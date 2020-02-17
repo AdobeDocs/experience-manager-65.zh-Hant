@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
-source-git-commit: 9532c1fb8af37b29285007bc72e86d42d5eb9c4d
+source-git-commit: 01f14c203e45b85c9d7733d88437bd56e3c27c8e
 
 ---
 
@@ -27,7 +27,7 @@ Tally是抽象類別，提供一套標準方法，可收集會員對特定產品
 
 [評分](rating-basics.md) (Rating)是指使用星型系統來表達從正面到負面的一系列意見的統計。
 
-自AEM 6.1起，民調問 [答元件](poll-basics.md) 已不再可用。
+自AEM 6.1起，民調問答元件不再可用。
 
 [Reviews](reviews-basics.md) 是SCF元件，是注釋和評 [分的](essentials-comments.md) 混合 [](rating-basics.md)。
 
