@@ -3,7 +3,7 @@ title: 將具有超連結的影像地圖新增至數位影像
 description: 瞭解如何新增包含超連結的影像地圖至影像。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: e547dde53011003a2db4814916c3e923da947cce
 
 ---
 
