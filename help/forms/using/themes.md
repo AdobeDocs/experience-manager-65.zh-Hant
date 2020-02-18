@@ -10,12 +10,12 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 617e42c6a9ca2e27f64b24073948e8accd1f5d1f
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
 
-# 建立和使用主題{#creating-and-using-themes}
+# 建立和使用主題 {#creating-and-using-themes}
 
 ## 簡介 {#introduction}
 
@@ -219,7 +219,7 @@ AEM Forms隨附於主題編輯器。 它是商業使用者和網頁設計人員�
    * **** 進階：可讓您將自訂CSS新增至物件，以覆寫視覺控制項在有重疊時所定義的屬性。
 
    * **檢視CSS**:可讓您檢視所選元件的CSS
-   此外，在側欄中，底部有箭頭。 當您按一下箭頭時，您會再看到兩個選項：模 **擬成功****和模擬錯誤。** 這些選項以及上述選項將在下文中詳 [細討論](../../forms/using/themes.md#using-rail)。
+   此外，在側欄底部還有箭頭。 當您按一下箭頭時，您會再看到兩個選項：模 **擬成功****和模擬錯誤。** 這些選項以及上述選項將在下文中詳 [細討論](../../forms/using/themes.md#using-rail)。
 
 [ 反白顯 ![示「邊欄」和「畫布」的主題編輯器。](assets/themes.png)](assets/themes-1.png)**** **A.側**&#x200B;欄B.畫布
 
@@ -435,7 +435,7 @@ AEM Forms中的主題支援在表單和互動式通訊的面板版面中設定�
 
 ### 設定元件的樣式 {#styling-a-component}
 
-例如，在您的表單中，您有兩種文字方塊：一個僅接受數字值，另一個接受字母數字值。 您可以為僅接受數值的文本框（數字框）定制樣式。
+例如，在您的表單中，您有兩種文字方塊：一個僅接受數字值，另一個接受字母數字值。 您可以為僅接受數值的文本框（數值框）定制樣式。
 
 執行以下步驟為特定元件定制樣式（本示例中的數字框）:
 
