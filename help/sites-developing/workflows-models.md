@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 
 ---
 
@@ -61,7 +61,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 編輯 [**預設和／或舊版&#x200B;**（現成可用）工作流程有額外的步驟，以確保在您進行變更之前](#editing-a-default-or-legacy-workflow-for-the-first-time)[](/help/sites-developing/workflows-best-practices.md#locations-workflow-models)先取得安全的復本。
 
-完成工作流程的更新後，您必須使用「同步 **」(Sync** ) **生成運行時模型**。 如需詳 [細資訊，請參閱同步您的工作流](#sync-your-workflow-generate-a-runtime-model) 。
+完成工作流程的更新後，您必須使用「同步 **」(Sync** ) **來生成運行時模型**。 如需詳 [細資訊，請參閱同步您的工作流](#sync-your-workflow-generate-a-runtime-model) 。
 
 ### 同步您的工作流程——產生執行階段模型 {#sync-your-workflow-generate-a-runtime-model}
 
@@ -174,19 +174,25 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 ## 在Touch UI中提供工作流程模型 {#classic2touchui}
 
-如果Classic UI中存在但Touch UI時間軸邊欄中選取範圍彈出式選單中遺失的工作流程模型，請依照設定進行，以便使用。 下列步驟說明如何使用稱為「請求啟動」和「請求停 **[!UICONTROL 用」的AEM Assets]****[!UICONTROL 工作流程模型]**。
+如果Classic UI中有工作流程模型，但Touch UI的 **[!UICONTROL Timeline]** rail中的選取範圍快顯功能表中遺失，請依照設定進行，以便使用。 以下步驟說明如何使用稱為「請求啟 **[!UICONTROL 動」的工作流程模型]**。
 
-1. 確認該型號未在啟用觸控的UI中使用。 使用路徑存取 `/assets.html/content/dam` 資產。 選取資產。 在左 **[!UICONTROL 側欄中]** ，開啟時間軸。 按一 **[!UICONTROL 下「開始工作流程]** 」，並注意 **[!UICONTROL 彈出式清單中不]** 會顯示「請求啟動」和「 **** 請求停用」模型。
-1. 按一 **[!UICONTROL 下「工具>一般>標籤」]**。 選擇「 **[!UICONTROL 工作流]**」。
-1. 按一 **[!UICONTROL 下「建立>建立標籤]**」。 將「 **[!UICONTROL 標題]** 」設 `DAM` 為 **[!UICONTROL ，將「]** 名稱 `dam`」設為。 按一 **[!UICONTROL 下提交]**。
+1. 確認該型號未在啟用觸控的UI中使用。 使用路徑存取 `/assets.html/content/dam` 資產。 選取資產。 在左 **[!UICONTROL 側欄中]** ，開啟時間軸。 按一 **[!UICONTROL 下「開始工作流程]** 」，並確認快顯 **[!UICONTROL 清單中不存在「要求啟動]** 」模型。
 
+1. 瀏覽「工 **[!UICONTROL 具>一般>標籤」]**。 選擇「 **[!UICONTROL 工作流]**」。
+
+1. 選擇「 **[!UICONTROL 建立>建立標籤]**」。 將「 **[!UICONTROL 標題]** 」設 `DAM` 為 **[!UICONTROL ，將「]** 名稱 `dam`」設為。 選擇 **[!UICONTROL 提交]**。
    ![在工作流程模型中建立標籤](assets/workflow_create_tag.png)
 
-1. 按一 **[!UICONTROL 下「工具>工作流程>模型」]**。 選取 **[!UICONTROL 啟動要求]** (或 **[!UICONTROL 停用要求]**)。 按一 **[!UICONTROL 下編輯]**。
-1. 在sidekick中，前往「頁 **[!UICONTROL 面]** 」標籤。 Open **[!UICONTROL Page Properties]**.
-1. 新增 `Workflow : DAM` 至 **[!UICONTROL 標籤／關鍵字欄位]** 。 按一下 **[!UICONTROL 確定]**。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 導覽至「 **[!UICONTROL 工具>工作流程>模型」]**。 選取「 **[!UICONTROL 要求啟動」]**，然後選 **[!UICONTROL 取「編輯」]**。
 
+1. 選 **[!UICONTROL 擇「編輯]**」，開啟「頁 **[!UICONTROL 面資訊」菜單，然後從中選擇]** UICONTROL Open Properties **[，並轉至]****** Basic Tab（如果尚未開啟）。
+
+1. 新增 `Workflow : DAM` 至 **[!UICONTROL 標籤]** 欄位。 使用勾選（勾選）確認選取範圍。
+
+1. 確認新增標籤與「儲存並 **[!UICONTROL 關閉」]**。
    ![編輯模型的頁面屬性](assets/workflow_model_edit_activation1.png)
+
+1. 使用同步完成 **[!UICONTROL 程式]**。 現在可在觸控式UI中使用工作流程。
 
 ### 為多資源支援配置工作流 {#configuring-a-workflow-for-multi-resource-support}
 
