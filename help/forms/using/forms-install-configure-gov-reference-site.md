@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93f3696242c681a019c2252364fe7cee510cb933
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
@@ -312,11 +312,15 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip **)是包�
 
 **引用:**
 
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html)
+* [與Adobe Analytics整合](../../sites-administering/adobeanalytics.md)
+
+* [連線至Adobe Analytics和建立架構](../../sites-administering/adobeanalytics-connect.md)
+
+* [檢視頁面分析資料](../../sites-authoring/pa-using.md)
+
+* [設定分析和報告](configure-analytics-forms-documents.md)
+
+* [檢視並瞭解AEM Forms分析報表](view-understand-aem-forms-analytics-reports.md)
 
 ### Adobe Analytics雲端服務設定 {#adobe-analytics-cloud-service-configuration}
 
@@ -432,7 +436,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip **)是包�
 
 此套件中包含的範本也支援樣式系統：
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[樣式系統](../../sites-authoring/style-system.md)
 
 #### 範本標誌 {#template-logos}
 
@@ -446,7 +450,7 @@ Project DAM Assets也包含We.Gov標誌和影像。 這些資產可在以下網�
 
 如需詳細資訊，請參閱編輯頁面內容：
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32)
+[編輯頁面內容](../../sites-authoring/editing-content.md)
 
 ### 自訂網站頁面 {#sites-pages-customization}
 
@@ -458,7 +462,7 @@ Project DAM Assets也包含We.Gov標誌和影像。 這些資產可在以下網�
 
 此套件中包含的頁面也支援樣式系統：
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[樣式系統](../../sites-authoring/style-system.md)
 
 您也可以參閱範本自 [訂樣式系統](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) ，以取得支援樣式的說明檔案。
 
@@ -480,8 +484,8 @@ Project DAM Assets也包含We.Gov標誌和影像。 這些資產可在以下網�
 
 您也可以使用樣式編輯器或主題編輯器來設定最適化表單的樣式：
 
-* [https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html)
-* [https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html](https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html)
+* [最適化表單元件的內嵌樣式](inline-style-adaptive-forms.md)
+* [建立和使用主題](themes.md)
 
 ### 工作流程自訂 {#workflow-customization}
 
