@@ -9,12 +9,12 @@ topic-tags: author
 discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
 
-# 最適化表單元件的內嵌樣式{#inline-styling-of-adaptive-form-components}
+# 最適化表單元件的內嵌樣式 {#inline-styling-of-adaptive-form-components}
 
 您可以使用主題編輯器指定樣式，以定義最適化表單的整體外 [觀和樣式](../../forms/using/themes.md)。 此外，您也可以將內嵌CSS樣式套用至個別的可調式表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
 
