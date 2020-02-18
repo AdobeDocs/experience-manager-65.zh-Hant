@@ -2,12 +2,9 @@
 title: 在AEM中搜尋數位資產和影像
 description: 瞭解如何使用「篩選」面板在AEM中尋找所需資產，以及如何使用顯示在搜尋中的資產。
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-discoiquuid: 98717f6d-1911-49ac-928c-01a75292ff01
-docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: dc38876e3905622a0ed6109c1718fcf464fe6374
+source-git-commit: b0ae7552a6dc0476a682bdbe715aac4b42315ff6
 
 ---
 
@@ -64,9 +61,13 @@ AEM搜尋功能支援搜尋系列並搜尋系列中的資產。 請參閱 [搜�
 
 結果會依相關性排序，從最接近的相符項目開始。 對於多個關鍵字，更相關的結果是在其中繼資料中包含兩個詞語的資產。 在中繼資料中，顯示為智慧標籤的關鍵字比顯示在其他中繼資料欄位中的關鍵字的排名更高。 AEM可讓特定搜尋詞賦予較高的權重。 此外，您也可以提 [升特定搜尋詞](#searchrank) ，數個目標資產的排名。
 
-為快速找到相關資產，豐富式介面提供篩選、排序和選擇機制。 您可以根據多個條件來篩選結果，並查看搜尋的資產數目，以找出各種篩選條件。 或者，您也可以在Omnisearch欄位中變更查詢，以重新執行搜尋。 當您變更搜尋詞或篩選器時，其他篩選器仍會套用，以保留您搜尋的上下文。 當結果超過1000時，AEM不會顯示所有搜尋的資產，並會顯示1000+為搜尋的資產數。 這是為了改善搜尋效能。 當您捲動以檢視更多資產時，超過1000個資產的數量會逐漸增加200個步驟。
+為快速找到相關資產，豐富式介面提供篩選、排序和選擇機制。 您可以根據多個條件來篩選結果，並查看搜尋的資產數目，以找出各種篩選條件。 或者，您也可以在Omnisearch欄位中變更查詢，以重新執行搜尋。 當您變更搜尋詞或篩選器時，其他篩選器仍會套用，以保留您搜尋的上下文。
 
-有時候，您會在搜尋結果中看到一些非預期的資產。 如需詳細資訊，請查看未 [預期的結果](#unexpectedresults)。
+當結果是許多資產時，AEM會在卡片檢視中顯示前100個，在清單檢視中顯示200個。 當使用者捲動時，會載入更多資產。 這是為了改善效能。
+
+>[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
+
+有時候，您會在搜尋結果中看到一些非預期的資產。 如需詳細資訊，請查看未 [預期的結果](#troubleshoot-unexpected-search-results-and-issues)。
 
 AEM可搜尋許多檔案格式，而且可自訂搜尋篩選器以符合您的業務需求。 請連絡您的管理員，瞭解您的DAM儲存庫有哪些搜尋選項，以及您的帳戶有哪些限制。
 
@@ -243,7 +244,7 @@ AEM搜尋功能支援搜尋系列並搜尋系列中的資產。 請參閱 [搜�
 | assettype(S) | 影像、檔案、多媒體、封存 | <ul><li>[https://localhost:4502/aem/assetpicker.html?assettype=images](https://localhost:4502/aem/assetpicker.html?assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=multimedia](https://localhost:4502/aem/assetpicker.html?assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=archives](https://localhost:4502/aem/assetpicker.html?assettype=archives)</li></ul> | 使用這個選項可根據傳遞的值來篩選資產類型。 |
 | 根 | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities) | 使用此選項可指定資產選擇器的根資料夾。 在這種情況下，資產選擇器可讓您只選取根資料夾下的子資產（直接／間接）。 |
 
-若要存取資產選擇器介面，請前往 `https://[AEM server]:[port]/aem/assetpicker`。 導覽至所要的檔案夾，並選取一或多個資產。 或者，從Omnisearch方塊中搜尋所要的資產、視需要套用篩選，然後選取它。
+若要存取資產選擇器介面，請前往 `https://[aem_server]:[port]/aem/assetpicker`。 導覽至所要的檔案夾，並選取一或多個資產。 或者，從Omnisearch方塊中搜尋所要的資產、視需要套用篩選，然後選取它。
 
 ![在資產選擇器中瀏覽並選取資產](assets/assetpicker.png)
 
@@ -258,7 +259,7 @@ AEM Assets中的搜尋功能有下列限制：
 * 在您從搜尋結果中選取資產的屬性，然後取消搜尋後，AEM可能會繼續顯示搜尋詞。 <!-- (CQ-4273540) -->
 * 搜索資料夾或檔案和資料夾時，不能對任何參數對搜索結果進行排序。
 * 如果您按下傳回鍵，而未在Omnisearch列中輸入任何內容，AEM會傳回僅包含檔案而非檔案夾的清單。 如果您在未使用關鍵字的情況下特別搜尋資料夾，AEM不會傳回任何結果。
-* 使用「 [!UICONTROL 全選] 」核取方塊，您只能在卡片檢視中選取前100個搜尋的資產，在清單檢視中選取前200個搜尋的資產。
+* 使用「 [!UICONTROL 全選] 」核取方塊，您只能在卡片檢視中選取前100個搜尋的資產，在清單檢視中選取前200個搜尋的資產。 如果您在使用者介面中捲動並載入更多資產，您可以使用「全選」選 [!UICONTROL 項選取更多] 。
 
 視覺搜尋或相似性搜尋有下列限制：
 
@@ -454,10 +455,10 @@ AEM Assets中的搜尋功能有下列限制：
 | 不相關或部分相關的搜尋結果 | 使用智慧標籤來變更搜尋行為。 | 瞭解 [智慧標籤後搜尋的變更](#withsmarttags)。 |
 | 無資產自動完成建議 | 新上傳的資產尚未建立索引。 當您開始在Omnisearch列中輸入搜尋關鍵字時，中繼資料無法立即當做建議使用。 | AEM Assets會等到逾時期間（預設為一小時）到期後，再執行背景工作，為所有新上傳或更新的資產建立中繼資料索引，然後將中繼資料新增至建議清單。 |
 | 沒有搜尋結果 | <ul><li>沒有與查詢相符的資產。</li><li>您在搜尋查詢前新增了空白字元。</li><li>不支援的中繼資料欄位包含您搜尋的關鍵字。</li><li>會為資產設定啟動和關閉時間，而搜尋是在資產關閉時間進行。</li></ul> | <ul><li>使用不同關鍵字進行搜尋。 或者，使用（智慧型）標籤來改善搜尋結果。</li><li>這是已知 [的限制](#limitations)。</li><li>並非所有中繼資料欄位都會被視為搜尋。 請參 [閱範圍](#scope)。</li><li>稍後搜尋或修改所需資產的開啟和關閉時間。</li></ul> |
-| Search filter/ predicate is not available | <ul><li>搜尋篩選器未設定。</li><li>登入時無法使用。</li><li>（不太可能）您使用的部署不會自訂搜尋選項。</li></ul> | <ul><li>請連絡管理員以檢查搜尋自訂是否可用。</li><li>請連絡管理員以檢查您的帳戶是否具有使用自訂的權限／權限。</li><li>聯絡管理員，並檢查您所使用之AEM Assets部署的可用自訂項目。</li></ul> |
+| Search filter/ predicate is not available | <ul><li>搜尋篩選器未設定。</li><li>登入時無法使用。</li><li>（不太可能）您使用的部署不會自訂搜尋選項。</li></ul> | <ul><li>請連絡管理員以檢查搜尋自訂是否可用。</li><li>請連絡管理員以檢查您的帳戶是否具有使用自訂的權限。</li><li>聯絡管理員，並檢查您所使用之AEM Assets部署的可用自訂項目。</li></ul> |
 | 在搜尋視覺上類似的影像時，會遺失預期的影像 | <ul><li>AEM中無法使用影像。</li><li>未對影像編製索引。 通常是在最近上傳時。</li><li>影像未標籤智慧型。</li></ul> | <ul><li>將影像新增至AEM Assets。</li><li>請與管理員聯繫以重新為儲存庫編製索引。 此外，請確定您使用的是適當的索引。</li><li>請洽詢您的管理員，以智慧標籤相關資產。</li></ul> |
 | 當搜尋視覺上類似的影像時，會顯示不相關的影像 | 視覺搜尋行為。 | AEM會顯示盡可能多的潛在相關資產。 較不相關的影像（如果有）會新增至結果，但搜尋排名較低。 當您向下捲動搜尋結果時，相符項目的品質和搜尋資產的相關性會降低。 |
-| 在選擇並操作搜尋的資產時，所有搜尋的資產都不會在 | 「全 [!UICONTROL 選] 」選項僅在卡片檢視中選取前100個搜尋結果，在清單檢視中選取前200個搜尋結果。 |  |
+| 在選取並操作搜尋結果時，所有搜尋的資產都不會在 | 「全 [!UICONTROL 選] 」選項僅在卡片檢視中選取前100個搜尋結果，在清單檢視中選取前200個搜尋結果。 |  |
 
 >[!MORELIKETHIS]
 >
