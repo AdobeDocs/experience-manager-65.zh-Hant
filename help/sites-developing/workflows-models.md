@@ -185,7 +185,7 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 
 1. 導覽至「 **[!UICONTROL 工具>工作流程>模型」]**。 選取「 **[!UICONTROL 要求啟動」]**，然後選 **[!UICONTROL 取「編輯」]**。
 
-1. 選 **[!UICONTROL 擇「編輯]**」，開啟「頁 **[!UICONTROL 面資訊」菜單，然後從中選擇]** UICONTROL Open Properties **[，並轉至]****** Basic Tab（如果尚未開啟）。
+1. 選 **[!UICONTROL 擇]**「Edit」（編輯），開啟「 **[!UICONTROL Page Information]** 」（頁面資訊）菜單，然後從此處選擇「 **[!UICONTROL Open Properties]** 」（開啟屬性），然後轉到「 **** Basic Edit」（如果尚未開啟）頁籤。
 
 1. 新增 `Workflow : DAM` 至 **[!UICONTROL 標籤]** 欄位。 使用勾選（勾選）確認選取範圍。
 
