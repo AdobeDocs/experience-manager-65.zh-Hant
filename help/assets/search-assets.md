@@ -7,7 +7,7 @@ discoiquuid: 98717f6d-1911-49ac-928c-01a75292ff01
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
+source-git-commit: dc38876e3905622a0ed6109c1718fcf464fe6374
 
 ---
 
@@ -407,7 +407,7 @@ AEM Assets中的搜尋功能有下列限制：
 
 ### 對搜索結果排序 {#sort}
 
-排序搜尋結果有助於您更快找到所需資產。 排序搜索結果在清單視圖中工作，且僅當從「篩選器」面板 **[!UICONTROL [中選擇「檔案](#searchui)]**」時**[!UICONTROL &#x200B;工作&#x200B;]**。 AEM Assets使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產（無論多少）。 伺服器端排序比用戶端排序提供更快速、更精確的結果。
+排序搜尋結果有助於您更快找到所需資產。 排序搜索結果在清單視圖中工作，且僅當從「篩選器」面板 **[!UICONTROL [中選擇「檔案](#searchui)]**」時**[!UICONTROL &#x200B;工作&#x200B;]**。 AEM Assets使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產（無論多少）。 伺服器端排序比用戶端排序提供更快速且更精確的結果。
 
 在清單檢視中，您可以像排序任何資料夾中的資產一樣，對搜尋結果進行排序。 排序功能適用於這些欄——名稱、標題、狀態、維度、大小、評分、使用狀況、（日期）建立、（日期）修改、（日期）發佈、工作流程和檢出。
 
@@ -459,7 +459,7 @@ AEM Assets中的搜尋功能有下列限制：
 | 當搜尋視覺上類似的影像時，會顯示不相關的影像 | 視覺搜尋行為。 | AEM會顯示盡可能多的潛在相關資產。 較不相關的影像（如果有）會新增至結果，但搜尋排名較低。 當您向下捲動搜尋結果時，相符項目的品質和搜尋資產的相關性會降低。 |
 | 在選擇並操作搜尋的資產時，所有搜尋的資產都不會在 | 「全 [!UICONTROL 選] 」選項僅在卡片檢視中選取前100個搜尋結果，在清單檢視中選取前200個搜尋結果。 |  |
 
->[!MORE 像這樣]
+>[!MORELIKETHIS]
 >
 >* [AEM搜尋實作指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [多值和標籤搜尋謂語的進階設定](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html)
