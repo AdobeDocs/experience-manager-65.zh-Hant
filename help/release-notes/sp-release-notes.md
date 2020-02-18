@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd0b8e1605f6d8f6cc04a4173731351df002a67d
+source-git-commit: 37d0225f69800225e82f253ad9dbab8b2b30ac5e
 
 ---
 
@@ -113,7 +113,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 
 * 新增至影像資產的熱點無法透過資產詳細資料頁面的互動式影像檢視器顯示(NPR-30979)。
 
-* 當對AEM Assets中資產執行的動作傳遞至Scene 7時，會建立巨大的sling工作，並重新顯示「處理」橫幅(NPR-30947)。
+* 當對AEM Assets中資產執行的動作傳遞至Scene 7時，會建立巨大的Sling工作，並重新顯示「處理」橫幅(NPR-30947)。
 
 * 建立資產的語言副本時發生衝突，資產不會上傳至場景7(NPR-30932)。
 
@@ -163,6 +163,8 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 
 * 在輪詢資產的作業詳細資訊時，AEM中會顯示例外(CQ-4283569)。
 
+* DAM中的XSS弱點(NPR-31654)。
+
 #### 網站 {#sites}
 
 * 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結(NPR-30980)。
@@ -175,6 +177,9 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 * ResponsiveGridExporter API不會傳回com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter介面。 com.day.cq.wcm.foundation.model.impl套件宣告為私用套件(NPR-31398)。
 * 在非編輯器模式(在「作者」中(不含首碼和 `editor.html``wcmmode=disabled`，或在「發佈者」中)中開啟包含某些ExperienceFragments的頁面時，請求會以HTTP狀態錯誤碼500(NPR-30743)結束。
 * 使用者無法變更密碼並存取其描述檔頁面(NPR-31161)。
+* 在伺服器端產生包含使用者資料的JavaScript檔案(NPR-30822)。
+* AEM製作UI可讓您使用外部內容進行網路釣魚(NPR-29745)。
+* AEM 6.5中繼資料編輯器中的運算式語言插入弱點(NPR-31017)。
 
 #### 搜尋與使用者介面 {#search-ui-interface}
 
