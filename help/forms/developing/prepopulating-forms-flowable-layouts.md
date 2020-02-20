@@ -36,7 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 當您預先填入已包含資料的表單時，必須指定XML資料來源中已顯示的資料。 假設一個包含10個欄位的表單有4個欄位中的資料。 接下來，假設您要預先填入其餘6個欄位。 在這種情況下，您必須在用於預先填入表單的XML資料來源中指定10個XML元素。 如果您只指定6個元素，原始的4個欄位會是空的。
 
-例如，您可以預先填入表單，例如範例確認表單。 (請參閱轉譯互動式PDF表單 [](/help/forms/developing/rendering-forms-rendering-forms-rendering-interactive-pdf-forms-rendering.md#rendering-interactive-pdf-forms-rendering)中的「確認表單」。)
+例如，您可以預先填入表單，例如範例確認表單。 (請參閱轉譯互動式PDF表單 [](/help/forms/developing/rendering-interactive-pdf-forms.md#rendering-interactive-pdf-forms)中的「確認表單」。)
 
 若要預先填入範例確認表單，您必須建立一個XML資料來源，其中包含三個XML元素，這些元素會符合表單中的三個欄位。 此表單包含下列三個欄位： `FirstName`、 `LastName`和 `Amount`。 第一步是建立XML資料來源，其中包含與表單設計欄位相符的XML元素。 下一步是為XML元素指派資料值，如下列XML程式碼所示。
 
