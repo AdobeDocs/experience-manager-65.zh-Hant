@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 3ba9308f7a6252f7ea6ae0de6455ab3e97e3b8dd
+source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
 
 ---
 
@@ -174,6 +174,22 @@ source-git-commit: 3ba9308f7a6252f7ea6ae0de6455ab3e97e3b8dd
 
 1. 登入您的AEM例項並建立互動式通訊。 若要使用下列范常式式碼中提及的互動式通訊，請按 [一下這裡](assets/SimpleMediumIC.zip)。
 1. [在您的AEM例項上使用Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) ，建立和部署AEM專案。
+1. 將 [AEM Forms Client SDK 6.0.12版或更新版本](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) ，以及最新的 [](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) AEM Uber Jar新增至AEM專案的POm檔案相依性清單中。 例如，
+
+   ```XML
+       <dependency>
+           <groupId>com.adobe.aemfd</groupId>
+           <artifactId>aemfd-client-sdk</artifactId>
+           <version>6.0.122</version>
+       </dependency>
+       <dependency>
+          <groupId>com.adobe.aem</groupId>
+          <artifactId>uber-jar</artifactId>
+          <version>6.5.0</version>
+          <classifier>apis</classifier>
+          <scope>provided</scope>
+       </dependency>
+   ```
 1. 開啟Java專案，建立。java檔案，例如CCMBatchServlet.java。 將下列程式碼新增至檔案：
 
    ```java
@@ -271,7 +287,7 @@ source-git-commit: 3ba9308f7a6252f7ea6ae0de6455ab3e97e3b8dd
                            throw new Exception("Invalid JSON Data. File name : " + filePath, ex);
                        }
                    }
-                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/testsample/mediumic").build();
+                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/[path of the interactive communcation]").build();
                    BatchConfig batchConfig = batchBuilderFactory.getBatchConfigBuilder().setBatchType(BatchType.WEB_AND_PRINT).build();
                    BatchResult batchResult = batchGeneratorService.generateBatch(batchInput, batchConfig);
                    List<RecordResult> recordList = batchResult.getRecordResults();
@@ -338,9 +354,7 @@ source-git-commit: 3ba9308f7a6252f7ea6ae0de6455ab3e97e3b8dd
    * 當您同時指定「列印」和「網頁」選項時，會產生PDF檔案和每個記錄的JSON檔案。
 
 1. [使用maven將更新的程式碼部署至您的AEM例項](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)。
-1. 叫用批次API以產生互動式通訊。 批次API會根據記錄數傳回PDF和。json檔案串流。 您可以使用JSON檔案 [預先填寫網頁範本](#web-template)。
-
-   如果您使用上述程式碼，API會部署於 `http://localhost:4502/bin/batchServlet`。 如果您使用步驟1中提供的互動式通訊範例，則可使用 [records.json](assets/records.json) 來產生互動式通訊。 例如， `http://localhost:4502/bin/batchServlet?filePath=C:/aem/records.json>.` 它會列印並傳回PDF和JSON檔案的串流。
+1. 叫用批次API以產生互動式通訊。 批次API會根據記錄數傳回PDF和。json檔案串流。 您可以使用JSON檔案 [預先填寫網頁範本](#web-template)。 如果您使用上述程式碼，API會部署於 `http://localhost:4502/bin/batchServlet`。 程式碼會列印並傳回PDF和JSON檔案的串流。
 
 ### 預先填寫網頁範本 {#web-template}
 
