@@ -80,7 +80,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的系列物件，或學習如何從傳回的系列物件擷取結果。 (請參 [閱「程式設計方式組裝PDF檔案」](/help/forms/developing/programmaticly-compasing-pdf-documents-programmaly-compasing-pdf-documents-programmatily.md#programmaty-compasing-pdf-documents)。
+>在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的系列物件，或學習如何從傳回的系列物件擷取結果。 (請參 [閱「程式設計方式組裝PDF檔案」](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。
 
 >[!NOTE]
 >
