@@ -138,7 +138,7 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 **另請參閱**
 
-[Rendering Forms By Value](/help/forms/developing/rendering-forms-rendering-forms-rendering-forms-value-rendering-forms.md#rendering-forms-by-value)
+[Rendering Forms By Value](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)
 
 [快速入門（SOAP模式）:使用Java API依值演算](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
