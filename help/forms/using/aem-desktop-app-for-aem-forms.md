@@ -34,7 +34,7 @@ AEM案頭應用程式可讓您將Adobe Experience Manager(AEM)Assets存放庫和
 AEM案頭應用程式在Microsoft windows上使用WebDAV通訊協定，在Mac OS x上使用SMB1連線至AEM Forms伺服器。 現成可用的AEM Forms伺服器無法與WebDAV或SMB用戶端同步二進位檔案和其他資產。 執行下列步驟，以啟用AEM案頭應用程式的AEM Forms:
 
 1. 以管理員身分登入AEM Forms。
-1. 在作者例項中，按一 ![下Adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL 「Adobe Experience Manager > Tools **hammer![> Deployment > Operations](assets/hammer.png)**]**> Web Console」。 「Web控制台」在新視窗中開啟。
+1. 在作者例項中，按一 ![下Adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL 「Adobe Experience Manager > Tools ]** ![hammer](assets/hammer.png) **[!UICONTROL > Deployment > Operations > Web Console]**&#x200B;」。 「Web控制台」在新視窗中開啟。
 1. 在Web控制台窗口中，找到並開啟 **[!UICONTROL FormsManager AddOn配置選項]** 。
 1. 在FormsManager的「AddOn配置」對話框中，取消選中「 **[!UICONTROL 非同步同步資源]** 」複選框，然後按一下 **[!UICONTROL 保存]**。
 1. 重新啟動AEM Forms伺服器。 重新啟動後，AEM Forms伺服器會啟用，以接受並與AEM案頭應用程式共用內容。
