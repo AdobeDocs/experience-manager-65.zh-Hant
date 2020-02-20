@@ -183,16 +183,16 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 * 添加計分和標籤屬性
 
-   ```
+       ```
        scoringRules = [/etc/community/scoring/rules/comments-scoring,
         /etc/community/scoring/rules/forums-scoring]
        ```
-   
+
        ```
        badgingRules =[/etc/community/badging/rules/comments-scoring,
         /etc/community/badging/rules/forums-scoring]
        ```
-   
+
 * 找到論壇元件節點
 
    * `/content/community-components/en/forum/jcr:content/content/forum`

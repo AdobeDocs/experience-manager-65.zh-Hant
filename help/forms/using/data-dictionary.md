@@ -423,7 +423,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 1. 在警 **報中點選** 「確定」。 「通信管理」會將郵遞區號檔案下載至您的電腦，其名稱為DataDictionary-&lt;Dname>.zip。
 1. Zip檔案包含。properties檔案。 此檔案定義已下載的資料字典。 屬性檔案的內容類似於：
 
-   # 星期三20日2015年5月20日16:06:23
+   &#x200B;# 星期三20日2015年5月20日16:06:23
    DataDictionary.EmployeeDD.description=DataDictionary.DisplayName=EmployeeDataDictionaryDictionaryElement.name.description=DataDictionaryElement.displayName=nameDataDictionaryElement.person.displayDaplyname=person
 
    屬性檔案的結構為每個描述定義一行以及資料字典中的資料字典元素的顯示名稱。 此外，屬性檔案為每個資料字典元素的枚舉值集定義一行。 與資料字典一樣，對應的屬性檔案可以有多個資料字典元素定義。 此外，該檔案可包含一個或多個枚舉值集的定義。

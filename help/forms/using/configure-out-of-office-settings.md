@@ -57,8 +57,9 @@ source-git-commit: 52e4564ecab61cedaf3aca3d10339f6bcee2f71e
 ![離職](assets/out-of-office.png)
 
 [!NOTE]
->（僅適用於以表單為中心的工作流程項目）啟用 **Allow assignee to delegate using** **** Assign task step in the workflow. 只有啟用上述選項的項目會委派給其他使用者。
-> 
+>
+> （僅適用於以表單為中心的工作流程項目）啟用 **Allow assignee to delegate using** **** Assign task step in the workflow. 只有啟用上述選項的項目會委派給其他使用者。
+
 ## 限制 {#limitations}
 
 * 不支援將項目指派給群組。

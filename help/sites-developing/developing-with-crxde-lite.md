@@ -425,13 +425,14 @@ CRXDE Lite提供下列功能：
 
    ```
      package com.mycompany.test;
-   
+
      public class HelloWorld {
      public String getString(){
      return "Hello World!";
      }
      }
    ```
+
 1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
 
 ### 建立搭售 {#building-a-bundle}

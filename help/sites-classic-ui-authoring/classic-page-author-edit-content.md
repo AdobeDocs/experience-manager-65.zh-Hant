@@ -153,8 +153,9 @@ sidekick是製作頁面時的重要工具。 它會在編寫頁面時浮動，�
 >
 >如果已設定用戶屬性以顯示「全局工具欄 [」，則還可以使用](/help/sites-classic-ui-authoring/author-env-user-props.md) Copy **、CutPaste**、 **PasteJoald、********** Delete可用按鈕對段落執行某些操作。
 
->此外 [還提供各](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 種鍵盤快速鍵。
 >
+>此外 [還提供各](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 種鍵盤快速鍵。
+
 ## 剪下／複製／貼上元件 {#cut-copy-paste-a-component}
 
 與刪 [除元件時一樣](#deleting-a-component) ，您可以使用上下文菜單來複製、剪切和／或貼上元件

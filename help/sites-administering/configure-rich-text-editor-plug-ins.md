@@ -282,19 +282,18 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都包含featu
 >
 >Rich Text Editor使用ID為的容器DOM元素， `CQrte` 可用來提供不同的檢視和編輯樣式：
 >
->
-```>
+>```
 >#CQ td {
 > // defines the style for viewing
 > }
->```>
->```>
+>```
+>
+>```
 >#CQrte td {
 > // defines the style for editing
 > }
->```>
-
-
+>```
+>
 
 ### 在快顯清單中指定可用的樣式 {#stylesindropdown}
 

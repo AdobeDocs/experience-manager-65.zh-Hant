@@ -52,10 +52,10 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
 >如果您正在叢集上執行AEM Forms實作，請在叢集的每個節點上執行下列步驟。
 
 1. 停止AEM Forms伺服器例項。
-1. 
+1.
 
-   * （適用於Windows）在編輯 `[JBoss root]/bin/run.conf.bat` 器中開啟檔案。
-   * （適用於Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 檔案。
+    * （適用於Windows）在編輯 `[JBoss root]/bin/run.conf.bat` 器中開啟檔案。
+    * （適用於Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 檔案。
 
 1. 添加JVM參數 `-Dreporting.publisher.cron = <expression>.`
 

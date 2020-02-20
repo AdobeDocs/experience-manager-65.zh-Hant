@@ -575,8 +575,7 @@ Maven JspC Plugin的結果也可以隨OSGi Bundle一起打包和部署，但這�
 >視您是否實際在中使用JSP程 `/libs` 式碼（亦即從中加入JSP）而定，您需要調整要複製哪些JSP以進行編譯。
 >
 >例如，如果您包 `/libs/foundation/global.jsp`含，則可以將下列組態用於，而 `maven-resources-plugin` 非上方完全跳過的組態 `/libs`。
->
-```
+>```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
 >           <includes>  
@@ -584,7 +583,7 @@ Maven JspC Plugin的結果也可以隨OSGi Bundle一起打包和部署，但這�
 >                   <include>libs/foundation/global.jsp</include>
 >       </includes>  
 >   </resource>  
->  ```
+>```
 
 ### 如何與SCM系統搭配使用 {#how-to-work-with-scm-systems}
 

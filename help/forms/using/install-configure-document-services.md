@@ -415,6 +415,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1. 儲存並關閉檔案。
 
 ### 設定字型管理器服務 {#configuring-the-font-manager-service}

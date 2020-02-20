@@ -1318,11 +1318,11 @@ N:apps
    >
    >這與定義相同：
    >
-   >
-   ```
+   >```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
+   >
    >其中，函式只會傳回它所接收的值。
 
 1. 定義您的報表設計。 例如， `osgireport[cq:Page]` 在 `/etc/designs/reports`下。
@@ -1389,13 +1389,13 @@ N:apps
    >
    >由於此示例沒有任何可組列，因此圖表將不可用。 要查看圖表，請將 `groupable` 設定為 `true`:
    >
-   >
-   ```
+   >```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
+   >
 
 ## 設定報表架構服務 {#configuring-the-report-framework-services}
 
