@@ -62,7 +62,7 @@ AEM Forms Document security提供多種工具來套用安全性原則。 您可�
 
    此外，Prortable Protection Library具備Document Security SDK的所有功能。 您可以使用Document Security SDK來存取檔案伺服器功能、開啟受原則保護的檔案，並開發自訂的擴充功能、外掛程式或應用程式。 另請注意，可攜式保護程式庫(PPL)無法解除保護使用AEM Forms檔案安全性用戶端SDK(CSDK)所保護的檔案，反之亦然。
 
-   可移植保護庫適用於32位和64位版本的Java和C++語言。 OSGi上的AEM Forms也提供OSGi套件。 C++ PPL可以使用Microsoft Visual Studio 2013編譯。 如果您已取得AEM Forms Document security附加元件的授權，可以聯絡 [AEM Forms Document Security](https://helpx.adobe.com/marketing-cloud/contact-support.html) 支援團隊以購買Portable Protection Library。 稍後，您可以使用「可攜式保護庫幫助」（與庫捆綁）來設定和使用可攜式保護庫。
+   可移植保護庫適用於32位和64位版本的Java和C\+\+語言。 OSGi上的AEM Forms也提供OSGi套件。 C\+\+ PPL可以使用Microsoft Visual Studio 2013編譯。 如果您已取得AEM Forms Document security附加元件的授權，可以聯絡 [AEM Forms Document Security](https://helpx.adobe.com/marketing-cloud/contact-support.html) 支援團隊以購買Portable Protection Library。 稍後，您可以使用「可攜式保護庫幫助」（與庫捆綁）來設定和使用可攜式保護庫。
 
 ### 檢視或編輯受保護的檔案 {#view-or-edit-protected-documents}
 
