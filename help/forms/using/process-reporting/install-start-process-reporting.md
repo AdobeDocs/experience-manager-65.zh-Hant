@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 8ae69f5bb67d51d759f143a076fef4f5f0375809
 
 ---
 
@@ -52,10 +52,10 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
 >如果您正在叢集上執行AEM Forms實作，請在叢集的每個節點上執行下列步驟。
 
 1. 停止AEM Forms伺服器例項。
-1.
+1. &#x200B;
 
-    * （適用於Windows）在編輯 `[JBoss root]/bin/run.conf.bat` 器中開啟檔案。
-    * （適用於Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 檔案。
+   * （適用於Windows）在編輯 `[JBoss root]/bin/run.conf.bat` 器中開啟檔案。
+   * （適用於Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 檔案。
 
 1. 添加JVM參數 `-Dreporting.publisher.cron = <expression>.`
 
