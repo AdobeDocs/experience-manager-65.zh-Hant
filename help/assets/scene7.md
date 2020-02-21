@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e9f5d8f63bc342723f2002f677c1673b4af6f891
 
 ---
 
@@ -177,7 +177,7 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 **[!UICONTROL 銳利化]** -選擇影像銳利化的方式。 銳利化會在影像預設集最佳實 [務和銳利化最佳實務中](/help/assets/managing-image-presets.md#image-preset-options)[詳細說明](/help/assets/assets/s7_sharpening_images.pdf)。
 
-**[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。 這些說明在「影像預 [設集」和](/help/assets/managing-image-presets.md) 「命 [令」參考中](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/c_command_reference.html)。
+**[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。 這些說明在「影像預 [設集」](/help/assets/managing-image-presets.md) 和「命 [令」參考中](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/c_command_reference.html)。
 
 **[!UICONTROL 中斷點]** -如果您的網站是互動式的，您需要調整中斷點。 中斷點必須以逗號(,)分隔。
 
@@ -265,10 +265,10 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
 >* 啟用 [「安全預覽」後](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene),Dynamic Media Classic上已發佈和未發佈的資產都會顯示在Dynamic Media Classic內容瀏覽器中。
 >* 如果您未在內容瀏覽器中將 **[!UICONTROL Dynamic Media Classic]** 或 **[!UICONTROL S7]** 圖示視為選項，您必須 [設定Dynamic Media Classic以搭配AEM運作](/help/sites-administering/scene7.md)。
 >* 對於視訊，Dynamic Media Classic內容瀏覽器支援：
->
->  * 最適化視訊集：容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
->  * 單一MP4視訊
->  * 單一F4V視訊
+   >   * 最適化視訊集：容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
+   >   * 單一MP4視訊
+   >   * 單一F4V視訊
+
 
 ### 在觸控最佳化UI中瀏覽內容 {#browsing-content-in-the-touch-optimized-ui}
 
