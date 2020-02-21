@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d522c5ec6c72a9fd391d021f2fac37f88c686bd9
 
 ---
 
@@ -153,16 +153,16 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 * 添加計分和標籤屬性
 
-       &quot;
-    規則= [/etc/community/rules/comments得分，
- etc/communts得分，社群／論壇……     &quot;規則=
- [/badging etc/communts/badging註解，等等——評分／評分論壇／評分規則／評分，     
-    
-    
-    
-    
-    等／社群／論壇。
-   
+   ```
+   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   /etc/community/scoring/rules/forums-scoring]
+   ```
+
+   ```
+   badgingRules =[/etc/community/badging/rules/comments-scoring,
+   /etc/community/badging/rules/forums-scoring]
+   ```
+
 * 找到論壇元件節點
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
@@ -183,15 +183,15 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 * 添加計分和標籤屬性
 
-       ```
-       scoringRules = [/etc/community/scoring/rules/comments-scoring,
-        /etc/community/scoring/rules/forums-scoring]
-       ```
+   ```
+   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   /etc/community/scoring/rules/forums-scoring]
+   ```
 
-       ```
-       badgingRules =[/etc/community/badging/rules/comments-scoring,
-        /etc/community/badging/rules/forums-scoring]
-       ```
+   ```
+   badgingRules =[/etc/community/badging/rules/comments-scoring,
+   /etc/community/badging/rules/forums-scoring]
+   ```
 
 * 找到論壇元件節點
 
