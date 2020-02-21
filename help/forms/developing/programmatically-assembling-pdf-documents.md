@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 868936e0fd20d3867e31f0351d7b388149472fd2
 
 ---
 
@@ -100,7 +100,7 @@ map.pdf檔案和directions.pdf檔案都必須放在系列物件中。 索引鍵�
 
 >[!NOTE]
 >
->如果 `AssemblerResult` 您叫用此操作，則會傳回包含系列物件的物 `invokeDDX` 件。 當您將兩個或兩個以上的輸入PDF檔案傳遞至Assembler服務時，就會使用此操作。 但是，如果只將一個輸入PDF傳遞給Assembler服務，而且只需要一個返回文檔，請調用該操 `invokeOneDocument` 作。 調用此操作時，將返回單個文檔。 如需使用此作業的詳細資訊，請參閱 [Massigning Encrypted PDF Documents](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
+>如果 `AssemblerResult` 您叫用此操作，則會傳回包含系列物件的物 `invokeDDX` 件。 當您將兩個或兩個以上的輸入PDF檔案傳遞至Assembler服務時，就會使用此操作。 但是，如果只將一個輸入PDF傳遞給Assembler服務，而且只需要一個返回文檔，請調用該操 `invokeOneDocument` 作。 調用此操作時，將返回單個文檔。 如需使用此作業的詳細資訊，請參 [閱組合加密的PDF檔案](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
 
 **設定執行時期選項**
 
