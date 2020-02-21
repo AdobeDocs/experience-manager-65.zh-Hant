@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 71b1301faf3ea3d881bcbf34eac101f3ed5c514c
 
 ---
 
@@ -152,7 +152,6 @@ sidekick是製作頁面時的重要工具。 它會在編寫頁面時浮動，�
 >[!NOTE]
 >
 >如果已設定用戶屬性以顯示「全局工具欄 [」，則還可以使用](/help/sites-classic-ui-authoring/author-env-user-props.md) Copy **、CutPaste**、 **PasteJoald、********** Delete可用按鈕對段落執行某些操作。
-
 >
 >此外 [還提供各](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 種鍵盤快速鍵。
 
@@ -161,8 +160,9 @@ sidekick是製作頁面時的重要工具。 它會在編寫頁面時浮動，�
 與刪 [除元件時一樣](#deleting-a-component) ，您可以使用上下文菜單來複製、剪切和／或貼上元件
 
 >[!NOTE]
-如果已設定用戶屬性以顯示「全局工具欄 [」，則還可以使用](/help/sites-classic-ui-authoring/author-env-user-props.md) Copy **、CutPaste**、 **PasteJoald、********** Delete可用按鈕對段落執行某些操作。
-
+>
+>如果已設定用戶屬性以顯示「全局工具欄 [」，則還可以使用](/help/sites-classic-ui-authoring/author-env-user-props.md) Copy **、CutPaste**、 **PasteJoald、********** Delete可用按鈕對段落執行某些操作。
+>
 >此外 [還提供各](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 種鍵盤快速鍵。
 
 >[!NOTE]
