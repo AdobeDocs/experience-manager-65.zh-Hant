@@ -4,7 +4,7 @@ seo-title: 設定不在辦公室的設定
 description: 配置辦公室外設定
 seo-description: 設定不在辦公室的設定
 translation-type: tm+mt
-source-git-commit: 52e4564ecab61cedaf3aca3d10339f6bcee2f71e
+source-git-commit: 7ed5c2d0121029811d8ddeca3b1121912bc761f4
 
 ---
 
@@ -48,7 +48,7 @@ source-git-commit: 52e4564ecab61cedaf3aca3d10339f6bcee2f71e
 
    重複此步驟以新增更多受指派者。 <br>
 
-   [!NOTE]
+   >[!NOTE]
    >受讓者的順序很重要。 當將項目指派給已啟用「不在辦公室」設定的使用者時，系統會根據新增訂單指派者中指定的受指派者清單來評估項目。 當項目符合條件時，它會指派給受託人，而不會勾選下一個受託人。
 
 1. 點選「 **[!UICONTROL 儲存]**」。 設定會在指定的開始日期和時間生效。 如果您在離開辦公室時登入，除非您變更設定，否則不會考慮在辦公室中。
@@ -56,9 +56,8 @@ source-git-commit: 52e4564ecab61cedaf3aca3d10339f6bcee2f71e
 現在，在「不在辦公室」時段內指派給您的項目會自動指派給指定的受託人。\
 ![離職](assets/out-of-office.png)
 
-[!NOTE]
->
-> （僅適用於以表單為中心的工作流程項目）啟用 **Allow assignee to delegate using** **** Assign task step in the workflow. 只有啟用上述選項的項目會委派給其他使用者。
+>[!NOTE]
+>（僅適用於以表單為中心的工作流程項目）啟用 **Allow assignee to delegate using** **** Assign task step in the workflow. 只有啟用上述選項的項目會委派給其他使用者。
 
 ## 限制 {#limitations}
 
