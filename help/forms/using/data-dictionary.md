@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 2b8d64082e3ba837c057ab5ee8c45ea0735ef6d0
 
 ---
 
@@ -423,8 +423,15 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 1. 在警 **報中點選** 「確定」。 「通信管理」會將郵遞區號檔案下載至您的電腦，其名稱為DataDictionary-&lt;Dname>.zip。
 1. Zip檔案包含。properties檔案。 此檔案定義已下載的資料字典。 屬性檔案的內容類似於：
 
-   &#x200B;# 星期三20日2015年5月20日16:06:23
-   DataDictionary.EmployeeDD.description=DataDictionary.DisplayName=EmployeeDataDictionaryDictionaryElement.name.description=DataDictionaryElement.displayName=nameDataDictionaryElement.person.displayDaplyname=person
+   ```
+   #Wed May 20 16:06:23 BST 2015
+   DataDictionary.EmployeeDD.description=
+   DataDictionary.EmployeeDD.displayName=EmployeeDataDictionary
+   DataDictionaryElement.name.description=
+   DataDictionaryElement.name.displayName=name
+   DataDictionaryElement.person.description=
+   DataDictionaryElement.person.displayName=person
+   ```
 
    屬性檔案的結構為每個描述定義一行以及資料字典中的資料字典元素的顯示名稱。 此外，屬性檔案為每個資料字典元素的枚舉值集定義一行。 與資料字典一樣，對應的屬性檔案可以有多個資料字典元素定義。 此外，該檔案可包含一個或多個枚舉值集的定義。
 
@@ -567,7 +574,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 
 ### 對應收集元素 {#mapping-collection-elements}
 
-系列元素只會映射至其他基數> 1的系列元素。 系列DDE的子DDE與其父XML綁定有相對（本地）XML綁定。 由於收集元素的子DDE必須與父項的基數相同，因此相對綁定的強制要求是確保基數約束，以便子DDE不指向非重複的XML架構元素。 在下列範例中，「TokenID」的基數必須與「Token」相同，後者是其父系列DDE。
+系列元素只會映射至其他基數> 1的系列元素。 系列DDE的子DDE與其父XML綁定相關（本地）XML綁定。 由於收集元素的子DDE必須與父項的基數相同，因此相對綁定的強制要求是確保基數約束，以便子DDE不指向非重複的XML架構元素。 在下列範例中，「TokenID」的基數必須與「Token」相同，後者是其父系列DDE。
 
 將集合DDE映射到XML架構元素時：
 
