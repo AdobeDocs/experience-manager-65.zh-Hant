@@ -60,10 +60,8 @@ source-git-commit: 0885fb6eb6b6a6b8fefd522b2656c8f64e0a537e
 >針對所有使用案例，建議您閱讀下列最佳實務：
 >
 >* [MSM的最佳實務](/help/sites-administering/msm-best-practices.md);特別是：
-   >
-   >   
-   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
-   >   * [MSM與多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>
+>   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
+>   * [MSM與多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻譯的最佳做法](/help/sites-administering/tc-bp.md)
-
