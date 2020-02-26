@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -83,7 +83,7 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源建立表單�
 
       * **JDBC驅動程式類**:指定JDBC驅動程式的Java類名。 對於MySQL資料庫，請 **指定com.mysql.jdbc.Driver**。
 
-      * **JDBC連接URI**:指定資料庫的連線URL。 對於在埠3306和模式teleca上運行的MySQL資料庫，URL為：jdbc:mysql://[server]:3306/teleca?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8
+      * **JDBC連接URI**:指定資料庫的連線URL。 對於在埠3306和模式teleca上運行的MySQL資料庫，URL為： `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **** 使用者名稱：資料庫的用戶名。 必須啟用JDBC驅動程式才能與資料庫建立連接。
       * **** 密碼：資料庫的口令。 必須啟用JDBC驅動程式才能與資料庫建立連接。
       * **** 借閱測試：啟用「 **借閱時測試** 」選項。
