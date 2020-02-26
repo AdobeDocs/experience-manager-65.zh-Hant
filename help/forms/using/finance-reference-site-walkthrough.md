@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -253,7 +253,7 @@ We.Finance會不時檢查其信用卡應用程式的效能，以檢查客戶可�
 
 #### 親眼看看 {#see-it-yourself-br}
 
-若要檢視並探索分析報表，我們將提供參考網站中信用卡應用程式的種子資料。 在您使用種子資料之前，請參 [閱設定分析](../../forms/using/setup-reference-sites.md#configureanalytics)。 在作者實例中執行以下步驟以查看包含種子資料的報告：
+若要檢視並探索分析報表，我們將提供參考網站中信用卡應用程式的種子資料。 使用種子資料之前，請參 [閱設定分析](../../forms/using/setup-reference-sites.md#configureanalytics)。 在作者實例中執行以下步驟以查看包含種子資料的報告：
 
 1. 前往https:// **&lt;** AuthorPort *>的「表單與檔案*」UI，網址為：&lt;主機名稱&#x200B;*>:&lt;* AuthorPort>/aem/forms.html/content/dam/formsanddocuments。
 
@@ -358,7 +358,7 @@ Sarah選擇申請住房抵押，然後按一下「 **[!UICONTROL Apply Now]** �
 
 如果Sarah正在從行動裝置存取家庭抵押應用程式，應用程式表格會開啟，並以最佳化的檢視方式在行動裝置上檢視。 在此視圖中，應用程式表單一次呈現一個部分。 它可讓Sarah在導覽申請表時，逐步檢視和提供資訊。
 
-下列影像顯示Sarah在行動裝置上瀏覽房屋抵押應用程式時的工作流程。
+以下影像顯示Sarah在行動裝置上瀏覽房屋抵押應用程式時的工作流程。
 
 ![在行動裝置上填寫抵押申請](assets/mortgage-form-on-mobile.png)
 
@@ -504,7 +504,7 @@ We.Finance會不時審查其抵押申請表現，以檢查客戶可能面臨的�
 
 #### 親眼看看 {#see-it-yourself-br-1}
 
-若要檢視並探索分析報表，我們會在參考網站中提供房貸申請的種子資料。 在您使用種子資料之前，請參 [閱設定分析](../../forms/using/setup-reference-sites.md#configureanalytics)。 在作者實例中執行以下步驟以查看包含種子資料的報告：
+若要檢視並探索分析報表，我們會在參考網站中提供房貸申請的種子資料。 使用種子資料之前，請參 [閱設定分析](../../forms/using/setup-reference-sites.md#configureanalytics)。 在作者實例中執行以下步驟以查看包含種子資料的報告：
 
 1. 前往https:// **&lt;** AuthorPort *>的「表單與檔案*」UI，網址為：&lt;主機名稱&#x200B;*>:&lt;* AuthorPort>/aem/forms.html/content/dam/formsanddocuments。
 
@@ -788,13 +788,13 @@ We.Finance Wealth Management情境包含下列角色：
 
 #### 運作方式 {#how-it-works-17}
 
-Blue Chip Growth Fund招股說明書是一種互動式通訊方式。 它使用文字、影像、圖表和表格元件（檔案片段）來顯示產品摘要、股票樣式、基金績效、基金詳細資訊和其他相關資訊。 [ 您可以在編輯模式下檢閱互動式通訊，網址為https://]authorHost[:authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html
+Blue Chip Growth Fund招股說明書是一種互動式通訊方式。 它使用文字、影像、圖表和表格元件（檔案片段）來顯示產品摘要、股票樣式、基金績效、基金詳細資訊和其他相關資訊。 您可以在編輯模式下，檢閱互動式通訊，網址為 `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`
 
-圖表和表格從表單資料模型中檢索資料。 表單資料模型會連線至已設定的資料來源（此逐步說明中的資料庫），以擷取基金專屬的資訊。 您可以在https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management檢閱表單資料模型
+圖表和表格從表單資料模型中檢索資料。 表單資料模型會連線至已設定的資料來源（此逐步說明中的資料庫），以擷取基金專屬的資訊。 您可以在 `https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management`
 
 #### 親眼看看 {#see-it-yourself-15}
 
-請至We.Finance入口網站https://[publishHost]:[publishPort]/wefinance，點選財富管理，依資產類別擴充基金，並點選We.Finance Blue Chip Growth Fund。 We.Finance藍籌增長基金招股說明書開幕。
+前往We.Finance的入口網站， `https://[publishHost]:[publishPort]/wefinance`點選Wealth Management，依資產類別擴充Funds，再點選We.Finance Blue Chip Growth Fund。 We.Finance藍籌增長基金招股說明書開幕。
 
 ### Sarah探索Blue Chip Growth Fund招股說明書，以瞭解該基金 {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
@@ -806,11 +806,11 @@ Sarah在招股說明書的「概觀」、「價格與績效」、「投資組合
 
 Blue Chip Growth Fund互動式通訊使用父代和子代面板，將相關資訊區隔為不同的區段。 上層面板會將所有子面板組織成標籤。
 
-上層標籤的版面設為「頂端標籤」，可將所有子面板轉換為標籤。 [ 您可以在https://]authorHost的編輯模式下檢視互動式通訊的面板[:authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html。
+上層標籤的版面設為「頂端標籤」，可將所有子面板轉換為標籤。 您可以在的編輯模式下查看互動式通信的面板 `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`。
 
 #### 親眼看看 {#see-it-yourself-16}
 
-[ 請至Blue Chip Growth Fund互動式通訊網址：https://]publishHost[:publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled。 探索所有標籤。
+請至Blue Chip Growth Fund互動式通訊網站 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled`。 探索所有標籤。
 
 ### Sarah檢視PDF版Blue Chip Growth Fund頁面並以電子郵件寄送 {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
 
@@ -820,15 +820,15 @@ Blue Chip Growth Fund互動式通訊使用父代和子代面板，將相關資�
 
 #### 運作方式 {#how-it-works-19}
 
-Blue Chip Growth Fund招股說明書是一種互動式通訊方式。 它有網頁和PDF頻道。 互動式通訊與AEM Workflows整合，透過電子郵件傳送PDF版本。 [ 您可以在https://]authorHost[:authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html。
+Blue Chip Growth Fund招股說明書是一種互動式通訊方式。 它有網頁和PDF頻道。 互動式通訊與AEM Workflows整合，透過電子郵件傳送PDF版本。 您可以在中查看工作流模型 `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html`。
 
 ![財富管理](assets/wealth-management.png)
 
 #### 親眼看看 {#see-it-yourself-17}
 
-[ 若要下載PDF版本，請前往Blue Chip Growth Fund互動式通訊https://]publishHost[:publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html，點選「下載PDF」。
+若要下載PDF版本，請前往Blue Chip Growth Fund互動式通訊，點選「下 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`載PDF」。
 
-[ 若要在電子郵件上傳送PDF，請前往Blue Chip Growth Fund互動式通訊https://]publishHost[:publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html，點選「電子郵件PDF」。 指定 **完整名稱** 和電 **子郵件地址**。 按一下 **傳送電子郵件**。
+若要在電子郵件中傳送PDF，請前往Blue Chip Growth Fund互動式通訊，點選「 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`電子郵件PDF」。 指定 **完整名稱** 和電 **子郵件地址**。 按一下 **傳送電子郵件**。
 
 ## 汽車保險申請逐步說明 {#auto-insurance-application-walkthrough}
 
@@ -849,13 +849,13 @@ Conrad登入AEM例項，開啟「自動保險」控制面板，指定Sarah的 **
 
 #### 運作方式 {#how-it-works-20}
 
-保險單續約通訊是互動式通訊。 Conrad Simms使用代理人UI將保險單續約通訊傳送給Sarah。 通訊內容包括列印(PDF)和連結至互動式通訊的網路頻道。 互動式通訊使用AEM Workflow來傳送電子郵件。 [ 您可在https://]authorHost[:authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
+保險單續約通訊是互動式通訊。 Conrad Simms使用代理人UI將保險單續約通訊傳送給Sarah。 通訊內容包括列印(PDF)和連結至互動式通訊的網路頻道。 互動式通訊使用AEM Workflow來傳送電子郵件。 您可在 `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html`
 
 ![自動保險工作流](assets/auto-insurance-workflow.png)
 
 #### 親眼看看 {#see-it-yourself-18}
 
-以Conrad Simms(csimms/password)的身分登入 **We.Finance Auto Insurance Dashboard** 。 URL為https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html。 指定 **客戶ID**。 Sarah rose的客戶ID為900001。 按一 **下「續約原則**」。 互動式通訊會在Agent UI中開啟。 在代理用戶介面中，輸入有效的電子郵件地址以傳送附有原則檔案的電子郵件，然後按一下「送 **出**」。 螢幕上將顯示一條消息「已啟動提交」，然後在幾秒內顯示另一條消息「已成功提交」。 您的汽車保險續約 **主旨的電子郵件** ，會以指定的電子郵件地址寄送。 莎拉·羅斯的政策是優質政策。
+以Conrad Simms(csimms/password)的身分登入 **We.Finance Auto Insurance Dashboard** 。 URL為 `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 指定 **客戶ID**。 Sarah rose的客戶ID為900001。 按一 **下「續約原則**」。 互動式通訊會在Agent UI中開啟。 在代理UI中，輸入有效的電子郵件地址以傳送附有原則檔案的電子郵件，然後按一下「送 **出**」。 螢幕上將顯示一條消息「已啟動提交」，然後在幾秒內顯示另一條消息「已成功提交」。 您的汽車保險續約 **主旨的電子郵件** ，會以指定的電子郵件地址寄送。 莎拉·羅斯的政策是優質政策。
 
 汽車保險的逐步介紹還包含另一位客戶艾莉森·瓊斯。 Alison Jones的客戶ID為900002。 當您將互動式通訊傳送至Alison Jones時，會傳送標準政策。 標準與優惠政策之間的差異為：
 
@@ -863,18 +863,18 @@ Conrad登入AEM例項，開啟「自動保險」控制面板，指定Sarah的 **
 * 標準政策的成本低於優惠政策。
 * 優惠政策有防盜獎勵，標準政策有明智的騎乘獎勵
 
-這兩種策略都使用相同的互動式通訊。 策略中的部分會根據策略類型條件進行更改或隱藏。 您可以直接從https://[authorHost存取和檢閱汽車保險續約互動式通訊]:authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal
+這兩種策略都使用相同的互動式通訊。 策略中的部分會根據策略類型條件進行更改或隱藏。 您可以直接從 `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **使用Microsoft Dynamics做為資料來源**
 
 參考網站也提供互動式通訊，使用Microsoft Dynamics做為表單資料模型的資料來源。 執行以下步驟，為自動保險演示配置互動式通信：
 
-1. 以管理員身[份登入https://]author[]:port/crx/de。
+1. 登入 `https://[author]:[port]/crx/de as an administrator`。
 1. 開啟檔 `/apps/we-finance/components/ccrui/ccrui.jsp`案。
 1. 將值設為 `FormFieldRequestParameter``/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. 點選「 **全部儲存**」。 該參考站點被配置為使用使用MS Dynamics作為資料源的互動式通信。
 
-現在，以Conrad Simms(csimms/password)的身分登入 **We.Finance Auto Insurance Dashboard** 。 URL為https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html。 指定 **客戶ID**。 Sarah rose的客戶ID為900001。 按一 **下「續約原則**」。 互動式通訊會在Agent UI中開啟。 在代理UI中，輸入有效的電子郵件地址以傳送附有原則檔案的電子郵件，然後按一下「送 **出**」。 螢幕上將顯示一條消息「已啟動提交」，然後在幾秒內顯示另一條消息「已成功提交」。 您的汽車保險續約 **主旨的電子郵件** ，會以指定的電子郵件地址寄出。
+現在，以Conrad Simms(csimms/password)的身分登入 **We.Finance Auto Insurance Dashboard** 。 URL為 `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 指定 **客戶ID**。 Sarah rose的客戶ID為900001。 按一 **下「續約原則**」。 互動式通訊會在Agent UI中開啟。 在代理UI中，輸入有效的電子郵件地址以傳送附有原則檔案的電子郵件，然後按一下「送 **出**」。 螢幕上將顯示一條消息「已啟動提交」，然後在幾秒內顯示另一條消息「已成功提交」。 您的汽車保險續約 **主旨的電子郵件** ，會以指定的電子郵件地址寄出。
 
 >[!NOTE]
 >
@@ -902,7 +902,7 @@ Sarah按一 **下「立即續約** 」，並轉至其汽車保險信函的網路
 
 電 **子郵件中的** 「立即續約」按鈕會將Sarah引導至原則的Web版本。 您可以造訪下列URL:
 
-https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&amp;customerId=900001
+`https://[publishServer]:[publishPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=900001`
 
 您可以檢查汽車保險續約的詳細摘要，然後按一下頁 **面底部的** 「立即續約」。
 
@@ -920,6 +920,6 @@ https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;docum
 
 按一 **下「立即續約** 」以進入「付款」頁面。 填寫您的信用卡資訊，然後按一下「 **付款」**。 您可以在以下網址進入編寫實例中的付款頁面：
 
-https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&amp;schema=fdm&amp;customerId=900001
+`https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&schema=fdm&customerId=900001`
 
 在按一下「付款」按鈕後，會出現感謝訊息。
