@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
+source-git-commit: a67ff409107cbde04d10932d624340857b9f9f64
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
 
 1. 導覽至您要建立新資料夾的數位資產檔案夾。 在功能表中，按一下「 **[!UICONTROL 建立]**」。 選擇「 **[!UICONTROL 新建資料夾]**」。
 1. 在「標 **[!UICONTROL 題]** 」欄位中，提供檔案夾名稱。 依預設，DAM會使用您提供的標題作為檔案夾名稱。 建立資料夾後，您可以覆寫預設資料夾，並指定另一個資料夾名稱。
-1. 按一下&#x200B;**[!UICONTROL 「建立」]**。您的資料夾會顯示在數位資產資料夾中。
+1. 按一下 **[!UICONTROL 建立]**。您的資料夾會顯示在數位資產資料夾中。
 
 不支援下列（以空格分隔的）字元清單：
 
@@ -346,7 +346,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    >
    >「屬性」頁面 [!UICONTROL 的版面配置] ，以及可用的中繼資料屬性，取決於基礎的中繼資料結構。 要瞭解如何修改「屬性」頁的 [!UICONTROL 佈局] ，請參 [閱元資料結構](/help/assets/metadata-schemas.md)。
 
-1. 若要排程啟動資產的特定日期／時間，請使用「準時」欄位旁的日 **[!UICONTROL 期選擇器]** 。
+1. 若要排程啟動資產的特定日期/時間，請使用「準時」欄位旁的日 **[!UICONTROL 期選擇器]** 。
 
    ![chlimage_1-217](assets/chlimage_1-12.png)
 
@@ -354,15 +354,13 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    ![chlimage_1-218](assets/chlimage_1-13.png)
 
-1. 在「標 **[!UICONTROL 記]** 」欄位中，選取一或多個標籤。 若要新增自訂標籤，請在方塊中輸入標籤名稱，然後按Enter。 新標籤會儲存在AEM中。
-
-   YouTube需要「標籤」才能發佈，並有YouTube的連結（如果找到適當的連結）。
+1. 在「標 **[!UICONTROL 記]** 」欄位中，選取一或多個標籤。 若要新增自訂標籤，請在方塊中輸入標籤名稱，然後按Enter。 新標籤會儲存在AEM中。 YouTube需要標籤才能發佈。 請參 [閱將影片發佈至YouTube](video.md#publishing-videos-to-youtube)。
 
    >[!NOTE]
    >
-   >要建立標籤，您需要在CRX儲存庫中 `/content/cq:tags/default` 的寫入權限。
+   >要建立標籤，您需要在CRX儲存庫 `/content/cq:tags/default` 中的寫入權限。
 
-1. 若要提供資產評等，請點選／按一下「進階 **** 」標籤，然後點選／按一下適當位置的星號，以指派所要的評等。
+1. 若要提供資產評等，請點選/按一下「進階 **** 」標籤，然後點選/按一下適當位置的星號，以指派所要的評等。
 
    ![評等](assets/ratings.png)
 
@@ -479,17 +477,17 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    **上傳新轉譯**
 
-   導覽至資產的資產詳細資訊頁面，然後點選／按一下工具列中的「新增轉譯 **** 」圖示，以上傳資產的新轉譯。
+   導覽至資產的資產詳細資訊頁面，然後點選/按一下工具列中的「新增轉譯 **** 」圖示，以上傳資產的新轉譯。
 
    ![chlimage_1-221](assets/chlimage_1-16.png)
 
    >[!NOTE]
    >
-   >如果您從「轉譯」面板選取轉譯 **** ，工具列會變更上下文，並僅顯示與轉譯相關的動作。 不會顯示「上傳轉譯」圖示等選項。 若要在工具列中檢視這些選項，請導覽至資產的詳細資訊頁面。
+   >如果您從「轉譯」面板選取轉譯 **** ，工具列會變更上下文，並僅顯示與轉譯相關的動作。不會顯示「上傳轉譯」圖示等選項。若要在工具列中檢視這些選項，請導覽至資產的詳細資訊頁面。
 
    您可以設定要顯示在影像或視訊資產詳細資料頁面的轉譯尺寸。 AEM Assets會根據您指定的維度，顯示具有精確或最接近的維度的轉譯。
 
-   若要在資產詳細資料層級設定影像的轉譯尺寸，請覆蓋節 `renditionpicker` 點(`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`)並設定width屬性的值。 設定屬性大 **[!UICONTROL 小（長）(KB]** )以取代寬度，以根據影像大小自訂資產詳細資料頁面上的轉譯。 對於基於大小的定製，如果匹配的 `preferOriginal` 格式副本的大小大於原始格式副本的大小，則屬性會為原始格式副本指定首選項。
+   若要在資產詳細資料層級設定影像的轉譯尺寸，請覆蓋節 `renditionpicker` 點(`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`)並設定width屬性的值。設定屬性大 **[!UICONTROL 小 (長) (KB]** )以取代寬度，以根據影像大小自訂資產詳細資料頁面上的轉譯。對於基於大小的定製，如果匹配的 `preferOriginal` 格式副本的大小大於原始格式副本的大小，則屬性會為原始格式副本指定首選項。
 
    同樣地，您也可以透過覆蓋來自訂「注釋」頁面影像 `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`。
 
@@ -532,7 +530,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ## 下載資產 {#downloading-assets}
 
-請參閱「 [從AEM下載資產」](/help/assets/download-assets-from-aem.md)。
+See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
 ## Publish assets {#publishing-assets}
 
@@ -542,7 +540,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 導覽至您要發佈的資產／資料夾的位置
 
-1. 從資產卡 **[!UICONTROL 中選取「發佈]** 」快速動作，或選取資產，然後點選／按一下工具列中的「 **[!UICONTROL 快速發佈]** 」圖示。
+1. 從資產卡 **[!UICONTROL 中選取「發佈]** 」快速動作，或選取資產，然後點選/按一下工具列中的「 **[!UICONTROL 快速發佈]** 」圖示。
 1. 如果資產引用其他資產，其引用將列在嚮導中。 只會顯示自上次發佈／未發佈後未發佈或已修改的參照。 選擇要發佈的參照。
 
    ![chlimage_1-225](assets/chlimage_1-21.png)
@@ -602,7 +600,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 1. 發佈資料夾，然後嘗試從發佈例項存取資料夾。 隨即顯示登入畫面。
 1. 如果您是CUG成員，請輸入您的安全憑據。 資料夾會在AEM驗證您後顯示。
 
-## Search assets {#assetsearch}
+## 搜尋資產 {#assetsearch}
 
 搜尋資產是數位資產管理系統的核心使用，不論是供創意人員進一步使用、由商業使用者和行銷人員強穩管理資產，或由DAM管理員管理。
 
@@ -652,7 +650,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![chlimage_1-226](assets/chlimage_1-22.png)
 
-1. 從清單中選取所需的選項。 裁切區域會根據您選擇的選項出現在影像上。 「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
+1. 從清單中選取所需的選項。裁切區域會根據您選擇的選項出現在影像上。「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
 
    ![chlimage_1-227](/help/assets/assets/chlimage_1-23.png)
 
@@ -718,7 +716,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    * 在選取資產或導覽至資產頁面後，從工具列
    ![chlimage_1-233](assets/chlimage_1-29.png)
 
-1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。 或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
+1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
 
    ![chlimage_1-234](assets/chlimage_1-30.png)
 
@@ -749,7 +747,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![依次選擇用戶配置檔案表徵圖和我的首選項以開啟用戶首選項](assets/User-profile-preferences.png)
 
-   在「注釋顏色」( **[!UICONTROL Annotation Color)框中指定所要的顏色]** ，然後按一下／點選「 **[!UICONTROL 接受」(Accept]**)。
+   在「注釋顏色」( **[!UICONTROL Annotation Color)框中指定所要的顏色]** ，然後按一下/點選「 **[!UICONTROL 接受」(Accept]**)。
 
    ![在用戶首選項中選擇注釋顏色以設定用戶角色顏色](assets/Annotation-color.png)
 
@@ -797,7 +795,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![chlimage_1-243](assets/chlimage_1-39.png)
 
-1. 點選／按一下工 **[!UICONTROL 具列中的]** 「列印」圖示。
+1. Tap/click the **[!UICONTROL Print]** icon from the toolbar.
 
    ![chlimage_1-244](assets/chlimage_1-40.png)
 
@@ -805,13 +803,13 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![從「打印」(Print)對話框中選擇注釋／審閱狀態在PDF上顯示的位置](assets/Print-annotation-dialog.png)
 
-   您可以根據要在打印的PDF中顯示注釋／狀態的位置選擇其他設定。 如果您希望註解／狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
+   您可以根據要在打印的PDF中顯示注釋/狀態的位置選擇其他設定。如果您希望註解/狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
 
    >[!NOTE]
    >
    >冗長的註解可能無法在PDF檔案中正確呈現。 為獲得最佳演算效果，Adobe建議您將註解限制在50字以內。
 
-1. 點選／按一下「 **[!UICONTROL 列印]**」。 根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解／狀態。 例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **** ，則生成的輸出類似於此處所示的PDF檔案。
+1. 點選/按一下「 **[!UICONTROL 列印]**」。根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **** ，則生成的輸出類似於此處所示的PDF檔案。
 
    ![chlimage_1-246](assets/chlimage_1-42.png)
 
@@ -893,7 +891,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![chlimage_1-251](assets/chlimage_1-47.png)
 
-1. 若要檢視新版本，請從資產詳細資 **[!UICONTROL 訊頁面或資產UI開啟時間軸中的「顯示全部]** 」清單，然後選擇「版 **[!UICONTROL 本」]**。 為資產建立的所有版本都會列在時間軸標籤下。 您可以按一下下拉箭頭並從清單中選取「版本」，篩選清單以顯 **[!UICONTROL 示「版本]** 」。
+1. 若要檢視新版本，請從資產詳細資 **[!UICONTROL 訊頁面或資產UI開啟時間軸中的「顯示全部]** 」清單，然後選擇「版 **[!UICONTROL 本」]**。為資產建立的所有版本都會列在時間軸標籤下。您可以按一下下拉箭頭並從清單中選取「版本」，篩選清單以顯 **[!UICONTROL 示「版本]** 」。
 
    ![versions_option](assets/versions_option.png)
 
@@ -909,7 +907,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![save_version](assets/save_version.png)
 
-1. 若要產生版本的預覽，請點選／按一下「預 **[!UICONTROL 覽版本」]**。
+1. 若要產生版本的預覽，請點選/按一下「預 **[!UICONTROL 覽版本」]**。
 1. 若要在資產UI中顯示此版本，請選取「 **[!UICONTROL 回復至此版本」]**。
 1. 若要比較兩個版本，請前往資產的資產頁面，點選／按一下要與目前版本比較的版本。
 
@@ -934,7 +932,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![chlimage_1-253](assets/chlimage_1-49.png)
 
-1. 在「開 **[!UICONTROL 始工作流]** 」(Start Workflow)對話框中，從清單中選擇工作流模型。
+1. In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
 
    ![chlimage_1-254](assets/chlimage_1-50.png)
 
@@ -942,13 +940,13 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![chlimage_1-255](assets/chlimage_1-51.png)
 
-1. 點選「 **[!UICONTROL 開始]**」，然後點選 **[!UICONTROL 對話方塊中的「繼續]** 」以進行確認。 工作流程的每個步驟都會以事件的形式顯示在時間軸中。
+1. Tap **[!UICONTROL Start]**, then tap **[!UICONTROL Proceed]** in the dialog to confirm. 工作流程的每個步驟都會以事件的形式顯示在時間軸中。
 
    ![chlimage_1-256](assets/chlimage_1-52.png)
 
 ## 集合 {#collections}
 
-系列是一組已訂購的資產。 使用系列在使用者之間共用相關資產，或將類似資產叢集在一起，以方便搜尋。
+系列是一組已訂購的資產。 使用系列在使用者之間共用相關資產，或將類似的資產叢集在一起，以方便搜尋。
 
 * 系列可以包含不同位置的資產，因為它們只包含這些資產的參考。 每個系列都會維護資產的參考完整性。
 * 您可以與擁有不同權限層級的多位使用者共用系列，包括編輯、檢視等。
