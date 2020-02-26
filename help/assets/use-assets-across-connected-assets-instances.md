@@ -3,7 +3,7 @@ title: 在Adobe Experience Manager Sites製作工作流程中，使用連結的�
 description: 在其他Experience Manager網站部署中建立網頁時，請使用遠端Adobe Experience Manager Assets部署中的可用資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a107f3d3f10e2f5b5aed7722aee467a838f9d13d
+source-git-commit: a7082bc47bea1b8514121f482911da44919da73c
 
 ---
 
@@ -27,9 +27,9 @@ AEM Sites提供建立網頁的功能，而AEM Assets是數位資產管理(DAM)�
 * 使用者是每個部署中適當使用者群組的一部分。
 * 對於Adobe Experience manager部署類型，符合其中一項支援的標準。 AEM 6.5 Assets可與AEM搭配使用，做為雲端服務。 如需詳細資訊，請 [參閱AEM中的「Connected Assets」（連線資產）功能(Cloud Service)](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
-   |  | AEM Sites as a Cloud Service | AMS上的AEM 6.5網站 | AEM 6.5內部部署網站 |
+   |  | AEM Sites 雲端服務 | AMS上的AEM 6.5網站 | AEM 6.5內部部署網站 |
    |---|---|---|---|
-   | **AEM Assets as a Cloud Service** | 支援 | 支援 | 支援 |
+   | **AEM Assets 雲端服務** | 支援 | 支援 | 支援 |
    | **AEM 6.5 Assets on AMS** | 不支援 | 支援 | 支援 |
    | **AEM 6.5內部部署資產** | 不支援 | 不支援 | 不支援 |
 
@@ -61,7 +61,7 @@ AEM Sites提供建立網頁的功能，而AEM Assets是數位資產管理(DAM)�
 
 ## 設定網站與資產部署之間的連線 {#configure-a-connection-between-sites-and-assets-deployments}
 
-AEM管理員可以建立此整合。 在建立後，使用它所需的權限會透過在Sites部署和DAM部署上定義的使用者群組來建立。
+AEM管理員可以建立此整合。 在建立後，使用它所需的權限會透過在網站部署和DAM部署上定義的使用者群組來建立。
 
 要配置「已連接資產」和「本地站點」連接，請遵循以下步驟。
 
@@ -119,7 +119,7 @@ AEM管理員可以建立此整合。 在建立後，使用它所需的權限會�
 
 作者可以在單一網頁中使用本機DAM和遠端DAM例項兩者上的可用資產。 使用內容搜尋器可在搜尋本機DAM或搜尋遠端DAM之間切換。
 
-只有那些具有與本地Sites實例相同分類層次結構的完全對應標籤的遠程資產的標籤才會被讀取。 會捨棄任何其他標籤。 作者可以使用遠端AEM部署上的所有標籤來搜尋遠端資產，因為AEM提供全文搜尋。
+只有那些具有與本地Sites實例相同分類層次結構的完全對應標籤的遠程資產的標籤才會被讀取。 會捨棄任何其他標籤。 作者可以使用遠端AEM部署上所有顯示的標籤來搜尋遠端資產，因為AEM提供全文搜尋。
 
 ### 使用的逐步介紹 {#walk-through-of-usage}
 
@@ -171,7 +171,7 @@ AEM管理員可以建立此整合。 在建立後，使用它所需的權限會�
 * 所有「網站作者」都對擷取的副本具有讀取權限，即使他們沒有遠端DAM部署的存取權。
 * 無API支援可自訂整合。
 * 此功能支援順暢搜尋和使用遠端資產。 若要讓許多遠端資產在單次部署時可供使用，請考慮移轉資產。 請參閱 [資產移轉指南](assets-migration-guide.md)。
-* 在「頁面屬性」的「縮圖」索引標籤中，無法使用遠端資產做為網頁的縮圖，方法是按一下「選取影像 [!UICONTROL 」] ，以取得網頁的縮圖 。
+* 無法將遠端資產當做頁面屬性使用者介面上的頁 [!UICONTROL 面縮圖] 。 您可以按一下「選取影像」，在「縮圖」的「頁 [!UICONTROL 面屬性] 」使用者介面中設定網頁的縮圖 。
 
 **設定和授權**
 
