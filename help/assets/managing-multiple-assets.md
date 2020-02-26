@@ -3,7 +3,7 @@ title: 管理多個資產和系列
 description: 瞭解如何同時編輯多個資產和系列的中繼資料，以快速傳播常見的中繼資料變更。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
 ---
 
@@ -44,31 +44,11 @@ Adobe Enterprise Manager(AEM)Assets可讓您同時編輯多個資產的中繼資
 
 1. 若要為資產選取不同的中繼資料結構，請點選／按一下工具列中的 **[!UICONTROL 「設定]** 」圖示，然後選取所要的結構。
 1. 儲存變更。
-1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。 如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。 點選／按一 **[!UICONTROL 下提交]**。
+1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。點選/按一 **[!UICONTROL 下提交]**。
 
    >[!CAUTION]
    >
    >對於單值欄位，即使您選擇「附加模式」，新元資料也不會附加到欄位中的現 **[!UICONTROL 有值]**。
-
-## 編輯多個系列的中繼資料屬性 {#editing-metadata-properties-of-multiple-collections}
-
-1. 從「系列」控制台中，選取您要編輯的系列。
-1. 在工具列中點選／按一 **[!UICONTROL 下「屬性]** 」，以開啟所選系列的屬性頁面。
-1. 在各種標籤下修改所選系列的中繼資料屬性。
-
-   >[!NOTE]
-   >
-   >您為所選系列新增的中繼資料會覆寫這些系列的先前中繼資料，但標籤除外。 您在「標籤」欄位中新 **[!UICONTROL 增的任何標籤]** ，都會附加至中繼資料中現有的標籤清單。
-
-1. 若要檢視特定系列的中繼資料屬性，請取消選取系列清單中的其餘系列。 中繼資料編輯器欄位會填入特定系列的中繼資料。
-
-   >[!NOTE]
-   >
-   >* 在系列屬性頁面中，您可以取消選取系列，從系列清單中移除系列。 系列清單預設會選取所有系列。 您移除之系列的中繼資料不會更新。
-   >* 在清單頂端，選取「標題」( **[!UICONTROL Title]** )附近的核取方塊，在選取系列和清除清單之間切換。
-
-
-1. 儲存變更。
 
 ## 設定大量中繼資料更新的限制 {#configlimit}
 
@@ -77,3 +57,8 @@ Adobe Enterprise Manager(AEM)Assets可讓您同時編輯多個資產的中繼資
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
 若要變更限制，請存取Web Console( **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**)並變更 **[!UICONTROL Apache Sling Parameters Request Apache Handling Osgi Configuration的]****** Maximum POST Parameters Praters Aremeters的值。
+
+>[!MORELIKETHIS]
+>
+>* [編輯多個系列的中繼資料屬性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+
