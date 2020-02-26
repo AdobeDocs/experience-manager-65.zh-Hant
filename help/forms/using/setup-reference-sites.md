@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -220,8 +220,8 @@ We.Finance參考網站的電子郵件範本包含電子郵件中的個人化連�
 
 在您安裝套件並啟動作者和發佈例項後，請造訪瀏覽器中的下列URL:
 
-* https://[伺服器]:[port]/wegov
-* https://[server]:[port]/wefinance
+* `https://[server]:[port]/wegov`
+* `https://[server]:[port]/wefinance`
 
 如果安裝成功，您可以訪問和We.Finance參考站點登錄頁。
 
@@ -231,12 +231,12 @@ We.Finance參考網站的電子郵件範本包含電子郵件中的個人化連�
 
 要導入汽車保險應用產品的自定義實體，請執行以下操作：
 
-1. 從您的 **AEM作者例項上的https://** server[:]port[/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip下載WeFinanceAutoInsurance_1_0.zip]解決方案套件。
+1. 從您的 **AEM作者實例下載WeFinanceAutoInsurance_1_0.zip**`https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` 解決方案套件。
 1. 在您的Microsoft Dynamics例項中，前往「設定> **解決方案** 」，然後按一 **下「匯入」**。 選擇並導入包。
 
 要導入汽車保險應用產品的自定義實體，請執行以下操作：
 
-1. 從https:// **author** :[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip下載[AEMFormsFSIRefsite_1_0.zip]套件。 選擇並導入包。
+1. 從下 **載AEMFormsFSIRefsite_1_0.zip** 包 `https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`。 選擇並導入包。
 
 1. 在您的Microsoft Dynamics例項中，前往「設定> **解決方案** 」，然後按一 **下「匯入」**。 選擇並導入包。
 
@@ -244,9 +244,9 @@ We.Finance參考網站的電子郵件範本包含電子郵件中的個人化連�
 
 1. 從您 **AEM作者例項的下列位置下載** We.Finance Customers.csv、We.Finance Auto Insurance Rexevals.csv **，以及** 家庭按揭資料檔案：
 
-   * https://[伺服器]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv
-   * https://[伺服器]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Rexenals.csv
-   * https://[server]:[port]/content/aemforms-refsite-actures/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv`
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv`
+   * `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
 1. 在您的Microsoft Dynamics實例中，執行下列操作：
 
@@ -273,7 +273,7 @@ We.Finance參考網站的電子郵件範本包含電子郵件中的個人化連�
 
 在作者和發佈例項上都執行下列動作：
 
-1. 前往https:// web組態主控台[]:[host]/system/console/configMgr。
+1. 請前往「AEM Web Configuration console」（AEM網頁設定主控台） `https://[server]:[host]/system/console/configMgr`。
 1. 尋找並點選 **[!UICONTROL Adobe Sign Configuration Service]** ，以開啟它進行設定。
 1. 將 **[!UICONTROL Status Update Scheduler Expression]** (狀態更新排程器運 **算式)配置為0 0/2 * * * * ?**。
 
@@ -369,7 +369,7 @@ AEM Forms與Adobe Analytics的整合可讓您監控和分析客戶與表單和�
 
 1. 按一 **[!UICONTROL 下「AEM Forms Target設定」]**。
 1. 選取Target架構。
-1. 在「目 **[!UICONTROL 標URL]** 」欄位中，指定AEM Forms的URL。 例如： `https://<hostname>:<port>/`。
+1. 在「目 **[!UICONTROL 標URL]** 」欄位中，指定AEM Forms的URL。 For example: `https://<hostname>:<port>/`.
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
 
