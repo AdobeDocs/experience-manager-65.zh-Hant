@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 56006a1f49e4d357cd7ee44a4a1dd1af7189e70a
 
 ---
 
@@ -41,7 +41,7 @@ MongoDB通常用於支援符合下列條件之一的AEM作者部署：
 
 ### AEM的MongoDB部署最少 {#minimal-mongodb-deployment-for-aem}
 
-以下是AEM在MongoDB上的最低部署。 為簡單起見，SSL終止和HTTP proxy元件已推廣。 它由一個MongoBD複製副本集組成，具有一個主映像和兩個輔助映像。
+以下是AEM在MongoDB上的最低部署。 為簡單起見，SSL終止和HTTP proxy元件已推廣。 它由一個MongoDB複製副本集組成，具有一個主映像和兩個輔助映像。
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
@@ -678,7 +678,7 @@ CSP允許對策略進行微調。 但是，在複雜的應用程式中，CSP標�
 
 雖然MongoMK支援將多個AEM執行個體與單一資料庫同時使用，但並行安裝則不受支援。
 
-為瞭解決這個問題，請務必先使用單一成員運行安裝，然後在完成安裝後添加其他成員。
+為瞭解決這個問題，請務必先使用單個成員運行安裝，然後在完成安裝後添加其他成員。
 
 ### 頁面名稱長度 {#page-name-length}
 
