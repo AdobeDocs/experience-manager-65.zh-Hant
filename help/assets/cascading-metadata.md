@@ -3,14 +3,14 @@ title: 階層式中繼資料
 description: 本文說明如何定義資產的階層式中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
 
 # 階層式中繼資料 {#cascading-metadata}
 
-在擷取資產的中繼資料資訊時，使用者會在各種可用欄位中提供資訊。 您可以顯示特定的中繼資料欄位或欄位值，這些欄位值取決於在其他欄位中選取的選項。 這種元資料的條件顯示稱為級聯元資料。 換言之，您可以在特定中繼資料欄位／值與一或多個欄位及／或其值之間建立相依性。
+在擷取資產的中繼資料資訊時，使用者會在各種可用欄位中提供資訊。 您可以顯示特定的中繼資料欄位或欄位值，這些欄位值取決於在其他欄位中選取的選項。 這種元資料的條件顯示稱為級聯元資料。 換言之，您可以在特定中繼資料欄位／值與一或多個欄位及／或其值之間建立相依關係。
 
 使用中繼資料結構來定義顯示階層式中繼資料的規則。 例如，如果中繼資料結構包含資產類型欄位，您可以根據使用者選擇的資產類型定義要顯示的相關欄位集。
 
@@ -32,8 +32,8 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 不論選擇的資產類型為何，請將版權資訊顯示為必填欄位。
 
-1. 點選／按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼 **[!UICONTROL 資料結構]**」。
-1. 在「方 **[!UICONTROL 案表單]** 」頁中，選擇方案表單，然後從工具欄點選／單 **[!UICONTROL 擊「編輯]** 」以編輯方案。
+1. 點選/按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼 **[!UICONTROL 資料結構]**」。
+1. 在「方 **[!UICONTROL 案表單]** 」頁中，選擇方案表單，然後從工具欄點選/單 **[!UICONTROL 擊「編輯]** 」以編輯方案。
 
    ![select_form](assets/select_form.png)
 
@@ -74,8 +74,8 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
    ![select_dependentfield](assets/select_dependentfield.png)
 
-1. 在「需 **[!UICONTROL 求]**」下，選擇 **[!UICONTROL 「必要」，根據新規則選項]** 。
-1. 點選／按一 **[!UICONTROL 下「新增規則]** 」，然後選擇「 **** 資產類型」欄位以建立相依性。 也選擇要在其上建立相關性的欄位值。 在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。 點選／按一 **[!UICONTROL 下「完成]** 」以儲存變更。
+1. Under **[!UICONTROL Requirement]**, choose the **[!UICONTROL Required, based on new rule]** option.
+1. 點選/按一 **[!UICONTROL 下「新增規則]** 」，然後選擇「 **** 資產類型」欄位以建立相依性。也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。點選/按一 **[!UICONTROL 下「完成]** 」以儲存變更。
 
    ![define_rule](assets/define_rule.png)
 
@@ -85,7 +85,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 1. 在「可 **[!UICONTROL 見性]**」下，選擇「可 **[!UICONTROL 見」，根據新規則選項]** 。
 
-1. 點選／按一 **[!UICONTROL 下「新增規則]** 」，然後選擇「 **** 資產類型」欄位以建立相依性。 也選擇要在其上建立相關性的欄位值。 在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。 點選／按一 **[!UICONTROL 下「完成]** 」以儲存變更。
+1. 點選/按一 **[!UICONTROL 下「新增規則]** 」，然後選擇「 **** 資產類型」欄位以建立相依性。也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。點選/按一 **[!UICONTROL 下「完成]** 」以儲存變更。
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
@@ -104,7 +104,9 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 1. 導覽至您套用中繼資料結構的資料夾，並開啟資產的屬性頁面。 根據您在「資產類型」欄位中的選擇，會顯示相關的階層式中繼資料欄位。
 
    ![視訊資產的階層式中繼資料](assets/video_asset.png)
+
    *圖：視訊的階層式中繼資料*
 
    ![檔案資產的階層式中繼資料](assets/doc_type_fields.png)
+
    *圖：檔案的階層式中繼資料*
