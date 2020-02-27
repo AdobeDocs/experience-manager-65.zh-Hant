@@ -3,7 +3,7 @@ title: 大量匯入和匯出資產中繼資料
 description: 大量匯入和匯出資產中繼資料
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -22,7 +22,7 @@ AEM Assets可讓您使用CSV檔案大量匯入資產中繼資料。 您可以匯
 
 1. 導覽至「資產」使用者介面，然後從工具列點選／按 **[!UICONTROL 一下]** 「建立」。
 1. 從功能表中，選取「中繼 **[!UICONTROL 資料]**」。
-1. 在「中繼資 **[!UICONTROL 料匯入]** 」頁面中，點選／按一 **[!UICONTROL 下「選取檔案」]**。 選取包含中繼資料的CSV檔案。
+1. 在「中繼資 **[!UICONTROL 料匯入]** 」頁面中，點選/按一 **[!UICONTROL 下「選取檔案」]**。選取包含中繼資料的CSV檔案。
 1. 指定下列參數：
 
    | 中繼資料匯入參數 | 說明 |
@@ -56,9 +56,10 @@ AEM Assets可讓您使用CSV檔案大量匯入資產中繼資料。 您可以匯
 1. 在「要 **[!UICONTROL 導出的屬性」(Properties to be exported]** )欄位中，指定要導出所有屬性還是要導出特定屬性。 如果選擇「選擇性屬性」以進行導出，請添加所需的屬性。
 
 1. 在工具列中點選／按一下「 **[!UICONTROL 匯出]**」。 訊息會確認中繼資料已匯出。 關閉訊息。
-1. 開啟導出作業的收件箱通知。 選擇作業，然後從工具 **[!UICONTROL 欄中]** ，按一下「開啟」。 若要下載包含中繼資料的CSV檔案，請從工具列點選／按 **[!UICONTROL 一下「CSV下載]** 」。 按一下 **[!UICONTROL 關閉]**。
+1. 開啟導出作業的收件箱通知。選擇作業，然後從工具 **[!UICONTROL 欄中]** ，按一下「開啟」。若要下載包含中繼資料的CSV檔案，請從工具列點選/按 **[!UICONTROL 一下「CSV下載]** 」。按一下 **[!UICONTROL 關閉]**。
 
    ![對話方塊，以下載包含大量匯出之中繼資料的CSV檔案](assets/csv_download.png)
+
    *圖：對話方塊，以下載包含大量匯出之中繼資料的CSV檔案*
 
 >[!MORELIKETHIS]
