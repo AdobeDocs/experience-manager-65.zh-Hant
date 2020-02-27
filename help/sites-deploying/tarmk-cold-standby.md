@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: c5e6098b62ff7e3e787b5f0f3c3b32a35e3981c6
 
 ---
 
@@ -361,6 +361,8 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 * `TransferredSegmentBytes:`傳送到此客戶機的位元組數。
 
 ## 冷備用儲存庫維護 {#cold-standby-repository-maintenance}
+
+### 修訂清除 {#revision-clean}
 
 >[!NOTE]
 如果在主實 [例上運行「聯機修訂清除](/help/sites-deploying/revision-cleanup.md) 」，則不需要下面顯示的手動過程。 此外，如果您使用「線上修訂清除」，則 `cleanup ()` 將自動執行備用實例的操作。
