@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選」面板在AEM中尋找所需資產，�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: faea8ebd2afea9ade9900a8e8b1e6cf3169c349d
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -49,7 +49,6 @@ AEM搜尋功能支援搜尋系列並搜尋系列中的資產。 請參閱 [搜�
 您可以使用搜尋Facet中動態更新的預期搜尋結果數目，更快地從搜尋結果頁面發現所需資產。 預期的資產數目會在套用搜尋篩選之前更新。 查看篩選的預期計數有助於您快速且有效地瀏覽搜尋結果。 如需詳細資訊，請參閱「 [在AEM中搜尋資產」](search-assets.md)。
 
 ![在搜尋Facet中檢視資產的概約數目，而不篩選搜尋結果。](assets/asset_search_results_in_facets_filters.png)
-
 
 *圖：在搜尋Facet中檢視資產的概約數目，而不篩選搜尋結果。*
 
@@ -100,7 +99,6 @@ AEM可搜尋許多檔案格式，而且可自訂搜尋篩選器以符合您的�
 
 ![輸入多個關鍵字以檢視符合所有關鍵字的建議](assets/search_suggestionsmanykeywords.gif)
 
-
 *圖：輸入多個關鍵字以檢視符合所有關鍵字的建議*
 
 ### 搜尋排名與提升 {#searchrank}
@@ -133,7 +131,6 @@ AEM提供各種方法，例如套用至已搜尋資產的篩選器，以協助�
 
 ![在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中](assets/search_folder_select.gif)
 
-
 *圖：在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中*
 
 ### 尋找類似的影像 {#visualsearch}
@@ -141,7 +138,6 @@ AEM提供各種方法，例如套用至已搜尋資產的篩選器，以協助�
 若要尋找視覺上類似使用者選取之影像的影像，請從影像的卡片檢視或工具列按一下「尋找類似 **** 」選項。AEM會顯示來自DAM儲存庫的智慧型標籤影像，這些影像類似於使用者選取的影像。瞭解 [如何設定相似性搜尋](#configvisualsearch)。
 
 ![使用卡片檢視中的選項尋找類似的影像](assets/search_find_similar.png)
-
 
 *圖：使用卡片檢視中的選項尋找類似的影像*
 
@@ -248,7 +244,6 @@ AEM搜尋功能支援搜尋系列並搜尋系列中的資產。 請參閱 [搜�
 
 ![在資產選擇器中瀏覽並選取資產](assets/assetpicker.png)
 
-
 *圖：在資產選擇器中瀏覽並選取資產*
 
 ## 限制 {#limitations}
@@ -290,7 +285,6 @@ AEM Assets中的搜尋功能有下列限制：
 
 ![使用引號和不使用引號的搜尋行為](assets/search_with_quotes.gif)
 
-
 *圖：使用引號和不使用引號的搜尋行為*
 
 **使用星號通配符進行搜索**:若要擴大搜尋範圍，請在搜尋字詞前後使用星號，以比對任意數目的字元。 例如，搜尋沒有星號的執行並不會傳回包含字詞變異的資產（包括在中繼資料中）。 星號可取代任意數字元。 例如，
@@ -301,7 +295,6 @@ AEM Assets中的搜尋功能有下列限制：
 * `*run*` 傳回所有可能的組合。
 
 ![以範例說明在資產搜尋中使用星號萬用字元](assets/search_with_asterisk_run.gif)
-
 
 *圖：以範例說明在資產搜尋中使用星號萬用字元*
 
@@ -315,13 +308,11 @@ AEM Assets中的搜尋功能有下列限制：
 
 ![使用範例說明在資產搜尋中使用問號萬用字元](assets/search_with_questionmark_run.gif)
 
-
 *圖：使用範例說明在資產搜尋中使用問號萬用字元*
 
 **排除關鍵字**:使用破折號來搜尋不含關鍵字的資產。 例如，查 `running -shoe` 詢會傳回包含但 `running`不包含的資產 `shoe`。 同樣地， `camp -night` 查詢會傳回包含但不包含 `camp` 的資產 `night`。 請注意， `camp-night` 查詢會傳回同時包含和的 `camp` 資產 `night`。
 
 ![使用破折號來搜尋不含已排除關鍵字的資產](assets/search_dash_exclude_keyword.gif)
-
 
 *圖：使用破折號來搜尋不含已排除關鍵字的資產*
 
@@ -423,7 +414,6 @@ AEM Assets中的搜尋功能有下列限制：
 若要檢查資產或資產版本記錄的註解，請按一下資產以開啟大型預覽。在左側導軌中開啟時間軸，並選取「 **[!UICONTROL 注釋]** 」或「 **[!UICONTROL 版本」]**。您也可以依時間順序將時間軸活動 (例如注釋或版本) 排序。
 
 ![排序搜尋資產的時間軸項目](assets/sort_timeline_search_results.gif)
-
 
 *圖：排序搜尋資產的時間軸項目*
 
