@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 37d0225f69800225e82f253ad9dbab8b2b30ac5e
+source-git-commit: fdcd9173b02347a7a9527b292635d63e8aa9ce19
 
 ---
 
@@ -291,6 +291,12 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 **Foundation JEE**
 
 * 動作設定不會載入「叫用表單工作流程」提交動作的程式名稱(NPR-31478)。
+* JEE上的AEM Forms使用者在匯入。lca檔案或在管理控制台中設定LDAP時，會遇到類似下列的錯誤：
+
+   `com.ibm.ws.webcontainer.filter.FilterInstanceWrapper doFilter SRVE8109W: Uncaught exception thrown by filter um: java.lang.NoClassDefFoundError: org/apache/commons/io/IOUtils at org.apache.commons.fileupload.util.Streams.copy`
+
+   `Error 500: javax.servlet.ServletException: java.lang.NoClassDefFoundError: org.apache.commons.io.IOUtils` (NPR-30931)
+
 
 ### 隨附的功能套件 {#feature-packs-included-6530}
 
@@ -393,13 +399,13 @@ Adobe Public Maven儲存庫中提供UberJar for AEM 6.5.3.0 [](https://repo.adob
 </dependency>
 ```
 
-## 不建議使用的功能 {#removed-deprecated-features}
+## Deprecated Features {#removed-deprecated-features}
 
 本節列出已標示為不再支援的AEM 6.5.3.0功能。計畫在未來版本中移除的功能會先設為不建議使用，並提供替代選項。
 
 建議客戶在目前的部署中是否使用功能，並規劃變更實施以使用替代選項。
 
-| 區域 | 功能 | 取代 |
+| 區域 | 功能 | 替代方案 |
 |---|---|---|
 | 整合 | AEM Cloud **[!UICONTROL Services選擇加入畫面已過時]** 。 隨著AEM 6.5中的AEM和Target整合更新，以支援Target Standard API（透過Adobe IMS和I/O使用驗證），以及Adobe Launch在檢測AEM頁面以進行分析和個人化方面的角色日漸增加，「選擇加入」精靈在功能上已變得無關緊要。 | 透過個別的AEM雲端服務，設定系統連線、Adobe IMS驗證和Adobe I/O整合 |
 
