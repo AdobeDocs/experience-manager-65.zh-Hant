@@ -3,7 +3,7 @@ title: Camera raw支援
 description: 瞭解如何在Adobe Experience Manager Assets中啟用Camera raw支援。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0b8472dbfbfe326b4b5fe0d43b0f361318b37d16
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -53,11 +53,9 @@ source-git-commit: 0b8472dbfbfe326b4b5fe0d43b0f361318b37d16
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-
 *圖：側窗格中的選項。*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
-
 
 *圖：使用選項對影像進行輕量型編輯。*
 
