@@ -3,7 +3,7 @@ title: 中繼資料結構
 description: 中繼資料結構定義屬性頁面的版面配置，以及為資產顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 4efe021c2f3f6f38594182d27a76ff69b7466c92
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 您可以使用中繼資料結構表單編輯器來修改現有結構或新增自訂中繼資料結構。
 
-1. 若要檢視資產的屬性頁面，請在「卡片檢視」中，按一下或點選資產圖格上的「快速動作」 **[!UICONTROL 的「檢視屬性]** 」圖示。
+1. 若要檢視資產的屬性頁面，請在「卡片檢視」中按一下或點選資產圖格上的「快速動作」 **[!UICONTROL 的「檢視屬性]** 」圖示。
 
    ![chlimage_1-34](assets/chlimage_1-170.png)
 
@@ -28,26 +28,26 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳 [細資訊，請參閱編輯中繼資料結構](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) 表單。 如果您修改特定MIME類型的中繼資料架構，則會修改目前MIME類型資產和所有資產子類型的屬性頁面配置。 例如，在下修改jpeg架構時， `default/image` 僅會修改MIME類型資產的中繼資料配置（資產屬性） `image/jpeg`。 不過，如果您編輯預設結構，您的變更會修改所有類型資產的中繼資料配置。
 
-1. 若要檢視表單／範本清單，請按一下AEM標誌，然後導覽至「工具 **[!UICONTROL >資產]** >中繼資 **[!UICONTROL 料結構]******」。
+1. 若要檢視表單/範本清單，請按一下 AEM 標誌，然後導覽至&#x200B;**[!UICONTROL 「工具」]**>**[!UICONTROL 「資產」]**>**[!UICONTROL 「中繼資料結構描述」]**。
 
    ![chlimage_1-37](assets/chlimage_1-173.png)
 
    AEM提供現成可用的下列範本：
-
    * **預設**:資產的基本中繼資料結構表單。
-   以下子表單繼承預設表單的屬性：i.影 **像**:MIME類型為&quot;image&quot;的資產的架構表單， `image/jpeg`例如 `image/png`、等。
-「影像」表單包含下列子表單範本：a. **jpeg**:子類型資產的結構表單 `jpeg`。
-b. **tiff**:子類型資產的結構表單 `tiff`。
 
-   ii. **應用程式**:具有MIME類型的資產的 `application`架構表單， `application/pdf``application/zip`例如，等等。
-a. **pdf**:子類型資產的結構表單 `pdf`。
+      以下子表單繼承預設表單的屬性：
 
-   iii. **視訊**:具有MIME類型的資產的 `video`架構表單， `video/avi`如 `video/mp4`、等等。
+      1. **影像**:MIME類型為&quot;image&quot;的資產的架構表單， `image/jpeg`例如 `image/png`、等。
 
+         「影像」表單包含下列子表單範本：
+         * **jpeg**:子類型資產的結構表單 `jpeg`。
+         * **tiff**:子類型資產的結構表單 `tiff`。
+      1. **應用程式**:具有MIME類型的資產的 `application`架構表單， `application/pdf``application/zip`例如，等等。
+         * **pdf**:子類型資產的結構表單 `pdf`。
+      1. **視訊**:具有MIME類型的資產的 `video`架構表單， `video/avi`如 `video/mp4`、等等。
    * **系列**:系列的結構表單。
    * **** contentfragment:內容片段的架構表單。
    * **表單**:此結構表單與 [Adobe Experience Manager Forms相關](/help/forms/home.md)。
-
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ a. **pdf**:子類型資產的結構表單 `pdf`。
 
 您可以將新標籤或表單項目新增至中繼資料結構表單。 衍生自父項的制表符和表單項處於鎖定狀態。 您無法在子級更改它們。
 
-1. 在「方案表單」頁中，選中表單前的複選框，然後按一下工具欄上的編輯表徵圖。
+1. 在「方案表單」頁中，選中表單前的複選框，然後按一下工 具欄上的 「編輯」表徵圖。
 
    ![chlimage_1-39](assets/chlimage_1-175.png)
 
@@ -121,7 +121,7 @@ a. **pdf**:子類型資產的結構表單 `pdf`。
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資產的中繼資料節點，做為屬性 `dc:title`。
 
-* `./jcr:created`:在資產的節點顯示JCR屬性。 如果您在檢視屬性上設定這些屬性，建議您將它們標示為「停用編輯」，因為這些屬性受到保護。 否則，在您 [!UICONTROL 儲存資產屬性時] ，錯誤「資產」無法修改結果。
+* `./jcr:created`:在資產的節點顯示JCR屬性。 如果您在檢視屬性上設定這些屬性，建議您將它們標示為「停用編輯」，因為這些屬性受到保護。Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
 
 為確保元資料架構表單中的元件正確顯示，屬性路徑不應包含任何空格。
 
@@ -139,7 +139,7 @@ a. **pdf**:子類型資產的結構表單 `pdf`。
 >
 >隱藏欄位元件不包括這些屬性。 而是包含屬性，例如屬性名稱、值、欄位標籤和說明。 每當儲存資產時，「隱藏欄位」元件的值都會以POST參數傳送。 它不會儲存為資產的中繼資料。
 
-如果您選取「必 **[!UICONTROL 要]** 」選項，可以搜尋遺失必要中繼資料的資產。 從「篩 **[!UICONTROL 選器]** 」面板中，展開「中繼資料 **[!UICONTROL 驗證謂語]** 」並選取「 **[!UICONTROL 無效]** 」選項。 搜尋結果會顯示遺失您透過結構表單設定之必要中繼資料的資產。
+如果您選取「必 **[!UICONTROL 要]** 」選項，可以搜尋遺失必要中繼資料的資產。從「篩 **[!UICONTROL 選器]** 」面板中，展開「中繼資料 **[!UICONTROL 驗證謂語]** 」並選取「 **[!UICONTROL 無效]** 」選項。搜尋結果會顯示遺失您透過結構表單設定之必要中繼資料的資產。
 
 ![chlimage_1-42](assets/chlimage_1-178.png)
 
@@ -153,11 +153,11 @@ a. **pdf**:子類型資產的結構表單 `pdf`。
 
 ### 在JSON檔案中指定屬性 {#specify-properties-in-json-file}
 
-您不必在「設定」標籤中指定選項的屬 **[!UICONTROL 性]** ，而是可以透過指定對應的索引鍵值配對，來定義JSON檔案中的選項。 在「 **[!UICONTROL JSON路徑」欄位中指定JSON檔案的]** 路徑。
+您不必在「設定」標籤中指定選項的屬 **[!UICONTROL 性]** ，而是可以透過指定對應的索引鍵值配對，來定義JSON檔案中的選項。在「 **[!UICONTROL JSON路徑」欄位中指定JSON檔案的]** 路徑。
 
 #### 在架構表單中添加或刪除頁籤 {#adding-deleting-a-tab-in-the-schema-form}
 
-架構編輯器可讓您新增或刪除標籤。 預設模式表單包 **[!UICONTROL 括Basic]**、 **[!UICONTROL Advanced]** 、 **[!UICONTROL IPTC]**&#x200B;和 **** IPTC Extension頁籤，預設情況下。
+架構編輯器可讓您新增或刪除標籤。預設模式表單包 **[!UICONTROL 括Basic]**、 **[!UICONTROL Advanced]** 、 **[!UICONTROL IPTC]**&#x200B;和 **** IPTC Extension頁籤，預設情況下。
 
 ![chlimage_1-45](assets/chlimage_1-181.png)
 
@@ -189,7 +189,7 @@ AEM Assets提供各種MIME類型的預設現成可用表單。 不過，您可�
 
 ### 為MIME類型添加新表單 {#add-new-forms-for-mime-types}
 
-在適當的表單類型下建立新表單。 例如，若要新增影像/png子類型的 **新範本** ，請在「影像」表單下建立表單。 方案表單的標題是子類型名稱。 在本例中，標題為&quot;png.**&quot;**
+在適當的表單類型下建立新表單。例如，若要新增影像/png子類型 **的新範本** ，請在「影像」表單下建立表單。方案表單的標題是子類型名稱。在本例中，標題為&quot;png.**&quot;**
 
 #### 對各種MIME類型使用現有的架構模板 {#use-an-existing-schema-template-for-various-mime-types}
 
@@ -236,7 +236,7 @@ AEM Assets可讓您定義中繼資料結構的變體，並將其套用至特定�
 
 如果資料夾具有子資料夾，則子資料夾內的資產將繼承子資料夾級別上應用的方案的元資料（如果子資料夾級別應用了不同的方案）。 但是，如果子資料夾級別未應用方案或相同方案，則子資料夾資產將繼承父資料夾級別所應用方案的元資料。
 
-1. 按一下AEM標誌，然後導覽至「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼 **[!UICONTROL 資料結構]**」。 此時將顯示 **[!UICONTROL 「元資料結構表]** 」頁。
+1. 按一下 AEM 標誌，然後導覽至&#x200B;**[!UICONTROL 「工具」]**>**[!UICONTROL 「資產」]**>**[!UICONTROL 「中繼資料結構描述」]**。此時會顯示&#x200B;**[!UICONTROL 「中繼資料結構描述表單」]**&#x200B;頁面。
 1. 選取表單前的核取方塊，例如預設中繼資料表單，然後按一下或點選復製圖示，並將它儲存為自訂表單。 例如，指定表單的自訂名稱 `my_default`。 或者，您也可以建立自訂表格。
    ![chlimage_1-184](assets/chlimage_1-184.png)
 
@@ -269,7 +269,7 @@ AEM Assets可讓您定義中繼資料結構的變體，並將其套用至特定�
 >
 >中繼資料欄位可根據其他欄位的值，定義為必填欄位。 在「卡片」檢視中，AEM不會顯示有關此類強制中繼資料欄位遺失中繼資料的警告訊息。
 
-1. 按一下AEM標誌，然後導覽至「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼 **[!UICONTROL 資料結構]**」。 此時將顯示 **[!UICONTROL 「元資料結構表]** 」頁。
+1. 按一下 AEM 標誌，然後導覽至&#x200B;**[!UICONTROL 「工具」]**>**[!UICONTROL 「資產」]**>**[!UICONTROL 「中繼資料結構描述」]**。此時會顯示&#x200B;**[!UICONTROL 「中繼資料結構描述表單」]**&#x200B;頁面。
 1. 將預設中繼資料表單儲存為自訂表單。 例如，將它另存為 `my_default`。
 
    ![chlimage_1-53](assets/chlimage_1-189.png)
