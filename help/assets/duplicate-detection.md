@@ -3,7 +3,7 @@ title: 可偵測重複資產
 description: 瞭解如何在AEM中啟用重複資產的偵測。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -17,7 +17,6 @@ source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
 1. 選取「偵 **[!UICONTROL 測重複]** 」選項，然後按一下／點選「 **[!UICONTROL 儲存」]**。
 
    ![在servlet中選擇檢測重複選項](assets/chlimage_1-377.png)
-
 
    *圖：在servlet中選擇檢測重複選項*
 
