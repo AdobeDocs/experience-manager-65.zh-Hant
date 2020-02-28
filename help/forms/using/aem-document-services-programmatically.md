@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: 9d7dd160cd4a9a1bfac9628498efae2e1f98023f
+source-git-commit: 86257dd8a54a0f25ed4365990a678bb794f18744
 
 ---
 
@@ -1355,7 +1355,7 @@ secureDocument可讓您個別或以特定順序以任何組合來加密、簽署
 
 公鑰證書包含用戶的公鑰和標識資訊。 X.509格式用於儲存憑證。 證書通常由證書頒發機構(CA)核發和數位簽名，該機構是一個認可的實體，提供對證書有效性的信任度。 憑證有到期日，之後即不再有效。
 
-此外，證書撤銷清單(CRL)提供在證書到期日前被撤銷的證書資訊。 憑證授權機構會定期發佈CRL。 證書的撤銷狀態也可以通過網路上的線上證書狀態協定(OCSP)來檢索。
+此外，證書撤銷清單(CRL)提供在證書到期日前被撤銷的證書資訊。 憑證授權機構會定期發佈CRL。 證書的撤銷狀態也可以通過網路上的聯機證書狀態協定(OCSP)來檢索。
 
 *****注意&#x200B;*:在*使用憑證加密PDF檔案之前，您必須先確定您已將憑證新增至AEM Trust Store *。
 
@@ -4471,11 +4471,10 @@ GeneratePDFService提供API，可將各種檔案格式，例如。doc、.docx、
    <td><strong>✓</strong></td>
   </tr>
   <tr>
-   <td>exportPDF</td>
+   <td>htmlToPDF</td>
    <td><strong>✓</strong></td>
    <td><strong>✓</strong></td>
   </tr>
-  <tr>
    <td>最佳化PDF</td>
    <td><strong>✓</strong></td>
    <td>✖</td>
