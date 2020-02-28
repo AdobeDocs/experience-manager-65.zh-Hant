@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1e70a1a0f82bcdf698dec378df1c3d59815e692b
+source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
 
 ---
 
@@ -93,26 +93,26 @@ Adobe Camera raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 
 資產管理功能支援的檔案格式如下：
 
-| 格式 | 儲存 | 中繼資料<br> 管理 | 中繼資料擷取<br> (Metadata Extraction) | 產生縮圖<br> (Thumbnail Generation) | 互動式編輯<br> | 回寫中繼資料<br> (Metadata) | 分析 |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
-| DOC | ✓ | ✓ | ✓ | ✓ |  |  |  |
-| DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  |
-| ODT | ✓ | ✓ | ✓ |  |  |  |  |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| HTML | ✓ | ✓ | ✓ |  |  |  |  |
-| RTF | ✓ | ✓ | ✓ |  |  |  |  |
-| TXT | ✓ | ✓ | ✓ |  |  |  |  |
-| XLS | ✓ | ✓ | ✓ |  |  |  |  |
-| XLSX | ✓ | ✓ | ✓ | ✓ |  |  |  |
-| ODS | ✓ | ✓ | ✓ |  |  |  |  |
-| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| ODP | ✓ | ✓ | ✓ |  |  |  |  |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
-| PS | ✓ | ✓ |  |  |  |  |  |
-| QXP | ✓ | ✓ |  |  |  |  |  |
-| EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |
+| 格式 | 儲存 | 中繼資料<br> 管理 | 中繼資料擷取<br> (Metadata Extraction) | 產生縮圖<br> (Thumbnail Generation) | 互動式編輯<br> | 回寫中繼資料<br> (Metadata) | 分析 | 連線資產 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
+| DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
+| ODT | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| HTML | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| RTF | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| TXT | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| XLS | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
+| ODS | ✓ | ✓ | ✓ |  |  |  |  |  |
+| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
+| ODP | ✓ | ✓ | ✓ |  |  |  |  |  |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
+| PS | ✓ | ✓ |  |  |  |  |  |  |
+| QXP | ✓ | ✓ |  |  |  |  |  |  |
+| EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
 動態媒體功能支援的檔案格式如下：
 
@@ -272,5 +272,4 @@ CRXDE Lite中提供支援的MIME類型清單，網址為 `/conf/global/settings/
 >[!MORELIKETHIS]
 >
 >* [啟用MIME類型型資產/Scene7上傳工作參數支援](../sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
->* [Connected Assets功能支援的格式](/help/assets/use-assets-across-connected-assets-instances.md)
 
