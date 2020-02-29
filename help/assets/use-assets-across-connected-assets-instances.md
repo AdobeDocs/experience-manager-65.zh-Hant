@@ -3,7 +3,7 @@ title: 在Adobe Experience Manager Sites製作工作流程中，使用連結的�
 description: 在其他Experience Manager網站部署中建立網頁時，請使用遠端Adobe Experience Manager Assets部署中的可用資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
+source-git-commit: bcc51ca9cc98af0141824e0f1ea6c3c0fd9fa888
 
 ---
 
@@ -35,7 +35,10 @@ AEM Sites提供建立網頁的功能，而AEM Assets是數位資產管理(DAM)�
 
 ### 支援的檔案格式 {#mimetypes}
 
-作者可在Content Finder中搜尋影像和下列類型的檔案，並在「頁面編輯器」中使用搜尋的資產。 可將檔案新增至元 `Download` 件，並將影像新增至元 `Image` 件。 作者也可以在任何可延伸預設或元件的自訂AEM元件中新增遠 `Download` 端資 `Image` 產。 如需支援格式的清單，請參閱「連 [接的資產」支援格式](assets-formats.md#supported-document-formats)。
+作者可在Content Finder中搜尋影像和下列類型的檔案，並在「頁面編輯器」中使用搜尋的資產。 可將檔案新增至元 `Download` 件，並將影像新增至元 `Image` 件。 作者也可以在任何可延伸預設或元件的自訂AEM元件中新增遠 `Download` 端資 `Image` 產。 支援的格式清單包括：
+
+* **影像格式**:Image元件支援的影像格 [式](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) ，由Connected Assets支援。 不支援動態媒體元件。
+* **檔案格式**:請參 [閱Connected Assets支援的檔案格式](assets-formats.md#supported-document-formats)。
 
 ### Users and groups involved {#users-and-groups-involved}
 
@@ -45,7 +48,7 @@ AEM Sites提供建立網頁的功能，而AEM Assets是數位資產管理(DAM)�
 |----------------------------------|--------|------------------------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AEM Sites Administrator | 本機 | AEM管理員 | `admin` | 設定AEM，設定與遠端資產部署的整合。 |
 | DAM使用者 | 本機 | 作者 | `ksaner` | 用於在中查看和複製提取的資產 `/content/DAM/connectedassets/`。 |
-| AEM Sites作者 | 本機 | 作者（可在遠端DAM上存取讀取權，並可在本機網站上存取作者） | `ksaner` | 一般使用者是網站作者，他們使用此項整合來提升內容速度。 作者使用Content Finder和本機網頁中的必要影像，在遠端DAM中搜尋及瀏覽資產。 使用 `ksaner` DAM使用者的認證。 |
+| AEM Sites作者 | 本機 | 作者（可在遠端DAM上存取讀取權，並可在本機網站上存取作者） | `ksaner` | 一般使用者是網站作者，他們使用此項整合來提升其內容速度。 作者使用Content Finder和本機網頁中的必要影像，在遠端DAM中搜尋及瀏覽資產。 使用 `ksaner` DAM使用者的認證。 |
 | AEM Assets管理員 | 遠端 | AEM管理員 | `admin` 在遠端AEM上 | 設定跨原始資源共用(CORS)。 |
 | DAM使用者 | 遠端 | 作者 | `ksaner` 在遠端AEM上 | 在遠端AEM部署上編寫角色。 使用內容搜尋器，在「已連線資產」中搜尋及瀏覽資產。 |
 | DAM配銷商（技術使用者） | 遠端 | 封裝建立工具和網站作者 | `ksaner` 在遠端AEM上 | AEM本端伺服器（而非網站作者角色）會使用此位於遠端部署的使用者來擷取遠端資產，代表網站作者。 此角色與上述兩個角色不同， `ksaner` 且屬於不同的使用者群組。 |
@@ -110,7 +113,7 @@ AEM管理員可以建立此整合。 在建立後，使用它所需的權限會�
 
 作者可以在單一網頁中使用本機DAM和遠端DAM例項兩者上的可用資產。 使用內容搜尋器可在搜尋本機DAM或搜尋遠端DAM之間切換。
 
-只有那些具有與本地Sites實例相同分類層次結構的完全對應標籤的遠程資產的標籤才會被讀取。 會捨棄任何其他標籤。 作者可以使用遠端AEM部署上所有顯示的標籤來搜尋遠端資產，因為AEM提供全文搜尋。
+只有那些具有與本地Sites實例相同分類層次結構的完全對應標籤的遠程資產的標籤才會被讀取。 會捨棄任何其他標籤。 作者可以使用遠端AEM部署上的所有標籤來搜尋遠端資產，因為AEM提供全文搜尋。
 
 ### 使用的逐步介紹 {#walk-through-of-usage}
 
