@@ -4,7 +4,7 @@ seo-title: AEM 6.5 Assets使用指南
 description: 本指南涵蓋所有AEM Assets工作，例如如何建立、管理、傳送和最佳化數位資產。
 seo-description: 涵蓋所有AEM Assets工作，例如如何建立、管理、提供和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
+source-git-commit: b90343874d5afd9858d8a6d82828eabdfa1d3ccd
 
 ---
 
@@ -39,11 +39,11 @@ source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
 
 ## 關鍵AEM資源
 
-* [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEM教學影片](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [GDPR 整備](/help/managing/data-protection-and-privacy.md)
+* [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
+* [AEM Assets社群論壇](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用指南](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [核心元件使用指南](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
-* [GDPR就緒性](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
-* [AEM社群論壇](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
