@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -154,7 +154,7 @@ log-bin=logname
 
 當安裝Content Services（已過時）時，會建立內容儲存根目錄。 在AEM表單安裝程式期間，會決定內容儲存根目錄的位置。
 
-「內容儲存根目錄」的預設位置 *[為aem-forms root]*/lccs_data。
+內容儲存根目錄的預設位置為 `[aem-forms root]/lccs_data`。
 
 備份位於「內容儲存根目錄」中的以下目錄：
 
@@ -176,7 +176,7 @@ log-bin=logname
 
 **** 索引根目錄：在群集中每個節點上建立的目錄，始終具有相同的路徑和目錄名
 
-內容儲存根目錄的預設位置是 *[GDS root]*/lccs_data，其中 *[GDS root]* (GDS root [)是](files-back-recover.md#gds-location)GDS位置中描述的位置。 備份位於「內容儲存根目錄」中的以下目錄：
+內容儲存根目錄的預設位置是 `[GDS root]/lccs_data`，其中 `[GDS root]` 是 [GDS位置中描述的位置](files-back-recover.md#gds-location)。 備份位於「內容儲存根目錄」中的以下目錄：
 
 /audit.contentstore
 
@@ -188,7 +188,7 @@ log-bin=logname
 
 如果/backup-lucene-indexes目錄不存在，請備份/lucene-indexes目錄，該目錄也位於「內容儲存根目錄」中。 如果/backup-lucene-indexes目錄存在，請不要備份/lucene-indexes目錄，因為該目錄可能導致錯誤。
 
-「索引根目錄」的預設位置是 *[每個節點上的aem-forms root]*/lucene-indexes。
+索引根目錄的預設位置位於每 `[aem-forms root]/lucene-indexes` 個節點上。
 
 ## 客戶安裝字型 {#customer-installed-fonts}
 
@@ -196,6 +196,6 @@ log-bin=logname
 
 >[!NOTE]
 >
->依預設，隨AEM表單安裝的Adobe字型位於 [aem-forms root]/fonts目錄中。
+>依預設，隨AEM表單安裝的Adobe字型位於目 `[aem-forms root]/fonts` 錄中。
 
 如果您正在重新初始化主機上的作業系統，並想要使用先前作業系統的字型，則系統字型目錄的內容也應加以備份。 （如需特定指示，請參閱作業系統的檔案）。
