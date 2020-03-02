@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 您可以使用下列用戶端應用程式，以程式設計方式叫用在Workbench中建立的以人為中心的長期流程：
 
 * 使用調用API的Java基於Web的客戶端應用程式。 (請參 [閱「使用Java API叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-java.md)」(/help/forms/developing/invoking-aem-forms-using-java.md#ucking-aem-forms-using-the-java-api))。
-* 使用web services的ASP.NET應用程式。 (請參 [閱使用Web services叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services))。
+* 使用web services的ASP.NET應用程式。 (請參 [閱「使用Web services叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)」)。
 * 使用Flex建立的用戶端應用程式，使用Remoting。 (請參 [閱使用（AEM表單已過時）AEM Forms Remoting叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting))。
 
 調用的長期進程名為 *FirstAppSolution/PreLoanProcess*。 您可以遵循「建立您的第一個AEM Forms應用程式」中指 [定的教學課程，來建立此程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)。
@@ -163,7 +163,7 @@ Java servlet將執行以下任務：
 1. 建立包 `ServiceClientFactory` 含連接屬性的對象。 (請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
 1. 使用其 `ServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。 對 `ServiceClient` 像可讓您調用服務操作。 它可處理如定位、調度和路由調用請求等任務。
 1. 使用其 `java.util.HashMap` 建構函式建立物件。
-1. 針對每 `java.util.HashMap` 個輸入參 `put` 數叫用物件的方法，以傳遞至長期的程式。 請確定您指定流程輸入參數的名稱。 由於此 `FirstAppSolution/PreLoanProcess` 過程需要一個類型( `XML` 命名 `formData`)的輸入參數，因此您只需調用該方法一 `put` 次。
+1. 針對每 `java.util.HashMap` 個輸入參 `put` 數叫用物件的方法，以傳遞至長期的程式。 請確定您指定流程輸入參數的名稱。 由於此 `FirstAppSolution/PreLoanProcess` 過程需要一個類型( `XML` 命名 `formData`)的輸入參數，因此您只需調用一 `put` 次方法。
 
    ```as3
     //Get the XML to pass to the FirstAppSolution/PreLoanProcess process
@@ -431,7 +431,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 ### 將WAR檔案部署至代管AEM Forms的J2EE應用程式伺服器 {#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms}
 
-將WAR檔案部署至部署AEM Forms的J2EE應用程式伺服器。 若要將WAR檔案部署至J2EE應用程式伺服器，請將WAR檔案從匯出路徑複製至 *[AEM Forms Install]*\Adobe\Adobe Experience Manager Forms\jboss\server\lc_turnkey\deploy。
+將WAR檔案部署至部署AEM Forms的J2EE應用程式伺服器。 要將WAR檔案部署到J2EE應用程式伺服器，請將WAR檔案從導出路徑複製到 `[AEM Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\lc_turnkey\deploy`。
 
 >[!NOTE]
 >
@@ -508,7 +508,7 @@ ASP.NET應用程式執行以下任務：
 
 >[!NOTE]
 >
->以 `hiro-xp` 代管AEM Forms的J2EE應用程式伺服器的IP位址取代。 此選 `lc_version` 項可確保AEM Forms功能（例如MTOM）可供使用。 若未指定 `lc_version`選項，就無法使用MTOM叫用AEM Forms。 (請參 [閱使用MTOM叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom))。
+>以 `hiro-xp` 代管AEM Forms的J2EE應用程式伺服器的IP位址取代。 此選 `lc_version` 項可確保AEM Forms功能（例如MTOM）可供使用。 若未指定 `lc_version`選項，就無法使用MTOM叫用AEM Forms。 (請參 [閱「使用MTOM叫用AEM表單](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)」)。
 
 ### 建立叫用FirstAppSolution/PreLoanProcess的ASP頁面 {#create-an-asp-page-that-invokes-firstappsolution-preloanprocess}
 
