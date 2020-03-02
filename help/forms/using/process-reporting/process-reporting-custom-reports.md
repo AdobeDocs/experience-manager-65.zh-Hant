@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -32,7 +32,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 CRX queryBuilder REST介面透過Java API和REST API公開「資產共用查詢產生器」的功能。 在執行下列步驟之 [前，瞭解如何使用CRX QueryBuilder REST介面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html):
 
-1. 瀏覽至URL https://[server]:[port]/lc/bin/querybuilder.json
+1. 瀏覽至URL `https://[server]:[port]/lc/bin/querybuilder.json`
 1. 根據Process Reporting儲存節點結構和節點屬性建立查詢。
 
    您可以指定可選參數來指定偏移、限制、點擊和屬性。 您可以硬式編碼靜態報表的引數，並從動態報表的UI擷取參數。
@@ -426,7 +426,7 @@ public class PeriodicProcessVolume {
 
 1. 在節點上建立CRX節 `/apps` 點並授予適當的訪問權限。 (PERM_PROCESS_REPORTING_USER)
 1. 在節點上定義渲染 `/content` 器。
-1. 將JSP或HTML檔案添加到步驟1中建立的節點。 您也可以新增CSS檔案。
+1. 將JSP或HTML檔案添加到在步驟1中建立的節點。 您也可以新增CSS檔案。
 
    ![包含JSP和CSS檔案的範例節點](assets/nodewith_jsp_css_new.png)
 
