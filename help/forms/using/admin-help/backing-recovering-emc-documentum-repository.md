@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -189,22 +189,22 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 按如下方式設定配置檔案密碼：
 
-   * 開啟命令提示符，然後更改 *[到NetWorker_root]*\Legato\nsr\bin。
+   * 開啟命令提示符，然後更改為 `[NetWorker_root]\Legato\nsr\bin`。
    * 運行以下命令： `-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;密碼>*
 
 1. 建立用於備份資料庫的可執行批處理(.bat)檔案。 （請參見NetWorker文檔。）根據您的安裝，在批處理檔案中設定詳細資訊。
 
    * 完整資料庫備份(nsrnmdbf.bat):
 
-      *[NetWorker資料庫_module_root]* &lt;NetWorker_Server_Name> `-s`*username *password`-U`*[password ]*`-P`*[]*`-l full`*&lt;database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]`password`-P`*[]*`-l full`*&lt;database_name>*
 
    * 增量資料庫備份(nsrnmddbi.bat):
 
-      *[NetWorker資料庫_module_root]* &lt;NetWorker_Server_Name> `-s`*username *password`-U`*[password ]*`-P`*[]*`-l 1 -R`*&lt;database_name>*
+      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P``[password]``-l 1 -R`*&lt;database_name>*
 
    * 資料庫日誌備份(nsrnmddbl.bat):
 
-      *[NetWorker資料庫_module_root]* &lt;NetWorker_Server_Name> `-s`*username *password`-U`*[password ]*`-P`*[]*`-l incr -R`*&lt;database_name>*
+      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>``-U``[username]``-P``[password]``-l incr -R`*&lt;database_name>*
 
       其中：
 
@@ -240,7 +240,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 >
 >命令指令碼需要您在準備EMC Document Content Server進行備份和恢復中建立的nsrnmd_win.cfg [檔案的完整路徑](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery)。
 
-1. 開啟命令提示符，然後更改 *[到NetWorker_root]*\Legato\nsr\bin。
+1. 開啟命令提示符，然後更改為 `[NetWorker_root]\Legato\nsr\bin`。
 1. 運行以下命令：
 
    ```as3
@@ -266,4 +266,3 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
    ```as3
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
    ```
-
