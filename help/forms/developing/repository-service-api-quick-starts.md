@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -53,7 +53,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 >[!NOTE]
 >
->您可以使用網頁瀏覽器來瀏覽AEM Forms Repository。 要瀏覽儲存庫，請在Web瀏覽器https://伺服器名[稱]:[server port]/repository中輸入以下URL。 您可使用網頁瀏覽器來驗證快速入門結果。 例如，如果您新增內容至AEM Forms Repository，您就可以在網頁瀏覽器中看到內容。
+>您可以使用網頁瀏覽器來瀏覽AEM Forms Repository。 要瀏覽儲存庫，請在Web瀏覽器中輸入以下URL `https://[server name]:[server port]/repository`。 您可使用網頁瀏覽器來驗證快速入門結果。 例如，如果您新增內容至AEM Forms Repository，您就可以在網頁瀏覽器中看到內容。
 
 >[!NOTE]
 >
