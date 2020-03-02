@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -702,7 +702,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 請注意下列問題：
 
-* Microsoft Spy\+\+使用&amp;符號(&amp;)來識別標題的熱鍵，以顯示標題。 例如，Spy\+\+將一個「打印」對話框的標題顯示為 `Pri&nt`，這表示熱鍵為 *n*。 指令碼和對話框XML檔案中的標題必須省略&amp;符號。
+* Microsoft Spy++使用&amp;符號(&amp;)來識別標題的熱鍵，以顯示標題。 例如，Spy++將一個「打印」對話框的標題顯示為 `Pri&nt`，這表示熱鍵為 *n*。 指令碼和對話框XML檔案中的標題必須省略&amp;符號。
 * 有些標題包含分行符號。 「產生PDF」服務無法識別分行符號。 如果標題包含分行符號，請包含足夠的標題以區隔其他功能表項目，然後對省略的部分使用規則運算式。 例如( `^Long caption title$`)。]. (請參閱 [在標題屬性中使用規則運算式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
 * 對保留的XML字元使用字元實體（也稱為轉義序列）。 例如，對於 `&` &amp;符號， `<` 對於 `>` 小於和大於符號，對於撇號 `&apos;` ，對於 `&quot;` 引號。
 
@@ -713,7 +713,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 對話框和指令碼檔案駐留在appmondata.jar檔案中。 在可以修改這些檔案或添加新指令碼或對話框檔案之前，必須先取消打包此JAR檔案。 例如，假設您要新增對EditPlus應用程式的支援。 您可以建立兩個XML檔案，名為appmon.editplus.script.en_US.xml和appmon.editplus.script.addition.en_US.xml。 這些XML指令碼必須新增至位於兩個位置的adobe-appmondata.jar檔案，如下所述：
 
 * adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.ear檔案位於匯出資料夾中，網址為 `[AEM forms install directory]\configurationManager`。 （如果AEM Forms已部署在其他J2EE應用程式伺服器上，請將adobe-livecycle-native-jboss-x86_win32.ear檔案取代為與您的J2EE應用程式伺服器對應的EAR檔案。）
-* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar檔案位於adobe-generatepdf-dsc.jar檔案中）。 adobe-generatepdf-dsc.jar檔案位於 *[AEM forms install directory]*\deploy資料夾中。
+* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar檔案位於adobe-generatepdf-dsc.jar檔案中）。 adobe-generatepdf-dsc.jar檔案位於資料夾 `[AEM forms install directory]\deploy` 中。
 
 將這些XML檔案新增至adobe-appmondata.jar檔案後，您必須重新部署GeneratePDF元件。 若要將對話方塊和指令碼XML檔案新增至adobe-appmondata.jar檔案，請執行下列工作：
 
@@ -741,7 +741,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 如果要將檔案定向到新的本地應用程式，則必須為該應用程式建立指令碼XML檔案。 如果您想要修改「產生PDF」服務與已受支援的原生應用程式互動的方式，您必須修改該應用程式的指令碼。
 
-此指令碼包含導覽原生應用程式視窗元素的指示，並提供這些元素的特定回應。 包含此資訊的檔案是appmon。*[appname]*.script。*[locale]*.xml。 例如appmon.notepad.script.en_US.xml。
+此指令碼包含導覽原生應用程式視窗元素的指示，並提供這些元素的特定回應。 包含此資訊的檔案為 `appmon.[appname]``.script.[locale].xml`。 例如appmon.notepad.script.en_US.xml。
 
 #### 標識指令碼必須執行的步驟 {#identifying-steps-the-script-must-execute}
 
@@ -836,16 +836,16 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 >[!NOTE]
 >
->在此背景下，「附加」一詞表示應用程式的內容。[applicationname].addition。[locale].xml檔案。 此類檔案指定對話XML檔案的覆蓋和添加。
+>在此背景中，「附加」一詞表示檔案的內 `appmon.[applicationname].addition.[locale].xml` 容。 此類檔案指定對話XML檔案的覆蓋和添加。
 
 您也可以針對下列用途修改原生應用程式的其他對話XML檔案：
 
 * 若要覆寫具有不同回應之應用程式的對話XML檔案
 * 向該應用程式的對話框XML檔案中未定址的對話框添加響應
 
-此時會套用用以識別其他dialogXML檔案的檔案名稱。*[appname]*.addition。*[locale]*.xml。 例如appmon.excel.addition.en_US.xml。
+標識其他dialogXML檔案的檔案名為 `appmon.[appname].addition.[locale].xml`。 例如appmon.excel.addition.en_US.xml。
 
-其他對話框XML檔案的名稱必須使用格式appmon。*[applicationname]*.addition。*[locale]*.xml，其中 *applicationname* 必須與XML配置檔案和指令碼中使用的應用程式名稱完全匹配。
+其他對話框XML檔案的名稱必須使用格式 `appmon.[applicationname].addition.[locale].xml`，其中 *applicationname* 必須與XML配置檔案和指令碼中使用的應用程式名稱完全匹配。
 
 >[!NOTE]
 >
@@ -898,7 +898,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 #### 建立環境變數以查找本機應用程式 {#creating-an-environment-variable-to-locate-the-native-application}
 
-建立一個環境變數，指定本地應用程式執行檔的位置。 變數必須使用格式 *[applicationname]*_PATH，其中 *applicationname* 必須與XML配置檔案和指令碼中使用的應用程式名稱完全匹配，並且路徑包含以雙引號表示的執行檔的路徑。 這樣的環境變數的示例為 `Photoshop_PATH`。
+建立一個環境變數，指定本地應用程式執行檔的位置。 變數必須使用格式 `[applicationname]_PATH`，其中 *applicationname* 必須與XML配置檔案和指令碼中使用的應用程式名稱完全匹配，並且路徑包含以雙引號表示的執行檔的路徑。 這樣的環境變數的示例為 `Photoshop_PATH`。
 
 建立新環境變數後，您必須重新啟動部署「產生PDF」服務的伺服器。
 
@@ -907,7 +907,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 1. 選擇「 **控制面板」>「系統**」。
 1. 在「系統屬性」對話框中，按一下「高 **級** 」頁籤，然後按一下「 **環境變數」**。
 1. 在「環境變數」(Environment Variables)對話框的「系統變數」(System Variables)下，按一下「 **新建**」(New)。
-1. 在「新建系統變數」對話框的「變 **量名稱** 」框中，鍵入使用格式 *[applicationname]*_PATH的名稱。
+1. 在「新建系統變數」對話框的「變 **量名稱** 」框中，鍵入使用格式的名稱 `[applicationname]_PATH`。
 1. 在「變 **量值** 」方塊中，輸入應用程式可執行檔的完整路徑和檔案名稱，然後按一下「 **確定」**。 例如，鍵入： `c:\windows\Notepad.exe`
 1. 在「環境變數」對話框中，按一下「確 **定」**。
 
