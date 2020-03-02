@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: 0f086ed9d1674149888d2921820eacce1aed9e24
 
 ---
 
@@ -384,7 +384,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 不會結轉資產特定副本的少數屬性。 例如：
 
-* 相對路徑、資產ID、建立日期和時間，以及版本和版本記錄。 有些屬性由屬性、 `dam:relativePath`、 `jcr:uuid``jcr:created`和表示 `cq:name`。
+* 資產ID、建立日期和時間，以及版本和版本記錄。 有些屬性由屬性、 `jcr:uuid`和 `jcr:created`指示 `cq:name`。
 
 * 每個資產及其每個轉譯的建立時間和參考路徑都是唯一的。
 
@@ -641,7 +641,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 1. 執行下列任一項作業，以在編輯模式中開啟資產：
 
-   * 選取資產，然後按一下／點選工具 **[!UICONTROL 列中的]** 「編輯」圖示。
+   * 選取資產，然後按一下／點選工具列 **[!UICONTROL 中的]** 「編輯」圖示。
    * 點選／按一 **[!UICONTROL 下]** 「卡片」檢視中資產上顯示的「編輯」圖示。
    * 在資產頁面中，點選／按一下工具 **[!UICONTROL 列中的]** 「編輯」圖示。
    ![edit_icon](assets/edit_icon.png)
