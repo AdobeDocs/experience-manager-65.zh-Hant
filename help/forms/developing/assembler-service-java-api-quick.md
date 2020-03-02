@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -191,7 +191,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API解譯PDF檔案 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-以下Java代碼示例拆解名為 *AssemblerResultPDF.pdf的PDF文檔*。 請注意，DDX文檔的名稱 *是shell_dissembler.xml*。 每個已拆解的PDF檔案都 *[命名為ResultPDFNumber].pdf*。 也就是說，第一個已拆解的PDF檔案名 *為ResultPDF1.pdf。* 如需此程式碼范 *例中所使用shell_dissembler.xml* DDX檔案的詳細資訊，請參閱 [以程式設計方式解譯PDF檔案](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
+以下Java代碼示例拆解名為 *AssemblerResultPDF.pdf的PDF文檔*。 請注意，DDX文檔的名稱 *是shell_dissembler.xml*。 每個已拆解的PDF檔案都會命名 `ResultPDF[Number].pdf`。 也就是說，第一個已拆解的PDF檔案名 *為ResultPDF1.pdf。* 如需此程式碼范 *例中所使用shell_dissembler.xml* DDX檔案的詳細資訊，請參閱 [以程式設計方式解譯PDF檔案](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
 
 ```as3
  /*
