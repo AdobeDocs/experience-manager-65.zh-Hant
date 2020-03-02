@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -43,7 +43,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->您可以使用網頁瀏覽器來瀏覽AEM Forms Repository。 要瀏覽儲存庫，請在Web瀏覽器https://伺服器名[稱]:[server port]/repository中輸入以下URL。 您可以使用網頁瀏覽器來驗證與「使用AEM Forms Repository」（使用AEM Forms資料庫）區段關聯的快速啟動結果。 例如，如果您新增內容至AEM Forms Repository，您就可以在網頁瀏覽器中看到內容。 (請參 [閱快速入門（SOAP模式）:使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)。)
+>您可以使用網頁瀏覽器來瀏覽AEM Forms Repository。 要瀏覽儲存庫，請在Web瀏覽器中輸入以下URL `https://[server name]:[server port]/repository`。 您可以使用網頁瀏覽器來驗證與「使用AEM Forms Repository」（使用AEM Forms資料庫）區段關聯的快速啟動結果。 例如，如果您新增內容至AEM Forms Repository，您就可以在網頁瀏覽器中看到內容。 (請參 [閱快速入門（SOAP模式）:使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)。)
 
 儲存庫API提供了一些操作，可用來儲存和檢索儲存庫中的資訊。 例如，當處理應用程式時需要資源時，可以獲取資源清單或檢索儲存在儲存庫中的特定資源。
 
@@ -142,7 +142,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
    * 要 `com.adobe.repository.infomodel.Id` 分配給資源的UUID標識符。
    * 要 `com.adobe.repository.infomodel.Lid` 分配給資源的UUID標識符。
-   * 包 `java.lang.String` 含資源集合的名稱。 例如， `FormsFolder`。
+   * 包 `java.lang.String` 含資源集合的名稱。 For example, `FormsFolder`.
    該方法返回表 `com.adobe.repository.infomodel.bean.ResourceCollection` 示新資料夾的對象。
 
    使用方法設定資料夾的說明， `setDescription` 並傳入下列參數：
@@ -334,7 +334,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
    * 對 `com.adobe.repository.infomodel.Id` 像，其建立方式是調用類的預設構造函 `Id` 數並分配給對 `Resource` 像的欄位 `id` 。
    * 對 `com.adobe.repository.infomodel.Lid` 像，其建立方式是調用類的預設構造函 `Lid` 數並分配給對 `Resource` 像的欄位 `lid` 。
    * 包含資源檔案名稱的字串，此名稱會指派給 `Resource` 物件的欄 `name` 位。 此示例中使用的名稱為 `"testResource"`。
-   * 包含資源說明的字串，此說明會指派給 `Resource` 物件的欄 `description` 位。 此示例中使用的說明為 `"test resource"`。
+   * 包含資源說明的字串，此說明會指派給物 `Resource` 件的欄 `description` 位。 此示例中使用的說明為 `"test resource"`。
 
 1. 指定資源內容
 
@@ -1120,7 +1120,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 1. 解除鎖定資源
 
-   調用 `RepositoryServiceService` 物件的方 `unlockResource` 法，並將資源的URI傳遞為第一個參數， `null` 以及第二個參數。
+   調用 `RepositoryServiceService` 物件的方 `unlockResource` 法，並將資源的URI傳遞為第一個參數，以及 `null` 第二個參數。
 
 **另請參閱**
 
