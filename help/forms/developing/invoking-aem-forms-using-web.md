@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -212,7 +212,7 @@ AEM Forms服務WSDL可定義許多資料類型。 Web服務中公開的最重要
 將值分配給屬於實例的 `BLOB` 欄位，如下所示：
 
 * **Base64**:若要將資料傳遞為以Base64格式編碼的文字，請在欄位中設定資料， `BLOB.binaryData` 並在欄位中以MIME格式(例如 `application/pdf`)設定資料 `BLOB.contentType` 類型。 (請參 [閱使用Base64編碼叫用AEM Forms](#invoking-aem-forms-using-base64-encoding))。
-* **MTOM**:若要在MTOM附件中傳遞二進位資料，請在欄位中設定 `BLOB.MTOM` 資料。 此設定會使用Java JAX-WS架構或SOAP架構的原生API，將資料附加至SOAP要求。 (請參 [閱使用MTOM叫用AEM表格](#invoking-aem-forms-using-mtom))。
+* **MTOM**:若要在MTOM附件中傳遞二進位資料，請在欄位中設定 `BLOB.MTOM` 資料。 此設定會使用Java JAX-WS架構或SOAP架構的原生API，將資料附加至SOAP要求。 (請參 [閱「使用MTOM叫用AEM表單](#invoking-aem-forms-using-mtom)」)。
 * **SwaRef**:要在WS-I SwaRef附件中傳遞二進位資料，請在欄位中設定 `BLOB.swaRef` 資料。 此設定會使用Java JAX-WS架構將資料附加至SOAP要求。 (請參 [閱使用SwaRef叫用AEM Forms](#invoking-aem-forms-using-swaref))
 * **MIME或DIME附件**:若要在MIME或DIME附件中傳送資料，請使用SOAP架構的原生API，將資料附加至SOAP要求。 在欄位中設定附件標 `BLOB.attachmentID` 識符。 (請參 [閱使用Base64編碼叫用AEM Forms](#invoking-aem-forms-using-base64-encoding))。
 * **遠端URL**:如果資料是裝載在網頁伺服器上並可透過HTTP URL存取，請在欄位中設定HTTP `BLOB.remoteURL` URL。 (請參 [閱「透過HTTP使用BLOB資料叫用AEM表格](#invoking-aem-forms-using-blob-data-over-http)」)。
@@ -368,7 +368,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 1. 安裝JDK 1.6或更新版本。
 
    * 將JDK bin目錄添加到類路徑。
-   * 將JRE bin目錄添加到類路徑中。 此bin位於 [*JDK_INSTALL_LOCATION*]/jre目錄中。
+   * 將JRE bin目錄添加到類路徑中。 此Bin位於目 `[JDK_INSTALL_LOCATION]/jre` 錄。
    * 將環 `JAVA_HOME` 境變數設定為JDK的安裝目錄。
    JDK 1.6包含build.xml檔案中使用的wsimport程式。 JDK 1.5不包含該程式。
 
@@ -558,7 +558,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
    * xalan.jar
    * xbean.jar
    * xercesImpl.jar
-   這些JAR檔案位於 *[安裝目錄]*/Adobe/Adobe Experience Manager Forms/sdk/lib/協力廠商目錄。
+   這些JAR檔案位於目 `[install directory]/Adobe/Adobe Experience Manager Forms/sdk/lib/thirdparty` 錄中。
 
 **另請參閱**
 
@@ -880,7 +880,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 1. 調用 `MyApplicationEncryptDocument` 物件的方 `MyApplicationEncryptDocumentService` 法以建立物 `getEncryptDocument` 件。
 1. 將值指派給下列資料成員，以設定呼叫AEM Forms所需的連線值：
 
-   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 給物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用SwaRef `MyApplication/EncryptDocument` 編碼來叫用服務，請指定下列URL值：
+   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 至物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用SwaRef `MyApplication/EncryptDocument` 編碼來叫用服務，請指定下列URL值：
 
       ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
@@ -1002,7 +1002,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 1. 調用 `MyApplicationEncryptDocument` 物件的方 `MyApplicationEncryptDocumentService` 法以建立物 `getEncryptDocument` 件。
 1. 將值指派給下列資料成員，以設定呼叫AEM Forms所需的連線值：
 
-   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 給物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用HTTP `MyApplication/EncryptDocument` 編碼上的BLOB來叫用服務，請指定下列URL值：
+   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 至物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用HTTP `MyApplication/EncryptDocument` 編碼上的BLOB來叫用服務，請指定下列URL值：
 
       `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
 
@@ -1041,7 +1041,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
 >[!NOTE]
 >
->不建議使用DIME叫用AEM Forms服務作業。 建議您使用MTOM。 (請參 [閱「使用MTOM叫用AEM表單](#invoking-aem-forms-using-mtom)」)。
+>不建議使用DIME叫用AEM Forms服務作業。 建議您使用MTOM。 (請參 [閱使用MTOM叫用AEM表格](#invoking-aem-forms-using-mtom))。
 
 ### 建立使用DIME的。NET專案 {#creating-a-net-project-that-uses-dime}
 
@@ -1233,7 +1233,7 @@ AEM表單使用者的身分識別可透過使用機密金鑰簽署的SAML斷言�
 
 AEM表單使用者可使用所取得的SAML Token進行驗證。 此SAML斷言（xml片段）可隨Web服務呼叫使用者驗證一起傳送，作為WS-Security標題的一部分。 通常，客戶端應用程式已驗證用戶，但未儲存用戶憑據。 （或者，使用者已透過使用使用者名稱和密碼以外的機制登入該用戶端。）在此情況下，用戶端應用程式必須叫用AEM Forms並模擬允許叫用AEM Forms的特定使用者。
 
-若要模擬特定使用者，請使 `AuthenticationManager.getAuthResultOnBehalfOfUser` 用web services叫用方法。 此方法傳回 `AuthResult` 包含該使用者之SAML斷言的例項。
+若要模擬特定使用者，請使用web `AuthenticationManager.getAuthResultOnBehalfOfUser` service叫用方法。 此方法傳回 `AuthResult` 包含該使用者之SAML斷言的例項。
 
 接著，使用該SAML斷言來叫用任何需要驗證的服務。 此操作涉及將斷言作為SOAP標題的一部分發送。 當使用此斷言進行Web服務呼叫時，AEM Forms會將使用者識別為該斷言所代表的使用者。 也就是說，斷言中指定的用戶是調用服務的用戶。
 
