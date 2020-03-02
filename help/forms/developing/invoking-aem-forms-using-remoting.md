@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -125,7 +125,7 @@ docRef.referenceType = DocumentReference.REF_TYPE_INLINE; 
 docRef.text = "Text for my document";  // Optionally, you can override the server’s default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
 ```
 
-* 當檔案不在伺服器上時，請使用「遠端上傳servlet」將檔案上傳至AEM Forms。 AEM Forms的新功能是可上傳安全檔案。 上傳安全檔案時，您必須使用具有「檔案上傳應用程式使用者」角色 *的使用者* 。 如果沒有此角色，用戶將無法上傳安全文檔。 建議您使用單一登入來上傳安全檔案。 (請參 [閱使用Remoting傳遞安全檔案以叫用程式](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。)
+* 當檔案不在伺服器上時，請使用「遠端上傳servlet」將檔案上傳至AEM Forms。 AEM Forms的新功能是可上傳安全檔案。 上傳安全檔案時，您必須使用具有「檔案上傳應用程式使 *用者」角色的使用者* 。 如果沒有此角色，用戶將無法上傳安全文檔。 建議您使用單一登入來上傳安全檔案。 (請參 [閱使用Remoting傳遞安全檔案以叫用程式](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。)
 
    **注意**:如果AEM Forms已設定為允許上傳不安全的檔案，您可以使用不具備「檔案上傳應用程式使用者」角色的使用者來上傳檔案。 使用者也可以擁有「檔案上傳」權限。 不過，如果AEM Forms已設定為僅允許安全檔案，請確定使用者具有「檔案上傳應用程式使用者」角色或「檔案上傳」權限。 (請參 [閱「設定AEM Forms以接受安全且不安全的檔案](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)」)。
 
@@ -963,7 +963,7 @@ AEM Forms複雜類型的完全限定資料類型會指派給別名標籤。
 ActionScript類別的欄位符合屬於AEM Forms複雜類型的欄位。 Customer ActionScript類別中的6個欄位符合屬於的欄位 `com.adobe.livecycle.sample.customer.Customer`。
 
 >[!NOTE]
-確定屬於Forms複雜類型的欄位名稱的一個好方法是在Web瀏覽器中查看服務的WSDL。 WSDL指定服務的複雜類型和相應的資料成員。 以下WSDL用於客戶服務：https:// *[yourServer]:[yourPort]/soap/services/CustomerService?wsdl。*
+確定屬於Forms複雜類型的欄位名稱的一個好方法是在Web瀏覽器中查看服務的WSDL。 WSDL指定服務的複雜類型和相應的資料成員。 以下WSDL用於客戶服務： `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 Customer ActionScript類別屬於名為customer的套件。 建議您將所有對應至複雜AEM Forms資料類型的ActionScript類別置於其專屬的套件中。 在Flex專案的src資料夾中建立資料夾，並將ActionScript檔案置於資料夾中，如下圖所示。
 
