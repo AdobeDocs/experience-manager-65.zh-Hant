@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: bdd9bb56-14f6-448b-be4a-7c11f670e901
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -144,7 +144,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API將PDF檔案轉換為JPEG檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-下列Java程式碼範例會將名為 *Loan.pdf* 的PDF檔案轉換為一組JPEG檔案，並儲存在C:\Adobe directory檔案夾中。 每個檔案都 *[名為tempFileindex].jpg*，其中第一個影像檔名 *為tempFile0.jpg*。 (請參 [閱將PDF檔案轉換為影像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats)。)
+下列Java程式碼範例會將名為 *Loan.pdf* 的PDF檔案轉換為一組JPEG檔案，並儲存在C:\Adobe directory檔案夾中。 每個檔案都 `tempFile[index].jpg`會命名，其中第一個影像檔 *案名為tempFile0.jpg*。 (請參 [閱將PDF檔案轉換為影像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats)。)
 
 ```as3
  /*
