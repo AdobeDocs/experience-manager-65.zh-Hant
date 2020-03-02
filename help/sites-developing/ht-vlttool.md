@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
-source-git-commit: 049e28176c9b98eeb3c2c6764cb868c51f1141bb
+source-git-commit: a7c3848704ee2b4b984fafcd82e29a75ea8d3443
 
 ---
 
@@ -215,7 +215,7 @@ Options:
 
 以下是在VLT中執行的一些常見任務。 有關每個命令的詳細資訊，請參見各 [個命令](#vlt-commands)。
 
-### 檢出Aubtree {#checking-out-a-subtree}
+### 檢出子樹 {#checking-out-a-subtree}
 
 例如，如果只想簽出儲存庫的子樹， `/apps/geometrixx`則可通過鍵入以下內容來執行此操作：
 
@@ -865,7 +865,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 * `.vlt-sync-config.properties`:配置檔案。
 
 * `.vlt-sync.log`:包含同步期間所執行操作相關資訊的記錄檔。
-* `.vlt-sync-filter.xml`:篩選器，用於定義同步的儲存庫的哪些部分。 此檔案的格式由「執行過濾的 [簽出」部分描述](#performing-a-filtered-checkout) 。
+* `.vlt-sync-filter.xml`:篩選器，用於定義同步的儲存庫的哪些部分。 此檔案的格式由「執行已過濾的 [檢出」部分描述](#performing-a-filtered-checkout) 。
 
 該 `.vlt-sync-config.properties` 檔案允許您配置以下屬性：
 
