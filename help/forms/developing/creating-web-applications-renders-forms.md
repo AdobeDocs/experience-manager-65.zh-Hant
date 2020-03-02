@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -383,7 +383,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 **要將WAR檔案部署到J2EE應用程式伺服器，請執行以下操作：**
 
-* 將WAR檔案從匯出路徑複製至 *[Forms Install]*\Adobe\Adobe Experience Manager Forms\jboss\server\all\deploy。
+* 將WAR檔案從導出路徑複製到 `[Forms Install]\Adobe\Adobe Experience Manager Forms\jboss\server\all\deploy`。
 
 ### 測試您的Web應用程式 {#testing-your-web-application}
 
