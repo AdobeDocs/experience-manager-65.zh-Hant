@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 有了新的架構，AEM負責主要資產並與Dynamic media同步，以處理和發佈資產：
 
-1. 當主資產上傳至AEM時，它會複製至Dynamic Media。 此時，Dynamic media會處理所有資產處理和轉譯產生，例如影像的視訊編碼和動態變數。 （在動態媒體- Scene7模式中，請注意，您只能上傳檔案大小為2 GB或以下的資產。）
+1. 當主資產上傳至AEM時，它會複製至Dynamic Media。 此時，Dynamic media會處理所有資產處理和轉譯產生，例如影像的視訊編碼和動態變數。 <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
 1. 產生轉譯後，AEM可以安全地存取和預覽遠端的Dynamic Media轉譯（不會將二進位檔傳回至AEM例項）。
 1. 內容準備好發佈及核准後，它會觸發Dynamic media服務將內容推出至傳送伺服器，並在CDN快取內容。
 
@@ -179,7 +179,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 >[!NOTE]
 >
->依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。 您可以提高此限制。 請參 [閱增加顯示的影像預設集數目](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) , [或增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
+>依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。您可以提高此限制。See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 
 #### 設定色彩管理 {#configuring-color-management}
@@ -189,7 +189,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 若要設定預設顏色屬性，以在請求影像時啟用色彩校正：
 
 1. [使用布建期間提供的憑證](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) ，登入Dynamic Media Classic。 定位至「 **[!UICONTROL 設定」>「應用程式設定」]**。
-1. 展開「發 **[!UICONTROL 布設定]** 」區域並選 **[!UICONTROL 取「影像伺服器」]**。 設定發 **[!UICONTROL 布例項的預設值]** ，將「發佈內容」設 **** 定為「影像伺服」。
+1. 展開「發 **[!UICONTROL 布設定]** 」區域並選 **[!UICONTROL 取「影像伺服器」]**。設定發 **[!UICONTROL 布例項的預設值]** ，將「發佈內容」設 **** 定為「影像伺服」。
 1. 捲動至您需要變更的屬性，例如「色彩管理屬性」區 **[!UICONTROL 域中的屬性]** 。
 
    您可以設定下列色彩校正屬性：
@@ -197,7 +197,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL CMYK預設色域]** -預設CMYK色彩描述檔的名稱
    * **[!UICONTROL 灰階預設色域]** -預設灰階色彩描述檔的名稱
    * **[!UICONTROL RGB預設色域]** -預設RGB色彩描述檔的名稱
-   * **[!UICONTROL 顏色轉換渲染方式]** -指定渲染方式。 可接受的值為：感 **[!UICONTROL 知]**，相 **[!UICONTROL 對冷]**&#x200B;藏飽和度 **[!UICONTROL ，絕]******&#x200B;對冷藏。 Adobe建議 **[!UICONTROL 以相對]]**為預設值。
+   * **[!UICONTROL 顏色轉換渲染方式]** -指定渲染方式。 Acceptable values are: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric]**. Adobe recommends **[!UICONTROL relative]]**as the default.
 
 1. 點選「 **[!UICONTROL 儲存]**」。
 
@@ -247,11 +247,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 #### 為不支援的格式添加自定義MIME類型 {#adding-custom-mime-types-for-unsupported-formats}
 
-您可以針對AEM Assets中不支援的格式新增自訂MIME類型。 為確保AEM不會刪除您在CRXDE Lite中新增的任何新節點，您必須確定您先移動MIME類型， `image_` 且其啟用值設為 **[!UICONTROL false]**。
+您可以針對AEM Assets中不支援的格式新增自訂MIME類型。為確保AEM不會刪除您在CRXDE Lite中新增的任何新節點，您必須確定您先移動MIME類型， `image_` 且其啟用值設為 **[!UICONTROL false]**。
 
 **要為不支援的格式添加自定義MIME類型**
 
-1. 在AEM中，點選「工 **[!UICONTROL 具>作業> Web Console]**」。
+1. From AEM, tap **[!UICONTROL Tools > Operations > Web Console]**.
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -259,7 +259,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. 在頁面上，向下捲動至名稱 *Adobe CQ Scene7 Asset MIME類型Service* ，如下列螢幕擷取所示。 在名稱的右側，點選「 **[!UICONTROL Edit the configuration values]** (pencil icon)(編輯配置值（鉛筆圖示）」。
+1. 在頁面上，向下捲動至名稱 *Adobe CQ Scene7 Asset MIME類型Service* ，如下列螢幕擷取所示。在名稱的右側，點選「 **[!UICONTROL Edit the configuration values]** (pencil icon)(編輯配置值 (鉛筆圖示) 」。
 
    ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
 
@@ -273,12 +273,12 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
-1. 在頁面的右下角，點選「儲存 **[!UICONTROL 」]**。
+1. In the lower-right corner of the page, tap **[!UICONTROL Save]**.
 
    此時，您可以關閉已開啟「Adobe Experience Manager Web Console設定」頁面的瀏覽器標籤。
 
 1. 返回開啟AEM主控台的瀏覽器標籤。
-1. 從AEM點選「工 **[!UICONTROL 具>一般> CRXDE Lite]**」。
+1. From AEM, tap **[!UICONTROL Tools > General > CRXDE Lite]**.
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -364,9 +364,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 1. 在「批次集類型」下拉式功能表中，選取預設類型。
 1. 執行下列任一項作業：
 
-   * 如果您使用先前在「應用程式設定」>「批次集預設集」>「預設命名」下設定的預設命名慣例 **[!UICONTROL ，請展開「]** Asset Naming Contriences **[!UICONTROL 」，然後在「File Naming」（檔案命名）下拉式清單中，點選「]** Default ****」。
+   * If you are using a default naming convention that you previously set up under **[!UICONTROL Application Setup > Batch Set Presets > Default Naming]**, expand **[!UICONTROL Asset Naming Conventions]**, and then in the File Naming drop-down list, tap **[!UICONTROL Default]**.
 
-   * 若要在設定預設時定義新的命名慣例，請展開「 **[!UICONTROL Asset Naming Conventions]**」，然後在「File Naming」（檔案命名）下拉式清單中，按一下「 **[!UICONTROL Custom]**」。
+   * To define a new naming convention as you set up the preset, expand **[!UICONTROL Asset Naming Conventions]**, and then in the File Naming drop-down list, click **[!UICONTROL Custom]**.
 
 1. 在「序列」順序中，定義在動態媒體中將影像組合在一起後顯示影像的順序。
 
@@ -401,7 +401,7 @@ spin-01-01
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
-對spinset的共用資產名稱部分進行分組將添加到「匹 **配** 」欄位（如突出顯示）。 包含行和列的資產名稱的變數部分將分別添加到 **行** 和 **列欄位中** 。
+對spinset的共用資產名稱部分進行分組將添加到「匹 **配** 」欄位 (如突出顯示)。包含行和列的資產名稱的變數部分將分別添加到 **行** 和 **列欄位中** 。
 
 上傳和發佈回轉集時，您會啟用「上傳工作選項」對話方塊中「批次集預設集」下方所列的2D回轉集 **方式名稱****** 。
 
@@ -415,12 +415,12 @@ spin-01-01
 
    請注 **[!UICONTROL 意，如「詳細資料]**」頁面右上角所設定，「檢視表單」是預設檢視。
 
-1. 在「預設清單」面板中，按一 **[!UICONTROL 下]** 「新增」，以啟動畫面右側「詳細資訊」面板中的定義欄位。
+1. 在「預設清單」面板中，按一 **[!UICONTROL 下]** 「新增」，以啟用畫面右側「詳細資訊」面板中的定義欄位。
 1. 在「詳細資料」面板的「預設集名稱」欄位中，輸入預設集的名稱。
 1. 在「批集類型」下拉式功能表中，選擇「資產 **[!UICONTROL 集」]**。
 1. 在「子類型」(Sub Type)下拉清單中，選擇「 **[!UICONTROL 多軸回轉集」(Multi-Axis Spin Set]**)。
 1. 展開 **[!UICONTROL 資產命名慣例]**，然後在「檔案命名」下拉式清單中按一下「自 **[!UICONTROL 訂」]**。
-1. 使用「 **[!UICONTROL 比對]** 」(Match **[!UICONTROL )和（可選）「基本名稱]** 」(Base Name)屬性，定義組成群組之影像資產的命名規則運算式。
+1. 使用「 **[!UICONTROL 比對]** 」(Match **[!UICONTROL )和 (可選) 「基本名稱]** 」(Base Name)屬性，定義組成群組之影像資產的命名規則運算式。
 
    例如，您的常值「符合」規則運算式可能如下所示：
 
