@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fdcd9173b02347a7a9527b292635d63e8aa9ce19
+source-git-commit: 9f4a460c7f64d86e35e950e512ed5b6cda1cbf2a
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: fdcd9173b02347a7a9527b292635d63e8aa9ce19
 | 版本 | 6.5.3.0 |
 | 類型 | Service pack版本 |
 | 日期 | 2019年12月12日 |
-| 下載URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.3.0)，軟 [體散發](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aem.html#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.3.zip) |
+| 下載URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.3.0) |
 
 ## Adobe Experience Manager 6.5.3.0包含的功能 {#what-s-included-in-aem}
 
@@ -434,10 +434,9 @@ AEM 6.5.3.0內容套件清單
 ## Helpful Resources {#helpful-resources}
 
 * [AEM 6.5版本注意事項](/help/release-notes/release-notes.md)
-* [AEM產品頁面](https://www.adobe.com/solutions/web-experience-management.html)
-* [AEM開發人員支援](https://docs.adobe.com/content/ddc/en.html)
+* [AEM產品頁面](https://www.adobe.com/marketing/experience-manager.html)
 * [AEM 6.5 檔案](https://helpx.adobe.com/support/experience-manager/6-5.html)
-* 訂閱 [Adobe優先產品更新](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)
+* 訂閱 [Adobe優先產品更新](https://www.adobe.com/subscription/priority-product-update.html)
 
 ## 受限制的網站 {#restricted-sites}
 
