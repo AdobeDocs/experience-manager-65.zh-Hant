@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 68692e7b82aecd81a21f3a970f3707f2ff39792a
+source-git-commit: f191f90f7a417387930d2d4cf7b9482aabbd6156
 
 ---
 
@@ -19,7 +19,9 @@ source-git-commit: 68692e7b82aecd81a21f3a970f3707f2ff39792a
 
 >[!NOTE]
 >
->共用至Marketing cloud時不 `sling:OrderedFolder`支援共用類型的「資產」檔案夾。 如果要共用資料夾，在建立資料夾時不 [!UICONTROL 要選擇] 「有序」。
+>* 共用至Marketing cloud時不 `sling:OrderedFolder`支援共用類型的「資產」檔案夾。 如果要共用資料夾，在建立資料夾時不 [!UICONTROL 要選擇] 「有序」。
+>* Experience manager不允許將 `subassets` Word用作資料夾的名稱。 它是為節點保留的關鍵字，其中包含複合資產的子資產。
+
 
 1. 導覽至您要建立新資料夾的數位資產檔案夾。 在功能表中，按一下「 **[!UICONTROL 建立]**」。 選擇「 **[!UICONTROL 新建資料夾]**」。
 1. 在「標 **[!UICONTROL 題]** 」欄位中，提供檔案夾名稱。 依預設，DAM會使用您提供的標題作為檔案夾名稱。 建立資料夾後，您可以覆寫預設資料夾，並指定另一個資料夾名稱。
@@ -641,7 +643,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 1. 執行下列任一項作業，以在編輯模式中開啟資產：
 
-   * 選取資產，然後按一下／點選工具列 **[!UICONTROL 中的]** 「編輯」圖示。
+   * 選取資產，然後按一下／點選工具 **[!UICONTROL 列中的]** 「編輯」圖示。
    * 點選／按一 **[!UICONTROL 下]** 「卡片」檢視中資產上顯示的「編輯」圖示。
    * 在資產頁面中，點選／按一下工具 **[!UICONTROL 列中的]** 「編輯」圖示。
    ![edit_icon](assets/edit_icon.png)
