@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 90e3fd0e-9bc3-4aff-8c7b-7408f5b940e8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
+source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 
 ---
 
 
 # Publish collections to Brand Portal {#publish-collections-to-brand-portal}
 
-身為Adobe Experience Manager(AEM)Assets管理員，您可以發佈系列至您組織的AEM Assets品牌入口網站例項。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請 [參閱「設定AEM資產與品牌入口網站的整合](/help/assets/brand-portal-configuring-integration.md)」。
+身為Adobe Experience Manager(AEM)Assets管理員，您可以發佈系列至您組織的AEM Assets品牌入口網站例項。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請 [參閱「設定AEM資產與品牌入口網站](/help/assets/configure-aem-assets-with-brand-portal.md)」。
 
 如果您在AEM Assets中對原始系列進行後續修改，這些變更將不會反映在品牌入口網站中，直到您再次發佈系列為止。 此特性可確保在品牌入口網站中無法使用進行中的變更。 品牌入口網站中僅提供管理員發佈的已核准變更。
 
@@ -31,7 +31,7 @@ source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
 ## 將系列發佈至品牌入口網站 {#publish-a-collection-to-brand-portal}
 
 1. 在「AEM Assets UI」中，按一下「AEM logo」。
-1. 從「 **導覽** 」頁面，前往「 **資產>系列」**。
+1. From **Navigation** page, go to **Assets > Collections**.
 1. 從「系列」主控台中，選取您要發佈至品牌入口網站的系列。
 
    ![select_collection](assets/select_collection.png)
