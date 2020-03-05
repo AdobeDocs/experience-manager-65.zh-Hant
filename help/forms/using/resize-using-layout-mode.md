@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -42,8 +42,8 @@ source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
 
    點選元件後顯示的工具列包含下列選項：
 
-   * **** 父級：選擇元件的父代。
-   * **** 浮動至新行：如果同一行中有多個元件，請將元件移到下一行。
+   * **父級：** 選擇元件的父代。
+   * **浮動至新行：** 如果同一行中有多個元件，請將元件移到下一行。
    您可以使用「還原斷點配置」（「還原斷點」）選項，還原所有調整大小的變更，並將預設配置套用至包含已重 **[!UICONTROL 新調整大小之元件的面板]**![](assets/reverttopreviouslypublishedversion.png)上。 點選已調整大小的元件的父項以檢視選項。
 
    >[!NOTE]
@@ -52,7 +52,7 @@ source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
 
 ### 例如 {#example}
 
-**** 目標：要插入表元件和影像元件，並在互動式通信中將它們平行放置。
+**目標：** 要插入表元件和影像元件，並在互動式通信中將它們平行放置。
 
 1. 在Web頻道中使用編輯模式插入表格和影像元件。 影像元件在表元件後面顯示。
 1. 切換至「版面」模式，然後點選「表格」元件。 藍點可調整元件在第1欄和第12欄的顯示大小。
@@ -76,6 +76,20 @@ source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
 
 1. 拖放藍點，以定義面板在回應式格線中的位置。
 您可以重複步驟1和2，然後選 ![取「選取父項](assets/float_to_new_line_icon.svg) 」，將重新調整大小的面板移至下一行。
+
+## 定義面板的多欄版面
+
+執行以下步驟以定義面板的列數：
+
+1. 在「編 **[!UICONTROL 輯]** 」模式中，點選面板，選取「設定」，然後選取「回應式 ![-頁面上的所有項目」，而不使用導覽](assets/configure_icon.png)**** 選項。
+
+1. 點選「 ![儲存](assets/save_icon.svg) 」以儲存屬性。
+
+1. 在「 **[!UICONTROL Layout]** 」模式中，點選面板中任何您要調整大小的元件，選取「 ![Select Parent](assets/select_parent_icon.svg)」（選取父項），然後選取下拉式清單中的第一個選項（如果面板是元件的直接父項）。
+
+1. 點 ![選多欄](assets/multi-column.svg) ，然後從下拉式清單中選取欄數。 欄數範圍從1到12。 面板會分為多欄版面。
+
+![配置模式下的多列](assets/multi-column-layout.png)
 
 ## 為舊版互動式版面啟用全新的互動式格線 {#enableresponsivegrid}
 
