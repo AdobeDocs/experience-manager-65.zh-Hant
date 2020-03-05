@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7029d6e7047680880ef89365826dd47af478c0b6
+source-git-commit: a986eb3154fba51de20e31b87e9082631f057d27
 
 ---
 
@@ -68,11 +68,13 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 如需詳 [細資訊，請參閱安裝功能套件18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md) 。
 
-## Configuring Dynamic Media Cloud Services {#configuring-dynamic-media-cloud-services}
+## 建立動態媒體設定 {#configuring-dynamic-media-cloud-services}
 
-**在您設定Dynamic Media Cloud服務之前**:在您收到具有動態媒體憑證的布建電子郵件後， [您必須登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
+**設定動態媒體之前**:在您收到具有動態媒體憑證的布建電子郵件後， [您必須登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
 
-若要設定動態媒體雲端服務：
+![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
+
+**建立動態媒體配置**
 
 1. 在AEM中，點選AEM標誌以存取全域導覽主控台，點選或按一下「工具」圖示，然後點選「 **[!UICONTROL Cloud Services >動態媒體設定」]**。
 1. 在「動態媒體設定瀏覽器」頁面的左側窗格中，點選 **[!UICONTROL global]** (不點選或選取全域左側的資料夾圖示 ****)，然後點選「 **[!UICONTROL 建立]**」。
@@ -110,8 +112,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    >
    >
    >啟動資產後，任何更新都會立即即時發佈至S7傳送。
-
-   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
 1. 點選「 **[!UICONTROL 儲存]**」。
 1. 若要在動態媒體內容發佈之前安全地預覽，您必須將AEM作者例項「白名單」以連線至動態媒體：
