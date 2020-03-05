@@ -19,8 +19,8 @@ source-git-commit: f191f90f7a417387930d2d4cf7b9482aabbd6156
 
 >[!NOTE]
 >
->* 共用至Marketing cloud時不 `sling:OrderedFolder`支援共用類型的「資產」檔案夾。 如果要共用資料夾，在建立資料夾時不 [!UICONTROL 要選擇] 「有序」。
->* Experience manager不允許將 `subassets` Word用作資料夾的名稱。 它是為節點保留的關鍵字，其中包含複合資產的子資產。
+>* 共用至Marketing Cloud時不 `sling:OrderedFolder`支援共用類型的「資產」檔案夾。 如果要共用資料夾，在建立資料夾時不 [!UICONTROL 要選擇] 「有序」。
+>* Experience Manager不允許將 `subassets` Word用作資料夾的名稱。 它是為節點保留的關鍵字，其中包含複合資產的子資產。
 
 
 1. 導覽至您要建立新資料夾的數位資產檔案夾。 在功能表中，按一下「 **[!UICONTROL 建立]**」。 選擇「 **[!UICONTROL 新建資料夾]**」。
@@ -229,7 +229,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時，您可以自動從檔案建立影像範本(選取「上傳」畫面上的「 [!UICONTROL 建立範本] 」選項)。
 
-如果您使用PSD檔案建立範本，Dynamic media會從含圖層的PSD檔案建立多張影像；它會為每個圖層建立一個影像。
+如果您使用PSD檔案建立範本，Dynamic Media會從含圖層的PSD檔案建立多張影像；它會為每個圖層建立一個影像。
 
 使用上 [!UICONTROL 述的「裁切選] 項 [!UICONTROL 」和「色彩描述檔選項]」以及Photoshop上傳選項。
 
@@ -278,7 +278,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 | 選項 | 子選項 | 說明 |
 |---|---|---|
-| 適應性影片 |  | 單一編碼預設集可搭配任何外觀比例運作，以建立視訊，以便發佈至行動裝置、平板電腦和桌上型電腦。 使用此預設集編碼的已上傳來源影片會以固定高度設定。 不過，寬度會自動縮放，以保留視訊的外觀比例。 <br>最佳實務是使用最適化視訊編碼。 |
+| 適應性影片 |  | 單一編碼預設集，可搭配任何外觀比例建立視訊，以便發佈至行動裝置、平板電腦和桌上型電腦。 使用此預設集編碼的已上傳來源影片會以固定高度設定。 不過，寬度會自動縮放，以保留視訊的外觀比例。 <br>最佳實務是使用最適化視訊編碼。 |
 | 單一編碼預設集 | 排序編碼預設集 | 選取「名稱」或「大小」，依名稱或解析度大小來排序「案頭」、「行動裝置」和「平板電腦」下方所列的編碼預設集。 |
 |  | 桌面 | 建立MP4檔案，以提供串流或漸進式視訊體驗至桌上型電腦。選擇一或多個外觀比例，以符合您所需的解析度大小和目標資料速率。 |
 |  | 行動 | 建立MP4檔案，以便在iPhone或Android行動裝置上傳送。選取一或多個寬高比，以符合您所需的解析度大小和目標資料速率。 |
@@ -352,7 +352,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    ![chlimage_1-217](assets/chlimage_1-12.png)
 
-1. 若要在特定持續時間後停用資產，請從「關閉時間」欄位旁的日期選取器選擇停 **[!UICONTROL 用日期]** /時間。 停用日期應晚於資產的啟用日期。 在「關 [!UICONTROL 閉時間]」後，資產及其轉譯無法透過「資產」網頁介面或HTTP API使用。
+1. 若要在特定持續時間後停用資產，請從「關閉時間」欄位旁的日期選擇器選擇停 **[!UICONTROL 用日期]** /時間。 停用日期應晚於資產的啟用日期。 在「關 [!UICONTROL 閉時間]」後，資產及其轉譯無法透過「資產」網頁介面或HTTP API使用。
 
    ![chlimage_1-218](assets/chlimage_1-13.png)
 
@@ -392,7 +392,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 保留其他屬性和元資料資訊。 複製資產時不會建立部分復本。
 
-1. 從「資產」UI中，選取一或多個資產，然後點選／按一下工具列 **[!UICONTROL 中的]** 「複製」圖示。 或者，從資 **[!UICONTROL 產卡選擇]** 「複製」快速動作。
+1. 從「資產」使用者介面中，選取一或多個資產，然後點選／按一下工具列 **[!UICONTROL 中的]** 「複製」圖示。 或者，從資 **[!UICONTROL 產卡選擇]** 「複製」快速動作。
    ![copy_icon](assets/copy_icon.png)
 
    >[!NOTE]
@@ -643,7 +643,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 1. 執行下列任一項作業，以在編輯模式中開啟資產：
 
-   * 選取資產，然後按一下／點選工具 **[!UICONTROL 列中的]** 「編輯」圖示。
+   * 選取資產，然後按一下／點選工具列 **[!UICONTROL 中的]** 「編輯」圖示。
    * 點選／按一 **[!UICONTROL 下]** 「卡片」檢視中資產上顯示的「編輯」圖示。
    * 在資產頁面中，點選／按一下工具 **[!UICONTROL 列中的]** 「編輯」圖示。
    ![edit_icon](assets/edit_icon.png)
@@ -724,7 +724,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    ![chlimage_1-234](assets/chlimage_1-30.png)
 
-1. 若要通知使用者註解的相關資訊，請指定使用者的電子郵件地址並新增註解。 例如，若要通知Aaron macDonald有關註解的資訊，請輸入@aa。 所有相符使用者的提示會顯示在清單中。 從清單中選取Aaron的電子郵件地址，以便用注釋標籤她。 同樣地，您可以在注釋內或注釋之前或之後的任何地方標籤更多用戶。
+1. 若要通知使用者註解的相關資訊，請指定使用者的電子郵件地址並新增註解。 例如，若要通知Aaron MacDonald有關註解的資訊，請輸入@aa。 所有相符使用者的提示會顯示在清單中。 從清單中選取Aaron的電子郵件地址，以便用注釋標籤她。 同樣地，您可以在注釋內或注釋之前或之後的任何地方標籤更多用戶。
 
    >[!NOTE]
    >
@@ -741,11 +741,11 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    >您可以在儲存多個註解之前，先加入這些註解。
 
 1. 點選／按一 **[!UICONTROL 下「關閉]** 」(Close)以退出「注釋」模式。
-1. 若要檢視通知，請使用Aaron macDonald的認證登入AEM Assets，然後按一下「 **[!UICONTROL Notifications]** 」圖示以檢視通知。
+1. 若要檢視通知，請使用Aaron MacDonald的認證登入AEM Assets，然後按一下「 **[!UICONTROL Notifications]** 」圖示以檢視通知。
 
    >[!NOTE]
    >
-   >您也可以將註解新增至視訊資產。 為視訊加上註解時，播放器會暫停，讓您在影格上加上註解。 如需詳細資訊，請參 [閱「管理視訊資產](/help/assets/managing-video-assets.md)」。
+   >您也可以將註解新增至視訊資產。 在為視訊加上註解時，播放器會暫停，讓您在影格上加上註解。 如需詳細資訊，請參 [閱「管理視訊資產](/help/assets/managing-video-assets.md)」。
 
 1. 若要選擇不同的顏色以便區分使用者，請按一下／點選「描述檔」圖示，然後按一下／點選「我的偏 **[!UICONTROL 好設定」]**。
 
@@ -850,7 +850,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 以下是如何設定AEM以列印CJK（中文、日文和韓文）註解的範例：
 
-1. 從下列連結下載Google Noto CJK字型，並將其儲存在Font Manager service中設定的字型目錄中。
+1. 從下列連結下載Google Noto CJK字型，並將其儲存在Font Manager Service中設定的字型目錄中。
 
    * 全部整合在一個超級CJK字型中： [https://www.google.com/get/noto/help/cjk/](https://www.google.com/get/noto/help/cjk/)
    * Noto Sans（歐洲語言版）: [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
