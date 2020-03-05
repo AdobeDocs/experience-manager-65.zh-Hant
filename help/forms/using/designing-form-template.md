@@ -10,14 +10,14 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
 
 # 設計HTML5表單的表單範本{#designing-form-templates-for-html-forms}
 
-AEM中的HTML5表單元件提供將XFA表單範本轉換為HTML5格式。 表單設計人員可使用 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) ，並使用HTML5轉譯功能來設計表單範本。 這些表單範本及其資產可以駐留在AEM儲存庫、檔案系統或透過http公開。 不過，如果您打算使用Forms manager管理表單，範本和資產應位於AEM儲存庫中。
+AEM中的HTML5表單元件提供將XFA表單範本轉換為HTML5格式。 表單設計人員可使用 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) ，並使用HTML5轉譯功能來設計表單範本。 這些表單範本及其資產可以駐留在AEM儲存庫、檔案系統或透過http公開。 不過，如果您打算使用Forms Manager管理表單，範本和資產應位於AEM儲存庫中。
 
 雖然HTML5表格在很大程度上與PDF表格的行為相符，但這兩種格式中都有某些功能不適用於其他格式。 例如，Adobe Reader中PDF表單上套用條碼的方式會因行動表單而異，或表格的數位簽署方式也會因格式而異。 如需此類變化的詳細資訊，請參 [閱「HTML5表單與PDF表單的功能區隔](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md)」。
 
@@ -38,5 +38,9 @@ AEM中的HTML5表單元件提供將XFA表單範本轉換為HTML5格式。 表單
 HTML5表單的主要目標是觸控裝置。 因此，AEM Forms Designer中新增了新的塗鴉簽名控制項。 您可以按一下或拖放表格範本上的塗鴉簽名控制項，並加以設定。 它會在HTML5轉譯中呈現為塗鴉欄位，並可用於在觸控裝置上塗鴉簽名。 在桌上型電腦上，它可使用滑鼠控制項，做為塗鴉欄位。 如需如何使用此功能的詳細資訊，請參 [閱XFA塗鴉欄位](../../forms/using/scribble-signature.md)。
 
 ![4](assets/4.png)
+
+#### Rich text format {#rich-text-format}
+
+要將格式設定選項清單添加到所轉換的HTML5表單中的文本欄位，可以在表單設計器中為文本欄位定義欄位格式。 在「設計檢視」中點選 **[!UICONTROL 文字欄位]**。 在「欄 **[!UICONTROL 位]** 」索引標籤中，從「欄位格式 **[!UICONTROL 」下拉式清單中選]** 取「豐富式文字 **** 」以套用設定。 在HTML5表單中轉譯時，文字欄位會顯示格式選項。
 
 [聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
