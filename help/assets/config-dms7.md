@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
+source-git-commit: 7029d6e7047680880ef89365826dd47af478c0b6
 
 ---
 
@@ -22,11 +22,11 @@ source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
 
 以下架構圖說明Dynamic Media - Scene7模式的運作方式。
 
-有了新的架構，AEM負責主要資產並與Dynamic media同步，以處理和發佈資產：
+有了新的架構，AEM負責主要資產並與Dynamic Media同步，以處理和發佈資產：
 
-1. 當主資產上傳至AEM時，它會複製至Dynamic Media。 此時，Dynamic media會處理所有資產處理和轉譯產生，例如影像的視訊編碼和動態變數。 <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
+1. 當主資產上傳至AEM時，它會複製至Dynamic Media。 此時，Dynamic Media會處理所有資產處理和轉譯產生，例如影像的視訊編碼和動態變數。 <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
 1. 產生轉譯後，AEM可以安全地存取和預覽遠端的Dynamic Media轉譯（不會將二進位檔傳回至AEM例項）。
-1. 內容準備好發佈及核准後，它會觸發Dynamic media服務將內容推出至傳送伺服器，並在CDN快取內容。
+1. 內容準備好發佈及核准後，它會觸發Dynamic Media服務將內容推出至傳送伺服器，並在CDN快取內容。
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
@@ -52,7 +52,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 >
 >如果您以相容模式執行AEM例項（即，您已安裝相容性封裝），就不需要執行這些命令。
 
-對於所有升級，不論是否有相容性套件，您都可以執行下列Linux curl命令，複製Dynamic media原本隨附的預設立即可用檢視器預設集：
+對於所有升級，不論是否有相容性套件，您都可以執行下列Linux curl命令，複製Dynamic Media原本隨附的預設立即可用檢視器預設集：
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
@@ -70,7 +70,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## Configuring Dynamic Media Cloud Services {#configuring-dynamic-media-cloud-services}
 
-**在您設定Dynamic Media cloud服務之前**:在您收到具有動態媒體憑證的布建電子郵件後， [您必須登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
+**在您設定Dynamic Media Cloud服務之前**:在您收到具有動態媒體憑證的布建電子郵件後， [您必須登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
 
 若要設定動態媒體雲端服務：
 
@@ -82,9 +82,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    >[!NOTE]
    >
-   >在您收到具有動態媒體憑證的布建電子郵件後，請 [登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media cloud服務。
+   >在您收到具有動態媒體憑證的布建電子郵件後，請 [登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud服務。
 
-1. 如果連接成功，您還可以設定以下內容：
+1. 連接成功後，您還可以設定以下內容：
 
    * **[!UICONTROL 公司]** -動態媒體帳戶的名稱。 您可能會針對不同子品牌、部門或不同的測試／生產環境擁有多個動態媒體帳戶。
 
@@ -94,6 +94,16 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * **[!UICONTROL 安全預覽伺服器]** -可讓您指定安全轉譯預覽伺服器的URL路徑。 也就是說，在產生轉譯後，AEM可以安全地存取和預覽遠端的「動態媒體」轉譯（不會將二進位檔傳回至AEM例項）。
 除非您有特殊安排可使用您公司的伺服器或特殊伺服器，否則Adobe Systems建議您依指定的方式保留此設定。
+
+   * **[!UICONTROL 同步所有內容]** -預 <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->設為「已選取」。 如果您想要選擇性地包含或排除同步至動態媒體的資產，請取消選取此選項。 取消選取此選項可讓您從下列兩種動態媒體同步模式中選擇：
+
+   * **[!UICONTROL Dynamic Media 同步處理模式]**
+      * **[!UICONTROL 預設啟用]** -預設情況下，配置將應用於所有資料夾，除非您專門標籤要導出的資料夾。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+      * **[!UICONTROL 預設禁用]** -在您明確標籤選定資料夾以同步到動態媒體之前，配置不會應用於任何資料夾。
+若要將選取的資料夾標示為同步至動態媒體，請選取資產資料夾，然後在工具列上按一下「屬 **[!UICONTROL 性」]**。 在「詳 **[!UICONTROL 細資訊]** 」標籤的「動態媒體同步模式 **** 」下拉式清單中，從下列三個選項中選擇。 完成時，點選「 **[!UICONTROL 儲存]**」。 *記住：如果您選取「先同步所有內容」，這三個選&#x200B;**項將無法使用**。*
+         * **[!UICONTROL 繼承]** -資料夾上沒有明確的同步值；相反，資料夾會繼承其上級資料夾或雲配置中預設模式中的同步值。 繼承的詳細狀態會透過工具提示顯示。
+         * **[!UICONTROL 啟用子資料夾]** -包含此子樹狀結構中的所有項目，以同步至動態媒體。 資料夾特定的設定會覆寫雲端設定中的預設模式。
+         * **[!UICONTROL 子資料夾停用]** -排除此子樹狀結構中的所有項目，以免同步至動態媒體。
    >[!NOTE]
    >
    >DMS7中不支援版本修訂。 此外，延遲啟動僅適用於在「編輯動態媒體設定」頁面中的「發佈資產 ********」設定為「啟動時」，然後只適用於在首次啟動資產時。
@@ -172,7 +182,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 >
 >若要與AEM維持一致性，請一律選擇下列設定：在目 **前資料夾中覆寫基本影像名稱／副檔名相同**
 
-* **[!UICONTROL 在任何資料夾中覆寫相同的基本資產名稱／副檔名]** -要求取代影像的副檔名與原始影像相同（例如，chair.jpg必須取代chair.jpg，而非chair.tif）。 不過，您可以將取代的影像上傳到原始檔案夾以外的其他檔案夾。 更新後的影像位於新資料夾中；在其原始位置中無法再找到檔案
+* **[!UICONTROL 在任何資料夾中覆寫相同的基本資產名稱／副檔名]** -要求取代影像的副檔名與原始影像相同（例如，chair.jpg必須取代chair.jpg，而非chair.tif）。 不過，您可以將取代影像上傳至原始檔案夾以外的其他檔案夾。 更新後的影像位於新資料夾中；在其原始位置中無法再找到檔案
 * **[!UICONTROL 在任何資料夾中覆寫相同的基本資產名稱(不論副檔名為何]** )-此選項是最包含的取代規則。 您可以將取代影像上傳至原始檔案夾以外的其他檔案夾、以不同副檔名上傳檔案，並取代原始檔案。 如果原始檔案位於不同的檔案夾中，則取代影像會位於上傳檔案的新檔案夾中。
 
 **[!UICONTROL 預設色彩描述檔]** -如需詳細 [資訊，請參閱設定](#configuring-color-management) 色彩管理。
@@ -213,7 +223,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 #### 設定資產處理 {#configuring-asset-processing}
 
-您可以定義Dynamic media應處理哪些資產類型，並自訂進階資產處理參數。 例如，您可以指定資產處理參數以執行下列動作：
+您可以定義Dynamic Media應處理哪些資產類型，並自訂進階資產處理參數。 例如，您可以指定資產處理參數以執行下列動作：
 
 * 將Adobe PDF轉換為eCatalog資產。
 * 將Adobe Photoshop檔案(.PSD)轉換為橫幅範本資產，以利個人化。
@@ -397,7 +407,7 @@ spin-01-01
  spin-03-12
 ```
 
-有了此資訊，您可以按如下方式建立批集類型處方：
+使用此資訊，您可以按如下方式建立批集類型處方：
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
@@ -415,7 +425,7 @@ spin-01-01
 
    請注 **[!UICONTROL 意，如「詳細資料]**」頁面右上角所設定，「檢視表單」是預設檢視。
 
-1. 在「預設清單」面板中，按一 **[!UICONTROL 下]** 「新增」，以啟用畫面右側「詳細資訊」面板中的定義欄位。
+1. 在「預設清單」面板中，按一 **[!UICONTROL 下]** 「新增」，以啟動畫面右側「詳細資訊」面板中的定義欄位。
 1. 在「詳細資料」面板的「預設集名稱」欄位中，輸入預設集的名稱。
 1. 在「批集類型」下拉式功能表中，選擇「資產 **[!UICONTROL 集」]**。
 1. 在「子類型」(Sub Type)下拉清單中，選擇「 **[!UICONTROL 多軸回轉集」(Multi-Axis Spin Set]**)。
@@ -569,7 +579,7 @@ Scene7「上傳連線」設定會將AEM資產同步至Dynamic Media Classic伺�
    <td>開始於 <strong>影片/</strong></td>
    <td>現成可用的「filter-video」將：
     <ul>
-     <li><br /> 排除原始視訊和靜態縮圖轉譯的複製。 <br /> </li>
+     <li>排除原始視訊和靜態縮圖轉譯的複製。<br /> <br /> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -588,7 +598,7 @@ Scene7「上傳連線」設定會將AEM資產同步至Dynamic Media Classic伺�
 
 1. 要定義篩選器的Mime類型，可以按如下方式查找Mime類型：
 
-   在左側導軌中，展 `content > dam > <locate_your_asset> > jcr:content > metadata`開，然後在表格中找到 `dc:format`。
+   在左側邊欄中，展 `content > dam > <locate_your_asset> > jcr:content > metadata`開，然後在表格中找到 `dc:format`。
 
    下圖是資產路徑的範例 `dc:format`。
 
