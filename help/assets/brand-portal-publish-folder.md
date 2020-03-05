@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
+source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 
 ---
 
 
 # Publish folders to Brand Portal{#publish-folders-to-brand-portal}
 
-身為Adobe Experience Manager(AEM)Assets管理員，您可以發佈資產和檔案夾至組織的AEM Assets Brand Portal例項（或排程發佈工作流程至較晚的日期／時間）。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請 [參閱「設定AEM資產與品牌入口網站的整合](/help/assets/brand-portal-configuring-integration.md)」。
+身為Adobe Experience Manager(AEM)Assets管理員，您可以發佈資產和檔案夾至組織的AEM Assets Brand Portal例項（或排程發佈工作流程至較晚的日期／時間）。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請 [參閱「設定AEM資產與品牌入口網站](/help/assets/configure-aem-assets-with-brand-portal.md)」。
 
 發佈資產或資料夾後，品牌入口網站的使用者即可使用它。
 
