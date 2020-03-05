@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -19,10 +19,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 您可以從AEM的不同區域收到通知，包括工作流程和專案；例如，關於：
 
-* 任務:
+* 任務：
 
    * 您也可以在AEM UI中的不同點建立這些項目，例如，在 **Projects下**,
-   * 這些可以是工作流「建立任務」 **或「建立****項目任務」步驟的產品** 。
+   * these can be the product of a workflow **Create Task** or **Create Project Task** step.
 
 * 工作流程:
 
@@ -75,12 +75,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 按一下／點選工具列中的指標。
 
-1. 選擇「 **全部查看**」。 「 **AEM收件匣** 」將會開啟。 收件匣會顯示工作流程、專案和工作中的項目。
-1. 預設視圖是「列 [表視圖](#inbox-list-view)」，但您也可以切換到「日 [歷視圖」](#inbox-calendar-view)。 這是使用檢視選取器（工具列，右上方）完成。
+1. 選擇「 **全部查看**」。「 **AEM收件匣** 」將會開啟。收件匣會顯示工作流程、專案和工作中的項目。
+1. 預設視圖是「列 [表視圖](#inbox-list-view)」，但您也可以切換到「日 [歷視圖」](#inbox-calendar-view)。這是使用檢視選取器 (工具列，右上方) 完成。
 
    對於這兩種視圖，您也可以定義「視 [圖設定」](#inbox-view-settings);可用的選項取決於當前視圖。
 
-   ![wf-79](assets/wf-79.png)
+   ![wf-79](assets/inbox-list-view.png)
 
 >[!NOTE]
 >
@@ -102,18 +102,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 選擇特定視圖；時 **間軸**、 **欄**、清 **單**
 
-* 根據「排程」指定要顯示的 **任務**;所有 **計畫中**&#x200B;的， **進行中**, **即將到**，過 ******去的,**
+* specify the tasks to display according to **Schedule**; **All**, **Planned**, **In Progress**, **Due Soon**, **Past Due**
 
 * 向下鑽取以獲取有關物料的詳細資訊
 * 選擇日期範圍以集中檢視：
 
 ![wf-91](assets/wf-91.png)
 
-### 收件箱——查看設定 {#inbox-view-settings}
+### Inbox - Settings {#inbox-view-settings}
 
 您可以針對兩種檢視（清單和日曆）定義設定：
 
-* **行事曆檢視**
+* **日曆檢視**
 
    對於 **日曆視圖** ，您可以配置：
 
@@ -126,9 +126,29 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    對於 **清單視圖** ，您可以配置排序機制：
 
-   * **排序方式**
+   * **排序欄位**
    * **排序順序**
-   ![wf-83](assets/wf-83.png)
+   ![wf-83](assets/inbox-settings.png)
+
+### 收件匣——管理控制 {#inbox-admin-control}
+
+屬於工作流程管理員 **群組的使用者** ，可以在清單中檢視「管理控制」選項。 使用此選項，管理員可以：
+
+* 定義標題中可用文字和標誌的自訂設定。
+
+* 控制頁首中可用導覽選項的顯示，並限制使用者切換至工作流程製作模式，或導覽至「說明」或其他解決方案連結。
+
+![admin-control](assets/admin-control.png)
+
+* **品牌自訂**
+
+   * **自訂標題文字：** 在此欄位中指定文字，以取代標題中顯 **示的現有Adobe Experience Manager** 文字。
+
+   * **自訂標誌：** 在「數位資產管理」(DAM)中上傳影像，並使用此欄位參考該影像，以取代標題中顯示的Adobe Experience Manager標誌。
+
+* **使用者導覽**
+   * **隱藏導覽選項：** 選取此選項可隱藏頁首中可用的導覽選項，例如導覽至其他解決方案的選項、說明連結，以及點選Adobe Experience Manager標誌或文字時顯示的選項。
+* **儲存：** 點選／按一下此選項以儲存設定。
 
 ## 對項目採取操作 {#taking-action-on-an-item}
 
@@ -176,14 +196,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 您可以從收件箱建立任務：
 
 1. 依次選擇 **建立**、 **任務**。
-1. 填寫「基本」和「進階」標 **簽中****的必要欄位** ;只有「 **標題** 」是必填項目，其他所有項目都是選用項目：
+1. Complete the necessary fields in the **Basic** and **Advanced** tabs; only the **Title** is mandatory, all others are optional:
 
    * **基本**:
 
       * **標題**
       * **專案**
       * **被指定者**
-      * **內容**;與裝載類似，這是從任務到儲存庫中某個位置的引用
+      * **內容**;類似於裝載，這是從任務到儲存庫中某個位置的引用
       * **說明**
       * **任務優先順序**
       * **開始日期**
@@ -210,7 +230,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    >工作項目（來自工作流）不能用於建立項目。
 
 1. 從工 **具列選擇** 「建立專案」以開啟精靈。
-1. 依次選擇適當的範本， **下一步**。
+1. Select the appropriate template, then **Next**.
 1. 指定所需的屬性：
 
    * **基本**
