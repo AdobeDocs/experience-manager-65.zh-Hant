@@ -4,7 +4,7 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
+source-git-commit: 27fdeaf50255379fd6e5bb45eaf593cec895cd04
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
 您可以與使用者共用多個系列。 每個系列都包含資產的參考。 資產的參考完整性會跨系列維持。
 
-系列是以下類型，依據其收集資產的方式：
+系列是以下類型，根據其收集資產的方式：
 
 * 包含資產、檔案夾和其他系列之靜態參考清單的系列。
 
@@ -119,7 +119,7 @@ source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
 ## 編輯智慧型系列 {#editing-a-smart-collection}
 
-智慧型系列是透過儲存搜尋來建立的，因此您可以修改已儲存搜尋的搜尋參數來變更其 [內容](#editing-saved-searches)。
+智慧型系列是透過儲存搜尋來建立的，因此您可以修改已儲存搜尋的搜尋參數來變更其 [內容](#saved-searches)。
 
 1. 在「資產」使用者介面中，點選／按一下工具列中的搜尋圖示。
 
@@ -209,7 +209,7 @@ source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
    >[!NOTE]
    >
-   >您也可以刪除儲存的搜尋， [以刪除智慧型系列](#deleting-saved-searches)。
+   >您也可以刪除儲存的搜尋， [以刪除智慧型系列](#saved-searches)。
 
 ## 下載系列 {#downloading-a-collection}
 
