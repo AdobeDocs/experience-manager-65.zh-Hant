@@ -702,7 +702,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 請注意下列問題：
 
-* Microsoft Spy++使用&amp;符號(&amp;)來識別標題的熱鍵，以顯示標題。 例如，Spy++將一個「打印」對話框的標題顯示為 `Pri&nt`，這表示熱鍵為 *n*。 指令碼和對話框XML檔案中的標題必須省略&amp;符號。
+* Microsoft Spy+&#x200B;+使用&amp;符號(&amp;)來識別標題的熱鍵，以顯示標題。 例如，Spy+&#x200B;+將一個「打印」對話框的標題顯示為 `Pri&nt`，這表示熱鍵為 *n*。 指令碼和對話框XML檔案中的標題必須省略&amp;符號。
 * 有些標題包含分行符號。 「產生PDF」服務無法識別分行符號。 如果標題包含分行符號，請包含足夠的標題以區隔其他功能表項目，然後對省略的部分使用規則運算式。 例如( `^Long caption title$`)。]. (請參閱 [在標題屬性中使用規則運算式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
 * 對保留的XML字元使用字元實體（也稱為轉義序列）。 例如，對於 `&` &amp;符號， `<` 對於 `>` 小於和大於符號，對於撇號 `&apos;` ，對於 `&quot;` 引號。
 
