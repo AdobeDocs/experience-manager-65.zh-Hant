@@ -1,5 +1,5 @@
 ---
-title: AEM 6.5 Service pack發行說明
+title: AEM 6.5 Service Pack發行說明
 description: Adobe Experience Manager 6.5 Service Pack 3的發行說明。
 uuid: c7bc3705-3d92-4e22-ad84-dc6002f6fa6c
 contentOwner: User
@@ -12,14 +12,14 @@ source-git-commit: 9f4a460c7f64d86e35e950e512ed5b6cda1cbf2a
 ---
 
 
-# Adobe Experience Manager 6.5 Service pack發行說明 {#aem-service-pack-release-notes}
+# Adobe Experience Manager 6.5 Service Pack發行說明 {#aem-service-pack-release-notes}
 
 ## 發行資訊 {#release-information}
 
 | 產品 | **Adobe Experience Manager 6.5** |
 |---|---|
 | 版本 | 6.5.3.0 |
-| 類型 | Service pack版本 |
+| 類型 | Service Pack版本 |
 | 日期 | 2019年12月12日 |
 | 下載URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.3.0) |
 
@@ -27,7 +27,7 @@ source-git-commit: 9f4a460c7f64d86e35e950e512ed5b6cda1cbf2a
 
 Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019年4月6.5版全面推出以來的效能、穩定性、安全性和重要客戶修正與增強 **功能**。 它可安裝在Adobe Experience Manager(AEM)6.5之上。
 
-此Service pack版本的一些主要亮點是：
+此Service Pack版本的一些主要亮點是：
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.10.6版。
 
@@ -113,7 +113,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 
 * 新增至影像資產的熱點無法透過資產詳細資料頁面的互動式影像檢視器顯示(NPR-30979)。
 
-* 當對AEM Assets中資產執行的動作傳遞至Scene 7時，會建立巨大的Sling工作，並重新顯示「處理」橫幅(NPR-30947)。
+* 當對AEM Assets中資產執行的動作傳遞至Scene 7時，會建立巨大的sling工作，並重新顯示「處理」橫幅(NPR-30947)。
 
 * 建立資產的語言副本時發生衝突，資產不會上傳至場景7(NPR-30932)。
 
@@ -171,7 +171,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 * 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行(NPR-31182)。
 * 當使用者在功能表的description屬性中新增日文或韓文字元時，功能表會顯示日文和韓文文字的扭曲字元。 (NPR-31331)。
 * Rich Text Editor(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
-* 立即可用的架構Rich Text Editor(RTE)。 意外地將內嵌字型大小套用至元素(NPR-31284)。
+* 立即可用的Rich Text Editor(RTE)腳手架。 意外地將內嵌字型大小套用至元素(NPR-31284)。
 * 當使用者專注在左側欄位並使用鍵盤快速鍵貼上內容時，會貼上頁面編輯器剪貼簿的內容，而非從左側欄位複製的內容(NPR-31172)。
 * 當用戶將「檔案上傳」欄位添加到多欄位時，影像路徑儲存在元件節點中，而不是多欄位節點(NPR-30882)。
 * ResponsiveGridExporter API不會傳回com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter介面。 com.day.cq.wcm.foundation.model.impl套件宣告為私用套件(NPR-31398)。
@@ -223,7 +223,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 
 **產品增強功能**
 
-* AEM Assets中的「資產來源補充」匯入工作流程已修改為僅將新建立的資產從Brand Portal擷取至AEM，並略過NEW檔案夾中已存在的資產，以避免複製(CQ-4278527)。
+* AEM Assets中的「資產來源補充」匯入工作流程已修改為僅將新建立的資產從品牌入口網站擷取至AEM，並略過NEW檔案夾中已存在的資產，以避免複製(CQ-4278527)。
 
 **修正**
 
@@ -240,7 +240,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 * 社群管理員（群組管理員／網站管理員）看不到管理群組的快速連結（開啟／編輯／發佈／刪除群組）(NPR-31627)。
 * 除非手動刷新／重新載入頁面，否則不會顯示已提交的部落格(NPR-31599)。
 * 「提及次數」功能使用的JCR查詢區分大小寫，而且傳回結果需要太長時間(NPR-31475)。
-* AEM 6.5 uberJar檔案拋出例 `cq-social-translation` 外，從AEM 6.5 uberJar檔案中遺失Bundle(NPR-31186)。
+* AEM 6.5 UberJar檔案拋出例 `cq-social-translation` 外，從AEM 6.5 UberJar檔案中遺失Bundle(NPR-31186)。
 * Jackson Databind程式庫已更新至2.9.9.3版，以解決新的弱點(NPR-30967)。
 * 活動和通知標題不一致(NPR-30941)。
 * 在社群部落格中編頁無法正常運作(NPR-30914)。
@@ -254,7 +254,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 
 >[!NOTE]
 >
->AEM Service pack不包含AEM Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
+>AEM Service Pack不包含AEM Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
 
 ##### Forms附加套件 {#forms-add-on-package-6530}
 
@@ -313,7 +313,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 **設定需求**
 
 * AEM 6.5.3.0需要AEM 6.5。請查看 [升級檔案](/help/sites-deploying/upgrade.md) ，以取得詳細指示。
-* Adobe Package Share提供Service pack下載，您可以直接從AEM 6.5執行個體存取。
+* Adobe Package Share提供Service Pack下載，您可以直接從AEM 6.5執行個體存取。
 * 在使用MongoDB和多個執行個體的部署中，使用「套件管理員」將AEM 6.5.3.0安裝在其中一個「作者」執行個體上。
 * 在安裝Service Pack之前，請確定您有AEM例項的快照或新鮮備份。
 * 在安裝之前重新啟動實例。 雖然只有在實例仍處於更新模式時才需要此選項（這是從舊版更新實例時的情況），但建議在實例運行較長時段時使用此選項。
