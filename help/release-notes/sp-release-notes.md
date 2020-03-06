@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
+source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
 | 版本 | 6.5.4.0 |
 | 類型 | Service Pack版本 |
 | 日期 | 2020年3月05日 |
-| 下載URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0) |
+| 下載URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0)，軟 [體散發（測試版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.4.zip) |
 
 ## Adobe Experience Manager 6.5.4.0包含的功能 {#what-s-included-in-aem}
 
@@ -128,8 +128,6 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 在相同資料夾中移動內容時，會停用頁面移動選項(NPR-31840)。
 
-* 存取以/_jcr_content/.html或/jcr:content/.html結尾的URL時，CPU尖峰和AEM會停止回應(NPR-31837)。
-
 * 在可編輯的範本結構模式中，版面容器中允許的元件清單會顯示不正確的結果。 版面容器中只會顯示具有設計對話方塊的元件(NPR-31816)。
 
 * 當頁面具有使用者的唯讀權限時，Open屬性選項會顯示在sites.html中，但不會顯示在editor.html中(NPR-31770)。
@@ -179,8 +177,6 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 ### WCM範本編輯器 {#wcm-template-editor-6540}
 
 * 在可編輯的範本結構模式中，版面容器中允許的元件清單不會顯示連結按鈕元件(CQ-4282099)。
-
-* 當URL結尾為或被存取時，CPU尖峰和Experience Manager `/_jcr_content/.html` 會 `/jcr:content/.html` 停止回應(CQ-4280770)。
 
 ### WCM頁面編輯器 {#wcm-page-editor-6540}
 
