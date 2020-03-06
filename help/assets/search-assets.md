@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選」面板在AEM中尋找所需資產，�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: c491b77dac1bf25b9e348ed12d16ed7894e5493e
 
 ---
 
@@ -42,7 +42,7 @@ AEM搜尋功能支援搜尋系列並搜尋系列中的資產。 請參閱 [搜�
 
 *圖：瞭解Assets搜尋結果介面的部分*
 
-**A.** 將搜尋儲存為智慧型集合。**B.** 用來縮減搜尋結果的篩選器 (述詞)。**C.** 在搜索結果中顯示檔案和 (或) 資料夾。**D.** 按一下「篩選器」以開啟或關閉左側邊欄。**E.** 搜尋位置為 DAM。************ F.Omnisearch欄位，包含使用者提供的搜尋關鍵字。 **G.複選框以選擇所有搜索結果。** H.顯示的搜尋結果總數。 **我。關閉搜**&#x200B;索J。在卡片檢視和清單檢視之間切換。
+**A.** 將搜尋儲存為智慧型集合。**B.** 用來縮減搜尋結果的篩選器 (述詞)。**C.** 在搜索結果中顯示檔案和 (或) 資料夾。**D.** 按一下「篩選器」以開啟或關閉左側邊欄。**E.** 搜尋位置為 DAM。**F.** Omnisearch欄位，包含使用者提供的搜尋關鍵字。 **G.** 複選框以選擇所有搜索結果。 **H.** 顯示的搜尋結果總數。 **我。** 關閉搜 **索J。** 在卡片檢視和清單檢視之間切換。
 
 ### 動態搜尋Facet {#dynamicfacets}
 
@@ -87,7 +87,7 @@ AEM可搜尋許多檔案格式，而且可自訂搜尋篩選器以符合您的�
 
 ### 在您輸入時搜尋建議 {#searchsuggestions}
 
-當您開始輸入關鍵字時，AEM會建議可能的搜尋關鍵字或片語。 建議是以現有資產的中繼資料為基礎。 AEM為所有中繼資料欄位建立索引，以協助搜尋。 為提供搜尋建議，系統會使用下列幾個中繼資料欄位的值。 若要提供搜尋建議，請考慮將適當的關鍵字填入下列欄位：
+當您開始輸入關鍵字時，AEM會建議可能的搜尋關鍵字或片語。 建議是以現有資產的中繼資料為基礎。 AEM為所有中繼資料欄位建立索引，以協助搜尋。 為提供搜尋建議，系統會使用下列數個中繼資料欄位的值。 若要提供搜尋建議，請考慮將適當的關鍵字填入下列欄位：
 
 * 資產標籤。 (映射至 `jcr:content/metadata/cq:tags`)
 * 資產標題。 (映射至 `jcr:content/metadata/dc:title`)
@@ -112,7 +112,7 @@ AEM可搜尋許多檔案格式，而且可自訂搜尋篩選器以符合您的�
 您可以改善特定資產的關鍵字關聯性，以協助根據關鍵字提高搜尋效率。 換言之，當您根據這些關鍵字進行搜尋時，您促銷特定關鍵字的影像會出現在搜尋結果的頂端。
 
 1. 從「資產」使用者介面，開啟資產的屬性頁面。按一 **[!UICONTROL 下「進階]** 」，然後按一下/點選「 **[!UICONTROL Elevate for search keywords]** 」下 **[!UICONTROL 方的「新增」]**。
-1. 在「搜 **[!UICONTROL 尋促銷]** 」方塊中，指定您要大幅提升影像搜尋的關鍵字，然後按一下／點選「新 **[!UICONTROL 增」]**。 您可以以相同的方式指定多個關鍵字。
+1. 在「搜 **[!UICONTROL 尋促銷]** 」方塊中，指定您要大幅提升影像搜尋的關鍵字，然後按一下／點選「新增」 ****。 您可以以相同的方式指定多個關鍵字。
 1. 按一下／點選「 **[!UICONTROL 儲存並關閉]**」。 您為此關鍵字促銷的資產會出現在熱門搜尋結果中。
 
 您可以透過提升目標關鍵字搜尋結果中某些資產的排名，來利用此功能。 請參閱以下範例影片。 如需詳細資訊，請參 [閱「AEM中的搜尋」](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html)。
@@ -197,11 +197,11 @@ Adobe Experience Manager(AEM)將DAM存放庫與各種其他AEM解決方案連結
 
 ### 從Adobe Asset Link面板搜尋資產 {#aal}
 
-使用Adobe Asset Link，創意專業人員現在可以存取儲存在AEM Assets中的內容，而不需離開支援的Adobe Creative cloud應用程式。 創意人員可使用Creative cloud應用程式中的應用程式內面板，順暢地瀏覽、搜尋、結帳和結帳資產：Photoshop、Illustrator和InDesign。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
+使用Adobe Asset Link，創意專業人員現在可以存取儲存在AEM Assets中的內容，而不需離開支援的Adobe Creative Cloud應用程式。 創意人員可使用Creative Cloud應用程式中的應用程式內面板，順暢地瀏覽、搜尋、結帳和結帳資產：Photoshop、Illustrator和InDesign。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
 
 ### 在AEM案頭應用程式中搜尋資產 {#desktopapp}
 
-創意專業人員使用案頭應用程式，讓AEM Assets可輕鬆搜尋，並可在其本機案頭（Win或Mac）上使用。 創意人員可以輕鬆地在Mac finder或Windows檔案總管中顯示所需資產、在案頭應用程式中開啟並在本機變更——這些變更會以儲存庫中建立的新版本儲存回AEM。 應用程式支援使用一或多個關鍵字*和？的基本搜尋 萬用字元和AND運算子。 請參閱 [在案頭應用程式中瀏覽](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 、搜尋和預覽資產。
+創意專業人員使用案頭應用程式，讓AEM Assets可輕鬆搜尋，並可在其本機案頭（Win或Mac）上使用。 創意人員可以輕鬆地在Mac Finder或Windows檔案總管中顯示所需資產、在案頭應用程式中開啟並在本機變更——這些變更會以儲存庫中建立的新版本儲存回AEM。 應用程式支援使用一或多個關鍵字*和？的基本搜尋 萬用字元和AND運算子。 請參閱 [在案頭應用程式中瀏覽](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 、搜尋和預覽資產。
 
 ### Search assets in Brand Portal {#brandportal}
 
@@ -304,7 +304,7 @@ AEM Assets中的搜尋功能有下列限制：
 
 * `run????` query與後4個字 `running` 元的字詞相符 `run`。
 
-* `??run` query與之前包含兩 `rerun` 個字元的字詞相符 `run`。
+* `??run` query與之前包含兩 `rerun` 個字元的單字相符 `run`。
 
 ![使用範例說明在資產搜尋中使用問號萬用字元](assets/search_with_questionmark_run.gif)
 
@@ -320,7 +320,7 @@ AEM Assets中的搜尋功能有下列限制：
 
 ### 搜索索引配置 {#searchindex}
 
-資產發現需要建立DAM內容的索引，包括中繼資料。 更快速且精確的資產發現有賴於最佳化索引和適當的組態。 請參 [閱搜尋索引](/help/assets/performance-tuning-guidelines.md#search-indexes)、 [Oak查詢和索引](/help/sites-deploying/queries-and-indexing.md)，以及 [最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
+資產發現需要建立DAM內容的索引，包括中繼資料。 更快速且精確的資產發現有賴於最佳化索引和適當的組態。 請參 [閱搜尋索引](/help/assets/performance-tuning-guidelines.md#search-indexes)、 [oak查詢和索引](/help/sites-deploying/queries-and-indexing.md)，以及 [最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
 ### 視覺化或相似性搜尋 {#configvisualsearch}
 
@@ -355,7 +355,7 @@ AEM Assets中的搜尋功能有下列限制：
 
 ### 必備中繼資料 {#mandatorymetadata}
 
-企業使用者、管理員或DAM圖書管理員可將部分中繼資料定義為必要的中繼資料，這是商業程式運作的必備中繼資料。 由於各種原因，某些資產可能會遺失此中繼資料，例如大量移轉的舊資產或資產。 會根據索引的中繼資料屬性，偵測並報告遺失或無效中繼資料的資產。 若要設定，請參閱必 [要中繼資料](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
+企業使用者、管理員或DAM圖書管理員可將部分中繼資料定義為必要的中繼資料，這是商業程式運作的必備中繼資料。 由於各種原因，某些資產可能會遺失此中繼資料，例如大量移轉的舊資產或資產。 會根據索引的中繼資料屬性，偵測並報告遺失或無效中繼資料的資產。 若要設定，請參閱必 [要的中繼資料](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
 
 ### 修改搜尋刻面 {#searchfacets}
 
