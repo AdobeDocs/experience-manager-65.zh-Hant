@@ -1,8 +1,8 @@
 ---
 title: 規劃升級
 seo-title: 規劃升級
-description: 本文有助於在規劃AEM升級時建立清楚的目標、階段和交付內容。
-seo-description: 本文有助於在規劃AEM升級時建立清楚的目標、階段和交付內容。
+description: 本文有助於在規劃AEM升級時，建立清楚的目標、階段和交付項目。
+seo-description: 本文有助於在規劃AEM升級時，建立清楚的目標、階段和交付項目。
 uuid: 6128ac53-4115-4262-82d9-a0ad7d498ea6
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ topic-tags: upgrading
 discoiquuid: 49210824-ad87-4b6a-9ae8-77dcfe2b5c06
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -66,7 +66,7 @@ AEM升級程式需要謹慎處理規劃、分析和執行階段，並針對每�
   <tr>
    <td>AEM元件／內容</td>
    <td>適中影響</td>
-   <td><code>/libs</code> 而且 <code>/apps</code> 通過升級可輕鬆處理，但 <code>/etc</code> 通常需要手動重新應用自定義。</td>
+   <td><code>/libs</code> 而且 <code>/apps</code> 可透過升級輕鬆處理，但 <code>/etc</code> 通常需要手動重新應用自訂。</td>
   </tr>
   <tr>
    <td>AEM Services</td>
@@ -106,7 +106,7 @@ AEM 6.5的新功能可在adobe.com的 [AEM區段中找到](/help/release-notes/r
 
 ![test-plan](assets/test-plan.png)
 
-必須複製實際的生產環境，並在升級後對其執行測試，以確保所有應用程式和自訂程式碼仍視需要執行。 您需要重新執行所有自訂作業，並執行效能、負載和安全性測試。 在組織測試計畫時，請務必涵蓋已對系統進行的所有自訂設定，以及日常操作中運用的現成UI和工作流程。 這些功能可包括自訂OSGI服務和servlet、與Adobe Marketing cloud的整合、透過AEM連接器與協力廠商的整合、自訂協力廠商整合、自訂元件和範本、AEM中的自訂UI覆蓋，以及自訂工作流程。 對於從AEM 6之前版本移轉的客戶，應分析任何自訂查詢，因為這些查詢可能需要建立索引。 對於已使用AEM 6.x版本的客戶，仍應測試這些查詢，以確保其索引在升級後仍能繼續有效運作。
+必須複製實際的生產環境，並在升級後對其執行測試，以確保所有應用程式和自訂程式碼仍視需要執行。 您需要重新執行所有自訂作業，並執行效能、負載和安全性測試。 在組織測試計畫時，請務必涵蓋已對系統進行的所有自訂設定，以及日常操作中運用的現成UI和工作流程。 這些功能可包括自訂OSGI服務和servlet、與Adobe Marketing Cloud的整合、透過AEM連接器與協力廠商的整合、自訂協力廠商整合、自訂元件和範本、AEM中的自訂UI覆蓋，以及自訂工作流程。 對於從AEM 6之前版本移轉的客戶，應分析任何自訂查詢，因為這些查詢可能需要建立索引。 對於已使用AEM 6.x版本的客戶，仍應測試這些查詢，以確保其索引在升級後仍能繼續有效運作。
 
 ### 確定需要的體系結構和基礎架構更改 {#determining-architectural-and-infrastructure-changes-needed}
 
@@ -136,7 +136,7 @@ AEM 6.5的新功能可在adobe.com的 [AEM區段中找到](/help/release-notes/r
 
 #### 內容重組考量事項 {#content-restructuring-considerations}
 
-AEM已對儲存庫結構進行變更，有助於更順暢地升級。 這些變更包括根據Adobe或客戶是否擁有內容，將內容從/etc檔案夾移出至資料夾，包括/libs、/apps和/content，以限制在發行期間覆寫內容的機率。 資料庫重組的執行方式不應要求在6.5升級時進行程式碼變更，不過建議在規劃升級時，在 [Repository Restructing in AEM](/help/sites-deploying/repository-restructuring-in-aem65.md) （AEM中的資料庫重組）中檢視詳細資訊。
+AEM已對儲存庫結構進行變更，有助於更順暢地升級。 這些變更包括根據Adobe或客戶是否擁有內容，將內容從/etc檔案夾移出至資料夾，包括/libs、/apps和/content，以限制在發行期間覆寫內容的機率。 資料庫重組的執行方式不應要求在6.5升級時進行程式碼變更，不過建議在規劃升級時，在 [Repository Restructing in AEM](/help/sites-deploying/repository-restructuring.md) （AEM中的資料庫重組）中檢視詳細資訊。
 
 ### 評估升級複雜性 {#assessing-upgrade-complexity}
 
