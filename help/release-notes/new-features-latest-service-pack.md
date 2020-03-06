@@ -4,14 +4,14 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d867ee46ca9cd5945c7413d42fc002b90332c3c
+source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-在2020年，針對Adobe Experience Manager(AEM)6.5，每季Service Pack都會提供新功能和改進。 當客戶更快地採用創新時，這種新方法可讓他們受益。
+在2020年，Adobe Experience Manager(AEM)6.5提供每季Service Pack的功能和持續的改進。 當客戶更快地採用創新時，這種新方法可讓他們受益。
 
 最新的AEM Service Pack 4(6.5.4.0)將於2020年3 **月5日發行**。 本文著重說明最新Service Pack提供的功能，讓您的AEM旅程更加豐富。
 
@@ -19,15 +19,16 @@ source-git-commit: 1d867ee46ca9cd5945c7413d42fc002b90332c3c
 
 ### 不同領域的效能改進 {#performance-improvements}
 
-* 縮短在網站(contexthub.kernel.js)中載入和初始化ContextHub的時間。 在網站造訪期間，可加快載入第1頁的速度。
+* 縮短在網站(contexthub.kernel.js)中載入和初始化ContextHub的時間。 這可讓網站瀏覽時載入頁面的速度更快。
 
-* 在頁面編輯器中，縮短將體驗片段拖放至頁面畫布後重新整理頁面的時間。
+* 縮短在頁面編輯器畫布中拖放體驗片段後重新整理頁面的時間。
 
-* 在即時副本概觀中，縮短在網站有多個即時副本時載入項目的時間(+200)。
+* 在即時副本概述中，當網站有超過200個即時副本時，可縮短載入項目的時間。
 
-* 在範本編輯器中，改善可能觸發範本編輯器變慢的不完整／無效URL的處理。
+* 在範本編輯器中，已改進可觸發範本編輯器減慢速度的不完整或無效URL的處理。
 
-此外，從AEM 6.5 SP4開始，「樣式系統」已增強，現在也可以在元件對話方塊中選取樣式。
+此外，AEM 6.5 SP4還包含Style System增強功能。 您現在也可以在元件對話方塊中選取樣式。
+
 
 ## AEM Assets {#aem-assets}
 
