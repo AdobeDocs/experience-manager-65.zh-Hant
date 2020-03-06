@@ -1,28 +1,300 @@
 ---
-title: AEM 6.5 Service pack發行說明
-description: Adobe Experience Manager 6.5 Service Pack 3的發行說明。
+title: AEM 6.5舊版Service Pack發行說明
+description: Adobe Experience Manager 6.5 Service Pack 3及更舊版本的發行說明。
 uuid: c7bc3705-3d92-4e22-ad84-dc6002f6fa6c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 95d9ed8a0ccfa7651b83058d337511dd6b15665f
+source-git-commit: 7ae0055e09c3ae2ff2898ac4f6c537a825dc0cf0
 
 ---
 
 
-# 舊版Service pack中包含的修補程式和功能套件 {#hotfixes-and-feature-packs-included-in-previous-service-packs}
+# 舊版Service Pack中包含的修補程式和功能套件 {#hotfixes-and-feature-packs-included-in-previous-service-packs}
+
+## AEM 6.5.3.0
+
+Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019年4月6.5版全面推出以來的效能、穩定性、安全性和重要客戶修正與增強 **功能**。 它可安裝在Adobe Experience Manager(AEM)6.5之上。
+
+此Service Pack版本的一些主要亮點是：
+
+* 內建儲存庫(Apache Jackrabbit Oak)已更新至1.10.6版。
+
+* Experience Manager Assets現在支援使用Deflate 64演算法建立的ZIP封存。
+
+* 已在DAM清單檢視中新增可排序的建立日期新欄，並在清單檢視中新增資產搜尋結果。
+
+* 已在「清單」檢視中啟用「名稱」欄的資產排序。
+
+* 動態媒體現在支援智慧型裁切視訊資產。 Smart Crop是機器學習驅動的功能，可在移動影格時重新裁切視訊，以跟隨場景的焦點。
+
+* 動態媒體支援智慧型影像。
+
+* 能夠在 [AEM工作流程中設定](../forms/using/configure-out-of-office-settings.md) 「Out of Office」偏好設定。
+
+* 可在AEM工 [作流程中與其他使用者共用「收件匣](../forms/using/configure-shared-queues-osgi.md) 」或「收件匣」項目。
+
+* 能夠在 [批次模式中產生互動式通訊](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
+
+* ContextHub中已整合的jQuery更新版本至3.4.1。
+
+### 資產 {#assets-6530-enhancements}
+
+**產品增強功能**
+
+* Experience Manager Assets現在支援使用Deflate 64演算法建立的ZIP封存(NPR-27573)。
+
+* 已在DAM清單檢視中新增可排序的建立日期新欄，並在清單檢視中新增資產搜尋結果(NPR-31312)。
+
+* 「清單」檢視中已允許根據「名稱」欄進行資產排序(NPR-31299)。
+
+* GLB、GLTF、OBJ和STL資產檔案支援在DAM的「資產詳細資訊」頁面中預覽資產(CQ-4282277)。
+
+* 在動態媒體中區塊上載期間，會針對區塊節點觸發ReplicationOnModifyListener事件(CQ-4281279)。
+
+* 動態媒體現在支援智慧型裁切視訊資產。 Smart Crop是機器學習驅動的功能，可在移動影格時重新裁切視訊，以跟隨場景的焦點(CQ-4278995)。
+
+* 動態媒體支援智慧型影像(CQ-422249)。
+
+* 如果查詢參數傳入請求中，搜尋／瀏覽檢視已設為Foundation選擇器的預設檢視(NPR-31601)。
+
+**修正**
+
+* 某些PDF檔案的中繼資料不會在修改標題時更新並儲存至PDF(NPR-31629)。
+
+* 資產共用不適用於名稱中加上&#39;+&#39;字元的資產(NPR-31547)。
+
+* 預設搜尋表單「資產管理員*搜尋邊欄」中的編輯無法如預期般運作(NPR-31502)。
+
+* 使用Omnisearch on assets view for searching assets時，不會顯示建議(NPR-31496)。
+
+* 當參考的資產移至其他位置時，系列中的資產參考不會更新，因為不同的使用者會參考不同的資產(NPR-31486)。
+
+* 重複的IPTC標籤會新增至資產中繼資料(NPR-31328)。
+
+* 當從篩選邊欄觸發搜尋時，右上角的搜尋結果計數無法正確更新(NPR-31316)。
+
+* 取消選擇「檔案類型」過濾器中的第二級複選框時，所有複選框都將被清除，搜索欄中的文本與所選／未選定的屬性不同步(NPR-31287)。
+
+* 不能從資料夾的「成員」部分中刪除所有成員（用戶／組）;在嘗試移除所有使用者時，登入的使用者會新增至清單(NPR-31171)。
+
+* 無法刪除檔案名稱中加上&#39;+&#39;符號的資產(NPR-31162)。
+
+* 建立下拉式選單（在選取資料夾時，會在頂端選單中顯示）不會將「資料夾」顯示為建立選項(NPR-30877)。
+
+* 當對用戶應用路徑上的ACL拒絕jcr:removeChildNodes和jcr:removeNode(NPR-30840)時，資料夾選擇「建立」>「檔案上載」操作項將丟失。
+
+* 當某些mp4資產上傳時，DAM工作流程會進入過時狀態，導致所有剩餘的工作流程都進入過時狀態(NPR-30662)。
+
+* 當大型PDF檔案（數GB）上傳至DAM並處理其子資產時，會出現記憶體不足錯誤(NPR-30614)。
+
+* 大量移動資產失敗並顯示警告訊息(NPR-30610)。
+
+* 在Dynamic Media Scene 7執行模式上執行的AEM中，當資產從一個檔案夾移至另一個檔案夾時，資產名稱會變更為小寫(NPR-31630)。
+
+* 編輯遠端影像集時，會針對與Scene 7公司名稱相同的資料夾中的影像，發現錯誤(NPR-31340)。
+
+* 不會發佈包含參考的動態媒體資產(NPR-31180)。
+
+* 從AEM Dynamic Media - Scene 7執行模式上傳至Scene 7的時間太長，無法完成(NPR-31048)。
+
+* 新增至影像資產的熱點無法透過資產詳細資料頁面的互動式影像檢視器顯示(NPR-30979)。
+
+* 當對AEM Assets中資產執行的動作傳遞至Scene 7時，會建立巨大的sling工作，並重新顯示「處理」橫幅(NPR-30947)。
+
+* 建立資產的語言副本時發生衝突，資產不會上傳至場景7(NPR-30932)。
+
+* 從AEM下載的動態轉譯在「動態媒體混合」模式下執行會中斷（這些轉譯屬於文字類型，內容「找不到影像」而非影像內容類型）(NPR-30876)。
+
+* 「動態媒體編碼視訊」工作流程無法針對從Scene 7移轉至Dynamic Media - Scene 7執行模式的視訊產生縮圖(CQ-4282011)。
+
+* 使用不同的Scene 7公司ID(CQ-4280548)，將資產從一個例項移轉至另一個例項時觀察到IpsApiException。
+
+* 當支援的3D模型已收錄到AEM中時，3D Asset縮圖不提供資訊(CQ-4283701)。
+
+* 如果3D資產的相機檢視次數很少，檢視器中會顯示捲動按鈕(CQ-4283322)。
+
+* 在「資產詳細資料」頁面的DimensionalViewer中預覽的已上傳3D模型容器高度不正確(CQ-4283309)。
+
+* 無法在Internet Explorer 11和Safari上使用SmartCropVideoViewer播放視訊(CQ-4281422)。
+
+* 使用「移動」按鈕，將多個資產從一個檔案夾移至另一個檔案夾時，在「動態媒體- scene7執行模式」上執行的AEM中會失敗(CQ-4280384)。
+
+* 當MIME類型不是MP4時，資產詳細資料上會顯示扭曲的視訊(CQ-4279704)。
+
+* 新收錄在具有視訊描述檔的資料夾中的視訊，即使編碼百分比完成到100%後，仍會維持處理狀態(CQ-4279389)。
+
+* 從資料夾移動資產會建立大量的sling工作（Scene 7 API呼叫），而非理想的必要(CQ-4278664)。
+
+* 當在DAM中建立影像集（或媒體集）並以適當的命名慣例命名時，影像集的名稱會在Scene 7中變更為小寫(CQ-4281112)。
+
+* Scene 7 Migrator未正確設定發佈狀態(CQ-4263492)。
+
+* 觸控UI搜尋（透過Omnisearch完成）結果頁面會自動捲動，並遺失使用者在內容片段中的捲動位置(CQ-4282898)。
+
+* PDF檔案不會建立索引，而內容則無法搜尋(CQ-4278916)。
+
+* 出現「Group not listed by user picker（組未由用戶選擇器列出）」錯誤：預期false為等於true」時，會在新增具有不同和(CQ-4278177) `principalName` 的封閉 `authorizableId` 使用者群組時觀察到。
+
+* 資產UI欄檢視會顯示所有路徑，不論特定租用戶的dam根路徑為何(CQ-4278175)。
+
+* 資產選擇器的搜尋無法如預期般運作(CQ-4275886)。
+
+* 轉譯工作流程失敗(CQ-4271928)。
+
+* DAM事件清除會刪除最新(maxSavedActivitys)事件資料，並保留先前建立的資料(NPR-31336)。
+
+* 觸控式UI搜尋（透過Omnisearch完成）結果頁面會自動捲動並遺失使用者的捲動位置(NPR-31307)。
+
+* 在Touch UI中選取全部然後取消選取某些項目（資料夾／個別資產）時，動作列和資產計數不會更新(NPR-31118)。
+
+* 在輪詢資產的作業詳細資訊時，AEM中會顯示例外(CQ-4283569)。
+
+### 網站 {#sites}
+
+* 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結(NPR-30980)。
+* 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行(NPR-31182)。
+* 當使用者在功能表的description屬性中新增日文或韓文字元時，功能表會顯示日文和韓文文字的扭曲字元。 (NPR-31331)。
+* Rich Text Editor(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
+* 立即可用的Rich Text Editor(RTE)腳手架。 意外地將內嵌字型大小套用至元素(NPR-31284)。
+* 當使用者專注在左側欄位並使用鍵盤快速鍵貼上內容時，會貼上頁面編輯器剪貼簿的內容，而非從左側欄位複製的內容(NPR-31172)。
+* 當用戶將「檔案上傳」欄位添加到多欄位時，影像路徑儲存在元件節點中，而不是多欄位節點(NPR-30882)。
+* ResponsiveGridExporter API不會傳回com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter介面。 com.day.cq.wcm.foundation.model.impl套件宣告為私用套件(NPR-31398)。
+* 在非編輯器模式(在「作者」中(不含首碼和 `editor.html``wcmmode=disabled`，或在「發佈者」中)中開啟包含某些ExperienceFragments的頁面時，請求會以HTTP狀態錯誤碼500(NPR-30743)結束。
+* 使用者無法變更密碼並存取其描述檔頁面(NPR-31161)。
+
+### 搜尋與使用者介面 {#search-ui-interface}
+
+* 從搜尋結果頁面的「卡片」檢視切換至「清單」檢視時，在可捲動頁面之前會有延遲(NPR-31286)。
+
+* 「全選」核取方塊會隱藏在「網站UI」的「清單」檢視中(NPR-31614)。
+
+* 搜尋結果頁面上的「全選」計數不正確(NPR-31120)。
+
+* 中繼資料編輯器會顯示不存在的標籤(NPR-31119)。
+
+### 轉換 {#translation}
+
+* 在翻譯工作中選擇「到期日期」選項時，會出現兩個日曆彈出式選項(NPR-31270)。
+
+### 平台 {#platform}
+
+* Web控制台中的Mime類型選項無效(NPR-31108)。
+
+* 在設定單一登入時不接受用戶端憑證(NPR-31165)。
+
+* 不會儲存Jetty型HTTP服務緩衝區大小設定的更新(NPR-30925)。
+
+* QueryBuilder現在支援 ``fn:name()`` xpath查詢中的orderby(NPR-31322)。
+
+* 從AEM 6.3升級時會建立重複的啟動樹狀結構(NPR-31513)。
+
+* 轉送的請求不會保留在sling驗證期間設定的回應標頭(NPR-30013)。
+
+* 在機械臂元件中搜索無法工作(NPR-31692)。
+
+* 由於Apache POI和Apache Tika搭售版本不同，將ZIP檔案附加至AEM Communities貼文時會顯示錯誤(NPR-31018)。
+
+* 包 ``org.apache.sling.distribution.api`` 在配置管理器中隱藏，因此無法用於定制包(NPR-31720)。
+
+### 專案 {#projects}
+
+* 切換日曆視圖無效(NPR-31271)。
+
+### 品牌入口網站 {#assets-brand-portal}
+
+**產品增強功能**
+
+* AEM Assets中的「資產來源補充」匯入工作流程已修改為僅將新建立的資產從品牌入口網站擷取至AEM，並略過NEW檔案夾中已存在的資產，以避免複製(CQ-4278527)。
+
+**修正**
+
+* 在「資產來源補充」功能中建立新的「貢獻」檔案夾時，會出現不正確的圖示(CQ-4282825)。
+* 建立新的「貢獻」檔案夾時，「貢獻」檔案夾中不會顯示一或兩個子檔案夾（NEW和SHARED）(CQ-4282424)。
+* 如果使用者在從品牌入口網站端接收「貢獻」檔案夾中的新資產後，嘗試從AEM將「貢獻」檔案夾重新發佈至品牌入口網站，系統會引發例外(CQ-4279740)。
+* 禁止在「貢獻」檔案夾（巢狀檔案夾）中建立「貢獻」檔案夾，以避免複雜性(CQ-4278391)。
+* 系統會在上傳從AEM Admin Console匯入的品牌入口網站使用者清單（.csv檔案）時引發例外。 .csv檔案中只有「電子郵件」、「名字」和「姓氏」欄位是必填欄位(CQ-4278390)。
+
+### 社群 {#communities}
+
+**修正**
+
+* 社群管理員（群組管理員／網站管理員）看不到管理群組的快速連結（開啟／編輯／發佈／刪除群組）(NPR-31627)。
+* 除非手動刷新／重新載入頁面，否則不會顯示已提交的部落格(NPR-31599)。
+* 「提及次數」功能使用的JCR查詢區分大小寫，而且傳回結果需要太長時間(NPR-31475)。
+* AEM 6.5 UberJar檔案拋出例 `cq-social-translation` 外，從AEM 6.5 UberJar檔案中遺失Bundle(NPR-31186)。
+* Jackson Databind程式庫已更新至2.9.9.3版，以解決新的弱點(NPR-30967)。
+* 活動和通知標題不一致(NPR-30941)。
+* 在社群部落格中編頁無法正常運作(NPR-30914)。
+* Analytics報表未填入AEM作者環境，空白頁面會出現(NPR-30913)。
+
+### 奧克 {#oak}
+
+* Lucene索引更新導致作者伺服器速度變慢(NPR-31548)。
+
+### 表單 {#forms-6530}
+
+>[!NOTE]
+>
+>AEM Service Pack不包含AEM Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
+
+#### Forms附加套件 {#forms-add-on-package-6530}
+
+**適用性表單**
+
+* 字串包含在本地化最適化表單時的字典鍵(NPR-31110)。
+
+**互動式通訊**
+
+* **MissingNode.toString()** 在將Jackson庫升級至2.10.0(NPR-31549)後傳回不正確的結果。
+
+* 文字編輯器會從從Microsoft Word複製的文字中隨機移除空格字元(NPR-31113)。
+
+**信件管理**
+
+* 從LiveCycle ES4SP1將字母移轉至AEM 6.5時，不會顯示標題和工具提示(NPR-31615)。
+
+* **將字母儲存為草稿時** ，不會再顯示文字流格式錯誤訊息(NPR-30463)。
+
+**工作流程**
+
+* OSGi工作流程因CPU使用率100%而失敗(NPR-31233)。
+
+**HTML5 Forms**
+
+* 產生XDP表單的HTML5預覽會在新增子表單例項時顯示閃爍(NPR-30909)。
+
+#### JEE安裝程式上的表格 {#forms-jee-installer-6530}
+
+**表單——檔案服務**
+
+* 在。NET專案中使用MTOM的SOAP web service會顯示AssemblerServiceClient叫用和HtmlToPDF2方法的例外(NPR-4281771)。
+
+**Foundation JEE**
+
+* 動作設定不會載入「叫用表單工作流程」提交動作的程式名稱(NPR-31478)。
+
+### 隨附的功能套件 {#feature-packs-included-6530}
+
+>[!NOTE]
+>
+>對於AEM Forms客戶，在安裝任何AEM Service Pack、Cumulative Fix Pack或Feature Pack後，必須安裝AEM Forms附加套件。
+
+#### 表單- Foundation JEE {#forms-foundation-jee-feature}
+
+* AEM Forms對Oracle 18c的支援(NPR-29155)。
 
 ## AEM 6.5.2.0
 
 AEM 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月AEM 6.5全面推出以來的重要客戶修正和 **增強功能**。 它可安裝在AEM 6.5上。
 
-此Service pack版本的一些主要亮點是：
+此Service Pack版本的一些主要亮點是：
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.10.3版。
-* 已新增設定屬性，以允許將體驗片段直接匯出至Adobe target的使用者定義工作區。
-* 資產使用者可以搜尋視覺上類似的影像。 AEM會顯示來自DAM儲存庫的智慧型標籤影像，這些影像類似於使用者選取的影像。 請參閱 [視覺搜尋](../assets/search-assets.md#visualsearch)。
+* 已新增設定屬性，以允許將體驗片段直接匯出至Adobe Target的使用者定義工作區。
+* 資產使用者可以搜尋視覺上類似的影像。 AEM會顯示來自DAM儲存庫的智慧型標籤影像，這些影像類似於使用者選取的影像。請參閱 [視覺搜尋](../assets/search-assets.md#visualsearch)。
 
 * 增強「已連線資產」功能，以新增從遠端DAM部署擷取檔案的支援。 網站作者現在可以在Content Finder中搜尋及篩選支援的檔案類型。 遠端檔案可新增至網頁上的「下載」元件。 請參 [閱使用連線資產](../assets/use-assets-across-connected-assets-instances.md)。
 
@@ -40,7 +312,7 @@ AEM 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性
 
 * 增強「已連線資產」功能，以新增從遠端DAM部署擷取檔案的支援。 網站作者現在可以在Content Finder中搜尋及篩選支援的檔案類型。 遠端檔案可新增至網頁上的「下載」元件。 CQ-4270245的修補程式。 請參 [閱使用連線資產](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-* 資產使用者可以搜尋視覺上類似的影像。 AEM會顯示來自DAM儲存庫的智慧型標籤影像，這些影像類似於使用者選取的影像。 請參閱 [視覺搜尋](../assets/search-assets.md#visualsearch)。
+* 資產使用者可以搜尋視覺上類似的影像。 AEM會顯示來自DAM儲存庫的智慧型標籤影像，這些影像類似於使用者選取的影像。請參閱 [視覺搜尋](../assets/search-assets.md#visualsearch)。
 
 **修正**
 
@@ -57,13 +329,13 @@ AEM 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性
 * DAM更新資產工作流程——上傳大型mp4檔案時處於過時狀態。 NPR-30480:CQ-4271352的修補程式
 * 「建立審閱任務」功能無法運作，因為空負載導致所有後續審閱任務相關操作失敗。 NPR-30468:CQ-4274263的修補程式
 * 透過Datapower的Adobe Smart Tag連線問題。 NPR-30026:CQ-4269457的修補程式
-* 「資產UI欄檢視」嘗試開啟離開邊欄的篩選時，會引發錯誤。 NPR-30501:CQ-4273862的修補程式
+* 「資產UI欄檢視」嘗試開啟離開邊欄的篩選時會引發錯誤。 NPR-30501:CQ-4273862的修補程式
 * 在資產資料夾的「已關閉使用者群組」(CUG)屬性中新增與LDAP同步的群組時，不會儲存並擷取群組。 NPR-30615:CQ-4274689的修補程式
 * 篩選搜索樣式和方向欄位不會將自動完成的值應用於搜索查詢。 NPR-30620:CQ-4275724的修補程式
 * 名稱中包含空格和&quot;&amp;&quot;字元之資料夾的資產共用連結，會為某些資產顯示空白的灰色卡片。 NPR-30557:CQ-4270187的修補程式
 * 資料夾中繼資料結構表單不會自動偵測資料類型，因此不會在表單提交中建立相關的TypeHint。 NPR-30599:CQ-4275227的修補程式
 * 裁切和旋轉資產編輯選項會從DMS7編寫UI中停用。 NPR-30118:CQ-4273221的修補程式
-* 在DMS7設定的AEM例項中，「共用連結」功能無法運作。 NPR-30080、NPR-30492:CQ-4273651的修補程式
+* 使用DMS7設定的AEM例項無法使用「共用連結」功能。 NPR-30080、NPR-30492:CQ-4273651的修補程式
 * 將Dynamic Media Scene7元件新增至頁面，然後發佈頁面並不會每次觸發dmscene7設定。 NPR-30641:CQ-4275962的修補程式
 * 在AEM中新增IPSJobJournal，以針對每個處理設定檔僅建立一個入侵防護系統(IPS)工作。 NPR-30490:CQ-4273614的修補程式
 * 動態媒體：新增預設篩選條件，排除資產不會複製至AEM發佈節點。 NPR-30538:CQ-4274678的修補程式
@@ -79,13 +351,13 @@ AEM 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性
 * 依相關性排序搜尋查詢會傳回InDesign檔案以及InDesign範本。 CQ-4273864的修補程式
 * 如果使用者有大寫電子郵件ID，使用者將無法登入先前已登出的資產。 CQ-4276575的修補程式
 * 「刪除」操作僅適用於所選的預設集，如果螢幕在操作後自動刷新清單，則會顯示已刷新的其他預設集。 CQ-4261461的修補程式
-* 在DMHybrid模式中設定Dynamic Media cloud服務會導致在Analytics中建立多個空的報表套裝，而且AEM中未儲存任何報表套裝ID，導致報表套裝重複。 CQ-4249780的修補程式
+* 在DMHybrid模式中設定Dynamic Media Cloud服務會導致在Analytics中建立多個空的報表套裝，而且AEM中未儲存任何報表套裝ID，導致報表套裝重複。 CQ-4249780的修補程式
 * 將AEM資產中的作業重新命名為重複名稱無法同步至Scene7。 CQ-4276763的修補程式
 * 使用者產生的內容會在搜尋篩選面板中錯誤顯示。 CQ-4273875的修補程式
 * TIFF影像無法使用「尋找類似項目」選項。 CQ-4278238的修補程式
 * 在VideoPlayer中載入時將視訊靜音的實作選項。 CQ-4266465的修補程式
-* 檢視器- videoViewer:poster=none在使用外部視訊時運作不正確。 CQ-4265536的修補程式
-* 在IE11和MS edge瀏覽器上播放視訊時，會顯示等待圖示。 CQ-4251539的修補程式
+* 檢視器- VideoViewer:poster=none在使用外部視訊時運作不正確。 CQ-4265536的修補程式
+* 在IE11和MS Edge瀏覽器上播放視訊時，會顯示等待圖示。 CQ-4251539的修補程式
 * 3.8 SDK和5.13檢視器README檔案未更新，且包含舊版資訊。 CQ-4273737的修補程式
 * 內容片段在儲存變更之前即會更新版本。 NPR-30616:CQ-4273088的修補程式
 * 在縮圖處理中，以Asset#getMetadataValueFromJcr(String)取代Asset#getMetadata(String)。 NPR-30491:CQ-4273067的修補程式
@@ -150,7 +422,7 @@ AEM 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性
 
 >[!NOTE]
 >
->AEM Service pack不包含AEM Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[與安裝AEM Forms JEE安裝程式」](#forms-jee-installer)。
+>AEM Service Pack不包含AEM Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[與安裝AEM Forms JEE安裝程式」](#forms-jee-installer)。
 
 AEM 6.5.2.0表格的主要重點為：
 
@@ -209,7 +481,7 @@ AEM 6.5.2.0表格的主要重點為：
 
 #### 網站 {#sites-feature-packs-included}
 
-* 已新增設定屬性，以允許將體驗片段直接匯出至Adobe target的使用者定義工作區。 NPR-29189:CQ-4249782的修補程式
+* 已新增設定屬性，以允許將體驗片段直接匯出至Adobe Target的使用者定義工作區。 NPR-29189:CQ-4249782的修補程式
 
 #### 表單——檔案服務 {#forms-document-services-1}
 
@@ -219,7 +491,7 @@ AEM 6.5.2.0表格的主要重點為：
 
 AEM 6.5.1.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月AEM 6.5全面推出以來的重要客戶修正和 *增強功能。* 它可安裝在AEM 6.5上。
 
-此Service pack版本的一些主要亮點是：
+此Service Pack版本的一些主要亮點是：
 
 * 啟用動態UI狀態在追蹤事件時的自訂屬性。
 * 包含在Dynamic Media Scene 7中傳送360度視訊資產的支援。
@@ -288,7 +560,7 @@ AEM 6.5.1.0是重要的發行版本，其中包括效能、穩定性、安全性
 
 ### WCM - MSM
 
-* 升級至AEM 6.4.3讓Multi-Site manager需要很長時間才能推出。 CQ-4271410的修補程式
+* 升級至AEM 6.4.3讓Multi-Site Manager需要很長時間才能推出。 CQ-4271410的修補程式
 
 ### 整合
 
@@ -310,7 +582,7 @@ AEM 6.5.1.0是重要的發行版本，其中包括效能、穩定性、安全性
 
 ### 複寫
 
-* Replication agent元件容易受到向未授權用戶洩漏敏感資訊的漏洞的攻擊。 NPR-29611:GRANITE-25070的修補程式
+* Replication Agent元件容易受到向未授權用戶洩漏敏感資訊的漏洞的攻擊。 NPR-29611:GRANITE-25070的修補程式
 
 * 每次複製到品牌入口網站時，OAuth期間會話洩漏。 NPR-30001:GRANITE-26196的修補程式
 
@@ -330,7 +602,7 @@ AEM 6.5.1.0是重要的發行版本，其中包括效能、穩定性、安全性
 
 AEM 6.5.1.0表格的主要重點為：
 
-* 僅限OSGi:在Output and Forms service中新 `PAGECOUNT` 增屬性。
+* 僅限OSGi:在Output and Forms Service中新 `PAGECOUNT` 增屬性。
 
 * 僅限OSGI:已啟用支援，可使用Forms Service建立靜態PDF檔案。
 * 為管理員和根用戶啟用對XMLForm.exe的權限。
@@ -341,7 +613,7 @@ AEM 6.5.1.0表格的主要重點為：
 **後端整合**
 
 * 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29944:CQ-4270777的修補程式
-* 當AEM Forms安裝在IBM webSphere上時，建立以SOAP為基礎的表單資料模型會失敗。 CQ-4251134的修補程式
+* 當AEM Forms安裝在IBM WebSphere上時，建立以SOAP為基礎的表單資料模型會失敗。 CQ-4251134的修補程式
 * 已針對Microsoft Dynamics內部部署整合啟用Active Directory Federation Services(ADFS)v3.0支援。 CQ-4270586的修補程式
 * 當資料來源的標題變更時，表單資料模型不會顯示更新的標題。 CQ-4265599的修補程式
 * 如果實體或屬性的名稱包含連字型大小或空格，表達式將無法計算此類實體和屬性。 CQ-4225129的修補程式
@@ -416,7 +688,7 @@ AEM 6.5.1.0表格的主要重點為：
 **表單——檔案安全性**
 
 * 使用硬體安全性模組(HSM)的數位簽章無法在Java 11和Java 8的OSGi Linux上運作。 NPR-29838:CQ-4270441的修補程式
-* 具有硬體安全模組(HSM)的數字簽名在JEE linux和所有受支援的應用程式伺服器（如JBoss和Websphere）上無法運行。 NPR-29839:CQ-4266721的修補程式
+* 具有硬體安全模組(HSM)的數字簽名在JEE Linux和所有受支援的應用程式伺服器（如JBoss和Websphere）上無法運行。 NPR-29839:CQ-4266721的修補程式
 * 使用PDF進階電子簽名(PAdES)驗證PDF中的簽名會產生InvalidOperationException。 NPR-29842:CQ-4244837的修補程式
 * 新增Document Security Extension對Office 2019的支援\。 CQ-4254369、CQ-4259764的修補程式
 
@@ -447,7 +719,7 @@ AEM 6.5.1.0表格的主要重點為：
 
 #### 表單——檔案服務——隨附
 
-* 僅限OSGi:在Output and Forms service中新增屬性PAGECOUNT。 NPR-28922:CQ-4270870的修補程式
+* 僅限OSGi:在Output and Forms Service中新增屬性PAGECOUNT。 NPR-28922:CQ-4270870的修補程式
 * 僅限OSGi:已啟用支援，可使用Forms Service建立靜態PDF檔案。 NPR-28572:CQ-4270869的修補程式
 * 為管理員和根用戶啟用對XMLForm.exe的權限。 NPR-29237:CQ-4267080的修補程式
 
