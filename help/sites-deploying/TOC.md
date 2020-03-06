@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Deploying Guide
 translation-type: tm+mt
-source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
+source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    + [Oak查詢和索引](queries-and-indexing.md)
    + [如何使用TarMK Cold Standby運行AEM](tarmk-cold-standby.md)
    + [AEM 6.5中的RDBMS支援](rdbms-support-in-aem.md)
-   + [透過Oak-run jar建立索引](indexing-via-the-oak-run-jar.md)
+   + [透過Oak-run Jar建立索引](indexing-via-the-oak-run-jar.md)
    + [Oak-run.jar索引使用案例](oak-run-indexing-usecases.md)
    + [疑難排解Oak索引](troubleshooting-oak-indexes.md)
    + [選擇匯總使用統計資訊收集](opt-in-aggregated-usage-statistics.md)
@@ -56,6 +56,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    + [效能最佳化](configuring-performance.md)
    + [資產效能指南](assets-performance-sizing.md)
    + [設定操作說明文章](ht-deploy.md)
+   + [配置Web控制台](configuring-web-console.md)
 + 升級至AEM 6.5 {#upgrading}
    + [升級至AEM 6.5](upgrade.md)
    + [規劃升級](upgrade-planning.md)
