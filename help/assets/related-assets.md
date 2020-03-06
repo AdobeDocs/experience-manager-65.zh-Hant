@@ -3,7 +3,7 @@ title: 相關資產
 description: 瞭解如何建立共用特定共同屬性的資產的關聯。 您也可以使用此功能來建立資產間的來源／衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: fb0688afbadd1b27f1a3b3326f18c15d1c7811aa
 
 ---
 
@@ -13,6 +13,9 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組織的需求手動建立資產關聯。 例如，您可以將授權檔案與類似主題上的資產或影像／視訊建立關聯。 您可以建立與共用特定共同屬性的資產關聯。 您也可以使用此功能來建立資產間的來源／衍生關係。 例如，如果您有PDF檔案是從INDD檔案產生，則可將PDF檔案與其來源INDD檔案建立關聯。
 
 使用此功能，您就可以彈性地與廠商或機構共用低解析度的PDF檔案或JPG檔案，並且只有在要求時才提供高解析度的INDD檔案。
+
+>[!NOTE] 具有編輯權限的使用者可以關聯和取消關聯資產。
+>
 
 ## Relate assets {#relating-assets}
 
@@ -28,7 +31,7 @@ Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. 若要將另一個資產與您選取的資產建立關聯，請按一下／點選工具 **[!UICONTROL 列中的]** 「建立關聯」圖示。
+1. 若要將另一個資產與您選取的資產建立關聯，請從工具列按一下／點選「 **[!UICONTROL 建立關聯]** 」圖示。
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
