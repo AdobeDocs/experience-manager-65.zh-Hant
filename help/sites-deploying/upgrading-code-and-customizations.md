@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -52,7 +52,7 @@ source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
 
 ### 更新AEM Uber Jar版本 {#update-the-aem-uber-jar-version}
 
-AEM uber Jar會將所有AEM API作為單一相依關係納入您的Maven專案 `pom.xml`。 將Uber jar納入為單一相依性，而不是納入個別AEM API相依性，永遠是最佳做法。 升級程式碼庫時，Uber jar的版本應變更為指向AEM的目標版本。 如果您的專案是在Uber jar存在之前以AEM版本開發的，所有個別AEM API相依性都應移除，並以AEM目標版本的Uber jar單一包含取代。 然後，應根據新版Uber Jar重新編譯代碼庫。 任何已過時的API或方法都應更新為與AEM的目標版本相容。
+AEM Uber Jar會將所有AEM API作為單一相依關係納入您的Maven專案 `pom.xml`。 將Uber Jar納入為單一相依性，而不是納入個別AEM API相依性，永遠是最佳做法。 升級程式碼庫時，Uber Jar的版本應變更為指向AEM的目標版本。 如果您的專案是在Uber Jar存在之前以AEM版本開發的，所有個別AEM API相依性都應移除，並以AEM目標版本的Uber Jar單一包含取代。 然後，應根據新版Uber Jar重新編譯代碼庫。 任何已過時的API或方法都應更新為與AEM的目標版本相容。
 
 ```
 <dependency>
@@ -88,7 +88,7 @@ AEM 6.5仍提供傳統UI編寫功能，但已不再提倡。 如需詳細資訊�
 
 為了使升級更輕鬆，並確保升級期間不會覆蓋配置，6.4版中的儲存庫將進行重組，以將內容與配置分開。
 
-因此，必須移動一些設定，使其不再 `/etc` 像過去那樣駐留。 若要檢視完整的儲存庫重組顧慮，而這些顧慮必須在更新至AEM 6.4時加以檢視和修正，請參閱「AEM 6.4中的 [儲存庫重組」](/help/sites-deploying/repository-restructuring-in-aem65.md)。
+因此，必須移動一些設定，使其不再 `/etc` 像過去那樣駐留。 若要檢視完整的儲存庫重組顧慮，而這些顧慮必須在更新至AEM 6.4時加以檢視和修正，請參閱「AEM 6.4中的 [儲存庫重組」](/help/sites-deploying/repository-restructuring.md)。
 
 ## AEM自訂 {#aem-customizations}
 
@@ -96,7 +96,7 @@ AEM來源版本中AEM製作環境的所有自訂項目都必須加以識別。 �
 
 ### 一般覆蓋 {#overlays-in-general}
 
-通常的做法是將AEM從現成可用的功能擴充至/libs下的節點和／或檔案與/apps下的其他節點重疊。 這些覆蓋應在版本控制中加以追蹤，並針對AEM的目標版本進行測試。 如果檔案（不論是JS、JSP、HTL）已覆蓋，建議您留下注釋，說明已擴充哪些功能，以便更輕鬆地對AEM的目標版本進行回歸測試。 有關覆蓋的詳細資訊，請參閱 [這裡](/help/sites-developing/overlays.md)。 下方提供特定AEM覆蓋的指示。
+通常的做法是將AEM從現成可用的功能擴充至/libs下的節點和／或檔案與/apps下的其他節點重疊。 這些覆蓋應在版本控制中追蹤，並針對AEM的目標版本進行測試。 如果檔案（不論是JS、JSP、HTL）已覆蓋，建議您留下注釋，說明已擴充哪些功能，以便更輕鬆地對AEM的目標版本進行回歸測試。 有關覆蓋的詳細資訊，請參閱 [這裡](/help/sites-developing/overlays.md)。 下方提供特定AEM覆蓋的指示。
 
 ### 升級自訂搜尋表單 {#upgrading-custom-search-forms}
 
@@ -140,13 +140,13 @@ AEM來源版本中AEM製作環境的所有自訂項目都必須加以識別。 �
 
 為了其他目的，請使用 `migrateAllAssets()` API。
 
-### InDesign script自訂 {#indesign-script-customizations}
+### InDesign Script自訂 {#indesign-script-customizations}
 
-Adobe建議將自訂指令碼放在 `/apps/settings/dam/indesign/scripts` 位置。 有關InDesign script自訂項目的更多資訊，請參 [閱這裡](/help/assets/indesign.md#configuring-the-aem-assets-workflow)。
+Adobe建議將自訂指令碼放在 `/apps/settings/dam/indesign/scripts` 位置。 有關InDesign Script自訂項目的更多資訊，請參 [閱這裡](/help/assets/indesign.md#configuring-the-aem-assets-workflow)。
 
 ### 恢復ContextHub配置 {#recovering-contexthub-configurations}
 
-ContextHub組態是由升級所決定。 有關如何恢復現有ContextHub配置的說明 [](/help/sites-administering/contexthub-config.md#recovering contexthub configurations after upgrading)。
+ContextHub組態是由升級所決定。 有關如何恢復現有ContextHub配置的說明，請 [在這裡](/help/sites-administering/contexthub-config.md#recovering contexthub configurations after upgrading)。
 
 ### 工作流程自訂 {#workflow-customizations}
 
@@ -191,7 +191,7 @@ ContextHub組態是由升級所決定。 有關如何恢復現有ContextHub配�
    <td>在「作者」層測試AEM實作和相關的程式碼。 應包含頁面、元件編寫和對話方塊。</td>
   </tr>
   <tr>
-   <td>與Marketing cloud解決方案整合</td>
+   <td>與Marketing Cloud解決方案整合</td>
    <td>驗證與Analytics、DTM和Target等產品的整合。</td>
   </tr>
   <tr>
