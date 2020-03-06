@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f191f90f7a417387930d2d4cf7b9482aabbd6156
+source-git-commit: 3aee0ce89638cb997e84e62bbde76e32e49174da
 
 ---
 
@@ -292,7 +292,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ### 串流上傳 {#streamed-uploads}
 
-如果您將許多資產上傳至AEM，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 AEM Assets支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先將資產儲存在伺服器上的臨時資料夾中，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 AEM Assets預設會啟用串流上傳。
+如果您將許多資產上傳至AEM，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 AEM Assets支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先在伺服器上的臨時資料夾中儲存資產，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 AEM Assets預設會啟用串流上傳。
 
 >[!NOTE]
 >
@@ -331,6 +331,24 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    點選 **[!UICONTROL 「重設]** 」，將檢視重設為原始大小。
 
    ![chlimage_1-216](assets/chlimage_1-11.png)
+
+**僅使用鍵盤按鍵預覽資產**
+
+若要使用鍵盤預覽資產，請遵循下列步驟：
+
+1. 從「資產」使用者介面，使用和方向鍵導覽至您要預覽的資產 `Tab` 的位置。
+
+1. 開啟所要的資產。
+
+   在預覽模式中，支援的影像類型（使用互動式編輯） [可使用縮放](/help/assets/assets-formats.md#supported-raster-image-formats) 和重設選項。
+1. 若要放大資產：
+   1. 使 `Tab` 用鍵將焦點移動到放大表徵圖。
+   1. 使用 `Enter` 金鑰可放大影像。
+   要縮小，請使 `Tab` 用鍵將焦點移動到縮小表徵圖並按 `Enter`。
+
+1. 使用 `Shift` + `Tab` 鍵將焦點移回影像。
+
+1. 使用方向鍵在縮放的影像周圍移動。
 
 另請參閱 [預覽動態媒體資產。](/help/assets/previewing-assets.md)
 
