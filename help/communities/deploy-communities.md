@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -90,7 +90,7 @@ AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communitie
 
 ### AEM 6.5更新 {#aem-updates}
 
-從AEM 6.4開始，Communities的更新會以AEM Cumulative Fix pack和Service pack的一部份提供。
+從AEM 6.4開始，「社群」的更新會以AEM Cumulative Fix Pack和Service Pack的一部份提供。
 
 如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Packs和Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
 
@@ -130,7 +130,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 1. 對所有作者和發佈例項重複步驟3和4
 
-有關安裝捆綁的詳細資訊，請參閱「 [Web控制台](/help/sites-deploying/configuring-web-console.md#bundles) 」頁。
+有關安裝捆綁的詳細資訊，請參閱「 [Web控制台](/help/sites-deploying/web-console.md) 」頁。
 
 #### 範例：已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
 
@@ -174,7 +174,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 ### 關於包共用的連結 {#about-links-to-package-share}
 
-**Adobe AEM cloud中可見的套件**
+**Adobe AEM Cloud中可見的套件**
 
 此頁面上的封裝連結不需要執行AEM例項，因為它們要在上共用 `adobeaemcloud.com`。 雖然可檢視套件，但 `Install`按鈕是用來將套件安裝至Adobe代管網站。 如果想要安裝在本機AEM例項上，選取時 `Install`會產生錯誤。
 
