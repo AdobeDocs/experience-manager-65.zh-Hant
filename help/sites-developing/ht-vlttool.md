@@ -315,7 +315,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | 命令 | 縮寫命令 | 說明 |
 | `export` |  | 從JCR儲存庫（Vault檔案系統）導出到本地檔案系統，而無控制檔案。 |
 | `import` |  | 將本地檔案系統導入JCR儲存庫（Vault檔案系統）。 |
-| `checkout` | `co` | 檢出Vault檔案系統。 將它用於本地檔案系統的初始JCR儲存庫。 (注意：您必須首先在subversion中籤出儲存庫。) |
+| `checkout` | `co` | 檢出Vault檔案系統。 將它用於本地檔案系統的初始JCR儲存庫。 (注意：您必須先在subversion中籤出儲存庫。) |
 | `analyze` |  | 分析包。 |
 | `status` | `st` | 打印工作副本檔案和目錄的狀態。 |
 | `update` | `up` | 將更改從儲存庫導入工作副本。 |
@@ -865,7 +865,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 * `.vlt-sync-config.properties`:配置檔案。
 
 * `.vlt-sync.log`:包含同步期間所執行操作相關資訊的記錄檔。
-* `.vlt-sync-filter.xml`:篩選器，用於定義同步的儲存庫的哪些部分。 此檔案的格式由「執行已過濾的 [檢出」部分描述](#performing-a-filtered-checkout) 。
+* `.vlt-sync-filter.xml`:篩選器，用於定義同步的儲存庫的哪些部分。 此檔案的格式由「執行過濾的 [簽出」部分描述](#performing-a-filtered-checkout) 。
 
 該 `.vlt-sync-config.properties` 檔案允許您配置以下屬性：
 
