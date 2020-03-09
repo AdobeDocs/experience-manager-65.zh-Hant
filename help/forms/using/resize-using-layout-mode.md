@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 
 ---
 
@@ -81,11 +81,11 @@ source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 執行以下步驟以定義面板的列數：
 
-1. 在「編 **[!UICONTROL 輯]** 」模式中，點選面板，選取「設定」，然後選取「回應式 ![-頁面上的所有項目」，而不使用導覽](assets/configure_icon.png)**** 選項。
+1. 在編 **[!UICONTROL 輯模式中]** ，點選面板，選取「設定」，然後從「面板排版下拉式清單」中選取「回應式——頁面上的所有項目」，而無導 ![](assets/configure_icon.png)******** 覽選項。
 
 1. 點選「 ![儲存](assets/save_icon.svg) 」以儲存屬性。
 
-1. 在「 **[!UICONTROL Layout]** 」模式中，點選面板中任何您要調整大小的元件，選取「 ![Select Parent](assets/select_parent_icon.svg)」（選取父項），然後選取下拉式清單中的第一個選項（如果面板是元件的直接父項）。
+1. 在「版 **[!UICONTROL 面]** 」模式中，點選面板中的任何元件，選取「 ![選取父項](assets/select_parent_icon.svg)」，然後選取面板。
 
 1. 點 ![選多欄](assets/multi-column.svg) ，然後從下拉式清單中選取欄數。 欄數範圍從1到12。 面板會分為多欄版面。
 
