@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 ---
 
@@ -102,11 +102,11 @@ AEM Forms提供規 [則編輯器](/help/forms/using/rule-editor.md) ，可讓您
 規則編輯器提供可視編輯器和代碼編輯器，用於編寫規則。 使用程式碼編輯器模式編寫規則時，請考慮下列事項：
 
 * 在撰寫規則時，為表單欄位和元件使用有意義且唯一的名稱，以避免任何可能的衝突。
-* 使用 `this` 元件的運算子，在規則運算式中引用元件本身。 它可確保即使元件名稱變更，規則仍然有效。 例如， `field1.valueCommit script: this.value > 10`。
+* 使用 `this` 元件的運算子，在規則運算式中引用元件本身。 它可確保即使元件名稱變更，規則仍然有效。 For example, `field1.valueCommit script: this.value > 10`.
 
-* 參照其他表單元件時，請使用元件名稱。 使用 `value` 屬性來擷取欄位或元件的值。 例如， `field1.value`。
+* 參照其他表單元件時，請使用元件名稱。 使用 `value` 屬性來擷取欄位或元件的值。 For example, `field1.value`.
 
-* 依相對唯一階層來參考元件，以避免任何衝突。 例如， `parentName.fieldName`。
+* 依相對唯一階層來參考元件，以避免任何衝突。 For example, `parentName.fieldName`.
 
 * 在處理複雜或常用的規則時，請考慮將商業邏輯編寫為個別用戶端程式庫中的函式，以便您指定並跨調適性表單重複使用。 用戶端程式庫應是獨立的程式庫，除jQuery和Undershore.js外，不應有任何外部相依性。 您也可以使用用戶端程式庫來強制 [伺服器端重新驗證已提交的表](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 單資料。
 * 最適化表單提供一組API，您可用來與最適化表單通訊，並對其執行動作。 部分關鍵API如下。 如需詳細資訊，請參 [閱適用於Adaptive Forms的JavaScript程式庫API參考](https://adobe.com/go/learn_aemforms_documentation_63)。
@@ -245,7 +245,7 @@ AEM提供翻譯工作流程，讓您用來本地化最適化表單。 如需詳�
 
    `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* AEM Forms目前支援以英文(en)、西班牙文(es)、法文(fr)、義大利文(it)、德文(de)、日文(ja)、葡萄牙文——巴西(pt-br)、中文-(zh-tn)、中文——台灣(zh-tw)和韓文(ko-kr)地區語言，將最適化表單內容本土化。 不過，您可以在執行時期新增對最適化表單新地區設定的支援。 如需詳細資訊，請參 [閱支援最適化表單本地化的新地區設定](/help/forms/using/supporting-new-language-localization.md)。
+* AEM Forms目前支援以英文(en)、西班牙文(es)、法文(fr)、義大利文(it)、德文(de)、日文(ja)、葡萄牙文——巴西(pt-BR)、中文(zh-CN)、中文——台灣(zh-TW)和韓文(ko-KR)語言環境將調適性表單內容本地化。 不過，您可以在執行時期新增對最適化表單新地區設定的支援。 如需詳細資訊，請參 [閱支援最適化表單本地化的新地區設定](/help/forms/using/supporting-new-language-localization.md)。
 
 ## 準備表單專案以供製作 {#prepare-forms-project-for-production}
 
