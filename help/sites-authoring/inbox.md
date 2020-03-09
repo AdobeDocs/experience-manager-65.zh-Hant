@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 033c32c581fddd5f632ad534f57c84b4d74a4104
 
 ---
 
@@ -132,22 +132,24 @@ source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ### 收件匣——管理控制 {#inbox-admin-control}
 
-屬於工作流程管理員 **群組的使用者** ，可以在清單中檢視「管理控制」選項。 使用此選項，管理員可以：
+管理控制選項可讓管理員：
 
-* 定義標題中可用文字和標誌的自訂設定。
+* 自訂標題文字和標誌
 
-* 控制頁首中可用導覽選項的顯示，並限制使用者切換至工作流程製作模式，或導覽至「說明」或其他解決方案連結。
+* 控制頁首中可用導覽連結的顯示
+
+只有在您是管理員或工作流程管理員群組的成員時，「管理控制」選項才會顯示在檢視選擇器下拉式清單中。
 
 ![admin-control](assets/admin-control.png)
 
 * **品牌自訂**
 
-   * **自訂標題文字：** 在此欄位中指定文字，以取代標題中顯 **示的現有Adobe Experience Manager** 文字。
+   * **自訂標題文字：** 指定要在頁首中顯示的文字。
 
-   * **自訂標誌：** 在「數位資產管理」(DAM)中上傳影像，並使用此欄位參考該影像，以取代標題中顯示的Adobe Experience Manager標誌。
+   * **自訂標誌：** 在「數位資產管理」(DAM)中上傳影像，並參考該影像以在標題中顯示。
 
 * **使用者導覽**
-   * **隱藏導覽選項：** 選取此選項可隱藏頁首中可用的導覽選項，例如導覽至其他解決方案的選項、說明連結，以及點選Adobe Experience Manager標誌或文字時顯示的選項。
+   * **隱藏導覽選項：** 選取此選項可隱藏頁首中可用的導覽選項。 導覽選項包括其他解決方案的連結、說明連結，以及點選Adobe Experience Manager標誌或文字時可用的製作選項。
 * **儲存：** 點選／按一下此選項以儲存設定。
 
 ## 對項目採取操作 {#taking-action-on-an-item}
