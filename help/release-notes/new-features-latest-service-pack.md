@@ -112,7 +112,7 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 除了新功能外，AEM 6.5 Service Pack 4還包含下列主要亮點：
 
-* 現在，只有選擇性內容子樹狀結構可以同步至 *Dynamic Media - Scene7模式* ，而非全部 `content/dam`。
+* 現在，只有選擇性內容子樹狀結構可以同步至 ***Dynamic Media - Scene7模式*** ，而非全部 `content/dam`。
 
 * 使用SOAP web service的表單資料模型整合現在支援元素上的選擇群組或屬性。
 
