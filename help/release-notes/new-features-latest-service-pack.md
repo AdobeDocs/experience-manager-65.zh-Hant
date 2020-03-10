@@ -4,14 +4,14 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
+source-git-commit: c9e8e1f2ebb72efc2f54c13c3ddae525ec55349f
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-在2020年，Adobe Experience Manager(AEM)6.5提供每季Service Pack的功能和持續的改進。 當客戶更快地採用創新時，這種新方法可讓他們受益。
+Adobe Experience Manager(AEM)6.5今年每季的Service Pack提供各項功能並不斷改進。 新方法可讓客戶更快地採用創新技術，從而獲益。
 
 最新的AEM Service Pack 4(6.5.4.0)將於2020年3 **月5日發行**。 本文著重說明最新Service Pack提供的功能，讓您的AEM旅程更加豐富。
 
@@ -23,20 +23,17 @@ source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
 
 * 縮短在頁面編輯器畫布中拖放體驗片段後重新整理頁面的時間。
 
-* 在即時副本概述中，當網站有超過200個即時副本時，可縮短載入項目的時間。
+* 縮短「即時副本概述」中載入「網站」頁面200個以上即時副本項目的時間。
 
-* 在範本編輯器中，已改進可觸發範本編輯器減慢速度的不完整或無效URL的處理。
+* 已改善處理不完整或無效URL的方式，這些URL可觸發範本編輯器在範本編輯器中減慢速度。
 
-此外，AEM 6.5 SP4還包含Style System增強功能。 您現在也可以在元件對話方塊中選取樣式。
-
+此外，AEM 6.5 Service Pack 4還包含Style System增強功能。 您現在也可以在元件對話方塊中選取樣式。
 
 ## AEM Assets {#aem-assets}
 
 ### 透過Adobe I/O Console與品牌入口網站整合 {#assets-integration-bp}
 
-AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買IMS Token以授權品牌入口網站租戶。 之前，它是透過舊版OAuth閘道在傳統使用者介面中設定。
-
-在2020年4月6日之後將不支援與舊版OAuth的新整合，並將改用Adobe I/O Console。 如果您未修改整合，現有的組態將繼續運作。
+您現在可以透過Adobe I/O Console，以品牌入口網站來設定AEM資產。 Adobe I/O Console會購買IMS Token以授權品牌入口網站租用戶。 之前，AEM Assets是透過舊版OAuth閘道在Classic UI中設定品牌入口網站。 使用舊版OAuth閘道的設定將於2020年4月6日之前受到支援。 如果您未修改整合，現有的組態將繼續運作。
 
 您可以建立新的整合，或將整合設定升級至Adobe I/O Console。
 
@@ -56,7 +53,7 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 ### 在AEM Forms工作流程中產生可列印的輸出 {#generate-printable-output}
 
-如果您想要解決方案列印來源範本檔案的多份副本，並將它與資料檔案整合，並包含許多記錄，AEM Forms提供新的「產生可列印的輸出」工作流程步驟。 例如，如果您想在每次打印源表單時使用不同的名稱來打印它，則可以在資料檔案中包含這些名稱，並將其與標準模板檔案整合。
+如果您想要解決方案列印或儲存來源範本檔案的多份副本，並將它與資料檔案整合併包含許多記錄，AEM Forms中會提供新的「產生可列印的輸出」工作流程步驟。 例如，如果您想在每次打印源表單時使用不同的名稱來打印它，則可以在資料檔案中包含這些名稱，並將其與標準模板檔案整合。
 
 利用此功能，使用「工 **具** >工作流 **** > **[!UICONTROL Workflow]** > **[!UICONTROL Create]****** Search for the Tools Printable Groupt Generate」（可打印輸出工作流程）步驟。
 
@@ -68,7 +65,7 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 您現在可以在最適化表單和互動式通訊中，定義面板的欄數。
 
-您可以切換至「版面」模式，點選您要轉換為多欄格式的面板，選取其父項並點選多欄圖示（如下圖所示），以定義面板的欄數。
+您可以切換至「版面」模式來尋找新選項。 點選您要轉換為多欄格式的面板，選取其父項並點選多欄圖示，以定義面板的欄數。
 
 ![多欄版面](assets/multi-column-layout.gif)
 
@@ -80,13 +77,13 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 **自訂頁首文字**
 
-屬於工作流程 **管理員群組的使用者** ，現在可以自訂位於頂端的頁首文字，以您自選的文字取代現有 **[!UICONTROL Adobe Experience Manager]** 。
+工作流程管理員現在可以指定您自己選擇的標題文字。
 
 您可以在檢視選取器( **[!UICONTROL 工具列右上角提供]** )>管理控制項下，找到新的「自訂頁首文字 **[!UICONTROL 」選項]**。
 
 **自訂標誌**
 
-與自訂頁首文字類似，屬於 **workflow-administrators** group的使用者現在可以自訂位於頁首的標誌，以及您自選的標誌。
+與自訂頁首文字類似，工作流程管理員現在可以指定您自己選擇的頁首標誌。
 
 您可以在「檢視選取器>管 **[!UICONTROL 理控制」(Admin Control]** )下找到新的「自訂標 **[!UICONTROL 志」(Customize Logo)選項]**。
 
@@ -94,7 +91,7 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 ### 使用者導覽控制 {#user-navigation-control}
 
-屬於工作流程 **管理員群組的使用者** ，可以選擇讓使用者根據其角色，在受限制的模式中處理AEM。 管理員可以控制頁首中可用導覽選項的顯示，並限制使用者切換至工作流程製作模式，或導覽至「說明」或其他解決方案連結。
+工作流程管理員現在可以選擇讓使用者根據其角色，在受限制的模式中處理AEM。 管理員可以控制標題中可用導覽選項的顯示，以限制使用者切換至工作流程編寫模式或其他解決方案連結。
 
 查看「檢視選取器 **[!UICONTROL >管理控制」]** 下方的 **[!UICONTROL 「隱藏導]**&#x200B;覽選項」。
 
@@ -102,9 +99,9 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 ### HTML5表格中的豐富式文字支援 {#rich-text-support}
 
-文字欄位現在可顯示轉譯HTML5表單中的格式選項清單。 您必須為Forms Designer中的文本欄位定義欄位格式，才能將適當的設定應用於該欄位。
+文字欄位現在可顯示轉譯HTML5表單中的格式選項清單。 您必須為Forms Designer中的文本欄位定義格式，才能將適當的設定應用於該欄位。
 
-若要使用此功能，請在Forms Designer中點選「設 **[!UICONTROL 計檢視]** 」中的文字欄位。 在「欄 **[!UICONTROL 位]** 」索引標籤中，從「欄位格式 **[!UICONTROL 」下拉式清單中選]** 取「豐富式文字 **** 」以套用設定。 現在，當在HTML5表單中轉譯時，文字欄位會顯示格式選項。
+若要使用此功能，請在Forms Designer中點選「設 **[!UICONTROL 計檢視]** 」中的文字欄位。 在「欄 **[!UICONTROL 位]** 」索引標籤中，從「欄位格式 **[!UICONTROL 」下拉式清單中選]** 取「豐富式文字 **** 」以套用設定。
 
 如需詳細資訊，請 [參閱「設計HTML5表格的表格範本」](../forms/using/designing-form-template.md)。
 
@@ -112,9 +109,9 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 除了新功能外，AEM 6.5 Service Pack 4還包含下列主要亮點：
 
-* 現在，只有選擇性內容子樹狀結構可以同步至 ***Dynamic Media - Scene7模式*** ，而非全部 `content/dam`。
+* 您現在可以將選擇性內容子樹同步至Scene7，而不是所有可用於的 `content/dam`。
 
-* 使用SOAP web service的表單資料模型整合現在支援元素上的選擇群組或屬性。
+* 與SOAP web service整合的表單資料模型現在支援元素上的選擇群組或屬性。
 
 * SOAP輸入或輸出和複雜的資料結構現在支援動態群組替代。
 
@@ -158,7 +155,7 @@ AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買I
 
 * AEM Sites:專案原型23啟動新AEM專案的最佳方式。 Archetype 23將SPA專 [案原型與一般網站整合為一](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23)，進一步提供預設主題，以開始您的前端開發。
 
-* AEM Sites:WKND參考網站所 [有全新的參考專案](https://www.wknd.site/) ，都包含如何使用AEM建立網站的最佳實務。 閱讀完全更新的 [WKND教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) ，並從 [GitHub擷取程式碼](https://github.com/adobe/aem-guides-wknd/releases)。
+* AEM Sites:WKND參考網站所 [有全新的參考專案](https://www.wknd.site/) ，都包含如何使用AEM建立網站的最佳實務。 閱讀完全更新的 [WKND教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) ，並從 [GitHub擷取程式碼，以進一步瞭解](https://github.com/adobe/aem-guides-wknd/releases)。
 
 * AEM Sites:商務CIF核心元件0.7.0和0.9.0整合AEM網站和Magento商務。 我們持續擴 [充專屬的核心元件和專案原型，以商務為中心](https://github.com/adobe/aem-core-cif-components/releases)。
 
