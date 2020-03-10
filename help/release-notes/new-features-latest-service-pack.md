@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c9e8e1f2ebb72efc2f54c13c3ddae525ec55349f
+source-git-commit: d0038181326037ab71f4df9b509d2f0827191c86
 
 ---
 
@@ -109,7 +109,7 @@ Adobe Experience Manager(AEM)6.5今年每季的Service Pack提供各項功能並
 
 除了新功能外，AEM 6.5 Service Pack 4還包含下列主要亮點：
 
-* 您現在可以將選擇性內容子樹同步至Scene7，而不是所有可用於的 `content/dam`。
+* 您現在可以將選擇性內容子樹狀結 *構同步至Dynamic Media - Scene7模式* ，而非所有可在取得 `content/dam`。
 
 * 與SOAP web service整合的表單資料模型現在支援元素上的選擇群組或屬性。
 
