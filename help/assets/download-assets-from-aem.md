@@ -1,14 +1,14 @@
 ---
-title: 從AEM下載資產
+title: 從 AEM 下載資產
 description: 瞭解如何從AEM下載資產並啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
 
-# 從AEM下載資產 {#download-assets-from-aem}
+# 從 AEM 下載資產 {#download-assets-from-aem}
 
 您可以下載資產，包括靜態和動態轉譯。 或者，您也可以直接從AEM Assets傳送包含資產連結的電子郵件。 已下載的資產會整合在ZIP檔案中。 壓縮的ZIP檔案對於匯出工作的檔案大小上限為1 GB。 每個匯出工作最多可獲得500個資產。
 
@@ -20,9 +20,11 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 無法下載資產類型影像集、回轉集、混合媒體集和轉盤集。
 
-![從AEM Assets下載資產時的可用選](assets/asset_download_dialog.png)*項圖：從AEM Assets下載資產時的可用選項*
+![從AEM Assets下載資產時的可用選項](assets/asset_download_dialog.png)
 
-以下是「匯出／下載」選項。 動態轉譯是Dynamic media獨有的，可讓您除了選取的資產外，即時產生轉譯——只有在您啟用「動態媒體」時，這個選項才可用。
+*圖：從AEM Assets下載資產時的可用選項*
+
+以下是「匯出／下載」選項。 動態轉譯是Dynamic Media獨有的，可讓您除了選取的資產外，即時產生轉譯——只有在您啟用「動態媒體」時，這個選項才可用。
 
 | 匯出或下載選項 | 說明 |
 |---|---|
@@ -70,4 +72,4 @@ AEM中的預設servlet可讓已驗證的使用者發出任意大型的並行下�
 >
 >* [下載受DRM保護的資產](drm.md)
 >* [在Win或Mac案頭上使用AEM案頭應用程式下載資產](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
->* [從支援的Adobe Creative cloud應用程式使用Adobe Assets Link下載資產](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [從支援的Adobe Creative Cloud應用程式使用Adobe Assets Link下載資產](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
