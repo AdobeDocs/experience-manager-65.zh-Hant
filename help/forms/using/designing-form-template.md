@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -41,6 +41,6 @@ HTML5表單的主要目標是觸控裝置。 因此，AEM Forms Designer中新�
 
 #### Rich text format {#rich-text-format}
 
-在Forms Designer中為文本欄位定義富格文本欄位格式，以便將格式設定選項清單添加到渲染的HTML5表單中的欄位。 若要套用設定，請點選「設計檢視」中的 **[!UICONTROL 文字欄位]**。 在「欄 **[!UICONTROL 位]** 」索引標籤中，從「欄位格式 **[!UICONTROL 」下拉式清單]** 中選取「豐富文字 **** 」。 在HTML5表單中轉譯時，文字欄位會顯示格式選項。
+您可以將文字欄位轉換為豐富式文字欄位。 它會在文字欄位中新增格式選項清單。 若要轉換，請開啟Forms Designer，點選「設計檢視」中的文 **[!UICONTROL 字欄位]**。 在「欄 **[!UICONTROL 位]** 」索引標籤中，從「欄位格式 **[!UICONTROL 」下拉式清單]** 中選取「豐富文字 **** 」。 現在，當XFA表單轉譯為HTML5表單時，該欄位會轉譯為RTF欄位。
 
 [聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
