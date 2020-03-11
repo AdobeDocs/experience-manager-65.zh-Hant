@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -81,7 +81,7 @@ source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 
 執行以下步驟以定義面板的列數：
 
-1. 在編 **[!UICONTROL 輯模式中]** ，點選面板，選取「設定」，然後從「面板排版下拉式清單」中選取「回應式——頁面上的所有項目」，而無導 ![](assets/configure_icon.png)******** 覽選項。
+1. 在編 **[!UICONTROL 輯模式中]** ，點選面板，選取「設定」，然後從「面板排版下拉式清單」中選取「回應式——頁面上的所有項目」，而不 ![](assets/configure_icon.png)******** 需導覽選項。
 
 1. 點選「 ![儲存](assets/save_icon.svg) 」以儲存屬性。
 
