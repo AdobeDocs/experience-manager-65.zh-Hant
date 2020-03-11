@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d0038181326037ab71f4df9b509d2f0827191c86
+source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
 
 ---
 
@@ -19,15 +19,15 @@ Adobe Experience Manager(AEM)6.5今年每季的Service Pack提供各項功能並
 
 ### 不同領域的效能改進 {#performance-improvements}
 
-* 縮短在網站(contexthub.kernel.js)中載入和初始化ContextHub的時間。 這可讓網站瀏覽時載入頁面的速度更快。
+* 縮短在網站(contexthub.kernel.js)中載入和初始化ContextHub的時間。 這可縮短網站瀏覽時的頁面載入時間。
 
-* 縮短在頁面編輯器畫布中拖放體驗片段後重新整理頁面的時間。
+* 將「體驗片段」拖放至「網站」頁面編輯器後，可縮短重新整理頁面的時間。
 
 * 縮短「即時副本概述」中載入「網站」頁面200個以上即時副本項目的時間。
 
-* 已改善處理不完整或無效URL的方式，這些URL可觸發範本編輯器在範本編輯器中減慢速度。
+* 已改善URL不完整或無效的處理。 這類URL會拖慢範本編輯器的速度。
 
-此外，AEM 6.5 Service Pack 4還包含Style System增強功能。 您現在也可以在元件對話方塊中選取樣式。
+此外，AEM 6.5.4.0還包含Style System增強功能。 您現在可以在元件對話方塊中選取樣式。
 
 ## AEM Assets {#aem-assets}
 
