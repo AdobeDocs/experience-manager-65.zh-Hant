@@ -3,7 +3,7 @@ title: 相關資產
 description: 瞭解如何建立共用特定共同屬性的資產的關聯。 您也可以使用此功能來建立資產間的來源／衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: fb0688afbadd1b27f1a3b3326f18c15d1c7811aa
+source-git-commit: 4fc656948e4c5cb4a3e927c25d3afd29102b7ab4
 
 ---
 
@@ -14,7 +14,7 @@ Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組
 
 使用此功能，您就可以彈性地與廠商或機構共用低解析度的PDF檔案或JPG檔案，並且只有在要求時才提供高解析度的INDD檔案。
 
->[!NOTE] 具有編輯權限的使用者可以關聯和取消關聯資產。
+>[!NOTE] 只有具有編輯權限的使用者可以建立關聯和取消關聯資產。
 >
 
 ## Relate assets {#relating-assets}
