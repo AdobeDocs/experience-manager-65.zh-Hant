@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
 
 ---
 
@@ -157,21 +157,21 @@ Content Services預設轉譯器可填補現成可用的Sling Defaults和自訂�
    <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>對於下列sling資源類型，請勿傳回預設的CaaS json匯出。<br /><br /> 將資源轉譯為：以傳回客戶json匯出；&lt;資源&gt;。&lt;SELECTOR_TO_INC&gt;.json </td>
+   <td>對於下列sling資源類型，請勿傳回預設的CaaS json匯出。<br /> 將資源轉譯為：以傳回客戶json匯出；<br /> &lt;資源&gt;。&lt;SELECTOR_TO_INC&gt;.json </td>
   </tr>
  </tbody>
 </table>
 
-### 現有Content services匯出設定 {#existing-content-services-export-configs}
+### 現有Content Services匯出設定 {#existing-content-services-export-configs}
 
-Content services包含兩種匯出組態：
+Content Services包含兩種匯出組態：
 
 * 預設值（未指定配置）
 * 頁面（以呈現網站頁面）
 
 #### 預設匯出設定 {#default-export-configuration}
 
-如果在請求的URI中指定了配置，則將應用Content services預設導出配置。
+如果在請求的URI中指定了配置，則將應用Content Services預設導出配置。
 
 &lt;RESOURCE>.caas[.&lt;DEPTH-INT>].json
 
@@ -224,9 +224,9 @@ Content services包含兩種匯出組態：
 
 ### 其他資源 {#additional-resources}
 
-請參閱以下資源，瞭解Content services中的其他主題：
+請參閱以下資源，瞭解Content Services中的其他主題：
 
-* [開發模型](/help/mobile/models-in-repository.md)
+* [開發模型](/help/mobile/administer-mobile-apps.md)
 * [編寫內容服務](/help/mobile/develop-content-as-a-service.md)
 * [管理內容服務](/help/mobile/developing-content-services.md)
 
