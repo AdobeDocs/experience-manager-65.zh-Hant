@@ -1,6 +1,6 @@
 ---
 title: PhoneGap
-seo-title: 製作適用於Adobe phoneGap Enterprise的內容
+seo-title: 製作適用於Adobe PhoneGap Enterprise的內容
 description: 本頁面是開發使用PhoneGap Enterprise搭配AEM之應用程式的起點。 AEM與PhoneGap整合，讓您可以使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者使用內容。
 seo-description: 本頁面是開發使用PhoneGap Enterprise搭配AEM之應用程式的起點。 AEM與PhoneGap整合，讓您可以使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者使用內容。
 uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
 
 ---
 
@@ -24,9 +24,9 @@ AEM與PhoneGap整合，讓您可以使用AEM頁面輕鬆建立應用程式。 Ph
 
 >[!NOTE]
 >
->開始使用Adobe phoneGap使用AEM mobile之前，請務必先設定您的環境，然後開始使用 [AEM Mobile應用程式儀表板](/help/mobile/phonegap-authoring-apps.md)。
+>開始使用Adobe PhoneGap使用AEM Mobile之前，請務必先設定您的環境，然後開始使用 [AEM Mobile應用程式儀表板](/help/mobile/phonegap-authoring-apps.md)。
 
-下列資源將協助您開始使用Adobe phoneGap的AEM Mobile:
+下列資源將協助您開始使用Adobe PhoneGap的AEM Mobile:
 
 * [在AEM中開發行動應用程式](/help/mobile/developing-mobile-applications.md)
 * [具備內容同步功能的行動裝置](/help/mobile/phonegap-contentsync.md)
@@ -35,7 +35,7 @@ AEM與PhoneGap整合，讓您可以使用AEM頁面輕鬆建立應用程式。 Ph
 * [AEM Mobile Content Services:概觀](/help/mobile/develop-content-as-a-service.md)
 
    * 若要啟用「內容服務」和「資料模型」，請參閱「管 [理內容服務」](/help/mobile/developing-content-services.md)
-   * 要瞭解建立模型，請參閱開 [發模型](/help/mobile/models-in-repository.md)
+   * 要瞭解建立模型，請參閱開 [發模型](/help/mobile/administer-mobile-apps.md)
    * 如需有關轉換和傳送的資訊，請參 [閱轉換和傳送內容服務](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
