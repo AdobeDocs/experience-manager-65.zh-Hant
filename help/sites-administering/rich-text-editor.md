@@ -7,12 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 2cde81d3-5fc1-4a32-a307-7dc592f37162
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
 
-# 設定Rich Text Editor {#configure-the-rich-text-editor}
+# Configure the Rich Text Editor {#configure-the-rich-text-editor}
 
 富格文本編輯器(RTE)為作者提供了多種編輯其文本內容的功能。 提供圖示、選擇方塊、工具列和選單，以提供WYSIWYG文字編輯體驗。
 
@@ -20,15 +20,21 @@ RTE可以配置為啟用、禁用和擴展編寫元件中可用的功能。 要�
 
 以下工作流說明了完成RTE配置任務的建議順序。
 
-![瞭解如何配置rte](assets/rte_workflow_v1.png)*Figure的步驟順序：學習如何配置RTE的步驟順序*
+![學習如何設定rte的步驟順序](assets/rte_workflow_v1.png)
+
+*圖：學習如何配置RTE的步驟順序*
 
 ## 瞭解可觸控的UI和傳統UI {#understand-touch-enabled-ui-and-classic-ui}
 
 Touch-enabled UI是AEM的標準使用者介面。 Adobe針對製作環境推出具 [互動式設計](/help/sites-authoring/responsive-layout.md) 的Touch UI。 Touch UI是專為觸控和桌上型裝置所設計。 UI與原始的傳統UI有很大不同。
 
-![啟用觸控的UI圖中的豐富型文字編輯器工具列](assets/chlimage_1-35.png)*圖：啟用觸控的UI中的豐富型文字編輯器工具列*
+![啟用觸控的UI中的豐富型文字編輯器工具列](assets/chlimage_1-35.png)
 
-![Classic UI圖中的Rich Text Editor工](assets/rtedefault.png)*具列：Classic UI中的Rich Text Editor工具列*
+*圖：啟用觸控的UI中的豐富型文字編輯器工具列*
+
+![Classic UI中的Rich Text Editor工具列](assets/rtedefault.png)
+
+*圖：Classic UI中的Rich Text Editor工具列*
 
 >[!MORELIKETHIS]
 >
@@ -57,7 +63,9 @@ Touch-enabled UI是AEM的標準使用者介面。 Adobe針對製作環境推出�
 
 開啟時（點選／按一下速度緩慢），您可在頁面內編輯內容。 給出了一個具有非常基本選項的緊湊的工具欄。
 
-![使用觸控式UI中的基本工具列進行內嵌編輯](assets/chlimage_1-36.png)*圖：使用觸控式UI中的基本工具列進行內嵌編輯*
+![使用觸控式UI中的基本工具列進行內嵌編輯](assets/chlimage_1-36.png)
+
+*圖：使用觸控式UI中的基本工具列進行內嵌編輯*
 
 在Classic UI中，按兩下元件時速度緩慢，可進行內嵌編輯，而橘色的外框會反白顯示內容。 如果Content Finder已開啟，則窗口頂部將顯示一個帶有可用RTE格式設定選項的工具欄。 如果未開啟「內容搜尋器」，則不會顯示格式選項，您只能進行基本文字編輯。
 
@@ -67,15 +75,21 @@ AEM元件可在全螢幕檢視中開啟，隱藏頁面內容並佔據可用螢�
 
 在對話框全屏模式中，以及詳細的RTE工具欄中，還提供了對話框中可用的選項和元件。 它僅適用於包含RTE和其他元件的對話框。
 
-![在啟用觸摸屏的UI圖中以全屏模式編輯時，詳細的RTE工具](assets/chlimage_1-37.png)*欄：在啟用觸摸屏的UI中以全屏模式編輯時的詳細RTE工具欄*
+![在啟用觸摸屏的UI中以全屏模式編輯時的詳細RTE工具欄](assets/chlimage_1-37.png)
+
+*圖：在啟用觸摸屏的UI中以全屏模式編輯時的詳細RTE工具欄*
 
 ### 對話框編輯 {#dialog-editing}
 
 當元件按兩下時，會開啟對話方塊以編輯內容。 對話框在現有頁面的頂部開啟。 在某些特定情況下，對話方塊會以快顯視窗的形式開啟。 例如，當「文字」元件是多欄頁面版面中欄的一部分，而對話方塊的可用區域較少時。
 
-![啟用觸控的UI圖中的對話編輯](assets/dialog_editing_modetouchui.png)*模式：啟用觸控的UI中的對話編輯模式*
+![啟用觸控的UI中的對話編輯模式](assets/dialog_editing_modetouchui.png)
 
-![Classic UI中包含編輯詳細工具列的對話框](assets/chlimage_1-38.png)*圖：Classic UI中包含編輯詳細工具列的對話框*
+*圖：啟用觸控的UI中的對話編輯模式*
+
+![Classic UI中包含編輯詳細工具列的對話框](assets/chlimage_1-38.png)
+
+*圖：Classic UI中包含編輯詳細工具列的對話框*
 
 ## 關於RTE插件和相關功能 {#aboutplugins}
 
