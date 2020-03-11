@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: 033c32c581fddd5f632ad534f57c84b4d74a4104
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -138,15 +138,15 @@ source-git-commit: 033c32c581fddd5f632ad534f57c84b4d74a4104
 
 * 控制頁首中可用導覽連結的顯示
 
-只有在您是管理員或工作流程管理員群組的成員時，「管理控制」選項才會顯示在檢視選擇器下拉式清單中。
+「管理控制」選項僅對管理員或工作流程管理員群組的成員顯示。
 
 ![admin-control](assets/admin-control.png)
 
 * **品牌自訂**
 
-   * **自訂標題文字：** 指定要在頁首中顯示的文字。
+   * **自訂標題文字：** 指定要在頁首中顯示的文字，以取代預設 **的Adobe Experience Manager** 文字。
 
-   * **自訂標誌：** 在「數位資產管理」(DAM)中上傳影像，並參考該影像以在標題中顯示。
+   * **自訂標誌：** 指定要在頁首中顯示為標誌的影像。 在「數位資產管理」(DAM)中上傳影像，並在欄位中參考該影像。
 
 * **使用者導覽**
    * **隱藏導覽選項：** 選取此選項可隱藏頁首中可用的導覽選項。 導覽選項包括其他解決方案的連結、說明連結，以及點選Adobe Experience Manager標誌或文字時可用的製作選項。
