@@ -3,7 +3,7 @@ title: 查看資料夾資產和集合
 description: 為資料夾或系列中的資產設定審核工作流程，並與審核者或創意合作夥伴分享，以尋求意見回應。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
