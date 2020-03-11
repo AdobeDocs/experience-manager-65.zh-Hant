@@ -1,22 +1,22 @@
 ---
-title: Camera raw支援
-description: 瞭解如何在Adobe Experience Manager Assets中啟用Camera raw支援。
+title: Camera Raw支援
+description: 瞭解如何在Adobe Experience Manager Assets中啟用Camera Raw支援。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
 
-# 支援使用Camera raw處理影像 {#camera-raw-support}
+# 支援使用Camera Raw處理影像 {#camera-raw-support}
 
-您可以啟用Camera raw支援來處理原始檔案格式，例如CR2、NEF和RAF，並以JPEG格式呈現影像。 Adobe Experience Manager Assets使用Camera Raw透過Package Share提供的 [Camera Raw套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ，支援這項功能。
+您可以啟用Camera Raw支援來處理原始檔案格式，例如CR2、NEF和RAF，並以JPEG格式呈現影像。 Adobe Experience Manager Assets使用Camera Raw透過Package Share提供的 [Camera Raw套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ，支援這項功能。
 
 >[!NOTE]
 >
 >此功能僅支援JPEG轉譯。 它在Windows 64位元、Mac OS和RHEL 7.x上都受支援。
 
-若要在Adobe Experience Manager Assets中啟用Camera raw支援，請依照下列步驟進行：
+若要在Adobe Experience Manager Assets中啟用Camera Raw支援，請依照下列步驟進行：
 
 1. 從Package Share [下載Camera Raw](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) (Camera Raw)套件。
 1. 存取 `https://[aem_server]:[port]/workflow`. 開啟「 **[!UICONTROL DAM更新資產」工作流程]** 。
@@ -53,13 +53,13 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-*圖：側窗格中的選項。*
+*圖：側窗格中的選項*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
 
-*圖：使用選項對影像進行輕量型編輯。*
+*圖：使用選項對影像進行輕量型編輯*
 
-將編輯儲存至Camera raw影像後，就會產生影 `AdjustedPreview.jpg` 像的新轉譯。 對於「Camera Raw」以外的其他影像類型，變更會反映在所有轉譯中。
+將編輯儲存至Camera Raw影像後，就會產生影 `AdjustedPreview.jpg` 像的新轉譯。 對於「Camera Raw」以外的其他影像類型，變更會反映在所有轉譯中。
 
 ## 最佳實務、已知問題和限制 {#best-practices}
 
@@ -67,4 +67,4 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 * 此功能僅支援JPEG轉譯。 它在Windows 64位元、Mac OS和RHEL 7.x上都受支援。
 * RAW和DNG格式不支援中繼資料回寫。
-* Camera raw程式庫在每次處理的像素總數上有限制。 目前，不論先遇到何種條件，它都可處理檔案長邊最多65000像素，或512 MP。
+* Camera Raw程式庫在每次處理的像素總數上有限制。 目前，不論先遇到何種條件，它都可處理檔案長邊最多65000像素，或512 MP。
