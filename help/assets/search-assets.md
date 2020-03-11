@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選」面板在AEM中尋找所需資產，�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c491b77dac1bf25b9e348ed12d16ed7894e5493e
+source-git-commit: 1d09e02c451c01955b93bc3149fc663754435fdf
 
 ---
 
@@ -31,6 +31,8 @@ AEM支援下列使用案例，而本文則說明這些使用案例的使用、�
 使用AEM網頁介面頂端的Omnisearch欄位來搜尋資產。 前往「 **[!UICONTROL Assets]** > **** Files in AEM」（資產> AEM中的檔案），按一下頂端列中的搜尋圖示，輸入搜尋關鍵字，然後按回車鍵。 或者，使用關鍵字快速鍵/（正斜線）來開啟Omnisearch欄位。 位置：資產已預先選取，以限制搜尋DAM資產。 AEM會在您開始輸入搜尋關鍵字時提供建議。
 
 使用「篩 **[!UICONTROL 選器]** 」面板，根據各種選項（謂語）篩選搜尋結果，以縮小搜尋範圍，例如檔案類型、檔案大小、上次修改日期、資產狀態、前瞻分析資料和Adobe Stock授權。 您的管理員可以自訂「篩選」面板，並使用搜尋Facet新增或移除搜尋謂語。
+
+請注意，「 [!UICONTROL 篩選器] 」面板中的「檔案類型」篩選器具有混合狀態核取方塊，這表示除非您選取所有巢狀謂詞（或格式），否則不會選取第一級核取方塊，而會改為刪除。
 
 AEM搜尋功能支援搜尋系列並搜尋系列中的資產。 請參閱 [搜尋系列](/help/assets/managing-collections-touch-ui.md)。
 
