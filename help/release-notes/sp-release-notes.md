@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: 7cc22c6558394c5e12ea2477bb07ff02dabc8dbc
 
 ---
 
@@ -244,7 +244,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 設計人員：如果表格中有合併的儲存格，則無障礙環境支援測試會失敗，無法針對使用輸出服務(CQ-4285372)從XDP表單轉換的輸出PDF檔案進行協助功能測試。
 
-* Foundation JEE:由於快取問題，從群集斷開的伺服器無法重新連接(NPR-32412)。
+* Foundation JEE:如果AEM Forms伺服器已與叢集中斷開連線，快取問題會使它無法重新連線至伺服器(NPR-32412)。
 
 ## Install 6.5.4.0 {#install}
 
