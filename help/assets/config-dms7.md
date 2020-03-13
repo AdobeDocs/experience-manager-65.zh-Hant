@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a986eb3154fba51de20e31b87e9082631f057d27
+source-git-commit: 9871cbf48a01298ab2b6fb1b79bb290714b84ab1
 
 ---
 
@@ -100,7 +100,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL 同步所有內容]** -預 <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->設為「已選取」。 如果您想要選擇性地包含或排除同步至動態媒體的資產，請取消選取此選項。 取消選取此選項可讓您從下列兩種動態媒體同步模式中選擇：
 
    * **[!UICONTROL Dynamic Media 同步處理模式]**
-      * **[!UICONTROL 預設啟用]** -預設情況下，配置將應用於所有資料夾，除非您專門標籤要導出的資料夾。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+      * **[!UICONTROL 預設啟用]** -預設情況下，配置將應用於所有資料夾，除非您專門為排除標籤資料夾。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 預設禁用]** -在您明確標籤選定資料夾以同步到動態媒體之前，配置不會應用於任何資料夾。
 若要將選取的資料夾標示為同步至動態媒體，請選取資產資料夾，然後在工具列上按一下「屬 **[!UICONTROL 性」]**。 在「詳 **[!UICONTROL 細資訊]** 」標籤的「動態媒體同步模式 **** 」下拉式清單中，從下列三個選項中選擇。 完成時，點選「 **[!UICONTROL 儲存]**」。 *記住：如果您選取「先同步所有內容」，這三個選&#x200B;**項將無法使用**。*
          * **[!UICONTROL 繼承]** -資料夾上沒有明確的同步值；相反，資料夾會繼承其上級資料夾或雲配置中預設模式中的同步值。 繼承的詳細狀態會透過工具提示顯示。
