@@ -1,8 +1,8 @@
 ---
 title: SAP Commerce Cloud
 seo-title: SAP Commerce Cloud
-description: 瞭解如何使用SAP Commerce cloud部署電子商務。
-seo-description: 瞭解如何使用SAP Commerce cloud部署電子商務。
+description: 瞭解如何使用SAP Commerce Cloud部署電子商務。
+seo-description: 瞭解如何使用SAP Commerce Cloud部署電子商務。
 uuid: 26ace49c-02d2-4b49-a959-e033def89bd4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: c5dcc90a-05d2-4701-a625-2b655ad0b458
 docset: aem65
 pagetitle: Deploying eCommerce with hybris
 translation-type: tm+mt
-source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
+source-git-commit: 9e39868768d2fc70f587b18d36042e742d5fae45
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
 >
 >此頁面包含Hybris網站的連結。 若是某些頁面，您需要帳戶才能登入。
 
-## 使用SAP Commerce cloud部署電子商務 {#deploying-ecommerce-with-sap-commerce-cloud}
+## 使用SAP Commerce Cloud部署電子商務 {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Geometrixx Outdoors網站的英文（美國）分支( `/content/geometrixx-outdo
 
 ### 技術需求- Hybris Server {#technical-requirements-hybris-server}
 
-eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5（視預設值而定），並維持與 [Hybris 4的回溯相容性](/help/sites-developing/hybris.md#developing-for-hybris)。
+eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5（視預設值而定），並維持與Hybris 4的回溯相容性 <!--[Hybris 4](/help/sites-developing/hybris.md#developing-for-hybris). -->
 
 >[!NOTE]
 >
