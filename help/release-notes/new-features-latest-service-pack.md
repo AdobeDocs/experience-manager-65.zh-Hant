@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
+source-git-commit: ed756d785864131c2e031aec4331388bc057576b
 
 ---
 
@@ -39,15 +39,17 @@ Adobe Experience Manager(AEM)6.5今年每季的Service Pack提供各項功能並
 
 ### 協助工具增強功能 {#accessibility-enhancements}
 
-* 混合狀態核取方塊現在有aria-checked屬性，其值為&quot;mixed&quot;，以便將混合狀態公開給螢幕閱讀程式。
+Experience Manager Assets包含下列協助工具增強功能：
 
-* 現在除了路徑型手勢外，支援鍵盤控制項，以在放大的影像周圍移動。
+* 鍵盤上的箭頭鍵可用來移動和平移縮放影像中的區域。 如需詳細資訊，請參閱 [僅使用鍵盤按鍵預覽資產](../assets/managing-assets-touch-ui.md#previewing-assets)。
 
-* 在欄位標籤中已提供日期格式限制，讓僅限鍵盤的使用者手動輸入日期。
+* 「篩選器」面板中的混合狀態複選框（除非您選擇了所有嵌套的謂詞，否則不會選擇並刪除第一級複選框）由螢幕閱讀器讀取。
 
-* Alt屬性已新增至裝飾性圖示，並移除role=img屬性，因此這些圖示和影像不會公開給螢幕閱讀程式使用者。
+* 日期和時間格式約束在日期欄位的欄位標籤中提供，使用戶能夠使用鍵盤以正確的格式輸入日期。
 
-* 已新增Alt屬性以關閉圖示，以在螢幕閱讀程式使用者在標籤上方時向他們指出。
+   For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份，YYYY是年份，DD是兩位數格式的日，HH是24小時軍用格式的小時，而mm是分鐘。
+
+* 現在 `X` 螢幕閱讀程式會公佈用來移除目前選取標籤的按鈕符號，以及選取的標籤數。
 
 ## AEM Forms {#aem-forms}
 
