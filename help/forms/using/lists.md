@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
@@ -60,7 +60,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
    [ ![工具列](assets/advancedediting.png)
 
-   * **連結**:在文字中插入超文字連結。 點選 **[!UICONTROL 連結]**、在 **[!UICONTROL URL欄位中指定連結、從]** Alt Text **[!UICONTROL 欄位移除預設物件名稱、點選]**![](assets/save_icon.svg)儲存。
+   * **連結**:在文 [字中插入](#insert-hyperlink) 超文字連結。
    * **重複**:使用分隔字元，重複列印「資料字典」中的收集元素。
    * **條件**:點選以插入條件。 根據條件插入文字。 如果條件為true，則文字會以字母顯示，否則不顯示。
    * **添加說明**:將註解新增至文字。 這是作者可見的中繼資料，但不是所建立之字母的一部分。
@@ -131,6 +131,18 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 1. 您可以使用內嵌條件並重複，讓您的字母具有高度情境化且結構化。 有關內嵌條件和重複的詳細資訊，請參 [閱內嵌條件和字母重複](/help/forms/using/cm-inline-condition.md)。
 1. 點選「 **儲存**」。
+
+#### 在文字中插入超連結 {#insert-hyperlink}
+
+執行下列步驟，在文字資產中建立超連結：
+
+1. 在文本編輯器中選擇文本或資料模型對象。
+
+2. 點選 **[!UICONTROL 連結]**。 點選 **[!UICONTROL 「替代文字]** 」欄位可移除現有的資料模型物件名稱或文字。
+
+3. 指定URL並點選「 ![儲存](assets/save_icon.svg)」。
+
+![在文字資產中建立超連結](assets/text-create-hyperlink.png)
 
 #### 搜尋和取代文字 {#searching-and-replacing-text}
 
