@@ -1,13 +1,13 @@
 ---
 title: AEM Sites發行說明
-description: Adobe Experience Manager 6.4 Sites的發行說明。
+description: Adobe Experience Manager 6.5 Sites的發行說明。
 uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
@@ -89,7 +89,7 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
 
 * 使用專案主管簡化翻譯專案的製作
 * 通過預設將翻譯作業設定為批准狀態簡化執行翻譯項目
-* 允許使用第三方翻譯記憶庫中的更改來更新翻譯的頁面
+* 允許使用第三方翻譯記憶庫中的更改更新翻譯的頁面
 * 允許以JSON格式導出翻譯作業
 * 更新Microsoft Translation整合以使用V3 API
 
@@ -114,7 +114,7 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
 >
 >AEM在AEM 6.5發行時不支援at.js 2.x。 請使用最新版本的at.js 1.x
 
-* Adobe target整合現在可以使用Target Standard API。 舊版AEM使用Target Classic HTTP API，現已過時。
+* Adobe Target整合現在可以使用Target Standard API。 舊版AEM使用Target Classic HTTP API，現已過時。
 * 隨附Adobe Target `mbox.js` 63版。 Adobe強烈建議將實作切 `at.js` 換為v1.x。
 * `at.js` 現在已包含1.5.0版。 Adobe建議您使 [用Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) , `at.js` 將v1.x布建至網站。
 
