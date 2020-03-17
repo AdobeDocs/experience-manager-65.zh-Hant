@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
+source-git-commit: 86dbd52d44a78401aa50cce299850469c51b691c
 
 ---
 
@@ -20,15 +20,33 @@ source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
 
 ## 平台 {#platform}
 
-會報告刪除CRX-Quickstart及其內容的問題。
+* 會報告刪除CRX-Quickstart及其內容的問題。
 
-在每個動作上，請確定「*htmllibmanager.fileSystemOutputCacheLocation*」屬性從來不是空字串：
+   在每個動作上，請確定「*htmllibmanager.fileSystemOutputCacheLocation*」屬性從來不是空字串：
 
-1. 呼叫&quot;*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*&quot;。
-2. 升級至AEM 6.5。
-3. 在AEM 6.5上執行「延遲內容移轉」。
+   1. 呼叫&quot;*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*&quot;。
+   2. 升級至AEM 6.5。
+   3. 在AEM 6.5上執行「延遲內容移轉」。
+   有 [知識庫文章](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) ，其中提供進一步的詳細資訊以及此問題的解決方法。
 
-有 [知識庫文章](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) ，其中提供進一步的詳細資訊以及此問題的解決方法。
+* 如果您正在搭配AEM 6.5執行個體使用JDK 11，部分頁面在部署某些封裝後可能會顯示為空白。 日誌檔案中顯示以下錯誤消息：
+
+   ```
+   *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
+   java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+   ```
+
+要解決此錯誤：
+
+1. 停止AEM例項。 前往並 `<aem_server_path_on_server>crx-quickstart\conf` 開啟檔 `sling.properties` 案。 Adobe建議備份此檔案。
+
+2. 搜尋 `org.osgi.framework.bootdelegation=`. 添加 `jdk.internal.reflect,jdk.internal.reflect.*` 屬性以將結果顯示為：
+
+   ```
+   org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.internal.reflect.*
+   ```
+
+3. 儲存檔案並重新啟動AEM例項。
 
 ## 資產 {#assets}
 
@@ -39,7 +57,7 @@ source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
 ## 表單 {#forms}
 
 * 當AEM Forms安裝在Linux作業系統上時，Digital Signature with Hardware Security Module（含硬體安全性模組的數位簽章）將無法運作。 (CQ-4266721)
-* （僅限WebSphere上的AEM Forms）如果您搜尋以使用者名稱為搜尋准則的管理員( **Administrator** ),**Forms Workflow **> **Task Search****** （任務搜尋）選項不會傳回任何結果。 (CQ-4266457)
+* （僅限WebSphere上的AEM Forms）如果您以搜尋標準 **Username為搜尋准則搜尋** Administrator **，則「** Forms Workflow **>** Task Search **** 」選項不會傳回任何結果。 (CQ-4266457)
 
 * AEM Forms無法將具有JPEG壓縮的。tif和。tiff檔案轉換為PDF檔案。 (CQ-4265972)
 * 「 **AEM Forms Assets掃描器** 」和「Letter to Interactive Communication Migration **」（互動式通訊移轉信號）選項無法在「** AEM Forms移轉 **** 」頁面上運作。 (CQ-4266572)
