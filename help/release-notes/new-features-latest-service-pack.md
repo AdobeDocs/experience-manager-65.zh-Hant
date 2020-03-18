@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed756d785864131c2e031aec4331388bc057576b
+source-git-commit: 1fde7fc5dd32b5a2a83fe6c01cfa2b24be32a899
 
 ---
 
@@ -31,11 +31,12 @@ Adobe Experience Manager(AEM)6.5今年每季的Service Pack提供各項功能並
 
 ## AEM Assets {#aem-assets}
 
-### 透過Adobe I/O Console與品牌入口網站整合 {#assets-integration-bp}
+### 使用品牌入口網站設定AEM資產 {#configure-assets-bp}
 
-您現在可以透過Adobe I/O Console，以品牌入口網站來設定AEM資產。 Adobe I/O Console會購買IMS Token以授權品牌入口網站租用戶。 之前，AEM Assets是透過舊版OAuth閘道在Classic UI中設定品牌入口網站。 使用舊版OAuth閘道的設定將於2020年4月6日之前受到支援。 如果您未修改整合，現有的組態將繼續運作。
+AEM Assets和品牌入口網站之間的授權渠道已變更。 之前，品牌入口網站是透過舊版OAuth閘道在傳統使用者介面中設定，該閘道使用JWT代號交換來取得IMS存取代號以進行授權。 AEM Assets現在已透過Adobe I/O設定品牌入口網站，Adobe I/O會購買IMS Token以授權您的品牌入口網站租用戶。
 
-您可以建立新的整合，或將整合設定升級至Adobe I/O Console。
+使用品牌入口網站設定AEM資產的步驟依您的AEM版本而異，以及您是首次設定或升級現有的設定。 如需詳 [細資訊，請參閱「設定AEM資產與品牌入口網站](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 」。
+
 
 ### 協助工具增強功能 {#accessibility-enhancements}
 
