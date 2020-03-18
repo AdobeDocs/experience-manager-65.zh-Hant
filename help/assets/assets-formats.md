@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a701d98fed79648104c39816482ff94997ba2e6
+source-git-commit: 08ea08fc2f8c36d509509f761a76a428d6df7e6a
 
 ---
 
@@ -63,7 +63,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 * 將中繼資料回寫新增至處理常式時，可用於PSB檔案格 `NComm` 式。
 
-* 若要使用Dynamic media預覽並產生EPS檔案的動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media預覽並產生EPS檔案的動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 對於EPS檔案，PostScript Document Structuring Convention(PS-Adobe)3.0版或更新版本支援中繼資料回寫。
 
@@ -87,7 +87,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 ## 支援的相機原始資料 {#supported-camera-raw}
 
-Adobe Camera raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera raw支援](camera-raw.md)。
+Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera Raw支援](camera-raw.md)。
 
 ## 支援的檔案格式 {#supported-document-formats}
 
@@ -124,9 +124,9 @@ Adobe Camera raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 
 除了上述功能外，請考慮下列事項：
 
-* 若要使用Dynamic media為PDF檔案產生動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media為PDF檔案產生動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 若要使用Dynamic media預覽並產生AI檔案的動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media預覽並產生AI檔案的動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 若要使用動態媒體來產生INDD檔案的動態轉譯，請參 [閱InDesign(INDD)檔案格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
 
@@ -158,7 +158,7 @@ Adobe Camera raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 | 視訊副檔名 | 容器 | 建議的視訊轉碼器 | 不支援的視訊轉碼器 |
 |---|---|---|---|
 | MP4 | MPEG-4 | H264/AVC（所有描述檔） |  |
-| MOV、QT | Apple quickTime | H264/AVC、Apple proRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHDAvid AVR | Apple Intemiderate、Apple Animation |
+| MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHDAvid AVR | Apple Intemiderate、Apple Animation |
 | FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（向量動畫檔案） |
 | WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft螢幕(MSS2)、Microsoft Photo Story(WVP2) |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 |  |
@@ -188,18 +188,17 @@ Adobe Camera raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 
 ## 其他支援的格式 {#other-supported-formats}
 
-下表說明常用DAM工作流程對其他幾種檔案格式的適用性。
+下表說明常用DAM工作流程對其他幾種檔案格式的適用性。 所有檔案都支援一般的DAM功能（動態媒體傳送除外）。
 
 | 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 動態媒體傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| * | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（當設定有自己的傳送網域時） |  |  |  |  |  | ✓ |
 
-**** &amp;ast;DAM中支援其他格式，包括儲存、版本修訂、ACL、工作流程、發佈和中繼資料管理。
+**&amp;ast;** DAM中支援其他格式，包括儲存、版本修訂、ACL、工作流程、發佈和中繼資料管理。
 
 ## Supported MIME types {#supported-mime-types}
 
