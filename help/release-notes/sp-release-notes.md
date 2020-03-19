@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc72581f0de6f47cd1d7e207f228e64ba7c9e842
+source-git-commit: cc3cb8732e2c0b4a7275ec302517791a5babdd42
 
 ---
 
@@ -41,6 +41,12 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 * [Experience Manager](new-features-latest-service-pack.md#accessibility-enhancements) Assets中的協助工具增強功能。
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.10.8版。
+
+* 您現在可以將選擇性內容子樹狀結 *構同步至Dynamic Media - Scene7模式* ，而非所有可在取得 `content/dam`。
+
+* 與SOAP web service整合的表單資料模型現在支援元素上的選擇群組或屬性。
+
+* SOAP輸入或輸出和複雜的資料結構現在支援動態群組替代。
 
 如需先前AEM 6.5 Service Pack中所推出的完整功能清單、主要重點、主要功能，請參閱「 [Adobe Experience Manager 6.5 Service Pack 4的新增功能」](new-features-latest-service-pack.md)。
 
