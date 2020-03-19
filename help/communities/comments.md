@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# 使用注釋{#using-comments}
+# 使用注釋 {#using-comments}
 
 ## 簡介 {#introduction}
 
@@ -81,7 +81,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **允許的檔案類型**
 
-   僅在勾選「允許檔案上傳」時相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許** **所有檔案類型。
+   僅在勾選「允許檔案上傳」時相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **RTF 編輯器**
 
@@ -101,9 +101,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 使用者協調標籤 {#user-moderation-tab}
 
-在「**使用者協調**」標籤下，指定張貼的留言的管理方式。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+在「使用 **者協調** 」標籤下，指定如何管理已張貼的留言。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-* **預先協調**：如果勾選，留言必須先經過核准，才能顯示在發佈網站上。 已取消選取預設值。
+* **事先審核**
+
+   如果勾選，則必須先核准註解，才能顯示在發佈網站上。 已取消選取預設值。
 
 * **刪除注釋**
 
@@ -139,7 +141,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 「排序設定」頁籤 {#sort-settings-tab}
 
-在「**排序設定**」標籤下，指定張貼的留言在顯示時的排序方式。
+在「排 **序設定** 」標籤下，指定顯示張貼留言的排序方式。
 
 * **排序欄位**
 
@@ -155,7 +157,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在已知自訂資源類型後，進入 [Design Mode](/help/sites-authoring/default-components-designmode.md) ，然後按兩下置入的元 `Comments` 件，以開啟具有額外標籤的對話方塊。
 
-在「**資源類型**」頁籤下，為元件的新實例指定自定義資源 `Comments or Voting`類型：
+在「資 **源類型** 」頁籤下，為元件的新實例指定自定義資源 `Comments or Voting`類型：
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -187,8 +189,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * 張貼新留言
 * 編輯自己的注釋
-* 刪除自己的注釋
-* 標幟其他人的意見
+* 刪除其自己的注釋
+* 標籤其他人的注釋
 
 #### 匿名 {#anonymous}
 
