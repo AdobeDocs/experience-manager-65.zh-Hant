@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -42,7 +42,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * `Name`:單頁範本
    * `Description`:由單一頁面函陣列成的範本。
-   * select `Enabled`
+   * 選取 `Enabled`
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
