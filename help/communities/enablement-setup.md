@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -105,7 +105,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 對於啟用社群網站，網站訪客不應能夠自 [行註冊或使用社交登入](sites-console.md#user-management)。
 
-相反，在啟用 [通道服務](#enable-the-tunnel-service) ,「成員」 [](members.md) 控制台用於在發佈環境中註冊新成員。
+相反，在啟用 [通道服務後](#enable-the-tunnel-service) ,「成 [](members.md) 員」控制台用於在發佈環境中註冊新成員。
 
 在本教學課程中，會在發佈環境中建立三個成員。 兩個成員將成為指派給學習路徑的使用者群組的成員，而第三個成員將成為啟用資源聯絡人。
 
