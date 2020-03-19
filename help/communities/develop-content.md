@@ -10,15 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: b97abfc9-62e6-470c-bb86-086e662c8091
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
 # 開發沙盒內容 {#develop-sandbox-content}
 
-**[‹添加客戶端](add-clientlibs.md)**
+**[新增Clientlibs](add-clientlibs.md)**
 
 目前，您可以使用 [We-Retail Community](../../help/sites-developing/we-retail.md)、社群元件指南和功能基本資訊，來探索沙盒中的社群功 [能](components-guide.md)[](essentials.md) 。
 
-**[‹添加客戶端](add-clientlibs.md)**
+
