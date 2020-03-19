@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 2de88b55-dda9-4ccf-ad4d-dd67943ef610
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# 工作功能{#assignments-feature}
+# 工作功能 {#assignments-feature}
 
 在元件瀏覽器的「 [社群」群組中，可找到「啟用指派」和「啟用目錄](/help/communities/catalog.md) 」元件是啟用社群 [的元件](/help/communities/overview.md#enablement-community)。
 
