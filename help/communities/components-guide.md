@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -40,7 +40,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在作者上，若要進入編輯模式，請插入 `editor.html` 或作為 `cf#` 伺服器名稱后的第一個路徑區段：
 
-* 標準UI:
+* 標準 UI:
 
    [https://&lt;server>:&lt;port>/editor.html/content/community-components/en.html](http://localhost:4502/editor.html/content/community-components/en.html)
 
@@ -118,7 +118,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->請注意，如果SRP預設為 [JSRP](jsrp.md)，則在發佈例項上輸入的UGC只會顯示在發佈上，而且*not *be viseble from the [](moderate-ugc.md) moderation console on the author instance.
+>請注意，如果SRP預設為 [JSRP](jsrp.md)**[](moderate-ugc.md) ，則在發佈例項上輸入的UGC只會在發佈時顯示，而不會在作者例項的協調控制台中顯示。
 
 ## 用戶端資源庫 {#client-side-libraries}
 
