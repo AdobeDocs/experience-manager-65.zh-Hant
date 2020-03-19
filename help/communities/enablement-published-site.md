@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -70,12 +70,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![站點驗證-1](assets/site-authentication-1.png)
 
-1. 新增登入頁面的路徑。 例如， `/content/......./GetStarted`。
+1. 新增登入頁面的路徑。 For example, `/content/......./GetStarted`.
 1. 發佈頁面。
 
 ## 已註冊會員 {#enrolled-member}
 
-這一經驗依賴於 `Riley Taylor` Ski Slik Sloyss Group `Sidney Croft` 的建立 [和被指派的Ski Lessons Learning Path(Ski Lessons Learning Path)的使用者，](enablement-setup.md#publishcreateenablementmembers) 通過其 [](resource.md#settings)**** 成為Ski Class Ski group的成員。
+這一經驗依賴於 `Riley Taylor` Ski Slik Slouns Leanss `Sidney Croft` 的建立 [和被指派的Ski Lessons Learning Path的使用者，](enablement-setup.md#publishcreateenablementmembers) 通過其 [成為Ski Class Ski Group的成員](resource.md#settings)**** ，使其成為Ski Lessons Leanssssssss Group。
 
 使用
 
@@ -161,7 +161,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 管理 {#administration}
 
-現在，兩位學員的活動， `Riley Taylor` 並選 `Sidney Croft. By s`擇 `Administration`連結以存取「協調控制台」,Quinn可以使用大量 [](moderation.md) 協調控制台來協調其貼文。
+有的是兩個學員的活動， `Riley Taylor` 還有 `Sidney Croft`。 選取要存 `Administration` 取「協調控制台」的連結，Quinn就可以使用大量 [協調控制台](moderation.md) ，來協調其貼文。
 
 選取側面板圖示可切換開啟用於搜尋社群內容的篩選器。
 
@@ -203,8 +203,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 使用管理權限登入
 * 從主功能表導覽至「社群> **[!UICONTROL 資源」]**
 * 選擇網 `Enablement Tutorial` 站
-* 選擇所 `Report`有資源摘要的表徵圖
-* 選擇資源，然後為該資 `Report`源上的報表選擇表徵圖
+* 選擇所 `Report` 有資源摘要的表徵圖
+* 選擇資源，然後為該資 `Report` 源上的報表選擇表徵圖
 
 請注意，顯示Adobe Analytics的資料可能還為時太早，Adobe Analytics可能需要1到12小時才會顯示。 不過，基本的SCORM報表已可供使用。
 
@@ -218,7 +218,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 開放卡 `Enablement Tutorial`
 * 開放卡 `Ski Lessons`
-* `select Report, User Report`
+* 選取 `Report > User Report`
 
 ![chlimage_1-444](assets/chlimage_1-444.png)
 
@@ -249,7 +249,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 論作者
 * 使用管理權限登入
-* 導覽至「 **[!UICONTROL 社群>報表>檢視報表」]**
+* 導覽至 **[!UICONTROL 社群>報表>檢視報表]**
 * 從下 **拉式功能表&#x200B;**(選取`Enablement Tutorial`)中選取網站
 
 * 選擇 **[!UICONTROL 內容類型]** (選擇 `all`)
