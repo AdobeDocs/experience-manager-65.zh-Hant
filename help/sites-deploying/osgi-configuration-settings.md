@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0849cfdd0e4f9a614c455214e6520ead07ae6da0
 
 ---
 
@@ -36,7 +36,7 @@ OSGi「提&#x200B;*供標準化的基元，允許應用程式從可重複使用�
 
 >[!NOTE]
 >
->AEM [OSGi Config Details](https://www.aemstuff.com/osgi.html) （AEM OSGi設定詳細資訊）工具可用來列出預設的OSGi設定。
+>OSGi Configuration Diff工具是 [AEM Tools的一部分](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)，可用來列出預設的OSGi組態。
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ OSGi「提&#x200B;*供標準化的基元，允許應用程式從可重複使用�
 >
 >請務必設定下列項目：
 >
->**使用者名** 稱和密碼 ****，是存取Apache Felix Web Management console本身的認證。
+>**使用者名** 稱和密碼 ****，是存取Apache Felix Web Management Console本身的認證。
 >在初始安裝後必須更改密碼，以確保實 [例的安](/help/sites-administering/security-checklist.md) 全性。
 
 >[!NOTE]
@@ -156,7 +156,7 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 * **Logger** to define the category;例如，僅記錄com.day.cq的記錄。
 
 * 通過使 **用工廠配置**，可以添加任何數量的附加配置，以適應所需的各種日誌級別和類別。
-* 這類配置在開發過程中非常有用；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
+* 這類配置在開發過程中很有幫助；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
 * 這種配置在生產環境中非常有用；例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
 
 如需詳細資訊，請 [參閱「AEM記錄](/help/sites-deploying/configure-logging.md) 」 [和「Sling記錄」](https://sling.apache.org/site/logging.html)。
@@ -168,7 +168,7 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 * The writer can be used by a **Apache Sling Logging Logger Configuration** configuration.
 
-* 這類配置在開發過程中非常有用；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
+* 這類配置在開發過程中很有幫助；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
 * 這種配置在生產環境中非常有用；例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
 
 如需詳細資訊，請 [參閱「AEM記錄](/help/sites-deploying/configure-logging.md) 」 [和「Sling記錄」](https://sling.apache.org/site/logging.html)。
@@ -181,7 +181,7 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 * **MIME類型** ，將項目所需的類型添加到系統中。 這允許對文 `GET` 件發出請求，以設定用於連結檔案類型和應用程式的正確內容類型標題。
 
-**Apache Sling Referrer Filter** （Apache Sling反向連結篩選）：若要解決CRX webDAV和Apache Sling中跨網站要求偽造(CSRF)的已知安全性問題，您必須設定反向連結篩選。
+**Apache Sling Referrer Filter** （Apache Sling反向連結篩選）：若要解決CRX WebDAV和Apache Sling中跨網站要求偽造(CSRF)的已知安全性問題，您必須設定反向連結篩選。
 
 反向連結篩選服務是一項OSGi服務，可讓您設定：
 
@@ -246,7 +246,7 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 **Day Commons GFX Font Helper** —— 在轉換圖形時，您可以使用DrawText來內嵌文字。 為此，您也可以安裝您自己的字型：
 
 * 定義要 **搜尋的字型路徑** ，以尋找專案特定的字型。
-例如， `/apps/myapp/fonts`。
+For example, `/apps/myapp/fonts`.
 
 **Apache HTTP Components Proxy Configuration** （Apache HTTP Client的Apache HTTP用戶端的所有程式碼的Proxy設定），用於建立HTTP時；例如，在複製時。
 
