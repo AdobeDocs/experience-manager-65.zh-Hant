@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
-source-git-commit: a7c3848704ee2b4b984fafcd82e29a75ea8d3443
+source-git-commit: 2da3da1a36f074593e276ddd15ed8331239ab70f
 
 ---
 
@@ -39,7 +39,7 @@ Jackrabbit FileVault工具(VLT)是 [Apache Foundation](https://www.apache.org/) 
 
 若要使用VLT工具，您必須先安裝它。 由於它是額外的工具，因此預設不會安裝它。 此外，您還需要設定系統的環境變數。
 
-1. 從 [Apache Jackrabbit網站下載FileVault封存檔。](https://jackrabbit.apache.org/jcr/downloads.html#vlt)
+1. 從Maven對象儲存庫下載FileVault [存檔檔案。](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
    >VLT工具的來源可在GitHub [上使用。](https://github.com/apache/jackrabbit-filevault)
@@ -315,7 +315,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | 命令 | 縮寫命令 | 說明 |
 | `export` |  | 從JCR儲存庫（Vault檔案系統）導出到本地檔案系統，而無控制檔案。 |
 | `import` |  | 將本地檔案系統導入JCR儲存庫（Vault檔案系統）。 |
-| `checkout` | `co` | 檢出Vault檔案系統。 將它用於本地檔案系統的初始JCR儲存庫。 (注意：您必須先在subversion中籤出儲存庫。) |
+| `checkout` | `co` | 檢出Vault檔案系統。 將它用於本地檔案系統的初始JCR儲存庫。 (注意：您必須首先在subversion中籤出儲存庫。) |
 | `analyze` |  | 分析包。 |
 | `status` | `st` | 打印工作副本檔案和目錄的狀態。 |
 | `update` | `up` | 將更改從儲存庫導入工作副本。 |
@@ -775,7 +775,7 @@ VLT使用的狀態代碼為：
 * &#39;R&#39;已取代
 * &#39;?&#39; 項目不在版本控制之下
 * &#39;!&#39; 項目遺失（由非svn命令移除）或不完整
-* 「~」版本化項目被不同類型的項目阻擋
+* 「~」版本項被不同類型的某個項目阻擋
 
 ## 設定FileVault同步 {#setting-up-filevault-sync}
 
@@ -865,7 +865,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 * `.vlt-sync-config.properties`:配置檔案。
 
 * `.vlt-sync.log`:包含同步期間所執行操作相關資訊的記錄檔。
-* `.vlt-sync-filter.xml`:篩選器，用於定義同步的儲存庫的哪些部分。 此檔案的格式由「執行過濾的 [簽出」部分描述](#performing-a-filtered-checkout) 。
+* `.vlt-sync-filter.xml`:篩選器，用於定義同步的儲存庫的哪些部分。 此檔案的格式由「執行已過濾的 [檢出」部分描述](#performing-a-filtered-checkout) 。
 
 該 `.vlt-sync-config.properties` 檔案允許您配置以下屬性：
 
@@ -946,4 +946,4 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->VLT同步功能僅支援簡單檔案和資料夾，但檢測特殊的電子倉庫序列化檔案（.content.xml、dialog.xml等），並以無提示方式忽略它們。 因此，可在預設vlt結帳時使用vault同步。
+>VLT同步功能僅支援簡單檔案和資料夾，但檢測到特殊的電子倉庫序列化檔案（.content.xml、dialog.xml等），並無提示地忽略它們。 因此，可在預設vlt結帳時使用vault同步。
