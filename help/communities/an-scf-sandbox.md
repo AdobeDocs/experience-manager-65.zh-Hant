@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 開發人員的另一個實用工具是「社 [群元件」指南](components-guide.md)，可探索社群元件和功能並快速建立原型。
 
-建立網站的練習對於瞭解AEM網站的結構非常有用，其中可能包含「社群」功能，同時也提供簡單頁面，以探索如何使用 [social元件架構(SCF)](scf.md)。
+建立網站的練習對於瞭解AEM網站的結構非常有用，其中可能包含「社群」功能，同時也提供簡單頁面，以探索如何與 [social元件架構(SCF)搭配運作](scf.md)。
 
 本教學課程主要針對對AEM不熟悉的開發人員，他們有興趣使用SCF元件。 它會逐步建立SCF沙盒網站，類似於如何建立功能完備的網際網路網站( [How to Create a Fully Featured Internet Website](../../help/sites-developing/website.md) )的教學課程，其中著重於網站結構，例如導覽、標誌、搜尋、工具列和列出子頁面。
 
@@ -50,10 +50,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 以下是AEM平台新進開發人員的一些實用連結：
 
-* [快速入門](../../help/sites-deploying/deploy.md#getting-started) -適用於部署AEM例項
+* [快速入門](../../help/sites-deploying/deploy.md#getting-started):部署AEM例項
 
-   * [The Basics](../../help/sites-developing/the-basics.md) —— 適用於網站和功能的開發人員
-   * [作者的第一步](../../help/sites-authoring/first-steps.md) -製作頁面內容
+   * [基本概念](../../help/sites-developing/the-basics.md):適用於網站和功能開發人員
+   * [作者的第一步](../../help/sites-authoring/first-steps.md):製作頁面內容
 
 ## 使用CRXDE Lite開發環境 {#using-crxde-lite-development-environment}
 
@@ -71,7 +71,7 @@ AEM開發人員將大部分時間花在 [CRXDE Lite開發環境中](../../help/s
 
 3. 直接瀏覽至 `CRXDE Lite`: `<server>:<port>/crx/de`
 
-   例如，在本機作者例項上： ` [http://localhost:4502/crx/de](http://localhost:4502/crx/de)`
+   例如，在本機作者例項上： [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 若要使用CRXDE Lite，您必須使用開發人員或管理員權限登入。 對於預設的localhost實例，可以使用
 
