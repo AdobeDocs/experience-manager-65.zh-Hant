@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d522c5ec6c72a9fd391d021f2fac37f88c686bd9
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# 計分和徽章基本工具{#scoring-and-badges-essentials}
+# 計分和徽章基本工具 {#scoring-and-badges-essentials}
 
-AEM Communities計分和標章功能提供識別和獎勵社群成員的能力。
+AEM Communities評分和標章功能提供識別和獎勵社群成員的能力。
 
 如需設定功能的詳細資訊，請參閱
 
@@ -26,7 +26,7 @@ AEM Communities計分和標章功能提供識別和獎勵社群成員的能力�
 
 本頁包含其他技術詳細資訊：
 
-* 如何 [將徽章顯示為影像](#displaying-badges) 或文字
+* 如何將 [徽章顯示為影](#displaying-badges) 像或文字
 * 如何開啟廣泛的除錯 [記錄功能](#debug-log-for-scoring-and-badging)
 * 如何 [存取與計分](#ugc-for-scoring-and-badging) 、徽章相關的UGC
 
@@ -38,7 +38,7 @@ AEM Communities計分和標章功能提供識別和獎勵社群成員的能力�
 
 徽章是顯示為文字或影像，會在HBS範本的用戶端進行控制。
 
-例如，在中 `this.isAssigned` 搜 `/libs/social/forum/components/hbs/topic/list-item.hbs`尋：
+例如，在中搜 `this.isAssigned` 尋 `/libs/social/forum/components/hbs/topic/list-item.hbs`:
 
 ```
 {{#each author.badges}}
@@ -84,14 +84,14 @@ AEM Communities計分和標章功能提供識別和獎勵社群成員的能力�
 
    * https://localhost:4502/system/console/slinglog
 
-1. select **Add new logger**
+1. 選擇 **添加新記錄程式**
 
-   1. 選擇 `DEBUG`日誌 **級別**
+   1. 選擇 `DEBUG` 日誌 **級別**
 
    1. 輸入日誌檔案 **的名稱**，例如
 
       * logs/scoring-debug.log
-   1. 輸入兩個**Logger **(class)條目(使用 `+` 表徵圖)
+   1. 輸入兩個 **Logger** (class)條目(使用 `+` 表徵圖)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
@@ -101,11 +101,11 @@ AEM Communities計分和標章功能提供識別和獎勵社群成員的能力�
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
-要查看日誌條目
+要查看日誌條目：
 
 * 從Web Console
 
-   * 在**狀態**菜單下
+   * 在「狀態 **」功能表**
    * 選擇 **日誌檔案**
    * 搜尋您的記錄檔名稱，例如 `scoring-debug`
 
@@ -123,9 +123,9 @@ AEM Communities計分和標章功能提供識別和獎勵社群成員的能力�
 
 存取計分和標籤資料的說明使用JSRP，因為UGC可使用 [CRXDE Lite輕鬆存取](/help/sites-developing/developing-with-crxde-lite.md)。
 
-**作者JSRP** :在作者環境中進行實驗會產生只有作者環境才能看到的UGC。
+**作者JSRP**:在作者環境中進行實驗會產生只有作者環境才能看到的UGC。
 
-**發佈時的JSRP** :同樣地，如果在發佈環境上進行測試，則必須以發佈實例的管理權限訪問CRXDE Lite。 如果發佈例項在生產模 [式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行 [，則必須啟](/help/sites-administering/enabling-crxde-lite.md)用CRXDE Lite。
+**發佈時的JSRP**:同樣地，如果在發佈環境上進行測試，則必須以發佈實例的管理權限訪問CRXDE Lite。 如果發佈例項在生產模 [式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行 [，則必須啟](/help/sites-administering/enabling-crxde-lite.md)用CRXDE Lite。
 
 UGC在JSRP上的基本位置為 `/content/usergenerated/asi/jcr/`。
 
@@ -146,12 +146,12 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 1. 具有唯一 *ID* （使用精靈建立的社群網站）的AEM網站：
 
-* 使用在快速入門教學課程中建立的快速入門教學課程(參 [與)網站](/help/communities/getting-started.md)
-* 找到論壇頁面節點
+   * 使用在快速入門教學課程中建立的快速入門教學課程( [參與)網站](/help/communities/getting-started.md)
+   * 找到論壇頁面節點
 
-   * `/content/sites/engage/en/forum/jcr:content`
+      `/content/sites/engage/en/forum/jcr:content`
 
-* 添加計分和標籤屬性
+   * 新增計分和標籤屬性
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -163,25 +163,26 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* 找到論壇元件節點
+   * 找到論壇元件節點
 
-   * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+      `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* 新增屬性以顯示標章
+   * 新增屬性至顯示標章
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* 使用者登入、建立論壇主題，並獲得銅製徽章
+   * 使用者登入、建立論壇主題，並獲得銅像徽章
+
 
 1. 沒有唯一 *ID* 的AEM網站：
 
-* 使用社 [群元件指南](/help/communities/components-guide.md)
-* 找到論壇頁面節點
+   * 使用社 [群元件指南](/help/communities/components-guide.md)
+   * 找到論壇頁面節點
 
-   * `/content/community-components/en/forum/jcr:content`
+      `/content/community-components/en/forum/jcr:content`
 
-* 添加計分和標籤屬性
+   * 新增計分和標籤屬性
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -193,24 +194,25 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* 找到論壇元件節點
+   * 找到論壇元件節點
 
-   * `/content/community-components/en/forum/jcr:content/content/forum`
+      `/content/community-components/en/forum/jcr:content/content/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* 新增屬性以顯示標章
+   * 新增屬性至顯示標章
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* 使用者登入、建立論壇主題，並獲得銅製徽章
+   * 使用者登入、建立論壇主題，並獲得銅像徽章
+
 
 1. 使用cURL為使用者指派協調者徽章：
 
-```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
-```
+   ```shell
+   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
+   ```
 
-由於使用者已獲得兩枚銅製徽章，並獲得協調者徽章，因此使用者在論壇項目中的呈現方式如下：
+   由於使用者已獲得兩枚銅牌，並獲得協調者徽章，因此使用者在論壇參加項目時，會以這種方式呈現。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -219,7 +221,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 >此範例不遵循下列最佳實務：
 >
 >* 計分規則名稱應全局唯一；他們不應以同名結尾。
-   >  *not *to的範例：
+   >  不要做 *的* :
    >  /etc/community/scoring/rules/site1/forums-scoring
    >  /etc/community/scoring/rules/site2/forums-scorning
    >
@@ -237,7 +239,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-的子節點 `scoring`是計分規則名稱。 因此，最佳實務是，伺服器上的計分規則名稱是全域唯一的。
+的子節點 `scoring` 是計分規則名稱。 因此，最佳實務是，伺服器上的計分規則名稱是全域唯一的。
 
 對於Geometrixx Engage網站，使用者及其分數位於路徑中，路徑包含計分規則名稱、社群網站的網站ID( `engage-ba81p`)、唯一ID和使用者ID:
 
@@ -257,17 +259,17 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 為了調查目的，以JSRP為例，包含已指派或已授予徽章資訊的基本資料夾是
 
-* /content/usergenerated/asi/jcr
+* `/content/usergenerated/asi/jcr`
 
 後面是使用者描述檔的路徑，結尾為標章檔案夾，例如
 
-* /home/users/community/w271OOup2Z4DjnOQrviv/profile/badges
+* `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
 #### 獎章 {#awarded-badge}
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-#### 已指派徽章 {#assigned-badge}
+#### 指派的徽章 {#assigned-badge}
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
