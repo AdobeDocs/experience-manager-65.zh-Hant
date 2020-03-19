@@ -11,25 +11,25 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# 製作新的社群網站以利啟用{#author-a-new-community-site-for-enablement}
+# 製作新的社群網站以利啟用 {#author-a-new-community-site-for-enablement}
 
 ## 建立社群網站 {#create-community-site}
 
-[「社群網站](/help/communities/sites-console.md) 」建立採用精靈，可引導您完成建立社群網站的步驟。 在最後一步中提 `Next`交站 `Back`點之前，可以前進到步驟或上一步。
+[「社群網站](/help/communities/sites-console.md) 」建立採用精靈，可引導您完成建立社群網站的步驟。 在最後一步中提交站 `Next` 點之 `Back` 前，可以前進到前一步。
 
 若要開始建立新社群網站：
 
 使用作 [者例項](https://localhost:4502/)
 
-* 以管理員權限登入
-* 導覽至 **社群、網****站**
+* 具有管理員權限的登入
+* 導覽至「 **[UIControl社群>網站」]**
 
-* 選擇創 **建**
+* Select **Create**
 
 ### 步驟1:網站範本 {#step-site-template}
 
@@ -86,7 +86,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * 不允許網站訪客自行註冊
 * 不允許匿名網站訪客檢視網站
-* 是否允許社區成員之間傳訊的可選選項
+* 是否允許社群成員之間傳訊是可選的
 * 不允許使用Facebook登入
 * 不允許使用Twitter登入
 
@@ -98,10 +98,10 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 此外，為社群網站選取「標籤名稱空間」會限制定義型錄和啟用資源時顯示的選擇。 如需重 [要資訊，請參閱標籤](/help/communities/tag-resources.md) 啟用資源。
 
-使用預先輸入搜尋功能，尋找名稱空間十分簡單。 例如，
+使用預先輸入搜尋功能，輕鬆尋找命名空間。 例如，
 
-* 鍵入&#39;tut&#39;
-* select `Tutorial`
+* 類型 `tut`
+* 選取 `Tutorial`
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
@@ -113,8 +113,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 例如，
 
-* 類型&quot;q&quot;
-* 選擇奎 [恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* 類型 `q`
+* 選擇 [奎恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
@@ -151,10 +151,10 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **啟用管理員**（必要）可選取群 `Community Enablement Managers` 組成員以管理此社群網站。
 
-   * 類型&quot;s&quot;
-   * select `Sirius Nilson`
+   * 類型 `s`
+   * 選取 `Sirius Nilson`
 
-* **Marketing cloud組織Id**（選用）在啟用報表中包含視訊心率分析時，必須使用的Adobe Analytics帳戶 [ID](/help/communities/analytics.md#video-heartbeat-analytics) 。
+* **Marketing Cloud組織Id**（選用）在啟用報表中包含視訊心率分析時，必須使用的Adobe Analytics帳戶 [ID](/help/communities/analytics.md#video-heartbeat-analytics) 。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -162,11 +162,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ### 步驟4:建立社群網站 {#step-create-community-site}
 
-選擇 **建立。**
+Select **Create.**
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-當流程完成時，新站點的資料夾將顯示在「社區——站點」控制台中。
+當程式完成時，新站點的資料夾將顯示在「社區」>「站點」控制台中。
 
 ![enablementsitecreated](assets/enablementsitecreated.png)
 
@@ -184,16 +184,26 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 從左到右為：
 
-* **「開啟網**&#x200B;站」選取鉛筆圖示，以作者編輯模式開啟社群網站，以新增及／或設定頁面元件
+* **開啟網站**
 
-* **「編輯網**&#x200B;站」選擇屬性圖示，以開啟社群網站以修改屬性，例如標題或變更主題
+   選取鉛筆圖示，以作者編輯模式開啟社群網站，以新增和／或設定頁面元件
 
-* **「發佈網**&#x200B;站」選取全球圖示以發佈社群網站（預設為localhost:4503）
+* **編輯網站**
 
-* **「匯出網**&#x200B;站」選取匯出圖示，以建立儲存在封裝管理員中及已下載之社群網站 [的封裝](/help/sites-administering/package-manager.md) 。
+   選擇屬性表徵圖以開啟社區站點以修改屬性，如標題或更改主題
+
+* **發佈網站**
+
+   選擇全球圖示以發佈社群網站（預設為localhost:4503）
+
+* **匯出網站**
+
+   選擇導出表徵圖可建立同時儲存在包管理器和下載的社區站點 [的包](/help/sites-administering/package-manager.md) 。
 請注意，網站套件中不包含UGC。
 
-* **刪除站點**&#x200B;要刪除社區站點，請選擇「刪除站點」表徵圖，該表徵圖將滑鼠懸停在「社區站點控制台」中的站點上。 此動作會移除與網站相關的所有項目，例如UGC、使用者群組、資產和資料庫記錄。
+* **刪除網站**
+
+   要刪除社區站點，請選擇「刪除站點」表徵圖，該表徵圖將滑鼠懸停在「社區站點控制台」中的站點上。 此動作會移除與網站相關的所有項目，例如UGC、使用者群組、資產和資料庫記錄。
 
 ![啟用網站動作](assets/enablesiteactions.png)
 
@@ -225,10 +235,10 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在此示例中，將 `Community Ski Class` 組添加為組的成員 `Community Enable Members` 和成員 `Quinn Harper`。
 
-* 導覽至 **社群、群組主控台**
+* 導覽至「 **社群」、「群組** 」主控台
 * 選擇 *社區啟用成員* 組
-* 在「將成員添加到組」 **搜索框中輸入** 「ski」
-* 選取 *社群滑雪課程* （學員群）
+* 在「新增成員至群組」 **搜尋方塊中輸入** 「ski」
+* 選取 *社群滑雪課程* （學員群組）
 * 在搜索框中輸入&#39;quinn&#39;
 * 選擇 *Quinn Harper* （啟用資源聯絡）
 
@@ -260,7 +270,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 1. 在發佈時，存取CRXDE並以管理員權限登入
 
-   * 例如，瀏覽至 [https://localhost:4503/crx/de](https://localhost:4503/crx/de) ，然後登入 `admin/admin`
+   * 例如，瀏覽至 [https://localhost:4503/crx/de](https://localhost:4503/crx/de) ，然後使用 `admin/admin`
 
 1. 在專案瀏覽器中，展開 `/etc/map`
 1. 選擇節 `http` 點
@@ -273,27 +283,27 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
       * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. 已選擇新建 `localhost.4503` 的節點
+1. 選擇新建立 `localhost.4503` 的節點
 
-* 添加屬性
+   * 新增屬性
 
-   * **Name** sling:match
-   * **類型字串**
-   * **值** localhost.4503/$
+      * **Name** sling:match
+      * **類型字串**
+      * **值** localhost.4503/$
+   （必須以&#39;$&#39;字元結尾）
 
-      （必須以&#39;$&#39;字元結尾）
+   * 新增屬性
 
-* 添加屬性
+      * **Name** sling:internalRedirect
+      * **類型字串**
+      * **值** /content/sites/enable/en.html
 
-   * **Name** sling:internalRedirect
-   * **類型字串**
-   * **值** /content/sites/enable/en.html
 
 1. 選擇「 **全部保存」**
 1. （可選）刪除瀏覽歷史記錄
-1. 瀏覽https://localhost:4503/
+1. 瀏覽至https://localhost:4503/
 
-* https://localhost:4503/content/sites/enable/en.html
+   * 請造訪https://localhost:4503/content/sites/enable/en.html
 
 >[!NOTE]
 >
@@ -303,7 +313,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 疑難排解：保存映射時出錯 {#troubleshooting-error-saving-map}
 
-如果無法保存更改，請確保節點名為 `localhost.4503`，帶有「dot」分隔符，而不帶有 `localhost:4503` 「冒號」分隔符，因為 `localhost`不是有效的命名空間前置詞。
+如果無法保存更改，請確保節點名為 `localhost.4503`，帶有「dot」分隔符，而不帶有 `localhost:4503` 「冒號」分隔符，因為 `localhost` 它不是有效的命名空間前置詞。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -331,7 +341,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 如果網站結構已包含目錄功能，則可變更其標題。
 
-要修改站點的結構，請導航至 **Communities、Sites** Console，開啟 `enable` 資料夾，然後選擇**編輯站點**表徵圖以訪問的屬性 `Enablement Tutorial`。
+要修改站點的結構，請導航至 **Communities、Sites** Console、開啟資料夾，並選擇「 `enable` Edit Site **」表徵圖以訪問的屬性**`Enablement Tutorial`。
 
 選擇「結構」面板以添加目錄或修改現有目錄：
 
