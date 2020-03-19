@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -125,8 +125,8 @@ SQL指令碼是從AEM資料庫取得：
 
 下載架構的方法之一是
 
-* 為sql文 `jcr:content`件選擇節點
-* 請注意，屬性的 `jcr:data`值是檢視連結
+* 為sql文 `jcr:content` 件選擇節點
+* 請注意，屬性的 `jcr:data` 值是檢視連結
 
 * 選取檢視連結，將資料儲存至本機檔案
 
@@ -155,7 +155,7 @@ SQL指令碼是從AEM資料庫取得：
 
 #### 重新整理 {#refresh}
 
-執行指令碼後，必須刷新該 `SCHEMAS`部分以 `Navigator` 查看新資料庫。 使用「方案」右側的刷新表徵圖：
+執行指令碼後，必須刷新該指令碼 `SCHEMAS` 的部分 `Navigator` 才能查看新資料庫。 使用「方案」右側的刷新表徵圖：
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
@@ -195,7 +195,7 @@ Day Commons JDBC連接池的OSGi **配置** ，配置MySQL JDBC驅動程式。
 
       如果沒有為MySQL設定口令，請清除此欄位，
 
-      else enter configured password for the mySQL Username
+      else enter configured password for the MySQL Username
    * **[!UICONTROL 資料來源名稱]**:為 [MySQL連接輸入的名稱](#new-connection-settings)，例如&#39;communities&#39;
 
 * 選擇保 **[!UICONTROL 存]**
