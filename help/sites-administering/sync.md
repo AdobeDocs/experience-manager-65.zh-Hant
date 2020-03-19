@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 ---
 
@@ -109,7 +109,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
       * 例如， [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
    * 建立新使用者
 
-      * 例如， `usersync-admin`
+      * for example, `usersync-admin`
    * 將此用戶添加到用 **`administrators`** 戶組
    * [將此用戶的ACL添加到/home](#howtoaddacl)
 
@@ -169,7 +169,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
    * 在步驟2中，將使用者名稱 [和密碼設為](#createauthorizeduser) 「發佈時建立的授權使用者」
 
-      * 例如， `usersync-admin`
+      * for example, `usersync-admin`
 
 
 ![](assets/chlimage_1-22.png)
@@ -286,7 +286,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
    * 以管理員權限登入
    * 訪問 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-      * 例如， `https://localhost:4503/system/console/configMgr`
+      * for example, `https://localhost:4503/system/console/configMgr`
    * 定位 `AEM Communities User Sync Listener`
    * 選取要開啟以進行編輯的現有設定（鉛筆圖示）確認 `Name`: `socialpubsync-scheduled-trigger`
 
@@ -328,7 +328,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 若要驗證所有Sling ID值都不同，請在每個發佈例項上：
 
-1. 瀏覽至 [https://*host:port*/system/console/status-slingsettings](https://localhost:4503/system/console/status-slingsettings)
+1. 瀏覽至 `http://<host>:<port>/system/console/status-slingsettings`
 1. 檢查 **Sling ID的值**
 
 ![](assets/chlimage_1-27.png)
@@ -393,7 +393,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 當拓撲是發佈群 [，且使用者同步已正確設定時，*user *和](/help/sites-deploying/recommended-deploys.md#tarmk-farm) user profile ** is synchronized using Sling distribution.
 
-### 使用者或使用者群組是使用Security console建立的 {#users-or-user-groups-are-created-using-security-console}
+### 使用者或使用者群組是使用Security Console建立的 {#users-or-user-groups-are-created-using-security-console}
 
 根據設計，在發佈環境中建立的使用者資料不會出現在作者環境中，反之亦然。
 
