@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
@@ -35,7 +35,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 覆蓋是透過修改/**apps目錄中預設元件的復本** ，而非修改/**libs目錄中的原始元件來完成** 。 元件是使用相同的相對路徑建構的，但「libs」會取代為「apps」。
 
-首先搜尋/apps目錄來解決請求，如果找不到，則會使用位於/libs目錄中的預設版本。
+/apps目錄是第一個搜尋以解決請求的位置，如果找不到，則會使用位於/libs目錄中的預設版本。
 
 不得修改/libs目錄中的預設元件，因為以後的修補程式和升級可以在維護公共介面的同時，以任何必要的方式自由更改/libs目錄。
 
@@ -102,9 +102,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!CAUTION]
 >
->任何前置詞** scf-js-&amp;ast;**的CSS類別名稱在javascript程式碼中都有特定用途。 這些類會影響元件的狀態（例如，從隱藏切換為可見），且不應覆蓋或移除。
+>前置詞的任何CSS類別名稱在javascript程 `scf-js` 式碼中都有特定用途。 這些類會影響元件的狀態（例如，從隱藏切換為可見），且不應覆蓋或移除。
 >
->而scf-js-&amp;ast;類不影響樣式，類名可以在樣式表中使用，但須注意，由於它們控制了元素的狀態，可能會有副作用。
+>雖然類 `scf-js` 不影響樣式，但類名可以用在樣式表中，但須注意，由於它們控制元素的狀態，可能會有副作用。
 
 ## 擴充Javascript {#extending-javascript}
 
@@ -145,7 +145,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 指令碼標籤是用戶端架構的固有部分。 它們可協助將伺服器端產生的標籤與用戶端的模型和檢視系結在一起。
 
-在覆蓋或覆蓋元件時，不應刪除SCF指令碼中的指令碼標籤。 SCF指令碼標籤會以屬性 `data-scf-json=`true來識別為在HTML中注入JSON而自動建立。
+在覆蓋或覆蓋元件時，不應刪除SCF指令碼中的指令碼標籤。 SCF指令碼標籤會以屬性來識別為在HTML中注入JSON而自動建立 `data-scf-json=true`。
 
 ## SCF的Clientlibs {#clientlibs-for-scf}
 
@@ -164,12 +164,12 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別�
 
 這些版本位於：
 
-* /etc/clientlibs/social/hbs/&lt;component name>
+* `/etc/clientlibs/social/hbs/&lt;component name&gt;`
 
 例如：
 
-* 客戶端資料夾節點：/etc/clientlibs/social/hbs/forum
-* 類別屬性：cq.social.hbs.forum
+* 客戶端資料夾節點： `/etc/clientlibs/social/hbs/forum`
+* 類別屬性： `cq.social.hbs.forum`
 
 「社 [群元件」指南](components-guide.md) ，列出了每個SCF元件所需的完整客戶端。
 
@@ -183,12 +183,12 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別�
 
 這些版本位於SCF libs資料夾中：
 
-* /libs/social/&lt;feature>/components/&lt;component name>/clientlibs
+* `/libs/social/&lt;feature&gt;/components/hbs/&lt;component name&gt;/clientlibs`
 
 例如：
 
-* 客戶端資料夾節點：/libs/social/forum/hbs/forum/clientlibs
-* 類別屬性：cq.social.author.hbs.forum
+* 客戶端資料夾節點： `/libs/social/forum/hbs/forum/clientlibs`
+* 類別屬性： `cq.social.author.hbs.forum`
 
 注意：雖然作者clientlibs從不嵌入其他程式庫，但是他們確實會列出其相依性。 嵌入到其他庫時，不會自動提取從屬關係，也必須嵌入。
 
@@ -198,7 +198,7 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別�
 
 每個網站在管理用戶端程式庫的方式上都不同。 各種因素包括：
 
-* 整體速度：可能是希望網站能夠回應，但是第一頁載入速度稍微慢一點，是可以接受的。 如果許多頁面使用相同的Javascript，則可將各種Javascript內嵌至一個clientlib，並從第一頁參考以載入。 此次下載中的Javascript會維持快取狀態，將後續頁面的資料下載量減至最少。
+* 整體速度：可能是希望網站能夠回應，但是第一個頁面載入速度稍微慢一點，是可以接受的。 如果許多頁面使用相同的Javascript，則可將各種Javascript內嵌至一個clientlib，並從第一頁參考以載入。 此次下載中的Javascript會維持快取狀態，將後續頁面的資料下載量減至最少。
 * 第一頁的簡短時間：可能是希望第一頁能快速載入。 在這種情況下，Javascript位於多個小檔案中，只有在需要時才會參考。
 * 第一頁載入與後續下載之間的平衡。
 
