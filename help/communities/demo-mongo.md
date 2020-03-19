@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -69,7 +69,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->如果MongoDB在*AEM後啟動*,**重新啟動**所有**AEM **實例，以便正確連接到MongoDB。
+>如果MongoDB是在 *AEM後啟動* ，請重 **新啟動所有** AEM **** 例項，以便正確連線至MongoDB。
 
 ### 示範製作選項：設定MongoDB複製副本集 {#demo-production-option-setup-mongodb-replica-set}
 
@@ -107,7 +107,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 為AEM Communities設定Solr {#configure-solr-for-aem-communities}
 
-若要設定MSRP的Solr系列以進行示範，需做兩項決定（請選取主要檔案的連結以取得詳細資訊）:
+若要設定MSRP的Solr系列以進行示範，需要做兩項決定（如需詳細資訊，請選取主要檔案的連結）:
 
 1. 在獨立或 [SolrCloud模式下執行Solr](msrp.md#solrcloudmode)
 1. 安裝 [標準](msrp.md#installingstandardmls) 或進 [階多語言搜](msrp.md#installingadvancedmls) 尋(MLS)
