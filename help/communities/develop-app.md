@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -30,9 +30,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 使用CRXDE Lite:
 
 <!--Resolve steps below-->
-    *名稱：`sling:resourceSuperType&#39;
-    *類型：「字串」
-    *值：`foundation/components/page`
+    名稱：`sling:resourceSuperType&#39;
+    Type:`字串&#39;
+    值：`foundation/components/page`
 
 1. 按一下綠色 **[!UICONTROL [+]Add]**
 1. 按一下「 **[!UICONTROL 全部儲存」]**
@@ -62,7 +62,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 請注意開啟／關閉指令碼標籤，請取代&quot; // TODO ...&quot; with包含&lt;html>標題和內文部分的指令碼。
 
-   如果超類型為 `foundation/components/page`，則未在此資料夾中定義的任何指令碼將解析為資料夾中的指令碼(如果存在 `/apps/foundation/components/page` )，否則解析為資料夾中的腳 `/libs/foundation/components/page` 本。
+   如果超類型為 `foundation/components/page`，則未在此資料夾中定義的任何指令碼都將解析為資料夾中的指令碼(如果存在 `/apps/foundation/components/page` )，否則解析為資料夾中的腳 `/libs/foundation/components/page` 本。
 
 #### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp-1}
 
@@ -86,9 +86,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    若要設定製作，請使 `body.jsp` 用本機指令碼覆蓋，並在內文中包含段落系統(parsys):
 
-   1. navigate to `/apps/an-scf-sandbox/components`
+   1. 導航到 `/apps/an-scf-sandbox/components`
    1. 選擇節 `playpage`點
-   1. 按一下右鍵並選擇 `Create > Create File...`
+   1. 按一下滑鼠右鍵並選取 `Create > Create File...`
 
       * 名稱： **body.jsp**
    1. 按一下「 **[!UICONTROL 全部儲存」]**
@@ -112,7 +112,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 按一下「 **[!UICONTROL 全部儲存」]**
 
-**在編輯模式下在瀏覽器中檢視頁面：**
+**以編輯模式在瀏覽器中檢視頁面：**
 
 * 標準UI: [http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html](http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.md)
 
@@ -174,4 +174,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 發佈網站後，瀏覽至發佈例項的根頁面會重新導向至英文頁面。
 
-使用社區SCF元件前的最後一個步驟是添加客戶端庫資料夾(clientlibs)。... **[⇒](add-clientlibs.md)**
+使用社區SCF元件前的最後一個步驟是添加客戶端庫資料夾(clientlibs)。... [新增Clienlibs](add-clientlibs.md)
