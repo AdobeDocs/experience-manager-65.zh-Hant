@@ -10,14 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
 # Communities Console {#communities-consoles}
 
-AEM Communities控制台可從全域導覽面板的作者環境取得，提供管理工作的存取權，例如
+AEM Communities控制台可從全域導覽面板的作者環境取得，可讓您存取管理工作，例如：
 
 * [建立社群網站](sites-console.md)
 * 新增 [巢狀內嵌](groups.md) 在網站中的群組
@@ -33,7 +33,7 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，提供�
 
 >[!NOTE]
 >
->在發佈環境中，當登入 [會員具有適當權](sites-console.md) 限時 `Administration`，社群網站會顯示功能表項目。
+>在發佈環境中，當登入 [會員具有適當權限](sites-console.md) ，社群網站 `Administration` 就會顯示功能表項目。
 
 ## 全域導覽面板 {#global-navigation-panel}
 
