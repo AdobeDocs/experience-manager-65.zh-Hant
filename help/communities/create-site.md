@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 1. 以管理員權限登入。
 1. 從全域導覽，前往導 **覽、社群、網站。**
 
-Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站點的步驟。 在最後一步中提 `Next`交站 `Back`點之前，可以前進到步驟或上一步。
+Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站點的步驟。 在最後一步中提交站 `Next` 點之 `Back` 前，可以前進到前一步。
 
 要開始建立新的社區站點，請執行以下操作：
 
@@ -47,7 +47,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 * **社群網站名稱**:參與
 
-   * 重複檢查名稱，因為在建立網站後不易變更
+   * 在建立網站後不易變更名稱，請再檢查此名稱
    * 初始URL將顯示在「社群網站名稱」下方
    * 若為有效的URL，請附加基本語言代碼+ &quot;。html&quot;
    * *例如*,https://localhost:4502/content/sites/ `engage/en.html`
@@ -66,7 +66,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 #### COMMUNITY SITE BRANDING {#community-site-branding}
 
-（選用）上傳橫幅影像以顯示在網站頁面上。 橫幅會釘在瀏覽器的左邊，位於社群網站標題和導覽連結之間。 橫幅高度會裁切為120像素。 橫幅的大小不會調整為適合瀏覽器寬度和120像素高度。
+（可選）上傳橫幅影像以顯示在網站頁面上。 橫幅會釘在瀏覽器的左邊，位於社群網站標題和導覽連結之間。 橫幅高度會裁切為120像素。 橫幅的大小不會調整為適合瀏覽器寬度和120像素高度。
 
 ![chlimage_1-58](assets/chlimage_1-58.png) ![chlimage_1-59](assets/chlimage_1-59.png)
 
@@ -82,11 +82,11 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 勾選「用戶管理」的所 [有複選框](/help/communities/sites-console.md#user-management)
 
-* 允許網站訪客自行註冊
-* 允許網站訪客檢視網站，而不需登入
+* 若要允許網站訪客自行註冊
+* 若要允許網站訪客檢視網站，而不需登入
 * 允許成員從其他社區成員發送和接收消息
-* 允許使用Facebook登入，而不是註冊和建立個人檔案
-* 允許使用Twitter登入，而不是註冊和建立設定檔
+* 若要允許使用Facebook登入，而不是註冊和建立個人檔案
+* 若要允許使用Twitter登入，而非註冊和建立描述檔
 
 >[!NOTE]
 >
@@ -98,10 +98,10 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 可套用至社群內容的標籤是透過選取先前透過「標籤控制台」( [Tagging Console](/help/sites-administering/tags.md#tagging-console) )定義的AEM名稱空間(例如 [Tutorial namespace](/help/communities/setup.md#create-tutorial-tags))來控制。
 
-使用預先輸入搜尋功能，尋找名稱空間十分簡單。 例如，
+使用預先輸入搜尋功能，輕鬆尋找命名空間。 例如，
 
-* 鍵入&#39;tut&#39;
-* select `Tutorial`
+* 類型 `tut`
+* 選取 `Tutorial`
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -113,8 +113,8 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 例如，
 
-* 類型&quot;q&quot;
-* 選擇奎 [恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* 類型 `q`
+* 選擇 [奎恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
@@ -141,11 +141,11 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 「轉 [譯」設定](/help/communities/sites-console.md#translation) ，可指定網站的基本語言，以及UGC是否可轉譯，以及是否可轉譯為哪種語言。
 
 * 檢查允 **許機器翻譯**
-* 保留預設的「機器翻譯」服務為翻譯選擇的預設語言
-* 保留預設翻譯提供器和配置
+* 預設的機器翻譯服務保留為翻譯選擇的預設語言
+* 保留預設翻譯提供程式和配置
 * 不需要全球商店，因為沒有語言復本
-* 選擇 **翻譯整個頁面**
-* 保留預設持久性選項
+* 選擇 **翻譯整個頁**
+* 保留預設永續性選項
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -159,7 +159,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 ### 步驟4:建立社群網站 {#step-create-communities-site}
 
-選擇 **建立。**
+Select **Create.**
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -181,16 +181,26 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 從左到右依次為：
 
-* **「開啟網**&#x200B;站」選取鉛筆圖示，以作者編輯模式開啟社群網站，以新增及／或設定頁面元件
+* **開啟網站**
 
-* **「編輯網**&#x200B;站」選擇屬性圖示，以開啟社群網站以修改屬性，例如標題或變更主題
+   選取鉛筆圖示，以作者編輯模式開啟社群網站，以新增和／或設定頁面元件
 
-* **「發佈網**&#x200B;站」選取全球圖示以發佈社群網站（例如，如果您的發佈伺服器正在本機電腦上執行，則預設為localhost:4503）
+* **編輯網站**
 
-* **「匯出網**&#x200B;站」選取匯出圖示，以建立儲存在封裝管理員中及已下載之社群網站 [的封裝](/help/sites-administering/package-manager.md) 。
+   選擇屬性表徵圖以開啟社區站點以修改屬性，如標題或更改主題
+
+* **發佈網站**
+
+   選擇全球圖示以發佈社群網站（例如，如果您的發佈伺服器正在本機電腦上執行，則預設為localhost:4503）
+
+* **匯出網站**
+
+   選擇導出表徵圖可建立同時儲存在包管理器和下載的社區站點 [的包](/help/sites-administering/package-manager.md) 。
 請注意，網站套件中不包含UGC。
 
-* **刪除站點**選擇刪除表徵圖，從「社區」>「站點」控制台中刪除社區站點。 此動作會移除與網站相關的所有項目，例如UGC、使用者群組、資產和資料庫記錄。
+* **刪除網站**
+
+   選擇刪除表徵圖可從「UIControl社區>站點控制台」 **[中刪除社區站點]**。 此動作會移除與網站相關的所有項目，例如UGC、使用者群組、資產和資料庫記錄。
 
 ![siteactions](assets/siteactions.png)
 
@@ -200,15 +210,17 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 >
 >在作者實例上，從主菜單：
 >
->1. 導航至「工具」>「操作」>「複製」菜單。
-1. 選擇「作者上的代理」。
-1. 選擇「預設代理（發佈）」。
-1. 在「設定」旁選擇「編輯」。
-1. 在「代理設定」的彈出對話框中，選擇「傳輸」頁籤。
-1. 在URI中，將埠號4503更改為所需的埠號>
-   * 例如，要使用埠6103:https://localhost:6103/bin/receive?sling:authRequestLogin=1
-1. 選擇「確定」。
-1. （可選）選擇「清除」或「強制重試」以重置複製隊列。
+>1. 導覽至「 **[UIControl工具>操作>複製]** 」功能表。
+>1. 選擇 **[作者上的UIControl Agents]**。
+>1. 選擇 **[UIControl Default Agent(publish)]**。
+>1. 在「UIControl Settings」( **[UIControl設定]**)旁，選 **[擇「UIControl Edit」(UIC控制編輯]**)。
+>1. 在「代理設定」的彈出對話框中，選擇「 **[UIControl傳輸]** 」頁籤。
+>1. 在URI中，將埠號4503更改為所需的埠號>
+   >    * 例如，要使用埠6103:
+      >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>
+1. 選擇「 **[UIControl OK(UIC控制確定]**)」。
+1. （可選）選擇 **[UIControl Clear]** 或 **[UIControl Force Retry]** 以重設複製隊列。
 
 
 
@@ -219,7 +231,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-成功發佈社群網站後，會短暫出現訊息：
+成功發佈社群網站後，會短暫顯示訊息：
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -236,7 +248,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 * 社群參與特權會員
 * 社群參與網站內容管理員
 
-請注意， [Aaron mcDonald](/help/communities/tutorials.md#demo-users) 是
+請注意， [Aaron McDonald](/help/communities/tutorials.md#demo-users) 是
 
 * 社群互動社群經理
 * 社群參與協調者
@@ -254,7 +266,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 新增為 `Login Page Mapping`
 
-* /content/sites/engage/tw/signin:/content/sites/engage/tw
+* `/content/sites/engage/en/signin:/content/sites/engage/en`
 
 ## 可選步驟 {#optional-steps}
 
@@ -295,10 +307,11 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 1. （可選）刪除瀏覽歷史記錄。
 1. 瀏覽至https://localhost:4503/。
 
-   * https://localhost:4503/content/sites/engage/en.html
+   * 請造訪https://localhost:4503/content/sites/engage/en.html
 
 >[!NOTE]
-若要停用，只需在屬 `sling:match` 性值前加上&#39;x&#39; - `xlocalhost.4503/$` —— 和 **全部儲存**。
+>
+>若要停用，只需在屬 `sling:match` 性值前加上&#39;x&#39; - `xlocalhost.4503/$` —— 和 **全部儲存**。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -321,5 +334,6 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 在進行任何修改後，請記 **得儲存** ，然後重&#x200B;**新發佈網站** 。
 
 >[!NOTE]
-如果不熟悉AEM，請檢視基本處理 [相關檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>
+>如果不熟悉AEM，請檢視基本處理 [相關檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
