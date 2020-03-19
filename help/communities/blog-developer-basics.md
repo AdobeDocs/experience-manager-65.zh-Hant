@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ---
 
 
-# Blog Essentials{#blog-essentials}
+# Blog Essentials {#blog-essentials}
 
-自AEM 6.1 Communities起，部落格就是社群活動。 現在，部落格文章會從發佈環境張貼，以前，部落格文章只能在作者環境中建立並發佈。
+自AEM 6.1 Communities起，部落格就是社群活動。 現在，部落格文章會從發佈環境中發佈，以前，部落格文章只能在作者環境中建立並發佈。
 
 部落格文章現在可由任何社群成員建立，除非僅限於特權成員。
 
