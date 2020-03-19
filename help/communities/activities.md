@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# 活動串流功能{#activity-streams-feature}
+# 活動串流功能 {#activity-streams-feature}
 
 ## 簡介 {#introduction}
 
@@ -26,8 +26,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 本檔案說明：
 
-* 新增「活動串流」元件至AEM網站
-* 活動流元件的配置設定
+* 新增活動串流元件至AEM網站
+* Activity Streams元件的組態設定
 
 ### 新增活動串流至頁面 {#adding-activity-streams-to-a-page}
 
@@ -53,27 +53,37 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-* **活動數目上限**、要顯示的活動數目
+* **活動最大數量**
 
-* **串流資源路**&#x200B;徑保留空白，以預設為社群網站或社群群組。 串流資源路徑可識別活動的來源。 預設為空白。
+   要顯示的活動數
 
-* **顯示用戶活動視**&#x200B;圖（如果選中），則活動頁將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動進行篩選。 已勾選預設值。
+* **資料流資源路徑**
 
-* **顯示所有活動視**&#x200B;圖（如果選中），則活動頁將包含一個頁籤，其中包含當前成員有權訪問的社區內生成的所有活動。 已勾選預設值。
+   保留空白以預設為社群網站或社群群組。 串流資源路徑可識別活動的來源。 預設為空白。
 
-* **如果選中「** Display Following View」（顯示後續視圖），則活動頁將包含一個頁籤，該頁籤根據當前成員正在跟蹤的活動進行篩選。 已勾選預設值。
+* **顯示使用者活動視圖**
+
+   如果選中此選項，則活動頁將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動篩選活動。 已勾選預設值。
+
+* **顯示所有活動視圖**
+
+   如果選中此選項，則活動頁將包含一個頁籤，其中包含當前成員有權訪問的社區內生成的所有活動。 已勾選預設值。
+
+* **顯示以下檢視**
+
+   如果選中此選項，則活動頁將包含一個頁籤，該頁籤根據當前成員正在跟蹤的活動篩選活動。 已勾選預設值。
 
 ### 後續檢視 {#following-view}
 
-必須配置元件以啟用以下功能。 允許以下功能：部落格 [、論壇](/help/communities/blog-feature.md)、 [QnQn](/help/communities/forum.md)、Filary [brary、elignary行事歷、](/help/communities/working-with-qna.md)[](/help/communities/calendar.md)[](/help/communities/file-library.md)[](/help/communities/comments.md)elicary注釋。
+必須配置元件以啟用以下功能。 允許以下功能：部落格 [、論壇](/help/communities/blog-feature.md)、 [QnQnPn](/help/communities/forum.md)、Filary [brary、elicary行事歷、](/help/communities/working-with-qna.md)[](/help/communities/calendar.md)[](/help/communities/file-library.md)[](/help/communities/comments.md)elicary注釋。
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-**Follow **button提供了以活動、通知或訂閱等形式關注 [項目](/help/communities/notifications.md)的 [方法](/help/communities/subscriptions.md)。 每次選取**Follow **button時，都可以開啟或關閉選取範圍。 只有 `Email Subscriptions` 在配置時，才會顯示選擇。
+「跟 **蹤** 」按鈕提供了一種方法，可將條目作為活動、通 [知](/help/communities/notifications.md)或訂 [閱跟蹤](/help/communities/subscriptions.md)。 每次選取「 **跟隨** 」按鈕時，都可以開啟或關閉選取範圍。 只有 `Email Subscriptions` 在配置時，才會顯示選擇。
 
 如果選取任何下列方法，按鈕的文字會變更為「下 **列」**。 為方便起見，您可以選取以 `Unfollow All` 關閉所有方法。
 
-出現**Follow **button
+將出 **現** 「跟蹤」按鈕
 
 * 查看其他成員的配置檔案時
 * 在主功能頁面上，例如論壇、QnA和部落格
