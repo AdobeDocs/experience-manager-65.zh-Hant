@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ---
 
 
-# 標章主控台{#badges-console}
+# 標章主控台 {#badges-console}
 
 ## 關於標章 {#about-badges}
 
@@ -26,15 +26,15 @@ Communities Badges控制台可以添加自定義徽章，這些徽章可在獲�
 
 目前，社群成員所賺取或指派的標章，將連同其姓名和頭像一起出現在下列位置：
 
-* 描述檔
+* 設定檔
 * [論壇](/help/communities/forum.md)
 * [QnA](/help/communities/working-with-qna.md)
 * [排行榜](/help/communities/enabling-leaderboard.md)
-* [意識形態](/help/communities/ideation-feature.md)
+* [創意力](/help/communities/ideation-feature.md)
 
 在作者環境中，若要進入Badges主控台
 
-* 從全域導覽：工 **具、社群、徽章**
+* 從全域導覽，導覽至「 **[UIControl工具>社群>標章」]**
 
 此控制台顯示當前可用的標章，並可從中添加新標章。
 
@@ -48,13 +48,21 @@ Communities Badges控制台可以添加自定義徽章，這些徽章可在獲�
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
-* **上傳影像**(必&#x200B;*要*)建議大小為32 x 32像素、72dpi的JPEG或PNG格式的標章影像。
+* **上傳影像**
 
-* **名稱**(*必要*)徽章名稱。 它是預設 `Display Name` 值和儲存庫節點名稱。 如果該 `Name` 節點不是有效的儲存庫節點名稱，則將對其進行修改。
+   (必&#x200B;*要*)建議大小為32 x 32像素、72dpi的JPEG或PNG格式的徽章影像。
 
-* **顯示名稱**(*可選*)UI中要顯示徽章的名稱。 預設值是為輸入的未更改文本 `Name`。
+* **名稱**
 
-* **說明**(*可選*)徽章的說明。
+   (必&#x200B;*要*)徽章名稱。 它是預設 `Display Name` 值和儲存庫節點名稱。 如果該 `Name` 節點不是有效的儲存庫節點名稱，則將對其進行修改。
+
+* **顯示名稱**
+
+   (可&#x200B;*選*)在UI中顯示徽章的名稱。 預設值是為輸入的未更改文本 `Name`。
+
+* **說明**
+
+   (可&#x200B;*選*)徽章的說明。
 
 ## 其他資訊 {#additional-information}
 
