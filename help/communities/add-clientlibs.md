@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# 新增Clientlibs{#add-clientlibs}
+# 新增Clientlibs {#add-clientlibs}
 
 ## 新增ClientLibraryFolder(clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
@@ -26,7 +26,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 1. 使用 **CRXDE Lite**，展開 `/etc/designs`
 
-1. 按一下右鍵 `an-scf-sandbox` 並選擇 `Create Node`
+1. 按一下滑鼠右鍵 `an-scf-sandbox` 並選取 `Create Node`
 
    * 名稱 : `clientlibs`
    * 類型 : `cq:ClientLibraryFolder`
@@ -35,22 +35,22 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
-在新節 **點的** 「屬性」選 `clientlibs` 項卡中，輸入**`categories`**屬性：
+在新節 **點的** 「屬性」選 `clientlibs` 項卡中，輸 **入類別** :
 
 * 名稱：類 **別**
 * 類型：字 **串**
 * 值： **apps.an-scf-sandbox**
-* click **Add**
-* 按一 **下「全部儲存」**
+* Click **Add**
+* 按一下「 **全部儲存」**
 
-注意：使用「應用程式」來預設類別值。 是將「擁有的應用程式」識別為位於/apps資料夾而非/libs的慣例。  重要：新增預留 `js.tx`位置t和**`css.tx`*t檔案。 （沒有cq:ClientLibraryFolder，它並非正式。）
+注意：使用「應用程式」來預設類別值。 是將「擁有的應用程式」識別為位於/apps資料夾而非/libs的慣例。  重要：新增預留位 `js.tx`置t和 **`css.txt`** 檔案。 （沒有cq:ClientLibraryFolder，它並非正式。）
 
-1. 右鍵 **`/etc/designs/an-scf-sandbox/clientlibs`**
+1. 按一下滑鼠右鍵 **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 選擇 **建立檔案……**
-1. **輸入**&#x200B;名稱： `css.txt`
+1. Enter **Name:** `css.txt`
 1. 選擇 **建立檔案……**
-1. **輸入**&#x200B;名稱： `js.txt`
-1. 按一 **下「全部儲存」**
+1. Enter **Name:** `js.txt`
+1. 按一下「 **全部儲存」**
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -77,24 +77,28 @@ css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本�
 
 **請注意** ，這可能是生產網站所需使用的方法，因為有考慮到每個頁面所下載的clientlib的便利性與大小／速度。
 
-如果只在單一頁面上使用一項功能，您可以直接在頁面上包含該功能的完整clientlib，例如&lt;% ui:includeClientLib類別=cq.social.hbs.forum&quot; %>
+如果僅在單一頁面上使用一項功能，您可以直接在頁面上包含該功能的完整clientlib，例如
+
+`% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
 在本例中，包括所有的SCF客戶端，因此，作者clientlibs的更基本的SCF客戶端：
 
 * 名稱 : **`embed`**
 * 類型 : **`String`**
 * 按一下 **`Multi`**
-* 值： **`cq.social.scf`***&lt;enter>會在每個項目後彈出對話方塊，按一下**[+] **以新增下列clientlib類別：*
+* 值: **`cq.social.scf`**
 
-   * **`cq.ckeditor`**
-   * **`cq.social.author.hbs.comments`**
-   * **`cq.social.author.hbs.forum`**
-   * **`cq.social.author.hbs.rating`**
-   * **`cq.social.author.hbs.reviews`**
-   * **`cq.social.author.hbs.voting`**
-   * 按一下「 **確定」**
+   * 它將彈出一個對話框，在每個條目後 **`+`** ，按一下以添加以下clientlib類別：
 
-* 按一 **下「全部儲存」**
+      * **`cq.ckeditor`**
+      * **`cq.social.author.hbs.comments`**
+      * **`cq.social.author.hbs.forum`**
+      * **`cq.social.author.hbs.rating`**
+      * **`cq.social.author.hbs.reviews`**
+      * **`cq.social.author.hbs.voting`**
+      * 按一下「 **確定」**
+
+* 按一下「 **全部儲存」**
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -114,20 +118,20 @@ css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本�
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-包含語句屬於 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 的 <html> 指令碼. 預設值 **`foundation head.jsp`** 包含可重疊的指令碼： **`headlibs.jsp`**。
+include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation head.jsp`** 包含可重疊的指令碼： **`headlibs.jsp`**。
 
 **複製headlibs.jsp並包含clientlibs:**
 
-1. 使用 **CRXDE Lite**，選擇 **`/libs/foundation/components/page/headlibs.jsp`**
+1. 使用 **CRXDE Lite**，選取 **`/libs/foundation/components/page/headlibs.jsp`**
 
-1. 按一下右鍵並選擇**複製**（或從工具欄中選擇「複製」）
-1. select**`/apps/an-scf-sandbox/components/playpage`**
-1. 按一下右鍵並選擇**貼上**（或從工具欄中選擇貼上）
-1. 按兩下 **`headlibs.jsp`** 將其開啟
-1. 在檔案末尾附加以下行
+1. 按一下右鍵並選擇「復 **制** 」（或從工具欄中選擇「複製」）
+1. 選取 **`/apps/an-scf-sandbox/components/playpage`**
+1. 按一下右鍵並選擇「 **貼上** 」（或從工具欄中選擇「貼上」）
+1. 按兩下以 **`headlibs.jsp`** 開啟它
+1. 在檔案結尾附加下列行
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
-1. 按一 **下「全部儲存」**
+1. 按一下「 **全部儲存」**
 
 ```xml
 <%@ page session="false" %><%
@@ -154,27 +158,27 @@ css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本�
 要建立包：
 
 * 從CRXDE Lite按一下「套 [件」圖示](https://localhost:4502/crx/packmgr/)
-* 按一 **下「建立套件」**
+* 按一下「 **建立套件」**
 
    * 包名：an-scf-sandbox-minimal-pkg
    * 版本：0.1
-   * 群組：&lt;leave as default>
+   * 群組: `leave as default`
    * 按一下「 **確定」**
 
-* 按一下「編 **輯」**
+* 按一下「 **編輯」**
 
-   * 選擇**篩選器**tab
+   * 「選擇篩 **選器** 」頁籤
 
-      * 按一 **下新增篩選**
-      * 根路徑：&lt;browse to** /apps/an-scf-sandbox*>
+      * 按一下「 **新增篩選」**
+      * 根路徑：瀏覽至 `/apps/an-scf-sandbox`
       * 按一下「完 **成」**
-      * 按一 **下新增篩選**
-      * 根路徑：&lt;browse to **/etc/designs/an-scf-sandbox**>
+      * 按一下「 **新增篩選」**
+      * 根路徑：瀏覽至 `/etc/designs/an-scf-sandbox`
       * 按一下「完 **成」**
-      * 按一 **下新增篩選**
-      * 根路徑：&lt;browse to **/content/an-scf-sandbox**>
+      * 按一下「 **新增篩選」**
+      * 根路徑：瀏覽至 `/content/an-scf-sandbox**`
       * 按一下「完 **成」**
-   * click **Save**
+   * Click **Save**
 
 
 * 按一下「建 **立」**
