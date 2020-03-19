@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -35,7 +35,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 設定：
 
-* **社群管理**&#x200B;員對於啟用社群，只能指派使用者群組的成員角色 `Community Enablement Managers``*Community Site* Enablement Manager`，其權限可能包括內容建立、指派和發佈環境中的成員管理。
+* **社群管理**&#x200B;員對於啟用社群，只能指派使用者群組的成員角色 `Community Enablement Managers``Community Site Enablement Manager`，其權限可能包括內容建立、指派和發佈環境中的成員管理。
 
 可選配置：
 
@@ -51,15 +51,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **在所有作者／發佈例項上：**
 
-1. **[為MySQL安裝JDBC驅動程式](deploy-communities.md#jdbc-driver-for-mysql)**使用Web控制台（捆綁包）:*http://localhost:4502/system/console/bundles安*裝&#x200B;*SCORM套件之前*，請先安裝
+1. **[安裝MySQL的JDBC驅動程式](deploy-communities.md#jdbc-driver-for-mysql)**使用Web控制台（捆綁包）:*http://localhost:4502/system/console/bundles安*裝&#x200B;*SCORM套件之前*，請先安裝
 
-1. **[安裝SCORM包](deploy-communities.md#scorm-package)**使用包管理器：*http://localhost:4502/crx/packmgr/*
+1. **[安裝SCORM套件](deploy-communities.md#scorm-package)**使用套件管理員：*http://localhost:4502/crx/packmgr/*
 
 **在任何伺服器上：**
 
 1. **[安裝MySQL、MySQL Workbench](mysql.md)**
 
-1. **[安裝MySQL資料庫](mysql.md#database-setup)**執行從作者實例下載的SQL指令碼使用MySQL Workbench
+1. **[安裝MySQL資料庫](mysql.md#database-setup)**從作者實例下載的執行SQL指令碼使用MySQL Workbench
 
 **在裝載作者例項的相同伺服器上：**
 
@@ -71,17 +71,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. **[配置SCORM引擎服務](mysql.md#aem-communities-scormengine-service)**使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
-1. **[配置CSRF過濾器](mysql.md#adobe-granite-csrf-filter)**使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
+1. **[配置CSRF篩選器](mysql.md#adobe-granite-csrf-filter)**使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
 **在作者實例上：**
 
 1. (可&#x200B;*選*) **[設定Analytics服務](analytics.md)**使用工具、部署、雲端服務主控台：*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
-1. **[配置Fmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**使用工作流／模型控制台
+1. **[設定Fmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**使用Workflow/Models主控台
 
-1. **[啟用Tunnel Service](deploy-communities.md#tunnel-service-on-author)**使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
+1. **[啟用通道服務](deploy-communities.md#tunnel-service-on-author)**使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
-1. **[建立社區管理員](users.md#creating-community-members)**：對於作者環境，請使用傳統UI安全控制台：http://localhost:4502/useradmin **建立路徑= /home/users/community的使用者
+1. **[建立社群管理員](users.md#creating-community-members)**：製作環境使用傳統UI安全性主控台：http://localhost:4502/useradmin **建立路徑= /home/users/community的使用者
 
    * 將成員添加到以下組：
 
@@ -90,4 +90,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Dispatcher {#dispatcher}
 
-當部署包含 [AEM的Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)，為了讓啟用功能正常運作，需要修 `clientheader`改 `filter`區段。 請參 [閱配置Dispatcher for Communities](dispatcher.md#enablement)。
+當部署包含 [AEM的Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)，為了讓啟用功能正常運作，需要修改 `clientheader` 和 `filter` 區段。 請參 [閱配置Dispatcher for Communities](dispatcher.md#enablement)。
