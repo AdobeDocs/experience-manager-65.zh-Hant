@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# Clientlibs for Communities元件{#clientlibs-for-communities-components}
+# Clientlibs for Communities元件 {#clientlibs-for-communities-components}
 
 ## 簡介 {#introduction}
 
@@ -66,20 +66,20 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 要使用 [CRXDE Lite為社區站點添加clientlib](/help/sites-developing/developing-with-crxde-lite.md) :
 
 * 瀏覽 [至https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* 找到 `clientlibslist` 要在其中添加元件的頁面的節點
+* 找到 `clientlibslist` 要在其中添加元件的頁的節點
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* 已選 `clientlibslist` 取節點
+* 選取 `clientlibslist` 節點時
 
-   * 查找String[] 屬性 `scg:requiredClientLibs`
-   * 選擇其 `Value` 以訪問「字串陣列」對話框
+   * 找到String[] 屬性 `scg:requiredClientLibs`
+   * 選擇其 `Value` 以訪問「字串」陣列對話框
 
-      * 必要時向下捲動
+      * 視需要向下捲動
       * 選擇+以輸入新的客戶端庫
 
-         * 重複添加更多客戶端庫
-      * 選擇**確定**
+         * 重複以新增更多用戶端程式庫
+      * 選擇「確 **定」**
    * 選擇「 **全部保存」**
 
 
