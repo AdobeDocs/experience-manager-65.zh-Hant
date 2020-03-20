@@ -1,9 +1,9 @@
 ---
-title: 在Experience manager中使用參考和多頁資產管理複合資產
+title: 在Experience Manager中使用參考和多頁資產管理複合資產
 description: 瞭解如何從InDesign、Illustrator和Photoshop建立AEM資產的參考。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b13fe70c4b67b27e0f18bdb557c52e25d21e7f75
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: b13fe70c4b67b27e0f18bdb557c52e25d21e7f75
 
 Adobe Experience Manager(AEM)資產可識別已上傳的檔案是否包含對儲存庫中已存在資產的參考。 此功能僅適用於支援的檔案格式。 如果已上傳的資產包含任何AEM資產的參考，則會在已上傳和參考的資產之間建立雙向連結。
 
-除了消除冗餘外，在Adobe Creative cloud應用程式中參考AEM資產可增強協同作業，並提高使用者的效率和生產力。
+除了消除冗餘外，在Adobe Creative Cloud應用程式中參考AEM資產可增強協同作業，並提高使用者的效率和生產力。
 
 AEM Assets支援雙向參照。 您可以在已上傳檔案的資產詳細資料頁面中找到參考的資產。 此外，您也可以在參考資產的資產詳細資料頁面中，檢視AEM資產的參考檔案。
 
@@ -24,7 +24,9 @@ AEM Assets支援雙向參照。 您可以在已上傳檔案的資產詳細資料
 
 1. 使用 [AEM案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，將AEM Assets存放庫載入本機電腦上的磁碟機。 在掛載的驅動器中，導航到要引用的資產的位置。
 1. 將資產從已掛載的磁碟機拖曳至Illustrator檔案。
+
 1. 將Illustrator檔案儲存至已載入的磁碟機，或 [上傳](/help/assets/managing-assets-touch-ui.md#uploading-assets) 至AEM儲存庫。
+
 1. 工作流程完成後，請前往資產的資產詳細資訊頁面。 現有AEM資產的參考會列在「參考」(References) **[!UICONTROL 欄的]** 「相依性」( **[!UICONTROL Dependencies]** )下。
 
    ![chlimage_1-84](assets/chlimage_1-258.png)
@@ -35,9 +37,11 @@ AEM Assets支援雙向參照。 您可以在已上傳檔案的資產詳細資料
 
 1. 按一下工 **[!UICONTROL 具欄中的]** 「查看屬性」。 在「屬 [!UICONTROL 性] 」頁面中，參考目前資產的檔案清單會顯示在「基本」標籤的「參考 **[!UICONTROL 」欄]** 下方 **** 。
 
-   ![chlimage_1-86](assets/chlimage_1-260.png)
+   ![在資產詳細資訊的「引用」列中查看Experience Manager資產的引用](assets/asset-references.png)
 
-## 在Adobe inDesign中新增AEM資產作為參考 {#add-aem-assets-as-references-in-adobe-indesign}
+   *圖：資產詳細資料中的資產參考*
+
+## 在Adobe InDesign中新增AEM資產作為參考 {#add-aem-assets-as-references-in-adobe-indesign}
 
 若要從InDesign檔案中參考AEM資產，請將AEM資產拖曳至InDesign檔案，或將InDesign檔案匯出為ZIP檔案。
 
@@ -54,8 +58,8 @@ AEM Assets中已存在參考的資產。 您可以設定InDesign伺服 [器以�
 ### 匯出ZIP檔案以建立資產參考 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. 執行「建立工作流 [模型」(Create workflow models](/help/sites-developing/workflows-models.md) )中的步驟以建立新工作流。
-1. 使用Adobe inDesign的「封裝」功能來匯出檔案。
-Adobe inDesign可將檔案和連結的資產匯出為套件。 在這種情況下，匯出的檔案夾包含InDesign檔案中包含子資產的「連結」檔案夾。
+1. 使用Adobe InDesign的「封裝」功能來匯出檔案。
+Adobe InDesign可將檔案和連結的資產匯出為套件。 在這種情況下，匯出的檔案夾包含InDesign檔案中包含子資產的「連結」檔案夾。
 1. 建立ZIP檔案並上傳至AEM儲存庫。
 1. 啟動工作 `Unarchiver` 流程。
 1. 當工作流程完成時，「連結」檔案夾中的參照會自動參照為子資產。 若要檢視參考資產的清單，請導覽至InDesign資產的資產詳細資訊頁面，然後關閉 [邊欄](/help/sites-authoring/basic-handling.md#rail-selector)。
@@ -80,7 +84,7 @@ Adobe inDesign可將檔案和連結的資產匯出為套件。 在這種情況�
 
 ## 建立子資產 {#generate-subassets}
 
-針對支援的多頁格式資產— PDF檔案、AI檔案、Microsoft powerPoint和Apple Keynote檔案，以及Adobe inDesign檔案— AEM可產生子資產，以對應至原始資產的每個個別頁面。 這些子資產會連結至 *父資產* ，並有助於多頁檢視。 對於所有其他用途，子資產在AEM中會視為一般資產。
+針對支援的多頁格式資產— PDF檔案、AI檔案、Microsoft PowerPoint和Apple Keynote檔案，以及Adobe InDesign檔案— AEM可產生子資產，以對應至原始資產的每個個別頁面。 這些子資產會連結至 *父資產* ，並有助於多頁檢視。 對於所有其他用途，子資產在AEM中會視為一般資產。
 
 子資產產生預設會停用。 若要啟用子資產產生，請依照下列步驟進行：
 
@@ -96,7 +100,7 @@ Adobe inDesign可將檔案和連結的資產匯出為套件。 在這種情況�
    * 選取資產，然後按一下「 [!UICONTROL 時間軸] 」以開啟左側面板。 或者，使用鍵盤快速鍵 `alt + 3`。 按一 [!UICONTROL 下「工作流]」，選取「 [!UICONTROL DAM更新資產」]，按一下「開始 [!UICONTROL 」，然後按一]下「繼續啟動」。
    * 選取資產，然後從工具 [!UICONTROL 列按一下「建立] >工作流程」。 從彈出式對話方塊中，選取「 [!UICONTROL DAM更新資產」工作流程] ，按一下「 [!UICONTROL 開始]」，然後按一下「 [!UICONTROL 繼續]」。
 
-尤其是Microsoft word檔案，請執行 **[!UICONTROL DAM Parse word檔案工作流程]** 。 它會從 `cq:Page` Microsoft word檔案的內容產生元件。 從文檔提取的影像從元件中參 `cq:Page` 考。 即使子資產產生已停用，這些影像也會擷取。
+尤其是Microsoft Word檔案，請執行 **[!UICONTROL DAM Parse Word檔案工作流程]** 。 它會從 `cq:Page` Microsoft Word檔案的內容產生元件。 從文檔提取的影像從元件中參 `cq:Page` 考。 即使子資產產生已停用，這些影像也會擷取。
 
 ## View subassets {#viewing-subassets}
 
