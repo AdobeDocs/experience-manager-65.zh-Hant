@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f50369f269040bf7f1a30b018acbc1b441abdb15
+source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
 
 ---
 
@@ -17,6 +17,8 @@ Adobe Experience Manager(AEM)6.5透過每季Service Pack提供功能和持續的
 
 ## AEM Sites {#aem-sites}
 
+AEM 6.5.4.0包含Style System增強功能。 您現在可以在元件對話方塊中選取樣式。
+
 ### 不同領域的效能改進 {#performance-improvements}
 
 * 縮短在網站(`contexthub.kernel.js`)中載入和初始化ContextHub的時間。 這可縮短網站瀏覽時的頁面載入時間。
@@ -26,8 +28,6 @@ Adobe Experience Manager(AEM)6.5透過每季Service Pack提供功能和持續的
 * 縮短「即時副本概述」中超過200個即時副本的「網站」頁面登入 **[!UICONTROL 時間]**。
 
 * 已改善URL不完整或無效的處理。 這類URL會拖慢範本編輯器的速度。
-
-此外，AEM 6.5.4.0還包含Style System增強功能。 您現在可以在元件對話方塊中選取樣式。
 
 ## AEM Assets {#aem-assets}
 
@@ -110,22 +110,25 @@ Experience Manager Forms包含下列協助工具增強功能：
 ### 為收件箱項目(6.5.3.0)配置不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
-您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
+您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
 
 ### 使用Batch API(6.5.3.0)產生多種互動式通訊 {#generate-multiple-ic}
 
 您可以使用Batch API，從範本產生多種互動式通訊。 範本是互動式通訊，不含任何資料。 批次API將資料與範本結合，以產生互動式通訊。 API在大量製作互動式通訊時很實用。 例如，電話帳單、多名客戶的信用卡帳單。 請參 [閱使用批次API產生多種互動式通訊](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-
-
 ## 自AEM 6.5 SP3以來的主要版本
 
 從2019年12月12日到2020年3月5日，Adobe發佈了下列核心AEM可交付項目以外的功能：
 
-* AEM Cloud Manager 2020.1.0和2020.2.0版本更新可改善管道狀態，並改善下載不同步驟記錄檔的能力。 如需詳細資訊，請參閱：
+* AEM Cloud Manager 2020.1.0和2020.2.0
+
+   發行更新可改善管道狀態，並改善下載不同步驟記錄檔的能力。 如需詳細資訊，請參閱：
+
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
+
    * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+
 
 * AEM Cloud Manager CLI更新
 
