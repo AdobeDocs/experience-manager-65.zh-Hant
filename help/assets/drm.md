@@ -3,7 +3,7 @@ title: 資產中的數位版權管理
 description: 瞭解如何在AEM中管理授權資產的資產到期狀態和資訊。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -118,9 +118,12 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. 在「進階」索引標籤中，並從下方的「過期」欄位設定資產的 **[!UICONTROL 到期]** 日。
+1. 在「進階」索引標籤中，從「過期」欄位設定資產的到 **[!UICONTROL 期日]** 。
 
-   ![chlimage_1-159](assets/chlimage_1-159.png)
+   ![在「過期」欄位中設定資產到期日期和時間](assets/asset-properties-advanced-tab.png)
+
+
+   *圖：資產屬性中的進階索引標籤以設定資產到期日*
 
 1. 按一 **[!UICONTROL 下「儲存]** 」，然後按一 **[!UICONTROL 下「關閉]** 」以顯示「資產」主控台。
 1. 資產的發佈狀態會指出卡片檢視中資產縮圖底部的過期狀態。 在清單檢視中，資產的狀態會顯示為「已 **[!UICONTROL 到期]**」。
@@ -158,7 +161,7 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
 這項功能會強制您接受授權合約，您才能從Adobe Experience Manager(AEM)Assets下載授權資產。
 
-如果您選取受保護的資產並點選「 **[!UICONTROL 下載]**」，則會將您重新導向至您接受授權合約的授權頁面。 如果您不接受授權合約，則會停 **[!UICONTROL 用]** 「下載」按鈕。
+如果您選取受保護的資產並點選「 **[!UICONTROL 下載]**」，則會將您重新導向至您接受授權合約的授權頁面。 如果您不接受授權合約，則會停 **[!UICONTROL 用「下載]** 」按鈕。
 
 如果選擇包含多個受保護的資產，請一次選取一個資產、接受授權合約，然後繼續下載資產。
 
