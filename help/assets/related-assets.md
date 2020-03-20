@@ -3,7 +3,7 @@ title: 相關資產
 description: 瞭解如何建立共用特定共同屬性的資產的關聯。 您也可以使用此功能來建立資產間的來源／衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4fc656948e4c5cb4a3e927c25d3afd29102b7ab4
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -14,14 +14,16 @@ Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組
 
 使用此功能，您就可以彈性地與廠商或機構共用低解析度的PDF檔案或JPG檔案，並且只有在要求時才提供高解析度的INDD檔案。
 
->[!NOTE] 只有具有編輯權限的使用者可以建立關聯和取消關聯資產。
+>[!NOTE] 只有對資產具有編輯權限的使用者可以關聯和取消關聯資產。
 >
 
 ## Relate assets {#relating-assets}
 
-1. 從AEM介面，開啟您 [!UICONTROL 要建立關聯之資產的「屬性] 」頁面。
+1. 從AEM介面，開啟您 **[!UICONTROL 要建立關聯之資產的「屬性]** 」頁面。
 
-   ![chlimage_1-272](assets/chlimage_1-272.png)
+   ![開啟資產的「屬性」頁面，以建立資產的關聯](assets/asset-properties-relate-assets.png)
+
+   *圖：「資產屬性」頁以關聯資產*
 
    或者，從清單檢視中選取資產。
 
@@ -67,11 +69,14 @@ Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-如果來源檔案與其他資產相關，AEM Assets會擷取參考的資產並加入它以進行轉換。
+如果源檔案與另一個資產相關，Experience Manager Assets將提取引用的資產並包括其以進行轉換。
 
-![chlimage_1-282](assets/chlimage_1-282.png)
+![「資產屬性」頁顯示要包括在轉換中的相關資產的源檔案](assets/asset-properties-source-asset.png)
+
+*圖：將包括在內的相關資產的來源資產*
 
 1. 遵循「建立新翻譯專案」中的步驟，將來源檔案夾中的資產翻譯 [成目標語言](translation-projects.md#create-a-new-translation-project)。 例如，在此例中，請將您的資產翻譯為法文。
+
 1. 從「項 [!UICONTROL 目] 」頁開啟翻譯資料夾。
 
    ![chlimage_1-283](assets/chlimage_1-283.png)
