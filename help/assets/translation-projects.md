@@ -3,7 +3,7 @@ title: 建立翻譯專案
 description: 瞭解如何在AEM中建立翻譯專案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ### 僅建立結構 {#create-structure-only}
 
-使用「 **[!UICONTROL 僅建立結構]** 」選項，在目標語言根目錄中建立目標資料夾層次結構，以匹配源語言根目錄中源資料夾的層次結構。 在這種情況下，來源資產會複製到目標資料夾。 但是，不會生成任何翻譯項目。
+使用「 **[!UICONTROL 僅建立結構]** 」選項，在目標語言根目錄中建立目標資料夾層次結構，以匹配源語言根目錄中源資料夾的層次結構。在這種情況下，來源資產會複製到目標資料夾。但是，不會生成任何翻譯項目。
 
 1. 在「資產」UI中，選取您要在目標語言根目錄中建立其結構的來源資料夾。
 1. 開啟「參 **[!UICONTROL 考」窗格]** ，然後按一下「復本」下的「語言復本 **[!UICONTROL 」(Language Copies]****[!UICONTROL )]**。
@@ -45,7 +45,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
-1. 從「目 **[!UICONTROL 標語言]** 」清單中，選取您要建立檔案夾結構的語言。
+1. From the **[!UICONTROL Target Languages]** list, select the language for which you want to create a folder structure.
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 
@@ -53,7 +53,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-60](assets/chlimage_1-60.png)
 
-1. 按一下／點選「 **[!UICONTROL 建立]**」。 目標語言的新結構列在「語言副本」( **[!UICONTROL Language Copies)下]**。
+1. 按一下/點選「 **[!UICONTROL 建立]**」。目標語言的新結構列在「語言副本」( **[!UICONTROL Language Copies)下]**。
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -86,7 +86,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-1. 按一下／點選「 **[!UICONTROL 建立]**」。 來源資料夾中的資產會複製到您在步驟4中選取的地區設定的目標資料夾。
+1. 按一下/點選「 **[!UICONTROL 建立]**」。來源資料夾中的資產會複製到您在步驟4中選取的地區設定的目標資料夾。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
@@ -114,7 +114,10 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 1. 導覽至「資產」UI，並開啟每個已翻譯資產的「屬性」頁面，以檢視已翻譯的中繼資料。
 
-   ![chlimage_1-74](assets/chlimage_1-74.png)
+   ![在「資產屬性」頁面中檢視翻譯的中繼資料](assets/translated-metadata-asset-properties.png)
+
+   *圖：資產屬性頁面中的翻譯中繼資料*
+
 
    >[!NOTE]
    >
@@ -125,8 +128,8 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 如果您使用此選項，則翻譯工作流程會針對您在執行先前的翻譯工作流程後新增至來源檔案夾的資產執行。 只有新增的資產會複製至包含先前轉換資產的目標資料夾。 在本例中，不會建立新的翻譯項目。
 
 1. 在「資產」使用者介面中，導覽至包含未轉譯資產的來源檔案夾。
-1. 選取您要轉換的資產，並開啟「參考」 **[!UICONTROL 窗格]**。 「語 **[!UICONTROL 言副本]** 」部分顯示當前可用的翻譯副本數。
-1. 按一下／點選「 **[!UICONTROL 復本」下的]** 「語言 **[!UICONTROL 復本」]**。 將顯示可用翻譯副本的清單。
+1. 選取您要轉換的資產，並開啟「參考」 **[!UICONTROL 窗格]**。「語 **[!UICONTROL 言副本]** 」部分顯示當前可用的翻譯副本數。
+1. 按一下/點選「 **[!UICONTROL 復本」下的]** 「語言 **[!UICONTROL 復本」]**。將顯示可用翻譯副本的清單。
 1. 按一下／點選 **[!UICONTROL 底部的「建立與翻譯]** 」。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
@@ -141,13 +144,13 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    >[!NOTE]
    >
-   >如果您選擇「 **[!UICONTROL Add to existing translation project]** 」（添加到現有翻譯項目）選項，則只有在項目設定與現有項目設定完全匹配時，才會將翻譯項目添加到現有項目。 否則，將建立新項目。
+   >如果您選擇「 **[!UICONTROL Add to existing translation project]** （添加到現有翻譯項目）」選項，則只有在項目設定與現有項目設定完全匹配時，才會將翻譯項目添加到現有項目。 否則，將建立新項目。
 
 1. 從「現 **[!UICONTROL 有翻譯項目]** 」清單中，選擇要添加要翻譯的資產的項目。
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. 按一下／點選「 **[!UICONTROL 建立]**」。 要翻譯的資產會新增至目標資料夾。 更新的資料夾會列在「語言復 **[!UICONTROL 本」區段下]** 。
+1. 按一下/點選「 **[!UICONTROL 建立]**」。要翻譯的資產會新增至目標資料夾。更新的資料夾會列在「語言復 **[!UICONTROL 本」區段下]** 。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -198,7 +201,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 如果您使用此選項，系統會針對您要更新語言副本的一組資產建立翻譯專案。
 
 1. 從「資產」使用者介面中，選取您新增資產的來源資料夾。
-1. 開啟「參 **[!UICONTROL 考]** 」窗格，然後按一下／點選「復本」下的「語言復本 ******** 」，以顯示語言復本清單。
+1. 開啟「參 **[!UICONTROL 考]** 」窗格，然後按一下/點選「復本」下的「語言復本 ******** 」，以顯示語言復本清單。
 1. 選中「語言副本」 **[!UICONTROL 之前的複選框]**，然後選擇與相應地區對應的目標資料夾。
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
@@ -215,7 +218,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
-1. 按一下／點選「 **[!UICONTROL 開始]**」。
+1. 按一下/點選「 **[!UICONTROL 開始]**」。
 1. 導覽至「專案」主控台。 翻譯資料夾將複製到「項目」控制台。
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
@@ -249,11 +252,11 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 如果您使用此選項，資產集會新增至現有的翻譯專案，以更新您所選地區的語言副本。
 
 1. 從「資產」使用者介面中，選取您新增資產檔案夾的來源檔案夾。
-1. 開啟「參 **[!UICONTROL 考」窗格]**，然後按一下／點選「復本」下的「語言復本 ******** 」，以顯示語言復本清單。
+1. 開啟「參 **[!UICONTROL 考」窗格]**，然後按一下/點選「復本」下的「語言復本 ******** 」，以顯示語言復本清單。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. 在「語言副本」之前選 **[!UICONTROL 取核取方塊]**，以選取所有語言副本。 取消選擇與要翻譯的語言環境相對應的語言副本（副本）以外的其他副本。
+1. 在「語言副本」之前選 **[!UICONTROL 取核取方塊]**，以選取所有語言副本。取消選擇與要翻譯的語言環境相對應的語言副本 (副本) 以外的其他副本。
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
@@ -269,14 +272,14 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
-1. 按一下／點選「 **[!UICONTROL 開始]**」。
+1. 按一下/點選「 **[!UICONTROL 開始]**」。
 1. 請參閱「添加到現有翻譯 [項目」的步驟](translation-projects.md#add-to-existing-translation-project) 9-14以完成其餘的步驟。
 
 ## 建立臨時語言副本 {#creating-temporary-language-copies}
 
 當您執行翻譯工作流程以更新具有原始資產編輯版本的語言副本時，會保留現有的語言副本，直到您核准翻譯的資產為止。 AEM Assets會將新翻譯的資產儲存在臨時位置，並在您明確核准資產後更新現有的語言副本。 如果您拒絕資產，語言副本將保持不變。
 
-1. 按一下／點選「語言副本」下方的「來源根」檔案夾( **[!UICONTROL Language Copies]** )，然後按一下／點選「 **[!UICONTROL Reveal in Assets]** 」（在資產中顯現）以開啟「AEM Assets」(AEM Assets)中的檔案夾。
+1. 按一下/點選「語言副本」下方的「來源根」檔案夾( **[!UICONTROL Language Copies]** )，然後按一下/點選「 **[!UICONTROL Reveal in Assets]** 」 (在資產中顯現) 以開啟「AEM Assets」(AEM Assets)中的檔案夾。
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -288,7 +291,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 選取「標題」( **[!UICONTROL Title)旁的核取方塊]**。
-1. 在工具列中，按一下／點選「 **[!UICONTROL Accept Translation]** 」（接受翻譯），然後在對話方塊中按一下／點選「 **[!UICONTROL Accept]** 」（接受），以使用已編輯資產的翻譯版本覆寫目標資料夾中的翻譯資產。
+1. 在工具列中，按一下/點選「 **[!UICONTROL Accept Translation]** 」 (接受翻譯)，然後在對話方塊中按一下/點選「 **[!UICONTROL Accept]** 」 (接受)，以使用已編輯資產的翻譯版本覆寫目標資料夾中的翻譯資產。
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
