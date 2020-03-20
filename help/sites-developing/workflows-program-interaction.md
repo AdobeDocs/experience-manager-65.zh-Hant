@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 7d2ba937710e5931356512b812a8b8fbe3a52072
 
 ---
 
@@ -35,32 +35,14 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 該類還提供了幾種干預工作流生命週期的方法。
 
-下表提供在以程式設計方式與工作流程互動時，要使用的數個關鍵Java物件參考檔案的連結。 下面的示例演示如何獲取和使用代碼中的類對象。
+下表提供在以程式設計方式與工作流程互動時，要使用之數個關鍵Java物件參考檔案的連結。 下面的示例演示如何獲取和使用代碼中的類對象。
 
-<table>
- <tbody>
-  <tr>
-   <th>功能<a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html"></a></th>
-   <th>物件<br /> </th>
-  </tr>
-  <tr>
-   <td>存取工作流程<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html"><code>WorkflowSession</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>執行和查詢工作流實例<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html"><code>Workflow</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html"><code>WorkItem</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html"><code>WorkflowData</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>管理工作流模型<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html"><code>WorkflowModel</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html"><code>WorkflowNode</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html"><code>WorkflowTransition</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>處於工作流（或不處於）中的節點的資訊 </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html"><code>WorkflowStatus</code></a></td>
-  </tr>
- </tbody>
-</table>
+| 功能 | 物件 |
+|---|---|
+| 存取工作流程 | [`WorkflowSession`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html) |
+| 執行和查詢工作流實例 | [`Workflow`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html)</br>[`WorkItem`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html)</br>[`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) |
+| 管理工作流模型 | [`WorkflowModel`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html)</br>[`WorkflowNode`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html)</br>[`WorkflowTransition`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html) |
+| 處於工作流（或不處於）中的節點的資訊 | [`WorkflowStatus`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) |
 
 ## 在ECMA指令碼中獲取工作流對象 {#obtaining-workflow-objects-in-ecma-scripts}
 
@@ -91,7 +73,7 @@ REST API支援下列動作：
 >
 >使用Firefox擴充功能Firebug進行網頁開發，可在控制台運作時追蹤HTTP流量。 例如，您可以檢查參數和傳送至AEM伺服器的值並附上 `POST` 請求。
 
-在本頁中，我們假設AEM在連接埠的localhost上 `4502` 執行，且安裝內容是&quot; `/`&quot;（根）。 如果安裝時不適用，則需相應調整HTTP請求所適用的URI。
+在本頁中，我們假設AEM在連接埠的localhost上 `4502` 執行，且安裝內容是&quot; `/`&quot;（根）。 如果安裝時不適用，則需要相應調整HTTP請求所適用的URI。
 
 請求支援的轉 `GET` 譯是JSON轉譯。 URL的副 `GET` 檔名應 `.json` 該為，例如：
 
@@ -115,7 +97,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>建立新的工作流程例項。 <br /> 參數包括：- <code>model</code>:相應工作流程模型的ID(URI)<br /> - <code>payloadType</code>:包含裝載的類型(例如 <code>JCR_PATH</code> 或URL)。<br /> 裝載會以參數傳送 <code>payload</code>。 ( <code>201</code> )回<code>CREATED</code>應會以位置標題傳回，其中包含新工作流程例項資源的URL。</p> </td>
+   <td><p>建立新的工作流程例項。 參數包括：<br /> - <code>model</code>:相應工作流程模型的ID(URI)<br /> - <code>payloadType</code>:包含裝載的類型(例如 <code>JCR_PATH</code> 或URL)。<br /> 裝載會以參數傳送 <code>payload</code>。 ( <code>201</code> )回<code>CREATED</code>應會以位置標題傳回，其中包含新工作流程例項資源的URL。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -171,7 +153,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>建立新工作流程模型. 如果發送 <code>title</code> 參數，則使用指定標題建立新模型。 附加JSON模型定義為參數 <code>model</code> 會根據提供的定義建立新的工作流程模型。<br /> 回 <code>201</code> 應(<code>CREATED</code>)會以包含新工作流程模型資源之URL的位置標題傳回。<br /> 當模型定義附加為名為的檔案參數時，也會發生同樣的情況 <code>modelfile</code>。<br /> 在和參數兩種情況 <code>model</code> 下， <code>modelfile</code> 都需要一個名為的 <code>type</code> 附加參數來定義序列化格式。 新的序列化格式可使用OSGI API進行整合。 標準JSON序列化程式會隨工作流程引擎一起提供。 其類型為JSON。 請參閱以下格式範例。</td>
+   <td>建立新工作流程模型. 如果發送 <code>title</code> 參數，則使用指定的標題建立新模型。 附加JSON模型定義為參數 <code>model</code> 會根據提供的定義建立新的工作流程模型。<br /> 回 <code>201</code> 應(<code>CREATED</code>)會以包含新工作流程模型資源之URL的位置標題傳回。<br /> 當模型定義附加為名為的檔案參數時，也會發生同樣的情況 <code>modelfile</code>。<br /> 在和參數兩種情況 <code>model</code> 下， <code>modelfile</code> 都需要一個名為的 <code>type</code> 附加參數來定義序列化格式。 新的序列化格式可使用OSGI API進行整合。 標準JSON序列化程式會隨工作流程引擎一起提供。 其類型為JSON。 請參閱以下格式範例。</td>
   </tr>
  </tbody>
 </table>
