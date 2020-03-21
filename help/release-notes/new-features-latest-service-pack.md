@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
+source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
 
 ---
 
@@ -16,6 +16,8 @@ Adobe Experience Manager(AEM)6.5透過每季Service Pack提供功能和持續的
 最新的AEM Service Pack 4(6.5.4.0)將於2020年3 **月5日發行**。 本文著重說明最新Service Pack提供的功能，讓您的AEM旅程更加豐富。
 
 ## AEM Sites {#aem-sites}
+
+### 樣式系統增強功能
 
 AEM 6.5.4.0包含Style System增強功能。 您現在可以在元件對話方塊中選取樣式。
 
@@ -110,7 +112,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 ### 為收件箱項目(6.5.3.0)配置不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
-您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
+您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
 
 ### 使用Batch API(6.5.3.0)產生多種互動式通訊 {#generate-multiple-ic}
 
@@ -122,7 +124,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * AEM Cloud Manager 2020.1.0和2020.2.0
 
-   發行更新可改善管道狀態，並改善下載不同步驟記錄檔的能力。 如需詳細資訊，請參閱：
+   改善管道狀態，並可針對不同步驟下載記錄檔。 請參閱：
 
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
@@ -132,7 +134,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * AEM Cloud Manager CLI更新
 
-   發行更新包括使用命令列工具自動執行Cloud Manager工作。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   使用命令列工具自動執行Cloud Manager任務。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEM Sites:原型23
 
@@ -148,7 +150,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * AEM Assets:案頭應用程式2.0.1.1
 
-   如需詳細資訊，請參 [閱「取得對資產的案頭存取權」](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
+   請參 [閱「取得資產的案頭存取權」](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
 
 * AEM Screens:功能套件202001
 
