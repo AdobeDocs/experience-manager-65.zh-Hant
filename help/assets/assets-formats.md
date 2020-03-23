@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8431275c0e4de408e1ebafafafa94dcfae3c1127
+source-git-commit: d7d25c75c1023383e07c36252ece2e85425a95be
 
 ---
 
@@ -34,7 +34,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
 | PNM | ✓ | ✓ |  |  |  |  | ✓ |
-| PFM | ✓ | ✓ |  |  |  |  | ✓ |
+| PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
 | PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
@@ -190,18 +190,15 @@ Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 
 ## 其他支援的格式 {#other-supported-formats}
 
-下表說明常用DAM工作流程對其他幾種檔案格式的適用性。 所有檔案都支援一般的DAM功能（動態媒體傳送除外）。
+下表說明常用DAM工作流程對其他幾種檔案格式的適用性。 所有檔案都支援一般的DAM功能，例如儲存、版本修訂、ACL、工作流程、發佈和中繼資料管理（動態媒體傳送除外）。
 
 | 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 動態媒體傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **²** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（當設定有自己的傳送網域時） |  |  |  |  |  | ✓ |
-
-**²** DAM支援其他格式，包括儲存、版本修訂、ACL、工作流程、發佈和中繼資料管理。
 
 ## Supported MIME types {#supported-mime-types}
 
