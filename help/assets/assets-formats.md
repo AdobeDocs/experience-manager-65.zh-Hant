@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 08ea08fc2f8c36d509509f761a76a428d6df7e6a
+source-git-commit: 8431275c0e4de408e1ebafafafa94dcfae3c1127
 
 ---
 
@@ -34,13 +34,15 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
 | PNM | ✓ | ✓ |  |  |  |  | ✓ |
-| PGM | ✓ | ✓ |  |  |  |  | ✓ |
+| PFM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD* | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
+
+**¹** 從PSD檔案擷取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
 動態媒體功能支援的點陣影像格式如下：
 
@@ -51,11 +53,11 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
-| PSD* | ✓ |  |  |  |  |
+| PSD **¹** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-&amp;ast;從PSD檔案中提取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
+**¹** 從PSD檔案擷取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
 除了上述資訊外，請考慮下列事項：
 
@@ -192,13 +194,14 @@ Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 
 | 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 動態媒體傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **²** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（當設定有自己的傳送網域時） |  |  |  |  |  | ✓ |
 
-**&amp;ast;** DAM中支援其他格式，包括儲存、版本修訂、ACL、工作流程、發佈和中繼資料管理。
+**²** DAM支援其他格式，包括儲存、版本修訂、ACL、工作流程、發佈和中繼資料管理。
 
 ## Supported MIME types {#supported-mime-types}
 
@@ -246,7 +249,7 @@ CRXDE Lite中提供支援的MIME類型清單，網址為 `/conf/global/settings/
 | OTF | application/x-font-otf |  |  |
 | PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdf選項](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_pdf_options) |
 | PFB | application/x-font-type1 |  |  |
-| PFM | application/x-font-type1 |  |  |
+| PGM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | image/png |  |  |
 | PPT | application/vnd.ms-powerpoint |  |  |
