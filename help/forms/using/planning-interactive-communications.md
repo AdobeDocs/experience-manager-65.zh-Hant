@@ -1,21 +1,21 @@
 ---
 title: 「教學課程：規劃互動式通訊」
 seo-title: 規劃您的互動式通訊
-description: 規劃互動式通訊的剖析
-seo-description: 規劃互動式通訊的剖析
+description: 規劃互動式通訊的結構
+seo-description: 規劃互動式通訊的結構
 uuid: 1c2b5c5b-c655-4559-8748-3e0b343779c2
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
 
 ---
 
 
 # 教學課程：規劃互動式通訊 {#tutorial-plan-the-interactive-communication}
 
-規劃互動式通訊的剖析
+規劃互動式通訊的結構
 
 ![02-create-adaptive-form-main-image](assets/02-create-adaptive-form-main-image.png)
 
@@ -28,7 +28,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 互動式通訊包括下列元素：
 
 * **靜態文本** (Static Text)主要包含了互動式通信的一些部分，這些部分在本質上是通用的，並且包含在與所有客戶的通信中。 例如頁首、頁尾、問候語或免責聲明。
-* **來自後端系統（表單資料模型）的資料是客戶專屬的** ，並與互動式通訊動態合併。 例如，可使用表單資料模型來源於原則編號或位址。
+* **源自後端系統（表單資料模型）的資料是客戶專屬的** ，並與互動式通訊動態合併。 例如，可使用表單資料模型來源於原則編號或位址。
 * **互動式通訊** (Interactive Communication)的列印與網頁版面或範本。
 * **Order** whith and the vorial text parfaces in the Interactive Communication.
 * **由前線員工（代理UI）輸入的資料** ，此員工在傳送通訊前會自訂通訊。 例如，付款到期日。
@@ -40,8 +40,6 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 ## 互動式通訊剖析 {#anatomy-of-the-interactive-communication}
 
 完成用於建立互動式通訊的內容和元素後，您就可以建立互動式通訊的剖析。 解剖結構必須包含「規劃考量事項」部分 [中列出的詳細](/help/forms/using/planning-interactive-communications.md#planning-considerations) 資訊。 根據我們的使用案例，以下是電信營運商傳送給其客戶之每月帳單的剖析範例。
-
-解剖學影片的預留位置
 
 解剖結構包括具有以下輸入模式的資料：
 
