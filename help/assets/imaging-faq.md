@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 9807bd4366315ad470128911cb67a31e7e9fd288
+source-git-commit: d690bcc80052f356425cd85c498aa48b1caf44bc
 
 ---
 
@@ -44,7 +44,7 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 * 智慧型影像可以使用「bfc」 URL參數關閉。
 * TTL（存留時間）獨立。 以前，Smart Imaging的最低TTL為12小時。
 * 以前，原始和衍生影像都會進行快取，而使快取失效的步驟是2個。 在最新的智慧型影像中，只會快取衍生產品，允許單步快取失效程式。
-* 使用規則集中自訂標題的客戶(例如，將自訂標題值新增至影像回應|Dynamic Media Classic [](https://helpx.adobe.com/in/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建議的「允許原點計時」、「X-Robot」)將受益於最新的智慧型影像，因為這些標題不會遭到封鎖，這與舊版智慧型影像不同。
+* 使用規則集中自訂標題的客戶(例如，將自訂標題值新增至影像回應|Dynamic Media Classic [](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建議的「允許原點計時」、「X-Robot」)將受益於最新的智慧型影像，因為這些標題不會遭到封鎖，這與舊版智慧型影像不同。
 
 ## 智慧型影像處理是否有相關的授權成本？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
@@ -142,7 +142,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示�
 1. 完成後，支援會通知您。
 1. 為充份提升智慧型影像處理的效能，Adobe建議將「存留時間(TTL)」設定為24小時或更長。 TTL會定義CDN快取資產的時間長度。 要更改此設定，請：
 
-   1. 如果您使用Dynamic Media Classic，請按一下「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器]**」。 將「預 **[!UICONTROL 設用戶端快取時間」設為]** 24或更長的「即時」值。
+   1. 如果您使用Dynamic Media Classic，請按一下「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器」]**。 將「預 **[!UICONTROL 設用戶端快取時間」設為]** 24或更長的「即時」值。
    1. 如果您使用動態媒體，請依照 [這些指示](config-dynamic.md)。 將「過 **[!UICONTROL 期]** 」值設為24小時或更長。
 
 ## 我何時可以期待我的帳戶啟用Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
@@ -150,7 +150,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示�
 請求的處理順序依技術支援部門接收的順序，依等待清單而定。
 
 >[!NOTE]
-啟用智慧型影像需要Adobe清除快取，因此可能需要較長的前置時間。 因此，在任何指定時間，都只能處理少數客戶轉場。
+啟用智慧型影像可能需要較長的前置時間，因為Adobe會清除快取。 因此，在任何指定時間，都只能處理少數客戶轉場。
 
 ## 切換到使用Smart Imaging時有哪些風險？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
