@@ -382,7 +382,7 @@ Analytics會自動用於數個Communities功能。
 
 在啟用Analytics並選取雲端設定架構時儲存社群網站後，AEM變數會自動對應至以evar1和event1開頭的Analytics eVar和事件，並遞增1。
 
-如果使用現有報表套裝來映射evar1到evar11和event1到event7中的任何變數，則必須重新 [](#modifying-analytics-variable-mapping) 映射AEM變數並還原原始對應。
+如果使用現有報表套裝來映射evar1到evar11和event1到event7中的任何變數，則必須重新 [](#modifying-analytics-variable-mapping) 映射AEM變數並還原原始映射。
 
 以下是遵循快速入門教學課程後的預 [設映射範例](/help/communities/getting-started-enablement.md):
 
