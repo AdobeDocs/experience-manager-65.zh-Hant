@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
+source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ---
 
@@ -209,6 +209,9 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    選取品 [牌以指定定位範圍](/help/sites-authoring/target-adobe-campaign.md)。
 
+   >[!NOTE]
+   >此選項要求使用者帳戶位於群 `Target Adminstrators`組中。
+
 ### 權限 {#permissions}
 
 * **權限**
@@ -289,7 +292,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 選擇 **開啟屬性** ，並開啟一個對話框，允許您按相應頁籤進行編輯。 工具列右側也提供下列按鈕：
+1. Select **Open Properties** and a dailog will open allowing you to edit the properties, sorted by the appropriate tab. 工具列右側也提供下列按鈕：
 
    * **取消**
    * **儲存並關閉**
@@ -298,7 +301,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
 ### 從Sites Console —— 多頁 {#from-the-sites-console-multiple-pages}
 
-從Sites **** Console中，您可以選取數個頁面，然後使用 **View Properties** （檢視屬性）來檢視和／或編輯頁面屬性。 這稱為頁面屬性的大量編輯。
+從Sites **** Console中，您可以選取數個頁面，然後使用 **View Properties**  (檢視屬性) 來檢視和/或編輯頁面屬性。這稱為頁面屬性的大量編輯。
 
 >[!NOTE]
 >
