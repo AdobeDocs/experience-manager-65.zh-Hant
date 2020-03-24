@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: d690bcc80052f356425cd85c498aa48b1caf44bc
+source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
 
 ---
 
@@ -88,7 +88,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 
 ## 我是否必須變更任何URL、影像預設集，或在我的網站上部署智慧型影像的新程式碼？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-智慧型影像功能可與您現有的影像URL和影像預設集完美搭配運作。 此外，智慧型影像功能不需要您在網站上新增任何程式碼來偵測使用者的瀏覽器。 所有這些都會自動處理。
+否. 智慧型影像功能可與您現有的影像URL和影像預設集完美搭配運作。 此外，智慧型影像功能不需要您在網站上新增任何程式碼來偵測使用者的瀏覽器。 所有這些都會自動處理。
 
 如前所述，智慧型影像僅支援JPEG和PNG影像格式。 對於其他格式，您需要將修飾 `bfc=off` 元附加至URL，如先前所述。
 
@@ -115,11 +115,11 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示�
 
 您必須提出使用智慧型影像的要求；不會自動啟用。
 
-1. 啟動技術支援要求(電子郵件：s7support@adobe.com)。
+1. 啟動技術支援要求(電子郵件： `s7support@adobe.com`)。
 1. 在您的支援要求中提供下列資訊：
 
    1. 主要聯絡人姓名、電子郵件、電話。
-   1. 所有要啟用智慧型影像功能的網域（即images.company.com或mycompany.scene7.com）。
+   1. 要啟用智慧映像的所有域(即 `images.company.com` 或 `mycompany.scene7.com`)。
 
       若要尋找您的網域，請登入您的公司帳戶或帳戶。
 
@@ -142,7 +142,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示�
 1. 完成後，支援會通知您。
 1. 為充份提升智慧型影像處理的效能，Adobe建議將「存留時間(TTL)」設定為24小時或更長。 TTL會定義CDN快取資產的時間長度。 要更改此設定，請：
 
-   1. 如果您使用Dynamic Media Classic，請按一下「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器」]**。 將「預 **[!UICONTROL 設用戶端快取時間」設為]** 24或更長的「即時」值。
+   1. 如果您使用Dynamic Media Classic，請按一下「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器]**」。 將「預 **[!UICONTROL 設用戶端快取時間」設為]** 24或更長的「即時」值。
    1. 如果您使用動態媒體，請依照 [這些指示](config-dynamic.md)。 將「過 **[!UICONTROL 期]** 」值設為24小時或更長。
 
 ## 我何時可以期待我的帳戶啟用Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
