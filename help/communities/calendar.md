@@ -117,7 +117,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 * **允許主要內容**
 
-   如果勾選，此構想就可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
+   若勾選，此構想即可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
 
 在「使用 **者協調** 」標籤下，指定如何管理已張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
