@@ -134,7 +134,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * AEM Cloud Manager CLI更新
 
-   使用命令列工具自動執行Cloud Manager任務。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   使用命令列工具自動執行Cloud Manager工作。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEM Sites:原型23
 
