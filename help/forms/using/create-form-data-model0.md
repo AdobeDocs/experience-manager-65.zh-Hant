@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
 
 ---
 
@@ -38,7 +38,7 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源建立表單�
 
 ![表單資料模型](assets/form_data_model_callouts_new.png)
 
-**********答：已設定資料來源** B.資料源結 **構** C.可用服 **務D.資料模型物**&#x200B;件E.已配置服務
+**答：** 已設定資料來源 **B.** 資料源結 **構** C.可用服 **務D.** 資料模型物 **件E.** 已配置服務
 
 ## 必備條件 {#prerequisites}
 
@@ -54,9 +54,61 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源建立表單�
 
 ![sample_data_cust](assets/sample_data_cust.png)
 
-呼叫表包括呼叫詳細資訊，如呼叫日期、呼叫時間、呼叫號碼、呼叫持續時間和呼叫費用。 客戶表使用「行動號碼(mobilenum)」欄位連結至呼叫表。 對於客戶表格中列出的每個行動電話號碼，呼叫表格中有多個記錄。 例如，您可以參照呼叫表來擷取 **1457892541** mobile號碼的呼叫詳細資訊。
+使用以下DDL語句在資料庫中 **建立** customer表。
 
-帳單表包括帳單明細，例如帳單日期、帳單期間、每月費用和通話費。 客戶表使用「清單計畫」欄位連結至清單表。 客戶表中有與每個客戶關聯的計畫。 清單表包括所有現有計畫的定價詳細資訊。 例如，您可以從客戶表中檢索 **Sarah** 的計畫詳細資訊，並使用這些詳細資訊從清單表中檢索定價詳細資訊。
+```sql
+CREATE TABLE `customer` (
+   `mobilenum` int(11) NOT NULL,
+   `name` varchar(45) NOT NULL,
+   `address` varchar(45) NOT NULL,
+   `alternatemobilenumber` int(11) DEFAULT NULL,
+   `relationshipnumber` int(11) DEFAULT NULL,
+   `customerplan` varchar(45) DEFAULT NULL,
+   PRIMARY KEY (`mobilenum`),
+   UNIQUE KEY `mobilenum_UNIQUE` (`mobilenum`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+使用以下DDL語句在資料庫中 **建立** bills表。
+
+```sql
+CREATE TABLE `bills` (
+   `billplan` varchar(45) NOT NULL,
+   `latepayment` decimal(4,2) NOT NULL,
+   `monthlycharges` decimal(4,2) NOT NULL,
+   `billdate` date NOT NULL,
+   `billperiod` varchar(45) NOT NULL,
+   `prevbal` decimal(4,2) NOT NULL,
+   `callcharges` decimal(4,2) NOT NULL,
+   `confcallcharges` decimal(4,2) NOT NULL,
+   `smscharges` decimal(4,2) NOT NULL,
+   `internetcharges` decimal(4,2) NOT NULL,
+   `roamingnational` decimal(4,2) NOT NULL,
+   `roamingintnl` decimal(4,2) NOT NULL,
+   `vas` decimal(4,2) NOT NULL,
+   `discounts` decimal(4,2) NOT NULL,
+   `tax` decimal(4,2) NOT NULL,
+   PRIMARY KEY (`billplan`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+使用以下DDL語句在資料庫中 **建立** 調用表。
+
+```sql
+CREATE TABLE `calls` (
+   `mobilenum` int(11) DEFAULT NULL,
+   `calldate` date DEFAULT NULL,
+   `calltime` varchar(45) DEFAULT NULL,
+   `callnumber` int(11) DEFAULT NULL,
+   `callduration` varchar(45) DEFAULT NULL,
+   `callcharges` decimal(4,2) DEFAULT NULL,
+   `calltype` varchar(45) DEFAULT NULL
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+呼 **叫表包括** 呼叫詳細資訊，如呼叫日期、呼叫時間、呼叫號碼、呼叫持續時間和呼叫費用。 客戶 **表使用** 「行動號碼(mobilenum)」欄位連結至呼叫表。 對於客戶表格中列出的每 **個行動** ，呼叫表格中會有多 **個記錄** 。 例如，您可以參照呼叫表來檢索 **1457892541** **Mobile號碼的呼叫詳細** 資訊。
+
+清 **單表** 包括清單詳細資訊，如帳單日期、帳單期間、月費和通話費。 客戶 **表使用「清單計** 划 **** 」欄位連結至清單表。 客戶表中有與每個客戶關聯的 **計畫** 。 清 **單表** 包括所有現有計畫的定價詳細資訊。 例如，您可以從客戶表中檢索 **Sarah** 的計畫詳細資訊，並使用 **這些詳細資訊從清單表中檢索定** 價詳細資訊 **** 。
 
 ## 步驟2:將MySQL資料庫配置為資料源 {#step-configure-mysql-database-as-data-source}
 
@@ -77,20 +129,20 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源建立表單�
    1. 找到 **Apache Sling Connection Pooled DataSource組態** 。 點選以在編輯模式中開啟設定。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
-      * **** 資料來源名稱：您可以指定任何名稱。 例如，指定 **MySQL**。
+      * **資料來源名稱：** 您可以指定任何名稱。 例如，指定 **MySQL**。
 
       * **DataSource服務屬性名稱**:指定包含DataSource名稱的服務屬性名稱。 在將資料源實例註冊為OSGi服務時指定。 例如， **datasource.name**。
 
       * **JDBC驅動程式類**:指定JDBC驅動程式的Java類名。 對於MySQL資料庫，請 **指定com.mysql.jdbc.Driver**。
 
       * **JDBC連接URI**:指定資料庫的連線URL。 對於在埠3306和模式teleca上運行的MySQL資料庫，URL為： `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-      * **** 使用者名稱：資料庫的用戶名。 必須啟用JDBC驅動程式才能與資料庫建立連接。
-      * **** 密碼：資料庫的口令。 必須啟用JDBC驅動程式才能與資料庫建立連接。
-      * **** 借閱測試：啟用「 **借閱時測試** 」選項。
+      * **使用者名稱：** 資料庫的用戶名。 必須啟用JDBC驅動程式才能與資料庫建立連接。
+      * **密碼：** 資料庫的口令。 必須啟用JDBC驅動程式才能與資料庫建立連接。
+      * **借閱測試：** 啟用「 **借閱時測試** 」選項。
 
-      * **** 回訪時測試：啟用「 **Test on Return** 」選項。
+      * **回訪時測試：** 啟用「 **Test on Return** 」選項。
 
-      * **** 驗證查詢：指定SQL SELECT查詢以驗證池中的連接。 查詢至少必須返回一行。 例如，從 **客戶選擇***。
+      * **驗證查詢：** 指定SQL SELECT查詢以驗證池中的連接。 查詢至少必須返回一行。 例如，從 **客戶選擇***。
 
       * **事務隔離**:將值設定為 **READ_COMMITTED**。
    將其他屬性保留為預設 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) ，然後點 **選「儲存**」。
@@ -176,7 +228,7 @@ AEM Forms提供直覺式使用者介面， [從設定的資](https://helpx.adobe
 
    ![使用費用規則編輯器](assets/usage_charges_rule_editor_new.png)
 
-1. 在數學表達式中，分 **別選擇****callcharges和confcallcharges** 作為第一和第二對象。 選擇 **加號** 作為運算子。 在數學表達式中點選並點選 **表達式** ，以擴 **展表達式來添加smscharges**、 **interingnational netcharges**、 ************ roamingnationnl、roamingingintingtingingost物件的表達式。
+1. 在數學表達式中，分 **別選擇****callcharges和confcallcharges** 作為第一和第二對象。 選擇 **加號** 作為運算子。 在數學表達式中點選並點選 **Expression** (表達式 **)以加入** smscharges **、** interingnational netcharges **、** roamingnational nl、Roamingingingintingingintingintagobjects，並點選Expression(表達式 ******** )以加入smsmscharges。
 
    下圖描述了規則編輯器中的數學表達式：
 
@@ -249,7 +301,7 @@ AEM Forms提供直覺式使用者介面， [從設定的資](https://helpx.adobe
 
    * 從「 **綁定值** 」(Binding Value **** )下拉式清單中選取customerplan。
 
-   * 點選 **「完成** 」(Done)，在計費計畫與客戶計畫屬性之間建立系結。
+   * 點選 **「完成** 」(Done)可建立計費計畫與客戶計畫屬性之間的系結。
    ![新增客戶帳單的關聯](assets/add_association_customer_bills_new.png)
 
    下圖描述了資料模型對象和用於建立它們之間關聯的屬性之間的關聯：
@@ -261,7 +313,7 @@ AEM Forms提供直覺式使用者介面， [從設定的資](https://helpx.adobe
 在建立客戶與其他資料模型物件之間的關聯後，編輯客戶屬性以定義從資料模型物件擷取資料的屬性。 根據使用案例，使用行動號碼作為屬性，從客戶資料模型物件擷取資料。
 
 1. 選取客戶資料模型物件頂端的核取方 **塊** ，以選取它並點選「編 **輯屬性」**。 「編 **輯屬性** 」窗格隨即開啟。
-1. 將 **客戶指定** 為「頂 **層模型」物件**。
+1. 將 **客戶指定** 為「 **頂層模型」物件**。
 1. 從「 **讀取服務** 」下 **拉式清單中選取「取得** 」。
 1. 在「參 **數** 」部分：
 
