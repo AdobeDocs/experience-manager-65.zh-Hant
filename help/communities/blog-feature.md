@@ -180,7 +180,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **允許主要內容**
 
-   若勾選，此構想即可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
+   如果勾選，此構想就可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
 
 * **啟用提及功能**
 
