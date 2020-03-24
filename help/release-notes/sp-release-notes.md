@@ -98,7 +98,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 資產收集頁面上觸發工作流程的按鈕已停用(NPR-32471)。
 
-* 在Experience Manager中使用Dynamic Media Scene7設定將資產從一個檔案夾移至另一個檔案夾時，無名稱的檔案夾會在SPS(Scene7 Publishing System)中建立。
+* 在Experience Manager中使用Dynamic Media Scene7設定將資產從一個檔案夾移至另一個檔案夾(NPR-32440)時，在SPS(Scene7 Publishing System)中建立無名稱的檔案夾。
 
 * 將所有資產（使用「全選」然後移動）移至包含已發佈資產的檔案夾的動作會失敗並出現錯誤(NPR-32366)。
 
