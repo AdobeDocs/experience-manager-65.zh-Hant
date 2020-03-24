@@ -98,7 +98,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 此外，為社群網站選取「標籤名稱空間」會限制定義型錄和啟用資源時顯示的選擇。 如需重 [要資訊，請參閱標籤](/help/communities/tag-resources.md) 啟用資源。
 
-使用預先輸入搜尋功能，輕鬆尋找命名空間。 例如，
+使用預先輸入搜尋功能，尋找名稱空間十分簡單。 例如，
 
 * 類型 `tut`
 * 選取 `Tutorial`
