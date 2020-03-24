@@ -90,7 +90,7 @@ AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communitie
 
 ### AEM 6.5更新 {#aem-updates}
 
-從AEM 6.4開始，「社群」的更新會以AEM Cumulative Fix Pack和Service Pack的一部份提供。
+從AEM 6.4開始，Communities的更新會以AEM Cumulative Fix Pack和Service Pack的一部份提供。
 
 如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Packs和Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
 
@@ -147,7 +147,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 **安裝SCORM套件**
 
 1. 從「 [Package Share」（套件共用）安裝2.3.7版的cq-social-scorm](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) -package。
-1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行該實例，以建立升級的scormEngineDB模式。
+1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行它，以建立升級的scormEngineDB模式。
 1. 在發 `/content/communities/scorm/RecordResults` 布者的CSRF篩選器中新增「排除的路徑」 `https://<hostname>:<port>/system/console/configMgr` 屬性。
 
 
