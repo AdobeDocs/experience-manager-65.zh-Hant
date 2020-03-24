@@ -4,22 +4,22 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
+source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager(AEM)6.5透過每季Service Pack提供功能和持續的改善。 新方法可讓客戶更快地採用創新技術，從而獲益。
+Adobe Experience Manager(AEM)6.5透過每季Service Pack提供功能和持續的改善。 隨著創新越來越易於採用，此方法將為您帶來益處。
 
-最新的AEM Service Pack 4(6.5.4.0)將於2020年3 **月5日發行**。 本文著重說明最新Service Pack提供的功能，讓您的AEM旅程更加豐富。
+AEM Service Pack 4(6.5.4.0)將於2020年3月5 **日發行**。 本文著重說明6.5 Service Pack提供的主要功能，讓您的AEM旅程更加豐富。
 
 ## AEM Sites {#aem-sites}
 
 ### 樣式系統增強功能
 
-AEM 6.5.4.0包含Style System增強功能。 您現在可以在元件對話方塊中選取樣式。
+現在，您可以使用增強的「樣式系統」(Style System)在元件對話框中選取樣式。
 
 ### 不同領域的效能改進 {#performance-improvements}
 
@@ -58,7 +58,7 @@ Experience Manager Assets包含下列協助工具增強功能：
 
 ### 在AEM Forms工作流程中產生可列印的輸出 {#generate-printable-output}
 
-新的「產生可列印的輸出」工作流程步驟可讓您將來源範本檔案與資料檔案整合。 此整合可讓您列印或儲存範本檔案的不同副本。 例如，您可以在每次打印源表單時打印不同的名稱。 將名稱儲存在資料檔案中，並將資料檔案與標準範本檔案整合。 如需此功能的詳細資訊，請參 [閱「OSGi —— 步驟參考」上的「表單導向工作流程」](../forms/using/aem-forms-workflow-step-reference.md)。
+使用「生成可打印輸出」工作流步驟，可以將源模板檔案與資料檔案整合。 此整合可讓您列印或儲存範本檔案的不同副本。 此步驟會產生PCL、PostScript、ZPL、IPL、TPCL或DPL輸出。 如需此功能的詳細資訊，請參 [閱「OSGi —— 步驟參考」上的「表單導向工作流程」](../forms/using/aem-forms-workflow-step-reference.md)。
 
 ![產生可列印的輸出](assets/generate-print-output-demo.gif)
 
@@ -66,10 +66,7 @@ Experience Manager Assets包含下列協助工具增強功能：
 
 您現在可以在最適化表單和互動式通訊中，定義面板的欄數。 切換至版面模式，以使用新的多欄選項。 如需詳細資訊，請參 [閱「使用版面模式調整元件大小](../forms/using/resize-using-layout-mode.md)」。
 
-
 ![多欄版面](assets/multi-column-layout.gif)
-
-
 
 ### AEM Inbox自訂 {#aem-inbox}
 
@@ -83,7 +80,7 @@ Experience Manager Assets包含下列協助工具增強功能：
 
 ### HTML5表格中的豐富式文字支援 {#rich-text-support}
 
-現在，當在HTML5表單中轉譯時，您可以將XFA表單中的文字欄位轉換為豐富式文字欄位。 因此，文字欄位會在HTML5表單中顯示其他格式選項的清單。 如需詳細資訊，請 [參閱「設計HTML5表格的表格範本」](../forms/using/designing-form-template.md)。
+將XFA表單中的文字欄位轉換為HTML5表單中的豐富式文字欄位。 如需詳細資訊，請 [參閱「設計HTML5表格的表格範本」](../forms/using/designing-form-template.md)。
 
 ### 協助工具增強功能 {#forms-accessibility-enhancements-6540}
 
@@ -105,16 +102,16 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 資產使用者可以搜尋視覺上類似的影像。 AEM會顯示來自DAM儲存庫的智慧型標籤影像，這些影像類似於使用者選取的影像。請參閱 [視覺搜尋](../assets/search-assets.md)。
 
-### 共用並請求訪問用戶的收件箱項目(6.5.3.0) {#share-request-access}
+### 共用並要求存取AEM Forms使用者(6.5.3.0)的「收件匣」項目 {#share-request-access}
 
 您可以與其他使用者共用您的收件匣項目。 當其他使用者存取您的「收件匣」項目時，使用者就可以對共用項目宣告並採取適當動作。 同樣地，您也可以請求其他使用者存取「收件匣」項目。 請參 [閱共用並請求訪問用戶的收件箱項目](../forms/using/configure-shared-queues-osgi.md)。
 
-### 為收件箱項目(6.5.3.0)配置不在辦公室的設定 {#configure-out-of-office}
+### 為AEM Forms使用者(6.5.3.0)的「收件匣」項目設定不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
 您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
 
-### 使用Batch API(6.5.3.0)產生多種互動式通訊 {#generate-multiple-ic}
+### 使用適用於AEM Forms(6.5.3.0)的Batch API產生多種互動式通訊 {#generate-multiple-ic}
 
 您可以使用Batch API，從範本產生多種互動式通訊。 範本是互動式通訊，不含任何資料。 批次API將資料與範本結合，以產生互動式通訊。 API在大量製作互動式通訊時很實用。 例如，電話帳單、多名客戶的信用卡帳單。 請參 [閱使用批次API產生多種互動式通訊](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
@@ -134,7 +131,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * AEM Cloud Manager CLI更新
 
-   使用命令列工具自動執行Cloud Manager工作。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   使用命令列工具自動執行Cloud Manager任務。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEM Sites:原型23
 
