@@ -3,7 +3,7 @@ title: 關於AEM Assets
 description: 瞭解什麼是數位資產管理、其使用案例，以及Adobe的AEM Asset產品
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 01475dc8cf4f1e4cb0575c60523c27105ebd1150
 
 ---
 
@@ -72,7 +72,7 @@ AEM Assets已與CQ WCM完全整合，而且可使用DAM圖示提供功能：
 
 * **轉譯** ：轉譯是資產的二進位表示法。 資產一律有主要表示法，即上傳的檔案。它們可以有不限數量的其他表示法，例如，可能是由自訂的工作流程步驟或在上傳資產時所建立。轉譯可能有不同大小、不同解析度、加上浮水印，或其他某個已變更的特性。
 
-* **版本** 「版本修訂」會在特定時間點建立數位資產的快照。 您可以將資產還原為舊版。 請參閱「AEM資產中的版本控制」。
+* **版本** 「版本修訂」會在特定時間點建立數位資產的快照。 您可以將資產還原為舊版。 請參 [閱AEM Assets中的版本控制](managing-assets-touch-ui.md#asset-versioning)。
 
 * **子資產** 「子資產」是組成資產的資產，例如Adobe Photoshop檔案中的圖層或PDF檔案中的頁面。 在AEM Assets中，您可以像管理資產一樣管理子資產。
 
@@ -89,6 +89,6 @@ AEM Assets已與CQ WCM完全整合，而且可使用DAM圖示提供功能：
 
 當然，您也可以手動套用工作流程。 請參 [閱「AEM Assets Media](/help/assets/media-handlers.md)Handler」以取得預設工作流程的清單。
 
-## AEM Assets和AEM mediaLibrary {#cq-dam-vs-cq-medialibrary}
+## AEM Assets和AEM MediaLibrary {#cq-dam-vs-cq-medialibrary}
 
 如需 [差異的相關資訊，請參閱「AEM Assets」和「AEM MediaLibrary](/help/assets/medialibrary.md) 」。
