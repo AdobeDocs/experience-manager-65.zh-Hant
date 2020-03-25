@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7ae0055e09c3ae2ff2898ac4f6c537a825dc0cf0
+source-git-commit: 7345d629aa628c2e2e094a8194d9306d7c3d2d60
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.10.6版。
 
-* Experience Manager Assets現在支援使用Deflate 64演算法建立的ZIP封存。
+* Adobe Experience Manager Assets現在支援使用Deflate64演算法建立的ZIP封存。
 
 * 已在DAM清單檢視中新增可排序的建立日期新欄，並在清單檢視中新增資產搜尋結果。
 
@@ -102,7 +102,7 @@ Adobe Experience Manager 6.5.3.0是重要的發行版本，其中包括自2019�
 
 * 新增至影像資產的熱點無法透過資產詳細資料頁面的互動式影像檢視器顯示(NPR-30979)。
 
-* 當對AEM Assets中資產執行的動作傳遞至Scene 7時，會建立巨大的sling工作，並重新顯示「處理」橫幅(NPR-30947)。
+* 當對AEM Assets中資產執行的動作傳遞至Scene 7時，會建立巨大的Sling工作，並重新顯示「處理」橫幅(NPR-30947)。
 
 * 建立資產的語言副本時發生衝突，資產不會上傳至場景7(NPR-30932)。
 
