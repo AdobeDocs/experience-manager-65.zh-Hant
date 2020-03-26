@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7c937b425d909a1f3a9af0a1c3357c44220af0f2
+source-git-commit: 61d1531c020b5a25207b5e3f1c2b0c14e2974e02
 
 ---
 
@@ -60,7 +60,7 @@ Experience Manager Assets包含下列協助工具增強功能：
 
 使用「生成可打印輸出」工作流步驟，可以將源模板檔案與資料檔案整合。 此整合可讓您列印或儲存範本檔案的不同副本。 此步驟會產生PCL、PostScript、ZPL、IPL、TPCL或DPL輸出。 如需此功能的詳細資訊，請參 [閱「OSGi —— 步驟參考」上的「表單導向工作流程」](../forms/using/aem-forms-workflow-step-reference.md)。
 
-![產生可列印的輸出](assets/generate-print-output-demo.gif)
+![產生可列印的輸出](assets/generate-print-output-step.gif)
 
 ### 多欄支援在版面模式中自適應表單和互動式通訊 {#multi-column-adaptive-forms}
 
@@ -107,7 +107,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 ### 為AEM Forms使用者(6.5.3.0)的「收件匣」項目設定不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
-您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
+您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
 
 ### 使用適用於AEM Forms(6.5.3.0)的Batch API產生多種互動式通訊 {#generate-multiple-ic}
 
@@ -124,12 +124,12 @@ Experience Manager Forms包含下列協助工具增強功能：
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
 
-   * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+   * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-2-0.html)
 
 
 * AEM Cloud Manager CLI更新
 
-   使用命令列工具自動執行Cloud Manager任務。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   使用命令列工具自動執行Cloud Manager工作。 請參 [閱GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEM Sites:原型23
 
