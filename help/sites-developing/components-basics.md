@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 00c98c4c1178f88844f6bec8a214d096205c58cd
 
 ---
 
@@ -47,7 +47,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 在開始進行任何有關開發元件的嚴肅討論之前，您必須知道作者將使用哪個UI:
 
 * **觸控式UI**
-   [標準使用者介面](/help/sites-developing/touch-ui-concepts.md) ，是以Adobe Marketing cloud的統一使用者體驗為基礎，使用 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI的基礎技術](/help/sites-developing/touch-ui-concepts.md#granite-ui)。
+   [標準使用者介面](/help/sites-developing/touch-ui-concepts.md) ，是以Adobe Marketing Cloud的統一使用者體驗為基礎，使用 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI的基礎技術](/help/sites-developing/touch-ui-concepts.md#granite-ui)。
 * **傳統UI**&#x200B;使用者介面，以AEM 6.4已淘汰的ExtJS技術為基礎。
 
 如需詳 [細資訊，請參閱客戶的UI介面](/help/sites-deploying/ui-recommendations.md) 建議。
@@ -111,7 +111,7 @@ HTL和JSP都可用來開發傳統和觸控式使用者介面的元件。 雖然�
 
 * 段落制度：
 
-   * 段落系統是網站管理段落清單的重要部分。 它用於保存和構建保存實際內容的各個元件。
+   * 段落系統是網站管理段落清單時的關鍵部分。 它用於保存和構建保存實際內容的各個元件。
    * 您可以在段落系統中建立、移動、複製和刪除段落。
    * 您也可以選取可在特定段落系統中使用的元件。
    * 標準例項中有各種可用的段落系統(例如 `parsys`, ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`)。
@@ -462,7 +462,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
    在傳統對話方塊中：
 
-   * 您可以將對話框建立為 `cq:Dialog`，它將提供單個頁籤——如文本元件中的頁籤，或者如果需要多個頁籤，如同textimage元件一樣，可將對話框定義為 `cq:TabPanel`。
+   * 您可以將對話框建立為 `cq:Dialog`，它將提供單個頁籤——如文本元件中的頁籤，或者如果需要多個頁籤，如文本時間元件中的頁籤，則可以將對話框定義為 `cq:TabPanel`。
    * a `cq:WidgetCollection` ( `items`)用於為輸入欄位( `cq:Widget`)或其它頁籤( `cq:Widget`)提供基礎 此階層可加以擴充。
 
 
@@ -532,7 +532,7 @@ AEM中的元件受3種不同階層的規範：
 
    這用於將配置設定填充到子元件中，最常用於parsys方案。
 
-   例如，可在父元件上定義編輯欄按鈕、控制集佈局（編輯欄、變換）、對話框佈局（內嵌、浮動）的配置設定並傳播到子元件。
+   例如，可在父元件上定義編輯欄按鈕、控制集佈局（編輯欄、變換）、對話框佈局（內嵌、浮動）的配置設定，並傳播到子元件。
 
    中的配置設定（與編輯功能相關） `cq:editConfig` 和 `cq:childEditConfig` 傳播。
 
@@ -624,6 +624,10 @@ AEM中的元件受3種不同階層的規範：
    <td><code>edit</code></td>
    <td>新增按鈕以編輯元件。</td>
   </tr>
+      <tr>
+    <td><code>editannotate</code></td>
+    <td>新增按鈕以編輯元件以及允許 <a href="/help/sites-authoring/annotations.md">註解</a>。</td>
+   </tr>
   <tr>
    <td><code>delete</code></td>
    <td>新增按鈕以刪除元件</td>
@@ -723,7 +727,7 @@ AEM中的元件受3種不同階層的規範：
 
 >[!NOTE]
 >
->在觸控式使用者介面中，對話方塊一律會在案頭模式中浮動，並自動在行動裝置中以全螢幕方式開啟。
+>在觸控式使用者介面中，對話方塊一律會在案頭模式中浮動，並在行動裝置中自動以全螢幕方式開啟。
 
 以下配置定義帶有編輯按鈕的編輯欄和浮動對話框：
 
