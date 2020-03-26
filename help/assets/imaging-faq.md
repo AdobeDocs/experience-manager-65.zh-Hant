@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
+source-git-commit: 582b7e9f36d3b9599058b4cfbe83897822b26d05
 
 ---
 
@@ -24,7 +24,7 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 以下影像資產範例說明新增的智慧型影像最佳化：
 
 | Image<br>(URL) | 縮圖 | 大小<br> (JPEG) | 大小(WebP)<br> (使用智 ***慧影像***) | 減少% |
-|---|:---:|:---:|:---:|:---:|:---:|
+|---|---|---|---|---|
 | [影像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
 | [影像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
 | [影像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
