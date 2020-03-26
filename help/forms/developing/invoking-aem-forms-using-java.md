@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
 
 ---
 
@@ -41,11 +41,11 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](#including-aem-forms-java-library-files)
 
 [調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#main-pars-text-0)
 
-[使用Web services叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md)
+[使用Web Services叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md)
 
 [設定連接屬性](#setting-connection-properties)
 
@@ -55,14 +55,17 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 [使用調用API調用短期進程](#invoking-a-short-lived-process-using-the-invocation-api)
 
-[建立Java web應用程式，以叫用以人為中心的長壽命程式](/help/forms/developing/invoking-human-centric-long-lived.md)
+[建立Java Web應用程式，以叫用以人為中心的長壽命程式](/help/forms/developing/invoking-human-centric-long-lived.md)
 
-## 包含AEM Forms java程式庫檔案 {#including-aem-forms-java-library-files}
+## 包含AEM Forms Java程式庫檔案 {#including-aem-forms-java-library-files}
 
 若要使用Java API以程式設計方式叫用AEM Forms服務，請在Java專案的類路徑中加入必要的程式庫檔案（JAR檔案）。 您在客戶端應用程式的類路徑中包含的JAR檔案取決於以下幾個因素：
 
 * 要叫用的AEM Forms服務。 客戶端應用程式可以調用一個或多個服務。
 * 您要叫用AEM Forms服務的模式。 您可以使用EJB或SOAP模式。 (請參 [閱設定連接屬性](invoking-aem-forms-using-java.md#setting-connection-properties)。)
+
+>[!NOTE] （僅限統包功能）使用命令啟動AEM Forms伺服器， `standalone.bat -b <Server IP> -c lc_turnkey.xml` 以指定EJB的伺服器IP
+
 * 部署AEM Forms的J2EE應用程式伺服器。
 
 ### 特定於服務的JAR檔案 {#service-specific-jar-files}
@@ -115,7 +118,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
   </tr>
   <tr>
    <td><p>adobe-convertpdf-client.jar</p></td>
-   <td><p>需要叫用轉換PDF服務。 </p></td>
+   <td><p>需要叫用「轉換PDF」服務。 </p></td>
    <td><p>&lt;<i>install directory</i>&gt;/sdk/client-libs/common</p></td>
   </tr>
   <tr>
@@ -262,7 +265,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
   </tr>
   <tr>
    <td><p>wlclient.jar</p> </td>
-   <td><p>如果AEM Forms已部署在BEA webLogic Server®上，請加入此JAR檔案。</p> </td>
+   <td><p>如果AEM Forms已部署在BEA WebLogic Server®上，請加入此JAR檔案。</p> </td>
    <td><p>WebLogic專用的lib目錄</p> <p>如果您將用戶端應用程式部署在相同的J2EE應用程式伺服器上，就不需要包含此檔案。</p> </td>
   </tr>
   <tr>
@@ -422,7 +425,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 若要成功叫用AEM Forms服務，請設定下列連線屬性：
 
-* **** DSC_DEFAULT_EJB_ENDPOINT:如果您使用EJB連線模式，此值代表部署AEM Forms的J2EE應用程式伺服器的URL。 若要遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的用戶端應用程式位於相同的J2EE應用程式伺服器上，則可以指定 `localhost`。 視部署J2EE應用程式伺服器AEM Forms的位置而定，指定下列其中一個值：
+* **DSC_DEFAULT_EJB_ENDPOINT:** 如果您使用EJB連線模式，此值代表部署AEM Forms的J2EE應用程式伺服器的URL。 若要遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的用戶端應用程式位於相同的J2EE應用程式伺服器上，則可以指定 `localhost`。 視部署J2EE應用程式伺服器AEM Forms的位置而定，指定下列其中一個值：
 
    * JBoss: `https://<ServerName>:8080 (default port)`
    * WebSphere: `iiop://<ServerName>:2809 (default port)`
@@ -430,7 +433,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 * **DSC_DEFAULT_SOAP_ENDPOINT**:如果您使用SOAP連接模式，此值表示發送調用請求的端點。 若要遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的用戶端應用程式位於相同的J2EE應用程式伺服器上，您可 `localhost` 以指定(例如 `http://localhost:8080`。)
 
-   * 如果J2EE應 `8080` 用程式是JBoss，則埠值適用。 如果J2EE應用程式伺服器是IBM® webSphere®，請使用連接埠 `9080`。 同樣地，如果J2EE應用程式伺服器是WebLogic，請使用連接埠 `7001`。 (這些值是預設埠值。 如果更改了埠值，請使用適用的埠號。)
+   * 如果J2EE應 `8080` 用程式是JBoss，則埠值適用。 如果J2EE應用程式伺服器是IBM® WebSphere®，請使用連接埠 `9080`。 同樣地，如果J2EE應用程式伺服器是WebLogic，請使用連接埠 `7001`。 (這些值是預設埠值。 如果更改了埠值，請使用適用的埠號。)
 
 * **DSC_TRANSPORT_PROTOCOL**:如果使用EJB連接模式，請為 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 此值指定。 如果您使用SOAP連接模式，請指定 `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`。
 * **DSC_SERVER_TYPE**:指定部署AEM Forms的J2EE應用程式伺服器。 有效值 `JBoss`為 `WebSphere`、 `WebLogic`。
@@ -441,9 +444,9 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
    * 如果您不 `java.naming.factory.initial` 想使用預設值，可將屬性設為符合您需求的值。
    *注&#x200B;**意**:您可以使用類的靜態成 `DSC_SERVER_TYPE` 員，而不是使用字串來設定連接屬 `ServiceClientFactoryProperties` 性。 可使用下列值： `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、 `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或 `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
 
-* **** DSC_CREDENTIAL_USERNAME:指定AEM表單使用者名稱。 若要讓使用者成功叫用AEM Forms服務，他們需要「服務使用者」角色。 用戶也可以具有包含「服務調用」權限的其他角色。 否則，當他們嘗試調用服務時會拋出異常。 如果服務安全性被禁用，則無需指定此連接屬性。
-* **** DSC_CREDENTIAL_PASSWORD:指定相應的口令值。 如果服務安全性被禁用，則無需指定此連接屬性。
-* **** DSC_REQUEST_TIMEOUT:SOAP請求的預設請求逾時限制為1200000毫秒（20分鐘）。 有時，完成操作的請求可能需要更長的時間。 例如，擷取大量記錄的SOAP請求可能需要較長的逾時限制。 您可以使用 `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` 來增加SOAP請求的請求呼叫逾時限制。
+* **DSC_CREDENTIAL_USERNAME:** 指定AEM表單使用者名稱。 若要讓使用者成功叫用AEM Forms服務，他們需要「服務使用者」角色。 用戶也可以具有包含「服務調用」權限的其他角色。 否則，當他們嘗試調用服務時會拋出異常。 如果服務安全性被禁用，則無需指定此連接屬性。
+* **DSC_CREDENTIAL_PASSWORD:** 指定相應的口令值。 如果服務安全性被禁用，則無需指定此連接屬性。
+* **DSC_REQUEST_TIMEOUT:** SOAP請求的預設請求逾時限制為1200000毫秒（20分鐘）。 有時，完成操作的請求可能需要更長的時間。 例如，擷取大量記錄的SOAP請求可能需要較長的逾時限制。 您可以使用 `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` 來增加SOAP請求的請求呼叫逾時限制。
 
    **注意**:只有基於SOAP的調用支援DSC_REQUEST_TIMEOUT屬性。
 
@@ -540,7 +543,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 **禁用服務安全性時設定連接屬性**
 
-以下Java代碼示例設定調用部署在JBoss Application server上的AEM Forms以及禁用服務安全性時所需的連接屬性。
+以下Java代碼示例設定調用部署在JBoss Application Server上的AEM Forms以及禁用服務安全性時所需的連接屬性。
 
 ```as3
  Properties ConnectionProps = new Properties();
@@ -567,7 +570,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **使用內容物件來叫用AEM Forms**
 
-您可以使用物 `com.adobe.idp.Context` 件來與已驗證的使用者叫用AEM Forms服務(物件 `com.adobe.idp.Context` 代表已驗證的使用者)。 使用對 `com.adobe.idp.Context` 像時，不需要設定或 `DSC_CREDENTIAL_USERNAME` 屬 `DSC_CREDENTIAL_PASSWORD` 性。 您可以使用物 `com.adobe.idp.Context` 件的方法，在驗證使用者時 `AuthenticationManagerServiceClient` 取得物 `authenticate` 件。
+您可以使用物 `com.adobe.idp.Context` 件來與已驗證的使用者叫用AEM Forms服務(該物 `com.adobe.idp.Context` 件代表已驗證的使用者)。 使用對 `com.adobe.idp.Context` 像時，不需要設定或 `DSC_CREDENTIAL_USERNAME` 屬 `DSC_CREDENTIAL_PASSWORD` 性。 您可以使用物 `com.adobe.idp.Context` 件的方法，在驗證使用者時 `AuthenticationManagerServiceClient` 取得物 `authenticate` 件。
 
 該 `authenticate` 方法返回 `AuthResult` 包含驗證結果的對象。 可以通過調用其 `com.adobe.idp.Context` 建構子來建立對象。 然後叫用 `com.adobe.idp.Context` 物件的方 `initPrincipal` 法並傳遞 `AuthResult` 物件，如下列程式碼所示：
 
@@ -674,7 +677,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [使用Java API將資料傳送至AEM Forms服務](invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
 
@@ -947,7 +950,7 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
 
 [使用Java API叫用AEM Forms](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [使用Java客戶端庫調用服務](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
@@ -957,11 +960,11 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 要執行服務操作，請調用屬於Java對象的方法。 Java客戶端庫包含通常以服務操作一對一映射的方法。 使用Java客戶端庫時，請設定所需的連接屬性。 (請參 [閱設定連接屬性](invoking-aem-forms-using-java.md#setting-connection-properties)。)
 
-設定連線屬性後，請建 `ServiceClientFactory` 立用來執行個體化Java物件的物件，讓您叫用服務。 每個具有Java客戶端庫的服務都具有相應的客戶端對象。 例如，要調用Repository服務，請使用其建構子 `ResourceRepositoryClient` 並傳遞對象來建立對 `ServiceClientFactory` 像。 物 `ServiceClientFactory` 件負責維護呼叫AEM Forms服務所需的連線設定。
+設定連線屬性後，請建 `ServiceClientFactory` 立用來執行個體化Java物件的物件，讓您叫用服務。 每個具有Java客戶端庫的服務都有相應的客戶端對象。 例如，要調用Repository服務，請使用其建構子 `ResourceRepositoryClient` 並傳遞對象來建立對 `ServiceClientFactory` 像。 物 `ServiceClientFactory` 件負責維護呼叫AEM Forms服務所需的連線設定。
 
 雖然獲取 `ServiceClientFactory` 的速度通常很快，但在首次使用工廠時，會涉及一些開銷。 此物件已最佳化以供重複使用，因此在建立多個Java用戶端物 `ServiceClientFactory` 件時，請盡可能使用相同的物件。 也就是說，請勿為您建立的每 `ServiceClientFactory` 個用戶端程式庫物件建立個別物件。
 
-「使用者管理員」設定可控制SAML斷言在物件內的存留期，該斷言 `com.adobe.idp.Context` 會影響物件 `ServiceClientFactory` 。 此設定會控制整個AEM Forms中的所有驗證內容期限，包括使用Java API執行的所有呼叫。 依預設，可使用物件的時 `ServiceCleintFactory` 段為2小時。
+「使用者管理員」設定可控制SAML斷言在物件內的存留期，此斷言 `com.adobe.idp.Context` 會影響物件 `ServiceClientFactory` 。 此設定會控制整個AEM Forms中的所有驗證內容期限，包括使用Java API執行的所有呼叫。 依預設，可使用物件的時 `ServiceCleintFactory` 段為2小時。
 
 >[!NOTE]
 >
@@ -969,7 +972,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 通過使用Java客戶端庫並執行以下步驟，可以調用儲存庫服務：
 
-1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-repository-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-repository-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 1. 設定調用服務所需的連接屬性。
 1. 調用物 `ServiceClientFactory` 件的靜態方 `ServiceClientFactory` 法並傳遞包含連線屬性的物 `createInstance` 件，以建立 `java.util.Properties` 物件。
 1. 使用其 `ResourceRepositoryClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。 使用對 `ResourceRepositoryClient` 像調用儲存庫服務操作。
@@ -998,7 +1001,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 [使用Java API叫用AEM Forms](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 ## 使用調用API調用短期進程 {#invoking-a-short-lived-process-using-the-invocation-api}
 
@@ -1023,11 +1026,11 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 使用 `MyApplication/EncryptDocument` Java調用API叫用短期流程：
 
-1. 在您Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-livecycle-client.jar。 (請參 [閱「包含AEM Forms java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」)。
+1. 在您Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-livecycle-client.jar。 (請參 [閱「包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」)。
 1. 建立包 `ServiceClientFactory` 含連接屬性的對象。 (請參 [閱設定連接屬性](invoking-aem-forms-using-java.md#setting-connection-properties)。)
 1. 使用其 `ServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。 對 `ServiceClient` 像可讓您調用服務操作。 它可處理如定位、調度和路由調用請求等任務。
 1. 使用其 `java.util.HashMap` 建構函式建立物件。
-1. 針對每 `java.util.HashMap` 個輸入參 `put` 數叫用物件的方法，以傳遞至長期的程式。 由於短 `MyApplication/EncryptDocument` 期進程需要一個類型的輸入參數 `Document`，因此只需調用一 `put` 次方法，如下例所示。
+1. 針對每 `java.util.HashMap` 個輸入參 `put` 數叫用物件的方法，以傳遞至長期的程式。 由於短 `MyApplication/EncryptDocument` 期進程需要一個類型的輸入參數 `Document`，因此只需調用一次 `put` 方法，如以下示例所示。
 
    ```as3
     //Create a Map object to store the parameter value for inDoc
@@ -1066,4 +1069,4 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 [調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
-[包含AEM Forms java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
