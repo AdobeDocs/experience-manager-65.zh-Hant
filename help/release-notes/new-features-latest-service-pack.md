@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
+source-git-commit: 7c937b425d909a1f3a9af0a1c3357c44220af0f2
 
 ---
 
@@ -85,8 +85,6 @@ Experience Manager Assets包含下列協助工具增強功能：
 ### 協助工具增強功能 {#forms-accessibility-enhancements-6540}
 
 Experience Manager Forms包含下列協助工具增強功能：
-
-* 使用者可以調整標籤焦點，而不會針對最適化表單的Ultramarine-Accessible參考主題產生任何問題。
 
 * 螢幕閱讀程式會在最適化表單中正確發佈核取方塊、連結、「日期選擇器」和「日期輸入」欄位。
 
