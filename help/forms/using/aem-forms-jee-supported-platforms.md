@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29a94f3ece1b96b24e1b77f4abe6f6f28924ae7b
+source-git-commit: 6cf69dc86ce70a43e77b00d6b3986fa40ae0a4ec
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 29a94f3ece1b96b24e1b77f4abe6f6f28924ae7b
 
 ### 支援等級 {#support-levels}
 
-JEE伺服器上的AEM Forms可使用支援的作業系統、應用程式伺服器、資料庫、資料庫驅動程式、JDK、LDAP伺服器和電子郵件伺服器的任意組合來設定。
+JEE伺服器上的AEM Forms可使用支援的作業系統、應用程式伺服器、資料庫、資料庫驅動程式、JDK、LDAP伺服器和電子郵件伺服器的任何組合來設定。
 
 本檔案列出JEE上AEM Forms支援的用戶端和伺服器平台。 Adobe針對我們建議的組態和其他組態提供數種支援等級。 本文檔還列出了其他支援的軟體及其版本、例外、補丁程式定義和第三方軟體補丁程式支援策略。
 
@@ -70,7 +70,7 @@ Adobe建議您進行這些組態，並在標準軟體維護合約中提供完整
 >為協助AEM Forms客戶降低擁有成本、簡化部署架構並最新化開發堆疊，Adobe Experience Manager企業平台正從應用程式伺服器部署轉向獨立OSGi部署。 Adobe持續支援AEM Forms JEE堆疊，並減少基礎架構元件的矩陣。
 >
 >在6.5版中，我們不再支援在客戶中使用率最低的基礎架構元件，如下所示：
->· Oracle webLogic應用程式伺服器
+>· Oracle WebLogic應用程式伺服器
 >· IBM DB2資料庫
 >· IBM AIX和Sun Solaris作業系統
 >
@@ -122,8 +122,6 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
 
 ### 資料庫和CRX持久性 {#databases-and-crx-persistence}
 
-#### AEM永續性支援 {#aem-persistence-support}
-
 <table>
  <tbody>
   <tr>
@@ -137,7 +135,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
    <td><p>支援</p> </td>
   </tr>
   <tr>
-   <td><p>MongoDB Enterprise 4.0</p> </td>
+   <td><p>MongoDB Enterprise 4.0 </p> </td>
    <td><p>儲存庫微內核</p> </td>
    <td><p>支援</p> </td>
   </tr>
@@ -154,7 +152,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
 
 <tr>
    <td>Oracle Database 19c </td>
-   <td>儲存庫微內核</td>
+   <td>存放庫</td>
    <td>支援</td>
   </tr>
   <tr>
@@ -165,6 +163,11 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   <tr>
    <td>IBM DB2 11.1</td>
    <td>儲存庫微內核</td>
+   <td>R:受限制的支援</td>
+  </tr>
+    <tr>
+   <td>MySQL 5.7.19 </td>
+   <td>-</td>
    <td>R:受限制的支援</td>
   </tr>
  </tbody>
@@ -172,7 +175,6 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
 
 * 新安裝不支援IBM DB2。 僅現有客戶可升級至AEM 6.5 Forms，才支援此功能。
 * MongoDB是協力廠商軟體，不包含在AEM授權套件中。 如需詳細資訊，請參 [閱MongoDB授權政策頁](https://www.mongodb.org/about/licensing/) 。
-
 * 為了充份運用您的AEM部署，Adobe建議您授權MongoDB企業版，以便從專業支援中獲益。
 * Adobe客戶服務將協助您針對搭配AEM使用MongoDB的相關資格問題。 如需詳細資訊，請參 [閱Adobe Experience Manager專用的MongoDB頁面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)。
 * 「檔案系統」包括符合POSIX的塊儲存。 其中包括網路儲存技術。 請注意，檔案系統效能可能會有所不同，並影響整體效能。 建議您將測試AEM與網路／遠端檔案系統結合載入。
@@ -180,50 +182,8 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
 * AEM不支援MongoDB Sharding。
 * JEE上的AEM Forms不支援MySQL的RDBMK永續性。
 * Document Security模組不使用Content Repository。 這表示，如果您只使用Document Security，而不打算使用HTML Workspace、HTML5表單或最適化表單，則不要安裝內容儲存庫。
+* JEE上的AEM Forms不支援使用MySQL來保存AEM Repository(CRX-Repository)。
 
-#### 資料庫支援 {#database-support}
-
-<table>
- <tbody>
-  <tr>
-   <td><p><strong>平台</strong></p> </td>
-   <td><p><strong> 說明</strong></p> </td>
-   <td><p><strong>支援等級</strong></p> </td>
-  </tr>
-  <tr>
-   <td>IBM DB2 11.1</td>
-   <td>儲存庫微內核</td>
-   <td>R:受限制的支援</td>
-  </tr>
-  <tr>
-   <td><p>Oracle Database 12c發行版1</p> </td>
-   <td><p>儲存庫微內核</p> </td>
-   <td><p>支援</p> </td>
-  </tr>
-  <tr>
-   <td>Oracle Database 18c</td>
-   <td>儲存庫微內核</td>
-   <td>支援</td>
-  </tr>
-    <tr>
-   <td>Oracle Database 19c</td>
-   <td>儲存庫微內核</td>
-   <td>支援</td>
-  </tr>
-  <tr>
-   <td><p>MySQL 5.7.19<br /> </p> </td>
-   <td><p>儲存庫微內核</p> </td>
-   <td><p>支援</p> </td>
-  </tr>
-  <tr>
-   <td><p>Microsoft SQL Server 2016</p> </td>
-   <td><p>儲存庫微內核</p> </td>
-   <td><p>支援</p> </td>
-  </tr>
- </tbody>
-</table>
-
-* 新安裝不支援IBM DB2。 僅現有客戶可升級至AEM 6.5 Forms，才支援此功能。
 
 ### 資料庫驅動程式 {#database-drivers}
 
@@ -262,9 +222,9 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
    <td><p><strong>支援的修補程式定義</strong></p> </td>
   </tr>
   <tr>
-   <td>IBM® webSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
+   <td>IBM® WebSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
    <td>答：支援</td>
-   <td>Service pack和重要更新</td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
    <td><p>JBoss®企業應用程式平台(EAP)7.1.4 <sup>[2] [3] [7]</sup></p> </td>
@@ -276,7 +236,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
 
 >[!NOTE]
 >
->IBM® webSphere®叢集僅支援網路部署版本。
+>IBM® WebSphere®叢集僅支援網路部署版本。
 
 ### 伺服器作業系統 {#server-operating-systems}
 
@@ -333,7 +293,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   <tr>
    <td><p>Microsoft® Windows® 10 64位元</p> </td>
    <td>E:預期可運作</td>
-   <td><p>Service pack和重要更新</p> </td>
+   <td><p>Service Pack和重要更新</p> </td>
   </tr>
  </tbody>
 </table>
@@ -342,10 +302,10 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
 
 在選擇平台以在JEE伺服器上設定AEM Forms時，請考慮下列例外情況。
 
-1. AEM Forms on JEE不支援IBM® webSphere®搭配MySQL。
-1. JEE上的AEM Forms不支援，SUSE Linux Enterprise Server 12上的JBoss也不支援。 SUSE Linux Enterprise Server 12僅支援IBM webSphere。
+1. AEM Forms on JEE不支援IBM® WebSphere®搭配MySQL。
+1. JEE上的AEM Forms不支援，SUSE Linux Enterprise Server 12上的JBoss也不支援。 SUSE Linux Enterprise Server 12僅支援IBM WebSphere。
 1. JEE上的AEM Forms不支援任何JDK搭配JBoss®（Oracle Java™ SE除外）。
-1. AEM Forms on JEE不支援IBM® webSphere®的任何JDK（IBM® JDK除外）。
+1. AEM Forms on JEE不支援IBM® WebSphere®的任何JDK（IBM® JDK除外）。
 1. CRX-repository支援TarMK、MongoDB和關係資料庫(RDBMK)類型的持久性。 應用程式伺服器和CRX-repository之間不能有兩個不同的資料庫系統。 不過，在JEE環境的AEM Forms上，您可以搭配CRX-repository使用MongoMK，並搭配應用程式伺服器使用支援的關係資料庫。
 1. JEE上的AEM Forms不支援CentOS上的WebSphere應用程式伺服器。
 1. JEE上的AEM Forms不支援JBoss角色型存取控制(RBAC)。
@@ -410,7 +370,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   </tr>
   <tr>
    <td>IBM Content Manager Server</td>
-   <td>8.5 Fix pack 2</td>
+   <td>8.5修正套件2</td>
   </tr>
   <tr>
    <td>IBM Content Manager Client</td>
@@ -478,7 +438,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 >此外：
 >
 >* PDF Generator需要32位元版本的 [Acrobat 2017傳統音軌17.011.30078或更新版本](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) ，才能執行轉換。
->* PDF Generator僅支援32位元零售版Microsoft Office Professional plus和轉換所需的其他軟體。
+>* PDF Generator僅支援32位元零售版Microsoft Office Professional Plus和轉換所需的其他軟體。
 >* PDF產生器不支援Microsoft Office 365。
 >* OpenOffice專用的PDF產生器轉換僅在Windows和Linux上受支援。
 >* OCR PDF、最佳化PDF和匯出PDF功能僅在Windows上受支援。
@@ -495,7 +455,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 下列AEM Forms子系統不符合 [508](https://www.section508.gov/) :
 
 * 最適化表單製作UI
-* Forms manager編寫UI
+* Forms Manager編寫UI
 * Commense Management編寫UI
 * 管理員UI（管理控制台UI）
 
@@ -525,7 +485,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
    <td>小型生產環境的硬體需求</td>
    <td>
     <ul>
-     <li><strong>英特爾支援的環境</strong>:英特爾®至強® E5-2680、2.4 GHz或更高版本。 使用雙核處理器將進一步提高效能</li>
+     <li><strong>英特爾驅動的環境</strong>:英特爾®至強® E5-2680、2.4 GHz或更高版本。 使用雙核處理器將進一步提高效能</li>
      <li><strong>記憶體： </strong>4 GB <br /> </li>
     </ul> </td>
   </tr>
@@ -569,7 +529,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 
 ### 設計人員 {#designer}
 
-**** 注意：若要在Windows上安裝Designer，請以管理權限執行安裝程式。
+**注意：** 若要在Windows上安裝Designer，請以管理權限執行安裝程式。
 
 * Microsoft® Windows® 2016 Server、Microsoft Windows 10
 
@@ -585,7 +545,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 * 視訊硬體加速（選用）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
 
-### Adobe acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
+### Adobe Acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
 <table>
  <tbody>
@@ -636,7 +596,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
    <td>所有更新</td>
   </tr>
   <tr>
-   <td>MAC OS x上的Google Chrome和Firefox</td>
+   <td>MAC OS X上的Google Chrome和Firefox</td>
    <td>答：支援<br /><br /> </td>
    <td>所有更新</td>
   </tr>
@@ -658,7 +618,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 >桌上型電腦的部分瀏覽器相關例外如下：
 >
 >* 大部份的現代瀏覽器不再支援NPAPI增效模組。 如需有關它對AEM Forms應用程式和工作流程有何影響的詳細資訊，請參閱「停 [止使用NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)」。
->* Safari僅在Macintosh OS x上受支援。
+>* Safari僅在Macintosh OS X上受支援。
 >* 工作區支援Macintosh OS X 10.6和10.7的Safari 5.1與Acrobat DC或更新版本。 如需Safari 5.1與Adobe Reader、Acrobat相容性的詳細資訊，請參閱 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html)。
 >* Safari不支援Administration Console。
 >* Correponse Management不支援Windows® Internet Explorer 9.0 for AEM 6.1表格。
@@ -722,7 +682,7 @@ AEM Forms應用程式可在下列平台上使用：
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Flash player最新版</p> </td>
+   <td><p>Flash Player最新版</p> </td>
    <td><p>次要版本和更新</p> </td>
   </tr>
  </tbody>
