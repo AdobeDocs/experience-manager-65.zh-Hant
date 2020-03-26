@@ -10,31 +10,31 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: a7ce63433f7e46feae8b0d23778e36d10c33972a
 
 ---
 
 
 # 為JBoss應用程式伺服器配置SSL {#configuring-ssl-for-jboss-application-server}
 
-要在JBoss Application server上配置SSL，需要SSL身份驗證憑證。 您可以使用Java鍵工具來建立憑證或要求，並從憑證授權機構(CA)匯入憑證。 然後，您必須在JBoss上啟用SSL。
+要在JBoss Application Server上配置SSL，需要SSL身份驗證憑證。 您可以使用Java鍵工具來建立憑證或要求，並從憑證授權機構(CA)匯入憑證。 然後，您必須在JBoss上啟用SSL。
 
 您可以使用單一命令來執行keytool，該命令包含建立keystore所需的所有資訊。
 
 在此過程中：
 
-* *[appserver root]* 是執行AEM表單之應用程式伺服器的首頁目錄。
-* *[type]* 是資料夾名稱，視您執行的安裝類型而定。
+* `[appserver root]` 是執行AEM表單之應用程式伺服器的首頁目錄。
+* `[type]` 是根據您執行的安裝類型而有所不同的資料夾名稱。
 
 ## 建立SSL憑證 {#create-an-ssl-credential}
 
 1. 在命令提示符下，導航到 *[JAVA HOME]*/bin ，然後鍵入以下命令以建立憑據和密鑰庫：
 
-   `keytool -genkey -dname "CN=`*主機名&#x200B;*組名`, OU=`*Group名Name* Company Name `, O=`*Company State Name *Company NameChantCountry`,L=`**`, S=`**`, C=`**`" -alias``"``*LC Cert*`**`-keyalg RSA -keypass`**`-keystore`**Code Company DignedChantKeyKeystostoRenamedCyMany`.keystore`
+   `keytool -genkey -dname "CN=`*主機名&#x200B;*組名稱`, OU=`*名稱名* 稱 `, O=`*Company Name *State ConturyName`,L=`**`, S=`**`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**Company StateCanturyCodeKey_password ConturyCode（城市名稱——密碼）KeystorenameCrenameCo`.keystore`
 
    >[!NOTE]
    >
-   >將 [JAVA_HOME] 替換為安裝JDK的目錄，並將斜體文本替換為與您的環境相對應的值。 主機名是應用程式伺服器的完全限定域名。
+   >以安 `[JAVA_HOME]` 裝JDK的目錄取代，並以與您的環境對應的值取代斜體文字。 主機名是應用程式伺服器的完全限定域名。
 
 1. 在提示輸 `keystore_password` 入密碼時輸入。 密鑰庫和密鑰的密碼必須相同。
 
@@ -42,60 +42,51 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
    >
    >此步 `keystore_password` 驟中 *輸入的密碼可能與在步驟1中輸入的密碼相同(key_password)，也可能不同。*
 
-1. 鍵入以 *下命令之一，將* keystorename *[.keystore複製到]* appserver root *[/server/]* type/conf目錄：
+1. 鍵入以 *下命令之一*，將keystorename `[appserver root]/server/[type]/conf` .keystore複製到目錄：
 
-   * (Windows Single Server) `copy`*keystorename *`.keystore`*[appserver root ]*`\standalone\configuration`
-   * (Windows Server Cluster)copy *keystorename*.keystore *[appserver root]*\domain\configuration
-   * （Linux單伺服器） `cp`*keystorename *`.keystore`*[appserver root ]*`/standalone/configuration`
-   * （Linux伺服器群集）
+   * (Windows Single Server) `copy``keystorename.keystore[appserver root]\standalone\configuration`
+   * （Windows伺服器群集）副本 `keystorename.keystore[appserver root]\domain\configuration`
+   * （Linux單伺服器） `cp keystorename.keystore [appserver root]/standalone/configuration`
+   * （Linux伺服器群集） `cp <em>keystorename</em>.keystore<em>[appserver root]</em>/domain/configuration`
 
-      ```
-      cp <em>keystorename</em>.keystore<em>[appserver root]</em>/domain/configuration
-      ```
 
 1. 鍵入以下命令以導出證書檔案：
 
-   * &quot;（單伺服器）keytool -export -alias &quot;LC Cert&quot; -file LC_cert.cer -keystore [appserver root]/standalone/configuration/keystorename.keystore
-   * （伺服器群集）keytool -export -alias *&quot;LC Cert&quot;* -file *LC_cert*.cer -appserver root *[]***/domain/configuration/keystorenameKeystore
+   * （單一伺服器） `keytool -export -alias "AEMForms Cert" -file AEMForms_cert.cer -keystore [appserver root]/standalone/configuration/keystorename.keystore`
+   * （伺服器群集） `keytool -export -alias "AEMForms Cert" -file AEMForms_cert.cer -keystore [appserver root]/domain/configuration/keystorename.keystore`
 
 1. 在提示輸 *入密碼時輸入keystore_password* 。
-1. 鍵入以下命令，將LC_cert.cer檔案復 *[制到appserver root]\conf *directory:
+1. 鍵入以下命令，將AEMForms_cert.cer檔案複製 *[到appserver root]\conf *directory:
 
-   * (Windows Single Server)copy LC_cert.cer [appserver root]\standalone\configuration
-   * （Windows伺服器群集）複製LC_cert.cer [appserver root]\domain\configuration
-   * （Linux單伺服器）cp LC _cert.cer [appserver root]\standalone\configuration
-   * （Linux伺服器群集）cp LC _cert.cer [appserver root]\domain\configuration
+   * (Windows Single Server) `copy AEMForms_cert.cer [appserver root]\standalone\configuration`
+   * （Windows伺服器群集） `copy AEMForms_cert.cer [appserver root]\domain\configuration`
+   * （Linux單伺服器） `cp AEMForms _cert.cer [appserver root]\standalone\configuration`
+   * （Linux伺服器群集） `cp AEMForms _cert.cer [appserver root]\domain\configuration`
 
 1. 通過鍵入以下命令查看證書的內容：
 
-   * `keytool -printcert -v -file [appserver root]\standalone\configuration\LC_cert.cer`
-   * 
+   * `keytool -printcert -v -file [appserver root]\standalone\configuration\AEMForms_cert.cer`
+   * `keytool -printcert -v -file [appserver root]\domain\configuration\AEMForms_cert.cer`
 
-   ```
-   keytool -printcert -v -file [appserver root]\domain\configuration\LC_cert.cer
-   ```
-
-   ``
-
-1. 要在 *[JAVA_HOME]*\jre\lib\security中提供對cacerts檔案的寫訪問，請執行以下任務：
+1. 要在中提供對cacerts檔案的寫訪問 `[JAVA_HOME]\jre\lib\security`權限（如果需要），請執行以下任務：
 
    * (Windows)在快取檔案上按一下滑鼠右鍵，然後選取「屬性」，然後取消選取「唯讀」屬性。
    * (Linux)類型 `chmod 777 cacerts`
 
 1. 輸入以下命令以匯入憑證：
 
-   `keytool -import -alias “LC Cert” -file`*LC_cert *`.cer -keystore`*JAVA_HOME*`\jre\lib\security\cacerts`
+   `keytool -import -alias “AEMForms Cert” -file`*AEMForms_cert *`.cer -keystore`*JAVA_HOME*`\jre\lib\security\cacerts`
 
 1. 鍵 `changeit` 入密碼。 此密碼是Java安裝的預設密碼，系統管理員可能已更改此密碼。
 1. 當提示輸入 `Trust this certificate? [no]`：時，鍵入 `yes`。 將顯示確認&quot;Certificate was added to keystore&quot;。
 1. 如果您要從Workbench透過SSL連線，請在Workbench電腦上安裝憑證。
 1. 在文字編輯器中，開啟下列檔案以進行編輯：
 
-   * 單伺服器- [appserver root]/standalone/configuration/lc_&lt;dbname/tunkney>.xml
+   * 單伺服器- `[appserver root]`/standalone/configuration/lc_&lt;dbname/tunkney>.xml
 
-   * 伺服器群集- [appserver root]/domain/configuration/host.xml
+   * 伺服器群集- `[appserver root]`/domain/configuration/host.xml
 
-   * 伺服器群集- [appserver root]/domain/configuration/domain_&lt;dbname>.xml
+   * 伺服器群集- `[appserver root]`/domain/configuration/domain_&lt;dbname>.xml
 
 1. 
    * **對於單一伺服器** ，在lc_&lt;dbaname/tunkey>.xml檔案中，在&lt;security-erinds>部分後面添加以下內容：
@@ -104,7 +95,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
    <security-realm name="SSLRealm">
    <server-identities>
    <ssl>
-   <keystore path="C:/Adobe/Adobe_Experience_Manager_Forms/jboss/standalone/configuration/aemformses.keystore" keystore-password="adobe" alias="AEMformsCert" key-password="adobe"/>
+   <keystore path="C:/Adobe/Adobe_Experience_Manager_Forms/jboss/standalone/configuration/aemformses.keystore" keystore-password="changeit" alias="AEMformsCert" key-password="changeit"/>
    </ssl>
    </server-identities>
    </security-realm>
@@ -126,7 +117,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
    <security-realm name="SSLRealm">
    <server-identities>
    <ssl>
-   <keystore path="C:/Adobe/Adobe_Experience_Manager_Forms/jboss/standalone/configuration/aemformses.keystore" keystore-password="adobe" alias="AEMformsCert" key-password="adobe"/>
+   <keystore path="C:/Adobe/Adobe_Experience_Manager_Forms/jboss/standalone/configuration/aemformses.keystore" keystore-password="changeit" alias="AEMForms Cert" key-password="changeit"/>
    </ssl>
    </server-identities>
    </security-realm>
@@ -175,15 +166,15 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 1. 在命令提示符下，導航到 *[JAVA HOME]*/bin ，然後鍵入以下命令以建立密鑰庫和密鑰：
 
-   `keytool -genkey -dname "CN=`*Host Name *Group Name`, OU=`*NameNameNameNameCompanyName* NameCompanyState `, O=`*NameCity *`, L=`**`, S=`**`, C=`**`" -alias``"``*LC Cert*`**`-keyalg RSA -keypass`**`-keystore`** Conturity Code Company Company ChangDignetOrignHyDPagngnPDOryPamedC `.keystore`
+   `keytool -genkey -dname "CN=`*主機名&#x200B;*組名稱`, OU=`*名稱名* 稱公司名稱 `, O=`*Company Name *Company State Name`, L=`**`, S=`**`, C=`**`-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**ConturyConturyContryContryCode&quot; Jountry-Key passwordRenameKeystostoRename`.keystore`
 
    >[!NOTE]
    >
-   >以安 *`[JAVA_HOME]`裝JDK的目錄取代，並以與您的環境對應的值取代斜體文字。*
+   >以安 *`[JAVA_HOME]`* 裝JDK的目錄取代，並以與您的環境對應的值取代斜體文字。
 
 1. 鍵入以下命令以生成要發送到證書頒發機構的證書請求：
 
-   `keytool -certreq -alias`*&quot;LC Cert&quot;*keystorename`-keystore`**`.keystore -file`*LCcertRequest.csr *
+   `keytool -certreq -alias` &quot;AEMForms Cert&quot; keystorename `-keystore`**`.keystore -file`*AEMFormscertRequest.csr*
 
 1. 當您的憑證檔案要求完成時，請完成下一個程式。
 
@@ -191,7 +182,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 1. 在命令提示符下，導航到 *`[JAVA HOME]`*/bin ，然後鍵入以下命令以導入已與CSR簽名的CA的根證書：
 
-   `keytool -import -trustcacerts -file`*rootcert *`.pem -keystore`*keystorename*`.keystore -alias root`
+   `keytool -import -trustcacerts -file` rootcert.pem -keystore` keystorename.keystore -alias root`
 
    如果根證書不在瀏覽器中，也可將其導入。
 
