@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -56,4 +56,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 檔案庫功能 {#file-library-function}
 
-一種包含「特色內容」功能 [的社群網站結構](functions.md#featured-content-function)，包括已設定的 `featured content` 元件。
+一種包含「特色內容」功能 [的社群網站結構](functions.md#featured-content-function)，包含已設定的 `featured content` 元件。
