@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f3928558641af89d138bfbf85ba099a4286b2f3
+source-git-commit: bdb26ba817e0599f811d7f4e131ec6ab356a4785
 
 ---
 
@@ -26,10 +26,15 @@ Adobe Experience Manager(AEM)Assets是透過Adobe I/O以品牌入口網站設定
 >之前，品牌入口網站是透過舊版OAuth閘道在傳統使用者介面中設定，該閘道使用JWT代號交換來取得IMS存取代號以進行授權。
 >
 >自2020年4月6日起，不再支援透過舊版OAuth進行的設定，並變更為透過Adobe I/O進行設定。
+
+
+>[!TIP]
 >
->如果您是舊版OAuth閘道上具備設定的現有品牌入口網站使用者，建議您刪除現有的設定並在Adobe I/O上建立新的設定。
+>***僅限現有客戶***
 >
->但是，如果不修改配置，現有配置將繼續工作。
+>建議您繼續使用現有的舊版OAuth閘道設定。 萬一您遇到舊版OAuth閘道設定的問題，請刪除現有的設定，並透過Adobe I/O建立新的設定。
+
+
 
 本說明說明下列兩個使用案例：
 * [新配置](#configure-new-integration-65):如果您是新的品牌入口網站使用者，並想要使用品牌入口網站設定您的AEM Assets作者例項，則可以在Adobe I/O上建立新的設定。
@@ -149,7 +154,7 @@ Adobe I/O整合會產生API金鑰、用戶端密碼和裝載(JWT)，這是設定
 
    ![建立整合](assets/create-new-integration2.png)
 
-1. 指定整合的名稱和說明。 按一 **[!UICONTROL 下「從電腦選取檔案]** 」，並上傳 `AEM-Adobe-IMS.crt` 在「取得公用憑證」區 [段中下載的檔案](#public-certificate) 。
+1. 指定整合的名稱和說明。 按一 **[!UICONTROL 下「從電腦選取檔案」]** ，並上傳 `AEM-Adobe-IMS.crt` 在「取得公用憑證」區 [段中下載的檔案](#public-certificate) 。
 
 1. 選擇組織的配置檔案。
 
