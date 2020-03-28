@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Messaging Essentials{#messaging-essentials}
+# Messaging Essentials {#messaging-essentials}
 
 本頁記錄了使用消息傳遞元件在網站上包含消息傳遞功能的詳細資訊。
 
@@ -98,17 +98,21 @@ source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
 
 >[!CAUTION]
 >
->String參數必須*not *包含下列MessageBuilder方法的尾隨斜線&quot;/&quot;:
+>String參數不得 *包含* 下列MessageBuilder方法的尾隨斜線&quot;/&quot;:
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
->例如：
 >
->```
+例如：
+>
+>
+```>
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
->```
+>```>
+
+
 
 ### 社群網站 {#community-site}
 
@@ -122,22 +126,22 @@ source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
 
 若要試用伺服器端範例指令碼，您需要開發環境和建立OSGi套件的能力：
 
-1. 以管理員身分登入， ` [CRXDE|Lite](https://localhost:4502/crx/de).`
+1. 以管理員身份登錄 ` [CRXDE|Lite](https://localhost:4502/crx/de)`。
 1. 使用任 `bundle node`意 `/apps/engage/install` 名稱建立，例如：
 
-   * 符號名稱：com.engage.media.social.messaging.MessagingNotification
+   * 符號名稱: `com.engage.media.social.messaging.MessagingNotification`
    * 名稱：快速入門教學課程訊息通知
-   * 說明：在使用者收到訊息時傳送電子郵件通知的範例服務
-   * 套件：com.engage.media.social.messaging.notification
+   * 說明：當使用者收到訊息時傳送電子郵件通知的範例服務
+   * 封裝: `com.engage.media.social.messaging.notification`
 
-1. 導覽至/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification，然後：
+1. 導覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然後：
 
-   1. 刪除自動建立的Activator.java類。
-   1. 建立類MessageEventHandler.java。
-   1. 將下面的代碼複製並貼上到MessageEventHandler.java中。
+   1. 刪除自 `Activator.java` 動建立的類。
+   1. 建立類別 `MessageEventHandler.java`。
+   1. 將下方的程式碼複製並貼入 `MessageEventHandler.java`。
 
-1. 按一下「 **全部儲存」。**
-1. 導覽至/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd，並新增MessageEventHandler.java程式碼中寫入的所有匯入陳述式。
+1. 按一下「 **全部儲存**」。
+1. 導覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`並新增程式碼中寫入的所有匯入陳述 `MessageEventHandler.java` 式。
 1. 建立套件。
 1. 確 `Day CQ Mail Service`保已配置OSGi服務。
 1. 以示範使用者身分登入，並傳送電子郵件給其他使用者。
