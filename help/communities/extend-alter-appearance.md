@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# 變更外觀(HBS){#alter-the-appearance-hbs}
+# 變更外觀(HBS) {#alter-the-appearance-hbs}
 
 現在，應用程式目錄(/apps)中自訂註解系統的元件已就緒，resourceSuperType會參照預設註解系統並註冊自訂模型／檢視，因此可修改實施。
 
@@ -30,7 +30,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* open [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* Open [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
    * 注釋掉標籤，其中包含評論貼文的頭像(~ line 21):
 
@@ -40,7 +40,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
        -->
       ```
 
-* open [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* Open [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
    * 注釋掉標籤，其中包含頭像做為下一個注釋項目(~ line 44):
 
