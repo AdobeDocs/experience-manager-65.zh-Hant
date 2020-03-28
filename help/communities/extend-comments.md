@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -31,7 +31,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 若要實作此解決方案，請建立可延伸（覆寫）現有元件並修改Handlebars指令碼的新元件。 使用新注釋的網站區域可以使用擴充的注釋，而使用預設外觀的網站則不受影響。
 
-注釋元件實際上是構成注釋系統的兩個元件之一。 因此，需要擴展兩個元件：留 *言**和留言*。 要編輯的指令碼位於*comment * `header.hbs` component的檔案中，而父 *comments* component（注釋系統）則是作者實際新增至頁面的內容。
+注釋元件實際上是構成注釋系統的兩個元件之一。 因此，需要擴展兩個元件：留 *言**和留言*。 要編輯的指令碼位於 *comment*`header.hbs` 元件的檔案中，而父 *注釋元件* （注釋系統）則是作者實際新增至頁面的內容。
 
 若要延伸意見，您必須：
 
