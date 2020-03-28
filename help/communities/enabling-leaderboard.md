@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# 排行榜功能{#leaderboard-feature}
+# 排行榜功能 {#leaderboard-feature}
 
 ## 簡介 {#introduction}
 
@@ -26,7 +26,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 本節說明
 
-* 將元件 `Leaderboard` 添加到社 [區站點](/help/communities/overview.md#community-sites)
+* 將元件 `Leaderboard` 新增至社 [群網站](/help/communities/overview.md#community-sites)
 * 元件的配置設 `Leaderboard` 置
 
 ### 新增排行榜至頁面 {#adding-a-leaderboard-to-a-page}
@@ -51,7 +51,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 「設定」頁籤 {#settings-tab}
 
-在**設定**頁籤下，指定將顯示與成員相關的資訊：
+在「設 **置** 」頁籤下，指定將顯示與成員相關的資訊：
 
 * **顯示名稱**
 
@@ -87,13 +87,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **徽章規則**
 
-   （必要）產生要顯示之標章的特定規則。
+   （必要）產生要顯示的徽章的特定規則。
 
 * **顯示限制**
 
-   每頁要顯示的成員數。
-
-   預設值為10。
+   每頁要顯示的成員數。預設值為10。
 
 ### 範例：參與者領導委員會 {#example-participants-leaderboard}
 
