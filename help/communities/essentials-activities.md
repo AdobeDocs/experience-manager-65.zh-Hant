@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Activity Stream Essentials{#activity-stream-essentials}
+# Activity Stream Essentials {#activity-stream-essentials}
 
 在社區成員中籤名的活動，例如張貼到論壇或部落格，被收集到流中，該流可以通過活動流元件的配置以各種方式被過濾和顯示。
 
@@ -32,7 +32,7 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
 
 新 *聞饋送* ，是將成員跟隨的活動串流合併為單一串流。
 
-*社 [交圖](/help/communities/essentials-socialgraph.md)*可擷取一個成員與另一個成員的下列關係。
+社 *[交圖表](/help/communities/essentials-socialgraph.md)*，會擷取一個成員與另一個成員的下列關係。
 
 ## 用戶端基本功能 {#essentials-for-client-side}
 
