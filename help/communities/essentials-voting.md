@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -49,7 +49,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td><p>請參 <a href="voting.md">閱使用投票</a></p> </td>
+   <td><p>請參閱，使 <a href="voting.md">用投票</a></p> </td>
   </tr>
  </tbody>
 </table>
