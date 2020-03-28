@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -21,9 +21,9 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 當成員與社群功能互動時，會傳送OSGi事件，可觸發非同步接聽程式，例如通知或遊戲化（計分和標籤）。
 
-元件的 [SocialEvent例項會將](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)`actions``topic`事件記錄為 SocialEvent包含傳回與動作相 `verb`關聯的方法。 和之 *間有* n- `actions`1關係 `verbs`。
+元件的 [SocialEvent例項會將事件記](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 錄為發生的事件 `actions``topic`。 SocialEvent包含傳回與動作相 `verb` 關聯的方法。 和之 *間有* n- `actions` 1關係 `verbs`。
 
-對於發行版中提供的Communities元件，下表說明了每個可 `verbs`用元件 `topic`的定義。
+對於發行版中提供的Communities元件，下表說明了每個可 `verbs` 用元件 `topic` 的定義。
 
 ## 主題和動詞 {#topics-and-verbs}
 
