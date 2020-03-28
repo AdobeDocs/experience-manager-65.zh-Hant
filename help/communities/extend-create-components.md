@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -73,7 +73,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 建立子注釋元件 {#create-the-child-comment-component}
 
-這些指示將 **Group** (組 `.hidden` )設定為，因為頁面中應僅包含父元件。
+這些指示將 **Group** ( `.hidden` 群組)設為僅應包含在頁面中的父元件。
 
 刪除自動建立的JSP檔案是因為將改用預設的HBS檔案。
 
