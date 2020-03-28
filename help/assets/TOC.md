@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assets User Guide
 translation-type: tm+mt
-source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
+source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 # AEM 6.5 Assets使用指南 {#assets}
 
 + [資產使用指南](home.md)
-+ [AEM 6.5 Assets發行說明](../release-notes/assets.md)
++ [AEM 6.5 Assets發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [關於DAM](assets.md)
 + [資產的最佳實務](best-practices-for-assets.md)
 + 使用AEM Assets {#using}
@@ -129,7 +129,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [使用內容片段](content-fragments.md)
    + [管理內容片段](content-fragments-managing.md)
    + [內容片段模型](content-fragments-models.md)
-   + [變化 - 製作片段內容](content-fragments-variations.md)
+   + [變化 - 編寫片段內容](content-fragments-variations.md)
    + [內容片段關聯內容](content-fragments-assoc-content.md)
    + [中繼資料 - 片段屬性](content-fragments-metadata.md)
    + [內容片段 - 刪除考量事項](content-fragments-delete.md)
