@@ -2,7 +2,7 @@
 title: Adobe Experience Manager Assets發行說明
 description: Adobe Experience Manager 6.5 Assets的新功能和增強功能。
 translation-type: tm+mt
-source-git-commit: 23f838b681d4d9eda55e287519f330addf7928aa
+source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
 
 ---
 
@@ -31,7 +31,7 @@ source-git-commit: 23f838b681d4d9eda55e287519f330addf7928aa
 
 [!DNL Adobe Stock] 服務可讓設計人員和企業針對其所有創意專案，取用數百萬個高品質、優質且免版稅的像片、向量、插圖、視訊、範本和3D資產。
 
-如需詳細資訊，請 [參閱「在Experience Manager資產中使用DNL Adobe Stock資產」](/help/assets/aem-assets-adobe-stock.md)。
+如需詳細資訊，請 [參閱Experience Manager Assets中的「使用[!DNL Adobe Stock]資產」](/help/assets/aem-assets-adobe-stock.md)。
 
 ![從Experience Manager Assets預覽Adobe Stock影像和授權](assets/stock_image_preview_license_options.png)
 
