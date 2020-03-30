@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -81,7 +81,7 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
 
    ![4-highlightmoduleincontent](assets/4_highlightmoduleincontent.png)
 
-   在「內容」或「資料」索引標籤中，只要點選HTML字母預覽左上角的「反白標示選取的模組」(反白標示選取的模組incontentccr ![](assets/highlightselectedmodulesincontentccr.png))，您就可以在字母預覽中選取相關文字、段落或資料欄位時停用或啟用功能，以前往內容／資料模組。
+   在「內容」或「資料」索引標籤中，只要點選HTML字母預覽左上角的「反白標示選取的模組」（反白標示選取的模組），您就可停用或啟用功能，以在字母預覽中選取相關文字、段落或資料欄位時移至內容／資料模組。 ![](assets/highlightselectedmodulesincontentccr.png)
 
    有關「建立對應」用戶介面中各模組可用操作的詳細資訊，請參閱「建立對應」 [用戶介面中的「操作」和「資訊」](../../forms/using/create-letter.md#main-pars-header-9)。
 
@@ -99,11 +99,11 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
 
    您可能想要重複使用另一個檔案應用程式中存在的多段文字。 您可以直接複製和貼上文字，例如從MS Word、HTML頁面或任何其他應用程式複製和貼上。
 
-   您可以在可編輯的文字模組中複製和貼上一或多個文欄位落。 例如，您可能有MS word檔案，其中包含可接受的居住證明項目清單，如下所示：
+   您可以在可編輯的文字模組中複製和貼上一或多個文欄位落。 例如，您可能有MS Word檔案，其中包含可接受的居住證明項目清單，如下所示：
 
    ![bastextword](assets/pastetextmsword.png)
 
-   您可以直接將MS word檔案中的文字複製並貼至可編輯的文字模組。 文字模組會保留項目清單、字型和文字顏色等格式。
+   您可以直接將MS Word檔案中的文字複製並貼至可編輯的文字模組。 文字模組會保留項目清單、字型和文字顏色等格式。
 
    ![basteteditablemodule](assets/pastetexteditablemodule.png)
 
@@ -134,9 +134,9 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
 
    ![黑邊背景顏色](assets/letterbackgroundcolor.png)
 
-   您可以直接點選「基本顏色」浮動視窗中顯示的基本顏色 **[A]** ，或在使用滑桿 **B後點選「選取」****[]** ，以選擇適當的顏色陰影。
+   您可以直接點選「基本顏色」浮動 `**[A]**` 視窗中顯示的基本顏色，或在使用滑桿選取適當的顏色後點選「選取」( **Select**`**[B]**` )。
 
-   或者，您也可以前往「進階」索引標籤，選取適當的「色相」、「明度」和「飽和度 **[C]** 」以建立精確的色彩，然後點選「選取 **[D]** 」以套用色彩來反白顯示文字。
+   或者，您也可以前往「進階」索引標籤，選取適當的「色相」、「明度」和「飽和度」 `**[C]**``**[D]**` ，以建立精確的色彩，然後點選「選取」以套用顏色來反白顯示文字。
 
    ![textbackgroundcolor](assets/textbackgroundcolor.png)
 
@@ -189,7 +189,7 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
 * 跳過項目符號（適用於清單模組及其子模組）:跳過特定模組中的項目符號。
 * 分頁前（適用於目標區域的子模組）:在模組前插入分頁符。
 * 後分頁符（適用於目標區域的子模組）:在模組前插入分頁符。
-* 未填充的值（資訊）:指出目標區域中未填入的變數數目。
+* 未填充的值（資訊）:指出目標區域中未填入變數的數目。
 * 編輯（僅限文字模組）:開啟豐富式文字編輯器，以編輯文字模組。
 * 資料面板（文字與條件模組）:開啟模組的所有變數。
 
@@ -304,7 +304,7 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
 
    ![Adobe Experience Manager Web Console設定](assets/2configmanager.png)
 
-1. 在本頁面上，找出「Adobe liveCycle Client SDK Configuration」，然後按一下以展開它。
+1. 在本頁面上，找出「Adobe LiveCycle Client SDK Configuration」，然後按一下以展開它。
 
 1. 在「處理伺服器URL」中，輸入LiveCycle伺服器的名稱，提供登入資訊，然後按一下「儲 **存**」。
 
@@ -349,7 +349,7 @@ AEM Forms Correponse Management會在「建立對應UI」中將字母顯示為HT
 
 要更改字母的預覽模式，請完成以下步驟：
 
-1. 請前 `https://[system]:[port]/system/console/configMgr` 往並視需要以管理員身分登入。
+1. 請前 `https://[system]:'port'/system/console/configMgr` 往並視需要以管理員身分登入。
 1. 轉至「 **[!UICONTROL 對應管理設定]** >轉譯類型 **[!UICONTROL 」，然後選取「]** HTML轉譯 **（預設）」或「****** PDF轉譯」。
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
 
