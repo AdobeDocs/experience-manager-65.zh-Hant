@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 若要透過編輯tbxeditor-config.xml檔案來自訂字型，請執行下列動作：
 
-1. 前往並 `https://[server]:[port]/[ContextPath]/crx/de` 以管理員身分登入。
+1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
 1. 在應用程式檔案夾中，使用類似設定檔案夾的路徑／結構建立名為config的檔案夾，該檔案夾位於libs/fd/cm/config中，請執行下列步驟：
 
    1. 以滑鼠右鍵按一下下列路徑上的items資料夾，然後選取「覆 **蓋節點」**:
@@ -48,11 +48,11 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
    1. 請確定「覆蓋節點」對話框具有下列值：
 
-      **** 路徑：/libs/fd/cm/config
+      **路徑：** /libs/fd/cm/config
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配節點類型：已選取
+      **匹配節點類型：** 已選取
 
       ![覆蓋節點](assets/2.png)
 
