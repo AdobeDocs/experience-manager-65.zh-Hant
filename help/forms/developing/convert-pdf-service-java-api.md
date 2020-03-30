@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: bdd9bb56-14f6-448b-be4a-7c11f670e901
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
-***注意&#x200B;**:「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application server和Microsoft windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
 ## 快速入門（SOAP模式）:使用Java API將PDF檔案轉換為PostScript {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
@@ -98,7 +98,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
          {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -144,7 +144,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API將PDF檔案轉換為JPEG檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-下列Java程式碼範例會將名為 *Loan.pdf* 的PDF檔案轉換為一組JPEG檔案，並儲存在C:\Adobe directory檔案夾中。 每個檔案都 `tempFile[index].jpg`會命名，其中第一個影像檔 *案名為tempFile0.jpg*。 (請參 [閱將PDF檔案轉換為影像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats)。)
+下列Java程式碼範例會將名為 *Loan.pdf* 的PDF檔案轉換為一組JPEG檔案，並儲存在C:\Adobe directory檔案夾中。 每個檔案都 `tempFile[index].jpg`會命名，其中第一個影像檔 *案命名為tempFile0.jpg*。 (請參 [閱將PDF檔案轉換為影像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats)。)
 
 ```as3
  /*
@@ -221,7 +221,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
      {
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
