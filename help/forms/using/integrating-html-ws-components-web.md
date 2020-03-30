@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 您可以在自己的Web應用程式 [中使用](/help/forms/using/description-reusable-components.md) AEM Forms工作區元件。 下列範例實作使用CRX™例項上安裝的AEM Forms工作區開發套件中的元件來建立Web應用程式。 自訂下列解決方案，以符合您的特定需求。 範例實作會重 `UserInfo`新使用 `FilterList`Web Portal `TaskList`內的元件。
 
-1. 在登錄CRXDE Lite環境 `https://[server]:[port]/lc/crx/de/`。 請確定您已安裝AEM Forms Workpace dev套件。
+1. 在登錄CRXDE Lite環境 `https://'[server]:[port]'/lc/crx/de/`。 請確定您已安裝AEM Forms Workpace dev套件。
 1. 建立路徑 `/apps/sampleApplication/wscomponents`。
 1. 複製css、影像、js/libs、js/runtime和js/registry.js
 
