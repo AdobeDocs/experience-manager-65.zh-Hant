@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 執行下列步驟以設定伺服器端記錄檔：
 
-1. 前往 `https://[server]:[port]/system/console/configMgr`. 找到並開啟 *Apace Sling logger configuration* option。 將出現一個對話框：
+1. 前往 `https://'[server]:[port]'/system/console/configMgr`. 找到並開啟 *Apace Sling logger configuration* option。 將出現一個對話框：
 
    ![ Apace Sling logger configuration option對話框](assets/logconfig.png)
 
@@ -172,11 +172,11 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 >b(xfaView):6（用戶指定的TRACE）
 >a(xfaPerf):2（預設層級錯誤）
 
-### 使用Configuration manager啟用記錄 {#enabling-logging-using-configuration-manager}
+### 使用Configuration Manager啟用記錄 {#enabling-logging-using-configuration-manager}
 
-如果您使用Configuration manager來啟用記錄，則會為每個演算請求產生記錄，直到再次停用記錄。
+如果您使用Configuration Manager來啟用記錄，則會為每個演算請求產生記錄，直到再次停用記錄。
 
-1. 在登入CQ Configuration Manager，並使用 `https://[server]:[port]/system/console/configMgr` 管理員認證登入。
+1. 在登入CQ Configuration Manager，並使用 `https://'[server]:[port]'/system/console/configMgr` 管理員認證登入。
 1. 搜尋並按一下「行 **動表單設定」**。
 1. 在「除錯選項」文字方塊中，輸入上一節所述的記錄設定，例如 **2-a4-b5-c6**
 
@@ -192,7 +192,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 要更改日誌檔案的位置和名稱，請執行以下操作：
 
-1. 以管理員身份登錄到Configuration Manager。 配置管理器的預設URL為 `https://[Server]:[Port]/system/console/configMgr`。
+1. 以管理員身份登錄到Configuration Manager。 配置管理器的預設URL為 `https://'[server]:[port]'/system/console/configMgr`。
 1. 按一 **下Apache Sling Logging Logger Configuration**。 將出現一個對話框。
 
    ![logconfig-1](assets/logconfig-1.png)
@@ -205,6 +205,6 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
    >
    >要在保存其他日誌檔案的同一目錄中建立日誌，請在「日誌檔案」屬性中指定。./logs/&lt;filename>。
 
-1. 將 **Logger** 變更為 **HTMLFormsPerfLogger** ，然後按一下「 **儲存**」。
+1. 將 **Logger** 變更為 **HTMLFormsPerfLogger** ，然後按一 **下Save**。
 
 [聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
