@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,7 +33,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >此程式不以現有的AEM Forms程式為基礎。 要跟隨討論如何調用此流程的代碼示例，請使用工作台建立一個名為 `MyApplication/EncryptDocument` 的流程。 (請參 [閱使用工作台](https://www.adobe.com/go/learn_aemforms_workbench_63)。)
 
-使用Flash builder建立的用戶端應用程式會與User Manager的安全servlet互動，此Servlet設定於 `/um/login` 和 `/um/logout`。 也就是說，用戶端應用程式會在啟動期間傳送 `/um/login` 要求至URL，以判斷使用者的狀態。 然後，使用者管理員會回應使用者狀態。 客戶端應用程式和用戶管理器安全servlet使用HTTP進行通信。
+使用Flash Builder建立的用戶端應用程式會與User Manager的安全servlet互動，此Servlet設定於 `/um/login` 和 `/um/logout`。 也就是說，用戶端應用程式會在啟動期間傳送 `/um/login` 要求至URL，以判斷使用者的狀態。 然後，使用者管理員會回應使用者狀態。 客戶端應用程式和用戶管理器安全servlet使用HTTP進行通信。
 
 **請求格式**
 
@@ -66,7 +66,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **登入程式**
 
-當客戶端應用程式啟動時，可以向安全servlet發出POST `/um/login` 請求。 例如， `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`。 當請求到達User Manager安全servlet時，它會執行以下步驟：
+當客戶端應用程式啟動時，可以向安全servlet發出POST `/um/login` 請求。 For example, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. 當請求到達User Manager安全servlet時，它會執行以下步驟：
 
 1. 它會尋找名為的Cookie `lcAuthToken`。 如果使用者已登入其他Forms應用程式，則此Cookie存在。 如果找到Cookie，則會驗證其內容。
 1. 如果啟用了基於標題的SSO，則servlet將查找已配置的標題以確定用戶的標識。
@@ -125,7 +125,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->請注意，有兩個名為um和views的包。 在建立客戶端應用程式時，請確保將檔案放在正確的包中。 此外，請確定您將adobe-remoting-provider.swc檔案新增至專案的類別路徑。 (請參 [閱「包含AEM Forms flex程式庫檔案](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)」)。
+>請注意，有兩個名為um和views的包。 在建立客戶端應用程式時，請確保將檔案放在正確的包中。 此外，請確定您將adobe-remoting-provider.swc檔案新增至專案的類別路徑。 (請參 [閱「包含AEM Forms Flex程式庫檔案](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)」)。
 
 ### 建立SSOStandalone.mxml檔案 {#creating-the-ssostandalone-mxml-file}
 
@@ -697,8 +697,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
              private var fileRef:FileReference = new FileReference();
              private var docRef:DocumentReference = new DocumentReference();
              private var parentResourcePath:String = "/";
-             //private var serverPort:String = "[server]:[port]";
-             private var serverPort:String = "[server]:[port]";
+             //private var serverPort:String = "'[server]:[port]'";
+             private var serverPort:String = "'[server]:[port]'";
              private var now1:Date;
              private var userManager:UserManager;
  
@@ -895,14 +895,14 @@ User Manager安全servlet會以下列值作出響應：
 
 ### 用戶已通過驗證 {#the-user-is-already-authenticated}
 
-在此情況下，使用者已登入AEM Forms，然後導覽至用戶端應用程式。 在啟動期間，客戶端應用程式連接到User manager安全servlet。
+在此情況下，使用者已登入AEM Forms，然後導覽至用戶端應用程式。 在啟動期間，客戶端應用程式連接到User Manager安全servlet。
 
 ```as3
  GET /um/login?um%5Fno%5Fredirect=true HTTP/1.1
  Cookie: JSESSIONID=A4E0BCC2DD4BCCD3167C45FA350BD72A; lcAuthToken=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A
 ```
 
-由於使用者已經通過驗證，因此User Manager cookie會存在並傳送至User Manager安全servlet。 然後，Servlet將獲取該 `assertionId` 值並驗證其是否有效。 如果有效，則 `authstate=COMPLETE` 傳回。 否則 `authstate=CREDENTIAL_CHALLENGE` 會傳回。 以下是典型響應：
+由於使用者已經通過驗證，因此User Manager Cookie會存在並傳送至User Manager安全servlet。 然後，Servlet將獲取該 `assertionId` 值並驗證其是否有效。 如果有效，則 `authstate=COMPLETE` 傳回。 否則 `authstate=CREDENTIAL_CHALLENGE` 會傳回。 以下是典型響應：
 
 ```as3
  HTTP/1.1 200 OK
