@@ -10,7 +10,7 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -130,11 +130,11 @@ Barcoded Forms服務對於將紙本上的資料轉換為電子格式非常有用
 
 ## 配置服務的屬性 {#configureproperties}
 
-您可以使用 **AEM Console中的AEMFD Barcoded Forms** Service來設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:[port]/system/console/configMgr`。
+您可以使用 **AEM Console中的AEMFD Barcoded Forms** Service來設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:'port'/system/console/configMgr`。
 
 ## 使用服務 {#using}
 
-Barcoded Forms service提供下列兩個API:
+Barcoded Forms Service提供下列兩個API:
 
 * **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:解碼輸入PDF檔案或tiff影像中所有可用的條碼。 它返回另一個XML文檔，該文檔包含從輸入文檔或影像中所有可用的條形碼檢索到的資料。
 
