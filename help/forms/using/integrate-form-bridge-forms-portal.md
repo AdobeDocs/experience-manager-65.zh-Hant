@@ -1,6 +1,6 @@
 ---
-title: 將Form bridge與HTML5表單的自訂入口網站整合
-seo-title: 將Form bridge與HTML5表單的自訂入口網站整合
+title: 將Form Bridge與HTML5表單的自訂入口網站整合
+seo-title: 將Form Bridge與HTML5表單的自訂入口網站整合
 description: 您可以使用FormBridge API從HTML頁面取得或設定表單欄位的值，並送出表單。
 seo-description: 您可以使用FormBridge API從HTML頁面取得或設定表單欄位的值，並送出表單。
 uuid: c8911f82-1a25-47a5-9a06-19b5dce74a2c
@@ -10,12 +10,12 @@ topic-tags: hTML5_forms
 discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# 將Form bridge與HTML5表單的自訂入口網站整合{#integrating-form-bridge-with-custom-portal-for-html-forms}
+# 將Form Bridge與HTML5表單的自訂入口網站整合{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
 FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBridge API參考，請參閱 [FormBridge API參考](/help/forms/using/form-bridge-apis.md)。
 
@@ -27,7 +27,7 @@ FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBrid
 
 1. **選擇描述檔或建立描述檔**
 
-   1. 在CRX DE介面中，導航至： `https://[server]:[port]/crx/de`。
+   1. 在CRX DE介面中，導航至： `https://'[server]:[port]'/crx/de`。
    1. 使用管理員憑證登入。
    1. 建立描述檔或選擇現有描述檔。
 
