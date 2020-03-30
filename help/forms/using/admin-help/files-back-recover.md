@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,9 +37,9 @@ GDS的位置是在AEM表單安裝程式期間或更新版本中，使用管理�
 
 如果在安裝期間將位置設定保留為空，則位置預設為應用程式伺服器安裝下的目錄。 您必須備份應用程式伺服器的以下目錄：
 
-* (JBoss) `[appserver root]/server/[server]/svcnative/DocumentStorage`
-* (WebLogic) `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage`
-* (WebSphere) `[appserver root]/installedApps/adobe/[server]/DocumentStorage`
+* (JBoss) `[appserver root]/server/'server'/svcnative/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`
+* (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 如果將GDS位置更改為非預設位置，則可以按如下方式確定該位置：
 
@@ -58,7 +58,7 @@ GDS的位置是在AEM表單安裝程式期間或更新版本中，使用管理�
 
 ## AEM存放庫 {#aem-repository}
 
-如果在安裝AEM表單時設定crx-repository，則會建立AEM資料庫(crx-repository)。 crx-repository目錄的位置是在AEM表單安裝程式期間決定。 AEM儲存庫備份和還原需要資料庫和GDS，才能在AEM表單中取得一致的AEM表單資料。 AEM儲存庫包含Correponsement Management Solution、Forms manager和AEM Forms Workspace的資料。
+如果在安裝AEM表單時設定crx-repository，則會建立AEM資料庫(crx-repository)。 crx-repository目錄的位置是在AEM表單安裝程式期間決定。 AEM儲存庫備份和還原需要資料庫和GDS，才能在AEM表單中取得一致的AEM表單資料。 AEM儲存庫包含Correponsement Management Solution、Forms Manager和AEM Forms Workspace的資料。
 
 ### 通信管理解決方案 {#correspondence-management-solution}
 
@@ -68,7 +68,7 @@ GDS的位置是在AEM表單安裝程式期間或更新版本中，使用管理�
 
 ### 表單管理器 {#forms-manager}
 
-forms manager可簡化更新、管理和淘汰表單的程式。
+forms Manager可簡化更新、管理和淘汰表單的程式。
 
 ### AEM Forms Workspace {#html-workspace}
 
@@ -78,7 +78,7 @@ AEM Forms Workspace符合（JEE上的AEM Forms已過時）Flex Workspace的功�
 >
 >AEM表單版本不建議使用Flex Workspace。
 
-它可讓用戶端不需使用Flash player和Adobe Reader即可進行任務管理。 除了PDF表單和Flex表單外，它還可協助轉譯HTML表格。
+它可讓用戶端不需使用Flash Player和Adobe Reader即可進行任務管理。 除了PDF表單和Flex表單外，它還可協助轉譯HTML表格。
 
 ## AEM表單資料庫 {#aem-forms-database}
 
@@ -113,15 +113,15 @@ DB2具有將資料庫備份到Tivoli Storage Manager的內置功能。 通過使
 
 使用快照備份或將Oracle資料庫配置為在歸檔日誌模式下運行。 (請參 [閱Oracle備份：簡介](https://www.databasedesign-resource.com/oracle-backup.md)。)有關備份和恢復Oracle資料庫的詳細資訊，請轉至以下站點：
 
-[](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Oracle備份和恢復：詳細說明了備份和恢復的概念以及使用Recovery Manager(RMAN)進行備份、恢復和報告的最常用技術，並提供了有關如何規劃備份和恢復策略的詳細資訊。
+[Oracle備份和恢復：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) 詳細說明了備份和恢復的概念以及使用Recovery Manager(RMAN)進行備份、恢復和報告的最常用技術，並提供了有關如何規劃備份和恢復策略的詳細資訊。
 
-[](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Oracle Database Backup and Recovery User&#39;s Guide:提供有關RMAN體系結構、備份和恢復概念和機制、高級恢復技術（如時間點恢復和資料庫閃回功能）以及備份和恢復效能調整的深入資訊。 它還包括使用主機作業系統功能（而非RMAN）的用戶管理備份和恢復。 此卷對於備份和恢復更複雜的資料庫部署以及高級恢複方案至關重要。
+[Oracle Database Backup and Recovery User&#39;s Guide:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) 提供有關RMAN體系結構、備份和恢復概念和機制、高級恢復技術（如時間點恢復和資料庫閃回功能）以及備份和恢復效能調整的深入資訊。 它還包括使用主機作業系統功能（而非RMAN）的用戶管理備份和恢復。 此卷對於備份和恢復更複雜的資料庫部署以及高級恢複方案至關重要。
 
-[](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Oracle資料庫備份和恢復參考：提供有關所有RMAN命令的語法和語義的完整資訊，並介紹可用於報告備份和恢復活動的資料庫視圖。
+[Oracle資料庫備份和恢復參考：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) 提供有關所有RMAN命令的語法和語義的完整資訊，並介紹可用於報告備份和恢復活動的資料庫視圖。
 
 ### SQL Server {#sql-server}
 
-使用快照備份或將SQL server資料庫配置為在事務日誌模式下運行。
+使用快照備份或將SQL Server資料庫配置為在事務日誌模式下運行。
 
 SQL Server還提供了兩種備份和恢復工具：
 
@@ -134,7 +134,7 @@ SQL Server還提供了兩種備份和恢復工具：
 
 使用MySQLAdmin或修改Windows中的INI檔案，以配置MySQL資料庫以二進位日誌模式運行。 (請參 [閱MySQL二進位日誌](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。)InnoBase軟體也提供了MySQL的熱備份工具。 (請參 [閱Innobase熱備份](https://www.innodb.com/hot-backup/features.md)。)
 
-**注意**:MySQL *的預設二進位日誌記錄模式是「語句」，它與Content services使用的表（已過時）不相容。 在此預設模式中使用二進位記錄會導致Content Services（已過時）失敗。 如果您的系統包含Content Services（已過時），請使用「混合」記錄模式。*要啟用「混合」日誌，請將以下引數添加到my.ini檔案：
+**注意**:MySQL *的預設二進位日誌記錄模式是「語句」，它與Content Services使用的表（已過時）不相容。 在此預設模式中使用二進位記錄會導致Content Services（已過時）失敗。 如果您的系統包含Content Services（已過時），請使用「混合」記錄模式。 要啟用「混合」日誌，請將以下引數添加到my.ini檔案：*
 `binlog_format=mixed log-bin=logname`
 
 您可以使用mysqldump實用程式獲得完整的資料庫備份。 需要完整備份，但並不總是方便的。 它們會生成大型備份檔案，並需要時間生成。 要執行增量備份，請確保使用——選項啟動服 `log-bin` 務器，如上節所述。 每次MySQL伺服器重新啟動時，它都停止寫入當前二進位日誌，建立新日誌，然後，從此開始，新日誌將變為當前日誌。 可以使用命令手動強制切換 `FLUSH LOGS SQL` 器。 在第一次完全備份後，後續增量備份將使用mysqladmin實用程式和命令來完成，該命 `flush-logs` 令將建立下一個日誌檔案。
@@ -172,9 +172,9 @@ log-bin=logname
 
 在叢集環境中安裝Content Services（已過時）時，Content Storage Root目錄會分割為兩個不同的目錄：
 
-**** 內容儲存根目錄：通常，共用網路目錄可供群集中所有節點讀／寫訪問
+**內容儲存根目錄：** 通常，共用網路目錄可供群集中所有節點讀／寫訪問
 
-**** 索引根目錄：在群集中每個節點上建立的目錄，始終具有相同的路徑和目錄名
+**索引根目錄：** 在群集中每個節點上建立的目錄，始終具有相同的路徑和目錄名
 
 內容儲存根目錄的預設位置是 `[GDS root]/lccs_data`，其中 `[GDS root]` 是 [GDS位置中描述的位置](files-back-recover.md#gds-location)。 備份位於「內容儲存根目錄」中的以下目錄：
 
