@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ AEM Forms工作區可讓您在「任務摘要」窗格中顯示您選擇的網�
 1. 配置任務摘要URL欄位。 您可以指定常值、範本、變數或XPath運算式。
 1. 下面是顯示「任務摘要」頁上資訊的示例。
 
-   * 請登錄到CRXDE Lite環境，網址為 `https://[server]:[port]/lc/crx/de`。
+   * 請登錄到CRXDE Lite環境，網址為 `https://'[server]:[port]'/lc/crx/de`。
    * `Create a node`**SampleSummary **/` under `contentnt:` with type `unstructredsling:`. In the properties of this node, add `resourceTypeSampleSummaryPERM_WORKSPACE_` of type String and value ``. In the Access Control List of this node, add an entry for `` allowing `USERjcr:read` privileges.`
    * `Create a folder`**SampleSummary **，在`/apps`下。 在的「訪問控制列`/apps/SampleSummary`表」中，添加允許的`PERM_WORKSPACE_USER`條目`jcr:readprivileges`。
    * `Create a file `html.esp` at `/apps/`. For example, add the following lines in `SampleSummaryhtml.esp`.`
