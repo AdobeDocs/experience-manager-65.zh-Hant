@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,12 +18,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Forms的預設安裝和設定僅允許伺服器上提供一個AEM Forms工作區。 不過，您可能需要在單一AEM Forms伺服器上托管兩個不同的AEM Forms工作區例項。 這兩個例項可透過不同的URL存取。
 
-AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩個工作區可在同一伺服器上使用。 在本自訂文章中，我們假設兩個工作區可在和 `https://[server]:[port]/lc/ws` 存取 `https://[server]:[port]:/lc/ws2`。
+AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩個工作區可在同一伺服器上使用。 在本自訂文章中，我們假設兩個工作區可在和 `https://'[server]:[port]'/lc/ws` 存取 `https://'[server]:[port]':/lc/ws2`。
 
 請依照下列步驟來設定AEM Forms工作區。
 
-1. 在您的伺服器上安裝AEM Forms工作區的開發套件。 如需 [建立封裝的指示](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，請參閱開發套件。
-1. 以管理員身分登入CRXDE Lite，方法是存取 `https://[server]:[port]/lc/crx/de/index.jsp`。
+1. 在您的伺服器上安裝AEM Forms工作區的開發套件。 如需 [建立封裝的指示](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，請參閱dev套件。
+1. 以管理員身分登入CRXDE Lite，方法是存取 `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 複製節點位於/content，貼上於/content。 將節點更名為ws2。 按一下「 **[!UICONTROL 全部儲存]**」。 在此節點的屬性中，將值 `sling:resourceType` 更改為ws2。 按一下「 **[!UICONTROL 全部儲存]**」。
 
 1. 從/libs複製資料夾，並貼在/apps。 將資料夾更名為ws2。 按一下「 **[!UICONTROL 全部儲存]**」。
