@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -72,7 +72,7 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
 
 您可以檢視有關作者或發佈例項的交易報表。 作者實例的事務報表提供在已配置的作者和發佈實例上發生的所有事務的匯總。 發佈例項上的交易報表提供僅在基礎發佈例項上發生的交易計數。 執行下列步驟以檢視報表：
 
-1. 請登入AEM Forms伺服器，網址為 `https://[hostname]:[port]`。
+1. 請登入AEM Forms伺服器，網址為 `https://[hostname]:'port'`。
 1. 導覽至「 **工具** >表 **單**>檢視交易報&#x200B;**表」**。
 
 ## 瞭解報表 {#understanding-the-report}
