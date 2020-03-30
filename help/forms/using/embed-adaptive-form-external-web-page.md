@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 92a64c8a1ba38f592d18355b8233cb79a2575301
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -162,7 +162,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 ## 啟用AEM Forms，以針對跨網域網站提供最適化表單 {#cross-site}
 
-1. 在AEM作者例項上，請前往AEM Web Console Configuration Manager(網址為 `https://[server]:[port]/system/console/configMgr`)。
+1. 在AEM作者例項上，請前往AEM Web Console Configuration Manager(網址為 `https://'[server]:[port]'/system/console/configMgr`)。
 1. 找到並開啟 **Apache Sling Referrer Filter設定** 。
 1. 在「允許的主機」欄位中，指定網頁所在的網域。 它可讓主機向AEM伺服器發出POST請求。 您也可以使用規則運算式來指定一系列外部應用程式網域。
 
