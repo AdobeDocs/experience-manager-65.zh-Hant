@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,9 +33,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 若要使用瀏覽器登入網頁，您需要檔案安全性URL和帳戶。 使用者的URL與管理員的URL不同。 管理員也可以登入使用者頁面以建立原則。
 
-如果您可存取多個檔案保全安裝，則需要要存取之檔案保全實例的URL。 如果您沒有此資訊，請洽詢您的管理員。 使用者頁面的預設URL為https://*[host]*:*[port]*/edc。 在某些情況下，可能不需要埠號。 請洽詢您的管理員以取得詳細資訊。
+如果您可存取多個檔案保全安裝，則需要要存取之檔案保全實例的URL。 如果您沒有此資訊，請洽詢您的管理員。 使用者頁面的預設URL為 `https://[host]:[port]/edc`。 在某些情況下，可能不需要埠號。 請洽詢您的管理員以取得詳細資訊。
 
-管理員的預設URL為https://*[host]*:*[port]*/adminui。
+管理員的預設URL為 `https://[host]:[port]/adminui`。
 
 對於管理員，在安裝期間會建立預設的超級管理員帳戶。 當首次安裝Document Security時，您可以使用這個帳戶登入。
 
@@ -45,9 +45,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 在瀏覽器中輸入URL:
 
-   檔案安全性URL:主 `https://`*[機&#x200B;]*`:`*[埠]*`/edc`
+   檔案安全性URL: `https://[host]:[port]/edc`
 
-   或管理控制台URL:主 `https://`*[機&#x200B;]*`:`*[埠]*`/adminui`
+   或管理控制台URL: `https://[host]:[port]/adminui`
 
 1. 在登入視窗中，輸入您的使用者名稱和密碼，然後按一下「確定」。
 1. 在「管理控制台」中，按一下「服務>檔案安全性」。
@@ -88,9 +88,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 <!-- Fix broken link See Configuring SSL for information on SSL.-->
 
-這些說明是Internet explorer專用的，但您可以使用任何支援的網頁瀏覽器來安裝憑證。 如需詳細資訊，請參閱您瀏覽器的說明。
+這些說明是Internet Explorer專用的，但您可以使用任何支援的網頁瀏覽器來安裝憑證。 如需詳細資訊，請參閱您瀏覽器的說明。
 
-**使用Internet explorer安裝伺服器證書**
+**使用Internet Explorer安裝伺服器證書**
 
 1. 開啟您的網頁瀏覽器，並在「位址」方塊中輸入檔案安全性的基本URL。 例如，鍵入 `https://[host]:[port]`。 出現「Security Alert（安全警報）」對話框。
 1. 按一下「檢視憑證」，然後按一下「安裝憑證」，並選取預設值以進行安裝。 憑證必須安裝在受信任的根認證授權機構中。
