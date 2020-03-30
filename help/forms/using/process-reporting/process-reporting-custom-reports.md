@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,16 +30,16 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ## 使用QueryBuilder的REST介面 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX queryBuilder REST介面透過Java API和REST API公開「資產共用查詢產生器」的功能。 在執行下列步驟之 [前，瞭解如何使用CRX QueryBuilder REST介面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html):
+CRX QueryBuilder REST介面透過Java API和REST API公開「資產共用查詢產生器」的功能。 在執行下列步驟之 [前，瞭解如何使用CRX QueryBuilder REST介面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html):
 
-1. 瀏覽至URL `https://[server]:[port]/lc/bin/querybuilder.json`
+1. 瀏覽至URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根據Process Reporting儲存節點結構和節點屬性建立查詢。
 
    您可以指定可選參數來指定偏移、限制、點擊和屬性。 您可以硬式編碼靜態報表的引數，並從動態報表的UI擷取參數。
 
    要獲取所有進程名，查詢為：
 
-   `https://[Server]:[Port]/lc/bin/querybuilder.json?exact=false&p.hits=selective&p.properties=pmProcessTitle&path=%2fcontent%2freporting%2fpm&property=pmNodeType&property.operation=equals&property.value=ProcessType&type=sling%3aFolder`
+   `https://'[server]:[port]'/lc/bin/querybuilder.json?exact=false&p.hits=selective&p.properties=pmProcessTitle&path=%2fcontent%2freporting%2fpm&property=pmNodeType&property.operation=equals&property.value=ProcessType&type=sling%3aFolder`
 
    >[!NOTE]
    >
@@ -426,7 +426,7 @@ public class PeriodicProcessVolume {
 
 1. 在節點上建立CRX節 `/apps` 點並授予適當的訪問權限。 (PERM_PROCESS_REPORTING_USER)
 1. 在節點上定義渲染 `/content` 器。
-1. 將JSP或HTML檔案添加到在步驟1中建立的節點。 您也可以新增CSS檔案。
+1. 將JSP或HTML檔案添加到步驟1中建立的節點。 您也可以新增CSS檔案。
 
    ![包含JSP和CSS檔案的範例節點](assets/nodewith_jsp_css_new.png)
 
@@ -438,7 +438,7 @@ public class PeriodicProcessVolume {
 
 1. （可選）將適當的錯誤處理常式新增至Ajax呼叫。
 
-同時使用OSGi service和QueryBuilder API的範例JSP程式碼為：
+同時使用OSGi Service和QueryBuilder API的範例JSP程式碼為：
 
 ```
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling/1.0"%>
@@ -635,7 +635,7 @@ response.setCharacterEncoding("utf-8");
 1. 建立個別的UI。
 1. 在節點上為每 `nt:unstructured` 個可插拔報告 `/content/process-reporting-runtime/custom-reports` 建立子節點。
 
-   * **id**—— 指定報表的唯一標識號。
+   * **id**—— 指定報表的唯一識別碼。
    * **name**—— 指定報表的名稱。 名稱會顯示在UI中。
    * **link**—— 指定個別UI轉譯器的相對連結。 該連結建立步驟1。
    * **description**—— 指定報表的一行說明。 您可將說明欄位保留為空白。
