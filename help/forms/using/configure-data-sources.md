@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43780682ba27d9c7d578393df04267ed8be4f1de
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,19 +20,19 @@ source-git-commit: 43780682ba27d9c7d578393df04267ed8be4f1de
 
 AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 下列類型是現成可用的支援。 不過，只需少量自訂，您也可以整合其他資料來源。
 
-* 關係資料庫- mySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
+* 關係資料庫- MySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
 * AEM使用者設定檔
 * REST風格的Web服務
 * 基於SOAP的web services
 * OData服務
 
-資料整合支援OAuth2.0、基本驗證和API金鑰驗證類型立即可用，並可實作自訂驗證以存取網站服務。 雖然RESTful、SOAP架構和OData服務已在AEM Cloud services中設定，但AEM web主控台中已設定關係式資料庫的JDBC和AEM使用者設定檔的連接器。
+資料整合支援OAuth2.0、基本驗證和API金鑰驗證類型立即可用，並可實作自訂驗證以存取網站服務。 雖然RESTful、SOAP架構和OData服務已在AEM Cloud Services中設定，但AEM Web主控台中已設定關係式資料庫的JDBC和AEM使用者設定檔的連接器。
 
 ## 配置關係資料庫 {#configure-relational-database}
 
 您可以使用AEM Web Console Configuration來設定關係式資料庫。 執行下列動作：
 
-1. 前往AEM網頁主控台([https:// server]:[host]/system/console/configMgr)。
+1. 前往https://server:host/system/console/configMgr的AEM網頁主控台。
 1. 尋找 **[!UICONTROL Apache Sling Connection Pooled DataSource組態]** 。 點選以在編輯模式中開啟設定。
 1. 在配置對話框中，指定要配置的資料庫的詳細資訊，例如：
 
@@ -47,7 +47,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
    >
    >    
    >    
-   >    1. 轉至https://[server]:[port]/system/console/crypto。
+   >    1. 請轉至https://&#39;[server]:[port]&#39;/system/console/crypto。
    >    1. 在「純 **[!UICONTROL 文本]** 」欄位中，指定要加密的口令或任何字串，然後按一下「保 **[!UICONTROL 護」]**。
    >    
    >    
@@ -66,7 +66,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 
 您可以在AEM Web Console中使用「使用者描述檔連接器」設定來設定AEM使用者描述檔。 執行下列動作：
 
-1. 前往AEM網頁主控台([https:// server]:[host]/system/console/configMgr)。
+1. 前往AEM網頁主控台，網址為[https://&#39; server]:[port]&#39;system/console/configMgr。
 1. 尋找 **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** ，然後點選以在編輯模式中開啟設定。
 1. 在「用戶配置檔案連接器配置」對話框中，可以添加、刪除或更新用戶配置檔案屬性。 指定的屬性將可用於表單資料模型中。 使用以下格式指定用戶配置檔案屬性：
 
@@ -137,7 +137,7 @@ REST風格的Web服務可在Swagger定義檔 [案中使用](https://swagger.io/s
    如需 [建立和設定雲端服務組態資料夾的相關資訊](../../forms/using/configure-data-sources.md#cloud-folder) ，請參閱雲端服務組態設定資料夾。
 
 1. 點選「 **[!UICONTROL 建立]** 」以開啟「 **[!UICONTROL 建立資料來源設定」精靈]**。 指定配置的名稱和標題（可選），從「服務類型」下拉式清單中選擇 **[!UICONTROL SOAP Web Service]** ，或者瀏覽並選擇配置的縮圖影像，然後點選「 **[!UICONTROL 下一步]******」。
-1. 為SOAP web服務指定以下內容：
+1. 為SOAP Web服務指定以下內容：
 
    * Web服務的WSDL URL。
    * 服務端點. 在此欄位中指定一個值，以覆蓋WSDL中提及的服務端點。
