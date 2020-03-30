@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -92,7 +92,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (可選)</td>
-   <td>指定要包含在結果中的表單屬性的逗號分隔清單。 <br /> 預設屬性為： <code>formName</code>, <code>formPath</code><code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>指定要包含在結果中的表單屬性的逗號分隔清單。 預設屬性為：<br /><code>formName</code>, <code>formPath</code><code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (可選)</td>
@@ -148,7 +148,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 **請求URL**
 
 ```
-https://[host:[port]/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
+https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
 ```
 
 **回應**
@@ -186,7 +186,7 @@ https://[host:[port]/content/forms/portal/submission.review.json?func=addComment
 **請求URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
+https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
 ```
 
 **回應**
@@ -218,7 +218,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getCommen
 **請求URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
+https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
 ```
 
 **回應**
