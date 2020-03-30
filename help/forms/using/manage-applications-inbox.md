@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,9 +31,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 建立應用程式 {#create-application}
 
-1. 前往https://[server]:[port]/aem/inbox的「AEM Inbox」。
+1. 前往https://&#39;[server]:[port]&#39;/aem/inbox的AEM Inbox。
 1. 在「收件匣」UI中，點選「 **[!UICONTROL 建立>應用程式」]**。 此時將顯示「選擇應用程式」頁。
-1. 選取應用程式，然後按一下「 **[!UICONTROL 建立]**」。 與應用程式相關聯的最適化表單隨即開啟。 在最適化表單中填寫資訊，然後點選「提 **[!UICONTROL 交」]**。 它會啟動關聯的工作流程，並在受託人的「收件匣」中建立工作。
+1. 選取應用程式，然後按一下「 **[!UICONTROL 建立]**」。 與應用程式相關聯的最適化表單隨即開啟。 在最適化表單中填寫資訊，然後點選「 **[!UICONTROL 送出」]**。 它會啟動相關的工作流程，並在受託人的「收件匣」中建立工作。
 
 ## 管理任務 {#manage-tasks}
 
@@ -108,7 +108,7 @@ AEM收件匣只會顯示作用中的工作。 完成的任務不會顯示在清�
 
 1. 點選以選取工作，然後按一下「 **[!UICONTROL 開啟]**」。
 
-此任務將開啟以顯示與任務相關聯的文檔或自適應表單。 對於最適化表單，任務會顯示唯讀最適化表單或其記錄的PDF文檔，如「指派任務」工作流程步驟的「表單／文檔」選 [項卡中所配置](/help/sites-developing/workflows-step-ref.md)。
+此任務將開啟以顯示與任務相關聯的文檔或自適應表單。 對於最適化表單，任務會顯示唯讀最適化表單或其記錄的PDF文檔，如在「指派任務」工作流程步驟的「表單／文檔」選 [項卡中配置](/help/sites-developing/workflows-step-ref.md)。
 
 任務詳細資訊部分顯示已執行的操作、任務狀態、開始日期和結束日期等資訊。
 
