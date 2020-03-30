@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,7 +31,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 執行以下步驟以配置自適應表單快取：
 
-1. 前往https:// Server:[port]/system[]/console/configMgr的AEM web主控台組態管理器。
+1. 請前往https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM網頁主控台組態管理器。
 1. 按一 **下「最適化表單與互動式通訊Web頻道設定」** ，以編輯其設定值。
 1. 在「編輯設定值」對話方塊中，在「最適化表單數」欄位中指定AEM Forms伺服器執行個體可快取的表 **單或檔案數上限** 。 預設值為100。
 
