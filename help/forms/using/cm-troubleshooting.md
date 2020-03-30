@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -46,7 +46,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 使用以下步驟重設發佈實例上的字母快取，然後重試查看字母：
 
-1. 前往並 **`https://[server]:[port]/[contextPath]/system/console/configMgr`** 以管理員身分登入。
+1. 前往並 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 以管理員身分登入。
 1. 選擇「 **對應管理配置」**。
 1. 在「對 **應管理配置」中**，禁用「 **啟用字母快取」,**&#x200B;然後按一下&#x200B;**「保存」。**
 1. 啟用 **字母快取** ，然後按一 **下儲存**。
