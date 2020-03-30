@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 ## 使用者資料與資料儲存 {#user-data-and-data-stores}
 
-用戶管理將用戶資料儲存在資料庫中，如My Sql 、 Oracle 、 MS SQL server和IBM DB2。 此外，任何已在AEM作者的Forms應用程式中至少登入一次的使用者， `https://[server]:[host]/lc`都會在AEM儲存庫中建立使用者。 因此，用戶管理儲存在以下資料儲存中：
+用戶管理將用戶資料儲存在資料庫中，如My Sql 、 Oracle 、 MS SQL Server和IBM DB2。 此外，任何已在AEM作者的Forms應用程式中至少登入一次的使用者， `https://'[server]:[port]'lc`都會在AEM儲存庫中建立使用者。 因此，用戶管理儲存在以下資料儲存中：
 
 * 資料庫
 * AEM存放庫
@@ -86,7 +86,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 ### AEM存放庫 {#aem-repository}
 
-至少曾在AEM儲存庫中存取過Forms應用程式一次的使用者 `https://[server]:[host]/lc` 管理資料也會儲存在AEM儲存庫中。
+至少曾在AEM儲存庫中存取過Forms應用程式一次的使用者 `https://'[server]:[port]'lc` 管理資料也會儲存在AEM儲存庫中。
 
 ## 存取和刪除使用者資料 {#access-and-delete-user-data}
 
@@ -178,14 +178,14 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 #### 存取使用者資料 {#access-user-data}
 
-若要檢視在AEM儲存庫中建立的使用者，請使用AEM管 `https://[server]:[port]/lc/useradmin` 理員認證登入。 請注意， `server` URL `port` 中是AEM作者例項的URL。 您可以在這裡使用使用者名稱來搜尋使用者。 連按兩下使用者，即可檢視使用者的屬性、權限和群組等資訊。 使用 `Path` 者的屬性會指定在AEM儲存庫中建立之使用者節點的路徑。
+若要檢視在AEM儲存庫中建立的使用者，請使用AEM管 `https://'[server]:[port]'/lc/useradmin` 理員認證登入。 請注意， `server` URL `port` 中是AEM作者例項的URL。 您可以在這裡使用使用者名稱來搜尋使用者。 連按兩下使用者，即可檢視使用者的屬性、權限和群組等資訊。 使用 `Path` 者的屬性會指定在AEM儲存庫中建立之使用者節點的路徑。
 
 #### 刪除使用者資料 {#delete-aem}
 
 刪除用戶：
 
-1. 前往「使 `https://[server]:[port]/lc/useradmin` 用AEM管理員認證」。
+1. 前往「使 `https://'[server]:[port]'/lc/useradmin` 用AEM管理員認證」。
 1. 搜尋使用者，然後按兩下使用者名稱以開啟使用者屬性。 複製屬 `Path` 性。
-1. 前往AEM CRX DELite(網址 `https://[server]:[port]/lc/crx/de/index.jsp` )，並導覽或搜尋使用者路徑。
+1. 前往AEM CRX DELite(網址 `https://'[server]:[port]'/lc/crx/de/index.jsp` )，並導覽或搜尋使用者路徑。
 1. 刪除路徑，然後按一 **[!UICONTROL 下「全部儲存]** 」，從AEM儲存庫永久刪除使用者。
 
