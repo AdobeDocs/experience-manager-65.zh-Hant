@@ -1,15 +1,15 @@
 ---
 title: 使用API列出網頁上的表格
 seo-title: 使用API列出網頁上的表格
-description: 以程式設計方式查詢Forms Manager，以擷取已篩選的表單清單並顯示在您自己的網頁上。
-seo-description: 以程式設計方式查詢Forms Manager，以擷取已篩選的表單清單並顯示在您自己的網頁上。
+description: 以程式設計方式查詢Forms Manager以擷取已篩選的表單清單並顯示在您自己的網頁上。
+seo-description: 以程式設計方式查詢Forms Manager以擷取已篩選的表單清單並顯示在您自己的網頁上。
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
-source-git-commit: db69c393fc44ca2fcb30f9fcb0c5ca456ba35ed5
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: db69c393fc44ca2fcb30f9fcb0c5ca456ba35ed5
 
 AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查詢和擷取符合搜尋准則的一組表單。 您可以使用API根據各種篩選條件來搜尋表單。 回應物件包含表單屬性、屬性和轉譯表單端點。
 
-若要使用REST API搜尋表單，請使用下列所述的查詢參數，傳送GET `https://[server]:[port]/libs/fd/fm/content/manage.json` 要求至伺服器。
+若要使用REST API搜尋表單，請使用下列所述的查詢參數，傳送GET `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 要求至伺服器。
 
 ## Query parameters {#query-parameters}
 
@@ -32,7 +32,7 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
    <td>函式<br /> </td>
    <td><p>指定要調用的函式。 要搜索表單，請將屬性的 <code>func </code>值設定為 <code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong></strong> 注意：此參 <em>數為必填參數。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> 此參 <em>數為必填參數。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
@@ -85,13 +85,13 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
        <li>LT —— 小於</li>
        <li>GTEQ —— 大於或等於</li>
        <li>LTEQ —— 小於或等於</li>
-       <li>CONTAINS - a包含B（如果B是A的一部分）</li>
+       <li>CONTAINS - A包含B（如果B是A的一部分）</li>
        <li>FULLTEXT —— 全文搜尋</li>
        <li>STARTSWITH —— 如果B是A的開頭部分，則A以B開頭</li>
        <li>ENDSWITH —— 如果B是A的結尾部分，則A以B結尾</li>
        <li>LIKE —— 實作LIKE運算子</li>
        <li>AND —— 合併多個陳述式</li>
-      </ul> <p><strong></strong> 注意： <em>GT、LT、GTEQ和LTEQ算子適用於線性類型的屬性，如LONG、DOUBLE和DATE。</em></p> </li>
+      </ul> <p><strong>注意：</strong><em>GT、LT、GTEQ和LTEQ算子適用於線性類型的屬性，如LONG、DOUBLE和DATE。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
