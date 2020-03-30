@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,11 +20,11 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 文章說明在JEE上執行AEM Forms的伺服器保全建議和最佳實務。 對於您的作業系統和應用程式伺服器，此檔案並非完整的主機強化檔案。 相反地，本文說明您應實作的各種安全性強化設定，以增強在公司內部網路中執行的JEE上AEM Forms的安全性。 不過，為確保JEE應用程式伺服器上的AEM Forms保持安全，您也應實作安全性監控、偵測和回應程式。
 
-本文描述在安裝和配置生命週期的以下階段應應用的強化技術：
+本文描述在安裝和配置生命週期的以下階段應用的強化技術：
 
-* **** 預安裝：在JEE上安裝AEM Forms之前，請先使用這些技巧。
-* **** 安裝：在AEM Forms on JEE安裝程式中使用這些技巧。
-* **** 安裝後：安裝後及安裝後定期使用這些技術。
+* **預安裝：** 在JEE上安裝AEM Forms之前，請先使用這些技巧。
+* **安裝：** 在AEM Forms on JEE安裝程式中使用這些技巧。
+* **安裝後：** 安裝後及安裝後定期使用這些技術。
 
 AEM Forms on JEE可高度自訂，可在許多不同的環境中運作。 有些建議可能不符合您組織的需求。
 
@@ -38,7 +38,7 @@ AEM Forms on JEE可高度自訂，可在許多不同的環境中運作。 有些
 
 **在Windows上安裝和配置**
 
-如果您是使用統包方法或安裝PDF產生器，在JBoss的JEE上安裝AEM Forms，您應以管理員身分在Windows上執行安裝。 此外，在具備原生應用程式支援的Windows上安裝PDF產生器時，您必須與安裝Microsoft office的Windows使用者一樣執行安裝。 如需安裝權限的詳細資訊，請參 **閱您應用程式伺服器的「在JEE上安裝和部署AEM** Forms」檔案。
+如果您是使用統包方法或安裝PDF產生器，在JBoss的JEE上安裝AEM Forms，您應以管理員身分在Windows上執行安裝。 此外，在具備原生應用程式支援的Windows上安裝PDF產生器時，您必須與安裝Microsoft Office的Windows使用者一樣執行安裝。 如需安裝權限的詳細資訊，請參 **閱您應用程式伺服器的「在JEE上安裝和部署AEM** Forms」檔案。
 
 ### 網路層安全性 {#network-layer-security}
 
@@ -189,7 +189,7 @@ AEM Forms on JEE依預設會使用LocalSystem帳戶來安裝服務。 內建的L
 
 **禁用配置管理器引導Servlet**
 
-Configuration manager使用部署在應用程式伺服器上的servlet，在JEE資料庫上執行AEM Forms的引導。 由於Configuration manager在配置完成前即存取此servlet，因此授權使用者尚未保護對其的存取，而且在您成功使用Configuration manager在JEE上設定AEM Forms後，應停用此Servlet。
+Configuration Manager使用部署在應用程式伺服器上的servlet，在JEE資料庫上執行AEM Forms的引導。 由於Configuration Manager在配置完成前即存取此servlet，因此授權使用者尚未保護對其的存取，而且在您成功使用Configuration Manager在JEE上設定AEM Forms後，應停用此Servlet。
 
 1. 解壓縮adobe-livecycle-[appserver].ear檔案。
 1. 開啟META-INF/application.xml檔案。
@@ -243,7 +243,7 @@ Configuration manager使用部署在應用程式伺服器上的servlet，在JEE�
 
 **鎖定對信任儲存的遠程訪問**
 
-Configuration manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE信任商店的AEM Forms。 這表示依預設，已啟用透過遠端通訊協定（SOAP和EJB）存取信任商店憑證服務的功能。 當您使用Configuration manager上傳權限憑證或您稍後決定使用Administration console管理憑證後，就不再需要此存取。
+Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE信任商店的AEM Forms。 這表示依預設，已啟用透過遠端通訊協定（SOAP和EJB）存取信任商店憑證服務的功能。 當您使用Configuration Manager上傳權限憑證或您稍後決定使用Administration Console管理憑證後，就不再需要此存取。
 
 您可以按照禁用非基本服務遠程訪問一節中的步驟禁用對所有信任 [儲存服務的遠程訪問](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)。
 
@@ -258,16 +258,16 @@ Configuration manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 1. 在網頁瀏覽器中輸入下列URL:
 
    ```as3
-   https://[host name]:[port]/adminui
+   https://[host name]:'port'/adminui
    ```
 
    預設埠號是以下其中之一：
 
-   **** JBoss:郵遞區號8080
+   **JBoss:** 郵遞區號8080
 
-   **** WebLogic伺服器：郵編：7001
+   **WebLogic伺服器：** 郵編：7001
 
-   **** WebSphere:9080。
+   **WebSphere:** 9080。
 
 1. 在「用 **戶名** 」欄位中，鍵入 `administrator` 並在「密碼」字 **段中鍵入**`password`。
 1. 按一 **下「設定** >使 **用者管理** >使 **用者和群組**」。
@@ -278,7 +278,7 @@ Configuration manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 
 此外，建議通過執行以下步驟來更改CRX管理員的預設密碼：
 
-1. 使用預 `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` 設的使用者名稱／密碼登入。
+1. 使用預 `https://'[server]:[port]'/lc/libs/granite/security/content/useradmin.html` 設的使用者名稱／密碼登入。
 1. 在搜尋欄位中鍵入Administrator，然後按一 **下Go**。
 1. 從搜 **尋結果中選取** 「管理員」，然後按一下使用者介面右下方的「編輯 **** 」圖示。
 1. 在「新密碼」欄位中 **指定新密碼** ，在「密碼」欄位中指 **定舊密碼** 。
@@ -291,7 +291,7 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 1. 在網頁瀏覽器中輸入下列URL:
 
    ```as3
-   https://[host name]:[port]/adminui
+   https://[host name]:'port'/adminui
    ```
 
 1. 按一下 **設定>核心繫統設定>配置**。
@@ -315,7 +315,7 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
   </tr> 
   <tr> 
    <td><p>應用程式伺服器Cookie設定</p> </td> 
-   <td><p>應用程式Cookie由應用程式伺服器控制。 部署應用程式時，應用程式伺服器管理員可以指定整個伺服器或特定應用程式的Cookie偏好設定。 依預設，伺服器設定會優先使用。</p> <p>您的應用程式伺服器產生的所有作業Cookie都應包含該 <code>HttpOnly</code> 屬性。 例如，使用JBoss Application Server時，可將SessionCookie元素修改為 <code>httpOnly="true"</code> 檔案 <code>WEB-INF/web.xml</code> 中。</p> <p>您可以限制使用僅HTTPS傳送的Cookie。 因此，不會透過HTTP傳送未加密的檔案。 應用程式伺服器管理員應全域啟用伺服器的安全Cookie。 例如，使用JBoss Application server時，可以將連接器元素修改為 <code>secure=true</code> 檔案 <code>server.xml</code> 中。</p> <p>如需Cookie設定的詳細資訊，請參閱應用程式伺服器檔案。</p> </td> 
+   <td><p>應用程式Cookie由應用程式伺服器控制。 部署應用程式時，應用程式伺服器管理員可以指定整個伺服器或特定應用程式的Cookie偏好設定。 依預設，伺服器設定會優先使用。</p> <p>您的應用程式伺服器產生的所有作業Cookie都應包含該 <code>HttpOnly</code> 屬性。 例如，使用JBoss Application Server時，可將SessionCookie元素修改為 <code>httpOnly="true"</code> 檔案 <code>WEB-INF/web.xml</code> 中。</p> <p>您可以限制使用僅HTTPS傳送的Cookie。 因此，不會透過HTTP傳送未加密的檔案。 應用程式伺服器管理員應全域啟用伺服器的安全Cookie。 例如，使用JBoss Application Server時，可以將連接器元素修改為 <code>secure=true</code> 檔案 <code>server.xml</code> 中。</p> <p>如需Cookie設定的詳細資訊，請參閱應用程式伺服器檔案。</p> </td> 
   </tr> 
   <tr> 
    <td><p>目錄瀏覽</p> </td> 
@@ -330,7 +330,7 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 
 在Oracle上，您使用的資料庫帳戶只需要CONNECT、RESOURCE和CREATE VIEW權限。 如需其他資料庫的類似需求，請 [參閱「準備在JEE(Single Server)上安裝AEM Forms」](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)。
 
-#### 在Windows上為JBoss配置SQL server的整合安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
+#### 在Windows上為JBoss配置SQL Server的整合安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
 1. 修改 [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml} `integratedSecurity=true` 以新增至連線URL，如以下範例所示：
 
@@ -339,10 +339,10 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
    ```
 
 1. 將sqljdbc_auth.dll檔案添加到運行應用程式伺服器的電腦上的Windows系統路徑。 sqljdbc_auth.dll檔案與Microsoft SQL JDBC 6.2.1.0驅動程式安裝一起使用。
-1. 將「從本機系統登入為」的JBoss windows服務(JBoss for AEM Forms on JEE)屬性修改為具有AEM Forms資料庫和最低權限集的登入帳戶。 如果從命令行而不是作為Windows服務運行JBoss，則無需執行此步驟。
-1. 將「SQL server的安全性」從「 **混合** 」模式設 **置為「Windows驗證」**。
+1. 將「從本機系統登入為」的JBoss Windows服務(JBoss for AEM Forms on JEE)屬性修改為具有AEM Forms資料庫和最低權限集的登入帳戶。 如果從命令行而不是作為Windows服務運行JBoss，則無需執行此步驟。
+1. 將「SQL Server的安全性」從「 **混合** 」模式設 **置為「Windows驗證」**。
 
-#### 在Windows上為WebLogic配置SQL server的整合安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}
+#### 在Windows上為WebLogic配置SQL Server的整合安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}
 
 1. 在Web瀏覽器的URL行中鍵入以下URL，以啟動WebLogic Server管理控制台：
 
@@ -356,9 +356,9 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 1. 在「域結構」下，單 **[擊「base_domain]** > **Services** > **JDBC**********> Sources」資料，在右窗格中按一下RightRm RM_DS Pane。
 1. 在下一個螢幕的「 **Configuration** （配置）」頁籤上，按一下「 **Connection Pool** （連接池）」頁籤，然後在「 **Properties** （屬性）」框中鍵入 `integratedSecurity=true`。
 1. 將sqljdbc_auth.dll檔案添加到運行應用程式伺服器的電腦上的Windows系統路徑。 sqljdbc_auth.dll檔案與Microsoft SQL JDBC 6.2.1.0驅動程式安裝一起使用。
-1. 將「SQL server的安全性」從「 **混合** 」模式設 **置為「Windows驗證」**。
+1. 將「SQL Server的安全性」從「 **混合** 」模式設 **置為「Windows驗證」**。
 
-#### 在Windows上為WebSphere配置SQL server的整合安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}
+#### 在Windows上為WebSphere配置SQL Server的整合安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}
 
 在WebSphere上，只有當使用外部SQL Server JDBC驅動程式時，才可配置整合安全性，而不是嵌入WebSphere的SQL Server JDBC驅動程式。
 
@@ -370,10 +370,10 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 1. 在右窗格中的「Additional Properties（其他屬性）」下，按一下「 **Custom Properties（自定義屬性）**」 ，然後按一下「 **New（新建）**」。
 1. 在「名 **稱** 」(Name `integratedSecurity` )框中，鍵入 **並在「值」(** Value `true`)框中鍵入。
 1. 在安裝WebSphere的電腦上，將sqljdbc_auth.dll檔案添加到Windows系統路徑(C:\Windows)。 sqljdbc_auth.dll檔案與Microsoft SQL JDBC 1.2驅動程式安裝位置相同(預設為 *[InstallDir]*/sqljdbc_1.2/enu/auth/x86)。
-1. 選擇「 **開始** 」>「控制面板 **」>「服務」** ，按一下右鍵WebSphere的Windows服務(IBM webSphere Application Server &lt;version> - &lt;node>)，然後選擇 ******** PropertiesAldings。
+1. 選擇「 **開始** 」>「控制面板 **」>「服務」** ，按一下右鍵WebSphere的Windows服務(IBM WebSphere Application Server &lt;version> - &lt;node>)，然後選擇 ******** PropertiesAldings。
 1. 在「屬性」對話方塊中，按一下「登 **入」標籤** 。
 1. 選 **擇此帳戶** ，並提供設定您要使用的登入帳戶所需的資訊。
-1. 將SQL server上的安全性從「混 **合** 」模式設 **置為「Windows身份驗證」**。
+1. 將SQL Server上的安全性從「混 **合** 」模式設 **置為「Windows身份驗證」**。
 
 ### 保護對資料庫中敏感內容的訪問 {#protecting-access-to-sensitive-content-in-the-database}
 
@@ -406,7 +406,7 @@ AEM Forms資料庫架構包含有關係統設定和商業程式的敏感資訊�
 
 ### 審核和記錄 {#auditing-and-logging}
 
-正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入的項目，以及重要應用程式事件，例如建立或刪除重要記錄。
+正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入等項目，以及重要應用程式事件，例如建立或刪除重要記錄。
 
 您可以使用審計來檢測多種攻擊類型，包括：
 
@@ -447,7 +447,7 @@ AEM Forms資料庫架構包含有關係統設定和商業程式的敏感資訊�
 
 JEE網頁應用程式上每個AEM Forms的下列應用程式根URL。 您只應設定反向代理，以公開您要提供給使用者之Web應用程式功能的URL。
 
-某些URL會反白標示為使用者對應的Web應用程式。 您應避免暴露Configuration manager的其他URL，以便透過反向代理存取外部使用者。
+某些URL會反白標示為使用者對應的Web應用程式。 您應避免暴露Configuration Manager的其他URL，以便透過反向代理存取外部使用者。
 
 <table> 
  <thead> 
@@ -639,10 +639,10 @@ CSRF共有下列特性：
 
 AEM Forms on JEE使用「反向連結篩選」功能來封鎖CSRF攻擊。 本節使用下列詞語來說明「反向連結篩選」機制：
 
-* **** 允許的反向連結：反向連結是傳送請求至伺服器之來源頁面的位址。 對於JSP頁面或表單，反向連結通常是瀏覽歷史記錄中的上一頁。 影像的反向連結通常是顯示影像的頁面。 您可以將允許的反向連結新增至允許的反向連結清單，以識別允許存取您伺服器資源的反向連結。
-* **** 允許的反向連結例外：您可能想要限制「允許反向連結」清單中特定反向連結的存取範圍。 若要執行此限制，您可以將該反向連結的個別路徑新增至「允許的反向連結例外情況」清單。 「允許的反向連結例外」清單中的路徑所產生的請求無法叫用表單伺服器上的任何資源。 您可以為特定應用程式定義允許的反向連結例外，也可以使用套用至所有應用程式的例外狀況全域清單。
-* **** 允許的URI:這是一份資源清單，不需勾選「反向連結標題」即可提供。 例如，不會導致伺服器狀態變更的資源（例如說說明頁面）可以新增至此清單。 「允許的URI」清單中的資源不會被「反向連結篩選器」封鎖，不論反向連結是誰。
-* **** 空反向連結：未與父網頁關聯或未源自父網頁的伺服器要求被視為來自空反向連結的請求。 例如，當您開啟新的瀏覽器視窗，輸入位址並按Enter時，傳送至伺服器的反向連結為null。 對Web伺服器發出HTTP請求的案頭應用程式（.NET或SWING）也會向伺服器發送空反向連接。
+* **允許的反向連結：** 反向連結是傳送請求至伺服器之來源頁面的位址。 對於JSP頁面或表單，反向連結通常是瀏覽歷史記錄中的上一頁。 影像的反向連結通常是顯示影像的頁面。 您可以將允許的反向連結新增至允許的反向連結清單，以識別允許存取您伺服器資源的反向連結。
+* **允許的反向連結例外：** 您可能想要限制「允許反向連結」清單中特定反向連結的存取範圍。 若要執行此限制，您可以將該反向連結的個別路徑新增至「允許的反向連結例外情況」清單。 「允許的反向連結例外」清單中的路徑所產生的請求無法叫用表單伺服器上的任何資源。 您可以為特定應用程式定義允許的反向連結例外，也可以使用套用至所有應用程式的例外狀況全域清單。
+* **允許的URI:** 這是一份資源清單，不需勾選「反向連結標題」即可提供。 例如，不會導致伺服器狀態變更的資源（例如說明頁面）可以新增至此清單。 「允許的URI」清單中的資源不會被「反向連結篩選器」封鎖，不論反向連結是誰。
+* **空反向連結：** 未與父網頁關聯或未源自父網頁的伺服器要求被視為來自空反向連結的請求。 例如，當您開啟新的瀏覽器視窗，輸入位址並按Enter時，傳送至伺服器的反向連結為null。 對Web伺服器發出HTTP請求的案頭應用程式（.NET或SWING）也會向伺服器發送空反向連接。
 
 ### 反向連結篩選 {#referer-filtering}
 
@@ -672,7 +672,7 @@ AEM Forms on JEE使用「反向連結篩選」功能來封鎖CSRF攻擊。 本�
 
 JEE上的AEM Forms提供「反向連結篩選」，以指定允許存取您伺服器資源的反向連結。 依預設，反向連結篩選器不會篩選使用安全HTTP方法（例如GET）的請求，除非 *CSRF_CHECK_GETS* 設定為true。 如果「允許的反向連結」項目的埠號設定為0,JEE上的AEM Forms將允許來自該主機的所有具有反向連結的請求，而不論其埠號為何。 如果未指定埠號，則僅允許來自預設埠80(HTTP)或埠443(HTTPS)的請求。 如果「允許的反向連結」清單中的所有項目都已刪除，則會停用「反向連結篩選」。
 
-首次安裝Document Services時，「允許反向連結」清單會更新為安裝Document services的伺服器位址。 伺服器的條目包括伺服器名、IPv4地址、IPv6地址（如果啟用了IPv6）、環回地址和localhost條目。 主機作業系統會傳回新增至「允許反向連結」清單的名稱。 例如，IP位址為10.40.54.187的伺服器將包含下列項目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`。 對於主機作業系統重新調整的任何不合格名稱（沒有IPv4地址、IPv6地址或限定域名的名稱），不更新白名單。 修改「允許的反向連結」清單以符合您的商業環境。 請勿使用預設的「允許反向連結」清單，在生產環境中部署表單伺服器。 修改任何「允許的反向連結」、「反向連結例外」或URI後，請確定您重新啟動伺服器，讓變更生效。
+首次安裝Document Services時，「允許反向連結」清單會更新為安裝Document Services的伺服器位址。 伺服器的條目包括伺服器名、IPv4地址、IPv6地址（如果啟用了IPv6）、環回地址和localhost條目。 主機作業系統會傳回新增至「允許反向連結」清單的名稱。 例如，IP位址為10.40.54.187的伺服器將包含下列項目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`。 對於主機作業系統重新調整的任何不合格名稱（沒有IPv4地址、IPv6地址或限定域名的名稱），不更新白名單。 修改「允許的反向連結」清單以符合您的商業環境。 請勿使用預設的「允許反向連結」清單，在生產環境中部署表單伺服器。 修改任何「允許的反向連結」、「反向連結例外」或URI後，請確定您重新啟動伺服器，讓變更生效。
 
 **管理允許的反向連結清單**
 
@@ -966,7 +966,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 1. 選擇「 **設定** >管 **理工具** >服 **務」**。
 1. 連按兩下應用程式伺服器服務並停止服務。
-1. 在「登 **錄** 」標籤上，選 ****&#x200B;擇「此帳戶」，瀏覽您建立的用戶帳戶，並輸入帳戶的密碼。
+1. 在「登 **錄** 」標籤上，選 **擇「此帳戶**」，瀏覽您建立的用戶帳戶，並輸入帳戶的密碼。
 1. 在「本地安全設定」窗口的「用戶權限分配」下，為運行表單伺服器的用戶帳戶提供以下權限：
 
    * 通過終端服務拒絕登錄
@@ -996,7 +996,7 @@ AEM Forms on JEE使用檔案系統的方式如下：
 
 ### 禁用目錄瀏覽 {#disable-directory-browsing}
 
-登入Administration Console後，可修改URL，以瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
+登入Administration Console後，可修改URL來瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
 
 ```as3
 https://<servername>:8080/adminui/secured/ 
@@ -1020,7 +1020,7 @@ https://<servername>:8080/um/
 
 ### 啟用WebLogic SSL埠 {#enable-weblogic-ssl-port}
 
-依預設，WebLogic不會啟用預設的SSL監聽埠7002。 在配置SSL之前，請在WebLogic server管理控制台中啟用此埠。
+依預設，WebLogic不會啟用預設的SSL監聽埠7002。 在配置SSL之前，請在WebLogic Server管理控制台中啟用此埠。
 
 ## WebSphere特定的安全性建議 {#websphere-specific-security-recommendations}
 
@@ -1035,7 +1035,7 @@ https://<servername>:8080/um/
 1. 登入WebSphere管理控制台。
 1. 在導覽樹狀結構中，前往「 **安全性** >全 **域安全性」**
 1. 選擇 **啟用管理安全**。
-1. 取消選 **取「啟用應用程式保全** 」 **和「使用Java 2保全」**。
+1. 取消選 **取「啟用應用程式保全** 」和「 **使用Java 2保全」**。
 1. 按一 **下「確定** 」或「 **套用」**。
 1. 在「消 **息** 」框中，單 **擊「直接保存到主配置」**。
 
