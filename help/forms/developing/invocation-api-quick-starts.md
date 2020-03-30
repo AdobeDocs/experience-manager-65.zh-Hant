@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -66,7 +66,7 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_swaref_in_a_java_project">快速入門：在Java項目中使用SwaRef調用服務</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">使用透過HTTP的BLOB資料叫用AEM</a> Forms（Java web service範例）</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">使用透過HTTP的BLOB資料叫用AEM Forms</a> （Java web service範例）</p></td>
    <td><p>N/A</p></td>
    <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">快速入門：在。NET項目中使用通過HTTP的BLOB資料調用服務</a></p></td>
@@ -106,7 +106,7 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
-***注意&#x200B;**:「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application server和Microsoft windows作業系統上的Forms伺服器為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
 ## 快速入門：使用調用API調用短期進程 {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
 
@@ -175,7 +175,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -334,7 +334,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
              MyApplicationEncryptDocument encryptDocClient = encClient.getEncryptDocument();
  
              //Set connection values required to invoke AEM Forms
-             String url = "[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=base64";
+             String url = "'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=base64";
              String username = "administrator";
              String password = "password";
              ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
@@ -419,7 +419,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
       private var fileRef:FileReference = new FileReference();
       private var docRef:DocumentReference = new DocumentReference();
       private var parentResourcePath:String = "/";
-      private var serverPort:String = "[server]:[port]";
+      private var serverPort:String = "'[server]:[port]'";
       private var now1:Date;
       private  var cs:ChannelSet
  
@@ -455,7 +455,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
      private function authTokenReceived(event:ResultEvent):void
              {
              var token:String = event.result as String;
-             var request:URLRequest = DocumentReference.constructRequestForUpload("https://[server]:[port]", token);
+             var request:URLRequest = DocumentReference.constructRequestForUpload("https://'[server]:[port]'", token);
  
              try
              {
@@ -684,7 +684,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
          MyApplicationEncryptDocumentServiceLocator locate = new MyApplicationEncryptDocumentServiceLocator ();
  
          //specify the service target URL and object type
-         URL serviceURL = new URL("https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=dime");
+         URL serviceURL = new URL("https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=dime");
  
          //Use the binding stub with the locator
          EncryptDocumentSoapBindingStub encryptionClientStub = new EncryptDocumentSoapBindingStub(serviceURL,locate);
@@ -756,7 +756,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 以下Java代碼示例調用名為通過HTTP `MyApplication/EncryptDocument` 使用資料的進程。 (請參 [閱「透過HTTP使用BLOB資料叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)」)。
 
-以名為 *Loan.pdf* 的PDF檔案為基礎的無擔保PDF檔案會使用SOAP over HTTP傳遞至AEM Forms程式。 PDF檔案位於下列URL: `https://[server]:[port]/FormsQS`。 此程式會傳回密碼加密的PDF檔案，並儲存為名為 *EncryptedDocument.pdf的PDF檔案*。
+以名為 *Loan.pdf* 的PDF檔案為基礎的無擔保PDF檔案會使用SOAP over HTTP傳遞至AEM Forms程式。 PDF檔案位於下列URL: `https://'[server]:[port]'/FormsQS`。 此程式會傳回密碼加密的PDF檔案，並儲存為名為 *EncryptedDocument.pdf的PDF檔案*。
 
 ```as3
  /**
@@ -783,7 +783,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
              MyApplicationEncryptDocument encryptDocClient = encClient.getEncryptDocument();
  
              //Set connection values required to invoke AEM Forms using BLOB over HTTP
-             String url = "https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=http";
+             String url = "https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=http";
              String username = "administrator";
              String password = "password";
              ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
@@ -792,7 +792,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
              //Create a BLOB object and populate it by invoking the setRemoteURL method
              BLOB inDoc = new BLOB();
-             inDoc.setRemoteURL("https://[server]:[port]/FormsQS/Loan.pdf");
+             inDoc.setRemoteURL("https://'[server]:[port]'/FormsQS/Loan.pdf");
  
                 //invoke the short-lived process named MyApplication/EncryptDocument
              BLOB outDoc = encryptDocClient.invoke(inDoc);
@@ -862,7 +862,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
                 try
                 {
-                    String urlData = "https://[server]:[port]/FormsQS/Loan.pdf";
+                    String urlData = "https://'[server]:[port]'/FormsQS/Loan.pdf";
  
                     //Create a MyApplication_EncryptDocumentService object and set authentication values
                     MyApplication_EncryptDocumentService encryptClient = new MyApplication_EncryptDocumentService();
@@ -929,7 +929,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門：在。NET專案中使用MTOM叫用服務 {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
 
-以下C#代碼示例使用MTOM調用從 `MyApplication/EncryptDocument` Microsoft .NET項目命名的進程。 (請參 [閱「使用MTOM叫用AEM表單](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)」)。
+以下C#代碼示例使用MTOM調用從 `MyApplication/EncryptDocument` Microsoft .NET項目命名的進程。 (請參 [閱使用MTOM叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom))。
 
 以PDF檔案(名為 *loan.pdf* )為基礎的無擔保PDF檔案，會使用MTOM傳遞至AEM Forms程式。 此程式會傳回密碼加密的PDF檔案，並儲存為名為 *EncryptedDocument.pdf的PDF檔案*。
 
@@ -964,7 +964,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
                     //Create an EncryptDocumentClient object
                     MyApplication_EncryptDocumentClient encryptProcess = new MyApplication_EncryptDocumentClient();
-                    encryptProcess.Endpoint.Address = new System.ServiceModel.EndpointAddress("https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=mtom");
+                    encryptProcess.Endpoint.Address = new System.ServiceModel.EndpointAddress("https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=mtom");
                     BasicHttpBinding b = (BasicHttpBinding)encryptProcess.Endpoint.Binding;
                     b.MessageEncoding = WSMessageEncoding.Mtom;
  
@@ -1050,7 +1050,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
          //Specify connection values required to invoke the MyApplication/EncryptDocument process
          //using SwaRef
-         String url = "https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=swaref";
+         String url = "https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=swaref";
          String username = "administrator";
          String password = "password";
          String pdfFile = "C:\\Adobe\Loan.pdf";
