@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 1cb54c8a-9322-4b5a-b5a7-0eef342cee54
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -88,13 +88,13 @@ Calvin可讓您在網頁瀏覽器中自動測試您的調適性表單。 Calvin�
 
 * 使用 [Hobbes建立測試套裝並執行測試案例](https://docs.adobe.com/docs/en/aem/6-3/develop/components/hobbes.html)
 * [Hobbes JavaScript API](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/test-api/index.html)
-* [Calvin javaScript API](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
+* [Calvin JavaScript API](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
 
 ## 範例：使用Hobbes做為測試架構，為最適化表單建立測試套件 {#example-create-a-test-suite-for-an-adaptive-form-using-hobbes-as-testing-framework}
 
 以下範例將逐步帶您建立測試套裝，以測試多個調適性表單。 您需要為每個需要測試的表單建立個別的測試案例。 依照類似下列步驟並在步驟11中修改JavaScript程式碼，您可以建立自己的測試套裝來測試您的自適應表單。
 
-1. 前往網頁瀏覽器中的CRXDE Lite: `https://[server]:[port]/crx/de`。
+1. 前往網頁瀏覽器中的CRXDE Lite: `https://'[server]:[port]'/crx/de`。
 1. 按一下右鍵/etc/clientlibs子資料夾，然後按一下「創 **建** 」>「 **建立節點」**。 輸入名稱（此處為afTestRegistration），將節點類型指定為cq:ClientLibraryFolder，然後按一下「 **確定」。**
 
    clientlibs資料夾包含應用程式的註冊方面（JS和Init）。 建議您在clientlibs資料夾中註冊所有Hobbes測試套裝物件，這些物件是特定於表單的。
@@ -313,7 +313,7 @@ Calvin可讓您在網頁瀏覽器中自動測試您的調適性表單。 Calvin�
 <table>
  <tbody>
   <tr>
-   <td><strong>期限</strong></td>
+   <td><strong>詞彙</strong></td>
    <td><strong>說明</strong></td>
   </tr>
   <tr>
@@ -326,7 +326,7 @@ Calvin可讓您在網頁瀏覽器中自動測試您的調適性表單。 Calvin�
   </tr>
   <tr>
    <td><p>動作</p> </td>
-   <td><p>動作是在UI中執行手勢的方法，例如按一下按鈕或以值填入輸入方塊。</p> <p>chout.actions.Wanfies、tower.actions.Core和tower.utils.af類的方法是您可在測試中使用的動作。 所有動作都會同步執行。</p> </td>
+   <td><p>動作是在UI中執行手勢的方法，例如按一下按鈕或以值填入輸入方塊。</p> <p>chout.actions.Wanfies、tower.actions.Core和tower.utils.af類的方法是可在測試中使用的動作。 所有動作都會同步執行。</p> </td>
   </tr>
   <tr>
    <td><p>製作或發佈環境</p> </td>
