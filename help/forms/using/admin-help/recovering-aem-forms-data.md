@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 translation-type: tm+mt
-source-git-commit: 3e83611f6b30cee774b72194bee1d03e323a6a57
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,13 +25,13 @@ source-git-commit: 3e83611f6b30cee774b72194bee1d03e323a6a57
 
 AEM表單應可靠地從下列失敗中恢復：
 
-**** 磁碟故障：恢復資料庫內容需要最新的備份介質。
+**磁碟故障：** 恢復資料庫內容需要最新的備份介質。
 
-**** 資料損毀：檔案系統不會記錄過去的事務，並且系統可能會意外覆寫所需的流程資料。
+**資料損毀：** 檔案系統不會記錄過去的事務，並且系統可能會意外覆寫所需的流程資料。
 
-**** 用戶錯誤：恢復僅限於資料庫提供的資料。 如果資料已儲存且可用，則恢復將得到簡化。
+**用戶錯誤：** 恢復僅限於資料庫提供的資料。 如果資料已儲存且可用，則恢復將得到簡化。
 
-**** 停電、系統崩潰：檔案系統API的設計或使用通常不是以強穩的方式，來防止意外的系統故障。 如果發生斷電或系統崩潰，儲存在資料庫中的文檔內容比儲存在檔案系統中的內容更可能是最新的。
+**停電、系統崩潰：** 檔案系統API的設計或使用通常不是以強穩的方式，來防止意外的系統故障。 如果發生斷電或系統崩潰，儲存在資料庫中的文檔內容比儲存在檔案系統中的內容更可能是最新的。
 
 如果使用滾動備份模式，則恢復後仍處於備份模式。 如果使用快照備份模式，則恢復後不處於備份模式。
 
@@ -43,7 +43,7 @@ AEM表單應可靠地從下列失敗中恢復：
 
 >[!NOTE]
 >
->必須將內容儲存根目錄的備份還原到該目錄的位置，就像在Content services配置過程中設定的一樣。
+>必須將內容儲存根目錄的備份還原到該目錄的位置，就像在Content Services配置過程中設定的一樣。
 
 如果多節點群集的單個節點出現故障，且群集的其餘節點運行正常，請執行群集單節點恢復過程。
 
@@ -57,7 +57,7 @@ AEM表單應可靠地從下列失敗中恢復：
 
    * [Oracle Backup and Recovery for AEM forms](https://www.adobe.com/go/kb403624)
    * [AEM表單的MySQL備份和恢復](https://www.adobe.com/go/kb403625)
-   * [適用於AEM表單的Microsoft SQL server備份和恢復](https://www.adobe.com/go/kb403623)
+   * [適用於AEM表單的Microsoft SQL Server備份和恢復](https://www.adobe.com/go/kb403623)
    * [AEM表單的DB2備份和恢復](https://www.adobe.com/go/kb403626)
 
 1. 請先刪除現有AEM表單安裝上的GDS目錄內容，然後從備份的GDS複製GDS目錄內容，以恢復GDS目錄。 如果更改了GDS目錄位置，請參 [閱在恢復過程中更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)。
@@ -67,17 +67,17 @@ AEM表單應可靠地從下列失敗中恢復：
    >
    >如果/restore目錄已存在，請備份該目錄，然後在更名包含最新資料的/backup目錄之前將其刪除。
 
-   * (JBoss)重命 `[appserver root]/server/[server]/svcnative/DocumentStorage/backup` 名為：
+   * (JBoss)重命 `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` 名為：
 
-      `[appserver root]/server/[server]/svcnative/DocumentStorage/restore`.
+      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`.
 
-   * (WebLogic)重新命 `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/backup` 名為：
+   * (WebLogic)重新命 `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` 名為：
 
-      `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/restore`.
+      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`.
 
-   * (WebSphere)重新命 `[appserver root]/installedApps/adobe/[server]/DocumentStorage/backup` 名為：
+   * (WebSphere)重新命 `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` 名為：
 
-      `[appserver root]/installedApps/adobe/[server]/DocumentStorage/restore`.
+      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`.
 
 1. 請先刪除現有AEM表單安裝上的「內容儲存根目錄」內容，然後依照單機或叢集環境的工作，以復原內容，以恢復「內容儲存根目錄」:
 
@@ -85,9 +85,9 @@ AEM表單應可靠地從下列失敗中恢復：
    >
    >必須將內容儲存根目錄的備份還原到內容儲存根目錄的位置，這與在內容服務（已過時）配置期間設定的內容儲存根目錄相同。
 
-   **** 獨立作業：在恢復過程中，恢復所有已備份的目錄。 恢復這些目錄時，如果存在/backup-lucene-indexes目錄，請將其更名為/lucene-indexes。 否則，lucene-indexes目錄應已存在，不需要執行任何操作。
+   **獨立作業：** 在恢復過程中，恢復所有已備份的目錄。 恢復這些目錄時，如果存在/backup-lucene-indexes目錄，請將其更名為/lucene-indexes。 否則，lucene-indexes目錄應已存在，不需要執行任何操作。
 
-   **** 叢集：在恢復過程中，恢復所有已備份的目錄。 要恢復「索引根目錄」，請在群集的每個節點上執行以下步驟：
+   **叢集：** 在恢復過程中，恢復所有已備份的目錄。 要恢復「索引根目錄」，請在群集的每個節點上執行以下步驟：
 
    * 刪除「索引根目錄」中的所有內容。
    * 如果/backup-lucene-indexes目錄存在，請將 *Content Storage Root directory*/backup-lucene-indexes目錄的內容複製到Index Root目錄，並刪除 *Content Storage Root directory*/backup-lucene-indexes目錄。
@@ -99,7 +99,7 @@ AEM表單應可靠地從下列失敗中恢復：
 
       *還原作者和發佈例項*:如果發生災難，您可以通過執行備份和還原中所述的步驟將儲存庫還原到上次備份 [狀態。](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)
 
-      「作者」節點的完整還原也會確認Forms manager和AEM Forms Workspace資料的還原。
+      「作者」節點的完整還原也會確認Forms Manager和AEM Forms Workspace資料的還原。
 
    * **叢集**
 
