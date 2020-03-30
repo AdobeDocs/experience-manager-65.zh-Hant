@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源建立表單�
 
 ![form-data-model-l](assets/form-data-model_l.png)
 
-**********答：已設定資料來源** B.資料源結 **構** C.可用服 **務D.資料模型物**&#x200B;件E.已配置服務
+**答：** 已設定資料來源 **B.** 資料源結 **構** C.可用服 **務D.** 資料模型物 **件E.** 已配置服務
 
 ## 必備條件 {#prerequisites}
 
@@ -67,15 +67,15 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源建立表單�
    1. 找到 **Apache Sling Connection Pooled DataSource組態** 。 點選以在編輯模式中開啟設定。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
-      * **** 資料來源名稱：您可以指定任何名稱。 例如，指定 **WeRetailMySQL**。
+      * **資料來源名稱：** 您可以指定任何名稱。 例如，指定 **WeRetailMySQL**。
       * **DataSource服務屬性名稱**:指定包含DataSource名稱的服務屬性名稱。 在將資料源實例註冊為OSGi服務時指定。 例如， **datasource.name**。
       * **JDBC驅動程式類**:指定JDBC驅動程式的Java類名。 對於MySQL資料庫，請 **指定com.mysql.jdbc.Driver**。
-      * **JDBC連接URI**:指定資料庫的連線URL。 對於在埠3306和模式weretail上運行的MySQL資料庫，URL為： `jdbc:mysql://[server]:3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-      * **** 使用者名稱：資料庫的用戶名。 必須啟用JDBC驅動程式才能與資料庫建立連接。
-      * **** 密碼：資料庫的口令。 必須啟用JDBC驅動程式才能與資料庫建立連接。
-      * **** 借閱測試：啟用「 **借閱時測試** 」選項。
-      * **** 回訪時測試：啟用「 **Test on Return** 」選項。
-      * **** 驗證查詢：指定SQL SELECT查詢以驗證池中的連接。 查詢至少必須返回一行。 例如，從 **客戶詳細資料中選擇***。
+      * **JDBC連接URI**:指定資料庫的連線URL。 對於在埠3306和模式weretail上運行的MySQL資料庫，URL為： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **使用者名稱：** 資料庫的用戶名。 必須啟用JDBC驅動程式才能與資料庫建立連接。
+      * **密碼：** 資料庫的口令。 必須啟用JDBC驅動程式才能與資料庫建立連接。
+      * **借閱測試：** 啟用「 **借閱時測試** 」選項。
+      * **回訪時測試：** 啟用「 **Test on Return** 」選項。
+      * **驗證查詢：** 指定SQL SELECT查詢以驗證池中的連接。 查詢至少必須返回一行。 例如，從 **客戶詳細資料中選擇***。
       * **事務隔離**:將值設定為 **READ_COMMITTED**。
       將其他屬性保留為預設 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) ，然後點 **選「儲存**」。
    系統會建立類似下列的設定。
@@ -113,7 +113,7 @@ AEM Forms提供直覺式使用者介面，可 [從設定的資料來源](../../f
 
    ![default-fdm](assets/default-fdm.png)
 
-1. 展開WeRailMySQL資料源樹。 從Weretail **> customerdetails架構選擇下列資料模型物****** 件和服務，以建立資料模型：
+1. 展開WeRailMySQL資料源樹。 從Weretail **>** customerdetails **** schema選擇下列資料模型物件和服務，以建立資料模型：
 
    * **資料模型物件**:
 
