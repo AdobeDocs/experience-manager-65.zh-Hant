@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ AEM Forms附加元件套件也包含參考OData設定，您可運用此設定來
 
 在開始設定和設定Microsoft Dynamics之前，請確定您有：
 
-* 已安 [裝AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)
+* 已安裝 [AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)
 * 已線上設定Microsoft Dynamics 365，或安裝下列其中一個Microsoft Dynamics版本的例項：
 
    * Microsoft Dynamics 365內部
@@ -55,11 +55,11 @@ AEM Forms附加元件套件也包含參考OData設定，您可運用此設定來
 
 1. 前往Microsoft Azure Active Directory帳戶，並在您註冊應用程式的「回覆URL」設定中 **新增下列雲端服務設定URL** :
 
-   `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+   `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
    ![Azure目錄](assets/azure_directory_new.png)
 
-1. 保存配置。
+1. 儲存設定。
 
 ## 為IFD配置Microsoft Dynamics {#configure-microsoft-dynamics-for-ifd}
 
@@ -70,7 +70,7 @@ Microsoft Dynamics使用以理賠為基礎的驗證，將Microsoft Dynamics CRM�
 >只有在整合AEM Forms與內部Microsoft Dynamics伺服器時，才能使用此程式。
 
 1. 按照為Microsoft Dynamics配置IFD中所述，為IFD配置Microsoft Dynamics [內部實例](https://technet.microsoft.com/en-us/library/dn609803.aspx)。
-1. 使用Windows powerShell運行以下命令，在啟用IFD的Microsoft Dynamics上配置聲明設定：
+1. 使用Windows PowerShell運行以下命令，在啟用IFD的Microsoft Dynamics上配置聲明設定：
 
    ```
    Add-PSSnapin Microsoft.Crm.PowerShell
@@ -97,7 +97,7 @@ Microsoft Dynamics使用以理賠為基礎的驗證，將Microsoft Dynamics CRM�
 
    * `Client-ID` 是可使用任何GUID產生器產生的用戶端ID。
    * `redirect-uri` 是AEM Forms上Microsoft Dynamics OData雲端服務的URL。 隨AEM Forms套件安裝的預設雲端服務會部署在下列URL:
-      `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. 運行以下命令以授予對AD FS電腦的訪問權：
 
@@ -140,7 +140,7 @@ MS Dynamics OData Cloud Service(OData Service)雲端服務已設定，並與您�
 
 若要檢閱表單資料模型，請前往「表 **[!UICONTROL 單>資料整合」]**。 選擇 **Microsoft Dynamics FDM** ，然後按一下「 **編輯」** ，以在編輯模式下開啟表單資料模型。 或者，您也可以直接從下列URL開啟表單資料模型：
 
-`https://[server]:[port]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
+`https://'[server]:[port]'/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
 
 ![default-fdm-1](assets/default-fdm-1.png)
 
