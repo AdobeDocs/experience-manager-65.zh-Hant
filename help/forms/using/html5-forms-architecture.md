@@ -11,16 +11,16 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # HTML5表單的架構{#architecture-of-html-forms}
 
-## 建築 {#architecture}
+## 架構 {#architecture}
 
-HTML5表單功能會部署為內嵌AEM例項中的套件，並會使用REST風格的 [Apache Sling Architecture以HTTP/S的REST端點形式公開](https://sling.apache.org/)。
+HTML5表單功能會部署為內嵌AEM例項中的套件，並會使用REST風格的 [Apache Sling Architecture，以HTTP/S的REST端點形式呈現](https://sling.apache.org/)。
 
 `<style> .background{ display: none; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:1001; -moz-opacity: 0.8; opacity:.80; filter: alpha(opacity=80); } .content { display: none; position: fixed; top: 50%; left: 50%; width: 1200px; height: 756px; margin-left: -600px; margin-top: -378px; border:10px solid orange; background-color: white; z-index:1002; overflow: visible; } </style>` [![01-aem-forms-architecture](assets/01-aem-forms-architecture.jpg)*檢視完整大小&#x200B;*](javascript:void(0).md)
 
@@ -50,7 +50,7 @@ HTML5表格不會快取遺失片段和影像參照的範本。 如果HTML5表單
 
 Forms OSGi服務會以兩個步驟處理請求：
 
-* **版面配置和初始表單狀態產生**:Forms OSGi render服務會呼叫Forms cache元件，以確定表單是否已快取且未失效。 如果表單已快取且有效，則會從快取中支援產生的HTML。 如果表單無效，Forms OSGi render服務將生成XML格式的「初始表單佈局」和「表單狀態」。 此XML會透過Forms OSGi服務轉換為HTML版面配置和初始JSON表單狀態，然後快取以備後續要求使用。
+* **版面配置和初始表單狀態產生**:Forms OSGi render服務會呼叫Forms Cache元件，以確定表單是否已快取且未失效。 如果表單已快取且有效，則會從快取中支援產生的HTML。 如果表單無效，Forms OSGi render服務會以XML格式生成初始表單佈局和表單狀態。 此XML會透過Forms OSGi服務轉換為HTML版面配置和初始JSON表單狀態，然後快取以備後續要求使用。
 * **預先填入的表單**:在轉譯時，如果使用者以預先填入的資料要求表單，Forms OSGi轉譯服務會呼叫Forms服務容器，並產生具有合併資料的新表單狀態。 不過，由於版面已在上述步驟中產生，因此此呼叫比第一次呼叫更快。 此調用僅執行資料合併並對資料運行指令碼。
 
 如果表單或表單內使用的資產有任何更新，表單快取元件會偵測到該更新，而該特定表單的快取會失效。 當Forms OSGi服務完成處理後，描述檔轉譯器jsp會將JavaScript程式庫參考和樣式新增至此表單，並傳回回應給用戶端。 Apache等典型Web伺服 [器](https://httpd.apache.org/) ，可在此處搭配HTML壓縮使用。 Web伺服器可大幅降低回應大小、網路流量，以及在伺服器與用戶端機器之間串流資料所需的時間。
@@ -108,9 +108,9 @@ HTML5表格會使用LRU策略執行記憶體內快取。 如果快取策略設�
 
 #### 配置服務 {#configuration-service}
 
-Configuration service可讓您調整HTML5表單的設定參數和快取設定。
+Configuration Service可讓您調整HTML5表單的設定參數和快取設定。
 
-若要更新這些設定，請前往CQ Felix Admin Console(可在https://&lt;[server]:[port]/system/console/configMgr取得)，搜尋並選取「Mobile Forms Configuration」（行動表單設定）。
+若要更新這些設定，請前往CQ Felix Admin Console(可在https://&lt;&#39;[server]:[port]&#39;/system/console/configMgr取得)，搜尋並選取「Mobile Forms Configuration」（行動表單設定）。
 
 您可以使用配置服務配置快取大小或禁用快取。 您也可以使用「除錯選項」參數啟用除錯。 如需除錯表單的詳細資訊，請參閱除 [錯HTML5表單](/help/forms/using/debug.md)。
 
