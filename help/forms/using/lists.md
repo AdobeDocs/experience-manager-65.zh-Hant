@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -107,9 +107,9 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
    ![文本背景著色](assets/textbackgroundcolorapplied.png)
 
-   您可以直接點選「基本顏色」浮動視窗中顯示的基本顏色 **[A]** ，或在使用滑桿 **B後點選「選取」****[]** ，以選擇適當的顏色陰影。
+   您可以直接點選「基本顏色」浮動 `**[A]**` 視窗中顯示的基本顏色，或在使用滑桿選取適當的顏色後點選「選取」( **Select**`**[B]**` )。
 
-   或者，您也可以前往「進階」索引標籤，選取適當的「色相」、「明度」和「飽和度 **[C]** 」以建立精確的色彩，然後點選「選取 **[D]** 」以套用色彩來反白顯示文字。
+   或者，您也可以前往「進階」索引標籤，選取適當的「色相」、「明度」和「飽和度」 `**[C]**``**[D]**` ，以建立精確的色彩，然後點選「選取」以套用顏色來反白顯示文字。
 
    ![textbackgroundcolor-1](assets/textbackgroundcolor-1.png)
 
@@ -248,7 +248,7 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
    ![在清單中重新排序及設定資產](assets/listitems.png)
 
-1. 您可以選擇以下選項來指定清單在CCR用戶介面中的行為：
+1. 您可以選擇以下選項，以指定清單在CCR用戶介面中的行為：
 
    * **資料庫存取**:若要啟用資料庫存取以新增資產，請點選「資料庫存取」。 啟用「資料庫存取」後，索賠調整者可以新增更多內容至清單。 否則，「索賠調整者」僅限於您為清單定義的內容。
    * **鎖定順序**:要鎖定清單中資產的順序，以便索賠調整者不能更改順序，請按一下「鎖定順序」。 如果您未選擇此選項，「索賠調整者」可以更改清單項的順序。
