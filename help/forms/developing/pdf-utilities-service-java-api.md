@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 4ec4c674-d7d3-4988-9d77-78d274970672
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,7 +31,7 @@ PDF公用程式服務提供下列快速入門。
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
-***注意&#x200B;**:「使用AEM表單進行程式設計」中的「快速入門」是以Forms server作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:「使用AEM表單進行程式設計」中的「快速入門」是以Forms Server作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
 ## 快速入門（SOAP模式）:使用Java API將PDF檔案轉換為XDP檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
@@ -102,7 +102,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -202,7 +202,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -302,7 +302,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -353,7 +353,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API設定PDF檔案的儲存樣式 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
 
-下列程式碼範例會設定儲存模式，以快速檢視Web，然後將PDF檔案傳送至加密服務，並加密檔案。 為快速進行網頁檢視而儲存的加密PDF檔案會儲存為名為* FastWebViewLoan.pdf*的PDF檔案。 (請參閱 [設定PDF檔案儲存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes)。)
+下列程式碼範例會設定儲存模式，以快速檢視網頁，然後將PDF檔案傳送至加密服務，並加密檔案。 為快速進行網頁檢視而儲存的加密PDF檔案會儲存為名為* FastWebViewLoan.pdf*的PDF檔案。 (請參閱 [設定PDF檔案儲存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes)。)
 
 ```as3
  /*
@@ -424,7 +424,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -543,7 +543,7 @@ public class CreatePDFADocument {
     try{
         //Set connection properties required to invoke AEM Forms
         Properties connectionProps = new Properties();
-        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+        connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -628,7 +628,7 @@ public class Sanitization {
         try {
             //Set connection properties required to invoke AEM Forms
             Properties connectionProps = new Properties();
-            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
