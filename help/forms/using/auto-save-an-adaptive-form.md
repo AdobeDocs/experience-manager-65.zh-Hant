@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,8 +31,8 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
 1. 在「最 **[!UICONTROL 適化表單事件]** 」方塊中，指定1或TRUE，以在表單載入瀏覽器時自動開始儲存表單。 您也可以指定事件的條件運算式，當觸發並傳回true時，會開始儲存表單的內容。
 1. 指定觸發器。 會根據您的設定觸發自動儲存。 您的選項包括：
 
-   * **** 時間型：選擇根據特定時間間隔開始保存內容的選項。
-   * **** 事件型：選取在觸發事件時開始儲存內容的選項。
+   * **[!UICONTROL 時間型：]** 選擇根據特定時間間隔開始保存內容的選項。
+   * **[!UICONTROL 事件型：]** 選取在觸發事件時開始儲存內容的選項。
    選擇觸發器時，將啟用「策略配置」框。 「策略配置」框可讓您：
 
    * 如果選擇基於時間的觸發器，請 **[!UICONTROL 指定時間間隔]** 。
@@ -53,7 +53,7 @@ source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
    >
    >若要自動儲存選項以供匿名使用者使用，請確定您已設定Forms Common Configuration Service，讓所有使用者都能預覽、驗證和簽署表格。
    >
-   >若要設定服務，請前往AEM Web Console設定，位於 `https://[server]:[host]/system/console/configMgr` 並編輯 **[!UICONTROL Forms Common Configuration Service]** ，以在「允許 **[!UICONTROL 」欄位中選擇「所有使用者]****** 」選項，然後儲存設定。
+   >若要設定服務，請前往AEM Web Console設定（位於）, `https://server:port/system/console/configMgr` 並編輯 **[!UICONTROL Forms Common Configuration Service]** ，以在「允許 **[!UICONTROL 」欄位中選擇「所有使用者]****** 」選項，然後儲存設定。
 
 ## 實作自訂策略，以針對最適化表單啟用自動儲存 {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 
