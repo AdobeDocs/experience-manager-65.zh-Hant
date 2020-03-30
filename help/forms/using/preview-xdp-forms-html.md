@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,8 +28,8 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 ### 設定Apache Sling Authentication Service {#configure-apache-sling-authentication-service}
 
-1. 前往OSGi `https://[server]:[port]/system/console/configMgr` 或
-   `https://[server]:[port]/lc/system/console/configMgr` 在JEE上執行的AEM Forms。
+1. 前往OSGi `https://'[server]:[port]'/system/console/configMgr` 或
+   `https://'[server]:[port]'/lc/system/console/configMgr` 在JEE上執行的AEM Forms。
 1. 找到並按一 **下Apache Sling Authentication Service** configuration，以在編輯模式中開啟它。
 
 1. 視您是在OSGi或JEE上執行AEM Forms而定，請在「驗證需求」欄位中 **新增下列** :
@@ -55,8 +55,8 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 1. 以管理員身分登入AEM Web Console。
 
-   * OSGi上的AEM表格URL `https://[server]:[port]/system/console/configMgr`
-   * JEE上的AEM Forms URL is `https://[server]:[port]/lc/system/console/configMgr`
+   * OSGi上的AEM表格URL `https://'[server]:[port]'/system/console/configMgr`
+   * JEE上的AEM Forms URL is `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. 開啟 **[!UICONTROL 行動表單設定]** ，以進行編輯。
 1. 取消選取「 **[!UICONTROL 保護模式]** 」選項，然後按 **[!UICONTROL 一下「儲存]**」。
@@ -69,16 +69,16 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
    * **伺服器URL**:AEM Forms伺服器URL。
 
    * **HTTP埠號**:AEM伺服器埠。 預設值為4502。
-   * **** HTML預覽內容：用於呈現XFA表單的描述檔路徑。 以下預設配置檔案用於在設計器中預覽表單。 不過，您也可以指定自訂描述檔的路徑。
+   * **HTML預覽內容：** 用於呈現XFA表單的描述檔路徑。 以下預設配置檔案用於在設計器中預覽表單。 不過，您也可以指定自訂描述檔的路徑。
 
       * `/content/xfaforms/profiles/default.html` （OSGi上的AEM Forms）
 
       * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
-   * **** Forms manager上下文：部署Forms Manager UI的上下文路徑。 預設值為：
+   * **Forms Manager上下文：** 部署Forms Manager UI的上下文路徑。 預設值為：
 
       * `/aem/forms` （OSGi上的AEM Forms）
       * `/lc/forms` (AEM Forms on JEE)
-   **** 注意：請確定AEM Forms伺服器已啟動並正在執行。 HTML預覽會連線至CRX伺服器以 *產生* 預覽。
+   **注意：** 請確定AEM Forms伺服器已啟動並正在執行。 HTML預覽會連線至CRX伺服器以 *產生* 預覽。
 
    ![AEM Forms Designer選項 ](assets/server_options.png)
 
