@@ -10,20 +10,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 單一登入和逾時處理常式 {#single-sign-on-and-timeout-handlers}
 
-AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式（例如Forms Manager或PDF Generator）使用者介面，並在相同的瀏覽器作業階段存取AEM Forms工作區，則使用者會登入AEM Forms工作區，反之亦然。
+AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式（例如Forms Manager或PDF Generator）使用者介面，並在相同的瀏覽器作業階段存取AEM Forms工作區，則使用者已登入AEM Forms工作區，反之亦然。
 
 ## 在AEM Forms工作區中處理伺服器逾時 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
 
 可在管理控制台中設定使用者的作業逾時。
 
-若要設定逾時，請登入至 `https://[server]:[port]/adminui`，導覽至「 **設定>使用者管理>設定>設定進階系統屬性**」，然後進行所需的設定。
+若要設定逾時，請登入至 `https://'[server]:[port]'/adminui`，導覽至「 **設定>使用者管理>設定>設定進階系統屬性**」，然後進行所需的設定。
 
 在AEM Forms工作區中，逾時的處理方式為：
 
