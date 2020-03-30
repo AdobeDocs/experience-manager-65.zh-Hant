@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2777706c-d42b-4921-a8f4-720b7c0fa45e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 當您將PDF檔案上傳至Acrobat Reader DC擴充功能Web應用程式時，您可以檢視此資訊：若要檢視該檔案是否已延伸Reader、套用任何使用權限，以及其到期日。
 
-1. 請登入Acrobat Reader DC擴充功能網頁應用程式，網址為http://localhost:*[port]*/ReaderExtensions(其中 *[port是您應用程式伺服器的埠號]* )。
+1. 請登入Acrobat Reader DC擴充功能網頁應用程式，位 `http://[localhost]:[port]/ReaderExtensions` 址為( *[其中]* port是您應用程式伺服器的埠號)。
 1. 按一下「瀏覽」以上傳PDF檔案，然後按一下「資訊」。 資訊會顯示在檔案名稱的下方。
 
    如需修改檔案使用權的詳細資訊，請參閱Acrobat Reader DC擴充功能說明。
