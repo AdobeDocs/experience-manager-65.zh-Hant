@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -51,7 +51,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
 使用下列步驟在/apps分支中建立所需的資料夾結構：
 
-1. 前往並 `https://[server]:[port]/[ContextPath]/crx/de` 以管理員身分登入。
+1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
 1. 在應用程式檔案夾中，建立名 `css` 為路徑／結構的檔案夾，類似於css檔案夾（位於ccrui檔案夾）。
 
    建立css資料夾的步驟：
@@ -62,11 +62,11 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
    1. 請確定「覆蓋節點」對話框具有下列值：
 
-      **** 路徑：/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
+      **路徑：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
 
-      **** 覆蓋位置：/apps/
+      **覆蓋位置：** /apps/
 
-      **** 匹配節點類型：已勾選
+      **匹配節點類型：** 已勾選
 
       ![覆蓋節點路徑](assets/0_1_5ioverlaynodedialog.png)
 
@@ -90,11 +90,11 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
    1. 以滑鼠右鍵按一 **下** ，在下列路徑上的imgs資料夾，然後選取「 **覆蓋節點」**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 請確定「覆蓋節點」對話框具有下列值：
 
-      **** 路徑：/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
+      **路徑：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
-      **** 覆蓋位置：/apps/
+      **覆蓋位置：** /apps/
 
-      **** 匹配節點類型：已勾選
+      **匹配節點類型：** 已勾選
 
    1. 按一下 **確定**。
 
@@ -114,7 +114,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
 使用下列步驟將自訂標誌檔案上傳至CRX:
 
-1. 前往 `https://[server]:[port]/[contextpath]/crx/de`. 如有必要，請以管理員身份登錄。
+1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，請以管理員身份登錄。
 1. 在CRXDE中，按一下右鍵以下路 **徑的** imgs資料夾，然後選擇「 **建立」>「建立檔案」**:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
@@ -157,7 +157,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
 使用下列步驟設定用於渲染徽標的樣式表：
 
-1. 前往 `https://[server]:[port]/[contextpath]/crx/de`. 如有必要，請以管理員身份登錄。
+1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，請以管理員身份登錄。
 1. 在下列位置建立名為customcss.css的檔案（您無法使用不同的檔案名稱）:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css/`
@@ -165,8 +165,8 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
    建立customcss.css檔案的步驟：
 
    1. 以滑鼠右鍵按一下 **css資料夾** ，然後選 **取「建立>建立檔案」**。
-   1. 在「新增檔案」對話方塊中，將CSS的名稱指定 `customcss.css`為（您不能使用不同的檔案名稱），然後按一下「確 **定」**。
-   1. 將下列程式碼新增至新建立的css檔案。 在程式碼中的content:url中，指定您已上傳至CRXDE中的imgs檔案夾的影像名稱。
+   1. 在「新建檔案」對話框中，將CSS的名稱指定為 `customcss.css`（不能使用不同的檔案名），然後按一下「確 **定」**。
+   1. 將下列程式碼新增至新建立的css檔案。 在程式碼中的content:url中，指定您已上傳至CRXDE中imgs檔案夾的影像名稱。
 
       ```css
       .logo, .logo:after {
