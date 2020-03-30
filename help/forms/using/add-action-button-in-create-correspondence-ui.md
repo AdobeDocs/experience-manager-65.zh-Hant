@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,7 +40,7 @@ Correponse Management解決方案允許您將自定義操作添加到「建立�
 
 ### 將按鈕新增至「建立對應」使用者介面 {#add-the-button-to-the-create-correspondence-user-interface}
 
-1. 前往並 `https://[server]:[port]/[ContextPath]/crx/de` 以管理員身分登入。
+1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
 1. 在應用程式檔案夾中，建立名為路徑／結 `defaultApp` 構的檔案夾，類似於defaultApp檔案夾（位於config檔案夾中）。 使用下列步驟建立資料夾：
 
    1. 以滑鼠右鍵按一 **下下列路徑上的** defaultApp資料夾，然後選取「 **覆蓋節點」**:
@@ -51,11 +51,11 @@ Correponse Management解決方案允許您將自定義操作添加到「建立�
 
    1. 請確定「覆蓋節點」對話框具有下列值：
 
-      **** 路徑：/libs/fd/cm/config/defaultApp/
+      **路徑：** /libs/fd/cm/config/defaultApp/
 
-      **** 覆蓋位置：/apps/
+      **覆蓋位置：** /apps/
 
-      **** 匹配節點類型：已勾選
+      **匹配節點類型：** 已勾選
 
       ![覆蓋節點](assets/2_defaultappoverlaynode.png)
 
@@ -70,7 +70,7 @@ Correponse Management解決方案允許您將自定義操作添加到「建立�
 
       ![複製acmExtensionsConfig.xml](assets/3_acmextensionsconfig_xml_copy.png)
 
-   1. 以滑鼠右鍵按一 **下「/apps/fd/cm/config/defaultApp/** 」的預設App資料夾，並選取「貼上」 ****。
+   1. 以滑鼠右鍵按一 **下「/apps/fd/cm/config/defaultApp/** 」的defaultApp資料夾，並選取「貼上」 ****。
    1. 按一下「 **全部儲存**」。
 
 1. 連按兩下您新在apps資料夾中建立的acmExtentionsConfig.xml副本。 檔案隨即開啟以供編輯。
@@ -131,11 +131,11 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 
 1. 請確定「覆蓋節點」對話框具有下列值：
 
-   **** 路徑：/libs/fd/cm/config/defaultApp/locale
+   **路徑：** /libs/fd/cm/config/defaultApp/locale
 
-   **** 覆蓋位置：/apps/
+   **覆蓋位置：** /apps/
 
-   **** 匹配節點類型：已勾選
+   **匹配節點類型：** 已勾選
 
 1. 按一下 **確定**。
 1. 按一下「 **全部儲存**」。
@@ -167,7 +167,7 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 >
 >您可能需要清除瀏覽器快取。
 
-1. 前往 `https://[host]:[port]/system/console/bundles`. 如有必要，請以管理員身份登錄。
+1. 前往 `https://[host]:'port'/system/console/bundles`. 如有必要，請以管理員身份登錄。
 
 1. 找到Adobe Asset Composer建置區塊套件。 重新啟動套件：按一下「停止」，然後按一下「開始」。
 
@@ -189,7 +189,7 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 * 啟用／禁用新添加的操作：完成方式：覆寫actionEnabled()函式。
 * 當使用者按一下按鈕時的實際動作處理：可覆寫handleAction()函式的實作。
 
-1. 前往 `https://[server]:[port]/[ContextPath]/crx/de`. 如有必要，請以管理員身份登錄。
+1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de`. 如有必要，請以管理員身份登錄。
 
 1. 在應用程式檔案夾中，建立名 `js` 為CRX /apps分支中的檔案夾，其結構類似於下列檔案夾：
 
@@ -203,11 +203,11 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 
    1. 請確定「覆蓋節點」對話框具有下列值：
 
-      **** 路徑：/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
+      **路徑：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
 
-      **** 覆蓋位置：/apps/
+      **覆蓋位置：** /apps/
 
-      **** 匹配節點類型：已勾選
+      **匹配節點類型：** 已勾選
 
    1. 按一下 **確定**。
    1. 按一下「 **全部儲存**」。
@@ -338,8 +338,8 @@ components.zip
 
 LCA程式會在LiveCycle伺服器上執行，並需要伺服器位址和登入憑證。
 
-1. 前往並 `https://[server]:[port]/system/console/configMgr` 以管理員身分登入。
-1. 找到「Adobe liveCycle Client SDK Configuration」（Adobe LiveCycle用戶端SDK設定），然後按一 **下「Edit** 」（編輯圖示）。 「配置」(Configurations)面板隨即開啟。
+1. 前往並 `https://'[server]:[port]'/system/console/configMgr` 以管理員身分登入。
+1. 找到「Adobe LiveCycle Client SDK Configuration」（Adobe LiveCycle用戶端SDK設定），然後按一 **下「Edit** 」（編輯圖示）。 「配置」(Configurations)面板隨即開啟。
 
 1. 輸入以下詳細資訊，然後按一下「 **保存**」:
 
@@ -380,9 +380,9 @@ LCA程式會在LiveCycle伺服器上執行，並需要伺服器位址和登入�
 
 在AEM伺服器中提及您要存取AEM伺服器的LiveCycle服務。
 
-1. 以管理員身份登錄 `https:/[host]/:[port]/system/console/configMgr`。
+1. 以管理員身份登錄 `https:/[host]:'port'/system/console/configMgr`。
 
-1. 找到並按一 **下「Adobe liveCycle Client SDK Configuration」**。 出現「Adobe LiveCycle Client SDK Configuration」（Adobe LiveCycle用戶端SDK設定）面板。
+1. 找到並按一 **下「Adobe LiveCycle Client SDK Configuration」**。 出現「Adobe LiveCycle Client SDK Configuration」（Adobe LiveCycle用戶端SDK設定）面板。
 1. 在「服務名」清單中，按一下+表徵圖並添加serviceName **SendLetterForReview/SendLetterForReviewProcess**。
 
 1. 按一下&#x200B;**「儲存」**。
@@ -413,7 +413,7 @@ LCA程式會在LiveCycle伺服器上執行，並需要伺服器位址和登入�
 
 1. 在配置檔案中提供以下參數：
 
-   * **crx.serverUrl**=https:/[host]/:port[/contextpath]/[context URL][AEM URL]
+   * **crx.serverUrl**=https:/host:port/[context path]/[AEM URL]
    * **crx.username**= AEM使用者名稱
    * **crx.password**= AEM密碼
    * **crx.appRoot**=/content/apps/cm
