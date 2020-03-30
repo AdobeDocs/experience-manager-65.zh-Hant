@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -108,7 +108,7 @@ CREATE TABLE `calls` (
 
 呼 **叫表包括** 呼叫詳細資訊，如呼叫日期、呼叫時間、呼叫號碼、呼叫持續時間和呼叫費用。 客戶 **表使用** 「行動號碼(mobilenum)」欄位連結至呼叫表。 對於客戶表格中列出的每 **個行動** ，呼叫表格中會有多 **個記錄** 。 例如，您可以參照呼叫表來檢索 **1457892541** **Mobile號碼的呼叫詳細** 資訊。
 
-清 **單表** 包括清單詳細資訊，如帳單日期、帳單期間、月費和通話費。 客戶 **表使用「清單計** 划 **** 」欄位連結至清單表。 客戶表中有與每個客戶關聯的 **計畫** 。 清 **單表** 包括所有現有計畫的定價詳細資訊。 例如，您可以從客戶表中檢索 **Sarah** 的計畫詳細資訊，並使用 **這些詳細資訊從清單表中檢索定** 價詳細資訊 **** 。
+清 **單表** 包括清單詳細資訊，如帳單日期、帳單期間、月費和通話費。 客戶 **表使用「清單計** 划 **** 」欄位連結至清單表。 客戶表中有與每個客戶關聯的 **計畫** 。 清 **單表** 包括所有現有計畫的定價詳細資訊。 例如，您可以從客戶表中檢索 **Sarah** 的計畫詳細資訊，並使用 **這些詳細資訊從清單表中檢索定價詳** 細資訊 **** 。
 
 ## 步驟2:將MySQL資料庫配置為資料源 {#step-configure-mysql-database-as-data-source}
 
@@ -135,7 +135,7 @@ CREATE TABLE `calls` (
 
       * **JDBC驅動程式類**:指定JDBC驅動程式的Java類名。 對於MySQL資料庫，請 **指定com.mysql.jdbc.Driver**。
 
-      * **JDBC連接URI**:指定資料庫的連線URL。 對於在埠3306和模式teleca上運行的MySQL資料庫，URL為： `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC連接URI**:指定資料庫的連線URL。 對於在埠3306和模式teleca上運行的MySQL資料庫，URL為： `jdbc:mysql://'server':3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **使用者名稱：** 資料庫的用戶名。 必須啟用JDBC驅動程式才能與資料庫建立連接。
       * **密碼：** 資料庫的口令。 必須啟用JDBC驅動程式才能與資料庫建立連接。
       * **借閱測試：** 啟用「 **借閱時測試** 」選項。
@@ -301,7 +301,7 @@ AEM Forms提供直覺式使用者介面， [從設定的資](https://helpx.adobe
 
    * 從「 **綁定值** 」(Binding Value **** )下拉式清單中選取customerplan。
 
-   * 點選 **「完成** 」(Done)可建立計費計畫與客戶計畫屬性之間的系結。
+   * 點選 **「完成** 」(Done)，在計費計畫與客戶計畫屬性之間建立系結。
    ![新增客戶帳單的關聯](assets/add_association_customer_bills_new.png)
 
    下圖描述了資料模型對象和用於建立它們之間關聯的屬性之間的關聯：
