@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 136ac7e3-9d1f-4d58-bd4f-9dbe09eeafee
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -50,7 +50,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 ## 建立自訂欄位版面 {#create-a-custom-field-layout}
 
-1. 開啟CRXDE lite。 預設URL為https://[Server]:[Port]/crx/de。
+1. 開啟CRXDE lite。 預設URL為https://&#39;[server]:[port]&#39;/crx/de。
 1. 將欄位版面從/libs/fd/af/layouts/field節點（例如defaultFieldLayout）複製至/apps節點（例如/apps/af-field-layout）。
 1. 重新命名複製的節點和defaultFieldLayout.jsp檔案。 例如，errorOnRight.jsp。
 
@@ -58,7 +58,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 1. 若要新增樣式和行為，請在/etc節點中建立用戶端程式庫。
 
-   例如，在/etc/af-field-layout-clientlib位置，建立節點client-library。 新增包含值af.field.errorOnRight和style.less檔案的類別屬性，並包含以下程式碼：
+   例如，在/etc/af-field-layout-clientlib位置，建立節點client-library。 新增包含值af.field.errorOnRight和style.less檔案的類別屬性，並包含下列程式碼：
 
    ```css
    .widgetErrorWrapper {
