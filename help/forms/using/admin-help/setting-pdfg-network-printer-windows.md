@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7620e5e4-022e-49b2-8cfe-d5eec8ab99d7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -60,7 +60,7 @@ PDFG網路印表機可讓使用者從支援列印的任何應用程式產生PDF�
 
 1. （PDFG管理員）在管理控制台中，按一下「服務> PDF產生器> PDFG網路印表機」。
 
-   （PDFG用戶）轉至「PDFG Network Printer Installation(PDFG網路打印 `http(s)://[host]:[port]/pdfgui` 機安裝)」下，並按一下該連結。
+   （PDFG用戶）轉至「PDFG Network Printer Installation(PDFG網路打印 `http(s)://[host]:'port'/pdfgui` 機安裝)」下，並按一下該連結。
 
 1. 在「PDFG Network Printer Installation（PDFG網路打印機安裝）」下，按一下該連結。 當提示輸入使用者帳戶資訊時，請指定您在步驟1中用來登入的使用者名稱和密碼。 出現一條消息，指出打印機已成功安裝。
 
