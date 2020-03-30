@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -80,7 +80,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
    *https://&lt;aemserver>:&lt;port>/content/forms/af/adobe-gov-forms/enrollment-application-for-health-benefits.html*
 
 1. **Adobe We.Gov網站**: *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html*
-1. **Adobe收件匣**:位於AEM後端的 [頂端功能表列] 「Bell」圖示。
+1. **Adobe收件匣**:位於AEM後端的 [頂端功能表列](assets/bell.svg) 「Bell」圖示。
 
    *https://&lt;aemserver>:&lt;port>/aem/start.html*
 
@@ -172,7 +172,7 @@ Aya需要先在家中審閱一些檔案，才能完成服務請求申請。 她�
 
 ## 案頭示範 {#desktop-demo}
 
-**** 本節：回到家後，Aya找到了她需要的資訊，並從她的案頭恢復了申請。 Aya導覽至線上表單入口網站，以繼續申請。 透過一些簡單的自訂功能，機構也可以自動產生連結並以電子郵件傳送，以繼續執行應用程式。
+**本節：** 回到家後，Aya找到了她需要的資訊，並從她的案頭恢復了申請。 Aya導覽至線上表單入口網站，以繼續申請。 透過一些簡單的自訂功能，機構也可以自動產生連結並以電子郵件傳送，以繼續執行應用程式。
 
 ### Aya使用者動態（續的最適化表單） {#aya-user-story-continued-adaptive-form}
 
@@ -219,7 +219,7 @@ Aya需要先在家中審閱一些檔案，才能完成服務請求申請。 她�
 
 ![政府代理人喬治](/help/forms/using/assets/george_lang-1.png)
 
-**** 本節：喬治是政府機關Aya的商業分析師，向Aya請求服務。 George有一個儀表板，他可以在其中查看所有指派給他進行審查的服務請求應用程式。
+**本節：** 喬治是政府機關Aya的商業分析師，向Aya請求服務。 George有一個儀表板，他可以在其中查看所有指派給他進行審查的服務請求應用程式。
 
 ### George User Story（AEM收件匣） {#george-user-story-aem-inbox}
 
@@ -230,8 +230,8 @@ Aya需要先在家中審閱一些檔案，才能完成服務請求申請。 她�
 
    1. 登入方式：
 
-      1. **** 使用者：george.lang
-      1. **** 密碼：密碼
+      1. **使用者：** george.lang
+      1. **密碼：** 密碼
    1. 或模擬：
 
       1. 在「**Impersonate as**」(模&#x200B;**擬為**)欄位中輸入「George」。
@@ -278,13 +278,13 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
 ![Camila（CX銷售線索）](/help/forms/using/assets/camila_santos-1.png)
 
-**** 本節：CX Lead與Aya打了歡迎電話，以說明如何利用她獲得批准的政府服務。
+**本節：** CX Lead與Aya打了歡迎電話，以說明如何利用她獲得批准的政府服務。
 
 ### Camila使用者動態（AEM收件匣與MS Dynamics） {#camila-user-story-aem-inbox-ms-dynamics}
 
 **使用者指示：**
 
-1. 導覽至 *https://&lt;aemserver>:&lt;port>/aem/start.html*
+1. Navigate to *https://&lt;aemserver>:&lt;port>/aem/start.html*
 1. 按一下使用者圖示（右上角），並使用「登出」或「**Impersonate as******」功能表選項（如果您目前與管理使用者登入）。
 
    1. 登入方式：
@@ -300,14 +300,14 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
 1. 從右上角按一下「通知（鈴鐺）」圖示。
 1. 按一下「**全部檢視**」以導覽至「收件匣」。
-1. 從「收件箱」中，開啟最新的「**新聯繫人批准**」任務。
+1. From the Inbox, open the latest “**New Contact Approval**” task.
 
    ![新連絡人核准](/help/forms/using/assets/new_contact_approval.png)
 
    **使用者指示：**
 
-1. 開啟並檢查唯讀最適化表單。
-1. 按一下「**Open MS Dynamics**」（開啟MS Dynamics）按鈕，在新窗口中開啟MS Dynamics記錄。
+1. Open and inspect the read-only adaptive form.
+1. Click on the “**Open MS Dynamics**” button to open the MS Dynamics record in a new window.
 1. 在CRM中，您可以看到所有資訊都可以更新
 
    1. （可選）直接在Dynamics中新增呼叫活動。
@@ -316,40 +316,40 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
    1. 添加電話呼叫詳細資訊。
    1. 保存並關閉窗口。
 
-1. 返回AEM，導覽至左上角，然後按一下「**Submit**」以送出應用程式。
-1. 在模型中，您可以留言。
-1. 按一下「完成」。
+1. Back in AEM, navigate to the top left corner and click “**Submit**” to submit the application.
+1. In the modal, you can leave a message.
+1. Click Done.
 
-   ![「活動」頁籤](/help/forms/using/assets/activities_tab.png) 「確 ![認新聯繫人」](/help/forms/using/assets/confirm_new_contact.png)
+   ![Activities tab](/help/forms/using/assets/activities_tab.png) ![Confirm New Contact](/help/forms/using/assets/confirm_new_contact.png)
 
-## 歡迎Kit公民(Aya) {#welcome-kit-citizen-aya}
+## Welcome Kit citizen (Aya) {#welcome-kit-citizen-aya}
 
-**** 本節：Aya收到一封電子郵件，其中包含互動式通訊的連結，可摘要她的優點，並包含要填寫的表格欄位。 附上PDF優點陳述並連結至電子郵件中的互動式通訊信件（與互動式通訊具有相同的主題／品牌）。
+**本節：** Aya收到一封電子郵件，其中包含互動式通訊的連結，可摘要她的優點，並包含要填寫的表格欄位。 附上PDF優點陳述並連結至電子郵件中的互動式通訊信件（與互動式通訊具有相同的主題／品牌）。
 
 ### Aya使用者動態（電子郵件用戶端） {#aya-user-story-email-client}
 
 **使用者指示：**
 
-1. 找到並開啟歡迎套件電子郵件。
-1. 捲動至頁面底部的PDF附件。
-1. 按一下以開啟PDF附件。
-1. 在電子郵件用戶端中捲動並按一下「線&#x200B;**上檢視歡迎套件**」。
+1. Locate and open the Welcome Kit email.
+1. Scroll to PDF attachment at the bottom of the page.
+1. Click to open the PDF attachment.
+1. Scroll back up in your email client and click on “**View welcome kit online**”.
 
-   1. 這會開啟相同檔案的Web頻道版本。
+   1. This will open the web channel version of the same document.
 
-1. 若要直接參考PDF:
+1. For a quick reference to PDF directly:
 
    *https://&lt;aemserver>:&lt;port>/aem/formdetails.html/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook*
 
-1. 直接參考IC:
+1. For a quick reference to IC directly:
 
-   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook:content?channel=web&amp;mode=preview&amp;wcmmode=disabled*
+   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content?channel=web&amp;mode=preview&amp;wcmmode=disabled*
 
-   ![歡迎權益手冊](/help/forms/using/assets/welcome_benefits_handbook.png)![互動式通訊連結](/help/forms/using/assets/interactive_communication.png)
+   ![Welcome Benefits Handbook](/help/forms/using/assets/welcome_benefits_handbook.png) ![Interactive Communication Link](/help/forms/using/assets/interactive_communication.png)
 
-## 續約提醒公民(Aya) {#renewal-reminder-citizen-aya}
+## Renewal Reminder citizen (Aya) {#renewal-reminder-citizen-aya}
 
-**** 本節：卡米拉還安排了一個通訊提醒，這樣一來，一年後。 （自動化／執行及以電子郵件傳送的工作流程步驟）。
+**This section:** Camila also schedules a communication reminder so one year later. （自動化／執行及以電子郵件傳送的工作流程步驟）。
 
 ### Aya使用者動態（電子郵件用戶端） {#aya-user-story-email-client-1}
 
@@ -364,7 +364,7 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
 ## Analytics CX銷售線索(Camila) {#analytics-cx-lead-camila}
 
-**** 本節：Camila導覽至儀表板，可在其中查看機構KPI，例如開始填寫服務申請表並放棄的公民百分比、從申請提交到批准／拒絕回應的平均時間，以及她寄送給公民的福利手冊的參與統計資料。
+**本節：** Camila導覽至儀表板，可在其中查看機構KPI，例如開始填寫服務申請表並放棄的公民百分比、從申請提交到批准／拒絕回應的平均時間，以及她寄送給公民的福利手冊的參與統計資料。
 
 ### Camila評論網站報告(We.Gov Adobe Analytics) {#camila-reviews-sites-reporting-we-gov-adobe-analytics}
 
