@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 9fcb80b4-cbc2-48a5-afd1-4f3bc50bc503
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 例如，若要將頂端導覽列錨點文字的字型變更為Courier New，請依照下列步驟進行：
 
-1. 存取以登入CRXDE Lite `https://[server]:[port]/lc/crx/de/index.jsp`。
+1. 存取以登入CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 執行下列任一項作業：
 
    1. 若要以現有樣式變更font-family，請在newStyle.css檔案中新增下列項目： /apps/ws/css。
