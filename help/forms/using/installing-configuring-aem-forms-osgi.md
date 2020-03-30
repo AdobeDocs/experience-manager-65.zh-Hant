@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 
 AEM Forms提供一組表單，以從使用者取得資料：最適化表單、HTML5表單和PDF表單。 它還提供工具來列出網頁上所有可用的表單、分析表單的使用情況，並根據用戶的個人檔案來定位用戶。 這些功能已包含在AEM Forms附加套件中。 附加元件套件已部署在AEM的「作者」或「發佈」例項上。
 
-**** 最適化表單：這些表格會根據裝置的螢幕大小改變外觀，而且具有吸引力，而且具互動性。 Adaptive Forms也可以與Adobe Analytics、Adobe Sign和Adobe Target整合。 它可讓您根據使用者的人口結構和其他功能，為使用者提供個人化表單和流程導向的體驗。 您也可以將最適化表單與Adobe Sign整合。
+**最適化表單：** 這些表格會根據裝置的螢幕大小改變外觀，而且具有吸引力，而且具互動性。 Adaptive Forms也可以與Adobe Analytics、Adobe Sign和Adobe Target整合。 它可讓您根據使用者的人口結構和其他功能，為使用者提供個人化表單和流程導向的體驗。 您也可以將最適化表單與Adobe Sign整合。
 
 **PDF Forms** 適用於PDF檔案中像素精確的列印和數位資訊擷取。 在數位頭像中，您可以使用Adobe Acrobat或Acrobat Reader填寫這些表格。 您可以將這些表單托管在您的網站上，或使用表單入口網站，在AEM網站上列出這些表單。 您也可以將這些表格以電子郵件附件形式寄送給其他人。 這些表格最適合案頭環境。
 
@@ -48,7 +48,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需�
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
-   * 15 GB的臨時空間，用於基於Microsoft windows的安裝。
+   * 15 GB的臨時空間，用於基於Microsoft Windows的安裝。
    * 6 GB的臨時空間，用於基於UNIX的安裝。
 
 * 為作者和發佈實例設定複製和反向複製。 有關詳細資訊，請參 [閱複製](/help/sites-deploying/replication.md)。
@@ -130,9 +130,9 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 對所有「作者」(Author)和「發佈」(Publish)實例執行以下步驟以引導委派庫：
 
 1. 停止基礎AEM例項。
-1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案以進行編輯。
+1. 開啟檔 `[AEM installation directory]\crx-quickstart\conf\sling.properties` 案以進行編輯。
 
-   如果您使 [用AEM安裝目錄]\crx-quickstart\bin\start.bat來啟動AEM，請編輯位於 [AEM_root]\crx-quickstart\的sling.properties。
+   如果您使 `[AEM installation directory]\crx-quickstart\bin\start.bat` 用啟動AEM，請編輯位於的sling.properties `[AEM_root]\crx-quickstart\`。
 
 1. 將下列屬性新增至sling.properties檔案：
 
@@ -148,7 +148,7 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 
 對所有「作者」和「發佈」實例執行以下步驟，以將軟體包列入白名單：
 
-1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為 `https://[server]:[port]/system/console/configMgr`。
+1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為 `https://'[server]:[port]'/system/console/configMgr`。
 1. 搜尋 **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** ，並開啟設定。
 1. 將 **sun.util.calendar** 包添加到白 **名單欄位** 。 按一下&#x200B;**「儲存」**。
 1. 對所有「作者」和「發佈」例項重複步驟1-3。
@@ -169,7 +169,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
 1. 設定反向連結篩選服務：
 
-   以管理員身分登入Apache Felix組態管理員。 配置管理器的預設URL是https://[server]:[port_number]/system/console/configMgr。 在**Configurations **功能表中，選取 **Apache Sling Referrer Filter** （Apache Sling反向連結篩選）選項。 在「允許主機」欄位中，輸入調度程式的主機名以允許它作為反向連接，然後按一下「保 **存」**。 條目的格式為https://[server]:[port]。
+   以管理員身分登入Apache Felix組態管理員。 配置管理器的預設URL為 `https://[server]:[port_number]/system/console/configMgr`。 在「設 **定** 」選單中，選取 **Apache Sling Referrer Filter** 選項。 在「允許主機」欄位中，輸入調度程式的主機名以允許它作為反向連接，然後按一下「保 **存」**。 條目的格式為「https://[server]:[port]」。
 
 #### 配置快取 {#configure-cache}
 
@@ -180,7 +180,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
 執行以下步驟以配置自適應表單快取：
 
-1. 前往https:// Server:[port]/system[]/console/configMgr的AEM web主控台組態管理器。
+1. 請前往https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM網頁主控台組態管理器。
 1. 按一 **下「最適化表單與互動式通訊Web頻道設定」** ，以編輯其設定值。 在「編輯設定值」對話方塊中，在「最適化表單數」欄位中指定AEM Forms伺服器執行個體可快取的表 **單或檔案數上限** 。 預設值為100。 按一下&#x200B;**「儲存」**。
 
    >[!NOTE]
@@ -197,7 +197,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
 Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名可改善處理法律、銷售、薪資、人力資源管理等領域檔案的工作流程。
 
-在典型的Adobe sign和最適化表單案例中，使用者會填入最適化表單以 **申請服務**。 例如，信用卡申請和公民福利表。 當使用者填寫、提交及簽署申請表格時，表格會傳送給服務提供者，以做進一步的動作。 服務供應商會審核應用程式，並使用Adobe Sign來標示已核准的應用程式。 若要啟用類似的電子簽名工作流程，您可以將Adobe Sign與AEM Forms整合。
+在典型的Adobe Sign和最適化表單案例中，使用者會填入最適化表單以 **申請服務**。 例如，信用卡申請和公民福利表。 當使用者填寫、提交及簽署申請表格時，表格會傳送給服務提供者，以做進一步的動作。 服務供應商會審核應用程式，並使用Adobe Sign來標示已核准的應用程式。 若要啟用類似的電子簽名工作流程，您可以將Adobe Sign與AEM Forms整合。
 
 若要搭配使用Adobe Sign和AEM Forms，請 [將Adobe Sign與AEM Forms整合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)。
 
@@ -211,7 +211,7 @@ AEM Forms與Adobe Analytics整合，可讓您擷取並追蹤已發佈表單和�
 
 如果您的客戶提供的體驗並不吸引人，他們可能會放棄表單。 雖然這令客戶感到挫折，但也可以提升組織的支援數量和成本。 識別並提供合適的客戶體驗以提高轉化率，既重要，也極具挑戰性。 AEM表格是此問題的關鍵。
 
-AEM表單與Adobe Marketing cloud解決方案Adobe Target整合，跨多個數位通道提供個人化且吸引人的客戶體驗。 若要使用Adobe Target來A/B測試調適性表單，請 [將Adobe Target與AEM Forms整合](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
+AEM表單與Adobe Marketing Cloud解決方案Adobe Target整合，跨多個數位通道提供個人化且吸引人的客戶體驗。 若要使用Adobe Target來A/B測試調適性表單，請 [將Adobe Target與AEM Forms整合](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
 
 ## 後續步驟 {#next-steps}
 
