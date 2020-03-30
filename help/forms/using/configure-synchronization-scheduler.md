@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 8c8b1998-eab4-4230-b24f-5e96883ba599
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
 
 執行以下步驟以更改同步調度程式的間隔：
 
-1. 登入AEM Configuration Manager。 配置管理器的URL是 `https://[Server]:[Port]/lc/system/console/configMgr`
+1. 登入AEM Configuration Manager。 配置管理器的URL是 `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. 找到並開啟 **FormsManagerConfiguration** bundle。
 
@@ -35,17 +35,17 @@ source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
 
 您可以使用「從資 **料庫同步資產** 」選項手動同步資產。 執行下列步驟以手動同步資產：
 
-1. 登入AEM Forms。 預設URL為 `https://[Server]:[Port]/lc/aem/forms/`。
+1. 登入AEM Forms。 預設URL為 `https://'[server]:[port]'/lc/aem/forms/`。
 
    ![AEM Forms使用者介面](assets/aem_forms_ui.png)
 
-   **** 圖： *AEM Forms使用者介面*
+   **圖：***AEM Forms使用者介面*
 
-1. 按一 ![下工具列中的aem6forms_sync](assets/aem6forms_sync.png) 圖示。 如果您在最後設定的路徑上沒有任何資產，則對話方塊如下所示。 按一下 **開始** ，啟動同步。
+1. 按一 ![下工具列中的aem6forms_sync](assets/aem6forms_sync.png) 圖示。 如果您在最後設定的路徑上沒有任何資產，則會顯示對話方塊，如下所示。 按一下 **開始** ，啟動同步。
 
    ![同步對話框](assets/migrate-and-syncronize.png)
 
-   **** 圖：「同 *步」對話框*
+   **圖：** 「同 *步」對話框*
 
 ## 同步錯誤疑難排解 {#troubleshooting-synchronization-error}
 
@@ -57,4 +57,4 @@ source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
 
 ![資產同步對話方塊中的衝突](assets/sync-conflict.png)
 
-**** 圖：「資 *產同步中的衝突」對話框*
+**圖：** 「資 *產同步中的衝突」對話框*
