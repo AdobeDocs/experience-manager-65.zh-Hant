@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,15 +19,15 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名可改善處理法律、銷售、薪資、人力資源管理等領域檔案的工作流程。
 
-在典型的Adobe sign和最適化表單案例中，使用者會填入最適化表單以 **申請服務**。 例如，信用卡申請和公民福利表。 當使用者填寫、提交及簽署申請表格時，表格會傳送給服務提供者，以做進一步的動作。 服務供應商會審核應用程式，並使用Adobe Sign來標示已核准的應用程式。 若要啟用類似的電子簽名工作流程，您可以將Adobe Sign與AEM Forms整合。
+在典型的Adobe Sign和最適化表單案例中，使用者會填入最適化表單以 **申請服務**。 例如，信用卡申請和公民福利表。 當使用者填寫、提交及簽署申請表格時，表格會傳送給服務提供者，以做進一步的動作。 服務供應商會審核應用程式，並使用Adobe Sign來標示已核准的應用程式。 若要啟用類似的電子簽名工作流程，您可以將Adobe Sign與AEM Forms整合。
 
-若要搭配AEM Forms使用Adobe Sign，請在AEM Cloud services中設定Adobe Sign:
+若要搭配AEM Forms使用Adobe Sign，請在AEM Cloud Services中設定Adobe Sign:
 
 ## 必備條件 {#prerequisites}
 
 您需要下列項目才能將Adobe Sign與AEM Forms整合：
 
-* 有效的 [Adobe sign開發人員帳戶。](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)
+* 有效的 [Adobe Sign開發人員帳戶。](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)
 * 啟用 [SSL的](/help/sites-administering/ssl-by-default.md) AEM Forms伺服器。
 * Adobe [Sign API應用程式](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
 * Adobe Sign API應用程式的認證（用戶端ID和用戶端密碼）。
@@ -61,7 +61,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
    * aggrement_send
    * widget_write
    * workflow_read
-   如需設定Adobe Sign應用程式的OAuth設定並取得索引鍵的逐步資訊，請參閱應用程式開發人員文 [件的設定](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md) oAuth設定。
+   如需設定Adobe Sign應用程式的OAuth設定並取得金鑰的逐步資訊，請參閱應用程式開發人員文 [件的設定](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md) oAuth設定。
 
    ![OAuth設定](assets/oauthconfig_new.png)
 
@@ -81,7 +81,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 
    點選 **[!UICONTROL 「建立]** 」以建立Adobe Sign設定。
 
-1. 開啟AEM Web Console。 URL是 `https://[server]:[port]/system/console/configMgr`
+1. 開啟AEM Web Console。 URL是 `https://'[server]:[port]'/system/console/configMgr`
 1. 開啟 **Forms Common Configuration Service。**
 1. 在「允 **許** 」欄位中，選 **取「所有使用者** -所有使用者（匿名或登入）」，可預覽附件、驗證和簽署表格，然後按一下「儲 **存」。** 作者例項已設定為使用Adobe Sign。
 1. 在 [Publish](/help/sites-deploying/deploy.md) 例項上，登入並開啟下列URL:
@@ -99,7 +99,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 1. 使用管理員認證登入AEM Forms伺服器，並導覽至「工 **具** > **作業** > **Web Console**」。
 
    您也可以在瀏覽器視窗中開啟下列URL:
-   `https://[localhost]:[port]/system/console/configMgr`
+   `https://[localhost]:'port'/system/console/configMgr`
 
 1. 找到並開啟 **Adobe Sign Configuration Service選項** 。 在「狀態更 [新排程器運算式](https://en.wikipedia.org/wiki/Cron#CRON_expression) 」欄位中指 **定cron運算式，然後按一下「** 儲存 ****」。 例如，要每天00:00 am運行配置服務，請在「狀態更新調度器運 `0 0 0 1/1 * ? *` 算式」 **欄位中指定** 。
 
