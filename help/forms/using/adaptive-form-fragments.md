@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 1. 按一下以開啟「 **表單模型** 」(Form Model **)頁籤，然後從「從** 選擇」(Select From)下拉菜單中，為該片段選擇以下模型之一：
 
    * **無**:指定從頭開始建立片段，而不使用任何表單模型。
-   * **表單範本**:指定使用上傳至AEM Forms的XDP範本建立片段。 選擇適當的XDP模板作為片段的表單模型。
+   * **表單範本**:指定使用上傳至AEM Forms的XDP範本建立片段。 選擇適當的XDP範本作為片段的表單模型。
    ![使用表單模板作為模型建立自適應表單](assets/form-template-model.png)
 
    還顯示在所選表單模板中標籤為片段的子表單。 您可以從下拉式清單中選取最適化表單片段的子表單。
@@ -79,7 +79,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
    * **標籤**:標籤片段的中繼資料。
 
-   * **目標路徑**:保存片段的儲存庫路徑。 如果不指定路徑，則在包含自適應表單的節點旁邊建立與片段名稱相同的節點。 片段保存在此節點中。
+   * **目標路徑**:保存片段的儲存庫路徑。 如果不指定路徑，則在包含自適應表單的節點旁邊建立與片段名稱相同的節點。 片段將保存在此節點中。
 
    * **表單模型**:根據最適化表單的表單模型，此欄位會顯示 **XML架構**、 **表單範本**&#x200B;或 **無**。 這是不可編輯的欄位。
 
@@ -163,7 +163,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 您可以使用AEM Forms UI，對最適化表單片段執行數個作業。
 
-1. 前往 `https://[hostname]:[port]/aem/forms.html`.
+1. 前往 `https://[hostname]:'port'/aem/forms.html`.
 
 1. 按一 **下** 「AEM Forms UI」工具列中的「選取」，然後選取最適化的表單片段。 工具列顯示您可以對所選自適應表單片段執行的下列操作。
 
@@ -175,39 +175,39 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
   </tr>
   <tr>
    <td><p>開啟</p> </td>
-   <td><p><br /> 在編輯模式下開啟選定的自適應表單片段。 <br /> </p> </td>
+   <td><p>在編輯模式下開啟選定的自適應表單片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>檢視屬性</p> </td>
-   <td><p>開啟「屬性」面板。 從「屬性」面板，您可以檢視和編輯屬性、產生預覽，以及上傳所選片段的縮圖影像。 <a href="../../forms/using/manage-form-metadata.md" target="_blank"> 如需詳細資訊，請參 </a>閱管理中繼資料<br />。 <br /> </p> </td>
+   <td><p>開啟「屬性」面板。 從「屬性」面板，您可以檢視和編輯屬性、產生預覽，以及上傳所選片段的縮圖影像。 如需詳細資訊，請參 <a href="../../forms/using/manage-form-metadata.md" target="_blank">閱管理中繼資料</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>複製</p> </td>
-   <td><p>複製所選片段。 <br /> 「貼上」按鈕會出現在工具列中。 <br /> </p> </td>
+   <td><p>複製所選片段。 「貼上」按鈕會出現在工具列中。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>下載</p> </td>
-   <td><p><br /> 下載所選片段。 <br /> </p> </td>
+   <td><p>下載所選片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>預覽</p> </td>
-   <td><p>提供選項，可將XML檔案中的資料與片段合併，以HTML或自訂預覽形式預覽片段。 <a href="/help/forms/using/previewing-forms.md" target="_blank"> 如需詳細資訊，請參 </a>閱預覽表格<br />。 <br /> </p> </td>
+   <td><p>提供選項，可將XML檔案中的資料與片段合併，以HTML或自訂預覽形式預覽片段。 如需詳細資訊，請參 <a href="/help/forms/using/previewing-forms.md" target="_blank">閱預覽表格</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>開始審閱／管理審閱</p> </td>
-   <td><p>允許啟動和管理選定片段的審核。 <a href="../../forms/using/create-reviews-forms.md" target="_blank"> 如需詳細資訊，請參 </a>閱建立和管理審核<br />。 <br /> </p> </td>
+   <td><p>允許啟動和管理選定片段的審核。 如需詳細資訊，請參 <a href="../../forms/using/create-reviews-forms.md" target="_blank">閱建立和管理審核</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>建立字典</p> </td>
-   <td><p>生成用於定位所選片段的字典。 <a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank"> 如需詳細資訊，請參閱本 </a>地化最適化表單<br />。 <br /> </p> </td>
+   <td><p>生成用於定位所選片段的字典。 如需詳細資訊，請參閱本 <a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank">地化最適化表單</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>發佈／取消發佈</p> </td>
-   <td><p><br /> 發佈／取消發佈所選片段。 <br /> </p> </td>
+   <td><p>發佈／取消發佈所選片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>刪除</p> </td>
-   <td><p><br /> 刪除選定的片段。 <br /> </p> </td>
+   <td><p>刪除選定的片段。<br /> <br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -233,7 +233,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 * 當您重新發佈更新的最適化表單片段時，變更會反映在使用片段的最適化表單的已發佈例項中。
 * 包含「驗證」元件的最適化表單不支援匿名使用者。 此外，不建議在最適化表單片段中使用Verify元件。
 * (僅&#x200B;**限Mac**)為確保表單片段功能在所有案例中都能正常運作，請將下列項目新增至/private/etc/hosts檔案：
-   `127.0.0.1 <Host machine>` 主 **機**:部署AEM Forms的Apple mac電腦。
+   `127.0.0.1 <Host machine>` 主 **機**:部署AEM Forms的Apple Mac電腦。
 
 ## 參考片段 {#reference-fragments}
 
