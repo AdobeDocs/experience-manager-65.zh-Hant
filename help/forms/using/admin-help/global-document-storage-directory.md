@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 translation-type: tm+mt
-source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
 
 長期使用的檔案可能包含敏感的使用者資訊。 當使用AEM表單API或使用者介面存取此資訊時，可能需要特殊認證。 GDS目錄必須通過作業系統正確保護。 只有用於運行應用程式伺服器的管理員帳戶才應具有對GDS目錄的讀／寫訪問權限。
 
-除了為GDS選擇安全、高可用的目錄外，您還可以選擇在資料庫中啟用文檔儲存。 請注意，即使使用AEM表單資料庫來儲存檔案，AEM表單仍需要GDS目錄。 (請參 [閱資料庫用於文檔儲存時的備份選項](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。)
+除了為GDS選擇安全、高可用的目錄外，您還可以選擇在資料庫中啟用文檔儲存。 請注意，即使使用AEM表格資料庫來儲存檔案，AEM表格仍需要GDS目錄。 (請參 [閱資料庫用於文檔儲存時的備份選項](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。)
 
 AEM表單應用程式資料位於GDS目錄和AEM表單資料庫中。 下表說明資料及其位置。
 
@@ -72,8 +72,8 @@ AEM表單應用程式資料位於GDS目錄和AEM表單資料庫中。 下表說�
 在AEM表單安裝程式期間，可手動設定GDS目錄的位置。 如果位置設定在安裝期間保持空，則位置預設為應用程式伺服器安裝下的目錄，如下所示：
 
 * (JBoss) `[appserver root]/server/[type]/svcnative/DocumentStorage`
-* (WebLogic) `[appserverdomain]/[server]/adobe/DocumentServer/DocumentStorage`
-* (WebSphere) `[appserver root]/installedApps/adobe/[server]/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
+* (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 ## 更改預設GDS位置 {#change-the-default-gds-location}
 
