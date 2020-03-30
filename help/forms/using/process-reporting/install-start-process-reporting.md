@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ae69f5bb67d51d759f143a076fef4f5f0375809
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -108,7 +108,7 @@ ProcessDataStorageProvider服務從ProcessDataPublisher服務接收流程資料�
 
 #### 要配置Process Reporting儲存庫位置，請執行以下操作： {#to-configure-the-process-reporting-repository-locations}
 
-1. 使用管理員 **憑證登入** 「管理控制台」。 管理控制台的預設URL為 `https://[server]:[port]/adminui`
+1. 使用管理員 **憑證登入** 「管理控制台」。 管理控制台的預設URL為 `https://'[server]:[port]'/adminui`
 1. 導覽至「 **首頁** >服務 **** >應用程 **式與服務** >服務管&#x200B;******** 理流程和開放DataStorageProvider Service」。
 
    ![過程——資料儲存——服務](assets/process-data-storage-service.png)
@@ -133,7 +133,7 @@ Process Reporting使用ReportConfiguration服務來配置流程報告查詢服�
 
 #### 要配置ReportingConfiguration服務 {#to-configure-the-reportingconfiguration-service}
 
-1. 使用CRX管理員 **憑證登入Configuration Manager** 。 配置管理器的預設URL是 `https://[server]:[port]/lc/system/console/configMgr`
+1. 使用CRX管理員 **憑證登入Configuration Manager** 。 配置管理器的預設URL是 `https://'[server]:[port]'/lc/system/console/configMgr`
 1. 開啟 **ReportingConfiguration** 服務。
 1. **記錄數**
 
@@ -166,7 +166,7 @@ ProcessDataPublisher服務從AEM Forms資料庫導入流程資料，並將資料
 
 1. 使用管理員 **憑證登入** 「管理控制台」。
 
-   預設URL為 `https://[server]:port]/adminui/`。
+   預設URL為 `https://'server':port]/adminui/`。
 
 1. 導航至「 **Services** > **Services** > Applications and Services **>********** Open Management And Open The Publisher Service」。
 
@@ -220,7 +220,7 @@ AEM Forms環境包含環境設定時的資料。
 
 「流程報告」的用戶介面基於瀏覽器。
 
-在設定「流程報表」後，您可以在AEM Forms安裝的下列位置開始使用「流程報表」:
+在設定「流程報表」後，您可以在AEM Forms安裝中的下列位置開始使用「流程報表」:
 
 `https://<server>:<port>/lc/pr`
 
@@ -244,37 +244,37 @@ AEM Forms環境包含環境設定時的資料。
 
 ![process-reporting-home-screen](assets/process-reporting-home-screen.png)
 
-**** 流程報告樹視圖：主螢幕左側的樹視圖包含「流程報告」模組的項。
+**流程報告樹視圖：** 主螢幕左側的樹視圖包含「流程報告」模組的項。
 
 樹視圖由下列頂層項目組成：
 
-**** 報表：此項目包含隨「流程報告」一起提供的現成報表。
+**報表：** 此項目包含隨「流程報告」一起提供的現成報表。
 
 有關預定義報表的詳細資訊，請參 [閱「在處理中預定義報表」](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md)。
 
-**** 臨機查詢：此項目包含對進程和任務執行基於篩選的搜索的選項。
+**臨機查詢：** 此項目包含對進程和任務執行基於篩選的搜索的選項。
 
 如需臨機查詢的詳細資訊，請參 [閱「處理中的臨機查詢」](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)。
 
-**** 自訂：「自訂」節點會顯示您建立的自訂報表。
+**自訂：** 「自訂」節點會顯示您建立的自訂報表。
 
 如需建立和顯示自訂報表的程式，請參閱「 [流程報表中的自訂報表」](/help/forms/using/process-reporting/process-reporting-custom-reports.md)。
 
-**** 流程報告標題欄：「流程報表」標題列包含一些在使用者介面中工作時可使用的一般選項。
+**流程報告標題欄：** 「流程報表」標題列包含一些在使用者介面中工作時可使用的一般選項。
 
-**** 流程報告標題：「流程報表」標題會顯示在標題列的左角。
+**流程報告標題：** 「流程報表」標題會顯示在標題列的左角。
 
 隨時按一下標題，返回「首頁」畫面。
 
-**** 上次更新時間：流程資料會從AEM Forms資料庫以排程方式發佈至「流程報表」儲存庫。
+**上次更新時間：** 流程資料會從AEM Forms資料庫以排程方式發佈至「流程報表」儲存庫。
 
 「上次更新時間」會顯示資料更新推送至「流程報表」儲存庫的最後日期和時間。
 
 有關資料發佈服務以及如何計畫此服務的詳細資訊，請參閱「流程報告快速入門 [」中的](/help/forms/using/process-reporting/install-start-process-reporting.md#p-schedule-process-data-publishing-p) 「計畫流程資料發佈」。
 
-**** 流程報告用戶：登入的使用者名稱會顯示在「上次更新」時間的右側。
+**流程報告用戶：** 登入的使用者名稱會顯示在「上次更新」時間的右側。
 
-**** 處理報表標題列下拉式清單：「流程報表」標題列右角的下拉式清單包含下列選項：
+**處理報表標題列下拉式清單：** 「流程報表」標題列右角的下拉式清單包含下列選項：
 
 * **[!UICONTROL 同步]**:將內嵌的Process Reporting儲存庫與AEM Forms資料庫同步。
 * **[!UICONTROL 說明]**:查看有關流程報告的幫助文檔。
