@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,14 +28,14 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 雖然JEE服務上的AEM Forms需要為授權呼叫者傳遞有效憑證，但您應僅允許遠端存取您需要遠端存取的服務。 要實現有限的可訪問性，您應將遠程可訪問服務集減少到功能正常的系統所能使用的最低程度，然後啟用遠程調用所需的其他服務。
 
-JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是Workbench使用的必要條件，但也包含由Workspace web應用程式呼叫的服務。
+JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是Workbench使用的必要條件，但也包含由Workspace Web應用程式呼叫的服務。
 
-使用Administration console的「應用程式與服務」網頁完成此程式：
+使用Administration Console的「應用程式與服務」網頁完成此程式：
 
 1. 在網頁瀏覽器中輸入下列URL以登入「管理控制台」:
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. 按一 **下「服務>應用程式與服務>偏好設定」**。
@@ -61,7 +61,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
    * 工作區單一登入
    * ApplicationManager
 
-1. 單 **擊「下一步** 」，對不在上述清單中的SOAP端點重複上一步。 在移除端點之前，請確定SOAP已列在「提供者」欄中。
+1. 按一下 **下一步** ，對不在上述清單中的SOAP端點重複上一步。 在移除端點之前，請確定SOAP已列在「提供者」欄中。
 
 ## 停用非必要的匿名服務存取 {#disabling-non-essential-anonymous-access-to-services}
 
@@ -70,7 +70,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
 1. 在網頁瀏覽器中輸入下列URL，以登入管理控制台：
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. 按一 **下「服務>應用程式與服務>服務管理」**。
@@ -105,14 +105,14 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
 
 ## 變更預設全域逾時 {#changing-the-default-global-time-out}
 
-使用者可以透過Workbench、AEM Forms web應用程式或叫用AEM Forms伺服器服務的自訂應用程式，驗證AEM Forms。 全域逾時設定可用來指定這些使用者在被迫重新驗證之前，可與AEM Forms（使用SAML架構的斷言）互動的時間長度。 預設設定為2小時。 在生產環境中，需要將時間縮減為可接受的最小分鐘數。
+使用者可以透過Workbench、AEM Forms Web應用程式或叫用AEM Forms伺服器服務的自訂應用程式，驗證AEM Forms。 全域逾時設定可用來指定這些使用者在被迫重新驗證之前，可與AEM Forms（使用SAML架構的斷言）互動的時間長度。 預設設定為2小時。 在生產環境中，需要將時間縮減為可接受的最小分鐘數。
 
 ### 將重新驗證時間限制降到最低 {#minimize-reauthentication-time-limit}
 
 1. 在網頁瀏覽器中輸入下列URL，以登入管理控制台：
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. 按一 **下「設定>使用者管理>設定>匯入和匯出設定檔」**。
