@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -88,7 +88,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 * adobe-usermanager-client.jar
 * adobe-utilities.jar
 
-如需這些JAR檔案的位置，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案的位置，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **若要建立Web專案：**
 
@@ -120,7 +120,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 
 ### 建立Servlet的Java應用程式邏輯 {#creating-java-application-logic-for-the-servlet}
 
-您可以在Java servlet內建立調用Forms服務的Java應用程式邏輯。 下列程式碼顯示 `RenderFormFragment` Java servlet的語法：
+您可以在Java servlet內建立調用Forms服務的Java應用程式邏輯。 下列程式碼顯示 `RenderFormFragment` Java Servlet的語法：
 
 ```as3
      public class RenderFormFragment extends HttpServlet implements Servlet {
@@ -139,7 +139,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 
 若要使用Forms服務API根據片段來呈現表單，請執行下列工作：
 
-1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 1. 擷取從HTML表單提交的選項按鈕值，並指定使用美國或加拿大資料。 如果提交American，請建立 `com.adobe.idp.Document` 儲存Purchase Order US.xml中 *資料的檔案*。 同樣地，如果是加拿大人，請建 `com.adobe.idp.Document` 立儲存 *Purchase Order Canada.xml檔案中的資料* 。
 1. 建立包 `ServiceClientFactory` 含連接屬性的對象。 (請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
 1. 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
@@ -219,7 +219,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -258,9 +258,9 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
              //Specify URI values that are required to render a form
              //design based on fragments
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/RenderFormFragment");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/RenderFormFragment");
              uriValues.setContentRootURI("repository:///");
-             uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
              //Invoke the renderPDFForm method and write the
              //results to a client web browser
@@ -336,7 +336,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
  </head>
  
  <body>
- <form name="myform" action="https://[server]:[port]/FragmentsWebApplication/RenderFormFragment" method="post">
+ <form name="myform" action="https://'[server]:[port]'/FragmentsWebApplication/RenderFormFragment" method="post">
       <table>
       <tr>
         <th>Forms Fragment Web Client</th>
