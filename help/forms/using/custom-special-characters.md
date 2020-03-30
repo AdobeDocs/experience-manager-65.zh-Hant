@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 08e53eec26e29c2403cdfc3239da3ea23da3f321
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,7 +40,7 @@ Correponce Management已內建210個特殊字元的預設支援，您可輕鬆�
 
 使用下列步驟新增自訂特殊字元的支援：
 
-1. 前往並 `https://[server]:[port]/[ContextPath]/crx/de` 以管理員身分登入。
+1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
 1. 在應用程式檔案夾中，建立名為 **[!UICONTROL specialcharacters]** （路徑／結構類似於specialcharacters檔案夾）的檔案夾（位於libs下的textEditorConfig檔案夾）:
 
    1. 在下列路徑上 **按一下特定字元** ，然後選取「覆 **蓋節點」**:
@@ -49,11 +49,11 @@ Correponce Management已內建210個特殊字元的預設支援，您可輕鬆�
 
    1. 請確定「覆蓋節點」對話框具有下列值：
 
-      **** 路徑：/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
+      **路徑：** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
 
-      **** 覆蓋位置：/apps/
+      **覆蓋位置：** /apps/
 
-      **** 匹配節點類型：已勾選
+      **匹配節點類型：** 已勾選
 
       >[!NOTE]
       >
