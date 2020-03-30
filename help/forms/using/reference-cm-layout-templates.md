@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ Correponse Management在AEM Forms套件 [AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES中
 
 安裝此套件後，版面範本(XDP)會列在範本資料夾中，位於下列位置：
 
-`https://[server]:[port]/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
+`https://'[server]:[port]'/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
 
 以下是此包中所有模板的常用欄位：
 
