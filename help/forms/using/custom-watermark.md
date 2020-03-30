@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: adc7ec13-0675-4071-9c4c-e238202d9d85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -21,9 +21,9 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
 在「建立對應」UI中，工程師使用者會以最終形式預覽對應，並將其傳送至後置處理，例如以電子郵件傳送或列印。
 
-為防止未授權使用此資料，組織可在預覽PDF上加上浮水印。 預設浮水印為「PREVIEW」，會顯示在PDF中。
+為防止未授權使用此資料，組織可在預覽PDF上加上浮水印。 預設的浮水印為「預覽」，會顯示在PDF中。
 
-要在預覽PDF中啟用水印，請在 **[!UICONTROL Correponsement Management Configurations]** https:// **[!UICONTROL server]** :[portSystem/console/configMgr中選擇Apply Watermark][]During Preview選項。
+要在預覽PDF中啟用水印，請在 **[!UICONTROL Correponsement Management Configurations]** https://&#39; **[!UICONTROL server]** :[port&#39;/system/console/configMgr中選擇Apply Watermark][]During Preview選項。
 
 ![default-watermark](assets/default-watermark.png)
 
@@ -31,7 +31,7 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
 ## 在「建立對應UI」中自訂PDF預覽中的浮水印 {#customizewatermark-}
 
-1. 前往並 `https://[server]:[port]/[ContextPath]/crx/de` 以管理員身分登入。
+1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
 1. 在應用程式檔案夾中，建立名為 **[!UICONTROL previewwatermark的檔案夾]** ，其路徑／結構類似於libs檔案夾中的previewwatermark檔案夾：
 
    1. 以滑鼠右鍵按一 **下下列路徑** ，並選取「覆蓋節點 **」**:
@@ -40,11 +40,11 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
    1. 請確定「覆蓋節點」對話框具有下列值：
 
-      **** 路徑：/libs/fd/cm/configFiles/previewwatermark
+      **路徑：** /libs/fd/cm/configFiles/previewwatermark
 
-      **** 覆蓋位置：/apps/
+      **覆蓋位置：** /apps/
 
-      **** 匹配節點類型：已勾選
+      **匹配節點類型：** 已勾選
 
       >[!NOTE]
       >
