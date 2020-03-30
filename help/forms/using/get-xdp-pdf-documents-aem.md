@@ -10,7 +10,7 @@ topic-tags: forms-manager
 discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,7 +33,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## 上傳表格 {#uploading-forms}
 
-1. 存取以登入AEM Forms使用者介面 `https://[server]:[port]/aem/forms.html`。
+1. 存取以登入AEM Forms使用者介面 `https://'[server]:[port]'/aem/forms.html`。
 1. 導覽至您要上傳表單的檔案夾，或包含表單的檔案夾。
 1. 在動作工具列中，點選「 **建立>檔案上傳」**。
 
@@ -65,7 +65,7 @@ AEM Forms伺服器可讓您執行JavaScript程式碼。 惡意JavaScript程式�
 
 受保護模式預設為開啟。 如有必要，您可以禁用保護模式：
 
-1. 以管理員身分登入AEM Web Console。 URL是https://[server]:[port]/system/console/configMgr
+1. 以管理員身分登入AEM Web Console。 URL是https://&#39;[server]:[port]&#39;/system/console/configMgr
 1. 開啟行動表單設定以進行編輯。
 1. 取消選取「保護模式」選項，然後按一下「 **儲存**」。 保護模式被禁用。
 
