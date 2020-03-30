@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 建立HTML5表單的自訂描述檔 {#creating-a-custom-profile-for-html-forms}
 
-描述檔是 [Apache Sling中的資源節點](https://sling.apache.org/)。 它代表HTML5表單轉譯服務的自訂版本。 您可以使用HTML5表單轉譯服務來自訂HTML5表單的外觀、行為和互動。 JCR儲存庫中的文 `/content` 件夾中存在配置檔案節點。 您可以將節點直接放在資料夾或 `/content` 資料夾的任何子資料夾 `/content` 下。
+描述檔是 [Apache Sling中的資源節點](https://sling.apache.org/)。 它代表HTML5表單轉譯服務的自訂版本。 您可以使用HTML5表單轉譯服務來自訂HTML5表單的外觀、行為和互動。 JCR儲存庫中的文 `/content` 件夾中存在配置檔案節點。 您可以將節點直接放在資料夾 `/content` 或資料夾的任何子資料夾 `/content` 下。
 
 描述檔節點具 **有sling:resourceSuperType** 屬性，預設值為 **xfaforms/profile**。 節點的演算指令碼位於/libs/xfaforms/profile。
 
@@ -44,7 +44,7 @@ formBody.jsp模組用於XFA表單的HTML表示。
 
 ## nav_footer.jsp {#nav-footer-jsp}
 
-一開始，HTML5表格只會轉譯表格的第一頁。 當使用者捲動表格時，會載入其餘的表格。 它讓載入體驗更快速。 nav_footer.jsp元件包含所有樣式和所需元素，以方便在捲動時載入頁面。
+一開始，HTML5表格只會轉譯表格的第一頁。 當使用者捲動表格時，會載入其餘的表格。 它讓載入體驗更快速。 nav_footer.jsp元件包含所有樣式和所需元素，以便在捲動時載入頁面。
 
 ## footer.jsp {#footer-jsp}
 
@@ -56,7 +56,7 @@ footer.jsp模組為空。 它允許您添加僅用於用戶交互的指令碼。
 
 ### 建立配置檔案節點 {#create-profile-node}
 
-1. 導覽至URL上的CRX DE介面：並 `https://[server]:[port]/crx/de` 使用管理員憑據登錄到介面。
+1. 導覽至URL上的CRX DE介面：並 `https://'[server]:[port]'/crx/de` 使用管理員憑據登錄到介面。
 
 1. 在左窗格中，導覽至位置/ *內容/xfaforms/描述檔*。
 
@@ -78,7 +78,7 @@ footer.jsp模組為空。 它允許您添加僅用於用戶交互的指令碼。
 1. 將 **html.jsp** 節點貼上到上面以相同名稱 `/apps/hrform/demo` html.jsp建立的資料夾中 **，然後按一下「保** 存」 ****。
 1. 如果您有任何其他描述檔指令碼元件，請依照步驟1-6複製/apps/hrform/demo檔案夾中的元件。
 
-1. 若要確認已建立描述檔，請開啟URL `https://[server]:[port]/content/xfaforms/profiles/hrform.html`
+1. 若要確認已建立描述檔，請開啟URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
 若要驗證您的表單，請 [將表單從您的本機檔案系統匯入](/help/forms/using/get-xdp-pdf-documents-aem.md) ，並在AEM伺服器 [作者例項上預覽表單](/help/forms/using/previewing-forms.md) 。
 
