@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -215,21 +215,21 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 ![textbackgroundcolorapplied-1](assets/textbackgroundcolorapplied-1.png)
 
-您可以直接點選「基本顏色」浮動視窗中顯示的基本顏色 **[A]** ，或在使用滑桿 **B後點選「選取」****[]** ，以選擇適當的顏色陰影。
+您可以直接點選「基本顏色」浮動 `**[A]**` 視窗中顯示的基本顏色，或在使用滑桿選取適當的顏色後點選「選取」( **Select**`**[B]**` )。
 
-或者，您也可以前往「進階」索引標籤，選取適當的「色相」、「明度」和「飽和度 **[C]** 」以建立精確的色彩，然後點選「選取 **[D]** 」以套用色彩來反白顯示文字。
+或者，您也可以前往「進階」索引標籤，選取適當的「色相」、「明度」和「飽和度」 `**[C]**``**[D]**` ，以建立精確的色彩，然後點選「選取」以套用顏色來反白顯示文字。
 
 ![textbackgroundcolor-2](assets/textbackgroundcolor-2.png)
 
 ### 貼上格式化文字 {#paste}
 
-若要重複使用其他應用程式（例如從Microsoft® word或HTML頁面）中存在的多段文字，請將文字複製並貼入文字編輯器中。 複製的文本的格式將保留在文本編輯器中。
+若要重複使用其他應用程式（例如從Microsoft® Word或HTML頁面）中存在的多段文字，請將文字複製並貼入文字編輯器中。 複製的文本的格式將保留在文本編輯器中。
 
-您可以複製和貼上可編輯文字檔案片段中的一或多個文欄位落。 例如，您可能有Microsoft® word檔案，其中包含可接受的居住證明項目清單，例如：
+您可以複製和貼上可編輯文字檔案片段中的一或多個文欄位落。 例如，您可能有Microsoft® Word檔案，其中包含可接受的居住證明項目清單，例如：
 
 ![pastetextmsword-2](assets/pastetextmsword-2.png)
 
-您可以直接將Microsoft® word檔案中的文字複製並貼至可編輯的文字檔案片段。 文字檔案片段中會保留項目清單、字型和文字顏色等格式。
+您可以直接將Microsoft® Word檔案中的文字複製並貼至可編輯的文字檔案片段。 文字檔案片段中會保留項目清單、字型和文字顏色等格式。
 
 ![pasteteditablemodule-1](assets/pastetexteditablemodule-1.png)
 
