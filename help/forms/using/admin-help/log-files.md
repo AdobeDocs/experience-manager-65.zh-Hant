@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cf140483-470f-4bff-8870-304207508aab
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 將運行時或啟動錯誤等事件記錄到應用程式伺服器日誌檔案中。 如果您在部署至應用程式伺服器時遇到問題，可使用記錄檔來協助您找出問題。 您可以使用任何文字編輯器開啟記錄檔。
 
-(JBoss)以下日誌檔案位於目 `[appserver root]/server/[server]/log` 錄中：
+(JBoss)以下日誌檔案位於目 `[appserver root]/server/'server'/log` 錄中：
 
 * boot.log
 * server.log。*[yyyy-mm-dd]*
