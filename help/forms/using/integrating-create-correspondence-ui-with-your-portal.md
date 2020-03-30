@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## 概覽 {#overview}
 
-本文詳細說明如何將「建立通信解決方案」與您的環境整合。
+本文詳述如何將「建立通信解決方案」與您的環境整合。
 
 ## 以URL為基礎的呼叫 {#url-based-invocation}
 
@@ -27,10 +27,10 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 * 字母範本的識別碼（使用cmLetterId參數）。
 
-* 從所需資料來源擷取的XML資料的URL（使用cmDataUrl參數）。
+* the URL to the XML data fetched from the desired data source (using the cmDataUrl parameter).
 
 例如，自訂入口網站會將URL準備為\
-`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，這可以是入口網站上連結的href。
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，這可以是入口網站上連結的href。
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## 內嵌資料式呼叫 {#inline-data-based-invocation}
 
-另一個（也是更安全的）呼叫「建立對應」應用程式的方式是，只要點擊https://[server]:port[/]contextPath[]/aem/forms/createcorrespondence.html的URL，同時傳送參數和資料以POST要求呼叫「建立對應」應用程式（隱藏於使用者）。 這也表示您現在可以將XML資料傳遞至內嵌的「建立對應」應用程式（使用cmData參數做為相同要求的一部分），這在先前的方法中是不可能的／理想的。
+另一個（也是更安全的）呼叫「建立對應」應用程式的方式是，只要點擊https://&#39;[server]:port[&#39;/]contextPath[]/aem/forms/createcorrespondence.html的URL，同時傳送參數和資料以POST要求呼叫「建立對應」應用程式（隱藏於使用者）。 這也表示您現在可以將XML資料傳遞至內嵌的「建立對應」應用程式（使用cmData參數做為相同要求的一部分），這在先前的方法中是不可能的／理想的。
 
 ### 用於指定字母的參數 {#parameters-for-specifying-letter}
 
