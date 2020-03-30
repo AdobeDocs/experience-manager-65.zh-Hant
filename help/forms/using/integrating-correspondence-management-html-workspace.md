@@ -9,7 +9,7 @@ topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -26,7 +26,7 @@ AEM Forms工作區支援管理表單和檔案的任務指派和完成活動。 �
 
 首先，建立在AEM Forms工作區中轉譯的範例「對應管理」範本。 如需詳細資訊，請參 [閱建立信函範本](../../forms/using/create-letter.md)。
 
-在其URL中存取「對應管理」範本，以驗證「對應管理」範本是否可成功轉譯。 URL的模式類似於 `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
+在其URL中存取「對應管理」範本，以驗證「對應管理」範本是否可成功轉譯。 URL的模式類似於 `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
 其中 `encodedLetterId` 是URL編碼的字母Id。 在「工作台」中定義工作區任務的演算程式時，請指定相同的字母Id。
 
@@ -104,7 +104,7 @@ AEM Forms工作區支援管理表單和檔案的任務指派和完成活動。 �
    在「定義活動」對話方塊中，選取適當的活動，例如getLetterInstanceInfo，然後按一下「 **確定**」。
 
 1. 部署應用程式。 如果出現提示登入並儲存資產。
-1. 登入AEM表單工作區，網址為https://[server]:[port]/lc/content/ws。
+1. 登入AEM表單工作區，網址為[https://&#39; server]:[port]&#39;/lc/content/ws。
 1. 開啟您新增的工作，CMRender。 此時將出現「Correportence Management（通信管理）」信函。
 
    ![cminworkspace](assets/cminworkspace.png)
