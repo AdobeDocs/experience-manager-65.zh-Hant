@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 呈現最適化表單時，它會依指定順序查看下列參數，以識別所要求的地區設定：
 
 * 請求參 `afAcceptLang`數若要覆寫使用者的瀏覽器地區設定，您可以傳遞 `afAcceptLang` 請求參數以強制地區設定。 例如，下列URL將強制在日文地區中轉換表單：
-   `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * 為用戶設定的瀏覽器區域設定，該設定在使用標題的請求中指 `Accept-Language` 定。
 
@@ -56,7 +56,7 @@ AEM Forms目前支援以英文(en)、西班牙文(es)、法文(fr)、義大利�
 
 ### 將地區設定新增至指南本地化服務 {#add-a-locale-to-the-guide-localization-service-br}
 
-1. 前往 `https://[server]:[port]/system/console/configMgr`.
+1. 前往 `https://'[server]:[port]'/system/console/configMgr`.
 1. 按一下可編輯指 **南本地化服務元件** 。
 1. 將要添加的區域設定添加到支援的區域設定清單中。
 
@@ -102,7 +102,7 @@ LogMessages.js
 
 1. 將添加 `<locale>` 到屬性的 `languages` 值中 `/etc/languages`。
 
-將出 `<locale>` 現在 `https://[server]:[port]/libs/cq/i18n/translator.html`。
+將出 `<locale>` 現在 `https://'[server]:[port]'/libs/cq/i18n/translator.html`。
 
 ### Restart the server {#restart-the-server}
 
