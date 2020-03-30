@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -156,18 +156,18 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-名為&quot;ads-ca.jks&quot;的自訂信任密鑰庫檔案會建立在 [appserverdomain]/adobe/[server] 目錄中。
+名為&quot;ads-ca.jks&quot;的自訂信任密鑰庫檔案會建立在 [appserverdomain]/adobe/&#39;server&#39;目錄中。
 
 設定WebLogic，使其使用您建立的自訂身分密鑰庫和自訂信任密鑰庫。 此外，由於用於建立密鑰庫檔案的唯一判別名不包括托管WebLogic伺服器的電腦名，因此禁用WebLogic主機名驗證功能。
 
 ## 設定WebLogic以使用SSL {#configure-weblogic-to-use-ssl}
 
-1. 在Web瀏覽器的URL行中輸入 `https://`*[主機名稱&#x200B;]*`:7001/console`，啟動WebLogic server管理控制台。
-1. 在「環境」下的「域配置」中，選 **擇「服[務器]」>「配置」>「常規」**。
+1. 在Web瀏覽器的URL行中輸入 `https://`*[主機名稱&#x200B;]*`:7001/console`，啟動WebLogic Server管理控制台。
+1. 在「環境」下的「域配置」中，選 **擇「伺服器」>「伺服器」>「配置」>「常規」**。
 1. 在「常規」下，在「配置」中，確 **保選擇「啟用監聽端** 」 **和「啟用SSL監聽埠** 」。 如果未啟用，請執行下列動作：
 
    1. 在「變更中心」(Change Center)下，按一下「 **鎖定並編輯」(Lock &amp; Edit** )以修改選擇和值。
-   1. 選中「 **Listen Port Enabled(啟用監聽埠** )」和「 **SSL Listen Port Enabled(啟用監聽埠** )」複選框。
+   1. 選中「 **Listen Port Enabled(啟用監聽埠** )」和「 **SSL Listen Port Enabled(啟用SSL監聽埠** )」複選框。
 
 1. 如果此伺服器是受控伺服器，請將「監聽埠」更改為未使用的埠值（如8001），將「SSL監聽埠」更改為未使用的埠值（如8002）。 在獨立伺服器上，預設的SSL埠為7002。
 1. 按一 **下「發行設定**」。
@@ -185,7 +185,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
 1. 在「信任」下，指定下列值：
 
-   **自定義信任密鑰庫檔案名**: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`，其中 `*[appserverdomain]*` 是實際路徑
+   **自定義信任密鑰庫檔案名**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`，其中 `*[appserverdomain]*` 是實際路徑
 
    **自定義信任密鑰庫類型**:JKS
 
