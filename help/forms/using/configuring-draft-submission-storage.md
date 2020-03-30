@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
 translation-type: tm+mt
-source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -38,7 +38,7 @@ AEM Forms Portal資料和中繼資料服務可支援草稿和提交。 依預設
 
 ## 設定Forms Portal草稿和提交服務 {#configuring-forms-portal-drafts-and-submissions-services}
 
-在「AEM Web Console設定」( `https://[host]:[port]/system/console/configMgr`)中，按一下以編輯模 **式開啟「表單入口網站草稿和提交設定** 」。
+在「AEM Web Console設定」( `https://[host]:'port'/system/console/configMgr`)中，按一下以編輯模 **式開啟「Forms Portal Draft and Submission Configuration** 」。
 
 根據您的需求指定屬性的值，如下所述：
 
@@ -102,7 +102,7 @@ AEM Forms Portal資料和中繼資料服務可支援草稿和提交。 依預設
 
 除了上述指定的配置外，請提供有關已配置遠程處理實例的資訊。
 
-在「AEM Web Console設定」( `https://[host]:[port]/system/console/configMgr`)中，按一下以編輯模 **式開啟「AEM DS Settings Service** 」。 在「AEM DS設定服務」對話方塊中，提供有關處理伺服器URL、處理伺服器使用者名稱和密碼的資訊。
+在「AEM Web Console設定」( `https://[host]:'port'/system/console/configMgr`)中，按一下以編輯模 **式開啟「AEM DS Settings Service** 」。 在「AEM DS設定服務」對話方塊中，提供有關處理伺服器URL、處理伺服器使用者名稱和密碼的資訊。
 
 >[!NOTE]
 >
