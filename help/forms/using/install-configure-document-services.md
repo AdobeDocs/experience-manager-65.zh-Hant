@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: a7ef7682df1dc627565f1cc30047ed775d2dbd13
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -475,7 +475,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
 
 在Microsoft Windows上，PDF Generator服務使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 請執行下列步驟，為PDF Generator服務設定Adobe Acrobat:
 
-1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選 **[!UICONTROL 擇自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
+1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選擇 **[!UICONTROL 自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
 1. 連按兩下系統上的PDF檔案。 當Acrobat首次啟動時，會出現登入、歡迎畫面和EULA的對話方塊。 針對所有已設定為使用PDF產生器的使用者，關閉這些對話方塊。
 1. 執行PDF Generator公用程式批次檔案，為PDF Generator服務設定Acrobat:
 
@@ -554,7 +554,7 @@ DocAssurance服務可以對PDF檔案套用使用權。 若要套用PDF檔案的�
 
 Assembler服務依賴於Reader Extensions服務、Signature服務、Forms服務和Output服務。 執行以下步驟以驗證所需的服務是否已啟動並正在運行：
 
-1. 以管理員身 `https://[server]:[port]/system/console/bundles` 分登入URL。
+1. 以管理員身 `https://'[server]:[port]'/system/console/bundles` 分登入URL。
 1. 搜索以下服務並確保服務已啟動並正在運行：
 
 <table> 
