@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,12 +25,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在安裝軟體包時，如果遇到錯誤， `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`請執行以下步驟：
 
-1. 登入CRX DE lite。 預設URL為 `https://[localhost]:[port]/lc/crx/de/index.jsp`
+1. 登入CRX DE lite。 預設URL為 `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. 刪除以下節點：
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. 轉至「包管理器」。 預設URL為 `https://[localhost]:[port]/lc/crx/packmgr/index.jsp.`
+1. 轉至「包管理器」。 預設URL為 `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
 1. 搜尋並安裝套 `adobe-lc-workspace-pkg-[version].zip` 件。
 1. 重新啟動應用程式伺服器。
 
@@ -107,7 +107,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <td><p>userinfoModel</p> </td>
   </tr>
   <tr>
-   <td><p>outofofficeModel</p> </td>
+   <td><p>outofoficeModel</p> </td>
    <td><p>startpointlistView</p> </td>
    <td><p>userinfoView</p> </td>
   </tr>
