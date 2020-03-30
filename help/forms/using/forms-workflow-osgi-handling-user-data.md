@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -80,7 +80,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 要標識和訪問為工作流實例儲存的用戶資料，請執行以下步驟：
 
-1. 在AEM作者例項上，前往並導 `https://[server]:[port]/crx/de` 覽至「工 **[!UICONTROL 具>查詢」]**。
+1. 在AEM作者例項上，前往並導 `https://'[server]:[port]'/crx/de` 覽至「工 **[!UICONTROL 具>查詢」]**。
 
    從「 **[!UICONTROL 類型]** 」下拉 **[!UICONTROL 式清單中選]** 擇「SQL2」。
 
@@ -133,7 +133,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 1. 對於「運行」、「暫停」或 **「過時**」狀態的工作流實例，執 **行此**&#x200B;步驟 **** :
 
-   1. 前往並 `https://[server]:[port]/aem/start.html` 使用管理員認證登入。
+   1. 前往並 `https://'[server]:[port]'/aem/start.html` 使用管理員認證登入。
    1. 導覽至「工 **[!UICONTROL 具>工作流程>例項」]**。
    1. 為用戶選擇相關的工作流實例，並點選「終 **[!UICONTROL 止]** 」以終止運行實例。
    有關使用工作流實例的詳細資訊，請參閱管 [理工作流實例](/help/sites-administering/workflows-administering.md)。
