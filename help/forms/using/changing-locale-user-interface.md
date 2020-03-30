@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ AEM Forms工作區提供現成可用的英文、法文、德文和日文支援�
 請執行下列步驟，新增對語言「新 *增* 」和瀏覽器地區設 *定代碼*。
 
 1. 登入CRXDE Lite。
-CRXDE Lite的預設URL為 `https://[server]:[port]/lc/crx/de/index.jsp`。
+CRXDE Lite的預設URL為 `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 導覽至該位置並 `apps/ws/locales` 建立新資料夾 `nw.`
 1. 將檔案從 `translation.json`位置復 `/apps/ws/locales/en-US` 制至位置 `/apps/ws/locales/nw` 。
 1. 導覽至並 `/apps/ws/locales/nw` 開啟以 `translation.json` 進行編輯。 對translation.json檔案進行地區設定特定的變更。
@@ -54,7 +54,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 
 >[!NOTE]
 >
->若要尋找瀏覽器的瀏覽器語言地區設定程式碼。 開啟 `https://[server]:[port]/lc/libs/ws/Locale.html`.
+>若要尋找瀏覽器的瀏覽器語言地區設定程式碼。 開啟 `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 
