@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -243,7 +243,7 @@ AEM提供翻譯工作流程，讓您用來本地化最適化表單。 如需詳�
 * 新增元件或在本地化表單中套用指令碼等任何修改都不會自動本地化。 因此，在本地化表單之前，您必須先完成表單的定版作業，以避免出現多個本地化週期。
 * 使用 `afAcceptLang` 請求參數來覆寫瀏覽器地區設定，並在指定的地區設定中轉譯表單。 例如，下列URL將強制以日文地區來轉換表單，而不考慮瀏覽器設定中指定的地區：
 
-   `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * AEM Forms目前支援以英文(en)、西班牙文(es)、法文(fr)、義大利文(it)、德文(de)、日文(ja)、葡萄牙文——巴西(pt-BR)、中文(zh-CN)、中文——台灣(zh-TW)和韓文(ko-KR)語言環境將調適性表單內容本地化。 不過，您可以在執行時期新增對最適化表單新地區設定的支援。 如需詳細資訊，請參 [閱支援最適化表單本地化的新地區設定](/help/forms/using/supporting-new-language-localization.md)。
 
