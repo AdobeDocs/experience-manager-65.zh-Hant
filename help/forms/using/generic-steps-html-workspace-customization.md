@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 執行任何自訂的一般步驟包括：
 
-1. 存取以登入CRXDE Lite `https://[server]:[port]/lc/crx/de/index.jsp`。
+1. 存取以登入CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 如果資料夾不存 `ws`在 `/apps`，請建立名為的資料夾。 按一下「 **[!UICONTROL 全部儲存]**」。
 1. 瀏覽至 `/apps/ws`「存取控制」索 **[!UICONTROL 引標籤]** 。
 1. 在「存 **[!UICONTROL 取控制]** 」清單中，按 **** 一下+以新增項目。 再按 **[!UICONTROL 一下]** +。
@@ -97,6 +97,6 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 1. 按一 **[!UICONTROL 下「全部儲存]**」、清除快取並重新整理AEM Forms工作區。
 
-   存取URL並 `https://[server]:[port]/lc/ws` 使用管理員／密碼憑證登入。 瀏覽器會重新導向 `https://[server]:[port]/lc/apps/ws/index.html`至。
+   存取URL並 `https://'[server]:[port]'/lc/ws` 使用管理員／密碼憑證登入。 瀏覽器會重新導向 `https://'[server]:[port]'/lc/apps/ws/index.html`至。
 
 [聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
