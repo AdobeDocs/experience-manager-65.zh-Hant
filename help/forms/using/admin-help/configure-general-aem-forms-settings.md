@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -50,8 +50,8 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 如果未指定GDS根目錄，則該目錄預設為應用程式伺服器目錄：
 
 * `[JBOSS_HOME]/server/<server>/svcnative/DocumentStorage`
-* `[WEBSPHERE_HOME]/installedApps/adobe/[server]/DocumentStorage`
-* `[WEBLOGIC_HOME]/user_projects/<domain>/[server]/adobe/AEMformsserver/DocumentStorage`
+* `[WEBSPHERE_HOME]/installedApps/adobe/'server'/DocumentStorage`
+* `[WEBLOGIC_HOME]/user_projects/<domain>/'server'/adobe/AEMformsserver/DocumentStorage`
 
 ***注意&#x200B;**:更改GDS根目錄設定的值應特別小心。 GDS目錄可用來儲存流程中使用的長期檔案，以及重要的AEM表單產品元件。 更改GDS目錄的位置是系統的一項主要更改。 錯誤設定GDS目錄的位置會導致AEM表單無法運作，而且可能需要完整重新安裝AEM表單。 如果您為GDS目錄指定了新位置，則應用程式伺服器需要關閉，並且資料必須在伺服器重新啟動之前遷移。 系統管理員必須將所有檔案從舊位置移動到新位置，但保留內部目錄結構。*
 
@@ -105,6 +105,6 @@ FIPS模式不支援在7.0之前的Adobe Acrobat®版本中使用的加密演算�
 
 **允許非安全的RDS請求** ：當選取此選項時，RDS請求不需要使用https。 依預設，未選取此選項，所有與資料服務的通訊都必須是https要求。
 
-**** 允許從Flex應用程式上傳非安全的檔案：從Adobe Flex®應用程式將檔案上傳至AEM表單的檔案上傳servlet，需要先經過驗證並授權，使用者才能上傳檔案。 必須為用戶分配「文檔上載應用程式用戶」角色或包含「文檔上載」權限的其他角色。 這有助於防止未經授權的使用者將檔案上傳至AEM表單伺服器。 如果您想要在開發環境中停用此安全性功能，或為了向後相容於舊版AEM表單，請選取這個選項。 依預設，不會選取此選項。 如需詳細資訊，請參閱「使用AEM表單進行程式設計」中的「使用AEM表單叫用AEM表單」。
+**允許從Flex應用程式上傳非安全的檔案：** 從Adobe Flex®應用程式將檔案上傳至AEM表單的檔案上傳servlet，需要先經過驗證並授權，使用者才能上傳檔案。 必須為用戶分配「文檔上載應用程式用戶」角色或包含「文檔上載」權限的其他角色。 這有助於防止未經授權的使用者將檔案上傳至AEM表單伺服器。 如果您想要在開發環境中停用此安全性功能，或為了向後相容於舊版AEM表單，請選取此選項。 依預設，不會選取此選項。 如需詳細資訊，請參閱「使用AEM表單進行程式設計」中的「使用AEM表單叫用AEM表單」。
 
-**** 允許從Java SDK應用程式上傳非安全的檔案：必須保護HTTP DocumentManager上載。 依預設，HTTP上傳作業需要使用者先經過驗證並取得授權，才能上傳檔案。 必須為用戶分配「服務用戶」角色或包含「服務調用」權限的其他角色。 這有助於防止未經授權的使用者將檔案上傳至表單伺服器。 如果您想要在開發環境中停用此安全性功能，以向後相容於舊版AEM表單，或根據防火牆設定，請選取此選項。 依預設，不會選取此選項。 如需詳細資訊，請參閱「使用AEM表單進行程式設計」中的「使用Java API叫用AEM表單」。
+**允許從Java SDK應用程式上傳非安全的檔案：** 必須保護HTTP DocumentManager上載。 依預設，HTTP上傳作業需要使用者先經過驗證並取得授權，才能上傳檔案。 必須為用戶分配「服務用戶」角色或包含「服務調用」權限的其他角色。 這有助於防止未經授權的使用者將檔案上傳至表單伺服器。 如果您想要在開發環境中停用此安全性功能，以向後相容於舊版AEM表單，或根據防火牆設定，請選取此選項。 依預設，不會選取此選項。 如需詳細資訊，請參閱「使用AEM表單進行程式設計」中的「使用Java API叫用AEM表單」。
