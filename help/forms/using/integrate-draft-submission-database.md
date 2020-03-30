@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -302,12 +302,12 @@ AEM Forms Portal草稿和提交元件可讓使用者將表單儲存為草稿，�
 
 對所有作者和發佈實例執行以下步驟以安裝mysql-connector-java-5.1.39-bin.jar檔案：
 
-1. 導覽至 `https://[server]:[port]/system/console/depfinder` 並搜尋com.mysql.jdbc套件。
+1. 導覽至 `https://'[server]:[port]'/system/console/depfinder` 並搜尋com.mysql.jdbc套件。
 1. 在「導出者」(Exported by)列中，檢查軟體包是否由任何包導出。
 
    如果軟體包未由任何包導出，請繼續。
 
-1. 導覽至並 `https://[server]:[port]/system/console/bundles` 按一下「 **[!UICONTROL 安裝／更新」]**。
+1. 導覽至並 `https://'[server]:[port]'/system/console/bundles` 按一下「 **[!UICONTROL 安裝／更新」]**。
 1. 單 **[!UICONTROL 擊「選擇檔案]** 」並瀏覽以選擇mysql-connector-java-5.1.39-bin.jar檔案。 此外，選擇「啟 **[!UICONTROL 動包」和]** 「刷 **[!UICONTROL 新包」複選框]** 。
 1. 按一 **[!UICONTROL 下安裝或更新]**。 完成後，重新啟動伺服器。
 1. (僅&#x200B;*限Windows*)關閉您作業系統的系統防火牆。
@@ -325,7 +325,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 該表具有�
 執行以下步驟以創 [建客戶端庫](/help/sites-developing/clientlibs.md) ，並使用指令碼：
 
 1. 登入CRXDE並導覽至/etc/clientlibs/
-1. 建立類型為 **cq:ClientLibraryFolder** 的節點，並提供該節點的名稱。 例如， `validation`。
+1. 建立類型為 **cq:ClientLibraryFolder** 的節點，並提供該節點的名稱。 For example, `validation`.
 
    按一下「 **[!UICONTROL 全部儲存]**」。
 
@@ -399,13 +399,13 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 該表具有�
 
 1. 將下列屬性新增至步驟2中建立的檔案夾，然後按一下「全 **[!UICONTROL 部儲存」]**。
 
-   * **** 名稱：類別
+   * **[!UICONTROL 名稱：]** 類別
 
-   * **** 類型：字串
+   * **[!UICONTROL 類型：]** 字串
 
-   * **** 值：fp.validation
+   * **[!UICONTROL 值：]** fp.validation
 
-   * **** 多選項：已啟用
+   * **[!UICONTROL 多選項：]** 已啟用
 
 1. 導覽至 `/libs/fd/af/runtime/clientlibs/guideRuntime`內嵌屬 `fp.validation` 性並附加值。
 
