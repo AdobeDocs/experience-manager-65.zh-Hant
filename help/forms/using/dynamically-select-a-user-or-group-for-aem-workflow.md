@@ -8,7 +8,7 @@ content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 ECMAScript是一種指令碼語言。 它用於用戶端指令碼和伺服器應用程式。 執行以下步驟，使用ECMAScript動態選擇用戶或組：
 
-1. 開啟CRXDE Lite。 URL是 `https://[server]:[port]/crx/de/index.jsp`
+1. 開啟CRXDE Lite。 URL是 `https://'[server]:[port]'/crx/de/index.jsp`
 1. 在以下路徑中建立副檔名為。ecma的檔案。 如果路徑（節點結構）不存在，請建立路徑：
 
    * （分配任務步驟的路徑） `/apps/fd/dashboard/scripts/participantChooser`
@@ -45,7 +45,7 @@ ECMAScript是一種指令碼語言。 它用於用戶端指令碼和伺服器應
       |--- |--- |--- |
       | jcr:title | 字串 | 指定指令碼的名稱。 例如，選擇最接近的欄位代理。 此名稱會顯示在「指派工作」和「簽署檔案」步驟中。 |
 
-   1. 按一下「 **全部儲存**」。 此指令碼可供AEM workflow的元件中選取。
+   1. 按一下「 **全部儲存**」。 此指令碼可供AEM Workflow的元件中選取。
 
       ![指令碼](assets/script.png)
 
@@ -228,7 +228,7 @@ function getAdobeSignRecipients() {
 
    `mvn clean install`
 
-1. 將套件上傳至AEM Forms伺服器。 您可以使用AEM Package manager將搭售匯入AEM Forms伺服器。
+1. 將套件上傳至AEM Forms伺服器。 您可以使用AEM Package Manager將搭售匯入AEM Forms伺服器。
 
 匯入套件後，Adobe Sign和「指派工作」步驟中便可使用選擇動態選取使用者或群組的Java介面選項。
 
