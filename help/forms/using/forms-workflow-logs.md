@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -69,7 +69,7 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 使用記錄來評估：
 
 * 您使用的是正確的adobe sign設定。
-* Adobe Sign service在成功建立合約後退出。
+* Adobe Sign Service在成功建立合約後退出。
 * 「簽署檔案」步驟會退出並顯示成功訊息。
 
 如果有例外，您可以檢視完整的堆疊追蹤，以評估錯誤的原因。
@@ -80,7 +80,7 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 1. 前往AEM網頁主控台組態管理器，網址為：
 
-   https://[伺服器]:[port]/system/console/configMgr
+   https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. 選取 **[!UICONTROL Sling]** > **[!UICONTROL Log Support]**。
 1. 點選 **[!UICONTROL 新增記錄程式。]**
