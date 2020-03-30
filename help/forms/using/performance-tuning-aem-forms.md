@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,8 +23,8 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 您可以在以下網址使用AEM Web Configuration Console中的 **Mobile Forms Configurations** （行動表單組態）元件，來設定和控制AEM Forms的快取策略：
 
-* （OSGi上的AEM Forms） `https://[server]:[port]/system/console/configMgr`
-* (AEM Forms on JEE) `https://[server]:[port]/lc/system/console/configMgr`
+* （OSGi上的AEM Forms） `https://'[server]:[port]'/system/console/configMgr`
+* (AEM Forms on JEE) `https://'[server]:[port]'/lc/system/console/configMgr`
 
 快取的可用選項如下：
 
@@ -71,7 +71,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 * Windows:從Apache HTTP Server項目站點下載Apache Web伺服器。
 * Solaris 64位：從Sunfreeware for Solaris網站下載Apache Web伺服器。
-* Linux:apache web伺服器已預安裝在Linux系統上。
+* Linux:apache Web伺服器已預安裝在Linux系統上。
 
 Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTTP進行優化的。
 
@@ -131,7 +131,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTT
    </Location>
    ```
 
-   要訪問crx伺服器，請使 `https://[server]:80`用，其 `server` 中是運行Apache伺服器的伺服器的名稱。
+   要訪問crx伺服器，請使 `https://'server':80`用，其 `server` 中是運行Apache伺服器的伺服器的名稱。
 
 ## 在執行AEM Forms的伺服器上使用防病毒 {#using-an-antivirus-on-server-running-aem-forms}
 
@@ -153,9 +153,9 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTT
 
 * **（僅限JEE上的AEM Forms）** 「全域檔案儲存(GDS)」目錄。 預設位置為：
 
-   * (JBoss) [appserver root]/server/[server]/svcnative/DocumentStorage
-   * (WebLogic) [appserverdomain]/[server]/adobe/LiveCycleServer/DocumentStorage
-   * (WebSphere) [appserver root]/installedApps/adobe/[server]/DocumentStorage
+   * (JBoss) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
+   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
+   * (WebSphere) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
 * **（僅限JEE上的AEM Forms）** AEM Forms伺服器記錄檔和暫存目錄。 預設位置為：
 
@@ -164,7 +164,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTT
 
 >[!NOTE]
 >
->* 如果您對GDS和臨時目錄使用不同的位置，請在中開啟AdminUI `https://[server]:[port]/adminui`，導覽至「首頁」>「設定」>「核心繫統設定」>「核心組態 **** 」以確認使用中的位置。
+>* 如果您對GDS和臨時目錄使用不同的位置，請在中開啟AdminUI `https://'[server]:[port]'/adminui`，導覽至「首頁」>「設定」>「核心繫統設定」>「核心組態 **** 」以確認使用中的位置。
 
 * 如果AEM Forms伺服器在排除建議的目錄後執行速度變慢，則也排除Java可執行檔(java.exe)。
 
