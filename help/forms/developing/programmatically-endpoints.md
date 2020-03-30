@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -76,10 +76,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry客戶端對象**
 
@@ -107,7 +107,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API添加EJB端點](programmatically-endpoints.md#adding-an-ejb-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -147,7 +147,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API添加EJB端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -181,8 +181,8 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
 建立SOAP端點時需要這些JAR檔案。 但是，如果使用SOAP端點調用服務，則需要添加JAR檔案。 如需AEM Forms JAR檔案的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -212,7 +212,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API新增SOAP端點](programmatically-endpoints.md#add-a-soap-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -252,7 +252,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API添加SOAP端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -264,7 +264,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 ![aw_aw_encryptdocumentprocess](assets/aw_aw_encryptdocumentprocess.png)
 
-此程式會接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的作 `EncryptPDFUsingPassword` 業。 PDF檔案會以密碼加密，而密碼加密的PDF檔案就是此程式的輸出值。 輸入值的名稱（不安全的PDF文檔） `InDoc` 和資料類型為 `com.adobe.idp.Document`。 輸出值的名稱（密碼加密的PDF檔案） `SecuredDoc` 和資料類型 `com.adobe.idp.Document`。
+此程式會接受不安全的PDF檔案作為輸入值，然後將不安全的PDF檔案傳遞至加密服務的作 `EncryptPDFUsingPassword` 業。 PDF檔案會以密碼加密，而密碼加密的PDF檔案就是此程式的輸出值。 輸入值的名稱（不安全的PDF文檔） `InDoc` 和資料類型為 `com.adobe.idp.Document`。 輸出值的名稱（密碼加密的PDF檔案） `SecuredDoc` 和資料類型為 `com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -291,10 +291,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry客戶端對象**
 
@@ -312,7 +312,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 **指定配置值**
 
-當以程式設計方式將Watched folder端點新增至服務時，您必須指定Watched folder端點的設定值。 如果使用管理控制台添加了「監視資料夾」端點，管理員將指定這些配置值。
+當以程式設計方式將Watched Folder端點新增至服務時，您必須指定Watched Folder端點的設定值。 如果使用管理控制台添加了「監視資料夾」端點，管理員將指定這些配置值。
 
 以下清單指定在以寫程式方式將Watched資料夾端點添加到服務時設定的配置值：
 
@@ -325,7 +325,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 * **throttleOn**:限制可在任何指定時間處理的「已監視資料夾」作業數。 作業的最大數量由batchSize值確定。
 * **userName**:從「監視資料夾」叫用目標服務時使用的使用者名稱。 此值為強制值。 預設值為SuperAdmin。
 * **domainName**:使用者的網域。 此值為強制值。 預設值為DefaultDom。
-* **batchSize**:每次掃描要拾取的檔案或資料夾數。 使用此值可防止系統過載；一次掃描太多檔案可能會導致當機。 預設值為2。
+* **batchSize**:每次掃描要拾取的檔案或資料夾數。 使用此值可防止系統過載；一次掃描太多檔案可能會造成當機。 預設值為2。
 * **waitTime**:建立資料夾或檔案後，在掃描資料夾或檔案之前等待的時間（以毫秒為單位）。 例如，如果等待時間是36,000,000毫秒（1小時），而檔案是在一分鐘前建立的，則此檔案會在59分鐘或更久之後擷取。 此屬性對於確保檔案或資料夾被完全複製到輸入資料夾非常有用。 例如，如果要處理大檔案，而要下載該檔案需要10分鐘，請將等待時間設定為10&amp;ast;60 &amp;ast;1000毫秒。 此設定會防止受監視的資料夾在檔案尚未等候10分鐘時進行掃描。 預設值為0。
 * **excludeFilePattern**:受監視資料夾用於確定要掃描和拾取哪些檔案和資料夾的模式。 不會掃描任何具有此模式的檔案或資料夾以進行處理。 當輸入是包含多個檔案的檔案夾時，此設定很實用。 資料夾的內容可以複製到名稱由受監視資料夾挑選的資料夾中。 此步驟可防止被監視的資料夾在完全複製到輸入資料夾之前拾取要處理的資料夾。 例如，如果excludeFilePattern值為，則不 `data*`會擷取所有符合的檔 `data*` 案和檔案夾。 這包括名為、 `data1`等的 `data2`檔案和檔案夾。 此外，該模式可以用通配符模式補充以指定檔案模式。 監看的資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`。 規則運算式不支援這些萬用字元模式。
 * **includeFilePattern**:受監視資料夾用於確定要掃描和拾取哪些資料夾和檔案的模式。 例如，如果此值為，則 `*`會擷取所有符合的檔 `input*` 案和檔案夾。 這包括名為、 `input1`等的 `input2`檔案和檔案夾。 預設值為 `*`。 此值表示所有檔案和資料夾。 此外，該模式可以用通配符模式補充以指定檔案模式。 監看的資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`。 規則運算式不支援這些萬用字元模式。 此值為必填值。
@@ -380,7 +380,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API新增「監視資料夾」端點](programmatically-endpoints.md#add-a-watched-folder-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -450,7 +450,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API新增「監視資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -522,10 +522,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry客戶端對象**
 
@@ -559,7 +559,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 * **userName**:從電子郵件中叫用目標服務時使用的用戶名。 預設值為 `SuperAdmin`。
 * **domainName**:強制設定值。 預設值為 `DefaultDom`。
 * **domainPattern**:指定提供者接受的傳入電子郵件的網域模式。 例如，若使用 `adobe.com` 此功能，則只會處理來自adobe.com的電子郵件，而忽略來自其他網域的電子郵件。
-* **filePattern**:指定提供程式接受的傳入檔案附件模式。 這包括具有特定檔案名副檔名(&amp;ast;.dat、&amp;ast;.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱和副檔名(&amp;ast;)中的複合表達式的檔案。[dD][aA][Tt])。 預設值為 `*`。
+* **filePattern**:指定提供程式接受的傳入檔案附件模式。 這包括具有特定檔案名副檔名(&amp;ast;.dat、&amp;ast;.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱和副檔名(&amp;ast;)中的複合表達式的檔案。[dD][aA]&#39;port&#39;)。 預設值為 `*`。
 * **recipientSuccessfulJob**:傳送訊息以指出成功工作的電子郵件地址。 預設情況下，成功的作業消息始終發送給發送者。 如果您輸 `sender`入，電子郵件結果會傳送給寄件者。 支援最多100個收件者。 指定其他收件者，其電子郵件位址以逗號分隔。 若要關閉此選項，請將此值留空。 在某些情況下，您可能想要觸發程式，而不想收到結果的電子郵件通知。 預設值為 `sender`。
 * **recipientFailedJob**:發送消息以指示失敗作業的電子郵件地址。 預設情況下，將始終向發件人發送失敗的作業消息。 如果您輸 `sender`入，電子郵件結果會傳送給寄件者。 支援最多100個收件者。 指定其他收件者，其電子郵件位址以逗號分隔。 若要關閉此選項，請將此值留空。 預設值為 `sender`。
 * **inboxHost**:要掃描的電子郵件提供者的收件箱主機名或IP地址。
@@ -623,7 +623,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API新增電子郵件端點](programmatically-endpoints.md#add-an-email-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -693,7 +693,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API新增「監視資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -745,7 +745,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 您可以使用AEM Forms Java API，以程式設計方式將遠端端點新增至服務。 借由新增Remoting端點，您就可讓Flex應用程式使用remoting來叫用服務。 (請參 [閱「使用（AEM表單已過時）AEM Forms Remoting叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)」)。
 
-為了以程式設計方式將Remoting端點新增至服務，請考慮下列名為 *EncryptDocument的簡短程式*。
+為了以程式設計方式將Remoting端點新增至服務，請考慮下列名為 *EncryptDocument的短時程式*。
 
 ![ar_ar_encryptdocumentprocess](assets/ar_ar_encryptdocumentprocess.png)
 
@@ -775,10 +775,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry客戶端對象**
 
@@ -806,7 +806,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API新增遠端端點](programmatically-endpoints.md#add-a-remoting-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -846,7 +846,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API新增遠端端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -877,10 +877,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry客戶端對象**
 
@@ -917,7 +917,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API添加TaskManager端點](programmatically-endpoints.md#add-a-taskmanager-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -967,7 +967,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API添加TaskManager端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -998,10 +998,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry客戶端對象**
 
@@ -1029,7 +1029,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API修改端點](programmatically-endpoints.md#modifying-an-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1069,7 +1069,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API修改端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1100,10 +1100,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立EndpointRegistry客戶端對象**
 
@@ -1123,7 +1123,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API移除端點](programmatically-endpoints.md#removing-an-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1157,7 +1157,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API移除端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1192,10 +1192,10 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如果AEM Forms部署在非JBoss的受支援J2EE應用程式伺服器上，則請將adobe-utilities.jar和jbossall-client.jar取代為JAR檔案，此JAR檔案是部署AEM Forms的J2EE應用程式伺服器專用。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在非JBoss的受支援J2EE應用程式伺服器上，則請將adobe-utilities.jar和jbossall-client.jar取代為JAR檔案，此JAR檔案是部署AEM Forms的J2EE應用程式伺服器專用。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立ConnectorRegistry客戶端對象**
 
@@ -1220,7 +1220,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [使用Java API擷取端點連接器資訊](programmatically-endpoints.md#retrieve-endpoint-connector-information-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1239,7 +1239,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 指定連接器類型。
 
-   通過調用對象的方法並傳遞 `ConnectorRegistryClient` 指定連接器 `getEndpointDefinition` 類型的字串值來指定連接器類型。 例如，若要指定「Watched資料夾」連接器類型，請傳遞字串值 `WatchedFolder`。 此方法返回與 `Endpoint` 連接器類型對應的對象。
+   通過調用對象的方法並傳遞 `ConnectorRegistryClient` 指定連接器 `getEndpointDefinition` 類型的字串值來指定連接器類型。 例如，若要指定Watched Folder連接器類型，請傳遞字串值 `WatchedFolder`。 此方法返回與 `Endpoint` 連接器類型對應的對象。
 
 1. 檢索配置值。
 
@@ -1252,6 +1252,6 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 [快速入門：使用Java API檢索端點連接器資訊](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
