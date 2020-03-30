@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 配置服務的屬性 {#properties}
 
-您可以使用 **AEM Console中的AEMFD ConvertPDF** Service，來設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:[port]/system/console/configMgr`。
+您可以使用 **AEM Console中的AEMFD ConvertPDF** Service，來設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:'port'/system/console/configMgr`。
 
 ## 使用服務 {#using-the-service}
 
