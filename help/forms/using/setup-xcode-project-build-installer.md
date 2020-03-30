@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -26,7 +26,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 1. 下載來源套件。 當您下載套件時，它會新增至您的AEM Forms套件管理員。
 1. 下載後，導覽至：和 `https://<server>:<port>/crx/packmgr/index.jsp`安裝 `adobe-aemfd-forms-app-src-pkg-<version>.zip`。
 
-1. 若要下載原始碼封存，請在您的瀏 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 覽器中開啟。
+1. 若要下載原始碼封存檔，請在您的瀏 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 覽器中開啟。
 來源套件會下載在您的裝置上。
 
 下圖顯示提取的內容 `adobe-lc-mobileworkspace-src-<version>.zip`。
@@ -119,7 +119,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
    >[!NOTE]
    >
-   >只有當AEM Forms應用程式需要連線至未遵循App Transport security要求的伺服器時，才需要此步驟。
+   >只有當AEM Forms應用程式需要連線至未遵循App Transport Security要求的伺服器時，才需要此步驟。
 
 1. 在 **PROJECT下**，選擇 **AEM Forms** ，並確保為 **Signing Identity**, DebugDebugIntity,ReleaseAndAny iOS SDK ************&#x200B;選擇適當的簽名。
 1. 將布建的iPad連接至Mac電腦。
@@ -130,7 +130,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
    已選取已布建的iPad Air 2裝置。
 
 1. 選擇「 **產品** 」>「清 **除」**。
-1. 選擇「 **產品** 」>「 **構建」**。
+1. 選擇 **產品** > **構建**。
 
 ## 建立AEM Forms應用程式的安裝程式 {#build-the-installer-for-the-mobile-workspace-app}
 
@@ -144,17 +144,17 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
    已選取已布建的iPad Air 2裝置。
 
 1. 選擇「 **產品** 」>「清 **除」**。
-1. 選擇「 **產品** 」>「 **構建」**。
+1. 選擇 **產品** > **構建**。
 1. 選擇「 **產品** >存 **檔」**。
 1. 在「組織工具——封存」中，選取專案的最新封存，然後按一下「分 **發」**。
 1. 選 **擇「儲存為企業用」或「臨機部署** 」做為散發方法，然後按一下「下 **一步」**。
 1. 選取適當的 **程式碼簽署識別** ，然後按 **下下一步**。 按一 **下** 「允許」以套用簽名。
 1. 提供應用程式名稱，並選取「儲 **存為企業散發」**。
-1. 提供應 **用程式的** 「應用程式URL」。 例如，若要在CRX伺服器上主控應用程式，請提供URL `https://[LC_host]:[port]/lc/content/distribution/mobileworkspace/APP_NAME.ipa`。
+1. 提供應 **用程式的** 「應用程式URL」。 例如，若要在CRX伺服器上主控應用程式，請提供URL `https://[LC_host]:'port'/lc/content/distribution/mobileworkspace/APP_NAME.ipa`。
 1. 在「標 **題** 」欄位中，指定AEM Forms。
 1. 按一 **下「儲存** 」並關閉Xcode。
 
-   安裝程式檔 `AEM Forms.ipa`案和屬性清單檔案 `AEM Forms-info.plist`會在指定的位置建立。
+   安裝程式檔 `AEM Forms.ipa`案和屬性清單檔案 `AEM Forms-info.plist`會建立在指定的位置。
 
 1. 在編輯器 `AEM Forms-info.plist` 中開啟檔案。
 1. 將。ipa檔案URL中的所有空格取代為%20。
