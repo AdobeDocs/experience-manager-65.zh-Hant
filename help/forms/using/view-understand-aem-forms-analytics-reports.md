@@ -10,7 +10,7 @@ topic-tags: integrations
 discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -49,20 +49,20 @@ AEM Forms中的分析功能是AEM Forms附加套件的一部分。 如需安裝�
 
 執行下列步驟以檢視分析報表：
 
-1. 登入AEM入口網站： `https://[hostname]:[port]`
+1. 登入AEM入口網站： `https://[hostname]:'port'`
 1. 按一 **下「表單>表單與檔案」**。
 1. 選取您要檢視分析報表的表單。
 1. 選取 **更多> Analytics報表**。
 
 ![分析報表](assets/analyticsreport.png)
 
-**** 答：Analytics報表命令
+**答：** Analytics報表命令
 
 AEM Forms會針對表單和表單中每個面板顯示分析報表，如下所示。
 
 ![最適化表單的摘要報告](assets/analyticsdashboard_callout.png)
 
-************ 答：轉換 **B.表單層級摘**&#x200B;要C.**面板層級摘**&#x200B;要D.訪客的瀏覽器——篩選 **器E。訪客作業系統——篩選**&#x200B;器F。訪客語言——篩選
+**答：** 轉換 **B.** 表單層級摘 **要C.** 面板層級摘 **要D.** 訪客的瀏覽器——篩選 **器E。** 訪客作業系統——篩選 **器F。** 訪客語言——篩選
 
 依預設，會顯示最近7天的分析報表。 您可以檢視最近15天、最近1個月等的報表，或指定日期範圍。
 
