@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets和Dynamic Media支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 84c6cc47d84656be587cc6a268b8ddc2e1e39635
+source-git-commit: 593c1e1954a1c8e0355ede9889caed05ff72f3f9
 
 ---
 
@@ -20,7 +20,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 |:---:|---|
 | ✓ | 支援 |
 | * | 支援附加功能 |
-| - | 不適用 |
+| − | 不適用 |
 
 ## AEM Assets中支援的點陣影像格式 {#supported-raster-image-formats}
 
@@ -35,12 +35,12 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 | PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD‡ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-**¹** 從PSD檔案擷取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
+‡合併的影像是從PSD檔案擷取。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
 ## 動態媒體中支援的點陣影像格式(#supported-raster-image-formats-dynamic-media)
 
@@ -51,11 +51,11 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
-| PSD **¹** | ✓ |  |  |  |  |
+| PSD **‡** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-**¹** 從PSD檔案擷取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
+**‡** 合併的影像是從PSD檔案擷取。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
 除了上述資訊外，請考慮下列事項：
 
@@ -130,7 +130,7 @@ Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## 動態媒體中支援的檔案格式(##supported-document-formats-dynamic-media)
+## 動態媒體中支援的檔案格式(#supported-document-formats-dynamic-media)
 
 | 格式 | 上傳<br> （輸入格式） | 建立影像預設集<br><br><br> （輸出格式） | 預覽<br><br> 動態轉譯 | 傳送<br> 動態轉譯<br> | 下載<br><br> 動態轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -150,16 +150,16 @@ Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 
 |  | 儲存 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | FFMPEG轉碼 |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | - | * |
-| MIDI | ✓ | ✓ |  | - | * |
-| 3GP | ✓ | ✓ |  | - | * |
-| MP3 | ✓ | ✓ | ✓ | - | * |
-| MPG | ✓ | ✓ |  | - | * |
-| OGA | ✓ | ✓ |  | - | * |
-| OGG | ✓ | ✓ |  | - | * |
-| RA | ✓ | ✓ |  | - | * |
-| WAV | ✓ | ✓ |  | - | * |
-| WMA | ✓ | ✓ |  | - | * |
+| AAC | ✓ | ✓ |  | − | * |
+| MIDI | ✓ | ✓ |  | − | * |
+| 3GP | ✓ | ✓ |  | − | * |
+| MP3 | ✓ | ✓ | ✓ | − | * |
+| MPG | ✓ | ✓ |  | − | * |
+| OGA | ✓ | ✓ |  | − | * |
+| OGG | ✓ | ✓ |  | − | * |
+| RA | ✓ | ✓ |  | − | * |
+| WAV | ✓ | ✓ |  | − | * |
+| WMA | ✓ | ✓ |  | − | * |
 | DVI | ✓ | ✓ |  | * | * |
 | FLV | ✓ | ✓ |  | * | * |
 | M4V | ✓ | ✓ |  | * | * |
@@ -260,7 +260,7 @@ CRXDE Lite中提供支援的MIME類型清單，網址為 `/conf/global/settings/
 | OTF | application/x-font-otf |  |  |
 | PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdf選項](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_pdf_options) |
 | PFB | application/x-font-type1 |  |  |
-| PFM | application/x-font-type1 |  |  |
+| PGM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | image/png |  |  |
 | PPT | application/vnd.ms-powerpoint |  |  |
