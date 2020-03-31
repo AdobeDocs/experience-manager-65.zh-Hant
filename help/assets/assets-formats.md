@@ -1,14 +1,14 @@
 ---
 title: 資產支援的格式
-description: AEM Assets支援的檔案格式清單以及每種格式支援的功能。
+description: AEM Assets和Dynamic Media支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d7d25c75c1023383e07c36252ece2e85425a95be
+source-git-commit: 84c6cc47d84656be587cc6a268b8ddc2e1e39635
 
 ---
 
 
-# 資產支援的格式 {#assets-supported-formats}
+# 支援的資產格式 {#assets-supported-formats}
 
 AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援也各不相同。
 
@@ -22,9 +22,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 | * | 支援附加功能 |
 | - | 不適用 |
 
-## 支援的點陣影像格式 {#supported-raster-image-formats}
-
-資產管理功能支援的點陣影像格式如下：
+## AEM Assets中支援的點陣影像格式 {#supported-raster-image-formats}
 
 | 格式 | 儲存 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | 互動式編輯 | 中繼資料回寫 | 分析 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -44,7 +42,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 **¹** 從PSD檔案擷取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
-動態媒體功能支援的點陣影像格式如下：
+## 動態媒體中支援的點陣影像格式(#supported-raster-image-formats-dynamic-media)
 
 | 格式 | 上傳<br> （輸入格式） | 建立影像預設集<br><br><br> （輸出格式） | 預覽<br><br> 動態轉譯 | 傳送<br> 動態轉譯<br> | 下載<br><br> 動態轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -69,6 +67,22 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 * 對於EPS檔案，PostScript Document Structuring Convention(PS-Adobe)3.0版或更新版本支援中繼資料回寫。
 
+## 動態媒體中不支援的點陣影像格式(#unsupported-image-formats-dynamic-media)
+
+下表說明動態媒體中不支援的點陣影像格 *式* 子類型。 該表還介紹了可用於檢測此類檔案的建議方法。
+
+| 格式 | 什麼不支援？ | 建議的檢測方法 |
+|---|---|---|
+| JPEG | 初始三個位元組不正確的檔案。 | 要識別JPEF檔案，其初始三個位元組必須 `ff d8 ff`。 如果它們是其他任何內容，則不會分類為JPEG。<br>·沒有軟體工具可協助解決此問題。<br>·讀取檔案初始三個位元組的小型C++/java程式應能夠檢測到這些類型的檔案。<br>·最好追蹤此類檔案的來源，並查看產生檔案的工具。 |
+| PNG | IDAT區塊大小大於100 MB的檔案。 | 您可以使用C++中 [的libpng](http://www.libpng.org/pub/png/libpng.html) 來偵測此問題。 |
+| PSB |  | 如果檔案類型為PSB，請使用exiftool。<br>ExifTool記錄檔中的範例：<br>1。 File type: `PSB` |
+| PSD | 不支援色域不是CMYK、RGB、灰階或點陣圖的檔案。<br>不支援DuoTone、Lab和索引色域。 | 如果「顏色」模式為「雙色調」，則使用ExifTool。<br>ExifTool記錄檔中的範例：<br>1。 顏色模式： `Duotone` |
+|  | 具有突然結尾的檔案。 | Adobe無法偵測到此狀況。 此外，這類檔案無法使用Adobe PhotoShop開啟。 Adobe建議您檢查用來建立此類檔案的工具，並在來源進行疑難排解。 |
+|  | 位元深度大於16的檔案。 | 如果位元深度大於16，請使用ExifTool。<br>ExifTool記錄檔中的範例：<br>1。 位元深度： `32` |
+|  | 具有Lab色域的檔案。 | 如果顏色模式為Lab，請使用exiftool。<br>ExifTool記錄檔中的範例：<br>1。 顏色模式： `Lab` |
+| TIFF | 具有浮點資料的檔案。 也就是說，不支援具有32位元深度的TIFF檔案。 | 如果MIME類型為且SampleFormat的值 `image/tiff` 中包含，請使 `Float` 用ExifTool。 ExifTool記錄檔中的範例：<br>1。 MIME類型：范 `image/tiff`<br>例格式： `Float #`<br>2. MIME類型：范 `image/tiff`<br>例格式： `Float; Float; Float; Float` |
+|  | 具有Lab色域的檔案。 | 如果顏色模式為Lab，請使用ExifTool。<br>ExifTool記錄檔中的範例：<br>1。 顏色模式： `Lab` |
+
 ## 支援的PDF點陣化器程式庫 {#supported-pdf-rasterizer-library}
 
 Adobe PDF Rasterizer程式庫可針對大型且內容密集的Adobe Illustrator和PDF檔案產生高品質的縮圖和預覽。 Adobe建議針對下列項目使用PDF點陣化器程式庫：
@@ -91,7 +105,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera Raw支援](camera-raw.md)。
 
-## 支援的檔案格式 {#supported-document-formats}
+## 支援的資產檔案格式 {#supported-document-formats}
 
 資產管理功能支援的檔案格式如下：
 
@@ -116,7 +130,7 @@ Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-動態媒體功能支援的檔案格式如下：
+## 動態媒體中支援的檔案格式(##supported-document-formats-dynamic-media)
 
 | 格式 | 上傳<br> （輸入格式） | 建立影像預設集<br><br><br> （輸出格式） | 預覽<br><br> 動態轉譯 | 傳送<br> 動態轉譯<br> | 下載<br><br> 動態轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -155,7 +169,7 @@ Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 | WMV | ✓ | ✓ |  | * | * |
 | SWF | ✓ | ✓ |  |  |  |
 
-## 動態媒體轉碼支援的輸入視訊格式 {#supported-input-video-formats-for-dynamic-media-transcoding}
+## 動態媒體中支援的輸入視訊格式，以進行轉碼 {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | 視訊副檔名 | 容器 | 建議的視訊轉碼器 | 不支援的視訊轉碼器 |
 |---|---|---|---|
@@ -246,7 +260,7 @@ CRXDE Lite中提供支援的MIME類型清單，網址為 `/conf/global/settings/
 | OTF | application/x-font-otf |  |  |
 | PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdf選項](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_pdf_options) |
 | PFB | application/x-font-type1 |  |  |
-| PGM | application/x-font-type1 |  |  |
+| PFM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | image/png |  |  |
 | PPT | application/vnd.ms-powerpoint |  |  |
