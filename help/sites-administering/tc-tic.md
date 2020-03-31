@@ -10,14 +10,14 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 98dd2d3e7445ceda6d96f0dd11b39d8361f1f402
 
 ---
 
 
 # 配置翻譯整合框架{#configuring-the-translation-integration-framework}
 
-翻譯整合框架與第三方翻譯服務整合，以協調AEM內容的翻譯。
+翻譯整合框架與第三方翻譯服務整合，協調AEM內容的翻譯。
 
 * 連接到您的翻譯服務提供商。
 * 建立翻譯整合框架配置。
@@ -30,6 +30,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 建立將AEM連結至您的翻譯服務供應商的雲端設定。 AEM包含依預設連線至Microsoft Translator的功能。 對於其他翻譯提供者，請從「套件共用」下載 [連接器套件](/help/sites-administering/package-manager.md#package-share)。
 以下翻譯供應商為翻譯項目提供了新API的實施。 連結，以進一步瞭解整合以及如何從Package Share下載：
 
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) （Adobe Exchange主要合作夥伴）
 * [Clay Tablet Technologies](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/clay-tablet-translation-connector-for-aem.html) （不在PackageShare上，請直接聯絡廠商）
 * [Lionbridge](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lionbridge-for-adobe-experience-manager.html)
 * [雲字](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/cloudwords-for-adobe-translations-connector.html)
@@ -37,8 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * [林戈特克](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lingotek-for-adobe-experience-manager.html)
 * Microsoft（Microsoft Translator已預先安裝在AEM中）
 * [Smartling](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/smartling-connector-for-adobe-experience-manager.html)
-* [Translations.com](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/globallink-connect-for-adobe-experience-manager.html)
-* [SDL worldServer](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdlworldserver-connector.html)
+* [SDL WorldServer](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdlworldserver-connector.html)
 * [SDL TMS](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdl-tms-translation-connector-for-adobe-experience-manager.html)
 * [Systran](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/systran-for-adobe-experience-manager.html)
 * [阿爾特朗](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/Altlang.html)
@@ -74,7 +74,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在配置翻譯整合框架後，您可 [以將其與使用該框架的頁](/help/sites-administering/tc-prep.md) 關聯。
 
-**** 注意：如需AEM中內容轉譯功能的概觀，請參閱「多語 [言網站的轉譯內容」](/help/sites-administering/translation.md)。
+**注意：** 如需AEM中內容轉譯功能的概觀，請參閱「多語 [言網站的轉譯內容」](/help/sites-administering/translation.md)。
 
 此架構的單一設定可控制如何翻譯頁面內容、社群內容和資產。
 ![chlimage_1-386](assets/chlimage_1-386.png)
@@ -95,7 +95,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
     <ul>
      <li>機器翻譯：翻譯提供者使用機器翻譯即時執行翻譯。</li>
      <li>人文翻譯：內容將發送到翻譯提供者，翻譯者將翻譯。 </li>
-     <li>不要翻譯：內容不會傳送以供翻譯。 這是為了略過某些無法翻譯但可更新為最新內容的內容分支。</li>
+     <li>不要翻譯：內容不會傳送以進行翻譯。 這是為了略過某些無法翻譯但可更新為最新內容的內容分支。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -195,12 +195,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 若要設定將來源頁面翻譯成其他語言，請將頁面與下列雲端設定建立關聯：
 
-* 將AEM連結至您的翻譯提供者的雲端設定。
+* 將AEM連接至您的翻譯提供者的雲端設定。
 * 配置翻譯詳細資訊的翻譯整合框架。
 
 請注意，翻譯整合架構雲端組態可識別用於連線至服務提供者的雲端組態。 將源頁面與Framework雲端配置關聯時，該頁面必須與Framework雲端配置使用的服務提供商雲端配置關聯。
 
-將頁面與雲端設定關聯時，頁面的子系會繼承關聯。 例如，如果您將/content/geometrixx/tw/products頁面與Translation Integration Framework建立關聯，則會根據框架翻譯「產品」頁面及其下面的所有頁面。
+將頁面與雲端設定關聯時，頁面的子系會繼承關聯。 例如，如果您將/content/geometrixx/tw/products頁面與Translation Integration Framework建立關聯，則會根據架構翻譯「產品」頁面及其下面的所有頁面。
 
 如有需要，您可以覆寫子系頁面上的關聯。 例如，網站的內容主要是服裝。 不過，其中一個頁面分支會說明該公司。 網站的根頁面與「翻譯整合框架」關聯，該框架指定使用Clothing類別進行機器翻譯。 描述公司的分支使用使用使用「常規」類別執行機器翻譯的框架。
 
