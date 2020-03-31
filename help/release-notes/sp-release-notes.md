@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc3cb8732e2c0b4a7275ec302517791a5babdd42
+source-git-commit: 34f5cfc692241da4b9f5330e5abc324998fadb23
 
 ---
 
@@ -98,7 +98,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 資產收集頁面上觸發工作流程的按鈕已停用(NPR-32471)。
 
-* 在Experience Manager中使用Dynamic Media Scene7設定將資產從一個檔案夾移至另一個檔案夾(NPR-32440)時，在SPS(Scene7 Publishing System)中建立無名稱的檔案夾。
+* 在Experience Manager中使用Dynamic Media Scene7設定將資產從一個檔案夾移至另一個檔案夾時，無名稱的檔案夾會在SPS(Scene7 Publishing System)中建立。
 
 * 將所有資產（使用「全選」然後移動）移至包含已發佈資產的檔案夾的動作會失敗並出現錯誤(NPR-32366)。
 
@@ -193,6 +193,13 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 * Target雲端設定失敗，並出現錯誤get mbox請求失敗(CQ-4279880)。
 
 ### 品牌入口網站 {#assets-brand-portal}
+
+* 在AEM 6.5.4上升級至Adobe I/O時，品牌入口網站使用者無法將貢獻資料夾資產發佈至AEM資產(CQDOC-15655)。
+
+   此問題將在下一個Service Pack AEM 6.5.5中修正。
+
+   如需AEM 6.5.4的立即修正，建議您下載 [修補程式](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) ，並安裝在您的作者實例上。
+
 
 * 中繼資料結構下拉式值在資產屬性中不可見(CQ-4283287)。
 
