@@ -1,188 +1,188 @@
 ---
-title: 在Adobe Experience Manager Sites製作工作流程中，使用連結的資產來共用DAM資產
-description: 在其他Experience Manager網站部署中建立網頁時，請使用遠端Adobe Experience Manager Assets部署中的可用資產。
+title: 在 Adobe Experience Manager Sites 編寫工作流程中使用「連線資產」共用 DAM 資產
+description: 在其他 Experience Manager 網站的部署工作中建立網頁時，使用遠端 Adobe Experience Manager Assets 部署的可用資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: 3c2c47b5d660fefd31470ce8d555c7bb949fa036
 
 ---
 
 
-# 使用「連線的資產」在AEM Sites中共用DAM資產 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
+# 使用「連線資產」在 AEM Sites 中共用 DAM 資產 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-在大型企業中，建立網站所需的基礎架構可能會分散。 建立這些網站的網站建立功能和數位資產有時可能會駐留在不同的部署中。 一些原因可能是部署分散各地，需要協同工作；收購導致母公司希望整合的異質基礎設施；這種規模的增長導致資產管理需要專門執行。
+大型企業中，建立網站所需的基礎架構可能很分散。有時候，建立這些網站的網站建立功能和數位資產可能會存放在不同的部署中。以下幾個原因可能是現有部署在地理位置分散，需要共同工作或進行收購，從而導致母公司希望共同使用的異構基礎架構。
 
-AEM Sites提供建立網頁的功能，而AEM Assets是數位資產管理(DAM)系統，可為網站提供必要的資產。 AEM現在整合AEM Sites和AEM Assets，以支援上述使用案例。
+AEM Sites 提供建立網頁的功能，而 AEM Assets 是可為網站提供必要資產的數位資產管理 (DAM) 系統。AEM 現在整合了 AEM Sites 和 AEM Assets，能支援上述使用案例。
 
 ## 連線資產概觀 {#overview-of-connected-assets}
 
-在「頁面編輯器」中編輯頁面時，作者可以從不同的AEM Assets部署順暢地搜尋、瀏覽和內嵌資產。 若要讓AEM管理員執行AEM Sites的本機部署與AEM Assets的不同（遠端）部署的一次性整合。
+在「頁面編輯器」中編輯頁面時，作者可從不同 AEM Assets 部署順暢地搜尋、瀏覽及內嵌資產。若要管理 AEM，請對 AEM Sites 本機部署與 AEM Assets 不同 (遠端) 部署執行一次性整合。
 
-對於網站作者，遠端資產可做為唯讀本機資產。 此功能可支援順暢搜尋並一次使用數個遠端資產。 若要讓許多遠端資產在單次部署時可供使用，請考慮大量移轉資產。 請參閱 [資產移轉指南](/help/assets/assets-migration-guide.md)。
+Sites 作者可以唯讀本機資產的形式取得遠端資產。此功能可支援順暢的搜尋作業，並允許一次使用數個遠端資產。若要在本機部署中一次提供多個遠端資產，不妨考慮大量移轉資產。請參閱[資產移轉指南](/help/assets/assets-migration-guide.md)。
 
 ### 先決條件和支援的部署 {#prerequisites}
 
-在您使用或設定此功能之前，請確定：
+使用或設定此功能之前，請先確定下列事項：
 
-* 使用者是每個部署中適當使用者群組的一部分。
-* 對於Adobe Experience Manager部署類型，符合其中一項支援的標準。 AEM 6.5 Assets可與AEM搭配使用，做為雲端服務。 如需詳細資訊，請 [參閱AEM中的「Connected Assets」（連線資產）功能(Cloud Service)](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* 每個部署中，使用者都是適當使用者群組的成員。
+* 若為 Adobe Experience Manager 部署類型，需符合其中一項支援條件。AEM 6.5 Assets可與AEM搭配使用，做為雲端服務。 如需詳細資訊，請 [參閱AEM中的「Connected Assets」（連線資產）功能(Cloud Service)](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
-   |  | AEM Sites 雲端服務 | AMS上的AEM 6.5網站 | AEM 6.5內部部署網站 |
+   |  | AEM Sites 雲端服務 | AMS 上的 AEM 6.5 Sites | 內部部署的 AEM 6.5 Sites |
    |---|---|---|---|
    | **AEM Assets 雲端服務** | 支援 | 支援 | 支援 |
-   | **AEM 6.5 Assets on AMS** | 支援 | 支援 | 支援 |
-   | **AEM 6.5內部部署資產** | 不支援 | 不支援 | 不支援 |
+   | **AMS 上的 AEM 6.5 Assets** | 支援 | 支援 | 支援 |
+   | **內部部署的 AEM 6.5 Assets** | 不支援 | 不支援 | 不支援 |
 
 ### 支援的檔案格式 {#mimetypes}
 
-作者可在Content Finder中搜尋影像和下列類型的檔案，並在「頁面編輯器」中使用搜尋的資產。 可將檔案新增至元 `Download` 件，並將影像新增至元 `Image` 件。 作者也可以在任何可延伸預設或元件的自訂AEM元件中新增遠 `Download` 端資 `Image` 產。 支援的格式清單包括：
+作者可在「內容尋找器」中搜尋影像和下列類型的文件，並在「頁面編輯器」中使用找到的資產。文件可新增至 `Download` 元件，且影像可新增至 `Image` 元件。作者也可以在任何可延伸預設 `Download` 或 `Image` 元件的自訂 AEM 元件中新增遠端資產。支援的格式清單包括：
 
 * **影像格式**:Image元件支援的影像格 [式](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) ，由Connected Assets支援。 不支援動態媒體影像。
-* **檔案格式**:請參閱 [「連接的資產」支援的檔案格式](assets-formats.md#supported-document-formats)。
+* **文件格式**：請參閱[連線資產支援的文件格式](assets-formats.md#supported-document-formats)。
 
-### Users and groups involved {#users-and-groups-involved}
+### 相關使用者和群組 {#users-and-groups-involved}
 
-以下說明配置和使用功能及其相應用戶組時涉及的各種角色。 本機範圍用於作者建立網頁的使用案例。 遠端範圍用於托管所需資產的DAM部署。 「站點」作者會讀取這些遠程資產。
+以下說明設定及使用功能以及其相對應的使用者群組時，相關的各種角色。本機範圍適用於由作者建立網頁的使用案例。遠端範圍適用於託管所需資產的 DAM 部署。Sites 作者會擷取這些遠端資產。
 
-| 角色 | 範圍 | 使用者群組 | 逐步執行中的使用者名稱 | 需求 |
+| 角色 | 範圍 | 使用者群組 | 逐步說明中的使用者名稱 | 需求 |
 |----------------------------------|--------|------------------------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AEM Sites Administrator | 本機 | AEM管理員 | `admin` | 設定AEM，設定與遠端資產部署的整合。 |
-| DAM使用者 | 本機 | 作者 | `ksaner` | 用於在中查看和複製提取的資產 `/content/DAM/connectedassets/`。 |
-| AEM Sites作者 | 本機 | 作者（可在遠端DAM上存取讀取權，並可在本機網站上存取作者） | `ksaner` | 一般使用者是網站作者，他們使用此項整合來提升內容速度。 作者使用Content Finder和本機網頁中的必要影像，在遠端DAM中搜尋及瀏覽資產。 使用 `ksaner` DAM使用者的認證。 |
-| AEM Assets管理員 | 遠端 | AEM管理員 | `admin` 在遠端AEM上 | 設定跨原始資源共用(CORS)。 |
-| DAM使用者 | 遠端 | 作者 | `ksaner` 在遠端AEM上 | 在遠端AEM部署上編寫角色。 使用內容搜尋器，在「已連線資產」中搜尋及瀏覽資產。 |
-| DAM配銷商（技術使用者） | 遠端 | 封裝建立工具和網站作者 | `ksaner` 在遠端AEM上 | AEM本端伺服器（而非網站作者角色）會使用此位於遠端部署的使用者來擷取遠端資產，代表網站作者。 此角色與上述兩個角色不同， `ksaner` 且屬於不同的使用者群組。 |
+| AEM Sites 管理員 | 本機 | AEM 管理員 | `admin` | 設定 AEM，設定與遠端資產部署的整合。 |
+| DAM 使用者 | 本機 | 作者 | `ksaner` | 用於檢視及複製 `/content/DAM/connectedassets/` 中擷取的資產。 |
+| AEM Sites 作者 | 本機 | 作者 (在遠端 DAM 上擁有讀取存取權限，並在本機 Sites 上擁有作者存取權限) | `ksaner` | 一般使用者是指使用這項整合提升其內容速度的 Sites 作者。作者可使用「內容尋找器」在遠端 DAM 中搜尋及瀏覽資產，並在本機網頁中使用所需的影像。已採用 `ksaner` DAM 使用者的認證。 |
+| AEM Assets 管理員 | 遠端 | AEM 管理員 | 遠端 AEM 上的 `admin` | 設定跨原始資源共用 (CORS)。 |
+| DAM 使用者 | 遠端 | 作者 | 遠端 AEM 上的 `ksaner` | 遠端 AEM 部署上的作者角色。使用「內容尋找器」，在「連線資產」中搜尋和瀏覽資產。 |
+| DAM 經銷商 (技術使用者) | 遠端 | 套件建立者和網站作者 | 遠端 AEM 上的 `ksaner` | AEM 本機伺服器 (非 Site 作者角色) 會代表 Sites 作者，以遠端部署上這名使用者的名義來擷取遠端資產。此角色與上述的兩個 `ksaner` 角色不一樣，而且屬於不同的使用者群組。 |
 
-## 設定網站與資產部署之間的連線 {#configure-a-connection-between-sites-and-assets-deployments}
+## 設定 Sites 和 Assets 部署之間的連線 {#configure-a-connection-between-sites-and-assets-deployments}
 
-AEM管理員可以建立此整合。 在建立後，使用它所需的權限會透過在網站部署和DAM部署上定義的使用者群組來建立。
+AEM 管理員可建立這項整合。一旦建立之後，系統會透過您在 Sites 部署和 DAM 部署中定義的使用者群組，建立使用該整合所需的權限。
 
-要配置「已連接資產」和「本地站點」連接，請遵循以下步驟。
+若要設定「連線資產」和本機 Sites 連線，請遵循這些步驟操作。
 
-1. 存取現有的AEM Sites部署，或使用下列命令建立部署：
+1. 存取現有的 AEM Sites 部署，或使用下列命令建立部署：
 
-   1. 在JAR檔案的檔案夾中，在終端上執行下列命令以建立每個AEM伺服器。
+   1. 在 JAR 檔案的資料夾中，在終端機上執行下列命令以建立各個 AEM 伺服器。
       `java -XX:MaxPermSize=768m -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
 
-   1. 幾分鐘後，AEM伺服器就會成功啟動。 請將此AEM Sites部署視為網頁製作的本機電腦，例如 `https://[local_sites]:4502`。
+   1. 幾分鐘後，AEM 伺服器就會成功啟動。將此 AEM Sites 部署視為網頁編寫的本機電腦，例如 `https://[local_sites]:4502`。
 
-1. 請確定AEM Sites部署和AMS上的AEM Assets部署上都有具有本機範圍的使用者和角色。 建立資產部署的技術使用者，並新增至相關使用者和群組中 [提及的使用者群組](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved)。
+1. 確定 AEM Sites 部署和 AMS 上的 AEM Assets 部署，都存在具有本機範圍的使用者和角色。建立 Assets 部署的技術使用者，並新增至[相關使用者和群組](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved)所提及的使用者群組。
 
-1. 請在存取本機AEM Sites部署 `https://[local_sites]:4502`。 按一 **[!UICONTROL 下「工具]** >資 **[!UICONTROL 產]** >連線 **[!UICONTROL 的資產設定]** 」，並提供下列值：
+1. 在 `https://[local_sites]:4502` 存取本機 AEM Sites 部署。按一下&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 連線資產設定」]**，並提供下列各值：
 
-   1. AEM Assets位置為 `https://[assets_servername_ams]:[port]`。
-   1. DAM配銷商的認證（技術使用者）。
-   1. 在「 **[!UICONTROL 裝載點]** 」欄位中，輸入AEM擷取資產的本機AEM路徑。 例如， `remoteassets` folder。
+   1. AEM Assets 位置為 `https://[assets_servername_ams]:[port]`。
+   1. DAM 經銷商 (技術使用者) 的認證。
+   1. 在&#x200B;**[!UICONTROL 「掛接點」]**&#x200B;欄位中，輸入 AEM 擷取資產的本機 AEM 路徑。例如，`remoteassets` 資料夾。
 
-   1. 根據您的網路調 **[!UICONTROL 整原始二進位傳輸優化閾值]** 。 大小大於此臨界值的資產轉譯會非同步傳送。
-   1. 如果 ****&#x200B;您使用資料存放區來儲存資產，而「資料存放區」是兩個AEM部署之間的共用儲存區，請選取「與已連接資產共用的資料存放區」。 在這種情況下，閾值限制並不重要，因為實際資產二進位檔案駐留在資料儲存上，並且不會傳輸。
-   ![連接資產的典型配置](assets/connected-assets-typical-config.png)
+   1. 根據您的網路調整&#x200B;**[!UICONTROL 原始二進位傳輸最佳化臨界值]**。大於此臨界值的資產轉譯項目會以非同步方式傳送。
+   1. 如果您是使用資料存放區來儲存資產，且「資料存放區」是兩個 AEM 部署之間的共用儲存空間，請選取&#x200B;**[!UICONTROL 「與連線資產共用的資料存放區」]**。這種情況下，臨界值限制並不重要，因為實際的資產二進位檔位於資料存放區，而且不會轉移。
+   ![連線資產的典型設定](assets/connected-assets-typical-config.png)
 
-   *圖：連接資產的典型配置*
+   *圖：連線資產的典型設定*
 
-1. 當資產已處理且已擷取轉譯時，請停用工作流程啟動器。 調整本機(AEM Sites)部署上的啟動程式設定，排除 `connectedassets` 擷取遠端資產的檔案夾。
+1. 資產處理完畢且轉譯完成擷取後，請停用工作流程啟動器。調整本機 (AEM Sites) 部署上的啟動器設定，以排除 `connectedassets` 資料夾 (遠端資產擷取作業的執行位置)。
 
-   1. 在AEM Sites部署中，按一下「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]****[!UICONTROL >]** Rachilers」。
+   1. 在 AEM Sites 部署中，按一下&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 啟動器」]**。
 
-   1. 使用工作流程搜尋啟動程 **[!UICONTROL 式：DAM更新資產]****[!UICONTROL 和DAM中繼資料回寫]**。
+   1. 搜尋將 **[!UICONTROL DAM 更新資產]**&#x200B;和 **[!UICONTROL DAM 中繼資料回寫]**&#x200B;設為工作流程的啟動器。
 
-   1. 選擇工作流啟動程式，然後按一下 **[!UICONTROL 操作欄上]** 「屬性」(Properties)。
+   1. 選取工作流程啟動器，然後按一下動作列上的&#x200B;**[!UICONTROL 「屬性」]**。
 
-   1. 在「屬性」嚮導中，將 **[!UICONTROL Path]** 欄位更改為以下映射，以更新其規則運算式以排除連接的 **[!UICONTROL 資產]**。
-   | 之前 | 之後 |
+   1. 在「屬性」設定精靈中，將&#x200B;**[!UICONTROL 「路徑」]**&#x200B;欄位變更為下列對應內容，更新其規則運算式以排除掛接點 **[!UICONTROL connectedassets]**。
+   | 變更前 | 變更後 |
    |---|---|
-   | /content/dam(/(?!/subassets)。*/)轉譯／原始 | /content/dam(/(?!/subassets)(?!connectedassets)。*/)轉譯／原始 |
-   | /content/dam(/.*/)轉譯／原始 | /content/dam(/(?!connectedassets)。*/)轉譯／原始 |
-   | /content/dam(/.*)/jcr:content/metadata | /content/dam(/(?!connectedassets)。*/)jcr:content/metadata |
+   | /content/dam(/((?!/subassets).)*/)renditions/original | /content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original |
+   | /content/dam(/.*/)renditions/original | /content/dam(/((?!connectedassets).)*/)renditions/original |
+   | /content/dam(/.*)/jcr:content/metadata | /content/dam(/((?!connectedassets).)*/)jcr:content/metadata |
 
    >[!NOTE]
    >
-   >當作者擷取資產時，會擷取遠端AEM部署上可用的所有轉譯。 如果您想要建立已擷取資產的更多轉譯，請略過此設定步驟。 「DAM更新資產」工作流程會被觸發並建立更多轉譯。 這些轉譯僅在本機網站部署中可用，在遠端DAM部署中則不可用。
+   >作者擷取資產時，會擷取遠端 AEM 部署上可用的所有轉譯項目。若要針對所擷取的資產建立更多轉譯項目，請略過此設定步驟。「DAM 更新資產」工作流程會隨即觸發，並建立更多轉譯項目。這些轉譯項目僅限在本機 Sites 部署中使用，不可在遠端 DAM 部署中使用。
 
-1. 將AEM Sites例項新增為遠端AEM Assets **[!UICONTROL CORS組態上的]** 「允許來源」。
+1. 在遠端 AEM Assets 的 CORS 設定中，將 AEM Sites 例項新增為其中一個&#x200B;**[!UICONTROL 「允許的原始項」]**。
 
-   1. 使用管理員憑據登錄。 搜尋跨原點。 存取 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**。
+   1. 使用管理員認證登入。搜尋「跨原始」。存取&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web 主控台」]**。
 
-   1. 若要建立AEM Sites例項的CORS設定，請按一下 ![Adobe Granite Cross-Origin Resource Sharing Policy](assets/aem_assets_add_icon.png) 旁的aem_assets_add_icon **[!UICONTROL 圖示]**。
+   1. 若要建立 AEM Sites 例項的 CORS 設定，請按一下&#x200B;**[!UICONTROL 「Adobe Granite 跨原始資源共用原則」]**&#x200B;旁的 ![aem_assets_add_icon](assets/aem_assets_add_icon.png) 圖示。
 
-   1. 在「允 **[!UICONTROL 許來源]**」欄位中，輸入本機網站的URL，即 `https://[local_sites]:[port]`。 保存配置。
+   1. 在&#x200B;**[!UICONTROL 「允許的原始項」]**&#x200B;欄位中，輸入本機 Sites 的 URL，也就是 `https://[local_sites]:[port]`。儲存設定。
 
 ## 使用遠端資產 {#use-remote-assets}
 
-網站作者使用Content Finder連線至DAM例項。 作者可以瀏覽、搜尋和拖曳元件中的遠端資產。 若要向遠端DAM驗證，請讓管理員提供的DAM使用者認證保持便利。
+網站作者使用「內容尋找器」連線至 DAM 例項。作者可以瀏覽、搜尋和拖曳元件中的遠端資產。若要向遠端 DAM 驗證，請備妥管理員提供的 DAM 使用者認證。
 
-作者可以在單一網頁中使用本機DAM和遠端DAM例項兩者上的可用資產。 使用內容搜尋器可在搜尋本機DAM或搜尋遠端DAM之間切換。
+作者可以在單一網頁中使用本機 DAM 和遠端 DAM 例項所提供的可用資產。使用「內容尋找器」，以便在搜尋本機 DAM 和搜尋遠端 DAM 之間切換。
 
-只有那些具有與本地Sites實例相同分類層次結構的完全對應標籤的遠程資產的標籤才會被讀取。 會捨棄任何其他標籤。 作者可以使用遠端AEM部署上所有顯示的標籤來搜尋遠端資產，因為AEM提供全文搜尋。
+系統只會鎖定那些標籤與本機 Sites 例項完全對應的遠端資產 (分類層次結構相同)，擷取其標籤。其他所有標籤會一概捨棄。由於 AEM 提供全文字搜尋功能，作者可使用遠端 AEM 部署上的所有標籤來搜尋遠端資產。
 
-### 使用的逐步介紹 {#walk-through-of-usage}
+### 逐步使用說明 {#walk-through-of-usage}
 
-使用上述設定來嘗試編寫體驗，以瞭解功能的運作方式。 在遠端DAM部署中使用您選擇的檔案或影像。
+不妨使用上述設定試著編寫體驗，以了解功能的運作方式。在遠端 DAM 部署中使用您所選擇的文件或影像。
 
-1. 從AEM工作區存取「資產 **[!UICONTROL >檔案」，導覽至遠端部]** 署的「資 **[!UICONTROL 產]** 」UI。 或者，在瀏 `https://[assets_servername_ams]:[port]/assets.html/content/dam` 覽器中存取。 上傳您選擇的資產。
-1. 在Sites實例的右上角的Profile Activator中，按一下Impersonate **[!UICONTROL as]**。 提供 `ksaner` 為用戶名，選擇提供的選項，然後按一下「 **[!UICONTROL 確定」]**。
-1. 在「網站 **[!UICONTROL >]** We.Retail **[!UICONTROL >]** us **[!UICONTROL >]** en.Sites」開啟「We.Retail」網站頁 ****&#x200B;面。 編輯頁面。 或者，在瀏 `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` 覽器中存取以編輯頁面。
+1. 從 AEM 工作區存取&#x200B;**[!UICONTROL 「Assets]** > **[!UICONTROL 檔案」]**，導覽至遠端部署的 Assets UI。或者，您也可以在瀏覽器中存取 `https://[assets_servername_ams]:[port]/assets.html/content/dam`。上傳您選擇的資產。
+1. 在 Sites 例項右上角的設定檔啟動器中，按一下&#x200B;**[!UICONTROL 「模擬為」]**。輸入 `ksaner` 作為使用者名稱，選取畫面上提供的選項，然後按一下&#x200B;**[!UICONTROL 「確定」]**。
+1. 在&#x200B;**[!UICONTROL 「Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL tw]** > **[!UICONTROL zh」]**&#x200B;開啟「We.Retail」網頁。編輯頁面。或者，您也可以在瀏覽器中存取 `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html`，進而編輯頁面。
 
-   按一 **[!UICONTROL 下頁面左上角]** 「切換側面板」。
+   按一下頁面左上角的&#x200B;**[!UICONTROL 「切換側面板」]**。
 
-1. 開啟「資產」標籤，然後按一 **[!UICONTROL 下「登入已連線的資產」]**。
-1. 提供憑證- `ksaner` 以使用者名稱 `password` 和密碼。 此使用者對這兩種AEM部署都具有編寫權限。
-1. 搜尋您新增至DAM的資產。 遠端資產會顯示在左側面板中。 篩選影像或檔案，並進一步篩選支援的檔案類型。 拖曳元件上的影 `Image` 像和元件上的文 `Download` 件。
+1. 開啟「Assets」標籤，然後按一下&#x200B;**[!UICONTROL 「登入連線資產」]**。
+1. 提供憑證 `ksaner` 作為使用者名稱，且以 `password` 作為密碼。這位使用者對這兩種 AEM 部署都具有編寫權限。
+1. 搜尋您新增至 DAM 的資產。遠端資產會顯示於左側面板。篩選影像或文件，並進一步篩選支援的文件類型。拖曳 `Image` 元件上的影像和 `Download` 元件上的文件。
 
-   擷取的資產在本機AEM Sites部署上為唯讀。 您仍可以使用AEM Sites元件提供的選項來編輯擷取的資產。 依元件編輯是無損的。
+   本機 AEM Sites 部署上，擷取的資產為唯讀狀態。您仍可使用 AEM Sites 元件提供的選項，編輯所擷取的資產。由元件進行編輯屬於非破壞性動作。
 
-   ![在遠端DAM上搜尋資產時，篩選檔案類型和影像的選項](assets/filetypes_filter_connected_assets.png)
+   ![在遠端 DAM 上搜尋資產時，篩選文件類型和影像的選項](assets/filetypes_filter_connected_assets.png)
 
-   *圖：在遠端DAM上搜尋資產時，篩選檔案類型和影像的選項*
+   *圖：在遠端 DAM 上搜尋資產時，篩選文件類型和影像的選項*
 
-1. 如果資產以非同步方式擷取且任何擷取工作失敗，網站作者會收到通知。 在編寫時，甚至在編寫之後，作者可以在非同步作業用戶介面中查看有關讀取任務和錯 [誤的詳細信](/help/assets/asynchronous-jobs.md) 息。
+1. 如果資產是以非同步方式擷取，一有擷取任務執行失敗，網站作者就會收到通知。編寫過程中或甚至在完成編寫之後，作者都能在[非同步工作](/help/assets/asynchronous-jobs.md)使用者介面中查看擷取任務和錯誤的詳細資訊。
 
-   ![關於在背景發生之資產的非同步擷取通知。](assets/assets_async_transfer_fails.png)
+   ![背景中非同步擷取資產作業的相關通知。](assets/assets_async_transfer_fails.png)
 
    *圖：關於在背景發生之資產的非同步擷取通知*
 
-1. 發佈頁面時，AEM會顯示頁面中使用的資產完整清單。 請確定發佈時已成功擷取遠端資產。 要檢查每個已獲取資產的狀態，請參閱非 [同步作業](/help/assets/asynchronous-jobs.md) 用戶介面。
+1. 發佈頁面時，AEM 會顯示頁面所使用資產的完整清單。請確認發佈時，系統已成功擷取遠端資產。若要檢查所擷取資產的個別狀態，請參閱[非同步工作](/help/assets/asynchronous-jobs.md)使用者介面。
 
    >[!NOTE]
    >
-   >即使未擷取一或多個遠端資產，也會發佈頁面。 使用遠端資產的元件會發佈為空白。 AEM通知區域會針對非同步作業頁面中顯示的錯誤顯示通知。
+   >即使有一或多個遠端資產未成功擷取，頁面還是會照常發佈。使用遠端資產的元件會以空白形式發佈。AEM 通知區域會依照非同步工作頁面所出現的錯誤來顯示通知。
 
 >[!CAUTION]
 >
->一旦在網頁中使用，擷取的遠端資產就可供任何有權存取儲存擷取資產之本機資料夾的人搜尋及使用(在上述`connectedassets` 逐步存取中)。 這些資產也可供搜尋，並可透過 [!UICONTROL Content Finder在本機儲存庫中顯示]。
+>擷取的遠端資產一旦用於網頁中，只要任何人有權存取所擷取資產儲存位置的本機資料夾，都能搜尋和使用 (即上述逐步說明中的`connectedassets`)。這些資產也可供搜尋，並可透過[!UICONTROL 「內容尋找器」]顯示於本機存放庫。
 
-擷取的資產可當成任何其他本機資產使用，但相關聯的中繼資料無法編輯除外。
+擷取的資產可設為其他任何本機資產以供使用，只是相關聯的中繼資料無法編輯。
 
 ## 限制 {#limitations}
 
-**權限與管理資產**
+**權限與資產管理**
 
-* 本機資產不會與遠端部署上的原始資產同步。 對DAM部署的任何編輯、刪除或撤銷權限都不會傳播到下游。
-* 本機資產為唯讀副本。 AEM元件會對資產進行非破壞性編輯。 不允許進行其他編輯。
-* 本機擷取的資產僅適用於製作用途。 無法套用資產更新工作流程，也無法編輯中繼資料。
-* 僅支援影像和所列的檔案格式。 不支援動態媒體資產、內容片段和體驗片段。
-* 中繼資料結構未擷取。
-* 所有「網站作者」都對擷取的副本具有讀取權限，即使他們沒有遠端DAM部署的存取權。
-* 無API支援可自訂整合。
-* 此功能支援順暢搜尋和使用遠端資產。 若要讓許多遠端資產在單次部署時可供使用，請考慮移轉資產。 請參閱 [資產移轉指南](assets-migration-guide.md)。
+* 本機資產不會與遠端部署上的原始資產同步。對 DAM 部署所做的任何編輯、刪除或撤銷權限操作都不會傳播到下游。
+* 本機資產為唯讀副本。AEM 元件會對資產執行非破壞性的編輯作業。不允許執行其他編輯作業。
+* 本機擷取的資產僅適用於編寫用途。無法套用資產更新工作流程，也無法編輯中繼資料。
+* 僅支援影像和列出的文件格式。不支援動態媒體資產、內容片段和體驗片段。
+* 不會擷取中繼資料結構。
+* 所有 Sites 作者都具備所擷取副本的讀取權限，即使他們沒有遠端 DAM 部署的存取權限，還是可以讀取。
+* 不提供 API 以支援自訂整合。
+* 此功能可支援順暢的搜尋作業及使用遠端資產。若要在本機部署中一次提供多個遠端資產，不妨考慮移轉資產。請參閱[資產移轉指南](assets-migration-guide.md)。
 * 無法將遠端資產當做頁面屬性使用者介面上的頁 [!UICONTROL 面縮圖] 。 您可以按一下「選取影像」，在「縮圖」的「頁 [!UICONTROL 面屬性] 」使用者介面中設定網頁的縮圖 。
 
 **設定和授權**
 
-* 支援在AMS上部署AEM Assets。
-* AEM Sites一次可以連線至單一AEM Assets存放庫。
-* AEM Assets的授權，可當成遠端儲存庫使用。
-* AEM Sites的一或多份授權可做為本機製作部署。
+* 支援在 AMS 上部署 AEM Assets。
+* AEM Sites 一次可連線至單一 AEM Assets 存放庫。
+* AEM Assets 授權可作為遠端存放庫使用。
+* AEM Sites 的一或多個授權可作為本機編寫部署。
 
 **使用狀況**
 
-* 只支援搜尋遠端資產並拖曳本機頁面上的遠端資產來製作內容的功能。
-* 5秒後擷取作業逾時。 作者在擷取資產時可能遇到問題，例如是否有網路問題。 作者可從 [!UICONTROL Content Finder拖曳遠端資產至頁面編輯器] ，以 [!UICONTROL 重新嘗試]。
-* 您可以對擷取的資產進行非破壞性的簡單編輯，以及透過AEM `Image` 元件支援的編輯。 資產為唯讀。
+* 目前僅支援搜尋遠端資產及拖曳本機頁面上的遠端資產，以便編寫內容。
+* 擷取作業會於 5 秒後逾時。如果有網路或其他方面的問題，作者擷取資產時就可能遇到問題。作者可從[!UICONTROL 「內容尋找器」]將遠端資產拖曳至[!UICONTROL 「頁面編輯器」]，以利重新嘗試。
+* 您可以對擷取的資產執行非破壞性的簡單編輯作業，也能執行透過 AEM `Image` 元件支援的編輯工作。資產僅供唯讀。
 
 ## 疑難排解問題 {#troubleshoot}
 
-請依照下列步驟，疑難排解常見錯誤案例：
+請依照下列步驟，疑難排解常見的錯誤情形：
 
-* 如果您無法從Content Finder搜尋遠端資產，請重新檢查並確定所需的角色和權限已就緒。
-* 從遠端Dam擷取的資產可能因下列原因無法發佈至網頁：它不存在於遠端；缺乏適當的權限來擷取；網路故障。 確保資產未從遠端DAM移除，或權限未變更；確保符合適當的先決條件；重新嘗試將資產新增至頁面並重新發佈。 檢查非 [同步作業清單](/help/assets/asynchronous-jobs.md) ，以找出資產擷取錯誤。
+* 如果您無法從「內容尋找器」搜尋遠端資產，請再次檢查，確定您具備所需的角色和權限。
+* 從遠端 DAM 擷取的資產可能會無法發佈至網頁，原因包括：該資產不存在於遠端；缺乏適當的擷取權限；網路發生問題。確認資產未從遠端 DAM 移除，或權限未受到變更；確認您符合適當的先決條件；重新嘗試將資產新增至頁面並重新發佈。檢查[非同步工作清單](/help/assets/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
