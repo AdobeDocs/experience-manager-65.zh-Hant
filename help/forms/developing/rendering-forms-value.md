@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 66bfd6870b4c09dc2ca1b66058e0b9e040a71507
 
 ---
 
@@ -86,7 +86,7 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 [使用web service API，依值演算表格](#render-a-form-by-value-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -123,7 +123,7 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
    * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此為可選參數，您可以指 `null` 定是否不想指定執行時選項。
    * 包 `URLSpec` 含Forms服務所需URI值的對象。
    * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
-   該方 `renderPDFForm` 法返回包 `FormsResult` 含可寫入客戶端Web瀏覽器的表單資料流的對象。
+   該方 `renderPDFForm` 法返回包 `FormsResult` 含表單資料流的對象，該表單資料流可以寫入客戶端Web瀏覽器。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
@@ -138,11 +138,11 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 **另請參閱**
 
-[Rendering Forms By Value](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)
+[依值轉換表單](/help/forms/developing/rendering-forms.md)
 
 [快速入門（SOAP模式）:使用Java API依值演算](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
