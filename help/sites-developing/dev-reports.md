@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: ea6da2b75cce4052211fb8f0793f1f380eb85a20
 
 ---
 
@@ -86,7 +86,7 @@ AEM提供一些標準報 [表](/help/sites-administering/reporting.md) ，其中
 
 報告框架遵循下列原則：
 
-* 它完全以CQ5 queryBuilder執行的查詢所傳回的結果集為基礎。
+* 它完全以CQ5 QueryBuilder執行的查詢所傳回的結果集為基礎。
 * 結果集定義了報告中顯示的資料。 結果集中的每一行都對應於報表的表格視圖中的一行。
 * 可在結果集上執行的操作類似於RDBMS概念；主要 *是分組**和聚合*。
 
@@ -161,7 +161,7 @@ AEM提供一些標準報 [表](/help/sites-administering/reporting.md) ，其中
    例如，路徑可以映射至標題(如各自 *jcr:title屬性中較人工可讀的內容* )。
 
 * 在不同點套用濾鏡。
-* 視需要建立複合值。
+* 如有必要，請建立複合值。
 
    例如，由顯示給使用者的文字、用於排序的值和用於（在用戶端）建立連結的額外URL組成。
 
@@ -635,7 +635,7 @@ N:definitions
 
    * `pathextension`
 
-      通過預先定義路徑並從已解析路徑上的節點屬性中獲取實際值來解析值。 例如，值可 `de` 能會以路徑為前置詞， `/libs/wcm/core/resources/languages`例如從屬性取值 `language`，將國家代碼解析為語 `de` 言說明 `German`。
+      通過預先定義路徑並從已解析路徑上的節點屬性中獲取實際值來解析值。 例如，值可 `de` 能會以路徑為前置， `/libs/wcm/core/resources/languages`例如從屬性取值 `language`，將國家代碼解析為語 `de` 言說明 `German`。
 
 * `resolverConfig`
 
@@ -1318,7 +1318,8 @@ N:apps
    >
    >這與定義相同：
    >
-   >```
+   >
+   ```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
@@ -1381,7 +1382,7 @@ N:apps
 1. 開啟「工 **具** 」主控台。
 
 1. 在左 **側窗格** 中選擇報表。
-1. **然**&#x200B;後新……從工具列中。 定義 **標題** 和名 **稱**，從範本清單中選取新的報表類型( **OSGi報表範本**)，然後按一下「 ****&#x200B;建立Orgat」。
+1. 然 **後新……** 從工具列中。 定義 **標題** 和名 **稱**，從範本清單中選取新的報表類型( **OSGi報表範本**)，然後按一下「 ****&#x200B;建立Orgat」。
 1. 您的新報表例項會出現在清單中。 按兩下此按鈕以開啟。
 1. 將元件(例如， **OSGi Report** group中的 **Bundle** )從側腳拖曳，以建立第一欄並啟 [動報表定義](/help/sites-administering/reporting.md#the-basics-of-report-customization)。
 
@@ -1389,19 +1390,19 @@ N:apps
    >
    >由於此示例沒有任何可組列，因此圖表將不可用。 要查看圖表，請將 `groupable` 設定為 `true`:
    >
-   >```
+   >
+   ```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
-   >
 
 ## 設定報表架構服務 {#configuring-the-report-framework-services}
 
 本節說明實作報告架構之OSGi服務的進階設定選項。
 
-您可使用Web主控台的「設定」功能表(例如，在 `http://localhost:4502/system/console/configMgr`)檢視。 使用AEM時，有幾種方法可管理此類服務的組態設定；如需詳 [細資訊](/help/sites-deploying/configuring-osgi.md) ，請參閱設定OSGi。
+您可使用Web主控台的「設定」功能表(例如，在 `http://localhost:4502/system/console/configMgr`)來檢視。 使用AEM時，有幾種方法可管理此類服務的組態設定；如需詳 [細資訊](/help/sites-deploying/configuring-osgi.md) ，請參閱設定OSGi。
 
 ### 基本服務（日CQ報告配置） {#basic-service-day-cq-reporting-configuration}
 
