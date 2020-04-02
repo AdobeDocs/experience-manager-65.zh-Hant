@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 4b9e2ceafc301db9337868b78bcae87c0f07e14b
+source-git-commit: 2e4b8ee13257758cba6b76012fed4958f7eabbd7
 
 ---
 
@@ -73,7 +73,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 ![cf_cf_caldata](assets/cf_cf_caldata.png)
 
-******答：名為NumericField1** B的欄位。名為NumericField2 **C.** a的欄位名為NumericField3
+**答：** 名為NumericField1 **B的欄位。** 名為NumericField2 **C.** A的欄位名為NumericField3
 
 位於此表單設計中的指令碼語法如下：
 
@@ -110,7 +110,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 **檢索包含計算指令碼的表單**
 
-您可使用Forms服務用戶端API來建立應用程式邏輯，以處理包含設定為在伺服器上執行之指令碼的表單。 此程式類似於處理提交的表單。 (請參 [閱處理提交的表單](/help/forms/developing/rendering-forms-rendering-forms handling-submitted-forms-handling-submitted.md#handling-submitted-forms)。
+您可使用Forms服務用戶端API來建立應用程式邏輯，以處理包含設定為在伺服器上執行之指令碼的表單。 此程式類似於處理提交的表單。 (請參 [閱處理提交的表單](/help/forms/developing/handling-submitted-forms.md)。)
 
 驗證與提交表單關聯的處理狀態是否為 `1``(Calculate)`，這表示Forms服務正在對表單資料執行計算操作，且結果必須寫回給用戶。 在這種情況下，將自動執行配置為在伺服器上運行的指令碼。
 
@@ -160,7 +160,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 **另請參閱**
 
 
-[包含AEM Forms java程式庫檔案設](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[包含AEM Forms Java程式庫檔案設](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用web service API計算表單資料 {#calculate-form-data-using-the-web-service-api}
 
@@ -177,7 +177,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 1. 檢索包含計算指令碼的表單
 
-   * 要檢索張貼到Java servlet的表單資料，請使用其 `BLOB` 建構子建立對象。
+   * 要檢索張貼到Java Servlet的表單資料，請使用其 `BLOB` 建構子建立對象。
    * 使用 `java.io.InputStream` 物件的方法 `javax.servlet.http.HttpServletResponse` 建立物 `getInputStream` 件。
    * 使用 `java.io.ByteArrayOutputStream` 其建構函式並傳遞物件長度，以建立物 `java.io.InputStream` 件。
    * 將對象的內 `java.io.InputStream` 容複製到對 `java.io.ByteArrayOutputStream` 像。
