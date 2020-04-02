@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e3f700b52446505224fa4b4688d439750a66f471
 
 ---
 
@@ -66,7 +66,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </Bookmarks>
 ```
 
-在此書籤XML檔案中，請注意「動作」元素，該元素定義當使用者按一下書籤時所執行的動作。 在「動作」元素下方是「啟動」元素，可啟動應用程式（例如NotePad）並開啟檔案（例如PDF檔案）。 要開啟PDF檔案，必須使用指定要開啟的檔案的「檔案」元素。 例如，在本節中指定的書籤XML檔案中，開啟的檔案名稱為LoanDetails.pdf。
+在此書籤XML檔案中，請注意「動作」元素，該元素定義當使用者按一下書籤時執行的動作。 在「動作」元素下方是「啟動」元素，可啟動應用程式（例如NotePad）並開啟檔案（例如PDF檔案）。 要開啟PDF檔案，必須使用指定要開啟的檔案的「檔案」元素。 例如，在本節中指定的書籤XML檔案中，開啟的檔案名稱為LoanDetails.pdf。
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的系列物件，或學習如何從傳回的系列物件擷取結果。 (請參 [閱「程式設計方式組裝PDF檔案」](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。
+>在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的系列物件，或學習如何從傳回的系列物件擷取結果。 (請參閱 [以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立PDF匯寫程式式用戶端**
 
@@ -163,7 +163,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -236,13 +236,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [快速入門（SOAP模式）:使用Java API將PDF檔案與書籤組合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用Web服務API，以書籤組合PDF檔案 {#assemble-pdf-documents-with-bookmarks-using-the-web-service-api}
 
-使用Assembler Service API(web service)，使用書籤組合PDF檔案：
+使用Assembler Service API(web service)，使用書籤來組合PDF檔案：
 
 1. 包含專案檔案。
 
