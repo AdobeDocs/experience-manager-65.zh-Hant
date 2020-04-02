@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: fcbe1d860410e215cb7c438f94579e0b14d262a5
 
 ---
 
@@ -66,7 +66,7 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 要渲染HTML表單，必須指定在Designer中建立並另存為XDP檔案的表單設計。 您還必須選擇HTML轉換類型。 例如，您可以指定轉換Internet Explorer 5.0或更新版本動態HTML的HTML轉換類型。
 
-轉換HTML表單也需要值，例如轉換其他表單類型所需的URI值。
+轉換HTML表格也需要值，例如轉換其他表格類型所需的URI值。
 
 **將表單資料串流寫入用戶端網頁瀏覽器**
 
@@ -76,7 +76,7 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 [使用Java API演算使用CSS檔案的HTML表格](#render-an-html-form-that-uses-a-css-file-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -135,7 +135,7 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 [快速入門（SOAP模式）:使用Java API轉換使用CSS檔案的HTML表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -163,7 +163,7 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
    * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * 指定 `TransformTo` HTML首選項類型的枚舉值。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定 `TransformTo.MSDHTML`。
-   * 包 `BLOB` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞 `null`。 (請參 [閱「使用可排程版面預填表單」](/help/forms/developing/rendering-forms-rendering-forms preming-forms-flowable-layouts-premilting.md#preming-forms-with-flowable-layouts)。
+   * 包 `BLOB` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞 `null`。 (請參 [閱使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)
    * 儲存 `HTMLRenderSpec` HTML執行時期選項的物件。
    * 指定標題值的字 `HTTP_USER_AGENT` 串值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。 如果您不想設定此值，可以傳遞空字串。
    * 存 `URLSpec` 儲呈現HTML表單所需URI值的對象。
