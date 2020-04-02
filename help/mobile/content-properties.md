@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 ---
 
@@ -31,12 +31,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 | **屬性名稱** | **類型** | **預設值或預期值** | **說明** |
 |---|---|---|---|
-| dps-id | 字串 |  | 指派給AEM mobile且AEM儲存的AEM在上傳至AEM mobile或從AEM mobile匯入後 |
+| dps-id | 字串 |  | 指派給AEM Mobile且AEM儲存的AEM在上傳至AEM Mobile或從AEM Mobile匯入後 |
 | dps-resourceType | 字串 | dps:Article | dps:Banner | dps:Collection | 實體類型屬性 |
-| dps-version | 字串 |  | AEM mobile實體的版本（也包含在完整的aemm-id中） |
-| dps-lastSynced | 日期 |  | 上次同步／從AEM mobile匯入至AEM的日期 |
-| dps-lastUploaded | 日期 |  | 上次從AEM上傳至AEM mobile的日期 |
-| dps-lastUploadedBy | 字串：userid |  | ID使用者，此使用者已執行從AEM到AEM mobile的上傳請求 |
+| dps-version | 字串 |  | AEM Mobile實體的版本（也包含在完整的aemm-id中） |
+| dps-lastSynced | 日期 |  | 上次同步／從AEM Mobile匯入至AEM的日期 |
+| dps-lastUploaded | 日期 |  | 上次從AEM上傳至AEM Mobile的日期 |
+| dps-lastUploadedBy | 字串：userid |  | ID使用者，此使用者已執行從AEM到AEM Mobile的上傳請求 |
 
 ## 核心中繼資料屬性 {#core-metadata-properties}
 
@@ -88,7 +88,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 ### 公共節點 {#common-nodes}
 
 | 節點名稱 | 類型 | 預設值或預期值 | 說明 |
---- |--- |--- |--- |
+|--- |--- |--- |--- |
 | 影像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### 實體 {#entities}
