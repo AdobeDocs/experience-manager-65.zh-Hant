@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
+source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 
 ---
 
@@ -167,7 +167,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
    * 定位 `Apache Sling Distribution Transport Credentials - User Credentials based DistributionTransportSecretProvider`
    * 選取要開啟以進行編輯的現有設定（鉛筆圖示）確認 `property name`: **`socialpubsync-publishUser`**
 
-   * 在步驟2中，將使用者名稱 [和密碼設為](#createauthorizeduser) 「發佈時建立的授權使用者」
+   * 在步驟2中，將使用者名稱 [和密碼設為](#createauthuser) 「發佈時建立的授權使用者」
 
       * for example, `usersync-admin`
 
@@ -450,7 +450,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 當從作者環境運行診斷程式時，通過／失敗結果將包含 [INFO] （資訊）部分，其中顯示已配置的發佈實例清單供確認。
 
-清單中包含每個發佈例項的URL，該例項將執行該例項的診斷。 url參數 `syncUser` 會附加至診斷URL，其值會設定至步驟2中 *建立的授權同步使* 用者 [](/help/sites-administering/sync.md#2createauthorizeduser)。
+清單中包含每個發佈例項的URL，該例項將執行該例項的診斷。 url參數 `syncUser` 會附加至診斷URL，其值會設定至步驟2中 *建立的授權同步使* 用者 [](#createauthuser)。
 
 **注意**:啟動URL之前，授 *權的同步使用者* ，必須已登入該發佈例項。
 
@@ -490,7 +490,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-然後確認第 [2節。 建立授權使用者](/content/docs/en/aem/6-1/administer/security/security/sync.md#2。 已正確遵循)。
+然後確認第 [2節。 已正確遵循「建立授權使用者](#createauthuser) 」。
 
 本節說明如何建立已授權的使用者（存在於所有發佈例項上），並在作者的「機密提供者」OSGi設定中識別這些使用者。 依預設，使用者為 `admin`。
 
