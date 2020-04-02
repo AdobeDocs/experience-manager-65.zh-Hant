@@ -1,9 +1,9 @@
 ---
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: e3f12a9bbcb111e9a174e6bc3a0ec634df73c60f
 translation-type: tm+mt
 
 ---
-# AEM 6.5檔案
+# Adobe Experience Manager 6.5檔案
 
 這是Adobe Experience Manager 6.5檔案的儲存庫。 本檔案涵蓋安裝、管理、編寫使用以及如何自訂AEM。
 
