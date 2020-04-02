@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: ba4e4908c0564af6e7f0759c5119a5c02f274dbd
 
 ---
 
@@ -414,6 +414,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1. 儲存並關閉檔案。
 
 ### 設定字型管理器服務 {#configuring-the-font-manager-service}
@@ -569,7 +570,7 @@ Assembler服務依賴於Reader Extensions服務、Signature服務、Forms服務�
   </tr> 
   <tr> 
    <td>Reader Extensions服務</td> 
-   <td>com.adobe.aemfd.adobe-aemfd.readerextensions<br /> </td> 
+   <td>com.adobe.aemfd.adobe-aemfd-readerextensions<br /> </td> 
   </tr> 
   <tr> 
    <td>表單服務</td> 
