@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
+source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
 
 ---
 
@@ -79,7 +79,7 @@ source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
 1. 建立「 [Watched」資料夾](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) ，並設定它以使用「批次API」:
    1. 登入AEM Forms作者例項。
    1. 導覽至「 **[!UICONTROL 工具]** >表單 **[!UICONTROL >設]** 定監看資料夾 ****」。 點選 **[!UICONTROL 新]**。
-   1. 指定 **[!UICONTROL 資料夾]** 的名 **[!UICONTROL 稱和]** 物理路徑。 例如， `c:\batchprocessing`。
+   1. 指定 **[!UICONTROL 資料夾]** 的名 **[!UICONTROL 稱和物]** 理路徑。 For example, `c:\batchprocessing`.
    1. 在「使用 **[!UICONTROL 流程檔案]** 」欄位中 **[!UICONTROL 選擇「服務]** 」選項。
    1. 在「服 **[!UICONTROL 務名稱」欄位中選取com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]****[!UICONTROL 服務]** 。
    1. 指定「輸 **[!UICONTROL 出檔案模式」]**。 例如，%F/模 [式指定](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 「監視資料夾」可在「監視資料夾」\input資料夾的子資料夾中查找輸入檔案。
@@ -141,7 +141,7 @@ source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
 1. 建立「 [Watched」資料夾](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) ，並設定它以使用「Batch API」服務：
    1. 登入AEM Forms作者例項。
    1. 導覽至「 **[!UICONTROL 工具]** >表單 **[!UICONTROL >設]** 定監看資料夾 ****」。 點選 **[!UICONTROL 新]**。
-   1. 指定 **[!UICONTROL 資料夾]** 的名 **[!UICONTROL 稱和]** 物理路徑。 例如， `c:\batchprocessing`。
+   1. 指定 **[!UICONTROL 資料夾]** 的名 **[!UICONTROL 稱和物]** 理路徑。 For example, `c:\batchprocessing`.
    1. 在「使用 **[!UICONTROL 流程檔案]** 」欄位中 **[!UICONTROL 選擇「服務]** 」選項。
    1. 在「服 **[!UICONTROL 務名稱」欄位中選取com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]****[!UICONTROL 服務]** 。
    1. 指定「輸 **[!UICONTROL 出檔案模式」]**。 例如，%F/模 [式指定](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 「監視資料夾」可在「監視資料夾」\input資料夾的子資料夾中查找輸入檔案。
