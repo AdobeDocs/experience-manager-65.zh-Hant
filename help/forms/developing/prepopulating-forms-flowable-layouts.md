@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: ebb60e79aa7fb45e059e2d2451f6d549cd24b8b0
 
 ---
 
@@ -34,9 +34,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 您要預先填入的每個表單欄位都必須有XML元素。 XML元素名稱必須與欄位名稱相符。 如果XML元素與表單欄位不對應，或XML元素名稱與欄位名稱不符，則會忽略它。 只要指定了所有XML元素，就不需要與XML元素的顯示順序匹配。
 
-當您預先填入已包含資料的表單時，必須指定XML資料來源中已顯示的資料。 假設一個包含10個欄位的表單有4個欄位中的資料。 接下來，假設您要預先填入其餘6個欄位。 在這種情況下，您必須在用於預先填入表單的XML資料來源中指定10個XML元素。 如果您只指定6個元素，原始的4個欄位會是空的。
+當您預先填入已包含資料的表單時，必須指定XML資料來源中已顯示的資料。 假設一個包含10個欄位的表單有4個欄位中的資料。 接下來，假設您要預先填入其餘6個欄位。 在這種情況下，您必須在XML資料來源中指定10個XML元素，以便預先填入表單。 如果您只指定6個元素，原始的4個欄位會是空的。
 
-例如，您可以預先填入表單，例如範例確認表單。 (請參閱轉譯互動式PDF表單 [](/help/forms/developing/rendering-interactive-pdf-forms.md#rendering-interactive-pdf-forms)中的「確認表單」。)
+例如，您可以預先填入表單，例如範例確認表單。 (請參閱轉譯互動式PDF表 [單中的「確認表](/help/forms/developing/rendering-interactive-pdf-forms.md)」)。
 
 若要預先填入範例確認表單，您必須建立一個XML資料來源，其中包含三個XML元素，這些元素會符合表單中的三個欄位。 此表單包含下列三個欄位： `FirstName`、 `LastName`和 `Amount`。 第一步是建立XML資料來源，其中包含與表單設計欄位相符的XML元素。 下一步是為XML元素指派資料值，如下列XML程式碼所示。
 
@@ -209,7 +209,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 **建立記憶體中的XML資料來源**
 
-您可以使用 `org.w3c.dom` 類別來建立記憶體內的XML資料來源，以預先填入具有可排列版面的表單。 您必須將資料放入符合表單的XML資料來源。 如需有可排列版面的表單與XML資料來源之間關係的詳細資訊，請參閱 [Understanding data sibroums](/help/forms/developing/rendering-forms-rendering-forms preming-forms-flowable-layouts-preming preming-forms-flowable-layouts-premipluepleuting.md#underpling.md#understanding-data-subroums.d.d.d-subroums)。
+您可以使用 `org.w3c.dom` 類別來建立記憶體內的XML資料來源，以預先填入具有可排列版面的表單。 您必須將資料放入符合表單的XML資料來源。 有關具有可流式版面的表單與XML資料來源之間關係的資訊，請參閱「瞭解資 [料子群組」](#understanding-data-subgroups)。
 
 **轉換XML資料來源**
 
@@ -225,7 +225,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -241,7 +241,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 1. 包含專案檔案
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 建立記憶體中的XML資料來源
 
@@ -307,7 +307,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 [快速入門（SOAP模式）:使用Java API將可排程的版面預先填入表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -366,7 +366,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
    叫用物 `FormsService` 件的方 `renderPDFForm` 法並傳遞下列值：
 
    * 指定表單設計名稱的字串值，包括檔案副檔名。
-   * 包 `BLOB` 含要與表單合併的資料的對象。 請確定您使用 `BLOB` 在步驟1和步驟2中建立的物件。
+   * 包 `BLOB` 含要與表單合併的資料的對象。 請確定您使用 `BLOB` 步驟1和2中建立的物件。
    * 存 `PDFFormRenderSpecc` 儲運行時選項的對象。 如需詳細資訊，請參 [閱「AEM Forms API參考」](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
    * 包 `URLSpec` 含Forms服務所需URI值的對象。
    * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
