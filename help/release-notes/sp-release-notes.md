@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34f5cfc692241da4b9f5330e5abc324998fadb23
+source-git-commit: a83def358e026b516add577f968dcc709357e458
 
 ---
 
@@ -131,8 +131,6 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 * 觸控式UI搜尋（透過Omnisearch完成）結果頁面會自動捲動並遺失使用者的捲動位置(NPR-31307)。
 
 * PDF資產的資產詳細資料頁面不會顯示動作按鈕，但Experience Manager中在Dynamic Media Scene7執行模式中執行的「至系列」和「新增轉譯」按鈕除外(CQ-4286705)。
-
-* 超過2GB的資產現在可在Dynamic Media-Scene7中上傳(CQ-4286561)。
 
 * 資產在完成Scene7的批次上傳程式時需要太長時間處理(CQ-4286445)。
 
