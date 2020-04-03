@@ -12,7 +12,7 @@ discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: a491d4e9bd9ffc68c4ba7cac3149f48cf7576ee8
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 
 伺服器端查詢產生器( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html))將接受查詢說明、建立並執行XPath查詢、選擇性篩選結果集，並視需要擷取Facet。
 
-查詢說明只是一組謂語([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html))。 範例包括與XPath中的函式對應的全文謂語，以及在DAM資產子樹中尋找寬度和高度屬性的影像大小謂語。 `jcr:contains()`
+查詢說明只是一組謂語([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html))。 範例包括與XPath中的函式相對應的 `jcr:contains()` 全文謂語。
 
 對於每個謂詞類型，都有一個evaluator元件([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html))，它知道如何處理XPath、filtering和facet抽取的特定謂詞。 建立自訂評估程式非常簡單，這些評估程式會透過OSGi元件執行時期插入。
 
@@ -35,7 +35,7 @@ REST API可透過HTTP存取與JSON中傳送的回應完全相同的功能。
 
 ## Gem會話 {#gem-session}
 
-[AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) 是Adobe專家針對Adobe Experience manager提供的一系列技術深入探討。 此專用於查詢產生器的作業對於概述和使用工具非常有用。
+[AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) 是Adobe專家針對Adobe Experience Manager提供的一系列技術深入探討。 此專用於查詢產生器的作業對於概述和使用工具非常有用。
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ REST API可透過HTTP存取與JSON中傳送的回應完全相同的功能。
 
 ### 傳回所有結果 {#returning-all-results}
 
-**下列查詢**&#x200B;會傳回十個結果&#x200B;**（或精確到十個），但會通知您**&#x200B;點擊數：（實際可用）:
+下列查詢 **會傳回十個結果** （或精確到十個），但會通知您 **點擊數：** （實際可用）:
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&orderby=path`
 
@@ -423,7 +423,7 @@ p.nodedepth=5
 
 >[!NOTE]
 >
->如要瞭解如何建立使用QueryBuilder API的OSGi搭售，並在Adobe Experience manager應用程式內使用該OSGi搭售，請參閱「建立使用Query Builder [](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)API的Adobe CQ OSGi搭售」。
+>如要瞭解如何建立使用QueryBuilder API的OSGi搭售，並在Adobe Experience Manager應用程式內使用該OSGi搭售，請參閱「建立使用Query Builder [](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)API的Adobe CQ OSGi搭售」。
 
 使用查詢產生器(JSON)Servlet在HTTP上執行的相同查詢：
 
