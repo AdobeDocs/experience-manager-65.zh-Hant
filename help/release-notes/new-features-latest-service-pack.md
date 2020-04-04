@@ -4,16 +4,18 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5fc75e3dcb0ca107605c456d0f41be861dabc0eb
+source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager(AEM)6.5透過每季Service Pack提供功能和持續的改善。 隨著創新越來越易於採用，此方法將為您帶來益處。
+Adobe Experience Manager(6.5)可讓您透過每季的Service Pack版本，存取新功能並不斷改進。 使用這種方法，您就可以輕鬆地採用創新。
 
-AEM Service Pack 4(6.5.4.0)將於2020年3月5 **日發行**。 本文著重說明6.5 Service Pack提供的主要功能，讓您的AEM旅程更加豐富。
+Experience Manager Service Pack 4(6.5.4.0)將於2020年3月5日發行。 這是一項重要的更新，其中包括自2019年4月6.5版全面推出以來，所發佈的新功能、客戶要求的重要增強功能，以及效能、穩定性、安全性改進。 Experience Manager 6.5.4.0可安裝在Adobe Experience Manager 6.5之上。
+
+本文重點介紹最新6.5 Service Pack的功能、 [舊版6.5 Service Pack的主要功能](#key-features-previous-service-packs)，以及Experience Manager 6.5.3.0以來的部 [分主要版本](#key-features-sice-sp3)。
 
 ## AEM Sites {#aem-sites}
 
@@ -94,7 +96,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * 最適化表單的每一頁現在都包含一個標題和一個主要地標標籤。
 
-## 舊版AEM 6.5 Service Pack的主要功能
+## 舊版AEM 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
 
 ### 適用於動態媒體的智慧型影像(6.5.3.0) {#smart-imaging}
 
@@ -117,7 +119,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 您可以使用Batch API，從範本產生多種互動式通訊。 範本是互動式通訊，不含任何資料。 批次API將資料與範本結合，以產生互動式通訊。 API在大量製作互動式通訊時很實用。 例如，電話帳單、多名客戶的信用卡帳單。 請參 [閱使用批次API產生多種互動式通訊](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-## 自AEM 6.5 SP3以來的主要版本
+## 自AEM 6.5 SP3以來的主要版本 {#key-features-sice-sp3}
 
 從2019年12月12日到2020年3月5日，Adobe發佈了下列核心AEM可交付項目以外的功能：
 
