@@ -2,7 +2,7 @@
 title: Adobe Experience Manager Assets發行說明
 description: Adobe Experience Manager 6.5 Assets的新功能和增強功能。
 translation-type: tm+mt
-source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
 
 [!DNL Adobe Asset Link] 加強創意人員與行銷人員在內容建立流程中的協作。 創意人員可以存取儲存在 [!DNL Experience Manager Assets]中的內容，而不需離開他們最熟悉的應用程式。 創作人員可使用應用程式、應用程式和應用程式中的應用程式內面板，順暢地瀏覽、搜尋、 [!DNL Adobe Photoshop]結帳 [!DNL Adobe Illustrator]和結 [!DNL Adobe InDesign] 帳資產。
 
-[!DNL Adobe Asset Link] 是適用於企 [業的Creative Cloud產品的一部分](https://www.adobe.com/creativecloud/business/enterprise.html) 。 如需詳細資訊，包括部署的必要設定，請 [!DNL Experience Manager] 參閱 [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)。
+[!DNL Adobe Asset Link] 是適用於企 [業的Creative Cloud產品的一部分](https://www.adobe.com/creativecloud/business/enterprise.html) 。 如需詳細資訊，包括部署的必要設定，請 [!DNL Experience Manager] 參閱 [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)。
 
 ![在Adobe Photoshop中搜尋資產](assets/asset_search_photoshop.png)
 
@@ -65,7 +65,7 @@ source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
 
 [!DNL Dynamic Media] 提供增強的豐富式媒體製作與發佈功能， [!DNL Experience Manager Assets] 以提供如臨現場且個人化的尖端體驗。 透過上傳單一高品質的主資產，並使用我們的進階雲端演算和檢視器，您可以即時提供任何轉譯組合，以支援組織的媒體策略。
 
-如需新功能的詳細資 [!DNL Dynamic Media] 訊，請 [參閱動態媒體發行說明](https://marketing.adobe.com/resources/help/en_US/s7/release_notes/)。
+如需新功能的詳細資 [!DNL Dynamic Media] 訊，請 [參閱動態媒體發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
 
 ### 360視訊支援 {#video-support}
 
@@ -77,7 +77,7 @@ source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
 
 ### 協助工具增強功能 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] 檢視器現在支援增強的協助工具功能，例如Aria支援、螢幕閱讀程式和Alt-text。 如需詳細資訊，請參 [閱動態媒體檢視器發行說明](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/index.html)。
+[!DNL Dynamic Media] 檢視器現在支援增強的協助工具功能，例如Aria支援、螢幕閱讀程式和Alt-text。 如需詳細資訊，請參 [閱動態媒體檢視器發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
 
 ## 搜尋體驗增強功能 {#search-experience-enhancement}
 
