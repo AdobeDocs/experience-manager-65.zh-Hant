@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -92,13 +92,13 @@ source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 
 * 大量移動資產失敗並顯示警告訊息(NPR-30610)。
 
-* 在 [!DNL Experience Manager][!DNL Dynamic Media] Scene 7執行模式中，當資產從一個檔案夾移至另一個檔案夾時，資產名稱會變更為小寫(NPR-31630)。
+* 在 [!DNL Experience Manager][!DNL Dynamic Media]-Scene7模式中，將資產從一個檔案夾移至另一個檔案夾時，資產名稱會變更為小寫(NPR-31630)。
 
 * 編輯遠端影像集時，會針對與Scene 7公司名稱相同的資料夾中的影像，發現錯誤(NPR-31340)。
 
 * [!DNL Dynamic Media] 包含參考的資產不會發佈(NPR-31180)。
 
-* 從上 [!DNL Experience Manager Dynamic Media] 傳- Scene 7執行模式到Scene 7的執行時間太長，無法完成(NPR-31048)。
+* 從 [!DNL Dynamic Media]7-Scene7模式上傳到的 [!DNL Dynamic Media Classic] 時間太長，無法完成(NPR-31048)。
 
 * 新增至影像資產的熱點無法透過資產詳細資料頁面的互動式影像檢視器顯示(NPR-30979)。
 
@@ -106,11 +106,11 @@ source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 
 * 建立資產的語言副本時發生衝突，資產不會上傳至場景7(NPR-30932)。
 
-* 從「混合模式 [!DNL Experience Manager][!DNL Dynamic Media] 」中執行下載的動態轉譯會中斷（它們屬於「找不到影像」而非影像內容類型的文字類型）(NPR-30876)。
+* 從以 [!DNL Experience Manager][!DNL Dynamic Media]-Hybrid模式執行下載的動態轉譯會中斷（這些轉譯是文字類型，內容為「找不到影像」，而非影像內容類型）(NPR-30876)。
 
-* [!DNL Dynamic Media] 「編碼視訊」工作流程無法產生從Scene 7移轉至 [!DNL Dynamic Media] - Scene 7執行模式(CQ-4282011)的視訊縮圖。
+* [!DNL Dynamic Media] 「編碼視訊」工作流程無法針對從Adobe Experience Manager的 [!DNL Dynamic Media Classic][!DNL Dynamic Media]-Scene7模式移轉至視訊的縮圖產生(CQ-4282011)。
 
-* 使用不同的Scene 7公司ID(CQ-4280548)，將資產從一個例項移轉至另一個例項時觀察到IpsApiException。
+* 使用不同的Scene7公司ID(CQ-4280548)，將資產從一個例項移轉至另一個例項時觀察到IpsApiException。
 
 * 當支援的3D模型已收錄至(CQ-4283701)時，「3D資產」縮圖 [!DNL Experience Manager] 不會提供資訊。
 
@@ -120,7 +120,7 @@ source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 
 * 無法在Internet Explorer 11和Safari上使用SmartCropVideoViewer播放視訊(CQ-4281422)。
 
-* 使用移動按鈕將多個資產從一個資料夾移至另一個資料夾時， [!DNL Experience Manager] 在 [!DNL Dynamic Media] - scene7執行模式(CQ-4280384)上執行失敗。
+* 在 [!DNL Experience Manager][!DNL Dynamic Media]-Scene7執行模式上執行時，使用移動按鈕將多個資產從一個檔案夾移至另一個檔案夾時失敗(CQ-4280384)。
 
 * 當MIME類型不是MP4時，資產詳細資料上會顯示扭曲的視訊(CQ-4279704)。
 
@@ -288,7 +288,7 @@ source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 
 ## Adobe Experience Manager 6.5.2.0
 
-[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來所發佈的重要客戶修 **正和增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來的重要客戶修 **正與增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
 
 此Service Pack版本的一些主要亮點是：
 
@@ -336,7 +336,7 @@ source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 * 資料夾中繼資料結構表單不會自動偵測資料類型，因此不會在表單提交中建立相關的TypeHint。 NPR-30599:CQ-4275227的修補程式
 * 裁切和旋轉資產編輯選項會從DMS7編寫UI中停用。 NPR-30118:CQ-4273221的修補程式
 * 使用DMS7配置的實例 [!DNL Experience Manager] 無法使用共用連結功能。 NPR-30080、NPR-30492:CQ-4273651的修補程式
-* 將 [!DNL Dynamic Media] Scene7元件新增至頁面，然後發佈頁面並不會每次都觸發dmscene7設定。 NPR-30641:CQ-4275962的修補程式
+* 將 [!DNL Dynamic Media]-Scene7元件新增至頁面，然後發佈頁面並不會每次都觸發dmscene7設定。 NPR-30641:CQ-4275962的修補程式
 * 在中添加了IPSJobJournal, [!DNL Experience Manager] 以為每個處理配置檔案僅建立一個入侵防護系統(IPS)作業。 NPR-30490:CQ-4273614的修補程式
 * [!DNL Dynamic Media]:新增預設篩選條件，排除資產不會複製至發 [!DNL Experience Manager] 布節點。 NPR-30538:CQ-4274678的修補程式
 * 引入外部「重新處理」工作流程，以支援多資源，以允許資料夾做為裝載。 工作流程有兩個步驟——透過中繼資料對應至下一個步驟，重新處理沒有控制代碼的資產，並在單一IPS工作中將所有沒有資產控制代碼的資產重新上傳至S7。 如需詳細資訊，請參閱「設定 [!DNL Dynamic Media] 雲端服務」。 NPR-30489:CQ-4272903的修補程式
@@ -351,7 +351,7 @@ source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 * 依相關性排序搜尋查詢會傳 [!DNL InDesign] 回檔案和范 [!DNL InDesign] 本。 CQ-4273864的修補程式
 * 如果使用者有大寫電子郵件ID，使用者將無法登入先前已登出的資產。 CQ-4276575的修補程式
 * 「刪除」操作僅適用於所選的預設集，如果螢幕在操作後自動刷新清單，則會顯示已刷新的其他預設集。 CQ-4261461的修補程式
-* 在DMHybrid模 [!DNL Dynamic Media] 式中設定雲端服務會導致在中建立多個空白報表套裝 [!DNL Analytics]，且報表套裝ID未儲存在 [!DNL Experience Manager]其中，導致報表套裝重複。 CQ-4249780的修補程式
+* 以混 [!DNL Dynamic Media] 合模式設定雲端服務會導致在中建立多個空白的報表套裝 [!DNL Dynamic Media]，且報表套裝ID未儲存在其中， [!DNL Analytics][!DNL Experience Manager]導致報表套裝重複。 CQ-4249780的修補程式
 * 將資產中的 [!DNL Experience Manager] 作業重新命名為重複名稱無法同步至Scene7。 CQ-4276763的修補程式
 * 使用者產生的內容會在搜尋篩選面板中錯誤顯示。 CQ-4273875的修補程式
 * TIFF影像無法使用「尋找類似項目」選項。 CQ-4278238的修補程式
@@ -494,7 +494,7 @@ source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
 此Service Pack版本的一些主要亮點是：
 
 * 啟用動態UI狀態在追蹤事件時的自訂屬性。
-* 包含在 [!DNL Dynamic Media] Scene 7中提供360度視訊資產的支援。
+* 包含支援以 [!DNL Dynamic Media]-Scene7模式傳送360度視訊資產。
 * 透過 *Rich Text Editor的樣式外掛程式* ，啟用日文繞字功能。 如需詳細資訊，請參 [閱設定日文換行](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)
 
 ### 資產
