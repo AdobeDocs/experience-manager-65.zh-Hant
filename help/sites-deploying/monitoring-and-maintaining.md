@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -162,7 +162,7 @@ CRX文 [檔的「備份和還原](/help/sites-administering/backup-and-restore.m
 
 ### 使用日誌 {#working-with-logs}
 
-AEM WCM會記錄詳細記錄檔。 開啟包裝並啟動Quickstart後，您可以找到以下日誌：
+AEM WCM會記錄詳細的記錄檔。 開啟包裝並啟動Quickstart後，您可以找到以下日誌：
 
 * `<cq-installation-dir>/crx-quickstart/logs/`
 
@@ -194,12 +194,12 @@ AEM WCM和儲存庫的所有存取要求都會在此處註冊。
    * `error.log`
 此處會註冊錯誤消息（嚴重性級別不同）。
 
-   * [ 只 `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)有在啟用動態媒體時才使用此記錄檔。 它提供用於分析內部ImageServer進程行為的統計和分析資訊。
+   * [ 只 `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)有在啟用時才 [!DNL Dynamic Media] 使用此日誌。 它提供用於分析內部ImageServer進程行為的統計和分析資訊。
 
    * `request.log`
 每個存取請求都會在此與回應一起註冊。
 
-   * [ 只 `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)有在啟用動態媒體時才使用此記錄檔。 s7access記錄透過和記錄對動態媒體提出的每個 `/is/image` 要求 `/is/content`。
+   * [ 只 `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)有在啟用時才 [!DNL Dynamic Media] 使用此日誌。 s7access記錄會記錄透過和提出的 [!DNL Dynamic Media] 每個 `/is/image` 請求 `/is/content`。
 
    * `stderr.log`
 保存在啟動期間生成的、嚴重性級別不同的錯誤消息。 根據預設，記錄層級設 `Warning` 為( `WARN`)
@@ -216,7 +216,7 @@ AEM WCM和儲存庫的所有存取要求都會在此處註冊。
 修訂日誌資訊。
 
 >[!NOTE]
-ImageServer和s7access記錄檔不包含在**下載完整**套件中，此套件是從**system/console/status-Bundlelist **頁面產生。 為了支援，如果您有動態媒體問題，請在聯絡客戶支援時附加ImageServer和s7access記錄檔。
+ImageServer和s7access記錄檔不包含在**下載完整**套件中，此套件是從**system/console/status-Bundlelist **頁面產生。 出於支援目的，如果您有 [!DNL Dynamic Media] 問題，請在聯絡客戶支援時附加ImageServer和s7access記錄檔。
 
 ### 啟用DEBUG日誌級別 {#activating-the-debug-log-level}
 
@@ -244,7 +244,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 ### 建立自訂記錄檔 {#create-a-custom-log-file}
 
 >[!NOTE]
-使用Adobe Experience manager時，有幾種方法可管理此類服務的組態設定；如需詳 [細資訊](/help/sites-deploying/configuring-osgi.md) ，請參閱設定OSGi。
+使用Adobe Experience Manager時，有幾種方法可管理此類服務的組態設定；如需詳 [細資訊](/help/sites-deploying/configuring-osgi.md) ，請參閱設定OSGi。
 
 在某些情況下，您可能希望建立具有不同日誌級別的自定義日誌檔案。 您可以通過以下方式在儲存庫中執行此操作：
 
@@ -358,33 +358,27 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
          值：指定依大小／日期控制檔案旋轉；例如， `'.'yyyy-MM-dd`
    >[!NOTE]
-   >
-   >`org.apache.sling.commons.log.file.size` 通過設定以下任一設定控制日誌檔案的旋轉：
-   >
-   >* 最大檔案大小
-   >* 時間／日期計畫
-   >
-   >以指示何時將建立新檔案（並根據名稱模式更名現有檔案）。
-   >
-   >* 可以用數字指定大小限制。 如果沒有提供大小指示器，則此指示器被視為位元組數，或者您可以添加一個大小指示器- `KB`、 `MB`或 `GB` （忽略大小寫）。
-   >* 時間／日期排程可指定為模 `java.util.SimpleDateFormat` 式。 這定義了檔案旋轉的時段；也附加到旋轉檔案的字尾（用於識別）。
-   >
-   >預設值為&#39;.&#39;。yyyy-MM-dd（用於每日日誌旋轉）。
-   >
-   >例如，在2010年1月20日的午夜（或當發生此事後的第一個記錄訊息時，請務必精確）,../logs/error.log將重新命名為../logs/error.log.2010-01-20。 1月21日的記錄將輸出為（新的和空的）../logs/error.log，直到在下一天的變更時滾動。
-   >
-   >      | `&#39;.&#39;yyyy-MM`|每月初的輪值|
-   >      |---|---|
-   >      | &#39;&#39;。&#39;yyyy-ww`|每週第一天的旋轉（視地區而定）。 |
-   >      | `&#39;.&#39;yyyy-MM-dd`每天午夜時輪流。 |
-   >      | `&#39;.&#39;yyyy-MM-dd-a`在每天的午夜和中午旋轉。 |
-   >      | `&#39;.&#39;yyyy-MM-dd-HH`每小時最上方的旋轉。 |
-   >      | `&#39;.&#39;yyyy-MM-dd-HH-mm`每分鐘開始時輪流。 |
-   >
-   >      Note:指定時間／日期時：
-   >      1. 您應「逸出」一對單引號(&#39; &#39;)中的常值文字；這
-   >      是為了避免某些字元被解譯為圖樣字母。
-   >      1. 在選項中的任何位置，僅允許使用有效檔案名的字元。
+   `org.apache.sling.commons.log.file.size` 通過設定以下任一設定控制日誌檔案的旋轉：
+   * 最大檔案大小
+   * 時間／日期計畫
+   以指示何時將建立新檔案（並根據名稱模式更名現有檔案）。
+   * 可以用數字指定大小限制。 如果沒有提供大小指示器，則此指示器被視為位元組數，或者您可以添加一個大小指示器- `KB`、 `MB`或 `GB` （忽略大小寫）。
+   * 時間／日期排程可指定為模 `java.util.SimpleDateFormat` 式。 這定義了檔案旋轉的時段；也附加到旋轉檔案的字尾（用於識別）。
+   預設值為&#39;.&#39;。yyyy-MM-dd（用於每日日誌旋轉）。
+   例如，在2010年1月20日的午夜（或當發生此事後的第一個記錄訊息時，請務必精確）,../logs/error.log將重新命名為../logs/error.log.2010-01-20。 1月21日的記錄將輸出為（新的和空的）../logs/error.log，直到在下一天的變更時滾動。
+       | `&#39;.&#39;yyyy-MM`|每月初的輪值|
+    |—|—|
+    | &#39;&#39;。&#39;yyyy-ww`|每週第一天的旋轉（視地區而定）。 |
+       | `&#39;.&#39;yyyy-MM-dd`每天午夜時輪流。 |
+       | `&#39;.&#39;yyyy-MM-dd-a`在每天的午夜和中午旋轉。 |
+       | `&#39;.&#39;yyyy-MM-dd-HH`每小時最上方的旋轉。 |
+       | `&#39;.&#39;yyyy-MM-dd-HH-mm`每分鐘開始時輪流。 |
+     
+    Note:指定時間／日期時：
+      1. 您應「逸出」一對單引號(&#39; &#39;)中的常值文字；
+  這     是為了避免某些字元被解譯為圖樣字母。
+       1. 在選項中的任何位置，僅允許使用有效檔案名的字元。
+   
 
 1. 使用您選擇的工具讀取您的新記錄檔。
 
@@ -477,7 +471,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「 **Configurat
 |  | 有些客戶速度快，有些客戶速度慢。 |  |  |
 | 伺服器 |  |  |  |
 | 網路 | 伺服器和客戶端的CPU使用率都較低。 | 消除網路瓶頸。 | 改進／優化客戶機快取的配置。 |
-|  | （相對而言）在伺服器上本機瀏覽的速度較快。 | 增加網路頻寬。 | 降低網頁的「重量」（例如，影像較少、最佳化HTML）。 |
+|  | （相對而言）在伺服器上本機瀏覽的速度較快。 | 增加網路頻寬。 | 降低網頁的「重量」（例如，減少影像、最佳化HTML）。 |
 | Web伺服器 | 網頁伺服器上的CPU使用量很高。 | 叢集您的Web伺服器。 | 減少每頁點擊（瀏覽）。 |
 |  |  | 使用硬體負載平衡器。 |  |
 | 應用程式 | 伺服器CPU使用量很高。 | 叢集您的AEM例項。 | 搜尋並消除CPU和記憶體記憶體記憶體記憶體記憶體記憶體記憶體（使用程式碼檢閱、計時輸出等）。 |
@@ -534,17 +528,17 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「 **Configurat
   <tr>
    <td>線程轉儲</td>
    <td>觀察JVM線程。 識別競爭、鎖定和長跑者。</td>
-   <td><p><br /> 取決於作業系統：- Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）:Ctrl-Break<br /> </p> <p>也提供分析工具，例如 <a href="https://java.net/projects/tda/">TDA</a>。<br /> </p> </td>
+   <td><p>取決於作業系統：<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）:Ctrl-Break<br /> </p> <p>也提供分析工具，例如 <a href="https://java.net/projects/tda/">TDA</a>。<br /> </p> </td>
   </tr>
   <tr>
    <td>堆轉儲</td>
    <td>記憶體不足導致效能降低。</td>
-   <td><p><br /> 新增： <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 的Java呼叫。</p> <p>請參 <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">閱Java SE 6 with HotSpot VM的故障排除指南</a>。</p> </td>
+   <td><p>新增：<br /><code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 的Java呼叫。</p> <p>請參 <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">閱Java SE 6 with HotSpot VM的故障排除指南</a>。</p> </td>
   </tr>
   <tr>
    <td>系統呼叫</td>
    <td>識別時間問題。</td>
-   <td><p>呼叫或 <code>System.currentTimeMillis()</code> . <code>com.day.util</code>Timing會用來從程式碼或透過 <a href="#html-comments">HTML-comments產生時間戳記</a>。</p> <p><strong></strong> 注意：這些應該實施，以便根據需要激活／停用；當系統運行順利時，不需要收集統計資訊的開銷。</p> </td>
+   <td><p>呼叫或 <code>System.currentTimeMillis()</code> . <code>com.day.util</code>Timing會用來從程式碼或透過 <a href="#html-comments">HTML-comments產生時間戳記</a>。</p> <p><strong>注意：</strong> 這些應該實施，以便根據需要激活／停用；當系統運行順利時，不需要收集統計資訊的開銷。</p> </td>
   </tr>
   <tr>
    <td>Apache Bench</td>
@@ -569,12 +563,12 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「 **Configurat
   <tr>
    <td>JConsole</td>
    <td>觀察JVM度量和線程。</td>
-   <td><p>用法：jconsole</p> <p>請參 <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">閱使用JConsole</a><a href="#monitoring-performance-using-jconsole">的jconsole和監視效能</a>。</p> <p><strong></strong> 注意：在JDK 1.6中，JConsole可以通過插件進行擴展；例如，Top或TDA（線程轉儲分析器）。</p> </td>
+   <td><p>用法：jconsole</p> <p>請參 <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">閱使用JConsole</a><a href="#monitoring-performance-using-jconsole">的jconsole和監視效能</a>。</p> <p><strong>注意：</strong> 在JDK 1.6中，JConsole可以通過插件進行擴展；例如，Top或TDA（線程轉儲分析器）。</p> </td>
   </tr>
   <tr>
-   <td>Java visualVM</td>
+   <td>Java VisualVM</td>
    <td>觀察JVM度量、線程、記憶體和分析。</td>
-   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>請參 <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">閱使用(J)VisualVM</a>、 <a href="https://visualvm.dev.java.net/">visualvm</a><a href="#monitoring-performance-using-j-visualvm">和監控效能</a>。</p> <p><strong></strong> 注意：使用JDK 1.6,VisualVM可以通過插件進行擴展。</p> </td>
+   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>請參 <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">閱使用(J)VisualVM</a>、 <a href="https://visualvm.dev.java.net/">visualvm</a><a href="#monitoring-performance-using-j-visualvm">和監控效能</a>。</p> <p><strong>注意：</strong> 使用JDK 1.6,VisualVM可以通過插件進行擴展。</p> </td>
   </tr>
   <tr>
    <td>桁架／網架，lsof</td>
@@ -605,7 +599,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「 **Configurat
 
 本 `request.log` 軟體提供內建方式，讓您瞭解要求需要多長時間。 為了開發目的，它對於 `tail -f` 和觀 `request.log` 察響應速度很有用。 若要分析更 `request.log` 大的項目， [我們建 `rlog.jar` 議您使用它來排序和篩選回應時間](#using-rlog-jar-to-find-requests-with-long-duration-times)。
 
-我們建議將「慢速」頁面與頁面隔離 `request.log`，然後個別調整頁面以獲得更佳的效能。 這通常是透過為每個元件加入效能量度或使用效能分析工具（例如）來完成 ` [yourkit](https://www.yourkit.com/)`。
+我們建議將「慢速」頁面與頁面隔離， `request.log`然後個別調整這些頁面以獲得更佳的效能。 這通常是透過為每個元件加入效能量度或使用效能分析工具（例如）來完成 ` [yourkit](https://www.yourkit.com/)`。
 
 #### 監控您網站上的流量 {#monitoring-traffic-on-your-website}
 
@@ -798,7 +792,7 @@ Percentage of the requests served within a certain time (ms)
 100% 8106 (longest request)
 ```
 
-上述數字取自可存取geometrixx公司頁面的標準MAcBook pro筆記型電腦（2010年中），如預設AEM安裝所示。 頁面非常簡單，但未針對效能最佳化。
+上述數字取自可存取geometrixx公司頁面的標準MAcBook Pro筆記型電腦（2010年中），如預設AEM安裝所示。 頁面非常簡單，但未針對效能最佳化。
 
 `apachebench` 也會以平均方式顯示每個請求的時間，以涵蓋所有併發請求；請參 `Time per request: 54.595 [ms]` 閱（平均值，涵蓋所有並行請求）。 您可以變更並行參數的值( `-c` 一次要執行多個請求數)，以查看任何效果。
 
