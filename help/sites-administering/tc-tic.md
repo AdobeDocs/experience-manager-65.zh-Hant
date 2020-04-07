@@ -10,14 +10,14 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: 98dd2d3e7445ceda6d96f0dd11b39d8361f1f402
+source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
 
 ---
 
 
 # 配置翻譯整合框架{#configuring-the-translation-integration-framework}
 
-翻譯整合框架與第三方翻譯服務整合，協調AEM內容的翻譯。
+翻譯整合框架與第三方翻譯服務整合，以協調AEM內容的翻譯。
 
 * 連接到您的翻譯服務提供商。
 * 建立翻譯整合框架配置。
@@ -77,7 +77,7 @@ source-git-commit: 98dd2d3e7445ceda6d96f0dd11b39d8361f1f402
 **注意：** 如需AEM中內容轉譯功能的概觀，請參閱「多語 [言網站的轉譯內容」](/help/sites-administering/translation.md)。
 
 此架構的單一設定可控制如何翻譯頁面內容、社群內容和資產。
-![chlimage_1-386](assets/chlimage_1-386.png)
+![chlimage_1-386](assets/translation-config-65.jpg)
 
 ### 站點配置屬性 {#sites-configuration-properties}
 
