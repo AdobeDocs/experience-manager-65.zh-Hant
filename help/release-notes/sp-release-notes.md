@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: fbe85c70ef993e4728bd76a327e1a27365cf1021
+source-git-commit: 4bda1be676ab357c68b541dbd41f108f274dd2d7
 
 ---
 
@@ -336,7 +336,7 @@ B.使用 [Package Manager的HTTP API](https://docs.adobe.com/content/docs/en/crx
 
 Adobe Public Maven儲存庫中提供UberJar for AEM 6.5.4.0 [](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4/)。
 
-Adobe Public Maven存放庫提供包含 **com.fasterxml.jackson.core.async** .套件的UberJar 6.5.4.0更新版 [](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4-1.0/)。
+Adobe Public Maven存放庫提供6.5.4.0版的更新版UberJar，其中包含 **com.fasterxml.jackson.core.async** 套件 [](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4-1.0/)。
 
 要在Maven項目中使用UberJar，請參閱 [How to use UberJar](/help/sites-developing/ht-projects-maven.md) and include the following dependency in your project POM:
 
