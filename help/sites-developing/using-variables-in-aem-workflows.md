@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bc042696506bf1691c2eeffc6ab941be85fa274c
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -47,7 +47,7 @@ source-git-commit: bc042696506bf1691c2eeffc6ab941be85fa274c
 執行下列步驟以建立變數：
 
 1. 在AEM例項上，導覽至「工具>工作流程>模型」。
-1. 點選「 **[!UICONTROL 建立]** 」，並指定工作流程模型的標題和選用名稱。 選取模型並點選「編 **[!UICONTROL 輯」]**。
+1. 點選 **[!UICONTROL 「建立]** 」，並指定工作流程模型的標題和選用名稱。 選取模型並點選「編 **[!UICONTROL 輯」]**。
 1. 點選工作流程模型側點中可用的變數圖示，並點選「新增變 **[!UICONTROL 數」]**。
 
    ![新增變數](assets/variables_add_variable_new.png)
@@ -76,12 +76,12 @@ source-git-commit: bc042696506bf1691c2eeffc6ab941be85fa274c
 
 視變數的資料類型而定，您可以使用下列選項來設定變數的值：
 
-* **** 常值：當您知道要指定的確切值時，請使用此選項。
-* **** 運算式：根據運算式計算要使用的值時，請使用此選項。 表達式在提供的表達式編輯器中建立。
-* **** JSON點符號：使用選項從JSON或FDM類型變數擷取值。
-* **** XPATH:使用選項從XML類型變數中檢索值。
-* **** 相對於負載：當要儲存至變數的值位於相對負載的路徑時，請使用此選項。
-* **** 絕對路徑：當要儲存至變數的值位於絕對路徑時，請使用此選項。
+* **常值：** 當您知道要指定的確切值時，請使用此選項。
+* **運算式：** 根據運算式計算要使用的值時，請使用此選項。 表達式在提供的表達式編輯器中建立。
+* **JSON點符號：** 使用選項從JSON或FDM類型變數擷取值。
+* **XPATH:** 使用選項從XML類型變數中檢索值。
+* **相對於負載：** 當要儲存至變數的值位於相對負載的路徑時，請使用此選項。
+* **絕對路徑：** 當要儲存至變數的值位於絕對路徑時，請使用此選項。
 
 您也可以使用JSON DOT符號或XPATH符號來更新JSON或XML類型變數的特定元素。
 
@@ -148,7 +148,7 @@ source-git-commit: bc042696506bf1691c2eeffc6ab941be85fa274c
 
 #### OR分割步驟 {#or-split-step}
 
-「或分割」(OR Split)在工作流中建立一個分割，之後只有一個分支處於活動狀態。 此步驟可讓您將條件式處理路徑引入工作流程。 您可以視需要將工作流程步驟新增至每個分支。
+「或分割」(OR Split)在工作流中建立一個分割，之後只有一個分支處於活動狀態。 此步驟可讓您將條件式處理路徑引入工作流程中。 您可以視需要將工作流程步驟新增至每個分支。
 
 您可以使用規則定義、ECMA指令碼或外部指令碼為分支定義路由表達式。
 
@@ -226,7 +226,7 @@ workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 
 [workflowSession.startWorkflow](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) 使用model、wfData和metaData作為參數。 使用MetaDataMap來設定變數的值。
 
-在此API中， **variableName** 變數會使用metaData.put(variableName, value)設定為**value **;
+在此API中， **variableName** 變數會使 **用metaData.put(variableName, value)設定** 為值；
 
 ```java
 import com.adobe.granite.workflow.model.WorkflowModel;
