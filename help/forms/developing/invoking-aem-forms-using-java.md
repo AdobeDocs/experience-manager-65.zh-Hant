@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -64,7 +64,9 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 * 要叫用的AEM Forms服務。 客戶端應用程式可以調用一個或多個服務。
 * 您要叫用AEM Forms服務的模式。 您可以使用EJB或SOAP模式。 (請參 [閱設定連接屬性](invoking-aem-forms-using-java.md#setting-connection-properties)。)
 
->[!NOTE] （僅限統包功能）使用命令啟動AEM Forms伺服器， `standalone.bat -b <Server IP> -c lc_turnkey.xml` 以指定EJB的伺服器IP
+>[!NOTE]
+>
+>（僅限統包功能）使用命令啟動AEM Forms伺服器， `standalone.bat -b <Server IP> -c lc_turnkey.xml` 以指定EJB的伺服器IP
 
 * 部署AEM Forms的J2EE應用程式伺服器。
 
@@ -182,7 +184,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
    <td><p>&lt;<i>install directory</i>&gt;/sdk/client-libs/common</p></td>
   </tr>
   <tr>
-   <td><p>adobe-repository-client-jar</p><p>commons-codec-1.3.jar</p></td>
+   <td><p>adobe-repository-client.jar</p><p>commons-codec-1.3.jar</p></td>
    <td><p>調用儲存庫服務所需。</p></td>
    <td><p>&lt;<i>install directory</i>&gt;/sdk/client-libs/common</p><p>&lt;<i>install directory</i>&gt;/sdk/client-libs\thirdparty</p></td>
   </tr>
@@ -195,7 +197,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
      <li><p>jaxb-impl.jar</p></li>
      <li><p>jaxb-libs.jar</p></li>
      <li><p>jaxb-xjc.jar</p></li>
-     <li><p>relanchingDatatype.jar</p></li>
+     <li><p>relaxngDatatype.jar</p></li>
      <li><p>xsdlib.jar</p></li>
     </ul></td>
    <td><p>需要叫用Rights Management服務。</p><p>如果AEM Forms已部署在JBoss上，請包含所有這些檔案。 </p></td>
@@ -791,7 +793,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 #### 基於檔案建立文檔 {#creating-a-document-based-on-a-file}
 
-下列程式碼範例會建 `com.adobe.idp.Document` 立以PDF檔名為 *map.pdf的物件*。 此檔案位於C硬碟的根目錄中。 此建構子嘗試使用檔案副檔名設定對 `com.adobe.idp.Document` 像的MIME內容類型。
+下列程式碼範例會 `com.adobe.idp.Document` 建立以PDF檔名為 *map.pdf的物件*。 此檔案位於C硬碟的根目錄中。 此建構子嘗試使用檔案副檔名設定對 `com.adobe.idp.Document` 像的MIME內容類型。
 
 接受 `com.adobe.idp.Document` 物件的建構函 `java.io.File` 式也接受布林參數。 通過將此參數設 `true`置為， `com.adobe.idp.Document` 對象將刪除檔案。 此動作表示您不必在將檔案傳遞至建構函式後移除 `com.adobe.idp.Document` 檔案。
 
@@ -964,7 +966,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 雖然獲取 `ServiceClientFactory` 的速度通常很快，但在首次使用工廠時，會涉及一些開銷。 此物件已最佳化以供重複使用，因此在建立多個Java用戶端物 `ServiceClientFactory` 件時，請盡可能使用相同的物件。 也就是說，請勿為您建立的每 `ServiceClientFactory` 個用戶端程式庫物件建立個別物件。
 
-「使用者管理員」設定可控制SAML斷言在物件內的存留期，此斷言 `com.adobe.idp.Context` 會影響物件 `ServiceClientFactory` 。 此設定會控制整個AEM Forms中的所有驗證內容期限，包括使用Java API執行的所有呼叫。 依預設，可使用物件的時 `ServiceCleintFactory` 段為2小時。
+「使用者管理員」設定可控制SAML斷言在物件內的存留期，該斷言 `com.adobe.idp.Context` 會影響物件 `ServiceClientFactory` 。 此設定會控制整個AEM Forms中的所有驗證內容期限，包括使用Java API執行的所有呼叫。 依預設，可使用物件的時 `ServiceCleintFactory` 段為2小時。
 
 >[!NOTE]
 >
@@ -989,7 +991,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 1. 調用物件的方 `com.adobe.idp.Document` 法，將物 `ResourceContent` 件的內容新 `ResourceContent` 增至物 `setDataDocument` 件。 傳遞物 `com.adobe.idp.Document` 件。
 1. 調用物件的方法並傳遞，以設定要新增至儲存庫的XDP `ResourceContent` 檔案的MIME `setMimeType` 類型 `application/vnd.adobe.xdp+xml`。
 1. 調用對象的方 `ResourceContent` 法並傳遞對 `Resource` 像，將對象的內容 `Resource` 添加到對象 `setContent``ResourceContent` 中。
-1. 通過調用對象的方法並傳遞 `Resource` 表示資源 `setDescription` 說明的字串值，添加資源說明。
+1. 通過調用對象的方法並傳遞 `Resource` 表示資源 `setDescription` 說明的字串值來添加資源說明。
 1. 調用物件的方法並傳遞下列值，將表 `ResourceRepositoryClient` 單設計新 `writeResource` 增至儲存庫：
 
    * 一個字串值，它指定包含新資源的資源集合的路徑
