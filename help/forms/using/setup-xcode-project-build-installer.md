@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -72,7 +72,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 1. 解壓目錄中的存 `[User_Home]/Projects/[your-project]`檔。
 1. 導覽至您 ` [User_Home]/Projects/ `[的專案目錄]`/adobe-lc-mobileworkspace-src-[version]/ios` 。
 1. 在Xcode中 `AEM Forms.xcodeproj` 開啟專案。
-1. 按一 **下「AEM Forms**」，在「 **TARGETS**」下方選 **取「AEM Forms**」。 選取「**建立設定**」標籤，找出「 **Code Signing Entitlement** 」區段，並在「Debug and Release」欄位中執行下列其中一項作業：
+1. 按一 **下「AEM Forms**」，在「 **TARGETS**」下方選 **取「AEM Forms**」。 選取「 **建立設定** 」標籤，找出「 **** 程式碼簽署權益」區段，並在「除錯與發行」欄位中執行下列任一項作業：
 
    * 將欄位保留為未指定，以建立標準的行動工作區應用程式
    * 指定欄位，如「建立iOS的 [](/help/forms/using/building-secure-mobile-workspace-app.md) Secure AEM Forms應用程式以建立安全的AEM Forms應用程式」中所述。
@@ -144,7 +144,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
    已選取已布建的iPad Air 2裝置。
 
 1. 選擇「 **產品** 」>「清 **除」**。
-1. 選擇 **產品** > **構建**。
+1. 選擇「 **產品** 」>「 **構建」**。
 1. 選擇「 **產品** >存 **檔」**。
 1. 在「組織工具——封存」中，選取專案的最新封存，然後按一下「分 **發」**。
 1. 選 **擇「儲存為企業用」或「臨機部署** 」做為散發方法，然後按一下「下 **一步」**。
