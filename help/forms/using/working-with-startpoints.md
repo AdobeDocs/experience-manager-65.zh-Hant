@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -23,24 +23,24 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 >
 >提及此概念時，詞語的起點、開始程式和表單會互動使用。
 
-若要從AEM Forms應用程式啟動程式，您必須在程式中有類型**Workspace **的起點。 此外，您還需要為起點選 **[!UICONTROL 取「行動工作區中的]** Visible」（在行動工作區中瀏覽）選項。
+若要從AEM Forms應用程式啟動程式，您必須在程式中擁有 **Workspace** 類型的起點。 此外，您還需要為起點選 **[!UICONTROL 取「行動工作區中的]** Visible」（在行動工作區中瀏覽）選項。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **要啟動在Workbench中定義的流程，請執行以下操作：**
 
 1. 若要檢視AEM Forms應用程式中的「起點」，請前往「首 [頁」畫面](../../forms/using/home-screen.md)。
-1. 依預設，在**[!UICONTROL Home]**畫面上會顯示**[!UICONTROL All Forms]**清單。
+1. 在「主 **[!UICONTROL 頁]** 」畫面上 **[!UICONTROL ，預設會顯示「]** 所有表單」清單。
 
    起始點與表單相關聯。 點選清單中的起點關聯表單以開啟它。
 
    與起點關聯的表單隨即開啟。
 
-1. 在**[!UICONTROL Startpoint]**表單中輸入詳細資訊。
+1. 在「起點」( **[!UICONTROL Startpoint]** )表單中輸入詳細資訊。
 
    您可以使用附件按鈕將注釋添加 [到此](../../forms/using/add-attachments.md) 任務。
 
-1. 填寫表單後，點選「送 **出** 」按鈕。
+1. 填寫表單後，點選「送 **[!UICONTROL 出]** 」按鈕。
 
 如果應用程式已離線，表單及其資料會儲存在「輸出方塊」檔案夾中。
 
