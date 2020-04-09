@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -66,7 +66,7 @@ AEM Uber Jar會將所有AEM API作為單一相依關係納入您的Maven專案 `
 
 ### 淘汰管理資源解析器 {#phase-out-use-of-administrative-resource-resolver}
 
-在AEM 6.0之前的程式碼 `SlingRepository.loginAdministrative()` 庫中， `ResourceResolverFactory.getAdministrativeResourceResolver()` 管理工作階段的使用十分普遍。由於這些方法的存取範圍太廣，因此已因安全原因而遭到淘汰。 [在Sling的未來版本中，這些方法將會移除](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。 強烈建議您重新調整任何程式碼，以改用「服務使用者」。 有關服務使用者及如 [何逐步退出管理工作階段的詳細資訊]，請參閱這裡(/help/sites-administering/security-service-users.md#how to phase out admin sessions)。
+在AEM 6.0之前的程式碼 `SlingRepository.loginAdministrative()` 庫中， `ResourceResolverFactory.getAdministrativeResourceResolver()` 管理工作階段的使用十分普遍。由於這些方法的存取範圍太廣，因此已因安全原因而遭到淘汰。 [在Sling的未來版本中，這些方法將會移除](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。 強烈建議您重新調整任何程式碼，以改用「服務使用者」。 有關服務用戶以及如何 [逐步退出管理會話的詳細資訊，請參閱此處](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)。
 
 ### 查詢和Oak索引 {#queries-and-oak-indexes}
 
@@ -146,7 +146,7 @@ Adobe建議將自訂指令碼放在 `/apps/settings/dam/indesign/scripts` 位置
 
 ### 恢復ContextHub配置 {#recovering-contexthub-configurations}
 
-ContextHub組態是由升級所決定。 有關如何恢復現有ContextHub配置的說明，請 [在這裡](/help/sites-administering/contexthub-config.md#recovering contexthub configurations after upgrading)。
+ContextHub組態受升級影響。 有關如何恢復現有ContextHub配置的說明，請參 [閱](/help/sites-administering/contexthub-config.md#recovering-contexthub-configurations-after-upgrading)。
 
 ### 工作流程自訂 {#workflow-customizations}
 
