@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -58,9 +58,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    1. 建立流程 **建立PTO匯總** ，並在協調中的「分配任務 **** 」操作之前將其用作子流程。
    1. 在新流 **程中定義employeeName**、employeeID **、** ptoReason **、** Days Name和NodeNameTotalName為輸入變數的employeeName ******** 、employeeID、ptoReason。 這些變數會以提交的表單資料傳遞。
 
-      此外，還定義輸出變數**ptoNodePath **，它將用於設定摘要Url。
+      此外，還定義輸出變 **量ptoNodePath** ，在設定摘要Url時將使用它。
 
-   1. 在創 **建PTO匯總流程中** ，使用 **set value** component來設定**nodeProperty **(**nodeProps**)映射中的輸入詳細資訊。
+   1. 在建立 **PTO匯總流程中** ，使用 **set value** component來設定nodeProperty **(****** nodePropsMap)映射中的輸入詳細資訊。
 
       此地圖中的索引鍵應與前一步驟中HTML轉譯器中定義的索引鍵相同。
 
