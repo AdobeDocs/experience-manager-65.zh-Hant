@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -148,19 +148,19 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 >
 >您會注意到，「處理提交的表單」區段有三個對應的快速開始。 使用Java API快速入門處理以PDF格式提交的PDF表單，示範如何處理已提交的PDF資料。 此快速入門中指定的內容類型為 `application/pdf`。 使用Java API快速入門處理以XML格式提交的PDF表單，說明如何處理從PDF表單提交的已提交XML資料。 此快速入門中指定的內容類型為 `text/xml`。 同樣地，使用Java API快速入門處理以XML形式提交的HTML表單，將示範如何處理從HTML表單提交的已提交XML資料。 此快速入門中指定的內容類型為application/x-www-form-urlencoded。
 
-您可擷取張貼至Forms服務的表單資料，並判斷其處理狀態。 也就是說，當資料提交至Forms服務時，並不一定表示Forms服務已完成處理資料，而且資料已準備好處理。 例如，資料可以提交至Forms服務，以便執行計算。 計算完成時，表單會呈現給用戶，並顯示計算結果。 在處理已提交的資料之前，建議您判斷Forms服務是否已完成處理資料。
+您可擷取張貼至Forms服務的表單資料，並判斷其處理狀態。 也就是說，當資料提交至Forms服務時，並不一定表示Forms服務已完成處理資料，而且資料已準備好處理。 例如，資料可以提交至Forms服務，以便執行計算。 計算完成時，表單會轉譯回用戶並顯示計算結果。 在處理已提交的資料之前，建議您判斷Forms服務是否已完成處理資料。
 
 Forms服務返回以下值，以指示它是否已完成資料處理：
 
-* **** 0（提交）:已提交的資料已準備好可供處理。
-* **** 1（計算）:Forms服務對資料執行了計算操作，結果必須向用戶呈現。
-* **** 2（驗證）:Forms服務驗證的表單資料，且結果必須轉譯回使用者。
-* **** 3（下一個）:目前頁面已變更，結果必須寫入用戶端應用程式。
+* **0（提交）:** 已提交的資料已準備好可供處理。
+* **1（計算）:** Forms服務對資料執行了計算操作，結果必須向用戶呈現。
+* **2（驗證）:** Forms服務驗證的表單資料，且結果必須轉譯回使用者。
+* **3（下一個）:** 目前頁面已變更，結果必須寫入用戶端應用程式。
 * **4(舊版**):目前頁面已變更，結果必須寫入用戶端應用程式。
 
 >[!NOTE]
 >
->必須將計算和驗證轉譯回用戶。 (請參 [閱計算表單資料](/help/forms/developing/rendering-forms-rendering-forms calculating-form-data-calculating-form calculating-form-data-calculating-form.md#calculating-form-data)*)。*
+>必須將計算和驗證轉譯回用戶。 (請參閱 [計算表單資料](/help/forms/developing/calculating-form-data.md#calculating-form-data)。
 
 **確定表單提交是否包含檔案附件**
 
@@ -178,7 +178,7 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -242,7 +242,7 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
    * 如果資料內容類型為， `application/pdf`請建立應用程式邏輯，將提交的PDF資料儲存為PDF檔案。
 
       * 調用 `com.adobe.idp.Document` 物件的方 `FormsResult` 法以建立物 `getOutputContent` 件。
-      * 使用其 `java.io.File` 公共建構子建立對象。 請務必指定PDF為副檔名。
+      * 使用其 `java.io.File` 公用建構函式建立物件。 請務必指定PDF為副檔名。
       * 調用物件的方法並傳 `com.adobe.idp.Document` 遞物件， `copyToFile` 以填入PDF `java.io.File` 檔案。
 
 
@@ -254,7 +254,7 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
 
 [快速入門（SOAP模式）:使用Java API處理以PDF格式提交的PDF表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -273,7 +273,7 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
 
 1. 擷取表單資料
 
-   * 要檢索張貼到Java servlet的表單資料，請使用其 `BLOB` 建構子建立對象。
+   * 要檢索張貼到Java Servlet的表單資料，請使用其 `BLOB` 建構子建立對象。
    * 調用 `java.io.InputStream` 物件的方 `javax.servlet.http.HttpServletResponse` 法以建立物 `getInputStream` 件。
    * 使用 `java.io.ByteArrayOutputStream` 其建構函式並傳遞物件長度，以建立物 `java.io.InputStream` 件。
    * 將對象的內 `java.io.InputStream` 容複製到對 `java.io.ByteArrayOutputStream` 像。
@@ -317,7 +317,7 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
 
       * 調用 `BLOB` 物件的方 `FormsResult` 法以建立物 `getOutputContent` 件。
       * 叫用物件的方法，以 `BLOB` 建立位元組 `getBinaryData` 陣列。
-      * 使用其 `java.io.File` 公共建構子建立對象。 請務必指定PDF為副檔名。
+      * 使用其 `java.io.File` 公用建構函式建立物件。 請務必指定PDF為副檔名。
       * 使用其 `java.io.FileOutputStream` 建構函式並傳遞物件，以建立物 `java.io.File` 件。
       * 調用物件的方法並傳 `java.io.FileOutputStream` 遞位元組陣列， `write` 以填入PDF檔案。
 
