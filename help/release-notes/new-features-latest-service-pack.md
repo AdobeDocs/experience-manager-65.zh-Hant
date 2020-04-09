@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -98,9 +98,13 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 ## 舊版AEM 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
 
-### 適用於動態媒體的智慧型影像(6.5.3.0) {#smart-imaging}
+### 適用於動態媒體的智慧型影像 {#smart-imaging}
 
 智慧型影像處理運用每位使用者獨特的檢視特性，自動提供最符合其體驗的影像，進而提高效能和參與度。 智慧型影像功能可與您現有的影像預設集搭配使用，並在傳送時的最後一毫秒使用智慧功能，根據瀏覽器或網路連線速度進一步降低影像檔案大小。 請參閱 [智慧型影像](../assets/imaging-faq.md)。
+
+### 動態媒體(6.5.3.0)的視訊設定檔智慧裁切 {#smart-crop-video}
+
+智慧型裁切視訊（視訊描述檔中的選用功能）是一種工具，可運用Adobe Sensei中的人工智慧功能，自動偵測並裁切您上傳的任何最適化視訊或漸進式視訊中的焦點，不論其大小。 請參 [閱關於在視訊描述檔中使用智慧裁切](../assets/video-profiles.md)。
 
 ### AEM Assets的視覺搜尋(6.5.2.0) {#visual-search}
 
@@ -151,7 +155,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * AEM Assets:案頭應用程式2.0.1.1
 
-   請參 [閱「取得資產的案頭存取權」](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
+   請參 [閱「取得資產的案頭存取權」](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/release-notes.html)。
 
 * AEM Screens:功能套件202001
 
