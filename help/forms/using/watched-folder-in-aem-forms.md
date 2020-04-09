@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -23,8 +23,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 您可以使用下列其中一種方法，在檔案系統上建立「Watched資料夾」:
 
-* 在配置Watched資料夾配置節點的屬性時，在folderPath屬性中鍵入父目錄的完整路徑，並附加要建立的Watched資料夾的名稱，如下例所示： `C:/MyPDFs/MyWatchedFolder`\
-   資 `MyWatchedFolder`料夾不存在，AEM Forms會嘗試在指定的路徑上建立資料夾。
+* 在配置Watched資料夾配置節點的屬性時，在folderPath屬性中鍵入父目錄的完整路徑，並附加要建立的Watched資料夾的名稱，如下例所示：資 `C:/MyPDFs/MyWatchedFolder`料 `MyWatchedFolder`夾不存在，AEM Forms會嘗試在指定的路徑上建立資料夾。
 
 * 在配置「監視資料夾」端點之前，在檔案系統上建立資料夾，然後在folderPath屬性中提供完整路徑。 如需folderPath屬性的詳細資訊，請參閱「 [Watched資料夾屬性」](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)。
 
@@ -90,8 +89,8 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 * **deleteExpiredStageFileOnlyWhenTachled（布林值，預設為true）:** 過期機制是否應僅在監控資料夾已調節時啟動。 該機制與調節的監控資料夾更相關，因為在未處理狀態中遊蕩的少量檔案（由於間歇性作業／工作流失火）在啟用調節時有可能阻塞整個批的處理。 如果此屬性保留為true（預設值），則未調節的監看資料夾的過期機制將不會啟動。 如果屬性保持為false，則只要stageFileExpirationDuration屬性為正數，機制就一律會啟動。
 
 * **pollInterval（長）**:掃描「監視資料夾」進行輸入的間隔（秒）。 除非啟用「限制」設定，否則輪詢間隔應比處理平均作業的時間長；否則，系統可能會超載。 預設值為5。 如需詳細資訊，請參閱批次大小的說明。 輪詢間隔的值必須大於或等於1。
-* **excludeFilePattern（字串）**:分號(;)分隔的模式清單，「Watched Folder」會使用它來判斷要掃描和擷取的檔案和檔案夾。 不會掃描任何具有此模式的檔案或資料夾以進行處理。 當輸入是包含多個檔案的檔案夾時，此設定很實用。 資料夾的內容可以複製到名稱由「監視資料夾」挑選的資料夾中。 這可防止「監視資料夾」在資料夾完全複製至輸入資料夾之前，先擷取資料夾以進行處理。 預設值為null。\
-   您可以使用 [檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) 來排除：
+* **excludeFilePattern（字串）**:分號(;)分隔的模式清單，「Watched Folder」會使用它來判斷要掃描和擷取的檔案和檔案夾。 不會掃描任何具有此模式的檔案或資料夾以進行處理。 當輸入是包含多個檔案的檔案夾時，此設定很實用。 資料夾的內容可以複製到名稱由「監視資料夾」挑選的資料夾中。 這可防止「監視資料夾」在資料夾完全複製至輸入資料夾之前，先擷取資料夾以進行處理。 預設值為null。
+您可以使用 [檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) 來排除：
 
    * 具有特定檔案副檔名的檔案；例如*.dat、*.xml、.pdf、*。*
    * 具有特定名稱的檔案；例如，data*會排除名為data1、data2等的檔案和資料夾。
@@ -169,7 +168,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    * **預設映射器：** 使用預設裝載映射器，將受監視資料夾的輸入和輸出內容保留在裝載中單獨的輸入和輸出資料夾中。 此外，在工作流的裝載路徑中，使 [用裝載]/輸入／和 [裝載]/輸出路徑來擷取和儲存內容。
 
-   * **簡單的基於檔案的負載映射器：** 使用簡單檔案式裝載映射程式，將輸入和輸出內容直接保留在裝載資料夾中。 它不建立任何額外的層次，如預設映射器。
+   * **簡單的基於檔案的負載映射器：** 使用簡單檔案型裝載映射程式，將輸入和輸出內容直接保留在裝載資料夾中。 它不建立任何額外的層次，如預設映射器。
 
 ### 自訂設定參數 {#custom-configuration-parameters}
 
@@ -216,16 +215,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 #### 自訂實作ContentProcessor介面 {#custom-implementation-of-the-contentprocessor-interface}
 
-自訂實作接受處理內容（com.adobe.aemfd.watchfolder.service.api.ProcessorContext類型的物件）、從內容讀取輸入檔案和組態參數、處理輸入，並將輸出新增至\
-內容。 ProcessorContext具有下列API:
+自訂實作接受處理內容（com.adobe.aemfd.watchfolder.service.api.ProcessorContext類型的物件）、從內容讀取輸入檔案和組態參數、處理輸入，並將輸出新增至內容。 ProcessorContext具有下列API:
 
 * **getWatchFolderId**:傳回「監視資料夾」的ID。
 * **getInputMap**:傳回映射類型的映射。 映射的鍵是輸入檔案的檔案名和包含檔案內容的文檔對象。 使用getinputMap API讀取輸入檔案。
-* **getConfigParameters**:傳回類型Map的不可變映射。 地圖包含\
-   監視資料夾的配置參數。
+* **getConfigParameters**:傳回類型Map的不可變映射。 該映射包含「監視資料夾」的配置參數。
 
-* **setResult**:ContentProcessor實作\
-   使用API將輸出文檔寫入結果資料夾。 您可以為setResult API的輸出檔案提供名稱。 API可能會根據指定的輸出資料夾／檔案模式選擇使用或忽略所提供的檔案。 如果指定了資料夾模式，則輸出檔案的名稱將如工作流中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。
+* **setResult**:ContentProcessor實作使用API將輸出文檔寫入結果資料夾。 您可以為setResult API的輸出檔案提供名稱。 API可能會根據指定的輸出資料夾／檔案模式選擇使用或忽略所提供的檔案。 如果指定了資料夾模式，則輸出檔案的名稱將如工作流中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。
 
 例如，以下代碼是ContentProcessor介面的自訂實作，具有custom foo=bar屬性。
 
@@ -276,7 +272,7 @@ var inputMap = processorContext.getInputMap();
 var params = processorContext.getConfigParameters();
 var entry = inputMap.entrySet().iterator().next();
 var tempFile = new Packages.java.io.File(params.get("tempDir"), params.get("outPrefix") + entry.getKey());
-entry.getValue().copyToFile(tempFile);    
+entry.getValue().copyToFile(tempFile);
 processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docmanager.Document(tempFile, true));
 ```
 
@@ -298,8 +294,8 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 工作流程可讓您自動化Experience Manager活動。 工作流程由一系列以特定順序執行的步驟組成。 每個步驟都會執行不同的活動，例如啟動頁面或傳送電子郵件訊息。 工作流程可與儲存庫、使用者帳戶和Experience Manager服務中的資產互動。 因此，工作流可以協調複雜的工作。
 
 * 在建立工作流之前，請考慮以下幾點：
-* 步驟的輸出必須可用於所有後續步驟。\
-   這些步驟必須能夠更新（甚至刪除）前述步驟生成的現有輸出。
+* 步驟的輸出必須可用於所有後續步驟。
+這些步驟必須能夠更新（甚至刪除）前述步驟生成的現有輸出。
 * 可變變數可用來在步驟之間傳送自訂動態資料。
 
 使用工作流程執行下列步驟以處理檔案：
@@ -347,7 +343,7 @@ processWorkflowContext()的引數是com.adobe.aemfd.watchfolder.workflow.api.Wor
 >
 >在任何其他案例中，以空內容呼叫setResult API會導致錯誤。
 
-以下範例是以工作流程步驟實作。 在此範例中，ECMAscript使用變數stepCount來追蹤目前工作流程例項中呼叫某個步驟的次數。\
+以下範例是以工作流程步驟實作。 在此範例中，ECMAscript使用變數stepCount來追蹤目前工作流程例項中呼叫某個步驟的次數。
 輸出資料夾的名稱是當前步驟編號、原始檔案名和outPrefix參數中指定的前置詞的組合。
 
 ECMAScript會取得工作流程內容服務的參考，並建立WorkflowContextProcessor介面的實作。 WorkflowContextProcessor實作可接受輸入檔案、將檔案複製至暫存位置，並傳回代表複製檔案的檔案。 根據Boolean變數purgePrevious的值，目前步驟會依目前工作流程例項中啟動步驟時的相同步驟，刪除上次產生的輸出。 最後，調用wfSvc.execute方法來執行WorkflowContextProcessor實現。 輸出文檔的內容將保存到「監視資料夾」配置節點中提及的物理路徑上的結果資料夾。
@@ -366,8 +362,8 @@ var impl = { processWorkflowContext: function (wfContext) {
     log.info("Inputs: " + inputMap); // Input map of type Map<String, Document>
     log.info("Params: " + paramMap); // Config params of type Map<String, Object>
     log.info("Old results: " + preResults);
-    log.info("Old variables: " + preVars);            
-    var currStepNumber = new Packages.java.lang.Long(new Packages.java.lang.Long(preVars.get("stepCount")).longValue() + 1);    
+    log.info("Old variables: " + preVars);
+    var currStepNumber = new Packages.java.lang.Long(new Packages.java.lang.Long(preVars.get("stepCount")).longValue() + 1);
     log.info("Current step number: " + currStepNumber);
     wfContext.setVariable("stepCount", currStepNumber);
     var entry = inputMap.entrySet().iterator().next();
@@ -378,7 +374,7 @@ var impl = { processWorkflowContext: function (wfContext) {
     wfContext.setResult(tempFile.getName(), outDoc);
     var prevStepOutName = paramMap.get("outPrefix") + "STEP-" + (currStepNumber - 1) + "-" + entry.getKey();
     if (preResults.containsKey(prevStepOutName) && paramMap.get("purgePrevious").booleanValue()) {
-        log.info("Purging previous step output " + prevStepOutName);        
+        log.info("Purging previous step output " + prevStepOutName);
         wfContext.setResult(prevStepOutName, null);
     }
 } }
@@ -631,8 +627,8 @@ ECMAScript會使用PDF產生器的createPDF API，將Microsoft Word(.docx)檔案
 
 ### 建立工作流程 {#create-a-workflow}
 
-1. 在瀏覽器視窗中開啟AEM Workflow UI。\
-   https://服[務器名]:&#39;port&#39;/worklow
+1. 在瀏覽器視窗中開啟AEM Workflow UI。
+https://服[務器名]:&#39;port&#39;/worklow
 
 1. 在「模型」視圖中，按一下「 **新建」**。 在「新建工作流」對話框中，指定「 **標題**」，然後按一下「 **確定」**。
 
@@ -642,7 +638,7 @@ ECMAScript會使用PDF產生器的createPDF API，將Microsoft Word(.docx)檔案
 
 1. 刪除預設的工作流程步驟。 將「流程步驟」從「側腳」拖放至「工作流」。
 
-   ![create-a-workflow-pdf-(2)](assets/create-a-workflow-pdf-(2).png)
+   ![create-a-workflow-pdf2](assets/create-a-workflow-pdf2.png)
 
 1. 按一下右鍵「流程步驟」並選擇「編 **輯」**。 出現「Step Properties（步驟屬性）」窗口。
 
@@ -660,8 +656,8 @@ ECMAScript會使用PDF產生器的createPDF API，將Microsoft Word(.docx)檔案
 
 1. 將以下屬性添加到節點：
 
-   * folderPath（字串）:要在定義的時間間隔內掃描的資料夾路徑。 該資料夾必須位於與所有具有伺服器完全訪問權限的伺服器共用的位置。\
-      inputProcessorType（字串）:要啟動的進程的類型。 在本教學課程中，請指定工作流程。
+   * folderPath（字串）:要在定義的時間間隔內掃描的資料夾路徑。 該資料夾必須位於與所有具有伺服器完全訪問權限的伺服器共用的位置。
+inputProcessorType（字串）:要啟動的進程的類型。 在本教學課程中，請指定工作流程。
 
    * inputProcessorId（字串）:inputProcessorId屬性的行為基於為inputProcessorType屬性指定的值。 在此示例中，inputProcessorType屬性的值為workflow。 因此，對於inputProcessorId屬性，請指定PDFG工作流的以下路徑：/etc/workflow/models/pdfg/jcr:content/model
 
