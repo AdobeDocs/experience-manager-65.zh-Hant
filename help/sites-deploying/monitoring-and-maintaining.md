@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e46f0d6b842ff1a295d411c770f36dd82001bcb2
+source-git-commit: 4244ebbe8ceb3bef8d47e1e32817edbd11db4d9a
 
 ---
 
@@ -151,8 +151,8 @@ CRX文 [檔的「備份和還原](/help/sites-administering/backup-and-restore.m
 
 在下一個範例中：
 
-* The **Thirts** versions are purged are grepted are their version ager that 2 days.
-* 東加 **時尚界！** 版本會被清除，因為其版本數大於5。
+* 版本 **[!DNL Shirts]** 會因其版本年齡超過2天而被清除。
+* 版本 **[!DNL Tonga Fashions!]** 會被清除，因為其版本數大於5。
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
 
