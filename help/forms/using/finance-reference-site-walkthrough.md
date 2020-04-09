@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -298,9 +298,9 @@ We.Finance會不時檢查其信用卡應用程式的效能，以檢查客戶可�
 1. 前往「表單與檔案」UI，選取表單，按一下「更 **多**」，然後選 **取「開始A/B測試」**。
 1. 現在，使用下列URL在chrome瀏覽器中開啟表單數次：
 
-   `https://&lt;*hostname*&gt;:&lt;*port*&gt;/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
 
-   >[!NOTE] 注意：在下次開啟表單前，從瀏 **覽器的Cookie永續性中移除名稱為** mbox的Cookie。 您會隨機看到表單的體驗A和B。
+   >[!NOTE] 在下次開啟表單前，從瀏 **覽器的Cookie永續性中移除名稱為** mbox的Cookie。 您會隨機看到表單的體驗A和B。
 
 1. 選取表單，按一下「 **更多**」，然後按 **一下「A/B測試報表」**。 您在報表中找不到許多資料，因為您剛開始測試。 現在，讓我們提供一些種子資料，瞭解A/B測試報表的外觀。
 1. 開啟CRXDE Lite並備份下列檔案：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
@@ -546,7 +546,7 @@ We.Finance會不時審查其抵押申請表現，以檢查客戶可能面臨的�
 1. 視需要修改表單，以建立不同於預設體驗A的體驗。
 1. 前往「表單與檔案」UI，選取表單，按一下「更 **多**」，然後選 **取「開始A/B測試」**。
 1. 現在，使用下列URL在chrome瀏覽器中開啟表單數次：
-   `https://&lt;hostname&gt;:&lt;port&gt;/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
 
    >[!NOTE]
    > 在下次開啟表單前，從瀏 **覽器的Cookie永續性中移除名稱為** mbox的Cookie。 您會隨機看到表單的體驗A和B。
@@ -576,7 +576,7 @@ Microsoft Dynamics的「住房抵押」應用程式逐步說明，當參考網�
 
 ### Sarah造訪We.Finance網站並申請住房抵押 {#sarah-visits-we-finance-website-and-applies-for-home-mortgage-1}
 
-莎拉·羅斯正計畫購買一套住房，並尋找住房抵押計畫。 她是We.Finance客戶，因此造訪We.Finance入口網站，探索房屋抵押優惠。 她前往「貸款」區段，在入口網站上找到抵押計算器。 她填好細節，點選了「計算我的抵押貸款」，這個計畫會返回抵押貸款計畫。
+莎拉·羅斯正計畫購買一套住房，並尋找住房抵押計畫。 她是We.Finance客戶，因此造訪We.Finance入口網站，探索房屋抵押優惠。 她前往「貸款」區段，在入口網站上找到抵押計算器。 她填好細節，點選了「計算我的抵押貸款」，該計劃歸還了抵押貸款計畫。
 
 ![貸款1](assets/loans1.png)![貸款2](assets/loans2.png)
 
@@ -782,7 +782,7 @@ We.Finance Wealth Management情境包含下列角色：
 
 ### 莎拉造訪了We.Finance網站，並開啟了Blue Chip Growth Fund招股說明書 {#sarah-visits-we-finance-website-and-opens-the-blue-chip-growth-fund-prospectus}
 
-莎拉·羅絲正計畫投資一隻共同基金。 她是We.Finance的現有客戶，因此，她造訪We.Finance入口網站，以探索可用的共同基金。 她進入財富管理部，開啟We.Finance藍籌增長基金頁面。 該頁包含招股說明書的連結，其中包含有關目前及歷史價格、每月業績、行業多元化、開支、費用、稅金，以及更多有關基金的資訊。
+莎拉·羅絲正計畫投資一隻共同基金。 她是We.Finance的現有客戶，因此，她造訪We.Finance入口網站，以探索可用的共同基金。 她進入財富管理部，開啟We.Finance藍籌股增長基金頁面。 該頁包含招股說明書的連結，其中包含有關目前及歷史價格、每月業績、行業多元化、開支、費用、稅金，以及更多有關基金的資訊。
 
 ![slide1](assets/slide1.png)
 
@@ -798,7 +798,7 @@ Blue Chip Growth Fund招股說明書是一種互動式通訊方式。 它使用�
 
 ### Sarah探索Blue Chip Growth Fund招股說明書，以瞭解該基金 {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
-Sarah在招股說明書的「概觀」、「價格與績效」、「投資組合管理」、「費用與最低值」和「稅金與付款」標籤中進行探索，以瞭解目前和歷史價格、歷史增長、與標普500指數的比較、以行業為導向的多元化、基金管理人員以及與基金相關的開支。 所述相關資訊被分隔成不同的標籤。 招股說明書是互動式溝通。 互動式通訊具有互動式設計。 她可以在任何螢幕大小的裝置上開啟互動式通訊，而互動式通訊則會重排設計，以符合基礎裝置。
+Sarah在招股說明書的「概觀」、「價格與績效」、「投資組合管理」、「費用與最低值」和「稅金與付款」標籤中進行探索，以瞭解目前和歷史價格、歷史增長、與標普500指數的比較、以行業為導向的多元化、基金管理人員以及與基金相關的開支。 相關資訊被分隔到不同的標籤中。 招股說明書是互動式溝通。 互動式通訊具有互動式設計。 她可以在任何螢幕大小的裝置上開啟互動式通訊，而互動式通訊則會重排設計，以符合基礎裝置。
 
 ![slide1-1](assets/slide1-1.png)
 
