@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -35,7 +35,7 @@ source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
 
 >[!NOTE]
 >
->若要使用「電子郵件」動作，您必須依照 [Configuring the mail service](/help/sites-administering/notification.md#configuring the mail service)中所述，設定AEM郵件服務。
+>若要使用「電子郵件」動作，您必須依照「設定郵件服務」中的說 [明設定AEM郵件服務](/help/sites-administering/notification.md#configuring-the-mail-service)。
 
 ### 在最適化表單上啟用電子郵件動作 {#enabling-email-action-on-an-adaptive-form}
 
