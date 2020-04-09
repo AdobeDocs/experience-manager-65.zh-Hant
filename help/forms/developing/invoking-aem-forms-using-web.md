@@ -1,6 +1,6 @@
 ---
-title: 使用Web services叫用AEM Forms
-seo-title: 使用Web services叫用AEM Forms
+title: 使用Web Services叫用AEM Forms
+seo-title: 使用Web Services叫用AEM Forms
 description: 'null'
 seo-description: 'null'
 uuid: 66bcd010-c476-4b66-831d-a48307d8d67a
@@ -10,12 +10,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
 
-# 使用Web services叫用AEM Forms {#invoking-aem-forms-using-web-services}
+# 使用Web Services叫用AEM Forms {#invoking-aem-forms-using-web-services}
 
 服務容器中的大部分AEM Forms服務都已設定為公開Web服務，並完全支援Web服務定義語言(WSDL)產生。 也就是說，您可以建立使用AEM Forms服務之原生SOAP堆疊的Proxy物件。 因此，AEM Forms服務可以交換及處理下列SOAP訊息：
 
@@ -24,7 +24,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 使用web services，您可以執行與使用Java API相同的AEM Forms服務作業。 使用web services來叫用AEM Forms服務的優點在於，您可以在支援SOAP的開發環境中建立用戶端應用程式。 用戶端應用程式不會與特定開發環境或程式設計語言相連結。 例如，您可以使用Microsoft Visual Studio .NET和C#作為寫程式語言來建立客戶端應用程式。
 
-AEM Forms服務會透過SOAP通訊協定公開，並且符合WSI Basic Profile 1.1規範。 Web Services Interoperability(WSI)是開放標準組織，可促進跨平台的Web服務互操作性。 如需詳細資訊，請參 [閱https://www.ws-i.org/](https://www.ws-i.org)。
+AEM Forms服務會透過SOAP通訊協定公開，並且符合WSI Basic Profile 1.1規範。 Web Services Interoperability(WSI)是一個開放標準組織，可促進跨平台的Web服務互操作性。 如需詳細資訊，請參 [閱https://www.ws-i.org/](https://www.ws-i.org)。
 
 AEM Forms支援下列Web服務標準：
 
@@ -162,7 +162,7 @@ AEM Forms支援下列Web服務標準：
 
 **使用web services存取新功能**
 
-您可使用web services存取新的AEM Forms服務功能。 例如，在AEM Forms中，會引入使用MTOM來編碼附件的功能。 (請參 [閱「使用MTOM叫用AEM表單](#invoking-aem-forms-using-mtom)」)。
+您可使用web services存取新的AEM Forms服務功能。 例如，在AEM Forms中，會引入使用MTOM來編碼附件的功能。 (請參 [閱使用MTOM叫用AEM表格](#invoking-aem-forms-using-mtom))。
 
 若要存取AEM Forms中引進的新功能，請在WSDL `lc_version` 定義中指定屬性。 例如，若要存取新的服務功能（包括MTOM支援），請指定下列WSDL定義：
 
@@ -212,7 +212,7 @@ AEM Forms服務WSDL可定義許多資料類型。 Web服務中公開的最重要
 將值分配給屬於實例的 `BLOB` 欄位，如下所示：
 
 * **Base64**:若要將資料傳遞為以Base64格式編碼的文字，請在欄位中設定資料， `BLOB.binaryData` 並在欄位中以MIME格式(例如 `application/pdf`)設定資料 `BLOB.contentType` 類型。 (請參 [閱使用Base64編碼叫用AEM Forms](#invoking-aem-forms-using-base64-encoding))。
-* **MTOM**:若要在MTOM附件中傳遞二進位資料，請在欄位中設定 `BLOB.MTOM` 資料。 此設定會使用Java JAX-WS架構或SOAP架構的原生API，將資料附加至SOAP要求。 (請參 [閱「使用MTOM叫用AEM表單](#invoking-aem-forms-using-mtom)」)。
+* **MTOM**:若要在MTOM附件中傳遞二進位資料，請在欄位中設定 `BLOB.MTOM` 資料。 此設定會使用Java JAX-WS架構或SOAP架構的原生API，將資料附加至SOAP要求。 (請參 [閱使用MTOM叫用AEM表格](#invoking-aem-forms-using-mtom))。
 * **SwaRef**:要在WS-I SwaRef附件中傳遞二進位資料，請在欄位中設定 `BLOB.swaRef` 資料。 此設定會使用Java JAX-WS架構將資料附加至SOAP要求。 (請參 [閱使用SwaRef叫用AEM Forms](#invoking-aem-forms-using-swaref))
 * **MIME或DIME附件**:若要在MIME或DIME附件中傳送資料，請使用SOAP架構的原生API，將資料附加至SOAP要求。 在欄位中設定附件標 `BLOB.attachmentID` 識符。 (請參 [閱使用Base64編碼叫用AEM Forms](#invoking-aem-forms-using-base64-encoding))。
 * **遠端URL**:如果資料是裝載在網頁伺服器上並可透過HTTP URL存取，請在欄位中設定HTTP `BLOB.remoteURL` URL。 (請參 [閱「透過HTTP使用BLOB資料叫用AEM表格](#invoking-aem-forms-using-blob-data-over-http)」)。
@@ -253,7 +253,7 @@ AEM Forms服務WSDL可定義許多資料類型。 Web服務中公開的最重要
 
 >[!NOTE]
 >
->使用MTOM傳輸通訊協定的JAX WS應用程式的已傳送和已接收資料限制為25MB。 此限制是由於JAX-WS中的錯誤。 如果您所傳送和接收檔案的總大小超過25MB，請使用SwaRef傳輸通訊協定，而非MTOM傳輸通訊協定。 否則，可能會有 `OutOfMemory`*例外。*
+>使用MTOM傳輸通訊協定的JAX WS應用程式的已傳送和已接收資料限制為25MB。 此限制是由於JAX-WS中的錯誤。 如果您所傳送和接收檔案的總大小超過25MB，請使用SwaRef傳輸通訊協定，而非MTOM傳輸通訊協定。 否則就有例外的可 `OutOfMemory` 能。
 
 **MTOM傳輸BASE64編碼位元組陣列**
 
@@ -358,7 +358,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
 ## 使用JAX-WS建立Java代理類 {#creating-java-proxy-classes-using-jax-ws}
 
-您可以使用JAX-WS將Forms服務WSDL轉換為Java代理類。 這些類別可讓您叫用AEM Forms服務作業。 Apache ant可讓您建立建置指令碼，透過參照AEM Forms服務WSDL來產生Java代理類別。 通過執行以下步驟，可以生成JAX-WS代理檔案：
+您可以使用JAX-WS將Forms服務WSDL轉換為Java代理類。 這些類別可讓您叫用AEM Forms服務作業。 Apache Ant可讓您建立建置指令碼，透過參照AEM Forms服務WSDL來產生Java代理類別。 通過執行以下步驟，可以生成JAX-WS代理檔案：
 
 1. 在客戶端電腦上安裝Apache Ant。 (請參 [閱https://ant.apache.org/bindownload.cgi](https://ant.apache.org/bindownload.cgi)。)
 
@@ -373,7 +373,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
    JDK 1.6包含build.xml檔案中使用的wsimport程式。 JDK 1.5不包含該程式。
 
 1. 在客戶端電腦上安裝JAX-WS。 (請參 [閱「XML網站服務的Java API](https://jax-ws.dev.java.net/jax-ws-ea3/docs/mtom-swaref.html)」)。
-1. 使用JAX-WS和Apache ant生成Java代理類。 建立Ant構建指令碼以完成此任務。 以下指令碼是名為build.xml的示例Ant構建指令碼：
+1. 使用JAX-WS和Apache Ant生成Java代理類。 建立Ant構建指令碼以完成此任務。 以下指令碼是名為build.xml的示例Ant構建指令碼：
 
    ```as3
     <?xml version="1.0" encoding="UTF-8"?>
@@ -421,7 +421,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
     </project>
    ```
 
-   在此Ant構建指令碼中，請注意，該屬 `url` 性已設定為引用在localhost上運行的加密服務WSDL。 必須將 `username` 和 `password` 屬性設為有效的AEM表單使用者名稱和密碼。 請注意，URL包含屬 `lc_version` 性。 若未指定 `lc_version` 選項，則無法叫用新的AEM Forms服務作業。
+   在此Ant構建指令碼中，請注意，該 `url` 屬性已設定為引用在localhost上運行的加密服務WSDL。 必須將 `username` 和 `password` 屬性設為有效的AEM表單使用者名稱和密碼。 請注意，URL包含屬 `lc_version` 性。 若未指定 `lc_version` 選項，則無法叫用新的AEM Forms服務作業。
 
    >[!NOTE]
    >
@@ -511,7 +511,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
     </project>
    ```
 
-   在此Ant構建指令碼中，請注意，該屬 `url` 性已設定為引用在localhost上運行的加密服務WSDL。 必須將 `username` 和 `password` 屬性設為有效的AEM表單使用者名稱和密碼。
+   在此Ant構建指令碼中，請注意，該 `url` 屬性已設定為引用在localhost上運行的加密服務WSDL。 必須將 `username` 和 `password` 屬性設為有效的AEM表單使用者名稱和密碼。
 
 1. 建立BAT檔案以執行Ant構建指令碼。 以下命令可位於負責執行Ant構建指令碼的BAT檔案中：
 
@@ -592,7 +592,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
 **建立代理類**
 
-您可以使用Microsoft Visual studio附帶的工具來建立用於建立。NET客戶端元件的代理類。 此工具的名稱為wsdl.exe，它位於Microsoft Visual studio安裝資料夾中。 要建立代理類，請開啟命令提示符並導航到包含wsdl.exe檔案的資料夾。 有關wsdl.exe工具的詳細資訊，請參閱 *MSDN幫助*。
+您可以使用Microsoft Visual Studio附帶的工具來建立用於建立。NET客戶端元件的代理類。 此工具的名稱為wsdl.exe，它位於Microsoft Visual Studio安裝資料夾中。 要建立代理類，請開啟命令提示符並導航到包含wsdl.exe檔案的資料夾。 有關wsdl.exe工具的詳細資訊，請參閱 *MSDN幫助*。
 
 在命令提示符下輸入以下命令：
 
@@ -618,7 +618,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
 **開發。NET客戶端元件**
 
-建立生成。NET客戶端元件的Visual studio類庫項目。 您使用wsdl.exe建立的CS檔案可匯入此專案。 此項目生成一個DLL檔案（.NET客戶端元件），可用於其他Visual Studio .NET項目以調用服務。
+建立生成。NET客戶端元件的Visual Studio類庫項目。 您使用wsdl.exe建立的CS檔案可匯入此專案。 此項目生成一個DLL檔案（.NET客戶端元件），可用於其他Visual Studio .NET項目以調用服務。
 
 1. 啟動Microsoft Visual Studio .NET。
 1. 建立類別程式庫專案，並將其命名為DocumentService。
@@ -674,7 +674,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
    >[!NOTE]
    >
-   >以 `hiro-xp`代管AEM Forms的J2EE應用程式伺服器的IP位址取代。
+   >以代 `hiro-xp`*管AEM Forms之J2EE應用程式伺服器的IP位址取代。*
 
 1. 將使用JAX-WS建立的Java代理類包裝到JAR檔案中。
 1. 將Java代理JAR檔案和JAR檔案包含在以下路徑中：
@@ -687,7 +687,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 1. 調用 `MyApplicationEncryptDocument` 物件的方 `MyApplicationEncryptDocumentService` 法以建立物 `getEncryptDocument` 件。
 1. 將值指派給下列資料成員，以設定呼叫AEM Forms所需的連線值：
 
-   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 至物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用 `MyApplication/EncryptDocument` Base64編碼叫用服務，請指定下列URL值：
+   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 給物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用 `MyApplication/EncryptDocument` Base64編碼叫用服務，請指定下列URL值：
 
       `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
 
@@ -746,7 +746,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
 ### 建立使用MTOM叫用服務的。NET專案 {#creating-a-net-project-that-invokes-a-service-using-mtom}
 
-您可以建立Microsoft .NET專案，以使用web services來叫用AEM Forms服務。 首先，使用Visual Studio 2008建立Microsoft .NET項目。 若要叫用AEM Forms服務，請建立要在專案中叫用之AEM Forms服務的服務參考。 當您建立「服務參考」時，請指定AEM Forms服務的URL:
+您可以建立Microsoft .NET專案，以使用web services叫用AEM Forms服務。 首先，使用Visual Studio 2008建立Microsoft .NET項目。 若要叫用AEM Forms服務，請建立要在專案中叫用之AEM Forms服務的服務參考。 當您建立「服務參考」時，請指定AEM Forms服務的URL:
 
 ```as3
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
@@ -768,7 +768,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
     http://localhost:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
    ```
 
-1. 按一 **下「**&#x200B;執行」，然後按一下&#x200B;**「確定」**。
+1. 按一 **下「Go** 」，然後按一 **下「OK**」。
 
 ### 在。NET專案中使用MTOM叫用服務 {#invoking-a-service-using-mtom-in-a-net-project}
 
@@ -786,7 +786,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
    >[!NOTE]
    >
-   >以 `hiro-xp`代管AEM Forms的J2EE應用程式伺服器的IP位址取代。
+   >以代 `hiro-xp`*管AEM Forms之J2EE應用程式伺服器的IP位址取代。*
 
 1. 通過獲 `System.ServiceModel.BasicHttpBinding` 取資料成員的值建立 `EncryptDocumentClient.Endpoint.Binding` 對象。 將返回值轉換為 `BasicHttpBinding`。
 1. 將物 `System.ServiceModel.BasicHttpBinding` 件的資料 `MessageEncoding` 成員設為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
@@ -867,7 +867,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
    >[!NOTE]
    >
-   >以 `hiro-xp`代管AEM Forms的J2EE應用程式伺服器的IP位址取代*。*
+   >以代 `hiro-xp`*管AEM Forms的J2EE應用程式伺服器的IP位址取代。*
 
 1. 將使用JAX-WS建立的Java代理類包裝到JAR檔案中。
 1. 將Java代理JAR檔案和JAR檔案包含在以下路徑中：
@@ -880,7 +880,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 1. 調用 `MyApplicationEncryptDocument` 物件的方 `MyApplicationEncryptDocumentService` 法以建立物 `getEncryptDocument` 件。
 1. 將值指派給下列資料成員，以設定呼叫AEM Forms所需的連線值：
 
-   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 至物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用SwaRef `MyApplication/EncryptDocument` 編碼來叫用服務，請指定下列URL值：
+   * 將WSDL端點和編碼類型指派 `javax.xml.ws.BindingProvider` 給物件的欄 `ENDPOINT_ADDRESS_PROPERTY` 位。 若要使用SwaRef `MyApplication/EncryptDocument` 編碼來叫用服務，請指定下列URL值：
 
       ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
@@ -933,7 +933,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
 >[!NOTE]
 >
->建議您熟悉使用SOAP叫用AEM表格。 (請參 [閱使用Web services叫用AEM Forms](#invoking-aem-forms-using-web-services))。
+>建議您熟悉使用SOAP叫用AEM表格。 (請參 [閱使用Web Services叫用AEM Forms](#invoking-aem-forms-using-web-services))。
 
 ### 建立通過HTTP使用資料的。NET客戶端元件 {#creating-a-net-client-assembly-that-uses-data-over-http}
 
@@ -989,7 +989,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
    >[!NOTE]
    >
-   >以 `hiro-xp`代管AEM Forms的J2EE應用程式伺服器的IP位址取代*。*
+   >以代 `hiro-xp`*管AEM Forms的J2EE應用程式伺服器的IP位址取代。*
 
 1. 將使用JAX-WS建立的Java代理類包裝到JAR檔案中。
 1. 將Java代理JAR檔案和JAR檔案包含在以下路徑中：
@@ -1037,7 +1037,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 1. 取得傳遞至程式的不安全PDF檔案。 此操作基於操 `SetValue` 作。 此進程的輸入參數是名為的 `document` 進程變數 `inDoc`。
 1. 使用密碼加密PDF檔案。 此操作基於操 `PasswordEncryptPDF` 作。 密碼加密的PDF檔案會在名為的流程變數中傳回 `outDoc`。
 
-此程式不以現有的AEM Forms程式為基礎。 若要遵循程式碼範例，請使用Workbench建立名 `MyApplication/EncryptDocument`為**的程式。 (請參 [閱使用工作台](https://www.adobe.com/go/learn_aemforms_workbench_63)。)
+此程式不以現有的AEM Forms程式為基礎。 要跟隨代碼示例，請使用Workbench建立一個名 `MyApplication/EncryptDocument` 為的流程。 (請參 [閱使用工作台](https://www.adobe.com/go/learn_aemforms_workbench_63)。)
 
 >[!NOTE]
 >
@@ -1058,7 +1058,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 
 >[!NOTE]
 >
->網站服務增強功能2.0支援DIME。 使用Web Services Enhancements 2.0時，支援的Microsoft Visual studio版本為2003。網站服務增強功能3.0不支援DIME;但是，它支援MTOM。
+>網站服務增強功能2.0支援DIME。 使用Web Services Enhancements 2.0時，支援的Microsoft Visual Studio版本為2003。網站服務增強功能3.0不支援DIME;但是，它支援MTOM。
 
 **建立AEM Forms服務的網頁參考**
 
@@ -1117,7 +1117,7 @@ Adobe開發人員網站包含下列文章，討論如何使用web service API叫
 1. 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
 1. 調用物件的方法並傳遞位元組陣列，將位元組 `System.IO.BinaryWriter` 的內容 `Write` 寫入PDF檔案。
 
-### 建立使用DIME的Apache Axis java代理類 {#creating-apache-axis-java-proxy-classes-that-use-dime}
+### 建立使用DIME的Apache Axis Java代理類 {#creating-apache-axis-java-proxy-classes-that-use-dime}
 
 您可以使用Apache Axis WSDL2Java工具將服務WSDL轉換為Java代理類，以便調用服務操作。 使用Apache Ant，您可以從AEM Forms服務WSDL產生Axis程式庫檔案，讓您叫用服務。 (請參 [閱使用Apache Axis建立Java代理類](#creating-java-proxy-classes-using-apache-axis)。)
 
@@ -1147,7 +1147,7 @@ Apache Axis WSDL2Java工具會產生JAVA檔案，其中包含用於傳送SOAP請
 1. 使用其 `org.apache.axis.attachments.AttachmentPart` 建構函式並傳遞物件，以建立物 `javax.activation.DataHandler` 件。
 1. 呼叫物件的方法並傳 `EncryptDocumentSoapBindingStub` 遞物件，以附 `addAttachment` 加附件 `org.apache.axis.attachments.AttachmentPart` 。
 1. 使用其 `BLOB` 建構函式建立物件。 調用 `BLOB` 物件的方法並傳遞附件識別碼值，以 `BLOB` 附件識 `setAttachmentID` 別碼值填入物件。 此值可透過調用物件的 `org.apache.axis.attachments.AttachmentPart` 方法來取 `getContentId` 得。
-1. 叫用 `MyApplication/EncryptDocument` 物件的方 `EncryptDocumentSoapBindingStub` 法以叫用 `invoke` 程式。 傳遞包 `BLOB` 含DIME附件的對象。 此程式會在物件中傳回加密的PDF `BLOB` 檔案。
+1. 叫用 `MyApplication/EncryptDocument` 物件的方 `EncryptDocumentSoapBindingStub` 法以叫用 `invoke` 程式。 傳遞包 `BLOB` 含DIME附件的物件。 此程式會在物件中傳回加密的PDF `BLOB` 檔案。
 1. 叫用傳回物件的方法，以取 `BLOB` 得附件識別 `getAttachmentID` 碼值。 此方法會傳回字串值，代表傳回之附件的識別碼值。
 1. 調用物件的方法 `EncryptDocumentSoapBindingStub` 來擷取附 `getAttachments` 件。 此方法返回表示附 `Objects` 件的陣列。
 1. 重複附件（陣列）, `Object` 並使用附件識別碼值來取得加密的PDF檔案。 每個元素都是一個 `org.apache.axis.attachments.AttachmentPart` 物件。
@@ -1505,9 +1505,9 @@ WSE體系結構使用策略、斷言和SecurityToken資料類型。 簡而言之
 
 ### J2EE應用程式伺服器的差異 {#differences-in-j2ee-application-servers}
 
-有時，使用特定J2EE應用程式伺服器建立的代理程式庫無法成功叫用其他J2EE應用程式伺服器上裝載的AEM Forms。 請考慮使用部署在WebSphere上的AEM Forms產生的代理程式庫。 此代理程式庫無法成功叫用部署在JBoss Application server上的AEM Forms服務。
+有時，使用特定J2EE應用程式伺服器建立的代理程式庫無法成功叫用其他J2EE應用程式伺服器上裝載的AEM Forms。 請考慮使用部署在WebSphere上的AEM Forms產生的代理程式庫。 此代理程式庫無法成功叫用部署在JBoss Application Server上的AEM Forms服務。
 
-與JBoss Application server相比，當AEM Forms部署在WebSphere時，有些AEM Forms複雜的資料類型(例如 `PrincipalReference`)的定義不同。 不同J2EE應用程式服務使用的JDK差異，是WSDL定義有差異的原因。 因此，請使用從相同J2EE應用程式伺服器產生的Proxy程式庫。
+與JBoss Application Server相比，當AEM Forms部署在WebSphere時，有些AEM Forms複雜的資料類型(例如 `PrincipalReference`)的定義不同。 不同J2EE應用程式服務使用的JDK差異，是WSDL定義有差異的原因。 因此，請使用從相同J2EE應用程式伺服器產生的Proxy程式庫。
 
 ### 使用web services存取多個服務 {#accessing-multiple-services-using-web-services}
 
@@ -1522,7 +1522,7 @@ WSE體系結構使用策略、斷言和SecurityToken資料類型。 簡而言之
 * `Roles`
 * `BLOB`
 
-為避免此問題，建議您完全限定資料類型。 例如，請考慮使用服務參考同時引用Forms服務和簽名服務的。NET應用程式。 兩個服務引用都將包含 `BLOB` 類。 要使用實 `BLOB` 例，請在聲明對象時 `BLOB` 完全限定該對象。 以下代碼示例顯示了此方法。 如需此程式碼範例的詳細資訊，請參 [閱數位簽署互動式表單](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)。
+為避免此問題，建議您完全限定資料類型。 例如，請考慮使用服務參考同時引用Forms服務和簽名服務的。NET應用程式。 兩個服務引用都將包含 `BLOB` 類。 要使用實 `BLOB` 例，請在聲明對象時 `BLOB` 完全限定對象。 以下代碼示例顯示了此方法。 如需此程式碼範例的詳細資訊，請參 [閱數位簽署互動式表單](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)。
 
 下列C#程式碼範例會簽署由Forms服務轉譯的互動式表單。 客戶端應用程式有兩個服務引用。 與 `BLOB` Forms服務關聯的實例屬於命名空 `SignInteractiveForm.ServiceReference2` 間。 同樣地， `BLOB` 與簽名服務相關聯的實例也屬於命名 `SignInteractiveForm.ServiceReference1` 空間。 簽署的互動式表單會儲存為名為 *LoanXFASpid.pdf的PDF檔案*。
 
@@ -1737,7 +1737,7 @@ WSE體系結構使用策略、斷言和SecurityToken資料類型。 簡而言之
  
 ```
 
-### 服務從字母I開始產生無效的代理檔案 {#services-starting-with-the-letter-i-produce-invalid-proxy-files}
+### 服務從字母I產生無效的代理檔案開始 {#services-starting-with-the-letter-i-produce-invalid-proxy-files}
 
 使用Microsoft .Net 3.5和WCF時，某些AEM Forms產生的代理類的名稱不正確。 當為IBMFilenetContentRepositoryConnector、IDPShedulerService或任何其他名稱以字母I開頭的服務建立代理類時，就會發生此問題。例如，如果是IBMFileNetContentRepositoryConnector，則生成的客戶機的名稱為 `BMFileNetContentRepositoryConnectorClient`。 生成的代理類中缺少的字母I。
 
