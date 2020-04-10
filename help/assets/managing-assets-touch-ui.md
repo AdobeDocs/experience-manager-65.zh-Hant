@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: be619b71dd0bb1addc10f4dbdbd2f00bc86dd003
 
 ---
 
@@ -138,7 +138,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->若要在「動態媒體- Scene7」模式中透過FTP上傳資產，請在AEM作者例項上安裝Feature Pack 18912。 請連 [絡Adobe客戶服務](https://helpx.adobe.com/contact/enterprise-support.ec.html) ，以取得FP-18912的存取權，並完成FTP帳戶的設定。 如需詳細資訊，請參 [閱安裝功能套件18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
+>若要在「動態媒體- Scene7」模式中透過FTP上傳資產，請在AEM作者例項上安裝Feature Pack 18912。 請連 [絡Adobe客戶服務](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) ，以取得FP-18912的存取權，並完成FTP帳戶的設定。 如需詳細資訊，請參 [閱安裝功能套件18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
 >
 >如果您使用FTP來上傳資產，則會忽略AEM中指定的上傳設定。 而是使用Dynamic Media Classic中定義的檔案處理規則。
 
@@ -942,30 +942,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 ### 在資產上啟動工作流程 {#starting-a-workflow-on-an-asset}
 
-1. 導覽至您要啟動工作流程的資產所在位置，然後點選／按一下資產以開啟資產頁面。
-1. 點選「GlobalNav」圖示，然後從選 **[!UICONTROL 單中選取]** 「時間軸」以顯示時間軸。
-
-   ![timeline-1](assets/timeline.png)
-
-1. 點選下 **[!UICONTROL 方的]** 「動作（箭頭）」圖示，以開啟資產可用的動作清單。
-
-   ![chlimage_1-252](assets/chlimage_1-45.png)
-
-1. 從清 **[!UICONTROL 單中點選「開始工作流程]** 」。
-
-   ![chlimage_1-253](assets/chlimage_1-49.png)
-
-1. In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
-
-   ![chlimage_1-254](assets/chlimage_1-50.png)
-
-1. （可選）指定工作流的標題，可用來參考工作流實例。
-
-   ![chlimage_1-255](assets/chlimage_1-51.png)
-
-1. Tap **[!UICONTROL Start]**, then tap **[!UICONTROL Proceed]** in the dialog to confirm. 工作流程的每個步驟都會以事件的形式顯示在時間軸中。
-
-   ![chlimage_1-256](assets/chlimage_1-52.png)
+若要套用工作流程來處理資產，請參閱「啟 [動資產的工作流程」](/help/assets/assets-workflow.md#apply-a-workflow-to-an-asset)。
 
 ## 集合 {#collections}
 
