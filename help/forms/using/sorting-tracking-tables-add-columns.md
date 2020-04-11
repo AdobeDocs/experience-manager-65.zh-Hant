@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # 自訂追蹤表格{#customize-tracking-tables}
 
-AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程式例項的詳細資料。 若要檢視追蹤表格，請先在左窗格中選取程式名稱，以在中間窗格中查看其例項清單。 選擇一個進程實例，在右窗格中查看由此實例生成的任務表。 預設情況下，表列顯示以下任務屬性（任務模型中的相應屬性在括弧中給出）:
+AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程式例項的詳細資料。 若要檢視追蹤表格，請先在左窗格中選取程式名稱，以在中間窗格中查看其例項清單。 選擇一個流程實例，在右窗格中查看此實例生成的任務表。 預設情況下，表列顯示以下任務屬性（任務模型中的相應屬性在括弧中給出）:
 
 * ID ( `taskId`)
 * 名稱 ( `stepName`)
@@ -210,5 +210,3 @@ AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程�
            render();
        };
    ```
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
