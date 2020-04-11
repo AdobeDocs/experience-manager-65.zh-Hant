@@ -1,8 +1,8 @@
 ---
 title: 骨幹互動
 seo-title: 骨幹互動
-description: 在AEM Forms工作區中使用Backbone javaScript模型的概念性資訊。
-seo-description: 在AEM Forms工作區中使用Backbone javaScript模型的概念性資訊。
+description: 在AEM Forms工作區中使用Backbone JavaScript模型的概念性資訊。
+seo-description: 在AEM Forms工作區中使用Backbone JavaScript模型的概念性資訊。
 uuid: 040f42cb-3b76-4657-ba05-9e52647efb12
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 538591fe-29e4-40c4-a045-06095cc0c6b8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -57,5 +57,3 @@ Backbone是一個資料庫，可協助在Web應用程式中建立和遵循MVC架
 1. 任務模型會將骨幹事件作為轉換呼叫完成的通知。
 1. 另一個視圖，任務詳細資訊視圖從任務模型監聽此事件。
 1. 然後，「任務詳細資訊」視圖將更改任務詳細資訊模板，以向用戶顯示所呈現的任務（表單、詳細資訊、附件、附註等）。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
