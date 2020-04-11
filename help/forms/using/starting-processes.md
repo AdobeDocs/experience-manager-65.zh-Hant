@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -127,5 +127,3 @@ AEM Forms工作區依管理員或流程設計人員設定的類別來組織流�
 >如果您通常在使用AEM Forms工作區時啟動程式，可以設定「開始位置」偏好設定，在啟動AEM Forms工作區時自動顯示「我的最愛」類別。 如需詳細資訊，請參閱「AEM Forms工作區快速 [入門」中的「管理偏好設定」](/help/forms/using/getting-started-livecycle-html-workspace.md)。
 
 要將進程標籤為收藏夾，請選擇其類別中的任務，然後按一下空心星形。 這顆星變黃了。 要取消將進程標籤為收藏，請再次按一下金色星形。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
