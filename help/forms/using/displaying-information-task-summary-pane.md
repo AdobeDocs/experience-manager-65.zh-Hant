@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 AEM Forms工作區可讓您在「任務摘要」窗格中顯示您選擇的網頁。 可以建立一個流程，以使用「工作台」顯示「任務匯總」窗格。
 
-1. 在工作台中建立分配任務流程。 有關「分配任務」操作的詳細資訊，請參閱「工作台幫助」中的「服 [務參考」主題](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)。
+1. 在工作台中建立分配任務流程。 有關「分配任務」操作的詳細資訊，請參閱「工作台幫助」中的「服務 [參考」主題](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)。
 
    >[!NOTE]
    >
@@ -50,6 +50,3 @@ AEM Forms工作區可讓您在「任務摘要」窗格中顯示您選擇的網�
 
    * 設定任務摘要URL的值，如「分配任 `/lc/content/SampleSummary.html` 務」步驟中。
    * 當在AEM Forms工作區中開啟與此「指派任務」步驟相關聯的工作時， `html.esp` at會 `/apps/SampleSummary` 在任務摘要窗格中呈現。
-
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
