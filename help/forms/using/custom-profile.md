@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -44,7 +44,7 @@ formBody.jsp模組用於XFA表單的HTML表示。
 
 ## nav_footer.jsp {#nav-footer-jsp}
 
-一開始，HTML5表格只會轉譯表格的第一頁。 當使用者捲動表格時，會載入其餘的表格。 它讓載入體驗更快速。 nav_footer.jsp元件包含所有樣式和所需元素，以便在捲動時載入頁面。
+一開始，HTML5表格只會轉譯表格的第一頁。 當使用者捲動表格時，會載入其餘的表格。 它讓載入體驗更快速。 nav_footer.jsp元件包含所有樣式和所需元素，以方便在捲動時載入頁面。
 
 ## footer.jsp {#footer-jsp}
 
@@ -81,5 +81,3 @@ footer.jsp模組為空。 它允許您添加僅用於用戶交互的指令碼。
 1. 若要確認已建立描述檔，請開啟URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
 若要驗證您的表單，請 [將表單從您的本機檔案系統匯入](/help/forms/using/get-xdp-pdf-documents-aem.md) ，並在AEM伺服器 [作者例項上預覽表單](/help/forms/using/previewing-forms.md) 。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
