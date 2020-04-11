@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -38,5 +38,3 @@ AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式�
 >[!NOTE]
 >
 >如果未執行任何動作，使用者會在作業過期前三秒自動登出AEM Forms工作區。
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
