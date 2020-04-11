@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 90cd8ba5-4f47-4074-bc54-6a7bb8afe256
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -39,5 +39,3 @@ source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
 1. 針對 **[!UICONTROL 程式碼簽署識別]**，請選取適當的簽名。 請確定已針對 **[!UICONTROL Debug]**、 **[!UICONTROL Release]**&#x200B;和 **[!UICONTROL Any iOS SDK選取相同的簽名]**。
 1. 在 **[!UICONTROL PROJECT下]**，選擇 **[!UICONTROL AEM Forms]** ，並確保為 **[!UICONTROL Signing Identity]**, DebugDebugIntity,ReleaseAndAny iOS SDK ************&#x200B;選擇適當的簽名。
 1. 建立和散發AEM Forms應用程式。 如需建立和散發AEM Forms應用程式的詳細指示，請參 [閱「建立AEM Forms應用程式的安裝程式」](/help/forms/using/setup-xcode-project-build-installer.md#main-pars-text-12)。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
