@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 Adobe Experience Manager(6.5)可讓您透過每季的Service Pack版本，存取新功能並不斷改進。 使用這種方法，您就可以輕鬆地採用創新。
 
-Experience Manager Service Pack 4(6.5.4.0)將於2020年3月5日發行。 這是一項重要的更新，其中包括自2019年4月6.5版全面推出以來，所發佈的新功能、客戶要求的重要增強功能，以及效能、穩定性、安全性改進。 Experience Manager 6.5.4.0可安裝在Adobe Experience Manager 6.5之上。
+Experience Manager Service Pack 4(6.5.4.0)是重要的更新。 它包含自2019年4月AEM 6.5發行以來所有的新功能、主要客戶要求的增強功能、效能、穩定性和安全性改進。 您可以在AEM 6.5和更新版本上安裝Service Pack。
 
 本文重點介紹最新6.5 Service Pack的功能、 [舊版6.5 Service Pack的主要功能](#key-features-previous-service-packs)，以及Experience Manager 6.5.3.0以來的部 [分主要版本](#key-features-sice-sp3)。
 
@@ -117,7 +117,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 ### 為AEM Forms使用者(6.5.3.0)的「收件匣」項目設定不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
-您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
+您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
 
 ### 使用適用於AEM Forms(6.5.3.0)的Batch API產生多種互動式通訊 {#generate-multiple-ic}
 
