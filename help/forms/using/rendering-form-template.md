@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -76,10 +76,8 @@ HTML5表格支援三種傳遞演算參數的方法。 您可以透過URL、鍵�
 
 * **SetAttribute請求參數**:可以將渲染參數指定為鍵值對。 在SetAttribute請求參數中，參數對最終用戶不可見。 您可以將任何其他JSP的請求轉發到HTML5表單描述檔轉譯器JSP，並使用 *setAttribute* on request物件來傳遞所有轉譯參數。 此方法的優先順序最高。
 
-* **** 描述檔節點請求參數：可以將渲染參數指定為配置檔案節點的節點屬性。 在描述檔節點請求參數中，一般使用者看不到這些參數。 描述檔節點是傳送請求的節點。 要將參數指定為節點屬性，請使用CRXDE lite。
+* **描述檔節點請求參數：** 可以將渲染參數指定為配置檔案節點的節點屬性。 在描述檔節點請求參數中，一般使用者看不到這些參數。 描述檔節點是傳送請求的節點。 要將參數指定為節點屬性，請使用CRXDE lite。
 
 ### 提交參數 {#submit-parameters}
 
 HTML5表單提交資料；在AEM伺服器上執行伺服器端指令碼和web-services。 如需在AEM伺服器上執行伺服器端指令碼和web-services的參數詳細資訊，請參閱 [HTML5 Forms Service Proxy](/help/forms/using/service-proxy.md)。
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
