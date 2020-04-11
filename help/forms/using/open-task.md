@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -45,5 +45,3 @@ source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
 1. 點選工作以開啟它。
 
    您可以點選「 **檢視摘要** 」以檢視為應用程式指定的其他指示。
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
