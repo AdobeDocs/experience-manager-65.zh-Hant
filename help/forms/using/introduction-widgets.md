@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -167,7 +167,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td><p>limitLengthToVisibleArea</p> <p><strong>注意</strong>:僅適用於HTML5表單</p> </td>
-   <td>指定當文字寬度超過介面工具集寬度時，文字欄位的行為。</td>
+   <td>指定文字寬度超過介面工具集寬度時的文字欄位行為。</td>
   </tr>
  </tbody>
 </table>
@@ -186,7 +186,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>項目<br /> </td>
-   <td>要顯示為選項的對象陣列。 <br /> 每個對象包含兩個屬性-<br /> save:要保存的值，顯示：值。 <br /> </td>
+   <td>要顯示為選項的對象陣列。 每個對象包含兩個屬性-<br /> save:要保存的值，顯示：值。<br /> <br /> </td>
   </tr>
   <tr>
    <td><p>可編輯</p> <p><strong>注意</strong>:僅適用於HTML5表單。<br /> </p> </td>
@@ -212,7 +212,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <th>說明</th>
   </tr>
   <tr>
-   <td><p><em> addItem:function(itemValues)<br /> itemValues:包含顯示的物件並儲存值 <br /> {sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;保存值&gt;}</em></p> </td>
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues:包含顯示的物件並儲存值 <br /> {sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;保存值&gt;}</em></p> </td>
    <td>新增項目至清單。</td>
   </tr>
   <tr>
@@ -267,5 +267,3 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 | 個月 | 該欄位的本地化月份名稱。 |
 | 零 | 數字0的本地化文本。 |
 | clearText | 清除按鈕的本地化文字。 |
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
