@@ -10,14 +10,14 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # 在ToDo清單中顯示其他資料{#displaying-additional-data-in-todo-list}
 
-依預設，AEM Forms工作區待辦項目清單會顯示工作顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示的樣式。
+依預設，AEM Forms工作區待辦事項清單會顯示工作顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示的樣式。
 
 ![查看顯示預設配置的「HTML工作區待辦事項」頁籤](assets/html-todo-list.png)
 
@@ -149,5 +149,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    ```
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
