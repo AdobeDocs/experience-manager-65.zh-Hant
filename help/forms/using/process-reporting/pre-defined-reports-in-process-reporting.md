@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d93375e-ec37-4445-96ea-d315676787b4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -123,5 +123,3 @@ AEM Forms Process Reporting隨附下列現 *成可用的報表* :
    * **刷新**:在儲存區中重新整理含有最新資料的報表
    * **變更圖例顏色**:選擇並變更報表圖例的顏色
    * **匯出至CSV**:將報表中的資料匯出並下載至逗號分隔的檔案
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
