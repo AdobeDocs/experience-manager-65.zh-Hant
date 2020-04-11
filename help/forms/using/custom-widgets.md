@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -100,5 +100,3 @@ window.formBridge.registerConfig("widgetConfig",
 | 具有名稱欄位名的特定欄位 | 識別碼：&quot;div.fieldname&quot; | 所有名稱為「fieldname」的欄位都會使用介面工具集呈現。 |
 | 所有類型為「type」的欄位（其中類型為NumericField、DateField等）。: | 識別碼：&quot;div.type&quot; | 對於Timefield和DateTimeField，類型為textfield，因為不支援這些欄位。 |
 | 所有欄位 | 識別碼：&quot;div.field&quot; |  |
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
