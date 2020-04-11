@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -49,7 +49,7 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
    * **[!UICONTROL 後處理]**:選擇要觸發的工作流的名稱。 當您選取AEM工作流程時，請提供「附件路徑」、「版面路徑」、「PDF路徑」、「列印資料路徑」和「Web資料路徑」。
    * **[!UICONTROL 標籤]**:選擇要套用至互動式通訊的標籤。 您也可以輸入新的／自訂標籤名稱，然後按Enter鍵建立它。
    * **[!UICONTROL 作者]**：作者名稱會自動取自已登入使用者的使用者名稱。
-   * **** 發佈日期：輸入發佈互動式通訊的日期。
+   * **[!UICONTROL 發佈日期：]** 輸入發佈互動式通訊的日期。
    * **[!UICONTROL 取消發佈日期]**:輸入取消發佈互動式通訊的日期。
 
 1. 點選「 **[!UICONTROL 下一步]**」。 此時會出現指定列印和網頁頻道詳細資訊的畫面。
@@ -141,15 +141,15 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
 
 ![未系結變數](assets/df_unbound_variable_new.png)
 
-點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](https://helpx.adobe.com/content/dam/help/images/en/edit.png) 物件或變數旁的編輯（編輯）圖示來編輯屬性。
+點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](assets/edit.svg) 物件或變數旁的編輯（編輯）圖示來編輯屬性。
 
 1. 若要設定變數的系結，請點選變數並選取 ![configure_icon](assets/configure_icon.png) (Configure)，然後在側欄的「屬性」面板中設定系結屬性。
 
    * **無**:代理將填寫變數的值。
    * **文字片段**:如果選中此選項，您可以瀏覽並選擇文本文檔片段，其內容將呈現在欄位中。 只有這些文字檔案片段可以系結至其中沒有變數的變數。
    * **資料模型物件**:選擇在欄位中填入其值的表單資料模型屬性。
-   * **** 預設值：您可以使用此欄位來定義變數的預設值。 當您預覽「互動式通訊」或在「代理」使用者介面中時，就會顯示該值。
-   * **** 顯示模式：您也可以定義變數的顯示格式。 從「類型」( **Type** )下拉式清單中選取任何預先定義的選項，以套用顯示格式至變數。 選擇 **「自定義** 」(Custom)可定義清單中不可用的顯示模式。 如需詳細資訊，請參 [閱資料顯示模式](../../forms/using/create-interactive-communication.md#datadisplaypatterns)。
+   * **預設值：** 您可以使用此欄位來定義變數的預設值。 當您預覽「互動式通訊」或在「代理」使用者介面中時，就會顯示該值。
+   * **顯示模式：** 您也可以定義變數的顯示格式。 從「類型」( **Type** )下拉式清單中選取任何預先定義的選項，以套用顯示格式至變數。 選擇 **「自定義** 」(Custom)可定義清單中不可用的顯示模式。 如需詳細資訊，請參 [閱資料顯示模式](../../forms/using/create-interactive-communication.md#datadisplaypatterns)。
    導覽至 [變數和資料模型物件](../../forms/using/create-interactive-communication.md#hiddenvariables) ，以設定檔案片段中隱藏變數的系結。
 
    您也可以拖放資料來源元素或文字檔案片段，以設定變數的系結。  若要建立與任何資料來源元素的系結，請選取「 **Data Sources** 」標籤，並將元素拖放至變數名稱。 資料來源元素和變數必須是相同類型，才能成功設定系結。 如果您將資料來源元素拖放至已系結的變數，新元素會取代先前的元素，以建立與變數的新系結。 同樣地，請選取「 **資產** 」標籤，並將文字檔案片段拖放至變數名稱，以設定它們之間的系結。 文字檔案片段不得包含任何變數。
@@ -160,7 +160,7 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
 
    如需版面片段的詳細資訊，請參閱 [檔案片段](/help/forms/using/document-fragments.md)。
 
-1. 在選取列印渠道後，「資產 **[!UICONTROL 」索引標籤中]** ，會將篩選套用至顯示影像。 將所需影像拖放至互動式通訊，例如公司標誌。
+1. 在選取列印渠道後，「資產 **[!UICONTROL 」標籤中]** ，會將篩選套用至顯示影像。 將所需影像拖放至互動式通訊，例如公司標誌。
 
    此外，在互動式通訊中管理下列項目：
 
@@ -182,7 +182,7 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
 
    ![網路頻道資產](assets/webchannelassets.png)
 
-   點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](https://helpx.adobe.com/content/dam/help/images/en/edit.png) 物件或變數旁的編輯（編輯）圖示來編輯屬性。 此外，對於使用列印頻道在 [Web頻道中自動產生的檔案片段](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) ，請使用每個資料模型物件和變數旁的 ![](assets/cancelinheritance.png) （取消繼承）圖示來取消繼承 [](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) ，並可加以編輯。
+   點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](assets/edit.svg) 物件或變數旁的編輯（編輯）圖示來編輯屬性。 此外，對於使用列印頻道在 [Web頻道中自動產生的檔案片段](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) ，請使用每個資料模型物件和變數旁的 ![](assets/cancelinheritance.png) （取消繼承）圖示來取消繼承 [](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) ，並可加以編輯。
 
 1. 若要在選取網頁頻道時，在網頁頻道中新增其他元件，請點選「元 **[!UICONTROL 件]**」。 視需要將元件拖放至互動式通訊的網路頻道，然後繼續進行設定。
 
@@ -240,7 +240,7 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
    * **[!UICONTROL 要附加的檔案]**:點選 **[!UICONTROL 「新增]** 」並瀏覽以選取要附加的檔案，並指定下列項目：
 
       * **[!UICONTROL 依預設將此檔案附加至檔案]**:如果附件不是「強制」，則可以更改此選項。
-      * **** 強制：代理將無法刪除代理UI中的附件。
+      * **[!UICONTROL 強制：]** 代理將無法刪除代理UI中的附件。
    ![附件](assets/attachfiles.png)
 
 1. 點選「 **[!UICONTROL 完成]**」。
@@ -376,7 +376,7 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
 
 ![元件工具列](assets/component_toolbar_table_row_new.png)
 
-******** 答：添加行 **B。刪除**&#x200B;行C.**上**&#x200B;移D。向下移動
+**答：** 添加行 **B。** 刪除 **行C.** 上 **移D。** 向下移動
 
 #### 在表格儲存格中新增或編輯文字 {#addedittexttable}
 
@@ -393,7 +393,7 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
 
 #### 為表格儲存格中的文字建立超連結 {#createhyperlinktable}
 
-1. 在表格儲存格中選取預設文字方塊，然後點選 ![](https://helpx.adobe.com/content/dam/help/images/en/edit.png) （編輯）。
+1. 在表格儲存格中選取預設文字方塊，然後點選 ![](assets/edit.svg) （編輯）。
 1. 選取表格儲存格中的文字，並點選「超連結」圖示。
 1. 在「路徑」欄位中指 **定URL** 。
 1. 點選 ![](assets/done_icon.png) 以儲存超連結屬性。
@@ -461,7 +461,7 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
 1. 在「屬 **性** 」頁面上，選 **取「渠道** 」標籤。
 1. 選取「 **Web** 」核取方塊，並選取「Web頻道」的範本。
 1. 選擇 **使用打印作為Web渠道的主要內容** ，以啟用Web渠道和打印渠道之間的同步。
-1. 點選 **「儲存並關閉** 」以儲存變更。
+1. Tap **Save &amp; Close** to save the changes.
 
    同樣地，您也可以點選「 **頻道** 」標籤上的「網頁」核取方 **** 塊，從「互動式通訊」中刪除網頁頻道。
 
@@ -573,17 +573,17 @@ source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
 
 點選元件可檢視下列選項：
 
-* **** 複製：複製元件並貼至「互動式通訊」的其他位置。
-* **** 剪下：在「互動式通訊」中，將元件從一個位置移至另一個位置。
-* **** 插入元件：在選定元件上方插入元件。
-* **** 貼上：使用上述選項貼上您剪切或複製的元件。
-* **** 群組：如果要剪下、複製或貼上多個元件，請選擇多個元件。
-* **** 父級：選擇元件的父代。
-* **** 查看SOM表達式：查看 [元件的SOM表達式](../../forms/using/using-som-expressions-adaptive-forms.md) 。
+* **複製：** 複製元件並貼至「互動式通訊」的其他位置。
+* **剪下：** 在「互動式通訊」中，將元件從一個位置移至另一個位置。
+* **插入元件：** 在選定元件上方插入元件。
+* **貼上：** 使用上述選項貼上您剪切或複製的元件。
+* **群組：** 如果要剪下、複製或貼上多個元件，請選擇多個元件。
+* **父級：** 選擇元件的父代。
+* **查看SOM表達式：** 查看 [元件的SOM表達式](../../forms/using/using-som-expressions-adaptive-forms.md) 。
 
-* **** 在面板中對對象進行分組：將面板中的元件分組，以便能夠同時對這些元件執行操作。 如需詳細資訊，請參 **[閱「面板」中的「群組物件」](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**。
+* **在面板中對對象進行分組：** 將面板中的元件分組，以便能夠同時對這些元件執行操作。 如需詳細資訊，請參 **[閱「面板」中的「群組物件」](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**。
 
-* **** 取消繼承：取 [消目標區域](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) 內元件的繼承以進行編輯。
+* **取消繼承：** 取 [消目標區域](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) 內元件的繼承以進行編輯。
 
 ### Group objects in Panel {#groupobjectspanel}
 
