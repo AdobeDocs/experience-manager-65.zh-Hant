@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b0a544e2-2ce4-48e2-a721-82f481d36004
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -188,7 +188,7 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
 
    ![process_details](assets/process_details.png)
 
-   **** 左面板：顯示所選進程的以下詳細資訊：
+   **左面板：** 顯示所選進程的以下詳細資訊：
 
    * 進程名稱
    * 流程建立日期時間
@@ -196,7 +196,7 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
    * 處理持續時間
    * 進程狀態
    * 進程啟動器
-   **** 右上方面板：顯示組成選定進程的任務的以下詳細資訊：
+   **右上方面板：** 顯示組成選定進程的任務的以下詳細資訊：
 
    * 任務ID
    * 任務名稱
@@ -206,7 +206,7 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
    * 任務完成日期時間
    * 任務持續時間
    * 任務狀態
-   **** 右下面板：顯示所選進程的進程歷史記錄的以下詳細資訊：
+   **右下面板：** 顯示所選進程的進程歷史記錄的以下詳細資訊：
 
    * 進程名稱
    * 進程啟動器
@@ -217,7 +217,7 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
 
    ![task_details](assets/task_details.png)
 
-   **** 左面板：顯示所選任務的以下詳細資訊：
+   **左面板：** 顯示所選任務的以下詳細資訊：
 
    * 任務名稱
    * 此任務所屬的進程ID
@@ -227,13 +227,13 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
    * 任務持續時間
    * 任務狀態
    * 選定的任務路由
-   **** 右上方面板：顯示組成選定任務的表單的以下詳細資訊：
+   **右上方面板：** 顯示組成選定任務的表單的以下詳細資訊：
 
    * Foprm ID
    * 表單建立日期時間
    * 表單更新日期時間
    * 表單範本Url
-   **** 右下面板：顯示所選任務的流程歷史記錄的以下詳細資訊：
+   **右下面板：** 顯示所選任務的流程歷史記錄的以下詳細資訊：
 
    * 任務分配類型
    * 任務所有者
@@ -266,5 +266,3 @@ source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
    對於流程，查詢結果顯示流程中包含的任務的詳細資訊。
 
    對於任務，查詢結果將顯示任務中包含的表單的詳細資訊。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
