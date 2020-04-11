@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ac0a281f-f589-4a70-9bc7-1a23e054b02f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -50,5 +50,3 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    >[!NOTE]
    >
    >為所有支援的語言新增對應的金鑰值對。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
