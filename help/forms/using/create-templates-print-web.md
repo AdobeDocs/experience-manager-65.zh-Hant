@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -84,14 +84,14 @@ source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
    * BillDetails
    * 客戶詳細資訊
    * BillSummary
-   * 摘要——選擇子 **表單** (Subform **)頁籤，然後從此子表單的「內容」(Content** )下拉清單中選擇「定位」(Positioned **** )。 在「摘要」子表單中插入 **以下子表** 單。
+   * 摘要——選擇子 **表單** (Subform **)頁籤，然後從此子表單的「內容** 」(Content **** )下拉清單中選擇「定位」(Positioned)。 在「摘要」子表單中插入 **以下子表** 單。
 
       * 費用
       * 圖表
    * ItemisedCalls
    * PayNow
    * ValueAddedServices
-   為節省時間，您也可以複製並貼上現有的子表單，以建立新的子表單。
+   為節省時間，您也可以複製並貼上現有的子表單以建立新的子表單。
 
    要將 **Charts** 子表單移到Charges子表單的右側，請從左窗格中選擇 **Charts** 子表單，選擇 **Layout** 頁籤，然後為 **** XAnchor欄位指定值。 值必須大於Charges子表單的 **Width** 欄位 **的值** 。 選擇「 **費用** 」子表單，然後選擇「 **佈局** 」頁籤以查看「寬 **度** 」欄位的值。
 
@@ -136,7 +136,7 @@ source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
 
    同樣地，將 **Cell2**、 **Cell3、Cell3**、 **Cell4、TimeCell4、** TimeCell Number、CellNumber、CellDeserCharges分別重新命名為Cell2、 **Cell3、Cell3、Cell4、****************** Cell5。
 
-1. 按一下「設計器」( **View** )中的「頁首」(Header)欄位，並將它們更名為「 **Time**」（時間）、「 **Number**」（編號）、「Acchirgs」（持續時間）和「Charges ********」（收費）。
+1. 按一下「設計器」( **View** )中的「頁首」(Header)欄位，並將它們更名為 **Time**、 **Number**、Duration和Charges ******** Charges。
 
    ![版面片段](assets/layout_fragment_print_new.png)
 
@@ -148,7 +148,7 @@ source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
 
    ![版面片段的文字欄位](assets/layout_fragment_print_text_field_new.png)
 
-   同樣地，將「文本字 **段** 」元件拖放到「時間 ****」、「數 **字」、「持續時********** 間」和「收費行」中。
+   同樣地，將「文本字 **段** 」元件拖放到「時間 ****」、「數 **字」、「持續時**&#x200B;間」和「 ******** 收費行」中。
 
 1. 選擇 **「檔案** 」>「另 **** 存新檔」，將檔案保存到本地檔案系統：
 
@@ -173,9 +173,9 @@ source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
 
 執行以下步驟為可編輯模板建立資料夾：
 
-1. 點選「 **工具** >設 ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) 定瀏覽器 ****」。
+1. 點選「 **工具** >設 ![](assets/hammer-icon.svg) 定瀏覽器 ****」。
 1. 在「設定瀏覽器」頁面中，點選「 **建立**」。
-1. 在「創 **建配置** 」對話框中，指定 **Create_First_IC_templates** 作為資料夾的標題，選中「 **Editable Templates**」，然後 ****&#x200B;點選「建立」。
+1. 在「創 **建配置** 」對話框中，指定 **Create_First_IC_templates** 作為資料夾的標題，選中「可編輯模板 **」，然後******&#x200B;點選「建立」。
 
    ![設定網頁範本](assets/create_first_ic_web_template_new.png)
 
@@ -211,7 +211,7 @@ source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
 
    ![範本編輯器](assets/template_editor_initial_content_new.png)
 
-1. 點選 **「Root Panel** （根面板）」，然 **** 後點選+以檢視您可新增至範本的元件清單。
+1. 點選 **「根面板** 」，然後點選 **** +以檢視可新增至範本的元件清單。
 1. 從清 **單中選擇** 「面板」，在「根面板」上方新 **增面板**。
 1. 在左窗格 **中選擇** 「內容」標籤。 在步驟8中新增的新面板會顯示在內容樹 **的「根面板** 」下方。
 
@@ -248,7 +248,7 @@ source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
 
 執行以下步驟以啟用Web模板：
 
-1. 點選「 **工具** >范 ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) 本」 ****。
+1. 點選「 **工具** >范 ![](assets/hammer-icon.svg) 本」 ****。
 1. 導覽至 **Create_First_IC_Web_Template** 範本，選取範本，然後點選「 **啟用」**。
 1. 標籤 **再次啟** 用以確認。
 
