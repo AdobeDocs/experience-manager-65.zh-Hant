@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -220,7 +220,7 @@ AEM Forms環境包含環境設定時的資料。
 
 「流程報告」的用戶介面基於瀏覽器。
 
-在設定「流程報表」後，您可以在AEM Forms安裝中的下列位置開始使用「流程報表」:
+在設定「流程報表」後，您可以在AEM Forms安裝的下列位置開始使用「流程報表」:
 
 `https://<server>:<port>/lc/pr`
 
@@ -279,5 +279,3 @@ AEM Forms環境包含環境設定時的資料。
 * **[!UICONTROL 同步]**:將內嵌的Process Reporting儲存庫與AEM Forms資料庫同步。
 * **[!UICONTROL 說明]**:查看有關流程報告的幫助文檔。
 * **[!UICONTROL 註銷]**:註銷進程報告
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
