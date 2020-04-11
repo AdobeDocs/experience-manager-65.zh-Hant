@@ -8,7 +8,7 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -57,11 +57,11 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 ![具有預設主題的最適化表單](assets/default-adaptive-form.png)
 
-**** 圖：具有 *預設主題的最適化表單*
+**圖：** 具有 *預設主題的最適化表單*
 
 ![具有調查主題的最適化表單](assets/adaptive-form-with-survey-theme.png)
 
-**** 圖：具有 *調查主題的最適化表單*
+**圖：** 具有 *調查主題的最適化表單*
 
 ## 步驟2:更新您的最適化表單 {#step-update-your-adaptive-form}
 
@@ -99,8 +99,8 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 1. 登入AEM作者例項，並導覽至 **Adobe Experience Manager** > **Forms** >主 **題**。 預設URL為 [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
 1. 點選「 **[!UICONTROL 建立]** 」並選 **[!UICONTROL 取「主題」]**。 此時將顯示「建立主題」頁，其中包含建立主題所需的欄位。 「標題」和「名稱」欄位是必填欄位：
 
-   * **** 標題：指定主題的標題。 例如，全 **域主題。** 標題可協助您從主題清單中識別主題。
-   * **** 名稱：指定主題的名稱。 例如， **Global-Theme。** 在儲存庫中建立具有指定名稱的節點。 當您開始輸入標題時，系統會自動產生名稱欄位的值。 您可以變更建議的值。 名稱欄位只能包含英數字元、連字型大小和底線。 所有無效輸入都會以連字型大小取代。
+   * **標題：** 指定主題的標題。 例如，全 **域主題。** 標題可協助您從主題清單中識別主題。
+   * **名稱：** 指定主題的名稱。 例如， **Global-Theme。** 在儲存庫中建立具有指定名稱的節點。 當您開始輸入標題時，系統會自動產生名稱欄位的值。 您可以變更建議的值。 名稱欄位只能包含英數字元、連字型大小和底線。 所有無效輸入都會以連字型大小取代。
 
 1. 點選「 **建立**」。 將建立一個主題，並出現一個用於開啟表單進行編輯的對話框。 點選 **「開啟** 」，在新標籤中開啟新建立的主題。 主題在主題編輯器中開啟。 對於樣式，主題編輯器會使用AEM Forms隨附的現成可用最適化表單。
 
@@ -110,17 +110,17 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
    ![自訂主題](assets/custom-theme.png)
 
-   **** 圖：具 *有shipping-add-update-form自適應表單的主題編輯器*
+   **圖：** 具 *有shipping-add-update-form自適應表單的主題編輯器*
 
    ![create-a-theme](assets/create-a-theme.png)
 
-   **** 圖：具有 *預設表單的最適化表單*
+   **圖：** 具有 *預設表單的最適化表單*
 
 ### 樣式頁首和頁尾 {#style-header-and-footer}
 
 頁首和頁尾為最適化表單提供一致且獨特的外觀。 一般而言，頁首包含組織的標誌和名稱，頁尾包含版權資訊，而且這些資訊在組織的多種形式上都相同。 要設定發運地址添加更新表單自適應表單的頁眉和頁腳的樣式，請執行以下操作：
 
-1. 導覽「選 **擇器** 」面板中的「頁首 **>文字** 」選項。 「選擇器」面板位於主題編輯器的左側。 如果面板不可見，請點選「切換 ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/toggle-side-panel.png) 側面板」。
+1. 導覽「選 **擇器** 」面板中的「頁首 **>文字** 」選項。 「選擇器」面板位於主題編輯器的左側。 如果面板不可見，請點選「切換 ![](assets/toggle-side-panel.png) 側面板」。
 
 1. 在 **Text** accordion中設定下列屬性，並點 ![選aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
@@ -156,7 +156,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
      <li>頂部：1.5rem</li> 
      <li>底部：-35px</li> 
      <li>左：1rem<strong><br /></strong></li> 
-    </ul> <p><strong></strong> 提示：點選連 <img src="assets/link.png"> 結圖示，為每個欄位提供不同的值。<br /> </p> </td> 
+    </ul> <p><strong>提示：</strong> 點選連 <img src="assets/link.png"> 結圖示，為每個欄位提供不同的值。<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>高度</td> 
@@ -303,7 +303,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
    | 浮點 | 左 |
    | 寬度 | 10% |
 
-1. 點選「 **Government approved address proof** (政府機關核准的地址證明 ![)」選項，然後點](assets/aem_6_3_edit.png)選「aem_6_3_editicon」。 設定下列屬性：
+1. 點選「 **Government approved address proof** (政府機關核准的位址證明 ![)」選項，然後點](assets/aem_6_3_edit.png)選「aem_6_3_editicon」。 設定下列屬性：
 
 <table> 
  <tbody> 
@@ -440,7 +440,7 @@ Adobe Typekit是網頁字型服務。 您可以設定並使用具有最適化表
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) Typekit現在稱為Adobe Fonts，並隨附於Creative cloud和其他訂閱。 [了解更多](https://fonts.adobe.com/).
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) Typekit現在稱為Adobe Fonts，並隨附於Creative Cloud和其他訂閱。 [了解更多](https://fonts.adobe.com/).
 
 1. 建立 [Adobe Typekit帳戶](https://typekit.com/) 、建立套件、將Myriad Pro字型加入套件、發佈套件並取得套件ID。 您必須以最適化表單使用Adobe Typekit字型（Web字型）。
 1. 在AEM Forms伺服器中，導覽至 ![adobe Experience Manager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** Manager **Hammer Tools** > Deployment ![](assets/hammer.png)******** Cloud Services。 在「雲端服務」頁面上，導覽至「第 **三方服務** > **Typekit**」，然後按一下「Typekit」下的「 **Configure** Now」（立即設定）。 如果配置已可用，請按一下+按鈕以建立新實例。
