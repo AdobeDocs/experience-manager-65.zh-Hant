@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 9a3c6ab4-8bb9-40c7-8c56-59153b364887
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -45,8 +45,6 @@ AEM Forms應用程式離線服務可識別表單中使用的資源。 AEM Forms�
    * **清除快取**:清除表單相關性的伺服器端快取。
    * **重設配置**:重設AEM Forms應用程式離線設定。
    * **快取有效性**:指定伺服器端離線快取的有效期。
-   * **資源觀察路徑**:指定離線服務監視資源更改的路徑。 如果指定路徑中發生任何變更，則會更新所有相依表單的離線快取。 例如， `/etc/clientlibs/fd,/content/dam/images`。
+   * **資源觀察路徑**:指定離線服務監視資源更改的路徑。 如果指定路徑中發生任何變更，則會更新所有相依表單的離線快取。 For example, `/etc/clientlibs/fd,/content/dam/images`.
 
 1. 在「手動資 **源快取** 」頁籤中，指定無法標識的表單相關性離線服務。 您可以指定資源，例如從JavaScript中載入的影像。 AEM Forms應用程式也會針對離線模式下載這些資源。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
