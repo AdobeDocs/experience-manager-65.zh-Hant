@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: a6ff50df-273d-48f7-b0c6-0e69e900b97f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -76,5 +76,3 @@ QueryDataServlet服務接受來自Process Reporting用戶介面的查詢。
 您可以建立自己的自訂報表，並在「流程報表」使用者介面的「自訂報表」標籤中顯示這些報表。
 
 如需建立自訂報表的步驟，請參閱「在流程報表中自訂報表」文章中的「 [若要建立自訂報表」](/help/forms/using/process-reporting/process-reporting-custom-reports.md)。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
