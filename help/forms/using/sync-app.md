@@ -11,7 +11,7 @@ topic-tags: forms-app
 discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -46,5 +46,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 * 在。js中，對processOfflineSubmittedSavedTasks(...)函式的調用將已保存／已提交的任務發送到伺服器。 它還可處理同步過程中的任何錯誤或衝突。 如果提交任務失敗，應用程式上的任務會標示為失敗。 此外，該任務仍保留在您的Outbox中。
 * syncSubmittedTask()和syncSavedTask()函式對單個任務執行操作。
 * 當用戶選擇將離線狀態同步到伺服器或通過後台線程自動同步後，任務清單元件將啟動對processOfflineSubmittedSavedTasks()函式的調用。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
