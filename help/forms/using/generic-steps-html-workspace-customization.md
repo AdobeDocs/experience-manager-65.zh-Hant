@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -98,5 +98,3 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 按一 **[!UICONTROL 下「全部儲存]**」、清除快取並重新整理AEM Forms工作區。
 
    存取URL並 `https://'[server]:[port]'/lc/ws` 使用管理員／密碼憑證登入。 瀏覽器會重新導向 `https://'[server]:[port]'/lc/apps/ws/index.html`至。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
