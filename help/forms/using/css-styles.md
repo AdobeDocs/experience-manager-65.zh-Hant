@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -248,5 +248,3 @@ AEM Forms Designer支援不同類型的欄位，例如NumericField、DecimalFiel
 `Styling Fields with Validation Errors`
 
 當欄位驗證失敗時，介面工具集的樣式會變更。 此樣式變更是透過在Widget元件上套用CSS **類別WidgetError** 來完成。 若要修改預設樣式，請覆寫 **widgetError類** 。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
