@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ef5c957a-9d5a-42be-ad85-bdca876f56bc
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -26,5 +26,3 @@ AEM Forms工作區是全新的工作區。 以下是AEM Forms工作區中無法�
 * 「AEM Forms」工作區不提供「管理追蹤頁面的欄標題」選項。
 * 在AEM Forms工作區中，不會接受為使用者工作設定核准容器或自訂容器。
 * 搜尋範本的選項可在「追蹤」標籤中使用，但在「目標」標籤中則不提供。
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
