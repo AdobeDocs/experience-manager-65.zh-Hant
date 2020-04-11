@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: ba79479b-4159-4a39-95eb-2285e7ece9d4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -45,5 +45,3 @@ source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
 應用程式上對「首頁」畫面設定所做的變更，會對目前已記錄的使用者或目前行動裝置上的使用者產生「首頁」畫面。
 
 不過，在HTML Workspace中所做的變更會影響所有登入AEM Forms伺服器的AEM Forms應用程式使用者。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
