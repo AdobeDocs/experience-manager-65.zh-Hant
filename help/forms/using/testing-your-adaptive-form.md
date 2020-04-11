@@ -8,7 +8,7 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -210,8 +210,8 @@ AEM Forms提供測試架構Calvin，以自動測試您的調適性表單。 使�
 
 測試套裝可以有多個測試案例。 您可以一次或個別執行測試套裝中的所有測試案例。 當您執行測試時，圖示會指出結果：
 
-* 複選標籤圖示表示通過的測試： ![](https://helpx.adobe.com/content/dam/help/icons/Checkmark.png)
-* 「X」圖示表示測試失敗： ![](https://helpx.adobe.com/content/dam/help/icons/Cross.png)
+* 複選標籤圖示表示通過的測試： ![](assets/save_icon.svg)
+* 「X」圖示表示測試失敗： ![](assets/close-icon.svg)
 
 1. 導覽至「AEM圖示>工 **[!UICONTROL 具]**> **[!UICONTROL 作業]**>測 **[!UICONTROL 試」]**
 1. 若要執行測試套裝的所有測試：
