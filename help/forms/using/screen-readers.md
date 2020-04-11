@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 HTML5表單元件會將XFA表單範本轉換為HTML5格式。 所有支援HTML5的標準瀏覽器都可轉換這些表格。 為支援跨PDF和HTML5表單的類似資料擷取體驗，PDF表單的版面會保留在HTML5表單中。
 
-HTML5表格使用標準的HTML結構，可讓HTML的一般協助工具搭配這些表格使用。 如果表單是根據可存取表單的最佳實務設計，則可搭配任何支援的螢幕閱讀程式使用。 此外，這類表單可用於鍵盤導覽。
+HTML5表格使用標準的HTML結構，可讓HTML的一般協助工具與這些表格搭配使用。 如果表單是根據可存取表單的最佳實務設計，則可搭配任何支援的螢幕閱讀程式使用。 此外，這類表單可用於鍵盤導覽。
 
 ## 協助工具標準 {#accessibility-standards}
 
@@ -26,8 +26,8 @@ HTML5表格符合第508節中已知例外的協助工具規定。 如需詳 [細
 
 ## HTML5表單的認證螢幕閱讀程式 {#certified-screen-readers-for-html-forms}
 
-* Microsoft windows上的JAWS 14.0
-* Mac OS x和iPad上的VoiceOver
+* Microsoft Windows上的JAWS 14.0
+* Mac OS X和iPad上的VoiceOver
 
 ### 《大白鯊》 {#jaws}
 
@@ -43,5 +43,3 @@ HTML5表格支援Voice over的所有預設按鍵和手勢。 有關設定和使�
 * **（僅限內部Explorer 9）** HTML5表單中的「日期選擇器」控制項無法透過鍵盤完全存取。 在「日期選擇器」控制項中，如果您多次按向上／向下鍵，「日期選擇器」控制項會關閉，焦點會移至下一個／最後一個欄位。
 
 * iPad safari上的日期介面工具集上的VoiceOver無法偵測到方向鍵。
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
