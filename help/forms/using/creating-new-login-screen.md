@@ -10,14 +10,14 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # 建立新的登入畫面{#creating-a-new-login-screen}
 
-您可以修改使用AEM Forms登入畫面的所有AEM Forms模組的登入畫面。 例如，這些修改會影響Forms manager和AEM Forms工作區的登入畫面。
+您可以修改使用AEM Forms登入畫面的所有AEM Forms模組的登入畫面。 例如，這些修改會影響Forms Manager和AEM Forms工作區的登入畫面。
 
 ## 先決條件 {#prerequisite}
 
@@ -48,7 +48,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 1. 請刪除內部除一 `i18n` 個資料夾外的所有資料夾 `en`。
 1. 在資料夾上 `en`，執行以下操作：
 
-   1. 將資料夾更名為要支援的區域設定名稱。 例如， `ar`。
+   1. 將資料夾更名為要支援的區域設定名稱。 For example, `ar`.
    1. 將屬性 `jcr:language` 值變 `ar`更為(檔 `ar` 案夾)。
    >[!NOTE]
    >
@@ -296,5 +296,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    
    <div class="newLginContainerBkg">
    ```
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
