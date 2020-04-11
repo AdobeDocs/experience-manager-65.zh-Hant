@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -119,7 +119,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>version</code></td>
    <td>傳回代表目前應用程式版本號碼的字串。</td>
-   <td>它會傳回表單版本。</td>
+   <td>它會傳回表單的版本。</td>
   </tr>
   <tr>
    <td><code>calculationsEnabled</code></td>
@@ -149,7 +149,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>resetdata</code></td>
    <td>將檔案中的欄位重設為預設值。</td>
-   <td>清除具有合併資料的表單中的所有資料，而非將其還原為預設值。</td>
+   <td>清除具有合併資料的表單中的所有資料，而不是將其還原為預設值。</td>
   </tr>
   <tr>
    <td><code>messageBox</code></td>
@@ -1140,7 +1140,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
      <li>邏輯（及／或）</li>
      <li>比較（大／小/等）</li>
     </ul> </td>
-   <td>A或1<br /> 1 &lt;&gt; 2<br /> A NE B<br /> a或1<br /><br /> 1 &lt;&gt; 2 A NE B</td>
+   <td>A或1<br /> 1 &lt;&gt; 2<br /> A NE B<br /> A或1<br /><br /> 1 &lt;&gt; 2 A NE B</td>
   </tr>
   <tr>
    <td>If運算式</td>
@@ -1213,7 +1213,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
    1. Ppmt()
    1. Pv()
    1. Rate()
-   1. Term()
+   1. 詞彙()
 
 1. **邏輯函式**
 
@@ -1279,7 +1279,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   </tr>
   <tr>
    <td>app.setInterval()</td>
-   <td>指定JavaScript指令碼和時段。 每次經過該時段時，就會執行該指令碼。 此方法的傳回值必須保存在JavaScript變數中。 否則，間隔對象將受到廢棄項目收集的約束，這將導致時鐘停止。 要終止週期性執行，請將返回的間隔對象傳遞給clearInterval。</td>
+   <td>指定JavaScript指令碼和時段。 每次經過時段時，就會執行指令碼。 此方法的傳回值必須保存在JavaScript變數中。 否則，間隔對象將受到廢棄項目收集的約束，這將導致時鐘停止。 要終止週期性執行，請將返回的間隔對象傳遞給clearInterval。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1351,5 +1351,3 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
 >[!NOTE]
 >
 >HTML5表格會在用戶端（瀏覽器）上轉譯。 建議使用用戶端驗證 **和計算****指令碼** ，而非伺服器端指令碼。
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
