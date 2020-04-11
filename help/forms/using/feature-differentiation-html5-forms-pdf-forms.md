@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -49,13 +49,13 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   </tr>
   <tr>
    <td>分頁<br /> </td>
-   <td><p>HTML5表格會分成面板和方塊，讓其外觀與PDF表格類似。 頁面大小會動態計算。 如果HTML5表單中的頁面內容全部被刪除或標示為隱藏，則空白頁面會隱藏，空白頁面上方和下方的頁面之間不會顯示空白（空白空間）。</p> <p>如果資料合併或指令碼將內容新增至頁面，則頁面的長度會擴充以容納新新增的內容。 表單中不會新增任何頁面，以容納新增的內容。 </p> <p><strong></strong> 注意：當HTML5表單中的頁面內容全部刪除或標示為隱藏時，空白頁面（空白空間）會在第1頁和第2頁之間，但不會在其他頁面之間顯示。</p> </td>
+   <td><p>HTML5表格會分成面板和方塊，讓其外觀與PDF表格類似。 頁面大小會動態計算。 如果HTML5表單中的頁面內容全部被刪除或標示為隱藏，則空白頁面會隱藏，空白頁面上方和下方的頁面之間不會顯示空白（空白空間）。</p> <p>如果資料合併或指令碼將內容新增至頁面，則頁面的長度會擴充以容納新新增的內容。 表單中不會新增任何頁面，以容納新增的內容。 </p> <p><strong>注意：</strong> 當HTML5表單中的頁面內容全部刪除或標示為隱藏時，空白頁面（空白空間）會在第1頁和第2頁之間，但不會在其他頁面之間顯示。</p> </td>
    <td>PDF中的分頁取決於合併的資料內容或使用者內容，而且會根據此內容增加／減少頁數。</td>
   </tr>
   <tr>
    <td>頁首／頁尾 </td>
-   <td>支援。 <br /> 由 <br /> 於HTML5行動表單不支援分頁，因此頁首和頁尾只會顯示一次。 不過，您可以在版面中設定這些表格，以便在行動表單預覽的多個位置顯示。<br /> </td>
-   <td>支援。</td>
+   <td>支援. <br /> 由 <br /> 於HTML5行動表單不支援分頁，因此頁首和頁尾只會顯示一次。 不過，您可以在版面中設定這些表格，以便在行動表單預覽的多個位置顯示。<br /> </td>
+   <td>支援.</td>
   </tr>
   <tr>
    <td>自訂Widget</td>
@@ -81,5 +81,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 </table>
 
 <!--Follow the best practices to enable a form template for HTML5 renditions and ensure that the behavior and appearance of HTML5 forms and XFA-based PDF is consistent. For detailed list of best practices, see [Best practices to design an HTML5 form.](/help/forms/using/best-practices-design-html5-forms.md)-->
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
