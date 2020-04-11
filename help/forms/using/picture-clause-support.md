@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -109,7 +109,7 @@ HTML5表格支援數值圖片符號。 不過，PDF表單和HTML表單的支援�
 * num.integer{}
 * num.decimal{}
 * num.currency{}
-* num.%{}
+* num.percent{}
 * num{Numeric Picture子句符號}
 
 <table>
@@ -210,5 +210,3 @@ HTML5表單支援下列Text Picture子句運算式：
 | O | 單一英數字元。 |
 | 0（零） | 單一英數字元。 |
 | 9 | 一位數。 |
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
