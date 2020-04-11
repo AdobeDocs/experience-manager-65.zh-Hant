@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -116,5 +116,3 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 ## 預覽儲存庫中的表單 {#html-preview-of-forms-in-forms-manager}
 
 在AEM Forms中，您可以在儲存庫中預覽表單和檔案。 預覽功能有助於確切瞭解表單的外觀和行為方式，讓使用者也能使用。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
