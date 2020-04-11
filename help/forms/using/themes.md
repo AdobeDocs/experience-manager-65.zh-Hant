@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -294,7 +294,7 @@ AEM Forms中的主題支援在表單和互動式通訊的面板版面中設定�
 
 當您為樣式提供自訂名稱時，樣式會系結至主題，而不再適用於其他主題。 要刪除保存的樣式：
 
-1. 在「畫布」工具列上，按一 **下「主題選項** >管 ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/theme-options.png) 理樣式」 ****。
+1. 在「畫布」工具列上，按一 **下「主題選項** >管 ![](assets/theme-options.png) 理樣式」 ****。
 1. 在「管理樣式」對話方塊中，選取儲存的樣式，按一下「刪 **除」**。
 
    ![刪除保存的樣式](assets/manage-styles.png)
