@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e83ed7b-3f48-4bf6-be4c-89f79949c1df
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -39,7 +39,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ![站點管理](assets/site-management.png)
 
-查看長期運行的進程清單、進程持續時間圖表，以及使用篩選器運行自定義查詢。
+查看長期運行進程的清單、進程持續時間圖表，以及使用篩選器運行自定義查詢。
 
 「流程報表」也提供以CSV格式匯出報表和查詢資料的選項。
 
@@ -68,5 +68,3 @@ AEM Forms伺服器會並行執行許多程式。 這些程式會持續從一種�
 「流程報表」提供對使用者介面的權限型存取。
 
 這表示只有具有報告權限的使用者才能存取「流程報告」使用者介面。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
