@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -118,7 +118,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 更新標籤中的 `<name>...</name>` 值。
 1. 重建AEM Forms應用程式。
 
-   如需建立Windows適用應用程式的詳細資訊，請 [參閱「設定Visual studio專案並建立Windows應用程式」](/help/forms/using/setup-visual-studio-project-build-installer.md)。
+   如需建立Windows適用應用程式的詳細資訊，請 [參閱「設定Visual Studio專案並建立Windows應用程式」](/help/forms/using/setup-visual-studio-project-build-installer.md)。
 
 ## 自訂登入頁面上的影像 {#customizing-images-on-the-login-page}
 
@@ -166,9 +166,9 @@ AEM Forms應用程式的登入頁面有標誌和背景影像。 標誌位於登�
 1. 若要變更背景，請以自訂 `Landing_bg.jpeg` 檔案取代預設 `Landing_bg.jpeg`檔案。
 1. 在Android裝置上建立及執行AEM Forms應用程式。
 
-### 使用Visual studio自訂登入頁面上的影像 {#to-customize-images-on-the-login-pages-using-visual-studio}
+### 使用Visual Studio自訂登入頁面上的影像 {#to-customize-images-on-the-login-pages-using-visual-studio}
 
-1. 在Visual studio `MWSWindows.sln` 中開啟專案。
+1. 在Visual Studio `MWSWindows.sln` 中開啟專案。
 
 1. 導覽至資料 `MWSWindows\www\wsmobile\images`夾。
 1. 若要變更標誌，請以自訂 `LC-logo.png` 檔案取代預設 `LC-logo.png` 檔案。
@@ -214,12 +214,10 @@ AEM Forms應用程式的登入頁面有標誌和背景影像。 標誌位於登�
 1. 若要變更標誌，請以自訂檔 `aem_icon.png` 案取代預設 `aem_icon.png` 檔案。
 1. 在Android裝置上建立及執行AEM Forms應用程式。
 
-### 使用Visual studio自訂登入頁面上的影像 {#to-customize-images-on-the-login-pages-using-visual-studio-1}
+### 使用Visual Studio自訂登入頁面上的影像 {#to-customize-images-on-the-login-pages-using-visual-studio-1}
 
-1. 在Visual studio `MWSWindows.sln` 中開啟專案。
+1. 在Visual Studio `MWSWindows.sln` 中開啟專案。
 
 1. 導覽至資料 `MWSWindows\www\wsmobile\images`夾。
 1. 若要變更標誌，請以自訂檔 `aem_icon.png` 案取代預設 `aem_icon.png` 檔案。
 1. 在Windows裝置上建立及執行AEM Forms應用程式。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
