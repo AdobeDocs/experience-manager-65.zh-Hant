@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -185,4 +185,3 @@ Profile節點有屬性 **sling:resourceSuperType** ，其值 **為xfaforms/profi
 
 HTML5表單可讓開發人員建立描述檔和描述檔轉譯器，以自訂表單的外觀。 例如，HTML表單可讓開發人員將表單整合在現有HTML入口網站的面板或&lt;div>區段中。
 如需建立自訂描述檔的詳細資訊，請參 [閱建立自訂描述檔](/help/forms/using/custom-profile.md)。
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
