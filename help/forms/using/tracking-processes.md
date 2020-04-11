@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2228dcdd-5c9c-46b3-9888-489756c04887
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -43,7 +43,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在「追蹤」頁面上，您可以選取程式並檢視其詳細資訊。 您可以根據各種參數搜索流程，以查看任務詳細資訊。 您也可以查看「狀態」頁籤，該頁籤適用於具有多個用戶同時接收任務的進程，其中啟用了用於審閱文檔的工具。
 
-**** 狀態：按一下任務時，進程中的任務狀態將顯示在「選定操作」列中。 但是，進程的狀態不可用。
+**狀態：** 按一下任務時，進程中的任務狀態將顯示在「選定操作」列中。 但是，進程的狀態不可用。
 
 1. 從搜索結果清單中選擇流程實例，以查看屬於流程實例的任務的詳細資訊。
 1. 要查看有關任務的詳細資訊，請執行以下一個或多個操作：
@@ -51,5 +51,3 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 要查看任務的注釋和附件，請按一下「附件」頁籤。
    * 要查看任務分配詳細資訊，請按一下「分配」頁籤。
    * 要查看關聯的表單，請按一下表單按鈕。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
