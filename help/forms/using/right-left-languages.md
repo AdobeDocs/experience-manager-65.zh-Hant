@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8465471-0458-42d6-8209-8ba90f41154a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -20,6 +20,4 @@ HTML5表格支援從右至左語言，例如希伯來文。 您可以以從右�
 
 **限制**
 
-Mobile Forms支援Internet explorer以外的所有瀏覽器中的從右至左語言。
-
-**[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)**
+Mobile Forms支援Internet Explorer以外的所有瀏覽器中的從右至左語言。
