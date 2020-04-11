@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -118,5 +118,3 @@ AEM Forms僅限使用者存取使用者擁有存取控制(ACL)的工作。 這�
 ![cu_manager_view](assets/cu_manager_view.png)
 
 存取直接報表的工作並處理工作
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
