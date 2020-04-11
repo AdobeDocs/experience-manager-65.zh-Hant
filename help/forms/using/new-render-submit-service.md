@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -160,4 +160,4 @@ newHTMLFormURL =呼叫API後傳回的 `generateFormURL` URL。
 如果您已修改現有的Render或Submit PDF Form服務或已建立自訂服務（例如custom1），現在想要對HTML轉譯使用相同的功能。 您需要複製新的演算或提交服務（如custom2），並套用類似的自訂設定。 現在，請修改XDP的動作設定檔，以開始使用custom2服務，而非custom1來呈現或送出。
 
 流程設計人員需要做什麼，才能讓表單在裝置上以HTML格式呈現，在案頭上以PDF格式呈現？
-流程設計人員需要做什麼，才能讓表單在裝置上以HTML格式呈現，在案頭上以PDF格式呈現？  [聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
+流程設計人員需要做什麼，才能讓表單在裝置上以HTML格式呈現，在案頭上以PDF格式呈現？
