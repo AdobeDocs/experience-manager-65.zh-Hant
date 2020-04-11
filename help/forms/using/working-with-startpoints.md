@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -47,5 +47,3 @@ source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 如果應用程式已連線，則工作會與AEM Forms伺服器同步，並指派給流程中指定的使用者。
 
 要處理任務清單中的任務，請參 [閱開啟任務](/help/forms/using/open-task.md)。
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
