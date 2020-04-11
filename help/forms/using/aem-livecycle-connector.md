@@ -1,15 +1,15 @@
 ---
 title: 將AEM Forms與Adobe LiveCycle連結
 seo-title: 將AEM Forms與Adobe LiveCycle連結
-description: AEM liveCycle Connector可讓您從AEM應用程式和工作流程中啟動LiveCycle ES4 Document Services。
-seo-description: AEM liveCycle Connector可讓您從AEM應用程式和工作流程中啟動LiveCycle ES4 Document Services。
+description: AEM LiveCycle Connector可讓您從AEM應用程式和工作流程中啟動LiveCycle ES4 Document Services。
+seo-description: AEM LiveCycle Connector可讓您從AEM應用程式和工作流程中啟動LiveCycle ES4 Document Services。
 uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -37,13 +37,13 @@ AEM LiveCycle Connector是 [AEM Forms附加套件的一部分](/help/forms/using
 
    的雙曲餘切值。
 
-* **Username**—— 指定用來建立AEM與LiveCycle通訊之帳戶的使用者名稱。 此帳戶是LiveCycle使用者帳戶，具有啟動Document services的權限。
+* **Username**—— 指定用來建立AEM與LiveCycle通訊之帳戶的使用者名稱。 此帳戶是LiveCycle使用者帳戶，具有啟動Document Services的權限。
 * **密碼**-指定密碼。
 * **服務名稱** -指定使用「用戶名」和「密碼」欄位中提供的用戶憑據啟動的服務。 依預設，啟動LiveCycle服務時不會傳遞任何認證。
 
 ## 啟動檔案服務 {#starting-document-services}
 
-用戶端應用程式可使用Java API、Web Services、Remoting和REST，以程式設計方式啟動LiveCycle服務。 對於Java用戶端，應用程式可使用LiveCycle SDK。 LiveCycle SDK提供Java API，以遠端啟動這些服務。 例如，若要將Microsoft word檔案轉換為PDF，用戶端會啟動GeneratePDFervice。 調用流由以下步驟組成：
+用戶端應用程式可使用Java API、Web Services、Remoting和REST，以程式設計方式啟動LiveCycle服務。 對於Java用戶端，應用程式可使用LiveCycle SDK。 LiveCycle SDK提供Java API，以遠端啟動這些服務。 例如，若要將Microsoft Word檔案轉換為PDF，用戶端會啟動GeneratePDFervice。 調用流由以下步驟組成：
 
 1. 建立ServiceClientFactory實例。
 1. 每個服務都提供一個客戶機類。 要啟動服務，請建立服務的客戶端實例。
@@ -89,7 +89,7 @@ AEM LiveCycle Connector可將這些用戶端例項公開為OSGi服務，讓您�
    </dependency>
    ```
 
-1. 獲取服務參考。 獲取服務實例的句柄。 如果您正在編寫Java類，則可以使用Declative services注釋。
+1. 獲取服務參考。 獲取服務實例的句柄。 如果您正在編寫Java類，則可以使用Declative Services注釋。
 
    ```java
    import com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient;
@@ -135,7 +135,7 @@ AEM LiveCycle Connector可將這些用戶端例項公開為OSGi服務，讓您�
 
 ### 通過ServiceClientFactory啟動 {#starting-via-serviceclientfactory}
 
-在某些情況下， serviceClientFactory類是必需的。 例如，您需要ServiceClientFactory來呼叫進程。
+在某些情況下， ServiceClientFactory類是必需的。 例如，您需要ServiceClientFactory來呼叫進程。
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.ServiceClientFactoryProvider;
@@ -254,7 +254,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle TaskManager Client套件 {#adobe-livecycle-taskmanager-client-bundle}
+### Adobe LiveCycle TaskManager用戶端套裝 {#adobe-livecycle-taskmanager-client-bundle}
 
 提供下列服務：
 
@@ -478,5 +478,3 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
   <version>11.0.0</version>
 </dependency>
 ```
-
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
