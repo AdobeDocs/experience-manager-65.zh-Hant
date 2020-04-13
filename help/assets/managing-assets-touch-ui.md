@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d1331c8c023a1e414e0231d082667d67c4adf17a
+source-git-commit: 24c72d79fe1ebd140d7746759d73cbaffdd1ea2d
 
 ---
 
@@ -880,7 +880,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 ## 建立、管理、預覽和回復資產版本 {#asset-versioning}
 
-版本設定會建立數位資產在特定時間點的快照。版本修訂功能有助於將資產還原為先前的狀態。 例如，如果您想要還原對資產所做的變更，請還原未編輯的資產版本。
+版本設定會建立數位資產在特定時間點的快照。版本修訂功能有助於將資產還原為先前的狀態。 例如，如果您想要還原對資產所做的變更，請還原未編輯的資產版本。 在Experience Manager中，您可以建立版本、檢視目前的修訂版本、檢視兩個影像版本之間的並排差異，以及將資產還原為舊版。
 
 您可以在Experience Manager中建立下列版本：
 
@@ -891,17 +891,11 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 您也可以透過工作流程啟用自動版本修訂。 當您為資產建立版本時，中繼資料和轉譯會與版本一起儲存。 轉譯是相同影像的替代格式，例如已上傳JPEG檔案的PNG轉譯。
 
-在Experience Manager中，您可以：
-
-* 建立資產版本。
-* 檢視資產的目前修訂。
-* 將資產還原為舊版。
-
 1. 導覽至您要為其建立版本的資產所在位置，然後按一下以開啟其預覽。 從頁面的左上角，開啟功能表，然後選取「時間 **[!UICONTROL 軸」]**。
 
    ![從左側導覽功能表，選取時間軸選項](assets/timeline.png)
 
-*圖：從頁面的左上角區域開啟選單，並選取「時間[!UICONTROL 軸]」選項。*
+   *圖：從頁面的左上角區域開啟選單，並選取「時間[!UICONTROL 軸]」選項。*
 
 1. 若要建立資產版本：
 
@@ -910,6 +904,8 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    * 按一 **[!UICONTROL 下「建立]** 」以建立版本。
 
       ![chlimage_1-251](assets/create-new-version-from-timeline.png)
+
+      *圖：從時間軸左側邊欄建立資[!UICONTROL 產]。*
 
 1. 要查看資產的版本，請執行以下操作：
 
@@ -926,6 +922,8 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    * Click **[!UICONTROL Revert to this Version]**.
 
       ![select_version](assets/select_version.png)
+
+      *圖：選擇一個版本並回復到它。 它會變成目前的版本，然後可供DAM使用者使用。*
 
 1. 若要比較兩個版本的影像，請依照下列步驟進行：
    * 按一下要與目前版本比較的版本。
