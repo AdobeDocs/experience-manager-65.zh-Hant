@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Assets User Guide
+user-guide-title: AEM 6.5 Assets使用指南
 translation-type: tm+mt
-source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
+source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
    + [預覽3D資產](previewing-3d-assets.md)
    + [查看資料夾資產和集合](bulk-approval.md)
    + [時間軸中的活動串流](activity-stream.md)
-   + [將工作流程套用至資產](assets-workflow.md)
+   + [處理資產](assets-workflow.md)
    + [新增影像地圖](image-maps.md)
    + [使用MSM重複使用資產](reuse-assets-using-msm.md)
    + [使用AEM Sites連結資產](use-assets-across-connected-assets-instances.md)
