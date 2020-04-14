@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -406,7 +406,7 @@ source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
    * **頁尾**:要為頁尾顯示的文字
    * **類型**:其他欄的類型。 欄位或目標區域。 對靜態佔位符表啟用類型。 類型可在欄層級定義，而不能在儲存格層級定義。 擴展列中的所有單元格類型都相同。 對於動態表，所有列均為欄位類型。 對於非佔位符表，不能定義附加列的類型。 在這種情況下，擴展列中的附加單元格類型與該行中最後一列的類型相同；而其他列中的儲存格類型與該欄中最後一個儲存格的類型相同。
    * **寬度比：** 表格欄寬比。
-   如需在版面片段中使用靜態和動態表格的詳細範例，請參 [閱範例檔案：在字母中使用靜態和動態表](#main-pars-header-28)。
+   如需在版面片段中使用靜態和動態表格的詳細範例，請參 [閱範例檔案：在字母中使用靜態和動態表](#examplewithsamplefiles)。
 
 1. 點選「 **儲存**」。
 
