@@ -3,7 +3,7 @@ title: 從 AEM 下載資產
 description: 瞭解如何從AEM下載資產並啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
 
 ---
 
@@ -72,4 +72,5 @@ AEM中的預設servlet可讓已驗證的使用者發出任意大型的並行下�
 >
 >* [下載受DRM保護的資產](drm.md)
 >* [在Win或Mac案頭上使用AEM案頭應用程式下載資產](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
->* [從支援的Adobe Creative Cloud應用程式使用Adobe Assets Link下載資產](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [從支援的Adobe Creative Cloud應用程式使用Adobe Assets Link下載資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html)
+
