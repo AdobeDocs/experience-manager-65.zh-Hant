@@ -3,7 +3,7 @@ title: 在 Adobe Experience Manager Sites 編寫工作流程中使用「連線�
 description: 在其他 Experience Manager 網站的部署工作中建立網頁時，使用遠端 Adobe Experience Manager Assets 部署的可用資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
+source-git-commit: 04fef21d6027dcfcb6a67a1121e0d1570926db41
 
 ---
 
@@ -95,7 +95,7 @@ AEM 管理員可建立這項整合。一旦建立之後，系統會透過您在 
 
    >[!NOTE]
    >
-   >作者擷取資產時，會擷取遠端 AEM 部署上可用的所有轉譯項目。若要針對所擷取的資產建立更多轉譯項目，請略過此設定步驟。「DAM 更新資產」工作流程會隨即觸發，並建立更多轉譯項目。這些轉譯項目僅限在本機 Sites 部署中使用，不可在遠端 DAM 部署中使用。
+   >作者擷取資產時，會擷取遠端 AEM 部署上可用的所有轉譯項目。若要針對所擷取的資產建立更多轉譯項目，請略過此設定步驟。The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
 1. 在遠端 AEM Assets 的 CORS 設定中，將 AEM Sites 例項新增為其中一個&#x200B;**[!UICONTROL 「允許的原始項」]**。
 
@@ -111,7 +111,7 @@ AEM 管理員可建立這項整合。一旦建立之後，系統會透過您在 
 
 作者可以在單一網頁中使用本機 DAM 和遠端 DAM 例項所提供的可用資產。使用「內容尋找器」，以便在搜尋本機 DAM 和搜尋遠端 DAM 之間切換。
 
-系統只會鎖定那些標籤與本機 Sites 例項完全對應的遠端資產 (分類層次結構相同)，擷取其標籤。其他所有標籤會一概捨棄。由於 AEM 提供全文字搜尋功能，作者可使用遠端 AEM 部署上的所有標籤來搜尋遠端資產。
+只有那些具有與本地Sites實例相同的分類層次具有完全對應標籤的遠程資產的標籤被提取。 其他所有標籤會一概捨棄。由於 AEM 提供全文字搜尋功能，作者可使用遠端 AEM 部署上的所有標籤來搜尋遠端資產。
 
 ### 逐步使用說明 {#walk-through-of-usage}
 
