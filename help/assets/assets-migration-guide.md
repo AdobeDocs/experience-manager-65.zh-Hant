@@ -1,9 +1,9 @@
 ---
 title: 將資產大量移轉至Adobe Experience Manager Assets
-description: 說明如何將資產匯入AEM、套用中繼資料、產生轉譯，以及啟用資產以發佈例項。
+description: 說明如何將資產帶入AEM、套用中繼資料、產生轉譯，以及啟用資產以發佈例項。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 >* 合成工作流程
 >
 >
-本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。 若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)[問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
+本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)[問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
 ## 移轉至AEM {#migrating-to-aem}
 
@@ -44,11 +44,11 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 ### 停用工作流程 {#disabling-workflows}
 
-開始移轉之前，請停用DAM更新資產工作流程的啟動器。 最好將所有資產收錄至系統，然後以批次執行工作流程。 如果您在移轉進行時已上線，您可以排程這些活動在下班時間執行。
+開始移轉之前，請停用 [!UICONTROL DAM更新資產工作流程的啟動器] 。 最好將所有資產收錄至系統，然後以批次執行工作流程。 如果您在移轉進行時已上線，您可以排程這些活動在下班時間執行。
 
 ### 載入標籤 {#loading-tags}
 
-您可能已經有了要套用至影像的標籤分類法。 雖然CSV Asset Importer和AEM對中繼資料描述檔的支援可自動將標籤套用至資產的程式，但是標籤必須載入系統中。 ACS [AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS AEM工具標籤製作器）功能可讓您使用載入系統的Microsoft excel試算表填入標籤。
+您可能已經有了要套用至影像的標籤分類法。 雖然CSV Asset Importer和Experience Manager對中繼資料描述檔的支援可自動化將標籤套用至資產的程式，但標籤必須載入系統中。 ACS [AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS AEM工具標籤製作器）功能可讓您使用載入系統的Microsoft Excel試算表填入標籤。
 
 ### 收錄資產 {#ingesting-assets}
 
@@ -58,7 +58,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 #### 透過HTTP傳送 {#pushing-through-http}
 
-Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是小型Java應用程式，可從一個目錄將所有資產載入AEM例項上的另一個目錄。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫中，而不是Glutton。
+Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是小型Java應用程式，可從一個目錄將所有資產載入AEM例項上的另一個目錄。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫，而不是Glutton。
 
 使用推送https的方法有兩個主要的缺點：
 
@@ -75,12 +75,12 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 ### 處理轉譯 {#processing-renditions}
 
-將資產載入系統後，您需要透過DAM更新資產工作流程來處理這些資產，以擷取中繼資料並產生轉譯。 在執行此步驟之前，您需要複製並修改DAM更新資產工作流程，以符合您的需求。 現成可用的工作流程包含許多您不需要的步驟，例如產生Scene7 PTIFF或整合InDesign伺服器。
+將資產載入系統後，您需要透過 [!UICONTROL DAM更新資產工作流程處理資產] ，以擷取中繼資料並產生轉譯。 在執行此步驟之前，您必須複製並修改 [!UICONTROL DAM更新資產工作流程] ，以符合您的需求。 現成可用的工作流程包含許多您不需要的步驟，例如產生Scene7 PTIFF或整合InDesign伺服器。
 
 根據您的需求設定工作流程後，您有兩個執行工作流程的選項：
 
 1. 最簡單的方法是 [ACS Commons的Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 此工具允許您執行查詢，並通過工作流處理查詢結果。 還有設定批次大小的選項。
-1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)[](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 雖然此方法的參與度更高，但可讓您移除AEM工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。 ACS Commons功能頁上提供了示例指令碼。
+1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)[](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。雖然此方法的參與度更高，但可讓您移除AEM工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。ACS Commons功能頁上提供了示例指令碼。
 
 ### 啟動資產 {#activating-assets}
 
@@ -88,7 +88,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 要解決此問題，您可以使用 [Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 來管理資產複製。 這樣不需使用Sling佇列，降低開銷，同時可調節工作負載，以防止伺服器過載。 使用FAM管理複製的範例顯示在功能的檔案頁面上。
 
-將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html)[或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。 另一個選擇是針對您的AEM基礎架構使用開放來源工具，稱為 [Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
+將資產傳送至發佈農場的其他選項包括使 [用vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html)[或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，這些工具是Jackrabbit的一部份。另一個選擇是針對您的AEM基礎架構使用開放來源工具，稱為 [Grabbit](https://github.com/TWCable/grabbit)，該工具聲稱其效能比vlt快。
 
 對於上述任何方法，但須注意的是，作者實例上的資產並未顯示為已啟動。 若要處理以正確啟動狀態來標籤這些資產，您還需要執行指令碼，將資產標示為已啟動。
 
@@ -102,7 +102,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 1. 備份源實例和資料儲存。
 1. 將實例和資料儲存的備份還原到目標位置。 以下步驟均參考此新實例。
-1. 在中執行檔案系統 `crx-quickstart/launchpad/felix` 搜索 `sling.id`。 刪除此檔案。
+1. Perform a filesystem search under `crx-quickstart/launchpad/felix` for `sling.id`. 刪除此檔案。
 1. 在資料儲存的根路徑下，找到並刪除任何 `repository-XXX` 檔案。
 1. 編 `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` 輯 `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` 並指向新環境中資料儲存的位置。
 1. 啟動環境。
@@ -110,7 +110,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 ### 啟用工作流程 {#enabling-workflows}
 
-完成移轉後，應重新啟用DAM更新資產工作流程的啟動器，以支援轉譯產生和中繼資料擷取，以持續使用日常系統。
+完成移轉後，應重新啟用 [!UICONTROL DAM Update Asset] （DAM更新資產）工作流程的啟動器，以支援產生轉譯和中繼資料擷取，以持續使用日常系統。
 
 ## 跨AEM部署移轉 {#migrating-between-aem-instances}
 
@@ -118,7 +118,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 在這種情況下，您的資產已填入中繼資料，且已產生轉譯。 您只需專注於將資產從一個實例移至另一個實例。 在AEM例項之間移轉時，請執行下列步驟：
 
-1. 停用工作流程：由於您要移轉轉譯以及我們的資產，所以您想要停用DAM更新資產的工作流程啟動器。
+1. 停用工作流程：由於您要移轉轉譯以及我們的資產，因此您想要停用 [!UICONTROL DAM更新資產工作流程的工作流程啟動器] 。
 
 1. 移轉標籤：由於您已在來源AEM例項中載入標籤，因此您可以在內容套件中建立標籤，並在目標例項上安裝套件。
 
@@ -131,4 +131,4 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 1. 仿製發佈：和新移轉一樣，載入單一發佈執行個體並進行仿製比在兩個節點上啟動內容更有效率。 請參閱 [仿製發佈。](#cloning-publish)
 
-1. 啟用工作流程：完成移轉後，請重新啟用DAM更新資產工作流程的啟動器，以支援產生轉譯和中繼資料擷取，以持續使用日常系統。
+1. 啟用工作流程：完成移轉後，請重新啟用 [!UICONTROL DAM Update Asset] workflow的啟動器，以支援產生轉譯和中繼資料擷取，以持續使用日常系統。
