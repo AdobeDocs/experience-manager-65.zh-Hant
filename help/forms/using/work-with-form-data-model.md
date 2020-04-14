@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -155,7 +155,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
    為員工資料源配置的讀寫服務
 
-1. 點選 ![aem_6_3_edit](assets/aem_6_3_edit.png) ，以取得讀取服務引數， [將引數系結至「使用者描述檔屬性」、「請求屬性」或「常值」值](../../forms/using/work-with-form-data-model.md#main-pars-header-2140694395) ，並指定系結值。
+1. 點選 ![aem_6_3_edit](assets/aem_6_3_edit.png) ，以取得讀取服務引數， [將引數系結至「使用者描述檔屬性」、「請求屬性」或「常值」值](#bindargument) ，並指定系結值。
 1. 點 **[!UICONTROL 選「完成]** 」以儲存引數，點選「完成 **[!UICONTROL 」以儲存屬性，然後點選「儲存]****** 」以儲存表單資料模型。
 
 ### 綁定讀取服務引數 {#bindargument}
@@ -174,7 +174,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 從「 **[!UICONTROL 系結至」下拉式選]** 單中選取「使用者描述檔屬性」 **[!UICONTROL ，並在「系結值」欄位中輸入]** 屬性名稱 **** 。 系統會根據屬性名稱，從資料來源擷取登入AEM例項的使用者詳細資訊。
 
-「綁定值」欄位中指 **[!UICONTROL 定的屬性名稱]** ，必須包括完整的綁定路徑，直到用戶的屬性名為止。 開啟下列URL以存取CRXDE的使用者詳細資訊：
+在「綁定值」欄位中指 **[!UICONTROL 定的屬性名稱]** ，必須包括完整的綁定路徑，直到用戶的屬性名稱為止。 開啟下列URL以存取CRXDE的使用者詳細資訊：
 
 https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
@@ -254,7 +254,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
    點選 **[!UICONTROL 「完成]** 」以儲存引數。
 
 1. 點選 **[!UICONTROL 「完成]** 」以儲存關聯，然後點選「 **[!UICONTROL 儲存]** 」以儲存表單資料模型。
-1. 重複這些步驟，視需要建立更多關聯。
+1. 重複步驟，視需要建立更多關聯。
 
 >[!NOTE] {graybox=&quot;true&quot;}
 >
