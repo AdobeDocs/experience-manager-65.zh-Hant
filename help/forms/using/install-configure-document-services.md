@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: ba4e4908c0564af6e7f0759c5119a5c02f274dbd
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -32,7 +32,7 @@ AEM Forms提供一組OSGi服務，以完成不同的檔案層級作業，例如�
 
 可讓您建立不同格式的檔案，包括PDF、雷射印表機格式和標籤印表機格式。 雷射打印機格式為PostScript和打印機控制語言(PCL)。 如需詳細資訊，請參 [閱Output Service](/help/forms/using/output-service.md)。
 
-PDF產生器服務提供API，可將原生檔案格式轉換為PDF。 此外，它還可將PDF轉換為其他檔案格式，並最佳化PDF檔案的大小。 如需詳細資訊，請參閱 [PDF產生器服務](/help/forms/using/aem-document-services-programmatically.md#main-pars-header-27)。
+PDF產生器服務提供API，可將原生檔案格式轉換為PDF。 此外，它還可將PDF轉換為其他檔案格式，並最佳化PDF檔案的大小。 如需詳細資訊，請參閱 [PDF產生器服務](aem-document-services-programmatically.md#pdfgeneratorservice)。
 
 讓貴組織透過擴充Adobe Reader的功能及額外的使用權限，輕鬆分享互動式PDF檔案。 此服務會啟動在使用Adobe Reader開啟PDF檔案時無法使用的功能，例如在檔案中新增註解、填寫表單以及儲存檔案。 如需詳細資訊，請參 [閱Reader Extension Service](/help/forms/using/overview-aem-document-services.md#p-reader-extension-service-p)。
 
@@ -476,7 +476,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
 
 在Microsoft Windows上，PDF Generator服務使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 請執行下列步驟，為PDF Generator服務設定Adobe Acrobat:
 
-1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選擇 **[!UICONTROL 自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
+1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選 **[!UICONTROL 擇自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
 1. 連按兩下系統上的PDF檔案。 當Acrobat首次啟動時，會出現登入、歡迎畫面和EULA的對話方塊。 針對所有已設定為使用PDF產生器的使用者，關閉這些對話方塊。
 1. 執行PDF Generator公用程式批次檔案，為PDF Generator服務設定Acrobat:
 
