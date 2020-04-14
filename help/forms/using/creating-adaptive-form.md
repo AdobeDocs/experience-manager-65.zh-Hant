@@ -9,7 +9,7 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -145,7 +145,7 @@ XML和JSON結構描述資料由組織中的後端系統產生或使用的結構�
 
 >[!NOTE]
 >
->當您開啟使用進階範本建立的最適化表單進行編輯時，會出現錯誤訊息。 進階範本有「簽名步驟」元件，預設會啟用Adobe Sign。 建立並選取 [Adobe Sign雲端設定](/help/forms/using/adobe-sign-integration-adaptive-forms.md) , [並設定簽署者](/help/forms/using/working-with-adobe-sign.md#main-pars-header-1374317451) ，以解決錯誤。
+>當您開啟使用進階範本建立的最適化表單進行編輯時，會出現錯誤訊息。 進階範本有「簽名步驟」元件，預設會啟用Adobe Sign。 建立並選取 [Adobe Sign雲端設定](/help/forms/using/adobe-sign-integration-adaptive-forms.md) , [並設定簽署者](working-with-adobe-sign.md#addsignerstoanadaptiveform) ，以解決錯誤。
 
 ## 編輯最適化表單的表單模型屬性 {#edit-form-model}
 
