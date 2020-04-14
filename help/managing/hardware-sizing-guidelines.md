@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8893306f-4bc0-48eb-8448-36d0214caddf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -48,7 +48,7 @@ source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
    * 網站大小（內容物件、頁面和使用者數）
    * 同時處於活動狀態的用戶／會話數
 
-## 建築 {#architecture}
+## 架構 {#architecture}
 
 典型的AEM設定由作者和發佈環境組成。 這些環境對底層硬體大小和系統配置有不同的要求。 作者環境和發佈環境章節中對這兩種環 [境的詳細考](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations)[量進行了說明](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) 。
 
@@ -111,7 +111,7 @@ AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直�
 
 根據具體Web項目的基本要求和具體使用案例，對需要多少簇節點進行估計：
 
-* 從故障安全性的角度，必須確定對於所有環境，關鍵故障的嚴重程度和故障補償時間取決於群集節點恢復所需的時間。
+* 從故障安全性的角度來看，對於所有環境，必鬚根據群集節點恢復所需的時間來確定關鍵故障的嚴重程度和故障補償時間。
 * 在可擴充性方面，寫操作的數量基本上是最重要的因素；請參 [閱作者平行工作](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) ，以瞭解作者環境，以及 [發佈環境的Social Collaboration](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) 。 對於僅為處理讀取操作而訪問系統的操作，可以建立負載平衡；如需詳 [細資訊](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) ，請參閱Dispatcher。
 
 ## 編寫環境特定計算 {#author-environment-specific-calculations}
@@ -168,13 +168,13 @@ AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直�
 
 ### 硬體建議 {#hardware-recommendations}
 
-通常，您可以針對您的作者環境使用與發佈環境建議相同的硬體。 通常，網站流量在製作系統上要低得多，但快取效率也更低。 然而，這裡的根本因素是，有多少作者同時工作，以及正在對系統採取的行動類型。 一般而言，AEM叢集（作者環境）在縮放讀取作業方面最為有效；換言之，AEM叢集可與執行基本編輯作業的作者進行良好的縮放。
+通常，您可以針對您的作者環境使用與發佈環境建議相同的硬體。 通常，網站流量在製作系統上要低得多，但快取效率也更低。 然而，這裡的根本因素是，有多少作者同時工作，以及正在對系統採取的行動類型。 一般而言，AEM叢集（作者環境）在縮放讀取作業方面最有效；換言之，AEM叢集可與執行基本編輯作業的作者進行良好的縮放。
 
-Adobe的基準測試是使用RedHat 5.5作業系統執行，此作業系統在Hewlett-Packard proLiant DL380 G5硬體平台上執行，並具備下列組態：
+Adobe的基準測試是使用RedHat 5.5作業系統執行，此作業系統在Hewlett-Packard ProLiant DL380 G5硬體平台上執行，並具備下列組態：
 
 * 兩個3.00GHz四核英特爾至強X5450 CPU
 * 8 GB RAM
-* Broadcom netXtreme II BCM5708千兆位乙太網
+* Broadcom NetXtreme II BCM5708千兆位乙太網
 * HP Smart Array RAID控制器，256 MB快取
 * 兩個146 GB 10,000 RPM SAS磁碟，配置為RAID0條帶集
 * SPEC CINT2006比率基準分數為110
@@ -270,7 +270,7 @@ AEM例項的最小堆大小為256M，最大堆大小為1024M。
 
 大量處理數位資產需要最佳化硬體資源，最相關的因素是影像大小和處理後影像的峰值吞吐量。
 
-分配至少16GB的堆積，並設定「DAM更新資產」工作流程，以使用 [Camera Raw套件擷取原始影像](/help/assets/camera-raw.md) 。
+分配至少16GB的堆積，並設定 [!UICONTROL DAM更新資產工作流程，以使用][](/help/assets/camera-raw.md) Camera Raw套件擷取原始影像。
 
 >[!NOTE]
 較高的影像吞吐量意味著計算資源需要能夠跟上系統I/O的腳步，反之亦然。 例如，如果匯入影像來啟動工作流程，則透過WebDAV上傳許多影像可能會造成工作流程積壓。
