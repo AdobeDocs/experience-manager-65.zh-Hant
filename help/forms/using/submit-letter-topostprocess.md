@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -25,9 +25,9 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 若要將貼文程式與信件或互動式通訊建立關聯，您必須先設定貼文程式。 可在提交的信件上執行兩種工作流程：
 
-1. **** 表單工作流程：這些是JEE流程管理工作流程上的AEM Forms。 設定表單工作 [流程的指示](../../forms/using/submit-letter-topostprocess.md#main-pars-header-3)。
+1. **表單工作流程：** 這些是JEE流程管理工作流程上的AEM Forms。 設定表單工作 [流程的指示](#formsworkflow)。
 
-1. **** AEM Workflow:AEM工作流程也可用作已提交信件的貼文處理。 設定 [AEM Workflow的指示](../../forms/using/aem-forms-workflow.md)。
+1. **AEM Workflow:** AEM工作流程也可用作已提交信件的貼文處理。 設定 [AEM Workflow的指示](../../forms/using/aem-forms-workflow.md)。
 
 ## 表單工作流程 {#formsworkflow}
 
@@ -57,11 +57,11 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
    前往「Adobe Experience Manager Web Console設定」頁面>「對 **[!UICONTROL 應管理設定]** 」，並設定下列參數：
 
-   1. **** inPDFoc（PDF檔案參數）:輸入PDF檔案。 此輸入包含已轉換的字母作為輸入。 所指示的參數名稱是可配置的。 它們可從配置中從「對應管理」配置進行配置。
-   1. **** inXMLDoc（XML資料參數）:輸入XML檔案。 此輸入包含使用者以XML格式輸入的資料。
-   1. **** inXDPDoc（XDP文檔參數）:輸入XML檔案。 此輸入包含基礎版面(XDP)。
-   1. **** inAttachmentDocs（Attachment Documents參數）:清單輸入參數。 此輸入包含所有作為輸入的附件。
-   1. **** 重新導向URL（重新導向URL輸出）:指示要重新導向至之URL的輸出類型。
+   1. **inPDFoc（PDF檔案參數）:** 輸入PDF檔案。 此輸入包含已轉換的字母作為輸入。 所指示的參數名稱是可配置的。 它們可從配置中從「對應管理」配置進行配置。
+   1. **inXMLDoc（XML資料參數）:** 輸入XML檔案。 此輸入包含使用者以XML格式輸入的資料。
+   1. **inXDPDoc（XDP文檔參數）:** 輸入XML檔案。 此輸入包含基礎版面(XDP)。
+   1. **inAttachmentDocs（Attachment Documents參數）:** 清單輸入參數。 此輸入包含所有作為輸入的附件。
+   1. **重新導向URL（重新導向URL輸出）:** 指示要重新導向至之URL的輸出類型。
    您的表單工作流程必須有PDF檔案參數或XML資料參數作為輸入，且名稱必須與「對應管理設定」中 **[!UICONTROL 指定的名稱相同]**。 此為「後置進程」下拉式清單中列出的進程所必需。
 
 ## 發佈例項的設定 {#settings-on-the-publish-instance}
