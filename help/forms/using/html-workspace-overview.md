@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -49,7 +49,7 @@ AEM Forms工作區是AEM Forms的一部分。 工作區除了PDF表格外，還�
 
 AEM Forms客戶不支援Flex Workspace。 所有使用Flex Workspace的客戶都應移至AEM Forms Workspace。
 
-在AEM Forms工作區中，預設的演算和送出服務（在預設動作設定檔中）與XDP表單關聯已變更，並已引入新服務。 如需詳細資訊，請 [參閱「新增演算和送出服務」](/help/forms/using/new-render-submit-service.md)。 若要移轉與XDP表單搭配運作的現有程式，若要使用這些服務，您可以遵循下 [列步驟](/help/forms/using/new-render-submit-service.md#main-pars-faq)。
+在AEM Forms工作區中，預設的演算和送出服務（在預設動作設定檔中）與XDP表單關聯已變更，並已引入新服務。 如需詳細資訊，請 [參閱「新增演算和送出服務」](/help/forms/using/new-render-submit-service.md)。 若要移轉與XDP表單搭配運作的現有程式，若要使用這些服務，您可以遵循下 [列步驟](new-render-submit-service.md)。
 
 **將Flex工作區自訂與AEM Forms工作區對應**
 
@@ -120,11 +120,11 @@ AEM Forms工作區支援多種自訂設定，以更新使用者介面的版面�
 * 使用語義定製的功能
 * 在其他網頁應用程式中重複使用HTML元件
 
-自訂 [文章](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-0) 會說明此類自訂的類型。
+自訂 [文章](introduction-customizing-html-workspace.md#types-of-customizations) 會說明此類自訂的類型。
 
 ### Set up the developer environment {#set-up-the-developer-environment}
 
-AEM Forms工作區交付項目包括部署在CRX上的CRX套件、包含完整原始碼的SDK封存、協力廠商JavaScript程式庫，以及建立AEM Forms工作區的指令碼。 使用這些設定來設定開發人員環境，以執行上述自訂設定。 如需詳細資訊，請參 [閱「建立AEM Forms工作區程式碼](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)」。
+AEM Forms工作區交付項目包括部署在CRX上的CRX套件、包含完整原始碼的SDK封存、協力廠商JavaScript程式庫，以及建立AEM Forms工作區的指令碼。 使用這些設定來設定開發人員環境，以執行上述自訂設定。 如需詳細資訊，請參 [閱「建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code)」。
 
 您可以自訂介面和核心功能的主要部分，例如字型、色彩配置、標誌、登入畫面、錯誤對話、與協力廠商應用程式整合，以及在協力廠商應用程式中重複使用元件。 您也可以增強「任務摘要」頁面上顯示的內容、顯示任務路由動作的影像，甚至修改建立AEM Forms工作區應用程式的低階骨幹模型和檢視。
 
