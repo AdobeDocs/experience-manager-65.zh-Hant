@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -43,7 +43,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 [包含AEM Forms Java程式庫檔案](#including-aem-forms-java-library-files)
 
-[調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#main-pars-text-0)
+[調用以人為中心的長壽命進程](invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
 [使用Web Services叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md)
 
@@ -793,7 +793,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 #### 基於檔案建立文檔 {#creating-a-document-based-on-a-file}
 
-下列程式碼範例會 `com.adobe.idp.Document` 建立以PDF檔名為 *map.pdf的物件*。 此檔案位於C硬碟的根目錄中。 此建構子嘗試使用檔案副檔名設定對 `com.adobe.idp.Document` 像的MIME內容類型。
+下列程式碼範例會建 `com.adobe.idp.Document` 立以PDF檔名為 *map.pdf的物件*。 此檔案位於C硬碟的根目錄中。 此建構子嘗試使用檔案副檔名設定對 `com.adobe.idp.Document` 像的MIME內容類型。
 
 接受 `com.adobe.idp.Document` 物件的建構函 `java.io.File` 式也接受布林參數。 通過將此參數設 `true`置為， `com.adobe.idp.Document` 對象將刪除檔案。 此動作表示您不必在將檔案傳遞至建構函式後移除 `com.adobe.idp.Document` 檔案。
 
