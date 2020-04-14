@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -85,7 +85,7 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 本節列出了各種鍵盤和輔助功能快速鍵，可在「通信管理」文本編輯器中使用。 您可以在下列情況下使用這些捷徑：
 
-* 建立或編輯文 [字資產](/help/forms/using/document-fragments.md#main-pars-header-0)
+* 建立或編輯文 [字資產](texts-interactive-communications.md)
 * 在建立對應時點選相關的「編輯」圖示( ![edittextmodule](assets/edittextmodule.png))後， [編輯文字模組](/help/forms/using/create-correspondence.md)。
 
 ### 文字選取和移動游標 {#text-selection-and-moving-the-cursor-around}
@@ -173,7 +173,7 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
    <td>Fn+Shift+向下鍵</td> 
   </tr>
   <tr>
-   <td><p>將游標移至頁面結尾</p> </td> 
+   <td><p>將游標移動到頁面結尾</p> </td> 
    <td><p>向下頁面</p> </td> 
    <td>Fn+向下鍵</td> 
   </tr>
