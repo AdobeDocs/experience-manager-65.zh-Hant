@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -44,7 +44,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
    Web通道中線型圖的基本屬性
 
 1. 根據頻 [道類型](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) ，設定圖表屬性。
-1. （僅限列印頻道）在「 **[!UICONTROL 代理設定」中]**，指定代理是否必須使用此圖表。 如果 **[!UICONTROL i t是「代理使用此圖表」選項的必選項]****** ，則代理可以點選「代理」UI的「內容」頁籤中圖表的眼睛表徵圖以顯示或隱藏圖表。
+1. （僅限列印頻道）在「 **[!UICONTROL 代理設定」中]**，指定代理是否必須使用此圖表。 如果 **[!UICONTROL i T是「代理使用此圖表」選項的必選項]****** ，則代理可以點選「代理」UI的「內容」頁籤中圖表的眼睛表徵圖以顯示或隱藏圖表。
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
@@ -150,7 +150,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
   </tr>
   <tr>
    <td>工具提示</td>
-   <td><p>工具提示顯示在網頁頻道圖表資料點上滑滑鼠的格式。 預設值為${x}(${y})。 根據圖表類型，當您將滑鼠指向圖表中的點、長條或切片時，變數${x}和${y}會動態地以X軸和Y軸上的對應值取代，並顯示在工具提示中。</p> <p>若要停用工具提示，請將「工具提 <span class="uicontrol">示</code> 」欄位留空。 此選項不適用於折線圖和面積圖。 例如，請參 <a href="../../forms/using/chart-component-interactive-communications.md#main-pars-header-e1f6">閱範例1:列印和網頁中的圖表輸出</a>。</code></p> </td>
+   <td><p>工具提示顯示在網頁頻道圖表資料點上滑滑鼠的格式。 預設值為${x}(${y})。 根據圖表類型，當您將滑鼠指向圖表中的點、長條或切片時，變數${x}和${y}會動態地以X軸和Y軸上的對應值取代，並顯示在工具提示中。</p> <p>若要停用工具提示，請將「工具提 <span class="uicontrol">示</code> 」欄位留空。 此選項不適用於折線圖和面積圖。 例如，請參 <a href="#chartoutputprintweb">閱範例1:列印和網頁中的圖表輸出</a>。</code></p> </td>
    <td>Web</td>
   </tr>
   <tr>
@@ -165,12 +165,12 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
      <li><strong>區域顏色</strong>:面積圖可用來指定圖表折線下方區域的顏色。</li>
      <li><strong>參考點&gt;系結類型：可 </strong>用於像限圖<strong> , </strong>以指定參考點的綁定類型。 使用靜態文本或資料模型對象屬性來定義參考點的值。</li>
      <li><strong>參照點&gt; X軸：如 </strong>果從「綁定類型」( <span class="uicontrol">Binding Type</code> )下拉清單中選擇「靜態」(Static)，以指定參考點的X軸值，則可用於像限圖。</code></li>
-     <li><strong>參照點&gt; y軸：如 </strong>果從「綁定類型」( <span class="uicontrol">Binding Type</code> )下拉清單中選擇「靜態」(Static)，以指定參考點的Y軸值，則可用於像限圖。</code></li>
+     <li><strong>參照點&gt; Y軸：如 </strong>果從「綁定類型」( <span class="uicontrol">Binding Type</code> )下拉清單中選擇「靜態」(Static)，以指定參考點的Y軸值，則可用於像限圖。</code></li>
      <li><strong>系列的參考點&gt;資料模型對象：如 </strong>果從「綁定類型」下拉清單中選 <span class="uicontrol">擇「資料模型對象</code> 」，則可用於多個像限圖。 定義表單資料模型物件屬性以確認參考點的系列. </code></li>
      <li><strong>系列的參考點&gt;資料模型對象值：如 </strong>果從「綁定類型」下拉清單中選 <span class="uicontrol">擇「資料模型對象</code> 」，則可用於多個像限圖。 使用系列的表單資料模型對象屬性和此欄位中定義的值來標識參考點的系列。</code></li>
      <li><strong>「參考點」(Reference Point)&gt;「參考點的資料模型對象」(Data Model Object):如果 </strong>從「綁定類型」下拉列 <span class="uicontrol">表中選擇「資料模型對象</code> 」，則可用於像限圖。 定義表單資料模型對象屬性，該屬性與X軸和Y軸上繪製的屬性同級。 此外，對於多個系列，請定義資料模型對象屬性，該屬性是為系列定義的資料模型對象屬性的子實體。</code></li>
-     <li><strong>「參考點」(Reference Point)&gt;「資料模型」(Data Model)參考點的對象值：如果 </strong>從「綁定類型」下拉列 <span class="uicontrol">表中選擇「資料模型對象</code> 」，則可用於像限圖。 使用參考點的表單資料模型對象屬性和在此欄位中定義的值來標識圖表的參考點。<br /><strong> 像限 </strong>標籤&gt;左上角：可用於像限圖以指定左上像限的名稱。</code></li>
-     <li><strong></strong> 像限標籤&gt;右上：可用於像限圖以指定右上像限的名稱。</li>
+     <li><strong>「參考點」(Reference Point)&gt;「資料模型」(Data Model)參考點的對象值：如果 </strong>從「綁定類型」下拉列 <span class="uicontrol">表中選擇「資料模型對象</code> 」，則可用於像限圖。 使用參考點的表單資料模型對象屬性和在此欄位中定義的值來標識圖表的參考點。<br /> 像限 <strong>標籤&gt;左上角：</strong> 可用於像限圖以指定左上像限的名稱。</code></li>
+     <li><strong>像限標籤&gt;右上：</strong> 可用於像限圖以指定右上像限的名稱。</li>
      <li><strong>像限標籤&gt;右下：可 </strong>用於像限圖，以指定右下方像限的名稱。</li>
      <li><strong>像限標籤&gt;左下角：可 </strong>用於像限圖，以指定左下像限的名稱。</li>
     </ul> </td>
@@ -185,7 +185,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 ![圖表中的函式](assets/functions_charts_new.png)
 
-雖然Chart元件隨附一些內建函式，但您可以編寫自訂函 [數](../../forms/using/chart-component-interactive-communications.md#main-pars-header-473010287) ，並將它們用於Web頻道的圖表設定中。
+雖然Chart元件隨附一些內建函式，但您可以編寫自訂函 [數](#customfunctionsweb) ，並將它們用於Web頻道的圖表設定中。
 
 Chart元件預設提供以下函式：
 
@@ -193,7 +193,7 @@ Chart元件預設提供以下函式：
 
 **Sum** 返回X軸或Y軸上另一個軸上給定值的所有值的總和。
 
-**Maximum** （最大值）返回X軸或Y軸上其它軸上給定值的最大值。
+**Maximum** （最大值）返回X或Y軸上其它軸上給定值的最大值。
 
 **頻率** ：傳回X或Y軸上另一個軸上給定值的值數。
 
@@ -203,9 +203,9 @@ Chart元件預設提供以下函式：
 
 **最小** ：返回X軸或Y軸上其它軸上給定值的最小值。
 
-**模式** ：返回在X或Y軸上出現次數最多的值，以表示另一個軸上的給定值。
+**模式** ：返回在X或Y軸上出現次數最多的值，以表示在另一個軸上給定的值。
 
-如需詳細資訊，請參 [閱範例2:求和與頻率函式在折線圖中的應用](../../forms/using/chart-component-interactive-communications.md#main-pars-header-ae38)。
+如需詳細資訊，請參 [閱範例2:求和與頻率函式在折線圖中的應用](#applicationsumfrequency)。
 
 ### 網頁頻道中的自訂函式 {#customfunctionsweb}
 
@@ -301,12 +301,12 @@ Sum函式可讓圖形在您想要拼貼和顯示相同資料屬性之許多例�
 
 若要完成此作業，請指定下列屬性：
 
-* **** 名稱：指定圖表的名稱。
-* **** 圖表類型：從下 **拉式清單** 中選取像限。
+* **名稱：** 指定圖表的名稱。
+* **圖表類型：** 從下 **拉式清單** 中選取像限。
 
 * 選中「多 **個系列** 」複選框。
 * **資料模型物件**:指定系列的資料模型對象屬性。 庫名稱的資料模型對象屬性是在X軸和Y軸中繪製的資料模型對象屬性的父屬性。
-* **** 資料模型物件：選擇資料模型對象屬性以建立X軸（事務日期）和Y軸（事務金額）的資料綁定。
+* **資料模型物件：** 選擇資料模型對象屬性以建立X軸（事務日期）和Y軸（事務金額）的資料綁定。
 * 在「參 **考點」(Reference Point** )部分中，選 **擇「靜態** 」(Static)作為「綁定類型」(Binding Type)。
 
 * 指定X軸和Y軸參照點的值。
