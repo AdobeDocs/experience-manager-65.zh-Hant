@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -75,7 +75,7 @@ CQ專案的效能最佳化方法可歸納為五個非常簡單的規則，可遵
 
 如果您上線使用網站，並在發佈後發現您遇到效能問題，只有一個原因：您的負載和效能測試並不足以模擬實際情況。
 
-模擬現實是困難的，而您在合理地想要投入多少精力來實現「真實」，取決於您專案的性質。 「真實」不僅指「真實程式碼」和「真實流量」，也指「真實內容」，尤其是關於內容大小和結構。 請記住，根據儲存庫的大小和結構，模板的行為可能完全不同。
+模擬現實很困難，而您在「實現」上合理想投入多少精力，取決於您專案的性質。 「真實」不僅指「真實程式碼」和「真實流量」，也指「真實內容」，尤其是關於內容大小和結構。 請記住，根據儲存庫的大小和結構，模板的行為可能完全不同。
 
 ### 建立堅實的目標 {#establish-solid-goals}
 
@@ -83,7 +83,7 @@ CQ專案的效能最佳化方法可歸納為五個非常簡單的規則，可遵
 
 正確制定業績目標的重要性不容低估。 通常，一旦人們將注意力集中在具體的績效目標上，就很難在以後改變這些目標，即使這些目標基於瘋狂的假設。
 
-建立良好、穩固的效能目標，確實是最棘手的領域之一。 通常最好從可比網站（例如新網站的前代網站）收集實際日誌和基準。
+建立良好、穩固的效能目標，確實是最棘手的領域之一。 通常最好從可比網站（例如新網站的前代網站）收集實際記錄和基準。
 
 ### 保持相關性 {#stay-relevant}
 
@@ -210,7 +210,7 @@ CQ（和／或基礎CRX）的某些方面可以配置為優化效能。 以下�
 
 ### 搜尋索引 {#search-indexing}
 
-從AEM 6.0開始，Adobe Experience manager使用Oak資料庫架構。
+從AEM 6.0開始，Adobe Experience Manager使用Oak資料庫架構。
 
 您可以在以下位置找到更新的索引資訊：
 
@@ -230,7 +230,7 @@ CQ（和／或基礎CRX）的某些方面可以配置為優化效能。 以下�
 
 配置這些服務以限制併發運行的工作流進程的最大數量。
 
-**** 注意：配置這些作業隊列會影響所有工作流，除非您為特定工作流模型建立了作業隊列(請參閱下面的 [Configure the Queue for a Specific Workflow Model](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) )。
+**注意：** 配置這些作業隊列會影響所有工作流，除非您為特定工作流模型建立了作業隊列(請參閱下面的 [Configure the Queue for a Specific Workflow Model](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) )。
 
 **儲存庫中的配置**
 
@@ -248,20 +248,20 @@ CQ（和／或基礎CRX）的某些方面可以配置為優化效能。 以下�
 
 為特定工作流模型建立作業隊列，以便您可以為該工作流模型配置作業處理。 這樣，您的配置會影響特定工作流的處理，而預設的「Granite工作流隊列」的配置則控制其他工作流的處理。
 
-當工作流程模型執行時，他們會針對特定主題建立Sling工作。 預設情況下，該主題與為常規Granite Workflow Queue或Granite Workflow External Process Job queue配置的主題匹配：
+當工作流程模型執行時，他們會針對特定主題建立Sling工作。 預設情況下，該主題與為常規Granite Workflow Queue或Granite Workflow External Process Job Queue配置的主題匹配：
 
 * com/adobe/granite/workflow/job&amp;ast;
 * com/adobe/granite/workflow/external/job&amp;ast;
 
-工作流模型生成的實際作業主題包括模型特定的尾碼。 例如，「DAM更新資產」工作流程模型會產生具有下列主題的工作：
+工作流模型生成的實際作業主題包括模型特定的尾碼。 例如，  DAM更新資產工作流模型生成具有以下主題的作業：
 
 com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model
 
 因此，您可以為主題建立與工作流模型的作業主題匹配的作業隊列。 配置隊列的效能相關屬性只影響生成與隊列主題匹配的作業的工作流模型。
 
-以下過程使用DAM更新資產工作流為例，為工作流建立作業隊列。
+以下過程使用 [!UICONTROL DAM Update Asset工作流為工作流建立作業隊列] 。
 
-1. 執行要為其建立作業隊列的工作流模型，以便生成主題統計資訊。 例如，將影像新增至「資產」以執行「DAM更新資產」工作流程。
+1. 執行要為其建立作業隊列的工作流模型，以便生成主題統計資訊。 例如，將影像新增至「資產」以執行 [!UICONTROL DAM更新資產工作流程] 。
 1. 開啟Sling Jobs主控台。 ([http://localhost:4502/system/console/slingevent](http://localhost:4502/system/console/slingevent))
 1. 在主控台中探索與工作流程相關的主題。 對於DAM更新資產，可找到下列主題：
 
@@ -506,7 +506,7 @@ Dispatcher提供許多內建機制，如果您的網站利用這些機制，您�
 
 ### 計算Dispatcher快取比 {#calculating-the-dispatcher-cache-ratio}
 
-快取比率公式估計快取處理的請求佔進入系統的請求總數的百分比。 要計算快取比率，您需要以下各項：
+快取比率公式估計快取處理的請求佔進入系統的請求總數的百分比。 要計算快取比率，您需要：
 
 * 請求總數。 Apache中提供了此資訊 `access.log`。 如需詳細資訊，請參閱 [Apache正式檔案](https://httpd.apache.org/docs/2.4/logs.html#accesslog)。
 
@@ -632,7 +632,7 @@ Dispatcher無法快取個人化資料，因此建議您將個人化限制在必�
 1. 其延伸(例如.html、.gif、.jpg等)
 1. 由伺服器隨檔案發送的MIME類型。
 
-對於大多數檔案，MIME類型隱含在檔案副檔名中。 即：
+對於大多數檔案，MIME類型隱含在檔案副檔名中。 i.e.:
 
 1. 其延伸(例如.html、.gif、.jpg等)
 1. 由伺服器隨檔案發送的MIME類型。
@@ -656,7 +656,7 @@ Dispatcher無法快取個人化資料，因此建議您將個人化限制在必�
 
 本文中所報告的結果是從參考環境中運行的基準（具有以下配置）獲得的。 此配置設計為類似於資料中心中的典型生產環境：
 
-* H-P proLiant DL380 G6,8個CPU x 2.533 GHz
+* H-P ProLiant DL380 G6,8個CPU x 2.533 GHz
 * 串列連接SCSI 300GB 10,000RPM驅動器
 * 硬體RAID控制器；RAID0+5陣列中有8個驅動器
 * VMware映像CPU x 2 Intel Xeon E5540 @ 2.53GHz
