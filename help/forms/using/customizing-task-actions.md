@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -135,7 +135,7 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂工作動作之�
 
 ### 任務清單任務操作彈出菜單 {#task-list-task-action-nbsp-pop-up-menu}
 
-1. 您需要開發套件來自訂AEM Forms工作區「工作清單」工作清單動作快顯功能表的項目。 如需建立開發套件的詳細資訊，請參閱「 [建立AEM Forms工作區程式碼」。](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
+1. 您需要開發套件來自訂AEM Forms工作區「工作清單」工作清單動作快顯功能表的項目。 如需建立開發套件的詳細資訊，請參閱「 [建立AEM Forms工作區程式碼」。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 1. 複製/libs/ws/js/runtime/templates/task.html以 `/apps/ws/js/runtime/templates/task.html`取代下列程式碼片段：
 
