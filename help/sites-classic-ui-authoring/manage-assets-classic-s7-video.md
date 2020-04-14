@@ -1,6 +1,6 @@
 ---
-title: 視訊
-seo-title: 視訊
+title: 影片
+seo-title: 影片
 description: Assets提供集中式視訊資產管理，您可以直接將視訊上傳至Assets，以便自動編碼至Scene7，並直接從Assets存取Scene7視訊，以進行頁面製作。
 seo-description: Assets提供集中式視訊資產管理，您可以直接將視訊上傳至Assets，以便自動編碼至Scene7，並直接從Assets存取Scene7視訊，以進行頁面製作。
 uuid: 46da7a0d-d17b-4716-a304-ce5496421b5a
@@ -10,12 +10,12 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
 
-# Video{#video}
+# 影片{#video}
 
 Assets提供集中式視訊資產管理，您可以直接將視訊上傳至Assets，以便自動編碼至Dynamic Media Classic，並直接從Assets存取Dynamic Media Classic視訊，以進行頁面製作。
 
@@ -26,14 +26,14 @@ Dynamic Media Classic視訊整合將最佳化視訊的觸及面延伸到所有�
 
 ## 關於FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
-預設的視訊編碼程式是以使用FFMPEG與視訊設定檔整合為基礎。 因此，現成可用的DAM更新資產工作流程包含下列兩個ffmpeg工作流程步驟：
+預設的視訊編碼程式是以使用FFMPEG與視訊設定檔整合為基礎。 因此，現成可用的  DAM更新資產工作流程包含下列兩個ffmpeg工作流程步驟：
 
 * FFMPEG縮圖
 * FFMPEG編碼
 
-請注意，啟用和設定Dynamic Media Classic整合併不會從現成可用的DAM更新資產擷取工作流程自動移除或停用這兩個工作流程步驟。 如果您已在AEM中使用以FFMPEG為基礎的視訊編碼，則您可能已在製作環境中安裝FFMPEG。 在此例中，使用「資產」收錄的新視訊會編碼兩次：一次是從FFMPEG編碼器，一次是從Dynamic Media Classic整合。
+請注意，啟用和設定Dynamic Media Classic整合併不會從立即可用的  DAM更新資產擷取工作流程自動移除或停用這兩個工作流程步驟。 如果您已在AEM中使用以FFMPEG為基礎的視訊編碼，則您可能已在製作環境中安裝FFMPEG。 在此例中，使用「資產」收錄的新視訊會編碼兩次：一次是從FFMPEG編碼器，一次是從Dynamic Media Classic整合。
 
-如果您已在AEM中設定FFMPEG視訊編碼並安裝FFMPEG,Adobe建議您從DAM更新資產工作流程中移除兩個FFMPEG工作流程。
+如果您已在AEM中設定FFMPEG視訊編碼並安裝FFMPEG,Adobe建議您從 [!UICONTROL DAM更新資產工作流程中移除兩個FFMPEG工作流程] 。
 
 ### 支援的格式 {#supported-formats}
 
@@ -49,7 +49,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 * 您需要視訊資產的工作流程嗎？
 * 您是否需要視訊資產的版本控制？
 
-如果對上述兩種問題的答案皆為「是」，則直接將視訊上傳至Adobe DAM。 如果這兩個問題的答案都是「否」，則直接將視訊上傳至Dynamic Media Classic。 下節將說明每個藍本的工作流程。
+如果對上述任一問題或兩個問題都回答「是」，則直接將視訊上傳至Adobe DAM。 如果這兩個問題的答案都是「否」，則直接將視訊上傳至Dynamic Media Classic。 下節將說明每個藍本的工作流程。
 
 #### 如果您要直接將視訊上傳至Adobe Assets {#if-you-are-uploading-your-video-directly-to-adobe-assets}
 
@@ -92,7 +92,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 
 如果您因為Dynamic Media Classic中的預設集已更新，所以需要更新AEM中視訊的檢視器和編碼預設集，請導覽至雲端設定中的Dynamic Media Classic設定，然後按一下「 **Update the viewer and encoding presets**」。
 
-![chlimage_1-131](assets/chlimage_1-131.png)
+![chlimage_1-135](assets/chlimage_1-131.png)
 
 ### 上傳您的主影片 {#uploading-your-master-video}
 
@@ -107,7 +107,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 
    將DAM主視訊拖曳至視訊元件時，會存 *取所有* Dynamic Media Classic編碼的Proxy轉譯以進行傳送。
 
-### Foundation Video元件與Dynamic Media Classic video元件 {#foundation-video-component-versus-scene-video-component}
+### Foundation Video元件與Dynamic Media Classic Video元件 {#foundation-video-component-versus-scene-video-component}
 
 使用AEM時，您可以存取Sites中的Video元件和Dynamic Media Classic(Scene7)視訊元件。 這些元件不能互換。
 
@@ -126,9 +126,9 @@ Dynamic Media Classic視訊元件僅適用於Dynamic Media Classic視訊。 基�
 
 即使建議使用Dynamic Media Classic視訊元件來檢視Dynamic Media Classic視訊，本節也會說明在AEM中搭配 [!UICONTROL Foundation Video Component] ，以取得完整性。
 
-### AEM video與Dynamic Media Classic video比較 {#aem-video-and-scene-video-comparison}
+### AEM Video與Dynamic Media Classic Video比較 {#aem-video-and-scene-video-comparison}
 
-下表提供AEM Foundation video元件與Scene7 video元件之間支援功能的高階比較：
+下表提供AEM Foundation Video元件與Scene7 Video元件之間支援功能的高階比較：
 
 |  | AEM Foundation影片 | Dynamic Media Classic視訊 |
 |---|---|---|
@@ -149,7 +149,7 @@ Dynamic Media Classic視訊元件僅適用於Dynamic Media Classic視訊。 基�
 >必須啟動新視訊設定檔及對其所做的變更才能發佈。
 
 1. 在AEM中，前往「工 **[!UICONTROL 具]**」，然後選 **[!UICONTROL 取「設定控制台」]**。 在設定控制台中，導覽至導 **[!UICONTROL 覽樹狀]** 結構中的 **[!UICONTROL 「工具]** >資 **[!UICONTROL 產]** >視訊描述檔」。
-1. 建立新的Dynamic Media Classic視訊設定檔。 **[!UICONTROL 在新]**...菜單，選 **[!UICONTROL 擇「建立頁面]** 」，然後選擇「動態媒體經典視頻配置檔案」模板。 為新視訊描述檔頁面指定名稱，然後按一下「 **[!UICONTROL 建立]**」。
+1. 建立新的Dynamic Media Classic視訊設定檔。 在新 **[!UICONTROL ...]** 菜單，選 **[!UICONTROL 擇「建立頁面]** 」，然後選擇「動態媒體經典視頻配置檔案」模板。 為新視訊描述檔頁面指定名稱，然後按一下「 **[!UICONTROL 建立]**」。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
