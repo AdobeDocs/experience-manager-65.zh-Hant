@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -127,7 +127,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
  </tbody>
 </table>
 
-您也可以使用「資產」索引標籤，將新片段拖曳至目標區域，以取代目標區域與檔案片段之 **間的系** 結。 拖曳片段時目標區域的藍色陰影表示檔案片段可以拖曳至目標區域。
+您也可以使用「資產」索引標籤，將新片段拖曳至目標區域，以取代目標區域與檔案片段之 **[!UICONTROL 間的系]** 結。 拖曳片段時目標區域的藍色陰影表示檔案片段可以拖曳至目標區域。
 
 如需檔案片段的詳細資訊，請參 [閱檔案片段](/help/forms/using/document-fragments.md)。
 
@@ -178,11 +178,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 切換至 **[!UICONTROL Web頻道]**。 網頁頻道會出現在互動式通訊編輯器中。 當您第一次從列印頻道切換至Web頻道時，會進行自動同步。 如需詳細資訊，請參 [閱從列印頻道同步化網頁頻道](../../forms/using/create-interactive-communication.md#synchronize)。
 
-   由於我們在此範例中使用「列印」做為網頁的主版，因此列印頻道預留位置、內容和資料系結會同步至網頁頻道。 不過，您可以變更和自訂網路頻道中的特定內容。 [取消繼承](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) （對於使用列印頻道產生的目標區域和變數），以便自訂內容。
+   由於我們在此範例中使用「列印」做為網頁的主版，因此列印頻道預留位置、內容和資料系結會同步至網頁頻道。 不過，您可以變更和自訂網路頻道中的特定內容。 [取消繼承](#cancelinheritance) （對於使用列印頻道產生的目標區域和變數），以便自訂內容。
 
    ![網路頻道資產](assets/webchannelassets.png)
 
-   點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](assets/edit.svg) 物件或變數旁的編輯（編輯）圖示來編輯屬性。 此外，對於使用列印頻道在 [Web頻道中自動產生的檔案片段](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) ，請使用每個資料模型物件和變數旁的 ![](assets/cancelinheritance.png) （取消繼承）圖示來取消繼承 [](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) ，並可加以編輯。
+   點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](assets/edit.svg) 物件或變數旁的編輯（編輯）圖示來編輯屬性。 此外，對於使用列印頻道在 [Web頻道中自動產生的檔案片段](#synchronize) ，請使用每個資料模型物件和變數旁的 ![](assets/cancelinheritance.png) （取消繼承）圖示來取消繼承 [](#cancelinheritance) ，並可加以編輯。
 
 1. 若要在選取網頁頻道時，在網頁頻道中新增其他元件，請點選「元 **[!UICONTROL 件]**」。 視需要將元件拖放至互動式通訊的網路頻道，然後繼續進行設定。
 
@@ -581,9 +581,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 * **父級：** 選擇元件的父代。
 * **查看SOM表達式：** 查看 [元件的SOM表達式](../../forms/using/using-som-expressions-adaptive-forms.md) 。
 
-* **在面板中對對象進行分組：** 將面板中的元件分組，以便能夠同時對這些元件執行操作。 如需詳細資訊，請參 **[閱「面板」中的「群組物件」](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**。
+* **在面板中對對象進行分組：** 將面板中的元件分組，以便能夠同時對這些元件執行操作。 如需詳細資訊，請參 [閱「面板」中的「群組物件」](#groupobjectspanel)。
 
-* **取消繼承：** 取 [消目標區域](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) 內元件的繼承以進行編輯。
+* **取消繼承：** 取 [消目標區域](#cancelinheritance) 內元件的繼承以進行編輯。
 
 ### Group objects in Panel {#groupobjectspanel}
 
