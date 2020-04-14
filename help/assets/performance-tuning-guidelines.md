@@ -4,7 +4,7 @@ description: 有關AEM設定、變更硬體、軟體和網路元件以排除瓶�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -29,7 +29,7 @@ AEM Assets的效能不佳可能會影響使用者在互動式效能、資產處�
 
 ### 臨時資料夾 {#temp-folder}
 
-若要改善資產上傳時間，請針對Java臨時目錄使用高效能的儲存空間。 在Linux和Windows上，可使用RAM驅動器或SSD。 在雲端環境中，可使用等同的高速儲存類型。 例如，在Amazon EC2中， [臨時資料夾可](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) 以使用「臨時驅動器」。
+若要改善資產上傳時間，請對Java暫存目錄使用高效能的儲存空間。 在Linux和Windows上，可使用RAM驅動器或SSD。 在雲端環境中，可使用等同的高速儲存類型。 例如，在Amazon EC2中， [臨時資料夾可](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) 以使用「臨時驅動器」驅動器。
 
 假設伺服器記憶體充足，請配置RAM驅動器。 在Linux上，運行以下命令以建立8 GB的RAM驅動器：
 
@@ -124,22 +124,22 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 ### 瞬態工作流程 {#transient-workflows}
 
-盡可能將「DAM更新資產」工作流程設為「暫時」。 此設定可大幅降低處理工作流程所需的開銷，因為在本例中，工作流程不需要經過一般的追蹤和封存程式。
+盡可能將「 [!UICONTROL DAM更新資產」工作流程設為] 「暫時」。 此設定可大幅降低處理工作流程所需的開銷，因為在本例中，工作流程不需要經過一般的追蹤和封存程式。
 
 >[!NOTE]
 >
->依預設，DAM更新資產工作流程會在AEM 6.3中設為「暫時」。在這種情況下，您可以略過以下過程。
+>在AEM 6.3中， [!UICONTROL DAM更新資產工作流程預設為] 「暫時」。在這種情況下，您可以略過以下過程。
 
 1. 導覽至 `/miscadmin` AEM例項中，網址為 `https://[aem_server]:[port]/miscadmin`。
 1. 展開「 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]** > **** dam」。
 1. 開啟 **[!UICONTROL DAM更新資產]**。 從浮動工具面板切換至「頁面」索 **[!UICONTROL 引標籤]** ，然後按一下「 **[!UICONTROL 頁面屬性」]**。
-1. 選擇「 **[!UICONTROL 暫時工作流]** 」，然後按一下「 **[!UICONTROL 確定」]**。
+1. Select **[!UICONTROL Transient Workflow]** and click **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
    >有些功能不支援暫時性工作流程。 如果您的AEM Assets部署需要這些功能，請勿設定暫時工作流程。
 
-在無法使用暫時性工作流程的情況下，請定期執行工作流程清除，以刪除封存的DAM更新資產工作流程，以確保系統效能不會降低。
+在無法使用暫時性工作流程的情況下，請定期執行工作流程清除，以刪除封存的 [!UICONTROL DAM更新資產工作流程] ，以確保系統效能不會降低。
 
 通常，每週執行清除工作流。 但是，在資源密集的情形中（例如在大規模資產擷取期間），您可以更頻繁地執行它。
 
@@ -151,7 +151,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 ### 最大並行作業數 {#maximum-parallel-jobs}
 
-依預設，AEM會執行與伺服器上處理器數目相等的最大並行作業數。 此設定的問題在於，在負載較重的期間，所有處理器都會被DAM更新資產工作流程佔用，降低UI回應速度，並防止AEM執行其他可保障伺服器效能與穩定性的程式。 作為一個好做法，請通過執行以下步驟將此值設定為伺服器上可用處理器的一半：
+依預設，AEM會執行與伺服器上處理器數目相等的最大並行作業數。 此設定的問題在於，在負載較重的期間， [!UICONTROL DAM Update Asset] （DAM更新資產）工作流程會佔用所有處理器，降低UI回應速度，並防止AEM執行其他可保障伺服器效能與穩定性的程式。 作為一個好做法，請通過執行以下步驟將此值設定為伺服器上可用處理器的一半：
 
 1. 在「AEM作者」上，請至 `https://[aem_server]:[port]/system/console/slingevent`。
 1. 按一 **[!UICONTROL 下與您的實作相關的每個工作流程佇列(例如]** Granite Transient Workflow Queue)上的「編輯」 ****。
@@ -161,15 +161,15 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 ### DAM更新資產設定 {#dam-update-asset-configuration}
 
-DAM更新資產工作流程包含為工作設定的完整步驟套件，例如產生Scene7 PTIFF和InDesign server整合。 不過，大部分使用者可能不需要其中幾個步驟。 Adobe建議您建立DAM更新資產工作流程模型的自訂復本，並移除任何不必要的步驟。 在此情況下，請更新DAM更新資產的啟動器，以指向新模型。
+「 [!UICONTROL DAM更新資產] 」工作流程包含為工作設定的完整步驟套件，例如產生Scene7 PTIFF和InDesign Server整合。 不過，大部分使用者可能不需要其中幾個步驟。 Adobe建議您建立自訂的 [!UICONTROL DAM更新資產工作流程模型] ，並移除任何不必要的步驟。 在此案例中，請更新 [!UICONTROL DAM Update Asset的啟動器] ，以指向新模型。
 
-深入執行DAM更新資產工作流程可大幅增加檔案資料存放區的大小。 Adobe進行的實驗結果顯示，如果在8小時內執行約5500個工作流程，資料存放區大小可增加約400 GB。
+深入執行 [!UICONTROL DAM更新資產工作流程] ，可大幅增加檔案資料存放區的大小。 Adobe進行的實驗結果顯示，若在8小時內執行約5500個工作流程，資料存放區大小可增加約400 GB。
 
 這是臨時增加，在運行資料儲存廢棄項目收集任務後，資料儲存將恢復為其原始大小。
 
 通常，資料儲存廢棄項目收集任務與其他計畫維護任務一起每週運行。
 
-如果您有有限的磁碟空間並密集執行DAM更新資產工作流程，請考慮更頻繁地排程廢棄項目收集工作。
+如果您有有限的磁碟空間並密集執行 [!UICONTROL DAM更新資產工作流程] ，請考慮更頻繁地排程廢棄項目收集工作。
 
 #### 產生執行時期轉譯 {#runtime-rendition-generation}
 
@@ -181,7 +181,7 @@ DAM更新資產工作流程包含為工作設定的完整步驟套件，例如�
 
 #### ImageMagick {#imagemagick}
 
-如果您自訂「DAM更新資產」工作流程，以使用ImageMagick產生轉譯，Adobe建議您在 `policy.xml` 修改檔 `/etc/ImageMagick/`案。 預設情況下，ImageMagick使用OS卷上的整個可用磁碟空間和可用記憶體。 在的部分中進行以下配 `policymap` 置更改 `policy.xml` 以限制這些資源。
+如果您自訂 [!UICONTROL DAM更新資產工作流程] ，以使用ImageMagick產生轉譯，Adobe建議您在 `policy.xml` 修改檔案 `/etc/ImageMagick/`。 預設情況下，ImageMagick使用OS卷上的整個可用磁碟空間和可用記憶體。 在的部分中進行以下配 `policymap` 置更改 `policy.xml` 以限制這些資源。
 
 ```xml
 <policymap>
@@ -220,7 +220,7 @@ DAM更新資產工作流程包含為工作設定的完整步驟套件，例如�
 
 * 資產本身已修改
 * 會建立資產的版本
-* DAM更新資產會針對資產執行
+* [!UICONTROL DAM更新資產] ，會針對資產執行
 
 所列結果消耗了大量資源。 因此，Adobe建議 [停用XMP回寫](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html)（如果不需要）。
 
@@ -242,7 +242,7 @@ DAM更新資產工作流程包含為工作設定的完整步驟套件，例如�
 
 ## 搜尋索引 {#search-indexes}
 
-請確定您實作了最新的Service pack和與效能相關的修補程式，因為它們通常包含系統索引的更新。 請參 [閱某些索引最佳化的](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) 「效能調整提示」。
+請確定您實作了最新的Service Pack和與效能相關的修補程式，因為它們通常包含系統索引的更新。 請參 [閱某些索引最佳化的](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) 「效能調整提示」。
 
 為經常運行的查詢建立自定義索引。 如需詳細資訊，請參 [閱分析慢速查詢和建立自訂索引](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)[的方法](/help/sites-deploying/queries-and-indexing.md)。 如需查詢和索引最佳實務的其他深入資訊，請參 [閱查詢和索引最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
@@ -322,7 +322,7 @@ AEM中有兩個與大型檔案相關的主要已知問題。 當檔案大小超�
 
 ### AEM例項測試 {#aem-instance-testing}
 
-若要透過有效的CPU使用率和負載分享，將延遲降至最低並達到高吞吐量，請定期監控AEM執行個體的效能。 特別是：
+若要透過有效的CPU使用率和負載分享，將延遲降至最低並達到高吞吐量，請定期監控AEM執行個體的效能。 尤其是：
 
 * 針對AEM例項執行載入測試
 * 監控上傳效能和UI回應速度
@@ -337,8 +337,8 @@ AEM中有兩個與大型檔案相關的主要已知問題。 當檔案大小超�
 * 啟用暫時工作流程
 * 調整Granite工作流程佇列以限制併發工作
 * 配置ImageMagick以限制資源消耗
-* 從「DAM更新資產」工作流程移除不必要的步驟
+* 從「 [!UICONTROL DAM更新資產」工作流程移除不必要的步驟]
 * 配置工作流和版本清除
-* 使用最新的Service pack和修補程式來最佳化索引。 請洽詢Adobe支援，以取得任何其他可用的索引最佳化。
+* 使用最新的Service Pack和修補程式來最佳化索引。 請洽詢Adobe支援，以取得任何其他可用的索引最佳化。
 * 使用guessTotal來最佳化查詢效能。
 * 如果您設定AEM以從檔案內容偵測檔案類型(在 **[!UICONTROL AEM Web Console中啟用]** Day CQ DAM Mime Type Service ****)，請在非尖峰時段大量上傳許多檔案，因為它耗用大量資源。
