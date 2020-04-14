@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -84,4 +84,4 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 >
 >若要使用在AEM Forms工作區的「開始處理」標籤中建立的工作來自訂工作詳細資訊頁面，請將新資訊新增至 ****`/apps/ws/js/runtime/templates/startprocess.html`。
 >
->若要為在詳細資料頁面中新增的資訊新增樣式，請使用「工作區自訂」中的「使用者介面變更」區段來修 *改CSS*[檔案](/help/forms/using/changing-locale-user-interface.md#main-pars-header-3)。
+>若要為在詳細資料頁面中新增的資訊新增樣式，請使用「工作區自訂」中的「使用者介面變更」區段來修 *改CSS*[檔案](changing-locale-user-interface.md)。
