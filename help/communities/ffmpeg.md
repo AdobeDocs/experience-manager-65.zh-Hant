@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -38,15 +38,15 @@ FFmpeg應安裝在代管AEM作者例 *項* 的伺服器上。
 
    您應該能夠從系統中的任何目錄運行FFmpeg。
 
-   * 例如， `ffmpeg -version`
+   * for example, `ffmpeg -version`
 
 ## 設定FFmpeg轉碼服務 {#configure-ffmpeg-transcoding-service}
 
-依預設，當安裝FFmpeg時，會根據DAM更新資產工作流程定義設定多個轉譯（轉碼）。
+依預設，當安裝FFmpeg時，會根據 [!UICONTROL DAM Update Asset] （更新資產）工作流程定義設定多個轉譯（轉碼）。
 
 由於轉碼需要CPU資源，因此建議修改目標轉譯的清單。 在大多數情況下，不需要轉碼。
 
-若要修改DAM更新資產工作流程，以及在此範例中，若要關閉轉碼：
+若要修改 [!UICONTROL DAM更新資產工作流程] ，以及在此範例中，若要關閉轉碼：
 
 * 以管理權限登入作者例項
 * 從全域導覽：「工 **[!UICONTROL 具>工作流>模型」]**
