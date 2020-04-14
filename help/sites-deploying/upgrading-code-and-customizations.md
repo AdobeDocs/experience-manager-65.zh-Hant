@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -150,7 +150,7 @@ ContextHub組態受升級影響。 有關如何恢復現有ContextHub配置的�
 
 ### 工作流程自訂 {#workflow-customizations}
 
-您通常會在開箱即用的工作流程中進行更新，以新增或移除不需要的功能。 自訂的常見工作流程是「DAM更新資產」工作流程。 自訂實作所需的所有工作流程都應備份並儲存在版本控制中，因為升級期間可能會覆寫這些工作流程。
+您通常會在開箱即用的工作流程中進行更新，以新增或移除不需要的功能。 自訂的常見工作流程是「 [!UICONTROL DAM更新資產」工作流程] 。 自訂實作所需的所有工作流程都應備份並儲存在版本控制中，因為升級期間可能會覆寫這些工作流程。
 
 ### 可編輯的範本 {#editable-templates}
 
