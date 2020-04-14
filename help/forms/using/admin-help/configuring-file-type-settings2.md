@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: adbe8416-c8d7-4581-940b-df62eadf0e26
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 在「檔案類型設定」頁上，您可以執行以下任務：
 
-* [建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)
+* [建立或編輯檔案類型設定](#create-or-edit-file-type-settings)
 * 指定預設要使用的檔案類型設定(請參 [閱匯入和匯出PDF產生器組態檔](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html))
 * [變更預設設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#change-the-default-settings)
 * [啟用PDF/A支援](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
@@ -50,15 +50,15 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
    [匯入和匯出PDF產生器組態檔](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
 
-   [Adobe PDF匯出設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-2)
+   [Adobe PDF匯出設定（僅限Windows）](#adobe-pdf-export-settings-windows-only)
 
-   [HTML至PDF設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-3)
+   [HTML至PDF設定](#html-to-pdf-settings)
 
-   [將Flash視訊轉換為PDF設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-9)
+   [將Flash視訊轉換為PDF設定](#flash-videos-to-pdf-settings)
 
-   [XPS到PDF設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-10)
+   [XPS到PDF設定](#xps-to-pdf-settings)
 
-   [PDF最佳化程式設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-11)
+   [PDF最佳化程式設定](#pdf-optimizer-settings)
 
    [Microsoft Excel設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings2.md#microsoft-excel-settings-windows-only)
 
@@ -399,7 +399,7 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 ## Microsoft Excel設定（僅限Windows） {#microsoft-excel-settings-windows-only}
 
-這些選項決定如何轉換Microsoft Excel檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)。
+這些選項決定如何轉換Microsoft Excel檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](#create-or-edit-file-type-settings)。
 
 **試用OpenOffice做為備援轉換器**:當選取此選項，而使用Microsoft Excel的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
 
@@ -463,7 +463,7 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 ## Microsoft Project設定（僅限Windows） {#microsoft-project-settings-windows-only}
 
-這些選項決定了Microsoft Project檔案的轉換方式。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)。
+這些選項決定了Microsoft Project檔案的轉換方式。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](#create-or-edit-file-type-settings)。
 
 1. **[!UICONTROL 副檔名：]** 指定此應用程式接受的檔案類型的檔案副檔名（以逗號分隔）。 預設值為 `mpp`。 請勿在擴充功能之前加入句號或之間加入空格。
 
@@ -474,7 +474,7 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 ## Microsoft Word設定（僅限Windows） {#microsoft-word-settings-windows-only}
 
-這些選項決定如何轉換Microsoft Word檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)。
+這些選項決定如何轉換Microsoft Word檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](#create-or-edit-file-type-settings)。
 
 **[!UICONTROL 試用OpenOffice做為備援轉換器]**:當選取此選項，而使用Microsoft Word的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
 
@@ -534,7 +534,7 @@ styleName1=level1[,styleName2=level2...]
 
 ## Microsoft Publisher設定（僅限Windows） {#microsoft-publisher-settings-windows-only}
 
-這些選項決定如何轉換Microsoft Publisher檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#main-pars-heading-0)。
+這些選項決定如何轉換Microsoft Publisher檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](#create-or-edit-file-type-settings)。
 
 **[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的檔案副檔名（以逗號分隔）。 預設值為 `pub`。 請勿在擴充功能之前加入句號或之間加入空格。
 
