@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -32,7 +32,7 @@ source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
 
 **定義資料顯示模式**
 
-互動式通訊的作者現在可 [以定義欄位](../../forms/using/create-interactive-communication.md#main-pars-header-1162517146) 、變數和表單資料模型元素的資料顯示模式。 例如，日期、貨幣或電話格式。
+互動式通訊的作者現在可 [以定義欄位](create-interactive-communication.md#datadisplaypatterns) 、變數和表單資料模型元素的資料顯示模式。 例如，日期、貨幣或電話格式。
 
 **使用新類型的圖表**
 
