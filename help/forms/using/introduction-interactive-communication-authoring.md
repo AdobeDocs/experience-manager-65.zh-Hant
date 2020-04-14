@@ -10,7 +10,7 @@ topic-tags: interactive-communications
 discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -31,13 +31,13 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
 ![互動式通訊製作使用者介面](assets/form-editor.png)
 
-******答：側**&#x200B;欄B.頁面工具 **列C.** Content區域
+**答：** 側 **欄B.** 頁面工具 **列C.** Content區域
 
 ## 側欄 {#sidebar}
 
 ![側欄](assets/sidebar-comps-2.png)
 
-**************答：頻道瀏覽**&#x200B;器B.內容瀏 **覽器C.** 屬性瀏 **覽器D.資產瀏覽**&#x200B;器E.元件瀏 **覽器F.資料來源瀏覽器——資料模**&#x200B;型G。Data Sources瀏覽器——主內容
+**答：** 頻道瀏覽 **器B.** 內容瀏 **覽器C.** 屬性瀏 **覽器D.** 資產瀏覽 **器E.** 元件瀏 **覽器F.** 資料來源瀏覽器——資料模 **型G。** Data Sources瀏覽器——主內容
 
 <!-- Click to enlarge
 
@@ -112,9 +112,9 @@ H.群 **組**:如果想要剪下、複製或貼上多個元件，可讓您選取
 
 I.父 **項**:可讓您選取元件的父項。
 
-**J.查**&#x200B;看SOM表達式：可讓您檢視元 [件的SOM運算式](../../forms/using/using-som-expressions-adaptive-forms.md) 。
+J.查 **看SOM表達式：** 可讓您檢視元 [件的SOM運算式](../../forms/using/using-som-expressions-adaptive-forms.md) 。
 
-**K:在面**&#x200B;板中對對象分組：可讓您將面板中的元件群組，以便能夠同時對這些元件執行作業。 如需詳細資訊，請參 [閱「面板」中的「群組物件」](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)。
+K:在面 **板中對對象分組：** 可讓您將面板中的元件群組，以便能夠同時對這些元件執行作業。 如需詳細資訊，請參 [閱「面板」中的「群組物件」](create-interactive-communication.md#groupobjectspanel)。
 
 L.新 **增子面板** （僅限面板）:可讓您將子面板新增至面板。
 
