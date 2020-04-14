@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: e9c64d214456eed8e0adb29edd60c2350b852a67
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: e9c64d214456eed8e0adb29edd60c2350b852a67
 >
 >* Dynamic Media Classic的DHTML檢視器平台已於2014年1月31日正式停售。 如需詳細資訊，請 [參閱DHTML檢視器生命週期結束的常見問答集](../sites-administering/dhtml-viewer-endoflifefaqs.md)。
 >* 在設定Dynamic Media Classic以搭配AEM運作之前，請參 [閱Best Practices](#best-practices-for-integrating-scene-with-aem) for integrating Dynamic Media Classic與AEM。
->* 如果您使用Dynamic Media Classic與自訂的Proxy設定，則需要設定兩個HTTP clientProxy設定，因為AEM的某些功能是使用3.x API，而其他部分則是使用4.x API。 3.x設定為http://localhost:4502/system/console/configMgr/com.day.commons.httpclient [](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) ,4.x設定為 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)。
+>* 如果您使用Dynamic Media Classic與自訂的Proxy設定，則需要設定兩個HTTP ClientProxy設定，因為AEM的某些功能是使用3.x API，而其他部分則是使用4.x API。 3.x設定為http://localhost:4502/system/console/configMgr/com.day.commons.httpclient [](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) ,4.x設定為 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)。
 >
 
 
@@ -55,7 +55,7 @@ AEM使用者可以選擇兩種解決方案來搭配動態媒體：將其AEM實�
 
 ### AEM Dynamic Media {#aem-dynamic-media}
 
-AEM Dynamic media是直接在AEM平台中統一Dynamic Media Classic功能。
+AEM Dynamic Media是直接在AEM平台中統一Dynamic Media Classic功能。
 
 當您在此解決方案中使用資產時，請遵循下列工作流程：
 
@@ -84,7 +84,7 @@ AEM Dynamic media是直接在AEM平台中統一Dynamic Media Classic功能。
     <tr>
     <td> </td>
     <td> </td>
-    <td><strong>動態媒體</strong></td>
+    <td><strong>Dynamic Media</strong></td>
     <td> </td>
     <td><strong>Dynamic Media Classic整合</strong></td>
     <td> </td>
@@ -99,7 +99,7 @@ AEM Dynamic media是直接在AEM平台中統一Dynamic Media Classic功能。
     </tr>
     <tr>
     <td>網站與動態媒體新手</td>
-    <td>將資產上傳至AEM並使用AEM Dynamic media元件在「網站」頁面上製作資產</td>
+    <td>將資產上傳至AEM並使用AEM Dynamic Media元件在「網站」頁面上製作資產</td>
     <td><p>開啟</p> <p>（請參閱步驟3）</p> </td>
     <td><a href="/help/assets/adding-dynamic-media-assets-to-pages.md">開啟</a></td>
     <td>關閉</td>
@@ -147,7 +147,7 @@ AEM Dynamic media是直接在AEM平台中統一Dynamic Media Classic功能。
     </tr>
     <tr>
     <td>既有的Dynamic Media Classic客戶，也是資產新手</td>
-    <td><p>將資產上傳至AEM，然後使用Dynamic Media產生轉譯以供下載／共用。 自動將AEM資產發佈至Dynamic Media Classic以進行傳送。</p> <p><strong></strong> 重要：在AEM中產生的重複處理和轉譯將無法同步至Dynamic Media Classic</p> </td>
+    <td><p>將資產上傳至AEM，然後使用Dynamic Media產生轉譯以供下載／共用。 自動將AEM資產發佈至Dynamic Media Classic以進行傳送。</p> <p><strong>重要：</strong> 在AEM中產生的重複處理和轉譯將無法同步至Dynamic Media Classic</p> </td>
     <td><p>開啟</p> <p>（請參閱步驟3）</p> </td>
     <td>關閉</td>
     <td>關閉</td>
@@ -214,7 +214,7 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
 1. [定義雲端設定](#creating-a-cloud-configuration-for-scene) -定義Dynamic Media Classic檔案夾和Assets檔案夾之間的對應。 即使您只想要單向(AEM Assets to Dynamic Media Classic)同步，您仍需要完成此步驟。
 1. [在 **OSGi主控台中啟用Adobe CQ s7dam Dam Listener **](#enabling-the-adobe-cq-scene-dam-listener)- Done。
-1. 如果您想要AEM資產自動上傳至Dynamic Media Classic，您必須開啟該選項，並將Dynamic Media Classic新增至DAM更新資產工作流程。 您也可以手動上傳資產。
+1. 如果您想要AEM資產自動上傳至Dynamic Media Classic，您必須開啟該選項，並將Dynamic Media Classic新增至 [!UICONTROL DAM Update Asset] workflow。 您也可以手動上傳資產。
 1. 將Dynamic Media Classic元件新增至sidekick。 這可讓使用者在其AEM頁面上使用Dynamic Media Classic元件。
 1. [將設定對應至AEM](#enabling-scene-for-wcm) —— 此步驟是檢視您在Dynamic Media Classic中建立的任何視訊預設集的必要步驟。 如果您需要從CQ目標資料夾外部執行資產發佈至Dynamic Media Classic，則此為必要項目。
 
@@ -323,7 +323,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
    >[!NOTE]
    >
-   >Dynamic Media Classic根路徑是Dynamic Media Classic資料夾AEM所連接的。 您可以將其縮小到特定的資料夾。
+   >Dynamic Media Classic根路徑是AEM所連接的Dynamic Media Classic資料夾。 您可以將其縮小到特定的資料夾。
 
    >[!CAUTION]
    >
@@ -408,7 +408,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
 如果您要將資產從AEM Assets推送至Dynamic Media Classic，您可以自動發佈資產（預設行為），或將資產推送至未發佈狀態的Dynamic Media Classic。
 
-如果您想在測試環境中測試資產後再上線，則不想立即在Dynamic Media Classic上發佈資產。 您可以搭配使用AEM和Dynamic Media Classic的Secure Test環境，將資產直接從Assets推送至未發佈狀態的Dynamic Media Classic。
+如果您想要在測試環境中測試資產，然後再上線，您可能不想立即在Dynamic Media Classic上發佈資產。 您可以搭配使用AEM和Dynamic Media Classic的Secure Test環境，將資產直接從Assets推送至未發佈狀態的Dynamic Media Classic。
 
 Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中發佈資產時，Dynamic Media Classic資產才會上線生產。
 
@@ -542,7 +542,7 @@ Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中�
 
 **若要啟用MIME類型型資產：**
 
-1. 點選AEM圖示並導覽至「工 **[!UICONTROL 具>作業> Web Console]**」。
+1. Tap the AEM icon and navigate to **[!UICONTROL Tools > Operations > Web Console]**.
 1. 在Adobe Experience Manager Web Console的「設定」面板的「 **[!UICONTROL OSGi]** 」選單中，點選「 **[!UICONTROL 設定」]**。
 1. 在「名稱」欄下，尋找並點選 **[!UICONTROL Adobe CQ Dynamic Media Classic Asset MIME類型服務]** ，以編輯設定。
 1. 在「Mime類型映射」區域中，點選任何加號(+)以新增MIME類型。
@@ -559,12 +559,12 @@ Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中�
 1. 展開 `<environment>` (替 `<environment>` 換實際名稱)以顯示節 `mimeTypes` 點。
 1. 點選您剛新增的mimeType。
 
-   例如， `mimeTypes > application_postscript` OR `mimeTypes > image_vnd.adobe.photoshop`。
+   For example, `mimeTypes > application_postscript` OR `mimeTypes > image_vnd.adobe.photoshop`.
 
 1. 在「CRXDE Lite」頁面的右側，點選「屬 **[!UICONTROL 性]** 」標籤。
 1. 在jobParam值欄位中指定Dynamic Media Classic上傳工 **[!UICONTROL 作參數]** 。
 
-   例如 `psprocess="rasterize"&psresolution=120` 。
+   For example, `psprocess="rasterize"&psresolution=120` .
 
    如需您 [可使用的其他上傳工作參數，請參閱Adobe Dynamic Media Classic Image Production System API](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/) 。
 
