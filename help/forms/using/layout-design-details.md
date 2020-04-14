@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 683809ac-089b-49bf-a72c-67d32439081f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -53,7 +53,7 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
 >[!NOTE]
 >
->將內容新增至互動式通訊的列印頻道，而非將內容新增至XDP範本的子表單元件。 使用檔案片段、圖表、影像和版面片段，將內 [容新增至列印頻道的目標區域](../../forms/using/create-interactive-communication.md#main-pars-header-741471925)。
+>將內容新增至互動式通訊的列印頻道，而非將內容新增至XDP範本的子表單元件。 使用檔案片段、圖表、影像和版面片段，將內 [容新增至列印頻道的目標區域](create-interactive-communication.md#step2)。
 
 執行以下步驟以在XDP模板中使用子表單：
 
@@ -83,7 +83,7 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
    1. 在「名稱」欄位中指定子表 **單的名** 稱。
    1. 從「 **資料系結** 」下拉式清 **單中選取「無資料系結** 」。
-   重複步驟2到5，向XDP模板添加更多子表單。 只 [有在編寫互動式通訊時，才能將文字、檔案片段](../../forms/using/create-interactive-communication.md#main-pars-header-741471925) 、影像和圖表新增至目標區域。
+   重複步驟2到5，向XDP模板添加更多子表單。 只 [有在編寫互動式通訊時，才能將文字、檔案片段](create-interactive-communication.md#step2) 、影像和圖表新增至目標區域。
 
 1. 選擇 **「檔案** 」>「另 **** 存新檔」，將檔案保存到本地檔案系統：
 
@@ -115,7 +115,7 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
 >[!NOTE]
 >
->在表格儲存格中輸入文字，或 [僅在編寫互動式通訊時，才建立與表單資料模型物件](../../forms/using/create-interactive-communication.md#main-pars-header-570999227) 的系結。
+>在表格儲存格中輸入文字，或 [僅在編寫互動式通訊時，才建立與表單資料模型物件](create-interactive-communication.md#step2) 的系結。
 
 使用Forms Designer在XDP模板中使用表元件，請執行以下步驟：
 
@@ -134,7 +134,7 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
 1. 從左窗格中選擇行的名稱，然後為每個資料項 **目選擇** 「對象」>「綁定 **」** >「重 **復行」**。 執行此步驟，以確保如果在此行的表單元格之間建立具有收集類型表單資料模型對象的綁定，則會自動為資料庫中的每個可用資料項重複表行。
 
-   在表格儲存格中輸入文字，或 [僅在編寫互動式通訊時，才建立與表單資料模型物件](../../forms/using/create-interactive-communication.md#main-pars-header-570999227) 的系結。
+   在表格儲存格中輸入文字，或 [僅在編寫互動式通訊時，才建立與表單資料模型物件](create-interactive-communication.md#step2) 的系結。
 
 1. 選擇 **「檔案** 」>「另 **** 存新檔」，將檔案保存到本地檔案系統：
 
