@@ -10,14 +10,14 @@ topic-tags: content
 content-type: reference
 discoiquuid: 91f0fd7d-4b49-4599-8f0e-fc367d51aeba
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
 
 # 資產工作流程卸載程式{#assets-workflow-offloader}
 
-資產工作流程分離程式可讓您啟用多個Adobe Experience Manager(AEM)Assets例項，以降低主要（領導者）例項的處理負載。 處理負載分佈在領導實例和您添加到其中的各種卸載程式（工作器）實例之間。 分配資產的處理負載可提高AEM Assets處理資產的效率和速度。 此外，它還可協助分配專用資源，以處理特定MIME類型的資產。 例如，您可以在拓撲中分配特定節點，以僅處理InDesign資產。
+資產工作流程分離程式可讓您啟用多個Adobe Experience Manager(AEM)Assets例項，以降低主要（領導者）例項的處理負載。 處理負載分佈在領導實例和您添加到它的各種卸載程式（工作程式）實例之間。 分配資產的處理負載可提高AEM Assets處理資產的效率和速度。 此外，它還可協助分配專用資源，以處理特定MIME類型的資產。 例如，您可以在拓撲中分配特定節點，以僅處理InDesign資產。
 
 ## 配置卸載器拓撲 {#configure-offloader-topology}
 
@@ -54,7 +54,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 ## 在領導者實例上配置工作流啟動器 {#configure-workflow-launchers-on-the-leader-instance}
 
-設定工作流程啟動程式，以在 **領導者例項上使用「DAM更新資產卸載** 」工作流程，而非 **** 「Dam更新資產」工作流程。
+設定工作流程啟動程式，以在 [!UICONTROL 領導者例項上使用「DAM更新資產卸載] 」工作流程，而非 **** 「Dam更新資產」工作流程。
 
 1. 點選／按一下AEM標誌，然後選擇「工具 **>工作流程** > **Workflow** 」(工具>工作流程啟動程 ******** 式)來開啟Workflow HanchilersConsole。
 
@@ -65,12 +65,12 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
    ![chlimage_1-51](assets/chlimage_1-51a.png)
 
-1. 從「工 **作流程** 」清單中，選擇「 **DAM更新資產卸載** 」，然後點選／按 **「儲存**」。
+1. 從「工 **作流程** 」清單中，選擇「 [!UICONTROL DAM更新資產卸載] 」，然後點選／按 **「儲存**」。
 
    ![chlimage_1-52](assets/chlimage_1-52a.png)
 
 1. 點選／按一下AEM標誌，然後選擇「工具 **>工作流程** >模型」 **，以開啟「工作流程模********** 型」頁面。
-1. 選取「 **DAM更新資產卸載」工作流程** ，並從工具列點選／按一下「 **編輯** 」以顯示其詳細資訊。
+1. 選取「 [!UICONTROL DAM更新資產卸載」工作流程] ，並從工具列點選／按一下「 **編輯** 」以顯示其詳細資訊。
 
    ![chlimage_1-53](assets/chlimage_1-53a.png)
 
