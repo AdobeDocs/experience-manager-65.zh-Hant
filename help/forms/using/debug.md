@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -52,9 +52,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
  </tbody>
 </table>
 
-## 問題：無法呈現表單（顯示錯誤訊息） {#problem-unable-to-render-a-form-an-error-message-is-displayed}
+## 問題：無法呈現表單（顯示錯誤訊息） {#problem-unable-to-render-form}
 
-1. 請確定指定的參數正確無誤。 有關參數的詳細資訊，請參 [閱Render Parameters](/help/forms/using/debug.md#main-pars-table)。
+1. 請確定指定的參數正確無誤。 有關參數的詳細資訊，請參 [閱Render Parameters](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)。
 1. 登錄到CRX軟體包管理器(位於https://&lt;server>:&lt;port>/crx/packmgr/index.jsp)並檢查以下軟體包是否正確安裝：
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
