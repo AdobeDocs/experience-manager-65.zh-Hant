@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -42,7 +42,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    1. 將系統環境變數設定 `PATH` 為 `<*your-ffmpeg-locatio*n>\bin`
    1. 重新啟動AEM。
 
-* **在Mac OS x上：**
+* **在Mac OS X上：**
 
    1. 安裝Xcode([https://developer.apple.com/technologies/tools/xcode.html](https://developer.apple.com/technologies/tools/xcode.html))
    1. 安裝XQuartz/X11。
@@ -88,5 +88,5 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->升級AEM例項時，OOTB工作流程模型不會保留。 Adobe建議您先複製OOTB工作流程模型，再加以編輯。 例如，在編輯DAM更新資產模型中的「FMPEG轉碼」步驟之前，請複製OOTB DAM更新資產模型，以挑選在升級前已存在的視訊描述檔名稱。 然後，您可以覆蓋節 `/apps` 點，讓AEM擷取對OOTB模型的自訂變更。
+>升級AEM例項時，OOTB工作流程模型不會保留。 Adobe建議您先複製OOTB工作流程模型，再加以編輯。 例如，在編輯 [!UICONTROL DAM Update Asset] model中的「 [!UICONTROL FFmpeg轉碼」步驟之前，請複製OOTB] DAM更新資產模型，以挑選在升級前已存在的視訊描述檔名稱。 然後，您可以覆蓋節 `/apps` 點，讓AEM擷取對OOTB模型的自訂變更。
 
