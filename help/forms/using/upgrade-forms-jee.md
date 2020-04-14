@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 43fe9540a3a29ae86f48756c77001c0a4b8ea3e4
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 43fe9540a3a29ae86f48756c77001c0a4b8ea3e4
 1. 根據您現有的環境和應用程式伺服器，選擇下列其中一份檔案並依照指示進行。
 
    * [從AEM 6.3或AEM 6.4 Forms升級至AEM 6.5 Forms for JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-   * [從AEM 6.3或AEM 6.4 Forms升級至AEM 6.5 Forms for webSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+   * [從AEM 6.3或AEM 6.4 Forms升級至AEM 6.5 Forms for WebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
    * [從AEM 6.3或AEM 6.4 Forms升級至AEM 6.5 Forms for JBoss Tunkly](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
 
-目前無法直接從LiveCycle ES2、LiveCycle ES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Forms升級至AEM 6.5 Forms。 您可以執行一或多個LiveCycle或AEM Forms版本的中階升級，然後從AEM 6.5 Forms升級。 有關中間版本和相應升級說明的清單，請參 [閱選擇升級路徑](../../forms/using/upgrade.md#main-pars-header)。
+目前無法直接從LiveCycle ES2、LiveCycle ES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Forms升級至AEM 6.5 Forms。 您可以執行一或多個LiveCycle或AEM Forms版本的中階升級，然後從AEM 6.5 Forms升級。 有關中間版本和相應升級說明的清單，請參 [閱選擇升級路徑](upgrade.md)。
