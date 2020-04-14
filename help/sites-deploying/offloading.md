@@ -10,7 +10,7 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: 4ccaf401d561087f864c95e2be4c594cf34a7cb7
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -19,9 +19,9 @@ source-git-commit: 4ccaf401d561087f864c95e2be4c594cf34a7cb7
 
 ## 簡介 {#introduction}
 
-卸載會在拓撲中分發包含Experience manager實例的處理任務。 借由卸載，您可以使用特定的Experience manager實例來執行特定類型的處理。 專業化的處理可讓您最大化可用伺服器資源的使用。
+卸載會在拓撲中分發包含Experience Manager實例的處理任務。 借由卸載，您可以使用特定的Experience Manager實例來執行特定類型的處理。 專業化的處理可讓您最大化可用伺服器資源的使用。
 
-Offloading是以 [Apache Sling Discovery和Sling JobManager功能為基礎](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) 。 要使用卸載，請將Experience manager群集添加到拓撲中，並標識群集處理的作業主題。 叢集由一或多個Experience manager實例組成，因此單一實例被視為叢集。
+Offloading是以 [Apache Sling Discovery和Sling JobManager功能為基礎](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) 。 要使用卸載，請將Experience Manager群集添加到拓撲中，並標識群集處理的作業主題。 叢集由一或多個Experience Manager實例組成，因此單一實例被視為叢集。
 
 有關向拓撲添加實例的資訊，請參見管 [理拓撲](/help/sites-deploying/offloading.md#administering-topologies)。
 
@@ -51,9 +51,9 @@ Sling JobManager和JobConsumer可建立在拓撲中處理的工作：
 
 ## 管理拓撲 {#administering-topologies}
 
-拓撲是鬆散耦合的Experience manager群集，它們參與卸載。 群集由一個或多個Experience manager伺服器實例（單個實例被視為群集）組成。
+拓撲是鬆散耦合的Experience Manager群集，它們參與卸載。 群集由一個或多個Experience Manager伺服器實例（單個實例被視為群集）組成。
 
-每個Experience manager實例都運行以下卸載相關服務：
+每個Experience Manager實例都運行以下卸載相關服務：
 
 * 發現服務：向拓撲連接器發送請求以加入拓撲。
 * 拓撲連接器：接收加入請求，並接受或拒絕每個請求。
@@ -66,7 +66,7 @@ Sling JobManager和JobConsumer可建立在拓撲中處理的工作：
 
 ### 查看拓撲 {#viewing-the-topology}
 
-使用拓撲瀏覽器來探索Experience manager實例參與的拓撲狀態。 拓撲瀏覽器顯示拓撲的群集和實例。
+使用拓撲瀏覽器來探索Experience Manager實例參與的拓撲狀態。 拓撲瀏覽器顯示拓撲的群集和實例。
 
 對於每個群集，您會看到一個群整合員清單，其中指明每個成員加入群集的順序以及哪個成員是「領導者」。 「目前」屬性會指出您目前管理的例項。
 
@@ -105,7 +105,7 @@ Sling JobManager和JobConsumer可建立在拓撲中處理的工作：
 
 Apache Sling Resource-Based Discovery Service會在每個執行個體上執行，以控制Experience Manager執行個體與拓撲互動的方式。
 
-Discovery service會定期向拓撲連接器服務發送POST請求（心跳），以建立和維護與拓撲的連接。 拓撲連接器服務維護允許加入拓撲的IP地址或主機名的白名單：
+Discovery服務會定期向拓撲連接器服務發送POST請求（心跳），以建立和維護與拓撲的連接。 拓撲連接器服務維護允許加入拓撲的IP地址或主機名的白名單：
 
 * 要將實例連接到拓撲，請指定根成員的拓撲連接器服務的URL。
 * 要啟用實例加入拓撲，請將實例添加到根成員的拓撲連接器服務的白名單中。
@@ -135,7 +135,7 @@ Discovery service會定期向拓撲連接器服務發送POST請求（心跳）�
   <tr>
    <td>最小事件延遲（秒）</td>
    <td>minEventDelay</td>
-   <td><p>當拓撲發生變化時，將狀態從TOPOLOGY_CHANGING延遲到TOPOLOGY_CHANGED的時間。 當狀態為TOPOLOGY_CHANGING時，每次更改都會將延遲增加此時間量。</p> <p>這種延遲可防止監聽器被事件淹沒。 </p> <p>若要不使用延遲，請指定0或負數。</p> </td>
+   <td><p>當拓撲發生變化時，將狀態從TOPOLOGY_CHANGING延遲到TOPOLOGY_CHANGED的時間。 當狀態為TOPOLOGY_CHANGING時，每發生一次更改都會增加此時間量的延遲。</p> <p>這種延遲可防止監聽器被事件淹沒。 </p> <p>若要不使用延遲，請指定0或負數。</p> </td>
    <td>3</td>
   </tr>
   <tr>
@@ -175,7 +175,7 @@ Discovery service會定期向拓撲連接器服務發送POST請求（心跳）�
 
 ## 配置主題使用 {#configuring-topic-consumption}
 
-使用卸載瀏覽器為拓撲中的Experience manager實例配置主題使用。 您可以針對每個例項指定其所使用的主題。 例如，要配置拓撲以便只有一個實例使用特定類型的主題，請禁用除一個實例以外的所有實例上的主題。
+使用卸載瀏覽器為拓撲中的Experience Manager實例配置主題使用。 您可以針對每個例項指定其所使用的主題。 例如，要配置拓撲以便只有一個實例使用特定類型的主題，請禁用除一個實例以外的所有實例上的主題。
 
 作業是使用循環邏輯啟用相關主題的分佈數量例項。
 
@@ -197,23 +197,23 @@ Discovery service會定期向拓撲連接器服務發送POST請求（心跳）�
    * 啟用：此實例將使用此主題的作業。
    * 停用：此實例不會使用此主題的作業。
    * 獨家：此實例僅會使用此主題的作業。
-   **** 注意：為主題選擇「獨佔」時，所有其它主題都會自動設定為「禁用」。
+   **注意：** 為主題選擇「獨佔」時，所有其它主題都會自動設定為「禁用」。
 
 ### 已安裝的作業使用者 {#installed-job-consumers}
 
-Experience manager已安裝數個JobConsumer實作。 這些JobConsumers註冊的主題會顯示在卸載瀏覽器中。 出現的其他主題是自訂JobConsumers已註冊的主題。 下表說明預設的JobConsumers。
+Experience Manager已安裝數個JobConsumer實作。 這些JobConsumers註冊的主題會顯示在卸載瀏覽器中。 出現的其他主題是自訂JobConsumers已註冊的主題。 下表說明預設的JobConsumers。
 
 | 工作主題 | 服務PID | 說明 |
 |---|---|---|
 | / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | 已與Apache Sling一起安裝。 處理OSGi事件管理員所產生的作業，以便向後相容。 |
 | com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | 複製代理，用於復製作業負載。 |
-| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | 處理DAM更新資產卸載程式工作流生成的作業。 |
+| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | 處理 [!UICONTROL DAM Update Asset Offloader工作流生成的作] 業。 |
 
 ### 禁用和啟用實例的主題 {#disabling-and-enabling-topics-for-an-instance}
 
-Apache Sling Job Consumer Manager服務提供主題白名單和黑名單屬性。 設定這些屬性，以啟用或停用Experience manager例項上特定主題的處理。
+Apache Sling Job Consumer Manager服務提供主題白名單和黑名單屬性。 設定這些屬性，以啟用或停用Experience Manager例項上特定主題的處理。
 
-**** 注意：如果實例屬於拓撲，您也可以在拓撲中的任何電腦上使用卸載瀏覽器來啟用或禁用主題。
+**注意：** 如果實例屬於拓撲，您也可以在拓撲中的任何電腦上使用卸載瀏覽器來啟用或禁用主題。
 
 建立已啟用主題清單的邏輯首先允許白名單中的所有主題，然後刪除黑名單中的主題。預設情況下，所有主題都處於啟用狀態(白名單值為 `*`)且不禁用任何主題（黑名單沒有值）。
 
@@ -221,8 +221,8 @@ Apache Sling Job Consumer Manager服務提供主題白名單和黑名單屬性�
 
 | Web Console中的屬性名稱 | OSGi ID | 說明 |
 |---|---|---|
-| 主題白名單 | job.counsmermanager.whitelist | 本地JobManager服務處理的主題清單。 &amp;ast；的預設值使所有主題都發送到註冊的TopicConsumer服務。 |
-| 主題黑名單 | job.counspermanager.blacklist | 本地JobManager服務不處理的主題清單。 |
+| 主題白名單 | job.consumermanager.whitelist | 本地JobManager服務處理的主題清單。 &amp;ast；的預設值使所有主題都發送到註冊的TopicConsumer服務。 |
+| 主題黑名單 | job.consumermanager.blacklist | 本地JobManager服務不處理的主題清單。 |
 
 ## 建立用於卸載的複製代理 {#creating-replication-agents-for-offloading}
 
@@ -308,7 +308,7 @@ Apache Sling Job Consumer Manager服務提供主題白名單和黑名單屬性�
 
 ### 尋找Sling ID {#finding-the-sling-id}
 
-使用下列任一方法取得Experience manager例項的Sling ID:
+使用下列任一方法取得Experience Manager例項的Sling ID:
 
 * 開啟Web Console，然後在Sling Settings中尋找Sling ID屬性的值([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings))。 如果實例尚未屬於拓撲，則此方法可用。
 * 如果實例已屬於拓撲的一部分，請使用拓撲瀏覽器。
@@ -317,31 +317,31 @@ Apache Sling Job Consumer Manager服務提供主題白名單和黑名單屬性�
 
 配置拓撲實例，使特定實例執行在DAM中添加或更新的資產的後台處理。
 
-依預設，當DAM資產變更或新增DAM時，Experience manager會執行DAM更新資產工作流程。 變更預設行為，讓Experience Manager改為執行DAM更新資產卸載程式工作流程。 此工作流將生成一個主題為的JobManager作業 `com/adobe/granite/workflow/offloading`。 然後，配置拓撲，以便將作業卸載到專用工作器。
+依預設，當DAM資產變更或新增 [!UICONTROL DAM時，Experience Manager會執行「DAM更新資產] 」工作流程。 變更預設行為，讓Experience Manager改為執行 [!UICONTROL DAM更新資產卸載程式工作流程] 。 此工作流將生成一個主題為的JobManager作業 `com/adobe/granite/workflow/offloading`。 然後，配置拓撲，以便將作業卸載到專用工作器。
 
 >[!CAUTION]
 >
->當與工作流卸載一起使用時，不應使工作流為瞬態。 例如，當用於資產卸載時，「DAM更新資產」工作流程不得是暫時的。 要在工作流中設定／取消設定臨時標誌，請參 [閱臨時工作流](/help/assets/performance-tuning-guidelines.md#workflows)。
+>當與工作流卸載一起使用時，不應使工作流為瞬態。 例如，當用於資 [!UICONTROL 產卸載時，「DAM更新資產] 」工作流程不得為暫時性。 要在工作流中設定／取消設定臨時標誌，請參 [閱臨時工作流](/help/assets/performance-tuning-guidelines.md#workflows)。
 
 以下過程假定卸載拓撲具有以下特徵：
 
-* 一或多個Experience manager實例正在編寫使用者與之互動的例項，以新增或更新DAM資產。
-* 使用者不需直接與處理DAM資產的一或多個Experience manager例項互動。 這些例項專用於DAM資產的背景處理。
+* 一或多個Experience Manager實例正在編寫使用者與之互動的例項，以新增或更新DAM資產。
+* 使用者不需直接與處理DAM資產的一或多個Experience Manager例項互動。 這些例項專用於DAM資產的背景處理。
 
-1. 在每個Experience manager實例上，配置Discovery服務，使其指向根拓撲連接器。 (請參閱 [配置拓撲成員資格](#title4)。)
+1. 在每個Experience Manager實例上，配置Discovery服務，使其指向根拓撲連接器。 (請參閱 [配置拓撲成員資格](#title4)。)
 1. 配置根拓撲連接器，使連接實例位於白名單中。
 1. 開啟「卸載瀏覽器」，並停 `com/adobe/granite/workflow/offloading` 用使用者與之互動以上傳或變更DAM資產之例項的主題。
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
-1. 在使用者互動以上傳或變更DAM資產的每個例項上，設定工作流程啟動器以使用「DAM更新資產卸載」工作流程：
+1. 在使用者互動以上傳或變更DAM資產的每個例項上，設定工作流程啟動程式以使用 [!UICONTROL DAM更新資產卸載工作流程] :
 
    1. 開啟「工作流程」主控台。
    1. 按一下「啟動器」標籤。
-   1. 找到執行DAM更新資產工作流程的兩個啟動器配置。 一個啟動程式配置事件類型是「已建立節點」，另一個類型是「已修改節點」。
-   1. 變更這兩種事件類型，以執行DAM更新資產卸載工作流程。 (有關啟動程式配置的資訊，請參 [閱Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md))。
+   1. 找到執行 [!UICONTROL DAM Update Asset工作流程的兩個啟動程] 序配置。 一個啟動程式配置事件類型是「已建立節點」，另一個類型是「已修改節點」。
+   1. 變更這兩種事件類型，以執行 [!UICONTROL DAM更新資產卸載工作流程] 。 (有關啟動程式配置的資訊，請參 [閱Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md))。
 
-1. 在執行DAM資產背景處理的例項上，停用執行DAM更新資產工作流程的工作流程啟動器。
+1. 在執行DAM資產背景處理的例項上，停用執行 [!UICONTROL DAM更新資產工作流程的工作流程啟動器] 。
 
 ## 進一步閱讀 {#further-reading}
 
