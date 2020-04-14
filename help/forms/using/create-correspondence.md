@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -83,7 +83,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    在「內容」或「資料」索引標籤中，只要點選HTML字母預覽左上角的「反白標示選取的模組」（反白標示選取的模組），您就可停用或啟用功能，以在字母預覽中選取相關文字、段落或資料欄位時移至內容／資料模組。 ![](assets/highlightselectedmodulesincontentccr.png)
 
-   有關「建立對應」用戶介面中各模組可用操作的詳細資訊，請參閱「建立對應」 [用戶介面中的「操作」和「資訊」](../../forms/using/create-letter.md#main-pars-header-9)。
+   有關「建立對應」用戶介面中各模組可用操作的詳細資訊，請參閱「建立對應」 [用戶介面中的「操作」和「資訊」](#actions-and-info-available-in-the-create-correspondence-content-tab)。
 
 1. 若要尋找內容模組，請使用「尋找」欄位。 輸入內容模組的完整或部分名稱或標題，以在對應中搜索內容模組。
 1. 點選清單、文 ![字](assets/display.png)、條件或目標區域前面的「顯示」圖示（顯示），以顯示或隱藏在字母中。
@@ -230,7 +230,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    點選「在內容中反白顯示選取的模組」(反白顯示選取的模組 ![incontentccr](assets/highlightselectedmodulesincontentccr.png))後，當在字母預覽中點選相關文字、段落或資料欄位時，您就可以停用或啟用「內容」索引標籤中反白顯示內容模組的功能。
 
-   有關「建立對應」用戶介面中各模組可用操作的詳細資訊，請參閱「建立對應」 [用戶介面中的「操作」和「資訊」](../../forms/using/create-letter.md#main-pars-header-9)。
+   有關「建立對應」用戶介面中各模組可用操作的詳細資訊，請參閱「建立對應」 [用戶介面中的「操作」和「資訊」](#actions-and-info-available-in-the-create-correspondence-content-tab)。
 
 1. 若要將分頁符新增至字母，請點選您要插入分頁符的位置，然後選取「分頁前」或「分頁後」( ![pagebreakfere](assets/pagebreakbeforeafter.png))。
 
@@ -246,7 +246,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   出現「繪製字母名稱」(Draft Letter Name)對話框，其中包含字母實例ID。 您可以選擇編輯此ID。 記下字母Id，然後點選「 **Done**」。 您稍後可以使用此ID [重新載入草稿字母](../../forms/using/submit-letter-topostprocess.md#main-pars-header-1)。
+   出現「繪製字母名稱」(Draft Letter Name)對話框，其中包含字母實例ID。 您可以選擇編輯此ID。 記下字母Id，然後點選「 **Done**」。 您稍後可以使用此ID [重新載入草稿字母](submit-letter-topostprocess.md#reloaddraft)。
 
 1. 若要將字母預覽為平面化PDF，並在提交時具有精確的版面配置和分頁符，請點選(預 ![覽](assets/preview.png))預覽。
 
