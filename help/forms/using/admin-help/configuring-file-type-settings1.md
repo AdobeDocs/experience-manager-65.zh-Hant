@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
 translation-type: tm+mt
-source-git-commit: 01c93d2ef344b1ce36fddd21b634b8fa4e7aebe0
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -29,7 +29,7 @@ source-git-commit: 01c93d2ef344b1ce36fddd21b634b8fa4e7aebe0
 
 >[!NOTE]
 >
->檔案類型設定不適用於備援轉換器，例如Acrobat for HTML轉換為PDF、Microsoft powerPoint、Microsoft word和Microsoft Excel。
+>檔案類型設定不適用於備援轉換器，例如Acrobat for HTML轉換為PDF、Microsoft PowerPoint、Microsoft Word和Microsoft Excel。
 
 ## 建立或編輯檔案類型設定 {#create-or-edit-file-type-settings}
 
@@ -40,11 +40,11 @@ source-git-commit: 01c93d2ef344b1ce36fddd21b634b8fa4e7aebe0
 1. 在「副檔名」方塊中，為此應用程式接受的檔案類型輸入副檔名（以逗號分隔）。 請勿在擴充功能之前加入句號或間隔。 預設值為 `bmp,gif,jpeg,jpg,tif,tiff,png`。
 1. （可選）若要在圖形或影像中使用文字的光學程式碼識別(OCR)，請選取「使用OCR」並設定下列選項：
 
-**** 主要OCRL語言：OCR引擎用來識別字元的語言。 預設值為英文（美國）。
+**主要OCRL語言：** 用於OCR引擎的語言，用於識別字元。 預設值為英文（美國）。
 
-**** PDF輸出樣式：選取「可搜尋的影像」，將頁面的點陣圖影像置於前景中，並將掃描的文字置於下方的不可見圖層上。 頁面的外觀不會變更，但文字會變成可選及可讀。 選取「格式化的文字與圖形」，使用已辨識的文字、字型、圖片和其他圖形元素來重建原始頁面。 預設為可搜尋影像（完全）。
+**PDF輸出樣式：** 選取「可搜尋的影像」，將頁面的點陣圖影像置於前景中，並將掃描的文字置於下方的不可見圖層上。 頁面的外觀不會變更，但文字會變成可選及可讀。 選取「格式化的文字與圖形」，使用已辨識的文字、字型、圖片和其他圖形元素來重建原始頁面。 預設為可搜尋影像（完全）。
 
-**** 縮減影像取樣：減少彩色、灰階和單色影像的像素數。 在OCR完成後，執行掃描影像的縮減取樣。 預設值為「最低」(600 dpi)。 如果您將PDF輸出樣式設為「可搜尋影像」（完全），則此選項不可用。
+**縮減影像取樣：** 減少彩色、灰階和單色影像的像素數。 在OCR完成後，執行掃描影像的縮減取樣。 預設值為「最低」(600 dpi)。 如果您將PDF輸出樣式設為「可搜尋影像」（完全），則此選項不可用。
 
 1. 請填妥下列章節中的必要資訊：
 
@@ -52,7 +52,7 @@ source-git-commit: 01c93d2ef344b1ce36fddd21b634b8fa4e7aebe0
 
    [Adobe PDF匯出設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-2)
 
-   [HTML至PDF設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-3)
+   [HTML至PDF設定](#html-to-pdf-settings)
 
    [將Flash視訊轉換為PDF設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-9)
 
@@ -60,15 +60,15 @@ source-git-commit: 01c93d2ef344b1ce36fddd21b634b8fa4e7aebe0
 
    [PDF最佳化程式設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-11)
 
-   [Microsoft excel設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-excel-settings-windows-only)
+   [Microsoft Excel設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-excel-settings-windows-only)
 
-   [Microsoft powerPoint設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-powerpoint-settings-windows-only)
+   [Microsoft PowerPoint設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-powerpoint-settings-windows-only)
 
-   [Microsoft project設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-project-settings-windows-only)
+   [Microsoft Project設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-project-settings-windows-only)
 
-   [Microsoft word設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-word-settings-windows-only)
+   [Microsoft Word設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-word-settings-windows-only)
 
-   [Microsoft Visio設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-header-1354428557)
+   [Microsoft Visio設定（僅限Windows）](#visio)
 
    [Microsoft Publisher設定（僅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-publisher-settings-windows-only)
 
@@ -110,29 +110,29 @@ source-git-commit: 01c93d2ef344b1ce36fddd21b634b8fa4e7aebe0
 
 ## 影像至PDF設定 {#image-to-pdf-settings}
 
-下列選項可決定如何將影像檔案轉換為PDF。 有關訪問這些設定的說明，請參 [閱建立或編輯檔案類型設定](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
+下列選項可決定如何將影像檔轉換為PDF。 有關訪問這些設定的說明，請參 [閱建立或編輯檔案類型設定](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
 
-**** 副檔名：以逗號分隔的可轉換副檔名清單。
+**副檔名：** 以逗號分隔的可轉換副檔名清單。
 
-**** 試用備援轉換器：PDF產生器可使用Java™或Acrobat將影像檔案轉換為PDF。 當選取此選項，而轉換失敗或達到指定的逾時限制時，PDF產生器會使用替代方法來嘗試轉換。 如果替代方法失敗或達到指定的逾時限制，則會將異常寫入日誌檔案。
+**試用備援轉換器：** PDF產生器可使用Java™或Acrobat將影像檔案轉換為PDF。 當選取此選項，而轉換失敗或達到指定的逾時限制時，PDF產生器會使用替代方法來嘗試轉換。 如果替代方法失敗或達到指定的逾時限制，則會將異常寫入日誌檔案。
 
 ***注意&#x200B;**:JPEG 2000檔案只能使用Acrobat進行轉換。*
 
-**** 使用OCR:指定是否將OCR（光學字元辨識）套用至PDF。 OCR軟體可讓您搜尋、修正和複製PDF中的文字。
+**使用OCR:** 指定是否將OCR（光學字元辨識）套用至PDF。 OCR軟體可讓您搜尋、修正和複製PDF中的文字。
 
-***注意&#x200B;**:OCR PDF（可搜尋的PDF）功能僅在Microsoft windows上受支援。*
+***注意&#x200B;**:OCR PDF（可搜尋的PDF）功能僅在Microsoft Windows上受支援。*
 
-**** 主要OCR語言：指定OCR引擎用於識別字元的語言。
+**主要OCR語言：** 指定OCR引擎用於識別字元的語言。
 
-**** PDF輸出樣式：決定要產生的PDF類型。 所有格式都會將OCR和字型及頁面識別套用至文字影像，並將它們轉換為一般文字。
+**PDF輸出樣式：** 決定要產生的PDF類型。 所有格式都會將OCR和字型及頁面識別套用至文字影像，並將它們轉換為一般文字。
 
-**** 可搜尋的影像：確保文字可供搜尋和選取。 這個選項會保留原始影像、視需要設定影像，並在其上放置不可見的文字圖層。 「縮減取樣影像」選項會決定影像是否已縮減取樣，以及縮減取樣的程度。
+**可搜尋的影像：** 確保文字可供搜尋和選取。 這個選項會保留原始影像、視需要設定影像，並在其上放置不可見的文字圖層。 「縮減取樣影像」選項會決定影像是否已縮減取樣，以及縮減取樣的程度。
 
-**** 可搜尋影像（完全）:確保文字可供搜尋和選取。 此選項會保留原始影像，並在其上放置不可見的文字圖層。 建議在需要原始影像最精確的情況下使用。
+**可搜尋影像（完全）:** 確保文字可供搜尋和選取。 此選項會保留原始影像，並在其上放置不可見的文字圖層。 建議在需要原始影像最精確的情況下使用。
 
-**** ClearScan:合成與原始字型相近的新Type 3字型，並使用低解析度的副本保留頁面背景。
+**ClearScan:** 合成與原始字型相近的新Type 3字型，並使用低解析度的副本保留頁面背景。
 
-**** 縮減影像取樣：在OCR完成後，減少彩色、灰階和單色影像的像素數。 選擇要套用的縮減取樣程度。 編號較高的選項可減少縮減取樣，產生解析度較高的PDF。
+**縮減影像取樣：** 在OCR完成後，減少彩色、灰階和單色影像的像素數。 選擇要套用的縮減取樣程度。 編號較高的選項可減少縮減取樣，產生解析度較高的PDF。
 
 ## Adobe PDF匯出設定（僅限Windows） {#adobe-pdf-export-settings-windows-only}
 
@@ -144,85 +144,85 @@ Adobe PDF匯出設定區段中的「匯出檔案類型」設定可用來將PDF�
 
 下列選項可決定HTML檔案轉換為PDF的方式。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
 
-**** 試用備援轉換器：PDF產生器可使用Java™或Acrobat將HTML檔案轉換為PDF。 當選取此選項，而轉換失敗或達到指定的逾時限制時，PDF產生器會使用替代方法來嘗試轉換。 如果替代方法失敗或達到指定的逾時限制，則會將異常寫入日誌檔案。
+**試用備援轉換器：** PDF產生器可使用Java™或Acrobat將HTML檔案轉換為PDF。 當選取此選項，而轉換失敗或達到指定的逾時限制時，PDF產生器會使用替代方法來嘗試轉換。 如果替代方法失敗或達到指定的逾時限制，則會將異常寫入日誌檔案。
 
-**** 預設編碼：從作業系統和字母菜單設定檔案文本的輸入編碼。 只有當HTML來源檔案未指定編碼類型時，才使用「預設編碼」選項中顯示的選取範圍。
+**預設編碼：** 從作業系統和字母菜單設定檔案文本的輸入編碼。 只有當HTML來源檔案未指定編碼類型時，才使用「預設編碼」選項中顯示的選取範圍。
 
-**** 強制選擇的編碼：忽略HTML來源檔案中指定的任何編碼，並使用「預設編碼」選項中顯示的選取範圍。
+**強制選擇的編碼：** 忽略HTML來源檔案中指定的任何編碼，並使用「預設編碼」選項中顯示的選取範圍。
 
 ### 色階設定 {#spidering-settings}
 
 *Spidring* 會掃描網頁，以尋找其他網頁的連結。 當遇到到其他網頁的連結時，會擷取目標頁面並包含在產生的PDF檔案中。 啟用這些選項，以設定要擷取並轉換為PDF的層級數：
 
-**** 僅取得X級：從基本頁面URL將頁面編目並轉換至指定層級的深度。 值1隻會轉換提供的URL。
+**僅取得X級：** 從基本頁面URL將頁面編目並轉換至指定層級的深度。 值1隻會轉換提供的URL。
 
-**** 取得整個網站：從提供的URL開始轉換整個網站。
+**取得整個網站：** 從提供的URL開始轉換整個網站。
 
-**** 保持同一條路：指向與基本URL不位於相同相對路徑之頁面的任何連結，都不會在尖峰期間轉換。
+**保持同一條路：** 指向與基本URL不位於相同相對路徑之頁面的任何連結，都不會在尖峰期間轉換。
 
-**** 保持在同一台伺服器上：指向不同伺服器上頁面的任何連結，都不會在串頁期間進行轉換。 只會轉換指向與指定URL相同伺服器的連結。
+**保持在同一台伺服器上：** 指向不同伺服器上頁面的任何連結，都不會在串頁期間進行轉換。 只會轉換指向與指定URL相同伺服器的連結。
 
 ### 頁面轉換設定 {#page-conversion-settings}
 
 啟用這些選項，以指定HTML頁面的轉換方式。 根據頁面大小，寬度、高度和邊界值會隨之調整。
 
-**** 頁面大小：選擇自訂並指定寬度和高度，或選取預先定義的尺寸。
+**頁面大小：** 選擇自訂並指定寬度和高度，或選取預先定義的尺寸。
 
-**** 方向：為轉換的PDF檔案選擇縱向或橫向。
+**方向：** 為轉換的PDF檔案選擇縱向或橫向。
 
-**** 邊界：指定所產生PDF檔案中的邊界（頂端、底部、左側和右側）。
+**邊界：** 指定所產生PDF檔案中的邊界（頂端、底部、左側和右側）。
 
-**** 新增書籤至PDF:將書籤新增至PDF檔案。
+**新增書籤至PDF:** 將書籤新增至PDF檔案。
 
-**** 啟用標籤的PDF:在PDF檔案中內嵌標籤。
+**啟用標籤的PDF:** 在PDF檔案中內嵌標籤。
 
-**** 設定初始檢視設定：可讓您設定「檔案選項」、「視窗選項」和「使用者介面選項」。 這些設定會決定內容的初始顯示方式。
+**設定初始檢視設定：** 可讓您設定「檔案選項」、「視窗選項」和「使用者介面選項」。 這些設定會決定內容的初始顯示方式。
 
 ### 檔案選項 {#document-options}
 
 啟用這些選項，以指定如何顯示內容、如何在PDF檔案中顯示頁面，以及如何指定放大等級：
 
-**** 顯示：選取開啟PDF檔案時要在Acrobat中開啟的窗格。
+**顯示：** 選取開啟PDF檔案時要在Acrobat中開啟的窗格。
 
-**** 頁面配置：為PDF文檔選擇頁面佈局類型。
+**頁面配置：** 為PDF文檔選擇頁面佈局類型。
 
-**** 放大比例：選擇PDF檔案初始檢視的預設放大比例，或選擇自訂值。 選擇預設設定表示將使用預設的Acrobat放大比例。
+**放大比例：** 選擇PDF檔案初始檢視的預設放大比例，或選擇自訂值。 選擇預設設定表示將使用預設的Acrobat放大比例。
 
-**** 開啟至頁碼：指定PDF開啟至的頁碼。
+**開啟至頁碼：** 指定PDF開啟至的頁碼。
 
 ### 視窗選項 {#window-options}
 
 啟用這些選項以指定視窗的大小和顯示方式。
 
-**** 將視窗調整為初始頁面：將Acrobat視窗調整為初始頁面的大小。
+**將視窗調整為初始頁面：** 將Acrobat視窗調整為初始頁面的大小。
 
-**** 畫面中央視窗：在螢幕中央開啟窗口。
+**畫面中央視窗：** 在螢幕中央開啟窗口。
 
-**** 以全螢幕模式開啟：以全螢幕模式開啟視窗。
+**以全螢幕模式開啟：** 以全螢幕模式開啟視窗。
 
-**** 顯示：在窗口中顯示文檔標題或檔案名。
+**顯示：** 在窗口中顯示文檔標題或檔案名。
 
 ### 使用者介面選項 {#user-interface-options}
 
 啟用這些選項以指定窗口外觀：
 
-**** 隱藏選單列：隱藏PDF檔案中的選單列。
+**隱藏選單列：** 隱藏PDF檔案中的選單列。
 
-**** 隱藏工具列：隱藏PDF檔案中的工具列。
+**隱藏工具列：** 隱藏PDF檔案中的工具列。
 
-**** 隱藏視窗控制項：隱藏PDF檔案中的視窗控制項。
+**隱藏視窗控制項：** 隱藏PDF檔案中的視窗控制項。
 
 ## 將Flash視訊轉換為PDF設定 {#flash-videos-to-pdf-settings}
 
-PDF Generator支援提交Adobe Flash影片（SWF或FLV檔案），並建立內嵌Adobe Flash影片的PDF檔案。 此轉換不需要將Adobe Flash Player安裝在表單伺服器上。 有關訪問此選項的說明，請參 [閱建立或編輯檔案類型設定](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
+PDF Generator支援提交Adobe Flash（SWF或FLV檔案）視訊的功能，並建立內嵌Adobe Flash視訊的PDF檔案。 此轉換不需要將Adobe Flash Player安裝在表單伺服器上。 有關訪問此選項的說明，請參 [閱建立或編輯檔案類型設定](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
 
-**** 副檔名：以逗號分隔的可轉換副檔名清單。
+**副檔名：** 以逗號分隔的可轉換副檔名清單。
 
 ## XPS到PDF設定 {#xps-to-pdf-settings}
 
-XML紙張規格(XPS)在Windows打印機中使用。 此為Microsoft格式，可從任何Microsoft office應用程式建立。 AEM表單提供轉換XPS檔案PDF的功能。
+XML紙張規格(XPS)在Windows打印機中使用。 此為Microsoft格式，可從任何Microsoft Office應用程式建立。 AEM表單提供轉換XPS檔案PDF的功能。
 
-**** 副檔名：以逗號分隔的清單，列出所有可轉換的XPS檔案副檔名。 目前有一種格式：.xps.
+**副檔名：** 以逗號分隔的清單，列出所有可轉換的XPS檔案副檔名。 目前有一種格式：.xps.
 
 ## PDF最佳化程式設定 {#pdf-optimizer-settings}
 
@@ -234,18 +234,18 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 有關訪問此設定的說明，請參 [閱建立或編輯檔案類型設定](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
 
-**** 目標PDF版本：指定PDF相容的Acrobat版本。
+**目標PDF版本：** 指定PDF相容的Acrobat版本。
 
 ### 字型 {#fonts}
 
 1. 選取「 **字型」。**
 1. 選擇下列選項之一：
 
-   **** 取消內嵌所有字型：解除內嵌所有內嵌字型。
+   **取消內嵌所有字型：** 解除內嵌所有內嵌字型。
 
-   **** 請勿取消內嵌任何字型：不取消內嵌任何字型。
+   **請勿取消內嵌任何字型：** 不取消內嵌任何字型。
 
-   **** 取消內嵌某些字型：僅解除內嵌指定字型。 請依照下列步驟來指定您要取消內嵌的字型：
+   **取消內嵌某些字型：** 僅解除內嵌指定字型。 請依照下列步驟來指定您要取消內嵌的字型：
 
    * 如有必要，請從「字型來源」下拉式選單 **中選取其** 他字型目錄。 此下拉式選單列出在「首頁>設定>核心繫 **統>核心組態」中指定的字型目錄**。
    * 從「可用字型」清單中選取一或多 **個字型** ，然後按一下「 **新增」**。 這些字型會新增至「要取消 **內嵌的字型** 」清單。
@@ -397,11 +397,11 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 **最佳化頁面內容**:將所有行尾字元轉換為空格字元，以改善Flate壓縮。
 
-## Microsoft excel設定（僅限Windows） {#microsoft-excel-settings-windows-only}
+## Microsoft Excel設定（僅限Windows） {#microsoft-excel-settings-windows-only}
 
-這些選項決定如何轉換Microsoft excel檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
+這些選項決定如何轉換Microsoft Excel檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
 
-**試用OpenOffice做為備援轉換器**:當選取此選項，而使用Microsoft excel的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
+**試用OpenOffice做為備援轉換器**:當選取此選項，而使用Microsoft Excel的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
 
 **副檔名**:指定此應用程式接受的檔案類型的檔案副檔名（以逗號分隔）。 預設值為 `xls,xlsx`。 請勿在擴充功能之前加入句號或之間加入空格。
 
@@ -427,11 +427,11 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 **要轉換的工作表清單**:當此方塊為空白時，Excel試算表中的所有工作表都會包含在產生的PDF中。 若要選擇性轉換工作表的子集，請提供以逗號分隔的工作表名稱清單。
 
-## Microsoft powerPoint設定（僅限Windows） {#microsoft-powerpoint-settings-windows-only}
+## Microsoft PowerPoint設定（僅限Windows） {#microsoft-powerpoint-settings-windows-only}
 
-這些選項決定了Microsoft powerPoint檔案的轉換方式。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings)。
+這些選項決定了Microsoft PowerPoint檔案的轉換方式。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings)。
 
-**[!UICONTROL 試用OpenOffice做為備援轉換器]**:當選取此選項，而使用Microsoft powerPoint的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
+**[!UICONTROL 試用OpenOffice做為備援轉換器]**:當選取此選項，而使用Microsoft PowerPoint的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
 
 **[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的檔案副檔名（以逗號分隔）。 預設值為ppt,pptx。 請勿在擴充功能之前加入句號或之間加入空格。
 
@@ -461,22 +461,22 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 **[!UICONTROL 建立PDF/A-1a相容檔案]**:強制使用PDF/A-1b:2005 RGB Adobe PDF設定。 當您產生PDF檔案時，不會轉換一些PowerPoint功能。 如果Acrobat中的PowerPoint轉場沒有相同的轉場，則會取代類似的轉場。 如果多個動畫效果位於同一張投影片中，則會使用單一效果。 頁面切換效果和項目符號跳轉效果會進行轉換。
 
-## Microsoft project設定（僅限Windows） {#microsoft-project-settings-windows-only}
+## Microsoft Project設定（僅限Windows） {#microsoft-project-settings-windows-only}
 
-這些選項決定了Microsoft project檔案的轉換方式。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
+這些選項決定了Microsoft Project檔案的轉換方式。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
 
-1. **** 副檔名：指定此應用程式接受的檔案類型的檔案副檔名（以逗號分隔）。 預設值為 `mpp`。 請勿在擴充功能之前加入句號或之間加入空格。
+1. **[!UICONTROL 副檔名：]** 指定此應用程式接受的檔案類型的檔案副檔名（以逗號分隔）。 預設值為 `mpp`。 請勿在擴充功能之前加入句號或之間加入空格。
 
 1. **[!UICONTROL 轉換檔案資訊]**:從來源檔案的「屬性」對話方塊新增檔案資訊，包括標題、主旨、作者、關鍵字、經理、公司、類別和注釋。 預設會選取此選項。
 1. **[!UICONTROL 將來源檔案附加至Adobe PDF]**:將來源檔案新增至PDF檔案做為附件。
 1. **[!UICONTROL 建立PDF/A-1a相容檔案]**:強制使用PDF/A-1b:2005 RGB Adobe PDF設定。
-1. **[!UICONTROL 自動運行宏]**:在轉換文檔之前，運行Microsoft project文檔中的任何宏（如插入當前時間的宏）。
+1. **[!UICONTROL 自動運行宏]**:在轉換文檔之前，運行Microsoft Project文檔中的任何宏（如插入當前時間的宏）。
 
-## Microsoft word設定（僅限Windows） {#microsoft-word-settings-windows-only}
+## Microsoft Word設定（僅限Windows） {#microsoft-word-settings-windows-only}
 
-這些選項決定如何轉換Microsoft word檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
+這些選項決定如何轉換Microsoft Word檔案。 有關訪問這些選項的說明，請參 [閱建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
 
-**[!UICONTROL 試用OpenOffice做為備援轉換器]**:當選取此選項，而使用Microsoft word的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
+**[!UICONTROL 試用OpenOffice做為備援轉換器]**:當選取此選項，而使用Microsoft Word的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
 
 **[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的檔案副檔名（以逗號分隔）。 預設值為 `doc,docx,rtf,txt`。 請勿在擴充功能之前加入句號或之間加入空格。
 
@@ -510,7 +510,7 @@ PDF產生器支援減少PDF檔案大小的功能。 您是使用這些設定，�
 
 styleName1=level1[,styleName2=level2...]
 
-如果Microsoft word樣式名稱包含逗號(,)或等號(=)，請在特殊字元前加上轉義字元(&quot;\_)。 例如，指定名為&quot;Heading, 1&quot;的樣式為Heading\, 1。
+如果Microsoft Word樣式名稱包含逗號(,)或等號(=)，請在特殊字元前加上轉義字元(&quot;\_)。 例如，指定名為&quot;Heading, 1&quot;的樣式為Heading\, 1。
 
 ## Microsoft Visio設定（僅限Windows） {#visio}
 
@@ -526,7 +526,7 @@ styleName1=level1[,styleName2=level2...]
 
 **轉換所有頁面**:轉換Visio檔案的所有頁面。
 
-**在Adobe acrobat中檢視時開啟圖層面板**:如果Visio圖層未平面化，則會開啟一個視窗，您可以在其中指定當使用Acrobat開啟時，PDF檔案中保留的圖層。 預設會選取此選項。
+**在Adobe Acrobat中檢視時開啟圖層面板**:如果Visio圖層未平面化，則會開啟一個視窗，您可以在其中指定當使用Acrobat開啟時，PDF檔案中保留的圖層。 預設會選取此選項。
 
 **建立PDF/A-1b相容檔案**:強制使用Adobe PDF設定PDF/A-1b:2005(RGB)。
 
@@ -609,8 +609,8 @@ styleName1=level1[,styleName2=level2...]
 
 您無法透過管理控制台來變更其他應用程式的設定；它們顯示支援檔案類型的檔案副檔名。 有關訪問這些設定的說明，請參 [閱建立或編輯檔案類型設定](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7e42.2.html)。
 
-* Corel wordPerfect: `wpd`
-* Adobe pageMaker: `pmd, pm6, p65, pm`
+* Corel WordPerfect: `wpd`
+* Adobe PageMaker: `pmd, pm6, p65, pm`
 * Adobe FrameMaker: `fm`
 * Adobe Photoshop: `psd`
 
