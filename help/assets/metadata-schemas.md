@@ -3,7 +3,7 @@ title: 中繼資料結構
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
+source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
 
 ---
 
@@ -16,24 +16,23 @@ source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
 
 1. 若要檢視資產的屬性頁面，請在「卡片檢視」中，按一下或點選資產圖格上的「快速動作」 **[!UICONTROL 的「檢視屬性]** 」圖示。
 
-   ![chlimage_1-34](assets/chlimage_1-170.png)
+   ![資產圖格上的快速動作](assets/chlimage_1-170.png)
 
    或者，在UI中選取資產，然後按一下或點選工具列 **[!UICONTROL 中的]** 「屬性」圖示。
 
-   ![chlimage_1-35](assets/chlimage_1-171.png)
+   ![屬性圖示（位於頂端工具列）](assets/chlimage_1-171.png)
 
 1. 在各種標籤下編輯各種中繼資料屬性。 但是，您無法修改屬性頁面中的資產類型。
 
-   ![您不能更改資產屬性的基本標籤中的資產類型](assets/asset-properties-basic-tab.png)
+   ![資產屬性的「基本」標籤，其中無法變更資產類型](assets/asset-properties-basic-tab.png)
 
    *圖：資產屬性上的「基本」標籤*
-
 
    若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳 [細資訊，請參閱編輯中繼資料結構](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) 表單。 如果您修改特定MIME類型的中繼資料架構，則會修改目前MIME類型資產和所有資產子類型的屬性頁面配置。 例如，在下修改jpeg架構時， `default/image` 僅會修改MIME類型資產的中繼資料配置（資產屬性） `image/jpeg`。 不過，如果您編輯預設結構，您的變更會修改所有類型資產的中繼資料配置。
 
 1. 若要檢視表單/範本清單，請按一下 AEM 標誌，然後導覽至&#x200B;**[!UICONTROL 「工具」]**>**[!UICONTROL 「資產」]**>**[!UICONTROL 「中繼資料結構描述」]**。
 
-   ![chlimage_1-37](assets/chlimage_1-173.png)
+   ![顯示元資料結構表單清單的頁](assets/chlimage_1-173.png)
 
    AEM提供現成可用的下列範本：
    * **預設**:資產的基本中繼資料結構表單。
@@ -66,7 +65,7 @@ source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
 
 1. 在對話框中，輸入架構表單的標題，然後按一下 **[!UICONTROL 建立]** ，完成表單建立過程。
 
-   ![chlimage_1-38](assets/chlimage_1-174.png)
+   ![指定標題並建立中繼資料結構表單](assets/chlimage_1-174.png)
 
 ## 編輯中繼資料結構表單 {#edit-metadata-schema-forms}
 
@@ -81,12 +80,11 @@ source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
 
 1. 在「方案表單」頁中，選中表單前的複選框，然後按一下工 具欄上的 「編輯」表徵圖。
 
-   ![chlimage_1-39](assets/chlimage_1-175.png)
+   ![中繼資料結構表單工具列上的編輯圖示](assets/chlimage_1-175.png)
 
 1. 在「元數 **[!UICONTROL 據結構編輯器]** 」頁中，通過將一個或多個元件從「構建表單」頁籤中的元件類型清單拖到「基本」頁籤，自定義資產的屬性頁 ******** 。
 
-   ![將元件從建立表單新增至中繼資料結構編輯器，以自訂資產屬性](assets/metadata-schema-editor.png)
-
+   ![「元資料結構編輯器：自定義資產屬性」頁](assets/metadata-schema-editor.png)
 
    *圖：中繼資料結構編輯器的基本索引標籤*
 
@@ -147,7 +145,7 @@ source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
 
 **刪除**:按一下此表徵圖可從架構表單中刪除元件。
 
-![chlimage_1-41](assets/chlimage_1-177.png)
+![元資料結構表單上的刪除表徵圖](assets/chlimage_1-177.png)
 
 >[!NOTE]
 >
@@ -155,15 +153,15 @@ source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
 
 如果您選取「必 **[!UICONTROL 要]** 」選項，可以搜尋遺失必要中繼資料的資產。從「篩 **[!UICONTROL 選器]** 」面板中，展開「中繼資料 **[!UICONTROL 驗證謂語]** 」並選取「 **[!UICONTROL 無效]** 」選項。搜尋結果會顯示遺失您透過結構表單設定之必要中繼資料的資產。
 
-![chlimage_1-42](assets/chlimage_1-178.png)
+![「篩選器」面板的「中繼資料驗證謂語」中選取的選項無效 ](assets/chlimage_1-178.png)
 
 如果將上下文元資料元件添加到任何方案表單的任何頁籤，則該元件將作為清單顯示在應用特定方案的資產的屬性頁中。 該清單包括除應用上下文元資料元件的頁籤之外的所有其他頁籤。 目前，此功能提供基本功能，可根據內容控制中繼資料的顯示。
 
-![chlimage_1-43](assets/chlimage_1-179.png)
+![內容相關的中繼資料元件清單標籤資產屬性](assets/chlimage_1-179.png)
 
 要顯示屬性頁面中除了應用上下文元資料元件的頁籤之外的任何頁籤，請從清單中選擇該頁籤。 該頁籤將添加到屬性頁。
 
-![從上下文中繼資料清單中選取標籤，以顯示在屬性頁面上](assets/contextual-metadata-asset-properties.png)
+![「內容相關中繼資料」清單上選取的標籤會顯示在資產屬性頁面上](assets/contextual-metadata-asset-properties.png)
 
 *圖：資產屬性頁面中的內容相關中繼資料*
 
@@ -173,15 +171,15 @@ source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
 
 #### 在架構表單中添加或刪除頁籤 {#adding-deleting-a-tab-in-the-schema-form}
 
-架構編輯器可讓您新增或刪除標籤。預設模式表單包 **[!UICONTROL 括Basic]**、 **[!UICONTROL Advanced]** 、 **[!UICONTROL IPTC]**&#x200B;和 **** IPTC Extension頁籤，預設情況下。
+架構編輯器可讓您新增或刪除標籤。The default schema form includes the **[!UICONTROL Basic]**, **[!UICONTROL Advanced]** , **[!UICONTROL IPTC]**, and **[!UICONTROL IPTC Extension]** tabs.
 
-![chlimage_1-45](assets/chlimage_1-181.png)
+![中繼資料結構表單中的預設標籤](assets/chlimage_1-181.png)
 
 單 `+` 擊可在架構表單上添加新頁籤。 依預設，新標籤的名稱為 `Unnamed-1`。 您可以從「設定」索引標籤修 **[!UICONTROL 改名稱]** 。
 
 按一 `X` 下以刪除標籤。
 
-![chlimage_1-46](assets/chlimage_1-182.png)
+![使用中繼資料結構編輯器新增或刪除標籤](assets/chlimage_1-182.png)
 
 ## 刪除中繼資料結構表單 {#delete-metadata-schema-forms}
 
@@ -189,7 +187,8 @@ AEM可讓您僅刪除自訂結構表單。 它不允許您刪除預設模式表�
 
 要刪除表單，請選擇一個表單並按一下刪除表徵圖。
 
-![chlimage_1-47](assets/chlimage_1-183.png)
+![刪除表徵圖以刪除自定義元資料結構表單](assets/chlimage_1-183.png)
+
 <!--![chlimage_1-47](assets/chlimage_1-177.png) -->
 >[!NOTE]
 >
@@ -254,26 +253,26 @@ AEM Assets可讓您定義中繼資料結構的變體，並將其套用至特定�
 
 1. 按一下 AEM 標誌，然後導覽至&#x200B;**[!UICONTROL 「工具」]**>**[!UICONTROL 「資產」]**>**[!UICONTROL 「中繼資料結構描述」]**。此時會顯示&#x200B;**[!UICONTROL 「中繼資料結構描述表單」]**&#x200B;頁面。
 1. 選取表單前的核取方塊，例如預設中繼資料表單，然後按一下或點選復製圖示，並將它儲存為自訂表單。 例如，指定表單的自訂名稱 `my_default`。 或者，您也可以建立自訂表格。
-   ![chlimage_1-184](assets/chlimage_1-184.png)
+   ![複製表徵圖以複製預設表單，並將其另存為「元資料結構表單」頁上的自定義表單](assets/chlimage_1-184.png)
 
 1. 在「元數 **[!UICONTROL 據結構表單]** 」頁中，選 `my_default` 擇表單，然後按一下 **[!UICONTROL 編輯表徵圖]** 。
 
-   ![chlimage_1-49](assets/chlimage_1-185.png)
+   ![編輯表徵圖以開啟元資料架構編輯器並編輯架構表單](assets/chlimage_1-185.png)
 
 1. 在「元數 **[!UICONTROL 據結構編輯器]** 」頁中，將文本欄位添加到結構表單中。 例如，新增標籤為「類別」的 **[!UICONTROL 欄位]**。
 
-   ![將文本欄位添加到元資料架構表單編輯器](assets/text-field-metadata-schema-editor.png)
+   ![添加到元資料結構表單編輯器的文本欄位](assets/text-field-metadata-schema-editor.png)
 
    *圖：已新增文字欄位至中繼資料結構表單編輯器*
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。已修改的表單列在「元資料結構表 **[!UICONTROL 單」頁中]** 。
 1. 按一下／點 **[!UICONTROL 選工具列中的「套用至資料夾」]** ，將自訂中繼資料套用至資料夾。
 
-   ![chlimage_1-51](assets/chlimage_1-187.png)
+   ![「套用至檔案夾」圖示，以套用自訂中繼資料至檔案夾](assets/chlimage_1-187.png)
 
 1. 選擇要在其上應用已修改方案的資料夾，然後按一下／點選「應 **[!UICONTROL 用」]**。
 
-   ![chlimage_1-52](assets/chlimage_1-188.png)
+   ![選擇要應用元資料方案的資料夾](assets/chlimage_1-188.png)
 
 1. 如果資料夾已套用其他中繼資料結構，會出現警告訊息，指出您即將覆寫現有的中繼資料結構。 按一 **下覆寫**。
 1. 按一 **下「確定** 」以關閉成功訊息。
@@ -290,21 +289,21 @@ AEM Assets可讓您定義中繼資料結構的變體，並將其套用至特定�
 1. 按一下 AEM 標誌，然後導覽至&#x200B;**[!UICONTROL 「工具」]**>**[!UICONTROL 「資產」]**>**[!UICONTROL 「中繼資料結構描述」]**。此時會顯示&#x200B;**[!UICONTROL 「中繼資料結構描述表單」]**&#x200B;頁面。
 1. 將預設中繼資料表單儲存為自訂表單。 例如，將它另存為 `my_default`。
 
-   ![chlimage_1-53](assets/chlimage_1-189.png)
+   ![預設的中繼資料表格儲存為自訂表格](assets/chlimage_1-189.png)
 
 1. 編輯自訂表格。 新增必填欄位。 例如，新增「類 **[!UICONTROL 別」欄位]** ，並將欄位設為必填。
 
-   ![將欄位新增至中繼資料表單，並選取「規則」索引標籤中的「必要」，將它設為強制](assets/mandatory-field-metadata-schema-editor.png)
+   ![在元資料結構表單編輯器中選擇「規則」頁籤中的「必需」，將強制欄位添加到元資料表單](assets/mandatory-field-metadata-schema-editor.png)
 
    *圖：中繼資料結構表單編輯器中的必填欄位*
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。已修改的表單列在「元資料結構表 **[!UICONTROL 單」頁中]** 。 選取表單，然後按一下或點選 **[!UICONTROL 工具列中的「套用至資料夾」]** ，將自訂中繼資料套用至資料夾。
 
-   ![chlimage_1-55](assets/chlimage_1-191.png)
+   ![「套用至檔案夾」圖示可將自訂中繼資料表單套用至檔案夾](assets/chlimage_1-191.png)
 
 1. 導覽至資料夾，並上傳您新增至自訂表單之必填欄位中遺失中繼資料的部分資產。 資產的「卡片」檢視中會顯示必要欄位遺失中繼資料的訊息。
 
-   ![chlimage_1-56](assets/chlimage_1-192.png)
+   ![在資料夾中上傳資產時，資產卡片檢視中遺失必要中繼資料的訊息](assets/chlimage_1-192.png)
 
 1. （可選）存取 `https://[server]:[port]/system/console/components/`。 配置並啟 `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` 用預設禁用的元件。 設定AEM檢查資產中中繼資料有效性的頻率。
 
