@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -84,7 +84,7 @@ AEM Forms資料整合模組可讓您從不同的後端資料來源建立表單�
 
 ## Step 2: Create form data model {#create-fdm}
 
-AEM Forms提供直覺式使用者介面，可 [從設定的資料來源](../../forms/using/data-integration.md#main-pars-header-1524967585)建立表單資料模型。 您可以在表單資料模型中使用多個資料來源。 對於我們的使用案例，我們將使用已配置的MySQL資料源。
+AEM Forms提供直覺式使用者介面，可 [從設定的資料來源建立表單](data-integration.md) 資料模型。 您可以在表單資料模型中使用多個資料來源。 對於我們的使用案例，我們將使用已配置的MySQL資料源。
 
 執行下列動作以建立表單資料模型：
 
