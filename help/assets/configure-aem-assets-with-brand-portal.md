@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bdb26ba817e0599f811d7f4e131ec6ab356a4785
+source-git-commit: 28354bd9785fa83939f9e3b051aac195d7706633
 
 ---
 
@@ -61,7 +61,7 @@ Adobe Experience Manager(AEM)Assets是透過Adobe I/O以品牌入口網站設定
 
 ### 下載並安裝AEM 6.5 {#aemquickstart}
 
-建議您讓AEM 6.5來設定AEM作者例項。 如果您沒有啟動並執行AEM，請從下列位置下載：
+建議您讓AEM 6.5來設定AEM作者例項。 如果您沒有啟動並執行AEM，請從下列位置下載它：
 
 * 如果您是現有的AEM客戶，請從 [Adobe授權網站下載AEM 6.5](http://licensing.adobe.com)。
 
@@ -73,7 +73,7 @@ Adobe Experience Manager(AEM)Assets是透過Adobe I/O以品牌入口網站設定
 
 如需詳細指示，請參閱
 
-* [AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)
+* [AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/sp-release-notes.html)
 
 **如果您找不到** 最新的AEM套件或Service Pack，請連絡支援。
 
@@ -154,7 +154,7 @@ Adobe I/O整合會產生API金鑰、用戶端密碼和裝載(JWT)，這是設定
 
    ![建立整合](assets/create-new-integration2.png)
 
-1. 指定整合的名稱和說明。 按一 **[!UICONTROL 下「從電腦選取檔案」]** ，並上傳 `AEM-Adobe-IMS.crt` 在「取得公用憑證」區 [段中下載的檔案](#public-certificate) 。
+1. 指定整合的名稱和說明。 按一 **[!UICONTROL 下「從電腦選取檔案]** 」，並上傳 `AEM-Adobe-IMS.crt` 在「取得公用憑證」區 [段中下載的檔案](#public-certificate) 。
 
 1. 選擇組織的配置檔案。
 
@@ -204,7 +204,7 @@ Adobe I/O整合會產生API金鑰、用戶端密碼和裝載(JWT)，這是設定
 
 >[!CAUTION]
 >
->僅建立一個有效的IMS設定。 請勿建立多個IMS組態。
+>只建立一個有效的IMS設定。
 >
 > 確保配置正常。 如果配置不健康，請將其刪除並建立新的健康配置。
 
