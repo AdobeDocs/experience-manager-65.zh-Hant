@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -27,10 +27,10 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 您可以預先填寫最適化表單的系結和未系結欄位。 預填充資料包含afBoundData和afUnBoundData部分，用於預填充自適應表單的綁定和未綁定欄位。 此區 `afBoundData` 段包含系結欄位和面板的預先填寫資料。 此資料必須與關聯的表單模型模式相容：
 
 * 對於使用 [XFA表單範本的自適應表單](../../forms/using/prepopulate-adaptive-form-fields.md)，請使用與XFA範本資料架構相容的預填XML。
-* 對於使用 [XML架構的自適應表單](../../forms/using/prepopulate-adaptive-form-fields.md#main-pars-header-3)，請使用與XML架構結構相容的預填XML。
-* 對於使用 [JSON結構描述的最適化表單](../../forms/using/prepopulate-adaptive-form-fields.md#json-schema-based-adaptive-forms)，請使用與JSON結構描述相容的預填JSON。
+* 對於使用 [XML架構的自適應表單](#xml-schema-af)，請使用與XML架構結構相容的預填XML。
+* 對於使用 [JSON結構描述的最適化表單](#json-schema-based-adaptive-forms)，請使用與JSON結構描述相容的預填JSON。
 * 對於使用FDM架構的最適化表單，請使用與FDM架構相容的預填JSON。
-* 對於沒有表單模型 [的自適應表單](../../forms/using/prepopulate-adaptive-form-fields.md#p-adaptive-form-with-no-form-model-p)，沒有綁定資料。 每個欄位都是未綁定欄位，並且使用未綁定的XML預填充。
+* 對於沒有表單模型 [的自適應表單](#adaptive-form-with-no-form-model)，沒有綁定資料。 每個欄位都是未綁定欄位，並且使用未綁定的XML預填充。
 
 ### 範例預填XML結構 {#sample-prefill-xml-structure}
 
@@ -222,7 +222,7 @@ Prefill-Submit-Data-ContentPackage.zip
 </afData>
 ```
 
-## 使用Configuration manager配置預填充服務 {#configuring-prefill-service-using-configuration-manager}
+## 使用Configuration Manager配置預填充服務 {#configuring-prefill-service-using-configuration-manager}
 
 若要啟用預填服務，請在「AEM Web Console設定」中指定「預設預填服務設定」。 使用下列步驟來設定Prefill服務：
 
