@@ -10,14 +10,14 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
 
 # AEM Forms中的Watched資料夾{#watched-folder-in-aem-forms}
 
-管理員可以設定網路資料夾（稱為「Watched Folder」），如此當使用者將檔案（例如PDF檔案）置於「Watched Folder」中時，就會啟動預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定的操作後，會將結果檔案保存到指定的輸出資料夾中。 如需工作流程、服務和指令碼的詳細資訊，請參 [閱各種檔案處理方法](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-4)。
+管理員可以設定網路資料夾（稱為「Watched Folder」），如此當使用者將檔案（例如PDF檔案）置於「Watched Folder」中時，就會啟動預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定的操作後，會將結果檔案保存到指定的輸出資料夾中。 如需工作流程、服務和指令碼的詳細資訊，請參 [閱各種檔案處理方法](#variousmethodsforprocessingfiles)。
 
 ## 建立Watched資料夾 {#create-a-watched-folder}
 
@@ -25,7 +25,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 * 在配置Watched資料夾配置節點的屬性時，在folderPath屬性中鍵入父目錄的完整路徑，並附加要建立的Watched資料夾的名稱，如下例所示：資 `C:/MyPDFs/MyWatchedFolder`料 `MyWatchedFolder`夾不存在，AEM Forms會嘗試在指定的路徑上建立資料夾。
 
-* 在配置「監視資料夾」端點之前，在檔案系統上建立資料夾，然後在folderPath屬性中提供完整路徑。 如需folderPath屬性的詳細資訊，請參閱「 [Watched資料夾屬性」](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)。
+* 在配置「監視資料夾」端點之前，在檔案系統上建立資料夾，然後在folderPath屬性中提供完整路徑。 如需folderPath屬性的詳細資訊，請參閱「 [Watched資料夾屬性」](#watchedfolderproperties)。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-   如需支援屬性的完整清單，請參閱「 [Watched資料夾屬性」](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)。
+   如需支援屬性的完整清單，請參閱「 [Watched資料夾屬性」](#watchedfolderproperties)。
 
 1. 按一下「 **全部儲存**」。 建立節點並保存屬性後。 在屬 `input`性中指 `result`定的路徑上建立、、、 `failure`和 `preserve`資料夾 `stage``folderPath` 。
 
@@ -168,7 +168,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
    * **預設映射器：** 使用預設裝載映射器，將受監視資料夾的輸入和輸出內容保留在裝載中單獨的輸入和輸出資料夾中。 此外，在工作流的裝載路徑中，使 [用裝載]/輸入／和 [裝載]/輸出路徑來擷取和儲存內容。
 
-   * **簡單的基於檔案的負載映射器：** 使用簡單檔案型裝載映射程式，將輸入和輸出內容直接保留在裝載資料夾中。 它不建立任何額外的層次，如預設映射器。
+   * **簡單的基於檔案的負載映射器：** 使用簡單檔案式裝載映射程式，將輸入和輸出內容直接保留在裝載資料夾中。 它不建立任何額外的層次，如預設映射器。
 
 ### 自訂設定參數 {#custom-configuration-parameters}
 
@@ -662,5 +662,5 @@ inputProcessorType（字串）:要啟動的進程的類型。 在本教學課程
    * inputProcessorId（字串）:inputProcessorId屬性的行為基於為inputProcessorType屬性指定的值。 在此示例中，inputProcessorType屬性的值為workflow。 因此，對於inputProcessorId屬性，請指定PDFG工作流的以下路徑：/etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern（字串）:輸出檔案的模式。 可以指定資料夾或檔案模式。 如果指定了資料夾模式，則輸出檔案的名稱將如工作流中所述。 如果指定了檔案模式，則輸出檔案的名稱如檔案模式中所述。
-   除了上述必要屬性外，「監視資料夾」也支援一些選用屬性。 如需選用屬性的完整清單和說明，請參閱「 [Watched資料夾屬性」](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)。
+   除了上述必要屬性外，「監視資料夾」也支援一些選用屬性。 如需選用屬性的完整清單和說明，請參閱「 [Watched資料夾屬性」](#watchedfolderproperties)。
 
