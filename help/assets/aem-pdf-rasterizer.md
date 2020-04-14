@@ -3,7 +3,7 @@ title: 使用PDF點陣化器產生轉譯
 description: 本文說明如何使用Adobe PDF Rasterizer程式庫產生高品質的縮圖和轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -26,9 +26,7 @@ Adobe建議針對下列項目使用PDF點陣化器程式庫：
    >
    >PDF點陣化器程式庫僅適用於Windows和Linux。
 
-1. 請在存取AEM Assets工作流程主控台 `https://[server]:[port]/workflow`。
-
-   開啟「DAM更新資產」工作流程頁面。
+1. 請在存取AEM Assets工作流程主控台 `https://[server]:[port]/workflow`。 開啟「 [!UICONTROL DAM更新資產」工作流程] 頁面。
 
 1. 若要防止使用預設方法產生PDF和AI檔案的縮圖和Web轉譯，請依照下列步驟進行：
 
