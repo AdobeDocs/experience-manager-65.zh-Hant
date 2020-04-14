@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -84,7 +84,7 @@ AEM Forms可讓您將「 [最適化表單](../../forms/using/embed-adaptive-form
 
 #### 將最適化表單範本的可用性限制在特定路徑 {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-最適化表單新增了對cq:allowedPaths屬性的支援。 該屬性將 [Adaptive Forms模板的可用性限制為特定路徑](../../forms/using/creating-adaptive-form.md#main-pars-text)。
+最適化表單新增了對cq:allowedPaths屬性的支援。 該屬性將 [Adaptive Forms模板的可用性限制為特定路徑](creating-adaptive-form.md#adaptive-form-templates)。
 
 #### 將核取方塊動態新增至最適化表單 {#add-check-boxes-to-the-adaptive-form-dynamically}
 
