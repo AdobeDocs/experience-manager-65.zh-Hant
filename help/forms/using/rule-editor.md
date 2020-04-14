@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -223,7 +223,7 @@ When(optional):
 
 ### 隱藏 {#hide}
 
-與「顯示」規則類型類似，您可以使用「隱藏 **** 」規則類型，根據是否滿足條件來顯示或隱藏表單對象。 隱藏規則類型也會在條件不滿足或返回時觸發顯示操作 `False`。
+與「顯示」規則類型類似，您可以使用「隱藏 **** 」規則類型來根據是否滿足條件顯示或隱藏表單對象。 隱藏規則類型也會在條件不滿足或返回時觸發顯示操作 `False`。
 
 典型的隱藏規則結構如下：
 
@@ -305,7 +305,7 @@ When(optional):
 
 ![自訂函式](assets/custom_functions_set_options_new.png)
 
-若要建立自訂函式，請參閱規 [則編輯器中的自訂函式](../../forms/using/rule-editor.md#main-pars-header-296220653)。
+若要建立自訂函式，請參閱規 [則編輯器中的自訂函式](#custom-functions)。
 
 要根據表單資料模型定義規則，請執行以下操作：
 
@@ -348,7 +348,7 @@ When(optional):
 
 套用一或多個有效規則的表單物件會標示為「綠點」。 如果套用至表單物件的任何規則無效，表單物件會以黃點標籤。
 
-「函式」標籤包含一組內建函式，例如總和、最小值、最大值、平均值、數量和驗證表單。 您可以使用這些函式在可重複面板和表格行中計算值，並在編寫規則時將它們用於操作和條件語句中。 不過，您也可以建立 [自訂函式](../../forms/using/rule-editor.md#custom-functions) 。
+「函式」標籤包含一組內建函式，例如總和、最小值、最大值、平均值、數量和驗證表單。 您可以使用這些函式在可重複面板和表格行中計算值，並在編寫規則時將它們用於操作和條件語句中。 不過，您也可以建立 [自訂函式](#custom-functions) 。
 
 ![函式頁籤](assets/functions.png)
 
@@ -415,7 +415,7 @@ AEM Forms會追蹤您上次用來編寫規則的規則編輯器模式。 下次�
 
    雖然您無法變更或修改選取的物件，但可使用規則下拉式清單（如下所示）來選取其他規則類型。 如果您想要在另一個物件上建立規則，請點選「取消」以退出規則編輯器，然後從所要的表單物件再次啟動規則。
 
-1. 點選 **[!UICONTROL 「Select State]** (選擇狀態 **[!UICONTROL )」下拉式清單，然後]**&#x200B;選取等於。 此時 **[!UICONTROL 將顯示「輸入字串]** 」欄位。
+1. 點選 **[!UICONTROL 「Select State]** (選擇狀態 **[!UICONTROL )」下拉式清單，然後]**&#x200B;選取等於。 出現 **[!UICONTROL 「Enter a String]** （輸入字串）」欄位。
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
@@ -691,7 +691,7 @@ var c = {
 
 若要複製貼上規則，請執行下列動作：
 
-1. 點選您要從中複製規則的表單物件，然後在元件工具列點選「編輯 ![規則」](assets/editrule.png)。 規則編輯器用戶介面將出現，並選擇表單對象，並顯示現有規則。
+1. 點選您要從中複製規則的表單物件，然後在元件工具列點選「編輯 ![規則」](assets/editrule.png)。 規則編輯器用戶介面將出現，並選擇表單對象並顯示現有規則。
 
    ![組排規則](assets/copyrule.png)
 
