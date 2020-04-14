@@ -11,7 +11,7 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -29,7 +29,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
    <td>任務</td> 
   </tr>
   <tr>
-   <td>forms-user <sup><a href="#main-pars-text">[1]</a></sup></td> 
+   <td>forms-user <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>建立、預覽、發佈及提交最適化表單</li> 
@@ -59,7 +59,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
     </ul> </td> 
   </tr>
   <tr>
-   <td>範本作者 <sup><a href="#main-pars-text">[2]</a></sup></td> 
+   <td>範本作者 <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>建立並預覽最適化表單或互動式通訊範本</li> 
