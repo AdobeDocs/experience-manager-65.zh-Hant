@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -61,11 +61,11 @@ AEM Forms工作區是網頁型HTML應用程式，與螢幕閱讀程式相容。 
 
 您可以在下列類別中設定各種AEM Forms工作區偏好設定：
 
-**離職：** 設定偏好設定，以控制在您離開辦公室時，如何指派工作給其他人。 請參 [閱設定離職偏好設定](/help/forms/using/todo-lists.md#main-pars-heading-22)。
+**離職：** 設定偏好設定，以控制在您離開辦公室時，如何指派工作給其他人。 請參 [閱設定離職偏好設定](todo-lists.md#setting-out-of-office-preferences)。
 
-**隊列：** 設定與其他使用者共用您的待辦事項清單或要求存取其他使用者清單的偏好設定。 請參 [閱使用組和共用隊列中的任務](/help/forms/using/todo-lists.md#main-pars-heading-19)。
+**隊列：** 設定與其他使用者共用您的待辦事項清單或要求存取其他使用者清單的偏好設定。 請參 [閱使用組和共用隊列中的任務](todo-lists.md#working-with-tasks-from-group-and-shared-queues)。
 
-**UI設定：** 設定您與AEM Forms工作區互動的偏好設定。 請參 [閱設定用戶介面首選項](/help/forms/using/getting-started-livecycle-html-workspace.md#main-pars-heading-5)。
+**UI設定：** 設定您與AEM Forms工作區互動的偏好設定。 請參 [閱設定用戶介面首選項](#set-user-interface-preferences)。
 
 ### 設定用戶介面首選項 {#set-user-interface-preferences}
 
