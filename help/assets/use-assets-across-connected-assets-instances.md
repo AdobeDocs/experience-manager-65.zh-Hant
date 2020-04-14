@@ -3,14 +3,14 @@ title: 在 Adobe Experience Manager Sites 編寫工作流程中使用「連線�
 description: 在其他 Experience Manager 網站的部署工作中建立網頁時，使用遠端 Adobe Experience Manager Assets 部署的可用資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3c2c47b5d660fefd31470ce8d555c7bb949fa036
+source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
 
 ---
 
 
 # 使用「連線資產」在 AEM Sites 中共用 DAM 資產 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-大型企業中，建立網站所需的基礎架構可能很分散。有時候，建立這些網站的網站建立功能和數位資產可能會存放在不同的部署中。以下幾個原因可能是現有部署在地理位置分散，需要共同工作或進行收購，從而導致母公司希望共同使用的異構基礎架構。
+大型企業中，建立網站所需的基礎架構可能很分散。有時候，建立這些網站的網站建立功能和數位資產可能會存放在不同的部署中。或許出於幾種原因，導致現有部署的地理位置分散，但礙於工作所需而得搭配使用，或是併購後才發現基礎架構的組成複雜分歧，母公司希望能加以整合。
 
 AEM Sites 提供建立網頁的功能，而 AEM Assets 是可為網站提供必要資產的數位資產管理 (DAM) 系統。AEM 現在整合了 AEM Sites 和 AEM Assets，能支援上述使用案例。
 
@@ -37,7 +37,7 @@ Sites 作者可以唯讀本機資產的形式取得遠端資產。此功能可�
 
 作者可在「內容尋找器」中搜尋影像和下列類型的文件，並在「頁面編輯器」中使用找到的資產。文件可新增至 `Download` 元件，且影像可新增至 `Image` 元件。作者也可以在任何可延伸預設 `Download` 或 `Image` 元件的自訂 AEM 元件中新增遠端資產。支援的格式清單包括：
 
-* **影像格式**:Image元件支援的影像格 [式](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) ，由Connected Assets支援。 不支援動態媒體影像。
+* **影像格式**:Image元件支援的影像格 [式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html) ，由Connected Assets支援。 不支援動態媒體影像。
 * **文件格式**：請參閱[連線資產支援的文件格式](assets-formats.md#supported-document-formats)。
 
 ### 相關使用者和群組 {#users-and-groups-involved}
@@ -45,7 +45,7 @@ Sites 作者可以唯讀本機資產的形式取得遠端資產。此功能可�
 以下說明設定及使用功能以及其相對應的使用者群組時，相關的各種角色。本機範圍適用於由作者建立網頁的使用案例。遠端範圍適用於託管所需資產的 DAM 部署。Sites 作者會擷取這些遠端資產。
 
 | 角色 | 範圍 | 使用者群組 | 逐步說明中的使用者名稱 | 需求 |
-|----------------------------------|--------|------------------------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---|---|---|---|---|
 | AEM Sites 管理員 | 本機 | AEM 管理員 | `admin` | 設定 AEM，設定與遠端資產部署的整合。 |
 | DAM 使用者 | 本機 | 作者 | `ksaner` | 用於檢視及複製 `/content/DAM/connectedassets/` 中擷取的資產。 |
 | AEM Sites 作者 | 本機 | 作者 (在遠端 DAM 上擁有讀取存取權限，並在本機 Sites 上擁有作者存取權限) | `ksaner` | 一般使用者是指使用這項整合提升其內容速度的 Sites 作者。作者可使用「內容尋找器」在遠端 DAM 中搜尋及瀏覽資產，並在本機網頁中使用所需的影像。已採用 `ksaner` DAM 使用者的認證。 |
@@ -73,11 +73,9 @@ AEM 管理員可建立這項整合。一旦建立之後，系統會透過您在 
    1. AEM Assets 位置為 `https://[assets_servername_ams]:[port]`。
    1. DAM 經銷商 (技術使用者) 的認證。
    1. 在&#x200B;**[!UICONTROL 「掛接點」]**&#x200B;欄位中，輸入 AEM 擷取資產的本機 AEM 路徑。例如，`remoteassets` 資料夾。
-
    1. 根據您的網路調整&#x200B;**[!UICONTROL 原始二進位傳輸最佳化臨界值]**。大於此臨界值的資產轉譯項目會以非同步方式傳送。
    1. 如果您是使用資料存放區來儲存資產，且「資料存放區」是兩個 AEM 部署之間的共用儲存空間，請選取&#x200B;**[!UICONTROL 「與連線資產共用的資料存放區」]**。這種情況下，臨界值限制並不重要，因為實際的資產二進位檔位於資料存放區，而且不會轉移。
-   ![連線資產的典型設定](assets/connected-assets-typical-config.png)
-
+      ![連線資產的典型設定](assets/connected-assets-typical-config.png)
    *圖：連線資產的典型設定*
 
 1. 資產處理完畢且轉譯完成擷取後，請停用工作流程啟動器。調整本機 (AEM Sites) 部署上的啟動器設定，以排除 `connectedassets` 資料夾 (遠端資產擷取作業的執行位置)。
