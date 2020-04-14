@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -101,13 +101,13 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 
    使用表達式編輯器為Branch 1和Branch 2建立路由表達式。 這些路由運算式可協助您根據AEM收件匣中的使用者動作來選擇分支。
 
-   **分支2的路由表達式**
+   **分支1的路由表達式**
 
    當使用者點選「 **AEM收件匣** 」中的「核准」時，Branch 1就會啟動。
 
    ![OR拆分示例](assets/orsplit_branch1_active_new.png)
 
-   **分支2的路由表達式**
+   **分支1的路由表達式**
 
    當使用者點選「 **AEM收件匣中** 」時，Branch 2就會啟動。
 
@@ -121,7 +121,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 
    對於為例如抵押貸款應用程式配置的分配任務步驟、記錄步驟文檔和簽署文檔步驟的所有欄位的完整值集，請導入示例包，該示例包可在本節的開頭下載。
 
-   工作流程模型已就緒。 您可以透過各種方法啟動工作流程。 如需詳細資訊，請 [參閱「在OSGi上啟動以表單為中心的工作流程」](../../forms/using/aem-forms-workflow.md#main-pars-header)。
+   工作流程模型已就緒。 您可以透過各種方法啟動工作流程。 如需詳細資訊，請 [參閱「在OSGi上啟動以表單為中心的工作流程」](#launch)。
 
    ![workflow-editor-mortgage](assets/workflow-editor-mortgage.png)
 
