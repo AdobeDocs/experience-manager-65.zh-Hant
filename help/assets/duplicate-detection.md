@@ -3,7 +3,7 @@ title: 可偵測重複資產
 description: 瞭解如何在AEM中啟用重複資產的偵測。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 1. 存取以開啟「AEM Web Console設定」頁 `https://[aem_server]:[port]/system/console/configMgr`面。
 1. 編輯servlet日CQ DAM創 **[!UICONTROL 建資產的配置]**。
-1. 選取「偵 **[!UICONTROL 測重複]** 」選項，然後按一下／點選「 **[!UICONTROL 儲存」]**。
+1. 選擇「檢 **[!UICONTROL 測重複]** 」選項，然後單 **[!UICONTROL 擊「保存」]**。
 
    ![在servlet中選擇檢測重複選項](assets/chlimage_1-377.png)
 
