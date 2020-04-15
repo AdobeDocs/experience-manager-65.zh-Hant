@@ -3,16 +3,16 @@ title: 使用媒體處理常式和工作流程處理資產
 description: 瞭解媒體處理常式以及如何使用工作流程對您的數位資產執行工作。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: b600e5eaf7c61568f2559b3fb4915d433f5e13bf
 
 ---
 
 
 # 使用媒體處理常式和工作流程處理資產 {#processing-assets-using-media-handlers-and-workflows}
 
-Adobe Experience Manager(AEM)Assets隨附一組預設工作流程和媒體處理常式，以處理資產。 工作流程會定義要在資產上執行的一般工作，然後將特定工作委派給媒體處理常式，例如縮圖產生或中繼資料擷取。
+Adobe Experience Manager(AEM)Assets隨附一組預設工作流程和媒體處理常式，以處理資產。 工作流程會定義要在資產上執行的工作，然後將特定工作委派給媒體處理常式，例如縮圖產生或中繼資料擷取。
 
-可以定義工作流程，當特定類型的資產上傳至伺服器時，工作流程會自動執行。 處理步驟是依一系列AEM Assets媒體處理常式來定義。 AEM提供一些內 [建的處理常式](#default-media-handlers) ，其他的處理常式可 [以自訂開發](#creating-a-new-media-handler) ，或借由將程式委派至命令列工 [具來定義](#command-line-based-media-handler)。
+工作流程可設定為在上傳特定MIME類型的資產時自動執行。 處理步驟是依一系列AEM Assets媒體處理常式來定義。 AEM提供一些內 [建的處理常式](#default-media-handlers) ，其他的處理常式可 [以自訂開發](#creating-a-new-media-handler) ，或借由將程式委派至命令列工 [具來定義](#command-line-based-media-handler)。
 
 媒體處理常式是AEM Assets內的服務，可對資產執行特定動作。 例如，當MP3音訊檔案上傳至AEM時，工作流程會觸發MP3處理常式，以擷取中繼資料並產生縮圖。 媒體處理常常與工作流程搭配使用。 AEM支援最常見的MIME類型。 特定工作可透過擴充／建立工作流程、擴充／建立媒體處理常式或停用／啟用媒體處理常式，對資產執行。
 
@@ -29,28 +29,28 @@ AEM Assets中提供下列媒體處理常式，並可處理最常見的MIME類型
 
 | 處理常式名稱 | 服務名（在系統控制台中） | 支援的MIME類型 |
 |---|---|---|
-| [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
-| [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
-| [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg |
-| [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
-| [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | image/pict |
-| [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
-| [!UICONTROL MSOfficeHandler] | com.day.cq.dam.handler.standard.msoffice.MSOfficeHandler | application/msword |
-| [!UICONTROL MSPowerPointHandler] | com.day.cq.dam.handler.standard.msoffice.MSPowerPointHandler | application/vnd.ms-powerpoint |
-| [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
-| [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
-| [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | 回退，以備找不到其他處理常式來擷取資產的資料 |
+| [!UICONTROL TextHandler] | `com.day.cq.dam.core.impl.handler.TextHandler` | text/plain |
+| [!UICONTROL PdfHandler] | `com.day.cq.dam.handler.standard.pdf.PdfHandler` | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
+| [!UICONTROL JpegHandler] | `com.day.cq.dam.core.impl.handler.JpegHandler` | image/jpeg |
+| [!UICONTROL Mp3Handler] | `com.day.cq.dam.handler.standard.mp3.Mp3Handler` | audio/mpeg |
+| [!UICONTROL ZipHandler] | `com.day.cq.dam.handler.standard.zip.ZipHandler` | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
+| [!UICONTROL PictHandler] | `com.day.cq.dam.handler.standard.pict.PictHandler` | image/pict |
+| [!UICONTROL StandardImageHandler] | `com.day.cq.dam.core.impl.handler.StandardImageHandler` | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
+| [!UICONTROL MSOfficeHandler] | `com.day.cq.dam.handler.standard.msoffice.MSOfficeHandler` | application/msword |
+| [!UICONTROL MSPowerPointHandler] | `com.day.cq.dam.handler.standard.msoffice.MSPowerPointHandler` | application/vnd.ms-powerpoint |
+| [!UICONTROL OpenOfficeHandler] | `com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler` | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
+| [!UICONTROL EPubHandler] | `com.day.cq.dam.handler.standard.epub.EPubHandler` | application/epub+zip |
+| [!UICONTROL GenericAssetHandler] | `com.day.cq.dam.core.impl.handler.GenericAssetHandler` | 回退，以備找不到其他處理常式來擷取資產的資料 |
 
 所有處理程式都執行下列任務：
 
 * 從資產擷取所有可用的中繼資料。
-* 從資產建立縮圖影像。
+* 建立資產的縮圖影像。
 
-可以查看活動媒體處理程式：
+要查看活動媒體處理程式：
 
 1. 在瀏覽器中，導覽至 `http://localhost:4502/system/console/components`。
-1. 按一下連結 `com.day.cq.dam.core.impl.store.AssetStoreImpl`。
+1. 按一下 `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
 1. 將顯示包含所有活動媒體處理程式的清單。 例如：
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
@@ -63,7 +63,7 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
 
 可擴充現有的工作流程，並建立新的工作流程，以根據特定需求處理資產。
 
-下列範例說明如何增強 **[!UICONTROL AEM Assets Synchronization]** （AEM Assets同步化）工作流程，以便為除PDF檔案外的所有資產產生子資產。
+下列範例說明如何增強 **[!UICONTROL AEM Assets Synchronization]**  (AEM Assets同步化) 工作流程，以便為除PDF檔案外的所有資產產生子資產。
 
 ### 停用或啟用媒體處理常式 {#disabling-enabling-a-media-handler}
 
@@ -72,7 +72,7 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
 要啟用／禁用媒體處理程式：
 
 1. 在瀏覽器中，導覽至 `https://<host>:<port>/system/console/components`。
-1. 按一下 **[!UICONTROL 媒體處理程式名稱旁邊的「禁用]** 」。 例如： `com.day.cq.dam.handler.standard.mp3.Mp3Handler`。
+1. 按一下 **[!UICONTROL 媒體處理程式名稱旁邊的「禁用]** 」。 For example: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
 1. 重新整理頁面：媒體處理常式旁會顯示圖示，指出其已停用。
 1. 若要啟用媒體處理常式，請按一 **[!UICONTROL 下媒體處理常式]** 名稱旁的「啟用」。
 
@@ -94,14 +94,16 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
 
 以下是範例範本：
 
-`package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement the relevant parts } `
+```Java
+package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement the relevant parts }
+```
 
 介面和類包括：
 
 * `com.day.cq.dam.api.handler.AssetHandler` 介面：此介面說明為特定MIME類型添加支援的服務。 要添加新的MIME類型，必須實施此介面。 介麵包含匯入和匯出特定檔案、建立縮圖和擷取中繼資料的方法。
 * `com.day.cq.dam.core.AbstractAssetHandler` 類別：此類別可做為所有其他資產處理常式實作的基礎，並提供常用的功能。
-* `com.day.cq.dam.core.AbstractSubAssetHandler` 類別:
-   * 此類別可做為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取的常用功能。
+* `com.day.cq.dam.core.AbstractSubAssetHandler` 類別：
+   * 此類別可做為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取常用功能。
    * 開始實施的最佳方式是繼承所提供的抽象實施，以處理大部分事物並提供合理的預設行為：com.day.cq.dam.core.AbstractAssetHandler類別。
    * 此類已提供抽象服務描述符。 因此，如果您繼承此類別並使用maven-sling-plugin，請確定您將inherit標幟設為true。
 
@@ -113,7 +115,7 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
 
 以下是範例範本：
 
-封裝my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;true&quot; &amp;ast;@scr.service &amp;ast;/ public class myMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement relevant parts }
+封裝my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;true&quot; &amp;ast;@scr.service &amp;ast;/ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement relevant parts }
 
 介面和類包括：
 
@@ -145,7 +147,7 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
    1. 按一 **[!UICONTROL 下完成]**。
 
 
-1. 將「Java編譯器」設定為1.5版：
+1. 將Java編譯器設定為1.5版：
 
    1. 按一下右鍵項目， `myBundle` 選擇「屬性」。
    1. 選擇「Java編譯器」並將以下屬性設定為1.5:
@@ -153,10 +155,10 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
       * 編譯器合規性級別
       * 生成的。class檔案相容性
       * 原始碼相容性
-   1. 按一下 **[!UICONTROL 確定]**。 在對話框窗口中，按一下「是」。
+   1. 按一下 **[!UICONTROL 確定]**。 在對話框窗口中，按一下「 **[!UICONTROL 是」]**。
 
 
-1. 將pom.xml檔案中的程式碼取代為下列程式碼：
+1. 將檔案中的程式 `pom.xml` 碼取代為下列程式碼：
 
    ```xml
    <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
@@ -280,7 +282,7 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
 
 1. 建立Java類 `MyHandler`:
 
-   1. 在Eclipse的下方， `myBundle/src/main/java`以滑鼠右鍵按一下套件 `com.day.cq5.myhandler` ，依序選取「新增」和「類別」。
+   1. 在Eclipse的下方， `myBundle/src/main/java`以滑鼠右鍵按一下套 `com.day.cq5.myhandler` 件，依序選取「新增」和「類別」。
    1. 在對話框窗口中，為Java類命名MyHandler，然後按一下「完成」。 Eclipse會建立並開啟檔案MyHandler.java。
    1. 在以 `MyHandler.java` 下方式取代現有程式碼，然後儲存變更：
 
@@ -426,23 +428,23 @@ AEM有一些處理資產的預設工作流程。 要查看它們，請開啟「�
 
 1. 編譯Java類並建立包：
 
-   1. 按一下右鍵myBundle項目，選擇「 **[!UICONTROL Run As]**」，然 **[!UICONTROL 後選擇「Maven Install]**」。
+   1. 按一下右鍵項 `myBundle` 目，選 **[!UICONTROL 擇Run As]**, Maven Install ****。
    1. 在下 `myBundle-0.0.1-SNAPSHOT.jar` 建立包（包含編譯類） `myBundle/target`。
 
 1. 在「CRX檔案總管」中，在下方建立新節點 `/apps/myApp`。 名稱= `install`，類型= `nt:folder`。
 1. 複製套件 `myBundle-0.0.1-SNAPSHOT.jar` 並將它儲存 `/apps/myApp/install` 在下方（例如WebDAV）。 新的文字處理常式現在在AEM中處於作用中。
-1. 在您的瀏覽器中，開啟Apache Felix Web Management Console。 選擇「元件」頁籤並禁用預設文本處理程式 `com.day.cq.dam.core.impl.handler.TextHandler`。
+1. 在您的瀏覽器中，開啟 [!UICONTROL Apache Felix Web Management Console]。 選取「元 [!UICONTROL 件] 」標籤，並停用預設文字處理常式 `com.day.cq.dam.core.impl.handler.TextHandler`。
 
 ## 基於命令行的媒體處理程式 {#command-line-based-media-handler}
 
-AEM可讓您在工作流程中執行任何命令列工具，以轉換資產（例如ImageMagick）並將新的轉譯新增至資產。 您只需要在AEM伺服器所在的磁碟上安裝命令列工具，並新增及設定工作流程的程式步驟。 調用的程式( `CommandLineProcess`稱為)也可以根據特定MIME類型進行篩選，並根據新轉譯建立多個縮圖。
+AEM可讓您在工作流程中執行任何命令列工具，以轉換資產（例如ImageMagick），並將新的轉譯新增至資產。 您只需要在AEM伺服器所在的磁碟上安裝命令列工具，並新增及設定工作流程的程式步驟。 調用的程式( `CommandLineProcess`稱為)也可以根據特定MIME類型進行篩選，並根據新轉譯建立多個縮圖。
 
 下列轉換可自動執行並儲存在AEM Assets中：
 
-* 使用 [ImageMagick和Ghostscript進行EPS](https://www.imagemagick.org/script/index.php) 和AI [轉換](https://www.ghostscript.com/)
-* 使用FFmpeg的FLV視訊轉 [碼](https://ffmpeg.org/)
-* 使用 [LAME的MP3編碼](http://lame.sourceforge.net/)
-* 使用 [SOX的音訊處理](http://sox.sourceforge.net/)
+* 使用ImageMagick和 [Ghostscript進行EPS](https://www.imagemagick.org/script/index.php)[和AI轉換](https://www.ghostscript.com/)。
+* 使用FFmpeg進行FLV視 [訊轉碼](https://ffmpeg.org/)。
+* 使用 [LAME進行MP3編碼](http://lame.sourceforge.net/)。
+* 使用 [SOX處理音訊](http://sox.sourceforge.net/)。
 
 >[!NOTE]
 >
@@ -474,9 +476,9 @@ AEM可讓您在工作流程中執行任何命令列工具，以轉換資產（�
 
    >[!NOTE]
    >
-   >在某些Windows版本（例如Windows SE）中，轉換命令可能無法運行，因為它與Windows安裝中的本機轉換實用程式衝突。 在這種情況下，請提及將影像檔案轉換為縮圖的ImageMagick公用程式的完整路徑。 例如， `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`。
+   >在某些Windows版本（例如Windows SE）中，轉換命令可能無法運行，因為它與Windows安裝中的本機轉換實用程式衝突。 在這種情況下，請提及將影像檔案轉換為縮圖的ImageMagick公用程式的完整路徑。 For example, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
-1. 若要查看工具是否正常運行，請將。jpg影像新增至工作目錄，然後在命令列上執 `<image-name>.jpg -flip <image-name>-flipped.jpg` 行命令convert。
+1. 若要查看工具是否正常運行，請將。jpg影像添加到工作目錄並在命令行上運行 `<image-name>.jpg -flip <image-name>-flipped.jpg` 命令convert。
 
    翻轉的影像會新增至目錄。
 
@@ -498,11 +500,11 @@ AEM可讓您在工作流程中執行任何命令列工具，以轉換資產（�
 1. 例如， **[!UICONTROL 前往CQ5 DAM]** Console `http://localhost:4502/libs/wcm/core/content/damadmin.html`。
 1. 開啟資產 **[!UICONTROL myImage.tiff]** ，並確認已建立翻轉的影像和三個縮圖。
 
-#### 配置CommandLineProcess步驟 {#configuring-the-commandlineprocess-process-step}
+#### 配置CommandLineProcess進程步驟 {#configuring-the-commandlineprocess-process-step}
 
-本節介紹如何設定 **CommandLineProcess的Process****參數**。
+本節介紹如何設定 [!UICONTROL CommandLineProcess的Process][!UICONTROL 參數]。
 
-「進程參 **數」的值** ，必須用逗號分隔，且不能以空格開頭。
+使用逗號分隔 [!UICONTROL 「進程參數] 」的值，不要以空格開頭。
 
 | 參數格式 | 說明 |
 |---|---|
@@ -510,20 +512,25 @@ AEM可讓您在工作流程中執行任何命令列工具，以轉換資產（�
 | tn:&lt;width>:&lt;height> | 可選引數。 該過程建立具有在參數中定義的尺寸的縮略圖。 <br>可定義數個縮圖。 |
 | cmd:&lt;command> | 定義將執行的命令。 語法取決於命令行工具。 只能定義一個命令。 <br>以下變數可用來建立命令：<br>`${filename}`:輸入檔案的名稱，例如original.jpg <br> `${file}`:輸入檔案的完整路徑名稱，例如/tmp/cqdam0816.tmp/original.jpg <br> `${directory}`:的目錄，例如/tmp/cqdam0816.tmp <br>`${basename}`:輸入檔案的名稱（不帶副檔名），例如原始檔案 <br>`${extension}`:輸入檔案的副檔名，例如jpg |
 
-例如，如果ImageMagick已安裝在AEM伺服器的磁碟上，且您使用 **CommandLineProcess** as Implementation，並使用下列值作為 **Process Arguments建立處理步驟**:
+例如，如果ImageMagick已安裝在AEM伺服器的磁碟上，且您使用 [!UICONTROL CommandLineProcess] as Implementation，並使用下列值作為 [!UICONTROL Process Arguments建立處理步驟]:
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
 然後，當工作流程執行時，此步驟僅會套用至具有image/gif或mime:image/tiff作為mime-types的資產，它會建立原始影像的翻轉影像，並將其轉換為。jpg，並建立三個尺寸縮圖：140x100、48x48和10x250。
 
-使用下列 **Process Arguments** ，使用ImageMagick建立三個標準縮圖：
+使用下列 [!UICONTROL Process Arguments] ，使用ImageMagick建立三個標準縮圖：
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=319x319 -thumbnail "319x319>" -background transparent -gravity center -extent 319x319 -write png:cq5dam.thumbnail.319.319.png -thumbnail "140x100>" -background transparent -gravity center -extent 140x100 -write cq5dam.thumbnail.140.100.png -thumbnail "48x48>" -background transparent -gravity center -extent 48x48 cq5dam.thumbnail.48.48.png`
 
-使用下列 **處理參數** ，使用ImageMagick建立啟用Web的轉譯：
+使用下列 [!UICONTROL 處理參數] ，使用ImageMagick建立啟用Web的轉譯：
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=1280x1280 -thumbnail "1280x1280>" cq5dam.web.1280.1280.jpeg`
 
 >[!NOTE]
 >
->CommandLineProcess **步驟僅適用於資產(類型的節**`dam:Asset`點)或資產的後代。
+>CommandLineProcess [!UICONTROL 步驟僅適用於資產(類型的節]`dam:Asset`點)或資產的後代。
+
+>[!MORELIKETHIS]
+>
+>* [處理資產](assets-workflow.md)
+
