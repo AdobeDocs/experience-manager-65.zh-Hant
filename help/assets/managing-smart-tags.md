@@ -3,7 +3,7 @@ title: 管理智慧標籤和搜尋
 description: 更新或移除不正確的智慧型標籤，以改善標籤的相關性
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -20,12 +20,12 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 
 您也可以指派較高的排名給標籤，以提高其與影像的相關性。 促銷影像的標籤會增加當根據特定標籤執行搜尋時，在搜尋結果中出現影像的機率。
 
-1. 在OmniSearch方塊中，根據標籤搜尋資產。
+1. 在Omnisearch方塊中，根據標籤搜尋資產。
 1. 檢查搜尋結果，以識別與搜尋無關的影像。
-1. 選取影像，然後從工具列點選「 **[!UICONTROL 管理標籤]** 」。
-1. 從「管 **[!UICONTROL 理標籤]** 」頁面檢查標籤。 如果您不想根據特定標籤來搜尋影像，請選取標籤，然後從工具列點選「 **[!UICONTROL 刪除]** 」。 或者，按一下／點選 `X` 出現在標籤旁的符號。
-1. 若要指派較高的排名給標籤，請選取標籤並點選工具列 **[!UICONTROL 中的]** 「升級」。 您促銷的標籤會移至「標籤 **[!UICONTROL 」區]** 域。
-1. 按一下／點 **[!UICONTROL 選「儲存]**」，然後按一下／點選「 **[!UICONTROL 確定]** 」以關閉「成功」對話方塊。
+1. 選取影像，然後按一下工 **[!UICONTROL 具列中的]** 「管理標籤」。
+1. 從「管 **[!UICONTROL 理標籤]** 」頁面檢查標籤。 如果您不想根據特定標籤來搜尋影像，請選取標籤，然後按一下工具列中的 **[!UICONTROL 刪除]** 。 或者，按一下 `X` 出現在標籤旁邊的符號。
+1. 若要指派較高的排名給標籤，請選取標籤，然後從工具列按 **[!UICONTROL 一下]** 「升級」。 您促銷的標籤會移至「標籤 **[!UICONTROL 」區]** 域。
+1. Click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the Success dialog.
 1. 導覽至影像的屬性頁面。 請注意，您促銷的標籤已指派高關聯性，因此在搜尋結果中會顯示高度。
 
 ## 使用智慧型標籤瞭解AEM搜尋結果 {#understandsearch}
