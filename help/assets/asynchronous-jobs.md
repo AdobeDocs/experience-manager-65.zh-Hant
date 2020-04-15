@@ -3,7 +3,7 @@ title: 非同步操作
 description: AEM Assets會以非同步方式完成一些耗資龐大的工作，以最佳化效能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 非同步處理包括將多個作業入隊並最終以串列方式運行這些作業（取決於系統資源的可用性）。
 
-您可以從「非同步作業狀態」頁面查看非 **[!UICONTROL 同步作業的狀態]** 。
+您可以從「非同步作業狀態」頁面查看非同步 **[!UICONTROL 作業的狀態]** 。
 
 >[!NOTE]
 >
@@ -33,7 +33,8 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 要詳細查看非同步操作的狀態，請定位至「非同步作業狀 **[!UICONTROL 態」頁]** 。
 
-1. 點選／按一下AEM標誌，然後前往「 **[!UICONTROL Operations]** > **[!UICONTROL Jobs」]**。
+1. 在Experience Manager介面中，按一下「 **[!UICONTROL 作業]** >工 **[!UICONTROL 作」]**。
+
 1. 在「非同 **[!UICONTROL 步作業狀態]** 」頁中，查看操作的詳細資訊。
 
    ![非同步操作的狀態和詳細資訊](assets/AsyncOperation-status.png)
@@ -48,11 +49,11 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
    * **[!UICONTROL 已排程]**:該操作已排程以便稍後處理
 
-1. 要停止活動操作，請從清單中選擇該操作，然後從工具欄 **[!UICONTROL 中按一下]** 「停止」。
+1. 要停止活動操作，請從清單中選擇該操作，然後按一下工 **[!UICONTROL 具欄]** 中的停止。
 
    ![stop_icon](assets/stop_icon.png)
 
-1. 要查看額外詳細資訊（例如說明和日誌），請選擇操作並從工具欄中點 **[!UICONTROL 選]** 「開啟」。
+1. 要查看額外詳細資訊（例如說明和日誌），請選擇操作，然後按一下工 **[!UICONTROL 具欄中]** 「開啟」。
 
    ![open_icon](assets/open_icon.png)
 
@@ -60,7 +61,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
    ![job_details](assets/job_details.png)
 
-1. 要從清單中刪除操作，請從工具欄 **[!UICONTROL 中選擇]** 「刪除」。 若要下載CSV檔案中的詳細資訊，請點選「下 **[!UICONTROL 載」]**。
+1. 要從清單中刪除操作，請從工具欄 **[!UICONTROL 中選擇]** 「刪除」。 若要下載CSV檔案中的詳細資訊，請按一下「下 **[!UICONTROL 載]**」。
 
    >[!NOTE]
    >
@@ -72,7 +73,7 @@ AEM Assets每天在上午1:00執行清除工作，以刪除已完成的超過一
 
 您可以修改清除作業的計畫以及刪除完成作業之前保留其詳細資訊的持續時間。 您也可以設定在任何時間點保留詳細資料的已完成作業數上限。
 
-1. 點選／按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web Console]**」。
+1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 1. 開啟 **[!UICONTROL Adobe CQ DAM非同步作業清除排程作業]** 。
 1. 指定刪除已完成作業的閾值天數，以及保留歷史記錄中詳細資料的作業的最大天數。
 
@@ -88,7 +89,7 @@ AEM Assets每天在上午1:00執行清除工作，以刪除已完成的超過一
 
 如果要刪除的資產或檔案夾數量超過臨界值數目，則會非同步執行刪除作業。
 
-1. 點選／按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web Console]**」。
+1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 1. 在Web控制台中，開啟「非同步刪 **[!UICONTROL 除操作作業處理」配置]** 。
 1. 在「資 **[!UICONTROL 產的臨界值數目]** 」方塊中，指定資產／資料夾的臨界值數目，以便非同步處理刪除作業。
 
@@ -100,9 +101,9 @@ AEM Assets每天在上午1:00執行清除工作，以刪除已完成的超過一
 
 如果要移動的資產／資料夾或參考數量超過閾值數量，將非同步執行移動操作。
 
-1. 點選／按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web Console]**」。
+1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 1. 從Web控制台中，開啟「非同步移 **[!UICONTROL 動操作作業處理」配置]** 。
-1. 在「資 **[!UICONTROL 產／參考的臨界值數]** 」方塊中，指定資產／資料夾或參考的臨界值數，以便非同步處理移動作業。
+1. 在「資 **[!UICONTROL 產／參考的閾值數]** 」框中，指定資產／資料夾或參考的閾值數，以便非同步處理移動操作。
 
    ![move_threshold](assets/move_threshold.png)
 
