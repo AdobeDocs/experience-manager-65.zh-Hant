@@ -3,7 +3,7 @@ title: 資產中的數位版權管理
 description: 瞭解如何在AEM中管理授權資產的資產到期狀態和資訊。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -63,7 +63,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. 按一下/點選「 **[!UICONTROL 到期狀態]** 」選項以展開它。
+1. Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
@@ -105,7 +105,7 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. 從工具 **[!UICONTROL 列點選]** 「發佈」。 如果您在工具列上未看 **到** 「發佈」，請點選工具列上的「更多」( **[!UICONTROL More]** )，然後找到「 **[!UICONTROL 發佈]** 」(Publish)選項。
+1. 從工具 **[!UICONTROL 列按一下]** 「發佈」。 如果您在工具列上未看 **到** 「發佈」，請按一下工具列上的「更多 **[!UICONTROL 」，然後找出「]** 發佈 **** 」選項。
 
    ![chlimage_1-156](assets/chlimage_1-156.png)
 
@@ -114,7 +114,7 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 在「資產」UI中，選取資產並點選「屬 **[!UICONTROL 性]** 」以顯示其資產詳細資料頁面。
+1. 在「資產」介面中，選取資產，然後按一下「 **[!UICONTROL 屬性]** 」以顯示其資產詳細資料頁面。
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
@@ -136,16 +136,16 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. 若要根據資產狀態來搜尋資產，請點選「 **[!UICONTROL 搜尋]** 」以顯示Omnisearch列。
+1. 若要根據資產狀態來搜尋資產，請按一 **[!UICONTROL 下「搜尋]** 」以顯示Omnisearch列。
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. 按return鍵，然後點選 **[!UICONTROL GlobalNav]** ，以顯示「搜尋」面板。
-1. 在「搜尋」面板中，點選/按一 **[!UICONTROL 下「發佈狀態]** 」，然後選取「 **[!UICONTROL 發佈]** 」以在「AEM資產」中搜尋已發佈的資產。
+1. 按return鍵，然後按一 **[!UICONTROL 下GlobalNav]** ，以顯示「搜尋」面板。
+1. In the Search panel, click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in AEM Assets.
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. 點選/按一 **[!UICONTROL 下「核准狀態]** 」，然後按一下適當的選項以搜尋已核准或已拒絕的資產。
+1. Click **[!UICONTROL Approval Status]** and click the appropriate option to search for approved or rejected assets.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
@@ -159,15 +159,15 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
 ## Digital Rights Management in Assets {#digital-rights-management-in-assets-1}
 
-這項功能會強制您接受授權合約，您才能從Adobe Experience Manager(AEM)Assets下載授權資產。
+此功能會強制您接受授權合約，您才能從Adobe Experience Manager Assets下載授權資產。
 
-如果您選取受保護的資產並點選「 **[!UICONTROL 下載]**」，則會將您重新導向至您接受授權合約的授權頁面。 如果您不接受授權合約，則會停 **[!UICONTROL 用「下載]** 」按鈕。
+如果您選取受保護的資產並按一下「 **[!UICONTROL 下載]**」，則會將您重新導向至您接受授權合約的授權頁面。 如果您不接受授權合約，則會停 **[!UICONTROL 用「下載]** 」按鈕。
 
 如果選擇包含多個受保護的資產，請一次選取一個資產、接受授權合約，然後繼續下載資產。
 
 如果符合下列任一條件，資產即視為受保護：
 
-* 資產中繼資料屬 `xmpRights:WebStatement` 性會指向包含資產授權合約的CQ頁面路徑。
+* 資產中繼資料屬 `xmpRights:WebStatement` 性指向包含資產授權合約之頁面的路徑。
 * 資產中繼資料屬性的值 `adobe_dam:restrictions` 是指定授權合約的原始HTML。
 
 >[!NOTE]
@@ -180,7 +180,7 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
 1. 在「卡片」檢視中，選取您要下載的資產，然後按一下「下 **[!UICONTROL 載」]**。
 1. 在「版 **[!UICONTROL 權管理]** 」頁面中，從清單中選取您要下載的資產。
-1. 在「授權」窗格中，選擇「同 **[!UICONTROL 意」]**。 您接受授權合約的資產旁會出現勾號。 點選／按一下「 **[!UICONTROL 下載]** 」按鈕。
+1. 在「授權」窗格中，選擇「同 **[!UICONTROL 意」]**。 您接受授權合約的資產旁會出現勾號。 按一下「 **[!UICONTROL 下載]** 」按鈕。
 
    >[!NOTE]
    >
@@ -188,4 +188,4 @@ Adobe Experience Manager(AEM)Assets的Assets主控台可顯示資產的各種狀
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 在對話方塊中，點選／按一 **[!UICONTROL 下「下載]** 」以下載資產或其轉譯。
+1. 在對話方塊中，按一 **[!UICONTROL 下「下載]** 」以下載資產或其轉譯。
