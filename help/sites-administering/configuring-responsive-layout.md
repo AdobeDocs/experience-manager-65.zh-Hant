@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 710958ceecc8bbbbdae5e836ec0571a9eeaf6a9a
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->這可與使用自適 [應網頁設計（主要針對傳統UI）的行動Web](/help/sites-developing/mobile-web.md) 機制進行比較。
+>這可與使用可調式網頁設 [計（主要針對傳統UI）的行動Web](/help/sites-developing/mobile-web.md) 機制進行比較。
 
 AEM使用多種機制組合，為您的頁面實現互動式版面配置：
 
@@ -169,7 +169,7 @@ AEM使用多種機制組合，為您的頁面實現互動式版面配置：
 
 ## 啟用頁面的元件大小調整 {#enable-component-resizing-for-the-page}
 
-這些程式是必要的，因此您可以在「版面」模式中調整 **元件** 。
+這些程式是必要的，因此您可以在「版面」模式中調整 **元件** 大小。
 
 ### 將版面容器設為主參數 {#set-layout-container-as-main-parsys}
 
@@ -240,11 +240,11 @@ AEM使用LESS來產生部分必要的CSS，這些必須包含在您的專案中�
 
 例如：
 
-* 之前:
+* 變更前:
 
    * `width=100px`
 
-* 之後:
+* 變更後:
 
    * `max-width=100px`
 
