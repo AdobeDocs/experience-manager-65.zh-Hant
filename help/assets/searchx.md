@@ -1,24 +1,24 @@
 ---
-title: 擴充AEM Assets的搜尋功能
-description: 將AEM Assets的搜尋功能擴充至預設值以外。
+title: 擴充Adobe Experience Manager Assets的搜尋功能
+description: 將Adobe Experience Manager Assets的搜尋功能擴及至預設值以外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
 # 擴充資產搜尋 {#extending-assets-search}
 
-您可以擴充Adobe Experience Manager(AEM)Assets搜尋功能。 AEM Assets立即可依字串搜尋資產。
+您可擴充搜 [!DNL Adobe Experience Manager Assets] 尋功能。 立即可用，依字 [!DNL Experience Manager Assets] 串搜尋資產。
 
 搜尋是透過QueryBuilder介面完成，因此可使用數個謂語自訂搜尋。 您可以覆蓋下列目錄中的預設謂詞集： `/apps/dam/content/search/searchpanel/facets`。
 
-您也可以新增其他標籤至「AEM資產管理」面板。
+您也可以新增其他標籤至管理 [!DNL Assets] 面板。
 
 >[!CAUTION]
 >
->自AEM 6.4起，Classic UI已過時。 如需公告，請參 [閱已過時和已移除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 我們建議您使用可觸控的UI。 如需自訂，請參 [閱搜尋面](/help/assets/search-facets.md)。
+>自 [!DNL Experience Manager] 6.4起，Classic UI已過時。 如需公告，請參 [閱已過時和已移除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建議使用啟用觸控的UI。 如需自訂，請參 [閱搜尋面](/help/assets/search-facets.md)。
 
 ## 覆蓋 {#overlaying}
 
@@ -29,7 +29,6 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 >[!NOTE]
 >
 >預設情況下，/下的目錄結 `apps` 構不存在，需要建立。 確保節點類型與／下的節點類型匹配 `libs`。
-
 
 ## 新增標籤 {#adding-tabs}
 
@@ -44,7 +43,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ## 建立自訂謂語 {#creating-custom-predicates}
 
-AEM Assets隨附一組預先定義的謂詞，可用來自訂「資產共用」頁面。 以此方式自訂資產共用，請參閱「建立 [和設定資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
+[!DNL Assets] 隨附一組預先定義的謂詞，可用於自訂「資產共用」頁面。 以此方式自訂資產共用在建立和設 [定資產共用頁面中](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
 除了使用預先存在的謂語外，AEM開發人員也可以使用 [Query Builder API建立自己的謂語](/help/sites-developing/querybuilder-api.md)。
 
@@ -136,7 +135,7 @@ AEM Assets隨附一組預先定義的謂詞，可用來自訂「資產共用」�
    </script>
    ```
 
-1. 若要讓元件可用，您必須能夠加以編輯。 若要讓元件可編輯，請在CRXDE中新增主要類型 **cq:EditConfig的節點cq:editConfig******。 為了能夠移除段落，請新增多值屬性 **cq:actions** ，其中單一值 **為DELETE**。
+1. 若要讓元件可用，您必須能夠加以編輯。若要讓元件可編輯，請在CRXDE中新增主要類型 **cq:EditConfig的節點cq:editConfig******。為了能夠移除段落，請新增多值屬性 **cq:actions** ，其中單一值 **為DELETE**。
 1. 導覽至您的瀏覽器，並在範例頁面上(例如 **press.html**)切換至設計模式，並啟用謂詞段落系統的新元件(例如 **left**)。
 
 1. 在「 **編輯** 」模式中，新元件現在可在sidekick中使用(可在「搜尋」群 **組中找到** )。 將元件插入「 **謂語** 」欄，然後輸入搜尋字詞，例如， **Diamond** ，然後按一下放大鏡開始搜尋。
@@ -240,7 +239,7 @@ AEM Assets隨附一組預先定義的謂詞，可用來自訂「資產共用」�
        });
    ```
 
-1. 若要讓元件可用，您必須能夠加以編輯。 若要讓元件可編輯，請在CRXDE中新增主要類型 **cq:EditConfig的節點cq:editConfig******。 為了能夠移除段落，請新增多值屬性 **cq:actions** ，其中單一值 **為DELETE**。
+1. 若要讓元件可用，您必須能夠加以編輯。若要讓元件可編輯，請在CRXDE中新增主要類型 **cq:EditConfig的節點cq:editConfig******。為了能夠移除段落，請新增多值屬性 **cq:actions** ，其中單一值 **為DELETE**。
 1. 導覽至您的瀏覽器，並在範例頁面上(例如 **press.html**)切換至設計模式，並啟用謂詞段落系統的新元件(例如 **left**)。
 1. 在「 **編輯** 」模式中，新元件現在可在sidekick中使用(可在「搜尋」群 **組中找到** )。 在「謂語」欄中插 **入元件** 。
 
@@ -294,6 +293,6 @@ AEM Assets隨附一組預先定義的謂詞，可用來自訂「資產共用」�
 
 ## 自訂搜尋結果 {#customizing-search-results}
 
-「資產分享」頁面上的搜尋結果呈現方式由選取的鏡頭控制。 AEM Assets隨附一組預先定義的鏡頭，可用來自訂「資產共用」頁面。 以此方式自訂資產共用，請參閱「建立 [及設定資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
+「資產分享」頁面上的搜尋結果呈現方式由選取的鏡頭控制。 AEM Assets隨附一組預先定義的鏡頭，可用來自訂「資產共用」頁面。 以此方式自訂資產共用，請參閱「建立 [和設定資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
 除了使用預先存在的鏡頭外，AEM開發人員也可以自行建立鏡頭。
