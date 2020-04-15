@@ -3,7 +3,7 @@ title: AEM Assets首頁體驗
 description: 個人化AEM Assets首頁，提供多樣化的歡迎畫面體驗，包括資產近期活動的快照。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -28,7 +28,7 @@ AEM Assets首頁提供多樣化且個人化的歡迎畫面體驗，其中包含�
    >
    >啟用「已檢視的資產」、「已檢視的專案」和「已檢視的系列」選項，可大幅增加已記錄事件的數目。
 
-1. 從Configuration manager開 **[!UICONTROL 啟DAM Asset首頁功能標幟]** (DAM Asset Home Page Feature Flag `https://[aem_server]:[port]/system/console/configMgr`)服務。
+1. 從Configuration Manager開 **[!UICONTROL 啟DAM Asset首頁功能標幟]** (DAM Asset Home Page Feature Flag `https://[aem_server]:[port]/system/console/configMgr`)服務。
 1. 選取選 `isEnabled.name` 項以啟用「資產首頁」功能。 儲存變更。
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
@@ -41,7 +41,7 @@ AEM Assets首頁提供多樣化且個人化的歡迎畫面體驗，其中包含�
 
 ![在資產使用者介面上設定體驗連結](assets/config-experience-link.png)
 
-點選／按一下 **[!UICONTROL 此處以設定體驗連結]** ，以新增您的使用者名稱、背景影像和描述檔影像。
+按一下 **[!UICONTROL 此處以設定體驗連結]** ，以新增您的使用者名稱、背景影像和描述檔影像。
 
 「資產」首頁包含下列區段：
 
@@ -80,6 +80,6 @@ AEM Assets首頁提供多樣化且個人化的歡迎畫面體驗，其中包含�
 >
 >擷取、篩選和清除「資產」首頁所需的使用者活動會對效能造成額外負擔。 因此，管理員應該為目標使用者有效配置首頁。
 >
->Adobe建議執行大量作業的管理員和使用者避免使用「資產首頁」功能來防止使用者活動增加。 此外，管理員可以從Configuration manager中設定 [!UICONTROL Day CQ DAM Event Recorder] ，排除特定使用者的 [!UICONTROL 錄制活動]。
+>Adobe建議執行大量作業的管理員和使用者避免使用「資產首頁」功能來防止使用者活動增加。 此外，管理員可以從Configuration Manager中設定 [!UICONTROL Day CQ DAM Event Recorder] ，排除特定使用者的 [!UICONTROL 錄制活動]。
 >
 >如果您使用此功能，Adobe建議您根據伺服器負載來排程清除頻率。
