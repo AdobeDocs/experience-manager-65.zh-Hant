@@ -3,7 +3,7 @@ title: 安裝並設定ImageMagick以搭配AEM Assets運作
 description: 瞭解ImageMagick軟體、如何安裝、設定命令列處理步驟，以及使用它編輯、合成和產生影像縮圖。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -34,7 +34,7 @@ ImageMagick是建立、編輯、合成或轉換點陣圖影像的軟體外掛程
 
 您可以為特定使用案例設定命令行處理步驟。 每次在AEM伺服器上新增JPEG影像檔案時，請執行下列步驟以產生翻轉的影像和縮圖（140x100、48x48、319x319和1280x1280）: `/content/dam`
 
-1. 在AEM伺服器上，前往「工作流程控制台」( `https://[*AEM server*]:[*Port*]/workflow`)並開啟 **[!UICONTROL DAM Update Asset]** workflow模型。
+1. 在AEM伺服器上，前往「工作流程控制台」(`https://[aem_server]:[port]/workflow`)並開啟 **[!UICONTROL DAM Update Asset]** workflow模型。
 1. 從「 **[!UICONTROL DAM更新資產」工作流程模型]** ，開啟 **[!UICONTROL EPS縮圖（由ImageMagick提供）步驟]** 。
 1. 在「參 **[!UICONTROL 數」頁籤]**，添加 `image/jpeg` 到「 **[!UICONTROL Mime類型]** 」清單。
 
@@ -48,11 +48,11 @@ ImageMagick是建立、編輯、合成或轉換點陣圖影像的軟體外掛程
 
    ![select_flags](assets/select_flags.png)
 
-1. 在「 **[!UICONTROL Web Enabled Image]** 」（啟用Web的影像）索引標籤中，指定尺寸為1280x1280像素的轉譯詳細資訊。 此外，在「*Mimetype* 」方塊中指 **[!UICONTROL 定image/jpeg]** 。
+1. 在「 **[!UICONTROL Web Enabled Image]** 」（啟用Web的影像）索引標籤中，指定尺寸為1280x1280像素的轉譯詳細資訊。 此外，在「Mimetype」( `image/jpeg` Mimetype)框 **[!UICONTROL 中指定]** 。
 
    ![web_enabled_image](assets/web_enabled_image.png)
 
-1. 點選／按一 **[!UICONTROL 下「確定]** 」以儲存變更。
+1. 按一下 **[!UICONTROL 確定]** ，保存更改。
 
    >[!NOTE]
    >
@@ -65,7 +65,7 @@ ImageMagick是建立、編輯、合成或轉換點陣圖影像的軟體外掛程
 
    ![skip_mime_types](assets/skip_mime_types.png)
 
-1. 在「啟 **[!UICONTROL 用Web的映像]** 」頁籤中，在「跳過清單」 `image/jpeg` 下添加 **[!UICONTROL MIME類型]**。 點選／按一 **[!UICONTROL 下「確定]** 」以儲存變更。
+1. 在「啟 **[!UICONTROL 用Web的映像]** 」頁籤中，在「跳過清單」 `image/jpeg` 下添加 **[!UICONTROL MIME類型]**。 按一下 **[!UICONTROL 確定]** ，保存更改。
 
    ![web_enabled](assets/web_enabled.png)
 
