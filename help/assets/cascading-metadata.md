@@ -3,14 +3,14 @@ title: 階層式中繼資料
 description: 本文說明如何定義資產的階層式中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
 # 階層式中繼資料 {#cascading-metadata}
 
-在擷取資產的中繼資料資訊時，使用者會在各種可用欄位中提供資訊。 您可以顯示特定的中繼資料欄位或欄位值，這些欄位值取決於在其他欄位中選取的選項。 這種元資料的條件顯示稱為級聯元資料。 換言之，您可以在特定中繼資料欄位／值與一或多個欄位及／或其值之間建立相依關係。
+在擷取資產的中繼資料資訊時，使用者會在各種可用欄位中提供資訊。 您可以顯示特定的中繼資料欄位或欄位值，這些欄位值取決於在其他欄位中選取的選項。 這種元資料的條件顯示稱為級聯元資料。 換言之，您可以在特定中繼資料欄位／值與一或多個欄位及／或其值之間建立相依性。
 
 使用中繼資料結構來定義顯示階層式中繼資料的規則。 例如，如果中繼資料結構包含資產類型欄位，您可以根據使用者選擇的資產類型定義要顯示的相關欄位集。
 
@@ -32,14 +32,14 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 不論選擇的資產類型為何，請將版權資訊顯示為必填欄位。
 
-1. 點選/按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼 **[!UICONTROL 資料結構]**」。
-1. 在「方 **[!UICONTROL 案表單]** 」頁中，選擇方案表單，然後從工具欄點選/單 **[!UICONTROL 擊「編輯]** 」以編輯方案。
+1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼 **[!UICONTROL 資料結構]**」。
+1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
 
 1. （可選）在中繼資料結構編輯器中，建立新欄位以條件化。 在「設定」索引標籤中指定名稱 **[!UICONTROL 和屬]** 性路徑。
 
-   若要建立新的標籤，請點選／按 `+` 一下以新增標籤，然後新增中繼資料欄位。
+   若要建立新的標籤，請按一 `+` 下以新增標籤，然後新增中繼資料欄位。
 
    ![add_tab](assets/add_tab.png)
 
@@ -49,7 +49,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 1. 鍵值配對是提供給表單使用者的選項。 您可以手動或從JSON檔案提供金鑰值配對。
 
-   * 若要手動指定值，請選取「手動 **[!UICONTROL 新增]**」，點選／按一下「 **[!UICONTROL 新增選擇]** 」並指定選項文字和值。 例如，指定「視訊」、「PDF」、「Word」和「影像」資產類型。
+   * 若要手動指定值，請選取「手動 **[!UICONTROL 新增]**」，然後按一 **[!UICONTROL 下「新增選擇]** 」並指定選項文字和值。 例如，指定「視訊」、「PDF」、「Word」和「影像」資產類型。
 
    * 若要動態擷取JSON檔案中的值，請選取「 **[!UICONTROL 透過JSON路徑新增]** 」並提供JSON檔案的路徑。 AEM會在表單顯示給使用者時即時擷取鍵值配對。
    這兩種選項互斥。 您無法從JSON檔案匯入選項並手動編輯。
@@ -75,7 +75,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
    ![select_dependentfield](assets/select_dependentfield.png)
 
 1. Under **[!UICONTROL Requirement]**, choose the **[!UICONTROL Required, based on new rule]** option.
-1. 點選/按一 **[!UICONTROL 下「新增規則]** 」，然後選擇「 **** 資產類型」欄位以建立相依性。也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。點選/按一 **[!UICONTROL 下「完成]** 」以儲存變更。
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。Click **[!UICONTROL Done]** to save the changes.
 
    ![define_rule](assets/define_rule.png)
 
@@ -85,13 +85,13 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 1. 在「可 **[!UICONTROL 見性]**」下，選擇「可 **[!UICONTROL 見」，根據新規則選項]** 。
 
-1. 點選/按一 **[!UICONTROL 下「新增規則]** 」，然後選擇「 **** 資產類型」欄位以建立相依性。也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。點選/按一 **[!UICONTROL 下「完成]** 」以儲存變更。
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。Click **[!UICONTROL Done]** to save the changes.
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
    >[!NOTE]
    >
-   >點選／按一下空白字元（或值以外的任何位置）會重設值。 如果發生此情況，請重新選取值。
+   >按一下空白（或值以外的任何位置）會重設值。 如果發生此情況，請重新選取值。
 
    >[!NOTE]
    >
