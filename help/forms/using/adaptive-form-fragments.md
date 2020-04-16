@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -71,7 +71,9 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 在「片段建立」對話方塊中，指定下列資訊：
 
    * **名稱**:片段的名稱。 預設值是面板的元素名稱。 這是一個強制欄位。
-      ***注意&#x200B;**:請確定您指定片段的唯一名稱。 如果已存在同名的另一個片段，則無法建立該片段。*
+      >[!NOTE]
+      >
+      >請確定您指定片段的唯一名稱。 如果已存在同名的另一個片段，則無法建立該片段。
 
    * **標題**:片段的標題。 預設值是面板的標題。
 
