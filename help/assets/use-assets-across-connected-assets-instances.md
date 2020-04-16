@@ -3,7 +3,7 @@ title: 在 Adobe Experience Manager Sites 編寫工作流程中使用「連線�
 description: 在其他 Experience Manager 網站的部署工作中建立網頁時，使用遠端 Adobe Experience Manager Assets 部署的可用資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 04fef21d6027dcfcb6a67a1121e0d1570926db41
+source-git-commit: 7628b5edd52a144aa4f92f8145493b9b927aeda0
 
 ---
 
@@ -89,9 +89,9 @@ AEM 管理員可建立這項整合。一旦建立之後，系統會透過您在 
    1. 在「屬性」設定精靈中，將&#x200B;**[!UICONTROL 「路徑」]**&#x200B;欄位變更為下列對應內容，更新其規則運算式以排除掛接點 **[!UICONTROL connectedassets]**。
    | 變更前 | 變更後 |
    |---|---|
-   | /content/dam(/((?!/subassets).)*/)renditions/original | /content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original |
-   | /content/dam(/.*/)renditions/original | /content/dam(/((?!connectedassets).)*/)renditions/original |
-   | /content/dam(/.*)/jcr:content/metadata | /content/dam(/((?!connectedassets).)*/)jcr:content/metadata |
+   | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
+   | `/content/dam(/*/)renditions/original` | `/content/dam(/((?!connectedassets).)*/)renditions/original` |
+   | `/content/dam(/*)/jcr:content/metadata` | `/content/dam(/((?!connectedassets).)*/)jcr:content/metadata` |
 
    >[!NOTE]
    >
