@@ -11,7 +11,7 @@ topic-tags: interactive-communications
 discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -22,7 +22,7 @@ Interactive Communications包含在安裝 [AEM Forms附加元件套件後自動�
 
 使用 **下列URL開啟Adobe Experience Manager Web Console設定頁** :
 
-`https://&lt;server&gt;:&lt;port&gt;/&lt;contextPath&gt;/system/console/configMgr`
+`https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
 配置屬性包括：
 
