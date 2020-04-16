@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 **關於加密服務**
 
-加密服務可讓您加密和解密檔案。 當文檔加密時，其內容將變得不可讀。 授權用戶可以解密文檔以獲得對內容的訪問。 如果PDF檔案使用密碼加密，使用者必須先指定開啟的密碼，才能在Adobe reader或Adobe Acrobat中檢視該檔案。 同樣地，如果PDF檔案使用憑證加密，使用者必須使用與用來加密PDF檔案的憑證（私密金鑰）對應的公開金鑰來解密PDF檔案。
+加密服務可讓您加密和解密檔案。 當文檔加密時，其內容將變得不可讀。 授權用戶可以解密文檔以獲得對內容的訪問。 如果PDF檔案使用密碼加密，使用者必須先指定開啟的密碼，才能在Adobe Reader或Adobe Acrobat中檢視該檔案。 同樣地，如果PDF檔案使用憑證加密，使用者必須使用與用來加密PDF檔案的憑證（私密金鑰）對應的公開金鑰來解密PDF檔案。
 
 您可以使用Encryption服務完成以下任務：
 
@@ -30,7 +30,9 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 * 解除鎖定PDF檔案，以便執行其他服務作業。 例如，在解除鎖定密碼加密的PDF檔案後，您就可以套用數位簽章。 (請參閱解 [除加密的PDF檔案鎖定](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)。)
 * 確定安全PDF檔案的加密類型。 (請參閱 [確定加密類型](encrypting-decrypting-pdf-documents.md#determining-encryption-type)。)
 
-   ***注意&#x200B;**:如需Encryption服務的詳細資訊，請參閱「AEM[表格的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。*
+>[!NOTE]
+>
+>如需Encryption服務的詳細資訊，請參閱「AEM [表格的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 使用密碼加密PDF檔案 {#encrypting-pdf-documents-with-a-password}
 
@@ -104,7 +106,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [使用web service API加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-a-pdf-document-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -159,7 +161,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [快速入門（SOAP模式）:使用Java API加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -236,7 +238,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 其中一個金鑰可當成使用者的私密金鑰。 請務必僅讓使用者存取此金鑰。 另一個金鑰是使用者的公開金鑰，可與其他人共用。
 
-公開金鑰憑證包含使用者的公開金鑰和識別資訊。 X.509格式用於儲存憑證。 證書通常由證書頒發機構(CA)核發和數位簽名，該機構是一個認可的實體，提供對證書有效性的信任度。 憑證有到期日，之後即不再有效。 此外，證書撤銷清單(CRL)提供在證書到期日前被撤銷的證書資訊。 憑證授權機構會定期發佈CRL。 證書的撤銷狀態也可以通過網路上的線上證書狀態協定(OCSP)來檢索。
+公開金鑰憑證包含使用者的公開金鑰和識別資訊。 X.509格式用於儲存憑證。 證書通常由證書頒發機構(CA)核發和數位簽名，該機構是一個認可的實體，提供對證書有效性的信任度。 憑證有到期日，之後即不再有效。 此外，證書撤銷清單(CRL)提供在證書到期日前被撤銷的證書資訊。 憑證授權機構會定期發佈CRL。 證書的撤銷狀態也可以通過網路上的聯機證書狀態協定(OCSP)來檢索。
 
 >[!NOTE]
 >
@@ -271,8 +273,8 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
 **建立加密客戶端API對象**
 
@@ -306,7 +308,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [使用web service API使用憑證加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypt-a-pdf-document-with-a-certificate-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -372,7 +374,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [快速入門（SOAP模式）:使用Java API使用憑證加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -479,8 +481,8 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
 **建立加密服務客戶端**
 
@@ -500,7 +502,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 **儲存PDF檔案**
 
-從加密的PDF檔案移除憑證式加密後，您就可將PDF檔案儲存為PDF檔案。 使用者可在Adobe reader或Acrobat中開啟PDF檔案。
+從加密的PDF檔案移除憑證式加密後，您就可將PDF檔案儲存為PDF檔案。 使用者可在Adobe Reader或Acrobat中開啟PDF檔案。
 
 **另請參閱**
 
@@ -508,7 +510,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [使用web service API移除憑證式加密](encrypting-decrypting-pdf-documents.md#remove-certificate-based-encryption-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -551,7 +553,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [快速入門（SOAP模式）:使用Java API移除憑證式加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -659,7 +661,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -783,8 +785,8 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
 **建立加密服務客戶端**
 
@@ -810,7 +812,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [使用web service API解除鎖定加密的PDF檔案](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -846,7 +848,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
    * 包 `com.adobe.idp.Document` 含憑證加密PDF檔案的物件。
    * 一個字串值，它指定與用於加密PDF文檔的私鑰相對應的公鑰的別名。
-   這些 `unlockPDFUsingPassword` 和 `unlockPDFUsingCredential` 方法都會傳回您傳 `com.adobe.idp.Document` 遞至另一個AEM Forms java方法以執行作業的物件。
+   這些 `unlockPDFUsingPassword` 和 `unlockPDFUsingCredential` 方法都會傳回您傳 `com.adobe.idp.Document` 遞至另一個AEM Forms Java方法以執行作業的物件。
 
 1. 執行AEM Forms作業。
 
@@ -860,7 +862,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [將使用權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -956,8 +958,8 @@ PDF檔案可受下列加密類型保護：
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
 **建立服務客戶端**
 
@@ -977,7 +979,7 @@ PDF檔案可受下列加密類型保護：
 
 [使用web service API確定加密類型](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1014,7 +1016,7 @@ PDF檔案可受下列加密類型保護：
 
 [快速入門（SOAP模式）:使用Java API確定加密類型](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
