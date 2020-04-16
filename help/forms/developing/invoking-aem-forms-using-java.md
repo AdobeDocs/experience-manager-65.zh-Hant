@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -444,7 +444,9 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
    * 如果將此連接屬性設 `WebLogic`置為， `java.naming.factory.initial` 則值將設定為 `weblogic.jndi.WLInitialContextFactory`。
    * 同樣地，如果將此連接屬性設 `JBoss`置為， `java.naming.factory.initial` 則值將設定為 `org.jnp.interfaces.NamingContextFactory`。
    * 如果您不 `java.naming.factory.initial` 想使用預設值，可將屬性設為符合您需求的值。
-   *注&#x200B;**意**:您可以使用類的靜態成 `DSC_SERVER_TYPE` 員，而不是使用字串來設定連接屬 `ServiceClientFactoryProperties` 性。 可使用下列值： `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、 `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或 `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
+   >[!NOTE]
+   >
+   >您可以使用類的靜態成 `DSC_SERVER_TYPE` 員，而不是使用字串來設定連接屬 `ServiceClientFactoryProperties` 性。 可使用下列值： `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、 `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或 `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
 
 * **DSC_CREDENTIAL_USERNAME:** 指定AEM表單使用者名稱。 若要讓使用者成功叫用AEM Forms服務，他們需要「服務使用者」角色。 用戶也可以具有包含「服務調用」權限的其他角色。 否則，當他們嘗試調用服務時會拋出異常。 如果服務安全性被禁用，則無需指定此連接屬性。
 * **DSC_CREDENTIAL_PASSWORD:** 指定相應的口令值。 如果服務安全性被禁用，則無需指定此連接屬性。
@@ -793,7 +795,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 #### 基於檔案建立文檔 {#creating-a-document-based-on-a-file}
 
-下列程式碼範例會建 `com.adobe.idp.Document` 立以PDF檔名為 *map.pdf的物件*。 此檔案位於C硬碟的根目錄中。 此建構子嘗試使用檔案副檔名設定對 `com.adobe.idp.Document` 像的MIME內容類型。
+下列程式碼範例會 `com.adobe.idp.Document` 建立以PDF檔名為 *map.pdf的物件*。 此檔案位於C硬碟的根目錄中。 此建構子嘗試使用檔案副檔名設定對 `com.adobe.idp.Document` 像的MIME內容類型。
 
 接受 `com.adobe.idp.Document` 物件的建構函 `java.io.File` 式也接受布林參數。 通過將此參數設 `true`置為， `com.adobe.idp.Document` 對象將刪除檔案。 此動作表示您不必在將檔案傳遞至建構函式後移除 `com.adobe.idp.Document` 檔案。
 
@@ -991,7 +993,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 1. 調用物件的方 `com.adobe.idp.Document` 法，將物 `ResourceContent` 件的內容新 `ResourceContent` 增至物 `setDataDocument` 件。 傳遞物 `com.adobe.idp.Document` 件。
 1. 調用物件的方法並傳遞，以設定要新增至儲存庫的XDP `ResourceContent` 檔案的MIME `setMimeType` 類型 `application/vnd.adobe.xdp+xml`。
 1. 調用對象的方 `ResourceContent` 法並傳遞對 `Resource` 像，將對象的內容 `Resource` 添加到對象 `setContent``ResourceContent` 中。
-1. 通過調用對象的方法並傳遞 `Resource` 表示資源 `setDescription` 說明的字串值來添加資源說明。
+1. 通過調用對象的方法並傳遞 `Resource` 表示資源 `setDescription` 說明的字串值，添加資源說明。
 1. 調用物件的方法並傳遞下列值，將表 `ResourceRepositoryClient` 單設計新 `writeResource` 增至儲存庫：
 
    * 一個字串值，它指定包含新資源的資源集合的路徑
