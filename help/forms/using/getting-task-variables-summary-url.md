@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -28,7 +28,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    * empid
    * 原因
    * 持續時間
-   **注意**:此轉譯器是摘要頁面範本。
+   >[!NOTE]
+   >
+   >此轉譯器是摘要頁面範本。
 
    此轉譯器的下列范常式式碼包含於：
 
