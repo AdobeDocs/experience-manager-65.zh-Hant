@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: f8749793-e53f-4812-a093-8278f480e6a8
 translation-type: tm+mt
-source-git-commit: 687cdacc2868de16a4df968dddedd330ce3317bb
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -30,8 +30,9 @@ Forms服務可讓您建立互動式資料擷取用戶端應用程式，以驗證
 * Web服務(Java Base64)示例是Java servlet。
 * web service(MTOM)範例是主控台應用程式（並非所有快速啟動都有MTOM範例）。
 
-***注意&#x200B;**:有關建立使用java servlet調用Forms服務的Web應用程式的資訊，請參[閱建立轉換表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)。*
-
+>[!NOTE]
+>
+> 有關建立使用java servlet調用Forms服務的Web應用程式的資訊，請參 [閱建立轉換表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)。
 
 您可以使用下列兩種方式之一，將表單設計（XDP檔案）或PDF檔案傳遞至Forms服務：
 
@@ -43,7 +44,7 @@ Forms服務可讓您建立互動式資料擷取用戶端應用程式，以驗證
 * 轉換互動式PDF表單。 (請參 [閱轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)。)
 * 在用戶端上演算表格。 (請參 [閱用戶端上的轉譯表單](/help/forms/developing/rendering-forms-client.md)。)
 * 根據片段來轉換表單。 (請參 [閱根據片段轉譯表單](/help/forms/developing/rendering-forms-based-fragments.md))。
-* 轉譯啟用權限的表單。 (請參 [閱轉換啟用權限的表單](/help/forms/developing/rendering-rights-enabled-forms.md)。)
+* 轉譯啟用權限的表格。 (請參 [閱轉換啟用權限的表單](/help/forms/developing/rendering-rights-enabled-forms.md)。)
 * 將表單轉換為HTML。 (請參 [閱「將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)」)。
 * 使用自訂CSS檔案轉換HTML表格(使[用自訂CSS檔案轉換HTML表格](/help/forms/developing/rendering-html-forms-using-custom.md))。
 * 處理提交的表單。 (請參 [閱處理提交的表單](/help/forms/developing/handling-submitted-forms.md)。)
