@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -36,7 +36,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 您可以使用簽名服務完成下列工作：
 
 * 將數位簽章欄位新增及刪除至PDF檔案。 (請參 [閱新增簽名欄](digitally-signing-certifying-documents.md#adding-signature-fields)。)
-* 擷取PDF檔案中的簽名欄位名稱。 (請參 [閱擷取簽名欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names)。)
+* 擷取PDF檔案中的簽名欄位名稱。 (請參閱 [擷取簽名欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names)。)
 * 修改簽名欄位。 (請參 [閱修改簽名欄](digitally-signing-certifying-documents.md#modifying-signature-fields)。)
 * 數位簽署PDF檔案。 (請參 [閱數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。)
 * 認證PDF檔案。 (請參閱 [認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents)。)
@@ -44,7 +44,9 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 * 驗證PDF檔案中的所有數位簽名。 (請參閱 [驗證多個數位簽名](digitally-signing-certifying-documents.md#verifying-digital-signatures)。)
 * 從簽名欄位移除數位簽名。 (請參閱 [移除數位簽章](digitally-signing-certifying-documents.md#removing-digital-signatures)。)
 
-   ***注意&#x200B;**:如需簽名服務的詳細資訊，請參閱「AEM表[單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。*
+>[!NOTE]
+>
+> 如需簽名服務的詳細資訊，請參閱「AEM表 [單的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)」。
 
 ## 新增簽名欄位 {#adding-signature-fields}
 
@@ -96,7 +98,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -234,7 +236,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立簽名用戶端**
 
@@ -246,7 +248,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 **擷取簽名欄位名稱**
 
-在擷取包含一或多個簽名欄位的PDF檔案後，可以擷取簽名欄位名稱。
+在擷取包含一或多個簽名欄位的PDF檔案後，您可以擷取簽名欄位名稱。
 
 **另請參閱**
 
@@ -254,7 +256,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 [使用web service API擷取簽名欄位](digitally-signing-certifying-documents.md#retrieve-signature-field-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -289,7 +291,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 [快速入門（SOAP模式）:使用Java API檢索簽名欄位名稱](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -398,11 +400,11 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 * **篩選**:指定與簽名欄位一起使用的篩選器。 例如，您可以使用Adobe.PPKLite篩選器。 (請參閱 [PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。)
 * **標籤選項**:指定與此簽名欄位關聯的標籤值。 值1表示簽署者只能使用指定的值來輸入項目。 值0表示允許其他值。 以下是位元位置：
 
-   * **** 1（篩選）:用於簽署簽名欄位的簽名處理程式
-   * **** 2（子篩選）:一組名稱，指出在簽署時要使用的可接受編碼
+   * **1（篩選）:** 用於簽署簽名欄位的簽名處理程式
+   * **2（子篩選）:** 一組名稱，指出在簽署時要使用的可接受編碼
    * **3(V)**:用於簽署簽名欄位之簽名處理常式的最低必要版本號碼
-   * **** 4（理由）:一系列字串，可指定簽署檔案的可能原因
-   * **** 5(PDFegalWarnings):指定可能的合法證明的字串陣列
+   * **4（理由）:** 一系列字串，可指定簽署檔案的可能原因
+   * **5(PDFegalWarnings):** 指定可能的合法證明的字串陣列
 
 * **法律證明**:當檔案獲得認證時，會自動掃描特定類型的內容，這些內容可能會使檔案的可見內容模糊或產生誤導。 例如，註解可以遮蔽對瞭解認證內容很重要的文字。 掃描過程生成指示存在此類內容的警告。 此外，也會針對可能產生警告的內容提供其他說明。
 * **權限**:指定可在PDF檔案上使用而不會使簽名無效的權限。
@@ -420,7 +422,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -457,7 +459,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
    * 調用物件的方法並傳遞物件，以設 `PDFSignatureFieldProperties`定簽名欄位鎖 `setFieldMDP` 定字典 `FieldMDPOptionSpec` 資訊。
    >[!NOTE]
    >
-   >要查看您可以設定的所有種子值字典值，請查看類 `PDFSeedValueOptionSpec` 參考。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。)
+   >要查看您可以設定的所有種子值字典值，請查看類 `PDFSeedValueOptionSpec` 參考。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
 
 1. 修改簽名欄位
 
@@ -640,14 +642,14 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 * **NoCheck**:請勿執行撤銷檢查。
 * **BestEffort**:請務必檢查是否撤銷鏈中的所有證書。 如果檢查中發生任何問題，則假定撤銷有效。 如果發生任何失敗，請假定憑證未被撤銷。
-* **** CheckIfAvailable:如果有撤銷資訊，請檢查是否撤銷鏈中的所有憑證。 如果檢查中發生任何問題，則假定撤銷無效。 如果發生任何故障，請假定憑證已撤銷且無效。 （這是預設值。）
+* **CheckIfAvailable:** 如果有撤銷資訊，請檢查是否撤銷鏈中的所有憑證。 如果檢查中發生任何問題，則假定撤銷無效。 如果發生任何故障，請假定憑證已撤銷且無效。 （這是預設值。）
 * **AlwaysCheck**:檢查是否撤銷鏈中的所有證書。 如果撤銷資訊未出現在任何憑證中，則假定撤銷無效。
 
 要對證書執行撤銷檢查，可以使用對象指定證書撤銷清單(CRL)伺服器的URL `CRLOptionSpec` 。 但是，如果您要執行撤銷檢查，而您未指定CRL伺服器的URL，則簽名服務會從憑證取得URL。
 
-執行撤銷檢查時，您可以使用線上證書狀態協定(OCSP)伺服器，而不是使用CRL伺服器。 通常在使用OCSP伺服器而非CRL伺服器時，會更快地執行撤銷檢查。 (請參閱https://tools.ietf.org/html/rfc2560上的「線上認證狀態通 [訊協定](https://tools.ietf.org/html/rfc2560)」)。
+執行撤銷檢查時，您可以使用線上認證狀態通訊協定(OCSP)伺服器，而不是使用CRL伺服器。 通常在使用OCSP伺服器而非CRL伺服器時，會更快地執行撤銷檢查。 (請參閱https://tools.ietf.org/html/rfc2560上的「線上認證狀態通 [訊協定](https://tools.ietf.org/html/rfc2560)」)。
 
-您可以使用Adobe應用程式與服務來設定簽名服務使用的CRL和OCSP伺服器順序。 例如，如果OCSP伺服器是先在Adobe Applications and services中設定，則會檢查OCSP伺服器，接著檢查CRL伺服器。 （請參閱AAC說明中的「使用信任商店管理憑證和認證」）。
+您可以使用Adobe應用程式與服務來設定簽名服務使用的CRL和OCSP伺服器順序。 例如，如果OCSP伺服器是先在Adobe Applications and Services中設定，則會檢查OCSP伺服器，接著檢查CRL伺服器。 （請參閱AAC說明中的「使用信任商店管理憑證和認證」）。
 
 如果您指定不執行撤銷檢查，則簽章服務不會檢查用來簽署或認證檔案的憑證是否已被撤銷。 即，忽略CRL和OCSP伺服器資訊。
 
@@ -675,7 +677,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [使用web service API數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -729,7 +731,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [快速入門（SOAP模式）:使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -842,7 +844,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立表單和簽名用戶端**
 
@@ -878,7 +880,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [使用web service API數位簽署互動式表單](digitally-signing-certifying-documents.md#digitally-sign-an-interactive-form-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -947,7 +949,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [快速入門（SOAP模式）:使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1046,8 +1048,8 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 您可以使用稱為認證簽名的特定簽名類型來認證PDF檔案，以保全PDF檔案。 認證簽名與數位簽名的區別在於：
 
 * 它必須是套用至PDF檔案的第一個簽名；也就是說，在套用認證簽名時，檔案中的任何其他簽名欄位都必須未簽署。 在PDF檔案中僅允許使用一個認證簽名。 如果您想要簽署和認證PDF檔案，您必須先取得認證，才能簽署。 在認證PDF檔案後，您可以數位簽署其他簽名欄位。
-* 文檔的作者或發起者可以指定文檔可以通過某些方式進行修改，而不使經認證的簽名失效。 例如，檔案可能允許填寫表格或加上註解。 如果作者指定不允許進行某些修改，Acrobat會限制使用者以此方式修改檔案。 如果進行此類修改，例如使用其他應用程式，認證的簽名無效，當使用者開啟檔案時，Acrobat會發出警告。 （使用未認證的簽名時，不會防止修改，而一般的編輯作業也不會使原始簽名無效。）
-* 在簽署時，會掃描檔案，以找出可能導致檔案內容模糊或誤導的特定內容類型。 例如，註解可能會遮蔽頁面上對瞭解所認證內容而言很重要的文字。 可以提供有關此類內容的說明（法律證明）。
+* 文檔的作者或發起者可以指定文檔可以通過某些方式進行修改，而不使經認證的簽名失效。 例如，檔案可能允許填寫表單或加上註解。 如果作者指定不允許進行某些修改，Acrobat會限制使用者以此方式修改檔案。 如果進行此類修改，例如使用其他應用程式，認證的簽名無效，當使用者開啟檔案時，Acrobat會發出警告。 （使用未認證的簽名時，不會防止修改，而一般的編輯作業也不會使原始簽名無效。）
+* 在簽署時，會掃描檔案，以找出可能導致檔案內容模糊或誤導的特定內容類型。 例如，註解可能會遮蔽頁面上對瞭解所認證內容很重要的部分文字。 可以提供有關此類內容的說明（法律證明）。
 
 您可以使用簽名服務Java API或簽名網站服務API，以程式設計方式認證PDF檔案。 認證PDF檔案時，您必須參考憑證服務中的安全憑證。 如需安全性憑證的詳細資訊，請參 *閱應用程式伺服器的安裝與部署AEM Forms* 指南。
 
@@ -1093,7 +1095,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立簽名用戶端**
 
@@ -1115,7 +1117,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 * **簽署者的位置**:憑證指定之簽署者的位置。
 * **聯絡資訊**:簽署者的聯絡資訊，例如地址和電話號碼。
 * **權限資訊**:控制一般使用者可在檔案上執行動作而不導致認證簽名無效的權限。 例如，您可以設定權限，如此對PDF檔案所做的任何變更，都會導致認證的簽名無效。
-* **法律解釋**:當檔案獲得認證時，會自動掃描特定類型的內容，這些內容可能會使檔案的內容模糊或產生誤導。 例如，註解可能會遮蔽頁面上對瞭解所認證內容而言很重要的文字。 掃描過程生成關於這些類型內容的警告。 此值提供可能產生警告之內容的額外說明。
+* **法律解釋**:當檔案獲得認證時，會自動掃描特定類型的內容，這些內容可能會使檔案的內容模糊或產生誤導。 例如，註解可能會遮蔽頁面上對瞭解所認證內容很重要的部分文字。 掃描過程生成關於這些類型內容的警告。 此值提供可能產生警告之內容的額外說明。
 * **外觀選項**:控制認證簽名外觀的選項。 例如，認證的簽名可顯示日期資訊。
 * **撤銷檢查**:此值指定是否對簽署者的憑證執行撤銷檢查。 預設的設定 `false` 表示不會執行撤銷檢查。
 * **OCSP設定**:線上認證狀態通訊協定(OCSP)支援的設定，提供用來認證PDF檔案之憑證狀態的相關資訊。 例如，您可以指定伺服器的URL，以提供您用來登入PDF檔案之憑證的相關資訊。
@@ -1132,7 +1134,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [使用web service API認證PDF檔案](digitally-signing-certifying-documents.md#certify-pdf-documents-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1187,7 +1189,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [快速入門（SOAP模式）:使用Java API認證PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1265,13 +1267,13 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 ## 驗證數位簽名 {#verifying-digital-signatures}
 
-數位簽章可進行驗證，以確保已簽署的PDF檔案未修改，且數位簽章有效。 在驗證數位簽名時，您可以檢查簽名的狀態和簽名的屬性，例如簽章者的身分。 在信任數位簽名之前，建議您先進行驗證。 在驗證數位簽名時，請參考包含數位簽名的PDF檔案。
+數位簽章可進行驗證，以確保已簽署的PDF檔案未修改，且數位簽章有效。 在驗證數位簽章時，您可以檢查簽名的狀態和簽名的屬性，例如簽章者的身分。 在信任數位簽名之前，建議您先進行驗證。 在驗證數位簽名時，請參考包含數位簽名的PDF檔案。
 
 假設簽章者的身分不明。 當您在Acrobat中開啟PDF檔案時，會出現警告訊息，指出簽署者的身分不明，如下圖所示。
 
 ![vd_vd_verifisig](assets/vd_vd_verifysig.png)
 
-同樣地，當您以程式設計方式驗證數位簽章時，您也可以決定簽署者身分的狀態。 例如，如果您驗證上圖所示檔案中的數位簽名，結果會是簽章者的身分不明。
+同樣地，當您以程式設計方式驗證數位簽章時，您也可以決定簽章者身分的狀態。 例如，如果您驗證上圖所示檔案中的數位簽名，結果會是簽章者的身分不明。
 
 >[!NOTE]
 >
@@ -1301,7 +1303,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立簽名用戶端**
 
@@ -1325,9 +1327,9 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 要對證書執行撤銷檢查，請使用對象指定證書撤銷清單(CRL)伺服器的URL `CRLOptionSpec` 。 但是，如果您未指定CRL伺服器的URL，則簽名服務會從憑證取得URL。
 
-執行撤銷檢查時，您可以使用線上證書狀態協定(OCSP)伺服器，而不是使用CRL伺服器。 通常，與CRL伺服器相比，使用OCSP伺服器時，撤銷檢查的執行速度更快。 (請參閱 [線上憑證狀態通訊協定](https://tools.ietf.org/html/rfc2560))。
+執行撤銷檢查時，您可以使用線上認證狀態通訊協定(OCSP)伺服器，而不是使用CRL伺服器。 通常，與CRL伺服器相比，使用OCSP伺服器時，撤銷檢查的執行速度更快。 (請參閱 [線上憑證狀態通訊協定](https://tools.ietf.org/html/rfc2560))。
 
-您可以使用Adobe應用程式與服務來設定簽名服務使用的CRL和OCSP伺服器順序。 例如，如果OCSP伺服器是先在Adobe Applications and services中設定，則會檢查OCSP伺服器，接著檢查CRL伺服器。
+您可以使用Adobe應用程式與服務來設定簽名服務使用的CRL和OCSP伺服器順序。 例如，如果OCSP伺服器是先在Adobe Applications and Services中設定，則會檢查OCSP伺服器，接著檢查CRL伺服器。
 
 如果您未執行撤銷檢查，「簽名服務」不會檢查憑證是否已撤銷。 即，忽略CRL和OCSP伺服器資訊。
 
@@ -1369,7 +1371,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [使用web service API驗證數位簽名](#verify-digital-signatures-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1422,7 +1424,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [快速入門（SOAP模式）:使用Java API驗證數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1494,7 +1496,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 ## 驗證多個數位簽名 {#verifying-multiple-digital-signatures}
 
-AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案包含多個數位簽名，因為業務流程需要多個簽署者的簽名。 例如，請考慮要求貸款主管和經理簽名的財務交易。 您可以使用簽名服務Java API或web service API來驗證PDF檔案中的所有簽名。 驗證多個數位簽名時，您可以檢查每個簽名的狀態和屬性。 在您信任數位簽名之前，建議您先進行驗證。 建議您熟悉驗證單一數位簽名。
+AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案包含多個數位簽名，因為業務流程需要多個簽署者的簽名。 例如，假設財務交易需要貸款主管和經理簽名。 您可以使用簽名服務Java API或web service API來驗證PDF檔案中的所有簽名。 驗證多個數位簽名時，您可以檢查每個簽名的狀態和屬性。 在您信任數位簽名之前，建議您先進行驗證。 建議您熟悉驗證單一數位簽名。
 
 >[!NOTE]
 >
@@ -1523,7 +1525,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立簽名用戶端**
 
@@ -1547,9 +1549,9 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 要對證書執行撤銷檢查，請使用對象指定證書撤銷清單(CRL)伺服器的URL `CRLOptionSpec` 。 但是，如果您未指定CRL伺服器的URL，則簽名服務會從憑證取得URL。
 
-執行撤銷檢查時，您可以使用線上證書狀態協定(OCSP)伺服器，而不是使用CRL伺服器。 通常，使用OCSP伺服器而非CRL伺服器時，撤銷檢查的執行速度會更快。 (請參閱 [線上憑證狀態通訊協定](https://tools.ietf.org/html/rfc2560))。
+執行撤銷檢查時，您可以使用線上認證狀態通訊協定(OCSP)伺服器，而不是使用CRL伺服器。 通常，使用OCSP伺服器而非CRL伺服器時，撤銷檢查的執行速度會更快。 (請參閱 [線上憑證狀態通訊協定](https://tools.ietf.org/html/rfc2560))。
 
-您可以使用Adobe應用程式與服務來設定簽名服務使用的CRL和OCSP伺服器順序。 例如，如果OCSP伺服器是先在Adobe Applications and services中設定，則會檢查OCSP伺服器，接著檢查CRL伺服器。
+您可以使用Adobe應用程式與服務來設定簽名服務使用的CRL和OCSP伺服器順序。 例如，如果OCSP伺服器是先在Adobe Applications and Services中設定，則會檢查OCSP伺服器，接著檢查CRL伺服器。
 
 如果您未執行撤銷檢查，「簽名服務」不會檢查憑證是否已撤銷。 即，忽略CRL和OCSP伺服器資訊。
 
@@ -1585,7 +1587,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 [使用web service API驗證多個數位簽名](#verify-digital-signatures-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1633,7 +1635,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 [快速入門（SOAP模式）:使用Java API驗證多個數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [驗證數位簽名](#verify-digital-signatures-using-the-java-api)
 
@@ -1730,7 +1732,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立簽名用戶端**
 
@@ -1754,7 +1756,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 [使用web service API移除數位簽名](digitally-signing-certifying-documents.md#remove-digital-signatures-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1797,7 +1799,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 [快速入門（SOAP模式）:使用Java API移除數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
