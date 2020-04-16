@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -43,7 +43,9 @@ Java API Quick Start(SOAP)適用於Output服務。
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
-* ***注意&#x200B;**:「使用AEM表單進行程式設計」中的「快速入門」是以Forms Server作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+>[!NOTE]
+>
+>「使用AEM表單進行程式設計」中的「快速入門」是以Forms Server作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門（SOAP模式）:使用Java API建立PDF檔案 {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
 
@@ -668,7 +670,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API將檔案傳送至輸出服務 {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
 
-以下Java快速入門會從Content Services中 *擷取檔案Loan.xdp* 。 此XDP檔案位於 `space /Company Home/Form Designs`。 XDP檔案會在例項中傳 `com.adobe.idp.Document` 回。 實例 `com.adobe.idp.Document` 將傳遞給Output服務。 非互動式表單會儲存為用戶端電腦上名為*Loan.pdf *的PDF檔案。 由於已設定「檔案URI」選項，因此PDF檔案*Loan.pdf *也會儲存在代管AEM Forms的J2EE應用程式伺服器上。 (請參 [閱將Content Services ES2中的檔案傳遞至輸出服務](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service))。
+以下Java快速入門會從Content Services中 *擷取檔案Loan.xdp* 。 此XDP檔案位於 `space /Company Home/Form Designs`。 XDP檔案會在例項中傳 `com.adobe.idp.Document` 回。 實例 `com.adobe.idp.Document` 將傳遞給Output服務。 非互動式表單會儲存為用戶端電腦上名為*Loan.pdf *的PDF檔案。 由於已設定「檔案URI」選項，因此PDF檔案*Loan.pdf *也會儲存在代管AEM Forms的J2EE應用程式伺服器上。 (請參 [閱將Content Services ES2中的檔案傳送至輸出服務](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service))。
 
 ```as3
  /*
