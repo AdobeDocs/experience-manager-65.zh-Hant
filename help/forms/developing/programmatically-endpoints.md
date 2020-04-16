@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -28,15 +28,17 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 * （AEM表格已停用）遠端
 * 任務管理器
 
-   ***注意&#x200B;**:SOAP、EJB和（JEE上的AEM表單已過時）會針對每個已啟動的服務自動建立遠端端點。 SOAP和EJB端點可為所有服務操作啟用SOAP和EJB。*
+>[!NOTE]
+>
+>SOAP、EJB和（JEE上的AEM表單已過時）會針對每個已啟動的服務自動建立遠端端點。 SOAP和EJB端點可為所有服務操作啟用SOAP和EJB。
 
-   遠端端點可讓Flex用戶端叫用端點新增至之AEM Forms服務上的作業。 會建立與端點同名的Flex目標，而Flex用戶端可建立指向此目標的RemoteObjects，以叫用相關服務的作業。
+遠端端點可讓Flex用戶端叫用端點新增至之AEM Forms服務上的作業。 會建立與端點同名的Flex目標，而Flex用戶端可建立指向此目標的RemoteObjects，以叫用相關服務的作業。
 
-   「電子郵件」、「任務管理員」和「監視資料夾」端點僅顯示服務的特定操作。 添加這些端點需要第二個配置步驟來選擇調用方法、設定配置參數以及指定輸入和輸出參數映射。
+「電子郵件」、「任務管理員」和「監視資料夾」端點僅顯示服務的特定操作。 添加這些端點需要第二個配置步驟來選擇調用方法、設定配置參數以及指定輸入和輸出參數映射。
 
-   您可以將TaskManager端點組織到稱為類別的 *組中*。 然後，這些類別會通過TaskManager向工作區公開，最終用戶將看到TaskManager端點按其分類。 在工作區中，使用者會在導覽窗格中看到這些類別。 每個類別中的端點都顯示為「工作區」的「啟動進程」頁上的進程卡。
+您可以將TaskManager端點組織到稱為類別的 *組中*。 然後，這些類別會通過TaskManager向工作區公開，最終用戶將看到TaskManager端點按其分類。 在工作區中，使用者會在導覽窗格中看到這些類別。 每個類別中的端點都顯示為「工作區」的「啟動進程」頁上的進程卡。
 
-   您可以使用端點註冊服務完成以下任務：
+您可以使用端點註冊服務完成以下任務：
 
 * 添加EJB端點。 (請參 [閱添加EJB端點](programmatically-endpoints.md#adding-ejb-endpoints)。)
 * 添加SOAP端點。 (請參 [閱添加SOAP端點](programmatically-endpoints.md#adding-soap-endpoints)。)
@@ -236,7 +238,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    * 調用物件的方法並傳遞描述 `CreateEndpointInfo` 端點的字 `setDescription` 串值，以指定端點的說明。
    * 調用物件的方法並傳遞指 `CreateEndpointInfo` 定名稱的字 `setName` 串值，以指定端點的名稱。
    * 通過調用對象的方法並傳遞指定服務名 `CreateEndpointInfo` 的字串值， `setServiceId` 指定端點所屬的服務。
-   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值所呼叫的作業。 對於SOAP和EJB端點，請指定通配符( `*`)，表示所有操作。
+   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值而呼叫的作業。 對於SOAP和EJB端點，請指定通配符( `*`)，表示所有操作。
 
 1. 建立SOAP端點。
 
@@ -647,7 +649,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    * 調用物件的方法並傳遞描述 `CreateEndpointInfo` 端點的字 `setDescription` 串值，以指定端點的說明。
    * 調用物件的方法並傳遞指 `CreateEndpointInfo` 定名稱的字 `setName` 串值，以指定端點的名稱。
    * 通過調用對象的方法並傳遞指定服務名 `CreateEndpointInfo` 的字串值， `setServiceId` 指定端點所屬的服務。
-   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值所呼叫的作業。 通常，為源自在Workbench中建立的流程的服務建立電子郵件端點時，會調用操作的名稱。
+   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值而呼叫的作業。 通常，為源自在Workbench中建立的流程的服務建立電子郵件端點時，會調用操作的名稱。
 
 1. 指定設定值。
 
