@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -25,9 +25,13 @@ Java API快速入門(SOAP)適用於憑證服務。
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
-***注意&#x200B;**:「使用AEM表單進行程式設計」中的快速入門是以部署在JBoss和Windows作業系統上的FormsServer為基礎。 但是，如果您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+>[!NOTE]
+>
+>「使用AEM表單進行程式設計」中的快速入門是以部署在JBoss和Windows作業系統上的FormsServer為基礎。 但是，如果您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-***注意&#x200B;**:不能使用Web服務執行憑據服務操作。*
+>[!NOTE]
+>
+>不能使用Web服務執行憑據服務操作。
 
 ## 快速入門（SOAP模式）:使用Java API匯入認證 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
