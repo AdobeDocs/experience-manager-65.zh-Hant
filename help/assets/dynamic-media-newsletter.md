@@ -5,7 +5,7 @@ keywords: dynamic media;newsletter;product updates;tips and tricks;events;custom
 contentOwner: Rick Brough
 solution: Dynamic Media
 translation-type: tm+mt
-source-git-commit: dc625b31b5f4d0db0941de2da0e869b3af177551
+source-git-commit: d43f845a1ba9ed9e9eb5bfcff735eaa42da53566
 
 ---
 
@@ -22,7 +22,23 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
 
 ## 錯過了動態媒體電子報？
 
-* **[2020年2月第2期](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@5lYjerUalNCDQd6ABlMufSyP3GqbFDn747uBiom3-3_efxsaEjuw8LNhJxrs89ft1vcsQzjvxTGMo55w-4k0YyBVGiL6m5AWSe9I7H7wIXKT0Efz.html)**本期：
+* **[2020年4月第3期](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@DRPFipWV_3bgH_oxl1monOhd4auNDxFVTBWB-uKB6lM_BixlVqja2E5Ml7DbtOy6pARL78LPxljqgxEEAr7RBsRp8WOyn-Zw6hQ8MNoFn9i9WMXm.html)**
+
+   在此問題中：
+
+   * 探索在這些充滿挑戰的時代，您的豐富型媒體投資有三種幫助方式。
+   * 註冊參加網路研討會，瞭解如何使用智慧型影像減輕頁面負載。
+   * 觀看Dynamic Media Classic的隨選技能產生器網路研討會。
+   * 從Adobe Summit 2020線上觀看動態媒體研討會。
+   * 進一步瞭解我們免費的Dynamic Media Classic稽核。
+   * 認識客戶成功服務資深計畫經理John Monroe。
+   >[!IMPORTANT]
+   >
+   >我們想確定我們只傳送動態媒體電子報給想要收到它的人。 若要在此期刊之後繼續收到電子報，請在這裡注 [冊](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)。
+
+* **[2020年2月，第二期](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@5lYjerUalNCDQd6ABlMufSyP3GqbFDn747uBiom3-3_efxsaEjuw8LNhJxrs89ft1vcsQzjvxTGMo55w-4k0YyBVGiL6m5AWSe9I7H7wIXKT0Efz.html)**
+
+   在此問題中：
 
    * 參加新的Skill Builder網路研討會，成為Dynamic Media Classic專家。
    * 在Adobe Summit 2020上，瞭解您將在何處找到動態媒體。
@@ -31,15 +47,19 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 瞭解Dynamic Media Classic的全新使用者介面。
    * 認識Adobe Experience Cloud客戶成功經理Georgia Myers。
 
-* **[2020年1月第1期](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@NpvOA7LHuVbd-W1B5pENdSLNFZ4L4ZeEkA_bVd4reX31KUOs3uaPFEuEx2mWz-3oNkVBcY5fdimoW3RM-SzTt6QXI4l1Rd2mEwrYsWp7C1LnUMVp.html)**本期：
+* **[2020年1月第1期](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@NpvOA7LHuVbd-W1B5pENdSLNFZ4L4ZeEkA_bVd4reX31KUOs3uaPFEuEx2mWz-3oNkVBcY5fdimoW3RM-SzTt6QXI4l1Rd2mEwrYsWp7C1LnUMVp.html)**
+
+   在此問題中：
 
    * 5個全新的Skill Builder網路研討會，磨練您的Dynamic Media Classic技能。
    * 免費稽核，協助您從Dynamic Media Classic獲得更多價值。
    * 為我們的多媒體客戶帶來創紀錄的假日購物季。
-   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新功能的準備。
+   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新增功能的準備。
    * 認識數位媒體專員Mark Dean。
 
-* **[2019年11月第11期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**在本期：
+* **[2019年11月，總第11期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**
+
+   在此問題中：
 
    * 重新整理Dynamic Media Classic使用者介面。
    * 強大的全新安全功能。
@@ -47,7 +67,9 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 與同事分享電子報，以建立團隊專業知識。
    * 認識Dynamic Media資深產品經理Apoorva Gupta。
 
-* **[2019年10月第10期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_10_2019_Oct.html)**本期：
+* **[2019年10月10日](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_10_2019_Oct.html)**
+
+   在此問題中：
 
    * 如何取得訪客在動態媒體檢視器中所採取動作的進階分析。
    * 提供高品質影像和視訊的資訊圖表，其中包含提示，可讓您輕鬆呈現高品質的影像和視訊。
@@ -56,7 +78,9 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 認識Adobe Experience Manager網站可靠性工程部經理Nick Peters。
    * 在Experience League中快速上手使用Dynamic Media和Dynamic Media Classic。
 
-* **[2019年9月9日](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_09_2019_Sept.html)**本期：
+* **[2019年9月9日總第09期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_09_2019_Sept.html)**
+
+   在此問題中：
 
    * 消除這9個「疑問」，以充分提升客戶體驗。
    * 瞭解動態媒體團隊如何協助您為高於一般訪客流量的一天做好準備。
@@ -66,7 +90,9 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 在Experience League中快速上手使用Dynamic Media和Dynamic Media Classic。
 
 
-* **[2019年8月08日](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_08_2019_Aug.html)**本期：
+* **[2019年8月8日總第08期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_08_2019_Aug.html)**
+
+   在此問題中：
 
    * 探索只有在升級至Dynamic Media時才提供的有用功能。
    * 瞭解網路研討會系列，以協助您快速上手使用Adobe Experience Manager Assets和Dynamic Media。
@@ -75,7 +101,9 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 認識動態媒體技術支援部門PieterJan Pieper。
 
 
-* **[2019年7月07](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**期在本期：
+* **[2019年7月7日總第07期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
+
+   在此問題中：
 
    * 可讓您正確管理高價值資產的資源和資訊，以放心地提供體驗，讓訪客持續回訪。
    * 瞭解即將舉辦的有關保護數位資產的網路研討會。
@@ -84,7 +112,9 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 將360度視訊和自訂視訊縮圖新增至您的網站。
    * 認識AEM Assets中動態媒體的首席解決方案顧問Andrew Hathaway。
 
-* **[2019年6月06日](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**本期：
+* **[2019年6月6日總第06期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**
+
+   在此問題中：
 
    * 體驗在AEM Assets中強調升級至Dynamic Media的絕佳效果的影片。
    * 在Experience League中觀看關鍵的操作視訊。
@@ -93,15 +123,21 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 瞭解AI導向的影像智慧裁切。
    * 認識Alex Thiers，它是Dynamic Media和Dynamic Media Classic中許多強大功能與創新背後的推動力之一。
 
-* **[2019年5月05](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_05_2019_May.html)**期在本期：
+* **[2019年5月05期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_05_2019_May.html)**
 
-   * 在部落格文章中探索Dynamic Media Classic的10大隱藏功能
+   在此問題中：
+
+   * 在部落格文章中探索Dynamic Media Classic的10大隱藏功能。
    * 在Experience League中觀看關鍵的操作視訊。
    * 瞭解即將推出的Adobe Insider導覽。
    * 閱讀包含三部分的部落格系列，以更新您的多媒體策略。
    * 瞭解AI導向的視訊智慧裁切。
 
-* **[2019年4月，第04期歡迎參加Dynamic Media電子報的正式發行。本期新月度電子報為Adobe Experience Manager Assets和Adobe Dynamic Media Classic中的Dynamic Media使用者提供新聞、活動和資源。](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**在此問題中：
+* **[2019年4月04日總第04期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**
+
+   歡迎閱讀Dynamic Media電子報的推出期，這是我們新推出的每月電子報，其中包含Adobe Experience Manager Assets和Adobe Dynamic Media Classic中Dynamic Media使用者的新聞、活動和資源。
+
+   在此問題中：
    * 註冊參加我們的Dynamic Media Classic隱藏功能網路研討會。
    * 瞭解我們的隨選網路研討會系列，以協助您制定豐富型媒體策略。
    * 閱讀主要的豐富式媒體使用案例及我們為他們提供的解決方案。
