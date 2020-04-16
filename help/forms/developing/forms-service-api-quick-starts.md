@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -51,9 +51,11 @@ Forms服務提供下列快速入門：
 
 使用Forms服務API的應用程式邏輯會實作為Java servlet。 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
-* **注意**:「使用v進行寫程式」中的快速啟動基於您正在使用其他作業系統（如Unix）的表單伺服器，使用適用作業系統支援的路徑替換特定於Windows的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
+>[!NOTE]
+>
+>「使用v進行寫程式」中的快速啟動基於您正在使用其他作業系統（如Unix）的表單伺服器，使用適用作業系統支援的路徑替換特定於Windows的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-   **提示**:Adobe開發人員網站包含下列文章，討論如何建立叫用Forms服務並轉譯表單的ASP.NET應用程式。 請參 [閱建立表單渲染ASP.NET應用程式](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)。
+**提示**:Adobe開發人員網站包含下列文章，討論如何建立叫用Forms服務並轉譯表單的ASP.NET應用程式。 請參 [閱建立表單渲染ASP.NET應用程式](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)。
 
 ## 快速入門（SOAP模式）:使用Java API轉換互動式PDF表單 {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
