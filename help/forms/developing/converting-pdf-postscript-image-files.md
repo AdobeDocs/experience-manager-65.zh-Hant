@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f8707752-2c83-461a-b83d-708754b0f3f6
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -26,7 +26,9 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 * 將PDF檔案轉換為PostScript。
 * 將PDF檔案轉換為影像格式。
 
-   ***注意&#x200B;**:如需轉換PDF服務的詳細資訊，請參閱「AEM表[單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。*
+>[!NOTE]
+>
+>如需轉換PDF服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 將PDF檔案轉換為PostScript {#converting-pdf-documents-to-postscript}
 
@@ -55,7 +57,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 您必須先建立「轉換PDF」服務用戶端，才能以程式設計方式執行「轉換PDF」服務作業。 如果您使用Java API，請建立物 `ConvertPdfServiceClient` 件。 如果您使用web service API，請建立物 `ConvertPDFServiceService` 件。
 
-本節使用AEM Forms中引進的Web服務功能。 若要存取新功能，您必須使用屬性來建構您的Proxy物 `lc_version` 件。 (請參閱「使用Web services叫用AEM Forms」中的「使 [用Web Services存取新功能](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)」)。
+本節使用AEM Forms中引進的Web服務功能。 若要存取新功能，您必須使用屬性來建構您的Proxy物 `lc_version` 件。 (請參閱「使用Web Services叫用AEM Forms」中的「使 [用Web Services存取新功能](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)」)。
 
 **參考PDF檔案以轉換為PostScript檔案**
 
@@ -87,7 +89,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [使用web service API將PDF檔案轉換為PS](converting-pdf-postscript-image-files.md#convert-a-pdf-document-to-ps-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -135,7 +137,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 [快速入門（SOAP模式）:使用Java API將PDF檔案轉換為PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -223,7 +225,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 **包含專案檔案**
 
-將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您已包含proxy檔案。
 
 **建立轉換PDF用戶端**
 
@@ -231,7 +233,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 **擷取要轉換的PDF檔案**
 
-您必須擷取PDF檔案才能轉換為影像。 您無法將互動式PDF檔案轉換為影像。 如果您嘗試這麼做，則會擲回例外。 若要將互動式PDF檔案轉換為影像檔，您必須先平面化PDF檔案，才能進行轉換。 (請參閱 [平面化PDF檔案](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)。)
+您必須擷取PDF檔案才能轉換為影像。 您無法將互動式PDF檔案轉換為影像。 如果您嘗試這麼做，則會擲回例外。 若要將互動式PDF檔案轉換為影像檔案，您必須先平面化PDF檔案，才能轉換。 (請參閱 [平面化PDF檔案](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)。)
 
 **設定執行時期選項**
 
@@ -249,7 +251,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
