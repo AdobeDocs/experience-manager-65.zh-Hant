@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -41,7 +41,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 以下各節說明如何在實例中傳遞表單 `com.adobe.idp.Document` 設計：
 
-* [將位於Content services中的檔案（不建議使用）傳送至輸出服務](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [將位於Content Services中的檔案（不建議使用）傳送至輸出服務](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [使用片段建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
 在決定要使用哪種技巧時，有一個考量是，如果您要從其他AEM Forms服務取得表單設計，然後在例項中傳 `com.adobe.idp.Document` 遞。 「將文 *件傳送至輸出服務* 」和「使用 ** 片段建立PDF檔案」區段都會顯示如何從其他AEM Forms服務取得表單設計。 第一個區段會從Content Services擷取表單設計（已過時）。 第二部分從Assembler服務檢索表單設計。
@@ -56,7 +56,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 * [建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents)
 * [建立PDF/A檔案](creating-document-output-streams.md#creating-pdf-a-documents)
-* [將位於Content services中的檔案（不建議使用）傳送至輸出服務](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [將位於Content Services中的檔案（不建議使用）傳送至輸出服務](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [使用片段建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 * [列印至檔案](creating-document-output-streams.md#printing-to-files)
 * [傳送列印串流至印表機](creating-document-output-streams.md#sending-print-streams-to-printers)
@@ -64,7 +64,9 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 * [建立搜尋規則](creating-document-output-streams.md#creating-search-rules)
 * [平面化PDF檔案](creating-document-output-streams.md#flattening-pdf-documents)
 
-   ***注意&#x200B;**:如需Output服務的詳細資訊，請參閱「AEM[表格的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。*
+>[!NOTE]
+>
+>如需Output服務的詳細資訊，請參閱「AEM [表格的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 建立PDF檔案 {#creating-pdf-documents}
 
@@ -102,7 +104,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器專屬檔案。
+如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器所專屬。
 
 **建立輸出客戶端對象**
 
@@ -197,7 +199,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 [使用web service API建立PDF檔案](creating-document-output-streams.md#create-a-pdf-document-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -277,7 +279,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 [快速入門（SOAP模式）:使用Java API建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -418,7 +420,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器專屬檔案。
+如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器所專屬。
 
 **建立輸出客戶端對象**
 
@@ -440,7 +442,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 >[!NOTE]
 >
->建立PDF/A 1A檔案時，無 `false` 法將標籤的Adobe PDF選項設定為。 PDF/A 1A永遠是標籤的PDF檔案。 此外，建立PDF/A 1B檔案時，您 `true` 無法將標籤的Adobe PDF選項設定為。 PDF/A 1B永遠是未標籤的PDF檔案。
+>建立PDF/A 1A檔案時，無 `false` 法將標籤的Adobe PDF選項設定為。 PDF/A 1A永遠是標籤的PDF檔案。 此外，您無法在建立PDF/A 1B檔案 `true` 時，將標籤的Adobe PDF選項設為。 PDF/A 1B永遠是未標籤的PDF檔案。
 
 **產生PDF/A檔案**
 
@@ -456,7 +458,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 [使用web service API建立PDF/A檔案](creating-document-output-streams.md#create-a-pdf-a-document-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -529,7 +531,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 [快速入門（SOAP模式）:使用Java API建立PDF/A檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
@@ -612,7 +614,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 [使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 將位於Content services中的檔案（不建議使用）傳送至輸出服務 {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## 將位於Content Services中的檔案（不建議使用）傳送至輸出服務 {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
 「輸出」服務會轉譯非互動式PDF表單，該表單以通常儲存為XDP檔案並在Designer中建立的表單設計為基礎。 您可以將包含 `com.adobe.idp.Document` 表單設計的物件傳遞至Output服務。 然後，輸出服務將呈現位於對象中的表單 `com.adobe.idp.Document` 設計。
 
@@ -642,7 +644,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 在以程式設計方式執行輸出服務API操作之前，請先建立輸出用戶端API物件。 此外，由於此工作流程會從Content Services擷取XDP檔案（已停用），因此請建立Document Management API物件。
 
-**從Content services擷取表單設計（已過時）**
+**從Content Services擷取表單設計（已過時）**
 
 使用Java或web service API從Content Services（已過時）擷取XDP檔案。 XDP檔案會傳回至例 `com.adobe.idp.Document` 項(或是 `BLOB` 您使用web services的例項)。 然後，您可以將實 `com.adobe.idp.Document` 例傳遞至Output服務。
 
@@ -664,7 +666,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 [使用web service API將檔案傳遞至Output Service](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -709,7 +711,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 1. 對表單資料流執行動作。
 
-   * 調用 `com.adobe.idp.Document` 物件的方法，擷取代表非互動 `OutputResult` 式表單的物 `getGeneratedDoc` 件。
+   * 調用 `com.adobe.idp.Document` 物件的方法，以擷取代表非互動 `OutputResult` 式表單的物 `getGeneratedDoc` 件。
    * 建立包 `java.io.File` 含操作結果的對象。 請確定副檔名為。pdf。
    * 叫用 `com.adobe.idp.Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `com.adobe.idp.Document` 由方法傳回的物 `com.adobe.idp.Document``getGeneratedDoc` 件)。
 
@@ -721,7 +723,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
 [快速入門（SOAP模式）:使用Java API將檔案傳送至輸出服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -775,7 +777,7 @@ PDF/A檔案必須使用在表單設計中指定的字型，且字型無法取代
 
    * 枚舉 `TransformationFormat` 值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`。
    * 一個字串值，它指定附加資源（如影像）所在的內容根目錄。
-   * 表 `BLOB` 示表單設計的物件(使用Content services傳 `BLOB` 回的例項（已過時）)。
+   * 表 `BLOB` 示表單設計的物件(使用Content Services傳 `BLOB` 回的例項（已過時）)。
    * 包 `PDFOutputOptionsSpec` 含PDF執行時期選項的物件。
    * 包含 `RenderOptionsSpec` 演算執行時間選項的物件。
    * 包 `BLOB` 含XML資料來源的物件，其中包含要與表單設計合併的資料。
@@ -860,7 +862,7 @@ XDP檔案會傳回至例 `com.adobe.idp.Document` 項(或是 `BLOB` 您使用web
 
 [使用Java API將儲存庫中的文檔傳遞到輸出服務](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -884,14 +886,14 @@ ResourceRepositoryClient
 
 1. 從AEM Forms Repository擷取表單設計。
 
-   調用 `ResourceRepositoryClient` 物件的方 `readResourceContent` 法，並將指定URI位置的字串值傳遞至XDP檔案。 例如， `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。 此值為必填值。 此方法傳回 `com.adobe.idp.Document` 代表XDP檔案的例項。
+   調用 `ResourceRepositoryClient` 物件的方 `readResourceContent` 法，並將指定URI位置的字串值傳遞至XDP檔案。 For example, `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. 此值為必填值。 此方法傳回 `com.adobe.idp.Document` 代表XDP檔案的例項。
 
 1. 轉換非互動式PDF表單。
 
    叫用物 `OutputClient` 件的方 `generatePDFOutput2` 法並傳遞下列值：
 
    * 枚舉 `TransformationFormat` 值。 若要產生PDF檔案，請指定 `TransformationFormat.PDF`。
-   * 一個字串值，它指定附加資源（如影像）所在的內容根目錄。 例如， `repository:///Applications/FormsApplication/1.0/FormsFolder/`。
+   * 一個字串值，它指定附加資源（如影像）所在的內容根目錄。 For example, `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
    * 表 `com.adobe.idp.Document` 示表單設計的物件(使用物件方法傳 `ResourceRepositoryClient` 回的例 `readResourceContent` 項)。
    * 包 `PDFOutputOptionsSpec` 含PDF執行時期選項的物件。
    * 包含 `RenderOptionsSpec` 演算執行時間選項的物件。
@@ -900,7 +902,7 @@ ResourceRepositoryClient
 
 1. 對表單資料流執行動作。
 
-   * 調用 `com.adobe.idp.Document` 物件的方法，擷取代表非互動 `OutputResult` 式表單的物 `getGeneratedDoc` 件。
+   * 調用 `com.adobe.idp.Document` 物件的方法，以擷取代表非互動 `OutputResult` 式表單的物 `getGeneratedDoc` 件。
    * 建立包 `java.io.File` 含操作結果的對象。 請確定副檔名為。pdf。
    * 叫用 `com.adobe.idp.Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `com.adobe.idp.Document` 由方法傳回的物 `com.adobe.idp.Document``getGeneratedDoc` 件)。
 
@@ -910,7 +912,7 @@ ResourceRepositoryClient
 
 [快速啟動（EJB模式）:使用Java API將AEM Forms Repository中的檔案傳遞至「輸出」服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -968,7 +970,7 @@ ResourceRepositoryClient
 
 [使用web service API，根據片段建立PDF檔案](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1032,7 +1034,7 @@ ResourceRepositoryClient
 
 [快速入門（SOAP模式）:使用Java API根據片段建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
@@ -1158,7 +1160,7 @@ ResourceRepositoryClient
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器專屬檔案。 (請參 [閱「包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」)。
+如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器所專屬。 (請參 [閱「包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」)。
 
 **建立輸出客戶端對象**
 
@@ -1190,7 +1192,7 @@ ResourceRepositoryClient
 
 [使用web service API列印至檔案](creating-document-output-streams.md#print-to-files-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1248,7 +1250,7 @@ ResourceRepositoryClient
 
 [快速入門（SOAP模式）:使用Java API列印至檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
@@ -1362,7 +1364,7 @@ ResourceRepositoryClient
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器專屬檔案。
+如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器所專屬。
 
 **建立輸出客戶端對象**
 
@@ -1408,15 +1410,15 @@ ResourceRepositoryClient
    <td><p>依預設建立dpl203.xdc或自訂xdc輸出串流。</p></td>
   </tr>
   <tr>
-   <td><p>DPL300DPI </p></td>
+   <td><p>DPL 300 DPI </p></td>
    <td><p>建立DPL 300 DPI輸出串流。</p></td>
   </tr>
   <tr>
-   <td><p>DPL406DPI </p></td>
+   <td><p>DPL 406 DPI </p></td>
    <td><p>建立DPL 400 DPI輸出串流。</p></td>
   </tr>
   <tr>
-   <td><p>DPL600DPI </p></td>
+   <td><p>DPL 600 DPI </p></td>
    <td><p>建立DPL 600 DPI輸出串流。</p></td>
   </tr>
   <tr>
@@ -1432,11 +1434,11 @@ ResourceRepositoryClient
    <td><p>建立自訂IPL輸出串流。</p></td>
   </tr>
   <tr>
-   <td><p>IPL300DPI </p></td>
+   <td><p>IPL 300 DPI </p></td>
    <td><p>建立IPL 300 DPI輸出串流。</p></td>
   </tr>
   <tr>
-   <td><p>IPL400DPI </p></td>
+   <td><p>IPL 400 DPI </p></td>
    <td><p>建立IPL 400 DPI輸出串流。</p></td>
   </tr>
   <tr>
@@ -1452,11 +1454,11 @@ ResourceRepositoryClient
    <td><p>建立自定義TPCL輸出流。</p></td>
   </tr>
   <tr>
-   <td><p>TPCL305DPI </p></td>
+   <td><p>TPCL 305 DPI </p></td>
    <td><p>建立TPCL 305 DPI輸出流。</p></td>
   </tr>
   <tr>
-   <td><p>TPCL600DPI </p></td>
+   <td><p>TPCL 600 DPI </p></td>
    <td><p>建立TPCL 600 DPI輸出流。</p></td>
   </tr>
   <tr>
@@ -1464,7 +1466,7 @@ ResourceRepositoryClient
    <td><p>建立ZPL 203 DPI輸出流。</p></td>
   </tr>
   <tr>
-   <td><p>ZPL300DPI </p></td>
+   <td><p>ZPL 300 DPI </p></td>
    <td><p>建立ZPL 300 DPI輸出流。</p></td>
   </tr>
  </tbody>
@@ -1700,7 +1702,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器專屬檔案。
+如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器所專屬。
 
 **建立輸出客戶端對象**
 
@@ -1718,7 +1720,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 * **許多檔案**:指定輸出服務是建立單個文檔還是建立多個文檔。 您可以指定true或false。 要為XML資料源中的每個資料記錄建立單獨的文檔，請指定true。
 * **檔案URI**:指定輸出服務生成的檔案的位置。 例如，假設您指定C:\\Adobe\forms\Loan.pdf。 在這種情況下，輸出服務會建立名為Loan.pdf的檔案，並將檔案放在C:\\Adobe\forms folder檔案夾中。 當有多個檔案時，檔案名稱為Loan0001.pdf、Loan0002.pdf、Loan0003.pdf等。 如果您指定檔案位置，則檔案會放在伺服器上，而非用戶端電腦上。
-* **記錄名稱**:指定在資料來源中分隔資料記錄的XML元素名稱。 例如，在本節稍早顯示的範例XML資料來源中，會呼叫分隔資料記錄的XML元素 `LoanRecord`。 (您可以為記錄級別指定數值，以指示包含資料記錄的元素級別，而不是設定「記錄名稱」運行時選項。 不過，您只能設定「記錄名稱」或「記錄層級」。 您不能同時設定這兩個值。)
+* **記錄名稱**:指定資料源中用於分隔資料記錄的XML元素名稱。 例如，在本節稍早顯示的範例XML資料來源中，會呼叫分隔資料記錄的XML元素 `LoanRecord`。 (您可以為記錄級別指定數值，以指示包含資料記錄的元素級別，而不是設定「記錄名稱」運行時選項。 不過，您只能設定「記錄名稱」或「記錄層級」。 您不能同時設定這兩個值。)
 
 **設定渲染運行時選項**
 
@@ -1767,7 +1769,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1826,7 +1828,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 [快速啟動（EJB模式）:使用Java API建立多個PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1964,7 +1966,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 設定下列PDF執行時期選項，讓「輸出」服務能夠根據多種表單設計成功建立PDF檔案：
 
-* **檔案URI**:指定輸出服務所生成的PDF檔案的名稱和位置。
+* **檔案URI**:指定輸出服務所產生的PDF檔案的名稱和位置。
 * **規則**:指定您定義的規則。
 * **LookAHead**:指定從輸入資料檔案開始掃描定義的文本模式時要使用的位元組數。 預設值為500位元組。
 
@@ -1982,7 +1984,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -2057,7 +2059,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 [快速入門（SOAP模式）:使用Java API建立搜尋規則](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -2088,7 +2090,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 1. 參考XML資料來源。
 
-   * 使用其 `BLOB` 建構函式建立物件。 該 `BLOB` 物件用來儲存將與PDF檔案合併的資料。
+   * 使用其 `BLOB` 建構函式建立物件。 物 `BLOB` 件用來儲存將與PDF檔案合併的資料。
    * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示要加密的PDF文檔的檔案位置以及開啟檔案的模式。
    * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
    * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
@@ -2196,7 +2198,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器專屬檔案。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在非JBoss的支援J2EE應用程式伺服器上，您將需要將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，這些檔案是部署AEM Forms的J2EE應用程式伺服器所專屬。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立輸出客戶端對象**
 
@@ -2220,7 +2222,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 [使用web service API平面化PDF檔案](creating-document-output-streams.md#flatten-a-pdf-document-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -2268,7 +2270,7 @@ Output服務可以為XML資料源中的每個記錄或包含所有記錄的單�
 
 [快速入門（SOAP模式）:使用Java API轉換PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
