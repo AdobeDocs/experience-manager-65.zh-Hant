@@ -1,6 +1,6 @@
 ---
-title: Components and Services Java APIQuick Start(SOAP)
-seo-title: Components and Services Java APIQuick Start(SOAP)
+title: 元件與服務Java APIQuick Start(SOAP)
+seo-title: 元件與服務Java APIQuick Start(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
@@ -10,41 +10,46 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
 
-# Components and Services Java API Quick Start (SOAP) {#components-and-services-java-apiquick-start-soap}
+# 元件與服務Java API快速入門(SOAP) {#components-and-services-java-apiquick-start-soap}
 
 Java API快速入門(SOAP)適用於元件和服務。
 
 
-[Quick Start (SOAP mode): Deploying a component using the Java API](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API部署元件](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
 
 [快速入門（SOAP模式）:使用Java API設定服務的執行上下文](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
 
-[Quick Start (SOAP mode): Disabling service security using the Java API](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API禁用服務安全性](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
 
-[Quick Start (SOAP mode): Starting a service using the Java API](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API啟動服務](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
 
-[Quick Start (SOAP mode): Modifying a services configuration values using the Java API](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API修改服務配置值](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
 
-[Quick Start (SOAP mode): Removing components using the Java API](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API移除元件](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
-* ***Note **: You cannot programmatically manipulate components and services by using web services.*
-* ***Note **: Quick starts located in Programming with AEM forms are based on the Forms server being deployed on JBoss and the Windows operating system. However, if you are using another operating system, such as Unix, replace windows specific paths with paths supported by the applicable operating system. 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參[閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+>[!NOTE]
+>
+>您無法使用web services以程式設計方式控制元件和服務。
 
 >[!NOTE]
 >
->If you have a custom component and you are using SOAP or EJB protocols to invoke DSCs on the same local server, and those invocations stop working after an upgrade, then use in-VM ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY)) invocation strategy. 使用預設ServiceClientFactory的in-VM DSC調用方法，不使用SOAP或EJB協定構建ServiceClientFactory。
+>「使用AEM表單進行程式設計」中的快速入門是以部署在JBoss和Windows作業系統上的Forms伺服器為基礎。 但是，如果您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+
+>[!NOTE]
+>
+>如果您有自訂元件，而且使用SOAP或EJB通訊協定來呼叫相同本機伺服器上的DSC，而這些呼叫在升級後停止運作，則使用in-VM([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY))呼叫策略。 使用預設ServiceClientFactory的in-VM DSC調用方法，不使用SOAP或EJB協定構建ServiceClientFactory。
 
 ## 快速入門（SOAP模式）:使用Java API部署元件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-The following Java example deploys a component that is based on a JAR file named *adobe-emailSample-dsc.jar*.
+以下Java示例部署基於名為 *adobe-emailSample-dsc.jar的JAR檔案的元件*。
 
 ```as3
  /* 
@@ -144,9 +149,9 @@ The following Java example deploys a component that is based on a JAR file named
  
 ```
 
-## Quick Start (SOAP mode): Setting the execution context of a service using the Java API {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API設定服務的執行上下文 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-The following Java code example sets the Run-As Invoker execution context to an example service named *EncryptDocument*.
+以下Java代碼示例將Run-As調用程式執行上下文設定為名為 *EncryptDocument的示例服務*。
 
 ```as3
  /* 
@@ -236,9 +241,9 @@ The following Java code example sets the Run-As Invoker execution context to an 
  
 ```
 
-## Quick Start (SOAP mode): Disabling service security using the Java API {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API禁用服務安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
-The following Java code example disables security from the example EncryptDocument service and the services that are invoked from within this service (the Set Value and Encryption services).
+以下Java代碼示例禁用示例EncryptDocument服務和從該服務中調用的服務（設定值和加密服務）的安全性。
 
 ```as3
  /* 
@@ -349,9 +354,9 @@ The following Java code example disables security from the example EncryptDocume
  
 ```
 
-## Quick Start (SOAP mode): Starting a service using the Java API {#quick-start-soap-mode-starting-a-service-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API啟動服務 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-The following Java code example starts a service named *SendEmailService*.
+以下Java代碼示例啟動名為 *SendEmailService的服務*。
 
 ```as3
  package com.adobe.sample.servicemanager; 
@@ -407,9 +412,9 @@ The following Java code example starts a service named *SendEmailService*.
  
 ```
 
-## Quick Start (SOAP mode): Modifying a services configuration values using the Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API修改服務配置值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
-The following Java example modifies configuration values that belong to SendEmail Service.
+以下Java示例修改屬於SendEmail服務的配置值。
 
 ```as3
  /* 
@@ -521,7 +526,7 @@ The following Java example modifies configuration values that belong to SendEmai
 
 ## 快速入門（SOAP模式）:使用Java API移除元件 {#quick-start-soap-mode-removing-components-using-the-java-api}
 
-The following Java code example removes a component by using the Java API.
+以下Java代碼示例使用Java API刪除元件。
 
 ```as3
  /* 
