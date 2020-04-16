@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -49,7 +49,11 @@ HTML用戶端有兩種類型。 第一個HTML用戶端是以JavaScript編寫的A
    如果使用HTTP POST方法調用Froms服務，則會在HTTP請求主體內傳遞參數。 如果AEM Forms服務的簽名有字串輸入參數，請求主體可以包含輸入參數的文字值。 如果服務的簽名定義了多個字串參數，請求可遵循HTTP的記號， `application/x-www-form-urlencoded` 並使用參數名稱做為表單的欄位名稱。
 
    如果Forms服務返回字串參數，則結果是輸出參數的文本表示。 如果服務返回多個字串參數，則結果是XML文檔以下列格式對輸出參數進行編碼：
-   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`**注意&#x200B;**:值`output-paramater1`表示輸出參數名稱。
+   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
+
+   >[!NOTE]
+   >
+   >值 `output-paramater1` 表示輸出參數名稱。
 
    如果Forms服務需要參 `com.adobe.idp.Document` 數，則只能使用HTTP POST方法調用該服務。 如果服務需要一 `com.adobe.idp.Document` 個參數，則HTTP請求主體會變成輸入Document物件的內容。
 
@@ -316,4 +320,4 @@ AEM Forms服務可以以呼叫URL中的 `services` 取代 `async_invoke` 來非�
 
 如果程式需要PDF檔案作為輸入值，請確定您以PDF格式提交表單，如上圖所示。 此外，若要成功叫用程式，程式必須傳回PDF檔案。 否則，Acrobat無法處理返回值，並會出現錯誤。 您不必指定輸入流程變數的名稱。 例如，MyApplication/ *EncryptDocument* 進程具有名為的輸入變數 `inDoc`。 只要表單已提交為PDF，您就不需要指定inDoc。
 
-您也可以將表單資料以XML格式提交至表單流程，若要提交XML資料，請確定下拉式清單 `Submit As` 會指定XML。 由於程式的返回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
+您也可以將表單資料以XML格式提交至表單流程，若要提交XML資料，請確定下拉式清單 `Submit As` 會指定XML。 由於程式的傳回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
