@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -31,9 +31,11 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
    這些類型的進程稱為長期進程。 非同步地執行長壽命進程，允許系統在資源許可的情況下進行交互，並允許跟蹤和監視操作。 當呼叫長期進程時，AEM Forms會建立呼叫識別碼值，作為追蹤長期進程狀態的記錄的一部分。 記錄會儲存在AEM Forms資料庫中。 您可以在不再需要長期流程記錄時清除這些記錄。
 
-   **注意**:當呼叫短期處理時，AEM Forms不會建立記錄。
+>[!NOTE]
+>
+>當呼叫短期處理時，AEM Forms不會建立記錄。
 
-   使用調用標識符值，可以跟蹤長壽命進程的狀態。 例如，您可以使用進程調用標識符值來執行進程管理器操作，如終止正在運行的進程實例。
+使用調用標識符值，可以跟蹤長壽命進程的狀態。 例如，您可以使用進程調用標識符值來執行進程管理器操作，如終止正在運行的進程實例。
 
 **短壽命流程示例**
 
@@ -70,7 +72,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 下圖是長期處理的範例。
 
-當申請人提交貸款表時，將調用此流程。 在貸款官員批准或拒絕貸款申請之前，該程式尚未完成。 此長期流程的名稱是 *FirstAppSolution/PreLoanProcess* ，其操作為 `invoke_Async`。 必須以非同步方式呼叫此程式。 如需以程式設計方式叫用此長壽命程式的詳細資訊，請 [參閱叫用以人為中心的長壽命程式](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。
+當申請人提交貸款表時，將調用此流程。 在貸款官員批准或拒絕貸款申請之前，該程式尚未完成。 此長期流程的名稱是 *FirstAppSolution/PreLoanProcess* ，其操作是 `invoke_Async`。 必須以非同步方式呼叫此程式。 如需以程式設計方式叫用此長壽命程式的詳細資訊，請 [參閱叫用以人為中心的長壽命程式](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。
 
 >[!NOTE]
 >
