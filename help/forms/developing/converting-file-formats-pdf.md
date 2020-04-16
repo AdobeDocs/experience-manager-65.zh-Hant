@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -25,17 +25,23 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 * 轉換DOC、DOCX、RTF、TXT、XLS、XLS、PPT、PPTX、PPTX、VSD、MPP、MPPX、XPS和PUB的Microsoft Office 2003和2007（僅限Windows）
 
-   **注意**:需要有Acrobat® 9.2或更新版本才能將Microsoft XPS格式轉換為PDF。*
+>[!NOTE]
+>
+>需要有Acrobat® 9.2或更新版本才能將Microsoft XPS格式轉換為PDF。
 
 * Autodesk AutoCAD 2005、2006、2007、2008和2009可轉換DWF、DWG和DXW（僅提供英文版）
 * Corel WordPerfect 12和X4可轉換WPD、QPW、SHW（僅提供英文版）
 * OpenOffice 2.0、2.4、3.0.1和3.1，以轉換ODT、ODS、ODP、ODG、ODF、SXW、SXI、SXC、SXD、DOC、RTF、TXT、XLSX、PPT、PPTtx、VSD、MPP、MPPX和PUB
 
-   ***注意&#x200B;**:「產生PDF」服務不支援64位元版本的OpenOffice。*
+>[!NOTE]
+>
+>「產生PDF」服務不支援64位元版本的OpenOffice。
 
 * 轉換PSD的Adobe Photoshop® CS2（僅限Windows）
 
-   *注&#x200B;**意**:不支援Photoshop CS3和CS4，因為它們不支援Windows Server 2003或Windows Server 2008。*
+>[!NOTE]
+>
+>不支援Photoshop CS3和CS4，因為它們不支援Windows Server 2003或Windows Server 2008。
 
 * Adobe FrameMaker® 7.2和8可轉換FM（僅限Windows）
 * Adobe PageMaker® 7.0可轉換PMD、PM6、P65和PM（僅限Windows）
@@ -587,7 +593,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 如果WinID能夠擷取對話方塊內容，例如文字、子視窗、視窗類別ID等，AppMon也可以這麼做。
 
-此表列出了用於打印本地檔案格式的資訊類型。
+此表列出了打印原始檔案格式時使用的資訊類型。
 
 <table>
  <thead>
@@ -674,7 +680,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 * appmon。`[appname]`.additional.`[locale]`.xml
 * appmon。`[appname]`.`[locale]`.xml（請勿修改此檔案）。
-* appmon.global。`[locale]`.xml（請勿修改此檔案）。
+* appmon.global.`[locale]`.xml（請勿修改此檔案）。
 
 如果「產生PDF」服務找到對話方塊的符合項，則會傳送對話方塊的按鍵動作或其他動作，以關閉該對話方塊。 如果對話框的說明指定了中止消息，則生成PDF服務將終止當前正在執行的作業並生成錯誤消息。 將在指令碼XML語法的元素中 `abortMessage` 指定此類中止消息。
 
