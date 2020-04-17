@@ -1,5 +1,5 @@
 ---
-title: 已過時和已移除的功能
+title: 過時和移除的功能
 description: Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 uuid: 81d9a064-e712-4eff-bd3b-6e15513a5435
 contentOwner: msm-service
@@ -7,39 +7,39 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
 
 ---
 
 
-# 已過時和已移除的功能 {#deprecated-and-removed-features}
+# 過時和移除的功能 {#deprecated-and-removed-features}
 
-Adobe會持續評估產品功能，以更現代的替代方式來革新或取代舊功能，以改善整體客戶價值，並時時考慮回溯相容性。
+Adobe 持續評估產品功能，以更新或替代的方式來改善或取代舊功能，以提升客戶享有的整體價值，且隨時謹慎考慮是否回溯相容。
 
-若要傳達即將移除／取代AEM功能，請套用下列規則：
+若要傳達 AEM 功能即將移除/取代的訊息，請套用下列規則：
 
-1. 首先宣佈放棄。 雖然已過時，但功能仍可用，但無法進一步增強。
+1. 首先需公告功能已過時。雖然已過時，但功能仍可用，但無法進一步增強。
 1. 在下列主要版本中，將最早移除已過時的功能。 將公佈實際的移除目標日期。
 
-此程式可讓客戶在實際移除之前，至少有一個發行週期，以調整其實作方式，以適應已過時功能的新版本或後繼版本。
+此程序可讓客戶在功能真正移除之前，至少還有一個發行週期，讓實作適應過時功能的新版本或後續版本。
 
-## 不建議使用的功能 {#deprecated-features}
+## Deprecated Features {#deprecated-features}
 
 本節列出已標示為不再提倡的AEM 6.5功能。通常，計畫在未來版本中移除的功能會先設為不建議使用，並提供其他選項。
 
-建議客戶在目前的部署中是否運用了功能／功能，並規劃變更實施以使用提供的替代方案。
+建議客戶檢視是否在目前的部署中使用這些功能，並規劃變更實作，改為使用所提供的替代方案。
 
 <table>
  <tbody>
   <tr>
    <td><b>區域</b></td>
    <td><b>功能</b></td>
-   <td><b>取代</b></td>
+   <td><b>替代方案</b></td>
   </tr>
   <tr>
-   <td>Creative cloud整合</td>
-   <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM to Creative Cloud Folder Sharing</a> is in AEM 6.2 as as as save give creative users access of AEM, so they thay bey open the CC applications and upload new files or save changes to AEM. Creative cloud應用程式中發行的新功能Adobe Asset Link提供更佳的使用者體驗，並可直接從Photoshop、InDesign和Illustrator內部，以更強大的方式存取AEM中的資產。</p> <p>Adobe不打算對AEM做進一步的增強，以整合Creative cloud資料夾共用。 雖然AEM中包含此功能，但強烈建議客戶使用取代解決方案。</p> </td>
-   <td>建議客戶改用新的Creative cloud整合功能，包括Adobe Asset Link或AEM案頭應用程式。 請參閱 <a href="/help/assets/aem-cc-integration-best-practices.md">AEM和Creative cloud整合最佳實務</a> ，以取得詳細資訊。</td>
+   <td>Creative Cloud整合</td>
+   <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM to Creative Cloud Folder Sharing</a> is in AEM 6.2 as as as save give creative users access of AEM, so they thay bey open the CC applications and upload new files or save changes to AEM. Creative Cloud應用程式中發行的新功能Adobe Asset Link提供更佳的使用者體驗，並可直接從Photoshop、InDesign和Illustrator內部，以更強大的方式存取AEM中的資產。</p> <p>Adobe不打算對AEM做進一步的增強，以整合Creative Cloud資料夾共用。 雖然AEM中包含此功能，但強烈建議客戶使用取代解決方案。</p> </td>
+   <td>建議客戶改用新的Creative Cloud整合功能，包括Adobe Asset Link或AEM案頭應用程式。 請參閱 <a href="/help/assets/aem-cc-integration-best-practices.md">AEM和Creative Cloud整合最佳實務</a> ，以取得詳細資訊。</td>
   </tr>
   <tr>
    <td>資產</td>
@@ -61,7 +61,7 @@ Adobe會持續評估產品功能，以更現代的替代方式來革新或取代
   </tr>
   <tr>
    <td>DTM標籤管理器</td>
-   <td>不再支援與DTM（動態標籤管理器）的整合。</td>
+   <td>不再提倡與DTM（動態標籤管理器）的整合。</td>
    <td>改用Adobe Experience Platform Launch做為標籤管理程式</td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ Adobe會持續評估產品功能，以更現代的替代方式來革新或取代
   </tr>
   <tr>
    <td>Adobe Target</td>
-   <td>不建議在AEM中使用與Adobe target的mbox.js整合。</td>
+   <td>不建議在AEM中使用與Adobe Target的mbox.js整合。</td>
    <td>切換為使用at.js 1.x</td>
   </tr>
   <tr>
@@ -151,21 +151,27 @@ Adobe會持續評估產品功能，以更現代的替代方式來革新或取代
    <td><p>CRXDE lite中的傳統UI對話框編輯器</p> <p>Adobe不打算進一步增強散發時隨附的Classic UI Dialog Editor（快速入門）</p> </td>
    <td> </td>
   </tr>
+  <tr>
+   <td>表單</td>
+   <td><p>AEM Forms與AEM Mobile整合&lt;已過時 </p> </td>
+   <td>無更換 </td>
+  </tr>
  </tbody>
 </table>
 
-## 已移除功能 {#removed-features}
+## Removed Features {#removed-features}
 
 本節列出已從AEM 6.5移除的功能。舊版的這些功能已標示為已過時。
 
-| 區域 | 功能 | 取代 |
+| 區域 | 功能 | 替代方案 |
 |--- |--- |--- |
 | Analytics Activity Map | AEM中包含的Activity Map版本。 | 由於Adobe Analytics API中的安全性變更，無法再使用AEM中包含的Activity Map版本。 使用Adobe [Analytics提供的ActivityMap外掛程式](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
 | 整合 | ExactTarget整合已從預設分發（快速入門）中移除，現已不再提供。 | 無取代 |
 | 整合 | Salesforce Force API整合已從預設散發(Quickstart)中移除，現在是要從PackageShare安裝的額外套件。 | 功能仍然可用。 |
-| 表單 | Adobe Central Migration bridge服務的支援已移除，因為不再支援Adobe Central產品。 | 無取代 |
+| 表單 | Adobe Central Migration Bridge服務的支援已移除，因為不再支援Adobe Central產品。 | 無取代 |
 | 表單 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 無取代 |
 | 表單 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 無取代 |
+| 表單 | JEE上不提供從LiveCycle ES4 SP1升級至AEM 6.5 Forms的單跳升級 | 請參 [閱AEM Forms升級檔案](../forms/using/upgrade.md) 中的可用升級途徑。 |
 | 開發人員 | Firebug Lite已從預設散發中移除（快速入門） | 使用瀏覽器內建的開發人員主控台 |
 | 開發人員 | 移除 `customJavaScriptPath` HTML用戶端程式庫管理員的支援。 | 無取代 |
 | 資產 | AEM 6.5中已移除「資產」卸載功能 | 無取代 |
