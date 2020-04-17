@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
+source-git-commit: dea9bf9387cf4b69e7054e03c5906ecf25cb0d59
 
 ---
 
@@ -292,7 +292,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ### 串流上傳 {#streamed-uploads}
 
-如果您將許多資產上傳至AEM，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 AEM Assets支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先在伺服器上的臨時資料夾中儲存資產，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 AEM Assets預設會啟用串流上傳。
+如果您將許多資產上傳至AEM，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 AEM Assets支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先將資產儲存在伺服器上的臨時資料夾中，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 AEM Assets預設會啟用串流上傳。
 
 >[!NOTE]
 >
@@ -306,7 +306,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 摘取完成後，AEM會在通知區中通知您。 當AEM擷取ZIP時，您可以回到您的工作中，而不會中斷擷取。
 
-![ZIP解壓縮通知](assets/Zip-extraction-notification.png)
+![ZIP檔案解壓縮通知](assets/Zip-extraction-notification.png)
 
 此功能的一些限制包括：
 
@@ -326,11 +326,9 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    若要縮放資產，請點選／按一 `+` 下（或點選／按一下資產上的放大鏡）。 若要縮小，請點選／按一下 `-`。 當您放大時，可以透過平移來仔細檢視影像的任何區域。 重設縮放箭頭會將您帶回原始檢視。
 
-   ![上傳圖示](assets/uploadicon.png)
-
    點選 **[!UICONTROL 「重設]** 」，將檢視重設為原始大小。
 
-   ![chlimage_1-216](assets/chlimage_1-11.png)
+   ![重設圖示，讓使用者回到原始檢視](assets/chlimage_1-11.png)
 
 **僅使用鍵盤按鍵預覽資產**
 
@@ -353,11 +351,11 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ## 編輯屬性和中繼資料 {#editing-properties}
 
-1. 導覽至您要編輯其中繼資料的資產所在位置。
+1. 導覽至資產的位置以編輯其中繼資料。
 
 1. 選取資產，然後點選／按一下工 **[!UICONTROL 具列中的]** 「屬性」以檢視資產屬性。 或者，選擇資 **[!UICONTROL 產卡上]** 「屬性」的快速動作。
 
-   ![properties_quickaction](assets/properties_quickaction.png)
+   ![資產卡片檢視的屬性快速動作](assets/properties_quickaction.png)
 
 1. 在「屬 [!UICONTROL 性] 」頁面中，編輯各標籤下的中繼資料屬性。 例如，在「基 **[!UICONTROL 本]** 」標籤下，編輯標題、說明等。
 
@@ -367,13 +365,13 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 若要排程啟動資產的特定日期/時間，請使用「準時」欄位旁的日 **[!UICONTROL 期選擇器]** 。
 
-   ![使用「按時間」欄位中的日期時間選擇器或鍵盤按鍵，新增資產啟動的日期和時間](assets/schedule-activation.png)
+   ![日期時間選擇器或使用「準時」欄位中的鍵盤按鍵，新增資產啟動的日期和時間](assets/schedule-activation.png)
 
    *圖：排程資產啟動*
 
 1. 若要在特定持續時間後停用資產，請從「關閉時間」欄位旁的日期選擇器選擇停 **[!UICONTROL 用日期]** /時間。 停用日期應晚於資產的啟用日期。 在「關 [!UICONTROL 閉時間]」後，資產及其轉譯無法透過「資產」網頁介面或HTTP API使用。
 
-   ![使用「關閉時間」欄位中的日期時間選擇器或鍵盤按鍵，新增資產停用的日期和時間](assets/schedule-deactivation.png)
+   ![日期時間選擇器或使用「關閉時間」欄位中的鍵盤按鍵，新增資產停用的日期和時間](assets/schedule-deactivation.png)
 
    *圖：排程資產停用*
 
@@ -385,7 +383,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 若要提供資產評等，請點選/按一下「進階 **** 」標籤，然後點選/按一下適當位置的星號，以指派所要的評等。
 
-   ![評等](assets/ratings.png)
+   ![資產屬性中的進階索引標籤以指派評分](assets/ratings.png)
 
    您指派給資產的評分分數會顯示在「您的評 **[!UICONTROL 分」下]**。 從對資產評分的使用者收到的資產平均評分，會顯示在「評 **[!UICONTROL 分」下]**。 此外，「分級劃分」下方會顯示對平均分級分數貢獻的分 **[!UICONTROL 級分數]**。 您可以根據平均評分分數來搜尋資產。
 
@@ -414,7 +412,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 保留其他屬性和元資料資訊。 複製資產時不會建立部分復本。
 
 1. 從「資產」使用者介面中，選取一或多個資產，然後點選／按一下工具列 **[!UICONTROL 中的]** 「複製」圖示。 或者，從資 **[!UICONTROL 產卡選擇]** 「複製」快速動作。
-   ![copy_icon](assets/copy_icon.png)
+   ![資產UI工具列中的復製圖示](assets/copy_icon.png)
 
    >[!NOTE]
    >
@@ -428,7 +426,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 按一下／點選工 **[!UICONTROL 具列中]** 「貼上資產」圖示。
 
-   ![chlimage_1-219](assets/chlimage_1-14.png)資產會複製至此位置。
+   ![然後，資產UI工具列中的「](assets/chlimage_1-14.png)資產」貼上圖示會複製至此位置。
 
    >[!NOTE]
    >
@@ -439,7 +437,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 1. 導覽至您要移動的資產所在的位置。
 
 1. 選取資產，然後點選／按一下工 **[!UICONTROL 具列中的]** 「移動」圖示。
-   ![move_icon](assets/move_icon.png)
+   ![資產UI工具列中的移動圖示](assets/move_icon.png)
 
 1. 在「移動資產」精靈中，執行下列其中一項作業：
 
