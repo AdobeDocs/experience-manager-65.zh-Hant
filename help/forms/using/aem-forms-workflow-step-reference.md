@@ -2,7 +2,7 @@
 title: OSGi上的表單導向工作流程——步驟參考
 seo-title: OSGi上的表單導向工作流程——步驟參考
 description: OSGi步驟上的表單導向工作流程可讓您快速建立以表單為基礎的調適性工作流程。
-seo-description: OSGi步驟上的表單導向工作流程可讓您快速建立以表單為基礎的調適性工作流程。
+seo-description: OSGi步驟的表單導向工作流程可讓您快速建立以表單為基礎的調適性工作流程。
 uuid: 6f791c45-0e35-4c55-9106-5340caab94b7
 contentOwner: null
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 86649ccfd494435038da06e72fbfed544a7aaf12
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -44,8 +44,11 @@ source-git-commit: 86649ccfd494435038da06e72fbfed544a7aaf12
 * **使用最適化表單：** 指定要定位輸入自適應表單的方法。 如果從「類型」(Type)下拉清單中選擇「最適化表單」(Adaptive form)或「只讀自適應表單」(Read-only adaptive form)，則此選項可用。 您可以使用提交至工作流程的最適化表單、以絕對路徑提供，或以變數的路徑提供。 您可以使用「字串」類型的變數來指定路徑。\
    您可以將多個調適性表單與工作流程建立關聯。 因此，您可以使用可用的輸入方法，在執行時期上指定最適化表單。
 
-* **使用互動式通訊：** 指定定位輸入互動式通訊的方法。 您可以使用提交至工作流程的互動式通訊，以絕對路徑提供，或以變數的路徑提供。 您可以使用「字串」類型的變數來指定路徑。 如果您從「類型」下拉式清單中選取「互動式通訊代理UI」或「互動式通訊Web頻道檔案」，就可使用此選項。\
-   **注意：** 您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的Interactive Communications Agent UI。
+* **使用互動式通訊：** 指定定位輸入互動式通訊的方法。 您可以使用提交至工作流程的互動式通訊，以絕對路徑提供，或以變數的路徑提供。 您可以使用「字串」類型的變數來指定路徑。 如果您從「類型」下拉式清單中選取「互動式通訊代理UI」或「互動式通訊Web頻道檔案」，就可使用此選項。
+
+>[!NOTE]
+>
+>您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的Interactive Communications Agent UI。
 
 * **最適化表單或互動式通訊路徑**:指定最適化表單或互動式通訊的路徑。 您可以使用提交到工作流的自適應表單或互動式通信（在絕對路徑上可用），或從儲存在字串資料類型變數中的路徑檢索自適應表單。
 * **使用下列方式選擇輸入PDF:** 指定非互動式PDF檔案的路徑。 當您在「類型」欄位中選擇非互動式PDF檔案時，此欄位即可使用。 您可以使用相對於裝載的路徑、儲存在絕對路徑上，或使用「檔案」資料類型的變數來選取輸入PDF。 例如， [Payload_Directory]/Workflow/PDF/credit-card.pdf。 crx-repository中不存在路徑。 管理員在使用路徑之前建立路徑。 您需要啟用記錄檔案選項或以表單範本為基礎的最適化表單，才能使用PDF路徑選項。
@@ -407,7 +410,7 @@ AEM檔案服務是一組用來建立、組合和保護PDF檔案的服務。 AEM 
 
 * **[!UICONTROL 使用下列項目選擇「內容根位置]**」:內容根是一個字串值，它指定URI、絕對引用或儲存庫中的位置，以檢索表單設計使用的相對資產。 例如，如果表單設計相對參照影像，例如../myImage.gif,myImage.gif必須位於repository://。 預設值為repository:// ，它指向儲存庫的根級別。
 
-   當您從應用程式中挑選資產時，「內容根URI」路徑必須有正確的結構。 例如，如果從名為SampleApp的應用程式中挑選表單，並將其置於SampleApp/1.0/forms/Test.xdp，則「內容根URI」必須指定為repository://administrator@password/Applications/SampleApp/1.0/forms/，或儲存庫：/Applications/SampleApp/1.0/forms/（當權限為null時）。 以此方式指定內容根URI時，表單中所有參考資產的路徑都會針對此URI進行解析。
+   當您從應用程式中挑選資產時，「內容根URI」路徑必須有正確的結構。 例如，如果從名為SampleApp的應用程式中挑選表單，並將其置於SampleApp/1.0/forms/Test.xdp，則「內容根URI」必須指定為repository://administrator@password/Applications/SampleApp/1.0/forms/，或儲存庫：/Applications/SampleApp/1.0/forms/（當權限為null時）。 以此方式指定「內容根URI」時，表單中所有參考資產的路徑都會針對此URI進行解析。
 
 * **[!UICONTROL 使用]**:XCI檔案可用來說明用於表單設計元素的字型和其他屬性。 您可以將XCI檔案相對於裝載、保留在絕對路徑，或使用「檔案」資料類型的變數。
 
