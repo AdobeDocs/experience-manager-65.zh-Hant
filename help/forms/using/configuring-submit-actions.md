@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -47,7 +47,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 >[!CAUTION]
 >
->如果您以 [XML](../../forms/using/prepopulate-adaptive-form-fields.md) 或JSON資料來預先填寫表單範本、表單資料模型或架構式最適化表單，並抱怨資料不包含&lt;afData>、&lt;afBoundData>和&lt;/afUnboundData>標籤的架構（XML架構、JSON架構、表單範本或表單資料模型），則會填入無界欄位的資料(UnbounboundedData>有界欄位是沒有bindref屬 [性的自適應表單欄位](../../forms/using/prepopulate-adaptive-form-fields.md) )。
+>如果您以 [XML](../../forms/using/prepopulate-adaptive-form-fields.md) 或JSON資料來預先填寫表單範本、表單資料模型或架構式最適化表單，並抱怨資料不包含&lt;afData>、&lt;afBoundData>和&lt;/afUnboundData>標籤的架構（XML架構、JSON架構、表單範本或表單資料模型），則會填入無界欄位的資料(UnbounboundDated有界欄位是沒有bindref屬 [性的自適應表單欄位](../../forms/using/prepopulate-adaptive-form-fields.md) )。
 
 您可以撰寫自訂的提交動作，讓最適化表單符合使用案例。 如需詳細資訊，請參 [閱撰寫最適化表單的自訂提交動作](../../forms/using/custom-submit-action-form.md)。
 
@@ -102,7 +102,8 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 「透 **過電子郵件傳送PDF** 」提交動作會在表單提交成功時，以包含表單資料的PDF傳送電子郵件給一或多個收件者。
 
-**** 注意：此提交操作適用於具有記錄文檔模板的基於XFA的適應性表單和基於XSD的適應性表單。
+>[!NOTE]
+此提交操作適用於具有記錄文檔模板的基於XFA的適應性表單和基於XSD的適應性表單。
 
 ## Invoke a forms workflow {#invoke-a-forms-workflow}
 
@@ -132,7 +133,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 ## Adaptive Form中的伺服器端重新驗證 {#server-side-revalidation-in-adaptive-form}
 
-通常，在任何線上資料擷取系統中，開發人員會在用戶端放置一些javascript驗證，以強制執行一些業務規則。 但是在現代瀏覽器中，使用者可以略過這些驗證，並使用各種技術（例如Web Browser devTools Console）手動進行提交。 這些技術也適用於適應性形式。 表單開發人員可以建立各種驗證邏輯，但技術上來說，使用者可以略過這些驗證邏輯，並將無效的資料送出至伺服器。 無效的資料會中斷表單作者已強制執行的業務規則。
+通常，在任何線上資料擷取系統中，開發人員會在用戶端放置一些javascript驗證，以強制執行一些業務規則。 但是在現代瀏覽器中，使用者可以略過這些驗證，並使用各種技術手動進行提交，例如Web Browser DevTools Console。 這些技術也適用於適應性形式。 表單開發人員可以建立各種驗證邏輯，但技術上來說，使用者可以略過這些驗證邏輯，並將無效的資料送出至伺服器。 無效的資料會中斷表單作者已強制執行的業務規則。
 
 伺服器端重新驗證功能也提供執行最適化表單作者在伺服器上設計最適化表單時所提供驗證的功能。 它可防止在表單驗證中呈現的資料提交和違反業務規則的行為受到任何可能的危害。
 
@@ -156,7 +157,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 ### 支援驗證運算式中的自訂函式 {#supporting-custom-functions-in-validation-expressions-br}
 
-有時，如果是複雜的驗 **證規則**，完全的驗證指令碼會駐留在自訂函式中，而作者會從欄位驗證運算式呼叫這些自訂函式。 若要讓此自訂函式館在執行伺服器端驗證時已知可用，表單作者可在「Adaptive Form Container」屬性的「 **Basic** 」（基本）標籤下設定AEM用戶端程式庫的名稱，如下所示。
+有時，如果是複雜的驗 **證規則**，完全的驗證指令碼會駐留在自訂函式中，作者會從欄位驗證運算式呼叫這些自訂函式。 若要讓此自訂函式館在執行伺服器端驗證時已知可用，表單作者可在「Adaptive Form Container」屬性的「 **Basic** 」（基本）標籤下設定AEM用戶端程式庫的名稱，如下所示。
 
 ![支援驗證運算式中的自訂函式](assets/clientlib-cat.png)
 
