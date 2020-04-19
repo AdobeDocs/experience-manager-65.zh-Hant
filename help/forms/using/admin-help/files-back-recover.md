@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -134,8 +134,9 @@ SQL Server還提供了兩種備份和恢復工具：
 
 使用MySQLAdmin或修改Windows中的INI檔案，以配置MySQL資料庫以二進位日誌模式運行。 (請參 [閱MySQL二進位日誌](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。)InnoBase軟體也提供了MySQL的熱備份工具。 (請參 [閱Innobase熱備份](https://www.innodb.com/hot-backup/features.md)。)
 
-**注意**:MySQL *的預設二進位日誌記錄模式是「語句」，它與Content Services使用的表（已過時）不相容。 在此預設模式中使用二進位記錄會導致Content Services（已過時）失敗。 如果您的系統包含Content Services（已過時），請使用「混合」記錄模式。 要啟用「混合」日誌，請將以下引數添加到my.ini檔案：*
-`binlog_format=mixed log-bin=logname`
+>[!NOTE]
+>
+>MySQL的預設二進位日誌記錄模式是「語句」，它與Content Services使用的表（已過時）不相容。 在此預設模式中使用二進位記錄會導致Content Services（已過時）失敗。 如果您的系統包含Content Services（已過時），請使用「混合」記錄模式。 若要啟用「混合」記錄，請將下列引數新增至my.ini file:*`binlog_format=mixed log-bin=logname`
 
 您可以使用mysqldump實用程式獲得完整的資料庫備份。 需要完整備份，但並不總是方便的。 它們會生成大型備份檔案，並需要時間生成。 要執行增量備份，請確保使用——選項啟動服 `log-bin` 務器，如上節所述。 每次MySQL伺服器重新啟動時，它都停止寫入當前二進位日誌，建立新日誌，然後，從此開始，新日誌將變為當前日誌。 可以使用命令手動強制切換 `FLUSH LOGS SQL` 器。 在第一次完全備份後，後續增量備份將使用mysqladmin實用程式和命令來完成，該命 `flush-logs` 令將建立下一個日誌檔案。
 
