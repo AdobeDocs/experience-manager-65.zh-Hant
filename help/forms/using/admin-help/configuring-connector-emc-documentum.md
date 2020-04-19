@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -59,13 +59,15 @@ EMC Documentum的Connector支援AEM表單與EMC Documentum之間的通信。 如
 
 您可以配置要與Documentum一起使用的儲存庫服務提供方。 儲存庫服務調用被委派給您配置的提供程式。 可使用下列選項：
 
-**** 當前儲存庫服務提供方名稱：當前儲存庫服務提供方的名稱
+**當前儲存庫服務提供方名稱：** 當前儲存庫服務提供方的名稱
 
-**** ECM Documentum儲存庫提供方：使Documentum儲存庫提供程式成為儲存庫的提供程式。 此選項已過時
+**ECM Documentum儲存庫提供方：** 使Documentum儲存庫提供程式成為儲存庫的提供程式。 此選項已過時
 
-**** 儲存庫提供方：使本機儲存庫提供程式成為儲存庫的提供程式
+**儲存庫提供方：** 使本機儲存庫提供程式成為儲存庫的提供程式
 
-***注意&#x200B;**:要選擇所列的儲存庫服務提供方以外的儲存庫服務提供方，請在「應用程式和服務」>「服務管理」中配置RepositoryService。<!-- Fix broken link (See Managing Services) -->*
+>[!NOTE]
+>
+>要選擇所列的儲存庫服務提供方以外的儲存庫服務提供方，請在「應用程式和服務」>「服務管理」中配置RepositoryService。 <!-- Fix broken link (See Managing Services) -->。
 
 1. 在管理控制台中，按一下「服務」>「EMC Documentum的連接器」>「配置設定」。
 1. 在儲存庫服務提供方資訊區中，選擇替代儲存庫服務提供方。
