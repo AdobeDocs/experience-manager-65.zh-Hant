@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 66a3db6cd50ae25849dc173e0714df7c140c1774
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -21,7 +21,7 @@ AEM Forms檔案安全性可讓您建立、儲存並套用預先定義的保全�
 
 ## 使用者資料與資料儲存 {#user-data-and-data-stores}
 
-Document security會將與受保護檔案相關的原則和資料儲存在資料庫中，包括使用者資料，例如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在用戶管理中儲存的策略中授權用戶的資料。 如需有關儲存在使用者管理中的資料，請參閱 [Forms使用者管理：處理使用者資料](/help/forms/using/user-management-handling-user-data.md)。
+Document Security會將與受保護檔案相關的原則和資料儲存在資料庫中，包括使用者資料，例如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在用戶管理中儲存的策略中授權用戶的資料。 如需有關儲存在使用者管理中的資料，請參閱 [Forms使用者管理：處理使用者資料](/help/forms/using/user-management-handling-user-data.md)。
 
 下表映射了文檔安全性在資料庫表中組織資料的方式。
 
@@ -49,7 +49,7 @@ Document security會將與受保護檔案相關的原則和資料儲存在資料
   </tr>
   <tr>
    <td><p><code>EdcRevokationEntity</code></p> </td>
-   <td>儲存有關撤銷和復原受保護檔案的資訊。</td>
+   <td>儲存有關撤銷和恢復受保護檔案的資訊。</td>
   </tr>
   <tr>
    <td><code>EdcMyPolicyListEntity</code></td>
@@ -201,7 +201,9 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. 擁有個人原則的使用者可登入其檔案安全網頁https://[*server*]:[*port*]/edc。
    1. 導覽至「 **[!UICONTROL 服務> Document Security >我的原則」]**。
    1. 開啟原則，並從原則中刪除使用者。
-   **注意**:管理員可使用管理控制台，從「服務> Document Security >我的原則」中，從其他使用者的個人原則搜尋、存取和刪除 **[!UICONTROL 使用者]** 資料。
+   >[!NOTE]
+   >
+   >管理員可使用管理控制台，從「服務> Document Security >我的原則」中，從其他使用者的個人原則搜尋、存取和刪除 **[!UICONTROL 使用者]** 資料。
 
 1. 從用戶管理資料庫中刪除承擔者ID的資料。 如需詳細步驟，請參 [閱Forms使用者管理|處理使用者資料](/help/forms/using/user-management-handling-user-data.md)。
 1. 啟動AEM Forms伺服器。
