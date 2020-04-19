@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: dea9bf9387cf4b69e7054e03c5906ecf25cb0d59
+source-git-commit: b1453d70ee75768057403c5cc93f5c7bad8ed918
 
 ---
 
@@ -646,7 +646,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 ![select_quick_action](assets/select_quick_action.png)
 
-在瀏覽器的「資產」使用者介面中瀏覽資料夾或系列時，您可以使用右上角的「全選  」選項，選取所有顯示或載入的資產。 如果您未在下方捲動，則卡片檢視中只會載入100個資產，清單檢視中只會載入200個資產。 「全選」選項只選取這些多個資產。
+在瀏覽器的「資產」使用者介面中瀏覽資料夾或系列時，您可以使用右上角的「全選  」選項，選取所有顯示或載入的資產。 一開始，只有100個資產會載入卡片檢視，而200個資產則會載入清單檢視。 當您捲動搜尋結果頁面時，檢視中會載入更多資產。 「全 [!UICONTROL 選] 」選項只選取載入的資產。
 
 如需詳細資訊，請參 [閱檢視並選取您的資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 
