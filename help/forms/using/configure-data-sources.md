@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -84,7 +84,8 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 
 ## 為雲端服務設定資料夾 {#cloud-folder}
 
-**注意**:為RESTful、SOAP和OData服務配置雲端服務時，需要配置雲端服務資料夾。
+>[!NOTE]
+為RESTful、SOAP和OData服務配置雲端服務時，需要配置雲端服務資料夾。
 
 AEM中的所有雲端服務設定都會整合在AEM `/conf` 儲存庫的資料夾中。 依預設，檔 `conf` 案夾包含您 `global` 可建立雲端服務組態的檔案夾。 不過，您必須針對雲端組態手動啟用它。 您也可以在中建立其他資料夾， `conf` 以建立並組織雲端服務組態。
 
