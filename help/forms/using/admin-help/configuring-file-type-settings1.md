@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -116,7 +116,9 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 **試用備援轉換器：** PDF產生器可使用Java™或Acrobat將影像檔案轉換為PDF。 當選取此選項，而轉換失敗或達到指定的逾時限制時，PDF產生器會使用替代方法來嘗試轉換。 如果替代方法失敗或達到指定的逾時限制，則會將異常寫入日誌檔案。
 
-***注意&#x200B;**:JPEG 2000檔案只能使用Acrobat進行轉換。*
+>[!NOTE]
+>
+>JPEG 2000檔案只能使用Acrobat進行轉換。
 
 **使用OCR:** 指定是否將OCR（光學字元辨識）套用至PDF。 OCR軟體可讓您搜尋、修正和複製PDF中的文字。
 
