@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -31,13 +31,15 @@ Adobe Experience Manager(AEM)是AEM表單的一個組成部分。 因此，您�
 
 AEM表單備份策略包含兩種備份類型：
 
-**** 系統映像：完整的系統備份，當硬碟或整個電腦停止工作時，可用於恢復電腦內容。 系統映像備份僅在生產部署AEM表單之前才需要。 然後，內部公司策略決定需要系統映像備份的頻率。
+**系統映像：** 完整的系統備份，當硬碟或整個電腦停止工作時，可用於恢復電腦內容。 系統映像備份僅在生產部署AEM表單之前才需要。 然後，內部公司策略決定需要系統映像備份的頻率。
 
-**** AEM表單特定資料：應用程式資料存在於資料庫、全域檔案儲存(GDS)和AEM儲存庫中，且必須即時備份。 GDS是一個目錄，用於儲存進程中使用的長壽命檔案。 這些檔案可能包含PDF、原則或表單範本。
+**AEM表單特定資料：** 應用程式資料存在於資料庫、全域檔案儲存(GDS)和AEM儲存庫中，且必須即時備份。 GDS是一個目錄，用於儲存進程中使用的長壽命檔案。 這些檔案可能包含PDF、原則或表單範本。
 
-***注意&#x200B;**:如果已安裝Content Services（已過時），也請備份Content Storage Root目錄。 (請參[閱內容儲存根目錄（僅限Content Services）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)。)*
+>[!NOTE]
+>
+>如果已安裝Content Services（已過時），也請備份Content Storage Root目錄。 請參 [閱內容儲存根目錄（僅限Content Services）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)。
 
-資料庫用於儲存表單對象、服務配置、進程狀態和對GDS檔案的資料庫引用。 如果您在資料庫中啟用了文檔儲存，則GDS中的持久資料和文檔也會儲存在資料庫中。 可以使用以下方法備份和恢復資料庫：
+資料庫用於儲存表單對象、服務配置、進程狀態和對GDS檔案的資料庫引用。 如果您在資料庫中啟用了文檔儲存，則GDS中的持久資料和文檔也儲存在資料庫中。 可以使用以下方法備份和恢復資料庫：
 
 * **快照備份** 模式表示AEM表單系統處於無限期備份模式，或處於指定的分鐘數內，之後不再啟用備份模式。 要進入或離開快照備份模式，可使用以下選項之一。 恢複方案後，不應啟用快照備份模式。
 
@@ -47,7 +49,9 @@ AEM表單備份策略包含兩種備份類型：
 
 * **滾動備份模式** (Rolling backup mode)表示系統始終處於備份模式，新備份模式會話在前一會話發佈後立即啟動。 沒有超時與滾動備份模式關聯。 當調用LCBackupMode指令碼或API以離開滾動備份模式時，將開始新的滾動備份模式會話。 此模式對於支援連續備份非常有用，但仍允許將舊的和不需要的文檔從GDS目錄中清除。 「備份和恢復」頁不支援滾動備份模式。 恢複方案後，仍然啟用滾動備份模式。 通過使用帶有選項的LCBackupMode指令碼，可以離開連續備份模式(滾動備份 `leaveContinuousCoverage` 模式)。
 
-*注&#x200B;**意**:離開滾動備份模式會立即開始新的備份模式會話。 要完全禁用滾動備份模式，請使 `leaveContinuousCoverage` 用指令碼中的選項，該選項覆蓋現有滾動備份會話。 在快照備份模式下，您可以像通常那樣離開備份模式。*
+>[!NOTE]
+>
+>離開滾動備份模式會立即開始新的備份模式會話。 要完全禁用滾動備份模式，請使 `leaveContinuousCoverage` 用指令碼中的選項，該選項覆蓋現有滾動備份會話。 在快照備份模式下，您可以像通常那樣離開備份模式。
 
 為避免資料遺失，AEM表單的特定資料必須以確保GDS和內容儲存根目錄檔案與資料庫參考建立關聯的方式進行備份。
 
@@ -102,4 +106,4 @@ AEM表單備份策略包含兩種備份類型：
 >
 >這種情況是您唯一應使用此指令碼來更改GDS位置的情況。 若要在AEM表單執行時變更GDS位置，請使用「管理控制台」。 (請參 [閱「設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*」)*
 
-設定GDS路徑後，以維護模式啟動Forms伺服器，並使用管理控制台為新節點更新剩餘的檔案系統路徑。 在您確認所有必要的組態都已更新後，請重新啟動並測試AEM表格。
+設定GDS路徑後，以維護模式啟動表單伺服器，並使用管理控制台為新節點更新剩餘的檔案系統路徑。 在您確認所有必要的組態都已更新後，請重新啟動並測試AEM表格。
