@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -37,7 +37,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
    * 如果您要上傳設定檔案，請在方塊中輸入其路徑和名稱，或按一下「瀏覽」尋找並選取檔案。
 
 1. （可選）在「XMP中繼資料檔案」下方，輸入XMP檔案的路徑和名稱，或按一下「瀏覽」尋找並選取檔案。 XMP檔案可用來包含標準中繼資料資訊。 (請參 [閱關於XMP檔案](converting-files-using-pdf-generator.md#about-xmp-files)。)
-1. 按一下「建立」。建立檔案時，將顯示指向該檔案的連結。 如果轉換期間發生錯誤，會出現警告。 如果您正在建立Postscript檔案，則警告還包含指向日誌檔案的連結。
+1. 按一下 建立。建立檔案時，將顯示指向該檔案的連結。 如果轉換期間發生錯誤，會出現警告。 如果您正在建立Postscript檔案，則警告還包含指向日誌檔案的連結。
 1. 按一下PDF檔案的連結。 檔案會在Acrobat中開啟。
 
 ### 關於XMP檔案 {#about-xmp-files}
@@ -72,19 +72,22 @@ Adobe Extensible Metadata Platform(XMP)為Adobe應用程式提供通用的XML架
 
    * 在「上傳檔案」中，輸入HTML檔案或ZIP檔案的路徑和檔案名稱，或按一下「瀏覽」以尋找並選取它。
    * 在「指定URL」方塊中，輸入要轉換的頁面或網站的URL。
-
-      ***注意&#x200B;**:您要轉換的檔案必須副檔名為。html、.htm或。zip。*
+   >[!NOTE]
+   >
+   >您要轉換的檔案必須副檔名為。html、.htm或。zip。
 
 1. 指定配置設定：
 
    * 若要使用自訂設定，請選取「使用自訂設定」、指定安全性和檔案類型設定，並指定逾時值。 預設值為270秒。
-
-      **注意**:如果您設定「產生PDF」服務以使用Acrobat webCapture，您在此頁面上選取的「檔案類型設定」不會影響產生的PDF。 請改為對伺服器上安裝的Acrobat版本進行適當變更。
+   >[!NOTE]
+   >
+   >如果您設定「產生PDF」服務以使用Acrobat WebCapture，您在此頁面上選取的「檔案類型設定」不會影響產生的PDF。 請改為對伺服器上安裝的Acrobat版本進行適當變更。
 
    * 若要使用現有的設定檔案，請選取「上傳設定檔案」，然後按一下「瀏覽」前往檔案位置。
 
+
 1. 若要上傳XMP檔案，請按一下「瀏覽」並移至檔案位置。 XMP檔案可用來包含標準中繼資料資訊。 (請參 [閱關於XMP檔案](converting-files-using-pdf-generator.md#about-xmp-files)。)
-1. 按一下「建立」。建立檔案時，會出現PDF檔案的連結。
+1. 按一下 建立。建立檔案時，會出現PDF檔案的連結。
 1. 按一下連結，在Acrobat中檢視PDF檔案。
 
 ## 將PDF檔案匯出為其他檔案格式（僅限Windows） {#export-a-pdf-file-to-another-file-format-windows-only}
@@ -117,5 +120,5 @@ PDF產生器支援縮減PDF檔案的大小。
    * 若要使用自訂設定，請選取「使用自訂設定」、指定檔案類型設定，並指定逾時值。 預設值為270秒。
    * 若要使用現有的設定檔案，請選取「上傳設定檔案」，然後按一下「瀏覽」前往檔案位置。
 
-1. 按一下「建立」。
+1. 按一下 建立。
 
