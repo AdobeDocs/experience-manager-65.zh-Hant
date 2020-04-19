@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -355,7 +355,10 @@ AEM Forms與Adobe Analytics的整合可讓您監控和分析客戶與表單和�
 若要體驗參考網站中的整合，請執行下列動作，在AEM中設定Target:
 
 1. 使用jvm引數啟動作者快速入 `-Dabtesting.enabled=true` 門，以在伺服器上啟用A/B測試。
-   **注意**:如果AEM例項是在JBoss上執行，而JBoss是從Tunky安裝中以服務形式啟動，請在檔案中 `-Dabtesting.enabled=true` 的下列項目中新增 `jboss\bin\standalone.conf.bat` 參數：
+
+   >[!NOTE]
+   >
+   >如果AEM例項是在JBoss上執行，而JBoss是從Tunky安裝中以服務形式啟動，請在檔案中 `-Dabtesting.enabled=true` 的下列項目中新增 `jboss\bin\standalone.conf.bat` 參數：
    `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
 1. 存取 `https://<hostname>:<port>/libs/cq/core/content/tools/cloudservices.html`.
