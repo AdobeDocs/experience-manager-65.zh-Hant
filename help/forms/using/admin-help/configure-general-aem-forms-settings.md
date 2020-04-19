@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -35,14 +35,18 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 **temp目錄的位置** AEM表單將建立產品暫存檔案的目錄路徑。 如果此設定的值為空，則位置預設為系統臨時目錄。 確保temp目錄是可寫資料夾。
 
-***注意&#x200B;**:確保臨時目錄位於本地檔案系統中。 AEM表格不支援遠端位置的臨時目錄。*
+>[!NOTE]
+>
+>確保臨時目錄位於本地檔案系統中。 AEM表格不支援遠端位置的臨時目錄。
 
 **全局文檔儲存根目錄** 全局文檔儲存(GDS)根目錄用於以下用途：
 
 * 儲存長期保存的檔案。 長期使用的檔案沒有過期時間，而且會持續存留，直到移除為止（例如，在工作流程中使用的PDF檔案）。 長期使用的檔案是整個系統狀態的關鍵部分。 如果部分或全部這些檔案遺失或損毀，表單伺服器可能會變得不穩定。 因此，此目錄必須儲存在RAID設備上。
 * 儲存處理期間需要的暫存檔案。
 
-   ***注意&#x200B;**:您也可以在AEM表單資料庫中啟用檔案儲存。 但是，使用GDS時，系統效能更好。*
+>[!NOTE]
+>
+>您也可以在AEM表單資料庫中啟用檔案儲存。 但是，使用GDS時，系統效能更好。
 
 * 在群集中的節點之間傳輸文檔。 如果您在叢集環境中執行AEM表單，此目錄必須可從叢集內的所有節點存取。
 * 從遠端API呼叫接收傳入參數。
@@ -53,9 +57,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 * `[WEBSPHERE_HOME]/installedApps/adobe/'server'/DocumentStorage`
 * `[WEBLOGIC_HOME]/user_projects/<domain>/'server'/adobe/AEMformsserver/DocumentStorage`
 
-***注意&#x200B;**:更改GDS根目錄設定的值應特別小心。 GDS目錄可用來儲存流程中使用的長期檔案，以及重要的AEM表單產品元件。 更改GDS目錄的位置是系統的一項主要更改。 錯誤設定GDS目錄的位置會導致AEM表單無法運作，而且可能需要完整重新安裝AEM表單。 如果您為GDS目錄指定了新位置，則應用程式伺服器需要關閉，並且資料必須在伺服器重新啟動之前遷移。 系統管理員必須將所有檔案從舊位置移動到新位置，但保留內部目錄結構。*
+>[!NOTE]
+>
+>更改GDS根目錄設定的值應特別小心。 GDS目錄可用來儲存流程中使用的長期檔案，以及重要的AEM表單產品元件。 更改GDS目錄的位置是系統的一項主要更改。 錯誤設定GDS目錄的位置會導致AEM表單無法運作，而且可能需要完整重新安裝AEM表單。 如果您為GDS目錄指定了新位置，則應用程式伺服器需要關閉，並且資料必須在伺服器重新啟動之前遷移。 系統管理員必須將所有檔案從舊位置移動到新位置，但保留內部目錄結構。
 
-***注意&#x200B;**:請勿為temp目錄和GDS目錄指定相同的目錄。*
+>[!NOTE]
+>
+>請勿為temp目錄和GDS目錄指定相同的目錄。
 
 如需GDS目錄的其他資訊，請參 [閱「準備安裝AEM表單(Single Server)」](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)。
 
@@ -91,7 +99,9 @@ FIPS模式不支援在7.0之前的Adobe Acrobat®版本中使用的加密演算�
 
 通常，啟用FIPS後，Assembler服務將不對任何文檔應用密碼加密。 如果嘗試這樣做，則會拋出FIPSModeException，指出「FIPS模式下不允許密碼加密」。 此外，當基本文檔使用密碼加密時，FIPS模式不支援「文檔描述XML(DDX)PDFFromBookmarks」元素。
 
-***注意&#x200B;**:AEM表單軟體不驗證程式碼以確保FIPS相容性。 它提供FIPS操作模式，以便FIPS認可的算法用於來自FIPS認可的庫(RSA)的加密服務。*
+>[!NOTE]
+>
+>AEM表單軟體不驗證程式碼以確保FIPS相容性。 它提供FIPS操作模式，以便FIPS認可的算法用於來自FIPS認可的庫(RSA)的加密服務。
 
 **啟用WSDL** 選取此選項，可針對屬於AEM表單一部分的所有服務啟用「網站服務定義語言(WSDL)」產生。
 
