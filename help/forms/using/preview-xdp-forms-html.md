@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -78,7 +78,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
       * `/aem/forms` （OSGi上的AEM Forms）
       * `/lc/forms` (AEM Forms on JEE)
-   **注意：** 請確定AEM Forms伺服器已啟動並正在執行。 HTML預覽會連線至CRX伺服器以 *產生* 預覽。
+   >[!NOTE]
+   >
+   >請確定AEM Forms伺服器已啟動並正在執行。 HTML預覽會連線至CRX伺服器以 *產生* 預覽。
 
    ![AEM Forms Designer選項 ](assets/server_options.png)
 
