@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -116,7 +116,9 @@ Aya在手機上填寫簡短的調適性表格，回答幾個問題以確認她�
 
 1. 在每個下拉式欄位中進行選取。
 
-   1. 注意：如果使用者每年的收入超過$200,000，則無法享有此優惠。
+   >[!NOTE]
+   >
+   >如果使用者每年的收入超過$200,000，則無法享有此優惠。
 
 1. 按一下「我&#x200B;**是否符合資格？**” 按鈕.
 1. 按一下「**立即套用**」按鈕繼續。
@@ -284,7 +286,7 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
 **使用者指示：**
 
-1. Navigate to *https://&lt;aemserver>:&lt;port>/aem/start.html*
+1. 導覽至 *https://&lt;aemserver>:&lt;port>/aem/start.html*
 1. 按一下使用者圖示（右上角），並使用「登出」或「**Impersonate as******」功能表選項（如果您目前與管理使用者登入）。
 
    1. 登入方式：
@@ -300,14 +302,14 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
 1. 從右上角按一下「通知（鈴鐺）」圖示。
 1. 按一下「**全部檢視**」以導覽至「收件匣」。
-1. From the Inbox, open the latest “**New Contact Approval**” task.
+1. 從「收件箱」中，開啟最新的「**新聯繫人批准**」任務。
 
    ![新連絡人核准](/help/forms/using/assets/new_contact_approval.png)
 
    **使用者指示：**
 
-1. Open and inspect the read-only adaptive form.
-1. Click on the “**Open MS Dynamics**” button to open the MS Dynamics record in a new window.
+1. 開啟並檢查唯讀最適化表單。
+1. 按一下「**Open MS Dynamics**」（開啟MS Dynamics）按鈕，在新窗口中開啟MS Dynamics記錄。
 1. 在CRM中，您可以看到所有資訊都可以更新
 
    1. （可選）直接在Dynamics中新增呼叫活動。
@@ -316,13 +318,13 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
    1. 添加電話呼叫詳細資訊。
    1. 保存並關閉窗口。
 
-1. Back in AEM, navigate to the top left corner and click “**Submit**” to submit the application.
-1. In the modal, you can leave a message.
-1. Click Done.
+1. 返回AEM，導覽至左上角，然後按一下「**Submit**」以送出應用程式。
+1. 在模型中，您可以留言。
+1. 按一下「完成」。
 
-   ![Activities tab](/help/forms/using/assets/activities_tab.png) ![Confirm New Contact](/help/forms/using/assets/confirm_new_contact.png)
+   ![「活動」頁籤](/help/forms/using/assets/activities_tab.png) 「確 ![認新聯繫人」](/help/forms/using/assets/confirm_new_contact.png)
 
-## Welcome Kit citizen (Aya) {#welcome-kit-citizen-aya}
+## 歡迎Kit公民(Aya) {#welcome-kit-citizen-aya}
 
 **本節：** Aya收到一封電子郵件，其中包含互動式通訊的連結，可摘要她的優點，並包含要填寫的表格欄位。 附上PDF優點陳述並連結至電子郵件中的互動式通訊信件（與互動式通訊具有相同的主題／品牌）。
 
@@ -330,26 +332,26 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
 **使用者指示：**
 
-1. Locate and open the Welcome Kit email.
-1. Scroll to PDF attachment at the bottom of the page.
-1. Click to open the PDF attachment.
-1. Scroll back up in your email client and click on “**View welcome kit online**”.
+1. 找到並開啟歡迎套件電子郵件。
+1. 捲動至頁面底部的PDF附件。
+1. 按一下以開啟PDF附件。
+1. 在電子郵件用戶端中捲動並按一下「線&#x200B;**上檢視歡迎套件**」。
 
-   1. This will open the web channel version of the same document.
+   1. 這會開啟相同檔案的Web頻道版本。
 
-1. For a quick reference to PDF directly:
+1. 若要直接參考PDF:
 
    *https://&lt;aemserver>:&lt;port>/aem/formdetails.html/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook*
 
-1. For a quick reference to IC directly:
+1. 直接參考IC:
 
-   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content?channel=web&amp;mode=preview&amp;wcmmode=disabled*
+   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook:content?channel=web&amp;mode=preview&amp;wcmmode=disabled*
 
-   ![Welcome Benefits Handbook](/help/forms/using/assets/welcome_benefits_handbook.png) ![Interactive Communication Link](/help/forms/using/assets/interactive_communication.png)
+   ![歡迎權益手冊](/help/forms/using/assets/welcome_benefits_handbook.png)![互動式通訊連結](/help/forms/using/assets/interactive_communication.png)
 
-## Renewal Reminder citizen (Aya) {#renewal-reminder-citizen-aya}
+## 續約提醒公民(Aya) {#renewal-reminder-citizen-aya}
 
-**This section:** Camila also schedules a communication reminder so one year later. （自動化／執行及以電子郵件傳送的工作流程步驟）。
+**本節：** 卡米拉還安排了一個通訊提醒，這樣一來，一年後。 （自動化／執行及以電子郵件傳送的工作流程步驟）。
 
 ### Aya使用者動態（電子郵件用戶端） {#aya-user-story-email-client-1}
 
