@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1453d70ee75768057403c5cc93f5c7bad8ed918
+source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
 
 ---
 
@@ -347,7 +347,11 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 使用方向鍵在縮放的影像周圍移動。
 
-另請參閱 [預覽動態媒體資產。](/help/assets/previewing-assets.md)
+>[!MORELIKETHIS]
+>
+>* [預覽動態媒體資產](/help/assets/previewing-assets.md)。
+>* [檢視子資產](managing-linked-subassets.md#viewing-subassets)。
+
 
 ## 編輯屬性和中繼資料 {#editing-properties}
 
