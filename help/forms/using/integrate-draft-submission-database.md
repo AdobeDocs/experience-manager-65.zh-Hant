@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -78,7 +78,9 @@ AEM Forms Portal草稿和提交元件可讓使用者將表單儲存為草稿，�
    要為資料表提供不同的名稱：
 
    * 在Web控制台配置中，查找並按一下表單門戶資料服務示例實施。 您可以變更資料來源和資料表格名稱的值。
-   **注意**:如果您變更表格名稱，請在表單入口網站設定中提供表格名稱。
+   >[!NOTE]
+   >
+   >如果您變更表格名稱，請在表單入口網站設定中提供表格名稱。
 
 1. 保持其他配置不變，然後按一下「 **[!UICONTROL 保存]**」。
 
@@ -97,7 +99,7 @@ AEM Forms Portal草稿和提交元件可讓使用者將表單儲存為草稿，�
   </tr>
   <tr>
    <td>JDBC驅動程式類</td>
-   <td>com.mysql.jdbc.driver</td>
+   <td>com.mysql.jdbc.Driver</td>
   </tr>
   <tr>
    <td>JDBC連接URI<br /> </td>
