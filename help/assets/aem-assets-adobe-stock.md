@@ -3,7 +3,7 @@ title: 在AEM Assets中管理Adobe Stock資產
 description: 在AEM中搜尋、擷取、授權及管理Adobe Stock資產。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 62e82b6da2a5f961acf8cbc30ad29b3c25b1ecef
+source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
 
 ---
 
@@ -118,10 +118,9 @@ Adobe Stock服務可讓設計人員和企業針對其所有創意專案，取用
 
 當使用者更新授權參考欄位時，授權參考資訊會在AEM中更新，但不會在Adobe Stock網站上更新。 同樣地，如果使用者更新Adobe Stock網站上的參考欄位，則AEM中的更新不會同步。
 
-## Related resources {#related-resources}
+>[!MORELIKETHIS]
+>
+>* [有關搭配使用Adobe Stock資產和AEM資產的教學影片](https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html)
+>* [Adobe Stock企業計畫說明](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
+>* [Adobe Stock常見問答集](https://helpx.adobe.com/stock/faq.html)
 
-[有關搭配使用Adobe Stock資產和AEM資產的教學影片](https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html)
-
-[Adobe Stock企業計畫說明](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
-
-[Adobe Stock常見問答集](https://helpx.adobe.com/stock/faq.html)
