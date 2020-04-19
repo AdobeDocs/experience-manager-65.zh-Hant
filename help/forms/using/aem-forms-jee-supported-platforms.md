@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -521,14 +521,16 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 * 安裝的磁碟空間：僅適用於Workbench 1.7 GB，在單一硬碟上2.7 GB可完整安裝Workbench、Designer和範例元件400 MB（適用於臨時安裝目錄）- 200 MB（適用於使用者臨時目錄）和200 MB（適用於Windows臨時目錄）。 如果所有這些位置都駐留在單個驅動器上，則安裝期間必須有1.5 GB的可用空間。 安裝完成後，將刪除複製到臨時目錄的檔案。
 
 * 運行Workbench的記憶體：2GB的記憶體
-* 硬體需求：Intel® Pentium® 4或AMD等級，1 GHz處理器
+* 硬體需求：Intel® Pentium® 4或AMD相當等級，1 GHz處理器
 * 最低1024 X 768像素或更高的螢幕解析度（含16位元色彩或更高）
 * TCP/IPv4或TCP/IPv6網路連線至JEE伺服器上的AEM Forms
 * 您必須擁有管理權限，才能在Windows上安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
 
 ### 設計人員 {#designer}
 
-**注意：** 若要在Windows上安裝Designer，請以管理權限執行安裝程式。
+>[!NOTE]
+>
+>若要在Windows上安裝Designer，請以管理權限執行安裝程式。
 
 * Microsoft® Windows® 2016 Server、Microsoft Windows 10
 
