@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -55,7 +55,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:PermSize=256m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 ```
 
-**注意**:建議的設定適用於Windows 2008 R2 8 Core和Oracle HotSpot 1.7（64位元）JDK，應根據您的系統配置放大或縮小。
+>[!NOTE]
+>
+>建議的設定適用於Windows 2008 R2 8 Core和Oracle HotSpot 1.7（64位元）JDK，應根據您的系統配置放大或縮小。
 
 ## 使用Web伺服器 {#using-a-web-server}
 
@@ -63,7 +65,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 例如，執行以下步驟以對具有JBoss的Apache Web Server 2.0 32位啟用壓縮：
 
-***注意&#x200B;**:以下說明不適用於除Apache Web Server 2.0 32位元以外的任何伺服器。 如需其他伺服器的特定步驟，請參閱相應的產品檔案。*
+>[!NOTE]
+>
+>以下說明不適用於除Apache Web Server 2.0 32位元以外的任何伺服器。 如需其他伺服器的特定步驟，請參閱相應的產品檔案。
 
 以下步驟演示了使用Apache Web Server啟用壓縮所需的更改
 
