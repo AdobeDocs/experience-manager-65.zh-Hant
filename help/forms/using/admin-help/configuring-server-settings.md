@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -43,7 +43,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    >[!NOTE]
    >
-   >如果您使用Microsoft Exchange Server且電子郵件地址是無效的電子郵件地址，則Microsoft exchange伺服器無法向分發清單發送電子郵件。 要解決此問題，請為Microsoft exchange服務 **器上的每個分發清單分別選擇「啟用外部通信** 」選項。
+   >如果您使用Microsoft Exchange Server且電子郵件地址是無效的電子郵件地址，則Microsoft Exchange伺服器無法向分發清單發送電子郵件。 要解決此問題，請為Microsoft Exchange服務 **器上的每個分發清單分別選擇「啟用外部通信** 」選項。
 
 1. 按一下「儲存」。
 
@@ -77,7 +77,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 任務分配
 * 期限
 
-若要產生群組的電子郵件通知，請在「使用者管理」中指定群組的電子郵件地址。 <!--Fix broken link See Setting up and organizing users -->當表單工作流程傳送電子郵件通知給群組時，群組內指定電子郵件地址的每位成員都會收到電子郵件通知。 當群組成員收到電子郵件通知並想要申請該任務時，該成員必須按一下電子郵件通知中的報銷申請連結，此連結會在「工作區」中開啟任務詳細資訊頁面。 從那裡，成員可以主張或主張並開啟工作項目。
+若要產生群組的電子郵件通知，請在「使用者管理」中指定群組的電子郵件地址。 <!--Fix broken link See Setting up and organizing users -->當表單工作流程傳送電子郵件通知給群組時，群組內指定電子郵件地址的每位成員都會收到電子郵件通知。 當群組成員收到電子郵件通知並想要申請工作時，該成員必須按一下電子郵件通知中的報銷申請連結，此連結會在「工作區」中開啟工作詳細資訊頁面。 從那裡，成員可以主張或主張並開啟工作項目。
 
 >[!NOTE]
 >
@@ -195,15 +195,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 `<`*PORT *是應用`>`程式伺服器的HTTP偵聽器的埠號。 支援的應用程式伺服器的預設HTTP偵聽器埠如下：
 
-**** JBoss:郵遞區號8080
+**JBoss:** 郵遞區號8080
 
-**** Oracle webLogic Server:郵編：7001
+**Oracle WebLogic Server:** 郵編：7001
 
-**** IBM webSphere:郵遞區號9080
+**IBM WebSphere:** 郵遞區號9080
 
 要使這些URL正常運作，請 `<`*用適&#x200B;*合您環境的埠號替換PORT`>`。
 
-***注意&#x200B;**:如果您使用Forms以外的自訂Web應用程式來讓使用者存取工作，則必須改用適合您自訂應用程式的URL格式。*
+>[!NOTE]
+>
+>如果您使用Forms以外的自訂Web應用程式來讓使用者存取工作，則必須改用適合您自訂應用程式的URL格式。
 
 ### 可變選擇器 {#variable-picker}
 
@@ -229,7 +231,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **group-name** 指派工作項目的群組名稱。
 
-**注意**:如 *果變數沒有值，則不會傳回任何內容。*
+>[!NOTE]
+>
+>如果變數沒有值，則不會傳回任何內容。
 
 對於停止的分支，您可以在「主旨」和「通知範本」方塊中使用下列變數：
 
@@ -271,7 +275,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 配置業務活動監視連接 {#configuring-business-activity-monitoring-connections}
 
-Business Activity Monitoring（可選模組）提供一組操作儀表板，可即時查看您的操作和關鍵效能指標。
+Business Activity Monitoring是一個可選模組，提供一組操作儀表板，可即時查看您的操作和關鍵效能指標。
 
 在「BAM配置設定」頁上，可以設定到運行BAM的伺服器的連接，以便跟蹤進程相關事件並將其發送到該伺服器。
 
