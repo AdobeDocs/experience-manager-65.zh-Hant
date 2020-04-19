@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -306,7 +306,9 @@ We.Finance會不時檢查其信用卡應用程式的效能，以檢查客戶可�
 1. 開啟CRXDE Lite並備份下列檔案：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 將上述檔案中 `onReportLoadSuccess` 的函式定義取代為下列檔案中的函式定義：/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：這些變更僅供示範之用。 確保完成此過程後恢復檔案內容。
+   >[!NOTE]
+   >
+   >這些變更僅供示範之用。 確保完成此過程後恢復檔案內容。
 
 1. 重新整理您產生的報表，您會看到下列內容。 檢閱報告控制面板。
 
@@ -555,7 +557,9 @@ We.Finance會不時審查其抵押申請表現，以檢查客戶可能面臨的�
 1. 開啟CRXDE Lite並備份下列檔案：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 將上述檔案中 `onReportLoadSuccess` 的函式定義取代為下列檔案中的函式定義：/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：這些變更僅供示範之用。 確保完成此過程後恢復檔案內容。
+   >[!NOTE]
+   >
+   >這些變更僅供示範之用。 確保完成此過程後恢復檔案內容。
 
 1. 重新整理您產生的報表，您會看到下列內容。 檢閱報告控制面板。
 
@@ -572,7 +576,7 @@ We.Finance的Microsoft Dynamics住房抵押方案涉及以下角色：
 * We.Finance客戶Sarah Rose
 * We.Finance Microsoft Dynamics實例的管理員
 
-Microsoft Dynamics的「住房抵押」應用程式逐步說明，當參考網站使用Microsoft Dynamics進行資料整合時，We.Finance客戶可如何使用網站申請住房抵押。 本逐步說明的結尾是由Microsoft Dynamics所接收的使用者填入的資料。 在繼續執行此方案之前，您必須完成We.Finance參考網站的 [Microsoft Dynamics 365住房抵押工作流程配置](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)。
+Microsoft Dynamics的「住房抵押」應用程式逐步說明，當參考網站使用Microsoft Dynamics進行資料整合時，We.Finance客戶可如何使用網站申請住房抵押。 本逐步說明的結尾是由Microsoft Dynamics所接收的使用者填入的資料。 在繼續執行此方案之前，您必須完成We.Finance參考網站的 [Microsoft Dynamics 365住房抵押工作流程的配置](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)。
 
 ### Sarah造訪We.Finance網站並申請住房抵押 {#sarah-visits-we-finance-website-and-applies-for-home-mortgage-1}
 
@@ -782,7 +786,7 @@ We.Finance Wealth Management情境包含下列角色：
 
 ### 莎拉造訪了We.Finance網站，並開啟了Blue Chip Growth Fund招股說明書 {#sarah-visits-we-finance-website-and-opens-the-blue-chip-growth-fund-prospectus}
 
-莎拉·羅絲正計畫投資一隻共同基金。 她是We.Finance的現有客戶，因此，她造訪We.Finance入口網站，以探索可用的共同基金。 她進入財富管理部，開啟We.Finance藍籌股增長基金頁面。 該頁包含招股說明書的連結，其中包含有關目前及歷史價格、每月業績、行業多元化、開支、費用、稅金，以及更多有關基金的資訊。
+莎拉·羅絲正計畫投資一隻共同基金。 她是We.Finance的現有客戶，因此，她造訪We.Finance入口網站，以探索可用的共同基金。 她進入財富管理部，開啟We.Finance藍籌增長基金頁面。 該頁包含招股說明書的連結，其中包含有關目前及歷史價格、每月業績、行業多元化、開支、費用、稅金，以及更多有關基金的資訊。
 
 ![slide1](assets/slide1.png)
 
