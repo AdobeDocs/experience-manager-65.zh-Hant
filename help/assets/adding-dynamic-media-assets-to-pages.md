@@ -1,6 +1,6 @@
 ---
 title: 新增動態媒體資產至頁面
-description: 如何在AEM中將Dynamic media元件新增至頁面
+description: 如何在AEM中將Dynamic Media元件新增至頁面
 uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,20 +9,20 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 202e4d5d0e3fa285b9973e4709a02ca77ccb6e71
 
 ---
 
 
-# 新增動態媒體資產至頁面{#adding-dynamic-media-assets-to-pages}
+# Adding Dynamic Media Assets to Pages{#adding-dynamic-media-assets-to-pages}
 
-若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增 **Dynamic Media**、 **Interactive Media**、 **Media**&#x200B;或 **** Video 360全景媒體元件。 若要這麼做，請進入「版面」模式並啟用「動態媒體」元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。 動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
+若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增 **Dynamic Media**、 **Interactive Media**、 **Media**&#x200B;或 **** Video 360全景媒體元件。若要這麼做，請進入「版面」模式並啟用「動態媒體」元件。然後，您可以將這些元件新增至頁面，並新增資產至元件。動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
 
-如果您使用AEM做為WCM，請直接將Dynamic media資產新增至頁面。 如果您使用協力廠商來處理WCM，請連結 [或](/help/assets/linking-urls-to-yourwebapplication.md)[內嵌資](/help/assets/embed-code.md) 產。 如需多方互動網站，請參閱將最佳化 [的影像傳送至多方互動網站](/help/assets/responsive-site.md)。
+如果您使用AEM做為WCM，請直接將動態媒體資產新增至頁面。如果您使用協力廠商來處理WCM，請連結 [或](/help/assets/linking-urls-to-yourwebapplication.md)[內嵌資](/help/assets/embed-code.md) 產。如需多方互動網站，請參閱將最佳化 [的影像傳送至多方互動網站](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
->您必須先發佈資產，才能將資產新增至AEM中的頁面。 請參閱 [發佈動態媒體資產](/help/assets/publishing-dynamicmedia-assets.md)。
+>您必須先發佈資產，才能將資產新增至AEM中的頁面。 See [Publishing Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md).
 
 ## 新增動態媒體元件至頁面 {#adding-a-dynamic-media-component-to-a-page}
 
@@ -57,9 +57,9 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 ## 本地化動態媒體元件 {#localizing-dynamic-media-components}
 
-您可透過下列兩種方式將Dynamic media元件當地語系化：
+您可透過下列兩種方式將Dynamic Media元件當地語系化：
 
-* 在「網站」的網頁中，開啟「屬 **[!UICONTROL 性]** 」並選 **[!UICONTROL 取「進階]** 」標籤。 選擇所要的本地化語言。
+* 在「網站」的網頁中，開啟「屬 **[!UICONTROL 性]** 」並選 **[!UICONTROL 取「進階]** 」標籤。選擇所要的本地化語言。
 
    ![chlimage_1-172](assets/chlimage_1-538.png)
 
@@ -113,13 +113,13 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像回應，您可以設定中斷點或套用回應式影像預設集。
 
-您可以點選元件中的「編輯」圖示，然後點選「動態媒體設定」，以編 **[!UICONTROL 輯下列]** 「動態媒體 **[!UICONTROL 設定」]**。
+您必 *須先點選元件中的「編輯」圖示，然後點選「動態媒體設定」，以編輯下列「動態媒體設定」*********。
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->依預設，動態媒體影像元件是可調式的。 如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
+>依預設，動態媒體影像元件是可調式的。如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
 
 * **[!UICONTROL 檢視器預設]**-從下拉式選單中選取現有的檢視器預設。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 請參閱管理檢視器預設集。 如果您使用影像預設集，則無法選取檢視器預設集，反之亦然。
 
@@ -139,7 +139,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
    如果您正在檢視影像集、回轉集或混合媒體集，則此選項不可用。
 
-   您可以點選元件中的「編輯」，編輯下列 **[!UICONTROL 進階設定]** 。
+   You can edit the following Advanced Settings by tapping **[!UICONTROL Edit]** in the component.
 
 * **[!UICONTROL 標題]**-更改影像的標題。
 
@@ -162,7 +162,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 ![chlimage_1-173](assets/chlimage_1-540.png)
 
-按一下元件中的「編輯」，即可編輯下列 **[!UICONTROL 動態媒體]** 「設定」。
+You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edit]** in the component.
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
    * 將標題檔案與視訊關聯： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_caption.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_caption.html)
    * 將導覽檔案與視訊建立關聯： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_navigation.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_navigation.html)
-   按一下元件中的「編輯」(Edit **** )可編輯以下「高級設定」(Advanced Settings)。
+   You can edit the following Advanced Settings by clicking **[!UICONTROL Edit]** in the component.
 
 * **[!UICONCONTROL標題**-更改視頻的標題。
 
@@ -192,17 +192,17 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 ![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
 
-按一下元件中的「編輯」，即可編輯下列 **[!UICONTROL 動態媒體]** 設定。
+您必須按一下元件中的「編輯」，編輯下列 **[!UICONTROL 動態媒]** 體設定。
 
 >[!NOTE]
 >
->依預設，動態媒體影像元件是可調式的。 如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
+>依預設，動態媒體影像元件是可調式的。如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
 
 * **[!UICONTROL 影像修飾元]**-您可以提供其他影像指令來套用影像效果。 這些說明在「影像預設集」和「影像伺服命令」參考中。
 
    如果您正在檢視影像集、回轉集或混合媒體集，則此選項不可用。
 
-   按一下元件中的「編輯」(Edit **** )可編輯以下「高級設定」(Advanced Settings)。
+   You can edit the following Advanced Settings by clicking **[!UICONTROL Edit]** in the component.
 
 * **[!UICONTROL 標題]**-更改「智慧裁切」影像的標題。
 
@@ -238,7 +238,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 ![chlimage_1-174](assets/chlimage_1-541.png)
 
-您可以點選元件中的「編 **[!UICONTROL 輯]** 」( **[!UICONTROL Edit]** )，編輯下列「一般」(General)設定。
+You can edit the following **[!UICONTROL General]** settings by tapping **[!UICONTROL Edit]** in the component.
 
 * **[!UICONTROL 檢視器預設]**-從下拉式選單中選取現有的檢視器預設。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 檢視器預設集必須先發佈，才能使用。 請參閱管理檢視器預設集。
 
@@ -248,7 +248,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 * **[!UICONTROL 高度]**-如果希望影像為固定大小，請以像素輸入值。 將此值留空可讓資產具有適應性。
 
-   您可以按一下元件 **[!UICONTROL 中的「編輯」]** ，編輯下列「新 **** 增至購物車」設定。
+   You can edit the following **[!UICONTROL Add To Cart]** settings by clicking **[!UICONTROL Edit]** in the component.
 
 * **[!UICONTROL 顯示產品資產]**-預設情況下，此值為選定值。 產品資產會依「商務」模組中的定義，顯示產品的影像。 清除核取標籤，不會顯示產品資產。
 
@@ -270,10 +270,10 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 >如果您的網頁有下列項目：
 >
 >* 在相同頁面上 **[!UICONTROL 使用Panoramic Media]** （全景媒體）元件的多個例項。
->* 每個實例都使用相同的資產類型。
+>* 每個例項都使用相同的資產類型。
 >
 >
-請注意，不支援為該頁面上的每個 **[!UICONTROL Panoramic Media]** （全景媒體）元件指派不同的檢視器預設集。
+請注意，不支援為該頁面上的每個 **[!UICONTROL Panoramic Media]**  (全景媒體) 元件指派不同的檢視器預設集。
 >
 >但是，您可以針對頁面內使用相同類型資產的所有全景媒體元件使用相同的檢視器預設集。
 
@@ -309,10 +309,10 @@ HTTP/2是全新、更新的Web通訊協定，可改善瀏覽器和伺服器的�
 
 >[!MORELIKETHIS]
 >
->* [在AEM Dynamic media中使用視訊播放器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-player-feature-video-use.html)
->* [搭配AEM Dynamic media使用互動式視訊](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-interactive-video-feature-video-use.html)
->* [使用AEM Dynamic media瞭解資產檢視器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-viewer-feature-video-understand.html)
->* [搭配AEM Dynamic media使用自訂視訊縮圖](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-thumbnails-feature-video-use.html)
->* [瞭解使用AEM Dynamic media進行色彩管理](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-color-management-technical-video-setup.html)
->* [搭配AEM Dynamic media使用影像銳利化](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-image-sharpening-feature-video-use.html)
+>* [在AEM Dynamic Media中使用視訊播放器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-player-feature-video-use.html)
+>* [搭配AEM Dynamic Media使用互動式視訊](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-interactive-video-feature-video-use.html)
+>* [使用AEM Dynamic Media瞭解資產檢視器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-viewer-feature-video-understand.html)
+>* [搭配AEM Dynamic Media使用自訂視訊縮圖](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [瞭解使用AEM Dynamic Media進行色彩管理](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-color-management-technical-video-setup.html)
+>* [搭配AEM Dynamic Media使用影像銳利化](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-image-sharpening-feature-video-use.html)
 
