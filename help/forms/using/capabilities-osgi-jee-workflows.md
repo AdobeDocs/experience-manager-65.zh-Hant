@@ -9,7 +9,7 @@ topic-tags: publish
 discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: 0a2d53aa3eab4eb4ec58fa9b28bef675715b1d09
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
 
 ## AEM收件匣和HTML工作區 {#aem-inbox-and-html-workspace}
 
-AEM Inbox可用來在OSGi上執行和監控以表單為中心的AEM工作流程。 HTML工作區可讓您執行和監視AEM Forms JEE工作流程。 下表列出OSGi上的「AEM Inbox for Forms-centric AEM Workflows」和「AEM Forms JEE Workflows的HTML Workspace」中可用的重要動作。
+您可以使用AEM Inbox在OSGi上執行和監控以表單為中心的AEM工作流程。 但是，HTML工作區可讓您執行和監控AEM Forms JEE工作流程。 下表可協助您瞭解OSGi上的「AEM Inbox for Forms導向的AEM工作流程」和AEM Forms JEE工作流程的「HTML工作區」中提供的各種重要動作。
 
 <table>
  <tbody>
@@ -97,7 +97,7 @@ AEM Inbox可用來在OSGi上執行和監控以表單為中心的AEM工作流程�
 
 ## OSGi和AEM Forms JEE工作流程上的表單導向AEM工作流程 {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Management)有不同的功能集。 下表列出OSGi和AEM Forms on JEE Workflows中以表單為中心的AEM Workflows的重要功能與支援：
+OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Management)有不同的功能集。 下表可協助您瞭解在OSGi和AEM Forms on JEE工作流程中，以表單為中心的AEM工作流程中提供的重要功能：
 
 <table>
  <tbody>
@@ -153,23 +153,23 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
   </tr>
   <tr>
    <td>電子簽名(Adobe Sign)</td>
-   <td>支援 <sup>的[1]</sup></td>
-   <td>支援 <sup>的[5]</sup></td>
+   <td>Supported <sup>[1]</sup></td>
+   <td>Supported <sup>[5]</sup></td>
   </tr>
   <tr>
    <td>管理任務和表單應用程式</td>
-   <td>支援 <sup>的[2]</sup><br /> </td>
-   <td>支援 <sup>的[2]</sup></td>
+   <td>Supported <sup>[2]</sup><br /> </td>
+   <td>Supported <sup>[2]</sup></td>
   </tr>
   <tr>
    <td>檔案服務</td>
-   <td>支援 <sup>的[3]</sup></td>
-   <td>支援 <sup>的[3]</sup></td>
+   <td>Supported <sup>[3]</sup></td>
+   <td>Supported <sup>[3]</sup></td>
   </tr>
   <tr>
    <td>將完成的工作演算為最適化表單或PDF檔案</td>
    <td>支援</td>
-   <td>支援[4]</td>
+   <td>支援 [4]</td>
   </tr>
   <tr>
    <td>與信件管理整合</td>
@@ -203,12 +203,12 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
   </tr>
   <tr>
    <td>HTML5表格、互動式PDF表格、表格集<br /> </td>
-   <td>Not Supported<br /> </td>
+   <td>不支援<br /> </td>
    <td>支援</td>
   </tr>
   <tr>
    <td>流程報告</td>
-   <td>Not Supported<br /> </td>
+   <td>不支援<br /> </td>
    <td>支援<br /> </td>
   </tr>
   <tr>
@@ -283,7 +283,7 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
   </tr>
   <tr>
    <td>在工作流程結束時傳送電子郵件</td>
-   <td>支援 <sup>的[7]</sup></td>
+   <td>Supported <sup>[7]</sup></td>
    <td>支援</td>
   </tr>
   <tr>
@@ -319,10 +319,10 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
  </tbody>
 </table>
 
-1. 您可以在OSGi上使用表單導向的AEM工作流程來簽署已填妥的最適化表單。 OSGi上的表單導向AEM工作流程支援表單簽署。 不 [支援表單簽署](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 。
+1. 您可以在OSGi上使用表單導向的AEM工作流程來簽署填充的最適化表單。 OSGi上的表單導向AEM工作流程支援表單簽署。 不 [支援表單簽署](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 。
 
-1. 您需要存取AEM Inbox才能執行和監視AEM Forms OSGi AEM Workflows和HTML Workspace，以執行和監視AEM Forms JEE Workflows。
-1. 原生AEM Forms Document services適用於OSGi上的表單導向AEM工作流程和JEE工作流程上的AEM Forms。 AEM Workflow使用原生檔案服務，在OSGi和AEM Forms JEE（流程管理）工作流程中使用表單導向的AEM工作流程。
+1. 您需要存取AEM Inbox，才能在AEM Forms OSGi和HTML Workspace上執行和監視「表單導向」工作流程，以執行和監視AEM Forms JEE工作流程。
+1. 原生AEM Forms Document Services適用於OSGi上的表單導向AEM工作流程和JEE工作流程上的AEM Forms。 AEM Workflow使用原生檔案服務，在OSGi和AEM Forms JEE（流程管理）工作流程中使用表單導向的AEM工作流程。
 1. AEM Forms JEE Workflows只能轉譯最適化表單。 它不支援將最適化表單轉換為PDF檔案。
 1. AEM表單JEE工作流程沒有Adobe Sign的個別步驟。 您需要AEM表單JEE工作流程中啟用Adobe Sign的最適化表單。 如需詳細資訊，請參 [閱Adobe Sign檔案](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
 1. 您可以使用「調 [用表單資料模型服務](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) 」步驟來叫用web-service服務，並張貼或擷取第三方應用程式的資料。
