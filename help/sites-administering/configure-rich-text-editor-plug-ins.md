@@ -1,14 +1,9 @@
 ---
 title: 設定Rich Text Editor外掛程式
-description: 瞭解如何設定AEM Rich Text Editor外掛程式，以啟用個別功能。
-uuid: 012552b7-5e32-4d74-be07-b441c3d4b47b
+description: 瞭解如何設定Adobe Experience Manager Rich Text Editor外掛程式，以啟用個別功能。
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
-mini-toc-levels: 1
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 72cdeff04e18c13e4b31543bafcbd5ffa65a78a7
+source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
 
 ---
 
@@ -21,7 +16,7 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都包含featu
 
 >[!NOTE]
 >
->使用CRXDE Lite時，建議使用「全部儲存」定期儲存變更。
+>使用CRXDE Lite時，建議使用「全部儲存」選項定期儲 [!UICONTROL 存變更] 。
 
 ## 啟動外掛程式並設定features屬性 {#activateplugin}
 
@@ -600,20 +595,18 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都包含featu
 當spellcheck外掛程式啟動時，RTE會針對每個適當的語言使用字典。 然後根據網站的語言選擇，分別從子樹中抽取語言屬性或從URL中抽取語言；例如。 分支 `/en/` 被選中為英語，分支被選 `/de/` 中為德語。
 
 >[!NOTE]
-訊息「拼字檢查失敗」。 is seen if a check is treed for a language that is not installed.
+如果 `Spell checking failed` 嘗試檢查未安裝的語言，則會看到消息。 標準字典位於 `/libs/cq/spellchecker/dictionaries`，以及適當的讀我檔案。 請勿修改檔案。
 
-標準AEM安裝包含下列字典：
-
-* 美國英文(en_us)
-* 英文(en_gb)
-
->[!NOTE]
-標準字典位於 `/libs/cq/spellchecker/dictionaries`，以及適當的讀我檔案。 請勿修改檔案。
-
-若要新增更多字典，請依照下列步驟進行。
+標準AEM安裝包含美國英文(`en_us`)和英文(`en_gb`)的字典。 若要新增更多字典，請依照下列步驟進行。
 
 1. 導覽至https://extensions.openoffice.org/ [頁面](https://extensions.openoffice.org/)。
-1. 選擇所需的語言並下載具有拼寫定義的ZIP檔案。 解壓檔案系統上的存檔內容。
+
+1. 執行下列任一項作業，以尋找您選擇的語言字典：
+
+   * 搜尋您選擇的語言字典。 在字典頁面上，找到原始來源或作者網頁的連結。 在此頁面上找到v2.x的字典檔案。
+   * 在https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries上搜尋v2.x字典 [檔案](https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries)。
+
+1. 下載包含拼字定義的封存檔。 解壓檔案系統上的存檔內容。
 
    >[!CAUTION]
    僅支援 `MySpell` OpenOffice.org v2.0.1或更早版本的字典。 由於字典現在是封存檔案，因此建議您在下載後確認封存。
@@ -622,9 +615,8 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都包含featu
 1. 將。aff和。dic檔案載入到儲存庫中，位於 `/apps/cq/spellchecker/dictionaries`。
 
 >[!NOTE]
-RTE拼字檢查器是隨選的。 當您開始輸入文字時，它不會自動執行。
-若要執行拼字檢查程式，請點選／按一下工具列上的「拼字檢查程式」按鈕。 RTE會檢查單字的拼字，並反白顯示拼字錯誤的單字。
-如果您加入拼字檢查程式所建議的任何變更，文字變更和拼字錯誤的字詞狀態將不再反白顯示。 要運行拼字檢查器，請再次點選／按一下「拼字檢查器」按鈕。
+RTE拼字檢查器是隨選的。 當您開始輸入文字時，它不會自動執行。 要運行拼字檢查器，請按一下工 [!UICONTROL 具欄中的] 「拼字檢查器」。 RTE會檢查單詞的拼字，並反白顯示拼寫錯誤的單詞。
+如果您加入拼字檢查器建議的任何變更，文字的狀態會變更，拼字錯誤的字詞不會再反白顯示。 要運行拼字檢查器，請再次點選／按一下「拼字檢查器」按鈕。
 
 ## 設定還原和重做動作的步驟記錄大小 {#undohistory}
 
