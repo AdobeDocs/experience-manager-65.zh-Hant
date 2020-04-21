@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
+source-git-commit: 7daf89f7e69d3e2e938780ff98fd2df46723e708
 
 ---
 
@@ -25,10 +25,10 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 
 | Image<br>(URL) | 縮圖 | 大小<br> (JPEG) | 大小(WebP)<br> （含智慧型影像） | 減少% |
 |---|---|---|---|---|
-| [影像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
-| [影像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
-| [影像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
-| [影像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
+| [影像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
+| [影像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
+| [影像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
+| [影像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
 |  |  |  |  | 平均= 51% |
 
 與上述類似，Adobe也透過來自即時客戶網站的7009個URL執行測試，並且由於智慧型影像功能，JPEG的檔案大小最佳化率平均提高了38%，而WebP格式的PNG的檔案大小最佳化率提高了31%。
@@ -72,25 +72,24 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 * JPEG
 * PNG
 
-對於URL中提及的任何其他格式，您應明確關閉「智慧型影像」。  將修飾 `bfc=off` 元附加至JPEG和PNG以外檔案格式的URL。 您可以使用下列其中一種方法來完成此作業：
+<!-- For any other format mentioned in a URL, you should explicity turn off Smart Imaging.  Append modifier `bfc=off` to the URL for file formats other than JPEG and PNG. You can accomplish this by using either one of the following methods:
 
-* 如果URL中提及 `fmt` 修飾詞，請使用規則集。
-* 在相關預設集的URL修飾元欄位中附加。
+* Use a ruleset if the `fmt` modifier is mentioned in the URL. 
+* Append in URL modifiers field of the presets concerned.
 
-Adobe正在處理不需要您附加至或的永久 `bfc=off` 性修 `fmt !=JPEG` 正 `fmt !=PNG`。 此主題會在傳送修正後更新。
-
+Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
 ## 智慧型影像處理如何與我們現有已使用的影像預設集搭配運作？ {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
 Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您的所有影像設定，但如果要求的檔案格式為JPEG或PNG，品質(qlt)和格式(fmt)除外。 對於格式轉換，我們會依照您的影像預設集設定所定義，維持完整的視覺完整性，但檔案大小會較小。 如果原始影像大小小於智慧型影像產生的大小，則會提供原始影像。
 
-此外，如果您的影像預設集是用來傳回或 `fmt !=JPEG` ，請 `fmt !=PNG`務必在預設修飾 `bfc=off` 元欄位中附加，以傳回要求的檔案格式。
+<!-- In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
 ## 我是否必須變更任何URL、影像預設集，或在我的網站上部署智慧型影像的新程式碼？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
 否. 智慧型影像功能可與您現有的影像URL和影像預設集完美搭配運作。 此外，智慧型影像功能不需要您在網站上新增任何程式碼來偵測使用者的瀏覽器。 所有這些都會自動處理。
 
-如前所述，智慧型影像僅支援JPEG和PNG影像格式。 對於其他格式，您需要將修飾 `bfc=off` 元附加至URL，如先前所述。
+<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
 另外，請看 [我是否符合使用Smart Imaging的資格？](#am-i-eligible-to-use-smart-imaging) 瞭解智慧型影像的預先要求。
 
