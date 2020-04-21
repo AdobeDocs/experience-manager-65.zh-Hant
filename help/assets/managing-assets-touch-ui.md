@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
+source-git-commit: 6d26a708ac2073eb7ceff62e65c6aaafdb727639
 
 ---
 
@@ -478,15 +478,15 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 點選／按一下資產以開啟其資產頁面。
 
-   ![chlimage_1-220](assets/chlimage_1-15.png)
+   ![「資產詳細資料」頁面，以管理轉譯](assets/chlimage_1-15.png)
 
 1. 點選／按一下GlobalNav圖示，然後從清單中選 **[!UICONTROL 取]** 「轉譯」。
 
-   ![renditions_menu](assets/renditions_menu.png)
+   ![左側欄以開啟選單，並選取「轉譯」選項](assets/renditions_menu.png)
 
 1. 在「轉 **[!UICONTROL 譯]** 」面板中，檢視為資產產生的轉譯清單。
 
-   ![renditions_panel](assets/renditions_panel.png)
+   ![「資產詳細資料」頁面上的轉譯面板](assets/renditions_panel.png)
 
    >[!NOTE]
    >
@@ -504,7 +504,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    導覽至資產的資產詳細資訊頁面，然後點選/按一下工具列中的「新增轉譯 **** 」圖示，以上傳資產的新轉譯。
 
-   ![chlimage_1-221](assets/chlimage_1-16.png)
+   ![新增轉譯圖示以上傳新轉譯](assets/chlimage_1-16.png)
 
    >[!NOTE]
    >
@@ -516,7 +516,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    同樣地，您也可以透過覆蓋來自訂「注釋」頁面影像 `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`。
 
-   ![chlimage_1-222](assets/chlimage_1-17.png)
+   ![CRXDE中的覆蓋重新顯示選擇器節點以自訂「注釋」頁面影像](assets/chlimage_1-17.png)
 
    若要設定視訊資產的轉譯維度，請導覽至CRX `videopicker` 儲存庫中位於位置的節 `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`點、覆蓋節點，然後編輯適當的屬性。
 
@@ -536,7 +536,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 選取資產，然後點選／按一下工具 **[!UICONTROL 列中的]** 「刪除」圖示。
 
-   ![delete_icon](assets/delete_icon.png)
+   ![刪除表徵圖](assets/delete_icon.png)
 
 1. 在確認對話方塊中，按一下：
 
@@ -584,11 +584,11 @@ See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
 1. 選取要解除發佈的資產／資料夾，然後點選／按一下工具列 **[!UICONTROL 中的「管理出版物]** 」圖示。
 
-   ![manage_publication](assets/manage_publication.png)
+   ![管理出版物圖示](assets/manage_publication.png)
 
 1. 從清單 **[!UICONTROL 中選取]** 「取消發佈」動作。
 
-   ![unpublish_action](assets/unpublish_action.png)
+   ![取消發佈動作](assets/unpublish_action.png)
 
 1. 若要稍後解除發佈資產，請選取「 **[!UICONTROL 稍後解除發佈]**」，然後選取要解除發佈資產的日期。
 1. 排程資產在發佈環境中無法使用的日期。
@@ -610,11 +610,11 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 1. 從「資產」使用者介面選取資料夾，然後點選／按一下工具列中的「屬性」圖示以顯示屬性頁面。
 1. 在「權 **[!UICONTROL 限]** 」標籤中，在「已關閉的使用者群組」 **[!UICONTROL 下新增成員或群組]**。
 
-   ![add_user](assets/add_user.png)
+   ![在已關閉的使用者群組中新增使用者](assets/add_user.png)
 
 1. 若要在使用者存取資料夾時顯示登入畫面，請選取「啟 **[!UICONTROL 用]** 」選項。 然後，在AEM中選取登入頁面的路徑，並儲存變更。
 
-   ![login_page](assets/login_page.png)
+   ![啟用並選取登入頁面，以在使用者存取資料夾時顯示](assets/login_page.png)
 
    >[!NOTE]
    >
@@ -642,13 +642,13 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 在清單檢視和欄檢視中，當您將指標 **[!UICONTROL 暫留在資產縮圖上時]** ，會顯示「選取」選項。
 
-![select_quick_in_listview](assets/select_quick_in_listview.png)
+![在清單檢視中選取資產](assets/select_quick_in_listview.png)
 
-![select_quick_in_columnview](assets/select_quick_in_columnview.png)
+![在欄檢視中選取資產](assets/select_quick_in_columnview.png)
 
 在卡片檢視中，「選 **[!UICONTROL 取]** 」選項會顯示為快速動作。
 
-![select_quick_action](assets/select_quick_action.png)
+![在資訊卡檢視上選擇快速動作](assets/select_quick_action.png)
 
 在瀏覽器的「資產」使用者介面中瀏覽資料夾或系列時，您可以使用右上角的「全選  」選項，選取所有顯示或載入的資產。 一開始，只有100個資產會載入卡片檢視，而200個資產則會載入清單檢視。 當您捲動搜尋結果頁面時，檢視中會載入更多資產。 「全 [!UICONTROL 選] 」選項只選取載入的資產。
 
@@ -667,36 +667,36 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    * 選取資產，然後按一下／點選工具列 **[!UICONTROL 中的]** 「編輯」圖示。
    * 點選／按一 **[!UICONTROL 下]** 「卡片」檢視中資產上顯示的「編輯」圖示。
    * 在資產頁面中，點選／按一下工具 **[!UICONTROL 列中的]** 「編輯」圖示。
-   ![edit_icon](assets/edit_icon.png)
+   ![工具列中的編輯圖示](assets/edit_icon.png)
 
 1. 若要裁切影像，請點選／按一下「裁切 **」圖** 示。
 
-   ![chlimage_1-226](assets/chlimage_1-22.png)
+   ![裁切圖示](assets/chlimage_1-22.png)
 
 1. 從清單中選取所需的選項。裁切區域會根據您選擇的選項出現在影像上。「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
 
-   ![chlimage_1-227](/help/assets/assets/chlimage_1-23.png)
+   ![裁切選項](/help/assets/assets/chlimage_1-23.png)
 
 1. 選取要裁切的區域，並調整影像上的大小或位置。
 1. 使用「 **完成** 」圖示（右上角）裁切影像。 按一下「完 **成** 」圖示也會觸發轉譯的重新產生。
 
-   ![chlimage_1-228](assets/chlimage_1-24.png)
+   ![「完成」表徵圖](assets/chlimage_1-24.png)
 
 1. 使用右 **上角的** 「復原」和「 **** 重做」圖示，分別回復至未裁切的影像或保留已裁切的影像。
 
-   ![chlimage_1-229](assets/chlimage_1-25.png)
+   ![還原和重做圖示](assets/chlimage_1-25.png)
 
 1. 點選／按一下適當的「旋轉」圖示，以順時針或逆時針旋轉影像。
 
-   ![chlimage_1-230](assets/chlimage_1-26.png)
+   ![順時針和逆時針旋轉圖示](assets/chlimage_1-26.png)
 
 1. 點選／按一下適當的「反向」圖示，以水準或垂直反向影像。
 
-   ![chlimage_1-231](assets/chlimage_1-27.png)
+   ![水準或垂直翻轉影像的圖示](assets/chlimage_1-27.png)
 
 1. 點選／按一下「 **完成** 」圖示以儲存變更。
 
-   ![chlimage_1-232](assets/chlimage_1-28.png)
+   ![「完成」表徵圖](assets/chlimage_1-28.png)
 
 >[!NOTE]
 >
@@ -739,11 +739,11 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    * [快速動作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在選取資產或導覽至資產頁面後，從工具列
-   ![chlimage_1-233](assets/chlimage_1-29.png)
+   ![「注釋」表徵圖](assets/chlimage_1-29.png)
 
 1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
 
-   ![chlimage_1-234](assets/chlimage_1-30.png)
+   ![「添加註釋」對話框中的注釋框](assets/chlimage_1-30.png)
 
 1. 若要通知使用者註解的相關資訊，請指定使用者的電子郵件地址並新增註解。 例如，若要通知Aaron MacDonald有關註解的資訊，請輸入@aa。 所有相符使用者的提示會顯示在清單中。 從清單中選取Aaron的電子郵件地址，以便用注釋標籤她。 同樣地，您可以在注釋內或注釋之前或之後的任何地方標籤更多用戶。
 
@@ -751,11 +751,11 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    >
    >對於非管理員使用者，只有當使用者具有Crx-de中的「在 */home讀取* 」權限時，才會顯示建議。
 
-   ![chlimage_1-235](assets/chlimage_1-31.png)
+   ![指定使用者的電子郵件地址並新增留言以通知使用者](assets/chlimage_1-31.png)
 
 1. 添加註釋後，按一下「 **[!UICONTROL 添加]** 」(Add)保存注釋。 註解通知會傳送給Aaron。
 
-   ![chlimage_1-236](assets/chlimage_1-32.png)
+   ![添加按鈕以保存注釋](assets/chlimage_1-32.png)
 
    >[!NOTE]
    >
@@ -786,15 +786,15 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 1. 點選／按一下GlobalNav圖示，然後從清 **[!UICONTROL 單中選擇]** 「時間軸」。
 
-   ![chlimage_1-239](assets/chlimage_1-35.png)
+   ![GlobalNav圖示上的可用選項](assets/chlimage_1-35.png)
 
 1. 從時間軸 **[!UICONTROL 的「顯示全部]** 」清單中，選取「注 **[!UICONTROL 釋]** 」以根據註解來篩選結果。
 
-   ![chlimage_1-240](assets/chlimage_1-36.png)
+   ![在時間軸中顯示全部清單](assets/chlimage_1-36.png)
 
    在「時間軸」面板中點選／按 **[!UICONTROL 一下注釋]** ，以檢視影像上的對應註解。
 
-   ![chlimage_1-241](assets/chlimage_1-37.png)
+   ![在影像上檢視註解的時間軸面板](assets/chlimage_1-37.png)
 
    點選／按一 **[!UICONTROL 下「刪除]**」，以刪除特定留言。
 
@@ -814,15 +814,15 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 1. 要打印特定注釋，請從時間軸中選擇注釋。
 
-   ![chlimage_1-242](assets/chlimage_1-38.png)
+   ![從時間軸中選取注釋以進行列印](assets/chlimage_1-38.png)
 
    要僅打印審閱狀態，請從時間軸中選擇它。
 
-   ![chlimage_1-243](assets/chlimage_1-39.png)
+   ![要僅打印注釋的審閱狀態，請從時間軸中選擇該狀態](assets/chlimage_1-39.png)
 
 1. Tap/click the **[!UICONTROL Print]** icon from the toolbar.
 
-   ![chlimage_1-244](assets/chlimage_1-40.png)
+   ![工具列中的列印圖示](assets/chlimage_1-40.png)
 
 1. 從「列印」對話方塊中，選擇您要在PDF上顯示註解／審閱狀態的位置。 例如，如果您希望註解／狀態列印在包含已列印影像之頁面的右上角，請使用左上 **角設定** 。 預設會選取它。
 
@@ -836,11 +836,11 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
 1. 點選/按一下「 **[!UICONTROL 列印]**」。根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **** ，則生成的輸出類似於此處所示的PDF檔案。
 
-   ![chlimage_1-246](assets/chlimage_1-42.png)
+   ![在產生的PDF上加上註解和審核狀態](assets/chlimage_1-42.png)
 
 1. 使用右上角的選項下載或列印PDF。
 
-   ![chlimage_1-247](assets/chlimage_1-43.png)
+   ![PDF的下載和列印選項](assets/chlimage_1-43.png)
 
    >[!NOTE]
    >
@@ -848,7 +848,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
 
    要修改渲染的PDF檔案的外觀，例如注釋和狀態的字型顏色、大小和樣式、背景顏色，請從「配置管理器」(Configuration Manager)開啟「注釋 **[!UICONTROL PDF」(]** Annotation PDF)配置，並修改所需的選項。 例如，要更改批准狀態的顯示顏色，請修改相應欄位中的顏色代碼。 有關更改批注的字型顏色的資訊，請參 [閱注釋](/help/assets/managing-assets-touch-ui.md#annotating)。
 
-   ![chlimage_1-248](assets/chlimage_1-44.png)
+   ![在PDF檔案上列印資產註解的設定](assets/chlimage_1-44.png)
 
    返回轉譯的PDF檔案並重新整理它。 重新整理的PDF會反映您所做的變更。
 
@@ -905,7 +905,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    * 按一 **[!UICONTROL 下「另存為版本]** 」，為資產建立版本。 （可選）添加標籤和注釋。
    * 按一 **[!UICONTROL 下「建立]** 」以建立版本。
 
-      ![chlimage_1-251](assets/create-new-version-from-timeline.png)
+      ![從側欄建立資產版本](assets/create-new-version-from-timeline.png)
 
       *圖：從時間軸左側邊欄建立資[!UICONTROL 產]。*
 
@@ -914,7 +914,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    * 按一 **[!UICONTROL 下「在時間軸中]** 顯 [!UICONTROL 示全部」]。
    * 按一 **[!UICONTROL 下版本]**。 為資產建立的所有版本都會列在左側邊欄。
 
-      ![versions_option](assets/versions_option.png)
+      ![ 從時間軸中選擇「版本」選項](assets/versions_option.png)
 
    * 選取資產的特定版本，然後按一下「預 **[!UICONTROL 覽版本」]**。
 
@@ -923,7 +923,7 @@ AEM Assets介面中的編輯工具可讓您對影像資產執行小型編輯工�
    * 按一下資產的版本。 （可選）添加標籤和注釋。
    * Click **[!UICONTROL Revert to this Version]**.
 
-      ![select_version](assets/select_version.png)
+      ![選擇要回復的版本](assets/select_version.png)
 
       *圖：選擇一個版本並回復到它。 它會變成目前的版本，然後可供DAM使用者使用。*
 
