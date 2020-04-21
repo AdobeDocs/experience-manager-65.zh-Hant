@@ -1,13 +1,9 @@
 ---
-title: '設定Rich Text Editor以在AEM中製作內容 '
-description: 瞭解如何設定AEM Rich Text Editor以在AEM中製作內容。
-uuid: 4f87745e-586a-4cba-887b-391e37520ffc
+title: 設定Rich Text Editor，以便在Adobe Experience Manager中製作內容。
+description: 瞭解如何設定Adobe Experience Manager Rich Text Editor，以便在Adobe Experience Manager中製作內容。
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 2cde81d3-5fc1-4a32-a307-7dc592f37162
-docset: aem65
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
 
 ---
 
@@ -16,19 +12,17 @@ source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 富格文本編輯器(RTE)為作者提供了多種編輯其文本內容的功能。 提供圖示、選擇方塊、工具列和選單，以提供WYSIWYG文字編輯體驗。
 
-RTE可以配置為啟用、禁用和擴展編寫元件中可用的功能。 要瞭解如何使用RTE功能進行編寫，請參 [閱Use Rich Text Editor for authoring](/help/sites-authoring/rich-text-editor.md)。
+要瞭解如何使用RTE功能進行編寫，請參 [閱Use Rich Text Editor for authoring](/help/sites-authoring/rich-text-editor.md)。 RTE可以配置為啟用、禁用和擴展編寫元件中可用的功能。 以下工作流程說明在Experience Manager中完成RTE配置任務的建議順序。
 
-以下工作流說明了完成RTE配置任務的建議順序。
-
-![學習如何設定rte的步驟順序](assets/rte_workflow_v1.png)
+![學習如何配置RTE的步驟順序](assets/rte_workflow_v1.png)
 
 *圖：學習如何配置RTE的步驟順序*
 
 ## 瞭解可觸控的UI和傳統UI {#understand-touch-enabled-ui-and-classic-ui}
 
-Touch-enabled UI是AEM的標準使用者介面。 Adobe針對製作環境推出具 [互動式設計](/help/sites-authoring/responsive-layout.md) 的Touch UI。 Touch UI是專為觸控和桌上型裝置所設計。 UI與原始的傳統UI有很大不同。
+啟用觸控的UI是Experience Manager的標準使用者介面。 Adobe針對製作環境推出具觸控功能 [的UI](/help/sites-authoring/responsive-layout.md) ，並提供互動式設計。 觸控式UI是專為觸控和桌上型裝置所設計。 介面與原始的Classic UI有很大不同。
 
-![啟用觸控的UI中的豐富型文字編輯器工具列](assets/chlimage_1-35.png)
+![觸控式使用者介面中的豐富型文字編輯器工具列](assets/chlimage_1-35.png)
 
 *圖：啟用觸控的UI中的豐富型文字編輯器工具列*
 
@@ -39,14 +33,14 @@ Touch-enabled UI是AEM的標準使用者介面。 Adobe針對製作環境推出�
 >[!MORELIKETHIS]
 >
 >* [UI建議](/help/sites-deploying/ui-recommendations.md)
->* 關於取代Classic UI，請參 [閱AEM 6.5發行說明](/help/release-notes/deprecated-removed-features.md)
+>* 關於取代傳統UI，請參 [閱Experience Manager 6.5發行說明](/help/release-notes/deprecated-removed-features.md)
 >* 如需UI之間的差異，請參 [閱Touch UI和Classic UI](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
->* 若要詳細瞭解啟用觸控的UI，請參閱「AEM Touch UI [的概念」](/help/sites-developing/touch-ui-concepts.md)
+>* 若要詳細瞭解可觸控的UI，請參閱Experience Manager [Touch UI的概念](/help/sites-developing/touch-ui-concepts.md)
 
 
 ## 各種編輯模式 {#editingmodes}
 
-作者可以使用不同的元件模式，在AEM中建立和編輯文字內容。 用於編寫和格式化內容的工具欄選項以及不同編輯模式下啟用RTE的元件的用戶體驗會因RTE配置而異。
+作者可以使用不同的元件模式，在Experience Manager中建立和編輯文字內容。 用於編寫和格式化內容的工具欄選項以及不同編輯模式下啟用RTE的元件的用戶體驗會因RTE配置而異。
 
 | 編輯模式 | 編輯區域 | 建議啟用的功能 | Touch UI | 傳統 UI |
 |--- |--- |--- |--- |--- |
@@ -71,7 +65,7 @@ Touch-enabled UI是AEM的標準使用者介面。 Adobe針對製作環境推出�
 
 ### 全螢幕編輯 {#full-screen-editing}
 
-AEM元件可在全螢幕檢視中開啟，隱藏頁面內容並佔據可用螢幕。 請考慮使用全螢幕編輯功能來編輯內嵌編輯的詳細版本，因為它提供最多的編輯選項。 使用內嵌編輯模式時，可 ![以從精簡工具列按一下rte_fullscreen](assets/rte_fullscreen.png)，以開啟它。
+Experience Manager元件可在全螢幕檢視中開啟，隱藏頁面內容並佔據可用螢幕。 請考慮使用全螢幕編輯功能來編輯內嵌編輯的詳細版本，因為它提供最多的編輯選項。 使用內嵌編輯模式時，可 ![以從精簡工具列按一下rte_fullscreen](assets/rte_fullscreen.png)，以開啟它。
 
 在對話框全屏模式中，以及詳細的RTE工具欄中，還提供了對話框中可用的選項和元件。 它僅適用於包含RTE和其他元件的對話框。
 
@@ -109,7 +103,6 @@ RTE的基本功能是由相應插件專用節點上 `features` 的屬性值激�
 * 具有API檔案連結的外掛程式ID。 啟用外掛程式時，ID會 [用作節點名稱](/help/sites-administering/configure-rich-text-editor-plug-ins.md#activateplugin)。
 * 屬性的允許 `features` 值。
 * 外掛程式提供的功能說明。
-
 
 | 外掛程式ID | 功能 | 說明 |
 |--- |--- |--- |
