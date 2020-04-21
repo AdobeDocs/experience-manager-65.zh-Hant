@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 070d4e105c94548dda1098bf47cab83e0847f24d
 
 ---
 
@@ -26,8 +26,7 @@ AEM Forms Portal草稿和提交元件可讓使用者將表單儲存為草稿，�
 >
 >* 本文檔中說明的示例和配置是根據MySQL 5.6.24進行的，您必須將它們適當地替代到資料庫系統。
 >* 請確定您已安裝最新版的AEM Forms附加元件套件。 如需可用套件的清單，請參閱 [AEM Forms發行文章](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
->
-
+> * 範例套件僅能與Adaptive Forms提交動作搭配使用。
 
 
 ## 設定並設定範例 {#set-up-and-configure-the-sample}
