@@ -1,9 +1,9 @@
 ---
-title: 在AEM Assets中管理Adobe Stock資產
-description: 在AEM中搜尋、擷取、授權及管理Adobe Stock資產。 將授權資產當做任何其他數位資產使用。
+title: 在[!DNL Adobe Experience Manager Assets]中管理[!DNL Adobe Stock]資產。
+description: 從Adobe Experience Manager中搜尋、擷取、授權及管理[!DNL Adobe Stock]資產。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
+source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
 
 ---
 
