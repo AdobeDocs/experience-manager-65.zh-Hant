@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: bb523ecf97ea18d8e8d5afa238fdf9e95fa58ab4
 
 ---
 
@@ -27,10 +27,10 @@ FFmpeg是轉換和串流音訊和視訊的解決方案，在安裝時，會用�
 
 FFmpeg應安裝在代管AEM作者例 *項* 的伺服器上。
 
-1. 前往 [https://www.ffmpeg.org](https://www.ffmpeg.org/)
-1. 下載適用於您特定環境（Macintosh、Windows或Linux）的最新版FFmpeg
+1. 請至 [https://www.ffmpeg.org](https://www.ffmpeg.org/)。
+1. 下載適用於您特定環境（Macintosh、Windows或Linux）的最新版FFmpeg。
 
-   * 由於舊版軟體中的安全性弱點，請務必保持FFmpeg最新狀態
+   * 由於舊版軟體中的安全性弱點，因此請務必保持FFmpeg的最新狀態。
 
 1. 依照作業系統的指示安裝Fmpeg。
 
@@ -38,7 +38,7 @@ FFmpeg應安裝在代管AEM作者例 *項* 的伺服器上。
 
    您應該能夠從系統中的任何目錄運行FFmpeg。
 
-   * for example, `ffmpeg -version`
+   * For example, `ffmpeg -version`.
 
 ## 設定FFmpeg轉碼服務 {#configure-ffmpeg-transcoding-service}
 
@@ -48,23 +48,23 @@ FFmpeg應安裝在代管AEM作者例 *項* 的伺服器上。
 
 若要修改 [!UICONTROL DAM更新資產工作流程] ，以及在此範例中，若要關閉轉碼：
 
-* 以管理權限登入作者例項
-* 從全域導覽：「工 **[!UICONTROL 具>工作流>模型」]**
-* 尋找 **[!UICONTROL DAM更新資產]**
-* 連按兩下以開啟Classic UI中要編輯的工作流程
+* 以管理權限登入作者例項。
+* 從全域導覽，導覽至「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]**」。
+* 找到 **[!UICONTROL DAM更新資產]**。
+* 連按兩下以開啟Classic UI中的編輯工作流程。
 
    結果位置： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* 連按兩下 **[!UICONTROL FFmpeg轉碼步驟]** ，以存取「步驟屬性」對話方塊
+* 連按兩下 **[!UICONTROL FFmpeg轉碼步驟]** ，以存取「步驟屬性」對話方塊。
 * 在「流程 **[!UICONTROL 」(Process]** )頁籤下：
 
    * **[!UICONTROL 圖]**:清除所有條目以禁用轉碼預設值： `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
 ![chlimage_1-372](assets/chlimage_1-372.png)
 
-* 選擇「 **[!UICONTROL 確定]** 」以關閉對 `Step Properties` 話框
+* 選擇 **[!UICONTROL 確定]** ，關閉對 `Step Properties` 話框。
 
-* 選擇「 **[!UICONTROL 保存]** 」以保存工作 `DAM Update Asset` 流
+* 選擇「 **[!UICONTROL 保存]** 」(Save `DAM Update Asset` )以保存工作流。
 
-   （左上角）
+
 
