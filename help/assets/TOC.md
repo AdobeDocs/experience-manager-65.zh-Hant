@@ -4,14 +4,14 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assets使用指南
 translation-type: tm+mt
-source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
+source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
 
 ---
 
 
 # AEM 6.5 Assets使用指南 {#assets}
 
-+ [資產使用指南](home.md)
++ [[!DNL資產]使用手冊](home.md)
 + [AEM 6.5 Assets發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [關於DAM](assets.md)
 + [資產的最佳實務](best-practices-for-assets.md)
@@ -19,7 +19,7 @@ source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
    + [AEM Assets首頁體驗](assets-home-page.md)
    + [在AEM中搜尋資產](search-assets.md)
    + [多語言資產](multilingual-assets.md)
-   + [在AEM資產中使用Adobe Stock資產](aem-assets-adobe-stock.md)
+   + [在AEM資產中使用[!DNL Adobe Stock]資產](aem-assets-adobe-stock.md)
    + [預覽3D資產](previewing-3d-assets.md)
    + [查看資料夾資產和集合](bulk-approval.md)
    + [時間軸中的活動串流](activity-stream.md)
@@ -74,7 +74,7 @@ source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
    + [自訂和擴充AEM資產](extending-assets.md)
    + [使用媒體處理常式和工作流程處理資產](media-handlers.md)
    + [擴充搜尋功能](searchx.md)
-   + [安裝並設定ImageMagick以搭配AEM Assets運作](best-practices-for-imagemagick.md)
+   + [安裝並設定[!DNL ImageMagick]以搭配AEM資產運作](best-practices-for-imagemagick.md)
    + [將資產與活動串流整合](extending-activity-stream.md)
    + [擴充資產編輯器](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
