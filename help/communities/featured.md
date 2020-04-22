@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ---
 
@@ -31,10 +31,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 每個元件可能允許或禁止功能化內容。
 
-本節說明
+本檔案章節說明：
 
 * 將精選內容新增至社群網站
-* 元件的配置設 `Featured Content`置
+* 元件的配置設 `Featured Content` 置
 
 ## 將精選內容新增至頁面 {#adding-featured-content-to-a-page}
 
@@ -46,7 +46,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
 
-當包含 [所需的用戶端程式庫](essentials-featured.md#essentials-for-client-side) ，元件的顯示 `Featured Content`方式如下：
+當包含 [所需的用戶端程式庫](essentials-featured.md#essentials-for-client-side) ，元件的顯示方式 `Featured Content` 如下：
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -60,7 +60,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在「設 **[!UICONTROL 定]** 」標籤下，識別要具備的內容：
 
-* **[!UICONTROL 顯示名]**&#x200B;稱精選內容清單的標題。 例如 `Featured Questions` 或 `Featured Ideas`。 如果留 `Featured Content` 空，則預設為。
+* **[!UICONTROL 顯示名]**&#x200B;稱精選內容清單的標題。 For example `Featured Questions` or `Featured Ideas`. 如果留 `Featured Content` 空，則預設為。
 
 * **[!UICONTROL 主要內容的位置]**
    *（必要）* ，瀏覽至包含可能是功能之內容的頁面（該頁面的元件必須設定為「允許功能內容」）。 例如， `/content/sites/engage/en/forum`
