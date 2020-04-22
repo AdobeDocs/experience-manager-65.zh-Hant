@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ---
 
@@ -26,11 +26,12 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >用於建立社區站點 [的控制台](/help/communities/sites-console.md)、社 [區站點模](/help/communities/sites.md)板、社區組模板 [,](/help/communities/tools-groups.md)[](/help/communities/functions.md) 以及社區功能的控制台僅用於作者環境。
 
+
 ## 社群功能主控台 {#community-functions-console}
 
-在作者環境中，要到達社群功能主控台
+在作者環境中，要訪問社區功能控制台：
 
-* 從全局導航：工 **具、社群、社群功能**
+* 從全域導覽：工 **[!UICONTROL 具]** >社 **[!UICONTROL 群]** >社 **[!UICONTROL 群功能]**。
 
 ![chlimage_1-106](assets/chlimage_1-106.png)
 
@@ -50,16 +51,20 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-* **Title**(*必要*)出現在網站功能選單中的文字
+* **標題**
 
-* **URL**(必&#x200B;*要*)用於產生URI的名稱。 名稱必須符合AEM和JCR [所強加](/help/sites-developing/naming-conventions.md) 的命名慣例。
+   (必&#x200B;*要*)出現在網站功能選單中的文字
+
+* **URL**
+
+   (必&#x200B;*要*)用於生成URI的名稱。 名稱必須符合AEM和JCR [所強加](/help/sites-developing/naming-conventions.md) 的命名慣例。
 
 例如，使用依據「快速入門」教學課程 [建立的網站](/help/communities/getting-started.md) ，如果
 
 * 標題=網頁
 * URL =頁面
 
-則頁面的URL為https://localhost:4503/content/sites/engage/en/**page**.html
+然後，頁面的URL是https://localhost:4503/content/sites/engage/en/page.html
 
 頁面的功能表連結會顯示為：
 
@@ -76,11 +81,18 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **顯示「我的活動」視圖**&#x200B;如果選中此選項，「活動」頁面將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動進行篩選。 已選取預設值。
 
-* **顯示「所有活動」視圖**&#x200B;如果選中此選項，「活動」頁將包含一個頁籤，其中包含當前成員有權訪問的社區內生成的所有活動。 已選取預設值。
+* **顯示「我的活動」檢視**
 
-* **顯示「動態消息」視圖**&#x200B;如果選中，「活動」頁面會包含一個標籤，該標籤會根據當前成員正在跟蹤的活動來篩選活動。 已選取預設值。
+   如果選中此選項，「活動」頁將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動來篩選活動。 已選取預設值。
+
+* **顯示「所有活動」檢視**
+
+   如果選中此選項，「活動」頁將包含一個頁籤，其中包含當前成員有權訪問的社區內生成的所有活動。 已選取預設值。
+
+* **顯示「新聞資訊源」檢視**
+
+   如果選中此選項，「活動」頁將包含一個頁籤，該頁籤根據當前成員正在跟蹤的活動篩選活動。 已選取預設值。
 
 ### 指定任務功能 {#assignments-function}
 
@@ -99,13 +111,22 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **允許特權成**&#x200B;員如果選中此選項，則部落格僅允許特權成員通過允許選擇特權成員組 [來建立文章](/help/communities/users.md#privileged-members-group)。 如果未選中，則允許所有社區成員建立。 已取消選取預設值。
 
-* **允許上傳檔案**&#x200B;如果選取此選項，部落格會包含成員上傳檔案的功能。 已選取預設值。
+* **允許有特殊權限的成員**
 
-* **允許執行緒回**&#x200B;覆如果未選取，部落格會允許對文章的回覆（留言），但不允許對留言的回覆。 已選取預設值。
+   如果選取此選項，則部落格僅允許有權限的成員透過允許選取有權限的成員群組來 [建立文章](/help/communities/users.md#privileged-members-group)。 如果未選中，則允許所有社區成員建立。 已取消選取預設值。
 
-* **允許特色內**&#x200B;容如果選取此選項，部落格即被識別 [為特色內容](/help/communities/featured.md)。 已選取預設值。
+* **允許檔案上傳**
+
+   如果選取此選項，部落格會包含成員上傳檔案的功能。 已選取預設值。
+
+* **允許執行緒式回覆**
+
+   如果未選取，部落格會允許對文章的回覆（留言），但是不允許回覆留言。 已選取預設值。
+
+* **允許主要內容**
+
+   如果選取此選項，則會將部落格識別為 [精選內容](/help/communities/featured.md)。 已選取預設值。
 
 ### 日曆功能 {#calendar-function}
 
@@ -115,16 +136,27 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
 
-* 請參閱 [標題和URL設定](#title-and-url-settings)
-* **允許釘選**&#x200B;如果選取，論壇允許將主題回覆釘選至留言清單的開頭。 已選取預設值。
+* [標題和URL設定](#title-and-url-settings)
 
-* **允許特權成**&#x200B;員如果選中此選項，則部落格僅允許特權成員通過允許選擇特權成員組 [來建立文章](/help/communities/users.md#privileged-members-group)。 如果未選中，則允許所有社區成員建立。 已取消選取預設值。
+* **允許釘選**
 
-* **允許上傳檔案**&#x200B;如果選取此選項，部落格會包含成員上傳檔案的功能。 已選取預設值。
+   如果選中此選項，論壇允許將主題回覆釘在注釋清單的開頭。 已選取預設值。
 
-* **允許執行緒回**&#x200B;覆如果未選取，部落格會允許對文章的回覆（留言），但不允許對留言的回覆。 已選取預設值。
+* **允許有特殊權限的成員**
 
-* **允許特色內**&#x200B;容如果選取，其內容會識別為特 [色內容](/help/communities/featured.md)。 已選取預設值。
+   如果選取此選項，則部落格僅允許有權限的成員透過允許選取有權限的成員群組來 [建立文章](/help/communities/users.md#privileged-members-group)。 如果未選中，則允許所有社區成員建立。 已取消選取預設值。
+
+* **允許檔案上傳**
+
+   如果選取此選項，部落格會包含成員上傳檔案的功能。 已選取預設值。
+
+* **允許執行緒式回覆**
+
+   如果未選取，部落格會允許對文章的回覆（留言），但是不允許回覆留言。 已選取預設值。
+
+* **允許主要內容**
+
+   如果選取，其內容會識別為 [特色內容](/help/communities/featured.md)。 已選取預設值。
 
 ### 目錄功能 {#catalog-function}
 
@@ -137,7 +169,10 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![目錄函式](assets/catalog-function.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **選擇所有名稱空**間選定的標籤名稱空間定義哪些標籤可由訪客選擇，以篩選目錄中列出的啟用資源清單。
+
+* **選取所有命名空間**
+
+   所選標籤名稱空間定義哪些標籤可由訪客選擇以篩選目錄中所列的啟用資源清單。
 如果選中此選項，則允許為社區站點使用的所有標籤名稱空間都可用。
 如果取消選取，則可以選擇社區站點允許的一個或多個名稱空間。
 已選取預設值。
@@ -167,15 +202,26 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **允許釘選**&#x200B;如果選取，論壇允許將主題回覆釘選至留言清單的開頭。 已選取預設值。
 
-* **允許特權成**&#x200B;員如果選中此選項，則論壇僅允許特權成員通過允許選擇特權成員 [組來發佈主題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
+* **允許釘選**
 
-* **允許上傳檔案**&#x200B;如果選取此選項，論壇將包含成員上傳檔案的功能。 已選取預設值。
+   如果選中此選項，論壇允許將主題回覆釘在注釋清單的開頭。 已選取預設值。
 
-* **允許線程化回**&#x200B;覆如果未選取，論壇會允許對主題的回覆，但不允許對這些回覆。 已選取預設值。
+* **允許有特殊權限的成員**
 
-* **允許特色內**&#x200B;容如果選取，元件的內容會識別為特 [色內容](/help/communities/featured.md)。 已選取預設值。
+   如果選中此選項，則論壇僅允許特權成員通過允許選擇特權成員組來 [發佈主題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
+
+* **允許檔案上傳**
+
+   如果選取此選項，論壇將包含成員上傳檔案的功能。 已選取預設值。
+
+* **允許執行緒式回覆**
+
+   如果未選擇，論壇允許對主題進行評論，但不允許對這些評論進行回覆。 已選取預設值。
+
+* **允許主要內容**
+
+   如果選取此選項，元件的內容會識別為 [特色內容](/help/communities/featured.md)。 已選取預設值。
 
 ### 群組函式 {#groups-function}
 
@@ -184,6 +230,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >群組功能必須*不是* *是網站結構* 或社群網站範本中的第一個也是唯一的功能。
 >
 >任何其他函式(例如頁 [面函式](#page-function))必須先包含並列出。
+
 
 群組功能可讓社群成員在發佈環境中在社群網站內建立子社群。
 
@@ -198,11 +245,18 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-113](assets/chlimage_1-113.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **選擇組模板**(Group Templates)下拉清單，允許選擇一個或多個啟用的組模板，新社區組（在發佈環境中）的將來建立者可以從中選擇這些模板。
 
-* **允許特權成**&#x200B;員如果選中此選項，則論壇僅允許特權成員通過允許選擇特權成員安 [全組來發佈主題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
+* **選取群組範本**
 
-* **允許建立發佈**如果選定此選項，則授權的社區成員可以在發佈環境中建立組。 如果取消選取，則只能在作者環境中從「社群網站的群組」主控台建立新群組（子社群）。
+   允許選擇一個或多個啟用的組模板的下拉清單，新社區組（在發佈環境中）的將來建立者可從中選擇該模板。
+
+* **允許有特殊權限的成員**
+
+   如果選中此選項，則論壇僅允許特權成員通過允許選擇特權成員安 [全組來發佈主題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
+
+* **允許發佈建立**
+
+   如果選取此選項，授權社群成員可以在發佈環境中建立群組。 如果取消選取，則只能在作者環境中從「社群網站的群組」主控台建立新群組（子社群）。
 已選取預設值。
 
 ### 創意力功能 {#ideation-function}
@@ -214,32 +268,48 @@ Ideation函式是具有一個Ideation元件 [的頁面](/help/communities/ideati
 ![chlimage_1-114](assets/chlimage_1-114.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **允許特權成**&#x200B;員如果選中此選項，則論壇僅允許特權成員通過允許選擇特權成員安 [全組來發佈主題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
 
-* **允許上傳檔**&#x200B;案如果選取此選項，其構想包含成員上傳檔案的功能。 已選取預設值。
+* **允許有特殊權限的成員**
 
-* **允許線程化**&#x200B;回覆如果未選中，該構想允許對主題的回覆（注釋），但不允許對注釋的回覆。 已選取預設值。
+   如果選中此選項，則論壇僅允許特權成員通過允許選擇特權成員安 [全組來發佈主題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
 
-* **允許特色內**&#x200B;容如果選取，其內容會識別為特 [色內容](/help/communities/featured.md)。 已選取預設值。
+* **允許檔案上傳**
+
+   如果選取此選項，此構想將包含成員上傳檔案的功能。 已選取預設值。
+
+* **允許執行緒式回覆**
+
+   如果未選取，此構想會允許對主題的回覆（留言），但不允許回覆留言。 已選取預設值。
+
+* **允許主要內容**
+
+   如果選取，其內容會識別為 [特色內容](/help/communities/featured.md)。 已選取預設值。
 
 ### 排行榜功能 {#leaderboard-function}
 
 排行榜功能是包含一個「排行榜」組 [件的頁面](/help/communities/enabling-leaderboard.md)。
 
-**注意**:在從包含Leederboard功能的社區模 *板建立社區站點* 後，Leederboard元件需要進一步配置。 指定Leaderboard元件的規 [則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於社 [區站點的計分和標章](/help/communities/implementing-scoring.md) 。
+**注意**:在從包含Leederboard功能的社區模板 *建立社區站點* 後，Leenderboard元件需要進一步配置。 指定Leaderboard元件的規 [則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於社 [區站點的計分和標章](/help/communities/implementing-scoring.md) 。
 
 新增至範本時，會開啟下列對話方塊，指定範本的預設標題和URL名稱，以及預設顯示設定：
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **顯示標章**如果選中，則排行榜中會包含標章圖示的欄。
+
+* **顯示徽章**
+
+   如果選中此選項，則排行榜中會包含標誌表徵圖的列。
 已取消選取預設值。
 
-* **顯示徽章名**稱如果選中此選項，則該徽章名稱的列將包括在排行榜中。
+* **顯示徽章名稱**
+
+   如果選中此選項，則標誌名稱的列將包括在排行榜中。
 已取消選取預設值。
 
-* **顯示頭像**如果選中此選項，成員的頭像影像將包含在排行榜中，位於其成員配置檔案的名稱連結旁邊。
+* **顯示頭像**
+
+   如果選中此選項，成員的頭像影像將包含在排行榜中，位於其成員配置檔案的名稱連結旁邊。
 已取消選取預設值。
 
 ### 頁面功能 {#page-function}
@@ -257,15 +327,26 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
 * [標題和URL設定](#title-and-url-settings)
-* **允許釘選**&#x200B;如果選取，論壇允許將主題回覆釘選至留言清單的開頭。 已選取預設值。
 
-* **允許特權成**&#x200B;員如果選中此選項，QnA論壇僅允許特權成員通過允許選擇特權成員組 [發佈問題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
+* **允許釘選**
 
-* **允許上傳文**&#x200B;件如果選中此選項，QnA論壇將包括成員上傳檔案的能力。 已選取預設值。
+   如果選中此選項，論壇允許將主題回覆釘在注釋清單的開頭。 已選取預設值。
 
-* **允許線程化回**&#x200B;覆如果未選取，QnA論壇會允許對已張貼的問題留言（答案），但不允許回覆答案。 已選取預設值。
+* **允許有特殊權限的成員**
 
-* **允許特色內**&#x200B;容如果選取，其內容會識別為特 [色內容](/help/communities/featured.md)。 已選取預設值。
+   如果選中此選項，則QnA論壇僅允許特權成員通過允許選擇特權成員組來 [發佈問題](/help/communities/users.md#privileged-members-group)。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
+
+* **允許檔案上傳**
+
+   如果選中此選項，QnA論壇將包括成員上傳檔案的能力。 已選取預設值。
+
+* **允許執行緒式回覆**
+
+   如果未選取，QnA論壇允許對已張貼的問題留言（答案），但不允許回覆答。 已選取預設值。
+
+* **允許主要內容**
+
+   如果選取，其內容會識別為 [特色內容](/help/communities/featured.md)。 已選取預設值。
 
 ## 建立社群功能 {#create-community-function}
 
@@ -279,11 +360,17 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 
 在「社群功能名稱」面板上，會設定名稱、說明，以及函式是啟用還是停用：
 
-* **社群函式名**&#x200B;稱用於顯示和儲存的函式名稱
+* **社群功能名稱**
 
-* **社區功能說明**&#x200B;顯示的功能說明
+   用於顯示和儲存的函式名稱。
 
-* **禁用／啟用**&#x200B;切換開關，控制是否可引用該函式
+* **社群功能說明**
+
+   顯示的函式說明。
+
+* **已禁用／啟用**
+
+   控制函式是否可參考的切換開關。
 
 ### AEM 藍圖 {#aem-blueprint}
 
@@ -291,7 +378,7 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 
 在面 `AEM Blueprint` 板上，可以選擇作為社區功能的基礎實現的藍圖。
 
-社群功能是包含一或多個頁面的迷你網站，已預先連線以加入社群網站，包括登入、使用者設定檔、通知、訊息、網站選單、搜尋、主題和品牌功能。 在建立函式後，就可以在作者編輯 [模式中開啟函式](#open-community-function) ，並自訂頁面或元件設定。
+社群功能是包含一或多個頁面的迷你網站，已預先連線以加入社群網站，包括登入、使用者設定檔、通知、訊息、網站選單、搜尋、主題和品牌功能。 在建立函式後，就可以在作者編 [輯模式中開啟函式](#open-community-function) ，並自訂頁面或元件設定。
 
 由於社群功能是作為Blueprint的 [即時副本實作](/help/sites-administering/msm.md#live-copies) ，因此，可以將對函式所做的變更推出，該函式會影響從社群網站範本 [，或是包含該函式的社群群群](/help/sites-administering/msm-livecopy.md#creatingablueprint)[](/help/communities/sites.md)[](/help/communities/tools-groups.md) 組範本所建立的所有社群網站頁面。 您也可以將頁面與其父藍圖取消關聯，以進行頁面層級的修改。
 
