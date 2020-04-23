@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -45,7 +45,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 **在AEM Author例項上：**
 
-* 從全域導覽，導覽至「 **[UIControl工具>社群>儲存組態」]** ，並選 **[取「UIControl Adobe儲存資源提供者(ASRP)]**。
+* 從全域導覽，導覽至「工 **[!UICONTROL 具>社群>儲存組態]** 」，然後選 **[!UICONTROL 取「Adobe儲存資源提供者(ASRP)」]**。
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
@@ -94,7 +94,7 @@ ASRP必須被識別為所有作者和發佈實例上的公用商店。
 
 在AEM Author例項上：
 
-* 從主菜單導航到 **[UIControl Tools > Operations > Replication]**。
+* 從主菜單導航到「工 **[!UICONTROL 具」>「操作」>「複製]**」。
 * 選擇 **激活樹**
 * **開始路徑**:瀏覽至 `/etc/socialconfig/srpc/`
 * 僅取消選 **擇已修改**
