@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,17 +19,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在本節中，您會建立下列所有使用頁面範本 [的頁面](initial-app.md#createthepagetemplate):
 
-* SCF沙盒網站，此網站會重新導向至首頁的英文版
+* SCF沙盒網站，此網站會重新導向至首頁的英文版。
 
-   * SCF沙盒——網站英文版的首頁
+   * SCF沙盒——網站英文版的首頁面。
 
-      * SCF播放——要播放的首頁的子項
+      * SCF播放——要播放的首頁的子頁。
 
 雖然本教學課程不深入探究 [語言副本](../../help/sites-administering/tc-prep.md)，但是其設計目的在於讓根頁面透過HTML標題實作使用者偏好語言的偵測，並重新導向至該語言的適當首頁。 慣例是使用雙字母國家／地區代碼作為頁面的節點名稱，例如英文為&quot;en&quot;、法文為&quot;fr&quot;等。
 
 ## 建立第一頁 {#create-first-pages}
 
-現在有了頁面 [範本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
+現在有了頁面范 [本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
 
 1. 標準UI目前提供建立網站的藍圖。 由於本教學課程是建立簡單網站，因此傳統的UI十分實用。
 
@@ -45,7 +45,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    或者，瀏覽至 [/網站管理員，直接存取網站的經典UI。](http://localhost:4502/siteadmin)
 
-1. 在檔案總管窗格中，選取「 **[!UICONTROL 網站]** 」，然後在工具列中選取「 **[!UICONTROL 新增>新頁面」]**。
+1. 在瀏覽器窗格中，選擇「 **[!UICONTROL 網站]** 」，然後在工具列中選擇「新 **[!UICONTROL 增]** >新 **[!UICONTROL 增頁面」]**。
 
    在「建 **[!UICONTROL 立頁面]** 」對話方塊中，輸入下列：
 
@@ -55,14 +55,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * Click **[!UICONTROL Create]**
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
-1. 在瀏覽器窗格中，選擇您剛建立的頁面，然 `/Websites/SCF Sandbox Site`後按一下「 **[!UICONTROL 新建」>「新建頁面]**:
+1. 在瀏覽器窗格中，選擇您剛建立的頁面，然 `/Websites/SCF Sandbox Site`後按一下「 **[!UICONTROL 新建]** 」>「 **[!UICONTROL 新建頁面]**」:
 
    * 標題: `SCF Sandbox`
    * 名稱: `en`
    * 選取 **SCF沙盒播放範本&#x200B;**
    * Click **Create **
 
-1. 在瀏覽器窗格中，選擇您剛建立的頁面，然 `/Websites/SCF Sandbox Site/SCF Sandbox`後按一下「 **[!UICONTROL 新建」>「新建頁面」]**
+1. 在瀏覽器窗格中，選擇剛建立的頁面，然 `/Websites/SCF Sandbox Site/SCF Sandbox`後按一下「 **[!UICONTROL 新建]** 」 > 「新建頁 **[!UICONTROL 面」]**
 
    * 標題: `SCF Play`
    * 名稱: `play`
@@ -105,4 +105,5 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >[!NOTE]
 >
 >cq:designPath的使用是選擇性的，與clientlibs的使 [用無關](develop-app.md#includeclientlibsintemplate)，這是SCF元件使用clientlibs來管理其JS和CSS時的必 [](client-customize.md#clientlibs-for-scf) 要條件。
+
 
