@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
@@ -91,7 +91,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    * ItemisedCalls
    * PayNow
    * ValueAddedServices
-   為節省時間，您也可以複製並貼上現有的子表單以建立新的子表單。
+   為節省時間，您也可以複製並貼上現有的子表單，以建立新的子表單。
 
    要將 **Charts** 子表單移到Charges子表單的右側，請從左窗格中選擇 **Charts** 子表單，選擇 **Layout** 頁籤，然後為 **** XAnchor欄位指定值。 值必須大於Charges子表單的 **Width** 欄位 **的值** 。 選擇「 **費用** 」子表單，然後選擇「 **佈局** 」頁籤以查看「寬 **度** 」欄位的值。
 
@@ -111,7 +111,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 使用Forms Designer建立XDP範本後，您必須將它上傳至AEM Forms伺服器，以便在建立互動通訊時使用範本。
 
-1. 選擇「 **表單** 」>「 **表單與檔案」**。
+1. 選擇「 **[!UICONTROL 表單]** 」>「 **[!UICONTROL 表單與檔案」]**。
 1. 點選「 **建立** >檔案 **上傳」**。
 
    導覽並選取 **create_first_ic_print_template** 範本(XDP)，然後點選 **Open** ，將XDP範本匯入AEM Forms伺服器。
@@ -225,7 +225,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    1. 從 **「欄** 數 **** 」下拉式清單中選取1。
 
    1. 點選 ![](/help/forms/using/assets/done_icon.png) 以儲存屬性。
-   面板的名稱會更新為內容樹 **中的Bill Details** 。
+   面板的名稱會更新為內容樹 **中的Bill Details** （清單詳細資訊）。
 
 1. 重複步驟7 - 11，將具有下列屬性的面板新增至範本：
 
