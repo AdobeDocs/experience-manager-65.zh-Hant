@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8ae97a21-83af-4615-9be3-61e2f8065081
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
@@ -60,7 +60,7 @@ source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
 
 執行下列步驟，以建立以Agent UI為資料來源之欄位的變數、建立靜態文字，以及在檔案片段中使用表單資料模型元素：
 
-1. 選擇「 **表單** >文 **件片段」**。
+1. 選擇「 **[!UICONTROL 表單]** >文 **[!UICONTROL 件片段」]**。
 
 1. 選擇「 **建立** > **文字」**。
 1. 指定下列資訊：
@@ -105,7 +105,7 @@ source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
 
 1. 按一下 **保存** ，建立「清單詳細資訊」文本文檔片段。
 
-## 步驟2:建立客戶詳細資訊文字檔案片段 {#step-create-customer-details-text-document-fragment}
+## 步驟2:建立客戶詳細資料文字檔案片段 {#step-create-customer-details-text-document-fragment}
 
 Customer Details文檔片段包含以下欄位：
 
@@ -122,7 +122,7 @@ Customer Details文檔片段包含以下欄位：
 
 執行下列步驟，以建立以Agent UI為資料來源之欄位的變數、建立靜態文字，以及在檔案片段中使用表單資料模型元素：
 
-1. 選擇「 **表單** >文 **件片段」**。
+1. 選擇「 **[!UICONTROL 表單]** >文 **[!UICONTROL 件片段」]**。
 1. 選擇「 **建立** > **文字」**。
 1. 指定下列資訊：
 
@@ -160,7 +160,7 @@ Customer Details文檔片段包含以下欄位：
 
 1. 將游標置於「行 **動號碼** 」欄位旁，然後按兩下 **customer** > **mobilenum** 屬性。
 1. 將游標置於「備用聯 **系人號碼** 」欄位旁，按兩下** customer** > **** alternatemobilenumber屬性。
-1. 將游標放在「關係編號」( **Relationship Number** )欄位旁，並按兩下 **customer** > **** relationshipnumber屬性。
+1. 將游標置於「關係編號」( **Relationship Number** )欄位旁，並按兩下 **customer** > **** relationshipnumber屬性。
 1. 選擇「 **變數** 」頁籤，將游標置於「供應地點」( **Place of Supply** )欄位旁，然後按兩下「 **Placesupply** 」（供應地點）變數。
 1. 將游標置於「狀態代碼 **」欄位旁** ，然後按兩下「狀態 **代碼」變數** 。
 1. 將游標置於「連接數 **」欄位旁** ，並按兩下 **Numberconnections** 變數。
@@ -184,7 +184,7 @@ Customer Details文檔片段包含以下欄位：
 
 執行下列步驟，以建立以Agent UI為資料來源之欄位的變數、建立靜態文字，以及在檔案片段中使用表單資料模型元素：
 
-1. 選擇「 **表單** >文 **件片段」**。
+1. 選擇「 **[!UICONTROL 表單]** >文 **[!UICONTROL 件片段」]**。
 1. 選擇「 **建立** > **文字」**。
 1. 指定下列資訊：
 
@@ -226,7 +226,7 @@ Customer Details文檔片段包含以下欄位：
 1. 將游標置於「調整」( **Adjustments** )欄位旁，並按兩下「調 **整」(Adjustments** )變數。
 1. 將游標置於「到期 **金額** 」欄位旁，然後按兩下 **「到期金額** 」變數。
 1. 將游標置於「到期日 **期** 」欄位旁，然後按兩下「 **Duedate** 」變數。
-1. 選擇「 **資料模型對象** 」頁籤，將游標置於右窗格中的「費用」當前開單期間 **，然後按兩下「清單** 」>「 ******** usagecharges屬性」。
+1. 選擇「 **資料模型對象** 」頁籤，將游標置於右窗格中的「當前開單期間」欄位旁邊，然後按兩下「清單 **」>「********** usagecharges屬性」。
 
    ![帳單摘要](assets/bill_summary_static_variables_new.png)
 
@@ -250,7 +250,7 @@ Customer Details文檔片段包含以下欄位：
 
 執行以下步驟以建立靜態文本並在文檔片段中使用表單資料模型元素：
 
-1. 選擇「 **表單** >文 **件片段」**。
+1. 選擇「 **[!UICONTROL 表單]** >文 **[!UICONTROL 件片段」]**。
 1. 選擇「 **建立** > **文字」**。
 1. 指定下列資訊：
 
