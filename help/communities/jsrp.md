@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: aa2c75e061e00ba74d54843a5f35bb7d82d12a92
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
@@ -35,7 +35,7 @@ source-git-commit: aa2c75e061e00ba74d54843a5f35bb7d82d12a92
 
 在作者環境中，要訪問儲存配置控制台
 
-* 從全域導覽：「工 **[!UICONTROL 具>社群>儲存設定」]**
+* 從全域導覽：工 **[!UICONTROL 具]** >社 **[!UICONTROL 群]** >存 **[!UICONTROL 儲配置]**
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -48,9 +48,8 @@ source-git-commit: aa2c75e061e00ba74d54843a5f35bb7d82d12a92
 
 * 作者：
 
-   * 從全域導覽：工 **[!UICONTROL 具>部署>複製]**
-   * 選擇 **[!UICONTROL 激活樹]**
-   * **[!UICONTROL 開始路徑]**:
+   * 從全域導覽：工 **[!UICONTROL 具]** >部 **[!UICONTROL 署]** >復 **[!UICONTROL 制]**
+   * 選擇「 **[!UICONTROL 激活樹]** 」>「 **[!UICONTROL 開始路徑」]**:
 
       * 瀏覽至 `/conf/global/settings/community/srpc/`
    * 選取「啟 **[!UICONTROL 動」]**
@@ -58,7 +57,7 @@ source-git-commit: aa2c75e061e00ba74d54843a5f35bb7d82d12a92
 
 ## 管理使用者資料 {#managing-user-data}
 
-如需使用者 *、使用者****、使用者*&#x200B;設定檔和使用者群組的相關資訊，請造訪
+如需有關使用者 *、使用者****、使用者*&#x200B;設定檔和使用者群組的資訊，請造訪：
 
 * [用戶同步](sync.md)
 * [管理使用者和使用者群組](users.md)
@@ -73,8 +72,8 @@ source-git-commit: aa2c75e061e00ba74d54843a5f35bb7d82d12a92
 
 * 在JCR中，如果 [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) ，這表示儲存提供程式是JSRP
-   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將JSRP定義為預設提供程式
+   * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) ，表示儲存提供程式是JSRP。
+   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將JSRP定義為預設提供程式。
 
 ### UGC在作者例項上不可見 {#ugc-not-visible-on-author-instance}
 
