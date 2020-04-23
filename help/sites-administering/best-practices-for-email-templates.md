@@ -11,7 +11,7 @@ topic-tags: best-practices
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd0cb6abe024bc4ff77c9932c99b816c832377f5
+source-git-commit: 87a8c36130c70d1fe8839c092fffda2821333466
 
 ---
 
@@ -99,7 +99,7 @@ AEM中提供的示範促銷活動會遵循所有這些最佳實務。 針對每�
 |---|---|
 | 新增 *alt* 屬性至影像 | Alt *屬性* ，已定義為影像元件的必備屬性。 |
 | 使用 *jpg* ，而非 *png格式* ，處理影像 | 影像元件一律會以JPG格式提供影像。 |
-| 在表 <img> 格中使用元素而非背景影像。 | 範本中未使用背景影像資料。 |
+| 在表 `<img>` 格中使用元素而非背景影像。 | 範本中未使用背景影像資料。 |
 | 在圖片上新增屬性style=&quot;display block&quot;。 讓Gmail顯示更好。 | 所有影像都依預設包 *含style=&quot;display block&quot;屬性* 。 |
 
 ### 文字和連結 {#text-and-links}
