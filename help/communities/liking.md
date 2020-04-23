@@ -10,18 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
 
 # 使用贊 {#using-liking}
 
-此 `Liking`元件是有用的工具，可讓使用者對特定內容（例如論壇中的注釋）發表意見。 使用元 `Liking`件時，成員會選擇心臟圖示以指出正面意見。
+該 `Liking` 元件是一種實用工具，允許用戶對特定內容（如論壇中的注釋）表達意見。 使用元 `Liking` 件時，成員會選取心臟圖示以指出正面意見。
 
 ## 新增對頁面按贊 {#adding-liking-to-a-page}
 
-若要在作 `Liking` 者模式中將元件新增至頁面，請使用元件瀏覽器來尋找
+若要在作 `Liking` 者模式下將元件新增至頁面，請使用元件瀏覽器來尋找：
 
 * `Communities / Liking`
 
@@ -43,11 +43,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-* **[!UICONTROL 正面回應標籤]**(必&#x200B;*要*)正面回應的屬性名稱。
+* **[!UICONTROL 正面回應標籤]**
 
-* **[!UICONTROL 負面回應標籤]**(*必要*)負面回應的屬性名稱。
+   (必&#x200B;*要*)正面回應的屬性名稱。
 
-* **[!UICONTROL Tally Name]**(*必要*)此投票元件實例的內部可識別屬性名稱。
+* **[!UICONTROL 負面回應標籤]**
+
+   (必&#x200B;*要*)負面回應的屬性名稱。
+
+* **[!UICONTROL 記帳名稱]**
+
+   (必&#x200B;*要*)此投票元件例項的內部、可識別屬性名稱。
 
 ## 網站訪客體驗 {#site-visitor-experience}
 
