@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
 
 ---
 
@@ -27,11 +27,12 @@ Handlebars Helpers（幫手）是可從Handlebars指令碼調用的方法，以�
 
 隨AEM Communities提供的自訂SCF幫助器，在用戶端資料庫 [中定義](../../help/sites-developing/clientlibs.md):
 
-* /etc/clientlibs/social/commons/scf/helpers.js
+* `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
 >請務必安裝最 [新的Communities功能套件](deploy-communities.md#latestfeaturepack)。
+
 
 ## 縮寫 {#abbreviate}
 
@@ -103,15 +104,15 @@ Then abbreviate would return
 
 * **moreText**:字串
 
-   （選用）要顯示的文字，指出要顯示的文字較多。 預設為「更多」。
+   （可選）要顯示的文字，指出要顯示的文字較多。 預設為「更多」。
 
 * **橢圓文字**:字串
 
-   （選用）要顯示的文字，指出有隱藏文字。 預設值為&quot;。..&quot;。
+   （可選）要顯示的文字，指出有隱藏文字。 預設值為&quot;。..&quot;。
 
 * **safeString**:布林值
 
-   （選用）布林值，指出是否在傳回結果前套用Handlebars.SafeString()。 預設為false。
+   （選用）布林值，指出在傳回結果之前是否要套用Handlebars.SafeString()。 預設為false。
 
 ### 例如 {#example}
 
@@ -163,11 +164,11 @@ Then content-loadmore would return
 
 * **lvalue**:字串
 
-   要比較的左側值
+   要比較的左手值。
 
 * **rvalue**:字串
 
-   要比較的右側值
+   要比較的右側值。
 
 ### 例如 {#example-1}
 
@@ -246,17 +247,17 @@ Then content-loadmore would return
 
    （可選，除非提供相對路徑）
 
-   用 `this`於傳遞目前內容
+   使用 `this` 來傳遞目前的內容。
 
-   用於 `this.id` 獲取在上的資源，以 `id` 呈現請求的resourceType
+   使用 `this.id` 獲取上的資源，以 `id` 呈現請求的resourceType。
 
 * **resourceType**:字串
 
-   （可選）資源類型將預設為上下文中的資源類型
+   （可選）資源類型預設為上下文中的資源類型。
 
 * **範本**:字串
 
-   元件指令碼的路徑
+   元件指令碼的路徑。
 
 * **路徑**:字串
 
@@ -272,7 +273,7 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-這將包含新的注釋元件，位 `this.id` 於+ /comments
+這將包含新的注釋元件，位 `this.id` 於+ /comments。
 
 ## IncludeClientLib {#includeclientlib}
 
@@ -383,7 +384,7 @@ Depending on how long in the past, may return
 
 * **內容**:物件
 
-   要編碼的HTML
+   要編碼的HTML。
 
 ### 例如 {#example-6}
 
@@ -401,7 +402,7 @@ Depending on how long in the past, may return
 
 * **內容**:物件
 
-   要編碼的HTML
+   要編碼的HTML。
 
 ### 例如 {#example-7}
 
@@ -419,7 +420,7 @@ Depending on how long in the past, may return
 
 * **內容**:物件
 
-   要編碼的HTML
+   要編碼的HTML。
 
 ### 例如 {#example-8}
 
@@ -437,7 +438,7 @@ var input = {{xss-jsString topic-title}}
 
 * **內容**:物件
 
-   要淨化的URL
+   要淨化的URL。
 
 ### 例如 {#example-9}
 
@@ -449,7 +450,7 @@ var input = {{xss-jsString topic-title}}
 
 從 [Handlebars.js檔案快速概觀協助功能](https://handlebarsjs.com/expressions.html):
 
-* Handlebars協助呼叫是簡單的識別碼（協助程式的*name *），後面接著零個或多個空格分隔的參數。
+* Handlebars幫手呼叫是簡單的識別碼( *幫手的名稱* )，後面跟著零個或多個空格分隔的參數。
 * 參數可以是簡單的字串、數字、布林值或JSON物件，以及可選的索引鍵值配對（雜湊引數）序列，做為最後一個參數。
 * 雜湊引數中的索引鍵必須是簡單識別碼。
 * 雜湊引數中的值是Handlebars運算式：簡單識別碼、路徑或字串。
@@ -566,6 +567,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >該元件在登錄用戶的客戶端上重新呈現，如果找不到客戶端幫助程式，則該元件將消失。
 
+
 ### 用戶端自訂協助工具 {#client-side-custom-helpers}
 
 客戶端幫助者是通過調用註冊的Handlebars指令碼 `Handlebars.registerHelper()`。
@@ -589,9 +591,9 @@ function(Handlebars, SCF, $CQ) {
 自訂用戶端協助工具必須新增至自訂用戶端程式庫。
 clientlib必須：
 
-* 包含依賴項 `cq.social.scf`
-* 在Handlebars載入後載入
-* 包含在 [內](clientlibs.md)
+* 包括依賴項 `cq.social.scf`。
+* 在車把被裝載後裝載。
+* 隨 [附](clientlibs.md)。
 
 注意：SCF幫助器的定義如 `/etc/clientlibs/social/commons/scf/helpers.js`中。
 
