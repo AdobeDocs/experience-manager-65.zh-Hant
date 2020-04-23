@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 使用作 [者例項](https://localhost:4502/)
 
 * 具有管理員權限的登入
-* 導覽至「 **[UIControl社群>網站」]**
+* 導覽至「社 **[!UICONTROL 群>網站」]**
 
 * Select **Create**
 
@@ -96,9 +96,9 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 可套用至社群內容的標籤是透過選取先前透過「標籤控制台」( [Tagging Console](/help/sites-administering/tags.md#tagging-console) )定義的AEM名稱空間(例如 [Tutorial namespace](/help/communities/enablement-setup.md#create-tutorial-tags))來控制。
 
-此外，為社群網站選取「標籤名稱空間」會限制定義型錄和啟用資源時顯示的選擇。 如需重 [要資訊，請參閱標籤](/help/communities/tag-resources.md) 啟用資源。
+此外，為社群網站選取「標籤名稱空間」會限制在定義型錄和啟用資源時顯示的選擇。 如需重 [要資訊，請參閱標籤](/help/communities/tag-resources.md) 啟用資源。
 
-使用預先輸入搜尋功能，尋找名稱空間十分簡單。 例如，
+使用預先輸入搜尋功能，輕鬆尋找命名空間。 例如，
 
 * 類型 `tut`
 * 選取 `Tutorial`
@@ -313,7 +313,7 @@ Select **Create.**
 
 #### 疑難排解：保存映射時出錯 {#troubleshooting-error-saving-map}
 
-如果無法保存更改，請確保節點名為 `localhost.4503`，帶有「dot」分隔符，而不帶有 `localhost:4503` 「冒號」分隔符，因為 `localhost` 它不是有效的命名空間前置詞。
+如果無法保存更改，請確保節點名為 `localhost.4503`，帶有「點」分隔符，而不帶有 `localhost:4503` 「冒號」分隔符，因為 `localhost` 它不是有效的命名空間前置詞。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
