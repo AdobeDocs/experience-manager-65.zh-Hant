@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -84,13 +84,13 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 
 
-## 最新版本 {#latest-releases}
+## Latest Releases {#latest-releases}
 
 AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communities的更新](/help/release-notes/release-notes.md#experiencemanagercommunities)，請 [參閱AEM 6.5發行說明](/help/release-notes/release-notes.md#communities-release-notes.html)。
 
 ### AEM 6.5更新 {#aem-updates}
 
-從AEM 6.4開始，Communities的更新會以AEM Cumulative Fix Pack和Service Pack的一部份提供。
+從AEM 6.4開始，「社群」的更新會以AEM Cumulative Fix Pack和Service Pack的一部份提供。
 
 如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Packs和Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
 
@@ -147,7 +147,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 **安裝SCORM套件**
 
 1. 從「 [Package Share」（套件共用）安裝2.3.7版的cq-social-scorm](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) -package。
-1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行它，以建立升級的scormEngineDB模式。
+1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行該實例，以建立升級的scormEngineDB模式。
 1. 在發 `/content/communities/scorm/RecordResults` 布者的CSRF篩選器中新增「排除的路徑」 `https://<hostname>:<port>/system/console/configMgr` 屬性。
 
 
@@ -245,7 +245,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 * 在作者上訪問複製控制台
 
-   * 從全域導覽，導覽至「 **[UIControl工具>部署>複製>作者代理」]**
+   * 從全域導覽，導覽至「工 **[!UICONTROL 具>部署>複製>作者代理」]**
 
 * 對於兩個代理，請遵循相同的流程：
 
@@ -279,7 +279,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 * 論作 **者**
 * 使用管理權限登入
-* 如果發佈者不是localhost:4503或傳輸用戶不是， `admin`則 [配置複製代理](#replication-agents-on-author)
+* 如果發佈者不是localhost:4503或transport用戶不是 `admin`，則 [配置複製代理](#replication-agents-on-author)
 
 * 存取 [Web Console](/help/sites-deploying/configuring-osgi.md)
 
@@ -324,7 +324,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 
 >[!CAUTION]
 >
->如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請 [聯絡客戶服務](https://helpx.adobe.com/marketing-cloud/contact-support.html)。
+>如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請 [聯絡客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
 #### 儲存庫複製 {#repository-replication}
 
