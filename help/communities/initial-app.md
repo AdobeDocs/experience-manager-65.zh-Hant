@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,8 +19,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在本節中，您將建立以下內容：
 
-* 用 **[於在](#createthepagetemplate)**範例網站中建立內容頁面的範本
-* 用 **[於呈現網站頁面的元件](#create-the-template-s-rendering-component)**和指令碼
+* 用 **[於在](#createthepagetemplate)**範例網站中建立內容頁面的範本。
+* 用 **[於呈現網站頁面的元件](#create-the-template-s-rendering-component)**和指令碼。
 
 ## 建立內容範本 {#create-the-content-template}
 
@@ -28,10 +28,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在本練習中，所有頁面都以單一簡單範本為基礎。
 
-1. 在CRXDE Lite的瀏覽器窗格中
+1. 在CRXDE Lite的瀏覽器窗格中：
 
-   * select `/apps/an-scf-sandbox/templates`
-   * **[!UICONTROL 「建立>建立範本」]**
+   * 選取 `/apps/an-scf-sandbox/templates`
+   * **[!UICONTROL 「建立]** >建立 **[!UICONTROL 範本」]**
 
 1. 在「建立範本」對話方塊中，輸入下列值，然後按一下「下 **[!UICONTROL 一步]**:
 
@@ -44,7 +44,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    資源類型將作為屬 `playpage`性顯示在jcr:content節點上 `sling:resourceType`。 它可識別在瀏覽器要求時轉譯內容的元件（資源）。
 
-   在這種情況下，使用模板建立的所 `playpage`有頁都由元件呈 `an-scf-sandbox/components/playpage` 現。 依慣例，元件的路徑是相對的，可讓Sling先在資料夾中搜尋資源，若找不到， `/apps` 則在資料夾中 `/libs` 搜尋。
+   在這種情況下，使用模板建立的所有頁 `playpage` 都由元件呈現 `an-scf-sandbox/components/playpage` 。 依慣例，元件的路徑是相對的，可讓Sling先在資料夾中搜尋資源，若找不到， `/apps` 則在資料夾中 `/libs` 搜尋。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
@@ -58,9 +58,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    注意：允許的路徑屬性的值是規則運 *算式。* 路徑與運算式相符的內容頁面可以使用範本。 在這種情況下，規則運算式與 **/content資料夾的路徑** 及其所有子頁面相符。
 
-   當作者在下面建立頁 `/content`面時，標 `playpage`題為「SCF沙盒頁面範本」的範本會出現在可用範本清單中。
+   當作者在下面建立頁面 `/content`時，標 `playpage` 題為「SCF沙盒頁面範本」的範本會出現在可用範本清單中。
 
-   從範本建立根頁面後，修改屬性以將根路徑包含在規則運算式中，即可限制範本的存取權限至此網站。
+   從範本建立根頁面後，可修改屬性以將根路徑包含在規則運算式中，以限制範本的存取權限至此網站。
 
    `/content/an-scf-sandbox(/.&ast;)?`
 
@@ -74,7 +74,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    按一下 **[!UICONTROL 確定]**。
 
-1. 按一下「確定」(OK)並完成模板的建立後，您將注意到新模板的「屬性」(Properties)頁籤值的拐角中顯示了紅色 `playpage`三角形。 這些紅色三角形表示未保存的編輯。
+1. 按一下「確定」(OK)並完成模板的建立後，您將注意到新模板的「屬性」(Properties)頁籤值的拐角中顯示了紅色 `playpage` 三角形。 這些紅色三角形表示未保存的編輯。
 
    按一下 **[!UICONTROL 全部保存]** ，將新模板保存到儲存庫。
 
@@ -100,7 +100,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 群組:
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. 按一下「 **[!UICONTROL 下一步]** 」，直到出現 **[!UICONTROL 對話框的「允許子項]** 」面板
+1. 按一下「 **[!UICONTROL 下一步]** 」，直到出現 **[!UICONTROL 對話框的「允許子項]** 」面板：
 
    * 按一下「 **[!UICONTROL 確定」]**
    * 按一下「 **[!UICONTROL 全部儲存」]**
