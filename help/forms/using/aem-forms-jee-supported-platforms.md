@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a6b4a32b320d53c41ebf9615895dbf17ab722f19
 
 ---
 
@@ -151,7 +151,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   </tr> 
    <tr>
    <td>Oracle Database 19c </td>
-   <td>存放庫</td>
+   <td>儲存庫微內核 </td>
    <td>支援</td>
   </tr>
   <tr>
@@ -713,6 +713,6 @@ Adobe支援協力廠商在發行時發出的緊急或建議的修補程式，前
 
 在Adobe無法控制的情況下，宣稱回溯相容性的協力廠商修補程式可能會對Adobe產品或客戶環境造成負面影響。 在這種情況下，Adobe建議客戶先評估第三方的任何緊急修補程式，再將它們套用至關鍵系統。 Adobe將與第三方合作，以合理的商業努力來解決此類問題，不論是透過一般的Adobe支援計畫，還是透過協力廠商在修補程式中修正問題。 這並不保證Adobe支援的新發行協力廠商修補程式會如廠商所記錄，或與JEE上的AEM Forms一起運作。
 
-Adobe保留在任何指定點變更AEM Forms on JEE版本所支援之協力廠商參考平台及其支援修補程式定義的權利。
+Adobe保留在任何指定時刻變更AEM Forms on JEE版本所支援之協力廠商參考平台及其支援修補程式定義的權利。
 
 如需協力廠商修補程式的詳細資訊，請搜尋Adobe企業支援網站，以取得與您產品相關的知識庫文章。
