@@ -1,6 +1,6 @@
 ---
-title: 匯出至 CSV
-seo-title: 匯出至 CSV
+title: 匯出為 CSV
+seo-title: 匯出為 CSV
 description: 將您頁面的相關資訊匯出至本機系統上的CSV檔案
 seo-description: 將您頁面的相關資訊匯出至本機系統上的CSV檔案
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
 
 ---
 
 
-# 匯出至 CSV{#export-to-csv}
+# 匯出為 CSV{#export-to-csv}
 
 **「建立CSV報表** 」可讓您將有關頁面的資訊匯出至本機系統上的CSV檔案。
 
@@ -51,7 +51,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 產生的 `export.csv` 檔案可在Excel或任何其他相容應用程式中開啟。
 
-![]() ![etc-01](assets/etc-01.png)
+![etc-01](assets/etc-01.png)
 
 瀏覽Sites **控制台時** （在「清單」檢視中），可使用「建立 **CSV報表** 」選項：它是「建立」( **Create** )下拉菜單的選項：
 
