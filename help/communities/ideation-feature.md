@@ -11,26 +11,26 @@ content-type: reference
 discoiquuid: a3f5a21d-2df6-4663-a1ea-3a067c46f860
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
 
-# 創意功能{#ideation-feature}
+# 創意功能 {#ideation-feature}
 
 ## 簡介 {#introduction}
 
-識別功能提供發佈環境中登入網站訪客（社群成員）的區域，讓您：
+識別功能為登入網站訪客（社群成員）在發佈環境中提供一個區域，以便：
 
-* 建立想法以與社群分享
-* 觀點與評論
-* 遵循想法
-* 對一個想法投了贊成票
+* 建立想法以與社群分享。
+* 檢視並評論構想。
+* 遵循構想。
+* 投一票。
 
-本節說明
+本檔案章節說明：
 
-* 新增創意功能至AEM網站
-* Ideation元件的配置設定
+* 新增創意功能至AEM網站。
+* Ideation元件的組態設定。
 
 ### 新增構想至頁面 {#adding-a-ideation-to-a-page}
 
@@ -42,7 +42,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/ideation.md#essentials-for-client-side) ，元件的顯示 `Ideation`方式如下：
+當包含 [所需的用戶端程式庫](/help/communities/ideation.md#essentials-for-client-side) ，元件的顯示方式 `Ideation` 如下：
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -54,7 +54,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 「設定」頁籤 {#settings-tab}
 
-在「**設定**」標籤下，指定構想和留言的設定：
+在「設 **[!UICONTROL 定]** 」標籤下，指定構想和留言的設定：
 
 * **允許附件縮圖**
 * **附加縮圖最大尺寸**
@@ -88,7 +88,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **允許標記**
 
-   如果勾選，允許成員將標籤標籤新增至其貼文(請參 **閱「標籤欄位** 」標籤)。 預設為未勾選。
+   如果勾選，允許成員將標籤標籤新增至其貼文(請參 **[!UICONTROL 閱「標籤欄位]** 」標籤)。 預設為未勾選。
 
 * **允許檔案上傳**
 
@@ -100,11 +100,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許** **所有檔案類型。
+   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
-   僅在勾選「允許檔案上傳」時相關。 上傳的影像檔案的位元組數上限。 預設值為2097152****(2 Mb)。
+   僅在勾選「允許檔案上傳」時相關。 上傳的影像檔案的位元組數上限。 預設值為2097152(2 Mb)。
 
 * **允許回覆**
 
@@ -146,7 +146,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 使用者協調標籤 {#user-moderation-tab}
 
-在「**使用者協調**」標籤下，指定如何管理已張貼的想法和留言（使用者產生的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+在「使用 **[!UICONTROL 者協調]** 」標籤下，指定如何管理已張貼的想法和留言（使用者產生的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
 * **拒絕貼文**
 
@@ -178,19 +178,19 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 「標籤」欄位頁籤 {#tag-field-tab}
 
-在「標 **記」欄位** (Tag field)標籤下，可套用的標籤（如果允許）會根據選擇的名稱空間加以限制。
+在「標 **[!UICONTROL 記」欄位]** (Tag field **** )標籤下，可套用的標籤（如果允許）會根據選擇的名稱空間加以限制。
 
 * **允許的命名空間**
 
-   如果已勾選 `Allow Tagging` 「設定」標籤下 **的選項** ，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
+   如果已勾選 `Allow Tagging` 「設定」標籤下 **[!UICONTROL 的選項]** ，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
 
 * **建議限制**
 
-   輸入要作為建議顯示給發佈到論壇的成員的標籤數。 值**-**1表示無限制。 預設值為0。
+   輸入要作為建議顯示給發佈到論壇的成員的標籤數。 值-1 **表示無** 限制。 預設值為0。
 
 #### 「排序設定」頁籤 {#sort-settings-tab}
 
-在「**排序設定**」標籤下，指定張貼的留言在顯示時的排序方式。
+在「排 **[!UICONTROL 序設定]** 」標籤下，指定顯示張貼留言的排序方式。
 
 * **排序方式**
 
@@ -226,7 +226,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 提供意見回應 {#providing-feedback}
 
-一旦發佈構想後，其他成員就可以登入、開啟構想( `Read More`)並像構想一樣，進而增加選票計數，並加上意見。
+一旦發佈構想，其他成員就可以登入、開啟構想( `Read More`)並像構想一樣，進而增加選票計數，並加上意見。
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
