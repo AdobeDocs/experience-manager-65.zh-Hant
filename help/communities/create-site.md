@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -141,7 +141,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 「轉 [譯」設定](/help/communities/sites-console.md#translation) ，可指定網站的基本語言，以及UGC是否可轉譯，以及是否可轉譯為哪種語言。
 
 * 檢查允 **許機器翻譯**
-* 預設的機器翻譯服務保留為翻譯選擇的預設語言
+* 預設的機器翻譯服務將預設語言保留為翻譯選定
 * 保留預設翻譯提供程式和配置
 * 不需要全球商店，因為沒有語言復本
 * 選擇 **翻譯整個頁**
@@ -200,7 +200,7 @@ Select **Create.**
 
 * **刪除網站**
 
-   選擇刪除表徵圖可從「UIControl社區>站點控制台」 **[中刪除社區站點]**。 此動作會移除與網站相關的所有項目，例如UGC、使用者群組、資產和資料庫記錄。
+   選擇刪除表徵圖可從「社群」>「站點」控 **[!UICONTROL 制台中刪除社群站點]**。 此動作會移除與網站相關的所有項目，例如UGC、使用者群組、資產和資料庫記錄。
 
 ![siteactions](assets/siteactions.png)
 
@@ -210,17 +210,17 @@ Select **Create.**
 >
 >在作者實例上，從主菜單：
 >
->1. 導覽至「 **[UIControl工具>操作>複製]** 」功能表。
->1. 選擇 **[作者上的UIControl Agents]**。
->1. 選擇 **[UIControl Default Agent(publish)]**。
->1. 在「UIControl Settings」( **[UIControl設定]**)旁，選 **[擇「UIControl Edit」(UIC控制編輯]**)。
->1. 在「代理設定」的彈出對話框中，選擇「 **[UIControl傳輸]** 」頁籤。
+>1. 導航至「 **[!UICONTROL 工具」>「操作」>「複製]** 」菜單。
+>1. 選擇 **[!UICONTROL 作者上的代理]**。
+>1. 選擇 **[!UICONTROL 預設代理（發佈）]**。
+>1. 在「設 **[!UICONTROL 定]**」旁，選 **[!UICONTROL 擇編輯]**。
+>1. 在「代理設定」的彈出對話框中，選擇「傳 **[!UICONTROL 輸]** 」頁籤。
 >1. 在URI中，將埠號4503更改為所需的埠號>
    >    * 例如，要使用埠6103:
       >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >
-1. 選擇「 **[UIControl OK(UIC控制確定]**)」。
-1. （可選）選擇 **[UIControl Clear]** 或 **[UIControl Force Retry]** 以重設複製隊列。
+1. 選擇 **[!UICONTROL 確定]**。
+1. （可選）選擇「 **[!UICONTROL 清除]** 」或「 **[!UICONTROL 強制重試]** 」以重設複製隊列。
 
 
 
