@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 貢獻限制功能可限制社群成員的貢獻，以防垃圾郵件。
 
-當會員受限時，任何超過允許之稿數的貼文，都會產生超出限制且貼文遭拒的警告。 然後，社群成員可前往社群訊息中心，並聯絡社群經理，如有需要，可移除限制。
+當會員受限時，任何超過允許之稿數的貼文都會產生警告，指出已超出限制且貼文遭拒。 然後，社群成員可前往社群訊息中心，並聯絡社群經理，如有需要，可移除限制。
 
 貢獻限制可以從「成員」控制台 [單獨啟用](members.md) ，和／或設定為在網站訪客成為新成員時自動啟用。
 
@@ -29,22 +29,22 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## AEM Communities使用者產生的內容貢獻限制設定 {#aem-communities-user-generated-content-contribution-limits-configuration}
 
-此OSGi配置
+此OSGi配置：
 
-* 定義繳費限制的特點（一個時段內的員額數）
-* 標識成員在達到限制時能夠向誰發送消息
-* 識別不需要限制的網域
+* 定義繳費限制的特性（一個時段內的貼文數）。
+* 標識成員在達到限制時能夠發送消息的對象。
+* 識別不需要限制的網域。
 
 要訪問此OSGi配置：
 
-* 在主要發行者上
-* 以管理員權限登入
-* 存取 [Web Console](../../help/sites-deploying/configuring-osgi.md)
+* 在主要發行者上：
+* 以管理員權限登入。
+* 存取 [Web Console](../../help/sites-deploying/configuring-osgi.md)。
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 尋找 `AEM Communities User Generated Content Contribution Limits Configuration`
-* 選取編輯圖示
+* 找到 `AEM Communities User Generated Content Contribution Limits Configuration`。
+* 選擇編輯表徵圖。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
