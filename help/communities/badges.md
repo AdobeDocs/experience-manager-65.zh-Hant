@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -34,7 +34,7 @@ Communities Badges控制台可以添加自定義徽章，這些徽章可在獲�
 
 在作者環境中，若要進入Badges主控台
 
-* 從全域導覽，導覽至「 **[UIControl工具>社群>標章」]**
+* 從全域導覽，導覽至「工 **[!UICONTROL 具>社群>標章」]**
 
 此控制台顯示當前可用的標章，並可從中添加新標章。
 
