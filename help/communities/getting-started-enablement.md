@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 341fef2b8f040848a59381b0d4996c29f352b929
 
 ---
 
@@ -26,6 +26,7 @@ AEM Communities可協助品牌建立跨數位和面對面通道的一致體驗�
 >[!NOTE]
 >
 >本教學課程假設安裝 [Communities功能套件1](deploy-communities.md#latestfeaturepack) 或更新版本。
+
 
 * [初始設定](enablement-setup.md)
 
