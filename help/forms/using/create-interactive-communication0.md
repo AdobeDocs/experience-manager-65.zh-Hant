@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
@@ -34,19 +34,19 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 ### 建立適用於列印頻道的互動式通訊 {#create-interactive-communication-for-print-channel}
 
-以下是本教學課程中已建立且建立列印頻道互動式通訊時所需的資源清單：
+以下是本教學課程中已建立、在建立適用於列印頻道的互動式通訊時需要的資源清單：
 
-**** 列印範本： [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
+**列印範本：**[create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
 
-**** 表單資料模型： [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**表單資料模型：**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**** 檔案片段： [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**檔案片段：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
-**** 版面片段： [table_lf](../../forms/using/create-templates-print-web.md)
+**版面片段：**[table_lf](../../forms/using/create-templates-print-web.md)
 
-**** 影像：PayNow和ValueAddedServices
+**影像：** PayNow和ValueAddedServices
 
-1. 登入AEM作者例項並導覽至 **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**。
+1. 登入AEM作者例項並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
 1. 點選「 **建立** 」並選 **取「互動式通訊」**。 此時將顯示 **「建立互動式通信** 」嚮導。
 1. 在「 **標題」和「名稱** 」欄位中指定create_first_ic ******** 。 選 **擇FDM_Create_First_IC** 作為表單資料模型並點選 **下一步**。
 1. 在「頻 **道** 」精靈中：
@@ -85,7 +85,7 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 1. 在「日期」欄中選取「文字欄 **位** 」，然後點選 ![](assets/configure_icon.png) （設定）。
 1. 從「 **綁定類型** 」下拉清單中選擇「資料模型對象」，然後選 **擇調用** > ******** calldateZombe。 點選 ![](assets/done_icon.png) 兩次以儲存屬性。
 
-   同樣地，在Callding中 **分別建立調用時間**、調用數、調用數 **、調用數、調用時間的電荷、************************** Calldtime數、Calldding電荷、Calldding電荷和調用持續時間的調用Calldign列。
+   同樣地，在Callding中 **分別建立調**&#x200B;用時間 **、調用數**、調用數、 **調用時間、Calldtime**、 ******************** Number、CalldingChargesChargesCargesChargesChargesChargesColumns的調用持續時間長度列。
 
 1. 點選 **PayNow** 目標區域，並點選 **+** 以新增 **Image** 元件。
 1. 點選影像元件並選取( ![](assets/configure_icon.png) 設定)。 影像屬性會顯示在左窗格中：
@@ -100,15 +100,15 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 以下是本教學課程中已建立的、在建立網路頻道互動式通訊時需要的資源清單：
 
-**** Web範本： [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
+**Web範本：**[Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
 
-**** 表單資料模型： [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**表單資料模型：**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**** 檔案片段： [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**檔案片段：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
-**** 影像：PayNowWeb和ValueAddedServicesWeb
+**影像：** PayNowWeb和ValueAddedServicesWeb
 
-1. 登入AEM作者例項並導覽至 **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**。
+1. 登入AEM作者例項並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
 1. 點選「 **建立** 」並選 **取「互動式通訊」**。 此時將顯示 **「建立互動式通信** 」嚮導。
 1. 在「 **標題」和「名稱** 」欄位中指定create_first_ic ******** 。 選 **擇FDM_Create_First_IC** 作為表單資料模型並點選 **下一步**。
 1. 在「頻 **道** 」精靈中：
@@ -154,7 +154,7 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 1. 選擇 **Mobilenum** 表列標題，然後選 **擇更多選項** > **刪除列**。 同樣地，請刪除 **Calltype** 列。
 1. 選擇「呼 **叫日期** 」表格欄標題，並點選「 ![edit](assets/edit.png) (Edit)」，將文字重新命名為「 **呼叫日期**」。 同樣地，請更名表中的其他列標題。
-1. 根據使用案例，在「互動式通訊」中插入「立即付 **費** 」按鈕，讓使用者可以按一下按鈕來付款。 執行以下步驟以插入按鈕：
+1. 根據使用案例，在「互動式通訊」中插入 **「立即付費** 」按鈕，讓使用者可以按一下按鈕來付款。 執行以下步驟以插入按鈕：
 
    1. 點選「 **立即付費** 」目標區域，並點選 **+** 以新增 **** Text元件。
 
@@ -173,10 +173,10 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 1. 使用下列步驟，將超連結文字設定樣式，以在互動式通訊中顯示為按鈕：
 
    1. 點選文字元件並選取 ![編輯](assets/edit.png) （編輯）。
-   1. 在「邊 **框** 」部分中，指定 **1.5px作為** 邊框寬度，選擇Border Width **,BorderPorderAdisLights，並指定****************** 4Px樣式為BorderRadius Adrius。
+   1. 在「邊 **框** 」部分中，指定 **1.5px作為** 邊框寬度，選擇Border Width **,BorderPorderAdisprement Specify****************** 4As Order Adrius。
 
    1. 從「背景」區段中選擇「紅色」作為按鈕的背 **景顏** 色。
-   1. 在「尺寸與位置 **」區段的「邊界** 」欄位中，同時點選「 **編輯」圖示，並將************** RightMargin設為ChrightPxLightContributes450pxZ。 「頂端」、「底部」和「左側」欄位皆設為空白。
+   1. 在「尺寸與位置 **」區段的「邊界** 」欄位中，同時點選「 **編輯」圖示，並將************** RightMargin設為ChrightPxLightCord。 「頂端」、「底部」和「左側」欄位皆設為空白。
    ![在互動式通訊中插入超連結](assets/ic_web_hyperlink_new.png)
 
 1. 點選「 **立即付費** 」目標區域，並點選 **+** 以新增 **** 影像元件。
@@ -194,11 +194,11 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 ## 使用自動同步功能建立適用於印刷與網路的互動式通訊 {#create-interactive-communications-for-print-and-web-with-auto-synchronization}
 
-您也可以啟用列印和網頁頻道之間的自動同步，以建立互動式通訊。 要啟用自動同步，請在建立互動式通信時選擇「打印為主版」選項。 選擇「列印為主版」選項可確保從列印頻道衍生出網頁頻道的內容、繼承和資料系結。 此外，還可確保列印管道中所做的變更反映在網頁管道中。
+您也可以啟用列印和網頁頻道之間的自動同步，以建立互動式通訊。 要啟用自動同步，請在建立交互通信時選擇「打印為主版」選項。 選擇「列印為主版」選項可確保從列印頻道衍生出網頁頻道的內容、繼承和資料系結。 此外，還可確保列印管道中所做的變更反映在網頁管道中。
 
 執行下列步驟，使用列印頻道衍生網頁頻道內容：
 
-1. 登入AEM作者例項並導覽至 **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**。
+1. 登入AEM作者例項並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
 1. 點選「 **建立** 」並選 **取「互動式通訊」**。 此時將顯示 **「建立互動式通信** 」嚮導。
 1. 在「 **標題」和「名稱** 」欄位中指定create_first_ic ******** 。 選 **擇FDM_Create_First_IC** 作為表單資料模型並點選 **下一步**。
 1. 在「頻 **道** 」精靈中：
