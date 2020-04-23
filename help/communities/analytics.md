@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -160,15 +160,15 @@ Adobe Analytics可針對AEM Communities進行設定，如此當會員與支援�
 
 若要建立新的Analytics整合，並使用作者例項上的標準UI，將Adobe Analytics與AEM社群網站整合：
 
-* 從全域導覽：UIControl **[Tools >部署>雲端服務]**
-* 向下捲動至 **[UIControl Adobe Analytics]**
-* 選擇 **[UIControl Configure Now]** （立即配置）或 **[UIControl Show Configurations（顯示配置）]**
+* 從全域導覽：工 **[!UICONTROL 具>部署>雲端服務]**
+* 向下捲動至 **[!UICONTROL Adobe Analytics]**
+* 選擇 **[!UICONTROL 立即配置]** 或 **[!UICONTROL 顯示配置]**
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
 ### 「建立配置」對話框 {#create-configuration-dialog}
 
-* 選擇 `[+]` UIControl Available Configurations旁 **[邊的表徵圖]** ，以建立新配置
+* 選擇 `[+]` 可用配置旁 **[!UICONTROL 邊的表徵圖]** ，以建立新配置
 
 在「建立配置」對話框中，要輸入的值標識配置。
 
@@ -246,7 +246,7 @@ For example, enter *communities*
 
 成功設定Adobe Analytics的基本連線後，必須建立或編輯社群網站的架構。 此架構的目的是將社群功能(AEM)變數對應至Analytics（報表套裝）變數。
 
-* 選擇 `[+]` UIControl Available Frameworks旁 **[邊的表徵圖]** ，以建立新架構
+* 選取 `[+]` 可用架構旁 **[!UICONTROL 的圖示]** ，以建立新架構
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
