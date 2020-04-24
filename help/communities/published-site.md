@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 現在新建立的社群網站已經發佈，請瀏覽至建立網站時顯示的URL，但瀏覽至發佈伺服器，例如
 
-* 作者URL = https://localhost:4502/content/sites/engage/en.html
+* A\uthor URL = https://localhost:4502/content/sites/engage/en.html
 * 發佈URL = https://localhost:4503/content/sites/engage/en.html
 
 為了盡量避免使用者在作者和發佈上登入哪些會員的混淆，建議針對每個例項使用不同的瀏覽器。
@@ -74,7 +74,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 受信任的社群成員 {#trusted-community-member}
 
-本體驗假設 [Aaron mcDonald](/help/communities/tutorials.md#demo-users) 被指派為社群經 [理和協調者的角色](/help/communities/create-site.md#roles)。 如果沒有，請返回作者環境以修 [改網站設定](/help/communities/sites-console.md#modifying-site-properties) ，並選擇Aaron mcDonald擔任社群經理和協調者。
+本體驗假設 [Aaron McDonald](/help/communities/tutorials.md#demo-users) 被指派為社群經 [理和協調者的角色](/help/communities/create-site.md#roles)。 如果沒有，請返回作者環境以修 [改網站設定](/help/communities/sites-console.md#modifying-site-properties) ，並選擇Aaron McDonald擔任社群經理和協調者。
 
 在右上角，選取並 `Log in`使用使用者名稱「aaron.mcdonald@mailinator.com」和密碼「password」簽署。 請注意，使用Twitter或Facebook認證登入的能力。
 
@@ -88,7 +88,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 1. 檢視您收到的直接訊息（收件匣）、傳送的訊息（已傳送的項目）和刪除的訊息（垃圾桶）。
 1. 編寫新的直接訊息，以傳送給個人和群組。
 
-* [通知](/help/communities/notifications.md) (Notifications)選項會引導您前往通知區段，您可在此處檢視感興趣的事件並編輯通知設定。
+* [通知](/help/communities/notifications.md) (Notifications)選項會引導您前往通知區段，您可在此檢視您感興趣的事件並編輯通知設定。
 * [管理](/help/communities/published-site.md#moderationlink) （如果您有協調權限）可將您導向「AEM Communities協調頁面」。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
@@ -177,9 +177,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-39](assets/chlimage_1-39.png)
 
-在作者上——具有管理權限，導覽至 [Communities Groups主控台](/help/communities/members.md) ，並將Weston mcCall新增至 `Community Engage Gymnastics <uid> Members` 群組。
+在作者上——具有管理權限，導覽至 [Communities Groups主控台](/help/communities/members.md) ，並將Weston McCall新增至 `Community Engage Gymnastics <uid> Members` 群組。
 
-繼續發佈時，以Aaron mcDonald的身分登出，並以匿名網站訪客的身分檢視運動群組：
+繼續發佈時，以Aaron McDonald的身分登出，並以匿名網站訪客的身分檢視運動群組：
 
 * 從首頁開始
 * 選取連 `Groups`結
@@ -188,7 +188,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 只會顯示棒球群組。
 
-以Weston mcCall(weston.mccall@dodgit.com /密碼)的身分登入，並導覽至相同的位置。 請注意，Weston可以使用 `Join` 開啟的 `Baseball` 群組和 `enter or Leave` 私人 `Gymnastics`群組。
+以Weston McCall(weston.mccall@dodgit.com /密碼)的身分登入，並導覽至相同的位置。 請注意，Weston可以使用 `Join` 開啟的 `Baseball` 群組和 `enter or Leave` 私人 `Gymnastics`群組。
 
 ![chlimage_1-40](assets/chlimage_1-40.png)
 
@@ -221,7 +221,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在指定使用者名稱、電子郵件和密碼後，選取會 `Sign Up`建立使用者並讓他們簽名。
 
-登入後，第一頁即為其頁面， `Profile`可供他們個人化。
+登入後，第一頁即為其頁面， `Profile`可供個人化。
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
