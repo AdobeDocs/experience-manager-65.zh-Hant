@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 概覽 {#overview}
 
-AEM Communities功能通常要求網站訪客必須先註冊並登入，才能參與發佈環境中的社群。 其使用者註冊只需存在於發佈環境中，通常稱為 *成員* ，以區分其與在作者環境中注 *冊的使用者* 。
+AEM Communities功能通常要求網站訪客必須先註冊並登入，才能參與發佈環境中的社群。 其使用者註冊只需存在於發佈環境中，通常稱為 *成員* ，以區分其與在作者環 *境中註冊的使* 用者。
 
 ### 發佈時的成員（使用者） {#members-users-on-publish}
 
@@ -29,22 +29,24 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 
 若要管理在作者環境中註冊的使 *用者和群組* ，必須使用平台的安全性主控台：
 
-* 從全域導覽選擇 `Tools, Security, Users`
-* 從全域導覽選擇 `Tools, Security, Groups`
+* 從全域導覽中，選 **[!UICONTROL 取「工具]** > **[!UICONTROL 保全]** >使 **[!UICONTROL 用者]**」。
+* 從全域導覽中，選 **[!UICONTROL 取「工具]** > **[!UICONTROL 保全]** > **[!UICONTROL 群組]**」。
 
 >[!NOTE]
 >
 >在部署並啟用範例內容後，許多範例使用者都存在於作者和發佈環境中。 使用nosamplecontent執行模式執行時，這些使 [用者將不存在](../../help/sites-administering/production-ready.md)。
 
+
 ## 成員控制台 {#members-console}
 
 在作者環境中，要訪問「成員」控制台以管理在發佈環境中註冊的成員：
 
-* 從全域導覽：導 **[!UICONTROL 覽>社群>成員]**
+* 從全域導覽中，選 **[!UICONTROL 擇導覽]** > **[!UICONTROL 社群]** >成 **[!UICONTROL 員]**
 
 >[!CAUTION]
 >
 >如果未啟用隧道服務，則無法使 [用](deploy-communities.md#tunnel-service-on-author) Members控制台。
+
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -58,7 +60,7 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 
 ### 成員統計資訊 {#member-statistics}
 
-當使用者是 `Views`啟用Adobe Analytics的一 `Posts`或多個社群網站的成員時，會顯示、 `Follows`和更新的 `Likes` 欄 [](sites-console.md#analytics)。
+當使用者是 `Views`啟用Adobe Analytics的一 `Posts`或多個社群網站的成員時，會更新顯示、顯示和顯示 `Follows` 的欄 `Likes`[](sites-console.md#analytics)。
 
 ### 匯出 CSV {#export-csv}
 
@@ -78,26 +80,38 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 
 大部分欄位都是成員日後可填寫其描述檔的選填欄位。
 
-* **[!UICONTROL ID]**(必&#x200B;*要*)可授權的ID是成員的登入ID。
+* **[!UICONTROL ID]**
+
+(必&#x200B;*要*)可授權的ID是成員的登入ID。
 依預設，ID會設為所需電子郵件地址的值。
-   *建立後，ID就無法修改。*
+*建立後，ID便無法修改*。
 
-* **[!UICONTROL 電子郵件地址]**(必&#x200B;*要*)成員的電子郵件地址。
-成員在更新其個人資料時可能變更其電子郵件地址。如果ID預設為電子郵件地址，則 *當變更* email地址時，ID不會變更。
+* **[!UICONTROL 電子郵件地址]**
 
-* **[!UICONTROL 密碼]**(*必要*)登入密碼。
+(必&#x200B;*要*)會員的電子郵件地址。
+成員在更新其個人資料時可能會變更其電子郵件地址。如果ID預設為電子郵件地址，則 *當電子郵件地址變更時* ,ID不會變更。
 
-* **[!UICONTROL 重新輸入密碼]**(必&#x200B;*要*)重新輸入密碼以進行驗證。
+* **[!UICONTROL 密碼]**
 
-* **[!UICONTROL 將成員添加到站點]**(*可選*)從現有社區站點中選擇，以便將成員添加到社區站點的成員組。
+   (必&#x200B;*要*)登入密碼。
 
-* **[!UICONTROL 將成員添加到組]**(*可選*)從現有成員組中選擇，以便將成員添加到該組。
+* **[!UICONTROL 重新鍵入密碼]**
+
+   (必&#x200B;*要*)重新輸入密碼進行驗證。
+
+* **[!UICONTROL 新增成員至網站]**
+
+   (可&#x200B;*選*)從現有社區站點中選擇，以便將成員添加到社區站點的成員組。
+
+* **[!UICONTROL 將成員新增至群組]**
+
+   (可&#x200B;*選*)從現有成員組中選擇，以便將成員添加到該組。
 
 * 選擇保 **[!UICONTROL 存]**
 
 ### 一般——帳戶設定 {#general-account-settings}
 
-在「帳戶設定」下，社群管理員可以
+在「Account settings（帳戶設定）」下，社區管理員可以：
 
 * **[!UICONTROL 狀態]**
    * UnbandedA會員無法登入，無法檢視頁面或參與需要登入的活動。 他們仍可以匿名造訪開放社群網站。
@@ -105,11 +119,15 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
    * 非禁用A會員可完全存取社群網站。
    預設為 `Not Banned`。
 
-* **[!UICONTROL 貢獻限制]**如果勾選，會員張貼內容的能力就會受到限制。
+* **[!UICONTROL 貢獻限制]**
+
+   如果勾選，會員張貼內容的能力將受到限制。
 預設值取決於貢獻限制的設定。
 請參 [閱會員繳費限制](limits.md)。
 
-* **[!UICONTROL 更改密]**&#x200B;碼修改現有成員時存在的連結。 提供社區管理員重設成員密碼的能力。
+* **[!UICONTROL 變更密碼]**
+
+   修改現有成員時存在的連結。 提供社區管理員重設成員密碼的能力。
 
 ### 一般——像片 {#general-photo}
 
@@ -135,7 +153,7 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
    * 開始鍵入以從可用標 [章中選擇](badges.md)。 選取徽章後，請選擇每個網站或所有網站，此徽章應與成員的頭像一起顯示在這些網站上。
    * 可以選擇多個標章和網站。
 * **[!UICONTROL 移除標章]**
-   * 選取徽章旁邊的垃圾桶圖示以移除它
+   * 選取徽章旁的垃圾桶圖示以移除它。
 
 ## 群組主控台 {#groups-console}
 
@@ -144,11 +162,12 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 * 基於組的啟用資 [源分配](resources.md)
 
 要訪問組控制台：
-* 從全域導覽：導 **[!UICONTROL 覽>社群>群組]**
+* 從全域導覽中，選 **[!UICONTROL 擇導覽]** > **[!UICONTROL 社群]** > **[!UICONTROL 群組]**。
 
 >[!CAUTION]
 >
 >如果未啟用隧道服務，則無法使 [用組](deploy-communities.md#tunnel-service-on-author) 控制台。
+
 
 ### 建立新群組 {#create-new-group}
 
@@ -158,16 +177,25 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 
 建立新發佈端成員組的必填欄位包括：
 
-* **[!UICONTROL ID]**(必&#x200B;*要*)群組唯一ID。
+* **[!UICONTROL ID]**
+
+   (必&#x200B;*要*)群組唯一ID。
+
    *建立後，ID就無法修改。*
 
-* **[!UICONTROL 名稱]**(*可選*)群組的顯示名稱。
+* **[!UICONTROL 名稱]**
+
+   (可&#x200B;*選*)群組的顯示名稱。
 
    預設值為ID。
 
-* **[!UICONTROL 說明]**(*可選*)群組用途和權限的說明。
+* **[!UICONTROL 說明]**
 
-* **[!UICONTROL 新增成員至群組]**(*可選*)選取要納入為群組初始成員的發佈端成員。
+   (選&#x200B;*用*)群組用途和權限的說明。
+
+* **[!UICONTROL 將成員新增至群組]**
+
+   (選&#x200B;*用*)選取要納入為群組初始成員的發佈端成員。
 
 * 選擇保 **[!UICONTROL 存]**
 
