@@ -3,7 +3,7 @@ title: 使用智慧型內容服務設定資產標籤
 description: 瞭解如何使用智慧型內容服務，在AEM中設定智慧型標籤和增強的智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 您可以使用Adobe I/O將Adobe Experience Manager(AEM)與智慧型內容服務整合。使用此設定從AEM存取Smart Content Service。
 
-文章詳細說明了配置Smart Content Service所需的下列主要工作。 在後端，AEM伺服器會先使用Adobe IO閘道驗證您的服務認證，然後再將您的請求轉送至Smart Content Service。
+文章詳細說明了配置Smart Content Service所需的下列主要工作。 在後端，AEM伺服器會先使用Adobe I/O閘道驗證您的服務認證，然後再將您的請求轉送至智慧型內容服務。
 
 * 在AEM中建立Smart Content Service設定以產生公開金鑰。 取得OAuth整合的公用憑證。
 * 在Adobe I/O中建立整合，並上傳產生的公開金鑰。
