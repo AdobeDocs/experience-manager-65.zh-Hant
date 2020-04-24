@@ -3,7 +3,7 @@ title: 使用媒體處理常式和工作流程處理資產
 description: 瞭解媒體處理常式以及如何使用工作流程對您的數位資產執行工作。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b600e5eaf7c61568f2559b3fb4915d433f5e13bf
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager(AEM)Assets隨附一組預設工作流程和媒體處理
 
 ## 預設媒體處理常式 {#default-media-handlers}
 
-AEM Assets中提供下列媒體處理常式，並可處理最常見的MIME類型：
+AEM Assets中提供下列媒體處理常式，並處理最常見的MIME類型：
 
 <!-- TBD: Apply correct formatting once table is moved to MD.
 -->
@@ -496,7 +496,7 @@ AEM可讓您在工作流程中執行任何命令列工具，以轉換資產（�
 
 若要測試修改後的工作流程，請新增資產至 `/content/dam`。
 
-1. 在檔案系統中，取得您所選擇的。tiff影像。 例如， `myImage.tiff` 使用WebDAV將其重 `/content/dam`新命名並複製至。
+1. 在檔案系統中，取得您選擇的TIFF影像。 例如， `myImage.tiff` 使用WebDAV將其重 `/content/dam`新命名並複製至。
 1. 例如， **[!UICONTROL 前往CQ5 DAM]** Console `http://localhost:4502/libs/wcm/core/content/damadmin.html`。
 1. 開啟資產 **[!UICONTROL myImage.tiff]** ，並確認已建立翻轉的影像和三個縮圖。
 
@@ -516,7 +516,7 @@ AEM可讓您在工作流程中執行任何命令列工具，以轉換資產（�
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-然後，當工作流程執行時，此步驟僅會套用至具有image/gif或mime:image/tiff作為mime-types的資產，它會建立原始影像的翻轉影像，並將其轉換為。jpg，並建立三個尺寸縮圖：140x100、48x48和10x250。
+然後，當工作流程執行時，此步驟僅會套用至具有或作為 `image/gif``mime:image/tiff``mime-types`，它會建立原始影像的翻轉影像，並將其轉換為JPG，並建立三個尺寸縮圖：140x100、48x48和10x250。
 
 使用下列 [!UICONTROL Process Arguments] ，使用ImageMagick建立三個標準縮圖：
 
