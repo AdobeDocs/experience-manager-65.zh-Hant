@@ -3,7 +3,7 @@ title: 增強的智慧型標籤
 description: 增強的智慧型標籤
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -44,7 +44,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ## 入門 {#onboarding}
 
-智慧型內容服務可作為Experience Manager的附加元件購買。 在您購買後，系統會寄送電子郵件給您組織的管理員，並附上Adobe IO的連結。
+智慧型內容服務可作為Experience Manager的附加元件購買。 在您購買後，系統會寄送電子郵件給您組織的管理員，並附上Adobe I/O的連結。
 
 管理員可依照連結，將Smart Content Service與Experience Manager整合。 若要將服務與Experience Manager Assets整合，請參閱 [設定智慧標籤](config-smart-tagging.md)。
 
