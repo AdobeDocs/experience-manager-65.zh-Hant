@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: dee9f9c9d3dfb916d1feaa0d258c883686e1a1dc
 
 ---
 
@@ -38,7 +38,7 @@ AEM Forms on JEE可高度自訂，可在許多不同的環境中運作。 有些
 
 **在Windows上安裝和配置**
 
-如果您是使用統包方法或安裝PDF產生器，在JBoss的JEE上安裝AEM Forms，您應以管理員身分在Windows上執行安裝。 此外，在具備原生應用程式支援的Windows上安裝PDF產生器時，您必須與安裝Microsoft Office的Windows使用者一樣執行安裝。 如需安裝權限的詳細資訊，請參 **閱您應用程式伺服器的「在JEE上安裝和部署AEM** Forms」檔案。
+如果您是使用統包方法或安裝PDF產生器，在JBoss的JEE上安裝AEM Forms，您應以管理員身分在Windows上執行安裝。 此外，在具備原生應用程式支援的Windows上安裝PDF產生器時，您必須與安裝Microsoft Office的Windows使用者一樣執行安裝。 如需安裝權限的詳細資訊，請參閱*您應用程式伺服器的「在JEE*上安裝和部署AEM Forms」檔案。
 
 ### 網路層安全性 {#network-layer-security}
 
@@ -184,7 +184,7 @@ AEM Forms on JEE依預設會使用LocalSystem帳戶來安裝服務。 內建的L
    * 拒絕本地登錄
    * 以服務身分登入（應已設定）
 
-1. 為新使用者帳戶提供JEE網頁內容目錄上AEM Forms的「讀取與執行」、「清單資料夾內容」和「讀取」權限項目。
+1. 為新使用者帳戶提供「讀取與執行」、「寫入」、「修改」、「清單資料夾內容」和「讀取」權限，以完成JEE安裝目錄和「全域檔案儲存」(GDS)目錄上的AEM Forms。 在AEM Forms安裝程式期間，會手動設定GDS目錄的位置。 如果位置設定在安裝期間保持空，則位置預設為 [JBoss root]/server/[type]/svcnative/DocumentStorage應用程式伺服器安裝下的目錄。
 1. 啟動應用程式伺服器。
 
 **禁用配置管理器引導Servlet**
@@ -258,7 +258,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 1. 在網頁瀏覽器中輸入下列URL:
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
    預設埠號是以下其中之一：
@@ -278,9 +278,9 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 
 此外，建議通過執行以下步驟來更改CRX管理員的預設密碼：
 
-1. 使用預 `https://'[server]:[port]'/lc/libs/granite/security/content/useradmin.html` 設的使用者名稱／密碼登入。
+1. 使用預 `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` 設的使用者名稱／密碼登入。
 1. 在搜尋欄位中鍵入Administrator，然後按一 **下Go**。
-1. 從搜 **尋結果中選取** 「管理員」，然後按一下使用者介面右下方的「編輯 **** 」圖示。
+1. 從搜 **尋結果中選擇** 「管理員」，然後按一下使用者介面右下方的「編輯 **** 」圖示。
 1. 在「新密碼」欄位中 **指定新密碼** ，在「密碼」欄位中指 **定舊密碼** 。
 1. 按一下使用者介面右下方的「儲存」圖示。
 
@@ -291,7 +291,7 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 1. 在網頁瀏覽器中輸入下列URL:
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
 1. 按一下 **設定>核心繫統設定>配置**。
@@ -676,7 +676,7 @@ JEE上的AEM Forms提供「反向連結篩選」，以指定允許存取您伺�
 
 **管理允許的反向連結清單**
 
-您可以從管理控制台的使用者管理介面管理允許的反向連結清單。 使用者管理介面提供您建立、編輯或刪除清單的功能。 如需使用「允 *[許的反向連結](/help/forms/using/admin-help/preventing-csrf-attacks.md)*」清單的詳細資訊，請&#x200B;*參閱管理說明的*「防止CSRF攻擊」一節。
+您可以從管理控制台的使用者管理介面管理允許的反向連結清單。 使用者管理介面提供您建立、編輯或刪除清單的功能。 如需使用「允 [許的反向連結」清單的詳細資訊，請](/help/forms/using/admin-help/preventing-csrf-attacks.md)參閱管理說明的* *Preventing CSRF attacks* *一節。
 
 **管理允許的反向連結例外和允許的URI清單**
 
@@ -691,7 +691,7 @@ JEE上的AEM Forms提供API來管理「允許的反向連結例外」清單和�
 * updateAllowedRefererExceptions
 * deleteAllowedRefererExceptions
 
-如需API的詳 *細資訊，請參閱JEE API參考上的AEM* Forms。
+如需API的詳細資訊，請參閱* AEM Forms on JEE API Reference*。
 
 在全局級 ***別使用LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list表示允許的反向連結例外，即定義適用於所有應用程式的例外。 此清單僅包含具有絕對路徑(如 `/index.html`)或相對路徑(例如 `/sample/`)。 您也可以將規則運算式附加至相對URI的結尾，例如 `/sample/(.)*`。
 
@@ -711,7 +711,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 **自訂WAR檔案的反向連結篩選**
 
-您可能已建立自訂WAR檔案，以便搭配AEM Forms on JEE運作，以符合您的業務需求。 若要為自訂WAR檔案啟用「反向連結篩選」，請在WAR的類別路徑中加入 ***adobe-usermanager-client.jar*** ，並在 ** web.xml檔案中加入篩選條目，並包含以下參數：
+您可能已建立自訂WAR檔案，以便搭配AEM Forms on JEE運作，以符合您的業務需求。 要為自定義WAR檔案啟用反向連接過濾，請在WAR的類路徑中包含 ***adobe-usermanager-client.jar*** ，並在* web.xml*檔案中包含一個過濾條目，並包含以下參數：
 
 **CSRF_CHECK_GETS控制GET請求的** 「反向連結」檢查。 如果未定義此參數，則預設值設定為false。 只有在您要篩選GET請求時，才加入此參數。
 
@@ -970,10 +970,11 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 1. 在「本地安全設定」窗口的「用戶權限分配」下，為運行表單伺服器的用戶帳戶提供以下權限：
 
    * 通過終端服務拒絕登錄
-   * 拒絕本地登錄
+   * 拒絕本地登錄xx
    * 以服務身分登入（應已設定）
 
-1. 為JEE網頁內容目錄上的AEM Forms提供新使用者帳戶的「讀取與執行」、「清單資料夾內容」和「讀取」權限。
+1. 為新使用者帳戶提供「讀取與執行」、「寫入」、「修改」、「清單資料夾內容」和「讀取」權限，以完成JEE安裝目錄和「全域檔案儲存」(GDS)目錄上的AEM Forms。 在AEM Forms安裝程式期間，會手動設定GDS目錄的位置。 如果位置設定在安裝期間保持空，則位置預設為 [JBoss root]/server/[type]/svcnative/DocumentStorage應用程式伺服器安裝下的目錄。
+
 1. 啟動應用程式伺服器服務。
 
 ### 檔案系統安全性 {#file-system-security}
@@ -1038,4 +1039,3 @@ https://<servername>:8080/um/
 1. 取消選 **取「啟用應用程式保全** 」和「 **使用Java 2保全」**。
 1. 按一 **下「確定** 」或「 **套用」**。
 1. 在「消 **息** 」框中，單 **擊「直接保存到主配置」**。
-
