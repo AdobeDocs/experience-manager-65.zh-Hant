@@ -3,7 +3,7 @@ title: 使用PDF點陣化器產生轉譯
 description: 本文說明如何使用Adobe PDF Rasterizer程式庫產生高品質的縮圖和轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -14,13 +14,13 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 Adobe建議針對下列項目使用PDF點陣化器程式庫：
 
-* 大量、內容密集的AI/PDF檔案
-* AI/PDF檔案中未產生縮圖
-* 具有Pantone Matching System(PMS)色彩的AI檔案
+* 大量、內容密集的AI/PDF檔案。
+* AI和PDF檔案的縮圖不會立即產生。
+* AI檔案搭配Pantone Matching System(PMS)色彩。
 
 使用PDF點陣化器產生的縮圖和預覽，與現成可用的輸出相比，品質更佳，因此可跨裝置提供一致的檢視體驗。 Adobe PDF Rasterizer程式庫不支援任何色域轉換。 無論來源檔案的色域為何，都會輸出為RGB。
 
-1. 從「封裝共用」在您的AEM例項上安裝PDF點陣 [化器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
+1. 從Package Share將PDF Rasterizer套件安裝在您的AEM部 [署上](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
 
    >[!NOTE]
    >
