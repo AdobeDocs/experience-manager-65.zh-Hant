@@ -3,7 +3,7 @@ title: 透過DTM啟用資產見解
 description: 瞭解如何使用Adobe動態標籤管理(DTM)來啟用資產分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -20,7 +20,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
 執行這些步驟，以透過DTM啟用資產分析。
 
-1. 點選／按一下AEM標誌，並前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 前瞻分析設定]**」。
+1. Tap/click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
 1. [使用DTM Cloud服務設定AEM例項](/help/sites-administering/dtm.md)
 
    當您登入https://dtm.adobe.com並從「設定檔」圖示造訪「 [帳戶設定](https://dtm.adobe.com/) 」後， **** API Token就可使用。 從「資產前瞻分析」的角度來看，此步驟不是必要步驟，因為AEM Sites與「資產前瞻分析」的整合仍在進行中。
@@ -33,7 +33,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
    * 視需要更新欄位，然後點選／按一下「 **[!UICONTROL 建立屬性」]**。 請參 [閱檔案](https://helpx.adobe.com/experience-manager/using/dtm.html)。
    ![建立編輯Web屬性](assets/Create-edit-web-property.png)
 
-1. 在「規 **[!UICONTROL 則]** 」標籤中，從導覽窗格 **[!UICONTROL 選取「頁面載入規則]** 」，並點選／按一 **[!UICONTROL 下「建立新規則」]**。
+1. 在「規 **[!UICONTROL 則]** 」標籤中，從導覽窗格 **[!UICONTROL 選取「頁面載入規則]** 」，並點選／按一下「 **[!UICONTROL 建立新規則」]**。
 
    ![chlimage_1-58](assets/chlimage_1-194.png)
 
@@ -41,7 +41,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. 點選／按一下AEM標誌，然後前往「工 **[!UICONTROL 具>資產」]**。
+1. Tap/click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
 1. 點選／按一 **[!UICONTROL 下前瞻分析頁面追蹤器]**，複製追蹤器程式碼，然後貼到您在步驟6中開啟的指令碼對話方塊中。 儲存變更。
 
    >[!NOTE]
@@ -104,8 +104,8 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
    })();
    ```
 
-   * DTM中的頁面載入規則僅包含pagetracker.js代碼。 任何 `assetAnalytics` 欄位皆視為預設值的覆寫。 預設不需要這些字元。
-   * 在確定 `assetAnalytics.dispatcher.init`()已初始化且 `_satellite.getToolsByType('sc')[0].getS`可用後，程式碼會呼叫 `assetAnalytics,dispatcher.init` ()。 因此，您可以略過在步驟11中加入。
+   * DTM中的頁面載入規則僅包含程 `pagetracker.js` 式碼。 任何 `assetAnalytics` 欄位皆視為預設值的覆寫。 預設不需要這些字元。
+   * 在確定已初 `assetAnalytics.dispatcher.init()` 始化且可用 `_satellite.getToolsByType('sc')[0].getS()` 後，就會呼 `assetAnalytics,dispatcher.init` 叫程式碼。 因此，您可以略過在步驟11中加入。
    * 如前瞻分析頁面追蹤器程式碼(「工具>資產>前瞻分析頁面追蹤器&#x200B;**[!UICONTROL 」)中的注釋所示，當頁面追蹤器未建立物件時，前三個引數]**`AppMeasurement` （RSID、追蹤伺服器和訪客命名空間）並不相關。 會改為傳遞空字串以反白標示此值。\
       其餘引數會對應至「前瞻分析設定」頁面(「工具>**[!UICONTROL 資產>前瞻分析設定]**」)中設定的參數。
    * AppMeasurement物件是透過查詢所有可 `satelliteLib` 用的SiteCatalyst引擎來擷取。 如果已設定多個標籤，請適當變更陣列選擇器的索引。 依據DTM介面中可用的SiteCatalyst工具，陣列中的項目排序。
