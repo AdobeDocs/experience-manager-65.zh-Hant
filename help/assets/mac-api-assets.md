@@ -1,14 +1,14 @@
 ---
-title: 資產HTTP API
+title: Assets HTTP API
 description: 瞭解Assets HTTP API的實作、資料模型和功能。 使用資產HTTP API來執行資產相關的各種工作。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
-# 資產HTTP API {#assets-http-api}
+# Assets HTTP API {#assets-http-api}
 
 ## 概覽 {#overview}
 
@@ -21,7 +21,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代碼。 JSON回應是選擇性的，可能無法使用，例如PDF檔案。 請依賴回應程式碼進行進一步分析或動作。
 
-在「關 [!UICONTROL 閉時間]」後，資產及其轉譯無法透過「資產」網頁介面或HTTP API使用。 如果「開機時間」是未來，或「關機時間 [!UICONTROL 」是過去] ,API會傳回404錯誤訊息。
+在「關 [!UICONTROL 閉時間]」後，資產及其轉譯無法透過「資產」網頁介面或HTTP API使用。 如果「開機時間」是未來，或「關機時 [!UICONTROL 間」是過去] ，則API會傳回404錯誤訊息。
 
 ## 內容片段 {#content-fragments}
 
@@ -156,7 +156,7 @@ POST /api/assets/* -F"name=myfolder" -F"title=My Folder"
 **參數**
 
 * `name` -資產名稱
-* `file` -檔案參考
+* `file` -檔案引用
 
 **要求**
 
@@ -224,7 +224,7 @@ PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"cl
 **參數**
 
 * `name` -轉譯名稱
-* `file` -檔案參考
+* `file` -檔案引用
 
 **要求**
 
