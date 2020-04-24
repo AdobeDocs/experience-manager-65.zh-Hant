@@ -3,7 +3,7 @@ title: 資產代理開發
 description: Proxy是使用Proxy工作者來處理工作的AEM例項。 瞭解如何設定AEM Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy工作器。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -110,7 +110,7 @@ Proxy和Proxy工作器組態都可透過雲端服務組態取得，您可從AEM 
 
 >[!NOTE]
 >
->如需詳 [細資訊，請參閱Indesign Server Proxy worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)[和Cloud Services設定](../sites-developing/extending-cloud-config.md) 。
+>如需詳 [細資訊，請參閱Indesign Server Proxy Worker](indesign.md#configuring-the-proxy-worker-for-indesign-server)[設定和Cloud Services設定](../sites-developing/extending-cloud-config.md) 。
 
 以下是API使用的範例：
 
@@ -163,7 +163,7 @@ IDS [代理工作者](indesign.md) (Proxy Worker)是AEM Assets代理工作者的
 
    實作 `WorkflowExternalProcess`，然後使用JobService API和您的工作主題來準備工作事件並將其分派至JobService（OSGi服務）。
 
-   例如，請參 `INDDMediaExtractProcess`見IDS代理工作器的。java。
+   例如，請參見 `INDDMediaExtractProcess`.java for the IDS proxy worker。
 
 1. 實作主題的工作處理常式。 此處理常式需要開發，以便執行您的特定動作，並視為工作者實作。
 
@@ -181,4 +181,4 @@ IDS [代理工作者](indesign.md) (Proxy Worker)是AEM Assets代理工作者的
 >
 >結果同步：
 >
->使用相同proxy的n個例項時，處理結果會維持在proxy中。 是用戶端（AEM作者）的工作，會使用與建立工作時提供給用戶端的相同唯一工作ID來請求結果。 Proxy只會完成工作，並讓結果隨時可供要求。
+>使用相同proxy的n個例項時，處理結果會保留在proxy中。 是用戶端（AEM作者）的工作，會使用與建立工作時提供給用戶端的相同唯一工作ID來請求結果。 Proxy只會完成工作，並讓結果隨時可供要求。
