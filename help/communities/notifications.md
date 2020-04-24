@@ -11,42 +11,42 @@ content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 
 ---
 
 
-# 社群通知{#communities-notifications}
+# 社群通知 {#communities-notifications}
 
 ## 概覽 {#overview}
 
 AEM Communities提供通知區段，可顯示已登入社群成員感興趣的事件。
 
-通知與活動 [和](/help/communities/essentials-activities.md)[訂閱類](/help/communities/subscriptions.md) 似，因為
+通知與活動 [和](/help/communities/essentials-activities.md)[訂閱類](/help/communities/subscriptions.md) 似，可能來自：
 
-* 發佈內容的成員
-* 選擇跟隨另一個成員的成員
-* 選擇遵循特定主題、文章和其他內容主題的成員
-* 用戶生成的內容中的成員標籤(@tountice)另一個社區成員
+* 發佈內容的成員。
+* 選擇跟隨另一個成員的成員。
+* 選擇遵循特定主題、文章和其他內容主題的成員。
+* 成員標籤（@提及）用戶生成的內容中的另一個社區成員。
 
-通知與活動和訂閱的區別在於
+通知與活動和訂閱的區別在於：
 
-* 通知區段的連結永遠會出現在社群網站的標題中
+* 通知區段的連結永遠會出現在社群網站的標題中：
 
-   * 活動需 [要將活動流函式](/help/communities/functions.md#activity-stream-function) ，納入社群網站的結構
-   * 訂閱需要 [設定電子郵件](/help/communities/email.md)
+   * 活動需 [要將活動串流功能](/help/communities/functions.md#activity-stream-function) ，納入社群網站的結構中。
+   * 訂閱需要 [設定電子郵件](/help/communities/email.md)。
 
-* 通知的實作是透過可擴充和可插拔的通道
+* 通知的實作方式是透過可擴充且可插拔的通道：
 
-   * 活動僅在Web上提供
-   * 訂閱僅能使用電子郵件
+   * 活動僅在Web上提供。
+   * 訂閱僅能使用電子郵件。
 
-自Communities [FP1起](/help/communities/deploy-communities.md#latestfeaturepack)，可用的通知渠道為
+自Communities [FP1起](/help/communities/deploy-communities.md#latestfeaturepack)，可用的通知渠道包括：
 
-* 網路頻道，使用連結存 `Notifications` 取
-* 電子郵件通道，當電子郵件已正確設定時可用
+* 使用連結存取的網路頻 `Notifications` 道。
+* 電子郵件渠道，在正確設定電子郵件時可用。
 
-未來的通道包括行動裝置和案頭。
+未來的通道包括行動和案頭。
 
 ### 需求 {#requirements}
 
@@ -58,32 +58,32 @@ AEM Communities提供通知區段，可顯示已登入社群成員感興趣的�
 
 **啟用追蹤**
 
-必須配置元件以啟用以下功能。 允許以下功能：部落格 [、論壇](/help/communities/blog-feature.md)、 [QnQn](/help/communities/forum.md)、Filary [brary、elignary行事歷、](/help/communities/working-with-qna.md)[](/help/communities/calendar.md)[](/help/communities/file-library.md)[](/help/communities/comments.md)elicary注釋。
+必須配置元件以啟用以下功能。 允許以下功能：部落格 [、論壇](/help/communities/blog-feature.md)、 [QnQnPn](/help/communities/forum.md)、Filary [brary、elicary行事歷、](/help/communities/working-with-qna.md)[](/help/communities/calendar.md)[](/help/communities/file-library.md)[](/help/communities/comments.md)elicary注釋。
 
-請注意，
+**注意**:
 
-* 社群網站範本 [](/help/communities/sites.md) 和群組範本中使用的元 [件](/help/communities/tools-groups.md) ，可能已設定為允許下列
+* 社群網站範本 [和群組範本](/help/communities/sites.md)[中使用的元件](/help/communities/tools-groups.md) ，可能已設定為遵循。
 
-* 成員配置檔案已配置為允許其他成員遵循
+* 成員配置檔案已配置為允許其他成員跟隨。
 
 ## 來自下列的通知 {#notifications-from-following}
 
 ![chlimage_1-243](assets/chlimage_1-243.png)
 
-**Follow **button提供了一種方法，可將項目作為活動、訂閱和／或通知跟蹤。 每次選取**Follow **button時，都可以開啟或關閉選取範圍。 只有 `Email Subscriptions` 在配置時，才會顯示選擇。
+「跟 **[!UICONTROL 蹤]** 」按鈕提供了一種方法，可以跟蹤條目作為活動、訂閱和／或通知。 每次選取「 **[!UICONTROL 跟隨]** 」按鈕時，都可以開啟或關閉選取範圍。 只有 `Email Subscriptions` 在配置時，才會顯示選擇。
 
-如果選取任何下列方法，按鈕的文字會變更為「下 **列」**。 為方便起見，您可以選取以 `Unfollow All` 關閉所有方法。
+如果選取任何下列方法，按鈕的文字會變更為「下 **[!UICONTROL 列」]**。 為方便起見，您可以選取以 `Unfollow All` 關閉所有方法。
 
-出現**Follow **button
+將出 **[!UICONTROL 現「]** Follow（跟蹤）」按鈕：
 
-* 查看其他成員的配置檔案時
-* 在主功能頁面上，例如論壇、QnA和部落格
+* 查看其他成員的配置檔案時。
+* 在主要功能頁面上，例如論壇、QnA和部落格：
 
-   * 遵循該一般功能的所有活動
+   * 遵循該一般功能的所有活動。
 
-* 針對特定項目，例如論壇主題、QnA問題或部落格文章
+* 對於特定項目，例如論壇主題、QnA問題或部落格：
 
-   * 遵循該特定條目的所有活動
+   * 跟蹤該特定條目的所有活動。
 
 ## 管理通知設定 {#managing-notification-settings}
 
@@ -123,7 +123,7 @@ Web頻道一律啟用。
 
 組織可以自訂電子郵件通 [知](/help/communities/client-customize.md#overlays) ，將範本覆 **蓋在/libs/settings/community/templates/email/html中**。
 
-例如，若要修改提及電子郵件通知（針對社群元件），請在您啟用@mentions支援的元件範本中，新增**條件( ****&#x200B;若是**條件動詞提及)**** 。
+例如，若要修改提及電子郵件通知（針對社群元件），請在您啟用 **@mentions支援的元件範本中，新增動詞提及的** if **條件****** 。
 
 若要修改部落格注釋中@提及的電子郵件通知範本，請將範本置於： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
 
