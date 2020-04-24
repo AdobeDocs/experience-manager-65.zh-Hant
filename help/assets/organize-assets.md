@@ -3,7 +3,7 @@ title: 組織您的數位資產
 description: 使用Experience Manager組織您的數位資產、影像、檔案、檔案夾等。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -36,7 +36,7 @@ AEM Assets支援多種組織內容的方式。 您可以使用資料夾以階層
 
 ## 使用標籤來組織資產 {#use-tags-to-organize-assets}
 
-使用標籤作為中繼資料，您可以輕鬆搜尋資產、使用搜尋結果建立系列、大幅提升某些資產的搜尋排名，並運用Adobe Sensei的人工智慧演算法進行資產探索。
+使用標籤作為中繼資料，您可以輕鬆搜尋資產、使用搜尋結果建立系列、大幅提升某些資產的搜尋排名，並運用Adobe Sensei的AI演算法來搜尋資產。
 
 Adobe Experience Manager Assets使用自學演算法建立高度描述性的標籤，讓您只需按幾下滑鼠，就能找到合適的資產。 智慧型標籤使用Adobe Sensei，這是我們的人工智慧和機器學習架構，可接受訓練以辨識標準和特定商業標籤並套用至影像。 智慧型標籤也可識別內容、個別字詞或片語，並自動將描述性標籤套用至資產
 
