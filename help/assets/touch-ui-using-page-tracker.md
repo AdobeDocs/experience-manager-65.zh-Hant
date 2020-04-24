@@ -3,7 +3,7 @@ title: 使用頁面追蹤器並在網頁中內嵌程式碼
 description: 瞭解如何將頁面追蹤器並內嵌JavaScript代碼至您的網站代碼，讓Adobe Analytics能夠擷取資產的使用資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -16,7 +16,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 下列范常式式碼顯示同時包含「頁面追蹤器」程式碼和「內嵌」程式碼的網頁外觀：
 
-```
+```html
 <!DOCTYPE html>
 <html>
     <head>
