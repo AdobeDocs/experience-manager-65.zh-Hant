@@ -11,18 +11,18 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
 
-# 協調控制台{#moderation-console}
+# 協調控制台 {#moderation-console}
 
 在AEM Communities中，管理員 [和社群協調者](/help/communities/moderate-ugc.md) （受信任的社群成員指派為協調者）可從作者和發佈環境大量協調社群內容。
 
 管理員和社群協調者也可 [能會在發佈環境中執行](/help/communities/in-context.md) 「內容內容協調」。
 
-所有社群網站 [的功能](/help/communities/sites-console.md) ，是 `Administration`可供具有管理權限登入的使用者使用的功能表項目。 此連 `Administration`結可讓您存取「協調」主控台。
+所有社群網站 [的功能](/help/communities/sites-console.md) , `Administration` 是可供具有管理權限登入的使用者使用的功能表項目。 連結 `Administration` 可讓您存取「協調」主控台。
 
 管理員和社群協調者可從「協調控制台」存取其有權協調的所有使用者產生內容(UGC)。 如果允許協調多個網站，則可以檢視所有網站的貼文，或依所選社群網站進行篩選。
 
@@ -30,16 +30,16 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 協調控制台支援：
 
-* 大量執行協調任務
-* 搜索UGC
-* 查看UGC詳細資訊
-* 查看UGC作者詳細資訊
+* 大量執行協調工作。
+* 搜尋UGC。
+* 檢視UGC詳細資訊。
+* 檢視UGC作者詳細資訊。
 
 只有以管理員或具有成員的身分登入時，才 ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`能執行協調工作。
 
 ## 發佈環境存取 {#publish-environment-access}
 
-從已發佈的社群網站存取「協調控制台」是透過「管理」連結，當社群協調者登入時，此連結會顯示。
+從已發佈的社群網站存取「協調」主控台是透過「管理」連結，當社群協調者登入時，此連結會顯示。
 
 ![publishweretail](assets/publishweretail.png)
 
@@ -51,13 +51,14 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在作者環境中，若要進入「協調」主控台
 
-* 從全域導覽：導 **覽、社群、協調**
+* 從全域導覽中，選取「 **[!UICONTROL 社群]** >協 **[!UICONTROL 調」]**。
 
-只有以管理員身分登入或以會員身分登入時，才 ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`能執行協調工作。 唯一顯示的社群內容是允許登入會員協調的社群內容。
+只有當以管理員身分登入或以擁有協調者權限的 [成員身分](/help/communities/in-context.md#identifyingtrustedmembers)，才能執行協調工作。 唯一顯示的社群內容是允許登入會員協調的社群內容。
 
 >[!NOTE]
 >
 >只有當所選SRP實作一般商店時，發佈環境中的UGC才會在作者身上顯示。 例如，預設儲存空間為JSRP，對於作者和發佈而言，JSRP不是常用的儲存空間。 請參 [閱社群內容儲存](/help/communities/working-with-srp.md)。
+
 
 ![協調主題作者](assets/moderationconsoleauthor.png)
 
@@ -66,7 +67,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 除了左側導覽邊欄（在作者上顯示，但在發佈上不顯示）外，協調UI有下列主要區域：
 
 * **[頂端導覽列](#top-navigation-bar)**
-* **[工具欄](#toolbar)**
+* **[工具列](#toolbar)**
 * **[內容區域](#content-area)**
 
 ### 頂端導覽列 {#top-navigation-bar}
@@ -91,19 +92,20 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 內容區域包含已張貼UGC的資訊：
 
-* UGC發佈
+* 發佈UGC
 * 成員名稱
-* 成員頭像
-* 貼文位置
-* 發佈時間
-* 貼文的回覆數
+* 會員頭像
+* 貼文的位置。
+* 發佈時。
+* 貼文的回覆數。
 * [與貼文](/help/communities/moderate-ugc.md#sentiment) 關聯的情緒
-* 如果批准，則顯示複選標籤
-* 如果有附件，則會顯示回形針
+* 如果批准，則顯示複選標籤。
+* 如果有附件，則會顯示回形針。
 
 >[!NOTE]
->
+> 
 >內容區域具有無 *限捲動*，這表示您可繼續捲動，直到內容結束為止。 即使在捲動時，工具列仍會保持在內容區域上方的固定可見位置。
+
 
 ### 濾鏡邊欄 {#ootbfilters}
 
@@ -111,19 +113,20 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 側面板圖示會開啟濾鏡邊欄。 顯示在內容區域左側的篩選邊欄提供不同的篩選，每個篩選器都對顯示在內容區域中的參考UGC有立即影響。
 
-每個類別中的篩選器都 ****&#x200B;是OR組合在一起，而不同類別中的篩選器 ****&#x200B;是AND組合在一起。
+每個類別中的篩 **選器是OR**&#39;d一起的，而不同類別中的篩選器 **是AND**&#39;d一起的。
 
-例如，如果您同時勾選「 **問題** 」和「答案」 **，則您會看到內容是**「問題」***&#x200B;或&#x200B;*「答*****&#x200B;案」。
+例如，如果同時檢查 **Question** 和 **Answer**，則您會看到內容是 **Question** 或Answer ****** Answer。
 
-不過，如果您勾 **選「問題** 」和「待審」 **，則只會看到**「問題」**且「待審」的**&#x200B;內容 ****。
+但是，如果您選 **中「問題** 」和「待定」 **，則只會看到屬於「問題**」和「待 ********&#x200B;定」的內容。
 
 >[!NOTE]
 >
 >社群協調者可以在協調控制台UI上為預先定義的篩選建立書籤。 當這些篩選條件附加至URL結尾（作為查詢字串參數）時，協調者稍後可返回書籤化篩選條件，並共用這些連結。
 
+
 ![searchicon](assets/searchicon.png)
 
-當篩選邊欄開啟時，「搜尋」圖示會切換側面板關閉。 不過，若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅限內容」選項。
+當篩選邊欄開啟時，「搜尋」圖示會切換側面板關閉。 不過，若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅內容」選項。
 
 #### 內容路徑 {#content-path}
 
@@ -149,6 +152,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >當受信任的社群成員在發佈時存取大量協調控制台時，只會顯示對為該成員獲授權協調的社群網站所建立之UGC的參考，並可使用網站篩選器加以篩選。
 
+
 #### 內容類型 {#content-type}
 
 「內容類型」會限制所選資源類型的貼文所顯示的參考UGC。 可以選擇下列一種或多種類型。 如果未選中任何類型，則顯示所有類型。
@@ -171,24 +175,24 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 其他內容類型 {#additional-content-types}
 
-若要新增要篩選的其他資源：
+要添加要篩選的其他資源，請執行以下操作：
 
-* 在作者實例上
-* 以管理員身分登入
-* 開啟 [Web主控台](https://localhost:4502/system/console/configMgr)
-* 定位 `AEM Communities Moderation Dashboard Filters`
-* 選擇要在編輯模式下開啟的配置
-* 輸入要篩選的元件的ResourceType
+* 以管理員身分登入您的作者實例。
+* 開啟 [Web Console](https://localhost:4502/system/console/configMgr)。
+* 找到 `AEM Communities Moderation Dashboard Filters`。
+* 選擇要在編輯模式下開啟的配置。
+* 輸入要篩選的元件的ResourceType:
 
    * 例如，要篩選包含的投票元件，請輸入：
+
       `Voting=social/tally/components/hbs/voting`
 
 ![chlimage_1-215](assets/chlimage_1-215.png)
 
-* 選擇保存
-* 重新整理社群——協調控制台
+* 選擇「保存」。
+* 重新整理社群——協調控制台。
 
-結果就是篩選群組下方的 `Voting`新可選 `Content Type` 篩選器。
+結果就是篩選群組下方的 `Voting` 新可選 `Content Type` 篩選器。
 
 選取該篩選器後，控制面板的內容將顯示與任何輸入的ResourceTypes相符的UGC。
 
@@ -200,13 +204,14 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >如果只選取「未回答」狀態，則協調者將會看到除回答問題之外的所有內容（適用於所有內容類型）。 因為在未回答的問題和其他內容（例如論壇主題、部落格文章或留言）中，不存在負責回答問題的屬性。
 
+
 ![狀態](assets/statuses.png)
 
 #### 標幟 {#flagging}
 
 標幟會限制顯示給已標幟或隱藏之貼文的參考UGC。
 
-一旦標籤某個內容，它會一直保持標籤狀態，直到您再次選取**標籤**按鈕，取消標籤該內容為止。 請注意，沒有標籤層級，例如重要或後續動作。
+一旦標籤某個內容，它會一直保持標籤狀態，直到您再次選取「標籤」按鈕，取消標籤該 **單一內容** 。 請注意，沒有標籤層級，例如重要或後續動作。
 
 ![chlimage_1-216](assets/chlimage_1-216.png)
 
@@ -287,10 +292,10 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ### 協調單一貼文 {#moderating-a-single-post}
 
-在單選模式中，您可以
+在單選模式中，您可以：
 
-* 通過選擇用戶名來查看用戶詳細資訊
-* 選取貼文的連結，以檢視內容相關的貼文
+* 通過選擇用戶名來查看用戶詳細資訊。
+* 選取貼文的連結，以檢視內容相關的貼文。
 * [回覆](#reply)
 * [允許](#allow)
 * [拒絕](#deny)
@@ -299,12 +304,12 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 * 檢視協 [調歷史記錄](#moderation-history)
 * [檢視詳情](#viewdetails)
 
-仲裁動作圖示位於卡片檢視上方的是貼文文字，下方是指出
+仲裁動作圖示位於卡片檢視上方的是貼文文字，下方是資料，指出：
 
-* 如果有回覆，若有，則前面會有回覆數
-* if已被標幟
-* 如果已核准
-* 發佈UGC的時間
+* 如果有回覆，若有則先於回覆數。
+* 如果已標籤。
+* 如果已通過。
+* 發佈UGC時。
 
 ![單電模式](assets/singleselectmode.png)
 
@@ -312,7 +317,7 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ![chlimage_1-220](assets/chlimage_1-220.png)
 
-使用單一貼文時，如果UGC類型支援回覆且設定為允許回覆，就會出現「回覆」圖示。
+使用單一貼文時，如果UGC類型支援回覆且設定為允許回覆，則會顯示「回覆」圖示。
 
 #### 允許 {#allow}
 
@@ -324,7 +329,7 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ![chlimage_1-222](assets/chlimage_1-222.png)
 
-**拒絕**協調動作僅適用於已協調的內容，除非在多選模式下，未協調的內容上不會顯示。
+「拒 **絕** 」協調動作僅適用於已協調的內容，除非在多選模式下，未協調的內容上不會顯示。
 
 未協調的內容一律會獲得核准。
 
@@ -336,7 +341,7 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
-在單一選取範圍或大量模式中，您可以選取項目並加以刪除。 刪除操作會產生確認對話框。 刪除後，這些項目會立即從內容區域中消失。 **刪除UGC後，它將從儲存庫中永久刪除，以後將無法檢索。**
+在單一選取範圍或大量模式中，您可以選取項目並加以刪除。 刪除操作會產生確認對話框。 刪除後，這些項目會立即從內容區域中消失。 **刪除UGC後，它將從儲存庫中永久刪除，以後將無法檢索**。
 
 #### 關閉 {#close}
 
