@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -52,7 +52,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在作者中，要訪問儲存配置控制台：
 
-* 從全域導覽：「工 **[!UICONTROL 具>社群>儲存設定」]**
+* 從全域導覽中，選 **[!UICONTROL 擇工具]** > **[!UICONTROL 社群]** > **[!UICONTROL 儲存設定]**。
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
@@ -79,18 +79,26 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper Host **
 
-      在 [SolrCloud模式下與外部ZooKeeper一起執行時，將此值設為](solr.md#solrcloud-mode) ZooKeeper的值，例如 `HOST:PORT` my.server.com:2181 *For a ZooKeeper Ensemble，輸入逗號分隔*&#x200B;值，例如 `HOST:PORT`**host1:2181,host2:2181如果使用內部ZooKeeper以獨立模式運行Solr，請將其留空。
+      在外部ZooKeeper的 [SolrCloud模式下執行時](solr.md#solrcloud-mode) ，將此值設為 `HOST:PORT` ZooKeeper的值， *例如my.server.com:2181*
+
+      對於ZooKeeper Ensemble，輸入逗號分 `HOST:PORT` 隔的值， *例如host1:2181,host2:2181*
+
+      如果使用內部ZooKeeper在獨立模式下執行Solr，請保留空白。
       *預設值*: *&lt;blank>*
-   * **[!UICONTROL Solr URL]**在獨立模式下與Solr通訊的URL。
+
+      * **[!UICONTROL Solr URL]**在獨立模式下與Solr通訊的URL。
 如果在SolrCloud模式中執行，請留空。
-      *預設值*:https://127.0.0.1:8983/solr/
-   * **[!UICONTROL Solr系列]**Solr系列名稱。
-      *預設值*:collection1
+         *預設值*:https://127.0.0.1:8983/solr/
+
+      * **[!UICONTROL Solr系列]**Solr系列名稱。
+         *預設值*:collection1
+
 * 選擇「提 **[!UICONTROL 交」]**
 
 >[!NOTE]
 >
->預設為名稱的mongoDB資料庫不 `communities`應設定為用於節點儲存或資料（二進位） [儲存的資料庫的名稱](../../help/sites-deploying/data-store-config.md)。 另請參閱 [AEM 6中的儲存元素](../../help/sites-deploying/storage-elements-in-aem-6.md)。
+>預設為名稱的mongoDB資料庫不 `communities`應設定為用於節點儲存或資料（二進位） [儲存的資料庫的名稱](../../help/sites-deploying/data-store-config.md)。 另請參 [閱AEM 6.5中的儲存元素](../../help/sites-deploying/storage-elements-in-aem-6.md)。
+
 
 ### MongoDB複製副本集 {#mongodb-replica-set}
 
@@ -104,8 +112,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ```shell
 # Example url for:
-#     servers "mongoserver1", "mongoserver2", "mongoserver3"
-#     replica set 'rs0'
+# servers "mongoserver1", "mongoserver2", "mongoserver3"
+# replica set 'rs0'
 # port numbers only necessary if not default port 27017
 mongodb://mongoserver1:<mongoport1>,mongoserver2:<mongoport2>,mongoserver3:<mongoport3>/?replicaSet=rs0&maxPoolSize=100&waitQueueMultiple=50&readPreference=secondaryPreferred
 ```
@@ -116,13 +124,13 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(M
 
 如果Oak和MSRP系列都已大量使用，則可能會因效能原因安裝第二個Solr。
 
-對於生產環境， [SolrCloud模式比獨立模式](solr.md#solrcloud-mode) （單一本機Solr設定）提供更佳的效能。
+對於生產環境， [SolrCloud模式比獨立模式](solr.md#solrcloud-mode) （單一本機Solr設定）提供了更佳的效能。
 
 有關配置詳細資訊，請 [參閱SRP的Solr配置](solr.md)。
 
 ### 升級 {#upgrading}
 
-如果從使用MSRP設定的舊版進行升級，則必須
+如果從使用MSRP設定的舊版進行升級，則必須：
 
 1. 執行AEM [Communities升級](upgrade.md)
 1. 安裝新的Solr配置檔案
@@ -134,14 +142,13 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(M
 
 MSRP必須被識別為所有作者和發佈例項上的公用商店。
 
-要使相同的配置在發佈環境中可用，請執行以下操作：
+若要在發佈環境中提供相同的設定，請登入您的作者例項，然後依照下列步驟進行：
 
-* 作者：
-   * 從主菜單導航到「工 **[!UICONTROL 具」>「操作」>「複製」]**
-   * 選擇 **[!UICONTROL 激活樹]**
-   * **[!UICONTROL 開始路徑]**:
-      * 瀏覽至 `/etc/socialconfig/srpc/`
-   * 選取「啟 **[!UICONTROL 動」]**
+* 從主菜單導航到「 **[!UICONTROL 工具]** >操 **[!UICONTROL 作]** >復 **[!UICONTROL 制]**」。
+* 選擇 **[!UICONTROL 激活樹]**
+* **[!UICONTROL 開始路徑]**:
+   * 瀏覽至 `/etc/socialconfig/srpc/`
+* 選取「啟 **[!UICONTROL 動」]**
 
 ## 管理使用者資料 {#managing-user-data}
 
@@ -193,6 +200,7 @@ cURL -u *簽名* -d *data**reindex-url*
 >
 >如果您正在 [重新索引DSRP Solr](dsrp.md)，則URL為 **/services/social/datastore/rdb/reindex**
 
+
 ### MSRP重新索引範例 {#msrp-reindex-example}
 
 ```shell
@@ -213,8 +221,8 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 * 在JCR中，如 [果/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-   * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，這表示儲存提供程式是JSRP
-   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將MSRP定義為預設提供程式
+   * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，表示儲存提供程式是JSRP。
+   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將MSRP定義為預設提供程式。
 
 ### 升級後UGC消失 {#ugc-disappears-after-upgrade}
 
@@ -240,18 +248,18 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 ... 124 common frames omitted
 ```
 
-若要解決錯誤，請依照安裝標準MLS的 [指示進行](solr.md#installing-standard-mls)，請確保
+若要解決錯誤，請依照安裝標準MLS的 [指示進行](solr.md#installing-standard-mls)，請確定：
 
-* XML配置檔案被複製到正確的Solr位置
-* 在新配置檔案替換現有配置檔案後，Solr重新啟動
+* XML配置檔案被複製到正確的Solr位置。
+* 在新配置檔案替換現有配置檔案後，Solr重新啟動。
 
 ### 與MongoDB的安全連接失敗 {#secure-connection-to-mongodb-fails}
 
 如果嘗試與MongoDB伺服器建立安全連接時由於缺少類定義而失敗，則需要更新MongoDB驅動程式包(可從公共主儲存庫獲得 `mongo-java-driver`)。
 
-1. 從https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar(2.13.2版 [或更新版本](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) )下載驅動程式
-1. 將套件複製至AEM例項的「crx-quickstart/install」檔案夾
-1. 重新啟動AEM例項
+1. 從https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar(2.13.2版 [或更新版本](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) )下載驅動程式。
+1. 將套件複製至AEM例項的「crx-quickstart/install」檔案夾。
+1. 重新啟動AEM例項。
 
 ## 資源 {#resources}
 
