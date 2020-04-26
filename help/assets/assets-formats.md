@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets和Dynamic Media支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6ac091d413690bd44b171ed11415c154aa8f437c
+source-git-commit: 1d16716d5fcf5b05a741b2d06d333e5f80e0d290
 
 ---
 
@@ -24,7 +24,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 ## AEM Assets中支援的點陣影像格式 {#supported-raster-image-formats}
 
-| 格式 | 儲存 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | 互動式編輯 | 中繼資料回寫 | 分析 |
+| 格式 | 儲存 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | 編輯 | 中繼資料回寫 | 分析 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
@@ -32,7 +32,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
 | PNM | ✓ | ✓ |  |  |  |  | ✓ |
-| PFM | ✓ | ✓ |  |  |  |  | ✓ |
+| PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
 | PSD‡ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
