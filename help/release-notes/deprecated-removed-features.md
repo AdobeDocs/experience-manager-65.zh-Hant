@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
+source-git-commit: 33fab976729baa09fdfd3725542f9e6bc7f37eeb
 
 ---
 
@@ -39,7 +39,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
   <tr>
    <td>Creative Cloud整合</td>
    <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM to Creative Cloud Folder Sharing</a> is in AEM 6.2 as as as save give creative users access of AEM, so they thay bey open the CC applications and upload new files or save changes to AEM. Creative Cloud應用程式中發行的新功能Adobe Asset Link提供更佳的使用者體驗，並可直接從Photoshop、InDesign和Illustrator內部，以更強大的方式存取AEM中的資產。</p> <p>Adobe不打算對AEM做進一步的增強，以整合Creative Cloud資料夾共用。 雖然AEM中包含此功能，但強烈建議客戶使用取代解決方案。</p> </td>
-   <td>建議客戶改用新的Creative Cloud整合功能，包括Adobe Asset Link或AEM案頭應用程式。 請參閱 <a href="/help/assets/aem-cc-integration-best-practices.md">AEM和Creative Cloud整合最佳實務</a> ，以取得詳細資訊。</td>
+   <td>建議客戶改用新的Creative Cloud整合功能，包括Adobe Asset Link或AEM案頭應用程式。 請參 <a href="/help/assets/aem-cc-integration-best-practices.md">閱AEM和Creative Cloud整合最佳實務</a> ，以取得詳細資訊。</td>
   </tr>
   <tr>
    <td>資產</td>
@@ -97,12 +97,12 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
      <li>如果您已執行新安裝：
       <ul>
        <li>在最適化表單的「簽名」步驟中使用Adobe Sign型簽署體驗。</li>
-       <li>在最適化表單、互動式通訊和HTML5表單中使用獨立的Scribble Signature元件。</li>
+       <li>在最適化表單、互動式通訊和HTML5表單中使用單機版塗鴉簽名元件。</li>
       </ul> </li>
      <li>如果您已從舊版升級至AEM 6.5 Forms:<br />
       <ul>
        <li>在已使用此功能的表單中，繼續使用「簽名步驟」的Scribble簽名簽署體驗。<br /> </li>
-       <li>當您建立新表格時，請在「簽名」步驟中使用獨立的Scribble Signature元件或以Adobe Sign為基礎的簽署體驗。 </li>
+       <li>當您建立表格時，請在「簽名」步驟中使用獨立的Scribble Signature元件或以Adobe Sign為基礎的簽署體驗。 </li>
       </ul> </li>
     </ul> <p> </p> <p> </p> </td>
   </tr>
@@ -165,13 +165,14 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 |
 |--- |--- |--- |
-| Analytics Activity Map | AEM中包含的Activity Map版本。 | 由於Adobe Analytics API中的安全性變更，無法再使用AEM中包含的Activity Map版本。 使用Adobe [Analytics提供的ActivityMap外掛程式](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
+| Analytics Activity Map | AEM中包含的Activity Map版本。 | 由於Adobe Analytics API中的安全性變更，無法再使用AEM中包含的Activity Map版本。 使用 [Adobe Analytics提供的ActivityMap外掛程式](https://docs.adobe.complugin /content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
 | 整合 | ExactTarget整合已從預設分發（快速入門）中移除，現已不再提供。 | 無取代 |
 | 整合 | Salesforce Force API整合已從預設散發(Quickstart)中移除，現在是要從PackageShare安裝的額外套件。 | 功能仍然可用。 |
 | 表單 | Adobe Central Migration Bridge服務的支援已移除，因為不再支援Adobe Central產品。 | 無取代 |
 | 表單 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 無取代 |
 | 表單 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 無取代 |
 | 表單 | JEE上不提供從LiveCycle ES4 SP1升級至AEM 6.5 Forms的單跳升級 | 請參 [閱AEM Forms升級檔案](../forms/using/upgrade.md) 中的可用升級途徑。 |
+| 表單 | 從JEE上的AEM Forms移除以UPD為基礎的叢集支援 | 在JEE上的AEM Forms中，您只能使用TCP叢集。 如果您將UDP多點傳播伺服器從舊版升級至JEE上的AEM 5.5 Forms，請執行手動組態，以切換至以TCP為基礎的gemfire叢集。 如需詳細指示，請 [參閱JEE上的「升級至AEM 6.5表格」](../forms/using/upgrade-forms-jee.md) |
 | 開發人員 | Firebug Lite已從預設散發中移除（快速入門） | 使用瀏覽器內建的開發人員主控台 |
 | 開發人員 | 移除 `customJavaScriptPath` HTML用戶端程式庫管理員的支援。 | 無取代 |
 | 資產 | AEM 6.5中已移除「資產」卸載功能 | 無取代 |
