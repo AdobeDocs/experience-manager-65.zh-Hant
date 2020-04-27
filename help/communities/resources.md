@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
@@ -32,9 +32,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >如果在建立社群網站後安裝了SCORM，則必須重新建立安裝SCORM前所顯示的任何啟用資源。
 
+
+
 >[!NOTE]
 >
 >隨著 [AEM 6.3](deploy-communities.md#latestfeaturepack) 和相當的社群功能套件 [AEM 6.2 FP3](deploy-communities.md#latestfeaturepack) 和 [AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest功能套件)的推出，啟用功能不再需要 [](mysql.md)aMySQL資料庫(C)。
+
 
 ## 術語 {#terminology}
 
@@ -44,13 +47,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 資源的特性：
 
-* 可能是
+* 可能是以下類型：
    * 影像(JPG、PNG、GIF、BMP)
    * 視訊(MP4)
    * Flash(SWF)
    * 檔案(PDF)
    * 隨堂測驗(SCORM)
-* 可參考一或多個學習路徑
+* 可參考一個或多個學習路徑。
 
 ### 學習路徑 {#learning-path}
 
@@ -58,9 +61,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 成員組 {#members-group}
 
-在建立社群網站時，URL的指定網站名稱會用於建立以各種角色的不同權限設定的 [網站特定使用者群組](users.md) 。 所有這些自動建立的群組都會加上前置詞 `Community *<site-name>*`。
+在建立社群網站時，URL的指定網站名稱會用於建立以各種角色的不同權限設定的 [網站特定使用者群組](users.md) 。 所有這些自動建立的群組都會加上前置詞 `Community <site-name>`。
 
-其中一個使用者群 `Community *<site-name>* Members` 組是群組，可將發佈環境中的註冊使用者識別為社群成員。 如需範例， [請參閱AEM Communities的教學課程](getting-started-enablement.md) 「快速入門」。
+其中一個使用者群 `Community <site-name> Members` 組是群組，可將發佈環境中的註冊使用者識別為社群成員。 如需範例， [請參閱AEM Communities的教學課程](getting-started-enablement.md) 「快速入門」。
 
 對於 [參與社群](overview.md#egagementcommunity)，允許網站訪客自行註冊或使用社交登入是合理的，在此時，網站訪客會自動新增至成員群組。
 
@@ -72,9 +75,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在作者環境中，若要進入資源主控台
 
-* 從全域導覽：導 **[!UICONTROL 覽>社群>資源]**
+* 從全域導覽：導覽 **[!UICONTROL >]** 社群 **[!UICONTROL >資]****[!UICONTROL 源]**
 
-![chlimage_1-163](assets/chlimage_1-163.png)
+   ![chlimage_1-163](assets/chlimage_1-163.png)
 
 ### 選擇社群網站 {#select-a-community-site}
 
@@ -106,16 +109,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要向社群站點添加新的啟用資源
 
-* 選擇圖 `Create` 標
-* 從顯示的子菜單中，選擇 `Resource`
+* 選擇圖 `Create` 標。
+* 從顯示的子菜單中，選擇「資 **[!UICONTROL 源」]**。
 
-這會啟動
+這會啟動下列項目的逐步程式：
 
-* 說明資源（名稱、卡片影像和文字）
-* 選擇資源內容
-* 為資源選擇封面影像
-* 標識資源聯繫人
-* 為成員分配資源
+* 說明資源（名稱、卡片影像和文字）。
+* 選擇資源內容。
+* 選擇資源的封面影像。
+* 標識資源聯繫人。
+* 為成員分配資源。
 
 當資源是課程的一部分（學習路徑）時，成員只應被指派到學習路徑。 可在建立啟用資源後添加分配。
 
@@ -125,7 +128,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **[!UICONTROL 新增影像]**
 
-   (可&#x200B;*選*)要在成員的分配頁面以及資源控制台中啟用資源的卡片上顯示的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
+   (可&#x200B;*選*)要在成員的分配頁以及資源控制台中顯示在啟用資源卡上的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
 
    ***注意***:建議的影像大小不僅是480 x 480像素。 由於卡片的回應式設計會隨各種瀏覽器尺寸而改變，所以顯示大小會從220 X 165像素變更為400 x 165像素。
 
@@ -133,13 +136,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    (*唯讀*)要向其添加資源的社區站點。
 
-* **[!UICONTROL 資源名稱&amp;ast;]**
+* **[!UICONTROL 資源名稱]**
 
    (必&#x200B;*要*)資源的顯示名稱。 根據顯示名稱建立有效的節點名稱。
 
 * **[!UICONTROL 標記]**
 
-   (可&#x200B;*選*)可以選擇一個或多個標籤，其將啟用資源與一個或多個目錄相關聯。 請參閱 [標籤啟用資源](tag-resources.md)。
+   (可&#x200B;*選*)可以選擇一個或多個標籤，其將啟用資源與一個或多個目錄關聯。 請參閱 [標籤啟用資源](tag-resources.md)。
 
 * **[!UICONTROL 在目錄中顯示]**
 
@@ -173,9 +176,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
-* **[!UICONTROL 從我的本機檔案上]**&#x200B;傳從本機檔案系統上傳將使用原生檔案瀏覽器來選擇並上傳檔案。 支援的檔案類型包括SCORM.zip（HTML5或SWF）、MP4視訊、SWF、PDF和影像類型(JPG、PNG、GIF、BMP)。 檔案名稱會變成資產的名稱，並新增至資產庫。
+* **[!UICONTROL 從我的本機檔案上傳]**
 
-* **[!UICONTROL 瀏覽資產庫]**&#x200B;從資產庫中選擇。 選取範圍僅限於在社群網站中可見的選取範圍。
+   從本機檔案系統上傳時，會使用原生檔案瀏覽器來選取並上傳檔案。 支援的檔案類型包括SCORM.zip（HTML5或SWF）、MP4視訊、SWF、PDF和影像類型(JPG、PNG、GIF、BMP)。 檔案名稱會變成資產的名稱，並新增至資產庫。
+
+* **[!UICONTROL 瀏覽資產庫]**
+
+   從「資產庫」中選擇。 選取範圍僅限於在社群網站中可見的選取範圍。
 
 * **[!UICONTROL 新增外部 URL]**
 
@@ -193,7 +200,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **[!UICONTROL 新增 Adobe 連線 URL]**
 
-   輸入Adobe connect作業的連結。
+   輸入Adobe Connect作業的連結。
 
    在開啟的對話框中，輸入：
 
@@ -203,7 +210,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * **[!UICONTROL URL]**
 
-      Adobe connect作業的URL。
+      Adobe Connect作業的URL。
 
 * **[!UICONTROL 定義外部資源]**
 
@@ -229,7 +236,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    封面影像的建議大小為640 x 360 px。
 
-* 選擇下 **[!UICONTROL 一步]**
+* 選擇 **[!UICONTROL 下一步]**。
 
 ### 3 Settings {#settings}
 
@@ -240,6 +247,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >學員不應直接註冊要從學習路徑參考的啟用資源。 學員只需在學習路徑中註冊。
 >
 >如果成員同時註冊了資源和參考該資源的學習路徑，則其分配將同時顯示學習路徑中的單個資源和資源。
+
 
 * **[!UICONTROL 社會化設定]**
 
@@ -258,26 +266,32 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
       如果勾選此選項，當社群網站也允許匿名存取時，匿名網站訪客即可檢視目錄中的資源。 預設為未勾選。
 
 * **[!UICONTROL 到期日期]**
+
    *（可選）* ，可以選擇完成分配的日期。
 
 * **[!UICONTROL 資原作者]**
+
    *（選擇性）* ，啟用資源的作者。 使用下拉菜單從成員組的成員中選 [擇](#members-group)。
 
 * **[!UICONTROL 資源Contact&amp;ast;]**
+
    *（必要）* ，會員可聯絡有關啟用資源的人員。 使用下拉菜單從成員組的成員中選 [擇](#members-group)。
 
 * **[!UICONTROL 資源專家]**
+
    *（可選）* ，會員可聯絡的人員，其具備相關啟用資源的專業知識。 使用下拉菜單從成員組成員中選擇 [用戶](#members-group)。
 
 ### 4 Assignments {#assignments}
 
 ![chlimage_1-174](assets/chlimage_1-174.png)
 
-* **[!UICONTROL 新增受]**&#x200B;聘者使用下拉式選單從要註冊為學員的 [成員](#members-group) -使用者和使用者群組（以粗體列出）中進行選擇。 當會員登入社群網站時，其註冊的啟用資源（和學習路徑）會顯示在其「工作總攬」 [頁面](functions.md#assignments-function) 。
+* **[!UICONTROL 新增被指定者]**
 
-* 選擇創 **[!UICONTROL 建]**
+   使用下拉式選單，從 [會員](#members-group) -以粗體列出的使用者和使用者群組——將註冊為學員。 當會員登入社群網站時，其註冊的啟用資源（和學習路徑）會顯示在其「工作總攬」 [頁面](functions.md#assignments-function) 。
 
-![chlimage_1-175](assets/chlimage_1-175.png)
+* 選擇 **[!UICONTROL 建立]**。
+
+   ![chlimage_1-175](assets/chlimage_1-175.png)
 
 成功建立啟用資源將返回「資源」控制台，並選擇新建的資源。 通過此控制台，可以管 [理資源](#managing-a-resource)。
 
@@ -288,17 +302,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 若要新增學習路徑至社群網站
 
 * 選擇圖 `Create` 標
-* 從顯示的子菜單中，選擇 `Learning Path`
+* 從顯示的子菜單中，選擇「學習路 **[!UICONTROL 徑」]**。
 
-這會啟動
+這會啟動下列項目的逐步程式：
 
-* 識別學習路徑
-* 提供卡片影像以代表學員的學習路徑
-* 參考要包含在學習路徑中的啟用資源
-* （可選）排序資源
-* 選擇性地識別先決條件學習路徑
-* 識別學習路徑連絡人
-* 註冊成員
+* 識別學習路徑。
+* 提供卡片影像來代表學員的學習路徑。
+* 參考要包含在學習路徑中的啟用資源。
+* （可選）對資源進行排序。
+* （可選）識別先決條件學習路徑。
+* 識別學習路徑連絡人。
+* 註冊成員。
 
 對於學習路徑中包含的啟用資源，指派的作業只能針對學習路徑，而非個別資源。
 
@@ -308,7 +322,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **[!UICONTROL 新增影像]**
 
-   (可&#x200B;*選*)要顯示在成員分配頁以及資源控制台中學習路徑的卡片上的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
+   (可&#x200B;*選*)要在成員的分配頁以及資源控制台中學習路徑的卡片上顯示的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
 
    ***注意***:建議的影像大小不再是480 x 480像素。 由於卡片的回應式設計會隨各種瀏覽器尺寸而改變，所以顯示大小會從220 X 165像素變更為400 x 165像素。
 
@@ -322,7 +336,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **[!UICONTROL 標記]**
 
-   (可&#x200B;*選*)可選擇將學習路徑與一個或多個目錄關聯的一個或多個標籤。 請參閱 [標籤啟用資源](tag-resources.md)。
+   (可&#x200B;*選*)可以選擇一個或多個標籤，將學習路徑與一個或多個目錄關聯。 請參閱 [標籤啟用資源](tag-resources.md)。
 
 * **[!UICONTROL 在目錄中顯示]**
 
@@ -344,15 +358,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    (選&#x200B;*用*)從AEM Assets中選取。 內容片段，可在發佈環境中參考，但預設未使用。
 
-* 選擇下 **[!UICONTROL 一步]**
+* 選擇 **[!UICONTROL 下一步]**。
 
 ### 新增必備條件 {#add-prerequisites}
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
-* **[!UICONTROL 先決條件學習路徑]**(*可選*)選取其他已發佈的學習路徑時，必須先完成這些路徑，學員才能選取此學習路徑。
+* **[!UICONTROL 必備條件學習路徑]**
 
-* 選擇下 **[!UICONTROL 一步]**
+   (可&#x200B;*選*)選取其他已發佈的學習路徑時，必須先完成這些路徑，學員才能選取此學習路徑。
+
+* 選擇 **[!UICONTROL 下一步]**。
 
 ### 新增資源 {#add-resources}
 
@@ -364,11 +380,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **[!UICONTROL 資源]**
 
-   從為目前社群網站建立的*已發佈*啟用資源中選擇一或多個資源。
+   從為目前社群網站所建立的已發佈 *啟用資源* ，選擇一或多個資源。
 
 >[!NOTE]
 >
 >您只能選擇與學習路徑位於同一級別的可用資源。 例如，對於在群組中建立的學習路徑，只有群組層級資源可供使用；對於在社群網站中建立的學習路徑，該網站中的資源可供新增至學習路徑。
+
 
 * 選擇 **[!UICONTROL 下一步]**。
 
@@ -378,13 +395,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **[!UICONTROL 新增註冊]**
 
-   使用下拉菜單從社區站點成員組的成員和成員組（以粗體列出）中選 [擇](#members-group)。 首次建立學習路徑時，不需要添加指派。 可修改學習路徑屬性，以便稍後新增學員。
+   使用下拉菜單從社區站點成員組的成員和成員組（以粗體顯示）中選擇 [成員](#members-group)。 首次建立學習路徑時，不需要添加指派。 可修改學習路徑屬性，以便稍後新增學員。
 
 * **[!UICONTROL Learning Path Contact&amp;ast;]**
 
    *（必要）* ，會員可聯絡有關學習路徑的人員。 使用下拉菜單從社區站點成員組的成員中選 [擇](#members-group)。
 
-* 選擇「創 **[!UICONTROL 建」]**
+* Select **[!UICONTROL Create]**
 
 >[!NOTE]
 >
@@ -392,13 +409,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >如果成員同時註冊了啟用資源和參考該資源的學習路徑，則其分配將同時顯示學習路徑中的單個資源和資源。
 
+
 ## 管理資源 {#managing-a-resource}
 
-要管理單一啟用資源
+要管理單個啟用資源，請執行以下操作：
 
-* 從資源控制台
-* 選擇包含資源的社區站點
-* 選擇資源
+* 從「資 **[!UICONTROL 源]** 」控制台中，選擇包含資源的社區站點。
+* 選擇資源。
 
 對於選定的啟用資源，您可以：
 
@@ -422,7 +439,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
-通過選擇傳輸表徵圖，在確認後將 `Delete`啟用資源。
+通過選擇轉存器表徵圖，啟用資源將在確認 `Deleted` 之後。
 
 ### 發佈 {#publish}
 
@@ -430,9 +447,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 學員必須先發佈它，才能看到指派的啟用資源：
 
-* 選取全球圖示 `Publish`
-* 在彈出的對話方塊中，再次選 **[!UICONTROL 取「發佈]** 」
-* 選擇關 **[!UICONTROL 閉]**
+* 選擇要顯示的全球表徵圖 `Publish`。
+* 在彈出的對話方塊中，再次選 **[!UICONTROL 取「發佈]** 」。
+* 選擇 **[!UICONTROL 關閉]**。
 
 即使對話方塊指出動作已排入佇列，但通常也會立即發佈。
 
@@ -440,7 +457,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-184](assets/chlimage_1-184.png)
 
-若要暫時讓發佈環境中的成員無法存取啟用資源，而不要加以刪除，請使用資源的世界 `Unpublish`圖示。
+若要暫時讓發佈環境中的成員無法存取啟用資源，而不要加以刪除，請使用資源的世界 `Unpublish` 圖示。
 
 ### 報表 {#report}
 
@@ -448,7 +465,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 「報表」圖示可讓學員在發佈環境中與指派的啟用資源互動時，存取產生的報表。 報表會依資源類型而異。
 
-對於所有學習路徑，您可以根據資源或學員( `User Report`)來檢視報表。
+對於所有學習路徑，您可以根據資源或學員( `User Report`.)來檢視報表
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
 
@@ -464,19 +481,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **檢視**
 
-   檢視是當學員瀏覽資源詳細資料頁面時
+   檢視是指學員瀏覽資源詳細資料頁面時。
 
 * **播放**
 
-   播放是指alLearner與資源互動，例如播放影片或開啟PDF
+   播放是指alLearner與資源互動時，例如播放影片或開啟PDF。
 
 * **評等**
 
-   評分是當學員指派星級給資源時
+   評分是當學員指派星級給資源時。
 
 * **評論**
 
-   注釋是alLearner新增注釋時
+   評論是alLearner新增評論時。
 
 垂直軸是事件數。
 
@@ -492,13 +509,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 水準軸是此資源的持續時間。
 
-[需要Marketing cloud組織ID](sites-console.md#enablement)。
+[需要Marketing Cloud組織ID](sites-console.md#enablement)。
 
 #### 依裝置的參與數 {#engagement-by-device}
 
 「依裝置分析參與」報錶針對視訊資源，說明從桌上型電腦和行動裝置播放的檢視百分比。
 
-[需要Marketing cloud組織ID](sites-console.md#enablement)。
+[需要Marketing Cloud組織ID](sites-console.md#enablement)。
 
 #### 被指定者的狀態 {#assignee-status}
 
@@ -514,14 +531,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 #### 報表摘要 {#report-summary}
 
-對於啟用資源，「報表摘要」是一個表格
+對於啟用資源，「報表摘要」是表格清單。
 
 * 與資源互動的每位學員
    * 他們的狀態
    * 是否已為他們分配資源
       * 而不是在目錄中尋找資源
-   * 張貼的留言數
-   * 給予的評分（如果有）
+      * 張貼的留言數
+      * 給予的評分（如果有）
 
 對於學習路徑資源報表，報表摘要是一個表
 
@@ -534,11 +551,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 大小
    * 社群網站名稱
 
-對於學習路徑「用戶報告」,「報告摘要」是一個表
+對於學習路徑「用戶報告」,「報告摘要」是一個表清單。
 
-* 指派給學習路徑的每個學員
-   * 完成的資源數
-   * 他們的狀態
+* 指派給學習路徑的每位學員：
+   * 已完成的資源數。
+   * 他們的身份。
 
 通過使用選擇器選擇列，可以調整表的顯 `Show / hide columns` 示。
 
@@ -546,7 +563,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 「報表摘要」表格可使用控制台上方的按鈕以CSV格式下載。
 
-* 對於啟用資源：按鈕 `Download Resource Report as CSV`
-* 學習路徑：按鈕 `Download Learning Path Report as CSV`
+* 對於啟用資源：按 `Download Resource Report as CSV` 鈕。
+* 學習途徑：按 `Download Learning Path Report as CSV` 鈕。
 
 無論選擇要顯示的欄，都會下載完整的報表摘要。
