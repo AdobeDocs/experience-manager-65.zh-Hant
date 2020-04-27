@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 ---
 
@@ -75,8 +75,8 @@ UGC應使用其中一種標準的協調方法來協調。
 
 請參閱：
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法
+* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
