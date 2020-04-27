@@ -3,28 +3,28 @@ title: 使用AEM Assets處理各種支援檔案格式的最佳實務。
 description: 使用AEM Assets處理各種支援檔案類型的最佳實務。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
 
 # 資產檔案格式最佳實務 {#assets-file-format-best-practices}
 
-AEM Assets支援許多專屬和協力廠商的檔案格式程式庫，以符合使用者的多種檔案支援需求。 支援的Adobe程式庫包括Adobe Camera Raw、Gibson、Adobe PDF Rasterizer和Adobe inDesign Server。 此外，AEM Assets還支援協力廠商資料庫，包括ImageMagick、TwelveMones等。
+AEM Assets支援許多專屬和協力廠商的檔案格式程式庫，以符合使用者的多種檔案支援需求。 支援的Adobe程式庫包括Adobe Camera Raw、Gibson、Adobe PDF Rasterizer和Adobe InDesign Server。 此外，AEM Assets還支援協力廠商資料庫，包括ImageMagick、TwelveMones等。
 
 如需支援的檔案格式，請參閱「 [Assets支援的格式」](/help/assets/assets-formats.md)。
 
 >[!TIP]
 >
->如果您在Adobe Managed Services(AMS)上使用Experience Manager，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe支援。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。
+>如果您在Adobe Managed Services(AMS)上使用Experience Manager，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe支援。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 Experience Manager可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
 
-## Adobe Camera raw資料庫 {#adobe-camera-raw-library}
+## Adobe Camera Raw資料庫 {#adobe-camera-raw-library}
 
-為獲得最佳效能，Adobe建議使用Adobe Camera raw程式庫來處理RAW和DNG檔案。
+為獲得最佳效能，Adobe建議使用Adobe Camera Raw程式庫來處理RAW和DNG檔案。
 
-Adobe Camera raw程式庫支援CMYK色彩描述檔作為輸入。 但是，它僅支援JPEG格式的輸出，並且在RGB顏色空間中生成輸出。 它不會在縮圖中保留原始檔案的色域（例如CMYK）。
+Adobe Camera Raw程式庫支援CMYK色彩描述檔作為輸入。 但是，它僅支援JPEG格式的輸出，並且在RGB顏色空間中生成輸出。 它不會在縮圖中保留原始檔案的色域（例如CMYK）。
 
-如需詳細資訊，請參 [閱Camera raw支援](/help/assets/camera-raw.md)。
+如需詳細資訊，請參 [閱Camera Raw支援](/help/assets/camera-raw.md)。
 
 ## Adobe PDF Rasterizer程式庫 {#adobe-pdf-rasterizer-library}
 
@@ -36,9 +36,9 @@ Adobe Camera raw程式庫支援CMYK色彩描述檔作為輸入。 但是，它�
 
 使用PDF點陣化器產生的縮圖和預覽，比現成可用的點陣化輸出更具品質。 Adobe PDF Rasterizer程式庫不支援任何色域轉換。 不論來源PDF檔案的色域為何，Adobe PDF Rasterizer都只會產生RGB輸出。
 
-## Adobe inDesign Server {#adobe-indesign-server}
+## Adobe InDesign Server {#adobe-indesign-server}
 
-Adobe建議您使用Adobe inDesign server擷取Adobe inDesign專用的轉譯，例如IDML和HTML。 如需詳細資訊，請 [參閱「在Adobe inDesign中新增AEM資產作為參考」](/help/assets/managing-linked-subassets.md#refai)。
+Adobe建議您使用Adobe InDesign Server擷取Adobe InDesign專用的轉譯，例如IDML和HTML。 如需詳細資訊，請 [參閱「在Adobe InDesign中新增AEM資產作為參考」](/help/assets/managing-linked-subassets.md#refai)。
 
 ## 動態媒體  {#dynamic-media}
 
