@@ -4,7 +4,7 @@ description: 有關AEM設定、變更硬體、軟體和網路元件以排除瓶�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -116,7 +116,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 您的網路最佳化策略主要取決於可用頻寬的數量，以及AEM例項的負載。 常見配置選項（包括防火牆或代理）有助於提高網路效能。 以下是需要記住的一些要點：
 
 * 視您的例項類型（小型、中度、大型）而定，請確定您的AEM例項有足夠的網路頻寬。 如果AEM是在AWS上代管，則適當的頻寬分配尤為重要。
-* 如果您的AEM實例是在AWS上代管的，則您可以擁有多功能擴展策略。 如果使用者預期負載較高，請調整執行個體的大小。 縮小它的大小以適中／低負載。
+* 如果您的AEM實例是在AWS上代管的，則您可以擁有多功能的擴展策略。 如果使用者預期負載較高，請調整執行個體的大小。 縮小它的大小以適中／低負載。
 * HTTPS:大部分使用者都有防火牆來監聽HTTP流量，這可能會對上傳檔案或在上傳作業期間損毀檔案造成負面影響。
 * 大型檔案上傳：確保用戶有到網路的有線連接（WiFi連接快速飽和）。
 
@@ -176,7 +176,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 客戶在其網站上使用各種大小和格式的影像，或將影像發佈給商業合作夥伴。 由於每個轉譯都會增加資產在儲存庫中的佔用空間，Adobe建議您審慎地使用此功能。 為了減少處理和儲存影像所需的資源量，您可以在執行時期產生這些影像，而不是在擷取時當做轉譯。
 
-許多網站客戶會實作影像servlet，在要求影像時調整影像大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
+許多網站客戶會實作影像servlet，在要求影像時調整大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
 
 另一種方法是使用Scene7技術完全放棄影像控制。 此外，您還可以部署品牌入口網站，不僅負責從AEM基礎架構接手轉譯產生責任，還負責整個發佈層。
 
@@ -203,17 +203,13 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 >[!CAUTION]
 >
->如果ImageMagick使用所有可用磁碟空間，錯誤配置可能會使伺服器不穩定。
->
->使用ImageMagick處理大型檔案所需的原則變更可能會影響AEM效能。 如需詳細資訊，請參 [閱安裝和設定ImageMagick](/help/assets/best-practices-for-imagemagick.md)。
+>如果ImageMagick使用所有可用磁碟空間，錯誤配置可能會使伺服器不穩定。 使用ImageMagick處理大型檔案所需的原則變更可能會影響AEM效能。 如需詳細資訊，請參 [閱安裝和設定ImageMagick](/help/assets/best-practices-for-imagemagick.md)。
 
 >[!NOTE]
 >
 >ImageMagick和 `policy.xml` 檔案可在中取 `configure.xml` 代。請參 `/usr/lib64/ImageMagick-&#42;/config/` 閱 `/etc/ImageMagick/`ImageMagick文檔 [](https://www.imagemagick.org/script/resources.php) ，瞭解配置檔案的位置。
 
->[!TIP]
->
->如果您在Adobe Managed Services(AMS)上使用Experience Manager，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe支援。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。
+如果您在Adobe Managed Services(AMS)上使用Experience Manager，如果您打算處理大量的PSD或PSB檔案，請聯絡Adobe客戶服務。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 Experience Manager可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
 
 ### XMP writeback {#xmp-writeback}
 
