@@ -10,18 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
 
 # 使用評分 {#using-ratings}
 
-該組 `Rating`件是單獨使用的，或與其他Communities功能一起使用。 此元件可讓登入的社群成員透過內容分級來表達意見。
+該組 `Rating` 件是單獨使用的，或與其他Communities功能一起使用。 此元件可讓登入的社群成員透過內容分級來表達意見。
 
 ## 新增評分至頁面 {#adding-a-rating-to-a-page}
 
-若要在作 `Rating`者模式下將元件新增至頁面，請找出元件並 `Communities / Rating` 將其拖曳至頁面上，例如與功能相關的位置，讓成員評分。
+若要在作 `Rating` 者模式下將元件新增至頁面，請找出元件並將其拖曳至頁面上， `Communities / Rating` 例如與功能相關的位置，讓成員評分。
 
 如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
 
