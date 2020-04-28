@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -21,12 +21,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 該框架的優點：
 
-* **功能**:80%的使用案例只需少量或不需自訂，即可輕鬆整合
-* **可變更外觀**:CSS樣式的HTML屬性使用一致
-* **可擴充**:元件實施是物件導向的，並輕鬆處理業務邏輯——易於在伺服器上添加增量業務登錄
-* **彈性**:簡單、無邏輯的Javascript範本，可輕鬆覆蓋和自訂
-* **可存取**:HTTP API支援從任何用戶端發佈內容，包括行動應用程式
-* **可攜式**:整合／嵌入任何以任何技術為基礎的網頁
+* **功能**:80%的使用案例只需少量或完全不需自訂，即可輕鬆整合。
+* **可變更外觀**:CSS樣式的HTML屬性使用一致。
+* **可擴充**:元件實施是物件導向的，並且輕鬆處理業務邏輯——易於在伺服器上添加增量業務登錄。
+* **彈性**:簡單、無邏輯的Javascript範本，可輕鬆覆蓋和自訂。
+* **可存取**:HTTP API支援從任何用戶端發佈內容，包括行動應用程式。
+* **可攜式**:整合／嵌入任何以任何技術為基礎的網頁。
 
 使用互動式社群元件指南，探索作者或發佈 [例項](components-guide.md)。
 
@@ -48,20 +48,20 @@ SocialComponent API可擴充，以提供用戶端對檢視層或HTTP用戶端所
 
 若要自訂或擴充元件，您只需將覆蓋和擴充功能寫入/apps目錄，以簡化升級至未來版本的程式。
 
-* 針對外觀設定
-   * 只有 [CSS需要編輯](client-customize.md#skinning-css)
-* 外觀和感覺
-   * 變更JS範本和CSS
-* 針對外觀、感覺和UX
-   * 變更JS範本、CSS和擴充／覆 [寫Javascript](client-customize.md#extending-javascript)
-* 修改JS範本或GET端點的可用資訊
-   * 擴充 [SocialComponent](server-customize.md#socialcomponent-interface)
-* 在操作過程中添加自定義處理
-   * 編寫 [OperationExtension](server-customize.md#operationextension-class)
-* 若要新增自訂作業
-   * 建立新的 [Sling Post Operation](server-customize.md#postoperation-class)
-   * 視需要使 [用現有的OperationServices](server-customize.md#operationservice-class)
-   * 視需要新增Javascript程式碼，從用戶端叫用您的作業
+* 針對外觀設定：
+   * 只有 [CSS需要編輯](client-customize.md#skinning-css)。
+* 外觀與感覺：
+   * 變更JS範本和CSS。
+* 外觀、感覺和UX:
+   * 變更JS範本、CSS和擴充／覆 [寫Javascript](client-customize.md#extending-javascript)。
+* 要修改JS模板或GET端點的可用資訊：
+   * 擴充 [SocialComponent](server-customize.md#socialcomponent-interface)。
+* 要在操作過程中添加自定義處理，請執行以下操作：
+   * 編寫 [OperationExtension](server-customize.md#operationextension-class)。
+* 要添加新的自定義操作，請執行以下操作：
+   * 建立新的 [Sling Post Operation](server-customize.md#postoperation-class)。
+   * 視需要 [使用現有](server-customize.md#operationservice-class) OperationServices。
+   * 視需要新增Javascript程式碼，從用戶端叫用您的作業。
 
 ## 伺服器端架構 {#server-side-framework}
 
@@ -77,17 +77,17 @@ Java API提供可輕鬆繼承或子分類的抽象類別和介面。
 
 ### HTTP API {#http-api}
 
-HTTP API支援PhoneGap應用程式、原生應用程式和其他整合與綜合應用程式的輕鬆自訂和用戶端平台選擇。 此外，HTTP API允許社區站點作為服務運行，而無需客戶端，這樣框架元件就可以整合到任何基於任何技術構建的網頁中。
+HTTP API支援PhoneGap應用程式、原生應用程式和其他整合與綜合應用程式的輕鬆自訂和用戶端平台選擇。 此外，HTTP API允許社群網站在沒有用戶端的情況下以服務形式運作，如此架構元件就可整合在任何技術上建立的任何網頁中。
 
 ### HTTP API —— 取得要求 {#http-api-get-requests}
 
 對於每個SocialComponent，架構都提供以HTTP為基礎的API端點。 透過傳送GET要求至具有「.social.json」選擇器+副檔名的資源，即可存取端點。 使用Sling，請求即會遞交至 `DefaultSocialGetServlet`。
 
-The `DefaultSocialGetServlet`
+**`DefaultSocialGetServlet`**
 
-1. 將資源(resourceType)傳遞至， `SocialComponentFactoryManager`並接收能夠選擇表示資源 `SocialComponent`的SocialComponentFactory。
+1. 將資源(resourceType)傳遞至， `SocialComponentFactoryManager` 並接收能夠選擇表示資源 `SocialComponent` 的SocialComponentFactory。
 
-1. 調用工廠並接收 `SocialComponent`能夠處理資源和請求的。
+1. 調用工廠並接收能 `SocialComponent` 夠處理資源和請求的設備。
 1. 叫用 `SocialComponent`處理請求並傳回結果的JSON表示法。
 1. 傳回JSON回應給用戶端。
 
@@ -111,11 +111,11 @@ The `DefaultSocialGetServlet`
 
 ### 儲存資源提供商(SRP) {#storage-resource-provider-srp}
 
-若要瞭解如何處理儲存在社群內容 [商店的UGC](working-with-srp.md)，請參閱
+若要瞭解如何處理儲存在社群內容儲 [存區中的UGC](working-with-srp.md)，請參閱：
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API公用程式方法與範例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
+* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
 
 ### 伺服器端自訂 {#server-side-customizations}
 
@@ -181,6 +181,7 @@ Most Communities元件必須 *新增* ，做為Sling可定址資源。 在模板
 >
 >若要動態新增元件至頁面，而非將元件新增或加入範本中，請參閱元 [件側載](sideloading.md)。
 
+
 ### Handlebars Helpers {#handlebars-helpers}
 
 如需 [SCF中提供的定製幫助的清單和說明，請參見SCF Handlebars Helpers](handlebars-helpers.md) 。
@@ -198,8 +199,8 @@ Most Communities元件必須 *新增* ，做為Sling可定址資源。 在模板
 以下是定義和使用CSS類別的建議慣例：
 
 * 使用清楚命名的CSS類別選擇器名稱，並避免使用一般名稱，例如「標題」、「影像」等。
-* 定義特定類別選擇器樣式，讓CSS樣式表能與頁面上的其他元素和樣式搭配使用。 例如： `.social-forum .topic-list .li { color: blue; }`
-* 將CSS類別與JavaScript所驅動之UX的CSS類別分開
+* 定義特定類別選擇器樣式，讓CSS樣式表能與頁面上的其他元素和樣式搭配使用。 For example: `.social-forum .topic-list .li { color: blue; }`
+* 將CSS類別與JavaScript所驅動之UX的CSS類別分開，以設定樣式。
 
 ### 用戶端自訂 {#client-side-customizations}
 
