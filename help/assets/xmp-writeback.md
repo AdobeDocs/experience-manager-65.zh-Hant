@@ -3,7 +3,7 @@ title: XMP回寫至轉譯
 description: 瞭解XMP回寫功能如何將資產的中繼資料變更傳播至資產的所有或特定轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 33ab9845f7800c80a6beb5db06f3fadf582122d0
 
 ---
 
@@ -30,7 +30,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
 ## 啟用XMP回寫 {#enabling-xmp-writeback}
 
-若要啟用中繼資料變更在上傳資產時傳播至資產的轉譯，請在Configuration manager中修改 **Adobe CQ DAM Rendition Maker** configuration。
+若要啟用中繼資料變更在上傳資產時傳播至資產的轉譯，請在Configuration Manager中修改 **Adobe CQ DAM Rendition Maker** configuration。
 
 1. 要開啟配置管理器，請訪問 `https://[aem_server]:[port]/system/console/configMgr`。
 1. 開啟 **Adobe CQ DAM Rendition Maker設定** 。
@@ -44,16 +44,16 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
 對於「XMP回寫」功能，將中繼資料傳播至轉譯縮圖140.100.png和319.319.png，請執行這些步驟。
 
-1. 點選／按一下AEM標誌，然後導覽至「工 **具** >工 **作流程** >模 **型**」。
+1. 點選/按一下AEM標誌，然後導覽至「工 **具** >工 **作流程** >模 **型**」。
 1. 從「模型」頁面，開啟「 **DAM中繼資料回寫** 」工作流程模型。
 1. 在「 **DAM中繼資料回寫** 」屬性頁面中，開啟 **「XMP回寫程式」步驟** 。
-1. 在「步驟屬性」對話方塊中，點選／按一下「 **處理** 」標籤。
+1. 在「步 驟屬性 」對話方塊中，點選/按一下「 **處理** 」標籤。
 1. 在「參 **數** 」方塊中，新增 `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`，然後點選／按一下「 **確定」**。
 
    ![step_properties](assets/step_properties.png)
 
 1. 儲存變更。
-1. 若要使用新屬性重新產生動態媒體影像的金字塔TIF轉譯，請將 **** Dynamic Media Process Image Assets步驟新增至DAM中繼資料回寫工作流程。
+1. To regenerate the pyramid TIF renditions for Dynamic Media images with the new attributes, add the **Dynamic Media Process Image Assets** step to the DAM Metadata Writeback workflow.
 
    PTIFF轉譯只會在Dynamic Media Hybrid實作中建立並儲存在本機。
 
@@ -63,7 +63,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
 >[!NOTE]
 >
->有關64位元Linux中的XMP回寫問題，請參 [閱如何在64位元RedHat linux上啟用XMP回寫](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)。
+>有關64位元Linux中的XMP回寫問題，請參 [閱如何在64位元RedHat Linux上啟用XMP回寫](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)。
 >
 >如需支援平台的詳細資訊，請參閱 [XMP中繼資料回寫的必要條件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
 
@@ -77,7 +77,7 @@ XMP中繼資料的白名單篩選可讓您定義要匯入的XMP屬性，以解�
 
 >[!NOTE]
 >
->篩選只適用於資產二進位檔中衍生自XMP來源的屬性。 對於從非XMP來源衍生的屬性（例如EXIF和IPTC格式），篩選無法運作。 例如，資產建立日期會儲存在以EXIF TIFF命名的 `CreateDate` 屬性中。 AEM在名為的中繼資料欄位中提到此值 `exif:DateTimeOriginal`。 由於來源是非XMP來源，因此篩選不適用於此屬性。
+>篩選只適用於資產二進位檔中衍生自XMP來源的屬性。 對於從非XMP來源衍生的屬性（例如EXIF和IPTC格式），篩選無法運作。 例如，資產建立日期會儲存在以EXIF TIFF命名的 `CreateDate` 屬性中。 AEM會將此值儲存在名為的中繼資料欄位 `exif:DateTimeOriginal`。 由於來源是非XMP來源，因此篩選不適用於此屬性。
 
 1. 要開啟配置管理器，請訪問 `https://[aem_server]:[port]/system/console/configMgr`。
 1. 開啟 **Adobe CQ DAM XmpFilter組態** 。
