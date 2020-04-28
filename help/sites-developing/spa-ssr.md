@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 9f0eebfa0c5d2449dcc2977c7085b11a48a10eb9
 
 ---
 
@@ -40,8 +40,8 @@ source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
 
 SSR通常在以下任一問題有明確的「是」時提供一些值：
 
-* **** SEO:SSR是否仍需要SSR才能讓帶來流量的搜尋引擎正確建立索引？ 請記住，主要搜尋引擎爬蟲程式現在會評估JS。
-* **** 頁面速度：SSR是否可大幅提升實際環境中的速度，並增加整體使用體驗？
+* **SEO:** SSR是否仍需要SSR才能讓帶來流量的搜尋引擎正確建立索引？ 請記住，主要搜尋引擎爬蟲程式現在會評估JS。
+* **頁面速度：** SSR是否可大幅提升實際環境中的速度，並增加整體使用體驗？
 
 只有當這兩個問題中至少有一個問題以明確的「是」回答時，Adobe才建議實作SSR。 以下各節將說明如何使用Adobe I/O Runtime進行此項作業。
 
@@ -62,6 +62,33 @@ SSR通常在以下任一問題有明確的「是」時提供一些值：
 >[!NOTE]
 >
 >Adobe建議針對每個AEM環境（作者、發佈、舞台等）使用個別的Adobe I/O Runtime執行個體。
+
+## 遠程渲染器配置 {#remote-renderer-configuration}
+
+AEM必須知道可擷取遠端轉譯內容的位置。 不論您 [選擇為SSR建置何種模型，](#adobe-i-o-runtime) 都需要指定AEM如何存取此遠端轉譯服務。
+
+這是通過RemoteContentRenderer - Configuration Factory OSGi服 **務完成的**。 在「Web控制台配置」控制台中搜索「RemoteContentRenderer」字串，網址為 `http://<host>:<port>/system/console/configMgr`。
+
+![轉譯器設定](assets/rendererconfig.png)
+
+下列欄位可用於設定：
+
+* **內容路徑模式** -規則運算式，以符合部分內容（如有必要）
+* **遠端端點URL** —— 負責產生內容的端點的URL
+   * 如果不在本地網路中，請使用安全的HTTPS協定。
+* **其他請求標題** -要新增至傳送至遠端端點之請求的其他標題
+   * 模式： `key=value`
+* **請求超時** -遠程主機請求超時（以毫秒為單位）
+
+>[!NOTE]
+>
+>不論您選擇實作 [AEM導向的通訊流程](#aem-driven-communication-flow) ，或 [](#adobe-i-o-runtime-driven-communication-flow) Adobe I/O Runtime導向的流程，您都必須定義遠端內容轉譯器設定。
+>
+>如果您選擇使用自訂Node.js伺服 [器，也必須定義此設定。](#using-node-js)
+
+>[!NOTE]
+>
+>此配置利用「遠 [程內容呈現器」](#remote-content-renderer) ，該轉換器還提供其他擴展和自定義選項。
 
 ## AEM導向的通訊流程 {#aem-driven-communication-flow}
 
@@ -164,3 +191,53 @@ Adobe I/O Runtime是建置AEM中SPA的SSR的建議解決方案。
 >[!NOTE]
 >
 >如果SSR必須透過Node.js實作，Adobe建議針對每個AEM環境（作者、發佈、舞台等）建置個別的Node.js例項。
+
+## 遠端內容轉譯器 {#remote-content-renderer}
+
+在AEM [中搭配SPA使用SSR所需的遠端內容轉譯器設定](#remote-content-renderer-configuration) ，可點選更廣泛的轉譯服務，以符合您的需求加以擴充和自訂。
+
+### RemoteContentRenderingService {#remotecontentrenderingservice}
+
+`RemoteContentRenderingService` 是OSGi服務，可擷取在遠端伺服器上轉譯的內容，例如從Adobe I/O轉譯。傳送至遠端伺服器的內容是根據傳遞的要求參數。
+
+`RemoteContentRenderingService` 可在需要額外的內容控制時，透過互依性反轉插入自訂Sling模型或servlet。
+
+此服務由 [RemoteContentRendererRequestHandlerServlet在內部使用](#remotecontentrendererrequesthandlerservlet)。
+
+### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
+
+您可 `RemoteContentRendererRequestHandlerServlet` 以使用程式設計方式設定請求組態。 `DefaultRemoteContentRendererRequestHandlerImpl`，提供的預設請求處理常式實作，可讓您建立多個OSGi組態，以便將內容結構中的位置對應至遠端端點。
+
+若要新增自訂請求處理常式，請實作 `RemoteContentRendererRequestHandler` 介面。 請務必將 `Constants.SERVICE_RANKING` component屬性設為大於100的整數，即排名 `DefaultRemoteContentRendererRequestHandlerImpl`。
+
+```
+@Component(immediate = true,
+        service = RemoteContentRendererRequestHandler.class,
+        property={
+            Constants.SERVICE_RANKING +":Integer=1000"
+        })
+public class CustomRemoteContentRendererRequestHandlerImpl implements RemoteContentRendererRequestHandler {}
+```
+
+### 配置預設處理程式的OSGi配置 {#configure-default-handler}
+
+預設處理程式的配置必須按照「遠程內容渲染器配置」一節中 [的說明進行配置](#remote-content-renderer-configuration)。
+
+### 遠端內容轉譯器使用 {#usage}
+
+若要讓servlet擷取並傳回某些可插入頁面的內容：
+
+1. 確保遠程伺服器可以訪問。
+1. 將下列其中一個程式碼片段新增至AEM元件的HTL範本。
+1. 或者，建立或修改OSGi配置。
+1. 瀏覽您網站的內容
+
+通常，頁面元件的HTL範本是此類功能的主要收件者。
+
+```
+<sly data-sly-resource="${resource @ resourceType='cq/remote/content/renderer/request/handler'}" />
+```
+
+### 需求 {#requirements}
+
+Servlet運用Sling Model Exporter序列化元件資料。 依預設，和 `com.adobe.cq.export.json.ContainerExporter` 都 `com.adobe.cq.export.json.ComponentExporter` 支援做為Sling Model適配器。 如有必要，您可以添加類，請求應適應使用和實 `RemoteContentRendererServlet` 施類 `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`。 其他類必須擴展 `ComponentExporter`。
