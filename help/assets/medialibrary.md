@@ -3,7 +3,7 @@ title: 比較AEM Assets和AEM Media Library產品
 description: 比較AEM Assets和AEM Media Library產品，並瞭解其差異。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
+source-git-commit: 476a8acbca2f498472225fe1df220f63eafe61e5
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 Adobe Experience Manager(AEM)Assets是AEM平台不可或缺的一部分。 此順暢整合被視為AEM的主要優點，可確保內容管理的一致性，並提高內容作者的生產力。
 
-## Frequently asked questions {#frequently-asked-questions}
+## 常見問題 {#frequently-asked-questions}
 
 ### 什麼是AEM Assets? {#what-is-aem-assets}
 
@@ -70,7 +70,7 @@ AEM Assets客戶僅能使用的獨特功能包括：
 * Adobe Asset Link（連線至適用於企業的Creative Cloud）
 * AEM案頭應用程式
 * 處理設定檔
-* InDesign server整合
+* InDesign Server整合
 * 資產範本和型錄製作者架構
 * Adobe Photoshop、Illustrator和InDesign連結資產
 * 多語言資產管理
@@ -100,6 +100,6 @@ AEM Assets客戶僅能使用的獨特功能包括：
 * 專案、工作、工作流程編寫
 * 活動串流（時間軸）
 * 查詢產生器(API)
-* Marketing cloud整合
+* Marketing Cloud整合
 * UI自訂與擴充功能
 * 注釋與注釋
