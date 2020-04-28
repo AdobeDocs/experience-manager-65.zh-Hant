@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 68cd1c13fff94ac485865e50bc955548cd285b14
 
 ---
 
@@ -37,7 +37,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
    * 如果您要上傳設定檔案，請在方塊中輸入其路徑和名稱，或按一下「瀏覽」尋找並選取檔案。
 
 1. （可選）在「XMP中繼資料檔案」下方，輸入XMP檔案的路徑和名稱，或按一下「瀏覽」尋找並選取檔案。 XMP檔案可用來包含標準中繼資料資訊。 (請參 [閱關於XMP檔案](converting-files-using-pdf-generator.md#about-xmp-files)。)
-1. 按一下 建立。建立檔案時，將顯示指向該檔案的連結。 如果轉換期間發生錯誤，會出現警告。 如果您正在建立Postscript檔案，則警告還包含指向日誌檔案的連結。
+1. 按一下建立。建立檔案時，將顯示指向該檔案的連結。 如果轉換期間發生錯誤，會出現警告。 如果您正在建立Postscript檔案，則警告還包含指向日誌檔案的連結。
 1. 按一下PDF檔案的連結。 檔案會在Acrobat中開啟。
 
 ### 關於XMP檔案 {#about-xmp-files}
@@ -61,11 +61,22 @@ Adobe Extensible Metadata Platform(XMP)為Adobe應用程式提供通用的XML架
 
 >[!NOTE]
 >
->HTML至PDF功能需要系統字型目錄中的特定字型。 在Linux、Solaris和AIX系統上，系統字型目錄必須包含Courier字型。 在Windows系統上，系統字型目錄必須包含Times New Roman。
+>* HTML至PDF功能需要系統字型目錄中的特定字型。 在Linux、Solaris和AIX系統上，系統字型目錄必須包含Courier字型。 在Windows系統上，系統字型目錄必須包含Times New Roman。
+   >
+   > 
+* 以下是Linux上AEM Forms的預設日文字型。 至少>其中一個字型應可在>system中轉換日文字型。
+   >
+   >   
+   * &quot;薩扎納米哥特&quot;
+   >   * &quot;Kozuka Gothic Pro-VI&quot;
+   >   * &quot;Kozuka Mincho Pro-VI&quot;
+   >   * &quot;薩扎納米哥特&quot;
+   >   * &quot;Kozuka Mincho Pr6N&quot;
+   >   * 《山上町》
+   >   * 「Adobe Heiti Std」
+   >   * 「Adobe Song Std」
+>* 若要從本機檔案系統上傳檔案，請使用HTML至PDF頁面上的「上傳檔案」選項。
 
->[!NOTE]
->
->若要從本機檔案系統上傳檔案，請使用HTML至PDF頁面上的「上傳檔案」選項。
 
 1. 在管理控制台中，按一下「服務> PDF產生器> HTML至PDF」。
 1. 執行下列任一任務，指定要轉換的檔案：
@@ -87,7 +98,7 @@ Adobe Extensible Metadata Platform(XMP)為Adobe應用程式提供通用的XML架
 
 
 1. 若要上傳XMP檔案，請按一下「瀏覽」並移至檔案位置。 XMP檔案可用來包含標準中繼資料資訊。 (請參 [閱關於XMP檔案](converting-files-using-pdf-generator.md#about-xmp-files)。)
-1. 按一下 建立。建立檔案時，會出現PDF檔案的連結。
+1. 按一下建立。建立檔案時，會出現PDF檔案的連結。
 1. 按一下連結，在Acrobat中檢視PDF檔案。
 
 ## 將PDF檔案匯出為其他檔案格式（僅限Windows） {#export-a-pdf-file-to-another-file-format-windows-only}
@@ -120,5 +131,5 @@ PDF產生器支援縮減PDF檔案的大小。
    * 若要使用自訂設定，請選取「使用自訂設定」、指定檔案類型設定，並指定逾時值。 預設值為270秒。
    * 若要使用現有的設定檔案，請選取「上傳設定檔案」，然後按一下「瀏覽」前往檔案位置。
 
-1. 按一下 建立。
+1. 按一下建立。
 
