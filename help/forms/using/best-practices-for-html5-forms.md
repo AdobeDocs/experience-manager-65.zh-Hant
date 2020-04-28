@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3e83611f6b30cee774b72194bee1d03e323a6a57
+source-git-commit: b6c013a31b70166cba80fea53dffc3794ffee5b8
 
 ---
 
@@ -47,7 +47,7 @@ HTML5表格可包含多種外部資源，例如影像、JavaScript和CSS檔案�
 
 ## 讓興趣持續存在，只顯示必填欄位 {#keep-the-interest-alive-show-only-required-fields}
 
-HTML5表單可以執行到數百個頁面。 在瀏覽器中載入具有大量欄位的表單時，速度會變慢。 您可以對XFA表單執行下列最佳化，以最佳化包含大量欄位和頁面的表單：
+HTML5表單可以執行到數百個頁面。 在瀏覽器中載入大量欄位的表單速度緩慢。 您可以對XFA表單執行下列最佳化，以最佳化包含大量欄位和頁面的表單：
 
 * 評估將大型表單分割為多個表單。 您也可以使用表單集將所有較小的表單群組在一起，並以單一單位呈現。 表單集僅載入所需的表單。 此外，在表單集中，您可以設定不同表單中的常用欄位，以共用資料系結。 資料系結可協助使用者只填寫一次一般資訊；這些資訊會自動填入後續的表格，大幅提升效能。 如需表單集的詳細資訊，請參閱「 [AEM表單中的表單集」](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html)。
 * 請考慮分割區段，並將每個區段移至不同的頁面。 HTML5表格會動態載入頁面捲動要求上的每個頁面。 只有捲動的頁面（顯示的頁面及其前面的頁面）會儲存在記憶體中；其餘的頁面會隨選載入。 因此，分割和移動頁面上的某個區段會減少載入表單所需的時間。 您也可以將表單的第一頁當做登陸頁面。 它類似於書籍的目錄(TOC)。 表單的著陸頁面僅包含表單其他區段的連結。 它可大幅改善表單第一頁的載入時間，並改善使用者體驗。
@@ -75,6 +75,7 @@ Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單
 * [管理AEM的最佳實務](/help/sites-administering/administer-best-practices.md)
 * [開發解決方案的最佳實務](/help/sites-developing/best-practices.md)
 * [使用最適化表單的最佳範例](/help/forms/using/adaptive-forms-best-practices.md)
+* [AEM Forms伺服器不會將字型內嵌至動態PDF表單](https://helpx.adobe.com/aem-forms/kb/aem-forms-server-does-not-embed-fonts-to-dynamic-pdf-form.html)
 
 ## 快速參考卡 {#quick-reference-card}
 
