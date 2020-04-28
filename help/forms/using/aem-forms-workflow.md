@@ -1,7 +1,7 @@
 ---
 title: OSGi上的表單導向工作流程
 seo-title: 快速建立以表單為基礎的調適性流程、自動化檔案服務作業，並搭配AEM工作流程使用Adobe Sign
-description: 使用AEM Forms Workflow，自動化並快速建立審閱與核准，以開始檔案服務
+description: 使用AEM Forms Workflow，自動化並快速建立審核與核准，以開始檔案服務
 seo-description: 使用AEM Forms Workflow，以自動化並快速建立審核與核准、開始檔案服務（例如，將PDF檔案轉換為其他格式）、與Adobe Sign簽名工作流程整合等。
 uuid: 797ba0f7-a378-45ac-9f82-fa9a952027be
 topic-tags: document_services
@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 14a6e0c5f79ac7acb9f8bd06d3524473f1007485
 
 ---
 
@@ -65,7 +65,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 
 [取得檔案](assets/example-mortgage-loan-application.zip)
 
-1. 開啟「工作流模型」控制台。 預設URL為https://&#39;[server]:[port]&#39;/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models
+1. 開啟「工作流模型」控制台。 預設URL為 `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. 依次選擇 **建立**、創 **建模型**。 將出現「添加工作流模型」(Add Workflow Model)對話框。
 1. 輸入 **Title** and **Name** （可選）。 例如，抵押貸款申請。 點選「 **完成**」。
 1. 選取新建立的工作流程模型，並點選「 **編輯」**。 現在，您可以新增工作流程步驟來建立商業邏輯。 首次建立工作流模型時，它包含：
@@ -75,7 +75,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 
 1. 啟用電子郵件通知。 您可以在OSGi上設定以表單為中心的工作流程，以傳送電子郵件通知給使用者或受指派者。 執行下列設定以啟用電子郵件通知：
 
-   1. 請前往https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM組態管理器。
+   1. 請前往AEM設定管理員 `https://[server]:[port]/system/console/configMgr`。
    1. 開啟 **[!UICONTROL Day CQ Mail Service設定]** 。 指定 **[!UICONTROL SMTP伺服器主機名、]** SMTP伺服器埠 **[!UICONTROL 、]** 「寄件者」地址欄位 **** 。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
    1. 開啟 **[!UICONTROL Day CQ Link Externalizer設定]** 。 在「網 **[!UICONTROL 域]** 」欄位中，指定本機、作者和發佈例項的實際主機名稱/IP位址和埠號。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
 
@@ -95,7 +95,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 
    您可以導入示例包，該示例包可在章節的開頭部分下載，以獲得為例如抵押貸款應用程式配置的分配任務步驟的所有欄位的完整值集。
 
-1. 將OR Split元件從步驟瀏覽器拖放至工作流程模型。 「或分割」(OR Split)在工作流中建立一個分割，之後只有一個分支處於活動狀態。 此步驟可讓您將條件式處理路徑引入工作流程中。 您可以視需要將工作流程步驟新增至每個分支。
+1. 將OR Split元件從步驟瀏覽器拖放至工作流程模型。 「或分割」(OR Split)在工作流中建立一個分割，之後只有一個分支處於活動狀態。 此步驟可讓您將條件式處理路徑引入工作流程。 您可以視需要將工作流程步驟新增至每個分支。
 
    您可以使用規則定義、ECMA指令碼或外部指令碼為分支定義路由表達式。
 
@@ -107,7 +107,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 
    ![OR拆分示例](assets/orsplit_branch1_active_new.png)
 
-   **分支1的路由表達式**
+   **分支2的路由表達式**
 
    當使用者點選「 **AEM收件匣中** 」時，Branch 2就會啟動。
 
@@ -265,10 +265,10 @@ AEM Forms應用程式與AEM Forms伺服器同步，可讓您變更帳戶中的�
 
 您可以使用「AEM工作流程」的「指派工作」和「傳送電子郵件」步驟來傳送電子郵件。 執行以下步驟來指定電子郵件伺服器和發送電子郵件所需的其他配置：
 
-1. 請前往https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM組態管理器。
+1. 請前往AEM設定管理員 `https://[server]:[port]/system/console/configMgr`。
 1. 開啟 **[!UICONTROL Day CQ Mail Service設定]** 。 指定 **[!UICONTROL SMTP伺服器主機名、]** SMTP伺服器埠 **[!UICONTROL 、]** 「寄件者」地址欄位 **** 。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
 1. 開啟 **[!UICONTROL Day CQ Link Externalizer設定]** 。 在「網 **[!UICONTROL 域]** 」欄位中，指定本機、作者和發佈例項的實際主機名稱/IP位址和埠號。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
 
 ### 清除工作流實例 {#purge-workflow-instances}
 
-最小化工作流實例數可提高工作流引擎的效能，因此您可以定期從儲存庫中清除已完成或正在運行的工作流實例。 有關詳細資訊，請參 [閱：定期清除工作流實例](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
+最小化工作流實例數可提高工作流引擎的效能，因此您可以定期從儲存庫中清除已完成或正在運行的工作流實例。 有關詳細資訊，請參 [閱：定期清除工作流實例](/help/sites-administering/workflows-administering.md#regular) ，清除工作流實例
