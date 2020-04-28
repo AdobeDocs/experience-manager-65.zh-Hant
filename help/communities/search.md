@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -19,11 +19,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 搜尋功能可與各種其他功能搭配使用，例如論壇，以提供搜尋內容的功能。
 
-新增搜尋社群成員輸入之貼文(稱為使用者產生的內容(UGC))的能力時，有兩個元件： [`Search`](#search) 和 [`Search Results`](#search-results)。
+新增搜尋社群成員輸入之貼文(稱為使用者產生的內容(UGC))的能力時，有兩個元件：搜尋 [和搜](#search) 尋結果 [](#search-results)。
 
 包含該元件的頁 `Search Results` 面支援搜索和結果顯示。
 
-包含元件的頁面 `Search`提供啟動搜尋的位置，搜尋結果會顯示在頁 `Search Results` 面上。
+包含元件的頁 `Search` 面提供啟動搜尋的位置，搜尋結果會顯示在頁 `Search Results` 面上。
 
 搜尋功能可與任何其他允許網站訪客和成員檢視內容的功能一起使用。
 
@@ -83,9 +83,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-378](assets/chlimage_1-378.png)
 
-* **[!UICONTROL 每頁搜尋結]**&#x200B;果定義每頁顯示的主題／貼文數。 預設值為10。
+* **[!UICONTROL 每頁搜尋結果數]**
 
-* **[!UICONTROL 搜尋路徑]**&#x200B;使用「新增項目」按鈕新增搜尋路徑，內容搜尋就受到限制。
+   定義每頁顯示的主題／貼文數。 預設值為10。
+
+* **[!UICONTROL 搜尋路徑]**
+
+   使用「新增項目」按鈕新增搜尋路徑，內容搜尋就會受到限制。
 
 ## 其他資訊 {#additional-information}
 
