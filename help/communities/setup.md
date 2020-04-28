@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -21,26 +21,27 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 為了開發和展示，必須執行一個作者和一個發佈執行個體。
 
-若要這麼做，請依照基本的AEM [快速入門](../../help/sites-deploying/deploy.md#getting-started) (Getting Started)指示進行，這將導致
+若要這麼做，請依照基本的AEM [快速入門](../../help/sites-deploying/deploy.md#getting-started) (Getting Started)指示進行，這將導致：
 
 * localhost:4502上的 [作者環境](http://localhost:4502/)
 * localhost:4503上 [的發佈環境](http://localhost:4503/)
 
 對於AEM Communities,
 
-* 作者環境適用於
+* 作者環境適用於：
 
-   * 開發網站、範本和元件
-   * 管理和配置任務
+   * 開發網站、範本和元件。
+   * 管理和配置任務。
 
-* 發佈環境適用於
+* 發佈環境適用於：
 
-   * 張貼和協調內容的社群體驗
-   * 建立社區組、成員和成員組
+   * 張貼和協調內容的社群體驗。
+   * 建立社區組、成員和成員組。
 
 >[!NOTE]
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](../../help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
+
 
 ## 安裝最新的Communities版本 {#install-latest-communities-release}
 
@@ -90,17 +91,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * 例如，使用者名稱&#39;admin&#39; /密碼&#39;admin&#39;
 
-* 從主控制台導覽至「工具> **[!UICONTROL 作業>安全性>使用者」]**
+* 從主控制台瀏覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 操作]** >安 **[!UICONTROL 全性]****[!UICONTROL >用]**&#x200B;戶」。
 * 從「編輯」 **菜單中&#x200B;**，選擇「添**[!UICONTROL 加用戶」]**
 
-* 在對話方 `Create New User` 塊中輸入
+* 在對話 `Create New User` 框中輸入：
 
-   * **[!UICONTROL ID&amp;ast;]**:天狼星
+   * **[!UICONTROL ID]**:天狼星
    * **[!UICONTROL 電子郵件地址]**:sirius.nilson@mailinator.com
-   * **[!UICONTROL Password&amp;ast;]**:密碼
+   * **[!UICONTROL 密碼]**:密碼
    * **[!UICONTROL 確認密碼&amp;ast;]**:密碼
    * **[!UICONTROL 名字]**:天狼星
-   * **[!UICONTROL 姓氏&amp;ast;]**:尼爾森
+   * **[!UICONTROL 姓氏]**:尼爾森
 
 ### 將Sirius指派給社區管理員群組 {#assign-sirius-to-community-administrators-group}
 
@@ -111,7 +112,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 選取 `Community Administrators`
    * 選取 `Community Enablement Managers`
 
-* 選擇保 **[!UICONTROL 存]**
+* 選擇 **[!UICONTROL 保存]**。
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 
@@ -119,8 +120,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在使用Facebook和Twitter的社交登入展示版本之前，必須
 
-1. 安裝修正套件或最 [新功能套件](deploy-communities.md#latestfeaturepack) （適用於2017年3月Facebook API變更）
-1. [在發佈環境中啟用OAuth提供者](social-login.md#adobe-granite-oauth-authentication-handler) ,
+1. 安裝修正套件或最 [新功能套件](deploy-communities.md#latestfeaturepack) （適用於2017年3月Facebook API變更）。
+1. [在發佈環境中啟用OAuth提供者](social-login.md#adobe-granite-oauth-authentication-handler) 。
 
 對於生產伺服器，必須建立提供社交登入所需的雲端服務。
 
@@ -141,10 +142,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-302](assets/chlimage_1-302.png)
 
-然後依照指示，
+然後，請依照指示執行：
 
-1. [設定標籤權限](../../help/sites-administering/tags.md#setting-tag-permissions)
-1. [發佈標籤](../../help/sites-administering/tags.md#publishing-tags)
+1. [設定標籤權限](../../help/sites-administering/tags.md#setting-tag-permissions)。
+1. [發佈標籤](../../help/sites-administering/tags.md#publishing-tags)。
 
 為AEM Communities快速入門教學課程所建立的標籤範例套件
 
