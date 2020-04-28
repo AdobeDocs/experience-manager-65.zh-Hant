@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -26,6 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >[!NOTE]
 >
 >當從一個主要版本升級至下一個版本時，Communities API的封裝位置可能會有所變更。
+
 
 ### SocialComponent介面 {#socialcomponent-interface}
 
@@ -43,7 +44,7 @@ SocialCollectionComponent介面可擴充SocialComponent介面，以更好地呈�
 
 ### SocialComponentFactory介面 {#socialcomponentfactory-interface}
 
-SocialComponentFactory(factory)會將SocialComponent註冊為架構。 該工廠提供一種方法，讓框架知道什麼SocialComponents可用於給定的resourceType及其優先順序ranking&amp;ast;識別多個Social元件時。
+SocialComponentFactory(factory)會將SocialComponent註冊為架構。 工廠提供一種方法，讓框架知道指定resourceType的SocialComponents可用項目，以及在識別多個SocialComponents時的優先順序排名。
 
 SocialComponentFactory負責建立所選SocialComponent的例項，以便能夠使用DI實務從工廠中注入SocialComponent所需的所有相依性。
 
@@ -55,7 +56,7 @@ SocialComponentFactory.getPriority()方法的實作應傳回最高值，以便�
 
 ### SocialComponentFactoryManager介面 {#socialcomponentfactorymanager-interface}
 
-SocialComponentFactoryManager（管理員）會管理在架構中註冊的所有SocialComponents，並負責選擇SocialComponentFactory以用於指定的資源(resourceType)。 如果沒有為特定資源類型註冊工廠，則經理將返回具有給定資源最接近超類型的工廠。
+SocialComponentFactoryManager（管理員）管理所有在架構中註冊的SocialComponents，並負責選擇SocialComponentFactory以用於指定的資源(resourceType)。 如果沒有為特定資源類型註冊工廠，則經理將返回具有給定資源最接近超類型的工廠。
 
 SocialComponentFactoryManager是OSGi服務，可存取其他OSGi服務，這些服務可透過建構函式傳遞至SocialComponent。
 
@@ -65,29 +66,29 @@ SocialComponentFactoryManager是OSGi服務，可存取其他OSGi服務，這些�
 
 #### 後工序類 {#postoperation-class}
 
-HTTP API POST端點是PostOperation類，通過實施介面（包） `SlingPostOperation`定義 `org.apache.sling.servlets.post`這些類。
+HTTP API POST端點是PostOperation類，通過實施介面(包 `SlingPostOperation` )定 `org.apache.sling.servlets.post`義。
 
-端 `PostOperation`點實施設 `sling.post.operation`置為操作將響應的值。 設為該值的：operation參數的所有POST請求都將委託給此實施類。
+端 `PostOperation` 點實作設 `sling.post.operation` 定為操作將回應的值。 設為該值的：operation參數的所有POST請求都將委託給此實施類。
 
-調用 `PostOperation`執行操 `SocialOperation`作所需操作的操作。
+調用 `PostOperation` 執行操 `SocialOperation` 作所需操作的操作。
 
-接 `PostOperation`收結果，並 `SocialOperation`傳回適當的回應給用戶端。
+The `PostOperation` receives the results from the `SocialOperation` and resurt the appropriate response to the client.
 
 #### SocialOperation類 {#socialoperation-class}
 
-每個 `SocialOperation`端點都會擴充AbstractSocialOperation類別並覆寫方法。 `performOperation().`This method會執行完成作業並傳回 `SocialOperationResult``OperationException`或擲回的所有必要動作，在此情況下，會傳回含訊息的HTTP錯誤狀態（如果有），以取代一般JSON回應或成功的HTTP狀態碼。
+每個 `SocialOperation` 端點都會擴展AbstractSocialOperation類並覆蓋該方法 `performOperation()`。 此方法會執行完成作業並傳回或擲出 `SocialOperationResult``OperationException`（否則）所需的所有動作，此時會傳回含訊息的HTTP錯誤狀態（如果有的話），以取代一般的JSON回應或成功的HTTP狀態碼。
 
-擴充 `AbstractSocialOperation`功能可重複使用傳 `SocialComponents`送JSON回應。
+擴充功 `AbstractSocialOperation` 能可重複使用來 `SocialComponents` 傳送JSON回應。
 
 #### SocialOperationResult類 {#socialoperationresult-class}
 
-類 `SocialOperationResult`作為返回的結果返回， `SocialOperation`並由 `SocialComponent`HTTP狀態代碼和HTTP狀態消息組成。
+類 `SocialOperationResult` 作為返回的結果返回， `SocialOperation` 並由 `SocialComponent`HTTP狀態代碼和HTTP狀態消息組成。
 
-表 `SocialComponent`示受工序影響的資源。
+表 `SocialComponent` 示受工序影響的資源。
 
-對於建立工序， `SocialComponent`中包 `SocialOperationResult`括的代表剛建立的資源，並代表由工序更改的資源。 不 `SocialComponent`會傳回刪除作業。
+對於建立工序， `SocialComponent` 中包含的 `SocialOperationResult` 代表剛建立的資源，對於更新工序，它代表由工序更改的資源。 不 `SocialComponent` 會傳回刪除作業。
 
-使用的成功HTTP狀態代碼為
+使用的成功HTTP狀態代碼為：
 
 * 2010年建立操作
 * 200 for Update operations
@@ -95,22 +96,24 @@ HTTP API POST端點是PostOperation類，通過實施介面（包） `SlingPostO
 
 #### OperationException類 {#operationexception-class}
 
-如果 `OperationExcepton`請求無效或發生其他錯誤，例如內部錯誤、參數值錯誤、權限不當等，則在執行操作時可能會拋出。 由 `OperationException`HTTP狀態代碼和錯誤消息組成，這些消息作為對的響應返回給客戶 `PostOperatoin`。
+如果 `OperationExcepton` 請求無效或發生其他錯誤，例如內部錯誤、參數值錯誤、權限不當等，則在執行操作時可能會拋出。 由 `OperationException` HTTP狀態代碼和錯誤消息組成，這些消息作為對的響應返回給客戶 `PostOperatoin`。
 
 #### OperationService類 {#operationservice-class}
 
-社交元件架構建議負責執行操作的商業邏輯不在類別中實作， `SocialOperation`而是委派給OSGi服務。 使用OSGi服務用於業務邏輯 `SocialComponent`允許端點所作 `SocialOperation`用的與其它代碼整合併應用不同的業務邏輯。
+社交元件架構建議負責執行操作的商業邏輯不要在類別中實 `SocialOperation` 作，而是委派給OSGi服務。 使用OSGi服務用於業務邏輯 `SocialComponent`允許端點所作 `SocialOperation` 的與其它代碼整合併應用不同的業務邏輯。
 
-所有 `OperationService`類都可 `AbstractOperationService`以擴展，允許附加擴展，這些擴展可以連接到正在執行的操作。 服務中的每個操作都由類表 `SocialOperation`示。 通過 `OperationExtensions`調用這些方法，可以在操作執行期間調用類
+所有 `OperationService` 類都可 `AbstractOperationService`以擴展，允許附加擴展，這些擴展可以連接到正在執行的操作。 服務中的每個操作都由類表 `SocialOperation` 示。 通過 `OperationExtensions` 調用這些方法，可在操作執行期間調用類
 
 * `performBeforeActions()`
-允許預檢／預處理和驗證
+
+   允許預檢／預處理和驗證
 * `performAfterActions()`
-允許進一步修改資源或調用自定義事件、工作流等
+
+   允許進一步修改資源或調用自定義事件、工作流等
 
 #### OperationExtension類 {#operationextension-class}
 
-`OperationExtension`類是可插入操作的自定義代碼片段，允許定制操作以滿足業務需要。 元件的使用者可動態且遞增地新增功能至元件。 擴充／掛接模式可讓開發人員專注於擴充功能本身，而不需複製和覆寫整個作業和元件。
+`OperationExtension` 類是可插入操作的自定義代碼片段，允許定制操作以滿足業務需要。 元件的使用者可動態且遞增地新增功能至元件。 擴充／掛接模式可讓開發人員專注於擴充功能本身，而不需複製和覆寫整個作業和元件。
 
 ## 范常式式碼 {#sample-code}
 
