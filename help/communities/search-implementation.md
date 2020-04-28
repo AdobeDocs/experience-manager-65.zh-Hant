@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -25,11 +25,11 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 * 社群成員張貼的內容
 
-   * 使用AEM Communities的UGC搜尋API
+   * 使用AEM Communities的UGC搜尋API。
 
 * 使用者和使用者群組（使用者資料）
 
-   * 使用AEM平台搜尋功能
+   * 使用AEM平台搜尋功能。
 
 說明檔案的本節內容對建立建立或管理UGC的自訂元件的開發人員十分有興趣。
 
@@ -59,10 +59,10 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 關於MSRP和Solr:
 
-* AEM平台的內嵌Solr不用於MSRP
-* 如果將遠端Solr用於AEM平台，則可能會與MSRP共用，但他們應使用不同的系列
-* Solr可設定為標準搜尋或多語言搜尋(MLS)
-* 如需設定詳細資訊，請參 [閱MSRP的Solr Configuration](msrp.md#solr-configuration)
+* AEM平台的內嵌Solr不會用於MSRP。
+* 如果將遠端Solr用於AEM平台，則可能會與MSRP共用，但他們應使用不同的系列。
+* Solr可設定為標準搜尋或多語言搜尋(MLS)。
+* 如需設定詳細資訊，請參 [閱MSRP的Solr設定](msrp.md#solr-configuration) 。
 
 自訂搜尋功能應使用 [UGC搜尋API](#ugc-search-api)。
 
@@ -88,8 +88,8 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ACS AEM Commons提 [供Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) 。 它提供：
 
-* 現有索引的檢視
-* 啟動重新索引的能力
+* 現有索引的視圖。
+* 啟動重新索引的能力。
 
 若要在 [CRXDE Lite中檢視現有的Oak索引](../../help/sites-developing/developing-with-crxde-lite.md)，位置為：
 
@@ -135,12 +135,12 @@ ACS AEM Commons提 [供Oak Index Manager](https://adobe-consulting-services.gith
 
 ### 自訂屬性的命名 {#naming-of-custom-properties}
 
-新增自訂屬性時，為了讓這些屬性對使用 [UGC搜尋API建立的排序和搜尋可見](#ugc-search-api)，必須使用*required *才能在屬性名稱中新增字尾。
+新增自訂屬性時，為了讓這些屬性對使用 [UGC搜尋API建立的排序和搜尋可見](#ugc-search-api)，必須 ** 在屬性名稱中新增尾碼。
 
 尾碼用於使用架構的查詢語言：
 
-* 它會將屬性識別為可搜尋
-* 它識別資料類型
+* 它會將屬性識別為可搜尋。
+* 它識別資料類型。
 
 Solr是使用架構的查詢語言的示例。
 
@@ -218,7 +218,7 @@ curl -X POST http://localhost:4502/services/social/srp/cleanup?path=/content/use
 
 若要協助疑難排解Solr查詢的問題，請啟用
 
-`com.adobe.cq.social.srp.impl.SocialSolrConnector`.
+`com.adobe.cq.social.srp.impl.SocialSolrConnector`。
 
 實際的Solr查詢會顯示在偵錯記錄中編碼的URL:
 
@@ -228,9 +228,9 @@ curl -X POST http://localhost:4502/services/social/srp/cleanup?path=/content/use
 
 ## 相關資源 {#related-resources}
 
-* [社群內容儲存](working-with-srp.md) -討論UGC公用商店的可用SRP選擇
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](socialutils.md) -取代SocialUtils之SRP的公用程式方法
-* [搜尋和搜尋結果元件](search.md) -將UGC搜尋功能新增至範本
+* [社群內容儲存](working-with-srp.md) -討論UGC公用商店的可用SRP選擇。
+* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](socialutils.md) -取代SocialUtils之SRP的公用程式方法。
+* [搜尋和搜尋結果元件](search.md) -將UGC搜尋功能新增至範本。
 
