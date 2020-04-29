@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: e562939f1c64d8345b4c2a28e4b882200d9e4c07
 
 ---
 
@@ -30,6 +30,7 @@ Adobe工程與諮詢團隊已針對AEM開發人員開發了一套完整的最佳
 * [程式碼缺陷](/help/sites-developing/code-pitfalls.md)
 * [JCR互動](/help/sites-developing/jcr-integration.md)
 * [OSGi Bundles](/help/sites-developing/osgi-bundles.md)
+* [Java API最佳實務](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### 其他最佳做法資訊 {#additional-best-practices-information}
 
@@ -93,11 +94,11 @@ HTML範本語言(HTL)是AEM 6.0中新推出的HTML範本系統。它取代JSP和
 
 |  |  |  |
 |---|---|---|
-| HTL概觀 | [HTL概觀與語法](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) | 本檔案說明HTL是什麼、如何移至HTL、範例專案、語法、運算式和陳述式 |
+| HTL概觀 | [HTL概觀與語法](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html) | 本檔案說明HTL是什麼、如何移至HTL、範例專案、語法、運算式和陳述式 |
 | 在java中使用API | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | HTL Java Use-API可讓HTL檔案存取自訂Java類別中的輔助方法。 |
 
 >[!NOTE]
 >
 >以下是設定新AEM專案的最佳實務，其中詳述核心元件、可編輯範本、用戶端程式庫和元件開發的多部份教學課程可能很有趣：
->[AEM Sites快速入門- WKND教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
