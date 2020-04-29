@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -25,9 +25,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 訂閱與通知的區別在於：
 
-* 當追隨其他成員時，成員不得訂閱
-* 成員唯一要執行的操作是選擇以 `Email Subscriptions` 下操作
-* 當設定電子郵件回覆時，會員只要回覆收到的電子郵件，就可以有效地張貼內容
+* 成員在追隨其他成員時不得訂閱。
+* 成員唯一要執行的操作是選擇以 `Email Subscriptions` 下時間。
+* 當設定電子郵件回覆時，會員只要回覆收到的電子郵件，就可以有效地張貼內容。
 
 ### 需求 {#requirements}
 
@@ -49,15 +49,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 如果選取任何下列方法，按鈕的文字會變更為「下 **列」**。 為方便起見，您可以選取以 `Unfollow All` 關閉所有方法。
 
-只有在 **將論壇、QnA或部**`Email Subscriptions` 落格設定為啟用電子郵件訂閱時，「關注」按鈕才會包含此選項。 此按鈕將會出現
+只有在 **將論壇、QnA或部**`Email Subscriptions` 落格設定為啟用電子郵件訂閱時，「關注」按鈕才會包含此選項。 此按鈕將會出現：
 
-* 在啟用論壇、QnA或部落格的主要功能頁面上
+* 在啟用論壇的主功能頁面上，QnA或部落格將針對該功能下的所有活動傳送電子郵件。
 
-   * 會針對該功能下的所有活動傳送電子郵件
-
-* 針對特定項目，例如論壇主題、QnA問題或部落格文章
-
-   * 當該特定項目有活動時，將會傳送電子郵件
+* 對於特定項目，如論壇主題、QnA問題或部落格，當該特定項目有活動時，將發送電子郵件。
 
 ## 電子郵件回覆 {#reply-by-email}
 
