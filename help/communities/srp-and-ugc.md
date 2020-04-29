@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -43,6 +43,7 @@ SRP API不是抽象類，它是介面。 自訂實作不應輕易進行，因為
 >
 >如需取代公用程式，請參 [閱SocialUtils重構](socialutils.md)。
 
+
 ## 訪問UGC的實用方法 {#utility-method-to-access-ugc}
 
 若要存取UGC，請使用SocialResourceUtilities套件中的方法，傳回適合從SRP存取UGC的路徑，並取代SocialUtils套件中找到的已過時方法。
@@ -68,7 +69,8 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->傳回的路徑resourceToUGCStoragePath()是*not *不適合 [ACL檢查](srp.md#for-access-control-acls)。
+>返回的路徑resourceToUGCStoragePath()不 *適* 於 [ACL檢查](srp.md#for-access-control-acls)。
+
 
 ## 訪問ACL的實用方法 {#utility-method-to-access-acls}
 
@@ -95,7 +97,8 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->resourceToACLPath()傳回的路徑是*not *不適 [合存取UGC](#utility-method-to-access-acls) 。
+>resourceToACLPath()返回的路徑 *不適*[合用](#utility-method-to-access-acls) 於訪問UGC。
+
 
 ## 與UGC相關的儲存位置 {#ugc-related-storage-locations}
 
@@ -107,27 +110,27 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 此類元件的示例是存在 [於「社群元件指南](http://localhost:4502/content/community-components/en/comments.html) 」站點 [中的注釋元件](components-guide.md) 。 本地儲存庫中注釋節點的路徑為：
 
-* 元件路徑= */content/community-components/en/comments/jcr:content/content/include/comments*
+* Component path = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **陰影節點位置**
 
-建立UGC還會建立 [一個影子節點](srp.md#about-shadow-nodes-in-jcr) ，以便應用必要的ACL。 到本地儲存庫中相應卷影節點的路徑是在元件路徑中預先放置卷影節點根路徑的結果：
+建立UGC還會建立 [一個影子節點](srp.md#about-shadow-nodes-in-jcr) ，以便應用必要的ACL。 到本地儲存庫中相應卷影節點的路徑是在元件路徑中預置卷影節點根路徑的結果：
 
-* 根路徑= /content/usergenerated
-* 注釋陰影節點= /content/usergenerated/content/community-components/en/comments/jcr:content/content/include/comments
+* 根路徑 = `/content/usergenerated`
+* 注釋陰影節點= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC位置**
 
 UGC不是在這兩個位置中建立的，且僅應使用叫用SRP API的 [公用程式方法](#utility-method-to-access-ugc) 來存取。
 
-* 根路徑= /content/usergenerated/asi/srp-choice
-* JSRP的UGC節點= /content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_
+* 根路徑 = `/content/usergenerated/asi/srp-choice`
+* JSRP的UGC節點= `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
 *請注意*，對於JSRP,UGC節點將只 *會出現* （作者或發佈）在輸入AEM例項上。 如果在發佈例項上輸入，則無法從作者的協調控制台進行協調。
 
 ## 相關資訊 {#related-information}
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法
+* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
