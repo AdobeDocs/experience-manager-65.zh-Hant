@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## SocialUtils套件已過時 {#socialutils-package-deprecated}
 
-在AEM 6.1 **中已過時使用套件com.adobe.cq.sosical.ugcbase.SocialUtils** 。
+在AEM 6.1 `com.adobe.cq.social.ugcbase.SocialUtils` 中，此套件已過時。
 
 下表列出要用來取代SocialUtils方法的方法。
 
