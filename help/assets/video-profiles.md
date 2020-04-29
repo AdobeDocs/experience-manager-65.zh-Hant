@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
+source-git-commit: 5832ca0438bd88c3113ee47875360b3c7b1e9176
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 >[!NOTE]
 >
->若要產生視訊的中繼資料和相關的視訊影像縮圖，視訊本身需要在動態媒體中執行編碼程式。 在AEM中，如果您已啟用動態媒 **** 體並設定視訊雲端服務，「動態媒體編碼視訊」工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。 請參閱 [監控視訊編碼和YouTube發佈進度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。 如果您已啟用動態媒體並設定視訊雲端服務，當您上傳視訊時，「動態媒體編碼視訊 **** 」工作流程會自動生效。 (如果您未使用動態媒體， **[!UICONTROL DAM更新資產工作流程將生效]** 。)
+>若要產生視訊的中繼資料和相關的視訊影像縮圖，視訊本身需要在動態媒體中執行編碼程式。在AEM中，如果您已啟用動態媒 **** 體並設定視訊雲端服務，「動態媒體編碼視訊」工作流程會對視訊進行編碼。此工作流程會擷取工作流程處理歷程記錄和失敗資訊。請參閱 [監控視訊編碼和YouTube發佈進度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。如果您已啟用動態媒體並設定視訊雲端服務，當您上傳視訊時，「動態媒體編碼視訊 **** 」工作流程會自動生效。(如果您未使用動態媒體， **[!UICONTROL DAM更新資產工作流程將生效]** 。)
 >
 >在搜尋資產時，中繼資料很實用。 縮圖是編碼期間產生的靜態視訊影像。 AEM系統需要這些視訊，並用於使用者介面，以協助您在「卡片」檢視、「搜尋結果」檢視和「資產清單」檢視中以視覺化方式識別視訊。 當您點選編碼視訊的「轉譯」圖示（畫家的浮動視窗）時，可看到產生的縮圖。
 
@@ -144,7 +144,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 * H264 設定檔
 * 音訊取樣速率
 
-如果值不相同，則可以繼續按原樣建立配置檔案。 不過，請注意，不可能進行自適應串流。 使用者將可體驗單位元速率串流。 建議您編輯編碼設定，以便在描述檔中的個別編碼預設集間使用相同的值。 （請注意，如果已啟用「最適化串流編碼」，視訊設定檔／預設集編輯器應強制同等使用最適化視訊編碼設定。）
+如果值不相同，則可以繼續按原樣建立配置檔案。 不過，請注意，不可能進行自適應串流。 使用者將可體驗單位元速率串流。 建議您編輯編碼設定，以便在描述檔中的個別編碼預設集間使用相同的值。 （請注意，如果已啟用「最適化串流編碼」，視訊設定檔／預設集編輯器應強制調整視訊編碼設定的奇偶校驗。）
 
 另請參閱 [建立漸進式串流的視訊編碼設定檔](#creating-a-video-encoding-profile-for-progressive-streaming)。
 
@@ -166,12 +166,12 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 1. 執行下列任一項作業：
 
-   * 在「寬 **[!UICONTROL 度]** 」欄位中輸 **[!UICONTROL 入auto]**。 在「高 **[!UICONTROL 度]** 」欄位中，輸入像素值。
+   * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto]**. In the **[!UICONTROL Height]** field, enter a value in pixels.
 
    * 若要協助您視覺化視訊的大小，請點選 **[!UICONTROL Height右側的資訊圖示(i)]** ，以開啟「大小計算器」頁面。 使用 **[!UICONTROL 大小計算器]** ，設定您想要的視訊尺寸（由藍色方塊表示）。 完成 **[!UICONTROL 時]** ，點選右上角的X。
 
 1. （可選）點選「進階 **[!UICONTROL 」標籤]** ，並確定已選 **[!UICONTROL 取「使用預設值]** 」核取方塊（建議）。 或者，修改進階的視訊和音訊設定。
-1. 在頁面的右上角，點選「儲 **[!UICONTROL 存]** 」以儲存預設集。
+1. In the upper-right corner of the page, tap **[!UICONTROL Save]** to save the preset.
 1. 執行下列任一項作業：
    * 重複步驟4-10以建立其他編碼預設集。 （最適化視訊串流需要多個視訊預設集。）
    * 繼續下一步。
@@ -186,13 +186,13 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
    * 視需要繼續新增裁切比例。
    * 繼續下一步。
 
-1. 在頁面的右上角，再點選「 **[!UICONTROL Save]** 」以儲存描述檔。
+1. In the upper-right corner of the page, tap **[!UICONTROL Save]** again to save the profile.
 
 您現在可以將描述檔套用至包含影片的檔案夾。 請參 [閱將視訊描述檔套用至資料夾](#applying-a-video-profile-to-folders) , [或全域套用視訊描述檔](#applying-a-video-profile-globally)。
 
 ## 建立漸進式串流的視訊設定檔 {#creating-a-video-encoding-profile-for-progressive-streaming}
 
-如果您選擇不使用「編碼」選項進行最適化串流 ****，請注意，您新增至描述檔的所有編碼預設集都會被視為個別視訊轉譯，以用於單位元速率串流或漸進式視訊傳送。 此外，沒有驗證可確保所有視訊轉譯具有相同的外觀比例。
+如果您選擇不使用「編碼」選項進行最適化串流 ****，請注意，您新增至描述檔的所有編碼預設集都會被視為個別視訊轉譯，以用於單位元速率串流或漸進式視訊傳送。此外，沒有驗證可確保所有視訊轉譯具有相同的外觀比例。
 
 視您執行的模式而定，支援的視訊格式轉碼器如下：
 
@@ -215,9 +215,9 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 請點選每個選項旁的資訊圖示，以根據選取的視訊格式codec取得其他說明或建議的設定。
 1. （可選）在「Video Size（視訊大小）」標題下，取消勾選「 **[!UICONTROL Keep aspect ratio（保留外觀比例）]**」。
 1. 執行下列動作：
-   * 在「寬 **[!UICONTROL 度]** 」欄位中輸 **[!UICONTROL 入auto]**。
-   * 在「高 **[!UICONTROL 度]** 」欄位中，輸入像素值。
-若要協助您視覺化視訊的大小，請點選「高度」的資訊圖示以開啟「大小計 **[!UICONTROL 算器]** 」頁面。 使用「 **[!UICONTROL 大小計算器]** 」頁可以進一步設定視頻尺寸（藍色框）。 完成後，在對話框的右上角點選 **[!UICONTROL X]**。
+   * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto]**.
+   * In the **[!UICONTROL Height]** field, enter a value in pixels.
+To help you visualize the size of the video, tap the Height&#39;s information icon to open the **[!UICONTROL Size Calculator]** page. Use the **[!UICONTROL Size Calculator]** page to further set the video dimension (blue box) how you want. When you are done, in the upper-right corner of the dialog box, tap **[!UICONTROL X]**.
 1. （可選）執行下列任一項作業：
 
    * 點選「 **[!UICONTROL 進階]** 」標籤，並確定已選 **[!UICONTROL 取「使用預設值]** 」核取方塊（建議）。
@@ -225,7 +225,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
    * 清除「 **[!UICONTROL 使用預設值]** 」核取方塊，並指定您要的視訊設定和音訊設定。
 請點選每個選項旁的資訊圖示，以根據選取的視訊格式codec取得其他說明或建議的設定。
 
-1. 在頁面的右上角，點選「儲 **[!UICONTROL 存]** 」以儲存預設集。
+1. In the upper-right corner of the page, tap **[!UICONTROL Save]** to save the preset.
 1. 執行下列任一項作業：
 
    * 重複步驟4-9以建立其他編碼預設集。
@@ -328,11 +328,10 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 1. 在「視訊描述檔」頁面上，勾選一個視訊描述檔名稱。
 1. 在工具列上，點選「 **[!UICONTROL 編輯」]**。
 1. 在「視訊編碼描述檔」頁面上，視需要編輯名稱和說明。
-1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。
-點選資訊圖示以取得最適化串流的說明。 （如果您正在編輯漸進式視訊設定檔，請勿選取此核取方塊）。
+1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。點選資訊圖示以取得最適化串流的說明。（如果您正在編輯漸進式視訊設定檔，請勿選取此核取方塊）。
 1. 在「視訊編碼預設集」標題下，新增、編輯或刪除構成描述檔的視訊編碼預設集。
 
-   請點選「基本」和「進階」標籤上每個選項旁的資訊圖示，以取得其他說明或根據選取的視訊格式codec建議的設定。 ********
+   請點選「基本」和「進階」標籤上每個選項旁的資訊圖示，以取得其他說明或根據選取的視訊格式codec建議的設定。********
 
 1. 在頁面的右上角，點選「儲存 **[!UICONTROL 」]**。
 
@@ -342,7 +341,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 1. 在「視訊描述檔」頁面上，勾選一個視訊描述檔名稱。
 1. 在工具列上，點選「 **[!UICONTROL 複製」]**。
 1. 在「視訊編碼描述檔」頁面上，輸入描述檔的新名稱。
-1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。 點選資訊圖示以取得最適化串流的說明。 （如果您要複製漸進式視訊設定檔，請勿選取核取方塊。）
+1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。點選資訊圖示以取得最適化串流的說明。 (如果您要複製漸進式視訊設定檔，請勿選取核取方塊。) 
 
    在「動態媒體——混合」模式中，如果WebM視訊預設集是視訊設定檔的一部分，則無法進行「 **[!UICONTROL Encode for adaptive streaming]** 」，因為所有預設集都必須是MP4。
 1. 在「視訊編碼預設集」標題下，新增、編輯或刪除構成描述檔的視訊編碼預設集。
@@ -364,7 +363,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 如果您指派不同的視訊描述檔給資料夾，新的描述檔會覆寫先前的描述檔。 舊有的資料夾資產仍維持不變。 新的描述檔會套用至稍後新增至資料夾的資產。
 
-在用戶介面中，配置了配置檔案的資料夾將通過卡名稱中顯示的配置檔案的名稱來表示。
+在用戶介面中，配置有配置檔案的資料夾將通過卡名稱中顯示的配置檔案名稱來指示。
 
 ![chlimage_1-517](assets/chlimage_1-517.png)
 
@@ -374,7 +373,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 ### 將視訊描述檔套用至特定資料夾 {#applying-video-profiles-to-specific-folders}
 
-您可以從「工具」菜單或在資料夾中從「屬性」將視頻配置檔案應 **[!UICONTROL 用到資料夾]******。 本節說明如何以兩種方式將視訊描述檔套用至資料夾。
+您可以從「工具」菜單或在資料夾中從「屬性」將視頻配置檔案應 **[!UICONTROL 用到資料夾]******。本節說明如何以兩種方式將視訊描述檔套用至資料夾。
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
@@ -384,14 +383,13 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 選擇要應用於資料夾或多個資料夾的視頻配置檔案。
-1. 點選 **[!UICONTROL 「將描述檔套用至檔案夾」]** ，然後選取您要用來接收新上傳資產的檔案夾或多個檔案夾，並點選「套 **[!UICONTROL 用」]**。 在「卡片檢視」中，資料夾名稱正下方會顯示資料夾名稱，以指出已指派給資料夾的 **[!UICONTROL 資料夾]**。
-您可以 [監控視訊描述檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job)。
+1. 點選 **[!UICONTROL 「將描述檔套用至檔案夾」]** ，然後選取您要用來接收新上傳資產的檔案夾或多個檔案夾，並點選「套 **[!UICONTROL 用」]**。在「卡片檢視」中，資料夾名稱正下方會顯示資料夾名稱，以指出已指派給資料夾的 **[!UICONTROL 資料夾]**。您可以 [監控視訊描述檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job)。
 
 #### 從「屬性」將視訊描述檔套用至資料夾 {#applying-video-profiles-to-folders-from-properties}
 
 1. 點選或按一下AEM標誌，並導覽至 **[!UICONTROL Assets]** ，然後導覽至您要套用視訊描述檔的檔案夾。
 1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
-1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，然後從下拉式選單中選取描述檔，然後按一下「 **[!UICONTROL 儲存並關閉」]**。 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，然後從下拉式選單中選取描述檔，然後按一下「 **[!UICONTROL 儲存並關閉」]**。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
    ![chlimage_1-518您](assets/chlimage_1-518.png)可以 [監控視訊描述檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job)。
 
@@ -418,7 +416,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 從資料夾中刪除視頻配置檔案時，任何子資料夾都會自動繼承從其父資料夾中刪除的配置檔案。 不過，對檔案夾中發生的檔案處理仍維持不變。
 
-您可以從「工具」功能表內的資料夾或在資料夾內的「資料夾設定」中移除視訊描述檔 ********。 本節說明如何以兩種方式從資料夾移除視訊描述檔。
+您可以從「工具」功能表內的資料夾或在資料夾內的「資料夾設定」中移除視訊描述檔 ********。本節說明如何以兩種方式從資料夾移除視訊描述檔。
 
 ### 透過描述檔使用者介面，從資料夾移除視訊描述檔 {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
@@ -432,5 +430,5 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 1. 點選或按一下AEM標誌，並導覽至 **[!UICONTROL Assets]** ，然後導覽至您要從中移除視訊描述檔的檔案夾。
 1. 在資料夾上點選或按一下核取標籤以選取它，然後點選或按一下「 **屬性」**。
-1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，並從下拉式選單中選 **[!UICONTROL 取「無]** 」，然後按一下「 **[!UICONTROL 儲存並關閉」]**。 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，並從下拉式選單中選 **[!UICONTROL 取「無]** 」，然後按一下「 **[!UICONTROL 儲存並關閉」]**。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
