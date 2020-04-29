@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -42,6 +42,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >不支援 [側載非現有資](scf.md#add-or-include-a-communities-component) 源。
 
+
 ## 動態新增元件至DOM {#dynamically-add-component-to-dom}
 
 不論元件是動態包含或動態載入，都必須先將其新增至DOM。
@@ -50,9 +51,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 無論使用什麼標籤，元素至少必須包含以下兩個屬性，以符合正常的SCF根元素模式：
 
-* **data-component-id**&#x200B;新增元件的有效路徑
+* **data-component-id**
 
-* **data-scf-component**&#x200B;元件的resourceType
+   新增元件的有效路徑。
+
+* **資料-SCF元件**
+
+   元件的resourceType。
 
 以下是新增注釋元件的範例：
 
@@ -73,7 +78,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要在頁面載入後隨時初始化SCF元件，只需觸發JQuery事件，如下所示：
 
-$(document)。trigger(SCF.events.BOOTSTRAP_REQUEST);
+`$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
 ### 動態載入 {#dynamic-loading}
 
@@ -81,6 +86,6 @@ $(document)。trigger(SCF.events.BOOTSTRAP_REQUEST);
 
 與其引導DOM中找到的所有SCF元件，您可以使用以下JavaScript方法指定要載入的特定SCF元件：
 
-SCF.addComponent(document.getElementById(*someId*));
+`SCF.addComponent(document.getElementById(*someId*));`
 
-其 *中* someId是 **data-component-id屬性的值** 。
+其 `someId` 中是屬性的 `data-component-id` 值。
