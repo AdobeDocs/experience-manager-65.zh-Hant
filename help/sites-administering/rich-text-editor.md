@@ -3,7 +3,7 @@ title: 設定Rich Text Editor，以便在Adobe Experience Manager中製作內容
 description: 瞭解如何設定Adobe Experience Manager Rich Text Editor，以便在Adobe Experience Manager中製作內容。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
+source-git-commit: 430994c8e9951500378e0a4d56c8004e7e81c24f
 
 ---
 
@@ -160,6 +160,15 @@ RTE的基本功能是由相應插件專用節點上 `features` 的屬性值激�
 * `rte-start`:在開始編輯RTE `contenteditable-div` 時觸發此事件。 只有在已設 `customStart` 為true時，才能運作。
 
 在啟用觸控的對話框中使用RTE時，必須將屬性 `useFixedInlineToolbar` 設定為true才能避免問題。
+
+## 就地自訂編輯 {#customizing-in-place-editing}
+
+您可以設定下列屬性，以定義文字編輯器在哪個HTML選擇器上啟動：
+
+* **`editElementQuery`** -定義於 `cq:InplaceEditingConfig`，此屬性用於指定HTML元素的選擇器，在該選擇器上將啟動文本元件的內嵌編輯。 如果未指定，內嵌編輯會直接在文字元件HTML上啟動。
+* **`textPropertyName`** -定義於 `cq:InplaceEditingConfig`中，此屬性用於指定將保存在內容節點上的屬性名稱，文本元件的HTML值將在內嵌編輯後保存在該節點上。
+
+對話框模式的對應屬性為 `name`。
 
 ## 通過激活插件啟用RTE功能 {#enable-rte-functionalities-by-activating-plug-ins}
 
