@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -33,9 +33,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 另請參閱:
 
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
 ## 關於儲存庫 {#about-the-repository}
 
@@ -64,6 +64,7 @@ JCR和OAK通常都用來參照AEM存放庫。
 >如需 [范常式式碼和其他詳細資訊，請參閱SRP](srp-and-ugc.md) 和UGC Essentials。
 >
 >請參 [閱使用SRP存取UGC](accessing-ugc-with-srp.md) ，以取得編碼時的最佳實務。
+
 
 ### ASRP {#asrp}
 
@@ -101,7 +102,7 @@ JSRP使用Oak索引查詢。
 
 模仿UGC路徑的卷影節點存在於本地儲存庫中，以提供兩種用途：
 
-1. [訪問控制(ACL](#for-access-control-acls))
+1. [訪問控制(ACL)](#for-access-control-acls)
 1. [非現有資源(NER)](#for-non-existing-resources-ners)
 
 無論SRP實作如何，實際的UGC將*not *在與陰影節點相同的位置顯示。
@@ -126,17 +127,18 @@ ACL檢查使用一種實用程式方法，該方法返回適合於檢查應用�
 >
 >由於陰影節點有多種用途，因此存在陰影節 *點並不* 表示元件是NER。
 
+
 ### 儲存位置 {#storage-location}
 
 以下是使用「社區元件指南」中的「注 [釋](http://localhost:4502/content/community-components/en/comments.html) 」元件 [的陰影節點示例](components-guide.md):
 
 * 元件存在於本地儲存庫中：
 
-   /content/community-components/tw/comments/jcr:content/content/include/comments
+   `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 * 相應的卷影節點存在於本地儲存庫中，位於：
 
-   /content/usergenerated/content/community-components/tw/comments/jcr:content/content/include/comments
+   `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 在陰影節點下找不到UGC。
 
@@ -144,7 +146,7 @@ ACL檢查使用一種實用程式方法，該方法返回適合於檢查應用�
 
 例如，假設部署是 [MSRP](msrp.md) ，並有TarMK發佈場。
 
-當成 [員在pub1上](users.md) （儲存在MongoDB中）發佈UGC時，會在pub1的JCR中建立陰影節點。
+當成 [員在pub1](users.md) （儲存在MongoDB中）上發佈UGC時，會在pub1的JCR中建立陰影節點。
 
 第一次在pub2上讀取UGC時，如果未設定任何內容，預設行為是建立陰影節點。
 
