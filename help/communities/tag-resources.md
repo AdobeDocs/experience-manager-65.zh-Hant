@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: fa01c9fad82adb021220631a0536ab77ceb01e31
 
 ---
 
@@ -26,13 +26,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * [為每個目錄建立標籤命名空間](../../help/sites-administering/tags.md#creating-a-namespace) ,
 
    * [設定標籤權限](../../help/sites-administering/tags.md#setting-tag-permissions)
+   * 僅限社群成員（封閉社群）
 
-      * 僅限社群成員（封閉社群）
+      * 允許社群站點成 [員組的讀取訪問](users.md#publish-group-roles)
+   * 對於任何網站訪客，不論登入或匿名（開放社群）
 
-         * 允許社群站點成 [員組的讀取訪問](users.md#publish-group-roles)
-      * 對於任何網站訪客，不論登入或匿名（開放社群）
-
-         * 允許群組的讀取存 `Everyone`取
+      * 允許群組的讀取存 `Everyone` 取
    * [發佈標籤](../../help/sites-administering/tags.md#publishing-tags)
 
 
@@ -41,8 +40,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * [設定網站結構中存在的目錄](functions.md#catalog-function)
 
-      * 可新增標籤至目錄例項，以控制UI篩選器中顯示的標籤清單
-      * 可新增 [預先篩選](catalog-developer-essentials.md#pre-filters)，以限制目錄所包含的資源
+      * 可新增標籤至目錄例項，以控制UI篩選器中顯示的標籤清單。
+      * 可新增 [預先篩選](catalog-developer-essentials.md#pre-filters)，以限制目錄所包含的資源。
 
 * [發佈社群網站](sites-console.md#publishing-the-site)
 * [套用標籤至啟用資源](resources.md#create-a-resource) ，以便可斷斷續續地篩選
@@ -82,9 +81,8 @@ Catalog函式包含標籤設定，可定義目錄篩選器UI中所列的標籤�
 
 例如，如果在名為 `ski-catalog` 的目錄上建立並設定了命名空間 `Ski Catalog`，則可能有兩個子標籤： `lesson-1` 和 `lesson-2`。
 
-因此，任何標有下列其中一項的啟用資源：
+因此，任何標籤有
 
-* ski-catalog:
 * ski-catalog:leansion-1
 * ski-catalog:leassion-2
 
