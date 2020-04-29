@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -21,15 +21,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Apache Solr [(](https://lucene.apache.org/solr/) Apache Solr [)安裝可以通過使用不同的](../../help/sites-deploying/data-store-config.md) 集合在節點儲存 [(Oak)和](working-with-srp.md) 公共儲存(SRP)之間共用。
 
-如果Oak和SRP系列都被大量使用，則可基於效能原因安裝第二個Solr。
+如果Oak和SRP系列都被大量使用，則可能會因效能原因安裝第二個Solr。
 
-對於生產環境， [SolrCloud模式比獨立模式](#solrcloud-mode) （單一本機Solr設定）提供更佳的效能。
+對於生產環境， [SolrCloud模式比獨立模式](#solrcloud-mode) （單一本機Solr設定）提供了更佳的效能。
 
 ### 需求 {#requirements}
 
 下載並安裝Apache Solr:
 
-* [4.10版](https://archive.apache.org/dist/lucene/solr/4.10.4/) 或 [5版](https://archive.apache.org/dist/lucene/solr/5.5.3/)
+* [4.10版](https://archive.apache.org/dist/lucene/solr/4.10.4/) 或 [5.x版](https://archive.apache.org/dist/lucene/solr/5.5.3/)
 
 * Solr需要Java 1.7或更新版本
 * 無需服務
@@ -49,10 +49,10 @@ Apache Solr [(](https://lucene.apache.org/solr/) Apache Solr [)安裝可以通�
 
 建議您依照SolrCloud指示進行安裝：
 
-* 同一伺服器上的3個SolrCloud節點
-* 外部Apache ZooKeeper
+* 3個SolrCloud節點位於同一伺服器上。
+* 外部的阿帕奇動物園管理員。
 
-此外，建議您設定JVM以調整記憶體使用和廢棄項目收集。
+此外，建議您設定JVM以調整記憶體使用量和廢棄項目收集。
 
 ### JVM配置示例 {#jvm-configuration-example}
 
@@ -108,16 +108,16 @@ AEM社群的MLS可以是標準MLS或進階MLS。 標準MLS僅包含Solr組態設
 
 標準MLS包含下列語言的內容搜尋增強功能：
 
-* 英文：用於嘗試匹配單詞導子的改進設定器
-* 日文：改良的半寬字元日文Token化
+* 英文：已改善嘗試比對字詞衍生的調整。
+* 日文：已改善半寬字元的日文Token化。
 
 進階MLS包含下列語言的內容搜尋增強功能：
 
-* 英文：用浮毛機取代修腳機
-* 德文：添加的解壓縮器
-* 法文：新增的條件處理
-* 簡體中文：新增更聰明的Tokenizer
-* 各種語言：新增更精簡、停止字詞清單和標準化程式。
+* 英文：用旅鼠座取代了修腳機。
+* 德文：已新增解壓縮程式。
+* 法文：已新增版本處理。
+* 簡體中文：新增更智慧的Tokenizer。
+* 各種語言：新增調整、停止字詞清單和標準化器。
 
 Advanced MLS支援下列33種語言。
 
@@ -147,66 +147,66 @@ Advanced MLS支援下列33種語言。
 * **schema.xml**
 * **solrconfig.xml**
 
-Solr 4.10適用的標準MLS檔案(schema.xml、solrconfig.xml)
+Solr 4.10適用的標準MLS檔案(schema.xml、solrconfig.xml)。
 
-Solr 5的標準MLS檔案(schema.xml、solrconfig.xml)
+Solr 5.x的標準MLS檔案(schema.xml、solrconfig.xml)。
 
 標準MLS檔案會儲存在AEM儲存庫中。
 
 **注意**:Solr檔案儲存在msrp/資料夾中，但也用於DSRP（不需要變更）。
 
-**下載指示**:以 `solrX` 或 `solr4``solr5` 適當取代
+**下載指示**:以或 `solrX` 適當 `solr4` 地 `solr5` 替換。
 
-1. 使用CRXDE|Lite，找到
+1. 使用CRXDE|Lite，找到：
 
-   * /libs/social/config/datastore/msrp/*solrX*/**schema.xml**
-   * /libs/social/config/datastore/msrp/*solrX*/**solrconfig.xml**
+   * `/libs/social/config/datastore/msrp/solrX/schema.xml`
+   * `/libs/social/config/datastore/msrp/solrX/solrconfig.xml`
 
-1. 下載至部署Solr的本機伺服器
+1. 下載至部署Solr的本機伺服器。
 
-   * 找到 `jcr:content` 節點的屬 `jcr:data` 性
-   * 選擇 `view` 以開始下載
-   * 確定檔案已儲存為適當的名稱和編碼(UTF8)
+   * 找到 `jcr:content` 節點的屬 `jcr:data` 性。
+   * 選擇 `view` 以開始下載。
+   * 請確定檔案已儲存為適當的名稱和編碼(UTF8)。
 
-1. 依照獨立或SolrCloud模式的安裝指示進行
+1. 請依照獨立或SolrCloud模式的安裝指示進行。
 
 #### SolrCloud模式——標準MLS {#solrcloud-mode-standard-mls}
 
-1. 在SolrCloud模式下安裝和配置Solr
+1. 在SolrCloud模式中安裝和設定Solr。
 1. 準備新配置：
 
-   1. 創 *建new-config-dir* ，如 *solr-install-dir*/myconfig/
+   1. 建立new-config-dir*，例如 `solr-install-dir*/myconfig/`
 
    1. 將現有Solr配置目錄的內容復 *制到new-config-dir*
 
-      * 對於Solr4:copy *solr-install-dir*/example/solr/collection1/conf/&amp;ast;
-      * 針對Solr5:copy *solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast;
-   1. 將下載的 **schema.xml****和solrconfig.xml複製** 到new-config-dir ** ，以覆寫現有檔案
+      * 對於Solr4:複製 `solr-install-dir/example/solr/collection1/conf/`
+      * 針對Solr5:複製 `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+   1. 將下載的 **schema.xml** 和 **solrconfig.xml複製** 到new-config-dir ** ，以覆寫現有檔案。
 
 
-1. [將新組態上傳](#upload-a-configuration-to-zookeeper) 至ZooKeeper
+1. [將新組態上傳](#upload-a-configuration-to-zookeeper) 至ZooKeeper。
 1. [建立指定必要參數的集合](#create-a-collection) ，如分片數、複製副本數和配置名稱。
-1. 如果設定名稱*未*在建立系列時提供，請將此新建立的 [系列與上傳至ZooKeeper的設定連結](#link-a-collection-to-a-configuration-set) 。
+1. 如果設定名稱*未*在建立系列時提供，請將此新建 [的系列與上傳至ZooKeeper的組態連結](#link-a-collection-to-a-configuration-set) 。
 
-1. 對於MSRP，請執行 [MSRP重新索引工具](msrp.md#msrp-reindex-tool)，除非這是新安裝
+1. 對於MSRP，請執行 [MSRP重新索引工具](msrp.md#msrp-reindex-tool)，除非這是新安裝。
 
 #### 獨立模式——標準MLS {#standalone-mode-standard-mls}
 
-1. 以獨立模式安裝Solr
+1. 以獨立模式安裝Solr。
 1. 如果執行Solr5，請建立系列1（類似於Solr4）:
 
-   * ./bin/solr啟動
-   * ./bin/solr create_core -c collection1 -d sample_techproducts_configs
+   * `./bin/solr start`
+   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 1. Solr **config目錄中的** Backup schema.xml和 **solrconfig.xml** ，例如：
 
-   * 對於Solr4: *solr-install-dir*/example/solr/collection1/conf/
-   * 為Solr5建立： *solr-install-dir*/server/solr/collection1/conf/
+   * 對於Solr4: `solr-install-dir/example/solr/collection1/conf/`
+   * 為Solr5建立： `solr-install-dir/server/solr/collection1/conf/`
 
-1. 將下載的 **schema.xml****** 和solrconfig.xml複製到相同目錄
+1. 將下載的 **schema.xml****** 和solrconfig.xml複製到相同目錄。
 
-1. 重新啟動Solr
-1. 對於MSRP，請執行 [MSRP重新索引工具](#msrpreindextool)，除非這是新安裝
+1. 重新啟動Solr。
+1. 對於MSRP，請執行 [MSRP重新索引工具](#msrpreindextool)，除非這是新安裝。
 
 ### 安裝進階MLS {#installing-advanced-mls}
 
@@ -216,14 +216,14 @@ Solr 5的標準MLS檔案(schema.xml、solrconfig.xml)
 
 若要開始安裝SolrCloud或獨立模式：
 
-* 下載AEM-SOLR-MLS zip封存至代管Solr的伺服器
-* 解壓縮存檔
+* 下載AEM-SOLR-MLS zip封存至代管Solr的伺服器。
+* 拆開存檔的包裝。
 
 #### SolrCloud模式——進階MLS {#solrcloud-mode-advanced-mls}
 
 安裝說明——注意Solr4和Solr5的幾點差異：
 
-1. 在SolrCloud模式下安裝和配置Solr
+1. 在SolrCloud模式中安裝和設定Solr。
 1. 將進階MLS套件的內容解壓縮至磁碟。 內容應包括：
 
    * **schema.xml**
@@ -236,15 +236,15 @@ Solr 5的標準MLS檔案(schema.xml、solrconfig.xml)
 
    1. 建立 *新配置目錄*
 
-      * 例如 *solr-install-dir*/myconfig/
-      * 建立子檔案夾stopwords/和lang/
+      * 例如 `solr-install-dir/myconfig/`
+      * 建立子檔案夾 `stopwords/` 和 `lang/`
    1. 將現有Solr配置目錄的內容復 *制到new-config-dir*
 
-      * 對於Solr4:Copy *solr-install-dir*/example/solr/collection1/conf/&amp;ast;
-      * 針對Solr5:復 *制solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast;
-   1. 將解壓縮 **的schema.xml****和solrconfig.xml複製** 到new-config-dir ** ，以覆寫現有檔案
-   1. 針對Solr5:將 *solr_install_dir*/server/solr/configsets/sample_techproducts_configs/conf/lang/&amp;ast;.txt&quot;複製到 *new-config-dir*/lang/
-   1. 將提取 **的stopwords/** folder複製 *到new-config-dir* ，生成 *new-config-dir*/stopwords/&amp;ast;.txt
+      * 對於Solr4:複製 `solr-install-dir/example/solr/collection1/conf/`
+      * 針對Solr5:複製 `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+   1. 將解壓縮 **的schema.xml** 和 **solrconfig.xml複製** 到new-config-dir ** ，以覆寫現有的檔案。
+   1. 針對Solr5:複製 `solr_install_dir/server/solr/configsets/sample_techproducts_configs/conf/lang/*.txt` 至 `new-config-dir/lang/`
+   1. 將提取的 **秒詞／資** 料夾復 *制到new-config-dir* ，導致 `new-config-dir/stopwords/*.txt`
 
 
 
@@ -269,9 +269,9 @@ Solr 5的標準MLS檔案(schema.xml、solrconfig.xml)
    * *solr-install-dir/contrib/analysis-extras/lucene-libs/* jar
 
 1. [建立指定必要參數的集合](#create-a-collection) ，如分片數、複製副本數和配置名稱。
-1. 如果在建立系列 *時未提供* ，請將此新建立的 [系列與上傳至ZooKeeper的設定連結](#link-a-collection-to-a-configuration-set) 。
+1. 如果在建立系列時 *未提供* ，請將此新建立的 [系列與上傳至ZooKeeper的設定連結](#link-a-collection-to-a-configuration-set) 。
 
-1. 對於MSRP，請執行 [MSRP重新索引工具](#msrpreindextool)，除非這是新安裝
+1. 對於MSRP，請執行 [MSRP重新索引工具](#msrpreindextool)，除非這是新安裝。
 
 #### 獨立模式——進階MLS {#standalone-mode-advanced-mls}
 
@@ -279,11 +279,11 @@ Solr 5的標準MLS檔案(schema.xml、solrconfig.xml)
 
 將軟體包的內容解壓縮到托管獨立Solr伺服器的伺服器後，只需執行安裝指令碼以安裝必要的資源和配置檔案。
 
-* 以獨立模式安裝Solr
+* 以獨立模式安裝Solr。
 * 如果執行Solr5，請建立系列1（類似於Solr4）:
 
-   * ./bin/solr啟動
-   * ./bin/solr create_core -c collection1 -d sample_techproducts_configs
+   * `./bin/solr start`
+   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 * 運行安裝指令碼：安 [裝-v 4|5] - [d solhome] -c收集路徑 []:
 
@@ -319,8 +319,8 @@ Solr 5的標準MLS檔案(schema.xml、solrconfig.xml)
 
 solrconfig.xml **** 檔案可控制自動提交間隔和搜尋可見度，而且需要測試和調整。
 
-&lt;autoCommit>:預設情況下， autoCommit間隔（對穩定儲存的硬提交）設定為15秒。 搜索可見性預設為使用預提交索引。
+`<autoCommit>`:預設情況下， AutoCommit間隔（對穩定儲存的硬提交）設定為15秒。 搜索可見性預設為使用預提交索引。
 
-要將搜索更改為使用更新的索引來反映由於提交而發生的更改，請將包含的&lt;openSearcher>更改為true。
+要更改搜索以使用更新的索引來反映由於提交而發生的更改，請將包含的更改 `openSearcher` 為true。
 
-&lt;autoSoftCommit>:「軟」提交可確保更改可見（索引已更新），但不確保更改同步到穩定儲存（硬提交）。 結果是效能的提升。 預設情況下，&lt;autoSoftCommit>在包含的&lt;maxTime>設定為-1時被禁用。
+`autoSoftCommit`:「軟」提交可確保更改可見（索引已更新），但不確保更改同步到穩定儲存（硬提交）。 結果是效能的提升。 預設情況下， `autoSoftCommit` 將禁用包含的設 `maxTime` 置為-1。
