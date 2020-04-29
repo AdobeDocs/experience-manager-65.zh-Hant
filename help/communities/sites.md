@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -21,11 +21,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->用於建立社區站點的控 [制台](sites-console.md)、社 [區站點模板](sites.md)、 [社區組模板和社區功](tools-groups.md)[](functions.md) 能僅供作者環境使用。
+>用於建立社區站點的控 [制台](sites-console.md)、社 [區站點模板](sites.md)、 [社區組模板和社](tools-groups.md)[](functions.md) 區功能僅在作者環境中使用。
+
 
 ## 網站範本主控台 {#site-templates-console}
 
-在作者環境中，若要進入社群網站主控台
+在作者環境中，若要進入社群網站主控台：
 
 * 從全域導覽：工 **[!UICONTROL 具>社群>網站範本]**
 
@@ -45,11 +46,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在「基本資訊」面板上，會設定名稱、說明以及範本是啟用還是停用：
 
-* **[!UICONTROL 社群網站範本名稱]**&#x200B;範本名稱id
+* **[!UICONTROL 社群網站範本名稱]**
 
-* **[!UICONTROL 社群網站範本說明]**&#x200B;範本說明
+   範本名稱ID。
 
-* **[!UICONTROL 禁用／啟用]**&#x200B;切換開關控制模板是否可引用
+* **[!UICONTROL 社群網站範本說明]**
+
+   範本說明。
+
+* **[!UICONTROL 已禁用／啟用]**
+
+   控制模板是否可引用的切換開關。
 
 ### 縮圖 {#thumbnail}
 
@@ -75,6 +82,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >任何其他函式(例如頁 [面函式](functions.md#page-function))必須先包含並列出。
 
+
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
 ### 群組範本功能 {#group-templates-for-groups-function}
@@ -84,6 +92,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >[!CAUTION]
 >
 >Groups函式不 *能是**網站結構中的* 第一個函式，也不能是唯一函式。
+
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
