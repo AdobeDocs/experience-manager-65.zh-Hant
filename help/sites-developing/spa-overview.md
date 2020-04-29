@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: 3d9bcc706a1fa7a15d0ce8729f7b85c4226b394f
 
 ---
 
@@ -32,7 +32,7 @@ SPA Editor提供完整的解決方案，以支援AEM中的SPA。 本頁概述SPA
 
 若要在AEM中啟用SPA的編輯，需要SPA的JSON輸出與AEM儲存庫中的內容模型之間的對應，才能儲存對內容所做的變更。
 
-AEM中的SPA支援提供精簡的JS層，當載入頁面編輯器時，此層會與SPA JS程式碼互動，可透過此層傳送事件，並啟動編輯控制項的位置，以允許內容內容編輯。 此功能以Content Services API Endpoint概念為基礎，因為SPA中的內容必須透過Content services載入。
+AEM中的SPA支援提供精簡的JS層，當載入頁面編輯器時，此層會與SPA JS程式碼互動，可透過此層傳送事件，並啟動編輯控制項的位置，以允許內容內容編輯。 此功能以Content Services API Endpoint概念為基礎，因為SPA中的內容必須透過Content Services載入。
 
 如需AEM中SPA的詳細資訊，請參閱下列檔案：
 
@@ -45,7 +45,7 @@ SPA的頁面元件不會透過JSP或HTL檔案提供其子元件的HTML元素。 
 
 ### 頁面模型管理 {#page-model-management}
 
-頁面模型的解析度和管理被委託給提供的庫 `PageModel` 。 SPA必須使用「頁面模型」庫，才能初始化並由SPA編輯器編寫。 透過npm間接提供給AEM page元件的頁面模型 `cq-react-editable-components` 庫。 「頁面模型」是AEM和SPA之間的解譯器，因此必須始終存在。 編寫頁面時，必須新增其 `cq.authoring.pagemodel.messaging` 他程式庫，才能與頁面編輯器通訊。
+頁面模型的解析度和管理被委託給提供的庫 `PageModel` 。 SPA必須使用「頁面模型」庫，才能初始化並由SPA編輯器編寫。 透過npm間接提供給AEM Page元件的頁面模型 `cq-react-editable-components` 庫。 「頁面模型」是AEM和SPA之間的解譯器，因此必須始終存在。 編寫頁面時，必須新增其 `cq.authoring.pagemodel.messaging` 他程式庫，才能與頁面編輯器通訊。
 
 如果SPA頁元件繼承自頁核心元件，則有兩個選項可使客戶端 `cq.authoring.pagemodel.messaging` 庫類別可用：
 
@@ -109,7 +109,7 @@ SPA的頁面元件不會透過JSP或HTL檔案提供其子元件的HTML元素。 
 ![page_editor_spa_authoringmediator-2](assets/page_editor_spa_authoringmediator-2.png)
 
 1. SPA會自行初始化，並從Sling Model Exporter要求頁面模型。
-1. Sling Model Exporter會要求從儲存庫中構成頁面的資源。
+1. Sling Model Exporter會請求從儲存庫組成頁面的資源。
 1. 儲存庫返回資源。
 1. Sling Model Exporter會傳回頁面的模型。
 1. SPA會根據頁面模型執行個體化其元件。
@@ -172,6 +172,17 @@ SPA編輯器SDK支援下列最低版本：
 ### 其他架構 {#additional-frameworks}
 
 您可建置其他SPA架構，以搭配AEM SPA Editor SDK使用。 請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 檔案，瞭解架構建立由模組、元件和服務組成的架構特定層，以便與AEM SPA編輯器搭配使用時必須滿足的需求。
+
+### 文字編輯器需求 {#text-editor-requirements}
+
+如果要使用在SPA中建立的文本元件的就地編輯器，則需要進行其他配置。
+
+1. 在包含文字HTML的容器包裝函式元素上設定屬性（可以是任何屬性）。 如果是WKND Journal樣本內容，則此為元 `<div>` 素，而已使用的選擇器 `data-rte-editelement`。
+1. 設定對 `editElementQuery` 應AEM文字元件上指向該選 `cq:InplaceEditingConfig` 取器的設定，例如 `data-rte-editelement`。 這可讓編輯者知道哪些HTML元素會包住HTML文字。
+
+有關如何執行此操作的示例，請參見 [WKND Journal示例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+
+有關屬性和富格文 `editElementQuery` 字編輯器配置的其他資訊，請參 [閱配置富格文本編輯器。](/help/sites-administering/rich-text-editor.md)
 
 ### 限制 {#limitations}
 
