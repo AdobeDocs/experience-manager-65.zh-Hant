@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -21,36 +21,42 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 可以為社區站點的每個語言副本單獨指定自定義站點模板。
 
-為此，
+若要這麼做：
 
-* 建立自訂範本
-* 覆蓋預設網站範本路徑
-* 新增自訂範本至覆蓋路徑
-* 將屬性新增至節點以指 `page-template` 定自訂范 `configuration` 本
+* 建立自訂範本。
+* 覆蓋預設網站範本路徑。
+* 新增自訂範本至覆蓋路徑。
+* 將屬性新增至節點，以指 `page-template` 定自訂范 `configuration` 本。
 
 **預設範本**:
 
-/**libs**/social/console/components/hbs/sitepage/**sitepage**.hbs
+`/libs/social/console/components/hbs/sitepage/sitepage.hbs`
 
 **覆蓋路徑中的自訂範本**:
 
-/**apps**/social/console/components/hbs/sitepage/**&lt;*template-name*>**.hbs
+`/apps/social/console/components/hbs/sitepage/template-name.hbs`
 
-**屬性**:page-template **類型**:字串&#x200B;**值**:&lt;*template-name*>（無副檔名）
+**屬性**:page-template
+
+**類型**:字串
+
+**值**: `template-name` （無延伸功能）
 
 **配置節點**:
 
-/content/&lt;*社群網站路徑*>/&lt;*lang*>/configuration
+`/content/community site path/lang/configuration`
 
-例如：/content/sites/engage/tw/configuration
+For example: `/content/sites/engage/en/configuration`
 
 >[!NOTE]
 >
 >覆蓋路徑中的所有節點都只需要類型 `Folder`。
 
+
 >[!CAUTION]
 >
->如果自訂範本的名稱為 *sitepage.hbs,* 則會自訂所有社群網站。
+>如果自訂範本的名稱為 *sitepage.hbs*，則會自訂所有社群網站。
+
 
 ### 自訂網站範本範例 {#custom-site-template-example}
 
@@ -58,11 +64,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [取得檔](assets/vertical-sitepage.hbs)案將自訂網站範本置於覆蓋資料夾：
 
-/**apps**/social/console/components/hbs/sitepage/**vertical-sitepage**.hbs
+`/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
 通過向配置節點添加屬 `page-template` 性來標識自定義模板：
 
-/content/sites/sample/tw/configuration
+`/content/sites/sample/en/configuration`
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
@@ -82,7 +88,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 刪除社群網站 {#deleting-a-community-site}
 
-自AEM Communities 6.3 Service Pack 1起，「刪除網站」圖示會顯示在「社群>網站主控台」的社群網站上。 在開發期間，如果想要刪除社群網站並重新開始，您可以使用此功能。 刪除社群網站時，會移除與該網站相關的下列項目：
+自AEM Communities 6.3 Service Pack 1起，「刪除網站」圖示會顯示在從 **[!UICONTROL Communities]** > **[!UICONTROL Sites]** 主控台的社群網站上。 在開發期間，如果想要刪除社群網站並重新開始，您可以使用此功能。 刪除社群網站時，會移除與該網站相關的下列項目：
 
 * [UGC](#user-generated-content)
 * [使用者群組](#community-user-groups)
@@ -93,11 +99,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要標識與社區站點關聯的唯一站點ID，請使用CRXDE:
 
-* 導覽至網站的語言根目錄，例如 `/content/sites/*<site name>*/en/rep:policy`
+* 導覽至網站的語言根目錄，例如 `/content/sites/*<site name>*/en/rep:policy`。
 
-* 查找 `allow<#>` 具有此格 `rep:principalName` 式的節點 `rep:principalName = *community-enable-nrh9h-members*`
+* 查找 `allow<#>` 具有此格 `rep:principalName` 式的節點 `rep:principalName = *community-enable-nrh9h-members*`。
 
-* 網站ID是第3個元件， `rep:principalName`例如，如果 `rep:principalName = community-enable-nrh9h-members`
+* 網站ID是 `rep:principalName`
+
+   例如，若 `rep:principalName = community-enable-nrh9h-members`
 
    * **網站名稱** =啟 *用*
    * **網站ID** = *nrh9h*
@@ -113,7 +121,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 所有UGC皆可移除，或針對特定網站移除，例如：
 
-* path=/content/usergenerated/asi/mongo/content/sites/engage
+* `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
 這只會移除使用者產生的內容（在發佈時輸入）及未編寫的內容（在作者時輸入）。 因此，影 [子節點](srp.md#shadownodes) 不受影響。
 
@@ -124,16 +132,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 前置詞 `community`
 * 後跟唯 [一的網站ID](#community-unique-site-id)
 
-例如， `community-engage-x0e11-members`。
+For example, `community-engage-x0e11-members`.
 
 ### 啟用資產 {#enablement-assets}
 
 從主控制台：
 
-* Select **[!UICONTROL Assets]**
-* 進入 **[!UICONTROL 選擇模]** 式
-* 選取以唯一網站Id命名 [的檔案夾](#community-unique-site-id)
-* 選擇 **[!UICONTROL 刪除]** (可能需要從更 **[!UICONTROL 多……]**)
+* Select **[!UICONTROL Assets]**.
+* 進入 **[!UICONTROL 選擇]** 模式。
+* 選取以唯一網站Id命名 [的檔案夾](#community-unique-site-id)。
+* 選擇 **[!UICONTROL 刪除]** (可能需要從更 **[!UICONTROL 多……]**)。
 
 ### 資料庫記錄 {#database-records}
 
