@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 0ce57ab1-e4c6-4c38-963d-556eef8757f2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -19,15 +19,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 簡介 {#introduction}
 
-社區成員可以通過兩 [個部分](activities.md) ，來開展活動並遵循： `Follow`和 `Following`。
+社區成員可以通過兩 [個部分](activities.md) ，來開展活動並遵循： `Follow` 和 `Following`。
 
-組 `Follow`件必須與其他資源關聯，而且此關聯已為社區成員和功能建立。
+組 `Follow` 件必須與其他資源關聯，而且此關聯已為社區成員和功能建立。
 
-組 `Following`件只列出當前成員後面或當前成員後面的成員。 此社交圖表包含在為社群網站建立的使用者設定檔 [中](overview.md#communitiessites)。
+組 `Following` 件只列出當前成員後面或當前成員後面的成員。 此社交圖表包含在為社群網站建立的使用者設定檔 [中](overview.md#communitiessites)。
 
 ## 新增關注頁面 {#adding-following-to-a-page}
 
-如果想要在作者模式 `Following`下將元件新增至頁面，請找出元件並 `Communities / Following` 將其拖曳至應出現社交圖形的頁面上。
+如果想要在作者模式 `Following` 下將元件新增至頁面，請找出元件並將 `Communities / Following` 它拖曳至社交圖表應出現的頁面上。
 
 如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
 
@@ -37,7 +37,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 設定下列項目 {#configuring-following}
 
-目前，必須設定屬性，以判斷元件是顯示關 `follows`系還是關 `following`系。
+目前，必須設定屬性，以判斷元件是顯示關 `follows` 系還是關 `following` 系。
 
 ## 其他資訊 {#additional-information}
 
