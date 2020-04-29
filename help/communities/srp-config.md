@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 此設定會通知AEM Communities程式碼，說明在存取UGC時，將使用哪個儲存資源提供者(SRP)實作，且必須反映部署AEM時建立的拓撲。
 
-有關儲存選項和部署拓撲的討論，請訪問
+有關儲存選項和部署拓撲的討論，請訪問：
 
 * [社群內容商店](working-with-srp.md)
 * [建議的拓撲](topologies.md)
@@ -30,9 +30,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-188](assets/chlimage_1-188.png)
 
-在作者環境中，要訪問儲存配置控制台
+在作者環境中，要訪問儲存配置控制台。
 
-* 從全域導覽：「工 **[!UICONTROL 具>社群>儲存設定」]**
+* 從全局導航中，選擇 **[!UICONTROL 工具]** > **[!UICONTROL 社區]** >存 **[!UICONTROL 儲配置]**
 
 要選擇預設JCR以外的儲存選項：
 
@@ -43,7 +43,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 請參閱選擇DSRP的 [詳細資訊](dsrp.md#select-dsrp)
    * 請參閱選擇ASRP的 [詳細資訊](asrp.md#select-asrp)
 
-* 選擇「提 **[!UICONTROL 交」]**
+* 選擇 **[!UICONTROL 提交]**。
 
 ### 關於JCR儲存 {#about-jcr-storage}
 
@@ -55,5 +55,6 @@ JCR不是 *作者* 和發佈環境共用的公用商店。 社群內容只會從
 
 >[!NOTE]
 >
->缺少下面的節 `srpc`點 `/etc/socialconfig` 表示預設 [JCR儲存](jsrp.md)。
+>缺少下面的節 `srpc` 點 `/etc/socialconfig` 表示預設 [JCR儲存](jsrp.md)。
+
 
