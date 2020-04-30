@@ -1,16 +1,16 @@
 ---
 title: 建立翻譯專案
-description: 瞭解如何在AEM中建立翻譯專案。
+description: 瞭解如何在[!DNL Adobe Experience Manager]中建立翻譯專案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 建立翻譯專案 {#creating-translation-projects}
 
-若要建立語言副本，請觸發下列任一語言副本工作流程：位於AEM使用者介面的「參考」邊欄下方。
+若要建立語言副本，請觸發使用者介面中「參考」邊欄下方可用的下列語言副本工 [!DNL Experience Manager] 作流程之一。
 
 * **建立和翻譯**:在此工作流程中，將要翻譯的資產複製到您要翻譯的語言的語言根目錄。 此外，根據您選擇的選項，系統會在「專案」主控台中為資產建立轉譯專案。 根據設定，翻譯項目可以手動啟動，或者允許在建立翻譯項目後立即自動運行。
 
@@ -28,15 +28,15 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 您使用建立和翻譯工作流程，第一次針對特定語言產生語言副本。 工作流程提供下列選項：
 
-* 僅建立結構
-* 建立新的翻譯專案
-* 新增至現有翻譯專案
+* 僅建立結構.
+* 建立新的翻譯專案.
+* 新增至現有翻譯專案.
 
 ### 僅建立結構 {#create-structure-only}
 
 使用「 **[!UICONTROL 僅建立結構]** 」選項，在目標語言根目錄中建立目標資料夾層次結構，以匹配源語言根目錄中源資料夾的層次結構。在這種情況下，來源資產會複製到目標資料夾。但是，不會生成任何翻譯項目。
 
-1. 在「資產」UI中，選取您要在目標語言根目錄中建立其結構的來源資料夾。
+1. 在界 [!DNL Assets] 面中，選擇要在目標語言根目錄中建立結構的源資料夾。
 1. 開啟「參 **[!UICONTROL 考」窗格]** ，然後按一下「復本」下的「語言復本 **[!UICONTROL 」(Language Copies]****[!UICONTROL )]**。
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
@@ -116,7 +116,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![在「資產屬性」頁面中檢視翻譯的中繼資料](assets/translated-metadata-asset-properties.png)
 
-   *圖：資產屬性頁面中的翻譯中繼資料*
+   *圖：資產屬性頁面中已翻譯的中繼資料。*
 
 
    >[!NOTE]
@@ -277,13 +277,13 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ## 建立臨時語言副本 {#creating-temporary-language-copies}
 
-當您執行翻譯工作流程以更新具有原始資產編輯版本的語言副本時，會保留現有的語言副本，直到您核准翻譯的資產為止。 AEM Assets會將新翻譯的資產儲存在臨時位置，並在您明確核准資產後更新現有的語言副本。 如果您拒絕資產，語言副本將保持不變。
+當您執行翻譯工作流程以更新具有原始資產編輯版本的語言副本時，會保留現有的語言副本，直到您核准翻譯的資產為止。 [!DNL Adobe Experience Manager Assets] 將新翻譯的資產儲存在臨時位置，並在您明確核准資產後更新現有的語言副本。 如果您拒絕資產，語言副本將保持不變。
 
-1. 按一下/點選「語言副本」下方的「來源根」檔案夾( **[!UICONTROL Language Copies]** )，然後按一下/點選「 **[!UICONTROL Reveal in Assets]** 」 (在資產中顯現) 以開啟「AEM Assets」(AEM Assets)中的檔案夾。
+1. Click/tap the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click/tap **[!UICONTROL Reveal in Assets]** to open the folder in [!DNL Experience Manager Assets].
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. 從「資產」使用者介面中，選取已翻譯的資產，然後從工具列按一下／點選「編 **[!UICONTROL 輯]** 」圖示，以在編輯模式中開啟資產。
+1. 在介面 [!DNL Assets] 中，選取已翻譯的資產，然後從工具列按一下／點選「 **[!UICONTROL Edit]** 」（編輯）圖示，以在編輯模式中開啟資產。
 1. 編輯資產，然後儲存變更。
 1. 執行「Add to existing translation project(添加到現有翻譯 [項目)」過程的步驟](#add-to-existing-translation-project) 2-14以更新語言副本。
 1. 按一下／點選「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。 從「翻譯作業」頁中的 **[!UICONTROL 資產清單]** ，您可以清楚地查看儲存資產翻譯版本的臨時位置。
@@ -303,6 +303,9 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
-1. 導覽至「資產」主控台，並開啟每個已轉換資產的「屬性」頁面，以檢視已轉換的中繼資料。
+1. 若要檢視已翻譯的中繼資料，請導覽至 [!DNL Assets] 主控台並開啟每個已翻譯資 [!UICONTROL 產的] 「屬性」頁面。
 
-如需如何有效率地轉譯資產中繼資料的秘訣，請參 [閱有效轉譯中繼資料的5個步驟](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)。
+>[!MORELIKETHIS]
+>
+>* [有效翻譯中繼資料的秘訣](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)。
+
