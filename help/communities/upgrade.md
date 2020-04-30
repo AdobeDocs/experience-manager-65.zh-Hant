@@ -11,12 +11,12 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
 
-# 升級至AEM 6.5 Communities{#upgrading-to-aem-communities}
+# 升級至AEM 6.5 Communities {#upgrading-to-aem-communities}
 
 視每個網站的拓撲和功能而定，在升級至AEM Communities 6.5或安裝最新功能套件時，可能需要執行下列動作。
 
@@ -26,17 +26,17 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ### 重新索引Solr {#reindex-solr}
 
-在使用MSRP設定的部署上安裝新的社群功能套件時，必須
+在配置有MSRP的部署上安裝新的Communities功能包時，必須：
 
-1. 安裝最 [新功能包](/help/communities/deploy-communities.md#latestfeaturepack)
-1. 安裝最 [新的Solr配置檔案](/help/communities/msrp.md#upgrading)
-1. 重新索引MSRP請參閱「 [MSRP重新索引工具」一節](/help/communities/msrp.md#msrp-reindex-tool)
+1. 安裝最 [新的功能套件](/help/communities/deploy-communities.md#latestfeaturepack)。
+1. 安裝最 [新的Solr配置檔案](/help/communities/msrp.md#upgrading)。
+1. 重新索引MSRP請參閱「 [MSRP重新索引工具」一節](/help/communities/msrp.md#msrp-reindex-tool)。
 
 ### Enablement 2.0 {#enablement}
 
 自AEM 6.3起，啟用功能將不再將報告資訊儲存在MySQL中。 MySQL相依性僅用於跟蹤SCORM內容。
 
-請聯絡客 [戶服務](https://helpx.adobe.com/marketing-cloud/contact-support.html) ，以取得從Enablement 1.0移轉內容的協助。
+請聯絡客 [戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html) ，以取得從Enablement 1.0移轉內容的協助。
 
 ## 從AEM 6.0升級 {#upgrading-from-aem}
 
@@ -48,24 +48,24 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 因此，可以指示ASRP使用UGC `AEM 6.0 compatability-mode` 訪問UGC。
 
-針對所有AEM 6.3作者和發佈例項
+針對所有AEM 6.3作者和發佈例項：
 
-* 以管理員權限登入
-* 配置 [ASRP](/help/communities/asrp.md)
-* 請遵循下列步驟，讓預先存在的UGC可見：
+* 以管理員權限登入。
+* 配置 [ASRP](/help/communities/asrp.md)。
+* 請依照下列步驟，讓預先存在的UGC可見：
 
-   * 瀏覽至Web主控台
+   * 瀏覽至Web主控台：
 
       * 例如， [https://&lt;host>:&lt;port>/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * 找出 **AEM Communities公用程式設定**
-   * 選擇展開配置面板
 
-      * *取消選中***`Cloud Storage`**
+      * 找到 **AEM Communities公用程式設定** 。
+      * 選擇以展開配置面板：
 
-      * 選擇保 **存**
+         * *取消選中*`Cloud Storage`
 
+         * 選擇保 **存**
+      ![chlimage_1-176](assets/chlimage_1-176.png)
 
-![chlimage_1-176](assets/chlimage_1-176.png)
 
 ### 現場儲存 {#on-premise-storage}
 
@@ -99,8 +99,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 從概念上講，有三代社群組成：
 
-**第1代** :大約CQ 5.4到AEM 5.6.0 —— 這些是 **collab** components，它們將UGC儲存在本機儲存庫中，並使用複製來同步跨平台的UGC。 其他差異包括使用Java Server Pages(JSP)的實作，以及部落格功能，其中僅包含在作者環境中編寫。
+**第1代**:大約CQ 5.4到AEM 5.6.0是 **collab** components，這些元件會將UGC儲存在本機儲存庫中，並使用複製來同步跨平台的UGC。 其他差異包括使用Java Server Pages(JSP)的實作，以及部落格功能，其中僅包含在作者環境中編寫。
 
-**第2代** :從AEM 5.6.1到AEM 6.1 —— 這是Collab和Social元 **件****的混合** 。 AEM 6.0推出新的 [Social元件架構](/help/communities/scf.md) (SCF),AEM 6.2推出通用的 [UGC商店](/help/communities/working-with-srp.md) ，可使用儲存資源提供者 [](/help/communities/srp.md) (SRP)存取UGC。
+**第2代**:從AEM 5.6.1到AEM 6.1，這是Collab和Social元 **件****的混合** 。 AEM 6.0推出新的 [Social元件架構](/help/communities/scf.md) (SCF),AEM 6.2推出通用的 [UGC商店](/help/communities/working-with-srp.md) ，可使用儲存資源提供者 [](/help/communities/srp.md) (SRP)存取UGC。
 
-**第3代** :從AEM 6.2轉發，只有 **social** components，以SCF建置為Handlebars(HBS)元件，需要針對UGC選擇SRP。
+**第3代**:從AEM 6.2開始，只有 **social** components，以SCF建置為Handlebars(HBS)元件，需要針對UGC選擇SRP。
