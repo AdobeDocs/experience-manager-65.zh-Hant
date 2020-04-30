@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,7 +21,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 用戶端自訂 {#client-side-customization}
 
-另請參見 [SCF客戶端定制](client-customize.md)。
+另請參閱:
+
+* [SCF客戶端定制](client-customize.md)
 
 * [社群元件指南](components-guide.md)
 
@@ -45,7 +47,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   MVC示範如何從頭開發SCF+SRP元件
+   ToDo MVC演示如何從頭開發SCF+SRP元件。
 
 * [AEM Communities快速入門](getting-started.md)
 
@@ -59,11 +61,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）與只要Geometrixx範例套件仍未安裝，在使用 [Community Components指南進行瀏覽時，您可以使用這些使用者來模擬登入狀態之間的體驗通常會有差異](components-guide.md)。
 
-如需示範使用者的完整清單，請使用邊欄導覽至「工具>作 **[!UICONTROL 業>安全性>使用者」]**。 或者，使用Classic UI安 [全性主控台](http://localhost:4502/useradmin) ，來管理使用者和群組。
+如需示範使用者的完整清單，請使用「導覽至工具 **[!UICONTROL >]** 作業 **[!UICONTROL >安]** 全性>使用者」導覽 ****。 或者，使用Classic UI安 [全性主控台](http://localhost:4502/useradmin) ，來管理使用者和群組。
 
 如果已 [建立社群網站](getting-started.md)，則可將示範使用者指派給其社 [群使用者群組](users.md)。
 
-***用戶ID */*密碼：***
+***用戶ID */*密碼***:
 
 * aaron.mcdonald@mailinator.com
 * emily.andrews@mailinator.com
