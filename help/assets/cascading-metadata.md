@@ -1,9 +1,9 @@
 ---
-title: 階層式中繼資料
+title: 在[!DNL Adobe Experience Manager Assets]中級聯元資料。
 description: 本文說明如何定義資產的階層式中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 * 根據在另一個欄位中指定的值，變更特定欄位顯示的選項。
 * 根據其他欄位中指定的值，在特定欄位中設定預設中繼資料值。
 
-## 在AEM中設定階層式中繼資料 {#configure-cascading-metadata-in-aem}
+## 在 [!DNL Experience Manager]{#configure-cascading-metadata-in-aem}
 
 請考慮您要根據所選資產類型顯示階層式中繼資料的藍本。 部分範例
 
@@ -32,7 +32,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 不論選擇的資產類型為何，請將版權資訊顯示為必填欄位。
 
-1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼 **[!UICONTROL 資料結構]**」。
+1. 在介 [!DNL Experience Manager] 面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中 **[!UICONTROL 繼資料結構]**」。
 1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
@@ -51,7 +51,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    * 若要手動指定值，請選取「手動 **[!UICONTROL 新增]**」，然後按一 **[!UICONTROL 下「新增選擇]** 」並指定選項文字和值。 例如，指定「視訊」、「PDF」、「Word」和「影像」資產類型。
 
-   * 若要動態擷取JSON檔案中的值，請選取「 **[!UICONTROL 透過JSON路徑新增]** 」並提供JSON檔案的路徑。 AEM會在表單顯示給使用者時即時擷取鍵值配對。
+   * 若要動態擷取JSON檔案中的值，請選取「 **[!UICONTROL 透過JSON路徑新增]** 」並提供JSON檔案的路徑。 [!DNL Experience Manager] 當表單顯示給用戶時，即時讀取鍵值對。
    這兩種選項互斥。 您無法從JSON檔案匯入選項並手動編輯。
 
    ![add_choice](assets/add_choice.png)
@@ -105,8 +105,8 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![視訊資產的階層式中繼資料](assets/video_asset.png)
 
-   *圖：視訊的階層式中繼資料*
+   *圖：視訊的階層式中繼資料。*
 
    ![檔案資產的階層式中繼資料](assets/doc_type_fields.png)
 
-   *圖：檔案的階層式中繼資料*
+   *圖：檔案的階層式中繼資料。*
