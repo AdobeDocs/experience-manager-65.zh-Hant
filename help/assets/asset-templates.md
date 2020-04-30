@@ -1,9 +1,9 @@
 ---
 title: 資產範本
-description: 瞭解AEM Assets中的資產範本，以及如何使用資產範本來建立行銷文宣。
+description: 瞭解[!DNL Adobe Experience Manager Assets]中的資產範本，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -16,11 +16,11 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 在確保全球標牌安全的同時，靈活地進行有限的編輯，使資產模板成為快速調整內容和分發內容的理想構件，以便用於各種功能的內容製品。 重新調整內容用途有助於降低管理印刷和數位通道的成本，並跨這些通道提供全方位且一致的體驗。
 
-身為行銷人員，您可以在AEM Assets中儲存和管理範本，並使用單一基本範本輕鬆建立多種個人化的列印體驗。 您可以建立各種類型的行銷文宣，包括簡介手冊、傳單、明信片、名片等，以便向客戶清楚傳達行銷訊息。 您也可以從現有或新的列印輸出組合多頁列印輸出。 最重要的是，您可以輕鬆同時提供數位和印刷體驗，為使用者提供一致、整合的體驗。
+身為行銷人員，您可以在內部儲存及管理範本， [!DNL Experience Manager Assets] 並使用單一基本範本輕鬆建立多種個人化的列印體驗。 您可以建立各種類型的行銷文宣，包括簡介手冊、傳單、明信片、名片等，以便向客戶清楚傳達行銷訊息。 您也可以從現有或新的列印輸出組合多頁列印輸出。 最重要的是，您可以輕鬆同時提供數位和印刷體驗，為使用者提供一致、整合的體驗。
 
-雖然資產範本大多是Adobe InDesign檔案，但是熟悉Adobe InDesign並不妨礙您建立出色的文物。 您不需要將Adobe InDesign範本的欄位與建立目錄時所需的產品欄位對應。 您可以直接在Web介面上，在WYSIWYG模式下編輯範本。 不過，若要讓Adobe InDesign處理您的編輯變更，您必須先設定AEM Assets以與Adobe InDesign伺服器整合。
+雖然資產範本大多是 [!DNL Adobe InDesign] 檔案，但熟悉程 [!DNL Adobe InDesign] 度並不妨礙製作亮眼的文物。 建立目錄時，您不需將范 [!DNL Adobe InDesign] 本的欄位與您的產品欄位對應。 您可以直接在Web介面上，在WYSIWYG模式下編輯範本。 不過，若 [!DNL Adobe InDesign] 要處理編輯變更，您必須先設定為 [!DNL Experience Manager Assets] 與整合 [!DNL Adobe InDesign Server]。
 
-從網頁介面編輯Adobe InDesign範本的功能有助於促進創意與行銷人員之間的更緊密協作，同時縮短本地促銷活動的上市時間。
+從網頁介面編 [!DNL Adobe InDesign] 輯範本的功能有助於促進創意與行銷人員之間的協作，同時縮短本地促銷活動的上市時間。
 
 您可以使用資產範本執行下列動作：
 
@@ -30,7 +30,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 * 預覽範本編輯
 * 合併多個範本檔案以建立多頁對象
 
-當您為宣傳品選擇範本時，AEM Assets會建立範本復本供您編輯。 原始範本會保留，以確保全域標牌保持完整，並可重複使用以強製品牌一致性。
+當您為宣傳品選擇模板時， [!DNL Experience Manager Assets] 將建立可編輯的模板副本。 原始範本會保留，以確保全域標牌保持完整，並可重複使用以強製品牌一致性。
 
 您可以以下列格式匯出父資料夾內的更新檔案：
 
@@ -42,9 +42,9 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ## 建立宣傳品 {#creating-a-collateral}
 
-假設您想要建立數位可列印的宣傳品，例如簡介手冊、傳單和廣告，以便在即將到來的宣傳活動中展示，並與全球的經銷商分享。 根據範本建立宣傳品有助於跨通道提供統一的客戶體驗。 設計人員可以使用創意解決方案（例如InDesign）建立促銷活動範本（單頁或多頁），並為您上傳範本至AEM Assets。 在建立宣傳品之前，請事先將一或多個INDD範本上傳至Experience Manager，並在Experience Manager中使用。
+假設您想要建立數位可列印的宣傳品，例如簡介手冊、傳單和廣告，以便在即將到來的宣傳活動中展示，並與全球的經銷商分享。 根據範本建立宣傳品有助於跨通道提供統一的客戶體驗。 設計人員可以使用創意解決方案（例如單頁或多頁）建立促銷活動範本，並 [!DNL InDesign] 為您上傳范 [!DNL Experience Manager Assets] 本。 在建立宣傳品之前，請先將一或多個INDD範本上傳至並提 [!DNL Experience Manager] 供使用。
 
-1. 在Experience Manager介面中，按一下「 [!UICONTROL 資產]」。
+1. 在介面 [!DNL Experience Manager] 中，按一下「 [!UICONTROL 資產」]。
 
 1. 從選項中選擇「模 **[!UICONTROL 板」]**。
 
@@ -54,7 +54,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 預先將一或多個INDD範本上傳至Experience Manager，並在Experience Manager中使用。 選擇手冊的範本，然後按一下「下 **[!UICONTROL 一步]**」。
+1. 將一或多個INDD範本上傳至並提 [!DNL Experience Manager] 前使用。 選擇手冊的範本，然後按一下「下 **[!UICONTROL 一步]**」。
 
    ![chlimage_1-103](assets/chlimage_1-308.png)
 
@@ -66,7 +66,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-105](assets/chlimage_1-310.png)
 
-1. 按一下 **[!UICONTROL 建立]**。對話方塊會確認已建立新的手冊。 按一 **[!UICONTROL 下「開啟]** 」，以編輯模式開啟手冊。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。對話方塊會確認已建立新的手冊。 按一 **[!UICONTROL 下「開啟]** 」，以編輯模式開啟手冊。
 
    <!--![chlimage_1-106](assets/.png) -->
 
@@ -90,17 +90,17 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    您可以使用文字編輯器修改要在文字欄位中顯示的文字。 您可以在標籤層級修改字型大小、樣式、顏色和文字。
 
-   使用資產搜尋器，您可以瀏覽或搜尋AEM Assets中的影像，並將範本中可編輯的影像取代為您選擇的影像。
+   使用資產搜尋器，您可以瀏覽或搜尋範本中的影 [!DNL Experience Manager Assets] 像，並將範本中可編輯的影像取代為您選擇的影像。
 
    ![chlimage_1-109](assets/chlimage_1-314.png)
 
-   可編輯的內容會顯示在右側。 若要在AEM Assets中編輯欄位，範本中的對應欄位必須在InDesign中加上標籤。 換句話說，它們應在InDesign中標示為可編輯。
+   可編輯的內容會顯示在右側。 若要在中編輯欄位，范 [!DNL Experience Manager Assets]本中的對應欄位必須在中標籤 [!DNL InDesign]。 換言之，它們應在中標示為可編輯 [!DNL InDesign]。
 
    ![chlimage_1-110](assets/chlimage_1-315.png)
 
    >[!NOTE]
    >
-   >請確定您的AEM實例已與InDesign伺服器整合，讓AEM Assets能夠從InDesign範本擷取資料，並讓它可供編輯。 如需詳細資訊，請 [參閱「整合AEM資產與InDesign Server」](/help/assets/indesign.md)。
+   >請確定您 [!DNL Experience Manager] 的例項已與 [!DNL InDesign Server] 整合， [!DNL Experience Manager Assets] 以便從InDesign範本擷取資料並加以編輯。 如需詳細資訊，請 [參閱「整合Experience Manager Assets與InDesign Server](/help/assets/indesign.md)」。
 
 1. 若要修改可編輯欄位中的文字，請按一下可編輯欄位清單中的文字欄位，然後編輯欄位中的文字。
 
@@ -120,7 +120,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
-   您也可以使用關鍵字、標籤，並根據其發佈狀態來搜尋影像。 您可以瀏覽AEM Assets儲存庫，並導覽至所要影像的位置。
+   您也可以使用關鍵字、標籤，並根據其發佈狀態來搜尋影像。 您可以瀏覽整個存 [!DNL Experience Manager Assets] 儲庫，並瀏覽到所需映像的位置。
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
@@ -136,17 +136,17 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    >[!NOTE]
    >
-   >只有當宣傳品中的可編輯影像欄位沒有任何缺少的表徵圖時，才會啟用「預覽」和「完成」表徵圖。 如果您的文宣中遺失圖示，是因為AEM無法解析InDesign範本中的影像。 通常，AEM無法在下列情況下解析影像：
+   >只有當宣傳品中的可編輯影像欄位沒有任何缺少的表徵圖時，才會啟用「預覽」和「完成」表徵圖。 如果您的宣傳品中缺少圖示，則是因 [!DNL Experience Manager] 為無法解析範本中的影 [!DNL InDesign] 像。 通常， [!DNL Experience Manager] 在下列情況下無法解析影像：
    >
-   >    * 影像未內嵌在基礎的InDesign範本中
-   >    * 從本機檔案系統連結影像
+   >    * 影像未內嵌在基礎範本 [!DNL InDesign] 中。
+   >    * 從本機檔案系統連結影像。
    >
-   >若要啟用AEM來解析影像，請執行下列動作：
+   >若要啟 [!DNL Experience Manager] 用解析影像，請執行下列動作：
    >
-   >    * 在建立InDesign範本時內嵌影像(請參 [閱關於連結和內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
-   >    * 將AEM載入您的本機檔案系統，然後將遺失的圖示與現有的AEM資產對應。
+   >    * 在建立範本時內嵌影 [!DNL InDesign] 像(請參閱 [關於連結和內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
+   >    * 載入 [!DNL Experience Manager] 您的本機檔案系統，然後將遺失的圖示與中的現有資產對應 [!DNL Experience Manager]。
    >
-   >如需有關使用InDesign檔案的詳細資訊，請參 [閱「在AEM中使用InDesign檔案的最佳實務」](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
+   >如需有關使用檔案的詳 [!DNL InDesign] 細資訊，請 [參閱Experience Manager中使用InDesign檔案的最佳實務](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
 
 1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下「繼 **[!UICONTROL 續]**」。
 1. 宣傳品是在您開始使用的資料夾中建立的。 要查看轉譯，請開啟宣傳品並從「GlobalNav」列 **[!UICONTROL 表中選擇]** 「轉譯」。
@@ -159,7 +159,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ## 合併宣傳品 {#merge-collateral}
 
-1. 在Experience Manager介面中，按一下導 [!UICONTROL 覽頁面] 上的「資產」。
+1. 在介面 [!DNL Experience Manager] 中，按一 [!UICONTROL 下導覽頁面上的] 「資產」。
 
 1. 從選項中選擇「模 **[!UICONTROL 板」]**。
 
@@ -179,7 +179,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-123](assets/chlimage_1-328.png)
 
-   您可以瀏覽AEM Assets儲存庫或系列，並導覽至所需範本的位置，然後選取範本以進行合併。
+   您可以瀏覽儲存庫 [!DNL Experience Manager Assets] 或系列，並導航到所需模板的位置，然後選擇這些模板進行合併。
 
    ![chlimage_1-124](assets/chlimage_1-329.png)
 
@@ -192,7 +192,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. 在「配 [!UICONTROL 置模板] 」螢幕中，指定宣傳品的名稱。 （可選）指定您認為適當的任何標籤。 如果您想要匯出PDF格式的輸出，請選 **[!UICONTROL 取Acrobat(.PDF)]**。 預設情況下，文宣將以JPG和InDesign格式導出。 要更改多頁文宣的顯示縮略圖，請按一下「更改縮 **[!UICONTROL 略圖」]**。
+1. 在「配 [!UICONTROL 置模板] 」螢幕中，指定宣傳品的名稱。 （可選）指定您認為適當的任何標籤。 如果您想要匯出PDF格式的輸出，請選 **[!UICONTROL 取Acrobat(.PDF)]**。 預設情況下，文宣將導出為JPG和格 [!DNL InDesign] 式。 要更改多頁文宣的顯示縮略圖，請按一下「更改縮 **[!UICONTROL 略圖」]**。
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
