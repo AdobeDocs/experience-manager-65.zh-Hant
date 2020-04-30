@@ -1,18 +1,18 @@
 ---
-title: 在Adobe Experience Manager中使用參考和多頁資產管理複合資產。
-description: 瞭解如何從Adobe InDesign、Adobe Illustrator和Adobe Photoshop建立數位資產的參考。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
+title: 在[!DNL Adobe Experience Manager]中使用參考和多頁資產管理複合資產。
+description: 瞭解如何從[!DNL Adobe InDesign]、[!DNL Adobe Illustrator]和[!DNL Adobe Photoshop]建立數位資產的參考。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 790efeaff6c8cf7e60104601e08955180dbb9600
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 管理複合和多頁資產 {#managing-compound-assets}
 
-[!DNL Adobe Experience Manager Assets] 可以識別已上載檔案是否包含對儲存庫中已存在資產的引用。 此功能僅適用於支援的檔案格式。 如果已上傳的資產包含任何Experience Manager資產的參考，則會在已上傳和參考的資產之間建立雙向連結。
+[!DNL Adobe Experience Manager Assets] 可以識別已上載檔案是否包含對儲存庫中已存在資產的引用。 此功能僅適用於支援的檔案格式。 如果已上傳的資產包含資產的任 [!DNL Experience Manager] 何參照，則會在已上傳和參考的資產之間建立雙向連結。
 
-除了消除冗餘外，參照Adobe Creative Cloud應用程式中的資產還可增強協作，並提高使用者的效率和生產力。
+除了消除冗餘外，在應用程式中參考資 [!DNL Adobe Creative Cloud] 產可增強協作，並提高使用者的效率和生產力。
 
 [!DNL Experience Manager Assets] 支援雙向引用。 您可以在已上傳檔案的資產詳細資料頁面中找到參考的資產。 此外，您還可以在參考資產的資產詳細資料頁面中檢視參考檔案。
 
@@ -25,7 +25,7 @@ source-git-commit: 790efeaff6c8cf7e60104601e08955180dbb9600
 1. 使用 [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 導覽至您要參考之資產的檔案系統位置。
 1. 將資產從本機資料夾拖曳至檔 [!DNL Illustrator] 案。
 
-1. 將檔 [!DNL Illustrator] 案儲存至已載入的磁碟機，或 [上傳](/help/assets/managing-assets-touch-ui.md#uploading-assets) 至Experience Manager儲存庫。
+1. 將檔案 [!DNL Illustrator] 保存到掛載的驅動器，或 [上傳](/help/assets/managing-assets-touch-ui.md#uploading-assets) 到儲存 [!DNL Experience Manager] 庫。
 
 1. 工作流程完成後，請前往資產的資產詳細資訊頁面。 現有數位資產的參考會列在「參 **[!UICONTROL 考]** 」欄的「相 **[!UICONTROL 依性]** 」下。
 
@@ -39,7 +39,7 @@ source-git-commit: 790efeaff6c8cf7e60104601e08955180dbb9600
 
    ![在資產詳細資訊的「引用」列中查看Experience Manager資產的引用](assets/asset-references.png)
 
-   *圖：資產詳細資料中的資產參考*
+   *圖：資產詳細資料中的資產參考。*
 
 ## 將數位資產新增為參考 [!DNL Adobe InDesign]{#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -86,7 +86,7 @@ source-git-commit: 790efeaff6c8cf7e60104601e08955180dbb9600
 
 子資產產生預設會停用。 若要啟用子資產產生，請依照下列步驟進行：
 
-1. 以管理員身分登入Experience Manager。 存取「 **[!UICONTROL 工具>工作流程>模型]**」。
+1. 以管理員 [!DNL Experience Manager] 身分登入。 存取「 **[!UICONTROL 工具>工作流程>模型]**」。
 1. 選取「 **[!UICONTROL DAM更新資產」工作流程]** ，然後按一下「 **[!UICONTROL 編輯」]**。
 1. 按一 **[!UICONTROL 下「切換側面板]** 」並找出「 **[!UICONTROL 建立子資產」步驟]** 。 將步驟新增至工作流程。 按一 **[!UICONTROL 下同步]**。
 
