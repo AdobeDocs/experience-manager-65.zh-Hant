@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: fa01c9fad82adb021220631a0536ab77ceb01e31
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -81,7 +81,7 @@ Catalog函式包含標籤設定，可定義目錄篩選器UI中所列的標籤�
 
 例如，如果在名為 `ski-catalog` 的目錄上建立並設定了命名空間 `Ski Catalog`，則可能有兩個子標籤： `lesson-1` 和 `lesson-2`。
 
-因此，任何標籤有
+因此，任何標有下列其中一項的啟用資源：
 
 * ski-catalog:leansion-1
 * ski-catalog:leassion-2
