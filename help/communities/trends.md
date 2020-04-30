@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
-# 活動趨勢{#activity-trends}
+# 活動趨勢 {#activity-trends}
 
 ## 簡介 {#introduction}
 
@@ -24,9 +24,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 本檔案說明：
 
-* 將元件 `Community Activity List` 添加到社 [區站點](/help/communities/overview.md#community-sites)
+* 將元件 `Community Activity List` 新增至社 [群網站](/help/communities/overview.md#community-sites)。
 
-* 元件的配置設 `Community Activity List` 置
+* 元件的配置 `Community Activity List` 設定。
 
 ### 需求 {#requirement}
 
@@ -54,7 +54,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-在**Comments **tab下，指定上傳檔案的注釋是否及其顯示方式：
+在「注 **釋** 」標籤下，指定上傳檔案的注釋是否及顯示方式：
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -62,7 +62,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
    指定要顯示社群成員或使用者產生內容(UGC)的相關資料。
 
-   從
+   從中選擇：
 
    * `Members`
    * `Content`
@@ -80,7 +80,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **活動類型**
 
-   選擇其中一個
+   選擇以下選項之一：
 
    * `Views`（頁面瀏覽）
    * `Posts`（建立UGC）
@@ -90,7 +90,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **時間段**
 
-   選擇其中一個
+   選擇以下選項之一：
 
    * `Last 24 hours`
    * `Last 7 days`
@@ -107,7 +107,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **成員人數彙總**
 
-   取消選取（關閉）時，只會計入頂層貼文。 例如，如果內容是根頁面（預設值），則 `Activity Type`中 `Posts`的不會顯示任何活動，因為無法將內容張貼至根頁面。 勾選後，會包含所有子系頁面的計數。
+   取消選取（關閉）時，只會計入頂層貼文。 例如，如果內容是根頁面（預設值），則 `Activity Type``Posts` 不會顯示任何活動，因為無法將內容張貼至根頁面。 勾選後，會包含所有子系頁面的計數。
 已勾選預設值。
 
 ### 包含4個元件的範例頁面 {#example-page-with-components}
