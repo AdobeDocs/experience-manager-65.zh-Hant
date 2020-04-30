@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
-source-git-commit: 01f14c203e45b85c9d7733d88437bd56e3c27c8e
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,7 +21,7 @@ Tally是抽象類別，提供一套標準方法，可收集會員對特定產品
 
 可通過擴展抽象計數類來建立自定義計數元件。
 
-[贊](essentials-liking.md) (Syok)是對數字的實施，是表達正面意見的簡單形式。
+[贊](essentials-liking.md) ，是一種簡單的表達正面意見的方式，
 
 [投票](essentials-voting.md) ，是一種簡單的表達正面或負面意見的表決方式。
 
@@ -54,8 +54,8 @@ UGC應使用其中一種標準的協調方法來協調。
 
 請參閱：
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法
+* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
