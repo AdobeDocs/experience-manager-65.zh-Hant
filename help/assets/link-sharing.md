@@ -3,7 +3,7 @@ title: 產生共用資產的URL
 description: 本文說明如何將AEM Assets中的資產、檔案夾和系列共用為外部方的URL。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
 
    ![與連結共用對話方塊](assets/Link-sharing-dialog-box.png)
 
-   *圖：與連結共用對話方塊*
+   *圖：將資產共用為連結的對話方塊。*
 
    或者，繼續執行本程式的步驟3-7以新增電子郵件收件者、設定連結的過期時間，並從對話方塊傳送。
 
@@ -47,28 +47,27 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
    >[!NOTE]
    如果共用資產移至不同位置，其連結將停止運作。 重新建立連結並與使用者重新共用。
 
-1. 從Web主控台開啟 **[!UICONTROL Day CQ Link Externalizer]** configuration，並在 **[!UICONTROL Domains]**  (網域) 欄位中修改下列屬性，並針對每個欄位提及值：
+1. In AEM interface, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-   * 本機
-   * 作者
-   * 發佈
-   對於本機和作者屬性，請分別提供本機和作者實例的URL。 如果您執行單一AEM作者例項，本機和作者屬性的值都相同。 對於發佈，請提供發佈例項的URL。
+1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration and modify the following properties in the **[!UICONTROL Domains]** field with the values mentioned against `local`, `author`, and `publish`. 對於和 `local` 屬性 `author` ，請分別提供本機實例和作者實例的URL。 如果 `local` 您執 `author` 行單一Experience Manager作者實例，則兩者的值都相同。 例如， `publish`提供Experience Manager發佈例項的URL。
 
 1. 在「連結共用」對話方 **[!UICONTROL 塊的電子郵件地址方塊中]** ，輸入您要共用連結之使用者的電子郵件ID。您也可以與多位使用者共用連結。
 
-   如果使用者是您組織的成員，請從顯示在輸入區域下方清單中的建議電子郵件ID中，選取使用者的電子郵件ID。 對於外部使用者，輸入完整的電子郵件ID，然後從清單中選取它。
+   如果使用者是您組織的成員，請從顯示在輸入區域下方清單中的建議電子郵件ID中選取使用者的電子郵件ID。 對於外部使用者，輸入完整的電子郵件ID，然後從清單中選取它。
 
    要啟用發送給用戶的電子郵件，請在第CQ天郵件服務中配置SMTP服 [務器詳細資訊](#configmailservice)。
 
    ![直接從「連結共用」對話方塊分享資產連結](assets/Asset-Sharing-LinkShareDialog.png)
 
-   直接從「連結共用」對話方塊分享資產連結
+   *圖：直接從「連結共用」對話方[!UICONTROL 塊共用資產連結]。*
 
    >[!NOTE]
-   如果您輸入非您組織成員之使用者的電子郵件ID,「外部使用者」會加上使用者的電子郵件ID前置詞。
+   如果您輸入非您組織成員之使用者的電子郵件ID，則「外部使用者  」字詞會加上使用者的電子郵件ID前置詞。
 
-1. 在「主 **[!UICONTROL 體]** 」方塊中，輸入您要共用之資產的主體。
-1. 在「消 **[!UICONTROL 息]** 」框中，輸入可選消息。
+1. 在「主 **[!UICONTROL 體]** 」欄位中，輸入您要共用之資產的主體。
+
+1. 在「消 **[!UICONTROL 息]** 」欄位中，輸入可選消息。
+
 1. 在「過 **[!UICONTROL 期]** 」欄位中，使用日期選擇器指定連結的到期日期和時間。 依預設，到期日是從您共用連結的日期開始的一週。
 
    ![設定共用連結的到期日](assets/Set-shared-link-expiration.png)
@@ -102,7 +101,7 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
 
 ## 配置日CQ郵件服務 {#configmailservice}
 
-1. 在Experience manager首頁上，導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
+1. 在Experience Manager首頁上，導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 1. 從服務清單中，找到 **[!UICONTROL Day CQ Mail Service]**。
 1. Tap **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
@@ -116,10 +115,10 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
 
 ## 配置最大資料大小 {#maxdatasize}
 
-當您使用「連結共用」功能從共用的連結下載資產時，AEM會從儲存庫壓縮資產階層，然後以ZIP檔案傳回資產。 但是，在ZIP檔案中壓縮的資料量沒有限制的情況下，大量資料會遭受壓縮，造成JVM中記憶體錯誤。 為防止系統因此遭受潛在的拒絕服務攻擊，請使用 **[!UICONTROL Configuration Manager中Day CQ的]** Max Content Size（未壓縮）  Day CQ DAM Adhoc Asset Share Proxy servlet參數配置最大大小。 如果資產的未壓縮大小超過設定的值，資產下載請求便會遭拒。 預設值為100 MB。
+當您使用「連結共用」功能從共用的連結下載資產時，AEM會從儲存庫壓縮資產階層，然後以ZIP檔案傳回資產。 但是，在ZIP檔案中壓縮的資料量沒有限制的情況下，大量資料會遭受壓縮，造成JVM中記憶體錯誤。 為防止系統因此遭受潛在的拒絕服務攻擊，請使用 **[!UICONTROL Configuration Manager中Day CQ的]** Max Content Size（未壓縮）  Day CQ DAM Adhoc Asset Share Proxy Servlet參數配置最大大小。 如果資產的未壓縮大小超過設定的值，資產下載請求便會遭拒。 預設值為100 MB。
 
 1. 按一下/點選AEM標誌，然後前往「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** >網 **[!UICONTROL 頁主控台]**」。
-1. 從Web主控台中，找到 **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy servlet設定]** 。
+1. 從Web主控台中，找到 **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet設定]** 。
 1. 在編輯模 **[!UICONTROL 式中開啟「日CQ DAM臨機資產共用代理Servlet]** 」設定，並修改「最大內容大小 (未壓縮) 」 **[!UICONTROL 參數的值]** 。
 
    ![chlimage_1-264](assets/chlimage_1-549.png)
