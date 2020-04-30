@@ -3,7 +3,7 @@ title: 在[!DNL Adobe Experience Manager]中管理數位資產的中繼資料。
 description: 瞭解中繼資料的類型，以及[!DNL Adobe Experience Manager Assets]如何協助管理資產的中繼資料，讓資產分類和組織更輕鬆。 [!DNL Experience Manager]可讓資產根據其中繼資料自動組織和處理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9bf48a6057e08e9feafc0e18d6fa9d0145768cf2
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -74,11 +74,11 @@ source-git-commit: 9bf48a6057e08e9feafc0e18d6fa9d0145768cf2
 * XMP:用於將提 [!DNL Assets] 取的元資料儲存在儲存庫中。
 * ID3:音訊和視訊檔案。
 * 例如：的雙曲餘切值。
-* 其他／舊版：從Microsoft Word、PowerPoint、Excel等。
+* 其他／舊版：從 [!DNL Microsoft Word]、 [!DNL PowerPoint][!DNL Excel]等。
 
 ### XMP {#xmp}
 
-可擴充中繼資料平台(XMP)是開放標準，適用於所 [!DNL Experience Manager Assets] 有中繼資料管理。 此標準提供通用中繼資料編碼，可嵌入所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供多樣化內容模型。 使用XMP標準和XMP標準的 [!DNL Experience Manager Assets] 使用者擁有強大的平台。 如需詳細資訊，請參 [閱XMP](https://www.adobe.com/products/xmp.html)。
+[!DNL Extensible Metadata Platform] (XMP)是開放標準，供所有中繼資料 [!DNL Experience Manager Assets] 管理使用。 此標準提供通用中繼資料編碼，可嵌入所有檔案格式。 Adobe和其他公司支援XMP標準，因為它提供多樣化內容模型。 使用XMP標準和XMP標準的 [!DNL Experience Manager Assets] 使用者擁有強大的平台。 如需詳細資訊，請參 [閱XMP](https://www.adobe.com/products/xmp.html)。
 
 ### ID3 {#id}
 
@@ -114,62 +114,62 @@ Exif的主要限制是不支援一些常用的影像檔案格式，例如BMP、G
 
 ### 標準中繼資料 {#standard-metadata}
 
-* dc - Dublin Core —— 最重要且廣泛使用的中繼資料集。
+* dc - [!DNL Dublin Core] 是最重要且廣泛使用的中繼資料集。
 * DICOM —— 數位影像與醫學通訊。
-* Iptc4xmpCore &amp; iptc4xmpExt —— 國際新聞通訊標準——許多特定主題的中繼資料。
+* Iptc4xmpCore &amp; iptc4xmpExt - International Press Communications Standard包含許多特定主題的中繼資料。
 * rdf —— 資源描述框架——通用語義Web元資料。
-* xmp —— 可擴充的中繼資料平台。
+* xmp - [!DNL Extensible Metadata Platform]
 * xmpBJ —— 基本工作訂票。
 
 ### 應用程式專用的中繼資料 {#application-specific-metadata}
 
 應用程式專用的中繼資料包含技術和描述性中繼資料。 如果您使用這些功能，其他應用程式可能無法使用中繼資料。 例如，如果您有包含中繼資料的資產，而另一個影像轉換應用程 [!DNL Adobe Photoshop] 式則嘗試存取中繼資料，則可能無法存取中繼資料。 如果您發現資產中有許多應用程式特定的中繼資料，可以建立將應用程式特定屬性變更為標準屬性的工作流程步驟。
 
-* acdsee —— 由ACDSee程式管理的元 [資料www.acdsee.com/](https://www.acdsee.com/)。
-* 相簿- Adobe Photoshop Album。
-* cq —— 用於 [!DNL Experience Manager Assets]。
-* dam —— 用於 [!DNL Experience Manager Assets]。
+* ACDSee —— 由程式管理的元 [!DNL ACDSee] 資料。 請參 [閱www.acdsee.com/](https://www.acdsee.com/)。
+* 相簿- [!DNL Adobe Photoshop Album]。
+* cq —— 使用者 [!DNL Experience Manager Assets]。
+* dam —— 使用者 [!DNL Experience Manager Assets]。
 * dex - Optima SC說明瀏覽器。
 * crs - Adobe Photoshop Camera Raw。
-* lr - Adobe Lightroom。
+* lr - [!DNL Adobe Lightroom]
 * mediapro - Ivew MediaPro。
 * MicrosoftPhoto和MP - Microsoft Photo。
 * pdf和pdfx。
-* photoshop &amp; psAux - Adobe Photoshop。
+* photoshop &amp; psAux - [!DNL Adobe Photoshop].
 
 ### 數位版權管理中繼資料 {#digital-rights-management-metadata}
 
-* cc —— 創意共用
-* xmpRights
-* plus —— 圖片授權通用系統- https://www.useplus.com/
-* prism - https://www.idealliance.org/prism-metadata業界標準中繼資料的發佈需求
-* prl —— 稜鏡版權語言
-* pur —— 稜鏡使用權
-* xmpPlus —— 整合PLUS與XMP
+* CC - [!DNL Creative Commons].
+* [!DNL XMPRights]。
+* 加上——圖 [片授權通用系統](https://www.useplus.com)。
+* prism - https://www.idealliance.org/prism-metadata業界標準中繼資料的發佈需求。
+* PRL —— 稜鏡版權語言。
+* PUR —— 稜鏡使用權。
+* xmpPlus —— 整合PLUS與XMP。
 
 ### 攝影專用中繼資料 {#photography-specific-metadata}
 
-* exif —— 相機提供的大量技術資訊，包括GPS位置
-* crs - photoshop相機原始資料
-* Iptc4xmpCore和iptc4xmpExt
-* TIFF —— 影像中繼資料（不僅適用於TIFF影像）
+* Exif —— 相機的技術資訊，包括GPS位置。
+* CRS —— 方 [!DNL Camera Raw] 案。
+* Iptc4xmpCore和iptc4xmpExt.
+* TIFF —— 影像中繼資料（不僅適用於TIFF影像）。
 
 ### 列印專用的中繼資料 {#print-specific-metadata}
 
-* pdf和pdfx - Adobe PDF和協力廠商應用程式
-* prism - [www.prismstandard.org業界標準中繼資料](https://www.prismstandard.org) （英文）的發佈需求
+* pdf和pdfx - Adobe PDF和協力廠商應用程式。
+* prism - [](https://www.prismstandard.org) www.prismstandard.org Publishing Requirements for Industry Standard Metadata（業界標準中繼資料的發佈需求）。
 * xmp
-* xmpPG —— 分頁文字的xmp
+* xmpPG —— 分頁文字的XMP中繼資料。
 
 ### 多媒體特定中繼資料 {#multimedia-specific-metadata}
 
-* xmpDM —— 動態媒體
-* xmpMM —— 媒體管理
+* xmpDM - [!DNL Dynamic Media].
+* xmpMM —— 媒體管理。
 
 ## 中繼資料導向的工作流程 {#metadata-driven-workflows}
 
 建立中繼資料導向的工作流程可協助您自動化某些程式，進而提高效率。 在元資料驅動的工作流中，工作流管理系統讀取該工作流並因此執行一些預定義的操作。 例如，您可使用中繼資料導向工作流程的一些方式：
 
-* 工作流程可檢查影像是否有標題。 如果沒有，系統會通知特定使用者新增標題。
-* 工作流程可以檢查資產上的版權聲明是否允許散發。 如果有，系統會將資產傳送至一個伺服器。 如果沒有，系統會將資產傳送至另一伺服器。
-* 工作流程可以檢查資產是否沒有預先定義的強制中繼資料，或是包含 *無效* 中繼資料。
+* 工作流程可以檢查影像是否有標題。 如果沒有，系統會通知您新增標題。
+* 工作流程可以檢查資產上的版權聲明是否允許散發。 因此，系統將資產發送到一個或另一個伺服器。
+* 工作流程可以檢查資產是否沒有預先定義的強制中繼資料，或是包含無效中繼資料 *的資* 產。
