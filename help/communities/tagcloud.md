@@ -1,8 +1,8 @@
 ---
 title: 使用Social Tag Cloud
 seo-title: 使用Social Tag Cloud
-description: 新增Social Tag cloud元件至頁面
-seo-description: 新增Social Tag cloud元件至頁面
+description: 新增Social Tag Cloud元件至頁面
+seo-description: 新增Social Tag Cloud元件至頁面
 uuid: 8c400030-976c-457a-bb5f-e473909647a9
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -49,27 +49,35 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-305](assets/chlimage_1-305.png)
 
-* **[!UICONTROL 顯示的社交標籤]**&#x200B;識別要顯示的UGC標籤。 下拉式選項包括
+* **[!UICONTROL 顯示的社交標籤]**&#x200B;識別要顯示的UGC標籤。 下拉式選項包括：
 
    * `From page and child pages`
    * `All tags`
    預設值 `From page and child pages`為，其中「頁面」是指下 **方的** 「頁面」設定。
 
-* **[!UICONTROL 頁面]**(若非頁面 `All tags)` 的UGC路徑，則為必要項目)。 如果保留空白，預設為目前頁面。
+* **[!UICONTROL 頁面]**
 
-* **[!UICONTROL 標籤上沒有連結]**&#x200B;如果勾選，標籤會以純文字顯示在標籤雲端。 如果取消勾選，標籤會顯示為活動連結，可搜尋套用該標籤的所有內容。 預設為未勾選，且 **[!UICONTROL 需要設定搜尋結果路徑]** 。
+   (若非頁面 `All tags)` 的UGC路徑，則為必要項目。 如果保留空白，預設為目前頁面。
 
-* **[!UICONTROL 搜尋結果路]**&#x200B;徑：放置元件之頁面的路徑， `Search Result` 設定為參照UGC，其中包含 **** Page設定所指定的UGC路徑。
+* **[!UICONTROL 標記上無連結]**
 
-## 變更Social Tag cloud的顯示 {#change-display-of-social-tag-cloud}
+   如果勾選，標籤會以純文字顯示在標籤雲端。 如果取消勾選，標籤會顯示為活動連結，可搜尋套用該標籤的所有內容。 預設為未勾選，且 **[!UICONTROL 需要設定搜尋結果路徑]** 。
+
+* **[!UICONTROL 搜尋結果路徑]**
+
+   放置元件的頁面路徑， `Search Result` 其設定為參照UGC，其中包含頁面設定所指定的UGC **路徑** 。
+
+## 變更Social Tag Cloud的顯示 {#change-display-of-social-tag-cloud}
 
 若要編輯 **Social Tag Cloud**，請進入「 [Design Mode](../../help/sites-authoring/default-components-designmode.md) 」（設計模式）並連按兩下置入的元件，以開啟具有其他標籤 `Social Tag Cloud` 的對話方塊。
 
-使用「 **[!UICONTROL Social Tag Cloud(Design)」標籤]** ，指定標籤的顯示方式。 標籤可以是簡單標籤、預設名稱空間中的單個單詞或分層分類：
+使用「 **[!UICONTROL Social標籤雲端（設計）」標籤]** ，指定標籤的顯示方式。 標籤可以是簡單標籤、預設名稱空間中的單個單詞或分層分類：
 
 ![chlimage_1-306](assets/chlimage_1-306.png)
 
-* **[!UICONTROL 顯示完整標題路徑]**&#x200B;如果勾選，則顯示父標籤的標題和每個套用標籤的名稱空間。
+* **[!UICONTROL 顯示完整的標題路徑]**
+
+   如果勾選，則顯示父標籤的標題和每個套用標籤的名稱空間。
 
    例如：
 
@@ -79,23 +87,31 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    預設為未勾選。
 
-* **[!UICONTROL 僅顯示葉標籤]**&#x200B;如果勾選，則僅顯示不含其他標籤的已套用標籤。
+* **[!UICONTROL 僅顯示葉標記]**
 
-   例如，若TagID為
+   如果勾選，則只會顯示不含其他標籤的已套用標籤。
+
+   例如，假設TagID為：
 
    `Geometrixx Media: Gadgets / Cars`
 
-   可套用3個標籤： `Geometrixx Media (the namespace)`、 `Gadgets`和 `Cars`
+   可套用3個標籤：
 
-   * 已勾選：只 `Cars` 會顯示，如果套用
-   * 未勾選：並 `Geometrixx Media` 且 `Gadgets``Cars` 會顯示（如果套用）
+   `Geometrixx Media (the namespace)`、 `Gadgets`和 `Cars`
+
+   * 已勾選：如果 `Cars` 套用，則只會顯示。
+   * 未勾選：並 `Geometrixx Media` 且如 `Gadgets`果套用 `Cars` ，也會顯示。
    簡單的標籤是葉標籤。
 
    預設為未勾選。
 
-* **[!UICONTROL 連結範本]**：當透過元件編輯對話方塊啟用連結時，用來在標籤雲端中顯示連結的範本（預設值除外）。
+* **[!UICONTROL 連結範本]**
 
-* **[!UICONTROL 所有標籤的大小相]**&#x200B;同如果勾選，則標籤雲中的所有字詞樣式都相同。 如果未勾選，字詞的樣式會根據其使用而不同。 預設為未勾選。
+   透過元件編輯對話方塊啟用連結時，用來在標籤雲端中顯示連結的範本（預設值除外）。
+
+* **[!UICONTROL 所有標記相同尺寸]**
+
+   如果勾選，標籤雲端中的所有字詞樣式都相同。 如果未勾選，字詞的樣式會根據其使用而不同。 預設為未勾選。
 
 ## 其他資訊 {#additional-information}
 
