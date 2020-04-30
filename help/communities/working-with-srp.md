@@ -11,18 +11,18 @@ content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
 
-# SRP —— 社群內容儲存{#srp-community-content-storage}
+# SRP —— 社群內容儲存 {#srp-community-content-storage}
 
 ## 簡介 {#introduction}
 
 自AEM Communities 6.1起，使用者產生的內容(UGC)會儲存在儲存資源提供者(SRP)提供的單一共用儲存區中。 有幾種SRP選項可供選擇，例如ASRP、MSRP和JSRP。
 
-與舊版不同，AEM例項間不會反向／正向複製UGC。 SRP可讓UGC直接存取，以便從所有作者和發佈例項建立、讀取、更新和刪除(CRUD)作業，但JSRP除外。
+與舊版不同，AEM例項中不會反向／正向複製UGC。 SRP可讓UGC直接存取，以便從所有作者和發佈例項建立、讀取、更新和刪除(CRUD)作業，但JSRP除外。
 
 以下是每 [個SRP選項的特性](#characteristics-of-srp-options)，在選擇適當的SRP和基礎部署時，這是決策過程的關 [鍵資訊](/help/communities/topologies.md)。
 
@@ -32,15 +32,19 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
 >
 >SRP僅適用於社群內容。 它不會影響網站內容的儲存位置(節點儲存[)，也不會影響AEM例項之間使用者註冊、使用者設定檔和使用者群組的安全處理(另請參閱](/help/sites-deploying/data-store-config.md)管理使用者資料 [](#managing-user-data))。
 
+
 >[!CAUTION]
 >
 >自AEM 6.1起， [UGC將不複製](#ugc-never-replicated)。
 >
 >當部署不包含公用商店(例如預設 [JSRP](/help/communities/topologies.md#jsrp) 拓撲)時，UGC只會顯示在輸入AEM發佈或作者例項上。 只有當拓撲包含發佈群集時，UGC才會顯示在任何發佈實例上。
 
+
 ## SRP選項的特點 {#characteristics-of-srp-options}
 
-[ASRP - Adobe儲存資源供應商](/help/communities/asrp.md)使用此選項，UGC會在Adobe代管和管理的雲端服務中遠端保存。 它需要額外的授權，並與帳戶代表合作為該特定授權提供帳戶。 ASRP要求：
+[ASRP - Adobe儲存資源供應商](/help/communities/asrp.md)
+
+使用這個選項，UGC會在Adobe代管和管理的雲端服務中遠端保存。 它需要額外的授權，並與帳戶代表合作為該特定授權提供帳戶。 ASRP要求：
 
 * Adobe提供並支援的相關雲端服務，以儲存社群內容。
 * 在特定地理位置（美國、歐洲、中東和非洲、亞太地區）選擇資料中心。
@@ -49,14 +53,17 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
 
 ASRP適合：
 
-* for TarMK publish farm.
+* 適用於TarMK發佈農場。
 * 當沒有投資本地儲存的意圖時。
 
 >[!NOTE]
 >
 >ASRP中的貼文（或留言）上傳附件的限制為50 MB。
 
-[MSRP - MongoDB儲存資源提供](/help/communities/msrp.md)器使用此選項，UGC直接保存在本地MongoDB實例中。
+
+[MSRP - MongoDB儲存資源提供程式](/help/communities/msrp.md)
+
+使用此選項，UGC會直接保存在本地MongoDB實例中。
 
 MSRP需要：
 
@@ -70,9 +77,11 @@ ASRP適合：
 * 用於MongoMK或RdbMK群集。
 * 當需要大量社群內容時。
 
-[DSRP —— 關係資料庫儲存資源提](/help/communities/dsrp.md)供器使用此選項，UGC將直接保存在本地MySQL資料庫實例中。
+[DSRP —— 關係資料庫儲存資源提供程式](/help/communities/dsrp.md)
 
-DSRP要求：
+使用此選項，UGC將直接保存在本地MySQL資料庫實例中。
+
+DSRP需要：
 
 * 本地安裝MySQL以儲存社區內容。
 * 本機安裝Apache Solr。
@@ -84,7 +93,9 @@ DSRP適合：
 * 用於MongoMK或RdbMK群集。
 * 當需要大量社群內容時。
 
-[JSRP - JCR儲存資源提供程式](/help/communities/jsrp.md)使用預設選項，沒有通用儲存。 UGC僅會與輸入AEM例項的相同JCR儲存庫中持續存在。
+[JSRP - JCR儲存資源提供商](/help/communities/jsrp.md)
+
+使用預設選項時，沒有共用商店。 UGC僅會與輸入AEM例項的相同JCR儲存庫中持續存在。
 
 JSRP:
 
@@ -100,7 +111,7 @@ JSRP:
 
 如需每個選項的設定詳細資訊，請參閱：
 
-* [ASRP - adobe儲存資源供應商](/help/communities/asrp.md)
+* [ASRP - Adobe儲存資源供應商](/help/communities/asrp.md)
 * [MSRP - MongoDB儲存資源提供程式](/help/communities/msrp.md)
 * [DSRP —— 關係資料庫儲存資源提供程式](/help/communities/dsrp.md)
 * [JSRP - JCR儲存資源提供商](/help/communities/jsrp.md)
