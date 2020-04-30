@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -27,7 +27,7 @@ AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AE
 
 * [DSRP —— 關係資料庫儲存資源提供程式](dsrp.md)
 * [MSRP - MongoDB儲存資源提供程式](msrp.md)
-* [ASRP - adobe儲存資源供應商](asrp.md)
+* [ASRP - Adobe儲存資源供應商](asrp.md)
 
 另一個SRP選項 [JSRP - JCR儲存資源提供方](jsrp.md)，不支援作者的通用UGC儲存，也不支援將環境發佈到兩者訪問。
 
@@ -39,9 +39,11 @@ AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AE
 >
 >當部署不包含公用 [商店](working-with-srp.md),UGC只會顯示在輸入AEM發佈或作者例項上。
 
+
 >[!NOTE]
 >
 >如需AEM平台的詳細資訊，請參 [閱Recommended Deployments](../../help/sites-deploying/recommended-deploys.md) [and Introduction to the AEM Platform](../../help/sites-deploying/data-store-config.md)。
+
 
 ## 適用於生產 {#for-production}
 
@@ -49,9 +51,9 @@ AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AE
 
 兩個範例：
 
-1) 如果預期的UGC量很高，且可能有本機MongoDB例項，則選擇為 [MSRP](msrp.md)。
+1. 如果預期的UGC量很高，且可能有本機MongoDB例項，則選擇為 [MSRP](msrp.md)。
 
-2) 為獲得頁面內容的最佳效能，選擇發佈群 [和](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)[ASRP](asrp.md) ，可提供相對簡單的作業來最佳化UGC縮放。
+1. 為獲得頁面內容的最佳效能，選擇發佈群 [和](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)[ASRP](asrp.md) ，可提供相對簡單的作業來最佳化UGC縮放。
 
 對於這兩者，部署可能基於任何OAK微內核。
 
@@ -61,7 +63,7 @@ AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AE
 
 ### TarMK發佈群組 {#tarmk-publish-farm}
 
-當拓撲為發佈場時，相關重要主題為
+當拓撲為發佈場時，相關重要主題為：
 
 * [用戶同步](sync.md)
 * [管理使用者和使用者群組](users.md)
@@ -100,7 +102,7 @@ AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AE
 
 * UGC通 [用商店](working-with-srp.md)
 
-   說明將社群內容與網站內容分開的儲存方式
+   說明社群內容與網站內容分開的儲存方式。
 
 * [節點儲存和資料儲存](../../help/sites-deploying/data-store-config.md)
 
