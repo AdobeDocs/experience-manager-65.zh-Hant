@@ -3,7 +3,7 @@ title: 處理資產以完成業務流程、進行審核、實現法規遵從性�
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
 
 ![部分預設工作流程](assets/aem-default-workflows.png)
 
-*圖：部分預設工作流程可用於[!DNL Experience Manager]*
+*圖：中提供的部分預設工作流程[!DNL Experience Manager]。*
 
 ## 將工作流程套用至處理資產 {#applying-workflows-to-assets}
 
