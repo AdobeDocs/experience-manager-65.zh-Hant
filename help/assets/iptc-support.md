@@ -1,24 +1,24 @@
 ---
-title: 支援IPTC中繼資料
-description: 瞭解Adobe Experience Manager(AEM)Assets如何透過Adobe Bridge和其他Creative Apps支援IPTC中繼資料、創意評分和新增至資產的關鍵字。
+title: 在[!DNL Adobe Experience Manager Assets]中使用IPTC中繼資料。
+description: 瞭解[!DNL Adobe Experience Manager Assets]如何支援透過Adobe Bridge和其他Creative Apps新增至資產的IPTC中繼資料、創意評分和關鍵字。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
-# 支援IPTC中繼資料 {#support-for-iptc-metadata}
+# 使用IPTC中繼資料 {#support-for-iptc-metadata}
 
-瞭解Adobe Experience Manager(AEM)Assets如何透過Adobe Bridge和其他Creative Apps支援IPTC中繼資料、創意評分和新增至資產的關鍵字。
+瞭解如何 [!DNL Adobe Experience Manager Assets] 支援透過和其他應用程式新增至資產的IPTC中繼資料、創意評 [!DNL Adobe Bridge] 分和關 [!DNL Adobe Creative Cloud] 鍵字。
 
-Adobe Experience Manager(AEM)Assets支援IPTC中繼資料標準，此標準廣泛用於描述資產。 如此，AEM Assets就可增強各方對其影像的接受度，包括攝影師、創意廣告公司、圖書館、博物館等。
+[!DNL Adobe Experience Manager Assets] 支援廣泛用於描述資產的IPTC中繼資料標準。 如此， [!DNL Assets] 就可提高攝影師、創意廣告公司、圖書館、博物館等各方對影像的接受度。
 
 資產的預設中繼資料結構現在整合了IPTC核心和IPTC擴充功能中繼資料結構，以定義完整的中繼資料屬性，讓使用者新增有關影像中顯示之人物、位置和產品的精確可靠資料。 它也支援建立影像的日期、名稱和識別碼，並提供彈性的方式來表達權限資訊。
 
 資產的「屬性」頁面現在包含個別的標籤，可在可編輯欄位中顯示「IPTC核心」和「IPTC擴充功能」中繼資料。
 
-1. 從「資產」使用者介面中，選取影像。
+1. 從使用者 [!DNL Assets] 介面中，選取影像。
 1. 從工具 **[!UICONTROL 列按一下]** 「屬性」。
 1. 按一下 **[!UICONTROL IPTC]** 標籤，以檢視資產的IPTC中繼資料。
 1. 視需要編輯IPTC中繼資料屬性。
