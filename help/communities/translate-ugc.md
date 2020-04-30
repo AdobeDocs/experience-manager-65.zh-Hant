@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,13 +21,13 @@ AEM Communities的轉譯功能將頁面內容轉譯至使用 [社交元件架構
 
 UGC的轉譯可讓網站訪客和成員透過移除語言障礙，體驗全球社群。
 
-例如，假設，
+例如，假設：
 
-* 一位來自法國的成員用法語向一家跨國烹飪網站的社區論壇發佈食譜
-* 另一位來自日本的會員使用翻譯功能觸發將配方從法語翻譯成日語
-* 讀完日文配方後，來自日本的會員接著以日文發表評論
-* 來自法國的成員使用翻譯功能將日文注釋翻譯成法文
-* 全球通訊！
+* 一位來自法國的成員用法語向一家跨國烹飪網站的社區論壇發佈配方。
+* 另一位來自日本的會員使用翻譯功能觸發將配方從法語翻譯成日語。
+* 讀完日文配方後，來自日本的會員會以日文發表評論。
+* 來自法國的成員使用翻譯功能將日文注釋翻譯成法文。
+* 全球通訊。
 
 ## 概覽 {#overview}
 
@@ -49,6 +49,7 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 >
 >對於生產系統，需要許可的翻譯服務。 如果未獲得許可，則應關閉預設的翻 [譯服務](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)。
 
+
 ## UGC的全球翻譯 {#global-translation-of-ugc}
 
 當網站有多種語 [言副本](../../help/sites-administering/tc-prep.md)，預設翻譯服務不會識別在某個網站上輸入的UGC可能與在另一個網站上輸入的UGC有關，因為UGC實際上是由同一元件（包含該元件的頁面的語言副本）產生。
@@ -67,6 +68,7 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 >
 >沒有移轉工具可將特定語言的內容移入或合併至全域共用商店。
 
+
 ### 翻譯整合配置 {#translation-integration-configuration}
 
 要建立新的翻譯整合，將翻譯服務連接器與作者實例上的網站整合：
@@ -79,11 +81,11 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 * 選擇 **[!UICONTROL 雲端服務]**
 * 向下捲動到翻 **[!UICONTROL 譯整合]**
 
-![chlimage_1-65](assets/chlimage_1-65.png)
+   ![chlimage_1-65](assets/chlimage_1-65.png)
 
 * 選擇 **[!UICONTROL 顯示配置]**
 
-![chlimage_1-66](assets/chlimage_1-66.png)
+   ![chlimage_1-66](assets/chlimage_1-66.png)
 
 * 選擇 `[+]` 可用配置旁 **[!UICONTROL 邊的表徵圖]** ，以建立新配置
 
@@ -91,13 +93,19 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-* **[!UICONTROL 父配置]**（必要）通常保留為預設值。 預設為 `/etc/cloudservices/translation`。
+* **[!UICONTROL 父設定]**
 
-* **[!UICONTROL 標題]**（必要）輸入您選擇的顯示標題。 無預設值。
+   （必要）通常保留為預設值。 預設為 `/etc/cloudservices/translation`。
 
-* **[!UICONTROL 名稱]**（可選）輸入配置的名稱。 預設值是基於「標題」的節點名稱。
+* **[!UICONTROL 標題]**
 
-* 選擇「創 **[!UICONTROL 建」]**
+   （必要）輸入您選擇的顯示標題。 無預設值。
+
+* **[!UICONTROL 名稱]**
+
+   （可選）輸入配置的名稱。 預設值是基於「標題」的節點名稱。
+
+* Select **[!UICONTROL Create]**
 
 #### 翻譯配置對話框 {#translation-config-dialog}
 
@@ -105,15 +113,16 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 
 有關詳細說明，請 [訪問建立翻譯整合配置](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
 
-* **[!UICONTROL 「站點]** 」頁籤：可保留為預設值
+* **[!UICONTROL 「站點]** 」頁籤：可以保留為預設值。
+
 * **[!UICONTROL 「社群]** 」頁籤：
    * **[!UICONTROL 翻譯提供]**&#x200B;者從下拉清單中選擇翻譯提供者。 預設為 `microsoft`試用服務。
 
    * **[!UICONTROL 內容類]**&#x200B;別：選擇說明要翻譯內容的類別。 預設值為 `General.`
 
-   * ****&#x200B;選擇地區……（選擇性）透過選取儲存UGC的地區設定，所有語言副本的貼文都會出現在一個全域對話中。 依慣例，選擇網站基 [本語言的地](sites-console.md#translation) 區設定。 選擇 `No Common Store` 將禁用全局轉換。 預設情況下，全局轉換處於禁用狀態。
+   * **[!UICONTROL 選擇地區……]**（選擇性）透過選取儲存UGC的地區設定，所有語言副本的貼文都會出現在一個全域對話中。 依慣例，選擇網站基 [本語言的地](sites-console.md#translation) 區設定。 選擇 `No Common Store` 將禁用全局轉換。 預設情況下，全局轉換處於禁用狀態。
 
-* **[!UICONTROL 「資產]** 」標籤：可保留為預設值
+* **[!UICONTROL 「資產]** 」標籤：可以保留為預設值。
 * 選擇「確 **[!UICONTROL 定」]**
 
 #### 啟動 {#activation}
@@ -131,6 +140,7 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 >首選語言是當網站訪客登入並指定語言偏好設定時，在使用者描述檔中設定的語言偏好設定。
 >
 >當網站訪客是匿名的，或未在其描述檔中指定語言偏好設定時，首選語言是頁面範本的基本語言。
+
 
 ### 使用者偏好設定 {#user-preference}
 
