@@ -3,7 +3,7 @@ title: 比較AEM Assets和AEM Media Library產品
 description: 比較AEM Assets和AEM Media Library產品，並瞭解其差異。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 476a8acbca2f498472225fe1df220f63eafe61e5
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -72,29 +72,28 @@ AEM Assets客戶僅能使用的獨特功能包括：
 * 處理設定檔
 * InDesign Server整合
 * 資產範本和型錄製作者架構
-* Adobe Photoshop、Illustrator和InDesign連結資產
+* Adobe Photoshop、Adobe Illustrator和Adobe InDesign整合
 * 多語言資產管理
 * PIM整合
-* Rights Management
+* 權限管理
 * Camera RAW支援
 * 搜尋Facet管理與設定
 * 預先建立的DAM工作流程（例如像片拍攝）
-* 資產報告與分析：資產見解
+* 資產報告與分析，稱為「前瞻分析」
 * 3D資產管理
 * 連線資產
 * 品牌入口網站
 * 自助服務存取
 * 瀏覽、搜尋和下載
 * 系列和資料夾共用
-* 管理工具
-* 智慧標記
+* 管理工具和介面
+* 智慧標籤
 * 視覺搜尋
-* 資產管理UI
 
 **媒體庫**
 
 * 基本中繼資料屬性
-* 標記管理
+* 標籤管理
 * 版本控制
 * 靜態轉譯
 * 專案、工作、工作流程編寫
@@ -102,4 +101,4 @@ AEM Assets客戶僅能使用的獨特功能包括：
 * 查詢產生器(API)
 * Marketing Cloud整合
 * UI自訂與擴充功能
-* 注釋與注釋
+* 注釋和注釋
