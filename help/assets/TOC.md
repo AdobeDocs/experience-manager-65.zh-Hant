@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assets使用指南
 translation-type: tm+mt
-source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -103,7 +103,7 @@ source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
    + [使用PDF點陣化器](aem-pdf-rasterizer.md)
    + [設定上傳限制](configuring-asset-upload-restrictions.md)
    + [AEM與Creative Cloud整合最佳實務](aem-cc-integration-best-practices.md)
-   + [與InDesign伺服器整合](indesign.md)
+   + [與InDesign Server整合](indesign.md)
    + [中繼資料設定檔](metadata-profiles.md)
    + [資產中的數位版權管理](drm.md)
    + [使用示範套件獲取資產見解](touch-ui-using-demo-package-for-asset-insights.md)
@@ -122,10 +122,10 @@ source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
    + [資料夾中繼資料結構](folder-metadata-schema.md)
    + [管理智慧標籤](managing-smart-tags.md)
 + 品牌入口網站 {#brandportal}
-   + [使用品牌入口網站設定AEM資產](configure-aem-assets-with-brand-portal.md)
-   + [將資產發佈至品牌入口網站](brand-portal-publish-assets.md)
-   + [將資料夾發佈至品牌入口網站](brand-portal-publish-folder.md)
-   + [將系列發佈至品牌入口網站](brand-portal-publish-collection.md)
+   + [使用 Brand Portal 設定 AEM Assets](configure-aem-assets-with-brand-portal.md)
+   + [將資產發佈至 Brand Portal](brand-portal-publish-assets.md)
+   + [將資料夾發佈至 Brand Portal](brand-portal-publish-folder.md)
+   + [將集合發佈至 Brand Portal](brand-portal-publish-collection.md)
 + 內容片段 {#fragments}
    + [使用內容片段](content-fragments.md)
    + [管理內容片段](content-fragments-managing.md)
