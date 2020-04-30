@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
-# 群組範本{#group-templates}
+# 群組範本 {#group-templates}
 
 「群組範本」主控台類似於「網 [站範本](/help/communities/sites.md) 」主控台。 兩者都是構成社群網站的預先連線頁面和功能的藍圖。 區別在於，網站範本是主社群的範本，而群組範本是社群群組（主社群內巢狀的子社群）的範本。
 
@@ -28,7 +28,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 >[!NOTE]
 >
->用於建立社區站點的控 [制台](/help/communities/sites-console.md)、社 [區站點模板](/help/communities/sites.md)、 [社區組模板和社區功](/help/communities/tools-groups.md)[](/help/communities/functions.md) 能僅供作者環境使用。
+>用於建立社區站點的控 [制台](/help/communities/sites-console.md)、社 [區站點模板](/help/communities/sites.md)、 [社區組模板和社](/help/communities/tools-groups.md)[](/help/communities/functions.md) 區功能僅在作者環境中使用。
+
 
 ## 群組範本主控台 {#group-templates-console}
 
@@ -42,7 +43,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 建立群組範本 {#create-group-template}
 
-若要開始建立新群組範本，請選取 `Create`
+若要開始建立新群組範本，請選取 `Create`。
 
 這會顯示「網站編輯器」面板，其中包含3個子面板：
 
@@ -52,15 +53,17 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在「基本資訊」面板上，會設定名稱、說明以及範本是啟用還是停用：
 
-* **新群組範本名稱**&#x200B;範本名稱ID
+* **新群組範本名稱**
+
+   範本名稱ID。
 
 * **說明**
 
-   範本說明
+   範本說明。
 
 * **已禁用／啟用**
 
-   切換開關控制模板是否可引用
+   控制模板是否可引用的切換開關。
 
 #### 縮圖 {#thumbnail}
 
@@ -78,6 +81,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >仍不允許將群組函式新增為範本中的第一個或唯一函式。
 
+
 ![群組範本編輯器](assets/template-editor.png)
 
 若要新增社群功能，請依網站功能表連結的顯示順序，從右側拖曳至左側。 在建立網站時，樣式會套用至範本。
@@ -88,7 +92,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![拖曳函式](assets/dragfunctions.png)
 
-將所有所需功能拖放至範本建立工具區域並加以設定後，請選取右上角的「儲存**」。
+將所有所需功能拖放至範本產生器區域並加以設定後，請選取右上角的「 **Save** 」（儲存）。
 
 ## 編輯群組範本{#edit-group-template}
 
