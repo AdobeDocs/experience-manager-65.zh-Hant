@@ -11,24 +11,28 @@ content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
 # 社群工具 {#communities-tools}
 
-在作者中，若要存取Communities工具主控台：
+若要存取Communities工具主控台，請登入您的作者實例：
 
-* 從全域導覽：工 **[!UICONTROL 具>社群]**
+* 從全域導覽：工 **[!UICONTROL 具]** > **[!UICONTROL 社群]**。
 
-![chlimage_1-129](assets/chlimage_1-129.png)
+   ![chlimage_1-129](assets/chlimage_1-129.png)
 
-* [站點模板](sites.md) -用於建立和管理站點模板的控制台
-* [群組範本](tools-groups.md)-用於建立和管理群組範本的主控台
-* [社群功能](functions.md)-用於建立和管理社群功能的主控台
-* [儲存配置](srp-config.md) -用於配置和選擇預設SRP的 [控制台](working-with-srp.md)
+* [站點模板](sites.md) -用於建立和管理站點模板的控制台。
+
+* [群組範本](tools-groups.md) -用於建立和管理群組範本的主控台。
+
+* [社群功能](functions.md) -用於建立和管理社群功能的主控台。
+
+* [儲存配置](srp-config.md) -用於配置和選擇預設SRP的 [控制台](working-with-srp.md)。
 
 * [元件指南](components-guide.md) -開啟一個互動式站點，允許對SCF元件的工作方式以及如何配置或定制它們進行實驗。
+
 * [標章](badges.md) -可從中新增自訂標章以用於計分和標章規 [則的主控台](implementing-scoring.md)
 
