@@ -1,28 +1,28 @@
 ---
-title: 使用AEM Assets處理各種支援檔案格式的最佳實務。
-description: 使用AEM Assets處理各種支援檔案類型的最佳實務。
+title: 使用[!DNL Adobe Experience Manager Assets]處理各種支援檔案格式的最佳實務。
+description: 使用[!DNL Experience Manager Assets]處理各種支援檔案類型的最佳實務。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 資產檔案格式最佳實務 {#assets-file-format-best-practices}
 
-AEM Assets支援許多專屬和協力廠商的檔案格式程式庫，以符合使用者的多種檔案支援需求。 支援的Adobe程式庫包括Adobe Camera Raw、Gibson、Adobe PDF Rasterizer和Adobe InDesign Server。 此外，AEM Assets還支援協力廠商資料庫，包括ImageMagick、TwelveMones等。
+[!DNL Adobe Experience Manager Assets] 支援許多專屬和協力廠商的檔案格式程式庫，以符合使用者的多種檔案支援需求。 支援的Adobe程式庫 [!DNL Adobe Camera Raw]包括、Gibson、Adobe PDF Rasterizer和 [!DNL Adobe InDesign Server]。 此外，還 [!DNL Experience Manager Assets] 支援協力廠商資料庫， [!DNL ImageMagick]包括 [!DNL TwelveMonkeys]、等等。
 
 如需支援的檔案格式，請參閱「 [Assets支援的格式」](/help/assets/assets-formats.md)。
 
 >[!TIP]
 >
->如果您在Adobe Managed Services(AMS)上使用Experience Manager，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe支援。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 Experience Manager可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
+>如果您正在使 [!DNL Experience Manager] 用Adobe Managed Services(AMS)，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe客戶服務。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理高解析度、超過30000 x 23000像素的PSB檔案。
 
-## Adobe Camera Raw資料庫 {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw] 資料庫 {#adobe-camera-raw-library}
 
-為獲得最佳效能，Adobe建議使用Adobe Camera Raw程式庫來處理RAW和DNG檔案。
+為獲得最佳效能，Adobe建議使 [!DNL Adobe Camera Raw] 用RAW和DNG檔案的程式庫。
 
-Adobe Camera Raw程式庫支援CMYK色彩描述檔作為輸入。 但是，它僅支援JPEG格式的輸出，並且在RGB顏色空間中生成輸出。 它不會在縮圖中保留原始檔案的色域（例如CMYK）。
+[!DNL Adobe Camera Raw] 資料庫支援CMYK色彩描述檔作為輸入。 但是，它僅支援JPEG格式的輸出，並且在RGB顏色空間中生成輸出。 它不會在縮圖中保留原始檔案的色域（例如CMYK）。
 
 如需詳細資訊，請參 [閱Camera Raw支援](/help/assets/camera-raw.md)。
 
@@ -36,26 +36,26 @@ Adobe Camera Raw程式庫支援CMYK色彩描述檔作為輸入。 但是，它�
 
 使用PDF點陣化器產生的縮圖和預覽，比現成可用的點陣化輸出更具品質。 Adobe PDF Rasterizer程式庫不支援任何色域轉換。 不論來源PDF檔案的色域為何，Adobe PDF Rasterizer都只會產生RGB輸出。
 
-## Adobe InDesign Server {#adobe-indesign-server}
+## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
-Adobe建議您使用Adobe InDesign Server擷取Adobe InDesign專用的轉譯，例如IDML和HTML。 如需詳細資訊，請 [參閱「在Adobe InDesign中新增AEM資產作為參考」](/help/assets/managing-linked-subassets.md#refai)。
+Adobe建議您使 [!DNL Adobe InDesign Server] 用擷取 [!DNL Adobe InDesign]特定轉譯，例如IDML和HTML。 如需詳細資訊，請 [參閱「在Adobe InDesign中新增Experience Manager資產作為參考」](/help/assets/managing-linked-subassets.md#refai)。
 
-## 動態媒體  {#dynamic-media}
+## [!DNL Dynamic Media]  {#dynamic-media}
 
-動態媒體透過其全球、可擴充且最佳化效能的網路，即時產生並提供多種多樣化內容。 它提供互動式檢視體驗，並簡化數位宣傳管理程式。 如需啟用動態媒體的詳細資訊，請參 [閱設定動態媒體](/help/assets/config-dynamic.md)。
+[!DNL Dynamic Media] 透過全球、可擴充且效能最佳化的網路，即時產生和提供多種多樣化內容。 它提供互動式檢視體驗，並簡化數位宣傳管理程式。 如需啟用的詳細資 [!DNL Dynamic Media]訊，請 [參閱設定動態媒體](/help/assets/config-dynamic.md)。
 
-目前，動態媒體可支援每個檔案高達20 GB的內容。
+目前， [!DNL Dynamic Media] 每個檔案最多可支援20 GB的內容。
 
 ## ImageMagick程式庫 {#imagemagick-library}
 
 Adobe建議在下列情況下使用ImageMagick程式庫：
 
-* 為EPS檔案生成縮略圖轉譯
-* 若要保留影像描述檔資訊
-* 要保留透明度
-* 要處理PSD和PSB檔案
+* 生成EPS檔案的縮略圖轉譯。
+* 保留影像描述檔資訊。
+* 保留透明度。
+* 處理PSD和PSB檔案。
 
-若要瞭解如何在AEM中設定ImageMagic程式庫，請參 [閱使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)。 如需最佳使用方式，請參 [閱設定ImageMagick的最佳實務](/help/assets/best-practices-for-imagemagick.md)。
+要瞭解如何在中設定 [!DNL ImageMagick] 庫，請 [!DNL Experience Manager]參 [閱使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)。 如需最佳使用方式，請參 [閱設定ImageMagick的最佳實務](/help/assets/best-practices-for-imagemagick.md)。
 
 ## 影像轉碼程式庫 {#image-transcoding-library}
 
