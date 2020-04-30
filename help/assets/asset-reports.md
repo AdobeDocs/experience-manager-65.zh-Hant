@@ -3,7 +3,7 @@ title: 有關您數位資產的報告
 description: 瞭解AEM Assets中有關您資產的報表，以協助您瞭解數位資產的使用、活動和共用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -38,12 +38,12 @@ AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員�
 
 1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
 
-![「工具」頁面，以導覽資產報表](assets/AssetsReportNavigation.png)
+![](assets/AssetsReportNavigation.png)
 
 1. 在「資 [!UICONTROL 產報表] 」頁面上，按 **[!UICONTROL 一下工具]** 列中的「建立」。
 1. 從「建 **[!UICONTROL 立報表]** 」頁面，選擇您要建立的報表，然後按一下「下 **[!UICONTROL 一步」]**。
 
-   ![選擇報表類型](assets/choose_report.png)
+   ![](assets/choose_report.png)
 
    >[!NOTE]
    >
@@ -55,7 +55,7 @@ AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員�
 
 1. 在儲存報表的CRX儲存庫中設定報表詳細資訊，例如標題、說明、縮圖和資料夾路徑。 預設情況下，資料夾路徑為 `/content/dam`。 您可以指定不同的路徑。
 
-   ![新增報表詳細資訊的頁面](assets/report_configuration.png)
+   ![](assets/report_configuration.png)
 
    選擇報表的日期範圍。
 
@@ -71,32 +71,32 @@ AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員�
    >
    >「磁 **[!UICONTROL 碟使用情況]** 」報表不包含日期範圍欄位，因為它僅表示目前的磁碟空間使用情況。
 
-   ![「 Disk Usage 」報告的詳細資訊頁](assets/disk_usage_configuration.png)
+   ![](assets/disk_usage_configuration.png)
 
    當您建立「檔 **[!UICONTROL 案]** 」報表時，可以包含／排除子資料夾。 不過，您無法為此報表包含資產轉譯。
 
-   ![「檔案」報表的詳細資訊頁面](assets/files_report.png)
+   ![](assets/files_report.png)
 
    「連 **[!UICONTROL 結共用]** 」報表會顯示資產的URL，這些資產是從AEM Assets內與外部使用者共用的。它包含共用資產之使用者的電子郵件ID、共用資產之使用者的電子郵件ID、連結的共用日期和到期日。欄無法自訂。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
-   ![「連結共用」報表的詳細資訊頁面](assets/link_share.png)
+   ![](assets/link_share.png)
 
 1. 從工具 **[!UICONTROL 列按一下]** 「下一步」。
 
 1. 在「設 **[!UICONTROL 定欄]** 」頁面中，某些欄會依預設顯示在報表中。 您可以選取更多欄。 取消選取選取的欄，將其排除在報表中。
 
-   ![選取或取消選取報表欄](assets/configure_columns.png)
+   ![](assets/configure_columns.png)
 
    若要顯示自訂欄名稱或屬性路徑，請在CRX的jcr:content節點下，設定資產二進位檔的屬性。 或者，透過屬性路徑選擇器加入。
 
-   ![選取或取消選取報表欄](assets/custom_columns.png)
+   ![](assets/custom_columns.png)
 
 1. 從工具 **[!UICONTROL 列按一下]** 「建立」。 訊息會通知報表產生已開始。
 1. 在「資產報表」頁面中，報表產生狀態是根據報表工作的目前狀態，例如「成功」、「失敗」、「已佇列」或「已排程」。 通知收件箱中會顯示相同的狀態。要查看報告頁，請按一下報告連結。 或者，選取報表，然後從工具列按 **[!UICONTROL 一下]** 「檢視」。
 
-   ![產生的報表](assets/report_page.png)
+   ![](assets/report_page.png)
 
    按一 **[!UICONTROL 下工具]** 列中的「下載」，以下載CSV格式的報表。
 
@@ -120,11 +120,11 @@ AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員�
 
 1. 要顯示自定義列，請在「自定義列」下指定列 **[!UICONTROL 的名稱]**。
 
-   ![指定報表的自訂欄名稱](assets/custom_columns-1.png)
+   ![](assets/custom_columns-1.png)
 
 1. 使用屬性路徑選擇器在CRXDE `jcr:content` 的節點下添加屬性路徑。 或者，在屬性路徑欄位中鍵入路徑。
 
-   ![從jcr:content中的路徑映射屬性路徑](assets/property_picker.png)
+   ![](assets/property_picker.png)
 
    若要新增更多自訂欄，請按一 **[!UICONTROL 下「新增]** 」，然後重複步驟5和6。
 
