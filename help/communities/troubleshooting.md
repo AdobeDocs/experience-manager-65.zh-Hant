@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -31,9 +31,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 如果論壇是在CQ 5.4上建立並張貼主題，然後網站已升級至AEM 5.6.1或更新版本，嘗試檢視現有貼文可能會在頁面上造成錯誤：
 
-非法模式字元&#39;a無法在此伺服器上將要求傳送至/content/demoforums/forum-test.html
-
-而記錄檔包含下列內容：
+非法模式字元&#39;a&#39;無法在此伺服器上 `/content/demoforums/forum-test.html` 提供要求，而記錄檔包含下列項目：
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -44,7 +42,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 問題是com.day.cq.commons.date.RelativeTimeFormat的格式字串在5.4和5.5之間變更，因此不再接受&quot;ago&quot;的&quot;a&quot;。
 
-因此，使用RelativeTimeFormat()API的任何程式碼都需要變更
+因此，使用RelativeTimeFormat()API的任何程式碼都需要變更：
 
 * 從: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * 至: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
@@ -59,9 +57,9 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 在啟動期間（不是第1次——但之後的每次），記錄檔中可能會出現下列警告：
 
-* 11.04.2014 08:38:07.223 **WARN**[]FelixStartLevelcom.github.jkank.handlebars.Handlebars Helper &#39;i18n&#39;已由&#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;取代
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` 已被 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-此警告可以安全地忽略，因為 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)，使用jkanc.handlebars。Handlebars隨附其i18n輔助工具。 啟動時，會以AEM專用的 [i18n協助程式取代它](handlebars-helpers.md#i-n)。 此警告由協力廠商程式庫產生，以確認覆寫現有協助程式。
+此警告可安全地忽略 `jknack.handlebars.Handlebars`，因為 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)隨附其i18n幫助實用程式。 啟動時，會以AEM專用的 [i18n協助程式取代它](handlebars-helpers.md#i-n)。 此警告由協力廠商程式庫產生，以確認覆寫現有協助程式。
 
 ### 記錄檔警告：OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
