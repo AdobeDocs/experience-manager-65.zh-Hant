@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 社群功能 {#communities-features}
 
-可設定為允許標籤的AEM Communities功能為
+可設定為允許標籤的AEM Communities功能包括：
 
 * [部落格](blog-feature.md)
 * [日曆](calendar.md)
@@ -41,7 +41,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 如需開 [發人員資訊](tag.md) ，請參閱Tag Essentials。
 
-請參 [閱使用Social Tag Cloud](tagcloud.md) ，將Social Tag cloud元件新增至頁面，以利使用套用的標籤搜尋已張貼的UGC。
+請參 [閱使用Social Tag Cloud](tagcloud.md) ，將Social Tag Cloud元件新增至頁面，以利使用套用的標籤搜尋已張貼的UGC。
 
 ### 標籤權限 {#tag-permissions}
 
@@ -51,7 +51,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 請參閱 [設定標籤權限](../../help/sites-administering/tags.md#setting-tag-permissions)。
 
-以下是當管理員將讀取權限套用至群組時，在CRXDE中 `/etc/tag/discussions` 的顯示方式 `*Community Engage Members*`。
+以下是當管理員將讀取權限套用至群組時，在CRXDE中 `/etc/tag/discussions` 的顯示方式 `Community Engage Members`。
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
