@@ -1,16 +1,16 @@
 ---
 title: 相關資產
-description: 瞭解如何建立共用特定共同屬性的資產的關聯。 您也可以使用此功能來建立資產間的來源／衍生關係。
+description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 相關資產 {#related-assets}
 
-Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組織的需求手動建立資產關聯。 例如，您可以將授權檔案與類似主題上的資產或影像／視訊建立關聯。 您可以建立與共用特定共同屬性的資產關聯。 您也可以使用此功能來建立資產間的來源／衍生關係。 例如，如果您有PDF檔案是從INDD檔案產生，則可將PDF檔案與其來源INDD檔案建立關聯。
+[!DNL Adobe Experience Manager Assets] 可讓您使用相關資產功能，根據組織的需求手動建立資產關聯。 例如，您可以將授權檔案與類似主題上的資產或影像／視訊建立關聯。 您可以建立與共用特定共同屬性的資產關聯。 您也可以使用此功能來建立資產間的來源／衍生關係。 例如，如果您有PDF檔案是從INDD檔案產生，則可將PDF檔案與其來源INDD檔案建立關聯。
 
 使用此功能，您就可以彈性地與廠商或機構共用低解析度的PDF檔案或JPG檔案，並且只有在要求時才提供高解析度的INDD檔案。
 
@@ -19,11 +19,11 @@ Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組
 
 ## Relate assets {#relating-assets}
 
-1. 從AEM介面，開啟您 **[!UICONTROL 要建立關聯之資產的「屬性]** 」頁面。
+1. 從Experience Manager介面，開啟您 **[!UICONTROL 要建立關聯之資產的]** 「屬性」頁面。
 
    ![開啟資產的「屬性」頁面，以建立資產的關聯](assets/asset-properties-relate-assets.png)
 
-   *圖：「資產屬性」頁以關聯資產*
+   *圖：「[!DNL Assets]屬[!UICONTROL 性]」頁，以關聯資產。*
 
    或者，從清單檢視中選取資產。
 
@@ -65,15 +65,15 @@ Adobe Experience Manager(AEM)Assets可讓您使用相關資產功能，根據組
 
 ## 折算相關資產 {#translating-related-assets}
 
-使用「相關資產」功能建立資產間的來源／衍生關係，在轉譯工作流程中也很有幫助。 當您對衍生資產執行轉譯工作流程時，AEM Assets會自動擷取來源檔案所參照的任何資產，並將其納入轉譯。 這樣，源資產引用的資產與源資產和衍生資產一起折算。 例如，假設您的英文版副本包含衍生資產及其來源檔案，如所示。
+使用「相關資產」功能建立資產間的來源／衍生關係，在轉譯工作流程中也很有幫助。 在派生資產上運行翻譯工作流時， [!DNL Experience Manager Assets] 會自動提取源檔案引用的任何資產並包括其以進行翻譯。 這樣，源資產引用的資產與源資產和衍生資產一起折算。 例如，假設您的英文版副本包含衍生資產及其來源檔案，如所示。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-如果源檔案與另一個資產相關，Experience Manager Assets將提取引用的資產並包括其以進行轉換。
+如果源檔案與另一個資產相關，則 [!DNL Experience Manager Assets] 讀取引用的資產並包括它以進行轉換。
 
 ![「資產屬性」頁顯示要包括在轉換中的相關資產的源檔案](assets/asset-properties-source-asset.png)
 
-*圖：將包括在內的相關資產的來源資產*
+*圖：相關資產的來源資產，以便進行折算。*
 
 1. 遵循「建立新翻譯專案」中的步驟，將來源檔案夾中的資產翻譯 [成目標語言](translation-projects.md#create-a-new-translation-project)。 例如，在此例中，請將您的資產翻譯為法文。
 
