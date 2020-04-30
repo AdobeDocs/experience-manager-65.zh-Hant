@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選器」面板在Adobe Experience Manager�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -40,7 +40,7 @@ Experience Manager搜尋功能支援搜尋系列和搜尋系列中的資產。 �
 
 ![瞭解Experience Manager Assets搜尋結果介面](assets/aem_search_results.png)
 
-*圖：瞭解Experience Manager Assets搜尋結果介面*
+*圖：瞭解Experience Manager Assets搜尋結果介面。*
 
 **答：** 將搜尋儲存為智慧型系列。 **B.** 篩選或謂語，以縮小搜尋結果。 **C.** Display files, folders, or both. **D.** 按一下「篩選器」以開啟或關閉左側邊欄。**E.** 搜尋位置為 DAM。**F.** Omnisearch欄位，包含使用者提供的搜尋關鍵字。 **G.** 選取載入的搜尋結果。 **H.** 顯示的搜尋結果總數。 **I.** 關閉搜 **尋J.** 在卡片檢視和清單檢視之間切換。
 
@@ -50,7 +50,7 @@ Experience Manager搜尋功能支援搜尋系列和搜尋系列中的資產。 �
 
 ![在搜尋Facet中檢視資產的概約數目，而不篩選搜尋結果。](assets/asset_search_results_in_facets_filters.png)
 
-*圖：在搜尋刻面中檢視資產的概約數目，而不篩選搜尋結果*
+*圖：在搜尋Facet中檢視資產的概約數目，而不篩選搜尋結果。*
 
 ## 瞭解搜尋結果和行為 {#searchbehavior}
 
@@ -99,7 +99,7 @@ Experience Manager可以搜尋許多檔案格式，而且可自訂搜尋篩選�
 
 ![輸入多個關鍵字以檢視符合所有關鍵字的建議](assets/search_suggestionsmanykeywords.gif)
 
-*圖：輸入多個關鍵字以檢視符合所有關鍵字的建議*
+*圖：輸入多個關鍵字以檢視符合所有關鍵字的建議。*
 
 ### 搜尋排名與提升 {#searchrank}
 
@@ -131,7 +131,7 @@ Experience Manager提供各種方法，例如套用至已搜尋資產的篩選�
 
 ![在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中](assets/search_folder_select.gif)
 
-*圖：在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中*
+*圖：在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中。*
 
 ### 尋找類似的影像 {#visualsearch}
 
@@ -139,7 +139,7 @@ Experience Manager提供各種方法，例如套用至已搜尋資產的篩選�
 
 ![使用卡片檢視中的選項尋找類似的影像](assets/search_find_similar.png)
 
-*圖：使用卡片檢視中的選項尋找類似的影像*
+*圖：使用卡片檢視中的選項尋找類似的影像。*
 
 ### Adobe Stock影像 {#adobestock}
 
@@ -197,7 +197,7 @@ Adobe Experience Manager將DAM存放庫與各種其他Experience Manager解決�
 
 ### 從Adobe Asset Link面板搜尋資產 {#aal}
 
-使用Adobe Asset Link，創意專業人員現在可以存取儲存在Experience Manager Assets中的內容，而不需離開支援的Adobe Creative Cloud應用程式。 創意人員可使用Creative Cloud應用程式中的應用程式內面板，順暢地瀏覽、搜尋、結帳和結帳資產：Photoshop、Illustrator和InDesign。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
+使用Adobe Asset Link，創意專業人員現在可以存取儲存在Experience Manager Assets中的內容，而不需離開支援的Adobe Creative Cloud應用程式。 創意人員可使用Creative Cloud應用程式中的應用程式內面板，順暢地瀏覽、搜尋、結帳和結帳資產：Photoshop、Illustrator和InDesign。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
 
 ### 在Experience Manager案頭應用程式中搜尋資產 {#desktopapp}
 
@@ -244,7 +244,7 @@ Experience Manager搜尋功能支援搜尋系列和搜尋系列中的資產。 �
 
 ![在資產選擇器中瀏覽並選取資產](assets/assetpicker.png)
 
-*圖：在資產選擇器中瀏覽並選取資產*
+*圖：在資產選擇器中瀏覽並選取資產。*
 
 ## 限制 {#limitations}
 
@@ -285,7 +285,7 @@ Experience Manager Assets中的搜尋功能有下列限制：
 
 ![使用引號和不使用引號的搜尋行為](assets/search_with_quotes.gif)
 
-*圖：使用引號和不使用引號的搜尋行為*
+*圖：搜尋行為時有引號或無引號。*
 
 **使用星號通配符進行搜索**:若要擴大搜尋範圍，請在搜尋字詞前後使用星號，以比對任意數目的字元。 例如，搜尋沒有星號的執行並不會傳回包含字詞變異的資產（包括在中繼資料中）。 星號可取代任意數字元。 例如，
 
@@ -296,7 +296,7 @@ Experience Manager Assets中的搜尋功能有下列限制：
 
 ![以範例說明在資產搜尋中使用星號萬用字元](assets/search_with_asterisk_run.gif)
 
-*圖：以範例說明在資產搜尋中使用星號萬用字元*
+*圖：以範例說明在資產搜尋中使用星號萬用字元。*
 
 **使用問號萬用字元搜尋**:若要擴大搜尋範圍，請使用一或多個「?」 字元來比對字元數目。 例如，在下圖中，
 
@@ -308,13 +308,13 @@ Experience Manager Assets中的搜尋功能有下列限制：
 
 ![使用範例說明在資產搜尋中使用問號萬用字元](assets/search_with_questionmark_run.gif)
 
-*圖：使用範例說明在資產搜尋中使用問號萬用字元*
+*圖：以範例說明在資產搜尋中使用問號萬用字元。*
 
 **排除關鍵字**:使用破折號來搜尋不含關鍵字的資產。 例如，查 `running -shoe` 詢會傳回包含但 `running`不包含的資產 `shoe`。 同樣地， `camp -night` 查詢會傳回包含但不包含 `camp` 的資產 `night`。 請注意， `camp-night` 查詢會傳回同時包含和的 `camp` 資產 `night`。
 
 ![使用破折號來搜尋不含已排除關鍵字的資產](assets/search_dash_exclude_keyword.gif)
 
-*圖：使用破折號來搜尋不含已排除關鍵字的資產*
+*圖：使用破折號來搜尋不含已排除關鍵字的資產。*
 
 ## 與搜索功能相關的配置和管理任務 {#configadmin}
 
@@ -415,7 +415,7 @@ Experience Manager Assets中的搜尋功能有下列限制：
 
 ![排序搜尋資產的時間軸項目](assets/sort_timeline_search_results.gif)
 
-*圖：排序搜尋資產的時間軸項目*
+*圖：排序搜尋資產的時間軸項目。*
 
 ### 下載搜尋的資產 {#download}
 
