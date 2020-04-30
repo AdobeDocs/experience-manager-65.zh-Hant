@@ -1,22 +1,22 @@
 ---
-title: 使用智慧型內容服務設定資產標籤
-description: 瞭解如何使用智慧型內容服務，在AEM中設定智慧型標籤和增強的智慧型標籤。
+title: 使用智慧型內容服務設定資產標籤。
+description: 瞭解如何使用智慧型內容服務，在Adobe Experience Manager中設定智慧型標籤和增強的智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 使用智慧型內容服務設定資產標籤 {#configure-asset-tagging-using-the-smart-content-service}
 
-您可以使用Adobe I/O將Adobe Experience Manager(AEM)與智慧型內容服務整合。使用此設定從AEM存取Smart Content Service。
+您可以使 [!DNL Adobe Experience Manager] 用Adobe I/O與智慧型內容服務整合。使用此配置可從中訪問Smart Content Service [!DNL Experience Manager]。
 
-文章詳細說明了配置Smart Content Service所需的下列主要工作。 在後端，AEM伺服器會先使用Adobe I/O閘道驗證您的服務認證，然後再將您的請求轉送至智慧型內容服務。
+文章詳細說明了配置Smart Content Service所需的下列主要工作。 在後端，伺服器會先 [!DNL Experience Manager] 使用Adobe I/O閘道驗證您的服務認證，然後再將您的要求轉送至智慧型內容服務。
 
-* 在AEM中建立Smart Content Service設定以產生公開金鑰。 取得OAuth整合的公用憑證。
+* 在中建立Smart Content Service配置 [!DNL Experience Manager] 以生成公開密鑰。 取得OAuth整合的公用憑證。
 * 在Adobe I/O中建立整合，並上傳產生的公開金鑰。
-* 使用API金鑰和Adobe I/O的其他認證來設定您的AEM例項。
+* 使用 [!DNL Experience Manager] API金鑰和Adobe I/O的其他認證來設定您的例項。
 * （可選）在資產上傳時啟用自動標籤。
 
 ## 必備條件 {#prerequisites}
@@ -30,10 +30,10 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 公開憑證可讓您在Adobe I/O上驗證您的個人檔案。
 
-1. From the AEM user interface, click the AEM logo, and go to **[!UICONTROL Tools > Cloud Services]**> **[!UICONTROL Legacy Cloud Services]**.
+1. 在使用 [!DNL Experience Manager] 者介面中，存 **[!UICONTROL 取「工具>雲端服務]**>舊 **[!UICONTROL 版雲端服務」]**。
 
 1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
-1. 在「建 **[!UICONTROL 立設定]** 」對話方塊中，指定「智慧標籤」設定的標題和名稱。 按一下 **[!UICONTROL 建立]**。
+1. 在「建 **[!UICONTROL 立設定]** 」對話方塊中，指定「智慧標籤」設定的標題和名稱。 按一下&#x200B;**[!UICONTROL 建立]**。
 1. 在「 **[!UICONTROL AEM智慧型內容服務]** 」對話方塊中，使用下列值：
 
    **[!UICONTROL 服務 URL]**: `https://mc.adobe.io/marketingcloud/smartcontent`
@@ -42,7 +42,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
    現在將其他欄位留空（稍後將提供）。 按一下 **[!UICONTROL 確定]**。
 
-   ![AEM Smart Content Service對話方塊，以提供內容服務URL](assets/aem_scs.png)
+   ![Experience Manager Smart Content Service對話框，用於提供內容服務URL](assets/aem_scs.png)
 
 1. 按一 **[!UICONTROL 下「下載OAuth整合的公用憑證]**」，然後下載公用憑證檔案 `AEM-SmartTags.crt`。
 
@@ -52,10 +52,10 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 當憑證過期時，它不再受信任。 若要新增憑證，請依照下列步驟進行。 您無法為過期的憑證續約。
 
-1. 以管理員身分登入您的AEM部署。按一 **[!UICONTROL 下「工具]** >安 **[!UICONTROL 全性]** >使 **[!UICONTROL 用者]**」。
+1. Log in your [!DNL Experience Manager] deployment as an administrator. 按一 **[!UICONTROL 下「工具]** >安 **[!UICONTROL 全性]** >使 **[!UICONTROL 用者]**」。
 
 1. 找到並按 **[!UICONTROL 一下dam-update-service使用者]** 。 按一下「密鑰 **[!UICONTROL 庫]** 」頁籤。
-1. 刪除具有過 **[!UICONTROL 期證書的]** 現有相似性search密鑰庫。 按一 **[!UICONTROL 下儲存並關閉]**。
+1. 刪除具有過 **[!UICONTROL 期證書的]** 現有相似性search密鑰庫。 Click **[!UICONTROL Save &amp; Close]**.
 
    ![刪除Keystore中現有的相似性搜尋項目，以新增安全憑證](assets/smarttags_delete_similaritysearch_keystore.png)
 
@@ -66,7 +66,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 1. 若要下載公用憑證，請按一下「 **[!UICONTROL 下載OAuth整合的公用憑證」]**。
 1. 存取 [https://console.adobe.io](https://console.adobe.io) ，並導覽至「整合」頁面上現有的智慧 **[!UICONTROL 內容服務]** 。 上傳新憑證。 如需詳細資訊，請參閱「建立 [Adobe I/O整合」中的指示](#create-adobe-i-o-integration)。
 
-## 建立Adobe I/O整合 {#create-adobe-i-o-integration}
+## 建立 Adobe I/O 整合項目 {#create-adobe-i-o-integration}
 
 若要使用Smart Content Service API，請在Adobe I/O中建立整合，以產生API金鑰、技術帳戶ID、組織ID和用戶端密碼。
 
@@ -81,16 +81,16 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 1. 在下一頁，選擇「新 **[!UICONTROL 增整合」]**。 按一 **[!UICONTROL 下繼續]**。
 1. 在「整 **[!UICONTROL 合詳細資訊]** 」頁面上，指定整合閘道的名稱並新增說明。
 1. 在公 **[!UICONTROL 開金鑰憑證中]**，上 `AEM-SmartTags.crt` 傳您先前下載的檔案。
-1. 按一 **[!UICONTROL 下建立整合]**。
+1. 按一下&#x200B;**[!UICONTROL 建立整合項目]**。
 1. 若要檢視整合資訊，請按一下「 **[!UICONTROL 繼續」以取得整合詳細資訊]**。
 
    ![在「概述」索引標籤中，您可以檢閱為整合提供的資訊。](assets/integration_details.png)
 
 ## 設定智慧型內容服務 {#configure-smart-content-service}
 
-若要設定整合，請使用Adobe I/O整合中「技術帳戶ID」、「組織ID」、「用戶端密碼」、「授權伺服器」和「API金鑰」欄位的值。 建立智慧型標籤雲端設定可讓AEM例項的API要求驗證。
+若要設定整合，請使用Adobe I/O整合中「技術帳戶ID」、「組織ID」、「用戶端密碼」、「授權伺服器」和「API金鑰」欄位的值。 建立智慧型標籤雲端設定可讓您驗證來自例項的API [!DNL Experience Manager] 請求。
 
-1. 在Experience Manager中，導覽至「工 **[!UICONTROL 具>雲端服務>舊版雲端服務]** 」以開啟 [!UICONTROL Cloud Services] 主控台。
+1. 在中 [!DNL Experience Manager]，導覽至「 **[!UICONTROL 工具>雲端服務>舊版雲端服務」以開啟]** Cloud Services  Console。
 1. 在「資 **[!UICONTROL 產智慧標籤]**」下，開啟上述建立的設定。 在服務設定頁面上，按一下「 **[!UICONTROL 編輯]**」。
 1. 在「 **[!UICONTROL AEM Smart Content Service]** 」對話方塊中 **[!UICONTROL ，使用「服務URL」和「授權伺服器」欄位的預先填入值]****** 。
 1. 對於「 **[!UICONTROL API金鑰]**」、「 **[!UICONTROL Technical Account Id]**」、「 **[!UICONTROL Organization Id]**」和「Client Secret **[!UICONTROL 」欄位，請使]**&#x200B;用上述產生的值。
@@ -99,7 +99,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 完成配置後，可使用JMX MBean來驗證配置。 若要驗證，請遵循下列步驟。
 
-1. 在存取您的AEM伺服器 `https://[server]:[port]`。
+1. 訪問您 [!DNL Experience Manager] 的伺服器 `https://[aem_server]:[port]`。
 
 1. 前往「 **[!UICONTROL 工具>作業> Web Console]** 」以開啟OSGi主控台。 按一 **[!UICONTROL 下「主要> JMX]**」。
 1. 按一 **[!UICONTROL 下com.day.cq.dam.similaritysearch.internal.impl]**。 它會開啟「 **[!UICONTROL SimiliarySearch雜項工作」。]**
@@ -109,14 +109,14 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ## 在「更新資產」工作流程中啟用智慧標籤（可選） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-1. 在Experience Manager中，前往「工 **[!UICONTROL 具>工作流程>模型」]**。
+1. 在中， [!DNL Experience Manager]請轉至「工 **[!UICONTROL 具」>「工作流」>「模型」]**。
 1. 在「工 **[!UICONTROL 作流模型]** 」頁面上，選擇 **** 「DAM更新資產」工作流模型。
 1. 從工具 **[!UICONTROL 列按一下]** 「編輯」。
 1. 展開「側面板」以顯示步驟。拖 **[!UICONTROL 曳DAM Workflow]**  (DAM工作流程) 區段中可用的智慧型標籤資產步驟，並將其置於「處理縮 **[!UICONTROL 圖」步驟之後]** 。
 
    ![在 [!UICONTROL DAM更新資產工作流程中，在流程縮圖步驟之後新增智慧型標籤資產步驟] 。](assets/chlimage_1-105.png)
 
-   *圖：在[!UICONTROL DAM更新資產工作流程中，在流程縮圖步驟之後新增智慧型標籤資產步驟]。*
+   *圖：在[!UICONTROL DAM Update Asset工作流程中，在流程縮圖步驟之後新增智慧型標籤資產步驟]。*
 
 1. 在編輯模式中開啟步驟。在「 **[!UICONTROL 進階設定]**」下，確定已選 **[!UICONTROL 取「處理常式進階]** 」選項。
 
