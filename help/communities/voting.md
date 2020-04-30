@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
@@ -39,11 +39,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
-* **[!UICONTROL 正面回應標籤]**(必&#x200B;*要*)正面回應的內部屬性名稱。
+* **[!UICONTROL 正面回應標籤]**
 
-* **[!UICONTROL 負面回應標籤]**(*必要*)負面回應的內部屬性名稱。
+   (必&#x200B;*要*)正面回應的內部屬性名稱。
 
-* **[!UICONTROL Tally Name]**(*必要*)此投票元件實例的內部可識別屬性名稱。
+* **[!UICONTROL 負面回應標籤]**
+
+   (必&#x200B;*要*)負面回應的內部屬性名稱。
+
+* **[!UICONTROL 記帳名稱]**
+
+   (必&#x200B;*要*)此投票元件例項的內部、可識別屬性名稱。
 
 ## 網站訪客體驗 {#site-visitor-experience}
 
