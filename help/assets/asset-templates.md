@@ -1,18 +1,16 @@
 ---
-title: 資產範本
+title: '[!DNL Adobe Experience Manager Assets]中的資產範本。'
 description: 瞭解[!DNL Adobe Experience Manager Assets]中的資產範本，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
 
 ---
 
 
 # Asset templates {#asset-templates}
 
-資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新運用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。
-
-固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
+資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
 
 在確保全球標牌安全的同時，靈活地進行有限的編輯，使資產模板成為快速調整內容和分發內容的理想構件，以便用於各種功能的內容製品。 重新調整內容用途有助於降低管理印刷和數位通道的成本，並跨這些通道提供全方位且一致的體驗。
 
@@ -20,25 +18,19 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 雖然資產範本大多是 [!DNL Adobe InDesign] 檔案，但熟悉程 [!DNL Adobe InDesign] 度並不妨礙製作亮眼的文物。 建立目錄時，您不需將范 [!DNL Adobe InDesign] 本的欄位與您的產品欄位對應。 您可以直接在Web介面上，在WYSIWYG模式下編輯範本。 不過，若 [!DNL Adobe InDesign] 要處理編輯變更，您必須先設定為 [!DNL Experience Manager Assets] 與整合 [!DNL Adobe InDesign Server]。
 
-從網頁介面編 [!DNL Adobe InDesign] 輯範本的功能有助於促進創意與行銷人員之間的協作，同時縮短本地促銷活動的上市時間。
+從網頁介面編 [!DNL Adobe InDesign] 輯範本的能力，有助於促進創意人員與行銷人員之間更緊密的協作。 內容速度的提高縮短了行銷資料的上市時間。
 
-您可以使用資產範本執行下列動作：
+您可以使用資產範本達成下列目標：
 
-* 從網頁介面修改可編輯的範本欄位
-* 控制文字的基本樣式，例如字型大小、樣式和文字在標籤層級
-* 使用內容選擇器變更範本中的影像
-* 預覽範本編輯
-* 合併多個範本檔案以建立多頁對象
+* 從網頁介面修改可編輯的範本欄位。
+* 控制文字的基本樣式，例如字型大小、樣式和標籤層級的文字。
+* 使用內容選擇器變更範本內的影像。
+* 預覽範本編輯。
+* 合併多個範本檔案以建立多頁對象。
 
 當您為宣傳品選擇模板時， [!DNL Experience Manager Assets] 將建立可編輯的模板副本。 原始範本會保留，以確保全域標牌保持完整，並可重複使用以強製品牌一致性。
 
-您可以以下列格式匯出父資料夾內的更新檔案：
-
-* INDD
-* PDF
-* JPG
-
-您也可以將這些格式的輸出下載到本機系統。
+您可以以INDD、PDF或JPG格式匯出父資料夾中的更新檔。 您也可以將這些格式的輸出下載至本機檔案系統。
 
 ## 建立宣傳品 {#creating-a-collateral}
 
@@ -70,13 +62,13 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    <!--![chlimage_1-106](assets/.png) -->
 
-   或者，關閉對話方塊並導覽至您開始使用的「範本」頁面中的資料夾，以檢視您建立的手冊。 在卡片檢視中，文宣的類型會出現在其縮圖上。 例如，在此例中，手冊會顯示在縮圖上。
+   或者，關閉對話方塊並導覽至您開始使用的「範本」頁面中的資料夾，以檢視您建立的手冊。 在卡片檢視中，文宣的類型會出現在其縮圖上。 例如，在此例中，縮圖上會顯 [!UICONTROL 示「手冊] 」一詞。
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
 ## 編輯宣傳品 {#editing-a-collateral}
 
-您可以在建立宣傳品後立即加以編輯。 或者，您也可以從「範本」頁面或資產頁面開啟它。
+您可以在建立宣傳品後立即加以編輯。 或者，您也可以從「範本」頁 [!UICONTROL 面或資產] 頁面開啟它。
 
 1. 要開啟文宣進行編輯，請執行下列操作之一：
 
@@ -100,13 +92,13 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    >[!NOTE]
    >
-   >請確定您 [!DNL Experience Manager] 的例項已與 [!DNL InDesign Server] 整合， [!DNL Experience Manager Assets] 以便從InDesign範本擷取資料並加以編輯。 如需詳細資訊，請 [參閱「整合Experience Manager Assets與InDesign Server](/help/assets/indesign.md)」。
+   >請確定您的 [!DNL Experience Manager] 例項已與整合， [!DNL InDesign Server] 以便從范 [!DNL Experience Manager Assets] 本擷取資料，並 [!DNL InDesign] 讓它可供編輯。 如需詳細資訊，請 [參閱將Experience Manager Assets與InDesign Server整合](/help/assets/indesign.md)。
 
 1. 若要修改可編輯欄位中的文字，請按一下可編輯欄位清單中的文字欄位，然後編輯欄位中的文字。
 
    ![chlimage_1-111](assets/chlimage_1-316.png)
 
-   您可以使用提供的選項來編輯文字屬性，例如字型樣式、顏色、大小。
+   您可以編輯文字屬性，例如字型樣式、顏色和大小，使用提供的選項。
 
 1. 按一 **[!UICONTROL 下「預覽]** 」以預覽文字變更。
 
@@ -201,3 +193,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    >[!NOTE]
    >
    >您以後無法編輯合併的宣傳品，也無法用它來建立其他宣傳品。
+
+## 最佳實務與限制 {#best-practices-limitations-tips}
+
+* AEM InDesign編輯器可在標籤層級運作，而單一標籤下的所有文字都視為單一實體。 若要在編輯時保留文字格式和樣式，請個別標籤每個段落（或使用不同樣式的文字）。
