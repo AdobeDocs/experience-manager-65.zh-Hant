@@ -3,7 +3,7 @@ title: 使用[!DNL Adobe Experience Manager Assets]處理各種支援檔案格�
 description: 使用[!DNL Experience Manager Assets]處理各種支援檔案類型的最佳實務。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 5f67b4e5ccd5d7e982732e449050123e917c9914
 
 ---
 
@@ -44,7 +44,7 @@ Adobe建議您使 [!DNL Adobe InDesign Server] 用擷取 [!DNL Adobe InDesign]�
 
 [!DNL Dynamic Media] 透過全球、可擴充且效能最佳化的網路，即時產生和提供多種多樣化內容。 它提供互動式檢視體驗，並簡化數位宣傳管理程式。 如需啟用的詳細資 [!DNL Dynamic Media]訊，請 [參閱設定動態媒體](/help/assets/config-dynamic.md)。
 
-目前， [!DNL Dynamic Media] 每個檔案最多可支援20 GB的內容。
+目前， [!DNL Dynamic Media] 每個檔案最多可支援15 GB的內容。
 
 ## ImageMagick程式庫 {#imagemagick-library}
 
