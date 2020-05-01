@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets和Dynamic Media支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 134530e6e4cabc31342fc3136ec3218ba5acea4a
+source-git-commit: 2b30ab18aa22352d7ece4617d22391759592fd19
 
 ---
 
@@ -42,7 +42,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 ‡合併的影像是從PSD檔案擷取。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
-## 動態媒體中支援的點陣影像格式(#supported-raster-image-formats-dynamic-media)
+## 動態媒體中支援的點陣影像格式 {#supported-raster-image-formats-dynamic-media}
 
 | 格式 | 上傳<br> （輸入格式） | 建立影像預設集<br><br><br> （輸出格式） | 預覽<br><br> 動態轉譯 | 傳送<br> 動態轉譯<br> | 下載<br><br> 動態轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -67,7 +67,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 * 對於EPS檔案，PostScript Document Structuring Convention(PS-Adobe)3.0版或更新版本支援中繼資料回寫。
 
-## 動態媒體中不支援的點陣影像格式(#unsupported-image-formats-dynamic-media)
+## 動態媒體中不支援的點陣影像格式 {#unsupported-image-formats-dynamic-media}
 
 下列清單說明動態媒體中不支援的點陣影像檔 *案* 格式子類型。
 
@@ -168,7 +168,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## 動態媒體中支援的檔案格式(#supported-document-formats-dynamic-media)
+## 動態媒體中支援的檔案格式 {#supported-document-formats-dynamic-media}
 
 | 格式 | 上傳<br> （輸入格式） | 建立影像預設集<br><br><br> （輸出格式） | 預覽<br><br> 動態轉譯 | 傳送<br> 動態轉譯<br> | 下載<br><br> 動態轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
