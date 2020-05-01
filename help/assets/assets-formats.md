@@ -3,7 +3,7 @@ title: 資產支援的格式
 description: AEM Assets和Dynamic Media支援的檔案格式清單以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1d16716d5fcf5b05a741b2d06d333e5f80e0d290
+source-git-commit: 134530e6e4cabc31342fc3136ec3218ba5acea4a
 
 ---
 
@@ -66,6 +66,17 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 * 若要使用Dynamic Media預覽並產生EPS檔案的動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 對於EPS檔案，PostScript Document Structuring Convention(PS-Adobe)3.0版或更新版本支援中繼資料回寫。
+
+## 動態媒體中不支援的點陣影像格式(#unsupported-image-formats-dynamic-media)
+
+下列清單說明動態媒體中不支援的點陣影像檔 *案* 格式子類型。
+
+* IDAT區塊大小大於100 MB的PNG檔案。
+* PSB檔案。
+* 不支援色域不是CMYK、RGB、灰階或點陣圖的PSD檔案。 不支援DuoTone、Lab和索引色域。
+* 位元深度大於16的PSD檔案。
+* 具有浮點資料的TIFF檔案。
+* 具有Lab色域的TIFF檔案。
 
 <!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
 ## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
@@ -283,7 +294,7 @@ CRXDE Lite中提供支援的MIME類型清單，網址為 `/conf/global/settings/
 | OTF | application/x-font-otf |  |  |
 | PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdf選項](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_pdf_options) |
 | PFB | application/x-font-type1 |  |  |
-| PGM | application/x-font-type1 |  |  |
+| PFM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | image/png |  |  |
 | PPT | application/vnd.ms-powerpoint |  |  |
