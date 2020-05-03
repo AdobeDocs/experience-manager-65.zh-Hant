@@ -3,7 +3,7 @@ title: 使用「連線資產」在[!DNL Adobe Experience Manager Sites]製作工
 description: 在其他Experience Manager網站部署中建立網頁時，請使用遠端[!DNL Adobe Experience Manager Assets]部署中的可用資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 2cdcea028814b40fb178e63f583939df27a46cad
 
 ---
 
@@ -37,7 +37,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
 作者可在「內容尋找器」中搜尋影像和下列類型的文件，並在「頁面編輯器」中使用找到的資產。文件可新增至 `Download` 元件，且影像可新增至 `Image` 元件。Authors can also add the remote assets in any custom Experience Manager component that extends the default `Download` or `Image` components. 支援的格式清單包括：
 
-* **影像格式**:Image元件支援的影像格 [式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html) ，由Connected Assets支援。 [!DNL Dynamic Media] 不支援影像。
+* **影像格式**: Image元件支援的影像格 [式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html) ，由Connected Assets支援。 [!DNL Dynamic Media] 不支援影像。
 * **文件格式**：請參閱[連線資產支援的文件格式](assets-formats.md#supported-document-formats)。
 
 ### 相關使用者和群組 {#users-and-groups-involved}
@@ -46,12 +46,12 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
 | 角色 | 範圍 | 使用者群組 | 逐步說明中的使用者名稱 | 需求 |
 |---|---|---|---|---|
-| [!DNL Sites] 管理員 | 本機 | Experience Manager管理員 | `admin` | 設定Experience Manager，設定與遠端部署的 [!DNL Assets] 整合。 |
-| DAM 使用者 | 本機 | 作者 | `ksaner` | 用於檢視及複製 `/content/DAM/connectedassets/` 中擷取的資產。 |
-| [!DNL Sites] 作者 | 本機 | Author (with read access on the remote DAM and author access on local [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. 作者可使用「內容尋找器」在遠端 DAM 中搜尋及瀏覽資產，並在本機網頁中使用所需的影像。已採用 `ksaner` DAM 使用者的認證。 |
-| [!DNL Assets] 管理員 | 遠端 | Experience Manager管理員 | `admin` 在遠程Experience Manager上 | 設定跨原始資源共用 (CORS)。 |
-| DAM 使用者 | 遠端 | 作者 | `ksaner` 在遠程Experience Manager上 | 在遠端Experience Manager部署上擔任作者角色。 使用「內容尋找器」，在「連線資產」中搜尋和瀏覽資產。 |
-| DAM 經銷商 (技術使用者) | 遠端 | 套件建立者和網站作者 | `ksaner` 在遠程Experience Manager上 | This user present on the remote deployment is used by Experience Manager local server (not the Site author role) to fetch the remote assets, on behalf of [!DNL Sites] author. 此角色與上述的兩個 `ksaner` 角色不一樣，而且屬於不同的使用者群組。 |
+| [!DNL Sites] 管理員 | 本機 | Experience Manager `administrators` | `admin` | 設定Experience Manager，設定與遠端部署的 [!DNL Assets] 整合。 |
+| DAM 使用者 | 本機 | `Authors` | `ksaner` | 用於檢視及複製 `/content/DAM/connectedassets/` 中擷取的資產。 |
+| [!DNL Sites] 作者 | 本機 | `Authors` (在遠端DAM上具有讀取存取權，在本機上具有作者存取權 [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. 作者可使用「內容尋找器」在遠端 DAM 中搜尋及瀏覽資產，並在本機網頁中使用所需的影像。已採用 `ksaner` DAM 使用者的認證。 |
+| [!DNL Assets] 管理員 | 遠端 | Experience Manager `administrators` | `admin` 在遠程Experience Manager上 | 設定跨原始資源共用 (CORS)。 |
+| DAM 使用者 | 遠端 | `Authors` | `ksaner` 在遠程Experience Manager上 | 在遠端Experience Manager部署上擔任作者角色。 使用「內容尋找器」，在「連線資產」中搜尋和瀏覽資產。 |
+| DAM 經銷商 (技術使用者) | 遠端 | `Authors` | `ksaner` 在遠程Experience Manager上 | This user present on the remote deployment is used by Experience Manager local server (not the Site author role) to fetch the remote assets, on behalf of [!DNL Sites] author. 此角色與上述的兩個 `ksaner` 角色不一樣，而且屬於不同的使用者群組。 |
 
 ## Configure a connection between [!DNL Sites] and [!DNL Assets] deployments {#configure-a-connection-between-sites-and-assets-deployments}
 
