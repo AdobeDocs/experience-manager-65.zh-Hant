@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9f0eebfa0c5d2449dcc2977c7085b11a48a10eb9
+source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
 
 ---
 
@@ -163,7 +163,7 @@ SPA元件可由用戶端（在瀏覽器中）或伺服器端轉譯。 在轉譯�
 
 AEM中SSR的SPA需要Adobe I/O Runtime，這是轉換應用程式內容伺服器端的呼叫。 在應用程式的HTL中，會呼叫Adobe I/O Runtime上的資源來呈現內容。
 
-就像AEM支援Angular和React SPA架構立即可用一樣，Angular和React應用程式也支援伺服器端演算。 如需詳細資訊，請參閱兩個架構的NPM檔案。
+就像AEM支援Angular和React SPA架構的現成功能一樣，Angular和React應用程式也支援伺服器端演算。 如需詳細資訊，請參閱兩個架構的NPM檔案。
 
 * 反應： [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 * 角度： [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
@@ -176,7 +176,7 @@ AEM中SSR的SPA需要Adobe I/O Runtime，這是轉換應用程式內容伺服器
 
 >[!NOTE]
 >
->AEM上的所有SPA專案都應以 [Maven Archetype for SPA Starter Kit為基礎](https://github.com/adobe/aem-spa-project-archetype)。
+>任何AEM專案都應運用 [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用React或Angular的SPA專案，並運用SPA SDK。
 
 ## 使用Node.js {#using-node-js}
 
@@ -194,11 +194,11 @@ Adobe I/O Runtime是建置AEM中SPA的SSR的建議解決方案。
 
 ## 遠端內容轉譯器 {#remote-content-renderer}
 
-在AEM [中搭配SPA使用SSR所需的遠端內容轉譯器設定](#remote-content-renderer-configuration) ，可點選更廣泛的轉譯服務，以符合您的需求加以擴充和自訂。
+在AEM [中搭配SPA使用SSR所需的遠端內容轉譯器設定](#remote-content-renderer-configuration) ，可點選更廣泛的轉譯服務，以因應您的需求加以擴充和自訂。
 
 ### RemoteContentRenderingService {#remotecontentrenderingservice}
 
-`RemoteContentRenderingService` 是OSGi服務，可擷取在遠端伺服器上轉譯的內容，例如從Adobe I/O轉譯。傳送至遠端伺服器的內容是根據傳遞的要求參數。
+`RemoteContentRenderingService` 是OSGi服務，可擷取在遠端伺服器上轉譯的內容，例如從Adobe I/O轉譯。 傳送至遠端伺服器的內容是根據傳遞的要求參數。
 
 `RemoteContentRenderingService` 可在需要額外的內容控制時，透過互依性反轉插入自訂Sling模型或servlet。
 
