@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6329301c-1a26-4a46-99ae-1b7cc15b08be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
 
 ---
 
@@ -37,11 +37,11 @@ SPA的頁面元件不會透過JSP或HTL檔案與資源物件提供其子元件�
 * 如果範本是可編輯的，請將用戶端程式庫類別新增至頁面原則。
 * 使用頁面元件新增用戶 `customfooterlibs.html` 端程式庫類別。
 
-別忘了將類別包含限制 `cq.authoring.pagemodel.messaging` 在頁面編輯器的上下文中。
+別忘了將類別包含限制 `cq.authoring.pagemodel.messaging` 在頁面編輯器的內容中。
 
 ## 通信資料類型 {#communication-data-type}
 
-通訊資料類型是使用屬性在AEM page元件內設定HTML元 `data-cq-datatype` 素。 當通訊資料類型設為JSON時，GET請求會點擊元件的Sling Model端點。 在頁面編輯器中發生更新後，更新元件的JSON表示法會傳送至頁面模型程式庫。 然後頁面模型庫會警告SPA更新。
+通訊資料類型是使用屬性在AEM Page元件內設定HTML元 `data-cq-datatype` 素。 當通訊資料類型設為JSON時，GET請求會點擊元件的Sling Model端點。 在頁面編輯器中發生更新後，更新元件的JSON表示法會傳送至頁面模型程式庫。 然後頁面模型庫會警告SPA更新。
 
 **SPA頁面元件-`body.html`**
 
@@ -80,12 +80,18 @@ SPA的頁面元件不會透過JSP或HTL檔案與資源物件提供其子元件�
 
 ## 中繼屬性 {#meta-properties}
 
-* `cq:wcmmode`:編輯器的WCM模式（例如頁面、範本）
-* `cq:pagemodel_root_url`:應用程式的根模型URL。 直接存取子頁面時很重要，因為子頁面模型是應用程式根模型的片段。 然後 ` [PageModelManager](/help/sites-developing/spa-page-component.md)` 系統地將應用程式初始模型從其根入口點重新合成為進入應用程式。
+* `cq:wcmmode`: 編輯器的WCM模式（例如頁面、範本）
+* `cq:pagemodel_root_url`: 應用程式的根模型URL。 直接存取子頁面時很重要，因為子頁面模型是應用程式根模型的片段。 然後 ` [PageModelManager](/help/sites-developing/spa-page-component.md)` 系統地將應用程式初始模型從其根入口點重新合成為進入應用程式。
 
-* `cq:pagemodel_router`:啟用或停用程 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 式庫 `PageModelManager` 的
+* `cq:pagemodel_router`: 啟用或停用程 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 式庫 `PageModelManager` 的
 
-* `cq:pagemodel_route_filters`:以逗號分隔的清單或規則表達式，以提供必須忽 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 略的路由。
+* `cq:pagemodel_route_filters`: 以逗號分隔的清單或規則表達式，以提供必須忽 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 略的路由。
+
+>[!CAUTION]
+>
+>本檔案僅將We.Retail Journal應用程式用於展示用途。 它不應用於任何項目工作。
+>
+>任何AEM專案都應運用 [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用React或Angular的SPA專案，並運用SPA SDK。AEM上的所有SPA專案都應以SPA Starter Kit的Maven Archetype為基礎。
 
 ## 頁面編輯器覆蓋同步 {#page-editor-overlay-synchronization}
 
@@ -95,7 +101,7 @@ SPA的頁面元件不會透過JSP或HTL檔案與資源物件提供其子元件�
 
 啟用路由功能時，假設SPA的JSON匯出包含應用程式的不同路由，這要歸功於AEM導覽元件的JSON匯出。 AEM導覽元件的JSON輸出可透過下列兩個屬性，在SPA的根頁面內容原則中設定：
 
-* `structureDepth`:與導出的樹的深度對應的編號
-* `structurePatterns`:與要導出的頁對應的regex的陣列的regex
+* `structureDepth`: 與導出的樹的深度對應的編號
+* `structurePatterns`: 與要導出的頁對應的regex的陣列的regex
 
 這可以在中的SPA示例內容中顯示 `/conf/we-retail-journal/react/settings/wcm/policies/we-retail-journal/react/components/structure/page/root`。
