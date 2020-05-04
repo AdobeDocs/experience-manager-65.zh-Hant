@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 
 ---
 
@@ -26,9 +26,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 這些功能可協助開發人員：
 
-* Discover:由哪些頁面組成。
-* 除錯：發生在何處和何時的情況，這反過來有助於解決問題。
-* 測試：應用程式是否如預期般運作。
+* Discover: 由哪些頁面組成。
+* 除錯： 發生在何處和何時的情況，這反過來有助於解決問題。
+* 測試： 應用程式是否如預期般運作。
 
 >[!CAUTION]
 >
@@ -36,13 +36,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >* 僅在啟用觸控的UI中可用（在編輯頁面時）。
 >* 在行動裝置或桌上型電腦的小視窗上無法使用（因為空間限制）。
->
->    * 當寬度小於1024像素時就會發生此情況。
->
->* 需要適當的權限／權限：
->
->    * 對「開發人員模式」的存取權會授予對具有寫入存取權的使用者 `/apps`。
->
+   >   * 當寬度小於1024像素時就會發生此情況。
+>* 僅適用於群組成員的使 `administrators` 用者。
+
 
 >[!CAUTION]
 >
@@ -61,7 +57,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >請參閱：
 >
 >* 知識庫文章「疑難 [排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」，以取得更多提示和工具。
->* AEM Gems工作階段關於 [AEM 6.0 Developer Mode](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)。
+>* AEM Gems工作階段關於 [AEM 6.0開發人員模式](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)。
 >
 
 
@@ -86,7 +82,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * 概述在頁面上呈現的元件和範本鏈（SLY、JSP等）。 樹可以展開，以顯示層次中的上下文。
 * 顯示轉換元件所需的伺服器端計算時間。
-* 允許您展開樹並在樹中選擇特定元件。 Selection提供對元件詳細資訊的訪問；例如：
+* 允許您展開樹並在樹中選擇特定元件。 Selection提供對元件詳細資訊的訪問； 例如：
 
    * 儲存庫路徑
    * 指令碼的連結（在CRXDE Lite中存取）
@@ -103,13 +99,13 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-* **檢視詳細資訊**:一個指向清單的連結，其中顯示：
+* **檢視詳細資訊**: 一個指向清單的連結，其中顯示：
 
    * 用於呈現元件的所有元件指令碼。
    * 此特定元件的儲存庫內容路徑。
    ![chlimage_1-14](assets/chlimage_1-14.png)
 
-* **編輯指令碼**:連結：
+* **編輯指令碼**: 連結：
 
    * 在CRXDE Lite中開啟元件指令碼。
 
