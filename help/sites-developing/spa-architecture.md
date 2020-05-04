@@ -1,8 +1,8 @@
 ---
 title: 開發AEM的SPA
 seo-title: 開發AEM的SPA
-description: 本文提出在雇用前端開發人員為AEM開發SPA時應考慮的重要問題，並概述AEM在AEM上部署開發的SPA時的SPA架構。
-seo-description: 本文提出在雇用前端開發人員為AEM開發SPA時應考慮的重要問題，並概述AEM在AEM上部署開發的SPA時的SPA架構。
+description: 本文提出在與前端開發人員接洽以開發AEM的SPA時應考慮的重要問題，並概述AEM在AEM上部署開發的SPA時的SPA架構。
+seo-description: 本文提出在與前端開發人員接洽以開發AEM的SPA時應考慮的重要問題，並概述AEM在AEM上部署開發的SPA時的SPA架構。
 uuid: 6673a041-c557-4968-ae54-4cd5b9f56251
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9584392a-d8a3-45a4-9cdf-fd211c8e6091
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
 
 ---
 
@@ -63,9 +63,9 @@ SPA只應仰賴動態轉換內容。 這是AEM擷取和轉譯內容結構所有�
 
 任何靜態路由都違反可 [攜性原則](/help/sites-developing/spa-architecture.md#portability) ，而且與AEM的內容製作功能不相容，限制了作者。 例如，使用靜態路由時，如果內容作者想要變更路由或變更頁面，則必須要求前端開發人員完成。
 
-## SPA Starter Kit的Maven Archetype {#maven-archetype-for-spa-starter-kit}
+## AEM Project Archetype {#aem-project-archetype}
 
-Adobe建議您運用 [Maven Archetype for SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype) ，協助您針對AEM開始自己的SPA專案。
+任何AEM專案都應運用 [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用React或Angular的SPA專案，並運用SPA SDK。
 
 ## SPA設計模型 {#spa-design-models}
 
@@ -81,7 +81,7 @@ Adobe建議您運用 [Maven Archetype for SPA Starter Kit](https://github.com/ad
    <th><strong>缺點</strong></th>
   </tr>
   <tr>
-   <td>AEM可當成無頭CMS使用，而不使用 <a href="/help/sites-developing/spa-reference-materials.md">SPA編輯器SDK架構。</a></td>
+   <td>AEM可當成無頭CMS使用，毋需使用 <a href="/help/sites-developing/spa-reference-materials.md">SPA編輯器SDK架構。</a></td>
    <td>前端開發人員可完全控制應用程式。</td>
    <td><p>內容製作者無法運用AEM的內容製作體驗。</p> <p>如果程式碼包含靜態參考或路由，則程式碼既不可攜式，也不可重複使用。</p> <p>不允許使用範本編輯器，因此前端開發人員必須透過JCR維護可編輯的範本。</p> </td>
   </tr>
