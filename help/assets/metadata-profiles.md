@@ -3,7 +3,7 @@ title: 自訂資產中繼資料需求的中繼資料設定檔
 description: 瞭解資產的中繼資料設定檔。 瞭解如何建立中繼資料描述檔並將它套用至資料夾資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ---
 
@@ -25,14 +25,14 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    編輯Description元件的以 **[!UICONTROL 下屬性]** :
 
-   * **[!UICONTROL 欄位標籤]**:中繼資料屬性的顯示名稱。 僅供使用者參考。
+   * **[!UICONTROL 欄位標籤]**: 中繼資料屬性的顯示名稱。 僅供使用者參考。
 
-   * **[!UICONTROL 對應至屬性]**:此屬性的值為資產節點提供了相對路徑／名稱，該資產節點保存在儲存庫中。 值應一律以開頭 `./` ，因為它表示路徑位於資產的節點下。
+   * **[!UICONTROL 對應至屬性]**: 此屬性的值為資產節點提供了相對路徑／名稱，該資產節點保存在儲存庫中。 值應一律以開頭 `./` ，因為它表示路徑位於資產的節點下。
    ![chlimage_1-199](assets/chlimage_1-482.png)
 
    The value you specify for **[!UICONTROL Map to property]** is stored as a property under the asset&#39;s metadata node. 例如，如果您指定。`/jcr:content/metadata/dc:desc` AEM Assets會將值儲 **[!UICONTROL 存在資產的中繼資料節點，作為]**`dc:desc` 「對應至屬性」的名稱。
 
-   * **[!UICONTROL 預設值]**:使用此屬性可為中繼資料元件新增預設值。 例如，如果您指定「我的說明」，則會將此值指派給資產中繼資 `dc:desc` 料節點的屬性。
+   * **[!UICONTROL 預設值]**: 使用此屬性可為中繼資料元件新增預設值。 例如，如果您指定「我的說明」，則會將此值指派給資產中繼資 `dc:desc` 料節點的屬性。
    ![chlimage_1-200](assets/chlimage_1-483.png)
 
    >[!NOTE]
@@ -53,7 +53,6 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 ![chlimage_1-201](assets/chlimage_1-484.png)
 
 1. 點選／按一下「 **[!UICONTROL 完成]**」。 中繼資料描述檔會新增至「中繼資料描述檔」頁面中的描 **[!UICONTROL 述檔清單]** 。<br>
-
 
    ![「元資料配置檔案」頁中添加的元資料配置檔案](assets/MetadataProfiles-page.png)
 
@@ -86,7 +85,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 在用戶介面中，配置有配置檔案的資料夾將通過卡名稱中顯示的配置檔案名稱來指示。
 
-![chlimage_1-205](assets/chlimage_1-489.png)
+![chlimage_1-206](assets/chlimage_1-489.png)
 
 您可以將中繼資料設定檔套用至特定資料夾，或全域套用至所有資產。
 
@@ -128,13 +127,13 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 您可以重新處理已有現有中繼資料設定檔的資料夾中的資產，而您稍後會加以變更。 請參 [閱編輯資料夾的處理設定檔後，重新處理資產](processing-profiles.md#reprocessing-assets)。
 
-**若要全域套用中繼資料設定檔，請執行下列其中一項作業**
+若要全域套用中繼資料設定檔，請遵循下列步驟：
 
 * 導覽至 `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 並套用適當的描述檔，然後點選「 **[!UICONTROL 儲存]**」。
 
    ![chlimage_1-209](assets/chlimage_1-492.png)
 
-* 導覽至CRXDE Lite至下列節點： `/content/dam/jcr:content`。 新增屬性並 `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>` 點選「 **全部儲存」**。
+* 在CRXDE Lite中，導覽至下列節點： `/content/dam/jcr:content`. 新增屬性， `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>` 然後按一下「 **[!UICONTROL 全部儲存」]**。
 
    ![chlimage_1-210](assets/chlimage_1-493.png)
 
@@ -157,6 +156,10 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 1. 點選AEM標誌並導覽 **[!UICONTROL Assets]** ，然後前往您要從中移除中繼資料描述檔的檔案夾。
 1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
 1. 選擇「元 **[!UICONTROL 資料描述檔]** 」標籤，然後從下拉式選單中選 **[!UICONTROL 擇「無]** 」，然後按一下「 **[!UICONTROL 儲存]**」。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+
+## 限制與最佳實務 {#limitations-best-practices-tips}
+
+* 升級至 [!DNL Experience Manager] 6.5之前，您可能已有預先存在的中繼資料設定檔。 升級後，如果您在「中繼資料設定檔」索引標籤的 [!UICONTROL 資料夾] 「屬  性」中套用此類設定檔，則不會顯示中繼資料表格欄位。 不過，如果您套用新建立的中繼資料描述檔，表單欄位會顯示，但無法如預期般使用。 功能不會遺失，但如果您想查看（無法使用）表單欄位，請編輯並儲存現有的中繼資料設定檔。
 
 >[!MORELIKETHIS]
 >
