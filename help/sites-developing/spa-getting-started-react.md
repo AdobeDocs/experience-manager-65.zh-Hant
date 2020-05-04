@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
 
 ---
 
@@ -118,9 +118,9 @@ module.exports = {
 
 建立後，套件就可以上傳至AEM例項。
 
-### SPA Starter Kit的Maven Archetype {#maven-archetype-for-spa-starter-kit}
+### AEM Project Archetype {#aem-project-archetype}
 
-Adobe建議您運用 [Maven Archetype for SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype) ，協助您針對AEM開始自己的SPA專案。
+任何AEM專案都應運用 [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用React或Angular的SPA專案，並運用SPA SDK。
 
 ## 應用程式結構 {#application-structure}
 
@@ -193,7 +193,7 @@ MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppP
 
 在此範例中， `AppPage` 類別會 `Page`延伸，其中包含內部內容方法，然後可加以使用。
 
-這 `Page` 會擷取頁面模型的JSON表示法，並處理內容以包覆／裝飾頁面的每個元素。 有關的詳細資 `Page` 訊，請參閱檔案 [SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501)。
+這 `Page` 會擷取頁面模型的JSON表示法，並處理內容以包覆／裝飾頁面的每個元素。 有關的詳細 `Page` 資訊，請參閱文 [件SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501)。
 
 ### Image.js {#image-js}
 
@@ -271,9 +271,9 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 單頁應用程式中的元件必須定期共用資訊。 有幾種建議的方法可做到，如下列出，增加了複雜性。
 
-* **** 選項1:例如，使用React Context將邏輯和廣播集中到必要的元件。
-* **** 選項2:使用狀態庫（例如Redux）來共用元件狀態。
-* **** 選項3:自訂和擴充容器元件，以運用物件階層。
+* **選項1:** 例如，使用React Context將邏輯和廣播集中到必要的元件。
+* **選項2:** 使用狀態庫（例如Redux）來共用元件狀態。
+* **選項3:** 自訂和擴充容器元件，以運用物件階層。
 
 ## 後續步驟 {#next-steps}
 
