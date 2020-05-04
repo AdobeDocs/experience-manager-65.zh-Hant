@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3d9bcc706a1fa7a15d0ce8729f7b85c4226b394f
+source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
 
 ---
 
@@ -40,6 +40,12 @@ SPA Editor提供完整的解決方案，以支援AEM中的SPA。 本文逐步說
    ](/help/release-notes/sp-release-notes.md)
 * [請在此處安裝GitHub上提供的範例We.Retail Journal應用程式。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
+>[!CAUTION]
+>
+>本檔案僅將 [We.Retail Journal應用程式用於展示用途](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 。 它不應用於任何項目工作。
+>
+>任何AEM專案都應運用 [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用React或Angular的SPA專案，並運用SPA SDK。
+
 ### 什麼是SPA? {#what-is-a-spa}
 
 單頁應用程式(SPA)與傳統頁面不同，它是由用戶端轉譯，主要是Javascript導向，依賴Ajax呼叫來載入資料並動態更新頁面。 大部分或所有內容在單一頁面載入時都會擷取一次，並根據使用者與頁面的互動，視需要以非同步方式載入其他資源。
@@ -61,7 +67,7 @@ SPA就像原生應用程式，不但對網頁的訪客，而且由於SPA的運�
 
 **行銷人員**
 
-* 行銷人員想要提供豐富、原生的體驗，以吸引訪客充份參與內容。
+* 行銷人員想要提供豐富、原生的體驗，以吸引訪客完全參與內容。
 * 個人化可讓這些體驗更吸引人。
 
 **開發人員**
