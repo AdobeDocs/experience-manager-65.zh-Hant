@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 translation-type: tm+mt
-source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
+source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
 
 ---
 
@@ -21,14 +21,22 @@ Adobe分類會以排程方式將分 [類資料匯出至Adobe Analytics](/help/si
 
 若要設定此值：
 
-1. 透過工 **具、Cloudservices導覽至** 「 **Adobe Analytics** 」區段。
-1. 添加新配置。 您會看到 **Adobe Analytics Framework** Configuration範本會顯示在 **Adobe Analytics Framework設定下方** 。 根據需 **要提供****標題和名稱** :
+1. 使用 **「Using** Invagation **」(工具**) **、「Cloud Services」（雲端服務），然後選擇「Legacy Cloud Services**」（舊式雲端服務）導 ****&#x200B;航。
+1. 捲動至 **Adobe Analytics** ，然後選 **取顯示設定**。
+1. 按一 **下Adobe Analytics設定旁的** [+]連結。
 
-   ![aa-25](assets/aa-25.png)
+1. 在「建立 **框架** 」對話框中：
 
-1. 按一 **下「建立** 」以設定設定。
+   * 指定 **標題**。
+   * 或者，您可以為儲存 **在儲存庫中的框架詳細資訊的節點指定名稱**。
+   * 選取 **Adobe Analytics分類**
+   然後按一下 **建立**。
 
-   ![chlimage_1](assets/chlimage_1a.png)
+   ![「建立框架」對話框](assets/aa-25.png)
+
+1. 「分 **類設定** 」對話方塊隨即開啟以供編輯。
+
+   ![「分類設定」對話方塊](assets/aa-classifications-settings.png)
 
    屬性包括：
 
