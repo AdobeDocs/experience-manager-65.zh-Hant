@@ -11,17 +11,17 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
 
 ---
 
 
 # 連線至Adobe Analytics和建立架構 {#connecting-to-adobe-analytics-and-creating-frameworks}
 
-若要在Adobe Analytics中追蹤AEM頁面的網頁資料，請建立Adobe Analytics Cloud services設定和Adobe Analytics架構：
+若要在Adobe Analytics中追蹤AEM頁面的網頁資料，請建立Adobe Analytics Cloud Services設定和Adobe Analytics架構：
 
-* **** Adobe Analytics設定：Adobe Analytics帳戶的相關資訊。 Adobe Analytics設定可讓AEM連線至Adobe Analytics。 為您使用的每個帳戶建立Adobe Analytics設定。
-* **** Adobe Analytics Framework:Adobe Analytics報表套裝屬性與CQ變數之間的一組映射。 使用架構來設定網站資料填入Adobe Analytics報表的方式。 架構與Adobe Analytics組態相關聯。 您可以為每個配置建立多個框架。
+* **Adobe Analytics設定：** Adobe Analytics帳戶的相關資訊。 Adobe Analytics設定可讓AEM連線至Adobe Analytics。 為您使用的每個帳戶建立Adobe Analytics設定。
+* **Adobe Analytics Framework:** Adobe Analytics報表套裝屬性與CQ變數之間的一組映射。 使用架構來設定網站資料填入Adobe Analytics報表的方式。 架構與Adobe Analytics組態相關聯。 您可以為每個配置建立多個框架。
 
 將網頁與框架關聯時，框架將對該頁和該頁的後代執行跟蹤。 然後，可從Adobe Analytics擷取頁面檢視，並顯示在「網站」主控台中。
 
@@ -87,7 +87,7 @@ AEM依預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料�
 >
 >現在 [應使用Adobe Analytics提供的](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) ActivityMap外掛程式。
 
-## 為Activity map設定 {#configuring-for-the-activity-map}
+## 為Activity Map設定 {#configuring-for-the-activity-map}
 
 >[!CAUTION]
 >
@@ -99,9 +99,9 @@ AEM依預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料�
 
 對於您使用的報表套裝ID(RSID)，您可以控制哪些伺服器例項（作者、發佈或兩者）將資料貢獻至報表套裝：
 
-* **全部**:來自作者和發佈例項的資訊都會填入報表套裝。
-* **作者**:只有作者例項的資訊會填入報表套裝。
-* **發佈**:只有來自發佈例項的資訊會填入報表套裝。
+* **全部**: 來自作者和發佈例項的資訊都會填入報表套裝。
+* **作者**: 只有作者例項的資訊會填入報表套裝。
+* **發佈**: 只有來自發佈例項的資訊會填入報表套裝。
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ AEM依預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料�
 >例如，架構已設定為使用 *diweretail* 報表套裝，而author是選取的伺服器例項。 當頁面與架構一起發佈時，仍會對Adobe Analytics進行呼叫，但這些呼叫不包含RSID。 只有來自作者例項的呼叫會包含RSID。
 
 1. 使用 **「Using** Invagation **」(工具**) **、「Cloud Services」（雲端服務），然後選擇「Legacy Cloud Services**」（舊式雲端服務）導 ****&#x200B;航。
-1. 捲動至 **Adobe Analytics** ，然後按一 **下「可用** 組態」旁邊的[+] ****。
+1. 捲動至 **Adobe Analytics** ，然後選 **取顯示設定**。
 1. 按一 **下Adobe Analytics設定旁的** [+]連結。
 
 1. 在「建立 **框架** 」對話框中：
@@ -181,7 +181,7 @@ AEM依預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料�
 1. 選擇「 **儲存並關閉**」。
 1. **[發佈頁](/help/sites-authoring/publishing-pages.md)**，以啟動頁面和任何連接的組態／檔案。
 1. 最後一個步驟是造訪發佈例項上的頁面，並使用 **** Search元件搜尋關鍵字（例如茄子）。
-1. 然後，您可以使用適當的工具檢查對Adobe Analytics的呼叫；例如 [Adobe Marketing cloud除錯程式](https://marketing.adobe.com/resources/help/en_US/sc/implement/debugger_install.html)。
+1. 然後，您可以使用適當的工具檢查對Adobe Analytics的呼叫； 例如 [Adobe Marketing Cloud除錯程式](https://marketing.adobe.com/resources/help/en_US/sc/implement/debugger_install.html)。
 1. 在提供的範例中，呼叫應包含eVar7中輸入的值（即茄子），而事件清單應包含event3。
 
 ### 頁面檢視 {#page-views}
@@ -194,10 +194,12 @@ AEM依預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料�
 
 設定 **Adobe AEM Managed Polling Configuration服務的適當例項** :
 
-* **輪詢間隔**:服務從Adobe Analytics擷取頁面檢視資料的間隔（以秒為單位）。
+* **輪詢間隔**:
+服務從Adobe Analytics擷取頁面檢視資料的間隔（以秒為單位）。
 預設間隔為43200000毫秒（12小時）。
 
-* **啟用**:啟用或禁用服務。 預設情況下，服務處於啟用狀態。
+* **啟用**:
+啟用或禁用服務。 預設情況下，服務處於啟用狀態。
 
 要配置此OSGi服務，可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) ，或儲存庫中 [的osgiConfig節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (服務PID是 `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`)。
 
