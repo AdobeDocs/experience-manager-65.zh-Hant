@@ -1,9 +1,12 @@
 ---
-title: 在[!DNL Adobe Experience Manager]中管理數位資產的中繼資料。
-description: 瞭解中繼資料的類型，以及[!DNL Adobe Experience Manager Assets]如何協助管理資產的中繼資料，讓資產分類和組織更輕鬆。 [!DNL Experience Manager]可讓資產根據其中繼資料自動組織和處理。
+title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]。
+description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c32e64d4921d7239d07f57ab9e12c744758faa0a
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1395'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: c32e64d4921d7239d07f57ab9e12c744758faa0a
 * 包含在中的資料夾的名稱。
 * 相關資產或套用的標籤。
 
-以上是Experience Manager可為資產管理的基本中繼資料屬性，可讓使用者查看所有資產。 例如，在嘗試尋找最近新增的資產時，可使用上次修改日期來排序資產。
+以上是可管理資產的基本中繼資 [!DNL Experience Manager] 料屬性，可讓使用者查看所有資產。 例如，在嘗試尋找最近新增的資產時，可使用上次修改日期來排序資產。
 
 您可以新增更多高階資料至數位資產，例如：
 
@@ -90,7 +93,7 @@ ID3標籤是針對MP3檔案格式而設計。 有關格式的其他資訊：
 
 ### Exif {#exif}
 
-可交換的影像檔案格式(Exif)是數位攝影中最常用的中繼資料格式。 它提供以多種檔案格式（例如JPEG、TIFF、RIFF和WAV）嵌入固定的中繼資料屬性辭彙的方式。 Exif將中繼資料儲存為中繼資料名稱與中繼資料值的配對。 這些中繼資料名稱——值配對也稱為標籤，不要與中的標籤混淆 [!DNL Experience Manager]。  現代數位相機可建立Exif中繼資料，而現代圖形軟體也支援它。 Exif格式是中繼資料管理的最低公分母，尤其是影像。
+可交換的影像檔案格式(Exif)是數位攝影中最常用的中繼資料格式。 它提供以多種檔案格式（例如JPEG、TIFF、RIFF和WAV）嵌入固定的中繼資料屬性辭彙的方式。 Exif將中繼資料儲存為中繼資料名稱與中繼資料值的配對。 這些中繼資料名稱——值配對也稱為標籤，不要與中的標籤混淆 [!DNL Experience Manager]。 現代數位相機可建立Exif中繼資料，而現代圖形軟體也支援它。 Exif格式是中繼資料管理的最低公分母，尤其是影像。
 
 Exif的主要限制是不支援一些常用的影像檔案格式，例如BMP、GIF或PNG。
 
@@ -98,7 +101,7 @@ Exif定義的中繼資料欄位通常具有技術性，在描述性中繼資料�
 
 ### 其他中繼資料 {#other-metadata}
 
-可從檔案內嵌的其他中繼資料包括Microsoft Word、PowerPoint、Excel等。
+可從檔案內嵌的其他中繼資 [!DNL Microsoft Word]料 [!DNL PowerPoint]包括 [!DNL Excel]、、等等。
 
 ## 中繼資料圖式 {#metadata-schemata}
 
