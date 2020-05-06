@@ -1,9 +1,12 @@
 ---
 title: 如何編輯或新增中繼資料
-description: 瞭解[!DNL Adobe Experience Manager Assets]中的資產中繼資料，以及編輯資產中繼資料的各種方式。
+description: 透過各種可編輯資 [!DNL Adobe Experience Manager Assets] 產中繼資料的方式，瞭解資產中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +26,11 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    * 從介面 [!DNL Assets] 中，選擇資產，然後從工具 **[!UICONTROL 列按一下「檢視屬性]** 」。
    * 從資產縮圖中，選取「檢視 **[!UICONTROL 屬性]** 」快速動作。
    * 在資產頁面中，按一 **[!UICONTROL 下工具列]**![中的「檢視屬性」(View Properties](assets/chlimage_1-168.png) chlimage_1-168)。
-   資產頁面會顯示資產的所有中繼資料。 當資產上傳（收錄）至Experience Manager時，會擷取中繼資料。
+   資產頁面會顯示資產的所有中繼資料。 當資產上傳（收錄）至時，會擷取中繼資料 [!DNL Experience Manager]。
 
    ![選取資產屬性以檢視中繼資料](assets/asset-metadata.png)
 
-   *圖：在資產屬性頁面上編輯或新增中繼資料。*
+   *圖： 在資產屬性頁面上編輯或新[!UICONTROL 增中繼資]料。*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the Assets web interface.
 
@@ -35,20 +38,20 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    >
    >如果文字欄位空白，則沒有現有的中繼資料集。 您可以在欄位中輸入值，並儲存它以新增該中繼資料屬性。
 
-對資產中繼資料所做的任何變更都會寫入原始二進位檔，作為其XMP資料的一部分。 這是透過Experience Manager中繼資料回寫工作流程來完成的。 對現有屬性所做的變更(如 `dc:title`)會被覆寫，而新建立的屬性(包括自訂屬性 `cq:tags`)會與架構一起新增。
+對資產中繼資料所做的任何變更都會寫入原始二進位檔，作為其XMP資料的一部分。 這是透過中繼資 [!DNL Experience Manager] 料回寫工作流程來完成。 對現有屬性所做的變更(如 `dc:title`)會被覆寫，而新建立的屬性(包括自訂屬性 `cq:tags`)會與架構一起新增。
 
 支援並啟用XMP回寫功能，適用於技術需求中所述的平台 [和檔案格式。](/help/sites-deploying/technical-requirements.md)
 
 ## 編輯中繼資料結構 {#editing-metadata-schema}
 
-如需如何編輯中繼資料結構的詳細資訊，請參閱「編 [輯中繼資料結構表單](metadata-schemas.md#edit-metadata-schema-forms)」。
+如需詳細資訊，請參 [閱編輯中繼資料結構表單](metadata-schemas.md#edit-metadata-schema-forms)。
 
-## 在Experience Manager中註冊自訂命名空間 {#registering-a-custom-namespace-within-aem}
+## 在 [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}
 
-您可以在Experience Manager中新增自己的名稱空間。 就像有預先定義的名稱空間（例如cq、jcr和sling）一樣，您也可以擁有儲存庫中繼資料和xml處理的名稱空間。
+您可以在中新增自己的名稱空間 [!DNL Experience Manager]。 就像有預先定義的名稱空間 `cq`(如、 `jcr`和 `sling`)一樣，您也可以為儲存庫元資料和XML處理提供一個命名空間。
 
 1. 轉至節點類型管理頁 `https:[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`。
 1. 按一 **[!UICONTROL 下頁面頂端]** 「命名空間」。 命名空間管理頁面會顯示在視窗中。
 
 1. 若要新增命名空間，請按一 **[!UICONTROL 下底部]** 的「新增」。
-1. 在XML命名空間約定中指定自訂命名空間（以URI的形式指定ID，並為ID指定相關首碼），然後按一下「儲 **[!UICONTROL 存」]**。
+1. 在XML命名空間慣例中指定自訂命名空間。 以URI的形式指定ID，並為ID指定相關首碼。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
