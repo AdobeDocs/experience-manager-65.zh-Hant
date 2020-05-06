@@ -1,9 +1,12 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]中的資產範本。'
-description: 瞭解[!DNL Adobe Experience Manager Assets]中的資產範本，以及如何使用資產範本建立行銷文宣。
+title: 中的資產模板 [!DNL Adobe Experience Manager Assets]。
+description: 瞭解資產範本 [!DNL Adobe Experience Manager Assets] ，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1553'
+ht-degree: 0%
 
 ---
 
@@ -196,4 +199,4 @@ source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
 
 ## 最佳實務與限制 {#best-practices-limitations-tips}
 
-* AEM InDesign編輯器可在標籤層級運作，而單一標籤下的所有文字都視為單一實體。 若要在編輯時保留文字格式和樣式，請個別標籤每個段落（或使用不同樣式的文字）。
+* 編輯 [!DNL InDesign] 器在標 [!DNL Experience Manager] 記層級運作，而單一標籤下的所有文字都視為單一實體。 若要在編輯時保留文字格式和樣式，請個別標籤每個段落（或使用不同樣式的文字）。
