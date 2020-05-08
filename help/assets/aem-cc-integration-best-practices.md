@@ -21,7 +21,7 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->[!DNL Experience Manager] 不 [!DNL Creative Cloud] 再提倡資料夾共用，本指南不再涵蓋。 Adobe建議使用較新的功能(例如 [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) 或 [Experience Manager案頭應用程式)，讓創意使用者可存取管理中的資產](Https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/introduction.html)[!DNL Experience Manager]。
+>[!DNL Experience Manager] 不 [!DNL Creative Cloud] 再提倡資料夾共用，本指南不再涵蓋。 Adobe建議使用較新的功能(例如 [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) 或 [Experience Manager案頭應用程式)，讓創意使用者可存取管理中的資產](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/introduction.html)[!DNL Experience Manager]。
 
 ## 創意人員、行銷人員和DAM使用者的協作需求 {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
