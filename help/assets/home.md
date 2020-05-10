@@ -4,7 +4,10 @@ seo-title: AEM 6.5 Assets使用指南
 description: 本指南涵蓋所有AEM Assets工作，例如如何建立、管理、傳送和最佳化數位資產。
 seo-description: 涵蓋所有AEM Assets工作，例如如何建立、管理、提供和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: e6c0ee967d1b01da18b538960520c206937599f6
+source-git-commit: db5996bd25c6c35854f8b7164558b41a477b4cd6
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 10%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: e6c0ee967d1b01da18b538960520c206937599f6
 | 使用手冊 | 說明 |
 |--- |---|
 | [發行說明](/help/release-notes/home.md) | 提供有關最新版AEM的重要資訊，包括新增、支援的平台、已過時和已移除的功能，以及已知問題 |
-| [表[單使用指南](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
+| [表單使用指南](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
 | [社群使用指南](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
 | [管理指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
 | [編寫指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫內容的概念。 |
