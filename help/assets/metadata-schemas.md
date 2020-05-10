@@ -3,9 +3,9 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6151c1afe3006e8d4b93648fc9eb779c73df4181
+source-git-commit: 739f1c6fcc910ed134849c27a44a6feccd1684c9
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2738'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 在中， [!DNL Adobe Experience Manager Assets]結構包含要填充的特定資訊的特定欄位。 它也包含版面資訊，以方便使用者的方式顯示中繼資料欄位。 中繼資料屬性包括標題、說明、MIME類型、標籤等。 您可以使用中繼資  料結構表單編輯器來修改現有結構或新增自訂的中繼資料結構。
 
-若要檢視資產的屬性頁面，請依照下列步驟進行：
+若要檢視和編輯資產的屬性頁面，請依照下列步驟進行：
 
 1. 按一下或點選「卡 **[!UICONTROL 片檢視」中資產圖格上]** 「快速動作」的「檢視屬性」圖示。
 
@@ -35,36 +35,22 @@ ht-degree: 9%
 
 若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳 [細資訊，請參閱編輯中繼資料結構](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) 表單。 如果您修改特定MIME類型的中繼資料架構，則會修改目前MIME類型資產和所有資產子類型的屬性頁面配置。 例如，在下修改jpeg架構時， `default/image` 僅會修改MIME類型資產的中繼資料配置（資產屬性） `image/jpeg`。 不過，如果您編輯預設結構，您的變更會修改所有類型資產的中繼資料配置。
 
-1. 若要檢視表單／範本清單，請在介面中導 [!DNL Experience Manager] 覽至「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼資 **[!UICONTROL 料結構]**」。
+## 中繼資料結構表單 {#default-metadata-schema-forms}
 
-## 預設可用的中繼資料結構表單 {#available-metadata-schema-templates}
+若要檢視表單／範本清單，請在介面中導 [!DNL Experience Manager] 覽至「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼資 **[!UICONTROL 料結構]**」。
 
-[!DNL Experience Manager] 提供下列範本：
+[!DNL Experience Manager] 提供以下元資料架構表單模板：
 
-### 預設 {#default-template}
-
-預設 [!UICONTROL 值是] 「資產」的基本中繼資料結構表單。 以下子表單繼承預設表單的屬性：
-
-**image** 是MIME類型為&quot;image&quot;的資產的架構表單。 例如， `image/jpeg`、 `image/png`等等。 「影像」表單包含下列子表單範本：
-* **jpeg** 是子類型資產的架構表單 `jpeg`。
-
-* **Tiff** 是子類型資產的架構表單 `tiff`。
-
-**application** 是具有MIME類型資產的架構表 `application`單。 例如， `application/pdf`、 `application/zip`等等。 **pdf** 是子類型資產的架構表單 `pdf`。
-
-**video** 是具有MIME類型的資產 `video`( `video/avi`如、 `video/mp4`等)的架構表單。
-
-### 集合 {#collection-template}
-
-系列 [!UICONTROL 是系列的] 「方案」表單。
-
-### contentfragment {#contentfragment-template}
-
-內容 [!UICONTROL 片段] 是內容片段的架構表單。
-
-### forms {#forms-template}
-
-表 [!UICONTROL 單結構] 表單與 [Adobe Experience Manager Forms相關](/help/forms/home.md)。
+| 範本 |  | 說明 |
+|---|---|---|
+| [!UICONTROL 預設] |  | 資產的基本中繼資料結構表單。 |
+|  | 以下子表單繼承預設表單的 [!UICONTROL 屬性] : |  |
+|  | <ul><li> [!UICONTROL 影像]</li></ul> | 具有MIME類型「image」的資產的架構表單，例如image/jpeg、image/png等。 <br> 影 [!UICONTROL 像表單] 包含下列子表單範本： <ul><li> [!UICONTROL jpeg]: 子類型 [!UICONTROL jpeg資產的架構表單]。</li> <li>[!UICONTROL tiff]: 子類型Tiff的資產的結構表 [!UICONTROL 單]。</li></ul> |
+|  | <ul><li> [!UICONTROL 應用程式]</li></ul> | MIME類型為「應用程式」的資產的架構表單，例如application/ pdf、application/ zip等。 <br>[!UICONTROL pdf]: 子類型pdf的資產的架構表單。 |
+|  | <ul><li>[!UICONTROL 視訊]</li></ul> | MIME類型為「video」的資產的架構表單，例如video/avi、video/mp4等。 |
+| [!UICONTROL 集合] |  | 系列的結構表單。 |
+| [!UICONTROL contentfragment] |  | 內容片段的架構表單。 |
+| [!UICONTROL 表單] |  | 此結構表單與 [Adobe Experience Manager Forms相關](/help/forms/home.md)。 |
 
 >[!NOTE]
 >
@@ -124,7 +110,7 @@ ht-degree: 9%
 
 **欄位標籤**: 顯示在資產屬性頁面上的中繼資料屬性名稱。
 
-**對應至屬性**: 此屬性指定資產節點的相對路徑／名稱，該資產節點保存在CRX儲存庫中。 開頭為 `./` 因為表示路徑位於資產節點下。
+**對應至屬性**: 此屬性指定資產節點的相對路徑／名稱，該資產節點保存在CRX儲存庫中。 它以開 `./` 頭，因為它表示路徑位於資產的節點下。
 
 以下是此屬性的有效值：
 
