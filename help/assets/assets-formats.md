@@ -1,34 +1,32 @@
 ---
-title: 資產支援的格式
-description: AEM Assets和Dynamic Media支援的檔案格式清單以及每種格式支援的功能。
+title: 支援的檔案格式 [!DNL Adobe Experience Manager Assets]。
+description: 支援的檔案格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 類型，以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1756'
 ht-degree: 8%
 
 ---
 
 
-# 支援的資產格式 {#assets-supported-formats}
+# 支援的格式 [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援也各不相同。
-
-若要將AEM Assets與其他符合標準的數位資產管理(DAM)解決方案和案頭軟體整合，請使用Adobe的可擴充中繼資料平台(XMP)。
+[!DNL Experience Manager Assets] 支援多種檔案格式，而各種功能都支援不同的MIME類型。 若要與 [!DNL Assets] 其他符合標準的數位資產管理(DAM)解決方案和案頭軟體整合，請使用Adobe的 [!DNL Extensible Metadata Platform] (XMP)。
 
 使用圖例瞭解支援等級。
 
 | 支援等級 | 說明 |
-|:---:|---|
+| :-----------: | ------------------------------ |
 | ✓ | 支援 |
 | * | 支援附加功能 |
 | − | 不適用 |
 
-## AEM Assets中支援的點陣影像格式 {#supported-raster-image-formats}
+## 支援的點陣影像格式 [!DNL Assets] {#supported-raster-image-formats}
 
 | 格式 | 儲存 | 中繼資料管理 | 中繼資料擷取 | 產生縮圖 | 編輯 | 中繼資料回寫 | 分析 |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
 | TIFF | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
@@ -45,7 +43,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 ‡合併的影像是從PSD檔案擷取。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
-## 動態媒體中支援的點陣影像格式 {#supported-raster-image-formats-dynamic-media}
+## 支援的點陣影像格式 [!DNL Dynamic Media] {#supported-raster-image-formats-dynamic-media}
 
 | 格式 | 上傳<br> （輸入格式） | 建立影像預設集<br><br><br> （輸出格式） | 預覽<br><br> 動態轉譯 | 傳送<br> 動態轉譯<br> | 下載<br><br> 動態轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -66,7 +64,7 @@ AEM Assets支援多種檔案格式，而各種功能對不同MIME類型的支援
 
 * 將中繼資料回寫新增至處理常式時，可用於PSB檔案格 `NComm` 式。
 
-* 若要使用Dynamic Media預覽並產生EPS檔案的動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使 [!DNL Dynamic Media] 用預覽並產生EPS檔案的動態轉譯，請參閱 [Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 對於EPS檔案，PostScript Document Structuring Convention(PS-Adobe)3.0版或更新版本支援中繼資料回寫。
 
