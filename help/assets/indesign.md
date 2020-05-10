@@ -1,20 +1,23 @@
 ---
-title: 將[!DNL Adobe Experience Manager Assets]與[!DNL Adobe InDesign Server]整合
-description: 瞭解如何將[!DNL Adobe Experience Manager Assets]與[!DNL Adobe InDesign Server]整合。
+title: 整 [!DNL Adobe Experience Manager Assets] 合 [!DNL Adobe InDesign Server]
+description: 瞭解如何 [!DNL Adobe Experience Manager Assets] 整合 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '1561'
+ht-degree: 3%
 
 ---
 
 
-# 與 [!DNL Adobe Experience Manager Assets][!DNL Adobe InDesign Server]{#integrating-aem-assets-with-indesign-server}
+# 與 [!DNL Adobe Experience Manager Assets] [!DNL Adobe InDesign Server] {#integrating-aem-assets-with-indesign-server}
 
 [!DNL Adobe Experience Manager Assets] 用途：
 
 * 一個代理，用於分配特定處理任務的負載。 代理是與代理工 [!DNL Experience Manager] 作者通信以完成特定任務的實例，而其他實例 [!DNL Experience Manager] 則用於傳遞結果。
 * 用於定義和管理特定任務的代理工作器。
-這些工作可以涵蓋各種任務；例如，使用 [!DNL InDesign Server] 處理檔案。
+這些工作可以涵蓋各種任務； 例如，使用 [!DNL InDesign Server] 處理檔案。
 
 若要完全上傳您 [!DNL Experience Manager Assets] 使用Proxy建立 [!DNL Adobe InDesign] 的檔案。 這會使用代理工作器與通信， [!DNL Adobe InDesign Server]在此處 [運行指令碼](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) ，以提取元資料並生成各種格式副本 [!DNL Experience Manager Assets]。 代理工作器在雲配置中啟用與 [!DNL InDesign Server] 實 [!DNL Experience Manager] 例之間的雙向通信。
 
@@ -64,7 +67,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 只有當預設值不適用於您的例項時，才需要這麼做。
 1. 為InDesign [Server設定代理工作器](#configuring-the-proxy-worker-for-indesign-server)。
 
-### 安裝 [!DNL InDesign Server]{#installing-the-indesign-server}
+### 安裝 [!DNL InDesign Server] {#installing-the-indesign-server}
 
 要安裝並啟動， [!DNL InDesign Server] 以便與 [!DNL Experience Manager]:
 
@@ -80,7 +83,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    >[!NOTE]
    >
-   >如果要將輸出消息保存到檔案，則使用重定向；例如，在Windows下：
+   >如果要將輸出消息保存到檔案，則使用重定向； 例如，在Windows下：
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
 ### 設定工作 [!DNL Experience Manager Assets] 流程 {#configuring-the-aem-assets-workflow}
@@ -104,9 +107,9 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 媒體擷取引數和指令碼路徑
 
-* **ExtendScript程式庫**:這是其他指令碼所需的簡單http get/post方法程式庫。
+* **ExtendScript程式庫**: 這是其他指令碼所需的簡單http get/post方法程式庫。
 
-* **擴充指令碼**:您可以在此處指定不同的指令碼組合。 如果希望在上執行自己的指令碼， [!DNL InDesign Server]請將指令碼保存在 `/apps/settings/dam/indesign/scripts`。
+* **擴充指令碼**: 您可以在此處指定不同的指令碼組合。 如果希望在上執行自己的指令碼， [!DNL InDesign Server]請將指令碼保存在 `/apps/settings/dam/indesign/scripts`。
 
 如需Indesign指令碼的詳細資訊，請參閱 [InDesign開發人員檔案](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
 
@@ -114,9 +117,9 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 >
 >請 勿變更ExtendScript程式庫。此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要發送到的庫以 [!DNL InDesign Server] 便在其中使用。
 
-「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 此轉譯用於「流程縮圖」工作流步驟，以生成所需的靜態轉譯 [!DNL Experience Manager]。
+「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 「處理縮圖」工作流程步驟會使用此格式副本，以產生所需的靜態格式副本 [!DNL Experience Manager]。
 
-您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您未移除預設值，因為介面需要這些預設 [!DNL Experience Manager Assets] 值。 最後，「刪除影像預覽轉譯」工作流程步驟會移除。jpg縮圖轉譯，因為不再需要它。
+您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您未移除預設值，因為介面需要這些預設 [!DNL Experience Manager Assets] 值。 最後，「刪除影像預覽轉譯」工作流程步驟會移除JPG縮圖轉譯，因為不再需要它。
 
 #### Page extraction {#page-extraction}
 
@@ -126,21 +129,21 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **頁面擷取處理常式**:從彈出式清單中，選取您要使用的處理常式。 擷取處理常式會針對由相關人員選擇的特定轉譯 `RenditionPicker` 進行操作(請參 `ExtractionHandler` 閱API)。
+* **頁面擷取處理常式**: 從彈出式清單中，選取您要使用的處理常式。 擷取處理常式會針對由相關人員選擇的特定轉譯 `RenditionPicker` 進行操作(請參 `ExtractionHandler` 閱API)。
 In a standard [!DNL Experience Manager] installation the following is available:
-   * IDML Export Extraction句柄：對在「媒體擷 `IDML` 取」步驟中產生的轉譯進行操作。
+   * IDML Export Extraction句柄： 對在「媒體擷 `IDML` 取」步驟中產生的轉譯進行操作。
 
-* **頁面名稱**:指定您要指派給產生頁面的名稱。 若保留空白，則名稱為「page」（若「page」已存在，則為衍生值）。
+* **頁面名稱**: 指定您要指派給產生頁面的名稱。 若保留空白，則名稱為「page」（若「page」已存在，則為衍生值）。
 
-* **頁面標題**:指定您要指派給產生頁面的標題。
+* **頁面標題**: 指定您要指派給產生頁面的標題。
 
-* **頁面根路徑**:結果頁面的根位置路徑。 如果保留空白，則會使用保留資產轉譯的節點。
+* **頁面根路徑**: 結果頁面的根位置路徑。 如果保留空白，則會使用保留資產轉譯的節點。
 
-* **頁面範本**:產生產生頁面時要使用的範本。
+* **頁面範本**: 產生產生頁面時要使用的範本。
 
-* **頁面設計**:產生產生頁面時要使用的頁面設計。
+* **頁面設計**: 產生產生頁面時要使用的頁面設計。
 
-### 為配置代理工作器 [!DNL InDesign Server]{#configuring-the-proxy-worker-for-indesign-server}
+### 為配置代理工作器 [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
 
 >[!NOTE]
 >
@@ -168,7 +171,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
 
-### 啟用並行作業處理 [!DNL InDesign Server]{#enabling-parallel-job-processing-for-indesign-server-s}
+### 啟用並行作業處理 [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server-s}
 
 您現在可以啟用IDS的並行作業處理。 確定可處理的並行作業的最`x`大數 [!DNL InDesign Server] 量():
 
@@ -177,7 +180,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 要配置並行IDS作業數：
 
-1. 開啟 **[!UICONTROL Felix]** Console的「設定」標籤；例如： `https://[aem_server]:[port]/system/console/configMgr`。
+1. 開啟 **[!UICONTROL Felix]** Console的「設定」標籤； 例如： `https://[aem_server]:[port]/system/console/configMgr`.
 
 1. 在下選擇IDS處理隊列 `Apache Sling Job Queue Configuration`。
 
