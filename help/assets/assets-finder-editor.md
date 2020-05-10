@@ -3,7 +3,10 @@ title: 「建立和配置資產編輯器」頁
 description: 瞭解如何建立自訂資產編輯器頁面並同時編輯多個資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '2147'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 * 如何建立和自訂資產編輯器頁面，這些頁面是WCM頁面，可讓您檢視和編輯中繼資料，以及對資產執行動作。
 * 如何同時編輯多個資產。
 
-<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 OOTB samples. -->
+<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 default samples. -->
 
 >[!NOTE]
 >
@@ -26,165 +29,165 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
 數位資產管理正被越來越多的案例所使用。 從專業訓練使用者的小型解決方案（例如攝影師或分類學者）到更大且更多元化的使用者群組（例如商業使用者、WCM作者、記者等），專業使用者的Adobe Experience Manager(AEM)Assets強大的使用者介面可提供太多資訊，而相關人員會開始要求特定使用者介面或應用程式存取與他們相關的數位資產……
 
-這些以資產為中心的應用程式可以是內部網路中的簡單像片收藏館，員工可從貿易展覽造訪或公開網站的新聞中心上傳像片，例如Geometrixx提供的範例。 以資產為中心的應用程式也可以延伸至完整的解決方案，包括購物車、結帳和驗證程式。
+這些以資產為中心的應用程式可以是內部網路中簡單的像片收藏館，員工可從商業展覽或公開網站的新聞中心上傳像片。 以資產為中心的應用程式也可以延伸至完整的解決方案，包括購物車、結帳和驗證程式。
 
-建立以資產為中心的應用程式，在很大程度上會變成不需撰寫程式碼的設定程式，只需瞭解使用者群組及其需求，以及所使用中繼資料的知識即可。 以AEM Assets建立的資產導向應用程式可擴充：使用適中的編碼工作，可重複使用的元件來搜尋、檢視和修改資產。
+建立以資產為中心的應用程式，在很大程度上會變成不需撰寫程式碼的設定程式，只需瞭解使用者群組及其需求，以及所使用中繼資料的知識即可。 以AEM Assets建立的資產導向應用程式可擴充： 使用適中的編碼工作，可重複使用的元件來搜尋、檢視和修改資產。
 
 AEM中以資產為中心的應用程式包含資產編輯器頁面，可用來取得特定資產的詳細檢視。 資產編輯器頁面也允許編輯元資料，前提是訪問資產的用戶具有必要的權限。
 
-## 建立和設定資產共用頁面 {#creating-and-configuring-an-asset-share-page}
+<!--
+## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
 
-您可自訂DAM Finder功能，並建立具有您所需所有功能的頁面，稱為「資產共用」頁面。 若要建立新的「資產共用」頁面，您可使用Geometrixx Asset Share範本新增頁面，然後自訂使用者可在該頁面上執行的動作、決定檢視者如何檢視資產，以及決定使用者如何建立查詢。
+You customize the DAM Finder functionality and create pages that have all the functionality you require, which are called Asset Share pages. To create a new Asset Share page, you add the page using the Geometrixx Asset Share template and then you customize the actions users can perform on that page, determine how viewers see the assets, and decide how users can build their queries.
 
-以下是建立自訂「資產共用」頁面的一些使用案例：
+Here are some use cases for creating a customized Asset Share page:
 
-* 記者新聞中心
-* 適用於內部商業使用者的影像搜尋引擎
-* 網站使用者的影像資料庫
-* 中繼資料編輯器的媒體標籤介面
+* Press Center for Journalists.
+* Image Search Engine for internal business users.
+* Image Database for website users.
+* Media Tagging Interface for metadata editors.
 
-### 建立資產共用頁面 {#creating-an-asset-share-page}
+### Create an Asset Share page {#creating-an-asset-share-page}
 
-若要建立新的「資產共用」頁面，您可以在使用網站時或從數位資產管理員建立頁面。
+To create a new Asset Share page, you can either create it when you are working on web sites or from the digital asset manager.
 
 >[!NOTE]
 >
->依預設，當您從數位資產管理員的「新增」中建立「資產共用」頁面時，系統會自動為您建立資產檢視器和資產編輯器。 ****
+>By default, when you create an Asset Share page from **New** in the digital asset manager, an Asset viewer and Asset editor are automatically created for you.
 
-若要在網站主控台中建立新的資產共 **用頁** :
+To create an new Asset Share page in the **Websites** console:
 
-1. 在「網 **站** 」標籤中，導覽至您要建立資產共用頁面的位置，然後按一下「新 **增」**。
+1. In the **Websites** tab, navigate to the place where you want to create an asset share page and click **New**.
 
-1. 選取「資 **產共用** 」頁面，然後按 **一下「建立**」。 會建立新頁面，資產共用頁面會列在「網站」標 **簽中** 。
+1. Select the **Asset Share** page and click **Create**. The new page is created and the asset share page is listed in the **Websites** tab.
 
 ![dam8](assets/dam8.png)
 
-使用Geometrixx DAM Asset Share範本建立的基本頁面外觀如下：
+The basic page created using the Geometrixx DAM Asset Share template looks as follows:
 
 ![screen_shot_2012-04-18at115456am](assets/screen_shot_2012-04-18at115456am.png)
 
-若要自訂「資產共用」頁面，請使用sidekick中的元素，並編輯查詢產生器屬性。 頁面 **Geometrixx Press Center** 是以此範本為基礎的自訂頁面版本：
+To customize your Asset Share page, you use elements from the sidekick and you also edit query builder properties. The page **Geometrixx Press Center** is a customized version of a page based on this template:
 
 ![screen_shot_2012-04-19at123048pm](assets/screen_shot_2012-04-19at123048pm.png)
 
-若要透過數位資產管理員建立新的資產共用頁面：
+To create a new asset share page via the digital asset manager:
 
-1. 在數位資產管理員的「新增 **」中**，選 **取「新增資產共用」**。
-1. 在「標 **題**」中，輸入資產共用頁面的名稱。 視需要輸入URL的名稱。
+1. In the digital asset manager, in **New**, select **New Asset Share**.
+1. In the **Title**, enter the name of the asset share page. If desired, enter a name for the URL.
 
    ![screen_shot_2012-04-19at23626pm](assets/screen_shot_2012-04-19at23626pm.png)
 
-1. 連按兩下資產共用頁面以開啟並設定頁面。
+1. Double-click the asset share page to open it and configure the page.
 
    ![screen_shot_2012-04-19at24114pm](assets/screen_shot_2012-04-19at24114pm.png)
 
-   依預設，當您從「新增」建立「資產共用」頁面時 ****，系統會自動為您建立資產檢視器和資產編輯器。
+   By default, when you create an Asset Share page from **New**, an Asset viewer and Asset editor are automatically created for you.
 
-#### 自訂動作 {#customizing-actions}
+#### Customize actions {#customizing-actions}
 
-您可以從一系列預先定義的動作中，決定使用者可對選取的數位資產執行哪些動作。
+You can determine what actions users can perform on selected digital assets from a selection of predefined actions.
 
-要向「資產共用」頁添加操作，請執行以下操作：
+To add actions to the Asset Share page:
 
-1. 在您要自訂的「資產共用」頁面中，按一下側 **點中** 的「動作」。
+1. In the Asset Share page that you want to customize, click **Actions** in the sidekick.
 
-可執行下列動作：
+The following actions are available:
 
-![assetshare2](assets/assetshare2.bmp)
+ | Action | Description |
+ |---|---|
+ | [!UICONTROL Delete Action] | Users can delete the selected assets. |
+ | [!UICONTROL Download Action] | Lets users download selected assets to their computers. |
+ | [!UICONTROL Lightbox Action] | Saves assets to a "lightbox"   where you can perform other actions on them. This comes in handy when working   with assets across multiple pages. The lightbox can also be used as a   shopping cart for assets. |
+ | [!UICONTROL Move Action] | Users can move the asset to another   location |
+ | [!UICONTROL Tags Action] | Lets users add tags to selected assets |
+ | [!UICONTROL View Asset Action] | Opens the asset in the Asset editor for   user manipulation. |
 
-| 動作 | 說明 |
-|---|---|
-| [!UICONTROL 刪除動作] | 使用者可以刪除選取的資產。 |
-| [!UICONTROL 下載動作] | 可讓使用者將選取的資產下載至其電腦。 |
-| [!UICONTROL Lightbox 動作] | 將資產儲存至「燈箱」，您可在其中執行其他動作。 在跨多個頁面處理資產時，此功能十分有用。 燈箱也可用作資產的購物車。 |
-| [!UICONTROL 移動動作] | 使用者可將資產移至其他位置 |
-| [!UICONTROL 標記動作] | 讓使用者將標籤新增至選取的資產 |
-| [!UICONTROL 檢視資產動作] | 在「資產」編輯器中開啟資產，以供使用者控制。 |
-
-1. 將適當的動作拖曳至頁 **面上** 「動作」區域。 這樣會建立用於執行該動作的按鈕。
+1. Drag the appropriate action to the **Actions** area on the page. Doing so creates a button that is used to execute that action.
 
 ![chlimage_1-159](assets/chlimage_1-387.png)
 
-#### 確定如何顯示搜索結果 {#determining-how-search-results-are-presented}
+#### Determine how search results are presented {#determining-how-search-results-are-presented}
 
-您可以從預先定義的鏡頭清單中決定結果的顯示方式。
+You determine how results are displayed from a predefined list of lenses.
 
-若要變更搜尋結果的檢視方式：
+To change how search results are viewed:
 
-1. 在您要自訂的「資產共用」頁面中，按一下「搜尋」。
+1. In the Asset Share page that you want to customize, click Search.
 
 ![chlimage_1](assets/assetshare3.png)
 
-1. 將適當的鏡頭拖曳至頁面的上方中心。 在Press Center中，已可使用鏡片。 使用者按下適當的鏡頭圖示，以視需要顯示搜尋結果。
+1. Drag the appropriate lens to the top center of the page. In the Press Center, the lenses are already available. Users press the appropriate lens icon to display search results as desired.
 
-有下列可用鏡頭：
+The following lenses are available:
 
-| 鏡頭 | 說明 |
+| Lens | Description |
 |---|---|
-| **[!UICONTROL 列出鏡頭]** | 以清單方式呈現資產及詳細資訊。 |
-| **[!UICONTROL 馬賽克鏡頭]** | 以馬賽克方式呈現資產。 |
+| **[!UICONTROL List Lens]** |Presents the assets in a list fashion with details. |
+| **[!UICONTROL Mosaic Lens]** |Presents assets in a mosaic fashion. |
 
-#### 馬賽克鏡頭 {#mosaic-lens}
+#### Mosaic Lens {#mosaic-lens}
 
 ![chlimage_1-160](assets/chlimage_1-388.png)
 
-#### 列出鏡頭 {#list-lens}
+#### List Lens {#list-lens}
 
 ![chlimage_1-161](assets/chlimage_1-389.png)
 
-#### 自訂查詢產生器 {#customizing-the-query-builder}
+#### Customize the Query Builder {#customizing-the-query-builder}
 
-查詢產生器可讓您輸入搜尋詞，並建立「資產共用」頁面的內容。 當您編輯查詢產生器時，您也可以決定每頁顯示多少搜尋結果、當您連按兩下資產時會開啟哪個資產編輯器、查詢搜尋的路徑，以及自訂節點類型。
+The query builder lets you enter search terms and create content for the Asset Share page. When you edit the query builder, you also get to determine how many search results are displayed per page, which asset editor opens when you double-click an asset, the path the query searches, and customizes nodetypes.
 
-若要自訂查詢產生器：
+To customize the query builder:
 
-1. 在您要自訂的「資產共用」頁面中，按一下「查詢產 **生器** 」中的「編輯」。 預設情況下，將開啟「 **常規** 」頁籤。
-1. 選擇每頁結果數、資產編輯器的路徑（如果您有自訂的資產編輯器）和「動作」標題。
+1. In the Asset Share page that you want to customize, click **Edit** in the Query Builder. By default, the **General** tab opens.
+1. Select the number of results per page, the path of the asset editor (if you have a customized asset editor) and the Actions title.
 
 ![screen_shot_2012-04-23at15055pm](assets/screen_shot_2012-04-23at15055pm.png)
 
-1. 按一下「 **路徑** 」標籤。 輸入將運行搜索的路徑或多個路徑。 如果用戶使用「路徑」述詞，則覆寫這些路徑。
+1. Click the **Paths** tab. Enter a path or multiple paths that the search will run. These paths are overwritten if the user uses the Paths predicate.
 
 ![screen_shot_2012-04-23at15150pm](assets/screen_shot_2012-04-23at15150pm.png)
 
-1. 如果需要，輸入另一個節點類型。
+1. Enter another node type, if desired.
 
-1. 在「查 **詢產生器URL** 」欄位中，您可以覆寫或包住查詢產生器，並使用現有的查詢產生器元件輸入新的servlet URL。 在「動 **態消息URL** 」欄位中，您也可以覆寫動態消息URL。
+1. In the **Query Builder URL** field, you can override or wrap the query builder and enter the new servlet URLs with the existing query builder component. In the **Feed URL** field, you can override the Feed URL as well.
 
 ![screen_shot_2012-04-23at15313pm](assets/screen_shot_2012-04-23at15313pm.png)
 
-1. 在「文 **字** 」欄位中，輸入要顯示結果和結果頁碼的文字。 完成 **更改後** ，按一下「確定」。
+1. In the **Text** field, enter the text you want to appear for results and page numbers of results. Click **OK** when finished making changes.
 
 ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
-#### 新增謂語 {#adding-predicates}
+#### Add predicates {#adding-predicates}
 
-AEM Assets包含許多可新增至「資產共用」頁面的謂詞。 這些功能可讓您的使用者進一步縮小搜尋範圍。 在某些情況下，它們可能會覆寫查詢產生器參數（例如，路徑參數）。
+AEM Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
 
-要添加謂語：
+To add predicates:
 
-1. 在您要自訂的「資產共用」頁面中，按一下「搜 **尋」**。
+1. In the Asset Share page that you want to customize, click **Search**.
 
 ![assetshare3](assets/assetshare3.png)
 
-1. 將適當的謂語拖曳至查詢產生器下方的「資產共用」頁面。 這樣做會建立適當的欄位。
+1. Drag the appropriate predicates to the Asset Share page underneath the query builder. Doing so creates the appropriate fields.
 
 ![assetshare4](assets/assetshare4.bmp)
 
-以下謂語可用：
+The following predicates are available:
 
-| 述詞 | 說明 |
+| Predicate | Description |
 |---|---|
-| **[!UICONTROL 日期述詞]** | 可讓使用者搜尋在特定日期前後修改的資產。 |
-| **[!UICONTROL 選項述詞]** | 網站擁有者可以指定要搜尋的屬性（如屬性述詞中的cq:tags），以及要從中填入選項的內容樹狀結構（如標籤樹狀結構）。 這樣做會產生選項清單，使用者可在其中選取所選屬性（tag屬性）應具有的值(tags)。 此謂語可讓您建立清單控制項，例如標籤清單、檔案類型、影像方向等。 它最適合固定的選項集。 |
-| **[!UICONTROL 路徑述詞]** | 可讓使用者視需要定義路徑和子檔案夾。 |
-| **[!UICONTROL 屬性述詞]** | 網站擁有者會指定要搜尋的屬性，例如tiff:ImageLength，然後使用者可輸入值，例如800。這會傳回高800像素的所有影像。 如果您的屬性可以具有任意值，則此謂語非常有用。 |
+| **[!UICONTROL Date Predicate]** |Lets users search for assets that were modified before and after certain dates. |
+| **[!UICONTROL Options Predicate]** |The site owner can specify a property to search for (as in the property predicate, for example cq:tags) and a content tree to populate the options from (for example the tag tree). Doing so generates a list of options where the users can select the values (tags) that the selected property (tag property) should have. This predicate lets you build list controls like the list of tags, file types, image orientations, and so on. It is great for a fixed set of options. |
+| **[!UICONTROL Path Predicate]** |Lets users define the path and subfolders, if desired. |
+| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, e.g. tiff:ImageLength and the user can then enter a value, e.g. 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
 
-如需詳細資訊，請參 [閱predicate Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html)。
+For more information, see the [predicate Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
 
-1. 要進一步配置謂語，請按兩下它。 例如，當您開啟「路徑謂語」時，需要指派根路徑。
+1. To configure the predicate further, double-click it. For example, when you open the Path Predicate, you need to assign the root path.
 
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
+-->
 
 ## 「建立和配置資產編輯器」頁 {#creating-and-configuring-an-asset-editor-page}
 
@@ -192,7 +195,7 @@ AEM Assets包含許多可新增至「資產共用」頁面的謂詞。 這些功
 
 >[!NOTE]
 >
->如果您想要將自訂欄位新增至DAM資產編輯器，請新增cq:Widget節點至 `/apps/dam/content/asseteditors.`
+>如果要將自訂欄位新增至DAM資產編輯器，請新增節 `cq:Widget` 點至 `/apps/dam/content/asseteditors.`
 
 ### 「建立資產編輯器」頁 {#creating-the-asset-editor-page}
 
@@ -201,7 +204,7 @@ AEM Assets包含許多可新增至「資產共用」頁面的謂詞。 這些功
 要建立「資產編輯器」頁，請執行以下操作：
 
 1. 在「網 **站** 」標籤中，導覽至您要建立資產編輯器頁面的位置，然後按一下「新 **增」**。
-1. 選取「 **Geometrixx Asset Editor」（Geometrixx資產編輯器）** ，然後按一 **下「建立**」。 新頁面隨即建立，頁面會列在「網站」 **標籤** 中。
+1. 選取「 **Geometrixx Asset Editor」(Geometrixx資產編輯器** )，然後按 **一下「建立**」。 新頁面隨即建立，頁面會列在「網站」 **標籤** 中。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
@@ -402,14 +405,14 @@ Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會�
 
    * 在Windows上： `Ctrl + click` 每個資產。
    * 在Mac上： `Cmd + click` 每個資產。
-   若要選取資產範圍：按一下第一個資產，然 `Shift + click` 後按一下最後一個資產。
+   若要選取資產範圍： 按一下第一個資產，然 `Shift + click` 後按一下最後一個資產。
 
 1. 按一 **下「動作****** 」欄位（頁面左側）中的「編輯中繼資料」。
 1. 「Geometrixx **Press Center Asset Editor** 」（Geometrixx按中心資產編輯器）頁面會在新標籤中開啟。 資產的中繼資料顯示如下：
 
    * 標籤（不適用於所有資產，但僅適用於少數資產）會以斜體顯示。
    * 套用至所有資產的標籤會以一般字型顯示。
-   * 除標籤以外的中繼資料：只有在所有選取資產的欄位值相同時，才會顯示欄位值。
+   * 除標籤以外的中繼資料： 只有在所有選取資產的欄位值相同時，才會顯示欄位值。
 
 1. 按一 **下「下載** 」以下載包含資產原始轉譯的zip檔案。
 1. 按一下「標籤」欄位旁 **的鉛筆圖示** ，以編輯標籤：
@@ -429,8 +432,8 @@ Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會�
 
    編輯欄位時，其值會在提交表單時覆寫所選資產的現有值。
 
-   注意：編輯欄位時，會自動勾選欄位旁的方塊。
+   注意： 編輯欄位時，會自動勾選欄位旁的方塊。
 
 1. 按一 **下「更新中繼資料** 」以提交表單並儲存所有資產的變更。
 
-   注意：僅會修改已勾選的中繼資料。
+   注意： 僅會修改已勾選的中繼資料。
