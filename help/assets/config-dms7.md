@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1eb8a0335d3e4697c3cfd5a1e7048dda06bbdaf8
+source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
 workflow-type: tm+mt
-source-wordcount: '5750'
+source-wordcount: '5753'
 ht-degree: 6%
 
 ---
@@ -480,7 +480,7 @@ spin-01-01
 
 ### （可選）調整動態媒體- Scene7模式的效能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-您可以在上傳檔案時調整工作參數，以加快處理速度。 例如，如果您上傳PSD檔案，但不想以範本的形式處理，則可將圖層擷取設為false(off)。 已調整的作業參數將顯示為 `process=none&createTemplate=false`。
+您可以在上傳檔案時調整工作參數，以加快處理速度。 例如，如果您上傳PSD檔案，但不想以範本的形式處理，則可將圖層擷取設為false(off)。 在這種情況下，已調整的作業參數將顯示為 `process=none&createTemplate=false`。
 
 Adobe建議對PSD、PDF和Postscript檔案使用下列「已調整」的工作參數：
 
