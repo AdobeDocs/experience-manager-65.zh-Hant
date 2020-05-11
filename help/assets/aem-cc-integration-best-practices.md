@@ -182,7 +182,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 Adobe Asset Link為此使用案例提供了良好的支援：
 
 * 當Photoshop、InDesign或Illustrator的使用者想要編輯檔案時，會對指定資產執行「取出」操作
-* 資產會在背景下載，並放入使用者Creative Cloud案頭應用程式同步至磁碟的Creative Cloud帳戶中，而且會在資產上切換結帳標幟，將編輯衝突降 [!DNL Experience Manager] 到最低
+* 資產會在背景下載，並放入使用者Creative Cloud案頭應用程式同步至磁碟的Creative Cloud帳戶中，而且會在資產上切換結帳標幟，將編輯衝突降 [!DNL Experience Manager] 至最低
 * 從此，使用者會在儲存在同步位置本機的檔案中工作，而且可以繼續工作並儲存必要的變更，以任何頻率需要
 * 此外，由於資產位於Creative Cloud帳戶中，因此也可在使用者可能擁有的其他裝置上使用（例如，可在專用的Creative Cloud行動應用程式中開啟或編輯），並可與其他Creative Cloud使用者共用以進行協作。
 * 當創意使用者完成變更後，他們可以在其Creative Cloud應用程式中對該檔案執行「登入」操作，並附上選用的註解。 中的對應資產 [!DNL Experience Manager] 會版本化，並更新為新二進位檔。 [!DNL Experience Manager] 像行銷人員或LOB使用者這樣的使用者可透過資產時間表UI存取重大資產變更或里程碑 [!DNL Experience Manager] 的資訊。
@@ -199,7 +199,7 @@ Adobe Asset Link為此使用案例提供了良好的支援：
 * 上傳創意廣告公司提供的資產
 * 如果在DAM外完成選取，則從較大的集合上傳選取的資產
 
-此說明是指在案頭使用者工作流程中，以正常作業方式（例如每週或每張像片）上傳檔案。 此處未涵蓋大型資產遷移。
+此說明是指將檔案上傳為案頭使用者工作流程的一般部分（例如，每週或每張像片）。 此處未涵蓋大型資產遷移。
 
 您可以運用下列上傳功能：
 
