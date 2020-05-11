@@ -1,5 +1,5 @@
 ---
-title: 影片
+title: 動態媒體中的視訊
 description: 瞭解如何在動態媒體中處理視訊
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
@@ -9,12 +9,15 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5f67b4e5ccd5d7e982732e449050123e917c9914
+source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+workflow-type: tm+mt
+source-wordcount: '11868'
+ht-degree: 8%
 
 ---
 
 
-# 影片 {#video}
+# 動態媒體中的視訊 {#video}
 
 本節說明在動態媒體中處理視訊。
 
@@ -1305,7 +1308,7 @@ AEM中的所有影片都必須有相關聯的縮圖； 您不能刪除縮圖而�
 1. 在「清單檢視」或「卡片檢視」的資產選擇模式中，點選視訊資產。
 1. 在工具列上，點選「 **[!UICONTROL 檢視屬性]** 」圖示（其中包含&quot;i&quot;的圓圈）。
 1. 在視訊的「屬性」頁面上，點選「變更 **[!UICONTROL 縮圖」]**。
-1. 在「變更縮圖」頁面的工具列上，點選「上傳新 **[!UICONTROL 縮圖」]**。
+1. 在「變更縮圖」頁面的工具列上，點選「上傳新縮 **[!UICONTROL 圖」]**。
 1. 導覽至您要使用的縮圖影像，選取它，然後點選「 **[!UICONTROL Open]** 」（開啟），開始將影像上傳至AEM。 上傳後，請務必發佈影像。
 1. 成功上傳並發佈影像後，在「變更縮圖」頁面中，點選「儲存變 **[!UICONTROL 更」]**。
 
