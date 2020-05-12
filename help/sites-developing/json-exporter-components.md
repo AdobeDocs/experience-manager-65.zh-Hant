@@ -10,7 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 3%
 
 ---
 
@@ -56,6 +59,16 @@ Sling Model實作類別必須加上下列註解：
 >
 >這 `ExporterConstants` 些 `ComponentExporter` 課程和課 `com.adobe.cq.export.json` 程。
 
+### 使用多個選擇器 {#multiple-selectors}
+
+雖然不是標準使用案例，但除了選擇器外，您仍可設定多個選擇 `model` 器。
+
+```
+https://<server>:<port>/content/page.model.selector1.selector2.json
+```
+
+但是，在這種情況下，選 `model` 擇器必須是第一個選擇器，而副檔名必須是 `.json`。
+
 ## 註解Sling Model Interface {#annotate-the-sling-model-interface}
 
 若要讓JSON匯出器架構考慮，Model介面應實 `ComponentExporter` 作介面( `ContainerExporter`若是容器元件)。
@@ -64,9 +77,9 @@ Sling Model實作類別必須加上下列註解：
 
 Model介面需要正確加上註解，以定義應序列化哪些方法。 依預設，所有遵循getter通常命名慣例的方法都會序列化，並會自然從getter名稱衍生其JSON屬性名稱。 使用或重新命名JSON屬性 `@JsonIgnore` 時， `@JsonProperty` 可防止或覆寫此動作。
 
-## 例如 {#example}
+## 範例 {#example}
 
-核心元件自核心元件發行 [1.1.0版起就支援JSON匯出](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) ，可當做參考。
+核心元件自核心元件發行 [1.1.0版起就支援JSON匯出](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) ，可當做參考。
 
 如需範例，請參閱Image Core Component及其註解介面的Sling Model實作。
 
@@ -86,5 +99,5 @@ GITHUB代碼
 * [內容片段模型](/help/assets/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
 * [內容服務的JSON匯出器](/help/sites-developing/json-exporter.md)
-* [核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) 和內容 [片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 和內容 [片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
 
