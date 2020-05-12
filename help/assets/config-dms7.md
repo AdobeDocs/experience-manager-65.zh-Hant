@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d948ea6e6f6983ba0ecfe05710ffa7dedb772075
+source-git-commit: d77296df73861c33720c16c14534c1b448d35d06
 workflow-type: tm+mt
-source-wordcount: '5759'
+source-wordcount: '5763'
 ht-degree: 6%
 
 ---
@@ -506,7 +506,7 @@ Adobe建議對PSD、PDF和Postscript檔案使用下列「已調整」的工作�
 
 「Granite傳輸工作流程」佇列用於「 **[!UICONTROL DAM更新資產」工作流程]** 。 在動態媒體中，它用於影像擷取和處理。
 
-**要更新Granite瞬態工作流隊列，請執行以下操作：**
+**要更新Granite瞬態工作流隊列**
 
 1. 導覽至 [https://&lt;server>/system/console/configMgr](https://localhost:4502/system/console/configMgr) ，並搜尋 **佇列： Granite暫時工作流程佇列**。
 
@@ -528,7 +528,7 @@ Adobe建議對PSD、PDF和Postscript檔案使用下列「已調整」的工作�
 
 「Granite工作流程」佇列用於非暫時性工作流程。 在Dynamic Media中，它用來使用 **[!UICONTROL Dynamic Media Encode Video Workflow處理視訊]** 。
 
-**要更新Granite工作流隊列**
+**要更新Granite工作流隊列，請執行以下操作：**
 
 1. 導覽至 `https://<server>/system/console/configMgr` 並搜尋佇 **列： Granite工作流程佇列**。
 
@@ -546,11 +546,11 @@ Adobe建議對PSD、PDF和Postscript檔案使用下列「已調整」的工作�
 
 1. 點選「 **[!UICONTROL 儲存]**」。
 
-#### 更新Scene7上傳連線 {#updating-the-scene-upload-connection}
+#### 更新Dynamic Media Classic上傳連線 {#updating-the-scene-upload-connection}
 
 Scene7「上傳連線」設定會將AEM資產同步至Dynamic Media Classic伺服器。
 
-**若要更新Scene7上傳連線**
+**若要更新Dynamic Media Classic上傳連線**
 
 1. 導航到 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. 在「連 **[!UICONTROL 接數」欄位]** 和／或「作 **[!UICONTROL 用中作業逾時」欄位中]** ，視需要變更數目。
