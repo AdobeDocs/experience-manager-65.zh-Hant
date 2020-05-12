@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: d948ea6e6f6983ba0ecfe05710ffa7dedb772075
 workflow-type: tm+mt
-source-wordcount: '5753'
+source-wordcount: '5759'
 ht-degree: 6%
 
 ---
@@ -480,7 +480,9 @@ spin-01-01
 
 ### （可選）調整動態媒體- Scene7模式的效能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-您可以在上傳檔案時調整工作參數，以加快處理速度。 例如，如果您上傳PSD檔案，但不想以範本的形式處理，則可將圖層擷取設為false(off)。 在這種情況下，已調整的作業參數將顯示為 `process=none&createTemplate=false`。
+**優化作業參數**
+
+您可以在上傳檔案時調整工作參數，以加快處理速度。 例如，如果您上傳PSD檔案，但不想以範本的形式處理，則可將圖層擷取設為false(off)。 在這種情況下，已調整的作業參數將顯示為 `process=None&createTemplate=false`。
 
 Adobe建議對PSD、PDF和Postscript檔案使用下列「已調整」的工作參數：
 
@@ -492,7 +494,9 @@ Adobe建議對PSD、PDF和Postscript檔案使用下列「已調整」的工作�
 
 若要更新這些參數，請遵循啟用 [MIME類型型資產／動態媒體經典上傳工作參數支援中的步驟](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
 
-此外，為了讓Dynamic Media - Scene7模式順利執行，Adobe建議使用下列同步效能／延展性微調提示：
+**同步效能／可擴充性微調提示**
+
+為了讓Dynamic Media - Scene7模式順利執行，Adobe建議使用下列同步效能／延展性微調提示：
 
 * 更新預先定義的Granite工作流程（視訊資產）佇列工作程式執行緒。
 * 更新預先定義的Granite暫時性工作流程（影像和非視訊資產）佇列工作線程。
