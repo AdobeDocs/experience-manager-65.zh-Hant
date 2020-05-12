@@ -9,7 +9,10 @@ topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 6b4bc58efd72900c54cb245878239e345d72ae3e
+workflow-type: tm+mt
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
@@ -38,11 +41,11 @@ DOM樹
 
 在自適應形式中提取SOM表達式
 
-在面板中，您可以從面板工具列存取功能。 此功能可協助自適應表單作者編寫指令碼。
+在面板中，您可以從面板工具列存取功能。 此功能可協助最適化表單作者編寫指令碼。
 
 ![使用面板工具列擷取SOM運算式](assets/som-expression.png)
 
 使用面板工具列擷取SOM運算式
 
-GuideBridge中列出的 [某些API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.md) ，會使用元素的SOM運算式。 例如，若要以最適化形式將焦點放在特定欄位，請將對應的SOM運算式傳遞至 `getFocus`API `guideBridge`。
+GuideBridge中列出的 [某些API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) ，會使用元素的SOM運算式。 例如，若要以最適化形式將焦點放在特定欄位，請將對應的SOM運算式傳遞至 `getFocus`API `guideBridge`。
 
