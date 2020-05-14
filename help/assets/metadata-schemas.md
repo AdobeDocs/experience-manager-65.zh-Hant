@@ -3,9 +3,9 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 739f1c6fcc910ed134849c27a44a6feccd1684c9
+source-git-commit: 530a720a5fbad906e7015aa41a650b31f09fe2c4
 workflow-type: tm+mt
-source-wordcount: '2738'
+source-wordcount: '2708'
 ht-degree: 9%
 
 ---
@@ -22,10 +22,6 @@ ht-degree: 9%
 1. 按一下或點選「卡 **[!UICONTROL 片檢視」中資產圖格上]** 「快速動作」的「檢視屬性」圖示。
 
    ![資產圖格上的快速動作](assets/chlimage_1-170.png)
-
-1. 在各種標籤下編輯各種中繼資料屬性。 但是，您無法修改「屬性」頁面中的資 [!UICONTROL 產類型] 。
-
-   ![資產屬性的「基本」標籤，其中無法變更資產類型](assets/asset-properties-basic-tab.png)
 
 1. 您可以在可用標籤下編輯各種中繼資料屬性。 但是，您無法修改屬 [!UICONTROL 性頁面] 「基本  」索引標籤中的資產類型。
 
@@ -110,7 +106,7 @@ ht-degree: 9%
 
 **欄位標籤**: 顯示在資產屬性頁面上的中繼資料屬性名稱。
 
-**對應至屬性**: 此屬性指定資產節點的相對路徑／名稱，該資產節點保存在CRX儲存庫中。 它以開 `./` 頭，因為它表示路徑位於資產的節點下。
+**對應至屬性**: 此屬性指定資產節點的相對路徑／名稱，該資產節點保存在CRX儲存庫中。 開頭為 `./` 因為表示路徑位於資產節點下。
 
 以下是此屬性的有效值：
 
