@@ -1,8 +1,8 @@
 ---
 title: 內容服務的JSON匯出器
 seo-title: 內容服務的JSON匯出器
-description: AEM Content services的設計目的，是將AEM中／來自AEM的內容描述和傳送，從而延伸到網頁。 它們使用可供任何用戶端使用的標準化方法，將內容傳送至非傳統AEM網頁的頻道。
-seo-description: AEM Content services的設計目的，是將AEM中／來自AEM的內容描述和傳送，從而延伸到網頁。 它們使用可供任何用戶端使用的標準化方法，將內容傳送至非傳統AEM網頁的頻道。
+description: AEM Content Services的設計目的，是將AEM中／來自AEM的內容描述和傳送，從而延伸到網頁。 它們使用可供任何用戶端使用的標準化方法，將內容傳送至非傳統AEM網頁的頻道。
+seo-description: AEM Content Services的設計目的，是將AEM中／來自AEM的內容描述和傳送，從而延伸到網頁。 它們使用可供任何用戶端使用的標準化方法，將內容傳送至非傳統AEM網頁的頻道。
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
@@ -10,18 +10,21 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+workflow-type: tm+mt
+source-wordcount: '495'
+ht-degree: 4%
 
 ---
 
 
 # 內容服務的JSON匯出器{#json-exporter-for-content-services}
 
-AEM Content services的設計目的，是將AEM中／來自AEM的內容描述和傳送，從而延伸到網頁。
+AEM Content Services的設計目的，是將AEM中／來自AEM的內容描述和傳送，從而延伸到網頁。
 
 它們使用可供任何用戶端使用的標準化方法，將內容傳送至非傳統AEM網頁的頻道。 這些渠道可以包括：
 
-* 單頁應用程式
+* [單頁應用程式](spa-walkthrough.md)
 * 原生行動應用程式
 * AEM外部的其他通道和觸點
 
@@ -35,7 +38,7 @@ AEM Content services的設計目的，是將AEM中／來自AEM的內容描述和
 
 使用AEM JSON匯出器，您可以以JSON資料模型格式傳送(y)AEM頁面的內容。 然後，您自己的應用程式就可使用這個功能。
 
-在AEM中，傳送是使用字尾來達成
+在AEM中，使用選擇器和擴充功能來 `model` 達成 `.json` 傳送。
 
 `.model.json`
 
@@ -51,7 +54,7 @@ AEM Content services的設計目的，是將AEM中／來自AEM的內容描述和
 
 您也可以透過明確定位結構化內容片段來提供內容。
 
-這是使用片段的整個路徑(透過 `jcr:content`);例如，加上尾碼，如。
+這是使用片段的整個路徑(透過 `jcr:content`); 例如，加上尾碼，如。
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
@@ -71,13 +74,17 @@ AEM Content services的設計目的，是將AEM中／來自AEM的內容描述和
    >
    >您可以 [調整自己的元件](/help/sites-developing/json-exporter-components.md) ，以存取和使用此資料。
 
+   >[!NOTE]
+   >
+   >雖然不是標準實作，但 [支援多個選擇器](json-exporter-components.md#multiple-selectors) , `model` 但必須是第一個。
+
 ### 更多資訊 {#further-information}
 
 另請參閱:
 
-* 資產HTTP API
+* Assets HTTP API
 
-   * [資產HTTP API](/help/assets/mac-api-assets.md)
+   * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
 * Sling Models:
 
@@ -97,5 +104,5 @@ AEM Content services的設計目的，是將AEM中／來自AEM的內容描述和
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
 * [為元件啟用JSON匯出](/help/sites-developing/json-exporter-components.md)
 
-* [核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) 和內容 [片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 和內容 [片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
 
