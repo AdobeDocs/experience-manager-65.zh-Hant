@@ -9,7 +9,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0985ba24f7430381fccc40faf3a316d3abd85a30
+workflow-type: tm+mt
+source-wordcount: '1365'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 同樣地，內容作者不僅需要建構和排列內容的能力，還需要選擇內容的視覺呈現方式。
 
-樣式系統為範本作者和內容作者的需求提供統一的解決方案：
+Style System針對範本作者和內容作者的需求提供統一的解決方案：
 
 * 範本作者可在元件的內容原則中定義樣式類別。
 * 然後，內容作者可以在編輯頁面上的元件時，從下拉式清單中選取這些類別，以套用對應的樣式。
@@ -35,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 概覽 {#overview}
 
-使用樣式系統通常採用下列形式。
+使用「樣式系統」通常採用下列形式。
 
 1. 網頁設計人員會建立不同的元件視覺變化。
 
@@ -61,57 +64,49 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 使用 {#use}
 
-若要展示功能，需要為元件建立樣式。 以 [We.Retail](/help/sites-developing/we-retail.md)的核心元件清單元件實作為基礎 [](https://helpx.adobe.com/experience-manager/core-components/using/list.html) ，您可以安裝包含樣式的附加套件，以探索功能。
+為了展示該功能，我們將以 [WKND](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)&#39;s implementation of the core component&#39;s [title component](https://www.adobe.com/go/aem_cmp_title_v2) 為例。
 
-下載樣 [式系統示範套件](assets/package_-_style_systemdemo.zip)
+以下幾 [節As a Content Author](#as-a-content-author)[和As a Template Author](#as-a-template-author) （以內容作者和範本作者的身份）說明如何使用WKND的樣式系統來測試樣式系統的功能。
 
->[!NOTE]
->
->示範套件旨在說明作者如何使用樣式系統，而不是做為如何最佳實作的參考。
->
->只有在We.Retail提供內建範例和最佳實務實作之前，才需要此套件。
+如果要將樣式系統用於自己的元件，請執行以下操作：
 
-以下幾 [節As a Content Author](/help/sites-authoring/style-system.md#as-a-content-author) and [As a Template Author](/help/sites-authoring/style-system.md#as-a-template-author) （以內容作者和範本作者的身分）說明如何使用We.Retail上的樣式系統示範套件來測試樣式系統的功能。
-
-如果您希望為自己的元件使用樣式系統，請執行以下操作：
-
-1. 將CSS安裝為用戶端程式庫，如「概述」一節所 [述](/help/sites-authoring/style-system.md#overview)。
-1. 設定您要提供給內容作者的CSS類別，如「身為範本作者」一節 [所述](/help/sites-authoring/style-system.md#as-a-template-author)。
-1. 然後，內容作者可依「身為內容作者」一節所述 [使用樣式](/help/sites-authoring/style-system.md#as-a-content-author)。
+1. 將CSS安裝為用戶端程式庫，如「概述」一節所 [述](#overview)。
+1. 設定您要提供給內容作者的CSS類別，如「身為範本作者」一節 [所述](#as-a-template-author)。
+1. 然後，內容作者可依「身為內容作者」一節所述 [使用樣式](#as-a-content-author)。
 
 ### 身為內容作者 {#as-a-content-author}
 
-1. 安裝樣式系統展示套件後，請導覽至We.Retail的英文主版首頁，並 `http://localhost:4502/sites.html/content/we-retail/language-masters/en` 編輯頁面。
-1. 在參數 **的底部** 或頂部選擇「清單」(List)元件。 請勿將它與「文章清單」 **元件混淆** 。
+1. 安裝WKND專案後，請導覽至WKND的英文主版首頁，並 `http://<host>:<port>/sites.html/content/wknd/language-masters/en` 編輯該頁面。
+1. 在頁面 **下方** ，選取Title元件
 
-   ![screen_shot_2017-11-15at162032](assets/screen_shot_2017-11-15at162032.png)
+   ![作者的樣式系統](assets/style-system-author.png)
 
 1. 點選或按一下 **List** （清單）元件工具欄上的「樣式」( **Styles** )按鈕，開啟樣式菜單並更改元件的外觀。
 
-   ![screen_shot_2017-11-15at162358](assets/screen_shot_2017-11-15at162358.png)
+   ![選取樣式](assets/style-system-author2.png)
 
    >[!NOTE]
    >
-   >在此示例中， **Layout** styles(**Block** and **Grid**)是互相組合的，而DisplayOptions( ************ Image ImageOr DateDisplayOptions)（JightOptions或DateDateS）是互斥的。 這可在范 [本中設定為範本作者](/help/sites-authoring/style-system.md#as-a-template-author)。
+   >在此示例中， **Colors** 樣式(**Black**、 **Grey Styles**、 ******************** Gray Styles和Colors)是混合的，同時The Options(A PS、RIght Right Light，和Align Align Align Align Mini Hidin（混合的混合白色）可以將混合。 這可在范 [本中設定為範本作者](#as-a-template-author)。
 
 ### 身為範本作者 {#as-a-template-author}
 
-1. 在編輯We.Retail的英文主版首頁時， `http://localhost:4502/sites.html/content/we-retail/language-masters/en`請透過「頁面資訊->編輯範本」 **編輯頁面範本**。
+1. 在編輯WKND的英文主版首頁時， `http://<host>:<port>/sites.html/content/wknd/language-masters/en`請透過「頁面資訊->編輯範本」 **編輯頁面範本**。
 
-   ![screen_shot_2017-11-15at162922](assets/screen_shot_2017-11-15at162922.png)
+   ![編輯範本](assets/style-system-edit-template.png)
 
-1. 點選或按一下 **List** （清單）元件的 **Policy** （原則）按鈕，編輯List（清單）元件的原則。 請勿將此與「文章清單」元 **件混淆** 。
+1. 點選或按一下 **Title** （標題）元件的 **Policy** （原則）按鈕，編輯Title（標題）元件的原則。
 
-   ![screen_shot_2017-11-15at163133](assets/screen_shot_2017-11-15at163133.png)
+   ![編輯原則](assets/style-system-edit-policy.png)
 
 1. 在屬性的「樣式」索引標籤上，您可以看到樣式的設定方式。
 
-   ![screen_shot_2017-12-15at101404](assets/screen_shot_2017-12-15at101404.png)
+   ![編輯屬性](assets/style-system-properties.png)
 
-   * **** 群組名稱：樣式可在樣式選單中分組，內容作者在設定元件的樣式時會看到這些樣式。
-   * **** 可組合樣式：允許同時選取該群組中的多種樣式。
-   * **** 樣式名稱：設定元件樣式時，將顯示給內容作者的樣式說明。
-   * **** CSS類別：與樣式關聯的CSS類的實際名稱。
+   * **群組名稱：** 樣式可在樣式選單中分組，內容作者在設定元件的樣式時會看到這些樣式。
+   * **可組合樣式：** 允許同時選取該群組中的多種樣式。
+   * **樣式名稱：** 設定元件樣式時，將顯示給內容作者的樣式說明。
+   * **CSS類別：** 與樣式關聯的CSS類的實際名稱。
    使用拖動控制滑塊來排列組的順序和組內的樣式。 使用新增或刪除圖示來新增或移除群組或群組中的樣式。
 
 >[!CAUTION]
@@ -120,18 +115,31 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 設定 {#setup}
 
->[!NOTE]
->
->第2版核心元件已完全啟用，以利用樣式系統，而且不需額外設定。
->
->請依照下列步驟，為您自己的自訂元件啟用樣式系統，或擴充第1版核心元件以運用此功能。
+核心元件版本2及更新版本已完全啟用，以利用樣式系統，而且不需額外設定。
 
-若要讓元件搭配AEM的樣式系統運作並在其設計對話方塊中顯示樣式標籤，元件開發人員必須在元件上包含來自產品的該標籤，並具備下列設定：
+只有為您自己的自訂元件啟用「樣式系統」或在「編輯」對話方塊中啟用選 [用的「樣式」索引標籤時，才需執行下列步驟。](#enable-styles-tab-edit)
+
+### 在「設計」對話框中啟用「樣式」頁籤 {#enable-styles-tab-design}
+
+若要讓元件搭配AEM的「樣式系統」運作，並在其設計對話方塊中顯示樣式標籤，元件開發人員必須在元件上加入具有下列設定的樣式標籤：
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 在設定元件後，頁面作者所設定的樣式將會由AEM自動插入裝飾元素上，AEM會自動環繞每個可編輯的元件。 元件本身不需要做其他任何動作，就能達成此目標。
+
+### 在「編輯」對話框中啟用「樣式」頁籤 {#enable-styles-tab-edit}
+
+自AEM 6.5.3.0版起，「編輯對話方塊」(Edit Dialog)中的「樣式」(Styles)頁籤現已可供使用。 與「設計對話框」頁籤不同，「編輯對話框」中的頁籤對於「樣式系統」的運作並不重要，但對於內容作者來說，它是設定樣式的可選替代介面。
+
+編輯對話框頁籤可以以與設計對話框頁籤類似的方式包括：
+
+* `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"`
+* `sling:resourceType = "granite/ui/components/coral/foundation/include"`
+
+>[!NOTE]
+>
+>「編輯」(Edit)對話框上的「樣式」(Styles)頁籤預設不啟用。
 
 ### 具有元素名稱的樣式 {#styles-with-element-names}
 
@@ -139,7 +147,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 此屬性在節點上設 `cq:Component` 置。 例如：
 
-* `/apps/weretail/components/content/list@cq:styleElements=[div,section,span]`
+* `/apps/<yoursite>/components/content/list@cq:styleElements=[div,section,span]`
 
 >[!CAUTION]
 >
