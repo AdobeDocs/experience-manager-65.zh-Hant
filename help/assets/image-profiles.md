@@ -1,5 +1,5 @@
 ---
-title: 動態媒體影像設定檔
+title: Dynamic Media 影像設定檔
 description: 建立包含非銳利遮色片和智慧型裁切或智慧型色票（或兩者）的設定的影像描述檔，然後將描述檔套用至影像資產的資料夾。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
@@ -8,12 +8,15 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 3cc0df3cdcb44250e26a31ac3ce1ad86064938d6
+workflow-type: tm+mt
+source-wordcount: '2671'
+ht-degree: 13%
 
 ---
 
 
-# 動態媒體影像設定檔 {#image-profiles}
+# Dynamic Media 影像設定檔 {#image-profiles}
 
 上傳影像時，您可以透過將影像描述檔套用至檔案夾，在上傳時自動裁切影像。
 
@@ -24,6 +27,10 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 ## Crop options {#crop-options}
 
 您有兩個影像裁切選項可供選擇，還有一個選項可自動建立顏色和影像色票。
+
+>[!IMPORTANT]
+>
+>請注意，您建立的每個智慧型裁切產生都需要額外處理。 例如，新增超過5種智慧型裁切外觀比例會導致資產擷取速度變慢。 它還可能增加系統的負載。 由於您可以在資料夾層級套用「智慧裁切」,Adobe建議您僅在需要智慧裁切的 *資料夾* 上使用它。
 
 <table>
  <tbody>
@@ -39,20 +46,20 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
     <ul>
      <li>值有「上」、「下」、「左」和「右」。</li>
      <li>左上角會視為0,0，而像素裁切會從那裡計算。</li>
-     <li>裁切起點：左邊是X，上邊是Y</li>
-     <li>水準計算：原始影像的水準像素尺寸減去「左」，然後減去「右」。</li>
-     <li>垂直計算：垂直像素高度減去「頂端」，然後減去「底部」。</li>
-    </ul> <p>例如，假設您有4000 x 3000像素的影像。 您使用值：Top=250;底部=500;左=300;右=700。</p> <p>從左上角(300,250)，使用（4000-300-700、3000-250-500或3000,2250）的填滿空間進行裁切。</p> </td>
+     <li>裁切起點： 左邊是X，上邊是Y</li>
+     <li>水準計算： 原始影像的水準像素尺寸減去「左」，然後減去「右」。</li>
+     <li>垂直計算： 垂直像素高度減去「頂端」，然後減去「底部」。</li>
+    </ul> <p>例如，假設您有4000 x 3000像素的影像。 您使用值： Top=250; 底部=500; 左=300; 右=700。</p> <p>從左上角(300,250)，使用（4000-300-700、3000-250-500或3000,2250）的填滿空間進行裁切。</p> </td>
   </tr>
   <tr>
    <td>智慧型裁切</td>
    <td>根據影像的視覺焦點大量裁切影像。</td>
-   <td><p>Smart Crop運用Adobe Sensei中的人工智慧功能，快速將影像裁切大量自動化。 智慧型裁切會自動偵測任何影像中的焦點並裁切至焦點，以擷取預期的興趣點，而不論螢幕大小。</p> <p>若要使用智慧型裁切，請從「裁切選項」下拉式清單中選取「智慧型裁切 <strong></strong> 」，然後在「自適應影像裁切」的右側，啟用（開啟）功能。</p> <p>大、中和小的預設中斷點大小通常涵蓋行動與平板電腦裝置、桌上型電腦和橫幅上使用的大多數影像大小。 如果需要，您可以編輯「大」、「中」和「小」的預設名稱。</p> <p>若要新增更多中斷點，請按一下「 <strong>新增裁切</strong>;若要刪除裁切，請按一下「廢棄項目可以」圖示。</p> </td>
+   <td><p>Smart Crop運用Adobe Sensei中的人工智慧功能，快速將影像裁切大量自動化。 智慧型裁切會自動偵測任何影像中的焦點並裁切至焦點，以擷取預期的興趣點，而不論螢幕大小。</p> <p>若要使用智慧型裁切，請從「裁切選項」下拉式清單中選取「智慧型裁切 <strong></strong> 」，然後在「自適應影像裁切」的右側，啟用（開啟）功能。</p> <p>大、中和小的預設中斷點大小通常涵蓋行動與平板電腦裝置、桌上型電腦和橫幅上使用的大多數影像大小。 如果需要，您可以編輯「大」、「中」和「小」的預設名稱。</p> <p>若要新增更多中斷點，請按一下「 <strong>新增裁切</strong>; 若要刪除裁切，請按一下「廢棄項目可以」圖示。</p> </td>
   </tr>
   <tr>
    <td>顏色及影像樣本</td>
    <td>大量產生每個影像的影像色票。</td>
-   <td><p><strong>注意</strong>:Dynamic Media Classic不支援智慧型色票。</p> <p>從顯示顏色或紋理的產品影像自動尋找並產生高品質色票。</p> <p>若要使用「顏色和影像色票」，請從「裁切選項」下拉式清單中選取「智慧裁切 <strong></strong> 」，然後在「顏色和影像色票」的右側，啟用（開啟）功能。 在「寬度」和「高度」文字方塊中輸入像素值。</p> <p>雖然所有影像裁切都可從「轉譯」邊欄使用，但色票僅能透過「複製URL」功能使用。 請注意，您必須使用自己的檢視元件來轉換網站上的色票。 (這個例外是轉盤橫幅。 動態媒體提供轉盤橫幅中所用色票的檢視元件。)</p> <p><strong>使用影像色票</strong></p> <p>影像色票的URL很簡單。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中 <code>:Swatch</code> 會附加至資產請求。</p> <p><strong>使用色票</strong></p> <p>若要使用色票，請對下列 <code>req=userdata</code> 項目提出要求：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media Classic(Scene7)中的色票資產：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>以下是色票資產的對應 <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>回 <code>req=userdata</code> 應如下：</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>注意</strong>: Dynamic Media Classic不支援智慧型色票。</p> <p>從顯示顏色或紋理的產品影像自動尋找並產生高品質色票。</p> <p>若要使用「顏色和影像色票」，請從「裁切選項」下拉式清單中選取「智慧裁切 <strong></strong> 」，然後在「顏色和影像色票」的右側，啟用（開啟）功能。 在「寬度」和「高度」文字方塊中輸入像素值。</p> <p>雖然所有影像裁切都可從「轉譯」邊欄使用，但色票僅能透過「複製URL」功能使用。 請注意，您必須使用自己的檢視元件來轉換網站上的色票。 (這個例外是轉盤橫幅。 動態媒體提供轉盤橫幅中所用色票的檢視元件。)</p> <p><strong>使用影像色票</strong></p> <p>影像色票的URL很簡單。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中 <code>:Swatch</code> 會附加至資產請求。</p> <p><strong>使用色票</strong></p> <p>若要使用色票，請對下列 <code>req=userdata</code> 項目提出要求：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media Classic(Scene7)中的色票資產：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>以下是色票資產的對應 <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>回 <code>req=userdata</code> 應如下：</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -61,7 +68,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 ## 不銳利化遮色片 {#unsharp-mask}
 
-您可以使 **[!UICONTROL 用「銳利化遮色片]** 」來微調最終縮減取樣影像的銳利化濾鏡效果。 您可以控制效果的強度、效果半徑（以像素計量），以及將忽略的對比度臨界值。 此效果使用的選項與Adobe Photoshop的「遮色片銳利化」濾鏡相同。
+您可以使 **[!UICONTROL 用「銳利化遮色片]** 」來微調最終縮減取樣影像的銳利化濾鏡效果。您可以控制效果的強度、效果半徑 (以像素計量)，以及將忽略的對比度臨界值。此效果使用的選項與Adobe Photoshop的「遮色片銳利化」濾鏡相同。
 
 >[!NOTE]
 >
@@ -77,22 +84,22 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
   </tr>
   <tr>
    <td>數量</td>
-   <td>控制套用至邊緣像素的對比度。 預設值為1.75。對於高解析度的影像，您可將影像增加到高達5。 將「量」視為濾鏡強度的度量。 範圍是0-5。</td>
+   <td>控制套用至邊緣像素的對比度。 預設值為1.75。 對於高解析度的影像，您可將影像增加到高達5。 將「量」視為濾鏡強度的度量。 範圍是0-5。</td>
   </tr>
   <tr>
    <td>半徑</td>
-   <td>決定邊緣像素周圍會影響銳利化的像素數量。若是高解析度影像，輸入介於 1 到 2 之間的值。低數值只會銳利化邊緣的像素；高數值會銳利化較寬的像素範圍。正確的值取決於影像大小。預設值為0.2。範圍是0-250。</td>
+   <td>決定邊緣像素周圍會影響銳利化的像素數量。若是高解析度影像，輸入介於 1 到 2 之間的值。低數值只會銳利化邊緣的像素；高數值會銳利化較寬的像素範圍。正確的值取決於影像大小。預設值為0.2。 範圍是0-250。</td>
   </tr>
   <tr>
    <td>臨界值</td>
-   <td><p>決定套用非銳利遮色片濾鏡時要忽略的對比範圍。換言之，此選項可決定銳化的像素在被視為邊緣像素並銳化之前，必須與周圍區域有多大差異。 為避免引入雜訊，請嘗試0-255之間的值。</p> </td>
+   <td><p>決定套用非銳利遮色片濾鏡時要忽略的對比範圍。 換言之，此選項可決定銳化的像素在被視為邊緣像素並銳化之前，必須與周圍區域有多大差異。 為避免引入雜訊，請嘗試0-255之間的值。</p> </td>
   </tr>
  </tbody>
 </table>
 
 銳利化影像中 [有說明](/help/assets/assets/s7_sharpening_images.pdf)。
 
-## 建立動態媒體影像設定檔 {#creating-image-profiles}
+## Creating Dynamic Media Image Profiles {#creating-image-profiles}
 
 要定義其他資產類型的高級處理參數，請參 [閱配置資產處理](config-dms7.md#configuring-asset-processing)。
 
@@ -102,7 +109,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 **建立動態媒體影像設定檔**
 
-1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具>資產>影像描述檔]**」。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. 點選「 **[!UICONTROL 建立]** 」以新增影像描述檔。
 1. 輸入遮色片、裁切或色票或兩者的描述檔名稱和值。
 
@@ -116,7 +123,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 ## 編輯或刪除動態媒體影像設定檔 {#editing-or-deleting-image-profiles}
 
-1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具>資產>影像描述檔]**」。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. 選擇要編輯或移除的影像描述檔。 若要編輯，請選取「編輯影 **[!UICONTROL 像處理設定檔」]**。 若要移除它，請選取「刪 **[!UICONTROL 除影像處理描述檔」]**。
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
@@ -139,7 +146,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 ### 將動態媒體影像描述檔套用至特定資料夾 {#applying-image-profiles-to-specific-folders}
 
-您可以從「工具」菜單或在資料夾內的「屬性」中將影像配置檔案應 **[!UICONTROL 用到資料夾]******。 本節將說明如何以兩種方式將映像配置檔案應用於資料夾。
+您可以從「工具」菜單或在資料夾內的「屬性」中將影像配置檔案應 **[!UICONTROL 用到資料夾]******。本節將說明如何以兩種方式將映像配置檔案應用於資料夾。
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
@@ -147,18 +154,18 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 #### 將動態媒體影像描述檔從描述檔使用者介面套用至檔案夾 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具>資產>影像描述檔]**」。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. 選擇要應用於資料夾或多個資料夾的影像配置檔案。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
-1. 點選 **[!UICONTROL 「將處理設定檔套用至資料夾」]** ，然後選取您要用來接收新上傳資產的資料夾或多個資料夾，並點選／按一下「 **[!UICONTROL 套用」]**。 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. Tap **[!UICONTROL Apply Processing Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap/click **[!UICONTROL Apply]**. 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
 #### 將動態媒體影像描述檔從屬性套用至資料夾 {#applying-image-profiles-to-folders-from-properties}
 
 1. 點選AEM標誌並導覽至 **[!UICONTROL Assets]** ，然後導覽至您要套用影像描述檔的檔案夾。
 1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
-1. 點選「影 **[!UICONTROL 像描述檔]** 」標籤。 從「描 **[!UICONTROL 述檔名稱]** 」下拉式清單中，選取描述檔，然後點選「 **[!UICONTROL 儲存並關閉」]**。 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 點選「影 **[!UICONTROL 像描述檔]** 」標籤。從「描 **[!UICONTROL 述檔名稱]** 」下拉式清單中，選取描述檔，然後點選「 **[!UICONTROL 儲存並關閉」]**。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -176,7 +183,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
-   * 導覽至CRXDE Lite至下列節點： `/content/dam/jcr:content`。
+   * 導覽至CRXDE Lite至下列節點： `/content/dam/jcr:content`.
 
       新增屬性並 `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` 點選「 **[!UICONTROL 全部儲存」]**。
 
@@ -202,13 +209,13 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 1. 點選資料夾以開啟其內容。
 1. 點選您要調整其智慧裁切或智慧色票的影像。
-1. 在工具列上，點選「 **[!UICONTROL 智慧裁切」]**。
+1. 在工具列上，點選「智慧 **[!UICONTROL 裁切」]**。
 
 1. 執行下列任一操作：
 
    * 在頁面的右上角附近，分別向左或向右拖曳滑桿以增加或減少影像顯示。
    * 在影像上，拖曳角點控制點以調整裁切或色票的可檢視區域大小。
-   * 在影像上，將方塊／色票拖曳至新位置。 您只能編輯影像色票；色票是靜態的。
+   * 在影像上，將方塊／色票拖曳至新位置。 您只能編輯影像色票； 色票是靜態的。
    * 在影像上方點選「 **[!UICONTROL 回復]** 」以還原您的所有編輯，並還原原始裁切或色票。
 
 1. 在頁面的右上角附近，點選「 **[!UICONTROL Save]**」，然後點選「 **[!UICONTROL Close]** 」以返回資產資料夾。
@@ -260,17 +267,17 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 
 
-1. 在頁面的右上角附近，點選「儲存 **[!UICONTROL 」]**。 然後點 **[!UICONTROL 選「關閉]** 」以返回資產資料夾。
+1. Near the upper-right corner of the page, tap **[!UICONTROL Save]**. 然後點 **[!UICONTROL 選「關閉]** 」以返回資產資料夾。
 
 ## 從資料夾中刪除映像配置檔案 {#removing-an-image-profile-from-folders}
 
 從資料夾中刪除影像配置檔案時，任何子資料夾都會自動繼承從其父資料夾中刪除該配置檔案。 不過，對檔案夾中發生的檔案處理仍維持不變。
 
-您可以從「工具」功能表內的資料夾中移除影像配置檔案，或者如果您位於資料夾中，則可以從「屬性」( **[!UICONTROL Properties)中移除影像配置檔案]******。 本節將說明如何以兩種方式從資料夾中刪除映像配置檔案。
+您可以從「工具」功能表內的資料夾中移除影像配置檔案，或者如果您位於資料夾中，則可以從「屬性」( **[!UICONTROL Properties)中移除影像配置檔案]******。本節將說明如何以兩種方式從資料夾中刪除映像配置檔案。
 
 ### 透過描述檔使用者介面從資料夾移除動態媒體影像描述檔 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具>資產>影像描述檔]**」。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. 選擇要從資料夾或多個資料夾中刪除的映像配置檔案。
 1. 點選 **[!UICONTROL 「從資料夾移除處理描述檔」]** ，然後選取您要用來從中移除描述檔的資料夾或多個資料夾，並點選「 **[!UICONTROL 移除」]**。
 
@@ -280,7 +287,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 1. 點選AEM標誌並導覽 **[!UICONTROL Assets]** ，然後前往您要從中移除影像描述檔的檔案夾。
 1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
-1. 選擇「圖 **[!UICONTROL 像配置檔案]** 」頁籤。
+1. Select the **[!UICONTROL Image Profiles]** tab.
 1. 從「描述 **[!UICONTROL 檔名稱]** 」下拉式選單中，選取「無」 **[!UICONTROL ，然後點選「]**&#x200B;儲存並關閉」 ****。
 
    已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
