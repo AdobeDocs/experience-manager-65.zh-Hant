@@ -1,16 +1,19 @@
 ---
-title: 在[!DNL Adobe Experience Manager]中使用參考和多頁資產管理複合資產。
-description: 瞭解如何從[!DNL Adobe InDesign]、[!DNL Adobe Illustrator]和[!DNL Adobe Photoshop]建立數位資產的參考。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
+title: 使用中的參考和多頁資產管理複合資產 [!DNL Adobe Experience Manager]。
+description: 瞭解如何從內部建立數位資產的參考 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: d90a95195a97a1840e1defb49d2a09ffbd3c8650
+workflow-type: tm+mt
+source-wordcount: '1359'
+ht-degree: 0%
 
 ---
 
 
 # 管理複合和多頁資產 {#managing-compound-assets}
 
-[!DNL Adobe Experience Manager Assets] 可以識別已上載檔案是否包含對儲存庫中已存在資產的引用。 此功能僅適用於支援的檔案格式。 如果已上傳的資產包含資產的任 [!DNL Experience Manager] 何參照，則會在已上傳和參考的資產之間建立雙向連結。
+[!DNL Adobe Experience Manager Assets] 可以識別已上載檔案是否包含對儲存庫中已存在資產的引用。 此功能僅適用於支援的檔案格式。 如果已上傳的資產包含資產的任 [!DNL Experience Manager] 何參考，則會在已上傳和參考的資產之間建立雙向連結。
 
 除了消除冗餘外，在應用程式中參考資 [!DNL Adobe Creative Cloud] 產可增強協作，並提高使用者的效率和生產力。
 
@@ -18,7 +21,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 參考會根據參考資產的路徑、檔案ID和例項ID來解析。
 
-## 將數位資產新增為參考 [!DNL Adobe Illustrator]{#refai}
+## 將數位資產新增為 [!DNL Adobe Illustrator] {#refai}
 
 您可以從檔案中參考現有的數位資 [!DNL Adobe Illustrator] 產。
 
@@ -39,9 +42,9 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![在資產詳細資訊的「引用」列中查看Experience Manager資產的引用](assets/asset-references.png)
 
-   *圖：資產詳細資料中的資產參考。*
+   *圖： 資產詳細資料中的資產參考。*
 
-## 將數位資產新增為參考 [!DNL Adobe InDesign]{#add-aem-assets-as-references-in-adobe-indesign}
+## 將數位資產新增為 [!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}
 
 若要從檔案中參考數位資 [!DNL InDesign] 產，請將資產拖曳至檔 [!DNL InDesign] 案或將檔案 [!DNL InDesign] 匯出為ZIP封存。
 
@@ -63,7 +66,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 1. 啟動工作 `Unarchiver` 流程。
 1. 當工作流程完成時，「連結」檔案夾中的參照會自動參照為子資產。 若要檢視參考資產的清單，請導覽至資產的資產詳細資 [!DNL InDesign] 料頁面並關閉 [邊欄](/help/sites-authoring/basic-handling.md#rail-selector)。
 
-## 將數位資產新增為參考 [!DNL Adobe Photoshop]{#refps}
+## 將數位資產新增為 [!DNL Adobe Photoshop] {#refps}
 
 1. 使用 [!DNL Experience Manager] 案頭應用程式存取 [!DNL Experience Manager Assets]。 下載並顯示本機檔案系統上的資產。 使用中 [!UICONTROL 的「置入連結] 」功能 [!DNL Adobe Photoshop]。 請參閱 [將資產置於案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
 
@@ -82,7 +85,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ## 建立子資產 {#generate-subassets}
 
-針對支援的多頁格式資產— PDF檔案、AI檔案 [!DNL Microsoft PowerPoint] 和 [!DNL Apple Keynote] 檔案， [!DNL Adobe InDesign] 以及檔案 可 [!DNL Experience Manager] 以產生對應至原始資產每個個別頁面的子資產。 這些子資產會連結至 *父資產* ，並有助於多頁檢視。 就所有其他目的而言，子資產在中會被視為一般資產 [!DNL Experience Manager]。
+針對支援的多頁格式資產— PDF檔案、AI檔案 [!DNL Microsoft PowerPoint] 和 [!DNL Apple Keynote] 檔案， [!DNL Adobe InDesign] 以及檔案 [!DNL Experience Manager] 可產生對應至原始資產每個個別頁面的子資產。 這些子資產會連結至 *父資產* ，並有助於多頁檢視。 就所有其他目的而言，子資產在中會被視為一般資產 [!DNL Experience Manager]。
 
 子資產產生預設會停用。 若要啟用子資產產生，請依照下列步驟進行：
 
@@ -92,8 +95,8 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 若要產生子資產，請執行下列其中一項作業：
 
-* 新資產：「 [!UICONTROL DAM更新資產] 」工作流程會對任何上傳至的新資產執行 [!DNL Experience Manager]。 子資產會針對新的多頁資產自動產生。
-* 現有多頁資產：遵循下列任 [!UICONTROL 一步驟手動執行DAM更新資產] :
+* 新資產： 「 [!UICONTROL DAM更新資產] 」工作流程會對任何上傳至的新資產執行 [!DNL Experience Manager]。 子資產會針對新的多頁資產自動產生。
+* 現有多頁資產： 遵循下列任 [!UICONTROL 一步驟手動執行DAM更新資產] :
 
    * 選取資產，然後按一下「 [!UICONTROL 時間軸] 」以開啟左側面板。 或者，使用鍵盤快速鍵 `alt + 3`。 按一 [!UICONTROL 下「工作流]」，選取「 [!UICONTROL DAM更新資產」]，按一下「開始 [!UICONTROL 」，然後按一]下「繼續啟動」。
    * 選取資產，然後從工具 [!UICONTROL 列按一下「建立] >工作流程」。 從彈出式對話方塊中，選取「 [!UICONTROL DAM更新資產」工作流程] ，按一下「 [!UICONTROL 開始]」，然後按一下「 [!UICONTROL 繼續]」。
@@ -125,6 +128,10 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 * **[!UICONTROL 「頁面概述]** 」選項可同時顯示所有子資產。
 
 * **[!UICONTROL 按一下]** 左側導軌圖示後，左側 ![導軌中的時間軸選項](assets/do-not-localize/aem_leftrail_contentonly.png) ，會顯示檔案的活動串流。
+
+## 最佳實務與限制 {#best-practice-limitation-tips}
+
+* 產生子資產對於任何Experience Manager部署都會耗費大量資源。 如果您要在上傳複雜資產時產生子資產，請在「DAM更新資產」工作流程中新增步驟。 如果您要隨選產生子資產，請建立個別的工作流程以產生子資產。 專用的工作流程可讓您略過DAM更新資產工作流程中的其他步驟，並儲存計算資源。
 
 >[!MORELIKETHIS]
 >
