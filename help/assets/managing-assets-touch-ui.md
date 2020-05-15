@@ -1,10 +1,13 @@
 ---
-title: 在[!DNL Adobe Experience Manager Assets]中管理您的數位資產。
+title: 在中管理您的數位資產 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋、刪除、註解和版本數位資產。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
+source-git-commit: 94f7f2cde3c87ed4693b9e2004f80fc5f0cd9855
+workflow-type: tm+mt
+source-wordcount: '9347'
+ht-degree: 5%
 
 ---
 
@@ -503,7 +506,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    **刪除轉譯**
 
-   從「轉譯」面板選取轉 **[!UICONTROL 譯]** ，然後點選／按一下工具列中的「 **[!UICONTROL 刪除轉譯]** 」圖示。
+   從「轉譯」面板選取轉 **[!UICONTROL 譯]** ，然後點選／按一下工具列中的「 **[!UICONTROL 刪除轉譯]** 」圖示。 資產處理完成後，無法大量刪除轉譯。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂Experience Manager以刪除特定轉譯或刪除資產，然後重新上傳已刪除的資產。
 
    ![刪除轉譯的選項](assets/delete_renditionicon.png)
 
@@ -671,7 +674,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 1. 執行下列任一項作業，以在編輯模式中開啟資產：
 
-   * 選取資產，然後按一下／點選工具 **[!UICONTROL 列中的]** 「編輯」圖示。
+   * 選取資產，然後按一下／點選工具列 **[!UICONTROL 中的]** 「編輯」圖示。
    * 點選／按一 **[!UICONTROL 下]** 「卡片」檢視中資產上顯示的「編輯」圖示。
    * 在資產頁面中，點選／按一下工具 **[!UICONTROL 列中的]** 「編輯」圖示。
    ![工具列中的編輯圖示](assets/edit_icon.png)
