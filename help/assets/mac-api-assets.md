@@ -3,7 +3,7 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 34167cd9c03c9bc26aa24e6837dbd144af8bf9bd
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 1%
@@ -95,9 +95,9 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 **必備條件**
 
-* 前往 `https://[aem_server]:[port]/system/console/configMgr`.
-* 導覽至 **Adobe Granite CSRF Filter**。
-* 請確定屬性篩選 **方法** : 貼文，放置，刪除。
+1. 前往 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 導覽至 **Adobe Granite CSRF Filter**。
+1. 請確定屬性篩選 **方法** : 貼文，放置，刪除。
 
 ## 檢索資料夾清單 {#retrieve-a-folder-listing}
 
