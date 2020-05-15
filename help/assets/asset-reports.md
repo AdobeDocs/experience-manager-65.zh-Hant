@@ -3,7 +3,10 @@ title: 有關您數位資產的報告
 description: 瞭解AEM Assets中有關您資產的報表，以協助您瞭解數位資產的使用、活動和共用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: f66be5de3bbd0051cd677430d5187ace9337b98d
+workflow-type: tm+mt
+source-wordcount: '977'
+ht-degree: 14%
 
 ---
 
@@ -37,8 +40,7 @@ AEM Assets會為您產生下列標準報表：
 AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員可依照下列步驟產生報表：
 
 1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
-
-![](assets/AssetsReportNavigation.png)
+   ![](assets/AssetsReportNavigation.png)
 
 1. 在「資 [!UICONTROL 產報表] 」頁面上，按 **[!UICONTROL 一下工具]** 列中的「建立」。
 1. 從「建 **[!UICONTROL 立報表]** 」頁面，選擇您要建立的報表，然後按一下「下 **[!UICONTROL 一步」]**。
@@ -111,6 +113,8 @@ AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員�
 * 發佈
 * 品牌入口網站發佈
 * 檔案
+
+若要新增自訂欄至這些報表，請依照下列步驟進行：
 
 1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
 1. 在「資 [!UICONTROL 產報表] 」頁面上，按 **[!UICONTROL 一下工具]** 列中的「建立」。
