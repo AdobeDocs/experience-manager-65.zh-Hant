@@ -3,7 +3,10 @@ title: 擴充Adobe Experience Manager Assets的搜尋功能
 description: 將Adobe Experience Manager Assets的搜尋功能擴及至預設值以外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 2348df62f970d7e2ff41ad386f29c1550ea94e48
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 18%
 
 ---
 
@@ -12,13 +15,13 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 您可擴充搜 [!DNL Adobe Experience Manager Assets] 尋功能。 立即可用，依字 [!DNL Experience Manager Assets] 串搜尋資產。
 
-搜尋是透過QueryBuilder介面完成，因此可使用數個謂語自訂搜尋。 您可以覆蓋下列目錄中的預設謂詞集： `/apps/dam/content/search/searchpanel/facets`。
+搜尋是透過QueryBuilder介面完成，因此可使用數個謂語自訂搜尋。 您可以覆蓋下列目錄中的預設謂詞集： `/apps/dam/content/search/searchpanel/facets`.
 
 您也可以新增其他標籤至管理 [!DNL Assets] 面板。
 
 >[!CAUTION]
 >
->自 [!DNL Experience Manager] 6.4起，Classic UI已過時。 如需公告，請參 [閱已過時和已移除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建議使用啟用觸控的UI。 如需自訂，請參 [閱搜尋面](/help/assets/search-facets.md)。
+>自 [!DNL Experience Manager] 6.4起，Classic UI已過時。 如需公告，請參 [閱已過時和移除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建議使用啟用觸控的UI。 如需自訂，請參 [閱搜尋Facet](/help/assets/search-facets.md)。
 
 ## 覆蓋 {#overlaying}
 
@@ -51,7 +54,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 最佳做法是複製現有謂詞並調整它。 範例謂語位於 **/libs/cq/search/components/predicates中**。
 
-### 範例：建立簡單屬性謂詞 {#example-build-a-simple-property-predicate}
+### 範例： 建立簡單屬性謂詞 {#example-build-a-simple-property-predicate}
 
 要構建屬性謂語：
 
@@ -70,7 +73,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 1. 新增 `titlepredicate.jsp`.
 
-   ```xml
+   ```java
    <%--
    
      Sample title predicate component
@@ -144,7 +147,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
    >
    >搜尋時，請務必準確輸入詞語，包括正確的大小寫。
 
-### 範例：建立簡單群組述詞 {#example-build-a-simple-group-predicate}
+### 範例： 建立簡單群組述詞 {#example-build-a-simple-group-predicate}
 
 若要建立群組述詞：
 
@@ -163,7 +166,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 1. 添加 **titlepredicate.jsp**:
 
-   ```xml
+   ```java
    <%--
    
      Sample group predicate component
