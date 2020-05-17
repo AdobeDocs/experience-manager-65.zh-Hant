@@ -3,7 +3,7 @@ title: 使用PDF點陣化器產生PDF檔案的轉譯。
 description: 使用中的Adobe PDF Rasterizer程式庫產生高品質的縮圖和轉譯 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 0%
@@ -63,6 +63,7 @@ ht-degree: 0%
 
 
 1. 要刪除中間轉譯，請選擇「刪 **[!UICONTROL 除生成的轉譯」]**。
+
 1. 若要讓PDF點陣化器產生Web轉譯，請選取「產 **[!UICONTROL 生Web轉譯」]**。
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
@@ -72,8 +73,11 @@ ht-degree: 0%
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
 1. 儲存工作流程。
-1. 若要啟用PDF點陣化器以使用PDF程式庫處理PDF頁面，請從工作流程主控台開啟 **[!UICONTROL DAM Process Subset]** model。
+
+1. 若要啟用PDF點陣化器以使用PDF程式庫處理PDF頁面，請從工作流程主控台開 **[!UICONTROL 啟「DAM Process Subset]**[!UICONTROL 模型] 」。
+
 1. 從側面面板，拖曳「建立啟用網頁的影像轉譯」步驟 **[!UICONTROL 下的「PDF點陣化處理常式」步驟]** 。
+
 1. 為「 **[!UICONTROL PDF點陣化器處理常式」步驟設定下列引數]** :
 
    * MIME類型： `application/pdf` 或 `application/postscript`
