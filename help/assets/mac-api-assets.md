@@ -3,9 +3,9 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 34167cd9c03c9bc26aa24e6837dbd144af8bf9bd
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1570'
 ht-degree: 1%
 
 ---
@@ -46,8 +46,8 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 **屬性**:
 
-* `name`  —資料夾的名稱。 這與URL路徑中沒有副檔名的最後一個區段相同
-* `title` —可顯示的資料夾的可選標題，而不是其名稱
+* `name` 是資料夾的名稱。 這與URL路徑中沒有副檔名的最後一個區段相同。
+* `title` 是可顯示的資料夾的可選標題，而非其名稱。
 
 >[!NOTE]
 >
@@ -55,39 +55,39 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 **「連結** 」檔案夾會公開三個連結：
 
-* `self`: 連結到自己
-* `parent`: 連結至父資料夾
-* `thumbnail`: （選用）檔案夾縮圖影像的連結
+* `self`: 連結到自己。
+* `parent`: 連結至父資料夾。
+* `thumbnail`: （選用）資料夾縮圖影像的連結。
 
 ### 資產 {#assets}
 
 在Experience Manager中，資產包含下列元素：
 
-* 資產的屬性和中繼資料
-* 多個轉譯，例如原始轉譯（原始上傳的資產）、縮圖和各種其他轉譯。 其他轉譯可能是不同大小的影像、不同的視訊編碼，或從PDF或InDesign擷取的頁面。
-* 選擇性注釋
+* 資產的屬性和中繼資料。
+* 多個轉譯，例如原始轉譯（原始上傳的資產）、縮圖和各種其他轉譯。 其他轉譯可能是不同大小的影像、不同的視訊編碼，或從PDF或Adobe InDesign檔案擷取的頁面。
+* 選用的注釋。
 
 如需內容片段元素的詳細資訊，請參 [閱Experience Manager Assets HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md#content-fragments)。
 
 在Experience Manager中，檔案夾包含下列元件：
 
 * 實體： 資產的子系是其轉譯。
-* 屬性
-* 連結
+* 屬性.
+* 連結.
 
 資產HTTP API包含下列功能：
 
-* 檢索資料夾清單
-* 建立資料夾
-* 建立資產
-* 更新資產二進位檔
-* 更新資產中繼資料
-* 建立資產轉譯
-* 更新資產轉譯
-* 建立資產註解
-* 複製資料夾或資產
-* 移動資料夾或資產
-* 刪除資料夾、資產或轉譯
+* 檢索資料夾清單。
+* 建立資料夾。
+* 建立資產。
+* 更新資產二進位檔。
+* 更新資產中繼資料。
+* 建立資產轉譯。
+* 更新資產轉譯。
+* 建立資產註解。
+* 複製資料夾或資產。
+* 移動資料夾或資產。
+* 刪除資料夾、資產或轉譯。
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 如果提供路徑的父節 `500` 點不存在，則API呼叫會因回應代碼而失敗。 如果資料夾已存在，呼 `409` 叫會傳回回回應代碼。
 
-**參數**: `name` -資料夾名稱
+**參數**: `name` 是資料夾名稱。
 
 **要求**
 
