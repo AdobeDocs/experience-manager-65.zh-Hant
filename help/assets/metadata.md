@@ -3,9 +3,9 @@ title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]�
 description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,69 @@ ht-degree: 0%
 * [XMP 中繼資料](xmp.md).
 * [如何編輯或新增中繼資料](meta-edit.md)。
 * [中繼資料圖式參考](meta-ref.md)。
+
+<!--  TBD: Complete this section. Take help from Metadata IRD for DDAM. Also, look at metadata features in Forrester analysis.
+
+## Understand metadata handling in Experience Manager {#metadata-possibilities-with-aem}
+
+Describe the journey of an assets' metadata. What all happens to metadata when an asset is added to AEM.
+
+## Add metadata to your digital assets {#add-metadata}
+
+Typically, the applications that create digital assets add some metadata to the assets created. Before uploading an asset to Experience Manager, you can edit and modify metadata using either the native application used to create an asset or using some metadata editors. When you upload an asset to Experience Manager, the metadata is processed.
+
+## Metadata of assets, folders, and collections {#metadata-of-assets-folders-collections}
+
+## Modify metadata of an asset, folder, or collection {#modify-metadata}
+
+## Modify metadata in bulk {#modify-metadata-in-bulk}
+
+Adobe Enterprise Manager Assets lets you edit the metadata of multiple assets simultaneously so you can quickly propagate common metadata changes to assets in bulk. You can also edit the metadata for multiple collections in bulk.
+
+Use the properties page to perform metadata changes on multiple assets or collections:
+
+* Change metadata properties to a common value
+* Add or modify tags
+
+To customize the metadata properties page, including adding, modifying, deleting metadata properties, use the schema editor.
+
+>[!NOTE]
+>
+>The bulk editing methods work for assets available in a folder or a collection. For the assets that are available across folders or match a common criteria, it is possible to [bulk update the metadata after searching](search-assets.md#metadataupdates).
+
+1. In the Assets user interface, navigate to the location of the assets you want to edit.
+1. Select the assets for which you want to edit common properties.
+1. From the toolbar, tap/click the **[!UICONTROL Properties]** icon to open the properties page for the selected assets.
+
+   >[!NOTE]
+   >
+   >When you select multiple assets, the lowest common parent form is selected for the assets. In other words, the properties page only displays metadata fields that are common across the properties pages of all the individual assets.
+
+1. Modify the metadata properties for selected assets under the various tabs.
+1. To view the metadata editor for a specific asset, deselect the remaining assets in the list. The metadata editor fields are populated with the metadata for the particular asset.
+
+   >[!NOTE]
+   >
+   >* In the properties page, you can remove assets from the asset list by deselecting them. The asset list has all the assets selected by default. The metadata for assets that you remove from the list is not updated.
+   >* At the top of assets list, select the check box near **[!UICONTROL Title]** to toggle between selecting the assets and clearing the list.
+
+1. To select a different metadata schema for the assets, tap/click the **[!UICONTROL Settings]** icon from the toolbar, and select the desired schema.
+1. Save the changes.
+1. To append the new metadata with the existing metadata in fields that contain multiple values, select **[!UICONTROL Append mode]**. If you do not select this option, the new metadata replaces the existing metadata in the fields. Tap/click **[!UICONTROL Submit]**.
+
+   >[!CAUTION]
+   >
+   >For single-value fields, the new metadata is not appended to the existing value in the field even if you select **[!UICONTROL Append mode]**.
+
+## Configure limit for bulk metadata update {#limit-bulk-metadata-updates}
+
+To prevent DOS like situation, Enterprise Manager limits the number of parameters supported in a Sling request. When updating metadata of many assets in one go, you may reach the limit and the metadata does not get updated for more assets. Enterprise Manager generates the following warning in the logs:
+
+`org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
+
+To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** and change the value of **[!UICONTROL Maximum POST Parameters]** in **[!UICONTROL Apache Sling Request Parameter Handling]** OSGi configuration.
+
+-->
 
 ## 為什麼我們需要中繼資料 {#why-we-need-metadata}
 
@@ -172,3 +235,11 @@ Exif定義的中繼資料欄位通常具有技術性，在描述性中繼資料�
 * 工作流程可以檢查影像是否有標題。 如果沒有，系統會通知您新增標題。
 * 工作流程可以檢查資產上的版權聲明是否允許散發。 因此，系統會將資產傳送至一或另一伺服器。
 * 工作流程可以檢查資產是否沒有預先定義的強制中繼資料，或是包含無效中繼資料 *的資* 產。
+
+>[!MORELIKETHIS]
+>
+>* [編輯多個系列的中繼資料屬性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+>* [XMP 中繼資料](xmp.md).
+>* [如何編輯或新增中繼資料](meta-edit.md)。
+>* [中繼資料圖式參考](meta-ref.md)。
+
