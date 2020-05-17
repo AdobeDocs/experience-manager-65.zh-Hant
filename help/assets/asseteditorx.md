@@ -3,12 +3,15 @@ title: 擴充資產編輯器
 description: 瞭解如何使用自訂元件擴充資產編輯器的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+workflow-type: tm+mt
+source-wordcount: '701'
+ht-degree: 13%
 
 ---
 
 
-# 擴充資產編輯器 {#extending-asset-editor}
+# Extend Asset Editor {#extending-asset-editor}
 
 「資產編輯器」是當透過「資產共用」找到的資產被點按時開啟的頁面，可讓使用者編輯資產的元資料、縮圖、標題和標籤等方面。
 
@@ -40,7 +43,7 @@ AEM Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載
 
 某些AEM Assets元件需要中定義的JS函式 `component.js`。 將此檔案複製到元件目錄並將其連結。
 
-```xml
+```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
@@ -50,15 +53,15 @@ AEM Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載
 
 部分AEM Assets元件會使用AEM Widget程式庫。 若要在內容內容內容中正確呈現，必須載入其他樣式表。 標籤動作元件需要一個。
 
-```xml
+```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
 ### Geometrixx樣式表 {#geometrixx-style-sheet}
 
-範例頁面元件要求所有選擇器都以( `.asseteditor` )開 `static.css` 頭`/etc/designs/geometrixx/static.css`。 最佳實務：將所有選 `.asseteditor` 擇器複製到樣式表，並視需要調整規則。
+範例頁面元件要求所有選擇器都以( `.asseteditor` )開 `static.css` 頭`/etc/designs/geometrixx/static.css`。 最佳實務： 將所有選 `.asseteditor` 擇器複製到樣式表，並視需要調整規則。
 
-### 表單選擇器：對最終載入的資源進行調整 {#formchooser-adjustments-for-eventually-loaded-resources}
+### 表單選擇器： 對最終載入的資源進行調整 {#formchooser-adjustments-for-eventually-loaded-resources}
 
 資產編輯器使用表單選擇器，您只需新增表單選擇器和表單路徑至資產的URL，即可編輯相同表單頁面上的資源（在本例中為資產）。
 
@@ -73,7 +76,7 @@ AEM Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載
 * 如果資產已載入，則會停用WCM模式，因為parsys只能在純格式頁面上編輯。
 * 如果資產已載入，則會使用其標題，而非表單頁面上的標題。
 
-```java
+```javascript
  List<Resource> resources = FormsHelper.getFormEditResources(slingRequest);
     if (resources != null) {
         if (resources.size() == 1) {
@@ -113,7 +116,7 @@ AEM Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載
 
 在HTML部分中，請使用前面的標題集（資產或頁面標題）:
 
-```xml
+```html
 <title><%= title %></title>
 ```
 
@@ -136,7 +139,7 @@ AEM Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載
 
 1. 加入 `samplemeta.jsp` 下列程式碼片段：
 
-   ```xml
+   ```javascript
    <%--
    
      Sample metadata field component
@@ -192,11 +195,11 @@ AEM Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載
    </div>
    ```
 
-1. 若要讓元件可用，您必須能夠加以編輯。 要使元件可編輯，請在CRXDE Lite中添加主 `cq:editConfig` 類型節點 `cq:EditConfig`。 為了能夠移除段落，請新增單一值 `cq:actions` 為的多值屬性 `DELETE`。
+1. 若要讓元件可用，您必須能夠加以編輯。To make a component editable, in CRXDE Lite, add a node `cq:editConfig` of primary type `cq:EditConfig`. 為了能夠移除段落，請新增多值屬性 `cq:actions` ，其中單一值 `DELETE`為。
 
 1. 導覽至您的瀏覽器，並在範例頁面上(例如 `asseteditor.html`)切換至設計模式，並啟用段落系統的新元件。
 
-1. 在「 **編輯** 」模式中，新元件(例如，「範例中繼資料 **」)現在可在sidekick中使用(可在「資產編輯器」**&#x200B;群組中找到 **** )。 插入元件。 若要儲存中繼資料，必須將其新增至中繼資料表格。
+1. 在「 **編輯** 」模式中，新元件(例如，「範例中繼資料 **」)現在可在sidekick中使用(可在「資產編輯器」**&#x200B;群組中找到 **** )。插入元件。若要儲存中繼資料，必須將其新增至中繼資料表格。
 
 ## 修改中繼資料選項 {#modifying-metadata-options}
 
