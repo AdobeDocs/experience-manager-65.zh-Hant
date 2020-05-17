@@ -3,7 +3,10 @@ title: 資產代理開發
 description: Proxy是使用Proxy工作者來處理工作的AEM例項。 瞭解如何設定AEM Proxy、支援的作業、Proxy元件，以及如何開發自訂Proxy工作器。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+workflow-type: tm+mt
+source-wordcount: '900'
+ht-degree: 0%
 
 ---
 
@@ -18,15 +21,15 @@ Proxy是特定（有時也是個別的）AEM例項，使用proxy工作者做為�
 
 ## 代理（HTTP存取） {#proxy-http-access}
 
-Proxy可透過HTTP Servlet取得，當它設定為接受下列位置的處理工作時： `/libs/dam/cloud/proxy`。 此servlet會從已張貼的參數建立sling工作。 然後，這會新增至代理工作佇列，並連線至適當的代理工作器。
+Proxy可透過HTTP Servlet取得，當它設定為接受下列位置的處理工作時： `/libs/dam/cloud/proxy`. 此servlet會從已張貼的參數建立sling工作。 然後，這會新增至代理工作佇列，並連線至適當的代理工作器。
 
 ### 支援的作業 {#supported-operations}
 
 * `job`
 
-   **需求**:參數必 `jobevent` 須設為序列化值映射。 這用於為作業處 `Event` 理器建立。
+   **需求**: 參數必 `jobevent` 須設為序列化值映射。 這用於為作業處 `Event` 理器建立。
 
-   **結果**:新增工作。 如果成功，則會傳回唯一的工作ID。
+   **結果**: 新增工作。 如果成功，則會傳回唯一的工作ID。
 
 ```shell
 curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
@@ -35,9 +38,9 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **需求**:必須 `jobid` 設定參數。
+   **需求**: 必須 `jobid` 設定參數。
 
-   **結果**:傳回由作業處理者建立之結果節點的JSON表示法。
+   **結果**: 傳回由作業處理者建立之結果節點的JSON表示法。
 
 ```shell
 curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
@@ -46,9 +49,9 @@ curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
 
 * `resource`
 
-   **需求**:必須設定參數jobid。
+   **需求**: 必須設定參數jobid。
 
-   **結果**:返回與給定作業關聯的資源。
+   **結果**: 返回與給定作業關聯的資源。
 
 ```shell
 curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
@@ -57,9 +60,9 @@ curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
 
 * `remove`
 
-   **需求**:必須設定參數jobid。
+   **需求**: 必須設定參數jobid。
 
-   **結果**:如果找到作業，則刪除作業。
+   **結果**: 如果找到作業，則刪除作業。
 
 ```shell
 curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
@@ -80,7 +83,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 以下是API使用的範例：
 
-```xml
+```java
 @Reference
  JobService proxyJobService;
 
@@ -114,7 +117,7 @@ Proxy和Proxy工作器組態都可透過雲端服務組態取得，您可從AEM 
 
 以下是API使用的範例：
 
-```xml
+```java
 @Reference(policy = ReferencePolicy.STATIC)
  ProxyConfig proxyConfig;
 
@@ -159,7 +162,7 @@ IDS [代理工作者](indesign.md) (Proxy Worker)是AEM Assets代理工作者的
 
    例如，請參見 `IDSJob.IDS_EXTENDSCRIPT_JOB` 有關IDS代理工作器的資訊。
 
-1. 外部步驟用來觸發事件，然後等待完成；這是透過輪詢id來完成的。 您必須自行制定實施新功能的步驟。
+1. 外部步驟用來觸發事件，然後等待完成； 這是透過輪詢id來完成的。 您必須自行制定實施新功能的步驟。
 
    實作 `WorkflowExternalProcess`，然後使用JobService API和您的工作主題來準備工作事件並將其分派至JobService（OSGi服務）。
 
