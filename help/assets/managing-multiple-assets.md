@@ -1,16 +1,19 @@
 ---
-title: 管理多個資產和系列
-description: 瞭解如何同時編輯多個資產和系列的中繼資料，以快速傳播常見的中繼資料變更。
+title: 在Adobe Enterprise Manager中管理許多資產和系列的中繼資料。
+description: 同時編輯許多資產和系列的中繼資料，以快速傳播常見的中繼資料變更。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+workflow-type: tm+mt
+source-wordcount: '502'
+ht-degree: 12%
 
 ---
 
 
 # 管理資產和系列 {#managing-multiple-assets-and-collections}
 
-Adobe Enterprise Manager(AEM)Assets可讓您同時編輯多個資產的中繼資料，以便快速將一般中繼資料變更大量傳播至資產。 您也可以大量編輯多個系列的中繼資料。
+Adobe Enterprise Manager Assets可讓您同時編輯多個資產的中繼資料，以便快速將一般中繼資料變更大量傳播至資產。 您也可以大量編輯多個系列的中繼資料。
 
 使用「屬性」頁面，對多個資產或系列執行中繼資料變更：
 
@@ -52,11 +55,11 @@ Adobe Enterprise Manager(AEM)Assets可讓您同時編輯多個資產的中繼資
 
 ## 設定大量中繼資料更新的限制 {#configlimit}
 
-為避免DOS類似情況，AEM會限制Sling請求中支援的參數數。 一次更新許多資產的中繼資料時，您可能會達到限制，而且無法針對更多資產更新中繼資料。 AEM會在記錄檔中產生下列警告：
+為避免DOS類似情況，Enterprise Manager會限制Sling請求中支援的參數數。 一次更新許多資產的中繼資料時，您可能會達到限制，而且無法針對更多資產更新中繼資料。 Enterprise Manager會在日誌中生成以下警告：
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-若要變更限制，請存取Web Console( **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**)並變更 **[!UICONTROL Apache Sling Parameters Request Apache Handling Osgi Configuration的]****** Maximum POST Parameters Praters Aremeters的值。
+To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** and change the value of **[!UICONTROL Maximum POST Parameters]** in **[!UICONTROL Apache Sling Request Parameter Handling]** OSGi configuration.
 
 >[!MORELIKETHIS]
 >
