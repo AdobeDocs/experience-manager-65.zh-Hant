@@ -3,9 +3,9 @@ title: 如何編輯或新增中繼資料
 description: 透過各種可編輯資 [!DNL Adobe Experience Manager Assets] 產中繼資料的方式，瞭解資產中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 中繼資料是可搜尋之資產的其他資訊。 上傳影像時會自動擷取。 您可以編輯現有的中繼資料，或將新的中繼資料屬性新增至現有欄位（例如，中繼資料欄位空白時）。
 
-由於組織需要可控且可靠的中繼資料詞 [!DNL Experience Manager Assets] 匯，因此不允許臨機新增中繼資料屬性。 雖然作者無法為資產新增中繼資料欄位，但開發人員可以。 請參 [閱為資產建立新的中繼資料屬性](meta-edit.md#editing-metadata-schema)。
+由於組織需要可控且可靠的中繼資料詞 [!DNL Experience Manager Assets] 匯，因此不允許隨選新增中繼資料屬性。 雖然作者無法為資產新增中繼資料欄位，但開發人員可以。 請參 [閱建立資產的中繼資料屬性](meta-edit.md#editing-metadata-schema)。
 
 ## 編輯資產的中繼資料 {#editing-metadata-for-an-asset}
 
-若要編輯中繼資料：
+若要編輯中繼資料，請依照下列步驟進行：
 
 1. 執行下列任一項作業：
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 
    *圖： 在資產屬性頁面上編輯或新[!UICONTROL 增中繼資]料。*
 
-1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the Assets web interface.
+1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
    >[!NOTE]
    >
    >如果文字欄位空白，則沒有現有的中繼資料集。 您可以在欄位中輸入值，並儲存它以新增該中繼資料屬性。
 
-對資產中繼資料所做的任何變更都會寫入原始二進位檔，作為其XMP資料的一部分。 這是透過中繼資 [!DNL Experience Manager] 料回寫工作流程來完成。 對現有屬性所做的變更(如 `dc:title`)會被覆寫，而新建立的屬性(包括自訂屬性 `cq:tags`)會與架構一起新增。
+對資產中繼資料所做的任何變更都會寫入原始二進位檔，作為其XMP資料的一部分。 中繼資料回寫工作流程會將中繼資料新增至原始二進位檔。 對現有屬性所做的變更(如 `dc:title`)會被覆寫，而新屬性(包括自訂屬性 `cq:tags`等)會隨架構新增。
 
 支援並啟用XMP回寫功能，適用於技術需求中所述的平台 [和檔案格式。](/help/sites-deploying/technical-requirements.md)
 
