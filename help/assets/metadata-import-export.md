@@ -3,7 +3,10 @@ title: 大量匯入和匯出資產中繼資料。
 description: 大量匯入和匯出數位資產的中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
+source-git-commit: 42532bfe73c44ad04b67afa973eef526f47588cf
+workflow-type: tm+mt
+source-wordcount: '786'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 1. 導覽至使 [!DNL Assets] 用者介面，然後按一下工 **[!UICONTROL 具列中的]** 「建立」。
 1. 從功能表中，選取「中繼 **[!UICONTROL 資料]**」。
 1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. 選取包含中繼資料的CSV檔案。
-1. 指定下列參數：
+1. 指定下列參數。 請參閱中繼資料匯 [入範例檔案。csv的範例CSV檔案](assets/metadata-import-sample-file.csv)。
 
    | 中繼資料匯入參數 | 說明 |
    |:---|:---|
@@ -33,7 +36,9 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
    | [!UICONTROL 啟動工作流程] | 預設為False。 設為且預 `true` 設的啟動程式設定對  DAM中繼資料回寫工作流程（將中繼資料寫入二進位XMP資料）有效。 啟用啟動工作流程會拖慢系統運作速度。 |
    | [!UICONTROL 資產路徑欄名稱] | 定義含資產之CSV檔案的欄名。 |
 
-1. 從工具列點選/ **[!UICONTROL 按一下]** 「匯入」。 匯入中繼資料後，通知會傳送至您的「通知 [!UICONTROL 收件匣] 」。 導覽至資產屬性頁面，並驗證是否正確匯入資產的中繼資料值。
+1. 從工具列點選/ **[!UICONTROL 按一下]** 「匯入」。 匯入中繼資料後，通知會顯示在「通知收件 [!UICONTROL 匣] 」中。
+
+1. 若要確認正確的匯入，請導覽至資產的「屬 [!UICONTROL 性] 」頁面，並驗證欄位中的值。
 
 若要在匯入中繼資料時新增日期和時間戳記，請 `YYYY-MM-DDThh:mm:ss.fff-00:00` 使用日期和時間格式。 日期和時間以24小時 `T`格式 `hh` 的小時、納秒和時區偏移 `fff``-00:00` 分隔。 例如， `2020-03-26T11:26:00.000-07:00` 是2020年3月26日太平洋標準時間上午11:26:00.000。
 
@@ -41,7 +46,7 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 >
 >如果日期格式不符 `YYYY-MM-DDThh:mm:ss.fff-00:00`合，則不設定日期值。 匯出的中繼資料CSV檔案的日期格式為格式 `YYYY-MM-DDThh:mm:ss-00:00`。 如果要匯入，請新增以表示的納秒值，將它轉換為可接受的格式 `fff`。
 
-## 匯出存中繼資料 {#export-metadata}
+## Export metadata {#export-metadata}
 
 您可以匯出CSV格式的多個資產的中繼資料。 中繼資料會以非同步方式匯出，不會影響系統的效能。 若要匯出中繼資 [!DNL Experience Manager] 料，請遍歷資產節點及其子節點的 `jcr:content/metadata` 屬性，並將中繼資料屬性匯出為CSV檔案。
 
@@ -50,7 +55,7 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 * 移轉資產時，匯入第三方系統中的中繼資料。
 * 與更廣大的專案團隊共用資產中繼資料。
 * 測試或稽核中繼資料以符合規範。
-* 將中繼資料外部化，以便個別地區化。
+* 將中繼資料外部化，以個別地本地化。
 
 1. 選取包含您要匯出中繼資料之資產的資產資料夾。 從工具列中，選擇「匯 **[!UICONTROL 出中繼資料]**」。
 
@@ -69,6 +74,12 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
    ![對話方塊，以下載包含大量匯出之中繼資料的CSV檔案](assets/csv_download.png)
 
    *圖： 對話方塊，以下載包含大量匯出之中繼資料的CSV檔案。*
+
+## 最佳實務、限制和秘訣 {#best-practices-limitations-tips}
+
+* 匯入資產中繼資料的CSV檔案格式非常特定。 為節省心力和時間，並避免意外錯誤，您可以開始使用匯出的CSV檔案格式建立CSV。
+* 使用CSV檔案匯入中繼資料時，必要的日期格式為 `YYYY-MM-DDThh:mm:ss.fff-00:00`。 如果使用其他格式，則不會設定日期值。 匯出的中繼資料CSV檔案的日期格式為格式 `YYYY-MM-DDThh:mm:ss-00:00`。 如果要匯入，請新增以表示的納秒值，將它轉換為可接受的格式 `fff`。
+* 若要匯入自訂名稱空間上的中繼資料，請先註冊名稱空間。
 
 >[!MORELIKETHIS]
 >
