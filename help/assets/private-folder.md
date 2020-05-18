@@ -3,9 +3,9 @@ title: 在AEM中建立和共用私人資料夾
 description: 瞭解如何在Adobe Experience Manager(AEM)Assets中建立私人資料夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 979d5074fcf94ca999fd941c77038ab6305cc67d
+source-git-commit: 02bd337271f0039b354ada2899198f5654f9e8bf
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '513'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-> 專用資料夾始終至少有一個成員具有所有者角色。
+> 私人資料夾至少有一個擁有擁有者角色的成員。
 
 
 1. 在「資產」主控台中，點選／按一 **[!UICONTROL 下工具列中的]** 「建立」，然後從選 **[!UICONTROL 單選擇「資料夾]** 」。
@@ -50,7 +50,7 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   > 專用資料夾始終至少有一個成員具有所有者角色。 因此，管理員無法從專用資料夾中刪除所有所有者成員。 但是，要從專用資料夾管理員中刪除現有所有者，必須將其他用戶添加為所有者。
+   > 私人資料夾至少有一個擁有擁有者角色的成員。 因此，管理員無法從專用資料夾中刪除所有所有者成員。 但是，要從專用資料夾中刪除現有所有者（和管理員本身），管理員必須將其他用戶添加為所有者。
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。根據您指派的角色，當使用者登入AEM Assets時，會為使用者指派一組權限給您的私人資料夾。
 1. 按一下 **[!UICONTROL 確定]** ，關閉確認消息。
