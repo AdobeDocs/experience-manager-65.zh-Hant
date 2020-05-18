@@ -3,9 +3,9 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 1f41de531d0e1784245c79ab2ace3586fc7dd469
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1568'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 如需內容片段元素的詳細資訊，請參 [閱Experience Manager Assets HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md#content-fragments)。
 
-在Experience Manager中，檔案夾包含下列元件：
+在資 [!DNL Experience Manager] 料夾中包含下列元件：
 
 * 實體： 資產的子系是其轉譯。
 * 屬性.
@@ -95,9 +95,9 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 **必備條件**
 
-1. 前往 `https://[aem_server]:[port]/system/console/configMgr`.
-1. 導覽至 **Adobe Granite CSRF Filter**。
-1. 請確定屬性篩選 **方法** : 貼文，放置，刪除。
+* 存取 `https://[aem_server]:[port]/system/console/configMgr`.
+* 導覽至 **[!UICONTROL Adobe Granite CSRF Filter]**。
+* 請確定屬性篩選 **[!UICONTROL 方法]** : `POST`, `PUT`, `DELETE`
 
 ## 檢索資料夾清單 {#retrieve-a-folder-listing}
 
@@ -181,14 +181,14 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 為資產建立新的資產轉譯。 如果未提供請求參數名稱，則會使用檔案名稱做為轉譯名稱。
 
-**參數** ：參數是 `name` 格式副本的名稱， `file` 並作為檔案參考。
+**參數**: 參數是 `name` 格式副本的名稱， `file` 並作為檔案參考。
 
 **要求**
 
 * `POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"`
 * `POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"`
 
-**回應碼**
+**回應碼**: 響應代碼為：
 
 * 201 —— 已建立——如果已成功建立轉譯。
 * 404 —— 找不到——如果在提供的URI中找不到或訪問資產，請執行此操作。
@@ -201,7 +201,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 **要求**: `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
-**回應碼** ：回應碼：
+**回應碼**: 響應代碼為：
 
 * 200 —— 確定——如果已成功更新轉譯。
 * 404 —— 找不到——如果在提供的URI中找不到或訪問資產，請執行此操作。
