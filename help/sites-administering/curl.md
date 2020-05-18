@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 translation-type: tm+mt
-source-git-commit: 7ee76afa11384aedc79b17e823c8dc9594662388
+source-git-commit: 4eb5f1c4aa6631d2570279eb1d4bf17a928e3b9f
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 2%
 
 ---
 
@@ -60,7 +63,7 @@ cURL命令可針對AEM中的大部分作業建立，例如觸發工作流程、�
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. 將cURL命令複製到文字編輯器，並從命令中移除所有標題，其開頭為 `-H` （在下圖中以藍色標示），然後新增正確的驗證參數，例如 `-u admin:admin`。
+1. 將cURL命令複製到文字編輯器，並從命令中移除所有標題，其開頭為 `-H` （在下圖中以藍色標示），然後新增正確的驗證參數，例如 `-u <user>:<password>`。
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -78,22 +81,28 @@ cURL命令可針對AEM中的大部分作業建立，例如觸發工作流程、�
 
 ### 套件管理 {#package-management}
 
+#### 列出所有已安裝的軟體包
+
+```shell
+curl -u <user>:<password> http://<host>:<port>/crx/packmgr/service.jsp?cmd=ls
+```
+
 #### 建立包 {#create-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
 ```
 
 #### 預覽套件 {#preview-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
 ```
 
 #### 清單封裝內容 {#list-package-content}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
 ```
 
 #### 建立套件 {#build-a-package}
@@ -102,46 +111,46 @@ curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/console.ht
 curl -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=build
 ```
 
-#### 重新包覆套件 {#rewrap-a-package}
+#### 重新包裝套件 {#rewrap-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
 ```
 
 #### 更名包 {#rename-a-package}
 
 ```shell
-curl -u admin:admin -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
+curl -u <user>:<password> -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
 ```
 
 #### 上傳套件 {#upload-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
+curl -u <user>:<password> -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
 ```
 
 #### 安裝軟體包 {#install-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=install http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=install http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### 卸載軟體包 {#uninstall-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### 刪除包 {#delete-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### 下載套件 {#download-a-package}
 
 ```shell
-curl -u admin:admin http://localhost:4502/etc/packages/my_packages/test.zip
+curl -u <user>:<password> http://localhost:4502/etc/packages/my_packages/test.zip
 ```
 
 ### 使用者管理 {#user-management}
@@ -149,61 +158,61 @@ curl -u admin:admin http://localhost:4502/etc/packages/my_packages/test.zip
 #### Create a New User {#create-a-new-user}
 
 ```shell
-curl -u admin:admin -FcreateUser= -FauthorizableId=hashim -Frep:password=hashim http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser= -FauthorizableId=hashim -Frep:password=hashim http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### Create a New Group {#create-a-new-group}
 
 ```shell
-curl -u admin:admin -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### 新增屬性至現有使用者 {#add-a-property-to-an-existing-user}
 
 ```shell
-curl -u admin:admin -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
+curl -u <user>:<password> -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
 ```
 
 #### 使用描述檔建立使用者 {#create-a-user-with-a-profile}
 
 ```shell
-curl -u admin:admin -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### 建立新使用者作為群組成員 {#create-a-new-user-as-a-member-of-a-group}
 
 ```shell
-curl -u admin:admin -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### 新增使用者至群組 {#add-a-user-to-a-group}
 
 ```shell
-curl -u admin:admin -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
+curl -u <user>:<password> -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
 #### 從群組移除使用者 {#remove-a-user-from-a-group}
 
 ```shell
-curl -u admin:admin -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
+curl -u <user>:<password> -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
 #### 設定使用者群組成員資格 {#set-a-user-s-group-membership}
 
 ```shell
-curl -u admin:admin -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
+curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
 ```
 
 #### 刪除用戶 {#delete-a-user}
 
 ```shell
-curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
 ```
 
 #### 刪除群組 {#delete-a-group}
 
 ```shell
-curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
 ```
 
 ### 備份 {#backup}
@@ -215,13 +224,13 @@ curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/groups/t/te
 #### 啟動捆綁包 {#starting-a-bundle}
 
 ```shell
-curl -u admin:admin -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
+curl -u <user>:<password> -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
 ```
 
 #### 停止捆綁包 {#stopping-a-bundle}
 
 ```shell
-curl -u admin:admin -Faction=stop http://localhost:4502/system/console/bundles/<bundle-name>
+curl -u <user>:<password> -Faction=stop http://localhost:4502/system/console/bundles/<bundle-name>
 ```
 
 ### Dispatcher {#dispatcher}
@@ -243,32 +252,32 @@ curl -H "CQ-Action: Deactivate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path:
 #### 檢查座席狀態 {#check-the-status-of-an-agent}
 
 ```shell
-curl -u admin:admin "http://localhost:4502/etc/replication/agents.author/publish/jcr:conten t.queue.json?agent=publish"
+curl -u <user>:<password> "http://localhost:4502/etc/replication/agents.author/publish/jcr:conten t.queue.json?agent=publish"
 http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on?agent=publish
 ```
 
 #### 刪除代理 {#delete-an-agent}
 
 ```shell
-curl -X DELETE http://localhost:4502/etc/replication/agents.author/replication99 -u admin:admin
+curl -X DELETE http://localhost:4502/etc/replication/agents.author/replication99 -u <user>:<password>
 ```
 
 #### 建立代理 {#create-an-agent}
 
 ```shell
-curl -u admin:admin -F "jcr:primaryType=cq:Page" -F "jcr:content/jcr:title=new-replication" -F "jcr:content/sling:resourceType=/libs/cq/replication/components/agent" -F "jcr:content/template=/libs/cq/replication/templates/agent" -F "jcr:content/transportUri=http://localhost:4503/bin/receive?sling:authRequestLogin=1" -F "jcr:content/transportUser=admin" -F "jcr:content/transportPassword={DES}8aadb625ced91ac483390ebc10640cdf"http://localhost:4502/etc/replication/agents.author/replication99
+curl -u <user>:<password> -F "jcr:primaryType=cq:Page" -F "jcr:content/jcr:title=new-replication" -F "jcr:content/sling:resourceType=/libs/cq/replication/components/agent" -F "jcr:content/template=/libs/cq/replication/templates/agent" -F "jcr:content/transportUri=http://localhost:4503/bin/receive?sling:authRequestLogin=1" -F "jcr:content/transportUser=admin" -F "jcr:content/transportPassword={DES}8aadb625ced91ac483390ebc10640cdf"http://localhost:4502/etc/replication/agents.author/replication99
 ```
 
 #### 暫停代理 {#pause-an-agent}
 
 ```shell
-curl -u admin:admin -F "cmd=pause" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
+curl -u <user>:<password> -F "cmd=pause" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
 ```
 
 #### 清除代理隊列 {#clear-an-agent-queue}
 
 ```shell
-curl -u admin:admin -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
+curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
 ```
 
 ### 社群 {#communities}
@@ -316,37 +325,37 @@ curl -u admin:admin -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/
 #### 頁面啟動 {#page-activation}
 
 ```shell
-curl -u admin:admin -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
+curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
 ```
 
 #### 頁面停用 {#page-deactivation}
 
 ```shell
-curl -u admin:admin -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
+curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
 ```
 
 #### 樹狀結構啟動 {#tree-activation}
 
 ```shell
-curl -u admin:admin -F cmd=activate -F ignoredeactivated=true -F onlymodified=true -F path=/content/geometrixx http://localhost:4502/etc/replication/treeactivation.html
+curl -u <user>:<password> -F cmd=activate -F ignoredeactivated=true -F onlymodified=true -F path=/content/geometrixx http://localhost:4502/etc/replication/treeactivation.html
 ```
 
 #### 鎖定頁面 {#lock-page}
 
 ```shell
-curl -u admin:admin -X POST -F cmd="lockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -X POST -F cmd="lockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 ```
 
 #### 解鎖頁面 {#unlock-page}
 
 ```shell
-curl -u admin:admin -X POST -F cmd="unlockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -X POST -F cmd="unlockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 ```
 
 #### 複製頁面 {#copy-page}
 
 ```shell
-curl -u admin:admin -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
 ```
 
 ### 工作流程 {#workflows}
@@ -358,43 +367,43 @@ curl -u admin:admin -F cmd=copyPage -F destParentPath=/path/to/destination/paren
 #### 建立資料夾 {#create-a-folder}
 
 ```shell
-curl -u admin:admin -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
+curl -u <user>:<password> -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
 ```
 
 #### 刪除節點 {#delete-a-node}
 
 ```shell
-curl -u admin:admin -F :operation=delete http://localhost:4502/etc/test/test.properties
+curl -u <user>:<password> -F :operation=delete http://localhost:4502/etc/test/test.properties
 ```
 
 #### 移動節點 {#move-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
+curl -u <user>:<password> -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### 複製節點 {#copy-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
+curl -u <user>:<password> -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### 使用Sling PostServlet上傳檔案 {#upload-files-using-sling-postservlet}
 
 ```shell
-curl -u admin:admin -F"*=@test.properties"  http://localhost:4502/etc/test
+curl -u <user>:<password> -F"*=@test.properties"  http://localhost:4502/etc/test
 ```
 
 #### 使用Sling PostServlet和指定節點名稱上傳檔案 {#upload-files-using-sling-postservlet-and-specifying-node-name}
 
 ```shell
-curl -u admin:admin -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
+curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
 ```
 
 #### 上傳指定內容類型的檔案 {#upload-files-specifying-a-content-type}
 
 ```shell
-curl -u admin:admin -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
+curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
 ```
 
 ### 資產操縱 {#asset-manipulation}
