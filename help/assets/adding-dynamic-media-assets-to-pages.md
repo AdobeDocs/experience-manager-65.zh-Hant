@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 202e4d5d0e3fa285b9973e4709a02ca77ccb6e71
+source-git-commit: 876589d26f17dc088531c3f34deea0fab4c7726a
+workflow-type: tm+mt
+source-wordcount: '3137'
+ht-degree: 8%
 
 ---
 
@@ -29,13 +32,14 @@ source-git-commit: 202e4d5d0e3fa285b9973e4709a02ca77ccb6e71
 將動態媒體、互動式媒體、全景媒體或視訊360媒體元件新增至頁面，與將元件新增至任何頁面相同。 以下各節將介紹動態媒體元件。
 
 1. 在AEM中，開啟您要新增動態媒體元件的頁面。
-1. 在左窗格中，點選「元件 **[!UICONTROL 」圖示]** ，然後篩選「動態媒體」。
+1. 在頁面左側的面板（您可能需要切換側面板的顯示）中，按一下「元件」 **[!UICONTROL 圖示]** 。
+1. 在「元 **[!UICONTROL 件]** 」標題下方的下拉式清單中，選取「動 **[!UICONTROL 態媒體」]**。
 
-   如果沒有可用的動態媒體元件，您必須啟用或開啟動態媒體元件。 如需詳 [細資訊，請參閱編輯頁面範本](/help/sites-authoring/templates.md#editing-templates-template-authors) 。
+   如果沒有可用的動態媒體元件清單，您可能需要啟用您要使用的動態媒體元件。 請參閱 [啟用動態媒體元件](#enabling-dynamic-media-components)。
 
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
-1. 拖曳動 **[!UICONTROL 態媒體元件]** ，並將其拖曳至頁面上所需的位置。
+1. 拖曳您 **[!UICONTROL 要使用的Dynamic Media]** 元件，並將其拖曳至頁面上所需的位置。
 
    在以下範例中， **[!UICONTROL 使用Video 360 Media]** （視訊360媒體）元件。
 
@@ -54,6 +58,33 @@ source-git-commit: 202e4d5d0e3fa285b9973e4709a02ca77ccb6e71
    動態媒體視訊360媒體元件。
 
 1. 完成後，在對話框右上角附近點選核取標籤以儲存變更。
+
+### 啟用動態媒體元件 {#enabling-dynamic-media-components}
+
+如果沒有可新增至頁面的動態媒體元件，可能表示您必須先啟用要使用的元件。
+
+1. 在AEM中，開啟您要新增動態媒體元件的頁面。
+1. 在工具列的左側，在頁面頂端附近點選「頁面資訊」圖示，然後從下拉式清單中點選「 **[!UICONTROL Edit Template]** 」（編輯範本）。
+
+   ![edit-template](/help/assets/assets-dm/edit-template.png)
+
+1. 在工具列右側，靠近頁面頂部，從下拉式清單中點選「結構」( **[!UICONTROL Structure]**)。
+
+   ![政策](/help/assets/assets-dm/structure-mode.png)
+
+1. 在頁面底部附近，點選「 **[!UICONTROL Layout Container]** 」以開啟其工具列，然後點選「Policy」（原則）圖示。
+1. 在「配 **[!UICONTROL 置容器]** 」頁面的「屬性」標題下，請確定已選取「允 **[!UICONTROL 許的元件]****** 」標籤。
+
+   ![允許的元件](/help/assets/assets-dm/allowed-components.png)
+
+1. 捲動直到您看到 **[!UICONTROL 動態媒體]**。
+1. 點選 **[!UICONTROL Dynamic Media]** （動態媒體）左側的>圖示以展開清單，選取您要啟用的動態媒體元件。
+
+   ![動態媒體元件清單](/help/assets/assets-dm/dm-components-select.png)
+
+1. 在「版面容器」頁面的右上角 **[!UICONTROL 附近]** ，點選「完成（勾選）」圖示。
+
+1. 在工具列的右側，靠近頁面頂端，從下拉式清單中點選「初始內容 **[!UICONTROL 」，然]**&#x200B;後照常將動態媒體元件新增至頁面 [](#adding-a-dynamic-media-component-to-a-page) 。
 
 ## 本地化動態媒體元件 {#localizing-dynamic-media-components}
 
@@ -109,7 +140,7 @@ source-git-commit: 202e4d5d0e3fa285b9973e4709a02ca77ccb6e71
 
 #### 使用影像時 {#when-working-with-images}
 
-動態媒體元件可讓您新增動態影像，包括影像集、回轉集和混合媒體集。 您可以放大、縮小，如果適用，則可以在回轉集內旋轉影像，或從其他類型的回轉集選取影像。
+動態媒體元件可讓您新增動態影像，包括影像集、回轉集和混合媒體集。 您可以放大、縮小，如果適用的話，可以在回轉集內旋轉影像，或從其他類型的回轉集選取影像。
 
 您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像回應，您可以設定中斷點或套用回應式影像預設集。
 
@@ -220,7 +251,7 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
 ### 互動式媒體元件 {#interactive-media-component}
 
-互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用互動式 **[!UICONTROL 媒體元件]** 。
+互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用 **[!UICONTROL 互動式媒體元件]** 。
 
 互動式媒體元件是智慧型的。 視您新增影像或視訊而定，您有各種選項。 此外，檢視器具有互動功能——螢幕大小會根據螢幕大小自動變更。 所有檢視器都是HTML5檢視器。
 
@@ -289,7 +320,7 @@ You can edit the following **[!UICONTROL General]** settings by tapping **[!UICO
 
 使用 **[!UICONTROL Video 360 Media]** （視訊360媒體）元件，在您的網頁上演算等方形視訊，以提供身歷其境的房間、房產、位置、風景或醫療程式檢視體驗。
 
-在平面顯示器上播放時，用戶可以控制視角；在行動裝置上播放時，通常會運用其內建的陀螺控制項。
+在平面顯示器上播放時，用戶可以控制視角； 在行動裝置上播放時，通常會運用其內建的陀螺控制項。
 
 檢視器包含傳送360個視訊資產的原生支援。 依預設，檢視或播放不需要其他設定。 您可使用標準的視訊副檔名（例如。mp4、.mkv和。mov）來傳送360視訊。 最常見的轉碼器是H.264。
 
