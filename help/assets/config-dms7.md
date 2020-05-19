@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f96a8fc51ffeef68b2e4c668bc1b2bae4e89133a
+source-git-commit: 06301db70f763eedebeca293dd288d22248cfbf6
 workflow-type: tm+mt
-source-wordcount: '5782'
+source-wordcount: '5777'
 ht-degree: 6%
 
 ---
@@ -479,8 +479,6 @@ spin-01-01
    啟動預設可確保在您上傳資產至動態媒體時，會套用批次集預設集以產生該預設集。
 
 ### （可選）調整動態媒體- Scene7模式的效能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
-
-**同步效能／可擴充性微調提示**
 
 為了讓Dynamic Media - Scene7模式順利執行，Adobe建議使用下列同步效能／延展性微調提示：
 
