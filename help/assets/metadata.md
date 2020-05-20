@@ -3,7 +3,7 @@ title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]�
 description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 0%
@@ -50,7 +50,7 @@ To customize the metadata properties page, including adding, modifying, deleting
 
 1. In the Assets user interface, navigate to the location of the assets you want to edit.
 1. Select the assets for which you want to edit common properties.
-1. From the toolbar, tap/click the **[!UICONTROL Properties]** icon to open the properties page for the selected assets.
+1. From the toolbar, click the **[!UICONTROL Properties]** icon to open the properties page for the selected assets.
 
    >[!NOTE]
    >
@@ -64,9 +64,9 @@ To customize the metadata properties page, including adding, modifying, deleting
    >* In the properties page, you can remove assets from the asset list by deselecting them. The asset list has all the assets selected by default. The metadata for assets that you remove from the list is not updated.
    >* At the top of assets list, select the check box near **[!UICONTROL Title]** to toggle between selecting the assets and clearing the list.
 
-1. To select a different metadata schema for the assets, tap/click the **[!UICONTROL Settings]** icon from the toolbar, and select the desired schema.
+1. To select a different metadata schema for the assets, click the **[!UICONTROL Settings]** icon from the toolbar, and select the desired schema.
 1. Save the changes.
-1. To append the new metadata with the existing metadata in fields that contain multiple values, select **[!UICONTROL Append mode]**. If you do not select this option, the new metadata replaces the existing metadata in the fields. Tap/click **[!UICONTROL Submit]**.
+1. To append the new metadata with the existing metadata in fields that contain multiple values, select **[!UICONTROL Append mode]**. If you do not select this option, the new metadata replaces the existing metadata in the fields. click **[!UICONTROL Submit]**.
 
    >[!CAUTION]
    >
