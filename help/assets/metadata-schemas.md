@@ -3,9 +3,9 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 265fc8fa6b4d835241b1213d95beaa17db5798ac
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '2665'
+source-wordcount: '2661'
 ht-degree: 7%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 7%
 
 若要檢視和編輯資產的屬性頁面，請依照下列步驟進行：
 
-1. 在資產圖格的卡片檢 **[!UICONTROL 視中，按一下或點選「快速動作]** 」中的「檢視屬性」圖示。
+1. 按一下資 **[!UICONTROL 產圖格中]** ，卡片檢視中「快速動作」的「檢視屬性」圖示。
 
    ![資產圖格上的快速動作](assets/chlimage_1-170.png)
 
-   或者，選取資產，然後從工具列按一下或點選 [!UICONTROL 「屬性] 」圖示。
+   或者，選取資產，然後按一下工 [!UICONTROL 具列中的] 「屬性」圖示。
 
 1. 您可以編輯可用標籤下的各種可編輯中繼資料屬性。 但是，您無法修改屬 [!UICONTROL 性頁面] 「基本  」索引標籤中的資產類型。
 
@@ -175,8 +175,8 @@ application doesn't contain the sub type zip OOTB.
 
 >[!NOTE]
 >
->* 刪除對預設表單的自定義更改後，鎖定表徵圖會重新顯示在元資料架構介面上。 它表示表單已回復為預設狀態。
->* 您無法刪除中的預設元資料架構表 [!DNL Assets]單。
+>* 刪除對預設表單的自定義更改後，鎖定表徵圖將重新顯示在元資料架構介面上。 它表示表單已回復為預設狀態。
+>* 您不能刪除中的預設元資料架構表 [!DNL Assets]單。
 
 
 ## MIME類型的架構表單 {#schema-forms-for-mime-types}
