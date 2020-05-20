@@ -3,7 +3,10 @@ title: 準備翻譯資產
 description: 建立語言根資料夾，以準備要翻譯的資產，以支援多語言資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '450'
+ht-degree: 0%
 
 ---
 
@@ -41,9 +44,9 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 要建立語言根目錄，請建立資料夾並使用ISO語言代碼作為「名稱」屬性的值。 建立語言根目錄後，可以在語言根目錄的任何級別建立語言副本。
 
-例如，範例階層的義大利文語言副本的根頁面 `it` 為Name屬性。 Name屬性用作儲存庫中資產節點的名稱，因此確定資產的路徑。(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
+例如，範例階層的義大利文語言副本的根頁面 `it` 為Name屬性。 Name屬性用作儲存庫中資產節點的名稱，因此確定資產的路徑。 (`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
 
-1. 在「資產」主控台中，按一下／點選「 **[!UICONTROL 建立]** 」，然後從 **[!UICONTROL 選單選擇「資料夾]** 」。
+1. From the Assets console, click **[!UICONTROL Create]** and choose **[!UICONTROL Folder]** from the menu.
 
    ![建立資料夾](assets/Create-folder.png)
 
@@ -51,17 +54,17 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![在資料夾中新增語言代碼](assets/Add-language-code-in-folder.png)
 
-1. 按一下或點選「 **[!UICONTROL 建立]**」。 語言根目錄是在「資產」主控台中建立。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。語言根目錄是在「資產」主控台中建立。
 
 ## 檢視語言根 {#viewing-language-roots}
 
 AEM介面提供「 **[!UICONTROL 參考」面板]** ，可顯示已在AEM Assets中建立的語言根目錄清單。
 
 1. 在「資產」主控台中，選取您要建立語言副本的語言主版。
-1. 按一下或點選「GlobalNav」圖示，然後選擇「參 **[!UICONTROL 考]** 」以開啟「 [!UICONTROL 參考] 」窗格。
+1. 按一下GlobalNav表徵圖，然後選擇「參 **[!UICONTROL 照]** 」以開啟「 [!UICONTROL 參考] 」窗格。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. 在「參考」窗格中，按一下或點選「語 **[!UICONTROL 言副本」]**。 「語 [!UICONTROL 言復本] 」面板會顯示資產的語言復本。
+1. 在「參考」窗格中，按一下「語 **[!UICONTROL 言副本」]**。 「語 [!UICONTROL 言復本] 」面板會顯示資產的語言復本。
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
