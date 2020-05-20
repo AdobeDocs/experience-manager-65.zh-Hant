@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: 215f062f80e7abfe35698743ce971394d01d0ed6
+workflow-type: tm+mt
+source-wordcount: '844'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
 
 以下列案例為例：
 
-發佈實例1的用戶可能獲得驗證，但如果後續請求發佈實例2，該實例沒有持續的驗證狀態，因為該狀態保存在發佈實例1的儲存庫中，而發佈實例2有自己的儲存庫。
+用戶可以在發佈實例1上獲得驗證，但如果後續請求發佈實例2，則該實例沒有持續的驗證狀態，因為該狀態保存在發佈實例1的儲存庫中，而發佈實例2有自己的儲存庫。
 
 解決方案是在負載平衡器層級配置嚴格連線。 使用嚴格連線時，使用者一律會被導向至相同的發佈例項。 因此，無法實現真正最佳的負載平衡。
 
@@ -51,6 +54,15 @@ Encapsulated Token是一種加密技術，可讓AEM安全地離線建立和驗�
 
 
 ## 設定封裝的Token {#configuring-the-encapsulated-token}
+
+>[!NOTE]
+>所有同步使用者並依賴Token驗證（例如SAML和OAuth）的驗證處理常式，只有在下列情況下才能與封裝的Token搭配運作：
+>
+>* 會啟用自黏作業，或
+   >
+   >
+* 同步啟動時，使用者已在AEM中建立。 這表示在處理常式在同步程式期間建立使用者時，將不 **支援封裝** 的Token。
+
 
 在設定封裝Token時，您需要考慮以下幾項：
 
