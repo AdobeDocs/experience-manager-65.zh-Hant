@@ -3,7 +3,7 @@ title: 整 [!DNL Adobe Experience Manager Assets] 合 [!DNL Adobe InDesign Serve
 description: 瞭解如何 [!DNL Adobe Experience Manager Assets] 整合 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 3%
@@ -117,7 +117,7 @@ ht-degree: 3%
 >
 >請 勿變更ExtendScript程式庫。此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要發送到的庫以 [!DNL InDesign Server] 便在其中使用。
 
-「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 「處理縮圖」工作流程步驟會使用此格式副本，以產生所需的靜態格式副本 [!DNL Experience Manager]。
+「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 此轉譯用於「流程縮圖」工作流步驟，以生成所需的靜態轉譯 [!DNL Experience Manager]。
 
 您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您未移除預設值，因為介面需要這些預設 [!DNL Experience Manager Assets] 值。 最後，「刪除影像預覽轉譯」工作流程步驟會移除JPG縮圖轉譯，因為不再需要它。
 
@@ -166,7 +166,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 如果 [!DNL InDesign Server] 和 [!DNL Experience Manager] 運行在不同的主機上，或者這兩個應用程式都未在預設埠上運行，請配置 [!UICONTROL Day CQ Link Externalizer] ，以設定主機名、埠和內容路徑 [!DNL InDesign Server]。
 
 1. 在訪問Web控制台 `https://[aem_server]:[port]/system/console/configMgr`。
-1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and tap **[!UICONTROL Edit]** to open it.
+1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and click **[!UICONTROL Edit]** to open it.
 1. 指定主機名和上下文路徑，然 [!DNL Indesign Server] 後按一下 **保存**。
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
