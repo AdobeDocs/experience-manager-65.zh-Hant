@@ -4,10 +4,10 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '5872'
-ht-degree: 6%
+source-wordcount: '5869'
+ht-degree: 5%
 
 ---
 
@@ -114,9 +114,9 @@ ht-degree: 6%
 
 您可以改善特定資產的關鍵字關聯性，以協助根據關鍵字提高搜尋效率。 換言之，當您根據這些關鍵字進行搜尋時，您促銷特定關鍵字的影像會出現在搜尋結果的頂端。
 
-1. From the [!DNL Assets] user interface, open the properties page for the asset. 按一 **[!UICONTROL 下「進階]** 」，然後按一下/點選「 **[!UICONTROL Elevate for search keywords]** 」下 **[!UICONTROL 方的「新增」]**。
-1. 在「搜 **[!UICONTROL 尋促銷]** 」方塊中，指定您要大幅提升影像搜尋的關鍵字，然後按一下／點選「新增」 ****。 您可以以相同的方式指定多個關鍵字。
-1. 按一下／點選「 **[!UICONTROL 儲存並關閉]**」。 您為此關鍵字促銷的資產會出現在熱門搜尋結果中。
+1. From the [!DNL Assets] user interface, open the properties page for the asset. Click **[!UICONTROL Advanced]** and click **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
+1. 在「搜 **[!UICONTROL 尋促銷]** 」方塊中，指定您要大幅提升影像搜尋的關鍵字，然後按一下「新 **[!UICONTROL 增」]**。 您可以以相同的方式指定多個關鍵字。
+1. Click **[!UICONTROL Save &amp; Close]**. 您為此關鍵字促銷的資產會出現在熱門搜尋結果中。
 
 您可以透過提升目標關鍵字搜尋結果中某些資產的排名，來利用此功能。 請參閱以下範例影片。 如需詳細資訊，請參 [閱Experience Manager中的搜尋](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html)。
 
