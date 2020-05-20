@@ -3,7 +3,10 @@ title: 影像轉碼程式庫
 description: 瞭解如何設定和使用Adobe的影像轉碼程式庫。此影像處理解決方案可執行核心影像處理功能，包括編碼、轉碼、影像重新取樣和影像大小調整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '948'
+ht-degree: 0%
 
 ---
 
@@ -23,8 +26,8 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 除了支援多種檔案格式和設定檔外，在效能、延展性和品質方面，影像轉碼程式庫與其他協力廠商解決方案相比，有顯著的優勢。 以下是使用影像轉碼程式庫的主要優點：
 
-* **隨檔案大小或解析度的增加而調整**:縮放主要是透過Imaging Coding Library的專利功能，在解碼檔案時重新調整大小。 此功能可確保執行時期記憶體的使用永遠是最佳的，而不是增加檔案大小或解析度百萬像素的二次函式。 影像轉碼程式庫可處理大型和高解析度（包含高百萬像素）的檔案。 協力廠商工具（例如ImageMagick）無法處理大型檔案，在處理這類檔案時會當機。
-* **Photoshop品質壓縮和調整大小演算法**:在向下取樣（平滑、銳利且自動的雙立方體）和壓縮品質方面與業界標準一致。 影像轉碼程式庫進一步評估輸入影像的品質因數，並智慧地使用最佳的表格和品質設定來輸出影像。 此功能可產生最佳檔案大小，而不會影響視覺品質。
+* **隨檔案大小或解析度的增加而調整**: 縮放主要是透過Imaging Coding Library的專利功能，在解碼檔案時重新調整大小。 此功能可確保執行時期記憶體的使用永遠是最佳的，而不是增加檔案大小或解析度百萬像素的二次函式。 影像轉碼程式庫可處理大型和高解析度（包含高百萬像素）的檔案。 協力廠商工具（例如ImageMagick）無法處理大型檔案，在處理這類檔案時會當機。
+* **Photoshop品質壓縮和調整大小演算法**: 在向下取樣（平滑、銳利且自動的雙立方體）和壓縮品質方面與業界標準一致。 影像轉碼程式庫進一步評估輸入影像的品質因數，並智慧地使用最佳的表格和品質設定來輸出影像。 此功能可產生最佳檔案大小，而不會影響視覺品質。
 * **高吞吐量：** 響應時間較短，吞吐量始終高於ImageMagick。 因此，影像轉碼程式庫應會縮短使用者的等待時間並降低代管成本。
 * **使用並行載入，可更佳地縮放：** 映像轉碼庫在並行負載條件下的效能最佳。 它以最佳的CPU效能、記憶體使用量和低的回應時間，提供高的總處理能力，有助於降低代管成本。
 
@@ -73,7 +76,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 1. 下載 [Imaging Rodcing Library軟體包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用軟體包管理器進行安裝。 此套件與AEM 6.5相容。
 
-1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console並點選「 **[!UICONTROL OSGi > Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
+1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console，然後按一下「 **[!UICONTROL OSGi > Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
 
 1. 使用命令檢查資料夾，確保提取所有所需的庫 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`，其中資料夾名稱是使用包ID構建的。 例如，如果bundle `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` id為，則命令為 `588`。
 
@@ -98,11 +101,11 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 1. 要確保路徑的值設定為，請使 `.`用命 `echo $LD_LIBRARY_PATH` 令。 產出應該只是 `.`。 如果值未設定為，請 `.`重新啟動會話。
 
-### 設定 [!UICONTROL DAM更新資產工作流程]{#configure-dam-asset-update-workflow}
+### 設定 [!UICONTROL DAM更新資產工作流程] {#configure-dam-asset-update-workflow}
 
 更新 [!UICONTROL DAM更新資產工作流程] ，以使用程式庫來處理影像。
 
-1. 點選/按一下AEM標誌，然後前往「工 **[!UICONTROL 具 >工 作流程 > 模型]**」。
+1. 在Experience Manager使用者介面中，選取「工 **[!UICONTROL 具>工作流程>模型」]**。
 
 1. 在「工 **[!UICONTROL 作流程模型]** 」頁面中，以編輯模式開 **** 啟「DAM更新資產」工作流模型。
 
