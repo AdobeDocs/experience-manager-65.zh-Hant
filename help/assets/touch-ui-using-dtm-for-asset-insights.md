@@ -3,7 +3,10 @@ title: 透過DTM啟用資產見解
 description: 瞭解如何使用Adobe動態標籤管理(DTM)來啟用資產分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
 執行這些步驟，以透過DTM啟用資產分析。
 
-1. Tap/click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
+1. Click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
 1. [使用DTM Cloud服務設定AEM例項](/help/sites-administering/dtm.md)
 
    當您登入https://dtm.adobe.com並從「設定檔」圖示造訪「 [帳戶設定](https://dtm.adobe.com/) 」後， **** API Token就可使用。 從「資產前瞻分析」的角度來看，此步驟不是必要步驟，因為AEM Sites與「資產前瞻分析」的整合仍在進行中。
@@ -28,21 +31,21 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 1. 登入https://dtm.adobe.com [](https://dtm.adobe.com/)，並視需要選取公司。
 1. 建立／開啟現有Web屬性
 
-   * 選取「 **[!UICONTROL Web屬性]** 」標籤，然後點選／按一下「 **[!UICONTROL 新增屬性」]**。
+   * 選擇「 **[!UICONTROL Web屬性]** 」標籤，然後按一 **[!UICONTROL 下「新增屬性」]**。
 
-   * 視需要更新欄位，然後點選／按一下「 **[!UICONTROL 建立屬性」]**。 請參 [閱檔案](https://helpx.adobe.com/experience-manager/using/dtm.html)。
+   * 視需要更新欄位，然後按一下「 **[!UICONTROL 建立屬性」]**。 請參 [閱檔案](https://helpx.adobe.com/experience-manager/using/dtm.html)。
    ![建立編輯Web屬性](assets/Create-edit-web-property.png)
 
-1. 在「規 **[!UICONTROL 則]** 」標籤中，從導覽窗格 **[!UICONTROL 選取「頁面載入規則]** 」，並點選／按一下「 **[!UICONTROL 建立新規則」]**。
+1. 在「規 **[!UICONTROL 則]** 」標籤中，從導 **[!UICONTROL 覽窗格中選取「頁面載入規則]** 」，然後按一 **[!UICONTROL 下「建立新規則」]**。
 
    ![chlimage_1-58](assets/chlimage_1-194.png)
 
-1. 展開 **[!UICONTROL Javascript /第三方標籤]**。 然後點選／按一 **[!UICONTROL 下「循序HTML]** 」索引標籤中 **** 的「新增指令碼」，以開啟「指令碼」對話方塊。
+1. 展開 **[!UICONTROL Javascript /第三方標籤]**。 然後按一 **[!UICONTROL 下「循序HTML]** 」索引標籤中 **[!UICONTROL 的「新增指令碼」]** ，以開啟「指令碼」對話方塊。
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Tap/click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
-1. 點選／按一 **[!UICONTROL 下前瞻分析頁面追蹤器]**，複製追蹤器程式碼，然後貼到您在步驟6中開啟的指令碼對話方塊中。 儲存變更。
+1. Click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
+1. 按一 **[!UICONTROL 下前瞻分析頁面追蹤器]**，複製追蹤器程式碼，然後貼到您在步驟6中開啟的指令碼對話方塊中。 儲存變更。
 
    >[!NOTE]
    >
@@ -62,7 +65,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
    ![chlimage_1-61](assets/chlimage_1-197.png)
 
-1. 展開「 **[!UICONTROL 自訂頁面代碼]**」，然後按一下或點選「 **[!UICONTROL 開啟編輯器」]**。
+1. 展開「 **[!UICONTROL 自訂頁面代碼]**」，然後按一 **[!UICONTROL 下「開啟編輯器」]**。
 
    ![chlimage_1-62](assets/chlimage_1-198.png)
 
