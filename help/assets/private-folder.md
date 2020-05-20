@@ -3,10 +3,10 @@ title: 在AEM中建立和共用私人資料夾
 description: 瞭解如何在Adobe Experience Manager(AEM)Assets中建立私人資料夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 02bd337271f0039b354ada2899198f5654f9e8bf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 5%
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 5%
 > 私人資料夾至少有一個擁有擁有者角色的成員。
 
 
-1. 在「資產」主控台中，點選／按一 **[!UICONTROL 下工具列中的]** 「建立」，然後從選 **[!UICONTROL 單選擇「資料夾]** 」。
+1. 在「資產」主控台中，按一 **[!UICONTROL 下工具列中的]** 「建立」，然後從功能表 **[!UICONTROL 選擇「資料夾]** 」。
 
    ![建立資產檔案夾](assets/Create-folder.png)
 
@@ -28,11 +28,11 @@ ht-degree: 5%
 
    ![選中「專用」複選框可將資料夾設定為專用](assets/private-folder.png)
 
-1. 點選／按一下「 **[!UICONTROL 建立]**」。 UI中會建立私人資料夾。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。UI中會建立私人資料夾。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. 要與其他用戶共用資料夾以及為其分配權限，請選擇該資料夾，然後按一下工具欄中的「屬性 **** 」表徵圖。
+1. To share the folder with other users and the assign privileges to them, select the folder, and click the **[!UICONTROL Properties]** icon from the toolbar.
 
    ![chlimage_1-414](assets/chlimage_1-414.png)
 
@@ -58,11 +58,11 @@ ht-degree: 5%
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 點選／按一下「通知」圖示以開啟通知清單。
+1. 按一下「通知」圖示以開啟通知清單。
 
    ![通知清單](assets/Assets-Notification.png)
 
-1. 按一下／點選管理員共用的專用資料夾條目以開啟該資料夾。
+1. 按一下管理員共用的專用資料夾條目以開啟該資料夾。
 
 >[!NOTE]
 >
