@@ -3,7 +3,10 @@ title: 相關資產
 description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '640'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![開啟資產的「屬性」頁面，以建立資產的關聯](assets/asset-properties-relate-assets.png)
 
-   *圖：「[!DNL Assets]屬[!UICONTROL 性]」頁，以關聯資產。*
+   *圖：[!DNL Assets][!UICONTROL 屬性]」頁面，以建立資產關聯。*
 
    或者，從清單檢視中選取資產。
 
@@ -33,7 +36,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. 若要將另一個資產與您選取的資產建立關聯，請從工具列按一下／點選「 **[!UICONTROL 建立關聯]** 」圖示。
+1. 若要將另一個資產與您選取的資產建立關聯，請按一下工 **[!UICONTROL 具列中]** 的「建立關聯」圖示。
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -48,20 +51,20 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. 按一下／點選「 **[!UICONTROL 確認]** 」圖示。
-1. 按一下／點選「 **[!UICONTROL 確定]** 」以關閉對話方塊。 根據您在步驟3中選擇的關係，相關資產會列在「相關」區段的適當類別 **[!UICONTROL 下]** 。 例如，如果您相關的資產是目前資產的來源檔案，則會列在「來源」 **[!UICONTROL 下]**。
+1. 按一下「 **[!UICONTROL 確認]** 」圖示。
+1. 按一下 **[!UICONTROL 確定]** ，關閉對話框。 根據您在步驟3中選擇的關係，相關資產會列在「相關」區段的適當類別 **[!UICONTROL 下]** 。 例如，如果您相關的資產是目前資產的來源檔案，則會列在「來源」 **[!UICONTROL 下]**。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. 若要解除資產的關聯，請按一下工具列中的「取消 **[!UICONTROL 關聯]** 」(Unrelate)。
+1. 若要解除資產的關聯，請按一下工 **[!UICONTROL 具列中的]** 「解除關聯」。
 
    ![chlimage_1-279](assets/chlimage_1-279.png)
 
-1. 從「移除關係」( **[!UICONTROL Remove Relations]** )對話框中選取要解除關聯的資產，然後按一下／點選「取消關 **[!UICONTROL 聯」(Unrelate)]**。
+1. 從「移除關係」( **[!UICONTROL Remove Relations]** )對話框中選取要解除關聯的資產，然後按一下「取 **[!UICONTROL 消關聯」(Unrelate)]**。
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
-1. 按一下／點選「 **[!UICONTROL 確定]** 」以關閉對話方塊。 移除關係的資產會從「相關」(Related)區段下的相關資產清單中 **[!UICONTROL 刪除]** 。
+1. 按一下 **[!UICONTROL 確定]** ，關閉對話框。 移除關係的資產會從「相關」(Related)區段下的相關資產清單中 **[!UICONTROL 刪除]** 。
 
 ## 折算相關資產 {#translating-related-assets}
 
@@ -73,7 +76,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ![「資產屬性」頁顯示要包括在轉換中的相關資產的源檔案](assets/asset-properties-source-asset.png)
 
-*圖：相關資產的來源資產，以便進行折算。*
+*圖： 相關資產的來源資產，以便進行折算。*
 
 1. 遵循「建立新翻譯專案」中的步驟，將來源檔案夾中的資產翻譯 [成目標語言](translation-projects.md#create-a-new-translation-project)。 例如，在此例中，請將您的資產翻譯為法文。
 
@@ -81,22 +84,22 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-283](assets/chlimage_1-283.png)
 
-1. 按一下／點選專案圖格以開啟詳細資訊頁面。
+1. 按一下專案圖格以開啟詳細資訊頁面。
 
    ![chlimage_1-284](assets/chlimage_1-284.png)
 
-1. 按一下／點選翻譯工作卡下的省略號以查看翻譯狀態。
+1. 按一下翻譯工作卡下方的省略號可查看翻譯狀態。
 
    ![chlimage_1-285](assets/chlimage_1-285.png)
 
-1. 選取資產，然後從工具列按一下／點 **[!UICONTROL 選「在資產中顯現]** 」，以檢視資產的轉換狀態。
+1. 選取資產，然後按一下工 **[!UICONTROL 具列中的「在資產中顯示]** 」，以檢視資產的轉換狀態。
 
    ![chlimage_1-286](assets/chlimage_1-286.png)
 
-1. 若要確認是否已轉換與來源相關的資產，請按一下／點選來源資產。
+1. 若要確認是否已轉換與來源相關的資產，請按一下來源資產。
 
    ![chlimage_1-287](assets/chlimage_1-287.png)
 
-1. 選取與來源相關的資產，然後按一下／點選「在資產中顯 **[!UICONTROL 示」]**。 會顯示已轉換的相關資產。
+1. 選取與來源相關的資產，然後按一下「在資 **[!UICONTROL 產中顯現」]**。 會顯示已轉換的相關資產。
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
