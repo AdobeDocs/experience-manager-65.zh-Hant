@@ -3,14 +3,17 @@ title: XMP回寫至轉譯
 description: 瞭解XMP回寫功能如何將資產的中繼資料變更傳播至資產的所有或特定轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '771'
+ht-degree: 10%
 
 ---
 
 
 # XMP回寫至轉譯 {#xmp-writeback-to-renditions}
 
-中的XMP回寫功能 [!DNL Adobe Experience Manager Assets] 會將資產中繼資料變更複製至資產的轉譯。 當您從資產內部或上傳資產時變更資 [!DNL Experience Manager Assets] 產的中繼資料時，變更最初會儲存在CRXDe的資產節點中。 XMP回寫功能會將中繼資料變更傳播至資產的所有或特定轉譯。
+中的XMP回寫功能 [!DNL Adobe Experience Manager Assets] 會將資產中繼資料變更複製到資產的轉譯。 當您從資產內部或上傳資產時變更資 [!DNL Experience Manager Assets] 產的中繼資料時，變更最初會儲存在CRXDe的資產節點中。 XMP回寫功能會將中繼資料變更傳播至資產的所有或特定轉譯。
 
 請考慮您修改資產 [!UICONTROL 標題] (Title)屬性的 `Classic Leather` 藍本 `Nylon`。
 
@@ -44,7 +47,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 1. 從「模型」頁面，開啟「 **[!UICONTROL DAM中繼資料回寫]** 」工作流程模型。
 1. 在「 **[!UICONTROL DAM中繼資料回寫]** 」屬性頁面中，開啟 **[!UICONTROL 「XMP回寫程式」步驟]** 。
 1. In the [!UICONTROL Step Properties] dialog box, click the **[!UICONTROL Process]** tab.
-1. 在「參 **數** 」方塊中，新增 `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`，然後點選／按一下「 **確定」**。
+1. 在「參 **數** 」框中，添加 `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`，然後按一下「 **確定」**。
 
    ![step_properties](assets/step_properties.png)
 
