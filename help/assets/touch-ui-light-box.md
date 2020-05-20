@@ -3,7 +3,10 @@ title: Lightbox在AEM Assets中做為您的個人影像收藏館
 description: 在AEM Assets中瞭解Lightbox作為您的個人影像收藏館。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 
-1. 在對話方塊中，點選／按一 **[!UICONTROL 下「新增]**」，然後關閉它以完成程式。 選取的資產會新增至燈箱。
+1. 在對話方塊中，按一 **[!UICONTROL 下「新增]**」，然後關閉它以完成程式。 選取的資產會新增至燈箱。
 1. 若要檢視燈箱，請移至「系列」主控台。
-1. 點選／按一 **[!UICONTROL 下「燈箱]** 」以檢視其中的資產。
+1. 按一 **[!UICONTROL 下燈箱]** ，以檢視其中的資產。
 
    >[!NOTE]
    >
@@ -31,7 +34,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ## 從燈箱移除資產 {#removing-assets-from-lightbox}
 
-1. 導覽至「系列」主控台，點選／按一下「燈箱」以檢視其資產。
+1. 導覽至「系列」主控台，按一下「燈箱」以檢視其資產。
 1. 選取您要移除的資產。
-1. 從工具列中點選／按一下「 **[!UICONTROL 移除]**」。
-1. 在對話方塊中，點選／按一 **[!UICONTROL 下「移除]** 」以確認刪除動作。 資產會從Lightbox中刪除。
+1. 在工具列中，按一下「 **[!UICONTROL 移除]**」。
+1. 在對話方塊中，按一下「 **[!UICONTROL 移除]** 」以確認刪除動作。 資產會從Lightbox中刪除。
