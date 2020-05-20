@@ -3,7 +3,10 @@ title: 自訂資產中繼資料需求的中繼資料設定檔
 description: 瞭解資產的中繼資料設定檔。 瞭解如何建立中繼資料描述檔並將它套用至資料夾資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '1410'
+ht-degree: 17%
 
 ---
 
@@ -14,8 +17,8 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ## 新增中繼資料設定檔 {#adding-a-metadata-profile}
 
-1. 導覽至「工 **[!UICONTROL 具>資產>中繼資料設定檔]** 」，然後點 **[!UICONTROL 選「建立]**」。
-1. 輸入中繼資料描述檔的標題，例如範例中繼資料，然後點選「建 **[!UICONTROL 立」]**。 此時將顯示 [!UICONTROL 元資料配置檔案的編輯表單] 。
+1. 導覽至「工 **[!UICONTROL 具>資產>中繼資料設定檔]** 」，然後按 **[!UICONTROL 一下「建立]**」。
+1. 輸入中繼資料描述檔的標題，例如範例中繼資料，然後按一下「建 **[!UICONTROL 立]**」。 此時將顯示 [!UICONTROL 元資料配置檔案的編輯表單] 。
 
    ![chlimage_1-197](assets/chlimage_1-480.png)
 
@@ -42,7 +45,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 1. (可選) 從「建置表單」標籤新增更多元件至「 **[!UICONTROL 編輯表單]** 」，並在「設定」標籤中設定 **[!UICONTROL 其屬性]** 。「生成表單」頁籤提供 **[!UICONTROL 以下屬性]** :
 
 | 元件 | 屬性 |
-|---|---|
+| ----------------------------- | ----------------------------------------------------------------------- |
 | [!UICONTROL 區段標題] | 欄位標籤，說 <br> 明 |
 | [!UICONTROL 單行文字] | 欄位標籤、 <br> 對應至屬性、預 <br> 設值 |
 | [!UICONTROL 多值文字] | 欄位標籤、 <br> 對應至屬性、預 <br> 設值 |
@@ -52,7 +55,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ![chlimage_1-201](assets/chlimage_1-484.png)
 
-1. 點選／按一下「 **[!UICONTROL 完成]**」。 中繼資料描述檔會新增至「中繼資料描述檔」頁面中的描 **[!UICONTROL 述檔清單]** 。<br>
+1. 按一 **[!UICONTROL 下完成]**。 中繼資料描述檔會新增至「中繼資料描述檔」頁面中的描 **[!UICONTROL 述檔清單]** 。<br>
 
    ![「元資料配置檔案」頁中添加的元資料配置檔案](assets/MetadataProfiles-page.png)
 
@@ -62,9 +65,9 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
    ![chlimage_1-203](assets/chlimage_1-486.png)
 
-1. 從工具 **[!UICONTROL 列點選]** 「複製」。
+1. 從工 **[!UICONTROL 具列按一下]** 「複製」。
 1. 在「復 **[!UICONTROL 制中繼資料設定檔]** 」對話方塊中，輸入中繼資料設定檔新副本的標題。
-1. 點選「 **[!UICONTROL 複製]**」。中繼資料描述檔的復本會顯示在「中繼資料描述檔」頁面的描述檔 **[!UICONTROL 清單中]** 。
+1. 按一 **[!UICONTROL 下複製]**。 中繼資料描述檔的復本會顯示在「中繼資料描述檔」頁面的描述檔 **[!UICONTROL 清單中]** 。
 
    ![在「中繼資料描述檔」頁面中新增的中繼資料描述檔復本](assets/copy-metadata-profile.png)
 
@@ -103,19 +106,19 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 請依照下列步驟來套用中繼資料描述檔：
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. 選擇要應用於資料夾或多個資料夾的元資料配置檔案。
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
 
-1. Tap **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap **[!UICONTROL Done]**. 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
 #### 從屬性將中繼資料描述檔套用至資料夾 {#applying-metadata-profiles-to-folders-from-properties}
 
-1. 在左側導軌中，點選「 **[!UICONTROL 資產]** 」，然後瀏覽至您要套用中繼資料描述檔的檔案夾。
-1. 在資料夾上，點選或按一下核取標籤以選取它，然後點選或按一下「 **[!UICONTROL 屬性]**」。
+1. 在左側導軌中，按一下「 **[!UICONTROL 資產]** 」，然後導覽至您要套用中繼資料描述檔的檔案夾。
+1. 在資料夾上，按一下複選標籤以選擇它，然後按一下「屬 **[!UICONTROL 性」]**。
 
-1. Select the **[!UICONTROL Metadata Profiles]** tab and select the profile from the drop-down menu and tap **[!UICONTROL Save]**.
+1. Select the **[!UICONTROL Metadata Profiles]** tab and select the profile from the drop-down menu and click **[!UICONTROL Save]**.
 
    ![chlimage_1-208](assets/chlimage_1-491.png)
 
@@ -129,7 +132,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 若要全域套用中繼資料設定檔，請遵循下列步驟：
 
-* 導覽至 `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 並套用適當的描述檔，然後點選「 **[!UICONTROL 儲存]**」。
+* 導覽至並 `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 套用適當的描述檔，然後按一下「 **[!UICONTROL 儲存]**」。
 
    ![chlimage_1-209](assets/chlimage_1-492.png)
 
@@ -145,16 +148,16 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ### 透過描述檔使用者介面，從資料夾移除中繼資料描述檔 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. 點選或按一下AEM標誌，然後導覽至「工具> **[!UICONTROL 資產>中繼資料設定檔]**」。
+1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. 選擇要從資料夾或多個資料夾中刪除的元資料配置檔案。
-1. 點選 **[!UICONTROL 「從資料夾移除中繼資料描述檔」]** ，然後選取您要用來從中移除描述檔的資料夾或多個資料夾，並點選「 **[!UICONTROL 完成」]**。
+1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
    您可以確認中繼資料描述檔不再套用至資料夾，因為該名稱不會再顯示在資料夾名稱下方。
 
 ### 透過屬性從資料夾移除中繼資料描述檔 {#removing-metadata-profiles-from-folders-via-properties}
 
-1. 點選AEM標誌並導覽 **[!UICONTROL Assets]** ，然後前往您要從中移除中繼資料描述檔的檔案夾。
-1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
+1. 按一下AEM標誌，並導覽 **[!UICONTROL Assets]** ，然後導覽至您要從中移除中繼資料描述檔的檔案夾。
+1. 在資料夾上，按一下複選標籤以選擇它，然後按一下「屬 **[!UICONTROL 性」]**。
 1. 選擇「元 **[!UICONTROL 資料描述檔]** 」標籤，然後從下拉式選單中選 **[!UICONTROL 擇「無]** 」，然後按一下「 **[!UICONTROL 儲存]**」。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
 ## 限制與最佳實務 {#limitations-best-practices-tips}
