@@ -3,9 +3,9 @@ title: 大量匯入和匯出資產中繼資料。
 description: 大量匯入和匯出數位資產的中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 42532bfe73c44ad04b67afa973eef526f47588cf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '785'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 5%
    | [!UICONTROL 啟動工作流程] | 預設為False。 設為且預 `true` 設的啟動程式設定對  DAM中繼資料回寫工作流程（將中繼資料寫入二進位XMP資料）有效。 啟用啟動工作流程會拖慢系統運作速度。 |
    | [!UICONTROL 資產路徑欄名稱] | 定義含資產之CSV檔案的欄名。 |
 
-1. 從工具列點選/ **[!UICONTROL 按一下]** 「匯入」。 匯入中繼資料後，通知會顯示在「通知收件 [!UICONTROL 匣] 」中。
+1. 按一 **[!UICONTROL 下工具]** 列的「匯入」。 匯入中繼資料後，通知會顯示在「通知收件 [!UICONTROL 匣] 」中。
 
 1. 若要確認正確的匯入，請導覽至資產的「屬 [!UICONTROL 性] 」頁面，並驗證欄位中的值。
 
