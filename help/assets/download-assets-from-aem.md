@@ -3,7 +3,7 @@ title: 從下載數位資產 [!DNL Adobe Experience Manager]。
 description: 瞭解如何從指令下 [!DNL Adobe Experience Manager] 載資產，以啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 >
 >電子郵件的收件者必須是群組的 `dam-users` 成員，才能存取電子郵件訊息中的ZIP下載連結。 若要下載資產，成員必須擁有啟動觸發資產下載的工作流程的權限。
 
-若要下載資產，請導覽至資產，選取資產，然後點選工具列 **[!UICONTROL 中的]** 「下載」。 在產生的對話方塊中，指定您的下載選項。
+若要下載資產，請導覽至資產，選取資產，然後按一下工 **[!UICONTROL 具列的]** 「下載」。 在產生的對話方塊中，指定您的下載選項。
 
 無法下載資產類型影像集、回轉集、混合媒體集和轉盤集。
 
