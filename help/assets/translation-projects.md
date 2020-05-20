@@ -1,9 +1,12 @@
 ---
 title: 建立翻譯專案
-description: 瞭解如何在[!DNL Adobe Experience Manager]中建立翻譯專案。
+description: 瞭解如何在中建立翻譯項目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '1898'
+ht-degree: 15%
 
 ---
 
@@ -12,9 +15,9 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 若要建立語言副本，請觸發使用者介面中「參考」邊欄下方可用的下列語言副本工 [!DNL Experience Manager] 作流程之一。
 
-* **建立和翻譯**:在此工作流程中，將要翻譯的資產複製到您要翻譯的語言的語言根目錄。 此外，根據您選擇的選項，系統會在「專案」主控台中為資產建立轉譯專案。 根據設定，翻譯項目可以手動啟動，或者允許在建立翻譯項目後立即自動運行。
+* **建立和翻譯**: 在此工作流程中，將要翻譯的資產複製到您要翻譯的語言的語言根目錄。 此外，根據您選擇的選項，系統會在「專案」主控台中為資產建立轉譯專案。 根據設定，翻譯項目可以手動啟動，或者允許在建立翻譯項目後立即自動運行。
 
-* **更新語言副本**:執行此工作流程，以轉譯另一組資產，並將其加入特定地區設定的語言副本中。 在此情況下，已轉換的資產會新增至已包含先前轉換資產的目標資料夾。
+* **更新語言副本**: 執行此工作流程，以轉譯另一組資產，並將其加入特定地區設定的語言副本中。 在此情況下，已轉換的資產會新增至已包含先前轉換資產的目標資料夾。
 
 >[!NOTE]
 >
@@ -37,11 +40,11 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 使用「 **[!UICONTROL 僅建立結構]** 」選項，在目標語言根目錄中建立目標資料夾層次結構，以匹配源語言根目錄中源資料夾的層次結構。在這種情況下，來源資產會複製到目標資料夾。但是，不會生成任何翻譯項目。
 
 1. 在界 [!DNL Assets] 面中，選擇要在目標語言根目錄中建立結構的源資料夾。
-1. 開啟「參 **[!UICONTROL 考」窗格]** ，然後按一下「復本」下的「語言復本 **[!UICONTROL 」(Language Copies]****[!UICONTROL )]**。
+1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
-1. 按一下／點選 **[!UICONTROL 底部的「建立與翻譯]** 」。
+1. 按一 **[!UICONTROL 下下方的「建立]** 」和「翻譯」。
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
@@ -53,11 +56,11 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-60](assets/chlimage_1-60.png)
 
-1. 按一下/點選「 **[!UICONTROL 建立]**」。目標語言的新結構列在「語言副本」( **[!UICONTROL Language Copies)下]**。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。目標語言的新結構列在「語言副本」( **[!UICONTROL Language Copies)下]**。
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
-1. 按一下／點選清單中的結構，然後按一下／點選「資產中的 **[!UICONTROL 顯現]** 」，以導覽至目標語言中的資料夾結構。
+1. 按一下清單中的結構，然後按一下「 **[!UICONTROL 在資產中顯現]** 」，以導覽至目標語言內的檔案夾結構。
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -66,11 +69,11 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 如果您使用此選項，將要翻譯的資產複製到要翻譯的語言的語言根目錄。 根據您選擇的選項，將為「項目」控制台中的資產建立一個翻譯項目。 根據設定，翻譯項目可以手動啟動，或在建立翻譯項目後自動運行。
 
 1. 在「資產」UI中，選取您要建立「語言」復本的來源資料夾。
-1. 開啟「參 **[!UICONTROL 考」窗格]** ，然後按一下「復本」下的「語言復本 **[!UICONTROL 」(Language Copies]****[!UICONTROL )]**。
+1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
-1. 按一下／點選 **[!UICONTROL 底部的「建立與翻譯]** 」。
+1. 按一 **[!UICONTROL 下下方的「建立]** 」和「翻譯」。
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -86,7 +89,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-1. 按一下/點選「 **[!UICONTROL 建立]**」。來源資料夾中的資產會複製到您在步驟4中選取的地區設定的目標資料夾。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。來源資料夾中的資產會複製到您在步驟4中選取的地區設定的目標資料夾。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
@@ -96,13 +99,13 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 1. 導覽至「專案」主控台。 翻譯資料夾將複製到「項目」控制台。
 
-   ![chlimage_1-70](assets/chlimage_1-70.png)
+   ![chlimage_1-78](assets/chlimage_1-70.png)
 
 1. 開啟資料夾以查看翻譯項目。
 
    ![chlimage_1-71](assets/chlimage_1-71.png)
 
-1. 按一下／點選專案以開啟詳細資訊頁面。
+1. 按一下專案以開啟詳細資訊頁面。
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
@@ -116,7 +119,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![在「資產屬性」頁面中檢視翻譯的中繼資料](assets/translated-metadata-asset-properties.png)
 
-   *圖：資產屬性頁面中已翻譯的中繼資料。*
+   *圖： 資產屬性頁面中已翻譯的中繼資料。*
 
 
    >[!NOTE]
@@ -129,8 +132,8 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 1. 在「資產」使用者介面中，導覽至包含未轉譯資產的來源檔案夾。
 1. 選取您要轉換的資產，並開啟「參考」 **[!UICONTROL 窗格]**。「語 **[!UICONTROL 言副本]** 」部分顯示當前可用的翻譯副本數。
-1. 按一下/點選「 **[!UICONTROL 復本」下的]** 「語言 **[!UICONTROL 復本」]**。將顯示可用翻譯副本的清單。
-1. 按一下／點選 **[!UICONTROL 底部的「建立與翻譯]** 」。
+1. Click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 將顯示可用翻譯副本的清單。
+1. 按一 **[!UICONTROL 下下方的「建立]** 」和「翻譯」。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
@@ -148,18 +151,18 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 1. 從「現 **[!UICONTROL 有翻譯項目]** 」清單中，選擇要添加要翻譯的資產的項目。
 
-   ![chlimage_1-78](assets/chlimage_1-78.png)
+   ![chlimage_1-70](assets/chlimage_1-78.png)
 
-1. 按一下/點選「 **[!UICONTROL 建立]**」。要翻譯的資產會新增至目標資料夾。更新的資料夾會列在「語言復 **[!UICONTROL 本」區段下]** 。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。要翻譯的資產會新增至目標資料夾。更新的資料夾會列在「語言復 **[!UICONTROL 本」區段下]** 。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
 1. 導覽至「專案」主控台，並開啟您新增至的現有翻譯專案。
-1. 按一下／點選翻譯專案檢視專案詳細資訊頁面。
+1. 按一下翻譯項目查看項目詳細資訊頁。
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 按一下／點選「轉譯工作」圖格底 **部的省略號** ，以檢視轉譯工作流程中的資產。 翻譯工作清單還顯示資產元資料和標籤的條目。 這些項目表示資產的中繼資料和標籤也會翻譯。
+1. 按一下翻譯作業表徵圖底部的省略 **號** ，在翻譯工作流程中查看資產。 翻譯工作清單還顯示資產元資料和標籤的條目。 這些項目表示資產的中繼資料和標籤也會翻譯。
 
    >[!NOTE]
    >
@@ -173,7 +176,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    >
    >如果您添加到翻譯作業的資產包含子資產，請選擇子資產並刪除這些子資產，以便翻譯繼續，而不會出現任何故障。
 
-1. 要啟動資產的翻譯，請按一下／點選「 **[!UICONTROL Translation Job]** （翻譯作業）」表徵圖上的箭頭，然後從列 **[!UICONTROL 表中選擇「Start]** （開始）」。
+1. 要啟動資產的翻譯，請按一下「翻譯作業」表徵圖上的箭 **[!UICONTROL 頭]** ，然後從列 **[!UICONTROL 表中選擇「開始]** 」。
 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
@@ -181,7 +184,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-82](assets/chlimage_1-82.png)
 
-1. 要查看翻譯作業的狀態，請按一下／點選「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。
+1. 要查看翻譯作業的狀態，請按一下「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
@@ -201,12 +204,12 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 如果您使用此選項，系統會針對您要更新語言副本的一組資產建立翻譯專案。
 
 1. 從「資產」使用者介面中，選取您新增資產的來源資料夾。
-1. 開啟「參 **[!UICONTROL 考]** 」窗格，然後按一下/點選「復本」下的「語言復本 ******** 」，以顯示語言復本清單。
+1. Open the **[!UICONTROL References]** pane, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
 1. 選中「語言副本」 **[!UICONTROL 之前的複選框]**，然後選擇與相應地區對應的目標資料夾。
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
-1. 按一下／點選 **[!UICONTROL 底部的「更新語言]** 」復本。
+1. 按一 **[!UICONTROL 下下方的]** 「更新語言副本」。
 
    ![chlimage_1-85](assets/chlimage_1-85.png)
 
@@ -218,7 +221,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
-1. 按一下/點選「 **[!UICONTROL 開始]**」。
+1. 按一 **[!UICONTROL 下開始]**。
 1. 導覽至「專案」主控台。 翻譯資料夾將複製到「項目」控制台。
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
@@ -227,7 +230,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
-1. 按一下／點選專案以開啟詳細資訊頁面。
+1. 按一下專案以開啟詳細資訊頁面。
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
@@ -239,7 +242,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 要查看翻譯作業的狀態，請按一下／點選「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。
+1. 要查看翻譯作業的狀態，請按一下「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -252,7 +255,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 如果您使用此選項，資產集會新增至現有的翻譯專案，以更新您所選地區的語言副本。
 
 1. 從「資產」使用者介面中，選取您新增資產檔案夾的來源檔案夾。
-1. 開啟「參 **[!UICONTROL 考」窗格]**，然後按一下/點選「復本」下的「語言復本 ******** 」，以顯示語言復本清單。
+1. Open the **[!UICONTROL References pane]**, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -260,7 +263,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. 按一下／點選 **[!UICONTROL 底部的「更新語言]** 」復本。
+1. 按一 **[!UICONTROL 下下方的]** 「更新語言副本」。
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
@@ -272,26 +275,26 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
-1. 按一下/點選「 **[!UICONTROL 開始]**」。
+1. 按一 **[!UICONTROL 下開始]**。
 1. 請參閱「添加到現有翻譯 [項目」的步驟](translation-projects.md#add-to-existing-translation-project) 9-14以完成其餘的步驟。
 
 ## 建立臨時語言副本 {#creating-temporary-language-copies}
 
 當您執行翻譯工作流程以更新具有原始資產編輯版本的語言副本時，會保留現有的語言副本，直到您核准翻譯的資產為止。 [!DNL Adobe Experience Manager Assets] 將新翻譯的資產儲存在臨時位置，並在您明確核准資產後更新現有的語言副本。 如果您拒絕資產，語言副本將保持不變。
 
-1. Click/tap the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click/tap **[!UICONTROL Reveal in Assets]** to open the folder in [!DNL Experience Manager Assets].
+1. Click the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click **[!UICONTROL Reveal in Assets]** to open the folder in [!DNL Experience Manager Assets].
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. 在介面 [!DNL Assets] 中，選取已翻譯的資產，然後從工具列按一下／點選「 **[!UICONTROL Edit]** 」（編輯）圖示，以在編輯模式中開啟資產。
+1. 在介面 [!DNL Assets] 中，選取已翻譯的資產，然後按一下工具列中的「編輯 **** 」圖示，以在編輯模式中開啟資產。
 1. 編輯資產，然後儲存變更。
 1. 執行「Add to existing translation project(添加到現有翻譯 [項目)」過程的步驟](#add-to-existing-translation-project) 2-14以更新語言副本。
-1. 按一下／點選「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。 從「翻譯作業」頁中的 **[!UICONTROL 資產清單]** ，您可以清楚地查看儲存資產翻譯版本的臨時位置。
+1. 按一下「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。 從「翻譯作業」頁中的 **[!UICONTROL 資產清單]** ，您可以清楚地查看儲存資產翻譯版本的臨時位置。
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 選取「標題」( **[!UICONTROL Title)旁的核取方塊]**。
-1. 在工具列中，按一下/點選「 **[!UICONTROL Accept Translation]** 」 (接受翻譯)，然後在對話方塊中按一下/點選「 **[!UICONTROL Accept]** 」 (接受)，以使用已編輯資產的翻譯版本覆寫目標資料夾中的翻譯資產。
+1. From the toolbar, click **[!UICONTROL Accept Translation]** and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
@@ -299,7 +302,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    >
    >若要啟用翻譯工作流程來更新目標資產，請同時接受資產和中繼資料。
 
-   按一下／點 **[!UICONTROL 選「拒絕翻譯]** 」，在目標地區根目錄中保留資產的原始翻譯版本，並拒絕編輯的版本。
+   按一 **[!UICONTROL 下「拒絕轉譯]** 」，在目標地區根目錄中保留資產的原始翻譯版本，並拒絕編輯的版本。
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
