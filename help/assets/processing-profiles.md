@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '1369'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -95,14 +95,14 @@ ht-degree: 2%
 
 **（可選）調整重新處理工作流的批大小**
 
-1. 在Experience Manager中，點選 **[!UICONTROL Adobe Experience Manager]** ，存取全域導覽主控台，然後點選「工具 **[!UICONTROL (槌子) 」圖示>「工]** 作流程>模型」 ****。
+1. In Experience Manager, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL Workflow > Models]**.
 1. 在「工作流程模型」頁面的「卡片檢視」或「清單檢視」中，選取 **[!UICONTROL Scene7: 重新處理資產]**。
 
    ![「工作流程模型」頁面與Scene7: 重新處理卡片檢視中選取的資產工作流程](/help/assets/assets-dm/reprocess-assets7.png)
 
 1. 在工具列上，按一下「編 **[!UICONTROL 輯」]**。 新的瀏覽器標籤會開啟Scene7: 「重新處理資產」工作流模型頁。
-1. 在Scene7: 重新處理「資產」工作流程頁面，靠近右上角，點選「 **[!UICONTROL 編輯]** 」以「解除鎖定」工作流程。
-1. 在工作流程中，選取「Scene7批次上傳」元件以開啟工具列，然後點選工具列 **[!UICONTROL 上的]** 「設定」。
+1. 在Scene7: 重新處理「資產」工作流程頁面，靠近右上角，按一下「 **[!UICONTROL 編輯]** 」以「解除鎖定」工作流程。
+1. 在工作流程中，選取「Scene7批次上傳」元件以開啟工具列，然後按一下工具列 **[!UICONTROL 上的]** 「設定」。
 
    ![Scene7批次上傳元件](/help/assets/assets-dm/reprocess-assets8.png)
 
@@ -115,16 +115,16 @@ ht-degree: 2%
    * 如果 **[!UICONTROL 要在到達超時]** ，請選擇「超時時提前」。 如果要在到達逾時時時繼續進入收件箱，請取消選擇。
    ![屬性對話框](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. 在「批次上傳至Scene7 —— 步驟屬 **[!UICONTROL 性」對話方塊的右上角]** ，點選「 **[!UICONTROL 完成」]**。
+1. 在「批次上傳至Scene7 —— 步驟屬 **[!UICONTROL 性」對話方塊的右上角]** ，按一下「 **[!UICONTROL 完成」]**。
 
-1. 在Scene7的右上角： 重新處理「資產」工作流程模型頁面，點選「 **[!UICONTROL 同步」]**。 當您看到「已 **[!UICONTROL 同步]**」時，工作流程執行階段模型已成功同步，並可重新處理資料夾中的資產。
+1. 在Scene7的右上角： 重新處理「資產」工作流模型頁面，按一下「 **[!UICONTROL 同步」]**。 當您看到「已 **[!UICONTROL 同步]**」時，工作流程執行階段模型已成功同步，並可重新處理資料夾中的資產。
 
    ![同步化工作流程模型](/help/assets/assets-dm/reprocess-assets1.png)
 
 1. 關閉顯示Scene7的瀏覽器標籤： 重新處理資產工作流程模型。
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
-1. In the upper-left corner of the page, tap **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then tap the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
+1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
 1. In the folder tree on the left side of the CRXDE Lite page, navigate to the following location:
 
    `/conf/global/settings/workflow/models/scene7_reprocess_assets/jcr:content/flow/reprocess/metaData`
@@ -135,10 +135,10 @@ ht-degree: 2%
     * **[!UICONTROL Name]**: `reprocess-batch-size`
     * **[!UICONTROL Type]**: `Long`
     * **[!UICONTROL Value]**: enter a default value (50-1000) for the batch size
-1. In the lower-right corner, tap **[!UICONTROL Add]**. The new property appears as the following:
+1. In the lower-right corner, click **[!UICONTROL Add]**. The new property appears as the following:
 
     ![Saving the new property](/help/assets/assets/workflow-models10.png)
 
-1. On the menu bar of the CRXDE Lite page, tap **[!UICONTROL Save All]**.
-1. In the upper-left corner of the page, tap **[!UICONTROL CRXDE Lite]** to return to the main AEM console
+1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All]**.
+1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main AEM console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
