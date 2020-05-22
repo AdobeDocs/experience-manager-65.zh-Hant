@@ -11,12 +11,15 @@ content-type: reference
 discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: cef5251d6bd72a6fd352f18e31d3f9d787e4320e
+workflow-type: tm+mt
+source-wordcount: '1906'
+ht-degree: 0%
 
 ---
 
 
-# AEM標籤架構{#aem-tagging-framework}
+# AEM標籤架構 {#aem-tagging-framework}
 
 若要標籤內容並運用AEM標籤基礎架構：
 
@@ -25,7 +28,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 * 標籤內容節點的NodeType必須包含混 [`cq:Taggable`](#taggable-content-cq-taggable-mixin) 合
 * TagID [會新增至內容節點的屬](#tagid) 性， [`cq:tags`](#tagged-content-cq-tags-property) 並解析至類型的節點 ` [cq:Tag](#tags-cq-tag-node-type)`
 
-## 標籤：cq：標籤節點類型 {#tags-cq-tag-node-type}
+## 標籤： cq：標籤節點類型  {#tags-cq-tag-node-type}
 
 標籤的聲明在儲存庫中捕獲，其類型為 `cq:Tag.`
 
@@ -78,7 +81,7 @@ TagID包含命名空 [間](#tag-namespace) ，後面接著本機TagID。 [容器
 
 容器標籤是包含任意數 `cq:Tag` 目和類型子節點的類型節點，因此可以使用自訂中繼資料來增強標籤模型。
 
-此外，分類法中的容器標籤（或超標籤）是所有子標籤的子總和：例如，使用水果／蘋果標籤的內容也被視為使用水果標籤，即搜索僅使用水果標籤的內容也會查找使用水果／蘋果標籤的內容。
+此外，分類法中的容器標籤（或超標籤）是所有子標籤的子總和： 例如，使用水果／蘋果標籤的內容也被視為使用水果標籤，即搜索僅使用水果標籤的內容也會查找使用水果／蘋果標籤的內容。
 
 ### 解析TagID {#resolving-tagids}
 
@@ -90,7 +93,8 @@ TagID包含命名空 [間](#tag-namespace) ，後面接著本機TagID。 [容器
 
 下表顯示一些TagID範例、其元素，以及TagID解析為儲存庫中絕對路徑的方式：
 
-下表顯示一些TagID範例、其元素，以及TagID解析為儲存庫中絕對路徑的方式：下表顯示一些TagID範例、其元素，以及TagID解析為儲存庫中絕對路徑的方式：
+下表顯示一些TagID範例、其元素，以及TagID解析為儲存庫中絕對路徑的方式：
+下表顯示一些TagID範例、其元素，以及TagID解析為儲存庫中絕對路徑的方式：
 
 <table>
  <tbody>
@@ -108,7 +112,7 @@ TagID包含命名空 [間](#tag-namespace) ，後面接著本機TagID。 [容器
    <td>水果／蘋果／佈雷本</td>
    <td>水果，蘋果</td>
    <td>braeburn</td>
-   <td>/content/cq:tags/dam/fruit/apple/braeburn</td>
+   <td>/content/cq:tags/dam/frout/apple/braeburn</td>
   </tr>
   <tr>
    <td>顏色／紅色</td>
@@ -162,12 +166,12 @@ TagID包含命名空 [間](#tag-namespace) ，後面接著本機TagID。 [容器
 
 典型做法包括：
 
-* 允許對所 `tag-administrators` 有名稱空間的組／角色寫訪問權限(在下添加／修 `/content/cq:tags`改)。 此群組隨附AEM現成可用功能。
+* 允許對所 `tag-administrators` 有名稱空間的組／角色寫訪問(在下添加／修 `/content/cq:tags`改)。 此群組隨附AEM現成可用功能。
 
 * 允許用戶／作者讀取對所有應該對其可讀取的名稱空間（大部分）的訪問權。
 * 允許用戶／作者對用戶／作者可自由定義標籤的名稱空間進行寫入訪問(在下面添加節 `/content/cq:tags/some_namespace`點)
 
-## 可標籤內容：cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
+## 可標籤內容： cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
 為了讓應用程式開發人員將標籤附加至內容類型，節點的註冊([CND](https://jackrabbit.apache.org/node-type-notation.html))必須包含 `cq:Taggable` mixin或mixin `cq:OwnerTaggable` 。
 
@@ -175,7 +179,7 @@ TagID包含命名空 [間](#tag-namespace) ，後面接著本機TagID。 [容器
 
 >[!NOTE]
 >
->建議僅在匯總內容項目的頂層節點（或其jcr:content節點）上啟用標籤。 範例包括：
+>建議僅在匯總內容項目（或其jcr:content節點）的頂層節點上啟用標籤。 範例包括：
 >
 >* 頁面( `cq:Page`)，其中節 `jcr:content`點是包含 `cq:PageContent` 混合的類型 `cq:Taggable` 。
    >
@@ -206,9 +210,9 @@ AEM中包含的「節點類型」基本定義如下：
     mixin
 ```
 
-## 標籤內容：cq:tags屬性 {#tagged-content-cq-tags-property}
+## 標籤內容： cq:tags屬性 {#tagged-content-cq-tags-property}
 
-屬 `cq:tags` 性是一個String陣列，當作者或網站訪客將一或多個TagID套用至內容時，用來儲存這些TagID。 僅當將屬性添加到使用mixin定義的節點時，該屬性才有 ` [cq:Taggable](#taggable-content-cq-taggable-mixin)` 意義。
+屬 `cq:tags` 性是一個String陣列，當作者或網站訪客將一或多個TagID套用至內容時，用來儲存這些TagID。 僅當將屬性添加到使用mixin定義的節點時，該屬性才有 `[cq:Taggable](#taggable-content-cq-taggable-mixin)` 意義。
 
 >[!NOTE]
 >
@@ -223,8 +227,9 @@ AEM中包含的「節點類型」基本定義如下：
    * 標籤A不會刪除，且會取得 `cq:movedTo` 屬性。
    * 標籤B已建立（在移動時）並取得屬 `cq:backlinks` 性。
 
-* `cq:movedTo` 指向標籤B。此屬性表示標籤A已移動或合併到標籤B。移動標籤B將相應地更新此屬性。 標籤A因此會隱藏，並且僅保存在儲存庫中，以解析指向標籤A的內容節點中的標籤ID。標籤廢棄項目收集器會移除標籤A等標籤，不再有內容節點指向標籤A。
-屬性的特殊 `cq:movedTo` 值為 `nirvana`:它將在標籤被刪除時應用，但無法從儲存庫中刪除，因為必須保留具有 `cq:movedTo` 子標籤的子標籤。
+* `cq:movedTo` 指向標籤B。
+此屬性表示標籤A已移動或合併到標籤B。 移動標籤B將相應地更新此屬性。 標籤A因此會隱藏，並且僅保存在儲存庫中，以解析指向標籤A的內容節點中的標籤ID。 標籤廢棄項目收集器會移除標籤A等標籤，不再有內容節點指向標籤A。
+屬性的特殊 `cq:movedTo` 值為 `nirvana`: 它將在標籤被刪除時應用，但無法從儲存庫中刪除，因為必須保留具有 `cq:movedTo` 子標籤的子標籤。
 
    >[!NOTE]
    >
@@ -233,12 +238,13 @@ AEM中包含的「節點類型」基本定義如下：
    > 1. 標籤包含已移動的子項。
 
 
-* `cq:backlinks` 將參照保持在另一個方向，即保留已移動到標籤B或與標籤B合併的所有標籤的清單。當標籤B移動／合併／刪 `cq:movedTo`除時，或標籤B啟動時，這通常需要保持屬性的最新狀態，在此情況下，其所有的回溯連結標籤也必須啟用。
+* `cq:backlinks` 將參照保持在另一個方向，即保留已移動到標籤B或與標籤B合併的所有標籤的清單。 當標籤B移動／合併／刪 `cq:movedTo`除時，或標籤B啟動時，這通常需要保持屬性的最新狀態，在此情況下，其所有的回溯連結標籤也必須啟用。
 
    >[!NOTE]
    >
    >只有 `cq:backlinks` 符合下列任一條件時，才會將屬性新增至已移動或合併的標籤：
-   > 1. 標籤用於內容（亦即它有參考）或
+   >
+   > 1. 標籤用於內容（亦即有參考）OR >
    > 1. 標籤包含已移動的子項。
 
 
@@ -250,6 +256,91 @@ AEM中包含的「節點類型」基本定義如下：
 
    1. 如果後面的標籤沒有屬 `cq:movedTo` 性，則讀取標籤。
 
-* 要在標籤已移動或合併時發佈更改，必須復 `cq:Tag` 制節點及其所有回鏈：當標籤在標籤管理主控台中啟動時，就會自動執行此動作。
+* 要在標籤已移動或合併時發佈更改，必須復 `cq:Tag` 制節點及其所有回鏈： 當標籤在標籤管理主控台中啟動時，就會自動執行此動作。
 
 * 稍後頁面屬性的更新 `cq:tags` 會自動清除「舊」參照。 觸發此項是因為透過API解析移動的標籤會傳回目標標籤，因此提供目標標籤ID。
+
+## 標籤移轉 {#tags-migration}
+
+Experience Manager 6.4以上的標籤會儲存在下方， `/content/cq:tags`而之前會儲存在下方 `/etc/tags`。 不過，在Adobe Experience Manager從舊版升級的情況下，標籤仍會出現在舊位置下 `/etc/tags`。 在升級的系統中，標籤需要在下進行遷移 `/content/cq:tags`。
+
+> [!NOTE]
+> 在標籤頁面的「頁面屬性」中，建議使用標籤ID(`geometrixx-outdoors:activity/biking`)，而非硬式編碼標籤基本路徑(例如 `/etc/tags/geometrixx-outdoors/activity/biking`)。
+> 若要列出標籤， `com.day.cq.tagging.servlets.TagListServlet` 可使用。
+
+> [!NOTE]
+> 建議使用標籤管理器API作為資源。
+
+### 如果升級的AEM例項支援TagManager API {#upgraded-instance-support-tagmanager-api}
+
+1. 在元件開始時，TagManager API會偵測它是否為升級的AEM例項。 在升級的系統中，標籤儲存在下 `/etc/tags`。
+
+1. 然後，TagManager API會在向後相容性模式下執行，這表示API `/etc/tags` 會用作基本路徑。 否則，會使用新位置 `/content/cq:tags`。
+
+1. 更新標籤位置。
+
+1. 將標籤移轉至新位置後，請執行下列指令碼：
+
+```java
+import org.apache.sling.api.resource.*
+import javax.jcr.*
+
+ResourceResolverFactory resourceResolverFactory = osgi.getService(ResourceResolverFactory.class);
+ResourceResolver resolver = resourceResolverFactory.getAdministrativeResourceResolver(null);
+Session session = resolver.adaptTo(Session.class);
+
+def queryManager = session.workspace.queryManager;
+def statement = "/jcr:root/content/cq:tags//element(*, cq:Tag)[jcr:contains(@cq:movedTo,\'/etc/tags\') or jcr:contains(@cq:backlinks,\'/etc/tags\')]";
+def query = queryManager.createQuery(statement, "xpath");
+
+println "query = ${query.statement}\n";
+
+def tags = query.execute().getNodes();
+
+
+tags.each { node ->
+  def tagPath = node.path;
+  println "tag = ${tagPath}";
+
+  if(node.hasProperty("cq:movedTo") && node.getProperty("cq:movedTo").getValue().toString().startsWith("/etc/tags"))
+    {
+     def movedTo = node.getProperty("cq:movedTo").getValue().toString();
+
+     println "cq:movedTo = ${movedTo} \n";
+
+     movedTo = movedTo.replace("/etc/tags","/content/cq:tags");
+     node.setProperty("cq:movedTo",movedTo);
+     } else if(node.hasProperty("cq:backlinks")){
+
+     String[] backLinks = node.getProperty("cq:backlinks").getValues();
+     int count = 0;
+
+     backLinks.each { value ->
+             if(value.startsWith("/etc/tags")){
+                     println "cq:backlinks = ${value}\n";
+                     backLinks[count] = value.replace("/etc/tags","/content/cq:tags");
+    }
+             count++;
+     }
+
+    node.setProperty("cq:backlinks",backLinks);
+  }
+}
+session.save();
+
+println "---------------------------------Success-------------------------------------"
+```
+
+該指令碼將讀取屬性 `/etc/tags` 值中的所有標 `cq:movedTo/cq:backLinks` 記。 然後，它會重複擷取的結果集，並將 `cq:movedTo` 和屬性值解析為路 `cq:backlinks` 徑(在值中偵測到 `/content/cq:tags``/etc/tags` 的情況下)。
+
+### 如果升級的AEM例項在Classic UI上執行 {#upgraded-instance-runs-classic-ui}
+
+> [!NOTE]
+> 傳統UI不符合零停機時間要求，也不支援新的標籤庫路徑。 如果您想使用傳統UI，而不 `/etc/tags` 需要先建立後重新啟動元 `cq-tagging` 件。
+
+
+若是TagManager API支援並在Classic UI中執行的升級AEM例項：
+
+1. 一旦使用tagId或新標籤位 `/etc/tags` 置取代舊標籤基本路徑的參照 `/content/cq:tags`，您就可將標籤移轉至CRX中的新 `/content/cq:tags` 位置，然後重新啟動元件。
+
+1. 將標籤移轉至新位置後，請執行上述指令碼。
