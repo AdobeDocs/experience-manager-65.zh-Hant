@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cef5251d6bd72a6fd352f18e31d3f9d787e4320e
+source-git-commit: 4c4a0b1a76f44dcf1084a4651194e60735bc5aea
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -259,6 +259,10 @@ AEM中包含的「節點類型」基本定義如下：
 * 要在標籤已移動或合併時發佈更改，必須復 `cq:Tag` 制節點及其所有回鏈： 當標籤在標籤管理主控台中啟動時，就會自動執行此動作。
 
 * 稍後頁面屬性的更新 `cq:tags` 會自動清除「舊」參照。 觸發此項是因為透過API解析移動的標籤會傳回目標標籤，因此提供目標標籤ID。
+
+> [!NOTE]
+>
+> 標籤移動與標籤移轉不同。
 
 ## 標籤移轉 {#tags-migration}
 
