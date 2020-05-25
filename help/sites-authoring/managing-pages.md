@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 13e34a6df8a513a1654bc5277539b924c809ab8a
+workflow-type: tm+mt
+source-wordcount: '2349'
+ht-degree: 6%
 
 ---
 
@@ -128,12 +131,12 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 #### 標題 {#title}
 
-如果您在建立新頁面時只提供頁面 **Title** ,AEM會從此字串衍生頁面 **Name** ，並 [](/help/sites-developing/naming-conventions.md) 根據AEM和JCR所強加的慣例驗證名稱。 將接 **受包含無效字元的Title** （標題）欄位，但派生的名稱會取代無效字元。 例如：
+如果您在建立新頁面時只提供頁面 **Title** ,AEM會從此字串衍生頁面 **Name**[ ，並根據AEM和JCR所強加的慣例來驗證名稱。](/help/sites-developing/naming-conventions.md)將接 **受包含無效字元的Title** （標題）欄位，但派生的名稱會取代無效字元。 例如：
 
 | 標題 | 衍生名稱 |
 |---|---|
 | 捨恩 | schoen.html |
-| SC%&amp;*ç+ | sc—c-.html |
+| SC%&amp;*ç+ | sc---c-.html |
 
 #### 名稱 {#name}
 
@@ -169,7 +172,7 @@ AEM隨附數個現成可用的範本。 可用的範本取決於個別網站。 
 * 文字
 * 影像
 * Slideshow
-* 視訊
+* 影片
 * 還有更多
 
 建立並開啟頁面後，您就可以使 [用元件瀏覽器提供的元件](/help/sites-authoring/editing-content.md#insertinganewparagraph)，來新增 [內容](/help/sites-authoring/author-environment-tools.md#componentbrowser)。
@@ -269,11 +272,15 @@ AEM隨附數個現成可用的範本。 可用的範本取決於個別網站。 
    如果您處於選擇模式，則複製頁面時，系統會立即自動退出。
 
 1. 導覽至頁面新復本的位置。
-1. 使用「 **貼上** 」頁面圖示：
+1. 「貼 **上** 」圖示可直接在右側使用下拉箭頭：
 
-   ![screen_shot_2018-03-22at105510](assets/screen_shot_2018-03-22at105510.png)
+   ![貼上](assets/paste-without-children.png)
 
-   原始頁面和任何子頁面的副本將會在此位置建立。
+   您可以:
+   * 選擇「 **貼上** 」頁面圖示本身： 將在此位置建立原始頁面和任何子頁面的副本。
+   * 選擇下拉箭頭以顯示「不含子 **代的貼上** 」選項。 原始頁面的復本將在此位置建立； 子頁面將不會複製。
+   >[!NOTE]
+   **AEM 6.5 Service Pack 5中提供** 「貼上不含子項」選項 [](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)。
 
    >[!NOTE]
    如果將頁面複製到與原始頁面同名的頁面已存在的位置，系統會通過附加數字自動生成名稱的變化。 例如，如果已 `winter` 經存在， `winter` 將變為 `winter1`。
@@ -344,7 +351,7 @@ AEM提供您更新任何參照重新命名／移動之頁面的內部連結的�
 1. 選擇「 **移動** 」將完成該過程，並根據需要移動／更名頁面。
 
 >[!NOTE]
-如果頁面已發佈，移動頁面會自動解除發佈。 依預設，移動完成時會重新發佈，但是可以取消勾選「調整／重新發佈」步驟中的「重新發佈 **」欄位，** 以變更此設定 **** 。
+如果頁面已發佈，移動頁面會自動解除發佈。By default, it will be republished when the move is complete, but this can changed by unchecking the **Republish** field in the **Adjust/Republish** step.
 
 >[!NOTE]
 如果頁面未以任何方式參考，則會跳 **過「調整／重新發佈** 」步驟。
@@ -390,7 +397,7 @@ AEM提供您更新任何參照重新命名／移動之頁面的內部連結的�
 
 
 
-1. 開啟 **Sites** 主控台並導覽至所需位置。
+1. Open the **Sites** console and navigate to the required location.
 1. 若要開啟選項清單，請從工具 **列選取** 「建立」
 1. 選擇「 **資料夾** 」(Folder)以開啟對話框。 您可以在此處輸入 **名稱** 和 **標題**:
 
