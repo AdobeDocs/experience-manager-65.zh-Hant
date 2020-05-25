@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13e34a6df8a513a1654bc5277539b924c809ab8a
+source-git-commit: 49874dc723c3659550d891e786ddc178b30834ec
 workflow-type: tm+mt
-source-wordcount: '2349'
+source-wordcount: '2350'
 ht-degree: 6%
 
 ---
@@ -280,7 +280,7 @@ AEM隨附數個現成可用的範本。 可用的範本取決於個別網站。 
    * 選擇「 **貼上** 」頁面圖示本身： 將在此位置建立原始頁面和任何子頁面的副本。
    * 選擇下拉箭頭以顯示「不含子 **代的貼上** 」選項。 原始頁面的復本將在此位置建立； 子頁面將不會複製。
    >[!NOTE]
-   **AEM 6.5 Service Pack 5中提供** 「貼上不含子項」選項 [](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)。
+   從 **AEM 6.5 Service Pack 5開始，** 「貼上而不含子項」選項就可供使用 [](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
    >[!NOTE]
    如果將頁面複製到與原始頁面同名的頁面已存在的位置，系統會通過附加數字自動生成名稱的變化。 例如，如果已 `winter` 經存在， `winter` 將變為 `winter1`。
