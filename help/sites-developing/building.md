@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 1493b301ecf4c25f785495e11ead352de600ddb7
+workflow-type: tm+mt
+source-wordcount: '893'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 有關標籤的相關資訊，請參見：
 
-* [管理標籤](/help/sites-administering/tags.md) ，以取得建立和管理標籤以及已套用內容標籤的相關資訊。
+* [管理標籤](/help/sites-administering/tags.md) ，以取得有關建立和管理標籤以及已套用內容標籤的資訊。
 * [使用標籤](/help/sites-authoring/tags.md) ，以取得標籤內容的相關資訊。
 
 ## 標籤API概述 {#overview-of-the-tagging-api}
@@ -65,7 +68,7 @@ Tag tag = tagManager.resolve("my/tag"); // for existing tags
 Tag tag = tagManager.createTag("my/tag"); // for new tags
 ```
 
-若是JCR架構的實作(對應 `Tags` 至JCR `Nodes`)，若您擁有資源(例如 `adaptTo``/etc/tags/default/my/tag`)，則可直接使用Sling&#39;s機制：
+若是JCR架構的實作(對應 `Tags` 至JCR `Nodes`)，若您擁有資源(例如 `adaptTo``/content/cq:tags/default/my/tag`)，則可直接使用Sling&#39;s機制：
 
 ```java
 Tag tag = resource.adaptTo(Tag.class);
@@ -131,7 +134,7 @@ replicator.replicate(session, replicationActionType, tagPath);
 
 ## 標籤廢棄項目收集器 {#the-tag-garbage-collector}
 
-標籤廢棄項目收集器是一種後台服務，可清除隱藏和未使用的標籤。 隱藏和未使用的標籤是下 `/etc/tags` 方具有屬 `cq:movedTo` 性且不用於內容節點的標籤——它們的計數為零。 通過使用此延遲刪除過程，內容節點(即屬性 `cq:tags` )不必作為移動或合併操作的一部分進行更新。 屬性中的參 `cq:tags` 照在更新屬性時會自動 `cq:tags` 更新，例如透過頁面屬性對話方塊。
+標籤廢棄項目收集器是一種後台服務，可清除隱藏和未使用的標籤。 隱藏和未使用的標籤是下 `/content/cq:tags` 方具有屬 `cq:movedTo` 性且不用於內容節點的標籤——它們的計數為零。 通過使用此延遲刪除過程，內容節點(即屬性 `cq:tags` )不必作為移動或合併操作的一部分進行更新。 屬性中的參 `cq:tags` 照在更新屬性時會自動 `cq:tags` 更新，例如透過頁面屬性對話方塊。
 
 標籤廢棄項目收集器依預設每天執行一次。 This can be configured at:
 
@@ -149,7 +152,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 ## 不同語言的標籤 {#tags-in-different-languages}
 
-如管理標籤的說明檔案中所述，在「管理不同語 [言中的標籤](/help/sites-administering/tags.md#managing-tags-in-different-languages)」一節中 `title`，可以定義不同語言的標籤。 然後，語言敏感屬性會新增至標籤節點。 此屬性的格式 `jcr:title.<locale>`為，例如 `jcr:title.fr` 用於法語翻譯。 `<locale>` 必須是小寫的ISO地區設定字串，並使用&quot;_&quot;而非&quot;-&quot;，例如： `de_ch`。
+如管理標籤的說明檔案中所述，在「管理不同語 [言中的標籤](/help/sites-administering/tags.md#managing-tags-in-different-languages)」一節中 `title`，可以定義不同語言的標籤。 然後，語言敏感屬性會新增至標籤節點。 此屬性的格式 `jcr:title.<locale>`為，例如 `jcr:title.fr` 用於法語翻譯。 `<locale>` 必須是小寫的ISO地區設定字串，並使用&quot;_&quot;而非&quot;-&quot;，例如： `de_ch`.
 
 將 **Animals** 標籤新增至 **Products** 頁面時，值會新增至節點/content/geometrixx/en/products/jcr:content的 `stockphotography:animals``cq:tags` 屬性。 轉換是從標籤節點引用的。
 
@@ -187,7 +190,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 下列程式說明如何將新語言（芬蘭文）新增至「標籤編 **輯」對話** 框：
 
-1. 在 **CRXDE**&#x200B;中，編輯節點的多 `languages` 值屬性 `/etc/tags`。
+1. 在 **CRXDE**&#x200B;中，編輯節點的多 `languages` 值屬性 `/content/cq:tags`。
 
 1. 添加 `fi_fi` -代表芬蘭語地區設定——並保存更改。
 
