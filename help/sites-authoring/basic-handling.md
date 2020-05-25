@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 69e9b7499c1babcf7a6da62b8728bba7f127b4f9
+source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+workflow-type: tm+mt
+source-wordcount: '3010'
+ht-degree: 5%
 
 ---
 
@@ -61,7 +64,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 ## 全域導覽 {#global-navigation}
 
-您可以使用全域導覽面板，在控制台之間導覽。 當您按一下或點選畫面左上角的Adobe Experience manager連結時，會以全螢幕下拉式清單觸發。
+您可以使用全域導覽面板，在控制台之間導覽。 當您按一下或點選畫面左上角的Adobe Experience Manager連結時，會以全螢幕下拉式清單觸發。
 
 您可以按一下或點選「關閉」以關閉全域導覽面板， **以返回** 先前的位置。
 
@@ -69,7 +72,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 >[!NOTE]
 >
->當您第一次登入時，會顯示導 **覽面板** 。
+>當您第一次登入時，會顯示導 **覽面** 板。
 
 全域導覽有兩個面板，由畫面左邊緣的圖示表示：
 
@@ -80,9 +83,15 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 ### 導覽面板 {#navigation-panel}
 
-導覽面板：
+「導覽」面板可讓您存取AEM主控台：
 
 ![bh-01](assets/bh-01.png)
+
+瀏覽器標籤的標題將會更新，以反映您在控制台和內容中瀏覽時的位置。
+
+>[!NOTE]
+>
+>標籤標題會反映 [AEM 6.5 Service Pack 5以後的位置](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
 在導航中，可用控制台包括：
 
@@ -133,7 +142,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 ### 工具面板 {#tools-panel}
 
-在「工具」面板中，側面板中的每個選項都包含一系列子菜單。 此處 [提供的「工具](/help/sites-administering/tools-consoles.md) 」主控台可讓您存取許多專業工具和主控台，以協助您管理網站、數位資產和內容存放庫的其他方面。
+在「工具」面板中，側面板中的每個選項都包含一系列子菜單。 The [Tools consoles](/help/sites-administering/tools-consoles.md) available here provide access to a number of specialized tools and consoles that help you administer your websites, digital assets and other aspects of your content repository.
 
 ![bh-04](assets/bh-04.png)
 
@@ -213,9 +222,21 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
    ![bh-07](assets/bh-07.png)
 
-   可以在欄檢視、卡片檢視和清單檢視之間切換；在清單檢視中，也會顯示檢視設定。
+   可以在欄檢視、卡片檢視和清單檢視之間切換； 在清單檢視中，也會顯示檢視設定。
 
    ![bh-09](assets/bh-09.png)
+
+* 鍵盤導覽
+
+   您只能使用鍵盤來導覽網站。 這會使用 **TAB鍵(或** OPT+TAB **)的標準瀏覽器功能，在可聚焦頁面的元素之間**&#x200B;移動 **。
+
+   在Sites **** Console中，「跳至主要內容」( **Skip to main content)中已新增選項**。 當您在頁首選 *項中選取標籤* ，這個選項就會顯示出來，並可讓您略過（產品）工具列中的標準元素，直接將您帶到主要內容，以加速導覽。
+
+   ![bh-30](assets/bh-30.png)
+
+   >[!NOTE]
+   >
+   >從 **** AEM 6.5 Service Pack 5 [開始，您就可使用「跳至主要內容」](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
 ## 存取說明 {#accessing-help}
 
@@ -270,7 +291,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 選擇資 [源的方式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) ，取決於視圖。
 
-由於某些視窗的空間限制，工具列可能會很快變得比可用的空間長。 發生此情況時，會出現其他選項。 按一下或點選省略號(三個點或…… ****)會開啟一個下拉式選取器，其中包含所有剩餘的動作。 例如，在Sites主控台中選取頁面 **後** :
+由於某些視窗的空間限制，工具列可能會很快變得比可用的空間長。發生此情況時，會出現其他選項。按一下或點選省略號(三個點或…… ****)會開啟一個下拉式選取器，其中包含所有剩餘的動作。例如，在Sites主控台中選取頁面 **後** :
 
 ![bh-12](assets/bh-12.png)
 
@@ -316,39 +337,39 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
    <td>欄檢視<br /> </td>
    <td>
     <ul>
-     <li><br /> 案頭：按一下縮圖</li>
-     <li><br /> 行動裝置：點選縮圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> 案頭：按一下縮圖</li>
-     <li><br /> 行動裝置：點選縮圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
   </tr>
   <tr>
    <td>卡片檢視<br /> </td>
    <td>
     <ul>
-     <li><br /> 案頭：滑鼠移動，然後使用勾號快速動作</li>
-     <li><br /> 行動裝置：點選並按住卡片</li>
+     <li>案頭：<br /> 滑鼠移動，然後使用勾號快速動作</li>
+     <li>行動裝置：<br /> 點選並按住卡片</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> 案頭：按一下資訊卡</li>
-     <li><br /> 行動裝置：點選資訊卡</li>
+     <li>案頭：<br /> 按一下資訊卡</li>
+     <li>行動裝置：<br /> 點選資訊卡</li>
     </ul> </td>
   </tr>
   <tr>
    <td>清單檢視</td>
    <td>
     <ul>
-     <li><br /> 案頭：按一下縮圖</li>
-     <li><br /> 行動裝置：點選縮圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> 案頭：按一下縮圖</li>
-     <li><br /> 行動裝置：點選縮圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -447,7 +468,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 ![bh-19](assets/bh-19.png)
 
 * 清單視圖列出了當前級別上每個資源的資訊。
-* 您可以點選／按一下資源名稱，然後使用標題中的階層連結進行備份，以在樹狀結構 [中向下導覽](/help/sites-authoring/basic-handling.md#the-header)。
+* 您可以點選／按一下資源名稱，然後使用標題中的階層連結進行 [備份，以在樹狀結構中瀏覽](/help/sites-authoring/basic-handling.md#the-header)。
 
 * 若要輕鬆選取清單中的所有項目，請使用清單左上角的核取方塊。
 
@@ -544,7 +565,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
       * 和全部顯示
 
 
-* [新增／檢視有關選](#timelineaddingandviewingcomments) 定項目的註解。 「注 **釋** 」方塊會顯示在事件清單的底部。 鍵入注釋後跟Return將註冊注釋。 當選取「注 **釋** 」或「 **全部顯示** 」時顯示。
+* [新增/檢視有關所選項目的註解。](#timelineaddingandviewingcomments)「注 **釋** 」方塊會顯示在事件清單的底部。鍵入注釋後跟Return將註冊注釋。當選取「注 **釋** 」或「 **全部顯示** 」時顯示。
 
 * 特定控制台具有其他功能。 例如，在Sites主控台中，您可以：
 
