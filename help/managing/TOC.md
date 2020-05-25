@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Managing User Guide
+user-guide-title: AEM 6.5管理使用指南
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: cb7df7301364eb1ce3a1ca376256d2cd5afcb2c8
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 17%
 
 ---
 
@@ -23,6 +26,6 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [SEO和URL管理最佳實務](seo-and-url-management.md)
 + 協助工具 {#accessibility}
    + [AEM與網頁協助工具准則](web-accessibility.md)
-   + [WCAG 2.0快速指南](qg-wcag.md)
+   + [WCAG 2.1快速指南](qg-wcag.md)
 + 資料保護 {#data-protection}
-   + [AEM資料保護與資料隱私權法規的準備](data-protection-and-privacy.md)
+   + [AEM 對資料保護與資料隱私權法規的整備](data-protection-and-privacy.md)
