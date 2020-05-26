@@ -10,14 +10,17 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: 2d04b33258a3727a088461055649c28d57a271c5
+workflow-type: tm+mt
+source-wordcount: '1055'
+ht-degree: 12%
 
 ---
 
 
 # 您的收件匣{#your-inbox}
 
-您可以從AEM的不同區域收到通知，包括工作流程和專案；例如，關於：
+您可以從AEM的不同區域收到通知，包括工作流程和專案； 例如，關於：
 
 * 任務：
 
@@ -60,7 +63,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 >
 >某些動作也會顯示在適 [當資源的卡片檢視中](/help/sites-authoring/basic-handling.md#card-view)。
 
-## 立即可用的管理任務 {#out-of-the-box-administrative-tasks}
+## 立即可用的管理任務  {#out-of-the-box-administrative-tasks}
 
 現成可用的AEM會預先載入4個指派給管理員使用者群組的工作。
 
@@ -78,7 +81,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 1. 選擇「 **全部查看**」。「 **AEM收件匣** 」將會開啟。收件匣會顯示工作流程、專案和工作中的項目。
 1. 預設視圖是「列 [表視圖](#inbox-list-view)」，但您也可以切換到「日 [歷視圖」](#inbox-calendar-view)。這是使用檢視選取器 (工具列，右上方) 完成。
 
-   對於這兩種視圖，您也可以定義「視 [圖設定」](#inbox-view-settings);可用的選項取決於當前視圖。
+   對於這兩種視圖，您也可以定義「視 [圖設定」](#inbox-view-settings); 可用的選項取決於當前視圖。
 
    ![wf-79](assets/inbox-list-view.png)
 
@@ -100,7 +103,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 您可以：
 
-* 選擇特定視圖；時 **間軸**、 **欄**、清 **單**
+* 選擇特定視圖； **時間軸**、 **欄**、清 **單**
 
 * specify the tasks to display according to **Schedule**; **All**, **Planned**, **In Progress**, **Due Soon**, **Past Due**
 
@@ -154,15 +157,20 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ## 對項目採取操作 {#taking-action-on-an-item}
 
+>[!NOTE]
+>
+>雖然可以選取多個項目，但一次只能對一個項目採取動作。
+
+
 1. 若要對項目採取動作，請選取適當項目的縮圖。 適用於該項目的動作圖示會顯示在工具列中：
 
    ![wf-84](assets/wf-84.png)
 
    這些操作適合項目，包括：
 
-   * **完整動作** ;例如，任務或工作流項。
+   * **完整動作** ; 例如，任務或工作流項。
    * **重新指派**/委&#x200B;**派項目** 。
-   * **開啟** ;根據項目類型，此操作可以：
+   * **開啟** ; 根據項目類型，此操作可以：
 
       * 顯示項目屬性
       * 開啟適當的控制面板或精靈，以進一步執行
@@ -177,7 +185,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
    >* 工作流程項目- [參與工作流程](/help/sites-authoring/workflows-participating.md)
 
 
-1. 根據所選項目，將啟動一個操作；例如：
+1. 根據所選項目，將啟動一個操作； 例如：
 
    * 將開啟與操作相適應的對話框。
    * 將啟動操作嚮導。
@@ -188,9 +196,9 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
    視對話方塊、精靈和檔案頁面是否已開啟而定，您可以：
 
-   * 確認適當的行動；例如重新指派。
+   * 確認適當的行動； 例如重新指派。
    * 取消動作。
-   * 後箭；例如，如果操作嚮導或文檔頁面已開啟，則可以返回收件箱。
+   * 後箭； 例如，如果操作嚮導或文檔頁面已開啟，則可以返回收件箱。
 
 
 ## 建立任務 {#creating-a-task}
@@ -205,7 +213,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
       * **標題**
       * **專案**
       * **被指定者**
-      * **內容**;類似於裝載，這是從任務到儲存庫中某個位置的引用
+      * **內容**; 類似於裝載，這是從任務到儲存庫中某個位置的引用
       * **說明**
       * **任務優先順序**
       * **開始日期**
@@ -214,7 +222,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
    * **進階**
 
-      * **名稱**:這將用於形成URL;如果空白，則會以標題為 **基礎**。
+      * **名稱**: 這將用於形成URL; 如果空白，則會以標題為 **基礎**。
    ![wf-87](assets/wf-87.png)
 
 1. 選擇 **提交**。
@@ -261,7 +269,7 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
    ![wf-88](assets/wf-88.png)
 
-1. 您可以根據一系列標準來篩選列出的項目，其中許多標準可以加以改進；例如：
+1. 您可以根據一系列標準來篩選列出的項目，其中許多標準可以加以改進； 例如：
 
    ![wf-89](assets/wf-89.png)
 
