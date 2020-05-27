@@ -3,7 +3,7 @@ title: 支援的檔案格式 [!DNL Adobe Experience Manager Assets]。
 description: 支援的檔案格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 類型，以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 138c8d960ad8c1de20212b7aeebbda0a486832ee
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1779'
 ht-degree: 8%
@@ -103,7 +103,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## 支援的PDF點陣化器程式庫 {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer程式庫可針對大型且內容密集的Adobe Illustrator和PDF檔案產生高品質的縮圖和預覽。 Adobe建議針對下列項目使用PDF點陣化器程式庫：
+Adobe PDF Rasterizer程式庫可針對大型且內容密集的PDF檔案產生高品質的縮圖 [!DNL Adobe Illustrator] 和預覽。 Adobe建議針對下列項目使用PDF點陣化器程式庫：
 
 * 需要大量資源處理的內容密集型AI/PDF檔案。
 * AI/PDF檔案，預設不會產生縮圖。
@@ -121,7 +121,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 ## 支援的相機原始資料 {#supported-camera-raw}
 
-Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera Raw支援](camera-raw.md)。
+Adobe Camera Raw程式庫可讓「資產」擷取原始影像。 請參閱 [Camera Raw支援](camera-raw.md)。
 
 ## 支援的資產檔案格式 {#supported-document-formats}
 
@@ -234,7 +234,7 @@ Adobe Camera Raw程式庫可讓AEM Assets擷取原始影像。 請參閱 [Camera
 
 ## Supported MIME types {#supported-mime-types}
 
-依預設，AEM會使用副檔名來偵測檔案類型。 AEM可從檔案內容中偵測到它。 對於後者，請 [!UICONTROL 在AEM Web Console的Day CQ] DAM Mime Type Service  ，選取「從內容偵測MIME」選項。
+依預設，Experience Manager會使用副檔名偵測檔案類型。 Experience Manager可從檔案內容中偵測到它。 對於後者，請 [!UICONTROL 在Experience Manager Web Console的] Day CQ DAM Mime Type Service中選取「從內容偵測MIME」選項。
 
 CRXDE Lite中提供支援的MIME類型清單，網址為 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
 
