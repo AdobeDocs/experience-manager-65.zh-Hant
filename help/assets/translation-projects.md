@@ -3,9 +3,9 @@ title: 建立翻譯專案
 description: 瞭解如何在中建立翻譯項目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1897'
 ht-degree: 15%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->如果您針對複雜資產（例如PDF和InDesign檔案）啟動轉譯工作流程，則不會提交其子資產或轉譯（如果有）以供轉譯。
+>如果您針對複雜資產（例如PDF和檔案）啟動轉譯工作流程 [!DNL Adobe InDesign] ，則不會提交其子資產或轉譯（如果有）以進行轉譯。
 
 ## 建立和翻譯工作流程 {#create-and-translate-workflow}
 
@@ -99,7 +99,7 @@ ht-degree: 15%
 
 1. 導覽至「專案」主控台。 翻譯資料夾將複製到「項目」控制台。
 
-   ![chlimage_1-78](assets/chlimage_1-70.png)
+   ![chlimage_1-70](assets/chlimage_1-70.png)
 
 1. 開啟資料夾以查看翻譯項目。
 
