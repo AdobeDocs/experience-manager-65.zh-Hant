@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '5869'
+source-wordcount: '5863'
 ht-degree: 5%
 
 ---
@@ -162,7 +162,7 @@ ht-degree: 5%
 | 產生器 | 建立者：John |
 | 位置 | 位置： NA |
 | 說明 | 說明：「範例影像」 |
-| 製作工具 | 創作工具：「Adobe Photoshop CC 2015」 |
+| 製作工具 | 創作工具：「Adobe Photoshop CC 2020」 |
 | 版權擁有者 | copyrightowner:「Adobe Systems」 |
 | 參與者 | 投稿人：John |
 | 使用條款 | 使用條款：「保留CopyRights」 |
@@ -200,7 +200,7 @@ ht-degree: 5%
 
 ### 從Adobe Asset Link面板搜尋資產 {#aal}
 
-使用Adobe Asset Link，創意專業人員現在可以存取儲存在中的內容，而 [!DNL Experience Manager Assets]不需離開支援的Adobe Creative Cloud應用程式。 創意人員可使用Creative Cloud應用程式中的應用程式內面板，順暢地瀏覽、搜尋、結帳和結帳資產： Photoshop、Illustrator和InDesign。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
+使用Adobe Asset Link，創意專業人員現在可以存取儲存在中的內容，而 [!DNL Experience Manager Assets]不需離開支援的Adobe Creative Cloud應用程式。 創作人員可使用下列項目中的應用程式內面板，順暢地瀏覽、搜尋、結帳和登入資產 [!DNL Adobe Creative Cloud apps]: [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
 
 ### 在案頭應用程式中 [!DNL Experience Manager] 搜尋資產 {#desktopapp}
 
