@@ -3,7 +3,7 @@ title: 將翻譯雲端服務套用至資料夾
 description: 將翻譯雲端服務套用至資料夾
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 43%
@@ -13,7 +13,7 @@ ht-degree: 43%
 
 # 將翻譯雲端服務套用至資料夾 {#applying-translation-cloud-services-to-folders}
 
-Adobe Experience Manager(AEM)可讓您從您選擇的翻譯供應商取得雲端翻譯服務，以確保您的資產根據您的需求進行翻譯。
+Adobe Experience Manager可讓您從您選擇的翻譯供應商取得雲端翻譯服務，以確保您的資產能根據您的需求進行翻譯。
 
 您可以直接將翻譯雲端服務套用至資產資料夾，以便在翻譯工作流程中使用。
 
@@ -42,7 +42,7 @@ Adobe Experience Manager(AEM)可讓您從您選擇的翻譯供應商取得雲端
 如果要為要用於翻譯工作流的翻譯服務應用自定義連接器。若要套用自訂連接器，請先從「封裝管理員」安裝連接器。然後，從雲端服務主控台設定連接器。在您設定連接器後，「套用轉譯服務」中所述的「雲端服務」標籤中的連接器清 [單中會顯示此連接器](transition-cloud-services.md#applying-the-translation-services)。在您應用自定義連接器並運行翻譯工作流後，翻譯項目的「 **[!UICONTROL Translation Summary]** 」 (翻譯摘要) 表徵圖會在heads **[!UICONTROL Provider]** and **[!UICONTROL Method下顯示連接器詳細資訊]**。
 
 1. 從「包管理器」安裝連接器。
-1. 按一下AEM標誌，並導覽至「工 **[!UICONTROL 具>部署>雲端服務」]**。
+1. 按一下Experience Manager標誌，並導覽至「工 **[!UICONTROL 具>部署>雲端服務」]**。
 1. 在「雲端服務」頁面的「 **[!UICONTROL 協力廠商服務]** 」下，找 **[!UICONTROL 出您安裝的連接器]** 。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
