@@ -1,11 +1,11 @@
 ---
 title: 有關您數位資產的報告
-description: 瞭解AEM Assets中有關您資產的報表，以協助您瞭解數位資產的使用、活動和共用。
+description: 瞭解Adobe Experience Manager Assets中有關您資產的報表，以協助您瞭解數位資產的使用、活動和分享。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f66be5de3bbd0051cd677430d5187ace9337b98d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '976'
 ht-degree: 14%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 14%
 
 # Asset Reports {#asset-reports}
 
-資產報告是評估Adobe Experience Manager(AEM)資產部署公用程式的重要工具。 有了AEM Assets，您就可以為數位資產產生各種報表。 這些報表提供您系統使用情況、使用者與資產的互動方式，以及哪些資產被下載和共用的實用資訊。
+資產報告是評估Adobe Experience Manager Assets部署效用的關鍵工具。 使用「資產」，您可以為數位資產產生各種報表。 這些報表提供您系統使用情況、使用者與資產的互動方式，以及哪些資產被下載和共用的實用資訊。
 
-使用報表中的資訊衍生關鍵成功度量，以評估您企業內部及客戶對AEM Assets的接受度。
+使用報表中的資訊衍生關鍵成功度量，以測量企業內部及客戶對「資產」的接受程度。
 
-AEM Assets報告架構使用Sling工作以有序方式非同步處理報表請求。 它適用於大型儲存庫。 非同步報表處理可提高報表產生的效率和速度。
+Assets reporting framework使用Sling作業以有序方式非同步處理報表請求。 它適用於大型儲存庫。 非同步報表處理可提高報表產生的效率和速度。
 
 報表管理介面是直覺式的，包含存取已封存報表及檢視報表執行狀態（成功、失敗和佇列）的精細選項和控制項。
 
@@ -25,7 +25,7 @@ AEM Assets報告架構使用Sling工作以有序方式非同步處理報表請�
 
 ## 產生報表 {#generate-reports}
 
-AEM Assets會為您產生下列標準報表：
+Experience Manager Assets會為您產生下列標準報表：
 
 * 上傳
 * 下載
@@ -37,7 +37,7 @@ AEM Assets會為您產生下列標準報表：
 * 檔案
 * 連結共用
 
-AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員可依照下列步驟產生報表：
+Experience Manager管理員可輕鬆產生並自訂這些報表，以供您實施。 管理員可依照下列步驟產生報表：
 
 1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
    ![](assets/AssetsReportNavigation.png)
@@ -79,7 +79,7 @@ AEM管理員可輕鬆產生並自訂這些報表，以供您實作。 管理員�
 
    ![](assets/files_report.png)
 
-   「連 **[!UICONTROL 結共用]** 」報表會顯示資產的URL，這些資產是從AEM Assets內與外部使用者共用的。它包含共用資產之使用者的電子郵件ID、共用資產之使用者的電子郵件ID、連結的共用日期和到期日。欄無法自訂。
+   「連 **[!UICONTROL 結共用]** 」報表會顯示資產的URL，這些資產是從 Assets內與外部使用者共用的。它包含共用資產之使用者的電子郵件ID、共用資產之使用者的電子郵件ID、連結的共用日期和到期日。欄無法自訂。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
