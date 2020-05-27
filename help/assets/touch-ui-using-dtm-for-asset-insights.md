@@ -3,9 +3,9 @@ title: 透過DTM啟用資產見解
 description: 瞭解如何使用Adobe動態標籤管理(DTM)來啟用資產分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
 執行這些步驟，以透過DTM啟用資產分析。
 
-1. Click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [使用DTM Cloud服務設定AEM例項](/help/sites-administering/dtm.md)
+1. 按一下Experience Manager標誌，並前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 洞察」設定]**。
+1. [使用DTM Cloud服務設定Experience Manager例項](/help/sites-administering/dtm.md)
 
-   當您登入https://dtm.adobe.com並從「設定檔」圖示造訪「 [帳戶設定](https://dtm.adobe.com/) 」後， **** API Token就可使用。 從「資產前瞻分析」的角度來看，此步驟不是必要步驟，因為AEM Sites與「資產前瞻分析」的整合仍在進行中。
+   當您登入https://dtm.adobe.com並從「設定檔」圖示造訪「 [帳戶設定](https://dtm.adobe.com/) 」後， **** API Token就可使用。 從資產前瞻分析的角度來看，此步驟不是必需的，因為Experience Manager Sites與資產前瞻分析的整合仍在進行中。
 
 1. 登入https://dtm.adobe.com [](https://dtm.adobe.com/)，並視需要選取公司。
 1. 建立／開啟現有Web屬性
@@ -44,15 +44,15 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
+1. 按一下Experience Manager標誌，然後前往「工 **[!UICONTROL 具>資產」]**。
 1. 按一 **[!UICONTROL 下前瞻分析頁面追蹤器]**，複製追蹤器程式碼，然後貼到您在步驟6中開啟的指令碼對話方塊中。 儲存變更。
 
    >[!NOTE]
    >
    > * `AppMeasurement.js` 中。 預計可透過DTM的Adobe Analytics工具取得。
    > * ()的 `assetAnalytics.dispatcher.init`呼叫已移除。 當DTM的Adobe Analytics工具載入完成時，預期會呼叫此函式。
-   > * 視資產前瞻分析頁面追蹤器的托管位置（例如AEM、CDN等）而定，指令碼來源的來源可能需要變更。
-   > * 對於AEM代管的頁面追蹤器，來源應使用分派程式例項的主機名稱指向發佈例項。
+   > * 視資產前瞻分析頁面追蹤器的托管位置（例如Experience Manager、CDN等）而定，指令碼來源的來源可能需要變更。
+   > * 對於Experience Manager代管的頁面追蹤器，來源應使用分派程式例項的主機名稱指向發佈例項。
 
 
 1. 存取 `https://dtm.adobe.com`. 按一 **[!UICONTROL 下Web屬性中的]** 「概述」，然後按一 **[!UICONTROL 下「新增工具]** 」或開啟現有的Adobe Analytics工具。 建立工具時，可將「配置方 **[!UICONTROL 法」(Configuration Method]** )設定 **[!UICONTROL 為「自動」(Automatic)]**。
