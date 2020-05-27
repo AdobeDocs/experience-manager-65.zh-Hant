@@ -3,9 +3,9 @@ title: 影像轉碼程式庫
 description: 瞭解如何設定和使用Adobe的影像轉碼程式庫。此影像處理解決方案可執行核心影像處理功能，包括編碼、轉碼、影像重新取樣和影像大小調整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -55,10 +55,10 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 您可以為參數設定下列選 `-resize` 項：
 
-* `X`: `Works similar to AEM. For example -resize 319.`
-* `WxH`: `Aspect Ratio will not be maintained, For example -resize 319X319.`
-* `Wx`: `Fixes the width and calculates the height maintaining the aspect ratio. For example -resize 319x.`
-* `xH`: `Fixes the height and calculates the width maintaining the aspect ratio. For example -resize x319.`
+* `X`: 工作方式類似於Experience Manager。 例如-resize 319。
+* `WxH`: 例如，外觀比例不會維持 `-resize 319x319`。
+* `Wx`: 修正寬度並計算維持長寬比的高度。 For example `-resize 319x`.
+* `xH`: 修正高度並計算維持長寬比的寬度。 For example `-resize x319`.
 
 ```shell
  -AllowUpsampling (Resizes smaller images)
@@ -74,7 +74,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 要配置庫，請建立。conf檔案，以使用以下步驟指示庫。 您需要管理員或根用戶權限。
 
-1. 下載 [Imaging Rodcing Library軟體包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用軟體包管理器進行安裝。 此套件與AEM 6.5相容。
+1. 下載 [Imaging Rodcing Library軟體包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用軟體包管理器進行安裝。 此套件與Experience Manager 6.5相容。
 
 1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console，然後按一下「 **[!UICONTROL OSGi > Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
 
@@ -92,7 +92,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 1. 執行 `ldconfig` 命令以建立必要的連結和快取。
 
-1. 在用來啟動AEM的帳戶中，編輯檔 `.bash_profile` 案。 新 `LD_LIBRARY_PATH` 增：
+1. 在用來啟動Experience Manager的帳戶中，編輯檔 `.bash_profile` 案。 新 `LD_LIBRARY_PATH` 增：
 
    ```shell
    LD_LIBRARY_PATH=.
@@ -136,8 +136,9 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 1. 同步更新的 [!UICONTROL DAM更新資產工作流程模] 型。 儲存工作流程。
 
-驗證配置、上傳TIFF影像並監視error.log檔案。 您會注意到 `INFO` 訊息中提及的 `SwitchEngineHandlingProcess execute: executing command line`。 記錄檔提及產生的轉譯。 工作流程完成後，您就可以在AEM中檢視新的轉譯。
+驗證配置、上傳TIFF影像並監視error.log檔案。 您會注意到 `INFO` 訊息中提及的 `SwitchEngineHandlingProcess execute: executing command line`。 記錄檔提及產生的轉譯。 工作流程完成後，您可以在Experience Manager中檢視新轉譯。
 
 >[!MORELIKETHIS]
 >
 >* [支援的MIME類型文章](assets-formats.md#supported-image-transcoding-library)
+
