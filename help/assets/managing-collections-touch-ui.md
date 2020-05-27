@@ -4,9 +4,9 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2216'
+source-wordcount: '2215'
 ht-degree: 13%
 
 ---
@@ -183,7 +183,7 @@ ht-degree: 13%
 
 ## 搜尋系列 {#searching-collections}
 
-您可以從「系列」主控台搜尋系列。 當您在Omnisearch方塊中搜尋關鍵字時，AEM Assets會搜尋系列名稱、中繼資料和新增至系列的標籤。
+您可以從「系列」主控台搜尋系列。 當您在Omnisearch方塊中搜尋關鍵字時，資產會搜尋系列名稱、中繼資料和新增至系列的標籤。
 
 如果您從頂層搜尋系列，搜尋結果中只會傳回個別的系列。 系列中的資產或檔案夾會被排除。 在所有其他情況下（例如，在個別系列或檔案夾階層中），會傳回所有相關資產、檔案夾和系列。
 
@@ -191,7 +191,7 @@ ht-degree: 13%
 
 在「系列」控制台中，按一下系列以開啟它。
 
-在系列中，AEM Asset搜尋會限制為您所檢視之系列中的資產（及其標籤和中繼資料）。 當您在資料夾內搜尋時，會傳回目前資料夾內所有相符的資產和子資料夾。 當您在系列中搜尋時，只會傳回符合的資產、檔案夾和其他系列，這些系列是系列的直接成員。
+在系列中，Experience Manager搜尋會限制在您所檢視之系列中的資產（及其標籤和中繼資料）。 當您在資料夾內搜尋時，會傳回目前資料夾內所有相符的資產和子資料夾。 當您在系列中搜尋時，只會傳回符合的資產、檔案夾和其他系列，這些系列是系列的直接成員。
 
 ## 編輯系列設定 {#editing-collection-settings}
 
