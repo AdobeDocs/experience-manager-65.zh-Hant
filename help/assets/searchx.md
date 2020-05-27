@@ -3,9 +3,9 @@ title: 擴充Adobe Experience Manager Assets的搜尋功能
 description: 將Adobe Experience Manager Assets的搜尋功能擴及至預設值以外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2348df62f970d7e2ff41ad386f29c1550ea94e48
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '859'
 ht-degree: 18%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 18%
 
 ## 新增標籤 {#adding-tabs}
 
-您可以在「AEM資產管理員」中設定其他搜尋標籤，以新增這些標籤。 要建立其他頁籤：
+您可以在資產管理介面中設定其他搜尋標籤，以新增這些標籤。 要建立其他頁籤：
 
 1. 如果資料夾結 `/apps/wcm/core/content/damadmin/tabs,`構不存在，則建立該資料夾結構，並從中復 `tabs` 制該節 `/libs/wcm/core/content/damadmin` 點並貼上它。
 1. 視需要建立並設定第二個標籤。
@@ -48,7 +48,7 @@ ht-degree: 18%
 
 [!DNL Assets] 隨附一組預先定義的謂詞，可用於自訂「資產共用」頁面。 以此方式自訂資產共用在建立和設 [定資產共用頁面中](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用預先存在的謂語外，AEM開發人員也可以使用 [Query Builder API建立自己的謂語](/help/sites-developing/querybuilder-api.md)。
+除了使用預先存在的謂語外，Experience Manager開發人員也可以使用 [Query Builder API建立自己的謂語](/help/sites-developing/querybuilder-api.md)。
 
 建立自訂謂語需要有關 [Widgets架構的基本知識](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)。
 
@@ -296,6 +296,6 @@ ht-degree: 18%
 
 ## 自訂搜尋結果 {#customizing-search-results}
 
-「資產分享」頁面上的搜尋結果呈現方式由選取的鏡頭控制。 AEM Assets隨附一組預先定義的鏡頭，可用來自訂「資產共用」頁面。 以此方式自訂資產共用，請參閱「建立 [和設定資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
+「資產分享」頁面上的搜尋結果呈現方式由選取的鏡頭控制。 Experience Manager Assets隨附一組預先定義的鏡頭，可用來自訂「資產共用」頁面。 以此方式自訂資產共用，請參閱「建立 [和設定資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用預先存在的鏡頭外，AEM開發人員也可以自行建立鏡頭。
+除了使用預先存在的鏡頭外，Experience Manager開發人員也可以建立自己的鏡頭。
