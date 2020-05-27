@@ -3,9 +3,9 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f41de531d0e1784245c79ab2ace3586fc7dd469
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1566'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 在Experience Manager中，資產包含下列元素：
 
 * 資產的屬性和中繼資料。
-* 多個轉譯，例如原始轉譯（原始上傳的資產）、縮圖和各種其他轉譯。 其他轉譯可能是不同大小的影像、不同的視訊編碼，或從PDF或Adobe InDesign檔案擷取的頁面。
+* 多個轉譯，例如原始轉譯（原始上傳的資產）、縮圖和各種其他轉譯。 其他轉譯可能是不同大小的影像、不同的視訊編碼，或從PDF或檔案擷取的 [!DNL Adobe InDesign] 頁面。
 * 選用的注釋。
 
 如需內容片段元素的詳細資訊，請參 [閱Experience Manager Assets HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md#content-fragments)。
