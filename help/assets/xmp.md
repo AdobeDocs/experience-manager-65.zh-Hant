@@ -1,40 +1,43 @@
 ---
-title: 支援AEM Assets中的XMP中繼資料
-description: 瞭解AEM Assets用於中繼資料管理的XMP（可擴充中繼資料平台）中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
+title: 支援Adobe Experience Manager Assets中的XMP中繼資料。
+description: 瞭解Experience Manager Assets用於中繼資料管理的XMP（可擴充中繼資料平台）中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '817'
+ht-degree: 19%
 
 ---
 
 
-# XMP中繼資料 {#xmp-metadata}
+# XMP 中繼資料 {#xmp-metadata}
 
-XMP（可擴充中繼資料平台）是AEM Assets用於所有中繼資料管理的中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
+XMP（可擴充中繼資料平台）是Adobe Experience Manager Assets用於所有中繼資料管理的中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
 
-除了提供可嵌入所有檔案格式的通用中繼資料編碼外，XMP還提供多樣化的 [內容模型](xmp.md#xmp-core-concepts) ，並受 [Adobe](xmp.md#advantages-of-xmp) 和其他公司的支援，讓XMP與AEM Assets的使用者擁有強大的平台可以建立。
+除了提供可嵌入所有檔案格式的通用中繼資料編碼外，XMP還提供多樣化內容模型 [,](xmp.md#xmp-core-concepts) 並受Adobe [](xmp.md#advantages-of-xmp) 和其他公司的支援，讓XMP與Assets的使用者擁有強大的平台來建立內容。
 
 XMP規 [格可從](https://www.adobe.com/devnet/xmp.html) Adobe取得。
 
 ## 什麼是XMP? {#what-is-xmp}
 
-AEM Assets本身支援XMP —— 由Adobe牽頭的可擴充中繼資料平台。 XMP是處理和儲存數位資產中標準化和專屬中繼資料的標準。 XMP是通用的標準，可讓多個應用程式有效地處理中繼資料。
+Assets原本就支援XMP —— 由Adobe牽頭的可擴充中繼資料平台。 XMP是處理和儲存數位資產中標準化和專屬中繼資料的標準。 XMP是通用的標準，可讓多個應用程式有效地處理中繼資料。
 
-例如，生產專業人員可使用Adobe應用程式內建的XMP支援，跨多種檔案格式傳遞資訊。 AEM Assets儲存庫會擷取XMP中繼資料，並使用它來管理內容生命週期，並提供建立自動化工作流程的功能。
+例如，生產專業人員可使用Adobe應用程式內建的XMP支援，跨多種檔案格式傳遞資訊。 Assets儲存庫會擷取XMP中繼資料，並使用它來管理內容生命週期，並提供建立自動化工作流程的功能。
 
 XMP透過提供資料模型、儲存模型和結構描述，標準化中繼資料的定義、建立和處理方式。 本節將介紹這些概念。
 
-EXIF、ID3或Microsoft office的所有舊式中繼資料都會自動轉譯為XMP,XMP可加以擴充，以支援客戶特定的中繼資料架構，例如產品型錄。
+EXIF、ID3或Microsoft Office的所有舊式中繼資料都會自動轉譯為XMP,XMP可加以擴充，以支援客戶特定的中繼資料架構，例如產品型錄。
 
-XMP中的中繼資料由一組屬性組成。 這些屬性始終與稱為資源的特定實體相關聯；即，屬性是關於資源的。 對於XMP，資源永遠是資產。
+XMP中的中繼資料由一組屬性組成。 這些屬性始終與稱為資源的特定實體相關聯； 即，屬性是關於資源的。 對於XMP，資源永遠是資產。
 
 ### Adobe {#adobe}
 
-Adobe率先將XMP標準納入Adobe acrobat軟體產品。 自此，XMP標準得到廣泛採用。
+Adobe率先將XMP標準納入Adobe Acrobat軟體產品。 自此，XMP標準得到廣泛採用。
 
 ### XMP生態系統 {#xmp-ecosystem}
 
-XMP定義了 [中繼資料](https://en.wikipedia.org/wiki/Metadata) 模型，可與任何已定義的中繼資料項目集搭配使用。 XMP也定義了基本屬性的特定結構 [](https://en.wikipedia.org/wiki/XML_schema) ，這些基本屬性可用於記錄資源在經過多個處理步驟（從被拍攝、掃描或創作為文字）、通過照片編輯步驟(如 [](https://en.wikipedia.org/wiki/Image_scanner)[](https://en.wikipedia.org/wiki/Cropping_%28image%29) or color adjustment)到組合成最終影像時的歷史記錄。 XMP可讓每個軟體程式或裝置在過程中，將自己的資訊新增至數位資源，並保留在最終的數位檔案中。
+XMP定義了 [中繼資料](https://en.wikipedia.org/wiki/Metadata) 模型，可與任何已定義的中繼資料項目集搭配使用。XMP也定義了基本屬性的特定結構 [](https://en.wikipedia.org/wiki/XML_schema) ，這些基本屬性可用於記錄資源在經過多個處理步驟 (從被拍攝、掃描或創作為文字) 、通過照片編輯步驟(如 [](https://en.wikipedia.org/wiki/Image_scanner)[](https://en.wikipedia.org/wiki/Cropping_%28image%29) or color adjustment)到組合成最終影像時的歷史記錄。XMP可讓每個軟體程式或裝置沿途將其資訊新增至數位資源，然後再保留在最終數位檔案中。
 
 XMP最常是使用 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)[Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF)的子集進行序列化和儲存，該子集又以 [XML表示](https://en.wikipedia.org/wiki/XML)。
 
@@ -71,10 +74,10 @@ XMP可以包括來自一個或多個方案的屬性。
 
 例如，許多Adobe應用程式使用的典型子集可能包括：
 
-* 都柏林核心架構：dc:title, dc:creator, dc:subject, dc:format, dc:rights
-* XMP基本架構：xmp:CreateDate, xmp:CreatorTool, xmp:ModifyDate, xmp:metadataDate
-* XMP權限管理架構：xmpRights:WebStatement, xmpRights:Marked
-* XMP媒體管理架構：xmpMM:DocumentID
+* 都柏林核心架構： dc:title, dc:creator, dc:subject, dc:format, dc:rights
+* XMP基本架構： xmp:CreateDate, xmp:CreatorTool, xmp:ModifyDate, xmp:metadataDate
+* XMP權限管理架構： xmpRights:WebStatement, xmpRights:Marked
+* XMP媒體管理架構： xmpMM:DocumentID
 
 ### 語言替代 {#language-alternatives}
 
