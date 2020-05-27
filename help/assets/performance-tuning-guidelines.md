@@ -1,10 +1,13 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]的效能調整。'
-description: 關於[!DNL Experience Manager]配置、硬體、軟體和網路元件的更改的建議和指導，以消除瓶頸並優化[!DNL Experience Manager Assets]的效能。
+title: 效能調整 [!DNL Adobe Experience Manager Assets]。
+description: 針對配置、 [!DNL Experience Manager] 硬體、軟體和網路元件變更的建議與指引，以消除瓶頸並最佳化效能 [!DNL Experience Manager Assets]。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '2723'
+ht-degree: 0%
 
 ---
 
@@ -74,7 +77,7 @@ Adobe建議在 [!DNL Experience Manager Assets] Java 8上部署以取得最佳�
 
 ### 配置緩衝映像快取的最大大小 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-當將大量資產上傳至 [!DNLAAdobe Experience Manager]，以允許記憶體使用量出現意外的尖峰，並防止JVM因OutOfMemoryErrors而失敗時，請減少已設定的緩衝影像快取最大大小。 例如，您有一個系統的堆積(- `Xmx`param)上限為5 GB,Oak BlobCache設為1 GB，檔案快取設為2 GB。 在這種情況下，緩衝快取最多需要1.25 GB的記憶體，因此，當出現意外的尖峰時，僅需0.75 GB的記憶體。
+當將大量資產上傳至 [!DNLAAdobe Experience Manager]，以允許記憶體使用量出現意外尖峰，並防止JVM因OutOfMemoryErrors而失敗時，請減少已設定的緩衝影像快取最大大小。 例如，您有一個系統的堆積(- `Xmx`param)上限為5 GB,Oak BlobCache設為1 GB，檔案快取設為2 GB。 在這種情況下，緩衝快取最多需要1.25 GB的記憶體，因此，當出現意外的尖峰時，僅需0.75 GB的記憶體。
 
 在OSGi Web Console中配置緩衝快取大小。 在 `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`，以位元組為單 `cq.dam.image.cache.max.memory` 位設定屬性。 例如，1073741824是1 GB(1024 x 1024 x 1024 = 1 GB)。
 
@@ -117,8 +120,8 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 * 視您的例項類型（小型、中型、大型）而定，請確定您有足夠的網路頻寬供您的Experience Manager例項使用。 如果Experience Manager是在AWS上代管， [!DNLE則適當的頻寬分配尤其重要] 。
 * 如果您 [!DNLE的Experience Manager] 實例是在AWS上托管的，則您可以通過使用多功能擴展策略來獲益。 如果使用者預期負載較高，請調整執行個體的大小。 縮小它的大小以適中／低負載。
-* HTTPS:大部分使用者都有防火牆來監聽HTTP流量，這可能會對上傳檔案或在上傳作業期間損毀檔案造成負面影響。
-* 大型檔案上傳：確保用戶有到網路的有線連接（WiFi連接快速飽和）。
+* HTTPS: 大部分使用者都有防火牆來監聽HTTP流量，這可能會對上傳檔案或在上傳作業期間損毀檔案造成負面影響。
+* 大型檔案上傳： 確保用戶有到網路的有線連接（WiFi連接快速飽和）。
 
 ## 工作流程 {#workflows}
 
@@ -162,7 +165,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 ### DAM更新資產設定 {#dam-update-asset-configuration}
 
-「 [!UICONTROL DAM更新資產] 」工作流程包含為工作設定的完整步驟套件，例如產生Scene7 PTIFF和InDesign Server整合。 不過，大部分使用者可能不需要其中幾個步驟。 Adobe建議您建立自訂的 [!UICONTROL DAM更新資產工作流程模型] ，並移除任何不必要的步驟。 在此案例中，請更新 [!UICONTROL DAM Update Asset的啟動器] ，以指向新模型。
+「 [!UICONTROL DAM更新資產] 」工作流程包含為工作設定的完整步驟套件，例如產生Scene7 PTIFF和整 [!DNL Adobe InDesign Server] 合。 不過，大部分使用者可能不需要其中幾個步驟。 Adobe建議您建立自訂的 [!UICONTROL DAM更新資產工作流程模型] ，並移除任何不必要的步驟。 在此案例中，請更新 [!UICONTROL DAM Update Asset的啟動器] ，以指向新模型。
 
 深入執行 [!UICONTROL DAM更新資產工作流程] ，可大幅增加檔案資料存放區的大小。 Adobe進行的實驗結果顯示，若在8小時內執行約5500個工作流程，資料存放區大小可增加約400 GB。
 
@@ -176,7 +179,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 客戶在其網站上使用各種大小和格式的影像，或將影像發佈給商業合作夥伴。 由於每個轉譯都會增加資產在儲存庫中的佔用空間，Adobe建議您審慎地使用此功能。 為了減少處理和儲存影像所需的資源量，您可以在執行時期產生這些影像，而不是在擷取時當做轉譯。
 
-許多網站客戶會實作影像servlet，在要求影像時調整影像大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
+許多網站客戶會實作影像servlet，在要求影像時調整大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
 
 另一種方法是使用Scene7技術完全放棄影像控制。 此外，您還可以部署品牌入口網站，不僅負責從 [!DNLEExperience Manager] Infrastructure接管轉譯產生責任，還負責整個發佈層。
 
