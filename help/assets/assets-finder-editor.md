@@ -3,9 +3,9 @@ title: 「建立和配置資產編輯器」頁
 description: 瞭解如何建立自訂資產編輯器頁面並同時編輯多個資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2147'
+source-wordcount: '2146'
 ht-degree: 1%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 1%
 
 ## 為何要建立和設定資產編輯器頁面？ {#why-create-and-configure-asset-editor-pages}
 
-數位資產管理正被越來越多的案例所使用。 從專業訓練使用者的小型解決方案（例如攝影師或分類學者）到更大且更多元化的使用者群組（例如商業使用者、WCM作者、記者等），專業使用者的Adobe Experience Manager(AEM)Assets強大的使用者介面可提供太多資訊，而相關人員會開始要求特定使用者介面或應用程式存取與他們相關的數位資產……
+數位資產管理正被越來越多的案例所使用。 當從專業訓練使用者的小型解決方案（例如攝影師或分類學者）移轉至更大且更多元化的使用者群組（例如商業使用者、WCM作者、記者等）時，專業使用者的Adobe Experience Manager Assets強大的使用者介面可提供太多資訊，而利益相關者可開始要求特定使用者介面或應用程式存取與他們相關的數位資產。
 
 這些以資產為中心的應用程式可以是內部網路中簡單的像片收藏館，員工可從商業展覽或公開網站的新聞中心上傳像片。 以資產為中心的應用程式也可以延伸至完整的解決方案，包括購物車、結帳和驗證程式。
 
-建立以資產為中心的應用程式，在很大程度上會變成不需撰寫程式碼的設定程式，只需瞭解使用者群組及其需求，以及所使用中繼資料的知識即可。 以AEM Assets建立的資產導向應用程式可擴充： 使用適中的編碼工作，可重複使用的元件來搜尋、檢視和修改資產。
+建立以資產為中心的應用程式，在很大程度上會變成不需撰寫程式碼的設定程式，只需瞭解使用者群組及其需求，以及所使用中繼資料的知識即可。 使用Assets建立以資產為中心的應用程式可擴充： 使用適中的編碼工作，可重複使用的元件來搜尋、檢視和修改資產。
 
-AEM中以資產為中心的應用程式包含資產編輯器頁面，可用來取得特定資產的詳細檢視。 資產編輯器頁面也允許編輯元資料，前提是訪問資產的用戶具有必要的權限。
+Experience Manager中以資產為中心的應用程式包含資產編輯器頁面，可用來取得特定資產的詳細檢視。 資產編輯器頁面也允許編輯元資料，前提是訪問資產的用戶具有必要的權限。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -161,7 +161,7 @@ To customize the query builder:
 
 #### Add predicates {#adding-predicates}
 
-AEM Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
+Experience Manager Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
 
 To add predicates:
 
@@ -278,7 +278,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-如需 [](/help/assets/extending-assets.md) 修改中繼資料表單中可用名稱空間的詳細資訊，請參閱自訂和擴充AEM資產。
+如需 [](/help/assets/extending-assets.md) 修改中繼資料表單中可用名稱空間的相關資訊，請參閱自訂和擴充資產。
 
 1. 按一下「約 **束** 」(Constraints)頁籤。 您可以在此處選擇欄位是否為必需欄位，並根據需要添加任何約束。
 
@@ -391,7 +391,7 @@ Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會�
 
 ## 使用「資產編輯器」頁面進行多重編輯資產 {#multi-editing-assets-with-the-asset-editor-page}
 
-有了AEM Assets，您一次可以變更數個資產。 在擁有選取的資產後，您可以同時變更其：
+借助Experience Manager Assets，您可以一次變更多個資產。 在擁有選取的資產後，您可以同時變更其：
 
 * 標記
 * 中繼資料
