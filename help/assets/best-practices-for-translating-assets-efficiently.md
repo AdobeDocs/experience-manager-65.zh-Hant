@@ -3,14 +3,17 @@ title: 翻譯資產的最佳實務
 description: 有效管理資產的最佳做法，可同步各種翻譯版本並簡化翻譯工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 0%
 
 ---
 
 
 # 翻譯資產的最佳實務 {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager(AEM)Assets支援多語言工作流程，將數位資產的二進位檔案、中繼資料和標籤轉譯為多個地區，並管理翻譯的資產。 如需詳細資訊，請參 [閱多語言資產](multilingual-assets.md)。
+Adobe Experience Manager Assets支援多語言工作流程，將數位資產的二進位檔案、中繼資料和標籤轉譯為多個地區，並管理翻譯的資產。 如需詳細資訊，請參 [閱多語言資產](multilingual-assets.md)。
 
 為有效管理資產以確保不同翻譯版本保持同步，請在執行翻譯工作 [流程之前](preparing-assets-for-translation.md) ，先建立資產的語言副本。
 
@@ -39,7 +42,7 @@ File Data Store和Amazon S3 Data Store提供最適合這些情況的儲存基礎
 
 1. 啟用「設 [!UICONTROL 定上次修改的日期] 」工作流程。
 
-   DAM MetaData回 [!UICONTROL 寫工作流程] ，可設定資產的上次修改日期。 由於您在步驟2中停用此工作流程，AEM Assets無法再將資產的上次修改日期保持為最新。 因此，請啟用「 *設定上次修改的日期* 」工作流程，以確保資產的上次修改日期是最新的。 具有過時上次修改日期的資產可能會導致錯誤。
+   DAM MetaData回 [!UICONTROL 寫工作流程] ，可設定資產的上次修改日期。 由於您在步驟2中停用此工作流程，資產無法再將資產的上次修改日期保持為最新。 因此，請啟用「 *設定上次修改的日期* 」工作流程，以確保資產的上次修改日期是最新的。 具有過時上次修改日期的資產可能會導致錯誤。
 
-1. [配置翻譯整合框架](/help/sites-administering/tc-tic.md) ，停止翻譯資產二進位檔案。 取消選 **[!UICONTROL 取「資產]** 」標籤下的「轉譯資產」選項，以停止轉譯資產二進位檔案。
+1. [配置翻譯整合框架](/help/sites-administering/tc-tic.md) ，以停止翻譯資產二進位檔案。 取消選 **[!UICONTROL 取「資產]** 」標籤下的「轉譯資產」選項，以停止轉譯資產二進位檔案。
 1. 使用多語言資產工作流程來翻譯 [資產中繼資料／標籤](multilingual-assets.md)。
