@@ -2,17 +2,17 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Assets使用指南
+user-guide-title: Experience Manager 6.5資產使用指南
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 39%
+source-wordcount: '636'
+ht-degree: 38%
 
 ---
 
 
-# AEM 6.5 Assets使用指南 {#assets}
+# Experience Manager 6.5資產使用指南 {#assets}
 
 + [[!DNL Assets] 使用者指南](home.md)
 + [AEM 6.5 Assets發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
@@ -153,7 +153,7 @@ ht-degree: 39%
    + [非同步操作](asynchronous-jobs.md)
    + [燈箱](touch-ui-light-box.md)
    + [資產見解](touch-ui-asset-insights.md)
-   + [透過DTM獲得資產見解](touch-ui-using-dtm-for-asset-insights.md)
+   + [透過Adobe Launch獲得資產見解](touch-ui-using-dtm-for-asset-insights.md)
    + [設定資產見解](touch-ui-configuring-asset-insights.md)
    + [登入及登出資產](check-out-and-submit-assets.md)
    + [將翻譯雲端服務套用至資料夾](transition-cloud-services.md)
