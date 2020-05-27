@@ -3,14 +3,17 @@ title: 登入並登出您的數位資產以進行編輯
 description: 瞭解如何取出要編輯的資產，並在變更完成後將其存回。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '417'
+ht-degree: 0%
 
 ---
 
 
-# AEM DAM中的登入和登出檔案 {#check-in-and-check-out-files-in-assets}
+# Experience Manager DAM中的登入和登出檔案 {#check-in-and-check-out-files-in-assets}
 
-Adobe Experience Manager(AEM)Assets可讓您取出要編輯的資產，並在完成變更後將其存回。 結帳資產後，只有您可以編輯、註解、發佈、移動或刪除資產。 簽出資產會鎖定資產。 在您將資產存回AEM Assets之前，其他使用者無法對資產執行任何這些作業。 不過，他們仍可變更鎖定資產的中繼資料。
+Adobe Experience Manager Assets可讓您取出要編輯的資產，並在完成變更後將其存回。 結帳資產後，只有您可以編輯、註解、發佈、移動或刪除資產。 簽出資產會鎖定資產。 在您將資產存回「資產」之前，其他使用者無法對資產執行任何這些作業。 不過，他們仍可變更鎖定資產的中繼資料。
 
 若要能夠登出／登入資產，您需要有其「寫入」存取權。
 
@@ -41,13 +44,13 @@ Adobe Experience Manager(AEM)Assets可讓您取出要編輯的資產，並在完
 
    您也可以選擇註解或發佈資產。
 
-1. 從介面中選擇編輯過的資 [!DNL Assets] 產，然後從工具欄中 **[!UICONTROL 按一下]** 「簽入」。 已修改的資產會登入AEM Assets，可供其他使用者編輯。
+1. 從介面中選擇編輯過的資 [!DNL Assets] 產，然後從工具欄中 **[!UICONTROL 按一下]** 「簽入」。 已修改的資產會登入「資產」，可供其他使用者編輯。
 
 ## 強制登入 {#forced-check-in}
 
 管理員可以簽入由其他用戶簽出的資產。
 
-1. 以管理員身分登入AEM Assets。
+1. 以管理員身分登入資產。
 1. 從「資產」使用者介面中，選取一或多個已由其他使用者簽出的資產。
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
@@ -56,6 +59,6 @@ Adobe Experience Manager(AEM)Assets可讓您取出要編輯的資產，並在完
 
 >[!MORELIKETHIS]
 >
->* [瞭解AEM案頭應用程式的登入與登出](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#how-app-works2)
->* [教學課程影片，以瞭解AEM Assets中的存回和存回](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/checkin-checkout-technical-video-understand.html)
+>* [瞭解Experience Manager案頭應用程式的登入與登出](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#how-app-works2)
+>* [教學課程影片，以瞭解在Assets中存回和取出](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/checkin-checkout-technical-video-understand.html)
 
