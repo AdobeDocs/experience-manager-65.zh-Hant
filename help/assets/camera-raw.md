@@ -1,9 +1,12 @@
 ---
 title: '[!DNL Adobe Camera Raw]支援。'
-description: 瞭解如何在[!DNL Adobe Experience Manager Assets]中啟用[!DNL Adobe Camera Raw]支援。
+description: 瞭解如何啟 [!DNL Adobe Camera Raw] 用中的支援 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '366'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 1. 在「啟 **[!UICONTROL 用Web的影像]** 」標籤的「跳 **[!UICONTROL 過清單」欄位中]** ，指定 `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`。
 
-   ![chlimage_1-129](assets/chlimage_1-335.png)
+   ![chlimage_1-127](assets/chlimage_1-335.png)
 
 1. 從側面板，在「縮圖建立」 **[!UICONTROL 步驟下方新增「Camera Raw/DNG Handler]** 」 **[!UICONTROL 步驟]** 。
 1. 在「 **[!UICONTROL Camera Raw/DNG處理常式]** 」步驟中，在「參數」標籤中新增下列 **[!UICONTROL 設定]** :
@@ -49,15 +52,15 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 >
 >請確定上述組態與Camera RAW和DNG處 **[!UICONTROL 理步驟組態的Sample DAM Update Asset]** 相同。
 
-您現在可以將Camera Raw檔案匯入AEM Assets。 安裝Camera RAW套件並設定必要的工作流程後，「影像調整」選 **** 項會出現在側窗格的清單中。
+您現在可以將Camera Raw檔案匯入「資產」。 安裝Camera RAW套件並設定必要的工作流程後，「影像調整」選 **** 項會出現在側窗格的清單中。
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-*圖：側窗格中的選項。*
+*圖： 側窗格中的選項。*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
 
-*圖：使用選項對影像進行輕量型編輯。*
+*圖： 使用選項對影像進行輕量型編輯。*
 
 在將編輯儲存至影 [!DNL Camera Raw] 像後，會為影像 `AdjustedPreview.jpg` 產生新的轉譯。 除了其他影像類型 [!DNL Camera Raw]外，變更會反映在所有轉譯中。
 
