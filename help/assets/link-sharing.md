@@ -1,11 +1,11 @@
 ---
 title: 產生共用資產的URL
-description: 本文說明如何將AEM Assets中的資產、檔案夾和系列共用為外部方的URL。
+description: 本文說明如何將Experience Manager Assets中的資產、檔案夾和系列共用為外部方的URL。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1228'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 # 透過連結分享資產 {#asset-link-sharing}
 
-Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包括合作夥伴和廠商）以URL形式共用資產、檔案夾和系列。 透過連結分享資產是讓外部廠商可使用資源的便利方式，而不需要先登入AEM Assets。
+Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括合作夥伴和廠商）以URL形式共用資產、資料夾和系列。 透過連結分享資產是讓外部使用者可使用資源的便利方式，而不需要先登入資產。
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
 
    >[!NOTE]
    >
-   >如果您想要將AEM Author例項的連結共用給外部實體，請確定您只針對請求公開下列URL（用於連結共用） `GET` 。 封鎖其他URL以確保AEM Author的安全性。
+   >如果您想要將Experience Manager Author實例的連結共用給外部實體，請確定您只針對請求公開下列URL（用於連結共用） `GET` 。 封鎖其他URL以確保Experience Manager作者的安全性。
    >
    >* http://&lt;aem_server>:&lt;port>/linkshare.html
    * http://&lt;aem_server>:&lt;port>/linksharepreview.html
@@ -50,7 +50,7 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
    >[!NOTE]
    如果共用資產移至不同位置，其連結將停止運作。 重新建立連結並與使用者重新共用。
 
-1. In AEM interface, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. 在Experience Manager介面中，存取「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 
 1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration and modify the following properties in the **[!UICONTROL Domains]** field with the values mentioned against `local`, `author`, and `publish`. 對於和 `local` 屬性 `author` ，請分別提供本機實例和作者實例的URL。 如果 `local` 您執 `author` 行單一Experience Manager作者實例，則兩者的值都相同。 例如， `publish`提供Experience Manager發佈例項的URL。
 
@@ -92,7 +92,7 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
    >[!NOTE]
-   AEM支援產生下列MIME類型資產的預覽： JPG、PNG、GIF、BMP、INDD、PDF和PPT。 您只能下載其他MIME類型的資產。
+   Experience Manager支援產生下列MIME類型資產的預覽： JPG、PNG、GIF、BMP、INDD、PDF和PPT。 您只能下載其他MIME類型的資產。
 
 1. 若要下載共用資產，請按一 **[!UICONTROL 下工具列中的]** 「選取」、按一下資產，然後按一下工具列 **[!UICONTROL 中的「下載]** 」。
 
@@ -118,9 +118,9 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
 
 ## 配置最大資料大小 {#maxdatasize}
 
-當您使用「連結共用」功能從共用的連結下載資產時，AEM會從儲存庫壓縮資產階層，然後以ZIP檔案傳回資產。 但是，在ZIP檔案中壓縮的資料量沒有限制的情況下，大量資料會遭受壓縮，造成JVM中記憶體錯誤。 為防止系統因此遭受潛在的拒絕服務攻擊，請使用 **[!UICONTROL Configuration Manager中Day CQ的]** Max Content Size（未壓縮）  Day CQ DAM Adhoc Asset Share Proxy Servlet參數配置最大大小。 如果資產的未壓縮大小超過設定的值，資產下載請求便會遭拒。 預設值為100 MB。
+當您使用「連結共用」功能從共用的連結下載資產時，Experience Manager會從儲存庫壓縮資產階層，然後以ZIP檔案傳回資產。 但是，在ZIP檔案中壓縮的資料量沒有限制的情況下，大量資料會遭受壓縮，造成JVM中記憶體錯誤。 為防止系統因此遭受潛在的拒絕服務攻擊，請使用 **[!UICONTROL Configuration Manager中Day CQ的]** Max Content Size（未壓縮）  Day CQ DAM Adhoc Asset Share Proxy Servlet參數配置最大大小。 如果資產的未壓縮大小超過設定的值，資產下載請求便會遭拒。 預設值為100 MB。
 
-1. Click the AEM logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Click the Experience Manager logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. 從Web主控台中，找到 **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet設定]** 。
 1. 在編輯模 **[!UICONTROL 式中開啟「日CQ DAM臨機資產共用代理Servlet]** 」設定，並修改「最大內容大小 (未壓縮) 」 **[!UICONTROL 參數的值]** 。
 
@@ -131,6 +131,6 @@ Adobe Experience Manager(AEM)Assets可讓您與組織成員及外部實體（包
 ## Best practices and troubleshooting {#bestpractices}
 
 * 資產檔案夾或名稱中包含空白字元的系列可能無法共用。
-* 如果使用者無法下載共用資產，請洽詢您的AEM管理員下 [載限制](#maxdatasize) 。
-* 如果您無法傳送含有共用資產連結的電子郵件，或如果其他使用者無法收到您的電子郵件，請洽詢您的AEM管理員( [是否已設定](#configmailservice) 電子郵件服務)。
+* 如果使用者無法下載共用資產，請洽詢您的Experience Manager管理員下載限 [制](#maxdatasize) 。
+* 如果您無法傳送含有共用資產連結的電子郵件，或如果其他使用者無法收到您的電子郵件，請洽詢您的Experience Manager管理員，以確認是否已 [設定](#configmailservice) 電子郵件服務。
 * 如果您無法使用連結共用功能來共用資產，請確定您擁有適當的權限。 請參閱 [分享資產](#sharelink)。
