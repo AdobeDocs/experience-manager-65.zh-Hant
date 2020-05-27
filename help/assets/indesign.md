@@ -3,7 +3,7 @@ title: 整 [!DNL Adobe Experience Manager Assets] 合 [!DNL Adobe InDesign Serve
 description: 瞭解如何 [!DNL Adobe Experience Manager Assets] 整合 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 3%
@@ -58,7 +58,7 @@ ht-degree: 3%
    * 提取的文本和檔案儲存在中 [!DNL Experience Manager Assets]。
    * 所有轉譯都儲存在 [!DNL Experience Manager Assets]資產本身中。
 
-## 與AEM整 [!DNL InDesign Server] 合 {#integrating-the-indesign-server-with-aem}
+## 與Experience [!DNL InDesign Server] Manager整合 {#integrating-the-indesign-server-with-aem}
 
 若要整合 [!DNL InDesign Server] 以便與 [!DNL Experience Manager Assets] 設定Proxy搭配使用，您必須：
 
@@ -111,13 +111,13 @@ ht-degree: 3%
 
 * **擴充指令碼**: 您可以在此處指定不同的指令碼組合。 如果希望在上執行自己的指令碼， [!DNL InDesign Server]請將指令碼保存在 `/apps/settings/dam/indesign/scripts`。
 
-如需Indesign指令碼的詳細資訊，請參閱 [InDesign開發人員檔案](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
+如需指令碼的相 [!DNL Adobe InDesign] 關資訊，請參 [閱InDesign開發人員檔案](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
 
 >[!CAUTION]
 >
 >請 勿變更ExtendScript程式庫。此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要發送到的庫以 [!DNL InDesign Server] 便在其中使用。
 
-「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 此轉譯用於「流程縮圖」工作流步驟，以生成所需的靜態轉譯 [!DNL Experience Manager]。
+「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 「處理縮圖」工作流程步驟會使用此格式副本，以產生所需的靜態格式副本 [!DNL Experience Manager]。
 
 您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您未移除預設值，因為介面需要這些預設 [!DNL Experience Manager Assets] 值。 最後，「刪除影像預覽轉譯」工作流程步驟會移除JPG縮圖轉譯，因為不再需要它。
 
@@ -167,7 +167,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 1. 在訪問Web控制台 `https://[aem_server]:[port]/system/console/configMgr`。
 1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and click **[!UICONTROL Edit]** to open it.
-1. 指定主機名和上下文路徑，然 [!DNL Indesign Server] 後按一下 **保存**。
+1. 指定主機名和上下文路徑，然 [!DNL Adobe InDesign Server] 後按一下 **保存**。
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
 
@@ -218,7 +218,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 >[!NOTE]
 >
->要 [!DNL InDesign Server] 與集 [!DNL Experience Manager Assets]成，請使用多核處理器，因為單核系統不支援整合所需的會話支援功能。
+>為 [!DNL InDesign Server] 與整 [!DNL Experience Manager Assets]合，請使用多核處理器，因為整合所需的作業階段支援功能在單核系統上不受支援。
 
 ## 配置認 [!DNL Experience Manager] 證 {#configure-aem-credentials}
 
