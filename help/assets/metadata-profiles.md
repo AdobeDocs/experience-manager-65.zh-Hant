@@ -3,9 +3,9 @@ title: 自訂資產中繼資料需求的中繼資料設定檔
 description: 瞭解資產的中繼資料設定檔。 瞭解如何建立中繼資料描述檔並將它套用至資料夾資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1413'
 ht-degree: 17%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 17%
    * **[!UICONTROL 對應至屬性]**: 此屬性的值為資產節點提供了相對路徑／名稱，該資產節點保存在儲存庫中。 值應一律以開頭 `./` ，因為它表示路徑位於資產的節點下。
    ![chlimage_1-199](assets/chlimage_1-482.png)
 
-   The value you specify for **[!UICONTROL Map to property]** is stored as a property under the asset&#39;s metadata node. 例如，如果您指定。`/jcr:content/metadata/dc:desc` AEM Assets會將值儲 **[!UICONTROL 存在資產的中繼資料節點，作為]**`dc:desc` 「對應至屬性」的名稱。
+   The value you specify for **[!UICONTROL Map to property]** is stored as a property under the asset&#39;s metadata node. 例如，如果您指定。`/jcr:content/metadata/dc:desc` 作為映射 **[!UICONTROL 至屬性的名稱]**,Assets會將值儲存 `dc:desc` 在資產的中繼資料節點。
 
    * **[!UICONTROL 預設值]**: 使用此屬性可為中繼資料元件新增預設值。 例如，如果您指定「我的說明」，則會將此值指派給資產中繼資 `dc:desc` 料節點的屬性。
    ![chlimage_1-200](assets/chlimage_1-483.png)
@@ -106,7 +106,7 @@ ht-degree: 17%
 
 請依照下列步驟來套用中繼資料描述檔：
 
-1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. 按一下Experience Manager標誌，並導覽至「工具> **[!UICONTROL 資產>中繼資料設定檔]**」。
 1. 選擇要應用於資料夾或多個資料夾的元資料配置檔案。
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
@@ -126,7 +126,7 @@ ht-degree: 17%
 
 ### 全域套用中繼資料設定檔 {#applying-a-metadata-profile-globally}
 
-除了將描述檔套用至檔案夾外，您也可以全域套用一個，如此任何檔案夾中上傳至AEM資產的內容都會套用選取的描述檔。
+除了將描述檔套用至資料夾外，您也可以全域套用一個，如此，任何資料夾中上傳至Experience Manager資產的任何內容都會套用選取的描述檔。
 
 您可以重新處理已有現有中繼資料設定檔的資料夾中的資產，而您稍後會加以變更。 請參 [閱編輯資料夾的處理設定檔後，重新處理資產](processing-profiles.md#reprocessing-assets)。
 
@@ -148,7 +148,7 @@ ht-degree: 17%
 
 ### 透過描述檔使用者介面，從資料夾移除中繼資料描述檔 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. 按一下Experience Manager標誌，並導覽至「工具> **[!UICONTROL 資產>中繼資料設定檔]**」。
 1. 選擇要從資料夾或多個資料夾中刪除的元資料配置檔案。
 1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
@@ -156,7 +156,7 @@ ht-degree: 17%
 
 ### 透過屬性從資料夾移除中繼資料描述檔 {#removing-metadata-profiles-from-folders-via-properties}
 
-1. 按一下AEM標誌，並導覽 **[!UICONTROL Assets]** ，然後導覽至您要從中移除中繼資料描述檔的檔案夾。
+1. 按一下Experience Manager標誌，並導覽 **[!UICONTROL Assets]** ，然後導覽至您要從中移除中繼資料描述檔的檔案夾。
 1. 在資料夾上，按一下複選標籤以選擇它，然後按一下「屬 **[!UICONTROL 性」]**。
 1. 選擇「元 **[!UICONTROL 資料描述檔]** 」標籤，然後從下拉式選單中選 **[!UICONTROL 擇「無]** 」，然後按一下「 **[!UICONTROL 儲存]**」。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
