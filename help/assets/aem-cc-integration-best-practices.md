@@ -3,9 +3,9 @@ title: Adobe Creative Cloud與整 [!DNL Adobe Experience Manager] 合最佳實�
 description: 整合的最佳實 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 務，以簡化資產轉讓工作流程並達到高內容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '3253'
+source-wordcount: '3247'
 ht-degree: 14%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 14%
 
 | 相關人員的價值主張 | Adobe產品 | 涉及的曲面 |
 |---|---|---|
-| 創意使用者可從中 [!DNL Experience Manager]發現資產、開啟並使用資產、編輯和上傳變更至 [!DNL Experience Manager]，以及將新檔案上傳至 [!DNL Experience Manager]，毋需離開應用 [!DNL Creative Cloud] 程式。 | [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) | Photoshop、Illustrator和InDesign |
+| 創意使用者可從中 [!DNL Experience Manager]發現資產、開啟並使用資產、編輯和上傳變更至 [!DNL Experience Manager]，以及將新檔案上傳至 [!DNL Experience Manager]，毋需離開應用 [!DNL Creative Cloud] 程式。 | [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 |
 | 商業使用者可簡化開啟和使用資產、編輯和上傳變更 [!DNL Experience Manager]至，以及從案頭環境 [!DNL Experience Manager] 上傳新檔案的程式。 他們會使用一般整合來開啟原生案頭應用程式中的任何資產類型，包括非Adobe的資產類型。 | [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac案頭版案頭應用程式 |
 | 行銷人員和商業使用者可從內部探索、預覽、授權和儲 [!DNL Adobe Stock] 存及管理資產 [!DNL Experience Manager]。 授權和儲存的資產提供精選的中繼 [!DNL Adobe Stock] 資料，以提升治理。 | [Experience Manager與Adobe Stock整合](aem-assets-adobe-stock.md) | [!DNL Experience Manager] 網路介面 |
 
@@ -181,8 +181,8 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 Adobe Asset Link為此使用案例提供了良好的支援：
 
-* 當Photoshop、InDesign或Illustrator的使用者想要編輯檔案時，會對指定資產執行「取出」操作
-* 資產會在背景下載，並放入使用者Creative Cloud案頭應用程式同步至磁碟的Creative Cloud帳戶中，而且會在資產上切換結帳標幟，將編輯衝突降 [!DNL Experience Manager] 至最低
+* 當使用者 [!DNL Photoshop]在、 [!DNL InDesign]或 [!DNL Illustrator] 想要編輯檔案時，他們會對指定資產執行「取出」作業
+* 資產會在背景下載，並放入使用者Creative Cloud案頭應用程式同步至磁碟的Creative Cloud帳戶中，而且會在資產上切換結帳標幟，將編輯衝突降 [!DNL Experience Manager] 到最低
 * 從此，使用者會在儲存在同步位置本機的檔案中工作，而且可以繼續工作並儲存必要的變更，以任何頻率需要
 * 此外，由於資產位於Creative Cloud帳戶中，因此也可在使用者可能擁有的其他裝置上使用（例如，可在專用的Creative Cloud行動應用程式中開啟或編輯），並可與其他Creative Cloud使用者共用以進行協作。
 * 當創意使用者完成變更後，他們可以在其Creative Cloud應用程式中對該檔案執行「登入」操作，並附上選用的註解。 中的對應資產 [!DNL Experience Manager] 會版本化，並更新為新二進位檔。 [!DNL Experience Manager] 像行銷人員或LOB使用者這樣的使用者可透過資產時間表UI存取重大資產變更或里程碑 [!DNL Experience Manager] 的資訊。
@@ -199,7 +199,7 @@ Adobe Asset Link為此使用案例提供了良好的支援：
 * 上傳創意廣告公司提供的資產
 * 如果在DAM外完成選取，則從較大的集合上傳選取的資產
 
-此說明是指將檔案上傳為案頭使用者工作流程的一般部分（例如，每週或每張像片）。 此處未涵蓋大型資產遷移。
+此說明是指在案頭使用者工作流程中，以正常作業方式（例如每週或每張像片）上傳檔案。 此處未涵蓋大型資產遷移。
 
 您可以運用下列上傳功能：
 
