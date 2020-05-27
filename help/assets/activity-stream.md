@@ -3,14 +3,17 @@ title: 時間軸中的活動串流
 description: 本文說明如何在時間軸上顯示資產的活動記錄檔。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 27%
 
 ---
 
 
 # 時間軸中的活動串流 {#activity-stream-in-timeline}
 
-此功能會顯示時間軸上資產的活動記錄。 如果您在Adobe Experience Manager(AEM)Assets中執行下列任何資產相關作業，活動串流功能會更新時間軸以反映活動。
+此功能會在時間軸上顯示資產的活動記錄。 如果您在Adobe Experience Manager Assets中執行下列任一與資產相關的作業，活動串流功能會更新時間軸以反映活動。
 
 活動流中記錄了以下操作：
 
@@ -23,7 +26,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 * 拒絕
 * 移動
 
-將從儲存日誌檔案的CRX位置提取要在時 `/var/audit/com.day.cq.dam/content/dam` 間軸中顯示的活動日誌。  此外，當上傳新資產或修改現有資產並透過 [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) 或 [AEM案頭應用程式簽入AEM時，會記錄時間軸活動](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
+將從儲存日誌檔案的CRX位置提取要在時 `/var/audit/com.day.cq.dam/content/dam` 間軸中顯示的活動日誌。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into Experience Manager via [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
@@ -39,4 +42,4 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 >[!NOTE]
 >
->「發佈」和「取消發佈」任 **[!UICONTROL 務的預設日]** 志存 **[!UICONTROL 儲位置為]**`/var/audit/com.day.cq.replication/content`。 對於 **[!UICONTROL 移動]** ，預設位置為 `/var/audit/com.day.cq.wcm.core.page`。
+>「發佈」和「取消發佈」任 **[!UICONTROL 務的預設日]** 志存 **[!UICONTROL 儲位置為]**`/var/audit/com.day.cq.replication/content`。對於 **[!UICONTROL 移動]** ，預設位置為 `/var/audit/com.day.cq.wcm.core.page`。
