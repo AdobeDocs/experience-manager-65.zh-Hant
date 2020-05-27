@@ -1,21 +1,19 @@
 ---
 title: 搜尋Facet
-description: 本文說明如何在AEM中建立、修改和使用搜尋Facet。
+description: 本文說明如何在Adobe Experience Manager中建立、修改和使用搜尋刻面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2522'
-ht-degree: 19%
+source-wordcount: '2517'
+ht-degree: 17%
 
 ---
 
 
 # Search Facets {#search-facets}
 
-瞭解如何在AEM中建立、修改和使用搜尋刻面。
-
-Adobe Experience Manager(AEM)Assets的企業部署可儲存許多資產。 有時候，如果您只使用AEM的一般搜尋功能，尋找正確的資產不但麻煩而且耗時。
+Adobe Experience Manager Assets的企業部署可儲存許多資產。 有時候，如果您只使用Experience Manager的一般搜尋功能，尋找正確的資產不但麻煩而且耗時。
 
 使用「篩選」面板中的搜尋Facet，為您的搜尋體驗增加更精細的度，並讓搜尋功能更有效率且更多功能。 搜尋刻面新增多個維度（謂語），可讓您執行更精細的搜尋。 「濾鏡」面板包含一些標準刻面。 您也可以新增自訂搜尋Facet。
 
@@ -29,7 +27,7 @@ Adobe Experience Manager(AEM)Assets的企業部署可儲存許多資產。 有�
 
 對於全文搜索，請將Fulltext謂詞添加到表單中。 使用Property predicate搜尋符合您指定之單一屬性的資產。 使用「選項」述詞可搜尋符合特定屬性之一或多個值的資產。 新增「日期範圍」述詞，以搜尋在指定日期範圍內建立的資產。
 
-1. 按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** >一 **[!UICONTROL 般]** > **[!UICONTROL 搜尋表格]**」。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 從「搜尋表單」頁面中，選 **[!UICONTROL 取「資產管理搜尋邊欄]**」，然後按一 **下「編** 輯Aemassets_edit ![](assets/aemassets_edit.png)」。
 
    ![尋找並選取「資產管理搜尋邊欄」](assets/assets_admin_searchrail.png)
@@ -38,7 +36,7 @@ Adobe Experience Manager(AEM)Assets的企業部署可儲存許多資產。 有�
 
    >[!NOTE]
    >
-   >若要使用舊版AEM中預先設定的 **Assets Admin Search Rail** ，來使用檔案夾搜尋功能，請執行下列步驟：
+   >若要使用舊版「資產管理搜尋邊欄」中預先設定的 **資料夾搜尋功能** ，請執行下列步驟：
    >
    >1. 導覽至 *CRXDE中的/conf/global/settings/dam/search/facets/assets/jcr:content/items* 。
    >1. 刪除 **type節點** 。
@@ -116,7 +114,7 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 >
 >Options謂語是包含屬性謂語的自訂包裝函式，用來展示描述的行為。 目前，沒有REST端點可用來支援本機功能。
 
-1. 按一下AEM標誌，然後前往「工 **[!UICONTROL 具 >一 般 > 搜尋表格]**」。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
 1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click the Edit icon.
 1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
 1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如「檔案類 **[!UICONTROL 型」]**。指定在屬性欄位中根據其執行搜索的屬性，例如 `jcr:content/metadata/dc:format.`
@@ -136,9 +134,9 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 ## 添加多值屬性謂語 {#adding-a-multi-value-property-predicate}
 
-「多值屬性」述詞可讓您搜尋資產以尋找多個值。 假設您在AEM Assets中擁有多個產品的影像，且每個影像的中繼資料包含與產品相關聯的SKU編號，這是您的案例。 您可以使用此謂語，根據多個SKU編號搜尋產品影像。
+「多值屬性」述詞可讓您搜尋資產以尋找多個值。 假設您在「資產」中有多個產品的影像，且每個影像的中繼資料包含與產品相關聯的SKU編號。 您可以使用此謂語，根據多個SKU編號搜尋產品影像。
 
-1. 按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** >一 **[!UICONTROL 般]** > **[!UICONTROL 搜尋表格]**」。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 在「搜尋表單」頁面上，選取「 **[!UICONTROL 資產管理搜尋邊欄]**」，按一下「 **[!UICONTROL 編輯]**![aemassets_edit](assets/aemassets_edit.png)」。
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. 也可以使用選擇對話框選擇節點。
@@ -149,9 +147,9 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 ## 新增標籤述詞 {#adding-a-tags-predicate}
 
-「標籤謂語」可讓您執行資產的標籤搜尋。 依預設，AEM Assets會根據您指定的標籤，搜尋資產以尋找一或多個符合的標籤。 換句話說，搜索查詢使用指定的標籤執行OR操作。 不過，您可以使用「符合所有標籤」選項來搜尋包含您所指定之所有標籤的資產。
+「標籤謂語」可讓您執行資產的標籤搜尋。 依預設，「資產」會根據您指定的標籤，搜尋一或多個標籤符合的資產。 換句話說，搜索查詢使用指定的標籤執行OR操作。 不過，您可以使用「符合所有標籤」選項來搜尋包含您所指定之所有標籤的資產。
 
-1. 按一下AEM標誌，然後前往「工 **[!UICONTROL 具]** >一 **[!UICONTROL 般]** > **[!UICONTROL 搜尋表格]**」。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 從「搜尋表單」頁面中，選 **[!UICONTROL 取「資產管理搜尋邊欄]** 」，然後按一 **[!UICONTROL 下「編]** 輯Aemsets_edit ![](assets/aemassets_edit.png)」。
 1. In the Edit Search Form page, drag **[!UICONTROL Tags Predicate]** from the Select Predicate tab to the main pane.
 1. 在「設定」標籤中，輸入謂語的預留位置文字。 Specify the property name based on which the search is to be performed in the property field, for example *jcr:content/metadata/cq:tags*. 或者，也可以從選擇對話框中選擇CRXDE中的節點。
@@ -166,9 +164,9 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 1. 導覽至「搜尋」面板。 The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. 指定您要依據其搜尋資產或從建議清單中選取的標籤。
 
-   ![輸入標籤名稱時的AEM提供建議](assets/chlimage_1-419.png)
+   ![在輸入標籤名稱時，Experience Manager提供的建議](assets/chlimage_1-419.png)
 
-   輸入標籤名稱時的AEM提供建議
+   *圖： 在輸入標籤名稱時，Experience Manager提供的建議。*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
