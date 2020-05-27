@@ -1,20 +1,23 @@
 ---
 title: 將資產與活動串流整合
-description: 說明AEM的錄制功能，以及如何設定AEM以記錄特定事件。
+description: 說明Experience Manager的錄制功能，以及如何設定它以記錄特定事件。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '281'
+ht-degree: 0%
 
 ---
 
 
 # 將資產與活動串流整合 {#integrating-assets-with-activity-stream}
 
-Adobe Experience Manager(AEM)Assets使用者會執行許多動作，例如建立、上傳和刪除資產。 您可以記錄這些動作，以便提供使用者所執行動作的記錄。 本節說明AEM的錄制功能，以及如何設定AEM以記錄特定事件。
+Adobe Experience Manager Assets使用者會執行許多動作，例如建立、上傳和刪除資產。 您可以記錄這些動作，以便提供使用者所執行動作的記錄。 本節說明Experience Manager的錄制功能，以及如何設定Experience Manager以記錄特定事件。
 
 ## 效能考量事項與預設行為 {#performance-considerations-and-default-behavior}
 
-例如，進行批量導入時，此整合可能會佔用CPU和磁碟空間。 基於這些原因，AEM Assets與「活動串流」的整合預設為停用。
+例如，進行批量導入時，此整合可能會佔用CPU和磁碟空間。 基於這些原因，預設會停用與活動串流的資產整合。
 
 ## 支援的動作事件 {#supported-action-events}
 
@@ -36,9 +39,9 @@ Adobe Experience Manager(AEM)Assets使用者會執行許多動作，例如建立
 * 已更新子資產(SUBASSET_UPDATED)
 * 已移除子資產(SUBASSET_REMOVED)
 
-## 設定AEM Assets事件錄制 {#configuring-aem-assets-events-recording}
+## 設定資產事件錄制 {#configuring-aem-assets-events-recording}
 
-Web主 [控台](/help/sites-deploying/configuring-osgi.md) ，可讓您存取AEM Assets事件記錄器微調。 若要設定AEM Assets事件記錄器，請依下列步驟進行：
+Web主 [控台](/help/sites-deploying/configuring-osgi.md) ，可讓您存取Assets事件記錄器微調。 若要設定資產事件記錄器，請依下列步驟進行：
 
 1. 導覽至 **[!UICONTROL Web Console]**
 
