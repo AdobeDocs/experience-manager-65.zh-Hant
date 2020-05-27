@@ -3,9 +3,9 @@ title: 管理影片資產
 description: 瞭解如何上傳、預覽、註解和發佈視訊資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '786'
 ht-degree: 11%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 11%
 
 # 管理影片資產 {#manage-video-assets}
 
-瞭解如何在Adobe Experience Manager(AEM)Assets中管理和編輯視訊資產。 此外，如果您取得使用Dynamic Media的授權，請參閱 [Dynamic Media視訊檔案](/help/assets/video.md)。
+瞭解如何在Adobe Experience Manager Assets中管理和編輯視訊資產。 此外，如果您取得使用Dynamic Media的授權，請參閱 [Dynamic Media視訊檔案](/help/assets/video.md)。
 
 ## 上傳和預覽視訊資產 {#upload-and-preview-video-assets}
 
-Adobe Experience Manager Assets會使用擴充功能MP4產生視訊資產的預覽。 如果資產的格式不是MP4，請安裝FFmpeg套件以產生預覽。 Fmpeg會建立OGG和MP4類型的視訊轉譯。 您可以在AEM Assets使用者介面中預覽這些轉譯。
+Adobe Experience Manager Assets會使用擴充功能MP4產生視訊資產的預覽。 如果資產的格式不是MP4，請安裝FFmpeg套件以產生預覽。 Fmpeg會建立OGG和MP4類型的視訊轉譯。 您可以在「資產」使用者介面中預覽這些轉譯。
 
 1. 在「數位資產」檔案夾或子檔案夾中，導覽至您要新增數位資產的位置。
 1. 若要上傳資產，請按一下工 **[!UICONTROL 具列中的]** 「建立」，然後選擇「 **[!UICONTROL 檔案」]**。 或者，直接將它拖曳至資產區域。 如需 [上傳作業的詳細資訊](managing-assets-touch-ui.md#uploading-assets) ，請參閱上傳資產。
@@ -44,11 +44,11 @@ Adobe Experience Manager Assets會使用擴充功能MP4產生視訊資產的預�
 
 >[!NOTE]
 >
->AEM Classic使用者介面沒有2 GB檔案大小限制。 此外，大型視訊的端對端工作流程也未完全受支援。
+>Experience Manager Classic使用者介面沒有2 GB檔案大小限制。 此外，大型視訊的端對端工作流程也未完全受支援。
 
 要配置較高的檔案大小限制，請在目錄中執行以下 `/apps` 步驟。
 
-1. In AEM, click **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. 在Experience Manager中，按一下「 **[!UICONTROL 工具]** >一 **[!UICONTROL 般]** > **[!UICONTROL CRXDE Lite]**」。
 1. 在CRXDE Lite中，導覽至 `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`。 要查看目錄窗口，請觸摸圖 `>>` 標。
 1. From the toolbar, click the **[!UICONTROL Overlay Node]**. 或者，從上 **[!UICONTROL 下文選單選取]** 「覆蓋節點」。
 1. In the **[!UICONTROL Overlay Node]** dialog, click **[!UICONTROL OK]**.
@@ -59,11 +59,11 @@ Adobe Experience Manager Assets會使用擴充功能MP4產生視訊資產的預�
 1. 在「屬 **[!UICONTROL 性]** 」索引標籤中，輸入適當的值（以位元組為單位），將大小限制增加到所需大小。 例如，要將大小限制增加到30 GB，請輸入 `{sizeLimit : "32212254720"}` 值。
 
 1. 從工具列，按一下「全 **[!UICONTROL 部儲存」]**。
-1. In AEM, click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. 在Experience Manager中，按一下「 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 1. 在「Adobe Experience Manager Web Console Bundles」頁面的表格「名稱」欄下方，找到並按一下「 **[!UICONTROL Adobe Granite Workflow External Process Job Handler」]**。
 1. 在「Adobe Granite Workflow External Process Job Handler」 (Adobe Granite工作流程外部流程作業處理程式) 頁面中，將「 **[!UICONTROL Default Timeout]** 」(預設逾時 **[!UICONTROL )和「]** Max Timeout `18000` 」 (最大逾時) 欄位的秒數設為 (5小時)。
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
-1. 在AEM中，按一下「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]**」。
+1. 在Experience Manager中，按一下「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]****[!UICONTROL >]**&#x200B;模型」。
 1. 在「工作流程模型」頁面上，選取「 **[!UICONTROL 動態媒體編碼視訊」]**，然後按一下「 **[!UICONTROL 編輯」]**。
 1. 在工作流程頁面上，按兩下「動態媒 **[!UICONTROL 體視訊服務程式」元件]** 。
 1. 在「步 [!UICONTROL 驟屬性] 」對話框的「常用」頁籤下，展開「 **[!UICONTROL 高級設定」]******。
@@ -90,4 +90,4 @@ Adobe Experience Manager Assets會使用擴充功能MP4產生視訊資產的預�
 
 1. 要在時間軸中查看，請按一下注釋。 要從時間軸刪除注釋，請按一下「刪 **[!UICONTROL 除」]**。
 
-   ![chlimage_1-78](assets/chlimage_1-206.png)
+   ![chlimage_1-70](assets/chlimage_1-206.png)
