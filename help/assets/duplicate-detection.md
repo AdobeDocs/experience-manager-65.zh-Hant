@@ -1,26 +1,29 @@
 ---
 title: 可偵測重複資產
-description: 瞭解如何在AEM中啟用重複資產的偵測。
+description: 瞭解如何在Experience Manager中啟用重複資產的偵測。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
 # 可偵測重複資產 {#enable-detection-of-duplicate-assets}
 
-如果您嘗試上傳存在於Adobe Experience Manager(AEM)Assets中的資產，重複偵測功能會將其識別為重複。 預設會停用重複偵測。 要啟用該功能，請執行以下步驟：
+如果您嘗試上傳Adobe Experience Manager Assets中的資產，重複偵測功能會將其識別為重複。 預設會停用重複偵測。 要啟用該功能，請執行以下步驟：
 
-1. 存取以開啟「AEM Web Console設定」頁 `https://[aem_server]:[port]/system/console/configMgr`面。
+1. 存取以開啟「Experience Manager Web Console設定」頁 `https://[aem_server]:[port]/system/console/configMgr`面。
 1. 編輯servlet日CQ DAM創 **[!UICONTROL 建資產的配置]**。
 1. 選擇「檢 **[!UICONTROL 測重複]** 」選項，然後單 **[!UICONTROL 擊「保存」]**。
 
    ![在servlet中選擇檢測重複選項](assets/chlimage_1-377.png)
 
-   *圖：在servlet中選擇檢測重複選項*
+   *圖： 在servlet中選擇檢測重複選項*
 
-AEM Assets現在已啟用偵測重複功能。 當使用者嘗試上傳AEM中存在的資產時，系統會檢查衝突並指出衝突。 資產使用儲存於的SHA-1雜湊來識別，這表 `jcr:content/metadata/dam:sha1`示不論檔案名稱為何，都會偵測到重複資產。
+偵測重複功能現在已在「資產」中啟用。 當使用者嘗試上傳Experience Manager中的資產時，系統會檢查衝突並指出衝突。 資產使用儲存於的SHA-1雜湊來識別，這表 `jcr:content/metadata/dam:sha1`示不論檔案名稱為何，都會偵測到重複資產。
 
 >[!MORELIKETHIS]
 >
