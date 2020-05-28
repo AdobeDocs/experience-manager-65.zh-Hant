@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33fab976729baa09fdfd3725542f9e6bc7f37eeb
+source-git-commit: 49209cb64c829fde396e87ca4b2e326ecf1dd941
+workflow-type: tm+mt
+source-wordcount: '1634'
+ht-degree: 8%
 
 ---
 
@@ -25,7 +28,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 ## Deprecated Features {#deprecated-features}
 
-本節列出已標示為不再提倡的AEM 6.5功能。通常，計畫在未來版本中移除的功能會先設為不建議使用，並提供其他選項。
+本節列出已標示為不再提倡的AEM 6.5功能。 通常，計畫在未來版本中移除的功能會先設為不建議使用，並提供其他選項。
 
 建議客戶檢視是否在目前的部署中使用這些功能，並規劃變更實作，改為使用所提供的替代方案。
 
@@ -86,25 +89,8 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
   </tr>
   <tr>
    <td>元件(AEM Sites)</td>
-   <td>Design Importer元件/libs/wcm/designimporter/components已標示為自6.5起已過時。Adobe不打算對該設計匯入工具的實作進行進一步的增強。</td>
+   <td>Design Importer元件/libs/wcm/designimporter/components已標示為自6.5起已過時。 Adobe不打算對該設計匯入工具的實作進行進一步的增強。</td>
    <td>Adobe計畫在未來版本中提供此使用案例的替代實作。</td>
-  </tr>
-  <tr>
-   <td>元件(AEM Forms)</td>
-   <td><p>簽名步驟可讓使用者驗證並簽署最適化表單。 在舊版中，簽名步驟可以同時使用Adobe Sign和Scribble Signature元件做為簽名欄位。 在AEM 6.5 Forms中，「簽名步驟」的「Scribble Signature」（草簽簽名）簽署體驗已過時。</p> </td>
-   <td>
-    <ul>
-     <li>如果您已執行新安裝：
-      <ul>
-       <li>在最適化表單的「簽名」步驟中使用Adobe Sign型簽署體驗。</li>
-       <li>在最適化表單、互動式通訊和HTML5表單中使用單機版塗鴉簽名元件。</li>
-      </ul> </li>
-     <li>如果您已從舊版升級至AEM 6.5 Forms:<br />
-      <ul>
-       <li>在已使用此功能的表單中，繼續使用「簽名步驟」的Scribble簽名簽署體驗。<br /> </li>
-       <li>當您建立表格時，請在「簽名」步驟中使用獨立的Scribble Signature元件或以Adobe Sign為基礎的簽署體驗。 </li>
-      </ul> </li>
-    </ul> <p> </p> <p> </p> </td>
   </tr>
   <tr>
    <td>基礎</td>
@@ -161,7 +147,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 ## Removed Features {#removed-features}
 
-本節列出已從AEM 6.5移除的功能。舊版的這些功能已標示為已過時。
+本節列出已從AEM 6.5移除的功能。 舊版的這些功能已標示為已過時。
 
 | 區域 | 功能 | 替代方案 |
 |--- |--- |--- |
