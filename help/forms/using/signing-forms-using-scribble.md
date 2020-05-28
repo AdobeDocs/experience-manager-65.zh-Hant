@@ -1,6 +1,6 @@
 ---
-title: 使用（已過時）塗鴉簽名將電子簽名套用至表格
-seo-title: 使用（已過時）塗鴉簽名將電子簽名套用至表格
+title: 使用塗鴉簽名將電子簽名套用至表格
+seo-title: 使用塗鴉簽名將電子簽名套用至表格
 description: 使用塗鴉簽署表格
 seo-description: 使用塗鴉簽署表格
 uuid: ffeba886-9b24-4ed1-95c0-e19356ff2f23
@@ -9,14 +9,17 @@ topic-tags: author
 discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 92a64c8a1ba38f592d18355b8233cb79a2575301
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '510'
+ht-degree: 0%
 
 ---
 
 
-# 使用（已過時）塗鴉簽名將電子簽名套用至表格{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
+# 使用塗鴉簽名將電子簽名套用至表格{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
 
-您可以使用（已過時） **Scribble Signature** (指令碼簽名 **)元件和** Signature Step（簽名步驟）元件，在最適化表單上繪製（指令碼）簽名。 「簽名」步驟元件會顯示最適化表單的PDF版本。 您需要啟用記錄檔案選項或以表單範本為基礎的最適化表單，才能使用簽名步驟元件。
+您可以使用 **Scribble Signature** (塗鴉簽名 **)元件和** Signature Step（簽名步驟）元件，在最適化表單上繪製（塗鴉）簽名。 「簽名」步驟元件會顯示最適化表單的PDF版本。 您需要啟用記錄檔案選項或以表單範本為基礎的最適化表單，才能使用簽名步驟元件。
 
 這兩個元件都提供一個視窗，如下所示，可簽署表格。 您也可以按一下地理位 ![置圖示aem_6_3_geolocation](assets/aem_6_3_geolocation.png) ，將地理位置新增至簽名。
 
@@ -41,13 +44,13 @@ source-git-commit: 92a64c8a1ba38f592d18355b8233cb79a2575301
 
 1. 點選「設 **定**![設定](assets/configure.png) 」圖示。 它會開啟屬性瀏覽器並顯示「簽名」步驟屬性。 設定下列屬性：
 
-   * **元素名稱**:指定元件的名稱。
+   * **元素名稱**: 指定元件的名稱。
 
-   * **** 標題：指定元件的唯一標題。
-   * **** 範本訊息：指定在載入簽名PDF時要顯示的訊息。 Adobe Sign services需要一些時間來準備和載入簽名PDF。
-   * **** 簽署服務：選取「 **Scribble Signature** 」（塗鴉簽名）選項。
+   * **標題：** 指定元件的唯一標題。
+   * **範本訊息：** 指定在載入簽名PDF時要顯示的訊息。 Adobe Sign Services需要一些時間來準備和載入簽名PDF。
+   * **簽署服務：** 選取「 **Scribble Signature** 」（塗鴉簽名）選項。
 
-   * **CSS類別**:指定用戶端程式庫的CSS類別（如果有）。 建議使用主 [題](../../forms/using/themes.md)[和行內](../../forms/using/inline-style-adaptive-forms.md) 樣式，而非CSS類別。
+   * **CSS類別**: 指定用戶端程式庫的CSS類別（如果有）。 建議使用主 [題](../../forms/using/themes.md)[和行內](../../forms/using/inline-style-adaptive-forms.md) 樣式，而非CSS類別。
    點選「Done ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」圖示以儲存變更。 簽名已成功配置。
 
    現在，當您填寫表格時，會顯示PDF版的最適化表格，並提供簽署PDF檔案的選項。 如需詳細資訊，請參 [閱使用塗鴉簽名簽署最適化表格](../../forms/using/signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature)。
