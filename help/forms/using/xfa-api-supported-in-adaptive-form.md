@@ -9,7 +9,10 @@ topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '700'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +61,7 @@ source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
   </tr>
   <tr>
    <td><p>簽名塗鴉</p> </td>
-   <td><p>（已過時）塗鴉簽名</p> </td>
+   <td><p>草寫簽名</p> </td>
   </tr>
   <tr>
    <td><p>數值欄位 </p> </td>
@@ -122,19 +125,19 @@ source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
    <td><p>以最適化形式映射至enabled屬性。 您可以使用「存取」運算式來覆寫它。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能：角色 </p> </td>
+   <td><p>協助功能： 角色 </p> </td>
    <td><p>映射至最適化格式的角色屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能：speakPriority </p> </td>
+   <td><p>協助功能： speakPriority </p> </td>
    <td><p>以最適化形式映射至speakPriority屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能：speakText</p> </td>
+   <td><p>協助功能： speakText</p> </td>
    <td><p>以最適化格式對應至自訂協助工具文字。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能：工具提示 </p> </td>
+   <td><p>協助功能： 工具提示 </p> </td>
    <td><p>映射至最適化格式的簡短描述屬性。</p> </td>
   </tr>
   <tr>
