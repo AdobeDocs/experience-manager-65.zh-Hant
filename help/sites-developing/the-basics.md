@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: 2d0e0325d1fce2587e4766bf2f60fc5d4accf45b
+source-git-commit: fc09ba6cb923d9ea25ec14af093d7f86a4835d85
+workflow-type: tm+mt
+source-wordcount: '3365'
+ht-degree: 0%
 
 ---
 
@@ -43,11 +46,11 @@ Java Content Repository(JCR)標準 [JSR 283](https://docs.adobe.com/content/docs
 
 規格領導由Adobe Research（瑞士）AG負責。
 
-JCR [API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) , javax.jcr.&amp;ast;用於直接訪問和控制儲存庫內容。
+JCR [API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) , javax.jcr.&amp;ast; 用於直接訪問和控制儲存庫內容。
 
 ## Experience Server(CRX)和Jackrabbit {#experience-server-crx-and-jackrabbit}
 
-Experience server提供AEM所建立的Experience Services，並可用來建立自訂應用程式，並內嵌以Jackrabbit為基礎的內容存放庫。
+Experience Server提供AEM所建立的Experience Services，並可用來建立自訂應用程式，並內嵌以Jackrabbit為基礎的內容存放庫。
 
 [Apache Jackrabbit](https://jackrabbit.apache.org/) 是JCR API 2.0的開放原始碼，完全符合規範。
 
@@ -63,7 +66,7 @@ AEM是使用 [Sling](https://sling.apache.org/site/index.html)（以REST原則�
 
 請參 [閱Discover Sling in 15 minutes](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html) for the first steps for developing with Sling。
 
-下圖說明Sling指令碼解析度：它說明如何從HTTP請求到內容節點，從內容節點到資源類型，從資源類型到指令碼，以及可用的指令碼變數。
+下圖說明Sling指令碼解析度： 它說明如何從HTTP請求到內容節點，從內容節點到資源類型，從資源類型到指令碼，以及可用的指令碼變數。
 
 ![chlimage_1-84](assets/chlimage_1-97.png)
 
@@ -82,11 +85,11 @@ Sling是以 *內容為中心*。 這表示處理會以JCR資源（儲存庫節�
 
 由於內容導向的理念，Sling建置了REST導向的伺服器，因此在Web應用程式架構中具備新概念。 其優點是：
 
-* 非常REST風格，不只是表面上；資源和表示法在伺服器內正確建模
+* 非常REST風格，不只是表面上； 資源和表示法在伺服器內正確建模
 * 刪除一個或多個資料模型
 
-   * 之前需要下列項目：URL結構、業務對象、資料庫模式；
-   * 現在，此功能已簡化為：URL =資源= JCR結構
+   * 之前需要下列項目： URL結構、業務對象、資料庫模式；
+   * 現在，此功能已簡化為： URL =資源= JCR結構
 
 ### URL分解 {#url-decomposition}
 
@@ -108,11 +111,11 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 **host** Name of the website.
 
-**內容路徑** ：指定要呈現內容的路徑。 與擴展結合使用；在此範例中，它們會轉譯為tools/spy.html。
+**內容路徑** ：指定要呈現內容的路徑。 與擴展結合使用； 在此範例中，它們會轉譯為tools/spy.html。
 
-**selector(s)** ，用於轉換內容的替代方法；在此示例中，A4格式的打印機友好版本。
+**selector(s)** ，用於轉換內容的替代方法； 在此示例中，A4格式的打印機友好版本。
 
-**extension** Content格式；也指定要用於呈現的指令碼。
+**extension** Content格式； 也指定要用於呈現的指令碼。
 
 **suffix** Can be used to specify additional information.
 
@@ -135,8 +138,8 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 請求會細分並擷取必要的資訊。 系統將搜索儲存庫以查找請求的資源（內容節點）:
 
-* first Sling會檢查節點是否存在於請求中指定的位置；例如， `../content/corporate/jobs/developer.html`
-* 如果沒有找到節點，則會丟棄擴展，並重複搜索；例如， `../content/corporate/jobs/developer`
+* first Sling會檢查節點是否存在於請求中指定的位置； 例如， `../content/corporate/jobs/developer.html`
+* 如果沒有找到節點，則會丟棄擴展，並重複搜索； 例如， `../content/corporate/jobs/developer`
 * 如果找不到節點，Sling將會傳回http code 404(Not Found)。
 
 Sling也允許JCR節點以外的項目成為資源，但這是進階功能。
@@ -159,10 +162,10 @@ Sling也允許JCR節點以外的項目成為資源，但這是進階功能。
 * 當需要方法(GET、POST)時，會根據HTTP規格（例如jobs.POST.esp）以大寫指定方法（請參閱下面）
 * 支援各種指令碼引擎：
 
-   * `.esp, .ecma`:ECMAScript(JavaScript)頁面（伺服器端執行）
-   * `.jsp`:Java伺服器頁（伺服器端執行）
-   * `.java`:Java Servlet編譯器（伺服器端執行）
-   * `.jst`:JavaScript範本（用戶端執行）
+   * `.esp, .ecma`: ECMAScript(JavaScript)頁面（伺服器端執行）
+   * `.jsp`: Java伺服器頁（伺服器端執行）
+   * `.java`: Java Servlet編譯器（伺服器端執行）
+   * `.jst`: JavaScript範本（用戶端執行）
 
 AEM的指定例項支援的指令碼引擎清單會列在Felix Management Console( `http://<host>:<port>/system/console/slingscripting`)上。
 
@@ -172,7 +175,7 @@ AEM的指定例項支援的指令碼引擎清單會列在Felix Management Consol
 
 * 以。html結尾的GET/HEAD請求和URL（預設請求類型，預設格式）
 
-   指令碼將為/apps/hr/jobs/jobs.esp;sling:resourceType的最後一個區段會形成檔案名稱。
+   指令碼將為/apps/hr/jobs/jobs.esp; sling:resourceType的最後一個區段會形成檔案名稱。
 
 * POST請求（除GET/HEAD外的所有請求類型，方法名稱必須大寫）
 
@@ -182,17 +185,17 @@ AEM的指定例項支援的指令碼引擎清單會列在Felix Management Consol
 
 * 其他格式的URL，不以。html結尾
 
-   例如 `../content/corporate/jobs/developer.pdf`
+   For example `../content/corporate/jobs/developer.pdf`
 
-   劇本是 `/apps/hr/jobs/jobs.pdf.esp`;尾碼將添加到指令碼名稱中。
+   劇本是 `/apps/hr/jobs/jobs.pdf.esp`; 尾碼將添加到指令碼名稱中。
 
 * 具有選擇器的URL
 
    選擇器可用來以替代格式顯示相同的內容。 例如，印表機友好版本、RSS饋送或摘要。
 
-   如果我們查看打印機友好版本，選擇器可以打印 *出來*;as in `../content/corporate/jobs/developer.print.html`
+   如果我們查看打印機友好版本，選擇器可以打印 *出來*; as in `../content/corporate/jobs/developer.print.html`
 
-   劇本是 `/apps/hr/jobs/jobs.print.esp`;選取器會新增至指令碼名稱。
+   劇本是 `/apps/hr/jobs/jobs.print.esp`; 選取器會新增至指令碼名稱。
 
 * 如果未定義sling:resourceType，則：
 
@@ -205,14 +208,15 @@ AEM的指定例項支援的指令碼引擎清單會列在Felix Management Consol
 * 如果根本找不到指令碼，則將使用預設指令碼。
 
    預設轉譯目前支援純文字(.txt)、HTML(.html)和JSON(.json)，所有這些都會列出節點的屬性（適當格式化）。 副檔名。res（或請求副檔名沒有請求副檔名）的預設轉譯，是將資源轉存（如果可能）。
-* 對於http錯誤處理（代碼403或404）,Sling會在下列任一處尋找指令碼：
+* 對於http錯誤處理（代碼403或404）,Sling會在以下任一處尋找指令碼：
 
    * 自訂指令碼的位置/apps/sling/servlet/errorhandler [](/help/sites-developing/customizing-errorhandler-pages.md)
    * 或標準指令碼/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
 
-如果多個指令碼套用至指定的請求，則會選取最符合的指令碼。 比賽越具體，越好；換言之，無論任何請求副檔名或方法名稱相符，選擇器與選取器的匹配程度都越高。
+如果多個指令碼套用至指定的請求，則會選取最符合的指令碼。 比賽越具體，越好； 換言之，無論任何請求副檔名或方法名稱相符，選擇器與選取器的匹配程度都越高。
 
-例如，考慮請求訪問類型`/content/corporate/jobs/developer.print.a4.html`的資源`sling:resourceType="hr/jobs"`
+例如，考慮請求訪問類型`/content/corporate/jobs/developer.print.a4.html`的資源
+`sling:resourceType="hr/jobs"`
 
 假設我們在正確位置有下列指令碼清單：
 
@@ -256,20 +260,27 @@ AEM的指定例項支援的指令碼引擎清單會列在Felix Management Consol
 
 
 
-/x的類型階層為 [ c、b、a、&lt;default>] ，而/y的階層為[ c、a、
+以下類型的層次結構：
+
+* `/x`
+   * 是 `[ c, b, a, <default>]`
+* while for `/y`
+   * 階層是 `[ c, a, <default>]`
+
+這是因為 `/y` 有屬性， `sling:resourceSuperType` 但 `/x` 沒有，因此其超類型取自其資源類型。
 
 #### 無法直接呼叫Sling Scripts {#sling-scripts-cannot-be-called-directly}
 
-在Sling中，無法直接呼叫指令碼，因為這會打破REST伺服器的嚴格概念；你會混合資源和陳述。
+在Sling中，無法直接呼叫指令碼，因為這會打破REST伺服器的嚴格概念； 你會混合資源和陳述。
 
 如果您直接呼叫表示法（指令碼），就會隱藏指令碼內的資源，因此架構(Sling)不再知道。 因此，您會失去某些功能：
 
-* 自動處理http方法（GET除外），包括：
+* 自動處理GET以外的http方法，包括：
 
    * POST、PUT、DELETE，這些處理方式都包含sling預設實作
    * sling: `POST.jsp` resourceType位置中的指令碼
 
-* 您的程式碼架構已不再簡潔，也不再像原本那樣清晰；對於大規模發展至關重要
+* 您的程式碼架構已不再簡潔，也不再像原本那樣清晰； 對於大規模發展至關重要
 
 ### Sling API {#sling-api}
 
@@ -356,7 +367,7 @@ AEM已使用Widget的ExtJS程式庫來開發。
 
 **元件** ：軟體元件是提供預定義服務或事件的系統元件，並且能夠與其他元件通信。
 
-在AEM中，元件通常用於轉譯資源的內容。 當資源是頁面時，轉換該資源的元件稱為頂層元件或分頁元件。 但是，元件不需要轉譯內容，也不需要連結至特定資源；例如，導覽元件將顯示多個資源的相關資訊。
+在AEM中，元件通常用於轉譯資源的內容。 當資源是頁面時，轉換該資源的元件稱為頂層元件或分頁元件。 但是，元件不需要轉譯內容，也不需要連結至特定資源； 例如，導覽元件將顯示多個資源的相關資訊。
 
 元件的定義包括：,
 
@@ -405,7 +416,7 @@ Page myPage = pageManager.getContainingPage(myResource);
 
 * `/apps`
 
-   與申請有關；包含您網站專屬的元件定義。 您開發的元件可以以位於的立即可用元件為基礎 `/libs/foundation/components`。
+   與申請有關； 包含您網站專屬的元件定義。 您開發的元件可以以位於的立即可用元件為基礎 `/libs/foundation/components`。
 
 * `/content`
 
@@ -427,11 +438,11 @@ Page myPage = pageManager.getContainingPage(myResource);
 
 * `/var`
 
-   系統更改和更新的檔案；例如審核記錄、統計資料、事件處理。 子資料夾包 `/var/classes` 含源和編譯表單中的java servlet，這些表單已從元件指令碼生成。
+   系統更改和更新的檔案； 例如審核記錄、統計資料、事件處理。 子資料夾包 `/var/classes` 含源和編譯表單中的java servlet，這些表單已從元件指令碼生成。
 
 ## 環境 {#environments}
 
-有了AEM，生產環境通常包含兩種不同的例項類型：作 [者和發佈例項](/help/sites-deploying/deploy.md#author-and-publish-installs)。
+有了AEM，生產環境通常包含兩種不同的例項類型： 作 [者和發佈例項](/help/sites-deploying/deploy.md#author-and-publish-installs)。
 
 ## The Dispatcher {#the-dispatcher}
 
@@ -439,7 +450,7 @@ Dispatcher是Adobe的快取和／或負載平衡工具。 有關詳細資訊，�
 
 ## FileVault（源修訂版系統） {#filevault-source-revision-system}
 
-FileVault為JCR儲存庫提供檔案系統映射和版本控制。 它可用來管理AEM開發專案，完全支援在標準版控制系統（例如Subversion）中儲存和修訂專案程式碼、內容、設定等。
+FileVault為JCR儲存庫提供檔案系統映射和版本控制。 它可用來管理AEM開發專案，完全支援在標準版控制系統（例如Subversion）中儲存和修訂專案程式碼、內容、組態等。
 
 如需詳細 [資訊，請參閱](/help/sites-developing/ht-vlttool.md) 「FileVault工具」檔案。
 
