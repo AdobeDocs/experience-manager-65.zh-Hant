@@ -9,7 +9,10 @@ topic-tags: publish
 discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 182043b43e9fdb2e7e6de982bceb87b43f36a3ba
+source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+workflow-type: tm+mt
+source-wordcount: '869'
+ht-degree: 19%
 
 ---
 
@@ -331,7 +334,7 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
 
 1. 您可以在OSGi上使用表單導向的AEM工作流程來簽署填充的最適化表單。 OSGi上的表單導向AEM工作流程支援表單簽署。 不 [支援表單簽署](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 。
 
-1. 您需要存取AEM Inbox，才能在AEM Forms OSGi和HTML Workspace上執行和監視「表單導向」工作流程，以執行和監視AEM Forms JEE工作流程。
+1. 您必須存取AEM Inbox，才能在AEM Forms OSGi和HTML Workspace上執行和監控「表單導向」工作流程，以執行和監控AEM Forms JEE工作流程。
 1. 原生AEM Forms Document Services適用於OSGi上的表單導向AEM工作流程和JEE工作流程上的AEM Forms。 AEM Workflow使用原生檔案服務，在OSGi和AEM Forms JEE（流程管理）工作流程中使用表單導向的AEM工作流程。
 1. AEM Forms JEE Workflows只能轉譯最適化表單。 它不支援將最適化表單轉換為PDF檔案。
 1. AEM表單JEE工作流程沒有Adobe Sign的個別步驟。 您需要AEM表單JEE工作流程中啟用Adobe Sign的最適化表單。 如需詳細資訊，請參 [閱Adobe Sign檔案](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
