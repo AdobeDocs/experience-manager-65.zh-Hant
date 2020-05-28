@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 68cd1c13fff94ac485865e50bc955548cd285b14
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '1180'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ Adobe Extensible Metadata Platform(XMP)為Adobe應用程式提供通用的XML架
 >* HTML至PDF功能需要系統字型目錄中的特定字型。 在Linux、Solaris和AIX系統上，系統字型目錄必須包含Courier字型。 在Windows系統上，系統字型目錄必須包含Times New Roman。
    >
    > 
-* 以下是Linux上AEM Forms的預設日文字型。 至少>其中一個字型應可在>system中轉換日文字型。
+* （僅限UNIX系統）AEM Forms伺服器上應提供下列其中一種日文字型，以將具有日文字型的網頁轉換為PDF檔案。
    >
    >   
    * &quot;薩扎納米哥特&quot;
