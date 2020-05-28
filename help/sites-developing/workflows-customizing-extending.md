@@ -10,7 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+workflow-type: tm+mt
+source-wordcount: '3587'
+ht-degree: 1%
 
 ---
 
@@ -47,7 +50,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 >
 >配置和其他更改的建議方法為：
 >
->1. 重新建立所需項目(例如，在 `/libs``/apps`
+>1. 重新建立所需項目(例如，在 `/libs` `/apps`
 >2. 在 `/apps`
 
 
@@ -63,8 +66,8 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
    具有以下頁籤的對話框：
 
-   * **常見**:編輯標題和說明。
-   * **進階**:編輯電子郵件通知屬性。
+   * **常見**: 編輯標題和說明。
+   * **進階**: 編輯電子郵件通知屬性。
    ![wf-44](assets/wf-44.png)![wf-45](assets/wf-45.png)
 
    >[!NOTE]
@@ -78,9 +81,9 @@ ECMA指令碼中提供以下對象（取決於步驟類型）:
 * [WorkItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkItem.html) workItem
 * [WorkflowSession](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) workflowSession
 * [WorkflowData](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) workflowData
-* `args`:array with process arguments.
+* `args`: array with process arguments.
 
-* `sling`:存取其他網站服務。
+* `sling`: 存取其他網站服務。
 * `jcrSession`
 
 ### MetaDataMaps {#metadatamaps}
@@ -101,7 +104,7 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 
 * 名稱: `sling:resourceSuperType`
 * 類型: `String`
-* 值：解析為基本元件的下列路徑之一：
+* 值： 解析為基本元件的下列路徑之一：
 
    * `cq/workflow/components/model/process`
    * `cq/workflow/components/model/participant`
@@ -115,7 +118,7 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 >
 >當滿足以下兩個要求時，欄位值將出現在步驟實例中：
 >
->* 步驟的編輯對話框將標題和說明儲存在以下位置：>
+>* 步驟的編輯對話框將標題和說明儲存在以下位置： >
 >* `./jcr:title`
 >* `./jcr:description` 位置
 >
@@ -140,8 +143,8 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 
 1. 將下 `String` 列名稱的屬性添加到節 `cq:formParameters` 點：
 
-   * `jcr:title`:該值填充了「 **常用** 」( **Common** )頁籤的「標題」(Title)欄位。
-   * `jcr:description`:該值填充了「 **常用** 」( **Common** )頁籤的「說明」(Description)欄位。
+   * `jcr:title`: 該值填充了「 **常用** 」( **Common** )頁籤的「標題」(Title)欄位。
+   * `jcr:description`: 該值填充了「 **常用** 」( **Common** )頁籤的「說明」(Description)欄位。
 
 ### 在工作流元資料中保存屬性值 {#saving-property-values-in-workflow-metadata}
 
@@ -169,11 +172,11 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 
 每個基本步驟元件都可讓工作流程模型開發人員在設計時設定下列主要功能：
 
-* 流程步驟：要在運行時執行的服務或ECMA指令碼。
-* 參與者步驟：指派給所產生工作項目之使用者的ID。
-* 動態參與者步驟：選擇指派工作項目之使用者ID的服務或ECMA指令碼。
+* 流程步驟： 要在運行時執行的服務或ECMA指令碼。
+* 參與者步驟： 指派給所產生工作項目之使用者的ID。
+* 動態參與者步驟： 選擇指派工作項目之使用者ID的服務或ECMA指令碼。
 
-若要將元件集中用於特定的工作流程藍本中，請在設計中設定關鍵功能，並移除模型開發人員變更它的功能。
+若要將元件集中用於特定的工作流程藍本，請在設計中設定關鍵功能，並移除模型開發人員變更它的功能。
 
 1. 在cq:component節點下方，新增下列節點：
 
@@ -194,9 +197,9 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 
 1. 指定屬性的值：
 
-   * `PROCESS`:實施步驟行為的ECMA指令碼或服務的PID路徑。
-   * `PARTICIPANT`:指派給工作項目之使用者的ID。
-   * `DYNAMIC_PARTICIPANT`:指向ECMA指令碼或選擇用戶指派工作項的服務的PID的路徑。
+   * `PROCESS`: 實施步驟行為的ECMA指令碼或服務的PID路徑。
+   * `PARTICIPANT`: 指派給工作項目之使用者的ID。
+   * `DYNAMIC_PARTICIPANT`: 指向ECMA指令碼或選擇用戶指派工作項的服務的PID的路徑。
 
 1. 若要移除模型開發人員變更屬性值的能力，請覆寫元件super類型的對話方塊。
 
@@ -224,13 +227,13 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 
    * 名稱: `FORM_PATH`
    * 類型: `String`
-   * 值：解析為表單的路徑
+   * 值： 解析為表單的路徑
 
 1. 要在用戶完成工作項目時顯示自定義對話框，請將以下屬性添加到節 `cq:formParameters` 點
 
    * 名稱: `DIALOG_PATH`
    * 類型: `String`
-   * 值：解析到對話框的路徑
+   * 值： 解析到對話框的路徑
 
 ### 設定工作流程步驟執行時期行為 {#configuring-the-workflow-step-runtime-behavior}
 
@@ -242,12 +245,12 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
    * 值:
 
       * 當設為工作 `true` 流程時，將執行該步驟並繼續——這是預設值，也建議
-      * 工作 `false`流程將運行並停止；這需要額外的處理，所以 `true` 建議
+      * 工作 `false`流程將運行並停止； 這需要額外的處理，所以 `true` 建議
 
 * 名稱: `DO_NOTIFY`
 
    * 類型: `Boolean`
-   * 值：指出是否應針對使用者參與步驟傳送電子郵件通知（並假設郵件伺服器已正確設定）
+   * 值： 指出是否應針對使用者參與步驟傳送電子郵件通知（並假設郵件伺服器已正確設定）
 
 ## 保存和訪問資料 {#persisting-and-accessing-data}
 
@@ -313,9 +316,9 @@ while (iterator.hasNext()){
 
 * 在ECMA指令碼實作中，值可使用和變 `args` 數 `metadata` 來。
 
-### 範例：檢索進程步驟元件的參數 {#example-retrieving-the-arguments-of-the-process-step-component}
+### 範例： 檢索進程步驟元件的參數 {#example-retrieving-the-arguments-of-the-process-step-component}
 
-「流程步驟」元件的 **編輯對話框** ，包含 **Arguments屬性** 。 Arguments屬性的值 **儲存在** worklow元資料中，並與鍵相 `PROCESS_ARGS` 關。
+「流程步驟」元件的 **編輯對話框** ，包含 **Arguments屬性** 。 Arguments屬性的值 **儲存在工作流元資料中** ，並與鍵相關聯 `PROCESS_ARGS` 。
 
 在下圖中， **Arguments屬性的值** 為 `argument1, argument2`:
 
@@ -358,7 +361,7 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
 >本節介紹如何使用流程步驟的參數。 此資訊也適用於動態參與者選擇器。
 
 >[!NOTE]
->如需將元件屬性儲存在工作流程中繼資料中的另一個範例，請參閱範例：建立記錄程式工作流程步驟。 此範例包含一個對話方塊，可將中繼資料值與PROCESS_ARGS以外的索引鍵建立關聯。
+>如需將元件屬性儲存在工作流程中繼資料中的另一個範例，請參閱範例： 建立記錄程式工作流程步驟。 此範例包含一個對話方塊，可將中繼資料值與PROCESS_ARGS以外的索引鍵建立關聯。
 
 ### 指令碼和進程引數 {#scripts-and-process-arguments}
 
@@ -391,7 +394,7 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
 1. 添加SCR屬 `process.label` 性並根據需要設定值。 這將是使用通用「流程步驟」( **Process Step** )元件時列出的流程步驟的名稱。 請參閱以下範例。
 1. 在「模 **型** 」編輯器中，使用通用「流程步驟」( **Process Step)元件將流程步驟添加到工作流中** 。
 1. 在編輯對話框(「流程步 **驟」**)中，轉至「流程」 **** 頁籤並選擇流程實施。
-1. 如果在代碼中使用參數，請設定「 **進程參數」**。 例如：false。
+1. 如果在代碼中使用參數，請設定「 **進程參數」**。 例如： false。
 1. 保存步驟和工作流模型（模型編輯器的左上角）的更改。
 
 Java方法（分別是實現可執行Java方法的類）註冊為OSGI服務，使您能夠在運行時隨時添加方法。
@@ -476,7 +479,7 @@ ECMA指令碼可讓指令碼開發人員建置程式步驟。 這些指令碼位
 | `com.adobe.granite.workflow.metadata.MetaDataMap` | `metaData` | 當前步驟實例的元資料。 |
 | `org.apache.sling.scripting.core.impl.InternalScriptHelper` | `sling` | 提供Sling執行時期環境的存取權。 |
 
-以下示例指令碼演示如何訪問表示工作流裝載的JCR節點。 該 `graniteWorkflowSession` 變數適用於JCR會話變數，其用於從有效載荷路徑獲得節點。
+以下示例指令碼演示如何訪問表示工作流裝載的JCR節點。 該 `graniteWorkflowSession` 變數適用於JCR會話變數，該會話變數用於從有效載荷路徑獲得節點。
 
 ```
 var workflowData = graniteWorkItem.getWorkflowData();
@@ -609,7 +612,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 1. 在「模 **型** 」編輯器中，使用通用的「動態參與者步驟」( **Dynamic Participant Step)元件將動態參與者步驟添加到工作流中** 。
 1. 在編輯對話方塊中，選取「參與 **者選擇器** 」標籤，並選取您的選擇器實作。
-1. 如果在代碼中使用參數，請設定「 **進程參數」**。 對於此示例： `/content/we-retail/de`。
+1. 如果在代碼中使用參數，請設定「 **進程參數」**。 對於此示例： `/content/we-retail/de`.
 1. 保存步驟和工作流模型的更改。
 
 ### 使用ECMA指令碼開發參與者選擇器 {#developing-a-participant-chooser-using-an-ecma-script}
@@ -668,9 +671,9 @@ function getParticipant() {
 
 您可以開發工作流步驟，以獲取包資源並對其進行處理。 以下包成員提 `com.day.cq.workflow.collection` 供對工作流包的訪問：
 
-* `ResourceCollection`:工作流包類。
-* `ResourceCollectionUtil`:用於檢索ResourceCollection對象。
-* `ResourceCollectionManager`:建立和擷取系列。 實作部署為OSGi服務。
+* `ResourceCollection`: 工作流包類。
+* `ResourceCollectionUtil`: 用於檢索ResourceCollection對象。
+* `ResourceCollectionManager`: 建立和擷取系列。 實作部署為OSGi服務。
 
 以下Java類示例演示了如何獲取包資源：
 
@@ -776,7 +779,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 }
 ```
 
-## 範例：建立自訂步驟 {#example-creating-a-custom-step}
+## 範例： 建立自訂步驟 {#example-creating-a-custom-step}
 
 開始建立您自訂步驟的簡單方式，是從下列位置複製現有步驟：
 
@@ -784,7 +787,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 ### 建立基本步驟 {#creating-the-basic-step}
 
-1. 在/apps下重新建立路徑；例如：
+1. 在/apps下重新建立路徑； 例如：
 
    `/apps/cq/workflow/components/model`
 
@@ -802,7 +805,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    >
    >此步驟不適用於傳統UI模型編輯器。
 
-1. 然後將複製的步驟置於/apps檔案夾中；例如：
+1. 然後將複製的步驟置於/apps檔案夾中； 例如：
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
@@ -888,7 +891,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 1. 在節點上配置屬性 `cq:listeners`。
 
-   節點 `cq:listener` 及其屬性可讓您在觸控式UI模型編輯器中設定回應事件的事件處理常式；例如將步驟拖曳至模型頁面或編輯步驟屬性。
+   節點 `cq:listener` 及其屬性可讓您在觸控式UI模型編輯器中設定回應事件的事件處理常式； 例如將步驟拖曳至模型頁面或編輯步驟屬性。
 
    **地產：**
 
