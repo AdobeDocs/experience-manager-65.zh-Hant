@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a6b4a32b320d53c41ebf9615895dbf17ab722f19
+source-git-commit: 18345e6519169cfceb01ab56821b596e284f3303
+workflow-type: tm+mt
+source-wordcount: '3202'
+ht-degree: 0%
 
 ---
 
@@ -44,15 +47,15 @@ Adobe建議您進行這些組態，並在標準軟體維護合約中提供完整
    <th>說明</th>
   </tr>
   <tr>
-   <td>答：支援<br /> </td>
+   <td>答： 支援<br /> </td>
    <td>Adobe提供此組態的完整支援與維護。 Adobe的品質保證程式涵蓋此設定。</td>
   </tr>
   <tr>
-   <td>R:受限制的支援</td>
+   <td>R: 受限制的支援</td>
    <td>在符合特定先決條件後，Adobe會提供此設定的完整支援。 請聯絡Adobe企業支援以瞭解必要條件並提出支援要求。</td>
   </tr>
   <tr>
-   <td>L:有限支援</td>
+   <td>L: 有限支援</td>
    <td>在符合特定先決條件後，Adobe會提供此組態的完整支援與維護。 並非所有功能都可用於配置。 請聯絡Adobe企業支援以瞭解必要條件並提出支援要求。<br /> </td>
   </tr>
  </tbody>
@@ -62,8 +65,8 @@ Adobe建議您進行這些組態，並在標準軟體維護合約中提供完整
 
 | 支援等級 | 說明 |
 |---|---|
-| E:預期可運作 | 預計此設定會運作，而且沒有相反的報告。 |
-| Z:不支援 | 不支援配置。 Adobe不會就設定是否有效發表任何陳述，也不支援。 |
+| E: 預期可運作 | 預計此設定會運作，而且沒有相反的報告。 |
+| Z: 不支援 | 不支援配置。 Adobe不會就設定是否有效發表任何陳述，也不支援。 |
 
 >[!NOTE]
 >
@@ -91,22 +94,22 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   </tr>
   <tr>
    <td><p>Oracle Java™ SE 11（64位）</p> </td>
-   <td><p>Z:不支援</p> </td>
+   <td><p>Z: 不支援</p> </td>
    <td><p> </p> </td>
   </tr>
   <tr>
    <td>Oracle Java™ SE 8（64位）</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>次要版本和更新</td>
   </tr>
   <tr>
    <td>IBM® J9 Virtual Machine(build 2.8,JRE 1.8.0)</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>次要版本和更新</td>
   </tr>
   <tr>
    <td>IBM® J9 Virtual Machine(build 2.9, JRE 1.8.0)<br /> </td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>次要版本和更新</td>
   </tr>
  </tbody>
@@ -114,10 +117,8 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
 
 >[!NOTE]
 >
->* JEE上的AEM Forms僅支援生產環境上的64位元JVM。
 >* 建議您追蹤Java廠商的安全性公告，以確保生產環境的安全性，並安裝最新的Java更新。
->
-
+>* JEE上的AEM Forms僅支援生產環境上的64位元JVM。
 
 
 ### 資料庫和CRX持久性 {#databases-and-crx-persistence}
@@ -162,12 +163,12 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   <tr>
    <td>IBM DB2 11.1</td>
    <td>儲存庫微內核</td>
-   <td>R:受限制的支援</td>
+   <td>R: 受限制的支援</td>
   </tr>
     <tr>
    <td>MySQL 5.7.19 </td>
    <td>-</td>
-   <td>R:受限制的支援</td>
+   <td>R: 受限制的支援</td>
   </tr>
  </tbody>
 </table>
@@ -222,12 +223,12 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   </tr>
   <tr>
    <td>IBM® WebSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>Service Pack和重要更新</td>
   </tr>
   <tr>
    <td><p>JBoss®企業應用程式平台(EAP)7.1.4 <sup>[2] [3] [7]</sup></p> </td>
-   <td><p>答：支援</p> </td>
+   <td><p>答： 支援</p> </td>
    <td><p>支援的EAP版本的修補程式和累積修補程式</p> </td>
   </tr>
  </tbody>
@@ -250,27 +251,27 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   </tr>
   <tr>
    <td>Microsoft Windows Server 2016（64位元）</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>服務包和重要更新</td>
   </tr>
   <tr>
    <td><p>Red Hat Enterprise Linux 7（內核3.x）（64位）</p> </td>
-   <td><p>答：支援</p> </td>
+   <td><p>答： 支援</p> </td>
    <td><p>次要版本、累計更新和重要更新</p> </td>
   </tr>
   <tr>
    <td><p>SUSE® Linux® Enterprise Server 12（64位元）</p> </td>
-   <td><p>答：支援</p> </td>
+   <td><p>答： 支援</p> </td>
    <td><p>服務包、累積修補程式和關鍵安全更新</p> </td>
   </tr>
   <tr>
    <td>Oracle Linux® 7更新3（64位）</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>服務包、累積修補程式和關鍵安全更新</td>
   </tr>
   <tr>
    <td>CentOS 7（64位元）<sup> [6]</sup></td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>服務包、累積修補程式和關鍵安全更新</td>
   </tr>
  </tbody>
@@ -291,7 +292,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
   </tr>
   <tr>
    <td><p>Microsoft® Windows® 10 64位元</p> </td>
-   <td>E:預期可運作</td>
+   <td>E: 預期可運作</td>
    <td><p>Service Pack和重要更新</p> </td>
   </tr>
  </tbody>
@@ -470,21 +471,21 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
   </tr>
   <tr>
    <td>Microsoft Windows Server</td>
-   <td>Intel® Xeon® E5-2680、2.4 GHz處理器或相當等級的<br /> VMWare ESX 5.1或更新版本<br /> RAM:6 GB（64位元作業系統，含64位元JVM）<br /> 可用磁碟空間：JEE上的AEM Forms需要15GB的暫存空間<br /> ，加上22GB</td>
+   <td>Intel® Xeon® E5-2680、2.4 GHz處理器或相當等級的<br /> VMWare ESX 5.1或更新版本<br /> RAM: 6 GB（64位元作業系統，含64位元JVM）<br /> 可用磁碟空間： JEE上的AEM Forms需要15GB的暫存空間<br /> ，加上22GB</td>
   </tr>
   <tr>
    <td>SUSE Linux Enterprise Server</td>
-   <td>Intel Xeon E5-2670v2,1個vCPU,2.5 GHz處理器<br /> AWS m3.medium（3個ECU）<br /> RAM:6 GB（64位元作業系統，含64位元JVM）<br /> 可用磁碟空間：JEE上的AEM Forms需要6 GB的暫存空間<br /> ，加上22GB</td>
+   <td>Intel Xeon E5-2670v2,1個vCPU,2.5 GHz處理器<br /> AWS m3.medium（3個ECU）<br /> RAM: 6 GB（64位元作業系統，含64位元JVM）<br /> 可用磁碟空間： JEE上的AEM Forms需要6 GB的暫存空間<br /> ，加上22GB</td>
   </tr>
   <tr>
    <td>Red Hat Enterprise Linux</td>
-   <td>Intel Xeon E5-2670v2,1個vCPU,2.5 GHz處理器<br /> AWS m3.medium（3個ECU）<br /> RAM:6 GB（64位元作業系統，含64位元JVM）<br /> 可用磁碟空間：JEE上的AEM Forms需要6 GB的暫存空間<br /> ，加上22GB<br /> </td>
+   <td>Intel Xeon E5-2670v2,1個vCPU,2.5 GHz處理器<br /> AWS m3.medium（3個ECU）<br /> RAM: 6 GB（64位元作業系統，含64位元JVM）<br /> 可用磁碟空間： JEE上的AEM Forms需要6 GB的暫存空間<br /> ，加上22GB<br /> </td>
   </tr>
   <tr>
    <td>小型生產環境的硬體需求</td>
    <td>
     <ul>
-     <li><strong>英特爾驅動的環境</strong>:英特爾®至強® E5-2680、2.4 GHz或更高版本。 使用雙核處理器將進一步提高效能</li>
+     <li><strong>英特爾驅動的環境</strong>: 英特爾®至強® E5-2680、2.4 GHz或更高版本。 使用雙核處理器將進一步提高效能</li>
      <li><strong>記憶體： </strong>4 GB <br /> </li>
     </ul> </td>
   </tr>
@@ -518,10 +519,10 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
  </tbody>
 </table>
 
-* 安裝的磁碟空間：僅適用於Workbench 1.7 GB，在單一硬碟上2.7 GB可完整安裝Workbench、Designer和範例元件400 MB（適用於臨時安裝目錄）- 200 MB（適用於使用者臨時目錄）和200 MB（適用於Windows臨時目錄）。 如果所有這些位置都駐留在單個驅動器上，則安裝期間必須有1.5 GB的可用空間。 安裝完成後，將刪除複製到臨時目錄的檔案。
+* 安裝的磁碟空間： 僅適用於Workbench 1.7 GB，在單一硬碟上2.7 GB可完整安裝Workbench、Designer和範例元件400 MB（適用於臨時安裝目錄）- 200 MB（適用於使用者臨時目錄）和200 MB（適用於Windows臨時目錄）。 如果所有這些位置都駐留在單個驅動器上，則安裝期間必須有1.5 GB的可用空間。 安裝完成後，將刪除複製到臨時目錄的檔案。
 
-* 運行Workbench的記憶體：2GB的記憶體
-* 硬體需求：Intel® Pentium® 4或AMD相當等級，1 GHz處理器
+* 運行Workbench的記憶體： 2GB的記憶體
+* 硬體需求： Intel® Pentium® 4或AMD相當等級，1 GHz處理器
 * 最低1024 X 768像素或更高的螢幕解析度（含16位元色彩或更高）
 * TCP/IPv4或TCP/IPv6網路連線至JEE伺服器上的AEM Forms
 * 您必須擁有管理權限，才能在Windows上安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
@@ -541,7 +542,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 * 圖形記憶體- 128 MB的GPU（建議使用256 MB）
 * 2.35 GB的可用硬碟空間
 * DVD-ROM光碟機
-* Internet Explorer 10或11;Firefox 45.x
+* Internet Explorer 10或11; Firefox 45.x
 * 1024 X 768像素或更高的螢幕解析度
 * 視訊硬體加速（選用）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
@@ -563,7 +564,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 
 >[!NOTE]
 >
->Acrobat DC產品系列為Acrobat和Reader提供兩種本質上不同的產品：「經典」和「連續」。如需詳細資訊和這兩個音軌的比較，請參閱 [https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
+>Acrobat DC產品系列為Acrobat和Reader提供兩種本質上不同的產品： 「經典」和「連續」。 如需詳細資訊和這兩個音軌的比較，請參閱 [https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
 
 ### 瀏覽器 {#browsers}
 
@@ -578,37 +579,37 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
   </tr>
   <tr>
    <td><p>Microsoft Edge(Evergreen)</p> </td>
-   <td><p>答：支援</p> </td>
+   <td><p>答： 支援</p> </td>
    <td><p>服務包和更新</p> </td>
   </tr>
   <tr>
    <td><p>Mozilla Firefox(Evergreen)</p> </td>
-   <td><p>答：支援</p> </td>
+   <td><p>答： 支援</p> </td>
    <td>所有更新</td>
   </tr>
   <tr>
    <td>Microsoft Firefox ESR</td>
-   <td>E:預期可運作</td>
+   <td>E: 預期可運作</td>
    <td> 所有更新</td>
   </tr>
   <tr>
    <td><p>Google Chrome(Evergreen)</p> </td>
-   <td><p>答：支援</p> </td>
+   <td><p>答： 支援</p> </td>
    <td>所有更新</td>
   </tr>
   <tr>
    <td>MAC OS X上的Google Chrome和Firefox</td>
-   <td>答：支援<br /><br /> </td>
+   <td>答： 支援<br /> <br /> </td>
    <td>所有更新</td>
   </tr>
   <tr>
    <td>Apple Safari 11.x</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
    <td>所有更新</td>
   </tr>
   <tr>
-   <td>Apple Safari 12.x<br /><br /> </td>
-   <td>答：支援</td>
+   <td>Apple Safari 12.x<br /> <br /> </td>
+   <td>答： 支援</td>
    <td>所有更新</td>
   </tr>
  </tbody>
