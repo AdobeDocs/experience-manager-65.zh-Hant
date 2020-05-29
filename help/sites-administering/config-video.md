@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: 44dbabeeea4e4e8d17cc69a2d8ea791c98be2bd2
+workflow-type: tm+mt
+source-wordcount: '434'
+ht-degree: 0%
 
 ---
 
@@ -63,8 +66,12 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 **若要設定AEM**:
 
+>[!NOTE]
+>
+>只有當需要進一步自訂轉碼器時，才需要這些步驟。
+
 1. 在您 [!UICONTROL 的網頁瀏覽器中開啟] CRXDE Lite。 ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
-1. 選擇節 `/libs/settings/dam/video/format_aac/jcr:content` 點並確保節點屬性如下：
+2. 選擇節 `/libs/settings/dam/video/format_aac/jcr:content` 點並確保節點屬性如下：
 
    * 音訊轉碼器：
 
@@ -78,13 +85,13 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
        -flags +loop -me_method umh -g 250 -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -bf 16 -b_strategy 1 -i_qfactor 0.71 -cmp chroma -subq 8 -me_range 16 -coder 1 -sc_threshold 40 -b-pyramid normal -wpredp 2 -mixed-refs 1 -8x8dct 1 -fast-pskip 1 -keyint_min 25 -refs 4 -trellis 1 -direct-pred 3 -partitions i8x8,i4x4,p8x8,b8x8
       ```
 
-1. 若要自訂設定，請在節點中建立覆蓋 `/apps/settings/` 並在節點下移動相同 `/conf/global/settings/` 結構。 無法在節點中編 `/libs` 輯。 例如，若要覆蓋路徑， `/libs/settings/dam/video/fullhd-bp`請在中建立路徑 `/conf/global/settings/dam/video/fullhd-bp`。
+3. 若要自訂設定，請在節點中建立覆蓋 `/apps/settings/` 並在節點下移動相同 `/conf/global/settings/` 結構。 無法在節點中編 `/libs` 輯。 例如，若要覆蓋路徑， `/libs/settings/dam/video/fullhd-bp`請在中建立路徑 `/conf/global/settings/dam/video/fullhd-bp`。
 
    >[!NOTE]
    >
    >覆蓋並編輯整個描述檔節點，而不只是需要修改的屬性。 這些資源不會透過SlingResourceMergare解決。
 
-1. 如果您變更了其中一個屬性，請按一下「全 **[!UICONTROL 部儲存」]**。
+4. 如果您變更了其中一個屬性，請按一下「全 **[!UICONTROL 部儲存」]**。
 
 >[!NOTE]
 >
