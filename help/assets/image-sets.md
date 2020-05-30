@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
+source-git-commit: 7c6655342256922473ec51dc1a58b2d08034b65b
+workflow-type: tm+mt
+source-wordcount: '2078'
+ht-degree: 19%
 
 ---
 
@@ -26,13 +29,13 @@ source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
 當您想要以不同的顏色、圖樣或完成顯示項目時，此應用程式特別有用。 若要使用色票建立影像集，您需要針對要呈現給使用者的不同顏色、圖樣或修飾建立一個影像。 您也需要一種顏色、圖樣或修飾色板來表示每種顏色、圖樣或修飾。
 
-例如，假設您想要呈現不同色彩表的頂蓋影像；賬單是紅的，綠的，藍的。 在這種情況下，你需要三杯相同的帽子。 你需要一張紅的，一張綠的，一張藍的。 您也需要紅色、綠色和藍色色票。 顏色色票會當做縮圖，讓使用者在色票集檢視器中按一下，以查看紅嘴、綠嘴或藍嘴的帽子。
+例如，假設您想要呈現不同色彩表的頂蓋影像； 賬單是紅的，綠的，藍的。 在這種情況下，你需要三杯相同的帽子。 你需要一張紅的，一張綠的，一張藍的。 您也需要紅色、綠色和藍色色票。 顏色色票會當做縮圖，讓使用者在色票集檢視器中按一下，以查看紅嘴、綠嘴或藍嘴的帽子。
 
 >[!NOTE]
 >
 >如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/managing-assets-touch-ui.md)。
 
-## 快速入門：影像集 {#quick-start-image-sets}
+## 快速入門： 影像集 {#quick-start-image-sets}
 
 要快速啟動並運行，請執行以下操作：
 
@@ -48,7 +51,7 @@ source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
    若要在資產中建立影像集，請點選或按一下「建立> **[!UICONTROL 影像集」]**。 然後，新增影像，然後按一下「 **[!UICONTROL 儲存]**」。
 
-   You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
+   You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md).
    >[!IMPORTANT]
    >
    >批集由IPS(Image Production System)建立，作為資產提取的一部分，並且僅在動態媒體- Scene7模式中可用。
@@ -70,7 +73,7 @@ source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
 1. [發佈影像集。](/help/assets/publishing-dynamicmedia-assets.md)
 
-   發佈影像集會啟動URL和內嵌字串。 此外，您必須發 [布您所建立的任何自訂檢視器預設](/help/assets/managing-viewer-presets.md) 。 現成可用的檢視器預設集已發佈。
+   發佈影像集會啟動URL和內嵌代碼。 此外，您必須發 [布您所建立的任何自訂檢視器預設](/help/assets/managing-viewer-presets.md) 。 現成可用的檢視器預設集已發佈。
 
 1. [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md) ，或 [內嵌視訊或影像檢視器](/help/assets/embed-code.md)。
 
