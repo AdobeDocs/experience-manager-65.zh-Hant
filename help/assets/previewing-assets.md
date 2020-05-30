@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
+source-git-commit: d77ee4377934a2ea3291a9beac7c1a8d1c5aeca6
+workflow-type: tm+mt
+source-wordcount: '1346'
+ht-degree: 3%
 
 ---
 
@@ -27,11 +30,11 @@ source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
 
 >[!NOTE]
 >
->當您在AEM的網頁 (網站) 上時，無法在「編輯」模式中預 **覽資產** 。您必須按一下右 **上角的** 「預覽 **** 」，以前往「預覽」模式。
+>當您在AEM的網頁 (網站) 上時，無法在「編輯」模式中預 **覽資產** 。You need to go to **Preview** mode by clicking **Preview** in the upper right-hand corner of the page.
 
 若要在使用者介面中啟用或停用檢視器預設集，請參閱「管 [理檢視器預設集」](/help/assets/managing-viewer-presets.md)。
 
-**若要使用使用者介面預覽資產**
+**若要使用軟體介面預覽資產**
 
 1. 在 **[!UICONTROL Adobe Experience Manager**，在 **[!UICONTROL導覽頁面上，點選「資產** 」，然後點選「檔 ******** 案」以存取資產。
 1. 在頁面的右上角附近，從「檢視」下拉式清單 **[!UICONTROL 中]** ，點選「清 **[!UICONTROL 單檢視」]**。
@@ -39,13 +42,32 @@ source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
 1. 在「標 **[!UICONTROL 題]** 」欄下方，按一下您要預覽之資產的標題名稱（而非縮圖影像）。
 1. 視您所點按的資產類型而定，執行下列任一項作業：
 
+
    <table>
     <tbody>
       <tr>
       <td><strong>您點按的資產類型</strong><br /> </td>
       <td><strong>能夠在特定轉譯中預覽資產嗎？</strong></td>
-      <td><strong>能夠在特定檢視器中預覽資產？</strong></td>
+      <td><strong>能夠在檢視器中預覽資產嗎？</strong></td>
       </tr>
+      <tr>
+      <td><p>3D</p> </td>
+      <td>否</td>
+      <td>是</td>
+      <td><p><strong>在維度檢視器中預覽3D資產</strong></p>
+        <ul>
+        <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 從清單 <strong>中按一下</strong> 「檢視器」，然後選取「維度檢視器」。
+        <li>點選 <strong>「重設</strong> 」，將影像還原為原始縮放。</li>
+        <li>點選「 <strong>全螢幕</strong> 」，以最大化顯示裝置上的檢視器。
+        </ul>
+        <p><strong>導覽3D場景</strong></p>
+        <ul>
+        <li><p><strong>轉動您的3D相機</strong> -圍繞3D場景和物件環繞視圖。</p> 滑鼠： 左鍵按一下+拖動。 </p> 觸控螢幕： 按+拖曳。</p>
+        <li><p><strong>平移您的相機</strong> -向左、向右、向上和向下平移您的檢視。</p> 滑鼠： 按一下右鍵+拖動。 </p> 觸控螢幕： 雙指按+拖曳。</p>
+        <li><p><strong>縮放您的相機</strong> -縮放您的相機，以在3D場景中移入和移出區域。</p> 滑鼠： 滾輪。 </p> 觸控螢幕： 手指捏。</p>
+        <li><p><strong>重新輸入您的相機</strong> -環繞3D場景和物件環繞視圖。</p> 滑鼠： 按兩下。 </p> 觸控螢幕： 點兩下。</li></p></td>
+
+   </tr>
       <tr>
       <td><p>影像</p> </td>
       <td>是</td>
@@ -56,7 +78,7 @@ source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
         </ul> <p><strong>若要在特定檢視器中預覽資產</strong></p>
         <ul>
         <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一 <strong>下清單中的</strong> 「檢視器」，然後選取您要套用至資產的檢視器。</li>
-        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您使用行動裝置，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>多媒體</td>
@@ -77,7 +99,7 @@ source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
       <td><p><strong>若要在特定檢視器中預覽資產</strong></p>
         <ul>
         <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一 <strong>下清單中的</strong> 「檢視器」，然後選取您要套用至資產的檢視器。</li>
-        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您使用行動裝置，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>回轉集</td>
@@ -86,7 +108,7 @@ source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
       <td><p><strong>若要在特定檢視器中預覽資產</strong></p>
         <ul>
         <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一 <strong>下清單中的</strong> 「檢視器」，然後選取您要套用至資產的檢視器。</li>
-        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您使用行動裝置，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>混合媒體集</td>
@@ -95,7 +117,7 @@ source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
       <td><p><strong>若要在特定檢視器中預覽資產</strong></p>
         <ul>
         <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一 <strong>下清單中的</strong> 「檢視器」，然後選取您要套用至資產的檢視器。</li>
-        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您使用行動裝置，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>轉盤集</td>
@@ -116,7 +138,7 @@ source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
         </ul> <p><strong>若要在特定檢視器中預覽資產</strong></p>
         <ul>
         <li>在頁面的左上角附近點選圖示，以便顯示下拉式清單。 選取 <strong>檢視器</strong>，然後選取您要套用至資產的檢視器。</li>
-        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您使用行動裝置，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+        </ul> <p>使用 <strong>+</strong><strong></strong> 和——圖示分別增加或減少所選影像的縮放。 按一 <strong>下「重設</strong> 」，將影像還原為原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。 達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
     </tbody>
     </table>
