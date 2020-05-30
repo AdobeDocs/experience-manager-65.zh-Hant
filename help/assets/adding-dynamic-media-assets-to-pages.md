@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 876589d26f17dc088531c3f34deea0fab4c7726a
+source-git-commit: b6a7648699bc8e8e041749fb03998f86a27292ce
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3129'
 ht-degree: 8%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 8%
 
 ## 新增動態媒體元件至頁面 {#adding-a-dynamic-media-component-to-a-page}
 
-將動態媒體、互動式媒體、全景媒體或視訊360媒體元件新增至頁面，與將元件新增至任何頁面相同。 以下各節將介紹動態媒體元件。
+將3D媒體、動態媒體、互動式媒體、全景媒體、智慧型裁切視訊或視訊360媒體元件新增至頁面，與將元件新增至任何頁面相同。 以下各節將介紹動態媒體元件。
 
 1. 在AEM中，開啟您要新增動態媒體元件的頁面。
 1. 在頁面左側的面板（您可能需要切換側面板的顯示）中，按一下「元件」 **[!UICONTROL 圖示]** 。
@@ -40,10 +40,6 @@ ht-degree: 8%
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
 1. 拖曳您 **[!UICONTROL 要使用的Dynamic Media]** 元件，並將其拖曳至頁面上所需的位置。
-
-   在以下範例中， **[!UICONTROL 使用Video 360 Media]** （視訊360媒體）元件。
-
-   ![6_5_360video_wcmcomponentdrag](assets/6_5_360video_wcmcomponentdrag.png)
 
 1. 將滑鼠指標直接暫留在元件上。 當元件被藍色方塊包圍時，點選一次即可顯示元件的工具列。 點選「 **[!UICONTROL Configuration(wrench)]** 」圖示。
 
@@ -57,7 +53,7 @@ ht-degree: 8%
 
    動態媒體視訊360媒體元件。
 
-1. 完成後，在對話框右上角附近點選核取標籤以儲存變更。
+1. 完成後，在對話框的右上角點選複選標籤以保存更改。
 
 ### 啟用動態媒體元件 {#enabling-dynamic-media-components}
 
@@ -140,7 +136,7 @@ ht-degree: 8%
 
 #### 使用影像時 {#when-working-with-images}
 
-動態媒體元件可讓您新增動態影像，包括影像集、回轉集和混合媒體集。 您可以放大、縮小，如果適用的話，可以在回轉集內旋轉影像，或從其他類型的回轉集選取影像。
+動態媒體元件可讓您新增動態影像，包括影像集、回轉集和混合媒體集。 您可以放大、縮小，如果適用，則可以在回轉集內旋轉影像，或從其他類型的回轉集選取影像。
 
 您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像回應，您可以設定中斷點或套用回應式影像預設集。
 
