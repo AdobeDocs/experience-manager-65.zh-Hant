@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS and AEM as a Cloud Service
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 7c6655342256922473ec51dc1a58b2d08034b65b
+source-git-commit: 46848fee0a3f838354ec65f2ea733cf70ac53deb
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2162'
 ht-degree: 1%
 
 ---
@@ -170,9 +170,7 @@ Dynamic Media支援下列3D檔案格式：
 
 ## 關於使用3D媒體元件 {#working-with-three-d-media-component}
 
-Dynamic Media包含動態媒體3D媒體元件，您可在AEM Sites中使用此元件，以在網頁上互動檢視3D模型。
-
-本節包含下列主題：
+Dynamic Media包含Dynamic Media 3D Media元件，您可在AEM Sites中使用此元件，以在網頁上互動檢視3D模型。
 
 * [將3D媒體元件新增至頁面範本](#adding-three-d-media-component-to-page-template)
 * [將3D媒體元件新增至網頁](#adding-the-three-d-media-component-to-a-web-page)
