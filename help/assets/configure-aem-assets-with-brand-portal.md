@@ -10,17 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb59bd52be86894e93063f4b7c32aef0ed23250b
+source-git-commit: cdcea49a25807e125ea15e7132ac9f188d3525bc
 workflow-type: tm+mt
-source-wordcount: '1748'
-ht-degree: 42%
+source-wordcount: '2074'
+ht-degree: 13%
 
 ---
 
 
 # 使用 Brand Portal 設定 AEM Assets {#configure-integration-65}
 
-Adobe Experience Manager (AEM) Assets 是透過 Adobe I/O 以 Brand Portal 設定，這種方式會取得 IMS Token 來使 Brand Portal 租用戶獲得授權。
+Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console以品牌入口網站設定，Adobe Developer Console會購買IMS Token以授權您的品牌入口網站租用戶。
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Adobe Experience Manager (AEM) Assets 是透過 Adobe I/O 以 Brand Portal 設�
 >
 >之前，品牌入口網站是透過舊版OAuth閘道在傳統使用者介面中設定，該閘道使用JWT代號交換來取得IMS存取代號以進行授權。
 >
->自2020年4月6日起，不再支援透過舊版OAuth進行的設定，並變更為透過Adobe I/O進行設定。
+>自2020年4月6日起，不再支援透過舊版OAuth進行的設定，並變更為透過Adobe Developer Console進行設定。
 
 
 >[!TIP]
@@ -82,10 +82,35 @@ Adobe Experience Manager (AEM) Assets 是透過 Adobe I/O 以 Brand Portal 設�
 
 ## 建立設定 {#configure-new-integration-65}
 
+使用品牌入口網站設定AEM資產需要在AEM Assets作者實例和Adobe Developer Console中進行設定。
+
+1. 在AEM Assets作者例項中，建立IMS帳戶並產生公開憑證（公開金鑰）。
+
+1. 在Adobe Developer Console中，為您的品牌入口網站租用戶（組織）建立專案。
+
+1. 在專案下，使用公開金鑰來設定API，以建立服務帳戶(JWT)連線。
+
+1. 獲取服務帳戶憑據和JWT裝載資訊。
+
+1. 在AEM Assets作者例項中，使用服務帳戶認證和JWT裝載來設定IMS帳戶。
+
+1. 在AEM Assets作者例項中，使用IMS帳戶和品牌入口端端點（組織URL）來設定品牌入口網站雲端服務。
+
+1. 將資產從AEM Assets作者例項發佈至品牌入口網站，以測試設定。
+
+
+>[!NOTE]
+>
+>品牌入口網站的租用戶只能設定一個AEM Assets作者例項。
+>
+>請勿設定具有多個AEM Assets作者例項的品牌入口網站租用戶。
+
+
+
 如果您是第一次使用品牌入口網站設定AEM資產，請在所列順序中執行下列步驟：
 1. [取得公開憑證](#public-certificate)
-1. [建立 Adobe I/O 整合項目](#createnewintegration)
-1. [建立 IMS 帳戶設定](#create-ims-account-configuration)
+1. [建立服務帳戶(JWT)連接](#createnewintegration)
+1. [設定IMS帳戶](#create-ims-account-configuration)
 1. [設定雲端服務](#configure-the-cloud-service)
 1. [測試設定](#test-integration)
 
@@ -96,112 +121,170 @@ IMS 設定會以 AEM Assets 作者例項驗證您的 Brand Portal 租用戶。
 IMS 設定包括兩個步驟：
 
 * [取得公開憑證](#public-certificate)
-* [建立 IMS 帳戶設定](#create-ims-account-configuration)
+* [設定IMS帳戶](#create-ims-account-configuration)
 
 ### 取得公開憑證 {#public-certificate}
 
-公開憑證可讓您在 Adobe I/O 上驗證設定檔。
+公開憑證可讓您在Adobe Developer Console上驗證您的個人檔案。
 
-1. 登入您的AEM Assets author instance預設URL: http:// localhost:4502/aem/start.html
-1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** >> **[!UICONTROL Adobe IMS Configurations]**.
+1. 登入您的AEM Assets作者實例。 預設URL為
+   `http:// localhost:4502/aem/start.html`
+1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
    ![Adobe IMS 帳戶設定 UI](assets/ims-config1.png)
 
-1. Adobe IMS 設定頁面隨即開啟。
+1. 在「Adobe IMS設定」頁面中，按一下「 **[!UICONTROL 建立]**」。
 
-   按一下&#x200B;**[!UICONTROL 建立]**。
+1. 您已重新導向至「 **[!UICONTROL Adobe IMS技術帳戶設定」頁面]** 。 By default, the **Certificate** tab opens.
 
-   這個動作會帶您前往&#x200B;**[!UICONTROL Adobe IMS 技術帳戶設定]**&#x200B;頁面。
-
-1. 依預設，**憑證**&#x200B;標籤會開啟。
-
-   在&#x200B;**雲端解決方案**&#x200B;中，選取 **[!UICONTROL Adobe Brand Portal]**。
+   選取雲端解決方 **[!UICONTROL 案Adobe Brand Portal]**。
 
 1. 勾選核取方塊&#x200B;**[!UICONTROL 建立新憑證]**&#x200B;並指定憑證的&#x200B;**別名**。別名的作用是對話方塊的名稱。
 
-1. 按一下&#x200B;**[!UICONTROL 建立憑證]**。對話方塊隨即顯示。按一下&#x200B;**[!UICONTROL 確定]**&#x200B;即可產生公開憑證。
+1. 按一下&#x200B;**[!UICONTROL 建立憑證]**。然後，在對 **[!UICONTROL 話方塊中]** ，按一下「確定」以產生公用憑證。
 
    ![建立憑證](assets/ims-config2.png)
 
-1. 按一下&#x200B;**[!UICONTROL 下載公開金鑰]**，並將 *AEM-Adobe-IMS.crt* 憑證檔案儲存在電腦上。憑證檔案可用於[建立 Adobe I/O 整合項目](#createnewintegration)。
+1. Click **[!UICONTROL Download Public Key]** and save the certificate (.crt) file on your machine.
+
+   此憑證檔案將用於進一步步驟，以針對您的品牌入口網站租用戶設定API，並在Adobe Developer Console中產生服務帳戶認證。
 
    ![下載憑證](assets/ims-config3.png)
 
 1. 按一下&#x200B;**[!UICONTROL 下一步]**。
 
-   您會在&#x200B;**帳戶**&#x200B;標籤中建立 Adobe IMS 帳戶，但需要整合詳細資訊才能完成。暫時保持此頁面開啟。
+   在「帳 **戶** 」標籤中，您建立Adobe IMS帳戶，但您需要在Adobe Developer Console中產生的服務帳戶認證。 暫時保持此頁面開啟。
 
-   開啟新標籤並[建立 Adobe I/O 整合項目](#createnewintegration)，以便取得 IMS 帳戶設定的整合詳細資訊。
+   在Adobe Developer Console中開啟新 [標籤並建立服務帳戶(JWT)連線](#createnewintegration) ，以取得用於設定IMS帳戶的認證和JWT裝載。
 
-### 建立 Adobe I/O 整合項目 {#createnewintegration}
+### 建立服務帳戶(JWT)連接 {#createnewintegration}
 
-Adobe I/O 整合項目會產生 API 金鑰、用戶端密碼，以及設定 IMS 帳戶設定所需的裝載 (JWT)。
+在Adobe Developer Console中，專案和API是在組織（品牌入口網站租用戶）層級設定。 設定API會在Adobe Developer Console中建立服務帳戶(JWT)連線。 有兩種方法可用來設定API：產生金鑰對（私用和公開金鑰）或上傳公開金鑰。 若要使用Brand Portal設定AEM Assets作者實例，您必須在AEM Assets作者實例中產生公用憑證（公用金鑰），並透過上傳公用金鑰在Adobe Developer Console中建立認證。 此公開金鑰用來設定所選品牌入口網站組織的API，並產生服務帳戶的認證和JWT裝載。 這些認證可進一步用於在AEM Assets作者例項中設定IMS帳戶。 在設定IMS帳戶後，您就可以在AEM Assets作者例項中設定品牌入口網站雲端服務。
 
-1. 以 Brand Portal 租用戶在 IMS 組織的系統管理員權限登入 Adobe I/O 控制台。
+執行以下步驟以生成服務帳戶憑據和JWT裝載：
 
-   預設 URL：[https://console.adobe.io/](https://console.adobe.io/)
+1. 以IMS組織（品牌入口網站租用戶）的系統管理員權限登入Adobe Developer Console。 預設URL為
 
-1. 按一下&#x200B;**[!UICONTROL 建立整合項目]**。
+   [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui)
 
-1. 選取&#x200B;**[!UICONTROL 存取 API]**，然後按一下&#x200B;**[!UICONTROL 繼續]**。
 
-   ![建立新整合項目](assets/create-new-integration1.png)
+   >[!NOTE]
+   >
+   >請確定您已從右上角的下拉式清單（組織清單）中選取正確的IMS組織（品牌入口網站租用戶）。
 
-1. 建立新整合項目的頁面隨即開啟。
+1. Click **[!UICONTROL Create new project]**. 系統會為您的組織建立空白專案。
 
-   從下拉式清單中選取您的組織。
+   按一 **[!UICONTROL 下「編輯專案]** 」以更新「 **[!UICONTROL 專案標題]** 」和「說 **[!UICONTROL 明」]**，然後按 ****&#x200B;一下「儲存」。
 
-   在 **[!UICONTROL Experience Cloud]** 中選取 **[!UICONTROL AEM Brand Portal]**，然後按一下&#x200B;**[!UICONTROL 繼續]**。
+   ![建立專案](assets/service-account1.png)
 
-   如果您已停用「Brand Portal」選項，請確認您已在 **[!UICONTROL Adobe 服務]**&#x200B;選項上方的下拉式方塊中選取正確的組織。如果您不清楚自己的組織為何，請聯絡您的管理員。
+1. 在「專案概述」標籤中，按一下「 **[!UICONTROL 新增API」]**。
 
-   ![建立整合項目](assets/create-new-integration2.png)
+   ![新增API](assets/service-account2.png)
 
-1. 指定整合項目的名稱和說明。按一下&#x200B;**[!UICONTROL 從電腦選取檔案]**，並上傳在[取得公開憑證](#public-certificate)區段中下載的 `AEM-Adobe-IMS.crt` 檔案 。
+1. 在「新增API」視窗中，選取「 **[!UICONTROL AEM品牌入口網站」]** ，然後按一 **[!UICONTROL 下「下一步]**」。
 
-1. 選取組織的設定檔。
+   請確定您擁有AEM品牌入口網站服務的存取權。
 
-   或者，選取預設設定檔 **[!UICONTROL Assets Brand Portal]**，然後按一下&#x200B;**[!UICONTROL 建立整合項目]**。整合項目隨即建立。
+1. 在「設定API」視窗中，按一下「 **[!UICONTROL 上傳公開金鑰」]**。 然後，按一 **[!UICONTROL 下「選取檔案]** 」，並上傳您已在取得公用憑證區段中下載的公 [用憑證(.crt](#public-certificate) 檔案)。
 
-1. 按一下&#x200B;**[!UICONTROL 繼續前往整合詳細資訊]**，以便檢視整合資訊。
+   按一下&#x200B;**[!UICONTROL 下一步]**。
 
-   複製 **[!UICONTROL API 金鑰]**
+   ![上傳公開金鑰](assets/service-account3.png)
 
-   按一下&#x200B;**[!UICONTROL 擷取用戶端密碼]**&#x200B;並複製用戶端密碼金鑰。
+1. 驗證公共證書並按一下「 **[!UICONTROL Next（下一步）]**」。
 
-   ![整合項目的 API 金鑰、用戶端密碼和裝載資訊](assets/create-new-integration3.png)
+1. 選取預設產品設定檔 **[!UICONTROL Assets Brand Portal]** ，然後按一 **[!UICONTROL 下「儲存設定」]**。
 
-1. 導覽至 **[!UICONTROL JWT]** 標籤，並複製 **[!UICONTROL JWT 裝載]**。
+   ![選擇產品設定檔](assets/service-account4.png)
 
-   API 金鑰、用戶端密碼金鑰和 JWT 裝載資訊將用來建立 IMS 帳戶設定。
+1. 在設定API後，您會重新導向至API概觀。 在左邊導覽的「憑 **[!UICONTROL 據」下]**，單 **[!UICONTROL 擊「服務帳戶(JWT)」]**。
+
+   >[!NOTE]
+   >
+   >您可以視需要檢視憑證並執行其他動作（產生JWT Token、複製憑證詳細資訊、擷取用戶端密碼等）。
+
+1. 從「客 **[!UICONTROL 戶端認證]** 」標籤複製 **[!UICONTROL 客戶端ID]**。
+
+   Click **[!UICONTROL Retrieve Client Secret]** and copy the **[!UICONTROL client secret]**.
+
+   ![服務帳戶認證](assets/service-account5.png)
+
+1. Navigate to the **[!UICONTROL Generate JWT]** tab and copy the **[!UICONTROL JWT Payload]**.
+
+您現在可以使用用戶端ID（API金鑰）、用戶端密碼和JWT裝載，在 [AEM Assets雲端例項中設定IMS](#create-ims-account-configuration) 帳戶。
+
+<!--
+### Create Adobe I/O integration {#createnewintegration}
+
+Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which is required in setting up the IMS Account configurations.
+
+1. Login to Adobe I/O Console with system administrator privileges on the IMS organization of the Brand Portal tenant.
+
+   Default URL: [https://console.adobe.io/](https://console.adobe.io/) 
+
+1. Click **[!UICONTROL Create Integration]**.
+
+1. Select **[!UICONTROL Access an API]**, and click **[!UICONTROL Continue]**.
+
+   ![Create New Integration](assets/create-new-integration1.png)
+
+1. Create a new integration page opens. 
+   
+   Select your organization from the drop-down list.
+
+   In **[!UICONTROL Experience Cloud]**, Select **[!UICONTROL AEM Brand Portal]** and click **[!UICONTROL Continue]**. 
+
+   If the Brand Portal option is disabled for you, ensure that you have selected correct organization from the drop-down box above the **[!UICONTROL Adobe Services]** option. If you do not know your organization, contact your administrator.
+
+   ![Create Integration](assets/create-new-integration2.png)
+
+1. Specify a name and description for the integration. Click **[!UICONTROL Select a File from your computer]** and upload the `AEM-Adobe-IMS.crt` file downloaded in the [obtain public certificates](#public-certificate) section.
+
+1. Select the profile of your organization. 
+
+   Or, select the default profile **[!UICONTROL Assets Brand Portal]** and click **[!UICONTROL Create Integration]**. The integration is created.
+
+1. Click **[!UICONTROL Continue to integration details]** to view the integration information. 
+
+   Copy the **[!UICONTROL API Key]** 
+   
+   Click **[!UICONTROL Retrieve Client Secret]** and copy the Client Secret key.
+
+   ![API Key, Client Secret, and payload information of an integration](assets/create-new-integration3.png)
+
+1. Navigate to **[!UICONTROL JWT]** tab, and copy the **[!UICONTROL JWT payload]**.
+
+   The API Key, Client Secret key, and JWT payload information will be used to create IMS account configuration.
+-->
 
 ### 建立 IMS 帳戶設定 {#create-ims-account-configuration}
 
 請確認您已執行下列步驟：
 
 * [取得公開憑證](#public-certificate)
-* [建立 Adobe I/O 整合項目](#createnewintegration)
+* [建立服務帳戶(JWT)連接](#createnewintegration)
 
-**建立 IMS 帳戶設定的步驟：**
+執行下列步驟以設定您在取得公用憑證時所建立 [的IMS帳戶](#public-certificate)。
 
-1. 開啟 IMS 設定頁面&#x200B;**[!UICONTROL 帳戶]**&#x200B;標籤。在[取得公開憑證](#public-certificate)這一節的結尾，您已保持此頁面開啟。
+1. 開啟「IMS設定」並導覽至「帳 **[!UICONTROL 戶]** 」標籤。 您在取得公開憑證時 [仍保持開啟頁面](#public-certificate)。
 
 1. 指定 IMS 帳戶的&#x200B;**[!UICONTROL 標題]**。
 
    在&#x200B;**[!UICONTROL 授權伺服器]**，輸入 URL：[https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/)
 
-   貼上您在[建立 Adobe I/O 整合項目](#createnewintegration)結尾複製的 API 金鑰、用戶端密碼和 JWT 裝載。
+   將用戶端ID貼入您建立服務帳戶(JWT)連線時複製的API金鑰、用戶 [端密碼和JWT裝載中](#createnewintegration)。
 
    按一下&#x200B;**[!UICONTROL 建立]**。
 
-   整合項目隨即建立。
+   已設定IMS帳戶。
 
    ![IMS 帳戶設定](assets/create-new-integration6.png)
 
 
-1. 選取 IMS 設定，然後按一下&#x200B;**[!UICONTROL 檢查健康狀態]**。對話方塊隨即顯示。
+1. 選取 IMS 設定，然後按一下&#x200B;**[!UICONTROL 檢查健康狀態]**。
 
-   按一下&#x200B;**[!UICONTROL 檢查]**。成功連線時，*已成功擷取 Token* 訊息就會顯示。
+   在對 **[!UICONTROL 話方塊中]** ，按一下「勾選」。 成功設定時，會顯示訊息，指出 *Token已成功擷取*。
 
    ![](assets/create-new-integration5.png)
 
@@ -212,42 +295,38 @@ Adobe I/O 整合項目會產生 API 金鑰、用戶端密碼，以及設定 IMS 
 >確保IMS配置通過健康檢查。 如果配置未通過健康檢查，則無效。 您必須刪除它並建立新的有效設定。
 
 
+
 ### 設定雲端服務 {#configure-the-cloud-service}
 
-執行下列步驟以建立 Brand Portal 雲端服務設定：
+執行下列步驟以建立品牌入口網站雲端服務：
 
-1. 登入您的AEM Assets作者實例
+1. 登入您的AEM Assets作者實例。
 
-   預設URL: http:// localhost:4502/aem/start.html
-1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services >> AEM Brand Portal]**.
+1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
 
-   「Brand Portal 設定」頁面隨即開啟。
-
-1. 按一下&#x200B;**[!UICONTROL 建立]**。
+1. 在「品牌入口網站設定」頁面中，按一下「 **[!UICONTROL 建立]**」。
 
 1. 指定設定的&#x200B;**[!UICONTROL 標題]**。
 
-   選取您在[建立 IMS 帳戶設定](#create-ims-account-configuration)步驟中建立的 IMS 設定。
+   選取您在設定IMS帳戶時所建 [立的IMS設定](#create-ims-account-configuration)。
 
-   在&#x200B;**[!UICONTROL 服務 URL]**&#x200B;中，輸入您的 Brand Portal 租用戶 URL。
+   In the **[!UICONTROL Service URL]**, enter your Brand Portal tenant (organization) URL.
 
    ![](assets/create-cloud-service.png)
 
-1. 按一下&#x200B;**[!UICONTROL 儲存並關閉]**。雲端設定此時已建立。您的AEM Assets作者實例現在已與品牌入口網站租用戶整合。
+1. 按一下&#x200B;**[!UICONTROL 儲存並關閉]**。雲端設定此時已建立。您的AEM Assets作者例項現在已設定為品牌入口網站租用戶。
 
 ### 測試設定 {#test-integration}
 
-1. 登入您的AEM Assets作者實例
+執行以下步驟以驗證配置：
 
-   預設URL: http:// localhost:4502/aem/start.html
+1. 登入您的AEM Assets雲端例項。
 
-1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment >> Replication]**.
+1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
    ![](assets/test-integration1.png)
 
-1. 複製頁開啟。
-
-   按一 **[!UICONTROL 下作者上的代理]**。
+1. 在「複製」頁中，按一下「作 **[!UICONTROL 者上的代理」]**。
 
    ![](assets/test-integration2.png)
 
@@ -264,22 +343,14 @@ Adobe I/O 整合項目會產生 API 金鑰、用戶端密碼，以及設定 IMS 
    >
    >複製代理並行工作，共用作業分配，使發佈速度提高了原始速度的四倍。 在設定雲端服務後，不需要額外的設定，就可啟用依預設啟用的複製代理，以啟用多個資產的並行發佈。
 
-   >[!NOTE]
-   >
-   >請避免禁用任何複製代理，因為這可能導致某些資產的複製失敗。
 
-
-1. To verify the connection between AEM Assets author and Brand Portal, click **[!UICONTROL Test Connection]**.
+1. 若要驗證 AEM Assets 和 Brand Portal 之間的連線，請按一下&#x200B;**[!UICONTROL 測試連線]**。
 
    ![](assets/test-integration4.png)
 
-1. 查看測試結果底部以驗證複製是否成功。
+   頁面底部會顯示訊息，指出您的測試封裝已成功傳送。
 
    ![](assets/test-integration5.png)
-
-   >[!NOTE]
-   >
-   >複製代理並行工作，共用作業分配，使發佈速度提高了原始速度的四倍。 在設定雲端服務後，不需要額外的設定，就可啟用依預設啟用的複製代理，以啟用多個資產的並行發佈。
 
 1. 對所有四個複製代理逐一驗證測試結果。
 
@@ -288,7 +359,7 @@ Adobe I/O 整合項目會產生 API 金鑰、用戶端密碼，以及設定 IMS 
    >
    >請避免禁用任何複製代理，因為這可能導致某些資產的複製失敗。
 
-您的AEM Assets作者實例已成功設定品牌入口網站。 您現在可以：
+您的AEM Assets作者實例已成功設定為品牌入口網站，您現在可以：
 
 * [從 AEM Assets 發佈資產到 Brand Portal](../assets/brand-portal-publish-assets.md)
 * [從 AEM Assets 發佈資料夾到 Brand Portal](../assets/brand-portal-publish-folder.md)
@@ -306,15 +377,11 @@ Adobe I/O 整合項目會產生 API 金鑰、用戶端密碼，以及設定 IMS 
 
 在您進行任何修改之前，請確定您的AEM Assets作者實例上沒有執行任何發佈工作。 為此，您可以驗證所有四個複製代理，並確保隊列是理想／空的。
 
-1. 登入您的AEM Assets作者實例
+1. 登入您的AEM Assets作者實例。
 
-   預設URL: http:// localhost:4502/aem/start.html
+1. 從「工 **具**![」面板，導航至「部](assets/tools.png) 署 **[!UICONTROL 」>「部署復]******&#x200B;制」。
 
-1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment >> Replication]**.
-
-1. 複製頁開啟。
-
-   按一 **[!UICONTROL 下作者上的代理]**。
+1. 在「複製」頁中，按一下「作 **[!UICONTROL 者上的代理」]**。
 
    ![](assets/test-integration2.png)
 
@@ -331,9 +398,9 @@ Adobe I/O 整合項目會產生 API 金鑰、用戶端密碼，以及設定 IMS 
 * 刪除雲端服務
 * 刪除MAC用戶
 
-1. 登入您的AEM Assets作者例項，並以管理員身分開啟CRX Lite。
+1. 登入您的AEM Assets作者例項，並以管理員身分開啟CRX Lite。 預設URL為
 
-   預設URL: http:// localhost:4502/crx/de/index.jsp
+   `http:// localhost:4502/crx/de/index.jsp`
 
 1. 導覽至 `/etc/replications/agents.author` 並刪除您品牌入口網站租用戶的所有4個複製代理。
 
@@ -348,7 +415,7 @@ Adobe I/O 整合項目會產生 API 金鑰、用戶端密碼，以及設定 IMS 
    ![](assets/delete-mac-user.png)
 
 
-您現在可 [以在Adobe I/O的AEM](#configure-new-integration-65) 6.5作者實例上建立設定。
+您現在可 [以在AEM](#configure-new-integration-65) 6.5作者實例上建立設定。
 
 
 
