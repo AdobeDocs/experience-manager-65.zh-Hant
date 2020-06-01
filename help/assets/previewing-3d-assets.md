@@ -4,9 +4,9 @@ description: 瞭解如何預覽3D資產
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85a93dfa3bcacfb0820029642c03b2d35552121f
+source-git-commit: 1cabc87dc58a4dbcac64a2797a3b1e0cca995d63
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '564'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Manager支援3D資產的上傳、傳送和互動式預覽，做
 
 您可從AEM的資產詳細資訊頁面取得互動式3D檢視器。 檢視器除了其他功能外，還包含一系列互動式相機控制項，可讓您環繞、縮放和平移3D資產。
 
-另請參閱 [在動態媒體中使用3D資產](/help/assets/assets-3d.md)。
+<!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
 ## AEM中支援的3D預覽格式 {#supported-3d-previewing-assets}
 
