@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media 影像設定檔
-description: 建立包含非銳利遮色片和智慧型裁切或智慧型色票（或兩者）的設定的影像描述檔，然後將描述檔套用至影像資產的資料夾。
+description: 建立包含非銳利遮色片設定、智慧型裁切或智慧型色票（或兩者）的影像描述檔，然後將描述檔套用至影像資產的檔案夾。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 3cc0df3cdcb44250e26a31ac3ce1ad86064938d6
+source-git-commit: e78b3701e57b1954f03591c38b72e3dd33e8ef46
 workflow-type: tm+mt
-source-wordcount: '2671'
-ht-degree: 13%
+source-wordcount: '2674'
+ht-degree: 12%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 13%
 
 ## Crop options {#crop-options}
 
-您有兩個影像裁切選項可供選擇，還有一個選項可自動建立顏色和影像色票。
+<!-- CQDOC-16069 -->Smart Crop coordinates are aspect ratio dependent. That is, for the various smart crop settings in an image profile, if the aspect ratio is the same for the added dimensions that are in the image profile, then the same aspect ratio is sent to Dynamic media. Because of this, Adobe recommends that you use the same crop area. Doing so will ensure that there is no impact to different dimensions used in the image profile.
 
->[!IMPORTANT]
->
->請注意，您建立的每個智慧型裁切產生都需要額外處理。 例如，新增超過5種智慧型裁切外觀比例會導致資產擷取速度變慢。 它還可能增加系統的負載。 由於您可以在資料夾層級套用「智慧裁切」,Adobe建議您僅在需要智慧裁切的 *資料夾* 上使用它。
+請注意，您建立的每個智慧型裁切產生都需要額外的處理。 例如，新增超過5種智慧型裁切外觀比例會導致資產擷取速度變慢。 它還可能增加系統的負載。 由於您可以在資料夾層級套用「智慧裁切」,Adobe建議您僅在需要智慧裁切的 *資料夾* 上使用它。
+
+您有兩個影像裁切選項可供選擇。 您也可以選擇自動建立顏色和影像色票。
 
 <table>
  <tbody>
@@ -49,7 +49,7 @@ ht-degree: 13%
      <li>裁切起點： 左邊是X，上邊是Y</li>
      <li>水準計算： 原始影像的水準像素尺寸減去「左」，然後減去「右」。</li>
      <li>垂直計算： 垂直像素高度減去「頂端」，然後減去「底部」。</li>
-    </ul> <p>例如，假設您有4000 x 3000像素的影像。 您使用值： Top=250; 底部=500; 左=300; 右=700。</p> <p>從左上角(300,250)，使用（4000-300-700、3000-250-500或3000,2250）的填滿空間進行裁切。</p> </td>
+    </ul> <p>例如，假設您有4000 x 3000像素的影像。 您使用值： Top=250,Bottom=500,Left=300,Right=700。</p> <p>從左上角(300,250)，使用（4000-300-700、3000-250-500或3000,2250）的填滿空間進行裁切。</p> </td>
   </tr>
   <tr>
    <td>智慧型裁切</td>
@@ -209,7 +209,7 @@ ht-degree: 13%
 
 1. 點選資料夾以開啟其內容。
 1. 點選您要調整其智慧裁切或智慧色票的影像。
-1. 在工具列上，點選「智慧 **[!UICONTROL 裁切」]**。
+1. 在工具列中，點選「智慧 **[!UICONTROL 裁切」]**。
 
 1. 執行下列任一操作：
 
@@ -288,6 +288,6 @@ ht-degree: 13%
 1. 點選AEM標誌並導覽 **[!UICONTROL Assets]** ，然後前往您要從中移除影像描述檔的檔案夾。
 1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
 1. Select the **[!UICONTROL Image Profiles]** tab.
-1. 從「描述 **[!UICONTROL 檔名稱]** 」下拉式選單中，選取「無」 **[!UICONTROL ，然後點選「]**&#x200B;儲存並關閉」 ****。
+1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close]**.
 
    已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
