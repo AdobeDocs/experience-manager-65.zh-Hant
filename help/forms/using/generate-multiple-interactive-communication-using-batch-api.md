@@ -6,7 +6,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
+source-git-commit: 5a97dd9a34d42bfbf3e2185763e4040e1190f297
+workflow-type: tm+mt
+source-wordcount: '2237'
+ht-degree: 0%
 
 ---
 
@@ -174,20 +177,13 @@ source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
 
 1. 登入您的AEM例項並建立互動式通訊。 若要使用下列范常式式碼中提及的互動式通訊，請按 [一下這裡](assets/SimpleMediumIC.zip)。
 1. [在您的AEM例項上使用Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) ，建立和部署AEM專案。
-1. 將 [AEM Forms Client SDK 6.0.12版或更新版本](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) ，以及最新的 [](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) AEM Uber Jar新增至AEM專案的POm檔案相依性清單中。 例如，
+1. 將 [](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) AEM Forms Client SDK 6.0.12版或更新版本新增至AEM專案的POM檔案的相依性清單中。 例如，
 
    ```XML
        <dependency>
            <groupId>com.adobe.aemfd</groupId>
            <artifactId>aemfd-client-sdk</artifactId>
            <version>6.0.122</version>
-       </dependency>
-       <dependency>
-          <groupId>com.adobe.aem</groupId>
-          <artifactId>uber-jar</artifactId>
-          <version>6.5.0</version>
-          <classifier>apis</classifier>
-          <scope>provided</scope>
        </dependency>
    ```
 
@@ -201,18 +197,9 @@ source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
            import java.io.FileOutputStream;
            import java.io.IOException;
            import java.io.InputStream;
-           import java.io.OutputStream;
            import java.io.PrintWriter;
            import java.util.List;
-           import java.util.logging.FileHandler;
-           import java.util.logging.Logger;
-           import java.util.logging.SimpleFormatter;
-   
            import javax.servlet.Servlet;
-           import javax.servlet.ServletContext;
-   
-           import com.adobe.aemfd.watchfolder.service.api.ContentProcessor;
-   
            import org.apache.commons.io.IOUtils;
            import org.apache.sling.api.SlingHttpServletRequest;
            import org.apache.sling.api.SlingHttpServletResponse;
@@ -222,8 +209,7 @@ source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
            import org.osgi.service.component.annotations.Component;
            import org.osgi.service.component.annotations.Reference;
    
-           import com.adobe.aemfd.docmanager.Document;
-           import com.adobe.aemfd.docmanager.passivation.DocumentPassivationHandler;
+           import com.adobe.fd.ccm.multichannel.batch.api.builder.BatchConfigBuilder;
            import com.adobe.fd.ccm.multichannel.batch.api.factory.BatchComponentBuilderFactory;
            import com.adobe.fd.ccm.multichannel.batch.api.model.BatchConfig;
            import com.adobe.fd.ccm.multichannel.batch.api.model.BatchInput;
@@ -233,21 +219,8 @@ source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
            import com.adobe.fd.ccm.multichannel.batch.api.model.RenditionResult;
            import com.adobe.fd.ccm.multichannel.batch.api.service.BatchGeneratorService;
            import com.adobe.fd.ccm.multichannel.batch.util.BatchConstants;
-           import com.adobe.icc.render.obj.Content;
-   
-           import javax.annotation.PostConstruct;
-           import javax.inject.Inject;
-           import javax.inject.Named;
-   
-           import org.apache.sling.api.resource.Resource;
-           import org.apache.sling.models.annotations.Default;
-           import org.apache.sling.models.annotations.Model;
-           import org.apache.sling.settings.SlingSettingsService;
-           import org.apache.sling.api.resource.ResourceUtil;
-   
-   
-           import org.slf4j.*;
            import java.util.Date;
+   
    
            @Component(service=Servlet.class,
            property={
@@ -361,11 +334,13 @@ source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
 
 當您將batchType設定為轉譯網頁頻道時，API會為每個資料記錄產生JSON檔案。 您可以使用下列語法，將JSON檔案與對應的「網頁頻道」合併，以產生互動式通訊：
 
-**語法**`http://host:port/<template-path>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=<guide-merged-json-path>`
+**語法**
+`http://host:port/<template-path>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=<guide-merged-json-path>`
 
 **範例**&#x200B;如果您的JSON檔案位於，而您 `C:\batch\mergedJsonPath.json` 使用下列互動式通訊範本： `http://host:port/content/dam/formsanddocuments/testsample/mediumic/jcr:content?channel=web`
 
-然後，發佈節點上的下列URL會顯示互動式通訊的Web頻道`http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
+然後，發佈節點上的下列URL會顯示互動式通訊的Web頻道
+`http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
 
 除了將資料儲存在檔案系統外，您還可將JSON檔案儲存在CRX-repository、檔案系統、Web伺服器，或可透過OSGI預填服務存取資料。 使用各種通訊協定來合併資料的語法為：
 
