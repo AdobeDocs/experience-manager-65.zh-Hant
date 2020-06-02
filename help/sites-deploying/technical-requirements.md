@@ -11,7 +11,10 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: f16c25468418b6f228132e9d06017d32466cf43a
+workflow-type: tm+mt
+source-wordcount: '3118'
+ht-degree: 0%
 
 ---
 
@@ -65,11 +68,11 @@ Adobe建議您進行這些組態，並在標準軟體維護合約中提供完整
    <td>說明<br /> </td>
   </tr>
   <tr>
-   <td><strong>答：支援</strong></td>
+   <td><strong>答： 支援</strong></td>
    <td>Adobe提供此組態的完整支援與維護。 Adobe的品質保證程式涵蓋此設定。</td>
   </tr>
   <tr>
-   <td><strong>R:受限制的支援</strong></td>
+   <td><strong>R: 受限制的支援</strong></td>
    <td>為確保客戶專案成功，Adobe在受限制的支援計畫中提供完整支援，這需要符合特定條件。 R級支援需要Adobe正式向客戶提出要求及確認。 如需詳細資訊，請聯絡Adobe客戶服務。</td>
   </tr>
  </tbody>
@@ -79,7 +82,7 @@ Adobe建議您進行這些組態，並在標準軟體維護合約中提供完整
 
 | 支援等級 | 說明 |
 |---|---|
-| **Z:不支援** | 不支援配置。 Adobe不會就設定是否有效發表任何陳述，也不支援。 |
+| **Z: 不支援** | 不支援配置。 Adobe不會就設定是否有效發表任何陳述，也不支援。 |
 
 ## 支援的平台 {#supported-platforms}
 
@@ -100,32 +103,32 @@ Adobe Experience Manager可與下列Java虛擬機版本搭配運作：
    <td>支援等級<br /> </td>
   </tr>
   <tr>
-   <td>Oracle Java SE 12 JDK「\[1]」</td>
-   <td>Z:不支援 </td>
+   <td>Oracle Java SE 12 JDK [1]</td>
+   <td>Z: 不支援 </td>
   </tr>
   <tr>
    <td><strong>Oracle Java SE 11 JDK - 64位</strong></td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
   </tr>
   <tr>
-   <td>Oracle Java SE 10 JDK「\[1]」</td>
-   <td>Z:不支援 </td>
+   <td>Oracle Java SE 10 JDK [1]</td>
+   <td>Z: 不支援 </td>
   </tr>
   <tr>
-   <td>Oracle Java SE 9 JDK「\[1]」</td>
-   <td>Z:不支援</td>
+   <td>Oracle Java SE 9 JDK [1]</td>
+   <td>Z: 不支援</td>
   </tr>
   <tr>
    <td>Oracle Java SE 8 JDK - 64位</td>
-   <td>答：支援的「\[3]」<br /> </td>
+   <td>答： 支援[3]</td>
   </tr>
   <tr>
-   <td>IBM J9 VM —— 內部版本2.9,JRE 1.8.0「\[2]」</td>
-   <td>答：支援</td>
+   <td>IBM J9 VM —— 內部版本2.9、JRE 1.8.0 [2]</td>
+   <td>答： 支援</td>
   </tr>
   <tr>
-   <td>IBM J9 VM —— 內部版本2.8,JRE 1.8.0「\[2]」</td>
-   <td>答：支援</td>
+   <td>IBM J9 VM —— 內部版本2.8、JRE 1.8.0 [2]</td>
+   <td>答： 支援</td>
   </tr>
  </tbody>
 </table>
@@ -141,19 +144,19 @@ Adobe Experience Manager的儲存庫有多種部署選項。 有關支援的技�
 
 | **平台** | **說明** | **支援等級** |
 |---|---|---|
-| **具有TAR檔案的檔案系統`\[1]`** | 存放庫 | 答：支援 |
-| **具有資料儲存的檔案系統`\[1]`** | 二進位檔 | 答：支援 |
-| 將二進位檔儲存在檔案系統的TAR檔案中 `\[1]` | 二進位檔 | Z:不支援生產 |
-| Amazon S3 | 二進位檔 | 答：支援 |
-| Microsoft Azure Blob儲存空間 | 二進位檔 | 答：支援 |
-| MongoDB Enterprise 4.0 | 存放庫 | 答：支 [援2、3] |
-| MongoDB Enterprise 3.6 | 存放庫 | Z:不支援 |
-| MongoDB Enterprise 3.4 | 存放庫 | Z:不支援 |
-| IBM DB2 10.5 | 儲存庫和表單資料庫 | R:受限制的支援 `\[4]` |
-| Oracle Database 12c(12.1.x) | 儲存庫和表單資料庫 | R:受限制的支援 |
-| Microsoft SQL Server 2016 | Forms資料庫 | 答：支援 |
-| **Apache Lucene（Quickstart內置）** | 搜尋服務 | 答：支援 |
-| Apache Solr | 搜尋服務 | 答：支援 |
+| **具有TAR檔案[1的檔案系統&#x200B;]** | 存放庫 | 答： 支援 |
+| **具有資料儲存區[1的檔案系統&#x200B;]** | 二進位檔 | 答： 支援 |
+| 將二進位檔儲存在檔案系統 [1的TAR檔案] | 二進位檔 | Z: 不支援生產 |
+| Amazon S3 | 二進位檔 | 答： 支援 |
+| Microsoft Azure Blob儲存空間 | 二進位檔 | 答： 支援 |
+| MongoDB Enterprise 4.0 | 存放庫 | 答： 支 [援2、3] |
+| MongoDB Enterprise 3.6 | 存放庫 | Z: 不支援 |
+| MongoDB Enterprise 3.4 | 存放庫 | Z: 不支援 |
+| IBM DB2 10.5 | 儲存庫和表單資料庫 | R: 受限制的支 [援4] |
+| Oracle Database 12c(12.1.x) | 儲存庫和表單資料庫 | R: 受限制的支援 |
+| Microsoft SQL Server 2016 | Forms資料庫 | 答： 支援 |
+| **Apache Lucene（Quickstart內置）** | 搜尋服務 | 答： 支援 |
+| Apache Solr | 搜尋服務 | 答： 支援 |
 
 1. 「檔案系統」包括符合POSIX的塊儲存。 其中包括網路儲存技術。 請注意，檔案系統效能可能會有所不同，並影響整體效能。 建議您將測試AEM與網路／遠端檔案系統結合載入。
 1. AEM不支援MongoDB Sharding。
@@ -194,14 +197,14 @@ Servlet 3.1需要的Servlet API最低版本
 
 | 平台 | 支援等級 |
 |---|---|
-| **快速入門內置Servlet引擎(Jetty 9.4)** | 答：支援 |
-| Oracle WebLogic Server 12.2(12cR2) | Z:不支援 |
-| IBM WebSphere Application Server Continuous Delivery(LibertyProfile)與Web Profile 7.0和IBM JRE 1.8 | R:新合約的限制支援 `\[2]` |
-| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R:新合約的限制支援 `\[1]``\[2]` |
-| Apache Tomcat 8.5.x | R:新合約的限制支援 `\[2]` |
-| JBoss EAP 7.2.x與JBoss應用程式伺服器 | Z:不支援 |
-| JBoss EAP 7.1.4與JBoss應用程式伺服器 | R:新合約的限制支援 `\[1]``\[2]` |
-| JBoss EAP 7.0.x與JBoss應用程式伺服器 | Z:不支援 |
+| **快速入門內置Servlet引擎(Jetty 9.4)** | 答： 支援 |
+| Oracle WebLogic Server 12.2(12cR2) | Z: 不支援 |
+| IBM WebSphere Application Server Continuous Delivery(LibertyProfile)與Web Profile 7.0和IBM JRE 1.8 | R: 新合約的限制支援 [2] |
+| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R: 新合約的限制支 [援1][2] |
+| Apache Tomcat 8.5.x | R: 新合約的限制支援 [2] |
+| JBoss EAP 7.2.x與JBoss應用程式伺服器 | Z: 不支援 |
+| JBoss EAP 7.1.4與JBoss應用程式伺服器 | R: 新合約的限制支 [援1][2] |
+| JBoss EAP 7.0.x與JBoss應用程式伺服器 | Z: 不支援 |
 
 1. 建議使用AEM Forms進行部署。
 1. 在應用程式伺服器上啟動AEM 6.5部署會移至「受限制支援」。 現有客戶可升級至AEM 6.5並持續使用應用程式伺服器。 對於新客戶，它隨附支援標準和支援方案，如上述R級說明所述。
@@ -212,14 +215,14 @@ Adobe Experience Manager適用於下列生產環境的伺服器平台：
 
 | **平台** | **支援等級** |
 |---|---|
-| **Linux，基於Red Hat分發** | 答：支援的 `\[1]``\[3]` |
-| Linux，基於Debian分發，包括烏邦圖 | 答：支援 `\[2]` |
-| Linux，基於SUSE分發 | 答：支援 |
-| Microsoft Windows Server 2019 `\[4]` | R:新合約的限制支援 |
-| Microsoft Windows Server 2016 `\[4]` | R:新合約的限制支援 `\[5]` |
-| Microsoft Windows Server 2012 R2 | Z:不支援 |
-| Oracle Solaris 11 | Z:不支援 |
-| IBM AIX 7.2 | Z:不支援 |
+| **Linux，基於Red Hat分發** | 答： 支援 [的1] [3] |
+| Linux，基於Debian分發，包括 烏邦圖 | 答： 支援的 [2] |
+| Linux，基於SUSE分發 | 答： 支援 |
+| Microsoft Windows Server 2019 [4] | R: 新合約的限制支援 |
+| Microsoft Windows Server 2016 [4] | R: 新合約的限制支援 [5] |
+| Microsoft Windows Server 2012 R2 | Z: 不支援 |
+| Oracle Solaris 11 | Z: 不支援 |
+| IBM AIX 7.2 | Z: 不支援 |
 
 1. Linux內核2.6、3.x和4.x包括Red Hat分發的衍生產品，包括Red Hat Enterprise Linux、CentOS、Oracle Linux和Amazon Linux。 AEM表單附加功能僅在CentOS 7和Red Hat Enterprise Linux 7上受支援。
 1. AEM Forms僅在Ubuntu 16.04 LTS上受支援
@@ -245,14 +248,14 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 
 | 平台 | 支援等級 |
 |---|---|
-| **Apache httpd 2.4.x** [1,2] | 答：支援 |
-| Microsoft IIS 10(Internet Information Server) | 答：支援 |
-| Microsoft IIS 8.5(Internet Information Server) | Z:不支援 |
+| **Apache httpd 2.4.x** [1,2] | 答： 支援 |
+| Microsoft IIS 10(Internet Information Server) | 答： 支援 |
+| Microsoft IIS 8.5(Internet Information Server) | Z: 不支援 |
 
 1. 以Apache httpd原始碼為基礎的Web伺服器，其支援等級將與其所依據的httpd版本相同。 如有疑問，請向Adobe洽詢有關個別伺服器產品的支援等級。 以下情況：
 
    1. HTTP伺服器僅使用官方的Apache來源散發，或
-   1. HTTP伺服器是以其執行作業系統的方式傳送。 範例：IBM HTTP Server、Oracle HTTP Server
+   1. HTTP伺服器是以其執行作業系統的方式傳送。 範例： IBM HTTP Server、Oracle HTTP Server
 
 1. Dispatcher不適用於Windows作業系統的Apache 2.4.x。
 
@@ -279,48 +282,48 @@ AEM使用者介面已針對較大螢幕（通常是筆記型電腦和桌上型�
   </tr>
   <tr>
    <td><strong>Google Chrome(Evergreen)</strong></td>
-   <td>答：支援</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
+   <td>答： 支援</td>
   </tr>
   <tr>
    <td>Microsoft Edge(Evergreen)</td>
-   <td>答：支援</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
+   <td>答： 支援</td>
   </tr>
   <tr>
    <td>Microsoft Internet Explorer 11</td>
-   <td>Z:不支援</td>
-   <td>Z:不支援</td>
+   <td>Z: 不支援</td>
+   <td>Z: 不支援</td>
   </tr>
   <tr>
    <td>Mozilla Firefox(Evergreen)</td>
-   <td>答：支援</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
+   <td>答： 支援</td>
   </tr>
   <tr>
-   <td>Mozilla Firefox最後一個ESR「\[1]」</td>
-   <td>答：支援</td>
-   <td>答：支援</td>
+   <td>Mozilla Firefox最後一個ESR [1]</td>
+   <td>答： 支援</td>
+   <td>答： 支援</td>
   </tr>
   <tr>
    <td>macOS版Apple Safari(Evergreen)</td>
-   <td>答：支援</td>
-   <td>答：支援</td>
+   <td>答： 支援</td>
+   <td>答： 支援</td>
   </tr>
   <tr>
    <td>macOS版Apple Safari 11.x</td>
-   <td>Z:不支援</td>
-   <td>Z:不支援</td>
+   <td>Z: 不支援</td>
+   <td>Z: 不支援</td>
   </tr>
   <tr>
    <td>iOS 12.x版的Apple Safari</td>
-   <td>答：支援的「\[2]」</td>
-   <td>Z:不支援</td>
+   <td>答： 支援[2]</td>
+   <td>Z: 不支援</td>
   </tr>
   <tr>
    <td>iOS 11.x版的Apple Safari</td>
-   <td>Z:不支援</td>
-   <td>Z:不支援</td>
+   <td>Z: 不支援</td>
+   <td>Z: 不支援</td>
   </tr>
  </tbody>
 </table>
@@ -374,9 +377,9 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用動態媒體](/help/a
 
 >[!NOTE]
 >
->這些系統需 **求** ，只有在您使用Dynamic Media - Hybrid模式時才適用；動態媒體——混合模式具有內嵌的影像伺服器，僅在特定作業系統上取得認證。
+>這些系統需 **求** ，只有在您使用Dynamic Media - Hybrid模式時才適用； 動態媒體——混合模式具有內嵌的影像伺服器，僅在特定作業系統上取得認證。
 >
->對於執行Dynamic Media - Scene7模式(即 **dynamicmedia_scene7** runmode)的Dynamic Media客戶，並無其他系統需求；只有與AEM相同的系統需求。 動態媒體- Scene7模式架構使用雲端影像服務，而非內嵌於AEM中的服務。
+>對於執行Dynamic Media - Scene7模式(即 **dynamicmedia_scene7** runmode)的Dynamic Media客戶，並無其他系統需求； 只有與AEM相同的系統需求。 動態媒體- Scene7模式架構使用雲端影像服務，而非內嵌於AEM中的服務。
 
 #### 硬體 {#hardware}
 
@@ -402,7 +405,7 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用動態媒體](/help/a
 >
 >**禁用SELinux:** 開啟SELinux時，影像伺服無法運作。 預設會啟用此選項。 要解決此問題，請編輯 **/etc/selinux/config** 檔案，並將SELinux值從：
 >
->`SELINUX=enforcing` **至**`SELINUX=disabled`
+>`SELINUX=enforcing` **to** `SELINUX=disabled`
 
 >[!NOTE]
 >
@@ -511,8 +514,8 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用動態媒體](/help/a
    * Windows Server
    * Mac OS X（64位元）
 
-* **檔案格式**:JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
+* **檔案格式**: JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
 
 ### AEM Assets在Linux上處理大量中繼資料資產的需求 {#assetsonlinux}
 
-XMPFiles處理器過程需要庫GLIBC_2.14才能工作。 使用包含GLIBC_2.14的Linux內核，例如Linux內核3.1.x版。它可改善處理包含大量中繼資料（例如PSD檔案）的資產的效能。 使用舊版GLIBC會導致從開始的日誌出錯 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`。
+XMPFiles處理器過程需要庫GLIBC_2.14才能工作。 使用包含GLIBC_2.14的Linux內核，例如Linux內核3.1.x版。 它可改善處理包含大量中繼資料（例如PSD檔案）的資產的效能。 使用舊版GLIBC會導致從開始的日誌出錯 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`。
