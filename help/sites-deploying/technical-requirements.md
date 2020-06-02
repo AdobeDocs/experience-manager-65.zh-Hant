@@ -11,7 +11,7 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f16c25468418b6f228132e9d06017d32466cf43a
+source-git-commit: a299e26668b1f1f08cca8d4a8085da185522ec96
 workflow-type: tm+mt
 source-wordcount: '3118'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Adobe Experience Manager可與下列Java虛擬機版本搭配運作：
  <tbody>
   <tr>
    <td>平台</td>
-   <td>支援等級<br /> </td>
+   <td>支援等級</td>
   </tr>
   <tr>
    <td>Oracle Java SE 12 JDK [1]</td>
@@ -144,15 +144,15 @@ Adobe Experience Manager的儲存庫有多種部署選項。 有關支援的技�
 
 | **平台** | **說明** | **支援等級** |
 |---|---|---|
-| **具有TAR檔案[1的檔案系統&#x200B;]** | 存放庫 | 答： 支援 |
-| **具有資料儲存區[1的檔案系統&#x200B;]** | 二進位檔 | 答： 支援 |
-| 將二進位檔儲存在檔案系統 [1的TAR檔案] | 二進位檔 | Z: 不支援生產 |
+| **具有TAR檔案的檔案系統** `[1]` | 存放庫 | 答： 支援 |
+| **具有資料儲存的檔案系統** `[1]` | 二進位檔 | 答： 支援 |
+| 將二進位檔儲存在檔案系統的TAR檔案中 `[1]` | 二進位檔 | Z: 不支援生產 |
 | Amazon S3 | 二進位檔 | 答： 支援 |
 | Microsoft Azure Blob儲存空間 | 二進位檔 | 答： 支援 |
-| MongoDB Enterprise 4.0 | 存放庫 | 答： 支 [援2、3] |
+| MongoDB Enterprise 4.0 | 存放庫 | 答： 支援 `[2, 3]` |
 | MongoDB Enterprise 3.6 | 存放庫 | Z: 不支援 |
 | MongoDB Enterprise 3.4 | 存放庫 | Z: 不支援 |
-| IBM DB2 10.5 | 儲存庫和表單資料庫 | R: 受限制的支 [援4] |
+| IBM DB2 10.5 | 儲存庫和表單資料庫 | R: 受限制的支援 `[4]` |
 | Oracle Database 12c(12.1.x) | 儲存庫和表單資料庫 | R: 受限制的支援 |
 | Microsoft SQL Server 2016 | Forms資料庫 | 答： 支援 |
 | **Apache Lucene（Quickstart內置）** | 搜尋服務 | 答： 支援 |
@@ -199,11 +199,11 @@ Servlet 3.1需要的Servlet API最低版本
 |---|---|
 | **快速入門內置Servlet引擎(Jetty 9.4)** | 答： 支援 |
 | Oracle WebLogic Server 12.2(12cR2) | Z: 不支援 |
-| IBM WebSphere Application Server Continuous Delivery(LibertyProfile)與Web Profile 7.0和IBM JRE 1.8 | R: 新合約的限制支援 [2] |
-| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R: 新合約的限制支 [援1][2] |
-| Apache Tomcat 8.5.x | R: 新合約的限制支援 [2] |
+| IBM WebSphere Application Server Continuous Delivery(LibertyProfile)與Web Profile 7.0和IBM JRE 1.8 | R: 新合約的限制支援 `[2]` |
+| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R: 新合約的限制支援 `[1]` `[2]` |
+| Apache Tomcat 8.5.x | R: 新合約的限制支援 `[2]` |
 | JBoss EAP 7.2.x與JBoss應用程式伺服器 | Z: 不支援 |
-| JBoss EAP 7.1.4與JBoss應用程式伺服器 | R: 新合約的限制支 [援1][2] |
+| JBoss EAP 7.1.4與JBoss應用程式伺服器 | R: 新合約的限制支援 `[1]` `[2]` |
 | JBoss EAP 7.0.x與JBoss應用程式伺服器 | Z: 不支援 |
 
 1. 建議使用AEM Forms進行部署。
@@ -215,11 +215,11 @@ Adobe Experience Manager適用於下列生產環境的伺服器平台：
 
 | **平台** | **支援等級** |
 |---|---|
-| **Linux，基於Red Hat分發** | 答： 支援 [的1] [3] |
-| Linux，基於Debian分發，包括 烏邦圖 | 答： 支援的 [2] |
+| **Linux，基於Red Hat分發** | 答： 支援 `[1]` `[3]` |
+| Linux，基於Debian分發，包括 烏邦圖 | 答： 支援 `[2]` |
 | Linux，基於SUSE分發 | 答： 支援 |
-| Microsoft Windows Server 2019 [4] | R: 新合約的限制支援 |
-| Microsoft Windows Server 2016 [4] | R: 新合約的限制支援 [5] |
+| Microsoft Windows Server 2019 `[4]` | R: 新合約的限制支援 |
+| Microsoft Windows Server 2016 `[4]` | R: 新合約的限制支援 `[5]` |
 | Microsoft Windows Server 2012 R2 | Z: 不支援 |
 | Oracle Solaris 11 | Z: 不支援 |
 | IBM AIX 7.2 | Z: 不支援 |
@@ -248,7 +248,7 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 
 | 平台 | 支援等級 |
 |---|---|
-| **Apache httpd 2.4.x** [1,2] | 答： 支援 |
+| **Apache httpd 2.4.x** `[1,2]` | 答： 支援 |
 | Microsoft IIS 10(Internet Information Server) | 答： 支援 |
 | Microsoft IIS 8.5(Internet Information Server) | Z: 不支援 |
 
