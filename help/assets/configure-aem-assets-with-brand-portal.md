@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cdcea49a25807e125ea15e7132ac9f188d3525bc
+source-git-commit: 9a27aabef07d5b5104c08c414138fbb22e284a68
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 13%
@@ -24,7 +24,7 @@ Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console以品牌入�
 
 >[!NOTE]
 >
->AEM 6.5.4.0及更新版本支援透過Adobe I/O以品牌入口網站設定AEM資產。
+>AEM 6.5.4.0及更新版本支援透過Adobe Developer Console以品牌入口網站設定AEM資產。
 >
 >之前，品牌入口網站是透過舊版OAuth閘道在傳統使用者介面中設定，該閘道使用JWT代號交換來取得IMS存取代號以進行授權。
 >
@@ -35,13 +35,13 @@ Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console以品牌入�
 >
 >***僅限現有客戶***
 >
->建議您繼續使用現有的舊版OAuth閘道設定。 萬一您遇到舊版OAuth閘道設定的問題，請刪除現有的設定，並透過Adobe I/O建立新的設定。
+>建議您繼續使用現有的舊版OAuth閘道設定。 萬一您遇到舊版OAuth閘道設定的問題，請刪除現有的設定，並透過Adobe Developer Console建立新的設定。
 
 
 
 本說明說明下列兩個使用案例：
-* [新配置](#configure-new-integration-65): 如果您是新的品牌入口網站使用者，並想要使用品牌入口網站設定您的AEM Assets作者例項，則可以在Adobe I/O上建立新的設定。
-* [升級配置](#upgrade-integration-65): 如果您是現有的品牌入口網站使用者，且AEM Assets作者實例在舊版OAuth閘道上設定了品牌入口網站，建議您刪除現有的設定並在Adobe I/O上建立新的設定。
+* [新配置](#configure-new-integration-65): 如果您是新的品牌入口網站使用者，並想要使用品牌入口網站設定您的AEM Assets作者例項，則可以在Adobe Developer Console上建立新的設定。
+* [升級配置](#upgrade-integration-65): 如果您是現有的品牌入口網站使用者，且AEM Assets作者實例在舊版OAuth閘道上設定了品牌入口網站，建議您刪除現有的設定並在Adobe Developer Console上建立新的設定。
 
 提供的資訊基於以下假設：閱讀本「說明」的人熟悉下列技術：
 
