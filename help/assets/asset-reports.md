@@ -3,9 +3,9 @@ title: 有關您數位資產的報告
 description: 瞭解Adobe Experience Manager Assets中有關您資產的報表，以協助您瞭解數位資產的使用、活動和分享。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 3e43e46b37ea5a9449da4a98d94fdc22f6c4ee8c
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '974'
 ht-degree: 14%
 
 ---
@@ -37,10 +37,11 @@ Experience Manager Assets會為您產生下列標準報表：
 * 檔案
 * 連結共用
 
-Experience Manager管理員可輕鬆產生並自訂這些報表，以供您實施。 管理員可依照下列步驟產生報表：
+[!DNL Adobe Experience Manager] 管理員可輕鬆產生和自訂這些報表，以供您的實作使用。 管理員可依照下列步驟產生報表：
 
 1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
-   ![](assets/AssetsReportNavigation.png)
+
+![](assets/AssetsReportNavigation.png)
 
 1. 在「資 [!UICONTROL 產報表] 」頁面上，按 **[!UICONTROL 一下工具]** 列中的「建立」。
 1. 從「建 **[!UICONTROL 立報表]** 」頁面，選擇您要建立的報表，然後按一下「下 **[!UICONTROL 一步」]**。
