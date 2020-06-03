@@ -3,7 +3,7 @@ title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manage
 description: 使用遠程部署中可用 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 的資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 3e43e46b37ea5a9449da4a98d94fdc22f6c4ee8c
 workflow-type: tm+mt
 source-wordcount: '2081'
 ht-degree: 51%
@@ -78,7 +78,8 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    1. 在&#x200B;**[!UICONTROL 「掛接點」]**&#x200B;欄位中，輸入 擷取資產的本機 路徑。[!DNL Experience Manager][!DNL Experience Manager]例如，`remoteassets` 資料夾。
    1. 根據您的網路調整&#x200B;**[!UICONTROL 原始二進位傳輸最佳化臨界值]**。大於此臨界值的資產轉譯項目會以非同步方式傳送。
    1. 如果您是使用資料存放區來儲存資產，且「資料存放區」是兩個 部署之間的共用儲存空間，請選取&#x200B;**[!UICONTROL 「與連線資產共用的資料存放區」]**。這種情況下，臨界值限制並不重要，因為實際的資產二進位檔位於資料存放區，而且不會轉移。
-      ![連線資產的典型設定](assets/connected-assets-typical-config.png)
+   ![連線資產的典型設定](assets/connected-assets-typical-config.png)
+
    *圖：連線資產的典型設定.*
 
 1. 資產處理完畢且轉譯完成擷取後，請停用工作流程啟動器。Adjust the launcher configurations on the local ([!DNL Sites]) deployment to exclude the `connectedassets` folder, in which the remote assets are fetched.
