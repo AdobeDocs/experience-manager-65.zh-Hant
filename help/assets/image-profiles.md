@@ -8,9 +8,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: d40488ce830eb15b4209145df03dff027f9a2470
+source-git-commit: a71507e3c6030ebc3f4abbd7064318d653d326bd
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2755'
 ht-degree: 12%
 
 ---
@@ -30,7 +30,9 @@ ht-degree: 12%
 
 ## Crop options {#crop-options}
 
-<!-- CQDOC-16069 -->Smart Crop coordinates are aspect ratio dependent. That is, for the various smart crop settings in an image profile, if the aspect ratio is the same for the added dimensions that are in the image profile, then the same aspect ratio is sent to Dynamic media. Because of this, Adobe recommends that you use the same crop area. Doing so will ensure that there is no impact to different dimensions used in the image profile.
+<!-- CQDOC-16069 for paragraph directly below -->
+
+智慧型裁切座標視長寬比而定。 也就是說，對於影像描述檔中的各種智慧型裁切設定，如果影像描述檔中新增尺寸的長寬比相同，則會傳送相同的長寬比給動態媒體。 因此，Adobe建議您使用相同的裁切區域。 這麼做可確保不會影響影像描述檔中使用的不同尺寸。
 
 請注意，您建立的每個智慧型裁切產生都需要額外的處理。 例如，新增超過5種智慧型裁切外觀比例會導致資產擷取速度變慢。 它還可能增加系統的負載。 由於您可以在資料夾層級套用「智慧裁切」,Adobe建議您僅在需要智慧裁切的 *資料夾* 上使用它。
 
