@@ -3,9 +3,9 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 8490b81242ee284208d0f7fd90797f411e2b99b2
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2709'
 ht-degree: 7%
 
 ---
@@ -119,7 +119,7 @@ application doesn't contain the sub type zip OOTB.
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資產的中繼資料節點，做為屬性 `dc:title`。
 
-* `./jcr:created`: 在資產的節點顯示JCR屬性。 如果您設定這些屬性，Adobe建議您將其標示為「停用編輯」。 屬性受到保護。 Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
+* `./jcr:created`: 在資產的節點顯示JCR屬性。 如果您設定這些屬性，Adobe建議您將其標示為「停用編輯」，且不要將任何日期欄位系結至 `./jcr:created`。 它是受保護的屬性。 當DAM使用者嘗試更新資產時，會導致 [!UICONTROL Asset無法修改錯誤]。 如果您決定將日期欄位對應至此JCR屬性，請使用預設結構。 複製Adobe提供的預設中繼資料結構並加以修改，因為預設結構中的日期欄位會對應至 `./jcr:created`。
 
 為確保元資料架構表單中的元件正確顯示，屬性路徑不應包含任何空格。
 
@@ -175,7 +175,7 @@ application doesn't contain the sub type zip OOTB.
 
 >[!NOTE]
 >
->* 刪除對預設表單的自定義更改後，鎖定表徵圖將重新顯示在元資料架構介面上。 它表示表單已回復為預設狀態。
+>* 刪除對預設表單的自定義更改後，鎖定表徵圖會重新顯示在元資料架構介面上。 它表示表單已回復為預設狀態。
 >* 您不能刪除中的預設元資料架構表 [!DNL Assets]單。
 
 
