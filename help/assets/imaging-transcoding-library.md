@@ -3,9 +3,9 @@ title: 影像轉碼程式庫
 description: 瞭解如何設定和使用Adobe的影像轉碼程式庫。此影像處理解決方案可執行核心影像處理功能，包括編碼、轉碼、影像重新取樣和影像大小調整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 要配置庫，請建立。conf檔案，以使用以下步驟指示庫。 您需要管理員或根用戶權限。
 
-1. 下載 [Imaging Rodcing Library軟體包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用軟體包管理器進行安裝。 此套件與Experience Manager 6.5相容。
+1. 從Package Share或 [Software Distribution](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) 下載Imaging [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) 轉碼程式庫套件，並使用Package Manager進行安裝。 此套件與Experience Manager 6.5相容。
 
 1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console，然後按一下「 **[!UICONTROL OSGi > Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
 
