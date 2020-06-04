@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 translation-type: tm+mt
-source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+source-git-commit: 6396660b642fd78ac7f311fa416efe0e0d52a9e3
+workflow-type: tm+mt
+source-wordcount: '2721'
+ht-degree: 2%
 
 ---
 
@@ -21,6 +24,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
 
 **使用6.5升級**
 
+* [ContextHub 組態](#contexthub-6.5)
 * [工作流程例項](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-instances)
 * [工作流程模型](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-models)
 * [工作流程啟動器](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-launchers)
@@ -29,11 +33,11 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
 **未來升級前**
 
 * [ContextHub 組態](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#contexthub-configurations)
-* [Classic Cloud services設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-cloud-services-designs)
+* [Classic Cloud Services設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-cloud-services-designs)
 * [傳統儀表板設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-dashboards-designs)
 * [傳統報表設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-reports-designs)
 * [預設設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#default-designs)
-* [Adobe DTM javaScript端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-javascript-endpoint)
+* [Adobe DTM JavaScript端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-javascript-endpoint)
 * [Adobe DTM Web-Hook端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-web-hook-endpoint)
 * [收件箱任務](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#inbox-tasks)
 * [多站點管理器Blueprint配置](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
@@ -49,6 +53,21 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
 * [工作流程通知電子郵件範本](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
 ## 使用6.5升級 {#with-upgrade}
+
+### ContextHub 組態 {#contexthub-6.5}
+
+從AEM 6.4開始，就沒有預設的ContextHub設定。 因此，應在站點的根級別上 `cq:contextHubPathproperty` 設定一個，以指示應使用哪個配置。
+
+1. 導覽至網站的根目錄。
+1. 開啟根頁面的頁面屬性，並選取「個人化」索引標籤。
+1. 在「Contexthub路徑」欄位中，輸入您自己的ContextHub設定路徑。
+
+此外，在ContextHub組態上， `sling:resourceType` 必須更新為相對而非絕對。
+
+1. 在CRX DE Lite中開啟ContextHub配置節點的屬性，例如 `/apps/settings/cloudsettings/legacy/contexthub`
+1. 從變 `sling:resourceType` 更 `/libs/granite/contexthub/cloudsettings/components/baseconfiguration` 為 `granite/contexthub/cloudsettings/components/baseconfiguration`
+
+例如，ContextHub `sling:resourceType` 組態必須是相對的，而非絕對的。
 
 ### 工作流程模型 {#workflow-models}
 
@@ -72,7 +91,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
       <ol>
        <li>在「工作流模型編輯器」開啟時，修改瀏覽器的位址URL，並將路徑區段/libs/settings/workflow/models取代為/etc/workflow/models。
         <ul>
-         <li>例如，變更： <em>http://localhost:4502/editor.html<strong>/libs/settings/workflow/models</strong>/dam/update_asset.html至</em> http://localhost:4502/editor.html <em>/etc/workflow/models<strong></strong>/dam/update_asset.html</em></li>
+         <li>例如，變更： <em>http://localhost:4502/editor.html<strong>/libs/settings/workflow/models</strong>/dam/update_asset.html</em> to <em>http://localhost:4502/editor.html<strong>/etc/workflow/models</strong>/dam/update_asset.html</em></li>
         </ul> </li>
       </ol> </li>
      <li>在工作流模型編輯器中啟用「編輯」模式，該模式將工作流模型定義複製到/conf/global/workflow/models。</li>
@@ -220,7 +239,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### Classic Cloud services設計 {#classic-cloud-services-designs}
+### Classic Cloud Services設計 {#classic-cloud-services-designs}
 
 <table>
  <tbody>
@@ -237,12 +256,13 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
    <td><p>適用於任何以SCM管理且不在執行時期透過設計對話方塊寫入的設計。</p>
     <ol>
      <li>將設計從「上一個位置」複製到「新位置」(<code>/apps</code>)。</li>
-     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">用戶端程式庫</a><code>allowProxy = true</code>。</li>
+     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為用戶 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">端程式庫</a> , <code>allowProxy = true</code>包含</li>
      <li>在以下位置更新「上一個位置」的參 <span class="code"><code>
         cq
-       </code>考：       屬 <code>
+       </code>考：
+       <code>
         designPath
-       </code></span> 性。</li>
+       </code></span> 屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
      <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
@@ -274,12 +294,13 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
    <td><p>適用於任何以SCM管理且不在執行時期透過設計對話方塊寫入的設計。</p>
     <ol>
      <li>將設計從「上一個位置」複製到「新位置」(/apps)。</li>
-     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">用戶端程式庫</a><code>allowProxy = true</code>。</li>
+     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為用戶 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">端程式庫</a> , <code>allowProxy = true</code>包含</li>
      <li>在以下位置更新對上一個位置的引用： <code>
        cq
-      </code>     屬 <code>
+      </code>
+      <code>
        designPath
-      </code> 性。</li>
+      </code> 屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
      <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
@@ -311,12 +332,13 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
    <td><p>適用於任何以SCM管理且不在執行時期透過設計對話方塊寫入的設計。</p>
     <ol>
      <li>將設計從「上一個位置」複製到「新位置」(/apps)。</li>
-     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">用戶端程式庫</a><code>allowProxy = true</code>。</li>
+     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為用戶 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">端程式庫</a> , <code>allowProxy = true</code>包含</li>
      <li>在以下位置更新對上一個位置的引用： <code>
        cq
-      </code>     屬 <code>
+      </code>
+      <code>
        designPath
-      </code> 性。</li>
+      </code> 屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
      <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
@@ -348,12 +370,13 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
    <td><p>適用於任何以SCM管理且不在執行時期透過設計對話方塊寫入的設計。</p>
     <ol>
      <li>將設計從「上一個位置」複製到「新位置」(/apps)。</li>
-     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">用戶端程式庫</a><code>allowProxy = true</code>。</li>
+     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為用戶 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">端程式庫</a> , <code>allowProxy = true</code>包含</li>
      <li>在以下位置更新對上一個位置的引用： <code>
        cq
-      </code>     屬 <code>
+      </code>
+      <code>
        designPath
-      </code> 性。</li>
+      </code> 屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
      <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
@@ -368,7 +391,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### Adobe DTM javaScript端點 {#adobe-dtm-javascript-endpoint}
+### Adobe DTM JavaScript端點 {#adobe-dtm-javascript-endpoint}
 
 <table>
  <tbody>
@@ -488,7 +511,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
       <ol>
        <li>請勿複製未修改的AEM Projects Dashboard Gadget設定，因為這些設定現在已存在於新位置(<code>/libs</code>)中。</li>
       </ol> </li>
-     <li>更新任何參照「上一個位置」的AEM projects範本，以指向適當的新位置。</li>
+     <li>更新任何參照「上一個位置」的AEM Projects範本，以指向適當的新位置。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -582,7 +605,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
      <li>將上一個位置的現有配置遷移到新位置。
       <ul>
        <li>透過「工具&gt;雲端服務&gt;轉譯雲端服務」的AEM製作UI, <strong>手動重新建立新的Translation Cloud服務設定</strong>。<br /> 或 </li>
-       <li>將任何新的Translation cloud服務配置從「上一個位置」複製到「新<code>/apps</code>位置」( <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</li>
+       <li>將任何新的Translation Cloud服務配置從「上一個位置」複製到「新<code>/apps</code>位置」( <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</li>
       </ul> </li>
      <li>將適用的AEM設定與AEM內容階層建立關聯。
       <ol>
@@ -592,7 +615,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
        <li>透過「 <strong>AEM Assets &gt;資料夾&gt;資料夾屬性&gt;雲端服務標籤&gt;設定」的AEM Assets資料夾階層</strong>。</li>
        <li>透過 <strong>AEM Projects &gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定的AEM專案</strong>。</li>
       </ol> </li>
-     <li>將任何移轉的舊版Translation cloud服務與前述的AEM內容階層分離。</li>
+     <li>將任何移轉的舊版Translation Cloud服務與前述的AEM內容階層分離。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -603,7 +626,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
      <li><code>/conf/global/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/apps/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/libs/settings/cloudconfigs/translations/translationcfg</code></li>
-    </ol> <p>移轉的Translation cloud服務必須與AEM 6.4相容。</p> </td>
+    </ol> <p>移轉的Translation Cloud服務必須與AEM 6.4相容。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -653,7 +676,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>修改的翻譯規則XML檔案必須遷移到新位置(<code>/apps</code>或 <code>/conf/global</code>)。</p> <p>1.將修改過的翻譯規則XML檔案從上一個位置複製到新位置。</p> </td>
+   <td><p>修改的翻譯規則XML檔案必須遷移到新位置(<code>/apps</code>或 <code>/conf/global</code>)。</p> <p>1. 將修改過的翻譯規則XML檔案從上一個位置複製到新位置。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
@@ -690,9 +713,10 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
      <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為用戶 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">端程式庫</a> , <code>allowProxy = true</code>包含</li>
      <li>在以下位置更新對上一個位置的引用： <code>
        cq
-      </code>     屬 <code>
+      </code>
+      <code>
        designPath
-      </code> 性。</li>
+      </code> 屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
      <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
@@ -746,7 +770,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
        <li>透過「 <strong>AEM Assets &gt;資料夾&gt;資料夾屬性&gt;雲端服務標籤&gt;設定」的AEM Assets資料夾階層</strong>。</li>
        <li>透過 <strong>AEM Projects &gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定的AEM專案</strong>。</li>
       </ol> </li>
-     <li>將任何移轉的舊版Translation cloud服務與前述的AEM內容階層分離。</li>
+     <li>將任何移轉的舊版Translation Cloud服務與前述的AEM內容階層分離。</li>
     </ol> </td>
   </tr>
   <tr>
