@@ -11,7 +11,10 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: eb9a4792f4d64f98805919f00bb62193a6a7dafc
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 1%
 
 ---
 
@@ -24,9 +27,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 頁面比較功能可方便並排比較兩頁的差異。
 
->[!CAUTION]
->
->用戶必須對節 **點具有「修改／建立／刪除** 」權 `/content/versionhistory` 限，才能使用該功能。
+>[!TIP]
 >
 >如需 [此功能的詳細技術資訊，請參閱開發與頁面比較](/help/sites-developing/pagediff.md#operation-details) 。
 
