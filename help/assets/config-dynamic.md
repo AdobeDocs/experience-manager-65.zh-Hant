@@ -10,7 +10,7 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: 5eb05c69b2236d92504305ca076734bf7fac21e2
 workflow-type: tm+mt
 source-wordcount: '8030'
 ht-degree: 1%
@@ -224,7 +224,7 @@ ht-degree: 1%
 
 如果您要將AEM Dynamic Media從6.3升級至6.5（現在包含零停機部署的功能），您必須執行下列curl命令，才能將所有預設集和組態從CRXDE `/etc` Lite移轉 `/conf` 至CRXDE Lite。
 
-**注意**: 如果您以相容模式執行AEM例項（即，您已安裝相容性封裝），就不需要執行這些命令。
+**注意**: 如果您以相容模式執行AEM例項，即您已安裝相容性套件，則不需要執行這些命令。
 
 對於所有升級，不論是否有相容性套件，您都可以執行下列Linux curl命令，複製Dynamic Media原本隨附的預設立即可用檢視器預設集：
 
@@ -965,7 +965,7 @@ Adobe色彩管理使用ICC描述檔，這是由國際色彩協會(ICC)定義的�
 * `iccEmbed` - [https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html)
 
 >[!NOTE]
-只有在您安裝了Package Share的 [Feature Pack 12445](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) ，或Software Distribution的 [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) Feature Pack 12445時，才能使用標準的Adobe色彩描述檔集。 所有功能包和服務包都可通過 [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) 和 [Software Distribution獲得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能套件12445提供Adobe色彩描述檔。
+只有在安裝了Package Share的 [Feature Pack 12445或Software Distribution的](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) Feature Pack 12445 [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 時，才能使用標準的Adobe色彩描述檔集。 所有功能包和服務包都可通過 [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) 和 [Software Distribution獲得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能套件12445提供Adobe色彩描述檔。
 
 ### 安裝功能包12445 {#installing-feature-pack}
 
