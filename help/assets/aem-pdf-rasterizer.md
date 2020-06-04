@@ -3,7 +3,7 @@ title: 使用PDF點陣化器產生PDF檔案的轉譯。
 description: 使用中的Adobe PDF Rasterizer程式庫產生高品質的縮圖和轉譯 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: 21f30cf67b73d26afc3f0413ca997a0b6e46e3d3
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 使用PDF點陣化器產生的縮圖和預覽，與現成可用的輸出相比，品質更佳，因此可跨裝置提供一致的檢視體驗。 Adobe PDF Rasterizer程式庫不支援任何色域轉換。 無論來源檔案的色域為何，都會輸出為RGB。
 
-1. 從「Package Share」（封裝共用）或「Software Distribution」（軟體散發），將PDF點陣 [!DNL Experience Manager] 化器封裝安 [裝在您的部](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)[署上](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)
+1. 從「Package Share」（封裝共用）或「Software Distribution」（軟體散發），將PDF點陣 [!DNL Experience Manager] 化器封裝安 [裝在您的部](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg) 署上 [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
 
    >[!NOTE]
    >
@@ -32,9 +32,11 @@ ht-degree: 0%
 1. 若要防止使用預設方法產生PDF檔案和AI檔案的縮圖和Web轉譯，請依照下列步驟進行：
 
    * 開啟「 **[!UICONTROL 處理縮圖]** 」步驟，並根據需要在「縮圖」頁籤下添加或在「跳過Mime類型」欄位中添加縮圖，或在「縮圖類型 `application/pdf` 」欄位中添加或在「縮 `application/postscript`******** 圖」頁籤下添加縮圖。
+
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
    * 在「啟用 **[!UICONTROL 網頁的影像]** 」索引標籤中，根據您的需求，在「略過清單」 `application/pdf` (Skip List `application/postscript`**** )下新增或下方。
+
    ![略過影像格式縮圖處理的設定](assets/web_enabled_imageskiplist.png)
 
 1. 開啟「點 **[!UICONTROL 陣化PDF/AI影像預覽轉譯」步驟]** ，並移除您要略過預設產生預覽影像轉譯的MIME類型。 例如，從「MIME類型」 `application/pdf`清單 `application/postscript`中 `application/illustrator` 刪除 **[!UICONTROL MIME類型]** 。
@@ -47,6 +49,7 @@ ht-degree: 0%
    * MIME類型： `application/pdf` 或 `application/postscript`
    * 命令: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * 新增縮圖大小： 319:319, 140:100, 48:48。 視需要新增自訂縮圖設定。
+
    該命令的命令行參 `PDFRasterizer` 數可以包括以下內容：
 
    * `-d`: 標幟可讓文字、向量圖稿和影像順暢呈現。 建立更高品質的影像。 不過，加入此參數會導致命令執行緩慢，並增加影像大小。
@@ -84,6 +87,7 @@ ht-degree: 0%
 
    * 命令: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * 新增縮圖大小： `319:319`, `140:100`, `48:48`視需要新增自訂縮圖設定。
+
    該命令的命令行參 `PDFRasterizer` 數可以包括以下內容：
 
    * `-d`: 標幟可讓文字、向量圖稿和影像順暢呈現。 建立更高品質的影像。 不過，加入此參數會導致命令執行緩慢，並增加影像大小。
