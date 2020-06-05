@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Experience Manager 6.5資產使用指南
 translation-type: tm+mt
-source-git-commit: 4f1aea28b94e037da5cefedd46228026299a3ddc
+source-git-commit: db60a7297defa2ed8e7f30f148d0f74a73a49893
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 38%
@@ -52,7 +52,7 @@ ht-degree: 38%
    + [HTTP2 傳送內容](http2.md)
    + [傳送 Dynamic Media 資產](delivering-dynamic-media-assets.md)
    + [在 Dynamic Media 中啟用超連結保護](hotlink-protection.md)
-   + [3D影像](/help/assets/assets-3d.md)
+   + [3D支援](/help/assets/assets-3d.md)
    + [影像集](image-sets.md)
    + [全景影像](panoramic-images.md)
    + [混合媒體集](mixed-media-sets.md)
