@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Release Notes
+user-guide-title: AEM 6.5發行說明
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
+workflow-type: tm+mt
+source-wordcount: '52'
+ht-degree: 15%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 + [AEM 6.5概觀](home.md)
 + [一般發行說明](release-notes.md)
 + Service Pack發行說明 {#service-pack}
-   + [新功能——最新的Service Pack](new-features-latest-service-pack.md)
-   + [最新Service Pack隨附的修補程式和功能套件](sp-release-notes.md)
-   + [舊版Service Pack隨附的修補程式和功能套件](previous-hotfixes-featurepacks.md)
+   + [新功能](new-features-latest-service-pack.md)
+   + [Service Pack 5發行說明](sp-release-notes.md)
+   + [先前的Service Pack發行說明](previous-hotfixes-featurepacks.md)
 + [AEM Sites發行說明](sites.md)
 + [AEM Assets發行說明](assets.md)
 + [AEM Communities發行說明](communities-release-notes.md)
