@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: bc49aaad1f55b8c70228d3c800f1e5abf8a2519c
+workflow-type: tm+mt
+source-wordcount: '963'
+ht-degree: 0%
 
 ---
 
@@ -123,9 +126,9 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 
 存取計分和標籤資料的說明使用JSRP，因為UGC可使用 [CRXDE Lite輕鬆存取](/help/sites-developing/developing-with-crxde-lite.md)。
 
-**作者JSRP**:在作者環境中進行實驗會產生只有作者環境才能看到的UGC。
+**作者JSRP**: 在作者環境中進行實驗會產生只有作者環境才能看到的UGC。
 
-**發佈時的JSRP**:同樣地，如果在發佈環境上進行測試，則必須以發佈實例的管理權限訪問CRXDE Lite。 如果發佈例項在生產模 [式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行 [，則必須啟](/help/sites-administering/enabling-crxde-lite.md)用CRXDE Lite。
+**發佈時的JSRP**: 同樣地，如果在發佈環境上進行測試，則必須以發佈實例的管理權限訪問CRXDE Lite。 如果發佈例項在生產模 [式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行 [，則必須啟](/help/sites-administering/enabling-crxde-lite.md)用CRXDE Lite。
 
 UGC在JSRP上的基本位置為 `/content/usergenerated/asi/jcr/`。
 
@@ -136,7 +139,7 @@ UGC在JSRP上的基本位置為 `/content/usergenerated/asi/jcr/`。
 * [com.adobe.cq.sosical.scoring.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/scoring/api/package-summary.html)
 * [com.adobe.cq.social.badging.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/badging/api/package-summary.html)
 
-Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 請參 [閱使用Maven for Communities:Javadocs](/help/communities/maven.md#javadocs)。
+Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 請參 [閱使用Maven for Communities: Javadocs](/help/communities/maven.md#javadocs)。
 
 **UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
 
@@ -185,13 +188,13 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
    * 新增計分和標籤屬性
 
    ```
-   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   scoringRules = [/libs/settings/community/scoring/rules/comments-scoring,
    /etc/community/scoring/rules/forums-scoring]
    ```
 
    ```
-   badgingRules =[/etc/community/badging/rules/comments-scoring,
-   /etc/community/badging/rules/forums-scoring]
+   badgingRules =[/libs/settings/community/badging/rules/comments-badging,
+   /libs/settings/community/badging/rules/forums-badging]
    ```
 
    * 找到論壇元件節點
@@ -220,7 +223,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 >
 >此範例不遵循下列最佳實務：
 >
->* 計分規則名稱應全局唯一；他們不應以同名結尾。
+>* 計分規則名稱應全局唯一； 他們不應以同名結尾。
    >  不要做 *的* :
    >  /etc/community/scoring/rules/site1/forums-scoring
    >  /etc/community/scoring/rules/site2/forums-scorning
