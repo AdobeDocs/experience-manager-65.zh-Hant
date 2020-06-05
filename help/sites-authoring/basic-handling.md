@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
-source-wordcount: '3010'
+source-wordcount: '2979'
 ht-degree: 5%
 
 ---
@@ -88,10 +88,6 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 ![bh-01](assets/bh-01.png)
 
 瀏覽器標籤的標題將會更新，以反映您在控制台和內容中瀏覽時的位置。
-
->[!NOTE]
->
->標籤標題會反映 [AEM 6.5 Service Pack 5以後的位置](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
 在導航中，可用控制台包括：
 
@@ -233,10 +229,6 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
    在Sites **** Console中，「跳至主要內容」( **Skip to main content)中已新增選項**。 當您在頁首選 *項中選取標籤* ，這個選項就會顯示出來，並可讓您略過（產品）工具列中的標準元素，直接將您帶到主要內容，以加速導覽。
 
    ![bh-30](assets/bh-30.png)
-
-   >[!NOTE]
-   >
-   >從 **** AEM 6.5 Service Pack 5 [開始，您就可使用「跳至主要內容」](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
 ## 存取說明 {#accessing-help}
 
