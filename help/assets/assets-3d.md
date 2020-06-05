@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 2f0e626aa16a62203755e29800a5935b350ffe79
+source-git-commit: d17500ea7b95c90069d9c51fac5d4f3706ee4c71
 workflow-type: tm+mt
-source-wordcount: '2162'
+source-wordcount: '2144'
 ht-degree: 1%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 動態媒體可讓您上傳、管理、檢視和傳遞3D資產，成為身歷其境的體驗。
 
-* 按一下即可發佈(使 **[!UICONTROL 用工具列上的「快速發佈]** 」)3D影像，以產生其URL。
-* 使用Adobe Dimension提供的高品質互動式Dimensional檢視器預設集，最佳化3D資產檢視支援。 檢視器預設集包括一系列互動式相機控制項，可讓您環繞、縮放和平移。
+* 按一下即可發佈(使 **[!UICONTROL 用工具列上的「快速發佈]** 」)3D資產，以產生URL。
+* 使用Adobe Dimension提供的高品質互動式Dimensional檢視器預設集，最佳化3D資產檢視支援。
 * 3D Media WCM元件可讓您輕鬆將3D資產新增至AEM Sites頁面。
 
-在Dynamic Media中不需安裝或設定任何類型的3D資產。
+在動態媒體中使用3D資產不需要額外的設定。
 
 ![3D鞋](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
@@ -36,10 +36,10 @@ Dynamic Media支援下列3D檔案格式：
 
 | 3D副檔名 | 檔案格式 | MIME類型 | 附註 |
 |---|---|---|---|
-| GLB | 二進位GL傳輸 | 模型/gltf-binary | 將紋理與資產一起加入，而非將它們參照為外部影像。 |
+| GLB | 二進位GL傳輸 | 模型/gltf-binary | 將材質和紋理整合為單一資產。 |
 | OBJ | WaveFront 3D物件檔案 | application/x-tgif |  |
 | STL | 立體成形 | application/vnd.ms-pki.stl |  |
-| USDZ | 通用場景描述Zip封存 | model/vnd.usdz+zip | *僅支援擷取； 不提供檢視或互動功能。* USDZ是Apple的專屬3D格式，只能由Safari或iOS檢視。 |
+| USDZ | 通用場景描述Zip封存 | model/vnd.usdz+zip | *僅支援擷取； 不提供檢視或互動功能。* USDZ是專屬的3D格式，可由Safari和iOS裝置以原生方式檢視。 |
 
 ## 快速入門： 動態媒體中的3D資產 {#quick-start-three-d}
 
@@ -149,7 +149,8 @@ Dynamic Media支援下列3D檔案格式：
 
    * 在頁面右上方附近，按一下「預 **[!UICONTROL 覽]** 」以進入 **[!UICONTROL 「預覽]** 」模式。
    * 從瀏 `/editor.html` 覽器的頁面URL刪除。
-   ![3D資產顯示在3D Media元件內](/help/assets/assets-dm/3d-asset-in-3d-media.png)：完全互動的3D資產，如「預 **[!UICONTROL 覽]** 」模式所示。
+
+完全互動的3D資產，如    ![3D資產顯示在3D Media元件內](/help/assets/assets-dm/3d-asset-in-3d-media.png)：完全互動的3D資產，如「預 **[!UICONTROL 覽]** 」模式所示。
 
 1. 在「預 **[!UICONTROL 覽]** 」模式中，執行下列任一動作：
 
@@ -280,6 +281,7 @@ Dynamic Media接受Dynamic Media中支援的各種3D檔案格式 *為靜態內* 
    * 3D資產是支援的格式（GLB、OBJ、STL和USDZ）。
    * 3D資產已收錄至動態媒體影像製作系統(IPS)。
    * 3D資產會發佈。
+
    ![3d-asset-url](/help/assets/assets-dm/3d-asset-url.png)
 
 1. 點選 **[!UICONTROL URL]** ，以顯示3D資產的生產URL。
