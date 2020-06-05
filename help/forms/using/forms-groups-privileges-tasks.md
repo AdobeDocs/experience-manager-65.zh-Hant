@@ -11,7 +11,10 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: dbb99875cc6f3c8810670ffe923756f7c13d4ace
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 1%
 
 ---
 
@@ -66,14 +69,6 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
     </ul> </td> 
   </tr>
   <tr>
-   <td>模板——用戶</td> 
-   <td>
-    <ul> 
-     <li>建立並預覽最適化表單或互動式通訊範本</li> 
-     <li>使用程式碼編輯器，為最適化表單或互動式通訊範本建立指令碼</li> 
-    </ul> </td> 
-  </tr>
-  <tr>
    <td><p>fdm-authors</p> </td> 
    <td>
     <ul> 
@@ -99,7 +94,7 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>使用AEM收件匣應用程式<br /><strong>注意：您必 </strong>須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的Interactive Communications Agent UI。</li> 
+     <li>使用AEM收件匣應用程式<br /><strong>注意： </strong>您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的Interactive Communications Agent UI。</li> 
      <li>管理工作流程例項</li> 
     </ul> </td> 
   </tr>
