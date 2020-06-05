@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 32695db5-d62d-4959-8a24-3d56b4a19904
 translation-type: tm+mt
-source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
+source-git-commit: 6a5a8e64c6eaab816d07d8206601849c974d1e26
+workflow-type: tm+mt
+source-wordcount: '769'
+ht-degree: 2%
 
 ---
 
@@ -143,7 +146,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
  </tbody>
 </table>
 
-## 累積修補程式套件 {#cumulative-fix-pack-aem}
+## 累積修補程式套件  {#cumulative-fix-pack-aem}
 
 <table>
  <tbody>
@@ -190,93 +193,6 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
  </tbody>
 </table>
 
-## Oak Cumulative Fix Pack {#oak-cumulative-fix-pack}
-
-<table>
- <tbody>
-  <tr>
-   <td><strong>定義</strong></td>
-   <td>
-    <ul>
-     <li>類似標準CFP，但僅包含Oak相關修正</li>
-     <li>COFP是自相關的（無相依性）。 客戶無需擔心尋找／解決相依性。 [1]</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>命名</strong></td>
-   <td>oak &lt;version&gt;</td>
-  </tr>
-  <tr>
-   <td><strong>包含項目</strong></td>
-   <td>COFP是包含特定1.x版本所有Oak元件的累積修補程式套件。 例如，如果客戶套用COHF 1.x.3，則COHF 1.x.3。 = COHF 1.x.1 + COHF 1.x.2。</td>
-  </tr>
-  <tr>
-   <td><strong>文件</strong></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>Cadence</strong></td>
-   <td><p>視需要</p> </td>
-  </tr>
-  <tr>
-   <td><strong>可用性和安裝</strong></td>
-   <td>
-    <ul>
-     <li>COFP安裝程式已簡化，以改善客戶體驗。 （客戶只需為所有元件安裝單一套件即可）。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>測試等級</strong></td>
-   <td><p>QA已驗證</p> </td>
-  </tr>
- </tbody>
-</table>
-
-## 修補程式 {#hot-fix}
-
-<table>
- <tbody>
-  <tr>
-   <td><strong>定義</strong></td>
-   <td><p>包含為解決產品缺陷而建立的一個或多個檔案的軟體包，該產品缺陷嚴重降低了基本服務或顯著影響了業務運營。 </p> </td>
-  </tr>
-  <tr>
-   <td><strong>命名</strong></td>
-   <td>cq-&lt;Release Version&gt;-hotfix-&lt;Hotfix ID&gt;-&lt;Hotfix版本&gt;</td>
-  </tr>
-  <tr>
-   <td><strong>包含項目</strong></td>
-   <td>包含特定問題的修正</td>
-  </tr>
-  <tr>
-   <td><strong>文件</strong></td>
-   <td>公開Hotfix的發行說明僅能根據客戶透過AEM支援入口網站的要求提供。</td>
-  </tr>
-  <tr>
-   <td><strong>Cadence</strong></td>
-   <td>視需要</td>
-  </tr>
-  <tr>
-   <td><strong>可用性和安裝</strong></td>
-   <td>
-    <ul>
-     <li>以套件形式傳送</li>
-     <li>在包共用中提供</li>
-     <li>取決於最新發佈的Service Pack</li>
-     <li>除非已指定，否則大部分的Hotfix都是獨立的。 可以按任何順序安裝。 可通過「從屬關係」元素的「包共用詳細資訊」頁籤進行驗證。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>測試等級</strong></td>
-   <td>
-    <ul>
-     <li>經客戶服務驗證</li>
-     <li>AEM Hotfix無法享有與服務套件或產品發行相同等級的品質保證。 因此，應首先在測試環境上驗證它們，作為質量部署流程的一部分。</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
-
 ## 覆蓋 {#overlay}
 
 <table>
@@ -306,7 +222,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    <td>
     <ul>
      <li>由AEM客戶服務以套件形式提供</li>
-     <li>Service pack或完整版不一定包含在內</li>
+     <li>Service Pack或完整版不一定包含在內</li>
     </ul> </td>
   </tr>
   <tr>
@@ -355,7 +271,7 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
    <td><strong>可用性和安裝</strong></td>
    <td>
     <ul>
-     <li>通過Service pack提供</li>
+     <li>通過Service Pack提供</li>
      <li>可在Package Share上使用。 客戶透過Package Share接受Adobe的條款與條件。</li>
     </ul> </td>
   </tr>
@@ -366,5 +282,5 @@ source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
  </tbody>
 </table>
 
-* [1]:OAK修正不會以個別Hotfix的形式提供。 不過，這些修補程式會包含在後續的Cumulative Oak Hotfix中。 如有必要，可以在最新COFP之上提供診斷版本。 前提是客戶擁有最新的COFP運行。 診斷構建版本僅提供與Hot Fix相同的級別品質保證。 因此，它們無法提供與累積修補程式套件、服務套件或產品發行相同等級的品質保證。 最終修正方案將隨下一個CFP提供。
+* [1]: OAK修正不會以個別Hotfix的形式提供。 不過，這些修補程式會包含在後續的Cumulative Oak Hotfix中。 如有必要，可以在最新COFP之上提供診斷版本。 前提是客戶擁有最新的COFP運行。 診斷構建版本僅提供與Hot Fix相同的級別品質保證。 因此，它們無法提供與累積修補程式套件、服務套件或產品發行相同等級的品質保證。 最終修正方案將隨下一個CFP提供。
 
