@@ -12,7 +12,10 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '2896'
+ht-degree: 2%
 
 ---
 
@@ -43,7 +46,7 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 
 預設情況下，徽章位於
 
-* `/etc/community/badging/images`
+* `/libs/settings/community/badging/images`
 
 如果儲存在不同的位置，則每個人都應該可以讀取。
 
@@ -62,13 +65,16 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 此版本包含3個以角色為基礎的標章：
 
 * **協調者**
-   `/etc/community/badging/images/moderator/jcr:content/moderator.png`
+
+   `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
 * **群組管理員**
-   `/etc/community/badging/images/group-manager/jcr:content/group-manager.png`
+
+   `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
 * **特權成員**
-   `/etc/community/badging/images/privileged-member/jcr:content/privileged-member.png`
+
+   `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -84,13 +90,16 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 本版包含3個獎勵型徽章：
 
 * **黃金**
-   `/etc/community/badging/images/gold-badge/jcr:content/gold.png`
+
+   `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
 * **銀**
-   `/etc/community/badging/images/silver-badge/jcr:content/silver.png`
+
+   `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **銅**
-   `/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
+
+   `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
 ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -145,7 +154,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 布爾屬性 `allowBadges`啟用／禁用元件實例的標誌顯示。 它可在論壇、QnA的組 [件編輯對話框中配置](/help/communities/author-communities.md) ，並通過標有「顯示標章」的複選框對元件 **進行注釋**。
 
-#### 範例：「論壇」元件實例的allowBadges {#example-allowbadges-for-forum-component-instance}
+#### 範例： 「論壇」元件實例的allowBadges {#example-allowbadges-for-forum-component-instance}
 
 ![chlimage_1-100](assets/chlimage_1-100.png)
 
@@ -177,13 +186,13 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 >[!NOTE]
 >
->最佳實務：為每個計分規則指定唯一名稱。
+>最佳實務： 為每個計分規則指定唯一名稱。
 >
->計分規則名稱應全局唯一；他們不應以同名結尾。
+>計分規則名稱應全局唯一； 他們不應以同名結尾。
 >
 >不要做 *的* 範例：
->/etc/community/scoring/rules/site1/forums-scoring
->/etc/community/scoring/rules/site2/forums-scorning
+>/libs/settings/community/scornimy/groin/rules/site1/forums-scorning
+>/libs/settings/community/scornimy/rules/site2/forums-scorning
 
 
 ### 計分子規則 {#scoring-sub-rules}
@@ -219,7 +228,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
    <td>長整數</td>
    <td>
     <ul>
-     <li>必要；動詞與事件動作相對應</li>
+     <li>必要； 動詞與事件動作相對應</li>
      <li>至少有一個動詞屬性</li>
      <li>動詞必須輸入全部大寫</li>
      <li>有多個動詞屬性，但沒有重複</li>
@@ -233,8 +242,8 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
    <td>String[]</td>
    <td>
     <ul>
-     <li>可選；將子規則限制為由事件主題標識的社區元件</li>
-     <li>如果已指定：值是事件主題的多值字串</li>
+     <li>可選； 將子規則限制為由事件主題標識的社區元件</li>
+     <li>如果已指定： 值是事件主題的多值字串</li>
      <li>發行中的主題清單位於「主題和動 <a href="#topics-and-verbs">詞」部分</a></li>
      <li>default is to apply to all topics associated with verb(s)</li>
     </ul> </td>
@@ -244,7 +253,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
    <td>布林值 (Boolean)</td>
    <td>
     <ul>
-     <li>可選；與會員根據其擁有的內容行事無關</li>
+     <li>可選； 與會員根據其擁有的內容行事無關</li>
      <li>若為真，則對所處理內容的擁有者套用分數</li>
      <li>如果為false，請將分數套用至執行動作的成員</li>
      <li>default is false</li>
@@ -255,7 +264,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
    <td>字串</td>
    <td>
     <ul>
-     <li>可選；識別計分引擎</li>
+     <li>可選； 識別計分引擎</li>
      <li>如果為"basic"，則根據數量指定計分引擎
       <ul>
        <li>包含在發行中</li>
@@ -274,13 +283,13 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 此發行包含兩個論壇功能的評 [分規則](/help/communities/functions.md#forum-function) （一個分別用於論壇和論壇功能的「注釋」元件）:
 
-1. /etc/community/scorting/rules/comments-scorting
+1. /libs/settings/community/scorning/rules/comments-scorning
 
-   * subRules[] =/etc/community/scoring/rules/sub-rules/member-comment-create/etc/community/scomment/scommen-receive-pote/etc/community/scoring/rules/member-give-pote/etc/communere/s/sub-rules/sub-ren-res/men-is/mer-is-is-joned
+   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-comment-create/libs/settings/community/scoring/sub-rules/member-receive-pote/toring/sub-rules/sub-is-is協調
 
-1. /etc/community/scoring/rules/forums-scoring
+1. /libs/settings/community/scorning/rules/forums-scorning
 
-   * subRules[] =/etc/community/scoring/rules/sub-rules/member-forum-create/etc/community/scommer-receive-vote/etc/community/scoring/rules/member-give-pote/etc/community/scorin/rules/sub-rules/mereres/mer-rules/member-is/is/is-is-is/men-is-is-is-is-is-is-is-is-is-is-is-h-re-is-h-h-h-re-re-th-thed
+   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-forum-create/libs/settings/comment-receive-pote/libs/settings/community/scoring/sub-rules/member-is-is-is-hared
 
 **附註:**
 
@@ -308,15 +317,15 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 標籤規則由強制屬性組成，此屬 `thresholds` 性是對應至標章之分數的有序清單。 分數必須依增加值排序。 例如：
 
-* `1|/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
+* `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
    * 獲得1分的銅牌是值得的。
 
-* `60|/etc/community/badging/images/silver-badge/jcr:content/silver.png`
+* `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
    * 積60分時頒發銀牌。
 
-* `80|/etc/community/badging/images/gold-badge/jcr:content/gold.png`
+* `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
    * 累積八十分，金牌就亮了。
 
@@ -326,7 +335,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 >[!NOTE]
 >
->最佳實務：建立每個AEM網站專屬的徽章影像。
+>最佳實務： 建立每個AEM網站專屬的徽章影像。
 
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
@@ -346,7 +355,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
      <li>數字=分數</li>
      <li>| =垂直線字元(U+007C)</li>
      <li>路徑=標籤映像資源的完整路徑</li>
-    </ul> 字串必須依序排列，如此數字值就會增加，數字和路徑之間不應出現空格。<br /> 範例項目：<br /> <code>80|/etc/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+    </ul> 字串必須依序排列，如此數字值就會增加，數字和路徑之間不應出現空格。<br /> 範例項目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>badgingType</td>
@@ -365,8 +374,9 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 此發行包含兩個與論壇和留言計分規則對 [應的標籤規則](#includedscoringrules)。
 
-* /etc/community/badging/rules/comments-badging
-* /etc/community/badging/rules/forums-badging
+* /libs/settings/community/badging/rules/comments-badging
+
+* /libs/settings/community/badging/rules/forums-badging
 
 **附註:**
 
@@ -389,15 +399,15 @@ cURL -i -X POST *H標頭* -u *signin* -F *operation* -F ***badgeChember-profile-
 
 *header* = &quot;Accept:application/json&quot;自訂標題，以傳遞至伺服器（必要）
 
-*signin* = administrator-id:password，例如：admin:admin
+*signin* = administrator-id:password，例如： admin:admin
 
 *operation* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
 *badge* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* = badge映像檔案在儲存庫中的位置，例如：/etc/community/badging/images/coldrator/jcr/content/moderator.png
+*badge-image-file* = badge映像檔案在儲存庫中的位置，例如： /libs/settings/community/badging/images/colduator/jcr/content/moderator.png
 
-*member-profile-url* =發佈時成員配置檔案的端點，例如：https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* =發佈時成員配置檔案的端點，例如： https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
@@ -405,22 +415,23 @@ cURL -i -X POST *H標頭* -u *signin* -F *operation* -F ***badgeChember-profile-
 >
 >* 如果已啟用「隧道服務」，則 [可參考作者實例](/help/communities/users.md#tunnel-service) 。
 >* 可能是模糊的隨機名稱——請參閱安全性檢 [查清單](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) ，瞭解可授權ID。
+
 >
 
 
 
-### 範例： {#examples}
+### Examples: {#examples}
 
 #### 指派協調者徽章 {#assign-a-moderator-badge}
 
 ```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
+curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
 #### 撤銷指派的銀色徽章 {#revoke-an-assigned-silver-badge}
 
 ```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/etc/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
+curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/libs/settings/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
 >[!NOTE]
@@ -574,9 +585,9 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
    * **類型**: `String`
    * 選擇 **多**
    * 選擇「添 **加」**
-   * Enter `/etc/community/badging/rules/forums-badging`
+   * Enter `/libs/settings/community/badging/rules/forums-badging`
    * 選取 **+**
-   * Enter `/etc/community/badging/rules/comments-badging`
+   * Enter `/libs/settings/community/badging/rules/comments-badging`
    * 選擇「確 **定」**
 
 * 新增scoringRules屬性：
@@ -585,9 +596,9 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
    * **類型**: `String`
    * 選擇 **多**
    * 選擇「添 **加」**
-   * Enter `/etc/community/scoring/rules/forums-scoring`
+   * Enter `/libs/settings/community/scoring/rules/forums-scoring`
    * 選取 **+**
-   * Enter `/etc/community/scoring/rules/comments-scoring`
+   * Enter `/libs/settings/community/scoring/rules/comments-scoring`
    * 選擇「確 **定」**
 
 * 選擇「 **全部保存**」。
@@ -614,11 +625,11 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 最後，
 
 * 瀏覽至發佈例項上的元件。
-* 以社群成員身分登入(例如：weston.mccall@dodgit.com)。
+* 以社群成員身分登入(例如： weston.mccall@dodgit.com)。
 * 張貼新論壇主題。
 * 頁面必須重新整理，才能顯示徽章。
 
-   * 註銷並作為不同的社區成員登錄(例如：aaron.mcdonald@mailinator.com/password)。
+   * 註銷並作為不同的社區成員登錄(例如： aaron.mcdonald@mailinator.com/password)。
 
 * 選擇論壇。
 
