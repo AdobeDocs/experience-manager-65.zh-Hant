@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 1%
 
 ---
 
@@ -24,9 +27,9 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 此差異是由於用來計算分數的計分引擎所致。 基本計分引擎採用簡單數學。 進階計分引擎是一種自適應算法，可獎勵通過主題的自然語言處理(NLP)推導而貢獻有價值和相關內容的主動成員。
 
-除了內容相關性外，計分演算法也會考量成員活動，例如投票和答案百分比。 雖然基本計分包括了量化分數，但進階計分則採用演算法。
+除了內容相關性外，計分演算法也會考量成員活動，例如投票和答案百分比。 雖然基本計分包括了定量計分，但進階計分則採用演算法。
 
-因此，先進的計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
+因此，高級計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
 
 設定進階計分與基本計分幾乎相同：
 
@@ -105,7 +108,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 進階計分套件會安裝組態資料夾，其中包含秒數檔案：
 
-* `/etc/community/scoring/configuration/stopwords`
+* `/libs/settings/community/scoring/configuration/stopwords`
 
 進階計分演算法使用秒字檔案中包含的字詞清單，以識別在內容處理期間忽略的常見英文字詞。
 
@@ -131,7 +134,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
   <tr>
    <td>badgingPath</td>
    <td>String[]</td>
-   <td><em>（必要）</em> ，標籤影像的多值字串，最多為badgingLevels數目。 標章影像路徑必須依順序排列，因此第一個路徑會授與最高專家。 如果標籤數少於badgingLevels所指示的標籤數，則陣列中的最後一個標籤將填充陣列的其餘部分。 範例項目：<br /> <code>/etc/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
+   <td><em>（必要）</em> ，標籤影像的多值字串，最多為badgingLevels數目。 標章影像路徑必須依順序排列，因此第一個路徑會授與最高專家。 如果標籤數少於badgingLevels所指示的標籤數，則陣列中的最後一個標籤將填充陣列的其餘部分。 範例項目：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
   </tr>
   <tr>
    <td>badgingLevels</td>
@@ -146,7 +149,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
   <tr>
    <td>計分規則</td>
    <td>String[]</td>
-   <td><em>（可選）</em> ，多值字串，將標籤規則限制為由列出的分數規則識別的分數事件。<br /> 範例項目：<br /> 預 <code>/etc/community/scoring/rules/adv-comments-scoring</code><br /> 設為無限制。</td>
+   <td><em>（可選）</em> ，多值字串，將標籤規則限制為由列出的分數規則識別的分數事件。<br /> 範例項目：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 預設為無限制。</td>
   </tr>
  </tbody>
 </table>
@@ -159,7 +162,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 * `expert`
 
-   `/etc/community/badging/images/expert-badge/jcr:content/expert.png`
+   `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -178,19 +181,19 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 測試版包含兩個論壇功能的進階計分 [規則](/help/communities/functions.md#forum-function) （每個用於論壇，而論壇功能的注釋元件則各一個）:
 
-1. `/etc/community/scoring/rules/adv-comments-scoring`
+1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
    * `subRules[] =
-/etc/community/scoring/rules/sub-rules/adv-comments-rule
-/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner
-/etc/community/scoring/rules/sub-rules/adv-voting-rule`
+/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule`
 
-1. `/etc/community/scoring/rules/adv-forums-scoring`
+1. `/libs/settings/community/scoring/rules/adv-forums-scoring`
 
    * `subRules[] =
-/etc/community/scoring/rules/sub-rules/adv-forums-rule
-/etc/community/scoring/rules/sub-rules/adv-comments-rule
-/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner`
+/libs/settings/community/scoring/rules/sub-rules/adv-forums-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner`
 
 **附註:**
 
@@ -208,8 +211,8 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 此發行包含兩個與進階論壇和留言計分規則對 [應的進階標籤規則](#included-scoring-rules-and-sub-rules)。
 
-* `/etc/community/badging/rules/adv-comments-badging`
-* `/etc/community/badging/rules/adv-forums-badging`
+* `/libs/settings/community/badging/rules/adv-comments-badging`
+* `/libs/settings/community/badging/rules/adv-forums-badging`
 
 **附註:**
 
