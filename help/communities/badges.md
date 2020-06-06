@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 4%
 
 ---
 
@@ -42,7 +45,7 @@ Communities Badges控制台可以添加自定義徽章，這些徽章可在獲�
 
 ## 建立預算 {#create-badge}
 
-通過上傳合適的小影像（72dpi，高度為26-32像素）並提供名稱來建立徽章。 徽章映像儲存在位於的儲存庫 `/etc/community/badging/images` 中，並自動複製到發佈環境。
+通過上傳合適的小影像（72dpi，高度為26-32像素）並提供名稱來建立徽章。 徽章映像儲存在位於的儲存庫 `/libs/settings/community/badging/images` 中，並自動複製到發佈環境。
 
 如果發佈環境是發佈者的農場，則必須設定使用 [者同步](/help/communities/sync.md)。
 
