@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '2765'
+ht-degree: 2%
 
 ---
 
@@ -160,7 +163,7 @@ Adobe Analytics可針對AEM Communities進行設定，如此當會員與支援�
 
 若要建立新的Analytics整合，並使用作者例項上的標準UI，將Adobe Analytics與AEM社群網站整合：
 
-* 從全域導覽：工 **[!UICONTROL 具>部署>雲端服務]**
+* 從全域導覽： **[!UICONTROL 工具>部署>雲端服務]**
 * 向下捲動至 **[!UICONTROL Adobe Analytics]**
 * 選擇 **[!UICONTROL 立即配置]** 或 **[!UICONTROL 顯示配置]**
 
@@ -277,7 +280,8 @@ For example, enter *communities*
 
 選取已針對視訊報表設定的報表套裝。
 
-如果報表套裝尚未建立或未正確設定，請參閱上一節：適用於[視訊報告的Adobe Analytics報表套裝](#adobe-analytics-report-suite-for-video-reporting)
+如果報表套裝尚未建立或未正確設定，請參閱上一節：
+[適用於視訊報告的Adobe Analytics報表套裝](#adobe-analytics-report-suite-for-video-reporting)
 
 不需要Sidekick且可將其最小化，以免妨礙存取「報表套裝」設定。
 
@@ -372,7 +376,7 @@ Analytics會自動用於數個Communities功能。
 
 ### 元件配置 {#component-configuration}
 
-![chlimage_1-186](assets/chlimage_1-186.png)
+![chlimage_1-185](assets/chlimage_1-186.png)
 
 >[!NOTE]
 >
@@ -514,17 +518,19 @@ Analytics會自動用於數個Communities功能。
 
 **eVar值的範例：**
 
-* *[MIME類型](https://www.iana.org/assignments/media-types)*:video/mp4
-* *[社群網站標題](/help/communities/sites-console.md#step13asitetemplate)*:Geometrixx Communities
-* *[社群函式名稱](/help/communities/functions.md)*:論壇
-* *[社群群組名稱](/help/communities/creating-groups.md#creating-a-new-group)*:遠足
-* *社群群組內容的路徑*: `/content/sites/communities/en/groups/hiking`
+* *[MIME類型](https://www.iana.org/assignments/media-types)*: video/mp4
+* *[社群網站標題](/help/communities/sites-console.md#step13asitetemplate)*: Geometrixx Communities
+* *[社群函式名稱](/help/communities/functions.md)*: 論壇
+* *[社群群組名稱](/help/communities/creating-groups.md#creating-a-new-group)*: 遠足
+* *社群群組內容的路徑*: `/content/sites/<site name>/en/groups/hiking`
 * *[UGC元件resourceType](/help/communities/essentials.md)*:`social/forum/components/hbs/topic`
-* *UGC元件標題*:遠足主題
+* *UGC元件標題*: 遠足主題
 * *login(authorizableId)*: `aaron.mcdonald@mailinator.com`
-* *SRP到UGC的路徑*:元 `/content/usergenerated/asi/.../forum/jmtz-topic3`件 *的路徑或後續路徑*: `/content/sites/communities/en/jcr:content/content/primary/forum`
+* *SRP到UGC的路徑*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
+或 
+*要遵循的元件路徑*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-* *社群網站內容的路徑*: `/content/sites/community/en`
+* *社群網站內容的路徑*: `/content/sites/<site name>/en`
 
 ### 修改Analytics變數對應 {#modifying-analytics-variable-mapping}
 
@@ -540,15 +546,15 @@ Analytics會自動用於數個Communities功能。
 >
 >在啟用Analytics的情況下發佈社群網站前，請務必重 [新對應](#publishing-the-community-site) ，否則就有資料遺失的風險。
 
-#### 範例步驟1:將Analytics evar14拖曳至對應表格 {#example-step-dragging-analytics-evar-into-mapping-table}
+#### 範例步驟1: 將Analytics evar14拖曳至對應表格 {#example-step-dragging-analytics-evar-into-mapping-table}
 
 ![chlimage_1-188](assets/chlimage_1-188.png)
 
-#### 範例步驟2:選取&#39;x&#39;以移除已取代的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
+#### 範例步驟2: 選取&#39;x&#39;以移除已取代的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
 
 ![chlimage_1-189](assets/chlimage_1-189.png)
 
-#### 範例步驟3:AEM var eventdata.siteId已重新映射至Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
+#### 範例步驟3: AEM var eventdata.siteId已重新映射至Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
 
 ![chlimage_1-190](assets/chlimage_1-190.png)
 
@@ -658,5 +664,5 @@ Adobe Analytics提供可讓您存取、匯出和刪除使用者資料的API。 �
 
 * Adobe Marketing Cloud: [Analytics說明與參考](https://marketing.adobe.com/resources/help/en_US/reference/)
 * AEM: [Integrating with Adobe Analytics](/help/sites-administering/adobeanalytics.md)
-* AEM:Analytics與外 [部提供者](/help/sites-administering/external-providers.md)
+* AEM: [Analytics與外部提供者](/help/sites-administering/external-providers.md)
 
