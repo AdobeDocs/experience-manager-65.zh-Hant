@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 9%
 
 ---
 
@@ -93,7 +96,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
    每頁要顯示的成員數。預設值為10。
 
-### 範例：參與者領導委員會 {#example-participants-leaderboard}
+### 範例： 參與者領導委員會 {#example-participants-leaderboard}
 
 此排行榜會報告套用基本計分規則的結果。
 
@@ -110,14 +113,14 @@ Leerboard元件組態：
 
 * 規則標籤：
 
-   * 規則位置 = `/content/sites/communities/jcr:content`
-   * 得分規則 = `/etc/community/scoring/rules/forums-scoring`
-   * 徽章規則 = `/etc/community/badging/rules/reference-badging`
+   * 規則位置 = `/content/sites/<site name>/jcr:content`
+   * 得分規則 = `/libs/settings/community/scoring/rules/forums-scoring`
+   * 徽章規則 = `/libs/settings/community/badging/rules//reference-badging`
    * 顯示限制 = `10`
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
-### 範例：專家排行榜 {#example-experts-leaderboard}
+### 範例： 專家排行榜 {#example-experts-leaderboard}
 
 此排行榜會報告套用進階計分規則的結果。
 
@@ -133,9 +136,9 @@ Leerboard元件組態：
 
 * 規則標籤：
 
-   * 規則位置 = `/content/sites/communities/jcr:content`
-   * 得分規則 = `/etc/community/scoring/rules/adv-forums-scoring`
-   * 徽章規則 = `/etc/community/badging/rules/adv-forums-badging`
+   * 規則位置 = `/content/sites/<site name>/jcr:content`
+   * 得分規則 = `/libs/settings/community/scoring/rules/adv-forums-scoring`
+   * 徽章規則 = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 顯示限制 = `10`
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
