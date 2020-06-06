@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bc49aaad1f55b8c70228d3c800f1e5abf8a2519c
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -157,13 +157,13 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
    * 新增計分和標籤屬性
 
    ```
-   scoringRules = [/etc/community/scoring/rules/comments-scoring,
-   /etc/community/scoring/rules/forums-scoring]
+   scoringRules = [/libs/settings/community/scoring/rules/comments-scoring,
+   /libs/settings/community/scoring/rules/forums-scoring]
    ```
 
    ```
-   badgingRules =[/etc/community/badging/rules/comments-scoring,
-   /etc/community/badging/rules/forums-scoring]
+   badgingRules =[/libs/settings/community/badging/rules/comments-scoring,
+   /libs/settings/community/badging/rules/forums-scoring]
    ```
 
    * 找到論壇元件節點
@@ -189,7 +189,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
    ```
    scoringRules = [/libs/settings/community/scoring/rules/comments-scoring,
-   /etc/community/scoring/rules/forums-scoring]
+   /libs/settings/community/scoring/rules/forums-scoring]
    ```
 
    ```
@@ -212,7 +212,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 1. 使用cURL為使用者指派協調者徽章：
 
    ```shell
-   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
+   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
    ```
 
    由於使用者已獲得兩枚銅牌，並獲得協調者徽章，因此使用者在論壇參加項目時，會以這種方式呈現。
@@ -225,11 +225,12 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 >
 >* 計分規則名稱應全局唯一； 他們不應以同名結尾。
    >  不要做 *的* :
-   >  /etc/community/scoring/rules/site1/forums-scoring
-   >  /etc/community/scoring/rules/site2/forums-scorning
+   >  /libs/settings/community/scornimy/groin/rules/site1/forums-scorning
+   >  /libs/settings/community/scornimy/rules/site2/forums-scorning
    >
    >
 * 為不同的AEM網站建立獨特的徽章影像
+
 >
 
 
