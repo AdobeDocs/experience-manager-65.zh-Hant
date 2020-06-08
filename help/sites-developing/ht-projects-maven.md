@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d42526ff4c7b7d8a31690ebfb8b45d0e951ebac
+source-git-commit: 1669412afb670a9f55f02476e828de55b4f7a55a
+workflow-type: tm+mt
+source-wordcount: '2424'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ Apache Maven是開放原始碼工具，可自動建立並提供高品質專案�
 * 不受IDE限制的開發環境
 * Adobe提供的Maven原型和文物使用
 * 使用Apache Sling和Apache Felix工具集進行Maven開發設定
-* 輕鬆匯入IDE;例如，Eclipse和／或IntelliJ
+* 輕鬆匯入IDE; 例如，Eclipse和／或IntelliJ
 * 輕鬆與持續整合系統整合
 
 ### Maven Project Archetypes {#maven-project-archetypes}
@@ -43,15 +46,15 @@ Adobe提供兩種Maven原型，可做為AEM專案的基準。 請參閱下列連
 
 ### 什麼是UberJar? {#what-is-the-uberjar}
 
-「UberJar」是Adobe提供之特殊Java封存(JAR)檔案的非正式名稱。 這些JAR檔案包含Adobe Experience manager公開的所有公開Java API。 它們也包含有限的外部程式庫，尤其是AEM中所有可用的公開API，這些API來自Apache Sling、Apache Jackrabbit、Apache Lucene、Google Guava，以及兩個用於影像處理的程式庫（Werner Randelshofer的CYMK JPEG ImageIO程式庫和TweleveWek Muxines影像庫）。 UberJar僅包含API介面和類別，這表示它們僅包含由AEM中的OSGi套件匯出的介面和類別。 它們也包含 *MANIFEST.MF* 檔案，其中包含所有這些匯出封裝的正確封裝匯出版本，因此可確保以UberJar建立的專案具有正確的封裝匯入範圍。
+「UberJar」是Adobe提供之特殊Java封存(JAR)檔案的非正式名稱。 這些JAR檔案包含Adobe Experience Manager公開的所有公開Java API。 它們也包含有限的外部程式庫，尤其是AEM中所有可用的公開API，這些API來自Apache Sling、Apache Jackrabbit、Apache Lucene、Google Guava，以及兩個用於影像處理的程式庫（Werner Randelshofer的CYMK JPEG ImageIO程式庫和TweleveWek Muxines影像庫）。 UberJar僅包含API介面和類別，這表示它們僅包含由AEM中的OSGi套件匯出的介面和類別。 它們也包含 *MANIFEST.MF* 檔案，其中包含所有這些匯出封裝的正確封裝匯出版本，因此可確保以UberJar建立的專案具有正確的封裝匯入範圍。
 
 ### 為什麼Adobe會建立UberJar? {#why-did-adobe-create-the-uberjars}
 
-過去，開發人員必須管理相對較多的個別相依性，以至於不同AEM程式庫，而且當使用每個新API時，必須將一或多個個別相依性新增至專案。 在一個項目中，UberJar的引入導致30個單獨的依賴項被從項目中刪除。
+過去，開發人員必須管理相對大量的個別相依性，以至於不同AEM程式庫，而且當使用每個新API時，必須將一或多個個別相依性新增至專案。 在一個項目中，UberJar的引入導致30個單獨的依賴項被從項目中刪除。
 
-從AEM 6.5開始，Adobe提供兩個UberJar:一個包含過時的介面，另一個包含刪除那些過時的介面。 透過在建置時明確參照某個程式碼，客戶一定會瞭解他們是否對不建議使用的程式碼有依賴性。
+從AEM 6.5開始，Adobe提供兩個UberJar: 一個包含過時的介面，另一個包含刪除那些過時的介面。 透過在建置時明確參照某個程式碼，客戶一定會瞭解他們是否對不建議使用的程式碼有依賴性。
 
-第二個Uber jar會移除任何已過時的類別、方法和屬性，讓客戶可以編譯並瞭解自訂代碼是否是未來證明。
+第二個Uber Jar會移除任何已過時的類別、方法和屬性，讓客戶可以編譯並瞭解自訂代碼是否是未來證明。
 
 ### 使用哪個UberJar? {#which-uberjar-to-use}
 
@@ -60,11 +63,11 @@ AEM 6.5提供兩種Uber Jar:
 1. Uber Jar —— 僅包含未標示為取代的公用介面。 這是建議 **使用的** UberJar，因為它可協助防範未來的程式碼基底，避免依賴已過時的API。
 1. Uber Jar含過時的API —— 包含所有公用介面，包括未來AEM版本中標示為淘汰的介面。
 
-### 我如何使用UberJar? {#how-to-i-use-the-uberjars}
+### 我要如何使用UberJars? {#how-do-i-use-the-uberjars}
 
-如果您使用Apache Maven做為組建系統（大部分的AEM java專案都是如此），您將需要新增一或兩個元素至 *pom.xml* 檔案。 第一種是相依 *性元素* ，將實際相依性添加到項目中：
+如果您使用Apache Maven做為組建系統（大部分的AEM Java專案都是如此），您將需要新增一或兩個元素至 *pom.xml* 檔案。 第一種是相依 *性元素* ，將實際相依性添加到項目中：
 
-**Uber jar相依&#x200B;*性（不含已過時的API）***
+**Uber Jar相依&#x200B;*性（不含已過時的API）***
 
 ```xml
 <dependency>
@@ -76,7 +79,7 @@ AEM 6.5提供兩種Uber Jar:
 </dependency>
 ```
 
-**使用已過時的API的Uber jar依賴性**
+**使用已過時的API的Uber Jar依賴性**
 
 >[!CAUTION]
 >
@@ -131,7 +134,7 @@ AEM 6.5提供兩種Uber Jar:
 
 #### 使用案例#1 —— 呼叫API介面的自訂代碼 {#use-case-custom-code-which-calls-a-api-interface}
 
-此案例最常見，涉及一些在AEM API所定義的Java介面上執行方法的自訂程式碼。 此介面的實現可以直接提供，也可以使用相關性插入模式插入。 **此使用案例可由UberJar處理。**
+此案例最常見，涉及一些自訂程式碼，可在AEM API定義的Java介面上執行方法。 此介面的實現可以直接提供，也可以使用相關性插入模式插入。 **此使用案例可由UberJar處理。**
 
 前者的例子是：
 
@@ -432,7 +435,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 </workspaceFilter>
 ```
 
-您還需要將maven-resources-plugin重新配置為不將這些檔案包含在包中：filter.xml檔案不會在安裝套件時套用，但只有在使用套件管理員重新建立套件時才會套用。
+您還需要將maven-resources-plugin重新配置為不將這些檔案包含在包中： filter.xml檔案不會在安裝套件時套用，但只有在使用套件管理員重新建立套件時才會套用。
 
 依此方 `<resources>` 式變更內容中的區段：
 
@@ -478,7 +481,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 >[!NOTE]
 >
->對 `com.adobe.granite.xssprotection` 像不包含在cq-quickstart-product-dependencies POM中，並且需要從Dependency finder中獲得的完整Maven坐標。
+>對 `com.adobe.granite.xssprotection` 像不包含在cq-quickstart-product-dependencies POM中，並且需要從Dependency Finder中獲得的完整Maven坐標。
 
 #### 將JSP編譯為Maven編譯階段的一部分 {#compiling-jsps-as-part-of-the-maven-compile-phase}
 
@@ -574,9 +577,10 @@ Maven JspC Plugin的結果也可以隨OSGi Bundle一起打包和部署，但這�
 >
 >視您是否實際在中使用JSP程 `/libs` 式碼（亦即從中加入JSP）而定，您需要調整要複製哪些JSP以進行編譯。
 >
->例如，如果您包 `/libs/foundation/global.jsp`括，則可以對下列配置進行 `maven-resources-plugin` 操作，而非完全跳過的配置 `/libs`。
+>例如，如果您包 `/libs/foundation/global.jsp`含，則可以將下列組態用於，而 `maven-resources-plugin` 非上方完全跳過的組態 `/libs`。
 >
->```
+>
+```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
 >           <includes>  
@@ -585,7 +589,6 @@ Maven JspC Plugin的結果也可以隨OSGi Bundle一起打包和部署，但這�
 >       </includes>  
 >   </resource>  
 >```
->
 
 ### 如何與SCM系統搭配使用 {#how-to-work-with-scm-systems}
 
