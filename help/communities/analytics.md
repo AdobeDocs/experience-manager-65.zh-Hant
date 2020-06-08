@@ -308,7 +308,7 @@ For example, enter *communities*
 
 1. 選擇發 **布**
 
-![chlimage_1-185](assets/chlimage_1-185.png)
+![chlimage_1-186](assets/chlimage_1-185.png)
 
 Analytic雲端服務與架構現已完成。 在啟用此Analytics服務後，社群網站建立後，即會定義映射。
 
@@ -376,7 +376,7 @@ Analytics會自動用於數個Communities功能。
 
 ### 元件配置 {#component-configuration}
 
-![chlimage_1-185](assets/chlimage_1-186.png)
+![chlimage_1-186](assets/chlimage_1-186.png)
 
 >[!NOTE]
 >
