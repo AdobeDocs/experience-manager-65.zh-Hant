@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 translation-type: tm+mt
-source-git-commit: a44d655871308dac34671f0af2c4a0017eba5793
+source-git-commit: d559a15e3c1c65c39e38935691835146f54a356e
+workflow-type: tm+mt
+source-wordcount: '853'
+ht-degree: 0%
 
 ---
 
@@ -30,9 +33,9 @@ AEM隨附 [SAML驗證處理](http://saml.xml.org/saml-specifications) 常式。 
 
 >[!NOTE]
 >
->檢 [視AEM和SAML整合的示範](https://helpx.adobe.com/cq/kb/saml-demo.html)。
+>檢 [視AEM和SAML整合的示範](https://helpx.adobe.com/experience-manager/kb/simple-saml-demo.html)。
 >
->若要閱讀端對端社群文章，請按一下：將 [SAML與Adobe Experience Manager整合](https://helpx.adobe.com/experience-manager/using/aem63_saml.html)。
+>若要閱讀端對端社群文章，請按一下： [將SAML與Adobe Experience Manager整合](https://helpx.adobe.com/experience-manager/using/aem63_saml.html)。
 
 ## 設定SAML 2.0驗證處理常式 {#configuring-the-saml-authentication-handler}
 
@@ -44,6 +47,7 @@ Web [主控台](/help/sites-deploying/configuring-osgi.md) ，提供對稱為 [A
 >
 >* 身分提供者POST URL。
 >* 服務提供者實體ID。
+
 >
 
 
@@ -132,7 +136,7 @@ SAML斷言會經過簽署，並可選擇加密。 為了使此功能發揮作用
 1. 搜尋並按一下名為 **Apache Sling Logging Logger Configuration的項目**
 1. 使用以下配置建立記錄器：
 
-   * **** 記錄層級：除錯
-   * **** 日誌檔案：logs/saml.log
-   * **** 記錄器：com.adobe.granite.auth.saml
+   * **記錄層級：** 除錯
+   * **日誌檔案：** logs/saml.log
+   * **記錄器：** com.adobe.granite.auth.saml
 
