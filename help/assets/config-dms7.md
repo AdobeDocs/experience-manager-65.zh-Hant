@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06301db70f763eedebeca293dd288d22248cfbf6
+source-git-commit: f671e00ad94555346190ecb98c905441ad111e18
 workflow-type: tm+mt
 source-wordcount: '5777'
 ht-degree: 6%
@@ -110,6 +110,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
          * **[!UICONTROL 繼承]** -資料夾上沒有明確的同步值； 相反，資料夾會繼承其上級資料夾或雲配置中預設模式中的同步值。 繼承的詳細狀態會透過工具提示顯示。
          * **[!UICONTROL 啟用子資料夾]** -包含此子樹狀結構中的所有項目，以同步至動態媒體。 資料夾特定的設定會覆寫雲端設定中的預設模式。
          * **[!UICONTROL 子資料夾停用]** -排除此子樹狀結構中的所有項目，以免同步至動態媒體。
+
    >[!NOTE]
    >
    >DMS7中不支援版本修訂。 此外，延遲啟動僅適用於在「編輯動態媒體設定」頁面中的「發佈資產 ********」設定為「啟動時」，然後只適用於在首次啟動資產時。
@@ -118,7 +119,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    >啟動資產後，任何更新都會立即即時發佈至S7傳送。
 
 1. 點選「 **[!UICONTROL 儲存]**」。
-1. 若要在動態媒體內容發佈之前安全地預覽，您必須將AEM作者例項「白名單」以連線至動態媒體：
+1. 若要在動態媒體內容發佈之前安全地預覽，您必須「允許列出」AEM作者例項，才能連線至動態媒體：
 
    * 登入您的Dynamic Media Classic帳戶： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). 您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
    * 在頁面右上方的導覽列上，按一下「設定>應用程 **[!UICONTROL 式設定>發佈設定>影像伺服器」]**。
