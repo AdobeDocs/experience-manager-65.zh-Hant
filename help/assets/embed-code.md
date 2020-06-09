@@ -8,20 +8,23 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 21%
 
 ---
 
 
-# 將動態媒體視訊或影像檢視器內嵌在網頁上 {#embedding-the-video-or-image-viewer-on-a-web-page}
+# 將動態媒體視訊、影像檢視器或維度檢視器內嵌在網頁上 {#embedding-the-video-or-image-viewer-on-a-web-page}
 
-當您想 **** 要播放視訊或檢視內嵌在網頁上的資產時，請使用「內嵌代碼」功能。 您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。 「內嵌代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
+當您想 **** 要播放視訊或檢視內嵌在網頁上的資產時，請使用「內嵌代碼」功能。您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。「內嵌代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
 
 只有當您未將AEM用 _作_ WCM時，才內嵌URL。 如果您使用AEM做為WCM, [就直接在頁面上新增資產。](adding-dynamic-media-assets-to-pages.md)
 
-請參 [閱連結URL至您的Web應用程式。](linking-urls-to-yourwebapplication.md)
+See [Linking URLs to your Web Application.](linking-urls-to-yourwebapplication.md)
 
-請參 [閱為互動式網站提供最佳化影像。](responsive-site.md)
+See [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
 
 >[!NOTE]
 >
@@ -37,7 +40,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 1. 導覽至您要 *複製其內嵌* 、已發佈的視訊或影像資產。
 
-   請記住，內嵌程式碼僅可在您首次 *發佈**資產後* 複製。 此外，檢視器預設集或影像預設集也必須發佈。
+   請記住，內嵌程式碼僅可在您首次 *發佈**資產後* 複製。此外，檢視器預設集或影像預設集也必須發佈。
 
    請參閱 [發佈資產。](publishing-dynamicmedia-assets.md)
 
