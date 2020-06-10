@@ -5,7 +5,10 @@ keywords: dynamic media;newsletter;product updates;tips and tricks;events;custom
 contentOwner: Rick Brough
 solution: Dynamic Media
 translation-type: tm+mt
-source-git-commit: d43f845a1ba9ed9e9eb5bfcff735eaa42da53566
+source-git-commit: 9e8ff9bf5c9ddd4675e887fc734bf3b616526b36
+workflow-type: tm+mt
+source-wordcount: '1283'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +25,21 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
 
 ## 錯過了動態媒體電子報？
 
+* **[2020年5月第4期](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
+
+   在此問題中：
+
+   * 在不確定的時期，業務連續性意味著什麼。
+   * 首次全面數位化Adobe峰會的主要優點。
+   * 必須觀看的Experience Manager專題討論會。
+   * 峰會客戶焦點： 在盔甲下。
+   * 絕不錯過Experience Insider網路研討會。
+   * 公共部門焦點： 數位註冊的迫切需求。
+   * 看看Experience Manager Innovation有哪些新功能。
+   * 與Adobe專業人員一 *起* ，培養您的Experience Manager技能。
+   * 與Adobe Experience Manager社群連絡。
+   * 透過Adobe Experience League快速追蹤您的Adobe專業知識。
+
 * **[2020年4月第3期](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@DRPFipWV_3bgH_oxl1monOhd4auNDxFVTBWB-uKB6lM_BixlVqja2E5Ml7DbtOy6pARL78LPxljqgxEEAr7RBsRp8WOyn-Zw6hQ8MNoFn9i9WMXm.html)**
 
    在此問題中：
@@ -32,6 +50,7 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 從Adobe Summit 2020線上觀看動態媒體研討會。
    * 進一步瞭解我們免費的Dynamic Media Classic稽核。
    * 認識客戶成功服務資深計畫經理John Monroe。
+
    >[!IMPORTANT]
    >
    >我們想確定我們只傳送動態媒體電子報給想要收到它的人。 若要在此期刊之後繼續收到電子報，請在這裡注 [冊](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)。
@@ -54,7 +73,7 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 5個全新的Skill Builder網路研討會，磨練您的Dynamic Media Classic技能。
    * 免費稽核，協助您從Dynamic Media Classic獲得更多價值。
    * 為我們的多媒體客戶帶來創紀錄的假日購物季。
-   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新增功能的準備。
+   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新功能的準備。
    * 認識數位媒體專員Mark Dean。
 
 * **[2019年11月，總第11期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**
@@ -141,4 +160,4 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 註冊參加我們的Dynamic Media Classic隱藏功能網路研討會。
    * 瞭解我們的隨選網路研討會系列，以協助您制定豐富型媒體策略。
    * 閱讀主要的豐富式媒體使用案例及我們為他們提供的解決方案。
-   * ...還有更多！
+   * ... 還有更多！
