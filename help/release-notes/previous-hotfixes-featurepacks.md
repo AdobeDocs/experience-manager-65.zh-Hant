@@ -1,15 +1,11 @@
 ---
-title: AEM 6.5舊版Service Pack發行說明
+title: Adobe Experience Manager 6.5舊版Service Pack發行說明
 description: Adobe Experience Manager 6.5 Service Pack 3及更舊版本的發行說明。
-uuid: c7bc3705-3d92-4e22-ad84-dc6002f6fa6c
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
-docset: aem65
+contentOwner: AK
 translation-type: tm+mt
-source-git-commit: c80cb65b42d8e132ba83c25f1decdcf0a0a6fc51
+source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
 workflow-type: tm+mt
-source-wordcount: '8093'
+source-wordcount: '8094'
 ht-degree: 0%
 
 ---
@@ -19,13 +15,13 @@ ht-degree: 0%
 
 ## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
 
-Adobe Experience Manager 6.5.4.0是重要的更新，其中包含新功能、客戶要求的重要增強功能以及自2019年4月6.5版全面推出以來的效能、穩定性、安全性 **增強**。 它可安裝在Adobe Experience Manager(AEM)6.5之上。
+Adobe Experience Manager 6.5.4.0是重要的更新，其中包含新功能、客戶要求的重要增強功能以及自2019年4月6.5版全面推出以來的效能、穩定性、安全性 **增強**。 它可安裝在Adobe Experience Manager 6.5之上。
 
-AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
+Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包括：
 
-* AEM Assets現在已透過Adobe I/O Console設定品牌入口網站。
+* Adobe Experience Manager Assets現在已透過Adobe I/O Console設定品牌入口網站。
 
-* AEM Forms工 [作流程現在提供新的「產生可列印的輸出](../forms/using/aem-forms-workflow-step-reference.md) 」步驟。
+* Adobe Experience Manager Forms工 [作流程現在提供新的「產生可列印的輸出](../forms/using/aem-forms-workflow-step-reference.md) 」步驟。
 
 * [多欄支援](../forms/using/resize-using-layout-mode.md) ，以版面配置模式建立最適化表單和互動式通訊。
 
@@ -41,13 +37,13 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * SOAP輸入或輸出和複雜的資料結構現在支援動態群組替代。
 
-如需先前AEM 6.5 Service Pack中所推出的完整功能清單、主要重點、主要功能，請參閱「 [Adobe Experience Manager 6.5 Service Pack 4的新增功能」](new-features-latest-service-pack.md)。
+如需最新Service Pack中新增的完整功能和重點說明清單，請參閱「 [Adobe Experience Manager 6.5 Service Pack的新增功能」](new-features-latest-service-pack.md)。
 
 ### 網站 {#sites-fixes}
 
-* 當AEM Sites頁面的URL包含冒號(: )或百分比符號(%)時，基礎瀏覽器停止回應，而CPU週期顯示尖峰(NPR-32369、NPR-31918)。
+* 當Adobe Experience Manager Sites頁面的URL包含冒號(`:`)或百分比符號(`%`)時，瀏覽器會停止回應，而CPU使用量尖峰(NPR-32369、NPR-31918)。
 
-* 當開啟AEM Sites頁面以進行編輯並複製元件時，某些預留位置仍無法使用貼上動作(NPR-32317)。
+* 當開啟Experience Manager Sites頁面進行編輯並複製元件時，貼上動作仍無法用於某些預留位置(NPR-32317)。
 
 * 當「管理出版物」精靈開啟時，連結至核心元件的體驗片段不會顯示在發佈的參考清單中(NPR-32233)。
 
@@ -55,7 +51,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 當伺服器時間和機器時間位於不同時區時，排程的發佈時間會在Touch UI中顯示伺服器時間，而在Classic UI中，則會顯示機器時間(NPR-32077)。
 
-* AEM Sites無法開啟URL中含有尾碼的頁面(NPR-32072)。
+* Experience Manager Sites無法開啟URL中含有尾碼的頁面(NPR-32072)。
 
 * 當用戶編輯內容片段時，內容片段的已刪除變化被恢復(NPR-32062)。
 
@@ -129,7 +125,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 當使用者未在動態媒體用戶端的設定編輯器中進行任何變更時，儲存按鈕不會匯入遠端設定(CQ-4285690)。
 
-* 當支援的3D模型已收錄到AEM中時，3D資產縮圖不提供資訊(CQ-4283701)。
+* 當支援的3D模型已收錄到Experience Manager(CQ-4283701)中時，3D資產縮圖不提供資訊。
 
 * 智慧型裁切影片檢視器預設集的未處理狀態會在橫幅文字上與預設名稱一起顯示兩次(CQ-4283517)。
 
@@ -139,7 +135,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 鍵盤焦點會卡在「下載」對話方塊、Chrome和Safari瀏覽器的「電子郵件」下拉式清單中(NPR-32067)。
 
-* 嘗試在AEM上新增DM雲端設定時，預設不會啟用「同步所有內容」核取方塊(CQ-4288533)。
+* 嘗試在Experience Manager上新增DM雲端設定時，預設不會啟用「同步所有內容」核取方塊(CQ-4288533)。
 
 ### Foundation UI {#foundation-ui-6540}
 
@@ -187,13 +183,9 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 ### 品牌入口網站 {#assets-brand-portal-6540}
 
-* 在AEM 6.5.4上升級至Adobe I/O時，品牌入口網站使用者無法將貢獻資料夾資產發佈至AEM資產(CQDOC-15655)。
+* 在Experience Manager 6.5.4上，品牌入口網站的使用者無法 [!DNL Assets] 將貢獻資料夾資產發佈至Adobe I/O(CQDOC-15655)。 如需Experience Manager 6.5.4的立即修正，建議您下載 [修補程式](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) ，並安裝在您的作者實例上。
 
-   此問題將在下一個Service Pack AEM 6.5.5中修正。
-
-   如需AEM 6.5.4的立即修正，建議您下載 [修補程式](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) ，並安裝在您的作者實例上。
-
-* 中繼資料結構下拉式值在資產屬性中不可見(CQ-4283287)。
+* 中繼資料結構彈出式值在資產屬性中不可見(CQ-4283287)。
 
 * 中繼資料子架構不會根據資產屬性中的mimetype顯示標籤(CQ-4283288)。
 
@@ -221,7 +213,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 >[!NOTE]
 >
->AEM Service Pack不包含AEM Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
+>Experience Manager Service Pack不包含Experience Manager Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上Adobe Experience Manager Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱在JEE上安裝Experience Manager Forms附加元件](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[和安裝Experience Manager Forms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 * 通信管理： 信件在提交至後置處理工作流程後會顯示額外的字元(NPR-32626)。
 
@@ -233,13 +225,13 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 檔案服務： 在套用Service Pack 2後，Letters和某些其他頁面的URL存取問題(NPR-32508、NPR-32509)。
 
-* 檔案服務： 如果伺服器上的交易數超過特定限制，HTML至PDF的轉換會失敗，而且檔案類型設定會從AEM Forms伺服器移除(NPR-32204)。
+* 檔案服務： 如果伺服器上的交易數超過特定限制，HTML至PDF的轉換會失敗，而且檔案類型設定會從伺服器 [!DNL Forms] 移除(NPR-32204)。
 
 * 最適化表單： 瀏覽器協助工具會根據WCAG2 Level AA准則，報告調適性表單的失敗(NPR-32312、NPR-32309、CQ-4285439)。
 
 * 最適化表單： Chrome瀏覽器協助工具報告最佳實務失敗(NPR-32310)。
 
-* 最適化表單： 設定內嵌在AEM網站頁面中的最適化表單時的轉換問題(NPR-32168)。
+* 最適化表單： 在Experience Manager Sites頁面中設定內嵌的最適化表單時發生轉換問題(NPR-32168)。
 
 * 工作台： 使用「取得PDF公用程式」服務的「PDF屬性」作業時，會顯示錯誤訊息(NPR-32150)。
 
@@ -249,7 +241,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 設計人員： 如果表格中有合併的儲存格，則無障礙環境支援測試會失敗，無法針對使用輸出服務(CQ-4285372)從XDP表單轉換的輸出PDF檔案進行協助功能測試。
 
-* Foundation JEE: 如果AEM Forms伺服器已與叢集中斷開連線，快取問題會使它無法重新連線至伺服器(NPR-32412)。
+* Foundation JEE: 如果Experience Manager Forms伺服器已與叢集中斷開連線，快取問題會使它無法重新連線至伺服器(NPR-32412)。
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -283,45 +275,48 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * [!DNL Experience Manager Assets] 現在支援使用Deflate64演算法建立的ZIP封存(NPR-27573)。
 
-* 已在DAM清單檢視中新增可排序的建立日期新欄，並在清單檢視中新增資產搜尋結果(NPR-31312)。
+* 在DAM清單檢視中新增可排序的建立日期欄，並在清單檢視中新增資產搜尋結果欄(NPR-31312)。
 
-* 「清單」檢視中已允許根據「名稱」欄進行資產排序(NPR-31299)。
+* 在清單檢視中，使用者可以使用「名稱」欄來 [!UICONTROL 排序資產清單] (NPR-31299)。
 
-* GLB、GLTF、OBJ和STL資產檔案支援在DAM的「資產詳細資訊」頁面中預覽資產(CQ-4282277)。
+* DAM的「資產詳細資料」頁面中可預覽GLB、GLTF、OBJ和STL [!UICONTROL 檔案] (CQ-4282277)。
 
-* 在(CQ-4281279)中塊上載期間，會針對塊節點觸 [!DNL Dynamic Media] 發ReplicationOnModifyListener事件。
+* `ReplicationOnModifyListener` 事件會在區塊上傳期間針對區塊節點 [!DNL Dynamic Media] 觸發(CQ-4281279)。
 
 * [!DNL Dynamic Media] 現在支援智慧型裁切視訊資產。 Smart Crop是機器學習驅動的功能，可在移動影格時重新裁切視訊，以跟隨場景的焦點(CQ-4278995)。
 
 * [!DNL Dynamic Media] 支援Smart Imaging(CQ-422249)。
 
-* 如果查詢參數傳入請求中，搜尋／瀏覽檢視已設為Foundation選擇器的預設檢視(NPR-31601)。
+* 如果查詢參數傳入請求中，搜尋或瀏覽檢視會設為Foundation選擇器中的預設檢視(NPR-31601)。
 
 **修正**
 
-* 某些PDF檔案的中繼資料不會在修改標題時更新並儲存至PDF(NPR-31629)。
+* 某些PDF檔案的中繼資料在標題修改時不會更新並儲存至PDF(NPR-31629)。
 
-* 資產共用不適用於名稱中加上&#39;+&#39;字元的資產(NPR-31547)。
+* 資產共用不適用於檔案名稱中加上(`+`)字元的資產(NPR-31547)。
 
 * 預設搜尋表單「資產管理員*搜尋邊欄」中的編輯無法如預期般運作(NPR-31502)。
 
-* 使用Omnisearch on assets view for searching assets時，不會顯示建議(NPR-31496)。
+<!-- Review: Check if this seemingly stray asterisk is needed there or not.
+-->
+
+* 當使用Omnisearch on assets view for serching assets時，不會顯示建議(NPR-31496)。
 
 * 當參考的資產移至其他位置時，系列中的資產參考不會更新，因為不同的使用者會參考不同的資產(NPR-31486)。
 
 * 重複的IPTC標籤會新增至資產中繼資料(NPR-31328)。
 
-* 當從篩選邊欄觸發搜尋時，右上角的搜尋結果計數無法正確更新(NPR-31316)。
+* 當從過濾器邊欄觸發搜索時，搜索結果計數不會準確更新(NPR-31316)。
 
-* 取消選擇「檔案類型」過濾器中的第二級複選框時，所有複選框都將被清除，搜索欄中的文本與所選／未選定的屬性不同步(NPR-31287)。
+* 取消選擇「檔案類型」過濾器中的第二級複選框時，所有複選框都會被清除，搜索欄中的文本與選定或取消選擇的屬性不同步(NPR-31287)。
 
 * 不能從資料夾的「成員」部分中刪除所有成員（用戶／組）; 在嘗試移除所有使用者時，登入的使用者會新增至清單(NPR-31171)。
 
-* 無法刪除檔案名稱中加上&#39;+&#39;符號的資產(NPR-31162)。
+* 無法刪除檔案名稱中`+`加號()的資產(NPR-31162)。
 
 * 建立下拉式選單（在選取資料夾時，會在頂端選單中顯示）不會將「資料夾」顯示為建立選項(NPR-30877)。
 
-* 當對用戶應用路徑上的ACL拒絕jcr:removeChildNodes和jcr:removeNode(NPR-30840)時，資料夾選擇「建立」>「檔案上載」操作項將丟失。
+* 對用戶應用拒絕和路徑上的ACL時，資料夾選 `jcr:removeChildNodes` 擇 `jcr:removeNode` 「建立」>「檔案上載」操作項目丟失(NPR-30840)。
 
 * 當某些mp4資產上傳時，DAM工作流程會進入過時狀態，導致所有剩餘的工作流程都進入過時狀態(NPR-30662)。
 
@@ -331,7 +326,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 在 [!DNL Experience Manager][!DNL Dynamic Media]-Scene7模式中，將資產從一個檔案夾移至另一個檔案夾時，資產名稱會變更為小寫(NPR-31630)。
 
-* 編輯遠端影像集時，會針對與Scene 7公司名稱相同的資料夾中的影像，發現錯誤(NPR-31340)。
+* 編輯遠端影像集時，會針對與Scene7公司名稱相同的資料夾中的影像，發現錯誤(NPR-31340)。
 
 * [!DNL Dynamic Media] 包含參考的資產不會發佈(NPR-31180)。
 
@@ -339,9 +334,9 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 新增至影像資產的熱點無法透過資產詳細資料頁面的互動式影像檢視器顯示(NPR-30979)。
 
-* 當中對資產執行的動作傳遞至Scene 7時，會建立巨大的sling工作，並重新顯 [!DNL Experience manager Assets] 示「處理」橫幅(Processing banner)。
+* 當中對資產執行的動作傳遞至Scene7時，會建立巨大的sling工作，並重新顯 [!DNL Experience manager Assets] 示「處理」橫幅(Processing banner)。
 
-* 建立資產的語言副本時發生衝突，資產不會上傳至場景7(NPR-30932)。
+* 建立資產的語言副本時發生衝突，資產不會上傳至Scene7(NPR-30932)。
 
 * 從以 [!DNL Experience Manager][!DNL Dynamic Media]-Hybrid模式執行下載的動態轉譯會中斷（這些轉譯是文字類型，內容為「找不到影像」，而非影像內容類型）(NPR-30876)。
 
@@ -363,11 +358,11 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 新收錄在具有視訊描述檔的資料夾中的視訊，即使編碼百分比完成到100%後，仍會維持處理狀態(CQ-4279389)。
 
-* 從資料夾移動資產會建立大量的sling工作（Scene 7 API呼叫），而非理想的必要(CQ-4278664)。
+* 從資料夾移動資產會建立大量的sling工作（Scene7 API呼叫），而非理想的必要(CQ-4278664)。
 
-* 當在DAM中建立影像集（或媒體集）並以適當的命名慣例命名時，影像集的名稱會在Scene 7中變更為小寫(CQ-4281112)。
+* 當在DAM中建立影像集（或媒體集）並使用適當的命名慣例命名時，影像集的名稱會在Scene7中變更為小寫(CQ-4281112)。
 
-* Scene 7 Migrator未正確設定發佈狀態(CQ-4263492)。
+* Scene7 Migrator會錯誤設定發佈狀態(CQ-4263492)。
 
 * 觸控UI搜尋（透過Omnisearch完成）結果頁面會自動捲動，並遺失使用者在內容片段中的捲動位置(CQ-4282898)。
 
@@ -381,7 +376,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 轉譯工作流程失敗(CQ-4271928)。
 
-* DAM事件清除會刪除最新(maxSavedActivitys)事件資料，並保留先前建立的資料(NPR-31336)。
+* DAM事件清除會刪除最新(`maxSavedActivities`)的事件資料並保存先前建立的資料(NPR-31336)。
 
 * 觸控式UI搜尋（透過Omnisearch完成）結果頁面會自動捲動並遺失使用者的捲動位置(NPR-31307)。
 
@@ -393,22 +388,27 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 * 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結(NPR-30980)。
 * 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行(NPR-31182)。
-* 當使用者在功能表的description屬性中新增日文或韓文字元時，功能表會顯示日文和韓文文字的扭曲字元。 (NPR-31331)。
+* 當使用者在功能表的description屬性中新增日文或韓文字元時，功能表會顯示日文和韓文文字的扭曲字元(NPR-31331)。
 * Rich Text Editor(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
 * 立即可用的Rich Text Editor(RTE)腳手架。 意外地將內嵌字型大小套用至元素(NPR-31284)。
 * 當使用者專注在左側欄位並使用鍵盤快速鍵貼上內容時，會貼上頁面編輯器剪貼簿的內容，而非從左側欄位複製的內容(NPR-31172)。
 * 當用戶將「檔案上傳」欄位添加到多欄位時，影像路徑儲存在元件節點中，而不是多欄位節點(NPR-30882)。
-* ResponsiveGridExporter API不會傳回com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter介面。 com.day.cq.wcm.foundation.model.impl套件宣告為私用套件(NPR-31398)。
-* 在非編輯器模式(在「作者」中(不含首碼和 `editor.html``wcmmode=disabled`，或在「發佈者」中)中開啟包含某些ExperienceFragments的頁面時，請求會以HTTP狀態錯誤碼500(NPR-30743)結束。
+* API `ResponsiveGridExporter` 不會傳回介 `com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter` 面。 該 `com.day.cq.wcm.foundation.model.impl` 包聲明為私有包(NPR-31398)。
+
+<!-- Review: NPR-31398 has fixVersion as 6530. However, it is mentioned twice in 6530 and 6520 as fixed. 
+Remove one mention of this fix.
+-->
+
+* 在非編輯器模式(在「作者」中(不含首碼和 `editor.html``wcmmode=disabled`，或在「發佈者」中)中開啟包含某些「體驗片段」的頁面時，請求會以HTTP狀態錯誤碼 `500` (NPR-30743)結束。
 * 使用者無法變更密碼並存取其描述檔頁面(NPR-31161)。
 
 ### 搜尋與使用者介面 {#search-ui-interface}
 
-* 從搜尋結果頁面的「卡片」檢視切換至「清單」檢視時，在可捲動頁面之前會有延遲(NPR-31286)。
+* 從卡片檢視切換至搜尋結果頁面上的清單檢視時，在可捲動頁面之前會有延遲(NPR-31286)。
 
-* 「全選」核取方塊會隱藏在 [!DNL Sites] UI的「清單」檢視中(NPR-31614)。
+* 「 [!UICONTROL 全選] 」核取方塊會隱藏在使用者介面的 [!DNL Sites] 清單檢視中(NPR-31614)。
 
-* 搜尋結果頁面上的「全選」計數不正確(NPR-31120)。
+* 搜 [!UICONTROL 尋結果頁面上的] 「全選」計數不正確(NPR-31120)。
 
 * 中繼資料編輯器會顯示不存在的標籤(NPR-31119)。
 
@@ -452,7 +452,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 * 建立新的「貢獻」檔案夾時，「貢獻」檔案夾中不會顯示一或兩個子檔案夾（NEW和SHARED）(CQ-4282424)。
 * 當使用者從結尾處接收「貢獻」檔案夾中的新資產後，嘗試 [!DNL Experience Manager] 從 [!DNL Brand Portal] 發佈「貢獻」檔案夾時，系統會 [!DNL Brand Portal] 引發例外(CQ-4279740)。
 * 禁止在「貢獻」檔案夾（巢狀檔案夾）中建立「貢獻」檔案夾，以避免複雜性(CQ-4278391)。
-* 系統會在上傳從「管理控制台」 [!DNL Brand Portal] 匯入的使用者清單（.csv檔案）時引發 [!DNL Experience Manager] 異常。 .csv檔案中只有「電子郵件」、「名字」和「姓氏」欄位是必填欄位(CQ-4278390)。
+* 系統上傳從「管理控制台」 [!DNL Brand Portal] 匯入的使用者清單（.csv檔案）時發 [!DNL Experience Manager] 生異常。 .csv檔案中只有「電子郵件」、「名字」和「姓氏」欄位是必填欄位(CQ-4278390)。
 
 ### 社群 {#communities-6530}
 
@@ -475,7 +475,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack不包含修正 [!DNL Experience Manager Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE修正的累 [!DNL Experience Manager Forms] 積安裝程式。 如需詳細資訊，請 [參閱在JEE上安裝Experience Manager Forms附加元件](#install-aem-forms-add-on-package)[和安裝Experience Manager Forms](#install-aem-forms-jee-installer)。
+>[!DNL Experience Manager] Service Pack不包含修正 [!DNL Experience Manager Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE修正的累 [!DNL Experience Manager Forms] 積安裝程式。 如需詳細資訊，請 [參閱在JEE上安裝Experience Manager Forms附加元件](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[和安裝Experience Manager Forms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 #### Forms附加套件 {#forms-add-on-package-6530}
 
@@ -525,7 +525,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來的重要客戶修 **正與增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來所發佈的重要客戶修 **正和增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
 
 此Service Pack版本的一些主要亮點是：
 
@@ -603,15 +603,15 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 ### 網站 {#sites-6520}
 
-* 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結。 (NPR-30980)
-* 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行。 (NPR-31182)
-* 文本元件的富格文本編輯器(RTE)插件顯示日文和韓文文本的扭曲字元。 (NPR-31331)
-* 富格文本編輯器(RTE)不允許將嵌入的表作為清單項插入。 (NPR-30879)
-* 立即可用的架構Rich Text Editor(RTE)會意外地套用內嵌字型大小至元素。 (NPR-31284)
-* 當使用者專注在左側欄位並使用鍵盤快速鍵貼上內容時，會貼上頁面編輯器剪貼簿的內容，而非從左側欄位複製的內容。 (NPR-31172)
-* 當用戶將「檔案上載」欄位添加到多欄位時，影像路徑將儲存在元件節點中，而不是多欄位節點中。 (NPR-30882)
-* ResponsiveGridExporter API不會傳回com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter介面。 com.day.cq.wcm.foundation.model.impl套件宣告為私用套件。 (NPR-31398)
-* 在非編輯器模式（在「作者」中不含首碼，或在「發行者」中）中開啟包含某些ExperienceFragments的頁面時，請求會以HTTP狀態錯誤碼500結束。 `editor.html``wcmmode=disabled`(NPR-30743)
+* 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結(NPR-30980)。
+* 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行(NPR-31182)。
+* 文本元件的富格文本編輯器(RTE)插件顯示日文和韓文文本的扭曲字元(NPR-31331)。
+* Rich Text Editor(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
+* 立即可用的架構Rich Text Editor(RTE)會意外地套用內嵌字型大小至元素(NPR-31284)。
+* 當使用者專注在左側欄位並使用鍵盤快速鍵貼上內容時，會貼上頁面編輯器剪貼簿的內容，而非從左側欄位複製的內容(NPR-31172)。
+* 當用戶將「檔案上傳」欄位添加到多欄位時，影像路徑儲存在元件節點中，而不是多欄位節點(NPR-30882)。
+* API `ResponsiveGridExporter` 不會傳回介 `com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter` 面。 該 `com.day.cq.wcm.foundation.model.impl` 包聲明為私有包(NPR-31398)。
+* 在非編輯器模式(在「作者」中(不含首碼和 `editor.html``wcmmode=disabled`，或在「發佈者」中)開啟包含某些體驗片段的頁面時，請求會以HTTP狀態錯誤碼500(NPR-30743)結束。
 
 ### WCM —— 頁面編輯器 {#wcm-page-editor-6520}
 
@@ -659,7 +659,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack不包含修正 [!DNL Experience Manager Forms]。 它們是使用個別的附 [!DNL Forms] 加套件傳送。 此外，還會發行包含JEE修正的累 [!DNL Experience Manager Forms] 積安裝程式。 如需詳細資訊，請 [參閱安裝Experience Manager Forms附加元件](#install-aem-forms-add-on-package)[和安裝Experience Manager Forms JEE安裝程式](#forms-jee-installer)。
+>[!DNL Experience Manager] Service Pack不包含修正 [!DNL Experience Manager Forms]。 它們是使用個別的附 [!DNL Forms] 加套件傳送。 此外，還會發行包含JEE修正的累 [!DNL Experience Manager Forms] 積安裝程式。 如需詳細資訊，請 [參閱安裝Experience Manager Forms附加元件](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[和安裝Experience Manager Forms JEE安裝程式](#forms-jee-installer)。
 
 6.5.2.0表 [!DNL Experience Manager] 格的主要重點為：
 
@@ -746,7 +746,7 @@ AEM 6.5.4.0中引進的一些主要功能和增強功能包括：
 * 已啟用對的多站點管理器支 [!DNL Experience Manager Assets]持。 CQ-4271453、CQ-4268621、CQ-4257491的修補程式
 * [!DNL Experience Manager] 介面應在時間軸歷程記錄中顯示資產目前版本的額外項目，並顯示最新的登入註解 [!DNL Adobe Asset Link]。 CQ-4262864的修補程式
 * 內容片段時間軸在遺失屬性時顯示錯誤訊息。 CQ-4272560的修補程式
-* Scene 7視訊播放器在展開為全螢幕時的問題。 CQ-4266700的修補程式
+* Scene7視訊播放器在展開為全螢幕時的問題。 CQ-4266700的修補程式
 * ZoomVerticalViewer: 如果使用單一影像資產，則不應顯示平移按鈕。 CQ-4264795的修補程式
 * 刪除即時副本中的子節點應分離liveRelationship。 CQ-4270395的修補程式
 * 中繼資料結構只包含全域設定中的項目，且遺失作用中租用戶中的項目。 formPath URL值即使在變更時也會回復為預設值。 NPR-29945: CQ-4262898的修補程式
