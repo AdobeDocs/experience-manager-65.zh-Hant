@@ -1,12 +1,12 @@
 ---
-title: AEM 6.5 Service Pack發行說明
+title: Adobe Experience Manager 6.5 Service Pack發行說明
 description: Adobe Experience Manager 6.5 Service Pack 5的發行說明。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
+source-git-commit: cb48bba01b78a0724f3a07875f601367520b2a8e
 workflow-type: tm+mt
-source-wordcount: '4486'
+source-wordcount: '4508'
 ht-degree: 0%
 
 ---
@@ -14,72 +14,72 @@ ht-degree: 0%
 
 # Adobe Experience Manager 6.5 Service Pack發行說明 {#aem-service-pack-release-notes}
 
-## 發行資訊 {#release-information}
+## Release information {#release-information}
 
-| 產品 | **Adobe Experience Manager 6.5** |
-|---|---|
+| 產品 | Adobe Experience Manager 6.5 |
+| -------- | ---------------------------- |
 | 版本 | 6.5.5.0 |
 | 類型 | Service Pack版本 |
 | 日期 | 2020年6月04日 |
-| 下載URL | [包共用](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0)，軟 [件分發 ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
+| 下載URL | [包共用](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0)，軟 [件分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
 ## Adobe Experience Manager 6.5.5.0包含的功能 {#what-s-included-in-aem}
 
-Adobe Experience Manager 6.5.5.0是重要的更新，其中包含新功能、客戶要求的重要增強功能以及自2019年4月6.5版全面推出以來的效能、穩定性、安全性 **增強**。 它可安裝在Adobe Experience Manager(AEM)6.5之上。
+Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月6.5版正式發行以來，新功能、客戶要求的重要增強功能，以及效能、穩定性和安全性 **增強**。 它可安裝在Adobe Experience Manager 6.5之上。
 
-AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
+Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包括：
 
-* 自訂顯示在AEM收件匣中的欄名稱。
+* 自訂顯示在Adobe Experience Manager收件匣中的欄名稱。
 
-* 改善AEM網頁內容管理(WCM)中各個區域的協助工具，例如頁面編輯器、核心元件、RTE和管理員使用者介面。
+* 已改善Experience Manager Web Content Management(WCM)中各個區域的協助功能，例如頁面編輯器、核心元件、RTE和管理員使用者介面。
 
-* 將互動式通訊儲存為草稿。
+* 將草稿 [!DNL Interactive Communication] 另存為。
 
-* 支援JEE [!DNL Oracle WebLogic 12] 上的AEM Forms。
+* 在JEE上 [!DNL Oracle WebLogic 12] 支援Experience Manager Forms。
 
-* 「資產」使用者介面流程中的例 [!DNL Adobe Experience Manager] 外處理現已改善。
+* 已改善使用者介面流 [!DNL Adobe Experience Manager Assets] 程中的例外處理。
 
-* 在介面中新 `getRemoteAssetPublishURL` 增一種方 `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` 法，以取得Dynamic Media Scene7的發佈URL。
+* 若要取得Dynamic Media Scene7的發佈URL，會在介面中新 `getRemoteAssetPublishURL` 增新的 `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` 方法。
 
-* [資產中的協助工具](#assets-6550-changes) ，依 [!DNL Adobe Experience Manager] 循「網頁內容協助工具准則」(WCAG)增強功能。
+* [符合Web內容協助](#assets-6550)[!DNL Adobe Experience Manager Assets] 工具准則(WCAG)的協助工具增強功能。
 
-* 已移除與Adobe Experience Manager的套件共用整合。
+* 已從Adobe Experience Manager移除套件共用整合。
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.22.3版。
 
-如需AEM 6.5 Service Pack 5中新增的完整功能清單、主要重點、主要功能，請參閱「 [Adobe Experience Manager 6.5 Service Pack 5的新增功能」](new-features-latest-service-pack.md) 。
+如需Experience Manager 6.5 Service Pack 5中新增功能、主要重點、主要功能的完整清單，請參閱「 [Adobe Experience Manager 6.5 Service Pack 5的新增功能」](new-features-latest-service-pack.md) 。
 
 以下是6.5.5.0版中提供 [!DNL Experience Manager] 的修正清單。
 
-### 網站 {#sites-6550}
+### [!DNL Sites] {#sites-6550}
 
-* AEM Sites提供從別名發佈或取消發佈頁面的選項。 該選項無效(NPR-33415)。
+* Experience Manager Sites提供從別名發佈或取消發佈頁面的選項。 該選項無效(NPR-33415)。
 * 從包含多個範本的範本刪除版面容器時，範本無法正確呈現(NPR-33347)。
-* 當AEM Sites頁面是包含多個即時副本的大型內容集的一部分時，頁面版本歷史記錄預覽無法載入(NPR-33311)。
-* 當您使用「移動」命令重新命名AEM Sites頁面時，不會更新頁面標題(NPR-33264)。
+* 當Experience Manager Sites頁面是包含多個即時副本的大型內容集的一部分時，頁面版本歷史記錄預覽無法載入(NPR-33311)。
+* 當您使用「移動」命令來重新命名Experience Manager Sites頁面時，不會更新頁面標題(NPR-33264)。
 * 當您在欄檢視中移動頁面時，欄會消失(NPR-33216)。
-* 當語言副本中的本端元件名稱與Blueprint中元件名稱相同且元件從Blueprint中推出時，_msm_moved詞語不會新增至本端元件名稱(NPR-33208)。
-* 「頁面重新導向servlet」會附加。html至ResourceType不為cq:Page的AEM Sites URL(NPR-33176)。
+* 當語言副本中的本地元件名稱與Blueprint中的元件名稱相同且從Blueprint中推出該元件時，不會將該術語添加到本地元件的名稱中( `_msm_moved` NPR-33208)。
+* 「頁面重新導向servlet」會附加。html至Experience Manager Sites URL，而ResourceType則不 `cq:Page` 在此URL中(NPR-33176)。
 * 貼上子樹時，沒有選項可決定是否貼上相應的子頁(NPR-33149)。
 * 元件即時使用結果的數目限制為49(NPR-33058)。
 * 當內容片段以架構為基礎且包含強制文字區域或路徑欄位時，內容片段無法儲存(NPR-33007)。
-* 當您使用「現成可用的體驗」片段元件建立自訂元件並在AEM Sites頁面中使用時，AEM不會顯示自訂元件的參考（使用）(NPR-32852)。
+* 當您使用預設的Experience Fragment元件建立自訂元件並在Experience Manager Sites頁面中使用時，Experience Manager不會顯示自訂元件的參考（使用）(NPR-32852)。
 * 當更名具有大量引用的資料夾時，不會更新該資料夾的許多引用(NPR-32765)。
 * 當您啟用來源編輯選項時，它將可用於內嵌全螢幕選項，但在富格文本編輯器的編輯對話框和全螢幕選項中仍會遺失(NPR-32763)。
-* 如果您有多欄位，且其在Blueprint的頁面屬性中包含必填欄位（例如下拉式清單或路徑欄位），則當卷出包含此多欄位的頁面時，即時副本的頁面屬性不會儲存。 (NPR-32751)
+* 如果您有多欄位，且其在Blueprint的頁面屬性中包含必填欄位（例如下拉式清單或路徑欄位），則當卷出包含此多欄位的頁面時，即時副本的頁面屬性不會儲存(NPR-32751)。
 * 螢幕閱讀程式無法使用標題結構來導覽頁面。 此外，「元件」標籤有錯誤的標籤(NPR-32648)。
 * 當分頁開始時，「體驗片段選擇器」不會載入所有項目(NPR-32605)。
 * 讀取、修改、建立和刪除即時副本的作者權限將被撤銷。 每個作者都必須明確提供讀取和修改權限，才能在Blueprint中移動頁面(NPR-32550)。
 * 內容作者無法針對與Adobe Analytics整合的頁面建立Launch(NPR-32548)。
 * 當使用者以同步方式繼承時，父頁面的即時副本不會與Blueprint同步，並顯示不正確的狀態(NPR-32500)。
-* 載入AEM Sites編輯器頁面需要超過15秒(NPR-32413)。
+* 載入Experience Manager Sites編輯器頁面需要超過15秒(NPR-32413)。
 * 某些欄位不顯示取消繼承選項(NPR-32362)。
 * 當您選取「體驗片段」元件的路徑並選取「開啟選取對話方塊」核取方塊時，不會導覽至「路徑瀏覽器」中的選取路徑(NPR-32308)。
-* 從AEM 6.2升級至AEM 6.5時，靜態範本的Parsys元件無法正確顯示。 Parsys元件的高度設定為0，其中的元件不可見。 (NPR-33663)。
+* 從Experience Manager 6.2升級至Experience Manager 6.5時，靜態範本的Parsys元件無法正確顯示。 Parsys元件的高度設定為0，其內部元件不可見(NPR-33663)。
 * 當使用者複製並貼上相同頁面上的「版面容器」時，「版面容器」中的元件不會顯示(NPR-33648)。
 * Dispatcher health check在日 `Invalid cookie header` 志檔案中顯示警告消息(NPR-33629)。
 
-### 資產 {#assets-6550-changes}
+### [!DNL Assets] {#assets-6550}
 
 **Experience Manager Assets中的協助工具增強功能**
 
@@ -87,11 +87,11 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 
 * 現在可以使用鍵盤 [!UICONTROL 按鍵，觸及資產的「檢視設定] 」選項，並變更「 [!UICONTROL 檢視設定] 」對話方塊中的設定(NPR-33420)。
 
-* 組合方塊的清單方塊下拉式清單（位於不同頁面上的各種欄位）現在會將項目顯示為螢幕閱讀程式可宣佈的選項清單(NPR-33516)。
+* 組合方塊的清單方塊快顯視窗（位於不同頁面的各欄位中）現在會將項目顯示為螢幕閱讀程式可宣佈的選項清單(NPR-33516)。
 
 * 螢幕閱讀程式現在會公佈可排序標題(在清單檢視、時間軸檢視和 [!UICONTROL Manage Publication] page)的排序功能，而欄標題的排序控制項可透過鍵盤存取(NPR-32979)。
 
-* 可點按的元素（例如註解卡、版本更新、組合方塊和功能表的雪佛龍圖示）現在可使用鍵盤加以集中和操作(NPR-33514)。
+* 可點選的元素，例如註解卡、版本更新、組合方塊和功能表的雪佛龍圖示，現在可以使用鍵盤加以關注並與之互動(NPR-33514)。
 
 * 螢幕閱讀程式現在可正確宣佈前瞻分析檢視( [!UICONTROL Insights View] )上前瞻分析圖示（用途、印象和點按）的功能（或動作目的）(NPR-33513)。
 
@@ -173,9 +173,9 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 
 * [!UICONTROL 中繼資料結構編輯器] (Metadata Schema Editor)頁面及其元素現在可使用鍵盤存取，而且螢幕閱讀器方便使用(CQ-4290962、CQ-4272953)。
 
-* 移除目前 [!UICONTROL 選取之標籤] x圖示的用途，也會與選取標籤的數目一併宣佈(CQ-4273017)。
+* 熒 `X` 幕閱讀程式現在會宣佈移除選取標籤的符號，以及選取標籤的數目(CQ-4273017)。
 
-* 螢幕閱讀程式現在會忽略裝飾性圖示和影像，以避免使用螢幕閱讀程式的無視使用者混淆(CQ-4272944)。
+* 為避免使用螢幕閱讀程式的無視使用者混淆，螢幕閱讀程式現在會忽略裝飾性圖示和影像(CQ-4272944)。
 
 **Experience Manager Assets中修正的問題**
 
@@ -183,7 +183,7 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 
 * [!UICONTROL 系列中] 「建立工  作流程」對話方塊上的「開始」選項已停用，因此無法觸發工作流程(NPR-32471)。
 
-* 在中繼資料結構中使用階層式下拉式清單時，在選取並儲存包含撇號的下拉式選項（從子下拉式清單）時，在重新開啟資產 [!UICONTROL Properties] (NPR-32649)後，選取的撇號選項會消失。
+* 在中繼資料結構中使用階層式快顯功能時，在選取並儲存包含縮寫符號的下拉式選項（從子下拉式清單）時，在重新開啟資產 [!UICONTROL Properties] (NPR-32649)後，選取的縮寫符號選項就會消失。
 
 * [!UICONTROL 如果Asset Insights Sync Job遇到無效項目（在Analytics端）而未移至下一個項目(NPR-32674)，則會停止Asset Insights Sync Job] （資產分析同步工作）並失敗。
 
@@ -207,19 +207,19 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 
 * [!UICONTROL 在選擇父節點] （其中顯示單個子資料夾），然後選擇子資料夾時，未啟用「下一步」選項(NPR-33275)。
 
-* Adobe Asset Link(AAL)上對具有刪除權限的使用者停用登入和登出權限，即使允許使用者存取其他權限（例如讀取、建立或修改）(NPR-33272)。
+* 即使已授予讀取、建立或修改等其他權限，Adobe Asset Link(AAL)的使用者也會停用登入和登出權限(AAL)。(NPR-33272)
 
 * 智慧型裁切轉譯無法在資產下載對話方塊中使用(NPR-33167)。
 
 * 在具有智慧型裁切設定檔的檔案夾下開啟PDF轉譯邊欄的記錄檔中，會發現異常(CQ-4294201)。
 
-* 如果AEM上的「動態媒體同步模式  」預設為停用（具有動態媒體Scene7執行模式）,「影像預設集」不會發佈(CQ-4294200)。
+* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用  「動態媒體同步模式」，則不會發佈影像預設集(CQ-4294200)。
 
 * 大量上傳時的資產處理會停滯，而工作流程例項則會顯示DAM更新資產的停滯例項(CQ-4293916)。
 
-* 在AEM上建立動態媒體設定有效，但在使用者介面上，選取「儲存」時不會發生任何情況(CQ-4292442)。
+* 在Experience Manager上建立動態媒體設定有效，但在使用者介面上，選取「儲存」時不會發生任何情況(CQ-4292442)。
 
-* 在Safari/Mac上漸進式播放時，f4v視訊資產的預覽無法運作(CQ-4289844)。
+* 在Safari/Mac上漸進式播放時，F4V視訊資產的預覽無法運作(CQ-4289844)。
 
 * 在智慧型裁切資產時會建立額外的資料夾，該資產位於父資料夾內， `.` 名稱中含點字元(CQ-4289337)。
 
@@ -231,22 +231,22 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 
    * 將大型二進位檔上傳至動態媒體影像處理伺服器需要太長時間。
 
-   * AEM的縮圖產生時間因為Dynamic Media Scene7架構而增加。
+   * Experience Manager的縮圖產生時間因為Dynamic Media Scene7架構而增加。
 
 * 對於擁有大量資產的客戶，動態Media Scene7移轉問題會失敗(CQ-4279206)。
 
 * 視訊360檢視器的版面配置如果使 `setVideo` 用則會中斷，而視訊會在使用時 `video= modifier` 向下移動(CQ-4263201)。
 
-* 安裝AEM SDL軟體包時顯示錯誤資訊(NPR-33175)。
+* 安裝Experience Manager SDL軟體包時顯示錯誤資訊(NPR-33175)。
 
 ### 平台 {#platform-6550}
 
 * 如果 [!DNL Sling] 在下面建立了 `sling:match` 映射條目，則不會調 `/etc/maps` 用篩選器(NPR-33362)。
-* AEM因區段錯誤而當機( [!DNL Apache Lucene] NPR-32988)。
-* [!DNL Jackson] AEM uber jar檔案中遺失核心套件(NPR-32848)。
-* CRXDE Lite不會在沒有節點屬性的READ權限下載 `jcr:primaryType` 使用者的內容(NPR-32611)。
-* [!DNL Granite] 維護工作排程器在AEM部署期間重新初始化的頻率太高(CQ-4294627)。
-* 當SQL查詢執行較長時間（例如7小時）時，AEM會停止回應(NPR-33044)。
+* Experience Manager因區段錯誤而當機( [!DNL Apache Lucene] NPR-32988)。
+* [!DNL Jackson] Experience Manager uberjar檔案中遺失核心套件(NPR-32848)。
+* CRXDE Lite不會在未取得節點屬性讀取權限的情 `jcr:primaryType` 況下，為使用者載入內容(NPR-32611)。
+* [!DNL Granite] 維護任務調度程式在Experience Manager部署期間重新初始化的頻率過高(CQ-4294627)。
+* 當SQL查詢長時間執行（例如7小時）時，Experience Manager停止響應(NPR-33044)。
 
 ### 使用者介面{#ui-6550}
 
@@ -260,14 +260,14 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 * 當發佈含有Adobe Target元件的頁面時，會清除內部快取(NPR-33162)。
 * 與Adobe Target的整合無法在 [!DNL Windows Internet Explorer] 11上運作(NPR-33111)。
 * 設定Adobe Target時，在選 [!UICONTROL 擇報表來源時] ,「公司」和「報  表套裝」欄位不會出現(NPR-32502)。
-* 使用Adobe I/O匯出體驗片段時，「來源產品」等中繼資料不會匯出至Adobe Target(NPR-32159)。
-* 本機AEM管理員群組中的授權IMS使用者無法建立或修改IMS設定(NPR-33045)。
+* 使用Adobe [!DNL Experience Fragments] I/O匯出時，「來源產品」等中繼資料不會匯出至Adobe Target(NPR-32159)。
+* 本機Experience Manager管理員群組中的授權IMS使用者無法建立或修改IMS組態(NPR-33045)。
 * Adobe Launch設定頁面不會顯示所有記錄(NPR-33011)。
 * 內容作者群組中的使用者無法編輯Adobe Target元件的屬性，因為發生JavaScript錯誤(NPR-32996)。
 
 ### 翻譯專案 {#translation-6550}
 
-* 翻譯的標籤不會從協力廠商翻譯服務匯入AEM(NPR-33154)。
+* 翻譯的標籤不會從協力廠商翻譯服務匯入到Experience Manager(NPR-33154)。
 * 翻譯配置頁顯示的翻譯提供程式與用於翻譯的翻譯提供程式不正確(NPR-32971)。
 * 將體驗片段資料夾新增至現有的翻譯專案，會建立新專案(NPR-32843)。
 * 在運 `NullPointerException` 行翻譯作業的日誌中出現錯誤(NPR-32628)。
@@ -278,19 +278,19 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 * 頁面編輯器——使用Well元件並包含已儲存資料的面板不會因為更新版本 [!DNL Chrome] 而 [!DNL Firefox] 顯示(CQ-4292995)。
 * MSM —— 從頁面刪除元件並不會從頁面的發佈版本中刪除元件(CQ-4292360)。
 
-### 品牌入口網站 {#assets-brand-portal-6550}
+### [!DNL Brand Portal] {#assets-brand-portal-6550}
 
 * 從中移除已發佈的中繼 [!DNL Brand Portal] 資料架構會導致錯誤(CQ-4292063)。
-* 如果管理員透過 [!DNL Experience Manager Assets] Adobe Developer Console設定品牌入口網站為 [!DNL Brand Portal] 6.5.4, [!DNL Brand Portal] 使用者無法將貢獻資料夾的資產從發佈到 [!DNL Experience Manager]發佈。 (NPR-33046)。
+* 如果管理員透過 [!DNL Experience Manager Assets] Adobe Developer Console設定品牌入口網站為 [!DNL Brand Portal] 6.5.4，則使用者無法將貢獻資料夾的資產從發佈 [!DNL Brand Portal] 到 [!DNL Experience Manager] (NPR-33046)。
 * 重複複製父資料夾導致衝突(NPR-33001)。
 
-### 社群 {#communities-6550}
+### [!DNL Communities] {#communities-6550}
 
 * 無法使用快速編輯功能表選項刪除協調主控台中的資訊卡(NPR-33117)。
 * 存取「活動串流」頁 [!UICONTROL 面時發生錯誤] (NPR-33146)。
 * 在作者例項上刪除的群組不會從所有發佈例項中移除(NPR-33199)。
 * 建立新群組後，作者不會重新導向至 [!DNL Internet Explorer] 11號的「社群群組」區段(NPR-33205)。
-* 在「AEM收件匣」中存取訊息不會將訊息的狀態變更為「已讀取」(NPR-32764)。
+* 在Experience Manager收件箱中訪問留言不會將留言的狀態更改為「已讀取」(NPR-32764)。
 * 編輯群 [!DNL Communities] 組並變更縮圖影像並不會更新群組縮圖影像(NPR-32599)。
 * 使用者無法傳送電子郵件給社群中的其他使用者(NPR-32598)。
 * 提交的部落格在使用者重新整理頁面之前不會顯示(NPR-32391)。
@@ -299,15 +299,15 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 ### 工作流程 {#workflow-6550}
 
 * 左側 [!UICONTROL 導軌中的] 「時間軸」選項的載入時間比預期要長(NPR-32851)。
-* 重新啟動AEM例項後，系列的審閱工作電子郵件會包含錯誤的裝載連結(NPR-32774)。
+* 重新啟動Experience Manager例項後，系列的審閱工作電子郵件會包含錯誤的裝載連結(NPR-32774)。
 
-### 表單 {#forms-6550}
+### [!DNL Forms] {#forms-6550}
 
 >[!NOTE]
 >
->AEM Service Pack不包含AEM Forms的修正。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
+>Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
 
-* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序被混亂。
+* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序會混亂。
 * 最適化表單： 當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
 * 最適化表單： 用戶無法保存具有多個附件的自適應表單(NPR-32997)。
 * 最適化表單： 以最適化表單變更面板版面會導致錯誤(CQ-4293880)。
@@ -326,76 +326,75 @@ AEM 6.5.5.0中引進的一些主要功能和增強功能包括：
 
 **設定需求**
 
-* AEM 6.5.5.0需要AEM 6.5。 請查看 [升級檔案](/help/sites-deploying/upgrade.md) ，以取得詳細指示。
-* Adobe Package Share提供Service Pack下載，您可以直接從AEM 6.5執行個體存取。
+* AEM 6.5.5.0需要AEM 6.5。 如需詳 [細指示](/help/sites-deploying/upgrade.md) ，請參閱升級檔案。
+* Adobe軟體散發提供Service Pack下 [載](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。
 * 在使用MongoDB和多個執行個體的部署中，使用「套件管理員」將AEM 6.5.5.0安裝在其中一個「作者」執行個體上。
 * 在安裝之前，請先拍下快照或AEM例項的新備份。
 * 在安裝之前重新啟動實例。 雖然只有在實例仍處於更新模式時才需要此選項（這是從舊版更新實例時的情況），但建議在實例運行較長時段時使用此選項。
 
 >[!NOTE]
 >
->Adobe不建議移除或解除安裝AEM 6.5.5.0套件。
+>Adobe不建議移除或解除安裝Adobe Experience Manager 6.5.5.0套件。
 
 ### 安裝Service Pack {#install-service-pack}
 
-請執行下列步驟，在現有的AEM 6.5執行個體上安裝Service Pack:
+執行下列步驟，將Service Pack安裝在現有的Adobe Experience Manager 6.5實例上：
 
-1. 按一下「 [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0) (包共用 [)」或「Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) （軟體分發）」連結以下載包。
+1. 從Package Share或Software [Distribution下載](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0)[Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
 
-1. 開啟「 [套件管理器](http://localhost:4502/crx/packmgr/index.jsp) 」，然後按一 **下「上傳套件** 」以上傳套件。
+1. 開啟「套件管理員」，然後按 **[!UICONTROL 一下「上傳套件]** 」以上傳套件。 要瞭解如何使用它，請參 [閱Package Manager](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
-1. 選擇軟體包名稱，然後按一下 **安裝**。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
 >[!NOTE]
 >
->**在安裝6.5.5.0時，Package Manager UI上的對話有時會無法正常退出**
->
->因此，建議您先等待錯誤記錄穩定，再存取執行個體。 在確保安裝成功之前，用戶必須等待與卸載更新程式包相關的特定日誌。 通常在Safari上會發生，但在任何瀏覽器上都會偶爾發生。
+>在安裝Service Pack時，有時會退出Package Manager UI的對話方塊。 Adobe建議您在存取部署之前，先等待錯誤記錄穩定下來。 請等待與解除安裝更新程式套件相關的特定記錄，然後確定安裝成功。 通常，這會在任何瀏 [!DNL Safari] 覽器上發生，但是偶爾會發生。
 
 **自動安裝**
 
-有兩種方式可自動將AEM 6.5.5.0安裝至執行中的例項：
+在工作實例上自動安裝Adobe Experience Manager 6.5.5.0有兩種方法：
 
-答： 當伺服器聯機 `../crx-quickstart/install ` 時，將軟體包放入資料夾。 軟體包會自動安裝。
+答： 當伺服器聯機 `../crx-quickstart/install` 時，將軟體包放入資料夾。 軟體包會自動安裝。
 
-B. 使用「 [套件管理員」的HTTP API](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html) —— 請務必使用 `cmd=install&recursive=true` -以便安裝巢狀套件。
+B. 使用套 [件管理員的HTTP API](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html)。 使 `cmd=install&recursive=true` 用以安裝巢狀包。
 
 >[!NOTE]
 >
->AEM 6.5.5.0不支援Bootstrap安裝。
+>Adobe Experience Manager 6.5.5.0不支援啟動載入。
 
 **驗證安裝**
 
-1. 「產品資訊」頁面(/system/console/ productinfo)會在「已安裝產品」下顯示更 `Adobe Experience Manager, Version 6.5.5.0` 新的版本字串。
+1. 產品資訊頁面(`/system/console/productinfo`)會在「已安裝產品」下顯示更 `Adobe Experience Manager (6.5.5.0)` 新 [!UICONTROL 的版本字串]。
 
-1. 所有OSGi捆綁包都 **[!UICONTROL 是OSGi控制台中的]****[!UICONTROL ACTIVE或FRAGMENT]** (使用Web控制台： /system/console/bundles)。
-1. OSGI搭售 `org.apache.jackrabbit.oak-core` 版本為1.10.6或更新版本(使用Web Console: `/system/console/bundles`)。
+1. 所有OSGi捆綁包都 **[!UICONTROL 是OSGi控制台中的]****[!UICONTROL ACTIVE或FRAGMENT]** (使用Web控制台： `/system/console/bundles`)。
 
-若要查看哪些平台已通過此版本的認證，請參閱技術 [要求](/help/sites-deploying/technical-requirements.md)。
+1. OSGI搭售版 `org.apache.jackrabbit.oak-core` 本為1.10.6或更新版本(使用Web Console: `/system/console/bundles`)。
 
-### 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
+若要瞭解經過認證可與此版本搭配使用的平台，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md)。
+
+### 安裝Adobe Experience Manager Forms附加套件 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->如果您不使用AEM Forms，請略過。 AEM Forms中的修正是透過個別的附加套件傳送。
+>如果您不使用AEM Forms，請略過。 Adobe Experience Manager Forms中的修正是透過個別的附加套件提供。
 
-1. 請確定您已安裝AEM Service Pack。
+1. 請確定您已安裝Adobe Experience Manager Service Pack。
 1. 下載您作業系統的 [AEM Forms版本中列出的對應Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
 1. 如安裝AEM Forms附加元件套件中所述，安 [裝Forms附加元件套件](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)。
 
-### 在JEE上安裝AEM Forms {#install-aem-forms-jee-installer}
+### 在JEE上安裝Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->如果您未在JEE上使用AEM Forms，請略過。 JEE上的AEM Forms中的修正會透過個別安裝程式提供。
+>如果您未在JEE上使用AEM Forms，請略過。 JEE上的Adobe Experience Manager Forms修正可透過個別的安裝程式提供。
 
-如需在JEE上安裝AEM Forms累積安裝程式和部署後設定的詳細資訊，請參閱修補程 [式0014的發行說明](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html)。
+如需在JEE上安裝Experience Manager Forms累積安裝程式和部署後設定的詳細資訊，請參閱修補程 [式0014的發行說明](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html)。
 
 ### UberJar {#uber-jar}
 
-Adobe Public Maven儲存庫中提供UberJar for AEM 6.5.5.0 [](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/)。
+UberJar for Experience Manager 6.5.5.0可在 [Adobe Public Maven儲存庫中取得](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/)。
 
-要在Maven項目中使用UberJar，請參閱 [How to use UberJar](/help/sites-developing/ht-projects-maven.md) and include the following dependency in your project POM:
+要在Maven項目中使用UberJar，請 [瞭解如何使用UberJar](/help/sites-developing/ht-projects-maven.md) ，並在項目POM中包括以下相關性：
 
 ```shell
 <dependency>
@@ -415,7 +414,7 @@ Adobe Public Maven儲存庫中提供UberJar for AEM 6.5.5.0 [](https://repo.adob
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| 整合 | AEM Cloud **[!UICONTROL Services選擇加入畫面已過時]** 。 隨著AEM 6.5中的AEM和Target整合更新，以支援Target Standard API（透過Adobe IMS和I/O使用驗證），以及Adobe Launch在檢測AEM頁面以進行分析和個人化方面的角色日漸增加，「選擇加入」精靈在功能上已變得無關緊要。 | 透過個別的AEM雲端服務，設定系統連線、Adobe IMS驗證和Adobe I/O整合 |
+| 整合 | AEM Cloud **[!UICONTROL Services選擇加入畫面已過時]** 。 隨著AEM 6.5中的AEM和Target整合更新，以支援Target Standard API（透過Adobe IMS和I/O使用驗證），以及Adobe Launch在檢測AEM頁面以進行分析和個人化方面的角色日漸增加，「選擇加入」精靈在功能上已變得無關緊要。 | 透過個別的AEM雲端服務，設定系統連線、Adobe IMS驗證和Adobe I/O整合。 |
 
 ## 已知問題 {#known-issues}
 
