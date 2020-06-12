@@ -3,9 +3,9 @@ title: Adobe Creative Cloud與整 [!DNL Adobe Experience Manager] 合最佳實�
 description: 整合的最佳實 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 務，以簡化資產轉讓工作流程並達到高內容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3249'
 ht-degree: 14%
 
 ---
@@ -160,7 +160,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 #### 直接存取DAM的創意使用者 {#creative-users-with-direct-access-to-dam}
 
-通常，內部創意團隊或內部網路的廣告公司／創意專業人員都可存取DAM例項，包括登 [!DNL Experience Manager] 入。 [!DNL Experience Manager] 網路基礎設施可以設定為允許直接訪問外部方——通常是受信任的組織，如為客戶工作的機構——通過網路訪問， [!DNL Experience Manager] 例如通過VPN或IP白名單。
+通常，內部創意團隊或內部網路的廣告公司／創意專業人員都可存取DAM例項，包括登 [!DNL Experience Manager] 入。 [!DNL Experience Manager] 網路基礎設施可以設定為允許直接訪問外部方——通常是受信任的組織，如為客戶工作的機構——可以通過網路訪問， [!DNL Experience Manager] 例如通過VPN或IP允許清單。
 
 在這種情況下，Adobe Asset Link或案頭應用程 [!DNL Experience Manager] 式可協助您輕鬆存取最終／核准的資產，並讓您將創意就緒的資產儲存至DAM。
 
@@ -173,7 +173,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 * 如果「資產連結」無法運作，請使用案頭應用程式。
 * 使用 [Experience Manager Assets Brand Portal](https://helpx.adobe.com/tw/experience-manager/brand-portal/user-guide.html) ，將資產安全地發佈至外部合作夥伴
 * 使用基於資產共用公域的分發和採購門戶的自 [訂實施](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* 使用在必要的網路基礎 [!DNL Experience Manager] 架構（例如，VPN和IP白名單）中設定的訪問控制，讓外部方能夠訪問DAM中的專用內容區域。 他們可以 [!DNL Experience Manager] 使用Web UI取得資產，並將新內容上傳至DAM。
+* 使用在必要的網路基礎 [!DNL Experience Manager] 架構（例如，VPN和IP允許清單）中設定的訪問控制，使外部方能夠訪問DAM中的專用內容區域。 他們可以 [!DNL Experience Manager] 使用Web UI取得資產，並將新內容上傳至DAM。
 
 #### 資產的進行中工作 [!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}
 
