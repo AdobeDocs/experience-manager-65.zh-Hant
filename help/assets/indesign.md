@@ -3,9 +3,9 @@ title: 整 [!DNL Adobe Experience Manager Assets] 合 [!DNL Adobe InDesign Serve
 description: 瞭解如何 [!DNL Adobe Experience Manager Assets] 整合 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1560'
 ht-degree: 3%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 3%
       * 產生PDF和JPG轉譯。
       * 產生HTML和IDML轉譯。
    * 將產生的檔案張貼回 [!DNL Experience Manager Assets]。
+
    >[!NOTE]
    >
    >IDML是以XML為基礎的格式，可轉譯檔案的所有 [!DNL InDesign] 內容。 它會使用 [ZIP壓縮儲存為壓縮的](https://www.techterms.com/definition/zip) 套件。 如需詳細資訊，請 [參閱InDesign Interchange Formats INX和IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
@@ -117,7 +118,7 @@ ht-degree: 3%
 >
 >請 勿變更ExtendScript程式庫。此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要發送到的庫以 [!DNL InDesign Server] 便在其中使用。
 
-「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 「處理縮圖」工作流程步驟會使用此格式副本，以產生所需的靜態格式副本 [!DNL Experience Manager]。
+「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 此轉譯用於「流程縮圖」工作流步驟，以生成所需的靜態轉譯 [!DNL Experience Manager]。
 
 您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您未移除預設值，因為介面需要這些預設 [!DNL Experience Manager Assets] 值。 最後，「刪除影像預覽轉譯」工作流程步驟會移除JPG縮圖轉譯，因為不再需要它。
 
@@ -195,18 +196,19 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
    如果有多台電腦在 [!DNL InDesign Server]運行，請為每個電腦添加SOAP端點（每台電腦的處理器數-1）。
 
-   >[!NOTE]
-   >
-   >在使用IDS員工池時，您可以選擇啟用「黑名單」。
-   >
-   >
-   >若要這麼做，請啟用 **[!UICONTROL IDS作業尋回的設定下]**`com.day.cq.dam.ids.impl.IDSJobProcessor.name` 的enable.retry.name核取方塊。
-   >
-   >
-   >此外，在配 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 置下，設定參數的正值，該參數在將IDS從作業處理程式清單中 `max.errors.to.blacklist` 禁止之前確定作業檢索的數量。
-   >
-   >
-   >預設情況下，在以分鐘為單位的可配置(retry.interval.to.whitelist.name)時間之後，IDS工作器將重新驗證。 如果線上找到該員工，則會將其從黑名單中刪除。
+<!-- 
+TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
+
+>[!NOTE]
+>
+>使用工作池時，可以啟用IDS工作池的阻止清單。
+>
+>若要這麼做，請啟用 **[!UICONTROL IDS作業尋回的設定下]**`com.day.cq.dam.ids.impl.IDSJobProcessor.name` 的enable.retry.name核取方塊。
+>
+>此外，在配 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 置下，設定參數的正值，該參數在將IDS從作業處理程式清單中 `max.errors.to.blacklist` 禁止之前確定作業檢索的數量。
+>
+>預設情況下，在IDS工作器經過可配`retry.interval.to.whitelist.name`置（分鐘）時間後重新驗證。 如果線上找到該工作器，則會將其從被阻止的清單中刪除。
 
 ## 啟用10.0或 [!DNL InDesign Server] 更新版本的支援 {#enabling-support-for-indesign-server-or-later}
 
