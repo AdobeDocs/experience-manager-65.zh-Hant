@@ -3,7 +3,7 @@ title: 組織您的數位資產
 description: 使用Experience Manager組織您的數位資產、影像、檔案、檔案夾等。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 1%
