@@ -8,10 +8,13 @@ getting-started-url: https://helpx.adobe.com/experience-manager/tutorials.html
 tutorials-title: 教學課程
 tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/experience-manager-65.en
+git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-65.zh-Hant
 index: y
 translation-type: tm+mt
-source-git-commit: d53e72b198db91d368ddddac768d19b88ee29050
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 6%
 
 ---
 
@@ -22,13 +25,13 @@ metadata.md檔案包含回購層級中繼資料，這些中繼資料會傳遞至
 
 | 中繼資料 | 它的功能 |
 |--- |--- |
-| 解決方案標題 | 在文章標題中用作連結 |
-| solution-hub-url | 開啟幫助中心頁 |
-| 解決方案圖示 | 在解決方案標題旁顯示解決方案圖示。 尚未實施 |
-| getting-started-url | 幫助快速入門頁面的連結 |
-| 教學課程-url | 連結至教學課程影片——說明教學課程或KT教學課程 |
-| 迷你目錄層級 | 決定出現在右側欄中的標題層數。 預設值為2 |
-| git-repo | 指定主回購協定的內部使用位置 |
+| 解決方案標題 | 在文章標題中用作連結。 |
+| solution-hub-url | 開啟幫助中心頁。 |
+| 解決方案圖示 | 在解決方案標題旁顯示解決方案圖示。 尚未實施。 |
+| getting-started-url | 連結至幫助快速入門頁面。 |
+| 教學課程-url | 連結至教學課程影片——說明教學課程或KT教學課程。 |
+| 迷你目錄層級 | 決定出現在右側欄中的標題層數。 預設值為2。 |
+| git-repo | 指定主回購協定的內部使用位置。 |
 
 在TOC.md檔案中
 
