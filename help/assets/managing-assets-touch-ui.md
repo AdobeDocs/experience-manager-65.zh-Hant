@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 85a93dfa3bcacfb0820029642c03b2d35552121f
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '9304'
+source-wordcount: '9303'
 ht-degree: 4%
 
 ---
@@ -63,6 +63,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    * 在工具列上，按一下「建 **[!UICONTROL 立]** 」圖示。 然後在功能表上，按一下「 **[!UICONTROL 檔案]**」。 如有需要，可在顯示的對話框中更名檔案。
    * 在支援HTML5的瀏覽器中，直接將資產拖曳至使用者 [!DNL Assets] 介面。 不會顯示要更名檔案的對話框。
+
    ![建立選項以上傳資產](assets/create-options.png)
 
    要選擇多個檔案，請按Ctrl或Command鍵，然後在檔案選擇器對話框中選擇資產。 使用iPad時，一次只能選取一個檔案。
@@ -119,6 +120,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    * 資產檔案名稱不可包含 `* / : [ \\ ] | # % { } ? &`
    * 資產資料夾名稱不可包含 `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
    資產檔案名稱的副檔名中不要包含特殊字元。
 
    ![上傳進度對話方塊顯示成功上傳檔案和無法上傳檔案的狀態](assets/chlimage_1-10.png)
@@ -197,7 +199,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 上傳影像檔案（包括AI、EPS和PSD檔案）時，您可以在「上傳工作選項」對話方塊中執 [!UICONTROL 行下列編輯動作] :
 
-* 從影像邊緣裁切空白（請參閱上表的說明）。
+* 從影像邊緣裁切空白字元（請參閱上表的說明）。
 * 從影像側手動裁切（請參閱上表的說明）。
 * 選擇顏色描述檔（請參閱上表中的選項說明）。
 * 從剪裁路徑建立遮色片。
@@ -301,7 +303,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ### 串流上傳 {#streamed-uploads}
 
-如果您將許多資產上傳至Adobe Experience Manager，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先在伺服器上的臨時資料夾中儲存資產，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 預設會在中啟用串流上傳 [!DNL Assets]。
+如果您將許多資產上傳至Adobe Experience Manager，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先將資產儲存在伺服器上的臨時資料夾中，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 預設會在中啟用串流上傳 [!DNL Assets]。
 
 >[!NOTE]
 >
@@ -350,6 +352,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 1. 若要放大資產：
    1. 使 `Tab` 用鍵將焦點移動到放大表徵圖。
    1. 使用 `Enter` 金鑰可放大影像。
+
    要縮小，請使 `Tab` 用鍵將焦點移動到縮小表徵圖並按 `Enter`。
 
 1. 使用 `Shift` + `Tab` 鍵將焦點移回影像。
@@ -407,6 +410,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    * 檢視或下載資產的次數
    * 使用資產的通道／裝置
    * 最近使用資產的創意解決方案
+
    如需詳細資訊，請參 [閱資產分析](/help/assets/touch-ui-asset-insights.md)。
 
 1. Click **[!UICONTROL Save &amp; Close]**.
@@ -480,6 +484,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    * 按一 **[!UICONTROL 下「上]** 」以返回「選 **[!UICONTROL 擇目標]** 」畫面。
 
    * 按一下 **[!UICONTROL 取消]** ，停止移動操作。
+
    如果您不更新參照，則參照會繼續指向資產的先前路徑。 如果您調整參照，它們會更新為新資產路徑。
 
 ## 管理轉譯 {#managing-renditions}
@@ -555,6 +560,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
       * 如果資產沒有參考，則會刪除資產。
       * 如果資產有參考，則會出現錯誤訊息通知您 **已參考一或多個資產。**&#x200B;您可以選取&#x200B;**[!UICONTROL 強制刪除]**&#x200B;或&#x200B;**[!UICONTROL 取消]**。
+
    >[!NOTE]
    >
    >若要刪除資產，使用者需要對的刪除權限 `dam/asset`。 如果您只有修改權限，則只能編輯資產中繼資料並新增附註至資產。 不過，您無法刪除資產或其中繼資料。
@@ -607,6 +613,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    * **[!UICONTROL 取消]** ，停止動作
    * **[!UICONTROL 取消發佈]** ，以確認資產在指定日期已取消發佈（在發佈環境中不再可用）。
+
    >[!NOTE]
    >
    >解除發佈複雜資產時，僅解除發佈資產。 請避免取消發佈參照，因為其他已發佈資產可能會參照這些參照。
@@ -677,6 +684,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
    * 選取資產，然後按一下工具 **[!UICONTROL 列中的]** 「編輯」圖示。
    * 按一下 **[!UICONTROL 卡片檢視]** 中資產上顯示的「編輯」圖示。
    * 在資產頁面中，按一下工 **[!UICONTROL 具列中]** 「編輯」圖示。
+
    ![工具列中的編輯圖示](assets/edit_icon.png)
 
 1. 若要裁切影像，請按一下「裁 **切** 」圖示。
@@ -749,6 +757,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
    * [快速動作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在選取資產或導覽至資產頁面後，從工具列
+
    ![「注釋」表徵圖](assets/chlimage_1-29.png)
 
 1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
@@ -940,6 +949,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 1. 若要比較兩個版本的影像，請依照下列步驟進行：
    * 按一下要與目前版本比較的版本。
    * 將滑桿向左拖曳，將此版本疊加至目前版本，然後進行比較。
+
    ![使用滑桿來比較資產的選定版本與目前版本](assets/version-slider.gif)
 
    *圖： 使用滑桿輕鬆比較資產的選定版本與目前版本。*
