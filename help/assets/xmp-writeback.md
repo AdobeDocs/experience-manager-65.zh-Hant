@@ -3,17 +3,17 @@ title: XMP回寫至轉譯
 description: 瞭解XMP回寫功能如何將資產的中繼資料變更傳播至資產的所有或特定轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 10%
+source-wordcount: '795'
+ht-degree: 4%
 
 ---
 
 
 # XMP回寫至轉譯 {#xmp-writeback-to-renditions}
 
-中的XMP回寫功能 [!DNL Adobe Experience Manager Assets] 會將資產中繼資料變更複製到資產的轉譯。 當您從資產內部或上傳資產時變更資 [!DNL Experience Manager Assets] 產的中繼資料時，變更最初會儲存在CRXDe的資產節點中。 XMP回寫功能會將中繼資料變更傳播至資產的所有或特定轉譯。
+中的XMP回寫功能 [!DNL Adobe Experience Manager Assets] 會將資產中繼資料變更複製至資產的轉譯。 當您從資產內部或上傳資產時變更資 [!DNL Experience Manager Assets] 產的中繼資料時，變更最初會儲存在CRXDe的資產節點中。 XMP回寫功能會將中繼資料變更傳播至資產的所有或特定轉譯。
 
 請考慮您修改資產 [!UICONTROL 標題] (Title)屬性的 `Classic Leather` 藍本 `Nylon`。
 
@@ -68,26 +68,36 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
 ## 篩選XMP中繼資料 {#filtering-xmp-metadata}
 
-[!DNL Experience Manager Assets] 支援對從資產二進位檔案讀取並在收錄資產時儲存在JCR中的XMP元資料的屬性／節點進行黑名單和白名單過濾。
+[!DNL Experience Manager Assets] 支援從資產二進位檔案讀取並在收錄資產時儲存在JCR中的XMP中繼資料的封鎖清單和允許的屬性／節點清單篩選。
 
-黑名單篩選功能可讓您匯入除為排除而指定的屬性以外的所有XMP中繼資料屬性。 不過，對於資產類型（例如具有大量XMP中繼資料的INDD檔案）（例如1000個節點，具有10,000個屬性），篩選的節點名稱不一定都會事先知道。 如果黑名單篩選允許匯入大量包含大量XMP中繼資料的資產，Experience Manager部署可能會遇到穩定性問題，例如觀察佇列阻塞。
+使用封鎖清單進行篩選可讓您匯入所有XMP中繼資料屬性，但為排除指定的屬性除外。 不過，對於資產類型（例如具有大量XMP中繼資料的INDD檔案）（例如1000個節點，具有10,000個屬性），篩選的節點名稱不一定都會事先知道。 如果使用封鎖清單進行篩選可讓大量包含大量XMP中繼資料的資產匯入，AEM例項／叢集可能會遇到穩定性問題，例如阻塞的觀察佇列。
 
-XMP中繼資料的白名單篩選可讓您定義要匯入的XMP屬性，以解決此問題。 這樣，將忽略其他／未知的XMP屬性。 您可以將這些屬性中的某些屬性添加到黑名單過濾器中，以便向後相容。
+透過允許的清單篩選XMP中繼資料可讓您定義要匯入的XMP屬性，以解決此問題。 如此，就會忽略任何其他或未知的XMP屬性。 為了向後相容性，您可以將其中某些屬性新增至使用封鎖清單的篩選器。
 
 >[!NOTE]
 >
 >篩選只適用於資產二進位檔中衍生自XMP來源的屬性。 對於從非XMP來源衍生的屬性（例如EXIF和IPTC格式），篩選無法運作。 例如，資產建立日期會儲存在以EXIF TIFF命名的 `CreateDate` 屬性中。 Experience Manager將此值儲存在名為的中繼資料欄位中 `exif:DateTimeOriginal`。 由於來源是非XMP來源，因此篩選不適用於此屬性。
 
+<!-- TBD: The instructions don't seem to match the UI. I see com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.description
+in Config Manager. And the settings are,
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_whitelist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.whitelist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_blacklist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.blacklist.name
+ 
+TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
+
 1. 要開啟配置管理器，請訪問 `https://[aem_server]:[port]/system/console/configMgr`。
 1. 開啟 **[!UICONTROL Adobe CQ DAM XmpFilter組態]** 。
-1. 若要套用白名單篩選，請選 **[!UICONTROL 取「套用白名單至XMP屬性」]**，並指定要在「白名單的XML名稱供XMP篩選」方 **[!UICONTROL 塊中匯入的屬性]** 。
+1. To apply filtering via an allowed list, select **[!UICONTROL Apply Whitelist to XMP Properties]**, and specify the properties to be imported in the **[!UICONTROL Whitelisted XML Names for XMP filtering]** box.
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. 若要在套用白名單篩選後篩除黑名單XMP屬性，請在「XMP篩選的黑名單XML名 **[!UICONTROL 稱」方塊中指定]** 。
+1. To filter out blocked XMP properties after applying filtering via allowed list, specify those in the **[!UICONTROL Blacklisted XML Names for XMP filtering]** box.
 
    >[!NOTE]
    >
-   >預設 **[!UICONTROL 情況下，「將黑名單應用於XMP屬性]** 」選項處於選中狀態。 換言之，黑名單篩選預設為啟用。 要禁用黑名單過濾，請取消選 **[!UICONTROL 擇將黑名單應用於XMP屬性]** 。
+   >預設 **[!UICONTROL 情況下，「將黑名單應用於XMP屬性]** 」選項處於選中狀態。 換言之，預設會啟用使用封鎖清單進行篩選。 要禁用此類篩選，請取消選 **[!UICONTROL 擇「將黑名單應用於XMP屬性]** 」選項。
 
 1. 儲存變更。
