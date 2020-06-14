@@ -3,9 +3,9 @@ title: Adobe Experience Manager 6.5舊版Service Pack發行說明
 description: Adobe Experience Manager 6.5 Service Pack 3及更舊版本的發行說明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
-source-wordcount: '8094'
+source-wordcount: '8093'
 ht-degree: 0%
 
 ---
@@ -291,14 +291,11 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 **修正**
 
-* 某些PDF檔案的中繼資料在標題修改時不會更新並儲存至PDF(NPR-31629)。
+* 某些PDF檔案的中繼資料不會在標題修改時更新並儲存至PDF(NPR-31629)。
 
 * 資產共用不適用於檔案名稱中加上(`+`)字元的資產(NPR-31547)。
 
-* 預設搜尋表單「資產管理員*搜尋邊欄」中的編輯無法如預期般運作(NPR-31502)。
-
-<!-- Review: Check if this seemingly stray asterisk is needed there or not.
--->
+* 預設搜尋表單中的「資產管理搜尋邊欄」編輯無法如預期般運作(NPR-31502)。
 
 * 當使用Omnisearch on assets view for serching assets時，不會顯示建議(NPR-31496)。
 
@@ -452,7 +449,7 @@ Remove one mention of this fix.
 * 建立新的「貢獻」檔案夾時，「貢獻」檔案夾中不會顯示一或兩個子檔案夾（NEW和SHARED）(CQ-4282424)。
 * 當使用者從結尾處接收「貢獻」檔案夾中的新資產後，嘗試 [!DNL Experience Manager] 從 [!DNL Brand Portal] 發佈「貢獻」檔案夾時，系統會 [!DNL Brand Portal] 引發例外(CQ-4279740)。
 * 禁止在「貢獻」檔案夾（巢狀檔案夾）中建立「貢獻」檔案夾，以避免複雜性(CQ-4278391)。
-* 系統上傳從「管理控制台」 [!DNL Brand Portal] 匯入的使用者清單（.csv檔案）時發 [!DNL Experience Manager] 生異常。 .csv檔案中只有「電子郵件」、「名字」和「姓氏」欄位是必填欄位(CQ-4278390)。
+* 系統會在上傳從「管理控制台」 [!DNL Brand Portal] 匯入的使用者清單（.csv檔案）時引發 [!DNL Experience Manager] 異常。 .csv檔案中只有「電子郵件」、「名字」和「姓氏」欄位是必填欄位(CQ-4278390)。
 
 ### 社群 {#communities-6530}
 
@@ -525,7 +522,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來所發佈的重要客戶修 **正和增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來的重要客戶修 **正與增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
 
 此Service Pack版本的一些主要亮點是：
 
