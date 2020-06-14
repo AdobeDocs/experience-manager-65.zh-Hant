@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 5的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 1%
@@ -56,9 +56,9 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 * 許多使用者介面元素、控制項和輸入表單欄位都可使用鍵盤存取。
 
-* 更新某些使用者介面元素的色彩和對比度，以便視覺有限的使用者或沒有色彩感知的使用者能夠區分這些使用者介面元素。 例如，星號分級圖示的顏色(例如在資產屬性( [!UICONTROL Properties] )或卡片檢視( [!UICONTROL Advanced Tab)的「分級(Rating] )」區段中)會變更，以取得適當的對比。
+* 某些使用者介面元素的色彩和對比會更新，以便視覺有限的使用者或沒有色彩感知的使用者能夠區分這些使用者介面元素。 例如，星號分級圖示的顏色(例如在資產屬性( [!UICONTROL Properties] )或卡片檢視( [!UICONTROL Advanced Tab)的「分級(Rating] )」區段中)會變更，以取得適當的對比。
 
-   ![對比度改善的分級圖示](assets/star-rating-icons.png)
+   ![對比度改善的圖示分級](assets/star-rating-icons.png)
 
 ### 增強的例外處理 {#exception-handling}
 
@@ -146,9 +146,10 @@ Adobe Experience Manager Forms包含下列協助工具增強功能：
 
 * 「篩選器」面板中的混合狀態複選框（除非您選擇了所有嵌套的謂詞，否則不會選擇並刪除第一級複選框）由螢幕閱讀器讀取。
 
-* 日期和時間格式約束在日期欄位的欄位標籤中提供，使用戶能夠使用鍵盤以正確的格式輸入日期。 For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份，YYYY是年份，DD是兩位數格式的日，HH是24小時軍用格式的小時，而mm是分鐘。
+* 日期和時間格式約束在日期欄位的欄位標籤中提供，使用戶能夠使用鍵盤以正確的格式輸入日期。
+For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份，YYYY是年份，DD是兩位數格式的日，HH是24小時軍用格式的小時，而mm是分鐘。
 
-* 螢幕閱讀程式 `X` 會宣佈符號，以移除選取的標籤和選取的標籤數。
+* 螢幕閱讀程式現在 `X` 會宣佈要移除所選標籤的符號，以及選取的標籤數。
 
 #### 視覺搜 [!DNL Adobe Experience Manager Assets] 尋(6.5.2.0) {#visual-search}
 
@@ -207,7 +208,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 #### 為AEM Forms使用者(6.5.3.0)的「收件匣」項目設定不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
-您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
+您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
 
 #### 使用適用於AEM Forms(6.5.3.0)的Batch API產生多種互動式通訊 {#generate-multiple-ic}
 
