@@ -4,9 +4,9 @@ description: 針對配置、 [!DNL Experience Manager] 硬體、軟體和網路�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: da2e435f33e8527793e009700c30e60868d196be
 workflow-type: tm+mt
-source-wordcount: '2723'
+source-wordcount: '2776'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Adobe建議在 [!DNL Experience Manager Assets] Java 8上部署以取得最佳�
 
 ### 配置緩衝映像快取的最大大小 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-當將大量資產上傳至 [!DNLAAdobe Experience Manager]，以允許記憶體使用量出現意外尖峰，並防止JVM因OutOfMemoryErrors而失敗時，請減少已設定的緩衝影像快取最大大小。 例如，您有一個系統的堆積(- `Xmx`param)上限為5 GB,Oak BlobCache設為1 GB，檔案快取設為2 GB。 在這種情況下，緩衝快取最多需要1.25 GB的記憶體，因此，當出現意外的尖峰時，僅需0.75 GB的記憶體。
+當將大量資產上傳至 [!DNLAAdobe Experience Manager]，以允許記憶體使用量出現意外的尖峰，並防止JVM因OutOfMemoryErrors而失敗時，請減少已設定的緩衝影像快取最大大小。 例如，您有一個系統的堆積(- `Xmx`param)上限為5 GB,Oak BlobCache設為1 GB，檔案快取設為2 GB。 在這種情況下，緩衝快取最多需要1.25 GB的記憶體，因此，當出現意外的尖峰時，僅需0.75 GB的記憶體。
 
 在OSGi Web Console中配置緩衝快取大小。 在 `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`，以位元組為單 `cq.dam.image.cache.max.memory` 位設定屬性。 例如，1073741824是1 GB(1024 x 1024 x 1024 = 1 GB)。
 
@@ -179,7 +179,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 客戶在其網站上使用各種大小和格式的影像，或將影像發佈給商業合作夥伴。 由於每個轉譯都會增加資產在儲存庫中的佔用空間，Adobe建議您審慎地使用此功能。 為了減少處理和儲存影像所需的資源量，您可以在執行時期產生這些影像，而不是在擷取時當做轉譯。
 
-許多網站客戶會實作影像servlet，在要求影像時調整大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
+許多網站客戶會實作影像servlet，在要求影像時調整影像大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
 
 另一種方法是使用Scene7技術完全放棄影像控制。 此外，您還可以部署品牌入口網站，不僅負責從 [!DNLEExperience Manager] Infrastructure接管轉譯產生責任，還負責整個發佈層。
 
@@ -300,6 +300,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 * 部署在Java 8。
 * 設定最佳JVM參數。
 * 配置檔案系統資料儲存或S3資料儲存。
+* 停用子資產產生。 如果已啟用，AEM的工作流程會針對多頁資產中的每個頁面建立個別的資產。 這些頁面都是個別資產，會佔用額外的磁碟空間、需要版本修訂以及額外的工作流程處理。 如果您不需要個別頁面，請停用子資產產生和頁面擷取活動。
 * 啟用暫時性工作流程。
 * 調整Granite工作流程佇列以限制併發工作。
 * 配置 [!DNL ImageMagick] 以限制資源消耗。
