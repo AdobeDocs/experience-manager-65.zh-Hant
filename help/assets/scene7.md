@@ -8,7 +8,10 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: e9f5d8f63bc342723f2002f677c1673b4af6f891
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '2873'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: e9f5d8f63bc342723f2002f677c1673b4af6f891
 
 * 縮放
 * 飛出
-* 視訊
+* 影片
 * 影像範本
 * 影像
 
@@ -58,7 +61,7 @@ AEM提供下列Dynamic Media Classic元件：
 * 彈出（縮放）
 * 影像範本
 * 影像
-* 視訊
+* 影片
 
 >[!NOTE]
 >
@@ -70,7 +73,7 @@ AEM提供下列Dynamic Media Classic元件：
 >
 >如果您要建立和開發自訂檢視器，並使用內容搜尋器，則需要明確新增allowfullscreen **[!UICONTROL 參數]** 。
 
-### Flash檢視器生命週期結束注意事項 {#flash-viewers-end-of-life-notice}
+### Flash 檢視器生命週期結束注意事項 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Dynamic Media Classic停止支援Flash檢視器平台。
 
@@ -145,7 +148,7 @@ AEM提供下列Dynamic Media Classic元件：
 
 ### 飛出 {#flyout}
 
-在HTML5 **[!UICONTROL Flyout元件中]** ，資產顯示為分割畫面；將資產保留在指定的大小；右側顯示縮放部分。 點選 **[!UICONTROL 編輯]** ，以設定元件。 使用此元件，您可以設 [定所有Dynamic Media Classic元件的共同設定](#settings-common-to-all-scene-components)。
+在HTML5 **[!UICONTROL Flyout元件中]** ，資產顯示為分割畫面； 將資產保留在指定的大小； 右側顯示縮放部分。 點選 **[!UICONTROL 編輯]** ，以設定元件。 使用此元件，您可以設 [定所有Dynamic Media Classic元件的共同設定](#settings-common-to-all-scene-components)。
 
 >[!NOTE]
 >
@@ -236,17 +239,17 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 ### 視訊元件 {#video-component}
 
-Dynamic Media Classic **** Video元件（可從側腳的Dynamic Media Classic區段取得）使用裝置和頻寬偵測，為每個螢幕提供正確的視訊。 此元件為HTML5視訊播放器；它是可跨通道使用的單一檢視器。
+Dynamic Media Classic **** Video元件（可從側腳的Dynamic Media Classic區段取得）使用裝置和頻寬偵測，為每個螢幕提供正確的視訊。 此元件為HTML5視訊播放器； 它是可跨通道使用的單一檢視器。
 
 它可用於最適化視訊集、單一MP4視訊或單一F4V視訊。
 
-如需 [視訊](s7-video.md) ，請參閱視訊以取得視訊如何與Dynamic Media Classic整合運作的詳細資訊。 此外，請參 [閱Dynamic Media Classic視訊元件與Foundation video元件](s7-video.md)。
+如需 [視訊](s7-video.md) ，請參閱視訊以取得視訊如何與Dynamic Media Classic整合運作的詳細資訊。 此外，請參 [閱Dynamic Media Classic視訊元件與Foundation Video元件](s7-video.md)。
 
 ![chlimage_1-239](assets/chlimage_1-239.png)
 
 ### 視訊元件的已知限制 {#known-limitations-for-the-video-component}
 
-Adobe DAM和WCM會顯示是否上傳主影片。 它們不會顯示下列代理資產：
+Adobe DAM和WCM會顯示是否上傳主要來源視訊。 它們不會顯示下列代理資產：
 
 * 動態媒體經典編碼轉譯
 * Dynamic Media Classic可調式視訊集
@@ -265,7 +268,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
 >* 啟用 [「安全預覽」後](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene),Dynamic Media Classic上已發佈和未發佈的資產都會顯示在Dynamic Media Classic內容瀏覽器中。
 >* 如果您未在內容瀏覽器中將 **[!UICONTROL Dynamic Media Classic]** 或 **[!UICONTROL S7]** 圖示視為選項，您必須 [設定Dynamic Media Classic以搭配AEM運作](/help/sites-administering/scene7.md)。
 >* 對於視訊，Dynamic Media Classic內容瀏覽器支援：
-   >   * 最適化視訊集：容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
+   >   * 最適化視訊集： 容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
    >   * 單一MP4視訊
    >   * 單一F4V視訊
 
@@ -282,6 +285,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
 >
 >* Dynamic Media Classic內容瀏覽器會載入約100個資產，並依名稱排序。
 >* 如果您已設定安全的預覽伺服器，瀏覽器會使用該預覽伺服器來轉譯縮圖和資產。
+
 >
 
 
@@ -323,7 +327,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
 
 ![chlimage_1-245](assets/chlimage_1-245.png)
 
-**[!UICONTROL 資產類型]** -在Dynamic Media Classic瀏覽器中，您可以篩選結果以包含下列任一項：影像、範本、視訊和最適化視訊集。 如果您未選取任何資產類型，AEM依預設會搜尋所有資產類型。
+**[!UICONTROL 資產類型]** -在Dynamic Media Classic瀏覽器中，您可以篩選結果以包含下列任一項： 影像、範本、視訊和最適化視訊集。 如果您未選取任何資產類型，AEM依預設會搜尋所有資產類型。
 
 ![chlimage_1-246](assets/chlimage_1-246.png)
 
@@ -334,11 +338,12 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
    >
 * 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅&amp;ast;.mp4）和編碼轉譯。
 >* 在搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，AEM不會搜尋子資料夾。
+
 >
 
 
 
-**[!UICONTROL 發佈狀態]** -您可以根據發佈狀態篩選資產：未發 **[!UICONTROL 布]** 或已 **[!UICONTROL 發佈]**。 如果您未選取任何「發 **[!UICONTROL 布狀態]**」,AEM依預設會搜尋所有發佈狀態。
+**[!UICONTROL 發佈狀態]** -您可以根據發佈狀態篩選資產： **[!UICONTROL 未發佈]** 或 **[!UICONTROL 已發佈]**。 如果您未選取任何「發 **[!UICONTROL 布狀態]**」,AEM依預設會搜尋所有發佈狀態。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
 
