@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '11868'
+source-wordcount: '11877'
 ht-degree: 8%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 8%
    >
    >
 * 請參 [閱設定動態媒體](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) -混合模式中的設定動態媒體雲端服務。
+
 >
 
 
@@ -43,12 +44,12 @@ ht-degree: 8%
 
       * [建立視訊編碼設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
       * 進一步瞭解視 [訊編碼的最佳實務](#best-practices-for-encoding-videos)。
-   * 將視訊處理描述檔關聯至您要上傳主影片的一或多個檔案夾。
+   * 將視訊處理描述檔關聯至您要上傳主要來源視訊的一或多個檔案夾。
 
       * [將視訊描述檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
       * 進一步瞭解組織 [數位資產以使用處理設定檔的最佳實務](/help/assets/organize-assets.md)。
       * 進一步瞭解組 [織數位資產](/help/assets/organize-assets.md)。
-   * 將您的主影片上傳至資料夾。 您可以上傳每個高達15 GB的視訊檔案。 當您將視訊新增至資料夾時，會根據您指派至資料夾的視訊處理設定檔進行編碼。
+   * 將您的主要來源影片上傳至資料夾。 您可以上傳每個檔案高達15 GB的視訊檔案。 當您將視訊新增至資料夾時，會根據您指派至資料夾的視訊處理設定檔進行編碼。
 
       * [上傳您的影片](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
       * 進一步瞭解支 [援的輸入檔案格式](/help/assets/assets-formats.md#supported-multimedia-formats)。
@@ -304,7 +305,7 @@ HLS是Apple自適應視訊串流的標準，可根據網路頻寬容量自動調
 
 ### 外觀比例 {#aspect-ratio}
 
-當您選擇或建立主視訊檔案的視訊編碼預設集時，請確定該預設集與主視訊檔案具有相同的外觀比例。 寬高比是視訊寬度與高度的比例。
+當您為主要來源視訊檔案選擇或建立視訊編碼預設集時，請確定預設集與主要來源視訊檔案具有相同的外觀比例。 寬高比是視訊寬度與高度的比例。
 
 若要決定視訊檔案的外觀比例，請取得檔案的中繼資料並記下檔案的寬度和高度（請參閱上述「取得檔案的中繼資料」）。 然後使用此公式來判斷外觀比例：
 
@@ -371,7 +372,7 @@ VBR編碼時間較長，但結果最好； 媒體檔案的品質更優越。 VBR
 * 選擇資料速率，然後以最高解析度編碼，以符合您選擇的資料速率。
 * 選擇解析度，然後依所需的資料速率編碼，以您選擇的解析度產生高品質視訊。
 
-當您為主視訊檔案選擇（或建立）視訊編碼預設集時，請使用下表來定位正確的解析度：
+當您為主要來源視訊檔案選擇（或建立）視訊編碼預設集時，請使用下表來定位正確的解析度：
 
 | 解析度 | 高度 (像素) | 螢幕大小 |
 |--- |--- |--- |
@@ -386,7 +387,7 @@ VBR編碼時間較長，但結果最好； 媒體檔案的品質更優越。 VBR
 
 在美國和日本，大部分視訊的拍攝速度是每秒29.97畫格(fps); 在歐洲，大部分的視訊拍攝時速為25 fps。 影片以24 fps拍攝。
 
-選擇符合主視訊檔案fps速率的視訊編碼預設集。 例如，如果主視訊是25 fps，請選擇25 fps的編碼預設集。 依預設，所有自訂編碼都使用主視訊檔的fps。 因此，在建立視訊編碼預設集時，您不需要明確指定fps設定。
+選擇符合您主要來源視訊檔的fps速率的視訊編碼預設集。 例如，如果您的主要來源視訊是25 fps，請選擇25 fps的編碼預設集。 依預設，所有自訂編碼都使用主要來源視訊檔案的fps。 因此，在建立視訊編碼預設集時，您不需要明確指定fps設定。
 
 ### 視訊編碼尺寸 {#video-encoding-dimensions}
 
@@ -472,6 +473,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    * 在專案的儀表板中，在「快速入門」卡片中，點選「 **[!UICONTROL 探索」並啟用API]**。
    * 在專案的「儀表板」中，在API卡片中，點選「 **[!UICONTROL 前往API概觀」]**。
+
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. 在「API與服務」頁面頂端附近，點選「 **[!UICONTROL 啟用API與服務」]**。
@@ -491,6 +493,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * 從「 **[!UICONTROL 您要從何處呼叫API?」]** 下拉式清單中，選 **[!UICONTROL 取「Web伺服器」（例如node.js、Tomcat）]**
 
    * From the **[!UICONTROL What data will you be accessing?]** 下拉式清單中，點選「使 **[!UICONTROL 用者資料」]**。
+
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
 1. 點選「 **[!UICONTROL 我需要哪些認證？」]**
@@ -780,7 +783,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
-發佈時間會因許多因素而大幅不同，這些因素包括主視訊格式、檔案大小和上傳流量。 發佈程式需要幾分鐘到幾個小時。 此外，請注意，解析度較高的格式轉譯速度會慢得多。 例如，720p和1080p的顯示時間比480p長得多。
+發佈時間會因許多因素而大幅不同，這些因素包括您的主要來源視訊格式、檔案大小和上傳流量。 發佈程式需要幾分鐘到幾個小時。 此外，請注意，解析度較高的格式轉譯速度會慢得多。 例如，720p和1080p的顯示時間比480p長得多。
 
 八小時後，如果您仍然看到狀態訊息顯示「已上傳」( **[!UICONTROL 正在處理，請稍候)]**，請嘗試從我們的網站移除視訊，然後再次上傳。
 
@@ -836,9 +839,11 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 在資產檔案夾中檢視視訊編碼進度：
 
    * 在卡片檢視中，視訊編碼進度會依百分比顯示在資產上。 如果發生錯誤，此資訊也會顯示在資產上。
+
    ![chlimage_1-429](assets/chlimage_1-429.png)
 
    * In list view, video encoding progress displays in the **[!UICONTROL Processing Status]** column. 如果出現錯誤，則該欄會顯示此訊息。
+
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
    預設不會顯示此欄。若要啟用欄，請從檢視下拉 **[!UICONTROL 式選單中選取「檢視設定]** 」，然後新增「處理狀態」欄，然後點選或按一下「更新」 ********。
@@ -858,6 +863,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite工作流程逾時佇列
+
    >
    >您可以調整這些 **[!UICONTROL 配置中]****[!UICONTROL 的重試]**、重試延遲 **[!UICONTROL ,]** 以及超時屬性。
 
@@ -892,6 +898,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite工作流程逾時佇列
+
    >
    >
    >您可以調整這些 **[!UICONTROL 配置中]****[!UICONTROL 的重試]**、重試延遲 **[!UICONTROL ,]** 以及超時屬性。
@@ -938,6 +945,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * 發佈開始
    * 發佈失敗
    * 發佈完成——包含有關頻道和URL的資訊
+
    清除核取方塊表示您不會從YouTube發佈工作流程收到指定的電子郵件通知。
 
    >[!NOTE]
@@ -987,6 +995,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    * 在右上角點選「**日期選擇器**」圖示。
 指定您要視訊資料的開始和結束日期範圍，然後點選「執行 **[!UICONTROL 報表」]**。
+
    「排名最前的量度」群組方塊可識別網站上所有*已發佈*視訊的各種匯總量度。
 
 1. 在列出熱門發佈影片的表格中，點選影片名稱以播放影片，並檢視影片的觀眾保留（下拉式）報表。
@@ -1181,7 +1190,7 @@ Cost-efficient access to rapidly evolving technology.
        <li>導覽至您 <i>要 </i>與您上傳之章節檔案建立關聯的已發佈視訊資產。 請記住，URL僅可在您首次發 <i>布資產</i> 後 <i>複製</i> 。請參閱 <a href="/help/assets/publishing-dynamicmedia-assets.md">發佈資產。</a></li>
        <li>從下拉式選單中，按一下或點選「檢 <strong>視器</strong>」。</li>
        <li>在左側導軌中，點選或按一下視訊檢視器預設集名稱。 視訊的預覽會在個別頁面中開啟。</li>
-       <li>在左側導軌底部，按一下「內 <strong>嵌」</strong>。</li>
+       <li>在左側導軌底部，按一下「內嵌」 <strong></strong>。</li>
        <li>在「內嵌代碼」對話方塊中，選取整個代碼並將它複製至剪貼簿，然後貼到簡單的文字編輯器中。</li>
        <li>以下列語法附加視訊的內嵌代碼，將它與複製的URL建立關聯至您的章節檔案：<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
        </ol> </td>
@@ -1308,7 +1317,7 @@ AEM中的所有影片都必須有相關聯的縮圖； 您不能刪除縮圖而�
 1. 在「清單檢視」或「卡片檢視」的資產選擇模式中，點選視訊資產。
 1. 在工具列上，點選「 **[!UICONTROL 檢視屬性]** 」圖示（其中包含&quot;i&quot;的圓圈）。
 1. 在視訊的「屬性」頁面上，點選「變更 **[!UICONTROL 縮圖」]**。
-1. 在「變更縮圖」頁面的工具列上，點選「上傳新縮 **[!UICONTROL 圖」]**。
+1. 在「變更縮圖」頁面的工具列上，點選「上傳新 **[!UICONTROL 縮圖」]**。
 1. 導覽至您要使用的縮圖影像，選取它，然後點選「 **[!UICONTROL Open]** 」（開啟），開始將影像上傳至AEM。 上傳後，請務必發佈影像。
 1. 成功上傳並發佈影像後，在「變更縮圖」頁面中，點選「儲存變 **[!UICONTROL 更」]**。
 
