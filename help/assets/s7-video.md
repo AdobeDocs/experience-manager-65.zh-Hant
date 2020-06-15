@@ -8,7 +8,10 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '1628'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +32,7 @@ Dynamic Media Classic視訊整合將最佳化視訊的觸及面延伸到所有�
 * FFMPEG縮圖
 * FFMPEG編碼
 
-請注意，啟用和設定Dynamic Media Classic整合併不會從現成可用的DAM擷取工作流程自動移除或停用這兩個工作流程步驟。 如果您已在AEM中使用以FFMPEG為基礎的視訊編碼，則您可能已在製作環境中安裝FFMPEG。 在此例中，使用DAM擷取的新視訊會編碼兩次：一次是從FFMPEG編碼器，一次是從Dynamic Media Classic整合。
+請注意，啟用和設定Dynamic Media Classic整合併不會從現成可用的DAM擷取工作流程自動移除或停用這兩個工作流程步驟。 如果您已在AEM中使用以FFMPEG為基礎的視訊編碼，則您可能已在製作環境中安裝FFMPEG。 在此例中，使用DAM擷取的新視訊會編碼兩次： 一次是從FFMPEG編碼器，一次是從Dynamic Media Classic整合。
 
 如果您已在AEM中設定FFMPEG視訊編碼並安裝FFMPEG,Adobe建議您從DAM擷取工作流程中移除兩個FFMPEG工作流程。
 
@@ -94,16 +97,16 @@ Scene7 Video元件支援下列格式：
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## 從Adobe DAM將您的主影片上傳至Scene7 {#uploading-your-master-video}
+## 從Adobe DAM將您的主要來源視訊上傳至Scene7 {#uploading-your-master-video}
 
 1. 導覽至您已使用Scene7編碼設定檔設定雲端設定的CQ DAM目標檔案夾。
-1. 按一 **[!UICONTROL 下「上傳]** 」以上傳主影片。 視訊上傳和編碼在 [!UICONTROL DAM Update Asset] ( **[!UICONTROL DAM更新資產)工作流程完成後完成，]** 「發佈至Scene7」會有核取標籤。
+1. 按一 **[!UICONTROL 下「上傳]** 」以上傳主要來源視訊。 視訊上傳和編碼在 [!UICONTROL DAM Update Asset] ( **[!UICONTROL DAM更新資產)工作流程完成後完成，]** 「發佈至Scene7」會有核取標籤。
 
    >[!NOTE]
    >
    >產生視訊縮圖可能需要一些時間。
 
-   將DAM主視訊拖曳至視訊元件時，會存取 *所有* Scene7編碼的Proxy轉譯以進行傳送。
+   將DAM主要來源視訊拖曳至視訊元件 *時* ，會存取所有Scene7編碼的Proxy轉譯以進行傳送。
 
 ## Foundation Video元件與Scene7 Video元件 {#foundation-video-component-versus-scene-video-component}
 
@@ -117,7 +120,7 @@ Scene7視訊元件僅適用於Scene7視訊。 基礎元件可處理從AEM（使�
 
 >[!NOTE]
 >
->S7視訊元件現成可用，使用通用視訊設定檔。 不過，您可以在Scene7中執行下列其中一項作業，取得AEM使用的HTML5視訊播放器：複製現成可用的HTML5視訊播放程式的內嵌程式碼，並將它放入您的AEM頁面。
+>S7視訊元件現成可用，使用通用視訊設定檔。 不過，您可以在Scene7中執行下列其中一項作業，取得AEM使用的HTML5視訊播放器： 複製現成可用的HTML5視訊播放程式的內嵌程式碼，並將它放入您的AEM頁面。
 
 ## AEM Video元件 {#aem-video-component}
 
