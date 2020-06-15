@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '1741'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +34,7 @@ Dynamic Media Classic視訊整合將最佳化視訊的觸及面延伸到所有�
 * FFMPEG縮圖
 * FFMPEG編碼
 
-請注意，啟用和設定Dynamic Media Classic整合併不會從立即可用的  DAM更新資產擷取工作流程自動移除或停用這兩個工作流程步驟。 如果您已在AEM中使用以FFMPEG為基礎的視訊編碼，則您可能已在製作環境中安裝FFMPEG。 在此例中，使用「資產」收錄的新視訊會編碼兩次：一次是從FFMPEG編碼器，一次是從Dynamic Media Classic整合。
+請注意，啟用和設定Dynamic Media Classic整合併不會從立即可用的  DAM更新資產擷取工作流程自動移除或停用這兩個工作流程步驟。 如果您已在AEM中使用以FFMPEG為基礎的視訊編碼，則您可能已在製作環境中安裝FFMPEG。 在此例中，使用「資產」收錄的新視訊會編碼兩次： 一次是從FFMPEG編碼器，一次是從Dynamic Media Classic整合。
 
 如果您已在AEM中設定FFMPEG視訊編碼並安裝FFMPEG,Adobe建議您從 [!UICONTROL DAM更新資產工作流程中移除兩個FFMPEG工作流程] 。
 
@@ -92,20 +95,20 @@ Dynamic Media Classic視訊元件支援下列格式：
 
 如果您因為Dynamic Media Classic中的預設集已更新，所以需要更新AEM中視訊的檢視器和編碼預設集，請導覽至雲端設定中的Dynamic Media Classic設定，然後按一下「 **Update the viewer and encoding presets**」。
 
-![chlimage_1-135](assets/chlimage_1-131.png)
+![chlimage_1-131](assets/chlimage_1-131.png)
 
-### 上傳您的主影片 {#uploading-your-master-video}
+### 上傳您的主要來源視訊 {#uploading-your-master-video}
 
-若要從Adobe DAM將您的主影片上傳至Dynamic Media Classic:
+若要從Adobe DAM將您的主要來源視訊上傳至Dynamic Media Classic:
 
 1. 導覽至CQ DAM目標資料夾，您已在該資料夾中使用Dynamic Media Classic編碼設定檔設定雲端設定。
-1. 按一 **[!UICONTROL 下「上傳]** 」以上傳主影片。 視訊上傳和編碼在 [!UICONTROL DAM Update Asset] ( **[!UICONTROL DAM更新資產)工作流程完成後完成，]** 「發佈至動態媒體經典(Publish to Dynamic Media Classic)」有核取標籤。
+1. 按一 **[!UICONTROL 下「上傳]** 」以上傳主要來源視訊。 視訊上傳和編碼在 [!UICONTROL DAM Update Asset] ( **[!UICONTROL DAM更新資產)工作流程完成後完成，]** 「發佈至動態媒體經典(Publish to Dynamic Media Classic)」有核取標籤。
 
    >[!NOTE]
    >
    >產生視訊縮圖可能需要一些時間。
 
-   將DAM主視訊拖曳至視訊元件時，會存 *取所有* Dynamic Media Classic編碼的Proxy轉譯以進行傳送。
+   將DAM主要來源視訊拖曳至視訊元件 *時* ，會存取所有Dynamic Media Classic編碼的Proxy轉譯以進行傳送。
 
 ### Foundation Video元件與Dynamic Media Classic Video元件 {#foundation-video-component-versus-scene-video-component}
 
