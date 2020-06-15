@@ -3,9 +3,9 @@ title: 大量匯入和匯出資產中繼資料。
 description: 大量匯入和匯出數位資產的中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 9d6f9b8f8d49ae3322a6f5f677292afbd48beeda
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '808'
 ht-degree: 5%
 
 ---
@@ -80,6 +80,7 @@ ht-degree: 5%
 * 匯入資產中繼資料的CSV檔案格式非常特定。 為節省心力和時間，並避免意外錯誤，您可以開始使用匯出的CSV檔案格式建立CSV。
 * 使用CSV檔案匯入中繼資料時，必要的日期格式為 `YYYY-MM-DDThh:mm:ss.fff-00:00`。 如果使用其他格式，則不會設定日期值。 匯出的中繼資料CSV檔案的日期格式為格式 `YYYY-MM-DDThh:mm:ss-00:00`。 如果要匯入，請新增以表示的納秒值，將它轉換為可接受的格式 `fff`。
 * 若要匯入自訂名稱空間上的中繼資料，請先註冊名稱空間。
+* 「屬性選擇器」會顯示用於架構編輯器和搜尋表單的屬性。 屬性選擇器不會從資產中挑選中繼資料屬性。
 
 >[!MORELIKETHIS]
 >
