@@ -10,9 +10,9 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: 5eb05c69b2236d92504305ca076734bf7fac21e2
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '8030'
+source-wordcount: '8031'
 ht-degree: 1%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 1%
 >
 >* `s7access.log`
 >* `ImageServing.log`
+
 >
 >
 這些資訊記錄在「監 [控與維護您的AEM例項」中](/help/sites-deploying/monitoring-and-maintaining.md)。
@@ -145,7 +146,7 @@ ht-degree: 1%
 >
 >透過執行模式啟用動態媒體會取代AEM 6.1和AEM 6.0中的功能，您可透過將標幟設定為 `dynamicMediaEnabled` true來啟用動態媒體 ****。 此標幟在AEM 6.2和更新版本中沒有功能。 此外，您不需要重新啟動快速入門，就能啟用動態媒體。
 
-透過啟用動態媒體，動態媒體功能將可在UI中使用，而且每個上傳的影像資產都會收到 *cqdam.pyramid.tiff* 轉譯，用於快速傳送動態影像轉譯。 這些PTIFF具有顯著的優點，包括(1)僅能管理單一主影像並即時產生無限轉譯，毋需額外儲存空間，以及(2)能夠使用互動式視覺效果，例如縮放、平移、回轉等。
+透過啟用動態媒體，動態媒體功能將可在UI中使用，而且每個上傳的影像資產都會收到 *cqdam.pyramid.tiff* 轉譯，用於快速傳送動態影像轉譯。 這些PTIFF具有顯著的優點，包括(1)僅能管理單一主要來源影像，並即時產生無限轉譯，毋需額外儲存空間，以及(2)可使用互動式視覺化功能，例如縮放、平移、回轉等。
 
 如果您想在AEM中使用Dynamic Media Classic(Scene7)，除非您使用特定藍本，否則不應啟用「動態 [媒體」](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。 除非您透過執行模式啟用動態媒體，否則動態媒體會停用。
 
@@ -176,8 +177,10 @@ ht-degree: 1%
    >若要疑難排解動態媒體的問題，請參閱目錄中的下列記 `crx-quickstart/logs/` 錄檔：
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer日誌提供用於分析內部ImageServer進程行為的統計和分析資訊。
+
    影像伺服器記錄檔名的範例： `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access記錄透過和記錄對Dynamic Media提出的每個 `/is/image` 請求 `/is/content`。
+
    這些記錄檔僅在啟用動態媒體時使用。 它們不包含在從頁 **面產生的Download Full** `system/console/status-Bundlelist` Package中； 如果您有動態媒體問題，請在呼叫客戶支援時，將這兩個記錄檔附加至問題。
 
 ### 如果您將AEM安裝至不同的連接埠或內容路徑…… {#if-you-installed-aem-to-a-different-port-or-context-path}
@@ -190,7 +193,7 @@ ht-degree: 1%
 
 在AEM中：
 
-* 外 **部化器中** 的自 [我網域](/help/sites-developing/externalizer.md) ，用於擷取埠號和內容路徑。
+* 外 **部化器** 中的自 [](/help/sites-developing/externalizer.md) 我網域用來擷取埠號和內容路徑。
 * 如果未 **配置自** 體域，則從Jetty HTTP服務檢索埠號和上下文路徑。
 
 在AEM QuickStart WAR部署中，無法衍生連接埠號碼和內容路徑，因此您必須設定 **自我** 網域。 請參 [閱外部化說明文](/help/sites-developing/externalizer.md) 件，瞭解如何設 **定self** 網域。
@@ -224,7 +227,7 @@ ht-degree: 1%
 
 如果您要將AEM Dynamic Media從6.3升級至6.5（現在包含零停機部署的功能），您必須執行下列curl命令，才能將所有預設集和組態從CRXDE `/etc` Lite移轉 `/conf` 至CRXDE Lite。
 
-**注意**: 如果您以相容模式執行AEM例項，即您已安裝相容性套件，則不需要執行這些命令。
+**注意**: 如果您以相容模式執行AEM例項（即，您已安裝相容性套件），就不需要執行這些命令。
 
 對於所有升級，不論是否有相容性套件，您都可以執行下列Linux curl命令，複製Dynamic Media原本隨附的預設立即可用檢視器預設集：
 
@@ -283,6 +286,7 @@ ht-degree: 1%
    * 在「KeyStore檔 **[!UICONTROL 案密碼」欄位中]** ，輸入「KeyStore檔案密碼」。 這不是 **您在步驟** 5中建立的KeyStore密碼，而是Adobe在布建期間傳送給您的歡迎電子郵件中提供的KeyStore檔案密碼。 如果您未收到KeyStore檔案密碼，請聯絡Adobe客戶服務。
    * 在「私 **[!UICONTROL 密金鑰密碼]** 」欄位中，輸入私密金鑰密碼（可能與前一步驟中提供的私鑰密碼相同）。 Adobe會在布建期間傳送給您的歡迎電子郵件中提供私密金鑰密碼。 如果您未收到私密金鑰密碼，請聯絡Adobe客戶服務。
    * 在「私 **[!UICONTROL 鑰別名]** 」欄位中，輸入私鑰別名。 For example, `*companyname*-alias`. Adobe會在布建期間傳送給您的歡迎電子郵件中提供私密金鑰別名。 如果您未收到私密金鑰別名，請聯絡Adobe客戶服務。
+
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
 1. 點選 **[!UICONTROL 「儲存並關閉]** 」，將變更儲存給此使用者。
@@ -299,19 +303,20 @@ ht-degree: 1%
    * **[!UICONTROL 啟用]** -選中此複選框可啟用複製代理。
    * **[!UICONTROL 地區]** -設為適當的地區： 北美、歐洲或亞洲
    * **[!UICONTROL 租用戶ID]** —— 此值是您發佈至複製服務的公司／租用戶的名稱。 此值是Adobe在布建期間傳送給您的歡迎電子郵件中提供的租用戶ID。 如果您未收到此訊息，請聯絡Adobe客戶服務。
-   * **[!UICONTROL 密鑰儲存別名]** -該值與在設定身份驗證中生成密鑰時設定的**新別名** [值相同](#setting-up-authentication); 例如， `replication`。 (請參閱設定驗 [證的步驟](#setting-up-authentication)7)。
-   * **[!UICONTROL Key Store Password]** —— 這是您點選「Create KeyStore」時建立的KeyStore **[!UICONTROL 密碼]**。 Adobe不提供此密碼。 請參閱設定驗 [證的步驟5](#setting-up-authentication)。
+   * **[!UICONTROL 密鑰儲存別名]** -該值與在設定身份驗證中生成密鑰時設定的**新別名** [值相同](#setting-up-authentication); 例如， `replication`。 (See step 7 in [Setting Up Authentication](#setting-up-authentication).)
+   * **[!UICONTROL Key Store Password]** - This is the KeyStore password that was created when you tapped **[!UICONTROL Create KeyStore]**. Adobe不提供此密碼。 See step 5 of [Setting up Authentication](#setting-up-authentication).
+
    下圖顯示了具有示例資料的複製代理：
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
 
 1. 點選「 **[!UICONTROL 確定]**」。
 
-### 驗證動態媒體的複製代理 {#validating-the-replication-agent-for-dynamic-media}
+### Validating the Replication Agent for Dynamic Media {#validating-the-replication-agent-for-dynamic-media}
 
-要驗證動態媒體的複製代理，請執行以下操作：
+To validate the replication agent for dynamic media, do the following:
 
-點選「 **[!UICONTROL 測試連線」]**。 輸出示例如下：
+點選「 **[!UICONTROL 測試連線」]**。 Example output is as follows:
 
 ```shell
 11.03.2016 10:57:55 - Transferring content for ReplicationAction{type=TEST, path[0]='/content/dam', time=1457722675402, userId='admin', revision='null'}
@@ -328,19 +333,19 @@ Replication test succeeded
 ```
 
 >[!NOTE]
-您也可以執行下列任一操作來檢查：
-* 檢查複製日誌以確保資產已複製。
-* 發佈影像。 點選影像，然後在下拉 **[!UICONTROL 式選單中]** ，選取「檢視器」。 然後選取檢視器預設集，然後按一下「URL」，並複製／貼上瀏覽器中的URL，以確認您可以看到影像。
+You can also check by doing one of the following:
+* Check the replication logs to make sure the asset is replicated.
+* Publish an image. Tap the image and select **[!UICONTROL Viewers]** in drop-down menu. Then select a viewer preset, then click URL, and copy/paste the URL in the browser to verify that you can see the image.
 
 
 
-### 驗證疑難排解 {#troubleshooting-authentication}
+### Troubleshooting Authentication {#troubleshooting-authentication}
 
-在設定驗證時，以下是您在其解決方案中可能遇到的一些問題。 在選中這些選項之前，請確保已設定複製。
+When setting up authentication, here are some issues you may run into with their solutions. Before checking these, make sure you have set up replication.
 
-#### 問題： HTTP狀態碼401含訊息——需要授權 {#problem-http-status-code-with-message-authorization-required}
+#### Problem: HTTP Status Code 401 with Message - Authorization Required {#problem-http-status-code-with-message-authorization-required}
 
-此問題可能是由於無法為用戶設定KeyStore所導致 `dynamic-media-replication` 的。
+This issue can be caused by a failure to set up the KeyStore for `dynamic-media-replication` user.
 
 ```shell
 Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
@@ -361,9 +366,9 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**解決方案**: 檢查是否 `KeyStore` 已將 **保存到動態媒體複製用戶** ，並提供了正確的密碼。
+**Solution**: Check that the `KeyStore` is saved to **dynamic-media-replication** user and is provided with the correct password.
 
-#### 問題： 無法解密密鑰——無法解密資料 {#problem-could-not-decrypt-key-could-not-decrypt-data}
+#### Problem: Could Not Decrypt Key - Could Not Decrypt Data {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
 ```xml
 Replication test to s7delivery:https://<localhost>:8580/is-publish/
@@ -377,18 +382,18 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 17.06.2016 19:00:16 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1466215216662, userId='admin', revision='null'}. java.lang.SecurityException: java.security.UnrecoverableKeyException: Could not decrypt key: Could not decrypt data.
 ```
 
-**解決方案**: 檢查密碼。 保存在複製代理中的密碼與用於建立密鑰庫的密碼不同。
+**Solution**: Check the password. The password saved in the replication agent is not the same password that was used to create keystore.
 
-#### 問題： InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
+#### Problem: InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
 
-此問題是由AEM Author例項中的設定錯誤所造成。 作者上的Java進程未獲得正確的資訊 `javax.net.ssl.trustStore`。 在複製日誌中看到以下錯誤：
+This issue is caused by a configuration error in your AEM Author instance. The java process on the Author is not getting the correct `javax.net.ssl.trustStore`. 在複製日誌中看到以下錯誤：
 
 ```shell
 14.04.2016 09:37:43 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1460651862089, userId='admin', revision='null'}. java.io.IOException: Failed to execute request 'https://<localhost>:8580/is-publish/publish-receiver?Cmd=Test&RootId=rbrough-osx2': java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
 14.04.2016 09:37:43 - Error while replicating: com.day.cq.replication.ReplicationException: Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1460651862089, userId='admin', revision='null'}. java.io.IOException: Failed to execute request 'https://<localhost>:8580/is-publish/publish-receiver?Cmd=Test&RootId=rbrough-osx2': java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
 ```
 
-或錯誤日誌：
+Or the error log:
 
 ```shell
 07.25.2019 12:00:59.893 *ERROR* [sling-threadpool-db2763bb-bc50-4bb5-bb64-10a09f432712-(apache-sling-job-thread-pool)-90-com_day_cq_replication_job_s7delivery(com/day/cq/replication/job/s7delivery)] com.day.cq.replication.Agent.s7delivery.queue Error during processing of replication.
@@ -397,11 +402,11 @@ java.io.IOException: Failed to execute request 'https://replicate-na.assetsadobe
         at com.scene7.is.catalog.service.publish.atomic.PublishingServiceHttp.executePost(PublishingServiceHttp.scala:195)
 ```
 
-**解決方案**: 請確定AEM Author上的java進程已將系統屬性設 `-Djavax.net.ssl.trustStore=` 為有效的信任庫。
+**Solution**: Make sure the java process on the AEM Author has the system property `-Djavax.net.ssl.trustStore=` set to a valid truststore.
 
-#### 問題： KeyStore未設定或未初始化 {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
+#### Problem: KeyStore is either not set up or it is not initialized {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
 
-此問題可能是由Hot Fix，或功能套件覆寫動態媒體使用者或金鑰庫節點所造成。
+This issue may be caused by a hot fix, or a feature pack overwriting the dynamic-media-user or keystore node.
 
 複製日誌示例：
 
@@ -415,12 +420,12 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 02.08.2016 14:37:44 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470173864834, userId='admin', revision='null'}. com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised key store for user dynamic-media-replication
 ```
 
-**解決方案**:
+**Solution**:
 
-1. 定位至「用戶管理」頁：
+1. Navigate to the User Management page:
    `localhost:4502/libs/granite/security/content/useradmin.html`
-1. 在「使用者管理」頁面上，導覽至使 `dynamic-media-replication` 用者，然後點選以開啟。
-1. 按一下「 **[!UICONTROL KeyStore]** 」標籤。 如果出 **[!UICONTROL 現「Create KeyStore]** 」按鈕，則需要重做「Setting up Authentication arel [(以前設定驗證](#setting-up-authentication) )」下的步驟。
+1. On the User Management page, navigate to the `dynamic-media-replication` user, then tap to open.
+1. Click the **[!UICONTROL KeyStore]** tab. 如果出 **[!UICONTROL 現「Create KeyStore]** 」按鈕，則需要重做「Setting up Authentication arel [(以前設定驗證](#setting-up-authentication) )」下的步驟。
 1. 如果必須重做KeyStore設定，則可能還需要 [再次配置複製代理](/help/assets/config-dynamic.md#configuring-the-replication-agent) 。
 
    重新配置s7delivery Replication Agent。
@@ -450,75 +455,75 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
    `localhost:4502/crx/de/index.jsp`
 
-1. 導航到s7delivery Replication Agent節點。
+1. Navigate to the s7delivery Replication Agent node.
    `localhost:4502/crx/de/index.jsp#/etc/replication/agents.author/s7delivery/jcr:content`
 
-1. 將此設定添加到複製代理(值設定為 **[!UICONTROL True的布林]**):
+1. Add this setting to the replication agent (Boolean with value set to **[!UICONTROL True]**):
 
    `enableOauth=true`
 
-1. 在頁面左上角附近，點選「全 **[!UICONTROL 部儲存」]**。
+1. Near the upper-left corner of the page, tap **[!UICONTROL Save All]**.
 
 ### 測試您的配置 {#testing-your-configuration}
 
-Adobe建議您對設定執行端對端測試。
+Adobe recommends that you perform an end-to-end test of the configuration.
 
-在開始此測試之前，請確定您已執行下列作業：
+Be sure you have already done the following prior to beginning this test:
 
-* 已新增影像預設集。
-* 在「 **[!UICONTROL 雲端服務」下設定「動態媒體設定」（6.3之前版本）]** 。 此測試需要影像服務URL
+* Added Image Presets.
+* Configure **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** under Cloud Services. The Image Service URL is required for this test
 
-**若要測試您的設定**
+**To test your configuration**
 
-1. 上傳影像資產。 (在「資產」中，點 **[!UICONTROL 選「建立>檔案]** 」並選取檔案。)
-1. 等待工作流程完成。
-1. 發佈影像資產。 (選取資產並點選「 **[!UICONTROL 快速發佈]**」)。
-1. 開啟影像並點選「轉譯」，導覽至該影像的轉 **[!UICONTROL 譯]**。
+1. Upload an image asset. (In Assets, tap **[!UICONTROL Create > Files]** and select the file.)
+1. Wait for the workflow to finish.
+1. Publish the image asset. (Select the asset and tap **[!UICONTROL Quick Publish]**.)
+1. Navigate to the renditions for that image by opening the image, and tapping **[!UICONTROL Renditions]**.
 
    ![chlimage_1-510](assets/chlimage_1-510.png)
 
 1. 選取任何動態轉譯。
-1. 按一 **[!UICONTROL 下]** 「URL」以取得此資產的URL。
+1. Click **[!UICONTROL URL]** to obtain the URL for this asset.
 1. 導覽至選取的URL，並檢查影像是否如預期般運作。
 
 另一種測試已傳送資產的方法，是將req=exists附加至您的URL。
 
 ## Configuring Dynamic Media Cloud Services {#configuring-dynamic-media-cloud-services}
 
-Dynamic Media Cloud服務支援雲端服務，例如混合發佈和傳送影像和視訊、視訊分析和視訊編碼等。
+The Dynamic Media Cloud service provides support for cloud services such as hybrid publishing and delivery of images and video, video analytics, and video encoding, among other things.
 
-在配置中，您需要輸入註冊ID、視頻服務URL、影像服務URL、複製服務URL和設定驗證。 您應該已在帳戶布建程式中收到所有這些資訊。 如果您未收到此資訊，請連絡您的Adobe Experience Manager管理員或Adobe技術支援以取得該資訊。
+As part of the configuration, you need to enter a registration ID, video service URL, image service URL, replication service URL and set up authentication. You should have received all this information as part of the account provisioning process. If you did not receive this information, contact your Adobe Experience Manager Administrator or Adobe Technical Support to obtain the information.
 
 >[!NOTE]
-在設定Dynamic Media Cloud服務之前，請務必設定您的發佈例項。 在配置Dynamic Media Cloud服務之前，您還必須設定複製。
+Before setting up Dynamic Media Cloud services, be sure to have your publish instance set up. 在配置Dynamic Media Cloud服務之前，您還必須設定複製。
 
 若要設定動態媒體雲端服務：
 
-1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選「 **[!UICONTROL 工具>雲端服務>動態媒體設定（6.3之前版本）]**」。
+1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Cloud Services > Dynamic Media Configuration (Pre-6.3)]**.
 1. 在「動態媒體設定瀏覽器」頁面的左窗格中，選取全域 ****，然後點選 **[!UICONTROL 建立]**。
-1. 在「建 **[!UICONTROL 立動態媒體設定]** 」對話方塊的「標題」欄位中，輸入標題。
-1. 如果您要設定視訊的動態媒體，
+1. In the **[!UICONTROL Create Dynamic Media Configuration]** dialog box, in the Title field, type a title.
+1. If you are configuring Dynamic Media for video,
 
    * 在「注 **[!UICONTROL 冊ID」欄位]** ，輸入您的註冊ID。
    * 在「視 **[!UICONTROL 訊服務URL ]**」欄位中，輸入動態媒體閘道的視訊服務URL。
 
 1. 如果您要設定Dynamic Media以進行影像處理，請在「 **[!UICONTROL Image Service URL]** 」（影像服務URL）欄位中，輸入Dynamic Media閘道的影像服務URL。
-1. 點選「 **[!UICONTROL 儲存]** 」可返回「動態媒體設定瀏覽器」頁面。
-1. 點選AEM標誌以存取全域導覽主控台。
+1. Tap **[!UICONTROL Save]** to return to the Dynamic Media Configuration Browser page.
+1. Tap the AEM logo to access the global navigation console.
 
-## 設定視訊報表 {#configuring-video-reporting}
+## Configuring Video Reporting {#configuring-video-reporting}
 
-您可以使用Dynamic Media Hybrid，在多個AEM安裝中設定視訊報告。
+You can configure video reporting across multiple installations of AEM using Dynamic Media Hybrid.
 
-**使用時機：** 在您設定動態媒體設定（6.3之前版本）時，會啟動許多功能，包括視訊報告。 此設定會在地區性Analytics公司中建立報表套裝。 如果您設定多個「作者」節點，您會為每個節點建立個別的報表套裝。 因此，報告資料在安裝之間不一致。 此外，如果每個「作者」節點都參照相同的「混合發佈」伺服器，則上次「作者」安裝會變更所有視訊報表的目標報表套裝。 此問題會將Analytics系統的報表套裝過多過載。
+**When to use:** At the time you configure Dynamic Media Configuration (Pre 6.3), numerous features are started including video reporting. The configuration creates a report suite in a regional Analytics company. If you configure multiple Author nodes, you create a separate report suite for each one. As a result, reporting data is inconsistent among installations. Furthermore, if each Author node refers to the same Hybrid Publish server, the last Author installation changes the destination report suite for all video reporting. This issue overloads the Analytics system with too many report suites.
 
 **開始使用：** 完成下列三項工作，以設定視訊報告。
 
-1. 在第一個「作者」節點上設定「動態媒體設定」（6.3之前版本）後，建立「視訊分析」預設套件。 此初始任務很重要，因為它允許新配置繼續使用相同的報表套裝。
+1. 在第一個「作者」節點上設定「動態媒體設定」（6.3之前版本）後，建立「視訊分析」預設套件。 This initial task is important because it allows a new configuration to continue using the same report suite.
 1. 在設定動態媒體設定(6.3之前 ***版本)之*** 前，先將Video Analytics預設集套 ****** 件安裝至任何新的Author節點。
-1. 驗證並調試軟體包安裝。
+1. Verify and debug the package installation.
 
-### 在設定第一個「作者」節點後建立「視訊分析預設」套件 {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
+### Creating a Video Analytics Preset package after configuring the first Author node {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
 完成此工作後，您會擁有包含視訊分析預設集的套件檔案。 這些預設集包含報表套裝、追蹤伺服器、追蹤命名空間和Marketing Cloud組織ID（若有的話）。
 
