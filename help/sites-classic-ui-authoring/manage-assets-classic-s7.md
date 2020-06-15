@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '3221'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
 
 * 縮放
 * 飛出
-* 視訊
+* 影片
 * 影像範本
 * 影像
 
@@ -36,7 +39,7 @@ source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
 
 如需搭配AEM使用視訊元件的詳細資訊，請參閱下列：
 
-* [視訊](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)
+* [影片](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)
 
 >[!NOTE]
 >
@@ -85,13 +88,13 @@ source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
 
    ![screen_shot_2012-02-22at34828pm](assets/screen_shot_2012-02-22at34828pm.png)
 
-1. **連結會變更**&#x200B;為「發佈……」然後 **發佈**。 前往Scene7並確認資產可用。
+1. 連結會變更 **為「發佈……」** 然後 **發佈**。 前往Scene7並確認資產可用。
 
    >[!NOTE]
    >
    >如果資產未正確發佈至Scene7，連結會變更為「發 **布失敗」**。 如果資產已發佈至Scene7，連結會顯示「重 **新發佈至Scene7」**。 重新發佈可讓您在AEM中變更資產，然後重新發佈。
 
-### 從CQ target檔案夾外部發佈資產 {#publishing-assets-from-outside-the-cq-target-folder}
+### 從CQ Target檔案夾外部發佈資產 {#publishing-assets-from-outside-the-cq-target-folder}
 
 Adobe建議您僅從Scene7目標資料夾中的資產，將資產發佈至Scene7。 不過，如果您需要從目標資料夾外的資料夾上傳資產，您仍可將資產上傳至Scene7的 **臨機資料夾** 。
 
@@ -135,7 +138,7 @@ AEM提供下列Scene7元件：
 * 彈出（縮放）
 * 影像範本
 * 影像
-* 視訊
+* 影片
 
 >[!NOTE]
 >
@@ -147,7 +150,7 @@ AEM提供下列Scene7元件：
 >
 >如果您要建立和開發自訂的S7檢視器，並使用內容搜尋器，則需要明確新增allowfullscreen **參數** 。
 
-### Flash檢視器生命週期結束注意事項 {#flash-viewers-end-of-life-notice}
+### Flash 檢視器生命週期結束注意事項 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Scene7將正式終止對Flash檢視器平台的支援。
 
@@ -212,7 +215,7 @@ AEM提供下列Scene7元件：
 
 ### 飛出 {#flyout}
 
-在HTML5 Flyout元件中，資產顯示為分割畫面；將資產保留在指定的大小；右側顯示縮放部分。 按一 **下「編輯** 」以設定元件。 使用此元件，您可以設 [定所有Scene7元件的共同設定](/help/sites-administering/scene7.md#settingscommontoallscene7components)。
+在HTML5 Flyout元件中，資產顯示為分割畫面； 將資產保留在指定的大小； 右側顯示縮放部分。 按一 **下「編輯** 」以設定元件。 使用此元件，您可以設 [定所有Scene7元件的共同設定](/help/sites-administering/scene7.md#settingscommontoallscene7components)。
 
 >[!NOTE]
 >
@@ -230,7 +233,7 @@ Scene7 Image元件可讓您將Scene7功能新增至影像，例如Scene7修飾�
 
 **標題、替代文字** ：在「進階」索引標籤中，為影像新增標題，並為關閉圖形的使用者新增替代文字。
 
-**URL, Open in** You can set an asset from to open a link. 設定URL，並在「開啟於」中指出您要在相同視窗或新視窗中開啟它。
+**URL, Open in** You can set an asset from to open a link. 設定URL，並在「開啟於」中指出您要在相同視窗或新視窗中開啟該URL。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
@@ -305,7 +308,7 @@ Scene7 Image元件可讓您將Scene7功能新增至影像，例如Scene7修飾�
 
 ### 視訊元件 {#video-component}
 
-Scene7 **Video** （可從側腳的Scene7區段取得）元件使用裝置和頻寬偵測，將適當的視訊提供至每個畫面。 此元件為HTML5視訊播放器；它是可跨通道使用的單一檢視器。
+Scene7 **Video** （可從側腳的Scene7區段取得）元件使用裝置和頻寬偵測，將適當的視訊提供至每個畫面。 此元件為HTML5視訊播放器； 它是可跨通道使用的單一檢視器。
 
 它可用於最適化視訊集、單一MP4視訊或單一F4V視訊。
 
@@ -315,7 +318,7 @@ Scene7 **Video** （可從側腳的Scene7區段取得）元件使用裝置和頻
 
 ### 視訊元件的已知限制 {#known-limitations-for-the-video-component}
 
-Adobe DAM和WCM會顯示是否上傳主影片。 它們不會顯示下列代理資產：
+Adobe DAM和WCM會顯示是否上傳主要來源視訊。 它們不會顯示下列代理資產：
 
 * Scene7編碼轉譯
 * Scene7可調式視訊集
@@ -333,12 +336,14 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 >* 位於臨機資料夾的資產不會出現在Scene7內容瀏覽器中。
 >* 啟用「 [安全預覽」後](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene),Scene7上已發佈和未發佈的資產都會出現在Scene7內容瀏覽器中。
 >* 如果您未在內 **容瀏覽器中將Scene7** 或 **S7** 圖示視為選項，則需 [要設定Scene7以搭配AEM運作](/help/sites-administering/scene7.md)。
+
    >
    >
-* 對於視訊，Scene7內容瀏覽器支援：>
-   >    * 最適化視訊集：容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
+* 對於視訊，Scene7內容瀏覽器支援： >
+   >    * 最適化視訊集： 容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
    >    * 單一MP4視訊
    >    * 單一F4V視訊
+
 >
 
 
@@ -359,9 +364,10 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 >
 >對於視訊，WCM的Scene7內容瀏覽器支援：
 >
->* 最適化視訊集：容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
+>* 最適化視訊集： 容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
 >* 單一MP4視訊
 >* 單一F4V視訊
+
 >
 
 
@@ -390,11 +396,11 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-**設定** ：如果您在Cloud services中定義了多個Scene7設定，您可以在這裡選取它。 因此，資料夾會根據您選擇的組態而變更。
+**設定** ：如果您在Cloud Services中定義了多個Scene7設定，您可以在這裡選取它。 因此，資料夾會根據您選擇的組態而變更。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**資產類型** ：在Scene7瀏覽器中，您可以篩選結果以包含下列任一項：影像、範本、視訊和最適化視訊集。 如果您未選取任何資產類型，AEM依預設會搜尋所有資產類型。
+**資產類型** ：在Scene7瀏覽器中，您可以篩選結果以包含下列任一項： 影像、範本、視訊和最適化視訊集。 如果您未選取任何資產類型，AEM依預設會搜尋所有資產類型。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -408,6 +414,6 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 
 
 
-**發佈狀態** ：您可以根據發佈狀態篩選資產：未發佈或已發佈。 如果您未選取任何「發佈狀態」,AEM依預設會搜尋所有發佈狀態。
+**發佈狀態** ：您可以根據發佈狀態篩選資產： 未發佈或已發佈。 如果您未選取任何「發佈狀態」,AEM依預設會搜尋所有發佈狀態。
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
