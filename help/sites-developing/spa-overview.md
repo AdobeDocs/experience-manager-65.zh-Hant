@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: fe81a72a6269060a7ec1283f817920618ba715ef
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,7 @@ SPA的頁面元件不會透過JSP或HTL檔案提供其子元件的HTML元素。 
 >* SPA總是負責其展示。
 >* SPA編輯器與SPA本身隔離。
 >* 在生產（發佈）中，SPA編輯器從未載入。
+
 >
 
 
@@ -112,7 +113,7 @@ SPA的頁面元件不會透過JSP或HTL檔案提供其子元件的HTML元素。 
 ![page_editor_spa_authoringmediator-2](assets/page_editor_spa_authoringmediator-2.png)
 
 1. SPA會自行初始化，並從Sling Model Exporter要求頁面模型。
-1. Sling Model Exporter會要求從儲存庫中構成頁面的資源。
+1. Sling Model Exporter會請求從儲存庫組成頁面的資源。
 1. 儲存庫返回資源。
 1. Sling Model Exporter會傳回頁面的模型。
 1. SPA會根據頁面模型執行個體化其元件。
@@ -167,8 +168,8 @@ SPA的頁面元件不會透過JSP或HTL檔案提供其子元件的HTML元素。 
 
 SPA編輯器SDK支援下列最低版本：
 
-* React 16.3
-* 角度6.x
+* React 16.x和更高版本
+* 6.x和更高角度
 
 這些架構的舊版可能與AEM SPA Editor SDK搭配使用，但不受支援。
 
