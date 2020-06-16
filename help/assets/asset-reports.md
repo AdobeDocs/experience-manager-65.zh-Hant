@@ -1,45 +1,54 @@
 ---
-title: 有關您數位資產的報告
-description: 瞭解Adobe Experience Manager Assets中有關您資產的報表，以協助您瞭解數位資產的使用、活動和分享。
+title: 有關數位資產的使用與分享的報告。
+description: 有關您資產的報 [!DNL Adobe Experience Manager Assets] 告，可協助您瞭解數位資產的使用、活動和共用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2faf210d4177d6b2e29795b5668f8199816097eb
+source-git-commit: bc08b0039f8be92a7638245b1770c2ad21503f63
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 14%
+source-wordcount: '1013'
+ht-degree: 8%
 
 ---
 
 
 # Asset Reports {#asset-reports}
 
-資產報告是評估Adobe Experience Manager Assets部署效用的關鍵工具。 使用「資產」，您可以為數位資產產生各種報表。 這些報表提供您系統使用情況、使用者與資產的互動方式，以及哪些資產被下載和共用的實用資訊。
+資產報表可讓您評估部署的實用 [!DNL Adobe Experience Manager Assets] 程式。 有了 [!DNL Assets]，您就可以產生各種數位資產的報表。 這些報表提供您系統使用情況、使用者與資產的互動方式，以及哪些資產被下載和共用的實用資訊。
 
-使用報表中的資訊衍生關鍵成功度量，以測量企業內部及客戶對「資產」的接受程度。
+使用報表中的資訊衍生關鍵成功度量，以評估您企業內 [!DNL Assets] 部和客戶的接受度。
 
-Assets reporting framework使用Sling作業以有序方式非同步處理報表請求。 它適用於大型儲存庫。 非同步報表處理可提高報表產生的效率和速度。
+報告 [!DNL Assets] 框架使用作 [!DNL Sling] 業以有序方式非同步處理報告請求。 它適用於大型儲存庫。 非同步報表處理可提高報表產生的效率和速度。
 
 報表管理介面是直覺式的，包含存取已封存報表及檢視報表執行狀態（成功、失敗和佇列）的精細選項和控制項。
 
 產生報表時，您會透過電子郵件（可選）和收件匣通知收到通知。 您可以從報表清單頁面檢視、下載或刪除報表，其中會顯示所有先前產生的報表。
 
+## 先決條件 {#prerequisite-for-reporting}
+
+若要產生報表，請確定下列項目：
+
+* 從「 [!UICONTROL 工具」>「作業」]**[!UICONTROL >「Web主控台]** 」啟用「Day CQ DAM Event Recorder **[!UICONTROL 」]******&#x200B;服務。
+* 選擇您要報告的活動或事件。 例如，若要產生已下載資產的報表，請選取「已 [!UICONTROL 下載資產」(DOWNLOADED)]。
+
+![在Web Console中啟用資產報告功能](assets/reports-config-day-cq-dam-event-recorder.png)
+
 ## 產生報表 {#generate-reports}
 
-Experience Manager Assets會為您產生下列標準報表：
+[!DNL Experience Manager Assets] 為您生成以下標準報表：
 
 * 上傳
 * 下載
 * 過期
 * 修改
 * 發佈
-* 品牌入口網站發佈
+* [!DNL Brand Portal] 發佈
 * 磁碟使用情況
 * 檔案
 * 連結共用
 
 [!DNL Adobe Experience Manager] 管理員可輕鬆產生和自訂這些報表，以供您的實作使用。 管理員可依照下列步驟產生報表：
 
-1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
+1. 在介 [!DNL Experience Manager] 面中，按一下「 **[!UICONTROL 工具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
 
 ![「工具」頁面，以導覽資產報表](assets/AssetsReportNavigation.png)
 
@@ -47,10 +56,6 @@ Experience Manager Assets會為您產生下列標準報表：
 1. 從「建 **[!UICONTROL 立報表]** 」頁面，選擇您要建立的報表，然後按一下「下 **[!UICONTROL 一步」]**。
 
    ![選擇報表類型](assets/choose_report.png)
-
-   >[!NOTE]
-   >
-   >在您產生「已下載 **[!UICONTROL 資產」報表]** ，請確定已啟用「資產下載」服務。從Web主控台(`https://[aem_server]:[port]/system/console/configMgr`)開啟「 **[!UICONTROL Day CQ DAM Event Recorder」 (日CQ DAM事件記錄器)]**&#x200B;設定，並在「事件類型」中選取「**[!UICONTROL Asset Downloaded(DOWNLOADED)]**」選項 (如果尚未選取)。
 
    >[!NOTE]
    >
@@ -80,7 +85,7 @@ Experience Manager Assets會為您產生下列標準報表：
 
    ![「檔案」報表的詳細資訊頁面](assets/files_report.png)
 
-   「連 **[!UICONTROL 結共用]** 」報表會顯示資產的URL，這些資產是從 Assets內與外部使用者共用的。它包含共用資產之使用者的電子郵件ID、共用資產之使用者的電子郵件ID、連結的共用日期和到期日。欄無法自訂。
+   The **[!UICONTROL Link Share]** report displays URLs to assets that are shared with external users from within [!DNL Assets]. 它包含共用資產之使用者的電子郵件ID、共用資產之使用者的電子郵件ID、連結的共用日期和到期日。欄無法自訂。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
@@ -92,12 +97,12 @@ Experience Manager Assets會為您產生下列標準報表：
 
    ![選取或取消選取報表欄](assets/configure_columns.png)
 
-   若要顯示自訂欄名稱或屬性路徑，請在CRX的jcr:content節點下，設定資產二進位檔的屬性。 或者，透過屬性路徑選擇器加入。
+   若要顯示自訂欄名稱或屬性路徑，請在CRX的節點下設定資產二進位 `jcr:content` 檔案的屬性。 或者，透過屬性路徑選擇器加入。
 
    ![選取或取消選取報表欄](assets/custom_columns.png)
 
 1. 從工具 **[!UICONTROL 列按一下]** 「建立」。 訊息會通知報表產生已開始。
-1. 在「資產報表」頁面中，報表產生狀態是根據報表工作的目前狀態，例如「成功」、「失敗」、「已佇列」或「已排程」。 通知收件箱中會顯示相同的狀態。要查看報告頁，請按一下報告連結。 或者，選取報表，然後從工具列按 **[!UICONTROL 一下]** 「檢視」。
+1. 在「報 [!UICONTROL 表] 」頁面上，報表產生狀態是根據報表作業的目前狀態，例如 [!UICONTROL Success]、FailedFailed [!UICONTROL 、]Queued Asset或ScheduledScheduledReports。 通知收件箱中會顯示相同的狀態。要查看報告頁，請按一下報告連結。 或者，選取報表，然後從工具列按 **[!UICONTROL 一下]** 「檢視」。
 
    ![產生的報表](assets/report_page.png)
 
@@ -112,12 +117,12 @@ Experience Manager Assets會為您產生下列標準報表：
 * 過期
 * 修改
 * 發佈
-* 品牌入口網站發佈
+* [!DNL Brand Portal] 發佈
 * 檔案
 
 若要新增自訂欄至這些報表，請依照下列步驟進行：
 
-1. 在Experience Manager介面中，按一下「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
+1. 在中，按 [!DNL Manager interface]一下「 **[!UICONTROL 工具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
 1. 在「資 [!UICONTROL 產報表] 」頁面上，按 **[!UICONTROL 一下工具]** 列中的「建立」。
 
 1. 從「建 **[!UICONTROL 立報表]** 」頁面，選擇您要建立的報表，然後按一下「下 **[!UICONTROL 一步」]**。
