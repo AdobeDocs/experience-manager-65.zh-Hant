@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '827'
+ht-degree: 0%
 
 ---
 
@@ -51,10 +54,10 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 以下資訊來自設定過程：
 
-* **資料中心URL**:下拉式清單，以選擇由您的帳戶代表所識別的生產資料中心。
-* **預設報表套裝**:輸入預設報表套裝的名稱。
-* **消費者金鑰**:輸入消費者金鑰。
-* **秘密**:輸入密碼。
+* **資料中心URL**: 下拉式清單，以選擇由您的帳戶代表所識別的生產資料中心。
+* **預設報表套裝**: 輸入預設報表套裝的名稱。
+* **消費者金鑰**: 輸入消費者金鑰。
+* **秘密**: 輸入密碼。
 * 選擇 **提交**。
 
 準備發佈例項：
@@ -72,7 +75,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ### 複製加密密鑰 {#replicate-the-crypto-key}
 
-消費者金鑰和機密金鑰會加密。 為了正確加密／解密密鑰，主Granite Crypto密鑰在所有AEM實例上必須相同。
+消費者金鑰和機密金鑰會加密。 為了正確加密／解密密鑰，所有AEM實例上的主Granite Crypto密鑰必須相同。
 
 按照複製加密密 [鑰中的說明操作](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
 
@@ -96,7 +99,7 @@ ASRP必須被識別為所有作者和發佈實例上的公用商店。
 
 * 從主菜單導航到「工 **[!UICONTROL 具」>「操作」>「複製]**」。
 * 選擇 **激活樹**
-* **開始路徑**:瀏覽至 `/etc/socialconfig/srpc/`
+* **開始路徑**: 瀏覽至 `/etc/socialconfig/srpc/`
 * 僅取消選 **擇已修改**
 * 選取「啟 **動」**
 
