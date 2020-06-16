@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '1893'
+ht-degree: 1%
 
 ---
 
@@ -72,6 +75,7 @@ source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
          * UGC從未複製
          * UGC僅可在輸入AEM例項或叢集上顯示
       * 預設為JSRP
+
    針對啟 **[用功能](/help/communities/overview.md#enablement-community)**
 
    * [安裝和配置FFmpeg](/help/communities/ffmpeg.md)
@@ -84,7 +88,7 @@ source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 
 
-## 最新版本 {#latest-releases}
+## Latest Releases {#latest-releases}
 
 AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communities的更新](/help/release-notes/release-notes.md#experiencemanagercommunities)，請 [參閱AEM 6.5發行說明](/help/release-notes/release-notes.md#communities-release-notes.html)。
 
@@ -102,8 +106,8 @@ AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communitie
 
 兩個社區功能使用MySQL資料庫：
 
-* 若要 [啟用](/help/communities/enablement.md) :錄制SCORM活動和學員
-* 針對 [DSRP](/help/communities/dsrp.md) :儲存使用者產生的內容(UGC)
+* 若要 [啟用](/help/communities/enablement.md) : 錄制SCORM活動和學員
+* 針對 [DSRP](/help/communities/dsrp.md) : 儲存使用者產生的內容(UGC)
 
 MySQL連接器必須單獨獲得和安裝。
 
@@ -118,7 +122,7 @@ MySQL連接器必須單獨獲得和安裝。
 
    * 例如，https://localhost:4502/system/console/bundles
    * select **`Install/Update`**
-   * 瀏覽……若要選取從下載的ZIP封存解壓縮的套件
+   * 瀏覽…… 若要選取從下載的ZIP封存解壓縮的套件
    * 檢查* Oracle Corporation的MySQLcom.mysql.jdbc* JDBC驅動程式是否處於活動狀態，如果沒有，則啟動它（或檢查日誌）
 
 1. 如果在配置JDBC後在現有部署上安裝，則通過從Web控制台中保存JDBC配置將JDBC重新綁定到新連接器：
@@ -132,7 +136,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 有關安裝捆綁的詳細資訊，請參閱「 [Web控制台](/help/sites-deploying/web-console.md#bundles) 」頁。
 
-#### 範例：已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
+#### 範例： 已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
 
 ![](/help/communities/assets/chlimage_1-125.png)
 
@@ -147,7 +151,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 **安裝SCORM套件**
 
 1. 從Package [Share安裝2.3.7版的cq-social-scorm-package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg)。
-1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行它，以建立升級的scormEngineDB模式。
+1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行該實例，以建立升級的scormEngineDB模式。
 1. 從「 `/content/communities/scorm/RecordResults` https://」新增CSRF篩選器中的「排除的路徑」屬性<hostname>:<port>/system/console/configMgr&#39;。
 
 #### SCORM記錄 {#scorm-logging}
@@ -198,9 +202,9 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 通用商店支援在發佈環境中協調和分析UGC，同時不需要復 [制](/help/communities/sync.md) UGC。
 
-* [社群內容商店](/help/communities/working-with-srp.md) :討論AEM社群的SRP儲存選項
+* [社群內容商店](/help/communities/working-with-srp.md) : 討論AEM社群的SRP儲存選項
 
-* [建議的拓撲](/help/communities/topologies.md) :根據使用案例和SRP選擇討論要使用的拓撲
+* [建議的拓撲](/help/communities/topologies.md) : 根據使用案例和SRP選擇討論要使用的拓撲
 
 ## 升級 {#upgrading}
 
@@ -244,7 +248,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 * 在作者上訪問複製控制台
 
-   * 從全域導覽：工 **具、部署、複製、作者代理**
+   * 從全域導覽： **工具、部署、複製、作者代理**
 
 * 請對兩個代理執行相同的流程：
 
@@ -308,7 +312,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
    * 導覽至資料夾，例如
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * 複製hmac和主檔案
+   * 複製hmac和主節點檔案
 
 
 
@@ -323,7 +327,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 
 >[!CAUTION]
 >
->如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請 [聯絡客戶服務](https://helpx.adobe.com/marketing-cloud/contact-support.html)。
+>如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請 [聯絡客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
 #### 儲存庫複製 {#repository-replication}
 
