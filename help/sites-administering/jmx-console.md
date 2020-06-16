@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
+source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+workflow-type: tm+mt
+source-wordcount: '4989'
+ht-degree: 1%
 
 ---
 
@@ -28,29 +31,29 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 管理運行、完成、過時和失敗的工作流實例的操作。
 
-* 網域：com.adobe.granite.workflow
-* 類型：維護
+* 網域： com.adobe.granite.workflow
+* 類型： 維護
 
 >[!NOTE]
 >
 >如需其他 [工作流程管理工具](/help/sites-administering/workflows-administering.md) ，以及可能的工作流程例項狀態說明，請參閱工作流程主控台。
 
-### 作業 {#operations}
+### 運作 {#operations}
 
 **listRunningWorkflowsPerModel** 列出每個工作流模型正在運行的工作流實例數。
 
-* 引數：nown
-* 傳回值：包含Count和ModelId列的表格式資料。
+* 引數： nown
+* 傳回值： 包含Count和ModelId列的表格式資料。
 
 **listCompletedWorkflowsPerModel** 列出每個工作流模型的已完成工作流實例數。
 
-* 引數：nown
-* 傳回值：包含Count和ModelId列的表格式資料。
+* 引數： nown
+* 傳回值： 包含Count和ModelId列的表格式資料。
 
 **returnWorkflowQueueInfo** 列出已處理和已排入處理佇列的工作流程項目的相關資訊。
 
-* 引數：nown
-* 傳回值：包含下列欄的表格資料：
+* 引數： nown
+* 傳回值： 包含下列欄的表格資料：
 
    * 工作
    * 佇列名稱
@@ -65,8 +68,8 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 **returnWorkflowJobTopicInfo** 列出按主題組織的工作流作業的處理資訊。
 
-* 引數：nown
-* 傳回值：包含下列欄的表格資料：
+* 引數： nown
+* 傳回值： 包含下列欄的表格資料：
 
    * 主題名稱
    * 平均處理時間
@@ -80,28 +83,28 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 * 引數:
 
-   * 模型：要查詢的模型ID。 要查看所有工作流模型的失敗工作流實例計數，請不指定任何值。 ID是指向模型節點的路徑，例如：
+   * 模型： 要查詢的模型ID。 要查看所有工作流模型的失敗工作流實例計數，請不指定任何值。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 傳回值：失敗的工作流程例項數。
+* 傳回值： 失敗的工作流程例項數。
 
 **returnFailedWorkflowCountPerModel** 顯示每個工作流模型失敗的工作流實例數。
 
-* 引數：沒有。
-* 傳回值：包含「計數」和「模型ID」欄的表格式資料。
+* 引數： 沒有。
+* 傳回值： 包含「計數」和「模型ID」欄的表格式資料。
 
 **terminateFailedInstances** 終止失敗的工作流實例。 您可以終止所有失敗實例，或僅終止特定模型的失敗實例。 （可選）您可以在終止實例後重新啟動實例。 您也可以測試操作，以查看結果，而不實際執行操作。
 
 * 引數:
 
-   * 重新啟動實例：（可選）指定值，以在 `true` 終止實例後重新啟動實例。 預設值會導致終止 `false` 的工作流實例不重新啟動。
-   * 乾跑：（可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
-   * 型號：（可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的失敗實例的模型。 ID是指向模型節點的路徑，例如：
+   * 重新啟動實例： （可選）指定值，以在 `true` 終止實例後重新啟動實例。 預設值會導致終止 `false` 的工作流實例不重新啟動。
+   * 乾跑： （可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
+   * 型號： （可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的失敗實例的模型。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 傳回值：關於終止的實例的表資料，包含以下列：
+* 傳回值： 關於終止的實例的表資料，包含以下列：
 
    * 發起人
    * InstanceId
@@ -114,12 +117,12 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 * 引數:
 
-   * 乾跑：（可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
-   * 型號：（可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的失敗工作項目的模型。 ID是指向模型節點的路徑，例如：
+   * 乾跑： （可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
+   * 型號： （可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的失敗工作項目的模型。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 傳回值：重試失敗工作項目的表格資料，包括下列：
+* 傳回值： 重試失敗工作項目的表格資料，包括下列：
 
    * 發起人
    * InstanceId
@@ -132,13 +135,13 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 * 引數:
 
-   * 型號：（可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的工作流實例的模型。 ID是指向模型節點的路徑，例如：
+   * 型號： （可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的工作流實例的模型。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 工作流程開始後的天數：要清除的工作流實例的年齡（以天為單位）。
-   * 乾跑：（可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
+   * 工作流程開始後的天數： 要清除的工作流實例的年齡（以天為單位）。
+   * 乾跑： （可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
 
-* 傳回值：有關已清除的活動工作流實例的表格式資料，包括以下列：
+* 傳回值： 有關已清除的活動工作流實例的表格式資料，包括以下列：
 
    * 發起人
    * InstanceId
@@ -151,59 +154,59 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 * 引數:
 
-   * 型號：（可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的工作流實例的模型。 ID是指向模型節點的路徑，例如：
+   * 型號： （可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的工作流實例的模型。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 傳回值：過時的工作流程例項數。
+* 傳回值： 過時的工作流程例項數。
 
-**restartStaleWorkflows** 重新啟動過時的工作流程例項。 您可以重新啟動所有過時實例，或僅重新啟動特定模型的過時實例。 您也可以測試操作，以查看結果，而不實際執行操作。
+**restartStaleWorkflows** Restarts stale workflow實例。 您可以重新啟動所有過時實例，或僅重新啟動特定模型的過時實例。 您也可以測試操作，以查看結果，而不實際執行操作。
 
 * 引數:
 
-   * 型號：（可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的過時實例的模型。 ID是指向模型節點的路徑，例如：
+   * 型號： （可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的過時實例的模型。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 乾跑：（可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
+   * 乾跑： （可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
 
-* 傳回值：已重新啟動的工作流實例清單。
+* 傳回值： 已重新啟動的工作流實例清單。
 
 **fetchModelList** 列出所有工作流模型。
 
-* 引數：nown
-* 傳回值：用於標識包括ModelId和ModelName列的工作流模型的表格資料。
+* 引數： nown
+* 傳回值： 用於標識包括ModelId和ModelName列的工作流模型的表格資料。
 
 **countRunningWorkflows** 返回正在運行的工作流實例數。 您可以檢索所有工作流模型或特定模型的運行實例數。
 
 * 引數:
 
-   * 型號：（可選）傳回執行中例項數的模型ID。 指定不要模型，以傳回所有工作流程模型的執行中例項數。 ID是指向模型節點的路徑，例如：
+   * 型號： （可選）傳回執行中例項數的模型ID。 指定不要模型，以傳回所有工作流程模型的執行中例項數。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 傳回值：正在運行的工作流實例數。
+* 傳回值： 正在運行的工作流實例數。
 
 **countCompletedWorkflows** 返回已完成的工作流實例數。 您可以檢索所有工作流模型或特定模型的已完成實例數。
 
 * 引數:
 
-   * 型號：（可選）傳回完成例項數的模型ID。 指定不要模型，以傳回所有工作流程模型的已完成例項數。 ID是指向模型節點的路徑，例如：
+   * 型號： （可選）傳回完成例項數的模型ID。 指定不要模型，以傳回所有工作流程模型的已完成例項數。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 傳回值：已完成的工作流實例數。
+* 傳回值： 已完成的工作流實例數。
 
 **purgeCompleted** 從儲存庫中刪除特定年齡的已完成工作流的記錄。 定期使用此操作，在您大量使用工作流時最大限度地減少儲存庫的大小。 您可以清除所有模型的已完成實例，或僅清除特定模型的實例。 您可以選擇性地測試工序以查看結果，而無需實際執行工序。
 
 * 引數:
 
-   * 型號：（可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的工作流實例的模型。 ID是指向模型節點的路徑，例如：
+   * 型號： （可選）應用操作的模型的ID。 指定不要將操作應用於所有工作流模型的工作流實例的模型。 ID是指向模型節點的路徑，例如：
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * 工作流程完成後的天數：工作流實例已處於完成狀態的天數。
-   * 乾跑：（可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
+   * 工作流程完成後的天數： 工作流實例已處於完成狀態的天數。
+   * 乾跑： （可選）指定值，以 `true` 查看操作的結果，而不實際執行操作。 預設值 `false` 將執行操作。
 
-* 傳回值：有關已清除的已完成工作流實例的表格式資料，包括以下列：
+* 傳回值： 有關已清除的已完成工作流實例的表格式資料，包括以下列：
 
    * 發起人
    * InstanceId
@@ -216,8 +219,8 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 有關CRX儲存庫的資訊
 
-* 網域：com.adobe.granite
-* 類型：儲存庫
+* 網域： com.adobe.granite
+* 類型： 儲存庫
 
 ### 屬性 {#attributes}
 
@@ -253,10 +256,10 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
    <td>identifier.stability</td>
    <td>指示不可引用節點標識符的穩定性。 可以使用下列值：
     <ul>
-     <li>identifier.stability.indugent.duration:識別碼不會變更。</li>
-     <li>identifier.stability.method.duration:識別碼可在方法呼叫之間變更。</li>
-     <li>identifier.stability.save.duration:標識符在保存／刷新週期中不會更改。</li>
-     <li>identifier.stability.session.duration:識別碼在作業期間不會變更。</li>
+     <li>identifier.stability.indugent.duration: 識別碼不會變更。</li>
+     <li>identifier.stability.method.duration: 識別碼可在方法呼叫之間變更。</li>
+     <li>identifier.stability.save.duration: 標識符在保存／刷新週期中不會更改。</li>
+     <li>identifier.stability.session.duration: 識別碼在作業期間不會變更。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -296,7 +299,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
    <td><p>true表示jcr:score偽屬性可用於包含jcrfn:contains（在XPath中）或CONTAINS（在SQL中）函式的XPath和SQL查詢，以執行全文搜索。</p> </td>
   </tr>
   <tr>
-   <td>option.simple.version.supported</td>
+   <td>option.simple.versioning.supported</td>
    <td>true表示儲存庫支援簡單的版本控制。 使用簡單的版本控制，儲存庫會維護節點的一系列連續版本。</td>
   </tr>
   <tr>
@@ -360,7 +363,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
    <td>儲存庫群集的標識符。</td>
   </tr>
   <tr>
-   <td>query.stored.querys.supported</td>
+   <td>query.stored.queries.supported</td>
    <td>true表示儲存庫支援儲存查詢。</td>
   </tr>
   <tr>
@@ -369,7 +372,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
   </tr>
   <tr>
    <td>node.type.management.inheritance</td>
-   <td><p>指示對節點類型繼承的儲存庫支援級別。 可以使用下列值：</p> <p>node.type.management.inheritance.minimal:主節點類型的註冊僅限於僅具有nt:base作為超類型的節點類型。 混合節點類型的配準被限制為沒有超類型的。</p> <p>node.type.management.inheritance.single:主節點類型的註冊限於具有一個超級類型的節點類型。 混合節點類型的配準被限制為具有最多一個超類型的節點類型。</p> <p><br /> node.type.management.inheritance.multiple:主節點類型可以註冊為一個或多個超類型。 Mixin節點類型可以用零個或多個超類型進行註冊。</p> </td>
+   <td><p>指示對節點類型繼承的儲存庫支援級別。 可以使用下列值：</p> <p>node.type.management.inheritance.minimal: 主節點類型的註冊僅限於僅具有nt:base作為超類型的節點類型。 混合節點類型的配準被限制為沒有超類型的。</p> <p>node.type.management.inheritance.single: 主節點類型的註冊限於具有一個超級類型的節點類型。 混合節點類型的配準被限制為具有最多一個超類型的節點類型。</p> <p><br /> node.type.management.inheritance.multiple: 主節點類型可以註冊為一個或多個超類型。 Mixin節點類型可以用零個或多個超類型進行註冊。</p> </td>
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
@@ -403,9 +406,9 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
    <td>query.joins</td>
    <td><p>查詢中連接的支援級別。 可以使用下列值：</p>
     <ul>
-     <li>query.joins.none:不支援連接。 查詢可以使用一個選擇器。</li>
-     <li>query.joins.inner:支援內連接。</li>
-     <li>query.joins.inner.outer:支援內連接和外連接。</li>
+     <li>query.joins.none: 不支援連接。 查詢可以使用一個選擇器。</li>
+     <li>query.joins.inner: 支援內連接。</li>
+     <li>query.joins.inner.outer: 支援內連接和外連接。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -429,7 +432,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
    <td>true表示儲存庫支援具有相同名稱的同級節點（具有相同父代的節點）。</td>
   </tr>
   <tr>
-   <td>node.type.management.residument.definitions.supported</td>
+   <td>node.type.management.residual.definitions.supported</td>
    <td>true表示儲存庫支援具有剩餘定義的名稱屬性。 支援時，項目定義的名稱屬性可以是星號("*")。</td>
   </tr>
   <tr>
@@ -453,7 +456,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
    <td>儲存庫實施的JCR規範的名稱。</td>
   </tr>
   <tr>
-   <td>option.version.supported</td>
+   <td>option.versioning.supported</td>
    <td>true表示儲存庫支援完整的版本控制。</td>
   </tr>
   <tr>
@@ -473,7 +476,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
    <td>true表示儲存庫支援活動。 活動是一組在合併到另一個工作區的工作區中執行的更改。</td>
   </tr>
   <tr>
-   <td>node.type.management.multivalued.properties受支援</td>
+   <td>node.type.management.multivalued.properties.supported</td>
    <td>true表示儲存庫支援的節點屬性可以具有零或多個值。</td>
   </tr>
   <tr>
@@ -503,11 +506,11 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 **BackupResult** 當前備份的狀態。 可以使用下列值：
 
-* 正在進行備份：當前正在執行備份。
-* 備份已取消：備份已取消。
-* 備份完成，但出現錯誤：備份期間發生錯誤。 錯誤資訊提供了有關原因的資訊。
-* 備份已完成：備份成功。
-* 目前未執行備份：沒有正在進行的備份。
+* 正在進行備份： 當前正在執行備份。
+* 備份已取消： 備份已取消。
+* 備份完成，但出現錯誤： 備份過程中出錯。 錯誤資訊提供了有關原因的資訊。
+* 備份已完成： 備份成功。
+* 目前未執行備份： 沒有正在進行的備份。
 
 唯讀.
 
@@ -525,34 +528,34 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 **ClusterNodeId** 儲存庫群集的此節點的標識符。 唯讀.
 
-### 作業 {#operations-1}
+### 運作 {#operations-1}
 
 **createWorkspace** 在此儲存庫中建立工作區。
 
 * 引數:
 
-   * 名稱：表示新工作區名稱的字串值。
+   * 名稱： 表示新工作區名稱的字串值。
 
-* 傳回值：nown
+* 傳回值： nown
 
 **runDataStoreGarbageCollection** 在儲存庫節點上執行廢棄項目收集。
 
 * 引數:
 
-   * 刪除：指示是否刪除未使用的儲存庫項的布爾值。 值true會刪除未使用的節點和屬性。 值false會掃描所有節點，但不會刪除任何節點。
+   * 刪除： 指示是否刪除未使用的儲存庫項的布爾值。 值true會刪除未使用的節點和屬性。 值false會掃描所有節點，但不會刪除任何節點。
 
-* 傳回值：nown
+* 傳回值： nown
 
 **stopDataStoreGarbageCollection** 停止執行中的資料儲存廢棄項目收集。
 
-* 引數：nown
-* 傳回值：目前狀態的字串表示法
+* 引數： nown
+* 傳回值： 目前狀態的字串表示法
 
 **startBackup** 備份ZIP檔案中的儲存庫資料。
 
 * 引數:
 
-   * `target`:（可選）一 `String` 個值，它表示要在其中存檔儲存庫資料的ZIP檔案或目錄的名稱。 若要使用ZIP檔案，請加入ZIP檔案副檔名。 要使用目錄，請不包括檔案副檔名。
+   * `target`: （可選）一 `String` 個值，它表示要在其中存檔儲存庫資料的ZIP檔案或目錄的名稱。 若要使用ZIP檔案，請加入ZIP檔案副檔名。 要使用目錄，請不包括檔案副檔名。
 
       要執行增量備份，請指定以前用於備份的目錄。
 
@@ -560,55 +563,55 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
       當您未指定值時，會使用預 `backup-currentdate.zip` 設值，其 `currentdate` 中為格式 `yyyyMMdd-HHmm`。
 
-* 傳回值：nown
+* 傳回值： nown
 
 **cancelBackup** 停止當前備份進程，並刪除為存檔資料而建立的臨時存檔。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **blockRepositoryWrites** 對儲存庫資料的更改進行阻止。 所有儲存庫備份偵聽程式都會收到該塊的通知。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **unlockRepositoryWrites** 從儲存庫中刪除該塊。 所有儲存庫備份偵聽程式都會收到刪除塊的通知。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **startTarOptimization** 使用tarOptimizationDelay的預設值啟動TAR檔案優化過程。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **stopTarOptimization** Stops TAR file optimization.
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
-**tarIndexMerge** 合併所有TAR集的頂部索引檔案。 頂級索引檔案是具有不同主要版本的檔案。 例如，以下檔案將合併到檔案index_3_1.tar中：index_1_1.tar、index_2_0.tar、index_3_0.tar。 已合併的檔案將被刪除（在上例中，將刪除index_1_1.tar、index_2_0.tar和index_3_0.tar）。
-
-* 引數:
-
-   * `background`:一個布爾值，指示是否在後台運行操作，以便在執行期間使用Web控制台。 值true在後台運行操作。
-
-* 傳回值：nown
-
-**bemocClusterMaster** 將此儲存庫節點設定為群集的主節點。 如果尚未主實例，此命令將停止當前主實例的偵聽器，並在當前節點上啟動主監聽器。 然後，此節點將設定為主節點並重新啟動，導致所有從節點連接到此實例。
-
-* 引數：nown
-* 傳回值：nown
-
-**joinCluster** 將此儲存庫作為從節點添加到群集中。 您必須提供使用者名稱和密碼才能進行驗證。 連接使用基本驗證。 安全憑證在傳送至伺服器之前，先經過Base-64編碼。
+**tarIndexMerge** 合併所有TAR集的頂部索引檔案。 頂級索引檔案是具有不同主要版本的檔案。 例如，以下檔案將合併到檔案index_3_1.tar中： index_1_1.tar、index_2_0.tar、index_3_0.tar。 已合併的檔案將被刪除（在上例中，將刪除index_1_1.tar、index_2_0.tar和index_3_0.tar）。
 
 * 引數:
 
-   * `master`:一個字串值，它代表運行主資料庫節點的電腦的IP地址或電腦名。
-   * `username`:用於向群集驗證的名稱。
-   * `password`:用於驗證的密碼。
+   * `background`: 一個布爾值，指示是否在後台運行操作，以便在執行期間使用Web控制台。 值true在後台運行操作。
 
-* 傳回值：nown
+* 傳回值： nown
+
+**bemocClusterMaster** 將此儲存庫節點設定為群集的主節點。 如果尚未是主實例，則此命令將停止當前主實例的偵聽器，並在當前節點上啟動主實例的偵聽器。 然後，此節點將設定為主節點並重新啟動，導致群集中的所有其他節點（即由主節點控制的節點）連接到此實例。
+
+* 引數： nown
+* 傳回值： nown
+
+**joinCluster** 將此儲存庫作為由群集主節點控制的節點添加到群集中。 您必須提供使用者名稱和密碼才能進行驗證。 連接使用基本驗證。 安全憑證在傳送至伺服器之前，先經過Base-64編碼。
+
+* 引數:
+
+   * `master`: 一個字串值，它代表運行主資料庫節點的電腦的IP地址或電腦名。
+   * `username`: 用於向群集驗證的名稱。
+   * `password`: 用於驗證的密碼。
+
+* 傳回值： nown
 
 **traversalCheck** Traverses（遍歷）和（可選）修正從特定節點開始的子樹中的不一致。 這在持久性管理器文檔中有詳細說明。
 
@@ -620,7 +623,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 * 網域: `com.adobe.granite`
 * 類型: `TimeSeries`
-* 名稱：來自 `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum類的下列值之一：
+* 名稱： 來自 `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum類的下列值之一：
 
    * BUNDLE_CACHE_ACCESS_COUNTER
    * BUNDLE_CACHE_MISS_AVERAGE
@@ -649,17 +652,17 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 為報告的每個統計類型提供以下屬性：
 
-* ValuePerSecond:最後一分鐘的測量值每秒。 唯讀.
-* ValuePerMinute:前一小時的每分鐘測量值。 唯讀.
-* ValuePerHour:上週的每小時測量值。 唯讀.
-* ValuePerWeek:過去三年的每週測量值。 唯讀.
+* ValuePerSecond: 最後一分鐘的測量值每秒。 唯讀.
+* ValuePerMinute: 前一小時的每分鐘測量值。 唯讀.
+* ValuePerHour: 上週的每小時測量值。 唯讀.
+* ValuePerWeek: 過去三年的每週測量值。 唯讀.
 
 ## 資料庫查詢統計資料 {#repository-query-stats}
 
 關於儲存庫查詢的統計資訊。
 
-* 網域：com.adobe.granite
-* 類型：QueryStat
+* 網域： com.adobe.granite
+* 類型： QueryStat
 
 ### 屬性 {#attributes-2}
 
@@ -671,26 +674,26 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 **PopularQuerysQueueSize** PopularQuerys清單中的查詢數上限。 讀寫。
 
-### 作業 {#operations-2}
+### 運作 {#operations-2}
 
 **clearSlowQuerysQueue** 從SlowQuerys清單中移除所有查詢。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **clearPopularQuerysQueue** 從PopularQuerys清單中移除所有查詢。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 ## 複寫代理程式 {#replication-agents}
 
 監視每個複製代理的服務。 建立複製代理時，該服務會自動出現在JMX控制台中。
 
-* **** 網域：com.adobe.granite.replication
-* **** 類型：代理
-* **** 名稱：無值
-* **** 屬性：{id=&quot;*Name*&quot;}，其中 *Name* 是代理Name屬性的值。
+* **網域：** com.adobe.granite.replication
+* **類型：** 代理
+* **名稱：** 無值
+* **屬性：** {id=&quot;*Name*&quot;}，其中 *Name* 是代理Name屬性的值。
 
 ### 屬性 {#attributes-3}
 
@@ -698,8 +701,8 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 **有效** ：一個布爾值，指示代理是否正確配置：
 
-* `true`:有效的配置。
-* `false` :配置包含錯誤。
+* `true`: 有效的配置。
+* `false` : 配置包含錯誤。
 
 唯讀.
 
@@ -711,14 +714,14 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 **QueueBlocked** ：一個布爾值，它指示隊列是否存在且被阻止：
 
 * `true`: 已封鎖. 自動重試擱置中。
-* `false`:未阻止或不存在。
+* `false`: 未阻止或不存在。
 
 唯讀.
 
 **QueuePaused** ：一個布林值，指示作業隊列是否暫停：
 
-* `true`:暫停（暫停）
-* `false`:未暫停或不存在。
+* `true`: 暫停（暫停）
+* `false`: 未暫停或不存在。
 
 讀寫。
 
@@ -732,25 +735,25 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 **QueueLastProcessTime** ：一個日期值，用於指示上一個作業何時完成。 唯讀.
 
-### 作業 {#operations-3}
+### 運作 {#operations-3}
 
 **queueForceRetry** 對於被阻止的隊列，向隊列發出retry命令。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **queueClear** 從隊列中刪除所有作業。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 ## Sling Engine {#sling-engine}
 
 提供有關HTTP請求的統計資料，以便您監控SlingRequestProcessor服務的效能。
 
-* 網域：org.apache.sling
-* 類型：引擎
-* 屬性：{service=RequestProcessor}
+* 網域： org.apache.sling
+* 類型： 引擎
+* 屬性： {service=RequestProcessor}
 
 ### 屬性 {#attributes-4}
 
@@ -764,16 +767,16 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 **MeanRequestDurationMsec** 處理請求所需的平均時間量。 平均值是使用統計資料上次重設後的所有請求計算
 
-### 作業 {#operations-4}
+### 運作 {#operations-4}
 
 **resetStatistics** 將所有統計資訊設定為零。 在您需要分析特定時段內的請求處理效能時，重設統計資料。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **id** 包ID的字串表示法。
 
-**installed** A boolean value that indicated the package is installed:
+**installed** A boolean value that indicated wheth the package is installed:
 
 * `true`: 已安裝.
 * `false`: 未安裝.
@@ -789,10 +792,10 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 有關啟動過程和快速啟動啟動程式的資訊。
 
-* 網域：com.adobe.granite.quickstart
-* 類型：啟動程式
+* 網域： com.adobe.granite.quickstart
+* 類型： 啟動程式
 
-### 作業 {#operations-5}
+### 運作 {#operations-5}
 
 **日誌**
 
@@ -800,18 +803,18 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 引數:
 
-* p1:代 `String` 表要顯示的消息的值。 下圖顯示調用p1 `log` 值的結果 `this is a log message`。
+* p1: 代 `String` 表要顯示的消息的值。 下圖顯示調用p1 `log` 值的結果 `this is a log message`。
 
 ![launcheruilog](assets/launcheruilog.png)
 
-* 傳回值：nown
+* 傳回值： nown
 
 **startupFinished**
 
 調用伺服器啟動器的startupFinished方法。 方法會嘗試在網頁瀏覽器中開啟「歡迎」頁面。
 
-* 引數：nown
-* 傳回值：nown
+* 引數： nown
+* 傳回值： nown
 
 **startupProgress**
 
@@ -819,9 +822,9 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 * 引數:
 
-   * p1:浮點值，以分數表示啟動程式完成的程度。 值應介於零和一之間。 例如，0.3表示完成30%。
+   * p1: 浮點值，以分數表示啟動程式完成的程度。 值應介於零和一之間。 例如，0.3表示完成30%。
 
-* 傳回值：沒有。
+* 傳回值： 沒有。
 
 ![launcherprogress](assets/launcherprogress.png)
 
@@ -885,8 +888,8 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 JMX控制台顯示有關伺服器上運行的若干服務的資訊：
 
-* 屬性：服務屬性，例如組態或執行時期資料。 屬性可以是只讀或讀寫。
-* 操作：可在服務上調用的命令。
+* 屬性： 服務屬性，例如組態或執行時期資料。 屬性可以是只讀或讀寫。
+* 操作： 可在服務上調用的命令。
 
 與OSGi服務一起部署的MBeans會將服務屬性和操作暴露到控制台。 MBean決定公開的屬性和操作，以及屬性是只讀還是讀寫。
 
@@ -899,7 +902,7 @@ JMX主控台的首頁包含服務表。 表中的每一行都代表由MBean公�
 
 ## 使用外部JMX應用程式進行監控 {#using-external-jmx-applications-for-monitoring}
 
-CRX允許外部應用程式通過 [Java管理擴展(JMX)與受管Bean(MBean)交互](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html)。 使用通用控制台(如 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) )或特定於域的監控應用程式，可以獲取和設定CRX配置和屬性，以及監視效能和資源使用情況。
+CRX允許外部應用程式通過 [Java管理擴展(JMX)與受管Bean(MBean)交互](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html)。 使用通用控制台(如 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) )或特定於域的監視應用程式，可獲取和設定CRX配置和屬性，以及監視效能和資源使用情況。
 
 ### 使用JConsole連接到CRX {#using-jconsole-to-connect-to-crx}
 
