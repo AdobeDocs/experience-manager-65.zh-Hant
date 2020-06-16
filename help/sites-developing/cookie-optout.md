@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+workflow-type: tm+mt
+source-wordcount: '576'
+ht-degree: 1%
 
 ---
 
@@ -49,7 +52,7 @@ granite.utils用戶端 [程式庫資料夾](/help/sites-developing/clientlibs.md
 
 `<ui:includeClientLib categories="granite.utils" />`
 
-例如，下列javascript函式會決定在寫入COOKIE之前是否允許使用COOKIE_NAME Cookie:
+例如，下列javascript函式會決定是否允許在寫入COOKIE_NAME Cookie之前使用COOKIE_NAME Cookie:
 
 ```
 function writeCookie(value){
@@ -104,11 +107,11 @@ Cookie名稱的陣列。
 
 ### maySetCookie(cookieName)函式 {#maysetcookie-cookiename-function}
 
-判斷特定Cookie是否可用於使用者的瀏覽器。 此函式等同於搭配使用 `isOptedOut` 函式，以判斷函式傳回的清單中是否包含指定 `getWhitelsitCookieNames` 的Cookie。
+判斷特定Cookie是否可用於使用者的瀏覽器。 此函式等同於搭配使用 `isOptedOut` 函式，以判斷函式傳回的清單中是否包含指定 `getWhitelistCookieNames` 的Cookie。
 
 **參數**
 
-* cookieName:字串。 Cookie的名稱。
+* cookieName: 字串。 Cookie的名稱。
 
 **退貨**
 
