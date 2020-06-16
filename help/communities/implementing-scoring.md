@@ -12,9 +12,9 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
 workflow-type: tm+mt
-source-wordcount: '2896'
+source-wordcount: '2897'
 ht-degree: 2%
 
 ---
@@ -355,7 +355,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
      <li>數字=分數</li>
      <li>| =垂直線字元(U+007C)</li>
      <li>路徑=標籤映像資源的完整路徑</li>
-    </ul> 字串必須依序排列，如此數字值就會增加，數字和路徑之間不應出現空格。<br /> 範例項目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+    </ul> 字串必須依序排列，如此數字值就會增加，數字和路徑之間不應出現空白字元。<br /> 範例項目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>badgingType</td>
