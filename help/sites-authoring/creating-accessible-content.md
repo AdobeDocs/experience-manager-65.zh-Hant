@@ -2,7 +2,7 @@
 title: 建立適用於Adobe Experience Manager的可存取內容（WCAG 2.1符合性）
 description: 使用AEM協助讓殘障人士存取和使用網頁內容
 translation-type: tm+mt
-source-git-commit: cb7df7301364eb1ce3a1ca376256d2cd5afcb2c8
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
 source-wordcount: '13956'
 ht-degree: 4%
@@ -10,7 +10,7 @@ ht-degree: 4%
 ---
 
 
-# Creating Accessible Content (WCAG 2.1 Conformance) {#creating-accessible-content-wcag-conformance}
+# 建立可存取的內容 (符合 WCAG 2.1) {#creating-accessible-content-wcag-conformance}
 
 World Wide Wec Consortium [(World Wide Wec Consortium](https://www.w3.org/TR/WCAG/))的一個工作組起草的《Web內容無障礙環境准則》(WCAG)2.1 [](https://www.w3.org/Consortium/activity#Accessibility_Guidelines_Working_Group)，由一套技術獨立的准則和成功標準組成，以幫助殘疾人能夠訪問和使用Web內容。
 
@@ -73,7 +73,7 @@ World Wide Wec Consortium [(World Wide Wec Consortium](https://www.w3.org/TR/WCA
 >
 >有些現成可用的核心元件(例如 **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)**)不提供將替代文字說明新增至個別影像的**Alternative Text **（替代文字）欄位，不過整個元件有**Label **field(**[](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** AccessibilityTab)。
 >
->When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 AEM需要依預 **設填入「替代文字** 」欄位。 如果影像純粹是裝飾性的，而不需要替代文字，則可以 **檢查「影像是裝飾** 」選項。
 
@@ -283,7 +283,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 ### 適應性(1.3) {#adaptable}
 
-[准則1.3適應性： 建立可以以不同方式呈現的內容（例如更簡單的版面），而不會遺失資訊或結構。](https://www.w3.org/TR/WCAG/#adaptable)
+[准則1.3適應性： 建立可以以不同方式呈現的內容（例如更簡單的版面配置），而不會遺失資訊或結構。](https://www.w3.org/TR/WCAG/#adaptable)
 
 本准則涵蓋支援以下人員的必要要求：
 
@@ -299,7 +299,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 #### 用途——資訊與關係(1.3.1) {#purpose-info-and-relationships}
 
-許多殘障人士使用的輔助技術都仰賴結構資訊，以有效顯示或瞭解 *內容* 。 此結構資訊可以採用頁標題、表行和列標題以及清單類型的形式。 例如，螢幕閱讀程式可讓使用者從標題到標題瀏覽頁面。 但是，當頁面內容只看起來是透過視覺樣式而非基礎HTML來呈現結構時，輔助技術就無法使用結構資訊，限制了其支援更輕鬆瀏覽的能力。
+許多殘障人士使用的輔助技術都仰賴結構資訊，以有效顯示或瞭解 *內容* 。 此結構資訊可以採用頁標題、表行和列標題以及清單類型的形式。 例如，螢幕閱讀程式可讓使用者從標題到標題瀏覽頁面。 不過，當頁面內容只看起來是透過視覺樣式而非基礎HTML來呈現結構時，輔助技術就無法使用結構資訊，限制了其支援更輕鬆瀏覽的能力。
 
 此成功標準的存在是為了確保此類結構資訊是透過HTML或其他編碼技術以程式設計方式提供，讓瀏覽器和輔助技術可存取並運用這些資訊。
 
@@ -330,7 +330,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構具有語義意義的網頁�
    * 元 `scope` 素的屬性用 `<th>` 於指示儲存格代表特定列或特定欄的標題。 類似的方法是在複雜表格中使用標題和id屬性，其中資料儲存格可與一或多個標題相關聯。
    >[!NOTE]
    >
-   >By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes).
+   >By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes).
 
    要開啟「表 **」(Table** )對話框 **，可以在其中選擇「表** 屬性」(Table Properties)頁籤：
 
@@ -719,7 +719,7 @@ AEM可讓您使用適當的HTML元素，輕鬆建構具有語義意義的網頁�
 #### 詳細資訊——暫停、停止、隱藏(2.2.2) {#more-information-pause-stop-hide}
 
 * [瞭解成功標準2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
-* [如何符合成功標準2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
+* [如何符合成功標準2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
 
 ### 癲癇與身體反應(2.3) {#seizures-and-physcial-reactions}
 
@@ -927,7 +927,7 @@ John Smith’s publications
 
 * 成功標準2.4.7
 * AA級
-* 焦點可見： 任何鍵盤可操作的用戶介面具有操作模式，其中鍵盤焦點指示器是可見的。
+* 焦點可見： 任何鍵盤可操作的用戶介面都具有操作模式，其中鍵盤焦點指示器是可見的。
 
 #### 用途——焦點可見(2.4.7) {#purpose-focus-visible}
 
@@ -1026,7 +1026,7 @@ John Smith’s publications
 >
 >在包含不同語言的名稱或城市，或在使用預設語言中已司空見慣的借詞或片語(例如英文中的 *幸災樂禍* )時，不必遵循此成功標準。
 
-要使用適當的語言添加span元素，可以在RTE的源編輯模式中手動編輯HTML標籤，以便其讀取如上。 或者， `lang` 系統管理員可將屬性包含在RTE中(請參 [閱Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes))。
+要使用適當的語言添加span元素，可以在RTE的源編輯模式中手動編輯HTML標籤，以便其讀取如上。 或者， `lang` 系統管理員可將屬性包含在RTE中(請參 [閱Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 
 #### 詳細資訊——部件語言(3.1.2) {#more-information-language-of-parts}
 
@@ -1190,7 +1190,7 @@ Where image buttons are used (for example, the **Image Button** component of the
 
 In the WKND project, where there is a group of related controls, such as **Radio Group**, a title may be needed for the group, as well as individual controls. 在AEM中新增一組選項按鈕時，「標題 **」欄位會提供此群組標題，而個別標題會指定為選項按鈕(** Items ****)。
 
-不過，群組標題和選項按鈕本身之間沒有程式化關聯。範本編輯人員必須將標題包住必要 `fieldset` 和 `legend` 標籤，才能建立此關聯，而這只能透過編輯頁面原始碼來完成。Alternatively, a system administrator can add support for these elements so that they appear in the **Field Properties** dialog (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+不過，群組標題和選項按鈕本身之間沒有程式化關聯。範本編輯人員必須將標題包住必要 `fieldset` 和 `legend` 標籤，才能建立此關聯，而這只能透過編輯頁面原始碼來完成。Alternatively, a system administrator can add support for these elements so that they appear in the **Field Properties** dialog (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 ###### 表單的其他考量事項 {#additional-considerations-for-forms}
 
