@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '449'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +53,7 @@ source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 * **[!UICONTROL 自動套用UGC貢獻限制]**
 
-   如果勾選，會在使用者註冊為社群成員時，自動設定其貢獻限制。 這反映在社區成員的配置檔案中，可以從成員控制台啟用／禁 [用](members.md)。 新成員的電子郵件位址來自白名單網域，不受限制。
+   如果勾選，會在使用者註冊為社群成員時，自動設定其貢獻限制。 這反映在社區成員的配置檔案中，可以從成員控制台啟用／禁 [用](members.md)。 從允許的網域清單中取得電子郵件地址的新成員永遠不受限制。
 
    預設為未勾選。
 
@@ -68,11 +71,11 @@ source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 * **[!UICONTROL 網域]**
 
-   一或多個電子郵件網域的白名單。 選擇+表徵圖以進行其他條目。
+   一或多個電子郵件網域的允許清單。 選擇+表徵圖以進行其他條目。
 
-   當自動套用UGC貢獻限制時，在白名單網域中擁有電子郵件地址的使用者不受影響。 例如，如果網域 `mycompany.com` 新增至網域清單，則永遠不會限制具有電子郵件地址 `me@mycompany.com` 的成員張貼。
+   自動套用UGC貢獻限制時，網域允許清單中包含電子郵件地址的使用者不受影響。 例如，如果網域 `mycompany.com` 新增至網域清單，則永遠不會限制具有電子郵件地址 `me@mycompany.com` 的成員張貼。
 
-   預設為空白清單。
+   預設為空的allowlist。
 
 * **[!UICONTROL 訊息收件者]**
 
@@ -82,4 +85,4 @@ source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
    預設為無訊息收件者。
 
-注意：預設設定會在一小時內限制10篇貼文。
+注意： 預設設定會在一小時內限制10篇貼文。
