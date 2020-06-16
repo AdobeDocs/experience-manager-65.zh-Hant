@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '1210'
+ht-degree: 1%
 
 ---
 
@@ -61,19 +64,19 @@ source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
    * **[!UICONTROL mongoDB URI]**
 
-      *預設*:mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+      *預設*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL mongoDB 資料庫]**
 
-      *預設*:社區
+      *預設*: 社區
 
    * **[!UICONTROL mongoDB UGC 集合]**
 
-      *預設*:內容
+      *預設*: 內容
 
    * **[!UICONTROL mongoDB 附件集合]**
 
-      *預設*:附件
+      *預設*: 附件
 
 * **[!UICONTROL SolrConfiguration]**
 
@@ -88,10 +91,12 @@ source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
       * **[!UICONTROL Solr URL]**在獨立模式下與Solr通訊的URL。
 如果在SolrCloud模式中執行，請留空。
-         *預設值*:https://127.0.0.1:8983/solr/
+
+         *預設值*: https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr系列]**Solr系列名稱。
-         *預設值*:collection1
+
+         *預設值*: collection1
 
 * 選擇「提 **[!UICONTROL 交」]**
 
@@ -102,13 +107,13 @@ source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ### MongoDB複製副本集 {#mongodb-replica-set}
 
-對於生產環境，強烈建議設定複製副本集，即實施主從複製和自動故障切換的MongoDB伺服器群集。
+對於生產環境，強烈建議設定複製副本集，即實施主次複製和自動故障切換的MongoDB伺服器群集。
 
 要瞭解有關複製副本集的更多資訊，請訪問MongoDB的 [Replication](https://docs.mongodb.org/manual/replication/) 文檔。
 
 要使用複製副本集並瞭解如何定義應用程式與MongoDB實例之間的連接，請訪問MongoDB的 [Connection String URI格式文檔](https://docs.mongodb.org/manual/reference/connection-string/) 。
 
-#### 用於連接到複製副本集的示例Url {#example-url-for-connecting-to-a-replica-set}
+#### 用於連接到複製副本集的示例Url  {#example-url-for-connecting-to-a-replica-set}
 
 ```shell
 # Example url for:
@@ -161,7 +166,7 @@ MSRP必須被識別為所有作者和發佈例項上的公用商店。
 
 在安裝新配置檔案或修復損壞的Solr索引時，有一個HTTP端點用於為MSRP的Solr重新編製索引。
 
-MongoDB是MSRP的真 *相* ;只需對MongoDB執行備份。
+MongoDB是MSRP的真 *相* ; 只需對MongoDB執行備份。
 
 整個UGC樹可以重新編製索引，或僅對*path *data參數指定的特定子樹進行索引。
 
@@ -182,11 +187,12 @@ MongoDB是MSRP的真 *相* ;只需對MongoDB執行備份。
 
 cURL -u *簽名* -d *data**reindex-url*
 
-*signin* = administrator-id:password例如：admin:admin
+*signin* = administrator-id:password例如： admin:admin
 
 *data* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
-*size* =每個操作要重新索引的UGC條目數`/content/usergenerated/asi/mongo/`
+*size* =每個操作要重新索引的UGC條目數
+`/content/usergenerated/asi/mongo/`
 
 *path* = UGC樹的根位置以重新索引
 
@@ -194,7 +200,8 @@ cURL -u *簽名* -d *data**reindex-url*
    `/etc/socialconfig/srpc/defaultconfiguration`
 * 若要將索引限制為某些UGC，請指定 `asipath`
 
-*reindex-url* = SRP重新索引的端點`http://localhost:4503/services/social/datastore/mongo/reindex`
+*reindex-url* = SRP重新索引的端點
+`http://localhost:4503/services/social/datastore/mongo/reindex`
 
 >[!NOTE]
 >
@@ -238,7 +245,7 @@ GitHub上提供開放原始碼工具，可用於：
 
 如果日誌中出現以下錯誤，表示Solr架構檔案配置不正確。
 
-#### JsonMappingException:未定義的欄位provider_id {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException: 未定義的欄位provider_id {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id
