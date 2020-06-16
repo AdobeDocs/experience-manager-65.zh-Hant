@@ -1,6 +1,6 @@
 ---
-title: 建立可存取的內容（WCAG 2.0符合性）
-seo-title: 建立可存取的內容（WCAG 2.0符合性）
+title: 建立可存取的內容 (符合 WCAG 2.0)
+seo-title: 建立可存取的內容 (符合 WCAG 2.0)
 description: WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身心障礙人士存取與使用網路內容。
 seo-description: WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身心障礙人士存取與使用網路內容。
 page-status-flag: de-activated
@@ -11,7 +11,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 translation-type: tm+mt
-source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
 source-wordcount: '9241'
 ht-degree: 8%
@@ -19,7 +19,7 @@ ht-degree: 8%
 ---
 
 
-# Creating Accessible Content (WCAG 2.0 Conformance){#creating-accessible-content-wcag-conformance}
+# 建立可存取的內容 (符合 WCAG 2.0){#creating-accessible-content-wcag-conformance}
 
 >[!CAUTION]
 >
@@ -29,7 +29,7 @@ ht-degree: 8%
 >
 >* [AEM與網頁協助工具准則](/help/managing/web-accessibility.md)
 >* [WCAG 2.1 快速指南](/help/managing/qg-wcag.md)
->* [建立可存取的內容（WCAG 2.1符合性）](/help/sites-authoring/creating-accessible-content.md)
+>* [建立可存取的內容 (符合 WCAG 2.1)](/help/sites-authoring/creating-accessible-content.md)
 
 
 WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身心障礙人士存取與使用網路內容。
@@ -40,6 +40,7 @@ WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身�
 >
 >* 我們 [的WCAG 2.0快速指南](/help/managing/qg-wcag.md) ，以取得詳細資訊
 >* [設定Rich Text Editor，以製作可存取的內容](/help/sites-administering/rte-accessible-content.md)
+
 >
 
 
@@ -64,6 +65,7 @@ WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身�
 >
 >* 《 [WCAG 2.0准則》的簡稱](https://www.w3.org/TR/WCAG20/#guidelines)。
 >* WCAG 2.0指南中用 [於協助與WCAG網站交互參照的編號](https://www.w3.org/TR/WCAG20/#guidelines) 。
+
 >
 
 
@@ -94,7 +96,7 @@ WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身�
 
 >[!NOTE]
 >
->有些現成可用的元件(例如 **Carousel** 和 **Slideshow** )不提供將替代文字說明新增至影像的方式。When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>有些現成可用的元件(例如 **Carousel** 和 **Slideshow** )不提供將替代文字說明新增至影像的方式。When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 「 **Image** 」(影像 **)元件對話框的「** Advanced **image properties」（高級影像屬性）頁籤中提供「Alt Text** 」（替代文本）欄位：
 
@@ -380,7 +382,7 @@ W3C [草稿： HTML5提供實用文字替代項目的技巧](https://dev.w3.org/
 
 #### 用途——資訊與關係(1.3.1) {#purpose-info-and-relationships}
 
-許多殘障人士使用的輔助技術都依賴結構資訊，以有效顯示或輸出內容。 此結構資訊可以採用頁標題、表行和列標題以及清單類型的形式。 例如，螢幕閱讀程式可讓使用者從標題到標題瀏覽頁面。 但是，當頁面內容只看起來是透過視覺樣式而非基礎HTML來呈現結構時，輔助技術就無法使用結構資訊，限制了其支援更輕鬆瀏覽的能力。
+許多殘障人士使用的輔助技術都依賴結構資訊，以有效顯示或輸出內容。 此結構資訊可以採用頁標題、表行和列標題以及清單類型的形式。 例如，螢幕閱讀程式可讓使用者從標題到標題瀏覽頁面。 不過，當頁面內容只看起來是透過視覺樣式而非基礎HTML來呈現結構時，輔助技術就無法使用結構資訊，限制了其支援更輕鬆瀏覽的能力。
 
 此成功標準的存在，是為了確保此類結構性資訊是透過HTML提供，讓瀏覽器和輔助技術能夠存取並運用這些資訊。
 
@@ -408,12 +410,14 @@ AEM可讓您輕鬆使用適當的HTML元素來建構網頁。 在RTE（文本元
 
    * 反白標示您要強調的文字；
    * Click on the **B** icon (for &lt;strong>) or the **I** icon (for &lt;em>) shown within the **Properties** panel (make sure that HTML is selected).
+
    >[!NOTE]
    >
    >標準AEM安裝中的RTE已設定為使用：
    >
    >* &lt;b>代表&lt;strong>
    * &lt;i> for &lt;em>
+
    它們實際上是相同的，但&lt;strong>和&lt;em>較好，因為它們是語義正確的html。 您的開發團隊可以設定RTE，以便在開發專案例項時使用&lt;strong>和&lt;em>（而非&lt;b>和&lt;i>）。
 
 * **使用清單**:您可以使用HTML來指定三種不同的清單類型：
@@ -438,6 +442,7 @@ AEM可讓您輕鬆使用適當的HTML元素來建構網頁。 在RTE（文本元
    * 表 `<tr>` 中每一行的元素
    * 每 `<th>` 行和列標題的元素
    * 每個 `<td>` 資料儲存格的元素
+
    >[!NOTE]
    表應使用表組 **件** 。 雖然表可以在Text元件中建立，但不建議這樣做。
 
@@ -446,13 +451,15 @@ AEM可讓您輕鬆使用適當的HTML元素來建構網頁。 在RTE（文本元
    * 元 `<caption>` 素用於提供表格的可見標題。 字幕預設會出現在表格的正中，但可使用CSS適當定位。 標題以寫程式方式與表關聯，因此它是提供內容介紹的有用方法。
    * 元 `<h3 class="summary">` 素提供有視覺的使用者可看到的摘要，協助無視的使用者更輕鬆地瞭解表格中顯示的資訊。 在使用複雜或非常規表格版面時（此屬性不會顯示在瀏覽器中，只會讀出至輔助技術），此功能特別有用。
    * 元 `scope` 素的屬性用 `<th>` 於指示儲存格代表特定列或特定欄的標題。 類似的方法是在複雜表格中使用標題和id屬性，其中資料儲存格可與一或多個標題相關聯。
+
    >[!NOTE]
-   By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+   By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
    添加表時 **，可以使** 用對話框 **配置表** 屬性。
 
    * 適當的 **標題**。
    * 理想情況下，請移除「寬 **度」、「邊框高度」、「邊框高度」、「邊框高度**」、「單元格間距」、「單元格間距 **」、「單元格**************&#x200B;間距」的預設值。因為這些屬性可以在全局樣式表中設定。
+
    ![表屬性對話框。](assets/chlimage_1-20a.png)
 
    然後，您可以使用 **儲存格屬性** ，選擇儲存格是資料或標題儲存格，如果是標題儲存格，則選擇它與列或欄或兩者皆相關：
@@ -693,7 +700,7 @@ Logotypes（屬於標誌或品牌名稱的文字）被視為必要項目。
 #### 詳細資訊——暫停、停止、隱藏(2.2.2) {#more-information-pause-stop-hide}
 
 * [瞭解成功標準2.2.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
-* [如何符合成功標準2.4.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause)
+* [如何符合成功標準2.2.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause)
 
 ### 緝獲量(2.3) {#seizures}
 
@@ -887,7 +894,7 @@ John Smith’s publications
 >[!NOTE]
 在包含不同語言的名稱或城市，或在使用預設語言中已司空見慣的借詞或片語(例如英文中的 *幸災樂禍* )時，不必遵循此成功標準。
 
-要使用適當的語言添加span元素，可以在RTE的源編輯模式中手動編輯HTML標籤，以便其讀取如上。 或者， `lang` 系統管理員可將屬性包含在RTE中(請參 [閱Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes))。
+要使用適當的語言添加span元素，可以在RTE的源編輯模式中手動編輯HTML標籤，以便其讀取如上。 或者， `lang` 系統管理員可將屬性包含在RTE中(請參 [閱Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 
 #### 詳細資訊——部件語言(3.1.2) {#more-information-language-of-parts}
 
@@ -928,7 +935,7 @@ John Smith’s publications
 
 ![新增項目至選項組。 群組標題是「聯絡我的方式」-在「標題」欄位中定義。](assets/chlimage_1-24a.png)
 
-不過，群組標題和選項按鈕本身之間沒有程式化關聯。範本編輯人員必須將標題包住必要 `fieldset` 和 `legend` 標籤，才能建立此關聯，而這只能透過編輯頁面原始碼來完成。Alternatively, a system administrator can add support for these elements so that they appear in the **Field Properties** dialog (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+不過，群組標題和選項按鈕本身之間沒有程式化關聯。範本編輯人員必須將標題包住必要 `fieldset` 和 `legend` 標籤，才能建立此關聯，而這只能透過編輯頁面原始碼來完成。Alternatively, a system administrator can add support for these elements so that they appear in the **Field Properties** dialog (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### 表單的其他考量事項 {#additional-considerations-for-forms}
 
