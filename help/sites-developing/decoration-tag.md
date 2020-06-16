@@ -1,27 +1,16 @@
 ---
 title: 裝飾標籤
-seo-title: 裝飾標籤
 description: 當轉譯網頁中的元件時，可產生HTML元素，並將轉譯的元件包裝在其中。 對於開發人員，AEM提供清晰簡單的邏輯，來控制包含元件的裝飾標籤。
-seo-description: 當轉譯網頁中的元件時，可產生HTML元素，並將轉譯的元件包裝在其中。 對於開發人員，AEM提供清晰簡單的邏輯，來控制包含元件的裝飾標籤。
-uuid: db796a22-b053-48dd-a50c-354dead7e8ec
-contentOwner: user
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: components
-content-type: reference
-discoiquuid: 8cb9fd6e-5e1f-43cd-8121-b490dee8c2be
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: be1c0e21216b1014a36f88d13557f6e1d7a87c0a
+workflow-type: tm+mt
+source-wordcount: '878'
+ht-degree: 1%
 
 ---
 
 
 # 裝飾標籤{#decoration-tag}
-
->[!NOTE]
->
->本文中描述的裝飾標籤行為和選項都以 [AEM 6.3 CFP1為基礎](https://helpx.adobe.com/experience-manager/release-notes--aem-6-3-cumulative-fix-pack.html)。
->
->CFP1之前6.3中裝飾標籤的行為與AEM 6.2類似。
 
 當轉譯網頁中的元件時，可產生HTML元素，並將轉譯的元件包裝在其中。 這主要有兩個目的：
 
@@ -48,12 +37,12 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 下列屬性和節點可套用至元件，以控制其裝飾標籤的行為：
 
-* **`cq:noDecoration {boolean}`**:此屬性可新增至元件，而true值會強制AEM不在元件上產生任何包裝函式元素。
+* **`cq:noDecoration {boolean}`:**此屬性可新增至元件，而true值會強制AEM不在元件上產生任何包裝函式元素。
 
-* **`cq:htmlTag`**節點：此節點可以添加到元件下，並具有以下屬性：
+* **`cq:htmlTag`節點：**此節點可以添加到元件下，並具有以下屬性：
 
-   * **`cq:tagName {String}`**:這可用來指定自訂HTML標籤，以用於封裝元件，而非預設DIV元素。
-   * **`class {String}`**:這可用來指定要新增至包裝函式的css類別名稱。
+   * **`cq:tagName {String}`:**這可用來指定自訂HTML標籤，以用於封裝元件，而非預設DIV元素。
+   * **`class {String}`:**這可用來指定要新增至包裝函式的css類別名稱。
    * 其他屬性名稱將會新增為HTML屬性，其字串值與提供的相同。
 
 ## 指令碼控制項 {#script-controls}
@@ -74,7 +63,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 您可以完全控制來自HTL指令碼的包裝函式標籤及其相關邏輯的行為。
 
-如需在HTL中開發的詳細資訊，請參閱 [HTL檔案](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)。
+如需在HTL中開發的詳細資訊，請參閱 [HTL檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)。
 
 #### 決策樹 {#decision-tree}
 
@@ -106,7 +95,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       @class = "component-two"
 ```
 
-#### 使用案例1:包含要重複使用程式碼的元件 {#use-case-include-a-component-for-code-reuse}
+#### 使用案例1: 包含要重複使用程式碼的元件 {#use-case-include-a-component-for-code-reuse}
 
 最典型的使用案例是，元件由於程式碼重複使用的原因而包含其他元件。 在這種情況下，所包含的元件不需要使用其專屬的工具列和對話方塊進行編輯，因此不需要包裝函式，而會忽略元 `cq:htmlTag` 件的介面。 這可視為預設行為。
 
@@ -120,7 +109,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 例如，一個元件包括用於顯示影像的核心影像元件，通常在這種情況下，該元件使用合成資源，該合成資源包括通過將表示元件將擁有的所有屬性的Map對象傳遞到資料透明資源來包括虛擬子元件。
 
-#### 使用案例2:包含可編輯的元件 {#use-case-include-an-editable-component}
+#### 使用案例2: 包含可編輯的元件 {#use-case-include-an-editable-component}
 
 另一個常見使用案例是容器元件包含可編輯的子元件時，例如「版面容器」。 在這種情況下，每個包含的子代都必須有一個包裝函式，才能讓編輯器正常運作（除非在屬性中明確停用）。 `cq:noDecoration`
 
@@ -134,7 +123,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 **`<article class="component-two">Hello World!</article>`**
 
-#### 使用案例3:自訂行為 {#use-case-custom-behavior}
+#### 使用案例3: 自訂行為 {#use-case-custom-behavior}
 
 HTL可以明確提供以下資訊，因此可以很容易地實現任意數量的複雜情況：
 
