@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
 workflow-type: tm+mt
 source-wordcount: '2765'
 ht-degree: 2%
@@ -243,7 +243,7 @@ For example, enter *communities*
 
 * 選擇「確 **定」**
 
-![chlimage_1-181](assets/chlimage_1-181.png)
+![chlimage_1-101](assets/chlimage_1-181.png)
 
 ### 建立框架 {#create-framework}
 
@@ -308,7 +308,7 @@ For example, enter *communities*
 
 1. 選擇發 **布**
 
-![chlimage_1-186](assets/chlimage_1-185.png)
+![chlimage_1-185](assets/chlimage_1-185.png)
 
 Analytic雲端服務與架構現已完成。 在啟用此Analytics服務後，社群網站建立後，即會定義映射。
 
@@ -386,7 +386,7 @@ Analytics會自動用於數個Communities功能。
 
 在啟用Analytics並選取雲端設定架構時儲存社群網站後，AEM變數會自動對應至以evar1和event1開頭的Analytics eVar和事件，並遞增1。
 
-如果使用現有報表套裝來映射evar1到evar11和event1到event7中的任何變數，則必須重新 [](#modifying-analytics-variable-mapping) 映射AEM變數並還原原始映射。
+如果使用現有報表套裝來映射evar1到evar11和event1到event7中的任何變數，則必須重新 [](#modifying-analytics-variable-mapping) 映射AEM變數並還原原始對應。
 
 以下是遵循快速入門教學課程後的預 [設映射範例](/help/communities/getting-started-enablement.md):
 
@@ -599,7 +599,7 @@ Analytics會自動用於數個Communities功能。
 
 ### 複製加密密鑰 {#replicate-the-crypto-key}
 
-Adobe Analytics認證會加密。 為方便作者與發佈者之間複製或傳輸加密的分析憑證，所有AEM例項都必須共用相同的主加密金鑰。
+Adobe Analytics認證會加密。 為方便作者與發佈者之間複製或傳輸加密的分析憑證，所有AEM例項都必須共用相同的主要加密金鑰。
 
 要執行此操作，請按照複製加密密 [鑰中的說明操作](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
 
