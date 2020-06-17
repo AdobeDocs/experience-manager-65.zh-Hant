@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f3781d9a-421a-446e-8b49-40744b9ef58e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3cbbad3ce9d93a353f48fc3206df989a8bf1991a
+workflow-type: tm+mt
+source-wordcount: '969'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +26,11 @@ Adobe的AEM團隊與開放原始碼專案 [NotSoSerial](https://github.com/kante
 
 此套件中包含的代理jar是Adobe修改的NotSoSerial散發。
 
-NotSoSerial是Java層級問題的Java層級解決方案，並非AEM專屬。 它會將預檢檢查加入嘗試反序列化物件的動作。 此檢查將針對防火牆類型的白名單和／或黑名單測試類名。 由於預設黑名單中的類數有限，這不太可能對您的系統或代碼產生影響。
+NotSoSerial是Java層級問題的Java層級解決方案，並非AEM專屬。 它會將預檢檢查加入嘗試反序列化物件的動作。 此檢查將根據防火牆樣式的允許清單和／或阻止清單來測試類名。 由於預設區塊清單中的類別數目有限，因此這不太可能對您的系統或程式碼造成影響。
 
-預設情況下，代理將對當前已知的易受攻擊類執行黑名單檢查。 此黑名單旨在保護您免受使用此類漏洞的當前利用漏洞的攻擊清單的侵害。
+預設情況下，代理將對當前已知的易受攻擊類執行塊清單檢查。 此塊清單旨在保護您免受使用此類漏洞的當前利用漏洞的攻擊清單的攻擊。
 
-按照本文「配置代理」部分中的說明，可以配 [置黑名單和白名單](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent) 。
+您可依照本文「設定代理」一節中的指示，來設定 [區塊清單和允許清單](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent) 。
 
 代理旨在幫助緩解最新已知的易受攻擊類。 如果您的專案正在反序列化不受信任的資料，它仍可能容易受到拒絕服務攻擊、記憶體不足攻擊，以及未知的未來還原序列化利用攻擊。
 
@@ -46,7 +49,7 @@ Adobe正式支援Java 6、7和8，但我們瞭解NotSoSerial也支援Java 5。
 
 ## 在應用程式伺服器上安裝代理 {#installing-the-agent-on-application-servers}
 
-應用程式伺服器的AEM標準散發中未包含NotSoSerial代理。 不過，您可以從AEM jar散發中擷取它，並搭配您的應用程式伺服器設定使用：
+NotSoSerial代理未包含在應用程式伺服器的AEM標準散發中。 不過，您可以從AEM jar散發中擷取它，並搭配您的應用程式伺服器設定使用：
 
 1. 首先，下載AEM快速入門檔案並解壓縮：
 
@@ -66,7 +69,7 @@ Adobe正式支援Java 6、7和8，但我們瞭解NotSoSerial也支援Java 5。
 
 ## 配置代理 {#configuring-the-agent}
 
-預設配置適用於大多數安裝。 這包括已知遠程執行易受攻擊類的黑名單和包的白名單，其中對受信任資料的還原序列化應該相對安全。
+預設配置適用於大多數安裝。 這包括已知遠程執行易受攻擊類的塊清單和允許包清單，其中對受信任資料的還原序列化應該相對安全。
 
 防火牆配置是動態的，可隨時通過以下方式進行更改：
 
@@ -80,15 +83,15 @@ Adobe正式支援Java 6、7和8，但我們瞭解NotSoSerial也支援Java 5。
    >* `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
 
-此配置包含白名單、黑名單和還原序列化記錄。
+此配置包含允許清單、塊清單和還原序列化記錄。
 
-**白名單**
+**允許列出**
 
-在白名單區段中，這些類別或封裝前置詞將允許用於還原序列化。 請務必注意，如果要反序列化自己的類，則需要將類或包添加到此白名單中。
+在允許清單部分中，這些是允許用於還原序列化的類或包前置詞。 請務必注意，如果要反序列化自己的類，則需要將類或包添加到此允許清單中。
 
-**黑名單**
+**塊清單**
 
-在黑名單部分中是不允許反序列化的類。 這些類的初始集僅限於發現易受遠程執行攻擊的類。 在列入白名單的條目之前應用黑名單。
+在塊清單部分中是不允許反序列化的類。 這些類的初始集僅限於發現易受遠程執行攻擊的類。 在允許列出任何條目之前，將應用塊清單。
 
 **診斷記錄**
 
@@ -110,7 +113,7 @@ Adobe正式支援Java 6、7和8，但我們瞭解NotSoSerial也支援Java 5。
 
 >[!NOTE]
 >
->如果您新增 `org.apache.commons.collections.functors` 至白名單，則健康狀況檢查永遠會失敗。
+>如果您新 `org.apache.commons.collections.functors` 增至允許清單，則健康狀況檢查永遠會失敗。
 
 ## 處理動態代理載入時的錯誤 {#handling-errors-with-dynamic-agent-loading}
 
@@ -139,4 +142,3 @@ Adobe正式支援Java 6、7和8，但我們瞭解NotSoSerial也支援Java 5。
 ## 其他考量事項 {#other-considerations}
 
 如果您正在IBM JVM上執行，請在此位置檢閱有關Java Attach API支援的 [檔案](https://www.ibm.com/support/knowledgecenter/SSSTCZ_2.0.0/com.ibm.rt.doc.20/user/attachapi.html)。
-
