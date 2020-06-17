@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: b01f6d3726fd6aa06ffedaf10dfde9526479a2a3
+workflow-type: tm+mt
+source-wordcount: '2880'
+ht-degree: 0%
 
 ---
 
@@ -82,8 +85,8 @@ Oak查詢引擎支援下列語言：
 1. 將節點命 **名為PropertyIndex**，並將節點類型設 **置為oak:QueryIndexDefinition**
 1. 為新節點設定以下屬性：
 
-   * **** 類型： `property` （字串類型）
-   * **** propertyNames: `jcr:uuid` （名稱類型）
+   * **類型：**  `property` （字串類型）
+   * **propertyNames:**  `jcr:uuid` （類型名稱）
    此特定示例將為屬性 `jcr:uuid` 編製索引，其作業是公開其所連接節點的通用唯一標識符(UUID)。
 
 1. 儲存變更。
@@ -119,8 +122,8 @@ AEM 6中提供以Apache Lucene為基礎的全文索引器。
 1. 將節點命 **名為LuceneIndex** ，並將節點類型設 **置為oak:QueryIndexDefinition**
 1. 將以下屬性添加到節點：
 
-   * **** 類型： `lucene` （字串類型）
-   * **** 非同步： `async` （字串類型）
+   * **類型：**  `lucene` （字串類型）
+   * **非同步：**  `async` （字串類型）
 
 1. 儲存變更。
 
@@ -129,7 +132,7 @@ Lucene Index具有以下配置選項：
 * 必須指定 **索引類型的type** 屬性必須設定為lucene ****
 * 必須 **設為** async的async屬 **性**。 這會將索引更新程式發送到後台線程。
 * includePropertyTypes **** 屬性，可定義索引中將包含哪些屬性類型子集。
-* 將定 **義屬性名稱的黑名單的excludePropertyNames** 屬性——應從索引中排除的屬性。
+* 將定 **義屬性名稱清單的excludePropertyNames** 屬性——應從索引中排除的屬性。
 * 重新 **索引** 旗標，若設為 **true**，則會觸發完整內容重新索引。
 
 ### Lucene屬性指數 {#the-lucene-property-index}
@@ -146,8 +149,8 @@ select * from [nt:base] where [alias] = '/admin'
 
 為了為上述查詢定義Lucene屬性索引，可以通過在 **oak:index下建立新節點來添加以下定義：**
 
-* **** 名稱： `LucenePropertyIndex`
-* **** 類型： `oak:QueryIndexDefinition`
+* **名稱：** `LucenePropertyIndex`
+* **類型：** `oak:QueryIndexDefinition`
 
 建立節點後，添加以下屬性：
 
@@ -169,7 +172,7 @@ select * from [nt:base] where [alias] = '/admin'
    false (of type Boolean)
    ```
 
-* **** includePropertyNames: `["alias"] (of type String)`
+* **includePropertyNames:** `["alias"] (of type String)`
 
 >[!NOTE]
 >
@@ -205,22 +208,22 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 使用以下屬性將屬性添加到預設節點：
 
-   * **** 名稱： `class`
-   * **** 類型： `String`
-   * **** 值： `org.apache.lucene.analysis.standard.StandardAnalyzer`
+   * **名稱：** `class`
+   * **類型：** `String`
+   * **值：** `org.apache.lucene.analysis.standard.StandardAnalyzer`
    該值是您要使用的分析器類的名稱。
 
    您也可以使用可選字串屬性將分析器設定為與特定lucene版本 `luceneMatchVersion` 一起使用。 與Lucene 4.7搭配使用的有效合成產品為：
 
-   * **** 名稱： `luceneMatchVersion`
-   * **** 類型： `String`
-   * **** 值： `LUCENE_47`
+   * **名稱：** `luceneMatchVersion`
+   * **類型：** `String`
+   * **值：** `LUCENE_47`
    如果 `luceneMatchVersion` 未提供，Oak將使用隨附的Lucene版本。
 
 1. 如果要向Analyzer配置中添加stopwords檔案，可以在具有以下屬性的節點下 `default` 建立新節點：
 
-   * **** 名稱： `stopwords`
-   * **** 類型： `nt:file`
+   * **名稱：** `stopwords`
+   * **類型：** `nt:file`
 
 #### 透過構圖建立分析器 {#creating-analyzers-via-composition}
 
@@ -228,37 +231,37 @@ select * from [nt:base] where [alias] = '/admin'
 
 以此節點結構為例：
 
-* **** 名稱： `analyzers`
+* **名稱：** `analyzers`
 
-   * **** 名稱： `default`
+   * **名稱：** `default`
 
-      * **** 名稱： `charFilters`
-      * **** 類型： `nt:unstructured`
+      * **名稱：** `charFilters`
+      * **類型：** `nt:unstructured`
 
-         * **** 名稱： `HTMLStrip`
-         * **** 名稱： `Mapping`
-      * **** 名稱： `tokenizer`
+         * **名稱：** `HTMLStrip`
+         * **名稱：** `Mapping`
+      * **名稱：** `tokenizer`
 
          * **屬性名稱:** `name`
 
-            * **** 類型： `String`
-            * **** 值： `Standard`
-      * **** 名稱： `filters`
-      * **** 類型： `nt:unstructured`
+            * **類型：** `String`
+            * **值：** `Standard`
+      * **名稱：** `filters`
+      * **類型：** `nt:unstructured`
 
-         * **** 名稱： `LowerCase`
-         * **** 名稱： `Stop`
+         * **名稱：** `LowerCase`
+         * **名稱：** `Stop`
 
-            * **** 屬性名稱： `words`
+            * **屬性名稱：** `words`
 
-               * **** 類型： `String`
-               * **** 值： `stop1.txt, stop2.txt`
-            * **** 名稱： `stop1.txt`
+               * **類型：** `String`
+               * **值：** `stop1.txt, stop2.txt`
+            * **名稱：** `stop1.txt`
 
-               * **** 類型： `nt:file`
-            * **** 名稱： `stop2.txt`
+               * **類型：** `nt:file`
+            * **名稱：** `stop2.txt`
 
-               * **** 類型： `nt:file`
+               * **類型：** `nt:file`
 
 
 
@@ -307,9 +310,9 @@ AEM可與內嵌的Solr伺服器搭配使用，可透過Web Console進行設定�
 1. 開啟CRXDE並以管理員身分登入。
 1. 在 **oak:index下新增名為** oak:QueryIndexDefinition類型之solrlndex **的節點，其****** 屬性如下：
 
-   * **** 類型： `solr`（字串類型）
-   * **** 非同步： `async`（字串類型）
-   * **** 重新索引： `true`（布爾型）
+   * **類型：** `solr`（字串類型）
+   * **非同步：** `async`（字串類型）
+   * **重新索引：** `true`（布爾型）
 
 1. 儲存變更。
 
@@ -368,9 +371,9 @@ AEM也可設定為與遠端Solr伺服器例項搭配使用：
 1. 前往CRXDE，以管理員身分登入。
 1. 在 **oak:index下建立名** 為solrIndex **的新節點**，並設定下列屬性：
 
-   * **** 類型：solr（字串類型）
-   * **** 非同步：async（字串類型）
-   * **** 重新索引：true（布爾型）
+   * **類型：** solr（字串類型）
+   * **非同步：** async（字串類型）
+   * **重新索引：** true（布爾型）
 
 1. 儲存變更。
 
