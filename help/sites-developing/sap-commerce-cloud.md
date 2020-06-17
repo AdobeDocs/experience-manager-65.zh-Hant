@@ -1,8 +1,8 @@
 ---
-title: 使用SAP Commerce cloud進行開發
-seo-title: 使用SAP Commerce cloud進行開發
-description: SAP Commerce cloud整合架構包含具有API的整合層
-seo-description: SAP Commerce cloud整合架構包含具有API的整合層
+title: 使用SAP Commerce Cloud進行開發
+seo-title: 使用SAP Commerce Cloud進行開發
+description: SAP Commerce Cloud整合架構包含具有API的整合層
+seo-description: SAP Commerce Cloud整合架構包含具有API的整合層
 uuid: a780dd17-027a-4a61-af8f-3e2f600524c7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,12 +10,15 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+workflow-type: tm+mt
+source-wordcount: '2331'
+ht-degree: 0%
 
 ---
 
 
-# 使用SAP Commerce cloud進行開發 {#developing-with-sap-commerce-cloud}
+# 使用SAP Commerce Cloud進行開發 {#developing-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -48,7 +51,7 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 
    * 引擎可由服務屬性 `commerceProvider` 區分
 
-* AEM支援 `Resource.adaptTo()` 與 `CommerceService``Product`
+* AEM支援 `Resource.adaptTo()` 與 `CommerceService` `Product`
 
    * 實 `adaptTo` 施會在資源的 `cq:commerceProvider` 層次結構中查找屬性：
 
@@ -65,11 +68,11 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 
 請參閱下列範例：
 
-| `cq:commerceProvider = geometrixx` | 在標準AEM安裝中，需要特定實作；例如，geometrixx範例，其中包含一般API的最小擴充功能 |
+| `cq:commerceProvider = geometrixx` | 在標準AEM安裝中，需要特定實作； 例如，geometrixx範例，其中包含一般API的最小擴充功能 |
 |---|---|
 | `cq:commerceProvider = hybris` | Hybris實現 |
 
-### 例如 {#example}
+### 範例 {#example}
 
 ```shell
 /content/store
@@ -124,7 +127,7 @@ source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
 
 hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作階段ID會從Cookie中的 `JSESSIONID` Hybris傳回，而Cookie需要在後續的Hybris請求時傳送。 為避免將工作階段ID儲存在儲存庫中，會將其編碼在儲存在購物者瀏覽器中的其他Cookie中。 執行下列步驟：
 
-* 在第一次要求時，購物者的要求不會設定Cookie;因此，請求會傳送至hybris例項以建立工作階段。
+* 在第一次要求時，購物者的要求不會設定Cookie; 因此，請求會傳送至hybris例項以建立工作階段。
 * 作業Cookie會從回應中擷取，並編碼為新Cookie(例如 `hybris-session-rest`)，並在對購物者的回應上設定。 需要新Cookie中的編碼，因為原始Cookie僅對特定路徑有效，否則在後續的請求中不會從瀏覽器傳回。 路徑資訊也必須新增至Cookie的值。
 * 在後續的請求中，Cookie會從 `hybris-session-<*xxx*>` Cookie中解碼，並設定在HTTP用戶端上，用來從Hybris請求資料。
 
@@ -190,19 +193,19 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 * 在AEM(c)中啟動頁面需要勾選(b)，而且只有在
 
    * 產品位於產品頁 **面的** 「線上目錄」版本。
-   * 參考的產品可用於其 **他頁面** （例如促銷活動頁面）的線上目錄版本。
+   * 參考的產品可在其他頁 **面** （例如促銷活動頁面）的線上目錄版本中使用。
 
 * 啟動的產品頁面需要存取產品資料的 **線上** (d)版本。
 
 * AEM發佈例項需要存取hybris，才能擷取產品和個人化資料(d)。
 
-### 建築 {#architecture}
+### 架構 {#architecture}
 
 #### 產品和變型的架構 {#architecture-of-product-and-variants}
 
-單一產品可以有多種變化；例如，可能因顏色和／或大小而異。 產品必須定義哪些屬性驅動變化；我們用變 *型軸來定義*。
+單一產品可以有多種變化； 例如，可能因顏色和／或大小而異。 產品必須定義哪些屬性驅動變化； 我們用變 *型軸來定義*。
 
-但是，並非所有屬性都是變型軸。 變化也會影響其他屬性；例如，價格可能取決於規模。 購物者無法選取這些屬性，因此不視為變型軸。
+但是，並非所有屬性都是變型軸。 變化也會影響其他屬性； 例如，價格可能取決於規模。 購物者無法選取這些屬性，因此不視為變型軸。
 
 每個產品和／或變體都由資源表示，因此將1:1映射到儲存庫節點。 由此推論，特定產品和／或變體可以通過其路徑唯一標識。
 
@@ -259,7 +262,7 @@ content
       shirt-l
 ```
 
-最後，不需要使用產品資料。 您可以將所有產品資料放在目錄的參考之下；但是，若不複製所有產品資料，就無法真正擁有多個型錄。
+最後，不需要使用產品資料。 您可以將所有產品資料放在目錄的參考之下； 但是，若不複製所有產品資料，就無法真正擁有多個型錄。
 
 **API**
 
@@ -285,7 +288,7 @@ public interface Product extends Adaptable {
 }
 ```
 
-#### com.adobe.cq.commerce.api.VariantFilter {#com-adobe-cq-commerce-api-variantfilter}
+#### com.adobe.cq.commerce.api.VariantFilter  {#com-adobe-cq-commerce-api-variantfilter}
 
 ```java
 /**
@@ -341,8 +344,8 @@ public class AxisFilter implements VariantFilter {
 
       * 參考，其中產品資料儲存在其他位置：
 
-         * 產品參考包 `productData` 含屬性，其指向產品資料(通常在 `/etc/commerce/products`下)。
-         * 產品資料是分層的；產品屬性繼承自產品資料節點的祖先。
+         * 產品參考包含 `productData` 一個屬性，該屬性指向產品資料(通常在 `/etc/commerce/products`下)。
+         * 產品資料是分層的； 產品屬性繼承自產品資料節點的祖先。
          * 產品參考也可以包含局部屬性，這些屬性會覆寫其產品資料中指定的屬性。
       * 產品本身：
 
@@ -356,7 +359,7 @@ public class AxisFilter implements VariantFilter {
    * 產品介面既代表產品，也代表變型，但相關儲存庫節點是特定的。
    * 產品節點描述產品屬性和變型軸。
 
-#### 例如 {#example-1}
+#### 範例 {#example-1}
 
 ```shell
 + banyan_shirt
@@ -406,7 +409,7 @@ public class AxisFilter implements VariantFilter {
 * 購物車歸 `CommerceSession:`
 
    * 執 `CommerceSession` 行添加／刪除等。
-   * 此外 `CommerceSession` ，還會對購物車執行各種計算。&quot;
+   * 此外 `CommerceSession` ，還會對購物車執行各種計算。 &quot;
 
 * 雖然不直接與購物車相關，但 `CommerceSession` 必須提供目錄定價資訊（因為它擁有定價）
 
@@ -493,7 +496,7 @@ The owns `CommerceSession` the three elements:
 
 >[!NOTE]
 >
->您可以實作運送選擇器；例如：
+>您可以實作運送選擇器； 例如：
 >
 >`yourProject/commerce/components/shippingpicker`:
 >
@@ -531,7 +534,7 @@ The owns `CommerceSession` the three elements:
 
 ![chlimage_1-14](assets/chlimage_1-14a.png)
 
-這可使用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
+這會利用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
 
 #### 搜尋API {#search-api}
 
@@ -543,7 +546,7 @@ The owns `CommerceSession` the three elements:
 
 1. `FacetParamHelper`
 
-   是提供一種靜態方法的實用程式類 `toParams` 別——用於從刻面和一個切 `GET` 換的值清單中生成參數字串。 這在UI端很有用，您需要針對每個Facet的每個值顯示超連結，如此當使用者按一下超連結時，就會切換個別值（例如，如果選取該值，則會從查詢中移除，否則會新增）。 這會處理處理多／單值刻面、覆寫值等所有邏輯。
+   是提供一種靜態方法的實用程式類 `toParams` 別——用於從刻面和一個切 `GET` 換的值清單中生成參數字串。 這在UI端很有用，您需要針對每個Facet的每個值顯示超連結，如此當使用者按一下超連結時，就會切換個別值（例如，如果選取該值，則會從查詢中移除，否則會加入）。 這會處理處理多／單值刻面、覆寫值等所有邏輯。
 
 搜尋API的入口點是傳回 `CommerceService#search` 物件的方 `CommerceResult` 法。 如需此 [主題的詳細資訊](/help/sites-developing/ecommerce.md#api-documentation) ，請參閱API檔案。
 
@@ -555,9 +558,9 @@ AEM與各種電子商務系統之間提供整合。 這需要在不同系統之�
 
    AEM被認為是唯一 *的* Web前端，因此執行 *所有* 。
 
-* 從屬帳戶
+* Hybris帳戶
 
-   AEM會針對每位購物者建立Hybris的奴隸帳戶。 從屬帳戶的使用者名稱與AEM使用者名稱相同。 密碼隨機密碼會自動產生並儲存（加密）至AEM。
+   AEM會針對每位購物者以Hybris建立對應（從屬）帳戶。 此帳戶的使用者名稱與AEM使用者名稱相同。 密碼隨機密碼會自動產生並儲存（加密）至AEM。
 
 #### 預先存在的使用者 {#pre-existing-users}
 
@@ -651,7 +654,7 @@ public interface ImportHandler {
 }
 ```
 
-對於要由匯入工具識別的自訂處理常式，它必須指定 `service.ranking`值大於0的屬性；例如：
+對於要由匯入工具識別的自訂處理常式，它必須指定 `service.ranking`值大於0的屬性； 例如：
 
 ```java
 @Component
