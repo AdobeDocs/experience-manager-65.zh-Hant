@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0849cfdd0e4f9a614c455214e6520ead07ae6da0
+source-git-commit: 474fc122f557f32d34fddd9d35a113431f6ce491
+workflow-type: tm+mt
+source-wordcount: '3805'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 0849cfdd0e4f9a614c455214e6520ead07ae6da0
 
 OSGi「提&#x200B;*供標準化的基元，允許應用程式從可重複使用的小型元件和協作元件中建構。 這些元件可以構成應用程式並部署*&quot;。
 
-這樣可以輕鬆管理捆綁包，因為它們可以單獨停止、安裝和啟動。 互依關係會自動處理。 每個OSGi元件(請參 [見OSGi規範](https://www.osgi.org/Specifications/HomePage))都包含在各種捆綁包中。 使用AEM時，有幾種方法可管理此類組合的組態設定；如需詳 [細資訊](/help/sites-deploying/configuring-osgi.md) ，請參閱設定OSGi。
+這樣可以輕鬆管理捆綁包，因為它們可以單獨停止、安裝和啟動。 互依關係會自動處理。 每個OSGi元件(請參 [見OSGi規範](https://www.osgi.org/Specifications/HomePage))都包含在各種捆綁包中。 使用AEM時，有幾種方法可管理此類組合的組態設定； 如需詳 [細資訊](/help/sites-deploying/configuring-osgi.md) ，請參閱設定OSGi。
 
 下列OSGi組態設定（依照套件列出）與專案實作相關。 並非所有列出的設定都需要調整，有些設定會提及以協助您瞭解AEM的運作方式。
 
@@ -40,7 +43,7 @@ OSGi「提&#x200B;*供標準化的基元，允許應用程式從可重複使用�
 
 >[!NOTE]
 >
->AEM中的特定功能區域可能需要進一步的搭售。 在這些情況下，可在與適當功能相關的頁面上找到配置詳細資訊。
+>AEM中的特定功能區域可能需要進一步的組合。 在這些情況下，可在與適當功能相關的頁面上找到配置詳細資訊。
 
 **AEM Replication Event Listener** Configure:
 
@@ -86,9 +89,9 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 * **最小池大小** 和最 **大池大小**，用於保存事件線程的池大小。
 
 * **隊列大小**，即當池用完時線程隊列的最大大小。
-建議的值是 `-1` 因為這會將佇列設為無限；如果設定了限制，則超出限制時可能會發生損失。
+建議的值是 `-1` 因為這會將佇列設為無限； 如果設定了限制，則超出限制時可能會發生損失。
 
-* 變更這些設定有助於在發生大量事件的情況下提供效能；例如，大量使用AEM DAM或Workflow。
+* 變更這些設定有助於在發生大量事件的情況下提供效能； 例如，大量使用AEM DAM或Workflow。
 * 應使用測試建立藍本的特定值。
 * 這些設定會影響執行個體的效能，因此請勿在沒有理由和適當考量的情況下變更執行個體。
 
@@ -122,7 +125,7 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 * **重試間隔**、最 **大重試次數**、最大並行作業數 **、**&#x200B;確認等待時間 ****，以及其他。
 
-* 更改這些設定可以改進具有大量作業的場景的效能；例如，大量使用AEM DAM和工作流程。
+* 更改這些設定可以改進具有大量作業的場景的效能； 例如，大量使用AEM DAM和工作流程。
 * 應使用測試建立藍本的特定值。
 * 請勿無故變更這些設定，但必須經過適當考慮才變更。
 
@@ -153,11 +156,11 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 * **日誌級別**、日 **志檔案和** 消息格式 **** ，以定義日誌檔案和消息的詳細資訊。
 
-* **Logger** to define the category;例如，僅記錄com.day.cq的記錄。
+* **Logger** to define the category; 例如，僅記錄com.day.cq的記錄。
 
 * 通過使 **用工廠配置**，可以添加任何數量的附加配置，以適應所需的各種日誌級別和類別。
-* 這類配置在開發過程中很有幫助；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
-* 這種配置在生產環境中非常有用；例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
+* 這類配置在開發過程中很有幫助； 例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
+* 這種配置在生產環境中非常有用； 例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
 
 如需詳細資訊，請 [參閱「AEM記錄](/help/sites-deploying/configure-logging.md) 」 [和「Sling記錄」](https://sling.apache.org/site/logging.html)。
 
@@ -168,8 +171,8 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 * The writer can be used by a **Apache Sling Logging Logger Configuration** configuration.
 
-* 這類配置在開發過程中很有幫助；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
-* 這種配置在生產環境中非常有用；例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
+* 這類配置在開發過程中很有幫助； 例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
+* 這種配置在生產環境中非常有用； 例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
 
 如需詳細資訊，請 [參閱「AEM記錄](/help/sites-deploying/configure-logging.md) 」 [和「Sling記錄」](https://sling.apache.org/site/logging.html)。
 
@@ -187,7 +190,7 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 * 哪些http方法應加以篩選
 * 是否允許空的反向連結標題
-* 以及除伺服器主機外還允許的伺服器的白名單。
+* 以及除伺服器主機外允許的伺服器清單。
 
 如需詳細 [資訊，請參閱安全性檢查清單——跨網站偽造要求問題](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) 。
 
@@ -212,13 +215,13 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 * **虛擬URL** ，以定義虛名的URL對應。
 
-* **URL映射** ，用於定義任何別名；例如，從 `/content` 到 `/`。
+* **URL映射** ，用於定義任何別名； 例如，從 `/content` 到 `/`。
 
 * **映射位置**，中外部化的映射器配置 `/etc/map`。
 
 * 使用本地安裝(例如，使用 `https://localhost:4502/system/console/jcrresolver`)確定哪個資源解析程式處於活動狀態。
 
-如需詳細資訊，請參閱： [https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution](https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution)。
+如需詳細資訊，請參閱： [https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution](https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution).
 
 >[!CAUTION]
 >
@@ -236,7 +239,7 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 
 可設定各種參數，包括：
 
-* **執行路徑** (Execution Paths)列出搜索可執行指令碼的路徑；通過配置特定路徑，您可以限制可以執行的指令碼。 如果未配置路徑，則使用預設路徑( `/` = root)，則允許執行所有指令碼。
+* **執行路徑** (Execution Paths)列出搜索可執行指令碼的路徑； 通過配置特定路徑，您可以限制可以執行的指令碼。 如果未配置路徑，則使用預設路徑( `/` = root)，則允許執行所有指令碼。
 如果已配置的路徑值以斜線結尾，則搜索整個子樹。 若沒有這樣的尾隨斜線，則只有在指令碼完全符合時才會執行它。
 
 * **指令碼用戶** -此可選屬性可以指定用於讀取指令碼的儲存庫用戶帳戶。 如果未指定帳戶，則 `admin` 預設會使用使用者。
@@ -248,9 +251,9 @@ This is paired with the [Apache Sling Request Logger](#apacheslingrequestlogger)
 * 定義要 **搜尋的字型路徑** ，以尋找專案特定的字型。
 For example, `/apps/myapp/fonts`.
 
-**Apache HTTP Components Proxy Configuration** （Apache HTTP Client的Apache HTTP用戶端的所有程式碼的Proxy設定），用於建立HTTP時；例如，在複製時。
+**Apache HTTP Components Proxy Configuration** （Apache HTTP Client的Apache HTTP用戶端的所有程式碼的Proxy設定），用於建立HTTP時； 例如，在複製時。
 
-建立新配置時，請勿更改工廠配置，而是使用此處提供的配置管理器為此元件建立新工廠配置： **https://localhost:4502/system/console/configMgr/**。 proxy設定可在 **org.apache.http.proxyconfigurator中使用。**
+建立新配置時，請勿更改工廠配置，而是使用此處提供的配置管理器為此元件建立新工廠配置： **https://localhost:4502/system/console/configMgr/**. proxy設定可在 **org.apache.http.proxyconfigurator中使用。**
 
 >[!NOTE]
 >
@@ -262,7 +265,7 @@ For example, `/apps/myapp/fonts`.
 * **API金鑰**
 * **註冊的URL**
 
-**Adobe Granite HTML Library Manager** Configure this to control handling of client libraries（css或js）;例如，包括如何看待基礎結構。
+**Adobe Granite HTML Library Manager** Configure this to control handling of client libraries（css或js）; 例如，包括如何看待基礎結構。
 
 * 對於生產實例：
 
@@ -337,13 +340,14 @@ AEM中有兩個可用的UI:
 >
 >標準安裝時，觸控最佳化UI為預設UI。
 
-**Adobe Granite SSO驗證處理常式** ：設定單一登入(SSO)詳細資訊；在企業作者設定中通常需要這些功能，通常與LDAP搭配使用。
+**Adobe Granite SSO驗證處理常式** ：設定單一登入(SSO)詳細資訊； 在企業作者設定中通常需要這些功能，通常與LDAP搭配使用。
 
 可使用各種配置屬性：
 
 * **Path**&#x200B;此驗證處理常式作用中的路徑。 如果此參數留空，驗證處理常式會停用。 例如，路徑／會使驗證處理常式用於整個資料庫。
 
-* **服務排名** OSGi框架服務排名值用於指示調用此服務所用的順序。 這是一個值， `int` 其中值越高，表示優先順序越高。
+* **服務排名** OSGi框架服務排名值用於指示調用此服務所用的順序。 這是 
+`int` 值，其中值越高，表示優先順序越高。
 預設值為 `0`.
 
 * **標題名**&#x200B;稱可能包含使用者ID的標題名稱。
@@ -352,7 +356,8 @@ AEM中有兩個可用的UI:
 
 * **參數名**&#x200B;稱可能提供使用者ID之請求參數的名稱。
 
-* **用戶圖**&#x200B;對於選定用戶，從HTTP請求提取的用戶名可以替換為憑據對象中的不同用戶名。 此處定義了映射。 如果使用者名 `admin` 稱出現在地圖的任一側，則會忽略對應。 請注意，字元&quot;=&quot;必須以前導&quot;\&quot;逸出。
+* **用戶圖**&#x200B;對於選定用戶，從HTTP請求提取的用戶名可以替換為憑據對象中的不同用戶名。 此處定義了映射。 如果用戶名 
+`admin` 顯示在地圖的任一側，則會忽略對應。 請注意，字元&quot;=&quot;必須以前導&quot;\&quot;逸出。
 
 * **格式**&#x200B;表示提供用戶ID的格式。 使用：
 
@@ -377,7 +382,7 @@ AEM中有兩個可用的UI:
 
 **第CQ天WCM連結檢查器配置器** 配置：
 
-* **重寫配置清單** ，以指定基於內容的連結檢查器配置的位置清單。 配置可以基於運行模式；這對於區分作者和發佈環境很重要，因為連結檢查器設定可能不同。
+* **重寫配置清單** ，以指定基於內容的連結檢查器配置的位置清單。 配置可以基於運行模式； 這對於區分作者和發佈環境很重要，因為連結檢查器設定可能不同。
 
 **第CQ WCM頁面處理器配置** :
 
@@ -385,7 +390,7 @@ AEM中有兩個可用的UI:
 
 **Adobe頁面印象追蹤** ：針對作者例項設定：
 
-* **sling.auth.requirements**:將此屬性的值設定為 `-/libs/wcm/stats/tracker`
+* **sling.auth.requirements**: 將此屬性的值設定為 `-/libs/wcm/stats/tracker`
 
 >[!CAUTION]
 >
@@ -397,7 +402,7 @@ AEM中有兩個可用的UI:
 
 **Day CQ WCM Page Statistics** For a publish instance configure:
 
-* **傳送資料的URL** ，以設定用來追蹤頁面統計資料的URL（如果追蹤器要求經過發送器，此URL至關重要）;例如，預設值為 `https://localhost:4502/libs/wcm/stats/tracker`。
+* **傳送資料的URL** ，以設定用來追蹤頁面統計資料的URL（如果追蹤器要求經過發送器，此URL至關重要）; 例如，預設值為 `https://localhost:4502/libs/wcm/stats/tracker`。
 
 * **追蹤指令碼** ，可啟用( `true`)或停用( `false`)頁面上包含追蹤指令碼。 預設值為 `false`。
 
@@ -448,7 +453,7 @@ AEM中有兩個可用的UI:
 
 控制CQ重寫器的HTML剖析器。
 
-* **要處理的附加標籤** -您可以添加或刪除要由解析器處理的HTML標籤。 依預設，會處理下列標籤：A,IMG,AREA,FORM,BASE,LINK,SCRIPT,BODY,HEAD。
+* **要處理的附加標籤** -您可以添加或刪除要由解析器處理的HTML標籤。 依預設，會處理下列標籤： A,IMG,AREA,FORM,BASE,LINK,SCRIPT,BODY,HEAD。
 * **保留駝峰大小寫** -依預設，HTML剖析器會將駝峰大小寫的屬性（例如eBay）轉換為小寫（例如ebay）。 您可以關閉此選項以保留駝峰大小寫屬性。 當使用Angular 2等前向框架時，這很有用。
 
 **Day Commons JDBC連接池** ：配置對用作內容源的外部資料庫的訪問。
@@ -457,7 +462,7 @@ AEM中有兩個可用的UI:
 
 **Adobe CQ Media DPS Sessions Service** Manage DPS Sessions for use with Publications。
 
-您尤其可以定義 `dps.session.service.url.name`:預設值設為 [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions)
+您尤其可以定義 `dps.session.service.url.name`: 預設值設為 [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions)
 
 **必須確保AEM與CDN之間的CDN Rewriter** Communication，以便以安全的方式將資產／二進位檔傳送給使用者。 這包括兩項任務：
 
