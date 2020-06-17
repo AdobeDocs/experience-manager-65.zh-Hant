@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
 translation-type: tm+mt
-source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
+source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+workflow-type: tm+mt
+source-wordcount: '1918'
+ht-degree: 9%
 
 ---
 
@@ -318,7 +321,7 @@ source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
 
 配置元件的一個放置目標。 此節點的名稱將用作拖放的ID。
 
-* `@prop accept` -此放置目標接受的MIME類型清單；例如， `["image/*"]`
+* `@prop accept` -此放置目標接受的MIME類型清單； 例如， `["image/*"]`
 * `@prop groups` -接受源的拖放組清單。
 * `@prop propertyName` -用於儲存引用的屬性的名稱。
 
@@ -446,7 +449,7 @@ DAM資產。
 
 **說明**
 
-`cq:attributes` 是ContentBus版本標籤的節點類型。 此節點僅具有一系列屬性；其中3個是預先定義的「已建立」、「csd」和「時間戳記」。
+`cq:attributes` 是ContentBus版本標籤的節點類型。 此節點僅具有一系列屬性； 其中3個是預先定義的「已建立」、「csd」和「時間戳記」。
 
 * `@prop created (long) mandatory copy` -建立版本資訊的時間戳記，通常是簽入先前版本的時間或建立頁面的時間。
 * `@prop csd (string) mandatory copy` - csd標準屬性，頁面節點的cq:csd屬性副本
@@ -550,7 +553,7 @@ MailerService節點類型。 郵件者使用具有該混合的節點作為消息
 
 **說明**
 
-定義LiveRelation混合。 主節點和從節點可以通過LiveRelationship虛擬連結。
+定義LiveRelation混合。 主要來源（控制）節點和即時副本（控制）節點可以通過LiveRelationship虛擬連結。
 
 **定義**
 
@@ -563,9 +566,9 @@ MailerService節點類型。 郵件者使用具有該混合的節點作為消息
 
 **說明**
 
-定義LiveSync混音。 如果某個節點與作為從節點的主節點有關聯，則該節點被標籤為LiveSync。
+定義LiveSync混音。 如果某個節點與主源（控制）節點和即時副本（控制）節點有關聯，則該節點將標籤為LiveSync。
 
-* `@prop cq:master` - liveRelationship主節點的路徑。
+* `@prop cq:master` - LiveRelations的主要來源（控制項）路徑。
 * `@prop cq:isDeep` -定義關係是否適用於子系。
 * `@prop cq:syncTrigger` -定義何時觸發同步。
 * `@node * LiveSyncAction` -在同步時執行的動作
@@ -580,9 +583,9 @@ MailerService節點類型。 郵件者使用具有該混合的節點作為消息
 
 **說明**
 
-定義LiveSyncCancelled混音。 取消從屬節點的LiveSync行為，該行為可能由於其父節點之一而與LiveRelationship相關。
+定義LiveSyncCancelled混音。 取消由於其父節點之一而可能與LiveRelations相關的即時副本（受控）節點的LiveSync行為。
 
-* `@prop cq:isCancelledForChildren` -定義LiveSync是否已取消；也是給孩子的。
+* `@prop cq:isCancelledForChildren` -定義LiveSync是否已取消； 也是給孩子的。
 
 **定義**
 
@@ -654,7 +657,7 @@ Blueprint動作
 * `@prop cq:lastPublishedBy`-上次發佈頁面的使用者（不再使用）。
 * `@prop cq:lastReplicated` -上次複製頁面的日期。
 * `@prop cq:lastReplicatedBy` -上次複製頁面的用戶。
-* `@prop cq:lastReplicationAction` -複製操作：啟用或停用。
+* `@prop cq:lastReplicationAction` -複製操作： 啟用或停用。
 * `@prop cq:lastReplicationStatus` -複製狀態（不再使用）。
 
 **定義**
