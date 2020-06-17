@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5的發行說明。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: 1eca1fcce90dfde8b512414249eb8cc05323c5cc
 workflow-type: tm+mt
-source-wordcount: '4510'
+source-wordcount: '4512'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 當使用者以同步方式繼承時，父頁面的即時副本不會與Blueprint同步，並顯示不正確的狀態(NPR-32500)。
 * 載入Experience Manager Sites編輯器頁面需要超過15秒(NPR-32413)。
 * 某些欄位不顯示取消繼承選項(NPR-32362)。
-* 當您選取「體驗片段」元件的路徑並選取「開啟選取對話方塊」核取方塊時，不會導覽至「路徑瀏覽器」中的選取路徑(NPR-32308)。
+* 當您選取「體驗片段」元件的路徑並選取「開啟選擇對話方塊」核取方塊時，不會導覽至「路徑瀏覽器」中的選取路徑(NPR-32308)。
 * 從Experience Manager 6.2升級至Experience Manager 6.5時，靜態範本的Parsys元件無法正確顯示。 Parsys元件的高度設定為0，其內部元件不可見(NPR-33663)。
 * 當使用者複製並貼上相同頁面上的「版面容器」時，「版面容器」中的元件不會顯示(NPR-33648)。
 * Dispatcher health check在日 `Invalid cookie header` 志檔案中顯示警告消息(NPR-33629)。
@@ -125,7 +125,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 * 螢幕閱讀程式現在可正確宣佈各種組合方塊元素（例如「路徑」欄位和在「資產屬性」的「基本」索引標籤中開啟「選擇」對話方塊的選項）的用途(NPR-33235)。
 
-* 現在，當鍵盤焦點位於螢幕閱讀器用戶上時，會將清單視圖表中可選擇的行的資訊發送給螢幕閱讀器用戶。 當滑鼠懸浮在列上時，就會公佈這項資訊(NPR-33234)。
+* 現在，當鍵盤焦點位於螢幕閱讀器用戶上時，會將清單視圖表中可選擇的行的資訊發送給螢幕閱讀器用戶。 當指針懸停在行上時，螢幕閱讀器會宣佈該資訊(NPR-33234)。
 
 * 現在，螢幕閱讀器( [!UICONTROL NPR-33206])可以訪問用於刪除Basic [!UICONTROL （屬性）頁籤的Basic] （基本）選 [!UICONTROL 項卡中Basic] （屬性）頁籤下的Selected Tags(Basic(Basic  )欄位下的每個選定標籤的選項（具有x）。
 
@@ -213,7 +213,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 * 在具有智慧型裁切設定檔的檔案夾下開啟PDF轉譯邊欄的記錄檔中，會發現異常(CQ-4294201)。
 
-* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用  「動態媒體同步模式」，則不會發佈影像預設集(CQ-4294200)。
+* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用 [!UICONTROL 「動態媒體同步模式」] (CQ-4294200)，則不會發佈影像預設集。
 
 * 大量上傳時的資產處理會停滯，而工作流程例項則會顯示DAM更新資產的停滯例項(CQ-4293916)。
 
@@ -307,14 +307,14 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 >
 >Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
 
-* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序被混亂。
+* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序會混亂。
 * 最適化表單： 當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
 * 最適化表單： 用戶無法保存具有多個附件的自適應表單(NPR-32997)。
 * 最適化表單： 以最適化表單變更面板版面會導致錯誤(CQ-4293880)。
 * 最適化表單： 自適應表單字典中字串的新行將字 `&#xa;` 符添加到字典(NPR-33266)。
 * 最適化表單協助功能： 當使用者將最適化表單預覽為HTML表格時，「 [!UICONTROL Scribble Signature] 」欄位無法保留標籤焦點(NPR-33159)。
 * 最適化表單協助功能： 提交最適化表單時顯示的錯誤訊息不會連結 `aria-describedBy` 至屬性(NPR-33071)。
-* 最適化表單協助功能： 在ARIA無障礙環境支援模式中，在最適化表單中標示為強制的欄位，沒有將強制屬性設為True(NPR-33070)。
+* 最適化表單協助功能： 在ARIA無障礙環境支援架構中，在最適化表單中標示為強制的欄位沒有將強制屬性設定為True(NPR-33070)。
 * PDFG服務： 當使用者將文字檔案轉換為PDF時，日文字元無法正確顯示(NPR-33238)。
 * PDFG服務： `CreatePDF` 操作無法將PDF檔案轉換為PDF OCR格式(NPR-32994)。
 * PDFG服務： 第200個檔案例項的PDF轉換失 [!DNL OpenOffice] 敗(NPR-32766)。
@@ -418,7 +418,7 @@ UberJar for Experience Manager 6.5.5.0可在 [Adobe Public Maven儲存庫中取�
 
 ## 已知問題 {#known-issues}
 
-* 如果要安裝 [!DNL Experience Manager] 6.5.5.0和11，請在安 [!DNL Java] 裝Service Pack後重新啟動伺服器。 如果要安裝帶有 [!DNL Java] 8的Service Pack，則無需重新啟動。
+* 如果要安裝 [!DNL Experience Manager] 6.5.5.0和11，請在安裝Service Pack後 [!DNL Java] 重新啟動伺服器。 如果要安裝帶有 [!DNL Java] 8的Service Pack，則無需重新啟動。
 
 * 如果階層中的檔案夾已重新命 [!DNL Experience Manager Assets] 名，且包含資產的巢狀檔案夾已發佈至 [!DNL Brand Portal]，則在中不會更新檔案夾的標題，直到 [!DNL Brand Portal] 根檔案夾再次發佈為止。
 
