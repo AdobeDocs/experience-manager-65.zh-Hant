@@ -10,7 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: d9f1e24e-51a9-4f28-b2cd-2e97aed63a24
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 4ea1bad1fb76142be7f6d564ecf30ed85a6da694
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
 
 應用程式擁有路由，然後由專案前端開發人員實作。 本檔案說明AEM伺服器傳回之模型專屬的路由。 頁面模型資料結構會公開基礎資源的URL。 前端項目可以使用任何提供路由功能的自定義或第三方庫。 一旦路由需要模型的片段，就可以調用 `PageModelManager.getData()` 該函式。 當模型路由變更時，必須觸發事件以警告監聽程式庫，例如頁面編輯器。
 
-## 建築 {#architecture}
+## 架構 {#architecture}
 
 如需詳細說明，請參閱SPA Blueprint文 [件的PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 一節。
 
@@ -61,7 +64,7 @@ source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
 <meta property="cq:pagemodel_router" content="disable"\>
 ```
 
-請注意，SPA的每條路由都應對應AEM中的可存取資源(例如，「 `/content/mysite/mypage"`)，因為一旦選取路由， `PageModelManager` 就會自動嘗試載入對應的頁面模型。 不過，如果需要，SPA也可以定義「黑名單」路由，該路由應被以下項忽略 `PageModelManager`:
+請注意，SPA的每條路由都應對應AEM中的可存取資源(例如，「 `/content/mysite/mypage"`)，因為一旦選取路由， `PageModelManager` 就會自動嘗試載入對應的頁面模型。 不過，如果需要，SPA也可以定義路由的「塊清單」，該清單應被以下項忽略 `PageModelManager`:
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>
