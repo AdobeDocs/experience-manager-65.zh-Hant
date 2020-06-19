@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '2190'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 請考慮以下有關備份和恢復的要點：
 
 * 應在GDS和AEM資料庫之前備份資料庫。
-* 如果需要關閉群集環境中的節點進行備份，請確保在主節點之前關閉從節點。 否則，會導致叢集或伺服器不一致。 此外，主節點應在任何從節點之前變為活動節點。
+* 如果需要關閉群集環境中的節點進行備份，請確保在主節點之前關閉輔助節點。 否則，會導致叢集或伺服器不一致。 此外，主節點應在任何輔助節點之前處於活動狀態。
 * 對於群集的恢復操作，應停止群集中每個節點的應用程式伺服器。
 
 ## 全局文檔儲存目錄 {#global-document-storage-directory}
@@ -111,7 +114,7 @@ DB2具有將資料庫備份到Tivoli Storage Manager的內置功能。 通過使
 
 ### Oracle {#oracle}
 
-使用快照備份或將Oracle資料庫配置為在歸檔日誌模式下運行。 (請參 [閱Oracle備份：簡介](https://www.databasedesign-resource.com/oracle-backup.md)。)有關備份和恢復Oracle資料庫的詳細資訊，請轉至以下站點：
+使用快照備份或將Oracle資料庫配置為在歸檔日誌模式下運行。 (請參 [閱Oracle備份： 簡介](https://www.databasedesign-resource.com/oracle-backup.md)。) 有關備份和恢復Oracle資料庫的詳細資訊，請轉至以下站點：
 
 [Oracle備份和恢復：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) 詳細說明了備份和恢復的概念以及使用Recovery Manager(RMAN)進行備份、恢復和報告的最常用技術，並提供了有關如何規劃備份和恢復策略的詳細資訊。
 
@@ -132,11 +135,12 @@ SQL Server還提供了兩種備份和恢復工具：
 
 ### MySQL {#mysql}
 
-使用MySQLAdmin或修改Windows中的INI檔案，以配置MySQL資料庫以二進位日誌模式運行。 (請參 [閱MySQL二進位日誌](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。)InnoBase軟體也提供了MySQL的熱備份工具。 (請參 [閱Innobase熱備份](https://www.innodb.com/hot-backup/features.md)。)
+使用MySQLAdmin或修改Windows中的INI檔案，以配置MySQL資料庫以二進位日誌模式運行。 (請參 [閱MySQL二進位日誌](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。) InnoBase軟體也提供了MySQL的熱備份工具。 (請參 [閱Innobase熱備份](https://www.innodb.com/hot-backup/features.md)。)
 
 >[!NOTE]
 >
->MySQL的預設二進位日誌記錄模式是「語句」，它與Content Services使用的表（已過時）不相容。 在此預設模式中使用二進位記錄會導致Content Services（已過時）失敗。 如果您的系統包含Content Services（已過時），請使用「混合」記錄模式。 若要啟用「混合」記錄，請將下列引數新增至my.ini file:*`binlog_format=mixed log-bin=logname`
+>MySQL的預設二進位日誌記錄模式是「語句」，它與Content Services使用的表（已過時）不相容。 在此預設模式中使用二進位記錄會導致Content Services（已過時）失敗。 如果您的系統包含Content Services（已過時），請使用「混合」記錄模式。 若要啟用「混合」記錄，請將下列引數新增至my.ini file:*
+`binlog_format=mixed log-bin=logname`
 
 您可以使用mysqldump實用程式獲得完整的資料庫備份。 需要完整備份，但並不總是方便的。 它們會生成大型備份檔案，並需要時間生成。 要執行增量備份，請確保使用——選項啟動服 `log-bin` 務器，如上節所述。 每次MySQL伺服器重新啟動時，它都停止寫入當前二進位日誌，建立新日誌，然後，從此開始，新日誌將變為當前日誌。 可以使用命令手動強制切換 `FLUSH LOGS SQL` 器。 在第一次完全備份後，後續增量備份將使用mysqladmin實用程式和命令來完成，該命 `flush-logs` 令將建立下一個日誌檔案。
 
