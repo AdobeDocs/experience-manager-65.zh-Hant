@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1029'
+ht-degree: 0%
 
 ---
 
@@ -51,9 +54,9 @@ AEM LiveCycle Connector是 [AEM Forms附加套件的一部分](/help/forms/using
 
 AEM LiveCycle Connector可將這些用戶端例項公開為OSGi服務，讓您使用標準OSGi來存取，以簡化流程。 LiveCycle連接器提供下列功能：
 
-* 作為OSGi服務的客戶端實例：打包為OSGI捆綁包的客戶端列在「文檔服 [務」清單部分](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 。 每個客戶端jar都將客戶端實例註冊為OSGi服務註冊表。
-* 用戶憑據傳播：連線至LiveCycle伺服器所需的連線詳細資訊會集中管理。
-* ServiceClientFactory服務：要啟動進程，客戶端應用程式可以訪問ServiceClientFactory實例。
+* 作為OSGi服務的客戶端實例： 打包為OSGI捆綁包的客戶端列在「文檔服 [務」清單部分](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 。 每個客戶端jar都將客戶端實例註冊為OSGi服務註冊表。
+* 用戶憑據傳播： 連線至LiveCycle伺服器所需的連線詳細資訊會集中管理。
+* ServiceClientFactory服務： 要啟動進程，客戶端應用程式可以訪問ServiceClientFactory實例。
 
 ### 從OSGi服務註冊通過服務引用啟動 {#starting-via-service-references-from-osgi-service-registry}
 
@@ -153,7 +156,7 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 LiveCycle中幾乎每個檔案服務都需要驗證。 您可以使用下列任一選項來啟動這些服務，而不需在程式碼中提供明確的憑證：
 
-### 白名單配置 {#whitelist-configuration}
+### Allowlist配置 {#allowlist-configuration}
 
 LiveCycle Client SDK組態包含有關服務名稱的設定。 此配置是服務清單，調用邏輯將立即使用管理員憑據。 例如，如果您將DirectoryManager服務（User Management API的一部分）新增至此清單，任何用戶端程式碼都可直接使用服務，而呼叫層會自動傳遞已設定的認證，作為傳送至LiveCycle伺服器之請求的一部分
 
