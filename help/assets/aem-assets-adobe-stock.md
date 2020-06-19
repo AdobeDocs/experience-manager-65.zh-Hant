@@ -1,16 +1,19 @@
 ---
-title: 在[!DNL Adobe Experience Manager Assets]中管理[!DNL Adobe Stock]資產。
-description: 從[!DNL Adobe Experience Manager]內搜尋、擷取、授權及管理[!DNL Adobe Stock]資產。 將授權資產當做任何其他數位資產使用。
+title: 管理 [!DNL Adobe Stock] 資產 [!DNL Adobe Experience Manager Assets]。
+description: 從內部搜尋、擷取、授 [!DNL Adobe Stock] 權及管理資產 [!DNL Adobe Experience Manager]。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
+workflow-type: tm+mt
+source-wordcount: '1048'
+ht-degree: 12%
 
 ---
 
 
-# 使用 [!DNL Adobe Stock][!DNL Adobe Experience Manager Assets] 資產於 {#use-adobe-stock-assets-in-aem-assets}
+# 使用 [!DNL Adobe Stock] 資產於 [!DNL Adobe Experience Manager Assets] {#use-adobe-stock-assets-in-aem-assets}
 
-組織可將其企 [!DNL Adobe Stock] 業計畫與 [!DNL Experience Manager Assets] 其強大的資產管理功能整合，以確保授權資產廣泛適用於其創意和行銷專案 [!DNL Experience Manager]。
+企業組織可將其企 [!DNL Adobe Stock] 業計畫與 [!DNL Experience Manager Assets] 授權資產整合，以確保其創意和行銷專案可廣泛使用授權資產，並具備強大的資產管理功能 [!DNL Experience Manager]。
 
 [!DNL Adobe Stock] 服務可讓設計人員和企業針對其所有創意專案，取用數百萬個高品質、優質且免版稅的像片、向量、插圖、視訊、範本和3D資產。 [!DNL Experience Manager] 使用者可以快速尋找、預覽和授權儲 [!DNL Adobe Stock] 存在的資產，而 [!DNL Experience Manager]不需離開介 [!DNL Experience Manager] 面。
 
@@ -18,7 +21,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 整合需要企 [業版Adobe Stock計畫](https://stockenterprise.adobe.com/)[!DNL Experience Manager] 和6.5或更新版本。 如需 [!DNL Experience Manager] 6.5 Service Pack的詳細資訊，請參閱這些 [發行說明](/help/release-notes/sp-release-notes.md)。
 
-## 整合 [!DNL Experience Manager] 與 [!DNL Adobe Stock]{#integrate-aem-and-adobe-stock}
+## 整合 [!DNL Experience Manager] 和 [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
 若要允許與之 [!DNL Experience Manager] 間的 [!DNL Adobe Stock]通訊，請在中建立IMS組態和 [!DNL Adobe Stock] 組態 [!DNL Experience Manager]。
 
@@ -34,7 +37,10 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 1. 在標題為&#x200B;**[!UICONTROL 「標題」]**、**[!UICONTROL 「授權伺服器」]**、**[!UICONTROL 「API 金鑰」]**、**[!UICONTROL 「用戶端密碼」]**&#x200B;和&#x200B;**[!UICONTROL 「裝載」]**&#x200B;的欄位中提供適當的值。See [JWT authentication quick start](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md), for detailed information to fetch these values from [!DNL Adobe I/O].
 1. 將下載的公開金鑰新增至您的服 [!DNL Adobe I/O] 務帳戶。
 
-### 在中 [!DNL Adobe Stock] 建立配 [!DNL Experience Manager] 置 {#create-adobe-stock-configuration-in-aem}
+<!-- TBD: Update the URL when the new URL is available. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
+-->
+
+### 在中 [!DNL Adobe Stock] 建立配置 [!DNL Experience Manager] {#create-adobe-stock-configuration-in-aem}
 
 1. In the [!DNL Experience Manager] user interface, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**.
 1. 按一 **[!UICONTROL 下「建立]** 」以建立組態，並將它與您現有的IMS組態建立關聯。 選擇 `PROD` 作為環境參數。
@@ -46,15 +52,15 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 >
 >如果有多種配 [!DNL Adobe Stock] 置，請在「用戶首選項」面板中按一下用戶介面右上角的 [!UICONTROL User] logo，以選擇所需 **[!DNL Experience Manager] 的配置。
 
-## 使用及管理 [!DNL Adobe Stock] 資產 [!DNL Experience Manager]{#usemanage}
+## 使用及管 [!DNL Adobe Stock] 理 [!DNL Experience Manager] {#usemanage}
 
 使用這項功能，組織可以允許其使用者在中使用 [!DNL Adobe Stock] 資產 [!DNL Experience Manager Assets]。 使用者可在使 [!DNL Experience Manager] 用者介面中搜尋資產， [!DNL Adobe Stock] 並授權所需的資產。
 
-在授權 [!DNL Adobe Stock] 資產後，就 [!DNL Experience Manager]可像一般資產一樣使用及管理資產。 用戶 [!DNL Experience Manager]可以搜索和預覽資產；複製及發佈資產；以股份形式分享資 [!DNL Brand Portal]產；透過案頭應用程式存取及使 [!DNL Experience Manager] 用資產；等等。
+在授權 [!DNL Adobe Stock] 資產後，就 [!DNL Experience Manager]可像一般資產一樣使用及管理資產。 用戶 [!DNL Experience Manager]可以搜索和預覽資產； 複製及發佈資產； 以股份形式分享資 [!DNL Brand Portal]產； 透過案頭應用程式存取及使 [!DNL Experience Manager] 用資產； 等等。
 
 ![搜尋Adobe Stock資產並篩選Adobe Experience Manager工作區的結果](assets/adobe-stock-search-results-workspace.png)
 
-*圖：從介面[!DNL Adobe Stock]搜尋資產並篩選結[!DNL Experience Manager]果。*
+*圖： 從介面[!DNL Adobe Stock]搜尋資產並篩選結[!DNL Experience Manager]果。*
 
 **A.**[!DNL Adobe Stock] 搜尋與已提供 ID 之資產的類似資產。**B.** 搜尋與您選取的型態或方向相符的資產。**C.** 搜尋一或多個支援的資產類型 **D.** 開啟或收合篩選器窗格 **E.** 在 中為選取的資產授權並加以儲存 [!DNL Experience Manager]**F.**[!DNL Experience Manager] 將資產儲存在 中並加上浮水印 **G.**[!DNL Adobe Stock] 在 網站上探索與選取的資產類似的資產 **H.**[!DNL Adobe Stock] 在 網站上檢視選取的資產 **I.** 搜尋結果中選取的資產數目 **J.** 在卡片檢視與清單檢視之間切換
 
@@ -74,7 +80,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ![在Experience Manager中搜尋篩選器，並在搜尋結果中反白顯示Adobe Stock資產](assets/aem-search-filters2.jpg)
 
-*圖：在搜尋結果中[!DNL Experience Manager]搜尋篩選[!DNL Adobe Stock]素材並反白顯示。*
+*圖： 在搜尋結果中[!DNL Experience Manager]搜尋篩選[!DNL Adobe Stock]素材並反白顯示。*
 
 ### 儲存並檢視所需資產 {#saveassets}
 
@@ -92,7 +98,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ![對話方塊可授權並儲存Experience Manager Assets中的Adobe Stock資產](assets/aem-stock_licenseandsave.jpg)
 
-*圖：對話方塊可授權並儲[!DNL Adobe Stock]存資產[!DNL Experience Manager Assets]。*
+*圖： 對話方塊可授權並儲[!DNL Adobe Stock]存資產[!DNL Experience Manager Assets]。*
 
 ### 存取中繼資料和資產屬性 {#access-metadata-and-asset-properties}
 
@@ -102,15 +108,15 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ![檢視及存取已儲存資產的中繼資料和授權參考](assets/metadata_properties.jpg)
 
-*圖：檢視及存取已儲存資產的中繼資料和授權參考。*
+*圖： 檢視及存取已儲存資產的中繼資料和授權參考。*
 
 ## 已知限制 {#known-limitations}
 
-* **未顯示編輯影像警告**:授權影像時，使用者無法檢查影像是否為「僅供編輯使用」。 為防止可能的誤用，管理員可以關閉從管理控制台存取編輯資產的權限。
+* **未顯示編輯影像警告**: 授權影像時，使用者無法檢查影像是否為「僅供編輯使用」。 為防止可能的誤用，管理員可以關閉從管理控制台存取編輯資產的權限。
 
-* **顯示的許可證類型錯誤**:資產的授權類型可能顯示 [!DNL Experience Manager] 不正確。 使用者可登入網 [!DNL Adobe Stock] 站以檢視授權類型。
+* **顯示的許可證類型錯誤**: 資產的授權類型可能顯示 [!DNL Experience Manager] 不正確。 使用者可登入網 [!DNL Adobe Stock] 站以檢視授權類型。
 
-* **參考欄位和中繼資料不會同步**:當使用者更新授權參考欄位時，授權參考資訊會在網站中更新， [!DNL Experience Manager] 但不會在網站上 [!DNL Adobe Stock] 更新。 同樣地，如果使用者更新網站上的參考欄 [!DNL Adobe Stock] 位，則更新不會同步 [!DNL Experience Manager]。
+* **參考欄位和中繼資料不會同步**: 當使用者更新授權參考欄位時，授權參考資訊會在網站中更新， [!DNL Experience Manager] 但不會在網站上 [!DNL Adobe Stock] 更新。 同樣地，如果使用者更新網站上的參考欄 [!DNL Adobe Stock] 位，則更新不會同步 [!DNL Experience Manager]。
 
 >[!MORELIKETHIS]
 >
