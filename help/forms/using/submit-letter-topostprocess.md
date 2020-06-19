@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 1. 指定使用者名稱和密碼。
 1. 確保將sun.util.calendar添加到還原序列化防火牆配置中。
 
-   轉到還原序列化防火牆配置，並在包前置詞的白名單類下添加sun.util.calendar。
+   轉到還原序列化防火牆配置，並在Allowlisted類包前置詞下添加sun.util.calendar。
 
 1. 現在，您的伺服器已經對應，而且AEM Forms on JEE中的貼文程式可在建立字母時，於AEM使用者介面中使用。
 
@@ -118,7 +121,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 1. 點選「 **儲存**」。
 1. 使用「後置處理」設定信件後，請發佈該信件，並選擇性地在發佈例項上，在AEM DS設定服務中指定處理URL。 這可確保後置進程在處理實例上運行。
 
-## 重新載入草稿字母例項 {#reloaddraft}
+## 重新載入草稿字母例項  {#reloaddraft}
 
 您可使用下列URL，在使用者介面中重新載入草稿字母例項：
 
@@ -126,6 +129,6 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 `createcorrespondence.html?/random=$&cmLetterInstanceId=$<LetterInstanceId>`
 
-LetterInstaceID:已提交字母實例的唯一ID。
+LetterInstaceID: 已提交字母實例的唯一ID。
 
 有關保存草稿信函的詳細資訊，請參閱 [保存草稿和提交信函實例](../../forms/using/create-correspondence.md#savingdrafts)。
