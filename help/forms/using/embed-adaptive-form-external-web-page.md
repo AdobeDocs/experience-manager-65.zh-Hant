@@ -9,7 +9,10 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '979'
+ht-degree: 0%
 
 ---
 
@@ -148,7 +151,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->如果設定了任何其他拓撲，請確保在調度程式層將提交、預填充和其他URL列入白名單。
+>如果設定了任何其他拓撲，請確保將submit、prefill和其他URL添加到調度程式層的allowlist中。
 
 ## Best practices {#best-practices}
 
