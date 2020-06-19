@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '923'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 1. 在命令提示符下，導航到 *[JAVA HOME]*/bin ，然後鍵入以下命令以建立憑據和密鑰庫：
 
-   `keytool -genkey -dname "CN=`*主機名&#x200B;*組名稱`, OU=`*名稱名* 稱 `, O=`*Company Name *State ConturyName`,L=`**`, S=`**`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**Company StateCanturyCodeKey_password ConturyCode（城市名稱——密碼）KeystorenameCrenameCo`.keystore`
+   `keytool -genkey -dname "CN=`*主機名&#x200B;*組名稱`, OU=`*名稱* 公司名稱 `, O=`*State Name *Company State Name`,L=`**`, S=`**`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`*ConturyCountryCadeKey_passwordKeystorenameCityKeystorename *`.keystore`
 
    >[!NOTE]
    >
@@ -44,7 +47,7 @@ source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 1. 鍵入以 *下命令之一*，將keystorename `[appserver root]/server/[type]/conf` .keystore複製到目錄：
 
-   * (Windows Single Server) `copy``keystorename.keystore[appserver root]\standalone\configuration`
+   * (Windows Single Server) `copy` `keystorename.keystore[appserver root]\standalone\configuration`
    * （Windows伺服器群集）副本 `keystorename.keystore[appserver root]\domain\configuration`
    * （Linux單伺服器） `cp keystorename.keystore [appserver root]/standalone/configuration`
    * （Linux伺服器群集） `cp <em>keystorename</em>.keystore<em>[appserver root]</em>/domain/configuration`
@@ -75,7 +78,7 @@ source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 1. 輸入以下命令以匯入憑證：
 
-   `keytool -import -alias “AEMForms Cert” -file`*AEMForms_cert *`.cer -keystore`*JAVA_HOME*`\jre\lib\security\cacerts`
+   `keytool -import -alias “AEMForms Cert” -file`*AEMForms_cert *`.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. 鍵 `changeit` 入密碼。 此密碼是Java安裝的預設密碼，系統管理員可能已更改此密碼。
 1. 當提示輸入 `Trust this certificate? [no]`：時，鍵入 `yes`。 將顯示確認&quot;Certificate was added to keystore&quot;。
@@ -166,7 +169,7 @@ source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 1. 在命令提示符下，導航到 *[JAVA HOME]*/bin ，然後鍵入以下命令以建立密鑰庫和密鑰：
 
-   `keytool -genkey -dname "CN=`*主機名&#x200B;*組名稱`, OU=`*名稱名* 稱公司名稱 `, O=`*Company Name *Company State Name`, L=`**`, S=`**`, C=`**`-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`**ConturyConturyContryContryCode&quot; Jountry-Key passwordRenameKeystostoRename`.keystore`
+   `keytool -genkey -dname "CN=`*主機名&#x200B;*組名稱`, OU=`*名稱名* 稱公司名稱 `, O=`*Company Name *State Name`, L=`*Company Company Name*`, S=`**`, C=`**`-alias "AEMForms Cert"``-keyalg RSA -keypass`**`-keystore`*CountryConturyCode&quot; Jountry-KeyPasswordRenameKeystostorename *`.keystore`
 
    >[!NOTE]
    >
@@ -192,7 +195,7 @@ source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 1. 在命令提示符下，導航到 *`[JAVA HOME]`*/bin ，然後鍵入以下命令將憑據導入密鑰庫：
 
-   `keytool -import -trustcacerts -file`*CACertificateName *`.crt -keystore`*keystorename*`.keystore`
+   `keytool -import -trustcacerts -file`*CACertificateName *keystorename`.crt -keystore`*（CACertificateName鍵盤更名）* `.keystore`
 
    >[!NOTE]
    >
