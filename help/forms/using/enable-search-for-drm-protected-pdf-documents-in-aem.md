@@ -11,7 +11,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: b79c147c-f846-4e48-bec0-8b658502bb6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '722'
+ht-degree: 0%
 
 ---
 
@@ -37,12 +40,12 @@ AEM搜尋功能可以搜尋和尋找AEM資產，並對各種常用的檔案格�
    * 對於OSGi上的AEM Forms，這些組合會列在https://&#39;[server]:[port]&#39;/system/console/bundles中。
    * 對於JEE上的AEM Forms，這些組合會列在https://&#39;[server]:[port]&#39;/[context-path]/system/console/bundles中。 例如https://localhost:8080/lc/system/console/bundles。
 
-* 將 *sun.util.calendar包列入白名單* 。 要將軟體包列入白名單，請執行以下步驟：
+* 將 *sun.util.calendar* 包添加到allowlist。 要將包添加到allowlist，請執行以下步驟：
 
    1. 開啟AEM Web Console。 URL為https://&#39;[server]:[port]&#39;/system/console/configMgr。
    1. 找到並開啟「還原序列化 **防火牆設定」**。
 
-   1. 將sun.util.calendar包添加到白名單類或包前置詞欄位中，然後按一下 **保存**。
+   1. 將sun.util.calendar包添加到Allowlisted類或包前置詞欄位中，然後按一下 **保存**。
 
 ### 在AEM Forms JEE和OSGi堆疊之間建立安全連線 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 
@@ -57,9 +60,10 @@ AEM搜尋功能可以搜尋和尋找AEM資產，並對各種常用的檔案格�
 1. 尋找並開啟 **Adobe LiveCycle Client SDK Bundle**。 指定下列欄位的值：
 
    * **伺服器URL:** 指定JEE伺服器上AEM Forms的HTTPS URL。 若要啟用透過https進行通訊，請使用-Djavax.net.ssl.trustStore=&lt;JEE金鑰庫檔案上的AEM Forms路徑>參數重新啟動伺服器。
-   * **服務名稱**:將RightsManagementService新增至指定服務的清單。
+   * **服務名稱**: 將RightsManagementService新增至指定服務的清單。
    * **使用者名稱：** 指定JEE帳戶上的AEM Forms使用者名稱，以用來從AEM伺服器啟動呼叫。 指定的帳戶必須擁有在JEE伺服器上的AEM Forms上啟動檔案服務的權限。
-   * **密碼**:指定「使用者名稱」欄位中提及之AEM Forms on JEE帳戶的密碼。
+   * **密碼**: 指定「使用者名稱」欄位中提及之AEM Forms on JEE帳戶的密碼。
+
    按一下&#x200B;**「儲存」**。AEM已啟用，可搜尋檔案安全性保護的PDF檔案。
 
 #### 使用相互驗證來設定Adobe LiveCycle Client SDK套件 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
@@ -68,13 +72,14 @@ AEM搜尋功能可以搜尋和尋找AEM資產，並對各種常用的檔案格�
 1. 開啟AEM Web Console。 URL為https://&#39;[server]:[port]&#39;/system/console/configMgr。
 1. 尋找並開啟 **Adobe LiveCycle Client SDK** Bundle。 指定下列屬性的值：
 
-   * **伺服器URL**:指定JEE伺服器上AEM Forms的HTTPS URL。 若要啟用透過https進行通訊，請使用-Djavax.net.ssl.trustStore=&lt;JEE金鑰庫檔案上的AEM Forms路徑>參數重新啟動AEM伺服器。
-   * **啟用雙向SSL**:啟用「啟用2向SSL」選項。
-   * **KeyStore檔案URL**:指定密鑰庫檔案的URL。
-   * **TrustStore FIle URL**:指定truststore檔案的URL。
-   * **KeyStore密碼**:指定密鑰庫檔案的密碼。
-   * **TrustStorePassword**:指定truststore檔案的密碼。
-   * **服務名稱**:將RightsManagementService新增至指定服務的清單。
+   * **伺服器URL**: 指定JEE伺服器上AEM Forms的HTTPS URL。 若要啟用透過https進行通訊，請使用-Djavax.net.ssl.trustStore=&lt;JEE金鑰庫檔案上的AEM Forms路徑>參數重新啟動AEM伺服器。
+   * **啟用雙向SSL**: 啟用「啟用2向SSL」選項。
+   * **KeyStore檔案URL**: 指定密鑰庫檔案的URL。
+   * **TrustStore FIle URL**: 指定truststore檔案的URL。
+   * **KeyStore密碼**: 指定密鑰庫檔案的密碼。
+   * **TrustStorePassword**: 指定truststore檔案的密碼。
+   * **服務名稱**: 將RightsManagementService新增至指定服務的清單。
+
    按一下&#x200B;**「儲存」**。AEM已啟用，可搜尋檔案安全性保護的PDF檔案
 
 ### 為受原則保護的範例PDF檔案建立索引 {#index-a-sample-policy-protected-pdf-document}
