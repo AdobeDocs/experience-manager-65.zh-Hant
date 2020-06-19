@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1875'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ## 簡介 {#introduction}
 
-AEM Forms提供一組表單，以從使用者取得資料：最適化表單、HTML5表單和PDF表單。 它還提供工具來列出網頁上所有可用的表單、分析表單的使用情況，並根據用戶的個人檔案來定位用戶。 這些功能已包含在AEM Forms附加套件中。 附加元件套件已部署在AEM的「作者」或「發佈」例項上。
+AEM Forms提供一組表單，以從使用者取得資料： 最適化表單、HTML5表單和PDF表單。 它還提供工具來列出網頁上所有可用的表單、分析表單的使用情況，並根據用戶的個人檔案來定位用戶。 這些功能已包含在AEM Forms附加套件中。 附加元件套件已部署在AEM的「作者」或「發佈」例項上。
 
 **最適化表單：** 這些表格會根據裝置的螢幕大小改變外觀，而且具有吸引力，而且具互動性。 Adaptive Forms也可以與Adobe Analytics、Adobe Sign和Adobe Target整合。 它可讓您根據使用者的人口結構和其他功能，為使用者提供個人化表單和流程導向的體驗。 您也可以將最適化表單與Adobe Sign整合。
 
@@ -43,8 +46,8 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需�
 * AEM例項的安裝路徑不包含空格。
 * AEM例項已啟動並執行。 在AEM術語中，「例項」是在作者或發佈模式下伺服器上執行的AEM復本。 您至少需要兩個 [AEM例項（一個作者和一個發佈）](/help/sites-deploying/deploy.md) ，才能執行AEM Forms資料擷取功能：
 
-   * **作者**:用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
-   * **發佈**:透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
+   * **作者**: 用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
+   * **發佈**: 透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
@@ -125,7 +128,7 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 
 ### 強制安裝後配置 {#mandatory-post-installation-configurations}
 
-#### 配置RSA和BuncyCastle庫 {#configure-rsa-and-bouncycastle-libraries}
+#### 配置RSA和BuncyCastle庫  {#configure-rsa-and-bouncycastle-libraries}
 
 對所有「作者」(Author)和「發佈」(Publish)實例執行以下步驟以引導委派庫：
 
@@ -146,18 +149,18 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 
 #### 設定序列化代理 {#configure-the-serialization-agent}
 
-對所有「作者」和「發佈」實例執行以下步驟，以將軟體包列入白名單：
+對所有「作者」(Author)和「發佈」(Publish)實例執行以下步驟，將包添加到allowlist:
 
 1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為 `https://'[server]:[port]'/system/console/configMgr`。
 1. 搜尋 **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** ，並開啟設定。
-1. 將 **sun.util.calendar** 包添加到白 **名單欄位** 。 按一下&#x200B;**「儲存」**。
+1. 將 **sun.util.calendar** 包添加到 **allowlist** 欄位。 按一下&#x200B;**「儲存」**。
 1. 對所有「作者」和「發佈」例項重複步驟1-3。
 
 ### 可選安裝後配置 {#optional-post-installation-configurations}
 
 #### 配置Dispatcher {#configure-dispatcher}
 
-Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保護AEM伺服器不受攻擊。 您可搭配使用Dispatcher與企業級Web伺服器，以提高AEM例項的安全性。 如果您使 [用Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)，請針對AEM Forms執行下列設定：
+Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保護AEM伺服器不受攻擊。 您可搭配使用Dispatcher與企業級Web伺服器，以提高AEM例項的安全性。 如果您使 [用Dispatcher](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html)，請針對AEM Forms執行下列設定：
 
 1. 設定AEM Forms的存取權：
 
@@ -165,7 +168,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   儲存並關閉檔案。 有關篩選器的詳細資訊，請參 [閱Dispatcher文檔](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)。
+   儲存並關閉檔案。 有關篩選器的詳細資訊，請參 [閱Dispatcher文檔](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html)。
 
 1. 設定反向連結篩選服務：
 
@@ -175,7 +178,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
 快取是一種機制，可縮短資料存取時間、減少延遲，並改善輸入／輸出(I/O)速度。 最適化表單快取只儲存最適化表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 它有助於縮短轉換最適化表單所需的時間。
 
-* 在使用最適化表單快取時，請使用 [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) ，快取最適化表單的用戶端程式庫（CSS和JavaScript）。
+* 在使用最適化表單快取時，請使用 [AEM Dispatcher](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html) ，快取最適化表單的用戶端程式庫（CSS和JavaScript）。
 * 在開發自訂元件時，請在用於開發的伺服器上停用最適化表單快取。
 
 執行以下步驟以配置自適應表單快取：
@@ -189,7 +192,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
 #### 為表單資料模型配置SSL通信 {#configure-ssl-communcation-for-form-data-model}
 
-您可以為表單資料模型啟用SSL通訊。 若要啟用表單資料模型的SSL通訊，請在啟動任何AEM Forms例項之前，將憑證新增至所有例項的Java信任存放區。 您可以執行以下命令來添加證書：&quot;
+您可以為表單資料模型啟用SSL通訊。 若要啟用表單資料模型的SSL通訊，請在啟動任何AEM Forms例項之前，將憑證新增至所有例項的Java信任存放區。 您可以執行以下命令來添加證書： &quot;
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
