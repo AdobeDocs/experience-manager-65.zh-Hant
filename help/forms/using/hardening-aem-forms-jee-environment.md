@@ -9,7 +9,10 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: dee9f9c9d3dfb916d1feaa0d258c883686e1a1dc
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '7445'
+ht-degree: 0%
 
 ---
 
@@ -162,7 +165,7 @@ AEM Forms on JEE可高度自訂，可在許多不同的環境中運作。 有些
 
 **服務帳戶（僅Windows上的JBoss統包）**
 
-AEM Forms on JEE依預設會使用LocalSystem帳戶來安裝服務。 內建的LocalSystem使用者帳戶具備高階的協助功能；它屬於管理員組。 如果工作進程身份作為LocalSystem用戶帳戶運行，則該工作進程可以完全訪問整個系統。
+AEM Forms on JEE依預設會使用LocalSystem帳戶來安裝服務。 內建的LocalSystem使用者帳戶具備高階的協助功能； 它屬於管理員組。 如果工作進程身份作為LocalSystem用戶帳戶運行，則該工作進程可以完全訪問整個系統。
 
 若要使用特定非管理帳戶，執行部署JEE上AEM Forms的應用程式伺服器，請依照下列指示進行：
 
@@ -653,10 +656,10 @@ AEM Forms on JEE使用「反向連結篩選」功能來封鎖CSRF攻擊。 本�
    1. 如果是POST，表單伺服器會執行「反向連結」標題檢查。
    1. 如果是GET，表單伺服器會略過「反向連結」檢查，除非 *CSRF_CHECK_GETS* 設定為true，否則會執行「反向連結」標題檢查。 *CSRF_CHECK_GETS* 是在應用程 *式的web.xml* 檔案中指定。
 
-1. Forms伺服器檢查請求的URI是否為白名單：
+1. Forms伺服器檢查請求的URI是否存在於allowlist中：
 
-   1. 如果URI已列入白名單，則伺服器接受請求。
-   1. 如果請求的URI未列入白名單，則伺服器將檢索請求的反向連結。
+   1. 如果允許列出URI，則伺服器接受請求。
+   1. 如果未允許列出請求的URI，則伺服器會檢索請求的反向連結。
 
 1. 如果請求中有反向連結，伺服器會檢查它是否為「允許的反向連結」。 如果允許，伺服器會檢查反向連結例外：
 
@@ -672,7 +675,7 @@ AEM Forms on JEE使用「反向連結篩選」功能來封鎖CSRF攻擊。 本�
 
 JEE上的AEM Forms提供「反向連結篩選」，以指定允許存取您伺服器資源的反向連結。 依預設，反向連結篩選器不會篩選使用安全HTTP方法（例如GET）的請求，除非 *CSRF_CHECK_GETS* 設定為true。 如果「允許的反向連結」項目的埠號設定為0,JEE上的AEM Forms將允許來自該主機的所有具有反向連結的請求，而不論其埠號為何。 如果未指定埠號，則僅允許來自預設埠80(HTTP)或埠443(HTTPS)的請求。 如果「允許的反向連結」清單中的所有項目都已刪除，則會停用「反向連結篩選」。
 
-首次安裝Document Services時，「允許反向連結」清單會更新為安裝Document Services的伺服器位址。 伺服器的條目包括伺服器名、IPv4地址、IPv6地址（如果啟用了IPv6）、環回地址和localhost條目。 主機作業系統會傳回新增至「允許反向連結」清單的名稱。 例如，IP位址為10.40.54.187的伺服器將包含下列項目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`。 對於主機作業系統重新調整的任何不合格名稱（沒有IPv4地址、IPv6地址或限定域名的名稱），不更新白名單。 修改「允許的反向連結」清單以符合您的商業環境。 請勿使用預設的「允許反向連結」清單，在生產環境中部署表單伺服器。 修改任何「允許的反向連結」、「反向連結例外」或URI後，請確定您重新啟動伺服器，讓變更生效。
+首次安裝Document Services時，「允許反向連結」清單會更新為安裝Document Services的伺服器位址。 伺服器的條目包括伺服器名、IPv4地址、IPv6地址（如果啟用了IPv6）、環回地址和localhost條目。 主機作業系統會傳回新增至「允許反向連結」清單的名稱。 例如，IP位址為10.40.54.187的伺服器將包含下列項目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 對於主機作業系統重新調整的任何不合格名稱（沒有IPv4地址、IPv6地址或限定域名的名稱），允許清單不會更新。 修改「允許的反向連結」清單以符合您的商業環境。 請勿使用預設的「允許反向連結」清單，在生產環境中部署表單伺服器。 修改任何「允許的反向連結」、「反向連結例外」或URI後，請確定您重新啟動伺服器，讓變更生效。
 
 **管理允許的反向連結清單**
 
@@ -693,7 +696,7 @@ JEE上的AEM Forms提供API來管理「允許的反向連結例外」清單和�
 
 如需API的詳細資訊，請參閱* AEM Forms on JEE API Reference*。
 
-在全局級 ***別使用LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list表示允許的反向連結例外，即定義適用於所有應用程式的例外。 此清單僅包含具有絕對路徑(如 `/index.html`)或相對路徑(例如 `/sample/`)。 您也可以將規則運算式附加至相對URI的結尾，例如 `/sample/(.)*`。
+在全局級 ***別使用LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list表示允許的反向連結例外，即定義適用於所有應用程式的例外。 此清單僅包含具有絕對路徑(如 `/index.html`)或相對路徑(例如 `/sample/`)。 您也可以將規則運算式附加至相對URI的結尾，例如 `/sample/(.)*`.
 
 LC_ ***GLOBAL_ALLOWED_REFERER_EXCEPTION*** 清單ID在命名空間類中定義為常 `UMConstants` 數， `com.adobe.idp.um.api` 如中所示 `adobe-usermanager-client.jar`。 您可以使用AEM Forms API來建立、修改或編輯此清單。 例如，若要建立「允許的全域反向連結例外」清單，請使用：
 
@@ -896,8 +899,8 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
    <td><p>存取Web應用程式</p> </td> 
    <td> 
     <ul> 
-     <li><p>管理伺服器偵聽埠：預設值為7001</p> </li> 
-     <li><p>管理伺服器SSL監聽埠：預設值為7002</p> </li> 
+     <li><p>管理伺服器偵聽埠： 預設值為7001</p> </li> 
+     <li><p>管理伺服器SSL監聽埠： 預設值為7002</p> </li> 
      <li><p>為受控伺服器配置的埠，例如8001</p> </li> 
     </ul> </td> 
   </tr> 
@@ -905,9 +908,9 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
    <td><p>在JEE上存取AEM Forms不需要WebLogic管理埠</p> </td> 
    <td> 
     <ul> 
-     <li><p>受控伺服器偵聽埠：可配置從1到65534</p> </li> 
-     <li><p>受控伺服器SSL偵聽埠：可配置從1到65534</p> </li> 
-     <li><p>節點管理器偵聽埠：預設為5556</p> </li> 
+     <li><p>受控伺服器偵聽埠： 可配置從1到65534</p> </li> 
+     <li><p>受控伺服器SSL偵聽埠： 可配置從1到65534</p> </li> 
+     <li><p>節點管理器偵聽埠： 預設為5556</p> </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -955,7 +958,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 ### JBoss服務帳戶 {#jboss-service-accounts}
 
-依預設，AEM Forms on JEE統包安裝會使用本機系統帳戶來設定服務帳戶。 內建的本機系統使用者帳戶具備高度的協助功能；它屬於管理員組。 如果工作進程身份作為本地系統用戶帳戶運行，則該工作進程具有對整個系統的完全訪問權限。
+依預設，AEM Forms on JEE統包安裝會使用本機系統帳戶來設定服務帳戶。 內建的本機系統使用者帳戶具備高度的協助功能； 它屬於管理員組。 如果工作進程身份作為本地系統用戶帳戶運行，則該工作進程具有對整個系統的完全訪問權限。
 
 #### 使用非管理帳戶運行應用程式伺服器 {#run-the-application-server-using-a-non-administrative-account}
 
@@ -997,7 +1000,7 @@ AEM Forms on JEE使用檔案系統的方式如下：
 
 ### 禁用目錄瀏覽 {#disable-directory-browsing}
 
-登入Administration Console後，可修改URL來瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
+登入Administration Console後，可修改URL，以瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
 
 ```as3
 https://<servername>:8080/adminui/secured/ 
