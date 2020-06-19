@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 18345e6519169cfceb01ab56821b596e284f3303
+source-git-commit: 5e932c127c74d13f6f46003b20a3ba5f68606c29
 workflow-type: tm+mt
-source-wordcount: '3202'
+source-wordcount: '3210'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ JEE伺服器上的AEM Forms可使用支援的作業系統、應用程式伺服�
 >
 >* 有關受支援伺服器平台的例外的完整清單，請參 [閱受支援伺服器平台的例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)。
 >* AEM Forms on JEE僅支援支援英文、法文、德文和日文版的支援作業系統和應用程式。
+
 >
 
 
@@ -73,7 +74,6 @@ Adobe建議您進行這些組態，並在標準軟體維護合約中提供完整
 >為協助AEM Forms客戶降低擁有成本、簡化部署架構並最新化開發堆疊，Adobe Experience Manager企業平台正從應用程式伺服器部署轉向獨立OSGi部署。 Adobe持續支援AEM Forms JEE堆疊，並減少基礎架構元件的矩陣。
 >
 >在6.5版中，我們不再支援在客戶中使用率最低的基礎架構元件，如下所示：
->· Oracle WebLogic應用程式伺服器
 >· IBM DB2資料庫
 >· IBM AIX和Sun Solaris作業系統
 >
@@ -220,6 +220,11 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
    <td><p><strong> 平台</strong></p> </td>
    <td><p><strong>支援等級</strong></p> </td>
    <td><p><strong>支援的修補程式定義</strong></p> </td>
+  </tr>
+  <tr>
+   <td>Oracle WebLogic Server 12.2.1(12c R2)</td>
+   <td>答： 支援</td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
    <td>IBM® WebSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
@@ -443,9 +448,11 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 >* OpenOffice專用的PDF產生器轉換僅在Windows和Linux上受支援。
 >* OCR PDF、最佳化PDF和匯出PDF功能僅在Windows上受支援。
 >* AEM Forms隨附Acrobat版本，以啟用PDF Generator功能。 在AEM Forms授權期間，僅能透過AEM Forms以程式設計方式存取搭售版本，以便與AEM Forms PDF Generator搭配使用。 如需詳細資訊，請參閱AEM Forms產品說明，如您的部署([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))」
+
    >
    >
 * PDF Generator服務不支援Microsoft Windows 10。
+
 >
 
 
@@ -522,7 +529,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 * 安裝的磁碟空間： 僅適用於Workbench 1.7 GB，在單一硬碟上2.7 GB可完整安裝Workbench、Designer和範例元件400 MB（適用於臨時安裝目錄）- 200 MB（適用於使用者臨時目錄）和200 MB（適用於Windows臨時目錄）。 如果所有這些位置都駐留在單個驅動器上，則安裝期間必須有1.5 GB的可用空間。 安裝完成後，將刪除複製到臨時目錄的檔案。
 
 * 運行Workbench的記憶體： 2GB的記憶體
-* 硬體需求： Intel® Pentium® 4或AMD相當等級，1 GHz處理器
+* 硬體需求： Intel® Pentium® 4或AMD等級，1 GHz處理器
 * 最低1024 X 768像素或更高的螢幕解析度（含16位元色彩或更高）
 * TCP/IPv4或TCP/IPv6網路連線至JEE伺服器上的AEM Forms
 * 您必須擁有管理權限，才能在Windows上安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
@@ -625,6 +632,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 >* Safari不支援Administration Console。
 >* Correponse Management不支援Windows® Internet Explorer 9.0 for AEM 6.1表格。
 >* Forms Portal支援Internet Explorer 11上的JAWS 14.0螢幕閱讀程式軟體，以協助您存取。
+
 >
 
 
@@ -659,6 +667,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 >[!NOTE]
 >
 >* Safari僅在iPad上支援表單入口網站。
+
 >
 
 
