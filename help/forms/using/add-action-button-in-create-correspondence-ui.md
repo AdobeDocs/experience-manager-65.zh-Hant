@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1910'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Correponse Management解決方案允許您將自定義操作添加到「建立�
 * CRX和JavaScript的相關知識
 * LiveCycle Server
 
-## 方案：在「建立對應使用者介面」中建立按鈕，以傳送信函以供審核 {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
+## 方案： 在「建立對應使用者介面」中建立按鈕，以傳送信函以供審核 {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
 
 在「建立對應使用者介面」中新增含動作的按鈕（此處傳送信函以供審核），包括：
 
@@ -169,7 +172,7 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 
 1. 前往 `https://[host]:'port'/system/console/bundles`. 如有必要，請以管理員身份登錄。
 
-1. 找到Adobe Asset Composer建置區塊套件。 重新啟動套件：按一下「停止」，然後按一下「開始」。
+1. 找到Adobe Asset Composer建置區塊套件。 重新啟動套件： 按一下「停止」，然後按一下「開始」。
 
    ![Adobe Asset Composer建置區塊](assets/6_assetcomposerbuildingblockbundle.png)
 
@@ -185,9 +188,9 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 
 按一下動作／按鈕時處理動作／按鈕的邏輯包括：
 
-* 將新加入的動作設為可見／不可見：完成方式：覆寫actionVisible()函式。
-* 啟用／禁用新添加的操作：完成方式：覆寫actionEnabled()函式。
-* 當使用者按一下按鈕時的實際動作處理：可覆寫handleAction()函式的實作。
+* 將新加入的動作設為可見／不可見： 完成方式：覆寫actionVisible()函式。
+* 啟用／禁用新添加的操作： 完成方式：覆寫actionEnabled()函式。
+* 當使用者按一下按鈕時的實際動作處理： 可覆寫handleAction()函式的實作。
 
 1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de`. 如有必要，請以管理員身份登錄。
 
@@ -343,9 +346,10 @@ LCA程式會在LiveCycle伺服器上執行，並需要伺服器位址和登入�
 
 1. 輸入以下詳細資訊，然後按一下「 **保存**」:
 
-   * **伺服器Url**:動作處理常式程式碼所使用之Send For Review服務之LC伺服器的URL。
-   * **使用者名稱**:LC伺服器的管理員用戶名
-   * **密碼**:管理員使用者名稱的密碼
+   * **伺服器Url**: 動作處理常式程式碼所使用之Send For Review服務之LC伺服器的URL。
+   * **使用者名稱**: LC伺服器的管理員用戶名
+   * **密碼**: 管理員使用者名稱的密碼
+
    ![Adobe LiveCycle Client SDK設定](assets/3_clientsdkconfiguration.png)
 
 #### 安裝LiveCycle Archive(LCA) {#install-livecycle-archive-lca}
@@ -376,7 +380,7 @@ LCA程式會在LiveCycle伺服器上執行，並需要伺服器位址和登入�
 
 1. 按一 **下匯入**。
 
-#### 將ServiceName添加到WhiteListed服務清單 {#adding-servicename-to-the-whitelisted-service-list}
+#### 將ServiceName添加到Allowlist服務清單 {#adding-servicename-to-the-allowlist-service-list}
 
 在AEM伺服器中提及您要存取AEM伺服器的LiveCycle服務。
 
@@ -417,6 +421,7 @@ LCA程式會在LiveCycle伺服器上執行，並需要伺服器位址和登入�
    * **crx.username**= AEM使用者名稱
    * **crx.password**= AEM密碼
    * **crx.appRoot**=/content/apps/cm
+
    >[!NOTE]
    >
    >每次您在伺服器端進行任何變更時，請重新啟動LiveCycle Server。 如需建立您自己LiveCycle元件的詳細資訊，請參 [閱透過自訂DSC開發擴充LiveCycle ES軟體](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html)。
