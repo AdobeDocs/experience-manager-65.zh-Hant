@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7eebef08-83b9-4b56-90ec-35ab3b0c27e8
 noindex: true
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '671'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Adobe Experience Manager提供使用者介面，可搜尋及尋找儲存在AEM�
 ## 開始之前 {#before-you-start}
 
 * 安裝及設定AEM Forms檔案安全性。
-* 將sun.util.calendar包添加到還原序列化防火牆配 **置的白名單中。** 配置列於 `https://'[server]:[port]'/system/console/configMgr`。
+* 將sun.util.calendar包添加到還原序列化防火牆配 **置的允許清單。** 配置列於 `https://'[server]:[port]'/system/console/configMgr`。
 * 確定所有AEM搭售都已啟動並執行。 捆綁包列於 `https://'[server]:[port]'/system/console/bundles`。 如果所有捆綁包都未激活，請等待，並在幾分鐘後檢查捆綁包的狀態。
 
 ## 在AEM Forms工作流程中建立安全連線（JEE上的AEM Forms） {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
@@ -40,9 +43,10 @@ Adobe Experience Manager提供使用者介面，可搜尋及尋找儲存在AEM�
 1. 搜尋並開啟AEM Forms Client SDK套裝。 指定下列屬性的值：
 
    * **伺服器URL:** 指定JEE伺服器上AEM Forms的HTTP URL。 若要啟用透過https進行通訊，請使用-Djavax.net.ssl.trustStore=&lt;JEE金鑰庫檔案上的AEM Forms路徑>參數，重新啟動JEE伺服器上的AEM Forms。
-   * **服務名稱**:將RightsManagementService新增至指定服務的清單。
+   * **服務名稱**: 將RightsManagementService新增至指定服務的清單。
    * **使用者名稱：** 指定JEE帳戶上的AEM Forms使用者名稱，以用來從JEE伺服器上的AEM Forms啟動呼叫。 指定的帳戶必須擁有在JEE伺服器上叫用AEM Forms的Document Services的權限。
-   * **密碼**:指定「使用者名稱」欄位中提及之AEM Forms on JEE帳戶的密碼。
+   * **密碼**: 指定「使用者名稱」欄位中提及之AEM Forms on JEE帳戶的密碼。
+
    按一下&#x200B;**「儲存」**。AEM已啟用，可搜尋受檔案安全性保護的PDF和Microsoft Office檔案。
 
 ### 使用相互驗證來設定AEM Forms Client SDK套件 {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
@@ -52,12 +56,13 @@ Adobe Experience Manager提供使用者介面，可搜尋及尋找儲存在AEM�
 1. 搜尋並開啟AEM Forms Client SDK套裝。 指定下列屬性的值：
 
    * **伺服器URL:** 指定JEE伺服器上AEM Forms的HTTPS URL。 若要啟用透過https進行通訊，請使用-Djavax.net.ssl.trustStore=&lt;JEE金鑰庫檔案上的AEM Forms路徑>參數，重新啟動JEE伺服器上的AEM Forms。
-   * **啟用雙向SSL**:啟用「啟用2向SSL」選項。
-   * **KeyStore檔案URL**:指定密鑰庫檔案的URL。
-   * **TrustStore FIle URL**:指定truststore檔案的URL。
-   * **KeyStore密碼**:指定密鑰庫檔案的密碼。
-   * **TrustStorePassword**:指定truststore檔案的密碼。
-   * **服務名稱**:將RightsManagementService新增至指定服務的清單。
+   * **啟用雙向SSL**: 啟用「啟用2向SSL」選項。
+   * **KeyStore檔案URL**: 指定密鑰庫檔案的URL。
+   * **TrustStore FIle URL**: 指定truststore檔案的URL。
+   * **KeyStore密碼**: 指定密鑰庫檔案的密碼。
+   * **TrustStorePassword**: 指定truststore檔案的密碼。
+   * **服務名稱**: 將RightsManagementService新增至指定服務的清單。
+
    按一下&#x200B;**「儲存」**。AEM已啟用，可搜尋受檔案安全性保護的PDF和Microsoft Office檔案
 
 ## 為受原則保護的範例PDF或Microsoft Office檔案建立索引 {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
