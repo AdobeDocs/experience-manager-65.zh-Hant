@@ -10,14 +10,17 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
+source-git-commit: 49b18b780c87501dcb2d9a00930da8eb5e51cff2
+workflow-type: tm+mt
+source-wordcount: '1563'
+ht-degree: 1%
 
 ---
 
 
 # 配置翻譯整合框架{#configuring-the-translation-integration-framework}
 
-翻譯整合框架與第三方翻譯服務整合，以協調AEM內容的翻譯。
+翻譯整合框架與第三方翻譯服務整合，協調AEM內容的翻譯。
 
 * 連接到您的翻譯服務提供商。
 * 建立翻譯整合框架配置。
@@ -27,21 +30,21 @@ source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
 
 ## 連接到翻譯服務提供商 {#connecting-to-a-translation-service-provider}
 
-建立將AEM連結至您的翻譯服務供應商的雲端設定。 AEM包含依預設連線至Microsoft Translator的功能。 對於其他翻譯提供者，請從「套件共用」下載 [連接器套件](/help/sites-administering/package-manager.md#package-share)。
-以下翻譯供應商為翻譯項目提供了新API的實施。 連結，以進一步瞭解整合以及如何從Package Share下載：
+建立將AEM連結至您的翻譯服務供應商的雲端設定。 AEM包含依預設連線至Microsoft Translator的功能。
+以下翻譯供應商為翻譯項目提供了新API的實施。 連結，以進一步瞭解整合：
 
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) （Adobe Exchange主要合作夥伴）
-* [Clay Tablet Technologies](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/clay-tablet-translation-connector-for-aem.html) （不在PackageShare上，請直接聯絡廠商）
-* [Lionbridge](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lionbridge-for-adobe-experience-manager.html)
-* [雲字](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/cloudwords-for-adobe-translations-connector.html)
-* [CrossLang NV](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/crosslang-xtm-for-adobe-experience-manager.html)
-* [林戈特克](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lingotek-for-adobe-experience-manager.html)
+* [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
+* [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
+* [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
+* [雲字](https://exchange.adobe.com/experiencecloud.details.90019.html)
+* [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
+* [林戈特克](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
+* [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
+* [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
+* [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
+* [阿爾特朗](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
 * Microsoft（Microsoft Translator已預先安裝在AEM中）
-* [Smartling](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/smartling-connector-for-adobe-experience-manager.html)
-* [SDL WorldServer](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdlworldserver-connector.html)
-* [SDL TMS](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdl-tms-translation-connector-for-adobe-experience-manager.html)
-* [Systran](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/systran-for-adobe-experience-manager.html)
-* [阿爾特朗](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/Altlang.html)
 
 >[!NOTE]
 >
@@ -50,6 +53,7 @@ source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
 >
 >* [AEM Human Translation](https://www.adobe.com/go/aem-human-translation-connectors)
 >* [AEM機器翻譯](https://www.adobe.com/go/aem-machine-translation-connectors)
+
 >
 
 
@@ -93,9 +97,9 @@ source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
    <td>轉換工作流程</td>
    <td><p>選擇框架對站點內容執行的轉換方法：</p>
     <ul>
-     <li>機器翻譯：翻譯提供者使用機器翻譯即時執行翻譯。</li>
-     <li>人文翻譯：內容將發送到翻譯提供者，翻譯者將翻譯。 </li>
-     <li>不要翻譯：內容不會傳送以進行翻譯。 這是為了略過某些無法翻譯但可更新為最新內容的內容分支。</li>
+     <li>機器翻譯： 翻譯提供者使用機器翻譯即時執行翻譯。</li>
+     <li>人文翻譯： 內容將發送到翻譯提供者，翻譯者將翻譯。 </li>
+     <li>不要翻譯： 內容不會傳送以進行翻譯。 這是為了略過某些無法翻譯但可更新為最新內容的內容分支。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -114,9 +118,9 @@ source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
    <td>翻譯頁面資產</td>
    <td><p>選擇如何轉換從檔案系統新增至元件或從「資產」參考的資產：</p>
     <ul>
-     <li>不要翻譯：頁面資產不會轉譯。</li>
-     <li>使用網站轉譯工作流程：資產會根據「網站」標籤上的設定屬性處理。</li>
-     <li>使用資產轉換工作流程：資產會根據「資產」標籤上屬性的設定來處理。</li>
+     <li>不要翻譯： 頁面資產不會轉譯。</li>
+     <li>使用網站轉譯工作流程： 資產會根據「網站」標籤上的設定屬性處理。</li>
+     <li>使用資產轉換工作流程： 資產會根據「資產」標籤上屬性的設定來處理。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -150,9 +154,9 @@ source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
    <td>轉換工作流程</td>
    <td><p>選擇框架為資產執行的翻譯類型：</p>
     <ul>
-     <li>機器翻譯：翻譯提供者使用機器翻譯立即執行翻譯。</li>
-     <li>人文翻譯：內容會自動傳送給翻譯提供者，以手動翻譯。 </li>
-     <li>不要翻譯：資產不會傳送以進行翻譯。</li>
+     <li>機器翻譯： 翻譯提供者使用機器翻譯立即執行翻譯。</li>
+     <li>人文翻譯： 內容會自動傳送給翻譯提供者，以手動翻譯。 </li>
+     <li>不要翻譯： 資產不會傳送以進行翻譯。</li>
     </ul> </td>
   </tr>
   <tr>
