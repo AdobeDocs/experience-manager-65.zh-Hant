@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 4170c7fe48a740e0574a32c7823841dc311fd565
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -102,7 +102,7 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 
 
 
-![chlimage_1-193](assets/chlimage_1-193.png)
+![chlimage_1-248](assets/chlimage_1-248.png)
 
 要查看日誌條目：
 
@@ -118,7 +118,7 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 
    * 例如， `.../crx-quickstart/logs/scoring-debug.log`
 
-![chlimage_1-194](assets/chlimage_1-194.png)
+![chlimage_1-249](assets/chlimage_1-249.png)
 
 ## UGC的計分與簽章 {#ugc-for-scoring-and-badging}
 
@@ -217,7 +217,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
    由於使用者已獲得兩枚銅牌，並獲得協調者徽章，因此使用者在論壇參加項目時，會以這種方式呈現。
 
-![chlimage_1-195](assets/chlimage_1-195.png)
+![chlimage_1-250](assets/chlimage_1-250.png)
 
 >[!NOTE]
 >
@@ -230,7 +230,6 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
    >
    >
 * 為不同的AEM網站建立獨特的徽章影像
-
 >
 
 
@@ -255,7 +254,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 分數會儲存在屬性中， `scoreValue_tl` 該屬性可能僅直接包含值或間接引用atomicCounter。
 
-![chlimage_1-196](assets/chlimage_1-196.png)
+![chlimage_1-251](assets/chlimage_1-251.png)
 
 ### 存取標籤UGC {#access-badging-ugc}
 
@@ -271,11 +270,11 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 #### 獎章 {#awarded-badge}
 
-![chlimage_1-197](assets/chlimage_1-197.png)
+![chlimage_1-252](assets/chlimage_1-252.png)
 
 #### 指派的徽章 {#assigned-badge}
 
-![chlimage_1-198](assets/chlimage_1-198.png)
+![chlimage_1-253](assets/chlimage_1-253.png)
 
 ## 其他資訊 {#additional-information}
 
