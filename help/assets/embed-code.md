@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 translation-type: tm+mt
-source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 21%
@@ -48,10 +48,10 @@ See [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
 
    請參閱 [發佈影像預設集](managing-image-presets.md#publishing-image-presets)。
 
-1. 在左側導軌中，選取下拉式選單並點選「檢 **[!UICONTROL 視器]**」。
+1. 在左側導軌中，選取下拉式選單並點選「檢 **[!UICONTROL 視器」。]**
 1. 在左側導軌中，點選檢視器預設集名稱。 檢視器預設會套用至資產。
-1. 點選「 **[!UICONTROL 內嵌]**」。
-1. 在「內 **[!UICONTROL 嵌代碼]** 」對話方塊中，將整個代碼複製到剪貼簿，然後點選「 **[!UICONTROL 關閉」]**。
+1. 點選「 **[!UICONTROL 內嵌」。]**
+1. 在「內 **[!UICONTROL 嵌程式碼]** 」對話方塊中，將整個程式碼複製到剪貼簿，然後點選「 **[!UICONTROL 關閉」。]**
 1. 將內嵌代碼貼入您的網頁。
 
 ## 使用HTTP/2來傳送您的動態媒體資產 {#using-http-to-deliver-your-dynamic-media-assets}
