@@ -9,12 +9,15 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '586'
+ht-degree: 0%
 
 ---
 
 
-# 全景影像{#panoramic-images}
+# Panoramic images{#panoramic-images}
 
 本節將說明如何與全景影像檢視器搭配使用，以呈現球面全景影像，提供如臨現場的360°房間、屬性、位置或風景觀賞體驗。
 
@@ -32,7 +35,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 * 使用關鍵字 `equirectangular`、 `spherical`和 `panorama`、或 `spherical` 和標籤 `panoramic`。 請參 [閱使用標籤](/help/sites-authoring/tags.md)。
 
-外觀比例和關鍵字條件都適用於資產詳細資料頁面和 `Panoramic Media` WCM元件的全景資產。
+Both the aspect ratio and keyword criteria apply to panoramic assets for the asset details page and the `Panoramic Media` WCM component.
 
 若要上傳資產以搭配全景影像檢視器使用，請參閱「上 [傳資產」](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
 
@@ -42,11 +45,11 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 1. [請針對每個公司帳戶登入您的Dynamic Media Classic(Scene7)](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 。
 
-1. 在頁面的右上角附近，按一下「設定>應 **[!UICONTROL 用程式設定>發佈設定>影像伺服器」]**。
-1. 在「影像伺服器發佈」頁面上，從上方 **[!UICONTROL 附近的「發佈內容]** 」下拉式選單中，選取「 **[!UICONTROL 影像伺服」]**。
+1. 在頁面的右上角附近，按一下「設定>應 **[!UICONTROL 用程式設定>發佈設定>影像伺服器」。]**
+1. 在「影像伺服器發佈」頁面上，從上方 **[!UICONTROL 附近的「發佈內容]** 」下拉式選單中，選取「影像 **[!UICONTROL 伺服」。]**
 
-1. 在相同的「影像伺服器發佈」頁面上，找到標題「請 **[!UICONTROL 求屬性」]**。
-1. 在「請求屬性」標題下，找出「 **[!UICONTROL 回覆影像大小限制」]**。 然後，在相關的「寬度」和「高度」欄位中，增加全景影像的最大允許影像大小。
+1. 在相同的「影像伺服器發佈」頁面上，找出標題「請 **[!UICONTROL 求屬性」。]**
+1. 在「請求屬性」標題下，找出「回 **[!UICONTROL 覆影像大小限制」。]** 然後，在相關的「寬度」和「高度」欄位中，增加全景影像的最大允許影像大小。
 
    Dynamic Media Classic(Scene7)的像素上限為25,000,000像素。 寬高比為2:1的影像允許的最大大小為7000 x 3500。 不過，對於一般的桌上型電腦螢幕，4096 x 2048像素就足夠了。
 
@@ -56,17 +59,18 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 1. 在「請求屬性」標題下，執行下列動作：
 
-   * 將「請求模糊化模式」設 **[!UICONTROL 為「停用]**」。
-   * 將「請求鎖定模式」設 **[!UICONTROL 置為「禁用]**」。
+   * 將「請求模糊化模式」設 **[!UICONTROL 為「停用」。]**
+   * 將「請求鎖定模式」設 **[!UICONTROL 為「停用」。]**
+
    在AEM中使用 `Panoramic Media` WCM元件時，必須進行這些設定。
 
-1. 在「影像伺服器發佈」頁面的左側，按一下「儲存」 ****。
+1. 在「影像伺服器發佈」頁面的左側，按一下「儲存」 **[!UICONTROL 。]**
 
-1. 在右下角，按一下「關閉 **[!UICONTROL 」]**。
+1. 在右下角，按一下「關閉」( **[!UICONTROL Close)。]**
 
 ### 全景媒體WCM元件故障排除 {#troubleshooting-the-panoramic-media-wcm-component}
 
-如果您將影像放入WCM的Panoramic media元件中，而元件預留位置已收合，您可能會想要疑難排解下列問題：
+如果您將影像放入WCM的Panoramic Media元件中，而元件預留位置已收合，您可能會想要疑難排解下列問題：
 
 * 如果您遇到403 Forbidden錯誤，可能是由於要求的影像大小過大所致。 檢閱「設 **[!UICONTROL 定動態媒體經典]** (Scene7)」 [中的「回覆影像大小限制」設定](/help/assets/panoramic-images.md#configuring%20dynamic%20media%20classic%20(scene7))。
 
