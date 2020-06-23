@@ -4,7 +4,7 @@ description: 瞭解如何預覽3D資產
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cabc87dc58a4dbcac64a2797a3b1e0cca995d63
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 4%
@@ -52,7 +52,7 @@ Adobe Experience Manager支援3D資產的上傳、傳送和互動式預覽，做
 
 1. 請確定您已將3D資產上傳至AEM。
 See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
-1. 在AEM的「導覽」頁面 **[!UICONTROL 上]** ，點選「 **[!UICONTROL 資產>檔案」]**。
+1. 在AEM的「導覽」頁面 **[!UICONTROL 上]** ，點選「 **[!UICONTROL 資產>檔案」。]**
 
    ![導覽頁面](/help/assets/assets-dm/navigation-assets.png)
 
@@ -81,4 +81,4 @@ See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Upl
    * **重設**-靠近頁面的右下角，點選「重設」圖示，將檢視目標點還原至3D資產的中心。 Reset也會使攝影機更靠近或更遠，以便以合理的檢視大小顯示整個資產。
    * **全螢幕模式**-若要進入全螢幕模式，請在頁面的右下角點選全螢幕圖示。
 
-1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close]**.
+1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close.]**
