@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b6a7648699bc8e8e041749fb03998f86a27292ce
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '3129'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 8%
 
 1. 在AEM中，開啟您要新增動態媒體元件的頁面。
 1. 在頁面左側的面板（您可能需要切換側面板的顯示）中，按一下「元件」 **[!UICONTROL 圖示]** 。
-1. 在「元 **[!UICONTROL 件]** 」標題下方的下拉式清單中，選取「動 **[!UICONTROL 態媒體」]**。
+1. 在「元 **[!UICONTROL 件]** 」標題下方的下拉式清單中，選取「動 **[!UICONTROL 態媒體」。]**
 
    如果沒有可用的動態媒體元件清單，您可能需要啟用您要使用的動態媒體元件。 請參閱 [啟用動態媒體元件](#enabling-dynamic-media-components)。
 
@@ -64,7 +64,7 @@ ht-degree: 8%
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
-1. 在工具列右側，靠近頁面頂部，從下拉式清單中點選「結構」( **[!UICONTROL Structure]**)。
+1. 在工具列右側，靠近頁面頂部，從下拉式清單中點選「結構」( **[!UICONTROL Structure)。]**
 
    ![政策](/help/assets/assets-dm/structure-mode.png)
 
@@ -73,7 +73,7 @@ ht-degree: 8%
 
    ![允許的元件](/help/assets/assets-dm/allowed-components.png)
 
-1. 捲動直到您看到 **[!UICONTROL 動態媒體]**。
+1. 捲動直到您看到 **[!UICONTROL 動態媒體。]**
 1. 點選 **[!UICONTROL Dynamic Media]** （動態媒體）左側的>圖示以展開清單，選取您要啟用的動態媒體元件。
 
    ![動態媒體元件清單](/help/assets/assets-dm/dm-components-select.png)
@@ -98,7 +98,7 @@ ht-degree: 8%
 
 ## 動態媒體元件 {#dynamic-media-components}
 
-當您點選「元件」圖示，然後在「動態媒體」上篩選時， **[!UICONTROL 就可使用]** 「動態媒 **[!UICONTROL 體」元件]**。
+當您點選「元件」圖示，然後在「動態媒體」上篩選時， **[!UICONTROL 就可使用]** 「動態媒 **[!UICONTROL 體」元件。]**
 
 可用的動態媒體元件包括：
 
@@ -140,13 +140,13 @@ ht-degree: 8%
 
 您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像回應，您可以設定中斷點或套用回應式影像預設集。
 
-您必 *須先點選元件中的「編輯」圖示，然後點選「動態媒體設定」，以編輯下列「動態媒體設定」*********。
+您必 ********[!UICONTROL 須先點選元件中的「編輯」圖示，再點選「動態媒體設定」，以編輯下列「動態媒體設定」。]**
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->依預設，動態媒體影像元件是可調式的。如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
+>依預設，動態媒體影像元件是可調式的。If you want to make it a fixed size, set it in the component in the **[!UICONTROL Advanced]** tab with the **[!UICONTROL Width]** and **[!UICONTROL Height.]**
 
 * **[!UICONTROL 檢視器預設]**-從下拉式選單中選取現有的檢視器預設。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 請參閱管理檢視器預設集。 如果您使用影像預設集，則無法選取檢視器預設集，反之亦然。
 
@@ -223,7 +223,7 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
 >[!NOTE]
 >
->依預設，動態媒體影像元件是可調式的。如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
+>依預設，動態媒體影像元件是可調式的。If you want to make it a fixed size, set it in the component in the **[!UICONTROL Advanced]** tab with the **[!UICONTROL Width]** and **[!UICONTROL Height.]**
 
 * **[!UICONTROL 影像修飾元]**-您可以提供其他影像指令來套用影像效果。 這些說明在「影像預設集」和「影像伺服命令」參考中。
 
@@ -247,7 +247,7 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
 ### 互動式媒體元件 {#interactive-media-component}
 
-互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用 **[!UICONTROL 互動式媒體元件]** 。
+互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用互動式 **[!UICONTROL 媒體元件]** 。
 
 互動式媒體元件是智慧型的。 視您新增影像或視訊而定，您有各種選項。 此外，檢視器具有互動功能——螢幕大小會根據螢幕大小自動變更。 所有檢視器都是HTML5檢視器。
 
