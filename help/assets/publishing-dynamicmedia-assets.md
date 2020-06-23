@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: b8fe3267a808f1a64b78620156826e0b6e3a5676
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # Publishing Dynamic Media Assets {#publishing-dynamic-media-assets}
 
-您可以選擇已上傳的資產，並點選「發佈」或「快速發佈」，以發佈您的 **[!UICONTROL 動態]****[!UICONTROL 媒體資產]**。 發佈動態媒體資產後，您就可透過URL或將程式碼內嵌在網頁中，將其加入網頁。
+您可以選擇已上傳的資產，並點選「發佈」或「快速發佈」，以發佈 **[!UICONTROL 動態]****[!UICONTROL 媒體資產。]** 發佈動態媒體資產後，您就可透過URL或將程式碼內嵌在網頁中，將其加入網頁。
 
 您也可以立即發佈上傳的資產，不需任何使用者干預。 請參 [閱設定動態媒體- Scene7模式](config-dms7.md)。
 
@@ -38,6 +38,7 @@ See also [Embedding the Dynamic Media Video or Image viewer on a web page](embed
 >
 >* 必須發佈資產才能使用URL。 如果資產未發佈，則複製URL並貼至網頁瀏覽器將無法運作。
 >* 必須啟用並發佈影像預設集和檢視器預設集，才能即時傳送。
+
 >
 
 
