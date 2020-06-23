@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 071f4a292343f0ad52ca3700c95bf60f03c307cc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -74,7 +74,7 @@ ht-degree: 0%
    >
    >覆蓋並編輯整個描述檔節點，而不只是需要修改的屬性。 這些資源不會透過SlingResourceMergare解決。
 
-4. 如果您變更了其中一個屬性，請按一下「全 **[!UICONTROL 部儲存」]**。
+4. 如果您變更了其中一個屬性，請按一下「全 **[!UICONTROL 部儲存」。]**
 
 >[!NOTE]
 >
