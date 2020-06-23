@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2079'
-ht-degree: 19%
+ht-degree: 16%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 19%
 
    在「影像集」中，使用者按一下「影像集檢視器」中的縮圖影像。
 
-   若要在資產中建立影像集，請點選或按一下「建立> **[!UICONTROL 影像集」]**。 然後，新增影像，然後按一下「 **[!UICONTROL 儲存]**」。
+   若要在資產中建立影像集，請點選或按一下「建立> **[!UICONTROL 影像集」。]** 然後，新增影像，然後按一下「 **[!UICONTROL 儲存」。]**
 
    You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md).
    >[!IMPORTANT]
@@ -62,7 +62,7 @@ ht-degree: 19%
 
 1. 視需 [要新增影像集檢視器預設](/help/assets/managing-viewer-presets.md)。
 
-   管理員可以建立或修改影像集檢視器預設集。 To see your image set with a viewer preset, select the image set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers]**.
+   管理員可以建立或修改影像集檢視器預設集。 To see your image set with a viewer preset, select the image set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers.]**
 
    請參閱「 **[!UICONTROL 工具>資產>檢視器預設集]** 」以建立或編輯檢視器預設集。
 
@@ -79,7 +79,7 @@ ht-degree: 19%
 
    AEM Assets會建立影像集的URL呼叫，並在您發佈影像集後加以啟動。 您可以在預覽資產時複製這些URL。 或者，您也可以將它們內嵌在您的網站上。
 
-   選取「影像集」，然後在左側導軌下拉式選單中選取「檢 **[!UICONTROL 視器]**」。
+   Select the Image Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers.]**
 
    請參 [閱連結影像集至網頁](/help/assets/linking-urls-to-yourwebapplication.md)[和內嵌影片或影像檢視器](/help/assets/embed-code.md)。
 
@@ -128,7 +128,7 @@ ht-degree: 19%
 
 **若要建立影像集**
 
-1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選「導 **[!UICONTROL 覽>資產」]**。導覽至您要建立影像集的位置，然後點選「建 **[!UICONTROL 立>影像集]** 」以開啟「影像集編輯器」頁面。
+1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選「導 **[!UICONTROL 覽>資產」。]**&#x200B;導覽至您要建立影像集的位置，然後點選「建 **[!UICONTROL 立>影像集]** 」以開啟「影像集編輯器」頁面。
 
    您也可以從包含資產的資料夾內建立資產集。
 
@@ -140,12 +140,12 @@ ht-degree: 19%
 
 1. 執行下列任一項作業：
 
-   * 在「影像集編輯器」頁面的左上角附近，點選「新增 **[!UICONTROL 資產」]**。
+   * 在「影像集編輯器」頁面的左上角附近，點選「新增 **[!UICONTROL 資產」。]**
 
-   * 在「影像集編輯器」頁面的中間，點選「點選」 **[!UICONTROL 以開啟「資產選擇器」]**。
-   點選以選取您要納入影像集的資產。 選取的資產上面有核取標籤圖示。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select]**.
+   * 在「影像集編輯器」頁面的中間，點選「點選」 **[!UICONTROL 以開啟「資產選擇器」。]**
+   點選以選取您要納入影像集的資產。 選取的資產上面有核取標籤圖示。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select.]**
 
-   使用「資產選擇器」，您可以輸入關鍵字並點選或按一下「退貨」來搜尋 **[!UICONTROL 資產]**。您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後點選工具 **[!UICONTROL 列上的]** 「篩選」圖示。點選「檢視」圖示並選取「欄檢視」、「卡片檢視」或「清 **[!UICONTROL 單檢視」]**, **[!UICONTROL 以變更]**&#x200B;檢視 ****。
+   使用「資產選擇器」，您可以輸入關鍵字並點選或按一下「退貨」來搜尋 **[!UICONTROL 資產。]**&#x200B;您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後點選工具 **[!UICONTROL 列上的]** 「篩選」圖示。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
 
    See [Working with Selectors.](/help/assets/working-with-selectors.md)
 
@@ -157,18 +157,18 @@ ht-degree: 19%
 
    ![6_5-影像集——重新排序資產](assets/6_5_imageset-reorderassets.png)
 
-   如果您想要變更縮圖或色票，請按一 **下影像旁** 的+ **縮圖** 圖示，並導覽至您想要的縮圖或色票。選取完所有影像後，按一下「 **[!UICONTROL 儲存]**」。
+   如果您想要變更縮圖或色票，請按一 **下影像旁** 的+ **縮圖** 圖示，並導覽至您想要的縮圖或色票。When done selecting all the images click **[!UICONTROL Save.]**
 
 1. （可選）執行下列任一項作業：
 
-   * 若要刪除影像，請選取影像並點選「刪 **[!UICONTROL 除資產」]**。
+   * 若要刪除影像，請選取影像並點選「刪 **[!UICONTROL 除資產」。]**
 
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a preset to apply to all the assets at once.
    >[!NOTE]
    >
-   >建立影像集時，您可以變更影像集縮圖，或允許AEM根據影像集中的資產自動選取縮圖。若要選取縮圖，請點選「影像集編輯器」頁面上「標題」欄位上方的「變更縮圖 **** 」，然後選取任何影像 (您也可以導覽至其他檔案夾以尋找影像)。如果您已選取縮圖，然後決定要讓AEM從影像集產生縮圖，請選取「切換至 **[!UICONTROL 自動]****[!UICONTROL 縮圖」]**。
+   >建立影像集時，您可以變更影像集縮圖，或允許AEM根據影像集中的資產自動選取縮圖。若要選取縮圖，請點選「影像集編輯器」頁面上「標題」欄位上方的「變更縮圖 **** 」，然後選取任何影像 (您也可以導覽至其他檔案夾以尋找影像)。If you have selected a thumbnail and then decide that you want AEM to generate one from the image set, select **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail.]**
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。您新建立的「影像集」會顯示在您所建立的檔案夾中。
+1. 按一下&#x200B;**[!UICONTROL 「儲存」。]** 您新建立的「影像集」會顯示在您所建立的檔案夾中。
 
 ## 檢視影像集 {#viewing-image-sets}
 
@@ -188,7 +188,7 @@ ht-degree: 19%
 
    ![6_5_imageset-setspuldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* 在搜索中，可以選 **擇[!UICONTROL篩選器**，然後展開 **[!UICONTROL動態媒體** ，並選擇 **[!UICONTROL 集]**。
+* From search, you can select **[!UICONTROL Filter**, then expand **[!UICONTROL Dynamic Media** and select **[!UICONTROL Sets.]**
 
    搜尋會傳回在UI中手動建立或透過批次集預設集自動建立的相符集。 對於自動集，搜尋查詢是使用「以」搜尋准則進行，此搜尋准則與以「包含」搜尋准則為基礎的AEM搜尋不同。 將篩選器設 **[!UICONTROL 置為]** 「集」是搜索自動集的唯一方法。
 
@@ -220,15 +220,15 @@ ht-degree: 19%
 
    * 若要重新排序資產，請將影像拖曳至新位置（選取重新排序圖示以移動項目）。
    * 若要依遞增或遞減順序排序項目，請按一下欄標題。
-   * 若要新增資產或更新現有資產，請按一下「新增 **[!UICONTROL 資產」]**。 導覽至資產，選取資產，然 **[!UICONTROL 後點選]** （靠近頁面右上角）。
+   * 若要新增資產或更新現有資產，請按一下「新增 **[!UICONTROL 資產」。]** 導覽至資產，選取資產，然 **[!UICONTROL 後點選]** （靠近頁面右上角）。
 
       >[!NOTE]
       >
       >如果您將AEM用縮圖取代為其他影像，以刪除該縮圖所使用的影像，原始資產仍會顯示。
-   * 若要刪除資產，請選取資產並點選或按一下「刪 **[!UICONTROL 除資產」]**。
+   * 若要刪除資產，請選取資產並點選或按一下「刪 **[!UICONTROL 除資產」。]**
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a viewer preset.
-   * 若要新增或變更縮圖，請選取資產右側的縮圖圖示。 導覽至新的縮圖或色票資產，選取它，然後點選「選 **[!UICONTROL 取」]**。
-   * 若要刪除整個影像集，請導覽至影像集，選取它，然後點選「刪 **[!UICONTROL 除」]**。
+   * 若要新增或變更縮圖，請選取資產右側的縮圖圖示。 導覽至新的縮圖或色票資產，選取它，然後點選「選 **[!UICONTROL 取」。]**
+   * 若要刪除整個影像集，請導覽至影像集，選取它，然後點選「刪 **[!UICONTROL 除」。]**
 
    >[!NOTE]
    >
