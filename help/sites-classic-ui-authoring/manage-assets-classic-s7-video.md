@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 1%
@@ -74,7 +74,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 
 **要配置通用預設集**:
 
-1. 在 **[!UICONTROL Cloud Services]**，導覽至您的 **[!UICONTROL Dynamic Media Classic設定，然後按一下「]** 編輯 ****」。
+1. 在 **[!UICONTROL Cloud Services]**，導覽至您的 **[!UICONTROL Dynamic Media Classic設定，然後按一下「編]****[!UICONTROL 輯」。]**
 1. 選擇「 **[!UICONTROL Video]** 」標籤。
 
    >[!NOTE]
@@ -151,8 +151,8 @@ Dynamic Media Classic視訊元件僅適用於Dynamic Media Classic視訊。 基�
 >
 >必須啟動新視訊設定檔及對其所做的變更才能發佈。
 
-1. 在AEM中，前往「工 **[!UICONTROL 具]**」，然後選 **[!UICONTROL 取「設定控制台」]**。 在設定控制台中，導覽至導 **[!UICONTROL 覽樹狀]** 結構中的 **[!UICONTROL 「工具]** >資 **[!UICONTROL 產]** >視訊描述檔」。
-1. 建立新的Dynamic Media Classic視訊設定檔。 在新 **[!UICONTROL ...]** 菜單，選 **[!UICONTROL 擇「建立頁面]** 」，然後選擇「動態媒體經典視頻配置檔案」模板。 為新視訊描述檔頁面指定名稱，然後按一下「 **[!UICONTROL 建立]**」。
+1. 在AEM中，前往「工 **[!UICONTROL 具]**」，然後選 **[!UICONTROL 取「設定主控台」。]** 在設定控制台中，導覽至導 **[!UICONTROL 覽樹狀]** 結構中的 **[!UICONTROL 「工具]** >資 **[!UICONTROL 產]** >視訊描述檔」。
+1. 建立新的Dynamic Media Classic視訊設定檔。 在新 **[!UICONTROL ...]** 菜單，選 **[!UICONTROL 擇「建立頁面]** 」，然後選擇「動態媒體經典視頻配置檔案」模板。 為新視訊描述檔頁面指定名稱，然後按一下「建 **[!UICONTROL 立」。]**
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
