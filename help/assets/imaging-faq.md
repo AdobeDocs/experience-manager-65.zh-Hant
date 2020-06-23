@@ -8,10 +8,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 8fa26e1d763950f370ba0adbc048efba612e8afc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1720'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -109,7 +109,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 
 若要尋找您的網域，請登入您的公司帳戶或帳戶。
 
-Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示為「已發佈伺服 **[!UICONTROL 器名稱」的欄位]**。 如果您目前使用一般網域，在提交技術支援票證時，可以請求移轉至您自己的自訂網域，做為此移轉的一部分。
+Tap **[!UICONTROL Setup > Application Setup > General Settings.]** 查找標有「已發佈伺服器 **[!UICONTROL 名稱」的欄位。]** 如果您目前使用一般網域，在提交技術支援票證時，可以請求移轉至您自己的自訂網域，做為此移轉的一部分。
 
 您的第一個自訂網域不需額外付費，只要取得Dynamic Media授權即可。
 
@@ -125,17 +125,17 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示�
 
       若要尋找您的網域，請登入您的公司帳戶或帳戶。
 
-      按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」]**。
+      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
 
-      尋找標示為「已發佈伺服 **[!UICONTROL 器名稱」的欄位]**。
+      查找標有「已發佈伺服器 **[!UICONTROL 名稱」的欄位。]**
    1. 確認您是否透過Adobe使用CDN，而且未透過直接關係進行管理。
    1. 確認您使用的是專用網域(如 `images.company.com` 或 `mycompany.scene7.com`)，而非一般網域(如、、 `s7d1.scene7.com`、) `s7d2.scene7.com``s7d13.scene7.com`。
 
       若要尋找您的網域，請登入您的公司帳戶或帳戶。
 
-      按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」]**。
+      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
 
-      尋找標示為「已發佈伺服 **[!UICONTROL 器名稱」的欄位]**。 如果您目前使用一般的Dynamic Media Classic網域，則可請求移至您自己的自訂網域，做為轉換的一部分。
+      查找標有「已發佈伺服器 **[!UICONTROL 名稱」的欄位。]** 如果您目前使用一般的Dynamic Media Classic網域，則可請求移至您自己的自訂網域，做為轉換的一部分。
    1. 指出您是否也需要此功能，才能透過HTTP/2運作。
 
 1. 技術支援將根據提交請求的順序將您添加到Smart Imaging客戶等待清單。
@@ -144,7 +144,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示�
 1. 完成後，支援會通知您。
 1. 為充份提升智慧型影像處理的效能，Adobe建議將「存留時間(TTL)」設定為24小時或更長。 TTL會定義CDN快取資產的時間長度。 要更改此設定，請：
 
-   1. 如果您使用Dynamic Media Classic，請按一下「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器]**」。 將「預 **[!UICONTROL 設用戶端快取時間」設為]** 24或更長的「即時」值。
+   1. 如果您使用Dynamic Media Classic，請按一下「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器」。]** 將「預 **[!UICONTROL 設用戶端快取時間」設為]** 24或更長的「即時」值。
    1. 如果您使用動態媒體，請依照 [這些指示](config-dynamic.md)。 將「過 **[!UICONTROL 期]** 」值設為24小時或更長。
 
 ## 我何時可以期待我的帳戶啟用Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
@@ -152,7 +152,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 尋找標示�
 請求的處理順序依技術支援部門接收的順序，依等待清單而定。
 
 >[!NOTE]
-啟用智慧型影像可能需要較長的前置時間，因為Adobe會清除快取。 因此，在任何指定時間，都只能處理少數客戶轉場。
+啟用智慧型影像需要Adobe清除快取，因此可能需要較長的前置時間。 因此，在任何指定時間，都只能處理少數客戶轉場。
 
 ## 切換到使用Smart Imaging時有哪些風險？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
