@@ -1,6 +1,6 @@
 ---
-title: HTTP2內容傳送常見問答集
-seo-title: HTTP2內容傳送常見問答集
+title: HTTP2 傳送內容常見問答集
+seo-title: HTTP2 傳送內容常見問答集
 description: 瞭解HTTP2內容傳送。
 seo-description: 瞭解HTTP2內容傳送。
 uuid: e837c3e0-6e48-46f1-b510-847c9976807a
@@ -10,12 +10,15 @@ topic-tags: integration
 content-type: reference
 discoiquuid: afbe9f80-c2a3-4a46-b9d6-4c9406667d7f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '749'
+ht-degree: 4%
 
 ---
 
 
-# HTTP2內容傳送常見問答集{#http-delivery-of-content-faq}
+# HTTP2 傳送內容常見問答集{#http-delivery-of-content-faq}
 
 Adobe很高興宣佈推出HTTP/2內容傳送。 使用HTTP/2時，您會注意到整體效能有所提升。
 
@@ -50,26 +53,28 @@ Adobe自己的測試產生了下列結果：
 
    若要尋找您的網域， [請針對每個公司帳戶登入您的Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 例項。
 
-   按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」]**。 尋找標示為「已發佈伺服 **器名稱」的欄位**。 如果您目前使用一般的Scene7網域，則可請求移至您自己的自訂網域，做為轉換的一部分。
+   按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」。]** 尋找標示為「已發佈伺服 **器名稱」的欄位**。 如果您目前使用一般的Scene7網域，則可請求移至您自己的自訂網域，做為轉換的一部分。
 
 ## 為我的Dynamic Media Classic帳戶啟用HTTP/2的程式為何？ {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-您必須提出Adobe技術支援(`s7support@adobe.com`)要求，以切換至HTTP/2;它不會自動為您完成。
+您必須提出Adobe技術支援(`s7support@adobe.com`)要求，以切換至HTTP/2; 它不會自動為您完成。
 
 1. 在您的支援要求中提供下列資訊：
 
    * 主要聯絡人姓名、電子郵件和電話號碼。
    * 要轉換到HTTP2的所有網域。 就是， `images.company.com` 或者 `mycompany.scene7.com`。
+
    若要尋找您的網域， [請針對每個公司帳戶登入您的Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 例項。
 
-   按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」]**。 尋找標示為「已發佈伺服 **[!UICONTROL 器名稱」的欄位]**。
+   按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」。]** 查找標有「已發佈伺服器 **[!UICONTROL 名稱」的欄位。]**
 
    * 確認您對多媒體請求使用安全的HTTPS。
    * 確認您是透過Adobe使用CDN，且未透過直接關係進行管理。
    * 確認您使用的是專用網域。 即，或 `images.company.com` 不 `mycompany.scene7.com`是一般的Scene7網域， `s7d1.scene7.com`例如 `s7d2.scene7.com`、 `s7d13.scene7.com`。
+
    若要尋找您的網域， [請針對每個公司帳戶登入您的Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 例項。
 
-   按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」]**。 尋找標示為「已發佈伺服 **[!UICONTROL 器名稱」的欄位]**。 如果您目前使用一般的Scene7網域，則可請求移至您自己的自訂網域，做為轉換的一部分。
+   按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」。]** 查找標有「已發佈伺服器 **[!UICONTROL 名稱」的欄位。]** 如果您目前使用一般的Scene7網域，則可請求移至您自己的自訂網域，做為轉換的一部分。
 
    1. 技術支援會根據提交請求的順序，將您新增至HTTP/2客戶候補清單。
    1. 當Adobe準備好處理您的請求時，支援部門會與您聯絡，協調轉場並設定目標日期。
@@ -93,4 +98,4 @@ Adobe自己的測試產生了下列結果：
 
 ## 如何驗證URL或網站是否已使用HTTP/2啟動？ {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-您需要下載外部版本，才能與網頁瀏覽器搭配使用。 對於Firefox和Chrome，有一個名為 **[!UICONTROL HTTP/2和SPDY Indicator的擴充功能]**。 瀏覽器僅安全支援HTTP/2，因此必須使用HTTPS呼叫URL以進行驗證。 如果支援HTTP/2，則以藍色Flash符號形式的擴充功能來指出，並加上標題&quot;X-Firefox-Spdy&quot;:&quot;h2&quot;。
+您需要下載外部版本，才能與網頁瀏覽器搭配使用。 對於Firefox和Chrome，有一個名為 **[!UICONTROL HTTP/2和SPDY Indicator的擴充功能。]** 瀏覽器僅安全支援HTTP/2，因此必須使用HTTPS呼叫URL以進行驗證。 如果支援HTTP/2，則以藍色Flash符號形式的擴充功能來指出，並加上標題&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;。
