@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2873'
 ht-degree: 0%
@@ -87,7 +87,7 @@ AEM提供下列Dynamic Media Classic元件：
 
 1. 在AEM中，開啟您要新增Dynamic Media Classic(Scene7)元件的頁面。
 
-1. 如果沒有可用的Dynamic Media Classic元件，請按一下「 **[!UICONTROL Design]** 」模式，點選任何具有藍邊框的元件，點選「 **[!UICONTROL Parent]** 」圖示，然後點選「 **[!UICONTROL Configuration]** 」圖示。 在 **[!UICONTROL Parsys(Design)]**，選取所有Dynamic Media Classic元件，使其可供使用，然後按一下「 **[!UICONTROL 確定」]**。
+1. 如果沒有可用的Dynamic Media Classic元件，請按一下「 **[!UICONTROL Design]** 」模式，點選任何具有藍邊框的元件，點選「 **[!UICONTROL Parent]** 」圖示，然後點選「 **[!UICONTROL Configuration]** 」圖示。 在 **[!UICONTROL Parsys(Design)]**，選取所有Dynamic Media Classic元件，使其可供使用，然後按一下「 **[!UICONTROL 確定」。]**
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -178,7 +178,7 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 **[!UICONTROL 輸出格式]** -選擇影像的輸出格式，例如jpeg。 視您選擇的輸出格式而定，您可能會有其他設定選項。 請參 [閱影像預設集最佳實務](/help/assets/managing-image-presets.md#image-preset-options)。
 
-**[!UICONTROL 銳利化]** -選擇影像銳利化的方式。 銳利化會在影像預設集最佳實 [務和銳利化最佳實務中](/help/assets/managing-image-presets.md#image-preset-options)[詳細說明](/help/assets/assets/s7_sharpening_images.pdf)。
+**[!UICONTROL 銳利化]** -選擇影像銳利化的方式。 「影像預設集」最佳實務和「銳利化」最 [佳實務中會詳細說明](/help/assets/managing-image-presets.md#image-preset-options)[銳利化功能](/help/assets/assets/s7_sharpening_images.pdf)。
 
 **[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。 這些說明在「影像預 [設集」和](/help/assets/managing-image-presets.md) 「命 [令」參考中](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/c_command_reference.html)。
 
@@ -210,7 +210,7 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 #### 動態變更文字 {#changing-text-dynamically}
 
-若要動態變更文字，請在欄位中輸入新文字，然後按一下「 **[!UICONTROL 確定]**」。 在此範例中， **[!UICONTROL 價格]** $50，運費為99美分。
+若要動態變更文字，請在欄位中輸入新文字，然後按一下「 **[!UICONTROL 確定」。]** 在此範例中， **[!UICONTROL 價格]** $50，運費為99美分。
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -220,7 +220,7 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 #### 變更文字以反映用戶端內容值的值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-若要將欄位連結至用戶端內容值，請點選「 **[!UICONTROL Select]** 」以開啟用戶端內容功能表、選取用戶端內容，然後點選「 **[!UICONTROL 確定」]**。 在此示例中，名稱會根據將名稱與配置檔案中的格式化名稱連結而改變。
+若要將欄位連結至用戶端內容值，請點選「 **[!UICONTROL Select]** 」以開啟用戶端內容功能表、選取用戶端內容，然後點選「 **[!UICONTROL 確定」。]** 在此示例中，名稱會根據將名稱與配置檔案中的格式化名稱連結而改變。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -230,12 +230,12 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 #### 將動態媒體經典影像範本設為連結 {#making-the-scene-image-template-a-link}
 
-1. 在含有Dynamic Media Classic影像範本元件的頁 **[!UICONTROL 面上]** ，點選「 **[!UICONTROL 編輯」]**。
+1. 在含有Dynamic Media Classic Image Template元件的頁 **[!UICONTROL 面上]** ，點選「 **[!UICONTROL 編輯」。]**
 1. 在「 **[!UICONTROL URL]** 」欄位中，輸入在點選影像時使用者前往的URL。 在「在 **[!UICONTROL 中開啟]** 」欄位中，選擇您要開啟目標（新視窗或相同視窗）。
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. 點選「 **[!UICONTROL 確定]**」。
+1. 點選「 **[!UICONTROL 確定」。]**
 
 ### 視訊元件 {#video-component}
 
@@ -343,7 +343,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
 
 
 
-**[!UICONTROL 發佈狀態]** -您可以根據發佈狀態篩選資產： **[!UICONTROL 未發佈]** 或 **[!UICONTROL 已發佈]**。 如果您未選取任何「發 **[!UICONTROL 布狀態]**」,AEM依預設會搜尋所有發佈狀態。
+**[!UICONTROL 發佈狀態]** -您可以根據發佈狀態篩選資產： **[!UICONTROL 未發佈]** 或已 **[!UICONTROL 發佈。]** 如果您未選取任何「發 **[!UICONTROL 布狀態]**」,AEM依預設會搜尋所有發佈狀態。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
 
