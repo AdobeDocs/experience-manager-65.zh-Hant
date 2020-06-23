@@ -8,10 +8,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: a71507e3c6030ebc3f4abbd7064318d653d326bd
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2755'
-ht-degree: 12%
+ht-degree: 11%
 
 ---
 
@@ -115,7 +115,7 @@ ht-degree: 12%
 
 **建立動態媒體影像設定檔**
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. 點選「 **[!UICONTROL 建立]** 」以新增影像描述檔。
 1. 輸入遮色片、裁切或色票或兩者的描述檔名稱和值。
 
@@ -125,12 +125,12 @@ ht-degree: 12%
 
    ![作物](assets/crop.png)
 
-1. 點選「 **[!UICONTROL 儲存]**」。 新建立的配置檔案將出現在可用配置檔案清單中。
+1. 點選「 **[!UICONTROL 儲存」。]** 新建立的配置檔案將出現在可用配置檔案清單中。
 
 ## 編輯或刪除動態媒體影像設定檔 {#editing-or-deleting-image-profiles}
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
-1. 選擇要編輯或移除的影像描述檔。 若要編輯，請選取「編輯影 **[!UICONTROL 像處理設定檔」]**。 若要移除它，請選取「刪 **[!UICONTROL 除影像處理描述檔」]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
+1. 選擇要編輯或移除的影像描述檔。 若要編輯，請選取「編輯影 **[!UICONTROL 像處理設定檔」。]** 若要移除它，請選取「刪 **[!UICONTROL 除影像處理描述檔」。]**
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
@@ -152,7 +152,7 @@ ht-degree: 12%
 
 ### 將動態媒體影像描述檔套用至特定資料夾 {#applying-image-profiles-to-specific-folders}
 
-您可以從「工具」菜單或在資料夾內的「屬性」中將影像配置檔案應 **[!UICONTROL 用到資料夾]******。本節將說明如何以兩種方式將映像配置檔案應用於資料夾。
+您可以從「工具」菜單或在資料夾內的「屬性」中將影像配置檔案應 **[!UICONTROL 用到資料夾]****[!UICONTROL 。]**&#x200B;本節將說明如何以兩種方式將映像配置檔案應用於資料夾。
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
@@ -160,18 +160,18 @@ ht-degree: 12%
 
 #### 將動態媒體影像描述檔從描述檔使用者介面套用至檔案夾 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. 選擇要應用於資料夾或多個資料夾的影像配置檔案。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
-1. Tap **[!UICONTROL Apply Processing Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap/click **[!UICONTROL Apply]**. 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. Tap **[!UICONTROL Apply Processing Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap/click **[!UICONTROL Apply.]**&#x200B;已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
 #### 將動態媒體影像描述檔從屬性套用至資料夾 {#applying-image-profiles-to-folders-from-properties}
 
 1. 點選AEM標誌並導覽至 **[!UICONTROL Assets]** ，然後導覽至您要套用影像描述檔的檔案夾。
-1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
-1. 點選「影 **[!UICONTROL 像描述檔]** 」標籤。從「描 **[!UICONTROL 述檔名稱]** 」下拉式清單中，選取描述檔，然後點選「 **[!UICONTROL 儲存並關閉」]**。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 在資料夾上，點選核取標籤以選取它，然後點選「屬 **[!UICONTROL 性」。]**
+1. 點選「影 **[!UICONTROL 像描述檔]** 」標籤。從「描 **[!UICONTROL 述檔名稱]** 」下拉式清單中，選取描述檔，然後點選「 **[!UICONTROL 儲存並關閉」。]**&#x200B;已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -185,13 +185,13 @@ ht-degree: 12%
 
 1. 執行下列任一項作業：
 
-   * 導覽至 `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 並套用適當的描述檔，然後點選「 **[!UICONTROL 儲存]**」。
+   * 導覽至並 `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 套用適當的描述檔，然後點選「 **[!UICONTROL 儲存」。]**
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
    * 導覽至CRXDE Lite至下列節點： `/content/dam/jcr:content`.
 
-      新增屬性並 `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` 點選「 **[!UICONTROL 全部儲存」]**。
+      新增屬性並點 `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` 選「全 **[!UICONTROL 部儲存」。]**
 
       ![configure_image_profiles](assets/configure_image_profiles.png)
 
@@ -215,7 +215,7 @@ ht-degree: 12%
 
 1. 點選資料夾以開啟其內容。
 1. 點選您要調整其智慧裁切或智慧色票的影像。
-1. 在工具列中，點選「智慧 **[!UICONTROL 裁切」]**。
+1. 在工具列中，點選「智慧 **[!UICONTROL 裁切」。]**
 
 1. 執行下列任一操作：
 
@@ -237,7 +237,7 @@ ht-degree: 12%
 **若要編輯多張影像的智慧裁切或智慧色票**:
 
 1. 點選AEM標誌並導覽至 **[!UICONTROL Assets]**，然後導覽至套用智慧裁切或智慧色票影像描述檔的檔案夾。
-1. 在資料夾上，點選「 **[!UICONTROL 更多動作]** (...)」圖示，然後點選「智 **[!UICONTROL 慧裁切」]**。
+1. 在資料夾上，點選「 **[!UICONTROL 更多動作]** (...)」圖示，然後點選「智 **[!UICONTROL 慧裁切」。]**
 
 1. 在「編 **[!UICONTROL 輯智慧裁切]** 」頁上，執行下列任一操作：
 
@@ -273,27 +273,27 @@ ht-degree: 12%
 
 
 
-1. Near the upper-right corner of the page, tap **[!UICONTROL Save]**. 然後點 **[!UICONTROL 選「關閉]** 」以返回資產資料夾。
+1. Near the upper-right corner of the page, tap **[!UICONTROL Save.]** 然後點 **[!UICONTROL 選「關閉]** 」以返回資產資料夾。
 
 ## 從資料夾中刪除映像配置檔案 {#removing-an-image-profile-from-folders}
 
 從資料夾中刪除影像配置檔案時，任何子資料夾都會自動繼承從其父資料夾中刪除該配置檔案。 不過，對檔案夾中發生的檔案處理仍維持不變。
 
-您可以從「工具」功能表內的資料夾中移除影像配置檔案，或者如果您位於資料夾中，則可以從「屬性」( **[!UICONTROL Properties)中移除影像配置檔案]******。本節將說明如何以兩種方式從資料夾中刪除映像配置檔案。
+您可以從「工具」功能表內的資料夾中移除影像配置檔案，或者如果您位於資料夾中，則可以從「屬性」( **[!UICONTROL Properties)中移除影像配置檔案]****[!UICONTROL 。]**&#x200B;本節將說明如何以兩種方式從資料夾中刪除映像配置檔案。
 
 ### 透過描述檔使用者介面從資料夾移除動態媒體影像描述檔 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. 選擇要從資料夾或多個資料夾中刪除的映像配置檔案。
-1. 點選 **[!UICONTROL 「從資料夾移除處理描述檔」]** ，然後選取您要用來從中移除描述檔的資料夾或多個資料夾，並點選「 **[!UICONTROL 移除」]**。
+1. Tap **[!UICONTROL Remove Processing Profile from Folder(s)]** and select the folder or multiple folders you want use to remove the profile from and tap **[!UICONTROL Remove.]**
 
    您可以確認影像描述檔不再套用至資料夾，因為檔案夾名稱下方不會再顯示該名稱。
 
 ### 通過屬性從資料夾中刪除動態媒體映像配置檔案 {#removing-image-profiles-from-folders-via-properties}
 
 1. 點選AEM標誌並導覽 **[!UICONTROL Assets]** ，然後前往您要從中移除影像描述檔的檔案夾。
-1. 在資料夾上，點選核取標籤以選取它，然後點選「 **[!UICONTROL 屬性]**」。
+1. 在資料夾上，點選核取標籤以選取它，然後點選「屬 **[!UICONTROL 性」。]**
 1. Select the **[!UICONTROL Image Profiles]** tab.
-1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close]**.
+1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close.]**
 
    已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
