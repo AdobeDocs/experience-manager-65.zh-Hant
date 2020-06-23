@@ -1,6 +1,6 @@
 ---
-title: 新增動態媒體資產至頁面
-seo-title: 新增動態媒體資產至頁面
+title: 將 Dynamic Media 資產新增至頁面
+seo-title: 將 Dynamic Media 資產新增至頁面
 description: 若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增動態媒體或互動媒體元件。
 seo-description: 若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增動態媒體或互動媒體元件。
 uuid: 650d0867-a079-4936-a466-55b7a30803a2
@@ -10,14 +10,17 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '1724'
+ht-degree: 2%
 
 ---
 
 
-# 新增動態媒體資產至頁面{#adding-dynamic-media-assets-to-pages}
+# 將 Dynamic Media 資產新增至頁面{#adding-dynamic-media-assets-to-pages}
 
-若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增 **[!UICONTROL Dynamic Media]****[!UICONTROL 或Interactive Media]** 元件。 您可以進入「設計 [!UICONTROL 」模式] ，並啟用動態媒體元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。 動態媒體和互動式媒體元件是智慧型的——他們知道您要新增影像或視訊，而可用的選項也會隨之改變。
+To add the Dynamic Media functionality to assets you use on your websites, you can add the **[!UICONTROL Dynamic Media]** or **[!UICONTROL Interactive Media]** component directly on the page. You do this by entering [!UICONTROL Design] mode and enabling the dynamic media components. 然後，您可以將這些元件新增至頁面，並新增資產至元件。動態媒體和互動式媒體元件是智慧型的——他們知道您要新增影像或視訊，而可用的選項也會隨之改變。
 
 如果您使用AEM做為WCM，請直接將動態媒體資產新增至頁面。
 
@@ -32,7 +35,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 若要將動態媒體元件／檢視器新增至頁面：
 
 1. 在AEM中，開啟您要新增動態媒體元件的頁面。
-1. 如果沒有可用的動態媒體元件，請按一下 [!UICONTROL Sidekick] 中的尺標以進入 **[!UICONTROL Design]** 模式，按一下 **[!UICONTROL Edit]** parsys，然後選取 **** Dynamic Media Parsys，讓動態媒體元件可用。
+1. 如果沒有可用的動態媒體元件，請按一下 [!UICONTROL Sidekick] 中的尺標以進入 **[!UICONTROL Design]** 模式，按一下 **[!UICONTROL Edit]** parsys，然後選取 **** Dynamic Media Sys，讓動態媒體元件可用。
 
    >[!NOTE]
    >
@@ -45,7 +48,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 ## 動態媒體元件 {#dynamic-media-components}
 
-[!UICONTROL 動態媒體] 和 [!UICONTROL 互動媒體位於] Dynamic Media下的 [!UICONTROL Sidekick]**[!UICONTROL 中]**。 您可將互動 **[!UICONTROL 式媒體元件用於任何互動式資產]** ，例如互動式視訊、互動式影像或轉盤集。 對於所有其他動態媒體元件，請使 **[!UICONTROL 用Dynamic Media]** 元件。
+[!UICONTROL 動態媒體] 和 [!UICONTROL 互動媒體位於] Dynamic Media的 [!UICONTROL Sidekick]**[!UICONTROL 下方。]** 您可將互動 **[!UICONTROL 式媒體元件用於任何互動式資產]** ，例如互動式視訊、互動式影像或轉盤集。 對於所有其他動態媒體元件，請使 **[!UICONTROL 用Dynamic Media]** 元件。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -63,6 +66,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 >
 >* 您已啟 [用動態媒體](/help/assets/config-dynamic.md)。 動態媒體預設為停用。
 >* 該影像具有金字塔tiff檔案。 在啟用動態媒體之前匯入的影像沒有金字塔tiff檔案。
+
 >
 
 
@@ -81,7 +85,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 >[!NOTE]
 >
->依預設，動態媒體影像元件是可調式的。 如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )屬性設定 **[!UICONTROL 它]** 。
+>依預設，動態媒體影像元件是可調式的。If you want to make it a fixed size, set it in the component in the **[!UICONTROL Advanced]** tab with the **[!UICONTROL Width]** and **[!UICONTROL Height]** properties.
 
 **[!UICONTROL 檢視器預設]** -從下拉式選單中選取現有的檢視器預設。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md)。 如果您使用影像預設集，則無法選取檢視器預設集，反之亦然。
 
@@ -99,7 +103,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 如果您正在檢視影像集、回轉集或混合媒體集，則此選項不可用。
 
-按一下元件中的「編 [!UICONTROL 輯」(Edit]**** )可編輯以下「高級設定」(Advanced Settings)。
+You can edit the following [!UICONTROL Advanced Settings] by clicking **[!UICONTROL Edit]** in the component.
 
 **[!UICONTROL 標題]** -變更影像的標題。
 
@@ -119,7 +123,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-按一下元件中的「編 [!UICONTROL 輯」] ，即可編 **[!UICONTROL 輯下列動態媒體設定]** 。
+You can edit the following [!UICONTROL Dynamic Media Settings] by clicking **[!UICONTROL Edit]** in the component.
 
 >[!NOTE]
 >
@@ -127,7 +131,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 **[!UICONTROL 檢視器預設]** -從下拉式選單中選取現有的視訊檢視器預設。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
-按一下元件中的「編 [!UICONTROL 輯] 」( **[!UICONTROL Edit]** )可編輯以下「高級」(Advanced)設定。
+You can edit the following [!UICONTROL Advanced] settings by clicking **[!UICONTROL Edit]** in the component.
 
 **[!UICONTROL 標題]** -變更影片標題。
 
@@ -141,13 +145,13 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 ### 互動式媒體元件 {#interactive-media-component}
 
-互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用互動式 **[!UICONTROL 媒體元件]** 。
+互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用 **[!UICONTROL 互動式媒體元件]** 。
 
 互 [!UICONTROL 動式媒體] (Interactive Media)元件是智慧型的——視您新增影像或視訊而定，您有各種選項。 此外，檢視器回應速度快。 也就是說，螢幕大小會根據螢幕大小自動變更。 所有檢視器都是以HTML5為基礎的檢視器。
 
 ![chlimage_1-75](assets/chlimage_1-75a.png)
 
-按一下元件中的「編 **[!UICONTROL 輯」(Edit]****** )可編輯以下「常規」(General)設定。
+You can edit the following **[!UICONTROL General]** settings by clicking **[!UICONTROL Edit]** in the component.
 
 **[!UICONTROL 檢視器預設]** -從下拉式選單中選取現有的檢視器預設。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 檢視器預設集必須先發佈，才能使用。 請參閱管理檢視器預設集。
 
@@ -155,7 +159,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 **[!UICONTROL 寬度和高度]** -如果您希望視訊大小固定，請輸入像素值。 將這些值留空可讓其適應性。
 
-您可以按一下元 **件中的「編輯」，編輯下列[!UICONTROL** Add To Cart **** Settings。
+You can edit the following **[!UICONTROL Add To Cart** settings by clicking **[!UICONTROL Edit]** in the component.
 
 **[!UICONTROL 顯示產品資產]** -依預設，此值會選取。 產品資產會依「商務」模組中的定義，顯示產品的影像。 清除核取標籤，不會顯示產品資產。
 
