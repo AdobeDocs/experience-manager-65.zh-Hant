@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 92ebc8def4354d04adaa2e2c66b404a5edf9e968
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '4400'
-ht-degree: 16%
+ht-degree: 15%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 16%
 
 ## Managing Viewer Presets {#managing-viewer-presets-1}
 
-您可以點選「 **[!UICONTROL工具**  (槌子圖示) **[!UICONTROL >資產>檢視器預設集」，在AEM中新增、編輯、刪除、發佈、取消發佈和預覽檢視器預設集]**。
+You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM by tapping **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
 
 ![6_5_tools-assets-viewerpresets](assets/6_5_tools-assets-viewerpresets.png)
 
@@ -387,7 +387,7 @@ ht-degree: 16%
 
 ## Increasing the number of Viewer Presets that display {#increasing-the-number-of-viewer-presets-that-display}
 
-AEM會在從「詳細資料檢視>檢視器」檢視資產時，顯示各種 **[!UICONTROL 檢視器預設集]**。 您可以增加或減少顯示的檢視器數目。
+AEM會在從「詳細資料檢視>檢視器」檢視資產時，顯示各種 **[!UICONTROL 檢視器預設集。]** 您可以增加或減少顯示的檢視器數目。
 
 **若要增加顯示的檢視器預設集數目**
 
@@ -402,7 +402,7 @@ AEM會在從「詳細資料檢視>檢視器」檢視資產時，顯示各種 **[
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
 1. 在limit屬性中，將數字變更為所需的數字，例如 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 點選「 **[!UICONTROL 全部儲存]**」。
+1. 點選「 **[!UICONTROL 全部儲存」。]**
 
 ## 建立檢視器預設集 {#creating-a-new-viewer-preset}
 
@@ -422,12 +422,12 @@ AEM會在從「詳細資料檢視>檢視器」檢視資產時，顯示各種 **[
 
    ![6_5檢視器預設集](assets/6_5_viewerpresets.png)
 
-1. 在檢視器預設集頁面的工具列上，點選「建 **[!UICONTROL 立」]**。
-1. 在「 **[!UICONCONTROL新建查看器預設集** 」對話框的「預設集名稱 **** 」欄位中，輸入新預設集的名稱。請謹慎選擇名稱——在您點選「建立」後，這些名稱就無法 **[!UICONTROL 編輯]**。
+1. 在檢視器預設集頁面的工具列上，點選「建立」 **[!UICONTROL 。]**
+1. 在「 **[!UICONCONTROL新建查看器預設集** 」對話框的「預設集名稱 **** 」欄位中，輸入新預設集的名稱。Choose a name carefully—they are not editable after you tap **[!UICONTROL Create.]**
 
    當您稍後在這些步驟中儲存預設時，名稱會出現在「預設集標題」欄標題下的「檢視器預設集」頁面上。
 
-1. 在「豐富型媒體類型」下拉式選單中，選取您要建立的檢視器預設集類型，然後在頁面的右上角點選「建 **[!UICONTROL 立」]**。
+1. 在「豐富型媒體類型」下拉式選單中，選取您要建立的檢視器預設集類型，然後在頁面的右上角點選「建 **[!UICONTROL 立」。]**
 
    請參閱 [檢視器預設集的豐富型媒體類型](#rich-media-types-for-viewer-presets)。
 
@@ -469,7 +469,7 @@ AEM會在從「詳細資料檢視>檢視器」檢視資產時，顯示各種 **[
    >
    >在文字欄位中輸入值後，點選使用者介面中的其他位置以提交變更並關閉虛擬鍵盤。 如果您點選Enter，則不會執行任何動作。
 
-1. Near the upper-right corner of the page, tap **[!UICONTROL Save]**.
+1. Near the upper-right corner of the page, tap **[!UICONTROL Save.]**
 1. 發佈新的檢視器預設集。 您必須先發佈預設集，才能在您的網站上使用它。
 
    請參 [閱Publishing Viewer預設集](#publishing-viewer-presets)。
@@ -501,7 +501,7 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 縮圖在互動式視訊檢視器中的自動捲動行為，與您選擇的顯示模式無關。
 
-當您建立或編輯互動式視訊檢視器預設集時，可從「行為」標籤存取「自動捲動」。在「行為」標籤中，從「選 **[!UICONTROL 取的元件]** 」下拉式選單中點選「 **[!UICONTROL 互動色票」]**。「自動捲動」(Auto Scroll)複選框列在「IS命令」(IS Command)文本欄位下。
+當您建立或編輯互動式視訊檢視器預設集時，可從「行為」標籤存取「自動捲動」。在「行為」標籤中，從「選 **[!UICONTROL 取的元件]** 」下拉式選單中點選「 **[!UICONTROL 互動色票」。]**「自動捲動」(Auto Scroll)複選框列在「IS命令」(IS Command)文本欄位下。
 
 如果您在檢視器預設集中停用「自動捲動 **** 」 (清除核取方塊)，當使用者播放視訊時，面板只會顯示整個視訊長度的第一個縮圖影像。不過，使用者可視需要使用向上和向下箭頭圖示手動捲動縮圖。
 
@@ -534,7 +534,7 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 |  | **說明** | **動作** |
 |---|---|---|
-| **[!UICONTROL 熱點表徵圖]** | 更改用於熱點的表徵圖 | 若要變更熱點圖示影像，請在「外觀」索 **[!UICONTROL 引標籤中]** ，點選「選取的元 **[!UICONTROL 件]**」中的「 **[!UICONTROL ImageMapEffect]**」。 Under **[!UICONTROL Icon]**, select **[!UICONTROL Background]** and in the **[!UICONTROL Image]** field navigate to the background image you want. |
+| **[!UICONTROL 熱點表徵圖]** | 更改用於熱點的表徵圖 | 若要變更熱點圖示影像，請在「外觀」索 **[!UICONTROL 引標籤]** 的「選取的元 **[!UICONTROL 件」中，點選「]****[!UICONTROL ImageMapEffect」。]** 在「 **[!UICONTROL 圖示]**」下，選 **[!UICONTROL 取「背景]** 」，然後在「影像」欄 **** 位中導覽至您想要的背景影像。 |
 
 ## 啟用或停用檢視器預設集 {#activating-or-deactivating-viewer-presets}
 
@@ -542,7 +542,7 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要啟用或停用檢視器預設集**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets]**.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
 1. 在「檢視器預設」頁面的「狀態 **[!UICONTROL 」欄標題]** ，點選切換以啟用或停用檢視器預設。
 
    啟動的檢視器預設集會在右側、藍色方塊內切換； 停用的檢視器預設集會讓切換畫面出現在左側的淺灰色方塊中。
@@ -559,13 +559,13 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要發佈檢視器預設集**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets]**.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
 1. 選取一或多個您要發佈的檢視器預設集。
 1. 在工具列上，點選「發 **[!UICONTROL 布]** 」圖示。
 
 ## 排序檢視器預設集 {#sorting-viewer-presets}
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets]**.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
 1. 按一 **[!UICONTROL 下「標題]**」、「類型」、「發佈國 **[!UICONTROL 」或「國]********** 家預設」，依該欄標題排序。例如，按一下「 **[!UICONTROL 類型]** 」，以字母或反字母順序排序檢視器預設集類型。
 
 ## 編輯檢視器預設集 {#editing-viewer-presets}
@@ -574,9 +574,9 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要編輯檢視器預設集**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Asset > Viewer Presets]**.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Asset > Viewer Presets.]**
 1. 勾選檢視器預設集標題左側的方塊，以選取預設集。
-1. 在工具列上，點選「 **[!UICONTROL 編輯」]**。
+1. 在工具列上，點選「編 **[!UICONTROL 輯」。]**
 1. 在「檢 **[!UICONTROL 視器預設集編輯器]** 」頁面上，使用「外觀」和「行為」標籤上的選項，對檢視器預設集進行您想要的變更 ******** 。
 
    從「 **[!UICONTROL Appearance]** 」 (外觀) 頁籤 **[!UICONTROL ，在「Viewer Preset Editor」 (查看器預設編輯器) 頁面的左上角附近，點選「]** Desktop **[!UICONTROL 」 (案頭) 、]** Tablet **[!UICONTROL 、或「Phone]** 」 (手機) 以更改資產的演示模式。
@@ -592,9 +592,9 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要刪除自訂檢視器預設集**
 
-1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，點選「工具 (槌子圖示) **[!UICONTROL >資產>檢視器預設集」]******。
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
 1. 在「檢視器預設集」頁面上，勾選「預設集標題」，然後點選「垃圾 **[!UICONTROL 筒]** 」圖示。
-1. 點選 **[!UICONTROL 刪除]**。
+1. 點選「 **[!UICONTROL 刪除」。]**
 
 ## 將檢視器預設集套用至資產 {#applying-a-viewer-preset-to-an-asset}
 
@@ -602,7 +602,7 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要將檢視器預設套用至資產**
 
-1. 開啟資產並靠近頁面的左上角，點選下拉式功能表，然後選取「檢 **[!UICONTROL 視器]**」。
+1. 開啟資產並靠近頁面的左上角，點選下拉式功能表，然後選取「檢 **[!UICONTROL 視器」。]**
 
    >[!NOTE]
    >
