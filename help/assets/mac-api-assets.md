@@ -3,7 +3,7 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 1%
@@ -24,11 +24,11 @@ ht-degree: 1%
 
 API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代碼。 JSON回應是選擇性的，可能無法使用，例如PDF檔案。 請依賴回應程式碼進行進一步分析或動作。
 
-在關閉 [!UICONTROL 時間後]，資產及其轉譯無法透過網頁介 [!DNL Assets] 面和HTTP API使用。 如果「開機時間」是未來，或「關機時間 [!UICONTROL 」是過去] ,API會傳回404錯誤訊息。
+在關閉 [!UICONTROL 時間後]，資產及其轉譯無法透過網頁介 [!DNL Assets] 面和HTTP API使用。 如果「開機時間」是未來，或「關機時 [!UICONTROL 間」是過去] ，則API會傳回404錯誤訊息。
 
 ## 內容片段 {#content-fragments}
 
-內 [容片段](/help/assets/content-fragments.md) ，是特殊的資產類型。 它可用來存取結構化資料，例如文字、數字、日期等。 由於資產有數種差 `standard` 異（例如影像或檔案），因此處理內容片段時會套用一些其他規則。
+內 [容片段](/help/assets/content-fragments/content-fragments.md) ，是特殊的資產類型。 它可用來存取結構化資料，例如文字、數字、日期等。 由於資產有數種差 `standard` 異（例如影像或檔案），因此處理內容片段時會套用一些其他規則。
 
 如需詳細資訊，請 [參閱Experience Manager Assets HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)。
 
