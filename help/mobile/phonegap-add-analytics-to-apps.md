@@ -1,8 +1,8 @@
 ---
 title: 將Adobe Analytics新增至您的行動應用程式
 seo-title: 將Adobe Analytics新增至您的行動應用程式
-description: 請依照本頁進行，瞭解如何透過與Adobe Mobile services整合，在AEM應用程式中使用Mobile App Analytics。
-seo-description: 請依照本頁進行，瞭解如何透過與Adobe Mobile services整合，在AEM應用程式中使用Mobile App Analytics。
+description: 請依照本頁進行，瞭解如何透過與Adobe Mobile Services整合，在AEM應用程式中使用Mobile App Analytics。
+seo-description: 請依照本頁進行，瞭解如何透過與Adobe Mobile Services整合，在AEM應用程式中使用Mobile App Analytics。
 uuid: d3ff6f9b-0467-4abe-9a59-b3495a6af0f8
 contentOwner: User
 content-type: reference
@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1064'
+ht-degree: 0%
 
 ---
 
@@ -36,10 +39,10 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 ## 先決條件 {#prerequisties}
 
-AEM mobile需要Adobe Analytics帳戶才能收集和報告應用程式中的追蹤資料。 在設定中，AEM *Administrator* 將首先需要：
+AEM Mobile需要Adobe Analytics帳戶才能收集和報告應用程式中的追蹤資料。 在設定中，AEM *Administrator* 將首先需要：
 
-* 在Mobile services中設定Adobe Analytics帳戶並建立應用程式的報表套裝。
-* 在Adobe Experience Manager(AEM)中設定AMS cloud服務。
+* 在Mobile Services中設定Adobe Analytics帳戶並建立應用程式的報表套裝。
+* 在Adobe Experience Manager(AEM)中設定AMS Cloud服務。
 
 ## 針對開發人員——將Mobile Analytics整合至您的應用程式 {#for-developers-integrate-mobile-analytics-into-your-app}
 
@@ -47,7 +50,7 @@ AEM mobile需要Adobe Analytics帳戶才能收集和報告應用程式中的追�
 
 在設定Analytics帳戶後，您將需要建立內容同步設定，以將內容納入您的行動應用程式。
 
-如需詳細資訊，請參閱「設定內容同步內容」。 配置將需要指示「內容同步」將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定位於： */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*。 此外，還有一種發展配置；但是，它與Geometrixx Outdoors的非開發設定相同。
+如需詳細資訊，請參閱「設定內容同步內容」。 配置將需要指示「內容同步」將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定位於： */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*。 此外，還有一種發展配置； 但是，它與Geometrixx Outdoors的非開發設定相同。
 
 如需如何從「行動應用程式AEM應用程式」儀表板下載ADBMobileConfig的詳細資訊，請參閱「Analytics - Mobile Services - Adobe Mobile Services SDK設定檔」。
 
@@ -102,7 +105,7 @@ Geometrixx Outdoors App config.xml位於 */content/phonegap/geometrixx-outdoors/
 
 ### 測量您的程式碼以進行完整的應用程式追蹤 {#instrument-your-code-for-full-app-tracking}
 
-AMS Phonegap外掛程式API中提 [供數個追蹤API。](https://marketing.adobe.com/resources/help/en_US/mobile/ios/phonegap_methods.html)
+AMS Phonegap外掛程式API中提 [供數個追蹤API。](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
 這些功能可讓您追蹤狀態和動作，例如使用者在應用程式中瀏覽至的頁面位置，以及最常使用的控制項。 要測量應用程式進行追蹤，最簡單的方式就是使用AMS外掛程式提供的Analytics API。
 
@@ -113,9 +116,11 @@ AMS Phonegap外掛程式API中提 [供數個追蹤API。](https://marketing.adob
 
 透過這些方法呼叫來檢測您的原始碼，您就可以針對您的應用程式收集完整量度。
 
-### 使用Bloodhound測試Analytics追蹤 {#testing-analytics-tracking-with-bloodhound}
+### 使用Bloodhound測試Analytics追蹤  {#testing-analytics-tracking-with-bloodhound}
 
 ![](do-not-localize/chlimage_1.jpeg)
+
+<!--NOTE TO WRITER: Bloodhound is no longer available.-->
 
 （可選）在部署至生產環境之前，您可以使用Adobe工具 [Bloodhound](https://marketing.adobe.com/developer/gallery/bloodhound-app-measurement-qa-tool-1) 來測試您的分析設定。 為測試您的分析設定，您需要編輯ADBMobileConfig.json檔案，以指向Bloodhound執行的伺服器，而非實際的Analytics伺服器。 若要進行此變更，請從您的ADBMobileConfig.json變更下列項目。
 
