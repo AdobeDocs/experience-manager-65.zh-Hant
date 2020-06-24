@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
    * 具有資料密集的變數聲明：
       `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
-   * 列出和重複控制參數：開始、步驟、結束：
+   * 列出和重複控制參數： 開始、步驟、結束：
       `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
    * 資料破解的標識符：
@@ -48,7 +51,7 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 * 核心元件2.3.2+，請參閱 [Github以取得發行說明](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
 * 版面容器的格線系統，請參 [閱Github](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid)。
-* Clientlib管理器：將Google Closure Compiler預設為JavaScript用戶端的精簡化（舊預設為Yahoo UIY），並將Google Closure Compiler更新為v20190121版
+* Clientlib管理器： 將Google Closure Compiler預設為JavaScript用戶端的精簡化（舊預設為Yahoo UIY），並將Google Closure Compiler更新為v20190121版
 * 範本編輯器與原則
 
    * 針對使用JS SDK的單頁應用程式建立和編輯範本（也稱為SPA編輯器）
@@ -73,10 +76,10 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ## 內容片段與編輯器 {#content-fragments-amp-editor}
 
-* 內容 [片段編輯器中](/help/assets/content-fragments-variations.md#viewing-editing-deleting-annotations) 「新註解」邊欄，以在文字中加上一般註解並檢視註解（也會顯示在時間軸邊欄中）
-* 可將「內容片段」模型中多行文字元素的預設內容類型設為簡單文字 [](/help/assets/content-fragments-models.md) 、豐富式文字或標籤文字
-* 通過 [在RTE（全屏視圖）中選擇文本](/help/assets/content-fragments-variations.md#annotating-a-content-fragment) ，添加註釋／注釋
-* [透過參考邊欄](/help/assets/content-fragments-managing.md#comparing-fragment-versions) ，並排比較內容片段的版本
+* 內容 [片段編輯器中](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations) 「新註解」邊欄，以在文字中加上一般註解並檢視註解（也會顯示在時間軸邊欄中）
+* 可將「內容片段」模型中多行文字元素的預設內容類型設為簡單文字 [](/help/assets/content-fragments/content-fragments-models.md) 、豐富式文字或標籤文字
+* 通過 [在RTE（全屏視圖）中選擇文本](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) ，添加註釋／注釋
+* [透過參考邊欄](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) ，並排比較內容片段的版本
 * 「資產下載報表」現在會相應顯示內容片段
 * 透過 [/api.json將內容片段支援新增至Assets HTTP API](/help/assets/assets-api-content-fragments.md) 。 有建立、更新、讀取和刪除內容片段的API。
 
@@ -125,7 +128,7 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ## AEM與商務 {#aem-commerce}
 
-自AEM 6.4以來，Commerce Integration Framework的改良功能已加快發行週期。請 [在這裡進一步瞭解](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html)。
+自AEM 6.4以來，Commerce Integration Framework的改良功能已加快發行週期。 [在這裡瞭解更多](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html)。
 
 ## 社群附加元件 {#communities-add-on}
 
