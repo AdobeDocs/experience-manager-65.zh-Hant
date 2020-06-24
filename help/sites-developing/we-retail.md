@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+workflow-type: tm+mt
+source-wordcount: '779'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
 
 ## 簡介 {#introduction}
 
-We.Retail是參考實作和範例內容，說明使用Adobe Experience manager設定線上呈現的建議方式。
+We.Retail是參考實作和範例內容，說明使用Adobe Experience Manager設定線上呈現的建議方式。
 
 We.Retail運用最新的AEM技術，例如HTL、互動式版面、可編輯的範本、核心元件等。
 
@@ -34,11 +37,11 @@ We.Retail是AEM的標準參考實作，展示AEM的一些最強大功能。
 | [全球化網站結構](/help/sites-administering/tc-bp.md) | We.Retail包含語言母版，可即時複製至國家／地區特定網站。 | [試試！](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [互動式版面](/help/sites-authoring/responsive-layout.md) | 所有頁面都具備回應式版面，可動態調整以配合螢幕和裝置大小。 | [試試！](/help/sites-developing/we-retail-responsive-layout.md) |
 | [可編輯的範本](/help/sites-developing/page-templates-editable.md) | 所有頁面都以可編輯的範本為基礎，讓非開發人員可調整和自訂範本。 | [試試！](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML 範本語言](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) | 所有元件都以HTL為基礎 |  |
+| [HTML 範本語言](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html) | 所有元件都以HTL為基礎 |  |
 | [電子商務功能](/help/sites-developing/ecommerce.md) | 功能：產品目錄 |  |
 | [社群網站](/help/communities/overview.md) | 允許訪客加入社群討論、閱讀部落格等 |  |
-| [核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) | 所有元件都以新的核心元件為基礎，而且更可用，而且可由使用者自行設定 | [試試！](/help/sites-developing/we-retail-core-components.md) |
-| [內容片段](/help/assets/content-fragments.md) | 「We.Retail體驗」區段展示透過內容片段重複使用內容的強大功能。 | [試試！](/help/sites-developing/we-retail-content-fragments.md) |
+| [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) | 所有元件都以新的核心元件為基礎，而且更可用，而且可由使用者自行設定 | [試試！](/help/sites-developing/we-retail-core-components.md) |
+| [內容片段](/help/assets/content-fragments/content-fragments.md) | 「We.Retail體驗」區段展示透過內容片段重複使用內容的強大功能。 | [試試！](/help/sites-developing/we-retail-content-fragments.md) |
 | [體驗片段](/help/sites-authoring/experience-fragments.md) | 「體驗片段」是一組或多個元件，包括可在頁面中參考的內容和版面。 | [試試！](/help/sites-developing/we-retail-experience-fragments.md) |
 
 ## 快速入門 {#getting-started}
@@ -82,7 +85,7 @@ We.Retail在技術上更健全，並運用最新的AEM技術，讓產品更有�
 | 全球化網站結構 | 將語言母版即時複製至國家／地區特定網站 | 不可用 |
 | 內容片段 | 可用 | 不可用 |
 | 體驗片段 | 可用 | 不可用 |
-| 互動式版面 | 適用於所有頁面 | 僅Geometrixx Media |
+| 回應式版面 | 適用於所有頁面 | 僅Geometrixx Media |
 | 可編輯的範本 | 適用於所有頁面 | 不可用 |
 | HTL | 所有元件 | 有限 |
 | 定位 | 適用於所有頁面 | 僅限Geometrixx Outdoors |
