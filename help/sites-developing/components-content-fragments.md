@@ -12,7 +12,10 @@ discoiquuid: b7777dc5-a867-4799-9e2c-a1f4bb5dd96a
 docset: aem65
 pagetitle: Components for Content Fragments
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+workflow-type: tm+mt
+source-wordcount: '960'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 >
 >如需詳細 [資訊，請參閱內容片段設定轉譯元件](/help/sites-developing/content-fragments-config-components-rendering.md) 。
 
-Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments.md)。 它們可讓您建立不受頻道影響的內容，以及（可能是特定頻道的）變化。 [然後，您可以在編寫內容頁面時使用這些片段及其變化](/help/sites-authoring/content-fragments.md)。 您也可以將現有內容片段資產從資 [產瀏覽器拖曳至頁面](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （對於其他以資產為基礎的元件，例如基礎元件影像），以使用它。 現成可用的內容片段元件只顯示參考 [內容片段](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) 的一個元素。 使用元件對話方塊，您可 [以定義要在頁面上顯示的元素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) 、變數和片段段落範圍。
+Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。它們可讓您建立不受頻道影響的內容，以及（可能是特定頻道的）變化。 [然後，您可以在編寫內容頁面時使用這些片段及其變化](/help/sites-authoring/content-fragments.md)。 您也可以將現有內容片段資產從資 [產瀏覽器拖曳至頁面](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （對於其他以資產為基礎的元件，例如基礎元件影像），以使用它。 現成可用的內容片段元件只顯示參考 [內容片段](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 的一個元素。 使用元件對話方塊，您可 [以定義要在頁面上顯示的元素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 、變數和片段段落範圍。
 
 >[!NOTE]
 >
@@ -67,7 +70,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 內容 {#in-between-content}
 
-「內 **容**&#x200B;片段」元件可讓您將其他元件拖放至顯示元素的不同段落 [之間](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)。 基本上，顯示的元素由不同段落組成（每個段落標有回車符）。 在每個段落之間，您可以使用其他元件插入內容。
+「內 **容**&#x200B;片段」元件可讓您將其他元件拖放至顯示元素的不同段落 [之間](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)。 基本上，顯示的元素由不同段落組成（每個段落標有回車符）。 在每個段落之間，您可以使用其他元件插入內容。
 
 從技術角度看，顯示的元素* *的每個段落都以其自己的parsys為生，而您在段落之間添加的每個元件都將（在外罩下）插入parsys中。
 
@@ -105,7 +108,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
    * 使用 `afterinsert`/ `afteredit`/ `afterdelete` 監聽器來觸發JS事件。 這些事件將在用戶端程式庫 `cq.authoring.editor.plugin.cfm` 中處理，以在側面面板中顯示相關內容。
    * 設定 `cq:dropTargets` 為支援拖曳內容片段資產。
-   * `cq:inplaceEditing` 已設定為支援在頁面編輯器中編寫內容片段。 片段就地編輯器在客戶端庫中定 `cq.authoring.editor.plugin.cfm` 義，並允許快速連結在片段編輯器中 [開啟當前元](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) 素／變化 [](/help/assets/content-fragments-variations.md)。
+   * `cq:inplaceEditing` 已設定為支援在頁面編輯器中編寫內容片段。 片段就地編輯器在客戶端庫中定 `cq.authoring.editor.plugin.cfm` 義，並允許快速連結在片段編輯器中 [開啟當前元](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 素／變化 [](/help/assets/content-fragments/content-fragments-variations.md)。
 
 ### 演算前重寫資產 {#asset-rewriting-before-rendering}
 
@@ -115,7 +118,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 現成配置使用以下變壓器：
 
-* `transformer-cfm-payloadfilter` -僅用於 `body` 檢索片段 `<body>...</body>`的HTML的部件()
+* `transformer-cfm-payloadfilter` -僅用於 `body` 檢索片段的 `<body>...</body>`HTML的部件()
 
 * `transformer-cfm-parfilter` -如果指定段落範圍，則過濾掉不要的段落（如「內容片段」元件所做）
 * `transformer-cfm-assetprocessor` -用於內部檢索嵌入在片段中的資產清單
