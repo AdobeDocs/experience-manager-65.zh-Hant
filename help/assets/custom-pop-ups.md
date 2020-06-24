@@ -1,6 +1,6 @@
 ---
-title: 使用Quickviews建立自訂快顯視窗
-seo-title: 使用Quickviews建立自訂快顯視窗
+title: 使用「快速檢視」建立自訂快顯視窗
+seo-title: 使用「快速檢視」建立自訂快顯視窗
 description: 在電子商務體驗中使用預設的Quickview，以便顯示包含產品資訊的快顯視窗來推動購買。 您可以觸發自訂內容以顯示在快顯視窗中。
 seo-description: 在電子商務體驗中使用預設的Quickview，以便顯示包含產品資訊的快顯視窗來推動購買。 您可以觸發自訂內容以顯示在快顯視窗中。
 uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
@@ -10,12 +10,15 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 translation-type: tm+mt
-source-git-commit: 73c2b5ee4d60eae253af537ccadccd9952300d3a
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+workflow-type: tm+mt
+source-wordcount: '1129'
+ht-degree: 2%
 
 ---
 
 
-# 使用Quickviews建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+# 使用「快速檢視」建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
 在電子商務體驗中使用預設的Quickview，以便顯示包含產品資訊的快顯視窗來推動購買。 不過，您可以觸發自訂內容以顯示在快顯視窗中。 根據您使用的檢視器，此功能可讓使用者按一下熱點、縮圖影像或影像地圖，以檢視資訊或相關內容。
 
@@ -40,15 +43,15 @@ source-git-commit: 73c2b5ee4d60eae253af537ccadccd9952300d3a
     <td><strong>完成這些步驟以建立Quickview</strong></td>
     </tr>
     <tr>
-    <td>互動式影像</td>
+    <td>互動影像</td>
     <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">將熱點添加到影像橫幅</a>。</td>
     </tr>
     <tr>
-    <td>互動式影片</td>
+    <td>互動影片</td>
     <td><a href="/help/assets/interactive-videos.md#adding-interactivity-to-your-video" target="_blank">為視訊新增互動功能</a>。</td>
     </tr>
     <tr>
-    <td>轉盤橫幅</td>
+    <td>輪播橫幅</td>
     <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">將熱點或影像映射添加到橫幅</a>。<br /> </td>
     </tr>
     </tbody>
@@ -104,8 +107,8 @@ source-git-commit: 73c2b5ee4d60eae253af537ccadccd9952300d3a
 
    如需進一步了 `setHandlers()` 解方法，請參閱：
 
-   * 互動式影像檢視器： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_image_viewer_javascriptapiref_sethandlers.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_image_viewer_javascriptapiref_sethandlers.html)
-   * 互動式視訊檢視器： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_video_javascriptapiref_sethandlers.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_video_javascriptapiref_sethandlers.html)
+   * 互動式影像檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
+   * 互動式視訊檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
 1. 您現在需要設定處理 `quickViewActivate` 常式。
 
@@ -134,9 +137,9 @@ source-git-commit: 73c2b5ee4d60eae253af537ccadccd9952300d3a
 
    如需進一步了 `quickViewActivate` 解方法，請參閱：
 
-   * 互動式影像檢視器： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_aem_interactive_image_event_callbacks.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_aem_interactive_image_event_callbacks.html)
-   * 互動式視訊檢視器： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_aem_int_video_event_callbacks.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_aem_int_video_event_callbacks.html)
-   * 互動式視訊檢視器中的互動式資料支援： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_aem_int_video_int_data_support.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_aem_int_video_int_data_support.html)
+   * 互動式影像檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
+   * 互動式視訊檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
+   * 互動式視訊檢視器中的互動式資料支援： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
 
 1. 執行下列動作：
 
@@ -160,7 +163,7 @@ source-git-commit: 73c2b5ee4d60eae253af537ccadccd9952300d3a
 
 
 
-1. 您現在可以使用函式來叫用Quickview中的簡單快顯功能。 下列範例會使用快 `DIV` 顯視窗。
+1. 您現在可以使用函式來叫用Quickview中的簡單快顯視窗。 下列範例會使用快 `DIV` 顯視窗。
 1. 以下列方式設 `DIV` 定快顯視窗的樣式。 視需要新增您自己的其他樣式。
 
    ```xml
@@ -186,7 +189,7 @@ source-git-commit: 73c2b5ee4d60eae253af537ccadccd9952300d3a
    </div>
    ```
 
-1. 新增函式以更新快顯視窗中的sku值；取代步驟5中建立的簡單函式，讓快顯視覺化。 與下列項目搭配：
+1. 新增函式以更新快顯視窗中的sku值； 取代步驟5中建立的簡單函式，讓快顯視覺化。 與下列項目搭配：
 
    ```xml
    <script type="text/javascript">
@@ -212,10 +215,10 @@ source-git-commit: 73c2b5ee4d60eae253af537ccadccd9952300d3a
 
    如需進一步了 `init()` 解方法，請參閱：
 
-   * 互動式影像檢視器： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_image_viewer_javascriptapiref_init.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_image_viewer_javascriptapiref_init.html)
-   * 互動式視訊檢視器： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_video_javascriptapiref_init.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_int_video_javascriptapiref_init.html)
+   * 互動式影像檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
+   * 互動式視訊檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
 
-1. 若要將快顯視窗（如前述步驟所述）附加至檢視器，請使用下列程式碼：
+1. 若要將先前步驟中描述的快顯功能附加至檢視器，請使用下列程式碼：
 
    ```xml
    "initComplete":function() {
