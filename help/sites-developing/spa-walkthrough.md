@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+workflow-type: tm+mt
+source-wordcount: '2000'
+ht-degree: 0%
 
 ---
 
@@ -67,7 +70,7 @@ SPA就像原生應用程式，不但對網頁的訪客，而且由於SPA的運�
 
 **行銷人員**
 
-* 行銷人員想要提供豐富、原生的體驗，以吸引訪客完全參與內容。
+* 行銷人員想要提供豐富、原生的體驗，以吸引訪客充份參與內容。
 * 個人化可讓這些體驗更吸引人。
 
 **開發人員**
@@ -103,6 +106,7 @@ SPA的主要思想是減少對伺服器的呼叫和依賴，以將伺服器呼�
 >
 >* [AEM 6.4版（含Service Pack 2）](/help/release-notes/sp-release-notes.md)
 >* [請在此處安裝GitHub上提供的範例We.Retail Journal應用程式。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+
 >
 
 
@@ -225,7 +229,7 @@ SPA的主要思想是減少對伺服器的呼叫和依賴，以將伺服器呼�
 
    ![screen_shot_2018-06-07at152636](assets/screen_shot_2018-06-07at152636.png)
 
-   AEM SPA編輯器運用 [AEM Content Services](/help/assets/content-fragments.md) ，以JSON模型的形式提供頁面的完整內容。
+   AEM SPA編輯器運用 [AEM Content Services](/help/assets/content-fragments/content-fragments.md) ，以JSON模型的形式提供頁面的完整內容。
 
    透過實施特定介面，Sling Models提供SPA所需的資訊。 JSON資料的傳送會下放至每個元件（從頁面、段落、到元件等）。
 
