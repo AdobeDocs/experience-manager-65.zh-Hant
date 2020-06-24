@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
 workflow-type: tm+mt
 source-wordcount: '4345'
 ht-degree: 1%
@@ -56,9 +56,10 @@ Watch a 10 minute and 33 second walkthrough on [how interactive image banners ar
 請參 [閱上傳影像橫幅](#uploading-an-image-banner)。
 
 1. **將熱點添加到影像橫幅** -將一個或多個熱點添加到影像橫幅中，並將每個熱點與超連結、快速視圖或體驗片段等操作關聯。 添加熱點後，將通過發佈互動式影像完成此任務。
-請參 [閱向影像橫幅添加熱點](#adding-hotspots-to-an-image-banner)。
-請參 [閱預覽互動式影像](#optional-previewing-interactive-images) -選用。 視需要，您可以檢視可購買橫幅的呈現方式，並測試其互動性。
-如需如 [何發佈互動式影像資產](/help/assets/publishing-dynamicmedia-assets.md) ，請參閱發佈資產。
+
+   * 請參 [閱向影像橫幅添加熱點](#adding-hotspots-to-an-image-banner)。
+   * 請參 [閱預覽互動式影像](#optional-previewing-interactive-images) -選用。 視需要，您可以檢視可購買橫幅的呈現方式，並測試其互動性。
+   * 如需如 [何發佈互動式影像資產](/help/assets/publishing-dynamicmedia-assets.md) ，請參閱發佈資產。
 
 1. **在AEM中將互動式影像新增至網站或網站**&#x200B;如果您使用AEM Sites、AEM eCommerce或兩者，您可以將互動式影像拖曳至頁面上，直接新增至AEM的網頁。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 如果您單獨使用AEM Assets和Dynamic Media，則必須複製網站上的內嵌代碼，然後將它與您現有的Quickview整合。 請參 [閱整合互動式影像與您的網站](#integrating-an-interactive-image-with-your-website)。
@@ -72,7 +73,6 @@ Watch a 10 minute and 33 second walkthrough on [how interactive image banners ar
 >
 >* 您想要透過觸發至Quickviews，將互動功能加入影像。
 >* 您的AEM實作不會使 *用* eCommerce整合架構，將產品資料從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 請參 [閱AEM Assets中的電子商務概念](/help/sites-administering/concepts.md)。
-
 >
 >
 如果您的AEM實作使用電子商務，您可以略過此工作並繼續下一個工作。
@@ -234,7 +234,7 @@ Quickview的大多數實施都採用以下模式：
 
 >[!NOTE]
 >
->請注意，當您將檢視器內嵌在體驗片段時，不支援互動式影像中的社交媒體分享工具。 若要解決這個問題，您可以使用或建立沒有社交媒體分享工具的檢視器預設集。 這些檢視器預設集可讓您成功將它內嵌在「體驗片段」中。
+>請注意，當您將檢視器內嵌在「體驗片段」時，不支援「互動式影像」中的社交媒體分享工具。 若要解決這個問題，您可以使用或建立沒有社交媒體分享工具的檢視器預設集。 這些檢視器預設集可讓您成功將它內嵌在「體驗片段」中。
 
 在目前的建立／編輯作業階段中，支援在頁面右上角的「復原」和「重做」選項。
 
@@ -288,7 +288,6 @@ Quickview的大多數實施都採用以下模式：
 
       * 如果您是AEM Sites客戶，請點選或按一下「網站選擇器」圖示（資料夾）以導覽至URL。 請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
       * 如果您是獨立客戶，請在HREF文字欄位中，指定連結網頁的完整URL路徑。
-
    請確定您要指定是在新的瀏覽器標籤（建議預設值）或相同的標籤中開啟連結。
 
    如需詳 [細資訊，請參閱使用選](/help/assets/working-with-selectors.md) 擇器。
@@ -470,7 +469,7 @@ AEM Assets傳回的內嵌代碼已經有可供使用的事件處理常式，已�
  </tbody>
 </table>
 
-觸發Quickview URL並啟動Quickview面板的最後一個步驟很可能需要您IT部門的前端IT人員協助。 他們具備最佳的知識，可瞭解如何從正確的步驟準確觸發Quickview實施，並擁有現成可用的Quickview URL。
+觸發Quickview URL並啟動Quickview面板的最後一個步驟很可能需要IT部門的前端IT人員協助。 他們具備最佳的知識，可瞭解如何從正確的步驟準確觸發Quickview實施，並擁有現成可用的Quickview URL。
 
 您可以瞭解這些步驟如何套用至示範網站，以便將可購買的互動式影像與Quickview程式碼完全整合。 之前，Quickview URL的結構已識別為：
 
