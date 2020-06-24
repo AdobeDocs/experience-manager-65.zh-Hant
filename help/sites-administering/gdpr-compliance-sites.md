@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 translation-type: tm+mt
-source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '850'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
 
 >[!IMPORTANT]
 >
->GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規；例如GDPR、CCPA等。
+>GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規； 例如GDPR、CCPA等。
 
 歐盟的資料隱私權通用資料保護條例自2018年5月起生效。
 
@@ -49,19 +52,19 @@ AEM有 [Cookie選擇退出服務](/help/sites-developing/cookie-optout.md) ，�
 
 AEM Sites包含Analytics的「增強前瞻分析」(Enhanced Insights by Analytics)的選購整合，此功能使用Adobe Analytics隨選服務中的功能。
 
-如需有關管理與Adobe Analytics相關的GDPR資料主體要求的詳細資訊，請參 [閱Adobe Analytics和GDPR](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/)。
+如需有關管理與Adobe Analytics相關的GDPR資料主體要求的詳細資訊，請參 [閱Adobe Analytics和GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)。
 
 ## 依Target強化個人化 {#enhanced-personalization-by-target}
 
 AEM Sites包含與Enhanced Personalization by Target的選購整合，此整合使用Adobe Target隨選服務中的功能。
 
-如需有關管理與Adobe target相關之GDPR資料主體要求的詳細資訊，請參閱 [Adobe Target —— 隱私與一般資料保護規則](https://marketing.adobe.com/resources/help/en_US/target/target/privacy-and-general-data-protection-regulation.html)。
+如需有關管理與Adobe Target相關之GDPR資料主體要求的詳細資訊，請參閱 [Adobe Target —— 隱私與一般資料保護規則](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)。
 
 ## ContextHub {#contexthub}
 
 AEM提供包含 [ContextHub的選用資料層](/help/sites-developing/contexthub.md)。 如此可保留瀏覽器中特定訪客的資料，以便用於規則型個人化。
 
-依預設，此訪客資料不會儲存在AEM中；AEM會傳送規則至資料層，以便在瀏覽器中做個人化決策。
+依預設，此訪客資料不會儲存在AEM中； AEM會傳送規則至資料層，以便在瀏覽器中做個人化決策。
 
 >[!NOTE]
 >
@@ -105,7 +108,7 @@ AEM提供包含 [ContextHub的選用資料層](/help/sites-developing/contexthub
 
 若要預覽使用ContextHub的永久性，使用者可以：
 
-* 使用瀏覽器的主控台；例如：
+* 使用瀏覽器的主控台； 例如：
 
    * Chrome:
 
@@ -148,6 +151,7 @@ AEM提供包含 [ContextHub的選用資料層](/help/sites-developing/contexthub
       * ContextHub.Utils.Persistence.Modes.SESSION
       * ContextHub.Utils.Persistence.Modes.COOKIE
       * ContextHub.Utils.Persistence.Modes.WINDOW
+
       ContextHub儲存器定義將使用哪個持久性層，因此查看持久性的當前狀態，應檢查所有層。
 
 
@@ -177,6 +181,7 @@ AEM提供包含 [ContextHub的選用資料層](/help/sites-developing/contexthub
       * ContextHub.Utils.Persistence.Modes.SESSION
       * ContextHub.Utils.Persistence.Modes.COOKIE
       * ContextHub.Utils.Persistence.Modes.WINDOW
+
       ContextHub儲存器定義將使用哪個持久性層，因此查看持久性的當前狀態，應檢查所有層。
 
 
@@ -204,7 +209,7 @@ console.log(storage.getTree());
    ContextHub.resetAllStores();
    ```
 
-* 清除特定的持久層；例如，sessionStorage:
+* 清除特定的持久層； 例如，sessionStorage:
 
    ```
    var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });
