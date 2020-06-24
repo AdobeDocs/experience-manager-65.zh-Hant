@@ -3,9 +3,9 @@ title: Adobe Experience Manager轉Adobe Creative Cloud資料夾分享最佳實�
 description: 設定Adobe Experience Manager，讓Experience Manager Assets中的使用者可與Adobe Creative Cloud(CC)使用者交換資料夾。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1079'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Experience Manager對Creative Cloud資料夾共用有賴於在資產和Creative 
 整合包含下列元素：
 
 * **部署在企業網路** （受管理服務或內部部署）中的Experience Manager Assets伺服器： 資料夾共用會從這裡開始。
-* **Adobe Marketing Cloud資產核心服務**: 在Experience Manager和Creative Cloud儲存服務之間充當中介。 使用整合的公司管理員需要在Marketing Cloud組織和「資產」例項之間建立信任關係。 他們也 [會定義已核准的Creative Cloud共同作業人員清單](https://marketing.adobe.com/resources/help/en_US/mcloud/t_admin_add_cc_user.html)，讓Assets使用者也可以共用資料夾，以提高安全性。
+* **Adobe Marketing Cloud資產核心服務**: 在Experience Manager和Creative Cloud儲存服務之間充當中介。 使用整合的公司管理員需要在Marketing Cloud組織和「資產」例項之間建立信任關係。 他們也 [會定義已核准的Creative Cloud共同作業人員清單](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)，讓Assets使用者也可以共用資料夾，以提高安全性。
 
 * **Creative Cloud資產網站服務** （儲存空間和Creative Cloud檔案網頁UI）: 這是特定Creative Cloud應用程式使用者（與他們共用「資產」檔案夾）可接受邀請並在其Creative Cloud帳戶儲存空間中查看該檔案夾的地方。
 * **Creative Cloud案頭應用程式**: （可選）可讓創意使用者透過與Creative Cloud Assets儲存空間同步，從案頭直接存取共用資料夾／檔案。
