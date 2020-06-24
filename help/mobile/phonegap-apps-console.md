@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '2638'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
 
-AEM行動應用程式開發程式承認，不同專業的使用者有助於行動應用程式的開發。 以下流程圖說明內容作者和應用程式開發人員執行工作的一般順序。
+AEM行動應用程式開發流程承認，不同專業的使用者有助於行動應用程式的開發。 以下流程圖說明內容作者和應用程式開發人員執行工作的一般順序。
 
 ![chlimage_1-10](assets/chlimage_1-10.gif)
 
@@ -29,7 +32,7 @@ AEM行動應用程式開發程式承認，不同專業的使用者有助於行�
 
 ## 行動應用程式的結構 {#the-structure-of-mobile-applications}
 
-AEM mobile提供Phonegap應用程式藍圖，以建立行動應用程式。 Blueprint會定義您所建立之應用程式的結構。 應用程式套件括以下項目：
+AEM Mobile提供Phonegap應用程式藍圖，以建立行動應用程式。 Blueprint會定義您所建立之應用程式的結構。 應用程式套件括以下項目：
 
 * 根頁面。
 * 應用程式的語言變化。
@@ -47,7 +50,7 @@ AEM mobile提供Phonegap應用程式藍圖，以建立行動應用程式。 Blue
 
 根頁面的第一個子頁面是應用程式的語言變化。 每個頁面的名稱是建立應用程式的語言。 例如，英文是應用程式英文變體的名稱。
 
-**** 注意：預設的PhoneGap藍圖僅會建立英文版應用程式。 您的開發人員可修改藍圖，以建立更多語言變化。
+**注意：** 預設的PhoneGap藍圖僅會建立英文版應用程式。 您的開發人員可修改藍圖，以建立更多語言變化。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -66,19 +69,19 @@ AEM mobile提供Phonegap應用程式藍圖，以建立行動應用程式。 Blue
 
 行動應用程式是以定義頁面結構和屬性的藍圖為基礎。 您可以設定下列應用程式屬性：
 
-* **** 標題：應用程式標題。
-* **** 目標路徑：儲存應用程式的儲存庫中的位置。 保留預設值，以根據應用程式名稱建立路徑。
+* **標題：** 應用程式標題。
+* **目標路徑：** 儲存應用程式的儲存庫中的位置。 保留預設值，以根據應用程式名稱建立路徑。
 
-* **** 名稱：預設值是Title屬性的值，並刪除空格字元。 名稱在CQ中用於引用應用程式，例如代表應用程式的儲存庫節點。
-* **** 說明：應用程式的說明。
-* **** 伺服器URL:提供Over-the-Air(OTA)內容更新至應用程式的URL。 預設值是用來建立應用程式（取自外部化器服務）之例項的發佈伺服器URL。 請注意，此為發佈伺服器例項，而非需要驗證的作者。
+* **名稱：** 預設值是Title屬性的值，並刪除空格字元。 名稱在CQ中用於引用應用程式，例如代表應用程式的儲存庫節點。
+* **說明：** 應用程式的說明。
+* **伺服器URL:** 提供Over-the-Air(OTA)內容更新至應用程式的URL。 預設值是用來建立應用程式（取自外部化器服務）之例項的發佈伺服器URL。 請注意，此為發佈伺服器例項，而非需要驗證的作者。
 
 您也可以提供影像檔案做為應用程式縮圖，選取要使用的PhoneGap Build設定，然後選取要使用的行動應用程式分析設定。 此影像僅用作縮圖，以在Experience Manager的行動應用程式主控台中呈現您的行動應用程式。
 
 建立雲端服務並將Adobe Mobile Services SDK外掛程式整合至應用程式時，會有其他（和選用）標籤。
 
-* 構建：按一下「管理設定」，並在此處設定build.phonegap.com組建服務。 然後，您就可以從下拉式清單中選取新建立的PhoneGap組建雲端服務。
-* 分析：按一下「管理組態」，並設定 [您的Adobe Mobile Services SDK](https://marketing.adobe.com/developer/en_US/get-started/mobile/c-measuring-mobile-applications) cloud服務。 然後，您就可以從下拉式清單中，選取新建立的Mobile Service，以整合到您的行動應用程式中。
+* 構建： 按一下「管理設定」，並在此處設定build.phonegap.com組建服務。 然後，您就可以從下拉式清單中選取新建立的PhoneGap組建雲端服務。
+* 分析： 按一下「管理組態」，並設定 [您的Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html) cloud服務。 然後，您就可以從下拉式清單中，選取新建立的Mobile Service，以整合到您的行動應用程式中。
 
 >[!NOTE]
 >
@@ -101,7 +104,7 @@ AEM mobile提供Phonegap應用程式藍圖，以建立行動應用程式。 Blue
    若要建立行動應用程式設定，請按一下「管理設定」。
 
 1. （可選）若要提供應用程式圖示，請按一下「瀏覽」按鈕，從檔案系統選取影像檔案，然後按一下「開啟」。
-1. 按一下「建立」。
+1. 按一下建立。
 
 ### 變更行動應用程式的屬性 {#changing-the-properties-of-a-mobile-application}
 
@@ -190,7 +193,7 @@ AEM發佈例項上的「內容同步」快取會用作行動應用程式的內�
 
 ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. 按一下「下一步」。
+1. 按一下下一步。
 1. 提供應用程式ID和標題，但您可能也想要包含名稱和說明。
 
    1. 此外，您也可以瀏覽AEM資產，將PNG（支援的PhoneGap圖示格式）提供為圖示。
@@ -293,17 +296,17 @@ Geometrixx Outdoors應用程式是範例PhoneGap應用程式，可展示預設Ph
 
 設定轉盤的行為：
 
-* 播放速度：每張影像在顯示下一張影像之前顯示的時間（以毫秒為單位）。
-* 轉換時間：影像轉場動畫的持續時間（以毫秒為單位）。
-* 控制項樣式：在影像之間移動所提供的控制項類型。
+* 播放速度： 每張影像在顯示下一張影像之前顯示的時間（以毫秒為單位）。
+* 轉換時間： 影像轉場動畫的持續時間（以毫秒為單位）。
+* 控制項樣式： 在影像之間移動所提供的控制項類型。
 
 **「清單屬性」頁籤**
 
 指定頁面清單的產生方式：
 
-* 使用：用於指定要包含在轉盤中的頁面的方法。 請參閱建立頁面清單。
-* 訂購方式：選擇用於排序頁清單的頁屬性。 例如，選取jcr:title可依標題的字母順序排序頁面。
-* 限制：要包含的最大頁數。 此屬性適用於建立頁面清單的搜尋式方法。
+* 使用： 用於指定要包含在轉盤中的頁面的方法。 請參閱建立頁面清單。
+* 訂購方式： 選擇用於排序頁清單的頁屬性。 例如，選取jcr:title可依標題的字母順序排序頁面。
+* 限制： 要包含的最大頁數。 此屬性適用於建立頁面清單的搜尋式方法。
 
 #### 建立頁面清單 {#building-the-page-list}
 
@@ -321,7 +324,7 @@ Geometrixx Outdoors應用程式是範例PhoneGap應用程式，可展示預設Ph
 * 使用向上和向下箭頭圖示在清單中移動頁面。
 * 按一下「移除」按鈕，從清單中移除頁面。
 
-Order by屬性不會影響固定清單的順序。
+Order By屬性不會影響固定清單的順序。
 
 **搜尋**
 
