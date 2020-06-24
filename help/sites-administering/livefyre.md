@@ -10,7 +10,10 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1706'
+ht-degree: 0%
 
 ---
 
@@ -55,7 +58,7 @@ AEM 6.5隨附預先安裝的Livefyre功能套件1.2.6。 此套件僅包含與AE
 
    如需功能套件的詳細資訊和版本注意事項，請參閱 [功能套件](https://helpx.adobe.com/experience-manager/6-3/release-notes/feature-packs-release-notes.html)。
 
-### 設定AEM以使用Livefyre:建立配置資料夾 {#configure-aem-to-use-livefyre-create-a-configuration-folder}
+### 設定AEM以使用Livefyre: 建立配置資料夾 {#configure-aem-to-use-livefyre-create-a-configuration-folder}
 
 1. 在AEM首頁中，按一下左側邊 **欄的** 「工具」圖示，然後導覽至「一般> **設定瀏覽器」**。
 1. 按一下 **建立** ，開啟建立配置對話框。
@@ -65,7 +68,7 @@ AEM 6.5隨附預先安裝的Livefyre功能套件1.2.6。 此套件僅包含與AE
 
    ![livefyre-aem-create-config-folder](assets/livefyre-aem-create-config-folder.png)
 
-### 設定AEM以使用Livefyre:建立Livefyre設定 {#configure-aem-to-use-livefyre-create-a-livefyre-configuration}
+### 設定AEM以使用Livefyre: 建立Livefyre設定 {#configure-aem-to-use-livefyre-create-a-livefyre-configuration}
 
 設定AEM以使用您組織的Livefyre授權認證，允許Livefyre與AEM之間通訊。
 
@@ -132,22 +135,22 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre的SSO服務之�
 
 ### 編輯AEM頁面的Livefyre元件。 {#edit-a-livefyre-component-for-an-aem-page}
 
-您只能在Livefyre studio中設定和編輯Livefyre元件。 來自AEM:
+您只能在Livefyre Studio中設定和編輯Livefyre元件。 來自AEM:
 
 1. 按一下Livefyre元件以進行設定。
 1. 按一下「 **設定** 」圖示（扳手）以開啟設定對話方塊。
 1. Click **To edit this component, go to Livefyre Studio**.
-1. 在Livefyre studio中編輯應用程式。
+1. 在Livefyre Studio中編輯應用程式。
 
 ## 搭配AEM資產使用Livefyre {#use-livefyre-with-aem-assets}
 
 ### 請求權限並將UGC匯入AEM資產 {#request-rights-and-import-ugc-into-aem-assets}
 
-您可以使用UGC匯入工具，將Twitter和Instagram使用者產生的內容(UGC)從Livefyre studio匯入至AEM資產。 在選取要匯入的內容後，您必須先要求內容的權限，才能完成匯入。
+您可以使用UGC匯入工具，將Twitter和Instagram使用者產生的內容(UGC)從Livefyre Studio匯入至AEM資產。 在選取要匯入的內容後，您必須先要求內容的權限，才能完成匯入。
 
 >[!NOTE]
 >
->在使用「資產」匯入UGC之前，您必須先在Livefyre studio中設定「Social帳戶」和「Rights Requests」帳戶。 請參閱 [設定：權限要求](https://marketing.adobe.com/resources/help/en_US/livefyre/c_how_requesting_rights_works.html) ，以取得詳細資訊。
+>在使用「資產」匯入UGC之前，您必須先在Livefyre Studio中設定「Social帳戶」和「Rights Requests」帳戶。 請參閱 [設定： 權限要求](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html) ，以取得詳細資訊。
 
 若要將UGC匯入AEM資產：
 
@@ -162,8 +165,8 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre的SSO服務之�
    * 按一下Twitter或Instagram標籤，即可從Twitter和Instagram取得。 使用搜尋或篩選器來尋找內容。
 
 1. 選取您要匯入的資產。 您選取的資產會自動計算並儲存在「選取的」標 **簽下** 。
-1. **可選**:按一下「 **選取** 」標籤，並檢視選取的UGC內容以匯入。
-1. 按一 **下「下一步**」。
+1. **可選**: 按一下「 **選取** 」標籤，並檢視選取的UGC內容以匯入。
+1. 按一下&#x200B;**下一步**。
 
    ![livefyre-aem-import-ugc2](assets/livefyre-aem-import-ugc2.png)
 
@@ -173,6 +176,7 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre的SSO服務之�
 
    * **手動請求權限** ，以取得可複製並貼上的訊息，並透過Instagram手動傳送給內容擁有者。
    * **手動屬性內容權限** ，以覆寫個別資產的權限。
+
    >[!NOTE]
    >
    >由於更新會影響非商業使用者帳戶的內容匯總，因此我們無法再代表您張貼意見或自動檢查作者的回覆。 [按一下這裡以進一步瞭解](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/)。
@@ -197,7 +201,7 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre的SSO服務之�
 
 1. 按一 **下右上角的** 「完成」，以完成「權限請求」工作流程。
 
-   您可在Livefyre studio中查看資產的待定權利要求狀態。 如果內容擱置中是權限請求，在授予權限之前，資產不會顯示在AEM資產中。 當授與「權限請求」時，資產會自動出現在AEM Assets中。
+   您可在Livefyre Studio中查看資產的待定權利要求狀態。 如果內容擱置中是權限請求，在授予權限之前，資產不會顯示在AEM資產中。 當授與「權限請求」時，資產會自動出現在AEM Assets中。
 
    若是Instagram，您必須追蹤內容擁有者的回應，並手動授與內容的權限。
 
