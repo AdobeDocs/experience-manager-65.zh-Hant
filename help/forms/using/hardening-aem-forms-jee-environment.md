@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
 workflow-type: tm+mt
-source-wordcount: '7445'
+source-wordcount: '7603'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 文章說明在JEE上執行AEM Forms的伺服器保全建議和最佳實務。 對於您的作業系統和應用程式伺服器，此檔案並非完整的主機強化檔案。 相反地，本文說明您應實作的各種安全性強化設定，以增強在公司內部網路中執行的JEE上AEM Forms的安全性。 不過，為確保JEE應用程式伺服器上的AEM Forms保持安全，您也應實作安全性監控、偵測和回應程式。
 
-本文描述在安裝和配置生命週期的以下階段應用的強化技術：
+本文描述在安裝和配置生命週期的以下階段應應用的強化技術：
 
 * **預安裝：** 在JEE上安裝AEM Forms之前，請先使用這些技巧。
 * **安裝：** 在AEM Forms on JEE安裝程式中使用這些技巧。
@@ -187,7 +187,25 @@ AEM Forms on JEE依預設會使用LocalSystem帳戶來安裝服務。 內建的L
    * 拒絕本地登錄
    * 以服務身分登入（應已設定）
 
-1. 為新使用者帳戶提供「讀取與執行」、「寫入」、「修改」、「清單資料夾內容」和「讀取」權限，以完成JEE安裝目錄和「全域檔案儲存」(GDS)目錄上的AEM Forms。 在AEM Forms安裝程式期間，會手動設定GDS目錄的位置。 如果位置設定在安裝期間保持空，則位置預設為 [JBoss root]/server/[type]/svcnative/DocumentStorage應用程式伺服器安裝下的目錄。
+1. 為下列目錄授予新用戶帳戶修改權限：
+   * **全域檔案儲存(GDS)目錄**: 在AEM Forms安裝程式期間，會手動設定GDS目錄的位置。 如果位置設定在安裝期間保持空，則位置預設為應用伺服器安裝下的目錄： `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repository目錄**: 預設位置為 `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms臨時目錄**:
+      * (Windows)環境變數中設定的TMP或TEMP路徑
+      * （AIX、Linux或Solaris）登入使用者的首頁目錄在以UNIX為基礎的系統上，非根用戶可以使用下列目錄作為臨時目錄：
+      * (Linux)/var/tmp或/usr/tmp
+      * (AIX)/tmp或/usr/tmp
+      * (Solaris)/var/tmp或/usr/tmp
+1. 為以下目錄提供新用戶帳戶的寫權限：
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > JBoss Application Server的預設安裝位置：
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/
+
 1. 啟動應用程式伺服器。
 
 **禁用配置管理器引導Servlet**
@@ -409,7 +427,7 @@ AEM Forms資料庫架構包含有關係統設定和商業程式的敏感資訊�
 
 ### 審核和記錄 {#auditing-and-logging}
 
-正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入等項目，以及重要應用程式事件，例如建立或刪除重要記錄。
+正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入的項目，以及重要應用程式事件，例如建立或刪除關鍵記錄。
 
 您可以使用審計來檢測多種攻擊類型，包括：
 
@@ -976,7 +994,25 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
    * 拒絕本地登錄xx
    * 以服務身分登入（應已設定）
 
-1. 為新使用者帳戶提供「讀取與執行」、「寫入」、「修改」、「清單資料夾內容」和「讀取」權限，以完成JEE安裝目錄和「全域檔案儲存」(GDS)目錄上的AEM Forms。 在AEM Forms安裝程式期間，會手動設定GDS目錄的位置。 如果位置設定在安裝期間保持空，則位置預設為 [JBoss root]/server/[type]/svcnative/DocumentStorage應用程式伺服器安裝下的目錄。
+1. 為下列目錄授予新用戶帳戶修改權限：
+   * **全域檔案儲存(GDS)目錄**: 在AEM Forms安裝程式期間，會手動設定GDS目錄的位置。 如果位置設定在安裝期間保持空，則位置預設為應用伺服器安裝下的目錄： `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repository目錄**: 預設位置為 `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms臨時目錄**:
+      * (Windows)環境變數中設定的TMP或TEMP路徑
+      * （AIX、Linux或Solaris）登入使用者的首頁目錄在以UNIX為基礎的系統上，非根用戶可以使用下列目錄作為臨時目錄：
+      * (Linux)/var/tmp或/usr/tmp
+      * (AIX)/tmp或/usr/tmp
+      * (Solaris)/var/tmp或/usr/tmp
+1. 為以下目錄提供新用戶帳戶的寫權限：
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > JBoss Application Server的預設安裝位置：
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/。
+
 
 1. 啟動應用程式伺服器服務。
 
