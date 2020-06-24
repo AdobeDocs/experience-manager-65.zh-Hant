@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1544'
+ht-degree: 3%
 
 ---
 
@@ -118,6 +121,7 @@ AEM依預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料�
    * 指定 **標題**。
    * 或者，您可以為儲存 **在儲存庫中的框架詳細資訊的節點指定名稱**。
    * 選取 **Adobe Analytics Framework**
+
    然後按一下 **建立**。
 
    此框架將開啟以供編輯。
@@ -181,7 +185,7 @@ AEM依預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料�
 1. 選擇「 **儲存並關閉**」。
 1. **[發佈頁](/help/sites-authoring/publishing-pages.md)**，以啟動頁面和任何連接的組態／檔案。
 1. 最後一個步驟是造訪發佈例項上的頁面，並使用 **** Search元件搜尋關鍵字（例如茄子）。
-1. 然後，您可以使用適當的工具檢查對Adobe Analytics的呼叫； 例如 [Adobe Marketing Cloud除錯程式](https://marketing.adobe.com/resources/help/en_US/sc/implement/debugger_install.html)。
+1. 然後，您可以使用適當的工具檢查對Adobe Analytics的呼叫； 例如， [Adobe Experience Cloud除錯程式](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)。
 1. 在提供的範例中，呼叫應包含eVar7中輸入的值（即茄子），而事件清單應包含event3。
 
 ### 頁面檢視 {#page-views}
