@@ -10,14 +10,17 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 translation-type: tm+mt
-source-git-commit: 48fd5ddb386d69795291e560fa7b21da6edf5979
+source-git-commit: 8f1a1beb9aa64b1d2ea5eda0bec3ca6e99c2ddcc
+workflow-type: tm+mt
+source-wordcount: '987'
+ht-degree: 0%
 
 ---
 
 
 # 建立內容片段的翻譯專案 {#creating-translation-projects-for-content-fragments}
 
-除了資產外，Adobe Experience Manager(AEM)Assets還支援內容片段(包括變 [數](content-fragments.md) )的語言複製工作流程。 在內容片段上執行語言複製工作流程不需要其他最佳化。 在每個工作流程中，都會傳送整個內容片段以供翻譯。
+除了資產外，Adobe Experience Manager(AEM)Assets還支援內容片段(包括變 [數](/help/assets/content-fragments/content-fragments.md) )的語言複製工作流程。 在內容片段上執行語言複製工作流程不需要其他最佳化。 在每個工作流程中，都會傳送整個內容片段以供翻譯。
 
 您可以在內容片段上執行的工作流程類型與您為資產執行的工作流程類型完全相同。 此外，每個工作流類型中可用的選項都與資產的相應工作流類型下可用的選項相匹配。
 
@@ -35,16 +38,16 @@ source-git-commit: 48fd5ddb386d69795291e560fa7b21da6edf5979
 
 「建立和翻譯」工作流程包含下列選項。 與每個選項相關聯的程式步驟類似於與資產的相應選項相關聯的步驟。
 
-* 僅建立結構：如需程式步驟，請參 [閱「僅建立資產結構」](translation-projects.md#create-structure-only)。
-* 建立新的翻譯專案：有關過程步驟，請參 [閱為資產建立新的翻譯項目](translation-projects.md#create-a-new-translation-project)。
-* 添加到現有翻譯項目：有關過程步驟，請參 [閱添加到現有資產的翻譯項目](translation-projects.md#add-to-existing-translation-project)。
+* 僅建立結構： 如需程式步驟，請參 [閱「僅建立資產結構」](translation-projects.md#create-structure-only)。
+* 建立新的翻譯專案： 有關過程步驟，請參 [閱為資產建立新的翻譯項目](translation-projects.md#create-a-new-translation-project)。
+* 添加到現有翻譯項目： 有關過程步驟，請參 [閱添加到現有資產的翻譯項目](translation-projects.md#add-to-existing-translation-project)。
 
 ## 更新語言副本工作流程 {#update-language-copies-workflow}
 
 「更新語言副本」工作流程包含下列選項。 與每個選項相關聯的程式步驟類似於與資產的相應選項相關聯的步驟。
 
-* 建立新的翻譯專案：如需程式步驟，請參 [閱為資產建立新的翻譯專案](translation-projects.md#create-a-new-translation-project) （更新工作流程）。
-* 添加到現有翻譯項目：如需程式步驟，請參 [閱「新增至資產的現有轉譯專案](translation-projects.md#add-to-existing-translation-project) （更新工作流程）」。
+* 建立新的翻譯專案： 如需程式步驟，請參 [閱為資產建立新的翻譯專案](translation-projects.md#create-a-new-translation-project) （更新工作流程）。
+* 添加到現有翻譯項目： 如需程式步驟，請參 [閱「新增至資產的現有轉譯專案](translation-projects.md#add-to-existing-translation-project) （更新工作流程）」。
 
 您也可以建立片段的暫時語言復本，就像建立資產的暫時復本一樣。 如需詳細資訊，請 [參閱建立資產的暫存語言副本](translation-projects.md#creating-temporary-language-copies)。
 
@@ -57,7 +60,7 @@ AEM可讓您翻譯包含各種類型媒體資產和系列的內容片段。 如�
 若要能夠轉譯包含混合媒體的內容片段，請先編輯預設的轉譯架構，以便轉譯與內容片段關聯的內嵌資產和系列。
 
 1. 按一下／點選AEM標誌，然後導覽至「工 **[!UICONTROL 具>部署>雲端服務」]**。
-1. 在 **[!UICONTROL Adobe Marketing cloud下方找]** 到翻譯整合 **[!UICONTROL ，然後按一下／點選「]**&#x200B;顯示設定 ****」。
+1. 在 **[!UICONTROL Adobe Marketing Cloud下方找]** 到翻譯整合 **[!UICONTROL ，然後按一下／點選「]**&#x200B;顯示設定 ****」。
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
@@ -65,11 +68,11 @@ AEM可讓您翻譯包含各種類型媒體資產和系列的內容片段。 如�
 
    ![chlimage_1-445](assets/chlimage_1-445.png)
 
-1. 按一下工 **[!UICONTROL 具欄中的]** 「編輯」(Edit)，以顯示「轉 **[!UICONTROL 換配置」(Translation Config]** )對話框。
+1. 按一下工 **[!UICONTROL 具欄中的]** 「編輯」(Edit)，以顯示「 **[!UICONTROL 轉換配置」(Translation Config]** )對話框。
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. 導覽至「資 **[!UICONTROL 產」標籤]** ，然後從「轉譯內容片段資產」清單中選 **[!UICONTROL 擇「內嵌媒體資產」和]** 「相 **** 關的系列」。 按一下／點選「 **[!UICONTROL 確定]** 」以儲存變更。
+1. 導覽至「資 **[!UICONTROL 產」標籤]** ，然後從「轉譯內容片段資產」清單中選 **[!UICONTROL 擇「內嵌媒體資產」和]** 「相 **** 關的系列」。 Click/tap **[!UICONTROL OK]** to save the changes.
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
