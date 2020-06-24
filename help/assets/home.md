@@ -4,7 +4,7 @@ seo-title: Adobe Experience Manager 6.5 Assets使用指南
 description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 seo-description: 涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 9%
@@ -38,7 +38,7 @@ ht-degree: 9%
 | [開發使用指南](/help/sites-developing/home.md) | 瞭解如何建立您的Experience Manager實例。 |
 | [管理使用手冊](/help/managing/home.md) | 本指南說明如何成功管理Experience Manager專案。 |
 | [行動使用指南](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [Experience Manager Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html) | 本指南說明如何與共用使用者產生的內容 [!DNL Livefyre]。 |
+| [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南說明如何與共用使用者產生的內容 [!DNL Livefyre]。 |
 
 ## 主要Experience Manager資源
 
