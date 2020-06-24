@@ -8,7 +8,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
 source-wordcount: '2755'
 ht-degree: 11%
@@ -257,12 +257,14 @@ ht-degree: 11%
 
       * 如果影像只有智慧型裁切或智慧型色票，請在影像上拖曳裁切方塊的角部控點，以調整裁切的可檢視區域大小。
       * 如果影像同時具有智慧型裁切和智慧型色票，請在影像上拖曳裁切方塊的角部控點，以調整裁切的可檢視區域大小。 或者，點選或按一下影像下方的智慧型色票（色票是靜態的），然後拖曳裁切方塊的角部控點以調整色票的可檢視區域大小。
+
       ![調整影像的智慧裁切大小。](assets/edit_smart_crops-resize.png)
 
    * 移動智慧型裁切方塊。 執行下列任一項作業：
 
       * 如果影像只有智慧型裁切或智慧型色票，請在影像上拖曳裁切方塊至新位置。
       * 如果影像同時具有智慧型裁切和智慧型色票，請將智慧型裁切方塊拖曳至新位置。 或者，點選或按一下影像下方的智慧型色票（色票為靜態），然後將智慧型色票裁切方塊拖曳至新位置。
+
       ![edit_smart_crobs-move](assets/edit_smart_crops-move.png)
 
    * 還原您的所有編輯，並還原原始智慧型裁切或智慧型色票（僅適用於目前的編輯工作階段）。
