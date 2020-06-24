@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Developing User Guide
+user-guide-title: AEM 6.5開發使用指南
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 62be4d88f6ed3df68a77a4b61f7e113bdf03002d
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 7%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 + [開發使用指南概觀](home.md)
 + 開發人員簡介{#introduction}
-   + [開始開發AEM網站- WKND教學課程](getting-started.md)
+   + [開始開發 AEM Sites - WKND 教學課程](getting-started.md)
    + [AEM Core Concepts](the-basics.md)
    + [AEM Touch-Enabled UI的結構](touch-ui-structure.md)
    + [AEM Touch-Enabled UI的概念](touch-ui-concepts.md)
@@ -65,9 +68,9 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + 電子商務{#ecommerce}
       + [電子商務](ecommerce.md)
       + [開發（一般）](generic.md)
-      + [使用SAP Commerce cloud進行開發](sap-commerce-cloud.md)
+      + [使用SAP Commerce Cloud進行開發](sap-commerce-cloud.md)
 + 元件{#components}
-   + [核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+   + [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
    + [樣式系統](/help/sites-authoring/style-system.md)
    + [元件概觀](components.md)
    + [AEM元件——基本概念](components-basics.md)
@@ -113,7 +116,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [SPA和伺服器端演算](spa-ssr.md)
       + [SPA Javascript API參考](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
-   + [內容片段](/help/assets/content-fragments.md)
+   + [內容片段](/help/assets/content-fragments/content-fragments.md)
    + [體驗片段](/help/sites-authoring/experience-fragments.md)
    + [瞭解AEM中的內容片段和內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 開發工具{#devtools}
@@ -149,7 +152,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [自訂頁面屬性的檢視](page-properties-views.md)
    + [設定頁面以大量編輯頁面屬性](bulk-editing.md)
    + [自訂和擴充內容片段](customizing-content-fragments.md)
-   + [內容片段設定要轉譯的元件](content-fragments-config-components-rendering.md)
+   + [轉譯專用內容片段設定元件](content-fragments-config-components-rendering.md)
    + [體驗片段](experience-fragments.md)
    + 擴充工作流程{#extending-workflows}
       + [開發和擴充工作流程](workflows.md)
