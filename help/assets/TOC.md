@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Experience Manager 6.5資產使用指南
 translation-type: tm+mt
-source-git-commit: db60a7297defa2ed8e7f30f148d0f74a73a49893
+source-git-commit: d870e80e33c5ba36a43ff45ba2dc82551491bb18
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 38%
@@ -131,14 +131,14 @@ ht-degree: 38%
    + [將資料夾發佈至 Brand Portal](brand-portal-publish-folder.md)
    + [將集合發佈至 Brand Portal](brand-portal-publish-collection.md)
 + 內容片段 {#fragments}
-   + [使用內容片段](content-fragments.md)
-   + [管理內容片段](content-fragments-managing.md)
-   + [內容片段模型](content-fragments-models.md)
-   + [變化 - 編寫片段內容](content-fragments-variations.md)
-   + [內容片段關聯內容](content-fragments-assoc-content.md)
-   + [中繼資料 - 片段屬性](content-fragments-metadata.md)
-   + [內容片段 - 刪除考量事項](content-fragments-delete.md)
-   + [內容片段——標籤](content-fragments-markdown.md)
+   + [使用內容片段](content-fragments/content-fragments.md)
+   + [管理內容片段](content-fragments/content-fragments-managing.md)
+   + [內容片段模型](content-fragments/content-fragments-models.md)
+   + [變化 - 編寫片段內容](content-fragments/content-fragments-variations.md)
+   + [內容片段關聯內容](content-fragments/content-fragments-assoc-content.md)
+   + [中繼資料 - 片段屬性](content-fragments/content-fragments-metadata.md)
+   + [內容片段 - 刪除考量事項](content-fragments/content-fragments-delete.md)
+   + [內容片段——標籤](content-fragments/content-fragments-markdown.md)
    + [建立內容片段的翻譯專案](creating-translation-projects-for-content-fragments.md)
 + Manage Assets {#managing}
    + [管理數位資產](managing-assets-touch-ui.md)
