@@ -11,7 +11,7 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13cf9930876af3dd27b2fcb3e1059dae61769803
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 2%
@@ -29,6 +29,7 @@ ht-degree: 2%
 >
 >* 資產REST API
 >* 包括支援內容片段
+
 >
 >
 AEM Assets HTTP API的目前實作為REST。
@@ -129,6 +130,7 @@ HTTP方法確定要執行的操作：
 >
 >* [CORS/AEM說明](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 >* [影片——使用AEM針對CORS進行開發](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+
 >
 
 
@@ -137,7 +139,7 @@ HTTP方法確定要執行的操作：
 
 ## 可用功能 {#available-features}
 
-「內容片段」是特定的資產類型，請參 [閱使用內容片段](/help/assets/content-fragments.md)。
+「內容片段」是特定的資產類型，請參 [閱使用內容片段](/help/assets/content-fragments/content-fragments.md)。
 
 如需透過API提供之功能的詳細資訊，請參閱：
 
@@ -197,7 +199,7 @@ Assets REST API會公開資料夾屬性的存取權； 例如其名稱、標題�
 
 ### 內容片段 {#content-fragments}
 
-內 [容片段](/help/assets/content-fragments.md) ，是特殊的資產類型。 它們可用於存取結構化資料，例如文字、數字、日期等。
+內 [容片段](/help/assets/content-fragments/content-fragments.md) ，是特殊的資產類型。 它們可用於存取結構化資料，例如文字、數字、日期等。
 
 由於標準資產(例如影 *像或音訊* )有數項差異，因此處理這些資產時會套用一些其他規則。
 
@@ -345,6 +347,7 @@ Assets REST API會公開資料夾屬性的存取權； 例如其名稱、標題�
 
       * `Could not update content element`
       * `Could not update fragment data of element`
+
    詳細的錯誤訊息通常會以下列方式傳回：
 
    ```xml
