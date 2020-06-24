@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2862'
 ht-degree: 0%
 
 ---
@@ -180,13 +180,13 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 **[!UICONTROL 銳利化]** -選擇影像銳利化的方式。 「影像預設集」最佳實務和「銳利化」最 [佳實務中會詳細說明](/help/assets/managing-image-presets.md#image-preset-options)[銳利化功能](/help/assets/assets/s7_sharpening_images.pdf)。
 
-**[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。 這些說明在「影像預 [設集」和](/help/assets/managing-image-presets.md) 「命 [令」參考中](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/c_command_reference.html)。
+**[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。 這些說明在「影像預 [設集」和](/help/assets/managing-image-presets.md) 「命 [令」參考中](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)。
 
 **[!UICONTROL 中斷點]** -如果您的網站是互動式的，您需要調整中斷點。 中斷點必須以逗號(,)分隔。
 
 ### 影像範本 {#image-template}
 
-[Dynamic Media Classic Image Templates是分層的Photoshop內容](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) ，已匯入至Dynamic Media Classic，其中內容和屬性會因變數而參數化。 「影 **[!UICONTROL 像範本]** 」元件可讓您在AEM中匯入影像並動態變更文字。 此外，您可以設定 **[!UICONTROL Image範本元件]** ，使用用戶端內容的值，讓每位使用者都能以個人化的方式體驗影像。
+[Dynamic Media Classic Image Templates是分層的Photoshop內容](https://docs.adobe.com/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html) ，已匯入至Dynamic Media Classic，其中內容和屬性會因變數而參數化。 「影 **[!UICONTROL 像範本]** 」元件可讓您在AEM中匯入影像並動態變更文字。 此外，您可以設定 **[!UICONTROL Image範本元件]** ，使用用戶端內容的值，讓每位使用者都能以個人化的方式體驗影像。
 
 點選 **[!UICONTROL 編輯]** ，以設定元件。 您可以設 [定所有Dynamic Media Classic元件的常用設定](#settings-common-to-all-scene-components) ，以及本節所述的其他設定。
 
