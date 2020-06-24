@@ -10,7 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fe6ba6af-f500-4c0d-b984-fb617d4bf48a
 translation-type: tm+mt
-source-git-commit: 6f49e01aa3e9841c7b2917870593452b778667d2
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1615'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 6f49e01aa3e9841c7b2917870593452b778667d2
 
 ## 設定Adobe Analytics架構的連結追蹤 {#configuring-link-tracking-for-an-adobe-analytics-framework}
 
-1. 使用 **Using****Deployment**, **Cloud Services** ，透過 **** Adobe Analytics導覽區段前往。
+1. 使用 **Using****Deployment**, **Cloud Services, go to the****** Adobe Analytics Navigation.
 
 1. 使用 **顯示設定**，開啟必要的Adobe Analytics架構。
 1. 展開「 **連結追蹤設定** 」區段，並視需要設定（本頁提供詳細資訊）:
@@ -48,7 +51,7 @@ source-git-commit: 6f49e01aa3e9841c7b2917870593452b778667d2
 
 例如，在PDF檔案啟用下載追蹤後，每當使用者按一下PDF檔案的連結時，就會追蹤PDF的下載。
 
-架構的下載追蹤屬性是以程式碼的形式實作在為頁 `analytics.sitecatalyst.js` 面產生的檔案中。 下列程式碼範例代表預設的下載追蹤設定：
+框架的下載追蹤屬性在為頁面產生的檔案中 `analytics.sitecatalyst.js` 實作為程式碼。 下列程式碼範例代表預設的下載追蹤設定：
 
 ```
 s.trackDownloadLinks= true;
@@ -122,7 +125,7 @@ s.linkLeaveQueryString= false;
 
 * **連結追蹤變**&#x200B;數輸入在點按連結時要傳送至Adobe Analytics的Adobe Analytics變數。 以逗號分隔多個變數名稱。
 
-   預設值不 `None` 會傳送任何變數資料。
+   預設值會 `None` 導致未傳送變數資料。
 
 當您指定要傳送的事件和變數時，設定會在為頁面產生的 `analytics.sitecatalyst.js` 檔案中實作為程式碼。 當架構追蹤事件和屬性時，會為頁面產生下 `event10` 列范常式 `prop4` 式碼：
 
@@ -133,7 +136,7 @@ s.linkTrackVars= 'prop4';
 
 ## 連結追蹤設定範例 {#example-link-tracking-configuration}
 
-請執行下列程式，以探索Adobe Analytics整合的連結追蹤行為。 這些程式會顯示 [Adobe Marketing cloud除錯程式的結果](https://marketing.adobe.com/resources/help/en_US/sc/implement/debugger_install.html)。
+請執行下列程式，以探索Adobe Analytics整合的連結追蹤行為。 這些程式會顯示 [Adobe Marketing Cloud除錯程式的結果](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)。
 
 ### General configuration {#general-configuration}
 
@@ -200,7 +203,7 @@ s.linkTrackVars= 'prop4';
 ### 設定外部連結追蹤 {#configure-external-link-tracking}
 
 1. 在您的架構中，展開「連 **結追蹤設定」區** 。
-1. 取消選 **取追蹤下載**。
+1. 取消選 **取「追蹤下載**」。
 
 1. 選擇 **追蹤外部**。
 1. 取消選 **取「保留查詢字串**」。
@@ -226,7 +229,7 @@ s.linkTrackVars= 'prop4';
 
 1. 切換至「 **預覽」模式** ，然後按一下連結。
 
-使用Adobe Marketing cloud除錯程式檢視時，所進行的呼叫會如下所示：
+使用Adobe Marketing Cloud除錯程式檢視時，所進行的呼叫會如下所示：
 
 ![aa-leavequerysearch-blank](assets/aa-leavequerysearch-blank.png)
 
@@ -240,7 +243,7 @@ s.linkTrackVars= 'prop4';
 1. 啟用 **保留查詢字串**。
 1. 重新載入頁面預覽，然後按一下連結。
 
-出現在Adobe Marketing cloud除錯程式中的呼叫詳細資訊類似下列範例：
+出現在Adobe Marketing Cloud除錯程式中的呼叫詳細資訊類似下列範例：
 
 ![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
 
@@ -331,16 +334,18 @@ s.linkTrackVars= 'prop4';
 
 1. （可選）若要透過連結點按來追蹤事件，請在「包含Adobe Analytics變數」欄位中新 **增Adobe Analytics事件名稱** 。 使用逗號分隔多個事件名稱，例如
 
-   `event1, event22`.
+   `event1, event22`。
 
 1. （選擇性）若要透過連結點按來追蹤變數資料，請在「包含Adobe Analytics變數」欄位中 **新增Adobe Analytics變數** 。 使用下列任一格式：
 
    * *`<Variable-name>`*: *`<Dynamic Value>`*
    * *`<Variable-name>`*: *`‘CONSTANT'`*
+
    下列範例說明各種格式：
 
    * `eVar10:pagedata.title`
    * `prop1: ‘Aubergine'`
+
    以逗號分隔多個值。
 
 1. 選擇 **確定**。
