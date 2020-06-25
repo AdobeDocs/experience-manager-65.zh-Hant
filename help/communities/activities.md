@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 10c17fc199c476ec66059cc6bf4cbb4a0ff1af40
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 4%
 
 ---
 
@@ -41,17 +44,17 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 當包含 [所需的用戶端程式庫](/help/communities/essentials-activities.md#essentials-for-client-side) ，元件的顯示方式 `Activity Streams` 如下：
 
-![chlimage_1-24](assets/chlimage_1-24.png)
+![chlimage_1-195](assets/chlimage_1-195.png)
 
 ### 設定活動串流 {#configuring-activity-streams}
 
 選擇要訪問 `Activity Streams` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-25](assets/chlimage_1-25.png)
+![chlimage_1-494](assets/chlimage_1-494.png)
 
 在「使用 **者活動** 」標籤下，指定要顯示的活動：
 
-![chlimage_1-26](assets/chlimage_1-26.png)
+![user-activity](assets/user-activities.png)
 
 * **活動最大數量**
 
@@ -77,22 +80,22 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 必須配置元件以啟用以下功能。 允許以下功能：部落格 [、論壇](/help/communities/blog-feature.md)、 [QnQnPn](/help/communities/forum.md)、Filary [brary、elicary行事歷、](/help/communities/working-with-qna.md)[](/help/communities/calendar.md)[](/help/communities/file-library.md)[](/help/communities/comments.md)elicary注釋。
 
-![chlimage_1-27](assets/chlimage_1-27.png)
+![chlimage_1-5](assets/chlimage_1-5.png)
 
 「跟 **蹤** 」按鈕提供了一種方法，可將條目作為活動、通 [知](/help/communities/notifications.md)或訂 [閱跟蹤](/help/communities/subscriptions.md)。 每次選取「 **跟隨** 」按鈕時，都可以開啟或關閉選取範圍。 只有 `Email Subscriptions` 在配置時，才會顯示選擇。
 
 如果選取任何下列方法，按鈕的文字會變更為「下 **列」**。 為方便起見，您可以選取以 `Unfollow All` 關閉所有方法。
 
-將出 **現** 「跟蹤」按鈕
+將出 **現「** Follow（跟蹤）」按鈕：
 
-* 查看其他成員的配置檔案時
-* 在主功能頁面上，例如論壇、QnA和部落格
+* 查看其他成員的配置檔案時。
+* 在主要功能頁面上，例如論壇、QnA和部落格。
 
-   * 遵循該一般功能的所有活動
+   * 遵循該一般功能的所有活動。
 
-* 針對特定項目，例如論壇主題、QnA問題或部落格文章
+* 針對特定項目，例如論壇主題、QnA問題或部落格文章。
 
-   * 遵循該特定條目的所有活動
+   * 跟蹤該特定條目的所有活動。
 
 ### 其他資訊 {#additional-information}
 
