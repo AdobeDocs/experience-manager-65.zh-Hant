@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 1b200f9dd5fc99b37bcc629be7a785e02e8320c0
+workflow-type: tm+mt
+source-wordcount: '2458'
+ht-degree: 6%
 
 ---
 
@@ -29,11 +32,11 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ## 社群功能主控台 {#community-functions-console}
 
-在作者環境中，要訪問社區功能控制台：
+要訪問作者環境中的社區功能控制台：
 
-* 從全域導覽：工 **[!UICONTROL 具]** >社 **[!UICONTROL 群]** >社 **[!UICONTROL 群功能]**。
+* 導覽至「 **[!UICONTROL 工具]** >社群 **[!UICONTROL >社群]** 功能」 ****。
 
-![chlimage_1-106](assets/chlimage_1-106.png)
+![chlimage_1-379](assets/chlimage_1-379.png)
 
 ## 預建函式 {#pre-built-functions}
 
@@ -43,13 +46,13 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ### 標題和URL設定 {#title-and-url-settings}
 
-**Title **和**URL **是所有社群函式的常用屬性。
+**Title** and **URL** are properties common to all community functions.
 
 當社群功能新增至社群網站範本或在修改社群網站 [結構](/help/communities/sites-console.md#modifying-site-properties) 時新增時，功能的對話方塊會開啟，以便設定標題和URL。
 
 #### 設定功能詳細資料 {#configuration-function-details}
 
-![chlimage_1-107](assets/chlimage_1-107.png)
+![chlimage_1-380](assets/chlimage_1-380.png)
 
 * **標題**
 
@@ -68,7 +71,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 頁面的功能表連結會顯示為：
 
-![chlimage_1-108](assets/chlimage_1-108.png)
+![chlimage_1-381](assets/chlimage_1-381.png)
 
 ### 活動資料流功能 {#activity-stream-function}
 
@@ -78,7 +81,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 #### 設定功能詳細資料 {#configuration-function-details-1}
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![chlimage_1-302](assets/chlimage_1-382.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -108,7 +111,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 新增至範本時，會開啟下列對話方塊：
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![chlimage_1-383](assets/chlimage_1-383.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -134,7 +137,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 新增至範本時，會開啟下列對話方塊：
 
-![chlimage_1-111](assets/chlimage_1-111.png)
+![chlimage_1-384](assets/chlimage_1-384.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -199,7 +202,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 #### 設定功能詳細資料 {#configuration-function-details-2}
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![chlimage_1-384](assets/chlimage_1-384.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -227,7 +230,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 >[!CAUTION]
 >
->群組功能必須*不是* *是網站結構* 或社群網站範本中的第一個也是唯一的功能。
+>群組函式不 *能是**網站結構* 或社群網站範本中的第一個，也不能是唯一的函式。
 >
 >任何其他函式(例如頁 [面函式](#page-function))必須先包含並列出。
 
@@ -242,7 +245,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 新增至範本時，會開啟下列對話方塊：
 
-![chlimage_1-113](assets/chlimage_1-113.png)
+![chlimage_1-386](assets/chlimage_1-386.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -265,7 +268,7 @@ Ideation函式是具有一個Ideation元件 [的頁面](/help/communities/ideati
 
 新增至範本時，會開啟下列對話方塊，指定範本的預設標題和URL名稱，以及預設顯示設定：
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![chlimage_1-387](assets/chlimage_1-387.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -289,11 +292,11 @@ Ideation函式是具有一個Ideation元件 [的頁面](/help/communities/ideati
 
 排行榜功能是包含一個「排行榜」組 [件的頁面](/help/communities/enabling-leaderboard.md)。
 
-**注意**:在從包含Leederboard功能的社區模板 *建立社區站點* 後，Leenderboard元件需要進一步配置。 指定Leaderboard元件的規 [則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於社 [區站點的計分和標章](/help/communities/implementing-scoring.md) 。
+**注意**: 在從包含Leederboard功能的社區模板 *建立社區站點* 後，Leenderboard元件需要進一步配置。 指定Leaderboard元件的規 [則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於社 [區站點的計分和標章](/help/communities/implementing-scoring.md) 。
 
 新增至範本時，會開啟下列對話方塊，指定範本的預設標題和URL名稱，以及預設顯示設定：
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![chlimage_1-388](assets/chlimage_1-388.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -314,7 +317,7 @@ Ideation函式是具有一個Ideation元件 [的頁面](/help/communities/ideati
 
 ### 頁面功能 {#page-function}
 
-頁面功能會將空白頁面新增至社群網站，並將其連線至社群網站的功能：登入、選單、通知、訊息、主題和品牌。 內容會使用標準的AEM製作模 [式新增至頁面](/help/sites-authoring/editing-content.md)。
+頁面功能會將空白頁面新增至社群網站，並將其連線至社群網站的功能： 登入、選單、通知、訊息、主題和品牌。 內容會使用標準的AEM製作模 [式新增至頁面](/help/sites-authoring/editing-content.md)。
 
 新增至範本時，唯一的設定是「標題」 [和「URL設定」](#title-and-url-settings)。
 
@@ -324,7 +327,7 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 
 將配置添加到模板時，該配置允許對特權成員進行限制：
 
-![chlimage_1-116](assets/chlimage_1-116.png)
+![chlimage_1-384](assets/chlimage_1-384.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -352,11 +355,11 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 
 選擇位於「社群功能」控制台頂部的圖 `Create Community Function` 示，即可建立社群功能。 您可以建立以相同AEM Blueprint為基礎的多個函式，然後以作者編輯模式開啟，進行唯一自訂。
 
-![chlimage_1-117](assets/chlimage_1-117.png)
+![chlimage_1-390](assets/chlimage_1-390.png)
 
 ### 社群功能名稱 {#community-function-name}
 
-![chlimage_1-118](assets/chlimage_1-118.png)
+![chlimage_1-391](assets/chlimage_1-391.png)
 
 在「社群功能名稱」面板上，會設定名稱、說明，以及函式是啟用還是停用：
 
@@ -374,7 +377,7 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 
 ### AEM 藍圖 {#aem-blueprint}
 
-![chlimage_1-119](assets/chlimage_1-119.png)
+![chlimage_1-392](assets/chlimage_1-392.png)
 
 在面 `AEM Blueprint` 板上，可以選擇作為社區功能的基礎實現的藍圖。
 
@@ -386,13 +389,13 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 
 ### 縮圖 {#thumbnail}
 
-![chlimage_1-120](assets/chlimage_1-120.png)
+![chlimage_1-393](assets/chlimage_1-393.png)
 
 在「縮圖」面板上，影像可能會上傳以顯示在「社群功 [能」主控台中](#community-functions-console)。
 
 ## 開啟社群功能 {#open-community-function}
 
-![chlimage_1-121](assets/chlimage_1-121.png)
+![chlimage_1-394](assets/chlimage_1-394.png)
 
 選擇圖 `Open Community Function` 標可進入作者編輯模式，以編寫頁面內容並修改功能元件的配置。
 
@@ -408,6 +411,6 @@ QnA函式是一個頁面，其中 [](/help/communities/working-with-qna.md) QnA�
 
 ## 編輯社群功能 {#edit-community-function}
 
-![chlimage_1-122](assets/chlimage_1-122.png)
+![chlimage_1-395](assets/chlimage_1-395.png)
 
 選取圖 `Edit Community Function` 示，使用與建立社群函式相同的面板來編輯函 [數的屬性](#create-community-function)，包括啟用或停用函式。
