@@ -3,9 +3,9 @@ title: 影像轉碼程式庫
 description: 瞭解如何設定和使用Adobe的影像轉碼程式庫。此影像處理解決方案可執行核心影像處理功能，包括編碼、轉碼、影像重新取樣和影像大小調整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 要配置庫，請建立。conf檔案，以使用以下步驟指示庫。 您需要管理員或根用戶權限。
 
-1. 從Package Share或 [Software Distribution](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) 下載Imaging [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) 轉碼程式庫套件，並使用Package Manager進行安裝。 此套件與Experience Manager 6.5相容。
+1. 從「軟 [體散發」下載Imaging Codeching Library套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用Package Manager安裝它。 此套件與Experience Manager 6.5相容。
 
 1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console，然後按一下「 **[!UICONTROL OSGi > Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
 
@@ -126,6 +126,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
    * `SWitchEngine -input ${file} -destMime PNG -resize 140x100 -output ${directory}cq5dam.thumbnail.140.100.png`
    * `SWitchEngine -input ${file} -destMime PNG -resize 319 -output ${directory}cq5dam.thumbnail.319.319.png`
    * `SWitchEngine -input ${file} -destMime JPEG -resize 1280 -preserveCMYK -output ${directory}cq5dam.web.1280.1280.jpeg`
+
    ![石竹](assets/chlimage_1-199.png)
 
 1. （可選）使用單一命令從中介轉譯產生縮圖。 中間轉譯充當源，以生成靜態和Web轉譯。 此方法比先前的方法快。 不過，您無法使用此方法將自訂參數套用至縮圖。
