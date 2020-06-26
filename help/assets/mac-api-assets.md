@@ -3,7 +3,7 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: f64df3a706762cdef631e18ad1a6fdd7044a551f
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 1%
@@ -77,17 +77,17 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 資產HTTP API包含下列功能：
 
-* 檢索資料夾清單。
-* 建立資料夾。
-* 建立資產。
-* 更新資產二進位檔。
-* 更新資產中繼資料。
-* 建立資產轉譯。
-* 更新資產轉譯。
-* 建立資產註解。
-* 複製資料夾或資產。
-* 移動資料夾或資產。
-* 刪除資料夾、資產或轉譯。
+* [檢索資料夾清單](#retrieve-a-folder-listing)。
+* [建立資料夾](#create-a-folder)。
+* [建立資產](#create-an-asset)。
+* [更新資產二進位檔](#update-asset-binary)。
+* [更新資產中繼資料](#update-asset-metadata)。
+* [建立資產轉譯](#create-an-asset-rendition)。
+* [更新資產轉譯](#update-an-asset-rendition)。
+* [建立資產註解](#create-an-asset-comment)。
+* [複製資料夾或資產](#copy-a-folder-or-asset)。
+* [移動資料夾或資產](#move-a-folder-or-asset)。
+* [刪除資料夾、資產或轉譯](#delete-a-folder-asset-or-rendition)。
 
 >[!NOTE]
 >
