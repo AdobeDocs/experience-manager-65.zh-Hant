@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 2b1cc29fbfdb80aff6b6fc5c6c4fc9093d12e418
+workflow-type: tm+mt
+source-wordcount: '687'
+ht-degree: 1%
 
 ---
 
@@ -33,17 +36,17 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 1. 按一下「 **確定」**
 
-![chlimage_1-47](assets/chlimage_1-47.png)
+![chlimage_1-220](assets/chlimage_1-220.png)
 
 在新節 **點的** 「屬性」選 `clientlibs` 項卡中，輸 **入類別** :
 
-* 名稱：類 **別**
-* 類型：字 **串**
+* 名稱： **類別**
+* 類型： **字串**
 * 值： **apps.an-scf-sandbox**
 * Click **Add**
 * 按一下「 **全部儲存」**
 
-注意：使用「應用程式」來預設類別值。 是將「擁有的應用程式」識別為位於/apps資料夾而非/libs的慣例。  重要：新增預留位 `js.tx`置t和 **`css.txt`** 檔案。 （沒有cq:ClientLibraryFolder，它並非正式。）
+注意： 使用「應用程式」來預設類別值。 是將「擁有的應用程式」識別為位於/apps資料夾而非/libs的慣例。  重要： 新增預留位 `js.tx`置t和 **`css.txt`** 檔案。 （沒有cq:ClientLibraryFolder，它並非正式。）
 
 1. 按一下滑鼠右鍵 **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 選擇 **建立檔案……**
@@ -52,7 +55,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 1. Enter **Name:** `js.txt`
 1. 按一下「 **全部儲存」**
 
-![chlimage_1-48](assets/chlimage_1-48.png)
+![chlimage_1-221](assets/chlimage_1-221.png)
 
 css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本位置。
 
@@ -100,11 +103,11 @@ css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本�
 
 * 按一下「 **全部儲存」**
 
-![chlimage_1-49](assets/chlimage_1-49.png)
+![chlimage_1-222](assets/chlimage_1-222.png)
 
 這是現在 `/etc/designs/an-scf-sandbox/clientlibs` 在儲存庫中的顯示方式：
 
-![chlimage_1-50](assets/chlimage_1-50.png)
+![chlimage_1-223](assets/chlimage_1-223.png)
 
 ### 在PlayPage範本中包含Clientlibs {#include-clientlibs-in-playpage-template}
 
@@ -112,13 +115,13 @@ css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本�
 
 例如，如果不包含clientlibs,SCF注釋元件將顯示為未樣式化：
 
-![chlimage_1-51](assets/chlimage_1-51.png)
+![chlimage_1-224](assets/chlimage_1-224.png)
 
 一旦包含apps.an-scf-sandbox clientlibs後，SCF注釋元件就會顯示樣式化：
 
-![chlimage_1-52](assets/chlimage_1-52.png)
+![chlimage_1-225](assets/chlimage_1-225.png)
 
-include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation head.jsp`** 包含可重疊的指令碼： **`headlibs.jsp`**。
+include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation head.jsp`** 包含可重疊的指令碼： **`headlibs.jsp`**.
 
 **複製headlibs.jsp並包含clientlibs:**
 
@@ -147,7 +150,7 @@ include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![chlimage_1-53](assets/chlimage_1-53.png)
+![chlimage_1-226](assets/chlimage_1-226.png)
 
 ### 保存您的作品 {#saving-your-work-so-far}
 
@@ -160,8 +163,8 @@ include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation
 * 從CRXDE Lite按一下「套 [件」圖示](https://localhost:4502/crx/packmgr/)
 * 按一下「 **建立套件」**
 
-   * 包名：an-scf-sandbox-minimal-pkg
-   * 版本：0.1
+   * 包名： an-scf-sandbox-minimal-pkg
+   * 版本： 0.1
    * 群組: `leave as default`
    * 按一下「 **確定」**
 
@@ -170,13 +173,13 @@ include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation
    * 「選擇篩 **選器** 」頁籤
 
       * 按一下「 **新增篩選」**
-      * 根路徑：瀏覽至 `/apps/an-scf-sandbox`
+      * 根路徑： 瀏覽至 `/apps/an-scf-sandbox`
       * 按一下「完 **成」**
       * 按一下「 **新增篩選」**
-      * 根路徑：瀏覽至 `/etc/designs/an-scf-sandbox`
+      * 根路徑： 瀏覽至 `/etc/designs/an-scf-sandbox`
       * 按一下「完 **成」**
       * 按一下「 **新增篩選」**
-      * 根路徑：瀏覽至 `/content/an-scf-sandbox**`
+      * 根路徑： 瀏覽至 `/content/an-scf-sandbox**`
       * 按一下「完 **成」**
    * Click **Save**
 
