@@ -10,15 +10,15 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '7951'
+source-wordcount: '7912'
 ht-degree: 1%
 
 ---
 
 
-# 配置動態媒體——混合模式{#configuring-dynamic-media-hybrid-mode}
+# 配置動態媒體——混合模式 {#configuring-dynamic-media-hybrid-mode}
 
 必須啟用並設定動態媒體混合功能，才能使用。 根據您的使用案例，動態媒體有數種支援 [的設定](#supported-dynamic-media-configurations)。
 
@@ -402,7 +402,7 @@ java.io.IOException: Failed to execute request 'https://replicate-na.assetsadobe
         at com.scene7.is.catalog.service.publish.atomic.PublishingServiceHttp.executePost(PublishingServiceHttp.scala:195)
 ```
 
-**解決方案**: 請確定AEM Author上的java進程已將系統屬性設 `-Djavax.net.ssl.trustStore=` 為有效的信任庫。
+**解決方案**: 請確定AEM Author上的java進程已將系統屬性設 `-Djavax.net.ssl.trustStore=` 定為有效的信任庫。
 
 #### 問題： KeyStore未設定或未初始化 {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
 
@@ -970,7 +970,7 @@ Adobe色彩管理使用ICC描述檔，這是由國際色彩協會(ICC)定義的�
 * `iccEmbed` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
-只有在安裝了Package Share的 [Feature Pack 12445或Software Distribution的](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) Feature Pack 12445 [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 時，才能使用標準的Adobe色彩描述檔集。 所有功能包和服務包都可通過 [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) 和 [Software Distribution獲得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能套件12445提供Adobe色彩描述檔。
+只有在安裝了「軟體散發」的 [Feature Pack 12445時，才能使用標準的Adobe色彩設定檔](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 。 所有功能包和服務包都可在軟體分 [發中獲得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能套件12445提供Adobe色彩描述檔。
 
 ### 安裝功能包12445 {#installing-feature-pack}
 
@@ -978,9 +978,9 @@ Adobe色彩管理使用ICC描述檔，這是由國際色彩協會(ICC)定義的�
 
 **安裝功能套件12445**
 
-1. 導覽至「 [Package Share](https://www.adobeaemcloud.com/content/packageshare.html) 」(封裝共用 [)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 或「Software Distribution `cq-6.3.0-featurepack-12445`」（軟體散發），然後下載。
+1. 導覽至「 [軟體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 」並下載其中一 `cq-6.3.0-featurepack-12445`個。
 
-   如需 [在AEM中使用「套件共用」和「套件」的詳細資訊，請參閱How to Work with Packages](/help/sites-administering/package-manager.md) 。
+   有關 [使用包的詳細資訊](/help/sites-administering/package-manager.md) ，請參閱如何使用包 [!DNL Adobe Experience Manager]。
 
 1. 安裝功能套件。
 
