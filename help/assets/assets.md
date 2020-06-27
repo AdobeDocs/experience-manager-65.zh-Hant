@@ -3,9 +3,9 @@ title: 關於Adobe Experience Manager Assets
 description: 瞭解什麼是數位資產管理、其使用案例，以及Adobe的Experience Manager Asset產品
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '879'
 ht-degree: 13%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 13%
 
 ### Experience Manager Assets與Experience Manager Sites整合 {#aem-assets-fully-integrated-in-cq-wcm}
 
-資產已與網站完全整合，而且可使用DAM圖示提供功能。 然後，在製作網頁時，可透過內容搜尋器存取在「資產」儲存庫中管理的數位資產。
+資產已與Sites完全整合，而且所有功能都可順暢使用。 然後，在製作網頁時，可透過內容搜尋器存取在「資產」儲存庫中管理的數位資產。
 
 基本使用者介面與網站的使用者介面相同。 如需 [完整詳細資訊，請參閱](/help/sites-authoring/page-authoring.md) 「網站概觀」。
 
