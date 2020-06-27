@@ -3,9 +3,9 @@ title: 使用中的參考和多頁資產管理複合資產 [!DNL Adobe Experienc
 description: 瞭解如何從內部建立數位資產的參考 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d90a95195a97a1840e1defb49d2a09ffbd3c8650
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 ## View subassets {#viewing-subassets}
 
-只有當子資產已產生且可用於選取的多頁資產時，才會顯示子資產。 若要檢視產生的子資產，請開啟多頁資產。 在頁面的左上方區域，按一下「左側 ![邊欄圖示](assets/do-not-localize/aem_leftrail_contentonly.png) 」，然後按 **[!UICONTROL 一下清單中的「子資產]** 」。 當您從清單 **[!UICONTROL 中選取]** 「子資產」時。 或者，使用鍵盤快速鍵 `alt + 5`。
+只有當子資產已產生且可用於選取的多頁資產時，才會顯示子資產。 若要檢視產生的子資產，請開啟多頁資產。 在頁面的左上方區域，按一下「選 ![項」以開啟左側邊欄](assets/do-not-localize/aem_leftrail_contentonly.png) ，然後從清單中按 **[!UICONTROL 一下子資產]** 。 當您從清單 **[!UICONTROL 中選取]** 「子資產」時。 或者，使用鍵盤快速鍵 `alt + 5`。
 
 ![檢視多頁資產的子資產](assets/view_subassets_simulation.gif)
 
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 * **[!UICONTROL 「頁面概述]** 」選項可同時顯示所有子資產。
 
-* **[!UICONTROL 按一下]** 左側導軌圖示後，左側 ![導軌中的時間軸選項](assets/do-not-localize/aem_leftrail_contentonly.png) ，會顯示檔案的活動串流。
+* **[!UICONTROL 按一下]** 「選項」以開啟左側邊欄後，左側邊欄中的時間軸選項 ![](assets/do-not-localize/aem_leftrail_contentonly.png) ，會顯示檔案的活動串流。
 
 ## 最佳實務與限制 {#best-practice-limitation-tips}
 
@@ -139,3 +139,4 @@ ht-degree: 0%
 >* [在Adobe Experience Manager中設定案頭動作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [在Adobe Photoshop中建立連結的智慧型物件](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [在Adobe InDesign中置入圖形](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+
