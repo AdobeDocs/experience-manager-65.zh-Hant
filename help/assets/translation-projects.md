@@ -3,9 +3,9 @@ title: 建立翻譯專案
 description: 瞭解如何在中建立翻譯項目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 15%
 
 ---
@@ -151,7 +151,7 @@ ht-degree: 15%
 
 1. 從「現 **[!UICONTROL 有翻譯項目]** 」清單中，選擇要添加要翻譯的資產的項目。
 
-   ![chlimage_1-70](assets/chlimage_1-78.png)
+   ![chlimage_1-78](assets/chlimage_1-78.png)
 
 1. 按一下&#x200B;**[!UICONTROL 建立]**。要翻譯的資產會新增至目標資料夾。更新的資料夾會列在「語言復 **[!UICONTROL 本」區段下]** 。
 
@@ -286,7 +286,7 @@ ht-degree: 15%
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. 在介面 [!DNL Assets] 中，選取已翻譯的資產，然後按一下工具列中的「編輯 **** 」圖示，以在編輯模式中開啟資產。
+1. 在介面 [!DNL Assets] 中，選取已翻譯的資產，然後從工具列按一下「 **[!UICONTROL 編輯]** 」，以在編輯模式中開啟資產。
 1. 編輯資產，然後儲存變更。
 1. 執行「Add to existing translation project(添加到現有翻譯 [項目)」過程的步驟](#add-to-existing-translation-project) 2-14以更新語言副本。
 1. 按一下「翻譯作業」表徵圖底部的 **[!UICONTROL 省略號]** 。 從「翻譯作業」頁中的 **[!UICONTROL 資產清單]** ，您可以清楚地查看儲存資產翻譯版本的臨時位置。
