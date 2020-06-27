@@ -3,9 +3,9 @@ title: 從下載數位資產 [!DNL Adobe Experience Manager]。
 description: 瞭解如何從指令下 [!DNL Adobe Experience Manager] 載資產，以啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '794'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 **若要下載資產，**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]**.
 1. 在「導覽」頁面上，點選「 **[!UICONTROL 資產>檔案」。]**
 1. 導覽至包含您要下載之資產的檔案夾。
 1. 選取資料夾或選取資料夾內的一或多個資產。
