@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '9303'
+source-wordcount: '9250'
 ht-degree: 4%
 
 ---
@@ -61,14 +61,14 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 1. 在使用 [!DNL Assets] 者介面中，導覽至您要新增數位資產的位置。
 1. 若要上傳資產，請執行下列其中一項作業：
 
-   * 在工具列上，按一下「建 **[!UICONTROL 立]** 」圖示。 然後在功能表上，按一下「 **[!UICONTROL 檔案]**」。 如有需要，可在顯示的對話框中更名檔案。
+   * 在工具列上，按一下「 **[!UICONTROL 建立]**」。 然後在功能表上，按一下「 **[!UICONTROL 檔案]**」。 如有需要，可在顯示的對話框中更名檔案。
    * 在支援HTML5的瀏覽器中，直接將資產拖曳至使用者 [!DNL Assets] 介面。 不會顯示要更名檔案的對話框。
 
    ![建立選項以上傳資產](assets/create-options.png)
 
    要選擇多個檔案，請按Ctrl或Command鍵，然後在檔案選擇器對話框中選擇資產。 使用iPad時，一次只能選取一個檔案。
 
-   您可以暫停上傳大型資產（大於500 MB），稍後從同一頁繼續。 按一下 **[!UICONTROL 上傳開始]** 時，進度列旁邊的「暫停」圖示。
+   您可以暫停上傳大型資產（大於500 MB），稍後從同一頁繼續。 按一 **[!UICONTROL 下]** 「暫停」旁邊的進度列，此進度列會在上載開始時顯示。
 
    ![上傳資產進度列](assets/chlimage_1-5.png)
 
@@ -78,9 +78,9 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    要修改大小限制，請在CRX存 `chunkUploadMinFileSize` 儲庫中配 `fileupload`置節點的屬性。
 
-   當您按一下「暫 **[!UICONTROL 停]** 」圖示時，會切換為「 **** 播放」圖示。 若要繼續上傳，請按一下「播 **[!UICONTROL 放]** 」圖示。
+   當您按一下「 **[!UICONTROL 暫停]**」時，它會切換至「 **[!UICONTROL 播放]** 」選項。 若要繼續上傳，請按一下「 **[!UICONTROL 播放」]**。
 
-   ![使用「播放」圖示繼續暫停的資產上傳](assets/chlimage_1-6.png)
+   ![繼續暫停的資產上傳](assets/chlimage_1-6.png)
 
    若要取消進行中的上傳，請按一下進`X`度列旁的關閉()。 當您取消上傳作業時， [!DNL Assets] 會刪除部分上傳的資產。
 
@@ -339,7 +339,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    按一 **[!UICONTROL 下「重設]** 」，將檢視重設為原始大小。
 
-   ![重設圖示，讓使用者回到原始檢視](assets/chlimage_1-11.png)
+   ![重設，讓使用者回到原始檢視](assets/chlimage_1-11.png)
 
 **僅使用鍵盤按鍵預覽資產**
 
@@ -350,10 +350,10 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 1. 按 `Enter` 所需資產上的鍵以開啟它。 您可以在預覽模式中縮放資產。
 
 1. 若要放大資產：
-   1. 使 `Tab` 用鍵將焦點移動到放大表徵圖。
+   1. 使 `Tab` 用鍵移動焦點以放大選項。
    1. 使用 `Enter` 金鑰可放大影像。
 
-   要縮小，請使 `Tab` 用鍵將焦點移動到縮小表徵圖並按 `Enter`。
+   要縮小，請使 `Tab` 用鍵將焦點移動到縮小選項並按 `Enter`。
 
 1. 使用 `Shift` + `Tab` 鍵將焦點移回影像。
 
@@ -428,8 +428,8 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 保留其他屬性和元資料資訊。 複製資產時不會建立部分復本。
 
-1. 在介 [!DNL Assets] 面中，選取一或多個資產，然後從工具列按一 **[!UICONTROL 下「複製]** 」圖示。 或者，從資 **[!UICONTROL 產卡選擇]** 「複製」快速動作。
-   ![資產UI工具列中的復製圖示](assets/copy_icon.png)
+1. 在介 [!DNL Assets] 面中，選取一或多個資產，然後從工具 **[!UICONTROL 列按一下]** 「複製」。 或者，從資 **[!UICONTROL 產卡選擇]** 「複製」快速動作。
+   ![「資產」介面工具列中的「複製」選項](assets/copy_icon.png)
 
    >[!NOTE]
    >
@@ -441,21 +441,21 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    >
    >如果您複製相同位置的資產， [!DNL Experience Manager] 會自動產生名稱的變更。 例如，如果您複製標題為資產 `Square`, [!DNL Experience Manager] 會自動產生其復本的標題 `Square1`。
 
-1. 按一下工 **[!UICONTROL 具列中]** 的「貼上資產」圖示。
+1. 按一下工 **[!UICONTROL 具列]** 中的「貼上資產」選項。
 
-   ![資產UI工具列中的貼上圖示](assets/chlimage_1-14.png)
+   ![「資產」工具列中的「貼上」選項](assets/chlimage_1-14.png)
    [!DNL Assets] 的子菜單。
 
    >[!NOTE]
    >
-   >「貼 **[!UICONTROL 上]** 」圖示可在工具列中使用，直到貼上作業完成為止。
+   >在貼 **[!UICONTROL 上操作完成]** 之前，工具列中會提供「貼上」選項。
 
 ### 移動或重新命名資產 {#moving-or-renaming-assets}
 
 1. 導覽至您要移動的資產所在的位置。
 
-1. 選取資產，然後按一下工 **[!UICONTROL 具列中的]** 「移動」圖示。
-   ![資產UI工具列中的移動圖示](assets/move_icon.png)
+1. 選取資產，然後按一下工 **[!UICONTROL 具列中的]** 「移動」選項。
+   ![「資產」工具列中的「移動」選項](assets/move_icon.png)
 
 1. 在「移 [!UICONTROL 動資產] 」精靈中，執行下列任一項作業：
 
@@ -495,7 +495,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    ![「資產詳細資料」頁面，以管理轉譯](assets/chlimage_1-15.png)
 
-1. 按一下GlobalNav圖示，然後從清 **[!UICONTROL 單中選取]** 「轉譯」。
+1. 在Experience Manager介面中，從清單中選 **[!UICONTROL 取「轉譯]** 」。
 
    ![左側欄以開啟選單，並選取「轉譯」選項](assets/renditions_menu.png)
 
@@ -511,19 +511,19 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    **刪除轉譯**
 
-   從「轉譯」面板中選 **[!UICONTROL 取轉譯]** ，然後從工具列按一下「 **[!UICONTROL 刪除轉譯]** 」圖示。 資產處理完成後，無法大量刪除轉譯。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂Experience Manager以刪除特定轉譯或刪除資產，然後重新上傳已刪除的資產。
+   從「轉譯」面板中選 **[!UICONTROL 取轉譯]** ，然後按一下工具列中的「 **[!UICONTROL 刪除轉譯]** 」選項。 資產處理完成後，無法大量刪除轉譯。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂Experience Manager以刪除特定轉譯或刪除資產，然後重新上傳已刪除的資產。
 
    ![刪除轉譯的選項](assets/delete_renditionicon.png)
 
    **上傳新轉譯**
 
-   Navigate to the asset details page for the asset, and click the **[!UICONTROL Add Rendition]** icon in the toolbar to upload a new rendition for the asset.
+   Navigate to the asset details page for the asset, and click the **[!UICONTROL Add Rendition]** option in the toolbar to upload a new rendition for the asset.
 
-   ![新增轉譯圖示以上傳新轉譯](assets/chlimage_1-16.png)
+   ![新增轉譯選項以上傳新轉譯](assets/chlimage_1-16.png)
 
    >[!NOTE]
    >
-   >如果您從「轉譯」面板選取轉譯 **** ，工具列會變更上下文，並僅顯示與轉譯相關的動作。不會顯示「上傳轉譯」圖示等選項。若要在工具列中檢視這些選項，請導覽至資產的詳細資訊頁面。
+   >如果您從「轉譯」面板選取轉譯 **** ，工具列會變更上下文，並僅顯示與轉譯相關的動作。Options, such as the [!UICONTROL Upload Rendition] option is not displayed. 若要在工具列中檢視這些選項，請導覽至資產的詳細資訊頁面。
 
    您可以設定要顯示在影像或視訊資產詳細資料頁面的轉譯尺寸。 根據您指定的尺寸，顯 [!DNL Assets] 示具有精確或最接近尺寸的轉譯。
 
@@ -549,9 +549,9 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 瀏覽至您要刪除的資產所在的位置。
 
-1. 選取資產，然後按一下工 **[!UICONTROL 具列中的]** 「刪除」圖示。
+1. Select the asset, and click **[!UICONTROL Delete]** from the toolbar.
 
-   ![刪除表徵圖](assets/delete_icon.png)
+   ![刪除選項](assets/delete_icon.png)
 
 1. 在確認對話方塊中，按一下：
 
@@ -581,7 +581,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 導覽至您要發佈的資產／資料夾的位置。
 
-1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** icon from the toolbar.
+1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** option from the toolbar.
 1. 如果資產引用其他資產，其引用將列在嚮導中。 只會顯示自上次發佈／未發佈後未發佈或已修改的參照。 選擇要發佈的參照。
 
    >[!NOTE]
@@ -598,9 +598,9 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 導覽至您要從發佈環境（解除發佈）移除的資產／資產檔案夾的位置。
 
-1. 選取要解除發佈的資產／資料夾，然後按一下工 **[!UICONTROL 具列中的「管理出版物]** 」圖示。
+1. 選取要取消發佈的資產／資料夾，然後按一下工 **[!UICONTROL 具列中的「管理出版物]** 」選項。
 
-   ![管理出版物圖示](assets/manage_publication.png)
+   ![管理出版物選項](assets/manage_publication.png)
 
 1. 從清單 **[!UICONTROL 中選取]** 「取消發佈」動作。
 
@@ -624,7 +624,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登入頁面。
 
-1. 從介面中選擇一 [!DNL Assets] 個資料夾，然後按一下工 [!UICONTROL 具欄中的] 「屬性」表徵圖以顯示屬性頁。
+1. 從介面中選擇一 [!DNL Assets] 個資料夾，然後按一下工 [!UICONTROL 具欄中的] 「屬性」選項以顯示屬性頁。
 1. 在「權 **[!UICONTROL 限]** 」標籤中，在「已關閉的使用者群組」 **[!UICONTROL 下新增成員或群組]**。
 
    ![在已關閉的使用者群組中新增使用者](assets/add_user.png)
@@ -681,40 +681,33 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 1. 執行下列任一項作業，以在編輯模式中開啟資產：
 
-   * 選取資產，然後按一下工具 **[!UICONTROL 列中的]** 「編輯」圖示。
-   * 按一下 **[!UICONTROL 卡片檢視]** 中資產上顯示的「編輯」圖示。
-   * 在資產頁面中，按一下工 **[!UICONTROL 具列中]** 「編輯」圖示。
+   * 選取資產，然後按一下工 **[!UICONTROL 具列中]** 的編輯。
+   * 按一 **[!UICONTROL 下]** 「編輯」選項，該選項會顯示在卡片檢視中的資產上。
+   * 從工具 **[!UICONTROL 列按一下]** 「編輯」。
 
-   ![工具列中的編輯圖示](assets/edit_icon.png)
+   ![工具列中的編輯選項](assets/edit_icon.png)
 
-1. 若要裁切影像，請按一下「裁 **切** 」圖示。
-
-   ![裁切圖示](assets/chlimage_1-22.png)
+1. 若要裁切影像，請按一 **[!UICONTROL 下「裁]** 切 ![選項」來裁切影像](assets/chlimage_1-22.png)。
 
 1. 從清單中選取所需的選項。裁切區域會根據您選擇的選項出現在影像上。「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
 
-   ![裁切選項](/help/assets/assets/chlimage_1-23.png)
+   ![裁切選項](assets/chlimage_1-23.png)
 
 1. 選取要裁切的區域，並調整影像上的大小或位置。
-1. 使用「 **完成** 」圖示（右上角）裁切影像。 按一下「完 **成** 」圖示也會觸發轉譯的重新產生。
 
-   ![「完成」表徵圖](assets/chlimage_1-24.png)
+1. Use the **Undo** and **Redo** options to revert to the uncropped image or retain the cropped image, respectively.
 
-1. 使用右 **上角的** 「復原」和「 **** 重做」圖示，分別回復至未裁切的影像或保留已裁切的影像。
+   ![還原和重做選項](assets/chlimage_1-25.png)
 
-   ![還原和重做圖示](assets/chlimage_1-25.png)
+1. 按一下適當的 **「旋轉** 」選項，以順時針或逆時針旋轉影像。
 
-1. 按一下適當的「旋轉」圖示，順時針或逆時針旋轉影像。
+   ![順時針和逆時針旋轉選項](assets/chlimage_1-26.png)
 
-   ![順時針和逆時針旋轉圖示](assets/chlimage_1-26.png)
+1. 按一下適當的 **「反向** 」選項，以水準或垂直反向影像。
 
-1. 按一下適當的「反向」圖示，以水準或垂直反向影像。
+   ![水準或垂直翻轉影像的選項](assets/chlimage_1-27.png)
 
-   ![水準或垂直翻轉影像的圖示](assets/chlimage_1-27.png)
-
-1. 按一下「 **完成** 」圖示以儲存變更。
-
-   ![「完成」表徵圖](assets/chlimage_1-28.png)
+1. 按一 **下「完** 成 ![」選項](assets/chlimage_1-24.png) ，完成影像編輯。 按一 **下「完成** 」(Finish)也會開始重新產生轉譯。
 
 >[!NOTE]
 >
@@ -753,12 +746,12 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 >對於「內容片段」, [會在片段編輯器中建立註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)。
 
 1. 導覽至您要新增附註的資產位置。
-1. 按一下下 **[!UICONTROL 列任一項中]** 的「注釋」(Annotate)表徵圖：
+1. 按一下下 **[!UICONTROL 列任一項]** 中的「注釋」(Annotate)選項：
 
    * [快速動作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在選取資產或導覽至資產頁面後，從工具列
 
-   ![「注釋」表徵圖](assets/chlimage_1-29.png)
+   ![註解選項](assets/chlimage_1-29.png)
 
 1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
 
@@ -781,15 +774,15 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
    >您可以在儲存多個註解之前，先加入這些註解。
 
 1. 按一下「 **[!UICONTROL 關閉]** 」(Close)退出「注釋」模式。
-1. 若要檢視通知，請使用Aaron MacDonald的認 [!DNL Assets] 證登入，然後按一下「 **[!UICONTROL 通知]** 」圖示以檢視通知。
+1. 若要檢視通知，請使用Aaron MacDonald的認 [!DNL Assets] 證登入，然後按一下「 **[!UICONTROL 通知]** 」選項以檢視通知。
 
    >[!NOTE]
    >
    >您也可以將註解新增至視訊資產。 在為視訊加上註解時，播放器會暫停，讓您在影格上加上註解。 如需詳細資訊，請參 [閱「管理視訊資產](/help/assets/managing-video-assets.md)」。
 
-1. 若要選擇不同的顏色以便區分使用者，請按一下「描述檔」圖示，然後按一下「我的偏 **[!UICONTROL 好設定」]**。
+1. 若要選擇不同的顏色以便區分使用者，請按一下「設定檔」選項，然後按一下「我的 **[!UICONTROL 偏好設定」]**。
 
-   ![依次選擇用戶配置檔案表徵圖和我的首選項以開啟用戶首選項](assets/User-profile-preferences.png)
+   ![依次選擇用戶配置檔案選項和我的首選項以開啟用戶首選項](assets/User-profile-preferences.png)
 
    Specify the desired color in the **[!UICONTROL Annotation Color]** box and then click **[!UICONTROL Accept]**.
 
@@ -803,9 +796,9 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 1. 要查看資產的已保存批注，請定位至資產的位置並開啟資產的資產頁。
 
-1. 按一下GlobalNav圖示，然後從清 **[!UICONTROL 單中選擇]** 「時間軸」。
+1. 在Experience Manager介面中，選擇「時間 **[!UICONTROL 軸」]**。
 
-   ![GlobalNav圖示上的可用選項](assets/chlimage_1-35.png)
+   ![Experience Manager中提供的選項](assets/chlimage_1-35.png)
 
 1. 從時間軸 **[!UICONTROL 的「顯示全部]** 」清單中，選取「注 **[!UICONTROL 釋]** 」以根據註解來篩選結果。
 
@@ -823,7 +816,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 您也可以選擇僅打印注釋或查看狀態。
 
-要打印注釋和查看狀態，請按一下「 **[!UICONTROL 打印]** 」表徵圖，然後按照嚮導中的說明操作。 只有當資 **[!UICONTROL 產至少指派了一個註解或審閱狀態時，「列印]** 」圖示才會出現在工具列中。
+要打印注釋和查看狀態，請按一下「 **[!UICONTROL 打印]** 」 ，然後按照嚮導中的說明進行操作。 只有當資 **[!UICONTROL 產至少已指派一個註解或審閱狀態給它時，「列印]** 」(Print)選項才會出現在工具列中。
 
 1. 從介面 [!DNL Assets] 開啟資產的預覽頁面。
 1. 執行下列任一項作業：
@@ -839,9 +832,9 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
    ![要僅打印注釋的審閱狀態，請從時間軸中選擇該狀態](assets/chlimage_1-39.png)
 
-1. Click the **[!UICONTROL Print]** icon from the toolbar.
+1. 從工具 **[!UICONTROL 列按一下]** 「列印」。
 
-   ![工具列中的列印圖示](assets/chlimage_1-40.png)
+   ![工具列中的列印選項](assets/chlimage_1-40.png)
 
 1. 從「列印」對話方塊中，選擇您要在PDF上顯示註解／審閱狀態的位置。 例如，如果您希望註解／狀態列印在包含已列印影像之頁面的右上角，請使用左上 **角設定** 。 預設會選取它。
 
