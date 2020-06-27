@@ -3,9 +3,9 @@ title: 將翻譯雲端服務套用至資料夾
 description: 將翻譯雲端服務套用至資料夾
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '391'
 ht-degree: 43%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Manager可讓您從您選擇的翻譯供應商取得雲端翻�
 將翻譯雲端服務直接套用至您的資產資料夾，不需要在您建立或更新翻譯工作流程時設定翻譯服務。
 
 1. 從「資產」使用者介面中，選取您要套用轉譯服務的檔案夾。
-1. From the toolbar, click the **[!UICONTROL Properties]** icon to display the **[!UICONTROL Folder Properties]** page.
+1. From the toolbar, click **[!UICONTROL Properties]** to display the **[!UICONTROL Folder Properties]** page.
 
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
