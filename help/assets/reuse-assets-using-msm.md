@@ -4,10 +4,10 @@ description: 跨衍生自父資產並連結至父資產的多個頁面／資料�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 11%
+source-wordcount: '3368'
+ht-degree: 10%
 
 ---
 
@@ -242,7 +242,7 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 即時拷貝是原始源建立時的副本。 即時副本的中繼資料值會繼承自來源。 中繼資料欄位個別地維持與來源資產各自欄位的繼承。
 
-不過，您有彈性對即時副本進行本機修改，以變更一些選取的屬性。若要進行本機修改，請取消所要屬性的繼承。當取消一個或多個元資料欄位的繼承時，保留資產的即時關係和其它元資料欄位的繼承。任何同步或轉出都不會覆寫本機修改。若要這麼做，請開啟即 **[!UICONTROL 時復本資產的「屬性]** 」頁面，按一下中繼 **[!UICONTROL 資料欄位旁的取消繼承]** 圖示。
+不過，您有彈性對即時副本進行本機修改，以變更一些選取的屬性。若要進行本機修改，請取消所要屬性的繼承。當取消一個或多個元資料欄位的繼承時，保留資產的即時關係和其它元資料欄位的繼承。任何同步或轉出都不會覆寫本機修改。To do so, open **[!UICONTROL Properties]** page of a live copy asset, click the **[!UICONTROL cancel inheritance]** option next to a metadata field.
 
 您可以還原所有本機修改，並將資產還原為其來源狀態。 重設動作可立即覆寫所有本機修改，並重新建立所有中繼資料欄位的繼承。 若要回復，請從即時復 **[!UICONTROL 制資產的]** 「屬性」頁面，按一下工具列中 **[!UICONTROL 的「重設]** 」。
 
