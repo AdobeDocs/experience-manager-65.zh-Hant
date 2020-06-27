@@ -1,9 +1,12 @@
 ---
-title: 在[!DNL Adobe Experience Manager Assets]中級聯元資料。
+title: 中的級聯元資料 [!DNL Adobe Experience Manager Assets]。
 description: 本文說明如何定義資產的階層式中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 6%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 * 根據在另一個欄位中指定的值，變更特定欄位顯示的選項。
 * 根據其他欄位中指定的值，在特定欄位中設定預設中繼資料值。
 
-## 在 [!DNL Experience Manager]{#configure-cascading-metadata-in-aem}
+## 在 [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
 
 請考慮您要根據所選資產類型顯示階層式中繼資料的藍本。 部分範例
 
@@ -52,6 +55,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    * 若要手動指定值，請選取「手動 **[!UICONTROL 新增]**」，然後按一 **[!UICONTROL 下「新增選擇]** 」並指定選項文字和值。 例如，指定「視訊」、「PDF」、「Word」和「影像」資產類型。
 
    * 若要動態擷取JSON檔案中的值，請選取「 **[!UICONTROL 透過JSON路徑新增]** 」並提供JSON檔案的路徑。 [!DNL Experience Manager] 當表單顯示給用戶時，即時讀取鍵值對。
+
    這兩種選項互斥。 您無法從JSON檔案匯入選項並手動編輯。
 
    ![add_choice](assets/add_choice.png)
@@ -62,7 +66,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    >[!NOTE]
    >
-   >添加選項時，如果按一下「下拉式清單」欄位，則介面會扭曲，選項的刪除表徵圖將停止工作。 儲存變更前，請勿按一下下拉式清單。 如果您遇到此問題，請儲存結構並再次開啟結構以繼續編輯。
+   >添加選項時，如果按一下「下拉清單」欄位，則介面會扭曲，並且選項的刪除選項將停止工作。 儲存變更前，請勿按一下下拉式清單。 如果您遇到此問題，請儲存結構並再次開啟結構以繼續編輯。
 
 1. （可選）新增其他必填欄位。 例如，資產類型視訊的格式、codec和持續時間。
 
@@ -105,8 +109,8 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
    ![視訊資產的階層式中繼資料](assets/video_asset.png)
 
-   *圖：視訊的階層式中繼資料。*
+   *圖： 視訊的階層式中繼資料。*
 
    ![檔案資產的階層式中繼資料](assets/doc_type_fields.png)
 
-   *圖：檔案的階層式中繼資料。*
+   *圖： 檔案的階層式中繼資料。*
