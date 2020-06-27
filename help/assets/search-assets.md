@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '5863'
+source-wordcount: '5862'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 5%
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [圖示範例](#samples) |  |  |
 
-使用網頁介面上方的Omnisearch欄位來搜尋 [!DNL Experience Manager] 資產。 前往「 **[!UICONTROL 資產]** >檔案 **[!UICONTROL 」(位於]**[!DNL Experience Manager]「資產」>「檔案」中)，按一下頂端列的搜尋圖示，輸入搜尋關鍵字，然後按回車鍵。 或者，使用關鍵字快速鍵/（正斜線）來開啟Omnisearch欄位。 `Location:Assets` 已預先選取，以限制搜尋DAM資產。 [!DNL Experience Manager] 在您開始輸入搜尋關鍵字時提供建議。
+使用網頁介面上方的Omnisearch欄位來搜尋 [!DNL Experience Manager] 資產。 前往「 **[!UICONTROL 資產]** >檔案 **[!UICONTROL 」(位於]**[!DNL Experience Manager]「資產」>「檔案」中)，按一下頂端列的搜尋，輸入搜尋關鍵字，然後按回車鍵。 或者，使用關鍵字快速鍵/（正斜線）來開啟Omnisearch欄位。 `Location:Assets` 已預先選取，以限制搜尋DAM資產。 [!DNL Experience Manager] 在您開始輸入搜尋關鍵字時提供建議。
 
 使用「篩 **[!UICONTROL 選器]** 」面板，根據各種選項（謂語）篩選搜尋結果，以縮小搜尋範圍，例如檔案類型、檔案大小、上次修改日期、資產狀態、前瞻分析資料和Adobe Stock授權。 您的管理員可以自訂「篩選」面板，並使用搜尋Facet新增或移除搜尋謂語。 「篩 [!UICONTROL 選器] 」面板中的「檔案類型  」篩選器具有混合狀態核取方塊。 因此，除非選擇所有嵌套的謂語（或格式），否則第一級複選框將被部分選中。
 
