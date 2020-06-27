@@ -3,7 +3,10 @@ title: 資料夾中繼資料結構
 description: 瞭解如何在Adobe Experience Manager Assets中為資產資料夾建立中繼資料結構
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+workflow-type: tm+mt
+source-wordcount: '1024'
+ht-degree: 4%
 
 ---
 
@@ -29,7 +32,7 @@ Adobe Experience Manager Assets可讓您建立資產資料夾的中繼資料結�
 
 您可以將這些表單項目映射／配置到CRX儲存庫中元資料節點中的欄位。 您可以將新標籤或表單項目新增至中繼資料結構表單。
 
-1. 在「方案表單」頁中，選擇您建立的表單，然後按一下工 **[!UICONTROL 具欄的]** 「編輯」表徵圖。
+1. 在「方案表單」頁中，選擇您建立的表單，然後從工具欄中選 **[!UICONTROL 擇]** 「編輯」選項。
 1. 在「資料夾元資料結構編輯器」頁中，單 `+` 擊可向表單添加頁籤。 若要重新命名標籤，請按一下預設名稱，並在「設定」下指定新 **[!UICONTROL 名稱]**。
 
    ![custom_tab](assets/custom_tab.png)
@@ -69,31 +72,31 @@ Adobe Experience Manager Assets可讓您建立資產資料夾的中繼資料結�
 
 要編輯表單項的屬性，請按一下該元件，然後在「設定」頁籤中編輯以下所有屬性或 **[!UICONTROL 子集]** 。
 
-**[!UICONTROL 欄位標籤]**:顯示在資料夾屬性頁面上的元資料屬性的名稱。
+**[!UICONTROL 欄位標籤]**: 顯示在資料夾屬性頁面上的元資料屬性的名稱。
 
-**[!UICONTROL 對應至屬性]**:此屬性指定保存資料夾節點的CRX儲存庫中資料夾節點的相對路徑。 它開頭是&quot;**./**&quot;，表示路徑位於資料夾節點下。
+**[!UICONTROL 對應至屬性]**: 此屬性指定保存資料夾節點的CRX儲存庫中資料夾節點的相對路徑。 它開頭是&quot;**./**&quot;，表示路徑位於資料夾節點下。
 
 以下是此屬性的有效值：
 
-* `./jcr:content/metadata/dc:title`:將值儲存在資料夾的元資料節點中作為屬性 `dc:title`。
+* `./jcr:content/metadata/dc:title`: 將值儲存在資料夾的元資料節點中作為屬性 `dc:title`。
 
-* `./jcr:created`:在資料夾的節點顯示JCR屬性。 如果您在CRXDE中設定這些屬性，Adobe建議您將它們標示為「停用編輯」，因為這些屬性受到保護。 否則，當您儲 `Asset(s) failed to modify`存資產的屬性時，會發生錯誤「」。
+* `./jcr:created`: 在資料夾的節點顯示JCR屬性。 如果您在CRXDE中設定這些屬性，Adobe建議您將它們標示為「停用編輯」，因為這些屬性受到保護。 否則，當您儲 `Asset(s) failed to modify`存資產的屬性時，會發生錯誤「」。
 
 要確保元資料架構表單中元件正確顯示，請勿在屬性路徑中包含空格。
 
-**[!UICONTROL JSON路徑]**:使用它來指定JSON檔案的路徑，您可在此指定選項的索引鍵值配對。
+**[!UICONTROL JSON路徑]**: 使用它來指定JSON檔案的路徑，您可在此指定選項的索引鍵值配對。
 
-**[!UICONTROL 預留位置]**:使用此屬性可指定與中繼資料屬性相關的預留位置文字。
+**[!UICONTROL 預留位置]**: 使用此屬性可指定與中繼資料屬性相關的預留位置文字。
 
-**[!UICONTROL 選擇]**:使用此屬性可指定清單中的選擇。
+**[!UICONTROL 選擇]**: 使用此屬性可指定清單中的選擇。
 
-**[!UICONTROL 說明]**:使用此屬性可為中繼資料元件新增簡短說明。
+**[!UICONTROL 說明]**: 使用此屬性可為中繼資料元件新增簡短說明。
 
-**[!UICONTROL 類別]**:屬性與關聯的對象類。
+**[!UICONTROL 類別]**: 屬性與關聯的對象類。
 
 ## Delete folder metadata schema forms {#delete-folder-metadata-schema-forms}
 
-可以從「資料夾元資料結構表單」頁刪除資料夾元資料結構表單。 若要刪除表單，請選取表單，然後從工具列按一下「刪除」圖示。
+可以從「資料夾元資料結構表單」頁刪除資料夾元資料結構表單。 要刪除表單，請選擇表單，然後從工具欄中按一下刪除選項。
 
 ![delete_form](assets/delete_form.png)
 
