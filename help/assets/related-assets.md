@@ -3,9 +3,9 @@ title: 相關資產
 description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. 若要將另一個資產與您選取的資產建立關聯，請按一下工 **[!UICONTROL 具列中]** 的「建立關聯」圖示。
+1. 若要將另一個資產與您選取的資產建立關聯，請按一下工 **[!UICONTROL 具列中]** 的「建立關聯」。
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. 按一下「 **[!UICONTROL 確認]** 」圖示。
+1. 按一 **[!UICONTROL 下確認]**。
 1. 按一下 **[!UICONTROL 確定]** ，關閉對話框。 根據您在步驟3中選擇的關係，相關資產會列在「相關」區段的適當類別 **[!UICONTROL 下]** 。 例如，如果您相關的資產是目前資產的來源檔案，則會列在「來源」 **[!UICONTROL 下]**。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
