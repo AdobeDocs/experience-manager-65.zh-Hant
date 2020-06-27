@@ -3,9 +3,9 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 505ee267534b7b3de1f85fb6782b855dbf3c371d
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2648'
+source-wordcount: '2644'
 ht-degree: 7%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 7%
 
 若要檢視和編輯資產的屬性頁面，請依照下列步驟進行：
 
-1. 按一下資 **[!UICONTROL 產圖格中]** ，卡片檢視中「快速動作」的「檢視屬性」圖示。
+1. 按一下 **[!UICONTROL 卡片檢視中]** ，資產圖格上的快速動作中的「檢視屬性」選項。
 
    ![資產圖格上的快速動作](assets/chlimage_1-170.png)
 
-   或者，選取資產，然後按一下工 [!UICONTROL 具列中的] 「屬性」圖示。
+   或者，選取資產，然後從工具列按 **[!UICONTROL 一下「屬]** 」。
 
 1. 您可以編輯可用標籤下的各種可編輯中繼資料屬性。 但是，您無法修改屬 [!UICONTROL 性頁面] 「基本  」索引標籤中的資產類型。
 
@@ -68,7 +68,7 @@ application doesn't contain the sub type zip OOTB.
 
    >[!NOTE]
    >
-   >鎖定表徵圖與未編輯的模板一起顯示。 如果您自訂範本，則不會顯示鎖定圖示。
+   >鎖定符號與未編輯的模板一起顯示。 如果您自訂範本，範本不會鎖 ![定關閉](assets/do-not-localize/lock_closed_icon.svg)。
 
 1. 在對話方塊中，提供架構表單的標題，然後按一下「 **[!UICONTROL 建立]** 」以完成表單建立程式。
 
@@ -175,7 +175,7 @@ application doesn't contain the sub type zip OOTB.
 
 >[!NOTE]
 >
->* 刪除對預設表單的自定義更改後，鎖定表徵圖將重新顯示在元資料架構介面上。 它表示表單已回復為預設狀態。
+>* 刪除對預設表單的自定義更改後，關閉的鎖 ![在表單](assets/do-not-localize/lock_closed_icon.svg) 之前重新顯示。 它表示表單已回復為預設狀態。
 >* 您無法刪除中的預設元資料架構表 [!DNL Assets]單。
 
 
