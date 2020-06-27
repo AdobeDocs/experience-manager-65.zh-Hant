@@ -3,9 +3,9 @@ title: 資產 Insights
 description: 瞭解「資產前瞻分析」功能如何讓您追蹤第三方網站、行銷宣傳和Adobe創意解決方案所使用影像的使用者評分和使用統計資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '735'
 ht-degree: 7%
 
 ---
@@ -43,6 +43,7 @@ Assets Insights會擷取使用者活動詳細資訊，例如影像被評等、�
    * **網頁與行動裝置**: 資產加入網站和應用程式的次數
    * **Social**: 資產在解決方案（例如Adobe Social和Adobe Campaign）中使用的次數
    * **電子郵件**: 資產用於電子郵件促銷活動的次數
+
    ![usage_statistics](assets/usage_statistics.png)
 
    >[!NOTE]
@@ -66,7 +67,7 @@ Assets Insights會擷取使用者活動詳細資訊，例如影像被評等、�
 您可以使用前瞻分析檢視同時檢視資料夾內所有資產 **[!UICONTROL 的分數]**。
 
 1. 在「資產」使用者介面中，導覽至包含您要檢視其見解之資產的檔案夾。
-1. 按一下工具列中的「版面」圖示，然後選擇「前瞻分析 **[!UICONTROL 檢視」]**。
+1. 從工具列按一下「版面」，然後選擇「 **[!UICONTROL 前瞻分析檢視」]**。
 1. 頁面會顯示資產的使用分數。 比較各種資產的評分並獲取見解。
 
 ## 排程背景工作 {#scheduling-background-job}
