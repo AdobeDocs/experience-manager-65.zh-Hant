@@ -3,9 +3,9 @@ title: 管理 [!DNL Adobe Stock] 資產 [!DNL Adobe Experience Manager Assets]�
 description: 從內部搜尋、擷取、授 [!DNL Adobe Stock] 權及管理資產 [!DNL Adobe Experience Manager]。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1046'
 ht-degree: 12%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 12%
 
 # 使用 [!DNL Adobe Stock] 資產於 [!DNL Adobe Experience Manager Assets] {#use-adobe-stock-assets-in-aem-assets}
 
-企業組織可將其企 [!DNL Adobe Stock] 業計畫與 [!DNL Experience Manager Assets] 授權資產整合，以確保其創意和行銷專案可廣泛使用授權資產，並具備強大的資產管理功能 [!DNL Experience Manager]。
+組織可將其企 [!DNL Adobe Stock] 業計畫與 [!DNL Experience Manager Assets] 其強大的資產管理功能整合，以確保授權資產廣泛適用於其創意和行銷專案 [!DNL Experience Manager]。
 
 [!DNL Adobe Stock] 服務可讓設計人員和企業針對其所有創意專案，取用數百萬個高品質、優質且免版稅的像片、向量、插圖、視訊、範本和3D資產。 [!DNL Experience Manager] 使用者可以快速尋找、預覽和授權儲 [!DNL Adobe Stock] 存在的資產，而 [!DNL Experience Manager]不需離開介 [!DNL Experience Manager] 面。
 
@@ -70,7 +70,7 @@ ht-degree: 12%
 
 * 若要搜尋資 [!DNL Adobe Stock] 產，請按一 **[!UICONTROL 下「導覽]** >資 **[!UICONTROL 產]** >搜 **[!UICONTROL 尋Adobe Stock]**」。
 
-* 若要在和之間搜 [!DNL Adobe Stock] 尋資 [!DNL Experience Manager Assets]產，請按一下搜尋 ![圖示search_icon](assets/search_icon.png)。
+* 若要在和之間搜 [!DNL Adobe Stock] 尋資 [!DNL Experience Manager Assets]產，請按一 ![下search search_icon](assets/search_icon.png)。
 
 或者，開始在搜 `Location: Adobe Stock` 尋列中輸入以選取 [!DNL Adobe Stock] 資產。 [!DNL Experience Manager] 提供已搜尋資產的進階篩選功能，讓使用者可使用篩選器（例如支援的資產類型、影像方向和授權狀態）快速將所需資產置入零位。
 
