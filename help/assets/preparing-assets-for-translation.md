@@ -3,7 +3,7 @@ title: 準備翻譯資產
 description: 建立語言根資料夾，以準備要翻譯的資產，以支援多語言資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ht-degree: 0%
 Experience Manager介面提供「參 **[!UICONTROL 考」面板]** ，可顯示在「資產」中建立的語言根目錄清單。
 
 1. 在「資產」主控台中，選取您要建立語言副本的語言主要版本。
-1. 按一下GlobalNav表徵圖，然後選擇「參 **[!UICONTROL 照]** 」以開啟「 [!UICONTROL 參考] 」窗格。
+1. 從左側導軌中，選擇「參 **[!UICONTROL 照]** 」(References [!UICONTROL )選項以打] 開「參照」(Reference)窗格。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
