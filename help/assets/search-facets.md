@@ -3,10 +3,10 @@ title: 搜尋Facet
 description: 本文說明如何在Adobe Experience Manager中建立、修改和使用搜尋刻面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2517'
-ht-degree: 17%
+source-wordcount: '2523'
+ht-degree: 16%
 
 ---
 
@@ -115,7 +115,7 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 >Options謂語是包含屬性謂語的自訂包裝函式，用來展示描述的行為。 目前，沒有REST端點可用來支援本機功能。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
-1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click the Edit icon.
+1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]**.
 1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
 1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如「檔案類 **[!UICONTROL 型」]**。指定在屬性欄位中根據其執行搜索的屬性，例如 `jcr:content/metadata/dc:format.`
 1. 執行下列任一項作業：
@@ -193,20 +193,17 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 ## 還原預設搜尋刻面 {#restoring-default-search-facets}
 
-依預設，「搜尋表單」頁面中的「資 **[!UICONTROL 產管理搜尋邊欄]** 」前會 **[!UICONTROL 出現「鎖定」圖示]** 。 如果向表單添加搜索刻面，表示預設表單已修改，則「鎖定」表徵圖將消失。
+依預設，「搜尋表單」頁 ![面中的「資產管理搜尋邊欄](assets/do-not-localize/lock_closed_icon.svg) 」前，會顯示鎖定圖示「鎖定 **[!UICONTROL 關閉」圖示]****** 。 「搜尋表單」頁面上的選項鎖定圖示表示預設設定保持不變且未自訂。 如果將搜 ![尋Facet新增至表單](assets/do-not-localize/lock_closed_icon.svg) ，表示已修改預設表單，圖示會消失鎖定關閉的圖示。
 
 ![「搜尋表單」頁面上的選項鎖定圖示表示預設設定保持不變且未自訂。](assets/locked_admin_rail.png)
-
-「搜尋表單」頁面上的選項鎖定圖示表示預設設定保持不變且未自訂。
 
 若要還原預設搜尋Facet，請執行下列步驟：
 
 1. 在「搜 **[!UICONTROL 尋表單」頁面中]** ，選取「資 **[!UICONTROL 產管理搜尋邊欄]** 」。
-1. 按一 **[!UICONTROL 下工具]** 列中的「刪除」。
-   ![deleteoutline](assets/deleteoutline.png)
+1. 按一下 **[!UICONTROL 工具欄]**![中的「刪除刪除大綱](assets/deleteoutline.png) 」。
 1. 在確認對話方塊中，按一下 **[!UICONTROL 刪除]** ，移除自訂變更。
 
-   刪除搜尋Facet的自訂變更後，在「搜尋表單」頁面的「資產管 **[!UICONTROL 理搜尋邊欄]** 」前會重 **** 新顯示「鎖定」圖示。
+   After you delete the custom changes to search facets, the lock icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) reappears before **[!UICONTROL Assets Admin Search Rail]** in the **[!UICONTROL Search Forms]** page.
 
 ## User permissions {#user-permissions}
 
