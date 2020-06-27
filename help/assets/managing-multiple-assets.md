@@ -3,9 +3,9 @@ title: 在Adobe Enterprise Manager中管理許多資產和系列的中繼資料�
 description: 同時編輯許多資產和系列的中繼資料，以快速傳播常見的中繼資料變更。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '495'
 ht-degree: 12%
 
 ---
@@ -30,7 +30,7 @@ Adobe Enterprise Manager Assets可讓您同時編輯多個資產的中繼資料�
 
 1. 在「資產」使用者介面中，導覽至您要編輯的資產所在的位置。
 1. 選取您要編輯其常用屬性的資產。
-1. 在工具列中，按一下「 **[!UICONTROL 屬性]** 」圖示，以開啟所選資產的屬性頁面。
+1. 在工具列中，按一 **[!UICONTROL 下「屬性]** 」以開啟所選資產的屬性頁面。
 
    >[!NOTE]
    >
@@ -45,7 +45,7 @@ Adobe Enterprise Manager Assets可讓您同時編輯多個資產的中繼資料�
    >* 在資產清單頂端，選取「標題」旁的核取方塊 **** ，以在選取資產和清除清單之間切換。
 
 
-1. 若要為資產選取不同的中繼資料結構，請按一下工 **[!UICONTROL 具列的]** 「設定」圖示，然後選取所要的結構。
+1. 若要為資產選取不同的中繼資料結構，請按一下工 **[!UICONTROL 具列中的]** 「設定」，然後選取所要的結構。
 1. 儲存變更。
 1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。按一 **[!UICONTROL 下提交]**。
 
