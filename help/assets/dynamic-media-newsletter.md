@@ -5,9 +5,9 @@ keywords: dynamic media;newsletter;product updates;tips and tricks;events;custom
 contentOwner: Rick Brough
 solution: Dynamic Media
 translation-type: tm+mt
-source-git-commit: 9e8ff9bf5c9ddd4675e887fc734bf3b616526b36
+source-git-commit: 7dce19107539bc4fd986d894b681ed6e1b99e4fc
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -25,20 +25,20 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
 
 ## 錯過了動態媒體電子報？
 
-* **[2020年5月第4期](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
+<!-- * **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
 
-   在此問題中：
+    In this issue:
 
-   * 在不確定的時期，業務連續性意味著什麼。
-   * 首次全面數位化Adobe峰會的主要優點。
-   * 必須觀看的Experience Manager專題討論會。
-   * 峰會客戶焦點： 在盔甲下。
-   * 絕不錯過Experience Insider網路研討會。
-   * 公共部門焦點： 數位註冊的迫切需求。
-   * 看看Experience Manager Innovation有哪些新功能。
-   * 與Adobe專業人員一 *起* ，培養您的Experience Manager技能。
-   * 與Adobe Experience Manager社群連絡。
-   * 透過Adobe Experience League快速追蹤您的Adobe專業知識。
+    * What business continuity means in uncertain times.
+    * Key takeaways from the first all-digital Adobe Summit.
+    * Must-watch Experience Manager breakout sessions.
+    * Summit customer spotlight: Under Armour.
+    * Never miss an Experience Insider webinar.
+    * Public sector spotlight: The urgent need for digital enrollment.
+    * Look what’s new in Experience Manager Innovation.
+    * Build your Experience Manager skills *live* with the Adobe pros.
+    * Connect with the Adobe Experience Manager Community.
+    * Fast-track your Adobe expertise with Adobe Experience League. -->
 
 * **[2020年4月第3期](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@DRPFipWV_3bgH_oxl1monOhd4auNDxFVTBWB-uKB6lM_BixlVqja2E5Ml7DbtOy6pARL78LPxljqgxEEAr7RBsRp8WOyn-Zw6hQ8MNoFn9i9WMXm.html)**
 
@@ -73,7 +73,7 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 5個全新的Skill Builder網路研討會，磨練您的Dynamic Media Classic技能。
    * 免費稽核，協助您從Dynamic Media Classic獲得更多價值。
    * 為我們的多媒體客戶帶來創紀錄的假日購物季。
-   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新功能的準備。
+   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新增功能的準備。
    * 認識數位媒體專員Mark Dean。
 
 * **[2019年11月，總第11期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**
