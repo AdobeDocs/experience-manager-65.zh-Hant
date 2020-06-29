@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 4%
 
 ---
@@ -35,9 +35,9 @@ Communities Badges控制台可以添加自定義徽章，這些徽章可在獲�
 * [排行榜](/help/communities/enabling-leaderboard.md)
 * [創意力](/help/communities/ideation-feature.md)
 
-在作者環境中，若要進入Badges主控台
+在作者環境中，導覽至「標章」主控台：
 
-* 從全域導覽，導覽至「工 **[!UICONTROL 具>社群>標章」]**
+* 從全域導覽： **[!UICONTROL 工具]** >社 **[!UICONTROL 群]** >標 **[!UICONTROL 章]**
 
 此控制台顯示當前可用的標章，並可從中添加新標章。
 
