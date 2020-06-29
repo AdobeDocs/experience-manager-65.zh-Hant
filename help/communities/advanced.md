@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -29,15 +29,15 @@ ht-degree: 1%
 
 除了內容相關性外，計分演算法也會考量成員活動，例如投票和答案百分比。 雖然基本計分包括了定量計分，但進階計分則採用演算法。
 
-因此，高級計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
+因此，先進的計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
 
 設定進階計分與基本計分幾乎相同：
 
-* 基本和進階計分與標籤規則 [會以相同方式套用](/help/communities/implementing-scoring.md#apply-rules-to-content) 至內容
+* 基本和進階計分與標籤規則 [會以相同方式套用](/help/communities/implementing-scoring.md#apply-rules-to-content) 至內容。
 
-   * 基本和進階計分與標籤規則可套用至相同內容
+   * 基本和進階計分和標籤規則可套用至相同內容。
 
-* [為元件啟用標章](/help/communities/implementing-scoring.md#enable-badges-for-component) ，是通用的
+* [為元件啟用標章](/help/communities/implementing-scoring.md#enable-badges-for-component) 是通用的。
 
 在設定計分和標籤規則方面的差異為：
 
@@ -45,23 +45,24 @@ ht-degree: 1%
 * 進階計分規則：
 
    * `scoringType` 設定為 `advanced`
-   * requires `stopwords`
+   * 需要 `stopwords`
 
 * 進階標籤規則：
 
    * `badgingType` 設定為 `advanced`
    * `badgingLevels` 設定為 **要授予的專家級數**
-   * 需要 `badgingPaths` 標籤陣列，而不是閾值陣列映射點到標籤
+   * 需要 `badgingPaths` 標籤陣列，而不是閾值陣列映射點到標籤。
 
 >[!NOTE]
 >
 >若要使用進階的計分和標籤功能，請安裝「專 [家識別」套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
 
+
 ## 可配置計分引擎 {#configurable-scoring-engine}
 
 進階計分引擎提供OSGi組態，其參數會影響進階計分演算法。
 
-![chlimage_1-139](assets/chlimage_1-139.png)
+![chlimage_1-260](assets/chlimage_1-260.png)
 
 * **評分權重**
 
@@ -102,7 +103,7 @@ ht-degree: 1%
 
 請參 [閱計分子規則](/help/communities/implementing-scoring.md#scoring-sub-rules)。
 
-![chlimage_1-140](assets/chlimage_1-140.png)
+![chlimage_1-261](assets/chlimage_1-261.png)
 
 ### 秒詞 {#stopwords}
 
@@ -122,7 +123,7 @@ ht-degree: 1%
 
 與其將點與徽章影像建立關聯，您只需識別允許的專家人數和要授予的徽章影像。
 
-![chlimage_1-141](assets/chlimage_1-141.png)
+![chlimage_1-262](assets/chlimage_1-262.png)
 
 <table>
  <tbody>
@@ -164,7 +165,7 @@ ht-degree: 1%
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-142](assets/chlimage_1-142.png)
+![chlimage_1-263](assets/chlimage_1-263.png)
 
 要讓專家徽章顯示為活動的獎勵，請確定：
 
@@ -197,15 +198,15 @@ ht-degree: 1%
 
 **附註:**
 
-* 節 `rules`點和 `sub-rules` 節點都屬於 `cq:Page`
+* 節 `rules` 點和 `sub-rules` 節點都屬於類型 `cq:Page`。
 
-* `subRules`是規則節點上類型[] 「字串」的屬 `jcr:content` 性
+* `subRules` 是規則節點上類型為[] 「字串」的屬 `jcr:content` 性。
 
-* `sub-rules` 可能與各種計分規則共用
+* `sub-rules` 可能會在各種計分規則之間共用。
 
-* `rules`應位於具有每個人的讀取權限的儲存庫位置
+* `rules` 應位於具有每個人讀取權限的儲存庫位置。
 
-   * 規則名稱必須是唯一的，無論位置為何
+* 規則名稱必須是唯一的，無論位置為何。
 
 ### 包含的標籤規則 {#included-badging-rules}
 
@@ -216,8 +217,7 @@ ht-degree: 1%
 
 **附註:**
 
-* `rules` 節點的類型cq:Page
-* `rules` 應位於具有每個人的讀取權限的儲存庫位置
-
-   * 規則名稱必須是唯一的，無論位置為何
+* `rules` 節點的類型為cq:Page。
+* `rules` 應位於具有每個人讀取權限的儲存庫位置。
+* 規則名稱必須是唯一的，無論位置為何。
 
