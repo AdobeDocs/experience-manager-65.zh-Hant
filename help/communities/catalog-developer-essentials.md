@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '363'
+ht-degree: 2%
 
 ---
 
@@ -84,8 +87,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
       * 名稱: `filters`
       * 類型: `nt:unstructured`
-   * 選擇「 **[!UICONTROL 全部保存」]**
-
+      * 選擇「 **[!UICONTROL 全部保存」]**
 
 * 向節 `se_resource-tags` 點添加屬 `filters` 性
 
@@ -93,12 +95,12 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
    * 新增多重屬性
 
       * 名稱: `se_resource-tags`
-      * 類型：字串
+      * 類型： 字串
       * 值： *&lt;輸入[TagID](#pre-filter-tagids)>*
-      * 選擇 **[!UICONTROL 多]**
-      * 選擇「添 **[!UICONTROL 加」]**
+         * 選擇 **[!UICONTROL 多]**
+         * 選擇「添 **[!UICONTROL 加」]**
 
-         * 在彈出式對話方塊中，選 `+` 取以新增其他預先篩選的TagID
+            * 在彈出式對話方塊中，選 `+` 取以新增其他預先篩選的TagID
 
 * 重新發佈社群網站
 
