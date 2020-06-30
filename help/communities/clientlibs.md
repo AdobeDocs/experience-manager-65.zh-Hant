@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 * [使用用戶端程式庫](/help/sites-developing/clientlibs.md) ，提供使用詳細資訊以及除錯工具
 * [用於SCF的Clientlibs](/help/communities/client-customize.md#clientlibs) ，它在定制SCF元件時提供有用的資訊
-* [部落格：AEM Client Libraries（由範例說明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
+* [部落格： AEM Client Libraries（由範例說明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
 ## 為何需要Clientlibs {#why-clientlibs-are-required}
 
@@ -36,13 +39,13 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 
 當所需的clientlibs遺失時， [將Communities元件新增至頁面](/help/communities/author-communities.md) ，可能會導致javascript錯誤以及意外的外觀。
 
-### 範例：未使用Clientlibs的置入審核 {#example-placed-reviews-without-clientlibs}
+### 範例： 未使用Clientlibs的置入審核 {#example-placed-reviews-without-clientlibs}
 
-![chlimage_1-132](assets/chlimage_1-132.png)
+![chlimage_1-426](assets/chlimage_1-426.png)
 
-### 範例：使用Clientlibs進行置入的審核 {#example-placed-reviews-with-clientlibs}
+### 範例： 使用Clientlibs進行置入的審核 {#example-placed-reviews-with-clientlibs}
 
-![chlimage_1-133](assets/chlimage_1-133.png)
+![chlimage_1-427](assets/chlimage_1-427.png)
 
 ## 識別所需的客戶端 {#identifying-required-clientlibs}
 
@@ -55,7 +58,7 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 * cq.ckeditor
 * cq.social.hbs.reviews
 
-![chlimage_1-134](assets/chlimage_1-134.png)
+![chlimage_1-246](assets/chlimage_1-246.png)
 
 ## 添加必需的客戶端 {#adding-required-clientlibs}
 
@@ -63,32 +66,33 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 
 使 [用CRXDE|Lite](#using-crxde-lite) ，修改社群網站頁面的現有clientlibslist。
 
-要使用 [CRXDE Lite為社區站點添加clientlib](/help/sites-developing/developing-with-crxde-lite.md) :
+要使用 [CRXDE Lite為社區站點添加clientlib](/help/sites-developing/developing-with-crxde-lite.md):
 
-* 瀏覽 [至https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* 找到 `clientlibslist` 要在其中添加元件的頁的節點
+* 瀏覽 [至https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)。
+* 找到 `clientlibslist` 要在其中添加元件的頁的節點：
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* 選取 `clientlibslist` 節點時
+* 在選 `clientlibslist` 取節點時：
 
-   * 找到String[] 屬性 `scg:requiredClientLibs`
-   * 選擇其 `Value` 以訪問「字串」陣列對話框
+   * 找到String[] 屬性 `scg:requiredClientLibs`。
+   * 選擇其 `Value` 以訪問「字串」陣列對話框。
 
-      * 視需要向下捲動
-      * 選擇+以輸入新的客戶端庫
+      * 如有必要，向下捲動。
+      * 選擇+以輸入新的客戶端庫。
 
-         * 重複以新增更多用戶端程式庫
-      * 選擇「確 **定」**
-   * 選擇「 **全部保存」**
+         * 重複以新增更多用戶端程式庫。
 
+         * 選擇 **確定**。
+   * 選擇「 **全部保存**」。
 
 
 >[!NOTE]
 >
 >如果網站不是社群網站，則需要搜尋網站所用用戶端程式庫的存在或位置。
 
-使用「 [AEM Communities快速入門](/help/communities/getting-started.md) 」範例(其中 `site-name` 為Engage **)，在新增審核元件時，clientliblist會以下列方式顯示：
 
-![chlimage_1-135](assets/chlimage_1-135.png)
+使用「 [AEM Communities快速入門](/help/communities/getting-started.md) 」範例(其中 `site-name` 為Engage **)，在新增審核元件時，clientliblist的顯示方式如下：
+
+![chlimage_1-247](assets/chlimage_1-247.png)
 
