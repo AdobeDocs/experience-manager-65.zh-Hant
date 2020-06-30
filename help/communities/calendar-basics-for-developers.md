@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +66,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### 日曆功能 {#calendar-function}
 
-包含「日曆」功能的社群 [網站結構](functions.md#calendar-function) ，將具有已設定的c `alendar`元件。 Calendar函式支援標識特權 [成員用戶組](users.md#privileged-members-group)。
+包含「日曆」功能的社群 [網站結構](functions.md#calendar-function) ，將具有已設定的 `calendar` 元件。 Calendar函式支援標識特權 [成員用戶組](users.md#privileged-members-group)。
 
 ### 存取日曆貼文(UGC) {#accessing-calendar-posts-ugc}
 
