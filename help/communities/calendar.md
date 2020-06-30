@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '1170'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 本節說明
 
 * 新增日曆功能至AEM網站
-* 元件的配置設 `Calendar`置
+* 元件的配置設 `Calendar` 置
 
 ## 新增日曆至頁面 {#adding-a-calendar-to-a-page}
 
@@ -39,13 +42,13 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 當包含 [所需的用戶端程式庫](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) ，元件的顯示方式 `Calendar` 就是這樣。
 
-![chlimage_1-147](assets/chlimage_1-147.png)
+![chlimage_1-112](assets/chlimage_1-112.png)
 
 ### 設定日曆 {#configuring-calendar}
 
-選擇要訪問 `Calendar`的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問 `Calendar` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-148](assets/chlimage_1-148.png) ![chlimage_1-149](assets/chlimage_1-149.png)
+![chlimage_1-113](assets/chlimage_1-113.png)![chlimage_1-114](assets/chlimage_1-114.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
@@ -85,7 +88,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -133,7 +136,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 * **標籤貼文**
 
-   如果勾選，允許成員將其他事件或留言標籤為不適當。 預設值已勾選**。**
+   如果勾選，允許成員將其他事件或留言標籤為不適當。 已勾選預設值。
 
 * **標籤原因清單**
 
@@ -141,7 +144,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 * **自訂標幟原因**
 
-   如果勾選，允許成員輸入自己為標籤事件或留言的理由，以示不適當。 預設為未勾選**。**
+   如果勾選，允許成員輸入自己為標籤事件或留言的理由，以示不適當。 預設為未勾選。
 
 * **協調臨界值**
 
@@ -167,6 +170,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 >
 >請造 [訪管理標籤](/help/sites-administering/tags.md) ，瞭解如何新增標籤命名空間（分類）。
 
+
 #### 翻譯標籤 {#translation-tab}
 
 在「轉 **譯** 」標籤下，如果為社群網站啟用了轉譯，則可將翻譯設定為翻譯整個主題（事件和注釋），而不是翻譯特定帖子。
@@ -187,7 +191,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 當登入的使用者具有協調者或管理員權限時，他們就可以對張貼至事件的所有日曆事件和留言執行協調 [任務](/help/communities/moderate-ugc.md) （依照元件的設定許可）。
 
-![chlimage_1-150](assets/chlimage_1-150.png)
+![chlimage_1-115](assets/chlimage_1-115.png)
 
 #### 成員 {#members}
 
@@ -201,13 +205,15 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 * 刪除其自己的日曆事件或留言
 * 標籤其他人的日曆事件或注釋
 
-![chlimage_1-151](assets/chlimage_1-151.png) ![chlimage_1-152](assets/chlimage_1-152.png)
+![chlimage_1-116](assets/chlimage_1-116.png)
+
+![chlimage_1-117](assets/chlimage_1-117.png)
 
 #### 匿名 {#anonymous}
 
 未登入的網站訪客只能閱讀已張貼的日曆事件、翻譯事件（如果支援），但不得新增事件或留言，也不得標籤其他人的事件或留言。
 
-![chlimage_1-153](assets/chlimage_1-153.png)
+![chlimage_1-118](assets/chlimage_1-118.png)
 
 ## 其他資訊 {#additional-information}
 
