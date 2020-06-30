@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
+source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+workflow-type: tm+mt
+source-wordcount: '1682'
+ht-degree: 6%
 
 ---
 
@@ -42,9 +45,10 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 >[!NOTE]
 >
->元件 `Journal`和 `Journal Sidebar` 的標題 `Blog` 為和 `Blog Sidebar`。
+>元件 `Journal` 和 `Journal Sidebar` 的標題 `Blog` 為和 `Blog Sidebar`。
 >
 >AEM 6.0及舊版中的部落格功能現在已移除。 它以範本為基礎，僅允許作者在作者環境中建立內容。
+
 
 ## 將部落格元件新增至頁面 {#adding-blog-components-to-a-page}
 
@@ -57,19 +61,21 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/blog-developer-basics.md#essentials-for-client-side) ，元件的顯示 `Blog`方式如下：
+當包含 [所需的用戶端程式庫](/help/communities/blog-developer-basics.md#essentials-for-client-side) ，元件的顯示方式 `Blog` 如下：
 
-![chlimage_1-229](assets/chlimage_1-229.png)
+![chlimage_1-147](assets/chlimage_1-147.png)
 
 以及將如何 `Blog Sidebar` 顯示：
 
-![chlimage_1-230](assets/chlimage_1-230.png)
+![chlimage_1-148](assets/chlimage_1-148.png)
 
 ### 設定部落格 {#configuring-blog}
 
 選擇要訪問 `Blog` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-231部落格](assets/chlimage_1-231.png)![設定](assets/blog-configure.png)
+![chlimage_1-149](assets/chlimage_1-149.png)
+
+![部落格設定](assets/blog-configure.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
@@ -112,6 +118,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 >「日誌標題」用於自動建立部落格的URL。
 >您在此處指定的日誌標題中，最多使用50個字元（另外還有5個字元）來建立部落格的URL。
 
+
 * **日誌說明**
 
    部落格說明。
@@ -146,7 +153,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -162,7 +169,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **允許使用者刪除評論和主題**
 
-   如果勾選，允許成員刪除他們張貼的留言和部落格項目。 預設值為** **uncebled。
+   如果勾選，允許成員刪除他們張貼的留言和部落格項目。 預設為未勾選。
 
 * **允許關注**
 
@@ -180,7 +187,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **允許主要內容**
 
-   如果勾選，此構想就可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
+   若勾選，此構想即可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
 
 * **啟用提及功能**
 
@@ -208,7 +215,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **標籤貼文**
 
-   如果勾選，允許成員將其他主題或注釋標籤為不適當。 預設為未勾選**。**
+   如果勾選，允許成員將其他主題或注釋標籤為不適當。 預設為未勾選。
 
 * **標籤原因清單**
 
@@ -216,7 +223,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **自訂標幟原因**
 
-   如果勾選，允許成員輸入自己將主題或留言標籤為不適當的原因。 預設為未勾選**。**
+   如果勾選，允許成員輸入自己將主題或留言標籤為不適當的原因。 預設為未勾選。
 
 * **協調臨界值**
 
@@ -232,7 +239,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **允許的命名空間**
 
-   如果在** `Allow Tagging` 設定**標籤下勾選，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
+   如果已勾選 `Allow Tagging` 「設定」標籤下 **的選項** ，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
 
 * **建議限制**
 
@@ -250,11 +257,12 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
    用於部落格條目存檔的顯示格式。 格式使用遵循Java約定的佔位符。
 
-   * yyyy:全年，就像2015年一樣
-   * yy:短年，比如15年。
-   * MMMMMM:整月，就像6月
-   * MMM:短月，就像6月
-   * MM:月數，例如06
+   * yyyy: 全年，就像2015年一樣
+   * yy: 短年，比如15年。
+   * MMMMMM: 整月，就像6月
+   * MMM: 短月，就像6月
+   * MM: 月數，例如06
+
    預設值為&quot;yyyy MMMMM&quot;，會顯示例如&quot;2015 June&quot;
 
 * **視圖類型**
@@ -299,7 +307,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 當登入的使用者具有協調者或管理員權限時，他們可以對張貼至部落格的所有部落格文章和留言執行 [協調任務](/help/communities/moderate-ugc.md) （依照元件組態的許可）。
 
-![chlimage_1-232](assets/chlimage_1-232.png)
+![chlimage_1-152](assets/chlimage_1-152.png)
 
 #### 成員 {#members}
 
@@ -314,13 +322,15 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 * 刪除其自己的部落格或評論
 * 標籤其他人的部落格文章或留言
 
-![chlimage_1-233](assets/chlimage_1-233.png) ![chlimage_1-234](assets/chlimage_1-234.png)
+![chlimage_1-153](assets/chlimage_1-153.png)
+
+![chlimage_1-154](assets/chlimage_1-154.png)
 
 #### 匿名 {#anonymous}
 
 未登入的網站訪客只能閱讀已張貼的部落格文章和留言、在受支援時加以翻譯，但不得新增部落格文章或留言，也不得為其他人的文章或留言加上旗標。
 
-![chlimage_1-235](assets/chlimage_1-235.png)
+![chlimage_1-155](assets/chlimage_1-155.png)
 
 ## 其他資訊 {#additional-information}
 
