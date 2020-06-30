@@ -3,10 +3,10 @@ title: 管理 [!DNL Adobe Stock] 資產 [!DNL Adobe Experience Manager Assets]�
 description: 從內部搜尋、擷取、授 [!DNL Adobe Stock] 權及管理資產 [!DNL Adobe Experience Manager]。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 97e17df1f79450b5aed5867633c129a1c21a17ac
+source-git-commit: 376940612066123a8f84fe6c30ff3002cda08079
 workflow-type: tm+mt
-source-wordcount: '1113'
-ht-degree: 11%
+source-wordcount: '1109'
+ht-degree: 10%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 11%
 
 ### Create an IMS configuration {#create-an-ims-configuration}
 
-1. Click on [!DNL Experience Manager] logo. 導覽至「 **[!UICONTROL 工具]** >安 **[!UICONTROL 全]** > **[!UICONTROL Adobe IMS設定」]**。按一 **[!UICONTROL 下「建立]** 」，然後選 **[!UICONTROL 取「雲端解決方案]** > **[!UICONTROL Adobe Stock]**」。
+1. 在使用 [!DNL Experience Manager] 者介面中，導覽至「工 **[!UICONTROL 具]** >安 **[!UICONTROL 全性]** > **[!UICONTROL Adobe IMS設定」]**。 按一 **[!UICONTROL 下「建立]** 」，然後選 **[!UICONTROL 取「雲端解決方案]** > **[!UICONTROL Adobe Stock]**」。
 1. 重複使用現有證書或選擇「 **[!UICONTROL 建立新證書」]**。
 1. 按一下&#x200B;**[!UICONTROL 建立憑證]**。建立後，請下載公開金鑰。 按一下&#x200B;**[!UICONTROL 下一步]**。
 1. 將下載的公開金鑰新增至您的服 [!DNL Adobe Developer Console] 務帳戶。 按一下&#x200B;**[!UICONTROL 下一步]**。讓「 [!UICONTROL Adobe IMS技術帳戶設定」畫面保持開啟] ，以便在不久後提供值。
@@ -52,7 +52,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->如果有多個配 [!DNL Adobe Stock] 置，請在「用戶首選項」面板中選 [!UICONTROL 擇所需的配置] 。 按一 *下使用者* 介面右上角的 [!DNL Experience Manager] User標誌。
+>如果有多種 [!DNL Adobe Stock] 設定，請在「使用者偏好設定」面板(**[!UICONTROL AEM]** > 「使用者圖示 **[!UICONTROL 」 > 「使用者偏好設定]** 」 ********> Stock Configuration ConfigurationShock)中選取所需的設定。
 
 ## 使用及管 [!DNL Adobe Stock] 理 [!DNL Experience Manager] {#usemanage}
 
