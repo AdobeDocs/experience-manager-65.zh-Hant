@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
+source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 2%
 
 ---
 
@@ -27,6 +30,7 @@ source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 >[!NOTE]
 >
 >部落格功能的基礎結構是日誌功能。
+
 
 ## 用戶端基本功能 {#essentials-for-client-side}
 
@@ -68,7 +72,7 @@ source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
 | [**included **](/help/communities/scf.md#add-or-include-a-communities-component) | 否 |
-| [**clientlibs **](/help/communities/clientlibs.md) | cq.social.hbs.journal.sidebar |
+| [**clientlibs **](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **模板** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
 | **屬性** | 請參閱 [部落格功能](/help/communities/blog-feature.md) |
@@ -98,10 +102,10 @@ UGC應使用其中一種標準的協調方法來協調。
 
 請參閱：
 
-* [儲存資源提供方概述](/help/communities/srp.md) -簡介和儲存庫使用概述
-* [SRP和UGC Essentials](/help/communities/srp-and-ugc.md) - SRP實用程式方法和示例
-* [使用SRP存取UGC](/help/communities/accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](/help/communities/socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法
+* [儲存資源提供方概述](/help/communities/srp.md) -簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](/help/communities/srp-and-ugc.md) - SRP實用程式方法和示例。
+* [使用SRP存取UGC](/help/communities/accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](/help/communities/socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
 ## 主要發行者 {#primary-publisher}
 
@@ -119,5 +123,5 @@ AEM平台會封鎖其他網站的連結，以防止XSS攻擊，如
 
 透過選取圖示，將豐富式媒體內嵌在部落格 `Embed Media from External Sites` 文章中：
 
-![chlimage_1-199](assets/chlimage_1-199.png)
+![chlimage_1-471](assets/chlimage_1-471.png)
 
