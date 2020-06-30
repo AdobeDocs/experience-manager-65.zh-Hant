@@ -10,14 +10,17 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 7cd7921e-6438-450a-a676-9da3c4a5ced3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 1%
 
 ---
 
 
 # 目錄功能 {#catalog-feature}
 
-在元 [ 件 `Enablement Assignments`](assignments.md) 瀏覽器的「社群」群組中找到的元件和元件是啟用社群 `Enablement Catalog` 的元件 [](overview.md#enablement-community)。
+在元 [`Enablement Assignments`](assignments.md) 件瀏 `Enablement Catalog` 覽器的「社群」群組中找到的元件和元件是啟用社群 [的元件](overview.md#enablement-community)。
 
 該 `Enablement Catalog` 元件允許社區成員訪問支援資源 [的目錄](resources.md)。 使用AEM標籤是管理目錄中啟用資源清單的重要部分(請參閱「標籤 [啟用資源](tag-resources.md)」)。
 
