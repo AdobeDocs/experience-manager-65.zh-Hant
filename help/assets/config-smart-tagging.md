@@ -1,12 +1,12 @@
 ---
 title: 使用智慧型內容服務設定資產標籤。
-description: 瞭解如何使用智慧型內容服務，在Adobe Experience Manager中設定智慧型標籤和增強的智慧型標籤。
+description: 瞭解如何使用智慧型內容服務來設定智慧型標籤 [!DNL Adobe Experience Manager]，以及增強智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f3d699f35c7b1ef832a0857fa2fa41aed1fe5a4e
+source-git-commit: dfac819018e85e0e8221bfcc57bc1eaf43b7ff25
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 15%
+source-wordcount: '1118'
+ht-degree: 14%
 
 ---
 
@@ -17,10 +17,11 @@ ht-degree: 15%
 
 文章詳細說明了配置Smart Content Service所需的下列主要工作。 在後端，伺服器會先 [!DNL Experience Manager] 使用Adobe Developer Console閘道驗證您的服務認證，然後再將您的要求轉送至智慧型內容服務。
 
-* 在中建立Smart Content Service配置 [!DNL Experience Manager] 以生成公開密鑰。 取得OAuth整合的公用憑證。
-* 在Adobe Developer Console中建立整合，並上傳產生的公開金鑰。
-* 使用Adobe [!DNL Experience Manager] Developer Console的API金鑰和其他認證來設定您的例項。
-* （可選）在資產上傳時啟用自動標籤。
+1. 在中建立Smart Content Service配置 [!DNL Experience Manager] 以生成公開密鑰。 [取得OAuth整合的公用憑證](#obtain-public-certificate) 。
+1. [在Adobe Developer Console中建立整合](#create-adobe-i-o-integration) ，並上傳產生的公開金鑰。
+1. [使用Adobe Developer Console的](#configure-smart-content-service) API金鑰和其他認證來設定您的部署。
+1. [測試配置](#validate-the-configuration)。
+1. （可選） [在資產上傳時啟用自動標籤](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
 
 ## 必備條件 {#prerequisites}
 
@@ -29,11 +30,13 @@ ht-degree: 15%
 * 具有組織管理員權限的Adobe ID帳戶。
 * 您的組織已啟用智慧型內容服務。
 
+除了上述功能外，若要啟用「增強智慧型標籤」，請另外安裝最新 [的AEM Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
+
 ## 取得公開憑證 {#obtain-public-certificate}
 
 公開憑證可讓您在Adobe Developer Console上驗證您的個人檔案。
 
-1. 在使用 [!DNL Experience Manager] 者介面中，存 **[!UICONTROL 取「工具>雲端服務]**>舊 **[!UICONTROL 版雲端服務」]**。
+1. 在使用 [!DNL Experience Manager] 者介面中，存 **[!UICONTROL 取「工具]** > **[!UICONTROL 雲端服務]** >舊 **[!UICONTROL 版雲端服務]**」。
 
 1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
 1. 在「建 **[!UICONTROL 立設定]** 」對話方塊中，指定「智慧標籤」設定的標題和名稱。 按一下&#x200B;**[!UICONTROL 建立]**。
@@ -46,6 +49,10 @@ ht-degree: 15%
    現在將其他欄位留空（稍後將提供）。 按一下 **[!UICONTROL 確定]**。
 
    ![Experience Manager Smart Content Service對話框，用於提供內容服務URL](assets/aem_scs.png)
+
+   >[!NOTE]
+   >
+   >以服務URL提供 [!UICONTROL 的URL] 無法透過瀏覽器存取，並產生404錯誤。 設定可正常運作，且與「服務URL」參 [!UICONTROL 數值相同] 。 有關整體服務狀態和維護計畫，請參 [閱https://status.adobe.com](https://status.adobe.com)。
 
 1. 按一 **[!UICONTROL 下「下載OAuth整合的公用憑證]**」，然後下載公用憑證檔案 `AEM-SmartTags.crt`。
 
@@ -78,13 +85,13 @@ ht-degree: 15%
 1. 在「新 **[!UICONTROL 增API]** 」頁面上，選 **[!UICONTROL 取「Experience Cloud]** 」並選 **[!UICONTROL 取「智慧內容]**」。 按一下&#x200B;**[!UICONTROL 下一步]**。
 1. 選擇 **[!UICONTROL 上傳公開金鑰]**。 提供從下載的憑證檔案 [!DNL Experience Manager]。 會顯 [!UICONTROL 示成功上傳的公開金鑰] 。 按一下&#x200B;**[!UICONTROL 下一步]**。
 1. [!UICONTROL 建立新的服務帳戶(JWT)憑據頁] ，顯示剛配置的服務帳戶的公鑰。 按一下&#x200B;**[!UICONTROL 下一步]**。
-1. 在「選擇 **[!UICONTROL 產品配置檔案]** 」頁上，選擇 **[!UICONTROL Smart Content Services]**。 按一 **[!UICONTROL 下「儲存已設定的API]**」。 一個頁面會顯示更多有關設定的資訊。 在中進一步設定智慧標籤時，請保持此頁面的開啟狀態，以複製並新增這些值至Experience Manager [!DNL Experience Manager]。
+1. 在「選擇 **[!UICONTROL 產品配置檔案]** 」頁面上，選 **[!UICONTROL 擇智慧內容服務]**。 按一 **[!UICONTROL 下「儲存已設定的API]**」。 一個頁面會顯示更多有關設定的資訊。 在中進一步設定智慧標籤時，請保持此頁面的開啟狀態，以複製並新增這些值至Experience Manager [!DNL Experience Manager]。
 
    ![在「概述」索引標籤中，您可以檢閱為整合提供的資訊。](assets/integration_details.png)
 
 ## 設定智慧型內容服務 {#configure-smart-content-service}
 
-若要設定整合，請使用Adobe Developer Console整合中的「技術帳戶ID」、「組織ID」、「用戶端密碼」、「授權伺服器」和API金鑰欄位的值。 建立智慧型標籤雲端設定可讓您驗證來自例項的API [!DNL Experience Manager] 請求。
+若要設定整合，請使用Adobe Developer Console整合中的「技術帳戶ID」、「組織ID」、「用戶端密碼」、「授權伺服器」和API金鑰欄位的值。 建立智慧型標籤雲端設定可讓您驗證部署中的API [!DNL Experience Manager] 要求。
 
 1. 在中 [!DNL Experience Manager]，導覽至「 **[!UICONTROL 工具>雲端服務>舊版雲端服務」以開啟]** Cloud Services  Console。
 1. 在「資 **[!UICONTROL 產智慧標籤]**」下，開啟上述建立的設定。 在服務設定頁面上，按一下「 **[!UICONTROL 編輯]**」。
@@ -96,7 +103,6 @@ ht-degree: 15%
 完成配置後，可使用JMX MBean來驗證配置。 若要驗證，請遵循下列步驟。
 
 1. 訪問您 [!DNL Experience Manager] 的伺服器 `https://[aem_server]:[port]`。
-
 1. 前往「 **[!UICONTROL 工具>作業> Web Console]** 」以開啟OSGi主控台。 按一 **[!UICONTROL 下「主要> JMX]**」。
 1. 按一 **[!UICONTROL 下com.day.cq.dam.similaritysearch.internal.impl]**。 它會開啟「相 **[!UICONTROL 似性搜尋雜項任務」]**。
 1. 按一 **[!UICONTROL 下validateConfigs()]**。 在「驗證 **[!UICONTROL 配置」對話]** ，按一下 **[!UICONTROL 調用]**。
@@ -110,7 +116,7 @@ ht-degree: 15%
 1. 從工具 **[!UICONTROL 列按一下]** 「編輯」。
 1. 展開「側面板」以顯示步驟。拖 **[!UICONTROL 曳DAM Workflow]**  (DAM工作流程) 區段中可用的智慧型標籤資產步驟，並將其置於「處理縮 **[!UICONTROL 圖」步驟之後]** 。
 
-   ![在 [!UICONTROL DAM更新資產工作流程中，在流程縮圖步驟之後新增智慧型標籤資產步驟] 。](assets/smart-tag-in-dam-update-asset-workflow.png)
+   ![在「DAM更新資產」工作流程中，在流程縮圖步驟之後新增智慧型標籤資產步驟](assets/smart-tag-in-dam-update-asset-workflow.png)
 
    *圖： 在[!UICONTROL DAM Update Asset工作流程中，在流程縮圖步驟之後新增智慧型標籤資產步驟]。*
 
