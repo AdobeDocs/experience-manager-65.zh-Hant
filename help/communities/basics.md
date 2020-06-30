@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f1870c1222004f582ccf337a59e1f30e2dc2cf32
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 1%
 
 ---
 
@@ -35,6 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >如果不熟悉AEM，請檢視基本處理的 [檔案](../../help/sites-authoring/basic-handling.md)。
 
+
 ### 進入設計模式 {#entering-design-mode}
 
 如果在 **元件瀏覽器** (sidekick)中找不到Communities元件，則必須輸入才能 `Design Mode` 新增其他Communities元件。 [也可能需要新增必要的用戶端程式庫](#required-clientlibs) (clientlibs)。
@@ -55,11 +59,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在將Communities元件新增至頁面時，如果結果是錯誤或非預期的外觀，首先要嘗試新增Communities元件所需的clientlibs。 如需詳細資訊，請參 [閱Clientlibs for Communities元件](clientlibs.md)。
 
-### 範例：最初放置的審核沒有客戶端庫…… {#example-initially-placed-reviews-without-client-libraries}
+### 範例： 最初放置的審核沒有客戶端庫…… {#example-initially-placed-reviews-without-client-libraries}
 
 ![chlimage_1-426](assets/chlimage_1-426.png)
 
-### ...使用用戶端程式庫 {#and-with-client-libraries}
+### ... 使用用戶端程式庫 {#and-with-client-libraries}
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
@@ -69,18 +73,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 如果允許標籤，則可以設定社區站點的配置，以限制發佈環境中成員顯示的名稱空間。 請參閱社 [群網站主控台](sites-console.md#tagging)。
 
-允許標籤的功能：部 [落格](blog-feature.md)、 [日曆](calendar.md)、 [檔案庫](file-library.md)、論 [壇](forum.md)
+允許標籤的功能： [部落格](blog-feature.md)，日 [歷](calendar.md)，檔 [案庫](file-library.md)，論 [壇](forum.md)
 
-使用標籤的功能：目 [錄](catalog.md)、搜 [尋](search.md)、社 [交標籤雲](tagcloud.md)
+使用標籤的功能： [目錄](catalog.md)、搜 [尋](search.md)、社 [交標籤雲](tagcloud.md)
 
 製作資訊：
 
-* [使用標籤](../../help/sites-authoring/tags.md)
+* [使用標記](../../help/sites-authoring/tags.md)
 
 若需管理資訊：
 
-* 建立標籤名稱空間（分類）:管 [理標籤](../../help/sites-administering/tags.md)
-* 社群網站設定：請參閱 [標籤](sites-console.md#tagging)
+* 建立標籤名稱空間（分類）: [管理標籤](../../help/sites-administering/tags.md)
+* 社群網站設定： 請參閱 [標籤](sites-console.md#tagging)
 * [標籤使用者產生的內容](../../help/sites-authoring/tags.md)
 * [標籤啟用資源](tag-resources.md)
 
