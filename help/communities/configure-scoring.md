@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4170c7fe48a740e0574a32c7823841dc311fd565
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -264,7 +264,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 * `/content/usergenerated/asi/jcr`
 
-後面是使用者描述檔的路徑，結尾為標章檔案夾，例如
+後面是使用者描述檔的路徑，結尾為標章檔案夾，例如：
 
 * `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
@@ -278,7 +278,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 ## 其他資訊 {#additional-information}
 
-要根據點顯示排序的成員清單：
+要根據點顯示排序的成員清單，請執行以下操作：
 
 * [榜單功能](/help/communities/functions.md#leaderboard-function) ，可加入社群網站或群組範本。
 * [Leerboard component](/help/communities/enabling-leaderboard.md), the featured component of the Leerboard function, for page authoring.
