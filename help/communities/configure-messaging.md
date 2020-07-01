@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 9d952604-f9ef-498f-937b-871817c80226
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '932'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +27,19 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 訊息功能可讓您：
 
-**A** —— 發送消息給一個或多個社區成員&#x200B;**B** - [直接發送給](/help/communities/messaging.md#group-messaging)bulk社區組CC ******************** Message消息——發送消息DD-前轉EJasting —— 前轉消息——回復消息DeleteMessageF-AdaMessageG —— 還原消息——刪除消息——刪除消息
+**A** —— 傳送訊息給一或多個社群成員
+
+**B** —— 大量傳送直 [接訊息給社群成員群組](/help/communities/messaging.md#group-messaging)
+
+**C** —— 發送包含附件的郵件
+
+**D** —— 轉發消息
+
+**E** —— 回覆訊息
+
+**F** —— 刪除消息
+
+**G** —— 恢復已刪除的消息
 
 ![消息部分](assets/messaging-section.png)![還原消息](assets/restore-message.png)
 
@@ -37,6 +52,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 >
 >不支援在作者編輯 `Compose Message, Message, or Message List` 模式中將元件( `Communities`位於元件群組)新增至頁面。
 
+
 ## 配置消息傳遞元件 {#configure-messaging-components}
 
 為社區站點啟用消息傳送時，無需進一步配置即可進行設定。 如果需要更改預設配置，則提供資訊。
@@ -45,10 +61,10 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 要修改消息傳遞功能的「收件箱」、「已發送項目」和「垃圾筒」頁 **面的消息清單的配置，請在作者編輯模**********[](/help/communities/sites-console.md#authoring-site-content)式中開啟站點。
 
-1. 在模 `Preview`式中，選擇「 **消息** 」連結以開啟主消息傳遞頁。 然後選擇「收 **件匣**」、「已 **傳送項目** 」或 **「垃圾桶** 」來設定該訊息清單的元件。
+1. 在模 `Preview` 式中，選擇「 **消息** 」連結以開啟主消息傳遞頁。 然後選擇「收 **件匣**」、「已 **傳送項目** 」或 **「垃圾桶** 」來設定該訊息清單的元件。
 
 1. 在模 `Edit` 式中，選擇頁面上的元件。
-1. 要訪問配置對話框，請通過選擇表徵圖取消 `link`繼承。
+1. 要訪問配置對話框，請通過選擇表徵圖取消繼 `link` 承。
 取消繼承後，可以選擇配置表徵圖以開啟配置對話框。
 
 1. 配置完成後，必須通過選擇表徵圖來恢復繼 `broken link` 承。
@@ -97,7 +113,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 * **刪除按鈕**
 
-   如果勾選，則顯示 `Delete`允許將消息標籤為已讀取的按鈕。 如果也勾選，將複製 **`Message Options`** 刪除功能。
+   如果勾選，則顯示 `Delete` 一個按鈕，允許將消息標籤為已讀取。 如果也勾選，將複製 **`Message Options`** 刪除功能。
 
 * **訊息選項**
 
