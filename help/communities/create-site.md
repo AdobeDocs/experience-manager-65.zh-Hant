@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: d5f4b8a8c42df86831bb57b73949e443ec19d7ea
+workflow-type: tm+mt
+source-wordcount: '1661'
+ht-degree: 1%
 
 ---
 
@@ -29,11 +32,11 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 要開始建立新的社區站點，請執行以下操作：
 
-* 選擇按 `Create`鈕。
+* 選擇按 `Create` 鈕。
 
 ![createcommunitysite](assets/createcommunitysite.png)
 
-### 步驟1:網站範本 {#step-site-template}
+### 步驟1: 網站範本 {#step-site-template}
 
 ![建立網站的範本](assets/create-site.png)
 
@@ -41,22 +44,22 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 * **社群網站標題**: `Getting Started Tutorial`
 * **社群網站說明**: `A site for engaging with the community.`
-* **社群網站根**:(對於預設根，保留空白 `/content/sites`)
-* **雲端設定**:（若未指定雲端設定，請留空）提供指定雲端設定的路徑。
-* **社群網站基本語言**:（單語言不受影響）英文)使用下拉式清單，從 *可用語言* (德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、中文（繁體）和簡體中文)選擇一或多種基本語言。 會針對新增的每種語言建立一個社群網站，並依照多語言網站翻譯內容中所述的最佳實務，存在於相 [同的網站資料夾中](/help/sites-administering/translation.md)。 每個網站的根頁面將包含一個子頁面，該子頁面由其中一種語言的語言代碼命名，例如英文的&#39;en&#39;或法文的&#39;fr&#39;。
+* **社群網站根**: (對於預設根，保留空白 `/content/sites`)
+* **雲端設定**: （若未指定雲端設定，請留空）提供指定雲端設定的路徑。
+* **社群網站基本語言**: （單語言不受影響） 英文)使用下拉式清單，從 *可用語言* (德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、中文（繁體）和簡體中文)選擇一或多種基本語言。 會針對新增的每種語言建立一個社群網站，並依照多語言網站翻譯內容中所述的最佳實務，存在於相 [同的網站資料夾中](/help/sites-administering/translation.md)。 每個網站的根頁面將包含一個子頁面，該子頁面由其中一種語言的語言代碼命名，例如英文的&#39;en&#39;或法文的&#39;fr&#39;。
 
-* **社群網站名稱**:參與
+* **社群網站名稱**: 參與
 
    * 在建立網站後不易變更名稱，請再檢查此名稱
    * 初始URL將顯示在「社群網站名稱」下方
    * 若為有效的URL，請附加基本語言代碼+ &quot;。html&quot;
    * *例如*,https://localhost:4502/content/sites/ `engage/en.html`
 
-* **範本**:向下拉選擇 `Reference Site`
+* **範本**: 向下拉選擇 `Reference Site`
 
-選擇下 **一步**
+* 選擇 **下一步**。
 
-### 步驟2:設計 {#step-design}
+### 步驟2: 設計 {#step-design}
 
 「設計」步驟會分兩節顯示，供您選取主題和品牌橫幅：
 
@@ -68,11 +71,13 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 （可選）上傳橫幅影像以顯示在網站頁面上。 橫幅會釘在瀏覽器的左邊，位於社群網站標題和導覽連結之間。 橫幅高度會裁切為120像素。 橫幅的大小不會調整為適合瀏覽器寬度和120像素高度。
 
-![chlimage_1-58](assets/chlimage_1-58.png) ![chlimage_1-59](assets/chlimage_1-59.png)
+![chlimage_1-284](assets/chlimage_1-284.png)
+
+![上傳——影像——網站](assets/upload-image-site.png)
 
 選擇 **下一步**。
 
-### 步驟3:設定 {#step-settings}
+### 步驟3: 設定 {#step-settings}
 
 在「設定」步驟中，在選取 `Next`之前，請注意有7個區段可提供使用者管理、標籤、協調、群組管理、分析、翻譯和啟用等組態的存取權。
 
@@ -92,6 +97,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 >
 >對於生產環境，必須建立自訂的Facebook和Twitter應用程式。 請參 [閱使用Facebook和Twitter的社交登入](/help/communities/social-login.md)。
 
+
 ![社群網站設定](assets/site-settings.png)
 
 #### TAGGING {#tagging}
@@ -103,7 +109,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 * 類型 `tut`
 * 選取 `Tutorial`
 
-![chlimage_1-60](assets/chlimage_1-60.png)
+![chlimage_1-286](assets/chlimage_1-286.png)
 
 #### ROLES {#roles}
 
@@ -120,13 +126,14 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 >
 >[隧道服務](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) ，允許選擇僅存在於發佈環境中的成員和組。
 
+
 ![新站點中的用戶角色](assets/site-admin-1.png)
 
 #### MODERATION {#moderation}
 
 接受預設的全域設 [定](/help/communities/sites-console.md#moderation) ，以協調使用者產生的內容(UGC)。
 
-![chlimage_1-61](assets/chlimage_1-61.png)
+![chlimage_1-287](assets/chlimage_1-287.png)
 
 #### ANALYTICS {#analytics}
 
@@ -134,7 +141,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 請參閱 [社群功能的Analytics設定](/help/communities/analytics.md)。
 
-![chlimage_1-62](assets/chlimage_1-62.png)
+![chlimage_1-288](assets/chlimage_1-288.png)
 
 #### TRANSLATION {#translation}
 
@@ -147,7 +154,7 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 * 選擇 **翻譯整個頁**
 * 保留預設永續性選項
 
-![chlimage_1-63](assets/chlimage_1-63.png)
+![chlimage_1-289](assets/chlimage_1-289.png)
 
 #### ENABLEMENT {#enablement}
 
@@ -157,11 +164,13 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 
 選擇 **下一步**。
 
-### 步驟4:建立社群網站 {#step-create-communities-site}
+![chlimage_1-290](assets/chlimage_1-290.png)
+
+### 步驟4: 建立社群網站 {#step-create-communities-site}
 
 Select **Create.**
 
-![chlimage_1-64](assets/chlimage_1-64.png)
+![chlimage_1-291](assets/chlimage_1-291.png)
 
 當流程完成時，新站點的資料夾將顯示在「社區——站點」控制台中。
 
@@ -210,18 +219,15 @@ Select **Create.**
 >
 >在作者實例上，從主菜單：
 >
->1. 導航至「 **[!UICONTROL 工具」>「操作」>「複製]** 」菜單。
+>1. 導覽至「 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** >復 **[!UICONTROL 制]** 」菜單。
 >1. 選擇 **[!UICONTROL 作者上的代理]**。
 >1. 選擇 **[!UICONTROL 預設代理（發佈）]**。
 >1. 在「設 **[!UICONTROL 定]**」旁，選 **[!UICONTROL 擇編輯]**。
 >1. 在「代理設定」的彈出對話框中，選擇「傳 **[!UICONTROL 輸]** 」頁籤。
->1. 在URI中，將埠號4503更改為所需的埠號>
-   >    * 例如，要使用埠6103:
-      >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. 在URI中，將埠號4503更改為所需的埠號。 例如，要使用埠6103: https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. 選擇 **[!UICONTROL 確定]**。
+>1. （可選）選擇「 **[!UICONTROL 清除]** 」或「 **[!UICONTROL 強制重試]** 」以重設複製隊列。
 >
-1. 選擇 **[!UICONTROL 確定]**。
-1. （可選）選擇「 **[!UICONTROL 清除]** 」或「 **[!UICONTROL 強制重試]** 」以重設複製隊列。
-
 
 
 
@@ -229,17 +235,17 @@ Select **Create.**
 
 在確保發佈伺服器正在執行後，選取要發佈社群網站的世界圖示。
 
-![chlimage_1-65](assets/chlimage_1-65.png)
+![chlimage_1-292](assets/chlimage_1-292.png)
 
 成功發佈社群網站後，會短暫顯示訊息：
 
-![chlimage_1-66](assets/chlimage_1-66.png)
+![chlimage_1-293](assets/chlimage_1-293.png)
 
 ### 新社群使用者群組 {#new-community-user-groups}
 
 除了新社群網站外，還會建立新的使用者群組，其中已針對各種管理功能設定適當的權限。 如需詳細資訊，請 [造訪社群網站的使用者群組](/help/communities/users.md#usergroupsforcommunitysites)。
 
-對於這個新社群網站，若在步驟1中指定網站名稱「參與」，則可從「群組」主控台(全域導覽 [](/help/communities/members.md) :社群、群組):
+對於這個新社群網站，若在步驟1中指定網站名稱「參與」，則可從「群組」主控台(全域導覽 [](/help/communities/members.md) : 社群、群組):
 
 * 社群互動社群經理
 * 社群參與群組管理員
@@ -254,11 +260,11 @@ Select **Create.**
 * 社群參與協調者
 * 社群參與會員（間接地以協調者群組成員的身分）
 
-![chlimage_1-67](assets/chlimage_1-67.png)
+![chlimage_1-294](assets/chlimage_1-294.png)
 
 #### https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}
 
-![chlimage_1-68](assets/chlimage_1-68.png)
+![chlimage_1-311](assets/chlimage_1-311.png)
 
 ## 配置驗證錯誤 {#configure-for-authentication-error}
 
@@ -293,7 +299,7 @@ Select **Create.**
 
    * 新增屬性：
 
-      * **Name** sling:match
+   * **Name** sling:match
       * **類型字串**
       * **值** localhost.4503/$（必須以&#39;$&#39;字元結尾）
    * 新增屬性：
@@ -313,15 +319,16 @@ Select **Create.**
 >
 >若要停用，只需在屬 `sling:match` 性值前加上&#39;x&#39; - `xlocalhost.4503/$` —— 和 **全部儲存**。
 
-![chlimage_1-69](assets/chlimage_1-69.png)
 
-#### 疑難排解：保存映射時出錯 {#troubleshooting-error-saving-map}
+![chlimage_1-297](assets/chlimage_1-297.png)
+
+#### 疑難排解： 保存映射時出錯 {#troubleshooting-error-saving-map}
 
 如果無法保存更改，請確保節點名稱為 `localhost.4503`，使用「dot」分隔符，而不使用「冒號」 `localhost:4503` 分隔符，因為 `localhost`它不是有效的命名空間前置詞。
 
-![chlimage_1-70](assets/chlimage_1-70.png)
+![chlimage_1-298](assets/chlimage_1-298.png)
 
-#### 疑難排解：無法重新導向 {#troubleshooting-fail-to-redirect}
+#### 疑難排解： 無法重新導向 {#troubleshooting-fail-to-redirect}
 
 規則運算式字&#x200B;**串結尾的&#39;**`sling:match``https://localhost:4503/` $&#39;至關重要，因此只會正確映射，否則重新導向值會前置詞至URL中server:port之後可能存在的任何路徑。 因此，當AEM嘗試重新導向至登入頁面時，它會失敗。
 
@@ -336,4 +343,5 @@ Select **Create.**
 >[!NOTE]
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
+
 
