@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '420'
+ht-degree: 2%
 
 ---
 
@@ -33,15 +36,15 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 若要開始，請建立簡單的社 [群網站範本](sites.md)。
 
-從作者實例的全域導覽中，選擇「 **[!UICONTROL 工具>社群>網站範本」]**。
+從作者實例的全域導覽中，選擇「 **[!UICONTROL 工具]** >社 **[!UICONTROL 群]** >網 **[!UICONTROL 站範本]**」。
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
 * 選取 `Create button`
 * 基本資訊
 
-   * `Name`:單頁範本
-   * `Description`:由單一頁面函陣列成的範本。
+   * `Name`: 單頁範本
+   * `Description`: 由單一頁面函陣列成的範本。
    * 選取 `Enabled`
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
@@ -51,7 +54,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
    * 將函式 `Page` 拖曳至範本產生器
    * 對於配置函式詳細資訊，請輸入
 
-      * `Title`:單頁
+      * `Title`: 單頁
       * `URL`: 頁面
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
@@ -71,17 +74,17 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 * 步驟 `1 - Site Template`
 
-   * `Title`:簡單社群網站
-   * `Description`:由單一頁面組成的社群網站，可供實驗。
+   * `Title`: 簡單社群網站
+   * `Description`: 由單一頁面組成的社群網站，可供實驗。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
-   * `Name`:樣本
+   * `Name`: 樣本
 
       * url = http://localhost:4502/content/sites/sample
-   * `Template`:選擇 `Single Page Template`
 
+      * `Template`: 選擇 `Single Page Template`
+      ![chlimage_1-86](assets/chlimage_1-86.png)
 
-![chlimage_1-86](assets/chlimage_1-86.png)
 
 * 選取 `Next`
 * 步驟 `2 - Design`
@@ -95,7 +98,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 * 選取 `Create`
 
-![chlimage_1-87](assets/chlimage_1-87.png)
+   ![chlimage_1-87](assets/chlimage_1-87.png)
 
 ## 發佈網站 {#publish-the-site}
 
