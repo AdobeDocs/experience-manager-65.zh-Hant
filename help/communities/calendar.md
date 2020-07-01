@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 5%
@@ -160,7 +160,7 @@ ht-degree: 5%
 
 * **允許的命名空間**
 
-   如果在** `Allow Tagging` 設定**標籤下勾選，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
+   如果已勾選 `Allow Tagging` 「設定」標籤下 **的選項** ，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
 
 * **建議限制**
 
