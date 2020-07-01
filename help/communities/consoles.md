@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 1%
 
 ---
 
@@ -35,6 +38,7 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 >
 >在發佈環境中，當登入 [會員具有適當權限](sites-console.md) ，社群網站 `Administration` 就會顯示功能表項目。
 
+
 ## 全域導覽面板 {#global-navigation-panel}
 
 ![chlimage_1-91](assets/chlimage_1-91.png)
@@ -56,7 +60,7 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 
 * [審核](moderation.md)
 
-   「協調控制台」可用於大量協調UGC和作者環境。 在發佈環境中可以存取類似的大量協調控制台，讓指派一或多個社群網站之社群協調 [者角色的社群](users.md#publishenvironmentusersandgroups) 成員也能存取。
+   「協調控制台」可用於大量協調UGC和作者環境。 在發佈環境中可以存取類似的大量協調控制台，讓指派一或多個社群網站之社 [群協調者](users.md#publishenvironmentusersandgroups) 角色的社群成員也能存取。
 
 * [成員、組](members.md)
 
@@ -72,4 +76,4 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 
 ## 工具控制台 {#tools-console}
 
-若要從 [全域導覽存取Communities Tools](tools.md) （之前稱為管理主控台）:工 **[!UICONTROL 具>社群]**
+若要從 [全域導覽存取Communities Tools](tools.md) （之前稱為管理主控台）: **[!UICONTROL 工具]** >社 **[!UICONTROL 群]**
