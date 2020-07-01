@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
+source-git-commit: 36c9b3d60331e7482655bc8039153b6b86d721f9
 workflow-type: tm+mt
-source-wordcount: '7603'
+source-wordcount: '7665'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 文章說明在JEE上執行AEM Forms的伺服器保全建議和最佳實務。 對於您的作業系統和應用程式伺服器，此檔案並非完整的主機強化檔案。 相反地，本文說明您應實作的各種安全性強化設定，以增強在公司內部網路中執行的JEE上AEM Forms的安全性。 不過，為確保JEE應用程式伺服器上的AEM Forms保持安全，您也應實作安全性監控、偵測和回應程式。
 
-本文描述在安裝和配置生命週期的以下階段應應用的強化技術：
+本文描述在安裝和配置生命週期的以下階段應用的強化技術：
 
 * **預安裝：** 在JEE上安裝AEM Forms之前，請先使用這些技巧。
 * **安裝：** 在AEM Forms on JEE安裝程式中使用這些技巧。
@@ -427,7 +427,7 @@ AEM Forms資料庫架構包含有關係統設定和商業程式的敏感資訊�
 
 ### 審核和記錄 {#auditing-and-logging}
 
-正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入的項目，以及重要應用程式事件，例如建立或刪除關鍵記錄。
+正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入等項目，以及重要應用程式事件，例如建立或刪除重要記錄。
 
 您可以使用審計來檢測多種攻擊類型，包括：
 
@@ -455,6 +455,16 @@ AEM Forms資料庫架構包含有關係統設定和商業程式的敏感資訊�
   </tr> 
  </tbody> 
 </table>
+
+### 讓非管理員使用者可執行PDF產生器
+
+您可以讓非管理員使用者使用PDF產生器。 一般而言，只有具有管理權限的使用者才能使用PDF產生器。 執行下列步驟，讓非管理員使用者執行PDF產生器：
+
+1. 建立環境變數名稱PDFG_NON_ADMIN_ENABLED。
+
+1. 將變數的值設為TRUE。
+
+1. 重新啟動AEM表格例項。
 
 ## 在JEE上設定AEM Forms，以便在企業以外存取 {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
@@ -1036,7 +1046,7 @@ AEM Forms on JEE使用檔案系統的方式如下：
 
 ### 禁用目錄瀏覽 {#disable-directory-browsing}
 
-登入Administration Console後，可修改URL，以瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
+登入Administration Console後，可修改URL來瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
 
 ```as3
 https://<servername>:8080/adminui/secured/ 
