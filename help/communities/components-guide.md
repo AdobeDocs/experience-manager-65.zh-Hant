@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '1203'
+ht-degree: 1%
 
 ---
 
 
-# 社群元件指南 {#community-components-guide}
+# 社群元件指南  {#community-components-guide}
 
 社群元件指南是社交元件架構( [Social Components Framework,SCF)的互動式開發工具](scf.md)。 它提供可用的AEM Communities元件清單，或由多個元件建立的更複雜功能。
 
@@ -33,10 +36,10 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 與Communities元件的互動會依下列各項而異：
 
-* 伺服器（作者或發佈）
-* 網站訪客是否登入
-* 如果登入，則指派給成員的權限
-* 是否使用預設SRP( [JSRP](jsrp.md))
+* 伺服器（作者或發佈）。
+* 網站訪客是否登入。
+* 如果登入，則指派給成員的權限。
+* 是否使用預設SRP( [JSRP](jsrp.md))。
 
 在作者上，若要進入編輯模式，請插入 `editor.html` 或作為 `cf#` 伺服器名稱后的第一個路徑區段：
 
@@ -60,6 +63,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 >
 >如果不熟悉AEM，請檢視基本處理的 [檔案](../../help/sites-authoring/basic-handling.md)。
 
+
 ### 首頁 {#home-page}
 
 本指南提供可在頁面左側預覽和建立原型的SCF元件清單。
@@ -76,15 +80,15 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 此時將顯示指南的主體：
 
-1. 標題：所選元件的名稱
-1. [用戶端程式庫](#client-side-libraries):一或多個必要類別的清單
-1. [可包含](scf.md#add-or-include-a-communities-component):如果元件可以動態包含，則可在作者編輯模式中切換狀態：
+1. 標題： 所選元件的名稱
+1. [用戶端程式庫](#client-side-libraries): 一或多個必要類別的清單
+1. [可包含](scf.md#add-or-include-a-communities-component): 如果元件可以動態包含，則可在作者編輯模式中切換狀態：
 
-   * 如果新增，顯示的文字為：&quot;此元件通過其par節點包含。&quot;
-   * 如果包含，則顯示的文字為：&quot;此元件是動態包含的。&quot;
+   * 如果新增，顯示的文字為： &quot;此元件通過其par節點包含。&quot;
+   * 如果包含，則顯示的文字為： &quot;此元件是動態包含的。&quot;
    * 如果不包含，則不顯示任何文字
 
-1. 元件或功能範例：元件或特徵的活動實例。 如果元件，則可隨著對標籤區段中提供的範本、CSS和資料所做的變更而變更。
+1. 元件或功能範例： 元件或特徵的活動實例。 如果元件，則可隨著對標籤區段中提供的範本、CSS和資料所做的變更而變更。
 
 >[!NOTE]
 >
@@ -106,10 +110,10 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
    如果取消選中，「元件指南」將使用儲存庫中的現有資源（作為par節點子節點的jcr節點）。
 
-   * 顯示的文字為：&quot;此元件通過其par節點包含。&quot;
+   * 顯示的文字為： &quot;此元件通過其par節點包含。&quot;
    如果勾選，「元件指南」會使用sling來動態包含子節點resourceType（非現有資源）的元件。
 
-   * 顯示的文字為：&quot;此元件是動態包含的。&quot;
+   * 顯示的文字為： &quot;此元件是動態包含的。&quot;
    預設為未勾選。
 
 ### 發佈互動 {#publish-interactions}
@@ -156,9 +160,9 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 1. 新增屬性
 
-   * **名稱**`scg:showIde`
-   * **類型**`String`
-   * **值**`true`
+   * **名稱** `scg:showIde`
+   * **類型** `String`
+   * **值** `true`
 
 1. 選擇「 **[!UICONTROL 全部保存」]**
 1. 重新載入指南中的「注釋」頁面
