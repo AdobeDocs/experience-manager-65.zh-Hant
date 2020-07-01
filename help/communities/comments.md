@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
+workflow-type: tm+mt
+source-wordcount: '994'
+ht-degree: 4%
 
 ---
 
@@ -24,16 +27,17 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 本檔案說明：
 
-* 新增 `Comments`至頁面。
-* 元件的配置 `Comments`設定。
+* 新增 `Comments` 至頁面。
+* 元件的配置 `Comments` 設定。
 
 >[!NOTE]
 >
 >不支援匿名張貼留言。 網站訪客必須註冊（成為會員）並登入以參與。
 
+
 ### 新增注釋至頁面 {#adding-comments-to-a-page}
 
-若要在作 `Comments`者模式下將元件新增至頁面，請使用元件瀏覽器來尋找
+若要在作 `Comments` 者模式中將元件新增至頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Comments`
 
@@ -41,19 +45,22 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/essentials-comments.md#essentials-for-client-side) ，元件就會以此 `Comments`顯示。
+當包含 [所需的用戶端程式庫](/help/communities/essentials-comments.md#essentials-for-client-side) ，元件就會以此 `Comments` 顯示。
 
-![chlimage_1-143](assets/chlimage_1-143.png)
+![chlimage_1-428](assets/chlimage_1-428.png)
 
 >[!NOTE]
 >
->頁面上 `Comments`只能存在一個元件。 請注意，數個社群功能已包含注釋，例如部落格、行事歷、論壇、QnA和評論。
+>頁面上 `Comments` 只能存在一個元件。 請注意，數個社群功能已包含注釋，例如部落格、行事歷、論壇、QnA和評論。
+
 
 ### 設定注釋 {#configuring-comments}
 
 選擇要訪問 `Comments` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![配置表徵圖](assets/configure.png)![注釋設定](assets/commentssettings.png)
+![配置表徵圖](assets/configure.png)
+
+![注釋設定](assets/commentssettings.png)
 
 #### 「注釋」頁籤 {#comments-tab}
 
@@ -81,7 +88,7 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 * **允許的檔案類型**
 
-   僅在勾選「允許檔案上傳」時相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選「允許檔案上傳」時相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **RTF 編輯器**
 
@@ -157,19 +164,19 @@ source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 在已知自訂資源類型後，進入 [Design Mode](/help/sites-authoring/default-components-designmode.md) ，然後按兩下置入的元 `Comments` 件，以開啟具有額外標籤的對話方塊。
 
-在「資 **源類型** 」頁籤下，為元件的新實例指定自定義資源 `Comments or Voting`類型：
+在「資 **源類型** 」頁籤下，為元件的新實例指定自定義資源 `Comments or Voting` 類型：
 
-![chlimage_1-144](assets/chlimage_1-144.png)
+![chlimage_1-429](assets/chlimage_1-429.png)
 
 * **評論資源類型**
 
-   導覽至/apps中延伸元件( `comment`單一註解)的resourceType。 例如， `/apps/social/commons/components/hbs/comments/comment`
+   導覽至/apps中延伸元件( `comment` 單一註解)的resourceType。 例如， `/apps/social/commons/components/hbs/comments/comment`
 
    此資源可識別訪客張貼留言時所建立之UGC的resourceType。
 
 * **投票資源類型**
 
-   導覽至/apps中延伸元件 `voting`的resourceType。 例如， `/apps/social/components/hbs/voting`
+   導覽至/apps中延伸元件 `voting` 的resourceType。 例如， `/apps/social/components/hbs/voting`
 
    此資源可識別訪客張貼投票時所建立之UGC的資源類型。
 
