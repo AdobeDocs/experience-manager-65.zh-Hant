@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: 2d04b33258a3727a088461055649c28d57a271c5
+source-git-commit: 530b1c3c1922eb10622888804a603cc82b3eb3aa
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 12%
+source-wordcount: '1148'
+ht-degree: 11%
 
 ---
 
@@ -49,6 +49,7 @@ ht-degree: 12%
 >* [項目——使用任務](/help/sites-authoring/task-content.md)
 >* [工作流程](/help/sites-authoring/workflows.md)
 >* [表單](/help/forms/home.md)
+
 >
 
 
@@ -123,6 +124,7 @@ ht-degree: 12%
    * **分組依據**
    * **排程** 或無 ****
    * **卡片大小**
+
    ![wf-92](assets/wf-92.png)
 
 * **清單檢視**
@@ -131,19 +133,28 @@ ht-degree: 12%
 
    * **排序欄位**
    * **排序順序**
+
    ![wf-83](assets/inbox-settings.png)
 
 ### 收件匣——管理控制 {#inbox-admin-control}
 
 管理控制選項可讓管理員：
 
+* 自訂AEM收件匣欄
+
 * 自訂標題文字和標誌
 
 * 控制頁首中可用導覽連結的顯示
 
-「管理控制」選項僅對管理員或工作流程管理員群組的成員顯示。
+「管理控制」選項僅對或群組的成員 `administrators` 顯 `workflow-administrators` 示。
 
-![admin-control](assets/admin-control.png)
+* **欄自訂**: 自訂AEM收件匣以變更欄的預設標題、重新排序欄位，並根據工作流程的資料顯示其他欄位。
+   * **添加列**: 選取要新增至AEM收件匣的欄。
+   * **編輯欄**: 將滑鼠暫留在欄標題上，並點選 ![編輯](assets/edit.svg) 圖示以輸入欄顯示名稱。
+   * **刪除列**: 點選「刪 ![除」圖示](assets/delete_updated.svg) ，即可從「AEM收件匣」中刪除欄。
+   * **移動列**: 拖曳移 ![動圖示](assets/move_updated.svg) ，將欄移至AEM Inbox中的新位置。
+
+   ![admin-control](assets/admin-control-column-customize.png)
 
 * **品牌自訂**
 
@@ -178,6 +189,7 @@ ht-degree: 12%
    * **退回** 到上一步。
    * 檢視工作流程的裝載。
    * 從項目建立專案。
+
    >[!NOTE]
    >
    >如需詳細資訊，請參閱：
@@ -190,6 +202,7 @@ ht-degree: 12%
    * 將開啟與操作相適應的對話框。
    * 將啟動操作嚮導。
    * 檔案頁面隨即開啟。
+
    例如，重新 **指派** 將開啟對話方塊：
 
    ![wf-85](assets/wf-85.png)
@@ -218,11 +231,13 @@ ht-degree: 12%
       * **任務優先順序**
       * **開始日期**
       * **到期日期**
+
    ![wf-86](assets/wf-86.png)
 
    * **進階**
 
       * **名稱**: 這將用於形成URL; 如果空白，則會以標題為 **基礎**。
+
    ![wf-87](assets/wf-87.png)
 
 1. 選擇 **提交**。
