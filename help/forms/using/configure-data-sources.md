@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 9df949b0069dad7fc1627977097cec5546cd845f
+workflow-type: tm+mt
+source-wordcount: '1558'
+ht-degree: 0%
 
 ---
 
@@ -41,6 +44,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
    * JDBC驅動程式的Java類名
    * JDBC連接URI
    * 用於與JDBC驅動程式建立連接的用戶名和密碼
+
    >[!NOTE] {graybox=&quot;true&quot;}
    >
    >在設定資料來源之前，請務必先加密機密資訊，例如密碼。 要加密：
@@ -49,6 +53,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
    >    
    >    1. 請轉至https://&#39;[server]:[port]&#39;/system/console/crypto。
    >    1. 在「純 **[!UICONTROL 文本]** 」欄位中，指定要加密的口令或任何字串，然後按一下「保 **[!UICONTROL 護」]**。
+
    >    
    >    
    >    
@@ -76,6 +81,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 
    * `name=profile/phoneNumber,type=string`
    * `name=profile/empLocation/*/city,type=string`
+
    >[!NOTE] {graybox=&quot;true&quot;}
    >
    >上例 **中的*** ，表示AEM使用者設定檔中，CRXDE `profile/empLocation/` 結構中節點下的所有節點。 表單資料模型可以訪問節點下 `city` 任何節點 `string` 中的類型屬 `profile/empLocation/` 性。 但是，包含指定屬性的節點必須遵循一致的結構。
@@ -120,11 +126,12 @@ REST風格的Web服務可在Swagger定義檔 [案中使用](https://swagger.io/s
    * 從「Swagger來源」下拉式清單中選取「URL」或「檔案」，並據以指定Swagger定義檔案的Swagger URL，或從本機檔案系統上傳Swagger檔案。
    * 根據Swagger來源輸入，下列欄位會預先填入值：
 
-      * 方案：REST API使用的傳輸通訊協定。 下拉式清單中顯示的方案類型數目取決於Swagger來源中定義的方案。
-      * 主機：提供REST API的主機的域名或IP地址。 這是一個強制欄位。
-      * 基本路徑：所有API路徑的URL首碼。 此欄位為選擇性欄位。\
+      * 方案： REST API使用的傳輸通訊協定。 下拉式清單中顯示的方案類型數目取決於Swagger來源中定義的方案。
+      * 主機： 提供REST API的主機的域名或IP地址。 這是一個強制欄位。
+      * 基本路徑： 所有API路徑的URL首碼。 此欄位為選擇性欄位。\
          如有必要，請編輯這些欄位的預先填入值。
    * 選擇驗證類型— 無、OAuth2.0、基本驗證、API金鑰或自訂驗證— 訪問REST風格的服務，並相應地提供驗證的詳細資訊。
+
    如果您選 **[!UICONTROL 取API金鑰]** ，則請指定API金鑰的值。 API金鑰可以以請求標題或查詢參數的形式傳送。 從「位置」( **[!UICONTROL Location]** )下拉式清單中選取其中一個選項，並在「參數名稱」(Parameter Name)欄位中指定標題或查詢 **[!UICONTROL 參數的名稱]** 。
 
 1. 點選 **[!UICONTROL 「建立]** 」以建立REST風格服務的雲端設定。
@@ -142,7 +149,10 @@ REST風格的Web服務可在Swagger定義檔 [案中使用](https://swagger.io/s
 
    * Web服務的WSDL URL。
    * 服務端點. 在此欄位中指定一個值，以覆蓋WSDL中提及的服務端點。
-   * 選擇驗證類型— 無、OAuth2.0、基本驗證或自訂驗證— 存取SOAP服務，並據以提供驗證的詳細資訊。
+   * 選擇驗證類型— 無、OAuth2.0、基本驗證、自訂驗證或X509 Token — 存取SOAP服務，並據以提供驗證的詳細資訊。
+
+      如果您選取「X509 Token」做為「驗證」類型，請設定X509憑證。 如需詳細資訊，請參 [閱設定憑證](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
+在「金鑰別名」欄位中指定X509憑證的 **[!UICONTROL KeyStore別名]** 。 在「到線時間」欄位中，指定驗證要求保持有效的 **[!UICONTROL 時間(秒]** )。 （可選）選擇簽署消息正文或時間戳標題或兩者。
 
 1. 點選 **[!UICONTROL 「建立]** 」以建立SOAP網站服務的雲端設定。
 
@@ -162,6 +172,7 @@ OData服務由其服務根URL標識。 若要在AEM雲端服務中設定OData服
 
    * 要配置的OData服務的服務根URL。
    * 選擇驗證類型— 無、OAuth2.0、基本驗證或自訂驗證— 訪問OData服務，並相應地提供驗證的詳細資訊。
+
    >[!NOTE]
    您必須選擇OAuth 2.0驗證類型，以OData端點作為服務根目錄與Microsoft Dynamics服務連接。
 
