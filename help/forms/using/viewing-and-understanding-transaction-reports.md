@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 4ee3b99a3f0a5d37441eee76c3ec747afcf2e32e
+workflow-type: tm+mt
+source-wordcount: '857'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 交易報表可讓您擷取並追蹤已提交表單、已處理檔案和已轉譯檔案的數量。 追蹤這些交易的目的，是為產品使用做出明智的決定，並重新平衡對硬體和軟體的投資。 如需詳細資訊，請參 [閱「AEM Forms交易報表概觀」](../../forms/using/transaction-reports-overview.md)。
 
-## 設定事務處理報告 {#setting-up-transaction-reports}
+## 設定事務處理報告  {#setting-up-transaction-reports}
 
 交易報表功能是AEM表單附加元件套件的一部分。 如需在所有作者和發佈例項上安裝附加元件套件的詳細資訊，請參 [閱安裝和設定AEM表單](/help/forms/using/installing-configuring-aem-forms-osgi.md)。 安裝AEM Forms附加套件後，請執行下列動作：
 
@@ -32,6 +35,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 >* AEM Forms交易報表不支援僅包含發佈例項的拓撲。
 >* 在使用事務報告之前，請確保對所有發佈實例啟用反向複製。
 >* 交易資料會從發佈例項反向複製至僅對應的作者或處理例項。 作者或處理例項無法進一步將資料複製至其他例項。
+
 >
 
 
@@ -83,11 +87,11 @@ AEM Forms會顯示自設定日期起的交易報表，如以下摘要報表所�
 
 * 使用「 **將日期重設為今天** 」選項來重設交易記錄。 將日期重設為今天時，所有先前的交易記錄都會遺失。 當您重設作者例項的日期時，變更不會影響「發佈」例項的交易報表，反之亦然。
 * 使用「 **僅顯示發佈實例的事務」** ，查看僅在已配置的發佈實例或發佈場上發生的所有事務。
-* 使用類別：Document Processed ****、Documents **Rendered**&#x200B;和Forms **Submitted** to view correspondations. 有關這些類別中入帳的事務處理類型，請參 [閱：可開單事務處理報表API](../../forms/using/transaction-reports-billable-apis.md)。
+* 使用類別： **Document Processed**、Documents **Rendered**, and **Forms Submitted** to view corresponds transactions. 有關這些類別中入帳的事務處理類型，請參 [閱：可開單事務處理報表API](../../forms/using/transaction-reports-billable-apis.md)。
 
 ## 查看事務報告日誌 {#view-transaction-reporting-logs}
 
-交易報表會將報表中顯示的所有資訊以及記錄檔中的某些其他資訊。 記錄檔中提供的資訊對進階使用者有幫助。 例如，記錄檔將交易分為多個細分類別，與報表中顯示的三個統一類別比較。 記錄檔位於/crx-quickstart/logs/aem-forms-transaction.log。
+交易報表會將報表中顯示的所有資訊以及記錄檔中的某些其他資訊。 記錄檔中提供的資訊對進階使用者有幫助。 例如，記錄檔將交易分為多個細分類別，與報表中顯示的三個統一類別比較。 這些日誌可在目錄中 `error.log` 的檔案中 `/crx-repository/logs/` 使用。 即使您未從AEM Web Console啟用交易報表，記錄檔也可供使用。
 
 ## 相關文章 {#related-articles}
 
