@@ -1,21 +1,24 @@
 ---
 title: 使用代理UI準備和傳送互動式通訊
 seo-title: 使用代理UI準備和傳送互動式通訊
-description: 代理UI允許代理準備併發送互動式通信到後置進程。 工程師會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
+description: 代理UI允許代理準備併發送互動式通信到後置進程。 代理程式會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 seo-description: 使用代理UI準備和傳送互動式通訊
 uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 4c4a5a15e9cbb5cc22bc5999fb40f1d6db3bb091
+workflow-type: tm+mt
+source-wordcount: '1641'
+ht-degree: 0%
 
 ---
 
 
 # 使用代理UI準備和傳送互動式通訊 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
-代理UI允許代理準備併發送互動式通信到後置進程。 工程師會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
+代理UI允許代理準備併發送互動式通信到後置進程。 代理程式會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 
 ## 概覽 {#overview}
 
@@ -23,9 +26,9 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 使用代理UI準備互動式通訊時，代理會先在代理UI中管理互動式通訊的下列方面，再將它送出至後置程式：
 
-* **資料**:Agent UI的「資料」頁籤顯示「交互通信」中任何可代理編輯的變數和解鎖表單資料模型屬性。 這些變數／屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立。 「資料」標籤也包含XDP/列印頻道範本中建立的任何欄位。 僅當代理可編輯「互動式通信」中的任何變數、表單資料模型屬性或欄位時，才會顯示「資料」頁籤。
-* **內容**:在「內容」索引標籤中，代理管理「互動式通訊」中的檔案片段和內容變數等內容。 在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
-* **附件**:只有當Interactive Communication具有任何附件或Agent具有庫訪問權限時，「附件」頁籤才會出現在Agent UI。 工程師可以或不允許更改或編輯附件。
+* **資料**: Agent UI的「資料」頁籤顯示「交互通信」中任何可代理編輯的變數和解鎖表單資料模型屬性。 這些變數／屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立。 「資料」標籤也包含XDP/列印頻道範本中建立的任何欄位。 僅當代理可編輯「互動式通信」中的任何變數、表單資料模型屬性或欄位時，才會顯示「資料」頁籤。
+* **內容**: 在「內容」索引標籤中，代理管理「互動式通訊」中的檔案片段和內容變數等內容。 在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
+* **附件**: 只有當Interactive Communication具有任何附件或Agent具有庫訪問權限時，「附件」頁籤才會出現在Agent UI。 工程師可以或不允許更改或編輯附件。
 
 ## 使用代理UI準備互動式通訊 {#prepare-interactive-communication-using-the-agent-ui}
 
@@ -38,7 +41,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
    ![openagentiui](assets/openagentiui.png)
 
-   根據Interactive Communication的內容和屬性，代理UI將顯示為以下三個頁籤：資料、內容和附件。
+   根據Interactive Communication的內容和屬性，代理UI將顯示為以下三個頁籤： 資料、內容和附件。
 
    ![agentitabs](assets/agentuitabs.png)
 
@@ -60,7 +63,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 1. 視需要在「內容」索引標籤中編輯檔案片段。 若要將焦點放在內容階層中的相關片段上，您可以在「互動式通訊」預覽中點選相關行或段落，或直接在「內容」階層中點選片段。
 
-   例如，檔案片段的行為是「立即線上付款……」」在下圖的預覽中選取，而「內容」索引標籤中也選取了相同的檔案片段。
+   例如，檔案片段的行為是「立即線上付款……」 」在下圖的預覽中選取，而「內容」索引標籤中也選取了相同的檔案片段。
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
@@ -74,6 +77,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
       * [反白顯示部分文字](#highlightemphasize)
    * [特殊字元](#specialcharacters)
    * [鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)
+
    有關Agent用戶介面中各種文檔片段可用操作的詳細資訊，請參閱 [Agent用戶介面中的「操作」和「資訊」](#actionsagentui)。
 
 1. 若要將分頁符新增至互動式通訊的列印輸出，請將游標置於您要插入分頁符的位置，然後選取「分頁符前面」或「分頁符後面」( ![pagebreakfereafter](assets/pagebreakbeforeafter.png))。
@@ -105,7 +109,7 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 ## 格式化文字 {#formattingtext}
 
-在代理UI中編輯文字片段時，工具列會依您選擇進行的編輯類型而變更：字型、段落或清單：
+在代理UI中編輯文字片段時，工具列會依您選擇進行的編輯類型而變更： 字型、段落或清單：
 
 ![typeofformattingtoolbar](assets/typeofformattingtoolbar.png) ![Font Toolbar](do-not-localize/fonttoolbar.png)
 
@@ -145,25 +149,63 @@ Agent UI已內建支援210個特殊字元。 管理員可 [以透過自訂新增
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
-* **向上／向下箭頭**:在互動式通訊中向上或向下移動檔案片段的箭頭。
-* **刪除**:如果允許，請從「互動式通訊」中刪除檔案片段。
-* **分頁前** （適用於目標區域的子片段）:在文檔片段前插入分頁符。
-* **縮進**:增加或減少文檔片段的縮進。
-* **Page Break After** （適用於目標區域的子片段）:在文檔片段後面插入分頁符。
+* **向上／向下箭頭**: 在互動式通訊中向上或向下移動檔案片段的箭頭。
+* **刪除**: 如果允許，請從「互動式通訊」中刪除檔案片段。
+* **分頁前** （適用於目標區域的子片段）: 在文檔片段前插入分頁符。
+* **縮進**: 增加或減少文檔片段的縮進。
+* **Page Break After** （適用於目標區域的子片段）: 在文檔片段後面插入分頁符。
 
 ![docfragoptions](assets/docfragoptions.png)
 
-* 編輯（僅限文字片段）:開啟豐富式文字編輯器，以編輯文字檔案片段。 如需詳細資訊，請參閱格 [式化文字](#formattingtext)。
+* 編輯（僅限文字片段）: 開啟豐富式文字編輯器，以編輯文字檔案片段。 如需詳細資訊，請參閱格 [式化文字](#formattingtext)。
 
-* 選取範圍（眼睛圖示）:包含\排除「互動式通訊」中的檔案片段。
-* 未填充的值（資訊）:指出檔案片段中未填入的變數數。
+* 選取範圍（眼睛圖示）: 包含\排除「互動式通訊」中的檔案片段。
+* 未填充的值（資訊）: 指出檔案片段中未填入的變數數。
 
 ### 列出檔案片段 {#list-document-fragments}
 
 ![清單選項](assets/listoptions.png)
 
-* 插入空白行：插入新的空行。
-* 選取範圍（眼睛圖示）:包含\排除「互動式通訊」中的檔案片段。
-* 跳過項目符號／編號：啟用以跳過清單文檔片段中的項目符號／編號。
-* 未填充的值（資訊）:指出檔案片段中未填入的變數數。
+* 插入空白行： 插入新的空行。
+* 選取範圍（眼睛圖示）: 包含\排除「互動式通訊」中的檔案片段。
+* 跳過項目符號／編號： 啟用以跳過清單文檔片段中的項目符號／編號。
+* 未填充的值（資訊）: 指出檔案片段中未填入的變數數。
 
+## 將互動式通訊儲存為草稿 {#save-as-draft}
+
+您可以使用Agent UI為每個「互動式通訊」儲存一或多個草稿，並稍後擷取草稿以繼續處理。 您可以為每個草稿指定不同的名稱以加以識別。
+
+Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿。
+
+### 啟用「另存為拔模」(Save as a Draft)功能 {#before-save-as-draft}
+
+預設情況下，「另存為拔模」(Save as a Draft)特徵不啟用。 執行下列步驟以啟用功能：
+
+1. 實施 [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) Service Provider Interface(SPI)。 SPI可讓您將互動式通信的草稿版本以草稿ID作為唯一標識符保存到資料庫。
+1. 前往 `https://'[server]:[port]'/system/console/configMgr`.
+1. 點選「 **[!UICONTROL 建立對應設定」]**。
+1. 選取「 **[!UICONTROL 使用CCRDocumentInstanceService啟用儲存」]** ，然後點選「 **[!UICONTROL 儲存」]**。
+
+### 將互動式通訊儲存為草稿 {#save-as-draft-agent-ui}
+
+執行以下步驟將互動式通信另存為草稿：
+
+1. 在Forms Manager中選取「互動式通訊」，然後點選「 **[!UICONTROL Open Agent UI]**」。
+
+1. 在代理UI中進行適當的變更，然後點選「另 **[!UICONTROL 存為草稿」]**。
+
+1. 在「名稱」欄位中指定「草稿」的名 **[!UICONTROL 稱]** ，然後點選「 **[!UICONTROL 完成」]**。
+
+將「互動式通訊」儲存為草稿後，點選「 **[!UICONTROL 儲存變更]** 」以儲存對草稿的任何進一步變更。
+
+### 擷取互動式通訊的草稿 {#retrieve-draft}
+
+將互動式通訊儲存為草稿後，您可以擷取它以繼續處理它。 使用下列方法檢索互動式通信：
+
+`https://server:port/aem/forms/createcorrespondence.hmtl?draftid=[draftid]`
+
+[draftid] 是指在將互動式通訊儲存為草稿後產生的草稿版本的唯一識別碼。
+
+>[!NOTE]
+>
+>如果您在將「互動式通訊」儲存為草稿後對它進行任何變更，則草稿版本無法開啟。
