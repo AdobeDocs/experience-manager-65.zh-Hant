@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: AEM 6.5 Administering User Guide
+user-guide-title: AEM 6.5管理使用指南
 translation-type: tm+mt
-source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+workflow-type: tm+mt
+source-wordcount: '622'
+ht-degree: 8%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
 + [管理使用指南概觀](home.md)
 + 網站功能 {#introduction}
    + [網站管理](msm-and-translation.md)
-   + [重複使用內容：多網站管理員和即時副本](msm.md)
+   + [重複使用內容： 多網站管理員和即時副本](msm.md)
    + [即時副本概述主控台](msm-livecopy-overview.md)
    + [配置即時拷貝同步](msm-sync.md)
    + [建立和同步即時副本](msm-livecopy.md)
@@ -31,7 +34,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [翻譯增強功能](tc-enhancements.md)
    + [翻譯最佳做法](tc-bp.md)
    + [AEM常見問答集](aem-faqs.md)
-+ 作業 {#operations}
++ 運作 {#operations}
    + [控制面板](dashboards.md)
    + [操作儀表板](operations-dashboard.md)
    + [備份和還原](backup-and-restore.md)
@@ -55,8 +58,8 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [搭配AEM使用cURL](curl.md)
    + [代理伺服器工具(proxy.jar)](proxy-jar.md)
    + [為AEM應用程式設定](config-apps.md)
-   + [配置搜索表單](search-forms.md)
-   + [工具控制台](tools-consoles.md)
+   + [設定搜尋表單](search-forms.md)
+   + [工具主控台](tools-consoles.md)
    + [報告](reporting.md)
    + [設定版面容器和版面模式](configuring-responsive-layout.md)
    + [編輯者](enable-classic-ui-editor.md)
@@ -69,7 +72,7 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [OWASP Top 10](owasp-top10.md)
    + [在生產就緒模式中執行AEM](production-ready.md)
    + [身分識別管理](identity-management.md)
-   + [AEM Managed services的Adobe IMS驗證和管理控制台支援](ims-config-and-admin-console.md)
+   + [AEM Managed Services的Adobe IMS驗證和管理控制台支援](ims-config-and-admin-console.md)
    + [建立已關閉的使用者群組](cug.md)
    + [減輕AEM中的序列化問題](mitigating-serialization-issues.md)
    + [用戶同步](sync.md)
@@ -109,21 +112,21 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
 + Integration {#integration}
    + [與第三方服務整合](third-party-services.md)
    + [與Salesforce整合](salesforce.md)
-   + [與Adobe Target整合](target.md)
-   + [與Adobe Analytics整合](adobeanalytics.md)
+   + [整合 Adobe Target](target.md)
+   + [整合 Adobe Analytics](adobeanalytics.md)
    + [連線至Adobe Analytics和建立架構](adobeanalytics-connect.md)
    + [設定Adobe Analytics的連結追蹤](adobeanalytics-link.md)
    + [使用Adobe Analytics屬性對應元件資料](adobeanalytics-mapping.md)
    + [設定Adobe Analytics的視訊追蹤](adobeanalytics-video.md)
-   + [HTTP2內容傳送常見問答集](scene7-http2faq.md)
+   + [HTTP2 傳送內容常見問答集](scene7-http2faq.md)
    + [疑難排解您的Adobe Campaign整合](troubleshooting-campaignintegration.md)
    + [SharePoint Connector授權、著作權聲明及免責聲明](sharepoint-connector-licenses.md)
    + [SharePoint Connector](sharepoint-connector.md)
-   + [DHTML檢視器生命週期結束常見問答集](dhtml-viewer-endoflifefaqs.md)
+   + [DHTML 檢視器生命週期結束常見問答集](dhtml-viewer-endoflifefaqs.md)
    + [與Adobe Campaign Classic整合](campaignonpremise.md)
    + [相關社群文章](related-community-articles.md)
    + [與Adobe Campaign Standard整合](campaignstandard.md)
-   + [Flash檢視器生命週期結束注意事項](flash-viewers-eol.md)
+   + [Flash 檢視器生命週期結束注意事項](flash-viewers-eol.md)
    + [產品摘要](product-feed.md)
    + [與Adobe動態標籤管理整合](dtm.md)
    + [選擇使用Adobe Analytics和Adobe Target](opt-in.md)
@@ -134,14 +137,14 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [與BrightEdge Content Optimizer整合](brightedge.md)
    + [電子郵件範本的最佳做法](best-practices-for-email-templates.md)
    + [Catalog Producer](catalog-producer.md)
-   + [設定與Experience cloud和Creative cloud的AEM資產整合](configure-assets-cc-integration.md)
+   + [設定與Experience Cloud和Creative Cloud的AEM資產整合](configure-assets-cc-integration.md)
    + [與Silverpop Engage整合](silverpop.md)
    + [與Adobe Campaign整合](campaign.md)
    + [與ExactTarget整合](exacttarget.md)
    + [Analytics與外部提供者](external-providers.md)
-   + [與Adobe Marketing cloud整合](marketing-cloud.md)
+   + [與Adobe Marketing Cloud整合](marketing-cloud.md)
    + [手動設定與Adobe Target的整合](target-configuring.md)
-   + [與Adobe target整合的先決條件](target-requirements.md)
+   + [與Adobe Target整合的先決條件](target-requirements.md)
    + [使用Adobe I/O與Adobe Target整合](integration-ims-adobe-io.md)
    + [Adobe分類](adobeanalytics-classifications.md)
    + [與Adobe Search&amp;Promote整合](search-and-promote.md)
@@ -149,8 +152,8 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [將體驗片段匯出至Adobe Target](experience-fragments-target.md)
    + [電子郵件範本的最佳做法](best-practices-for-email-templates.md)
    + [與Livefyre整合](livefyre.md)
-+ Best Practices {#bestpractices}
-   + [最佳實務](administer-best-practices.md)
++ 最佳作法 {#bestpractices}
+   + [最佳作法](administer-best-practices.md)
    + [翻譯最佳做法](tc-bp.md)
    + [MSM最佳實務](msm-best-practices.md)
    + [AEM Sites - GDPR就緒性](gdpr-compliance-sites.md)
@@ -158,7 +161,6 @@ source-git-commit: e1c1850849b0715af8d865143991c6e937ec0d5f
    + [AEM商務- GDPR就緒性](gdpr-compliance-commerce.md)
 + 內容管理 {#contentmanagement}
    + [如何使用套件](package-manager.md)
-   + [資產工作流程卸載程式](workflow-offloader.md)
    + [管理標籤](tags.md)
    + [頁面匯出器](page-exporter.md)
    + [傳統UI標籤控制台](classic-console.md)
