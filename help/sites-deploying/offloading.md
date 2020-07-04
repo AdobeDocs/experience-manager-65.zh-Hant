@@ -10,10 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: c3e4b68c10496cac8f75d009fdd9ebd777826850
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
 workflow-type: tm+mt
-source-wordcount: '2771'
-ht-degree: 0%
+source-wordcount: '2403'
+ht-degree: 1%
 
 ---
 
@@ -211,7 +211,10 @@ Experience Manager已安裝數個JobConsumer實作。 這些JobConsumers註冊�
 |---|---|---|
 | / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | 已與Apache Sling一起安裝。 處理OSGi事件管理員所產生的作業，以便向後相容。 |
 | com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | 複製代理，用於復製作業負載。 |
-| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | 處理DAM更新資產卸載程式工作流生成的作業。 |
+
+<!--
+| com/adobe/granite/workflow/offloading |com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer |Processes jobs that the DAM Update Asset Offloader workflow generates. |
+-->
 
 ### 禁用和啟用實例的主題 {#disabling-and-enabling-topics-for-an-instance}
 
@@ -317,35 +320,37 @@ Apache Sling Job Consumer Manager服務提供主題allow list和區塊清單屬�
 * 開啟Web Console，然後在Sling Settings中尋找Sling ID屬性的值([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings))。 如果實例尚未屬於拓撲，則此方法非常有用。
 * 如果實例已屬於拓撲的一部分，請使用拓撲瀏覽器。
 
-## 卸載DAM資產的處理 {#offloading-the-processing-of-dam-assets}
+<!--
+## Offloading the Processing of DAM Assets {#offloading-the-processing-of-dam-assets}
 
-配置拓撲實例，使特定實例執行在DAM中添加或更新的資產的後台處理。
+Configure the instances of a topology so that specific instances perform the background processing of assets that are added or updated in DAM.
 
-依預設，當DAM資產變更或新增 [!UICONTROL DAM時，Experience Manager會執行「DAM更新資產] 」工作流程。 變更預設行為，讓Experience Manager改為執行 [!UICONTROL DAM更新資產卸載程式工作流程] 。 此工作流將生成一個主題為的JobManager作業 `com/adobe/granite/workflow/offloading`。 然後，配置拓撲，以便將作業卸載到專用工作器。
+By default, Experience Manager executes the [!UICONTROL DAM Update Asset] workflow when a DAM asset changes or one is added to DAM. Change the default behavior so that Experience Manager instead executes the [!UICONTROL DAM Update Asset Offloader] workflow. This workflow generates a JobManager job that has a topic of `com/adobe/granite/workflow/offloading`. Then, configure the topology so that the job is offloaded to a dedicated worker.
 
 >[!CAUTION]
 >
->當與工作流卸載一起使用時，不應使工作流為瞬態。 例如，當用於資 [!UICONTROL 產卸載時，「DAM更新資產] 」工作流程不得為暫時性。 要在工作流中設定／取消設定臨時標誌，請參 [閱臨時工作流](/help/assets/performance-tuning-guidelines.md#workflows)。
+>No workflow should be transient when used with workflow offloading. For example, the [!UICONTROL DAM Update Asset] workflow must not be transient when used for asset offloading. To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
 
-以下過程假定卸載拓撲具有以下特徵：
+The following procedure assumes the following characteristics for the offloading topology:
 
-* 一或多個Experience Manager實例正在編寫使用者與之互動的例項，以新增或更新DAM資產。
-* 使用者不需直接與處理DAM資產的一或多個Experience Manager例項互動。 這些例項專用於DAM資產的背景處理。
+* One or more Experience Manager instance are authoring instances that users interact with for adding or updating DAM assets.
+* Users to do not directly interact with one or more Experience Manager instances that process the DAM assets. These instances are dedicated to the background processing of DAM assets.
 
-1. 在每個Experience Manager實例上，配置Discovery服務，使其指向根拓撲連接器。 (請參閱 [配置拓撲成員資格](#title4)。)
-1. 配置根拓撲連接器，使連接實例位於允許清單中。
-1. 開啟「卸載瀏覽器」，並停 `com/adobe/granite/workflow/offloading` 用使用者與之互動以上傳或變更DAM資產之例項的主題。
+1. On each Experience Manager instance, configure the Discovery Service so that it points to the root Topography Connector. (See [Configuring Topology Membership](#title4).)
+1. Configure the root Topography Connector so that the connecting instances are on the allow list.
+1. Open Offloading Browser and disable the `com/adobe/granite/workflow/offloading` topic on the instances with which users interact to upload or change DAM assets.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
-1. 在使用者互動以上傳或變更DAM資產的每個例項上，設定工作流程啟動程式以使用 [!UICONTROL DAM更新資產卸載工作流程] :
+1. On each instance that users interact with to upload or change DAM assets, configure workflow launchers to use the [!UICONTROL DAM Update Asset Offloading] workflow:
 
-   1. 開啟「工作流程」主控台。
-   1. 按一下「啟動器」標籤。
-   1. 找到執行 [!UICONTROL DAM Update Asset工作流程的兩個啟動程] 序配置。 一個啟動程式配置事件類型是「已建立節點」，另一個類型是「已修改節點」。
-   1. 變更這兩種事件類型，以執行 [!UICONTROL DAM更新資產卸載工作流程] 。 (有關啟動程式配置的資訊，請參 [閱Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md))。
+    1. Open the Workflow console.
+    1. Click the Launcher tab.
+    1. Locate the two Launcher configurations that execute the [!UICONTROL DAM Update Asset] workflow. One launcher configuration event type is Node Created, and the other type is Node Modified.
+    1. Change both event types so that they execute the [!UICONTROL DAM Update Asset Offloading] workflow. (For information about launcher configurations, see [Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md).)
 
-1. 在執行DAM資產背景處理的例項上，停用執行 [!UICONTROL DAM更新資產工作流程的工作流程啟動器] 。
+1. On the instances that perform the background processing of DAM assets, disable the workflow launchers that execute the [!UICONTROL DAM Update Asset] workflow.
+-->
 
 ## 進一步閱讀 {#further-reading}
 
