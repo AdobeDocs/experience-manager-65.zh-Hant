@@ -3,9 +3,9 @@ title: 翻譯資產的最佳實務
 description: 有效管理資產的最佳做法，可同步各種翻譯版本並簡化翻譯工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,15 @@ File Data Store和Amazon S3 Data Store提供最適合這些情況的儲存基礎
    * [設定檔案資料儲存區](/help/sites-deploying/data-store-config.md)
    * [設定Amazon S3 Data Store](/help/sites-deploying/data-store-config.md)
 
-1. 停用 [DAM MetaData回寫工作流程](/help/sites-administering/workflow-offloader.md#disable-offloading) 。
+<!--
+1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
 
-   如名稱所示，  DAM中繼資料回寫工作流程會將中繼資料重新寫入二進位檔案。 由於中繼資料在轉譯後會變更，因此將它寫回二進位檔案會為語言副本產生不同的二進位檔。
+   As the name suggests, the [!UICONTROL DAM Metadata Writeback] workflow rewrites the metadata to the binary file. Because the metadata changes after translation, writing it back to the binary file generates a different binary for a language copy.
 
    >[!NOTE]
    >
-   >停用 [!UICONTROL DAM MetaData回寫工作流程] ，會關閉資產二進位檔案的XMP中繼資料回寫。 因此，未來的中繼資料變更將不再儲存在資產中。 在禁用此工作流之前評估後果。
+   >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
+-->
 
 1. 啟用「設 [!UICONTROL 定上次修改的日期] 」工作流程。
 
