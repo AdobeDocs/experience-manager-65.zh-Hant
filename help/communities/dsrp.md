@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: b7c790681034e9950aa43738310f7af8b1dd0085
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 2%
 
 ---
 
@@ -25,8 +28,8 @@ source-git-commit: b7c790681034e9950aa43738310f7af8b1dd0085
 
 ## 需求 {#requirements}
 
-* [MySQL](#mysql-configuration)，關係資料庫
-* [Apache Solr](#solr-configuration)，搜尋平台
+* [MySQL](#mysql-configuration)，關係型資料庫。
+* [Apache Solr](#solr-configuration)，搜尋平台。
 
 >[!NOTE]
 >
@@ -45,7 +48,7 @@ MySQL安裝可通過使用不同的資料庫（模式）名稱和不同的連接
 
 Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(SRP)之間共用。
 
-如果Oak和SRP系列都被大量使用，則可基於效能原因安裝第二個Solr。
+如果Oak和SRP系列都被大量使用，則可能會因效能原因安裝第二個Solr。
 
 對於生產環境，SolrCloud模式比獨立模式（單一本機Solr設定）提供更佳的效能。
 
@@ -68,8 +71,7 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(S
       >[!NOTE]
       >
       >預設儲存配置現在儲存在conf路徑(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而不是etc路徑(`/etc/socialconfig/srpc/defaultconfiguration`)中。 建議您依照移轉步 [驟](#zerodt-migration-steps) ，讓預設srp如預期般運作。
-
-![chlimage_1-128](assets/chlimage_1-128.png)
+   ![chlimage_1-128](assets/chlimage_1-128.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **資料庫設定**
@@ -78,13 +80,13 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(S
 
       給定給MySQL連接的名稱必須與在 [JDBC OSGi配置中輸入的名稱相同](dsrp-mysql.md#configurejdbcconnections)
 
-      *預設*:社區
+      *預設*: 社區
 
    * **[!UICONTROL 資料庫名稱]**
 
       為 [init_schema.sql指令碼中的架構指定的名稱](dsrp-mysql.md#obtain-the-sql-script)
 
-      *預設*:社區
+      *預設*: 社區
 
 * **SolrConfiguration**
 
@@ -96,11 +98,11 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(S
 
    * **[!UICONTROL Solr URL]**
 
-      *預設*:https://127.0.0.1:8983/solr/
+      *預設*: https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr 集合]**
 
-      *預設*:collection1
+      *預設*: collection1
 
 * 選擇 **[!UICONTROL 提交]**。
 
@@ -122,18 +124,18 @@ DSRP必須被識別為所有作者和發佈例項上的通用商店。
 
 * 作者：
 
-   * 從主菜單導航到「工 **[!UICONTROL 具」>「操作」>「複製」]**
-   * 按兩下「激活 **樹」**
-   * **開始路徑:**
+   * 從主菜單導航到「工 **[!UICONTROL 具]** 」>「 **[!UICONTROL 操作]** 」 **[!UICONTROL >「複製」]**
+   * 按兩下「激活 **[!UICONTROL 樹」]**
+   * **開始路徑**:
 
       * 瀏覽至 `/etc/socialconfig/srpc/`
    * 請確 `Only Modified` 定未選取。
-   * 選取「啟 **[!UICONTROL 動」]**
+   * 選擇「 **[!UICONTROL 啟動]**」。
 
 
 ## 管理使用者資料 {#managing-user-data}
 
-如需使用者 *、使用者****、使用者*&#x200B;設定檔和使用者群組的相關資訊，請造訪
+如需有關使用者 *、使用者****、使用者*&#x200B;設定檔和使用者群組的資訊，請造訪：
 
 * [用戶同步](sync.md)
 * [管理使用者和使用者群組](users.md)
