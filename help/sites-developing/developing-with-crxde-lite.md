@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 78133b41e1c99f8f86f4c0d51961287735423fe2
+source-git-commit: cb141914428f42a9755b5479ab1652c8ca51f640
+workflow-type: tm+mt
+source-wordcount: '2155'
+ht-degree: 1%
 
 ---
 
@@ -22,14 +25,14 @@ source-git-commit: 78133b41e1c99f8f86f4c0d51961287735423fe2
 
 請參閱概述檔案，以取得有關不同開發環境的詳細資訊。
 
-CRXDE Lite已內嵌在AEM中，可讓您在瀏覽器中執行標準開發工作。 使用CRXDE Lite，您可以建立專案、建立和編輯檔案（例如。jsp和。java）、檔案夾、範本、元件、對話方塊、節點、屬性和組合，同時記錄和整合SVN。
+CRXDE Lite已內嵌在AEM中，可讓您在瀏覽器中執行標準開發工作。 使用CRXDE Lite，您可以在記錄時建立專案、建立和編輯檔案（例如。jsp和。java）、檔案夾、範本、元件、對話方塊、節點、屬性和組合。
 當您無法直接存取AEM伺服器、透過擴充或修改現成可用的元件和Java套件來開發應用程式時，或當您不需要專用的除錯程式、程式碼完成和語法反白顯示時，建議使用CRXDE Lite。
 
 >[!NOTE]
 >
->依預設，所有AEM使用者都可存取CRXDE Lite。 如果需要， [請為以下節點配置ACL](/help/sites-administering/security.md#permissions-and-acls) ，以便只有開發人員可以訪問CRX DE Lite:
->
->`/libs/granite/crxde`
+>從AEM 6.5.5.0開始，就無法再匿名存取CRXDE Lite。
+>使用者會重新導向至登入畫面。
+
 
 >[!NOTE]
 >
@@ -47,7 +50,7 @@ CRXDE Lite已內嵌在AEM中，可讓您在瀏覽器中執行標準開發工作�
 
 CRXDE Lite使用者介面在您的瀏覽器中的外觀如下：
 
-![chlimage_1-18](assets/chlimage_1-18.png)
+![chlimage_1-18](assets/crx-interface.jpg)
 
 您現在可以使用CRXDE Lite來開發您的應用程式。
 
@@ -63,15 +66,15 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>節點路徑Widget</td>
-   <td><p>顯示當前選定節點的路徑。</p> <p>您也可以使用它跳至節點，方法是手動輸入路徑，或從其他位置貼上路徑，然後按Enter鍵。</p> <p>它還支援查找具有特定節點名的節點。 輸入您要尋找的節點名稱，然後等待（或點擊右側的搜尋符號）。 您可以嘗試輸入，例如，將字串橡 <em>木</em> ，進入介面工具集，以瞭解其運作方式。 如果某個給定節點或節點已載入到瀏覽器窗格中，則會顯示清單，您可以選擇路徑並按一下Enter以導航到該路徑。 請注意，它僅適用於當前在瀏覽器中載入到CRXDE客戶端應用程式中的節點。 如果要搜索整個儲存庫，請依次使用工具和查詢。</p> </td>
+   <td><p>顯示當前選定節點的路徑。</p> <p>您也可以使用它跳至節點，方法是手動輸入路徑，或從其他位置貼上路徑，然後按Enter鍵。</p> <p>它還支援查找具有特定節點名的節點。 輸入您要尋找的節點名稱，然後等待（或點擊右側的搜尋符號）。 您可以嘗試輸入，例如，將字串 <em>橡樹</em> ，輸入介面工具集，以瞭解其運作方式。 如果某個給定節點或節點已載入到瀏覽器窗格中，則會顯示清單，您可以選擇路徑並按一下Enter以導航到該路徑。 請注意，它僅適用於當前在瀏覽器中載入到CRXDE客戶端應用程式中的節點。 如果要搜索整個儲存庫，請依次使用工具和查詢。</p> </td>
   </tr>
   <tr>
    <td>瀏覽器窗格</td>
-   <td><p>顯示儲存庫中所有節點的樹。</p> <p>按一下節點，在「屬性」頁籤中顯示其 <strong>屬性</strong> 。 按一下節點後，可以在工具欄中選擇操作。 再次按一下該節點以將其更名。</p> <p>樹狀導航濾鏡（雙目表徵圖）:使您可以過濾名稱包含輸入文本的儲存庫中的節點。 它僅適用於已在本地載入的節點。<br /> </p> </td>
+   <td><p>顯示儲存庫中所有節點的樹。</p> <p>按一下節點，在「屬性」頁籤中顯示其 <strong>屬性</strong> 。 按一下節點後，可以在工具欄中選擇操作。 再次按一下該節點以將其更名。</p> <p>樹狀導航濾鏡（雙目表徵圖）: 使您可以過濾名稱包含輸入文本的儲存庫中的節點。 它僅適用於已在本地載入的節點。<br /> </p> </td>
   </tr>
   <tr>
    <td>編輯窗格</td>
-   <td><p><strong>「首頁</strong> 」頁籤：可讓您搜尋內容和／或檔案，並存取開發人員資源（檔案、開發人員部落格、知識庫）和支援（Adobe首頁和支援中心）。<br /> </p> <p>連按兩下「檔案總管」窗格中 <strong>的檔案</strong> ，以顯示其內容；例如，.jsp或。java檔案。 然後，您可以修改它並儲存變更。</p> <p>在「編輯」窗格中編輯檔 <strong>案後</strong> ，工具列上會提供下列工具：<br /> </p> -在 <strong>樹中顯示：顯 </strong>示儲存庫樹中的檔案。<br /> -搜 <strong>尋／取代……</strong>:進行搜尋或取代。<br /> 雙 <br /> 擊「編輯」窗格的狀態行可開啟「 <strong></strong><strong></strong> 轉到行」對話框，以便輸入要轉到的特定行號。<br /> </td>
+   <td><p><strong>「首頁</strong> 」頁籤： 可讓您搜尋內容和／或檔案，並存取開發人員資源（檔案、開發人員部落格、知識庫）和支援（Adobe首頁和支援中心）。<br /> </p> <p>連按兩下「檔案總管」窗格中 <strong>的檔案</strong> ，以顯示其內容； 例如，.jsp或。java檔案。 然後，您可以修改它並儲存變更。</p> <p>在「編輯」窗格中編輯檔 <strong>案後</strong> ，工具列上會提供下列工具：<br /> </p> -在 <strong>樹中顯示： </strong>顯示儲存庫樹中的檔案。<br /> -搜 <strong>尋／取代……</strong>: 進行搜尋或取代。<br /> <br /> 連按兩下「編輯」窗格的狀態行，會開啟「 <strong>跳至行</strong><strong></strong> 」對話方塊，讓您輸入要跳至的特定行號。<br /> </td>
   </tr>
   <tr>
    <td>「屬性」頁籤<br /> </td>
@@ -79,7 +82,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>「訪問控制」頁籤</td>
-   <td><p>根據當前路徑、儲存庫級別或承擔者顯示權限。</p> <p>權限被劃分為</p> <p>-適 <strong>用的訪問控制策略</strong>:可套用至目前選擇的原則。</p> <p>-本 <strong>地訪問控制策略</strong>:當前策略在本地應用於當前選擇。</p> <p>-有 <strong>效的訪問控制策略</strong>:當前為當前選擇應用的策略可以設定為本地或繼承自父節點。</p> <p>注意. 要能夠查看訪問控制資訊，登錄到CRXDE Lite的用戶必須具有讀取ACL項的權限。 匿名使用者依預設看不到此資訊——請以管理員等身分登入，以檢視資訊。</p> </td>
+   <td><p>根據當前路徑、儲存庫級別或承擔者顯示權限。</p> <p>權限被劃分為</p> <p>-適 <strong>用的訪問控制策略</strong>: 可套用至目前選擇的原則。</p> <p>-本 <strong>地訪問控制策略</strong>: 當前策略在本地應用於當前選擇。</p> <p>-有 <strong>效的訪問控制策略</strong>: 當前為當前選擇應用的策略可以設定為本地或繼承自父節點。</p> <p>注意. 要能夠查看訪問控制資訊，登錄到CRXDE Lite的用戶必須具有讀取ACL項的權限。 匿名使用者依預設看不到此資訊——請以管理員等身分登入，以檢視資訊。</p> </td>
   </tr>
   <tr>
    <td>複製頁籤</td>
@@ -103,7 +106,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>建立 ...<br /> </td>
-   <td><p>下拉式功能表，在選取的節點下建立下列項目：<br /> </p> <p>-節 <strong>點</strong>:具有任意節點類型的節點<br /> </p> <p>-文 <strong>件</strong>:nt：檔案節點及其nt：資源子節點</p> <p>-文 <strong>件夾</strong>:nt：資料夾節點</p> <p>-范 <strong>本</strong>:AEM範本</p> <p>-元 <strong>件</strong>:AEM元件</p> <p>-對 <strong>話框</strong>:AEM對話方塊</p> </td>
+   <td><p>下拉式功能表，在選取的節點下建立下列項目：<br /> </p> <p>-節 <strong>點</strong>: 具有任意節點類型的節點<br /> </p> <p>-文 <strong>件</strong>: nt：檔案節點及其nt：資源子節點</p> <p>-文 <strong>件夾</strong>: nt：資料夾節點</p> <p>-范 <strong>本</strong>: AEM範本</p> <p>-元 <strong>件</strong>: AEM元件</p> <p>-對 <strong>話框</strong>: AEM對話方塊</p> </td>
   </tr>
   <tr>
    <td>刪除<br /> </td>
@@ -130,12 +133,8 @@ CRXDE Lite提供下列功能：
    <td>允許您將混合類型添加到節點類型。 混合類型主要用於新增進階功能，例如版本控制、存取控制、參照和鎖定至節點。</td>
   </tr>
   <tr>
-   <td>團隊<br /> </td>
-   <td><p>下拉式功能表，以執行標準版本控制工作：</p> <p>-從SVN服 <strong>務器更新儲存庫</strong></p> <p>-提 <strong>交對</strong> SVN伺服器的本地更改</p> <p>-查看當 <strong>前節點</strong> 的狀態</p> <p>-查看當 <strong>前節點子樹</strong> 的遞歸狀態</p> <p>-從 <strong>SVN伺服器</strong> 簽出工作副本</p> <p>-從 <strong>SVN伺服器</strong> （不建立工作副本）導出項目</p> <p>-將項 <strong>目從儲存庫</strong> 導入到SVN伺服器<br /> </p> <p>請注意，您必須以具有足夠權限的用戶身份登錄，才能執行某些任務（尤其是寫入本地儲存庫的任務）。<br /> </p> </td>
-  </tr>
-  <tr>
    <td>工具<br /> </td>
-   <td><p>下拉式選單，包含下列工具：</p> <p>-服 <strong>務器配置……</strong>:去Felix Console。</p> <p>-查 <strong>詢……</strong>:來查詢儲存庫。</p> <p>-權 <strong>限……</strong>:以開啟權限管理，您可在其中檢視和新增權限。</p> <p>-測 <strong>試訪問控制……</strong>:您可以在其中測試特定路徑和／或承擔者權限的位置。</p> <p>-導 <strong>出節點類型</strong>:將系統中的節點類型導出為cnd注釋。</p> <p>-導 <strong>入節點類型……</strong>:來導入節點類型。</p> <p>-安 <strong>裝SiteCatalyst除錯程式……</strong>:說明如何安裝Analytics除錯程式。</p> </td>
+   <td><p>下拉式選單，包含下列工具：</p> <p>-服 <strong>務器配置……</strong>: 去Felix Console。</p> <p>-查 <strong>詢……</strong>: 來查詢儲存庫。</p> <p>-權 <strong>限……</strong>: 以開啟權限管理，您可在其中檢視和新增權限。</p> <p>-測 <strong>試訪問控制……</strong>: 您可以在其中測試特定路徑和／或承擔者權限的位置。</p> <p>-導 <strong>出節點類型</strong>: 將系統中的節點類型導出為cnd注釋。</p> <p>-導 <strong>入節點類型……</strong>: 來導入節點類型。</p> <p>-安 <strong>裝SiteCatalyst除錯程式……</strong>: 說明如何安裝Analytics除錯程式。</p> </td>
   </tr>
   <tr>
    <td>登入介面工具集<br /> </td>
@@ -143,48 +142,6 @@ CRXDE Lite提供下列功能：
   </tr>
  </tbody>
 </table>
-
-## 建立專案 {#creating-a-project}
-
-有了CRXDE Lite，您只需按三下，就可以建立正常的專案。 專案精靈會在下方建立新專案， `/apps`在t下方建立部 `/conten`分內容，並在下方建立封裝所有專案的套件 `/etc/packages`。 該項目可立即用於根據jsp指令碼（從儲存庫轉換屬性並調用Java類來轉換某些文本）來呈現顯示 **Hello World**&#x200B;的示例頁。
-
-要使用CRXDE Lite建立項目：
-
-1. 在您的瀏覽器中開啟CRXDE Lite。
-1. 在「導覽」窗格中，以滑鼠右鍵按一下節點，選 **取「建立……**」，然 **後選取「建立專案……」**.
-注意：您可以按一下右鍵樹導航中的任意節點，因為新項目節點按設計建立在以下和 `/apps,` 下 `/content` 面 `/etc/packages`。
-
-1. 定義：
-
-   * **項目名稱** -項目名稱用於建立新節點和包，如 `myproject`。
-
-   * **Java Package** - Java套件名稱首碼，例如 `com.mycompany`。
-
-1. 按一下 **建立**。
-1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
-
-若要存取顯示「Hello World」的 **範例頁面**，請將您的瀏覽器指向：
-
-`https://localhost:4502/content/<project-name>.html`
-
-「 **Hello World** 」頁基於內容節點，該節點通過屬性調用jsp腳 `sling:resourceType` 本。 指令碼從儲存庫 `jcr:title` 中讀取屬性，並通過調用項目包中可用的SampleUtil類的方法來獲取主體內容。
-
-將建立以下節點：
-
-* `/apps/<project-name>`:應用程式容器。
-* `/apps/<project-name>/components`:包含用於呈現頁面的範例html.jsp檔案的元件容器。
-
-* `/apps/<project-name>/src`:包容器中，包含範例專案包。
-
-* `/apps/<project-name>/install`:已編譯的包容器，包含已編譯的示例項目包。
-* `/content/<project-name>`:內容容器。
-* /etc/packages/&lt;java-suffix>/&lt;project-name>.zip，封裝所有專案應用程式和內容的套件。 您可以使用它重建項目以進一步部署（例如，到其他環境），或通過包共用進行共用。
-
-在CRXDE Lite中，此結構的外觀如下，其中包含名為 **myproject** 的項目和名為 **mycompany的java包尾碼**:
-
-![chlimage_1-19](assets/chlimage_1-19.png)
-
-![chlimage_1-20](assets/chlimage_1-20.png)
 
 ## 建立資料夾 {#creating-a-folder}
 
@@ -204,13 +161,13 @@ CRXDE Lite提供下列功能：
 1. 在您的瀏覽器中開啟CRXDE Lite。
 1. 在「導覽」窗格中，以滑鼠右鍵按一下您要建立範本的檔案夾，選取「建立……」 **，然****後選取「建立範本……」**.
 
-1. 輸入 **Label**、Label **、** Description **、Type Resource********** Ranking of the Label、Description、Oracle Type Ranking Of the Ranking Of the Label。 按一 **下「下一步**」。
+1. 輸入 **Label**、Label **、** Description **、Type Resource********** Ranking of the Label、Description、Oracle Type Ranking Of the Ranking Of the Label。 按一下&#x200B;**下一步**。
 
-1. 此步驟為可選步驟：設定允 **許路徑**。 按「下一 **步」**
+1. 此步驟為可選步驟： 設定允 **許路徑**。 Click **Next**
 
-1. 此步驟為可選步驟：設定「 **允許父項**」。 按一 **下「下一步**」。
+1. 此步驟為可選步驟： 設定「 **允許父項**」。 按一下&#x200B;**下一步**。
 
-1. 此步驟為可選步驟：設定「允 **許的子項**」。 按一下 **確定**。
+1. 此步驟為可選步驟： 設定「允 **許的子項**」。 按一下 **確定**。
 
 1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
 
@@ -220,7 +177,7 @@ CRXDE Lite提供下列功能：
 
 * 具有頁面內容屬性的 `cq:PageContent` 子節點類型
 
-您可以將屬性新增至範本：請參閱「 [建立屬性](#creating-a-property) 」部分。
+您可以將屬性新增至範本： 請參閱「 [建立屬性](#creating-a-property) 」部分。
 
 ## 建立元件 {#creating-a-component}
 
@@ -231,13 +188,13 @@ CRXDE Lite提供下列功能：
 1. 在您的瀏覽器中開啟CRXDE Lite。
 1. 在「導覽」窗格中，以滑鼠右鍵按一下您要建立元件的檔案夾，選取「建立……」 **，然****後選取「建立元件……」**.
 
-1. 輸入Label ****、Title **、** Description **、** Super Type Type和Super Group Of the Label、Title、Description ******** 和Super Type Group Of the Label。 按一 **下「下一步**」。
+1. 輸入Label ****、Title **、** Description **、** Super Type Type和Super Group Of the Label、Title、Description ******** 和Super Type Group Of the Label。 按一下&#x200B;**下一步**。
 
-1. 此步驟為可選步驟：設定元件屬性 **是容器、無裝飾** 、單元 **格名稱**&#x200B;和對 **話路徑******。 按一 **下「下一步**」。
+1. 此步驟為可選步驟： 設定元件屬性 **是容器、無裝飾** 、單元 **格名稱**&#x200B;和對 **話路徑******。 按一下&#x200B;**下一步**。
 
-1. 此步驟為可選步驟：設定元件屬性「允 **許父項」**。 按一 **下「下一步**」。
+1. 此步驟為可選步驟： 設定元件屬性「允 **許父項」**。 按一下&#x200B;**下一步**。
 
-1. 此步驟為可選步驟：設定元件屬 **性Allowed Children**。 按一下 **確定**。
+1. 此步驟為可選步驟： 設定元件屬 **性Allowed Children**。 按一下 **確定**。
 
 1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
 
@@ -305,176 +262,6 @@ CRXDE Lite提供下列功能：
 1. 新檔案會在「編輯」窗格中以標籤的形式開啟。
 1. 編輯檔案。
 1. Click **Save All** to save the changes.
-
-## 管理套件 {#managing-a-bundle}
-
-有了CRXDE Lite，建立OSGI套件、新增Java類別並建立它就變得簡單明瞭。 然後，套裝會自動安裝並啟動在OSGI容器中。
-
-本節說明如何使用顯 `Test` 示Hello World！的 `HelloWorld` Java類建立包 **裝程式！** 在瀏覽器中。
-
-### 建立包 {#creating-a-bundle}
-
-要使用CRXDE Lite建立Test包：
-
-1. 在CRXDE Lite中，使用 `myapp` 專案精靈建立 [專案](#creating-a-project)。 建立的節點包括：
-
-   * `/apps/myapp/src`
-   * `/apps/myapp/install`
-
-1. 按一下右鍵將包 `/apps/myapp/src` 含該包的文 `Test` 件夾，選擇 **建立……**, **然後建立包……**.
-
-1. 按如下方式設定包屬性：
-
-   * 符號包名稱： `com.mycompany.test.TestBundle`
-
-   * 組合包名稱: `Test Bundle`
-   * Bundle說明：
-
-      ```
-      This is my Test Bundle
-      ```
-
-   * 封裝:
-
-      ```
-      com.mycompany.test
-      ```
-   按一下 **確定**。
-
-1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
-
-精靈會建立下列元素：
-
-* 類型為 `com.mycompany.test.TestBundle` It的節 `nt:folder.` 點是捆綁容器節點。
-
-* 檔案 `com.mycompany.test.TestBundle.bnd`。 它用作包的部署描述符，並由一組標頭組成。
-
-* 資料夾結構：
-
-   * `src/main/java/com/mycompany/test`. 它將包含包和Java類。
-
-   * `src/main/resources`. 它將包含捆綁包中使用的資源。
-
-* 檔 `Activator.java` 案。 It is optional listener class to be notified of bundle start and stop events.
-
-下表列出。bnd檔案的所有屬性、其值和說明：
-
-<table>
- <tbody>
-  <tr>
-   <td><strong>屬性</strong></td>
-   <td><strong>值（在建立搭售時）<br /> </strong></td>
-   <td><strong>說明</strong></td>
-  </tr>
-  <tr>
-   <td>Export-Package:</td>
-   <td><p>*</p> <p>注意：此值需要調整以反映套件的特異性。</p> </td>
-   <td>Export-Package標題定義從包中導出的包（包的逗號分隔清單）。 導出的包構成包的公用視圖<br /> 。<br /> </td>
-  </tr>
-  <tr>
-   <td>Import-Package:</td>
-   <td><p>*</p> <p>注意：此值需要調整以反映套件的特異性。</p> </td>
-   <td>Import-Package標題定義包的導入包（包的逗號分隔清單）</td>
-  </tr>
-  <tr>
-   <td>私有包：</td>
-   <td><p>*</p> <p>注意：此值需要調整以反映套件的特異性。</p> </td>
-   <td>Private-Package標題定義包的專用包（包的逗號分隔清單）。 私人包裹構成內部實施。<br /> </td>
-  </tr>
-  <tr>
-   <td>Bundle-Name:</td>
-   <td>測試套件</td>
-   <td>定義套件的簡短、人類可讀名稱</td>
-  </tr>
-  <tr>
-   <td>Bundle-Description:</td>
-   <td>這是我的測試套件</td>
-   <td>定義套件的簡短、人類可讀的說明</td>
-  </tr>
-  <tr>
-   <td>Bundle-SymbolicName:</td>
-   <td>com.mycompany.test.TestBundle</td>
-   <td>指定綁定的唯一、不可本地化名稱</td>
-  </tr>
-  <tr>
-   <td>Bundle-Version:</td>
-   <td>1.0.0-快照</td>
-   <td>指定包的版本</td>
-  </tr>
-  <tr>
-   <td>Bundle-Activator:</td>
-   <td>com.mycompany.test.Activator</td>
-   <td>指定要通知綁定啟動和停止事件的可選監聽程式類的名稱</td>
-  </tr>
- </tbody>
-</table>
-
-有關bnd格式的詳細資訊，請參閱CRXDE用 [於建立](https://bndtools.org/) OSGI束的bnd實用程式。
-
-### 建立Java類 {#creating-a-java-class}
-
-要在測試包 `HelloWorld` 中建立Java類：
-
-1. 在您的瀏覽器中開啟CRXDE Lite。
-1. 在「導覽」窗格中，以滑鼠右鍵按一下包含檔 `Activator.java` 案的節點( `/apps/myapp/src/com.mycompany.test.TestBundle/src/main/java`)，然後選 **取「建立……**」, **然後選取「建立檔案……」**.
-
-1. 命名檔案 `HelloWorld.java`。 按一下 **確定**。
-
-1. 檔案 `HelloWorld.java` 會在「編輯」窗格中開啟。
-1. 將下列行新增至 `HelloWorld.java`:
-
-   ```
-     package com.mycompany.test;
-   
-     public class HelloWorld {
-     public String getString(){
-     return "Hello World!";
-     }
-     }
-   ```
-
-1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
-
-### 建立搭售 {#building-a-bundle}
-
-若要建立測試套件：
-
-1. 在您的瀏覽器中開啟CRXDE Lite。
-1. 在「導覽」窗格中，以滑鼠右鍵按一下。bnd檔案，選取「工 **具」，然**&#x200B;後選取&#x200B;**「Bundle」**。
-
-「生成包」嚮導：
-
-* 編譯Java類。
-* 建立包含已編譯的Java類和資源的。jar檔案，並將其放入資料夾 `myapp/install` 中。
-* 在OSGI容器中安裝並啟動套件。
-
-若要查看Test Bundle的效果，請建立使用Java方法HelloWorld.getString()的元件，以及此元件所呈現的資源：
-
-1. 在下面創 `mycomp` 建元件 `myapp/components`。
-
-1. 編 `mycomp.jsp` 輯代碼並用下列行替換：
-
-   ```
-     <%@ page import="com.mycompany.test.HelloWorld"%><%
-     %><%@ include file="/libs/foundation/global.jsp"%><%
-     %><% HelloWorld hello = new HelloWorld();%><%
-     %>
-     <html>
-     <body>
-     <b><%= hello.getString() %></b><br>
-     </body>
-     </html>
-   ```
-
-1. 在下建立類 `test_node` 型的 `nt:unstructured` 資源 `/content`。
-
-1. 對於 `test_node`，請建立以下屬性：名稱= `sling:resourceType`，類型= `String`，值= `myapp/components/mycomp`。
-
-1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
-
-1. 在您的瀏覽器中，請求 `test_node`: `https://<hostname>:<port>/content/test_node.html`。
-
-1. 顯示一個帶有「Hello World!」 **的頁面。** message.
 
 ## 導出和導入節點類型 {#exporting-and-importing-node-types}
 
