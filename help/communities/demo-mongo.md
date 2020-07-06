@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 0%
@@ -125,7 +125,7 @@ ht-degree: 0%
 * cd to &lt;solrinstall>/example
 * java -jar start.jar
 
-這將使用預設埠8983啟動Solr HTTP伺服器。 您可以瀏覽至Solr主控台，以取得Solr主控台進行測試。
+這將使用預設埠8983啟動Solr HTTP伺服器。 您可以瀏覽至Solr Console以取得Solr主控台進行測試。
 
 * 預設Solr控制台： [http://localhost:8983/solr/](http://localhost:8983/solr/)
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
    注意： 雖然作者在asipath下有JCR節 *點* ，但這些節點是用於SCF框架的。 實際的UGC不在JCR中，它在MongoDB中。
 
-1. 在mongodb社群>系列> **[!UICONTROL 內容中檢視UGC]**
+1. 在mongodb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** >內容中檢視UGC ****
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
