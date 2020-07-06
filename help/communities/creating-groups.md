@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: d94708ee-ca6b-420c-9536-6889d752f9de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -28,19 +31,19 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ## 建立新群組 {#creating-a-new-group}
 
-建立新社群群群組的能力，取決於是否有包含群組功能的社群網站，例如從建立的網站 ` [Reference Site Template](/help/communities/sites.md)`。
+建立新社群群群組的能力取決於是否存在包含群組功能的社群網站，例如從「參考網站範本」建 [立的社群網站](/help/communities/sites.md)。
 
 下列範例使用從中建立的社群網站，如「AEM社群快速入門」教 `Reference Site Template` 學課程中 [所述](/help/communities/getting-started.md) 。
 
 這是在選取「群組」功能表項目時， **在發佈時載入** 的頁面：
 
-![chlimage_1-85](assets/chlimage_1-85.png)
+![chlimage_1-236](assets/chlimage_1-236.png)
 
 選擇「新建組」 **表徵圖後** ，將開啟編輯對話框。
 
 在「設 **定** 」標籤下，您提供群組的基本功能：
 
-![chlimage_1-86](assets/chlimage_1-86.png)
+![chlimage_1-237](assets/chlimage_1-237.png)
 
 * **群組名稱**
 
@@ -68,21 +71,21 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 在「模 **板** 」(Template)頁籤下，可以從社區組模板清單中進行選擇，這些模板是在社區站點結構或社區站點模板中包含組功能時指定的。
 
-![chlimage_1-87](assets/chlimage_1-87.png)
+![chlimage_1-238](assets/chlimage_1-238.png)
 
 在「影 **像** 」標籤下方，可上傳影像，以便在社群網站的「群組」頁面上顯示群組。 預設樣式表會將影像大小設為170 x 90像素。
 
-![chlimage_1-88](assets/chlimage_1-88.png)
+![chlimage_1-239](assets/chlimage_1-239.png)
 
-選取「建 **立群組** 」按鈕後，會根據選擇的範本建立群組的頁面，並為會籍建立使用者群組，而「群組」頁面將會更新以顯示新的子社群。
+選取「建 **立群組** 」按鈕後，會根據所選範本建立群組的頁面，並為會籍建立使用者群組，而「群組」頁面將會更新以顯示新的子社群。
 
 例如，具有名為「焦點群組」的新子社群的「群組」頁面（已上傳影像縮圖）會顯示如下（仍以社群群組管理員身分登入）:
 
-![chlimage_1-89](assets/chlimage_1-89.png)
+![chlimage_1-240](assets/chlimage_1-240.png)
 
 選取連 `Focus Group` 結會在瀏覽器中開啟「焦點群組」頁面，此頁面會根據所選範本具有初始外觀，並在主社群網站的功能表下方包含子功能表：
 
-![chlimage_1-90](assets/chlimage_1-90.png)
+![chlimage_1-241](assets/chlimage_1-241.png)
 
 ### Community Group Member List Component {#community-group-member-list-component}
 
