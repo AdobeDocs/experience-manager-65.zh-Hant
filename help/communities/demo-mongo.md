@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+workflow-type: tm+mt
+source-wordcount: '794'
+ht-degree: 0%
 
 ---
 
@@ -49,15 +52,15 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 * 基本配置
 
-   * 依照MongoDB安裝指示
-   * 為mongod配置
+   * 請遵循MongoDB安裝指示。
+   * 按mongod配置：
 
-      * 無需配置蒙古檔案或共用
-   * 已安裝的MongoDB資料夾將稱為&lt;mongo-install>
-   * 定義的資料目錄路徑將稱為&lt;mongo-dbpath>
+      * 不需要配置蒙古檔案或共用。
+   * 已安裝的MongoDB資料夾將稱為&lt;mongo-install>。
+   * 定義的資料目錄路徑將稱為&lt;mongo-dbpath>。
 
 
-* MongoDB可能與AEM在同一台主機上運行，或遠程運行
+* MongoDB可能與AEM在相同的主機上執行，或遠端執行。
 
 ### 啟動MongoDB {#start-mongodb}
 
@@ -71,23 +74,24 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 >
 >如果MongoDB是在 *AEM後啟動* ，請重 **新啟動所有** AEM **** 例項，以便正確連線至MongoDB。
 
-### 示範製作選項：設定MongoDB複製副本集 {#demo-production-option-setup-mongodb-replica-set}
+
+### 示範製作選項： 設定MongoDB複製副本集 {#demo-production-option-setup-mongodb-replica-set}
 
 以下命令是在localhost上設定具有3個節點的複製副本集的示例：
 
-* bin/mongod —port 27017 —dbpath資料—replSet rs0&amp;
-* bin/mongo
+* `bin/mongod --port 27017 --dbpath data --replSet rs0&`
+* `bin/mongo`
 
-   * cfg = {&quot;_id&quot;:&quot;rs0&quot;,&quot;version&quot;:1,&quot;members&quot;: [{&quot;_id&quot;:0,「主機」:&quot;127.0.0.1:27017&quot;}]}
-   * rs.initiate(cfg)
+   * `cfg = {"_id": "rs0","version": 1,"members": [{"_id": 0,"host": "127.0.0.1:27017"}]}`
+   * `rs.initiate(cfg)`
 
-* bin/mongod —port 27018 —dbpath data1 —replSet rs0&amp;
-* bin/mongod —port 27019 —dbpath data2 —replSet rs0&amp;
-* bin/mongo
+* `bin/mongod --port 27018 --dbpath data1 --replSet rs0&`
+* `bin/mongod --port 27019 --dbpath data2 --replSet rs0&`
+* `bin/mongo`
 
-   * rs.add(&quot;127.0.0.1:27018&quot;)
-   * rs.add(&quot;127.0.0.1:27019&quot;)
-   * rs.status()
+   * `rs.add("127.0.0.1:27018")`
+   * `rs.add("127.0.0.1:27019")`
+   * `rs.status()`
 
 ## Solr {#solr}
 
@@ -95,22 +99,22 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 * 從 [Apache Lucene下載Solr](https://archive.apache.org/dist/lucene/solr/):
 
-   * 適用於任何作業系統
-   * 使用4.10版或5版
-   * Solr需要Java 1.7或更新版本
+   * 適用於任何作業系統。
+   * 使用4.10版或5版。
+   * Solr需要Java 1.7或更新版本。
 
 * 基本配置
 
-   * 遵循「範例」Solr設定
-   * 無需服務
-   * 已安裝的Solr資料夾將稱為&lt;solr-install>
+   * 請遵循「範例」Solr設定。
+   * 不需要任何服務。
+   * 已安裝的Solr資料夾將稱為&lt;solr-install>。
 
 ### 為AEM Communities設定Solr {#configure-solr-for-aem-communities}
 
 若要設定MSRP的Solr系列以進行示範，需要做兩項決定（如需詳細資訊，請選取主要檔案的連結）:
 
-1. 在獨立或 [SolrCloud模式下執行Solr](msrp.md#solrcloudmode)
-1. 安裝 [標準](msrp.md#installingstandardmls) 或進 [階多語言搜](msrp.md#installingadvancedmls) 尋(MLS)
+1. 在獨立或 [SolrCloud模式中執行Solr](msrp.md#solrcloudmode)。
+1. 安裝 [標準](msrp.md#installingstandardmls) 或進 [階多語言搜](msrp.md#installingadvancedmls) 尋(MLS)。
 
 ### 獨立Solr {#standalone-solr}
 
@@ -127,14 +131,15 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 >[!NOTE]
 >
->如果Solr Console不可用，請檢查&lt;solrinstall>/example/logs下的日誌。 查看SOLR是否嘗試綁定到無法解析的特定主機名(如「user-macbook-pro」)。
+>如果Solr Console不可用，請檢查&lt;solrinstall>/example/logs下的日誌。 查看SOLR是否嘗試綁定到無法解析的特定主機名(如 「user-macbook-pro」)。
 如果是，請使用此主機名的新條目（如127.0.0.1 user-macbook-pro）更新etc/hosts檔案，Solr將正常啟動。
+
 
 ### SolrCloud {#solrcloud}
 
 要運行非常基本（非生產）的solrCloud設定，請從以下位置開始：
 
-* java -Dbootstrap_confdir=。/solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar
+* `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
 ## 將MongoDB標識為通用儲存 {#identify-mongodb-as-common-store}
 
@@ -158,7 +163,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-   注意：雖然作者在asipath下有JCR節 *點* ，但這些節點是用於SCF框架的。 實際的UGC不在JCR中，它在MongoDB中。
+   注意： 雖然作者在asipath下有JCR節 *點* ，但這些節點是用於SCF框架的。 實際的UGC不在JCR中，它在MongoDB中。
 
 1. 在mongodb社群>系列> **[!UICONTROL 內容中檢視UGC]**
 
@@ -170,6 +175,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
    * 要選 `core selector` 擇的用戶 `collection1`
    * 選取 `Query`
    * 選取 `Execute Query`
+
    ![chlimage_1-194](assets/chlimage_1-194.png)
 
 ## 疑難排解 {#troubleshooting}
@@ -181,12 +187,13 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 1. 請確定MSRP已設定為預設提供者：
 
    * 在所有作者和發佈AEM例項上，請重新造訪「儲 [存設定」主控台](srp-config.md)
-   或檢查AEM資料庫：
+
+   或者，檢查AEM存放庫：
 
    * 在JCR中，如 [果/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-      * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，這表示儲存提供程式是JSRP
-      * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將MSRP定義為預設提供程式
+   * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，這表示儲存提供程式是JSRP
+   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將MSRP定義為預設提供程式
 
 
 1. 請確定AEM在選取MSRP後重新啟動。
