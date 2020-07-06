@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,7 @@ MySQL是關係型資料庫，可用來儲存使用者產生的內容(UGC)。
 
 將MySQL更改為以UTF8作為其字元集：
 
-* mysql> SET NAMES &#39;utf8&#39;;
+* mysql > SET NAMES &#39;utf8&#39;;
 
 將MySQL資料庫變更為預設為UTF8:
 
@@ -121,7 +124,7 @@ SQL指令碼是從AEM資料庫取得：
 1. 選擇/libs/social/config/datastore/dsrp/schema資料夾
 1. 下載 `init-schema.sql`
 
-![chlimage_1-107](assets/chlimage_1-107.png)
+   ![chlimage_1-107](assets/chlimage_1-107.png)
 
 下載架構的方法之一是
 
@@ -136,7 +139,7 @@ SQL指令碼是從AEM資料庫取得：
 
 如果指令碼中更改了資料庫名稱，請務必在 [JDBC配置中更改該名稱](#configurejdbcconnections)。
 
-#### 步驟1:開啟SQL檔案 {#step-open-sql-file}
+#### 步驟1: 開啟SQL檔案 {#step-open-sql-file}
 
 在MySQL工作台中
 
@@ -145,7 +148,7 @@ SQL指令碼是從AEM資料庫取得：
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
-#### 步驟2:執行SQL指令碼 {#step-execute-sql-script}
+#### 步驟2: 執行SQL指令碼 {#step-execute-sql-script}
 
 在步驟1中開啟之檔案的「工作台」視窗中，選取要 `lightening (flash) icon` 執行指令碼的檔案。
 
@@ -167,36 +170,35 @@ Day Commons JDBC連接池的OSGi **配置** ，配置MySQL JDBC驅動程式。
 
 當MySQL在與AEM不同的伺服器上執行時，必須在JDBC連接器中指定伺服器主機名稱，以取代&#39;localhost&#39;。
 
-* 在每個作者上並發佈AEM例項
-* 以管理員權限登入
-* 存取網 [路主控台](../../help/sites-deploying/configuring-osgi.md)
+* 在每個作者上並發佈AEM例項。
+* 以管理員權限登入。
+* 存取網 [路主控台](../../help/sites-deploying/configuring-osgi.md)。
 
    * 例如， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
 * 找到 `Day Commons JDBC Connections Pool`
-* 選擇圖 `+` 標以建立新連接配置
+* 選擇圖 `+` 標以建立新連接配置。
 
-![chlimage_1-111](assets/chlimage_1-111.png)
+   ![chlimage_1-111](assets/chlimage_1-111.png)
 
 * 輸入下列值：
 
    * **[!UICONTROL JDBC驅動程式類]**: `com.mysql.jdbc.Driver`
    * **[!UICONTROL JDBC連接URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      如果MySQL伺服器與&#39;this&#39; AEM伺服器不相同，請指定伺服器取代localhost
-
-      *communities* is the default database(schema)name
+      如果MySQL伺服器與&#39;this&#39; AEM伺服器社群不是預設資料庫（架構）名稱，請指定 *伺服器* ，以取代localhost。
 
    * **[!UICONTROL 使用者名稱]**: `root`
 
-      或者，如果不是「root」，請輸入MySQL伺服器的配置用戶名
+      或者，如果不是「root」，請輸入MySQL伺服器的配置用戶名。
 
    * **[!UICONTROL 密碼]**:
 
       如果沒有為MySQL設定口令，請清除此欄位，
 
-      else enter configured password for the MySQL Username
-   * **[!UICONTROL 資料來源名稱]**:為 [MySQL連接輸入的名稱](#new-connection-settings)，例如&#39;communities&#39;
+      否則，請輸入MySQL用戶名的配置口令。
+
+   * **[!UICONTROL 資料來源名稱]**: 為 [MySQL連接輸入的名稱](#new-connection-settings)，例如&#39;communities&#39;。
 
 * 選擇保 **[!UICONTROL 存]**
 
