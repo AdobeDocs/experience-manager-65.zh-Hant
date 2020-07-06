@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 85d4cdf0e2cfcb8b5e70387ce2dc556df9033257
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1899'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 * AEM Communities授權
 
-* 適用於：
+* 適用於下列產品的可選授權：
 
    * [Adobe Analytics for Communities功能](/help/communities/analytics.md)
    * [MSRP專用的MongoDB](/help/communities/msrp.md)
@@ -74,15 +74,14 @@ ht-degree: 1%
 
          * UGC從未複製
          * UGC僅可在輸入AEM例項或叢集上顯示
-      * 預設值為JSRP
 
+         * 預設值為JSRP
    針對啟 **[用功能](/help/communities/overview.md#enablement-community)**
 
    * [安裝和配置FFmpeg](/help/communities/ffmpeg.md)
    * [安裝MySQL的JDBC驅動程式](#jdbc-driver-for-mysql)
    * [安裝AEM Communities SCORM-Engine](#scorm-package)
    * [安裝和配置MySQL以啟用](/help/communities/mysql.md)
-
 
 
 
@@ -106,12 +105,12 @@ AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communitie
 
 兩個社區功能使用MySQL資料庫：
 
-* 若要 [啟用](/help/communities/enablement.md) : 錄制SCORM活動和學員
-* 針對 [DSRP](/help/communities/dsrp.md) : 儲存使用者產生的內容(UGC)
+* 若要 [啟用](/help/communities/enablement.md): 錄制SCORM活動和學員
+* 針對 [DSRP](/help/communities/dsrp.md): 儲存使用者產生的內容(UGC)
 
 MySQL連接器必須單獨獲得和安裝。
 
-必要的步驟有：
+必要的步驟包括：
 
 1. 從https://dev.mysql.com/downloads/connector/j/下載ZIP封 [存](https://dev.mysql.com/downloads/connector/j/)
 
@@ -126,7 +125,6 @@ MySQL連接器必須單獨獲得和安裝。
    * 檢查 *Oracle Corporation的MySQLcom.mysql.jdbc* JDBC驅動程式是否處於活動狀態，如果沒有，則啟動它（或檢查日誌）
 
 1. 如果在配置JDBC後在現有部署上安裝，則通過從Web控制台中保存JDBC配置，將JDBC重新綁定到新連接器：
-
    * 例如，https://localhost:4502/system/console/configMgr
    * 找到配 `Day Commons JDBC Connections Pool` 置
    * 選擇以開啟
@@ -138,7 +136,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 #### 範例： 已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![chlimage-bundles](assets/chlimage-bundles.png)
 
 ### SCORM套件 {#scorm-package}
 
@@ -151,7 +149,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 **安裝SCORM套件**
 
 1. 從「 [Package Share」（套件共用）安裝2.3.7版的cq-social-scorm](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) -package。
-1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行該實例，以建立升級的scormEngineDB模式。
+1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行它，以建立升級的scormEngineDB模式。
 1. 在發 `/content/communities/scorm/RecordResults` 布者的CSRF篩選器中新增「排除的路徑」 `https://<hostname>:<port>/system/console/configMgr` 屬性。
 
 
@@ -223,7 +221,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 因此，必須編輯所有 **次要發佈例項的配置** ，以取消勾選 **`Primary Publisher`** 核取方塊。
 
-![](/help/communities/assets/chlimage_1-126.png)
+![chlimage_1-411](assets/chlimage_1-411.png)
 
 對於發佈群中的所有其他（次要）發佈例項：
 
@@ -249,7 +247,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 * 在作者上訪問複製控制台
 
-   * 從全域導覽，導覽至「工 **[!UICONTROL 具>部署>複製>作者代理」]**
+   * 從全局導航，導航至「工 **[!UICONTROL 具]** 」 > 「部 **[!UICONTROL 署]** 」 > 「復 **[!UICONTROL 制]** 」 > 「作 **[!UICONTROL 者上的代理」]**
 
 * 對於兩個代理，請遵循相同的流程：
 
@@ -267,11 +265,11 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 #### 預設代理（發佈） {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![chlimage_1-412](assets/chlimage_1-412.png)
 
 #### 反向複製代理（發佈反向） {#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![chlimage_1-413](assets/chlimage_1-413.png)
 
 ### 作者的隧道服務 {#tunnel-service-on-author}
 
@@ -279,11 +277,10 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 隧道服務使用作者上的複製代理提供此訪問。
 
-要啟用隧道服務：
+要啟用隧道服務，請執行以下操作：
 
-* 論作 **者**
-* 使用管理權限登入
-* 如果發佈者不是localhost:4503或transport用戶不是 `admin`，則 [配置複製代理](#replication-agents-on-author)
+* 以管理權限登入您的作者實例。
+* 如果發佈者不是localhost:4503或傳輸用戶不是， `admin`則 [配置複製代理](#replication-agents-on-author)
 
 * 存取 [Web Console](/help/sites-deploying/configuring-osgi.md)
 
@@ -294,7 +291,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 * 勾選「 **啟用** 」方塊
 * 選擇保 **存**
 
-![](/help/communities/assets/chlimage_1-129.png)
+   ![chlimage_1-414](assets/chlimage_1-414.png)
 
 ### 複製加密密鑰 {#replicate-the-crypto-key}
 
@@ -306,15 +303,15 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 
 * 存取AEM例項（通常為作者例項），其中包含要複製的關鍵材料
 
-   * 在本機檔 `com.adobe.granite.crypto.file` 案系統中尋找包，例如，
+   * 在本機 `com.adobe.granite.crypto.file` 檔案系統中找到包，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * 檔 `bundle.info` 案會識別套件
    * 導覽至資料夾，例如
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * 複製hmac和主節點檔案
 
+      * 複製hmac和主節點檔案
 
 
 * 針對每個目標AEM例項
@@ -330,6 +327,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 >
 >如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請 [聯絡客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
+
 #### 儲存庫複製 {#repository-replication}
 
 如同AEM 6.2及舊版軟體一樣，將關鍵資料儲存在儲存庫中，可在每個AEM例項的首次啟動時指定下列系統屬性（會建立初始儲存庫），以保留它：
@@ -340,9 +338,10 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 >
 >請務必驗證作者上的復 [制代理是否正確](#replication-agents-on-author) 配置。
 
-在儲存庫中儲存密鑰材料後，將加密密鑰從作者複製到其他實例的方式如下：
 
-使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
+將密鑰材料儲存在儲存庫中後，將加密密鑰從作者複製到其他實例的方式如下：
+
+使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
 * 瀏覽 [至https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
 * 選取 `/etc/key`
@@ -351,7 +350,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 
 * [刷新Granite加密包](#refresh-the-granite-crypto-bundle)
 
-![](/help/communities/assets/chlimage_1-130.png)
+   ![chlimage_1-415](assets/chlimage_1-415.png)
 
 #### 刷新Granite加密包 {#refresh-the-granite-crypto-bundle}
 
@@ -362,7 +361,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 * 找 `Adobe Granite Crypto Support` 到包(com.adobe.granite.crypto)
 * 選擇「刷 **新」**
 
-![](/help/communities/assets/chlimage_1-131.png)
+   ![chlimage_1-416](assets/chlimage_1-416.png)
 
 * 稍後，應會出現「 **成功** 」對話方塊：
    `Operation completed successfully.`
