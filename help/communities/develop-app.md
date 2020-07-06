@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 2b04724138f28cd7f357d155b88daf964632f3bc
+workflow-type: tm+mt
+source-wordcount: '608'
+ht-degree: 2%
 
 ---
 
 
-# 開發沙盒應用程式 {#develop-sandbox-application}
+# 開發沙盒應用程式  {#develop-sandbox-application}
 
 在本節中，由於範本已在初始應用程式區段中設定，而初始內容區段中已建立初始頁面 [](initial-app.md)[](initial-content.md) ，因此可使用基礎指令碼來開發應用程式，包括啟用使用社群元件製作內容的功能。 在本節結束時，網站將可正常運作。
 
@@ -30,57 +33,57 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 使用CRXDE Lite:
 
 <!--Resolve steps below-->
-    名稱：`sling:resourceSuperType&#39;
-    Type:`字串&#39;
-    值：`foundation/components/page`
+    名稱： `sling:resourceSuperType&#39;
+    Type: `字串&#39;
+    值： `foundation/components/page`
 
 1. 按一下綠色 **[!UICONTROL [+]Add]**
 1. 按一下「 **[!UICONTROL 全部儲存」]**
 
-![chlimage_1-231](assets/chlimage_1-231.png)
+   ![chlimage_1-231](assets/chlimage_1-231.png)
 
 ### 頭部和身體指令碼 {#head-and-body-scripts}
 
 1. 在 **CRXDE Lite** explorer窗格中，導覽至 `/apps/an-scf-sandbox/components/playpage` 並連按兩下檔案，以在編輯 `playpage.jsp` 窗格中開啟檔案。
 
-#### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp}
+   `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
-```xml
-<%--
-
-  An SCF Sandbox Play Component component.
-
-  This is the component which renders content for An SCF Sandbox page.
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
-%><%@page session="false" %><%
-%><%
- // TODO add your code here
-%>
-```
+   ```xml
+   <%--
+   
+     An SCF Sandbox Play Component component.
+   
+     This is the component which renders content for An SCF Sandbox page.
+   
+   --%><%
+   %><%@include file="/libs/foundation/global.jsp"%><%
+   %><%@page session="false" %><%
+   %><%
+    // TODO add your code here
+   %>
+   ```
 
 1. 請注意開啟／關閉指令碼標籤，請取代&quot; // TODO ...&quot; with包含&lt;html>標題和內文部分的指令碼。
 
    如果超類型為 `foundation/components/page`，則未在此資料夾中定義的任何指令碼都將解析為資料夾中的指令碼(如果存在 `/apps/foundation/components/page` )，否則解析為資料夾中的腳 `/libs/foundation/components/page` 本。
 
-#### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp-1}
+   `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
-```xml
-<%--
-
-    An SCF Sandbox Play Component component: playpage.jsp
-
-  This is the component which renders content for An SCF Sandbox page.
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
-%><%@page session="false" %>
-<html>
-  <cq:include script="head.jsp"/>
-  <cq:include script="body.jsp"/>
-</html>
-```
+   ```xml
+   <%--
+   
+       An SCF Sandbox Play Component component: playpage.jsp
+   
+     This is the component which renders content for An SCF Sandbox page.
+   
+   --%><%
+   %><%@include file="/libs/foundation/global.jsp"%><%
+   %><%@page session="false" %>
+   <html>
+     <cq:include script="head.jsp"/>
+     <cq:include script="body.jsp"/>
+   </html>
+   ```
 
 1. 基礎指令碼 `head.jsp` 不需要覆蓋，但基礎指令碼 `body.jsp` 是空的。
 
@@ -92,6 +95,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
       * 名稱： **body.jsp**
    1. 按一下「 **[!UICONTROL 全部儲存」]**
+
    開啟 `/apps/an-scf-sandbox/components/playpage/body.jsp` 並貼入下列文字：
 
    ```xml
@@ -155,6 +159,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 >為頁面par啟用的元件將作為 `components`
 >`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` 節點。
 
+
 ## 登陸頁面 {#landing-page}
 
 在多語言環境中，根頁面將包含一個指令碼，該指令碼將解析來自客戶端的請求以確定首選語言。
@@ -167,7 +172,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 * 選擇 **[!UICONTROL 開啟屬性]**
 * 在「高級」頁籤上
 
-   * 若為「重新導向」項目，請瀏 **[!UICONTROL 覽至「網站> SCF沙盒網站> SCF沙盒」]**
+   * 若為「重新導向」項目，請瀏 **[!UICONTROL 覽至「網站]** > **[!UICONTROL SCF沙盒網站]** > **[!UICONTROL SCF沙盒」]**
    * 按一下「 **[!UICONTROL 確定」]**
 
 * 按一下「 **[!UICONTROL 確定」]**
