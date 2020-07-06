@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: 2b04724138f28cd7f357d155b88daf964632f3bc
+source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '616'
 ht-degree: 2%
 
 ---
@@ -32,13 +32,17 @@ ht-degree: 2%
 
 使用CRXDE Lite:
 
-<!--Resolve steps below-->
-    名稱： `sling:resourceSuperType&#39;
-    Type: `字串&#39;
-    值： `foundation/components/page`
+1. 選擇節 `/apps/an-scf-sandbox/components/playpage`點。
+1. 在「屬性」頁籤中，輸入具有以下值的新屬性：
 
-1. 按一下綠色 **[!UICONTROL [+]Add]**
-1. 按一下「 **[!UICONTROL 全部儲存」]**
+   名稱: `sling:resourceSuperType`
+
+   類型: `String`
+
+   值: `foundation/components/page`
+
+1. 按一下綠色 **[!UICONTROL +添加按鈕]** 。
+1. 按一下「 **[!UICONTROL 全部儲存]**」。
 
    ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -89,12 +93,12 @@ ht-degree: 2%
 
    若要設定製作，請使 `body.jsp` 用本機指令碼覆蓋，並在內文中包含段落系統(parsys):
 
-   1. 導航到 `/apps/an-scf-sandbox/components`
-   1. 選擇節 `playpage`點
+   1. 導航到 `/apps/an-scf-sandbox/components`.
+   1. 選擇節 `playpage` 點。
    1. 按一下滑鼠右鍵並選取 `Create > Create File...`
 
       * 名稱： **body.jsp**
-   1. 按一下「 **[!UICONTROL 全部儲存」]**
+   1. 按一下「 **[!UICONTROL 全部儲存]**」。
 
    開啟 `/apps/an-scf-sandbox/components/playpage/body.jsp` 並貼入下列文字：
 
@@ -114,7 +118,7 @@ ht-degree: 2%
    </body>
    ```
 
-1. 按一下「 **[!UICONTROL 全部儲存」]**
+1. 按一下「 **[!UICONTROL 全部儲存]**」。
 
 **以編輯模式在瀏覽器中檢視頁面：**
 
