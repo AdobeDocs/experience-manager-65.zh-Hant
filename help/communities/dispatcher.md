@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 瞭解您特定部署和網站設計的必要項目
 
-* 聯絡 [客戶服務](https://helpx.adobe.com/marketing-cloud/contact-support.html)
+* 聯絡 [客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)
 
 另請參見主要 [Dispatcher文檔](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
 
@@ -58,12 +61,14 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 * 尋找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 選擇「+」表徵圖以建立新連接配置
 
-![chlimage_1-339](assets/chlimage_1-339.png)
+   ![chlimage_1-339](assets/chlimage_1-339.png)
 
 * **篩選模式**
-   *（必要）* ，一或多個社群頁面路徑。 例如， `/content/sites/engage/(.*)`。
+
+   *（必要）* ，一或多個社群頁面路徑。 For example, `/content/sites/engage/(.*)`.
 
 * **快取控制最大使用時間**
+
    *（必要）* ，要新增至「快取控制」標題的最大時段（以秒為單位）。 值必須大於零(0)。
 
 ## Dispatcher Client標題 {#dispatcher-client-headers}
@@ -80,7 +85,7 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 
 以下示例使用可能需要修改的屬性名稱，以適合任何特定的dispatcher.any檔案。
 
-另請參閱
+另請參閱:
 
 * [Dispatcher Security Checklist](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)
 
@@ -88,6 +93,7 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 >
 >**屬性名稱範例**
 >顯示的所有屬性名稱(如 **/0050** 和 **/0170**)都應調整為適合現有dispatcher.any配置檔案。
+
 
 應將下列條目添加到/filter節的結尾，尤其是在所有拒絕條目之後。
 
