@@ -3,9 +3,9 @@ title: XMP回寫至轉譯
 description: 瞭解XMP回寫功能如何將資產的中繼資料變更傳播至資產的所有或特定轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '793'
 ht-degree: 4%
 
 ---
@@ -64,7 +64,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 >
 >有關64位元Linux中的XMP回寫問題，請參 [閱如何在64位元RedHat Linux上啟用XMP回寫](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)。
 >
->如需支援平台的詳細資訊，請參閱 [XMP中繼資料回寫的必要條件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
+>如需支援的平台，請參 [閱XMP中繼資料回寫的必要條件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
 
 ## 篩選XMP中繼資料 {#filtering-xmp-metadata}
 
