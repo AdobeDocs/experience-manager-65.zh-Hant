@@ -3,9 +3,9 @@ title: 使用中的媒體處理常式和工作流程來處理資產 [!DNL Adobe 
 description: 瞭解媒體處理常式以及如何使用工作流程對您的數位資產執行工作。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -21,15 +21,13 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->請參閱「資 [產支援的格式](assets-formats.md) 」頁面，以取得各格式支援的 [!DNL Assets] 所有格式及支援的功能說明。
+>如需各 [種格式支援之格式](assets-formats.md) ，請參閱「資產支援的格式」頁面，以 [!DNL Assets] 取得各格式支援之功能的說明。
 
 ## 預設媒體處理常式 {#default-media-handlers}
 
 下列媒體處理常式可用於 [!DNL Assets] 和處理最常見的MIME類型：
 
-<!-- TBD: 
-* Apply correct formatting once table is moved to MD.
-* Java versions shouldn't be set to 1.5. Must be updated.
+<!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
 -->
 
 | 處理常式名稱 | 服務名（在系統控制台中） | 支援的MIME類型 |
@@ -140,7 +138,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 1. 在Eclipse中，建立 `myBundle` 專 [!DNL Maven] 案：
 
-   1. 在功能表列中，按一下「 **[!UICONTROL 檔案>新增>其他]**」。
+   1. 在功能表列中，按一下「 **[!UICONTROL 檔案]** >新 **[!UICONTROL 增]** >其 **[!UICONTROL 他]**」。
    1. 在對話框中，展開檔案 [!DNL Maven] 夾，選擇 [!DNL Maven] 項目並按一下 **[!UICONTROL 下一步]**。
    1. 選中「建立簡單項目」框和「使用預設工作區位置」框，然後按一下「下 **[!UICONTROL 一步]**」。
    1. 定義專 [!DNL Maven] 案：
@@ -505,7 +503,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 |---|---|
 | mime:&lt;mime-type> | 可選引數。 如果資產與其中一個引數的MIME類型相同，則會套用此程式。 <br>可定義數種MIME類型。 |
 | tn:&lt;width>:&lt;height> | 可選引數。 該過程建立具有在參數中定義的尺寸的縮略圖。 <br>可定義數個縮圖。 |
-| cmd: &lt;command> | 定義將執行的命令。 語法取決於命令行工具。 只能定義一個命令。 <br>以下變數可用來建立命令：<br>`${filename}`: 輸入檔案的名稱，例如original.jpg <br> `${file}`: 輸入檔案的完整路徑名稱，例如/tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: 的目錄，例如/tmp/cqdam0816.tmp <br>`${basename}`: 輸入檔案的名稱（不帶副檔名），例如原始檔案 <br>`${extension}`: 輸入檔案的副檔名，例如JPG。 |
+| cmd: &lt;command> | 定義所執行的命令。 語法取決於命令行工具。 只能定義一個命令。 <br>以下變數可用來建立命令：<br>`${filename}`: 輸入檔案的名稱，例如original.jpg <br> `${file}`: 輸入檔案的完整路徑名稱，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: 目錄，例如 `/tmp/cqdam0816.tmp`<br>`${basename}`: 輸入檔案的名稱（不帶副檔名），例如原始檔案 <br>`${extension}`: 輸入檔案的副檔名，例如JPG。 |
 
 例如，如果 [!DNL ImageMagick] 安裝在托管伺服器的磁碟上，並且 [!DNL Experience Manager] 使用 [!UICONTROL CommandLineProcess作為實施建立流程步驟，並使用下列值作為流] 程參數 :
 
