@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '952'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 總之，「收件箱」允許您建立新應用程式並管理分配的任務。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >您必須是工作流程使用者群組的成員，才能使用AEM Inbox。
 
@@ -50,9 +53,11 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 執行下列任一項作業：
 
    * 若要委派任務，請點選「委 **[!UICONTROL 派」]**。 「委派項目」(Delegate Item)對話框開啟。 選取使用者、選擇性地新增註解，然後點選「 **[!UICONTROL 確定]**」。
+
    ![委派](assets/delegate.png)
 
    * 要聲明任務，請按一下「打 **[!UICONTROL 開」]**。 將開啟「指定給自身」對話框。 點選「 **[!UICONTROL 繼續]** 」以宣告此工作。 聲明的任務將以您作為收件箱中的受託人的身份顯示。
+
    ![索賠](assets/claim.png)
 
 ### 查看詳細資訊並對任務執行操作 {#view-details-and-perform-actions-on-tasks}
