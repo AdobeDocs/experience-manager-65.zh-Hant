@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 2%
 
 ---
 
@@ -102,6 +105,7 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
+
 >
 >
 例如：
@@ -116,7 +120,7 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
 
 使用嚮導建立的社區站點結構在選定時包括消息傳遞功能。 請參 `User Management` 閱社群網 [站主控台的設定](/help/communities/sites-console.md#user-management)。
 
-### 范常式式碼：收到的消息通知 {#sample-code-message-received-notification}
+### 范常式式碼： 收到的消息通知 {#sample-code-message-received-notification}
 
 「社交訊息」功能會拋出操作的事件， `send`例如 `marking read`, `marking delete`。 可以捕獲這些事件並對事件中包含的資料採取操作。
 
@@ -128,8 +132,8 @@ source-git-commit: a7c2d71798649050f2f7852251996c2edf1cf113
 1. 使用任 `bundle node`意 `/apps/engage/install` 名稱建立，例如：
 
    * 符號名稱: `com.engage.media.social.messaging.MessagingNotification`
-   * 名稱：快速入門教學課程訊息通知
-   * 說明：當使用者收到訊息時傳送電子郵件通知的範例服務
+   * 名稱： 快速入門教學課程訊息通知
+   * 說明： 當使用者收到訊息時傳送電子郵件通知的範例服務
    * 封裝: `com.engage.media.social.messaging.notification`
 
 1. 導覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然後：
