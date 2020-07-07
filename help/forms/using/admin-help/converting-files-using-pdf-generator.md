@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1180'
 ht-degree: 0%
@@ -66,19 +66,22 @@ Adobe Extensible Metadata Platform(XMP)為Adobe應用程式提供通用的XML架
 >
 >* HTML至PDF功能需要系統字型目錄中的特定字型。 在Linux、Solaris和AIX系統上，系統字型目錄必須包含Courier字型。 在Windows系統上，系統字型目錄必須包含Times New Roman。
    >
-   > 
+   >
 * （僅限UNIX系統）AEM Forms伺服器上應提供下列其中一種日文字型，以將具有日文字型的網頁轉換為PDF檔案。
    >
-   >   
-   * &quot;薩扎納米哥特&quot;
-   >   * &quot;Kozuka Gothic Pro-VI&quot;
-   >   * &quot;Kozuka Mincho Pro-VI&quot;
-   >   * &quot;薩扎納米哥特&quot;
-   >   * &quot;Kozuka Mincho Pr6N&quot;
-   >   * 《山上町》
-   >   * 「Adobe Heiti Std」
-   >   * 「Adobe Song Std」
->* 若要從本機檔案系統上傳檔案，請使用HTML至PDF頁面上的「上傳檔案」選項。
+   >  
+* &quot;薩扎納米哥特&quot;
+>  * &quot;Kozuka Gothic Pro-VI&quot;
+>  * &quot;Kozuka Mincho Pro-VI&quot;
+>  * &quot;薩扎納米哥特&quot;
+>  * &quot;Kozuka Mincho Pr6N&quot;
+>  * 《山上町》
+>  * 「Adobe Heiti Std」
+>  * 「Adobe Song Std」
+
+   >
+   >
+* 若要從本機檔案系統上傳檔案，請使用HTML至PDF頁面上的「上傳檔案」選項。
 
 
 1. 在管理控制台中，按一下「服務> PDF產生器> HTML至PDF」。
@@ -86,6 +89,7 @@ Adobe Extensible Metadata Platform(XMP)為Adobe應用程式提供通用的XML架
 
    * 在「上傳檔案」中，輸入HTML檔案或ZIP檔案的路徑和檔案名稱，或按一下「瀏覽」以尋找並選取它。
    * 在「指定URL」方塊中，輸入要轉換的頁面或網站的URL。
+
    >[!NOTE]
    >
    >您要轉換的檔案必須副檔名為。html、.htm或。zip。
