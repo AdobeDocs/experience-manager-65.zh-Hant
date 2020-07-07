@@ -10,7 +10,10 @@ topic-tags: author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 translation-type: tm+mt
-source-git-commit: abfb6dced1ffd8d0dd11eaab1e66c78704df543f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '665'
+ht-degree: 0%
 
 ---
 
@@ -21,10 +24,11 @@ CAPTCHA（完全自動化的公共圖靈測試，可區分電腦和人類）是�
 
 AEM Forms支援最適化表單中的CAPTCHA。 您可以使用Google的reCAPTCHA服務來實作CAPTCHA。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >* AEM Forms僅支援reCaptcha v2。 不支援任何其他版本。
 >* AEM Forms應用程式的離線模式不支援最適化表單中的CAPTCHA。
+
 >
 
 
@@ -58,6 +62,7 @@ AEM Forms支援最適化表單中的CAPTCHA。 您可以使用Google的reCAPTCHA
    1. 點選 **[!UICONTROL reCAPTCHA]**。 將開啟「配置」頁。 選取在上一個步驟中建立的設定容器，然後點選「 **[!UICONTROL 建立]**」。
    1. 指定reCAPTCHA服務的名稱、網站金鑰和機密金鑰，並點選「 **[!UICONTROL 建立]** 」以建立雲端服務設定。
    1. 在「編輯元件」對話方塊中，指定在步驟1中取得的網站和機密金鑰。 點選 **「Save Settings** (儲存設定 **)」，然後點選「** OK（確定）」以完成設定。
+
    在設定reCAPTCHA服務後，就可在最適化表單中使用。 如需詳細資訊，請參 [閱在最適化表單中使用CAPTCHA](#using-captcha)。
 
 ## 在最適化表單中使用CAPTCHA {#using-captcha}
