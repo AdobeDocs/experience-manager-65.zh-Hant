@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 0%
@@ -172,6 +172,7 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 * hybris擴充功能提供輪詢匯入程式（「hybris」配置），可設定此匯入程式以指定的間隔（例如，每隔24小時，以秒為單位指定間隔）將變更匯入AEM:
 
    * 
+
       ```
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
@@ -226,10 +227,9 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
    >
    >
 1. 再加一個
-   >   此額外變數是透過產品參 `variationAxis` 考的屬性選取(通常 `color` 適用於Geometrixx Outdoors)。
 >
-
-
+>   
+此額外變數是透過產品參 `variationAxis` 考的屬性選取(通常 `color` 適用於Geometrixx Outdoors)。
 
 #### 產品參考資料和產品資料 {#product-references-and-product-data}
 
@@ -534,7 +534,7 @@ The owns `CommerceSession` the three elements:
 
 ![chlimage_1-14](assets/chlimage_1-14a.png)
 
-這會利用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
+這可使用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
 
 #### 搜尋API {#search-api}
 
