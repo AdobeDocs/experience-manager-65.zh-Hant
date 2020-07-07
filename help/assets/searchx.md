@@ -3,9 +3,9 @@ title: 擴充Adobe Experience Manager Assets的搜尋功能
 description: 將Adobe Experience Manager Assets的搜尋功能擴及至預設值以外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '857'
 ht-degree: 18%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->預設情況下，/下的目錄結 `apps` 構不存在，需要建立。 確保節點類型與／下的節點類型匹配 `libs`。
+>預設情況下，下面的目錄結 `/apps` 構不存在，請建立它。 確保節點類型與下面的類型匹配 `/libs`。
 
 ## 新增標籤 {#adding-tabs}
 
@@ -296,6 +296,6 @@ ht-degree: 18%
 
 ## 自訂搜尋結果 {#customizing-search-results}
 
-「資產分享」頁面上的搜尋結果呈現方式由選取的鏡頭控制。 Experience Manager Assets隨附一組預先定義的鏡頭，可用來自訂「資產共用」頁面。 以此方式自訂資產共用，請參閱「建立 [和設定資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
+「資產分享」頁面上的搜尋結果呈現方式由選取的鏡頭控制。 Experience Manager Assets隨附一組預先定義的鏡頭，可用來自訂「資產共用」頁面。 以此方式自訂資產共用，請參閱「建立 [及設定資產共用」頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
 除了使用預先存在的鏡頭外，Experience Manager開發人員也可以建立自己的鏡頭。
