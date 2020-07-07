@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+workflow-type: tm+mt
+source-wordcount: '447'
+ht-degree: 1%
 
 ---
 
@@ -63,9 +66,14 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 1. **[安裝MySQL的JDBC驅動程式](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   使用Web Console（捆綁包）: *http://localhost:4502/system/console/bundles安*&#x200B;裝 *SCORM套件之前* ，請先安裝
+   使用Web Console（捆綁包）: *http://localhost:4502/system/console/bundles*
 
-1. **[安裝SCORM套件](deploy-communities.md#scorm-package)**使用套件管理員：*http://localhost:4502/crx/packmgr/*
+   安裝 *SCORM套件* 之前先安裝
+
+1. **[安裝SCORM套件](deploy-communities.md#scorm-package)**
+
+
+   使用包管理器： *http://localhost:4502/crx/packmgr/*
 
 **在任何伺服器上：**
 
@@ -73,7 +81,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 1. **[安裝MySQL資料庫](mysql.md#database-setup)**
 
-   執行從作者實例下載的SQL指令碼使用MySQL Workbench
+   執行從作者實例下載的SQL指令碼
+
+   使用MySQL工作台
 
 **在裝載作者例項的相同伺服器上：**
 
@@ -109,7 +119,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 1. **[建立社群管理員](users.md#creating-community-members)**
 
-   對於作者環境，請使用classic-UI安全控制台：http://localhost:4502/useradmin **&#x200B;建立路徑= /home/users/community的使用者
+   對於作者環境，請使用classic-UI安全控制台： *http://localhost:4502/useradmin*
+
+   使用路徑= /home/users/community建立使用者
 
    * 將成員添加到以下組：
 
