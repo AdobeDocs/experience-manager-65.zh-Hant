@@ -3,7 +3,10 @@ title: 增強的智慧型標籤
 description: 增強的智慧型標籤
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+workflow-type: tm+mt
+source-wordcount: '1561'
+ht-degree: 7%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 與自然語言辭彙相比，基於業務分類法標籤數位資產有助於使其與公司業務保持一致，並確保最相關的資產出現在搜尋中。
 
-例如，汽車製造商可以用型號名稱來標籤汽車影像，以便在搜尋各種型號的影像以設計促銷活動時，只顯示相關影像。
+例如，汽車製造商可以使用型號名稱來標籤汽車影像，因此當搜尋各種型號的影像以設計促銷活動時，只會顯示相關影像。
 
 要使智慧內容服務應用正確的標籤，您必須對其進行培訓以識別分類。 若要訓練服務，請先組織一組最能說明這些資產的資產和標籤。 在資產上套用這些標籤，並執行培訓工作流程以協助服務學習。
 
@@ -24,7 +27,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
-智慧型內容服務是Adobe I/O上代管的雲端服務。若要在Adobe Experience Manager中使用它，系統管理員必須將您的Experience Manager實例與Adobe I/O整合。
+智慧型內容服務是Adobe I/O上代管的雲端服務。 若要在Adobe Experience Manager中使用它，系統管理員必須將您的Experience Manager實例與Adobe I/O整合。
 
 總而言之，以下是使用智慧型內容服務的主要步驟：
 
@@ -93,7 +96,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 您可以在工作流程主控台(Workflow console)中，視需要訓練智慧型內容服務。
 
-1. 在Experience Manager介面中，前往「工具>工 **[!UICONTROL 作流程>模型」]**。
+1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]****[!UICONTROL >]**&#x200B;模型」。
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 1. 在「執 **[!UICONTROL 行工作流程]** 」對話方塊中，瀏覽至包含標籤資產的裝載資料夾，以訓練服務。
 1. 指定工作流程的標題並新增註解。 然後，按一下「 **[!UICONTROL 執行]**」。 資產和標籤會提交以供培訓。
@@ -108,7 +111,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 若要檢查智慧型內容服務是否在訓練資產集中的標籤上接受訓練，請從「報告」主控台檢閱訓練工作流程報告。
 
-1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具>資產>報表」]**。
+1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
 1. In the **[!UICONTROL Asset Reports]** page, click **[!UICONTROL Create]**.
 1. Select the **[!UICONTROL Smart Tags Training]** report, and then click **[!UICONTROL Next]** from the toolbar.
 1. 指定報表的標題和說明。在「 **[!UICONTROL 排程報表]**」下，保 **[!UICONTROL 留「現在]** 」選項。如果您想要排程報表以供稍後使用，請選 **[!UICONTROL 取]** 「稍後」並指定日期和時間。Then, click **[!UICONTROL Create]** from the toolbar.
@@ -150,7 +153,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 #### 從工作流程主控台標籤資產 {#tagging-assets-from-the-workflow-console}
 
-1. 在Experience Manager介面中，前往「工具>工 **[!UICONTROL 作流程>模型」]**。
+1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]****[!UICONTROL >]**&#x200B;模型」。
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
