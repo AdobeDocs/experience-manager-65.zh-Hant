@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9a27aabef07d5b5104c08c414138fbb22e284a68
+source-git-commit: d7e2d33b81847b15d1e33b3aa406e5e91d44a5f8
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 13%
+source-wordcount: '2045'
+ht-degree: 12%
 
 ---
 
@@ -45,9 +45,9 @@ Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console以品牌入�
 
 提供的資訊基於以下假設：閱讀本「說明」的人熟悉下列技術：
 
-* 安裝、設定和管理Adobe Experience Manager和AEM套件
+* 安裝、設定和管理Adobe Experience Manager和AEM套件。
 
-* 使用Linux和Microsoft Windows作業系統
+* 使用Linux和Microsoft Windows作業系統。
 
 ## 必備條件 {#prerequisites}
 
@@ -357,7 +357,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    >[!NOTE]
    >
-   >請避免禁用任何複製代理，因為這可能導致某些資產的複製失敗。
+   >避免禁用任何複製代理。 這可能會導致某些資產的複製失敗。
 
 您的AEM Assets作者實例已成功設定為品牌入口網站，您現在可以：
 
@@ -375,7 +375,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 ### 驗證正在運行的作業 {#verify-jobs}
 
-在您進行任何修改之前，請確定您的AEM Assets作者實例上沒有執行任何發佈工作。 為此，您可以驗證所有四個複製代理，並確保隊列是理想／空的。
+在您進行任何修改之前，請確定您的AEM Assets作者實例上沒有執行任何發佈工作。 為此，您可以驗證所有四個複製代理，並確保隊列為空。
 
 1. 登入您的AEM Assets作者實例。
 
@@ -415,7 +415,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    ![](assets/delete-mac-user.png)
 
 
-您現在可 [以在AEM](#configure-new-integration-65) 6.5作者實例上建立設定。
+您現在可 [以透過](#configure-new-integration-65) Adobe Developer Console在AEM 6.5作者實例上建立設定。
 
 
 
@@ -431,8 +431,4 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    <li>Step text</li>
    -->
 
-複製成功後，您可以將資產、檔案夾和系列發佈至品牌入口網站。 如需詳細資訊，請參閱：
 
-* [將資產發佈至 Brand Portal](/help/assets/brand-portal-publish-assets.md)
-* [將資料夾發佈至 Brand Portal](/help/assets/brand-portal-publish-folder.md)
-* [將系列發佈至品牌入口網站](/help/assets/brand-portal-publish-collection.md)
