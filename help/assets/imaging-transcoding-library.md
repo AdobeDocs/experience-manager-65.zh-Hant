@@ -3,7 +3,7 @@ title: 影像轉碼程式庫
 description: 瞭解如何設定和使用Adobe的影像轉碼程式庫。此影像處理解決方案可執行核心影像處理功能，包括編碼、轉碼、影像重新取樣和影像大小調整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 1. 從「軟 [體散發」下載Imaging Codeching Library套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用Package Manager安裝它。 此套件與Experience Manager 6.5相容。
 
-1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console，然後按一下「 **[!UICONTROL OSGi > Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
+1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console，然後按一下「 **[!UICONTROL OSGi]** > **[!UICONTROL Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
 
 1. 使用命令檢查資料夾，確保提取所有所需的庫 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`，其中資料夾名稱是使用包ID構建的。 例如，如果bundle `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` id為，則命令為 `588`。
 
@@ -105,7 +105,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 更新 [!UICONTROL DAM更新資產工作流程] ，以使用程式庫來處理影像。
 
-1. 在Experience Manager使用者介面中，選取「工 **[!UICONTROL 具>工作流程>模型」]**。
+1. 在Experience Manager使用者介面中，選取「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]**」。
 
 1. 在「工 **[!UICONTROL 作流程模型]** 」頁面中，以編輯模式開 **** 啟「DAM更新資產」工作流模型。
 
