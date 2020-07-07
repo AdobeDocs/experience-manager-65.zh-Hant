@@ -9,7 +9,10 @@ topic-tags: integration
 discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '1273'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,7 @@ AEM Forms資料整合可讓您使用分散的後端資料來源來建立表單�
 
 在基於表單資料模型建立自適應表單或自適應表單片段後，表單資料模型對象將以自適應表單編輯器顯示在內容瀏覽器的「資料模型對象」( **[!UICONTROL Data Model Objects]** )頁籤中。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >對於自適應表單片段，只有在編寫時選擇的資料模型對象及其關聯的資料模型對象才會顯示在「資料模型對象」頁籤中。
 
@@ -114,7 +117,7 @@ AEM Forms提供現成可用的表單資料模型預填服務，您可以啟用�
 
 ## 將提交的自適應表單資料寫入資料來源 {#write-af}
 
-當使用者根據表單資料模型提交表單時，您可以設定表單，將資料模型物件的提交資料寫入其資料來源。 為了達成此使用案例，AEM Forms提供「表單資料模型」提交動作 [](../../forms/using/configuring-submit-actions.md)，現成可用於根據表單資料模型建立的最適化表單。 它將資料模型對象的提交資料寫入其資料源。
+當使用者根據表單資料模型提交表單時，您可以設定表單，將資料模型物件的提交資料寫入其資料來源。 為了達成此使用案例，AEM Forms提供「表單資料模型」提交動作 [](../../forms/using/configuring-submit-actions.md)，現成可用於根據表單資料模型建立的最適化表單。 它將資料模型對象的提交資料寫入其資料源中。
 
 若要設定「表單資料模型」提交動作，請開啟「最適化表單容器」屬性，並從「提交」accordion下的「提交動作」下拉式清單中選取「使用表單資料模型提交」。 **** 然後，從要提交的資料模型對象的 **[!UICONTROL 「名稱」(Name]** )下拉式清單中瀏覽並選擇資料模型對象。 儲存屬性。
 
