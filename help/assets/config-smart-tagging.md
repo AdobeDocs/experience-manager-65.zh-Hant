@@ -3,9 +3,9 @@ title: 使用智慧型內容服務設定資產標籤。
 description: 瞭解如何使用智慧型內容服務來設定智慧型標籤 [!DNL Adobe Experience Manager]，以及增強智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: dfac819018e85e0e8221bfcc57bc1eaf43b7ff25
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1116'
 ht-degree: 14%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 14%
 
 若要設定整合，請使用Adobe Developer Console整合中的「技術帳戶ID」、「組織ID」、「用戶端密碼」、「授權伺服器」和API金鑰欄位的值。 建立智慧型標籤雲端設定可讓您驗證部署中的API [!DNL Experience Manager] 要求。
 
-1. 在中 [!DNL Experience Manager]，導覽至「 **[!UICONTROL 工具>雲端服務>舊版雲端服務」以開啟]** Cloud Services  Console。
+1. 在中， [!DNL Experience Manager]導航至「 **[!UICONTROL 工具]** > **[!UICONTROL Cloud服務]** >舊版Cloud服務 **** >開放Cloud Services主控台。
 1. 在「資 **[!UICONTROL 產智慧標籤]**」下，開啟上述建立的設定。 在服務設定頁面上，按一下「 **[!UICONTROL 編輯]**」。
 1. 在「 **[!UICONTROL AEM Smart Content Service]** 」對話方塊中 **[!UICONTROL ，使用「服務URL」和「授權伺服器」欄位的預先填入值]****** 。
 1. 對於「 **[!UICONTROL API金鑰]**」、「 **[!UICONTROL Technical Account Id]**」、「 **[!UICONTROL Organization Id]**」和「Client Secret **[!UICONTROL 」欄位，請使]**&#x200B;用上述產生的值。
@@ -103,15 +103,13 @@ ht-degree: 14%
 完成配置後，可使用JMX MBean來驗證配置。 若要驗證，請遵循下列步驟。
 
 1. 訪問您 [!DNL Experience Manager] 的伺服器 `https://[aem_server]:[port]`。
-1. 前往「 **[!UICONTROL 工具>作業> Web Console]** 」以開啟OSGi主控台。 按一 **[!UICONTROL 下「主要> JMX]**」。
-1. 按一 **[!UICONTROL 下com.day.cq.dam.similaritysearch.internal.impl]**。 它會開啟「相 **[!UICONTROL 似性搜尋雜項任務」]**。
-1. 按一 **[!UICONTROL 下validateConfigs()]**。 在「驗證 **[!UICONTROL 配置」對話]** ，按一下 **[!UICONTROL 調用]**。
+1. 前往「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web Console]** 」以開啟OSGi主控台。 按一 **[!UICONTROL 下「主]>[!UICONTROL JMX]**」。
+1. 按一下 `com.day.cq.dam.similaritysearch.internal.impl`. 它會開啟「相 **[!UICONTROL 似性搜尋雜項任務」]**。
+1. 按一下 `validateConfigs()`. 在「驗證 **[!UICONTROL 配置」對話]** ，按一下 **[!UICONTROL 調用]**。 驗證結果會顯示在相同的對話方塊中。
 
-   驗證結果會顯示在相同的對話方塊中。
+## 在 [!UICONTROL DAM更新資產工作流程中啟用智慧標籤] （選用） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-## 在DAM更新資產工作流程中啟用智慧標籤（可選） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
-
-1. 在中， [!DNL Experience Manager]請轉至「工 **[!UICONTROL 具」>「工作流」>「模型」]**。
+1. 在中 [!DNL Experience Manager]，請轉至「工 **[!UICONTROL 具」]** >「工 **[!UICONTROL 作流程]** 」 **[!UICONTROL >「模型]**」。
 1. 在「工 **[!UICONTROL 作流模型]** 」頁面上，選擇 **** 「DAM更新資產」工作流模型。
 1. 從工具 **[!UICONTROL 列按一下]** 「編輯」。
 1. 展開「側面板」以顯示步驟。拖 **[!UICONTROL 曳DAM Workflow]**  (DAM工作流程) 區段中可用的智慧型標籤資產步驟，並將其置於「處理縮 **[!UICONTROL 圖」步驟之後]** 。
