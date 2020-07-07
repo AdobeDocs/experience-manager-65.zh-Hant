@@ -4,9 +4,9 @@ description: 針對配置、 [!DNL Experience Manager] 硬體、軟體和網路�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da2e435f33e8527793e009700c30e60868d196be
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '2776'
+source-wordcount: '2767'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,8 @@ mkfs -q /dev/ram1 800000
 
 Adobe建議在 [!DNL Experience Manager Assets] Java 8上部署以取得最佳效能。
 
->[!NOTE]
->
->Oracle自2015年4月起停止發佈Java 7的更新。
+<!-- TBD: Link to the latest official word around Java.
+-->
 
 ### JVM參數 {#jvm-parameters}
 
