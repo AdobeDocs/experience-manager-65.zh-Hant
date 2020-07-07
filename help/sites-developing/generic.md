@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: platform
 discoiquuid: d8ee3b57-633a-425e-bf36-646f0e0bad52
 translation-type: tm+mt
-source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '1886'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,7 @@ source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
 
    * 引擎可由服務屬性 `commerceProvider` 區分
 
-* AEM支援 `Resource.adaptTo()` 與 `CommerceService``Product`
+* AEM支援 `Resource.adaptTo()` 與 `CommerceService` `Product`
 
    * 實 `adaptTo` 施會在資源的 `cq:commerceProvider` 層次結構中查找屬性：
 
@@ -54,15 +57,15 @@ source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
 * 該 `cq:commerceProvider` 屬性也用於參考相應的商務工廠定義。
 
    * 例如，具 `cq:commerceProvider` 有值geometrixx的屬性會關聯至Day CQ Commerce Factory for Geometrixx-Outdoors **(** )的OSGi組態，其中`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`參數也有值 `commerceProvider``geometrixx`。
-   * 您可在此處設定其他屬性（若適用且可用）。
+   * 您可在這裡設定其他屬性（若適當且可用）。
 
 在標準AEM安裝中，需要特定實作，例如：
 
 |  |  |
 |---|---|
-| `cq:commerceProvider = geometrixx` | geometrixx範例；這包括一般API的最低擴充功能 |
+| `cq:commerceProvider = geometrixx` | geometrixx範例； 這包括一般API的最低擴充功能 |
 
-### 例如 {#example}
+### 範例 {#example}
 
 ```shell
 /etc/commerce/products/geometrixx-outdoors
@@ -106,13 +109,13 @@ CommerceSession ****:
 * 也擁有付款 **處理** 連線
 * 也擁有履約 **連線** 。
 
-### 建築 {#architecture}
+### 架構 {#architecture}
 
 #### 產品和變型的架構 {#architecture-of-product-and-variants}
 
-單一產品可以有多種變化；例如，可能因顏色和／或大小而異。 產品必須定義哪些屬性驅動變化；我們用變 *型軸來定義*。
+單一產品可以有多種變化； 例如，可能因顏色和／或大小而異。 產品必須定義哪些屬性驅動變化； 我們用變 *型軸來定義*。
 
-但是，並非所有屬性都是變型軸。 變化也會影響其他屬性；例如，價格可能取決於規模。 購物者無法選取這些屬性，因此不視為變型軸。
+但是，並非所有屬性都是變型軸。 變化也會影響其他屬性； 例如，價格可能取決於規模。 購物者無法選取這些屬性，因此不視為變型軸。
 
 每個產品和／或變體都由資源表示，因此將1:1映射到儲存庫節點。 由此推論，特定產品和／或變體可以通過其路徑唯一標識。
 
@@ -128,13 +131,11 @@ CommerceSession ****:
 雖然產品（一般而言）可以有許多變型軸，但現成的產品元件只能處理兩個：
 >
 >1. `size`
-   >
-   >
-1. 再加一個
-   >   此額外變數是透過產品參 `variationAxis` 考的屬性選取(通常 `color` 適用於Geometrixx Outdoors)。
+>1. 再加一個
+
 >
-
-
+>   
+此額外變數是透過產品參 `variationAxis` 考的屬性選取(通常 `color` 適用於Geometrixx Outdoors)。
 
 #### 產品參考與PIM資料 {#product-references-and-pim-data}
 
@@ -167,7 +168,7 @@ content
       shirt-l
 ```
 
-最後，不需要使用產品資料。 您可以將所有產品資料放在目錄的參考之下；但是，若不複製所有產品資料，就無法真正擁有多個型錄。
+最後，不需要使用產品資料。 您可以將所有產品資料放在目錄的參考之下； 但是，若不複製所有產品資料，就無法真正擁有多個型錄。
 
 **API**
 
@@ -193,7 +194,7 @@ public interface Product extends Adaptable {
 }
 ```
 
-#### com.adobe.cq.commerce.api.VariantFilter {#com-adobe-cq-commerce-api-variantfilter}
+#### com.adobe.cq.commerce.api.VariantFilter  {#com-adobe-cq-commerce-api-variantfilter}
 
 ```java
 /**
@@ -249,8 +250,8 @@ public class AxisFilter implements VariantFilter {
 
       * 參考，其中產品資料儲存在其他位置：
 
-         * 產品參考包 `productData` 含屬性，其指向產品資料(通常在 `/etc/commerce/products`下)。
-         * 產品資料是分層的；產品屬性繼承自產品資料節點的祖先。
+         * 產品參考包含 `productData` 一個屬性，該屬性指向產品資料(通常在 `/etc/commerce/products`下)。
+         * 產品資料是分層的； 產品屬性繼承自產品資料節點的祖先。
          * 產品參考也可以包含局部屬性，這些屬性會覆寫其產品資料中指定的屬性。
       * 產品本身：
 
@@ -264,7 +265,7 @@ public class AxisFilter implements VariantFilter {
    * 產品介面既代表產品，也代表變型，但相關儲存庫節點是特定的。
    * 產品節點描述產品屬性和變型軸。
 
-#### 例如 {#example-1}
+#### 範例 {#example-1}
 
 ```shell
 + banyan_shirt
@@ -413,7 +414,7 @@ The owns `CommerceSession` the three elements:
 
 ![chlimage_1-34](assets/chlimage_1-34a.png)
 
-這可使用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
+這會利用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
 
 #### 搜尋API {#search-api}
 
@@ -425,7 +426,7 @@ The owns `CommerceSession` the three elements:
 
 1. `FacetParamHelper`
 
-   是提供一種靜態方法的實用程式類 `toParams` 別——用於從刻面和一個切 `GET` 換的值清單中生成參數字串。 這在UI端很有用，您需要針對每個Facet的每個值顯示超連結，如此當使用者按一下超連結時，就會切換個別值（例如，如果選取該值，則會從查詢中移除，否則會新增）。 這會處理處理多／單值刻面、覆寫值等所有邏輯。
+   是提供一種靜態方法的實用程式類 `toParams` 別——用於從刻面和一個切 `GET` 換的值清單中生成參數字串。 這在UI端很有用，您需要針對每個Facet的每個值顯示超連結，如此當使用者按一下超連結時，就會切換個別值（例如，如果選取該值，則會從查詢中移除，否則會加入）。 這會處理處理多／單值刻面、覆寫值等所有邏輯。
 
 搜尋API的入口點是傳回 `CommerceService#search` 物件的方 `CommerceResult` 法。 如需此主題的詳細資訊，請參閱API檔案。
 
@@ -443,13 +444,13 @@ The owns `CommerceSession` the three elements:
       * 優惠券標籤（在購物者將其輸入購物車後顯示）。
       * 促銷路徑（用來定義憑證套用的動作）。
    * 憑單沒有自己的開／關日期／時間，但使用其父促銷活動。
-   * 外部商務引擎也可以提供憑證；這些要求至少：
+   * 外部商務引擎也可以提供憑證； 這些要求至少：
 
       * 優惠券代碼
       * 一種方 `isValid()` 法
    * 憑 **單元** ( `/libs/commerce/components/voucher`)提供：
 
-      * 憑證管理的轉譯器；這會顯示購物車中目前的任何憑單。
+      * 憑證管理的轉譯器； 這會顯示購物車中目前的任何憑單。
       * 用於管理（添加／刪除）憑單的編輯對話框（表單）。
       * 在購物車中新增／移除憑單所需的動作。
 
@@ -478,7 +479,7 @@ The owns `CommerceSession` the three elements:
       * `PerfectPartnerPromotionHandler`，如果合作夥伴產品也在購物車中，則套用產品絕對或百分比折扣
    * ClientContext會解 `SegmentMgr` 析區段，而ClientContext會解 `CartMgr` 析促銷。 每個至少受限於一個已解決群體的促銷活動都會引發。
 
-      * 引發的促銷活動會透過AJAX呼叫傳回伺服器，以重新計算購物車。
+      * 引發的促銷會透過AJAX呼叫傳回至伺服器，以重新計算購物車。
       * 引發的促銷活動（和新增的憑證）也會顯示在ClientContext面板中。
 
 
@@ -511,7 +512,7 @@ public void removeVoucher(String code) throws CommerceException;
 public List<Voucher> getVouchers() throws CommerceException;
 ```
 
-這樣，該代 `CommerceSession` 表負責檢查憑證是否存在以及是否可以套用。 這可能是針對只有在符合特定條件時才能使用的憑證；例如，當購物車總價格大於$100時)。 如果憑單因任何原因無法套用， `addVoucher` 方法會擲回例外。 此外， `CommerceSession` 在新增／移除優惠券後，還負責更新購物車的價格。
+這樣，該代 `CommerceSession` 表負責檢查憑證是否存在以及是否可以套用。 這可能是針對只有在符合特定條件時才能使用的憑證； 例如，當購物車總價格大於$100時)。 如果憑單因任何原因無法套用， `addVoucher` 方法會擲回例外。 此外， `CommerceSession` 在新增／移除優惠券後，還負責更新購物車的價格。
 
 是 `Voucher` 一個類似Bean的類，包含以下欄位：
 
@@ -525,7 +526,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 
 * `jcr:title` （字串）-用於優惠券的說明
 * `code` （字串）-使用者必須輸入的代碼，才能套用此憑單
-* `promotion` （字串）-要套用的促銷；例如， `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` （字串）-要套用的促銷； 例如， `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 促銷處理常式是可修改購物車的OSGi服務。 購物車將支援在介面中定義的數個勾 `PromotionHandler` 點。
 
