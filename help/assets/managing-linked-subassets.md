@@ -3,7 +3,7 @@ title: 使用中的參考和多頁資產管理複合資產 [!DNL Adobe Experienc
 description: 瞭解如何從內部建立數位資產的參考 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 您可以從檔案中參考現有的數位資 [!DNL Adobe Illustrator] 產。
 
-1. 使用 [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 導覽至您要參考之資產的檔案系統位置。
+1. 使用 [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 Navigate to the filesystem location of the asset that you want to reference.
 1. 將資產從本機資料夾拖曳至檔 [!DNL Illustrator] 案。
 
 1. 將檔案 [!DNL Illustrator] 保存到掛載的驅動器，或 [上傳](/help/assets/managing-assets-touch-ui.md#uploading-assets) 到儲存 [!DNL Experience Manager] 庫。
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 子資產產生預設會停用。 若要啟用子資產產生，請依照下列步驟進行：
 
-1. 以管理員 [!DNL Experience Manager] 身分登入。 存取「 **[!UICONTROL 工具>工作流程>模型]**」。
+1. 以管理員 [!DNL Experience Manager] 身分登入。 存取「 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]**」。
 1. 選取「 **[!UICONTROL DAM更新資產」工作流程]** ，然後按一下「 **[!UICONTROL 編輯」]**。
 1. 按一 **[!UICONTROL 下「切換側面板]** 」並找出「 **[!UICONTROL 建立子資產」步驟]** 。 將步驟新增至工作流程。 按一 **[!UICONTROL 下同步]**。
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 * 現有多頁資產： 遵循下列任 [!UICONTROL 一步驟手動執行DAM更新資產] :
 
    * 選取資產，然後按一下「 [!UICONTROL 時間軸] 」以開啟左側面板。 或者，使用鍵盤快速鍵 `alt + 3`。 按一 [!UICONTROL 下「工作流]」，選取「 [!UICONTROL DAM更新資產」]，按一下「開始 [!UICONTROL 」，然後按一]下「繼續啟動」。
-   * 選取資產，然後從工具 [!UICONTROL 列按一下「建立] >工作流程」。 從彈出式對話方塊中，選取「 [!UICONTROL DAM更新資產」工作流程] ，按一下「 [!UICONTROL 開始]」，然後按一下「 [!UICONTROL 繼續]」。
+   * 選取資產，然後從工具 [!UICONTROL 列按一下] 「建 [!UICONTROL 立] >工作流程」。 從彈出式對話方塊中，選取「 [!UICONTROL DAM更新資產」工作流程] ，按一下「 [!UICONTROL 開始]」，然後按一下「 [!UICONTROL 繼續]」。
 
 尤其是Microsoft Word檔案，請執行 **[!UICONTROL DAM Parse Word檔案工作流程]** 。 它會從 `cq:Page` Microsoft Word檔案的內容產生元件。 從文檔提取的影像從元件中參 `cq:Page` 考。 即使子資產產生已停用，這些影像也會擷取。
 
