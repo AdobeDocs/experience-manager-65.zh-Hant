@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '16977'
+ht-degree: 0%
 
 ---
 
@@ -46,13 +49,13 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 >[!NOTE]
 >
-> 如需簽名服務的詳細資訊，請參閱「AEM表 [單的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)」。
+>如需簽名服務的詳細資訊，請參閱「AEM表 [單的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)」。
 
 ## 新增簽名欄位 {#adding-signature-fields}
 
 數位簽名會出現在簽名欄位中，這些欄位是包含簽名圖形表示的表格欄位。 簽名欄位可以是可見或不可見的。 簽署者可以使用預先存在的簽名欄位，或以程式設計方式新增簽名欄位。 在這兩種情況下，簽名欄位必須存在，才能簽署PDF檔案。
 
-您可以使用簽名服務Java API或簽名網站服務API，以程式設計方式新增簽名欄位。 您可以在PDF檔案中新增多個簽名欄位；但是，每個簽名欄位名必須是唯一的。
+您可以使用簽名服務Java API或簽名網站服務API，以程式設計方式新增簽名欄位。 您可以在PDF檔案中新增多個簽名欄位； 但是，每個簽名欄位名必須是唯一的。
 
 >[!NOTE]
 >
@@ -90,7 +93,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 **新增簽名欄位**
 
-若要成功將簽名欄位新增至PDF檔案，請指定用以識別簽名欄位位置的坐標值。 （如果您新增不可見的簽名欄位，則不需要這些值。）此外，您也可以指定在將簽名套用至簽名欄位後，PDF檔案中的哪些欄位會被鎖定。
+若要成功將簽名欄位新增至PDF檔案，請指定用以識別簽名欄位位置的坐標值。 （如果您新增不可見的簽名欄位，則不需要這些值。） 此外，您也可以指定在將簽名套用至簽名欄位後，PDF檔案中的哪些欄位會被鎖定。
 
 **將PDF檔案儲存為PDF檔案**
 
@@ -155,7 +158,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -192,6 +195,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 指 `PositionRect` 定簽名欄位位置的對象。
    * 指定 `FieldMDPOptions` 在數位簽名套用至簽名欄位後鎖定之PDF檔案欄位的物件。 此參數值是可選的，您可以通過 `null`。
    * 指定 `PDFSeedValueOptions` 各種運行時值的對象。 此參數值是可選的，您可以通過 `null`。
+
    此方 `addSignatureField` 法會傳回 `BLOB` 代表包含簽名欄位之PDF檔案的物件。
 
 1. 將PDF檔案儲存為PDF檔案
@@ -289,7 +293,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [檢索簽名欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
 
-[快速入門（SOAP模式）:使用Java API檢索簽名欄位名稱](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API檢索簽名欄位名稱](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -301,7 +305,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -394,23 +398,23 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 可以設定以下種子值字典值：
 
-* **修訂檢查**:指定在將簽名應用到簽名欄位時是否執行撤銷檢查。
-* **憑證選項**:為證書種子值字典指定值。 在指定憑證選項之前，建議您熟悉憑證種子值字典。 (請參閱 [PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。)
-* **摘要選項**:指派用於簽署的摘要演算法。 有效值為SHA1、SHA256、SHA384、SHA512和RIPEMD160。
-* **篩選**:指定與簽名欄位一起使用的篩選器。 例如，您可以使用Adobe.PPKLite篩選器。 (請參閱 [PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。)
-* **標籤選項**:指定與此簽名欄位關聯的標籤值。 值1表示簽署者只能使用指定的值來輸入項目。 值0表示允許其他值。 以下是位元位置：
+* **修訂檢查**: 指定在將簽名應用到簽名欄位時是否執行撤銷檢查。
+* **憑證選項**: 為證書種子值字典指定值。 在指定憑證選項之前，建議您熟悉憑證種子值字典。 (請參閱 [PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。)
+* **摘要選項**: 指派用於簽署的摘要演算法。 有效值為SHA1、SHA256、SHA384、SHA512和RIPEMD160。
+* **篩選**: 指定與簽名欄位一起使用的篩選器。 例如，您可以使用Adobe.PPKLite篩選器。 (請參閱 [PDF參考](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。)
+* **標籤選項**: 指定與此簽名欄位關聯的標籤值。 值1表示簽署者只能使用指定的值來輸入項目。 值0表示允許其他值。 以下是位元位置：
 
    * **1（篩選）:** 用於簽署簽名欄位的簽名處理程式
    * **2（子篩選）:** 一組名稱，指出在簽署時要使用的可接受編碼
-   * **3(V)**:用於簽署簽名欄位之簽名處理常式的最低必要版本號碼
+   * **3(V)**: 用於簽署簽名欄位之簽名處理常式的最低必要版本號碼
    * **4（理由）:** 一系列字串，可指定簽署檔案的可能原因
    * **5(PDFegalWarnings):** 指定可能的合法證明的字串陣列
 
-* **法律證明**:當檔案獲得認證時，會自動掃描特定類型的內容，這些內容可能會使檔案的可見內容模糊或產生誤導。 例如，註解可以遮蔽對瞭解認證內容很重要的文字。 掃描過程生成指示存在此類內容的警告。 此外，也會針對可能產生警告的內容提供其他說明。
-* **權限**:指定可在PDF檔案上使用而不會使簽名無效的權限。
-* **原因**:指定必須簽署此檔案的原因。
-* **時間戳**:指定時間戳記選項。 例如，您可以設定所使用之時間戳記伺服器的URL。
-* **版本**:指定用於簽署簽名欄位的簽名處理程式的最小版本號。
+* **法律證明**: 當檔案獲得認證時，會自動掃描特定類型的內容，這些內容可能會使檔案的可見內容模糊或產生誤導。 例如，註解可以遮蔽對瞭解認證內容很重要的文字。 掃描過程生成指示存在此類內容的警告。 此外，也會針對可能產生警告的內容提供其他說明。
+* **權限**: 指定可在PDF檔案上使用而不會使簽名無效的權限。
+* **原因**: 指定必須簽署此檔案的原因。
+* **時間戳**: 指定時間戳記選項。 例如，您可以設定所使用之時間戳記伺服器的URL。
+* **版本**: 指定用於簽署簽名欄位的簽名處理程式的最小版本號。
 
 **修改簽名欄位**
 
@@ -457,6 +461,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 叫用物件的方法並傳遞列舉值，以鎖 `FieldMDPOptionSpec` 定PDF文 `setMdpValue` 件中的所 `FieldMDPAction.ALL` 有欄位。
    * 調用物件的方法並傳遞物件， `PDFSignatureFieldProperties` 以設定種 `setSeedValue` 子值字典 `PDFSeedValueOptionSpec` 資訊。
    * 調用物件的方法並傳遞物件，以設 `PDFSignatureFieldProperties`定簽名欄位鎖 `setFieldMDP` 定字典 `FieldMDPOptionSpec` 資訊。
+
    >[!NOTE]
    >
    >要查看您可以設定的所有種子值字典值，請查看類 `PDFSeedValueOptionSpec` 參考。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
@@ -468,6 +473,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 儲存 `com.adobe.idp.Document` 包含要修改之簽名欄位之PDF檔案的物件
    * 指定簽名欄位名稱的字串值
    * 存 `PDFSignatureFieldProperties` 儲簽名欄位鎖定字典和種子值字典資訊的對象
+
    此方 `modifySignatureField` 法會傳回 `com.adobe.idp.Document` 儲存包含已修改簽名欄位之PDF檔案的物件。
 
 1. 將PDF檔案儲存為PDF檔案
@@ -481,7 +487,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -517,6 +523,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 將列舉值指派給物件的資料成員，以 `FieldMDPAction.ALL` 鎖定PDF檔案 `FieldMDPOptionSpec` 中的所 `mdpValue` 有欄位。
    * 將物件指派給物件的資料成 `PDFSeedValueOptionSpec` 員，以設定 `PDFSignatureFieldProperties` 種子值字 `seedValue` 典資訊。
    * 將物件指派給物件的資料成員，以設 `FieldMDPOptionSpec` 定簽名欄位鎖 `PDFSignatureFieldProperties` 定字典 `fieldMDP` 資訊。
+
    >[!NOTE]
    >
    >要查看您可以設定的所有種子值字典值，請查看類 `PDFSeedValueOptionSpec` 參考。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
@@ -528,6 +535,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 儲存 `BLOB` 包含要修改之簽名欄位之PDF檔案的物件
    * 指定簽名欄位名稱的字串值
    * 存 `PDFSignatureFieldProperties` 儲簽名欄位鎖定字典和種子值字典資訊的對象
+
    此方 `modifySignatureField` 法會傳回 `BLOB` 儲存包含已修改簽名欄位之PDF檔案的物件。
 
 1. 將PDF檔案儲存為PDF檔案
@@ -547,7 +555,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 數位簽章可套用至PDF檔案，以提供更高的安全性。 數位簽章（如手寫簽章）提供簽署者識別自己並對檔案進行陳述的方式。 以數位方式簽署檔案的技術有助於確保簽署者和收件者都清楚已簽署的內容，並確信檔案自簽署後未變更。
 
-PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰和私鑰。 私密金鑰會儲存在使用者的憑證中，當簽署時，該憑證必須可供使用。 公開金鑰會儲存在使用者的憑證中，而收件者必須能使用此憑證來驗證簽名。 有關已撤銷證書的資訊可在證書撤銷清單(CRL)和由證書頒發機構(CA)分發的線上證書狀態協定(OCSP)響應中找到。 簽署時間可從稱為時間戳記授權機構的受信任來源取得。
+PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰： 公鑰和私鑰。 私密金鑰會儲存在使用者的憑證中，當簽署時，該憑證必須可供使用。 公開金鑰會儲存在使用者的憑證中，而收件者必須能使用此憑證來驗證簽名。 有關已撤銷證書的資訊可在證書撤銷清單(CRL)和由證書頒發機構(CA)分發的線上證書狀態協定(OCSP)響應中找到。 簽署時間可從稱為時間戳記授權機構的受信任來源取得。
 
 >[!NOTE]
 >
@@ -640,10 +648,10 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 您也可以指定是否執行撤銷檢查，以判斷用於數位簽署PDF檔案的憑證是否已被撤銷。 要執行撤銷檢查，您可以指定以下值之一：
 
-* **NoCheck**:請勿執行撤銷檢查。
-* **BestEffort**:請務必檢查是否撤銷鏈中的所有證書。 如果檢查中發生任何問題，則假定撤銷有效。 如果發生任何失敗，請假定憑證未被撤銷。
+* **NoCheck**: 請勿執行撤銷檢查。
+* **BestEffort**: 請務必檢查是否撤銷鏈中的所有證書。 如果檢查中發生任何問題，則假定撤銷有效。 如果發生任何失敗，請假定憑證未被撤銷。
 * **CheckIfAvailable:** 如果有撤銷資訊，請檢查是否撤銷鏈中的所有憑證。 如果檢查中發生任何問題，則假定撤銷無效。 如果發生任何故障，請假定憑證已撤銷且無效。 （這是預設值。）
-* **AlwaysCheck**:檢查是否撤銷鏈中的所有證書。 如果撤銷資訊未出現在任何憑證中，則假定撤銷無效。
+* **AlwaysCheck**: 檢查是否撤銷鏈中的所有證書。 如果撤銷資訊未出現在任何憑證中，則假定撤銷無效。
 
 要對證書執行撤銷檢查，可以使用對象指定證書撤銷清單(CRL)伺服器的URL `CRLOptionSpec` 。 但是，如果您要執行撤銷檢查，而您未指定CRL伺服器的URL，則簽名服務會從憑證取得URL。
 
@@ -663,7 +671,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 >
 >在Java和web服務中，通過各個部分和相應的快速啟動，使用撤銷檢查。 由於未指定CRL或OCSP伺服器資訊，因此伺服器資訊是從用於數位簽署PDF檔案的憑證中取得。
 
-若要成功簽署PDF檔案，您可以指定包含數位簽章的簽名欄位的完全限定名稱，例如 `form1[0].#subform[1].SignatureField3[3]`。 使用XFA表單欄位時，也可以使用簽名欄位的部分名稱： `SignatureField3[3]`。
+若要成功簽署PDF檔案，您可以指定包含數位簽章的簽名欄位的完全限定名稱，例如 `form1[0].#subform[1].SignatureField3[3]`。 使用XFA表單欄位時，也可以使用簽名欄位的部分名稱： `SignatureField3[3]`.
 
 您也必須參考安全憑證才能數位簽署PDF檔案。 要引用安全憑據，請指定別名。 別名是對PKCS#12檔案（副檔名為。pfx）或硬體安全模組(HSM)中實際憑據的引用。 如需安全性憑證的詳細資訊，請參 *閱應用程式伺服器的安裝與部署AEM Forms* 指南。
 
@@ -718,6 +726,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 存 `OCSPOptionSpec` 儲聯機證書狀態協定(OCSP)支援首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `CRLPreferences` 證書撤銷清單(CRL)首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `TSPPreferences` 時間戳記提供者(TSP)支援偏好設定的物件。 此參數為可選參數，可以是 `null`。 如需詳細資訊，請參 [閱「AEM Forms API參考」](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+
    此方 `sign` 法會傳回 `com.adobe.idp.Document` 代表已簽署PDF檔案的物件。
 
 1. 儲存已簽署的PDF檔案
@@ -729,7 +738,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-[快速入門（SOAP模式）:使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -741,7 +750,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -785,6 +794,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 存 `OCSPOptionSpec` 儲聯機證書狀態協定(OCSP)支援首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。 如需此物件的詳細資訊，請參 [閱「AEM Forms API參考」](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
    * 儲存 `CRLPreferences` 證書撤銷清單(CRL)首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `TSPPreferences` 時間戳記提供者(TSP)支援偏好設定的物件。 此參數為可選參數，可以是 `null`。
+
    此方 `sign` 法會傳回 `BLOB` 代表已簽署PDF檔案的物件。
 
 1. 儲存已簽署的PDF檔案
@@ -916,6 +926,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
       * 存 `PDFFormRenderSpec` 儲運行時選項的對象。
       * 包 `URLSpec` 含Forms服務所需URI值的對象。 您可以指 `null` 定此參數值。
       * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
+
       該方 `renderPDFForm2` 法返回包 `FormsResult` 含表單資料流的對象
 
    * 調用物件的方法，以 `FormsResult` 擷取PDF表 `getOutputContent` 格。 此方法返回 `com.adobe.idp.Document` 表示互動式表單的對象。
@@ -936,6 +947,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 存 `OCSPPreferences` 儲聯機證書狀態協定(OCSP)支援首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `CRLPreferences` 證書撤銷清單(CRL)首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `TSPPreferences` 時間戳記提供者(TSP)支援偏好設定的物件。 此參數為可選參數，可以是 `null`。
+
    此方 `sign` 法會傳回 `com.adobe.idp.Document` 代表已簽署PDF檔案的物件。
 
 1. 儲存已簽署的PDF檔案
@@ -947,7 +959,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [數位簽署互動式表單](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
 
-[快速入門（SOAP模式）:使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -959,9 +971,9 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 由於此用戶端應用程式會叫用兩個AEM Forms服務，因此請建立兩個服務參考。 對與簽名服務關聯的服務引用使用以下WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 由於此用戶端應用程式會叫用兩個AEM Forms服務，因此請建立兩個服務參考。 對與簽名服務關聯的服務引用使用以下WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
-   對與Forms服務關聯的服務引用使用以下WSDL定義： `http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`。
+   對與Forms服務關聯的服務引用使用以下WSDL定義： `http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`.
 
    由於兩 `BLOB` 個服務引用都使用資料類型，因此在使用資料類 `BLOB` 型時完全限定該資料類型。 在對應的Web服務快速啟動中，所有實例 `BLOB` 都完全限定。
 
@@ -981,6 +993,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
       * 為欄位分配相應的口令值 `SignatureServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+
    >[!NOTE]
    >
    >對Forms服務客戶端重複這些步驟。
@@ -1028,6 +1041,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 存 `OCSPPreferences` 儲聯機證書狀態協定(OCSP)支援首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。 如需此物件的詳細資訊，請參 [閱「AEM Forms API參考」](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
    * 儲存 `CRLPreferences` 證書撤銷清單(CRL)首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `TSPPreferences` 時間戳記提供者(TSP)支援偏好設定的物件。 此參數為可選參數，可以是 `null`。
+
    此方 `sign` 法會傳回 `BLOB` 代表已簽署PDF檔案的物件。
 
 1. 儲存已簽署的PDF檔案
@@ -1047,7 +1061,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 您可以使用稱為認證簽名的特定簽名類型來認證PDF檔案，以保全PDF檔案。 認證簽名與數位簽名的區別在於：
 
-* 它必須是套用至PDF檔案的第一個簽名；也就是說，在套用認證簽名時，檔案中的任何其他簽名欄位都必須未簽署。 在PDF檔案中僅允許使用一個認證簽名。 如果您想要簽署和認證PDF檔案，您必須先取得認證，才能簽署。 在認證PDF檔案後，您可以數位簽署其他簽名欄位。
+* 它必須是套用至PDF檔案的第一個簽名； 也就是說，在套用認證簽名時，檔案中的任何其他簽名欄位都必須未簽署。 在PDF檔案中僅允許使用一個認證簽名。 如果您想要簽署和認證PDF檔案，您必須先取得認證，才能簽署。 在認證PDF檔案後，您可以數位簽署其他簽名欄位。
 * 文檔的作者或發起者可以指定文檔可以通過某些方式進行修改，而不使經認證的簽名失效。 例如，檔案可能允許填寫表單或加上註解。 如果作者指定不允許進行某些修改，Acrobat會限制使用者以此方式修改檔案。 如果進行此類修改，例如使用其他應用程式，認證的簽名無效，當使用者開啟檔案時，Acrobat會發出警告。 （使用未認證的簽名時，不會防止修改，而一般的編輯作業也不會使原始簽名無效。）
 * 在簽署時，會掃描檔案，以找出可能導致檔案內容模糊或誤導的特定內容類型。 例如，註解可能會遮蔽頁面上對瞭解所認證內容很重要的部分文字。 可以提供有關此類內容的說明（法律證明）。
 
@@ -1109,20 +1123,20 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 若要成功認證PDF檔案，您需要下列由簽章服務用來認證PDF檔案的輸入值：
 
-* **PDF檔案**:包含簽名欄位的PDF文檔，該欄位是包含已認證簽名的圖形表示的表單欄位。 PDF檔案必須先包含簽名欄位，才能取得認證。 可使用設計工具或程式設計方式新增簽名欄位。 (請參 [閱新增簽名欄](digitally-signing-certifying-documents.md#adding-signature-fields)。)
-* **簽名欄位名稱**:經認證的簽名欄位的全限定名稱。 以下是一個示例： `form1[0].#subform[1].SignatureField3[3]`。 使用XFA表單欄位時，也可以使用簽名欄位的部分名稱： `SignatureField3[3]`。 如果為欄位名稱傳遞空值，則會動態建立並認證不可見的簽名欄位。
-* **安全憑證**:用於認證PDF檔案的憑證。 此安全憑證包含密碼和別名，這些密碼和別名必須與位於憑證服務中的憑證中顯示的別名相符。 別名是對PKCS#12檔案（副檔名為。pfx）或硬體安全模組(HSM)中實際憑據的引用。
-* **雜湊算法**:用於摘要PDF檔案的雜湊演算法。
-* **簽署原因**:顯示在Acrobat或Adobe Reader中的值，讓其他使用者知道PDF檔案獲得認證的原因。
-* **簽署者的位置**:憑證指定之簽署者的位置。
-* **聯絡資訊**:簽署者的聯絡資訊，例如地址和電話號碼。
-* **權限資訊**:控制一般使用者可在檔案上執行動作而不導致認證簽名無效的權限。 例如，您可以設定權限，如此對PDF檔案所做的任何變更，都會導致認證的簽名無效。
-* **法律解釋**:當檔案獲得認證時，會自動掃描特定類型的內容，這些內容可能會使檔案的內容模糊或產生誤導。 例如，註解可能會遮蔽頁面上對瞭解所認證內容很重要的部分文字。 掃描過程生成關於這些類型內容的警告。 此值提供可能產生警告之內容的額外說明。
-* **外觀選項**:控制認證簽名外觀的選項。 例如，認證的簽名可顯示日期資訊。
-* **撤銷檢查**:此值指定是否對簽署者的憑證執行撤銷檢查。 預設的設定 `false` 表示不會執行撤銷檢查。
-* **OCSP設定**:線上認證狀態通訊協定(OCSP)支援的設定，提供用來認證PDF檔案之憑證狀態的相關資訊。 例如，您可以指定伺服器的URL，以提供您用來登入PDF檔案之憑證的相關資訊。
-* **CRL設定**:完成撤銷檢查時，證書撤銷清單(CRL)首選項的設定。 例如，您可以指定一律檢查憑證是否已撤銷。
-* **時間戳記**:定義套用至認證簽名之時間戳記資訊的設定。 時間戳表示特定資料在某個時間之前建立。 這項知識有助於在簽署者與驗證者之間建立信任關係。
+* **PDF檔案**: 包含簽名欄位的PDF文檔，該欄位是包含已認證簽名的圖形表示的表單欄位。 PDF檔案必須先包含簽名欄位，才能取得認證。 可使用設計工具或程式設計方式新增簽名欄位。 (請參 [閱新增簽名欄](digitally-signing-certifying-documents.md#adding-signature-fields)。)
+* **簽名欄位名稱**: 經認證的簽名欄位的全限定名稱。 以下是一個示例： `form1[0].#subform[1].SignatureField3[3]`. 使用XFA表單欄位時，也可以使用簽名欄位的部分名稱： `SignatureField3[3]`. 如果為欄位名稱傳遞空值，則會動態建立並認證不可見的簽名欄位。
+* **安全憑證**: 用於認證PDF檔案的憑證。 此安全憑證包含密碼和別名，這些密碼和別名必須與位於憑證服務中的憑證中顯示的別名相符。 別名是對PKCS#12檔案（副檔名為。pfx）或硬體安全模組(HSM)中實際憑據的引用。
+* **雜湊算法**: 用於摘要PDF檔案的雜湊演算法。
+* **簽署原因**: 顯示在Acrobat或Adobe Reader中的值，讓其他使用者知道PDF檔案獲得認證的原因。
+* **簽署者的位置**: 憑證指定之簽署者的位置。
+* **聯絡資訊**: 簽署者的聯絡資訊，例如地址和電話號碼。
+* **權限資訊**: 控制一般使用者可在檔案上執行動作而不導致認證簽名無效的權限。 例如，您可以設定權限，如此對PDF檔案所做的任何變更，都會導致認證的簽名無效。
+* **法律解釋**: 當檔案獲得認證時，會自動掃描特定類型的內容，這些內容可能會使檔案的內容模糊或產生誤導。 例如，註解可能會遮蔽頁面上對瞭解所認證內容很重要的部分文字。 掃描過程生成關於這些類型內容的警告。 此值提供可能產生警告之內容的額外說明。
+* **外觀選項**: 控制認證簽名外觀的選項。 例如，認證的簽名可顯示日期資訊。
+* **撤銷檢查**: 此值指定是否對簽署者的憑證執行撤銷檢查。 預設的設定 `false` 表示不會執行撤銷檢查。
+* **OCSP設定**: 線上認證狀態通訊協定(OCSP)支援的設定，提供用來認證PDF檔案之憑證狀態的相關資訊。 例如，您可以指定伺服器的URL，以提供您用來登入PDF檔案之憑證的相關資訊。
+* **CRL設定**: 完成撤銷檢查時，證書撤銷清單(CRL)首選項的設定。 例如，您可以指定一律檢查憑證是否已撤銷。
+* **時間戳記**: 定義套用至認證簽名之時間戳記資訊的設定。 時間戳表示特定資料在某個時間之前建立。 這項知識有助於在簽署者與驗證者之間建立信任關係。
 
 **將認證的PDF檔案儲存為PDF檔案**
 
@@ -1176,6 +1190,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 存 `OCSPPreferences` 儲聯機證書狀態協定(OCSP)支援首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。 如需此物件的詳細資訊，請參 [閱AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
    * 儲存 `CRLPreferences` 證書撤銷清單(CRL)首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `TSPPreferences` 時間戳記提供者(TSP)支援偏好設定的物件。 例如，在建立物件 `TSPPreferences` 後，您可以叫用物件的方法來設定TSP `TSPPreferences` 伺服器的 `setTspServerURL` URL。 此參數為可選參數，可以是 `null`。 如需詳細資訊，請參 [閱「AEM Forms的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+
    此方 `certify` 法會傳回 `com.adobe.idp.Document` 代表已認證PDF檔案的物件。
 
 1. 將認證的PDF檔案儲存為PDF檔案
@@ -1187,7 +1202,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents)
 
-[快速入門（SOAP模式）:使用Java API認證PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API認證PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1199,7 +1214,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1248,6 +1263,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 儲 `OCSPPreferences` 存線上認證狀態通訊協定(OCSP)支援偏好設定的物件，提供用來認證PDF檔案之憑證狀態的資訊。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `CRLPreferences` 證書撤銷清單(CRL)首選項的對象。 如果未完成撤銷檢查，則不使用此參數，您可以指定 `null`。
    * 儲存 `TSPPreferences` 時間戳記提供者(TSP)支援偏好設定的物件。 例如，建立物件 `TSPPreferences` 後，您可以設定物件的資料成員，以設 `TSPPreferences` 定TSP的 `tspServerURL` URL。 此參數為可選參數，可以是 `null`。
+
    此方 `certify` 法會傳回 `BLOB` 代表已認證PDF檔案的物件。
 
 1. 將認證的PDF檔案儲存為PDF檔案
@@ -1345,7 +1361,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 **驗證數位簽名**
 
-要成功驗證簽名，請指定包含簽名的簽名欄位的完全限定名稱，例如 `form1[0].#subform[1].SignatureField3[3]`。 使用XFA表單欄位時，您也可以使用簽名欄位的部分名稱： `SignatureField3`。
+要成功驗證簽名，請指定包含簽名的簽名欄位的完全限定名稱，例如 `form1[0].#subform[1].SignatureField3[3]`。 使用XFA表單欄位時，您也可以使用簽名欄位的部分名稱： `SignatureField3`.
 
 依預設，簽章服務會將檔案在驗證後可簽署的時間限制為65分鐘。 如果使用者嘗試在目前時間驗證簽名，而簽署時間晚於目前時間且在65分鐘內，則簽名服務不會建立驗證錯誤。
 
@@ -1361,9 +1377,9 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 您可以決定簽章者的身分，這可以是下列其中一個值：
 
-* **未知**:此簽署者未知，因為無法執行簽署者驗證。
-* **受信任**:此簽署者是受信任的。
-* **不受信任**:此簽署者不受信任。
+* **未知**: 此簽署者未知，因為無法執行簽署者驗證。
+* **受信任**: 此簽署者是受信任的。
+* **不受信任**: 此簽署者不受信任。
 
 **另請參閱**
 
@@ -1407,6 +1423,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 一個字串值，代表包含要驗證之簽名的簽名欄位名稱。
    * 包 `PKIOptions` 含PKI運行時選項的對象。
    * 包 `VerifySPIOptions` 含SPI資訊的實例。 您可以指定 `null` 此參數。
+
    該方 `verify2` 法傳回包 `PDFSignatureVerificationInfo` 含可用於驗證數字簽名的資訊的對象。
 
 1. 確定簽名的狀態
@@ -1422,7 +1439,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 [驗證數位簽名](#verify-digital-signatures-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API驗證數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API驗證數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1434,7 +1451,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1475,6 +1492,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
    * 一個字串值，代表包含要驗證之簽名的簽名欄位名稱。
    * 包 `PKIOptions` 含PKI運行時選項的對象。
    * 包 `VerifySPIOptions` 含SPI資訊的實例。 您可以指定 `null` 此參數。
+
    該方 `verify2` 法傳回包 `PDFSignatureVerificationInfo` 含可用於驗證數字簽名的資訊的對象。
 
 1. 確定簽名的狀態
@@ -1622,6 +1640,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
    * 包 `com.adobe.idp.Document` 含包含多個數位簽名之PDF檔案的物件。
    * 包 `PKIOptions` 含PKI運行時選項的對象。
    * 包 `VerifySPIOptions` 含SPI資訊的實例。 您可以指定 `null` 此參數。
+
    此方 `verifyPDFDocument` 法會傳回包 `PDFDocumentVerificationInfo` 含PDF檔案中所有數位簽名資訊的物件。
 
 1. 重複所有簽名
@@ -1633,7 +1652,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 [驗證多個數位簽名](#verifying-multiple-digital-signatures)
 
-[快速入門（SOAP模式）:使用Java API驗證多個數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API驗證多個數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1647,7 +1666,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1687,6 +1706,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
    * 包 `BLOB` 含包含多個數位簽名之PDF檔案的物件。
    * 包 `PKIOptions` 含PKI運行時選項的對象。
    * 包 `VerifySPIOptions` 含SPI資訊的實例。 您可以為此參數指定null。
+
    此方 `verifyPDFDocument` 法會傳回包 `PDFDocumentVerificationInfo` 含PDF檔案中所有數位簽名資訊的物件。
 
 1. 重複所有簽名
@@ -1744,7 +1764,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 **從簽名欄位移除數位簽名**
 
-若要成功從PDF檔案移除數位簽章，您必須指定包含數位簽章的簽名欄位名稱。 此外，您必須擁有移除數位簽名的權限；否則，會發生例外。
+若要成功從PDF檔案移除數位簽章，您必須指定包含數位簽章的簽名欄位名稱。 此外，您必須擁有移除數位簽名的權限； 否則，會發生例外。
 
 **將PDF檔案儲存為PDF檔案**
 
@@ -1786,6 +1806,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
    * 表 `com.adobe.idp.Document` 示PDF檔案的物件，其中包含要移除的簽名。
    * 一個字串值，它指定包含數字簽名的簽名欄位的名稱。
+
    此方 `clearSignatureField` 法會傳回 `com.adobe.idp.Document` 一個物件，該物件代表移除數位簽名的PDF檔案。
 
 1. 將PDF檔案儲存為PDF檔案
@@ -1797,7 +1818,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 [移除數位簽名](digitally-signing-certifying-documents.md#removing-digital-signatures)
 
-[快速入門（SOAP模式）:使用Java API移除數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API移除數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1809,7 +1830,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/SignatureService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1842,6 +1863,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方式。 假設PDF檔案�
 
    * 包含 `BLOB` 已簽署PDF檔案的物件。
    * 一個字串值，代表包含要移除之數位簽名之簽名欄位的名稱。
+
    此方 `clearSignatureField` 法會傳回 `BLOB` 一個物件，該物件代表移除數位簽名的PDF檔案。
 
 1. 將PDF檔案儲存為PDF檔案
