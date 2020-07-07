@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '475'
+ht-degree: 0%
 
 ---
 
@@ -19,27 +22,27 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 Java API Quick Start(SOAP)適用於User Manager API。
 
-[快速入門（SOAP模式）:使用Java API新增使用者](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API新增使用者](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API刪除用戶](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API刪除用戶](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API建立群組](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API建立群組](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API管理使用者和群組](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API管理使用者和群組](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API管理角色和權限](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API管理角色和權限](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API以程式設計方式同步使用者](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API以程式設計方式同步使用者](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API以程式設計方式管理偏好設定節點](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API以程式設計方式管理偏好設定節點](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
 >[!NOTE]
 >
-> 使用AEM表單進行程式設計時，若您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑，此為「檔案」的基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表單進行程式設計時，若您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑，此為「檔案」的基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入門（SOAP模式）:使用Java API新增使用者 {#quick-start-soap-mode-adding-users-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API新增使用者 {#quick-start-soap-mode-adding-users-using-the-java-api}
 
 下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 (請參閱 [新增使用者](/help/forms/developing/users.md#adding-users)。)
 
@@ -157,7 +160,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API刪除用戶 {#quick-start-soap-mode-deleting-users-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API刪除用戶 {#quick-start-soap-mode-deleting-users-using-the-java-api}
 
 下列程式碼範例會從AEM Forms中刪除名為Wendy Blue的使用者。 (請參 [閱刪除用戶](/help/forms/developing/users.md#deleting-users)。)
 
@@ -253,7 +256,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API管理使用者和群組 {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API管理使用者和群組 {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
 
 以下代碼示例查找本地用戶和用戶所屬的本地組。 (請參 [閱管理使用者和群組](/help/forms/developing/users.md#managing-users-and-groups)。)
 
@@ -377,9 +380,9 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API管理角色和權限 {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API管理角色和權限 {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
 
-下面的代碼示例將「服務用戶」角色分配給承擔者，打印承擔者具有的角色，然後從承擔者中刪除該角色。 此快速入門時會叫用兩個服務：目錄管理器服務和授權管理器服務。(請參 [閱管理角色和權限](/help/forms/developing/users.md#managing-roles-and-permissions)。)
+下面的代碼示例將「服務用戶」角色分配給承擔者，打印承擔者具有的角色，然後從承擔者中刪除該角色。 此快速入門時會叫用兩個服務： 目錄管理器服務和授權管理器服務。(請參 [閱管理角色和權限](/help/forms/developing/users.md#managing-roles-and-permissions)。)
 
 ```as3
  /*
@@ -520,7 +523,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API以程式設計方式同步使用者 {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API以程式設計方式同步使用者 {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
 下列Java程式碼範例會使用「使用者管理API」來同步使用者。 (請參 [閱以程式設計方式同步使用者](/help/forms/developing/users.md#programmatically-synchronizing-users))。
 
@@ -629,7 +632,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API新增使用者 {#quick_start_soap_mode_adding_users_using_the_java_api-1}
+## 快速入門（SOAP模式）: 使用Java API新增使用者 {#quick_start_soap_mode_adding_users_using_the_java_api-1}
 
 下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 (請參閱 [新增使用者](/help/forms/developing/users.md#adding-users)。)
 
@@ -747,7 +750,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API建立群組 {#quick-start-soap-mode-creating-groups-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API建立群組 {#quick-start-soap-mode-creating-groups-using-the-java-api}
 
 下列程式碼範例會建立名為AdobeGroup的群組至AEM Forms。 (請參閱 [建立群組](/help/forms/developing/users.md#creating-groups)。)
 
@@ -1002,7 +1005,7 @@ public class ManagePreferences {
 }
 ```
 
-## 快速入門（SOAP模式）:使用Java API以程式設計方式管理偏好設定節點 {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API以程式設計方式管理偏好設定節點 {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
 以下Java代碼模型使用用戶管理API管理首選項節點(請參 [閱以寫程式方式管理首選項節點](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
