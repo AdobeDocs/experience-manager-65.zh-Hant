@@ -3,7 +3,7 @@ title: 搜尋Facet
 description: 本文說明如何在Adobe Experience Manager中建立、修改和使用搜尋刻面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '2523'
 ht-degree: 16%
@@ -114,7 +114,7 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 >
 >Options謂語是包含屬性謂語的自訂包裝函式，用來展示描述的行為。 目前，沒有REST端點可用來支援本機功能。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]**.
 1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
 1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如「檔案類 **[!UICONTROL 型」]**。指定在屬性欄位中根據其執行搜索的屬性，例如 `jcr:content/metadata/dc:format.`
@@ -134,20 +134,20 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 ## 添加多值屬性謂語 {#adding-a-multi-value-property-predicate}
 
-「多值屬性」述詞可讓您搜尋資產以尋找多個值。 假設您在「資產」中有多個產品的影像，且每個影像的中繼資料包含與產品相關聯的SKU編號。 您可以使用此謂語，根據多個SKU編號搜尋產品影像。
+「多值屬性」述詞可讓您搜尋資產以尋找多個值。 Consider a scenario where you have images of multiple products in Assets and the metadata for each image includes an SKU number associated with the product. You can use this predicate to search for product images based on multiple SKU numbers.
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. 在「搜尋表單」頁面上，選取「 **[!UICONTROL 資產管理搜尋邊欄]**」，按一下「 **[!UICONTROL 編輯]**![aemassets_edit](assets/aemassets_edit.png)」。
+1. On the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, the click **[!UICONTROL Edit]** ![aemassets_edit](assets/aemassets_edit.png).
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
-1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. 也可以使用選擇對話框選擇節點。
+1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. You can also use the selection dialog to select a node.
 1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。依預設，逗號會指定為分隔字元。您可以指定不同的分隔字元。
-1. 在「說 **明** 」欄位中，輸入選用的說明，然後按一下「 **[!UICONTROL 完成」]**。
+1. In the **Description** field, enter an optional description and then click **[!UICONTROL Done]**.
 1. 導覽至「資產」使用者介面中的「篩選」面板。The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
-1. 在「多值」欄位中指定多個值，由分隔字元分隔，並執行搜尋。 謂語會為您指定的值提取完全符合的文字。
+1. Specify multiple value in the Multi Value field separated by the delimiters and perform the search. The predicate fetches an exact text match for the values you specify.
 
-## 新增標籤述詞 {#adding-a-tags-predicate}
+## Add a Tags predicate {#adding-a-tags-predicate}
 
-「標籤謂語」可讓您執行資產的標籤搜尋。 依預設，「資產」會根據您指定的標籤，搜尋一或多個標籤符合的資產。 換句話說，搜索查詢使用指定的標籤執行OR操作。 不過，您可以使用「符合所有標籤」選項來搜尋包含您所指定之所有標籤的資產。
+The Tag predicate allows you to perform tag-based searches for assets. 依預設，「資產」會根據您指定的標籤，搜尋一或多個標籤符合的資產。 換句話說，搜索查詢使用指定的標籤執行OR操作。 不過，您可以使用「符合所有標籤」選項來搜尋包含您所指定之所有標籤的資產。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 從「搜尋表單」頁面中，選 **[!UICONTROL 取「資產管理搜尋邊欄]** 」，然後按一 **[!UICONTROL 下「編]** 輯Aemsets_edit ![](assets/aemassets_edit.png)」。
@@ -213,10 +213,10 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 | ------------------- | ---------------------------------------------------------------- |
 | [!UICONTROL 編輯] | CRXDE中節點的讀 `/apps` 寫權限 |
 | [!UICONTROL 刪除] | 在CRXDE中讀取、寫入和刪除節 `/apps` 點的權限 |
-| [!UICONTROL 預覽] | 在CRXDE中讀取、寫入和刪 `/var/dam/content` 除節點權限。 此外，節點上的「讀取」和「寫入」 `/apps` 權限。 |
+| [!UICONTROL 預覽] | 在CRXDE中讀取、寫入和刪 `/var/dam/content` 除節點權限。 Also, Read and Write permissions on `/apps` node. |
 
 >[!MORELIKETHIS]
 >
->* [擴充資產搜尋功能](searchx.md)
+>* [Extend asset search capability](searchx.md)
 >* [搜尋資產](search-assets.md)
 
