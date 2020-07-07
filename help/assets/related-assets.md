@@ -3,7 +3,7 @@ title: 相關資產
 description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 0%
@@ -17,8 +17,9 @@ ht-degree: 0%
 
 使用此功能，您就可以彈性地與廠商或機構共用低解析度的PDF檔案或JPG檔案，並且只有在要求時才提供高解析度的INDD檔案。
 
->[!NOTE] 只有對資產具有編輯權限的使用者可以關聯和取消關聯資產。
+>[!NOTE]
 >
+>只有對資產具有編輯權限的使用者可以關聯和取消關聯資產。
 
 ## Relate assets {#relating-assets}
 
