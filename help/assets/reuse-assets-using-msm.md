@@ -4,7 +4,7 @@ description: 跨衍生自父資產並連結至父資產的多個頁面／資料�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '3368'
 ht-degree: 10%
@@ -61,14 +61,14 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 若要從一或多個來源資產或檔案夾建立即時副本，請遵循下列其中一項：
 
-* 方法1: 選取來源資產，然後按一 **[!UICONTROL 下頂端工具列的「建立]** >即時副本」。
-* 方法2: 在使 [!DNL Experience Manager] 用者介面中，按一 **** 下介面右上角的「建立>即時副本」。
+* 方法1: 選取來源資產，然後按一 **[!UICONTROL 下頂端]** 「 **[!UICONTROL 建立]** >即時復本」工具列。
+* 方法2: 在使 [!DNL Experience Manager] 用者介面中，按一 **[!UICONTROL 下介面右上角的「建]** 立 **** >即時副本」。
 
 您可以一次建立資產或資料夾的即時副本。 您可以建立衍生自資產或即時副本本身之資料夾的即時副本。 使用案例不支援內容片段(CF)。 嘗試建立其即時副本時，CF會依原樣複製，沒有任何關係。 複製的CF是及時的快照，在更新原始CF時不會更新。
 
 若要使用第一種方法建立即時副本，請遵循下列步驟：
 
-1. 選擇源資產或資料夾。 在工具列中，按一下「 **[!UICONTROL 建立>即時副本」]**。
+1. 選擇源資產或資料夾。 在工具列中，按一下「 **[!UICONTROL 建立]** >即 **[!UICONTROL 時副本」]**。
 
    ![從Experience Manager介面建立即時副本](assets/create_lc1.png)
 
@@ -80,7 +80,7 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 若要使用第二種方法建立即時副本，請依照下列步驟進行：
 
-1. 在介 [!DNL Experience Manager] 面中，從右上角按一下「建立> **[!UICONTROL 即時副本」]**。
+1. 在介 [!DNL Experience Manager] 面中，從右上角按一下「建立 **** >即時 **[!UICONTROL 副本」]**。
 
    ![從Experience Manager介面建立即時副本](assets/create_lc2.png)
 
@@ -282,7 +282,7 @@ Alternatively, you can quickly detach multiple assets in a live copy folder from
 
 ## 擴充MSM [!DNL Assets] {#extendapi}
 
-[!DNL Experience Manager] 可讓您使用MSM Java API擴充功能。 對 [!DNL Assets]於MSM，擴展功能與MSM功能相同 [!DNL Sites]。 如需詳細資訊， [請參閱擴充MSM](/help/sites-developing/extending-msm.md) ，以及下列各項，以取得特定工作的詳細資訊：
+[!DNL Experience Manager] 可讓您使用MSM Java API擴充功能。 For [!DNL Assets], the extending works just the same as it works with MSM for [!DNL Sites]. For details, see [Extending the MSM](/help/sites-developing/extending-msm.md) and the following for information about specific tasks:
 
 * [API概觀](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
 * [建立新的同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
@@ -291,42 +291,42 @@ Alternatively, you can quickly detach multiple assets in a live copy folder from
 
 >[!NOTE]
 >
->* MSM的Blueprint [!DNL Sites] 稱為MSM的Live Copy來源 [!DNL Assets]。
->* MSM不支援刪除建立站點嚮導中的章節步驟 [!DNL Assets]。
+>* Blueprint in MSM for [!DNL Sites] is called Live Copy source in MSM for [!DNL Assets].
+>* Removing the chapters step in the create site wizard is not supported in MSM for [!DNL Assets].
 >* MSM不支援在頁面屬性（觸控式UI）上設定MSM鎖 [!DNL Assets]。
 
 
-## 資產管理任務對即時拷貝的影響 {#manageassets}
+## Impact of asset management tasks on live copies {#manageassets}
 
-即時副本和來源是可在一定程度上作為數字資產進行管理的資產或資料夾。 中的某些資產管理任 [!DNL Experience Manager] 務對即時拷貝有特定影響。
+Live copies and sources are assets or folders that can be managed, to a certain extent, as digital assets. Some asset management tasks in [!DNL Experience Manager] have a specific impact on the live copies.
 
 * 複製即時副本時，會建立與第一個即時副本來源相同的即時副本資產。
 * 當您移動來源或其即時副本時，即時關係會保留。
-* 編輯動作不適用於即時複製資產。 如果即時副本的來源本身是即時副本，則編輯動作不適用。
-* 即時複製資產無法使用結帳動作。
-* 對於源資料夾，可以使用建立審閱任務的選項。
+* 編輯動作不適用於即時複製資產。 If the source of a live copy is a live copy in itself, then edit action does not work for it.
+* Check-out action is not available for live copy assets.
+* For source folder, the option to create review tasks is available.
 * 在清單檢視和欄檢視中檢視資產清單時，即時副本資產或資料夾會針對其顯示「即時副本」。 這可協助您輕鬆識別資料夾中的即時副本。
 
-## 比較MSM的 [!DNL Assets] 和 [!DNL Sites] {#comparison}
+## Compare MSM for [!DNL Assets] and [!DNL Sites] {#comparison}
 
-在更多情況下，MSM for [!DNL Assets] Sites功能與MSM for Sites的行為相符。 需要注意的主要差異有：
+In more scenarios, MSM for [!DNL Assets] matches the behavior of MSM for Sites functionality. 需要注意的主要差異有：
 
-* MSM的Blueprint [!DNL Sites] 稱為MSM的Live Copy來源 [!DNL Assets]。
-* 在「網站」中，您可以比較藍圖及其即時副本，但無法比 [!DNL Assets] 較來源與即時副本。
-* 您無法在中編輯即時副本 [!DNL Assets]。
-* 網站通常有孩子，但 [!DNL Assets] 沒有。 建立個別資產的即時副本時，不會顯示包含或排除子項的選項。
-* MSM不支援刪除建立站點嚮導中的章節步驟 [!DNL Assets]。
+* Blueprint in MSM for [!DNL Sites] is called Live Copy source in MSM for [!DNL Assets].
+* In Sites, you can compare a blueprint and its live copy but it is not possible in [!DNL Assets] to compare a source to its live copy.
+* You cannot edit a live copy in [!DNL Assets].
+* Sites usually have children, but [!DNL Assets] do not. 建立個別資產的即時副本時，不會顯示包含或排除子項的選項。
+* Removing the chapters step in the create site wizard is not supported in MSM for [!DNL Assets].
 * MSM不支援在頁面屬性上設定MSM鎖（啟用觸控的UI） [!DNL Assets]。
-* 對於MSM, [!DNL Assets]僅使用 **[!UICONTROL Standard轉出設定]**。 MSM無法使用其他的推廣配置 [!DNL Assets]。
+* For MSM for [!DNL Assets], use only the **[!UICONTROL Standard rollout config]**. MSM無法使用其他的推廣配置 [!DNL Assets]。
 
 ## Best practices {#bestpractices}
 
 MSM的一些最佳實務為：
 
-* 在開始實施前，規劃資產和內容流的父子關係。
+* Plan the parent-children relationships of the assets and content flows before starting the implementation.
 
-## MSM的限制和已知問題 [!DNL Assets] {#limitations}
+## Limitations and known issues of MSM for [!DNL Assets] {#limitations}
 
-以下是MSM的限制 [!DNL Assets]。
+Following is a limitation of MSM for [!DNL Assets].
 
-* 使用案例不支援內容片段(CF)。 嘗試建立其即時副本時，CF會依原樣複製，沒有任何關係。 複製的CF是及時的快照，在更新原始CF時不會更新。
+* 使用案例不支援內容片段(CF)。 When attempting to create their live copies, CFs are copied over as is without any relationship. 複製的CF是及時的快照，在更新原始CF時不會更新。
