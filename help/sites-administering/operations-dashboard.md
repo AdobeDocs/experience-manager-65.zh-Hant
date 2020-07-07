@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9eb8f3921e7d485ca4eb035cd04a9d8731dd6b06
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '6229'
 ht-degree: 1%
@@ -217,7 +217,7 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
    <td>已同步時鐘</td>
    <td><p>此檢查僅與文檔節點 <a href="https://github.com/apache/sling-old-svn-mirror/blob/4df9ab2d6592422889c71fa13afd453a10a5a626/bundles/extensions/discovery/oak/src/main/java/org/apache/sling/discovery/oak/SynchronizedClocksHealthCheck.java">儲存群集相關</a>。 它返回以下狀態：</p>
     <ul>
-     <li>當實例時鐘不同步並超過預先定義的低閾值時，返回「警告」狀態</li>
+     <li>當實例時鐘不同步並超過預定義的低閾值時，返回「警告」狀態</li>
      <li>當實例時鐘不同步並超過預定義的高閾值時，返回「嚴重」狀態</li>
     </ul> <p>The Mbean for this health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingDiscoveryOakSynchronizedClocks%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=slingDiscoveryOakSynchronizedClocks,type=HealthCheck</a>。</p> </td>
   </tr>
@@ -333,7 +333,7 @@ Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 下列範例
 
    >[!NOTE]
    >
-   >有關如何在您的系統上安裝Nagios和NRPE的更多資訊，請參閱 [Nagios Documentation](https://library.nagios.com/library/products/nagioscore/manuals/)。
+   >有關如何在您的系統上安裝Nagios和NRPE的更多資訊，請參閱 [Nagios檔案](https://library.nagios.com/library/products/nagioscore/manuals/)。
 
 1. 新增AEM伺服器的主機定義。 這可以透過Nagios XI Web介面，使用Configuration Manager:
 
@@ -589,7 +589,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 >[!NOTE]
 >
-> 有關「工作流維護」的詳細資訊，請參 [閱此頁](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
+>有關「工作流維護」的詳細資訊，請參 [閱此頁](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
 
 ### 審計日誌維護 {#audit-log-maintenance}
 
@@ -686,7 +686,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 在部署服務後，它會公開至「作業控制面板」UI。 您可以將其添加到其中一個可用的維護計畫：
 
-![chlimage_1-129](assets/chlimage_1-127.png)
+![chlimage_1-127](assets/chlimage_1-127.png)
 
 這將在/apps/granite/operations/config/maintenance/`schedule`//中新增對應的資源`taskname`。 如果任務與運行模式相關，則需要在該節點上設定granite.operations.conditions.runmode屬性，其中需要為此維護任務激活的運行模式值。
 
