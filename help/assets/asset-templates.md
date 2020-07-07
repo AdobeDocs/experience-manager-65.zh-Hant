@@ -3,7 +3,7 @@ title: 中的資產模板 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解資產範本 [!DNL Adobe Experience Manager Assets] ，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Asset templates {#asset-templates}
 
-資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
+資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新運用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
 
 在確保全球標牌安全的同時，靈活地進行有限的編輯，使資產模板成為快速調整內容和分發內容的理想構件，以便用於各種功能的內容製品。 重新調整內容用途有助於降低管理印刷和數位通道的成本，並跨這些通道提供全方位且一致的體驗。
 
@@ -79,6 +79,7 @@ ht-degree: 0%
    * 從「模板」頁面，導航到建立宣傳品的資料夾，然後按一下宣傳品縮圖上的「 [!UICONTROL Edit] quick action（編輯快速操作）」。
    * 在宣傳品的資產頁面中，按一下工 **[!UICONTROL 具列中的]** 「編輯」。
    * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
+
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
    資產搜尋器和文字編輯器會顯示在頁面的左側。 文字編輯器預設為開啟。
@@ -131,15 +132,17 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >只有當宣傳品中的可編輯影像欄位沒有任何缺少的表徵圖時，才會啟用「預覽」和「完成」表徵圖。 如果您的宣傳品中缺少圖示，則是因 [!DNL Experience Manager] 為無法解析範本中的影 [!DNL InDesign] 像。 通常， [!DNL Experience Manager] 在下列情況下無法解析影像：
+   >只有當宣傳品中可編輯的影像欄位沒有任何缺少的表徵圖時，才會啟用「預覽」和「完成」選項。 如果您的宣傳品中缺少圖示，則是因 [!DNL Experience Manager] 為無法解析範本中的影 [!DNL InDesign] 像。 通常， [!DNL Experience Manager] 在下列情況下無法解析影像：
    >
-   >    * 影像未內嵌在基礎範本 [!DNL InDesign] 中。
-   >    * 從本機檔案系統連結影像。
+   >* 影像未內嵌在基礎範本 [!DNL InDesign] 中。
+   >* 從本機檔案系統連結影像。
+
    >
    >若要啟 [!DNL Experience Manager] 用解析影像，請執行下列動作：
    >
-   >    * 在建立範本時內嵌影 [!DNL InDesign] 像(請參閱 [關於連結和內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
-   >    * 載入 [!DNL Experience Manager] 您的本機檔案系統，然後將遺失的圖示與中的現有資產對應 [!DNL Experience Manager]。
+   >* 在建立範本時內嵌影 [!DNL InDesign] 像(請參閱 [關於連結和內嵌圖形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
+   >* 載入 [!DNL Experience Manager] 您的本機檔案系統，然後將遺失的圖示與中的現有資產對應 [!DNL Experience Manager]。
+
    >
    >如需有關使用檔案的詳 [!DNL InDesign] 細資訊，請 [參閱Experience Manager中使用InDesign檔案的最佳實務](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
 
