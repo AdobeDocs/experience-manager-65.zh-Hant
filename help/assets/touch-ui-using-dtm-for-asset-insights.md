@@ -3,7 +3,7 @@ title: 透過DTM啟用資產見解
 description: 瞭解如何使用Adobe動態標籤管理(DTM)來啟用資產分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -45,15 +45,15 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. 按一下Experience Manager標誌，然後前往「工 **[!UICONTROL 具>資產」]**。
+1. 按一下Experience Manager標誌，然後前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產」]**。
 1. 按一 **[!UICONTROL 下前瞻分析頁面追蹤器]**，複製追蹤器程式碼，然後貼到您在步驟6中開啟的指令碼對話方塊中。 儲存變更。
 
    >[!NOTE]
    >
-   > * `AppMeasurement.js` 中。 預計可透過DTM的Adobe Analytics工具取得。
-   > * ()的 `assetAnalytics.dispatcher.init`呼叫已移除。 當DTM的Adobe Analytics工具載入完成時，預期會呼叫此函式。
-   > * 視資產前瞻分析頁面追蹤器的托管位置（例如Experience Manager、CDN等）而定，指令碼來源的來源可能需要變更。
-   > * 對於Experience Manager代管的頁面追蹤器，來源應使用分派程式例項的主機名稱指向發佈例項。
+   >* `AppMeasurement.js` 中。 預計可透過DTM的Adobe Analytics工具取得。
+   >* 將刪除對 `assetAnalytics.dispatcher.init()` 的調用。 當DTM的Adobe Analytics工具載入完成時，預期會呼叫此函式。
+   >* 視資產前瞻分析頁面追蹤器的托管位置（例如Experience Manager、CDN等）而定，指令碼來源的來源可能需要變更。
+   >* 對於Experience Manager代管的頁面追蹤器，來源應使用分派程式例項的主機名稱指向發佈例項。
 
 
 1. 存取 `https://dtm.adobe.com`. 按一 **[!UICONTROL 下Web屬性中的]** 「概述」，然後按一 **[!UICONTROL 下「新增工具]** 」或開啟現有的Adobe Analytics工具。 建立工具時，可將「配置方 **[!UICONTROL 法」(Configuration Method]** )設定 **[!UICONTROL 為「自動」(Automatic)]**。
