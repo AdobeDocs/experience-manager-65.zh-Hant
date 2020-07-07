@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '4102'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
    「模型」頁籤顯示添加的資料模型對象
 
-   >[!NOTE] {graybox=&quot;true&quot;}
+   >[!NOTE]
    >
    >您可以按住並拖曳資料模型物件方塊，以在內容區域中組織它們。 在「資料來源」窗格中，表格資料模型中新增的所有資料模型物件都會變灰。
 
@@ -70,7 +73,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 1. 點選「 **[!UICONTROL 儲存]** 」以儲存表單模型物件。
 
-   >[!NOTE] {graybox=&quot;true&quot;}
+   >[!NOTE]
    >
    >您可以使用自適應表單規則來調用在表單資料模型的「服務」頁籤中配置的服務。 規則編輯器的「調用服務」操作中提供了已配置的服務。有關在自適應表單規則中使用這些服務的詳細資訊，請參閱規則編輯器中的調用服務和設定規 [則值](/help/forms/using/rule-editor.md)。
 
@@ -213,7 +216,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 將資料源中的關聯資料模型對象添加到表單資料模型時，它們的關聯將保留並顯示為通過箭頭線連接。 您可以在表單資料模型中，跨不同資料來源新增資料模型物件之間的關聯。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >JDBC資料源中的預定義關聯不會保留在表單資料模型中。 您必須手動建立。
 
@@ -239,6 +242,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
    * 選擇關聯類型— 一對一或一對多。
    * 選擇要與關聯的資料模型對象。
    * 選擇讀取服務以從所選模型對象讀取資料。 將顯示讀取服務參數。 編輯以變更引數（如有必要），並將其系結至資料模型物件的屬性以建立關聯。
+
    在以下示例中，Dependents資料模型對象的讀取服務的預設參數為 `dependentid`。
 
    ![add-association-example](assets/add-association-example.png)
@@ -256,7 +260,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 1. 點選 **[!UICONTROL 「完成]** 」以儲存關聯，然後點選「 **[!UICONTROL 儲存]** 」以儲存表單資料模型。
 1. 重複步驟，視需要建立更多關聯。
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >添加的關聯會以指定的標題和連接關聯資料模型對象的一行出現在資料模型對象框中。
 >
@@ -273,9 +277,10 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 1. 選中資料模型對象、屬性或表單資料模型中服務旁邊的複選框。
 1. 點選「 **[!UICONTROL 編輯屬性]**」。 將打 **[!UICONTROL 開選定模型對象]** 、屬性或服務的「編輯屬性」窗格。
 
-   * **資料模型物件**:指定讀寫服務並編輯引數。
-   * **屬性**:指定屬性的類型、子類型和格式。 您也可以指定所選屬性是否為資料模型對象的主鍵。
-   * **服務**:指定服務的輸入模型對象、輸出類型和參數。 對於Get服務，您可以指定是否需要返回陣列。
+   * **資料模型物件**: 指定讀寫服務並編輯引數。
+   * **屬性**: 指定屬性的類型、子類型和格式。 您也可以指定所選屬性是否為資料模型對象的主鍵。
+   * **服務**: 指定服務的輸入模型對象、輸出類型和參數。 對於Get服務，您可以指定是否需要返回陣列。
+
    ![edit-properties-service](assets/edit-properties-service.png)
 
    獲取服務的編輯屬性對話框
@@ -402,9 +407,9 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 此標幟可設為下列任一值：
 
-* **完整**:FDM基於所有約束執行驗證
-* **關閉**:無驗證
-* **基本**:FDM基於「必需」和「可空」約束執行驗證
+* **完整**: FDM基於所有約束執行驗證
+* **關閉**: 無驗證
+* **基本**: FDM基於「必需」和「可空」約束執行驗證
 
 如果沒有為標籤設定 `ValidationOptions`值，則 **對輸入資料執行BASIC** 驗證。
 
@@ -491,12 +496,12 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
    <td>斯瓦格</td> 
   </tr> 
   <tr> 
-   <td>列舉（字串）<br /><br /> </td> 
+   <td>列舉（字串）<br /> <br /> </td> 
    <td>將輸入資料中的參數值限制為一組固定字串值。 它必須是至少包含一個元素的陣列，其中每個元素都是唯一的。</td> 
    <td>Swagger、WSDL和Odata</td> 
   </tr> 
   <tr> 
-   <td>列舉（數字）<br /><br /> </td> 
+   <td>列舉（數字）<br /> <br /> </td> 
    <td>將輸入資料中的參數值限制為一組固定的數值。 它必須是至少包含一個元素的陣列，其中每個元素都是唯一的。</td> 
    <td>WSDL</td> 
   </tr> 
