@@ -3,7 +3,7 @@ title: 資料夾中繼資料結構
 description: 瞭解如何在Adobe Experience Manager Assets中為資產資料夾建立中繼資料結構
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 4%
@@ -13,9 +13,9 @@ ht-degree: 4%
 
 # 資料夾中繼資料結構 {#folder-metadata-schema}
 
-Adobe Experience Manager Assets可讓您建立資產資料夾的中繼資料結構，以定義資料夾屬性頁面中顯示的版面和中繼資料。
+Adobe Experience Manager Assets lets you create metadata schemas for asset folders, which define the layout and metadata displayed in folder properties pages.
 
-## 添加資料夾元資料結構表單 {#add-a-folder-metadata-schema-form}
+## Add a folder metadata schema form {#add-a-folder-metadata-schema-form}
 
 使用資料夾元資料結構表單編輯器可建立和編輯資料夾的元資料結構。
 
@@ -32,12 +32,12 @@ Adobe Experience Manager Assets可讓您建立資產資料夾的中繼資料結�
 
 您可以將這些表單項目映射／配置到CRX儲存庫中元資料節點中的欄位。 您可以將新標籤或表單項目新增至中繼資料結構表單。
 
-1. 在「方案表單」頁中，選擇您建立的表單，然後從工具欄中選 **[!UICONTROL 擇]** 「編輯」選項。
-1. 在「資料夾元資料結構編輯器」頁中，單 `+` 擊可向表單添加頁籤。 若要重新命名標籤，請按一下預設名稱，並在「設定」下指定新 **[!UICONTROL 名稱]**。
+1. In the Schema Forms page, select the form you created, and then select the **[!UICONTROL Edit]** option from the toolbar.
+1. In the Folder Metadata Schema Editor page, click `+` to add a tab to the form. To rename the tab, click the default name and specify the new name under **[!UICONTROL Settings]**.
 
    ![custom_tab](assets/custom_tab.png)
 
-   若要新增更多標籤，請按一下 `+`。 按一 `X` 下標籤以將其刪除。
+   To add more tabs, click `+`. Click `X` on a tab to delete it.
 
 1. 在作用中標籤中，從「建置表單」標籤中新增一 **[!UICONTROL 或多個元件]** 。
 
@@ -47,13 +47,13 @@ Adobe Experience Manager Assets可讓您建立資產資料夾的中繼資料結�
 
 1. 要配置元件，請選擇該元件並在「設定」頁籤中修改 **[!UICONTROL 其屬]** 性。
 
-   如果需要，請從「設定」頁籤中刪 **[!UICONTROL 除元件]** 。
+   If required, delete a component from the **[!UICONTROL Settings]** tab.
 
    ![configure_properties](assets/configure_properties.png)
 
 1. 按一 **[!UICONTROL 下工具]** 列中的「儲存」以儲存變更。
 
-### 建立表單的元件 {#components-to-build-forms}
+### Components to build forms {#components-to-build-forms}
 
 「構 **[!UICONTROL 建表單]** 」頁籤列出了資料夾元資料結構表單中使用的表單項。 「設 **[!UICONTROL 定]** 」標籤會顯示您在「建立表單」標籤中選取之每個項 **[!UICONTROL 目的屬性]** 。 以下是「建立表單」標籤中可用的表 **[!UICONTROL 單項目]** :
 
@@ -108,7 +108,7 @@ Adobe Experience Manager Assets可讓您建立資產資料夾的中繼資料結�
 
 ### 從「資料夾元資料方案」頁指定給方案 {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]**>資料 **[!UICONTROL 夾中繼資料結構]**」。
+1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >資 **[!UICONTROL 料夾中繼資料結構]**」。
 1. 從「資料夾元資料結構表單」頁中，選擇要應用於資料夾的結構結構表單。
 1. 在工具列中，按一 **[!UICONTROL 下套用至資料夾]**。
 
