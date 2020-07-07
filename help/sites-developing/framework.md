@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c4a0b1a76f44dcf1084a4651194e60735bc5aea
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 0%
@@ -185,6 +185,7 @@ TagID包含命名空 [間](#tag-namespace) ，後面接著本機TagID。 [容器
    >
    >
 * 資產( `cq:Asset`)節點永 `jcr:content/metadata` 遠有混合項的 `cq:Taggable` 位置。
+
 >
 
 
@@ -260,20 +261,23 @@ AEM中包含的「節點類型」基本定義如下：
 
 * 稍後頁面屬性的更新 `cq:tags` 會自動清除「舊」參照。 觸發此項是因為透過API解析移動的標籤會傳回目標標籤，因此提供目標標籤ID。
 
-> [!NOTE]
+>[!NOTE]
 >
-> 標籤移動與標籤移轉不同。
+>標籤移動與標籤移轉不同。
 
 ## 標籤移轉 {#tags-migration}
 
 Experience Manager 6.4以上的標籤會儲存在下方， `/content/cq:tags`而之前會儲存在下方 `/etc/tags`。 不過，在Adobe Experience Manager從舊版升級的情況下，標籤仍會出現在舊位置下 `/etc/tags`。 在升級的系統中，標籤需要在下進行遷移 `/content/cq:tags`。
 
-> [!NOTE]
-> 在標籤頁面的「頁面屬性」中，建議使用標籤ID(`geometrixx-outdoors:activity/biking`)，而非硬式編碼標籤基本路徑(例如 `/etc/tags/geometrixx-outdoors/activity/biking`)。
-> 若要列出標籤， `com.day.cq.tagging.servlets.TagListServlet` 可使用。
+>[!NOTE]
+>
+>在標籤頁面的「頁面屬性」中，建議使用標籤ID(`geometrixx-outdoors:activity/biking`)，而非硬式編碼標籤基本路徑(例如 `/etc/tags/geometrixx-outdoors/activity/biking`)。
+>
+>若要列出標籤， `com.day.cq.tagging.servlets.TagListServlet` 可使用。
 
-> [!NOTE]
-> 建議使用標籤管理器API作為資源。
+>[!NOTE]
+>
+>建議使用標籤管理器API作為資源。
 
 ### 如果升級的AEM例項支援TagManager API {#upgraded-instance-support-tagmanager-api}
 
@@ -339,9 +343,9 @@ println "---------------------------------Success-------------------------------
 
 ### 如果升級的AEM例項在Classic UI上執行 {#upgraded-instance-runs-classic-ui}
 
-> [!NOTE]
-> 傳統UI不符合零停機時間要求，也不支援新的標籤庫路徑。 如果您想使用傳統UI，而不 `/etc/tags` 需要先建立後重新啟動元 `cq-tagging` 件。
-
+>[!NOTE]
+>
+>傳統UI不符合零停機時間要求，也不支援新的標籤庫路徑。 如果您想使用傳統UI，而不 `/etc/tags` 需要先建立後重新啟動元 `cq-tagging` 件。
 
 若是TagManager API支援並在Classic UI中執行的升級AEM例項：
 
