@@ -2,10 +2,10 @@
 title: Adobe Experience Manager(AEM)與網頁協助工具准則
 description: Adobe Experience Manager(AEM)簡介及網頁協助工具准則
 translation-type: tm+mt
-source-git-commit: 7d2996b425db3115851ad35a446ec6b2ed4a32f3
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '415'
-ht-degree: 62%
+ht-degree: 69%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 62%
 
 建立具AEM影響的可存取網站和內容：
 
-* 負責設定AEM以確保正確啟用協助功能的管理員。
+* 負責設定 AEM 的管理員可確保無障礙功能可正確啟用。
 
 * 作者可使用這些功能建立無障礙網站。
 
@@ -28,7 +28,7 @@ Adobe Experience Manager works with the [guidelines](#wcag-accessibility-guideli
 
 >[!NOTE]
 >
-> 如需詳細 [資訊，請參閱Adobe解決方案的協助工具符合性報表](https://www.adobe.com/accessibility/compliance.html) 。
+>如需詳細資訊，請參閱 [Adobe 解決方案的無障礙合規報告](https://www.adobe.com/accessibility/compliance.html)。
 
 ## 全球資訊網協會 {#world-wide-web-consortium}
 
@@ -53,7 +53,7 @@ WCAG 2.1 提供的[指引 (及相關成功標準) 說明了無障礙環境等級
 * [建立可存取的最適化表單](/help/forms/using/creating-accessible-adaptive-forms.md)Adobe Experience Manager(AEM)包含許多功能和功能，可增強不同功能使用者適用的最適化表單的可用性。 此解決方案也協助表單作者建立可存取的調適性表單。
 
 >[!NOTE]
-> 
+>
 >建立網站時，您必須決定要讓網站遵循的整體等級。
 
 ## Adobe 的無障礙措施 {#accessibility-at-adobe}
