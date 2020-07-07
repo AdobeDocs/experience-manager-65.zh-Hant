@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '708'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +39,10 @@ source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 >
 >* 僅在啟用觸控的UI中可用（在編輯頁面時）。
 >* 在行動裝置或桌上型電腦的小視窗上無法使用（因為空間限制）。
-   >   * 當寬度小於1024像素時就會發生此情況。
+
+   >
+   >   
+   * 當寬度小於1024像素時就會發生此情況。
 >* 僅適用於群組成員的使 `administrators` 用者。
 
 
@@ -48,6 +54,7 @@ source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 >
 >* 在使用nosamplecontent run-mode的作者實例上
 >* 發佈實例
+
 >
 >
 使用後應再次停用。
@@ -58,6 +65,7 @@ source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 >
 >* 知識庫文章「疑難 [排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」，以取得更多提示和工具。
 >* AEM Gems工作階段關於 [AEM 6.0開發人員模式](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)。
+
 >
 
 
@@ -103,6 +111,7 @@ source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 
    * 用於呈現元件的所有元件指令碼。
    * 此特定元件的儲存庫內容路徑。
+
    ![chlimage_1-14](assets/chlimage_1-14.png)
 
 * **編輯指令碼**: 連結：
@@ -113,6 +122,7 @@ source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 
    * 所選元件內的層次。
    * 單獨呈現所選元件的時間、其中巢狀內嵌的任何個別元件，以及總和。
+
    ![chlimage_1-15](assets/chlimage_1-15.png)
 
 >[!CAUTION]
