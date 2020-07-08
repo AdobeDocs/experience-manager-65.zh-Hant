@@ -3,7 +3,7 @@ title: 增強的智慧型標籤
 description: 增強的智慧型標籤
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 7%
@@ -27,7 +27,7 @@ ht-degree: 7%
 
 在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
-智慧型內容服務是Adobe I/O上代管的雲端服務。 若要在Adobe Experience Manager中使用它，系統管理員必須將您的Experience Manager實例與Adobe I/O整合。
+智慧型內容服務是Adobe I/O上代管的雲端服務。 若要在Adobe Experience Manager中使用它，系統管理員必須將您的Experience Manager部署與Adobe I/O整合。
 
 總而言之，以下是使用智慧型內容服務的主要步驟：
 
