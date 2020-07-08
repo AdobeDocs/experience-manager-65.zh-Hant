@@ -3,7 +3,7 @@ title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manage
 description: 使用遠程部署中可用 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 的資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: e3907ac1c6e3900f280b2570b93053b10128cc6d
 workflow-type: tm+mt
 source-wordcount: '2082'
 ht-degree: 51%
@@ -137,13 +137,13 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 
    *圖：在遠端 DAM 上搜尋資產時，篩選文件類型和影像的選項.*
 
-1. 如果資產是以非同步方式擷取，一有擷取任務執行失敗，網站作者就會收到通知。編寫過程中或甚至在完成編寫之後，作者都能在[非同步工作](/help/assets/asynchronous-jobs.md)使用者介面中查看擷取任務和錯誤的詳細資訊。
+1. 如果資產是以非同步方式擷取，一有擷取任務執行失敗，網站作者就會收到通知。編寫過程中或甚至在完成編寫之後，作者都能在[非同步工作](/help/sites-administering/asynchronous-jobs.md)使用者介面中查看擷取任務和錯誤的詳細資訊。
 
    ![背景中非同步擷取資產作業的相關通知。](assets/assets_async_transfer_fails.png)
 
    *圖：背景中非同步擷取資產作業的相關通知。*
 
-1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. 請確認發佈時，系統已成功擷取遠端資產。若要檢查所擷取資產的個別狀態，請參閱[非同步工作](/help/assets/asynchronous-jobs.md)使用者介面。
+1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. 請確認發佈時，系統已成功擷取遠端資產。若要檢查所擷取資產的個別狀態，請參閱[非同步工作](/help/sites-administering/asynchronous-jobs.md)使用者介面。
 
    >[!NOTE]
    >
@@ -187,4 +187,4 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 請依照下列步驟，疑難排解常見的錯誤情形：
 
 * If you cannot search for remote assets from the [!UICONTROL Content Finder] then ensure that the required roles and permissions are in place.
-* 從遠端Dam擷取的資產可能因一個或多個原因無法發佈在網頁上。 它不存在於遠程伺服器上，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠端DAM移除。 請確定已有適當的權限，並符合必要條件。 重新嘗試將資產新增至頁面並重新發佈。 檢查[非同步工作清單](/help/assets/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
+* 從遠端Dam擷取的資產可能因一個或多個原因無法發佈在網頁上。 它不存在於遠程伺服器上，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠端DAM移除。 請確定已有適當的權限，並符合必要條件。 重新嘗試將資產新增至頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
