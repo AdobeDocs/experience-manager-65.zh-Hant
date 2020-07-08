@@ -3,9 +3,9 @@ title: 整 [!DNL Adobe Experience Manager Assets] 合 [!DNL Adobe InDesign Serve
 description: 瞭解如何 [!DNL Adobe Experience Manager Assets] 整合 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1559'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 * 用於定義和管理特定任務的代理工作器。
 這些工作可以涵蓋各種任務； 例如，使用 [!DNL InDesign Server] 處理檔案。
 
-若要完全上傳您 [!DNL Experience Manager Assets] 使用Proxy建立 [!DNL Adobe InDesign] 的檔案。 這會使用代理工作器與通信， [!DNL Adobe InDesign Server]在此處 [運行指令碼](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) ，以提取元資料並生成各種格式副本 [!DNL Experience Manager Assets]。 代理工作器在雲配置中啟用與 [!DNL InDesign Server] 實 [!DNL Experience Manager] 例之間的雙向通信。
+若要完全上傳您 [!DNL Experience Manager Assets] 使用Proxy建立 [!DNL Adobe InDesign] 的檔案。 這會使用代理工作器與通信， [!DNL Adobe InDesign Server]在此處 [運行指令碼](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) ，以提取元資料並生成各種格式副本 [!DNL Experience Manager Assets]。 代理工作器可啟用雲配置中實例與實 [!DNL InDesign Server] 例之 [!DNL Experience Manager] 間的雙向通信。
 
 >[!NOTE]
 >
@@ -220,11 +220,11 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!NOTE]
 >
->為 [!DNL InDesign Server] 與整 [!DNL Experience Manager Assets]合，請使用多核處理器，因為整合所需的作業階段支援功能在單核系統上不受支援。
+>為 [!DNL InDesign Server] 與整 [!DNL Experience Manager Assets]合，請使用多核處理器，因為單核系統不支援整合所需的階段作業支援功能。
 
 ## 配置認 [!DNL Experience Manager] 證 {#configure-aem-credentials}
 
-您可以變更從例項存取的預設管理員認證(使用者名 [!DNL InDesign Server] 稱和密 [!DNL Experience Manager] 碼)，而不中斷與的整合 [!DNL InDesign Server]。
+您可以變更從部署存取的預設管理員認證(使用者名 [!DNL InDesign Server] 稱和密 [!DNL Experience Manager] 碼)，而不中斷與的整合 [!DNL InDesign Server]。
 
 1. 前往 `/etc/cloudservices/proxy.html`.
 1. 在對話方塊中，指定新的使用者名稱和密碼。
