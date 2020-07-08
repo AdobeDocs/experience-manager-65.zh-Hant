@@ -3,7 +3,7 @@ title: Introduction to [!DNL Adobe Experience Manager Assets].
 description: 瞭解什麼是數位資產管理、其使用案例 [!DNL Adobe Experience Manager Asset] 和分支。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d5b3a442756e95c15cb01c4117a83b761dc8367
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 12%
@@ -49,7 +49,7 @@ ht-degree: 12%
 
 >[!CAUTION]
 >
->上傳和／或編輯大量資產（尤其是影像）可能會影響執行個體的效 [!DNL Experience Manager] 能。
+>上傳和／或編輯大量資產（尤其是影像）可能會影響部署的效 [!DNL Experience Manager] 能。
 
 ### [!DNL Experience Manager Assets] 術語 {#aem-assets-terminology}
 
