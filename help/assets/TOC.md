@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Experience Manager 6.5資產使用指南
 translation-type: tm+mt
-source-git-commit: d870e80e33c5ba36a43ff45ba2dc82551491bb18
+source-git-commit: e3907ac1c6e3900f280b2570b93053b10128cc6d
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 38%
@@ -151,7 +151,7 @@ ht-degree: 38%
    + [建立翻譯專案](translation-projects.md)
    + [準備翻譯資產](preparing-assets-for-translation.md)
    + [從 AEM 下載資產](download-assets-from-aem.md)
-   + [非同步操作](asynchronous-jobs.md)
+   + [非同步操作](/help/sites-administering/asynchronous-jobs.md)
    + [燈箱](touch-ui-light-box.md)
    + [資產見解](touch-ui-asset-insights.md)
    + [透過Adobe Launch獲得資產見解](touch-ui-using-dtm-for-asset-insights.md)
