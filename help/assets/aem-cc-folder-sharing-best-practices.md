@@ -3,7 +3,7 @@ title: Adobe Experience Manager轉Adobe Creative Cloud資料夾分享最佳實�
 description: 設定Adobe Experience Manager，讓Experience Manager Assets中的使用者可與Adobe Creative Cloud(CC)使用者交換資料夾。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Experience Manager到Creative Cloud資料夾共用功能已過時。 Adobe強烈建議使用較新的功能，例如 [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)[或Experience Manager案頭應用程式](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)。 進一步了 [解Experience Manager和Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)。
 
-Adobe Experience Manager可設定為允許資產中的使用者與Adobe Creative Cloud應用程式的使用者共用資料夾，以便在Adobe Creative Cloud Assets服務中以共用資料夾的形式提供。 此功能可用於創意團隊和資產使用者之間交換檔案，尤其是當創意使用者無法存取資產例項（他們不在企業網路上）時。
+Adobe Experience Manager可設定為允許資產中的使用者與Adobe Creative Cloud應用程式的使用者共用資料夾，以便在Adobe Creative Cloud Assets服務中以共用資料夾的形式提供。 此功能可用於創意團隊和資產使用者之間交換檔案，尤其是當創意使用者無法存取資產部署時（他們不在企業網路上）。
 
 此類整合可用於下列使用案例，尤其是與沒有直接存取資產的使用者合作時：
 
@@ -39,7 +39,7 @@ Experience Manager對Creative Cloud資料夾共用有賴於在資產和Creative 
 整合包含下列元素：
 
 * **部署在企業網路** （受管理服務或內部部署）中的Experience Manager Assets伺服器： 資料夾共用會從這裡開始。
-* **Adobe Marketing Cloud資產核心服務**: 在Experience Manager和Creative Cloud儲存服務之間充當中介。 使用整合的公司管理員需要在Marketing Cloud組織和「資產」例項之間建立信任關係。 他們也 [會定義已核准的Creative Cloud共同作業人員清單](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)，讓Assets使用者也可以共用資料夾，以提高安全性。
+* **Adobe Marketing Cloud資產核心服務**: 在Experience Manager和Creative Cloud儲存服務之間充當中介。 使用整合的公司管理員需要在Marketing Cloud組織與資產部署之間建立信任關係。 他們也 [會定義已核准的Creative Cloud共同作業人員清單](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)，讓Assets使用者也可以共用資料夾，以提高安全性。
 
 * **Creative Cloud資產網站服務** （儲存空間和Creative Cloud檔案網頁UI）: 這是特定Creative Cloud應用程式使用者（與他們共用「資產」檔案夾）可接受邀請並在其Creative Cloud帳戶儲存空間中查看該檔案夾的地方。
 * **Creative Cloud案頭應用程式**: （可選）可讓創意使用者透過與Creative Cloud Assets儲存空間同步，從案頭直接存取共用資料夾／檔案。
