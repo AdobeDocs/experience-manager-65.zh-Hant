@@ -3,7 +3,7 @@ title: 中的資產模板 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解資產範本 [!DNL Adobe Experience Manager Assets] ，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Asset templates {#asset-templates}
 
-資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新運用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
+資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
 
 在確保全球標牌安全的同時，靈活地進行有限的編輯，使資產模板成為快速調整內容和分發內容的理想構件，以便用於各種功能的內容製品。 重新調整內容用途有助於降低管理印刷和數位通道的成本，並跨這些通道提供全方位且一致的體驗。
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >請確定您的 [!DNL Experience Manager] 例項已與整合， [!DNL InDesign Server] 以便從范 [!DNL Experience Manager Assets] 本擷取資料，並 [!DNL InDesign] 讓它可供編輯。 如需詳細資訊，請 [參閱將Experience Manager Assets與InDesign Server整合](/help/assets/indesign.md)。
+   >請確定您的 [!DNL Experience Manager] 部署已與整合， [!DNL InDesign Server] 以便 [!DNL Experience Manager Assets] 從範本擷取資料並 [!DNL InDesign] 加以編輯。 如需詳細資訊，請 [參閱將Experience Manager Assets與InDesign Server整合](/help/assets/indesign.md)。
 
 1. 若要修改可編輯欄位中的文字，請按一下可編輯欄位清單中的文字欄位，然後編輯欄位中的文字。
 
