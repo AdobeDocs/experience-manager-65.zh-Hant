@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 8ca4e3057ec13762404a8b7fb6f6bdf5dd562281
 workflow-type: tm+mt
-source-wordcount: '5862'
+source-wordcount: '5826'
 ht-degree: 5%
 
 ---
@@ -180,13 +180,13 @@ ht-degree: 5%
 | 影像高度 | 高度：下限。上界 |
 | 人員 | 人：John |
 
-屬性路徑、限制、大小和orderby不能與任何其他屬性一起使用ORed。
+屬性、 `path`、 `limit`和不 `size`能與任 `orderby` 何其 *他屬性* 「或」連接。
 
 使用者產生屬性的關鍵字是屬性編輯器中的小寫欄位標籤，並移除空格。
 
 以下是複雜查詢的搜尋格式範例：
 
-* 若要顯示具有多個刻面欄位的所有資產(例如： title=John Doe and creator tool = Adobe Photoshop): `tiltle:"John Doe" creatortool : Adobe*`
+* 若要顯示具有多個刻面欄位的所有資產(例如： title=John Doe and creator tool = Adobe Photoshop): `tiltle:"John Doe" creatortool:Adobe*`
 * 若要在Facet值不是單字而是句子時顯示所有資產(例如： title=Scott Reynolds): `title:"Scott Reynolds"`
 * 若要顯示具有單一屬性多個值的資產(例如： title=Scott Reynolds或John Doe): `title:"Scott Reynolds" OR "John Doe"`
 * 若要顯示屬性值以特定字串開頭的資產(例如： 標題是Scott Reynolds): `title:Scott*`
@@ -275,7 +275,7 @@ ht-degree: 5%
 * 使用「全 **[!UICONTROL 選]** 」核取方塊選取搜尋的資產。 [!DNL Experience Manager] 一開始會在卡片檢視中顯示100個資產，在清單檢視中顯示200個資產。 當您捲動搜尋結果時，會載入更多資產。 您可以選取比載入資產更多的資產。 選取資產的計數會顯示在搜尋結果頁面的右上角。 您可以對選取範圍進行操作，例如下載選取的資產、大量更新選取資產的中繼資料屬性，或將選取的資產新增至系列。 選取的資產比顯示的資產多時，會對所有選取的資產套用動作，或對話方塊顯示套用的資產數。 若要將動作套用至未載入的資產，請確定已明確選取所有資產。
 * 若要搜尋不含必要中繼資料的資產，請參閱必 [要中繼資料](#mandatorymetadata)。
 * 搜尋使用所有中繼資料欄位。 一般搜尋（例如搜尋12）通常會傳回許多結果。 為獲得更佳結果，請使用雙引號（非單引號），或確保數字與沒有特殊字元的單字相鄰(例如 *shoe12*)。
-* 全文搜尋支援運算子，例如-、^等。 要將這些字母作為字串文本搜索，請用雙引號將搜索表達式括起來。 例如，使用「筆記型電腦——美容」而非「筆記型電腦——美容」。
+* 全文搜尋支援運算子，例如——和^。 要將這些字母作為字串文本搜索，請用雙引號將搜索表達式括起來。 例如，使用「筆記型電腦——美容」而非「筆記型電腦——美容」。
 * 如果搜尋結果太多，請將 [搜尋範圍限制](#scope) 為所要資產的零值。 當您對如何更好地尋找所需資產（例如特定檔案類型、特定位置、特定中繼資料等）有一些概念時，效果最佳。
 
 * **標籤**: 標籤可協助您將可以更有效率地瀏覽和搜尋的資產分類。 標籤有助於將適當的分類傳播給其他用戶和工作流。 [!DNL Experience Manager] 提供使用Adobe Sensei人為智慧服務自動標籤資產的方法，這些服務在使用和訓練中不斷改進對資產的標籤。 當您搜尋資產時，如果您的帳戶已啟用功能，智慧標籤會加入。 它可與內建搜尋功能搭配使用。 請參閱 [搜尋行為](#searchbehavior)。 若要最佳化搜尋結果的顯示順序，您可以提 [高少數選取資產的搜尋](#searchrank) 排名。
@@ -313,7 +313,7 @@ ht-degree: 5%
 
 *圖： 以範例說明在資產搜尋中使用問號萬用字元。*
 
-**排除關鍵字**: 使用破折號來搜尋不含關鍵字的資產。 例如，查 `running -shoe` 詢會傳回包含但 `running`不包含的資產 `shoe`。 同樣地， `camp -night` 查詢會傳回包含但不包含 `camp` 的資產 `night`。 請注意， `camp-night` 查詢會傳回同時包含和的 `camp` 資產 `night`。
+**排除關鍵字**: 使用破折號來搜尋不含關鍵字的資產。 例如，查 `running -shoe` 詢會傳回包含但 `running`不包含的資產 `shoe`。 同樣地， `camp -night` 查詢會傳回包含但不包含 `camp` 的資產 `night`。 查詢會 `camp-night` 傳回同時包含和的 `camp` 資產 `night`。
 
 ![使用破折號來搜尋不含已排除關鍵字的資產](assets/search_dash_exclude_keyword.gif)
 
@@ -327,32 +327,29 @@ ht-degree: 5%
 
 ### 視覺化或相似性搜尋 {#configvisualsearch}
 
-視覺搜尋使用智慧型標籤， [!DNL Experience Manager] 需要6.5.2.0或更新版本。 在設定智慧型標籤功能後，請遵循下列步驟。
+視覺搜尋使用智慧型標籤， [!DNL Experience Manager] 需要6.5.2.0或更新版本。 在設定智慧型標籤功能後，請遵循下列步驟：
 
 1. 在 [!DNL Experience Manager] CRXDE中，在節 `/oak:index/lucene` 點中添加以下屬性和值並保存更改。
 
    * `costPerEntry` 屬性( `Double` 含值) `10`。
-
    * `costPerExecution` 屬性( `Double` 含值) `2`。
-
    * `refresh` 屬性( `Boolean` 含值) `true`。
+
    此配置允許從適當的索引中進行搜索。
 
 1. 要建立Lucene索引，請在CRXDE中， `/oak:index/damAssetLucene/indexRules/dam:Asset/properties`建立名為type `imageFeatures` 的節點 `nt-unstructured`。 在節 `imageFeatures` 點中，
 
    * 新增 `name` 具有值 `String` 的類型屬性 `jcr:content/metadata/imageFeatures/haystack0`。
-
    * 新 `nodeScopeIndex` 增值 `Boolean` 為的類型屬性 `true`。
-
    * 新 `propertyIndex` 增值 `Boolean` 為的類型屬性 `true`。
-
    * 新增 `useInSimilarity` 具有值 `Boolean` 的類型屬性 `true`。
+
    儲存變更。
 
 1. 存取 `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` 並新 `similarityTags` 增具 `Boolean` 有值的type屬性 `true`。
 1. 將智慧標籤套用至儲存庫中的 [!DNL Experience Manager] 資產。 瞭解 [如何設定智慧標籤](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)。
 1. 在CRXDE的節 `/oak-index/damAssetLucene` 點中，將屬 `reindex` 性設定為 `true`。 儲存變更。
-1. （可選）如果您有自訂的搜尋表單，請將節 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 點複製到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存所有變更。
+1. （可選）如果您有自訂的搜尋表單，請將節 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 點複製到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存變更。
 
 如需相關資訊，請參 [閱瞭解Experience Manager中的智慧標籤](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) , [以及如何管理智慧標籤](/help/assets/managing-smart-tags.md)。
 
@@ -375,7 +372,7 @@ ht-degree: 5%
 您可以根據下列一或多個屬性來搜尋數位資產。 依預設，套用在某些屬性上的篩選器是可用的，而某些其他篩選器則可以自訂建立，以套用在其他屬性上。
 
 | 搜尋欄位 | 搜尋屬性值 |
-|---|---|
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | MIME類型 | 影像、檔案、多媒體、封存或其他。 |
 | 上次修改時間 | 小時、日、周、月或年。 |
 | 檔案大小 | 小型、中型或大型。 |
@@ -393,7 +390,7 @@ ht-degree: 5%
 
 ## 使用資產搜尋結果 {#aftersearch}
 
-在您看到一些符合標準的搜尋資產後，您可以執行下列典型工作，或對這些搜尋結果執行下列動作：
+您可以對在Experience Manager中搜尋的資產執行下列動作：
 
 * 檢視中繼資料屬性和其他資訊。
 * 下載一或多個資產。
@@ -402,7 +399,7 @@ ht-degree: 5%
 
 ### 對搜索結果排序 {#sort}
 
-排序搜尋結果有助於您更快找到所需資產。排序搜索結果在清單視圖中工作，且僅當從「篩選器」面板 **[!UICONTROL [中選擇「檔案](#searchui)]**」時**[!UICONTROL &#x200B;工作&#x200B;]**。[!DNL Experience Manager Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
+對搜尋結果排序，以更快發現所需資產。 You can sort the search results in list view and only when you select **[!UICONTROL [Files](#searchui)]**from the**[!UICONTROL  Filters ]**panel.[!DNL Experience Manager Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
 
 在清單檢視中，您可以像排序任何資料夾中的資產一樣，對搜尋結果進行排序。 排序功能適用於這些欄——名稱、標題、狀態、維度、大小、評分、使用狀況、（日期）建立、（日期）修改、（日期）發佈、工作流程和檢出。
 
@@ -443,15 +440,15 @@ ht-degree: 5%
 
 | 錯誤、問題、症狀 | 可能的原因 | 可能修正或瞭解問題 |
 |---|---|---|
-| 搜尋遺失中繼資料的資產時，結果不正確 | 搜尋遺失必要中繼資料的資產時，可 [!DNL Experience Manager] 能會顯示某些具有有效中繼資料的資產。 結果基於索引元資料屬性。 | 更新中繼資料後，需要重新建立索引，以反映資產中繼資料的正確狀態。 請參 [閱必要中繼資料](metadata-schemas.md#define-mandatory-metadata)。 |
-| 搜尋結果過多 | 廣泛的搜尋參數。 | 考慮限制 [搜索範圍](#scope)。 使用智慧型標籤可能會提供比預期更多的搜尋結果。 請參 [閱使用智慧標籤的搜尋行為](#withsmarttags)。 |
-| 不相關或部分相關的搜尋結果 | 使用智慧標籤來變更搜尋行為。 | 瞭解 [智慧標籤後搜尋的變更](#withsmarttags)。 |
-| 無資產自動完成建議 | 新上傳的資產尚未建立索引。 當您開始在Omnisearch列中輸入搜尋關鍵字時，中繼資料無法立即當做建議使用。 | [!DNL Assets] 等到逾時期間（預設為一小時）到期後，執行背景工作，為所有新上傳或更新的資產建立中繼資料索引，然後將中繼資料新增至建議清單。 |
-| 沒有搜尋結果 | <ul><li>沒有與查詢相符的資產。</li><li>您在搜尋查詢前新增了空白字元。</li><li>不支援的中繼資料欄位包含您搜尋的關鍵字。</li><li>會為資產設定啟動和關閉時間，而搜尋是在資產關閉時間進行。</li></ul> | <ul><li>使用不同關鍵字進行搜尋。 或者，使用（智慧型）標籤來改善搜尋結果。</li><li>這是已知 [的限制](#limitations)。</li><li>並非所有中繼資料欄位都會被視為搜尋。 請參 [閱範圍](#scope)。</li><li>稍後搜尋或修改所需資產的開啟和關閉時間。</li></ul> |
-| Search filter/ predicate is not available | <ul><li>搜尋篩選器未設定。</li><li>登入時無法使用。</li><li>（不太可能）您使用的部署不會自訂搜尋選項。</li></ul> | <ul><li>請連絡管理員以檢查搜尋自訂是否可用。</li><li>請連絡管理員以檢查您的帳戶是否具有使用自訂的權限。</li><li>聯絡管理員，並檢查您所使用之部 [!DNL Assets] 署的可用自訂項目。</li></ul> |
-| 在搜尋視覺上類似的影像時，會遺失預期的影像 | <ul><li>在中不提供映像 [!DNL Experience Manager]。</li><li>未對影像編製索引。 通常是在最近上傳時。</li><li>影像未標籤智慧型。</li></ul> | <ul><li>將影像新增至 [!DNL Assets]。</li><li>請與管理員聯繫以重新為儲存庫編製索引。 此外，請確定您使用的是適當的索引。</li><li>請洽詢您的管理員，以智慧標籤相關資產。</li></ul> |
-| 當搜尋視覺上類似的影像時，會顯示不相關的影像 | 視覺搜尋行為。 | [!DNL Experience Manager] 顯示盡可能多的潛在相關資產。 較不相關的影像（如果有）會新增至結果，但搜尋排名較低。 當您向下捲動搜尋結果時，相符項目的品質和搜尋資產的相關性會降低。 |
-| 在選取並操作搜尋結果時，所有搜尋的資產都不會在 | 「全 [!UICONTROL 選] 」選項僅在卡片檢視中選取前100個搜尋結果，在清單檢視中選取前200個搜尋結果。 |  |
+| 搜尋遺失中繼資料的資產時，結果不正確。 | 搜尋遺失必要中繼資料的資產時，可 [!DNL Experience Manager] 能會顯示某些具有有效中繼資料的資產。 結果基於索引元資料屬性。 | 更新中繼資料後，需要重新建立索引，以反映資產中繼資料的正確狀態。 請參 [閱必要中繼資料](metadata-schemas.md#define-mandatory-metadata)。 |
+| 搜尋結果太多。 | 廣泛的搜尋參數。 | 考慮限制 [搜索範圍](#scope)。 使用智慧型標籤可能會提供比預期更多的搜尋結果。 請參 [閱使用智慧標籤的搜尋行為](#withsmarttags)。 |
+| 不相關或部分相關的搜尋結果。 | 使用智慧標籤來變更搜尋行為。 | 瞭解 [智慧標籤後搜尋的變更](#withsmarttags)。 |
+| 沒有資產的自動完成建議。 | 新上傳的資產尚未建立索引。 當您開始在Omnisearch列中輸入搜尋關鍵字時，中繼資料無法立即當做建議使用。 | [!DNL Assets] 等到逾時期間（預設為一小時）到期後，執行背景工作，為所有新上傳或更新的資產建立中繼資料索引，然後將中繼資料新增至建議清單。 |
+| 沒有搜尋結果. | <ul><li>符合查詢的資產不存在。 </li><li> 在搜尋查詢前新增空白字元。 </li><li> 不支援的中繼資料欄位包含您搜尋的關鍵字。</li><li> 在資產的離職期間進行搜尋。 </li></ul> | <ul><li>使用不同關鍵字進行搜尋。 或者，使用智慧標籤或相似性搜尋來改善搜尋結果。 </li><li>[已知限制](#limitations)。</li><li>所有中繼資料欄位都不會被視為搜尋。 請參 [閱範圍](#scope)。</li><li>稍後搜尋或修改所需資產的準時和非時。</li></ul> |
+| 搜尋篩選器或謂語不可用。 | <ul><li>搜尋篩選器未設定。</li><li>登入時無法使用。</li><li>（不太可能）您使用的部署不會自訂搜尋選項。</li></ul> | <ul><li>請連絡管理員以檢查搜尋自訂是否可用。</li><li>請連絡管理員以檢查您的帳戶是否具有使用自訂的權限。</li><li>聯絡管理員，並檢查您所使用之部 [!DNL Assets] 署的可用自訂項目。</li></ul> |
+| 在搜尋視覺上類似的影像時，會遺失預期的影像。 | <ul><li>在中不提供映像 [!DNL Experience Manager]。</li><li>未對影像編製索引。 通常是在最近上傳時。</li><li>影像未標籤智慧型。</li></ul> | <ul><li>將影像新增至 [!DNL Assets]。</li><li>請與管理員聯繫以重新為儲存庫編製索引。 此外，請確定您使用的是適當的索引。</li><li>請洽詢您的管理員，以智慧標籤相關資產。</li></ul> |
+| 當搜尋視覺上類似的影像時，會顯示不相關的影像。 | 視覺搜尋行為。 | [!DNL Experience Manager] 顯示盡可能多的潛在相關資產。 較不相關的影像（如果有）會新增至結果，但搜尋排名較低。 當您向下捲動搜尋結果時，相符項目的品質和搜尋資產的相關性會降低。 |
+| 在選取並操作搜尋結果時，不會對所有搜尋的資產進行操作。 | 「全 [!UICONTROL 選] 」選項僅在卡片檢視中選取前100個搜尋結果，在清單檢視中選取前200個搜尋結果。 |  |
 
 >[!MORELIKETHIS]
 >
