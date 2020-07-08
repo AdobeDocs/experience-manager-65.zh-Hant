@@ -3,7 +3,7 @@ title: 大量移 [!DNL Adobe Experience Manager Assets] 轉資產。
 description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及啟用資產以發佈例項。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1800'
 ht-degree: 8%
@@ -28,6 +28,7 @@ ht-degree: 8%
 >* ACS Commons Bulk Workflow Manager
 >* ACS Commons Fast Action Manager
 >* 合成工作流程
+
 >
 >
 本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)[問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
@@ -61,7 +62,7 @@ ht-degree: 8%
 
 #### 透過HTTP傳送 {#pushing-through-http}
 
-Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是一個小型Java應用程式，可從一個目錄將所有資產載入執行個體的另一個目錄 [!DNL Experience Manager] 中。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫中，而不是Glutton。
+Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是一個小型Java應用程式，可從一個目錄將所有資產載入部署時的另一個 [!DNL Experience Manager] 目錄。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫中，而不是Glutton。
 
 使用推送https的方法有兩個主要的缺點：
 
@@ -74,7 +75,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 [ACS AEM Tools CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ，會從CSV檔案中為資產匯入提取檔案系統的資產和資產中繼資料。 Experience Manager Asset Manager API可用來將資產匯入系統並套用已設定的中繼資料屬性。 理想情況下，資產會透過網路檔案載入或透過外部磁碟機載入伺服器。
 
-由於資產不需要透過網路傳輸，因此整體效能會大幅提升，而且通常認為此方法是將資產載入儲存庫的最有效方式。 此外，由於此工具支援中繼資料擷取，因此您可以在單一步驟中匯入所有資產和中繼資料，而不是建立第二個步驟，以透過個別工具套用中繼資料。
+由於資產不需要透過網路傳輸，因此整體效能大幅提升，而且通常認為此方法是將資產載入儲存庫的最有效方式。 此外，由於此工具支援中繼資料擷取，因此您可以在單一步驟中匯入所有資產和中繼資料，而不是建立第二個步驟，以透過個別工具套用中繼資料。
 
 ### 處理轉譯 {#processing-renditions}
 
@@ -117,15 +118,15 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 ## 跨部署移 [!DNL Experience Manager] 轉 {#migrating-between-aem-instances}
 
-雖然不是這麼常見，但有時您需要將大量資料從一個實例遷移到另 [!DNL Experience Manager] 一個實例； 例如，當您執行升級、 [!DNL Experience Manager] 升級硬體或遷移到新資料中心時，例如使用AMS遷移。
+雖然不像以前那麼常見，但有時您需要將大量資料從一個部署移轉至另 [!DNL Experience Manager] 一個部署； 例如，當您執行升級、 [!DNL Experience Manager] 升級硬體或遷移到新資料中心時，例如使用AMS遷移。
 
-在這種情況下，您的資產已填入中繼資料，且已產生轉譯。 您只需專注於將資產從一個實例移至另一個實例。 在實例之間 [!DNL Experience Manager] 遷移時，請執行以下步驟：
+在這種情況下，您的資產已填入中繼資料，且已產生轉譯。 您只需專注於將資產從一個實例移至另一個實例。 在部署之間 [!DNL Experience Manager] 遷移時，請執行以下步驟：
 
 1. 停用工作流程： 由於您要移轉轉譯以及我們的資產，因此您想要停用 [!UICONTROL DAM更新資產工作流程的工作流程啟動器] 。
 
-1. 移轉標籤： 由於您已在來源例項中載入標籤， [!DNL Experience Manager] 因此您可以在內容套件中建立標籤，並將該標籤安裝在目標例項上。
+1. 移轉標籤： 由於您已在來源部署中載入了標 [!DNL Experience Manager] 記，因此您可以在內容套件中建立標籤，並將此套件安裝在目標例項上。
 
-1. 移轉資產： 建議使用兩種工具將資產從一個例項移 [!DNL Experience Manager] 至另一個例項：
+1. 移轉資產： 建議使用兩種工具將資產從一個部署移至 [!DNL Experience Manager] 另一個部署：
 
    * **Vault Remote Copy** 或vlt rcp，允許您跨網路使用vlt。 您可以指定源目錄和目標目錄，並從一個實例下載所有儲存庫資料並將其載入到另一個實例。 Vlt rcp在 [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
    * **Grabbit** 是Time Warner Cable開發的開放原始碼內容同步工具，用於實作 [!DNL Experience Manager] 內容。 由於它使用連續的資料流，與vlt rcp相比，它的延遲更低，並聲稱速度比vlt rcp快2到10倍。 Grabbit也僅支援Delta內容的同步，這可讓Grabbit在初始移轉通過完成後同步變更。
