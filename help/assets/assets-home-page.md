@@ -3,7 +3,7 @@ title: Adobe Experience Manager資產首頁體驗
 description: 個人化Experience Manager資產首頁，提供豐富的歡迎畫面體驗，包括資產近期活動的快照。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -69,7 +69,7 @@ ht-degree: 1%
 
 **最近**: 此區 **[!UICONTROL 段下的「最近檢視]** 」介面工具集會顯示登入使用者最近存取的實體，包括資料夾、系列和專案。
 
-**Discover**: 此區 **[!UICONTROL 段下的]** 「新增」介面工具集會顯示最近上傳至「資產」例項的資產和轉譯。
+**Discover**: 此區 **[!UICONTROL 段下的]** 「新增」介面工具集會顯示最近上傳至「資產」部署的資產和轉譯。
 
 要啟用清除用戶活動資料，請從配置管理 **[!UICONTROL 器啟用DAM事件清除服務]** 。 啟用此服務後，系統將刪除超過指定數目的登入使用者活動。
 
