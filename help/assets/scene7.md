@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '2862'
 ht-degree: 0%
@@ -178,7 +178,7 @@ Dynamic Media Classic **[!UICONTROL Image]** （動態媒體經典影像）元�
 
 **[!UICONTROL 輸出格式]** -選擇影像的輸出格式，例如jpeg。 視您選擇的輸出格式而定，您可能會有其他設定選項。 請參 [閱影像預設集最佳實務](/help/assets/managing-image-presets.md#image-preset-options)。
 
-**[!UICONTROL 銳利化]** -選擇影像銳利化的方式。 「影像預設集」最佳實務和「銳利化」最 [佳實務中會詳細說明](/help/assets/managing-image-presets.md#image-preset-options)[銳利化功能](/help/assets/assets/s7_sharpening_images.pdf)。
+**[!UICONTROL 銳利化]** -選擇影像銳利化的方式。 銳利化會在影像預設集最佳實 [務和銳利化最佳實務中](/help/assets/managing-image-presets.md#image-preset-options)[詳細說明](/help/assets/assets/s7_sharpening_images.pdf)。
 
 **[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。 這些說明在「影像預 [設集」和](/help/assets/managing-image-presets.md) 「命 [令」參考中](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)。
 
@@ -268,7 +268,9 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
 >* 啟用 [「安全預覽」後](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene),Dynamic Media Classic上已發佈和未發佈的資產都會顯示在Dynamic Media Classic內容瀏覽器中。
 >* 如果您未在內容瀏覽器中將 **[!UICONTROL Dynamic Media Classic]** 或 **[!UICONTROL S7]** 圖示視為選項，您必須 [設定Dynamic Media Classic以搭配AEM運作](/help/sites-administering/scene7.md)。
 >* 對於視訊，Dynamic Media Classic內容瀏覽器支援：
-   >   * 最適化視訊集： 容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
+   >
+   >   
+   * 最適化視訊集： 容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
    >   * 單一MP4視訊
    >   * 單一F4V視訊
 
@@ -285,7 +287,6 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
 >
 >* Dynamic Media Classic內容瀏覽器會載入約100個資產，並依名稱排序。
 >* 如果您已設定安全的預覽伺服器，瀏覽器會使用該預覽伺服器來轉譯縮圖和資產。
-
 >
 
 
@@ -338,7 +339,6 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中從Dynamic Media Cla
    >
 * 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅&amp;ast;.mp4）和編碼轉譯。
 >* 在搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，AEM不會搜尋子資料夾。
-
 >
 
 
