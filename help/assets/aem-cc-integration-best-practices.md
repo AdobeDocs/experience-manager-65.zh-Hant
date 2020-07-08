@@ -3,9 +3,9 @@ title: Adobe Creative Cloud與整 [!DNL Adobe Experience Manager] 合最佳實�
 description: 整合的最佳實 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 務，以簡化資產轉讓工作流程並達到高內容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '3250'
+source-wordcount: '3251'
 ht-degree: 14%
 
 ---
@@ -45,6 +45,9 @@ ht-degree: 14%
 
 ### 使用案例與Adobe解決方案的對應 {#mapping-of-use-cases-and-adobe-solutions}
 
+<!-- TBD: Add some info about XD integration and possibly info about DA v2.0.
+-->
+
 | 使用案例 | [!DNL Adobe Asset Link] | [!DNL Experience Manager] 案頭應用程式 | 備注／其他解決方案 |
 |---|---|---|---|
 | Discover —— 瀏覽DAM資料夾 | 是 | [!DNL Experience Manager] 網頁介面和案頭動作 |  |
@@ -73,7 +76,7 @@ ht-degree: 14%
 ### 常見術語辭彙表 {#glossary-of-common-terms}
 
 * **在製品或創意在製品 (WIP)：**&#x200B;在資產生命週期中，資產會經歷多次變更，且通常尚未準備好更廣泛地與其他團隊共用的階段。
-* **創意就緒資產：** [!DNL Assets] 已準備好與更廣大的團隊分享，或已經由創意團隊選取／核准，以便與行銷或LOB團隊分享。
+* **創意就緒資產：** [!DNL Assets] 已準備好與更廣大的團隊分享，或已經由創意團隊選定或核准，以便與行銷或LOB團隊分享。
 * **資產核准：**&#x200B;針對已上傳至 DAM 的資產執行的核准程序，通常包括品牌核准、法律核准等。
 * **最終資產：**&#x200B;已完成所有核准/中繼資料標記，且已準備好更廣泛地供團隊使用的資產。此類資產會儲存在 DAM 中，並提供給所有 (或所有相關的) 使用者使用。這類資產可用於行銷管道，或供創意團隊創作設計。
 * **小幅度資產更新/變更：**&#x200B;數位資產的快速微幅變更。此類更新/變更通常是為了因應潤飾或微幅編輯請求、資產檢閱或核准 (例如重新定位、變更文字大小、調整飽和度/亮度、顏色等) 而進行的。
@@ -160,13 +163,13 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 #### 直接存取DAM的創意使用者 {#creative-users-with-direct-access-to-dam}
 
-通常，內部創意團隊或內部網路的廣告公司／創意專業人員都可存取DAM例項，包括登 [!DNL Experience Manager] 入。 [!DNL Experience Manager] 網路基礎設施可以設定為允許直接訪問外部方——通常是受信任的組織，如為客戶工作的機構——可以通過網路訪問， [!DNL Experience Manager] 例如通過VPN或IP允許清單。
+通常，內部創意團隊或內部網路的廣告公司／創意專業人員都可存取DAM部署，包括登 [!DNL Experience Manager] 入。 [!DNL Experience Manager] 網路基礎設施可以設定為允許直接訪問外部方——通常是受信任的組織，如為客戶工作的機構——可以通過網路訪問， [!DNL Experience Manager] 例如通過VPN或IP允許清單。
 
 在這種情況下，Adobe Asset Link或案頭應用程 [!DNL Experience Manager] 式可協助您輕鬆存取最終／核准的資產，並讓您將創意就緒的資產儲存至DAM。
 
 #### 無法存取DAM的創意使用者 {#creative-users-without-access-to-dam}
 
-無法直接存取DAM例項的外部機構和自由工作者可能需要存取已核准的資產，或想要將其新設計新增至DAM。
+無法直接存取DAM部署的外部機構和自由工作者可能需要存取已核准的資產，或想要將其新設計新增至DAM。
 
 使用下列策略來存取最終／核准的資產：
 
@@ -199,7 +202,7 @@ Adobe Asset Link為此使用案例提供了良好的支援：
 * 上傳創意廣告公司提供的資產
 * 如果在DAM外完成選取，則從較大的集合上傳選取的資產
 
-此說明是指在案頭使用者工作流程中，以正常作業方式（例如每週或每張像片）上傳檔案。 此處未涵蓋大型資產遷移。
+此說明是指將檔案上傳為案頭使用者工作流程的一般部分（例如，每週或每張像片）。 此處未涵蓋大型資產遷移。
 
 您可以運用下列上傳功能：
 
