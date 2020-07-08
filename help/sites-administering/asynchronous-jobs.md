@@ -1,18 +1,18 @@
 ---
-title: 非同步操作
+title: 非同步作業
 description: Adobe Experience Manager可以非同步地完成一些耗用大量資源的工作，以最佳化效能。
 translation-type: tm+mt
-source-git-commit: 69b90432ac6028a64f36300819e1bead1ae8d671
+source-git-commit: 198593fa456780816216a63790fea8cca469f8c7
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 2%
+source-wordcount: '892'
+ht-degree: 3%
 
 ---
 
 
 # 非同步操作 {#asynchronous-operations}
 
-為了降低對效能的負面影響，Adobe Experience Manager會非同步處理某些長時間執行且耗用大量資源的作業。
+為了降低對效能的負面影響，Adobe Experience Manager會非同步處理某些長時間執行且耗用大量資源的作業。 非同步處理包括將多個作業入隊並以串列方式運行，這取決於系統資源的可用性。
 
 這些操作包括：
 
@@ -22,8 +22,6 @@ ht-degree: 2%
 * 從遠程Experience Manager部署中提取高於閾值限制設定的資產
 * 移動頁面
 * 推出即時副本
-
-非同步處理包括將多個作業入隊並以串列方式運行，這取決於系統資源的可用性。
 
 您可以從「非同步作業狀態 **[!UICONTROL 」控制面板的「非同步作業狀態」控制面板查看]** Global Navigation **->** Operations **-> Jobs********** JobsStatus的狀態。
 
@@ -35,7 +33,7 @@ ht-degree: 2%
 
 ## 監視非同步操作的狀態 {#monitor-the-status-of-asynchronous-operations}
 
-每當AEM以非同步方式處理作業時，您都會在收件匣中及透過電子郵件（如果已啟用）收到通知。
+每當AEM以非同步方式處理作業時，您都會在收件匣中收 [到通知](/help/sites-authoring/inbox.md) ，並透過電子郵件（如果已啟用）。
 
 要詳細查看非同步操作的狀態，請定位至「非同步作業狀 **[!UICONTROL 態」頁]** 。
 
@@ -142,3 +140,12 @@ AEM每天01:00執行清除工作，以刪除已完成的超過一天的非同步
    ![MSM配置](assets/async-msm.png)
 
 1. 儲存變更。
+
+>[!MORELIKETHIS]
+>
+>* [建立和組織頁面](/help/sites-authoring/managing-pages.md)
+>* [建立和同步即時副本](/help/sites-administering/msm-livecopy.md)
+>* [在Experience Manager中設定電子郵件](/help/sites-administering/notification.md)。
+>* [大量匯入和匯出資產中繼資料](/help/assets/metadata-import-export.md)。
+>* [使用「連線資產」來共用來自遠端部署的DAM資產](/help/assets/use-assets-across-connected-assets-instances.md)。
+
