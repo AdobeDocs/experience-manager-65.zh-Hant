@@ -4,10 +4,10 @@ seo-title: Adobe Experience Manager 6.5 Assets使用指南
 description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 seo-description: 涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 9%
 | [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中，在Experience Manager中編寫內容的概念。 |
 | [畫面使用指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數位標牌解決方案，以發佈動態互動式數位體驗。 |
 | [部署使用指南](/help/sites-deploying/home.md) | 本指南將向您展示Experience Manager的基本概念。 |
-| [開發使用指南](/help/sites-developing/home.md) | 瞭解如何建立您的Experience Manager實例。 |
+| [開發使用指南](/help/sites-developing/home.md) | 瞭解如何建立您的Experience Manager部署。 |
 | [管理使用手冊](/help/managing/home.md) | 本指南說明如何成功管理Experience Manager專案。 |
 | [行動使用指南](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 | [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南說明如何與共用使用者產生的內容 [!DNL Livefyre]。 |
@@ -46,7 +46,7 @@ ht-degree: 9%
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager Assets社群論壇](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
-* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 * [核心元件使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
