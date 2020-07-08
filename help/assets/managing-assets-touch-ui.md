@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '9250'
 ht-degree: 4%
@@ -131,7 +131,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 串列上傳 {#serialuploads}
 
-大量上傳大量資產會耗用大量的I/O資源，這可能會對您實例的效能造成負面 [!DNL Assets] 影響。 尤其是，如果您的網際網路連線緩慢，由於磁碟I/O尖峰，上傳的時間會大幅增加。 此外，您的網頁瀏覽器可能會對並行資產上傳可處理的POST請 [!DNL Assets] 求數量加以限制。 因此，上載操作會失敗或提前終止。 換句話說，在 [!DNL Experience Manager Assets] 擷取大量檔案時可能會遺失某些檔案，或完全無法擷取任何檔案。
+大量上傳大量資產會耗用大量的I/O資源，這可能會對部署的效能造成負面 [!DNL Assets] 影響。 尤其是，如果您的網際網路連線緩慢，由於磁碟I/O尖峰，上傳的時間會大幅增加。 此外，您的網頁瀏覽器可能會對並行資產上傳可處理的POST請 [!DNL Assets] 求數量加以限制。 因此，上載操作會失敗或提前終止。 換句話說，在 [!DNL Experience Manager Assets] 擷取大量檔案時可能會遺失某些檔案，或完全無法擷取任何檔案。
 
 為了克服這種情況， [!DNL Assets] 在批量上載操作期間一次提取一個資產（串列上載），而不是同時提取所有資產。
 
@@ -301,7 +301,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ### 串流上傳 {#streamed-uploads}
 
-如果您將許多資產上傳至Adobe Experience Manager，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先將資產儲存在伺服器上的臨時資料夾中，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 預設會在中啟用串流上傳 [!DNL Assets]。
+如果您將許多資產上傳至Adobe Experience Manager，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先在伺服器上的臨時資料夾中儲存資產，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 預設會在中啟用串流上傳 [!DNL Assets]。
 
 >[!NOTE]
 >
@@ -870,7 +870,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
    * 在font-family選 `<font_family_name_of_custom_font, sans-serif>` 項中包含字串。 例如，如果要在CJK（中文、日文和韓文）中打印注釋，請在font-family選 `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` 項中包括字串。 如果要用印地文打印注釋，請下載相應的字型並將該字型系列配置為Arial Unicode MS、Noto Sans、Noto Sans CJK JP、Noto Sans Devanagari、sans-serif。
 
-1. 重新啟動 [!DNL Experience Manager] 實例。
+1. 重新啟動 [!DNL Experience Manager] 部署。
 
 以下是如何配置在CJK(中 [!DNL Experience Manager] 文、日文和韓文)中打印注釋的示例：
 
