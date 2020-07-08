@@ -1,9 +1,12 @@
 ---
-title: 使用[!DNL Adobe Experience Manager Assets]處理各種支援檔案格式的最佳實務。
-description: 使用[!DNL Experience Manager Assets]處理各種支援檔案類型的最佳實務。
+title: 處理各種支援檔案格式的最佳範例 [!DNL Adobe Experience Manager Assets]。
+description: 使用處理各種支援檔案類型的最佳實務 [!DNL Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f67b4e5ccd5d7e982732e449050123e917c9914
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+workflow-type: tm+mt
+source-wordcount: '467'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +43,7 @@ source-git-commit: 5f67b4e5ccd5d7e982732e449050123e917c9914
 
 Adobe建議您使 [!DNL Adobe InDesign Server] 用擷取 [!DNL Adobe InDesign]特定轉譯，例如IDML和HTML。 如需詳細資訊，請 [參閱「在Adobe InDesign中新增Experience Manager資產作為參考」](/help/assets/managing-linked-subassets.md#refai)。
 
-## [!DNL Dynamic Media]  {#dynamic-media}
+## [!DNL Dynamic Media] {#dynamic-media}
 
 [!DNL Dynamic Media] 透過全球、可擴充且效能最佳化的網路，即時產生和提供多種多樣化內容。 它提供互動式檢視體驗，並簡化數位宣傳管理程式。 如需啟用的詳細資 [!DNL Dynamic Media]訊，請 [參閱設定動態媒體](/help/assets/config-dynamic.md)。
 
