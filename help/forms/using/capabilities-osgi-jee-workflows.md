@@ -1,18 +1,12 @@
 ---
 title: OSGi和AEM Forms JEE工作流程中表單導向AEM工作流程的動作和功能
-seo-title: OSGi和AEM Forms JEE工作流程中表單導向AEM工作流程的動作和功能
-description: 'null'
-seo-description: 'null'
-uuid: 8af9527d-fa5e-4fcb-88e1-49571528fca6
+description: OSGi和AEM Forms JEE工作流程中表單導向AEM工作流程的動作和功能
 contentOwner: khsingh
-topic-tags: publish
-discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 7cc206dc95e6975f61ea9343dea67fa2681a9ae1
+source-git-commit: d5d30e16d2561c020a82cdda847a9dd9b48acd3b
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 19%
+source-wordcount: '914'
+ht-degree: 20%
 
 ---
 
@@ -210,19 +204,64 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
    <td>不支援</td>
   </tr>
   <tr>
-   <td>HTML5表格、互動式PDF表格、表格集<br /> </td>
-   <td>不支援<br /> </td>
+   <td>輪詢／計畫服務</td>
+   <td>立即可用</td>
+   <td>需要自訂實作</td>
+  </tr>
+  <tr>
+   <td>最適化表單應用程式</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>Assembler Service</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>PDF Generator服務</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>表單服務</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>輸出服務</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>檔案保證</td>
+   <td>支援</td>
+   <td>支援 </td>
+  </tr>
+  <tr>
+   <td>執行指令碼</td>
+   <td>支援ECMAScript</td>
+   <td>支援Java程式碼片段</td>
+  </tr>
+  <tr>
+   <td>匯編器</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>  
+  <tr>
+   <td>HTML5表格、互動式PDF表格、表格集</td>
+   <td>不支援</td>
    <td>支援</td>
   </tr>
   <tr>
    <td>流程報告</td>
-   <td>不支援<br /> </td>
-   <td>支援<br /> </td>
+   <td>不支援</td>
+   <td>支援</td>
   </tr>
   <tr>
    <td>數位簽章</td>
-   <td>支援<br /> </td>
-   <td>支援<br /> </td>
+   <td>支援</td>
+   <td>支援</td>
   </tr>
   <tr>
    <td>起點類別</td>
