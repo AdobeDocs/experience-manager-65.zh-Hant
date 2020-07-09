@@ -10,14 +10,17 @@ topic-tags: customization
 discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: a399b2cb2e0ae4f045f7e0fddf378fdcd80bb848
+workflow-type: tm+mt
+source-wordcount: '1661'
+ht-degree: 0%
 
 ---
 
 
 # 編寫最適化表單的自訂提交動作{#writing-custom-submit-action-for-adaptive-forms}
 
-最適化表單需要「提交」動作來處理使用者指定的資料。 「提交」操作決定使用自適應表單對提交的資料執行的任務。 Adobe Experience Manager(AEM)包含 [OOTB Submit動作](../../forms/using/configuring-submit-actions.md) ，可展現您可使用使用者提交資料執行的自訂工作。 例如，您可以執行工作，例如傳送電子郵件或儲存資料。
+最適化表單需要提交動作來處理使用者指定的資料。 「提交」操作決定使用自適應表單對提交的資料執行的任務。 Adobe Experience Manager(AEM)包含 [OOTB Submit動作](../../forms/using/configuring-submit-actions.md) ，可展現您可使用使用者提交資料執行的自訂工作。 例如，您可以執行工作，例如傳送電子郵件或儲存資料。
 
 ## 提交動作的工作流程 {#workflow-for-a-submit-action}
 
@@ -89,18 +92,18 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 A Submit action is a sling:Folder, that includes:
 
-* **addfields.jsp**:此指令碼提供在轉譯期間新增至HTML檔案的動作欄位。 使用此指令碼，在post.POST.jsp指令碼中新增提交期間所需的隱藏輸入參數。
-* **dialog.xml**:此指令碼類似於「CQ元件」對話方塊。 它提供作者自訂的設定資訊。 當您選擇「提交」操作時，這些欄位將顯示在「最適化表單編輯」對話框的「提交操作」頁籤中。
-* **post.POST.jsp**:Submit servlet會使用您提交的資料和前面幾節中的其他資料調用此指令碼。 只要提及在本頁中執行動作，即表示執行post.POST.jsp指令碼。 若要將Submit動作註冊為最適化表單，以便在「最適化表單編輯」對話方塊中顯示，請將這些屬性新增至sling:Folder:
+* **addfields.jsp**: 此指令碼提供在轉譯期間新增至HTML檔案的動作欄位。 使用此指令碼，在post.POST.jsp指令碼中新增提交期間所需的隱藏輸入參數。
+* **dialog.xml**: 此指令碼類似於「CQ元件」對話方塊。 它提供作者自訂的設定資訊。 當您選擇「提交」操作時，這些欄位將顯示在「最適化表單編輯」對話框的「提交操作」頁籤中。
+* **post.POST.jsp**: Submit servlet會使用您提交的資料和前面幾節中的其他資料調用此指令碼。 只要提及在本頁中執行動作，即表示執行post.POST.jsp指令碼。 若要將Submit動作註冊為最適化表單，以便在「最適化表單編輯」對話方塊中顯示，請將這些屬性新增至sling:Folder:
 
    * **guideComponentType** of type String and **value fd/af/components/guidesubmittype**
    * **guideDataModel** ，其類型為String，指定適用於Submit動作的最適化表單類型。 **XFA架構** 的最適化表單支援xfa，而 **XSD架構的最適化表單** 則支援xsd。 **不使用** XDP或XSD的最適化表單支援basic。 若要在多種類型的最適化表單上顯示動作，請新增對應的字串。 以逗號分隔每個字串。 例如，若要讓動作在以XFA和XSD為基礎的最適化表單上顯示，請分別指 **定值xfa****和xsd** 。
 
-   * **jcr:String類型的** description。 此屬性的值顯示在「最適化表單編輯」對話框的「提交操作」頁籤的「提交操作」清單中。 OOTB操作在CRX儲存庫中的位置/libs/fd/af/components **/guidesubmittype處存在**。
+   * **jcr:String類型** 的說明。 此屬性的值顯示在「最適化表單編輯」對話框的「提交操作」頁籤的「提交操作」清單中。 OOTB操作在CRX儲存庫中的位置/libs/fd/af/components **/guidesubmittype處存在**。
 
 ## 建立自訂的「提交」動作 {#creating-a-custom-submit-action}
 
-請執行下列步驟，以建立自訂的「送出」動作，將資料儲存在CRX存放庫中，然後傳送電子郵件給您。 最適化表單包含將資料儲存在CRX儲存庫的OOTB Submit動作商店內容（已過時）。 此外，CQ還提供 [Mail](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html) API，可用來傳送電子郵件。 在使用Mail API之前， [請通過系統]控制台配置(https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring Mail Service)Day CQ mail服務。 您可以重複使用「儲存內容（已過時）」操作將資料儲存在儲存庫中。 在CRX儲存庫的/libs/fd/af/components/guidesubmittype/store位置，可使用「儲存內容（已過時）」操作。
+請執行下列步驟，以建立自訂的「送出」動作，將資料儲存在CRX存放庫中，然後傳送電子郵件給您。 最適化表單包含將資料儲存在CRX儲存庫的OOTB Submit動作商店內容（已過時）。 此外，CQ還提供 [Mail](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html) API，可用來傳送電子郵件。 在使用Mail API之前， [請通過系統]控制台配置(https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring Mail Service)Day CQ Mail服務。 您可以重複使用「儲存內容（已過時）」操作將資料儲存在儲存庫中。 在CRX儲存庫的/libs/fd/af/components/guidesubmittype/store位置，可使用「儲存內容（已過時）」操作。
 
 1. 登入URL https://&lt;server>:&lt;port> /crx/de/index.jsp的CRXDE Lite。 在/apps/custom_submit_action檔案夾中建立具有屬性sling:Folder和名稱store_and_mail的節點。 如果custom_submit_action資料夾不存在，請建立它。
 
