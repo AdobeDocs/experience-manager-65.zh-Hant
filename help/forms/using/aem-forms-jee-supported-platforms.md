@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1584bc5034e7d4a549a5f824a89e8cf0c06ac3c
+source-git-commit: 5ae20c36efe40e7228488a59ffc27f86e56e2d48
 workflow-type: tm+mt
-source-wordcount: '3217'
+source-wordcount: '3225'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
    <td>支援</td>
   </tr> 
    <tr>
-   <td>Oracle Database 19c </td>
+   <td>Oracle Database 19c(Standard、Real Application Clusters(RAC)和Enterprise版本) </td>
    <td>儲存庫微內核 </td>
    <td>支援</td>
   </tr>
