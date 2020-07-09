@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
 workflow-type: tm+mt
 source-wordcount: '1700'
 ht-degree: 1%
@@ -20,17 +20,17 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-企業會收集和處理來自多個表單、後端系統和其他資料來源的資料。 資料處理包括審核和核准程式、重複性工作以及資料封存。 例如，檢閱表格並將其轉換為PDF檔案。 手動完成重複性任務時，可能需要大量的時間和資源。
+企業會收集和處理來自多個表單、後端系統和其他資料來源的資料。 資料處理包括審核和核准程式、重複性工作以及資料封存。 例如，檢閱表單並將其轉換為PDF檔案。 手動完成重複性任務時，可能需要大量的時間和資源。
 
 您可以在OSGi上 [使用以表單為中心的工作流程](../../forms/using/aem-forms-workflow.md) ，快速建立以表單為主的調適性工作流程。 這些工作流程可協助您自動化審閱和核准工作流程、商業程式工作流程和其他重複性工作。 這些工作流程也有助於處理檔案（建立、組合、分發和封存PDF檔案、新增數位簽章以限制檔案存取、解碼條碼表格等），並搭配表格和檔案使用Adobe Sign簽章工作流程。
 
 設定後，這些工作流程可以手動觸發，以完成定義的程式，或在使用者提交表單或互動式通訊時以程式設計方式執行。 此功能已包含在AEM Forms附加套件中。
 
-AEM Forms是功能強大的企業級平台。 OSGi上的表單導向工作流程只是AEM Forms的功能之一。 如需完整的功能清單，請參 [閱「AEM Forms簡介」](../../forms/using/introduction-aem-forms.md)。
+AEM Forms是功能強大的企業級平台。 OSGi上的表單導向工作流程只是AEM Forms的功能之一。 如需完整的功能清單，請參 [閱「AEM Forms簡介」](introduction-aem-forms.md)。
 
 >[!NOTE]
 >
->有了OSGi上以表單為中心的工作流程，您就可以在OSGi堆疊上快速建立和部署各種工作的工作流程，而不需在JEE堆疊上安裝完整的流程管理功能。 檢視OSGi [上的](../../forms/using/capabilities-osgi-jee-workflows.md) 「Forms-centric AEM Workflows」與JEE上的「Process Management」的比較，以瞭解功能的不同與相似之處。
+>有了OSGi上以表單為中心的工作流程，您就可以在OSGi堆疊上快速建立和部署各種工作的工作流程，而不需在JEE堆疊上安裝完整的流程管理功能。 檢視OSGi [上的](capabilities-osgi-jee-workflows.md) 「Forms-centric AEM Workflows」與JEE上的「Process Management」的比較，以瞭解功能的不同與相似之處。
 >
 >比較後，如果您選擇在JEE堆疊上安裝「流程管理」功能，請參閱在JEE上安裝或升級AEM Forms [](/help/forms/home.md) ，以取得有關安裝和設定JEE堆疊和「流程管理」功能的詳細資訊。
 
