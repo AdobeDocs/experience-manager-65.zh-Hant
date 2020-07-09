@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: e795a647b8728b224792f342200a700169a5e87b
+workflow-type: tm+mt
+source-wordcount: '1239'
+ht-degree: 1%
 
 ---
 
@@ -42,12 +45,13 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 匿名網站訪客會立即看到此私人啟用社群網站的登入頁面。 請注意，您沒有選擇自行註冊或登入Facebook或Twitter。
 
-請注意，此首頁顯示四個功能表項目：而 `Assignments, Ski Catalog, What's New` 且， `Discussions`但若未登入，則無法達成任何目標。
+請注意，此首頁顯示四個功能表項目： `Assignments, Ski Catalog, What's New` 而 `Discussions`且，若未登入，則無法取得。
 
 >[!NOTE]
 >
 >不允許網站訪客自行註冊，就可授予對啟用網站的匿名存取權。
 >如果啟用資源設 `show in catalog` 為 `allow anonymous access`且，匿名網站訪客將可檢視目錄中的資源。
+
 
 ### 防止對JCR的匿名訪問 {#prevent-anonymous-access-on-jcr}
 
@@ -63,7 +67,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 1. 前往「頁 **[!UICONTROL 面屬性」]**。
 
-   ![page-properties-1](assets/page-properties-1.png)
+   ![page-properties](assets/page-properties.png)
 
 1. 前往「進 **[!UICONTROL 階]** 」標籤。
 1. 啟用 **[!UICONTROL 驗證要求]**。
@@ -92,7 +96,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 在「工作」頁面中，會顯示成員所有專門分配給他們的學習路徑和啟用資源。
 
-每項指派都提供基本資訊
+每個分配都提供以下基本資訊：
 
 * 指派類型
 * 是否為新任務
@@ -234,7 +238,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 * 論作者
 * 使用管理權限登入
-* 導覽至「社 **[!UICONTROL 群>報表>工作分配報表」]**
+* 導覽至「 **[!UICONTROL 社群]** >報 **[!UICONTROL 表]** >分 **[!UICONTROL 配報表」]**
 * 從下 **[!UICONTROL 拉式功能表]** (選取 `Enablement Tutorial`)中選取網站
 
 * 選擇 **[!UICONTROL 群組]** (選擇 `Community Ski Class`)
@@ -247,9 +251,8 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 若是檢視報表：
 
-* 論作者
-* 使用管理權限登入
-* 導覽至 **[!UICONTROL 社群>報表>檢視報表]**
+* 在作者上，以管理權限登入
+* 導覽至「 **[!UICONTROL 社群]** >報 **[!UICONTROL 表]** >檢視 **[!UICONTROL 報表」]**
 * 從下 **拉式功能表&#x200B;**(選取`Enablement Tutorial`)中選取網站
 
 * 選擇 **[!UICONTROL 內容類型]** (選擇 `all`)
