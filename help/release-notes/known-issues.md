@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6943eb3d0b73a348fc7bb5a713813bf73f8e7e79
+source-git-commit: 0a55ed44cb7fe3320b2196df38fe8492ee03912d
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
@@ -69,6 +69,8 @@ ht-degree: 2%
 * （僅限JBoss 7）從舊版升級至AEM 6.5 Forms，而舊版有建立並使用預設提交或預設演算程式副本的程式(.lca)時，使用此類程式(.lca)的HTML5 Forms無法執行必要動作。 (CQ-4243928)
 * 在自適應中，當從規則編輯器調用表單資料模型服務以動態更新影像選擇元件的值時，不更新影像選擇元件的值。 (CQ-4254754)
 * AEM Forms Designer安裝程式需要32位元版本的 [Visual C++可重新分發的執行階段套件2012](https://support.microsoft.com/en-in/help/2977003/the-latest-supported-visual-c-downloads) , [Visual C++可重新分發的執行階段套件2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package)。 在開始安裝之前，請確定已安裝前述的可重新分發的執行階段套件。 (CQ-4265668)
+
+* PDF產生器不支援智慧卡驗證。  當管理員在Windows伺服器上啟 `Interactive Logon: Require Smart card` 用「群組原則」時，所有現有的PDF產生器使用者都會失效。
 
 * 當將自適應表單配置為動態更新元件的值並且托管表單的發佈實例通過調度器訪問時，動態更新欄位值的功能將停止工作。 若要解決此問題，請在發佈例項上開啟CRXDE，導覽至/libs/fd/af/runtime/clientlibs/guideChartReducer，並建立下列屬性。
 
