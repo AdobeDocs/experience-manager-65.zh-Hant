@@ -1,7 +1,7 @@
 ---
 title: OSGi上的表單導向工作流程
 seo-title: 快速建立以表單為基礎的調適性流程、自動化檔案服務作業，並搭配AEM工作流程使用Adobe Sign
-description: 使用AEM Forms Workflow，自動化並快速建立審核與核准，以開始檔案服務
+description: 使用AEM Forms Workflow，自動化並快速建立審閱與核准，以開始檔案服務
 seo-description: 使用AEM Forms Workflow，以自動化並快速建立審核與核准、開始檔案服務（例如，將PDF檔案轉換為其他格式）、與Adobe Sign簽名工作流程整合等。
 uuid: 797ba0f7-a378-45ac-9f82-fa9a952027be
 topic-tags: document_services
@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14a6e0c5f79ac7acb9f8bd06d3524473f1007485
+source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
+workflow-type: tm+mt
+source-wordcount: '3065'
+ht-degree: 1%
 
 ---
 
@@ -28,9 +31,9 @@ source-git-commit: 14a6e0c5f79ac7acb9f8bd06d3524473f1007485
 
 有了OSGi上以表單為中心的工作流程，您就可以在OSGi堆疊上快速建立和部署各種工作的工作流程，而不需在JEE堆疊上安裝完整的流程管理功能。 工作流程的開發與管理使用熟悉的AEM Workflow和AEM Inbox功能。 工作流程是自動化實際商業流程的基礎，這些流程跨越多個軟體系統、網路、部門甚至組織。
 
-設定後，這些工作流程可以手動觸發，以完成定義的程式，或在使用者提交表單或信件時以程式 [設計方式](/help/forms/using/cm-overview.md) 執行。 透過這項增強的AEM Workflow功能，AEM Forms提供兩種不同但類似的功能。 在部署策略中，您需要決定哪一種適合您。 檢視OSGi [上](../../forms/using/capabilities-osgi-jee-workflows.md) 「以表單為中心的AEM工作流程」與JEE上「流程管理」的比較。 此外，如需部署拓撲，請參 [閱AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md)。
+設定後，這些工作流程可以手動觸發，以完成定義的程式，或在使用者提交表單或信件時以程式 [設計方式](/help/forms/using/cm-overview.md) 執行。 透過這項增強的AEM Workflow功能，AEM Forms提供兩種不同但類似的功能。 在部署策略中，您需要決定哪一種適合您。 檢視OSGi [上](capabilities-osgi-jee-workflows.md) 「以表單為中心的AEM工作流程」與JEE上「流程管理」的比較。 此外，如需部署拓撲，請參 [閱AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md)。
 
-OSGi上的表單導向工作流程可擴充 [AEM Inbox](/help/sites-authoring/inbox.md) ，並為AEM Workflow編輯器提供額外的元件（步驟），以新增對AEM Forms導向工作流程的支援。 擴充的AEM收件匣具有類似 [AEM Forms Workspace的功能](../../forms/using/introduction-html-workspace.md)。 除了管理以人為中心的工作流程（核准、審閱等），您還可以使用AEM工作流程來自動化檔案服務相關的作業(例如 [Generate PDF](/help/sites-developing/workflows-step-ref.md))和電子簽署(Adobe Sign)檔案。
+OSGi上的表單導向工作流程可擴充 [AEM Inbox](/help/sites-authoring/inbox.md) ，並為AEM Workflow編輯器提供額外的元件（步驟），以新增對AEM Forms導向工作流程的支援。 擴充的AEM收件匣具有類似 [AEM Forms Workspace的功能](introduction-html-workspace.md)。 除了管理以人為中心的工作流程（核准、審閱等），您還可以使用AEM工作流程來自動化檔案服務相關的作業(例如 [Generate PDF](/help/sites-developing/workflows-step-ref.md))和電子簽署(Adobe Sign)檔案。
 
 所有AEM Forms工作流程步驟都支援使用變數。 變數可讓工作流程步驟在執行時期保留和傳遞跨步驟的中繼資料。 您可以建立不同類型的變數，以儲存不同的資料類型。 您也可以建立變數集合（陣列），以儲存多個相關、相同類型資料的例項。 通常，當您需要根據變數所包含的值做出決策，或儲存流程稍後需要的資訊時，會使用變數或變數集合。 如需在這些以表單為中心的工作流程元件（步驟）中使用變數的詳細資訊，請參閱OSGi —— 步驟參考上的 [Forms導向工作流程](../../forms/using/aem-forms-workflow-step-reference.md)。 如需建立和管理變數的詳細資訊，請參閱「AEM工 [作流程中的變數」](../../forms/using/variable-in-aem-workflows.md)。
 
@@ -70,7 +73,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 1. 輸入 **Title** and **Name** （可選）。 例如，抵押貸款申請。 點選「 **完成**」。
 1. 選取新建立的工作流程模型，並點選「 **編輯」**。 現在，您可以新增工作流程步驟來建立商業邏輯。 首次建立工作流模型時，它包含：
 
-   * 步驟：流開始和流結束。 這些步驟代表工作流程的開始和結束。 這些步驟是必要步驟，無法編輯或移除。
+   * 步驟： 流開始和流結束。 這些步驟代表工作流程的開始和結束。 這些步驟是必要步驟，無法編輯或移除。
    * 名為步驟1的參與者步驟示例。 此步驟已設定為指派工作項目給管理員使用者。 移除此步驟。
 
 1. 啟用電子郵件通知。 您可以在OSGi上設定以表單為中心的工作流程，以傳送電子郵件通知給使用者或受指派者。 執行下列設定以啟用電子郵件通知：
@@ -81,7 +84,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 
 1. 建立工作流程階段。 工作流程可以有多個階段。 這些階段會顯示在「AEM收件匣」中，並報告工作流程的進度。
 
-   若要定義舞台，請點選「 ![info-circle](assets/info-circle.png) 」圖示以開啟工作流程模型屬性、開啟「 **Stages** 」標籤、新增工作流程模型的階段，並點選「 **儲存與關閉」**。 對於貸款申請示例，請建立階段：貸款申請、貸款申請狀態、待簽檔案和已簽署貸款檔案。
+   若要定義舞台，請點選「 ![info-circle](assets/info-circle.png) 」圖示以開啟工作流程模型屬性、開啟「 **Stages** 」標籤、新增工作流程模型的階段，並點選「 **儲存與關閉」**。 對於貸款申請示例，請建立階段： 貸款申請、貸款申請狀態、待簽檔案和已簽署貸款檔案。
 
 1. 將「指定任務」步驟 **瀏覽器拖放到工作流模型中** 。 將它作為模型的第一步。
 
@@ -156,7 +159,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
   </tr>
   <tr>
    <td>最適化表單</td>
-   <td><p>指定最適化表單的路徑。 當使用者啟動應用程式時，會顯示指定的最適化表單。</p> <p><strong>注意</strong>:工作流程應用程式不支援長度超過一頁或需要在Apple iPad上捲動的表單和PDF檔案。 當應用程式在Apple iPad上開啟時，當最適化表單或PDF檔案長於頁面時，第二個頁面的表單欄位和內容會遺失。</p> </td>
+   <td><p>指定最適化表單的路徑。 當使用者啟動應用程式時，會顯示指定的最適化表單。</p> <p><strong>注意</strong>: 工作流程應用程式不支援長度超過一頁或需要在Apple iPad上捲動的表單和PDF檔案。 當應用程式在Apple iPad上開啟時，當最適化表單或PDF檔案長於頁面時，第二個頁面的表單欄位和內容會遺失。</p> </td>
   </tr>
   <tr>
    <td>存取群組</td>
