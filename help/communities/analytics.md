@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 2%
@@ -108,9 +108,6 @@ Adobe Analytics可針對AEM Communities進行設定，如此當會員與支援�
       * 非 **`Counter (no subrelations)`**
    * 可重新使用（重新命名）現有事件或建立新事件以用於社群功能
 
-   <!--
-    NOTE TO WRITER: The following link was broken, so I replaced it. Check for accuracy https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html 
-    -->
 
 * [視訊管理](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
 
@@ -392,7 +389,7 @@ Analytics會自動用於數個Communities功能。
 
 在啟用Analytics並選取雲端設定架構時儲存社群網站後，AEM變數會自動對應至以evar1和event1開頭的Analytics eVar和事件，並遞增1。
 
-如果使用現有報表套裝來映射evar1到evar11和event1到event7中的任何變數，則必須重新 [](#modifying-analytics-variable-mapping) 映射AEM變數並還原原始映射。
+如果使用現有報表套裝來映射evar1到evar11和event1到event7中的任何變數，則必須重新 [](#modifying-analytics-variable-mapping) 映射AEM變數並還原原始對應。
 
 以下是遵循快速入門教學課程後的預 [設映射範例](/help/communities/getting-started-enablement.md):
 
@@ -533,140 +530,141 @@ Analytics會自動用於數個Communities功能。
 * *UGC元件標題*: 遠足主題
 * *login(authorizableId)*: `aaron.mcdonald@mailinator.com`
 * *SRP到UGC的路徑*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
-或 *要遵循的元件路徑*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
-*社群網站內容的路徑*: `/content/sites/<site name>/en`
+或 
+*要遵循的元件路徑*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-* 修改Analytics變數對應 {#modifying-analytics-variable-mapping}*`/content/sites/<site name>/en`
+* *社群網站內容的路徑*: `/content/sites/<site name>/en`
 
-### 在社群網站啟用Analytics後，可從架構設定看到Analytics eVar和事件對應至AEM變數。{#modifying-analytics-variable-mapping}
+### 修改Analytics變數對應 {#modifying-analytics-variable-mapping}
+
+在社群網站啟用Analytics後，可從架構設定看到Analytics eVar和事件對應至AEM變數。
 
 啟用Analytics後，在社群網站發佈之前，從左側導軌拖曳所需的Analytics evar或事件並拖曳至對應表格的相關列，即可在架構中變更對應。
 
-若要避免重複映射，請務必將已取代的Analytics evar或事件暫留在行上，並選取顯示在Analytics變數元素右側的&quot;X&quot;，以便從行中移除。
+若要避免重複映射，請務必將滑鼠指標暫留在行上並選取Analytics變數元素右側的「X」，以移除已取代的Analytics evar或事件。
 
 如果Communities eVar和事件覆寫報表套裝中預先存在的映射，則為避免資料遺失，請將Communities功能的AEM變數指派給其他Analytics eVar或事件，並還原原始映射。
 
-[!CAUTION]
-
->在啟用Analytics的情況下發佈社群網站前，請務必重 [新對應](#publishing-the-community-site) ，否則就有資料遺失的風險。
+>[!CAUTION]
 >
->範例步驟1: 將Analytics evar14拖曳至對應表格 {#example-step-dragging-analytics-evar-into-mapping-table}](#publishing-the-community-site)
+>在啟用Analytics的情況下發佈社群網站前，請務必重 [新對應](#publishing-the-community-site) ，否則就有資料遺失的風險。
 
-#### ![chlimage_1-275](assets/chlimage_1-275.png)
+#### 範例步驟1: 將Analytics evar14拖曳至對應表格 {#example-step-dragging-analytics-evar-into-mapping-table}
 
-範例步驟2: 選取&#39;x&#39;以移除已取代的evar11 {#example-step-selecting-x-to-remove-replaced-evar}](assets/chlimage_1-275.png)
+![chlimage_1-275](assets/chlimage_1-275.png)
 
-#### ![chlimage_1-276](assets/chlimage_1-276.png)
+#### 範例步驟2: 選取&#39;x&#39;以移除已取代的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
 
-範例步驟3: AEM var eventdata.siteId已重新映射至Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}](assets/chlimage_1-276.png)
+![chlimage_1-276](assets/chlimage_1-276.png)
 
-#### ![chlimage_1-277](assets/chlimage_1-277.png)
+#### 範例步驟3: AEM var eventdata.siteId已重新映射至Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
 
-發佈社群網站 {#publishing-the-community-site}](assets/chlimage_1-277.png)
+![chlimage_1-277](assets/chlimage_1-277.png)
 
-## 驗證Analytics與AEM變數對應 {#verify-analytics-to-aem-variable-mapping}
+## 發佈社群網站 {#publishing-the-community-site}
 
-### 在發佈社群網站（也發佈Analytics雲端服務和架構）之前，最好先驗證變數對應。{#verify-analytics-to-aem-variable-mapping}
+### 驗證Analytics與AEM變數對應 {#verify-analytics-to-aem-variable-mapping}
+
+在發佈社群網站（也發佈Analytics雲端服務和架構）之前，最好先驗證變數對應。
 
 請參閱章節：
 
-[將Analytics對應至AEM變數](#mapped-analytics-to-aem-variables)
-
+* [將Analytics對應至AEM變數](#mapped-analytics-to-aem-variables)
 * [修改Analytics變數對應](#modifying-analytics-variable-mapping)
-* [!CAUTION]](#modifying-analytics-variable-mapping)
 
+>[!CAUTION]
+>
 >**若使用現有報表套裝，且報表套裝已在**
 >
->**`evar1`** through **`evar11`****
->
->* **`event1`** through **`event7`**
+>* **`evar1`** through **`evar11`**
    >
    >
-* **然後，在社群網站發佈之前，** 請務必還原預先存在的對應，並將自動映射的社群AEM變數（當社群網站的Analytics啟用時）移至其他Analytics變數。 此重新映射應在所有社區元件中保持一致。**`event7`**
+* **`event1`** through **`event7`**
 >
 >
-**如果不這樣做，可能會導致無法恢復的資料丟失。**
+**然後，在社群網站發佈之前，** 請務必還原預先存在的對應，並將自動映射的社群AEM變數（當社群網站的Analytics啟用時）移至其他Analytics變數。 此重新映射應在所有社區元件中保持一致。
 >
->主要發行者 {#primary-publisher}
+>如果不這樣做，可能會導致無法恢復的資料丟失。
 
-### 當選擇的部署是發 [布場](/help/communities/topologies.md#tarmk-publish-farm)，則必須將一個AEM發佈例項識別為主要發佈者，以輪詢Adobe Analytics，以便將報表資料寫入 [SRP](/help/communities/working-with-srp.md)。
+### 主要發行者 {#primary-publisher}
 
-依預設， `AEM Communities Publisher Configuration` OSGi設定會將其發佈例項識別為主要發佈者，如此發佈群中的所有發佈例項都會自行識別為主要發佈者。](/help/communities/topologies.md#tarmk-publish-farm)[](/help/communities/working-with-srp.md)
+當選擇的部署是發 [布場](/help/communities/topologies.md#tarmk-publish-farm)，則必須將一個AEM發佈例項識別為主要發佈者，以輪詢Adobe Analytics，以便將報表資料寫入 [SRP](/help/communities/working-with-srp.md)。
+
+依預設， `AEM Communities Publisher Configuration` OSGi設定會將其發佈例項識別為主要發佈者，如此發佈群中的所有發佈例項都會自行識別為主要發佈者。
 
 因此，必須編輯所有次要發佈例項的設定，才能取消選取「主要發佈者」核 **取方塊** 。
 
 有關具體說明，請參閱「部署社群」的主要發 [布者部分](/help/communities/deploy-communities.md#primary-publisher)。
 
-[!CAUTION]](/help/communities/deploy-communities.md#primary-publisher)
-
->[!CAUTION]請務必設定主要發佈者，以防止從多個發佈例項進行輪詢。
+>[!CAUTION]
 >
->複製加密密鑰 {#replicate-the-crypto-key}
+>請務必設定主要發佈者，以防止從多個發佈例項進行輪詢。
 
-### Adobe Analytics認證會加密。 為方便作者與發佈者之間複製或傳輸加密的分析憑證，所有AEM例項都必須共用相同的主要加密金鑰。{#replicate-the-crypto-key}
+### 複製加密密鑰 {#replicate-the-crypto-key}
+
+Adobe Analytics認證會加密。 為方便作者與發佈者之間複製或傳輸加密的分析憑證，所有AEM例項都必須共用相同的主要加密金鑰。
 
 要執行此操作，請按照複製加密密 [鑰中的說明操作](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
 
-發佈社群網站和Analytics Cloud服務 {#publish-community-site-and-analytics-cloud-service}](/help/communities/deploy-communities.md#replicate-the-crypto-key)
+### 發佈社群網站和Analytics Cloud服務 {#publish-community-site-and-analytics-cloud-service}
 
-### 在社群網站啟用Analytics雲端服務後，並視需要調整Analytics與 [AEM變數的對應](#mapped-analytics-to-aem-variables)，就必須透過 [（重新）發佈社群網站，將設定複製至發佈環境](/help/communities/sites-console.md#publishing-the-site)。
+在社群網站啟用Analytics雲端服務後，並視需要調整Analytics與 [AEM變數的對應](#mapped-analytics-to-aem-variables)，就必須透過 [（重新）發佈社群網站，將設定複製至發佈環境](/help/communities/sites-console.md#publishing-the-site)。
 
-從Analytics取得報表 {#obtaining-reports-from-analytics}](#mapped-analytics-to-aem-variables)[](/help/communities/sites-console.md#publishing-the-site)
+## 從Analytics取得報表 {#obtaining-reports-from-analytics}
 
-## 報表管理 {#report-management}
+### 報表管理 {#report-management}
 
-### 作者和主要發行者的 [OSGi設定](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Management`，用於查詢Analytics。
+作者和主要發行者的 [OSGi設定](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Management`，用於查詢Analytics。
 
-在作者上，查詢是即時報告。[](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Management`
+在作者上，查詢是即時報告。
 
 在主要發佈者上，查詢可用來提供資訊，以準備報表匯入工具的Analytic資料匯入。
 
 查詢間隔預設為10秒。
 
-報表匯入工具 {#report-importer}
+### 報表匯入工具 {#report-importer}
 
-### 一旦發佈啟用Analytics的社群網站後，主要發行者的 [](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`OSGi組態即可設定為針對CRXDE中未個別設定的組態設定預設輪詢間隔。
+一旦發佈啟用Analytics的社群網站後，主要發行者的 [](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`OSGi組態即可設定為針對CRXDE中未個別設定的組態設定預設輪詢間隔。
 
-輪詢間隔控制向Adobe Analytics請求提取並保存到 [SRP中的資料的頻率](/help/communities/working-with-srp.md)。`AEM Communities Analytics Report Importer`
+輪詢間隔控制向Adobe Analytics請求提取並保存到 [SRP中的資料的頻率](/help/communities/working-with-srp.md)。
 
-當資料可歸類為「大資料」時，更頻繁的投票可能會給社群網站帶來很大的負載。[](/help/communities/working-with-srp.md)
+當資料可歸類為「大資料」時，更頻繁的投票可能會給社群網站帶來很大的負載。
 
 預設輪詢 **導入間隔** 設定為12小時。
 
 ![chlimage_1-278](assets/chlimage_1-278.png)
 
-元件報表自訂 {#component-report-customization}](assets/chlimage_1-278.png)
+### 元件報表自訂 {#component-report-customization}
 
-### 目前，若要自訂要追蹤的量度，系統會在儲存庫中建立節點，以定義要針對該量度產生報表的時段。{#component-report-customization}
+目前，若要自訂要追蹤的量度，系統會在儲存庫中建立節點，以定義要針對該量度產生報表的時段。
 
 論壇主題是目前此項自訂的唯一範例：
 
-在主要發行者上，以管理權限登入。
+* 在主要發行者上，以管理權限登入。
+* 導覽至 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de)。
 
-* 導覽至 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。 例如， [https://localhost:4503/crx/de[#$tu263]。
-* 
+* 在語言根目錄的jcr:content節點下(例如，導 `/content/sites/engage/en/jcr:content),`覽至為Analytics報表設定的元件。
+例如， **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
-* 請注意所建立的時段：`/content/sites/engage/en/jcr:content),`**`analytics/reportConfigs/social_forum_components_hbs_topic`**
+* 請注意所建立的時段：
 
-* `last30Days`
-
+   * `last30Days`
    * `last90Days`
    * `thisYear`
-   * 注意節 `total`點。
 
-* 修改屬 **`interval`** 性會覆寫「報表匯入工具」間隔。
+* 注意節 `total`點。
 
-   * 值以秒為單位，並設為4小時（14400秒）。**`interval`**
-   * ![chlimage_1-279](assets/chlimage_1-279.png)
+   * 修改屬 **`interval`** 性會覆寫「報表匯入工具」間隔。
+   * 值以秒為單位，並設為4小時（14400秒）。
 
-在Analytics中管理使用者資料 {#manage-user-data-in-analytics}](assets/chlimage_1-279.png)
+![chlimage_1-279](assets/chlimage_1-279.png)
 
-## Adobe Analytics提供可讓您存取、匯出和刪除使用者資料的API。 如需詳細資訊，請參 [閱提交存取權和刪除請求[#$tu275]。
+## 在Analytics中管理使用者資料 {#manage-user-data-in-analytics}
 
+Adobe Analytics提供可讓您存取、匯出和刪除使用者資料的API。 如需詳細資訊，請參 [閱提交存取權和刪除請求](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)。
 
+## 資源 {#resources}
 
-## Adobe Experience Cloud: [Analytics說明與參考[#$tu278]
-
-* 
+* Adobe Experience Cloud: [Analytics說明與參考](https://docs.adobe.com/content/help/en/analytics/landing/home.html)
+* AEM: [Integrating with Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * AEM: [Analytics與外部提供者](/help/sites-administering/external-providers.md)
-* AEM: [Analytics with External Providers](/help/sites-administering/external-providers.md)
