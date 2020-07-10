@@ -1,11 +1,14 @@
 ---
 cloud: experience-cloud
 product: adobe experience manager
-sub-product: forms
+sub-product: 表單
 audience: end-user
-user-guide-title: AEM 6.5 Forms User Guide
+user-guide-title: AEM 6.5 Forms使用指南
 translation-type: tm+mt
-source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
+source-git-commit: 8bb5e92140371fbfee0f946ed3701cd40a972702
+workflow-type: tm+mt
+source-wordcount: '3695'
+ht-degree: 1%
 
 ---
 
@@ -21,22 +24,22 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [製作最適化表單簡介](using/introduction-forms-authoring.md)
    + [互動式通訊簡介](using/interactive-communications-overview.md)
    + [管理表單簡介](using/introduction-managing-forms.md)
-   + [自動化表單轉換服務簡介](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
-   + 教學課程：建立您的第一個最適化表單 {#create-first-adaptive-form}
-      + [教學課程：建立您的第一個最適化表單](using/create-your-first-adaptive-form.md)
-      + [教學課程：建立最適化表單](using/create-adaptive-form.md)
-      + [教學課程：建立表單資料模型](using/create-form-data-model.md)
-      + [教學課程：套用規則至最適化表單欄位l](using/apply-rules-to-adaptive-form-fields.md)
-      + [教學課程：設定最適化表單的樣式](using/style-your-adaptive-form.md)
-      + [教學課程：發佈最適化表單](/help/forms/using/publish-your-adaptive-form.md)
-      + [教學課程：測試您的最適化表單](/help/forms/using/testing-your-adaptive-form.md)
-   + 教學課程：建立您的第一個互動式通訊 {#create-first-interactive-communication}
-      + [教學課程：建立您的第一個互動式通訊](using/create-your-first-interactive-communication.md)
-      + [教學課程：規劃互動式通訊](using/planning-interactive-communications.md)
-      + [教學課程：建立表單資料模型](using/create-form-data-model0.md)
-      + [教學課程：建立檔案片段](using/create-document-fragments.md)
-      + [教學課程：建立範本](using/create-templates-print-web.md)
-      + [教學課程：建立互動式通訊](using/create-interactive-communication0.md)
+   + [自動表單轉換服務簡介](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
+   + 教學課程： 建立您的第一個最適化表單 {#create-first-adaptive-form}
+      + [教學課程： 建立您的第一個最適化表單](using/create-your-first-adaptive-form.md)
+      + [教學課程： 建立最適化表單](using/create-adaptive-form.md)
+      + [教學課程： 建立表單資料模型](using/create-form-data-model.md)
+      + [教學課程： 套用規則至最適化表單欄位l](using/apply-rules-to-adaptive-form-fields.md)
+      + [教學課程： 設定最適化表單的樣式](using/style-your-adaptive-form.md)
+      + [教學課程： 發佈最適化表單](/help/forms/using/publish-your-adaptive-form.md)
+      + [教學課程： 測試您的最適化表單](/help/forms/using/testing-your-adaptive-form.md)
+   + 教學課程： 建立您的第一個互動式通訊 {#create-first-interactive-communication}
+      + [教學課程： 建立您的第一個互動式通訊](using/create-your-first-interactive-communication.md)
+      + [教學課程： 規劃互動式通訊](using/planning-interactive-communications.md)
+      + [教學課程： 建立表單資料模型](using/create-form-data-model0.md)
+      + [教學課程： 建立檔案片段](using/create-document-fragments.md)
+      + [教學課程： 建立範本](using/create-templates-print-web.md)
+      + [教學課程： 建立互動式通訊](using/create-interactive-communication0.md)
    + AEM Forms參考資料 {#aem-forms-reference-collaterals}
       + [設定和配置We.Finance和員工自助服務參考站點](using/setup-reference-sites.md)
       + [設定和設定We.Gov參考網站](/help/forms/using/forms-install-configure-gov-reference-site.md)
@@ -62,16 +65,18 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
       + [安裝和配置Automated Forms Conversion服務](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + 在JEE上安裝AEM Forms {#jee-installation}
       + [JEE上AEM表單的支援平台](using/aem-forms-jee-supported-platforms.md)
-      + [使用JBoss統包功能，在JEE上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+      + [使用JBoss統包功能，在JEE上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
       + [安裝和設定AEM Forms Document Security伺服器](using/installing-and-configuring-the-document-security-server.md)
       + [準備安裝AEM Forms單一伺服器](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
       + [在JEE for JBoss上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
       + [在JEE for WebSphere上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+      + [在JEE for WebLogic上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安裝AEM Forms Workbench](using/install-workbench.md)
       + [安裝和配置設計器](using/installing-configuring-designer.md)
       + [準備安裝AEM Forms伺服器叢集](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
       + [在JBoss叢集的JEE上設定AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
       + [在WebSphere叢集的JEE上設定AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
+      + [在WebLogic叢集的JEE上設定AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
    + 設定 AEM Forms {#configure-aem-forms}
       + [AEM Forms伺服器的效能調整](using/performance-tuning-aem-forms.md)
       + [配置自適應表單快取](using/configure-adaptive-forms-cache.md)
@@ -94,6 +99,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
       + [從AEM Forms版本升級至JEE for JBoss上的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
       + [從AEM Forms版本升級至JEE上的AEM 6.5 Forms for JBoss統包](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
       + [從AEM Forms版本升級至JEE for WebSphere的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+      + [從AEM Forms版本升級至JEE for WebLogic上的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
 + 管理AEM Forms {#manage-administer-aem-forms}
    + [OSGi群組和權限上的AEM Forms](using/forms-groups-privileges-tasks.md)
    + [建立新資料夾以分類表單](using/creating-new-folders-categorize-forms.md)
@@ -313,7 +319,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [將自訂屬性新增至Correponsent Management資產](using/add-custom-properties-cm-assets.md)
    + [自訂建立對應UI](using/customize-create-correspondence-ui.md)
    + [自訂文字編輯器](using/customize-text-editor.md)
-   + [通信管理：疑難排解](using/cm-troubleshooting.md)
+   + [通信管理： 疑難排解](using/cm-troubleshooting.md)
    + [存取字母例項的API](using/cm-apis-to-access-letter-instances.md)
    + [整合建立對應UI與您的自訂入口網站](using/integrating-create-correspondence-ui-with-your-portal.md)
    + [對應管理中的自訂特殊字元](using/custom-special-characters.md)
@@ -535,11 +541,11 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
       + [Work Manager和調節](/help/forms/using/admin-help/manager-throttling.md)
       + [在維護模式中執行AEM表單](/help/forms/using/admin-help/running-aem-forms-maintenance-mode.md)
    + 維護AEM表單資料庫 {#maintain-aem-forms-database}
-      + [DB2資料庫：每週運行流程](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
+      + [DB2資料庫： 每週運行流程](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
       + [Oracle資料庫最大開啟游標閾值](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
-      + [IBM DB2資料庫：運行用於定期維護的命令](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
+      + [IBM DB2資料庫： 運行用於定期維護的命令](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
       + [清除流程資料](/help/forms/using/admin-help/purging-process-data.md)
-      + [Microsoft SQL Server資料庫：微調配置](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
+      + [Microsoft SQL Server資料庫： 微調配置](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
       + [將資料庫增長降至最低的提示](/help/forms/using/admin-help/tips-minimizing-database-growth.md)
    + 維護應用程式伺服器 {#manage-application-server}
       + [應用程式伺服器網站](/help/forms/using/admin-help/application-server-websites.md)
@@ -571,7 +577,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [流程報告疑難排解](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開發人員參考 {#developer-reference}
    + [開發人員基本資訊](https://docs.adobe.com/content/help/en/experience-manager-65/developing/home.html)
-   + [HTML 範本語言](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+   + [HTML 範本語言](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
    + [AEM增效模組，以除錯最適化表單](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
    + [AEM Forms on JEE Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
