@@ -10,21 +10,28 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '833'
+ht-degree: 0%
 
 ---
 
 
 # 設定Xcode專案並建立iOS應用程式{#set-up-the-xcode-project-and-build-the-ios-app}
 
-AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自訂AEM Forms應用程式的所有元件。 原始碼存檔是包 `adobe-lc-mobileworkspace-src-<version>.zip` 共用上包的 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 一部分。
+AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自訂AEM Forms應用程式的所有元件。 原始碼存檔是 `adobe-lc-mobileworkspace-src-<version>.zip` 軟體分發軟體包 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 的一部分。
 
 若要取得AEM Forms應用程式來源，請執行下列步驟：
 
-1. 導覽至套件shareURL: `https://<server>:<port>/crx/packageshare`。
-
-1. 下載來源套件。 當您下載套件時，它會新增至您的AEM Forms套件管理員。
-1. 下載後，導覽至：和 `https://<server>:<port>/crx/packmgr/index.jsp`安裝 `adobe-aemfd-forms-app-src-pkg-<version>.zip`。
+1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+1. 在「篩 **[!UICONTROL 選器]** 」區段：
+   1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+   2. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+1. 點選適用於您作業系統的套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL Download]**」。
+1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
 1. 若要下載原始碼封存檔，請在您的瀏 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 覽器中開啟。
 來源套件會下載在您的裝置上。
@@ -144,7 +151,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
    已選取已布建的iPad Air 2裝置。
 
 1. 選擇「 **產品** 」>「清 **除」**。
-1. 選擇「 **產品** 」>「 **構建」**。
+1. 選擇 **產品** > **構建**。
 1. 選擇「 **產品** >存 **檔」**。
 1. 在「組織工具——封存」中，選取專案的最新封存，然後按一下「分 **發」**。
 1. 選 **擇「儲存為企業用」或「臨機部署** 」做為散發方法，然後按一下「下 **一步」**。
@@ -152,7 +159,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 1. 提供應用程式名稱，並選取「儲 **存為企業散發」**。
 1. 提供應 **用程式的** 「應用程式URL」。 例如，若要在CRX伺服器上主控應用程式，請提供URL `https://[LC_host]:'port'/lc/content/distribution/mobileworkspace/APP_NAME.ipa`。
 1. 在「標 **題** 」欄位中，指定AEM Forms。
-1. 按一 **下「儲存** 」並關閉Xcode。
+1. Click **Save** and close Xcode.
 
    安裝程式檔 `AEM Forms.ipa`案和屬性清單檔案 `AEM Forms-info.plist`會建立在指定的位置。
 
