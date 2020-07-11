@@ -7,9 +7,9 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '4353'
+source-wordcount: '4295'
 ht-degree: 0%
 
 ---
@@ -391,15 +391,16 @@ PDF產生器服務提供WebKit、WebCapture和PhantomJS路由或方法，將HTML
 
 AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含AEM Forms Document Services和其他AEM Forms功能。 執行以下步驟以安裝軟體包：
 
-1. 以管理員身分登入 [AEM伺服器](http://localhost:4502) ，並開啟套 [件共用](http://localhost:4502/crx/packageshare)。 您需要Adobe ID才能登入套件共用。
+1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+1. 在「篩 **[!UICONTROL 選器]** 」區段：
+   1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+   2. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+1. 點選適用於您作業系統的套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL Download]**」。
+1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
-1. 在 [AEM套件共用中](http://localhost:4502/crx/packageshare/login.html)，搜尋 **[!UICONTROL AEM 6.4 Forms附加元件套件]**，按一下適用於您作業系統的套件，然後按一下「 **[!UICONTROL 下載」]**。 閱讀並接受授權合約，然後按一下「 **[!UICONTROL 確定]**」。 下載開始。 下載後，「已下 **[!UICONTROL 載]** 」一詞會出現在套件旁。
-
-   您也可以使用版本號碼來搜尋附加元件套件。 如需最新套件的版本號碼，請參閱 [AEM Forms發行文章](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
-
-1. 下載完成後，按一下「已 **[!UICONTROL 下載]**」。 您被重定向到包管理器。 在包管理器中，搜索下載的包，然後按一下安 **[!UICONTROL 裝]**。
-
-   如果您透過 [AEM Forms發行文章中所列的直接連結手動下載套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，請登入套件管理員，按一下「 **[!UICONTROL Upload Package]**」（上傳套件），選取已下載的套件，然後按一下「upload」（上傳）。 上載包後，按一下包名稱，然後按一下安 **[!UICONTROL 裝]**。
+   您也可以透過 [AEM Forms發行文章中所列的直接連結下載套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
 
 1. 安裝套件後，系統會提示您重新啟動AEM例項。 **不要立即停止伺服器。** 在停止AEM Forms伺服器之前，請等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在 `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log檔案中，且記錄檔穩定。
 
@@ -485,7 +486,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
 
 在Microsoft Windows上，PDF Generator服務使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 請執行下列步驟，為PDF Generator服務設定Adobe Acrobat:
 
-1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選擇 **[!UICONTROL 自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
+1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選 **[!UICONTROL 擇自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
 1. 連按兩下系統上的PDF檔案。 當Acrobat首次啟動時，會出現登入、歡迎畫面和EULA的對話方塊。 針對所有已設定為使用PDF產生器的使用者，關閉這些對話方塊。
 1. 執行PDF Generator公用程式批次檔案，為PDF Generator服務設定Acrobat:
 
