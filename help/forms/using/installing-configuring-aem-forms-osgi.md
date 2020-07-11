@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1817'
 ht-degree: 1%
 
 ---
@@ -98,6 +98,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需�
 >
 >* 如果伺服器上已安裝OpenSSL，請將它升級至最新版本。
 >* 分別建立指向libcurl、libcrypto.so和libssl.so庫最新版本的libcurl.so、libcrypto.so和libssl.so符號連結。
+
 >
 
 
@@ -110,15 +111,16 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需�
 
 AEM Forms附加元件套件是部署在AEM上的應用程式。 套件包含AEM Forms資料擷取和其他功能。 執行下列步驟以安裝附加元件套件：
 
-1. 以管理員身分登入 [AEM伺服器](https://localhost:4502) ，並開啟套 [件共用](https://localhost:4502/crx/packageshare)。 您需要Adobe ID才能登入套件共用。
-1. 在 [AEM套件共用中](https://localhost:4502/crx/packageshare/login.html)，搜尋 **AEM 6.5 Forms附加元件套件**，按一下適用於您作業系統的套件，然後按一下「 **下載」**。 閱讀並接受授權合約，然後按一下「 **確定**」。 下載開始。 下載後，「已下 **載** 」一詞會出現在套件旁。
+1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+1. 在「篩 **[!UICONTROL 選器]** 」區段：
+   1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+   2. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+1. 點選適用於您作業系統的套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL Download]**」。
+1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
-   您也可以使用版本號碼來搜尋附加元件套件。 如需最新套件的版本號碼，請參閱 [AEM Forms發行文章](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
-
-1. 下載完成後，按一下「已 **下載**」。 您被重定向到包管理器。 在包管理器中，搜索下載的包，然後按一下安 **裝**。
-
-   如果您透過 [AEM Forms發行文章中所列的直接連結手動下載套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，請登入套件管理員，按一下「 **Upload Package**」（上傳套件），選取已下載的套件，然後按一下「upload」（上傳）。 上載包後，按一下包名稱，然後按一下安 **裝。**
-
+   您也可以透過 [AEM Forms發行文章中所列的直接連結下載套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
 1. 安裝套件後，系統會提示您重新啟動AEM例項。 **不要立即重新啟動伺服器。** 在停止AEM Forms伺服器之前，請等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在檔案中，而 `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` 且記錄檔是穩定的。
 1. 對所有「作者」和「發佈」例項重複步驟1-4。
 
