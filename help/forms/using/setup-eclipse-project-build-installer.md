@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f5d6d9bd-4f36-4a4f-8008-15fb853a9219
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '749'
+ht-degree: 0%
 
 ---
 
@@ -24,15 +27,20 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ## 下載AEM Forms App原始程式碼套件 {#download-android-zip}
 
-AEM Forms App Source Code Package會參照封存 `adobe-lc-mobileworkspace-src-<version>.zip` 檔。 此封存包含建立自訂AEM Forms應用程式所需的原始碼。 封裝共用上可 `adobe-aemfd-forms-app-src-pkg-<version>.zip`用的套件包含封裝。
+AEM Forms App Source Code Package會參照封存 `adobe-lc-mobileworkspace-src-<version>.zip` 檔。 此封存包含建立自訂AEM Forms應用程式所需的原始碼。 此封存檔包含在「軟 `adobe-aemfd-forms-app-src-pkg-<version>.zip`體散發」上的套件中。
 
 請執行下列步驟以下載檔 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 案：
 
-1. 以管理員身分登入 [AEM伺服器的作者例項](http://localhost:4502/) ，並開啟套 [件共用](http://localhost:4502/crx/packageshare)。 您需要Adobe ID才能登入套件共用。
-1. 在 [AEM套件共用中](http://localhost:4502/crx/packageshare/login.html)，搜尋 `adobe-aemfd-forms-app-src-pkg-<version>.zip`、按一下適用於您作業系統的套件，然後按一下「 **下載」**。 閱讀並接受授權合約，然後按一下「 **確定**」。 下載開始。 下載後，「已下 **載** 」一詞會出現在套件旁。
-1. 下載完成後，按一下「已 **下載**」。 您被重定向到包管理器。 在包管理器中，搜索下載的包，然後按一下安 **裝**。
+1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+1. 在「篩 **[!UICONTROL 選器]** 」區段：
+   1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+   2. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+1. 點選適用於您作業系統的套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL Download]**」。
+1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 1. 若要下載原始碼封存檔，請在您的瀏覽器中開啟 **https://&lt;server>:&lt;port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-&lt;version>.zip** 。 Android應用程式。zip檔案會下載在您的裝置上。
-1. 將。zip檔案的內容解壓縮至您本機檔案系統上的檔案夾。 例如， *C:\&amp;lt;Folder Structure>\adobe-lc-mobileworkspace-src-2.4.20*
+1. 將。zip檔案的內容解壓縮至您本機檔案系統上的檔案夾。 例如， *C:\&lt;Folder Structure>\adobe-lc-mobileworkspace-src-2.4.20*
 
 下圖顯示資料夾的 `adobe-lc-mobileworkspace-src-<version>.zip\android`結構。
 
@@ -73,6 +81,7 @@ AEM Forms App Source Code Package會參照封存 `adobe-lc-mobileworkspace-src-<
    * [品牌自訂](/help/forms/using/branding-customization.md)
    * [主題自訂](/help/forms/using/theme-customization.md)
    * [手勢自訂](/help/forms/using/gesture-customization.md)
+
    將適當的自訂項目套用至您的應用程式後，您就可以產生。apk檔案以進行散發。
 
 ### 使用Android Studio產生。apk檔案 {#generate-apk-android-studio}
