@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 discoiquuid: fabc981e-0c9e-4157-b0a1-0c13717fb6cd
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '620'
+ht-degree: 0%
 
 ---
 
@@ -18,20 +21,18 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 本文適用於建立AEM Forms App 6.3.1.1及更新版本。 如需從AEM Forms App 6.3原始碼的原始碼建立應用程式，請參閱「 [Set up the Eclipse project and build the Android™ app](/help/forms/using/setup-eclipse-project-build-installer.md)」。
 
-AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自訂AEM Forms應用程式的所有元件。 原始碼存檔是包 `adobe-lc-mobileworkspace-src-<version>.zip` 共用上包的 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 一部分。
+AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自訂AEM Forms應用程式的所有元件。 原始碼存檔是 `adobe-lc-mobileworkspace-src-<version>.zip` 軟體分發軟體包 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 的一部分。
 
 若要取得AEM Forms應用程式來源，請執行下列步驟：
 
-1. 導覽至封裝共用
-
-   URL: `https://<server>:<port>/crx/packageshare`.
-
-1. 下載來源套件。 當您下載套件時，它會新增至您的AEM Forms套件管理員。
-1. 下載後，導覽至：和 `https://<server>:<port>/crx/packmgr/index.jsp`安裝 `adobe-aemfd-forms-app-src-pkg-<version>.zip`。
-
-1. 若要下載原始碼封存檔，請在您的 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 瀏覽器中開啟。
-
-   來源套件會下載在您的裝置上。
+1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+1. 在「篩 **[!UICONTROL 選器]** 」區段：
+   1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+   2. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+1. 點選適用於您作業系統的套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL Download]**」。
+1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
 下圖顯示提取的內容 `adobe-lc-mobileworkspace-src-<version>.zip`。
 
@@ -69,9 +70,9 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
 1. 啟動Android™ Studio。
 
-   **針對MAC使用者**:更新資 `local.properties` 料夾中的檔案， `[User_Home]/Projects/[your-project]/android` 並將變數指 `sdk.dir` 向案頭 `SDK` 上的位置。
+   **針對MAC使用者**: 更新資 `local.properties` 料夾中的檔案， `[User_Home]/Projects/[your-project]/android` 並將變數指 `sdk.dir` 向案頭 `SDK` 上的位置。
 
-   **對於Windows®使用者**:更新資 `local.properties` 料夾中的檔案， `%HOMEPATH%\Projects\[your-project]\android` 並將變數指 `sdk.dir` 向案頭 `SDK` 上的位置。
+   **對於Windows®使用者**: 更新資 `local.properties` 料夾中的檔案， `%HOMEPATH%\Projects\[your-project]\android` 並將變數指 `sdk.dir` 向案頭 `SDK` 上的位置。
 
 1. 按一 **[!UICONTROL 下「完成]** 」以建立專案。
 
@@ -82,7 +83,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 1. 在Android™ Studio中，選 **[!UICONTROL 取「匯入專案」（Eclipse ADT、Gradle等）]**。
 1. 在項目瀏覽器中，在「根目錄」文本框中選擇要構建的項目的 **根目錄** :
 
-   **對於Mac使用者：**[User_Home]/Projects/MobileWorkspace/src/android
+   **對於Mac使用者：** [User_Home]/Projects/MobileWorkspace/src/android
 
    **對於Windows®使用者：** %HOMEPATH%\Projects\MobileWorkspace\src\android
 
