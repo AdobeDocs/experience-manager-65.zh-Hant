@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 translation-type: tm+mt
-source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '2418'
+source-wordcount: '2470'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 AEM Forms應用程式可讓您根據伺服器，在行動裝置上同步最適化表單、行動表單和表單。 您可以定義以OSGi或JEE的 [Forms工作流程為中心的](/help/forms/using/aem-forms-workflow.md)[工作流程](/help/forms/using/finance-reference-site-walkthrough.md#approving-the-application)。 例如，您經營一家銀行，並使用AEM Forms來管理客戶應用程式和通訊。 您的客戶填寫表格並送出以進行驗證。 如果您在行動裝置上啟用表單，您的客戶可以在AEM Forms應用程式中填寫表單。 您也可以在行動裝置上啟用驗證表單，以管理驗證工作流程。 您的現場工作人員可以攜帶行動裝置給客戶、驗證詳細資訊並提交表單。 AEM Forms應用程式會與AEM Forms伺服器同步，並擷取針對行動裝置啟用的表單。 如果應用程式已離線，它會將資料儲存在本機。
 
-AEM Forms應用程式的原始碼可透過套件共用方式提供給客戶。 包共用中的原始碼包可用於： `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
+AEM Forms應用程式的原始碼可供客戶透過「軟體散發」取得。 「軟體分發」中的原始碼包可以從以下位置獲得： `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
 
 iOS、Android和Windows裝置支援AEM Forms應用程式。 您可以從Google Play、App Store的iOS和Windows市集的Windows，安裝適用於Android的AEM Forms應用程式。
 
@@ -179,20 +179,18 @@ AEM Forms應用程式可輕鬆自訂，以符合組織特定需求。 應用程�
 
 ### 建立和散發 {#build-and-distribute}
 
-AEM Forms應用程式的原始碼可從adobe-lc-mobileworkspace-src.zip解壓縮，此軟體是AEM Forms應用程式來源套件中封裝共用的一部分。
+AEM Forms應用程式的原始碼可從「軟體散發」上 `adobe-lc-mobileworkspace-src.zip` AEM Forms應用程式來源套件的一部分中擷取。
 
 若要取得AEM Forms應用程式來源，請執行下列步驟：
 
-1. 導覽至封裝共用
-
-   URL: `https://<server>:<port>/crx/packageshare`.
-
-1. 下載來源套件。 當您下載套件時，它會新增至您的AEM Forms套件管理員。
-1. 下載後，導覽至： `https://<server>:<port>/crx/packmgr/index.jsp`，並安裝 `adobe-aemfd-forms-app-src-pkg-<version>.zip`。
-
-1. 若要下載套件，請在您的 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 瀏覽器中開啟。
-
-   來源套件會下載在您的裝置上。
+1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+1. 在「篩 **[!UICONTROL 選器]** 」區段：
+   1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+   2. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+1. 點選適用於您作業系統的套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL Download]**」。
+1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
 **針對iOS**:
 
