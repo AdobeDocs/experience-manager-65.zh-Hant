@@ -1,15 +1,18 @@
 ---
 title: 參考主題
 seo-title: 參考主題
-description: AEM Forms提供可調整的表單主題，您可從套件共用中取得這些主題，並用來設定表單的樣式。
-seo-description: AEM Forms提供可調整的表單主題，您可從套件共用中取得這些主題，並用來設定表單的樣式。
+description: AEM Forms提供可從「軟體散發」取得的最適化表單主題，並用來設定表單的樣式。
+seo-description: AEM Forms提供可從「軟體散發」取得的最適化表單主題，並用來設定表單的樣式。
 uuid: 3c6bd309-aa5a-4953-91ed-25ed5ba5671a
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a69d3787-8149-4bca-835d-aeecfb11702b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
