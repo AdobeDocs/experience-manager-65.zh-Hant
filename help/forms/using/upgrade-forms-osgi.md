@@ -10,7 +10,10 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '955'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 請執行下列動作，以從AEM 6.3 Forms或AEM 6.4 Forms升級至AEM 6.5 Forms:
 
-1. 將現有的AEM例項升級至AEM 6.5。步驟如下：
+1. 將現有的AEM例項升級至AEM 6.5。 步驟如下：
 
    1. 安裝AEM 6.3 Forms或AEM 6.4 Forms的最新Service Pack和修補程式。 如需詳細資訊，請參 [閱「AEM維護中樞」](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
    1. 準備升級的源實例。 如需詳細步驟，請 [參閱「升級至AEM 6.5」](/help/sites-deploying/upgrade.md)。
@@ -32,7 +35,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       `chmod -R 755 ../crx-quickstart`
 
-   1. 將您的AEM實例升級至AEM 6.3。如需逐步指示，請參 [閱升級至AEM 6.5](/help/sites-deploying/upgrade.md)。
+   1. 將您的AEM實例升級至AEM 6.3。 如需逐步指示，請參 [閱升級至AEM 6.5](/help/sites-deploying/upgrade.md)。
 
       在繼續後續步驟之前，請等待&lt;crx-repository>/error.log檔案中停止顯示ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息。
 
@@ -42,26 +45,28 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 1. 安裝AEM Forms附加元件套件。 步驟如下：
 
-   1. 以管理員身分登入AEM伺服器，並開啟套件共用。 套件共用的預設URL為 `https://'[server]:[port]'/crx/packageshare`。
-   1. 在套件共用中，搜尋 **AEM 6.5 Forms附加元件套件**，按一下適用於您作業系統的套件，然後按一下「下 **載」**。 閱讀並接受授權合約，然後按一下「 **確定**」。 下載開始。 下載後，「已下 **載** 」一詞會出現在套件旁。
+   1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+   1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+   1. 在「篩 **[!UICONTROL 選器]** 」區段：
+      1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+      1. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+   1. 點選適用於您作業系統的套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL Download]**」。
+   1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+   1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
-      或者，您也可以使用 [AEM Forms版本中列出的超連結](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，手動下載套件。
-
-   1. 下載完成後，按一下「已下 **載」**。 您被重定向到包管理器。 在包管理器中，搜索下載的包，然後按一下安 **裝**。
-
-      如果您使用 [AEM Forms版本中所列的直接連結手動下載套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)，然後開啟AEM Package Manager，按一下「 **Upload Package**」（上傳套件），選取已下載的套件，然後按一下「上傳」。 上載包後，按一下包名稱，然後按一下安 **裝。**
+      您也可以使用 [AEM Forms發行文章中所列的直接連結來下載套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
 
       >[!NOTE]
       >
       >安裝套件後，系統會提示您重新啟動AEM例項。 **不要立即停止伺服器。** 在停止AEM Forms伺服器之前，請等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在&lt;crx-repository>/error.log檔案中，且記錄檔是穩定的。 另請注意，一些軟體包可以保持安裝狀態。 您可以安全地忽略這些包的狀態。
 
-   1. 重新啟動AEM例項。
+1. 重新啟動AEM例項。
 
 1. 執行安裝後活動。
 
    * **運行遷移實用程式**
 
-      移轉公用程式可讓舊版的最適化表單和通訊管理資產與AEM 6.5表單相容。 您可以從AEM套件共用下載公用程式。 有關配置和使用遷移實用程式的逐步資訊，請參見遷移實 [用程式](../../forms/using/migration-utility.md)。
+      移轉公用程式可讓舊版的最適化表單和通訊管理資產與AEM 6.5表單相容。 您可從「AEM Software Distribution」（AEM軟體散發）下載公用程式。 有關配置和使用遷移實用程式的逐步資訊，請參見遷移實 [用程式](../../forms/using/migration-utility.md)。
 
       如果您使用 [Sample將草稿和提交元件與資料庫整合併從舊版升級](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) ，則在執行升級後運行以下SQL查詢：
 
@@ -83,7 +88,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    * **支援jQuery**
 
-      在AEM 6.5 Forms中，jQuery版本會更新為3.2.1，而jQuery UI版本則會更新為1.12.1。AEM Form在無衝突模式下使 **用JQuery** 。 因此，如果您使用任何其他jQuery版本，則在執行升級時不會顯示任何問題。 不過，當您升級至AEM 6.5 Forms時：
+      在AEM 6.5 Forms中，jQuery版本會更新為3.2.1，而jQuery UI版本則會更新為1.12.1。 AEM Form在無衝突模式下使 **用JQuery** 。 因此，如果您使用任何其他jQuery版本，則在執行升級時不會顯示任何問題。 不過，當您升級至AEM 6.5 Forms時：
 
       * 請確定您的自訂元件（如果有）與支援的jQuery版本相容。
       * 從自訂元件移除不支援的API。 如需 [移除的API清單](https://jquery.com/upgrade-guide/3.0/) ，請參閱升級指南。 例如，會移除對load()、.unload()和。error()API的支援。 使用。on()方法取代前述的API。 例如，將$(&quot;img&quot;)。load(fn)變更為$(&quot;img&quot;)。on(&quot;load&quot;, fn)。
@@ -101,6 +106,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
       * `https://'[server]:[port]'/crx/packmgr`
       * `https://'[server]:[port]'/crx/de`
       * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
+
    >[!NOTE]
    在AEM 6.4 Forms中，crx-repository的結構已變更。 如果從6.3 Forms升級至AEM 6.5 Forms，請使用您重新建立的變更路徑進行自訂。 如需變更路徑的完整清單，請參閱「AEM中的 [Forms Repository Restructing」（在AEM中重組表格資料庫）](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)。
 
