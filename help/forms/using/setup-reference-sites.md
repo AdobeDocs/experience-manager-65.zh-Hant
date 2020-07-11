@@ -10,7 +10,10 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '2864'
+ht-degree: 0%
 
 ---
 
@@ -68,12 +71,12 @@ We.Finance參考網站會繪製實際使用案例，以便直接從首次接觸�
   </tr>
   <tr>
    <td><a href="#ssl">設定SSL</a></td>
-   <td>作者與發佈<br /> </td>
+   <td>Author and Publish<br /> </td>
    <td>啟用HTTP over SSL，以便與Adobe Sign進行安全通訊。</td>
   </tr>
   <tr>
    <td><p><a href="#externalizer">設定Day CQ Link Externalizer設定</a></p> </td>
-   <td>作者與發佈<br /> </td>
+   <td>Author and Publish<br /> </td>
    <td><p>參考網站使用案例會針對不同的交易傳送電子郵件。 此設定是透過電子郵件傳送電子報的必要設定。 它可確保URL和影像指向發佈例項。 </p> </td>
   </tr>
   <tr>
@@ -108,12 +111,12 @@ We.Finance參考網站會繪製實際使用案例，以便直接從首次接觸�
   </tr>
   <tr>
    <td><a href="#scheduler">設定Adobe Sign排程器</a></td>
-   <td>作者與發佈<br /> </td>
+   <td>Author and Publish<br /> </td>
    <td>更改調度程式的配置，每兩分鐘檢查一次狀態。</td>
   </tr>
   <tr>
    <td><a href="#sign-service">設定參考網站Adobe Sign Cloud服務</a></td>
-   <td>作者與發佈<br /> </td>
+   <td>Author and Publish<br /> </td>
    <td>隨參考站點包一起提供的配置，需要使用有效的憑據重新配置。</td>
   </tr>
   <tr>
@@ -123,7 +126,7 @@ We.Finance參考網站會繪製實際使用案例，以便直接從首次接觸�
   </tr>
   <tr>
    <td><a href="#fdm">修改表單資料模型的Rest服務Swagger檔案</a></td>
-   <td>作者與發佈<br /> </td>
+   <td>Author and Publish<br /> </td>
    <td>修改您環境的服務。</td>
   </tr>
  </tbody>
@@ -147,7 +150,7 @@ We.Finance參考網站會繪製實際使用案例，以便直接從首次接觸�
 
 ## 設定Day CQ Link Externalizer設定 {#externalizer}
 
-在AEM中， **Externalizer** 是OSGI服務，可讓您以程式設計方式轉換資源路徑(例如/path/to/my/page)，透過預先設定的DNS來預先固定路徑，以匯入外部和絕對URL(例如https://www.mycompany.com/path/to/my/page)。 請參 [閱外部化URL](/help/sites-developing/externalizer.md)。
+在AEM中， **Externalizer** 是OSGI服務，可讓您以程式設計方式轉換資源路徑(例如 /path/to/my/page)，透過預先設定的DNS來預先固定路徑，以匯入外部和絕對URL(例如https://www.mycompany.com/path/to/my/page)。 請參 [閱外部化URL](/help/sites-developing/externalizer.md)。
 
 >[!CAUTION]
 >
@@ -211,12 +214,12 @@ We.Finance參考網站的電子郵件範本包含電子郵件中的個人化連�
 
 ## 部署參考站點包 {#refsite}
 
-使用軟體包共用安裝參考站點軟體包。
+使用軟體分發安裝參考站 [點軟體包](https://docs.adobe.com/content/help/en/experience-cloud/software-distribution/home.html)。
 
 * [AEM Forms FSI參考網站套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-FSI-REF-SITE)
 * [AEM Forms Gov參考網站套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-GOV-REF-SITE)
 
-若要進一步瞭解如何使用套件和套件共用，請參 [閱How to Work With Packages](/help/sites-administering/package-manager.md)。
+若要進一步瞭解如何使用套件，請參 [閱如何使用套件](/help/sites-administering/package-manager.md)。
 
 在您安裝套件並啟動作者和發佈例項後，請造訪瀏覽器中的下列URL:
 
@@ -263,7 +266,7 @@ We.Finance參考網站的電子郵件範本包含電子郵件中的個人化連�
 1. 在AEM作者例項上，前往「工 **具** > **Cloud Services** > **Data Sources** > **** global Allignam」。 點選「 **重新設定動態整合」圖示** ，然後點選「屬性」。
 1. 前往Microsoft Azure Active Directory帳戶。 在註冊應用程式的「回覆URL」設定中 **新增複製的雲端服務設定URL** 。 儲存設定。
 1. 在「驗證設定」標籤中， **為您的Microsoft Dynamics例項指**&#x200B;定「服務根 **」、「用戶端Id**」、「用戶 **端密碼**」 **** 和「資源URL」。 按一 **下重新導向至** Microsoft Dynamics登入頁面的「連線至OAuth」。
-1. 提供您的登入認證。 登入後，會將您重新導向至AEM Forms雲端服務設定頁面。 按一 **下儲存並關閉**。 雲端服務設定已儲存。
+1. 提供您的登入認證。 登入後，會將您重新導向至AEM Forms雲端服務設定頁面。 Click **Save &amp; Close**. 雲端服務設定已儲存。
 1. 前往「 **表單** >資 **料整合** > **We.Finance**」。 選擇「自動保險（動態）」，然後按一下「編輯」。 Microsoft Dynamics實體會列在「資料來源」標籤下。 請等待，直到從Microsoft Dynamics擷取所有實體並列在資料來源標籤下。
 1. 選擇AutoInsuranceRenewal **實體** ，然後單 **擊測試模型對象**。 在輸入請求區段中，將客戶ID的值指定為&quot;900001&quot;，然後按一下「測 **試**」。 「輸出」部分顯示從Microsoft Dynamics獲取的客戶ID 900001的記錄。
 1. 在輸入請求區段中，將客戶ID的值指定為&quot;900001&quot;，然後按一下「測 **試**」。 「輸出」部分顯示從Microsoft Dynamics獲取的客戶ID 900001的記錄。
@@ -346,6 +349,7 @@ AEM Forms與Adobe Analytics的整合可讓您監控和分析客戶與表單和�
 
    * 開啟We.Finance資料夾，並選取您要查看報表的表單。
    * 按一下「動作工具列」中的「啟用分析」。 啟用表單分析後，按一下「分析報表」。 您可以看到產生的空白報表。 產生空白報表後，您必須提供refsite套件隨附的種子資料，才能產生分析報表以進行示範。
+
    參考網站提供分析報告，提供信用卡、住房抵押和子系支援使用案例的種子資料。
 
 ### 設定目標 {#configure-target}
