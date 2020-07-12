@@ -3,9 +3,9 @@ title: Adobe Experience Manager 6.5舊版Service Pack發行說明
 description: Adobe Experience Manager 6.5 Service Pack 3及更舊版本的發行說明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: f75e5ad12aed95e950dbf7a00e0f444605f800dd
 workflow-type: tm+mt
-source-wordcount: '8093'
+source-wordcount: '8102'
 ht-degree: 0%
 
 ---
@@ -291,7 +291,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 **修正**
 
-* 某些PDF檔案的中繼資料不會在標題修改時更新並儲存至PDF(NPR-31629)。
+* 某些PDF檔案的中繼資料在標題修改時不會更新並儲存至PDF(NPR-31629)。
 
 * 資產共用不適用於檔案名稱中加上(`+`)字元的資產(NPR-31547)。
 
@@ -505,6 +505,8 @@ Remove one mention of this fix.
 **表單——檔案服務**
 
 * 在。NET專案中使用MTOM的SOAP web service會顯示AssemblerServiceClient叫用和HtmlToPDF2方法的例外(NPR-4281771)。
+
+* Axis jar版本1.4和1.4.1包含安全漏洞(NPR-31015)。
 
 **Foundation JEE**
 
