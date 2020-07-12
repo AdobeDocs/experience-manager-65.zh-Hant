@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 1%
@@ -102,7 +102,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
    您也可以透過 [AEM Forms發行文章中所列的直接連結下載套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
 
 1. 安裝套件後，系統會提示您重新啟動AEM例項。 **不要立即重新啟動伺服器。** 在停止AEM Forms伺服器之前，請等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log檔案中，且記錄檔是穩定的。
-1. 對所有「作者」和「發佈」例項重複步驟1-4。
+1. 對所有「作者」和「發佈」例項重複步驟1-7。
 
 ## 安裝後配置 {#post-installation-configurations}
 
