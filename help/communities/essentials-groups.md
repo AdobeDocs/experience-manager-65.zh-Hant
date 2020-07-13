@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4f85cd3c-5158-4f23-abe2-7e375fd0c8d4
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 1%
 
 ---
 
 
-# Community Group Essentials {#community-group-essentials}
+# Community Group Essentials  {#community-group-essentials}
 
 社群群組功能是讓來自發佈和作者環境的授權使用者在社群網站中動態建立子社群的能力。
 
@@ -95,10 +98,11 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 自Communities [FP1起](deploy-communities.md#latestfeaturepack)，群組功能可能會包含在群組範本中，因此允許巢狀群組（子社群）。
 
-當社群網站或群組範本包含「群組」功能時，
+當社群網站或群組範本包含「群組」功能時，可以：
 
-* 在作者環境中建立子社群
-* 在發佈環境中建立群組（若設定為允許）
+* 在作者環境中建立子社群。
+
+* 在發佈環境中建立群組（設定為允許）。
 
 在作者環境中建立群組時，必須先發佈社群網站，然後發佈群組。 發佈社群站點將發佈組的頁面，而不建立ACL所設定的子社區成員組。 因此，在明確發佈組之前，可以看到受限（秘密）組。
 
