@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 投票元件( [tally子類](tally.md) )是有用的工具，可讓成員只要選取向上或向下箭頭來指出其意見，即可對特定內容片段進行評分。
 
-允許在同一頁放置多個投票元件實例；每個實例都必須配置一個唯一 `tally name` 屬性。
+允許在同一頁放置多個投票元件實例； 每個實例都必須配置一個唯一 `tally name` 屬性。
 
 不支援匿名張貼投票。 網站訪客必須註冊並登入才能參與投票一次，登入的訪客（會員）可隨時變更投票。
 
@@ -37,7 +40,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
-   <td> cq.social.hbs.porting</td>
+   <td> cq.social.hbs.voting</td>
   </tr>
   <tr>
    <td> <strong>模板</strong></td>
@@ -49,7 +52,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td><p>請參閱，使 <a href="voting.md">用投票</a></p> </td>
+   <td><p>請參 <a href="voting.md">閱使用投票</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -75,8 +78,8 @@ UGC應使用其中一種標準的協調方法來協調。
 
 請參閱：
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法
+* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
