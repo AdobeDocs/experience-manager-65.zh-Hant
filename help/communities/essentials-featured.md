@@ -10,16 +10,20 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 5%
 
 ---
 
 
-# 主要內容基本功能 {#featured-content-essentials}
+# 主要內容基本功能  {#featured-content-essentials}
 
 本頁提供使用特色內容的基本資訊。
 
 與將貼文釘在論壇頂端不同，此功能可讓社群網站內的任何位置反白顯示內容。
+
 
 ## 用戶端基本功能 {#essentials-for-client-side}
 
