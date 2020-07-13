@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: d6ae8bffa2d9d59f5656b9344d8826128f12885c
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1653'
 ht-degree: 0%
 
 ---
@@ -39,22 +39,13 @@ AEM 6.5隨附預先安裝的Livefyre功能套件1.2.6。 此套件僅包含與AE
 
    ![livefyre-aem-uninstall-64](assets/livefyre-aem-uninstall-64.png)
 
-1. 返回AEM首頁，按一下「工具」，然後導覽至「部 **署>套件共用**」。
+1. 從「軟體散發」下載 [Livefyre套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。
 
-   此時會顯示功能套件和可下載的修補程式清單。
-
-1. 在關鍵字搜尋中，搜尋「Livefyre」，然後選取與AEM版本對應的Livefyre功能套件。
-
-   ![livefyre-aem3-6-4](assets/livefyre-aem3-6-4.png)
-
-1. 在功能套件資訊頁面上，按一下「 **下載**」，然後閱讀「套件授權合約」並按一下「 **接受」**。
-1. 返回「包管理器」，找到新下載的包，然後按一下「安 **裝」**。
+1. 從「套件管理器」，安裝下載的套件。 如需 [在AEM中使用軟體散發和套件的詳細資訊](/help/sites-administering/package-manager.md) ，請參閱如何使用套件
 
    ![livefyre-aem4-6-4](assets/livefyre-aem4-6-4.png)
 
    您的Livefyre-AEM套件現已安裝。 您必須先設定AEM，才能開始使用整合功能。
-
-   有關包的詳細資訊，請參 [閱How to Work With Packages](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html)。
 
    如需功能套件的詳細資訊和版本注意事項，請參閱 [功能套件](https://helpx.adobe.com/experience-manager/6-3/release-notes/feature-packs-release-notes.html)。
 
