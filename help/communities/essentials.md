@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 17%
 
 ---
 
 
-# 元件、功能和功能基本工具 {#component-function-and-feature-essentials}
+# 元件、功能和功能基本工具  {#component-function-and-feature-essentials}
 
 AEM Communities功能要求網站訪客成為會員並登入社 [群網站](overview.md#communitiessites) ，才能張貼內容。 因此， [從中建立社群網站的社群網站范](sites.md)本 [](sites-console.md)，設計為包含登入功能以及使用者設定檔、傳訊、搜尋、協調和翻譯。
 
@@ -61,7 +64,7 @@ AEM Communities功能要求網站訪客成為會員並登入社 [群網站](over
 * [計分和徽章](configure-scoring.md)
 * [搜尋](search-implementation.md)
 * [社交圖](essentials-socialgraph.md)
-* [儲存資源提供商](srp-and-ugc.md)`(SRP)`
+* [儲存資源提供方](srp-and-ugc.md) `(SRP)`
 
 * [標記](tag.md)
 
