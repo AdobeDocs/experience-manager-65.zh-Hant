@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: e795a647b8728b224792f342200a700169a5e87b
+source-git-commit: b242163267b43507e1cb9c6d4c36bb65385afc62
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 1%
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 若要保護您的社群網站內容不受匿名使用者透過jcr內容和json存取，請遵循下列步驟：
 
-1. 在「AEM作者」例項上，請前往https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html。
+1. 在AEM作者例項上，請前往https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html。
 
    >[!NOTE]
    >
@@ -182,7 +182,7 @@ ht-degree: 1%
 * 所有啟用資源和學習途徑
 * 一種特定的啟用資源或學習途徑
 
-導覽至「社 **群」、「報[告」主控台](reports.md)**，並根據
+導覽至「社 **群」、「報[告」主控台](reports.md)**，並根據下列項目產生報告：
 
 * 指派至啟用資源和學習路徑
 * 在特定時段內張貼至社群網站
@@ -203,12 +203,11 @@ ht-degree: 1%
 
 只要進行一些活動，並與發佈時的「資源」互動，檢視作者的報表就值得一看。
 
-* 論作者
-* 使用管理權限登入
-* 從主功能表導覽至「社群> **[!UICONTROL 資源」]**
-* 選擇網 `Enablement Tutorial` 站
-* 選擇所 `Report` 有資源摘要的表徵圖
-* 選擇資源，然後為該資 `Report` 源上的報表選擇表徵圖
+* 在作者上，以管理權限登入。
+* 從主功能表導覽至「社 **[!UICONTROL 群]** >資 **[!UICONTROL 源」]**。
+* 選擇網 `Enablement Tutorial` 站。
+* 選擇所 `Report` 有資源摘要的表徵圖。
+* 選擇資源，然後為該 `Report` 資源上的報表選擇表徵圖。
 
 請注意，顯示Adobe Analytics的資料可能還為時太早，Adobe Analytics可能需要1到12小時才會顯示。 不過，基本的SCORM報表已可供使用。
 
@@ -236,10 +235,9 @@ ht-degree: 1%
 
 對於分配報告：
 
-* 論作者
-* 使用管理權限登入
-* 導覽至「 **[!UICONTROL 社群]** >報 **[!UICONTROL 表]** >分 **[!UICONTROL 配報表」]**
-* 從下 **[!UICONTROL 拉式功能表]** (選取 `Enablement Tutorial`)中選取網站
+* 在作者上，以管理權限登入。
+* 導覽至「 **[!UICONTROL 社群]** >報 **[!UICONTROL 表]** >分 **[!UICONTROL 配報表」]**。
+* 從下 **[!UICONTROL 拉式功能表]** (選取 `Enablement Tutorial`)中選取「網站」。
 
 * 選擇 **[!UICONTROL 群組]** (選擇 `Community Ski Class`)
 
@@ -251,15 +249,15 @@ ht-degree: 1%
 
 若是檢視報表：
 
-* 在作者上，以管理權限登入
-* 導覽至「 **[!UICONTROL 社群]** >報 **[!UICONTROL 表]** >檢視 **[!UICONTROL 報表」]**
-* 從下 **拉式功能表&#x200B;**(選取`Enablement Tutorial`)中選取網站
+* 在作者上，以管理權限登入。
+* 導覽至「 **[!UICONTROL 社群]** >報 **[!UICONTROL 表]** >檢 **[!UICONTROL 視報表]**」。
+* 從下 **拉式功能表&#x200B;**(選取`Enablement Tutorial`)中選取「網站」。
 
-* 選擇 **[!UICONTROL 內容類型]** (選擇 `all`)
+* 選擇 **[!UICONTROL 內容類型]** (選擇 `all`)。
 
-* 選擇日 **[!UICONTROL 期範圍]** (選擇 `Last 7 days`)
+* 選擇日 **[!UICONTROL 期範圍]** (選 `Last 7 days`擇)。
 
-* 選擇生 **[!UICONTROL 成]**
+* 選擇 **[!UICONTROL 生成]**。
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
