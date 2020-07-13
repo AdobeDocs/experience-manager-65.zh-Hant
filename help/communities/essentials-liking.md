@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 按贊元件( [tally子類](tally.md) )是有用的工具，可讓成員只要選取心臟圖示，就能對特定內容表達正面意見。
 
-允許在同一頁放置多個按贊元件例項；每個實例都必須配置一個唯一 `tally name` 屬性。
+允許在同一頁放置多個按贊元件例項； 每個實例都必須配置一個唯一 `tally name` 屬性。
 
 不支援匿名張貼類似內容。 網站訪客必須註冊並登入才能參與按贊。 登入的訪客（會員）隨時可以按贊或關閉。
 
@@ -38,7 +41,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
-   <td> cq.social.hbs.like</td>
+   <td> cq.social.hbs.liking</td>
   </tr>
   <tr>
    <td> <strong>模板</strong></td>
@@ -76,8 +79,8 @@ UGC應使用其中一種標準的協調方法來協調。
 
 請參閱：
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法
+* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
