@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 4%
 
 ---
 
 
-# OSGi Events for Communities Components {#osgi-events-for-communities-components}
+# OSGi Events for Communities Components  {#osgi-events-for-communities-components}
 
 ## 概覽 {#overview}
 
@@ -33,7 +36,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 |---|---|
 | 貼文 | 成員建立日曆事件 |
 | 新增 | 日曆事件上的成員注釋 |
-| 更新 | 會編輯成員的日曆事件或注釋 |
+| 更新 | 會員的日曆事件或留言已編輯 |
 | 刪除 | 會員的日曆事件或留言已刪除 |
 
 [Comments Component](essentials-comments.md)SocialEvent `topic`= com/adobe/cq/social/comment
@@ -41,9 +44,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 | **動詞** | **說明** |
 |---|---|
 | 貼文 | 成員建立注釋 |
-| 新增 | 成員回覆評論 |
-| 更新 | 已編輯成員的注釋 |
-| 刪除 | 會員的注釋已刪除 |
+| 新增 | 會員對評論的回覆 |
+| 更新 | 會員的注釋已編輯 |
+| 刪除 | 會員的評論已刪除 |
 
 [檔案庫元件](essentials-file-library.md)SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
@@ -58,18 +61,18 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 | **動詞** | **說明** |
 |---|---|
-| 貼文 | 成員建立論壇主題 |
+| 貼文 | 會員建立論壇主題 |
 | 新增 | 成員對論壇主題的回覆 |
-| 更新 | 編輯成員的論壇主題或回覆 |
-| 刪除 | 會員的論壇主題或回覆被刪除 |
+| 更新 | 會員的論壇主題或回覆已編輯 |
+| 刪除 | 會員的論壇主題或回覆已刪除 |
 
 [Journal Component](blog-developer-basics.md)SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **動詞** | **說明** |
 |---|---|
-| 貼文 | 成員建立部落格 |
-| 新增 | 部落格文章中的成員注釋 |
-| 更新 | 會編輯會員的部落格文章或留言 |
+| 貼文 | 會員會建立部落格文章 |
+| 新增 | 部落格文章的會員意見 |
+| 更新 | 會員的部落格文章或留言已編輯 |
 | 刪除 | 會員的部落格文章或留言已刪除 |
 
 [QnA元件](qna-essentials.md)SocialEvent `topic` = com/adobe/cq/social/qna
@@ -78,9 +81,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 |---|---|
 | 貼文 | 成員建立QnA問題 |
 | 新增 | 成員建立QnA答案 |
-| 更新 | 成員的QnA問題或答案已編輯 |
+| 更新 | 會員的QnA問題或答案已編輯 |
 | 選擇 | 已選擇成員的答案 |
-| 取消選擇 | 會員的答案為取消選擇 |
+| 取消選擇 | 會員的答案已取消選擇 |
 | 刪除 | 刪除成員的QnA問題或答案 |
 
 [Reviews Component](reviews-basics.md)SocialEvent `topic`= com/adobe/cq/social/review
@@ -95,7 +98,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 | **動詞** | **說明** |
 |---|---|
-| 新增評分 | 會員的內容已被評級 |
+| 新增評分 | 會員的內容評級已提高 |
 | 移除評分 | 會員的內容已降級 |
 
 [投票元件](essentials-voting.md)SocialEvent `topic`= com/adobe/cq/social/tally
@@ -113,8 +116,8 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 | 不適當的旗幟 | 會員的內容已標籤 |
 | 取消標幟為不當 | 會員的內容已取消標幟 |
 | 接受 | 會員的內容由協調者核准 |
-| 關閉 | 成員關閉編輯和回覆的注釋 |
-| 開啟 | 成員重新開啟注釋 |
+| 關閉 | 會員關閉對編輯和回覆的注釋 |
+| 開啟 | 會員重新開啟註解 |
 
 ## 自訂元件的事件 {#events-for-custom-components}
 
@@ -126,9 +129,13 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 >
 >確保自訂擴充功能的註冊排名低於產品中任何現有實作的排名。
 
+
 ### 自訂元件事件的偽程式碼 {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);[com.adobe.cq.sosical.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);[com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
+[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
+[com.adobe.cq.soscial.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);
+[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);
+[com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
 package com.mycompany.recipe;
