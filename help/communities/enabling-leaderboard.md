@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 9%
@@ -27,10 +27,10 @@ ht-degree: 9%
 
 在將排行榜元件包括在頁面之前，必須配置社 [區評分和標章](/help/communities/implementing-scoring.md)。
 
-本節說明
+本檔案章節說明：
 
-* 將元件 `Leaderboard` 新增至社 [群網站](/help/communities/overview.md#community-sites)
-* 元件的配置設 `Leaderboard` 置
+* 將元件 `Leaderboard` 新增至社 [群網站](/help/communities/overview.md#community-sites)。
+* 元件的配置 `Leaderboard` 設定。
 
 ### 新增排行榜至頁面 {#adding-a-leaderboard-to-a-page}
 
@@ -44,17 +44,19 @@ ht-degree: 9%
 
 首次放置在社群網站頁面時，元件的顯示方式如下：
 
-![chlimage_1-19](assets/chlimage_1-19.png)
+![chlimage_1-8](assets/chlimage_1-8.png)
 
 ### 配置排行榜 {#configuring-leaderboard}
 
 選擇要訪問 `Leaderboard` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-20](assets/chlimage_1-20.png) ![chlimage_1-21](assets/chlimage_1-21.png)
+![chlimage_1-9](assets/chlimage_1-9.png)
+
+![chlimage_1-10](assets/chlimage_1-10.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
-在「設 **置** 」頁籤下，指定將顯示與成員相關的資訊：
+在「設 **[!UICONTROL 置]** 」頁籤下，指定將顯示與成員相關的資訊：
 
 * **顯示名稱**
 
@@ -100,7 +102,7 @@ ht-degree: 9%
 
 此排行榜會報告套用基本計分規則的結果。
 
-Leerboard元件組態：
+Leaderboard元件配置：
 
 * 「設定」頁籤：
 
@@ -118,13 +120,13 @@ Leerboard元件組態：
    * 徽章規則 = `/libs/settings/community/badging/rules//reference-badging`
    * 顯示限制 = `10`
 
-![chlimage_1-22](assets/chlimage_1-22.png)
+![chlimage_1-11](assets/chlimage_1-11.png)
 
 ### 範例： 專家排行榜 {#example-experts-leaderboard}
 
 此排行榜會報告套用進階計分規則的結果。
 
-Leerboard元件組態：
+Leaderboard元件配置：
 
 * 「設定」頁籤：
 
@@ -141,7 +143,7 @@ Leerboard元件組態：
    * 徽章規則 = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 顯示限制 = `10`
 
-![chlimage_1-23](assets/chlimage_1-23.png)
+![chlimage_1-12](assets/chlimage_1-12.png)
 
 ### 其他資訊 {#additional-information}
 
