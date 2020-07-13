@@ -10,12 +10,15 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+workflow-type: tm+mt
+source-wordcount: '866'
+ht-degree: 1%
 
 ---
 
 
-# 啟用的初始設定 {#initial-setup-for-enablement}
+# 啟用的初始設定  {#initial-setup-for-enablement}
 
 ## 啟動作者和發佈例項 {#start-author-and-publish-instances}
 
@@ -28,22 +31,23 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 對於AEM Communities,
 
-* 作者環境適用於
+* 作者環境適用於：
 
-   * 開發網站、範本、元件、實作資源和學習途徑
-   * 將成員和成員組分配給啟用資源和學習路徑
-   * 產生指派、檢視和貼文的報表
-   * 管理和配置任務
+   * 開發網站、範本、元件、實施資源和學習途徑。
+   * 將成員和成員群組指派給啟用資源和學習路徑。
+   * 產生指派、檢視和貼文的報表。
+   * 管理和配置任務。
 
-* 發佈環境適用於
+* 發佈環境適用於：
 
-   * 根據由啟用管理員管理的主題進行學習／培訓
-   * 註解與評分啟用資源與學習途徑
-   * 與資源聯繫人聯繫
+   * 根據啟用管理員管理的主題進行學習／培訓。
+   * 註解和評分啟用資源與學習路徑。
+   * 與資源聯繫人聯繫。
 
 >[!NOTE]
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](../../help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
+
 
 ## 安裝最新的Communities版本 {#install-latest-communities-release}
 
@@ -92,7 +96,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ![chlimage_1-417](assets/chlimage_1-417.png)
 
-然後依照指示，
+然後，請依照指示執行：
 
 1. [設定標籤權限](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [發佈標籤](../../help/sites-administering/tags.md#publishing-tags)
@@ -119,46 +123,47 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 >
 >但是，稍後會將其指 [派給成員群組](enablement-create-site.md#assignuserstocommunityenablemembersgroup)。
 
+
 ### Riley Taylor —— 註冊人 {#riley-taylor-enrollee}
 
 [建立將新增至](members.md#create-new-member) 「學員」群組（社群滑雪課程群組）的成員。
 
-* **ID**:賴萊
-* **電子郵件**:riley.taylor@mailinator.com
-* **密碼**:密碼
-* **確認密碼**:密碼
-* **名字**:萊利
-* **姓氏**:泰勒
+* **ID**: 賴萊
+* **電子郵件**: riley.taylor@mailinator.com
+* **密碼**: 密碼
+* **確認密碼**: 密碼
+* **名字**: 萊利
+* **姓氏**: 泰勒
 
 ### Sidney Croft —— 註冊人 {#sidney-croft-enrollee}
 
 [建立將添加到](members.md#create-new-member) 「社區滑雪類」組的第二個成員。
 
-* **ID**:西德尼
-* **電子郵件**:sidney.croft@mailinator.com
-* **密碼**:密碼
-* **確認密碼**:密碼
-* **名字**:西德尼
-* **姓氏**:克羅夫特
+* **ID**: 西德尼
+* **電子郵件**: sidney.croft@mailinator.com
+* **密碼**: 密碼
+* **確認密碼**: 密碼
+* **名字**: 西德尼
+* **姓氏**: 克羅夫特
 
 ### Quinn Harper —— 啟用資源聯絡與協調人 {#quinn-harper-enablement-resource-contact-and-moderator}
 
-[建立成員](members.md#create-new-member) ，在建立該站點後，該成員將添加到社區站點的成員組。 此會籍可讓會員在為網站建立啟用資源時， [被指派為啟用資源連絡人](resources.md#settings) 。
+[建立成員](members.md#create-new-member) ，在建立站點後，該成員將添加到社區站點的成員組。 此會籍可讓會員在為網站建立啟用資源時， [被指派為啟用資源連絡人](resources.md#settings) 。
 
-* **ID**:奎恩
-* **電子郵件**:quinn.harper@mailinator.com
-* **密碼**:密碼
-* **確認密碼**:密碼
-* **名字**:奎恩
-* **姓氏**:哈珀
+* **ID**: 奎恩
+* **電子郵件**: quinn.harper@mailinator.com
+* **密碼**: 密碼
+* **確認密碼**: 密碼
+* **名字**: 奎恩
+* **姓氏**: 哈珀
 
 ### 新增使用者群組——社群滑雪課程 {#add-a-user-group-community-ski-class}
 
 [新增名為](members.md#create-new-group) Community Ski Class的群組。
 
-* **ID**:社區滑雪課
-* **名稱**:社區滑雪課
-* **說明**:指派啟用資源的範例群組
+* **ID**: 社區滑雪課
+* **名稱**: 社區滑雪課
+* **說明**: 指派啟用資源的範例群組
 * **將成員添加到組** 「添加」:
 
    * 賴萊
@@ -173,6 +178,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 >[!NOTE]
 >
 >在建立社區站點期間，現有成員和組可以添加到社區站點的成員組中。
+
 
 ## 社區管理員角色 {#community-administrator-role}
 
@@ -190,17 +196,17 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
    * 例如，使用者名稱&#39;admin&#39; /密碼&#39;admin&#39;
 
-* 從主控制台導覽至「工具」、「作 **[!UICONTROL 業>安全性>使用者」]**
-* 從「編輯」 **[!UICONTROL 菜單中]** ，選擇「添 **[!UICONTROL 加用戶」]**
+* 從主控制台瀏覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 操作]** >安 **[!UICONTROL 全性]****[!UICONTROL >用]**&#x200B;戶」。
+* 從「編輯 **[!UICONTROL 」功能表]** ，選擇「 **[!UICONTROL 新增使用者」]**。
 
-* 在對話方 `Create New User` 塊中輸入
+* 在對話 `Create New User` 框中輸入：
 
-   * **ID&amp;ast;**:天狼星
-   * **電子郵件地址**:sirius.nilson@mailinator.com
-   * **Password&amp;ast;**:密碼
-   * **確認密碼&amp;ast;**:密碼
-   * **名字**:天狼星
-   * **姓氏&amp;ast;**:尼爾森
+   * **ID&amp;ast;**: 天狼星
+   * **電子郵件地址**: sirius.nilson@mailinator.com
+   * **Password&amp;ast;**: 密碼
+   * **確認密碼&amp;ast;**: 密碼
+   * **名字**: 天狼星
+   * **姓氏&amp;ast;**: 尼爾森
 
 ### 將Sirius指派給社區管理員群組 {#assign-sirius-to-community-administrators-group}
 
