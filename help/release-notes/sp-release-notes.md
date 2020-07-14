@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 5的發行說明。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
+source-git-commit: 97714abf86a80f6b3d1c68c85ccf443482da22bf
 workflow-type: tm+mt
 source-wordcount: '4529'
 ht-degree: 0%
@@ -111,7 +111,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 * 畫面閱讀程式現在可正確 [!UICONTROL 宣佈資產屬性(] Properties  )和左側導軌導覽（在資產使用者介面上）上的「標籤(Tags)」對話方塊的展開和收合狀態(NPR-33396)。
 
-* 資產上所有已瀏覽頁面的 [!DNL Adobe Experience Manager] 標題現在都是唯一的(NPR-33343)。
+* Titles of all the browsed pages on [!DNL Adobe Experience Manager] Assets are now unique (NPR-33343).
 
 * 當導覽樹狀結構時，螢幕閱讀程式現在會正確宣佈樹狀檢視控制的各種元素(NPR-33304)。
 
@@ -307,7 +307,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 >
 >Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
 
-* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序會混亂。
+* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序被混亂。
 * 最適化表單： 當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
 * 最適化表單： 用戶無法保存具有多個附件的自適應表單(NPR-32997)。
 * 最適化表單： 以最適化表單變更面板版面會導致錯誤(CQ-4293880)。
@@ -368,7 +368,7 @@ B. 使用套 [件管理員的HTTP API](https://docs.adobe.com/content/docs/en/cr
 
 1. 所有OSGi捆綁包都 **[!UICONTROL 是OSGi控制台中的]****[!UICONTROL ACTIVE或FRAGMENT]** (使用Web控制台： `/system/console/bundles`)。
 
-1. OSGI搭售版 `org.apache.jackrabbit.oak-core` 本為1.10.6或更新版本(使用Web Console: `/system/console/bundles`)。
+1. OSGI搭售版 `org.apache.jackrabbit.oak-core` 本為1.22.3或更高版本(使用Web Console: `/system/console/bundles`)。
 
 若要瞭解經過認證可與此版本搭配使用的平台，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md)。
 
@@ -419,7 +419,7 @@ UberJar for Experience Manager 6.5.5.0可在 [Adobe Public Maven儲存庫中取�
 
 ## 已知問題 {#known-issues}
 
-* 如果要安裝 [!DNL Experience Manager] 6.5.5.0和11，請在安 [!DNL Java] 裝Service Pack後重新啟動伺服器。 如果要安裝帶有 [!DNL Java] 8的Service Pack，則無需重新啟動。
+* 如果要安裝 [!DNL Experience Manager] 6.5.5.0和11，請在安裝Service Pack後 [!DNL Java] 重新啟動伺服器。 如果要安裝帶有 [!DNL Java] 8的Service Pack，則無需重新啟動。
 
 * 如果階層中的檔案夾已重新命 [!DNL Experience Manager Assets] 名，且包含資產的巢狀檔案夾已發佈至 [!DNL Brand Portal]，則在中不會更新檔案夾的標題，直到 [!DNL Brand Portal] 根檔案夾再次發佈為止。
 
