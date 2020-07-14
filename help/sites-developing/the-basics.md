@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: fc09ba6cb923d9ea25ec14af093d7f86a4835d85
+source-git-commit: d621a612556f0bea032444c2e07be101868b1905
 workflow-type: tm+mt
-source-wordcount: '3365'
+source-wordcount: '3371'
 ht-degree: 0%
 
 ---
@@ -68,11 +68,11 @@ AEM是使用 [Sling](https://sling.apache.org/site/index.html)（以REST原則�
 
 下圖說明Sling指令碼解析度： 它說明如何從HTTP請求到內容節點，從內容節點到資源類型，從資源類型到指令碼，以及可用的指令碼變數。
 
-![chlimage_1-84](assets/chlimage_1-97.png)
+![瞭解Apache Sling指令碼解析度](assets/sling-cheatsheet-01.png)
 
 下圖說明處理SlingPostServlet時，您可使用的所有隱藏但功能強大的請求參數，SlingPostServlet是所有POST請求的預設處理常式，提供您無限選項，以建立、修改、刪除、複製和移動儲存庫中的節點。
 
-![chlimage_1-85](assets/chlimage_1-98.png)
+![使用SlingPostServlet](assets/sling-cheatsheet-02.png)
 
 ### Sling is Content Centric {#sling-is-content-centric}
 
@@ -208,7 +208,7 @@ AEM的指定例項支援的指令碼引擎清單會列在Felix Management Consol
 * 如果根本找不到指令碼，則將使用預設指令碼。
 
    預設轉譯目前支援純文字(.txt)、HTML(.html)和JSON(.json)，所有這些都會列出節點的屬性（適當格式化）。 副檔名。res（或請求副檔名沒有請求副檔名）的預設轉譯，是將資源轉存（如果可能）。
-* 對於http錯誤處理（代碼403或404）,Sling會在以下任一處尋找指令碼：
+* 對於http錯誤處理（代碼403或404）,Sling會在下列任一處尋找指令碼：
 
    * 自訂指令碼的位置/apps/sling/servlet/errorhandler [](/help/sites-developing/customizing-errorhandler-pages.md)
    * 或標準指令碼/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
@@ -275,7 +275,7 @@ AEM的指定例項支援的指令碼引擎清單會列在Felix Management Consol
 
 如果您直接呼叫表示法（指令碼），就會隱藏指令碼內的資源，因此架構(Sling)不再知道。 因此，您會失去某些功能：
 
-* 自動處理GET以外的http方法，包括：
+* 自動處理http方法（GET除外），包括：
 
    * POST、PUT、DELETE，這些處理方式都包含sling預設實作
    * sling: `POST.jsp` resourceType位置中的指令碼
