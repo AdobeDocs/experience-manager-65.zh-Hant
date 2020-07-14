@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 38f40badf8a850de363fa3f28232d3037fbf209b
+source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
 workflow-type: tm+mt
-source-wordcount: '5037'
+source-wordcount: '4685'
 ht-degree: 1%
 
 ---
@@ -77,31 +77,6 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 * 示例（記憶體中）Apache Derby資料庫
 * Apache Derby資料源（用於表單資料模型）
 
-## 設定選項 {#configuration-options}
-
-使用者可以設定各種工作流程服務選項，其中包括：
-
-1. Microsoft Dynamics Entry
-1. Adobe Sign
-1. AEM自訂通訊管理
-1. Adobe Analytics
-
-為了在「工作流」中將其配置為啟用，用戶需要執行以下任務。
-
-1. 導覽至https://&#39;[server]:[port]&#39;/system/console/configMgr。
-
-1. 找到 *WeGov配置*。
-
-1. 開啟服務定義，並啟用選定服務以在工作流中調用。
-
->[!NOTE]
->
->僅僅因為用戶在「配置管理器」(Configuration Manager)頁中啟用了服務，用戶仍需設定服務配置以便與請求的外部服務通信。
-
-![wee govforms package](assets/aftia-configuration-options.jpg)
-
-1. 完成後，按一下「保存」按鈕以保存設定。
-
 ## 示範套件安裝 {#demo-package-installation}
 
 本節包含有關安裝演示軟體包的資訊。
@@ -163,18 +138,19 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 1. 導覽至 *https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.html*
 1. 以管理員身份登錄，以執行以下任務。
+1. 向下捲動至頁面結尾，以載入所有使用者群組。
 1. 搜尋「工&#x200B;**作流程**」。
 1. 選取「**workflow-users**」群組，然後按一下「屬性」。
 1. 導覽至「成員」標籤。
 1. 在「選 **取使用者** 或群組」欄位中輸入wegov。
-1. 從下拉式清單「**We.Gov Form Users**」中選取。
+1. 從下拉式清單「**We.Gov Forms Users**」中選取。
 
    ![編輯工作流程使用者的群組設定](assets/edit_group_settings.jpg)
 
 1. 按一下功能表列中的「儲存並關閉」。
-1. 重複步驟2-7：搜尋「**analytics**」、選取「**Analytics Administrators**」群組，並新增「**We.Gov Form Users**」群組為成員。
-1. 重複步驟2-7：搜尋「**forms users**」、選取「**forms-power-users**」群組，並新增「**We.Gov Form Users**」群組為成員。
-1. 重複步驟2-7：搜尋「**forms users**」、選取「**forms-users**」群組，並新增「**We.Gov Users**」群組為成員。
+1. 重複步驟2-7：搜尋「**analytics**」、選取「**Analytics Administrators**」群組，並新增「**We.Gov Forms Users**」群組為成員。
+1. 重複步驟2-7：搜尋「**forms users**」、選取「**forms-power-users**」群組，並新增「**We.Gov Forms Users**」群組為成員。
+1. 重複步驟2-7：搜尋「**forms-users**」、選取「**forms-users**」群組，並新增「**We.Gov Users**」群組為成員。
 
 ### 電子郵件伺服器組態 {#email-server-configuration}
 
@@ -362,7 +338,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 1. Click on **Save and Close**.
 
-1. 測試服務，以確保它們成功連接到已配置的資料源
+1. [測試服務](work-with-form-data-model.md#test-data-model-objects-and-services) ，以確保它們成功連接到已配置的資料源
 
    * 要測試連接，請選擇 **HOMEMORGOGAGEACCOUNT** ，並為其提供get服務。 測試服務，系統管理員就可以看到擷取的資料。
 
@@ -488,25 +464,6 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 
    ![檢視Analytics報表資料](assets/analytics_report_data.jpg)
 
-#### 檢視Adobe Analytics報表 {#view-adobe-analytics-reporting}
-
-或者，您也可以直接導覽至Adobe Analytics，以查看分析資料。
-
-1. 導覽至 [https://my.omniture.com/login/](https://my.omniture.com/login/)
-1. 使用您的認證登入：
-
-   1. **公司：** AEM Forms示範
-   1. **使用者：** &lt;available on request>
-   1. **密碼：** &lt;available on request>
-
-1. 從報表套裝中選取「We.Gov參考網站」。
-
-   ![報表套裝](assets/report_suites.jpg)
-
-1. 選取其中一個可用報表以顯示該報表的分析資料。
-
-   ![報表的分析資料](assets/analytics_data.jpg)
-
 ### Adobe自動化表單設定啟用 {#automated-forms-enablement}
 
 若要安裝並設定AEM Forms與Adobe Forms，轉換工具使用者必須具備下列功能。
@@ -535,7 +492,7 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 
 1. 請確定下載憑證。
 
-1. 請勿繼續配置——查看部分(TBD)的其餘部分
+1. 請勿繼續進行Adobe I/O中建立整合的其餘設定- [檢閱區段](#create-integration-adobeio)
 
 >[!NOTE]
 本節中建立的憑證將用於在Adobe I/O中建立整合服務。 使用者在整合服務中建立後，使用者就可以使用Adobe I/O中的資訊來完成設定。
@@ -590,7 +547,7 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 
 #### 設定雲端設定(We.Gov AFC Production) {#configure-cloud-configuration}
 
-一旦IMS設定完成，我們就可以繼續在AEM中建立雲端設定。
+IMS設定完成後，我們就可以繼續在AEM中檢視雲端設定。 如果此設定不存在，請使用下列步驟在AEM中建立雲端設定：
 
 1. 開啟瀏覽器並導覽至系統URL https://&lt;domain_name>:&lt;system_port>
 
@@ -672,13 +629,7 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 
    ![進階轉換設定](assets/aftia-conversion-settings-2.jpg)
 
-1. 在您設定了所有要使用的選項後，選取開始轉換
-
-   >[!NOTE]
-   *指定「最適化表單主題* 」區段，讓使用者可以在此處指定「可存取——超海洋主題」主題。
-
-   >[!NOTE]
-   如果希望用FDM或其他任何方式綁定生成的表單，則必須選中「生成不帶資料綁定的自適應表單」複選框 **。
+1. 在您設定了所有要使用的選項後，選取開始轉換。
 
 1. 當轉換程式開始時，使用者應看到下列畫面：
 
@@ -688,57 +639,11 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 
    ![轉換的最適化表單](assets/aftia-converted-adaptive-form-2.jpg)
 
-#### 測試表單轉換（We.Finance信用卡申請） {#testing-forms-conversion-wefinance}
-
-設定好設定後，使用者就可以上傳PDF檔案來測試它。
-
-1. 導覽至AEM系統https://&lt;domain_name>:&lt;system_port>
-
-1. 按一下「表單>表單與檔案> AEM Forms We.finance表單> PDF表單」。
-
-1. 選擇We.Finance信用卡應用程式。
-
-1. 按一下右上角 **的「開始自動轉換** 」按鈕。
-
-1. 使用者應能看到下列選項。
-
-   ![PDF表格](assets/aftia-pdf-forms.jpg)
-
-1. 在選取按鈕後，使用者會看到下列選項。
-
-   * 確保用戶選擇 *We.Finance AFC生產配置* 。
-
-   ![選擇We.Finance AFC生產](assets/aftia-select-production-configuration.jpg)
-
-   ![進階轉換設定](assets/aftia-advanced-conversion-settings-wefinance.jpg)
-
-1. 在您設定了所有要使用的選項後，選取開始轉換
-
-   >[!NOTE]
-   *指定「最適化表單主題* 」區段，讓使用者可以在此處指定「可存取——超海洋主題」主題。
-
-   >[!NOTE]
-   如果希望用FDM或其他任何方式綁定生成的表單，則必須選中「生成不帶資料綁定的自適應表單」複選框 **。
-
-   >[!NOTE]
-   使用者應將輸出資料夾位置設為 */content/dam/formsanddocuments/adobe-finance-forms/afc-converted-forms* ，讓轉譯的表格出現在We.Gov網站的表單入口網站中。
-
-1. 當轉換程式開始時，使用者應看到下列畫面：
-
-   ![正在轉換](assets/aftia-conversion-progress.jpg)
-
-   >[!NOTE]
-   三是報告的錯誤，即使您從雲端設定中選取個別的檔案夾，它仍會在本機建立輸出檔案夾，然後將產生的表格置於正確的位置。
-
-1. 轉換完成後，使用者會看到下列畫面：
-
-   ![正在轉換](assets/aftia-conversion-complete.jpg)
-
-1. 用戶還可以查看轉換過程並編輯結果，使系統具有更好的轉換能力。
+   按一下「 **輸出** 」檔案夾以檢視產生的最適化表單。
 
 #### 已知問題與注意事項 {#known-issues-notes}
 
-表單轉換程式有一些限制，可在Adobe網站上檢視。 請參 [閱已知問題](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html) ，瞭解您的表單是否與此程式相容。
+「自動表單轉換」服務包含某些 [最佳實務、已知的複雜模式](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)，以及 [已知問題](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 在您開始使用AEM Forms Automated Forms Conversion服務之前，請先檢閱這些項目。
 
 1. 如果要在轉換後將表單綁定到FDM，則生成具有生成適應性表單而不啟用資料綁定的表單。
 
@@ -868,6 +773,30 @@ Adobe維護的公開Ultramarine主題內建在可安裝的`we-gov-forms.pkg.all-
 Package Manager，使用者可導覽至 **Forms** > **Themes** > Reference Themes **>****** Ultramarine-AccessibleAccessible，以存取AEM Forms中的Ultramarine主題。
 
 ![超海洋主題](assets/aftia-ultramarine-theme.jpg)
+
+## 設定選項 {#configuration-options}
+
+使用者可以設定各種工作流程服務選項，其中包括：
+
+1. Microsoft Dynamics Entry
+1. Adobe Sign
+1. AEM自訂通訊管理
+1. Adobe Analytics
+
+為了在「工作流」中將其配置為啟用，用戶需要執行以下任務。
+
+1. 導覽至https://&#39;[server]:[port]&#39;/system/console/configMgr。
+
+1. 找到 *WeGov配置*。
+
+1. 開啟服務定義，並啟用選定服務以在工作流中調用。
+
+>[!NOTE]
+僅僅因為用戶在「配置管理器」(Configuration Manager)頁中啟用了服務，用戶仍需設定服務配置以便與請求的外部服務通信。
+
+![wee govforms package](assets/aftia-configuration-options.jpg)
+
+1. 完成後，按一下「保存」按鈕以保存設定。
 
 ## 後續步驟 {#next-steps}
 
