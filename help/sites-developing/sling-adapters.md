@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: 95c23d29aa1dd1695ed4e541dd11c2bbc7214f75
+source-git-commit: 4949eeb190f26850f80e1ad107f2057c661ed23d
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '2100'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Node node = resource.adaptTo(Node.class);
 
 為了改進效能，實現可自由快取從調用返回的 `obj.adaptTo()` 對象。 如果 `obj` 相同，則返回的對象相同。
 
-此快取會針對所有基 `AdapterFactory` 礎案例。
+此快取會針對所有基 `AdapterFactory` 礎案例執行。
 
 但是，沒有一般規則——物件可以是新例項或現有例項。 這表示您無法依賴這兩種行為。 因此，在此場景中，物件可重 `AdapterFactory`復使用，這一點非常重要，尤其是在內部。
 
@@ -118,7 +118,78 @@ Node node = resource.adaptTo(Node.class);
   </tr>
   <tr>
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
-   <td>傳回「檔案」的二進位內容<code>nt:resource</code></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr></tbody></table>
+   <td>返回檔案資源的二進位內容(如果這是基於JCR節點的資源，且節點類型為 <code>nt:file</code> 或 <code>nt:resource</code>; 如果這是包資源； 檔案內容（如果這是檔案系統資源）或二進位JCR屬性資源的資料。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html">URL</a></td>
+   <td>返回資源的URL(如果此節點是基於JCR節點的資源，則返回此節點的儲存庫URL; jar bundle URL（如果這是包資源）; 檔案URL（如果這是檔案系統資源）。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html">檔案</a></td>
+   <td>如果這是檔案系統資源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://sling.apache.org/apidocs/sling5/org/apache/sling/api/scripting/SlingScript.html">SlingScript</a></td>
+   <td>如果此資源是指其指令碼引擎已註冊為sling的指令碼（例如jsp檔案）。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/products/servlet/2.2/javadoc/javax/servlet/Servlet.html">Servlet</a></td>
+   <td>如果此資源是指已使用sling註冊指令碼引擎的指令碼（例如jsp檔案），或此為servlet資源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html">String</a><br /> Boolean <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html">Long</a><br /> Long <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html">Long</a><br /> Double Calendar Value Ling <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Double.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html"></a><br /><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html"></a><br /><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html">Double Calendar String[]Long[]Long[]Calendar[BooleanCalendarValue[]BooleanCalendar[]</a></td>
+   <td>如果這是基於JCR屬性的資源（且值符合），則返回值。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html">LakedResource</a></td>
+   <td>如果這是基於JCR節點的資源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Asset.html">資產</a></td>
+   <td>如果這是dam：資產節點資源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Rendition.html">轉譯</a></td>
+   <td>如果這是dam:Asset轉譯（nt:file，位於dam:Assert的轉譯資料夾下）</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html">UserManager</a></td>
+   <td>根據JCR會話（如果這是基於JCR的資源，且用戶具有訪問UserManager的權限）。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">可授權項目</a></td>
+   <td>「可授權」是「使用者」和「群組」的常見基本介面。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/User.html">使用者</a></td>
+   <td>使用者是可驗證和模擬的特殊可授權使用者。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/SimpleSearch.html">SimpleSearch</a></td>
+   <td>在資源下進行搜索(如果這是基於JCR的資源，則使用setSearchIn())。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/status/WorkflowStatus.html">WorkflowStatus</a></td>
+   <td>指定頁面／工作流裝載節點的工作流狀態。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/ReplicationStatus.html">ReplicationStatus</a></td>
+   <td>給定資源或其jcr:content子節點的複製狀態（首先選中）。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/connector/ConnectorResource.html">ConnectorResource</a></td>
+   <td>如果這是基於JCR節點的資源，則返回某些類型的適配連接器資源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/config/package-summary.html">設定</a></td>
+   <td>如果這是節 <code>cq:ContentSyncConfig</code> 點資源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/config/package-summary.html">ConfigEntry</a></td>
+   <td>如果此值在節點資 <code>cq:ContentSyncConfig</code> 源下。</td>
+  </tr>
+ </tbody>
+</table>
 
 [**資源解析器&#x200B;**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html)適用於：
 
