@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1723'
 ht-degree: 2%
 
 ---
@@ -66,13 +66,14 @@ To add the Dynamic Media functionality to assets you use on your websites, you c
 >
 >* 您已啟 [用動態媒體](/help/assets/config-dynamic.md)。 動態媒體預設為停用。
 >* 該影像具有金字塔tiff檔案。 在啟用動態媒體之前匯入的影像沒有金字塔tiff檔案。
+
 >
 
 
 
 #### 使用影像時 {#when-working-with-images}
 
-動態  媒體元件可讓您新增動態影像，包括影像集、回轉集和混合媒體集。 您可以放大、縮小，如果適用的話，可以在回轉集內旋轉影像，或從其他類型的回轉集選取影像。
+動態  媒體元件可讓您新增動態影像，包括影像集、回轉集和混合媒體集。 您可以放大、縮小，如果適用，則可以在回轉集內旋轉影像，或從其他類型的回轉集選取影像。
 
 您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像回應，您可以設定中斷點或套用回應式影像預設集。
 
@@ -138,13 +139,13 @@ You can edit the following [!UICONTROL Advanced] settings by clicking **[!UICONT
 
 #### 如何傳送安全的視訊 {#how-to-delivery-secure-video}
 
-在AEM 6.2中，當您安裝 [FP-13480](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)，您可以控制視訊是透過安全SSL連線(HTTPS)還是不安全的連線(HTTP)傳送。 依預設，視訊傳送通訊協定會自動從內嵌網頁的通訊協定繼承。 如果網頁是透過HTTPS載入，視訊也會透過HTTPS傳送。 反之亦然，如果網頁位於HTTP上，則視訊會透過HTTP傳送。 在大多數情況下，此預設行為是正確的，無需進行任何配置更改。 不過，您可以附加至URL路徑的結尾或內嵌程式碼片段中 `VideoPlayer.ssl=on` 其他檢視器設定參數的清單，以覆寫此預設行為，以強制安全傳送視訊。
+在AEM 6.2中，當您安裝 [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)，您可以控制視訊是透過安全SSL連線(HTTPS)還是不安全的連線(HTTP)傳送。 依預設，視訊傳送通訊協定會自動從內嵌網頁的通訊協定繼承。 如果網頁是透過HTTPS載入，視訊也會透過HTTPS傳送。 反之亦然，如果網頁位於HTTP上，則視訊會透過HTTP傳送。 在大多數情況下，此預設行為是正確的，無需進行任何配置更改。 不過，您可以附加至URL路徑的結尾或內嵌程式碼片段中 `VideoPlayer.ssl=on` 其他檢視器設定參數的清單，以覆寫此預設行為，以強制安全傳送視訊。
 
 如需有關保全視訊傳送和使用URL路徑 `VideoPlayer.ssl` 中設定屬性的詳細資訊，請參閱檢視器參考指 [南中的保全視訊傳送](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html) 。 除了視訊檢視器外，混合媒體檢視器和互動式視訊檢視器也能提供安全的視訊傳送。
 
 ### 互動式媒體元件 {#interactive-media-component}
 
-互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用互動式 **[!UICONTROL 媒體元件]** 。
+互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用 **[!UICONTROL 互動式媒體元件]** 。
 
 互 [!UICONTROL 動式媒體] (Interactive Media)元件是智慧型的——視您新增影像或視訊而定，您有各種選項。 此外，檢視器回應速度快。 也就是說，螢幕大小會根據螢幕大小自動變更。 所有檢視器都是以HTML5為基礎的檢視器。
 
