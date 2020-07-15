@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5的發行說明。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 97714abf86a80f6b3d1c68c85ccf443482da22bf
+source-git-commit: a599a1c75a1933d6b21e60e96485f43a0aedd679
 workflow-type: tm+mt
-source-wordcount: '4529'
+source-wordcount: '4496'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 | 版本 | 6.5.5.0 |
 | 類型 | Service Pack版本 |
 | 日期 | 2020年6月04日 |
-| 下載URL | [包共用](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0)，軟 [件分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
+| 下載URL | [軟體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
 ## Adobe Experience Manager 6.5.5.0包含的功能 {#what-s-included-in-aem}
 
@@ -213,7 +213,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 * 在具有智慧型裁切設定檔的檔案夾下開啟PDF轉譯邊欄的記錄檔中，會發現異常(CQ-4294201)。
 
-* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用  「動態媒體同步模式」，則不會發佈影像預設集(CQ-4294200)。
+* 如果Experience Manager的Dynamic Media Scene7執行模式預設停用 [!UICONTROL Dynamic Media同步模式] (CQ-4294200)，則不會發佈影像預設集。
 
 * 大量上傳時的資產處理會停滯，而工作流程例項則會顯示DAM更新資產的停滯例項(CQ-4293916)。
 
@@ -314,7 +314,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 最適化表單： 自適應表單字典中字串的新行將字 `&#xa;` 符添加到字典(NPR-33266)。
 * 最適化表單協助功能： 當使用者將最適化表單預覽為HTML表格時，「 [!UICONTROL Scribble Signature] 」欄位無法保留標籤焦點(NPR-33159)。
 * 最適化表單協助功能： 提交最適化表單時顯示的錯誤訊息不會連結 `aria-describedBy` 至屬性(NPR-33071)。
-* 最適化表單協助功能： 在ARIA無障礙環境支援模式中，在最適化表單中標示為強制的欄位，沒有將強制屬性設為True(NPR-33070)。
+* 最適化表單協助功能： 在ARIA無障礙環境支援架構中，在最適化表單中標示為強制的欄位沒有將強制屬性設定為True(NPR-33070)。
 * PDFG服務： 當使用者將文字檔案轉換為PDF時，日文字元無法正確顯示(NPR-33238)。
 * PDFG服務： `CreatePDF` 操作無法將PDF檔案轉換為PDF OCR格式(NPR-32994)。
 * PDFG服務： 第200個檔案例項的PDF轉換失 [!DNL OpenOffice] 敗(NPR-32766)。
@@ -340,7 +340,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 執行下列步驟，將Service Pack安裝在現有的Adobe Experience Manager 6.5實例上：
 
-1. 從Package Share或Software [Distribution下載](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0)[Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
+1. 從「軟體散發」下載 [Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
 
 1. 開啟「套件管理員」，然後按 **[!UICONTROL 一下「上傳套件]** 」以上傳套件。 要瞭解如何使用它，請參 [閱Package Manager](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
