@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 7d3ceccb-4f00-4e11-9c9f-6de46a455e02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+workflow-type: tm+mt
+source-wordcount: '2182'
+ht-degree: 3%
 
 ---
 
@@ -43,7 +46,7 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
 
 ### Trivia {#trivia}
 
-此版Adobe Experience manager的發行週期從2018年4月4日開始，經過23次反複的品質保證與錯誤修正，並於2019年3月28日結束。 這一版發行中修正的客戶相關問題，包括加強與新功能，總共有 1345 個。
+此版Adobe Experience Manager的發行週期從2018年4月4日開始，經過23次反複的品質保證與錯誤修正，並於2019年3月28日結束。 這一版發行中修正的客戶相關問題，包括加強與新功能，總共有 1345 個。
 
 Adobe Experience Manager 6.5自2019年4月8日起正式推出。
 
@@ -59,11 +62,11 @@ Adobe Experience Manager 6.5是Adobe Experience Manager 6.4程式碼庫的升級
 
 [AEM Foundation變更的完整清單](/help/release-notes/wcm-platform.md)。
 
-Adobe Experience Manager 6.5平台以OSGi架構（Apache Sling和Apache Felix）的更新版本和Java Content Repository為基礎：Apache Jackrabbit Oak 1.10.2.
+Adobe Experience Manager 6.5平台以OSGi架構（Apache Sling和Apache Felix）的更新版本和Java Content Repository為基礎： Apache Jackrabbit Oak 1.10.2.
 
 快速入門使用Eclipse Jetty 9.4.15做為servlet引擎。
 
-#### Java支援 {#java-support}
+#### Java支援  {#java-support}
 
 * Java 11的新支援，以及已支援的Java 8
 * 為獲得最佳效能，請用其他值覆蓋預設GC值。 如需詳細資訊，請參閱「安 [裝與更新](/help/sites-deploying/custom-standalone-install.md) 」一節。
@@ -94,7 +97,7 @@ UI已做了各種增強功能，讓它更有生產力，也更容易使用。
 
 #### 升級 {#upgrade}
 
-* 執行AEM 6.2、6.3和6.4的客戶支援直接就地升級至AEM 6.5。使用5.x或6.0/6.1的客戶若想使用就地升級，則需先升級至6.4 —— 然後升級至6.5，或透過在執行個體之間傳輸內容直接升級至AEM 6.5。
+* 執行AEM 6.2、6.3和6.4的客戶支援直接就地升級至AEM 6.5。 使用5.x或6.0/6.1的客戶若想使用就地升級，則需先升級至6.4 —— 然後升級至6.5，或透過在執行個體之間傳輸內容直接升級至AEM 6.5。
 
 #### 專案和工作流程 {#projects-and-workflows}
 
@@ -140,7 +143,7 @@ AEM能夠以各種格式和堆疊的不同層級來提供內容。 有些自2008
 **最佳化**
 
 * 使用動態預留位置，依資料觸發內容的位置或設定個人化。
-* 由Adobe Analytics與AEM Screens player整合所推動的統一見解
+* 由Adobe Analytics與AEM Screens Player整合所推動的統一見解
 
 如需AEM畫面變更的詳細資訊——請參閱 [AEM畫面使用指南中的發行說明](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)。
 
@@ -150,9 +153,9 @@ AEM能夠以各種格式和堆疊的不同層級來提供內容。 有些自2008
 
 AEM 6.5提供下列功能和增強功能，可大幅提升AEM使用者、DAM角色和相關的創意和行銷角色的生產力。
 
-#### 與Adobe Creative cloud整合 {#integration-with-adobe-creative-cloud}
+#### Integration with Adobe Creative Cloud {#integration-with-adobe-creative-cloud}
 
-Adobe Asset Link [](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)是Adobe Creative cloud應用程式（包括Photoshop、Illustrator和InDesign）中的創意使用者在應用程式中的體驗，它可簡化創意人員與行銷人員在內容建立程式中的協作。 AEM案頭應用程式持續支援使用者使用AEM在案頭上的資產、使用任何檔案類型和任何案頭應用程式的需求。
+Adobe Asset Link [](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)是Adobe Creative Cloud應用程式（包括Photoshop、Illustrator和InDesign）中的創意使用者在應用程式中的體驗，它可簡化創意人員與行銷人員在內容建立程式中的協作。 AEM案頭應用程式持續支援使用者使用AEM在案頭上的資產、使用任何檔案類型和任何案頭應用程式的需求。
 
 此外，AEM與Adobe Stock整合，可協助直接從AEM Web UI尋找、預覽、授權及儲存Adobe Stock資產。
 
@@ -164,7 +167,7 @@ Connected Assets功能針對較大型的部署，提供許多AEM Sites部署，�
 
 ### 動態媒體 {#dynamic-media}
 
-Dynamic media在AEM Assets中提供增強的豐富型媒體製作和發佈功能，以推動身歷其境且個人化的尖端體驗。 透過單一高品質的主資產，您可以利用我們的進階雲端演算、Smart Crop和同級最佳檢視器，以領先業界的效能提供最引人入勝的體驗。
+Dynamic Media在AEM Assets中提供增強的豐富型媒體製作和發佈功能，以推動身歷其境且個人化的尖端體驗。 透過單一高品質的主資產，您可以利用我們的進階雲端演算、Smart Crop和同級最佳檢視器，以領先業界的效能提供最引人入勝的體驗。
 
 新功能包括：
 
@@ -217,7 +220,7 @@ AEM 6.5新增功能和增強功能至社群。 此版本的亮點為：
 
 Adobe採用以客戶為中心的開發模型，讓客戶在規格、開發和測試期間，對開發流程的所有階段都有貢獻。 在此過程中，我們感謝所有有貢獻的客戶和合作夥伴。
 
-Adobe已制定相關程式和程式，以收集、排定優先順序並追蹤以客戶為中心的錯誤解決方案和增強功能要求開發。 Adobe [Marketing cloud支援入口網站](https://helpx.adobe.com/marketing-cloud/contact-support.html) ，已與Adobe增強與缺陷追蹤系統整合。 客戶問題會盡可能與客戶服務確認並解決。 呈報至研發時，會擷取所有客戶資訊，並用於優先排序和報告用途。 在開發時，優先考慮付費支援和擔保問題以及付費客戶增強功能。
+Adobe已制定相關程式和程式，以收集、排定優先順序並追蹤以客戶為中心的錯誤解決方案和增強功能要求開發。 Adobe [Marketing Cloud支援入口網站](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html) ，已與Adobe增強與缺陷追蹤系統整合。 客戶問題會盡可能與客戶服務確認並解決。 呈報至研發時，會擷取所有客戶資訊，並用於優先排序和報告用途。 在開發時，優先考慮付費支援和擔保問題以及付費客戶增強功能。
 
 此優先順序排列程式已在AEM 6.5中修正超過750項以客戶為主的變更。
 
@@ -225,8 +228,8 @@ Adobe已制定相關程式和程式，以收集、排定優先順序並追蹤以
 
 **基礎**
 
-* 獨立快速入門：cq-quickstart-6.5.0.jar
-* 應用程式伺服器快速啟動：cq-quickstart-6.5.0.war
+* 獨立快速入門： cq-quickstart-6.5.0.jar
+* 應用程式伺服器快速啟動： cq-quickstart-6.5.0.war
 * Dispatcher 4.3.2或更新版本，適用於各種Web伺服器和平台(下[載連結](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html))
 * Eclipse IDE增效模組(詳[細內容及下載](/help/sites-developing/aem-eclipse.md))
 
@@ -246,10 +249,10 @@ Adobe已制定相關程式和程式，以收集、排定優先順序並追蹤以
 
 * 智慧型內容語言模型。 已預先安裝英文——可下載更多語言
 
-   * [德文](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [西班牙文](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [義大利文](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [法文](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
+   * [德文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+   * [西班牙文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+   * [義大利文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+   * [法文](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * AEM最新化工具套裝，例如對話轉換工具。 ([GitHub專案](https://github.com/adobe/aem-modernize-tools))
 
@@ -288,15 +291,15 @@ Experience Manager 6.5已通過GB18030-2005 CITS認證，可使用中文編碼�
 
 ## 支援的平台 {#supported-platforms}
 
-請尋找完整的支援平台矩陣，包括[AEM 6.5技術需求的支援層級](/help/sites-deploying/technical-requirements.md)
+請尋找完整的支援平台矩陣，包括 [AEM 6.5技術需求的支援層級](/help/sites-deploying/technical-requirements.md)
 
-Oak microKernel forOak microKernel for
+Oak MicroKernel forOak MicroKernel for
 
 >[!NOTE]
 >
 >Oracle已改為Oracle Java SE產品的「長期支援」(LTS)模型。 Java 9和10是Oracle發行的非LTS版本(請參 [閱Oracle Java SE支援路線圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 Adobe僅提供LTS版Java的支援，以在生產中執行AEM。 因此，建議使用Java 11與AEM 6.5搭配使用。
 
-## 已過時和已移除的功能 {#deprecated-and-removed-features}
+## 過時和移除的功能 {#deprecated-and-removed-features}
 
 Adobe會持續評估產品中的功能，並隨著時間推移，計畫以功能更強大的版本來取代功能，或決定重新建置選取的部件，以便為未來的期望或擴充做好更好的準備。
 
@@ -310,7 +313,7 @@ Adobe會持續評估產品中的功能，並隨著時間推移，計畫以功能
 
 這些網站僅提供給客戶使用。 如果您是客戶，需要存取權，請聯絡您的Adobe客戶經理。
 
-* [](https://daycare.day.com) 產 [品下載，請造訪licensing.adobe.com](https://licensing.adobe.com/)
+* [](https://daycare.day.com) [產品下載，請造訪licensing.adobe.com](https://licensing.adobe.com/)
 
 * [daycare.day.com的客戶支援](https://daycare.day.com)
 
