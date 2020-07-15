@@ -8,10 +8,10 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29b1a151a6c284fcb0bf01de425dfba79f5943c2
+source-git-commit: f4dcf58d70ea5a17617ef1e80942de7db3233031
 workflow-type: tm+mt
-source-wordcount: '2422'
-ht-degree: 1%
+source-wordcount: '2464'
+ht-degree: 0%
 
 ---
 
@@ -102,7 +102,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
 ## 自動化表單轉換(Camila) {#automated-forms-conversion}
 
-**本節**: Camila the CX Lead有舊版PDF表單，用於書面流程。 作為現代化工作的一部分，她想使用此PDF表格自動建立新的現代化最適化表格。
+**本節**: Camila the CX Lead現有的PDF表單是用於書面流程的一部分。 作為現代化工作的一部分，她想使用此PDF表格自動建立新的現代化最適化表格。
 
 ### 自動化表單轉換- We.Gov(Camila) {#automated-forms-conversion-wegov}
 
@@ -116,7 +116,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
    ![上傳表格](assets/aftia-upload-form.jpg)
 
-1. 然後，Camilla會選擇「自動表單轉換」任務
+1. 然後，Camilla會選取PDF表單，並按一 **下「開始自動轉換** 」以開始轉換程式。 如果您已轉換表單， **則可能需要按一下** 「覆寫轉換」。
 
    >[!NOTE]
    >
@@ -124,9 +124,11 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
    * **可選**: 如果希望使用「可訪問的Ultramarine」主題，只需按一下「指定自適應表單主題」，然後選擇出現在選項清單中的「可訪問的-Ultramarine」主題。
 
+   ![開始轉換](assets/aftia-start-conversion.jpg)
+
    ![超海洋主題](assets/aftia-upload-conversion-settings.jpg)
 
-   ![開始轉換](assets/aftia-start-conversion.jpg)
+   轉換期間會顯示完成百分比狀態。 在狀態顯示「已轉 **換**」後，按一下 **output** 資料夾，選擇最適化表單，然後按一下「 **編輯** 」以開啟已轉換的表單。
 
 1. 然後，Camilla會檢閱表格，並確定所有欄位都存在
 
@@ -156,7 +158,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
 Camila也驗證建立的內容是否已正確建立且完全可依公司標準存取。
 
-1. Camila開啟完成的We.Gov表格。
+1. Camila按一下 **輸出資料夾** ，選取最適化表單，然後按一 **下「預覽** 」以開啟完成的We.Gov表單。
 
 1. 在Chrome Developer Tool中開啟「稽核」標籤。
 
@@ -214,24 +216,9 @@ Aya需要先在家中審閱一些檔案，才能完成服務請求申請。 她�
    1. 基本資訊
 
       1. 名字
-      1. 中間名
       1. 姓氏
-      1. 首選名稱
       1. DOB
-      1. 性別
-   1. 連絡人資訊
-
-      1. 街道地址
-      1. 城市
-      1. 電話號碼
-      1. 郵遞區號
       1. 電子郵件
-      1. 狀態
-   1. 軍事狀態
-
-      1. 家庭狀態
-
-
 
 1. 使用下列動 **態邏輯** ，使用「族狀態」下拉式清單來展 **示動態功能** :
 
