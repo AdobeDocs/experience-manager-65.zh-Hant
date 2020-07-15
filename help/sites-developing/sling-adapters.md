@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: 4949eeb190f26850f80e1ad107f2057c661ed23d
+source-git-commit: bac56cb8e172d826114e1e607dc24b0a17821f8c
 workflow-type: tm+mt
 source-wordcount: '2100'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Node node = resource.adaptTo(Node.class);
 
 * 取得實作專屬物件。
 
-   例如，以JCR為基礎的通用介面實作可 [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) 提供對基礎JCR`的存 [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)取。
+   例如，以JCR為基礎的通用介面實作可 [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) 讓您存取基礎JCR [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 * 建立需要傳遞內部上下文對象的對象的快捷方式。
 
@@ -70,7 +70,7 @@ Node node = resource.adaptTo(Node.class);
 有多種可實 `Adaptable.adaptTo()` 施的方式：
 
 * 物體本身； 實現方法本身並映射到特定對象。
-* By an [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)`, which can map artibure objects.
+* 由， [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)可映射任意對象。
 
    對象仍必須實施接 `Adaptable` 口並且必須擴展 [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (這會將調 `adaptTo` 用傳遞給中央適配器管理器)。
 
