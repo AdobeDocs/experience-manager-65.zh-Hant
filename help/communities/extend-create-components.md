@@ -10,17 +10,20 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+workflow-type: tm+mt
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
 
-# 建立元件 {#create-the-components}
+# 建立元件  {#create-the-components}
 
 擴展元件的示例使用注釋系統，該系統實際上由兩個元件組成
 
-* 注釋——包含的注釋系統，是放置在頁面上的元件
-* Comment —— 擷取已張貼留言之例項的元件
+* 注釋——包含的注釋系統，該系統是放置在頁面上的元件。
+* Comment —— 擷取已張貼留言之例項的元件。
 
 這兩個元件都必須到位，尤其是自訂已張貼留言的外觀時。
 
@@ -29,6 +32,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 >每個網站頁面僅允許一個注釋系統。
 >
 >許多Communities功能已包含注釋系統，其resourceType可修改以參考擴充的注釋系統。
+
 
 ## 建立注釋元件 {#create-the-comments-component}
 
@@ -52,11 +56,11 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
    * **[!UICONTROL 「建立>元件……」]**
 
-      * **標籤**:注 *釋*
-      * **標題**:替 *代注釋*
-      * **說明**:替 *代注釋樣式*
+      * **標籤**: *留言*
+      * **標題**: *替代注釋*
+      * **說明**: *替代注釋樣式*
       * **超類型**: *social/commons/components/hbs/comments*
-      * **群組**:自 *訂*
+      * **群組**: *自訂*
    * 選擇下 **[!UICONTROL 一步]**
    * 選擇下 **[!UICONTROL 一步]**
    * 選擇下 **[!UICONTROL 一步]**
@@ -80,11 +84,11 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 1. 導航到節 `/apps/custom/components/comments` 點
 1. 按一下右鍵節點
 
-   * 選擇「 **[!UICONTROL 建立」>「元件……」。]**
+   * 選擇**[!UICONTROL Create] > **[!UICONTROL Component...]**
 
-      * **標籤**:評 *論*
-      * **標題**:替 *代注釋*
-      * **說明**:替代 *注釋樣式*
+      * **標籤**: *評論*
+      * **標題**: *替代注釋*
+      * **說明**: *替代注釋樣式*
       * **超類型**: *social/commons/components/hbs/comments/comments*
       * **群組**: `*.hidden*`
    * 選擇下 **[!UICONTROL 一步]**
@@ -99,7 +103,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 1. 選擇刪 **[!UICONTROL 除]**
 1. 選擇「 **[!UICONTROL 全部保存」]**
 
-![chlimage_1-71](assets/chlimage_1-71.png) ![chlimage_1-72](assets/chlimage_1-72.png)
+![chlimage_1-71](assets/chlimage_1-71.png)
+
+![chlimage_1-72](assets/chlimage_1-72.png)
 
 ### 複製和修改預設HBS指令碼 {#copy-and-modify-the-default-hbs-scripts}
 
@@ -150,15 +156,15 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
    * **類型**: `cq:ClientLibraryFolder`
    * 「添加到屬 **[!UICONTROL 性]** 」頁籤：
 
-      * **名稱** Type `categories` **Value** Zhing `String`****`cq.social.author.hbs.comments``Multi`
-      * **名稱** Type `dependencies` **Value** Zhing `String`****`cq.social.scf``Multi`
+      * **名稱**`categories`**類型**`String`**值** `cq.social.author.hbs.comments` `Multi`
+      * **名稱**`dependencies`**類型**`String`**值** `cq.social.scf` `Multi`
 
 * 選擇「 **[!UICONTROL 全部保存」]**
 * 在選 `/apps/custom/components/comments/clientlib`取s節點後，建立3個檔案：
 
    * **名稱**: `css.txt`
    * **名稱**: `js.txt`
-   * **名稱**:customcommentsystem.js
+   * **名稱**: customcommentsystem.js
 
 * 輸入&#39;customcommentsystem.js&#39;作為 `js.txt`
 * 選擇「 **[!UICONTROL 全部保存」]**
@@ -199,9 +205,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 * 從全域導覽
 
-   * 選擇 **[!UICONTROL 工具>部署>複製]**
-   * 選取 `Activate Tree`
-   * 設定 `Start Path`:to `/apps/custom`
-   * 取消選中 `Only Modified`
-   * 「選擇」 `Activate`按鈕
+   * 選擇 **[!UICONTROL 工具]** >部 **[!UICONTROL 署]** >復 **[!UICONTROL 制]**
+   * 選擇 **[!UICONTROL 激活樹]**
+   * 設為 `Start Path` `/apps/custom`
+   * 取消選中 **[!UICONTROL 僅已修改]**
+   * 選擇「 **[!UICONTROL 激活]** 」按鈕
 
