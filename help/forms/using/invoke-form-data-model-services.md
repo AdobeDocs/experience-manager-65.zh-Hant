@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: adf1ac2cb84049ca7e42921ce31135a6149ef510
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -28,14 +31,6 @@ API `guidelib.dataIntegrationUtils.executeOperation` 從最適化表單欄位叫
 ```
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
-
-API需要下列參數。
-
-| 參數 | 說明 |
-|---|---|
-| `operationInfo` | 用於指定表單資料模型標識符、操作標題和操作名稱的結構 |
-| `inputs` | 用於指定其值被輸入到服務操作的表單對象的結構 |
-| `outputs` | 結構：指定將用服務操作返回的值填充的表單對象 |
 
 API的結構會指 `guidelib.dataIntegrationUtils.executeOperation` 定服務作業的詳細資訊。 結構的語法如下。
 
@@ -64,7 +59,11 @@ API結構指定服務操作的以下詳細資訊。
    <th>說明</th>
   </tr>
   <tr>
-   <td><code>forDataModelId</code></td>
+   <td><code>operationInfo</code></td>
+   <td>用於指定表單資料模型標識符、操作標題和操作名稱的結構</td>
+  </tr>
+  <tr>
+   <td><code>formDataModelId</code></td>
    <td>指定表單資料模型的儲存庫路徑，包括其名稱</td>
   </tr>
   <tr>
@@ -72,12 +71,20 @@ API結構指定服務操作的以下詳細資訊。
    <td>指定要執行的服務操作的名稱</td>
   </tr>
   <tr>
-   <td><code>input</code></td>
+   <td><code>inputs</code></td>
    <td>將一個或多個表單對象映射到服務操作的輸入參數</td>
   </tr>
   <tr>
-   <td>輸出</td>
+   <td><code>Outputs</code></td>
    <td>將一個或多個表單對象映射到從服務操作輸出值以填充表單欄位<br /> </td>
+  </tr>
+  <tr>
+   <td><code>success</code></td>
+   <td>根據服務操作的輸入參數返回值。 它是用作回呼函式的可選參數。<br /> </td>
+  </tr>
+  <tr>
+   <td><code>failure</code></td>
+   <td>如果成功回呼函式無法根據輸入參數顯示輸出值，則顯示錯誤消息。 它是用作回呼函式的可選參數。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -86,7 +93,7 @@ API結構指定服務操作的以下詳細資訊。
 
 以下範例指令碼使用 `guidelib.dataIntegrationUtils.executeOperation` API來叫用表單資 `getAccountById` 料模型中設定的 `employeeAccount` 服務作業。
 
-此操 `getAccountById` 作將表單欄位中的值作為參數 `employeeID``empId` 的輸入，並返回相應員工的員工姓名、帳戶編號和帳戶餘額。 輸出值會填入指定的表單欄位。 例如，參數中的值 `name` 會填入表單元素中， `fullName` 而表單元素中 `accountNumber` 的參數值 `account` 中。
+此操 `getAccountById` 作將表單欄位中的值作為參數的輸 `employeeID``empId` 入，並返回相應員工的員工姓名、帳戶編號和帳戶餘額。 輸出值會填入指定的表單欄位。 例如，參數中的值會 `name` 填入表單元素中， `fullName` 而表單元素中 `accountNumber` 的參數值 `account` 中。
 
 ```
 var operationInfo = {
@@ -104,3 +111,41 @@ var outputs = {
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 ```
 
+## 使用API與回呼函式 {#using-the-api-callback}
+
+您也可以使用具有回呼函式的 `guidelib.dataIntegrationUtils.executeOperation` API來叫用表單資料模型服務。 API語法如下：
+
+```
+guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
+```
+
+回呼函式可以有回呼 `success` 函式 `failure` 和函式。
+
+### 包含成功與失敗回呼函式的範例指令碼 {#callback-function-success-failure}
+
+以下範例指令碼使用 `guidelib.dataIntegrationUtils.executeOperation` API來叫用表單資 `GETOrder` 料模型中設定的 `employeeOrder` 服務作業。
+
+操 `GETOrder` 作將表單域中的值作 `Order ID` 為參數的輸入，並返回回 `orderId` 調函式中的訂單量 `success` 值。  如果回 `success` 調函式未傳回訂單量，則回 `failure` 調函式會顯示訊 `Error occured` 息。
+
+>[!NOTE]
+>
+> 如果您使用 `success` 回呼函式，輸出值不會填入指定的表單欄位。
+
+```
+var operationInfo = {
+    "formDataModelId": "/content/dam/formsanddocuments-fdm/employeeOrder",
+    "operationTitle": "GETOrder",
+    "operationName": "GETOrder"
+};
+var inputs = {
+    "orderId" : Order ID
+};
+var outputs = {};
+var success = function (wsdlOutput, textStatus, jqXHR) {
+order_quantity.value = JSON.parse(wsdlOutput).quantity;
+ };
+var failure = function(){
+alert('Error occured');
+};
+guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, success, failure);
+```
