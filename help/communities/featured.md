@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ## 簡介 {#introduction}
 
-精選內容功能提供發佈環境中登入網站訪客（社群成員）的區域，以反白標示
+特色內容功能為登入網站訪客（社群成員）在發佈環境中提供一個區域，以反白標示下列內容：
 
 * [部落格](blog-feature.md)
 * [日曆](calendar.md)
@@ -33,8 +36,8 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 本檔案章節說明：
 
-* 將精選內容新增至社群網站
-* 元件的配置設 `Featured Content` 置
+* 將精選內容新增至社群網站。
+* 元件的配置 `Featured Content` 設定。
 
 ## 將精選內容新增至頁面 {#adding-featured-content-to-a-page}
 
@@ -54,18 +57,25 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 選擇要訪問 `Featured Content` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-14](assets/chlimage_1-14.png) ![chlimage_1-15](assets/chlimage_1-15.png)
+![chlimage_1-14](assets/chlimage_1-14.png)
+
+![chlimage_1-15](assets/chlimage_1-15.png)
 
 ### 「設定」頁籤 {#settings-tab}
 
 在「設 **[!UICONTROL 定]** 」標籤下，識別要具備的內容：
 
-* **[!UICONTROL 顯示名]**&#x200B;稱精選內容清單的標題。 For example `Featured Questions` or `Featured Ideas`. 如果留 `Featured Content` 空，則預設為。
+* **[!UICONTROL 顯示名稱]**
+
+   精選內容清單的標題。 For example `Featured Questions` or `Featured Ideas`. 如果留 `Featured Content` 空，則預設為。
 
 * **[!UICONTROL 主要內容的位置]**
-   *（必要）* ，瀏覽至包含可能是功能之內容的頁面（該頁面的元件必須設定為「允許功能內容」）。 例如， `/content/sites/engage/en/forum`
 
-* **[!UICONTROL 顯示限]**&#x200B;制要顯示的精選內容數目上限。 預設值為5。
+   *（必要）* ，瀏覽至包含可能是功能之內容的頁面（該頁面的元件必須設定為「允許功能內容」）。 For example, `/content/sites/engage/en/forum`.
+
+* **[!UICONTROL 顯示限制]**
+
+   要顯示的特色內容數上限。 預設值為5。
 
 ## 網站訪客體驗 {#site-visitor-experience}
 
