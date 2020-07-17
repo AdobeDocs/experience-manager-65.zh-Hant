@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+workflow-type: tm+mt
+source-wordcount: '1226'
+ht-degree: 8%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 本檔案章節說明：
 
 * 新增論壇功能至AEM網站。
-* 元件的配置 `Forum`設定。
+* 元件的配置 `Forum` 設定。
 
 ### 新增論壇至頁面 {#adding-a-forum-to-a-page}
 
@@ -44,15 +47,17 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side) ，元件的顯示 `Forum`方式如下：
+當包含 [所需的用戶端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side) ，元件的顯示方式 `Forum` 如下：
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![chlimage_1-60](assets/chlimage_1-60.png)
 
 ### 設定論壇 {#configuring-a-forum}
 
 選擇要訪問 `Forum` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-105](assets/chlimage_1-105.png) ![forum-config](assets/forum-config.png)
+![chlimage_1-61](assets/chlimage_1-61.png)
+
+![論壇——組態](assets/forum-config.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
@@ -117,7 +122,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **僅當勾選「允許上傳檔案**」時，附加影像檔案大小的上限才相關。 上傳的影像檔案的位元組數上限。 預設值為2097152(2 Mb)。
 
@@ -232,7 +237,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 * **排序方式**
 
-   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設為 `Newest, Oldest, Last Updated`。
+   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`。
 
 * **設為預設值**
 
@@ -240,7 +245,9 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 * **選取 Analytics 排序的時間選項**
 
-   下拉式選取其中一個 `All, Last 24 Hours, Last 7 Days, Last 30 Days`。 預設為 `All`。
+   下拉式選擇下列選項之一： `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
+
+   預設為 `All`。
 
 ### 其他資訊 {#additional-information}
 
