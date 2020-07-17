@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
 workflow-type: tm+mt
-source-wordcount: '4685'
+source-wordcount: '5004'
 ht-degree: 1%
 
 ---
@@ -222,6 +222,48 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 1. 從已設定的Adobe Sign例項提供已設定的用戶端ID和用戶端密碼。
 1. 按一下「連線至Adobe Sign」。
 1. 成功連線後，按一下「儲存並關閉」以完成整合。
+
+### 填寫及簽署多份表格 {#fill-sign-multiple-forms}
+
+本檔案說明設定填寫及簽署多個表單的能力所需的步驟。 您也可以在這裡嘗 [試相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例將此示例所需的必要資料儲存在AME儲存庫中。 這麼做是為了確保在您的本機伺服器上部署示範資產時，體驗順暢無阻。 在現實生活中，我們會將您選擇的相同資訊儲存在RDMS中。
+
+#### 必備條件 {#pre-requisites-fill-sign-multiple-forms}
+
+* [配置日CQ郵件服務](https://docs.adobe.com/content/help/en/experience-manager-65/communities/administer/email.html)
+
+* [使用Adobe Sign設定AEM表格](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html)
+
+#### 在本機伺服器上設定範例 {#setup-sample-local-server}
+
+執行以下步驟以在本地伺服器上設定示例：
+
+1. 安裝軟體包。 此套件包含下列項目：
+   * 適用性表單. 表單位於formsandsigndemo資 **料夾**
+   * 自訂OSGI組合
+   * 工作流程
+1. 設定 [同意表](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/consentform.html) ，以使用您的Adobe Sign設定。
+1. 設定 [多狀態興趣鎖定表](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/multistateinterestratelock.html) ，以使用您的Adobe Sign設定。
+1. 開啟 [Formsandsigndemo](http://localhost:4502/editor.html/conf/global/settings/workflow/models/formsandsigningdemo.html) workflow模型：
+   1. 開啟「在CRX中儲存表格」步驟。
+   1. 將localhost變更為AEM Server的ip位址。
+   1. 儲存您的變更。
+   1. 同步工作流程以產生執行階段模型。
+
+      ![簽署多份表格](assets/sign-multiple-forms.jpg)
+
+   1. 開啟再 [融資表格](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。
+   1. 填寫必填欄位。 請確定您提供有效的電子郵件地址，並選取一或多個表單以簽署和送出表單。
+您會收到一封電子郵件，內含填寫及簽署表格的連結。
+
+#### 疑難排解 {#troubleshoot-sign-multiple-forms}
+
+* 除錯記錄檔會寫入 `signingmultipleforms.log` 至伺服器記錄檔資料夾中的檔案。
+
+* 要簽署的表格會儲存在下方 `/content/formsforsigning`。
+
+* 請確定所有的捆綁包都處於活動狀態。
+
+* 檢查您的電子郵件伺服器組態。
 
 ### （可選）MS Dynamics雲端組態 {#ms-dynamics-cloud-configuration}
 
