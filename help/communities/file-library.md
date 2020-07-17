@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+workflow-type: tm+mt
+source-wordcount: '753'
+ht-degree: 6%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ### 新增檔案庫至頁面 {#adding-a-file-library-to-a-page}
 
-若要在作 `File Library` 者模式下將元件新增至頁面，請找出元件
+若要在作 `File Library` 者模式下將元件新增至頁面，請找出元件：
 
 * `Communities / File Library`
 
@@ -39,13 +42,15 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 當包含 [所需的用戶端程式庫](/help/communities/essentials-file-library.md#essentials-for-client-side) ，元件的顯示方式 `File Library` 如下：
 
-![chlimage_1-145](assets/chlimage_1-145.png)
+![chlimage_1-430](assets/chlimage_1-430.png)
 
 ### 配置檔案庫 {#configuring-file-library}
 
 選擇要訪問 `File Library` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-146](assets/chlimage_1-146.png) ![forum-config-1](assets/forum-config-1.png)
+![chlimage_1-431](assets/chlimage_1-431.png)
+
+![chlimage_1-432](assets/chlimage_1-432.png)
 
 #### 「注釋」頁籤 {#comments-tab}
 
@@ -69,7 +74,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 * **允許的檔案類型**
 
-   以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **RTF 編輯器**
 
