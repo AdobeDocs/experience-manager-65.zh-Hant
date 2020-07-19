@@ -44,8 +44,8 @@ ht-degree: 7%
 | [!UICONTROL 預設] |  | 資產的基本中繼資料結構表單。 |
 |  | 以下子表單繼承預設表單的 [!UICONTROL 屬性] : |  |
 |  | [!UICONTROL dm_video] | 動態媒體影片的架構表單。 |
-|  | [!UICONTROL 影像] | Schema form for images with the MIME type such as `image/jpeg` and `image/png`. <br> 影 [!UICONTROL 像表單] 包含下列子表單範本： <ul><li> [!UICONTROL jpeg]: 子類型 [!UICONTROL jpeg資產的架構表單]。</li> <li>[!UICONTROL tiff]: 子類型為TIFF的資產的架構表單。</li></ul> |
-|  | [!UICONTROL 應用程式] | Schema form for assets with MIME type such as `application/pdf` and `application/zip`. <br>[!UICONTROL pdf]: 子類型為PDF的資產的架構表單。 |
+|  | [!UICONTROL 影像] | 具有MIME類型（如和）的映像的 `image/jpeg` 架構表 `image/png`單。 <br> 影 [!UICONTROL 像表單] 包含下列子表單範本： <ul><li> [!UICONTROL jpeg]: 子類型 [!UICONTROL jpeg資產的架構表單]。</li> <li>[!UICONTROL tiff]: 子類型為TIFF的資產的架構表單。</li></ul> |
+|  | [!UICONTROL 應用程式] | 具有MIME類型（如和）的資產的 `application/pdf` 架構表 `application/zip`格。 <br>[!UICONTROL pdf]: 子類型為PDF的資產的架構表單。 |
 |  | [!UICONTROL 視訊] | 具有MIME類型（如和）的視訊資產的 `video/avi` 架構表 `video/mp4`格。 |
 | [!UICONTROL 集合] |  | 系列的結構表單。 |
 | [!UICONTROL contentfragment] |  | [內容片段的架構表單](/help/sites-developing/customizing-content-fragments.md)。 |
@@ -75,7 +75,7 @@ application doesn't contain the sub type zip OOTB.
 
 ## 編輯中繼資料結構表單 {#edit-metadata-schema-forms}
 
-您可以編輯新增或現有的中繼資料結構表單。 The metadata schema form includes tabs and form items within tabs. 您可以將這些表單項目映射／配置到CRX儲存庫中元資料節點中的欄位。 您可以將標籤或表單項目新增至中繼資料結構表單。 衍生自父項的制表符和表單項處於鎖定狀態。 您無法在子級更改它們。
+您可以編輯新增或現有的中繼資料結構表單。 中繼資料結構表單包含標籤和標籤內的表單項目。 您可以將這些表單項目映射／配置到CRX儲存庫中元資料節點中的欄位。 您可以將標籤或表單項目新增至中繼資料結構表單。 衍生自父項的制表符和表單項處於鎖定狀態。 您無法在子級更改它們。
 
 1. 在「元數 [!UICONTROL 據結構表單] 」頁上，選擇一個表單，然後按一下工 **[!UICONTROL 具欄中的]** 編輯。
 
@@ -120,19 +120,19 @@ application doesn't contain the sub type zip OOTB.
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資產的中繼資料節點，做為屬性 `dc:title`。
 
-* `./jcr:created`: Stores the creation date and time of an asset. It is a protected property. If you configure these properties, Adobe recommends that you mark them as Disable Edit.
+* `./jcr:created`: 儲存資產的建立日期和時間。 它是受保護的屬性。 如果您設定這些屬性，Adobe建議您將其標示為「停用編輯」。
 
 為確保元資料架構表單中的元件正確顯示，屬性路徑不應包含任何空格。
 
 * **預留位置**: 使用此屬性可指定與中繼資料屬性相關的預留位置文字。
 * **必要**: 使用此屬性可將中繼資料屬性標示為屬性頁面上的必要屬性。
-* **Disable Edit**: Use this property to disallow any edits to a property on the properties page.
+* **停用編輯**: 使用此屬性可禁止對屬性頁面上的屬性進行任何編輯。
 * **在唯讀中顯示空白欄位**: 標籤此屬性，即使其沒有值，也可在屬性頁面上顯示中繼資料屬性。 預設情況下，當中繼資料屬性沒有值時，該屬性不會列在屬性頁面上。
 * **顯示順序清單**: 使用此屬性可顯示選擇的有序清單。
 * **選擇**: 使用此屬性可指定清單中的選擇。
 * **說明** : 使用此屬性可為中繼資料元件新增簡短說明。
 * **類別**: 屬性與關聯的對象類。
-* **Delete**: Click [!UICONTROL Delete] to delete a component from the schema form.
+* **刪除**: 按一下 [!UICONTROL 刪除] ，從架構表單中刪除元件。
 
 >[!NOTE]
 >
@@ -142,7 +142,7 @@ application doesn't contain the sub type zip OOTB.
 
 ![「篩選器」面板的「中繼資料驗證謂語」中選取的選項無效 ](assets/chlimage_1-178.png)
 
-如果將上下文元資料元件添加到任何方案表單的任何頁籤，則該元件將作為清單顯示在應用特定方案的資產的屬性頁中。 該清單包括除應用上下文元資料元件的頁籤之外的所有其他頁籤。 Currently, this feature provides basic functionality to control the display of metadata based on the context.
+如果將上下文元資料元件添加到任何方案表單的任何頁籤，則該元件將作為清單顯示在應用特定方案的資產的屬性頁中。 該清單包括除應用上下文元資料元件的頁籤之外的所有其他頁籤。 目前，此功能提供基本功能，可根據內容控制中繼資料的顯示。
 
 ![內容相關的中繼資料元件清單標籤資產屬性](assets/chlimage_1-179.png)
 
@@ -162,7 +162,7 @@ application doesn't contain the sub type zip OOTB.
 
 ![中繼資料結構表單中的預設標籤](assets/chlimage_1-181.png)
 
-Click `+` to add a tab on a schema form. 依預設，新標籤的名稱為 `Unnamed-1`。 您可以從「設定」索引標籤修 **[!UICONTROL 改名稱]** 。
+單 `+` 擊可在架構表單上添加頁籤。 依預設，新標籤的名稱為 `Unnamed-1`。 您可以從「設定」索引標籤修 **[!UICONTROL 改名稱]** 。
 
 按一 `X` 下以刪除標籤。
 
@@ -176,15 +176,15 @@ Click `+` to add a tab on a schema form. 依預設，新標籤的名稱為 `Unna
 
 >[!NOTE]
 >
->* 刪除對預設表單的自定義更改後，關閉的鎖 ![在表單](assets/do-not-localize/lock_closed_icon.svg) 之前重新顯示。 It indicates that the form is reverted to its default state.
+>* 刪除對預設表單的自定義更改後，關閉的鎖 ![在表單](assets/do-not-localize/lock_closed_icon.svg) 之前重新顯示。 它表示表單已回復為預設狀態。
 >* 您不能刪除中的預設元資料架構表 [!DNL Assets]單。
 
 
 ## MIME類型的架構表單 {#schema-forms-for-mime-types}
 
-[!DNL Experience Manager] 為各種現成可用的MIME類型提供預設表單。 However, you can add custom forms for assets of various MIME types.
+[!DNL Experience Manager] 為各種現成可用的MIME類型提供預設表單。 不過，您可以為各種MIME類型的資產新增自訂表格。
 
-### Add new forms for MIME types {#add-new-forms-for-mime-types}
+### 為MIME類型添加新表單 {#add-new-forms-for-mime-types}
 
 在適當的表單類型下建立表單。 For example, to add a template for the `image/png` subtype, create the form under the &quot;image&quot; forms. 方案表單的標題是子類型名稱。In this case, the title is `png`.
 
@@ -192,12 +192,12 @@ Click `+` to add a tab on a schema form. 依預設，新標籤的名稱為 `Unna
 
 您可以針對不同的MIME類型使用現有範本。 例如，使用MIME `image/jpeg` 類型資產的表單 `image/png`。
 
-In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the CRX repository. Specify a name for the node and define the following properties:
+在這種情況下，請在CRX儲存庫 `/etc/dam/metadataeditor/mimetypemappings` 中建立節點。 指定節點的名稱並定義以下屬性：
 
 | 名稱 | 說明 | 類型 | 值 |
 |------|-------------|------|-------|
-| `exposedmimetype` | Name of the existing form to be mapped | `String` | `image/jpeg` |
-| `mimetypes` | List of MIME types that use the form defined in the `exposedmimetype` attribute | `String` | `image/png` |
+| `exposedmimetype` | 要映射的現有表單的名稱 | `String` | `image/jpeg` |
+| `mimetypes` | 使用屬性中定義的表單的MIME類型列 `exposedmimetype` 表 | `String` | `image/png` |
 
 [!DNL Assets] 映射以下MIME類型和模式表單：
 
@@ -217,13 +217,13 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
 ## 授予對中繼資料結構的存取權 {#grant-access-to-metadata-schemas}
 
-The Metadata Schema feature is available to administrators only. 不過，管理員可修改某些權限，以提供非管理員的存取權。 提供非管理員使用者對資料夾建立、修改和刪除權 `/conf` 限。
+「中繼資料結構」功能僅供管理員使用。 不過，管理員可修改某些權限，以提供非管理員的存取權。 提供非管理員使用者對資料夾建立、修改和刪除權 `/conf` 限。
 
 ## 套用資料夾特定的中繼資料 {#apply-folder-specific-metadata}
 
 [!DNL Assets] 可讓您定義中繼資料結構的變體，並將其套用至特定資料夾。
 
-For example, you can define a variant of the default metadata schema and apply it to a folder. 當您套用已修改的架構時，它會覆寫套用至資料夾內資產的原始預設中繼資料架構。
+例如，您可以定義預設中繼資料結構的變體，並將其套用至資料夾。 當您套用已修改的架構時，它會覆寫套用至資料夾內資產的原始預設中繼資料架構。
 
 只有上傳至套用此架構的資料夾的資產，才符合變型中繼資料架構中定義的已修改中繼資料。 [!DNL Assets] 在應用原始模式的其他資料夾中，繼續與原始模式中定義的元資料保持一致。
 
@@ -264,13 +264,13 @@ For example, you can define a variant of the default metadata schema and apply i
 1. 在介 [!DNL Experience Manager] 面中，導覽至「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中 **[!UICONTROL 繼資料結構]**」。 此時會顯示&#x200B;**[!UICONTROL 「中繼資料結構描述表單」]**&#x200B;頁面。
 1. 將預設中繼資料表單儲存為自訂表單。 例如，將它另存為 `my_default`。
 
-1. 編輯自訂表格。 新增必填欄位。 For example, add a **[!UICONTROL Category]** field and make the field mandatory.
+1. 編輯自訂表格。 新增必填欄位。 例如，新增「類 **[!UICONTROL 別」欄位]** ，並將欄位設為必填。
 
-   ![Add mandatory field to metadata form by selecting Required in Rules tab in Metadata Schema Form Editor](assets/mandatory-field-metadata-schema-editor.png)
+   ![在元資料結構表單編輯器中選擇「規則」頁籤中的「必需」，將強制欄位添加到元資料表單](assets/mandatory-field-metadata-schema-editor.png)
 
    *圖： 中繼資料結構表單編輯器中的必填欄位。*
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。已修改的表單列在「元資料結構表 **[!UICONTROL 單」頁中]** 。 Select the form and then click **[!UICONTROL Apply to Folder(s)]** from the toolbar to apply the custom metadata to a folder.
+1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。已修改的表單列在「元資料結構表 **[!UICONTROL 單」頁中]** 。 選取表單，然後按一 **[!UICONTROL 下工具列中的「套用至資料夾」]** ，將自訂中繼資料套用至資料夾。
 
 1. 導覽至資料夾，並上傳您新增至自訂表單之必填欄位中遺失中繼資料的部分資產。 在資產的卡片檢視中，會顯示必要欄位遺失中繼資料的訊息。
 
