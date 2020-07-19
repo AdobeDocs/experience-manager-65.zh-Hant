@@ -4,10 +4,10 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 983f281b77a122c757bb508bee570c6c8490a2b9
 workflow-type: tm+mt
-source-wordcount: '2177'
-ht-degree: 13%
+source-wordcount: '2197'
+ht-degree: 12%
 
 ---
 
@@ -246,7 +246,7 @@ ht-degree: 13%
 
 ![saved_searches_list](assets/saved_searches_list.png)
 
-儲存的搜尋會在您建立智慧型系列時建立。智慧型系列會自動新增至「已儲 **[!UICONTROL 存的搜尋]** 」清單。系列的「已保存的搜索」查詢將保存在相 `dam:query` 對位置CRXDE的屬性中 `/content/dam/collections/`。
+儲存的搜尋會在您建立智慧型系列時建立。智慧型系列會自動新增至「已儲 **[!UICONTROL 存的搜尋]** 」清單。The [!UICONTROL Saved Searches] query for the collection is saved in the `dam:query` property in CRXDE at the relative location `/content/dam/collections/`. 您可以儲存的搜尋和清單中顯示的已儲存搜尋沒有限制。
 
 >[!NOTE]
 >
@@ -264,7 +264,7 @@ ht-degree: 13%
 
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
-   ![select_smart_collection-1](assets/select_smart_collection-1.png)
+   ![select_smart_collection](assets/select_smart_collection.png)
 
 1. 在對話方塊中，按一下「 **[!UICONTROL 刪除]** 」以刪除儲存的搜尋。
 
