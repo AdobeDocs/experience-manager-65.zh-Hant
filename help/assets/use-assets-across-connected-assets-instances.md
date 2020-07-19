@@ -3,10 +3,10 @@ title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manage
 description: 使用遠程部署中可用 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 的資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7d001ce126e72663bf8ad0722cf59c1cb7239ae0
+source-git-commit: 28c55333e0eebb68ada46ee89785f5f6475abf9e
 workflow-type: tm+mt
-source-wordcount: '2080'
-ht-degree: 44%
+source-wordcount: '2105'
+ht-degree: 43%
 
 ---
 
@@ -27,8 +27,8 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
 使用或設定此功能之前，請先確定下列事項：
 
-* 每個部署中，使用者都是適當使用者群組的成員。
-* 對於Adobe Experience Manager部署類型，符合其中一個支援的標準。 [!DNL Experience Manager] 6.5可 [!DNL Assets] 搭配雲 [!DNL Experience Manager] 端服務使用。 如需詳細資訊，請 [參閱Experience Manager中的「Connected Assets」（連接資產）功能，即雲端服務](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* 使用者是每個部署中適當使用者群組的一部分。
+* For [!DNL Adobe Experience Manager] deployment types, one of the supported criteria is met. [!DNL Experience Manager] 6.5可 [!DNL Assets] 搭配雲 [!DNL Experience Manager] 端服務使用。 如需詳細資訊，請 [參閱Experience Manager中的「Connected Assets」（連接資產）功能，即雲端服務](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
    |  | [!DNL Sites] 雲端服務 | [!DNL Experience Manager] 6.5 [!DNL Sites] on AMS. | [!DNL Experience Manager] 6.5內 [!DNL Sites] 部部署 |
    |---|---|---|---|
@@ -41,7 +41,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 作者在Content Finder中搜尋影像和下列類型的檔案，並在「頁面編輯器」中使用搜尋的資產。 文檔將添加到元件 `Download` 中，影像將添加到組 `Image` 件中。 Authors also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. 支援的格式包括：
 
 * **影像格式**: Image元件支 [持的格式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html) 。 [!DNL Dynamic Media] 不支援影像。
-* **檔案格式**: 請參 [閱「連線資產」支援的檔案格式](assets-formats.md#supported-document-formats)。
+* **檔案格式**: 請參閱支 [援的檔案格式](assets-formats.md#supported-document-formats)。
 
 ### 相關使用者和群組 {#users-and-groups-involved}
 
@@ -58,7 +58,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
 ## Configure a connection between [!DNL Sites] and [!DNL Assets] deployments {#configure-a-connection-between-sites-and-assets-deployments}
 
-An [!DNL Experience Manager] administrator can create this integration. 建立後，使用權限所需的權限會透過使用者群組建立。 使用者群組是在部署和 [!DNL Sites] DAM部署上定義。
+An [!DNL Experience Manager] administrator can create this integration. 建立後，使用權限所需的權限會透過使用者群組建立。 用戶組在部署和DAM [!DNL Sites] 部署上定義。
 
 To configure Connected Assets and local [!DNL Sites] connectivity, follow these steps:
 
@@ -96,8 +96,8 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    | 變更前 | 變更後 |
    |---|---|
    | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
-   | `/content/dam(/*/)renditions/original` | `/content/dam(/((?!connectedassets).)*/)renditions/original` |
-   | `/content/dam(/*)/jcr:content/metadata` | `/content/dam(/((?!connectedassets).)*/)jcr:content/metadata` |
+   | `/content/dam(/.*/)renditions/original` | `/content/dam(/((?!connectedassets).)*/)renditions/original` |
+   | `/content/dam(/.*)/jcr:content/metadata` | `/content/dam(/((?!connectedassets).)*/)jcr:content/metadata` |
 
    >[!NOTE]
    >
@@ -182,11 +182,12 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 * 使用者可在製作時搜尋遠端資產，並拖曳這些資產至本機頁面。 不支援其他功能。
 * 擷取作業會於 5 秒後逾時。如果有網路或其他方面的問題，作者擷取資產時就可能遇到問題。Authors can reattempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
-* Simple edits that are non-destructive and the edit supported via the `Image` component can be done on fetched assets. 資產僅供唯讀。
+* 您可以對擷取的資產執行非破壞性的簡單編輯作業，也能執行透過 `Image` 元件支援的編輯工作。資產僅供唯讀。
+* 唯一可重新擷取資產的方法，就是將資產拖曳至頁面上。 沒有API支援或其他方法可重新擷取資產以進行更新。
 
 ## 疑難排解問題 {#troubleshoot}
 
 要排除常見錯誤情形的故障，請執行以下步驟：
 
 * If you cannot search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
-* 從遠端Dam擷取的資產可能因一個或多個原因無法發佈在網頁上。 它不存在於遠程伺服器上，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠端DAM移除。 請確定已有適當的權限，並符合必要條件。 重新嘗試將資產新增至頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
+* 從遠端Dam擷取的資產可能因一個或多個原因無法發佈在網頁上。 它不存在於遠程伺服器上，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠端DAM移除。 請確定已有適當的權限，並符合先決條件。 重新嘗試將資產新增至頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
