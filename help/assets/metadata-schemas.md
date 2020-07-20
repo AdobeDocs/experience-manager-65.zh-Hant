@@ -3,7 +3,7 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0496d2d541be052e1201ada2bff99a2ed6fef4f3
+source-git-commit: 04babc1ec79a0816e1cb9f97e2711fe212f51387
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 7%
@@ -43,19 +43,14 @@ ht-degree: 7%
 |---|---|---|
 | [!UICONTROL 預設] |  | 資產的基本中繼資料結構表單。 |
 |  | 以下子表單繼承預設表單的 [!UICONTROL 屬性] : |  |
-|  | [!UICONTROL dm_video] | 動態媒體影片的架構表單。 |
-|  | [!UICONTROL 影像] | 具有MIME類型（如和）的映像的 `image/jpeg` 架構表 `image/png`單。 <br> 影 [!UICONTROL 像表單] 包含下列子表單範本： <ul><li> [!UICONTROL jpeg]: 子類型 [!UICONTROL jpeg資產的架構表單]。</li> <li>[!UICONTROL tiff]: 子類型為TIFF的資產的架構表單。</li></ul> |
-|  | [!UICONTROL 應用程式] | 具有MIME類型（如和）的資產的 `application/pdf` 架構表 `application/zip`格。 <br>[!UICONTROL pdf]: 子類型為PDF的資產的架構表單。 |
-|  | [!UICONTROL 視訊] | 具有MIME類型（如和）的視訊資產的 `video/avi` 架構表 `video/mp4`格。 |
+|  | <ul><li>[!UICONTROL dm_video]</li></ul> | 動態媒體影片的架構表單。 |
+|  | <ul><li>[!UICONTROL 影像]</li></ul> | 具有MIME類型（如和）的映像的 `image/jpeg` 架構表 `image/png`單。 <br> 影 [!UICONTROL 像表單] 包含下列子表單範本： <ul><li> [!UICONTROL jpeg]: 子類型 [!UICONTROL jpeg資產的架構表單]。</li> <li>[!UICONTROL tiff]: 子類型為TIFF的資產的架構表單。</li></ul> |
+|  | <ul><li>[!UICONTROL 應用程式]</li></ul> | 具有MIME類型（如和）的資產的 `application/pdf` 架構表 `application/zip`格。 <br>[!UICONTROL pdf]: 子類型為PDF的資產的架構表單。 |
+|  | <ul><li>[!UICONTROL 視訊]</li></ul> | 具有MIME類型（如和）的視訊資產的 `video/avi` 架構表 `video/mp4`格。 |
 | [!UICONTROL 集合] |  | 系列的結構表單。 |
 | [!UICONTROL contentfragment] |  | [內容片段的架構表單](/help/sites-developing/customizing-content-fragments.md)。 |
 | [!UICONTROL 表單] |  | 此結構表單與 [Adobe Experience Manager Forms相關](/help/forms/home.md)。 |
 | [!UICONTROL ugc_contentfragment] |  | 從社交媒體整合至Experience Manager的使用者產生內容片段和資產的架構表單。 |
-
-<!-- 
-TBD: video doesn't contain any sub types as listed above OOTB.
-application doesn't contain the sub type zip OOTB.
--->
 
 >[!NOTE]
 >
