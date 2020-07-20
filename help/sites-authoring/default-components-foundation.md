@@ -35,7 +35,7 @@ ht-degree: 9%
 
 有些可立即透過元件瀏覽器使用，而有的則可使用 [設計模式](/help/sites-authoring/default-components-designmode.md) （如果頁面是以靜態範本為基礎）或 [編輯範本](/help/sites-authoring/templates.md) （如果頁面是以可編輯的範本為基礎）。
 
-支援使用基礎元件，但大部分已經過時，並由核心元件取代，因為核心元件提供更多擴充性和彈性。
+支援使用基礎元件，但大部分都已過時，並由核心元件取代，因為核心元件提供更多擴充性和彈性。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 9%
 >
 >視您的例項而定，您可能已針對您的需求明確開發自訂元件。 這些元件甚至可能與此處討論的某些元件名稱相同。
 
-在編輯頁面時，這些組 **件可在頁面編輯器側面板的「組** 件」頁籤上使用 [](/help/sites-authoring/editing-content.md)。
+The components are available on the **Components** tab of the side panel of the page editor when [editing a page](/help/sites-authoring/editing-content.md).
 
 您可以選取元件，並將它拖曳至頁面上的必要位置。 然後，您可以使用：
 
@@ -52,9 +52,9 @@ ht-degree: 9%
 
 * [編輯內容——全螢幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-元件根據稱為元件組的各種類別進行排序，包括：
+Components are sorted according to various categories called component groups including:
 
-* [一般](#general): 包含基本元件，包括文字、影像、表格和圖表。
+* [General](#general): Includes basic components, including text, images, tables, and charts.
 * [欄](#columns): 包含組織內容版面配置所需的元件。
 * [表單](#formgroup): 包含建立表單所需的所有元件。
 
@@ -80,16 +80,16 @@ ht-degree: 9%
 
 「最適化影像」基礎元件會產生影像，調整大小以符合開啟網頁的視窗。 若要使用元件，請從檔案系統或DAM提供影像資源。 當網頁開啟時，網頁瀏覽器會下載已調整大小的影像副本，以適合目前的視窗。
 
-以下特性可確定窗口的大小：
+The following characteristics can determine the size of the window:
 
 * 裝置畫面： 行動裝置通常會顯示網頁，以延伸至整個螢幕。
 * 網頁瀏覽器視窗大小： 膝上型電腦和桌上型電腦的使用者可以調整網頁瀏覽器視窗的大小。
 
-例如，當網頁在行動電話上開啟時，元件會產生小型影像，而當在平板電腦上開啟時，元件會產生中型影像。 在膝上型電腦上，當在最大化的網頁瀏覽器中開啟頁面時，元件會建立並傳送大型影像。 當網頁瀏覽器調整大小以符合螢幕的一部分時，元件會傳送較小的影像並重新整理檢視，以適應此需求。
+例如，當網頁在行動電話上開啟時，元件會產生小型影像，而當在平板電腦上開啟時，元件會產生中型影像。 在膝上型電腦上，當頁面在最大化的網頁瀏覽器中開啟時，元件會建立並傳送大型影像。 當網頁瀏覽器調整大小以符合螢幕的一部分時，元件會傳送較小的影像並重新整理檢視，以適應此需求。
 
-#### 支援的影像格式 {#supported-image-formats}
+#### Supported Image Formats {#supported-image-formats}
 
-您可以將下列副檔名的影像檔案與Adaptive Image元件搭配使用：
+You can use image files of the following file name extensions with the Adaptive Image component:
 
 * .jpg
 * .jpeg
@@ -98,11 +98,11 @@ ht-degree: 9%
 
 >[!CAUTION]
 >
->AEM不支援最適化轉譯的GIF動畫檔案。
+>Animated GIF files are not supported in AEM for adaptive renditions.
 
-#### 影像大小與品質 {#images-sizes-and-quality}
+#### Images Sizes and Quality {#images-sizes-and-quality}
 
-下表列出為給定視區寬度生成的影像的寬度。 計算所生成的影像的高度以保持恆定的長寬比，並且影像邊緣內不出現空白。 裁切可用來避免空格。
+The following table lists the width of the image that is generated for the given viewport width. The height of the generated image is calculated to maintain a constant aspect ratio and no whitespace occurs inside the image edge. Cropping can be used to avoid whitespace.
 
 當影像是JPEG影像時，檢視區大小也會影響JPEG品質。 可能有下列JPEG品質：
 
@@ -113,7 +113,7 @@ ht-degree: 9%
 | **視區寬度範圍（像素）** | **影像寬度（像素）** | **JPEG 品質** | **目標裝置類型** |
 |---|---|---|---|
 | width &lt;= 319 | 320 | 低 |  |
-| width = 320 | 320 | 中 | 行動電話（縱向） |
+| width = 320 | 320 | 中 | Mobile phone (portrait) |
 | 320 &lt;寬度&lt; 481 | 480 | 中 | 行動電話（橫向） |
 | 480 &lt;寬度&lt; 769 | 476 | 高 | 平板電腦（縱向） |
 | 768 &lt;寬度&lt; 1025 | 620 | 高 | 平板電腦（橫向） |
@@ -121,7 +121,7 @@ ht-degree: 9%
 
 #### 屬性 {#properties}
 
-該對話框允許您編輯最適化影像元件實例的屬性，其中許多屬性與其所基於的影像元件相同。 這些屬性可在兩個標籤中使用：
+The dialog allows you to edit properties for your instance of the Adaptive Image component, many of which are common with the Image component on which it is based. 這些屬性可在兩個標籤中使用：
 
 * **影像**
 
@@ -143,9 +143,9 @@ ht-degree: 9%
 
    * **說明** Adaptive Image元件不使用此屬性。
 
-#### 擴充自適應影像元件 {#extending-the-adaptive-image-component}
+#### Extending the Adaptive Image Component {#extending-the-adaptive-image-component}
 
-有關自定義最適化影像元件的資訊，請參 [閱瞭解最適化影像元件](/help/sites-developing/responsive.md#using-adaptive-images)。
+For information about customizing the Adaptive Image component, see [Understanding the Adaptive Image Component](/help/sites-developing/responsive.md#using-adaptive-images).
 
 ### 傳送 {#carousel}
 
@@ -155,49 +155,59 @@ ht-degree: 9%
 
 「轉盤元件」可讓您顯示與個別頁面相關的影像：
 
-* 一次一個
-* 很短的時間
-* 依您指定的順序
+* one at a time
+* for a short time
+* in an order you specify
 * 以您指定的
 
-可點按的控制項也可讓使用者隨選即時循環檢視顯示的頁面。 按一下目前可見的頁面影像會帶您前往該頁面。 換言之，轉盤可當成導覽控制項。
+Clickable controls also let the user cycle through the displayed pages in real time, on demand. Clicking on the currently visible page image takes you to that page. In other words, the Carousel acts as a navigation control.
 
 #### 屬性 {#properties-1}
 
 這些頁籤可用於兩個頁籤：
 
-* **轉盤**&#x200B;在此處指定轉盤的運作方式：
+* **Carousel**
+Here you specify how the carousel operates:
 
    * 播放速度下一張投影片顯示前的毫秒數。
    * 轉換時間兩張投影片之間轉換的毫秒數時間。
-   * 控制樣式下拉式選單提供各種選項； 例如，「上／下一個按鈕」、「右上」開關。
+   * Controls Style
+Various options are available from a pulldown menu; for example, Prev / Next Buttons, Top-Right Switches.
 
 * **清單**
 
    您可在此處指定頁面在轉盤中的包含方式：
 
    * **使用建立清單**：建立頁面清單有數種方式——子頁面、固定清單、搜尋或進階搜尋（詳見下文）。
-請注意，無論您選擇哪種方法，您列在清單中的頁面都應已有與頁面相關聯的影像，而是此影像會顯示在轉盤中。 如果該頁面的「頁面屬性」下沒有指定頁面的影像，您應先將影像與頁面建立關聯，否則轉盤會顯示空白（或大部分為空白）頁面。 請參閱 [編輯頁面屬性](/help/sites-authoring/editing-page-properties.md)。
-根據您選擇的項目，將會出現新面板：
+Note that no matter which method you choose, the pages you include in your list should each already have an image associated with the page, it is this image that will be displayed in the Carousel. 如果該頁面的「頁面屬性」下沒有指定頁面的影像，您應先將影像與頁面建立關聯，否則轉盤會顯示空白（或大部分為空白）頁面。 請參閱 [編輯頁面屬性](/help/sites-authoring/editing-page-properties.md)。
+Depending on the item you choose a new panel will appear:
 
       * **子頁面的選項**
 
-         * **父頁面**&#x200B;手動或使用選擇器指定路徑。 留空可將目前頁面用作父頁面。
+         * **Parent Page**
+Specify a path either manually or using the selector. 留空可將目前頁面用作父頁面。
       * **固定清單的選項**
 
-         * **頁面**&#x200B;選擇頁面清單。 使 `+` 用新增更多項目和上／下按鈕來調整順序。
+         * **Pages**
+Select a list of pages. 使用 
+`+` to add more entries and the up/down buttons to adjust the order.
       * **搜尋選項**
 
          * **開始於**&#x200B;手動或使用選擇器輸入起始路徑。
 
-         * **搜索查詢**&#x200B;您可以輸入純文字檔案搜索查詢。
+         * **Search query**
+You can enter a plain text search query.
       * **進階搜尋的選項**
 
-         * **Querybuilder謂詞符號**您可以使用Querybuilder謂詞符號輸入搜索查詢。 例如，您可以輸入&quot;fulltext=Marketing&quot;，讓內容中具有&quot;Marketing&quot;的所有頁面都顯示在轉盤中。
+         * **Querybuilder predicate notation**
+You can enter a search query using Querybuilder predicate notation. 例如，您可以輸入&quot;fulltext=Marketing&quot;，讓內容中具有&quot;Marketing&quot;的所有頁面都顯示在轉盤中。
 如需 [查詢運算式和進一步範例的完整討論，請參閱QueryBuilder API](/help/sites-developing/querybuilder-api.md) 。
-   * **依順序**&#x200B;從下拉 `jcr:title`式選 `jcr:created`單中選 `cq:lastModified`取、 `cq:template` 或選取。
+   * **Order by**
+Select 
+`jcr:title`、 `jcr:created`、 `cq:lastModified`或 `cq:template` 從下拉菜單中。
 
-   * **限**&#x200B;制您要在轉盤中使用的項目數上限； 這是可選的。
+   * **Limit**
+The maximum number of items you would like to use in the Carousel; this is optional.
 
 
 
@@ -205,7 +215,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->您可以為Adobe Experience Manager建立自訂轉盤元件，以顯示位於AEM DAM中的數位資產。 如需詳細資訊，請 [參閱「建立Adobe Experience Manager的自訂轉盤元件」](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)。
+>You can create a custom carousel component for Adobe Experience Manager that displays digital assets located in the AEM DAM. For information, see [Creating Custom Carousel components for Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html).
 
 ### 圖表 {#chart}
 
@@ -213,11 +223,12 @@ ht-degree: 9%
 >
 >此Foundation元件已過時。 Adobe建議改用核 [心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 。
 
-圖表元件可讓您新增長條圖、折線圖或圓形圖。 AEM會從您提供的資料建立圖表。 您可以直接在「資料」索引標籤中輸入，或複製並貼上試算表，以提供資料。
+The Chart component lets you add a bar, line, or pie chart. AEM creates a chart from the data you provide. You provide data by typing directly into the Data tab or by copying and pasting a spreadsheet.
 
 * **資料**
 
-   * **圖表資**&#x200B;料使用CSV格式輸入圖表資料； 逗號分隔值格式使用逗號(&quot;,&quot;)作為欄位分隔符號。
+   * **Chart Data**
+Enter your chart data using the CSV format; the Comma Separated Values format uses commas (“,”) as the field separator.
 
 * **進階**
 
@@ -665,7 +676,7 @@ Reference **** （參考）元件可讓您參考AEM網站（在目前例項中�
 ### Sitemap {#sitemap}
 
 >[!CAUTION]
-此Foundation元件已過時。 Adobe建議改用 [導覽](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)、 [語言導覽](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html)和 [Breadcrumb核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html) 。
+此Foundation元件已過時。 Adobe建議改用 [導覽](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)、語 [言導覽](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html)和 [Breadcrumb核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html) 。
 
 自動網站地圖清單（使用預設設定）會列出目前網站中的所有頁面（作為作用中連結）。 例如，摘取顯示：
 
@@ -1470,5 +1481,5 @@ Captcha元件要求使用者輸入螢幕上顯示的英數字串。 字串會隨
 
 這可讓您建立「提交」按鈕，以便用於工作流程。
 
-![chlimage_1-101](assets/chlimage_1-101.png)
+![chlimage_1-181](assets/chlimage_1-101.png)
 
