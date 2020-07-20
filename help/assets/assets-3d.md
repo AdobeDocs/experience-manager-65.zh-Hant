@@ -16,7 +16,7 @@ ht-degree: 1%
 ---
 
 
-# 在動態媒體中使用3D資產 {#working-with-three-d-assets-dm}
+# Working with 3D assets in Dynamic Media {#working-with-three-d-assets-dm}
 
 動態媒體可讓您上傳、管理、檢視和傳遞3D資產，成為身歷其境的體驗。
 
