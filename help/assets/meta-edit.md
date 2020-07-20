@@ -3,9 +3,9 @@ title: 如何編輯或新增中繼資料
 description: 透過各種可編輯資 [!DNL Adobe Experience Manager Assets] 產中繼資料的方式，瞭解資產中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 4748eed3ce484e8446b641ccbc7b5d76cb66f428
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # 如何編輯或新增中繼資料 {#how-to-edit-or-add-metadata}
 
-中繼資料是可搜尋之資產的其他資訊。 上傳影像時會自動擷取。 您可以編輯現有的中繼資料，或將新的中繼資料屬性新增至現有欄位（例如，中繼資料欄位空白時）。
+中繼資料是可搜尋之資產的其他資訊。 上傳影像時會自動擷取。 您可以編輯現有的中繼資料，或將新的中繼資料屬性新增至現有欄位，例如，中繼資料欄位空白時。
 
-由於組織需要可控且可靠的中繼資料詞 [!DNL Experience Manager Assets] 匯，因此不允許隨選新增中繼資料屬性。 雖然作者無法為資產新增中繼資料欄位，但開發人員可以。 請參 [閱建立資產的中繼資料屬性](meta-edit.md#editing-metadata-schema)。
+組織需要可控且可靠的中繼資料辭彙。 因 [!DNL Experience Manager Assets] 此不允許隨選新增中繼資料屬性。 開發人員而非作者可以新增資產的中繼資料欄位。 請參 [閱建立資產的中繼資料屬性](meta-edit.md#editing-metadata-schema)。
 
 ## 編輯資產的中繼資料 {#editing-metadata-for-an-asset}
 
@@ -25,10 +25,11 @@ ht-degree: 0%
 
    * 從介面 [!DNL Assets] 中，選擇資產，然後從工具 **[!UICONTROL 列按一下「檢視屬性]** 」。
    * 從資產縮圖中，選取「檢視 **[!UICONTROL 屬性]** 」快速動作。
-   * 在資產頁面中，按一 **[!UICONTROL 下工具列]**![中的「檢視屬性」(View Properties](assets/chlimage_1-168.png) chlimage_1-168)。
+   * 在資產頁面中，按一下工 **[!UICONTROL 具列中的「檢]**![視屬性資](assets/do-not-localize/info-circle-icon.png) 產資訊」圖示。
+
    資產頁面會顯示資產的所有中繼資料。 當資產上傳（收錄）至時，會擷取中繼資料 [!DNL Experience Manager]。
 
-   ![選取資產屬性以檢視中繼資料](assets/asset-metadata.png)
+   ![選取資產的屬性以檢視其中繼資料](assets/asset-metadata.png)
 
    *圖： 在資產屬性頁面上編輯或新[!UICONTROL 增中繼資]料。*
 
@@ -50,8 +51,14 @@ ht-degree: 0%
 
 您可以在中新增自己的名稱空間 [!DNL Experience Manager]。 就像有預先定義的名稱空間 `cq`(如、 `jcr`和 `sling`)一樣，您也可以為儲存庫元資料和XML處理提供一個命名空間。
 
-1. 轉至節點類型管理頁 `https:[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`。
-1. 按一 **[!UICONTROL 下頁面頂端]** 「命名空間」。 命名空間管理頁面會顯示在視窗中。
-
-1. 若要新增命名空間，請按一 **[!UICONTROL 下底部]** 的「新增」。
+1. 訪問節點類型管理頁 `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`。
+1. 若要存取命名空間管理頁面，請按 **[!UICONTROL 一下頁面頂端的]** 「命名空間」。
+1. 若要新增命名空間，請 **[!UICONTROL 按一下]** 頁面底部的「新增」。
 1. 在XML命名空間慣例中指定自訂命名空間。 以URI的形式指定ID，並為ID指定相關首碼。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+
+>[!MORELIKETHIS]
+>
+>* [關於資產中的中繼資料及其需求](metadata.md)
+>* [XMP 中繼資料](xmp.md)
+>* [中繼資料圖式參考](meta-ref.md)
+
