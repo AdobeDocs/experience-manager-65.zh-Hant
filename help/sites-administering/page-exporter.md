@@ -1,25 +1,26 @@
 ---
 title: 頁面匯出器
-seo-title: 頁面匯出器
 description: 瞭解如何使用AEM Page Exporter。
-seo-description: 瞭解如何使用AEM Page Exporter。
-uuid: 2ca2b8f1-c723-4e6b-8c3d-f5886cd0d3f1
-contentOwner: Chiradeep Majumdar
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: content
-content-type: reference
-discoiquuid: 6ab07b5b-ee37-4029-95da-be2031779107
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 000666e0c3f05635a9469d3571a10c67b3b21613
+workflow-type: tm+mt
+source-wordcount: '1071'
+ht-degree: 0%
 
 ---
 
 
 # 頁面匯出器{#the-page-exporter}
 
-AEM可讓您將頁面匯出為完整的網頁，包括影像、.js和。css檔案。
+AEM可讓您將頁面匯出為完整的網頁，包括影像 `.js` 和 `.css` 檔案。
 
-在設定匯出後，您只需在瀏覽器中以URL中的取代來請求頁面， `html``export.zip` 就可取得包含以html格式呈現的頁面和參考資產的Zip檔案下載。 頁面中的所有路徑（例如影像路徑）都會重寫，以指向zip檔案中包含的檔案或伺服器上的資源。
+在設定後，您會以URL中的取代，從瀏覽器 `html` 請求 `export.zip` 頁面匯出。 這會產生封存(zip)檔案，其中包含以html格式呈現的頁面，以及參考的資產。 頁面中的所有路徑（例如，到映像的路徑）都會被重寫，以指向歸檔檔案中包含的檔案或伺服器上的資源。 然後，可從您的瀏覽器下載封存(zip)檔案。
+
+>!![NOTE]
+視您的瀏覽器和設定而定，下載內容會是：
+* 檔案(`<page-name>.export.zip`)
+* 資料夾(`<page-name>`); 有效地擴展了歸檔檔案
+
 
 ## 匯出頁面 {#exporting-a-page}
 
@@ -27,110 +28,156 @@ AEM可讓您將頁面匯出為完整的網頁，包括影像、.js和。css檔�
 
 若要匯出頁面：
 
-1. 在您的瀏覽器中，開啟頁面。 例如：
-1. `http://localhost:4502/content/geometrixx/en/products/triangle.html`
-1. 開啟頁面屬性對話方塊，選取「進 **階** 」標籤並展開「 **匯出** 」欄位集。
+1. 導覽至所需頁面，選取頁面，然後開啟「屬 **性** 」對話方塊。
 
-1. 按一下放大鏡表徵圖並選擇配置模板。 選取 **geometrixx** 範本，因為它是Geometrixx網站的預設範本。 按一下 **確定**。
+1. 選擇「高 **級** 」頁籤。
 
-1. 按一 **下「確定** 」以關閉頁面屬性對話方塊。
-1. 在URL中以取代 `html` 來請 `export.zip` 求頁面。
+1. 展開「 **導出** 」欄位以選擇配置模板。
+選取您網站的必要範本，然後使用「確定」 **確認**。
 
-1. 將檔案 `<page-name>.export.zip` 下載至您的檔案系統。
+1. 選擇 **「保存並關閉** 」以關閉頁面屬性對話框。
 
-1. 在您的檔案系統中，解壓縮檔案：
+1. 請求要匯出的頁面，在URL中 `html` 取 `export.zip` 代字尾。
 
-   * 頁面html檔案( `<page-name>.html`)可在 `<unzip-dir>/<page-path>`
-   * 其他資源（.js檔案、.css檔案、影像……）會根據匯出範本中的設定進行定位。 在此範例中，有些資源在下 `<unzip-dir>/etc`面，有些在下 `<unzip-dir>/<page-path>`面。
+   例如：
+   * localhost:4502/content/we-retail/language-masters/en.html
 
-1. 在瀏覽器中開啟頁面html `<unzip-dir>/<page-path>.html`檔案()以檢查演算。
+   存取方式：
+   * localhost:4502/content/we-retail/language-masters/en.export.zip
+
+
+1. 將存檔檔案下載到檔案系統。
+
+1. 在您的檔案系統中，視需要解壓縮檔案。 展開後，會有與選取頁面同名的檔案夾。 此資料夾包含：
+
+   * 子資料夾 `content`，它是反映儲存庫中頁面路徑的一系列子資料夾的根
+
+   * 在此結構中，有選定頁面的html檔案(`<page-name>.html`)
+
+   * 其他資源(`.js` 檔案、 `.css` 檔案、影像等) 是根據匯出範本中的設定所定位
+
+1. 在瀏覽器中開啟頁面html`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`檔案()以檢查演算。
 
 ## 為您的網站建立頁面匯出器設定 {#creating-a-page-exporter-configuration-for-your-site}
 
-頁面匯出器是以「內容同步」架構為基礎。 頁面屬性對話框中可用的配置是配置模板。 它們定義了頁面的所有必需依賴項。 觸發頁面匯出時，會使用設定範本，並動態地將頁面路徑和設計路徑套用至設定。 然後使用標準的「內容同步」功能建立zip檔案。
+頁面匯出器是以「內容同步」架構為基礎。 「頁面屬性」對話框中 **可用的配置** ，是定義頁面所需相依性的導出模板。
 
-AEM內嵌一些範本，包括：
+觸發頁面匯出時，會參考匯出範本，並動態套用頁面路徑和設計路徑。 然後使用標準的「內容同步」功能建立zip檔案。
 
-* 預設值 `/etc/contentsync/templates/default`。 此範本：
+AEM會內嵌預設範本於 `/etc/contentsync/templates/default`。
 
-   * 在儲存庫中未找到配置模板時是備用模板。
-   * 可作為新配置模板的基礎。
+* 當在儲存庫中未找到配置模板時，此模板是備用模板。
 
-* 專用於 **Geometrixx網站的** ，網址為 `/etc/contentsync/templates/geometrixx`。 此範本可做為建立新範本的範例。
+* 范 `default` 本會顯示如何設定頁面匯出，以做為新設定範本的基礎。
 
-要建立頁面導出器配置模板，請執行以下操作：
+* 若要以JSON格式檢視瀏覽器中範本的節點結構，請要求下列URL:
+   `http://localhost:4502/etc/contentsync/templates/default.json`
+
+建立新頁面匯出器範本最簡單的方法是：
+
+* 複製范 `default` 本，
+
+* 為您的網站指定新名稱，
+
+* 然後進行必要的更新。
+
+若要建立全新範本：
 
 1. 在 **CRXDE Lite中**，建立下方的節點 `/etc/contentsync/templates`:
 
-   * 名稱：例如， `mysite`。 選擇頁面導出器模板時，名稱將出現在頁面屬性對話框中。
-   * 類型: `nt:unstructured`
+   * `Name`: 適合您網站的名稱； 例如， `<mysite>`。 選擇頁面導出器模板時，名稱將出現在頁面屬性對話框中。
+
+   * `Type`: `nt:unstructured`
 
 1. 在範本節點（在此處調用） `mysite`下，使用下面介紹的配置節點建立節點結構。
 
+## 為頁面啟用頁面匯出器範本 {#activating-a-page-exporter-configuration-for-your-pages}
+
+在設定範本後，您必須將它提供：
+
+1. 在CRXDE中，導覽至所需頁面。
+
+1. 在節點 `jcr:content` 上建立屬性：
+   * `Name`: `cq:exportTemplate`
+   * `Type`: `String`
+   * `Value`: 範本路徑； 例如： `/etc/contentsync/templates/mysite`
+
 ### 頁面導出器配置節點 {#page-exporter-configuration-nodes}
 
-配置模板由節點結構組成。 每個節點都有 `type` 一個屬性，可定義zip檔案建立過程中的特定操作。 有關type屬性的詳細資訊，請參閱「內容同步框架」頁中的「配置類型概述」部分。
+模板由節點結構組成。 每個節點都有 `type` 一個屬性，可定義zip檔案建立過程中的特定操作。 有關type屬性的詳細資訊，請參閱「內容同步框架」頁中的「配置類型概述」部分。
 
 以下節點可用於構建導出配置模板：
 
-**page node** （頁面節點）頁面節點用於將頁面html複製到zip檔案。 它具有以下特點：
+* `page`
+頁面節點用於將頁面html複製到zip檔案。 它具有以下特點：
 
-* 是強制節點。
-* 位於下方 `/etc/contentsync/templates/<sitename>`。
-* 其名稱為 `page`。
-* 其節點類型為 `nt:unstructured`
+   * 是強制節點。
+   * 位於下方 `/etc/contentsync/templates/<sitename>`。
+   * 其名稱為 `page`。
+   * 其節點類型為 `nt:unstructured`
 
-節 `page` 點具有以下屬性：
+   節 `page` 點具有以下屬性：
 
-* 與 `type` 值一起設定的屬性 `pages`。
+   * 與 `type` 值一起設定的屬性 `pages`。
 
-* 它沒有屬性， `path` 因為目前頁面路徑會動態複製至設定。
+   * 它沒有屬性， `path` 因為目前頁面路徑會動態複製至設定。
 
-* 其他屬性在Content sync框架的「配置類型概述」部分中介紹。
+   * 其他屬性在Content Sync框架的「配置類型概述」部分中介紹。
 
-**rewrite node** 重寫節點定義如何在導出的頁面中重寫連結。 重寫的連結可以指向包含在zip檔案中的檔案或指向伺服器上的資源。
 
-請參閱「內容同步」頁面，以取得節點的完整說 `rewrite` 明。
+* `rewrite`
+重寫節點定義如何在導出的頁面中重寫連結。 重寫的連結可以指向包含在zip檔案中的檔案或指向伺服器上的資源。
 
-**設計節點** ：設計節點用於複製用於導出頁面的設計。 它具有以下特點：
+   請參閱「內容同步」頁面，以取得節點的完整說 `rewrite` 明。
 
-* 是可選的。
-* 位於下方 `/etc/contentsync/templates/<sitename>`。
-* 其名稱為 `design`。
-* 其節點類型為 `nt:unstructured`。
+* `design`
+設計節點用於複製用於導出頁面的設計。 它具有以下特點：
 
-節 `design` 點具有以下屬性：
+   * 是可選的。
+   * 位於下方 `/etc/contentsync/templates/<sitename>`。
+   * 其名稱為 `design`。
+   * 其節點類型為 `nt:unstructured`。
 
-* 設 `type` 置為值的屬性 `copy`。
+   節 `design` 點具有以下屬性：
 
-* 它沒有屬性， `path` 因為目前頁面路徑會動態複製至設定。
+   * 設 `type` 置為值的屬性 `copy`。
 
-**一般節點** ：一般節點可用來將clientlibs .js或。css檔案等資源複製到zip檔案。 它具有以下特點：
+   * 它沒有屬性， `path` 因為目前頁面路徑會動態複製至設定。
 
-* 是可選的。
-* 位於下方 `/etc/contentsync/templates/<sitename>`。
-* 沒有特定名稱。
-* 其節點類型為 `nt:unstructured`。
-* 具有Content `type` Sync框架 `type` 的「配置類型概述」部分中定義的屬性和任何相關屬性。
 
-例如，下列設定節點會將geometrixx clientlibs .js檔案複製至zip檔案：
+* `generic`
+一般節點可用來將clientlibs .js或。css檔案等資源複製至zip檔案。 它具有以下特點：
 
-```xml
-"geometrixx.clientlibs.js": {
-    "extension": "js",
-    "type": "clientlib",
-    "path": "/etc/designs/geometrixx/clientlibs",
-    "jcr:primaryType": "nt:unstructured"
-}
-```
+   * 是可選的。
 
-Geometrixx **** page export設定範本會顯示如何設定頁面匯出。 若要以json格式檢視瀏覽器中範本的節點結構，請要求下列URL:
+   * 位於下方 `/etc/contentsync/templates/<sitename>`。
 
-`http://localhost:4502/etc/contentsync/templates/geometrixx.-1.json`
+   * 沒有特定名稱。
+
+   * 其節點類型為 `nt:unstructured`。
+
+   * 具有Content `type` Sync框架 `type` 的「配置類型概述」部分中定義的屬性和任何相關屬性。
+
+   例如，以下配置節點將文 `mysite.clientlibs.js` 件複製到zip檔案：
+
+   ```xml
+   "mysite.clientlibs.js": {
+       "extension": "js",
+       "type": "clientlib",
+       "path": "/etc/designs/mysite/clientlibs",
+       "jcr:primaryType": "nt:unstructured"
+   }
+   ```
 
 **實作自訂設定**
 
-如您在節點結構中所注意的， **Geometrixx** page export配置模板有一個 `logo` 將屬性設定為 `type` 的節點 `image`。 這是已建立的特殊組態類型，可將影像標誌複製至zip檔案。 為符合某些特定需求，您可能需要實作自訂屬 `type` 性：若要這麼做，請參閱「內容同步」頁面中的「實作自訂更新處理常式」區段。
+您也可以使用自訂設定。
+
+<!--
+As you may have noticed in the node structure, the **Geometrixx** page export configuration template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
+-->
+
+為符合某些特定需求，您可能需要實作自訂屬 `type` 性： 若要這麼做，請參閱「內容同步」頁面中的「實作自訂更新處理常式」區段。
 
 ## 以程式設計方式匯出頁面 {#programmatically-exporting-a-page}
 
