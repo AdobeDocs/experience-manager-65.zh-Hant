@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
+source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
 workflow-type: tm+mt
-source-wordcount: '5004'
+source-wordcount: '5035'
 ht-degree: 1%
 
 ---
@@ -81,19 +81,16 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 本節包含有關安裝演示軟體包的資訊。
 
-### 從包共用 {#from-package-share}
+### 從軟體分發 {#from-software-distribution}
 
-1. 導覽至 *https://&lt;aemserver>:&lt;port>/crx/packageshare/*
-
-   或在AEM中，按一下「部署」並導覽至「封裝共用圖示」。
-
-   ![套裝共用圖示](assets/package_share_icon.jpg)
-
-1. 使用您的Adobe ID登入。
-1. 搜尋並找 **到we-gov-forms.pkg.all-&lt;version>套件** 。
-1. 選取「下載」選項並接受條款與條件。
-1. 下載後，選擇「已下載」選項，在「套件管理器」中找到套件。
-1. 選擇「安裝」選項以安裝軟體包。
+1. 開放 [軟體散發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
+1. 點選 **[!UICONTROL 頁首選單中的]** 「Adobe Experience Manager」。
+1. 在「篩 **[!UICONTROL 選器]** 」區段：
+   1. 從「 **[!UICONTROL 解決方]** 案 **[!UICONTROL 」下拉式清單中選]** 取「表單」。
+   2. 選擇包的版本和類型。 您也可以使用「搜尋 **[!UICONTROL 下載」選項]** ，來篩選結果。
+1. 點選 **we-gov-forms.pkg.all-&lt;version>.zip** 套件名稱，選取「 **[!UICONTROL Accept EULA Terms]**」，然後點選「 **[!UICONTROL 下載]**」。
+1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
+1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
    ![wee govforms package](assets/wegov_forms_package.jpg)
 
@@ -322,7 +319,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 1. 在「設定」檢視中，按一下「金鑰」以檢視建立新金鑰（這會用作AEM中的「用戶端密碼」）。
 
-   1. 請務必保留金鑰副本，因為您以後無法在Azure或AEM中檢視它。
+   1. 請務必保留金鑰的副本，因為您以後無法在Azure或AEM中檢視它。
 
 1. 要找到資源URL/服務根URL，請導航到MS Dynamics實例儀表板。
 1. 在頂端導覽列中，按一下「銷售」或您自己的例項類型，然後按一下「選取設定」。
