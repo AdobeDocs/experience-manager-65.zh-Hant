@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9bd71115dac8109c9a47155ab60ac7573d88014c
+source-git-commit: 81707b4d57f7f15106459b91f95b1bc6ec333bf4
 workflow-type: tm+mt
 source-wordcount: '3221'
 ht-degree: 0%
@@ -336,10 +336,7 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 >* 位於臨機資料夾的資產不會出現在Scene7內容瀏覽器中。
 >* 啟用「 [安全預覽」後](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene),Scene7上已發佈和未發佈的資產都會出現在Scene7內容瀏覽器中。
 >* 如果您未在內 **容瀏覽器中將Scene7** 或 **S7** 圖示視為選項，則需 [要設定Scene7以搭配AEM運作](/help/sites-administering/scene7.md)。
-
-   >
-   >
-* 對於視訊，Scene7內容瀏覽器支援：
+>* 對於視訊，Scene7內容瀏覽器支援：
    >   * 最適化視訊集： 容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
    >   * 單一MP4視訊
    >   * 單一F4V視訊
