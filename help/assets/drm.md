@@ -3,9 +3,9 @@ title: 數位版權管理 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解如何管理中授權資產的資產到期狀態和資訊 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ee54a3fa395e2c1ab4a5895a0bb8fc251d24a35a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1422'
 ht-degree: 6%
 
 ---
@@ -108,10 +108,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. 從工具 **[!UICONTROL 列按一下]** 「發佈」。 如果您在工具列上未看 **到** 「發佈」，請按一下工具列上的「更多 **[!UICONTROL 」，然後找出「]** 發佈 **** 」選項。
-
-   ![chlimage_1-156](assets/chlimage_1-156.png)
-
+1. Click **[!UICONTROL Publish]** from the toolbar. 如果您在工具列上看不到 **Publish** ，請按一下工具列上的 **[!UICONTROL More]** ，然後找到Publish ****![](assets/do-not-localize/publish-globe.png) publish選項Don。
 1. 從功 **[!UICONTROL 能表選擇]** 「發佈」，然後關閉確認對話框。
 1. 退出選擇模式。 資產的出版物狀態會顯示在卡片檢視中資產縮圖的底部。 在清單檢視中，「已發佈」欄會顯示資產發佈的時間。
 
@@ -138,10 +135,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. 若要根據資產狀態來搜尋資產，請按一 **[!UICONTROL 下「搜尋]** 」以顯示Omnisearch列。
-
-   ![chlimage_1-162](assets/chlimage_1-162.png)
-
+1. 若要根據資產狀態來搜尋資產，請按一 **[!UICONTROL 下「搜]**![尋」選項](assets/do-not-localize/search_icon.png) ，以顯示「搜尋列」。
 1. 按return並按一下 [!DNL Experience Manager] 以顯示搜索面板。
 1. In the search panel, click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in [!DNL Assets].
 
