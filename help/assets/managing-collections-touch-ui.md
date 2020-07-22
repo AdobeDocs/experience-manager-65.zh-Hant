@@ -4,9 +4,9 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 983f281b77a122c757bb508bee570c6c8490a2b9
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2200'
 ht-degree: 12%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 您可以與使用者共用多個系列。 每個系列都包含資產的參考。 資產的參考完整性會跨系列維持。
 
-系列是以下類型，根據其收集資產的方式：
+系列是以下類型，依據其收集資產的方式：
 
 * 包含資產、檔案夾和其他系列之靜態參考清單的系列。
 
@@ -124,10 +124,7 @@ ht-degree: 12%
 
 智慧型系列是透過儲存搜尋來建立的，因此您可以修改已儲存搜尋的搜尋參數來變更其 [內容](#saved-searches)。
 
-1. 在「資產」使用者介面中，按一下工具列中的搜尋選項。
-
-   ![chlimage_1-9](assets/chlimage_1-110.png)
-
+1. 在「資產」使用者介面中，按一下工具列中 ![的搜尋選項](assets/do-not-localize/search_icon.png) 「搜尋」選項。
 1. 在Omnisearch框中，按Return鍵。
 1. 在Experience Manager介面中，開啟「篩選」面板。
 1. 從「保 **[!UICONTROL 存的搜索]** 」清單中，選擇要修改的智慧系列。「搜尋」面板會顯示為儲存的搜尋設定的篩選器。
@@ -256,12 +253,9 @@ ht-degree: 12%
 
 要刪除保存的搜索，請執行以下步驟：
 
-1. 在「資產」使用者介面中，按一 ![下search chlimage_1-13](assets/chlimage_1-114.png)。
-
-1. 在「Omnisearch」（搜索）欄位中，按Enter鍵。
-
+1. 在「資產」使用者介面中，按一下「搜尋 ![搜尋」選項](assets/do-not-localize/search_icon.png)。
+1. 在「Omnisearch」（搜索）欄位中，按Return鍵。
 1. 在Experience Manager介面中，開啟「篩選」面板。
-
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection](assets/select_smart_collection.png)
@@ -273,7 +267,7 @@ ht-degree: 12%
 您可以為系列中的資產執行工作流程。 如果系列包含巢狀系列，工作流程也會在巢狀系列內的資產上執行。 不過，如果系列和巢狀系列包含重複的資產，此類資產的工作流程只會執行一次。
 
 1. 開啟 **[!UICONTROL 資產]** > **[!UICONTROL 系列]**。 若要在特定系列上執行工作流程，請選取它。
-1. 開啟 **[!UICONTROL 時間軸]** 邊欄。 按一 ![下chlimage_1-14](assets/chlimage_1-137.png) ，然後按一 **[!UICONTROL 下「開始工作流程」]**。
+1. 開啟 **[!UICONTROL 時間軸]** 邊欄。 按一下 ![雪佛龍](assets/do-not-localize/chevron-up-icon.png) ，然後按一下 **[!UICONTROL 啟動工作流]**。
 1. 在「開 **[!UICONTROL 始工作流]** 」部分，從清單中選擇工作流模型。例如，選取「 **[!UICONTROL DAM更新資產」模型]** 。
 1. 輸入工作流的標題，然後按一下「開 **[!UICONTROL 始」]**。
 1. In the dialog, click **[!UICONTROL Proceed]**. 工作流程會處理選取之系列中的所有資產。
