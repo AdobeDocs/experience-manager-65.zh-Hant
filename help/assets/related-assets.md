@@ -3,9 +3,9 @@ title: 相關資產
 description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -37,15 +37,13 @@ ht-degree: 0%
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. 若要將另一個資產與您選取的資產建立關聯，請按一下工 **[!UICONTROL 具列中]** 的「建立關聯」。
-
-   ![chlimage_1-275](assets/chlimage_1-275.png)
-
+1. 若要將另一個資產與您選取的資產建立關聯，請按一 **[!UICONTROL 下工]** 具 ![列中的「建立關聯資產](assets/do-not-localize/link-relate.png) 」。
 1. 執行下列任一項作業：
 
    * 要關聯資產的源檔案，請從清單中 **[!UICONTROL 選擇]** 「源」。
    * 要關聯派生檔案，請從列 **[!UICONTROL 表中選擇]** 「派生」。
    * 若要在資產之間建立雙向關係，請從清單中選 **[!UICONTROL 取]** 「其他」。
+
    ![chlimage_1-276](assets/chlimage_1-276.png)
 
 1. 從「選 **[!UICONTROL 取資產]** 」畫面，導覽至您要建立關聯的資產所在的位置，然後加以選取。
@@ -59,7 +57,7 @@ ht-degree: 0%
 
 1. 若要解除資產的關聯，請按一下工 **[!UICONTROL 具列中的]** 「解除關聯」。
 
-   ![chlimage_1-279](assets/chlimage_1-279.png)
+   ![非關聯資產](assets/do-not-localize/link-unrelate-icon.png)
 
 1. 從「移除關係」( **[!UICONTROL Remove Relations]** )對話框中選取要解除關聯的資產，然後按一下「取 **[!UICONTROL 消關聯」(Unrelate)]**。
 
