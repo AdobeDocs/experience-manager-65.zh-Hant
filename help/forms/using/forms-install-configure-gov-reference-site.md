@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
+source-git-commit: 5412d788ccebe00707f2d94dfb1e40da6cb0471c
 workflow-type: tm+mt
 source-wordcount: '5035'
 ht-degree: 1%
@@ -222,7 +222,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 ### 填寫及簽署多份表格 {#fill-sign-multiple-forms}
 
-本檔案說明設定填寫及簽署多個表單的能力所需的步驟。 您也可以在這裡嘗 [試相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例將此示例所需的必要資料儲存在AME儲存庫中。 這麼做是為了確保在您的本機伺服器上部署示範資產時，體驗順暢無阻。 在現實生活中，我們會將您選擇的相同資訊儲存在RDMS中。
+本檔案說明設定填寫及簽署多個表單的能力所需的步驟。 您也可以在這裡嘗 [試相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此範例會將此範例所需的必要資料儲存在AEM儲存庫中。 這麼做是為了確保在您的本機伺服器上部署示範資產時，體驗順暢無阻。 在現實生活中，我們會將您選擇的相同資訊儲存在RDMS中。
 
 #### 必備條件 {#pre-requisites-fill-sign-multiple-forms}
 
@@ -319,7 +319,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 1. 在「設定」檢視中，按一下「金鑰」以檢視建立新金鑰（這會用作AEM中的「用戶端密碼」）。
 
-   1. 請務必保留金鑰的副本，因為您以後無法在Azure或AEM中檢視它。
+   1. 請務必保留金鑰副本，因為您以後無法在Azure或AEM中檢視它。
 
 1. 要找到資源URL/服務根URL，請導航到MS Dynamics實例儀表板。
 1. 在頂端導覽列中，按一下「銷售」或您自己的例項類型，然後按一下「選取設定」。
