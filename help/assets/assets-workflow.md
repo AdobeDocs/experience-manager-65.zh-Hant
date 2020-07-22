@@ -3,9 +3,9 @@ title: 處理資產以完成業務流程、進行審核、實現法規遵從性�
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f6c770e8830bd2fe7c436c4bfe9725564c49a08f
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '979'
 ht-degree: 3%
 
 ---
@@ -72,10 +72,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
-1. 按一 **[!UICONTROL 下底部]** 的「動作」。
-
-   ![chlimage_1-30](assets/chlimage_1-137.png)
-
+1. 按一 **[!UICONTROL 下底]** 部的 ![](assets/do-not-localize/chevron-up-icon.png) 「動作(Actions)」。
 1. 按一下「 **[!UICONTROL 開始工作流程]**」。 In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
 
    ![chlimage_1-31](assets/chlimage_1-138.png)
