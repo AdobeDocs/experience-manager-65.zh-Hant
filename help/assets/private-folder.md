@@ -3,9 +3,9 @@ title: 在Adobe Experience Manager中建立和共用私人資料夾。
 description: 瞭解如何在Adobe Experience Manager Assets中建立私人資料夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # 私人資料夾共用 {#private-folder-sharing}
 
-您可以在Adobe Experience Manager Assets使用者介面中建立專屬於您的私人資料夾。 You can share this private folder to other users and assign various privileges to them. Based on the privilege level you assign, users can perform various tasks on the folder, for example view assets within the folder or edit the assets.
+您可以在Adobe Experience Manager Assets使用者介面中建立專屬於您的私人資料夾。 您可以將此私人資料夾共用給其他使用者，並為其指派各種權限。 根據您指派的權限層級，使用者可以對資料夾執行各種工作，例如檢視資料夾內的資產或編輯資產。
 
 >[!NOTE]
 >
->Private folder has at least one member with Owner role.
+>私人資料夾至少有一個擁有擁有者角色的成員。
 
-1. In the Assets console, click **[!UICONTROL Create]** from the toolbar and then choose **[!UICONTROL Folder]** from the menu.
+1. 在「資產」主控台中，按一 **[!UICONTROL 下工具列中的]** 「建立」，然後從功能表 **[!UICONTROL 選擇「資料夾]** 」。
 
-   ![Create assets folder](assets/Create-folder.png)
+   ![建立資產檔案夾](assets/Create-folder.png)
 
 1. 在「創 **[!UICONTROL 建資料夾]** 」對話框中，輸入資料夾的標題和名稱（可選），然後選擇「 **[!UICONTROL 私用」]**。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 1. To share the folder with other users and the assign privileges to them, select the folder, and click **[!UICONTROL Properties]** from the toolbar.
 
-   ![chlimage_1-414](assets/chlimage_1-414.png)
+   ![資訊選項](assets/do-not-localize/info-circle-icon.png)
 
    >[!NOTE]
    >
@@ -65,4 +65,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->To be able to create a private folder, you require Read and Edit ACL permissions on the parent folder under which you want to create a private folder. 如果您不是管理員，則這些權限依預設不會為您啟用 `/content/dam`。 In this case, first obtain these permissions for your user ID/group before attempting to create private folders or view folder settings.
+>要能夠建立專用資料夾，您需要對要建立專用資料夾的父資料夾具有讀取和編輯ACL權限。 如果您不是管理員，則這些權限依預設不會為您啟用 `/content/dam`。 在此情況下，請先取得使用者ID/群組的這些權限，再嘗試建立私人資料夾或檢視資料夾設定。
