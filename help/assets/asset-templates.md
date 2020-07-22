@@ -3,9 +3,9 @@ title: 中的資產模板 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解資產範本 [!DNL Adobe Experience Manager Assets] ，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Asset templates {#asset-templates}
 
-資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
+資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新運用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
 
 在確保全球標牌安全的同時，靈活地進行有限的編輯，使資產模板成為快速調整內容和分發內容的理想構件，以便用於各種功能的內容製品。 重新調整內容用途有助於降低管理印刷和數位通道的成本，並跨這些通道提供全方位且一致的體驗。
 
@@ -165,9 +165,7 @@ ht-degree: 0%
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. 在「範本 [!UICONTROL 合併] 」頁面中，按一 **[!UICONTROL 下合併]**。
-
-   ![chlimage_1-121](assets/chlimage_1-326.png)
+1. 在「範本 [!UICONTROL 合併] 」頁面中，按一 **[!UICONTROL 下「合]** 並 ![新增資產](assets/do-not-localize/assets_add_icon.png)」。
 
 1. 導航到要合併的宣傳品的位置，按一下要合併的宣傳品的縮圖以選擇它們。
 
@@ -185,7 +183,7 @@ ht-degree: 0%
 
    ![chlimage_1-125](assets/chlimage_1-330.png)
 
-1. 從工具 **[!UICONTROL 列按一下]** 「下一步」。
+1. Click **[!UICONTROL Next]** from the toolbar.
 1. 在「預 **[!UICONTROL 覽與重新排序]** 」畫面中，視需要重新排列範本，並預覽要合併的範本選擇。 然後，從工具 **[!UICONTROL 列按一下]** 「下一步」。
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
