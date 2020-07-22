@@ -3,7 +3,7 @@ title: 「建立和配置資產編輯器」頁
 description: 瞭解如何建立自訂資產編輯器頁面並同時編輯多個資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '2135'
 ht-degree: 1%
@@ -290,7 +290,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 以下是包含各種欄位的中繼資料表單範例：
 
-![chlimage_1-162](assets/chlimage_1-390.png)
+![中繼資料](assets/chlimage_1-390.png)
 
 然後，在「資產編輯器」頁面上，使用者可以在中繼資料欄位中輸入值（如果可編輯），並執行結束動作（例如提交變更）。
 
@@ -405,6 +405,7 @@ Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會�
 
    * 在Windows上： `Ctrl + click` 每個資產。
    * 在Mac上： `Cmd + click` 每個資產。
+
    若要選取資產範圍： 按一下第一個資產，然 `Shift + click` 後按一下最後一個資產。
 
 1. 按一 **下「動作****** 」欄位（頁面左側）中的「編輯中繼資料」。
@@ -419,11 +420,13 @@ Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會�
 
    * 標籤不會套用至所有資產，但只會套用至少數資產具有灰色背景。
    * 套用至所有資產的標籤具有白色背景。
+
    您可以：
 
    * 按一 `x` 下可移除所有資產的標籤。
    * 按一 `+` 下以新增標籤至所有資產。
    * 按一 **下箭頭** ，並選取標籤，以新增標籤至所有資產。
+
    按一下 **確定** ，將更改寫入表單。 「標籤」欄位旁 **的方塊** ，會自動勾選。
 
 1. 編輯「說明」欄位。 例如，將其設定為：
