@@ -3,9 +3,9 @@ title: 產生共用資產的URL
 description: 本文說明如何將Experience Manager Assets中的資產、檔案夾和系列共用為外部方的URL。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1229'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括�
 >在您與使用者共用連結之前，請確定已設定Day CQ Mail Service。 如果您嘗試共用連結而未先設定Day CQ [Mail服務，就會發生錯誤](/help/assets/link-sharing.md#configmailservice)。
 
 1. 在「資產」使用者介面中，選取要以連結形式共用的資產。
-1. 在工具列中，按一 **[!UICONTROL 下Share Link]** ![assets_share](assets/assets_share.png)。
+1. 在工具列中，按一下「共 **[!UICONTROL 用連結]**![共用資產」圖示](assets/do-not-localize/assets_share.png)。
 
    資產連結會在「共用連結」欄位中 **[!UICONTROL 自動建立]** 。 複製此連結並與使用者共用。 連結的預設有效期為一天。
 
