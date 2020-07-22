@@ -2,7 +2,10 @@
 title: Adobe Experience Manager Assets發行說明
 description: Adobe Experience Manager 6.5 Assets的新功能和增強功能。
 translation-type: tm+mt
-source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+workflow-type: tm+mt
+source-wordcount: '916'
+ht-degree: 3%
 
 ---
 
@@ -31,17 +34,17 @@ source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 [!DNL Adobe Stock] 服務可讓設計人員和企業針對其所有創意專案，取用數百萬個高品質、優質且免版稅的像片、向量、插圖、視訊、範本和3D資產。
 
-如需詳細資訊，請 [參閱Experience Manager Assets中的「使用[!DNL Adobe Stock]資產」](/help/assets/aem-assets-adobe-stock.md)。
+如需詳細資訊，請 [參閱「在Experience Manager Assets中使用Adobe Stock資產」](/help/assets/aem-assets-adobe-stock.md)。
 
 ![從Experience Manager Assets預覽Adobe Stock影像和授權](assets/stock_image_preview_license_options.png)
 
-*圖：從內[!DNL Adobe Stock]部預覽影像和授權[!DNL Experience Manager Assets]。*
+*圖： 從內[!DNL Adobe Stock]部預覽影像和授權[!DNL Experience Manager Assets]。*
 
 ![在Experience Manager中搜尋及篩選已授權的Adobe Stock影像](assets/aem-search-filters2.jpg)
 
-*圖：在中搜尋及篩選[!DNL Adobe Stock]授權影像[!DNL Experience Manager]。*
+*圖： 在中搜尋及篩選[!DNL Adobe Stock]授權影像[!DNL Experience Manager]。*
 
-### 動態參照 [!DNL Adobe InDesign]{#dynamic-references-in-indesign}
+### 動態參照 [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
 [!DNL Experience Manager Assets] 用於檔案 [!DNL Adobe InDesign] 中是動態的。 如果引用的資產在儲存庫中移動，則引用會自動更新。 如需詳細資訊，請參 [閱如何管理複合資產](/help/assets/managing-linked-subassets.md)。
 
@@ -59,7 +62,7 @@ source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ![將資產從部署中 [!DNL Experience Manager] 拖曳至不同 [!DNL Sites] 部署的頁 [!DNL Experience Manager] 面](assets/connected-assets-drag-and-drop-only.gif)
 
-*圖：將資產從部署中[!DNL Experience Manager]拖曳至不同[!DNL Sites]部署之頁面上的[!DNL Experience Manager]部署。*
+*圖： 將資產從部署中[!DNL Experience Manager]拖曳至不同[!DNL Sites]部署之頁面上的[!DNL Experience Manager]部署。*
 
 ## 動態媒體 {#dynamic-media}
 
@@ -75,7 +78,7 @@ source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 您現在可以使用視訊本身的影格或儲存在DAM中的其他內容，自訂視訊資產的縮圖。 如需其他指示，請參 [閱關於視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
-### 協助工具增強功能 {#accessibility-enhancements}
+### Accessibility Enhancements {#accessibility-enhancements}
 
 [!DNL Dynamic Media] 檢視器現在支援增強的協助工具功能，例如Aria支援、螢幕閱讀程式和Alt-text。 如需詳細資訊，請參 [閱動態媒體檢視器發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
 
@@ -85,7 +88,7 @@ source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ![在搜尋刻面中查看資產數量，而不篩選搜尋結果](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
-*圖：在搜尋刻面中查看資產數目，而不篩選搜尋結果。*
+*圖： 在搜尋刻面中查看資產數目，而不篩選搜尋結果。*
 
 ## 可用性增強功能 {#usability-enhancement}
 
@@ -93,7 +96,7 @@ source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ![使用「全選」選項，只要按一下，即可選取所有載入的資產。](assets/select-all-in-aem-assets.gif)
 
-*圖：使用「全選」選項，只要按一下，即可選取所有載入的資產。*
+*圖： 使用「全選」選項，只要按一下，即可選取所有載入的資產。*
 
 ## 中繼資料增強功能 {#metadata-enhancements}
 
