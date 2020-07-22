@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d7e2d33b81847b15d1e33b3aa406e5e91d44a5f8
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 12%
@@ -64,7 +64,7 @@ Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console以品牌入�
 
 ### 下載並安裝AEM 6.5 {#aemquickstart}
 
-建議您讓AEM 6.5來設定AEM作者例項。 如果您沒有啟動並執行AEM，請從下列位置下載：
+建議您讓AEM 6.5來設定AEM作者例項。 如果您沒有啟動並執行AEM，請從下列位置下載它：
 
 * 如果您是現有的AEM客戶，請從 [Adobe授權網站下載AEM 6.5](http://licensing.adobe.com)。
 
@@ -129,7 +129,7 @@ IMS 設定包括兩個步驟：
 
 1. 登入您的AEM Assets作者實例。 預設URL為
    `http:// localhost:4502/aem/start.html`
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
    ![Adobe IMS 帳戶設定 UI](assets/ims-config1.png)
 
@@ -302,7 +302,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登入您的AEM Assets作者實例。
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
 
 1. 在「品牌入口網站設定」頁面中，按一下「 **[!UICONTROL 建立]**」。
 
@@ -322,7 +322,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登入您的AEM Assets雲端例項。
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
    ![](assets/test-integration1.png)
 
@@ -379,7 +379,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登入您的AEM Assets作者實例。
 
-1. 從「工 **具**![」面板，導航至「部](assets/tools.png) 署 **[!UICONTROL 」>「部署復]******&#x200B;制」。
+1. 從「工 **具**![」面板，導航至「部](assets/do-not-localize/tools.png) 署 **[!UICONTROL 」>「部署復]******&#x200B;制」。
 
 1. 在「複製」頁中，按一下「作 **[!UICONTROL 者上的代理」]**。
 
