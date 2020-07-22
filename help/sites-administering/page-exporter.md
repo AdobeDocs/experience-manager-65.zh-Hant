@@ -2,7 +2,7 @@
 title: 頁面匯出器
 description: 瞭解如何使用AEM Page Exporter。
 translation-type: tm+mt
-source-git-commit: b0126894dec33648a24c0308972aa5b47d7e4b84
+source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -16,10 +16,11 @@ AEM可讓您將頁面匯出為完整的網頁，包括影像 `.js` 和 `.css` �
 
 在設定後，您會以URL中的取代，從瀏覽器 `html` 請求 `export.zip` 頁面匯出。 這會產生封存(zip)檔案，其中包含以html格式呈現的頁面，以及參考的資產。 頁面中的所有路徑（例如，到映像的路徑）都會被重寫，以指向歸檔檔案中包含的檔案或伺服器上的資源。 然後，可從您的瀏覽器下載封存(zip)檔案。
 
->!![NOTE]
-視您的瀏覽器和設定而定，下載內容會是：
-* 檔案(`<page-name>.export.zip`)
-* 資料夾(`<page-name>`); 有效地擴展了歸檔檔案
+>[!NOTE]
+>
+>視您的瀏覽器和設定而定，下載內容會是：
+>* 檔案(`<page-name>.export.zip`)
+>* 資料夾(`<page-name>`); 有效地擴展了歸檔檔案
 
 
 ## 匯出頁面 {#exporting-a-page}
