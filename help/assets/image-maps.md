@@ -3,9 +3,9 @@ title: 將具有超連結的影像地圖新增至數位影像
 description: 瞭解如何新增包含超連結的影像地圖至影像。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -26,12 +26,9 @@ ht-degree: 0%
    * 在「資 **[!UICONTROL 訊卡]** 」或「清單 **[!UICONTROL 」檢視中，選取資產，然後按一下工具列]** 上的「編輯 **** 」。
    * 按一 **[!UICONTROL 下資產]** 頁面中的編輯。
 
-      ![chlimage_1-420](assets/chlimage_1-420.png)
+      ![編輯選項](assets/do-not-localize/edit_icon.png)
 
-1. 若要插入影像地圖，請按一下工 **[!UICONTROL 具列中的「啟動地圖]** 」。
-
-   ![chlimage_1-421](assets/chlimage_1-421.png)
-
+1. 若要插入影像地圖，請按一 **[!UICONTROL 下工具列]**![的「啟動地圖](assets/do-not-localize/image-map-icon.png) 」影像地圖。
 1. 選取影像地圖的形狀。 選取形狀的作用點會置於影像上。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
@@ -40,13 +37,9 @@ ht-degree: 0%
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. 按一 **[!UICONTROL 下確認]** ，然後按一下工 **[!UICONTROL 具列中的完成]** ，以儲存變更。
+1. 按一下 **[!UICONTROL 確認]** ，然後按一下工 **[!UICONTROL 具]** 欄中的「完成」(Finish) ![](assets/do-not-localize/check-ok-done-icon.png) 「選擇檢查完成」(Check done)以保存更改。
 
-   ![chlimage_1-424](assets/chlimage_1-424.png)
-
-   若要刪除影像地圖，請按一下作用點，然後按一下「刪 **[!UICONTROL 除」]**。
-
-   ![chlimage_1-425](assets/chlimage_1-425.png)
+   若要刪除影像地圖，請按一下作用點，然後按一下「刪 **[!UICONTROL 除]**![」](assets/do-not-localize/delete-solid-line.png)。
 
 1. 若要檢視影像地圖，請導覽至資產詳細資料頁面，並將游標暫留在影像上。
 
