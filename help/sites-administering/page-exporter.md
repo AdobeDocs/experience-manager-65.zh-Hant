@@ -2,9 +2,9 @@
 title: 頁面匯出器
 description: 瞭解如何使用AEM Page Exporter。
 translation-type: tm+mt
-source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
+source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1065'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ AEM可讓您將頁面匯出為完整的網頁，包括影像 `.js` 和 `.css` �
 
 在設定範本後，您必須將它提供：
 
-1. 在CRXDE中，導覽至分支中的必要 `/content` 頁面。
+1. 在CRXDE中，導覽至分支中的必要 `/content` 頁面。 這可以是個別頁面，或子樹的根頁面。
 
 1. 在頁面 `jcr:content` 的節點上建立屬性：
    * `Name`: `cq:exportTemplate`
