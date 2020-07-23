@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: a3f5a21d-2df6-4663-a1ea-3a067c46f860
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+workflow-type: tm+mt
+source-wordcount: '1124'
+ht-degree: 9%
 
 ---
 
@@ -44,13 +47,15 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 當包含 [所需的用戶端程式庫](/help/communities/ideation.md#essentials-for-client-side) ，元件的顯示方式 `Ideation` 如下：
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![意識形態](assets/ideation.png)
 
 ### 設定構想 {#configuring-an-ideation}
 
 選擇要訪問 `Ideation` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-72](assets/chlimage_1-72.png)![視覺設定](assets/ideation-settings.png)
+![configure-new](assets/configure-new.png)
+
+![視覺設定](assets/ideation-settings.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
@@ -100,7 +105,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -138,7 +143,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * **允許主要內容**
 
-   若勾選，此構想即可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
+   如果勾選，此構想就可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
 
 * **啟用提及功能**
 * **最大提及數**
@@ -194,7 +199,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * **排序方式**
 
-   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設為 `Newest, Oldest, Last Updated`。
+   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`。
 
 * **設為預設值**
 
@@ -212,23 +217,23 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 一旦登入，會員就可能會建立新構想。
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![建立新構想](assets/create-new-idea.png)
 
 在提交構想之前，會員可儲存草稿。
 
 通過選擇 `Save as Draft` 按鈕，將保存草稿。
 
-![chlimage_1-74](assets/chlimage_1-74.png)
+![儲存構想](assets/save-idea.png)
 
 在頁籤中查看保存的草 `My Drafts` 稿時，選擇 `Read More` 以重新進入編輯模式：
 
-![chlimage_1-75](assets/chlimage_1-75.png)
+![編輯構想](assets/edit-idea.png)
 
 #### 提供意見回應 {#providing-feedback}
 
 一旦發佈構想，其他成員就可以登入、開啟構想( `Read More`)並像構想一樣，進而增加選票計數，並加上意見。
 
-![chlimage_1-76](assets/chlimage_1-76.png)
+![反饋](assets/feedback-idea.png)
 
 ### 其他資訊 {#additional-information}
 
