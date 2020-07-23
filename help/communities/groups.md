@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: ee0d4aa07db6f00409cace8664d02c545e7d6550
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -259,7 +259,7 @@ STRUCTURE面板允許修改最初從作者或發佈環境建立子社區站點�
 
 >[!CAUTION]
 >
->群組函式必須*not *是網站結 *構中的第一個* ，也是唯一的函式。
+>群組函式不 *能是**網站結構中的* 第一個函式，也不能是唯一函式。
 >
 >任何其他函式(例如頁 [面函式](/help/communities/functions.md#page-function))必須先包含並列出。
 
