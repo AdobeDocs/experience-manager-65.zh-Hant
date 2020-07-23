@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '1346'
-ht-degree: 3%
+source-wordcount: '1344'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 **若要使用軟體介面預覽資產**
 
-1. 在 **[!UICONTROL Adobe Experience Manager**，在 **[!UICONTROL導覽頁面上，點選「資產** 」，然後點選「檔 ******** 案」以存取資產。
+1. From **[!UICONTROL Adobe Experience Manager]**, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets]**, then **[!UICONTROL Files]** to access assets.
 1. 在頁面的右上角附近，從「檢視」下拉式清單 **[!UICONTROL 中]** ，點選「清單 **[!UICONTROL 檢視」。]**
 1. （可選）使用 **[!UICONTROL Type]** 欄，依您要預覽的類型排序資產。
 1. 在「標 **[!UICONTROL 題]** 」欄下方，按一下您要預覽之資產的標題名稱（而非縮圖影像）。
