@@ -1,8 +1,8 @@
 ---
 title: 將工作流程套用至頁面
 seo-title: 將工作流程套用至頁面
-description: 撰寫時，您可以叫用工作流程，在頁面上採取行動；您也可以套用多個工作流程。
-seo-description: 撰寫時，您可以叫用工作流程，在頁面上採取行動；您也可以套用多個工作流程。
+description: 撰寫時，您可以叫用工作流程，在頁面上採取行動； 您也可以套用多個工作流程。
+seo-description: 撰寫時，您可以叫用工作流程，在頁面上採取行動； 您也可以套用多個工作流程。
 uuid: 652d9a23-907d-43ad-9eef-7ab1d07918cd
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,33 +11,36 @@ topic-tags: site-features
 discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 611743cc4144f99968845093b3903fe7df8bf9d9
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 15%
 
 ---
 
 
 # 將工作流程套用至頁面{#applying-workflows-to-pages}
 
-撰寫時，您可以叫用工作流程，在頁面上採取行動；您也可以套用多個工作流程。
+撰寫時，您可以叫用工作流程，在頁面上採取行動； 您也可以套用多個工作流程。
 
 應用工作流時，您指定以下資訊：
 
-* 要套用的工作流程。
-您可以套用您有權存取的任何工作流程（由AEM管理員指派）。
+* 要套用的工作流程。您可以套用您有權存取的任何工作流程 (由AEM管理員指派)。
 * （可選）幫助標識用戶收件箱中工作流實例的標題。
-* 工作流負載；這可以是一或多個頁面。
+* 工作流負載； 這可以是一或多個頁面。
 
 工作流程可從以下網址啟動：
 
-* [Sites **主控** 台](#starting-a-workflow-from-the-sites-console)。
-* [編輯頁面時，從「頁面 **資訊」**](#starting-a-workflow-from-the-page-editor)。
+* [站點控制台](#starting-a-workflow-from-the-sites-console)。
+* [編輯頁面時，從「頁面資訊」](#starting-a-workflow-from-the-page-editor)。
 
 >[!NOTE]
 >
 >另請參閱:
 >
 >* [如何將工作流程套用至DAM資產](/help/assets/assets-workflow.md)。
->* [使用專案工作流程](/help/sites-authoring/projects-with-workflows.md)。
+>* [使用專案工作流程](/help/sites-authoring/projects-with-workflows.md).
+
 >
 
 
@@ -50,14 +53,14 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 您可以從以下任一位置啟動工作流：
 
-* [「站 **點** 」工具欄的「建立」選項](#starting-a-workflow-from-the-sites-toolbar)。
-* [站點 **控制台的** 「時間軸」邊欄](#starting-a-workflow-from-the-timeline)。
+* [「站點」工具欄的「建立」選項](#starting-a-workflow-from-the-sites-toolbar)。
+* [sites主控台的時間軸邊欄](#starting-a-workflow-from-the-timeline)。
 
 在這兩種情況下，您需要：
 
 * [在「建立工作流嚮導」中指定「工作流詳細資訊」](#specifying-workflow-details-in-the-create-workflow-wizard)。
 
-### 從「站點」工具欄啟動工作流 {#starting-a-workflow-from-the-sites-toolbar}
+### 從Sites工具列啟動工作流程 {#starting-a-workflow-from-the-sites-toolbar}
 
 您可以從Sites主控台的工具列啟動工 **作流程** :
 
@@ -86,8 +89,8 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 在從以下任一 **項開啟「建立工作流** 」嚮導後：
 
-* [「站 **點** 」工具欄的「建立」選項](#starting-a-workflow-from-the-sites-toolbar)。
-* [站點 **控制台的** 「時間軸」邊欄](#starting-a-workflow-from-the-timeline)。
+* [「站點」工具欄的「建立」選項](#starting-a-workflow-from-the-sites-toolbar)。
+* [sites主控台的時間軸邊欄](#starting-a-workflow-from-the-timeline)。
 
 您可以指定詳細資訊：
 
@@ -97,6 +100,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
    * **工作流程標題**
 
       * 您可以指定此例項的標題，以協助您在稍後階段進行識別。
+
    根據工作流模型，還提供以下選項。 這些功能可讓建立為裝載的套件在工作流程完成後保留。
 
    * **保留工作流程封裝**
@@ -105,7 +109,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
       * 您可以指定套件的標題，以協助識別。
    >[!NOTE]
    >
-   >當為「 **多資源支援」配置了工作流且已選擇多個資源時，「保**[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) 留工作流包」選項可用。
+   >當為「 **** 多資源支援」配置了工作流且已選擇多個資源時，「保留工作流包」選項可用。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
 
    完成後，請使 **用** Next繼續。
 
@@ -113,7 +117,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 1. 在「范 **圍** 」步驟中，您可以選擇：
 
-   * **新增內容** ，以開啟路 [徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) ，並選取其他資源；在瀏覽器中，按一下／點選「選 **取** 」，將內容新增至工作流程例項。
+   * **新增內容** ，以開啟路 [徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) ，並選取其他資源； 在瀏覽器中，按一下／點選「選 **取** 」，將內容新增至工作流程例項。
 
    * 查看其他操作的現有資源：
 
@@ -123,9 +127,11 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
          * 僅包含直接子項.
          * 僅包含修改過的頁面.
          * 僅包含已發佈的頁面.
+
          所有指定的子項都將添加到將應用工作流的資源清單中。
 
       * **刪除選擇** ，從工作流中刪除該資源。
+
    ![wf-53](assets/wf-53.png)
 
    >[!NOTE]
