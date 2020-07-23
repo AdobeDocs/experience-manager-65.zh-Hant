@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+source-git-commit: 299c4cb377c65e49b94383704a906fdd0bb38d06
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -61,7 +61,7 @@ FFmpeg應安裝在代管AEM作者例 *項* 的伺服器上。
 * 連按兩下 **[!UICONTROL FFmpeg轉碼步驟]** ，以存取「步驟屬性」對話方塊。
 * 在「流程 **[!UICONTROL 」(Process]** )頁籤下：
 
-   * **[!UICONTROL 圖]**: 清除所有條目以禁用轉碼預設值： `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL 圖]**: 清除所有條目以禁用轉碼預設值： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
