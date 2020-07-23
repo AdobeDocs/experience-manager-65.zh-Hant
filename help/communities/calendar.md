@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
+source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 5%
@@ -48,7 +48,9 @@ ht-degree: 5%
 
 選擇要訪問 `Calendar` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-113](assets/chlimage_1-113.png)![chlimage_1-114](assets/chlimage_1-114.png)
+![chlimage_1-113](assets/chlimage_1-113.png)
+
+![chlimage_1-114](assets/chlimage_1-114.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
