@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: f9b11eee4c044a8df4e694aa5f660b5ea375ca3c
+source-git-commit: 9e1d77b8696436b392f0d9209ddcb2c9196f3c09
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7698'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 文章說明在JEE上執行AEM Forms的伺服器保全建議和最佳實務。 對於您的作業系統和應用程式伺服器，此檔案並非完整的主機強化檔案。 相反地，本文說明您應實作的各種安全性強化設定，以增強在公司內部網路中執行的JEE上AEM Forms的安全性。 不過，為確保JEE應用程式伺服器上的AEM Forms保持安全，您也應實作安全性監控、偵測和回應程式。
 
-本文描述在安裝和配置生命週期的以下階段應用的強化技術：
+本文描述在安裝和配置生命週期的以下階段應應用的強化技術：
 
 * **預安裝：** 在JEE上安裝AEM Forms之前，請先使用這些技巧。
 * **安裝：** 在AEM Forms on JEE安裝程式中使用這些技巧。
@@ -429,7 +429,7 @@ AEM Forms資料庫架構包含有關係統設定和商業程式的敏感資訊�
 
 ### 審核和記錄 {#auditing-and-logging}
 
-正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入的項目，以及重要應用程式事件，例如建立或刪除重要記錄。
+正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入等項目，以及重要應用程式事件，例如建立或刪除重要記錄。
 
 您可以使用審計來檢測多種攻擊類型，包括：
 
@@ -956,6 +956,8 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 如需如何在JBoss、WebLogic和WebSphere上配置SSL的說明，請參閱管理幫助中的「配置SSL [」](https://www.adobe.com/go/learn_aemforms_admin_64)。
 
+如需如何將憑證匯入AEM Forms伺服器所設定之JVM(Java Virtual Machine)的指示，請參閱 [AEM Forms Workbench說明中的「相互驗證」區段](http://www.adobe.com/go/learn_aemforms_workbench_65)。
+
 ### 設定SSL重新導向 {#configuring-ssl-redirect}
 
 在將應用程式伺服器設定為支援SSL後，您必須確保所有應用程式和服務的HTTP流量都強制使用SSL連接埠。
@@ -1049,7 +1051,7 @@ AEM Forms on JEE使用檔案系統的方式如下：
 
 ### 禁用目錄瀏覽 {#disable-directory-browsing}
 
-登入Administration Console後，可修改URL來瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
+登入Administration Console後，可修改URL，以瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
 
 ```as3
 https://<servername>:8080/adminui/secured/ 
