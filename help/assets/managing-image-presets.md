@@ -10,9 +10,9 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '3845'
+source-wordcount: '3843'
 ht-degree: 8%
 
 ---
@@ -171,7 +171,7 @@ Dynamic Media整合使用下列指令碼：
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>是</td>
-   <td>為每個頁面產生300 ppi的JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，它還經過工作流程的最佳化，並轉變成PTIFF <code>DAM Update Asset</code> 。<br /> </td>
+   <td>為每個頁面產生300 ppi的JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，它還經過工作流程的最佳化，並轉變成PTIFF <code>DAM Update Asset</code> 格式。<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -224,7 +224,7 @@ Dynamic Media整合使用下列指令碼：
 1. 導覽至CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
 1. 導覽至位於的影像預設集清單節點 `/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`
 
-   ![increase_denthenumberofimagepresets that display](assets/increase_decreasethenumberofimagepresetsthatdisplay.png)
+   ![increase_denthementumberofimagepresets that display](assets/increase_decreasethenumberofimagepresetsthatdisplay.png)
 
 1. 在 **[!UICONTROL limit]** 屬性中，將預設設 ****&#x200B;定為15的值變更為所要的數字。
 1. 導覽至影像預設集資料來源，網址為 `/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist/datasource`
@@ -291,7 +291,7 @@ Dynamic Media整合使用下列指令碼：
 
 當您建立或編輯影像預設集時，您可以選擇本節所述的選項。 此外，Adobe建議您從下列「最佳實務」選項開始：
 
-* **[!UICONTROL格式** (基本&#x200B;**[!UICONTROL 頁籤]** )-選擇 **[!UICONTROL JPEG]** 或其它符合您要求的格式。所有網頁瀏覽器都支援JPEG影像格式；它在小檔案大小和影像品質之間提供良好的平衡。但是，JPEG格式影像使用有損壓縮方案，如果壓縮設定太低，則該壓縮方案會引入不想要的影像偽影。因此，Adobe建議將壓縮品質設為75。此設定在影像品質和檔案大小之間取得良好的平衡。
+* **[!UICONTROL 格式]** (**[!UICONTROL 基本]** )-選擇 **[!UICONTROL JPEG]** 或其他符合您需求的格式。 所有網頁瀏覽器都支援JPEG影像格式；它在小檔案大小和影像品質之間提供良好的平衡。但是，JPEG格式影像使用有損壓縮方案，如果壓縮設定太低，則該壓縮方案會引入不想要的影像偽影。因此，Adobe建議將壓縮品質設為75。此設定在影像品質和檔案大小之間取得良好的平衡。
 
 * **[!UICONTROL 啟用簡單銳利化]** -請勿選取「啟用簡 **** 單銳利化」 (此銳利化濾鏡提供的控制力比「非銳利化遮色片」設定少)。
 
@@ -379,7 +379,7 @@ Dynamic Media整合使用下列指令碼：
   </tr>
   <tr>
    <td><strong>銳利化文字</strong></td>
-   <td><p>選擇「 <strong>無</strong>」、「銳 <strong>化」</strong>或「銳 <strong>化」或「銳化遮色片</strong>」。 </p>
+   <td><p>選擇「 <strong>無</strong>」、「銳 <strong>化」</strong>或「銳 <strong>化」或「銳化」</strong>。 </p>
     <ul>
      <li>選擇「 <strong>無</strong> 」可禁用銳利化。</li>
      <li>選取「 <strong>銳利 </strong>化」，在進行所有縮放後，將基本銳利化濾鏡套用至影像。 銳利化有助於補償以不同大小顯示影像時可能產生的模糊性。 </li>
@@ -504,5 +504,5 @@ Dynamic Media整合使用下列指令碼：
 
 1. 在AEM中，點選或按一下AEM標誌以存取全域導覽主控台。
 1. 點選「工 **[!UICONTROL 具」圖示]** ，然後導覽至「資 **[!UICONTROL 產>影像預設集」。]**
-1. 選擇預設集，然後按一下「 **[!UICONTROL刪除」**。 動態媒體會確認您要刪除它。 點選「 **[!UICONTROL 刪除]** 」以刪除，或點選「取 **[!UICONTROL 消]** 」以中止。
+1. 選取預設集，然後按一下「刪 **[!UICONTROL 除」]**。 動態媒體會確認您要刪除它。 點選「 **[!UICONTROL 刪除]** 」以刪除，或點選「取 **[!UICONTROL 消]** 」以中止。
 
