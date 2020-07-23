@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 4%
 
 ---
 
@@ -46,9 +49,9 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 首次放置在社群網站頁面時，元件的顯示方式如下：
 
-![chlimage_1-54](assets/chlimage_1-54.png)
+![社群活動](assets/community-activity.png)
 
-### 配置社區活動清單 {#configuring-community-activity-list}
+### 配置社區活動清單  {#configuring-community-activity-list}
 
 選擇要訪問 `Community Activity List` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
@@ -66,6 +69,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
    * `Members`
    * `Content`
+
    預設為 `Members`。
 
 * **顯示標題**
@@ -86,6 +90,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
    * `Posts`（建立UGC）
    * `Follows`
    * `Likes`
+
    預設為「檢視」。
 
 * **時間段**
@@ -98,6 +103,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
    * `Last 90 days`
    * `This year (since Jan 1st)`
    * `Total`
+
    預設為 `Total`。
 
 * **內容路徑**
@@ -112,13 +118,13 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ### 包含4個元件的範例頁面 {#example-page-with-components}
 
-**熱門訪客** 設定：類型=成員，活動類型=視圖
+**熱門訪客** 設定： 類型=成員，活動類型=視圖
 
-**熱門參與者** (Top Contributors)設定：類型=成員，活動類型=貼文
+**熱門參與者** (Top Contributors)設定： 類型=成員，活動類型=貼文
 
-**主要內容** (Top Content)設定：類型=內容，活動類型=檢視，
+**主要內容** (Top Content)設定： 類型=內容，活動類型=檢視，
 
-**趨勢內容** 設定：類型=內容，活動類型=貼文
+**趨勢內容** 設定： 類型=內容，活動類型=貼文
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
