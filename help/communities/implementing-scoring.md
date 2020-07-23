@@ -12,7 +12,7 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '2897'
 ht-degree: 2%
@@ -62,7 +62,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 指派（和已喚醒）的標章會儲存在選取的 [SRP](/help/communities/srp.md) ，無法直接存取。 在GUI可用之前，指派角色標章的唯一方法就是使用程式碼或cURL。 如需cURL指示，請參閱標題為「指派 [和撤銷標章」的章節](#assign-and-revoke-badges)。
 
-此版本包含3個以角色為基礎的標章：
+此發行包含3個以角色為基礎的標章：
 
 * **協調者**
 
@@ -308,7 +308,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 ## 標籤規則 {#badging-rules}
 
-標籤規則會指定：
+標籤規則會指定下列項目，將計分規則連結至標章：
 
 * 計分規則。
 * 必須獲得特定徽章的分數。
