@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '4361'
-ht-degree: 14%
+source-wordcount: '4360'
+ht-degree: 13%
 
 ---
 
@@ -423,7 +423,7 @@ AEM會在從「詳細資料檢視>檢視器」檢視資產時，顯示各種 **[
    ![6_5檢視器預設集](assets/6_5_viewerpresets.png)
 
 1. 在檢視器預設集頁面的工具列上，點選「建立」 **[!UICONTROL 。]**
-1. 在「 **[!UICONCONTROL新建查看器預設集** 」對話框的「預設集名稱 **** 」欄位中，輸入新預設集的名稱。Choose a name carefully—they are not editable after you tap **[!UICONTROL Create.]**
+1. In the **[!UICONTROL New Viewer Preset]** dialog box, in the **[!UICONTROL Preset Name]** field, enter the name of the new preset. Choose a name carefully—they are not editable after you tap **[!UICONTROL Create.]**
 
    當您稍後在這些步驟中儲存預設時，名稱會出現在「預設集標題」欄標題下的「檢視器預設集」頁面上。
 
