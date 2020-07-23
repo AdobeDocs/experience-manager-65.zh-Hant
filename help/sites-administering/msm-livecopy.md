@@ -2,9 +2,9 @@
 title: 建立和同步即時副本
 description: 瞭解如何建立及同步即時副本。
 translation-type: tm+mt
-source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
+source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
 workflow-type: tm+mt
-source-wordcount: '4116'
+source-wordcount: '4115'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Blueprint設定可識別您要用作一或多個即時副本頁面來源的現�
 
 您可以建立任何頁面的即時副本：
 
-* 頁面是藍圖設定所 [參考的](#creating-a-blueprint-configuration),
+* 藍圖設定所參考 [的頁面](#creating-a-blueprint-configuration)。
 * 和與配置無連接的頁面。
 * AEM也支援在其他即時副本的頁面內建立即時副本。
 
@@ -432,7 +432,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
       * 即使有嵌套， `LiveRelationships` 也會移除任何子體 `LiveCopies`。
 
-* 切換至深度即時副本：
+* 切換為深度即時副本：
 
    * 子頁面仍保持不變。
    * 若要查看切換的效果，您可以進行推廣，任何內容修改都會根據推廣配置來套用。
@@ -445,7 +445,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
 1. 使用Sites控制台的「檢視屬性」命令或使用頁面工具列上的「頁面資訊」, **開啟即時復本頁面的屬性** ，您可以使用Sites ******** Console的「檢視屬性」命令來開啟即時復本頁面的屬性。
 1. 按一下或點選「即 **時副本** 」標籤。
-1. 在「配 **置** 」部分中，根據是否包含子頁，設定或清除 **** 「即時複製繼承」選項：
+1. 在「配 **置** 」部分中，根據是否包含子頁，設定或清除「 **** 即時複製繼承」選項：
 
    * 勾選——深入即時副本（包含子頁面）
    * clear —— 淺層即時副本（排除子頁面）
