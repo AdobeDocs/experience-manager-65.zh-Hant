@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+workflow-type: tm+mt
+source-wordcount: '542'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 若要觸及AEM Author環境中的群組範本主控台：
 
-* 選擇工 **具|社群|群組範本** ，來自全域導覽。
+* 選擇工 **具 |社群 |群組範本** ，來自全域導覽。
 
 此控制台顯示可從中創 [建社區站點](/help/communities/sites-console.md) 的模板，並允許建立新組模板。
 
@@ -49,7 +52,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ### 基本資訊 {#basic-info}
 
-![chlimage_1-137](assets/chlimage_1-137.png)
+![site-basic-info](assets/site-basic-info.png)
 
 在「基本資訊」面板上，會設定名稱、說明以及範本是啟用還是停用：
 
@@ -67,7 +70,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 #### 縮圖 {#thumbnail}
 
-![chlimage_1-138](assets/chlimage_1-138.png)
+![site-thumbnail](assets/site-thumbnail.png)
 
 （可選）選取「上傳影像」圖示，向社群網站的建立者顯示縮圖以及名稱和說明。
 
