@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
 workflow-type: tm+mt
 source-wordcount: '1729'
 ht-degree: 2%
@@ -100,7 +100,7 @@ ht-degree: 2%
 
 可套用至社群內容的標籤是透過選取先前透過「標籤控制台」( [Tagging Console](/help/sites-administering/tags.md#tagging-console) )定義的AEM名稱空間(例如 [Tutorial namespace](/help/communities/enablement-setup.md#create-tutorial-tags))來控制。
 
-此外，為社群網站選取「標籤名稱空間」會限制在定義型錄和啟用資源時顯示的選擇。 如需重 [要資訊，請參閱標籤](/help/communities/tag-resources.md) 啟用資源。
+此外，為社群網站選取「標籤名稱空間」會限制定義型錄和啟用資源時顯示的選擇。 如需重 [要資訊，請參閱標籤](/help/communities/tag-resources.md) 啟用資源。
 
 使用預先輸入搜尋功能，輕鬆尋找命名空間。 例如，
 
@@ -256,7 +256,7 @@ Select **Create.**
 
 `https://localhost:4503/content/sites/enable/en.html {#http-localhost-content-sites-enable-en-html}`
 
-![chlimage_1-433](assets/chlimage_1-433.png)
+![啟用登入](assets/enablement-login.png)
 
 ### 配置驗證錯誤 {#configure-for-authentication-error}
 
