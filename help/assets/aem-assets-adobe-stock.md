@@ -3,9 +3,9 @@ title: 管理 [!DNL Adobe Stock] 資產 [!DNL Adobe Experience Manager Assets]�
 description: 從內部搜尋、擷取、授 [!DNL Adobe Stock] 權及管理資產 [!DNL Adobe Experience Manager]。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1099'
 ht-degree: 10%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 10%
 
 # 使用 [!DNL Adobe Stock] 資產於 [!DNL Adobe Experience Manager Assets] {#use-adobe-stock-assets-in-aem-assets}
 
-企業組織可將其企 [!DNL Adobe Stock] 業計畫與 [!DNL Experience Manager Assets] 授權資產整合，以確保其創意和行銷專案可廣泛使用授權資產，並具備強大的資產管理功能 [!DNL Experience Manager]。
+組織可將其企 [!DNL Adobe Stock] 業計畫與 [!DNL Experience Manager Assets] 其強大的資產管理功能整合，以確保授權資產廣泛適用於其創意和行銷專案 [!DNL Experience Manager]。
 
 [!DNL Adobe Stock] 服務可讓設計人員和企業針對其所有創意專案，取用數百萬個高品質、優質且免版稅的像片、向量、插圖、視訊、範本和3D資產。 [!DNL Experience Manager] 使用者可以快速尋找、預覽和授權儲 [!DNL Adobe Stock] 存在的資產，而 [!DNL Experience Manager]不需離開介 [!DNL Experience Manager] 面。
 
@@ -122,7 +122,7 @@ ht-degree: 10%
 
 >[!MORELIKETHIS]
 >
->* [有關搭配使用Adobe Stock資產與Experience Manager Assets的教學課程影片](https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html)
+>* [有關搭配使用Adobe Stock資產與Experience Manager Assets的教學課程影片](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
 >* [Adobe Stock企業計畫說明](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
 >* [Adobe Stock常見問答集](https://helpx.adobe.com/stock/faq.html)
 
