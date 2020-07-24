@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+workflow-type: tm+mt
+source-wordcount: '2110'
+ht-degree: 3%
 
 ---
 
@@ -45,7 +48,7 @@ source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 選取「管理」連結後，會顯示「協調控制台」:
 
-![協調控制台——發佈](assets/moderationconsole-publish.png)
+![協調控制台——發佈](assets/moderation-console-publish.png)
 
 ## 作者環境存取 {#author-environment-access}
 
