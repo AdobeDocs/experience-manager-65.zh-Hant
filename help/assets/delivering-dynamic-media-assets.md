@@ -9,12 +9,15 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 1%
 
 ---
 
 
-# 提供動態媒體資產{#delivering-dynamic-media-assets}
+# Delivering Dynamic Media Assets{#delivering-dynamic-media-assets}
 
 如何提供動態媒體資產（視訊和影像）取決於網站的實作方式。
 
@@ -35,7 +38,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 * [新增動態媒體資產至網頁](/help/assets/adding-dynamic-media-assets-to-pages.md)
 * [將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)
-* [在動態媒體中啟用熱連結保護](https://helpx.adobe.com/experience-manager/6-4/help/assets/hotlink-protection.html)
+* [在 Dynamic Media 中啟用超連結保護](hotlink-protection.md)
 * [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)
 * [為互動式網站提供最佳化影像](/help/assets/responsive-site.md)
 * [HTTP2內容傳送](/help/assets/http2.md)
