@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -44,20 +44,18 @@ ht-degree: 0%
 
 * 選擇「提 **[!UICONTROL 交」]**
 
-![chlimage_1-234](assets/chlimage_1-234.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
 ### 發佈設定 {#publishing-the-configuration}
 
 雖然JSRP是預設設定，但若要確保在發佈環境中設定相同的設定：
 
-* 作者：
+* 從全域導覽： **[!UICONTROL 工具]** >部 **[!UICONTROL 署]** >復 **[!UICONTROL 制]**
+* 選擇「 **[!UICONTROL 激活樹]** 」>「 **[!UICONTROL 開始路徑」]**:
 
-   * 從全域導覽： **[!UICONTROL 工具]** >部 **[!UICONTROL 署]** >復 **[!UICONTROL 制]**
-   * 選擇「 **[!UICONTROL 激活樹]** 」>「 **[!UICONTROL 開始路徑」]**:
+   * 瀏覽至 `/conf/global/settings/community/srpc/`
 
-      * 瀏覽至 `/conf/global/settings/community/srpc/`
-   * 選取「啟 **[!UICONTROL 動」]**
-
+* 選取「啟 **[!UICONTROL 動」]**
 
 ## 管理使用者資料 {#managing-user-data}
 
