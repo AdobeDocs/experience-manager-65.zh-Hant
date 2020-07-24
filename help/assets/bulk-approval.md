@@ -3,9 +3,9 @@ title: 查看資料夾資產和集合
 description: 為資料夾或系列中的資產設定審核工作流程，並與審核者或創意合作夥伴分享，以尋求意見回應。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '794'
 ht-degree: 4%
 
 ---
@@ -26,9 +26,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
 ## 為資料夾建立審核任務 {#creating-a-review-task-for-folders}
 
 1. 從「資產」使用者介面中，選取您要為其建立審核工作的檔案夾。
-1. From the toolbar, click **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-403](assets/chlimage_1-403.png)
+1. 在工具欄中，按一下 **[!UICONTROL Create Review Task]** ![create review task](assets/do-not-localize/create-review-task.png) （建立審核任務）以開啟 **[!UICONTROL Review Task]** （審核任務）頁。 If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （可選）從「項 **[!UICONTROL 目]** 」清單中，選擇要與審閱任務關聯的項目。 預設情況下，選 **[!UICONTROL 擇「無]** 」選項。 如果不想將任何項目與審閱任務關聯，請保留此選項。
 
@@ -60,7 +58,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
 
    ![review_task](assets/review_task.png)
 
-1. 從工具 **[!UICONTROL 列按一下]** 「完成」。 在對話方塊中，輸入註解，然後按一 **[!UICONTROL 下]** 「完成」確認。
+1. Click **[!UICONTROL Complete]** from the toolbar. 在對話方塊中，輸入註解，然後按一 **[!UICONTROL 下]** 「完成」確認。
 1. 導覽至「資產」使用者介面並開啟檔案夾。 資產的核准狀態圖示會顯示在卡片檢視和清單檢視中。
 
    **卡片檢視**
@@ -74,9 +72,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
 ## 為系列建立審核工作 {#creating-a-review-task-for-collections}
 
 1. 從「系列」頁面中，選擇要為其建立審閱任務的系列。
-1. From the toolbar, click **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-405](assets/chlimage_1-405.png)
+1. 在工具欄中，按一下 **[!UICONTROL Create Review Task]** ![create review task](assets/do-not-localize/create-review-task.png) （建立審核任務）以開啟 **[!UICONTROL Review Task]** （審核任務）頁。 If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （可選）從「項 **[!UICONTROL 目]** 」清單中，選擇要與審閱任務關聯的項目。 預設情況下，選 **[!UICONTROL 擇「無]** 」選項。 如果不想將任何項目與審閱任務關聯，請保留此選項。
 
@@ -101,7 +97,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. 從工具 **[!UICONTROL 列按一下]** 「完成」。 在對話方塊中，輸入註解，然後按一 **[!UICONTROL 下]** 「完成」確認。
+1. Click **[!UICONTROL Complete]** from the toolbar. 在對話方塊中，輸入註解，然後按一 **[!UICONTROL 下]** 「完成」確認。
 1. 導覽至「系列」主控台，然後開啟系列。 資產的核准狀態圖示會同時出現在「卡片」和「清單」檢視中。
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
