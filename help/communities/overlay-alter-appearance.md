@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ comment.hbs指令碼負責建立每個註解的整體HTML。
 
 1. 開啟覆蓋的 `comment.hbs`
 
-   * 按兩下中的節點 `comment.hbs``/apps/social/commons/components/hbs/comments/comment folder`
+   * 按兩下中的節點 `comment.hbs` `/apps/social/commons/components/hbs/comments/comment folder`
 
 1. 查找以下行並刪除或注釋它們：
 
@@ -64,7 +67,7 @@ comment.hbs指令碼負責建立每個註解的整體HTML。
 
 對於「開始路徑」，請輸 `/apps/social/commons` 入並選擇「 **[!UICONTROL 激活」]**。
 
-![chlimage_1-77](assets/chlimage_1-77.png)
+![verify-content-template](assets/verify-content-template.png)
 
 ### 檢視結果 {#view-results}
 
@@ -72,5 +75,5 @@ comment.hbs指令碼負責建立每個註解的整體HTML。
 
 如果您登出並重新登入為 `aaron.mcdonald@mailinator.com/password` 頁面並重新整理，您會發現張貼的留言不再顯示為頭像，而是顯示簡單的「xxx」。
 
-![chlimage_1-78](assets/chlimage_1-78.png)
+![create-template-component](assets/create-template-component.png)
 
