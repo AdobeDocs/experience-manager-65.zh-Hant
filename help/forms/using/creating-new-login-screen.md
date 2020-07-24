@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e345fbff7030dbdeb3710e34599c0087eed4b1b8
+source-git-commit: 81249e13db9bd173d4251683ccaacbb7f71b3209
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 3%
@@ -27,9 +27,15 @@ ht-degree: 3%
 1. 使用管理員權 `/lc/crx/de` 限登入。
 1. 執行下列動作：
 
-   1. 複製分層結構： 在 `/libs/livecycle/core/content` 的 `/apps/livecycle/core/content`。 維護相同的（節點／資料夾）屬性和訪問控制。
+   1. 複製分層結構： 在 `/libs/livecycle/core/content` 的 `/apps/livecycle/core/content`。
 
-   1. 複製內容資料夾： 從 `/libs/livecycle/core` 到 `/apps/livecycle/core`。
+      維護相同的（節點／資料夾）屬性和訪問控制。
+
+   1. 複製內容資料夾：
+
+      從: `/libs/livecycle/core`
+
+      至: `/apps/livecycle/core`.
 
    1. 刪除資料夾的 `/apps/livecycle/core` 內容。
 
@@ -244,6 +250,7 @@ String browserLocale = "en";
 
       * 至 `/apps/livecycle/core/components/login`
    1. 修改 `/apps/livecycle/core/components/login/login.jsp` 以合併新添加的樣式。
+
 
 
 例如：
