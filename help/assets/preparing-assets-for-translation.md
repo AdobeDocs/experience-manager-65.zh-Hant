@@ -3,9 +3,9 @@ title: 準備翻譯資產
 description: 建立語言根資料夾，以準備要翻譯的資產，以支援多語言資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
@@ -67,4 +67,4 @@ Experience Manager介面提供「參 **[!UICONTROL 考」面板]** ，可顯示�
 
 1. 在「參考」窗格中，按一下「語 **[!UICONTROL 言副本」]**。 「語 [!UICONTROL 言復本] 」面板會顯示資產的語言復本。
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+   ![語言副本](assets/lang-copy2.png)
