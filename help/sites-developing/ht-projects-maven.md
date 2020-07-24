@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1669412afb670a9f55f02476e828de55b4f7a55a
+source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
 workflow-type: tm+mt
 source-wordcount: '2424'
 ht-degree: 0%
@@ -386,10 +386,6 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/myproject"/>
-    <filter root="/etc/msm/rolloutconfigs/myrolloutconfig"/>
-    <filter root="/etc/blueprints/mysite/globalsite"/>
-    <filter root="/etc/workflow/models/myproject"/>
-    <filter root="/etc/designs/myproject"/>
     <filter root="/content/myproject/sample-content"/>
 </workspaceFilter>
 ```
@@ -459,7 +455,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 ### 如何使用JSP {#how-to-work-with-jsps}
 
-目前所述的Maven設定會建立內容套件，其中也可包含元件及其對應的JSP。 不過，Maven會將它們視為屬於內容套件的任何其他檔案，甚至不會將它們辨識為JSP。
+目前所述的Maven設定會建立內容套件，其中也可包含元件及其對應的JSP。 不過，Maven會將這些檔案視為內容套件中的任何其他檔案，甚至不會將它們辨識為JSP。
 
 產生的元件在AEM中都能運作，但讓Maven知道JSP有兩個主要優點
 
