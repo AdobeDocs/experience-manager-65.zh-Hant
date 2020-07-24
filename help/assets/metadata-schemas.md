@@ -3,9 +3,9 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 04babc1ec79a0816e1cb9f97e2711fe212f51387
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2667'
 ht-degree: 7%
 
 ---
@@ -19,11 +19,7 @@ ht-degree: 7%
 
 若要檢視和編輯資產的屬性頁面，請依照下列步驟進行：
 
-1. 按一下 **[!UICONTROL 卡片檢視中]** ，資產圖格上的快速動作中的「檢視屬性」選項。
-
-   ![資產圖格上的快速動作](assets/chlimage_1-170.png)
-
-   或者，選取資產，然後從工具列按 **[!UICONTROL 一下「屬]** 」。
+1. 按一下 **[!UICONTROL 卡片檢視中]** ，資產圖格上的快速動作中的「檢視屬性」選項。 或者，選擇資產，然後從工具 **[!UICONTROL 列按一下]**![「屬性](assets/do-not-localize/info-circle-icon.png) 」檢視屬性。
 
 1. 您可以編輯可用標籤下的各種可編輯中繼資料屬性。 但是，您無法修改屬 [!UICONTROL 性頁面] 「基本  」索引標籤中的資產類型。
 
