@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8ca4e3057ec13762404a8b7fb6f6bdf5dd562281
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '5826'
+source-wordcount: '5830'
 ht-degree: 5%
 
 ---
@@ -116,9 +116,9 @@ ht-degree: 5%
 
 1. From the [!DNL Assets] user interface, open the properties page for the asset. Click **[!UICONTROL Advanced]** and click **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
 1. 在「搜 **[!UICONTROL 尋促銷]** 」方塊中，指定您要大幅提升影像搜尋的關鍵字，然後按一下「新 **[!UICONTROL 增」]**。 您可以以相同的方式指定多個關鍵字。
-1. Click **[!UICONTROL Save &amp; Close]**. 您為此關鍵字促銷的資產會出現在熱門搜尋結果中。
+1. 按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。您為此關鍵字促銷的資產會出現在熱門搜尋結果中。
 
-您可以透過提升目標關鍵字搜尋結果中某些資產的排名，來利用此功能。 請參閱以下範例影片。 如需詳細資訊，請參 [閱Experience Manager中的搜尋](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html)。
+您可以透過提升目標關鍵字搜尋結果中某些資產的排名，來利用此功能。 請參閱以下範例影片。 如需詳細資訊，請參 [閱Experience Manager中的搜尋](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search.html)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -351,7 +351,7 @@ ht-degree: 5%
 1. 在CRXDE的節 `/oak-index/damAssetLucene` 點中，將屬 `reindex` 性設定為 `true`。 儲存變更。
 1. （可選）如果您有自訂的搜尋表單，請將節 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 點複製到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存變更。
 
-如需相關資訊，請參 [閱瞭解Experience Manager中的智慧標籤](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) , [以及如何管理智慧標籤](/help/assets/managing-smart-tags.md)。
+如需相關資訊，請參 [閱瞭解Experience Manager中的智慧標籤](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) , [以及如何管理智慧標籤](/help/assets/managing-smart-tags.md)。
 
 ### 必備中繼資料 {#mandatorymetadata}
 
