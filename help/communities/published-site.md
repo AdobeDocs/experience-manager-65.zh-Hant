@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
+source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+workflow-type: tm+mt
+source-wordcount: '1202'
+ht-degree: 0%
 
 ---
 
@@ -103,6 +106,7 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 >
 >* [社群元件](/help/communities/author-communities.md) （適用於作者）
 >* [元件、功能和功能基本工具](/help/communities/essentials.md) （適用於開發人員）
+
 >
 
 
@@ -125,7 +129,7 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 群組也可以在作者環境中建立，並在作者環境的社群網站(社群群組主控[台](/help/communities/groups.md))中管理。 本教學課程 [提供在作者上建立群組](/help/communities/nested-groups.md) 的後續經驗。
 
-![chlimage_1-36](assets/chlimage_1-36.png)
+![classic-ui](assets/classic-ui.png)
 
 建立參考群組：
 
@@ -143,11 +147,11 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 1. 選擇 **建立群組**
 
-![chlimage_1-37](assets/chlimage_1-37.png)
+![classic-ui-website](assets/classic-ui-website.png)
 
 建立新群組後，請選 **取新的「運動」群組** ，以便在其中建立兩個群組（巢狀）。 由於網站結構無法以群組功能開始，因此在開啟「運動」群組後，必須選取「群組」連結：
 
-![chlimage_1-38](assets/chlimage_1-38.png)
+![classic-ui-create-page](assets/classic-ui-create-page.png)
 
 第二組連結(從開 `Blog`始)屬於目前選取的群組，即群 `Sports` 組。 選取「運動」(Sports) `Groups` 連結後，就可在「運動」(Sports)群組內巢狀內嵌兩個群組。
 
@@ -175,7 +179,7 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 群組的連結會顯示在主網站的連結下方，並產生下列顯示：
 
-![chlimage_1-39](assets/chlimage_1-39.png)
+![classic-ui-website-page](assets/classic-ui-website-page.png)
 
 在作者上——具有管理權限，導覽至 [Communities Groups主控台](/help/communities/members.md) ，並將Weston McCall新增至 `Community Engage Gymnastics <uid> Members` 群組。
 
@@ -190,7 +194,7 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 以Weston McCall(weston.mccall@dodgit.com /密碼)的身分登入，並導覽至相同的位置。 請注意，Weston可以使用 `Join` 開啟的 `Baseball` 群組 `enter or Leave` 和私人 `Gymnastics` 群組。
 
-![chlimage_1-40](assets/chlimage_1-40.png)
+![classic-ui-repository-view](assets/classic-ui-repository-view.png)
 
 ### 網頁連結 {#web-page-link}
 
@@ -198,7 +202,7 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 例如，前往作 **者例項** ，在 `engage` Communities Sites主控台中開啟資料夾 [，選取「開啟網站](/help/communities/sites-console.md)**** 」圖示以進入作者編輯模式。 然後選取預覽模式以選取連 `Web Page` 結，然後選取編輯模式以新增標題和文字元件。 最後，只重新發佈頁面或整個網站。
 
-![chlimage_1-41](assets/chlimage_1-41.png)
+![classic-ui-repository-path](assets/classic-ui-repository-path.png)
 
 ### 協調連結 {#moderationlink}
 
