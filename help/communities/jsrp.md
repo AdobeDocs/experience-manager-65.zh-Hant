@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 0%
 
 ---
 
@@ -35,12 +38,13 @@ source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 在作者環境中，要訪問儲存配置控制台
 
-* 從全域導覽：工 **[!UICONTROL 具]** >社 **[!UICONTROL 群]** >存 **[!UICONTROL 儲配置]**
-
-![chlimage_1-234](assets/chlimage_1-234.png)
+* 從全域導覽： **[!UICONTROL 工具]** >社 **[!UICONTROL 群]** >儲 **[!UICONTROL 存設定]**
 
 * Select **[!UICONTROL JCR Storage Resource Provider (JSRP)]**
+
 * 選擇「提 **[!UICONTROL 交」]**
+
+![chlimage_1-234](assets/chlimage_1-234.png)
 
 ### 發佈設定 {#publishing-the-configuration}
 
@@ -48,7 +52,7 @@ source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 * 作者：
 
-   * 從全域導覽：工 **[!UICONTROL 具]** >部 **[!UICONTROL 署]** >復 **[!UICONTROL 制]**
+   * 從全域導覽： **[!UICONTROL 工具]** >部 **[!UICONTROL 署]** >復 **[!UICONTROL 制]**
    * 選擇「 **[!UICONTROL 激活樹]** 」>「 **[!UICONTROL 開始路徑」]**:
 
       * 瀏覽至 `/conf/global/settings/community/srpc/`
