@@ -3,9 +3,9 @@ title: 在Adobe Experience Manager中建立和共用私人資料夾。
 description: 瞭解如何在Adobe Experience Manager Assets中建立私人資料夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,9 @@ ht-degree: 0%
 
    ![建立資產檔案夾](assets/Create-folder.png)
 
-1. 在「創 **[!UICONTROL 建資料夾]** 」對話框中，輸入資料夾的標題和名稱（可選），然後選擇「 **[!UICONTROL 私用」]**。
+1. 在「創 **[!UICONTROL 建資料夾]** 」對話框中，輸入資料夾的標題和名稱（可選），然後選擇「 **[!UICONTROL 私用]** 」選項。
 
-   ![選中「專用」複選框可將資料夾設定為專用](assets/private-folder.png)
-
-1. 按一下&#x200B;**[!UICONTROL 建立]**。UI中會建立私人資料夾。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。建立專用資料夾。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
