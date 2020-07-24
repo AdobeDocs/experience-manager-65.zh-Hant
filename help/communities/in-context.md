@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: 917fceffb58883df83e96f60da4769046a18f3c0
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 1%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 1. 已登入，但管理員、協調者和內容的作者都未登入。
 1. 未登入。
 
-## 例如 {#example}
+## 範例 {#example}
 
 使用 [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) [](getting-started.md)Site（在AEM Communities快速入門時建立的Geometrixx Engage網站），您就可以在論壇中快速設定執行緒，以便在發佈環境中體驗各種協調活動，如下所示。
 
@@ -58,6 +61,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
    * 輸入正文文本
 
       每年我掛一隻蜂鳥餵食器時，我並沒有取得什麼成功。 看來他們來了一兩天就到了。 我每週換一次，這樣太長了嗎？ 我需要早點改變嗎？
+
    * 選取貼文
    * 選擇註銷
 
@@ -89,7 +93,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
 
 匿名網站訪客只能檢視論壇，但我不會張貼任何內容，也不會執行任何協調動作。
 
-![chlimage_1](assets/chlimage_1.png)
+![社群論壇——訪客](assets/community-forum-visitor.png)
 
 ### 新會員(#4) {#new-member}
 
@@ -107,7 +111,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
 
 登出
 
-![chlimage_1-1](assets/chlimage_1-1.png)
+![社群論壇成員](assets/community-forum-member.png)
 
 ### Administrator (#3) {#administrator}
 
@@ -118,7 +122,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
 * 管理員可以標幟、刪除、編輯、拒絕、剪下、關閉、釘選、功能。
 * 管理員可選擇「管理」以存取協調主控台。
 
-![社群管理——論壇](assets/communityadmin-forum.png)
+![社群——管理——論壇](assets/community-admin-forum.png)
 
 選取「管理」功能表項目，從發 [布環境存取](moderation.md) 「協調控制台」。
 
@@ -128,7 +132,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
 
 登出.
 
-![協調控制台——發佈](assets/moderationconsole-publish.png)
+![協調控制台——發佈](assets/moderation-console-publish.png)
 
 ### 社群協調者(#2) {#community-moderator}
 
@@ -141,7 +145,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
 * Aaron can Cut將論壇話題轉移到他主持的另一個論壇。
 * Aaron可以選擇「管理」來存取協調主控台。
 
-![chlimage_1-2](assets/chlimage_1-2.png)
+![社群論壇——主持者](assets/community-forum-moderator.png)
 
 選取「管理」功能表項目，從發 [布環境存取](moderation.md) 「協調控制台」。
 
@@ -151,7 +155,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
 
 登出.
 
-![協調者存取](assets/moderatoraccess.png)
+![協調者存取](assets/moderator-access.png)
 
 ### 內容作者(#1) {#content-author}
 
@@ -163,5 +167,5 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用「成員」主控台加�
 * Rebekah也可以「回覆」或「標籤其他內容」。
 * Rebekah無法存取協調主控台。
 
-![chlimage_1-3](assets/chlimage_1-3.png)
+![社群論壇作者](assets/community-forum-author.png)
 
