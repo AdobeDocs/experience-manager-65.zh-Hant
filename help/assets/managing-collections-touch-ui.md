@@ -4,10 +4,10 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '2200'
-ht-degree: 12%
+source-wordcount: '2203'
+ht-degree: 11%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 您可以與使用者共用多個系列。 每個系列都包含資產的參考。 資產的參考完整性會跨系列維持。
 
-系列是以下類型，依據其收集資產的方式：
+系列是以下類型，根據其收集資產的方式：
 
 * 包含資產、檔案夾和其他系列之靜態參考清單的系列。
 
@@ -102,19 +102,14 @@ ht-degree: 12%
 
    ![collection_listing](assets/collection_listing.png)
 
-   「建立智慧選 **[!UICONTROL 擇」按鈕的標籤將更改為]** 「編 **[!UICONTROL 輯智慧選擇」]**。要編輯智慧系列的設定，請從「檔案和文 **[!UICONTROL 件夾]** 」列 **[!UICONTROL 表中選擇「檔案]** 」。Then, Click the **[!UICONTROL Edit Smart Selection]** button.
-
-   ![chlimage_1-7](assets/chlimage_1-112.png)
+   The label of the **[!UICONTROL Create Smart Selection]** option changes to **[!UICONTROL Edit Smart Selection]**. 要編輯智慧系列的設定，請從「檔案和文 **[!UICONTROL 件夾]** 」列 **[!UICONTROL 表中選擇「檔案]** 」。按一下「 **[!UICONTROL 編輯智慧型選]**![擇」編輯智慧型系列](assets/do-not-localize/edit-smart-collection.png) 。
 
 ## 新增資產至系列 {#adding-assets-to-a-collection}
 
 您可以將資產新增至包含參考資產或檔案夾清單的系列。 智慧型系列使用搜尋查詢來填入資產。 因此，資產和檔案夾的靜態參考不適用。
 
-1. 在「資產」使用者介面中，選取資產，然後從工具 **[!UICONTROL 列按一下「收集]** 」。
-
-   ![chlimage_1-8](assets/chlimage_1-113.png)
-
-   或者，您也可以將資產拖曳至介 **[!UICONTROL 面上的「拖曳]** 」區域。 當地區標籤變更為「拖放至新增」時， **[!UICONTROL 新增資產]**。
+1. 在「資產」使用者介面中，選取資產，然後從工具 **[!UICONTROL 列按一下「]**![新增至系列](assets/do-not-localize/add-to-collection.png) 」。
+或者，您也可以將資產拖曳至介 **[!UICONTROL 面上的「拖曳]** 」區域。 當地區標籤變更為「拖放至新增」時， **[!UICONTROL 新增資產]**。
 
 1. 在「新 **[!UICONTROL 增至系列]** 」頁面中，選取您要新增資產的系列。
 
