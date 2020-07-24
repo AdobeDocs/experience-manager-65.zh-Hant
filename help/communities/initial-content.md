@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 2%
 
 ---
 
@@ -23,13 +26,13 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
    * SCF沙盒——網站英文版的首頁面。
 
-      * SCF播放——要播放的首頁的子頁。
+   * SCF播放——要播放的首頁的子頁。
 
 雖然本教學課程不深入探究 [語言副本](../../help/sites-administering/tc-prep.md)，但是其設計目的在於讓根頁面透過HTML標題實作使用者偏好語言的偵測，並重新導向至該語言的適當首頁。 慣例是使用雙字母國家／地區代碼作為頁面的節點名稱，例如英文為&quot;en&quot;、法文為&quot;fr&quot;等。
 
 ## 建立第一頁 {#create-first-pages}
 
-現在有了頁面范 [本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
+現在有了頁面 [範本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
 
 1. 標準UI目前提供建立網站的藍圖。 由於本教學課程是建立簡單網站，因此傳統的UI十分實用。
 
@@ -53,14 +56,15 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
    * 名稱: `an-scf-sandbox`
    * 選取 **[!UICONTROL SCF沙盒播放範本]**
    * Click **[!UICONTROL Create]**
+
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
 1. 在瀏覽器窗格中，選擇您剛建立的頁面，然 `/Websites/SCF Sandbox Site`後按一下「 **[!UICONTROL 新建]** 」>「 **[!UICONTROL 新建頁面]**」:
 
    * 標題: `SCF Sandbox`
    * 名稱: `en`
-   * 選取 **SCF沙盒播放範本&#x200B;**
-   * Click **Create **
+   * 選取 **[!UICONTROL SCF沙盒播放範本]**
+   * Click **[!UICONTROL Create]**
 
 1. 在瀏覽器窗格中，選擇剛建立的頁面，然 `/Websites/SCF Sandbox Site/SCF Sandbox`後按一下「 **[!UICONTROL 新建]** 」 > 「新建頁 **[!UICONTROL 面」]**
 
@@ -85,7 +89,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 定義，提供使用來參考指令碼中設計資產的選用功能 `currentDesign.getPath()`。 例如
 
-* &lt;%字串favIcon = currentDesign.getPath()+ &quot;/favicon.ico&quot;;%>
+* `% String favIcon = currentDesign.getPath() + "/favicon.ico"; %`
 
 
    * 名稱: `cq:designPath`
@@ -100,10 +104,10 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * 按一下「 **[!UICONTROL 全部儲存」]**
 
-[ 難以拯救？ 重新登入！ ]
+如果保存配置時遇到問題，請重新登錄並再次配置。
 
 >[!NOTE]
 >
->cq:designPath的使用是選擇性的，與clientlibs的使 [用無關](develop-app.md#includeclientlibsintemplate)，這是SCF元件使用clientlibs來管理其JS和CSS時的必 [](client-customize.md#clientlibs-for-scf) 要條件。
+>使用是可 `cq:designPath` 選的，與使用clientlibs無關 [，這是SCF元件使用clientlibs來管理其JS和CSS時的必](develop-app.md#includeclientlibsintemplate)[](client-customize.md#clientlibs-for-scf) 要條件。
 
 
