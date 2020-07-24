@@ -3,9 +3,9 @@ title: 處理資產以完成業務流程、進行審核、實現法規遵從性�
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '986'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,9 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 1. In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
 
-   ![chlimage_1-254](assets/chlimage_1-50.png)
-
 1. （可選）指定可用於參考工作流實例的工作流標題。
 
-   ![chlimage_1-255](assets/chlimage_1-51.png)
+   ![選取工作流程，提供標題並按一下「開始」](assets/start-workflow.png)
 
 1. 按一 **[!UICONTROL 下「開始]** 」，然後按一 **[!UICONTROL 下「繼續]**」。 工作流程的每個步驟都會以事件的形式顯示在時間軸中。
 
@@ -75,7 +73,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 1. 按一 **[!UICONTROL 下底]** 部的 ![](assets/do-not-localize/chevron-up-icon.png) 「動作(Actions)」。
 1. 按一下「 **[!UICONTROL 開始工作流程]**」。 In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
 
-   ![chlimage_1-31](assets/chlimage_1-138.png)
+   ![啟動工作流程](assets/start-workflow.png)
 
 1. （可選）指定工作流的標題，可用來參考工作流實例。
 1. 按一 **[!UICONTROL 下「開始]** 」，然後按一 **[!UICONTROL 下對話方塊中的「確認]** 」。工作流程會在您選取的所有資產上執行。
