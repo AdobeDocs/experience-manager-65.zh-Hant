@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '4811'
+source-wordcount: '4814'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-您可以在這裡導覽影像（按一下數字）。 此外，投影片會根據您可自訂的時間間隔自動旋轉。 您在轉盤橫幅中新增的影像同時支援熱點和影像地圖，使用者可以點選或前往超連結或存取快速檢視視窗。
+您可以在此處導覽影像（按一下數字）。 此外，投影片會根據您可自訂的時間間隔自動旋轉。 您在轉盤橫幅中新增的影像同時支援熱點和影像地圖，使用者可以點選或前往超連結或存取快速檢視視窗。
 
 在此範例中，使用者點選或點選影像地圖，並存取手套的快速檢視視窗：
 
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 1. 可選：視需 [要建立轉盤集檢視器預設](/help/assets/managing-viewer-presets.md)。
 
-   如果您是管理員，則可以建立您自己的轉盤檢視器預設集，自訂轉盤的行為和外觀。 主要優點是，您可以針對多個轉盤重複使用此自訂檢視器預設集。 不過，使用者也可以選擇在製作轉盤時直接自訂轉盤的行為和外觀。 當您想要特定轉盤的設計時，這是您偏好的方法。
+   如果您是管理員，則可以建立自己的轉盤檢視器預設集，自訂轉盤的行為和外觀。 主要優點是，您可以針對多個轉盤重複使用此自訂檢視器預設集。 不過，使用者也可以選擇在製作轉盤時直接自訂轉盤的行為和外觀。 當您想要特定轉盤的設計時，這是您偏好的方法。
 
 1. [上傳影像橫幅](#uploading-image-banners)。
 
@@ -94,11 +94,11 @@ ht-degree: 3%
       ](/help/assets/adding-dynamic-media-assets-to-pages.md)如果您是AEM Sites客戶，您可以使用互動式媒體元件，將浮動切換集直接新增至AEM的頁面。
 
 
-如果需要編輯轉盤集，請參閱編 [輯轉盤集。](#editing-carousel-sets) 此外，您還可以檢視和編輯「轉盤 [集」屬性](https://helpx.adobe.com/experience-manager/6-5/help/assets/managing-assets-touch-ui.md#editingproperties)。
+如果需要編輯轉盤集，請參閱編 [輯轉盤集。](#editing-carousel-sets) 此外，您還可以檢視和編輯「轉盤 [集」屬性](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)。
 
 ## 識別熱點和影像地圖變數 {#identifying-hotspot-and-image-map-variables}
 
-首先，識別現有快速檢視實作所使用的動態變數，以便在AEM Assets中建立轉盤集的過程中，正確輸入熱點或影像地圖資料。
+首先，識別現有快速檢視實作所使用的動態變數，以便在AEM Assets中建立轉盤集時，正確輸入熱點或影像地圖資料。
 
 當您在AEM Assets中將熱點或影像地圖新增至橫幅影像時，您需要為每個熱點或影像地圖指派SKU和可選的其他變數。 這些變數稍後會用來比對熱點或影像地圖與快速檢視內容。
 
@@ -214,7 +214,7 @@ ht-degree: 3%
    * 若要刪除影像，請選取影像，然後點選工具列 **[!UICONTROL 上的「刪除投影片]** 」。
 
    * 若要套用預設集，請在頁面右上角附近點選預設下拉式清單，然後選取一個預設集以一次套用至該預設集。
-   若要刪除投影片，請點選或按一下投影片，然後點選或按一下工具列中的「刪 **[!UICONTROL 除投影片]** 」。 若要移動投影片，請點選訂單圖示並按住並移至所需位置。
+   若要刪除投影片，請點選或按一下投影片，然後點選或按一下工具列中的「刪 **[!UICONTROL 除投影片]** 」。 若要移動投影片，請點選訂單圖示並按住並移至所要的位置。
 
 1. 在投影片中新增影像後，您可以將熱點、影像地圖或兩者新增至影像。 請參 [閱添加熱點或影像映射](#adding-hotspots-or-image-maps-to-an-image-banner)。
 1. 您可以點選或按一下「行為」和「外觀」標籤，並調整轉盤橫幅的外觀或特定元件的行為，以變更轉盤集的視覺設計和行為。 如需 [如何使用檢視器編輯器的詳細資訊](/help/assets/viewer-presets.md) ，請參閱管理檢視器預設集。
@@ -356,7 +356,7 @@ ht-degree: 3%
    * 若要重新排序投影片，請將投影片拖曳至新位置（選取重新排序圖示以移動項目）。
    * 要添加熱點或影像映射，請按一下熱點或影像映射表徵圖，請參閱添 [加熱點和影像映射](#adding-hotspots-or-image-maps-to-an-image-banner)。
    * To edit the appearance or behavior of the carousel set, tap the **[!UICONTROL Appearance]** tab or **[!UICONTROL Behavior]** tab, then set the options you want.
-   * 要編輯熱點或影像映射，請在相應的幻燈片上選擇熱點或影像映射，並在「操作」( **[!UICONTROL Actions]** )頁籤下根據需要進行更改。
+   * 要編輯熱點或影像映射，請在相應的幻燈片上選擇熱點或影像映射，並在「操作」( **[!UICONTROL Actions]** )頁籤下進行必要的更改。
    * 若要刪除投影片，請選取它，然後點選工具 **[!UICONTROL 列上的「刪除投影片]** 」。
    * To apply a preset, near the upper-right corner of the page, tap the **[!UICONTROL Preset]** drop-down list, then select a viewer preset.
    * 若要刪除整個轉盤集，請導覽至轉盤集，選取它，然後點選「刪 **[!UICONTROL 除」。]**
