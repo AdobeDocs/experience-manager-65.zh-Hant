@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1486'
 ht-degree: 11%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->其中許多是 [Assets和](/help/assets/managing-assets-touch-ui.md) /或 [AEM案頭應用程式的標準動作](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)。
+>其中許多是 [Assets和](/help/assets/managing-assets-touch-ui.md) /或 [AEM案頭應用程式的標準動作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。
 
 ## 開啟片段編輯器 {#opening-the-fragment-editor}
 
