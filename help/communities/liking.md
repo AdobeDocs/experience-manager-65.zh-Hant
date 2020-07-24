@@ -10,18 +10,21 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 5%
 
 ---
 
 
 # 使用贊 {#using-liking}
 
-該 `Liking` 元件是一種實用工具，允許用戶對特定內容（如論壇中的注釋）表達意見。 使用元 `Liking` 件時，成員會選取心臟圖示以指出正面意見。
+該 `Liking` 元件是一種實用工具，允許用戶對特定內容（如論壇中的注釋）表達意見。 使用元 `Liking` 件時，成員會選擇心臟圖示以指出正面意見。
 
 ## 新增對頁面按贊 {#adding-liking-to-a-page}
 
-若要在作 `Liking` 者模式下將元件新增至頁面，請使用元件瀏覽器來尋找：
+若要在作 `Liking` 者模式中將元件新增至頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Liking`
 
