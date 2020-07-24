@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '11828'
+source-wordcount: '11830'
 ht-degree: 6%
 
 ---
@@ -568,7 +568,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 ### 啟用YouTube Publish複製代理 {#enabling-the-youtube-publish-replication-agent}
 
-啟用YouTube Publish複製代理後，如果您想要測試與Google Cloud帳戶的連線，請點選「測 **[!UICONTROL 試連線」。]** 瀏覽器頁籤顯示連接結果。 如果您已新增「YouTube頻道」，則這些頻道的清單會顯示為測試的一部分。
+啟用YouTube Publish複製代理後，如果您想要測試與Google Cloud帳戶的連線，請點選「 **[!UICONTROL Test Connection」。]** 瀏覽器頁籤顯示連接結果。 如果您已新增「YouTube頻道」，則這些頻道的清單會顯示為測試的一部分。
 
 1. In the upper-left corner of AEM, click the AEM logo, then in the left rail, click **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author.]**
 1. 在「作者代理」頁面上，按一下「 **[!UICONTROL YouTube發佈(youtube)」。]**
@@ -773,7 +773,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 在視訊屬性頁面的右上角，按一下「儲存並關 **[!UICONTROL 閉」。]**
 1. 在工具列上，按一下「 **[!UICONTROL 快速發佈」。]**
 
-   另請參 [閱「搭配AEM網站使用出版物管理」](https://helpx.adobe.com/experience-manager/kt/sites/using/publication-management-feature-video-use.html)。
+   另請參 [閱「搭配AEM網站使用出版物管理」](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)。
 
    您可以選擇在YouTube頻道上驗證已發佈的視訊。
 
