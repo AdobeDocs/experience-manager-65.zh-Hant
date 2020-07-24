@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 2%
@@ -32,19 +32,19 @@ ht-degree: 2%
 
 ## 建立第一頁 {#create-first-pages}
 
-現在有了頁面 [範本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
+現在有了頁面范 [本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
 
 1. 標準UI目前提供建立網站的藍圖。 由於本教學課程是建立簡單網站，因此傳統的UI十分實用。
 
    若要切換至傳統UI，請選取全域導覽，並將滑鼠指標暫留在「專案」圖示的右側。 選擇「 *切換至傳統UI* 」表徵圖，該表徵圖顯示：
 
-   ![chlimage_1-36](assets/chlimage_1-36.png)
+   ![classic-ui](assets/classic-ui.png)
 
    必須由管理員啟用切換至傳統 [UI的功能](../../help/sites-administering/enable-classic-ui.md)。
 
 1. 從傳統 [UI歡迎頁面中](http://localhost:4502/welcome.html)，選擇 **[!UICONTROL 網站]**。
 
-   ![chlimage_1-37](assets/chlimage_1-37.png)
+   ![classic-ui-website](assets/classic-ui-website.png)
 
    或者，瀏覽至 [/網站管理員，直接存取網站的經典UI。](http://localhost:4502/siteadmin)
 
@@ -57,7 +57,7 @@ ht-degree: 2%
    * 選取 **[!UICONTROL SCF沙盒播放範本]**
    * Click **[!UICONTROL Create]**
 
-   ![chlimage_1-38](assets/chlimage_1-38.png)
+   ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
 1. 在瀏覽器窗格中，選擇您剛建立的頁面，然 `/Websites/SCF Sandbox Site`後按一下「 **[!UICONTROL 新建]** 」>「 **[!UICONTROL 新建頁面]**」:
 
@@ -75,11 +75,11 @@ ht-degree: 2%
 
 1. 網站現在會以此方式出現在網站主控台中。 請注意，在瀏覽器窗格中選擇的項目的子頁面會顯示在右窗格中，供管理。
 
-   ![chlimage_1-39](assets/chlimage_1-39.png)
+   ![classic-ui-website-page](assets/classic-ui-website-page.png)
 
    這是使用網站工具和模板建立內容的儲存庫視圖：
 
-   ![chlimage_1-40](assets/chlimage_1-40.png)
+   ![classic-ui-repository-view](assets/classic-ui-repository-view.png)
 
 ## 新增設計路徑 {#add-the-design-path}
 
@@ -100,7 +100,7 @@ ht-degree: 2%
 
 儲存庫應如下所示：
 
-![chlimage_1-41](assets/chlimage_1-41.png)
+![classic-ui-repository-path](assets/classic-ui-repository-path.png)
 
 * 按一下「 **[!UICONTROL 全部儲存」]**
 
