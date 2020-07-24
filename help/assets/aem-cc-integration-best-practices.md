@@ -3,10 +3,10 @@ title: Adobe Creative Cloud與整 [!DNL Adobe Experience Manager] 合最佳實�
 description: 整合的最佳實 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 務，以簡化資產轉讓工作流程並達到高內容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '3251'
-ht-degree: 14%
+source-wordcount: '3262'
+ht-degree: 15%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 14%
 | 商業使用者可簡化開啟和使用資產、編輯和上傳變更 [!DNL Experience Manager]至，以及從案頭環境 [!DNL Experience Manager] 上傳新檔案的程式。 他們會使用一般整合來開啟原生案頭應用程式中的任何資產類型，包括非Adobe的資產類型。 | [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac案頭版案頭應用程式 |
 | 行銷人員和商業使用者可從內部探索、預覽、授權和儲 [!DNL Adobe Stock] 存及管理資產 [!DNL Experience Manager]。 授權和儲存的資產提供精選的中繼 [!DNL Adobe Stock] 資料，以提升治理。 | [Experience Manager與Adobe Stock整合](aem-assets-adobe-stock.md) | [!DNL Experience Manager] 網路介面 |
 
-本文主要針對協作需求的前兩個方面。資產規模分配和採購作為一個使用案例被簡要提及。針對這些需求解決方案，請考慮Adobe品牌入口網站或資產共用公域。Alternate solutions such as [Brand Portal](https://helpx.adobe.com/tw/experience-manager/brand-portal/user-guide.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/managing-assets-touch-ui.md) should be reviewed based on specific requirement.
+本文主要針對協作需求的前兩個方面。資產規模分配和採購作為一個使用案例被簡要提及。針對這些需求解決方案，請考慮Adobe品牌入口網站或資產共用公域。Alternate solutions such as [Brand Portal](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/home.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/managing-assets-touch-ui.md) should be reviewed based on specific requirement.
 
 ![適用於Experience Manager的Creative Cloud連線，決定要使用哪些功能](assets/creative-connections-aem.png)
 
@@ -66,7 +66,7 @@ ht-degree: 14%
 
 為支援資產散發使用案例，應考慮其他解決方案：
 
-* [品牌入口](https://helpx.adobe.com/tw/experience-manager/brand-portal/user-guide.html) ，提供可設定、SaaS附加元件，以 [!DNL Experience Manager Assets] 發佈資產。
+* [品牌入口](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/home.html) ，提供可設定、SaaS附加元件，以 [!DNL Experience Manager Assets] 發佈資產。
 * 自訂解決方案是根據「資產共 [用共用共用](https://adobe-marketing-cloud.github.io/asset-share-commons/) 」程式碼庫建立。
 * [!DNL Experience Manager] [連結共用](/help/assets/link-sharing.md) ，使用連結臨機共用資產。
 * [Experience Manager Assets網路介面](/help/assets/managing-assets-touch-ui.md) ，可讓外部使用者存取控制設定 [!DNL Experience Manager] ，以及必要的IT/網路組態調整，為他們提供存取權 [!DNL Experience Manager]。
@@ -174,7 +174,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 使用下列策略來存取最終／核准的資產：
 
 * 如果「資產連結」無法運作，請使用案頭應用程式。
-* 使用 [Experience Manager Assets Brand Portal](https://helpx.adobe.com/tw/experience-manager/brand-portal/user-guide.html) ，將資產安全地發佈至外部合作夥伴
+* 使用 [Experience Manager Assets Brand Portal](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/home.html) ，將資產安全地發佈至外部合作夥伴
 * 使用基於資產共用公域的分發和採購門戶的自 [訂實施](https://adobe-marketing-cloud.github.io/asset-share-commons/)
 * 使用在必要的網路基礎 [!DNL Experience Manager] 架構（例如，VPN和IP允許清單）中設定的訪問控制，使外部方能夠訪問DAM中的專用內容區域。 他們可以 [!DNL Experience Manager] 使用Web UI取得資產，並將新內容上傳至DAM。
 
@@ -185,7 +185,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 Adobe Asset Link為此使用案例提供了良好的支援：
 
 * 當使用者 [!DNL Photoshop]在、 [!DNL InDesign]或 [!DNL Illustrator] 想要編輯檔案時，他們會對指定資產執行「取出」作業
-* 資產會在背景下載，並放入使用者Creative Cloud案頭應用程式同步至磁碟的Creative Cloud帳戶中，而且會在資產上切換結帳標幟，將編輯衝突降 [!DNL Experience Manager] 至最低
+* 資產會在背景下載，並放入使用者Creative Cloud案頭應用程式同步至磁碟的Creative Cloud帳戶中，而且會在資產上切換結帳標幟，將編輯衝突降 [!DNL Experience Manager] 到最低
 * 從此，使用者會在儲存在同步位置本機的檔案中工作，而且可以繼續工作並儲存必要的變更，以任何頻率需要
 * 此外，由於資產位於Creative Cloud帳戶中，因此也可在使用者可能擁有的其他裝置上使用（例如，可在專用的Creative Cloud行動應用程式中開啟或編輯），並可與其他Creative Cloud使用者共用以進行協作。
 * 當創意使用者完成變更後，他們可以在其Creative Cloud應用程式中對該檔案執行「登入」操作，並附上選用的註解。 中的對應資產 [!DNL Experience Manager] 會版本化，並更新為新二進位檔。 [!DNL Experience Manager] 像行銷人員或LOB使用者這樣的使用者可透過資產時間表UI存取重大資產變更或里程碑 [!DNL Experience Manager] 的資訊。
@@ -202,11 +202,11 @@ Adobe Asset Link為此使用案例提供了良好的支援：
 * 上傳創意廣告公司提供的資產
 * 如果在DAM外完成選取，則從較大的集合上傳選取的資產
 
-此說明是指將檔案上傳為案頭使用者工作流程的一般部分（例如，每週或每張像片）。 此處未涵蓋大型資產遷移。
+此說明是指在案頭使用者工作流程中，以正常作業方式（例如每週或每張像片）上傳檔案。 此處未涵蓋大型資產遷移。
 
 您可以運用下列上傳功能：
 
-* 若要大量上傳大型／階層式資料夾，請使用提 [!DNL Experience Manager] 供資料夾上傳功能的 [案頭應用程式](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html#bulkupload) 。 您也可以上傳階層式資料夾結構。 [!DNL Assets] 會在背景上傳，因此不會系結至網頁瀏覽器工作階段
+* 若要大量上傳大型／階層式資料夾，請使用提 [!DNL Experience Manager] 供資料夾上傳功能的 [案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#bulk-upload-assets) 。 您也可以上傳階層式資料夾結構。 [!DNL Assets] 會在背景上傳，因此不會系結至網頁瀏覽器工作階段
 * 若要從單一檔案夾上傳幾個檔案，請直接將檔案拖曳至網頁介面，或使用網頁介面中的「建立」 [!DNL Assets] 選項。
 * 您也可以根據您的業務需求使用自訂的上載程式。
 
@@ -222,7 +222,7 @@ Adobe Asset Link為此使用案例提供了良好的支援：
 
 >[!MORELIKETHIS]
 >
->* [Adobe Asset Link](https://helpx.adobe.com/in/enterprise/using/adobe-asset-link.html)
+>* [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)
 >* [Experience Manager案頭應用程式最佳實務](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
 >* [Experience Manager品牌入口網站](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
 >* [Experience Manager與Adobe Stock整合](aem-assets-adobe-stock.md)
