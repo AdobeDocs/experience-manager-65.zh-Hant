@@ -3,7 +3,7 @@ title: 數位版權管理 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解如何管理中授權資產的資產到期狀態和資訊 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 6%
@@ -65,9 +65,6 @@ ht-degree: 6%
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
 1. 按一 [!DNL Experience Manager] 下標誌以顯示搜尋面板。
-
-   ![chlimage_1-151](assets/chlimage_1-151.png)
-
 1. Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
@@ -114,11 +111,9 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 若要顯示其資產詳細資訊頁面，請在介面 [!DNL Assets] 中選取資產，然後按一下「屬 **[!UICONTROL 性]**」。
+1. 若要顯示其資產詳細資訊頁面，請在介面中 [!DNL Assets] 選取資產，然後按一下「屬 **[!UICONTROL 性]** 」 ![檢視屬性](assets/do-not-localize/info-circle-icon.png)。
 
-   ![chlimage_1-158](assets/chlimage_1-158.png)
-
-1. 在「進階」索引標籤中，從「過期」欄位設定資產的到 **[!UICONTROL 期日]** 。
+1. 在「進 [!UICONTROL 階] 」索引標籤中 **[!UICONTROL ，從「過期」欄位設定資產的到]** 期日。
 
    ![在「過期」欄位中設定資產到期日期和時間](assets/asset-properties-advanced-tab.png)
 
