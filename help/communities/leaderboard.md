@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 7449f99e-77d7-4c0f-96d5-b67d5e1f124a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+workflow-type: tm+mt
+source-wordcount: '99'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +22,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 本頁提供使用排行榜功能的基本資訊。
 
-在將排行榜元件包括在頁面之前，必須配置社 [區評分和標章](implementing-scoring.md)。 另請參閱 [Scoring and Badges Essentials](configure-scoring.md)。
+在將排行榜元件包括在頁面之前，必須配置社 [區評分和標章](implementing-scoring.md)。
+
+請參 [閱Scoring and Badges Essentials](configure-scoring.md)。
 
 ## 用戶端基本功能 {#essentials-for-client-side}
 
