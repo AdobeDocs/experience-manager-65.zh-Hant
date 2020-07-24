@@ -3,9 +3,9 @@ title: 中的資產模板 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解資產範本 [!DNL Adobe Experience Manager Assets] ，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Asset templates {#asset-templates}
 
-資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新運用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
+資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
 
 在確保全球標牌安全的同時，靈活地進行有限的編輯，使資產模板成為快速調整內容和分發內容的理想構件，以便用於各種功能的內容製品。 重新調整內容用途有助於降低管理印刷和數位通道的成本，並跨這些通道提供全方位且一致的體驗。
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 1. 按一 **[!UICONTROL 下「預覽]** 」以預覽文字變更。
 
-   ![chlimage_1-112](assets/chlimage_1-317.png)
+   ![檢視變更](assets/view-changes.png)
 
 1. 若要交換影像，請按一下「資 **[!UICONTROL 產搜尋器」]**。
 
@@ -122,11 +122,11 @@ ht-degree: 0%
 
 1. 按一 **[!UICONTROL 下「預覽]** 」以預覽影像。
 
-   ![chlimage_1-116](assets/chlimage_1-321.png)
+   ![檢視變更](assets/view-changes.png)
 
 1. 要編輯多頁宣傳品中的特定頁面，請使用底部的頁面導覽器。
 
-   ![chlimage_1-117](assets/chlimage_1-322.png)
+   ![頁面導覽器](assets/page-navigator.png)
 
 1. 按一 **[!UICONTROL 下工具列上的]** 「預覽」，以預覽所有變更。 按一下 **[!UICONTROL 完成]** ，保存對宣傳品的編輯更改。
 
@@ -172,8 +172,6 @@ ht-degree: 0%
    ![chlimage_1-122](assets/chlimage_1-327.png)
 
    您也可以從Omnisearch方塊中搜尋範本。
-
-   ![chlimage_1-123](assets/chlimage_1-328.png)
 
    您可以瀏覽儲存庫 [!DNL Experience Manager Assets] 或系列，並導航到所需模板的位置，然後選擇這些模板進行合併。
 
