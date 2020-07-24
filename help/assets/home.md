@@ -4,7 +4,7 @@ seo-title: Adobe Experience Manager 6.5 Assets使用指南
 description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 seo-description: 涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 11%
@@ -17,6 +17,9 @@ ht-degree: 11%
 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 
 ## Experience Manager重要文章
+
+<!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
+-->
 
 * [Experience Manager快速入門](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Experience Manager 6.5發行說明](/help/release-notes/home.md)
