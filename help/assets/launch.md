@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '6662'
+source-wordcount: '6623'
 ht-degree: 17%
 
 ---
@@ -84,7 +84,7 @@ Adobe Launch中的規則是一種不可知的設定，可定義構成規則的�
 若是Adobe Analytics追蹤，必須安裝數個額外的擴充功能，如安裝 [與設定擴充功能中所述](#installing-and-setup-of-extensions)。 具體而言：
 
 * 動態媒體檢視器擴充功能可將支援的事件清單擴充至特定於動態媒體檢視器的事件，例如檢視器載入、資產交換、放大和視訊播放。
-* Adobe Analytics擴充功能以傳送資料至追蹤伺服器所需的兩個動作，來擴充支援的動作清單： *設定變數* , *傳送信標*。
+* Adobe Analytics擴充功能以傳送資料至追蹤伺服器所需的兩個動作，擴充支援的動作清單： *設定變數* , *傳送信標*。
 
 若要追蹤動態媒體檢視器，可使用下列任何類型：
 
@@ -141,7 +141,9 @@ Adobe Launch中的下列範例設定示範如何在檢視器載入時追蹤資�
 
 在正確設定後，您使用動態媒體支援的WCM元件新增至「網站」頁面的任何動態媒體檢視器，都會自動追蹤資料至Adobe Analytics、Adobe Analytics for Video，或兩者皆有。
 
-請參 [閱使用Adobe Sites將動態媒體資產新增至頁面](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)。
+<!-- To be reviewed and updated:
+See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
+-->
 
 ### 使用內嵌程式碼追蹤動態媒體檢視器 {#tracking-dynamic-media-viewers-using-embed-code}
 
@@ -153,7 +155,9 @@ Adobe Launch中的下列範例設定示範如何在檢視器載入時追蹤資�
 
 請參 [閱新增Launch內嵌代碼](https://docs.adobe.com/content/help/en/launch/using/implement/configure/implement-the-launch-install-code.html) ，以進一步瞭解如何使用Adobe Launch程式庫內嵌代碼。
 
-請參 [閱「將視訊或影像檢視器內嵌在網頁上](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) 」，以進一步瞭解如何使用AEM Dynamic Media的內嵌程式碼功能。
+<!-- To be reviewed and updated:
+See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
+-->
 
 **若要使用內嵌程式碼追蹤動態媒體檢視器**:
 
@@ -712,6 +716,7 @@ AEM設定包含下列兩個主要步驟：
    * Under the **[!UICONTROL Select a role for Experience Platform Launch API]** heading, select **[!UICONTROL Admin]**.
 
    * 在「為 **[!UICONTROL Experience Platform Launch API選取一或多個產品設定檔」標題下]** ，選取名為 **[!UICONTROL Launch - &lt;your_company_name>的產品設定檔]**。
+
    ![2019-07-25_13-49-18](assets/2019-07-25_13-49-18.png)
 
 1. Click **[!UICONTROL Create integration]**.
@@ -747,7 +752,8 @@ AEM設定包含下列兩個主要步驟：
 
    * **[!UICONTROL 標題]** -輸入描述性帳戶標題。
    * **[!UICONTROL 授權伺服器]** -返回您先前開啟的「整合詳細資訊」頁面。 按一下「 **[!UICONTROL JWT]** 」頁籤。 複製伺服器名稱（不含路徑），如下所強調。
-   返回「帳 **[!UICONTROL 戶]** 」頁面，然後將名稱貼到相應欄位。例如， `https://ims-na1.adobelogin.com/`（範例伺服器名稱僅供圖例之用）
+
+（範例伺服器名稱僅供圖例之用）   返回「帳 **[!UICONTROL 戶]** 」頁面，然後將名稱貼到相應欄位。例如， `https://ims-na1.adobelogin.com/`（範例伺服器名稱僅供圖例之用）
 
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
 
