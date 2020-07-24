@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2051'
 ht-degree: 12%
 
 ---
@@ -70,13 +70,13 @@ Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console以品牌入�
 
 * 如果您是Adobe合作夥伴，請使用 [Adobe合作夥伴培訓計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，申請AEM 6.5。
 
-下載AEM後，如需設定AEM作者例項的指示，請參閱「部署 [與維護」](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
+下載AEM後，如需設定AEM作者例項的指示，請參閱「部署 [與維護」](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html#default-local-install)。
 
 ### 下載並安裝AEM最新Service Pack {#servicepack}
 
 如需詳細指示，請參閱
 
-* [AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/sp-release-notes.html)
+* [AEM 6.5 Service Pack發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
 
 **如果您找不到最新的AEM套件或Service Pack** ，請連絡客戶服務。
 
