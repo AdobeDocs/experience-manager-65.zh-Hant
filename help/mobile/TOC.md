@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Mobile User Guide
+user-guide-title: AEM 6.5 Mobile使用指南
+user-guide-description: Create and manage content for mobile apps.
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +17,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 + [行動使用指南總覽](home.md)
 + Introduction to AEM Mobile {#introduction}
-   + [AEM mobile快速入門](getting-started-aem-mobile.md)
+   + [AEM Mobile快速入門](getting-started-aem-mobile.md)
    + [AEM Mobile隨選](getting-started-aem-mobile-on-demand.md)
    + [行動應用程式](mobile-apps.md)
    + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
@@ -35,7 +39,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [內容屬性和節點](content-properties.md)
    + [建立共用資源導出配置](creating-shared-resources-export-configuration.md)
    + [建立和添加模板和元件](mobile-ondemand-app-templates.md)
-   + [最佳實務](best-practices-aem-mobile.md)
+   + [最佳作法](best-practices-aem-mobile.md)
    + [建立文章匯出設定](creating-article-export-configuration.md)
    + [具備內容同步功能的行動裝置](mobile-ondemand-contentsync.md)
    + [行動應用程式的頁面範本](apps-architecture.md)
@@ -57,10 +61,10 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [編輯應用程式中繼資料](phonegap-editmetadata.md)
    + [應用程式定義](phonegap-app-definitions.md)
    + [建立和管理應用程式內容](phonegap-manage-app-content.md)
-   + [使用建立精靈建立新的AEM mobile應用程式](phonegap-create-new-app.md)
+   + [使用建立精靈建立新的AEM Mobile應用程式](phonegap-create-new-app.md)
    + [製作行動應用程式](phonegap-authoring-apps.md)
    + [管理應用程式圖格](phonegap-app-details-tile.md)
-   + [AEM mobile內容個人化](phonegap-aem-mobile-content-personalization.md)
+   + [AEM Mobile內容個人化](phonegap-aem-mobile-content-personalization.md)
 + 開發Adobe PhoneGap Enterprise {#developphonegap}
    + [PhoneGap](developing-in-phonegap.md)
    + [建立行動應用程式](building-app-mobile-phonegap.md)
@@ -75,7 +79,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [存取裝置功能](phonegap-access-device-features.md)
    + [將Adobe Analytics新增至您的行動應用程式](phonegap-add-analytics-to-apps.md)
    + [行動應用程式的頁面範本](phonegap-apps-arch-page-templates.md)
-   + [設定Adobe Target cloud服務](aem-mobile-configuring-cloud-service.md)
+   + [設定Adobe Target Cloud服務](aem-mobile-configuring-cloud-service.md)
    + [單頁應用程式](phonegap-single-page-applications.md)
    + [儲存庫中的模型](administer-mobile-apps.md)
    + [啟動AEM PhoneGap](starting-aem-phonegap-app.md)
@@ -85,7 +89,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 + 管理Adobe PhoneGap Enterprise {#administering-phonegap}
    + [行動快速入門](phonegap-mobile-quickstart.md)
    + [使用AEM管理Adobe PhoneGap Enterprise的內容](administer-phonegap.md)
-   + [設定您的Adobe phoneGap Build cloud服務](configure-phonegap-build-cloud.md)
+   + [設定您的Adobe PhoneGap Build Cloud服務](configure-phonegap-build-cloud.md)
    + [將您的反向連結篩選設定為允許空白](setting-referrer-filter-empty.md)
-   + [設定您的Adobe Mobile Services cloud服務](configure-adobe-mobile-cloud-service.md)
+   + [設定您的Adobe Mobile Services Cloud服務](configure-adobe-mobile-cloud-service.md)
    + [設定您的使用者和使用者群組](configure-users-groups.md)
