@@ -3,11 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5編寫使用指南
+user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 41%
+ht-degree: 43%
 
 ---
 
@@ -41,7 +42,7 @@ ht-degree: 41%
    + [製作行動裝置的頁面](mobile.md)
    + [編寫時疑難排解AEM](troubleshooting.md)
    + [編輯頁面時的鍵盤快速鍵](page-authoring-keyboard-shortcuts.md)
-   + [最佳實務](best-practices.md)
+   + [最佳作法](best-practices.md)
 + 網站和頁面功能 {#siteandpage}
    + [使用標記](tags.md)
    + [建立頁面範本](templates.md)
@@ -51,7 +52,7 @@ ht-degree: 41%
    + [元件主控台](default-components-console.md)
    + [回應式版面](responsive-layout.md)
    + [內容分析](content-insights.md)
-   + [建立可存取的內容（WCAG 2.1符合性）](creating-accessible-content.md)
+   + [建立可存取的內容 (符合 WCAG 2.1)](creating-accessible-content.md)
    + [支架](scaffolding.md)
    + [在設計模式中設定元件](default-components-designmode.md)
    + [基礎元件](default-components-foundation.md)
