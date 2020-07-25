@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Communities User Guide
+user-guide-title: AEM 6.5 Communities使用指南
+user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: e9e7112cb1188de465b4c233292f6eec7d5d82c6
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 3%
 
 ---
 
@@ -62,7 +66,7 @@ source-git-commit: e9e7112cb1188de465b4c233292f6eec7d5d82c6
    + [適用於社群的FFmpeg](ffmpeg.md)
    + [內容協調](in-context.md)
    + [進階計分和徽章](advanced.md)
-   + [ASRP - adobe儲存資源供應商](asrp.md)
+   + [ASRP - Adobe儲存資源供應商](asrp.md)
    + [MSRP - MongoDB儲存資源提供程式](msrp.md)
    + [如何設定MongoDB以進行示範](demo-mongo.md)
    + [DSRP —— 關係資料庫儲存資源提供程式](dsrp.md)
