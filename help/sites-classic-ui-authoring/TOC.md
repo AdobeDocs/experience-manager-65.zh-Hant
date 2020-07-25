@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Classic UI Authoring User Guide
+user-guide-title: AEM 6.5 Classic UI編寫使用指南
+user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '266'
+ht-degree: 25%
 
 ---
 
@@ -32,7 +36,7 @@ source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
    + [編輯頁面屬性](classic-page-author-edit-page-properties.md)
    + [編輯頁面時的註解](classic-page-author-annotations.md)
    + [編寫時疑難排解AEM](classic-page-author-troubleshooting.md)
-   + [建立可存取的內容（WCAG 2.0符合性）](classic-page-author-accessible-content.md)
+   + [建立可存取的內容 (符合 WCAG 2.0)](classic-page-author-accessible-content.md)
    + [製作行動裝置的頁面](classic-feature-mobile.md)
    + [頁面製作的元件](classic-page-author-edit-mode.md)
    + [編輯頁面時的鍵盤快速鍵](classic-page-author-keyboard-shortcuts.md)
