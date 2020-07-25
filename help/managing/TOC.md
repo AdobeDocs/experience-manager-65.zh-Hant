@@ -3,11 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5管理使用指南
+user-guide-description: Learn how to manage an AEM project.
 translation-type: tm+mt
-source-git-commit: cb7df7301364eb1ce3a1ca376256d2cd5afcb2c8
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '63'
-ht-degree: 17%
+ht-degree: 20%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 17%
    + [檢查清單——進一步參考](best-practices-further-reference.md)
 + 管理——進一步參考 {#managing-further-reference}
    + [硬體尺寸指南](hardware-sizing-guidelines.md)
-   + [企業開發營運](enterprise-devops.md)
+   + [企業 DevOps](enterprise-devops.md)
    + [SEO和URL管理最佳實務](seo-and-url-management.md)
 + 協助工具 {#accessibility}
    + [AEM與網頁協助工具准則](web-accessibility.md)
