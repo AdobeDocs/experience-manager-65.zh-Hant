@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Deploying Guide
+user-guide-title: AEM 6.5部署指南
+user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.5, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 2%
 
 ---
 
@@ -40,7 +44,7 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [配置OSGi](configuring-osgi.md)
    + [OSGi配置設定](osgi-configuration-settings.md)
    + [執行模式](configure-runmodes.md)
-   + [Web 控制台](web-console.md)
+   + [Web 主控台](web-console.md)
    + [複寫](replication.md)
    + [使用互相SSL進行複製](mssl-replication.md)
    + [複製故障排除](troubleshoot-rep.md)
@@ -87,7 +91,7 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
    + [馬根托](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
-+ Best Practices {#practices}
++ 最佳作法 {#practices}
    + [部署最佳實務](best-practices.md)
    + [效能樹](performance-tree.md)
    + [效能測試的最佳實務](best-practices-for-performance-testing.md)
