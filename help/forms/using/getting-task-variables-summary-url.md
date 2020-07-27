@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
@@ -28,6 +31,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * empid
    * 原因
    * 持續時間
+
    >[!NOTE]
    >
    >此轉譯器是摘要頁面範本。
@@ -36,7 +40,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
    `apps/Employees/PtoApplication/html.esp`
 
-   ```
+   ```html
    <html>
      <body>
        <table>
@@ -72,9 +76,9 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
       它需要三個輸入變數：
 
-      * **資料夾路徑**:建立新CRX節點的路徑。 將路徑設為 **/content**。
-      * **節點名稱**:將輸入變數nodeName指派給此欄位。 這是唯一的節點名稱字串。
-      * **節點類型**:將類型定義為 **nt:unstructured**。 此進程的輸出是nodePath。 nodePath是新建立的節點的CRX路徑。 ndoePath將是建立PTO匯總流程的 **最終輸出** 。
+      * **資料夾路徑**: 建立新CRX節點的路徑。 將路徑設為 **/content**。
+      * **節點名稱**: 將輸入變數nodeName指派給此欄位。 這是唯一的節點名稱字串。
+      * **節點類型**: 將類型定義為 **nt:unstructured**。 此進程的輸出是nodePath。 nodePath是新建立的節點的CRX路徑。 ndoePath將是建立PTO匯總流程的 **最終輸出** 。
    1. 將提交的表單資料(**employee** Name、 **employee** ID **、** TotalDays Reason和TotalDays ********)作為輸入傳遞至新流程Oracle Process Create PTO SummaryPo。 將輸出作為 **ptoSummaryNodePath**。
 
 
