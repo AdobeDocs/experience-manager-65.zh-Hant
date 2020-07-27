@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 9e1d77b8696436b392f0d9209ddcb2c9196f3c09
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '7698'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 文章說明在JEE上執行AEM Forms的伺服器保全建議和最佳實務。 對於您的作業系統和應用程式伺服器，此檔案並非完整的主機強化檔案。 相反地，本文說明您應實作的各種安全性強化設定，以增強在公司內部網路中執行的JEE上AEM Forms的安全性。 不過，為確保JEE應用程式伺服器上的AEM Forms保持安全，您也應實作安全性監控、偵測和回應程式。
 
-本文描述在安裝和配置生命週期的以下階段應應用的強化技術：
+本文描述在安裝和配置生命週期的以下階段應用的強化技術：
 
 * **預安裝：** 在JEE上安裝AEM Forms之前，請先使用這些技巧。
 * **安裝：** 在AEM Forms on JEE安裝程式中使用這些技巧。
@@ -218,7 +218,7 @@ Configuration Manager使用部署在應用程式伺服器上的servlet，在JEE�
 1. 開啟META-INF/application.xml檔案。
 1. 搜尋adobe-bootstrapper.war區段：
 
-   ```as3
+   ```java
    <!-- bootstrapper start --> 
    <module id="WebApp_adobe_bootstrapper"> 
        <web> 
@@ -238,7 +238,7 @@ Configuration Manager使用部署在應用程式伺服器上的servlet，在JEE�
 1. 停止AEM Forms伺服器。
 1. 注釋adobe-bootstrapper.war和adobe-lcm-bootstrapper-redirectory。 戰爭模組如下：
 
-   ```as3
+   ```java
    <!-- bootstrapper start --> 
    <!-- 
    <module id="WebApp_adobe_bootstrapper"> 
@@ -280,7 +280,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 
 1. 在網頁瀏覽器中輸入下列URL:
 
-   ```as3
+   ```java
    https://[host name]:[port]/adminui
    ```
 
@@ -313,7 +313,7 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 
 1. 在網頁瀏覽器中輸入下列URL:
 
-   ```as3
+   ```java
    https://[host name]:[port]/adminui
    ```
 
@@ -357,7 +357,7 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 
 1. 修改 [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml} `integratedSecurity=true` 以新增至連線URL，如以下範例所示：
 
-   ```as3
+   ```java
     jdbc:sqlserver://<serverhost>:<port>;databaseName=<dbname>;integratedSecurity=true
    ```
 
@@ -369,7 +369,7 @@ Web服務定義語言(WSDL)產生只能用於開發環境，開發人員會使�
 
 1. 在Web瀏覽器的URL行中鍵入以下URL，以啟動WebLogic Server管理控制台：
 
-   ```as3
+   ```java
    https://[host name]:7001/console
    ```
 
@@ -429,7 +429,7 @@ AEM Forms資料庫架構包含有關係統設定和商業程式的敏感資訊�
 
 ### 審核和記錄 {#auditing-and-logging}
 
-正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入等項目，以及重要應用程式事件，例如建立或刪除重要記錄。
+正確且安全地使用應用程式稽核和記錄功能有助於確保盡快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能，包括追蹤成功登入和失敗登入的項目，以及重要應用程式事件，例如建立或刪除重要記錄。
 
 您可以使用審計來檢測多種攻擊類型，包括：
 
@@ -730,7 +730,7 @@ JEE上的AEM Forms提供API來管理「允許的反向連結例外」清單和�
 
 LC_ ***GLOBAL_ALLOWED_REFERER_EXCEPTION*** 清單ID在命名空間類中定義為常 `UMConstants` 數， `com.adobe.idp.um.api` 如中所示 `adobe-usermanager-client.jar`。 您可以使用AEM Forms API來建立、修改或編輯此清單。 例如，若要建立「允許的全域反向連結例外」清單，請使用：
 
-```as3
+```java
 addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arrays.asList("/index.html", "/sample/(.)*"))
 ```
 
@@ -758,7 +758,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 以下是 *SAMPLE* WAR檔案 ****** web.xml檔案中篩選條目的範例：
 
-```as3
+```java
 <filter> 
        <filter-name> filter-name </filter-name> 
        <filter-class> com.adobe.idp.um.auth.filter.RemoteCSRFFilter </filter-class> 
@@ -976,7 +976,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 1. 在https連接器元素中新增下列程式碼：
 
-   ```
+   ```xml
    <connector name="https" protocol="HTTP/1.1" scheme="https" socket-binding="https" secure="true" enabled="true"> 
     <ssl name="jboss7_ssl" key-alias="jboss71" password="Tibco321" certificate-key-file="../standalone/configuration/server.keystore" protocol="TLSv1"/> 
     </connector>
@@ -1053,7 +1053,7 @@ AEM Forms on JEE使用檔案系統的方式如下：
 
 登入Administration Console後，可修改URL，以瀏覽主控台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會出現目錄清單：
 
-```as3
+```java
 https://<servername>:8080/adminui/secured/ 
 https://<servername>:8080/um/
 ```
@@ -1066,7 +1066,7 @@ https://<servername>:8080/um/
 
 將weblogic.xml檔案中的index-directorys屬性設定為 `false`，如以下示例所示：
 
-```as3
+```xml
 <container-descriptor> 
     <index-directory-enabled>false 
     </index-directory-enabled> 
