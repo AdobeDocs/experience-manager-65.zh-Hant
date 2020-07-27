@@ -10,7 +10,10 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '1033'
+ht-degree: 0%
 
 ---
 
@@ -45,20 +48,20 @@ CRX QueryBuilder REST介面透過Java API和REST API公開「資產共用查詢�
    >
    >在每個查詢中，路徑參數都指向crx儲存位置，字元會根據URL標準逸出。
 
-## 使用Query Builder API建立服務 {#creating-a-service-using-query-builder-api-nbsp}
+## 使用Query Builder API建立服務  {#creating-a-service-using-query-builder-api-nbsp}
 
 使用Query Builder API建立服務的先決條件是 [建立和部署CQ OSGI搭售](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) , [以及使用Query Builder API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)。
 
 1. 使用適當的註解建立OSGi服務。 若要存取QueryBuilder，請使用：
 
-   ```
+   ```java
    @Reference(referenceInterface = QueryBuilder.class)
     private QueryBuilder queryBuilder;
    ```
 
 1. 建立謂片語。 建立謂片語的代碼為：
 
-   ```
+   ```java
    PredicateGroup predicateGroup = new PredicateGroup();
     predicateGroup.setAllRequired(true);
    ```
@@ -340,7 +343,7 @@ public class PeriodicProcessVolume {
 
 在服務 `pom.xml`之上構建的示例檔案為：
 
-```java
+```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -420,7 +423,7 @@ public class PeriodicProcessVolume {
 </project>
 ```
 
-## 建立個別的UI {#creating-a-separate-ui-nbsp}
+## 建立個別的UI  {#creating-a-separate-ui-nbsp}
 
 建立個別UI以顯示結果的先決條件是 [Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html)、 [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) ，以及提供適當的存 [取權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
 
@@ -432,7 +435,7 @@ public class PeriodicProcessVolume {
 
    包含JSP和CSS檔案的範例節點
 
-1. 新增javascript程式碼，以啟動Ajax呼叫至Querybuilder REST API或您的服務。 此外，還可添加適當的引數。
+1. 新增JavaScript程式碼，以啟動Ajax呼叫查詢建立工具REST API或您的服務。 此外，還可添加適當的引數。
 
 1. 將適當的成功處理常式新增至Ajax呼叫，以剖析並顯示結果。 您可以將結果解析為多種格式（json/csv/使用者定義），並以表格或其他形式顯示。
 
@@ -440,7 +443,7 @@ public class PeriodicProcessVolume {
 
 同時使用OSGi Service和QueryBuilder API的範例JSP程式碼為：
 
-```
+```html
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling/1.0"%>
 <%request.setAttribute("silentAuthor", new Boolean(true));%>
 <%@include file="/libs/foundation/global.jsp"%>
@@ -628,7 +631,7 @@ response.setCharacterEncoding("utf-8");
 </html>
 ```
 
-## 將報表UI整合在現有的流程報表UI中 {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
+## 將報表UI整合在現有的流程報表UI中  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
 建立個別UI以顯示結果的先決條件是 [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、 [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) ，以及提供適當的存 [取權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
 
@@ -640,6 +643,7 @@ response.setCharacterEncoding("utf-8");
    * **link**—— 指定個別UI轉譯器的相對連結。 該連結建立步驟1。
    * **description**—— 指定報表的一行說明。 您可將說明欄位保留為空白。
    * **圖示**-指定要以圖形方式呈現報表的影像。 您可以將圖示欄位保留為空白。
+
    ![節點的屬性 ](assets/node_properties_new.png)
 
    節點的屬性
