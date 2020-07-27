@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '10781'
+ht-degree: 0%
 
 ---
 
@@ -91,11 +94,11 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要為服務建立EJB端點，請指定以下值：
 
-* **連接器識別碼**:指定要建立的端點類型。 要建立EJB端點，請指定 `EJB`。
-* **說明**:指定端點說明。
-* **名稱**:指定端點的名稱。
-* **服務識別碼**:指定端點所屬的服務。
-* **操作名稱**:指定使用端點調用的操作的名稱。 建立EJB端點時，請指定通配符( `*`)。 但是，如果要指定與調用所有服務操作不同的特定操作，請指定操作的名稱，而不是使用通配符( `*`)。
+* **連接器識別碼**: 指定要建立的端點類型。 要建立EJB端點，請指定 `EJB`。
+* **說明**: 指定端點說明。
+* **名稱**: 指定端點的名稱。
+* **服務識別碼**: 指定端點所屬的服務。
+* **操作名稱**: 指定使用端點調用的操作的名稱。 建立EJB端點時，請指定通配符( `*`)。 但是，如果要指定與調用所有服務操作不同的特定操作，請指定操作的名稱，而不是使用通配符( `*`)。
 
 **建立EJB端點**
 
@@ -147,7 +150,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API添加EJB端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
+[快速入門： 使用Java API添加EJB端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -196,11 +199,11 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要向服務添加SOAP端點，請指定以下值：
 
-* **連接器標識符值**:指定要建立的端點類型。 要建立SOAP端點，請指定 `SOAP`。
-* **說明**:指定端點說明。
-* **名稱**:指定端點名稱。
-* **服務標識符值**:指定端點所屬的服務。
-* **操作名稱**:指定使用端點調用的操作的名稱。 建立SOAP端點時，請指定通配符( `*`)。 但是，如果要指定與調用所有服務操作不同的特定操作，請指定操作的名稱，而不是使用通配符( `*`)。
+* **連接器標識符值**: 指定要建立的端點類型。 要建立SOAP端點，請指定 `SOAP`。
+* **說明**: 指定端點說明。
+* **名稱**: 指定端點名稱。
+* **服務標識符值**: 指定端點所屬的服務。
+* **操作名稱**: 指定使用端點調用的操作的名稱。 建立SOAP端點時，請指定通配符( `*`)。 但是，如果要指定與調用所有服務操作不同的特定操作，請指定操作的名稱，而不是使用通配符( `*`)。
 
 **建立SOAP端點**
 
@@ -238,7 +241,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 調用物件的方法並傳遞描述 `CreateEndpointInfo` 端點的字 `setDescription` 串值，以指定端點的說明。
    * 調用物件的方法並傳遞指 `CreateEndpointInfo` 定名稱的字 `setName` 串值，以指定端點的名稱。
    * 通過調用對象的方法並傳遞指定服務名 `CreateEndpointInfo` 的字串值， `setServiceId` 指定端點所屬的服務。
-   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值而呼叫的作業。 對於SOAP和EJB端點，請指定通配符( `*`)，表示所有操作。
+   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值所呼叫的作業。 對於SOAP和EJB端點，請指定通配符( `*`)，表示所有操作。
 
 1. 建立SOAP端點。
 
@@ -252,7 +255,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API添加SOAP端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+[快速入門： 使用Java API添加SOAP端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -306,11 +309,11 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要為服務建立「監視資料夾」端點，請指定以下值：
 
-* **連接器識別碼**:指定所建立的端點類型。 要建立「監視資料夾」端點，請指定 `WatchedFolder`。
-* **說明**:指定端點的說明。
-* **名稱**:指定端點的名稱。
-* **服務識別碼**:指定端點所屬的服務。 例如，若要將「監視資料夾」端點新增至本節中引入的程式（當使用Workbench啟動時，程式會變成服務），請指定 `EncryptDocument`。
-* **操作名稱**:指定使用端點調用的操作的名稱。 通常，為源自在Workbench中建立的流程的服務建立「監視資料夾」端點時，操作的名稱為 `invoke`。
+* **連接器識別碼**: 指定所建立的端點類型。 要建立「監視資料夾」端點，請指定 `WatchedFolder`。
+* **說明**: 指定端點的說明。
+* **名稱**: 指定端點的名稱。
+* **服務識別碼**: 指定端點所屬的服務。 例如，若要將「監視資料夾」端點新增至本節中引入的程式（當使用Workbench啟動時，程式會變成服務），請指定 `EncryptDocument`。
+* **操作名稱**: 指定使用端點調用的操作的名稱。 通常，為源自在Workbench中建立的流程的服務建立「監視資料夾」端點時，操作的名稱為 `invoke`。
 
 **指定配置值**
 
@@ -318,24 +321,24 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 以下清單指定在以寫程式方式將Watched資料夾端點添加到服務時設定的配置值：
 
-* **url**:指定受監視的資料夾位置。 在叢集環境中，此值必須指向可從叢集中每台電腦存取的共用網路資料夾。
-* **非同步**:將調用類型標識為非同步或同步。 瞬態和同步進程只能同步調用。 預設值為true。 建議使用非同步。
-* **cronExpression**:Quartz用於調度輸入目錄的輪詢。 如需設定cron運算式的詳細資訊，請參閱 [https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html](https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html)。
-* **purgeDuration**:這是必備屬性。 結果資料夾中的檔案和資料夾在其早於此值時被清除。 此值以天計。 此屬性對於確保結果資料夾未變為完整非常有用。 值為-1天表示從不刪除結果資料夾。 預設值為-1。
-* **repeatInterval**:掃描「監視資料夾」進行輸入的間隔（秒）。 除非啟用調節，否則此值應比處理平均作業的時間長；否則，系統可能會超載。 預設值為5。
-* **repeatCount**:「監視資料夾」掃描資料夾或目錄的次數。 值-1表示無限掃描。 預設值為-1。
-* **throttleOn**:限制可在任何指定時間處理的「已監視資料夾」作業數。 作業的最大數量由batchSize值確定。
-* **userName**:從「監視資料夾」叫用目標服務時使用的使用者名稱。 此值為強制值。 預設值為SuperAdmin。
-* **domainName**:使用者的網域。 此值為強制值。 預設值為DefaultDom。
-* **batchSize**:每次掃描要拾取的檔案或資料夾數。 使用此值可防止系統過載；一次掃描太多檔案可能會造成當機。 預設值為2。
-* **waitTime**:建立資料夾或檔案後，在掃描資料夾或檔案之前等待的時間（以毫秒為單位）。 例如，如果等待時間是36,000,000毫秒（1小時），而檔案是在一分鐘前建立的，則此檔案會在59分鐘或更久之後擷取。 此屬性對於確保檔案或資料夾被完全複製到輸入資料夾非常有用。 例如，如果要處理大檔案，而要下載該檔案需要10分鐘，請將等待時間設定為10&amp;ast;60 &amp;ast;1000毫秒。 此設定會防止受監視的資料夾在檔案尚未等候10分鐘時進行掃描。 預設值為0。
-* **excludeFilePattern**:受監視資料夾用於確定要掃描和拾取哪些檔案和資料夾的模式。 不會掃描任何具有此模式的檔案或資料夾以進行處理。 當輸入是包含多個檔案的檔案夾時，此設定很實用。 資料夾的內容可以複製到名稱由受監視資料夾挑選的資料夾中。 此步驟可防止被監視的資料夾在完全複製到輸入資料夾之前拾取要處理的資料夾。 例如，如果excludeFilePattern值為，則不 `data*`會擷取所有符合的檔 `data*` 案和檔案夾。 這包括名為、 `data1`等的 `data2`檔案和檔案夾。 此外，該模式可以用通配符模式補充以指定檔案模式。 監看的資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`。 規則運算式不支援這些萬用字元模式。
-* **includeFilePattern**:受監視資料夾用於確定要掃描和拾取哪些資料夾和檔案的模式。 例如，如果此值為，則 `*`會擷取所有符合的檔 `input*` 案和檔案夾。 這包括名為、 `input1`等的 `input2`檔案和檔案夾。 預設值為 `*`。 此值表示所有檔案和資料夾。 此外，該模式可以用通配符模式補充以指定檔案模式。 監看的資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`。 規則運算式不支援這些萬用字元模式。 此值為必填值。
-* **resultFolderName**:儲儲存存結果的資料夾。 此位置可以是絕對或相對目錄路徑。 如果結果未顯示在此資料夾中，請檢查失敗資料夾。 只讀檔案不會被處理，並將保存在失敗資料夾中。 預設值為 `result/%Y/%M/%D/`。 這是監視資料夾內的結果資料夾。
-* **preserveFolderName**:成功掃描和拾取檔案後儲存檔案的位置。 此位置可以是絕對、相對或空目錄路徑。 預設值為 `preserve/%Y/%M/%D/`。
-* **failureFolderName**:保存失敗檔案的資料夾。 此位置始終相對於監視的資料夾。 只讀檔案不會被處理，並將保存在失敗資料夾中。 預設值為 `failure/%Y/%M/%D/`。
-* **preserveOnFailure**:在無法對服務執行操作時保留輸入檔案。 預設值為true。
-* **overwriteDuplicateFilename**:設定為true時，將覆蓋結果資料夾和保留資料夾中的檔案。 設定為false時，名稱會使用具有數字索引尾碼的檔案和資料夾。 預設值為false。
+* **url**: 指定受監視的資料夾位置。 在叢集環境中，此值必須指向可從叢集中每台電腦存取的共用網路資料夾。
+* **非同步**: 將調用類型標識為非同步或同步。 瞬態和同步進程只能同步調用。 預設值為true。 建議使用非同步。
+* **cronExpression**: Quartz用於調度輸入目錄的輪詢。 如需設定cron運算式的詳細資訊，請參閱 [https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html](https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html)。
+* **purgeDuration**: 這是必備屬性。 結果資料夾中的檔案和資料夾在其早於此值時被清除。 此值以天計。 此屬性對於確保結果資料夾未變為完整非常有用。 值為-1天表示從不刪除結果資料夾。 預設值為-1。
+* **repeatInterval**: 掃描「監視資料夾」進行輸入的間隔（秒）。 除非啟用調節，否則此值應比處理平均作業的時間長； 否則，系統可能會超載。 預設值為5。
+* **repeatCount**: 「監視資料夾」掃描資料夾或目錄的次數。 值-1表示無限掃描。 預設值為-1。
+* **throttleOn**: 限制可在任何指定時間處理的「已監視資料夾」作業數。 作業的最大數量由batchSize值確定。
+* **userName**: 從「監視資料夾」叫用目標服務時使用的使用者名稱。 此值為強制值。 預設值為SuperAdmin。
+* **domainName**: 使用者的網域。 此值為強制值。 預設值為DefaultDom。
+* **batchSize**: 每次掃描要拾取的檔案或資料夾數。 使用此值可防止系統過載； 一次掃描太多檔案可能會造成當機。 預設值為2。
+* **waitTime**: 建立資料夾或檔案後，在掃描資料夾或檔案之前等待的時間（以毫秒為單位）。 例如，如果等待時間是36,000,000毫秒（1小時），而檔案是在一分鐘前建立的，則此檔案會在59分鐘或更久之後擷取。 此屬性對於確保檔案或資料夾被完全複製到輸入資料夾非常有用。 例如，如果要處理大檔案，而要下載該檔案需要10分鐘，請將等待時間設定為10&amp;ast;60 &amp;ast;1000毫秒。 此設定會防止受監視的資料夾在檔案尚未等候10分鐘時進行掃描。 預設值為0。
+* **excludeFilePattern**: 受監視資料夾用於確定要掃描和拾取哪些檔案和資料夾的模式。 不會掃描任何具有此模式的檔案或資料夾以進行處理。 當輸入是包含多個檔案的檔案夾時，此設定很實用。 資料夾的內容可以複製到名稱由受監視資料夾挑選的資料夾中。 此步驟可防止被監視的資料夾在完全複製到輸入資料夾之前拾取要處理的資料夾。 例如，如果excludeFilePattern值為，則不 `data*`會擷取所有符合的檔 `data*` 案和檔案夾。 這包括名為、 `data1`等的 `data2`檔案和檔案夾。 此外，該模式可以用通配符模式補充以指定檔案模式。 監看的資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`。 規則運算式不支援這些萬用字元模式。
+* **includeFilePattern**: 受監視資料夾用於確定要掃描和拾取哪些資料夾和檔案的模式。 例如，如果此值為，則 `*`會擷取所有符合的檔 `input*` 案和檔案夾。 這包括名為、 `input1`等的 `input2`檔案和檔案夾。 預設值為 `*`。 此值表示所有檔案和資料夾。 此外，該模式可以用通配符模式補充以指定檔案模式。 監看的資料夾會修改規則運算式，以支援萬用字元模式，例如 `*.*` 和 `*.pdf`。 規則運算式不支援這些萬用字元模式。 此值為必填值。
+* **resultFolderName**: 儲儲存存結果的資料夾。 此位置可以是絕對或相對目錄路徑。 如果結果未顯示在此資料夾中，請檢查失敗資料夾。 只讀檔案不會被處理，並將保存在失敗資料夾中。 預設值為 `result/%Y/%M/%D/`。 這是監視資料夾內的結果資料夾。
+* **preserveFolderName**: 成功掃描和拾取檔案後儲存檔案的位置。 此位置可以是絕對、相對或空目錄路徑。 預設值為 `preserve/%Y/%M/%D/`。
+* **failureFolderName**: 保存失敗檔案的資料夾。 此位置始終相對於監視的資料夾。 只讀檔案不會被處理，並將保存在失敗資料夾中。 預設值為 `failure/%Y/%M/%D/`。
+* **preserveOnFailure**: 在無法對服務執行操作時保留輸入檔案。 預設值為true。
+* **overwriteDuplicateFilename**: 設定為true時，將覆蓋結果資料夾和保留資料夾中的檔案。 設定為false時，名稱會使用具有數字索引尾碼的檔案和資料夾。 預設值為false。
 
 **定義輸入參數值**
 
@@ -343,16 +346,16 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要定義「監視資料夾」端點所需的輸入參數值，請指定以下值：
 
-**輸入參數名稱**:輸入參數的名稱。 輸入值的名稱在流程的「工作台」中指定。 如果輸入值屬於服務操作（不是在Workbench中建立的進程的服務），則在component.xml檔案中指定輸入名稱。 例如，本節中引入的進程的輸入參數的名稱為 `InDoc`。
+**輸入參數名稱**: 輸入參數的名稱。 輸入值的名稱在流程的「工作台」中指定。 如果輸入值屬於服務操作（不是在Workbench中建立的進程的服務），則在component.xml檔案中指定輸入名稱。 例如，本節中引入的進程的輸入參數的名稱為 `InDoc`。
 
-**對應類型**:用於配置調用服務操作所需的輸入值。 映射類型有兩種：
+**對應類型**: 用於配置調用服務操作所需的輸入值。 映射類型有兩種：
 
-* `Literal`:「監視資料夾」端點使用在顯示時在欄位中輸入的值。 支援所有基本的Java類型。 例如，如果API使用輸入（例如String、long、int和Boolean），則字串將轉換為正確的類型並調用服務。
-* `Variable`:輸入的值是受監視資料夾用於選擇輸入的檔案模式。 例如，如果為映射類型選擇「變數」，且輸入文檔必須是PDF檔案，則可以指 `*.pdf`定為映射值。
+* `Literal`: 「監視資料夾」端點使用在顯示時在欄位中輸入的值。 支援所有基本的Java類型。 例如，如果API使用輸入（例如String、long、int和Boolean），則字串將轉換為正確的類型並調用服務。
+* `Variable`: 輸入的值是受監視資料夾用於選擇輸入的檔案模式。 例如，如果為映射類型選擇「變數」，且輸入文檔必須是PDF檔案，則可以指 `*.pdf`定為映射值。
 
-**對應值**:指定映射類型的值。 例如，如果選擇映射類 `Variable` 型，可以指定 `*.pdf` 為檔案模式。
+**對應值**: 指定映射類型的值。 例如，如果選擇映射類 `Variable` 型，可以指定 `*.pdf` 為檔案模式。
 
-**資料類型**:指定輸入值的資料類型。 例如，本節中介紹的進程輸入值的資料類型為 `com.adobe.idp.Document`。
+**資料類型**: 指定輸入值的資料類型。 例如，本節中介紹的進程輸入值的資料類型為 `com.adobe.idp.Document`。
 
 **定義輸出參數值**
 
@@ -360,15 +363,15 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要定義「監視資料夾」端點所需的輸出參數值，請指定以下值：
 
-**輸出參數名稱**:輸出參數的名稱。 流程輸出值的名稱在Workbench中指定。 如果輸出值屬於服務操作（不是在Workbench中建立的進程的服務），則輸出名稱在component.xml檔案中指定。 例如，本節中介紹的進程的輸出參數的名稱為 `SecuredDoc`。
+**輸出參數名稱**: 輸出參數的名稱。 流程輸出值的名稱在Workbench中指定。 如果輸出值屬於服務操作（不是在Workbench中建立的進程的服務），則輸出名稱在component.xml檔案中指定。 例如，本節中介紹的進程的輸出參數的名稱為 `SecuredDoc`。
 
-**對應類型**:用於配置服務和操作的輸出。 可使用下列選項：
+**對應類型**: 用於配置服務和操作的輸出。 可使用下列選項：
 
 * 如果服務傳回單一物件（單一檔案），則模式為， `%F.pdf` 來源目的地為sourcefilename.pdf。 例如，本節中引入的程式會傳回單一檔案。 因此，映射類型可定義為 `%F.pdf` ( `%F` 表示使用給定檔案名)。 該模式 `%E` 指定輸入文檔的副檔名。
 * 如果服務返回清單，則模式為 `Result\%F\`，源目標為Result\sourcefilename\source1 (output 1)和Result\sourcefilename\source2 (output 2)。
 * 如果服務返回映射，則模式為 `Result\%F\`，源目標為Result\sourcefilename\file1 and Result\sourcefilename\file2。 如果映射有多個對象，則模式為 `Result\%F.pdf` ，源目標為Result\sourcefilename1.pdf（輸出1）、Result\sourcefilenam2.pdf（輸出2）等。
 
-**資料類型**:指定返回值的資料類型。 例如，本節中介紹的進程返回值的資料類型為 `com.adobe.idp.Document`。
+**資料類型**: 指定返回值的資料類型。 例如，本節中介紹的進程返回值的資料類型為 `com.adobe.idp.Document`。
 
 **建立Watched資料夾端點**
 
@@ -414,9 +417,10 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
    * 指定配置值名稱的字串值。 設定設定 `url` 值時，請指定 `url`。
    * 指定配置值值的字串值。 設定設定值 `url` 時，請指定監看的資料夾位置。
+
    >[!NOTE]
    >
-   >要查看為EncryptDocument服務設定的所有配置值，請參閱 [QuickStart中的Java代碼示例：使用Java API新增「監看資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)。
+   >要查看為EncryptDocument服務設定的所有配置值，請參閱 [QuickStart中的Java代碼示例： 使用Java API新增「監看資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)。
 
 1. 定義輸入參數值。
 
@@ -426,6 +430,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 指定輸入參數的資料類型的字串值。 例如，輸入參數的資料 `InDoc` 類型為 `com.adobe.idp.Document`。
    * 指定映射類型的字串值。 例如，您可以指定 `variable`。
    * 指定映射類型值的字串值。 例如，您可以指定&amp;ast;.pdf作為檔案模式。
+
    >[!NOTE]
    >
    >調用每 `setInputParameterMapping` 個輸入參數值的方法進行定義。 由於EncryptDocument進程只有一個輸入參數，因此您需要調用此方法一次。
@@ -450,7 +455,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API新增「監視資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[快速入門： 使用Java API新增「監視資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -458,9 +463,9 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ### 監視資料夾配置值常數檔案 {#watched-folder-configuration-values-constant-file}
 
-快速 [入門：使用Java API新增「監看資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) ，會使用必須屬於Java專案一部分的常數檔案，以編譯快速開始。 此常數檔案表示在添加「監視資料夾」端點時必須設定的配置值。 以下Java代碼表示常數檔案。
+快速 [入門： 使用Java API新增「監看資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) ，會使用必須屬於Java專案一部分的常數檔案，以編譯快速開始。 此常數檔案表示在添加「監視資料夾」端點時必須設定的配置值。 以下Java代碼表示常數檔案。
 
-```as3
+```java
  /**
      * This class contains constants that can be used when setting Watched Folder
      * configuration values
@@ -537,11 +542,11 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要為服務建立電子郵件端點，請指定以下值：
 
-* **連接器標識符值**:指定所建立的端點類型。 要建立電子郵件端點，請指定 `Email`。
-* **說明**:指定端點的說明。
-* **名稱**:指定端點的名稱。
-* **服務標識符值**:指定端點所屬的服務。 例如，若要將電子郵件端點新增至本節中引入的程式（當使用Workbench啟動程式時，程式會變成服務），請指定 `EncryptDocument`。
-* **操作名稱**:指定使用端點調用的操作的名稱。 通常，為源自在Workbench中建立的流程的服務建立電子郵件端點時，操作的名稱為 `invoke`。
+* **連接器標識符值**: 指定所建立的端點類型。 要建立電子郵件端點，請指定 `Email`。
+* **說明**: 指定端點的說明。
+* **名稱**: 指定端點的名稱。
+* **服務標識符值**: 指定端點所屬的服務。 例如，若要將電子郵件端點新增至本節中引入的程式（當使用Workbench啟動程式時，程式會變成服務），請指定 `EncryptDocument`。
+* **操作名稱**: 指定使用端點調用的操作的名稱。 通常，為源自在Workbench中建立的流程的服務建立電子郵件端點時，操作的名稱為 `invoke`。
 
 **指定配置值**
 
@@ -553,32 +558,32 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 在以寫程式方式將電子郵件端點添加到服務時設定以下配置值：
 
-* **cronExpression**:cron運算式（如果電子郵件必須使用cron運算式來排程）。
-* **repeatCount**:電子郵件端點掃描資料夾或目錄的次數。 值-1表示無限掃描。 預設值為-1。
-* **repeatInterval**:接收方用於檢查傳入郵件的掃描速率（以秒為單位）。 預設值為10。
-* **startDelay**:排程器啟動後等待掃描的時間。 預設時間為0。
-* **batchSize**:接收方在每次掃描中處理的電子郵件消息數，以獲得最佳效能。 值-1表示所有電子郵件。 預設值為2。
-* **userName**:從電子郵件中叫用目標服務時使用的用戶名。 預設值為 `SuperAdmin`。
-* **domainName**:強制設定值。 預設值為 `DefaultDom`。
-* **domainPattern**:指定提供者接受的傳入電子郵件的網域模式。 例如，若使用 `adobe.com` 此功能，則只會處理來自adobe.com的電子郵件，而忽略來自其他網域的電子郵件。
-* **filePattern**:指定提供程式接受的傳入檔案附件模式。 這包括具有特定檔案名副檔名(&amp;ast;.dat、&amp;ast;.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱和副檔名(&amp;ast;)中的複合表達式的檔案。[dD][aA]&#39;port&#39;)。 預設值為 `*`。
-* **recipientSuccessfulJob**:傳送訊息以指出成功工作的電子郵件地址。 預設情況下，成功的作業消息始終發送給發送者。 如果您輸 `sender`入，電子郵件結果會傳送給寄件者。 支援最多100個收件者。 指定其他收件者，其電子郵件位址以逗號分隔。 若要關閉此選項，請將此值留空。 在某些情況下，您可能想要觸發程式，而不想收到結果的電子郵件通知。 預設值為 `sender`。
-* **recipientFailedJob**:發送消息以指示失敗作業的電子郵件地址。 預設情況下，將始終向發件人發送失敗的作業消息。 如果您輸 `sender`入，電子郵件結果會傳送給寄件者。 支援最多100個收件者。 指定其他收件者，其電子郵件位址以逗號分隔。 若要關閉此選項，請將此值留空。 預設值為 `sender`。
-* **inboxHost**:要掃描的電子郵件提供者的收件箱主機名或IP地址。
-* **inboxPort**:電子郵件伺服器使用的埠。 POP3的預設值為110,IMAP的預設值為143。 如果啟用SSL，則POP3的預設值為995,IMAP的預設值為993。
-* **inboxProtocol**:用於掃描收件箱的電子郵件端點的電子郵件協定。 選項為 `IMAP` 或 `POP3`。 收件箱主機郵件伺服器必須支援這些協定。
-* **inboxTimeOut**:電子郵件提供者等待收件匣回應的逾時（秒）。 預設值為60。
-* **inboxUser**:登入電子郵件帳戶所需的使用者名稱。 視電子郵件伺服器和設定而定，這可能只是電子郵件的使用者名稱部分，或可能是完整的電子郵件地址。
-* **inboxPassword**:收件箱用戶的密碼。
-* **inboxSSLEnabled**:設定此值，以在傳送結果或錯誤的通知訊息時強制電子郵件提供者使用SSL。 確保IMAP或POP3主機支援SSL。
-* **smtp主機**:電子郵件提供程式發送結果和錯誤消息的郵件伺服器的主機名。
-* **smtpPort**:SMTP埠的預設值為25。
-* **smtpUser**:電子郵件提供者在傳送結果和錯誤的電子郵件通知時要使用的使用者帳戶。
-* **smtpPassword**:SMTP帳戶的口令。 某些郵件伺服器不需要SMTP密碼。
-* **charSet**:電子郵件提供者使用的字元集。 預設值為 `UTF-8`。
-* **smtpSSLEnabled**:設定此值，以在傳送結果或錯誤的通知訊息時強制電子郵件提供者使用SSL。 確保SMTP主機支援SSL。
-* **failedJobFolder**:指定在SMTP郵件伺服器不工作時儲存結果的目錄。
-* **非同步**:設為同步時，會處理所有輸入檔案並傳回單一回應。 當設為非同步時，會針對每個已處理的輸入檔案傳送回應。 例如，會為本主題中介紹的程式建立電子郵件端點，並且會向端點的收件匣發送一封電子郵件，該收件匣包含多個不安全的PDF檔案。 當所有PDF檔案都使用密碼加密，且端點設定為同步時，會隨附所有安全的PDF檔案傳送單一回應電子郵件訊息。 如果端點設定為非同步，則會針對每個安全的PDF檔案傳送個別的回應電子郵件訊息。 每封電子郵件都包含一份PDF檔案作為附件。 預設值為非同步。
+* **cronExpression**: cron運算式（如果電子郵件必須使用cron運算式來排程）。
+* **repeatCount**: 電子郵件端點掃描資料夾或目錄的次數。 值-1表示無限掃描。 預設值為-1。
+* **repeatInterval**: 接收方用於檢查傳入郵件的掃描速率（以秒為單位）。 預設值為10。
+* **startDelay**: 排程器啟動後等待掃描的時間。 預設時間為0。
+* **batchSize**: 接收方在每次掃描中處理的電子郵件消息數，以獲得最佳效能。 值-1表示所有電子郵件。 預設值為2。
+* **userName**: 從電子郵件中叫用目標服務時使用的用戶名。 預設值為 `SuperAdmin`。
+* **domainName**: 強制設定值。 預設值為 `DefaultDom`。
+* **domainPattern**: 指定提供者接受的傳入電子郵件的網域模式。 例如，若使用 `adobe.com` 此功能，則只會處理來自adobe.com的電子郵件，而忽略來自其他網域的電子郵件。
+* **filePattern**: 指定提供程式接受的傳入檔案附件模式。 這包括具有特定檔案名副檔名(&amp;ast;.dat、&amp;ast;.xml)的檔案、具有特定名稱（資料）的檔案，以及具有名稱和副檔名(&amp;ast;)中的複合表達式的檔案。[dD][aA]&#39;port&#39;)。 預設值為 `*`。
+* **recipientSuccessfulJob**: 傳送訊息以指出成功工作的電子郵件地址。 預設情況下，成功的作業消息始終發送給發送者。 如果您輸 `sender`入，電子郵件結果會傳送給寄件者。 支援最多100個收件者。 指定其他收件者，其電子郵件位址以逗號分隔。 若要關閉此選項，請將此值留空。 在某些情況下，您可能想要觸發程式，而不想收到結果的電子郵件通知。 預設值為 `sender`。
+* **recipientFailedJob**: 發送消息以指示失敗作業的電子郵件地址。 預設情況下，將始終向發件人發送失敗的作業消息。 如果您輸 `sender`入，電子郵件結果會傳送給寄件者。 支援最多100個收件者。 指定其他收件者，其電子郵件位址以逗號分隔。 若要關閉此選項，請將此值留空。 預設值為 `sender`。
+* **inboxHost**: 要掃描的電子郵件提供者的收件箱主機名或IP地址。
+* **inboxPort**: 電子郵件伺服器使用的埠。 POP3的預設值為110,IMAP的預設值為143。 如果啟用SSL，則POP3的預設值為995,IMAP的預設值為993。
+* **inboxProtocol**: 用於掃描收件箱的電子郵件端點的電子郵件協定。 選項為 `IMAP` 或 `POP3`。 收件箱主機郵件伺服器必須支援這些協定。
+* **inboxTimeOut**: 電子郵件提供者等待收件匣回應的逾時（秒）。 預設值為60。
+* **inboxUser**: 登入電子郵件帳戶所需的使用者名稱。 視電子郵件伺服器和設定而定，這可能只是電子郵件的使用者名稱部分，或可能是完整的電子郵件地址。
+* **inboxPassword**: 收件箱用戶的密碼。
+* **inboxSSLEnabled**: 設定此值，以在傳送結果或錯誤的通知訊息時強制電子郵件提供者使用SSL。 確保IMAP或POP3主機支援SSL。
+* **smtp主機**: 電子郵件提供程式發送結果和錯誤消息的郵件伺服器的主機名。
+* **smtpPort**: SMTP埠的預設值為25。
+* **smtpUser**: 電子郵件提供者在傳送結果和錯誤的電子郵件通知時要使用的使用者帳戶。
+* **smtpPassword**: SMTP帳戶的口令。 某些郵件伺服器不需要SMTP密碼。
+* **charSet**: 電子郵件提供者使用的字元集。 預設值為 `UTF-8`。
+* **smtpSSLEnabled**: 設定此值，以在傳送結果或錯誤的通知訊息時強制電子郵件提供者使用SSL。 確保SMTP主機支援SSL。
+* **failedJobFolder**: 指定在SMTP郵件伺服器不工作時儲存結果的目錄。
+* **非同步**: 設為同步時，會處理所有輸入檔案並傳回單一回應。 當設為非同步時，會針對每個已處理的輸入檔案傳送回應。 例如，會為本主題中介紹的程式建立電子郵件端點，並且會向端點的收件匣發送一封電子郵件，該收件匣包含多個不安全的PDF檔案。 當所有PDF檔案都使用密碼加密，且端點設定為同步時，會隨附所有安全的PDF檔案傳送單一回應電子郵件訊息。 如果端點設定為非同步，則會針對每個安全的PDF檔案傳送個別的回應電子郵件訊息。 每封電子郵件都包含一份PDF檔案作為附件。 預設值為非同步。
 
 **定義輸入參數值**
 
@@ -586,16 +591,16 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要定義電子郵件端點所需的輸入參數值，請指定以下值：
 
-**輸入參數名稱**:輸入參數的名稱。 輸入值的名稱在流程的「工作台」中指定。 如果輸入值屬於服務操作（不是在Workbench中建立的進程的Forms服務），則輸入名稱在component.xml檔案中指定。 例如，本節中引入的進程的輸入參數的名稱為 `InDoc`。
+**輸入參數名稱**: 輸入參數的名稱。 輸入值的名稱在流程的「工作台」中指定。 如果輸入值屬於服務操作（不是在Workbench中建立的進程的Forms服務），則輸入名稱在component.xml檔案中指定。 例如，本節中引入的進程的輸入參數的名稱為 `InDoc`。
 
-**對應類型**:用於配置調用服務操作所需的輸入值。 兩種映射類型如下：
+**對應類型**: 用於配置調用服務操作所需的輸入值。 兩種映射類型如下：
 
-* `Literal`:「電子郵件」端點會使用在顯示欄位中輸入的值。 支援所有基本的Java類型。 例如，如果API使用輸入（例如String、long、int和Boolean），則字串將轉換為正確的類型並調用服務。
-* `Variable`:輸入的值是電子郵件端點用於選擇輸入的檔案模式。 例如，如果為映射類型選擇「變數」，且輸入文檔必須是PDF檔案，則可以指 `*.pdf` 定為映射值。
+* `Literal`: 「電子郵件」端點會使用在顯示欄位中輸入的值。 支援所有基本的Java類型。 例如，如果API使用輸入（例如String、long、int和Boolean），則字串將轉換為正確的類型並調用服務。
+* `Variable`: 輸入的值是電子郵件端點用於選擇輸入的檔案模式。 例如，如果為映射類型選擇「變數」，且輸入文檔必須是PDF檔案，則可以指 `*.pdf` 定為映射值。
 
-**對應值**:指定映射類型的值。 例如，如果選擇「變數」映射類型，可以指 `*.pdf` 定為檔案模式。
+**對應值**: 指定映射類型的值。 例如，如果選擇「變數」映射類型，可以指 `*.pdf` 定為檔案模式。
 
-**資料類型**:指定輸入值的資料類型。 例如，本節中引入的程式輸入值的資料類型為com.adobe.idp.Document。
+**資料類型**: 指定輸入值的資料類型。 例如，本節中引入的程式輸入值的資料類型為com.adobe.idp.Document。
 
 **定義輸出參數值**
 
@@ -603,15 +608,15 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要定義「電子郵件」端點所需的輸出參數值，請指定以下值：
 
-**輸出參數名稱**:輸出參數的名稱。 流程輸出值的名稱在Workbench中指定。 如果輸出值屬於服務操作（不是在Workbench中建立的進程的服務），則輸出名稱在component.xml檔案中指定。 例如，本節中介紹的進程的輸出參數的名稱為 `SecuredDoc`。
+**輸出參數名稱**: 輸出參數的名稱。 流程輸出值的名稱在Workbench中指定。 如果輸出值屬於服務操作（不是在Workbench中建立的進程的服務），則輸出名稱在component.xml檔案中指定。 例如，本節中介紹的進程的輸出參數的名稱為 `SecuredDoc`。
 
-**對應類型**:用於配置服務和操作的輸出。 可使用下列選項：
+**對應類型**: 用於配置服務和操作的輸出。 可使用下列選項：
 
 * 如果服務傳回單一物件（單一檔案），則模式為， `%F.pdf` 來源目的地為sourcefilename.pdf。 例如，本節中引入的程式會傳回單一檔案。 因此，映射類型可定義為 `%F.pdf` ( `%F` 表示使用給定檔案名)。 該模式 `%E` 指定輸入文檔的副檔名。
 * 如果服務返回清單，則模式為 `Result\%F\`，源目標為Result\sourcefilename\source1 (output 1)和Result\sourcefilename\source2 (output 2)。
 * 如果服務返回映射，則模式為 `Result\%F\`，源目標為Result\sourcefilename\file1 and Result\sourcefilename\file2。 如果映射有多個對象，則模式為 `Result\%F.pdf` ，源目標為Result\sourcefilename1.pdf（輸出1）、Result\sourcefilenam2.pdf（輸出2）等。
 
-**資料類型**:指定返回值的資料類型。 例如，本節中介紹的進程返回值的資料類型為 `com.adobe.idp.Document`。
+**資料類型**: 指定返回值的資料類型。 例如，本節中介紹的進程返回值的資料類型為 `com.adobe.idp.Document`。
 
 **建立電子郵件端點**
 
@@ -649,7 +654,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 調用物件的方法並傳遞描述 `CreateEndpointInfo` 端點的字 `setDescription` 串值，以指定端點的說明。
    * 調用物件的方法並傳遞指 `CreateEndpointInfo` 定名稱的字 `setName` 串值，以指定端點的名稱。
    * 通過調用對象的方法並傳遞指定服務名 `CreateEndpointInfo` 的字串值， `setServiceId` 指定端點所屬的服務。
-   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值而呼叫的作業。 通常，為源自在Workbench中建立的流程的服務建立電子郵件端點時，會調用操作的名稱。
+   * 指定透過叫用物件的方法並傳 `CreateEndpointInfo` 遞指定作 `setOperationName` 業名稱的字串值所呼叫的作業。 通常，為源自在Workbench中建立的流程的服務建立電子郵件端點時，會調用操作的名稱。
 
 1. 指定設定值。
 
@@ -657,9 +662,10 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
    * 指定配置值名稱的字串值。 設定設定 `smtpHost` 值時，請指定 `smtpHost`。
    * 指定配置值值的字串值。 設定配 `smtpHost` 置值時，請指定指定SMTP伺服器名稱的字串值。
+
    >[!NOTE]
    >
-   >要查看本節中介紹的EncryptDocument服務的所有配置值集，請參見 [QuickStart上的Java代碼示例：使用Java API新增電子郵件端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)。
+   >要查看本節中介紹的EncryptDocument服務的所有配置值集，請參見 [QuickStart上的Java代碼示例： 使用Java API新增電子郵件端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)。
 
 1. 定義輸入參數值。
 
@@ -669,6 +675,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 指定輸入參數的資料類型的字串值。 例如，輸入參數的資料 `InDoc` 類型為 `com.adobe.idp.Document`。
    * 指定映射類型的字串值。 例如，您可以指定 `variable`。
    * 指定映射類型值的字串值。 例如，您可以指定&amp;ast;.pdf作為檔案模式。
+
    >[!NOTE]
    >
    >調用每 `setInputParameterMapping` 個輸入參數值的方法進行定義。 由於EncryptDocument進程只有一個輸入參數，因此您需要調用此方法一次。
@@ -693,7 +700,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API新增「監視資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[快速入門： 使用Java API新增「監視資料夾」端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -701,9 +708,9 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ### 電子郵件組態值常數檔案 {#email-configuration-values-constant-file}
 
-快速 [入門：使用Java API新增電子郵件端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) ，會使用必須屬於Java專案一部分的常數檔案，以編譯快速入門。 此常數檔案表示添加電子郵件端點時必須設定的配置值。 以下Java代碼表示常數檔案。
+快速 [入門： 使用Java API新增電子郵件端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) ，會使用必須屬於Java專案一部分的常數檔案，以編譯快速入門。 此常數檔案表示添加電子郵件端點時必須設定的配置值。 以下Java代碼表示常數檔案。
 
-```as3
+```java
  /**
      * This class contains constants that can be used when setting email endpoint
      * configuration values
@@ -790,11 +797,11 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要為服務建立遠程端點，請指定以下值：
 
-* **連接器標識符值**:指定所建立的端點類型。 要建立遠程端點，請指定 `Remoting`。
-* **說明**:指定端點的說明。
-* **名稱**:指定端點的名稱。
-* **服務標識符值**:指定端點所屬的服務。 例如，要將遠程端點添加到本節中介紹的進程（進程在Workbench中激活後即變為服務），請指定 `EncryptDocument`。
-* **操作名稱**:指定使用端點調用的操作的名稱。 建立遠程端點時，請指定通配符(&amp;ast;)。
+* **連接器標識符值**: 指定所建立的端點類型。 要建立遠程端點，請指定 `Remoting`。
+* **說明**: 指定端點的說明。
+* **名稱**: 指定端點的名稱。
+* **服務標識符值**: 指定端點所屬的服務。 例如，要將遠程端點添加到本節中介紹的進程（進程在Workbench中激活後即變為服務），請指定 `EncryptDocument`。
+* **操作名稱**: 指定使用端點調用的操作的名稱。 建立遠程端點時，請指定通配符(&amp;ast;)。
 
 **建立遠程端點**
 
@@ -846,7 +853,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API新增遠端端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
+[快速入門： 使用Java API新增遠端端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -900,12 +907,12 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 要為服務建立TaskManager端點，請指定以下值：
 
-* **連接器識別碼**:指定所建立的端點類型。 要建立TaskManager端點，請指定 `TaskManagerConnector`。
-* **說明**:指定端點的說明。
-* **名稱**:指定端點的名稱。
-* **服務識別碼**:指定端點所屬的服務。
-* **類別**:指定與TaskManager端點關聯的類別標識符值。
-* **操作名稱**:通常，為源自在Workbench中建立的進程的服務建立TaskManager端點時，操作的名稱為 `invoke`。
+* **連接器識別碼**: 指定所建立的端點類型。 要建立TaskManager端點，請指定 `TaskManagerConnector`。
+* **說明**: 指定端點的說明。
+* **名稱**: 指定端點的名稱。
+* **服務識別碼**: 指定端點所屬的服務。
+* **類別**: 指定與TaskManager端點關聯的類別標識符值。
+* **操作名稱**: 通常，為源自在Workbench中建立的進程的服務建立TaskManager端點時，操作的名稱為 `invoke`。
 
 **建立TaskManager端點**
 
@@ -967,7 +974,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API添加TaskManager端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
+[快速入門： 使用Java API添加TaskManager端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1069,7 +1076,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API修改端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
+[快速入門： 使用Java API修改端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1157,7 +1164,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API移除端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
+[快速入門： 使用Java API移除端點](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1207,12 +1214,12 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 指定要從中檢索資訊的連接器類型。 存在以下類型的連接器：
 
-* **EJB**:使客戶端應用程式能夠使用EJB模式調用服務。
-* **SOAP**:使客戶端應用程式能夠使用SOAP模式調用服務。
-* **Watched Folder**:使受監視的資料夾能夠調用服務。
-* **電子郵件**:啟用電子郵件訊息以叫用服務。
-* **移除**:可讓Flex用戶端應用程式叫用服務。
-* **TaskManagerConnector**:使工作區用戶能夠從工作區中調用服務。
+* **EJB**: 使客戶端應用程式能夠使用EJB模式調用服務。
+* **SOAP**: 使客戶端應用程式能夠使用SOAP模式調用服務。
+* **Watched Folder**: 使受監視的資料夾能夠調用服務。
+* **電子郵件**: 啟用電子郵件訊息以叫用服務。
+* **移除**: 可讓Flex用戶端應用程式叫用服務。
+* **TaskManagerConnector**: 使工作區用戶能夠從工作區中調用服務。
 
 **檢索配置值**
 
@@ -1230,7 +1237,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 使用Java API擷取端點連接器資訊：
 
-1. 包含專案檔案。.
+1. 包含專案檔案。 .
 
    在您Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-livecycle-client.jar。
 
@@ -1252,7 +1259,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](programmatically-endpoints.md#summary-of-steps)
 
-[快速入門：使用Java API檢索端點連接器資訊](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[快速入門： 使用Java API檢索端點連接器資訊](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
