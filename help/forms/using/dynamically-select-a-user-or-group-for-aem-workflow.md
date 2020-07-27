@@ -8,7 +8,10 @@ content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 translation-type: tm+mt
-source-git-commit: 997a35b331385738a8d4a3fcab89c950ed4b7d33
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '947'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +56,7 @@ ECMAScript是一種指令碼語言。 它用於用戶端指令碼和伺服器應
 
 以下示例ECMAScript動態選擇「指派任務」步驟的受託人。 在此指令碼中，根據裝載路徑選擇用戶。 使用此指令碼之前，請確定指令碼中提及的所有使用者都存在於AEM中。 如果指令檔中提及的使用者不存在於AEM中，則相關程式可能會失敗。
 
-```
+```javascript
 function getParticipant() {
 
 var workflowData = graniteWorkItem.getWorkflowData();
@@ -77,7 +80,7 @@ var path = workflowData.getPayload().toString();
 >
 >使用ECMAScript for Adobe Sign時，指令碼必須位於crx-repository的/apps/fd/workflow/scripts/adobesign/，且應具有名為getAdobeSignRecipients的函式，以傳回使用者清單。
 
-```
+```javascript
 function getAdobeSignRecipients() {
 
     var recipientSetInfos = new Packages.java.util.ArrayList();
