@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '15466'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 **關於Document Security Service**
 
-Document security服務可讓使用者動態地將機密設定套用至Adobe PDF檔案，而且不論檔案的散布範圍有多廣，都能保有檔案的控制權。
+Document Security服務可讓使用者動態地將機密設定套用至Adobe PDF檔案，而且不論檔案的散布範圍有多廣，都能保有檔案的控制權。
 
 Document Security服務可讓使用者控制收件者使用受原則保護PDF檔案的方式，防止資訊擴散到使用者的觸及範圍以外。 使用者可以指定誰可以開啟檔案、限制其使用方式，以及在檔案發佈後監控檔案。 使用者也可以動態控制對受原則保護檔案的存取，甚至可以動態撤銷對檔案的存取。
 
@@ -66,7 +69,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 使用web service API建立原則時，請參考描述該原則的現有可攜式檔案權限語言(PDRL)XML檔案。 策略權限和承擔者在PDRL文檔中定義。 以下XML文檔是PDRL文檔的示例。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
  <Policy PolicyInstanceVersion="1" PolicyID="5DA3F847-DE76-F9CC-63EA-49A8D59154DE" PolicyCreationTime="2004-08-30T00:02:28.294+00:00" PolicyType="1" PolicySchemaVersion="1.0" PolicyName="SDK Test Policy -4344050357301573237" PolicyDescription="An SDK Test policy" xmlns="https://www.adobe.com/schema/1.0/pdrl">
        <PolicyEntry>
@@ -161,7 +164,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 * adobe-utilities.jar
 * jbossall-client.jar（如果AEM Forms未部署在JBoss上，請使用不同的JAR檔案）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立Document Security Client API物件**
 
@@ -184,9 +187,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 設定屬於策略的屬性時，還可以設定加密設定。 這些加密設定會在原則套用至檔案時生效。 您可以指定下列加密值：
 
-* **AES256**:表示使用256位元金鑰的AES加密演算法。
-* **AES128**:以128位元金鑰表示AES加密演算法。
-* **** 無加密：不表示加密。
+* **AES256**: 表示使用256位元金鑰的AES加密演算法。
+* **AES128**: 以128位元金鑰表示AES加密演算法。
+* **無加密：** 不表示加密。
 
 指定選 `NoEncryption` 項時，不能將選 `PlaintextMetadata` 項設定為 `false`。 如果您嘗試這麼做，則會擲回例外。
 
@@ -247,6 +250,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
       * 代 `Policy` 表要註冊的策略的對象。
    * 一個字串值，它表示策略所屬的策略集。
+
    如果您在連線設定中使用AEM Forms管理員帳戶來建立物 `DocumentSecurityClient` 件，請在呼叫方法時指定原則集名 `registerPolicy` 稱。 如果為策略集 `null` 傳遞值，則會在管理員「我的策略」策略集 *中建立策略* 。
 
    如果您在連線設定中使用Document Security使用者，則可以叫用只接受原則 `registerPolicy` 的多載方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為「我的策略」的 *策略集中*。 如果不想將新策略添加到此策略集，則在調用該方法時指定策略集名 `registerPolicy` 稱。
@@ -257,7 +261,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列：
 
-* &quot;快速啟動（SOAP模式）:使用Java API建立原則」
+* &quot;快速啟動（SOAP模式）: 使用Java API建立原則」
 
 ### 使用web service API建立原則 {#create-a-policy-using-the-web-service-api}
 
@@ -265,7 +269,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -274,7 +278,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -300,10 +304,11 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 註冊原則。
 
-   呼叫物件的方法並傳 `DocumentSecurityServiceClient` 遞下列值， `registerPolicy` 以註冊原則：
+   叫用物件的方法並傳 `DocumentSecurityServiceClient` 遞下列值， `registerPolicy` 以註冊原則：
 
    * 代 `PolicySpec` 表要註冊的策略的對象。
    * 一個字串值，它表示策略所屬的策略集。 您可以指定 `null` 導致策略被添加到 ** MyPolices策略集的值。
+
    如果您在連線設定中使用AEM Forms管理員帳戶來建立物 `DocumentSecurityClient` 件，請在呼叫方法時指定原則集 `registerPolicy` 名稱。
 
    如果您在連線設定中使用Document SecurityDocument Security使用者，則可以叫用只接受原則 `registerPolicy` 的多載方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為「我的策略」的 *策略集中*。 如果不想將新策略添加到此策略集，則在調用該方法時指定策略集名 `registerPolicy` 稱。
@@ -314,8 +319,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API建立原則」
-* 「快速入門(SwaRef):使用web service API建立原則」
+* 「快速入門(MTOM): 使用web service API建立原則」
+* 「快速入門(SwaRef): 使用web service API建立原則」
 
 ## 修改策略 {#modifying-policies}
 
@@ -396,7 +401,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **程式碼範例**
 
-如需使用Document Security服務的程式碼範例，請參閱快速啟動（SOAP模式）:使用Java API部分修改策略。
+如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）: 使用Java API部分修改策略。
 
 ### 使用web service API修改現有策略 {#modify-existing-policies-using-the-web-service-api}
 
@@ -404,7 +409,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -413,7 +418,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -443,8 +448,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API修改原則&quot;
-* 「快速入門(SwaRef):使用web service API修改原則&quot;
+* 「快速入門(MTOM): 使用web service API修改原則&quot;
+* 「快速入門(SwaRef): 使用web service API修改原則&quot;
 
 ## 刪除策略 {#deleting-policies}
 
@@ -472,7 +477,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **刪除原則**
 
-要刪除策略，請指定要刪除的策略和策略所屬的策略集。 使用其設定來叫用AEM Forms的使用者必須擁有刪除原則的權限；否則會發生異常。 同樣地，如果您嘗試刪除不存在的策略，則會出現例外。
+要刪除策略，請指定要刪除的策略和策略所屬的策略集。 使用其設定來叫用AEM Forms的使用者必須擁有刪除原則的權限； 否則會發生異常。 同樣地，如果您嘗試刪除不存在的策略，則會出現例外。
 
 ### 使用Java API刪除原則 {#delete-policies-using-the-java-api}
 
@@ -499,7 +504,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用Java API刪除策略」
+* &quot;快速啟動（SOAP模式）: 使用Java API刪除策略」
 
 ### 使用web service API刪除原則 {#delete-policies-using-the-web-service-api}
 
@@ -507,7 +512,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -516,7 +521,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -538,8 +543,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API刪除策略&quot;
-* 「快速入門(SwaRef):使用web service API刪除策略&quot;
+* 「快速入門(MTOM): 使用web service API刪除策略&quot;
+* 「快速入門(SwaRef): 使用web service API刪除策略&quot;
 
 ## 套用原則至PDF檔案 {#applying-policies-to-pdf-documents}
 
@@ -585,7 +590,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -620,7 +625,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
       * 指定策略名稱的字串值。
       * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null（如果此參數為null，則下一個參數值必須為null）。
       * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可 `null` 以是(如果此參數為null，則上一個參數值必須 `null`是)。
-      * 表 `com.adobe.livecycle.rightsmanagement.Locale` 示用於選擇MS office模板的區域設定。 此參數值是可選的，不用於PDF文檔。 若要保護PDF檔案，請指定 `null`。
+      * 表 `com.adobe.livecycle.rightsmanagement.Locale` 示用於選擇MS Office模板的區域設定。 此參數值是可選的，不用於PDF文檔。 若要保護PDF檔案，請指定 `null`。
+
       此方 `protectDocument` 法會傳回包 `RMSecureDocumentResult` 含受原則保護PDF檔案的物件。
 
 
@@ -634,12 +640,12 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（EJB模式）:使用Java API將原則套用至PDF檔案」
-* &quot;快速啟動（SOAP模式）:使用Java API將原則套用至PDF檔案」
+* &quot;快速啟動（EJB模式）: 使用Java API將原則套用至PDF檔案」
+* &quot;快速啟動（SOAP模式）: 使用Java API將原則套用至PDF檔案」
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -649,7 +655,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -658,7 +664,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -691,6 +697,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
    * 用於儲存策略標識符值的字串輸出參數。
    * 用來儲存受原則保護識別碼值的字串輸出參數。
    * 用於儲存MIME類型(例如， `application/pdf`)的字串輸出參數。
+
    此方 `protectDocument` 法會傳回包 `BLOB` 含受原則保護PDF檔案的物件。
 
 1. 儲存PDF檔案。
@@ -704,8 +711,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API將原則套用至PDF檔案」
-* 「快速入門(SwaRef):使用web service API將原則套用至PDF檔案」
+* 「快速入門(MTOM): 使用web service API將原則套用至PDF檔案」
+* 「快速入門(SwaRef): 使用web service API將原則套用至PDF檔案」
 
 ## 從PDF檔案移除原則 {#removing-policies-from-pdf-documents}
 
@@ -747,7 +754,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -785,7 +792,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用Java API從PDF檔案移除原則」
+* &quot;快速啟動（SOAP模式）: 使用Java API從PDF檔案移除原則」
 
 ### 使用web service API移除原則 {#remove-a-policy-using-the-web-service-api}
 
@@ -793,7 +800,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -802,7 +809,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -835,8 +842,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API從PDF檔案移除原則」
-* 「快速入門(SwaRef):使用web service API從PDF檔案移除原則」
+* 「快速入門(MTOM): 使用web service API從PDF檔案移除原則」
+* 「快速入門(SwaRef): 使用web service API從PDF檔案移除原則」
 
 **另請參閱**
 
@@ -887,7 +894,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -928,7 +935,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用Java API廢止檔案」
+* &quot;快速啟動（SOAP模式）: 使用Java API廢止檔案」
 
 ### 使用web service API撤銷檔案的存取權 {#revoke-access-to-documents-using-the-web-service-api}
 
@@ -936,7 +943,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -945,7 +952,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件
 
    * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -977,8 +984,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API廢止檔案」
-* 「快速入門(SwaRef):使用web service API廢止檔案」
+* 「快速入門(MTOM): 使用web service API廢止檔案」
+* 「快速入門(SwaRef): 使用web service API廢止檔案」
 
 **另請參閱**
 
@@ -1023,7 +1030,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1060,7 +1067,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用web service API恢復對已撤銷文檔的訪問權&quot;
+* &quot;快速啟動（SOAP模式）: 使用web service API恢復對已撤銷文檔的訪問權&quot;
 
 ### 使用Web服務API恢復對已撤銷檔案的存取權 {#reinstate-access-to-revoked-documents-using-the-web-service-api}
 
@@ -1068,7 +1075,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1077,7 +1084,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -1105,8 +1112,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API恢復對已撤銷文檔的訪問權&quot;
-* 「快速入門(SwaRef):使用web service API恢復對已撤銷文檔的訪問權&quot;
+* 「快速入門(MTOM): 使用web service API恢復對已撤銷文檔的訪問權&quot;
+* 「快速入門(SwaRef): 使用web service API恢復對已撤銷文檔的訪問權&quot;
 
 **另請參閱**
 
@@ -1159,7 +1166,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1169,7 +1176,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-rightsmanagement-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-rightsmanagement-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 建立Document Security Client API物件。
 
@@ -1194,7 +1201,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用Java API檢查受原則保護的PDF檔案」
+* &quot;快速啟動（SOAP模式）: 使用Java API檢查受原則保護的PDF檔案」
 
 ### 使用web service API檢查受原則保護的PDF檔案 {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
 
@@ -1202,7 +1209,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1211,7 +1218,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -1242,8 +1249,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API檢查受原則保護的PDF檔案」
-* 「快速入門(SwaRef):使用web service API檢查受原則保護的PDF檔案」
+* 「快速入門(MTOM): 使用web service API檢查受原則保護的PDF檔案」
+* 「快速入門(SwaRef): 使用web service API檢查受原則保護的PDF檔案」
 
 **另請參閱**
 
@@ -1253,7 +1260,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 ## 建立浮水印 {#creating-watermarks}
 
-浮水印可以透過唯一識別檔案並控製版權侵權來確保檔案的安全性。 例如，您可以建立水印，並將該水印標示為檔案的所有頁面上的機密。 在建立浮水印後，您可以將它加入原則中。 也就是說，您可以使用新建立的浮水印來設定原則的浮水印屬性。 將包含浮水印的原則套用至檔案後，浮水印就會出現在受原則保護的檔案中。
+浮水印可以透過唯一識別檔案並控製版權侵權來確保檔案的安全性。 例如，您可以建立水印，並將該水印標示為檔案所有頁面上的機密。 在建立浮水印後，您可以將它加入原則中。 也就是說，您可以使用新建立的浮水印來設定原則的浮水印屬性。 將包含浮水印的原則套用至檔案後，浮水印就會出現在受原則保護的檔案中。
 
 >[!NOTE]
 >
@@ -1378,7 +1385,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1414,7 +1421,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用Java API建立浮水印&quot;
+* &quot;快速啟動（SOAP模式）: 使用Java API建立浮水印&quot;
 
 ### 使用web service API建立浮水印 {#create-watermarks-using-the-web-service-api}
 
@@ -1422,7 +1429,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1431,7 +1438,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -1461,8 +1468,8 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API建立浮水印&quot;
-* 「快速入門(SwaRef):使用web service API建立浮水印&quot;
+* 「快速入門(MTOM): 使用web service API建立浮水印&quot;
+* 「快速入門(SwaRef): 使用web service API建立浮水印&quot;
 
 **另請參閱**
 
@@ -1508,7 +1515,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **設定浮水印屬性**
 
-要修改現有水印，請更改一個或多個水印屬性的值。 當使用Web服務以程式設計方式更新水印時，您必須設定所有原本設定的屬性，即使值未變更亦然。 例如，假設已設定以下水印屬性： `WaterBackCmd:IS_USERID_ENABLED`、 `WaterBackCmd:IS_CUSTOMTEXT_ENABLED``WaterBackCmd:OPACITY`和 `WaterBackCmd:SRCTEXT`。 雖然您要修改的唯一屬性是 `WaterBackCmd:OPACITY`，但您必須將其他值設定為正確。
+要修改現有水印，請更改一個或多個水印屬性的值。 當使用Web服務以程式設計方式更新水印時，您必須設定所有原本設定的屬性，即使值未變更亦然。 例如，假設已設定以下水印屬性： `WaterBackCmd:IS_USERID_ENABLED`、 `WaterBackCmd:IS_CUSTOMTEXT_ENABLED`、 `WaterBackCmd:OPACITY`和 `WaterBackCmd:SRCTEXT`。 雖然您要修改的唯一屬性是 `WaterBackCmd:OPACITY`，但您必須將其他值設定為正確。
 
 >[!NOTE]
 >
@@ -1524,7 +1531,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1561,7 +1568,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **程式碼範例**
 
-如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）:使用Java API部分修改水印。
+如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）: 使用Java API部分修改水印。
 
 ### 使用web service API修改浮水印 {#modify-watermarks-using-the-web-service-api}
 
@@ -1569,7 +1576,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1578,7 +1585,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 1. 建立Document Security Client API物件。
 
    * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -1609,7 +1616,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API修改水印&quot;
+* 「快速入門(MTOM): 使用web service API修改水印&quot;
 
 ## 搜尋事件 {#searching-for-events}
 
@@ -1655,7 +1662,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1676,6 +1683,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
    * 調用 `EventManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getEventManager` 件。 此方法返回對 `EventManager` 像。
    * 通過調用 `EventSearchFilter` 其建構子建立對象。
    * 通過調用對象的方法並傳遞屬於表示要搜索的 `EventSearchFilter` 事件的類的 `setEventCode` 靜態資料成員，指定要搜索的 `EventManager` 事件。 例如，要搜索策略建立事件，請傳遞 `EventManager.POLICY_CREATE_EVENT`。
+
    >[!NOTE]
    >
    >您可以叫用物件方法來定義其他 `EventSearchFilter` 搜尋准則。 例如，叫用方 `setUserName` 法以指定與事件關聯的使用者。
@@ -1688,7 +1696,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 如需使用Rights Management服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速入門(SOAP):使用Java API搜尋事件&quot;
+* &quot;快速入門(SOAP): 使用Java API搜尋事件&quot;
 
 ### 使用網站服務API搜尋事件 {#search-for-events-using-the-web-service-api}
 
@@ -1696,7 +1704,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -1705,7 +1713,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 1. 建立Rights Management用戶端API物件
 
    * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -1721,9 +1729,10 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
    * 使用其 `EventSpec` 建構函式建立物件。
    * 透過設定物件的資料成員，以例項來指 `EventSpec` 定事件發生的 `firstTime.date` 時 `DataTime` 段開始時間，例項代表事件發生時的日期範圍開始時間。
    * 將值指 `true` 派給物 `EventSpec` 件的資料 `firstTime.dateSpecified` 成員。
-   * 透過使用例項設定物件的資料成員，以 `EventSpec` 指定事件發生 `lastTime.date``DataTime` 的時段結束時間，此例項代表事件發生時的日期範圍結束時間。
+   * 透過使用例項來設定物件的資料 `EventSpec` 成員，以 `lastTime.date` 指 `DataTime` 定事件發生時的期間結束。
    * 將值指 `true` 派給物 `EventSpec` 件的資料 `lastTime.dateSpecified` 成員。
    * 將字串值指派給物件的資料成員，以設定要 `EventSpec` 搜尋的 `eventCode` 事件。 下表列出了可分配給此屬性的數值：
+
    <table>
     <thead>
     <tr>
@@ -1931,8 +1940,8 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 如需使用Rights Management服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API搜尋事件&quot;
-* 「快速入門(SwaRef):使用web service API搜尋事件&quot;
+* 「快速入門(MTOM): 使用web service API搜尋事件&quot;
+* 「快速入門(SwaRef): 使用web service API搜尋事件&quot;
 
 **另請參閱**
 
@@ -1982,7 +1991,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -2017,7 +2026,8 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
       * 指定策略名稱的字串值。
       * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null（如果此參數為null，則下一個參數值必須為null）。
       * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可 `null` 以是(如果此參數 `null`為，則前一個參數值必須 `null`是)。
-      * 表 `com.adobe.livecycle.rightsmanagement.Locale` 示用於選擇MS office模板的區域設定。 此參數值是可選的，您可以指定 `null`。
+      * 表 `com.adobe.livecycle.rightsmanagement.Locale` 示用於選擇MS Office模板的區域設定。 此參數值是可選的，您可以指定 `null`。
+
       此方 `protectDocument` 法會傳回包 `RMSecureDocumentResult` 含受原則保護Word檔案的物件。
 
 
@@ -2031,7 +2041,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用Java API將原則套用至Word檔案」
+* &quot;快速啟動（SOAP模式）: 使用Java API將原則套用至Word檔案」
 
 ### 使用web service API將原則套用至Word檔案 {#apply-a-policy-to-a-word-document-using-the-web-service-api}
 
@@ -2039,7 +2049,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/DocumentSecurityService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/DocumentSecurityService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -2048,7 +2058,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 1. 建立Document Security Client API物件。
 
    * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -2081,6 +2091,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
    * 用於儲存策略標識符值的字串輸出參數。
    * 用來儲存受原則保護識別碼值的字串輸出參數。
    * 用於儲存MIME類型(例如， `application/doc`)的字串輸出參數。
+
    此方 `protectDocument` 法會傳回包 `BLOB` 含受原則保護Word檔案的物件。
 
 1. 儲存Word檔案。
@@ -2094,7 +2105,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API將原則套用至Word檔案」
+* 「快速入門(MTOM): 使用web service API將原則套用至Word檔案」
 
 ## 從Word檔案移除原則 {#removing-policies-from-word-documents}
 
@@ -2106,7 +2117,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 ### 步驟摘要 {#summary_of_steps-12}
 
-若要從受原則保護的Word檔案移除原則，請執行下列步驟：
+要從受原則保護的Word檔案移除原則，請執行下列步驟：
 
 1. 包含專案檔案
 1. 建立Document Security Client API物件。
@@ -2136,7 +2147,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -2174,7 +2185,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）:使用Java API從Word檔案移除原則」
+* &quot;快速啟動（SOAP模式）: 使用Java API從Word檔案移除原則」
 
 ### 使用web service API從Word檔案移除原則 {#remove-a-policy-from-a-word-document-using-the-web-service-api}
 
@@ -2182,7 +2193,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -2191,7 +2202,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 1. 建立Document Security Client API物件
 
    * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。)您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
+   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -2224,7 +2235,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM):使用web service API從Word檔案移除原則」
+* 「快速入門(MTOM): 使用web service API從Word檔案移除原則」
 
 **另請參閱**
 
