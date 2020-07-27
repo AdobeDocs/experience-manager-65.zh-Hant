@@ -9,7 +9,10 @@ topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '825'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 ## 必備條件 {#prerequisites}
 
 * 瞭解LESS(Leaner CSS)架構
-* 如何在Adobe Experience manager中建立用戶端程式庫
+* 如何在Adobe Experience Manager中建立用戶端程式庫
 * [建立最適化表單範本](/help/forms/using/custom-adaptive-forms-templates.md) ，以使用您建立的主題
 
 ## Adaptive form theme {#adaptive-form-theme}
@@ -38,11 +41,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->使用AEM物件的範例名稱（例如節點、屬性和資料夾）來說明下列程式。
+>使用AEM物件（例如節點、屬性和資料夾）的範例名稱來說明下列程式。
 >
 >如果使用名稱執行這些步驟，則生成的模板應與以下快照類似：
 
-![](assets/thumbnail.png) 森林主題最適化表單快照&#x200B;****&#x200B;圖：森林 *主題範例*
+![森林主題最適化表單快照](assets/thumbnail.png)**圖：** *森林主題範例*
 
 1. 在節點下建立類 `cq:ClientLibraryFolder` 型的 `/apps`節點。
 
@@ -52,23 +55,25 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 將多值字串屬性新增 `categories` 至節點並適當設定其值。
 
-   例如，將屬性設為： `af.theme.forest`。
+   例如，將屬性設為： `af.theme.forest`.
 
    ![CRX儲存庫快照](assets/3-2.png)
 
 1. 向步驟1中創 `less` 建的節 `css`點添加兩個 `css.txt` 資料夾和一個檔案：
 
-   * `less` 資料夾：包含 `less` 您用來定義變數和 `less` 管理 `less mixins` .css樣式的變數檔案。
+   * `less` 資料夾： 包含 `less` 您用來定義變數和 `less` 管理 `less mixins` .css樣式的變數檔案。
 
       此檔案夾包含 `less` 變數檔案、混合 `less` 檔案、使用混合 `less` 檔案和變數定義樣式的檔案。 然後，所有這些較少的檔案都會匯入樣式。
 
-   * `css`資料夾：包含。css檔案，您可在其中定義主題中使用的靜態樣式。
-   **變數檔案較少**:這些是檔案，您可在其中定義或覆寫用於定義CSS樣式的變數。
+   * `css`資料夾： 包含。css檔案，您可在其中定義主題中使用的靜態樣式。
+
+   **變數檔案較少**: 這些是檔案，您可在其中定義或覆寫用於定義CSS樣式的變數。
 
    最適化表單提供下列。less檔案中定義的OOTB變數：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
+
    最適化表單也提供下列定義的第三方變數：
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
@@ -81,7 +86,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    覆寫變數範例：
 
-   ```
+   ```css
    @button-background-color: rgb(19, 102, 44);
    @button-border-color: rgb(19, 102, 44);
    @button-border-size: 0px;
@@ -96,24 +101,27 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
       `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
    1. 然後匯入包含覆寫變數的較少檔案。
+
    新變數定義範例：
 
-   ```
+   ```css
    @button-focus-bg-color: rgb(40, 208, 90);
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **** 檔案的混音較少：您可以定義接受變數作為參數的函式。 這些函式的輸出是生成的樣式。 在不同的樣式中使用這些混音，以避免重複的CSS樣式。
+   **檔案的混音較少：** 您可以定義接受變數作為參數的函式。 這些函式的輸出是生成的樣式。 在不同的樣式中使用這些混音，以避免重複的CSS樣式。
 
    最適化表單提供定義於：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
+
    最適化表單也提供下列定義的協力廠商混合：
 
    * `/apps/clientlibs/fd/af/third-party/less/mixins.less`
+
    混合定義示例：
 
-   ```
+   ```css
    .rounded-corners (@radius) {
      -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
@@ -127,7 +135,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    }
    ```
 
-   **** Styles.less檔案：使用此檔案可包含您在用戶端程式庫中需要使用的所有較少檔案（變數、混合、樣式）。
+   **Styles.less檔案：** 使用此檔案可包含您在用戶端程式庫中需要使用的所有較少檔案（變數、混合、樣式）。
 
    在以下示例 `styles.less` 檔案中，可以按任意順序放置import語句。
 
@@ -138,7 +146,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * `components.less`
    * `layouts.less`
 
-   ```
+   ```css
    @import "../../../clientlibs/fd/af/guidetheme/common/less/globalvariables.less";
    @import "../../../clientlibs/fd/af/guidetheme/common/less/layoutvariables.less";
    @import "forestTheme-variables";
@@ -170,7 +178,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    例如：
 
-   ```
+   ```javascript
    #base=/apps/clientlibs/fd/af/third-party/css
    bootstrap.css
    
@@ -214,14 +222,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
       下列范常式式碼片段會匯入主 `af.theme.forest` 題。
 
-      ```
+      ```jsp
       <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
       <cq:includeClientLib categories="af.theme.forest"/>
       ```
 
-   1. **可選**:在自訂頁面中，視需要覆寫header.jsp、footer.jsp和body.jsp。
+   1. **可選**: 在自訂頁面中，視需要覆寫header.jsp、footer.jsp和body.jsp。
 
-1. 建立自訂範本(例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`)其jcr:content指向上一步驟中建立的自訂頁面(例如： `myAfCustomizations/myAfPages/forestPage)`。
+1. 建立自訂範本(例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`)，其jcr:content指向在上一步驟中建立的自訂頁面(例如： `myAfCustomizations/myAfPages/forestPage)`.
 
    ![CRX儲存庫快照](assets/2-1.png)
 
