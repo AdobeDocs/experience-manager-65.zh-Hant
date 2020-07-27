@@ -9,7 +9,10 @@ topic-tags: author
 discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '1503'
+ht-degree: 1%
 
 ---
 
@@ -68,7 +71,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 >[!NOTE]
 若要將欄位傳遞為REST URL中的參數，所有欄位都必須有不同的元素名稱，即使欄位放在不同的面板上亦然。
 
-### 將提交的資料張貼至資源或外部休息端點 {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
+### 將提交的資料張貼至資源或外部休息端點  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
 使用「 **提交到REST端點** 」(Submit to REST Endpoint)操作，將提交的資料發佈到其餘URL。 URL可以是內部（轉譯表單的伺服器）或外部伺服器。
 
@@ -133,7 +136,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ## Adaptive Form中的伺服器端重新驗證 {#server-side-revalidation-in-adaptive-form}
 
-通常，在任何線上資料擷取系統中，開發人員會在用戶端放置一些javascript驗證，以強制執行一些業務規則。 但是在現代瀏覽器中，使用者可以略過這些驗證，並使用各種技術手動進行提交，例如Web Browser DevTools Console。 這些技術也適用於適應性形式。 表單開發人員可以建立各種驗證邏輯，但技術上來說，使用者可以略過這些驗證邏輯，並將無效的資料送出至伺服器。 無效的資料會中斷表單作者已強制執行的業務規則。
+通常，在任何線上資料擷取系統中，開發人員會在用戶端放置一些JavaScript驗證，以執行一些業務規則。 但是在現代瀏覽器中，使用者可以略過這些驗證，並使用各種技術手動進行提交，例如Web Browser DevTools Console。 這些技術也適用於適應性形式。 表單開發人員可以建立各種驗證邏輯，但技術上來說，使用者可以略過這些驗證邏輯，並將無效的資料送出至伺服器。 無效的資料會中斷表單作者已強制執行的業務規則。
 
 伺服器端重新驗證功能也提供執行最適化表單作者在伺服器上設計最適化表單時所提供驗證的功能。 它可防止在表單驗證中呈現的資料提交和違反業務規則的行為受到任何可能的危害。
 
@@ -163,7 +166,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 支援驗證運算式中的自訂函式
 
-作者可依最適化表單設定自訂javascript程式庫。 在程式庫中，僅保留可重複使用的函式，而這些函式依賴於jquery和undershore.js協力廠商程式庫。
+作者可以依據最適化表單來設定customJavaScript程式庫。 在程式庫中，僅保留可重複使用的函式，而這些函式依賴於jquery和undershore.js協力廠商程式庫。
 
 ## 提交動作的錯誤處理 {#error-handling-on-submit-action}
 
