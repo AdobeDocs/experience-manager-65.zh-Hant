@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 8f8134d6c4fcc0ef54f9cc8298936c5c7d746c09
 workflow-type: tm+mt
-source-wordcount: '5830'
+source-wordcount: '5860'
 ht-degree: 5%
 
 ---
@@ -275,7 +275,7 @@ ht-degree: 5%
 * 使用「全 **[!UICONTROL 選]** 」核取方塊選取搜尋的資產。 [!DNL Experience Manager] 一開始會在卡片檢視中顯示100個資產，在清單檢視中顯示200個資產。 當您捲動搜尋結果時，會載入更多資產。 您可以選取比載入資產更多的資產。 選取資產的計數會顯示在搜尋結果頁面的右上角。 您可以對選取範圍進行操作，例如下載選取的資產、大量更新選取資產的中繼資料屬性，或將選取的資產新增至系列。 選取的資產比顯示的資產多時，會對所有選取的資產套用動作，或對話方塊顯示套用的資產數。 若要將動作套用至未載入的資產，請確定已明確選取所有資產。
 * 若要搜尋不含必要中繼資料的資產，請參閱必 [要中繼資料](#mandatorymetadata)。
 * 搜尋使用所有中繼資料欄位。 一般搜尋（例如搜尋12）通常會傳回許多結果。 為獲得更佳結果，請使用雙引號（非單引號），或確保數字與沒有特殊字元的單字相鄰(例如 *shoe12*)。
-* 全文搜尋支援運算子，例如——和^。 要將這些字母作為字串文本搜索，請用雙引號將搜索表達式括起來。 例如，使用「筆記型電腦——美容」而非「筆記型電腦——美容」。
+* 全文搜索支援運算子，如——和^。 要將這些字母作為字串文本搜索，請用雙引號將搜索表達式括起來。 例如，使用「筆記型電腦——美容」而非「筆記型電腦——美容」。
 * 如果搜尋結果太多，請將 [搜尋範圍限制](#scope) 為所要資產的零值。 當您對如何更好地尋找所需資產（例如特定檔案類型、特定位置、特定中繼資料等）有一些概念時，效果最佳。
 
 * **標籤**: 標籤可協助您將可以更有效率地瀏覽和搜尋的資產分類。 標籤有助於將適當的分類傳播給其他用戶和工作流。 [!DNL Experience Manager] 提供使用Adobe Sensei人為智慧服務自動標籤資產的方法，這些服務在使用和訓練中不斷改進對資產的標籤。 當您搜尋資產時，如果您的帳戶已啟用功能，智慧標籤會加入。 它可與內建搜尋功能搭配使用。 請參閱 [搜尋行為](#searchbehavior)。 若要最佳化搜尋結果的顯示順序，您可以提 [高少數選取資產的搜尋](#searchrank) 排名。
@@ -325,6 +325,8 @@ ht-degree: 5%
 
 資產發現需要建立DAM內容的索引，包括中繼資料。 更快速且精確的資產發現有賴於最佳化索引和適當的組態。 請參 [閱搜尋索引](/help/assets/performance-tuning-guidelines.md#search-indexes)、 [oak查詢和索引](/help/sites-deploying/queries-and-indexing.md)，以及 [最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
+若要從搜尋結果中排除特定資產，請使 `excludedPath` 用Lucene索引上的屬性。
+
 ### 視覺化或相似性搜尋 {#configvisualsearch}
 
 視覺搜尋使用智慧型標籤， [!DNL Experience Manager] 需要6.5.2.0或更新版本。 在設定智慧型標籤功能後，請遵循下列步驟：
@@ -364,6 +366,8 @@ ht-degree: 5%
 ### 上傳資產時擷取文字 {#extracttextupload}
 
 您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+
+如果文字擷取對您的部署而言太過耗費資源，請考慮停用 [文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
 ### 自訂謂語以篩選搜尋結果 {#custompredicates}
 
