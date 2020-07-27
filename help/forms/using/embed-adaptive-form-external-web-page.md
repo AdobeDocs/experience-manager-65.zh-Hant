@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -120,14 +120,14 @@ ht-degree: 0%
 
 1. 開啟設 `httpd.conf` 定檔案並取消註解下列程式碼行。 或者，您也可以在檔案中新增這些程式碼行。
 
-   ```
+   ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
 1. 在設定檔案中新增下列程式碼行，以設定代 `httpd-proxy.conf` 理規則。
 
-   ```
+   ```text
    ProxyPass /forms https://[AEM_Instance]/forms
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
@@ -136,7 +136,7 @@ ht-degree: 0%
 
 如果您未將AEM伺服器載入內容路徑，Apache層的Proxy規則將如下：
 
-```java
+```text
 ProxyPass /content https://<AEM_Instance>/content
 ProxyPass /etc https://<AEM_Instance>/etc
 ProxyPass /etc.clientlibs https://<AEM_Instance>/etc.clientlibs
