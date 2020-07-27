@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: adc7ec13-0675-4071-9c4c-e238202d9d85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 將「/libs/fd/cm/configFiles/previewwatermark」檔案夾中的ddx檔案複製並貼至「/apps/fd/cm/configFiles/previewwatermark」檔案夾，然後按一下「全 **[!UICONTROL 部儲存]**」。
 1. 在/apps/fd/cm/configFiles/previewwatermark/下的dx檔案中進行所需的變更。
 
-   ```
+   ```xml
    <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
     <PDF result="output.pdf">
      <PDF source="input.pdf"/>
