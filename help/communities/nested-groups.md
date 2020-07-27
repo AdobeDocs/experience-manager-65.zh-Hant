@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -47,12 +50,12 @@ source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 
 * **社群群組範本**:
 
-   * **[!UICONTROL 社群群組標題]**:藝術。
-   * **[!UICONTROL 社群群組說明]**:不同藝術團體的父項團體。
-   * **[!UICONTROL 社群群組根]**:保 *留為預設值*。
-   * **[!UICONTROL 其他可用社群群組語言]**:使用下拉式功能表來選取可用的社群群組語言。 功能表會顯示建立父社群網站的所有語言。 使用者可在這些語言中選擇，以在此單一步驟中建立多個地區設定的群組。 在相應社群網站的「群組」主控台中，以多種指定語言建立相同的群組。
-   * **[!UICONTROL 社群群組名稱]**:藝術。
-   * **[!UICONTROL 範本]**:下拉式選擇 `Reference Group.`
+   * **[!UICONTROL 社群群組標題]**: 藝術。
+   * **[!UICONTROL 社群群組說明]**: 不同藝術團體的父項團體。
+   * **[!UICONTROL 社群群組根]**: *保留為預設值*。
+   * **[!UICONTROL 其他可用社群群組語言]**: 使用下拉式功能表來選取可用的社群群組語言。 功能表會顯示建立父社群網站的所有語言。 使用者可在這些語言中選擇，以在此單一步驟中建立多個地區設定的群組。 在相應社群網站的「群組」主控台中，以多種指定語言建立相同的群組。
+   * **[!UICONTROL 社群群組名稱]**: 藝術。
+   * **[!UICONTROL 範本]**: 下拉式選擇 `Reference Group.`
    * 選擇 **[!UICONTROL 下一步]**。
 
 ![巢狀社群群組](assets/parent-to-nestedgroup.png)
@@ -91,7 +94,7 @@ source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 
 在建立群組內巢狀的群 `arts` 組之前，將滑鼠指標暫留在資 `arts` 訊卡上，並選取發佈圖示以進行發佈。
 
-![chlimage_1-93](assets/chlimage_1-93.png)
+![對開元件](assets/liking-component.png)
 
 等候確認群組已發佈。
 
@@ -104,21 +107,21 @@ source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
    * 標題: `Visual Arts`
    * 名稱: `visual`
    * 範本: `Reference Group`
-   * 會籍：選 `Optional Membership`擇公共組，開啟給所有成員。
+   * 會籍： 選 `Optional Membership`擇公共組，開啟給所有成員。
 
 1. **[!UICONTROL 聽覺]**
 
    * 標題: `Auditory Arts`
    * 名稱: `auditory`
    * 範本: `Reference Group`
-   * 會籍：選擇 `Required Membership`一個開啟的組，供成員加入。
+   * 會籍： 選擇 `Required Membership`一個開啟的組，供成員加入。
 
 1. **[!UICONTROL 歷史]**
 
    * 標題: `Art History`
    * 名稱: `history`
    * 範本: `Reference Group`
-   * 會籍：選擇 `Restricted Membership`一個秘密組，只對邀請的成員可見。 例如，邀請示範 [使用者](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com`。
+   * 會籍： 選擇 `Restricted Membership`一個秘密組，只對邀請的成員可見。 例如，邀請示範 [使用者](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com`。
 
 重新整理頁面，查看所有三個巢狀群組（子社群）。
 
@@ -130,7 +133,7 @@ source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 * 選 **[!UICONTROL 擇藝術卡]**
 * 選擇 **[!UICONTROL 群組]** 資料夾
 
-![chlimage_1-95](assets/chlimage_1-95.png)
+![configure-like](assets/configure-liking.png)
 
 ## 發佈群組 {#publishing-groups}
 
@@ -152,12 +155,12 @@ source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 
 登入時，您可能會體驗不同的群組，例如與 [用於](/help/communities/tutorials.md#demo-users) :
 
-* 圖稿／歷史記錄組成員：emily.andrews@mailinator.com/密碼
+* 圖稿／歷史記錄組成員： emily.andrews@mailinator.com/密碼
    * 受限制的（機密）群組（藝術／歷史）可見：
    * 可以看到可選（公開）群組。
    * 可以加入受限制（開啟）的群組。
 
-* 群組管理員：aaron.mcdonald@mailinator.com/密碼
+* 群組管理員： aaron.mcdonald@mailinator.com/密碼
 
    * 可以看到可選（公開）群組。
    * 可以加入受限制（開啟）的群組。
