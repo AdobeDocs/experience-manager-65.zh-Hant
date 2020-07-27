@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '568'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRo
 
 如果您的範本位於名為FormSubmission的應用程式中的AEM儲存庫中，URI為：
 
-```
+```http
 http://localhost:4502/content/xfaforms/profiles/default.html?
  contentRoot=crx:///content/dam/formsanddocuments/FormSubmission/1.0
  &template=sampleForm.xdp
@@ -72,12 +75,12 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
 
 HTML5表格支援三種傳遞演算參數的方法。 您可以透過URL、鍵值配對和描述檔節點傳遞參數。 在render參數中，鍵值對的優先順序最高，後跟配置檔案節點。 「URL請求」參數的優先順序最低。
 
-* **URL請求參數**:您可以在URL中指定演算參數。 在URL請求參數中，參數對一般使用者可見。 例如，下列提交URL在URL中包含範本參數： `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
+* **URL請求參數**: 您可以在URL中指定演算參數。 在URL請求參數中，參數對一般使用者可見。 例如，下列提交URL在URL中包含範本參數： `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
-* **SetAttribute請求參數**:可以將渲染參數指定為鍵值對。 在SetAttribute請求參數中，參數對最終用戶不可見。 您可以將任何其他JSP的請求轉發到HTML5表單描述檔轉譯器JSP，並使用 *setAttribute* on request物件來傳遞所有轉譯參數。 此方法的優先順序最高。
+* **SetAttribute請求參數**: 可以將渲染參數指定為鍵值對。 在SetAttribute請求參數中，參數對最終用戶不可見。 您可以將任何其他JSP的請求轉發到HTML5表單描述檔轉譯器JSP，並使用 *setAttribute* on request物件來傳遞所有轉譯參數。 此方法的優先順序最高。
 
 * **描述檔節點請求參數：** 可以將渲染參數指定為配置檔案節點的節點屬性。 在描述檔節點請求參數中，一般使用者看不到這些參數。 描述檔節點是傳送請求的節點。 要將參數指定為節點屬性，請使用CRXDE lite。
 
 ### 提交參數 {#submit-parameters}
 
-HTML5表單提交資料；在AEM伺服器上執行伺服器端指令碼和web-services。 如需在AEM伺服器上執行伺服器端指令碼和web-services的參數詳細資訊，請參閱 [HTML5 Forms Service Proxy](/help/forms/using/service-proxy.md)。
+HTML5表單提交資料； 在AEM伺服器上執行伺服器端指令碼和web-services。 如需在AEM伺服器上執行伺服器端指令碼和web-services的參數詳細資訊，請參閱 [HTML5 Forms Service Proxy](/help/forms/using/service-proxy.md)。
