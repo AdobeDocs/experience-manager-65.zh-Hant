@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 在任意給定時刻顯示多個欄位的錯誤消息。
 * 顯示錯誤而不考慮選取的欄位。
 
-## 自訂錯誤訊息 {#customizing-error-messages-nbsp}
+## 自訂錯誤訊息  {#customizing-error-messages-nbsp}
 
 在自訂錯誤訊息之前，請先下載並解壓縮附加的套件(CustomErrorManager-1.0-SNAPSHOT.zip)。
 
@@ -31,7 +34,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [取得檔案](assets/customerrormanager-1.0-snapshot.zip)
 
-### 自定義錯誤消息的位置 {#customizing-the-position-of-error-messages-nbsp}
+### 自定義錯誤消息的位置  {#customizing-the-position-of-error-messages-nbsp}
 
 若要自訂錯誤訊息的位置，請針對每個錯誤和警告欄位新增&lt;div>標籤，將&lt;div>標籤置於左或右，並在&lt;div>標籤上套用css樣式。 如需詳細步驟，請參閱下列程式：
 
@@ -46,7 +49,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 在開箱即用的實作中，欄位右側會顯示錯誤訊息。 若要讓錯誤訊息出現在頂端，請使用下列程式碼。
 
-   ```
+   ```javascript
    markError: function (jqWidget, msg, type) {
                var element = jqWidget.element,                                //Gives the div containing widget
                    pos = $(element).offset(),                          //Calculates the position of the div in the view port
@@ -77,7 +80,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 導覽至檔 `CustomErrorManager-1.0-SNAPSHOT` 案夾並建立jcr_root和META-INF檔案夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
 1. 使用套件管理器來上傳及安裝套件。
 
-## 顯示多個欄位的錯誤訊息 {#display-error-messages-for-multiple-fields-nbsp}
+## 顯示多個欄位的錯誤訊息  {#display-error-messages-for-multiple-fields-nbsp}
 
 使用附加的包可同時顯示所有欄位的錯誤消息。 若要顯示單一錯誤訊息，請使用預設描述檔。
 
@@ -89,7 +92,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    使用下列程式碼來變更錯誤／警告訊息的字型大小和顏色。
 
-   ```
+   ```css
    #customError {
    color: #0000FF; // it changes the color of Error Message
    display:none;
@@ -113,13 +116,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 儲存並關閉檔案。
 1. 導覽至CustomErrorManager-1.0-SNAPSHOT檔案夾，並建立jcr_root和META-INF檔案夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
-1. 使用套件管理員來上傳及安裝套件。
+1. 使用套件管理器來上傳及安裝套件。
 
 ## 使用新的描述檔來轉換表格。  {#render-the-form-with-the-new-profile-nbsp}
 
-現成可用的html5表格會使用預設描述檔：https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
+現成可用的html5表格會使用預設描述檔： https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
 
-若要檢視含有自訂錯誤訊息的表單，請轉換含有錯誤描述檔的表單：https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
+若要檢視含有自訂錯誤訊息的表單，請轉換含有錯誤描述檔的表單： https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
 
 >[!NOTE]
 >
