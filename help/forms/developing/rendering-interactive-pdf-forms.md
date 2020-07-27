@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2442'
+ht-degree: 0%
 
 ---
 
@@ -83,7 +86,7 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 以下代碼顯示名為GetLoanForm的Java Servlet的語法：
 
-```as3
+```java
      public class GetLoanForm extends HttpServlet implements Servlet {
          public void doGet(HttpServletRequest req, HttpServletResponse resp
          throws ServletException, IOException {
@@ -126,7 +129,7 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 ![ri_ri_formrepository](assets/ri_ri_formrepository.png)
 
-若要存取此表單設計，請 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` 指定為表單名稱(傳遞至方法的第一個 `renderPDFForm` 參數) `repository:///` 和內容根URI值。
+若要存取此表單設計，請 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` 指定為表單名稱(傳遞至方法的第一個參 `renderPDFForm` 數) `repository:///` 和內容根URI值。
 
 >[!NOTE]
 >
@@ -202,6 +205,7 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
       * 一個字串值，它指定檔案附件的名稱，包括檔案副檔名。
    * 包 `com.adobe.idp.Document` 含檔案附件的對象。
+
    >[!NOTE]
    >
    >對要附加到表單的每個檔案重複此步驟。 此步驟為可選步驟，如果您 `null` 不想發送檔案附件，則可以通過。
@@ -215,6 +219,7 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
    * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此為可選參數，您可以指 `null` 定是否不想指定執行時選項。
    * 包 `URLSpec` 含Forms服務所需URI值的對象。
    * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
+
    該方 `renderPDFForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
@@ -254,6 +259,7 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
       * 指定檔案附件名稱的字串值，包括檔案副檔名
    * 包 `BLOB` 含檔案附件的對象
+
    >[!NOTE]
    >
    >對要附加到表單的每個檔案重複此步驟。
@@ -271,6 +277,7 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
    * 由方 `javax.xml.rpc.holders.LongHolder` 法填充的空對象。 （此引數將儲存表單中的頁數。）
    * 由方 `javax.xml.rpc.holders.StringHolder` 法填充的空對象。 （此引數將儲存地區值。）
    * 包含 `com.adobe.idp.services.holders.FormsResultHolder` 此操作結果的空對象。
+
    該方 `renderPDFForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
