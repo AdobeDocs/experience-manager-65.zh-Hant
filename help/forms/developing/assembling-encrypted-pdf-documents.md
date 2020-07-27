@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 6d75c7b1-9c0e-47f3-bdb1-61acf16b97f9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1639'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在本討論中，假設使用了以下DDX文檔。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
         <PDF result="EncryptLoan.pdf" encryption="userProtect">
@@ -72,7 +75,7 @@ Encryption服務不必是AEM表單安裝的一部分，就能以密碼加密PDF�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立Assembler客戶端**
 
@@ -100,7 +103,7 @@ Encryption服務不必是AEM表單安裝的一部分，就能以密碼加密PDF�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -139,6 +142,7 @@ Encryption服務不必是AEM表單安裝的一部分，就能以密碼加密PDF�
    * 表 `com.adobe.idp.Document` 示DDX文檔的對象。 請確定此DDX檔案包含PDF `inDoc` 來源元素的值。
    * 包 `com.adobe.idp.Document` 含不安全PDF文檔的對象。
    * 指定 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 運行時選項（包括預設字型和作業日誌級別）的對象。
+
    此方 `invokeOneDocument` 法會傳回包 `com.adobe.idp.Document` 含密碼加密PDF檔案的物件。
 
 1. 儲存加密的PDF檔案。
@@ -148,13 +152,13 @@ Encryption服務不必是AEM表單安裝的一部分，就能以密碼加密PDF�
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API組合加密的PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API組合加密的PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
 ## 使用web service API組合加密的PDF檔案 {#assemble-an-encrypted-pdf-document-using-the-web-service-api}
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -201,6 +205,7 @@ Encryption服務不必是AEM表單安裝的一部分，就能以密碼加密PDF�
    * 代 `BLOB` 表DDX文檔的對象
    * 表示 `BLOB` 不安全PDF文檔的對象
    * 指定 `AssemblerOptionSpec` 運行時選項的對象
+
    此方 `invokeOneDocument` 法會傳回包 `BLOB` 含加密PDF檔案的物件。
 
 1. 儲存加密的PDF檔案。
