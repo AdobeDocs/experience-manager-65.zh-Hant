@@ -10,7 +10,10 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '927'
+ht-degree: 0%
 
 ---
 
@@ -28,15 +31,15 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 快取的可用選項如下：
 
-* **無**:強制不快取任何對象。 實際上，這會降低效能，並且由於缺少快取而需要高記憶體可用性。
-* **保守**:指定僅快取在呈現表單之前生成的中間對象，例如包含內嵌片段和影像的模板。
-* **咄咄逼人**:強制快取幾乎所有可快取的項目，包括從「保守」快取層級轉換的HTML內容。 它會產生最佳效能，但也會耗用更多記憶體來儲存快取的工件。 積極的快取策略意味著，當快取轉譯內容時，您在轉譯表格時，會獲得持續的時間效能。
+* **無**: 強制不快取任何對象。 實際上，這會降低效能，並且由於缺少快取而需要高記憶體可用性。
+* **保守**: 指定僅快取在呈現表單之前生成的中間對象，例如包含內嵌片段和影像的模板。
+* **咄咄逼人**: 強制快取幾乎所有可快取的項目，包括從「保守」快取層級轉換的HTML內容。 它會產生最佳效能，但也會耗用更多記憶體來儲存快取的工件。 積極的快取策略意味著，當快取轉譯內容時，您在轉譯表格時，會獲得持續的時間效能。
 
 AEM Forms的預設快取設定可能不足以達到最佳效能。 因此，建議使用下列設定：
 
-* **快取策略**:攻擊性
-* **快取大小** （表單數）:視需要
-* **最大物件大小**:視需要
+* **快取策略**: 攻擊性
+* **快取大小** （表單數）: 視需要
+* **最大物件大小**: 視需要
 
 ![行動表單設定](assets/snap.png)
 
@@ -48,7 +51,7 @@ AEM Forms的預設快取設定可能不足以達到最佳效能。 因此，建�
 
 為獲得最佳效能，建議使用以下JVM `init` 參數來配置 `Java heap` 和 `PermGen`。
 
-```java
+```shell
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xmx8192m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:PermSize=256m
@@ -73,15 +76,15 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 **取得適用於您作業系統的Apache網路伺服器軟體**
 
-* Windows:從Apache HTTP Server項目站點下載Apache Web伺服器。
-* Solaris 64位：從Sunfreeware for Solaris網站下載Apache Web伺服器。
-* Linux:apache Web伺服器已預安裝在Linux系統上。
+* Windows: 從Apache HTTP Server項目站點下載Apache Web伺服器。
+* Solaris 64位： 從Sunfreeware for Solaris網站下載Apache Web伺服器。
+* Linux: apache Web伺服器已預安裝在Linux系統上。
 
 Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTTP進行優化的。
 
 1. 在檔案中取消注釋以下模組 `APACHE_HOME/conf/httpd.conf` 配置。
 
-   ```java
+   ```shell
    LoadModule proxy_balancer_module modules/mod_proxy.so
    LoadModule proxy_balancer_module modules/mod_proxy_http.so
    LoadModule deflate_module modules/mod_deflate.so
@@ -94,7 +97,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTT
 1. 在crx的埠4502上配置代理。
 在配置檔案中添加 `APACHE_HOME/conf/httpd.conf` 以下配置。
 
-   ```java
+   ```shell
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
@@ -103,7 +106,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTT
 
    **針對HTML5表格**
 
-   ```java
+   ```xml
    <Location /content/xfaforms>
        <IfModule mod_deflate.c>
            SetOutputFilter DEFLATE
@@ -120,7 +123,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些配置是用於使用HTT
 
    **針對最適化表單**
 
-   ```java
+   ```xml
    <Location /content/forms/af>
        <IfModule mod_deflate.c>
            SetOutputFilter DEFLATE
