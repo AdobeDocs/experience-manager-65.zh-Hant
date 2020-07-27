@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 0d961630-573b-4c8e-902f-996f1d1265b6
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 0%
 
 ---
 
@@ -74,7 +77,7 @@ private TransactionRecord extractTxRecordFromRequest(SlingHttpServletRequest req
 
 您可以使用下列范常式式碼來呼叫具有 `TransactionRecorder`API的servlet。
 
-```
+```javascript
 $.ajax({
    type: 'POST',
    url: url, //servlet url
