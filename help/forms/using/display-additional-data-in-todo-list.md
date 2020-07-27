@@ -10,7 +10,10 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +39,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    例如，英文 `/apps/ws/locales/en-US/translation.json` 的變更：
 
-   ```
+   ```json
    "task" : {
            "reminder" : {
                "value" : "Reminder",
@@ -112,7 +115,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 例如，在任務塊中添加資訊：
 
-   ```
+   ```json
    "stepname" : {
                "value" : "Step Name",
                "tooltip" : "This task belongs to __stepName__ step"
@@ -146,6 +149,6 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    例如，在 `div class="taskProperties"`:
 
-   ```
+   ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
