@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '10273'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 >
 >基本URL已內嵌在受原則保護的檔案中。 用戶端應用程式使用基本URL來連線回伺服器。 受保護的檔案將繼續包含基本URL，即使稍後變更亦然。 如果您變更基本URL，則所有連線用戶端的設定資訊都必須更新。
 
-**預設離線租用期：** 使用者離線使用受保護檔案的預設時間長度。 此設定決定了建立策略時自動離線租用期間設定的初始值。 （請參閱建立和編輯原則。）當租賃期到期時，收件者必須再次同步檔案，才能繼續使用。
+**預設離線租用期：** 使用者離線使用受保護檔案的預設時間長度。 此設定決定了建立策略時自動離線租用期間設定的初始值。 （請參閱建立和編輯原則。） 當租賃期到期時，收件者必須再次同步檔案，才能繼續使用。
 
 有關離線租用和同步如何運作的討論，請參 [閱Primer中有關配置離線租用和同步的資訊](https://blogs.adobe.com/security/2009/05/primer_on_configuring_offline.html)。
 
@@ -54,15 +57,15 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 選擇此選項可讓客戶端應用程式使用擴展身份驗證。 擴充驗證可提供自訂驗證程式，以及AEM Forms伺服器上設定的不同驗證選項。 例如，使用者現在可以從Acrobat和Reader用戶端體驗以SAML為基礎的驗證，而非AEM表單的使用者名稱／密碼。 依預設，「著陸URL」包含 *localhost* 作為伺服器名稱。 以完全限定的主機名替換伺服器名稱。 如果尚未啟用擴充驗證，著陸URL中的主機名稱會自動從基本URL填入。 請參 [閱添加擴展驗證提供程式](configuring-client-server-options.md#add-the-extended-authentication-provider)。
 
-***注意&#x200B;**:Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本支援延伸驗證。*
+***注意&#x200B;**: Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本支援延伸驗證。*
 
 **延伸驗證的偏好HTML控制寬度** ：指定在Acrobat中開啟以輸入使用者認證的延伸驗證對話方塊的寬度。
 
 **延伸驗證的偏好HTML控制高度** ：指定在Acrobat中開啟以輸入使用者認證的延伸驗證對話方塊的高度。
 
-***注意&#x200B;**:此對話框的寬度和高度限制如下：*寬度：最少= 400，最多= 900
+***注意&#x200B;**: 此對話框的寬度和高度限制如下：*寬度： 最少= 400，最多= 900
 
-高度：最低= 450;最大值= 800
+高度： 最低= 450; 最大值= 800
 
 **啟用客戶端憑據快取：** 選取此選項可讓使用者快取其認證（使用者名稱和密碼）。 當使用者的認證被快取時，他們不必在每次開啟檔案時或按一下Adobe Acrobat「管理保全政策」頁面上的「重新整理」按鈕時輸入認證。 您可以指定使用者必須再次提供其認證的天數。 將天數設為0可無限期快取憑證。
 
@@ -82,7 +85,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 1. 在您安裝並設定AEM表單環境並具備檔案安全性後，請在「使用者管理」中設定所有適當的網域。 <!-- Fix broken link (See Setting up and managing domains) -->
 
-   ***注意&#x200B;**:必須先建立域，才能建立任何策略。*
+   ***注意&#x200B;**: 必須先建立域，才能建立任何策略。*
 
 1. 在管理控制台中，按一下「服務>檔案管理>原則」，然後按一下「原則集」標籤。
 1. 選擇全局策略集，然後按一下可見用戶和組頁籤。
@@ -116,13 +119,13 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 在編輯器中開啟檔案，並找到AllowedUrls節點。
 1. 在節 `AllowedUrls` 點中添加以下行： `<entry key="sso-l" value="/ssoexample/login.jsp"/> <entry key="sso-s" value="/ssoexample"/> <entry key="sso-o" value="/ssoexample/logout.jsp"/>`
 
-   ```as3
+   ```xml
    <entry key="sso-l" value="/ssoexample/login.jsp"/>
    <entry key="sso-s" value="/ssoexample"/>
    <entry key="sso-o" value="/ssoexample/logout.jsp"/>
    ```
 
-1. 儲存檔案，然後從「手動設定」頁面匯入更新的檔案：在管理控制台中，按一下「設定>使用者管理>設定>匯入和匯出設定檔」。
+1. 儲存檔案，然後從「手動設定」頁面匯入更新的檔案： 在管理控制台中，按一下「設定>使用者管理>設定>匯入和匯出設定檔」。
 
 ## 設定離線安全性 {#configuring-offline-security}
 
@@ -160,7 +163,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 **變更主要變換頻率**
 
-為保密目的，當您使用離線檔案時，檔案安全性會提供預設頻率為20天的自動金鑰變換選項。 您可以變更變換頻率；不過，請避免將值設為低於14天，因為可能會防止使用者檢視離線檔案，而且系統效能可能會受到影響。
+為保密目的，當您使用離線檔案時，檔案安全性會提供預設頻率為20天的自動金鑰變換選項。 您可以變更變換頻率； 不過，請避免將值設為低於14天，因為可能會防止使用者檢視離線檔案，而且系統效能可能會受到影響。
 
 1. 在檔案安全性頁面上，按一下「設定>金鑰管理」。
 1. 在「關鍵變換頻率」框中，鍵入變換期間的天數。
@@ -417,7 +420,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 **自訂用戶端憑證顯示**
 
-**僅顯示受信任的憑證發行者：** 選取此選項時，用戶端應用程式只會向使用者提供AEM表單設定為信任的憑證發行者憑證（請參閱管理憑證和憑證）。如果未選取此選項，使用者會收到使用者系統上所有憑證的清單。
+**僅顯示受信任的憑證發行者：** 選取此選項時，用戶端應用程式只會向使用者提供AEM表單設定為信任的憑證發行者憑證（請參閱管理憑證和憑證）。 如果未選取此選項，使用者會收到使用者系統上所有憑證的清單。
 
 ## 設定動態浮水印 {#configure-dynamic-watermarks}
 
@@ -466,7 +469,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
    * 進階選項，例如頁面範圍或顯示選項
    * 文字格式選項，例如指定的字型、字型名稱和顏色。 不過，舊版Acrobat和Reader會以預設字型和顏色顯示文字內容。
 
-* Acrobat 9.0及舊版：Acrobat 9.0及舊版不支援動態浮水印的原則名稱。 如果Acrobat 9.0開啟受原則保護的檔案，其中包含原則名稱和其他動態資料的動態水印，則會顯示水印，而不包含原則名稱。 如果動態水印只包含原則名稱，Acrobat會顯示錯誤訊息
+* Acrobat 9.0及舊版： Acrobat 9.0及舊版不支援動態浮水印的原則名稱。 如果Acrobat 9.0開啟受原則保護的檔案，其中包含原則名稱和其他動態資料的動態水印，則會顯示水印，而不包含原則名稱。 如果動態水印只包含原則名稱，Acrobat會顯示錯誤訊息
 
 ### 新增動態水印範本 {#add-a-dynamic-watermark-template}
 
@@ -480,7 +483,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 按一下「新增」。
 1. 在「名稱」框中，鍵入新水印的名稱。
 
-   ***注意&#x200B;**:水印或水印元素的名稱或說明中不能使用某些特殊字元。 請參閱「考量事項」中列出的[限制，以編輯原則](/help/forms/using/admin-help/creating-policies.md#considerations-for-editing-policies)。*
+   ***注意&#x200B;**: 水印或水印元素的名稱或說明中不能使用某些特殊字元。 請參閱「考量事項」中列出的[限制，以編輯原則](/help/forms/using/admin-help/creating-policies.md#considerations-for-editing-policies)。*
 
 1. 在「名稱」下，在加號旁輸入有意義的名稱至浮水印元素，例如「頁首」，然後新增說明，並展開加號以顯示選項。
 1. 在「來源」下，選取「文字」或「PDF」的水印類型。
@@ -489,15 +492,15 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
    * 選擇要包括的水印類型。 如果您選取「自訂文字」，請在相鄰方塊中輸入要顯示浮水印的文字。 請記住將顯示為浮水印的文字長度。
    * 為水印文本的文本內容指定文本格式屬性，如字型名稱、字型大小、前景顏色和背景顏色。 將前景和背景顏色指定為十六進位值。
 
-      ***注意&#x200B;**:如果您選取「調整大小」選項為「最適頁面大小」，則無法編輯字型大小屬性。*
+      ***注意&#x200B;**: 如果您選取「調整大小」選項為「最適頁面大小」，則無法編輯字型大小屬性。*
 
-1. 如果您選取PDF做為豐富浮水印選項，請按一下「選取浮水印PDF」旁的「瀏覽 **** 」，以選取您要當做浮水印使用的PDF檔案。
+1. 如果您選取PDF做為豐富水印選項，請按一下「選取浮水印PDF」旁的「瀏覽 **** 」，以選取您要當做浮水印的PDF檔案。
 
-   ***注意&#x200B;**:請勿使用受密碼保護的PDF檔案。 如果您指定受密碼保護的PDF做為浮水印元素，則不會套用浮水印。*
+   ***注意&#x200B;**: 請勿使用受密碼保護的PDF檔案。 如果您指定受密碼保護的PDF做為浮水印元素，則不會套用浮水印。*
 
 1. 在「用作背景」下，選擇「是」或「否」。
 
-   **注意**:目前，水印會出現在前景中，而不考慮此設定。
+   **注意**: 目前，水印會出現在前景中，而不考慮此設定。
 
 1. 要控制水印在文檔中的顯示位置，請配置「垂直對齊」和「水準對齊」選項。
 1. 選擇「適合頁面大小」或選擇%，然後在方塊中輸入百分比。 值必須是整數，而非分數。 若要設定浮水印大小，您可以使用頁面的百分比值，或設定浮水印以符合頁面大小。
@@ -550,7 +553,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 註冊電子郵件包含「註冊」頁面的連結，以及如何註冊的資訊。 在邀請的使用者註冊後，檔案安全性會發出啟動電子郵件，並附上啟動頁面的連結。 啟用後，帳戶會一直有效，直到您停用或刪除為止。
 
-如果啟用內置註冊，則只需指定一次SMTP伺服器、註冊電子郵件詳細資訊、訪問權能和重設密碼電子郵件資訊。 在啟用內建註冊之前，請確定您已在「使用者管理」中建立本機網域，已將「Document security Invite User」角色指派給貴組織中適當的使用者和群組。 (請參 [閱添加本地域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)[和建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。)如果您不使用內建註冊，則必須使用AEM表單SDK建立您自己的使用者註冊系統。 請參閱「使用AEM表單進行程式設計」中的「開發AEM表 [單的SPI」說明](https://www.adobe.com/go/learn-aemforms-programming-63)。 如果您不使用內建註冊選項，建議您在啟動電子郵件和用戶端登入畫面中設定訊息，以通知使用者如何聯絡管理員以取得新密碼或取得其他資訊。
+如果啟用內置註冊，則只需指定一次SMTP伺服器、註冊電子郵件詳細資訊、訪問權能和重設密碼電子郵件資訊。 在啟用內建註冊之前，請確定您已在「使用者管理」中建立本機網域，已將「Document security Invite User」角色指派給貴組織中適當的使用者和群組。 (請參 [閱添加本地域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)[和建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。) 如果您不使用內建註冊，則必須使用AEM表單SDK建立您自己的使用者註冊系統。 請參閱「使用AEM表單進行程式設計」中的「開發AEM表 [單的SPI」說明](https://www.adobe.com/go/learn-aemforms-programming-63)。 如果您不使用內建註冊選項，建議您在啟動電子郵件和用戶端登入畫面中設定訊息，以通知使用者如何聯絡管理員以取得新密碼或取得其他資訊。
 
 **啟用和設定邀請的使用者註冊**
 
@@ -661,7 +664,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 ### 設定密碼重設電子郵件 {#configure-a-password-reset-email}
 
-如果您必須重設受邀使用者的密碼，會產生確認電子郵件，邀請使用者選擇新密碼。 無法判斷使用者的密碼；如果使用者忘記，您必須重設它。
+如果您必須重設受邀使用者的密碼，會產生確認電子郵件，邀請使用者選擇新密碼。 無法判斷使用者的密碼； 如果使用者忘記，您必須重設它。
 
 下列設定位於「已邀請的使用者註冊」頁面的「重設密碼電子郵件」區域。
 
@@ -819,7 +822,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 匯出檔案保全設定檔。 (請參 [閱手動編輯Document Security設定檔](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file))。
 1. 在編輯器中開啟配置檔案並找到該 `PolicyServer` 節點。 添加節 `ClientVersionRules` 點作為節點的直接子 `PolicyServer` 節點（如果不存在）:
 
-   ```as3
+   ```java
     <node name="ClientVersionRules">
         <map>
             <entry key="infoURL" value="URL"/>
@@ -855,6 +858,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
    * Apple OS X
    * Sun Solaris
    * HP-UX
+
    `SDKVersions` 指定用戶端應用程式所使用的檔案安全性C++用戶端API版本。 For example, `"8.2"`.
 
    `APPFamilies` 由用戶端API定義。
@@ -875,7 +879,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 在此示例中，所有Windows客戶端都被拒絕訪問。
 
-```as3
+```java
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value="https://www.dont.use/windows.html"/>
@@ -893,7 +897,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 在此範例中，「我的應用程式3.0版」和「我的其他應用程式2.0版」皆遭拒存取。 無論拒絕的原因為何，都會使用相同的拒絕資訊URL。
 
-```as3
+```java
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -918,7 +922,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 在此範例中，來自Microsoft PowerPoint 2007或Microsoft PowerPoint 2010安裝Microsoft Office專用Acrobat Reader DC擴充功能的所有要求均遭拒絕。
 
-```as3
+```java
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -941,7 +945,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 依預設，您最多可以在浮水印中指定五個元素。 此外，您要用作浮水印的PDF檔案檔案大小上限為100KB。 您可以在config.xml檔案中變更這些參數。
 
-***注意&#x200B;**:您應謹慎變更這些參數。*
+***注意&#x200B;**: 您應謹慎變更這些參數。*
 
 1. 匯出檔案保全設定檔。 (請參 [閱手動編輯Document Security設定檔](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file))。
 1. 在編輯器中開啟配置檔案並找到該 `ServerSettings` 節點。
@@ -951,7 +955,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
    第二個項目 *，最大元素* ，是浮水印中允許的最大元素數。 預設值為5。
 
-   ```as3
+   ```java
    <entry key="maximumSizeOfWatermarkElement" value="max filesize in KB"/>
    <entry key="maximumWatermarkElementsPerWatermark" value="max elements"/>
    ```
@@ -963,7 +967,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 許多檔案安全性使用者在使用「正確管理」使用者介面時，無法 **存取** www.adobe.com等外部連結：
 
 * `https://[host]:'port'/adminui`
-* `https://[host]:'port'/edc`.
+* `https://[host]:'port'/edc`。
 
 下列對config.xml的變更會停用「Right Management」使用者介面的所有外部連結。
 
@@ -971,7 +975,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 在編輯器中開啟配置檔案並找到該 `DisplaySettings` 節點。
 1. 要禁用所有外部連結，請在節 `DisplaySettings` 點中添加以下條目，然後保存檔案： `<entry key="ExternalLinksAllowed" value="false"/>`
 
-   ```as3
+   ```java
    <entry key="ExternalLinksAllowed" value="false"/>
    ```
 
@@ -985,7 +989,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 在編輯器中開啟配置檔案並找到該 `DisplaySettings` 節點。
 1. 找到以下節點： `<node name="ExternalUser">`
 
-   ```as3
+   ```java
    <node name="ExternalUser">
    ```
 
@@ -1001,7 +1005,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 匯出檔案保全設定檔。 (請參 [閱手動編輯Document Security設定檔](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file))。
 1. 在編輯器中開啟配置檔案並找到以下節點： `<node name="DRM">`
 
-   ```as3
+   ```java
    <node name="DRM">
    ```
 
@@ -1011,7 +1015,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 1. 若要停用檔案安全性檔案的SOAP端點，請將值屬性設 **為false**。
 
-   ```as3
+   ```java
    <node name="DRM">
        <map>
            <entry key="AllowUnencryptedVoucher" value="false"/>
