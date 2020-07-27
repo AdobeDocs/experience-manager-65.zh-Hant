@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
 translation-type: tm+mt
-source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,7 @@ source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
 
    在中新增下列程式碼 `init.jsp`。
 
-   ```
+   ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
    <guide:initializeBean name="guideField" className="com.adobe.aemds.guide.common.GuideButton"/>
    
@@ -112,7 +115,7 @@ source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
 
    在檔案中新增下列程 `ReviewBeforeSubmit.js` 式碼。
 
-   ```
+   ```javascript
    /*anonymous function to handle show of review before submit view */
    $(function () {
        if($("div.reviewbeforesubmit button[id*=reviewbeforesubmit]").length > 0) {
