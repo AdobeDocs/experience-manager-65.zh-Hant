@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '3909'
+ht-degree: 6%
 
 ---
 
@@ -1254,12 +1257,12 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   </tr>
   <tr>
    <td>console.println()</td>
-   <td>此Acrobat API會將輸出轉儲至javascript主控台。</td>
+   <td>此Acrobat API會將輸出轉儲到JavaScript主控台。</td>
    <td> </td>
   </tr>
   <tr>
    <td>app.alert()</td>
-   <td>此Acrobat API會透過javascript快顯功能表傳送警報訊息。</td>
+   <td>此acrobat API會透過JavaScript快顯視窗傳送警報訊息。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1279,7 +1282,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   </tr>
   <tr>
    <td>app.setInterval()</td>
-   <td>指定JavaScript指令碼和時段。 每次經過時段時，就會執行指令碼。 此方法的傳回值必須保存在JavaScript變數中。 否則，間隔對象將受到廢棄項目收集的約束，這將導致時鐘停止。 要終止週期性執行，請將返回的間隔對象傳遞給clearInterval。</td>
+   <td>指定JavaScript指令碼和時段。 每次經過該時段時，就會執行該指令碼。 此方法的傳回值必須保存在JavaScript變數中。 否則，間隔對象將受到廢棄項目收集的約束，這將導致時鐘停止。 要終止週期性執行，請將返回的間隔對象傳遞給clearInterval。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1304,7 +1307,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   </tr>
   <tr>
    <td>app.activeDocs</td>
-   <td>包含每個活動文檔的Doc對象的陣列。 如果沒有作用中的檔案，activeDocs將不會傳回任何內容；也就是說，它在核心JavaScript中的行為與d = new Array(0)相同。</td>
+   <td>包含每個活動文檔的Doc對象的陣列。 如果沒有作用中的檔案，activeDocs將不會傳回任何內容； 也就是說，它在核心JavaScript中的行為與d = new Array(0)相同。</td>
    <td>傳回HTMl5表單的空白陣列。</td>
   </tr>
   <tr>
