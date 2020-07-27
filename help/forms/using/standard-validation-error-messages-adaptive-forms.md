@@ -9,7 +9,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 translation-type: tm+mt
-source-git-commit: 48cd21915017da96015df4e7619611ebf775c5fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1130'
+ht-degree: 0%
 
 ---
 
@@ -68,8 +71,9 @@ source-git-commit: 48cd21915017da96015df4e7619611ebf775c5fb
 1. 選擇「 **[!UICONTROL 在伺服器上重新驗證]** 」，以在提交之前驗證伺服器上的輸入欄位值。
 1. 選擇提交操作：
 
-   * 如果 **[!UICONTROL 使用基於RESTful web服務的表單資料模型作為資料源，請選擇「使用表單資料模型]** 提交 [](work-with-form-data-model.md) 」並選擇相應的資料模型。
+   * 如果 **[!UICONTROL 使用基於RESTful Web服務的表單資料模型作為資料源，請選擇「使用表單資料模型]** 提交 [](work-with-form-data-model.md) 」並選擇相應的資料模型。
    * 如果 **[!UICONTROL 您使用REST風格的Web服務作為資料源]** ，請選擇「提交到REST端點」並指定 ****「重定向URL/路徑」。
+
    ![自適應表單提交屬性](assets/af_submission_properties.png)
 
 1. 點選「 ![儲存](assets/save_icon.png) 」以儲存屬性。
@@ -127,9 +131,9 @@ if (data) {
 
 列 `var som_map` 出要轉換為標準格式的自適應表單域的SOM表達式。 通過點選該欄位並選擇「查看SOM表達式」，可以在自適應形式中查看任何欄位的SOM **[!UICONTROL 表達式]**。
 
-使用此自定義錯誤處理常式，最適化表單會將中列出的欄位 `var som_map` 轉換為標準錯誤訊息格式。 因此，驗證錯誤訊息會以自適應表單的欄位層級顯示。
+使用此自訂錯誤處理常式，最適化表單會將列在中的欄位 `var som_map` 轉換為標準錯誤訊息格式。 因此，驗證錯誤訊息會以自適應表單的欄位層級顯示。
 
-## 使用Invoke service動作新增自訂處理常式
+## 使用Invoke Service動作新增自訂處理常式
 
 執行以下步驟，使用規則編輯器的「調用服務」操作添加錯誤處理程式，將自定義錯誤結構轉 [換為標準錯誤結構](rule-editor.md) :
 
@@ -204,4 +208,4 @@ if (data) {
 
    executeOperation API包含基於 `null` 新自訂 `errorHandler` 錯誤處理常式的參數和參數。
 
-   使用此自定義錯誤處理常式，最適化表單會將中列出的欄位 `var som_map` 轉換為標準錯誤訊息格式。 因此，驗證錯誤訊息會以自適應表單的欄位層級顯示。
+   使用此自訂錯誤處理常式，最適化表單會將列在中的欄位 `var som_map` 轉換為標準錯誤訊息格式。 因此，驗證錯誤訊息會以自適應表單的欄位層級顯示。
