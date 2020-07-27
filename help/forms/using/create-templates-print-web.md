@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：建立範本」
+title: 「教學課程： 建立範本」
 seo-title: 建立互動式通訊的列印和網頁範本
 description: 建立互動式通訊的列印和網頁範本
 seo-description: 建立互動式通訊的列印和網頁範本
@@ -9,12 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '1804'
+ht-degree: 0%
 
 ---
 
 
-# 教學課程：建立範本{#tutorial-create-templates}
+# 教學課程： 建立範本{#tutorial-create-templates}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
@@ -44,13 +47,13 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 根據使 [用案例](/help/forms/using/create-your-first-interactive-communication.md)[和解剖結](/help/forms/using/planning-interactive-communications.md)構，在XDP範本中建立下列子表單：
 
-* 帳單詳細資訊：包含檔案片段
-* 客戶詳細資訊：包含檔案片段
-* 清單匯總：包含檔案片段
-* 摘要：包含文檔片段（費用子表單）和圖表（圖表子表單）
-* 明細呼叫：包含表格（版面片段）
-* 立即付款：包含影像
-* 增值服務：包含影像
+* 帳單詳細資訊： 包含檔案片段
+* 客戶詳細資訊： 包含檔案片段
+* 清單匯總： 包含檔案片段
+* 摘要： 包含文檔片段（費用子表單）和圖表（圖表子表單）
+* 明細呼叫： 包含表格（版面片段）
+* 立即付款： 包含影像
+* 增值服務： 包含影像
 
 ![create_print_template](assets/create_print_template.gif)
 
@@ -70,6 +73,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    1. 在「名 **稱** 」欄位中指 **定BillDetails** 。
 
    1. 從「 **資料系結** 」下拉式清 **單中選取「無資料系結** 」。
+
    ![設計人員子表單](assets/forms_designer_subform_new.png)
 
 1. 同樣地，選擇根子表單，選擇 **子表單** ，然後從「內容」下拉式清單中選擇「 **Flued** (流 **化** )」。 在「系 **結** 」標籤中：
@@ -77,6 +81,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    1. 在「名 **稱」欄位中** ，指 **定TelecaBill** 。
 
    1. 從「 **資料系結** 」下拉式清 **單中選取「無資料系結** 」。
+
    ![列印範本的子表單](assets/root_subform_print_template_new.png)
 
 1. 重複步驟2 - 5以建立以下子表單：
@@ -91,6 +96,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    * ItemisedCalls
    * PayNow
    * ValueAddedServices
+
    為節省時間，您也可以複製並貼上現有的子表單，以建立新的子表單。
 
    要將 **Charts** 子表單移到Charges子表單的右側，請從左窗格中選擇 **Charts** 子表單，選擇 **Layout** 頁籤，然後為 **** XAnchor欄位指定值。 值必須大於Charges子表單的 **Width** 欄位 **的值** 。 選擇「 **費用** 」子表單，然後選擇「 **佈局** 」頁籤以查看「寬 **度** 」欄位的值。
@@ -173,7 +179,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 執行以下步驟為可編輯模板建立資料夾：
 
-1. 點選「 **工具** >設 ![](assets/hammer-icon.svg) 定瀏覽器 ****」。
+1. 點選 **「工** 具 ![槌子圖示](assets/hammer-icon.svg) >設定 **瀏覽器**」。
 1. 在「設定瀏覽器」頁面中，點選「 **建立**」。
 1. 在「創 **建配置** 」對話框中，指定 **Create_First_IC_templates** 作為資料夾的標題，選中「可編輯模板 **」，然後******&#x200B;點選「建立」。
 
@@ -185,13 +191,13 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 根據使用 [案例](/help/forms/using/create-your-first-interactive-communication.md)[和解剖結](/help/forms/using/planning-interactive-communications.md)構，在Web範本中建立下列面板：
 
-* 帳單詳細資訊：包含檔案片段
-* 客戶詳細資訊：包含檔案片段
-* 清單匯總：包含檔案片段
-* 費用匯總：包含檔案片段和圖表（雙欄版面）
-* 明細呼叫：包含表格
-* 立即付款：包含「 **立即付** 款」按鈕和影像
-* 增值服務：包含影像和「訂閱」 **按鈕** 。
+* 帳單詳細資訊： 包含檔案片段
+* 客戶詳細資訊： 包含檔案片段
+* 清單匯總： 包含檔案片段
+* 費用匯總： 包含檔案片段和圖表（雙欄版面）
+* 明細呼叫： 包含表格
+* 立即付款： 包含「 **立即付** 款」按鈕和影像
+* 增值服務： 包含影像和「訂閱」 **按鈕** 。
 
 ![create_web_template](assets/create_web_template.gif)
 
@@ -217,7 +223,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
    ![內容樹](assets/content_tree_root_panel_new.png)
 
-1. 選取面板並點選 ![](assets/configure_icon.png) （設定）。
+1. 選取面板並點選 ![configure_icon](assets/configure_icon.png) (Configure)。
 1. 在「屬性」窗格中：
 
    1. 在「名 **稱」欄位中** ，指定開單詳細資訊。
@@ -225,7 +231,8 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    1. 從 **「欄** 數 **** 」下拉式清單中選取1。
 
    1. 點選 ![](/help/forms/using/assets/done_icon.png) 以儲存屬性。
-   面板的名稱會更新為內容樹 **中的Bill Details** （清單詳細資訊）。
+
+   面板的名稱會更新為內容樹 **中的Bill Details** 。
 
 1. 重複步驟7 - 11，將具有下列屬性的面板新增至範本：
 
@@ -248,7 +255,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 執行以下步驟以啟用Web模板：
 
-1. 點選「 **工具** >范 ![](assets/hammer-icon.svg) 本」 ****。
+1. 點選「 **工具**![」(Tools](assets/hammer-icon.svg) )「槌子圖示 **>范**&#x200B;本」。
 1. 導覽至 **Create_First_IC_Web_Template** 範本，選取範本，然後點選「 **啟用」**。
 1. 標籤 **再次啟** 用以確認。
 
@@ -267,4 +274,4 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
    ![允許的元件](assets/allowed_components_af_new.png)
 
-1. 點選 ![](assets/done_icon.png) 以儲存屬性。
+1. 點選 ![done_icon](assets/done_icon.png) 以儲存屬性。
