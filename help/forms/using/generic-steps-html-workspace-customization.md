@@ -11,7 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. 複製資 `/libs/ws/locales` 料夾中的資 `/apps/ws` 料夾。 按一下「 **[!UICONTROL 全部儲存]**」。
 1. 更新檔案中的參照和相對路徑(如 `GET.jsp` 下所示)，然後按一下「 **[!UICONTROL 全部保存」]**。
 
-   ```
+   ```jsp
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
    ```
 
