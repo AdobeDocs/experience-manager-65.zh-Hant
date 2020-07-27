@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩�
 1. 從/libs複製資料夾，並貼在/apps。 將資料夾更名為ws2。 按一下「 **[!UICONTROL 全部儲存]**」。
 1. 在 `GET.jsp` 中， `/apps/ws2`請變更下列程式碼。 取代下列
 
-   ```
+   ```html
    <html lang="en">
    <head>
        <meta charset="utf-8">
@@ -43,7 +46,7 @@ AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩�
 
    使用下列程式碼
 
-   ```
+   ```html
    <html lang="en">
    <head>
        <meta charset="utf-8">
