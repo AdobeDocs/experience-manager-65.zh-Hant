@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1381'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +39,7 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 * JavaScript
 * Java
 
-## 方案：將命令新增至字母清單使用者介面，以下載字母的平面PDF版本 {#addcommandtoletters}
+## 方案： 將命令新增至字母清單使用者介面，以下載字母的平面PDF版本 {#addcommandtoletters}
 
 以下步驟將「下載平面PDF」命令新增至字母的資產清單檢視，讓您的使用者下載所選字母的平面PDF。 使用這些步驟搭配適當的程式碼和參數，您可以為不同的資產新增一些其他功能，例如資料字典或文字。
 
@@ -69,11 +72,11 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 
       ![覆蓋節點](assets/2_createnodedownloadflatpdf.png)
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
       按一下「 **全部儲存**」。
 
-1. 在新建立的項目資料夾下，為特定資產中的自訂按鈕／動作新增節點(範例：downloadFlatPDF)，使用下列步驟：
+1. 在新建立的項目資料夾下，為特定資產中的自訂按鈕／動作新增節點(範例： downloadFlatPDF)，使用下列步驟：
 
    1. 按一下右鍵項目文 **件夾** ，然後選擇「 **建立** 」 **>「**&#x200B;建立節點」。
 
@@ -102,7 +105,7 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
         <tr>
         <td>foundation-collection-action</td>
         <td>字串</td>
-        <td><p>{"target":"。cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"LETTER"}<br /> ActiveSelectionCount <br /><br /><strong></strong> 可以是單個或多個，以允許選擇執行自定義操作的單個或多個資產。</p> <p><strong>類型</strong> 可以是下列項目的一或多個（逗號分隔多個項目）:字母、文字、清單、條件、資料字典</p> </td>
+        <td><p>{"target": "。cq-manageasset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> ActiveSelectionCount <br /><br /><strong></strong> 可以是單個或多個，以允許選擇執行自定義操作的單個或多個資產。</p> <p><strong>類型</strong> 可以是下列項目的一或多個（逗號分隔多個項目）: 字母、文字、清單、條件、資料字典</p> </td>
         </tr>
         <tr>
         <td>圖示</td>
@@ -151,7 +154,7 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。 按一下「 **全部儲存**」。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。 按一下「 **全部儲存**」。
 
 1. 在js資料夾中，使用下列步驟建立名為formaction.js的檔案，其中包含按鈕動作處理的程式碼：
 
@@ -168,7 +171,7 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 
       然後在formaction.js檔案（在/apps分支下）的結尾附加下列程式碼，然後按一下「全 **部儲存**:
 
-      ```
+      ```javascript
       /* Action url for xml file to be added.*/
       var ACTION_URL = "/apps/fd/cm/ma/gui/content/commons/actionhandlers/items/letterpdfdownloader.html";
       
@@ -241,11 +244,11 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
    1. 按一下「 **全部儲存**」。
 
-1. 在新建立的項目節點下，為特定資產中的自訂按鈕／操作添加節點(示例：letterpdfdownloader)，使用下列步驟：
+1. 在新建立的項目節點下，為特定資產中的自訂按鈕／操作添加節點(示例： letterpdfdownloader)，使用下列步驟：
 
    1. 按一下右鍵項目資料夾，然後選擇「 **建立」>「建立節點**」。
 
@@ -355,9 +358,9 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 1. 按一 **下「選取** 」，然後按一下字母以選取它。
 1. 選取 **更多** > **&lt;下載平面PDF>** （使用本文說明建立的自訂功能）。 將顯示「以PDF格式下載信函」對話框。
 
-   功能表項目名稱、功能和alt-text是根據在方案中建立的自 [訂：將命令新增至字母清單使用者介面，以下載字母的平面PDF版本。](#addcommandtoletters)
+   功能表項目名稱、功能和alt-text是根據在方案中建立的自 [訂： 將命令新增至字母清單使用者介面，以下載字母的平面PDF版本。](#addcommandtoletters)
 
-   ![自訂功能：下載平面PDF](assets/5_downloadflatpdf.png)
+   ![自訂功能： 下載平面PDF](assets/5_downloadflatpdf.png)
 
 1. 在「以PDF格式下載信函」對話方塊中，選取您要在PDF中填入資料的相關XML。
 
