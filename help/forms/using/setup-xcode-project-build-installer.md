@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 0%
@@ -33,7 +33,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 1. 開啟「 [套件管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) 」，然後按一 **[!UICONTROL 下「上傳套件]** 」以上傳套件。
 1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
 
-1. 若要下載原始碼封存檔，請在您的瀏 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 覽器中開啟。
+1. 若要下載原始碼封存，請在您的瀏 `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` 覽器中開啟。
 來源套件會下載在您的裝置上。
 
 下圖顯示提取的內容 `adobe-lc-mobileworkspace-src-<version>.zip`。
@@ -90,7 +90,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 1. 請確定已針對 **Debug**、 **Release**&#x200B;和 **Any iOS SDK選取相同的簽名**。
 1. 在檔案中取代下列程 `AEM Forms-info.plist` 式碼：
 
-   ```java
+   ```xml
    <key>NSAppTransportSecurity</key>
    <dict>
    <key>NSAllowsArbitraryLoads</key>
@@ -100,7 +100,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
    使用下列程式碼，並 `yourserver.com` 以伺服器的適當主機名稱取代。
 
-   ```java
+   ```xml
    <key>NSAppTransportSecurity</key>
    <dict>
    <key>NSExceptionDomains</key>
@@ -137,7 +137,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
    已選取已布建的iPad Air 2裝置。
 
 1. 選擇「 **產品** 」>「清 **除」**。
-1. 選擇 **產品** > **構建**。
+1. 選擇「 **產品** 」>「 **構建」**。
 
 ## 建立AEM Forms應用程式的安裝程式 {#build-the-installer-for-the-mobile-workspace-app}
 
@@ -151,7 +151,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
    已選取已布建的iPad Air 2裝置。
 
 1. 選擇「 **產品** 」>「清 **除」**。
-1. 選擇 **產品** > **構建**。
+1. 選擇「 **產品** 」>「 **構建」**。
 1. 選擇「 **產品** >存 **檔」**。
 1. 在「組織工具——封存」中，選取專案的最新封存，然後按一下「分 **發」**。
 1. 選 **擇「儲存為企業用」或「臨機部署** 」做為散發方法，然後按一下「下 **一步」**。
