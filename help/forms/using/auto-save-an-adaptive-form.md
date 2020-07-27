@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 0%
 
 ---
 
@@ -33,10 +36,12 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    * **[!UICONTROL 時間型：]** 選擇根據特定時間間隔開始保存內容的選項。
    * **[!UICONTROL 事件型：]** 選取在觸發事件時開始儲存內容的選項。
+
    選擇觸發器時，將啟用「策略配置」框。 「策略配置」框可讓您：
 
    * 如果選擇基於時間的觸發器，請 **[!UICONTROL 指定時間間隔]** 。
    * 如果您選取事件型觸發器，請指 **[!UICONTROL 定事件]** 名稱。
+
    您也可以建立並新增自己的自訂策略至清單。 如需詳細資訊，請 [參閱實作自訂策略以自動儲存表單](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)。
 
 1. （僅限基於時間的自動保存）執行以下步驟以配置基於時間的自動保存選項。
@@ -63,7 +68,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    例如，下列指令碼使用自訂事件 `emailFocusChange`來觸發自動儲存功能：
 
-   ```
+   ```javascript
    window.addEventListener("bridgeInitializeStart", function (){
        guideBridge.connect(function () { guideBridge.on("elementFocusChanged", function (event,data) {
            if(data.target.name === 'Email') {
@@ -82,5 +87,5 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 1. 在編輯模式中，選取元件，然後點選欄 ![位層級](assets/field-level.png) > **[!UICONTROL 最適化表單容器]**，然後點選 ![cmppr](assets/cmppr.png)。
 1. 在屬性中，開啟「基 **[!UICONTROL 本]** 」區段。 在「客 **[!UICONTROL 戶端庫類別]** 」框中，輸入建立客戶端庫資料夾時定義的類別屬性的值。
-1. 開啟「自動儲存」區段。 在「在此 **[!UICONTROL 事件後自動儲存]** 」方塊中，指定用戶端程式庫中已定義的自訂事件。 按一下 **[!UICONTROL 確定]**。
+1. 開啟「自動儲存」區段。 在「在此 **[!UICONTROL 事件後自動儲存]** 」方塊中，指定用戶端程式庫中已定義的自訂事件。 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
