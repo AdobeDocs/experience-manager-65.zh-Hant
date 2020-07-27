@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ac0a281f-f589-4a70-9bc7-1a23e054b02f
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    * 對於在啟動進程中啟動的任務，請使用塊中的以下代碼 `"startprocess" : {}` 段。
 
-   ```
+   ```json
    "tabname" : {
                "form" : "Application",
                "details" : "Overview",
@@ -36,7 +39,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    * 對於To-do中的任務，請使用塊中的以下代碼 `"todo" : {}` 片段。
 
-   ```
+   ```json
    "tabname" : {
                "summary" : "Bird's-eye view",
                "history" : "Past",
