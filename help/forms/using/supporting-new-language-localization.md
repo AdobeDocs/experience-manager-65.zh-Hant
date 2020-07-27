@@ -10,7 +10,10 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '715'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,8 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 呈現最適化表單時，它會依指定順序查看下列參數，以識別所要求的地區設定：
 
-* 請求參 `afAcceptLang`數若要覆寫使用者的瀏覽器地區設定，您可以傳遞 `afAcceptLang` 請求參數以強制地區設定。 例如，下列URL將強制在日文地區中轉換表單：
+* 請求參 `afAcceptLang`數若要覆寫使用者的瀏覽器地區設定，您可以傳遞 
+`afAcceptLang` 請求參數來強制地區設定。 例如，下列URL將強制在日文地區中轉換表單：
    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * 為用戶設定的瀏覽器區域設定，該設定在使用標題的請求中指 `Accept-Language` 定。
@@ -70,7 +74,7 @@ AEM Forms目前支援以英文(en)、西班牙文(es)、法文(fr)、義大利�
 
 * **js.txt** ，包含下列項目：
 
-```
+```text
 /libs/fd/xfaforms/clientlibs/I18N/Namespace.js
 I18N.js
 /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js
@@ -78,7 +82,7 @@ I18N.js
 
 ### 為地區設定新增最適化表單用戶端程式庫 {#add-adaptive-form-client-library-for-a-locale-br}
 
-在下建立類型 `cq:ClientLibraryFolder` 的節 `etc/<folderHierarchy>`點，其類別為 `guides.I18N.<locale>` ，從屬關係為， `xfaforms.3rdparty`和 `xfaforms.I18N.<locale>``guide.common`。&quot;
+在下建立類型 `cq:ClientLibraryFolder` 的節 `etc/<folderHierarchy>`點，其類別為 `guides.I18N.<locale>` ，從屬關係為， `xfaforms.3rdparty`和 `xfaforms.I18N.<locale>``guide.common`。 &quot;
 
 將下列檔案新增至用戶端程式庫：
 
@@ -86,7 +90,7 @@ I18N.js
 * **LogMessages.js** 定義 `guidelib.i18n.strings` 和 `guidelib.i18n.LogMessages` ，如 `<locale>` 中定義 `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`。
 * **js.txt** ，包含下列項目：
 
-```
+```text
 i18n.js
 LogMessages.js
 ```
