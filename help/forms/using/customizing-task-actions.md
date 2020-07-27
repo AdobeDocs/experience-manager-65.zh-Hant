@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 0%
 
 ---
 
@@ -139,7 +142,7 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂工作動作之�
 
 1. 複製/libs/ws/js/runtime/templates/task.html以 `/apps/ws/js/runtime/templates/task.html`取代下列程式碼片段：
 
-   ```
+   ```html
    // Orignal code
    <div class="taskActionsPopUp">
            <!--START_TASKACTIONS-->
@@ -174,7 +177,7 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂工作動作之�
        </div>
    ```
 
-   ```
+   ```html
    //New code
    
    <div class="taskActionsPopUp">
@@ -267,7 +270,7 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂工作動作之�
 * 將/libs/ws/js/runtime/templates/taskdetails.html檔案複製至檔案 `/apps/ws/js/runtime/templates/` 夾：
 * 將圖示標籤封裝在錨點標籤內，而非文字。 例如，下列的 *新程式碼* ，會封裝錨點標籤中的圖示標籤：
 
-```
+```html
 // Original code
 <div class="taskActionsPopUp">
         <!--START_ACTIONBUTTONGROUP-->
@@ -310,7 +313,7 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂工作動作之�
     </div>
 ```
 
-```
+```html
 //New code
 
 <div class="taskActionsPopUp">
