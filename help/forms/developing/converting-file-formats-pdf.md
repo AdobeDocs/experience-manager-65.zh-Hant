@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '7842'
+ht-degree: 0%
 
 ---
 
@@ -49,8 +52,8 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 「產生PDF」服務會將下列標準檔案格式轉換為PDF。
 
-* 視訊格式：SWF、FLV（僅限Windows）
-* 影像格式：JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
+* 視訊格式： SWF、FLV（僅限Windows）
+* 影像格式： JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
 * HTML（Windows、Sun™ Solaris™和Linux®）
 
 「產生PDF」服務會將PDF轉換為下列檔案格式（僅限Windows）:
@@ -166,6 +169,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 包 `java.lang.String` 含要使用的安全設定名稱的對象。
    * 可選物 `com.adobe.idp.Document` 件，包含產生PDF檔案時要套用的設定。
    * 可選物 `com.adobe.idp.Document` 件，包含要套用至PDF檔案的中繼資料資訊。
+
    此方 `createPDF2` 法會傳回 `CreatePDFResult` 包含新PDF檔案和記錄檔資訊的物件。 日誌檔案通常包含由轉換請求生成的錯誤或警告消息。
 
 1. 擷取結果。
@@ -174,6 +178,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
    * 叫用 `CreatePDFResult` 物件的方 `getCreatedDocument` 法，以傳回物 `com.adobe.idp.Document` 件。
    * 叫用物 `com.adobe.idp.Document` 件的方 `copyToFile` 法，從先前步驟中建立的物件擷取PDF檔案。
+
    如果您使用 `createPDF2` 方法來取得記錄檔（不適用於HTML轉換），請執行下列動作：
 
    * 叫用 `CreatePDFResult` 物件的方 `getLogDocument` 法。 這會傳回 `com.adobe.idp.Document` 物件。
@@ -184,7 +189,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入門（SOAP模式）:使用Java API將Microsoft Word檔案轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API將Microsoft Word檔案轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -196,7 +201,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -205,7 +210,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 1. 建立產生PDF用戶端。
 
    * 使用其 `GeneratePDFServiceClient` 預設建構函式建立物件。
-   * 使用建 `GeneratePDFServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`。)您不需要使用屬 `lc_version` 性。 不過，請指定 `?blob=mtom`。
+   * 使用建 `GeneratePDFServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`。) 您不需要使用屬 `lc_version` 性。 不過，請指定 `?blob=mtom`。
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `GeneratePDFServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -339,9 +344,9 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [將HTML檔案轉換為PDF檔案](converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)
 
-[快速入門（SOAP模式）:使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -353,7 +358,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -362,7 +367,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 1. 建立產生PDF用戶端。
 
    * 使用其 `GeneratePDFServiceClient` 預設建構函式建立物件。
-   * 使用建 `GeneratePDFServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`。)您不需要使用屬 `lc_version` 性。 不過，請指定 `?blob=mtom`。
+   * 使用建 `GeneratePDFServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`。) 您不需要使用屬 `lc_version` 性。 不過，請指定 `?blob=mtom`。
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `GeneratePDFServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -478,6 +483,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 包 `java.lang.String` 含Adobe PDF設定名稱的物件。
    * 指定 `ConvertPDFFormatType` 轉換的目標檔案類型的對象。
    * 可選物 `com.adobe.idp.Document` 件，包含產生PDF檔案時要套用的設定。
+
    該方 `exportPDF2` 法返回包 `ExportPDFResult` 含已轉換檔案的對象。
 
 1. 轉換PDF檔案。
@@ -491,7 +497,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 [步驟摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入門（SOAP模式）:使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -503,7 +509,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -512,7 +518,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 1. 建立生成PDf客戶端。
 
    * 使用其 `GeneratePDFServiceClient` 預設建構函式建立物件。
-   * 使用建 `GeneratePDFServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`。)您不需要使用屬 `lc_version` 性。 不過，請指定 `?blob=mtom`。
+   * 使用建 `GeneratePDFServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`。) 您不需要使用屬 `lc_version` 性。 不過，請指定 `?blob=mtom`。
    * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `GeneratePDFServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
    * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
@@ -537,7 +543,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
    * 表示 `BLOB` 要轉換的PDF檔案的物件。
    * 包含要轉換的檔案路徑名的字串。
    * 指定 `java.lang.String` 檔案位置的對象。
-   * 指定轉換目標檔案類型的字串對象。 指定 `RTF`。
+   * 指定轉換目標檔案類型的字串對象。 Specify `RTF`.
    * 可選物 `BLOB` 件，包含產生PDF檔案時要套用的設定。
    * 由方法填 `BLOB` 入的輸出參 `ExportPDF2` 數。 該方 `ExportPDF2` 法使用轉換的文檔填充此對象。 （此參數值僅適用於Web服務調用）。
 
@@ -579,7 +585,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 *AppMon是企業元件* ，與原生應用程式互動的方式，與使用者在應用程式顯示的對話方塊中導覽的方式相同。 AppMon用來指示應用程式（例如Microsoft Word）開啟和列印檔案的XML文字會包含下列循序工作：
 
 1. 通過選擇「檔案」>「開啟」開啟檔案
-1. 確保「開啟」對話框出現；否則，處理錯誤
+1. 確保「開啟」對話框出現； 否則，處理錯誤
 1. 在「檔案名」欄位中提供檔案名，然後按一下「開啟」按鈕
 1. 確保檔案實際開啟
 1. 通過選擇「檔案」>「打印」開啟「打印」對話框
@@ -589,7 +595,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 由於這些Win32 API的限制，AppMon無法將這些UI事件分派到某些特定類型的視窗，例如浮動式選單列（在TextPad等應用程式中），以及某些使用Win32 API無法擷取其內容的對話方塊。
 
-可以很容易地以視覺化方式識別浮動的菜單欄；但是，可能無法只透過視覺檢查來識別特殊類型的對話框。 您需要協力廠商應用程式(例如Microsoft Spy++（Microsoft Visual C++開發環境的一部分）或其相當的WinID(可從 [https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)免費下載)來檢查對話方塊，以判斷AppMon是否能使用標準Win32 API與它互動。
+可以很容易地以視覺化方式識別浮動的菜單欄； 但是，可能無法只透過視覺檢查來識別特殊類型的對話框。 您需要協力廠商應用程式(例如Microsoft Spy++（Microsoft Visual C++開發環境的一部分）或其相當的WinID(可從 [https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)免費下載)來檢查對話方塊，以判斷AppMon是否能使用標準Win32 API與它互動。
 
 如果WinID能夠擷取對話方塊內容，例如文字、子視窗、視窗類別ID等，AppMon也可以這麼做。
 
@@ -627,14 +633,14 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
   <tr>
    <td><p>其他應用程式特定對話方塊指示 </p></td>
    <td><p>指定對特定應用程式對話框指令的覆蓋和添加。 本節介紹了此類資訊的示例。 </p><p>包含此資訊的檔案是appmon。<i>「[appname]」</i>.addition。<i>「[區域設定]`</i>.xml。 例如appmon.addition.en_US.xml。</p></td>
-   <td><p>可使用XML編輯應用程式來建立和修改此類檔案。 (請參 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">閱為原生應用程式建立或修改其他對話XML檔案</a>。) </p><p><strong>重要</strong>:您必須針對您的伺服器將支援的每個原生應用程式建立其他應用程式特定對話框指示。 </p></td>
+   <td><p>可使用XML編輯應用程式來建立和修改此類檔案。 (請參 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">閱為原生應用程式建立或修改其他對話XML檔案</a>。) </p><p><strong>重要</strong>: 您必須針對您的伺服器將支援的每個原生應用程式建立其他應用程式特定對話框指示。 </p></td>
   </tr>
  </tbody>
 </table>
 
 ### 關於指令碼和對話框XML檔案 {#about-the-script-and-dialog-xml-files}
 
-指令碼XML檔案會引導「產生PDF」服務以使用者在應用程式對話方塊中導覽的方式，在應用程式對話方塊中導覽。 指令碼XML檔案也會指示「產生PDF」服務執行按鈕、選取或取消選取核取方塊或選取功能表項目等動作，以回應對話方塊。
+指令碼XML檔案會引導「產生PDF」服務以使用者在應用程式對話方塊中導覽的方式，在應用程式對話方塊中導覽。 指令碼XML檔案也會指示「產生PDF」服務執行按鈕、選取或取消選取核取方塊或選取選單項目等動作，以回應對話方塊。
 
 相反地，對話框XML檔案只對對話框做出響應，其操作類型與指令碼XML檔案中使用的操作類型相同。
 
@@ -679,7 +685,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 當系統或原生應用程式顯示目前執行的指令碼XML檔案未處理的對話方塊時，「產生PDF」服務會依此順序搜尋對話方塊XML檔案，在找到相符項目時停止：
 
 * appmon。`[appname]`.additional.`[locale]`.xml
-* appmon。`[appname]`.`[locale]`.xml（請勿修改此檔案）。
+* appmon。`[appname]`。`[locale]`.xml（請勿修改此檔案）。
 * appmon.global.`[locale]`.xml（請勿修改此檔案）。
 
 如果「產生PDF」服務找到對話方塊的符合項，則會傳送對話方塊的按鍵動作或其他動作，以關閉該對話方塊。 如果對話框的說明指定了中止消息，則生成PDF服務將終止當前正在執行的作業並生成錯誤消息。 將在指令碼XML語法的元素中 `abortMessage` 指定此類中止消息。
@@ -726,7 +732,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 1. 使用WinZip或WinRAR等工具，開啟adobe-livecycle-native.jboss-x86_win32.earfile > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar檔案。
 1. 將對話方塊和指令碼XML檔案新增至appmondata.jar檔案，或修改此檔案中現有的XML檔案。 (請參 [閱為本地應用程式建立或修改指令碼XML文](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)件， [以及為本地應用程式建立或修改其他對話框XML檔案](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。)
 1. 使用WinZip或WinRAR等工具，開啟adobe-generatepdf-dsc.jar > adobe-appmondata.jar。
-1. 將對話方塊和指令碼XML檔案新增至appmondata.jar檔案，或修改此檔案中現有的XML檔案。 (請參 [閱為本地應用程式建立或修改指令碼XML文](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)件， [以及為本地應用程式建立或修改其他對話框XML檔案](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。)將XML檔案新增至adobe-appmondata.jar檔案後，請將新的adobe-appmondata.jar檔案置入adobe-generatepdf-dsc.jar檔案。
+1. 將對話方塊和指令碼XML檔案新增至appmondata.jar檔案，或修改此檔案中現有的XML檔案。 (請參 [閱為本地應用程式建立或修改指令碼XML文](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)件， [以及為本地應用程式建立或修改其他對話框XML檔案](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。) 將XML檔案新增至adobe-appmondata.jar檔案後，請將新的adobe-appmondata.jar檔案置入adobe-generatepdf-dsc.jar檔案。
 1. 如果您新增了對其他原生檔案格式的支援，請建立提供應用程式路徑的系統環境變數(請參閱建立環境變數以找出原生應用程式 [](converting-file-formats-pdf.md#creating-an-environment-variable-to-locate-the-native-application))。
 
 **重新部署GeneratePDF元件**
@@ -769,7 +775,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 **在記事本橫幅中，包含前置於記事本的檔案名的規則運算式**
 
-```as3
+```xml
  <!-- The regular expression ".*Notepad" means any number of non-terminating characters followed by Notepad. -->
  <step>
      <expectedWindow>
@@ -780,7 +786,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 **規則運算式區分列印與列印設定**
 
-```as3
+```xml
  <!-- This regular expression differentiates the Print dialog box from the Print Setup dialog box. The "^" specifies the beginning of the line, and the "$" specifies the end of the line. -->
  <windowList>
      <window controlID="0x01" caption="^Print$" action="press"/>
@@ -796,7 +802,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 **對對話框檔案中的窗口元素進行排序**
 
-```as3
+```xml
  <!-- The caption attribute in the following window element is 40 characters long. It is the longest caption in this example, so its parent window element appears before the others. -->
  <window caption="Unexpected Failure in DebugActiveProcess">
      <…>
@@ -820,7 +826,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 **在窗口中對窗口元素排序清單元素**
 
-```as3
+```xml
  <!-- The caption attribute in the following indexes element is 56 characters long. It is the longest caption in this example, so its parent window element appears before the others. -->
  <windowList>
      <window caption="Can&apos;t exit design mode because.* cannot be created"/>
@@ -881,7 +887,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 **將文字檔案導向記事本的修改(native2pdfconfig.xml)**
 
-```as3
+```xml
  <filetype-settings>
 
  <!-- Some native app file types were omitted for brevity. -->
@@ -921,7 +927,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 1. 在命令行窗口中，使用以下格式鍵入變數定義：
 
-   ```as3
+   ```shell
             [applicationname]_PATH=[Full path name]
    ```
 
@@ -939,7 +945,7 @@ AEM Forms包含範例XML檔案，可讓「產生PDF」服務使用記事本處�
 
 **記事本對話方塊(appmon.notepad.addition.en_US.xml)**
 
-```as3
+```xml
  <dialogs app="Notepad" locale="en_US" version="7.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dialogs.xsd">
      <window caption="Caption Title">
          <windowList>
@@ -955,7 +961,7 @@ AEM Forms包含範例XML檔案，可讓「產生PDF」服務使用記事本處�
 
 **記事本指令碼XML檔案(appmon.notepad.script.en_US.xml)**
 
-```as3
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
 *
