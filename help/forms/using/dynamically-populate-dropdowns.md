@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -155,7 +158,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
    ![新增國家／地區名稱](assets/country-dropdown.png)![新增指令碼以填入國家／地區名稱](assets/state-dropdown.png) 「 ![國家／地區」下拉式清單以收集](assets/2dropdowns.png)
 
-   ```
+   ```javascript
    JSON.parse(
        $.ajax({
            url: "/apps/myfolder/demo/dropdown",
