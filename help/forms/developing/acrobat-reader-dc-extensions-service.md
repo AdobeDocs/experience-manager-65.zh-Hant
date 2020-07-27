@@ -9,7 +9,10 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Acrobat Reader DC Extensions服務提供下列快速入門。
 
 [從PDF檔案移除使用權](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API檢索憑據資訊](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API檢索憑據資訊](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
@@ -35,7 +38,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 下列Java程式碼範例將使用權套用至名為 *Loan.pdf的PDF檔案*。 啟用權限的PDF檔案會儲存為名為 *LoanUsageRights.pdf的PDF檔案*。 下列使用權限會套用至此PDF檔案： `enabledComments`、 `enabledFormFillIn`和 `enabledDigitalSignatures`。 (請參 [閱套用PDF檔案的使用權](/help/forms/developing/assigning-usage-rights.md)。)
 
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -143,11 +146,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API移除PDF檔案的使用權 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API移除PDF檔案的使用權 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
 下列Java程式碼範例會從名為 *LoanUsageRights.pdf的已啟用權限的PDF檔案中移除使用權*。 (請參 [閱從PDF檔案移除使用權](/help/forms/developing/assigning-usage-rights.md)。)
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -243,11 +246,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API檢索憑據資訊 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API檢索憑據資訊 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
 以下Java代碼示例檢索有關用於將使用權限應用於名為 *LoanUsageRights.pdf的具有權限的PDF文檔的憑據的資訊*。 (請參 [閱檢索憑據資訊](/help/forms/developing/assigning-usage-rights.md)。)
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
