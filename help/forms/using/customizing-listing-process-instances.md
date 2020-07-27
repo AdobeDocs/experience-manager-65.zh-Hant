@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 1%
 
 ---
 
@@ -75,7 +78,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    1. 複製/libs/ws/js/runtime/templates/processinstance.html至/apps/ws/js/runtime/templates/（如果不存在）。 按一下「 **全部儲存**」。
    1. 添加進程說明div，其類= &#39;processDescription&#39; inprocessinstance.html。
 
-   ```
+   ```jsp
    <div class="processDescription" title="<%= description%>"><%= description%></div>
    ```
 
