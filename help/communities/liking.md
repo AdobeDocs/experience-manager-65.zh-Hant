@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 5%
@@ -34,17 +34,17 @@ ht-degree: 5%
 
 當包含 [所需的用戶端程式庫](essentials-liking.md#essentials-for-client-side) ，元件的顯示方式 `Liking` 就是這樣。
 
-![chlimage_1-93](assets/chlimage_1-93.png)
+![對開元件](assets/liking-component.png)
 
 ## 設定贊 {#configuring-liking}
 
 選擇要訪問 `Liking` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![configure-new](assets/configure-new.png)
 
 在「文 **[!UICONTROL 字與標籤]** 」索引標籤下，指定用來記錄按贊的屬性。
 
-![chlimage_1-95](assets/chlimage_1-95.png)
+![configure-like](assets/configure-liking.png)
 
 * **[!UICONTROL 正面回應標籤]**
 
