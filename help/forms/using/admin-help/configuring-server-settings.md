@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2657'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 1. 在管理主控台中，按一下「服務>表單工作流程>伺服器設定>電子郵件設定」。
 1. 選擇「啟用傳出消息」。
-1. 在「SMTP伺服器」框中，鍵入電子郵件伺服器名或IP地址。 來自表單工作流程的所有通知電子郵件訊息都會從此電子郵件伺服器傳送。
+1. 在「SMTP伺服器」框中，鍵入電子郵件伺服器名稱或IP地址。 來自表單工作流程的所有通知電子郵件訊息都會從此電子郵件伺服器傳送。
 1. 在「用戶名」和「密碼」框中，鍵入在SMTP伺服器需要驗證時要使用的登錄名和密碼。 如果允許匿名登入，請將其留空。
 1. 在「電子郵件地址」方塊中，輸入要作為表單工作流程傳送之電子郵件回傳地址的電子郵件地址。
 
@@ -63,7 +66,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 1. 開啟任務分配模板。
 1. 將任務通知中的模板設定為： `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
-   ```as3
+   ```java
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@
    ```
 
