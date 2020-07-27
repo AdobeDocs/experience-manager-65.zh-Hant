@@ -11,7 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '671'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +29,13 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## 將自訂Widget與HTML5表單整合 {#integrating-custom-widgets-with-html-forms}
 
-### 建立描述檔 {#create-a-profile-nbsp}
+### 建立描述檔  {#create-a-profile-nbsp}
 
 您可以建立描述檔或選擇現有的描述檔以新增自訂介面工具集。 如需建立描述檔的詳細資訊，請參 [閱建立自訂描述檔](/help/forms/using/custom-profile.md)。
 
 ### 建立介面工具集 {#create-a-widget}
 
-HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 實作是jQuery Widget abstractWidget ** ，可擴充以編寫新Widget。 新介面工具集只能透過擴充／覆寫下列功能，使其發揮功能。
+HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 實作是jQuery Widget abstractWidget ** ，可擴充以編寫新Widget。 只有延伸／覆寫下列功能，才能讓新介面工具集運作。
 
 <table>
  <tbody>
@@ -46,7 +49,7 @@ HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 �
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>傳回將HTML事件轉換為XFA事件的地圖。 <br /> {<br /> blur:XFA_EXIT_EVENT,<br /><br /> }此示例顯示模糊是HTML事件，XFA_EXIT_EVENT是相應的XFA事件。 </td>
+   <td>傳回將HTML事件轉換為XFA事件的地圖。 <br /> {<br /> blur: XFA_EXIT_EVENT,<br /><br /> }此示例顯示模糊是HTML事件，XFA_EXIT_EVENT是相應的XFA事件。 </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -69,15 +72,15 @@ HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 �
 
 若要建立您自己的介面工具集，請在上述建立的描述檔中，包含JavaScript檔案的參考，其中包含覆寫的函式和新增的函式。 例如，sliderNumericFieldWidget *是數值欄位的介面工具集* 。 若要在頁首區段中使用描述檔中的介面工具集，請加入下列行：
 
-```
+```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 ```
 
-### 使用XFA指令碼引擎註冊自訂Widget {#register-custom-widget-with-xfa-scripting-engine-nbsp}
+### 使用XFA指令碼引擎註冊自訂Widget  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
 當自訂介面工具集程式碼準備就緒時，請使用 `registerConfig`API for [Form Bridge，向指令碼引擎註冊介面工具集](/help/forms/using/form-bridge-apis.md)。 它以widgetConfigObject為輸入。
 
-```
+```javascript
 window.formBridge.registerConfig("widgetConfig",
         {
         ".<field-identifier>":"<name-of-the-widget>"
@@ -91,12 +94,13 @@ window.formBridge.registerConfig("widgetConfig",
 
 *{*
 
-*&quot;identifier1&quot; :&quot;customwidgetname&quot;,&quot;identifier2&quot; :&quot;customwidgetname2&quot;,...}*
+*&quot;identifier1&quot; : &quot;customwidgetname&quot;,&quot;identifier2&quot; : &quot;customwidgetname2&quot;,...
+}*
 
 其中，「identifier」是jQuery CSS選擇器，代表特定欄位、特定類型的欄位集或所有欄位。 以下列出不同情況下識別碼的值：
 
 | 識別碼類型 | 識別碼 | 說明 |
 |---|---|---|
 | 具有名稱欄位名的特定欄位 | 識別碼：&quot;div.fieldname&quot; | 所有名稱為「fieldname」的欄位都會使用介面工具集呈現。 |
-| 所有類型為「type」的欄位（其中類型為NumericField、DateField等）。: | 識別碼：&quot;div.type&quot; | 對於Timefield和DateTimeField，類型為textfield，因為不支援這些欄位。 |
-| 所有欄位 | 識別碼：&quot;div.field&quot; |  |
+| 所有類型為「type」的欄位（其中類型為NumericField、DateField等）。: | 識別碼： &quot;div.type&quot; | 對於Timefield和DateTimeField，類型為textfield，因為不支援這些欄位。 |
+| 所有欄位 | 識別碼： &quot;div.field&quot; |  |
