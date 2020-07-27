@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 7eb0e8a8-d76a-43f7-a012-c21157b14cd4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2304'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ Forms服務可讓您自訂使用HTML表格轉譯的工具列。 您可自訂工�
 
 fscJS是與每個節點相關聯的Java指令碼。 必須為節點提供一個，並 `div#fscmenu` 可選地為節點 `ul#fscmenuItem` 提供。 JS檔案會實作核心工具列功能，而預設檔案也能運作。
 
-fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工具列外觀。 *fscVCSS* 是垂直工具列的樣式表，顯示在轉譯的HTML表格左側。 *fscIECSS* 是用於在Internet explorer中呈現的HTML表單的樣式表。
+fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工具列外觀。 *fscVCSS* 是垂直工具列的樣式表，顯示在轉譯的HTML表格左側。 *fscIECSS* 是用於在Internet Explorer中呈現的HTML表單的樣式表。
 
 請確定fscmenu.xml檔案中已參考上述所有檔案。 也就是說，在fscmenu.xml檔案中，指定指向這些檔案的URI位置，讓Forms服務找到這些檔案。 依預設，這些檔案可在URI位置使用，從內部關鍵字 `FSWebRoot` 開始 `ApplicationWebRoot`。
 
@@ -55,7 +58,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 以下XML語法顯示了fscmenu.xml檔案示例。
 
-```as3
+```html
  <div id="fscmenu" fscJS="FSToolBarURI/scripts/fscmenu.js" fscCSS="FSToolBarURI/fscmenu.css" fscVCSS="FSToolBarURI/fscmenu-v.css" fscIECSS="FSToolBarURI/fscmenu-ie.css">
          <ul class="fscmenuItem" id="Home">
              <li>
@@ -109,7 +112,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 若要變更工具列的地區設定值，請確定fscmenu.xml檔案包含您要顯示的語言。 以下XML語法顯示用於顯示法文工具欄的fscmenu.xml檔案。
 
-```as3
+```html
  <div id="fscmenu" fscJS="FSToolBarURI/scripts/fscmenu.js" fscCSS="FSToolBarURI/fscmenu.css" fscVCSS="FSToolBarURI/fscmenu-v.css" fscIECSS="FSToolBarURI/fscmenu-ie.css">
          <ul class="fscmenuItem" id="Home">
              <li>
@@ -174,7 +177,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 **參考自訂fscmenu XML檔案**
 
-要渲染包含自定義工具欄的HTML表單，請參考描述該工具欄的fscmenu XML檔案。 （本節提供fscmenu XML檔案的兩個示例。）此外，請確定fscmenu.xml檔案會正確指定所有參照檔案的位置。 如本節稍早所述，請確定所有檔案皆由關鍵字或其絕 `FSToolBarURI` 對位置參考。
+要渲染包含自定義工具欄的HTML表單，請參考描述該工具欄的fscmenu XML檔案。 （本節提供fscmenu XML檔案的兩個示例。） 此外，請確定fscmenu.xml檔案會正確指定所有參照檔案的位置。 如本節稍早所述，請確定所有檔案皆由關鍵字或其絕 `FSToolBarURI` 對位置參考。
 
 **轉換HTML表格**
 
@@ -192,7 +195,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 [使用web service API，使用自訂工具列轉譯HTML表格](#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -223,6 +226,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
    * 若要使用工具列來轉換HTML表格，請叫 `HTMLRenderSpec` 用物件的方 `setHTMLToolbar` 法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`。
    * 調用物件的方法並傳遞指定XML檔 `HTMLRenderSpec` 案URI位 `setToolbarURI` 置的字串值，以指定fscmenu XML檔案的位置。
    * 如果適用，請調用物件的方法並傳 `HTMLRenderSpec` 遞指定地區值 `setLocale` 的字串值，以設定地區值。 預設值為英文。
+
    >[!NOTE]
    >
    >與此部分關聯的快速啟動將此值設定為 `fr_FR`*。*
@@ -238,6 +242,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
    * 指定標題值的字 `HTTP_USER_AGENT` 串值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
    * 存 `URLSpec` 儲呈現HTML表單所需URI值的對象。
    * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不要將檔案附加到表單。
+
    該方 `renderHTMLForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
@@ -252,9 +257,9 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API使用自訂工具列來轉換HTML表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API使用自訂工具列來轉換HTML表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -277,6 +282,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
    * 若要使用工具列來轉換HTML表格，請叫 `HTMLRenderSpec` 用物件的方 `setHTMLToolbar` 法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`。
    * 調用物件的方法並傳遞指定XML檔 `HTMLRenderSpec` 案URI位 `setToolbarURI` 置的字串值，以指定fscmenu XML檔案的位置。
    * 如果適用，請調用物件的方法並傳 `HTMLRenderSpec` 遞指定地區值 `setLocale` 的字串值，以設定地區值。 預設值為英文。
+
    >[!NOTE]
    >
    >與此部分關聯的快速啟動將此值設定為 `fr_FR`*。*
@@ -298,6 +304,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
    * 由方 `javax.xml.rpc.holders.StringHolder` 法填入的空對 `renderHTMLForm` 像。 此引數儲存地區值。
    * 由方 `javax.xml.rpc.holders.StringHolder` 法填入的空對 `renderHTMLForm` 像。 此引數儲存所使用的HTML轉換值。
    * 包含 `com.adobe.idp.services.holders.FormsResultHolder` 此操作結果的空對象。
+
    該方 `renderHTMLForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
