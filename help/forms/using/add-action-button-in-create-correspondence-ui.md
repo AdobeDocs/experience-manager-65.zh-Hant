@@ -10,10 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1910'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Correponse Management解決方案允許您將自定義操作添加到「建立�
 
       ![覆蓋節點](assets/2_defaultappoverlaynode.png)
 
-   1. 按一下 **確定**。
+   1. 按一下&#x200B;**「確定」**。
    1. 按一下「 **全部儲存**」。
 
 1. 複製acmExtensionsConfig.xml檔案（存在於/libs分支下），位於/apps分支下。
@@ -140,7 +140,7 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 
    **匹配節點類型：** 已勾選
 
-1. 按一下 **確定**。
+1. 按一下&#x200B;**「確定」**。
 1. 按一下「 **全部儲存**」。
 1. 按一下右鍵以下檔案並選擇「復 **制」**:
 
@@ -212,7 +212,7 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
 
       **匹配節點類型：** 已勾選
 
-   1. 按一下 **確定**。
+   1. 按一下&#x200B;**「確定」**。
    1. 按一下「 **全部儲存**」。
 
 1. 在js資料夾中，使用下列步驟建立名為ccrcustomization.js的檔案，其中包含按鈕動作處理的程式碼：
@@ -226,7 +226,7 @@ ACMExtensionsMessages.properties檔案包含「建立對應」使用者介面中
    1. 連按兩下ccrcustomization.js檔案，以在CRX中開啟它。
    1. 在檔案中，貼上下列程式碼，然後按一下「全 **部儲存**:
 
-      ```
+      ```javascript
       /* for adding and handling custom actions in Extensible Toolbar.
         * One instance of handler will be created for each action.
         * CM.domain.CCRCustomActionHandler is actionHandler class.
