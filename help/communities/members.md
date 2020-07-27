@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+workflow-type: tm+mt
+source-wordcount: '963'
+ht-degree: 4%
 
 ---
 
@@ -48,13 +51,16 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 >如果未啟用隧道服務，則無法使 [用](deploy-communities.md#tunnel-service-on-author) Members控制台。
 
 
-![chlimage_1-119](assets/chlimage_1-119.png)
+![member-console1](assets/member-console1.png)
 
 ### 搜尋 {#search-features}
 
 選取標題左側的側面板圖示， `Members` 以切換開啟搜尋側面板。
 
-![chlimage_1-120](assets/chlimage_1-120.png) ![chlimage_1-121](assets/chlimage_1-121.png)
+![](assets/leftpanel-icon.png)
+
+
+![member-console2](assets/member-console2.png)
 
 選取標題左側的搜尋圖示，以 `Members` 切換已關閉的搜尋面板。
 
@@ -74,7 +80,7 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 
 選 `Create Member` 擇以在發佈環境中建立用戶。
 
-![chlimage_1-122](assets/chlimage_1-122.png)
+![create-member1](assets/create-member1.png)
 
 ### 一般——成員詳細資訊 {#general-member-details}
 
@@ -117,6 +123,7 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
    * UnbandedA會員無法登入，無法檢視頁面或參與需要登入的活動。 他們仍可以匿名造訪開放社群網站。
 
    * 非禁用A會員可完全存取社群網站。
+
    預設為 `Not Banned`。
 
 * **[!UICONTROL 貢獻限制]**
@@ -147,7 +154,7 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 
 另請參閱 [計分和標章](implementing-scoring.md)。
 
-![chlimage_1-123](assets/chlimage_1-123.png)
+![create-member2](assets/create-member2.png)
 
 * **[!UICONTROL 新增標章]**
    * 開始鍵入以從可用標 [章中選擇](badges.md)。 選取徽章後，請選擇每個網站或所有網站，此徽章應與成員的頭像一起顯示在這些網站上。
@@ -173,7 +180,7 @@ AEM Communities功能通常要求網站訪客必須先註冊並登入，才能�
 
 選 `Add Group` 取以在發佈環境中建立群組。
 
-![chlimage_1-124](assets/chlimage_1-124.png)
+![group-console1](assets/group-console1.png)
 
 建立新發佈端成員組的必填欄位包括：
 
