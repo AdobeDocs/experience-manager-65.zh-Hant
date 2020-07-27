@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 2%
 
 ---
 
@@ -119,7 +122,7 @@ AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程�
 
 1. 要修改表中顯示的任務屬性及其順序，請配置檔案/ws/js/runtime/templates/processinstancehistory.html :
 
-   ```as3
+   ```html
    <table>
        <thead>
            <tr>
@@ -134,7 +137,7 @@ AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程�
    </table>
    ```
 
-   ```as3
+   ```html
    <table>
        <tbody>
            <%_.each(obj, function(task){%>
@@ -157,7 +160,7 @@ AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程�
 
 1. 在檔案中註冊點按 `.fixedTaskTableHeader th` 處理常式 `js/runtime/views/processinstancehistory.js`。
 
-   ```as3
+   ```javascript
    events: {
        //other handlers
        "click .fixedTaskTableHeader th": "onTaskTableHeaderClick",
@@ -167,7 +170,7 @@ AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程�
 
    在處理程式中，調用 `onTaskTableHeaderClick` 的函式 `js/runtime/util/history.js`。
 
-   ```as3
+   ```javascript
    onTaskTableHeaderClick: function (event) {
            history.onTaskTableHeaderClick(event);
    }
@@ -179,7 +182,7 @@ AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程�
 
    通過提供比較器功能，使用任務清單集合上的Backbone排序功能進行排序。
 
-   ```as3
+   ```javascript
        return {
            //other methods
            onTaskTableHeaderClick  : onTaskTableHeaderClick,
@@ -187,7 +190,7 @@ AEM Forms工作區中的追蹤標籤可用來顯示涉及登入使用者的程�
        };
    ```
 
-   ```as3
+   ```javascript
    onTaskTableHeaderClick = function (event) {
            var target = $(event.target),
             comparator,
