@@ -9,7 +9,10 @@ topic-tags: author
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1158'
+ht-degree: 0%
 
 ---
 
@@ -34,11 +37,11 @@ Adobe Experience Manager(AEM)可讓您建立簡單易用的調適性表單，為
 
 **行動版面** ：控制行動裝置上表單的導覽。 如果裝置寬度為768像素或以上，則版面會視為行動版面，並針對行動裝置最佳化。
 
-**工具欄佈局** ：控制表單中工具欄或面板工具欄中的「操作」按鈕的位置。
+**工具欄佈局** ：控制表單中工具欄或面板工具欄中「操作」按鈕的位置。
 
 所有這些面板版面都定義在下列位置：
 
-`/libs/fd/af/layouts`.
+`/libs/fd/af/layouts`。
 
 >[!NOTE]
 >
@@ -76,7 +79,7 @@ Adobe Experience Manager(AEM)可讓您建立簡單易用的調適性表單，為
 
 使用 `Panel adaptive form` 元件在面板中提供逐步導覽。 當您使用此版面時，使用者只有在目前步驟完成後才會移至下一個步驟
 
-```
+```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
 ```
 
