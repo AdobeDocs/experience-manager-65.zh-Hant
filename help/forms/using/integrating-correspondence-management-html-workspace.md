@@ -9,7 +9,10 @@ topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '650'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ AEM Forms工作區支援管理表單和檔案的任務指派和完成活動。 �
 
    自訂包裝函式範例如下：
 
-   ```java
+   ```javascript
    public LetterInstanceInfo getLetterInstanceInfo(Document dataXML) throws Exception {
    try {
    if(dataXML == null)
@@ -99,7 +102,7 @@ AEM Forms工作區支援管理表單和檔案的任務指派和完成活動。 �
    }
    ```
 
-   [獲取檔案](assets/dscsample.zip)下載DSC:上述DSCSample.zip檔案中提供範例DSC。 下載並解壓縮DSCSample.zip檔案。 在使用DSC服務之前，您需要對其進行配置。 有關資訊，請參 [閱配置DSC服務](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
+   [獲取檔案](assets/dscsample.zip)下載DSC: 上述DSCSample.zip檔案中提供範例DSC。 下載並解壓縮DSCSample.zip檔案。 在使用DSC服務之前，您需要對其進行配置。 有關資訊，請參 [閱配置DSC服務](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
 
    在「定義活動」對話方塊中，選取適當的活動，例如getLetterInstanceInfo，然後按一下「 **確定**」。
 
