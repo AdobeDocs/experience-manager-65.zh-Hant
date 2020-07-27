@@ -10,7 +10,10 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '932'
+ht-degree: 0%
 
 ---
 
@@ -36,10 +39,10 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 
 在具備必要條件後，請執行下列步驟，在「作者」例項上以AEM Forms設定Adobe Sign:
 
-1. 在AEM Forms作者例項上，導覽至「工 **具** > ![](assets/hammer.png) 一般 **>** 設定瀏覽器 ****」。
+1. 在AEM Forms作者例項上，導覽至「工 **具**![槌](assets/hammer.png) >一般 **>設定瀏******&#x200B;覽器」。
 1. 在「設定瀏 **[!UICONTROL 覽器]** 」頁面上，點 **[!UICONTROL 選「建立」]**。
 1. 在「建 **[!UICONTROL 立設定]** 」對話方塊中，指定設定的 **[!UICONTROL Title]** ，啟用「 **[!UICONTROL Cloud設定」]**、「建立 **** Create」。 它會為雲端服務建立組態容器。
-1. 導覽至「 **工具** > ![](assets/hammer.png) Cloud Services **>** Adobe Sign **** 」，然後選取您在上述步驟中建立的設定容器。
+1. 導覽至「 **槌子** > ![雲端服務](assets/hammer.png) > ******** Adobe Sign Sign Container」，並選取您在上述步驟中建立的組態容器。
 
    >[!NOTE]
    >
@@ -61,6 +64,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
    * aggrement_send
    * widget_write
    * workflow_read
+
    如需設定Adobe Sign應用程式的OAuth設定並取得金鑰的逐步資訊，請參閱應用程式開發人員文 [件的設定](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md) oAuth設定。
 
    ![OAuth設定](assets/oauthconfig_new.png)
