@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 01d5677f-5c87-4a6e-987b-8eda9acc0b27
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1369'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 ![ww_ww_metadatadialog](assets/ww_ww_metadatadialog.png)
 
-若要以程式設計方式將中繼資料匯入PDF檔案，您可以使用指定中繼資料值的現有XML檔案，或使用類型物件 `XMPUtilityMetadata`。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。)
+若要以程式設計方式將中繼資料匯入PDF檔案，您可以使用指定中繼資料值的現有XML檔案，或使用類型物件 `XMPUtilityMetadata`。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
 
 >[!NOTE]
 >
@@ -46,7 +49,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 下列XML程式碼包含與上圖對應的中繼資料值。 例如，請注意指定關鍵字的粗體項目。
 
-```as3
+```xml
  <?xpacket begin="?" id="W5M0MpCehiHzreSzNTczkc9d"?>
  <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.2-jc015 52.349034, 2008 Jun 20 00:30:39-PDT (debug)">
        <rdf:RDF xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -139,7 +142,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [使用web service API匯入XMP中繼資料](xmp-utilities.md#importing-xmp-metadata-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -167,17 +170,19 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
    * 代表 `com.adobe.idp.Document` PDF檔案的物件。
    * 包 `XMPUtilityMetadata` 含要導入的元資料的對象。
+
    如果您使用 `importXMP` 方法，請傳入下列值：
 
    * 代表 `com.adobe.idp.Document` PDF檔案的物件。
    * 表 `com.adobe.idp.Document` 示包含要導入的元資料的XML檔案的對象。
+
    無論何種情況，傳回的值都是 `com.adobe.idp.Document` 一個物件，代表包含新匯入中繼資料的PDF檔案。 然後，可以將此對象保存到磁碟。
 
 **另請參閱**
 
 [將中繼資料匯入PDF檔案](xmp-utilities.md#importing-metadata-into-pdf-documents)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -202,10 +207,12 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
    * 代表 `BLOB` PDF檔案的物件。
    * 包 `XMPUtilityMetadata` 含要導入的元資料的對象。
+
    如果您使用 `importXMP` 方法，請傳入下列值：
 
    * 代表 `BLOB` PDF檔案的物件。
    * 表 `BLOB` 示包含要導入的元資料的XML檔案的對象。
+
    無論何種情況，傳回的值都是 `BLOB` 一個物件，代表包含新匯入中繼資料的PDF檔案。 然後，可以將此對象保存到磁碟。
 
 **另請參閱**
@@ -252,7 +259,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [使用web service API匯入XMP中繼資料](xmp-utilities.md#importing-xmp-metadata-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -282,7 +289,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [從PDF檔案匯出中繼資料](xmp-utilities.md#exporting-metadata-from-pdf-documents)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
