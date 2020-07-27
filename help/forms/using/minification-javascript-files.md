@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
@@ -31,11 +34,13 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    例如，新增新的Sharequeue模型（例如mySharequeue），請變更：
 
-   ```
+   ```javascript
    sharequeuemodel : pathprefix + 'runtime/models/sharequeue',
-   
-   To
-   
+   ```
+
+   至
+
+   ```javascript
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
@@ -48,9 +53,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
                name="sharequeue"
                path="runtime/models/sharequeue.js"
                service="service"/>
-   
-   To
-   
+   ```
+
+   至
+
+   ```xml
    <sharequeue
                name="sharequeue"
                path="runtime/myModels/mySharequeue.js"
