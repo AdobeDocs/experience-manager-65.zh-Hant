@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ HTML5 Forms中表格的預設實作使用HTML DIV元素來轉換表格。 演算
 
 若要在HTML5 Forms中使用新格式，請將表格標示為複雜表格。 要將表標籤為複雜，請按如 `extras` 下方式在表子表單的XML源中添加標籤：
 
-```
+```xml
 </extras>
  <text name="complexTable">1</text>
  </extras>
