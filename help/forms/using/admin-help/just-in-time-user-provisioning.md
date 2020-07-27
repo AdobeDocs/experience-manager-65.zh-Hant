@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '599'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +30,11 @@ AEM表格支援使用者管理中尚未存在的使用者即時布建。 使用�
 1. 驗證提供者會驗證憑證。
 1. 然後驗證提供者會檢查使用者是否存在於使用者管理資料庫中。 可能會產生下列結果：
 
-   **** 存在：如果使用者是最新且已解除鎖定，「使用者管理」會傳回驗證成功。 不過，如果使用者不是最新或已鎖定，使用者管理會傳回驗證失敗。
+   **存在：** 如果使用者是最新且已解除鎖定，「使用者管理」會傳回驗證成功。 不過，如果使用者不是最新或已鎖定，使用者管理會傳回驗證失敗。
 
-   **** 不存在：使用者管理傳回驗證失敗。
+   **不存在：** 使用者管理傳回驗證失敗。
 
-   **** 無效：使用者管理傳回驗證失敗。
+   **無效：** 使用者管理傳回驗證失敗。
 
 1. 驗證提供者傳回的結果會進行評估。 如果驗證提供者傳回驗證成功，則允許使用者登入。 否則，使用者管理會檢查下一個驗證提供者（步驟2-3）。
 1. 如果沒有可用的驗證提供者驗證使用者憑證，則會傳回驗證失敗。
@@ -44,7 +47,7 @@ AEM表格支援使用者管理中尚未存在的使用者即時布建。 使用�
 
 AEM表格提供下列API以供即時布建：
 
-```as3
+```java
 package com.adobe.idp.um.spi.authentication  ;
 publ ic interface IdentityCreator {
 /**
@@ -82,7 +85,7 @@ public Boolean assign(User user);
 ### 建立啟用時間限制的網域時的考量事項 {#considerations-while-creating-a-just-in-time-enabled-domain}
 
 * 建立混合網 `IdentityCreator` 域的自訂時，請確定已為本機使用者指定虛擬密碼。 請勿將此密碼欄位留空。
-* 建議：使用 `DomainSpecificAuthentication` 來驗證特定網域的使用者憑證。
+* 建議： 使用 `DomainSpecificAuthentication` 來驗證特定網域的使用者憑證。
 
 ### 建立啟用時間的網域 {#create-a-just-in-time-enabled-domain}
 
