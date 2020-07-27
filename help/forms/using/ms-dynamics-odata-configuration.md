@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1217'
+ht-degree: 0%
 
 ---
 
@@ -72,7 +75,7 @@ Microsoft Dynamics使用以理賠為基礎的驗證，將Microsoft Dynamics CRM�
 1. 按照為Microsoft Dynamics配置IFD中所述，為IFD配置Microsoft Dynamics [內部實例](https://technet.microsoft.com/en-us/library/dn609803.aspx)。
 1. 使用Windows PowerShell運行以下命令，在啟用IFD的Microsoft Dynamics上配置聲明設定：
 
-   ```
+   ```shell
    Add-PSSnapin Microsoft.Crm.PowerShell
     $ClaimsSettings = Get-CrmSetting -SettingType OAuthClaimsSettings
     $ClaimsSettings.Enabled = $true
@@ -123,6 +126,7 @@ MS **Dynamics OData Cloud Service(OData Service)** Configuration隨附預設的O
    1. Client Id **(也稱為** Application ID **)、** Client Secret、 **Client Secret、** OAUTH、 **Refresh Refresh UrlGread Jurl Access、Jignath Recassing Token************** 和Microsoft Dynamicrosoft Dynamics服務設定的Tok Token Don Den Dokes中的預設值取代替Resource值。 必須在「資源」欄位中指定動態例項URL, **** 才能使用表單資料模型來設定Microsoft Dynamics。 使用「服務根URL」衍生動態例項URL。 例如， [https://org.crm.dynamics.com](https://org.crm.dynamics.com/)。
 
    1. 在Microsoft **Dynamics** 的「授權範圍 **** 」欄位中指定openid，以進行授權程式。
+
    ![驗證設定](assets/dynamics_authentication_settings_new.png)
 
 1. 按一 **[!UICONTROL 下「連線至OAuth」]**。 系統會將您重新導向至Microsoft Dynamics登入頁面。
