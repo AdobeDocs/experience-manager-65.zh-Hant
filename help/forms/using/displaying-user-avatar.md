@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. 使用下一步中提及的詳細資訊建立DSC。 如需詳細資訊，請參閱「使用AEM Forms進行程式設計」指南中的「開 [發AEM Forms的元件](https://www.adobe.com/go/learn_aemforms_programming_63) 」主題。
 1. 在DSC中，定義新的SPI，其會公開getCurrentUserImageUrl和getUserImageUrl方法，以取得AEM Forms使用者的影像URL。 以下是範例Java™程式碼片段：
 
-   ```as3
+   ```java
    public class DemoUserImageURLProviderService {
      public String getCurrentUserImageUrl()
      {
@@ -43,7 +46,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    以下程式碼片段為範例。 自訂以符合您的特定需求。
 
-   ```as3
+   ```java
    <component xmlns="https://adobe.com/idp/dsc/component/document">
        <component-id>com.adobe.sample.DemoUsersComponent</component-id>
        <version>1.1</version>
