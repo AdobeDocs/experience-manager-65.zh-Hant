@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 translation-type: tm+mt
-source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '634'
+ht-degree: 0%
 
 ---
 
@@ -25,14 +28,14 @@ source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
 
 AEM表格提供兩個已註冊的MBean，可提供導覽和統計資訊。 以下是唯一支援整合和檢查的MBean:
 
-* **** 服務統計：此MBean提供有關服務名稱及其版本的資訊。
-* **** OperationStatistics:此MBean提供每個表單伺服器服務的統計資料。 管理員可在此處獲取有關特定服務的資訊，如調用時間、錯誤數等。
+* **服務統計：** 此MBean提供有關服務名稱及其版本的資訊。
+* **OperationStatistics:** 此MBean提供每個表單伺服器服務的統計資料。 管理員可在此處獲取有關特定服務的資訊，如調用時間、錯誤數等。
 
 ### ServiceStatisticMbean公共介面 {#servicestatisticmbean-public-interfaces}
 
 ServiceStatistic MBean的以下公共介面可用於測試：
 
-```as3
+```java
  public String getServiceId();
  public int getMajorVersion();
  public int getMinorVersion();
@@ -42,7 +45,7 @@ ServiceStatistic MBean的以下公共介面可用於測試：
 
 OperationStatistic MBean的以下公共介面可用於測試：
 
-```as3
+```java
  // InvocationCount: The number of times the method is invoked.
  public long getInvocationCount();
  // InvocationStartTime: The time at which the method started to execute.
@@ -72,33 +75,33 @@ OperationStatistic MBean的以下公共介面可用於測試：
 
 **MBean樹**
 
-**** Adobe網域名稱：取決於應用程式伺服器。 如果應用程式伺服器未定義網域，預設為adobe.com。
+**Adobe網域名稱：** 取決於應用程式伺服器。 如果應用程式伺服器未定義網域，預設為adobe.com。
 
-**** 服務類型：AdobeService是用來列出所有服務的名稱。
+**服務類型：** AdobeService是用來列出所有服務的名稱。
 
-**** AdobeServiceName:服務名稱或服務ID。
+**AdobeServiceName:** 服務名稱或服務ID。
 
-**** 版本：服務版本。
+**版本：** 服務版本。
 
 **操作統計資訊**
 
-**** 調用時間：執行方法所花的時間。 這不包括請求序列化、從用戶端傳送至伺服器，以及取消序列化的時間。
+**調用時間：** 執行方法所花的時間。 這不包括請求序列化、從用戶端傳送至伺服器，以及取消序列化的時間。
 
-**** 調用計數：調用服務的次數。
+**調用計數：** 調用服務的次數。
 
-**** 平均呼叫時間：自伺服器啟動以來已執行的所有調用的平均時間。
+**平均呼叫時間：** 自伺服器啟動以來已執行的所有調用的平均時間。
 
-**** 最大調用時間：自伺服器啟動以來執行的最長調用的持續時間。
+**最大調用時間：** 自伺服器啟動以來執行的最長調用的持續時間。
 
-**** 最小調用時間：自伺服器啟動以來執行的最短調用的持續時間。
+**最小調用時間：** 自伺服器啟動以來執行的最短調用的持續時間。
 
-**** 例外計數：導致失敗的調用數。
+**例外計數：** 導致失敗的調用數。
 
-**** 例外消息：發生的最後一個例外的錯誤消息。
+**例外消息：** 發生的最後一個例外的錯誤消息。
 
-**** 上次取樣日期時間：上次調用的日期。
+**上次取樣日期時間：** 上次調用的日期。
 
-**** 時間單位：預設值為毫秒。
+**時間單位：** 預設值為毫秒。
 
 若要啟用JMX監控，應用程式伺服器通常需要一些設定。 請參閱應用程式伺服器檔案以取得詳細資訊。
 
@@ -111,7 +114,7 @@ OperationStatistic MBean的以下公共介面可用於測試：
 1. 編輯位於InstallJBoss/bin下的run.bat檔案。
 1. 查找JAVA_OPTS行並添加以下內容：
 
-   ```as3
+   ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
    ```
 
@@ -120,7 +123,7 @@ OperationStatistic MBean的以下公共介面可用於測試：
 1. 編輯位於下方的startWebLogic.bat檔案 `[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin`。
 1. 查找JAVA_OPTS行並添加以下內容：
 
-   ```as3
+   ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
    ```
 
@@ -139,13 +142,13 @@ OperationStatistic MBean的以下公共介面可用於測試：
 
 1. 在管理控制台（應用程式伺服器> server1 >程式定義> JVM）上，將下列行新增至「一般JVM引數」欄位：
 
-   ```as3
+   ```shell
     -Djavax.management.builder.initial= -Dcom.sun.management.jmxremote
    ```
 
 1. 在/opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties檔案(或&lt;Your Websphere JRE>/ lib/management/management.properties)中新增或取消註解下列三行：
 
-   ```as3
+   ```shell
     com.sun.management.jmxremote.port=9999 //any port you like, but make sure you use this port when you connect
     com.sun.management.jmxremote.authenticate=false
     com.sun.management.jmxremote.ssl=false
