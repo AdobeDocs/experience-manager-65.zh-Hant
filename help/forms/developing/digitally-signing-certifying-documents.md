@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '16977'
 ht-degree: 0%
@@ -589,8 +589,8 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰： 公鑰
 
 您可以在cknfastrc檔案中新增下列組態值，該檔案位於/opt/nfast/cknfastrc(或c:\nfast\cknfastrc):
 
-```as3
- CKNFAST_ASSUME_SINGLE_PROCESS=0
+```shell
+    CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
 將此配置值添加到cknfastrc檔案後，無需重新啟動J2EE應用程式伺服器即可使用新憑據。
@@ -1077,8 +1077,8 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰： 公鑰
 
 您可以在cknfastrc檔案中新增下列組態值，該檔案位於/opt/nfast/cknfastrc(或c:\nfast\cknfastrc):
 
-```as3
-             CKNFAST_ASSUME_SINGLE_PROCESS=0
+```shell
+    CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
 將此配置值添加到cknfastrc檔案後，無需重新啟動J2EE應用程式伺服器即可使用新憑據。
