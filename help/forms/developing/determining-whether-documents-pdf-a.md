@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: c429d6e1-7847-43c8-bf75-cb0078dbb9d5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2069'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 您可以使用Assembler服務來判斷PDF檔案是否與PDF/A相容。 PDF/A檔案以封存格式存在，以長期保存檔案的內容。 字型會內嵌在檔案中，檔案會解壓縮。 因此，PDF/A檔案通常比標準PDF檔案大。 此外，PDF/A檔案不包含音訊和視訊內容。
 
-PDF/A-1規格包含兩個符合等級，即A和B。兩個級別之間的主要區別是邏輯結構（可訪問性）支援，這是符合性級別B不需要的。無論符合程度如何，PDF/A-1都規定所有字型都內嵌在產生的PDF/A檔案中。 目前，驗證（和轉換）只支援PDF/A-1b。
+PDF/A-1規格包含兩個符合等級，即A和B。 兩個級別之間的主要區別是邏輯結構（可訪問性）支援，這是符合性級別B不需要的。 無論符合程度如何，PDF/A-1都規定所有字型都內嵌在產生的PDF/A檔案中。 目前，驗證（和轉換）只支援PDF/A-1b。
 
 在本討論中，假設使用了以下DDX文檔。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
          <DocumentInformation source="Loan.pdf" result="Loan_result.xml">
@@ -39,7 +42,7 @@ Assembler服務返回指定輸入的PDF文檔在包含元素的XML文檔中是�
 
 >[!NOTE]
 >
->由於本節中指定的DDX文檔包含元 `DocumentInformation` 素，因此Assembler服務會傳回XML資料，而非PDF文檔。 即Assembler服務不匯編或反匯編PDF文檔；它會傳回有關XML檔案中輸入PDF檔案的資訊。
+>由於本節中指定的DDX文檔包含元 `DocumentInformation` 素，因此Assembler服務會傳回XML資料，而非PDF文檔。 即Assembler服務不匯編或反匯編PDF文檔； 它會傳回有關XML檔案中輸入PDF檔案的資訊。
 
 >[!NOTE]
 >
@@ -73,7 +76,7 @@ Assembler服務返回指定輸入的PDF文檔在包含元素的XML文檔中是�
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立PDF匯寫程式式用戶端**
 
@@ -99,7 +102,7 @@ Assembler服務返回指定輸入的PDF文檔在包含元素的XML文檔中是�
 
 Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。 例如，如果輸入的PDF檔案與PDF/A不相容，Assembler服務會傳回包含下列元素的XML檔案：
 
-```as3
+```xml
  <PDFAConformance isCompliant="false" compliance="PDF/A-1b" resultLevel="Detailed" ignoreUnusedResources="true" allowCertificationSignatures="true">
 ```
 
@@ -111,7 +114,7 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
 
 [使用web service API判斷檔案是否符合PDF/A規範](/help/forms/developing/determining-whether-documents-pdf-a.md#determine-whether-a-document-is-pdf-a-compliant-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -157,6 +160,7 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
    * 表 `com.adobe.idp.Document` 示要使用的DDX文檔的對象
    * 包 `java.util.Map` 含輸入PDF檔案的物件，用於判斷PDF/A相容性
    * 指 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 定運行時選項的對象
+
    此方 `invokeDDX` 法會傳回包 `com.adobe.livecycle.assembler.client.AssemblerResult` 含XML資料的物件，指定輸入的PDF檔案是否與PDF/A相容。
 
 1. 儲存傳回的XML檔案。
@@ -169,9 +173,9 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api) （SOAP模式）判斷檔案是否與PDF/A相容
+[快速入門（SOAP模式）: 使用Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api) （SOAP模式）判斷檔案是否與PDF/A相容
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -181,7 +185,7 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -233,6 +237,7 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
    * 表 `BLOB` 示DDX文檔的對象。
    * 包 `MyMapOf_xsd_string_To_xsd_anyType` 含輸入PDF檔案的物件。 其鍵必須與PDF源檔案的名稱匹配，其值必須是與輸 `BLOB` 入的PDF檔案對應的對象。
    * 指定 `AssemblerOptionSpec` 運行時選項的對象。
+
    此方 `invoke` 法傳回包 `AssemblerResult` 含XML資料的物件，指定輸入的PDF檔案是否為PDF/A檔案。
 
 1. 儲存傳回的XML檔案。
