@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +35,7 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
    <td>函式<br /> </td>
    <td><p>指定要調用的函式。 要搜索表單，請將屬性的 <code>func </code>值設定為 <code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> 此參 <em>數為必填參數。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此參數為強制參數。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
@@ -50,9 +53,9 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
    <td>關係<br /> </td>
    <td>指定要讀取的相關資產以及搜尋結果。 您可以選擇下列其中一個選項來擷取相關資產：
     <ul>
-     <li><strong>NO_RELATION</strong>:請勿擷取相關資產。</li>
-     <li><strong>立即</strong>:擷取與搜尋結果直接相關的資產。</li>
-     <li><strong>全部</strong>:直接及間接相關資產。</li>
+     <li><strong>NO_RELATION</strong>: 請勿擷取相關資產。</li>
+     <li><strong>立即</strong>: 擷取與搜尋結果直接相關的資產。</li>
+     <li><strong>全部</strong>: 直接及間接相關資產。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -75,9 +78,9 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
        statement.put("value", "SimpleSurveyAF");
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上述範例中， </p>
     <ul>
-     <li><strong>名稱</strong>:指定要搜索的屬性的名稱。</li>
-     <li><strong>值</strong>:指定要搜索的屬性的值。</li>
-     <li><strong>運算元</strong>:指定在搜索時應用的運算子。 支援下列運算子：
+     <li><strong>名稱</strong>: 指定要搜索的屬性的名稱。</li>
+     <li><strong>值</strong>: 指定要搜索的屬性的值。</li>
+     <li><strong>運算元</strong>: 指定在搜索時應用的運算子。 支援下列運算子：
       <ul>
        <li>EQ —— 等於 </li>
        <li>NEQ —— 不等於</li>
@@ -91,7 +94,7 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
        <li>ENDSWITH —— 如果B是A的結尾部分，則A以B結尾</li>
        <li>LIKE —— 實作LIKE運算子</li>
        <li>AND —— 合併多個陳述式</li>
-      </ul> <p><strong>注意：</strong><em>GT、LT、GTEQ和LTEQ算子適用於線性類型的屬性，如LONG、DOUBLE和DATE。</em></p> </li>
+      </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ和LTEQ算子適用於線性類型的屬性，如LONG、DOUBLE和DATE。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -103,8 +106,8 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>名稱</strong>:指定用於排序搜索結果的屬性的名稱。</li>
-     <li><strong>准則</strong>:指定結果的順序。 order屬性接受以下值：
+     <li><strong>名稱</strong>: 指定用於排序搜索結果的屬性的名稱。</li>
+     <li><strong>准則</strong>: 指定結果的順序。 order屬性接受以下值：
       <ul>
        <li>ASC —— 使用ASC以升序排列結果。<br /> </li>
        <li>DES —— 使用DES以降序排列結果。</li>
@@ -124,7 +127,7 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
 
 ## 請求範例 {#sample-request}
 
-```
+```json
 func : searchForms
 appPath : /content/dam/formsanddocuments/MyApplication23
 cutPoints : title|description|author|status|creationDate|lastModifiedDate|activationDate|expiryDate|tags|allowedRenderFormat|formmodel
@@ -144,7 +147,7 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 ## 範例回應 {#sample-response}
 
-```
+```json
 [
 {"resultCount":2},
     {"assetType":"FORM","name":"ExpenseClaim.xdp","id":"509fa2d5-e3c9-407b-b8dc-fa0ba08eb0ce",
