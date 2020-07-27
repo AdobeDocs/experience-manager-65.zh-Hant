@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1730'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在本討論中，假設使用了以下DDX文檔。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
       <PDFsFromBookmarks prefix="stmt">
@@ -86,7 +89,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 必須參考DDX檔案，才能反匯編PDF檔案。 此DDX檔案必須包含 `PDFsFromBookmarks` 元素。
 
-**參考PDF檔案以反匯編**
+**參考PDF檔案以進行反匯編**
 
 要反匯編PDF文檔，請參考表示要反匯編的PDF文檔的PDF檔案。 傳遞至Assembler服務時，會針對檔案中的每個第1級書籤傳回個別的PDF檔案。
 
@@ -104,7 +107,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -150,6 +153,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 表 `com.adobe.idp.Document` 示要使用的DDX文檔的對象
    * 包含 `java.util.Map` 要反匯編的PDF文檔的對象
    * 指定 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 運行時選項（包括預設字型和作業日誌級別）的對象
+
    此方 `invokeDDX` 法會傳回包 `com.adobe.livecycle.assembler.client.AssemblerResult` 含已拆解PDF檔案的物件，以及發生的任何例外。
 
 1. 儲存已拆解的PDF檔案。
@@ -164,9 +168,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [以程式設計方式解譯PDF檔案](#programmatically-disassembling-pdf-documents)
 
-[快速入門（SOAP模式）:使用Java API解譯PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API解譯PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -176,7 +180,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -228,6 +232,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 代 `BLOB` 表DDX文檔的對象，該PDF文檔會拆分
    * 包含 `MyMapOf_xsd_string_To_xsd_anyType` 要反匯編的PDF文檔的對象
    * 指定 `AssemblerOptionSpec` 運行時選項的對象
+
    該方 `invokeDDX` 法返回一個對 `AssemblerResult` 像，該對象包含作業結果和所發生的任何異常。
 
 1. 儲存已拆解的PDF檔案。
