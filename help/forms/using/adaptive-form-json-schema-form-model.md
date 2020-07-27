@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 375ba8fc-3152-4564-aec5-fcff2a95cf4c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1469'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 * [JSON結構描述](https://json-schema.org/)
 
-## 使用JSON結構描述做為表單模型 {#using-a-json-schema-as-form-model}
+## 使用JSON結構描述做為表單模型  {#using-a-json-schema-as-form-model}
 
 AEM Forms支援使用現有的JSON結構描述來建立最適化表單。 此JSON結構描述組織中後端系統產生或使用資料的結構。 您使用的JSON結構描述應符合 [v4規範](https://json-schema.org/draft-04/schema)。
 
@@ -37,7 +40,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 此JSON元素與最適化表單元件的對應如下：
 
-```
+```json
 "birthDate": {
               "type": "string",
               "format": "date",
@@ -79,7 +82,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
     </ul> </td>
   </tr>
   <tr>
-   <td><p>{</p> <p>「類型」:"字串",</p> <p>}</p> </td>
+   <td><p>{</p> <p>「類型」: "字串",</p> <p>}</p> </td>
    <td><br /> <br /> 文字欄位<br /> <br /> <br /> </td>
   </tr>
   <tr>
@@ -107,7 +110,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 ### 通用架構屬性 {#common-schema-properties}
 
-最適化表單使用JSON結構描述中的可用資訊來對應每個產生的欄位。 特別是：
+最適化表單使用JSON結構描述中的可用資訊來對應每個產生的欄位。 尤其是：
 
 * title屬性用作最適化表單元件的標籤。
 * description屬性設定為自適應表單元件的詳細說明。
@@ -125,7 +128,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 以下是JSON結構描述的範例。
 
-```
+```json
 {
  "$schema": "https://json-schema.org/draft-04/schema#",
  "definitions": {
@@ -307,7 +310,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 定義索引鍵用於識別可重複使用的結構描述。 可重複使用的架構定義用於建立片段。 它類似於在XSD中識別複雜類型。 以下提供含定義的範例JSON結構描述：
 
-```
+```json
 {
   "$schema": "https://json-schema.org/draft-04/schema#",
 
@@ -338,7 +341,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 您可以使用 **aem:afProperties** 屬性來預先設定JSON結構描述欄位，以對應至自訂最適化表單元件。 以下列出範例：
 
-```
+```json
 {
     "properties": {
         "sizeInMB": {
@@ -356,13 +359,13 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 }
 ```
 
-## 為表單對象配置指令碼或表達式 {#configure-scripts-or-expressions-for-form-objects}
+## 為表單對象配置指令碼或表達式  {#configure-scripts-or-expressions-for-form-objects}
 
 JavaScript是最適化表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用最適化表單指令碼模型API。 您可以預先設定表單物件，以 [評估表單事件](../../forms/using/adaptive-form-expressions.md) 上的運算式。
 
 使用aem:afproperties屬性來預先設定最適化表單運算式或指令碼，以用於最適化表單元件。 例如，觸發初始化事件時，下列程式碼會設定電話欄位的值，並列印值至記錄檔：
 
-```
+```json
 "telephone": {
   "type": "string",
   "pattern": "/\\d{10}/",
@@ -589,7 +592,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 ### 隱藏初始化事件上的欄位 {#hiding-a-field-on-initialize-event}
 
-```
+```json
 "name": {
     "type": "string",
     "aem:afProperties": {
@@ -602,7 +605,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 #### 在值提交事件上配置另一個欄位的值 {#configure-value-of-another-field-on-value-commit-event}
 
-```
+```json
 "Income": {
     "type": "object",
     "properties": {
@@ -722,7 +725,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
  </tbody>
 </table>
 
-## 不支援的構造 {#non-supported-constructs}
+## 不支援的構造  {#non-supported-constructs}
 
 最適化表單不支援下列JSON結構：
 
@@ -731,7 +734,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 * OneOf、AnyOf、AllOf和NOT
 * 僅支援同構陣列。 因此，項目約束必須是對象而不是陣列。
 
-## Frequently asked questions {#frequently-asked-questions}
+## 常見問題 {#frequently-asked-questions}
 
 **為什麼我無法將子表單的個別元素（從任何複雜類型產生的結構）拖曳至可重複的子表單（minOccours或maxOccuns值大於1）?**
 
