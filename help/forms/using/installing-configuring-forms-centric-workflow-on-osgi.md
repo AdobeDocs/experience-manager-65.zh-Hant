@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 1%
@@ -133,7 +133,7 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 
 1. 將下列屬性新增至sling.properties檔案：
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
@@ -166,7 +166,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
 1. 設定反向連結篩選服務：
 
-   以管理員身分登入Apache Felix組態管理員。 配置管理器的預設URL為https://&#39;server&#39;:[port_number]/system/console/configMgr。 在「設 **定** 」選單中，選取 **Apache Sling Referrer Filter** 選項。 在「允許主機」欄位中，輸入調度程式的主機名以允許它作為反向連接，然後按一下「保 **存」**。 條目的格式為 `https://'[server]:[port]'`。
+   以管理員身分登入Apache Felix組態管理員。 配置管理器的預設URL為https://&#39;server&#39;:[port_number]/system/console/configMgr。 在「設 **定** 」選單中，選取 **Apache Sling Referrer Filter** 選項。 在「允許主機」欄位中，輸入調度程式的主機名以允許它作為反向連接，然後按一下「保 **存」**。 The format of the entry is `https://'[server]:[port]'`.
 
 #### 配置快取 {#configure-cache}
 
