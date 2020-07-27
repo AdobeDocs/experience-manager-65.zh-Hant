@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
@@ -36,7 +36,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 下列Java程式碼範例會將資料匯入PDF表單。 資料位於名為 *Loan_data.xml的XML檔案中* ，而PDF表格會儲存為名為 *ResultLoanForm.pdf的PDF檔案*。 (請參閱 [匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -138,7 +138,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 下列Java程式碼範例會從PDF表單匯出資料。 表單資料會儲存為名為 *Loan_data.xml的XML檔案*。 (請參 [閱匯出表單資料](/help/forms/developing/importing-exporting-data.md#exporting-form-data)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
