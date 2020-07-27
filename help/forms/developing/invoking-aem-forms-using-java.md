@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '5410'
+ht-degree: 0%
 
 ---
 
@@ -433,17 +436,18 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
    * WebSphere: `iiop://<ServerName>:2809 (default port)`
    * WebLogic: `t3://<ServerName>:7001 (default port)`
 
-* **DSC_DEFAULT_SOAP_ENDPOINT**:如果您使用SOAP連接模式，此值表示發送調用請求的端點。 若要遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的用戶端應用程式位於相同的J2EE應用程式伺服器上，您可 `localhost` 以指定(例如 `http://localhost:8080`。)
+* **DSC_DEFAULT_SOAP_ENDPOINT**: 如果您使用SOAP連接模式，此值表示發送調用請求的端點。 若要遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的用戶端應用程式位於相同的J2EE應用程式伺服器上，您可 `localhost` 以指定(例如 `http://localhost:8080`。)
 
    * 如果J2EE應 `8080` 用程式是JBoss，則埠值適用。 如果J2EE應用程式伺服器是IBM® WebSphere®，請使用連接埠 `9080`。 同樣地，如果J2EE應用程式伺服器是WebLogic，請使用連接埠 `7001`。 (這些值是預設埠值。 如果更改了埠值，請使用適用的埠號。)
 
-* **DSC_TRANSPORT_PROTOCOL**:如果使用EJB連接模式，請為 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 此值指定。 如果您使用SOAP連接模式，請指定 `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`。
-* **DSC_SERVER_TYPE**:指定部署AEM Forms的J2EE應用程式伺服器。 有效值 `JBoss`為 `WebSphere`、 `WebLogic`。
+* **DSC_TRANSPORT_PROTOCOL**: 如果使用EJB連接模式，請為 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 此值指定。 如果您使用SOAP連接模式，請指定 `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`。
+* **DSC_SERVER_TYPE**: 指定部署AEM Forms的J2EE應用程式伺服器。 有效值 `JBoss`為 `WebSphere`、 `WebLogic`。
 
    * 如果將此連接屬性設 `WebSphere`置為， `java.naming.factory.initial` 則值將設定為 `com.ibm.ws.naming.util.WsnInitCtxFactory`。
    * 如果將此連接屬性設 `WebLogic`置為， `java.naming.factory.initial` 則值將設定為 `weblogic.jndi.WLInitialContextFactory`。
    * 同樣地，如果將此連接屬性設 `JBoss`置為， `java.naming.factory.initial` 則值將設定為 `org.jnp.interfaces.NamingContextFactory`。
    * 如果您不 `java.naming.factory.initial` 想使用預設值，可將屬性設為符合您需求的值。
+
    >[!NOTE]
    >
    >您可以使用類的靜態成 `DSC_SERVER_TYPE` 員，而不是使用字串來設定連接屬 `ServiceClientFactoryProperties` 性。 可使用下列值： `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、 `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或 `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
@@ -452,7 +456,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 * **DSC_CREDENTIAL_PASSWORD:** 指定相應的口令值。 如果服務安全性被禁用，則無需指定此連接屬性。
 * **DSC_REQUEST_TIMEOUT:** SOAP請求的預設請求逾時限制為1200000毫秒（20分鐘）。 有時，完成操作的請求可能需要更長的時間。 例如，擷取大量記錄的SOAP請求可能需要較長的逾時限制。 您可以使用 `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` 來增加SOAP請求的請求呼叫逾時限制。
 
-   **注意**:只有基於SOAP的調用支援DSC_REQUEST_TIMEOUT屬性。
+   **注意**: 只有基於SOAP的調用支援DSC_REQUEST_TIMEOUT屬性。
 
 要設定連接屬性，請執行以下任務：
 
@@ -461,6 +465,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
    * 枚舉 `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` 值
    * 一個字串值，指定代管AEM Forms的J2EE應用程式伺服器URL
+
    >[!NOTE]
    >
    >如果您使用SOAP連接模式，請指定枚舉 `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` 值而不是枚舉 `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` 值。
@@ -469,6 +474,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
    * 枚舉 `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL` 值
    * 枚舉 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 值
+
    >[!NOTE]
    >
    >如果您使用SOAP連接模式，請指定枚舉 `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`值而不是枚舉 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 值。
@@ -506,7 +512,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 下列Java程式碼範例會設定連線屬性，以叫用部署在WebLogic上的AEM Forms，並使用EJB連線模式。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "t3://localhost:7001");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
@@ -519,7 +525,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 下列Java程式碼範例會設定連線屬性，以叫用部署在WebSphere上的AEM Forms，並使用EJB連線模式。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "iiop://localhost:2809");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
@@ -532,7 +538,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 以下Java代碼示例在SOAP模式下設定連接屬性，以調用部署在JBoss上的AEM Forms。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -549,7 +555,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 以下Java代碼示例設定調用部署在JBoss Application Server上的AEM Forms以及禁用服務安全性時所需的連接屬性。
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "jnp://localhost:1099");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
@@ -562,7 +568,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 **使用自訂請求逾時限制設定SOAP連線模式**
 
-```as3
+```java
  Properties ConnectionProps = new Properties();
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -578,7 +584,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 該 `authenticate` 方法返回 `AuthResult` 包含驗證結果的對象。 可以通過調用其 `com.adobe.idp.Context` 建構子來建立對象。 然後叫用 `com.adobe.idp.Context` 物件的方 `initPrincipal` 法並傳遞 `AuthResult` 物件，如下列程式碼所示：
 
-```as3
+```java
  Context myCtx = new Context();
  myCtx.initPrincipal(authResult);
 ```
@@ -587,7 +593,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 以下代碼示例說明如何在用 `com.adobe.idp.Context` 於建立對象的連接設定中使用對 `EncryptionServiceClient` 像。
 
-```as3
+```java
  //Authenticate a user and use the Context object within connection settings
  // Authenticate the user
  String username = "wblue";
@@ -650,7 +656,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 下列範例顯示用來連線至部署在WebSphere上的AEM Forms的jndi.properties檔案的內容。
 
-```as3
+```ini
  java.naming.factory.initial=com.ibm.websphere.naming.
  WsnInitialContextFactory
  java.naming.provider.url=corbaloc::appserver1:9810,:appserver2:9810
@@ -660,7 +666,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 下列範例顯示用來連線至部署在WebLogic上的AEM Forms的jndi.properties檔案的內容。
 
-```as3
+```ini
  java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
  java.naming.provider.url=t3://appserver1:8001, appserver2:8001
 ```
@@ -669,7 +675,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 以下示例顯示用於連接到部署在JBoss上的AEM Forms的jndi.properties檔案的內容。
 
-```as3
+```ini
  java.naming.factory.initial= org.jnp.interfaces.NamingContextFactory
  java.naming.provider.url= jnp://appserver1:1099, appserver2:1099,
  appserver3:1099
@@ -703,13 +709,13 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 如果宣傳檔案駐留在同一檔案系統上，建立對象的 `com.adobe.idp.Document` 速度會更快。 如果宣傳檔案駐留在遠程檔案系統上，則必須執行複製操作，這會影響效能。
 
-應用程式可同時包含 `com.adobe.idp.Document` 資料 `org.w3c.dom.Document` 類型。 不過，請確定您完全符合資料 `org.w3c.dom.Document` 類型的資格。 有關將對象轉換為對 `org.w3c.dom.Document` 像的資訊，請 `com.adobe.idp.Document` 參閱快速 [啟動（EJB模式）:使用Java API將可排程的版面預先填入表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)。
+應用程式可同時包含 `com.adobe.idp.Document` 資料 `org.w3c.dom.Document` 類型。 不過，請確定您完全符合資料 `org.w3c.dom.Document` 類型的資格。 有關將對象轉換為對 `org.w3c.dom.Document` 像的資訊，請 `com.adobe.idp.Document` 參閱快速 [啟動（EJB模式）: 使用Java API將可排程的版面預先填入表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)。
 
 >[!NOTE]
 >
 >為避免在使用物件時WebLogic中發生記憶體洩漏，請 `com.adobe.idp.Document` 以2048位元組或更少的區塊來讀取檔案資訊。 例如，以下代碼以2048位元組的塊讀取文檔資訊：
 
-```as3
+```java
         // Set up the chunk size to prevent a potential memory leak
         int buffSize = 2048;
  
@@ -768,7 +774,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 **建立基於位元組陣列的Document對象**
 
-```as3
+```java
  Document myPDFDocument = new Document(myByteArray);
 ```
 
@@ -778,7 +784,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 **建立基於其他文檔的文檔對象**
 
-```as3
+```java
  //Create a Document object based on a byte array
  InputStream is = new FileInputStream("C:\\Map.pdf");
  int len = is.available();
@@ -803,7 +809,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 **建立以PDF檔案為基礎的Document物件**
 
-```as3
+```java
  //Create a Document object based on the map.pdf source file
  File mySourceMap = new File("C:\\map.pdf");
  Document myPDFDocument = new Document(mySourceMap,true);
@@ -815,7 +821,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 **基於InputStream對象建立文檔**
 
-```as3
+```java
  //Create a Document object based on an InputStream object
  InputStream is = new FileInputStream("C:\\Map.pdf");
  Document myPDFDocument = new Document(is);
@@ -827,7 +833,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如物 `java.io.I
 
 提供給對象的URL `com.adobe.idp.Document` 始終在建立原始對象的一 `com.adobe.idp.Document` 側讀取，如以下示例所示：
 
-```as3
+```java
      Document doc = new Document(new java.net.URL("file:c:/temp/input.pdf"));
 ```
 
@@ -835,7 +841,7 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
 
 **根據可從URL存取的內容建立檔案**
 
-```as3
+```java
  //Create a Document object based on a java.net.URL object
  URL myURL = new URL("http", "localhost", 8080,"/WebApp/map.pdf");
  
@@ -859,7 +865,7 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
 
 以下代碼行將對象 `com.adobe.idp.Document` 轉換為對 `java.io.InputStream` 像。 假設它 `myPDFDocument` 表示對 `com.adobe.idp.Document` 像：
 
-```as3
+```java
      java.io.InputStream resultStream = myDocument.getInputStream();
 ```
 
@@ -872,7 +878,7 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
 
 **將文檔對象的內容複製到檔案**
 
-```as3
+```java
  File outFile = new File("C:\\AnotherMap.pdf");
  myDocument.copyToFile (outFile);
 ```
@@ -934,7 +940,7 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
 
 **確定Document對象的內容類型**
 
-```as3
+```java
  //Determine the content type of the Document object
  String ct = myDocument.getContentType();
  System.out.println("The content type of the Document object is " +ct);
@@ -986,6 +992,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
    * 指定唯一的ID值 `new Id()`。
    * 通過指定唯一的UUID值 `new Lid()`。
    * 資源的名稱。 可以指定XDP檔案的檔案名。
+
    將返回值轉換為 `Resource`。
 
 1. 調用 `ResourceContent` 物件的方法並 `RepositoryInfomodelFactoryBean` 將傳回值 `newImage` 轉換為，以建立物件 `ResourceContent`。 此對象表示添加到儲存庫的內容。
@@ -993,7 +1000,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 1. 調用物件的方 `com.adobe.idp.Document` 法，將物 `ResourceContent` 件的內容新 `ResourceContent` 增至物 `setDataDocument` 件。 傳遞物 `com.adobe.idp.Document` 件。
 1. 調用物件的方法並傳遞，以設定要新增至儲存庫的XDP `ResourceContent` 檔案的MIME `setMimeType` 類型 `application/vnd.adobe.xdp+xml`。
 1. 調用對象的方 `ResourceContent` 法並傳遞對 `Resource` 像，將對象的內容 `Resource` 添加到對象 `setContent``ResourceContent` 中。
-1. 通過調用對象的方法並傳遞 `Resource` 表示資源 `setDescription` 說明的字串值，添加資源說明。
+1. 通過調用對象的方法並傳遞 `Resource` 表示資源 `setDescription` 說明的字串值來添加資源說明。
 1. 調用物件的方法並傳遞下列值，將表 `ResourceRepositoryClient` 單設計新 `writeResource` 增至儲存庫：
 
    * 一個字串值，它指定包含新資源的資源集合的路徑
@@ -1001,7 +1008,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 **另請參閱**
 
-[快速啟動（EJB模式）:使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
+[快速啟動（EJB模式）: 使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
 
 [使用Java API叫用AEM Forms](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
@@ -1036,7 +1043,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 1. 使用其 `java.util.HashMap` 建構函式建立物件。
 1. 針對每 `java.util.HashMap` 個輸入參 `put` 數叫用物件的方法，以傳遞至長期的程式。 由於短 `MyApplication/EncryptDocument` 期進程需要一個類型的輸入參數 `Document`，因此只需調用一次 `put` 方法，如以下示例所示。
 
-   ```as3
+   ```java
     //Create a Map object to store the parameter value for inDoc
     Map params = new HashMap();
     InputStream inFile = new FileInputStream("C:\\Adobe\Loan.pdf");
@@ -1059,7 +1066,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 1. 調用物件的方法並傳遞指定 `InvocationReponse` 輸出參數名 `getOutputParameter` 稱的字串值，以擷取程式的傳回值。 在這種情況下，請指 `outDoc` 定( `outDoc` 是進程的輸出參數的 `MyApplication/EncryptDocument` 名稱)。 將返回值轉換 `Document`為，如下例所示。
 
-   ```as3
+   ```java
     InvocationResponse response = myServiceClient.invoke(request);
     Document encryptDoc = (Document) response.getOutputParameter("outDoc");
    ```
@@ -1069,7 +1076,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 **另請參閱**
 
-[快速入門：使用調用API調用短期進程](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-using-the-invocation-api)
+[快速入門： 使用調用API調用短期進程](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-using-the-invocation-api)
 
 [調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
