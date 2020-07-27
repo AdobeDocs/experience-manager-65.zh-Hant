@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: 868936e0fd20d3867e31f0351d7b388149472fd2
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2092'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 868936e0fd20d3867e31f0351d7b388149472fd2
 
 在本討論中，假設使用了以下DDX文檔。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
      <PDF result="out.pdf">
@@ -82,7 +85,7 @@ source-git-commit: 868936e0fd20d3867e31f0351d7b388149472fd2
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而JAR檔案是部署AEM Forms的J2EE應用程式伺服器專用的檔案。
+如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而JAR檔案是部署AEM Forms的J2EE應用程式伺服器專用。
 
 **建立PDF匯寫程式式用戶端**
 
@@ -145,7 +148,7 @@ Assembler服務返回一 `java.util.Map` 個對象，該對象可從該對象中
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -191,6 +194,7 @@ Assembler服務返回一 `java.util.Map` 個對象，該對象可從該對象中
    * 表 `com.adobe.idp.Document` 示要使用的DDX文檔的對象
    * 包 `java.util.Map` 含要組合的輸入PDF檔案的對象
    * 指定 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 運行時選項（包括預設字型和作業日誌級別）的對象
+
    該方 `invokeDDX` 法返回 `com.adobe.livecycle.assembler.client.AssemblerResult` 一個對象，該對象包含作業結果和所發生的任何異常。
 
 1. 擷取結果。
@@ -200,15 +204,16 @@ Assembler服務返回一 `java.util.Map` 個對象，該對象可從該對象中
    * 叫用 `AssemblerResult` 物件的方 `getDocuments` 法。 這會傳回 `java.util.Map` 物件。
    * 重複該對 `java.util.Map` 像，直到找到結果對 `com.adobe.idp.Document` 像。 （您可以使用DDX檔案中指定的PDF結果元素來取得檔案。）
    * 叫用物 `com.adobe.idp.Document` 件的方 `copyToFile` 法以擷取PDF檔案。
+
    >[!NOTE]
    >
    >如果 `LOG_LEVEL` 設定為生成日誌，則可使用對象的方法 `AssemblerResult` 提取日 `getJobLog` 志。
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API組合PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API組合PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -218,7 +223,7 @@ Assembler服務返回一 `java.util.Map` 個對象，該對象可從該對象中
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -270,6 +275,7 @@ Assembler服務返回一 `java.util.Map` 個對象，該對象可從該對象中
    * 表 `BLOB` 示DDX文檔的對象。
    * 包含 `mapItem` 輸入PDF檔案的陣列。 其鍵必須與PDF源檔案的名稱匹配，其值必須是對應 `BLOB` 於這些檔案的對象。
    * 指定 `AssemblerOptionSpec` 運行時選項的對象。
+
    該方 `invoke` 法返回 `AssemblerResult` 一個對象，該對象包含作業的結果和可能發生的任何例外。
 
 1. 擷取結果。
@@ -279,6 +285,7 @@ Assembler服務返回一 `java.util.Map` 個對象，該對象可從該對象中
    * 存取物 `AssemblerResult` 件的欄 `documents` 位，此欄位是包含 `Map` 結果PDF檔案的物件。
    * 重複該對 `Map` 像，直到找到與生成文檔的名稱匹配的鍵。 然後將該陣列成員轉 `value` 換為 `BLOB`。
    * 存取PDF檔案的物件屬性，以擷取代表PDF文 `BLOB` 件的二進位 `MTOM` 資料。 這會傳回可寫出至PDF檔案的位元組陣列。
+
    >[!NOTE]
    >
    >如果 `LOG_LEVEL` 設定為生成日誌，則可以通過獲取對象資料成員的值來 `AssemblerResult` 提取日 `jobLog` 志。
