@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1831'
+ht-degree: 0%
 
 ---
 
@@ -79,7 +82,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 
 ### 建立網頁專案 {#creating-a-web-project}
 
-要建立包含可調用Forms服務的Java Servlet的Web應用程式，第一步是建立新Web項目。 本檔案所基於的Java IDE是Eclipse 3.3。使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 最後，將名為 *index.html的HTML頁面* ，以及Java servlet新增至您的專案。
+要建立包含可調用Forms服務的Java Servlet的Web應用程式，第一步是建立新Web項目。 本檔案所基於的Java IDE是Eclipse 3.3。 使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 最後，將名為 *index.html的HTML頁面* ，以及Java servlet新增至您的專案。
 
 以下清單指定必須添加到Web項目的JAR檔案：
 
@@ -122,7 +125,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 
 您可以在Java servlet內建立調用Forms服務的Java應用程式邏輯。 下列程式碼顯示 `RenderFormFragment` Java Servlet的語法：
 
-```as3
+```java
      public class RenderFormFragment extends HttpServlet implements Servlet {
          public void doGet(HttpServletRequest req, HttpServletResponse resp
          throws ServletException, IOException {
@@ -154,6 +157,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
    * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 如需詳細資訊，請參 [閱「AEM Forms API參考」](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
    * 包 `URLSpec` 含Forms服務根據片段呈現表單所需URI值的物件。
    * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
+
    該方 `renderPDFForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
 
 1. 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
@@ -166,7 +170,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 
 以下代碼示例代表調用Forms服務並基於片段呈現表單的Java servlet。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-forms-client.jar
@@ -307,7 +311,7 @@ index.html網頁提供Java servlet的入口點，並叫用Forms服務。 此網�
 
 Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
-```as3
+```java
              Document oInputData = null;
  
              //Get the value of selected radio button
@@ -327,7 +331,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 以下HTML程式碼位於在設定開發環境時建立的index.html檔案中。 (請參 [閱建立Web專案](/help/forms/developing/rendering-forms.md#creating-a-web-project)。)
 
-```as3
+```xml
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
  <html xmlns="https://www.w3.org/1999/xhtml">
  <head>
