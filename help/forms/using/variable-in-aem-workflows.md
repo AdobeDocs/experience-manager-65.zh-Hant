@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2113'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
    * 表單資料模型——指定表單資料模型路徑。
    * ArrayList —— 指定系列的子類型。
 
-1. 指定變數的選用說明，並點選以 ![](assets/done_icon.png) 儲存變更。 變數會顯示在左窗格的可用清單中。
+1. 指定變數的選用說明，並點選 ![done_icon](assets/done_icon.png) 以儲存變更。 變數會顯示在左窗格的可用清單中。
 
 建立變數時，請考慮下列實務：
 
@@ -97,10 +97,10 @@ ht-degree: 0%
 執行下列步驟以新增變數之間的映射：
 
 1. 在工作流程編輯頁面上，點選工作流程模型側點中的「步驟」圖示。
-1. 將「設定變數」步驟拖 **放至工作流程編輯器** ，點選該步驟並選取 ![](assets/configure_icon.png) （設定）。
+1. 將「設定變數」步驟拖 **放至工作流程編輯器** ，點選該步驟並選取 ![configure_icon](assets/configure_icon.png) （設定）。
 1. 在「設定變數」對話方塊中，選取「 **[!UICONTROL 對應]** >新 **[!UICONTROL 增對應」]**。
 1. 在「對 **應變數** 」區段中，選取要儲存資料的變數、選取對應模式，並指定要儲存在變數中的值。 對應模式會根據變數類型而有所不同。
-1. 映射更多變數，以建立有意義的運算式。 點選 ![](assets/done_icon.png) 以儲存變更。
+1. 映射更多變數，以建立有意義的運算式。 Tap ![done_icon](assets/done_icon.png) to save the changes.
 
 ### 範例1: 查詢XML變數以設定字串變數的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -273,8 +273,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## 編輯變數 {#edit-a-variable}
 
 1. 在編輯工作流程頁面上，點選工作流程模型側鍵中的「變數」圖示。 左窗格中的「變數」區段會顯示所有現有變數。
-1. 點選 ![](assets/edit.png) 您要編輯之變數名稱旁的（編輯）圖示。
-1. 編輯變數資訊並點選以 ![](assets/done_icon.png) 儲存變更。 您無法編輯變 **[!UICONTROL 數的]** 「名 **[!UICONTROL 稱」]** 和「類型」欄位。
+1. 點選您 ![要編輯](assets/edit.png) 之變數名稱旁的編輯（編輯）圖示。
+1. 編輯變數資訊並點選 ![done_icon](assets/done_icon.png) ，以儲存變更。 您無法編輯變 **[!UICONTROL 數的]** 「名 **[!UICONTROL 稱」]** 和「類型」欄位。
 
 ## 刪除變數 {#delete-a-variable}
 
@@ -284,7 +284,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. 在編輯工作流程頁面上，點選工作流程模型側鍵中的「變數」圖示。 左窗格中的「變數」區段會顯示所有現有變數。
 1. 點選您要刪除之變數名稱旁的「刪除」圖示。
-1. 點選 ![](assets/done_icon.png) 以確認並刪除變數。
+1. 點選 ![done_icon](assets/done_icon.png) ，確認並刪除變數。
 
 ## 引用 {#references}
 
