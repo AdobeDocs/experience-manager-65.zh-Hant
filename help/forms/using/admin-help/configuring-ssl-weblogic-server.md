@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1074'
+ht-degree: 0%
 
 ---
 
@@ -75,8 +78,8 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
    <td><p>保護密鑰庫內容的口令。 </p></td>
    <td>
     <ul>
-     <li><p>自訂身分密鑰庫：密鑰庫密碼必須與為管理控制台的信任儲存元件指定的SSL憑證密碼對應。</p></li>
-     <li><p>自訂信任金鑰庫：使用與您用於自訂身分密鑰庫的相同密碼。</p></li>
+     <li><p>自訂身分密鑰庫： 密鑰庫密碼必須與為管理控制台的信任儲存元件指定的SSL憑證密碼對應。</p></li>
+     <li><p>自訂信任金鑰庫： 使用與您用於自訂身分密鑰庫的相同密碼。</p></li>
     </ul></td>
   </tr>
   <tr>
@@ -115,7 +118,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
    例如：
 
-   ```as3
+   ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
    ```
 
@@ -135,7 +138,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
    例如：
 
-   ```as3
+   ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
    ```
 
@@ -144,7 +147,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 1. 將ads-ca.cer檔案複製至需要與應用程式伺服器進行安全通訊的任何主機。
 1. 輸入以下命令，將證書插入新的密鑰庫檔案（自定義信任密鑰庫）:
 
-   [JAVA_HOME]`/bin/keytool -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass store_password -keypass key_password`
+   [JAVA_HOME] `/bin/keytool -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass store_password -keypass key_password`
 
    >[!NOTE]
    >
@@ -152,13 +155,13 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
    例如：
 
-   ```as3
+   ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
 名為&quot;ads-ca.jks&quot;的自訂信任密鑰庫檔案會建立在 [appserverdomain]/adobe/&#39;server&#39;目錄中。
 
-設定WebLogic，使其使用您建立的自訂身分密鑰庫和自訂信任密鑰庫。 此外，由於用於建立密鑰庫檔案的唯一判別名不包括托管WebLogic伺服器的電腦名，因此禁用WebLogic主機名驗證功能。
+設定WebLogic，使其使用您建立的自訂身分密鑰庫和自訂信任密鑰庫。 此外，禁用WebLogic主機名驗證功能，因為用於建立密鑰庫檔案的唯一判別名不包括托管WebLogic伺服器的電腦的名稱。
 
 ## 設定WebLogic以使用SSL {#configure-weblogic-to-use-ssl}
 
@@ -177,9 +180,9 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 1. 按一 **下「變更** 」，以將密鑰庫清單取為下拉式清單，並選取「自訂身 **分和自訂信任」**。
 1. 在「身分」下，指定下列值：
 
-   **自訂身分密鑰庫**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks，其中*[appserverdomain] *是實際路徑，而伺服器 *[]* 名稱是應用程式伺服器的名稱。
+   **自訂身分密鑰庫**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks，其中*[appserverdomain] *是實際路徑，而 *[]* 伺服器名稱是應用程式伺服器的名稱。
 
-   **自訂身份密鑰庫類型**:JKS
+   **自訂身份密鑰庫類型**: JKS
 
    **自訂身分密鑰庫密碼**: *mypassword* （自訂身分密鑰庫密碼）
 
@@ -187,7 +190,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
    **自定義信任密鑰庫檔案名**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`，其中 `*[appserverdomain]*` 是實際路徑
 
-   **自定義信任密鑰庫類型**:JKS
+   **自定義信任密鑰庫類型**: JKS
 
    **自訂信任金鑰庫密碼片語**: *mypassword* （自訂信任金鑰密碼）
 
@@ -195,7 +198,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 1. 預設情況下，為「身份和信任位置」選擇「密鑰庫」。 否則，請將其更改為密鑰庫。
 1. 在「身分」下，指定下列值：
 
-   **私密金鑰別名**:ads-credentials
+   **私密金鑰別名**: ads-credentials
 
    **密碼短語**: *mypassword*
 
