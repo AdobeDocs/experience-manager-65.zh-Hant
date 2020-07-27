@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. 在/apps/sampleApplication/wscomponents/js資料夾內建立demomain.js檔案。 將程式碼從/libs/ws/js/main.js複製至demomain.js。
 1. 在demomain.js中，刪除要初始化路由器的代碼並添加以下代碼：
 
-   ```
+   ```javascript
    require(['initializer','runtime/util/usersession'],
        function(initializer, UserSession) {
            UserSession.initialize(
@@ -44,7 +47,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. 在范 `/apps/sampleApplication/wscomponents/js/registry.js` 本值的更 `/lc/libs/ws/` 新 `/lc/apps/sampleApplication/wscomponents/` 路徑中。
 1. 在您的入口網站首頁JSP檔案( `/apps/sampleApplication/GET.jsp`)中，新增下列程式碼，以在入口網站內包含必要的元件。
 
-   ```as3
+   ```jsp
    <script data-main="/lc/apps/sampleApplication/wscomponents/js/demomain" src="/lc/apps/sampleApplication/wscomponents/js/libs/require/require.js"></script>
    <div class="UserInfoView gcomponent" data-name="userinfo"></div>
    <div class="filterListView gcomponent" data-name="filterlist"></div>
@@ -59,7 +62,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 要定制元件，可以按如下方式擴展所需元件的現有視圖：
 
-   ```as3
+   ```javascript
    define([
        ‘jquery’,
        ‘underscore’,
@@ -81,7 +84,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 修改入口網站CSS，以設定您入口網站上所需元件的版面、位置和樣式。 例如，您想要將此入口網站的背景顏色維持為黑色，以便檢視userInfo元件。 您可以依下列方式變更背景顏色來 `/apps/sampleApplication/wscomponents/css/style.css` 執行此動作：
 
-   ```as3
+   ```css
    body {
        font-family: "Myriad pro", Arial;
        background: #000;    //This was origianlly #CCC
