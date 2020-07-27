@@ -1,5 +1,5 @@
 ---
-title: 「教學課程：建立互動式通訊"
+title: 「教學課程： 建立互動式通訊"
 seo-title: 建立適用於印刷品與網頁的互動式通訊
 description: 使用所有建置區塊建立互動式通訊
 seo-description: 使用所有建置區塊建立互動式通訊
@@ -9,12 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '2020'
+ht-degree: 0%
 
 ---
 
 
-# 教學課程：建立互動式通訊 {#tutorial-create-interactive-communication}
+# 教學課程： 建立互動式通訊 {#tutorial-create-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
 
@@ -22,7 +25,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 一旦您建立了Web版本的所有建置區塊，例如表單資料模型、檔案片段、範本和主題，就可以開始建立互動式通訊。
 
-互動式通訊可透過兩個通道提供：平面與網頁。 您也可以以主版的方式建立互動式的列印通訊管道。 列印為網頁頻道的主選項，可確保網頁頻道的內容、繼承和資料系結是從列印頻道衍生而來。 此外，還可確保在列印頻道中所做的變更在網頁頻道中同步。 不過，「互動式通訊」作者可以中斷Web頻道中特定元件的繼承。
+互動式通訊可透過兩個通道提供： 平面與網頁。 您也可以以主版的方式建立互動式的列印通訊管道。 列印為網頁頻道的主選項，可確保網頁頻道的內容、繼承和資料系結是從列印頻道衍生而來。 此外，還可確保在列印頻道中所做的變更在網頁頻道中同步。 不過，「互動式通訊」作者可以中斷Web頻道中特定元件的繼承。
 
 本教學課程將逐步帶您建立適用於印刷和網路頻道的互動式通訊。 在本教學課程結束時，您將能夠：
 
@@ -34,15 +37,15 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ### 建立適用於列印頻道的互動式通訊 {#create-interactive-communication-for-print-channel}
 
-以下是本教學課程中已建立、在建立適用於列印頻道的互動式通訊時需要的資源清單：
+以下是本教學課程中已建立且建立列印頻道互動式通訊時所需的資源清單：
 
-**列印範本：**[create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
+**列印範本：** [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
 
-**表單資料模型：**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**表單資料模型：** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**檔案片段：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**檔案片段：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
-**版面片段：**[table_lf](../../forms/using/create-templates-print-web.md)
+**版面片段：** [table_lf](../../forms/using/create-templates-print-web.md)
 
 **影像：** PayNow和ValueAddedServices
 
@@ -56,6 +59,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    1. 指 **定Create_First_IC_templates資料夾>** Create_First_IC_Web_Template **為Web範本，然後點選「選** 取」 ****。
 
    1. 點選「 **建立**」。
+
    將顯示一條確認消息，表明已成功建立互動式通信。
 
 1. 點選「 **編輯** 」以開啟右窗格中的「互動式通訊」。
@@ -72,27 +76,27 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    ![互動式通訊的檔案片段](assets/create_first_ic_doc_fragments_new.png)
 
 1. 點選 **圖表** 目標區域，點選 **+** 以新增圖 **** 表元件。
-1. 點選圖表元件並選取( ![](assets/configure_icon.png) 設定)。 圖表屬性會顯示在左窗格中：
+1. 點選圖表元件並選 ![取configure_icon](assets/configure_icon.png) (Configure)。 圖表屬性會顯示在左窗格中：
 
    1. 指定圖表的名稱。
    1. 從「 **圖表類** 型」下拉式清 **單中選取** 「圓形圖」。
-   1. 在 **X** 軸節中，從調 **用資料模型對象類型中選** 擇調用類型 **** 。 點選 ![](assets/done_icon.png)。
+   1. 在 **X** 軸節中，從調 **用資料模型對象類型中選** 擇調用類型 **** 。 點選 ![done_icon](assets/done_icon.png)。
    1. 從「 **功能** 」下拉式清 **單中選取「頻率** 」。
-   1. 從「 **Y軸** 」部分的「調 **用****」資料模型對象類型中選** 擇「調用類型」屬性。 點選 ![](assets/done_icon.png)。
-   1. 點選 ![](assets/done_icon.png) 以儲存圖表屬性。
+   1. 從「 **Y軸** 」部分的「調 **用****」資料模型對象類型中選** 擇「調用類型」屬性。 點選 ![done_icon](assets/done_icon.png)。
+   1. 點選 ![done_icon](assets/done_icon.png) 以儲存圖表屬性。
 
 1. 前往「資 **產** 」標籤，並套用篩選，只顯示左側窗格中的版面片段。 將table_lf **layout片段拖放至** Itemized Calls **** target區域。
-1. 在「日期」欄中選取「文字欄 **位** 」，然後點選 ![](assets/configure_icon.png) （設定）。
-1. 從「 **綁定類型** 」下拉清單中選擇「資料模型對象」，然後選 **擇調用** > ******** calldateZombe。 點選 ![](assets/done_icon.png) 兩次以儲存屬性。
+1. 在「日期」欄中選取「文 **字欄位** 」，然後點 ![選「configure_icon](assets/configure_icon.png) （設定）」。
+1. 從「 **綁定類型** 」下拉清單中選擇「資料模型對象」，然後選 **擇調用** > ******** calldateZombe。 點選 ![兩次done_icon](assets/done_icon.png) ，以儲存屬性。
 
    同樣地，在Callding中 **分別建立調**&#x200B;用時間 **、調用數**、調用數、 **調用時間、Calldtime**、 ******************** Number、CalldingChargesChargesCargesChargesChargesChargesColumns的調用持續時間長度列。
 
 1. 點選 **PayNow** 目標區域，並點選 **+** 以新增 **Image** 元件。
-1. 點選影像元件並選取( ![](assets/configure_icon.png) 設定)。 影像屬性會顯示在左窗格中：
+1. 點選影像元件並選 ![取configure_icon](assets/configure_icon.png) (Configure)。 影像屬性會顯示在左窗格中：
 
    1. 在「 **名稱** 」欄位中，將PayNow指定為影像 **名稱** 。
    1. 點選 **「上傳**」，選取儲存在本機檔案系統上的影像，然後點選「 **開啟」**。
-   1. 點選 ![](assets/done_icon.png) 以儲存影像屬性。
+   1. 點選 ![done_icon](assets/done_icon.png) 以儲存影像屬性。
 
 1. 重複步驟13和14，將 **ValueAddedServices** 映像添加到 **** ValueAddedServices目標區域。
 
@@ -100,11 +104,11 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 以下是本教學課程中已建立的、在建立網路頻道互動式通訊時需要的資源清單：
 
-**Web範本：**[Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
+**Web範本：** [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
 
-**表單資料模型：**[FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**表單資料模型：** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**檔案片段：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
+**檔案片段：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](../../forms/using/create-document-fragments.md)
 
 **影像：** PayNowWeb和ValueAddedServicesWeb
 
@@ -118,6 +122,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    1. 指 **定Create_First_IC_templates資料夾>** Create_First_IC_Web_Template **為Web範本，然後點選「選** 取」 ****。
 
    1. 點選「 **建立**」。
+
    將顯示一條確認消息，表明已成功建立互動式通信。
 
 1. 點選「 **編輯** 」以開啟右窗格中的「互動式通訊」。
@@ -133,18 +138,18 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    | summary_charges_first_interactive_communication | 費用 |
 
 1. 點選 **Summary of Charges** target區域，並點選 **+** 以新增 **Chart** 元件。
-1. 點選圖表元件並選取( ![](assets/configure_icon.png) 設定)。 圖表屬性會顯示在左窗格中：
+1. 點選圖表元件並選 ![取configure_icon](assets/configure_icon.png) (Configure)。 圖表屬性會顯示在左窗格中：
 
    1. 指定圖表的名稱。
    1. 從「 **圖表類** 型」下拉式清 **單中選取** 「圓形圖」。
 
-   1. 在 **X** 軸節中，從調 **用資料模型對象類型中選** 擇調用類型 **** 。 點選 ![](assets/done_icon.png)。
+   1. 在 **X** 軸節中，從調 **用資料模型對象類型中選** 擇調用類型 **** 。 點選 ![done_icon](assets/done_icon.png)。
 
    1. 從「 **功能** 」下拉式清 **單中選取「頻率** 」。
 
-   1. 從「 **Y軸** 」部分的「調 **用****」資料模型對象類型中選** 擇「調用類型」屬性。 點選 ![](assets/done_icon.png)。
+   1. 從「 **Y軸** 」部分的「調 **用****」資料模型對象類型中選** 擇「調用類型」屬性。 點選 ![done_icon](assets/done_icon.png)。
 
-   1. 點選 ![](assets/done_icon.png) 以儲存圖表屬性。
+   1. 點選 ![done_icon](assets/done_icon.png) 以儲存圖表屬性。
 
 1. 從左側 **窗格選取「Data Sources** 」標籤，並將呼叫資料模型物件拖放至「明細呼叫 **」目標區域****** 中。 調用資料 **模型對象** ，所有屬性都顯示為右窗格中「明細調 **用** 」目標區域的表列。
 
@@ -164,29 +169,30 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    1. 在「路徑」欄位中指定 **付款** URL。
    1. 從 **Target下拉式清** 單中 **選取** 「新增標籤」。
 
-   1. 點選 ![](assets/done_icon.png) 以儲存超連結屬性。
+   1. 點選 ![done_icon](assets/done_icon.png) ，儲存超連結屬性。
 
 1. 從「 **預覽** 」選項旁的下拉式清單中選取「 **樣式** 」。
 
    ![選擇互動式通信的樣式模式](assets/select_style_ic_web_new.png)
 
-1. 使用下列步驟，將超連結文字設定樣式，以在互動式通訊中顯示為按鈕：
+1. 使用下列步驟，將超連結文字設為樣式，以便在互動式通訊中顯示為按鈕：
 
    1. 點選文字元件並選取 ![編輯](assets/edit.png) （編輯）。
    1. 在「邊 **框** 」部分中，指定 **1.5px作為** 邊框寬度，選擇Border Width **,BorderPorderAdisprement Specify****************** 4As Order Adrius。
 
    1. 從「背景」區段中選擇「紅色」作為按鈕的背 **景顏** 色。
    1. 在「尺寸與位置 **」區段的「邊界** 」欄位中，同時點選「 **編輯」圖示，並將************** RightMargin設為ChrightPxLightCord。 「頂端」、「底部」和「左側」欄位皆設為空白。
+
    ![在互動式通訊中插入超連結](assets/ic_web_hyperlink_new.png)
 
 1. 點選「 **立即付費** 」目標區域，並點選 **+** 以新增 **** 影像元件。
-1. 點選影像元件並選取( ![](assets/configure_icon.png) 設定)。 影像屬性會顯示在左窗格中：
+1. 點選影像元件並選 ![取configure_icon](assets/configure_icon.png) (Configure)。 影像屬性會顯示在左窗格中：
 
    1. 在「 **名稱** 」欄位中，將PayNow指定為影像 **名稱** 。
 
    1. 點選 **「上傳**」，選取本機檔案系 **統上儲存的PayNowWeb** 影像，然後點選「 **開啟**」。
 
-   1. 點選 ![](assets/done_icon.png) 以儲存影像屬性。
+   1. 點選 ![done_icon](assets/done_icon.png) 以儲存影像屬性。
 
 1. 根據使用案例，在互動式通訊中插入 **Subscribe** （訂閱）按鈕，讓使用者可以按一下按鈕，訂閱增值服務。
 
@@ -209,6 +215,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    1. 指 **定Create_First_IC_templates資料夾>** Create_First_IC_Web_Template **為Web範本，然後點選「選** 取」 ****。
 
    1. 點選「 **建立**」。
+
    將顯示一條確認消息，表明已成功建立互動式通信。
 
 1. 點選「 **編輯** 」以開啟右窗格中的「互動式通訊」。
@@ -232,6 +239,7 @@ source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
    * 「清單匯總」元件至「清單匯總」面板
    * 「費用元件匯總」至「費用匯總」面板
    * 「項目化呼叫」面板的版面片段（表格）
+
    ![網頁內容樹狀結構](assets/ic_web_content_tree_new.png)
 
 1. 重複「建立適用於網頁 [頻道的互動式通訊](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-web-channel) 」的步驟13 - 18，將「立即付費」和「 **訂閱****** 」超連結插入互動式通訊的網頁頻道。
