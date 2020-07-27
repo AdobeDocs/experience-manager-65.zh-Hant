@@ -10,14 +10,17 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1240'
+ht-degree: 0%
 
 ---
 
 
 # 為WebSphere應用程式伺服器配置SSL {#configuring-ssl-for-websphere-application-server}
 
-本節包含以下步驟，以便使用IBM webSphere Application server配置SSL。
+本節包含以下步驟，以便使用IBM WebSphere Application Server配置SSL。
 
 ## 在WebSphere上建立本機使用者帳戶 {#creating-a-local-user-account-on-websphere}
 
@@ -70,7 +73,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 1. 在「管理安全性」下，選擇「管 **理用戶角色」**。
 1. 按一下「新增」並執行下列動作：
 
-   1. **鍵入**&amp;ast;在搜索框中，然後按一下搜索。
+   1. 鍵入 **&amp;ast;** 在搜索框中，然後按一下搜索。
    1. 按一下 **角色下** 「管理員」。
    1. 將新建立的用戶添加到映射到角色，並將其映射到管理員。
 
@@ -81,7 +84,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 1. 在WebSphere管理控制台中，選擇「安 **全性」>「全域安全性」**。
 1. 按一 **下安全設定精靈**。
-1. 確保 **已啟用「啟用應用程式安全** 」複選框。 按一 **下「下一步**」。
+1. 確保 **已啟用「啟用應用程式安全** 」複選框。 按一下&#x200B;**下一步**。
 1. 選擇「 **同盟資料庫** 」 ，然後按一下「 **下一步**」。
 1. 指定要設定的憑據，然後按一下「下 **一步**」。
 1. 按一 **下完成**。
@@ -91,7 +94,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 ## 啟用SSL（自訂金鑰和信任存放區） {#enable-ssl-custom-key-and-truststore}
 
-您可以使用ikeyman公用程式或管理控制台來建立信任庫和keystore。 要使ikeyman正常運作，請確保WebSphere安裝路徑不包含括弧。
+您可以使用ikeyman公用程式或管理控制台來建立信任存放區和keystore。 要使ikeyman正常運作，請確保WebSphere安裝路徑不包含括弧。
 
 1. 在WebSphere管理控制台中，選擇「 **安全性> SSL憑證和金鑰管理」**。
 1. 按一 **下「相關項目** 」下的「鑰匙圈和憑證」。
@@ -104,7 +107,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 1. 按一 **下個人憑證**。
 1. 如果您已使用ikeyman新增已建立密鑰庫，則會出現憑證。 否則，您需要執行下列步驟來新增自簽證：
 
-   1. 選擇「 **建立>自簽證書」**。
+   1. Select **Create > Self-signed Certificate**.
    1. 在憑證表單上指定適當的值。 確保將別名和公用名稱保留為電腦的完全限定域名。
    1. 按一 **下套用**。
 
@@ -138,7 +141,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 **為啟用https的網站建立簽署者憑證**
 
 1. 確保WebSphere正在運行。
-1. 在WebSphere管理控制台中，導覽至簽署者憑證，然後按一下「安全性> SSL憑證和金鑰管理>金鑰存放區和憑證> nodeDefaultTrustStore >簽署者憑證」。
+1. 在WebSphere管理控制台中，導覽至簽署者憑證，然後按一下「安全性> SSL憑證和金鑰管理>金鑰存放區和憑證> NodeDefaultTrustStore >簽署者憑證」。
 1. 按一下「從埠檢索」並執行以下任務：
 
    * 在「主機」方塊中，輸入URL。 例如，鍵入 `www.paypal.com`。
@@ -156,7 +159,7 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 ## 配置動態埠 {#configuring-dynamic-ports}
 
-IBM webSphere不允許在啟用「全域安全性」時對ORB.init()進行多次呼叫。 您可以在https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704上閱讀永久限制的相關資訊。
+IBM WebSphere不允許在啟用「全域安全性」時對ORB.init()進行多次呼叫。 您可以在https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704上閱讀永久限制的相關資訊。
 
 執行以下步驟將埠設定為動態並解決問題：
 
@@ -175,7 +178,7 @@ IBM webSphere不允許在啟用「全域安全性」時對ORB.init()進行多次
 1. 開啟\crx-repository\launchpad\sling.properties `[aem-forms_root]`檔案以進行編輯。
 1. 找到屬 `sling.bootdelegation.ibm` 性並新 `com.ibm.websphere.ssl.*`增至其值欄位。 更新的欄位如下所示：
 
-   ```as3
+   ```java
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
    ```
 
