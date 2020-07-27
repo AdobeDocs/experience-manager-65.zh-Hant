@@ -11,7 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ AEM Forms僅限使用者存取使用者擁有存取控制(ACL)的工作。 這�
 1. 建立DSC。 如需詳細資訊，請參閱「使用AEM Forms進行程式設計」指南中的「開 [發AEM Forms的元件](https://www.adobe.com/go/learn_aemforms_programming_63) 」主題。
 1. 在DSC中，為階層管理定義新的SPI，以在AEM Forms使用者中定義直接報表和階層。 以下是範例Java™程式碼片段。
 
-   ```as3
+   ```java
    public class MyHierarchyMgmtService
    {
         /*
@@ -68,7 +71,7 @@ AEM Forms僅限使用者存取使用者擁有存取控制(ACL)的工作。 這�
 
 1. 建立component.xml檔案。 請確定規格ID必須與下列程式碼片段中所示相同。 以下是您可重複使用的范常式式碼片段。
 
-   ```as3
+   ```xml
    <component xmlns="https://adobe.com/idp/dsc/component/document">
        <component-id>com.adobe.sample.SampleDSC</component-id>
        <version>1.1</version>
