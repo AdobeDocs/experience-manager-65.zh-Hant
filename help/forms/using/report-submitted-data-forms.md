@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '570'
+ht-degree: 4%
 
 ---
 
@@ -34,7 +37,7 @@ AEM Forms提供API，您可用來查詢透過表單入口網站提交的表單�
 
 回應物件包含JSON陣列，其中包含表單名稱及其儲存庫路徑。 響應的結構如下：
 
-```
+```json
 [
  {formName: "<form name>",
  formPath: "<path to the form>" },
@@ -42,17 +45,17 @@ AEM Forms提供API，您可用來查詢透過表單入口網站提交的表單�
  ......]
 ```
 
-### 例如 {#example}
+### 範例 {#example}
 
 **請求URL**
 
-```
+```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview
 ```
 
 **回應**
 
-```java
+```json
 [{"formPath":"/content/dam/formsanddocuments/forms-review/form2","formName":"form2"},{"formPath":"/content/dam/formsanddocuments/forms-review/form1","formName":"form1"}]
 ```
 
@@ -92,7 +95,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (可選)</td>
-   <td>指定要包含在結果中的表單屬性的逗號分隔清單。 預設屬性為：<br /><code>formName</code>, <code>formPath</code><code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>指定要包含在結果中的表單屬性的逗號分隔清單。 預設屬性為：<br /> <code>formName</code>、 <code>formPath</code>、 <code>submitID</code>、 <code>formType</code>、 <code>jcr:lastModified</code>、 <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (可選)</td>
@@ -105,24 +108,24 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 回應物件包含JSON陣列，其中包含指定表單的詳細資訊。 響應的結構如下：
 
-```
+```json
 {
  total: "<total number of submissions>",
  items: [{ formName: "<name of the form>", formPath: "<path to the form>", owner: "<owner of the form>"},
  ....]}
 ```
 
-### 例如 {#example-1}
+### 範例 {#example-1}
 
 **請求URL**
 
-```
+```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSubmissions&formPath=/content/dam/formsanddocuments/forms-review/form2
 ```
 
 **回應**
 
-```java
+```json
 {"total":1,"items":[{"formName":"form2","formPath":"/content/dam/formsanddocuments/forms-review/form2","submitID":"1403037413508500","formType":"af","jcr:lastModified":"2015-11-05T17:52:32.243+05:30","owner":"admin"}]}
 ```
 
@@ -143,11 +146,11 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 傳回成功張貼留言的留言ID。
 
-### 例如 {#example-2}
+### 範例 {#example-2}
 
 **請求URL**
 
-```
+```http
 https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
 ```
 
@@ -157,7 +160,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getComments {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET /content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
 傳回在指定的提交實例上張貼的所有注釋。
 
@@ -173,7 +176,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 回應物件包含JSON陣列，其中包含與指定之提交ID相關的所有註解。 響應的結構如下：
 
-```
+```json
 [{
  owner: "<name of the commenter>",
  comment: "<comment text>",
@@ -181,11 +184,11 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
  { }......]
 ```
 
-### 例如 {#example-3}
+### 範例 {#example-3}
 
 **請求URL**
 
-```
+```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
 ```
 
@@ -213,17 +216,17 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 傳回JSON物件，其中包含已張貼更新的相關資訊。
 
-### 例如 {#example-4}
+### 範例 {#example-4}
 
 **請求URL**
 
-```
+```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
 ```
 
 **回應**
 
-```java
+```json
 {"formName":"form2","owner":"admin","jcr:lastModified":1446727516593,"path":"/content/forms/fp/admin/submit/metadata/1403037413508500.html","submitID":"1403037413508500","status":"submitted"}
 ```
 
