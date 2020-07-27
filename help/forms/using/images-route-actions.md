@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
    `/apps/ws/css/newStyle.css`
 
-   例如：新增名為下方 `myStyle1`所示的新樣式，並使用WebDAV用戶 `myStyleIcon1.png` 端將影 `/apps/ws/image`像檔案上傳至s資料夾。
+   例如： 新增名為下方 `myStyle1`所示的新樣式，並使用WebDAV用戶 `myStyleIcon1.png` 端將影 `/apps/ws/image`像檔案上傳至s資料夾。
 
    >[!NOTE]
    >
@@ -50,7 +53,7 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱相同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/task.html`:
 
-   ```
+   ```jsp
    <%if(routeList == null){%>
                <li>
                    <a href="javascript:void(0);" title="<%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%>" value="<%= availableCommands.directCommands[0]%>" data-action="route"><%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%></a>
@@ -80,7 +83,7 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱不同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/task.html`。 它添加一個servlet條件堆 `if-else` 棧，以用路由操作名映射樣式。
 
-```
+```jsp
 <%if(routeList == null){%>
             <li>
                 <a href="javascript:void(0);" title="<%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%>" value="<%= availableCommands.directCommands[0]%>" data-action="route"><%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%></a>
@@ -120,7 +123,7 @@ To
 
 1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱相同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/taskdetails.html`:
 
-   ```
+   ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
                            <li class="routeAction">
                                <a href="javascript:void(0);" title="<%= availableCommands.directCommands[i]%>" value="<%= availableCommands.directCommands[i]%>" data-action="route"><%= availableCommands.directCommands[i]%></a>
@@ -140,7 +143,7 @@ To
 
 1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱不同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/taskdetails.html`。 它添加一堆 `if-else` servlet條件，以用路由操作名映射樣式。
 
-   ```
+   ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
                            <li class="routeAction">
                                <a href="javascript:void(0);" title="<%= availableCommands.directCommands[i]%>" value="<%= availableCommands.directCommands[i]%>" data-action="route"><%= availableCommands.directCommands[i]%></a>
