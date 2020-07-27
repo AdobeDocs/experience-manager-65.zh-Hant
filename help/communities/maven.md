@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: f05d7c19e3284c0627e29b9590db4749be100229
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +49,7 @@ AEM Communities檔案的此區段除了：
 1. 以管理權限登入。
 1. 瀏覽至 [Package Manager](../../help/sites-administering/package-manager.md)。 例如， [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-1. 找到 *軟體包cq-socialcommunities-pkg-1.x.xxx*
+1. 找到包： `cq-socialcommunities-pkg-1.x.xxx`
 1. 從包名稱中抽取版本：
    * AEM 6.3的第一個版本是1.11.170版。
    * 功能套件版本為1.12.xxx。
