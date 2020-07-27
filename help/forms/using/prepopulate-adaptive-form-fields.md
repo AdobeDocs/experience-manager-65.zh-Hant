@@ -9,7 +9,10 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2022'
+ht-degree: 0%
 
 ---
 
@@ -58,7 +61,7 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ### 範例預填JSON結構 {#sample-prefill-json-structure}
 
-```
+```javascript
 {
    "afBoundData": {
       "employeeData": { }
@@ -78,20 +81,20 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 XFA自適應表單的預填充XML和提交的XML結構如下：
 
-* **預填充XML結構**:預先填入XFA自適應表單的XML必須與XFA表單範本的資料架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住 `/afData/afBoundData` 標籤。
+* **預填充XML結構**: 預先填入XFA自適應表單的XML必須與XFA表單範本的資料架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住 `/afData/afBoundData` 標籤。
 
-* **已提交的XML結構**:當未使用預填充XML時，提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式也相同。 如果預填充XML沒有包裝函 `afData/afBoundData`式，而是直接從結構根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
+* **已提交的XML結構**: 當未使用預填充XML時，提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式也相同。 如果預填充XML沒有包裝函 `afData/afBoundData`式，而是直接從結構根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
 
 Prefill-Submit-Data-ContentPackage.zip
 
 [取得包含](assets/prefill-submit-data-contentpackage.zip)預填資料和已提交資料的檔案範例
 
-### 基於XML架構的自適應表單 {#xml-schema-af}
+### 基於XML架構的自適應表單  {#xml-schema-af}
 
 基於XML架構的自適應表單預填充XML和提交XML的結構如下：
 
-* **預填充XML結構**:預填充XML必須與關聯的XML架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住/afData/afBoundData標籤。
-* **已提交的XML結構**:如果未使用預填充XML，則提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式相同。 如果預填充XML沒有包裝函 `afData/afBoundData` 式，而是直接從模式根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
+* **預填充XML結構**: 預填充XML必須與關聯的XML架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住/afData/afBoundData標籤。
+* **已提交的XML結構**: 如果未使用預填充XML，則提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式相同。 如果預填充XML沒有包裝函 `afData/afBoundData` 式，而是直接從模式根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -143,10 +146,10 @@ Prefill-Submit-Data-ContentPackage.zip
 
 對於以JSON結構描述為基礎的最適化表單，以下說明預先填寫JSON和已提交JSON的結構。 如需詳細資訊，請參 [閱「使用JSON結構描述建立最適化表單](../../forms/using/adaptive-form-json-schema-form-model.md)」。
 
-* **預填JSON結構**:預先填入JSON必須與關聯的JSON結構描述相容。 或者，如果您也想要預先填寫未系結的欄位，可將它包裝在/afData/afBoundData物件中。
-* **已提交的JSON結構**:如果未使用預先填寫JSON，則提交的JSON會包含afData包裝函式標籤中已系結和未系結欄位的資料。 如果使用預先填入JSON，則提交的JSON與預先填入JSON的結構相同。 如果預先填寫JSON以afData根物件開頭，則輸出JSON的格式會相同。 如果預先填入JSON沒有afData/afBoundData包裝函式，而是直接從結構根物件（例如使用者）啟動，則提交的JSON也會從使用者物件開始。
+* **預填JSON結構**: 預先填入JSON必須與關聯的JSON結構描述相容。 或者，如果您也想要預先填寫未系結的欄位，可將它包裝在/afData/afBoundData物件中。
+* **已提交的JSON結構**: 如果未使用預先填寫JSON，則提交的JSON會包含afData包裝函式標籤中已系結和未系結欄位的資料。 如果使用預先填入JSON，則提交的JSON與預先填入JSON的結構相同。 如果預先填寫JSON以afData根物件開頭，則輸出JSON的格式會相同。 如果預先填入JSON沒有afData/afBoundData包裝函式，而是直接從結構根物件（例如使用者）啟動，則提交的JSON也會從使用者物件開始。
 
-```
+```json
 {
     "id": "https://some.site.somewhere/entry-schema#",
     "$schema": "https://json-schema.org/draft-04/schema#",
@@ -165,7 +168,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 對於使用JSON結構描述模型的欄位，資料會預先填入afBoundData物件中，如以下範例JSON所示。 它可用於用一個或多個未綁定文本欄位預填充自適應表單。 以下是包裝函式資料的范 `afData/afBoundData` 例：
 
-```
+```json
 {
   "afData": {
     "afUnboundData": {
@@ -182,7 +185,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 以下是不含包裝函式的 `afData/afBoundData` 範例：
 
-```
+```json
 {
  "user": {
   "address": {
@@ -240,6 +243,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
    * file:///C:/Users/public/Document/Prefill/。*
    * https://localhost:8000/somesamplexmlfile.xml
+
    >[!NOTE]
    >
    >依預設，所有類型的最適化表單（XSD、XDP、JSON、FDM和不以表單模型為基礎）都允許透過crx檔案進行預填。 只有JSON和XML檔案才允許預先填寫。
@@ -267,15 +271,15 @@ Prefill-Submit-Data-ContentPackage.zip
 
 ### crx://通訊協定 {#the-crx-protocol}
 
-```xml
+```http
 https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=crx:///tmp/fd/af/myassets/sample.xml
 ```
 
 指定的節點必須具有名為的屬 `jcr:data` 性並保存資料。
 
-### file://通訊協定 {#the-file-protocol-nbsp}
+### file://通訊協定  {#the-file-protocol-nbsp}
 
-```xml
+```http
 https://localhost:4502/content/forms/af/someAF.html?wcmmode=disabled&dataRef=file:///C:/Users/form-user/Downloads/somesamplexml.xml
 ```
 
@@ -283,13 +287,13 @@ https://localhost:4502/content/forms/af/someAF.html?wcmmode=disabled&dataRef=fil
 
 ### https://通訊協定 {#the-http-protocol}
 
-```xml
+```http
 https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=https://localhost:8000/somesamplexmlfile.xml
 ```
 
 ### service://通訊協定 {#the-service-protocol}
 
-```xml
+```http
 https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=service://[SERVICE_NAME]/[IDENTIFIER]
 ```
 
@@ -304,7 +308,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 您也可以在中 `data` 設定屬 `slingRequest`性，其中屬 `data` 性是包含XML或JSON的字串，如下列范常式式碼所示（範例為XML）:
 
-```java
+```javascript
 <%
            String dataXML="<afData>" +
                             "<afUnboundData>" +
