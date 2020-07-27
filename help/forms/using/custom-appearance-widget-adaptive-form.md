@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1728'
+ht-degree: 0%
 
 ---
 
@@ -39,21 +42,21 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 建立自定義外觀的高級步驟如下：
 
-1. **建立專案**:建立Maven專案，以產生要部署在AEM上的內容套件。
-1. **擴充現有的Widget類別**:擴充現有的介面工具集類別並覆寫所需的類別。
-1. **建立客戶端庫**:建立程 `clientLib: af.customwidget` 式庫並新增所需的JavaScript和CSS檔案。
+1. **建立專案**: 建立Maven專案，以產生要部署在AEM上的內容套件。
+1. **擴充現有的Widget類別**: 擴充現有的介面工具集類別並覆寫所需的類別。
+1. **建立客戶端庫**: 建立程 `clientLib: af.customwidget` 式庫並新增所需的JavaScript和CSS檔案。
 
-1. **建立並安裝專案**:建立Maven專案，並在AEM上安裝產生的內容套件。
-1. **更新最適化表單**:更新最適化表單欄位屬性，以使用自訂外觀。
+1. **建立並安裝專案**: 建立Maven專案，並在AEM上安裝產生的內容套件。
+1. **更新最適化表單**: 更新最適化表單欄位屬性，以使用自訂外觀。
 
 ### 建立專案 {#create-a-project}
 
 主原型是建立自訂外觀的起點。 待用原型的詳細內容如下：
 
-* **儲存庫**:https://repo.adobe.com/nexus/content/groups/public/
-* **對象ID**:自訂外觀原型
-* **群組ID**:com.adobe.aemforms
-* **版本**:1.0.4
+* **儲存庫**: https://repo.adobe.com/nexus/content/groups/public/
+* **對象ID**: 自訂外觀原型
+* **群組ID**: com.adobe.aemforms
+* **版本**: 1.0.4
 
 執行以下命令以基於原型建立本地項目：
 
@@ -61,13 +64,13 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 該命令從儲存庫下載Maven插件和原型資訊，並根據以下資訊生成項目：
 
-* **groupId**:產生的Maven專案所使用的群組ID
-* **artifactId**:生成的Maven項目使用的對象ID。
-* **版本**:產生的Maven專案版本。
-* **package**:用於檔案結構的包。
-* **artifactName**:產生的AEM套件的對象名稱。
-* **packageGroup**:產生的AEM套件的套件群組。
-* **widgetName**:用於參考的外觀名稱。
+* **groupId**: 產生的Maven專案所使用的群組ID
+* **artifactId**: 生成的Maven項目使用的對象ID。
+* **版本**: 產生的Maven專案版本。
+* **package**: 用於檔案結構的包。
+* **artifactName**: 產生的AEM套件的對象名稱。
+* **packageGroup**: 產生的AEM套件的套件群組。
+* **widgetName**: 用於參考的外觀名稱。
 
 生成的項目具有以下結構：
 
@@ -188,7 +191,7 @@ Maven原型產生的範例專案會自動建立必要的用戶端程式庫，並
 1. 開啟 **要套用自訂外觀之欄位的「屬性** 」對話方塊。
 1. 在「樣 **式** 」(Styling `CSS class` )頁籤中，更新屬 `widget_<widgetName>` 性以添加格式的外觀名稱。 例如： **widget_numericstepper**
 
-## 範例：建立自訂外觀 {#sample-create-a-custom-appearance-nbsp}
+## 範例： 建立自訂外觀   {#sample-create-a-custom-appearance-nbsp}
 
 現在，讓我們看一個示例，以建立數字欄位的自定義外觀，使其顯示為數字步進器或滑塊。 執行以下步驟：
 
@@ -235,7 +238,7 @@ Maven原型產生的範例專案會自動建立必要的用戶端程式庫，並
 
    * 數值步進器應從擴展 `- $.xfaWidget.numericInput`。
    * 介面 `set value` 工具集的方法會在焦點位於欄位後設定值。 這是最適化表單Widget的必備要求。
-   * 必須 `render` 覆寫方法，才能叫用 `bootstrapNumber` 方法。
+   * 必 `render` 須覆寫方法才能叫 `bootstrapNumber` 用方法。
 
    * 除了外掛程式的主要原始碼外，外掛程式沒有其他相依性。
    * 範例不會在步進器上執行任何樣式，因此不需要額外的CSS。
@@ -246,7 +249,7 @@ Maven原型產生的範例專案會自動建立必要的用戶端程式庫，並
 1. 將(jQuery增效模 `bootstrap-number-input.js` 組)的內容取代為檔案的內 `numericStepper-plugin.js` 容。
 1. 在檔案 `numericStepper-widget.js` 中，新增下列程式碼以覆寫演算方法以叫用外掛程式並傳回物 `$userControl` 件：
 
-   ```java
+   ```javascript
    render : function() {
         var control = $.xfaWidget.numericInput.prototype.render.apply(this, arguments);
         var $control = $(control);
@@ -266,7 +269,7 @@ Maven原型產生的範例專案會自動建立必要的用戶端程式庫，並
 
 1. 在檔 `numericStepper-widget.js` 案中，覆寫屬 `getOptionsMap` 性以覆寫存取選項，並在停用模式中隱藏+和——按鈕。
 
-   ```java
+   ```javascript
    getOptionsMap: function(){
        var parentOptionsMap = $.xfaWidget.numericInput.prototype.getOptionsMap.apply(this,arguments),
    
