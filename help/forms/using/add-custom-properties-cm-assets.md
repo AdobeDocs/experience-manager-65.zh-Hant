@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '4460'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 透過調整這些藍本中的屬性、路徑和值，您可以根據需求將自訂屬性和標籤新增至不同的資產組。
 
-### 方案：新增公用欄位（屬性）至所有資產類型 {#scenario-adding-a-common-field-property-to-all-the-asset-types}
+### 方案： 新增公用欄位（屬性）至所有資產類型 {#scenario-adding-a-common-field-property-to-all-the-asset-types}
 
 此藍本說明如何新增自訂屬性至所有資產類型（文字、清單、條件和版面片段）和字母。 使用此方案，您可以將屬性「收件者的位置」新增至所有資產和字母。 「收件者位置」屬性有助於識別資產或信件的交付地區。
 
@@ -62,11 +65,11 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       ![覆蓋節點](assets/cmmetapropertiesoverlaynode.png)
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
    1. 按一下「 **全部儲存**」。
 
-1. 在新建立的項目資料夾下，為所有資產新增自訂屬性的節點(範例：GeoLocation)，使用下列步驟：
+1. 在新建立的項目資料夾下，為所有資產新增自訂屬性的節點(範例： GeoLocation)，使用下列步驟：
 
    1. 按一下右鍵項目資料夾，然後選擇「 **建立** 」>「 **建立節點」**。
 
@@ -78,14 +81,14 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **類型：** nt：非結構化
 
-      ![建立節點：地理位置](assets/geographicallocationcreatenode.png)
+      ![建立節點： 地理位置](assets/geographicallocationcreatenode.png)
 
    1. 按一下您建立的新節點（此處為GeoLocation）。 CRX顯示節點的屬性。
    1. 將下列屬性新增至節點（此處為GeoLocation）:
 
       | **名稱** | **類型** | **值** |
       |---|---|---|
-      | fieldLabel | 字串 | 您要指定欄位／屬性的名稱。 (這裡：收件者位置) |
+      | fieldLabel | 字串 | 您要指定欄位／屬性的名稱。 (這裡： 收件者位置) |
       | 名稱 | 字串 | `./extendedproperties/GeoLocation` （保留值與在項目節點下建立的欄位名稱相同） |
       | renderReadOnly | 布林值 (Boolean) | true |
       | sling:resourceType | 字串 | `granite/ui/components/coral/foundation/form/textfield` |
@@ -104,7 +107,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    >
    >您新增之所有資產的通用屬性會顯示在資產屬性的基本標籤中。 依預設，所有資產新增的常用屬性會出現在屬性頁面和資產建立頁面上。 若要隱藏常用屬性，您必須 <!--link to show / hide properties]-->。
 
-### 方案：新增自訂下拉式清單和值至自訂屬性／欄位 {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
+### 方案： 新增自訂下拉式清單和值至自訂屬性／欄位 {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
 
 此藍本說明如何新增自訂屬性至所有資產類型，並新增下拉式值。
 
@@ -125,12 +128,12 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    <tr>
       <td>fieldLabel</td>
       <td>字串</td>
-      <td>您要指定欄位／屬性的名稱。 (這裡：地理配置)</td>
+      <td>您要指定欄位／屬性的名稱。 (這裡： 地理配置)</td>
    </tr>
    <tr>
       <td>名稱</td>
       <td>字串</td>
-      <td>./extendedproperties/geographicallocation（保留值與您在items節點下建立的欄位名相同）</td>
+      <td>。/extendedproperties/geographicallocation（保留值與您在items節點下建立的欄位名相同）</td>
    </tr>
    <tr>
       <td>renderReadOnly</td>
@@ -177,7 +180,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ![下拉式定制](assets/drop-down_customization.png)
 
-### 方案：所有資產類型的公用標籤 {#scenario-common-tab-for-all-asset-types}
+### 方案： 所有資產類型的公用標籤 {#scenario-common-tab-for-all-asset-types}
 
 此案例顯示如何將自訂標籤「收件者」新增至所有資產類型（文字、清單、條件和版面片段）和字母。 您可以在「收件者」索引標籤中，規劃將所有與收件者相關的自訂屬性放入。
 
@@ -202,13 +205,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
       ![在CRX中建立的覆蓋資料夾結構](assets/cmmetadatapropertiesappsfolder.png)
 
       按一下「 **全部儲存**」。
 
-1. 在cmmetadataproperties資料夾下，新增節點，以建立所有資產的自訂標籤(範例：commontab)，使用下列步驟：
+1. 在cmmetadataproperties資料夾下，新增節點，以建立所有資產的自訂標籤(範例： commontab)，使用下列步驟：
 
    1. 按一下右鍵cmmetadataproperties資料夾，然後選 **擇「建立** 」>「 **建立節點」**。
 
@@ -233,7 +236,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
          <tr>
           <td>jcr:title</td>
           <td>字串</td>
-          <td>要指定列的名稱。 (這裡：收件者)</td>
+          <td>要指定列的名稱。 (這裡： 收件者)</td>
          </tr>
          <tr>
           <td>sling:resourceType</td>
@@ -307,7 +310,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
       | **名稱** | **類型** | **值** |
       |---|---|---|
       | fieldLabel | 字串 | 收件者的位置（或您要指定欄位的名稱）。 |
-      | 名稱 | 字串 | ./extendedproperties/GeortalLocation |
+      | 名稱 | 字串 | 。/extendedproperties/GeortalLocation |
       | renderReadOnly | 布林值 (Boolean) | true |
       | sling:resourceType | 字串 | `/libs/granite/ui/components/coral/foundation/form/textfield` |
 
@@ -331,7 +334,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾已建立。 按一下「 **全部儲存**」。
+   1. 按一下&#x200B;**「確定」**。資料夾已建立。 按一下「 **全部儲存**」。
 
 1. 在新建立的項目資料夾中，使用下列步驟新增資產中自訂標籤的節點（此處為mytab —— 此名稱不會顯示在使用者介面中）:
 
@@ -375,7 +378,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    ![自訂索引標籤新增至字母](assets/recipientstab-1.png)
 
-### 方案：新增特定資產類型的自訂屬性 {#scenario-adding-custom-properties-for-specific-asset-types}
+### 方案： 新增特定資產類型的自訂屬性 {#scenario-adding-custom-properties-for-specific-asset-types}
 
 此藍本顯示如何將屬性新增至特定資產類型，例如欄位至所有文字資產。 使用此過程，可以將屬性添加到以下其中一個：
 
@@ -417,11 +420,11 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
       按一下「 **全部儲存**」。
 
-1. 在新建立的項目資料夾中，為資產中的自訂標籤新增節點(範例：customtab)，使用下列步驟：
+1. 在新建立的項目資料夾中，為資產中的自訂標籤新增節點(範例： customtab)，使用下列步驟：
 
    1. 按一下右鍵項目資料夾，然後選擇「 **建立** 」>「 **建立節點」**。
    1. 確保「建立節點」對話框具有以下值，然後按一下「確 **定」**:
@@ -540,7 +543,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    | 片段 | /libs/fd/cm/gui/content/createasset/createfragment/jcr:content/body/items/form/items/fragmentwizard/items/properties/properties/items/tabs2/items/tab1/items1/items |
    | 字母 | /libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/letterproperties/items |
 
-1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
 1. 在您建立的覆蓋項目節點下，建立名稱col4（或任何其他名稱）的節點，然後按一下「全 **部儲存」**。
 
@@ -562,8 +565,8 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    <td>字串</td>
    <td><p>此路徑是指向在以下位置建立的列的指針：</p>
     <ul>
-     <li>對於所有資產類型的公用標籤：/apps/fd/cm/ma/gui/content/cmmetadataproperties/commontab/items/col1</li>
-     <li>針對不同資產類型的不同屬性：/apps/fd/cm/ma/gui/content/cmmetadataproperties/properties//items/tabs/items/customtab/items/col1</li>
+     <li>對於所有資產類型的公用標籤： /apps/fd/cm/ma/gui/content/cmmetadataproperties/commontab/items/col1</li>
+     <li>針對不同資產類型的不同屬性： /apps/fd/cm/ma/gui/content/cmmetadataproperties/properties//items/tabs/items/customtab/items/col1</li>
     </ul> </td>
   </tr>
   <tr>
@@ -603,7 +606,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
       按一下「 **全部儲存**」。
 
@@ -661,7 +664,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
       按一下「 **全部儲存**」。
 
@@ -677,13 +680,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    1. 將下列內容新增至檔案第19行（依版權聲明）。
 
-      ```
+      ```jsp
       <%@page import="java.util.Map"%>
       ```
 
    1. 將函式的下列程式碼新增至檔案結尾，以取得每個自訂屬性的值：
 
-      ```
+      ```jsp
       <%!
           private String getCustomPropertyValue(Map<String, Object> extendedProperties, String propertyName) {
       
@@ -699,7 +702,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    1. 在&lt;tr>標籤(&lt;tr &lt;%= attrs.build()%>>)開始之前新增下列項目：
 
-      ```
+      ```jsp
       <%
           String GeoLocation = "";
           if (asset != null) {
@@ -711,11 +714,11 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
       %>
       ```
 
-      在程式碼中，GeoLocation是您在建立自訂節點／欄位時，在name屬性中設定的值。 在建立自定義節點／欄位時，您指定了屬性的名稱。/extendedproperties/ prefix:./extendedproperties/GeoLocation。 在程式碼中，首碼不是必要的。
+      在程式碼中，GeoLocation是您在建立自訂節點／欄位時，在name屬性中設定的值。 在建立自定義節點／欄位時，您指定了屬性的名稱。/extendedproperties/ prefix: ./extendedproperties/GeoLocation。 在程式碼中，首碼不是必要的。
 
    1. 若要在UI中顯示新屬性，請在結束tr(&lt;/tr>)標籤之前，新增TD標籤，如下所示：
 
-      ```
+      ```jsp
       <td is="coral-td" value="<%= xssAPI.encodeForHTMLAttr(geographicalLocation) %>"><%= xssAPI.encodeForHTML(geographicalLocation) %></td>
       ```
 
@@ -727,7 +730,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    此過程中添加的UI列和屬性將針對所有資產類型顯示。 不過，這些屬性中的值只能針對您原本新增自訂屬性的資產類型輸入和顯示。
 
-   例如，使用藍本：新增特定資產類型的自訂屬性，您新增自訂屬性至文字資產，您只能在文字資產中輸入自訂屬性。 但是，如果您在UI中顯示該自訂屬性，則所有資產類型都會顯示該欄。
+   例如，使用藍本： 新增特定資產類型的自訂屬性，您新增自訂屬性至文字資產，您只能在文字資產中輸入自訂屬性。 但是，如果您在UI中顯示該自訂屬性，則所有資產類型都會顯示該欄。
 
    ![custompropertylistview](assets/custompropertyinlistview.png)
 
@@ -857,7 +860,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
    1. 按一下「 **全部儲存**」。
 
@@ -903,7 +906,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
       **匹配節點類型：** 已選取
 
-   1. 按一下 **確定**。 資料夾結構會建立在應用程式資料夾中。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
    1. 按一下「 **全部儲存**」。
 
