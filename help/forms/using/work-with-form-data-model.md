@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '4102'
 ht-degree: 0%
@@ -200,7 +200,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 1. 在head.jsp檔案中包含以下文本：
 
-   ```
+   ```jsp
    <%Map paraMap = new HashMap();
     paraMap.put("<request_attribute>",request.getParameter("<request_attribute>"));
     request.setAttribute("paramMap",paraMap);%>
@@ -510,24 +510,24 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
 
 在此示例中，根據Swagger檔案中定義的最大、最小和所需約束來驗證輸入資料。 只有當訂單ID存在且其值介於1和10之間時，輸入資料才符合驗證標準。
 
-```xml
-parameters: [
-{
-name: "orderId",
-in: "path",
-description: "ID of pet that needs to be fetched",
-required: true,
-type: "integer",
-maximum: 10,
-minimum: 1,
-format: "int64"
-}
-]
+```json
+   parameters: [
+   {
+   name: "orderId",
+   in: "path",
+   description: "ID of pet that needs to be fetched",
+   required: true,
+   type: "integer",
+   maximum: 10,
+   minimum: 1,
+   format: "int64"
+   }
+   ]
 ```
 
 如果輸入資料不符合驗證標準，則顯示例外。 如果日誌級別設定為 **Debug**，則錯誤將記錄 **到error.log** 檔案。 例如，
 
-```java
+```verilog
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}
 ```
 
