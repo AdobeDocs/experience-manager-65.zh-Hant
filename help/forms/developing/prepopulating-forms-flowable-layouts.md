@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
-source-git-commit: ebb60e79aa7fb45e059e2d2451f6d549cd24b8b0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '3489'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +43,7 @@ source-git-commit: ebb60e79aa7fb45e059e2d2451f6d549cd24b8b0
 
 若要預先填入範例確認表單，您必須建立一個XML資料來源，其中包含三個XML元素，這些元素會符合表單中的三個欄位。 此表單包含下列三個欄位： `FirstName`、 `LastName`和 `Amount`。 第一步是建立XML資料來源，其中包含與表單設計欄位相符的XML元素。 下一步是為XML元素指派資料值，如下列XML程式碼所示。
 
-```as3
+```xml
      <Untitled>
          <FirstName>Jerry</FirstName>
          <LastName>Johnson</LastName>
@@ -111,7 +114,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 以下XML資料來源用於預先填入採購單表單。
 
-```as3
+```xml
      <header>
          <!-- XML elements used to prepopulate non-repeating fields such as address
          <!and city
@@ -261,7 +264,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
       ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
 
-   * 重複表格靜態部分（在XML資料來源圖中，這些欄位如A節所示）中每個欄位的最後一個子步驟，將所有剩餘的元素新增至標題元素。(請參 [閱瞭解資料子群組](#understanding-data-subgroups)。)
+   * 重複表格靜態部分（在XML資料來源圖中，這些欄位如A節所示）中每個欄位的最後一個子步驟，將所有剩餘的元素新增至標題元素。 (請參 [閱瞭解資料子群組](#understanding-data-subgroups)。)
    * 呼叫物件的方法，以建立XML資料來源 `Document` 的詳細資 `createElement` 料。 將表示元素名稱的字串值傳遞至方 `createElement` 法。 將返回值轉換為 `Element`。 接著，呼叫物件的方法，將詳細資料元素附加 `root` 至根元素 `appendChild` ，並將詳細資料元素物件傳遞為引數。 附加到細節元素的XML元素對應於表單的動態部分。 下列程式碼行會顯示此應用程式邏輯：
 
       ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
@@ -294,6 +297,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
    * 存 `PDFFormRenderSpec` 儲運行時選項的對象。
    * 包 `URLSpec` 含Forms服務所需URI值的對象。
    * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
+
    該方 `renderPDFForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
 
    * 建立用 `javax.servlet.ServletOutputStream` 於傳送表單資料串流至用戶端網頁瀏覽器的物件。
@@ -305,7 +309,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API將可排程的版面預先填入表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API將可排程的版面預先填入表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -337,7 +341,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
       ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
-   * 重複表格靜態部分（在XML資料來源圖中，這些欄位如A節所示）中每個欄位的最後一個子步驟，將所有剩餘的元素新增至標題元素。(請參 [閱瞭解資料子群組](#understanding-data-subgroups)。)
+   * 重複表格靜態部分（在XML資料來源圖中，這些欄位如A節所示）中每個欄位的最後一個子步驟，將所有剩餘的元素新增至標題元素。 (請參 [閱瞭解資料子群組](#understanding-data-subgroups)。)
    * 呼叫物件的方法，以建立XML資料來源 `Document` 的詳細資 `createElement` 料。 將表示元素名稱的字串值傳遞至方 `createElement` 法。 將返回值轉換為 `Element`。 接著，呼叫物件的方法，將詳細資料元素附加 `root` 至根元素 `appendChild` ，並將詳細資料元素物件傳遞為引數。 附加到細節元素的XML元素對應於表單的動態部分。 下列程式碼行顯示此應用程式邏輯：
 
       ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
@@ -374,6 +378,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
    * 由方 `javax.xml.rpc.holders.LongHolder` 法填充的空對象。 （此引數將儲存表單中的頁數）。
    * 由方 `javax.xml.rpc.holders.StringHolder` 法填充的空對象。 （此引數將儲存地區值）。
    * 包含 `com.adobe.idp.services.holders.FormsResultHolder` 此操作結果的空對象。
+
    該方 `renderPDFForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
 
    * 獲取 `FormResult` 對象資料成員的 `com.adobe.idp.services.holders.FormsResultHolder` 值以建立 `value` 對象。
@@ -383,6 +388,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
    * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
    * 建立位元組陣列，並透過叫用物件的方 `BLOB` 法來填入該 `getBinaryData` 陣列。 此任務將對象的內 `FormsResult` 容分配給位元組陣列。
    * 叫用物 `javax.servlet.http.HttpServletResponse` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+
    >[!NOTE]
    >
    >該方 `renderPDFForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
