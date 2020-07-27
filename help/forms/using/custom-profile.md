@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Sling指令碼是JSP指令碼。 這些JSP指令碼可當成容器，用來將�
 
 ## formRuntime.jsp {#formruntime-jsp-br}
 
-formRuntime.jsp模組包含客戶端庫的引用。 它還描述了從請求中提取地區資訊並將本地化消息包含在請求中的方法。 您可以在formRuntime.jsp中加入自訂的javascript libs或樣式。
+formRuntime.jsp模組包含客戶端庫的引用。 它還描述了從請求中提取地區資訊並將本地化消息包含在請求中的方法。 您可以在formRuntime.jsp中加入自己的customJavaScript Libs或樣式。
 
 ## config.jsp {#config-jsp}
 
@@ -44,7 +47,7 @@ formBody.jsp模組用於XFA表單的HTML表示。
 
 ## nav_footer.jsp {#nav-footer-jsp}
 
-一開始，HTML5表格只會轉譯表格的第一頁。 當使用者捲動表格時，會載入其餘的表格。 它讓載入體驗更快速。 nav_footer.jsp元件包含所有樣式和所需元素，以方便在捲動時載入頁面。
+一開始，HTML5表格只會轉譯表格的第一頁。 當使用者捲動表格時，會載入其餘的表格。 它讓載入體驗更快速。 nav_footer.jsp元件包含所有樣式和所需元素，以便在捲動時載入頁面。
 
 ## footer.jsp {#footer-jsp}
 
@@ -56,13 +59,13 @@ footer.jsp模組為空。 它允許您添加僅用於用戶交互的指令碼。
 
 ### 建立配置檔案節點 {#create-profile-node}
 
-1. 導覽至URL上的CRX DE介面：並 `https://'[server]:[port]'/crx/de` 使用管理員憑據登錄到介面。
+1. 導覽至URL上的CRX DE介面： `https://'[server]:[port]'/crx/de` 並使用管理員憑據登錄到介面。
 
 1. 在左窗格中，導覽至位置/ *內容/xfaforms/描述檔*。
 
 1. 複製節點預設值，並將節點貼到名稱為hrform的不&#x200B;*同資料夾(/content/profiles*) *中*。
 
-1. 選擇新節點、 *hrform*，然後添加字串屬性： *sling:resourceType* with value:hrform/ *demo*。
+1. 選擇新節點、 *hrform*，然後添加字串屬性： *sling:resourceType* with value: *hrform/demo*。
 
 1. 按一下工具列選單中的「全部儲存」以儲存變更。
 
