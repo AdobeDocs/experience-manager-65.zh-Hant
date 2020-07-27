@@ -10,24 +10,27 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f12c10c3-1ce6-4415-ba9d-5349d1888237
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 
 # 加密服務Java API快速入門(SOAP) {#encryption-service-java-api-quickstart-soap}
 
-[快速入門（SOAP模式）:使用Java API加密PDF檔案](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API加密PDF檔案](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API移除密碼加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API移除密碼加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API使用憑證加密PDF檔案](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API使用憑證加密PDF檔案](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API移除憑證式加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API移除憑證式加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API解除加密的PDF檔案鎖定](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API解除加密的PDF檔案鎖定](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API確定加密類型](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API確定加密類型](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
@@ -35,11 +38,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 >
 >「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入門（SOAP模式）:使用Java API加密PDF檔案 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API加密PDF檔案 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
 
 下列Java程式碼範例會加密名為 *Loan.pdf* 、密碼值為的PDF檔案 `OpenPassword`。 主密碼為 `PermissionPassword`。 安全的PDF檔案會儲存為名為 *EncryptLoan.pdf的PDF檔案*。 (請參 [閱使用密碼加密PDF檔案](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -155,11 +158,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  }
 ```
 
-## 快速入門（SOAP模式）:使用Java API移除密碼加密 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API移除密碼加密 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
 
 以下Java代碼示例從名為 *EncryptLoan.pdf的PDF文檔中刪除基於密碼的加密*。 用於刪除基於密碼的加密的主密碼值是 *PermissionPassword*。 無擔保的PDF檔案會儲存為名為 *noEncryptionLoan.pdf的PDF檔案*。 (請參 [閱刪除密碼加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -252,11 +255,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  }
 ```
 
-## 快速入門（SOAP模式）:使用Java API使用憑證加密PDF檔案 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API使用憑證加密PDF檔案 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
 
 下列Java程式碼範例會使用名為 *Encryption.cer的憑證來加密名為* Loan.pdf *的PDF檔案*。 加密的PDF檔案會儲存為名為 *EncryptLoanCert.pdf的PDF檔案*。 (請參 [閱使用憑證加密PDF檔案](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -381,11 +384,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API移除憑證式加密 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API移除憑證式加密 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
 
 以下Java代碼示例從名為 *EncryptLoanCert.pdf的PDF文檔中刪除基於證書的加密*。 用於刪除加密的公鑰的別名為 `Encryption`。 無擔保的PDF檔案會儲存為名為 *noEncryptionLoan.pdf的PDF檔案*。 (請參 [閱移除憑證式加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption))。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -478,11 +481,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  }
 ```
 
-## 快速入門（SOAP模式）:使用Java API解除加密的PDF檔案鎖定 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API解除加密的PDF檔案鎖定 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
 
 下列Java程式碼範例會解除鎖定名為 *EncryptLoan.pdf的密碼加密PDF檔案*。 (請參閱解 [除加密的PDF檔案鎖定](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -574,11 +577,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API確定加密類型 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API確定加密類型 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
 
 以下Java代碼示例確定保護名為 *EncryptLoan.pdf的PDF文檔的加密類型*。 (請參閱 [確定加密類型](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
