@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 1%
@@ -54,7 +54,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需�
    * 15 GB的臨時空間，用於基於Microsoft Windows的安裝。
    * 6 GB的臨時空間，用於基於UNIX的安裝。
 
-* 為作者和發佈實例設定複製和反向複製。 有關詳細資訊，請參 [閱複製](/help/sites-deploying/replication.md)。
+* 為作者和發佈實例設定複製和反向複製。 For details, see [Replication](/help/sites-deploying/replication.md).
 * 對於基於UNIX的系統：
 
    * 從安裝介質安裝以下32位軟體包：
@@ -141,7 +141,7 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 
 1. 將下列屬性新增至sling.properties檔案：
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
