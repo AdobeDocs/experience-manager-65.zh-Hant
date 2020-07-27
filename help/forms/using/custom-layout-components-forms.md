@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5f470768fd3368e3b2118333b8a84f8331e7fa2e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -88,7 +91,7 @@ qtip
    }
    ```
 
-   ```
+   ```javascript
    /** function for toggling the navigators **/
    var toggleNav = function () {
    
@@ -116,7 +119,7 @@ qtip
 
    此外，請更新。jsp檔案中包含指令碼的路徑。 例如，請按如下方 `customPanelLayout.jsp` 式更新檔案：
 
-   ```
+   ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -145,7 +148,7 @@ qtip
 
    文 `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` 件：
 
-   ```
+   ```html
    <%-- jsp governing the navigation part --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -174,7 +177,7 @@ qtip
 
    更新 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
 
-   ```
+   ```html
    <%-- jsp governing the panel content --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
