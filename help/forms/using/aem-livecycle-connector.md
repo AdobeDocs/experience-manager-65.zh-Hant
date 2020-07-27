@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 0%
@@ -33,7 +33,7 @@ AEM LiveCycle Connector是 [AEM Forms附加套件的一部分](/help/forms/using
 
 * **伺服器URL** —— 指定LiveCycle伺服器的URL。 如果您想要LiveCycle和AEM透過https通訊，請使用下列JVM啟動AEM
 
-   ```
+   ```java
    argument
     -Djavax.net.ssl.trustStore=<<em>path to LC keystore</em>>
    ```
@@ -118,7 +118,7 @@ AEM LiveCycle Connector可將這些用戶端例項公開為OSGi服務，讓您�
 
    上述程式碼片段會啟動GeneratePdfServiceClient的createPDF API，將檔案轉換為PDF。 您可以使用下列代碼在JSP中執行類似的調用。 主要差異在於下列程式碼使用Sling ScriptHelper存取GeneratePdfServiceClient。
 
-   ```java
+   ```jsp
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>
    <%@ page import="com.adobe.livecycle.generatepdf.client.CreatePDFResult" %>
    <%@ page import="com.adobe.idp.Document" %>
