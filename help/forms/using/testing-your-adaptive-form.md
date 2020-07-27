@@ -1,6 +1,6 @@
 ---
-title: 「教學課程：測試您的最適化表單」
-seo-title: 「教學課程：測試您的最適化表單」
+title: 「教學課程： 測試您的最適化表單」
+seo-title: 「教學課程： 測試您的最適化表單」
 description: 使用自動化測試一次測試多個可調式表單。
 seo-description: 使用自動化測試一次測試多個可調式表單。
 uuid: 6d182bbc-b47a-4c97-af70-c960b52fdfac
@@ -8,12 +8,15 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '966'
+ht-degree: 2%
 
 ---
 
 
-# 教學課程：測試您的最適化表單{#tutorial-testing-your-adaptive-form}
+# 教學課程： 測試您的最適化表單{#tutorial-testing-your-adaptive-form}
 
 ![](do-not-localize/10-test-your-adaptive-form.png)
 
@@ -27,7 +30,7 @@ AEM Forms提供測試架構Calvin，以自動測試您的調適性表單。 使�
 * [建立最適化表單的測試](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-case-to-prefill-values-in-an-adaptive-form)
 * [執行為最適化表單建立的測試套裝和測試](#step-run-all-the-tests-in-a-suite-or-individual-tests-cases)
 
-## 步驟1:建立測試套裝 {#step-create-a-test-suite}
+## 步驟1: 建立測試套裝 {#step-create-a-test-suite}
 
 測試套裝包含一組測試案例。 您可以有多個測試套裝。 建議每個表單使用個別的測試套裝。 若要建立測試套裝：
 
@@ -75,14 +78,14 @@ AEM Forms提供測試架構Calvin，以自動測試您的調適性表單。 使�
 1. 以滑鼠右鍵按一下「 **[!UICONTROL WeRetailFormTestCases」節點]** ，按一下「 **建立** >建 **立檔案**」。 在「名稱」欄位中，輸入並 `js.txt` 按一下「 **確定」**。
 1. 開啟js.txt檔案以進行編輯、新增下列程式碼並儲存檔案：
 
-   ```
+   ```text
    #base=.
     init.js
    ```
 
 1. 在節點中建立一個檔案init.js `WeRetailFormTestCases`。 將下列程式碼新增至檔案，然後點選「全 **[!UICONTROL 部儲存」]**。
 
-   ```
+   ```javascript
    (function(window, hobs) {
        'use strict';
        window.testsuites = window.testsuites || {};
@@ -102,7 +105,7 @@ AEM Forms提供測試架構Calvin，以自動測試您的調適性表單。 使�
 
    ![we-retail-test-suite](assets/we-retail-test-suite.png)
 
-## 步驟2:建立測試案例，以在最適化表單中預先填寫值 {#step-create-a-test-case-to-prefill-values-in-an-adaptive-form}
+## 步驟2: 建立測試案例，以在最適化表單中預先填寫值 {#step-create-a-test-case-to-prefill-values-in-an-adaptive-form}
 
 測試案例是一組動作，可測試特定功能。 例如，預先填寫表單的所有欄位，並驗證幾個欄位，以確保輸入正確的值。
 
@@ -206,7 +209,7 @@ AEM Forms提供測試架構Calvin，以自動測試您的調適性表單。 使�
 
    測試案例已建立並可供執行。 您可以建立測試案例來驗證自適應表單的各個方面，例如檢查計算指令碼的執行、驗證模式，以及驗證自適應表單的提交體驗。 如需有關最適化表單測試各方面的資訊，請參閱自動化最適化表單測試。
 
-## 步驟3:在套裝或個別測試案例中執行所有測試 {#step-run-all-the-tests-in-a-suite-or-individual-tests-cases}
+## 步驟3: 在套裝或個別測試案例中執行所有測試 {#step-run-all-the-tests-in-a-suite-or-individual-tests-cases}
 
 測試套裝可以有多個測試案例。 您可以一次或個別執行測試套裝中的所有測試案例。 當您執行測試時，圖示會指出結果：
 
@@ -218,6 +221,7 @@ AEM Forms提供測試架構Calvin，以自動測試您的調適性表單。 使�
 
    1. 在「測試」面板中，點選「 **[!UICONTROL We retail - Tests(1)」]**。 此套裝會展開以顯示測試清單。
    1. 點選「執 **[!UICONTROL 行測試]** 」按鈕。 當測試執行時，螢幕右側的空白區域會以最適化形式取代。
+
    ![run-all-test](assets/run-all-test.png)
 
 1. 若要從測試套裝執行單一測試：
