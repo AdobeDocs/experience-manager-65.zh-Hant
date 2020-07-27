@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 1%
@@ -337,7 +337,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 該表具有�
 
 1. 按一下右鍵節點，按一下 **[!UICONTROL 建立新檔案]**，然後建立副檔名為。txt的檔案。 例如，將下 `js.txt`列程式碼新增至新建立的。txt檔案，然後按一下「全 **[!UICONTROL 部儲存」]**。
 
-   ```
+   ```javascript
    #base=util
     util.js
    ```
@@ -348,7 +348,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 該表具有�
 
 1. 將下列程式碼新增至util.js檔案，然後按一下「全 **[!UICONTROL 部儲存」]**。 代碼驗證檔案名的長度。
 
-   ```
+   ```javascript
    /*
     * ADOBE CONFIDENTIAL
     * ___________________
