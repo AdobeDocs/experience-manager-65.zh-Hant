@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '3669'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ FirstAppSolution/ *PreLoanProcess* 進程接受名為 *formData* 的輸入參數
 
 當申 `FirstAppSolution/PreLoanProcess` 請人提交申請時，該程式被調用，該申請被表示為XML資料。 輸入進程變數的名稱為， `formData` 其資料類型為XML。 在本討論中，假設以下XML資料是用來輸入程式的 `FirstAppSolution/PreLoanProcess` 。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <LoanApp>
  <Name>Sam White</Name>
@@ -95,7 +98,7 @@ Java servlet將執行以下任務：
 
 ### 建立網頁專案 {#create-a-web-project}
 
-建立Web應用程式的第一步是建立Web專案。 本檔案所基於的Java IDE是Eclipse 3.3。使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 將名為 *index.html* 和Java servlet的HTML頁面新增至專案。
+建立Web應用程式的第一步是建立Web專案。 本檔案所基於的Java IDE是Eclipse 3.3。 使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 將名為 *index.html* 和Java servlet的HTML頁面新增至專案。
 
 以下清單指定要包含在Web項目中的JAR檔案：
 
@@ -141,7 +144,7 @@ Java servlet將執行以下任務：
 
 建立從Java servlet內調用 `FirstAppSolution/PreLoanProcess` 進程的Java應用程式邏輯。 下列程式碼顯示 `SubmitXML` Java Servlet的語法：
 
-```as3
+```java
      public class SubmitXML extends HttpServlet implements Servlet {
          public void doGet(HttpServletRequest req, HttpServletResponse resp
          throws ServletException, IOException {
@@ -165,7 +168,7 @@ Java servlet將執行以下任務：
 1. 使用其 `java.util.HashMap` 建構函式建立物件。
 1. 針對每 `java.util.HashMap` 個輸入參 `put` 數叫用物件的方法，以傳遞至長期的程式。 請確定您指定流程輸入參數的名稱。 由於此 `FirstAppSolution/PreLoanProcess` 過程需要一個類型( `XML` 命名 `formData`)的輸入參數，因此您只需調用一 `put` 次方法。
 
-   ```as3
+   ```java
     //Get the XML to pass to the FirstAppSolution/PreLoanProcess process
     org.w3c.dom.Document inXML = GetDataSource(name,phone,amount);
     
@@ -180,6 +183,7 @@ Java servlet將執行以下任務：
    * 表示流程操作名稱的字串值。 長壽命流程操作的名稱為 `invoke`。
    * 包 `java.util.HashMap` 含服務操作所需參數值的對象。
    * 一個布爾值，它 `false`指定建立非同步請求（此值適用於調用長壽命進程）。
+
    >[!NOTE]
    >
    >*將值true傳入createInvocationRequest方法的第四個參數，即可叫用短暫的程式。 傳遞值true會建立同步請求。*
@@ -187,7 +191,7 @@ Java servlet將執行以下任務：
 1. 呼叫物件的方法並傳遞物件，將呼叫 `ServiceClient` 請求傳 `invoke` 送至AEM Forms `InvocationRequest` 。 方法 `invoke` 返回對 `InvocationReponse` 像。
 1. 長期進程返回一個字串值，該字串值表示調用標識值。 調用物件的方法 `InvocationReponse` 來擷取此 `getInvocationId` 值。
 
-   ```as3
+   ```java
     //Send the invocation request to the long-lived process and
     //get back an invocation response object
     InvocationResponse lcResponse = myServiceClient.invoke(lcRequest);
@@ -196,11 +200,11 @@ Java servlet將執行以下任務：
 
 1. 將調用標識值寫入客戶端Web瀏覽器。 您可以使用例 `java.io.PrintWriter` 項將此值寫入用戶端網頁瀏覽器。
 
-### 快速入門：使用調用API調用長壽命進程 {#quick-start-invoking-a-long-lived-process-using-the-invocation-api}
+### 快速入門： 使用調用API調用長壽命進程 {#quick-start-invoking-a-long-lived-process-using-the-invocation-api}
 
 以下Java代碼示例表示調用進程的Java servlet `FirstAppSolution/PreLoanProcess` 。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -359,7 +363,7 @@ Java servlet將執行以下任務：
 
 Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
-```as3
+```java
  //Get the values that are passed from the Loan HTML page
  String name = request.getParameter("name");
  String phone = request.getParameter("phone");
@@ -368,7 +372,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 以下HTML程式碼代表在設定開發環境期間建立的index.html檔案。 (請參 [閱建立Web專案](invoking-human-centric-long-lived.md#create-a-web-project)。)
 
-```as3
+```xml
  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
  <html>
  <head>
@@ -492,7 +496,7 @@ ASP.NET應用程式執行以下任務：
 1. 在「項目」菜單中，選擇「添 **加服務參考」**。
 1. 在「地 **址** 」對話框中，為「作業管理器」服務指定WSDL。
 
-   ```as3
+   ```java
     https://hiro-xp:8080/soap/services/JobManager?WSDL&lc_version=9.0.1
    ```
 
@@ -501,7 +505,7 @@ ASP.NET應用程式執行以下任務：
 1. 在「項目 **」菜單中** ，選擇「 **添加服務參考」**。
 1. 在「位 **址** 」對話方塊中，指定FirstAppSolution/PreLoanProcess程式的WSDL。
 
-   ```as3
+   ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?WSDL&lc_version=9.0.1
    ```
 
@@ -559,7 +563,7 @@ ASP.NET應用程式執行以下任務：
 
 當從ASP.NET應用程式叫用需要XML資料的程式時，您可使用XML資料類型。 也就是說，您無法將實 `System.Xml.XmlDocument` 例傳遞至流程。 要傳遞給該進程的此XML實例的完全限定名稱為 `InvokePreLoanProcess.PreLoanProcess.XML`。 將例項 `System.Xml.XmlDocument` 轉換為 `InvokePreLoanProcess.PreLoanProcess.XML`。 您可以使用下列程式碼來執行此工作。
 
-```as3
+```java
  //Create the XML to pass to the FirstAppSolution/PreLoanProcess process
  XmlDocument myXML = CreateXML(userName, phone, amount);
  
@@ -577,7 +581,7 @@ ASP.NET應用程式執行以下任務：
 1. 使用其 `FirstAppSolution_PreLoanProcessClient` 預設建構函式建立物件。
 1. 使用建 `FirstAppSolution_PreLoanProcessClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務和編碼類型：
 
-   ```as3
+   ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?blob=mtom
    ```
 
@@ -585,7 +589,7 @@ ASP.NET應用程式執行以下任務：
 
    >[!NOTE]
    >
-   >以 `hiro-xp`代管AEM Forms的J2EE應用程式伺服器的IP位址取代*。*
+   >以 `hiro-xp`代管AEM Forms的J2EE應用程式伺服器的IP位址取代*。 *
 
 1. 通過獲 `System.ServiceModel.BasicHttpBinding` 取資料成員的值建立 `FirstAppSolution_PreLoanProcessClient.Endpoint.Binding` 對象。 將返回值轉換為 `BasicHttpBinding`。
 1. 將物 `System.ServiceModel.BasicHttpBinding` 件的資料 `MessageEncoding` 成員設為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
@@ -595,6 +599,7 @@ ASP.NET應用程式執行以下任務：
    * 為資料成員分配相應的口令值 `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.Password`。
    * 為資料成員 `HttpClientCredentialType.Basic` 分配常數值 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 為資料成員 `BasicHttpSecurityMode.TransportCredentialOnly` 分配常數值 `BasicHttpBindingSecurity.Security.Mode`。
+
    下列程式碼範例顯示這些工作。
 
    ```as3
@@ -614,7 +619,7 @@ ASP.NET應用程式執行以下任務：
 1. 將例項 `System.Xml.XmlDocument` 轉換為 `InvokePreLoanProcess.PreLoanProcess.XML` （此應用程式邏輯如下列程式碼範例所示）。
 1. 叫用 `FirstAppSolution/PreLoanProcess` 物件的方 `FirstAppSolution_PreLoanProcessClient` 法以叫用 `invoke_Async` 程式。 此方法返回一個字串值，該字串值表示長壽命進程的調用標識符值。
 1. 使用is建 `JobManagerClient` 構函式建立。 （請確定您已經為Job Manager服務設定了服務參考。）
-1. 重複步驟1-5。 指定步驟2的下列URL: `https://hiro-xp:8080/soap/services/JobManager?blob=mtom`。
+1. 重複步驟1-5。 指定步驟2的下列URL: `https://hiro-xp:8080/soap/services/JobManager?blob=mtom`.
 1. 使用其 `JobId` 建構函式建立物件。
 1. 使用物 `JobId` 件方 `id` 法的傳回值設定物 `FirstAppSolution_PreLoanProcessClient` 件的資料成 `invoke_Async` 員。
 1. 為對 `value` 像的資料 `JobId` 成員指 `persistent` 定true。
@@ -623,11 +628,11 @@ ASP.NET應用程式執行以下任務：
 1. 將調用標識符值分配給 `LabelJobID.Text` 欄位。
 1. 將狀態值指派給欄 `LabelStatus.Text` 位。
 
-### 快速入門：使用web service API叫用長期的程式 {#quick-start-invoking-a-long-lived-process-using-the-web-service-api}
+### 快速入門： 使用web service API叫用長期的程式 {#quick-start-invoking-a-long-lived-process-using-the-web-service-api}
 
 以下C#代碼示例調用該 `FirstAppSolution/PreLoanProcess`過程。
 
-```as3
+```csharp
  ???/**
      * Ensure that you create a .NET project that uses
      * MS Visual Studio 2008 and version 3.5 of the .NET
@@ -851,7 +856,7 @@ ASP.NET應用程式執行以下任務：
 1. 建立XML資料來源，以便透過建 `FirstAppSolution/PreLoanProcess` 立XML例項傳遞至程式。 （此應用程式邏輯如下列程式碼範例所示。）
 1. 使用其建構子建立Object類型的對象。 指定程式輸入參數的名稱，將XML指派給物件，如下列程式碼所示：
 
-   ```as3
+   ```csharp
     //Get the XML data to pass to the AEM Forms process
     var xml:XML = createXML();
     var params:Object = new Object();
@@ -861,7 +866,7 @@ ASP.NET應用程式執行以下任務：
 1. 呼叫 `FirstAppSolution/PreLoanProcess` 例項的方 `mx:RemoteObject` 法以叫用 `invoke_Async` 程式。 傳遞包 `Object` 含輸入參數的參數。 (請參 [閱傳遞輸入值](/help/forms/developing/invoking-aem-forms-using-remoting.md)。)
 1. 檢索從長壽命進程返回的調用標識值，如以下代碼所示：
 
-   ```as3
+   ```csharp
     // Handles async call that invokes the long-lived process
     private function resultHandler(event:ResultEvent):void
     {
@@ -874,7 +879,7 @@ ASP.NET應用程式執行以下任務：
 
 以下Flex程式碼範例會叫用此 `FirstAppSolution/PreLoanProcess` 程式。
 
-```as3
+```java
  <?xml version="1.0" encoding="utf-8"?>
  
  <mx:Application  xmlns="*" backgroundColor="#FFFFFF"
