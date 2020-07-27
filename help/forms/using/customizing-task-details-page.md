@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
    例如，要在任務詳細資訊頁中添加有關「需要路由選擇」的資訊，可以在任務塊中添加以下鍵值對：
 
-   ```
+   ```json
    "todo" : {
        .
        .
