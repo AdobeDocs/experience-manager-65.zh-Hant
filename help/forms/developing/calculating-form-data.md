@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 2e4b8ee13257758cba6b76012fed4958f7eabbd7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1842'
+ht-degree: 0%
 
 ---
 
@@ -77,7 +80,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 位於此表單設計中的指令碼語法如下：
 
-```as3
+```javascript
      NumericField3 = NumericField2 + NumericField1
 ```
 
@@ -142,8 +145,9 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
       * 包 `com.adobe.idp.Document` 含表單資料的物件。
       * 一個字串值，它指定包括所有相關HTTP標題的環境變數。 必須通過為環境變數指定一個或多個值來指定要處理的內 `CONTENT_TYPE` 容類型。 例如，若要處理XML和PDF資料，請為此參數指定下列字串值： `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
-      * 指定標題值的 `HTTP_USER_AGENT` 字串值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+      * 指定標題值的 `HTTP_USER_AGENT` 字串值； 例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
       * 存 `RenderOptionsSpec` 儲運行時選項的對象。
+
       該方 `processFormSubmission` 法返回包 `FormsResult` 含表單提交結果的對象。
 
    * 請叫用物件的方法，以確認與已提交表 `1` 單相關聯的處 `FormsResult` 理狀態 `getAction` 為。 如果此方法返回值 `1`，則會執行計算，並將資料寫回客戶端Web瀏覽器。
@@ -188,7 +192,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
       * 包 `BLOB` 含表單資料的物件。
       * 指定環境變數的字串值包括所有相關的HTTP標頭。 例如，您可以指定下列字串值： `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * 指定標題值的 `HTTP_USER_AGENT` 字串值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+      * 指定標題值的 `HTTP_USER_AGENT` 字串值； 例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
       * 存 `RenderOptionsSpec` 儲運行時選項的對象。 如需詳細資訊，請造訪。
       * 由方 `BLOBHolder` 法填充的空對象。
       * 由方 `javax.xml.rpc.holders.StringHolder` 法填充的空對象。
@@ -197,6 +201,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
       * 由方 `javax.xml.rpc.holders.ShortHolder` 法填充的空對象。
       * 由方 `MyArrayOf_xsd_anyTypeHolder` 法填充的空對象。 此參數用於儲存隨表單一起提交的檔案附件。
       * 由方 `FormsResultHolder` 法填入的空對象，其表單為已提交。
+
       方 `processFormSubmission` 法會以表 `FormsResultHolder` 單提交的結果填入參數。 該方 `processFormSubmission` 法返回包 `FormsResult` 含表單提交結果的對象。
 
    * 請叫用物件的方法，以確認與已提交表 `1` 單相關聯的處 `FormsResult` 理狀態 `getAction` 為。 如果此方法返回值 `1`，則會執行計算，並將資料寫回客戶端Web瀏覽器。
