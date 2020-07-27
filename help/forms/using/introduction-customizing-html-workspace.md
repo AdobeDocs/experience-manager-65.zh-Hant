@@ -11,7 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: 021c6606-8cd3-472c-a80b-b1bcace7e87f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '1786'
+ht-degree: 0%
 
 ---
 
@@ -202,21 +205,21 @@ HTML範本可協助定義工作區使用者介面的外觀和版面。 透過更
 
          * libs —— 包含AEM Forms工作區中使用的所有協力廠商程式庫。
          * 授權——包含HTML和JS檔案的授權，以及將這些授權首碼放在個別來源檔案的程式碼。
-         * Minifier —— 用於自訂Javascript程式碼的組合、精簡和醜化。
-         * resourcejs_optimizer —— 用於Javascript來源的組合、精簡和優化。
+         * minifier —— 用於組合、精簡和使用自訂JavaScript程式碼的建立。
+         * resourcejs_optimizer —— 用於JavaScript來源的組合、精簡和醜化。
          * resource_generator —— 用於生成register.js和modelcontrollerpath.js。
          * 執行時期：
 
             * 初始設定式——包含用來初始化AEM Forms工作區中主幹檢視和模型的初始設定式。js。
             * 模型——包含AEM Forms工作區中所有元件的骨幹模型。
-            * routes —— 包含javascript檔案和HTML檔案，這些檔案會在AEM Forms工作區中載入開始程式、工作、追蹤和偏好設定。
+            * routes —— 包含JavaScript檔案和HTML檔案，這些檔案會在AEM Forms工作區中載入開始程式、工作、追蹤和偏好設定。
             * 服務——包含用於AEM Forms工作區的service.js。 所有伺服器呼叫都是透過service.js進行。
             * 範本——包含所有範本，即AEM Forms工作區中所有檢視的HTML檔案。
             * util —— 包含AEM Forms工作區中使用的所有公用程式檔案(javascript)。
             * 檢視——包含AEM Forms工作區中所有元件的骨幹檢視。
          * main.js
          * router.js
-      * libs/ws:pdf.html和pluginPing.pdf用於在AEM Forms工作區中載入PDF表格，而WSNextAdapter.swf用於在AEM Forms工作區中載入SWF表格和參考線。
+      * libs/ws: pdf.html和pluginPing.pdf用於在AEM Forms工作區中載入PDF表格，而WSNextAdapter.swf用於在AEM Forms工作區中載入SWF表格和參考線。
       * 地區設定：
 
          * de-DE —— 包含德文版的translation.json。
@@ -351,7 +354,7 @@ mvn clean -P Dev安裝在client-pkg上
 
       * 初始設定式——包含初始設定式。js和modelcontrollerpath.js。
       * 模型——包含AEM Forms工作區中所有元件的模型。
-      * routes —— 包含javascript檔案和HTML檔案，這些檔案會在AEM Forms工作區中載入開始程式、工作、追蹤和偏好設定。
+      * routes —— 包含JavaScript檔案和HTML檔案，這些檔案會在AEM Forms工作區中載入開始程式、工作、追蹤和偏好設定。
       * 服務——包含用於AEM Forms工作區的service.js。
       * 範本——包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
       * util —— 包含AEM Forms工作區中使用的所有公用程式檔案(JavaScript)。
