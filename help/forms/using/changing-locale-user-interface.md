@@ -11,7 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '587'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +66,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 1. 使用WebDAV用戶端，將影像檔案置於 */apps/ws/images資料夾中* 。
 1. 導覽至 */apps/ws/css*。 開啟 *newStyle.css* ，以進行編輯並新增下列項目：
 
-   ```
+   ```css
    #categoryListBar .content.nw {
         background: #3e3e3e url(../images/Categories_nw.png) no-repeat 10px 10px;
     }
@@ -81,7 +84,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 1. 導覽至 *js/runtime/utility檔案夾* ，並開啟 ** usersession.js檔案以進行編輯。
 1. 找出原始程式碼區塊中列出的程式碼，並新增條件 *lang !== &#39;nw&#39;* to if statement:
 
-   ```
+   ```javascript
    // Orignal code
    setLocale = function () {
            var lang = $.trim(i18n.lng());
@@ -93,7 +96,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
        }
    ```
 
-   ```
+   ```javascript
    //new code
     setLocale = function () {
            var lang = $.trim(i18n.lng());
@@ -114,7 +117,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 1. 導覽至 `apps/ws/js` 並開啟檔 `jquery.ui.datepicker-nw.js` 案以進行編輯。
 1. 在main.js檔案中，為檔案建立 `jquery.ui.datepicker-nw.js.` 別名的程式碼 `jquery.ui.datepicker-nw.js` 為：
 
-   ```
+   ```javascript
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
    ```
 
@@ -122,9 +125,10 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`
+
    以下范常式式碼說明如何新增jquery.ui.datepicker-nw.js項目：
 
-   ```
+   ```json
    //Original Code
    define([
        'jquery',
@@ -141,7 +145,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
    ], function ($, _, Backbone, jQueryUI, jQueryUIDatePickerJA, jQueryUIDatePickerDE, jQueryUIDatePickerFR, slimScroll, UserSearch, LogManager, Logger) {
    ```
 
-   ```
+   ```json
    // Code with Date Picker alias for new language
    define([
        'jquery',
@@ -163,9 +167,10 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 
    * apps\ws\js\runtime\views\searchtemplatedetails.js
    * apps\ws\js\runtime\views\outofoffice.js
+
    變更下列程式碼以新增地區設定：
 
-   ```
+   ```javascript
    if (locale === 'ja-JP') {
       $.datepicker.setDefaults($.datepicker.regional.ja);
    } else if (locale === 'de-DE') {
@@ -177,7 +182,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
    }
    ```
 
-   ```
+   ```javascript
    if (locale === 'ja-JP') {
        $.datepicker.setDefaults($.datepicker.regional.ja);
    } else if (locale === 'de-DE') {
