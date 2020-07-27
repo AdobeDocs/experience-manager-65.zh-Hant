@@ -12,7 +12,10 @@ topic-tags: operations
 discoiquuid: c4706632-02e5-4510-ad9c-4f732d5fbdad
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9678b4979580bab23dea8ca7493b48b63d5bcfa6
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1876'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ source-git-commit: 9678b4979580bab23dea8ca7493b48b63d5bcfa6
 
 以下DDX檔案會將多個XDP片段組合成XDP檔案。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
          <XDP result="tuc018result.xdp">
@@ -52,7 +55,7 @@ source-git-commit: 9678b4979580bab23dea8ca7493b48b63d5bcfa6
 
 DDX文檔包含一個XDP `result` 標籤，該標籤指定結果的名稱。 在這種情況下，價值是 `tuc018result.xdp`。 在Assembler服務返回結果後，在用於檢索XDP文檔的應用程式邏輯中引用了此值。 例如，請考慮下列用於檢索已裝配的XDP文檔的Java應用程式邏輯（請注意，值被粗體化）:
 
-```as3
+```java
  //Iterate through the map object to retrieve the result XDP document
  for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
      // Retrieve the Map object’s value
@@ -119,7 +122,7 @@ DDX文檔包含一個XDP `result` 標籤，該標籤指定結果的名稱。 在
 
 要組合多個XDP文檔，請參考用於組合結果XDP文檔的所有XDP檔案。 確保在屬性中指定了屬性引用的XDP文檔中包含 `source` 的子表單的名 `fragment` 稱。 子表單是在設計器中定義的。 例如，請考慮以下XML。
 
-```as3
+```xml
  <XDPContent insertionPoint="ddx_fragment" source="tuc018_contact.xdp" fragment="subPatientContact" required="false"/>
 ```
 
@@ -143,7 +146,7 @@ DDX文檔包含一個XDP `result` 標籤，該標籤指定結果的名稱。 在
 
 [使用web service API組合多個XDP片段](assembling-multiple-xdp-fragments.md#assemble-multiple-xdp-fragments-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -190,6 +193,7 @@ DDX文檔包含一個XDP `result` 標籤，該標籤指定結果的名稱。 在
    * 表 `com.adobe.idp.Document` 示要使用的DDX文檔的對象
    * 包 `java.util.Map` 含輸入XDP檔案的對象
    * 指定 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 運行時選項（包括預設字型和作業日誌級別）的對象
+
    該方 `invokeDDX` 法返回包 `com.adobe.livecycle.assembler.client.AssemblerResult` 含已裝配的XDP文檔的對象。
 
 1. 檢索已裝配的XDP文檔。
@@ -202,7 +206,7 @@ DDX文檔包含一個XDP `result` 標籤，該標籤指定結果的名稱。 在
 
 **另請參閱**
 
-[組合多個XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[快速啟動（SOAP模式）:使用Java API組合多個XDP片段](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)[包括AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[組合多個XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)[快速啟動（SOAP模式）: 使用Java API組合多個XDP片段](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)[包括AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用web service API組合多個XDP片段 {#assemble-multiple-xdp-fragments-using-the-web-service-api}
 
@@ -212,7 +216,7 @@ DDX文檔包含一個XDP `result` 標籤，該標籤指定結果的名稱。 在
 
    建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義：
 
-   ```as3
+   ```java
     https://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1.
    ```
 
@@ -266,6 +270,7 @@ DDX文檔包含一個XDP `result` 標籤，該標籤指定結果的名稱。 在
    * 代 `BLOB` 表DDX文檔的對象
    * 包 `MyMapOf_xsd_string_To_xsd_anyType` 含所需檔案的對象
    * 指定 `AssemblerOptionSpec` 運行時選項的對象
+
    該方 `invokeDDX` 法返回 `AssemblerResult` 一個對象，該對象包含作業結果和所發生的任何異常。
 
 1. 檢索已裝配的XDP文檔。
