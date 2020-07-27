@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 * 找到 `AEM Communities User Generated Content Contribution Limits Configuration`。
 * 選擇編輯表徵圖。
 
-![chlimage_1-127](assets/chlimage_1-127.png)
+![configure-limits](assets/configure-limits.png)
 
 * **[!UICONTROL 自動套用UGC貢獻限制]**
 
