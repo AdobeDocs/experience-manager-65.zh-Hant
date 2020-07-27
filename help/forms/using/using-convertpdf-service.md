@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 * 將PDF檔案轉換為PostScript。 轉換為PostScript時，您可以使用轉換操作來指定來源檔案，以及轉換為PostScript第2層還是第3層。 您轉換為PostScript檔案的PDF檔案必須是非互動的。
 * 將PDF檔案轉換為JPEG、JPEG 2000、PNG和TIFF影像格式。 轉換為任何這些影像格式時，可以使用轉換操作來指定源文檔和影像選項規範。 規格包含各種偏好設定，例如影像轉換格式、影像解析度和色彩轉換。
 
-## 配置服務的屬性 {#properties}
+## 配置服務的屬性   {#properties}
 
 您可以使用 **AEM Console中的AEMFD ConvertPDF** Service，來設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:'port'/system/console/configMgr`。
 
@@ -33,13 +36,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ConvertPDF服務提供下列兩個API:
 
-* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**:將PDF檔案轉換為PostScript檔案。
+* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**: 將PDF檔案轉換為PostScript檔案。
 
-* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**:將PDF檔案轉換為影像檔。 支援的影像格式包括JPEG、JPEG2000、PNG和TIFF。
+* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: 將PDF檔案轉換為影像檔。 支援的影像格式包括JPEG、JPEG2000、PNG和TIFF。
 
 ### 搭配JSP或Servlet使用toPS API {#using-tops-api-with-a-jsp-or-servlets}
 
-```java
+```jsp
 <%@ page import="java.util.List, java.io.File,
 
                 com.adobe.fd.cpdf.api.ConvertPdfService,
@@ -83,7 +86,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 ### 搭配JSP或Servlet使用toImage API {#using-toimage-api-with-a-jsp-or-servlets}
 
-```java
+```jsp
 <%@ page import="java.util.List, java.io.File,
 
                 com.adobe.fd.cpdf.api.ConvertPdfService,
@@ -136,7 +139,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 以下工作流程流程示例將輸入文檔轉換為PostScript文檔。 程式碼會寫入ECMAScript，檔案會以工作流程裝載的形式傳遞：
 
-```
+```javascript
 /*
  * Imports
  */
