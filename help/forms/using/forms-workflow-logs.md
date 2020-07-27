@@ -10,7 +10,10 @@ topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 5%
 
 ---
 
@@ -40,7 +43,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 * 寫入JCR儲存庫的變數。 例如：
 
-   ```
+   ```verilog
       [DEBUG] Successfully written variable <variable name> into meta data node at <JCR path where meta data is being written>
    ```
 
@@ -49,14 +52,14 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 * 動態步驟中繼資料參數。 例如：
 
-   ```
+   ```verilog
    [DEBUG] Document of Record to be generated for adaptive form <path of adaptive form>
     [DEBUG] Locale to be used for Document of Record is <locale>
    ```
 
 以下範例說明「簽署檔案」步驟的記錄檔：
 
-```xml
+```verilog
 [DEBUG] Executing sign document step.
 [DEBUG] Using adobe sign configuration: <path of adobe sign configuration>
 [DEBUG] Invoking Adobe Sign Service for creating agreement
