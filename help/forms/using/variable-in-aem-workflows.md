@@ -10,7 +10,10 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2102'
+ht-degree: 0%
 
 ---
 
@@ -35,8 +38,8 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 您可使用工作流程模型側腳中的「變數」區段來建立變數。 AEM工作流程變數支援下列資料類型：
 
-* **基本資料類型**:長、雙、布爾、日期和字串
-* **複雜的資料類型**: [Document](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、 [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、 [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表單資料模型例項。
+* **基本資料類型**: 長、雙、布爾、日期和字串
+* **複雜的資料類型**: [檔案](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、 [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、 [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表單資料模型例項。
 
 >[!NOTE]
 >
@@ -47,7 +50,7 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 執行下列步驟以建立變數：
 
 1. 在AEM例項上，導覽至「工具>工 ![](/help/forms/using/assets/hammer.png) 作流程>模型」。
-1. 點選「 **[!UICONTROL 建立]** 」，並指定工作流程模型的標題和選用名稱。 選取模型並點選「編 **[!UICONTROL 輯」]**。
+1. 點選 **[!UICONTROL 「建立]** 」，並指定工作流程模型的標題和選用名稱。 選取模型並點選「編 **[!UICONTROL 輯」]**。
 1. 點選工作流程模型側點中可用的變數圖示，並點選「新增變 **[!UICONTROL 數」]**。
 
    ![新增變數](assets/variables_add_variable_new.png)
@@ -76,16 +79,16 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 視變數的資料類型而定，您可以使用下列選項來設定變數的值：
 
-* **** 常值：當您知道要指定的確切值時，請使用此選項。
+* **常值：** 當您知道要指定的確切值時，請使用此選項。
 
-* **** 運算式：根據運算式計算要使用的值時，請使用此選項。 表達式在提供的表達式編輯器中建立。
+* **運算式：** 根據運算式計算要使用的值時，請使用此選項。 表達式在提供的表達式編輯器中建立。
 
-* **** JSON點符號：使用選項從JSON或FDM類型變數擷取值。
-* **** XPATH:使用選項從XML類型變數中檢索值。
+* **JSON點符號：** 使用選項從JSON或FDM類型變數擷取值。
+* **XPATH:** 使用選項從XML類型變數中檢索值。
 
-* **** 相對於負載：當要儲存至變數的值位於相對負載的路徑時，請使用此選項。
+* **相對於負載：** 當要儲存至變數的值位於相對負載的路徑時，請使用此選項。
 
-* **** 絕對路徑：當要儲存至變數的值位於絕對路徑時，請使用此選項。
+* **絕對路徑：** 當要儲存至變數的值位於絕對路徑時，請使用此選項。
 
 您也可以使用JSON DOT符號或XPATH符號來更新JSON或XML類型變數的特定元素。
 
@@ -99,7 +102,7 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 1. 在「對 **應變數** 」區段中，選取要儲存資料的變數、選取對應模式，並指定要儲存在變數中的值。 對應模式會根據變數類型而有所不同。
 1. 映射更多變數，以建立有意義的運算式。 點選 ![](assets/done_icon.png) 以儲存變更。
 
-### 範例1:查詢XML變數以設定字串變數的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
+### 範例1: 查詢XML變數以設定字串變數的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
 選擇XML類型的變數以儲存XML檔案。 查詢XML變數，為XML檔案中可用的屬性設定字串變數的值。 使用 **為XML變數欄位指定XPATH** ，以定義要儲存在字串變數中的屬性。
 
@@ -107,7 +110,7 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "設定變數的值")
 
-### 範例2:使用運算式以其他變數為基礎來儲存值 {#example2}
+### 範例2: 使用運算式以其他變數為基礎來儲存值 {#example2}
 
 使用運算式來計算變數的總和，並將結果儲存在變數中。
 
@@ -206,7 +209,7 @@ source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
 
 使用下列API擷取字串資料類型的值：
 
-```
+```javascript
 workItem.getWorkflowData().getMetaDataMap().get(accname, Packages.java.lang.String)
 ```
 
@@ -214,13 +217,13 @@ workItem.getWorkflowData().getMetaDataMap().get(accname, Packages.java.lang.Stri
 
 在ECMA指令碼中使用下列API來更新變數的值：
 
-```
+```javascript
 workItem.getWorkflowData().getMetaDataMap().put(variableName, value)
 ```
 
 **範例**
 
-```
+```javascript
 workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 ```
 
@@ -234,7 +237,7 @@ workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 
 在此API中， **variableName** 變數會使 **用metaData.put(variableName, value)設定** 為值；
 
-```java
+```javascript
 import com.adobe.granite.workflow.model.WorkflowModel;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.adobe.aemfd.docmanager.Document;
@@ -251,7 +254,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 將 **doc** doc檔案物件初始化為路徑(&quot;a/b/c&quot;)，並將 **** docVar變數的值設定為檔案物件中儲存的路徑。
 
-```java
+```javascript
 import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.exec.WorkflowData;
 import com.adobe.granite.workflow.model.WorkflowModel;
