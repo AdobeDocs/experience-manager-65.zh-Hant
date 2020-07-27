@@ -10,7 +10,10 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1042'
+ht-degree: 0%
 
 ---
 
@@ -93,7 +96,7 @@ Barcoded Forms服務在解碼條形碼後返回以下XML文檔：
 
 ### 使用條碼表單的工作流程 {#workflows-that-use-barcoded-forms}
 
-表單作者使用設計工具建立互動式條碼表單。 (請參 [閱設計人員說明](https://www.adobe.com/go/learn_aemforms_designer_63)。)當使用者使用Adobe Reader或Acrobat填寫條碼表格時，會自動更新條碼以編碼表格資料。
+表單作者使用設計工具建立互動式條碼表單。 (請參 [閱設計人員說明](https://www.adobe.com/go/learn_aemforms_designer_63)。) 當使用者使用Adobe Reader或Acrobat填寫條碼表格時，會自動更新條碼以編碼表格資料。
 
 Barcoded Forms服務對於將紙本上的資料轉換為電子格式非常有用。 例如，當填入並列印條形碼表格時，可掃描列印的復本並用作Barcoded Forms服務的輸入。
 
@@ -128,7 +131,7 @@ Barcoded Forms服務對於將紙本上的資料轉換為電子格式非常有用
 
 此外，如果遵守上述限制，服務可解碼使用支援條碼的任何條碼。 如需如何建立互動式條碼表單的詳細資訊，請參閱設計 [人員說明](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
-## 配置服務的屬性 {#configureproperties}
+## 配置服務的屬性   {#configureproperties}
 
 您可以使用 **AEM Console中的AEMFD Barcoded Forms** Service來設定此服務的屬性。 AEM主控台的預設URL為 `https://[host]:'port'/system/console/configMgr`。
 
@@ -136,15 +139,15 @@ Barcoded Forms服務對於將紙本上的資料轉換為電子格式非常有用
 
 Barcoded Forms Service提供下列兩個API:
 
-* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:解碼輸入PDF檔案或tiff影像中所有可用的條碼。 它返回另一個XML文檔，該文檔包含從輸入文檔或影像中所有可用的條形碼檢索到的資料。
+* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: 解碼輸入PDF檔案或tiff影像中所有可用的條碼。 它返回另一個XML文檔，該文檔包含從輸入文檔或影像中所有可用的條形碼檢索到的資料。
 
-* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:將使用解碼API解碼的資料轉換為XML資料。 此XML資料可與XFA表單合併。 它會傳回XML檔案清單，每個條碼各一份。
+* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: 將使用解碼API解碼的資料轉換為XML資料。 此XML資料可與XFA表單合併。 它會傳回XML檔案清單，每個條碼各一份。
 
 ### 將BCF服務與JSP或Servlet一起使用 {#using-bcf-service-with-a-jsp-or-servlets}
 
 下列范常式式碼會解碼檔案中的條碼，並將輸出的XML儲存至磁碟。
 
-```java
+```jsp
 <%@ page import="java.util.List,
                 com.adobe.fd.bcf.api.BarcodedFormsService,
                 com.adobe.fd.bcf.api.CharSet,
