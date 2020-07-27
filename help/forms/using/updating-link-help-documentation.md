@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. 將檔 `userinfo.html` 案從復 `/libs/ws/js/runtime/templates` 制到 `/apps/ws/js/runtime/templates`。
 1. 變更：
 
-   ```
+   ```html
    <ul class="helpmenu">
      <li>
        <a href="https://www.adobe.com/go/learn_aemforms_documentation_63" title="<%= $.t('index.header.dropdown.WorkspaceHelp')%>" target="_blank"><%= $.t('index.header.dropdown.WorkspaceHelp')%></a>
@@ -38,7 +41,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    至
 
-   ```
+   ```html
    <ul class="helpmenu">
      <li>
        <a href="<!--place new help url here-->" title="<%= $.t('index.header.dropdown.WorkspaceHelp')%>" target="_blank"><%= $.t('index.header.dropdown.WorkspaceHelp')%></a>
