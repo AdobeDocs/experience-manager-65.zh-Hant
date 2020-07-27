@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ AEM Forms工作區可讓您在「任務摘要」窗格中顯示您選擇的網�
    * `Create a folder`**SampleSummary **，在`/apps`下。 在的「訪問控制列`/apps/SampleSummary`表」中，添加允許的`PERM_WORKSPACE_USER`條目`jcr:readprivileges`。
    * `Create a file `html.esp` at `/apps/`. For example, add the following lines in `SampleSummaryhtml.esp`.`
 
-   ```
+   ```html
    <html>
        <body>
            <h1>Sample Summary</h1>
