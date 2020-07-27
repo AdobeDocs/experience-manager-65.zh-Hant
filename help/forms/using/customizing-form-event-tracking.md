@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '476'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +82,7 @@ source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
 
 在下列範例中，會維 *護每個fieldName* 屬性的 ** error事件狀態。 事件只會在再次發生錯誤時傳送至分析伺服器。
 
-```
+```javascript
 case 'error':
         if(errorOccurred[variableValueMap.fieldName] == true) {
             pushEvent(eventName, variableValueMap)
