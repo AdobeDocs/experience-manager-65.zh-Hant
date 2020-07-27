@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 1%
@@ -30,7 +30,7 @@ AEM Forms是功能強大的企業級平台。 互動式通訊只是AEM Forms的�
 
 ## 部署拓撲 {#deployment-topology}
 
-AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需要一個AEM作者和處理執行個體，即可執行互動式通訊功能。 以下拓撲是指示性拓撲，可針對OSGi功能執行AEM Forms Interactive Communications、Conversence Management、AEM Forms資料擷取和Forms-Centric工作流程。 如需拓撲的詳細資訊，請參 [閱「AEM Forms的架構和部署拓撲」](/help/forms/using/aem-forms-architecture-deployment.md)。
+AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需要一個AEM作者和處理執行個體，就能執行互動式通訊功能。 以下拓撲是指示性拓撲，可針對OSGi功能執行AEM Forms Interactive Communications、Conversence Management、AEM Forms資料擷取和Forms-Centric工作流程。 如需拓撲的詳細資訊，請參 [閱「AEM Forms的架構和部署拓撲」](/help/forms/using/aem-forms-architecture-deployment.md)。
 
 ![推薦拓撲](assets/recommended-topology.png)
 
@@ -121,7 +121,7 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 
 1. 將下列屬性新增至sling.properties檔案：
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
