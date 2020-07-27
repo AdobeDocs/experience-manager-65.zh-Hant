@@ -11,14 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 023f0d9e-bfde-4879-a839-085fadffb48e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1785'
+ht-degree: 0%
 
 ---
 
 
 # 組合PDF資料夾 {#assembling-pdf-portfolios}
 
-您可以使用Assembler java和web service API來組合PDF資料夾。 作品集可以結合多種類型的檔案，包括Word檔、影像檔（例如jpeg檔）和PDF檔案。 作品集的版面可以設定為不同的樣式，例如 *「預覽格線」、「在影像上*」版面，甚至 *「旋轉***」。
+您可以使用Assembler Java和web service API來組合PDF資料夾。 作品集可以結合多種類型的檔案，包括Word檔、影像檔（例如jpeg檔）和PDF檔案。 作品集的版面可以設定為不同的樣式，例如 *「預覽格線」、「在影像上*」版面，甚至 *「旋轉***」。
 
 下圖為具有「在影像上」樣式版面 *的作品集螢幕擷取* 。
 
@@ -26,7 +29,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 建立PDF資料夾是傳遞檔案集的無紙化替代選擇。 使用AEM Forms，您可以使用結構化DDX檔案來叫用Assembler服務來建立作品集。 以下DDX檔案是建立PDF資料夾的DDX檔案範例。
 
-```as3
+```xml
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
      <PDF result="portfolio1.pdf">
          <Portfolio>
@@ -48,7 +51,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </DDX>
 ```
 
-DXX檔案必須包含含 `Portfolio` 有巢狀標籤的標 `Navigator` 記。 請注意，只有在 `<Resource name="navigator/image.xxx" source="myImage.png"/>` 指派為onImage版面 `myNavigator` 導覽器時，才需要標籤： `AdobeOnImage.nav`。 此標籤允許Assembler服務選擇要用作資料夾背景的影像。 包含 `PackageFiles` 和標 `File` 記，以定義封裝檔案的檔案名稱和MIME類型。
+DXX檔案必須包含含 `Portfolio` 有巢狀標籤的標 `Navigator` 記。 請注意，只有在 `<Resource name="navigator/image.xxx" source="myImage.png"/>` 指派為onImage版面 `myNavigator` 導覽器時，才需要標籤： `AdobeOnImage.nav`. 此標籤允許Assembler服務選擇要用作資料夾背景的影像。 包含 `PackageFiles` 和標 `File` 記，以定義封裝檔案的檔案名稱和MIME類型。
 
 >[!NOTE]
 >
@@ -92,9 +95,9 @@ DXX檔案必須包含含 `Portfolio` 有巢狀標籤的標 `Navigator` 記。 �
 
 **參考所需檔案**
 
-若要組合PDF資料夾，請參考所有代表要組合的檔案的檔案。 例如，將DDX文檔中指定的所有影像檔案傳遞到Assembler服務。 請注意，在本節中指定的DDX檔案中會參照這些檔案： *myImage.png**和saint_bernard.jpg*。
+若要組合PDF資料夾，請參考所有代表要組合的檔案的檔案。 例如，將DDX文檔中指定的所有影像檔案傳遞到Assembler服務。 請注意，在本節中指定的DDX檔案中會參照這些檔案： *myImage.png* 和 *saint_bernard.jpg*。
 
-當組合PDF資料夾時，請將NAV檔案（導覽檔案）傳遞至Assembler服務。 您傳遞至Assembler服務的NAV檔案取決於要建立的PDF資料夾類型。 例如，若要建立「 *On an Image* 」版面，請傳遞AdobeOnImage.nav檔案。 您可以在下列資料夾中找到NAV檔案：
+當組合PDF資料夾時，請將NAV檔案（導覽檔）傳遞至Assembler服務。 您傳遞至Assembler服務的NAV檔案取決於要建立的PDF資料夾類型。 例如，若要建立「 *On an Image* 」版面，請傳遞AdobeOnImage.nav檔案。 您可以在下列資料夾中找到NAV檔案：
 
 `<Install folder>\Acrobat 9.0\Acrobat\Navigators`
 
@@ -122,7 +125,7 @@ PDF資料夾會在系列物件中傳回。 重複收集物件並將PDF資料夾�
 
 [使用web service API組合PDF資料夾](#assemble-a-pdf-portfolio-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -168,6 +171,7 @@ PDF資料夾會在系列物件中傳回。 重複收集物件並將PDF資料夾�
    * 表 `com.adobe.idp.Document` 示要使用的DDX文檔的對象
    * 包 `java.util.Map` 含建立PDF資料夾所需檔案的物件。
    * 指定 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 運行時選項的對象，包括預設字型和作業日誌級別
+
    此方 `invokeDDX` 法會傳回包 `com.adobe.livecycle.assembler.client.AssemblerResult` 含已組合之PDF資料夾和發生的任何例外的物件。
 
 1. 儲存組合的作品集。
@@ -180,9 +184,9 @@ PDF資料夾會在系列物件中傳回。 重複收集物件並將PDF資料夾�
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API組合PDF資料夾](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API組合PDF資料夾](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -192,7 +196,7 @@ PDF資料夾會在系列物件中傳回。 重複收集物件並將PDF資料夾�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -244,6 +248,7 @@ PDF資料夾會在系列物件中傳回。 重複收集物件並將PDF資料夾�
    * 代 `BLOB` 表DDX文檔的對象
    * 包 `MyMapOf_xsd_string_To_xsd_anyType` 含所需檔案的對象
    * 指定 `AssemblerOptionSpec` 運行時選項的對象
+
    該方 `invokeDDX` 法返回 `AssemblerResult` 一個對象，該對象包含作業結果和所發生的任何異常。
 
 1. 儲存組合的作品集。
