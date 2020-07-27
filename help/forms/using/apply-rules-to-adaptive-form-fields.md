@@ -1,5 +1,5 @@
 ---
-title: 「不要發佈教學課程：套用規則至最適化表單欄位」
+title: 「不要發佈教學課程： 套用規則至最適化表單欄位」
 seo-title: 將規則套用至最適化表單欄位
 description: 建立規則，將互動功能、商業邏輯和智慧驗證新增至最適化表單。
 seo-description: 建立規則，將互動功能、商業邏輯和智慧驗證新增至最適化表單。
@@ -8,12 +8,15 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1152'
+ht-degree: 0%
 
 ---
 
 
-# 教學課程：將規則套用至最適化表單欄位 {#tutorial-apply-rules-to-adaptive-form-fields}
+# 教學課程： 將規則套用至最適化表單欄位 {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
@@ -33,7 +36,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 教學課程各節結尾的互動式GIF影像可協助您即時學習並驗證所建立表格的功能。
 
-## 步驟1:從資料庫檢索客戶記錄 {#retrieve-customer-record}
+## 步驟1: 從資料庫檢索客戶記錄 {#retrieve-customer-record}
 
 您遵循建立表單資料模型文章， [建立表單資料模型](/help/forms/using/create-form-data-model.md) 。 現在，您可以使用規則編輯器來調用Forms資料模型服務來檢索和向資料庫添加資訊。
 
@@ -52,7 +55,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
    ![when customdischanged](assets/whencustomeridischanged.png)
 
-1. 在 **[!UICONTROL THEN語句中]********** ，從「選擇操作」下拉式清單中選擇「叫用服務」。
+1. 在 **[!UICONTROL THEN語句中]********** ，從「選擇操作」下拉式清單中選擇「調用服務」。
 1. 從「選 **[!UICONTROL 擇」下拉式清單中]** ，選擇 **[!UICONTROL 「檢索發運地址]** 」服務。
 1. 將「客戶ID」欄位從「表 **[!UICONTROL 單物件]** 」索引標籤拖放至「拖放」物件，或在「輸入」方塊中選取 **[!UICONTROL 「在此處]** 欄位 **** 」。
 
@@ -68,7 +71,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
    ![檢索資訊](assets/retrieve-information.gif)
 
-## 步驟2:將更新的客戶地址添加到資料庫 {#updated-customer-address}
+## 步驟2: 將更新的客戶地址添加到資料庫 {#updated-customer-address}
 
 從資料庫擷取客戶詳細資訊後，您就可以更新送貨地址、州和郵遞區號。 以下過程調用表單資料模型服務，將客戶資訊更新到資料庫：
 
@@ -98,11 +101,11 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 1. 點選 **[!UICONTROL 「完成]** 」以儲存規則。 在規則編輯器視窗中，點選「 **[!UICONTROL 關閉」]**。
 1. 預覽最適化表單。 擷取客戶的詳細資訊、更新運送地址並提交表單。 當您再次檢索同一客戶的詳細資訊時，將顯示更新的發運地址。
 
-## 步驟3:（附加部分）使用程式碼編輯器來執行驗證並顯示錯誤訊息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
+## 步驟3: （附加部分）使用程式碼編輯器來執行驗證並顯示錯誤訊息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
 
 您應對表單執行驗證，以確保在表單中輸入的資料正確無誤，並在資料不正確時顯示錯誤訊息。 例如，如果在表單中輸入了非現有的客戶ID，則應顯示錯誤訊息。
 
-最適化表單提供多個內建驗證元件，例如電子郵件和數值欄位，您可用於一般使用案例。 使用規則編輯器進行進階使用案例，例如，當資料庫傳回零(0)記錄（無記錄）時，顯示錯誤訊息。
+最適化表單提供多個內建驗證的元件，例如電子郵件和數值欄位，您可用於一般使用案例。 使用規則編輯器進行進階使用案例，例如，當資料庫傳回零(0)記錄（無記錄）時，顯示錯誤訊息。
 
 以下過程說明如何建立規則以在表單中輸入的客戶ID不存在於資料庫中時顯示錯誤消息。 此規則也會將焦點引入並重設「客戶ID」欄位。 規則會使 [用表單資料模型服務的dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) ，以檢查資料庫中是否存在客戶ID。
 
@@ -123,7 +126,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 以下列程式碼取代輸入變數區段：
 
-   ```
+   ```javascript
    var inputs = {
        "id" : this
    };
@@ -131,7 +134,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 以下列程式碼取代guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)區段：
 
-   ```
+   ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
      if (result) {
          result = JSON.parse(result);
