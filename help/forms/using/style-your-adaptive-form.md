@@ -8,7 +8,10 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '2079'
+ht-degree: 7%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 本教學課程是「建立您的第 [一個最適化表單](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 」系列的步驟。 建議依序依序依序排列，以瞭解、執行和展示完整的教學課程使用案例。
 
-## 關於教學課程 {#about-the-tutorial}
+## 關於教學課程  {#about-the-tutorial}
 
 您可以使用主題為最適化表單提供獨特的外觀和樣式。 您可以套用隨附於最適化表單編輯器的方塊外主題，或建立您自己的自訂主題。 AEM Forms提供主題編 [輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) ，以建立自訂主題。 單一主題可針對在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同的外觀。 使用主題編輯器時，不需具備任何CSS或LESS的先前知識，但需要它。
 
@@ -30,7 +33,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 * 將立即可用的主題套用至最適化表單
 * 使用主題編輯器建立最適化表單的主題
 * 設定個別元件的樣式
-* 附加部分：在自訂主題中使用網頁字型
+* 附加部分： 在自訂主題中使用網頁字型
 
 在您完成教學課程後，表單看起來會類似下列：
 
@@ -44,7 +47,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 [取得檔案](assets/logo-1.png)
 
-## 步驟1:將主題套用至最適化表單 {#step-apply-a-theme-to-your-adaptive-form}
+## 步驟1: 將主題套用至最適化表單 {#step-apply-a-theme-to-your-adaptive-form}
 
 最適化表單編輯器提供多種現成可用的主題。 如果您打算不針對最適化表單使用自訂樣式，也可以使用現成可用的主題來發佈最適化表單。 主題與最適化表單無關。 您可以將相同的主題套用至多個調適性表單。 若要將主題套用至最適化表單：
 
@@ -57,13 +60,13 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ![具有預設主題的最適化表單](assets/default-adaptive-form.png)
 
-**圖：** 具有 *預設主題的最適化表單*
+**圖：** *具有預設主題的最適化表單*
 
 ![具有調查主題的最適化表單](assets/adaptive-form-with-survey-theme.png)
 
-**圖：** 具有 *調查主題的最適化表單*
+**圖：** *具有調查主題的最適化表單*
 
-## 步驟2:更新您的最適化表單 {#step-update-your-adaptive-form}
+## 步驟2: 更新您的最適化表單 {#step-update-your-adaptive-form}
 
 上述設計需要變更現有最適化表單的預留位置文字和標誌。 執行下列步驟以進行必要的變更：
 
@@ -76,6 +79,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    1. 在頁首元件中點選標誌影像，然後點選 ![cmppr](assets/cmppr.png) properties。 在影像屬性中，點選X以移除現有的標誌影像。
    1. 點選「上傳」、選取logo.png，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) ，以儲存變更。 影像已下載至「開始 [之前](/help/forms/using/style-your-adaptive-form.md#before-you-start) 」區段。
    1. 點選標題文 `We.Retail`字，點 ![選aem_6_3_edit](assets/aem_6_3_edit.png) **edit**。 將頁首文字變更為 `we retail`。 僅將粗體格式套用 `we`於 `we retail`。
+
    ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. 移除標題並新增預留位置文字：
@@ -84,9 +88,10 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    1. 將「標題」欄位的內 **容複製** 到「預留位 **置文字」欄位** 。
    1. 刪除「標題 **」欄位的內容，並** 點選aem_6_3_forms_save ![](assets/aem_6_3_forms_save.png)。
    1. 對表單中的所有文字方塊、數值方塊和電子郵件欄位重複上述三個步驟。
+
    ![更新的自適應形式](assets/updated-adaptive-form.png)
 
-## 步驟3:為最適化表單建立自訂主題 {#step-create-a-custom-theme-for-your-adaptive-form}
+## 步驟3: 為最適化表單建立自訂主題 {#step-create-a-custom-theme-for-your-adaptive-form}
 
 您可以使用 [主題編輯器](/help/forms/using/themes.md) ，建立自訂主題。 主題編輯器是功能強大的WYSIWYG編輯器。 它是將CSS套用至自適應表單各元件的視覺化方法。 它提供更精細的控制項，讓元件和面板在最適化表單中變樣。
 
@@ -110,17 +115,17 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    ![自訂主題](assets/custom-theme.png)
 
-   **圖：** 具 *有shipping-add-update-form自適應表單的主題編輯器*
+   **圖：** *具有shipping-address-add-update-form自適應表單的主題編輯器*
 
    ![create-a-theme](assets/create-a-theme.png)
 
-   **圖：** 具有 *預設表單的最適化表單*
+   **圖：** *具有預設表單的自適應表單*
 
 ### 樣式頁首和頁尾 {#style-header-and-footer}
 
 頁首和頁尾為最適化表單提供一致且獨特的外觀。 一般而言，頁首包含組織的標誌和名稱，頁尾包含版權資訊，而且這些資訊在組織的多種形式上都相同。 要設定發運地址添加更新表單自適應表單的頁眉和頁腳的樣式，請執行以下操作：
 
-1. 導覽「選 **擇器** 」面板中的「頁首 **>文字** 」選項。 「選擇器」面板位於主題編輯器的左側。 如果面板不可見，請點選「切換 ![](assets/toggle-side-panel.png) 側面板」。
+1. 導覽「選 **擇器** 」面板中的「頁首 **>文字** 」選項。 「選擇器」面板位於主題編輯器的左側。 如果面板不可見，請點選「 ![切換側面板](assets/toggle-side-panel.png) 」「切換側面板」。
 
 1. 在 **Text** accordion中設定下列屬性，並點 ![選aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
@@ -131,7 +136,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    | 字型大小 | 54px |
 
 1. 點選頁首介面工具集並點選「頁 **首」**。 標題介面工具集樣式的選項會顯示在左側。 展開「 **Dimensions &amp; Position** 」(尺寸與位置 **)accordion、將「** Height `120px`」（高度）設 ![定為，然後點選](assets/aem_6_3_forms_save.png)aem_6_3_forms_save。
-1. 展開頁首介面工具集的「背景」accordion，將「背景顏 **色」設為**`F6921E.`
+1. 展開頁首介面工具集的「背景」accordion，將「背景顏 **色」設為** `F6921E.`
 
    將滑鼠指標暫 **留在「影像與漸層** > **+新增」上，點選「**&#x200B;影像 ****」。 設定下列屬性， ![然後點選aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
@@ -153,9 +158,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>邊距</td> 
    <td> 
     <ul> 
-     <li>頂部：1.5rem</li> 
-     <li>底部：-35px</li> 
-     <li>左：1rem<strong><br /></strong></li> 
+     <li>頂部： 1.5rem</li> 
+     <li>底部： -35px</li> 
+     <li>左： 1rem<strong><br /> </strong></li> 
     </ul> <p><strong>提示：</strong> 點選連 <img src="assets/link.png"> 結圖示，為每個欄位提供不同的值。<br /> </p> </td> 
   </tr> 
   <tr> 
@@ -190,10 +195,10 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>邊框半徑 </td> 
    <td> 
     <ul> 
-     <li>頂部：7px<br /> </li> 
-     <li>右：7px<br /> </li> 
-     <li>底部：7px<br /> </li> 
-     <li>左：7px<br /> </li> 
+     <li>頂部： 7px<br /> </li> 
+     <li>右： 7px<br /> </li> 
+     <li>底部： 7px<br /> </li> 
+     <li>左： 7px<br /> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -221,7 +226,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>邊距</td> 
    <td> 
     <ul> 
-     <li>左：10rem</li> 
+     <li>左： 10rem</li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -259,10 +264,10 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>邊框半徑 </td> 
    <td> 
     <ul> 
-     <li>頂部：7px<br /> </li> 
-     <li>右：7px<br /> </li> 
-     <li>底部：7px<br /> </li> 
-     <li>左：7px</li> 
+     <li>頂部： 7px<br /> </li> 
+     <li>右： 7px<br /> </li> 
+     <li>底部： 7px<br /> </li> 
+     <li>左： 7px</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -287,7 +292,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    ![style-data-capture-components](assets/style-data-capture-components.png)
 
-## 步驟4:設定個別元件的樣式 {#step-style-individual-components}
+## 步驟4: 設定個別元件的樣式 {#step-style-individual-components}
 
 有些樣式只適用於特定元件。 這些元件是在最適化表單編輯器中建立樣式的。
 
@@ -327,7 +332,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>邊距</td> 
    <td> 
     <ul> 
-     <li>左：10px</li> 
+     <li>左： 10px</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -340,8 +345,8 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>邊距</td> 
    <td><br /> 
     <ul> 
-     <li>右：2rem</li> 
-     <li>左：10rem </li> 
+     <li>右： 2rem</li> 
+     <li>左： 10rem </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -411,10 +416,10 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>邊距</td> 
    <td> 
     <ul> 
-     <li>頂部：5rem</li> 
-     <li>右：14rem</li> 
-     <li>底部：20px</li> 
-     <li>左：20px<br /> </li> 
+     <li>頂部： 5rem</li> 
+     <li>右： 14rem</li> 
+     <li>底部： 20px</li> 
+     <li>左： 20px<br /> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -432,7 +437,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ![樣式化自適應形式-1](assets/styled-adaptive-form-1.png)
 
-## 步驟5:附加部分：在自訂主題中使用網頁字型 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
+## 步驟5: 附加部分： 在自訂主題中使用網頁字型 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
 
 您可以使用各種字型來設計最適化表單。 在檢視最適化表單的所有裝置上，可能沒有用於設計最適化表單的字型。 您可以使用網頁字型服務，將必要的字型傳送至目標裝置。
 
