@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -70,14 +70,14 @@ ht-degree: 0%
 
       如果您使用 [Sample將草稿和提交元件與資料庫整合併從舊版升級](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) ，則在執行升級後運行以下SQL查詢：
 
-      ```
+      ```sql
       UPDATE metadata m, additionalmetadatatable am
       SET m.dataType = am.value
       WHERE m.id = am.id
       AND am.key = 'dataType'
       ```
 
-      ```
+      ```sql
       DELETE from additionalmetadatatable
       WHERE `key` = 'dataType'
       ```
