@@ -1,15 +1,18 @@
 ---
 title: 轉譯器的檔案詳細資訊
 seo-title: 轉譯器的檔案詳細資訊
-description: 有關如何在AEM Forms工作區中演算工作的概念性資訊，以演算各種支援的表單和檔案類型。
-seo-description: 有關如何在AEM Forms工作區中演算工作的概念性資訊，以演算各種支援的表單和檔案類型。
+description: 有關如何在AEM Forms工作區中轉換工作的概念性資訊，以轉換各種支援的表單和檔案類型。
+seo-description: 有關如何在AEM Forms工作區中轉換工作的概念性資訊，以轉換各種支援的表單和檔案類型。
 uuid: ae3f0585-9105-4ca7-a490-ffdefd3ac8cd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '676'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ PDF表格由轉換 `PdfTaskForm View`。
 
 使用 `pdfObject.postMessage` / `pdfObject.messageHandler`
 
-此方法是從HTML與PDF javascript通訊的標準方式。 PdfTaskForm檢視也會處理平面PDF，並清晰呈現。
+此方法是從HTML與PDFJavaScript通訊的標準方式。 PdfTaskForm檢視也會處理平面PDF，並清晰呈現。
 
 >[!NOTE]
 >
@@ -55,9 +58,9 @@ PDF表格由轉換 `PdfTaskForm View`。
 
 新的HTML表格由NewHTMLTaskForm檢視轉譯。
 
-當使用部署在CRX上的行動表單套件將XDP表單轉譯為HTML時，它也會新增額外的 `FormBridge` javascript至表單，以提供儲存和送出表單資料的不同方法。
+當使用部署在CRX上的行動表單套件將XDP表單轉譯為HTML時，它也會新增額外的 `FormBridge`JavaScript至表單，以顯示儲存和送出表單資料的不同方法。
 
-此javascript與上述「PDF表單」中提及的Javascript不同，但其用途類似。
+此JavaScript與上述PDF表單中提及的JavaScript不同，但其用途類似。
 
 >[!NOTE]
 >
