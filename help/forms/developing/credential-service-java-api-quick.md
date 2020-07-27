@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 Java API快速入門(SOAP)適用於憑證服務。
 
-[快速入門（SOAP模式）:使用Java API匯入認證](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API匯入認證](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API刪除認證](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API刪除認證](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
@@ -33,11 +36,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 >
 >不能使用Web服務執行憑據服務操作。
 
-## 快速入門（SOAP模式）:使用Java API匯入認證 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API匯入認證 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
 下列程式碼範例會根據名為 *cred.p12的檔案匯入憑證*。 用於導入憑據的別名值為 `Secure`。 (請參 [閱使用Trust Manager API匯入認證](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -134,11 +137,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API刪除認證 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
+## 快速入門（SOAP模式）: 使用Java API刪除認證 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
 下面的代碼示例基於安全的別名值刪除 *憑據*。 (請參 [閱使用Trust Manager API刪除認證](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
