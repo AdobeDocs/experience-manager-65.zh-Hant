@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '969'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 您可以使用下列范常式式碼來建立連線。
 
-```
+```javascript
 // Example showing how to connect to FormBridge
 window.addEventListener("FormBridgeInitialized",
                                 function(event) {
@@ -37,32 +40,32 @@ window.addEventListener("FormBridgeInitialized",
 >
 >請務必先建立連線，再加入formRuntime.jsp檔案。
 
-## 可用的表單Bridge API {#available-form-bridge-api-nbsp}
+## 可用的表單Bridge API  {#available-form-bridge-api-nbsp}
 
 **getBridgeVersion()**
 
 返回指令碼庫的版本號
 
-* **輸入**:無
-* **輸出**:指令碼庫的版本號
-* **錯誤**:無
+* **輸入**: 無
+* **輸出**: 指令碼庫的版本號
+* **錯誤**: 無
 
 **isConnected()** Checks if Form State has been initialized
 
-* **輸入**:無
-* **輸出**:如 **** 果XFA表單狀態已初始化，則為True
+* **輸入**: 無
+* **輸出**: **如果** XFA表單狀態已初始化，則返回true
 
-* **錯誤**:無
+* **錯誤**: 無
 
 **connect(handler, context)** ，建立與FormBridge的連線，並在建立連線並初始化表單狀態後執行函式
 
 * **輸入**:
 
-   * **處理常式**:連接表單網橋後要執行的函式
-   * **內容**:將處理程式函式的上下文(this)設 *置到* 的對象。
+   * **處理常式**: 連接表單網橋後要執行的函式
+   * **內容**: 將處理程式函式的上下文(this)設 *置到* 的對象。
 
-* **輸出**:無
-* **錯誤**:無
+* **輸出**: 無
+* **錯誤**: 無
 
 **getDataXML（選項）** 以XML格式傳回目前的表單資料
 
@@ -70,11 +73,11 @@ window.addEventListener("FormBridgeInitialized",
 
    * **選項：** JavaScript物件包含下列屬性：
 
-      * **錯誤**:錯誤處理程式函式
-      * **成功**:成功處理常式函式。 此函式會傳遞資料屬性中包含XML *的物* 件。
-      * **內容**:成功函式的上下文（此）設 *定* 。
-      * **validationChecker**:函式，用於調用以檢查從伺服器收到的驗證錯誤。 驗證函式會傳遞一組錯誤字串。
-      * **formState**:必須傳回資料XML之XFA表單的JSON狀態。 如果未指定，則返回當前呈現表單的資料XML。
+      * **錯誤**: 錯誤處理程式函式
+      * **成功**: 成功處理常式函式。 此函式會傳遞資料屬性中包含XML *的物* 件。
+      * **內容**: 成功函式的上下文（此）設 *定* 。
+      * **validationChecker**: 函式，用於調用以檢查從伺服器收到的驗證錯誤。 驗證函式會傳遞一組錯誤字串。
+      * **formState**: 必須傳回資料XML之XFA表單的JSON狀態。 如果未指定，則返回當前呈現表單的資料XML。
 
 * **輸出：** 無
 * **錯誤：** 無
@@ -91,11 +94,11 @@ window.addEventListener("FormBridgeInitialized",
 
       * **pagingConfig:** 允許用戶覆蓋僅呈現第一頁的預設行為。 配置被覆蓋如下：
 
-         *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled:&lt;true| false>,shrinkPageDisabled:&lt;true| false> })。*
+         *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>,shrinkPageDisabled: &lt;true | false> })。*
 
       * **LoggingConfig:** 允許用戶覆蓋記錄級別、禁用類別的記錄，或是顯示日誌控制台還是發送到伺服器。 可以按如下方式覆蓋配置：
 
-      ```JavaScript
+      ```javascript
       formBridge.registerConfig{
         "LoggerConfig" : {
       {
@@ -109,7 +112,7 @@ window.addEventListener("FormBridgeInitialized",
 
       * **SubmitServiceProxyConfig:** 允許用戶註冊提交和記錄代理服務。
 
-         ```JavaScript
+         ```javascript
          window.formBridge.registerConfig("submitServiceProxyConfig",
          {
          "submitServiceProxy" : "`<submitServiceProxy>`",
@@ -145,9 +148,9 @@ window.addEventListener("FormBridgeInitialized",
 
 **hideSubmitButtons()** 隱藏表單中的所有提交按鈕
 
-* **輸入**:無
-* **輸出**:無
-* **錯誤**:如果表單狀態未初始化，則拋出異常
+* **輸入**: 無
+* **輸出**: 無
+* **錯誤**: 如果表單狀態未初始化，則拋出異常
 
 **getFormState()傳回表** 示「表單狀態」的JSON
 
@@ -162,10 +165,10 @@ window.addEventListener("FormBridgeInitialized",
 
    * **選項：** JavaScript物件包含下列屬性：
 
-      * **錯誤**:錯誤處理程式函式
-      * **成功**:成功處理常式函式
-      * **內容**:成功函式的上下文（此）設 *定* 。
-      * **formState**:表單的JSON狀態。 表單會還原為JSON狀態。
+      * **錯誤**: 錯誤處理程式函式
+      * **成功**: 成功處理常式函式
+      * **內容**: 成功函式的上下文（此）設 *定* 。
+      * **formState**: 表單的JSON狀態。 表單會還原為JSON狀態。
 
 * **輸出：** 無
 * **錯誤：** 無
@@ -211,7 +214,7 @@ if(a.errors) {
 * **輸入:**
 
    * **som:** 包含欄位的Som表達式的陣列
-   * **屬性**:需要值的屬性的名稱
+   * **屬性**: 需要值的屬性的名稱
 
 * **輸出：** 在data屬性中將結果包含為Array *的對象*
 
@@ -222,7 +225,7 @@ if(a.errors) {
 * **輸入:**
 
    * **som:** 包含某些欄位表達式的陣列，其值必須設定
-   * **屬性**:必須設定其值的屬性
+   * **屬性**: 必須設定其值的屬性
    * **值：** 包含Som運算式中指定之欄位之指定屬性值的陣列
 
 * **輸出：** 無
