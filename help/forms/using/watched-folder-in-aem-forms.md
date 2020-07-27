@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '7153'
 ht-degree: 0%
@@ -360,7 +360,7 @@ processWorkflowContext()的引數是com.adobe.aemfd.watchfolder.workflow.api.Wor
 
 ECMAScript會取得工作流程內容服務的參考，並建立WorkflowContextProcessor介面的實作。 WorkflowContextProcessor實作可接受輸入檔案、將檔案複製至暫存位置，並傳回代表複製檔案的檔案。 根據Boolean變數purgePrevious的值，目前步驟會依目前工作流程例項中啟動步驟時的相同步驟，刪除上次產生的輸出。 最後，調用wfSvc.execute方法來執行WorkflowContextProcessor實現。 輸出文檔的內容將保存到「監視資料夾」配置節點中提及的物理路徑上的結果資料夾。
 
-```java
+```javascript
 log.error("Watch-folder workflow script called for step: " + graniteWorkItem.getNode().getTitle());
 var wfSvc = sling.getService(Packages.com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService);
 // Custom WorkflowContextProcessor implementation which defines the processWorkflowContext() method purely in JS
@@ -548,7 +548,7 @@ Watched Folder會在每個pollInterval掃描輸入資料夾，選擇「批次大
 
    >[!NOTE]
    >
-   >您可以查看舞台目錄中檔案的日期和時間戳。 根據檔案數和正常處理時間，您可以確定哪些檔案的舊版本足以被視為卡住。
+   >您可以查看舞台目錄中檔案的日期和時間戳。 您可以根據檔案的數量和正常處理時間來判斷哪些檔案已過時，可視為卡住。
 
 1. 將未處理檔案從舞台目錄複製到輸入目錄。
 
@@ -613,7 +613,7 @@ ECMAScript會使用PDF產生器的createPDF API，將Microsoft Word(.docx)檔案
 
 1. 在PDFG檔案夾中，建立名為pdfg-openOffice-sample.ecma的檔案，並新增下列程式碼至檔案：
 
-   ```java
+   ```javascript
    var wfSvc = sling.getService(Packages.com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService);
    // Custom ContentProcessor implementation which defines the processInputs() method purely in JS
    var impl = { processWorkflowContext: function (wrkfContext) {
