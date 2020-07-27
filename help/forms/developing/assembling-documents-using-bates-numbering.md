@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1901'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 在此討論中，唯一的頁面識別碼會放在檔案的標題中。 假設使用下列DDX檔案。
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
         <PDF result="out.pdf">
@@ -59,7 +62,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 ## 步驟摘要 {#summary-of-steps}
 
-要組合包含唯一頁面識別碼（Bates編號）的PDF文檔，請執行以下任務：
+要組合包含唯一頁面標識符（Bates編號）的PDF文檔，請執行以下任務：
 
 1. 包含專案檔案。
 1. 建立PDF匯寫程式式用戶端。
@@ -81,7 +84,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，此為部署AEM Forms的J2EE應用程式伺服器專屬檔案。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，此為部署AEM Forms的J2EE應用程式伺服器專屬檔案。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立PDF匯寫程式式用戶端**
 
@@ -113,7 +116,7 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -159,6 +162,7 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
    * 表 `com.adobe.idp.Document` 示DDX文檔的對象。
    * 包 `java.util.Map` 含輸入不安全PDF檔案的物件。
    * 指定 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 運行時選項（包括預設字型和作業日誌級別）的對象。
+
    此方 `invokeDDX` 法會傳回包 `com.adobe.livecycle.assembler.client.AssemblerResult` 含密碼加密PDF檔案的物件。
 
 1. 擷取結果。
@@ -171,9 +175,9 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API將PDF檔案與bates編號組合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
+[快速入門（SOAP模式）: 使用Java API將PDF檔案與bates編號組合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -183,7 +187,7 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
@@ -235,6 +239,7 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
    * 表 `BLOB` 示DDX文檔的對象。
    * 包 `MyMapOf_xsd_string_To_xsd_anyType` 含輸入PDF檔案的物件。 其鍵必須與PDF源檔案的名稱匹配，其值必須是與這些文 `BLOB` 件對應的對象。
    * 指定 `AssemblerOptionSpec` 運行時選項的對象。
+
    該方 `invoke` 法返回 `AssemblerResult` 一個對象，該對象包含作業結果和所發生的任何異常。
 
 1. 擷取結果。
