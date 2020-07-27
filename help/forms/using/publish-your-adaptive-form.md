@@ -1,6 +1,6 @@
 ---
-title: 「教學課程：發佈最適化表單」
-seo-title: 「教學課程：發佈最適化表單」
+title: 「教學課程： 發佈最適化表單」
+seo-title: 「教學課程： 發佈最適化表單」
 description: 將最適化表單發佈為AEM頁面、將表單內嵌至AEM網站頁面，或將最適化表單內嵌至外部網頁
 seo-description: 將最適化表單發佈為AEM頁面、將表單內嵌至AEM網站頁面，或將最適化表單內嵌至外部網頁
 uuid: 1b164376-e61a-40aa-9f16-c79d24a72e20
@@ -9,12 +9,15 @@ topic-tags: introduction
 discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '989'
+ht-degree: 0%
 
 ---
 
 
-# 教學課程：發佈最適化表單 {#tutorial-publish-your-adaptive-form}
+# 教學課程： 發佈最適化表單 {#tutorial-publish-your-adaptive-form}
 
 ![](do-not-localize/13-publish-your-adaptive-form-small.png)
 
@@ -30,8 +33,8 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## 開始之前 {#before-you-start}
 
-* **[設定AEM Forms發佈例項](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**:發佈例項是以發佈模式執行之AEM Forms的公開對應例項。 在生產環境中，發佈實例不在組織的防火牆外。
-* **[設定複製和反向複製](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**:複製會將內容從作者實例複製到發佈實例，並將用戶輸入（例如，表單輸入）從發佈實例返回作者實例。
+* **[設定AEM Forms發佈例項](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**: 發佈例項是以發佈模式執行之AEM Forms的公開對應例項。 在生產環境中，發佈實例不在組織的防火牆外。
+* **[設定複製和反向複製](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**: 複製會將內容從作者實例複製到發佈實例，並將用戶輸入（例如，表單輸入）從發佈實例返回作者實例。
 
 ## 將最適化表單發佈為AEM頁面 {#publish-the-adaptive-form-as-an-aem-page}
 
@@ -56,15 +59,16 @@ AEM Forms提供元件AEM Forms Container，可將最適化表單內嵌至AEM Sit
    We.Retail網站隨附AEM。 如果您未安裝We.Retail網站，請參閱「 [We.Retail Reference Implementation](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/we-retail.html) 」安裝網站。
 
 1. 點選 ![屬性頁](assets/properties.png) ，並在新建立的We.Retail網站頁面中選取「編 **輯範本** 」選項。 頁面的範本會在瀏覽器的新標籤中開啟。
-1. 在版面容器 **方塊內點選** ，然後點選 ![feedmanagement](assets/feedmanagement.png)。 在「允 **許的元件** 」索引標籤中，展開「一般 **」accordion，選取** AEM Form **（AEM表單）選項，然後點選**![](assets/save_icon.svg)。 AEM Forms Container元件已針對頁面啟用。
+1. 在版面容器 **方塊內點選** ，然後點選 ![feedmanagement](assets/feedmanagement.png)。 在「允 **許的元件** 」標籤中，展開「一般 **」accordion，選取** AEM Form **選項，並點選**![](assets/save_icon.svg)save_icon。 AEM Forms Container元件已針對頁面啟用。
 
 1. 開啟包含在步驟1中開啟之AEM Sites頁面的瀏覽器標籤。 點選「拖 **曳元件到此處** 」方塊，然後點選 **+。** 在「插入 **新元件」方塊中** ，點選 **「AEM表單」。** AEM **Forms Container** 元件會新增至頁面。
-1. 點選 **AEM Forms容器元件** ，然後點選 ![](assets/configure-icon.svg)。 此時會出現一個對話方塊，其中包含AEM Forms容器的屬性。 在「資 **產路徑** 」欄位中，瀏覽並選取shipping-address-add-update-form最適化表單。 點選 ![](assets/save_icon.svg)。 最適化表單內嵌在頁面中。
+1. 點選「 **AEM Forms容器」元件** ，然後點 ![選「configure-icon」](assets/configure-icon.svg)。 此時會出現一個對話方塊，其中包含AEM Forms容器的屬性。 在「資 **產路徑** 」欄位中，瀏覽並選取shipping-address-add-update-form最適化表單。 點選 ![save_icon](assets/save_icon.svg)。 最適化表單內嵌在頁面中。
 1. 同時發佈最適化表單和網站頁面。 以下是需要考慮的幾點：
 
    * 如果您是第一次發佈AEM網站頁面，而且其中包含內嵌表單，請發佈網站頁面和內嵌表單。
    * 如果您只修改發佈網站頁面中的內嵌表單，請發佈原始表單，而變更會反映在發佈的網站頁面中。 發佈的網站頁面包含表單的參考，不需要重新發佈頁面。
    * 如果您修改網站頁面和內嵌表單，請重新發佈網站頁面和表單。
+
    ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
 
    新增至「AEM網站」頁面的「送貨和帳單地址變更」表單。
