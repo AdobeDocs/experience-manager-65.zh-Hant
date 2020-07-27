@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3271ad3a7d0daac731803975e12d79b77905068a
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
 workflow-type: tm+mt
-source-wordcount: '6107'
+source-wordcount: '6120'
 ht-degree: 1%
 
 ---
@@ -187,7 +187,7 @@ ht-degree: 1%
 
    ![網路頻道資產](assets/webchannelassets.png)
 
-   點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](assets/edit.svg) 物件或變數旁的編輯（編輯）圖示來編輯屬性。 此外，對於使用列印頻道在 [Web頻道中自動產生的檔案片段](#synchronize) ，請使用每個資料模型物件和變數旁的 ![](assets/cancelinheritance.png) （取消繼承）圖示來取消繼承 [](#cancelinheritance) ，並可加以編輯。
+   點選檔案片段、點選 ![configure_icon](assets/configure_icon.png) (Configure)，然後從「互動式通訊」的側點點選「 **[!UICONTROL Properties]** 」。 「變 **[!UICONTROL 數與資料模型物件]** 」區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用每 ![個資料模型](assets/edit.svg) 物件或變數旁的編輯（編輯）圖示來編輯屬性。 此外，對於使用列印頻道在 [Web頻道中自動產生的檔案片段](#synchronize) ，請使用每個資料模型物件和變數旁的取消繼承（取消繼承）圖示來取 ![消繼承](assets/cancelinheritance.png)[](#cancelinheritance) ，並可加以編輯。
 
 1. 若要在選取網頁頻道時，在網頁頻道中新增其他元件，請點選「元 **[!UICONTROL 件]**」。 視需要將元件拖放至互動式通訊的網路頻道，然後繼續進行設定。
 
@@ -386,12 +386,12 @@ ht-degree: 1%
 
 #### 在表格儲存格中新增或編輯文字 {#addedittexttable}
 
-1. 在表格儲存格中選取預設文字方塊，然後點選 ![](assets/edit.png) （編輯）。
-1. 在表格儲存格中輸入文字，然後點選 ![](assets/done_icon.png) 以儲存它。
+1. 在表格儲存格中選取預設文字方塊，然後點選 ![編輯](assets/edit.png) （編輯）。
+1. 在表格儲存格中輸入文字，然 ![後點選done_icon](assets/done_icon.png) 以儲存它。
 
 #### 在表格儲存格和資料模型物件元素之間建立系結 {#createbindingtablecells}
 
-1. 在表格列中選取預設文字方塊，然後點選 ![](assets/edit.png) （編輯）。
+1. 在表格列中選取預設文字方塊，然後點選 ![編輯](assets/edit.png) （編輯）。
 1. 點選「資料模型物件」下拉式清單，並選取屬性。
 1. 點選以儲存表格儲存格和資料模型物件屬性之間的系結。
 
@@ -399,10 +399,10 @@ ht-degree: 1%
 
 #### 為表格儲存格中的文字建立超連結 {#createhyperlinktable}
 
-1. 在表格儲存格中選取預設文字方塊，然後點選 ![](assets/edit.svg) （編輯）。
+1. 在表格儲存格中選取預設文字方塊，然後點選 ![編輯](assets/edit.svg) （編輯）。
 1. 選取表格儲存格中的文字，並點選「超連結」圖示。
 1. 在「路徑」欄位中指 **定URL** 。
-1. 點選 ![](assets/done_icon.png) 以儲存超連結屬性。
+1. 點選 ![done_icon](assets/done_icon.png) ，儲存超連結屬性。
 
 ![建立超連結](assets/create_hyperlink_table_new.png)
 
@@ -426,9 +426,9 @@ ht-degree: 1%
 
 要啟用排序：
 
-1. 選取表格並點選 ![](assets/configure_icon.png) （設定）。 您也可以使用互動式通訊的側 **邊** ，使用內容瀏覽器選取表格。
+1. 選取表格並點選 ![configure_icon](assets/configure_icon.png) (Configure)。 您也可以使用互動式通訊的側 **邊** ，使用內容瀏覽器選取表格。
 1. 選擇 **啟用排序。**
-1. 點選 ![](assets/done_icon.png) 以儲存表格屬性。 欄標題中的排序圖示（向上和向下箭頭）表示已啟用排序。
+1. 點選 ![done_icon](assets/done_icon.png) 以儲存表格屬性。 欄標題中的排序圖示（向上和向下箭頭）表示已啟用排序。
 
    ![啟用排序](assets/enable_sorting_new-1.png)
 
@@ -479,7 +479,7 @@ ht-degree: 1%
 若要新增按鈕並定義其上的規則：
 
 1. 點選Web範本中的根面板，並點選 **+** ，將 **Button** （按鈕）元件新增至互動式通訊。
-1. 點選按鈕元件並點選 ![](assets/edit-rules.png) 以在點選按鈕時定義規則。
+1. 點選按鈕元件並點選 ![edit-rules](assets/edit-rules.png) ，在點選按鈕時定義規則。
 1. 在「 **When** 」區段中，從 **** 按鈕下拉式清單的狀態中選取「已點按」。
 1. 在Then **區** :
 
