@@ -1,8 +1,8 @@
 ---
 title: 建立自訂工具列版面
 seo-title: 建立自訂工具列版面
-description: 您可以指定表單的工具列版面。 工具欄佈局定義了窗體中工具欄的命令和佈局。
-seo-description: 您可以指定表單的工具列版面。 工具欄佈局定義了窗體中工具欄的命令和佈局。
+description: 您可以指定表單的工具列版面。 工具欄佈局定義了窗體上的命令和工具欄佈局。
+seo-description: 您可以指定表單的工具列版面。 工具欄佈局定義了窗體上的命令和工具欄佈局。
 uuid: 389a715a-4c91-4a63-895d-bb2d0f1054eb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '552'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## 工具列版面 {#layout}
 
-當您建立最適化表單時，可以指定表單的工具列版面。 工具欄佈局定義了窗體中工具欄的命令和佈局。
+當您建立最適化表單時，可以指定表單的工具列版面。 工具欄佈局定義了窗體上的命令和工具欄佈局。
 
-工具列版面配置使用時，主要依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。 為協助處理此問題，AEM提供「用戶端程式庫檔案夾」，可讓您將用戶端程式碼儲存在儲存庫中、將它組織為類別，並定義將每類程式碼提供給用戶端的時間和方式。 然後用戶端程式庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請 [參閱「用戶端程式庫在AEM中的運作方式」。](/help/sites-developing/clientlibs.md)
+工具列版面配置使用時，主要依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。 為協助處理此問題，AEM提供「用戶端程式庫檔案夾」，可讓您將用戶端程式碼儲存在儲存庫中、將它組織成類別，並定義將每類程式碼提供給用戶端的時間和方式。 然後用戶端程式庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請 [參閱「用戶端程式庫在AEM中的運作方式」。](/help/sites-developing/clientlibs.md)
 
 ![工具列的範例版面](assets/default_toolbar_layout.png)
 
@@ -47,7 +50,7 @@ CustomToolbarLayoutDemo.zip
 
 1. 建立檔案夾以維護自訂工具列版面。 例如：
 
-   `/apps/customlayout/toolbar`.
+   `/apps/customlayout/toolbar`。
 
    若要建立自訂版面，您可以使用（並自訂）下列檔案夾中的其中一個現成可用的工具列版面：
 
@@ -91,7 +94,7 @@ CustomToolbarLayoutDemo.zip
 
    範例 `customToolbarLayout.jsp`:
 
-   ```php
+   ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
    <cq:includeClientLib categories="customtoolbarlayout" />
    <c:if test="${isEditMode}">
@@ -109,7 +112,7 @@ CustomToolbarLayoutDemo.zip
 
    範例 `toolBarCommon.jsp`:
 
-   ```php
+   ```jsp
    <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions"%>
    <%--------------------
    This code iterates over all the tool bar items using the guideToolbar bean.
