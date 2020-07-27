@@ -9,7 +9,10 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '884'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
 
 1. 在網頁瀏覽器中輸入下列URL以登入「管理控制台」:
 
-   ```as3
+   ```java
             https://[host name]:'port'/adminui
    ```
 
@@ -61,7 +64,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
    * 工作區單一登入
    * ApplicationManager
 
-1. 按一下 **下一步** ，對不在上述清單中的SOAP端點重複上一步。 在移除端點之前，請確定SOAP已列在「提供者」欄中。
+1. 單 **擊「下一步** 」，對不在上述清單中的SOAP端點重複上一步。 在移除端點之前，請確定SOAP已列在「提供者」欄中。
 
 ## 停用非必要的匿名服務存取 {#disabling-non-essential-anonymous-access-to-services}
 
@@ -69,7 +72,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
 
 1. 在網頁瀏覽器中輸入下列URL，以登入管理控制台：
 
-   ```as3
+   ```java
             https://[host name]:'port'/adminui
    ```
 
@@ -99,6 +102,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
    * WorkspacePropertyService
    * OutputService
    * FormsService
+
    如果您要公開這些服務中的任何一項以進行遠程調用，您也應考慮禁用這些服務的匿名訪問。 否則，任何有權訪問此服務的呼叫者都可能在未通過有效憑證的情況下調用服務。
 
    對於任何不需要的服務，應禁用匿名訪問。 許多內部服務都需要啟用匿名驗證，因為這些驗證需要由系統中任何可能的使用者呼叫，而不需預先授權。
@@ -111,7 +115,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
 
 1. 在網頁瀏覽器中輸入下列URL，以登入管理控制台：
 
-   ```as3
+   ```java
             https://[host name]:'port'/adminui
    ```
 
