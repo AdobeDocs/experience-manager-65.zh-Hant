@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
-source-wordcount: '1893'
+source-wordcount: '1894'
 ht-degree: 1%
 
 ---
@@ -138,7 +138,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 #### 範例： 已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![](../assets/chlimage_1-125.png)
 
 ### SCORM套件 {#scorm-package}
 
@@ -151,7 +151,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 **安裝SCORM套件**
 
 1. 從Package [Share安裝2.3.7版的cq-social-scorm-package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg)。
-1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行該實例，以建立升級的scormEngineDB模式。
+1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行它，以建立升級的scormEngineDB模式。
 1. 從「 `/content/communities/scorm/RecordResults` https://」新增CSRF篩選器中的「排除的路徑」屬性<hostname>:<port>/system/console/configMgr&#39;。
 
 #### SCORM記錄 {#scorm-logging}
@@ -222,7 +222,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 因此，必須編輯所有 **次要發佈例項的配置** ，以取消勾選 **`Primary Publisher`** 核取方塊。
 
-![](/help/communities/assets/chlimage_1-126.png)
+![](../assets/chlimage_1-126.png)
 
 對於發佈群中的所有其他（次要）發佈例項：
 
@@ -266,11 +266,11 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 #### 預設代理（發佈） {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![configure-limits](../assets/configure-limits.png)
 
 #### 反向複製代理（發佈反向） {#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![](../assets/chlimage_1-128.png)
 
 ### 作者的隧道服務 {#tunnel-service-on-author}
 
@@ -293,7 +293,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 * 勾選**enable **box
 * 選擇保 **存**
 
-![](/help/communities/assets/chlimage_1-129.png)
+![](../assets/chlimage_1-129.png)
 
 ### 複製加密密鑰 {#replicate-the-crypto-key}
 
@@ -350,7 +350,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 
 * [刷新Granite Crypto包](#refresh-the-granite-crypto-bundle)
 
-![](/help/communities/assets/chlimage_1-130.png)
+![](../assets/chlimage_1-130.png)
 
 #### 刷新Granite加密包 {#refresh-the-granite-crypto-bundle}
 
@@ -361,7 +361,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 * 找 `Adobe Granite Crypto Support` 到搭售(com.adobe.granite.crypto)
 * 選擇刷 **新**
 
-![](/help/communities/assets/chlimage_1-131.png)
+![](../assets/chlimage_1-131.png)
 
 * 稍後，應出現**成功**對話方塊：
    `Operation completed successfully.`
