@@ -3,9 +3,9 @@ title: 在中管理視訊資產 [!DNL Adobe Experience Manager]。
 description: 在中上傳、預覽、註解和發佈視訊資產 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '816'
 ht-degree: 7%
 
 ---
@@ -23,17 +23,11 @@ ht-degree: 7%
 
 1. 在「數位資產」檔案夾或子檔案夾中，導覽至您要新增數位資產的位置。
 1. 若要上傳資產，請按一下工 **[!UICONTROL 具列中的]** 「建立」，然後選擇「 **[!UICONTROL 檔案」]**。 或者，直接將它拖曳至資產區域。 如需上 [傳作業的詳細資訊](managing-assets-touch-ui.md#uploading-assets) ，請參閱上傳資產。
-1. 若要在「卡片」檢視中預覽影片，請按一下 **[!UICONTROL 影片資產]** 上的「播放」按鈕。
+1. 若要在「卡片」檢視中預覽視訊，請按一下 **[!UICONTROL 視訊資產]**![上的「播放](assets/do-not-localize/play.png) 」選項。 您只能在卡片檢視中暫停或播放影片。 「播 [!UICONTROL 放] 」和「暫 [!UICONTROL 停] 」選項在清單檢視中不可用。
 
-   ![chlimage_1-65](assets/chlimage_1-201.png)
+1. 若要在資產詳細資訊頁面中預覽視訊，請按一 **[!UICONTROL 下資訊卡]** 上的編輯。 視訊會在瀏覽器的原生視訊播放器中播放。 您可以播放、暫停、控制音量，以及將視訊縮放至全螢幕。
 
-   您只能在卡片檢視中暫停或播放影片。 「播 [!UICONTROL 放] 」和「暫  停」按鈕在清單檢視中不可用。
-
-1. 若要在資產詳細資訊頁面中預覽視訊，請按一 **[!UICONTROL 下資訊卡]** 上的編輯。
-
-   視訊會在瀏覽器的原生視訊播放器中播放。 您可以播放、暫停、控制音量，以及將視訊縮放至全螢幕。
-
-   ![chlimage_1-66](assets/chlimage_1-202.png)
+   ![視訊播放控制項](assets/video-playback-controls.png)
 
 ## 上傳大於2 GB資產的設定 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
