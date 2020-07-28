@@ -3,9 +3,9 @@ title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL
 description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2666'
 ht-degree: 7%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 7%
 | [!UICONTROL 區段標題] | 新增共用元件清單的區段標題。 |
 | [!UICONTROL 單行文字] | 新增單行文字屬性。 它儲存為字串。 |
 | [!UICONTROL 多值文字] | 新增多值文字屬性。 它儲存為字串陣列。 |
-| [!UICONTROL 數字] | 添加數字元件。 |
+| [!UICONTROL 數量] | 添加數字元件。 |
 | [!UICONTROL 日期] | 新增日期元件。 |
 | [!UICONTROL 下拉式] | 新增下拉式清單。 |
 | [!UICONTROL 標準標記] | 新增標記. |
@@ -131,15 +131,15 @@ ht-degree: 7%
 
 如果您選取「必 **[!UICONTROL 要]** 」選項，可以搜尋遺失必要中繼資料的資產。從「篩 **[!UICONTROL 選器]** 」面板中，展開「中繼資料 **[!UICONTROL 驗證謂語]** 」並選取「 **[!UICONTROL 無效]** 」選項。搜尋結果會顯示遺失您透過結構表單設定之必要中繼資料的資產。
 
-![「篩選器」面板的「中繼資料驗證謂語」中選取的選項無效 ](assets/chlimage_1-178.png)
+![「篩選器」面板的「中繼資料驗證謂語」中選取的選項](assets/invalid-metadata-predicate.png)
 
 如果將上下文元資料元件添加到任何方案表單的任何頁籤，則該元件將作為清單顯示在應用特定方案的資產的屬性頁中。 該清單包括除應用上下文元資料元件的頁籤之外的所有其他頁籤。 目前，此功能提供基本功能，可根據內容控制中繼資料的顯示。
 
-![內容相關的中繼資料元件清單標籤資產屬性](assets/chlimage_1-179.png)
+![內容相關的中繼資料元件清單資產屬性標籤](assets/metadata-contextual-component-list.png)
 
 要顯示屬性頁面中除了應用上下文元資料元件的頁籤之外的任何頁籤，請從清單中選擇該頁籤。 該頁籤將添加到屬性頁。
 
-![「內容相關中繼資料」清單上選取的標籤會顯示在資產屬性頁面上](assets/contextual-metadata-asset-properties.png)
+![上下文中繼資料清單上選取的標籤會顯示在資產屬性頁面上](assets/contextual-metadata-asset-properties.png)
 
 *圖： 資產屬性頁面中的內容相關中繼資料。*
 
@@ -151,13 +151,11 @@ ht-degree: 7%
 
 架構編輯器可讓您新增或刪除標籤。The default schema form includes the **[!UICONTROL Basic]**, **[!UICONTROL Advanced]** , **[!UICONTROL IPTC]**, and **[!UICONTROL IPTC Extension]** tabs.
 
-![中繼資料結構表單中的預設標籤](assets/chlimage_1-181.png)
+![中繼資料結構表單中的預設標籤](assets/metadata-schema-form-tabs.png)
 
-單 `+` 擊可在架構表單上添加頁籤。 依預設，新標籤的名稱為 `Unnamed-1`。 您可以從「設定」索引標籤修 **[!UICONTROL 改名稱]** 。
+單 `+` 擊可在架構表單上添加頁籤。 依預設，新標籤的名稱為 `Unnamed-1`。 您可以從「設定」索引標籤修 **[!UICONTROL 改名稱]** 。 按一 `X` 下以刪除標籤。
 
-按一 `X` 下以刪除標籤。
-
-![使用中繼資料結構編輯器新增或刪除標籤](assets/chlimage_1-182.png)
+![使用中繼資料結構編輯器新增或刪除標籤](assets/metadata-schema-form-new-tab.png)
 
 ## 刪除中繼資料結構表單 {#delete-metadata-schema-forms}
 
@@ -238,7 +236,7 @@ ht-degree: 7%
 
 1. 選擇要在其上應用已修改方案的資料夾，然後按一下應 **[!UICONTROL 用]**。
 
-   ![選擇要應用元資料方案的資料夾](assets/chlimage_1-188.png)
+   ![選擇要應用元資料方案的資料夾](assets/metadata-schema-select-folder.png)
 
 1. 如果資料夾已套用其他中繼資料結構，會出現警告訊息，指出您即將覆寫現有的中繼資料結構。 按一 **下覆寫**。
 1. 按一 **下「確定** 」以關閉成功訊息。
@@ -265,7 +263,7 @@ ht-degree: 7%
 
 1. 導覽至資料夾，並上傳您新增至自訂表單之必填欄位中遺失中繼資料的部分資產。 在資產的卡片檢視中，會顯示必要欄位遺失中繼資料的訊息。
 
-   ![在資料夾中上傳資產時，資產卡片檢視中遺失必要中繼資料的訊息](assets/chlimage_1-192.png)
+   ![在資料夾中上傳資產時，資產卡片檢視中遺失必要中繼資料的訊息](assets/metadata-missing-info-card-view.png)
 
 1. （可選）存取 `https://[aem_server]:[port]/system/console/components/`。 配置並啟 `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` 用預設禁用的元件。 設定檢查資產上 [!DNL Experience Manager] 中繼資料有效性的頻率。 此設定會將屬性新 `hasValidMetadata` 增至 `jcr:content` 資產。 [!DNL Experience Manager] 使用此屬性來篩選搜尋結果中的無效資產。 如果您在勾選後新增資產，則資產會在下次排程的勾選前 `hasValidMetadata` 才加上標幟。 因此，資產不會出現在搜尋篩選器中，搜尋無效中繼資料，直到下次排程檢查之後。
 
