@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d488b1acc789c0fb1a631e58844d9fe9a70c2662
+source-git-commit: 3a1d02fc1bc561b54e57cf91abc8f4406ba8c365
 workflow-type: tm+mt
-source-wordcount: '2610'
+source-wordcount: '2601'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,9 @@ ht-degree: 0%
 
 * 瞭解MSM Java API的主要成員。
 * 建立可用於轉出設定的新同步動作。
-* 移除「建立網站」精靈中的「章節」步驟。
 * 修改預設語言和國家／地區代碼。
+
+<!-- * Remove the "Chapters" step in the Create Site wizard. -->
 
 >[!NOTE]
 >
@@ -649,7 +650,7 @@ MSM會使用儲存的語言和國家代碼清單來判斷與您頁面的語言�
 1. 按一 **下「工具**」、「 **作業** 」 **和「Web Console**」。 在此控制台中，單 **擊OSGi**，然 **後按一下Configuration**。
 1. 找到並單 **擊Day CQ WCM Language Manager**，將「Language List **（語言清單）」的值更改為** ，然後按一下「 `/apps/wcm/core/resources/languages`Save（保存） ****」。
 
-   ![chlimage_1-70](assets/chlimage_1-78.png)
+   ![chlimage_1-78](assets/chlimage_1-78.png)
 
 ## 在頁面屬性上設定MSM鎖（啟用觸控的UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
