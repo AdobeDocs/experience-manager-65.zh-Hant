@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 3%
@@ -112,7 +112,7 @@ ht-degree: 3%
 
 ### 濾鏡邊欄 {#ootbfilters}
 
-![chlimage_1-212](assets/chlimage_1-212.png)
+![開放濾鏡](assets/open-filterrail.png)
 
 側面板圖示會開啟濾鏡邊欄。 顯示在內容區域左側的篩選邊欄提供不同的篩選，每個篩選器都對顯示在內容區域中的參考UGC有立即影響。
 
@@ -141,13 +141,13 @@ ht-degree: 3%
 
 文字搜尋會限制對包含輸入文字之貼文顯示的參考UGC。
 
-![chlimage_1-213](assets/chlimage_1-213.png)
+![文本搜索](assets/text-search.png)
 
 #### 網站 {#site}
 
 網站會限制顯示給所選社群網站貼文的參考UGC。 如果未勾選任何網站，則會顯示所有UGC參照。
 
-![chlimage_1-214](assets/chlimage_1-214.png)
+![site-panel](assets/site-panel.png)
 
 >[!NOTE]
 >
@@ -189,8 +189,7 @@ ht-degree: 3%
    * 例如，要篩選包含的投票元件，請輸入：
 
       `Voting=social/tally/components/hbs/voting`
-
-![chlimage_1-215](assets/chlimage_1-215.png)
+   ![additional-contenttype](assets/additional-contenttype.png)
 
 * 選擇「保存」。
 * 重新整理社群——協調控制台。
@@ -216,25 +215,25 @@ ht-degree: 3%
 
 一旦標籤某個內容，它會一直保持標籤狀態，直到您再次選取「標籤」按鈕，取消標籤該 **單一內容** 。 請注意，沒有標籤層級，例如重要或後續動作。
 
-![chlimage_1-216](assets/chlimage_1-216.png)
+![標籤](assets/flagging.png)
 
 #### 成員 {#members}
 
 成員限制由輸入的成員名稱發佈的UGC所顯示的引用UGC。
 
-![chlimage_1-217](assets/chlimage_1-217.png)
+![成員](assets/members.png)
 
 #### 發佈於前一 {#posted-in-the-last}
 
 「在最後一個貼文中張貼」會限制在最後一小時、一天、一週、月或年內張貼的貼文所顯示的參考UGC。
 
-![chlimage_1-218](assets/chlimage_1-218.png)
+![posted-last](assets/posted-last.png)
 
 #### 情緒 {#sentiment}
 
 [情緒](/help/communities/moderate-ugc.md#sentiment) ，會限制顯示給情緒值為正面、負面或中性的貼文的參考UGC。
 
-![chlimage_1-219](assets/chlimage_1-219.png)
+![情緒](assets/sentiment.png)
 
 ## 自訂篩選器 {#custom-filters}
 
@@ -271,7 +270,7 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 [在內容區域](/help/communities/moderate-ugc.md#moderation-actions) ，或在檢視內容詳細資訊時，可對一或多個選取項目執行協調動作。
 
-若要大量協調貼文，請在內容區域中按一下貼文上的「選取(選取 ![](assets/selecticon.png))」圖示，該圖示會以滑鼠（案頭）暫留在貼文上，或在貼文上按住手指（行動裝置）。 執行此動作後，您就會進入多選模式，現在只要按一下後續的貼文，即可選取要大量協調的貼文。 使用工具列上顯示的按鈕，對選取的貼文執行協調動作。 所有動作都會提示您確認。
+若要大量協調貼文，請在內容區域中按一下貼文上的「選取(選取![](assets/selecticon.png))」圖示，該圖示會以滑鼠（案頭）暫留在貼文上，或在貼文上按住手指（行動裝置）。 執行此動作後，您就會進入多選模式，現在只要按一下後續的貼文，即可選取要大量協調的貼文。 使用工具列上顯示的按鈕，對選取的貼文執行協調動作。 所有動作都會提示您確認。
 
 若要協調內容區域中的單一貼文，請將滑鼠（案頭）暫留在貼文上，或按住貼文（行動裝置）上的手指，讓按鈕出現在貼文上。 在單一內容詳細資料上作業時，只有刪除動作會提示確認。
 
@@ -318,19 +317,19 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 #### 回覆 {#reply}
 
-![chlimage_1-220](assets/chlimage_1-220.png)
+![回覆](assets/reply.png)
 
 使用單一貼文時，如果UGC類型支援回覆且設定為允許回覆，則會顯示「回覆」圖示。
 
 #### 允許 {#allow}
 
-![chlimage_1-221](assets/chlimage_1-221.png)
+![允許](assets/allow.png)
 
 使用單一貼文時，當貼文已標幟或拒絕時，「允許」圖示會出現。 如果已標幟，選取「允許」將會清除所有標幟。
 
 #### 拒絕 {#deny}
 
-![chlimage_1-222](assets/chlimage_1-222.png)
+![拒絕](assets/deny.png)
 
 「拒 **絕** 」協調動作僅適用於已協調的內容，除非在多選模式下，未協調的內容上不會顯示。
 
@@ -342,19 +341,19 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 #### 刪除 {#delete}
 
-![chlimage_1-223](assets/chlimage_1-223.png)
+![刪除](assets/delete.png)
 
 在單一選取範圍或大量模式中，您可以選取項目並加以刪除。 刪除操作會產生確認對話框。 刪除後，這些項目會立即從內容區域中消失。 **刪除UGC後，它將從儲存庫中永久刪除，以後將無法檢索**。
 
 #### 關閉 {#close}
 
-![chlimage_1-224](assets/chlimage_1-224.png)
+![關閉](assets/close.png)
 
 使用單一貼文時，如果UGC類型支援防止該資源的進一步貼文，就會出現「關閉」圖示。
 
 #### 審核歷史記錄 {#moderation-history}
 
-![chlimage_1-225](assets/chlimage_1-225.png)
+![協調](assets/moderation.png)
 
 使用單一貼文時，將滑鼠指標暫留在貼文上方時，會顯示「協調歷程記錄」圖示。 選取圖示將會顯示一個窗格，其中包含對UGC貼文所採取動作的記錄。
 
@@ -362,11 +361,11 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 例如：
 
-![chlimage_1-226](assets/chlimage_1-226.png)
+![協調歷史](assets/moderation-history.png)
 
 #### 檢視詳細資料 {#view-detail}
 
-![chlimage_1-227](assets/chlimage_1-227.png)
+![視圖](assets/view.png)
 
 使用單一貼文時，可以以詳細模式開啟UGC來檢視更多詳細資訊。
 
@@ -376,5 +375,5 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 例如：
 
-![chlimage_1-228](assets/chlimage_1-228.png)
+![view1](assets/view1.png)
 
