@@ -3,9 +3,9 @@ title: 搜尋 Facet.
 description: 如何在Adobe Experience Manager中建立、修改和使用搜尋刻面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '2525'
+source-wordcount: '2515'
 ht-degree: 16%
 
 ---
@@ -28,11 +28,9 @@ Adobe Experience Manager Assets的企業部署可儲存許多資產。 有時候
 若為全文搜尋，請將  Fulltext謂語新增至表單。 使用Property predicate搜尋符合您指定之單一屬性的資產。 使用「選項」述詞可搜尋符合特定屬性之一或多個值的資產。 新增「日期範圍」述詞，以搜尋在指定日期範圍內建立的資產。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **Edit** ![edit icon](assets/do-not-localize/aemassets_edit.png).
+1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 
    ![尋找並選取「資產管理搜尋邊欄」](assets/assets_admin_searchrail.png)
-
-   尋找並選取「資產管理搜尋邊欄」
 
    >[!NOTE]
    >
@@ -76,7 +74,7 @@ Adobe Experience Manager Assets的企業部署可儲存許多資產。 有時候
 1. 若要關閉預覽，請按 **[!UICONTROL 一下預]** 覽右 ![上角的「關閉](assets/do-not-localize/close.png) 」(Close close)。
 1. 按一 **[!UICONTROL 下「完成]** 」以儲存設定。
 1. 導覽至「資產」使用者介面中的「搜尋」面板。 The Property predicate is added to the panel.
-1. 在文本框中輸入要搜索的資產的說明。 例如，輸入&quot;Adobe&quot;。 當您執行搜尋時，描述符合「Adobe」的資產會列在搜尋結果中。
+1. 在文本框中輸入要搜索的資產的說明。 For example, enter `Adobe`. 當您執行搜尋時，具有描述符合的資 `Adobe` 產會列在搜尋結果中。
 
 ## 新增選項述詞 {#adding-an-options-predicate}
 
@@ -90,13 +88,13 @@ Adobe Experience Manager Assets的企業部署可儲存許多資產。 有時候
 
 例如，如果您為檔案類型選取「影像」，則會使用OR運算結合屬性來建立資 `value` 產的搜尋查詢。例如，通過組合影像/jpeg *、* image/gif *、* png影像、影像 */jpeg影像、以及使用OR操作對Tiff屬性進行搜索的Joff影像*****`jcr:content/metadata/dc:format` /Tiff影像的匹配結果來構建影像搜索查詢。
 
-![CRXDE中所示的檔案類型的Value屬性用於搜索查詢](assets/chlimage_1-418.png)
+![CRXDE中所示的檔案類型的Value屬性用於搜索查詢](assets/filetype-value-property.png)
 
 CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 您不必手動為CRXDE儲存庫中的選項建立節點結構，而是可以透過指定對應的索引鍵值配對，來定義JSON檔案中的選項。 在「屬性名稱」欄位中指定JSON檔 **[!UICONTROL 案的路徑]** 。例如，您可以定義鍵值配對、 `image/bmp`、 `image/gif``image/jpeg`、和 `image/png` 並指定其值，如下列範例JSON檔案中所示。In the **[!UICONTROL Property Name]** field, you can specify the CRXDE path for this file.
 
-```JSON
+```json
 {
     "options" :
  [
@@ -164,7 +162,7 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 1. 導覽至「搜尋」面板。 The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. 指定您要依據其搜尋資產或從建議清單中選取的標籤。
 
-   ![在輸入標籤名稱時，Experience Manager提供的建議](assets/chlimage_1-419.png)
+   ![在輸入標籤名稱時，Experience Manager提供的建議](assets/tag-suggestion.png)
 
    *圖： 在輸入標籤名稱時，Experience Manager提供的建議。*
 
