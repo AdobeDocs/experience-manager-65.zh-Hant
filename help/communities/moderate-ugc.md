@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+workflow-type: tm+mt
+source-wordcount: '1523'
+ht-degree: 1%
 
 ---
 
@@ -22,20 +25,20 @@ source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 當會員（登入網站訪客）透過與下列其中一個社群元件互動，從已發佈的社群網站張貼內容時，就會建立社群內容，也稱為使用者產生的內容(UGC):
 
-* [部落格](/help/communities/blog-feature.md):會員張貼部落格文章或留言。
-* [日曆](/help/communities/calendar.md):成員會張貼日曆事件或留言。
-* [注釋](/help/communities/comments.md):成員會張貼留言或回覆留言。
+* [部落格](/help/communities/blog-feature.md): 會員張貼部落格文章或留言。
+* [日曆](/help/communities/calendar.md): 成員會張貼日曆事件或留言。
+* [注釋](/help/communities/comments.md): 成員會張貼留言或回覆留言。
 
-* [論壇](/help/communities/forum.md):成員會發佈新主題或回覆主題。
-* [概念](/help/communities/ideation-feature.md):會員張貼構想或留言。
-* [QnA](/help/communities/working-with-qna.md):成員會建立問題或回答問題。
-* [評論](/help/communities/reviews.md):成員在評分項目時張貼評論。
+* [論壇](/help/communities/forum.md): 成員會發佈新主題或回覆主題。
+* [概念](/help/communities/ideation-feature.md): 會員張貼構想或留言。
+* [QnA](/help/communities/working-with-qna.md): 成員會建立問題或回答問題。
+* [評論](/help/communities/reviews.md): 成員在評分項目時張貼評論。
 
 UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾訊息和辱罵性語言）。 UGC可從以下幾種環境協調：
 
 * [社群內容儲存](working-with-srp.md)
 
-* [批量協調控制台](moderation.md)
+* [大量協調主控台](moderation.md)
 
    管理員和社群協調者可在公共環 [境中存取](/help/communities/users.md) 「協調」主控台，也可在作者環境中存取管理員。 當社群內容儲存在共用商店時，就 [可能如此](/help/communities/working-with-srp.md)。
 
@@ -154,11 +157,15 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 
 選取「剪下」(Cut)動作，內容就會複製到剪貼簿。 多則貼文可以複製，並以群組的形式移至新位置。
 
-![cutugc](assets/cutugc.png)![putbackugc](assets/putbackugc.png)
+![cutugc](assets/cutugc.png)
+
+![putbackugc](assets/putbackugc.png)
 
 在另一個位置，當剪貼簿中有內容時，「新貼文」旁會顯示「貼上」按鈕，其編號會識別將貼上的貼文數。 「貼上」按鈕包含清除剪貼簿而非貼上的選項。
 
-![chlimage_1-28](assets/chlimage_1-28.png) ![chlimage_1-29](assets/chlimage_1-29.png)
+![作業範圍](assets/pasteugc.png)
+
+![pasteugc1](assets/pasteugc1.png)
 
 ### 拒絕 {#deny}
 
@@ -200,7 +207,7 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 
 垃圾訊息偵測是一種自動協調功能，可將提交的使用者產生的內容標示為垃圾訊息，以篩選不可取的部分。 啟用後，它會根據預先設定的垃圾訊息字詞集合，識別使用者產生的內容是否為垃圾訊息。 預設垃圾訊息字詞提供於
 
-`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`.
+`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`。
 
 不過，若要自訂或延伸預設垃圾訊息字詞，請透過覆蓋，在/apps目錄中依預設垃圾訊息字詞的結構建立一組 [字詞](/help/communities/overlay-comments.md)。
 
@@ -234,10 +241,10 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 
 /libs元件中定義的規則包括：
 
-* 規則1:如果沒有正面字詞且至少有一個負面字詞，請將值設為1。
-* 規則2:如果沒有否定字詞且至少有一個正面字詞，請將值設為10。
-* 規則3:如果有比正面字詞更多的負面字詞，請將值設為3。
-* 規則4:如果正面字詞多於負面字詞，請將值設為8。
+* 規則1: 如果沒有正面字詞且至少有一個負面字詞，請將值設為1。
+* 規則2: 如果沒有否定字詞且至少有一個正面字詞，請將值設為10。
+* 規則3: 如果有比正面字詞更多的負面字詞，請將值設為3。
+* 規則4: 如果正面字詞多於負面字詞，請將值設為8。
 
 若要覆寫或新增規則，請依照預設規則的結構，在/apps目錄中建立一組規則。 編輯情緒設定，以識別規則的位置。
 
@@ -259,7 +266,7 @@ AEM社群提供 *Watchword分析器* ，做為評估情緒的程式 [步驟](#se
 
 若要設定情緒和關注字詞：
 
-* 以管理員身分登入您的作者實例。
+* 以管理員身分登入您的作者例項。
 * 開啟 [Web Console](https://localhost:4502/system/console/configMgr)。
 * 找到 `sentimentprocess.name`。
 * 選擇要在編輯模式下開啟的配置。
