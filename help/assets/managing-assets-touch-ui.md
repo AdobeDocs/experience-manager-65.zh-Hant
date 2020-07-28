@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '9234'
+source-wordcount: '9216'
 ht-degree: 4%
 
 ---
@@ -70,7 +70,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    您可以暫停上傳大型資產（大於500 MB），稍後從同一頁繼續。 按一 **[!UICONTROL 下]** 「暫停」旁邊的進度列，此進度列會在上載開始時顯示。
 
-   ![上傳資產進度列](assets/chlimage_1-5.png)
+   ![上傳資產進度列](assets/upload-progress-bar.png)
 
    資產被視為大型資產的大小可以設定。 例如，您可以設定系統，將超過1000 MB（而非500 MB）的資產視為大型資產。 在這種情況下，當 **[!UICONTROL 上傳大小大於]** 1000 MB的資產時，進度列上會顯示「暫停」。
 
@@ -80,7 +80,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    當您按一下「 **[!UICONTROL 暫停]**」時，它會切換至「 **[!UICONTROL 播放]** 」選項。 若要繼續上傳，請按一下「 **[!UICONTROL 播放」]**。
 
-   ![繼續暫停的資產上傳](assets/chlimage_1-6.png)
+   ![繼續暫停的資產上傳](assets/resume-paused-upload.png)
 
    若要取消進行中的上傳，請按一下進`X`度列旁的關閉()。 當您取消上傳作業時， [!DNL Assets] 會刪除部分上傳的資產。
 
@@ -94,7 +94,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    您可以選擇取代現有資產、建立其他版本，或借由重新命名已上傳的新資產來保留兩者。 如果您取代現有資產，資產的中繼資料以及您對現有資產所做的任何先前修改（例如註解或裁切）都會被刪除。 如果您選擇保留這兩個資產，新資產會重新命名，並附加 `1` 數字至其名稱。
 
-   ![「名稱衝突」對話方塊可解決資產名稱衝突](assets/chlimage_1-7.png)
+   ![「名稱衝突」對話方塊可解決資產名稱衝突](assets/resolve-naming-conflict.png)
 
    >[!NOTE]
    >
@@ -108,7 +108,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
    >
    >僅當 [!UICONTROL 啟用重複檢測功能時] ，才會顯示「檢測到重複項」對話框。 若要啟用重複偵測功能，請參 [閱啟用重複偵測](/help/assets/duplicate-detection.md)。
 
-   ![「檢測到重複資產」對話框](assets/chlimage_1-8.png)
+   ![「檢測到重複資產」對話框](assets/duplicate-asset-detected.png)
 
    若要保留重複資產，請按一 [!DNL Assets]下「保 **[!UICONTROL 留]**」。 若要刪除您上傳的重複資產，請按一下「刪 **[!UICONTROL 除」]**。
 
@@ -123,7 +123,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    資產檔案名稱的副檔名中不要包含特殊字元。
 
-   ![上傳進度對話方塊顯示成功上傳檔案和無法上傳檔案的狀態](assets/chlimage_1-10.png)
+   ![上傳進度對話方塊顯示成功上傳檔案和無法上傳檔案的狀態](assets/bulk-upload-progress.png)
 
    此外，使用者 [!DNL Assets] 介面會顯示您上傳的最新資產或您先建立的資料夾。
 
@@ -303,7 +303,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ### 串流上傳 {#streamed-uploads}
 
-如果您將許多資產上傳至Adobe Experience Manager，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先在伺服器上的臨時資料夾中儲存資產，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 預設會在中啟用串流上傳 [!DNL Assets]。
+如果您將許多資產上傳至Adobe Experience Manager，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。 串流上傳可避免在將磁碟複製到儲存庫之前，先將資產儲存在伺服器上的臨時資料夾中，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 預設會在中啟用串流上傳 [!DNL Assets]。
 
 >[!NOTE]
 >
@@ -479,10 +479,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 您可以新增或移除資產的轉譯，但原始的轉譯除外。 導覽至您要新增或移除轉譯的資產位置。
 
-1. 按一下資產以開啟其資產頁面。
-
-   ![「資產詳細資料」頁面，以管理轉譯](assets/chlimage_1-15.png)
-
+1. 按一下資產以開啟其頁面。
 1. 在Experience Manager介面中，從清單中選 **[!UICONTROL 取「轉譯]** 」。
 
    ![左側欄以開啟選單，並選取「轉譯」選項](assets/renditions_menu.png)
@@ -515,7 +512,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    同樣地，您也可以透過覆蓋來自訂「注釋」頁面影像 `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`。
 
-   ![CRXDE中的覆蓋重新顯示選擇器節點以自訂「注釋」頁面影像](assets/chlimage_1-17.png)
+   ![CRXDE中的覆蓋重新顯示選擇器節點以自訂「注釋」頁面影像](assets/renditionpicker-node-crxde.png)
 
    若要設定視訊資產的轉譯維度，請導覽至CRX `videopicker` 儲存庫中位於位置的節 `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`點、覆蓋節點，然後編輯適當的屬性。
 
@@ -671,21 +668,16 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 1. 從清單中選取所需的選項。裁切區域會根據您選擇的選項出現在影像上。「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
 
-   ![裁切選項](assets/chlimage_1-23.png)
+   ![裁切選項](assets/crop-options.png)
 
 1. 選取要裁切的區域，並調整影像上的大小或位置。
 
-1. Use the **[!UICONTROL Undo]** and **[!UICONTROL Redo]** options to revert to the uncropped image or retain the cropped image, respectively.
-
-   ![還原和重做選項](assets/chlimage_1-25.png)
-
+1. 使用還原工具 **[!UICONTROL 列選項]** 「還原 ![」工具列選項和「重](assets/do-not-localize/undo.png) 做」工具列選 ****![](assets/do-not-localize/redo.png) 項「還原」選項，或分別還原為未裁切的影像或保留已裁切的影像。
 1. 按一下適當的 **[!UICONTROL 「旋轉]** 」選項，以順時針或逆時針旋轉影像。
 
-   ![順時針和逆時針旋轉選項](assets/chlimage_1-26.png)
+   ![順時針和逆時針旋轉選項](assets/do-not-localize/rotate-options.png)
 
-1. 按一下適當的 **[!UICONTROL 「反向]** 」選項，以水準或垂直反向影像。
-
-   ![水準或垂直翻轉影像的選項](assets/chlimage_1-27.png)
+1. 按一下適當的 **[!UICONTROL 「反向]** 」選項，以水準反 ![射水準選項](assets/do-not-localize/flip-horizontal.png) ，或垂直反 ![射垂直選項](assets/do-not-localize/flip-vertical.png)。
 
 1. 要完成影像編輯，請按一下「完 **[!UICONTROL 成]**![」選項](assets/do-not-localize/check-ok-done-icon.png)。 按一 **下「完成** 」(Finish)也會開始重新產生轉譯。
 
@@ -731,23 +723,23 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
    * [快速動作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在選取資產或導覽至資產頁面後，從工具列
 
-   ![註解選項](assets/chlimage_1-29.png)
+   ![註解選項](assets/annotate-option.png)
 
 1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
 
-   ![「添加註釋」對話框中的注釋框](assets/chlimage_1-30.png)
+   ![「添加註釋」對話框中的注釋框](assets/annotation-comment-box.png)
 
 1. 若要通知使用者註解的相關資訊，請指定使用者的電子郵件地址並新增註解。 例如，若要通知Aaron MacDonald有關註解的資訊，請輸入@aa。 所有相符使用者的提示會顯示在清單中。 從清單中選取Aaron的電子郵件地址，以便用注釋標籤她。 同樣地，您可以在注釋內或注釋之前或之後的任何地方標籤更多用戶。
 
+   ![指定使用者的電子郵件地址並新增留言以通知使用者](assets/annotation-add-user-email.png)
+
    >[!NOTE]
    >
-   >對於非管理員使用者，只有當使用者具有Crx-de中的「在 */home讀取* 」權限時，才會顯示建議。
-
-   ![指定使用者的電子郵件地址並新增留言以通知使用者](assets/chlimage_1-31.png)
+   >對於非管理員使用者，只有當使用者在CRXDE的路徑上具有讀取權限時，才會 `/home` 顯示建議。
 
 1. 添加註釋後，按一下「 **[!UICONTROL 添加]** 」(Add)保存注釋。 註解通知會傳送給Aaron。
 
-   ![添加按鈕以保存注釋](assets/chlimage_1-32.png)
+   ![添加按鈕以保存注釋](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -778,15 +770,15 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 1. 在Experience Manager介面中，選擇「時間 **[!UICONTROL 軸」]**。
 
-   ![Experience Manager中提供的選項](assets/chlimage_1-35.png)
+   ![Experience Manager中提供的時間軸選項](assets/view-timeline.png)
 
 1. 從時間軸 **[!UICONTROL 的「顯示全部]** 」清單中，選取「注 **[!UICONTROL 釋]** 」以根據註解來篩選結果。
 
-   ![在時間軸中顯示全部清單](assets/chlimage_1-36.png)
+   ![在時間軸中顯示全部清單](assets/timeline-show-all-option.png)
 
    在「時間軸」( **[!UICONTROL Timeline]** )面板中按一下注釋，查看影像上的相應注釋。
 
-   ![在影像上檢視註解的時間軸面板](assets/chlimage_1-37.png)
+   ![在影像上檢視註解的時間軸面板](assets/timeline-view-annotations.png)
 
    按一 **[!UICONTROL 下「刪除]**」，以刪除特定留言。
 
@@ -806,11 +798,9 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 1. 要打印特定注釋，請從時間軸中選擇注釋。
 
-   ![從時間軸中選取注釋以進行列印](assets/chlimage_1-38.png)
+   ![從時間軸中選取注釋以進行列印](assets/timeline-select-annotations.png)
 
    要僅打印審閱狀態，請從時間軸中選擇它。
-
-   ![要僅打印注釋的審閱狀態，請從時間軸中選擇該狀態](assets/chlimage_1-39.png)
 
 1. Click **[!UICONTROL Print]** from the toolbar.
 
@@ -828,7 +818,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 1. 按一 **[!UICONTROL 下列印]**。 根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **** ，則生成的輸出類似於此處所示的PDF檔案。
 
-   ![在產生的PDF上加上註解和審核狀態](assets/chlimage_1-42.png)
+   ![在產生的PDF上加上註解和審核狀態](assets/annotation-status-pdf.png)
 
 1. 使用 ![右上角的選項](assets/do-not-localize/download.png) ，下載PDF的「下 ![載」選項或在PDF](assets/do-not-localize/print.png) 上的PDF上列印選項。
 
@@ -838,7 +828,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
    要修改渲染的PDF檔案的外觀，例如注釋和狀態的字型顏色、大小和樣式、背景顏色，請從「配置管理器」(Configuration Manager)開啟「注釋 **[!UICONTROL PDF」(]** Annotation PDF)配置，並修改所需的選項。 例如，要更改批准狀態的顯示顏色，請修改相應欄位中的顏色代碼。 有關更改批注的字型顏色的資訊，請參 [閱注釋](/help/assets/managing-assets-touch-ui.md#annotating)。
 
-   ![在PDF檔案上列印資產註解的設定](assets/chlimage_1-44.png)
+   ![在PDF檔案上列印資產附註的設定](assets/annotation-print-pdf-config.png)
 
    返回轉譯的PDF檔案並重新整理它。 重新整理的PDF會反映您所做的變更。
 
