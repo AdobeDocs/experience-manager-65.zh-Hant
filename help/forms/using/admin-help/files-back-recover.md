@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: ac3d18bf0b39efbe927c10aef557296140628e19
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ SQL Server還提供了兩種備份和恢復工具：
 * SQL Server Management Studio(GUI)
 * T-SQL（命令行）
 
-請參 [閱備](https://articles.techrepublic.com.com/5100-1035_61-1043671.md)份策 [略和備份和還原](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)。
+有關詳細資訊，請參 [閱備份和還原](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)。
 
 ### MySQL {#mysql}
 
