@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 6a9f273c6e9eb822e2d4765700361a205019b84c
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -43,7 +43,7 @@ ht-degree: 1%
    * 運行模式選擇：
       * 獨立模式
       * [SolrCloud模式](solr.md#solrcloud-mode) （建議用於生產環境）
-   * 多語言搜尋選擇(MLS)
+   * 多語言搜尋(MLS)選擇：
       * [安裝標準MLS](solr.md#installing-standard-mls)
       * [安裝進階MLS](solr.md#installing-advanced-mls)
 
