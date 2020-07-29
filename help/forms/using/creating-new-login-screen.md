@@ -10,9 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b4c1bc5f09491a8843a82c3589604f6717a76ea8
+source-git-commit: 9fcfd1c2c63d9a32f2d68f5b0c974bc5b5d22b40
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '485'
 ht-degree: 4%
 
 ---
@@ -97,9 +97,11 @@ String browserLocale = "en";
             break;
         }
     }
+```
 
-To
+至
 
+```jsp
 String browserLocale = "en";
     for(int i=0; i<locales.length; i++)
     {
@@ -125,8 +127,9 @@ String browserLocale = "en";
             break;
         }
     }
-```jsp
+```
 
+```jsp
 String browserLocale = "en";
 
     for(int i=0; i<locales.length; i++)
@@ -149,9 +152,11 @@ String browserLocale = "en";
             break;
         }
     }
+```
 
-To
+至
 
+```jsp
 String browserLocale = "en";
     for(int i=0; i<locales.length; i++)
     {
@@ -177,20 +182,19 @@ String browserLocale = "en";
             break;
         }
     }
-***To change Default locale***
-
-```jsp
-
-String browserLocale = "en";
-for(int i=0; i<locales.length; i++)
-
-To
-
-String browserLocale = "ar";
-for(int i=0; i<locales.length; i++)
 ```
 
+***若要變更預設地區設定***
 
+```jsp
+   String browserLocale = "en";
+   for(int i=0; i<locales.length; i++)
+
+   To
+
+   String browserLocale = "ar";
+   for(int i=0; i<locales.length; i++)
+```
 
 ### 添加新文本或修改現有文本 {#adding-new-text-or-modifying-existing-text}
 
@@ -233,8 +237,6 @@ for(int i=0; i<locales.length; i++)
                        <span class="loginTitle"><%= i18n.get("Login") %></code>
                        <% if (loginFailed) {%>
    ```
-
-
 
 ### 添加新樣式或修改現有樣式 {#adding-new-style-or-modifying-existing-style}
 
@@ -285,7 +287,6 @@ css.newLoginContentArea {
 >
 >如果移除(複製自 `/apps/livecycle/core/content/login` )中的現 `/libs/livecycle/core/content/login`有影像，則移除CSS中的對應參照。
 
-
 ### 新增影像 {#add-new-images}
 
 1. 請遵循「新增樣式」或修改現有樣式（如上所述）的步驟。
@@ -324,4 +325,3 @@ css.newLoginContentArea {
 ```jsp
 <div class="newLginContainerBkg">
 ```
-
