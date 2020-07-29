@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 瀏覽至發佈時的新網站 {#browse-to-new-site-on-publish}
 
-現在新建立的社群網站已經發佈，請瀏覽至建立網站時顯示的URL，但瀏覽至發佈伺服器，例如
+現在新建立的社群網站已經發佈，請瀏覽至建立網站時顯示的URL，但是在發佈伺服器上，例如：
 
 * 作者URL = https://localhost:4502/content/sites/engage/en.html
 * 發佈URL = https://localhost:4503/content/sites/engage/en.html
@@ -65,13 +65,14 @@ ht-degree: 0%
 
 1. 前往「頁 **面屬性」**。
 
-   ![站點驗證](assets/site-authentication.png)
+   ![page-properties](assets/page-properties.png)
 
 1. 前往「進 **階** 」標籤。
 
-   ![page-properties](assets/page-properties.png)
-
 1. 啟用 **驗證要求**。
+
+   ![站點驗證](assets/site-authentication.png)
+
 1. 新增登入頁面的路徑。 例如， **/content/......./GetStarted**.
 1. 發佈頁面。
 
