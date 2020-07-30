@@ -3,9 +3,9 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 92b7ca5c4864c4cca0eb8f1fb1c6bcec9d87c21c
+source-git-commit: f29eeb54c115514947a11bbc8a9e9e7df7cd082b
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
@@ -254,8 +254,11 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 **要求**: `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
-請勿在URL `/content/dam` 中使用。 覆寫時移動的範例命令為：
-`curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"`
+請勿在URL `/content/dam` 中使用。 移動資產和覆寫現有資產的範例命令如下：
+
+```shell
+curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
+```
 
 **回應碼**: 響應代碼為：
 
