@@ -3,9 +3,9 @@ title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f64df3a706762cdef631e18ad1a6fdd7044a551f
+source-git-commit: 92b7ca5c4864c4cca0eb8f1fb1c6bcec9d87c21c
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1580'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代碼。 JSON回應是選擇性的，可能無法使用，例如PDF檔案。 請依賴回應程式碼進行進一步分析或動作。
 
-在關閉 [!UICONTROL 時間後]，資產及其轉譯無法透過網頁介 [!DNL Assets] 面和HTTP API使用。 如果「開機時間」是未來，或「關機時 [!UICONTROL 間」是過去] ，則API會傳回404錯誤訊息。
+在關閉 [!UICONTROL 時間後]，資產及其轉譯無法透過網頁介 [!DNL Assets] 面和HTTP API使用。 如果「開機時間」是未來，或「關機時間 [!UICONTROL 」是過去] ,API會傳回404錯誤訊息。
 
 ## 內容片段 {#content-fragments}
 
@@ -253,6 +253,9 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 * `X-Overwrite` -使用強制 `T` 刪除現有資源或防止覆 `F` 蓋現有資源。
 
 **要求**: `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
+
+請勿在URL `/content/dam` 中使用。 覆寫時移動的範例命令為：
+`curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"`
 
 **回應碼**: 響應代碼為：
 
