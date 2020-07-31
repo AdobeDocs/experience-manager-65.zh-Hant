@@ -10,7 +10,7 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 0%
@@ -240,7 +240,7 @@ Barcoded Forms Service提供下列兩個API:
 
 下面的示例工作流進程對文檔中的條形碼進行解碼並將結果保存到磁碟。 程式碼會寫入ECMAScript，檔案會以工作流程裝載的形式傳遞：
 
-```
+```javascript
 /*
  * Imports 
  */
