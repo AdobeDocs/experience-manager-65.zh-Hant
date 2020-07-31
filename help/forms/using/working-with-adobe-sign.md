@@ -10,7 +10,10 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14975f409a0e17183b3da6bdc5a42c8073080108
+source-git-commit: 70052a5a8cba16dd2d73179e6e1d617347d716bc
+workflow-type: tm+mt
+source-wordcount: '3679'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 14975f409a0e17183b3da6bdc5a42c8073080108
 
 Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名可改善處理法律、銷售、薪資、人力資源管理等領域檔案的工作流程。
 
-在典型的Adobe sign和最適化表單案例中，使用者會填寫最適化表單以申請服務。 例如，房貸和信用卡申請需要所有借款人和共同申請人的合法簽名。 若要針對類似案例啟用電子簽名工作流程，您可以將Adobe Sign與AEM Forms整合。 您還可以使用Adobe sign執行下列動作：
+在典型的Adobe Sign和最適化表單案例中，使用者會填寫最適化表單以申請服務。 例如，房貸和信用卡申請需要所有借款人和共同申請人的合法簽名。 若要針對類似案例啟用電子簽名工作流程，您可以將Adobe Sign與AEM Forms整合。 您還可以使用Adobe Sign執行下列動作：
 
 * 透過完全自動化的提案、報價和合約流程，從任何裝置完成交易。
 * 更快完成人力資源流程，為您的員工提供數位體驗。
@@ -95,7 +98,7 @@ Adobe Sign與AEM Forms的整合支援：
 
    * 選擇「生 **[!UICONTROL 成記錄文檔]** 」選項。 如果您使用啟用「記錄檔案」選項的最適化表單，則傳送供簽署的檔案會顯示最適化表單的所有欄位。
 
-1. 點選「 **[!UICONTROL 儲存並關閉]**」。 Adobe sign已啟用最適化表單。
+1. 點選「 **[!UICONTROL 儲存並關閉]**」。 Adobe Sign已啟用最適化表單。
 
 ### 將Adobe Sign欄位新增至最適化表單 {#addadobesignfieldstoanadaptiveform}
 
@@ -107,19 +110,19 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    ![簽署區塊](assets/sign_block_new.png)
 
-   依預設，Adobe Sign Block不會顯示在已發佈的最適化表單中。 只有簽署檔案才會顯示。 您可以從Adobe Sign Block元件的屬性變更Adobe Sign Block的可見性。
+   依預設，Adobe Sign Block不會顯示在已發佈的最適化表單中。 只有簽署檔案才會顯示。 您可以從Adobe Sign Block元件的屬性變更Adobe Sign Block的可見度。
 
    >[!NOTE]
    >
    >    * 使用Adobe Sign區塊並非在最適化表單中使用Adobe Sign的必要條件。 如果您不使用Adobe Sign區塊並新增簽署者的欄位，則預設簽名欄位會顯示在簽署檔案的底部。
-   >    * Adobe sign區塊僅適用於自動產生記錄檔案的適用表單。 如果您使用自訂XDP來產生記錄檔案或以表單範本為基礎的最適化表單，則不需要Adobe Sign區塊。
+   >    * Adobe Sign區塊僅適用於自動產生記錄檔案的適用表單。 如果您使用自訂XDP來產生記錄檔案或以表單範本為基礎的最適化表單，則不需要Adobe Sign區塊。
 
 
 1. 選取 **Adobe Sign Block** 元件，並點選「 **Edit** ![aem_6_3_edit](assets/aem_6_3_edit.png) 」圖示。 它顯示添加欄位和欄位格式外觀的選項。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
-   **** 答：選取並新增Adobe Sign欄位。 **** B.將Adobe Sign區塊展開為全螢幕檢視
+   **答：** 選取並新增Adobe Sign欄位。 **B.** 將Adobe Sign區塊展開為全螢幕檢視
 
 1. 點選 **Adobe Sign欄位**![aem_6_3_adobesign圖示](assets/aem_6_3_adobesign.png) 。 它會顯示選取和新增Adobe Sign欄位的選項。
 
@@ -127,7 +130,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
-   必須為欄位提供唯一名稱。 您也可以選取必要選項，將欄位標示為必填欄位。 除了「名稱」 **和** 「必 ****&#x200B;要」選項外，有些Adobe Sign欄位還有更多選項。 例如，遮色片和多行。 此外，請為每個Adobe Sign欄位指定唯一名稱，不論欄位是位於相同還是不同的Adobe sign區塊。
+   必須為欄位提供唯一名稱。 您也可以選取必要選項，將欄位標示為必填欄位。 除了「名稱」 **和** 「必 ****&#x200B;要」選項外，有些Adobe Sign欄位還有更多選項。 例如，遮色片和多行。 此外，請為每個Adobe Sign欄位指定唯一名稱，不論欄位是位於相同還是不同的Adobe Sign區塊。
 
    如果您從下 **拉式清單中選取「數位簽章** 」，則可將數位簽名套用至最適化表單：
 
@@ -141,7 +144,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 1. 在「內容」瀏覽器中，點選「表 **單容器**」，然後點選「設 **定**![設定](assets/configure.png) 」圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。
 1. 在屬性瀏覽器中，展開「電 **子簽名** accordion」，然後選 **取「啟用Adobe Sign** 」選項。 它可讓Adobe Sign建立最適化表單。
 
-### 選擇Adobe Sign cloud服務和簽署順序 {#selectadobesigncloudserviceforanadaptiveform}
+### 選擇Adobe Sign Cloud服務和簽署順序 {#selectadobesigncloudserviceforanadaptiveform}
 
 您可以為AEM Forms的例項設定多個Adobe Sign Services。 建議為每個功能（人力資源、財務等）分別提供一組服務。 它讓追蹤和報告已簽署的檔案變得更輕鬆。 例如，銀行有多個部門。 您可以為每個部門分別設定一個設定，以便更好地追蹤檔案。
 
@@ -153,11 +156,11 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 1. 在「內容」瀏覽器中，點選「表 **單容器**」，然後點選「設 **定**![設定](assets/configure.png) 」圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。
 1. 在屬性瀏覽器中，展開「電 **子簽名** accordion」，然後選 **取「啟用Adobe Sign** 」選項。 它可讓Adobe Sign建立最適化表單。
-1. 從已設定的Adobe Sign Cloud services清單中選取雲端服務。
+1. 從已設定的Adobe Sign Cloud Services清單中選取雲端服務。
 
-   如果 **Adobe Sign cloud服務清單為空白** ，請依照「使用AEM Forms文章 [設定Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md) 」來設定服務。
+   如果 **Adobe Sign Cloud服務清單為空白** ，請依照「使用AEM Forms文章 [設定Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md) 」來設定服務。
 
-1. 從「簽署者可以簽署」對 **話方塊中選取簽署順序** 。 Adobe Sign歌手可依序簽署最適 **化表單** -一個接一個的簽署者，或 **同時簽署** -以任何順序。
+1. 從「簽署者可以簽署」對 **話方塊中選取簽署順序** 。 Adobe Sign歌手可依序簽署最適 **化表單** -一個接一個的簽 **署者** ，或同時簽署。
 
    依循序序列，一次會有一個簽署者收到要簽署的表格。 簽署者完成簽署檔案後，表格會傳送給下一個簽署者，依此類推。
 
@@ -177,22 +180,23 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    按一 **下「編** 輯 ![aem_6_3_edit](assets/aem_6_3_edit.png) 」圖示，以指定與簽署者相關的下列資訊：
 
-   * **** 標題：指定標題以唯一識別簽署者。
+   * **標題：** 指定標題以唯一識別簽署者。
 
-   * **** 簽署者和填寫表格的人員是否相同？:如果 ****&#x200B;表單填寫者和第一個簽署者是同一人，請選取「是」。 如果選項設定為 **No,** 則請勿在最適化表單中使用簽名步驟元件。 如果表單包含「簽名步驟」元件，則欄位會自動設為「是」。
+   * **簽署者和填寫表格的人員是否相同？:** 如果 ****&#x200B;表單填寫者和第一個簽署者是同一人，請選取「是」。 如果選項設定為 **No,** 則請勿在最適化表單中使用簽名步驟元件。 如果表單包含「簽名步驟」元件，則欄位會自動設為「是」。
 
-   * **** 簽署者電子郵件地址：指定簽署者的電子郵件地址。 簽署者會收到指定電子郵件地址上的已簽署檔案／表格。 您可以選擇使用表單欄位中提供的電子郵件地址、登入使用者的AEM使用者設定檔，或手動輸入電子郵件地址。 這是必要的步驟。 請確定第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址與用於設定AEM雲端服務的Adobe Sign帳戶不相同。
+   * **簽署者電子郵件地址：** 指定簽署者的電子郵件地址。 簽署者會收到指定電子郵件地址上的已簽署檔案／表格。 您可以選擇使用表單欄位中提供的電子郵件地址、登入使用者的AEM使用者設定檔，或手動輸入電子郵件地址。 這是必要的一步。 請確定第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址與用於設定AEM雲端服務的Adobe Sign帳戶不相同。
 
-   * **** 簽署者驗證方法：指定在開啟表單進行簽署前先驗證使用者的方法。 您可以選擇電話、知識庫和社交身分驗證。
+   * **簽署者驗證方法：** 指定在開啟表單進行簽署前先驗證使用者的方法。 您可以選擇電話、知識庫和社交身分驗證。
    >[!NOTE]
    >
    >    * 依預設，社交身分驗證提供使用Facebook、Google和LinkedIn進行驗證的選項。 您可以聯絡Adobe Sign支援，以啟用其他社交驗證提供者。
 
 
-   * **** 要填寫或簽署的Adobe Sign欄位：為簽署者選取「Adobe Sign」欄位。 最適化表單可包含多個Adobe Sign欄位。 您可以選擇為簽署者啟用特定欄位。 欄位會顯示所有可用的Adobe Sign區塊。 選擇塊時，將選擇塊的所有欄位。 您可以使用X圖示來取消選取欄位。
+   * **要填寫或簽署的Adobe Sign欄位：** 為簽署者選取「Adobe Sign」欄位。 最適化表單可包含多個Adobe Sign欄位。 您可以選擇為簽署者啟用特定欄位。 欄位會顯示所有可用的Adobe Sign區塊。 選擇塊時，將選擇塊的所有欄位。 您可以使用X圖示來取消選取欄位。
+
    ![簽署者——詳細資訊](assets/signer-details.png)
 
-   上述影像有兩個範例Adobe Sign Blocks:個人資訊和辦公室詳細資訊
+   上述影像有兩個範例Adobe Sign Blocks: 個人資訊和辦公室詳細資訊
 
    點選「Done ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」圖示。 簽章者已新增並設定。
 
@@ -200,7 +204,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 在您新增Adobe Sign欄位至最適化表單、從表單容器啟用Adobe Sign、選取「Adobe Sign Cloud Service」並新增Adobe Sign簽署者後，請為最適化表單選取適當的提交動作。 如需最適化表單提交動作的詳細資訊，請參 [閱設定提交動作](../../forms/using/configuring-submit-actions.md)。
 
-此外，只有所有簽署者簽署表格後，才會提交啟用Adobe Sign的最適化表格。 您可以在表單入口網站的「待簽」區段中找到部分簽署的表單。 Adobe Sign Configuration service會定期輪詢Adobe Sign [伺服器](../../forms/using/adobe-sign-integration-adaptive-forms.md) ，以驗證簽名狀態。 如果所有簽署者都完成表單簽署，則會啟動提交動作服務並提交表單。 如果您使用自訂提交動作，而表單使用Adobe Sign，請更新自訂提交動作以使用提交動作服務。
+此外，只有所有簽署者簽署表格後，才會提交啟用Adobe Sign的最適化表格。 您可以在表單入口網站的「待簽」區段中找到部分簽署的表單。 Adobe Sign Configuration Service會定期輪詢Adobe Sign [伺服器](../../forms/using/adobe-sign-integration-adaptive-forms.md) ，以驗證簽名狀態。 如果所有簽署者都完成表單簽署，則會啟動提交動作服務並提交表單。 如果您使用自訂提交動作，而表單使用Adobe Sign，請更新自訂提交動作以使用提交動作服務。
 
 >[!NOTE]
 >
@@ -222,7 +226,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
-   **** 答：選取並新增Adobe Sign欄位。 **** B.將Adobe Sign區塊展開為全螢幕檢視
+   **答：** 選取並新增Adobe Sign欄位。 **B.** 將Adobe Sign區塊展開為全螢幕檢視
 
 1. 點選 **Adobe Sign欄位**![aem_6_3_adobesign圖示](assets/aem_6_3_adobesign.png) 。 它會顯示選取和新增Adobe Sign欄位的選項。
 
@@ -234,8 +238,9 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    使用下列功能，將數位簽名套用至最適化表單：
 
-   * 雲端簽名：使用信任服 [務供應商代管](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 的數位ID進行簽署。
-   * Adobe acrobat或Reader:使用Adobe Acrobat或Reader下載並開啟檔案，以使用智慧卡、USB Token或以檔案為基礎的數位ID進行簽署。
+   * 雲端簽名： 使用信任服 [務供應商代管](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 的數位ID進行簽署。
+   * Adobe Acrobat或Reader: 使用Adobe Acrobat或Reader下載並開啟檔案，以使用智慧卡、USB Token或以檔案為基礎的數位ID進行簽署。
+
    將雲端簽名欄位新增至最適化表單後，請執行下列步驟以完成設定程式：
 
    * [為最適化表單啟用Adobe Sign](../../forms/using/working-with-adobe-sign.md#enableadobsignforanadaptiveform)
@@ -246,7 +251,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 ## 建立表單內簽署體驗 {#create-in-form-signing-experience}
 
-使用者也可以在填寫表單時簽署最適化表單。 此體驗也稱為表單簽署體驗。 表單簽署體驗僅適用於多重簽署者環境中的第一位歌手。 執行下列步驟以建立最適化表單的表單內簽署體驗：
+使用者也可以在填寫表單時簽署最適化表單。 此體驗也稱為表單簽署體驗。 表單簽署體驗僅適用於多重簽署者環境中的第一位歌手。 執行下列步驟，為最適化表單建立表單內簽署體驗：
 
 1. [新增及設定「簽名步驟」元件](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
 1. [添加摘要步驟元件](../../forms/using/working-with-adobe-sign.md#configure-the-thank-you-page-or-summary-step-component)。
@@ -262,25 +267,32 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 1. 將「簽名步驟」元 **件從「元件** 」瀏覽器拖放至表單。
 1. 選取新增的「簽名」步驟元件，並點選「設 **定**![設定](assets/configure.png) 」圖示。 它會開啟屬性瀏覽器並顯示「簽名」步驟屬性。 設定下列屬性：
 
-   * **元素名稱**:指定元件的名稱。
+   * **元素名稱**: 指定元件的名稱。
 
-   * **** 標題：指定元件的唯一標題。
-   * **** 範本訊息：指定在載入簽名PDF時要顯示的訊息。 Adobe Sign services需要一些時間來準備和載入簽名PDF。
-   * **** 簽署服務：選取 **Adobe Sign** 選項。
+   * **標題：** 指定元件的唯一標題。
+   * **範本訊息：** 指定在載入簽名PDF時要顯示的訊息。 Adobe Sign Services需要一些時間來準備和載入簽名PDF。
+   * **簽署服務：** 選取 **Adobe Sign** 選項。
 
-   * **使用舊版電子簽名元件**:如果您在 [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md)、AEM Forms應用程式中使用個別的最適化表單，或基礎的最適化表單有舊版電子簽名元件，請選取 **Use legacy E-sign元件選項** 。
+   * **使用舊版電子簽名元件**: 如果您在 [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md)、AEM Forms應用程式中使用個別的最適化表單，或基礎的最適化表單有舊版電子簽名元件，請選取 **Use legacy E-sign元件選項** 。
 
-   * **配置**:選取設定（Adobe Sign Cloud服務）。 下拉式方塊僅在啟用「使用舊 **版電子簽名元件** 」選項時可用。
+   * **配置**: 選取設定（Adobe Sign Cloud服務）。 下拉式方塊僅在啟用「使用舊 **版電子簽名元件** 」選項時可用。
+
    點選「Done ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」圖示以儲存變更。
 
    ![簽名步驟](assets/signature_step_new.png)
 
    >[!NOTE]
    >
-   >    * 將「簽章步驟」元件拖放 **[!UICONTROL 至表格時]** ,「簽章者 **[!UICONTROL 與填寫表格的人是否相同？」]** 選項自動設定為「 **是」**。 必須讓表單繼續運作。
+   > * 將「簽章步驟」元件拖放 **[!UICONTROL 至表格時]** ,「簽章者 **[!UICONTROL 與填寫表格的人是否相同？」]** 選項自動設定為「 **是」**。 必須讓表單繼續運作。
       >
-      >    
-   * 啟用Adobe Sign的最適化表單不支援使用「簽名步驟」元件之區段或面板上的「提交」按鈕。 您可以在手動提交的「簽名」步驟後新增摘要步驟，或在使用 [Adobe Sign Configuration Service設定間隔後觸發自動提交](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status)。
+      > 
+   * 在「簽名步驟」元件後使用「摘要步驟」元件，以獲得最佳體驗。 在您完成簽名步驟元件中的表單簽署後，「摘要」步驟會自動並立即提交表單。 如果您未使用摘要步驟，則只有在使用 [Adobe Sign Configuration Service設定間隔後，才會觸發自動提交](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status)。
+   > * 以下是一些最佳實務：
+   > * 包含簽名步驟的最適化表單面板永遠位於最適化表單的最後一個或第二個最後一個面板。 只有在最後一個面板包含「摘要」步驟時，它才能是第二個最後一個面板。
+   > * 包含「簽名」或「摘要」步驟元件的面板不能包含任何其他元件。
+   > * 包含「簽名步驟」的最適化表單不能有「提交」按鈕。 提交是通過後台服務或摘要步驟處理的。
+   > * 設計表單，讓使用者不能從包含「簽名」或「摘要」步驟的面板導覽回來。
+
 
 
 ### 設定感謝頁面或摘要步驟元件 {#configure-the-thank-you-page-or-summary-step-component}
@@ -289,19 +301,19 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 現在，表單簽署體驗已就緒。 您可以預覽表單以驗證簽署體驗。
 
-## Frequently asked questions {#frequently-asked-questions}
+## 常見問題 {#frequently-asked-questions}
 
-**** Ans:否，AEM Forms不支援使用可內嵌Adobe Sign的可調式表單進行簽署的可調式表單
+**Ans:** 否，AEM Forms不支援使用可內嵌Adobe Sign的可調式表單進行簽署的可調式表單
 
-**** Ans:使用進階範本建立的最適化表單已設定為使用Adobe Sign。 若要解決錯誤，請建立並選取Adobe Sign雲端組態，並為最適化表單設定Adobe Sign簽章者。
+**Ans:** 使用進階範本建立的最適化表單已設定為使用Adobe Sign。 若要解決錯誤，請建立並選取Adobe Sign雲端組態，並為最適化表單設定Adobe Sign簽章者。
 
-**** Ans:是的，您可以在文字元件中使用文字標籤，將Adobe Sign欄位新增至啟用「記錄檔案 [](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) 」（僅限「自動產生記錄檔案」選項）的最適化表單。 若要瞭解建立文字標籤的程式和規則，請參閱 [Adobe Sign檔案](https://helpx.adobe.com/sign/help/text-tags.html)。 另請注意，最適化表單對文字標籤的支援有限。 您只能使用文字標籤來建立 [Adobe Sign Block支援的欄位](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) 。
+**Ans:** 是的，您可以在文字元件中使用文字標籤，將Adobe Sign欄位新增至啟用「記錄檔案 [](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) 」（僅限「自動產生記錄檔案」選項）的最適化表單。 若要瞭解建立文字標籤的程式和規則，請參閱 [Adobe Sign檔案](https://helpx.adobe.com/sign/help/text-tags.html)。 另請注意，最適化表單對文字標籤的支援有限。 您只能使用文字標籤來建立 [Adobe Sign Block支援的欄位](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) 。
 
-**** Ans:您可以在表單中同時使用這兩個元件。 以下是使用這些元件的一些建議：
+**Ans:** 您可以在表單中同時使用這兩個元件。 以下是使用這些元件的一些建議：
 
-**** Adobe Sign Block:您可以使用Adobe Sign Block，在最適化表單的任何位置新增Adobe Sign欄位。 此外，也有助於為簽署者指派特定欄位。 預覽最適化表單或發佈的Adobe Sign Block時，預設不會顯示。 這些區塊僅在簽署檔案中啟用。 在簽署檔案中，只會啟用指派給簽署者的欄位。 Adobe Sign區塊可用於第一個和後續的簽署者。
+**Adobe Sign Block:** 您可以使用Adobe Sign Block，在最適化表單的任何位置新增Adobe Sign欄位。 此外，也有助於為簽署者指派特定欄位。 預覽最適化表單或發佈的Adobe Sign Block時，預設不會顯示。 這些區塊僅在簽署檔案中啟用。 在簽署檔案中，只會啟用指派給簽署者的欄位。 Adobe Sign區塊可用於第一個和後續的簽署者。
 
-**** 簽名步驟元件：您可以使用簽名步驟元件來建立表單簽署體驗。 它只允許第一個簽署者在填寫表單時簽名。 當轉譯包含「簽名步驟」元件的區段時，會顯示可簽名的表單PDF版本。 通常是表單的最後一個或倒數第二個部分，後面接著是摘要元件。
+**簽名步驟元件：** 您可以使用簽名步驟元件來建立表單簽署體驗。 它只允許第一個簽署者在填寫表單時簽名。 當轉譯包含「簽名步驟」元件的區段時，會顯示可簽名的表單PDF版本。 通常是表單的最後一個或倒數第二個部分，後面接著是摘要元件。
 
 ## 疑難排解 {#troubleshoot}
 
@@ -312,8 +324,8 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 **解析度**
 
 * 檢查在 [最適化表單中使用的Adobe Sign雲端服務](../../forms/using/adobe-sign-integration-adaptive-forms.md) 。
-* 請確定用於設定Adobe Sign cloud服務的Adobe Sign伺服器上的API應用程式具有必要的權限。
-* 如果您使用多個Adobe Sign cloud服務，請將所有服 **[!UICONTROL 務的oAuth URL]** ，指向相同 **[!UICONTROL 的Adobe Sign分享卡]**。
+* 請確定用於設定Adobe Sign Cloud服務的Adobe Sign伺服器上的API應用程式具有必要的權限。
+* 如果您使用多個Adobe Sign Cloud服務，請將所有服 **[!UICONTROL 務的oAuth URL]** ，指向相同 **[!UICONTROL 的Adobe Sign分享卡]**。
 
 * 使用個別的電子郵件地址來設定Adobe Sign帳戶，以及第一個簽署者和單一簽署者的帳戶。 第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址不能與用於設定AEM雲端服務的Adobe Sign帳戶相同。
 
