@@ -8,7 +8,7 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
+source-git-commit: a842aa85652e5c04d5825a3e88aa6b64ef8a0088
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 2%
@@ -177,7 +177,7 @@ AEM Forms提供測試架構Calvin，以自動測試您的調適性表單。 使�
 
 1. 在WeRetailFormTests節 `prefillTest.js`點中建 **[!UICONTROL 立檔案]** 。 將下列程式碼新增至檔案。 程式碼會建立測試案例。 測試案例會預先填寫表單的所有欄位，並驗證某些欄位，以確保輸入正確的值。
 
-   ```
+   ```javascript
    (function (window, hobs) {
        'use strict';
    
