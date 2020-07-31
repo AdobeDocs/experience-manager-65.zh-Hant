@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '10273'
 ht-degree: 0%
@@ -664,7 +664,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 ### 設定密碼重設電子郵件 {#configure-a-password-reset-email}
 
-如果您必須重設受邀使用者的密碼，會產生確認電子郵件，邀請使用者選擇新密碼。 無法判斷使用者的密碼； 如果使用者忘記，您必須重設它。
+如果您必須重設受邀使用者的密碼，則會產生確認電子郵件，邀請使用者選擇新密碼。 無法判斷使用者的密碼； 如果使用者忘記，您必須重設它。
 
 下列設定位於「已邀請的使用者註冊」頁面的「重設密碼電子郵件」區域。
 
@@ -822,7 +822,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 匯出檔案保全設定檔。 (請參 [閱手動編輯Document Security設定檔](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file))。
 1. 在編輯器中開啟配置檔案並找到該 `PolicyServer` 節點。 添加節 `ClientVersionRules` 點作為節點的直接子 `PolicyServer` 節點（如果不存在）:
 
-   ```java
+   ```xml
     <node name="ClientVersionRules">
         <map>
             <entry key="infoURL" value="URL"/>
@@ -879,7 +879,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 在此示例中，所有Windows客戶端都被拒絕訪問。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value="https://www.dont.use/windows.html"/>
@@ -897,7 +897,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 在此範例中，「我的應用程式3.0版」和「我的其他應用程式2.0版」皆遭拒存取。 無論拒絕的原因為何，都會使用相同的拒絕資訊URL。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -922,7 +922,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 在此範例中，來自Microsoft PowerPoint 2007或Microsoft PowerPoint 2010安裝Microsoft Office專用Acrobat Reader DC擴充功能的所有要求均遭拒絕。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -955,7 +955,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
    第二個項目 *，最大元素* ，是浮水印中允許的最大元素數。 預設值為5。
 
-   ```java
+   ```xml
    <entry key="maximumSizeOfWatermarkElement" value="max filesize in KB"/>
    <entry key="maximumWatermarkElementsPerWatermark" value="max elements"/>
    ```
@@ -975,7 +975,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 在編輯器中開啟配置檔案並找到該 `DisplaySettings` 節點。
 1. 要禁用所有外部連結，請在節 `DisplaySettings` 點中添加以下條目，然後保存檔案： `<entry key="ExternalLinksAllowed" value="false"/>`
 
-   ```java
+   ```xml
    <entry key="ExternalLinksAllowed" value="false"/>
    ```
 
@@ -989,7 +989,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 在編輯器中開啟配置檔案並找到該 `DisplaySettings` 節點。
 1. 找到以下節點： `<node name="ExternalUser">`
 
-   ```java
+   ```xml
    <node name="ExternalUser">
    ```
 
@@ -1005,7 +1005,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 1. 匯出檔案保全設定檔。 (請參 [閱手動編輯Document Security設定檔](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file))。
 1. 在編輯器中開啟配置檔案並找到以下節點： `<node name="DRM">`
 
-   ```java
+   ```xml
    <node name="DRM">
    ```
 
@@ -1015,7 +1015,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 1. 若要停用檔案安全性檔案的SOAP端點，請將值屬性設 **為false**。
 
-   ```java
+   ```xml
    <node name="DRM">
        <map>
            <entry key="AllowUnencryptedVoucher" value="false"/>
