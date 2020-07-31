@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '6822'
 ht-degree: 0%
@@ -642,7 +642,7 @@ area = function(len) {
 
 **函式表達式和語句**
 
-```
+```javascript
 var b={};
 /** */
 b.area = function(len) {
@@ -652,7 +652,7 @@ b.area = function(len) {
 
 **函式聲明為變數**
 
-```
+```javascript
 /** */
 var x1,
     area = function(len) {
@@ -665,7 +665,7 @@ var x1,
 
 **函式聲明作為對象**
 
-```
+```javascript
 var c = {
     b : {
         /** */
