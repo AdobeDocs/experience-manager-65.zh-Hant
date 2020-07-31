@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 0%
@@ -178,7 +178,7 @@ IBM WebSphere不允許在啟用「全域安全性」時對ORB.init()進行多次
 1. 開啟\crx-repository\launchpad\sling.properties `[aem-forms_root]`檔案以進行編輯。
 1. 找到屬 `sling.bootdelegation.ibm` 性並新 `com.ibm.websphere.ssl.*`增至其值欄位。 更新的欄位如下所示：
 
-   ```java
+   ```shell
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
    ```
 
