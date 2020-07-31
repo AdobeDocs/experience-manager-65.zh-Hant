@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -143,7 +143,6 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  } 
   
   
- 
 ```
 
 ## 快速入門（SOAP模式）: 使用Java API移除PDF檔案的使用權 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
