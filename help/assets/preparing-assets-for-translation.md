@@ -3,9 +3,9 @@ title: 準備翻譯資產
 description: 建立語言根資料夾，以準備要翻譯的資產，以支援多語言資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 多語言資產是指包含多種語言的二進位檔、中繼資料和標籤的資產。 一般而言，資產的二進位檔、中繼資料和標籤都以一種語言存在，然後會翻譯成其他語言，以用於多語言專案。
 
-在Adobe Experience Manager Assets中，多語言資產會包含在檔案夾中，其中每個檔案夾都包含不同語言的資產。
+在資 [!DNL Adobe Experience Manager Assets]料夾中會包含多語言資產，其中每個資料夾都包含不同語言的資產。
 
 每個語言資料夾都稱為語言副本。 語言副本的根資料夾（稱為語言根目錄）標識語言副本中內容的語言。 例如， ** /content/dam/it是義大利文語言副本的義大利文根目錄。 語言副本必須使用 [正確設定的語言根目錄](preparing-assets-for-translation.md#creating-a-language-root) ，以便在執行來源資產翻譯時定位正確的語言。
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 例如，範例階層的義大利文語言副本的根頁面 `it` 為Name屬性。 Name屬性用作儲存庫中資產節點的名稱，因此確定資產的路徑。 (`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
 
-1. From the Assets console, click **[!UICONTROL Create]** and choose **[!UICONTROL Folder]** from the menu.
+1. From the [!DNL Assets] console, click **[!UICONTROL Create]** and choose **[!UICONTROL Folder]** from the menu.
 
    ![建立資料夾](assets/Create-folder.png)
 
@@ -54,13 +54,13 @@ ht-degree: 0%
 
    ![在資料夾中新增語言代碼](assets/Add-language-code-in-folder.png)
 
-1. 按一下&#x200B;**[!UICONTROL 建立]**。語言根目錄是在「資產」主控台中建立。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。語言根目錄是在控制台中創 [!DNL Assets] 建的。
 
 ## 檢視語言根 {#viewing-language-roots}
 
-Experience Manager介面提供「參 **[!UICONTROL 考」面板]** ，可顯示在「資產」中建立的語言根目錄清單。
+[!DNL Experience Manager] interface提供 **[!UICONTROL 「參考]** 」面板，可顯示已在其中建立的語言根清單 [!DNL Assets]。
 
-1. 在「資產」主控台中，選取您要建立語言副本的語言主要版本。
+1. 在控制 [!DNL Assets] 台中，選擇要為其建立語言副本的語言主版。
 1. 從左側導軌中，選擇「參 **[!UICONTROL 照]** 」(References [!UICONTROL )選項以打] 開「參照」(Reference)窗格。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
