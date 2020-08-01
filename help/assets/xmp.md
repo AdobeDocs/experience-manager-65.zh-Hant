@@ -1,29 +1,29 @@
 ---
-title: 支援Adobe Experience Manager Assets中的XMP中繼資料。
-description: 瞭解Experience Manager Assets用於中繼資料管理的XMP（可擴充中繼資料平台）中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
+title: 在中支援XMP中繼資料 [!DNL Adobe Experience Manager Assets]。
+description: 瞭解中繼資料管理所使用的XMP（可擴充中繼資料平台） [!DNL Experience Manager Assets] 中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 19%
+source-wordcount: '776'
+ht-degree: 20%
 
 ---
 
 
 # XMP 中繼資料 {#xmp-metadata}
 
-XMP（可擴充中繼資料平台）是Adobe Experience Manager Assets用於所有中繼資料管理的中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
+XMP（可擴充中繼資料平台）是所有中繼資料管理所 [!DNL Adobe Experience Manager Assets] 使用的中繼資料標準。 XMP提供標準格式，讓您針對多種應用程式建立、處理和交換中繼資料。
 
-除了提供可嵌入所有檔案格式的通用中繼資料編碼外，XMP還提供多樣化內容模型 [,](xmp.md#xmp-core-concepts) 並受Adobe [](xmp.md#advantages-of-xmp) 和其他公司的支援，讓XMP與Assets的使用者擁有強大的平台來建立內容。
+XMP除了提供可嵌入所有檔案格式的通用中繼資料編碼外，還提供多樣化的 [內容模型](xmp.md#xmp-core-concepts) ，並受 [Adobe](xmp.md#advantages-of-xmp)[!DNL Assets] 和其他公司的支援，讓XMP的使用者結合使用者擁有強大的平台來建立內容。
 
 XMP規 [格可從](https://www.adobe.com/devnet/xmp.html) Adobe取得。
 
 ## 什麼是XMP? {#what-is-xmp}
 
-Assets原本就支援XMP —— 由Adobe牽頭的可擴充中繼資料平台。 XMP是處理和儲存數位資產中標準化和專屬中繼資料的標準。 XMP是通用的標準，可讓多個應用程式有效地處理中繼資料。
+[!DNL Assets] 原生支援XMP —— 由Adobe牽頭的可擴充中繼資料平台。 XMP是處理和儲存數位資產中標準化和專屬中繼資料的標準。 XMP是通用的標準，可讓多個應用程式有效地處理中繼資料。
 
-例如，生產專業人員可使用Adobe應用程式內建的XMP支援，跨多種檔案格式傳遞資訊。 Assets儲存庫會擷取XMP中繼資料，並使用它來管理內容生命週期，並提供建立自動化工作流程的功能。
+例如，生產專業人員可使用Adobe應用程式內建的XMP支援，跨多種檔案格式傳遞資訊。 [!DNL Assets] 資料庫會擷取XMP中繼資料，並使用它來管理內容生命週期，並提供建立自動化工作流程的能力。
 
 XMP透過提供資料模型、儲存模型和結構描述，標準化中繼資料的定義、建立和處理方式。 本節將介紹這些概念。
 
@@ -70,15 +70,13 @@ XMP架構是一組通用XML命名空間中的屬性名稱，其中包含資料�
 
 ### 屬性與值 {#properties-and-values}
 
-XMP可以包括來自一個或多個方案的屬性。
+XMP可以包括來自一個或多個方案的屬性。 例如，許多Adobe應用程式使用的典型子集可能包括：
 
-例如，許多Adobe應用程式使用的典型子集可能包括：
-
-* 都柏林核心架構： dc:title, dc:creator, dc:subject, dc:format, dc:rights
-* XMP基本架構： xmp:CreateDate, xmp:CreatorTool, xmp:ModifyDate, xmp:metadataDate
-* XMP權限管理架構： xmpRights:WebStatement, xmpRights:Marked
-* XMP媒體管理架構： xmpMM:DocumentID
+* 都柏林核心架構： `dc:title`, `dc:creator`, `dc:subject`, `dc:format`, `dc:rights`
+* XMP基本架構： `xmp:CreateDate`, `xmp:CreatorTool`, `xmp:ModifyDate`, `xmp:metadataDate`。
+* XMP權限管理架構： `xmpRights:WebStatement`, `xmpRights:Marked`ý?
+* XMP媒體管理架構： `xmpMM:DocumentID`.
 
 ### 語言替代 {#language-alternatives}
 
-XMP可讓您將屬性新增至 `xml:lang` 文字屬性，以指定文字的語言。
+XMP可讓您將屬 `xml:lang` 性新增至文字屬性，以指定文字的語言。
