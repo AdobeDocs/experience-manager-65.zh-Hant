@@ -3,9 +3,9 @@ title: 使用頁面追蹤器並在網頁中內嵌程式碼
 description: 瞭解如何將頁面追蹤器並內嵌JavaScript代碼至您的網站代碼，讓Adobe Analytics能夠擷取資產的使用資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 在網頁中使用頁面追蹤器和內嵌代碼 {#using-page-tracker-and-embed-code-in-web-pages}
 
-「頁面追蹤器」是JavaScript程式碼的一部分，您會將它加入協力廠商網站的程式碼中，讓Adobe Analytics能夠擷取這些網站上Adobe Experience Manager Assets的使用資料。
+「頁面追蹤器」是JavaScript程式碼的一部分，您會將它加入協力廠商網站的程式碼中，讓Adobe Analytics能夠擷取這些網站的使 [!DNL Adobe Experience Manager Assets] 用資料。
 
 若要擷取資產專屬的事件（例如點按等），您也可在協力廠商網站的程式碼中加入內嵌程式碼。
 
