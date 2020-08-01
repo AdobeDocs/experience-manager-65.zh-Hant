@@ -3,9 +3,9 @@ title: 管理智慧標籤和搜尋
 description: 更新或移除不正確的智慧型標籤，以改善標籤的相關性
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 1. Click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the Success dialog.
 1. 導覽至影像的屬性頁面。 請注意，您促銷的標籤已指派高關聯性，因此在搜尋結果中會顯示高度。
 
-## 透過智慧型標籤瞭解Experience Manager搜尋結果 {#understandsearch}
+## 使用智 [!DNL Experience Manager] 慧標籤瞭解搜尋結果 {#understandsearch}
 
-依預設，Experience Manager搜尋會將搜尋詞與子句結 `AND` 合。 使用智慧型標籤不會變更此預設行為。 使用智慧型標籤會新增一 `OR` 個額外的子句，以尋找套用智慧型標籤中的任何搜尋詞。 For example, consider searching for `woman running`. 預設情況下， `woman` 中繼資 `running` 料中只包含或只包含關鍵字的資產不會出現在搜尋結果中。 但是，標籤有或使用智 `woman` 慧標 `running` 記的資產會出現在此類搜尋查詢中。 所以搜索結果是，
+依預設， [!DNL Experience Manager] 搜尋會將搜尋詞與子句結 `AND` 合。 使用智慧型標籤不會變更此預設行為。 使用智慧型標籤會新增一 `OR` 個額外的子句，以尋找套用智慧型標籤中的任何搜尋詞。 For example, consider searching for `woman running`. 預設情況下， `woman` 中繼資 `running` 料中只包含或只包含關鍵字的資產不會出現在搜尋結果中。 但是，標籤有或使用智 `woman` 慧標 `running` 記的資產會出現在此類搜尋查詢中。 所以搜索結果是，
 
 * 資產 `woman` 和 `running` 中繼資料中的關鍵字。
 
