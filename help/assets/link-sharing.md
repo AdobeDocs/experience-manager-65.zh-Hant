@@ -1,11 +1,11 @@
 ---
 title: 產生共用資產的URL
-description: 本文說明如何將Experience Manager Assets中的資產、檔案夾和系列共用為外部方的URL。
+description: 本文說明如何在URL內共用資產、檔案夾和系 [!DNL Experience Manager Assets] 列給外部當事人。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1196'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 # 透過連結分享資產 {#asset-link-sharing}
 
-Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括合作夥伴和廠商）以URL形式共用資產、資料夾和系列。 透過連結分享資產是讓外部使用者可使用資源的便利方式，而不需要先登入資產。
+[!DNL Adobe Experience Manager Assets] 可讓您與組織成員和外部實體（包括合作夥伴和廠商）以URL形式共用資產、檔案夾和系列。 透過連結分享資產是讓外部使用者可使用資源的便利方式，而不需要先登入 [!DNL Assets]。
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括�
 >
 >在您與使用者共用連結之前，請確定已設定Day CQ Mail Service。 如果您嘗試共用連結而未先設定Day CQ [Mail服務，就會發生錯誤](/help/assets/link-sharing.md#configmailservice)。
 
-1. 在「資產」使用者介面中，選取要以連結形式共用的資產。
+1. 在使用者 [!DNL Assets] 介面中，選取要共用為連結的資產。
 1. 在工具列中，按一下「共 **[!UICONTROL 用連結]**![共用資產」圖示](assets/do-not-localize/assets_share.png)。
 
    資產連結會在「共用連結」欄位中 **[!UICONTROL 自動建立]** 。 複製此連結並與使用者共用。 連結的預設有效期為一天。
@@ -40,7 +40,7 @@ Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括�
 
    >[!NOTE]
    >
-   >如果您想要將Experience Manager Author部署的連結共用給外部實體，請確定您只針對請求公開下列URL（用於連結共用） `GET` 。 封鎖其他URL以確保Experience Manager作者的安全性。
+   >如果您想要將您的「作者」部署的連結共用給外部實體，請確定您只針對請求公開下列URL（用於連結共用） [!DNL Experience Manager]`GET` 。 封鎖其他URL以確保「作者」的 [!DNL Experience Manager] 安全性。
    >
    >* http://[aem_server]:[port]/linkshare.html
    >* http://[aem_server]:[port]/linksharepreview.html
@@ -51,9 +51,9 @@ Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括�
    >
    >如果共用資產移至不同位置，其連結將停止運作。 重新建立連結並與使用者重新共用。
 
-1. 在Experience Manager介面中，存取「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
+1. 在介 [!DNL Experience Manager] 面中，存 **[!UICONTROL 取「工具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 
-1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration and modify the following properties in the **[!UICONTROL Domains]** field with the values mentioned against `local`, `author`, and `publish`. 對於和 `local` 屬性 `author` ，請分別提供本機實例和作者實例的URL。 如果 `local` 您執 `author` 行單一Experience Manager作者實例，則兩者的值都相同。 例如， `publish`提供Experience Manager發佈例項的URL。
+1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration and modify the following properties in the **[!UICONTROL Domains]** field with the values mentioned against `local`, `author`, and `publish`. 對於和 `local` 屬性 `author` ，請分別提供本機實例和作者實例的URL。 如果 `local` 您執 `author` 行單一「作者」例項，則兩個屬性的值 [!DNL Experience Manager] 都相同。 例如， `publish`提供發佈例項的 [!DNL Experience Manager] URL。
 
 1. 在「連結共用」對話方 **[!UICONTROL 塊的電子郵件地址方塊中]** ，輸入您要共用連結之使用者的電子郵件ID。您也可以與多位使用者共用連結。
 
@@ -96,19 +96,19 @@ Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括�
 
    >[!NOTE]
    >
-   >Experience Manager支援產生下列MIME類型資產的預覽： JPG、PNG、GIF、BMP、INDD、PDF和PPT。 您只能下載其他MIME類型的資產。
+   >[!DNL Experience Manager] 支援產生下列MIME類型資產的預覽： JPG、PNG、GIF、BMP、INDD、PDF和PPT。 您只能下載其他MIME類型的資產。
 
 1. 若要下載共用資產，請按一 **[!UICONTROL 下工具列中的]** 「選取」、按一下資產，然後按一下工具列 **[!UICONTROL 中的「下載]** 」。
 
    ![chlimage_1-262](assets/chlimage_1-547.png)
 
-1. 若要檢視您共用為連結的資產，請前往「資產」UI，然後按一下「Experience Manager」標誌。 從清 **[!UICONTROL 單選擇]** 「導覽」，以顯示「導覽」窗格。
+1. 若要檢視您共用為連結的資產，請前往使 [!DNL Assets] 用者介面，然後按一下標 [!DNL Experience Manager] 志。 從清 **[!UICONTROL 單選擇]** 「導覽」，以顯示「導覽」窗格。
 1. 從「導覽」窗格中，選 **[!UICONTROL 擇「共用連結]** 」以顯示共用資產清單。
 1. 若要取消共用資產，請選取資產，然後按一下工 **[!UICONTROL 具列中的]** 「取消共用」。 之後會出現確認訊息。 資產的項目會從清單中移除。
 
 ## 配置日CQ郵件服務 {#configmailservice}
 
-1. 在Experience Manager首頁上，導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
+1. 在首頁 [!DNL Experience Manager] 上，導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 作業]** > **[!UICONTROL Web主控台]**」。
 1. 從服務清單中，找到 **[!UICONTROL Day CQ Mail Service]**。
 1. Click **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
@@ -123,9 +123,9 @@ Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括�
 
 ## 配置最大資料大小 {#maxdatasize}
 
-當您使用「連結共用」功能從共用的連結下載資產時，Experience Manager會從儲存庫壓縮資產階層，然後以ZIP檔案傳回資產。 但是，在ZIP檔案中壓縮的資料量沒有限制的情況下，大量資料會遭受壓縮，造成JVM中記憶體錯誤。 為防止系統因此遭受潛在的拒絕服務攻擊，請使用 **[!UICONTROL Configuration Manager中Day CQ的]** Max Content Size（未壓縮）  Day CQ DAM Adhoc Asset Share Proxy Servlet參數配置最大大小。 如果資產的未壓縮大小超過設定的值，資產下載請求便會遭拒。 預設值為100 MB。
+當您使用「連結共用」功能從共用的連結下載資產時， [!DNL Experience Manager] 請從儲存庫壓縮資產階層，然後以ZIP檔案傳回資產。 但是，在ZIP檔案中壓縮的資料量沒有限制的情況下，大量資料會遭受壓縮，造成JVM中記憶體錯誤。 為防止系統因此遭受潛在的拒絕服務攻擊，請使用 **[!UICONTROL Configuration Manager中Day CQ的]** Max Content Size（未壓縮）  Day CQ DAM Adhoc Asset Share Proxy Servlet參數配置最大大小。 如果資產的未壓縮大小超過設定的值，資產下載請求便會遭拒。 預設值為100 MB。
 
-1. Click the Experience Manager logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Click the [!DNL Experience Manager] logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. 從Web主控台中，找到 **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet設定]** 。
 1. 在編輯模 **[!UICONTROL 式中開啟「日CQ DAM臨機資產共用代理Servlet]** 」設定，並修改「最大內容大小 (未壓縮) 」 **[!UICONTROL 參數的值]** 。
 
@@ -136,6 +136,6 @@ Adobe Experience Manager Assets可讓您與組織成員及外部實體（包括�
 ## Best practices and troubleshooting {#bestpractices}
 
 * 資產檔案夾或名稱中包含空白字元的系列可能無法共用。
-* 如果使用者無法下載共用資產，請洽詢您的Experience Manager管理員下載限 [制](#maxdatasize) 。
-* 如果您無法傳送含有共用資產連結的電子郵件，或如果其他使用者無法收到您的電子郵件，請洽詢您的Experience Manager管理員，以確認是否已 [設定](#configmailservice) 電子郵件服務。
+* 如果使用者無法下載共用資產，請洽詢您的管 [!DNL Experience Manager] 理員下載限 [制內容](#maxdatasize) 。
+* 如果您無法傳送含有共用資產連結的電子郵件，或如果其他使用者無法收到您的電子郵件，請洽詢您的 [!DNL Experience Manager] 管理員是 [否設定了電子郵件](#configmailservice) 。
 * 如果您無法使用連結共用功能來共用資產，請確定您擁有適當的權限。 請參閱 [分享資產](#sharelink)。
