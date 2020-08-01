@@ -3,9 +3,9 @@ title: 擴充資產編輯器
 description: 瞭解如何使用自訂元件擴充資產編輯器的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '688'
 ht-degree: 13%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 13%
 
 使用預先定義的編輯元件配置編輯器的說明見「創 [建和配置資產編輯器」頁](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)。
 
-除了使用預先存在的編輯器元件外，Adobe Experience Manager開發人員也可以建立自己的元件。
+除了使用預先存在的編輯器元件外，開發人 [!DNL Adobe Experience Manager] 員也可以建立自己的元件。
 
 ## 建立資產編輯器範本 {#creating-an-asset-editor-template}
 
@@ -29,9 +29,9 @@ Geometrixx中包含下列範例頁面：
 
 ### 配置Clientlib {#configuring-clientlib}
 
-Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載入 `init.jsp`。
+[!DNL Assets] 元件使用WCM edit clientlib的擴展。 clientlib通常會載入 `init.jsp`。
 
-與預設clientlib載入(在核心的 `init.jsp`)相比，「資產」範本必須具備下列功能：
+與預設clientlib載入(在核心的 `init.jsp`)相比，模 [!DNL Assets] 板必須具有以下內容：
 
 * 範本必須包含clientlib( `cq.dam.edit` 而非 `cq.wcm.edit`)。
 
@@ -41,17 +41,17 @@ Assets元件使用WCM edit clientlib的擴充功能。 clientlib通常會載入 
 
 ### 設定JS動作 {#configuring-js-actions}
 
-部分資產元件需要中定義的JS函式 `component.js`。 將此檔案複製到元件目錄並將其連結。
+部分元件需 [!DNL Assets] 要中定義的JS函式 `component.js`。 將此檔案複製到元件目錄並將其連結。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-範例會在( `head.jsp``/apps/geometrixx/components/asseteditor/head.jsp`)中載入此javascript來源。
+範例會在( `head.jsp``/apps/geometrixx/components/asseteditor/head.jsp`)中載入此JavaScript來源。
 
 ### 其他樣式表 {#additional-style-sheets}
 
-部分「資產」元件會使用Widget程式庫。 若要在內容內容內容中正確呈現，必須載入其他樣式表。 標籤動作元件需要一個。
+有些元件 [!DNL Assets] 會使用Widget程式庫。 若要在內容內容內容中正確呈現，必須載入其他樣式表。 標籤動作元件需要一個。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
