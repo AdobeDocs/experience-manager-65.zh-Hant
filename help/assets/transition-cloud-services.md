@@ -3,9 +3,9 @@ title: 將翻譯雲端服務套用至資料夾
 description: 將翻譯雲端服務套用至資料夾
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '385'
 ht-degree: 43%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 43%
 
 # 將翻譯雲端服務套用至資料夾 {#applying-translation-cloud-services-to-folders}
 
-Adobe Experience Manager可讓您從您選擇的翻譯供應商取得雲端翻譯服務，以確保您的資產能根據您的需求進行翻譯。
+[!DNL Adobe Experience Manager] 可讓您從您選擇的翻譯供應商取得雲端翻譯服務，以確保您的資產會根據您的需求進行翻譯。
 
 您可以直接將翻譯雲端服務套用至資產資料夾，以便在翻譯工作流程中使用。
 
@@ -21,7 +21,7 @@ Adobe Experience Manager可讓您從您選擇的翻譯供應商取得雲端翻�
 
 將翻譯雲端服務直接套用至您的資產資料夾，不需要在您建立或更新翻譯工作流程時設定翻譯服務。
 
-1. 從「資產」使用者介面中，選取您要套用轉譯服務的檔案夾。
+1. 從用 [!DNL Assets] 戶介面中，選擇要應用翻譯服務的資料夾。
 1. From the toolbar, click **[!UICONTROL Properties]** to display the **[!UICONTROL Folder Properties]** page.
 
    ![chlimage_1-215](assets/chlimage_1-215.png)
@@ -42,7 +42,7 @@ Adobe Experience Manager可讓您從您選擇的翻譯供應商取得雲端翻�
 如果要為要用於翻譯工作流的翻譯服務應用自定義連接器。若要套用自訂連接器，請先從「封裝管理員」安裝連接器。然後，從雲端服務主控台設定連接器。在您設定連接器後，「套用轉譯服務」中所述的「雲端服務」標籤中的連接器清 [單中會顯示此連接器](transition-cloud-services.md#applying-the-translation-services)。在您應用自定義連接器並運行翻譯工作流後，翻譯項目的「 **[!UICONTROL Translation Summary]** 」 (翻譯摘要) 表徵圖會在heads **[!UICONTROL Provider]** and **[!UICONTROL Method下顯示連接器詳細資訊]**。
 
 1. 從「包管理器」安裝連接器。
-1. 按一下Experience Manager標誌，並導覽至「工 **[!UICONTROL 具]** >部 **[!UICONTROL 署]** > **[!UICONTROL 雲端服務]**」。
+1. 按一下標 [!DNL Experience Manager] 志，然後導覽至「工 **[!UICONTROL 具]** >部 **[!UICONTROL 署]** > **[!UICONTROL 雲端服務]**」。
 1. 在「雲端服務」頁面的「 **[!UICONTROL 協力廠商服務]** 」下，找 **[!UICONTROL 出您安裝的連接器]** 。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
