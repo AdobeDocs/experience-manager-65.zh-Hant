@@ -3,9 +3,9 @@ title: 支援的檔案格式 [!DNL Adobe Experience Manager Assets]。
 description: 支援的檔案格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 類型，以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 62085bdd8fa576e0d4eaeae19076d6edbf8c484a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1636'
 ht-degree: 9%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 9%
 
 支援下列3D格式清單。
 
-另請參閱 [在動態媒體中使用3D資產。](/help/assets/assets-3d.md)
+See also [Working with 3D assets in Dynamic Media.](/help/assets/assets-3d.md)
 
 | 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 縮圖預覽 | 3D預覽 | 動態媒體傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -136,9 +136,9 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 ## 支援的相機原始資料 {#supported-camera-raw}
 
-Adobe Camera Raw程式庫可讓「資產」擷取原始影像。 請參閱 [Camera Raw支援](camera-raw.md)。
+程式 [!DNL Adobe Camera Raw] 庫可讓 [!DNL Assets] 您收錄原始影像。 請參閱 [Camera Raw支援](camera-raw.md)。
 
-## 支援的資產檔案格式 {#supported-document-formats}
+## 支援的 [!DNL Assets] 檔案格式 {#supported-document-formats}
 
 資產管理功能支援的檔案格式如下：
 
@@ -249,7 +249,7 @@ Adobe Camera Raw程式庫可讓「資產」擷取原始影像。 請參閱 [Came
 
 ## Supported MIME types {#supported-mime-types}
 
-依預設，Experience Manager會使用副檔名偵測檔案類型。 Experience Manager可從檔案內容中偵測到它。 對於後者，請 [!UICONTROL 在Experience Manager Web Console的] Day CQ DAM Mime Type Service中選取「從內容偵測MIME」選項。
+預設情況下， [!DNL Experience Manager] 使用檔案副檔名檢測檔案類型。 [!DNL Experience Manager] 可以從檔案內容中檢測到。 對於後者，請在 [!UICONTROL Web控制台的Day CQ] DAM Mime Type Service [!UICONTROL （日CQ DAM Mime Type Service）中選擇Detect MIME from content] (從內容中檢測MIME [!DNL Experience Manager] )選項。
 
 CRXDE Lite中提供支援的MIME類型清單，網址為 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
 
