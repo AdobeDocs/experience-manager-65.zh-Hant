@@ -3,9 +3,9 @@ title: 影像轉碼程式庫
 description: 瞭解如何設定和使用Adobe的影像轉碼程式庫。此影像處理解決方案可執行核心影像處理功能，包括編碼、轉碼、影像重新取樣和影像大小調整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 您可以為參數設定下列選 `-resize` 項：
 
-* `X`: 工作方式類似於Experience Manager。 例如-resize 319。
+* `X`: 工作方式類似 [!DNL Experience Manager]。 例如-resize 319。
 * `WxH`: 例如，外觀比例不會維持 `-resize 319x319`。
 * `Wx`: 修正寬度並計算維持長寬比的高度。 For example `-resize 319x`.
 * `xH`: 修正高度並計算維持長寬比的寬度。 For example `-resize x319`.
@@ -72,9 +72,9 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 ### 為提取的包建立配置檔案 {#create-conf-file}
 
-要配置庫，請建立。conf檔案，以使用以下步驟指示庫。 您需要管理員或根用戶權限。
+要配置庫，請建立CONF檔案，以使用以下步驟指示庫。 您需要管理員或根用戶權限。
 
-1. 從「軟 [體散發」下載Imaging Codeching Library套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用Package Manager安裝它。 此套件與Experience Manager 6.5相容。
+1. 從「軟 [體散發」下載Imaging Codeching Library套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，並使用Package Manager安裝它。 此套件與 [!DNL Experience Manager] 6.5相容。
 
 1. 若要瞭解Bundle ID，請登 `com.day.cq.dam.cq-dam-switchengine`入Web Console，然後按一下「 **[!UICONTROL OSGi]** > **[!UICONTROL Bundles]**」。 或者，若要開啟組合主控台，請存取 `https://[aem_server:[port]/system/console/bundles/` URL。 找到 `com.day.cq.dam.cq-dam-switchengine` bundle及其ID。
 
@@ -92,7 +92,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 1. 執行 `ldconfig` 命令以建立必要的連結和快取。
 
-1. 在用來啟動Experience Manager的帳戶中，編輯檔 `.bash_profile` 案。 新 `LD_LIBRARY_PATH` 增：
+1. 在用於啟動的帳戶中，編 [!DNL Experience Manager]輯文 `.bash_profile` 件。 新 `LD_LIBRARY_PATH` 增：
 
    ```shell
    LD_LIBRARY_PATH=.
@@ -105,7 +105,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 更新 [!UICONTROL DAM更新資產工作流程] ，以使用程式庫來處理影像。
 
-1. 在Experience Manager使用者介面中，選取「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]**」。
+1. 在使 [!DNL Experience Manager] 用者介面中，選取「工 **[!UICONTROL 具]** 」>「工 **[!UICONTROL 作流程]** 」>「 **[!UICONTROL 模型]**」。
 
 1. 在「工 **[!UICONTROL 作流程模型]** 」頁面中，以編輯模式開 **** 啟「DAM更新資產」工作流模型。
 
@@ -137,7 +137,7 @@ Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核
 
 1. 同步更新的 [!UICONTROL DAM更新資產工作流程模] 型。 儲存工作流程。
 
-驗證配置、上傳TIFF影像並監視error.log檔案。 您會注意到 `INFO` 訊息中提及的 `SwitchEngineHandlingProcess execute: executing command line`。 記錄檔提及產生的轉譯。 工作流程完成後，您可以在Experience Manager中檢視新轉譯。
+驗證配置、上傳TIFF影像並監視error.log檔案。 您會注意到 `INFO` 訊息中提及的 `SwitchEngineHandlingProcess execute: executing command line`。 記錄檔提及產生的轉譯。 工作流程完成後，您可以在中檢視新轉譯 [!DNL Experience Manager]。
 
 >[!MORELIKETHIS]
 >
