@@ -1,11 +1,11 @@
 ---
-title: 在Adobe Experience Manager中建立和共用私人資料夾。
-description: 瞭解如何在Adobe Experience Manager Assets中建立私人資料夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
+title: 在中建立和共用專用資料夾 [!DNL Adobe Experience Manager]。
+description: 瞭解如何在中建立私人資料 [!DNL Adobe Experience Manager Assets] 夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # 私人資料夾共用 {#private-folder-sharing}
 
-您可以在Adobe Experience Manager Assets使用者介面中建立專屬於您的私人資料夾。 您可以將此私人資料夾共用給其他使用者，並為其指派各種權限。 根據您指派的權限層級，使用者可以對資料夾執行各種工作，例如檢視資料夾內的資產或編輯資產。
+您可以在使用者介面中建立 [!DNL Adobe Experience Manager Assets] 專屬於您的私人資料夾。 您可以將此私人資料夾共用給其他使用者，並為其指派各種權限。 根據您指派的權限層級，使用者可以對資料夾執行各種工作，例如檢視資料夾內的資產或編輯資產。
 
 >[!NOTE]
 >
 >私人資料夾至少有一個擁有擁有者角色的成員。
 
-1. 在「資產」主控台中，按一 **[!UICONTROL 下工具列中的]** 「建立」，然後從功能表 **[!UICONTROL 選擇「資料夾]** 」。
+1. 在控制 [!DNL Assets] 台中，按一下工 **[!UICONTROL 具列中的「建立]** 」，然後從選單中選 **[!UICONTROL 擇「資料夾]** 」。
 
    ![建立資產檔案夾](assets/Create-folder.png)
 
@@ -49,9 +49,9 @@ ht-degree: 0%
    >
    >私人資料夾至少有一個擁有擁有者角色的成員。 因此，管理員無法從專用資料夾中刪除所有所有者成員。 但是，要從專用資料夾中刪除現有所有者（和管理員本身），管理員必須將其他用戶添加為所有者。
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。根據您指派的角色，當使用者登入「資產」時，會為使用者指派一組權限給您的私人資料夾。
+1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。根據您指派的角色，當使用者登入時，會為使用者指派一組權限給您的私人資料夾 [!DNL Assets]。
 1. 按一下 **[!UICONTROL 確定]** ，關閉確認消息。
-1. 與您共用資料夾的使用者會收到共用通知。 使用使用者的認證登入資產以檢視通知。
+1. 與您共用資料夾的使用者會收到共用通知。 使用用 [!DNL Assets] 者的認證登入以檢視通知。
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
