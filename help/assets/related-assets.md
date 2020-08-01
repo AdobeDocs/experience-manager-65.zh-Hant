@@ -3,9 +3,9 @@ title: 相關資產
 description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Relate assets {#relating-assets}
 
-1. 從Experience Manager介面，開啟您 **[!UICONTROL 要建立關聯之資產的]** 「屬性」頁面。
+1. 從介 [!DNL Experience Manager] 面中，開啟您要 **** 建立關聯之資產的「屬性」頁面。
 
    ![開啟資產的「屬性」頁面，以建立資產的關聯](assets/asset-properties-relate-assets.png)
 
@@ -65,9 +65,9 @@ ht-degree: 0%
 
 1. 按一下 **[!UICONTROL 確定]** ，關閉對話框。 移除關係的資產會從「相關」(Related)區段下的相關資產清單中 **[!UICONTROL 刪除]** 。
 
-## 折算相關資產 {#translating-related-assets}
+## 翻譯相關資產 {#translating-related-assets}
 
-使用「相關資產」功能建立資產間的來源／衍生關係，在轉譯工作流程中也很有幫助。 在派生資產上運行翻譯工作流時， [!DNL Experience Manager Assets] 會自動提取源檔案引用的任何資產並包括其以進行翻譯。 這樣，源資產引用的資產與源資產和衍生資產一起折算。 例如，假設您的英文版副本包含衍生資產及其來源檔案，如所示。
+使用相關資產功能建立資產間的來源／衍生關係也有助於翻譯工作流程。 在派生資產上運行翻譯工作流時， [!DNL Experience Manager Assets] 會自動提取源檔案引用的任何資產並包括其以進行翻譯。 這樣，源資產引用的資產與源資產和衍生資產一起折算。 例如，假設您的英文版副本包含衍生資產及其來源檔案，如所示。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
