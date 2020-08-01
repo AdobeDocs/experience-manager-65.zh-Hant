@@ -1,11 +1,11 @@
 ---
 title: 搜尋 Facet.
-description: 如何在Adobe Experience Manager中建立、修改和使用搜尋刻面。
+description: 如何在中建立、修改和使用搜索小面 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '2515'
+source-wordcount: '2488'
 ht-degree: 16%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 # 搜尋 Facet {#search-facets}
 
-Adobe Experience Manager Assets的企業部署可儲存許多資產。 有時候，如果您只使用Experience Manager的一般搜尋功能，尋找正確的資產不但麻煩而且耗時。
+整個企業的部署可 [!DNL Adobe Experience Manager Assets] 以儲存許多資產。 有時，如果您只使用的一般搜尋功能，尋找正確的資產不但麻煩而且耗時 [!DNL Experience Manager]。
 
 使用「篩選」面板中的搜尋Facet，為您的搜尋體驗增加更精細的度，並讓搜尋功能更有效率且更多功能。 搜尋刻面新增多個維度（謂語），可讓您執行更精細的搜尋。 「濾鏡」面板包含一些標準刻面。 您也可以新增自訂搜尋Facet。
 
@@ -27,16 +27,16 @@ Adobe Experience Manager Assets的企業部署可儲存許多資產。 有時候
 
 若為全文搜尋，請將  Fulltext謂語新增至表單。 使用Property predicate搜尋符合您指定之單一屬性的資產。 使用「選項」述詞可搜尋符合特定屬性之一或多個值的資產。 新增「日期範圍」述詞，以搜尋在指定日期範圍內建立的資產。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 
-   ![尋找並選取「資產管理搜尋邊欄」](assets/assets_admin_searchrail.png)
+   ![尋找並選取資產或管理搜尋邊欄](assets/assets_admin_searchrail.png)
 
    >[!NOTE]
    >
    >若要使用舊版「資產管理搜尋邊欄」中預先設定的 **資料夾搜尋功能** ，請執行下列步驟：
    >
-   >1. 導覽至 *CRXDE中的/conf/global/settings/dam/search/facets/assets/jcr:content/items* 。
+   >1. 導覽至 `/conf/global/settings/dam/search/facets/assets/jcr:content/items` CRXDE。
    >1. 刪除 **type節點** 。
    >1. 從路徑 */libs/settings/dam/search/facets/assets/jcr:content/items*，將節點資產、目錄、類型、排除路徑和 **searchtype****** ，複製到步驟1提及的路徑。
    >1. 儲存變更。
@@ -73,7 +73,7 @@ Adobe Experience Manager Assets的企業部署可儲存許多資產。 有時候
 
 1. 若要關閉預覽，請按 **[!UICONTROL 一下預]** 覽右 ![上角的「關閉](assets/do-not-localize/close.png) 」(Close close)。
 1. 按一 **[!UICONTROL 下「完成]** 」以儲存設定。
-1. 導覽至「資產」使用者介面中的「搜尋」面板。 The Property predicate is added to the panel.
+1. Navigate to the Search panel in the [!DNL Assets] user interface. The Property predicate is added to the panel.
 1. 在文本框中輸入要搜索的資產的說明。 For example, enter `Adobe`. 當您執行搜尋時，具有描述符合的資 `Adobe` 產會列在搜尋結果中。
 
 ## 新增選項述詞 {#adding-an-options-predicate}
@@ -112,7 +112,7 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 >
 >Options謂語是包含屬性謂語的自訂包裝函式，用來展示描述的行為。 目前，沒有REST端點可用來支援本機功能。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]**.
 1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
 1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如「檔案類 **[!UICONTROL 型」]**。指定在屬性欄位中根據其執行搜索的屬性，例如 `jcr:content/metadata/dc:format.`
@@ -132,22 +132,22 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 ## 添加多值屬性謂語 {#adding-a-multi-value-property-predicate}
 
-「多值屬性」述詞可讓您搜尋資產以尋找多個值。 假設您在「資產」中有多個產品的影像，且每個影像的中繼資料包含與產品相關聯的SKU編號。 您可以使用此謂語，根據多個SKU編號搜尋產品影像。
+「多值屬性」述詞可讓您搜尋資產以尋找多個值。 假設您在多個產品中有影像，而每個影 [!DNL Assets] 像的中繼資料包含與產品相關的SKU編號。 您可以使用此謂語，根據多個SKU編號搜尋產品影像。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 在「搜尋表單」頁面上，選取「 **[!UICONTROL 資產管理搜尋邊欄]**」，按一下「編 **[!UICONTROL 輯]**![編輯」圖示](assets/do-not-localize/aemassets_edit.png)。
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. 也可以使用選擇對話框選擇節點。
 1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。依預設，逗號會指定為分隔字元。您可以指定不同的分隔字元。
 1. 在「說 **明** 」欄位中，輸入選用的說明，然後按一下「 **[!UICONTROL 完成」]**。
-1. 導覽至「資產」使用者介面中的「篩選」面板。The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
+1. Navigate to the Filters panel in the [!DNL Assets] user interface. The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
 1. 在「多值」欄位中指定多個值，由分隔字元分隔，並執行搜尋。 謂語會為您指定的值提取完全符合的文字。
 
 ## 新增標籤述詞 {#adding-a-tags-predicate}
 
-「標籤謂語」可讓您執行資產的標籤搜尋。 依預設，「資產」會根據您指定的標籤，搜尋一或多個標籤符合的資產。 換句話說，搜索查詢使用指定的標籤執行OR操作。 不過，您可以使用「符合所有標籤」選項來搜尋包含您所指定之所有標籤的資產。
+「標籤謂語」可讓您執行資產的標籤搜尋。 依預設， [!DNL Assets] 會根據您指定的標籤，搜尋一或多個標籤符合的資產。 換句話說，搜索查詢使用指定的標籤執行OR操作。 不過，您可以使用「符合所有標籤」選項來搜尋包含您所指定之所有標籤的資產。
 
-1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]** and then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 1. In the Edit Search Form page, drag **[!UICONTROL Tags Predicate]** from the Select Predicate tab to the main pane.
 1. 在「設定」標籤中，輸入謂語的預留位置文字。 Specify the property name based on which the search is to be performed in the property field, for example *jcr:content/metadata/cq:tags*. 或者，也可以從選擇對話框中選擇CRXDE中的節點。
