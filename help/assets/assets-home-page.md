@@ -1,25 +1,25 @@
 ---
-title: Adobe Experience Manager資產首頁體驗
-description: 個人化Experience Manager資產首頁，提供豐富的歡迎畫面體驗，包括資產近期活動的快照。
+title: '[!DNL Adobe Experience Manager Assets]首頁體驗。'
+description: 個人 [!DNL Experience Manager Assets] 化首頁，提供多樣化的歡迎畫面體驗，包括資產相關活動的快照。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Manager資產首頁體驗 {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] 首頁體驗 {#aem-assets-home-page-experience}
 
-個人化Adobe Experience Manager Assets首頁，提供多樣化的歡迎畫面體驗，包括資產近期活動的快照。
+個人化 [!DNL Adobe Experience Manager Assets] 首頁，提供豐富的歡迎畫面體驗，包括資產相關活動的快照。
 
-資產首頁提供多樣化且個人化的歡迎畫面體驗，其中包含最近活動的快照，例如最近檢視或上傳的資產。
+[!DNL Assets] 首頁提供多樣化的個人化歡迎畫面體驗，其中包含最近檢視或上傳的資產等活動的快照。
 
-預設會停用「資產」首頁。 要啟用它，請執行以下步驟：
+預設 [!DNL Assets] 會停用首頁。 要啟用它，請執行以下步驟：
 
-1. 開啟Experience Manager Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`。
+1. 開啟 [!DNL Experience Manager] 配置管理 `https://[aem_server]:[port]/system/console/configMgr`器。
 1. 開啟 **[!UICONTROL Day CQ DAM Event Recorder服務]** 。
 1. 選擇「 **[!UICONTROL 啟用此服務]** 」以啟用活動記錄。
 
@@ -32,7 +32,7 @@ ht-degree: 1%
    >啟用「已檢視的資產」、「已檢視的專案」和「已檢視的系列」選項，可大幅增加已記錄事件的數目。
 
 1. 從Configuration Manager開 **[!UICONTROL 啟DAM Asset首頁功能標幟]** (DAM Asset Home Page Feature Flag `https://[aem_server]:[port]/system/console/configMgr`)服務。
-1. 選取選 `isEnabled.name` 項以啟用「資產首頁」功能。 儲存變更。
+1. 選取選 `isEnabled.name` 項以啟用「首 [!DNL Assets] 頁」功能。 儲存變更。
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
@@ -40,13 +40,13 @@ ht-degree: 1%
 
    ![在「使用者偏好設定」對話方塊上啟用資產首頁](assets/Annotation-color.png)
 
-啟用「資產」首頁後，從「導覽」頁面導覽至「資產」使用者介面，或直接從URL存取該介面 `https://[aem_server]:[port]/aem/assetshome.html/content/dam`。
+啟用首頁 [!DNL Assets] 後，從「導覽」頁 [!DNL Assets] 面導覽至使用者介面，或直接從URL存取該介面 `https://[aem_server]:[port]/aem/assetshome.html/content/dam`。
 
 ![在資產使用者介面上設定體驗連結](assets/config-experience-link.png)
 
 按一下 **[!UICONTROL 此處以設定體驗連結]** ，以新增您的使用者名稱、背景影像和描述檔影像。
 
-「資產」首頁包含下列區段：
+「首 [!DNL Assets] 頁」包含以下部分：
 
 * 歡迎區
 * 介面工具集區段
@@ -69,7 +69,7 @@ ht-degree: 1%
 
 **最近**: 此區 **[!UICONTROL 段下的「最近檢視]** 」介面工具集會顯示登入使用者最近存取的實體，包括資料夾、系列和專案。
 
-**Discover**: 此區 **[!UICONTROL 段下的]** 「新增」介面工具集會顯示最近上傳至「資產」部署的資產和轉譯。
+**Discover**: 此區 **[!UICONTROL 段下的]** 「新增」介面工具集會顯示最近上傳至部署的資產和轉 [!DNL Assets] 譯。
 
 要啟用清除用戶活動資料，請從配置管理 **[!UICONTROL 器啟用DAM事件清除服務]** 。 啟用此服務後，系統將刪除超過指定數目的登入使用者活動。
 
@@ -77,11 +77,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->啟用 [!UICONTROL Day CQ DAM Event Recorder] and [!UICONTROL DAM Event Purge] services可增加對JCR的寫入作業和搜尋索引，這可大幅增加Experience Manager伺服器的負載。 Experience Manager伺服器上的額外負載可能會影響其效能。
+>啟用 [!UICONTROL Day CQ DAM Event Recorder] and [!UICONTROL DAM Event Purge] services可增加對JCR的寫入操作和搜尋索引，這可大幅增加伺服器的負 [!DNL Experience Manager] 載。 伺服器的額外負載 [!DNL Experience Manager] 可能會影響其效能。
 
 >[!CAUTION]
 >
->擷取、篩選和清除「資產」首頁所需的使用者活動會對效能造成額外負擔。 因此，管理員應該為目標使用者有效配置首頁。
+>擷取、篩選和清除首頁所需的使用者活 [!DNL Assets] 動會對效能造成額外負擔。 因此，管理員應該為目標使用者有效配置首頁。
 >
 >Adobe建議執行大量作業的管理員和使用者避免使用「資產首頁」功能來防止使用者活動增加。 此外，管理員可以從Configuration Manager中設定 [!UICONTROL Day CQ DAM Event Recorder] ，排除特定使用者的 [!UICONTROL 錄制活動]。
 >
