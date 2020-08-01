@@ -1,21 +1,21 @@
 ---
-title: 自訂和擴充Adobe Experience Manager Assets
+title: 自訂和擴充 [!DNL Adobe Experience Manager Assets]。
 description: 瞭解如何自訂和擴充資產共用與資產編輯器，為使用者提供特別自訂的介面和功能集。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 
-# 自訂和擴充資產 {#customizing-and-extending-assets}
+# 自訂和擴充 [!DNL Assets] {#customizing-and-extending-assets}
 
 資產編輯器是Adobe Enterprise Manager網站的使用者用來尋找、檢視和控制儲存庫中數位資產的主要存取點。
 
-身為Experience Manager開發人員，您可以透過多種方式自訂和擴充資產編輯器，為使用者提供特別自訂的介面和功能集。
+身為開 [!DNL Experience Manager] 發人員，您可以透過多種方式自訂和擴充資產編輯器，為使用者提供特別自訂的介面和功能集。
 
 可自訂或增強功能的下列方面：
 
@@ -36,6 +36,6 @@ ht-degree: 0%
 
 ## 自訂轉譯 {#customizing-renditions}
 
-在Experience Manager Assets術語中，轉譯是資產顯示的表單。 一般而言，特定資產可能具有多個轉譯。 例如，全彩影像可能有一個格式副本的原始大小，另一個格式副本的縮放大小，另一個格式副本的縮放大小和灰階轉換大小。
+在術 [!DNL Experience Manager Assets] 語中，轉譯是資產呈現的形式。 一般而言，特定資產可能具有多個轉譯。 例如，全彩影像可能有一個格式副本的原始大小，另一個格式副本的縮放大小，另一個格式副本的縮放大小和灰階轉換大小。
 
 特定資產可用的轉譯可以自訂，並建立新的轉譯。
