@@ -1,26 +1,26 @@
 ---
-title: 中的資產HTTP API [!DNL Adobe Experience Manager]。
+title: '[!DNL資產]中的HTTP API [!DNL Adobe Experience Manager]。'
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f29eeb54c115514947a11bbc8a9e9e7df7cd082b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 1%
+source-wordcount: '1579'
+ht-degree: 0%
 
 ---
 
 
-# Assets HTTP API {#assets-http-api}
+# [!DNL Assets] HTTP API {#assets-http-api}
 
 ## 概覽 {#overview}
 
-資產HTTP API可讓您對數位資產（包括中繼資料、轉譯和注釋）以及使用內容片段的結構化內容進行建立——讀取——更新——刪除(CRUD) [!DNL Experience Manager] 作業。 它在公開， `/api/assets` 並實作為REST API。 它包含 [內容片段支援](/help/assets/assets-api-content-fragments.md)。
+HTTP [!DNL Assets] API可讓您對數位資產（包括中繼資料、轉譯和注釋）以及使用內容片段的結構化內容進行建立——讀取——更新——刪除(CRUD) [!DNL Experience Manager] 作業。 它在公開， `/api/assets` 並實作為REST API。 它包含 [內容片段支援](/help/assets/assets-api-content-fragments.md)。
 
 若要存取API:
 
 1. 在中開啟API服務文檔 `https://[hostname]:[port]/api.json`。
-1. 請依循「資產」服務連結，前往 `https://[hostname]:[server]/api/assets.json`。
+1. 遵循服務 [!DNL Assets] 連結，以前往 `https://[hostname]:[server]/api/assets.json`。
 
 API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代碼。 JSON回應是選擇性的，可能無法使用，例如PDF檔案。 請依賴回應程式碼進行進一步分析或動作。
 
@@ -34,7 +34,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 ## Data model {#data-model}
 
-資產HTTP API會公開兩個主要元素、資料夾和資產（適用於標準資產）。
+HTTP [!DNL Assets] API會公開兩個主要元素、資料夾和資產（針對標準資產）。
 
 此外，它還會針對描述「內容片段」中結構化內容的自訂資料模型公開更詳細的元素。 如需詳 [細資訊，請參閱內容片段資料模型](/help/assets/assets-api-content-fragments.md#content-fragments) 。
 
@@ -75,7 +75,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 * 屬性.
 * 連結.
 
-資產HTTP API包含下列功能：
+HTTP [!DNL Assets] API包含下列功能：
 
 * [檢索資料夾清單](#retrieve-a-folder-listing)。
 * [建立資料夾](#create-a-folder)。
