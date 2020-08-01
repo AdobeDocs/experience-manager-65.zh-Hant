@@ -1,11 +1,11 @@
 ---
-title: Lightbox做為Adobe Experience Manager Assets中的個人影像收藏館。
-description: 在Adobe Experience Manager Assets中瞭解Lightbox作為您的個人影像收藏館。
+title: Lightbox做為您的個人影像收藏館 [!DNL Adobe Experience Manager Assets]。
+description: 在Adobe Experience Manager Assets中瞭解Lightbox作為您的個人影像收藏館]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 燈箱是特殊的系列，可讓您輕鬆存取資產。 您可以快速存取Lightbox以新增或刪除資產。 它可當成您的個人影像收藏館。
 
-如果您是Adobe Experience Manager Assets使用者，當您第一次登入應用程式時，會自動建立燈箱。 它是您登入的唯一選項。 其他使用者無法存取您的燈箱。
+如果您是使 [!DNL Adobe Experience Manager Assets] 用者，當您第一次登入應用程式時，會自動建立燈箱。 它是您登入的唯一選項。 其他使用者無法存取您的燈箱。
 
 ## 將資產新增至燈箱 {#adding-assets-to-lightbox}
 
-1. 從「資產」使用者介面中，選取您要新增至「燈箱」的資產。
+1. 從使用 [!DNL Assets] 者介面中，選取您要新增至Lightbox的資產。
 1. 將資產拖曳至「 **[!UICONTROL Lightbox中的放置]** 」區。 當拖放區域變為作用中，且其標籤變更為「拖放至新 **[!UICONTROL 增」時釋放]**。
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
