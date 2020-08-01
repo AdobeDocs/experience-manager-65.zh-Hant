@@ -3,9 +3,9 @@ title: 建立翻譯專案
 description: 瞭解如何在中建立翻譯項目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 34b98636966264b15b16fffc9e712b925303a701
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1898'
 ht-degree: 15%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 15%
 
 如果您使用此選項，將要翻譯的資產複製到要翻譯的語言的語言根目錄。 根據您選擇的選項，將為「項目」控制台中的資產建立一個翻譯項目。 根據設定，翻譯項目可以手動啟動，或在建立翻譯項目後自動運行。
 
-1. 在「資產」UI中，選取您要建立「語言」復本的來源資料夾。
+1. 在用戶 [!DNL Assets] 介面中，選擇要為其建立語言副本的源資料夾。
 1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
@@ -85,7 +85,7 @@ ht-degree: 15%
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-1. 按一下&#x200B;**[!UICONTROL 建立]**。來源資料夾中的資產會複製到您在步驟4中選取的地區設定的目標資料夾。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。[!DNL Assets] 從源資料夾複製到您在步驟4中選擇的語言環境的目標資料夾。
 
    ![語言副本](assets/lang-copy2.png)
 
@@ -111,12 +111,11 @@ ht-degree: 15%
 
    有關作業狀態的詳細資訊，請 [參閱監視翻譯作業的狀態](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 導覽至「資產」UI，並開啟每個已翻譯資產的「屬性」頁面，以檢視已翻譯的中繼資料。
+1. 導覽至 [!DNL Assets] UI，並開啟每個翻譯資產的「屬性」頁面，以檢視翻譯的中繼資料。
 
    ![在「資產屬性」頁面中檢視翻譯的中繼資料](assets/translated-metadata-asset-properties.png)
 
    *圖： 資產屬性頁面中已翻譯的中繼資料。*
-
 
    >[!NOTE]
    >
@@ -126,7 +125,7 @@ ht-degree: 15%
 
 如果您使用此選項，則翻譯工作流程會針對您在執行先前的翻譯工作流程後新增至來源檔案夾的資產執行。 只有新增的資產會複製至包含先前轉換資產的目標資料夾。 在本例中，不會建立新的翻譯項目。
 
-1. 在「資產」使用者介面中，導覽至包含未轉譯資產的來源檔案夾。
+1. 在 [!DNL Assets] UI中，導覽至包含未轉譯資產的來源資料夾。
 1. 選取您要轉換的資產，並開啟「參考」 **[!UICONTROL 窗格]**。「語 **[!UICONTROL 言副本]** 」部分顯示當前可用的翻譯副本數。
 1. Click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 將顯示可用翻譯副本的清單。
 1. 按一 **[!UICONTROL 下下方的「建立]** 」和「翻譯」。
@@ -184,7 +183,7 @@ ht-degree: 15%
 
    有關詳細資訊，請 [參閱監視翻譯作業的狀態](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 翻譯完成後，狀態將更改為「Ready to Review（準備審核）」。 導覽至「資產」UI，並開啟每個已翻譯資產的「屬性」頁面，以檢視已翻譯的中繼資料。
+1. 翻譯完成後，狀態將更改為「Ready to Review（準備審核）」。 導覽至 [!DNL Assets] UI，並開啟每個翻譯資產的「屬性」頁面，以檢視翻譯的中繼資料。
 
 ## 更新語言副本 {#update-language-copies}
 
@@ -197,7 +196,7 @@ ht-degree: 15%
 
 如果您使用此選項，系統會針對您要更新語言副本的一組資產建立翻譯專案。
 
-1. 從「資產」使用者介面中，選取您新增資產的來源資料夾。
+1. 從 [!DNL Assets] UI中，選取您新增資產的來源資料夾。
 1. Open the **[!UICONTROL References]** pane, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
 1. 選中「語言副本」 **[!UICONTROL 之前的複選框]**，然後選擇與相應地區對應的目標資料夾。
 
@@ -240,13 +239,13 @@ ht-degree: 15%
 
    有關作業狀態的詳細資訊，請 [參閱監視翻譯作業的狀態](../sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 導覽至「資產」UI，並開啟每個已翻譯資產的「屬性」頁面，以檢視已翻譯的中繼資料。
+1. 導覽至使 [!DNL Assets] 用者介面，並開啟每個已翻譯資產的「屬性」頁面，以檢視已翻譯的中繼資料。
 
 ### 新增至現有翻譯專案 {#add-to-existing-translation-project-1}
 
 如果您使用此選項，資產集會新增至現有的翻譯專案，以更新您所選地區的語言副本。
 
-1. 從「資產」使用者介面中，選取您新增資產檔案夾的來源檔案夾。
+1. 從 [!DNL Assets] UI中，選取您新增資產資料夾的來源資料夾。
 1. Open the **[!UICONTROL References pane]**, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
@@ -292,7 +291,7 @@ ht-degree: 15%
 
    按一 **[!UICONTROL 下「拒絕轉]** 譯」 ![「拒絕轉譯」](assets/do-not-localize/thumb-down.png) ，以保留目標地區根目錄中資產的原始翻譯版本並拒絕編輯的版本。
 
-1. 若要檢視已翻譯的中繼資料，請導覽至 [!DNL Assets] 主控台並開啟每個已翻譯資 [!UICONTROL 產的] 「屬性」頁面。
+1. 若要檢視已翻譯的中繼資料，請導覽至 [!DNL Assets] 主控台並開啟每個已 [!UICONTROL 翻譯資產的] 「屬性」頁面。
 
 >[!MORELIKETHIS]
 >
