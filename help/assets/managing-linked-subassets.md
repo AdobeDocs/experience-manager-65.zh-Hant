@@ -3,9 +3,9 @@ title: 使用中的參考和多頁資產管理複合資產 [!DNL Adobe Experienc
 description: 瞭解如何從內部建立數位資產的參考 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 您可以從檔案中參考現有的數位資 [!DNL Adobe Illustrator] 產。
 
-1. 使用 [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 Navigate to the filesystem location of the asset that you want to reference.
+1. 使用 [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 導覽至您要參考之資產的檔案系統位置。
 1. 將資產從本機資料夾拖曳至檔 [!DNL Illustrator] 案。
 
 1. 將檔案 [!DNL Illustrator] 保存到掛載的驅動器，或 [上傳](/help/assets/managing-assets-touch-ui.md#uploading-assets) 到儲存 [!DNL Experience Manager] 庫。
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 1. 以管理員 [!DNL Experience Manager] 身分登入。 存取「 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]**」。
 1. 選取「 **[!UICONTROL DAM更新資產」工作流程]** ，然後按一下「 **[!UICONTROL 編輯」]**。
-1. 按一 **[!UICONTROL 下「切換側面板]** 」並找出「 **[!UICONTROL 建立子資產」步驟]** 。 將步驟新增至工作流程。 按一 **[!UICONTROL 下同步]**。
+1. 按一 **[!UICONTROL 下「切換側面板]** 」並找出「 **[!UICONTROL 建立子資產」步驟]** 。 將步驟新增至工作流程。 按一下&#x200B;**[!UICONTROL 「同步」]**。
 
 若要產生子資產，請執行下列其中一項作業：
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 ## 最佳實務與限制 {#best-practice-limitation-tips}
 
-* 產生子資產對於任何Experience Manager部署都會耗費大量資源。 如果您要在上傳複雜資產時產生子資產，請在「DAM更新資產」工作流程中新增步驟。 如果您要隨選產生子資產，請建立個別的工作流程以產生子資產。 專用的工作流程可讓您略過DAM更新資產工作流程中的其他步驟，並儲存計算資源。
+* 產生子資產對於任何部署都會耗費大量 [!DNL Experience Manager] 資源。 如果您要在上傳複雜資產時產生子資產，請在「DAM更新資產」工作流程中新增步驟。 如果您要隨選產生子資產，請建立個別的工作流程以產生子資產。 專用的工作流程可讓您略過DAM更新資產工作流程中的其他步驟，並儲存計算資源。
 
 >[!MORELIKETHIS]
 >
