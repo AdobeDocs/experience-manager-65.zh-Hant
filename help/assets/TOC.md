@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Experience Manager 6.5資產使用指南
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '630'
 ht-degree: 39%
 
 ---
@@ -16,21 +16,21 @@ ht-degree: 39%
 # Experience Manager 6.5資產使用指南 {#assets}
 
 + [[!DNL Assets] 使用者指南](home.md)
-+ [AEM 6.5 Assets發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [Experience Manager 6.5 Assets發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [關於DAM](assets.md)
 + [資產的最佳實務](best-practices-for-assets.md)
-+ 使用AEM Assets {#using}
-   + [AEM Assets首頁體驗](assets-home-page.md)
-   + [在AEM中搜尋資產](search-assets.md)
++ 使用Experience Manager Assets {#using}
+   + [資產首頁體驗](assets-home-page.md)
+   + [搜尋數位資產](search-assets.md)
    + [多語言資產](multilingual-assets.md)
-   + [AEM Assets [!DNL Adobe Stock] 中的使用資產](aem-assets-adobe-stock.md)
+   + [資產 [!DNL Adobe Stock] 中的使用資產](aem-assets-adobe-stock.md)
    + [預覽3D資產](previewing-3d-assets.md)
    + [查看資料夾資產和集合](bulk-approval.md)
    + [時間軸中的活動串流](activity-stream.md)
    + [處理資產](assets-workflow.md)
    + [新增影像地圖](image-maps.md)
    + [使用MSM重複使用資產](reuse-assets-using-msm.md)
-   + [使用AEM Sites連結資產](use-assets-across-connected-assets-instances.md)
+   + [連結資產與網站](use-assets-across-connected-assets-instances.md)
 + 動態媒體{#dynamic}
    + [Experience League 的 Dynamic Media 電子報](dynamic-media-newsletter.md)
    + [建立 Dynamic Media](administering-dynamic-media.md)
@@ -76,14 +76,14 @@ ht-degree: 39%
    + [安裝Feature Pack 18912以進行大量資產移轉](bulk-ingest-migrate.md)
    + [使用選取工具](working-with-selectors.md)
 + 擴充資產 {#extending}
-   + [自訂和擴充AEM資產](extending-assets.md)
+   + [自訂和擴充資產](extending-assets.md)
    + [使用媒體處理常式和工作流程處理資產](media-handlers.md)
    + [擴充搜尋功能](searchx.md)
-   + [安裝及設 [!DNL ImageMagick] 定以搭配AEM Assets運作](best-practices-for-imagemagick.md)
+   + [安裝及設 [!DNL ImageMagick] 定以搭配資產運作](best-practices-for-imagemagick.md)
    + [將資產與活動串流整合](extending-activity-stream.md)
    + [擴充資產編輯器](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
-   + [AEM Assets HTTP API中的內容片段支援](assets-api-content-fragments.md)
+   + [資產HTTP API中的內容片段支援](assets-api-content-fragments.md)
    + [資產代理開發](proxy.md)
 + 管理資產 {#administer}
    + [支援的檔案格式](assets-formats.md)
@@ -104,10 +104,10 @@ ht-degree: 39%
    + [資產移轉指南](assets-migration-guide.md)
    + [XMP 中繼資料](xmp.md)
    + [資產網路考量](assets-network-considerations.md)
-   + [AEM Assets和AEM MediaLibrary](medialibrary.md)
+   + [資產和媒體庫](medialibrary.md)
    + [使用PDF點陣化器](aem-pdf-rasterizer.md)
    + [設定上傳限制](configuring-asset-upload-restrictions.md)
-   + [AEM與Creative Cloud整合最佳實務](aem-cc-integration-best-practices.md)
+   + [Experience Manager與Creative Cloud整合](aem-cc-integration-best-practices.md)
    + [與InDesign Server整合](indesign.md)
    + [中繼資料設定檔](metadata-profiles.md)
    + [資產中的數位版權管理](drm.md)
@@ -127,7 +127,7 @@ ht-degree: 39%
    + [資料夾中繼資料結構](folder-metadata-schema.md)
    + [管理智慧標籤](managing-smart-tags.md)
 + 品牌入口網站 {#brandportal}
-   + [使用 Brand Portal 設定 AEM Assets](configure-aem-assets-with-brand-portal.md)
+   + [使用 Brand Portal 設定 Assets](configure-aem-assets-with-brand-portal.md)
    + [將資產發佈至 Brand Portal](brand-portal-publish-assets.md)
    + [將資料夾發佈至 Brand Portal](brand-portal-publish-folder.md)
    + [將集合發佈至 Brand Portal](brand-portal-publish-collection.md)
@@ -151,7 +151,7 @@ ht-degree: 39%
    + [管理影片資產](managing-video-assets.md)
    + [建立翻譯專案](translation-projects.md)
    + [準備翻譯資產](preparing-assets-for-translation.md)
-   + [從 AEM 下載資產](download-assets-from-aem.md)
+   + [從Experience Manager下載資產](download-assets-from-aem.md)
    + [不同步作業](asynchronous-jobs.md)
    + [燈箱](touch-ui-light-box.md)
    + [資產見解](touch-ui-asset-insights.md)
