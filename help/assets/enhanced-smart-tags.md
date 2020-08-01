@@ -1,17 +1,17 @@
 ---
-title: 增強的智慧型標籤
-description: 增強的智慧型標籤
+title: 增強型智慧標記
+description: 增強型智慧標記
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1561'
-ht-degree: 7%
+source-wordcount: '1536'
+ht-degree: 8%
 
 ---
 
 
-# 增強的智慧型標籤 {#enhanced-smart-tags}
+# 增強型智慧標記 {#enhanced-smart-tags}
 
 ## 增強的智慧型標籤概觀 {#overview-of-enhanced-smart-tags}
 
@@ -19,7 +19,7 @@ ht-degree: 7%
 
 與自然語言辭彙相比，基於業務分類法標籤數位資產有助於使其與公司業務保持一致，並確保最相關的資產出現在搜尋中。
 
-例如，汽車製造商可以使用型號名稱來標籤汽車影像，因此當搜尋各種型號的影像以設計促銷活動時，只會顯示相關影像。
+例如，汽車製造商可以用型號名稱來標籤汽車影像，以便在搜尋各種型號的影像以設計促銷活動時，只顯示相關影像。
 
 要使智慧內容服務應用正確的標籤，您必須對其進行培訓以識別分類。 若要訓練服務，請先組織一組最能說明這些資產的資產和標籤。 在資產上套用這些標籤，並執行培訓工作流程以協助服務學習。
 
@@ -27,7 +27,7 @@ ht-degree: 7%
 
 在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
-智慧型內容服務是Adobe I/O上代管的雲端服務。 若要在Adobe Experience Manager中使用它，系統管理員必須將您的Experience Manager部署與Adobe I/O整合。
+智慧型內容服務是Adobe I/O上代管的雲端服務。 若要在中使 [!DNL Adobe Experience Manager]用，系統管理員必須將您的 [!DNL Experience Manager] 部署與Adobe I/O整合。
 
 總而言之，以下是使用智慧型內容服務的主要步驟：
 
@@ -42,20 +42,20 @@ ht-degree: 7%
 
 在您使用智慧型內容服務之前，請確定以下各項以建立Adobe I/O整合：
 
-* 具有組織管理員權限的Adobe ID帳戶。
+* Adobe ID 帳戶具有組織的管理員權限。
 * 您的組織已啟用智慧型內容服務。
 
 ## 入門 {#onboarding}
 
-智慧型內容服務可作為Experience Manager的附加元件購買。 在您購買後，系統會寄送電子郵件給您組織的管理員，並附上Adobe I/O的連結。
+The Smart Content Service is available for purchase as an add-on to [!DNL Experience Manager]. 在您購買後，系統會寄送電子郵件給您組織的管理員，並附上Adobe I/O的連結。
 
-管理員可依照連結，將Smart Content Service與Experience Manager整合。 若要將服務與Experience Manager Assets整合，請參閱 [設定智慧標籤](config-smart-tagging.md)。
+管理員可以遵循此連結，將智慧型內容服務與整合 [!DNL Experience Manager]。 若要將服務與整合，請 [!DNL Experience Manager Assets]參閱 [設定智慧標籤](config-smart-tagging.md)。
 
-當管理員在Experience Manager中設定服務並新增使用者時，上線程式就會完成。
+當管理員配置服務並在中添加用戶時，上線過程將完成 [!DNL Experience Manager]。
 
 >[!NOTE]
 >
->如果您使用Experience Manager 6.3或更舊版本，並需要為資產加上標籤服務，請參 [閱智慧標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智慧型標籤不使用最新的AI功能，因此不如增強的智慧型標籤服務精確。
+>如果您使用 [!DNL Experience Manager] 6.3或更舊版本，且需要為資產加上標籤服務，請參 [閱智慧標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智慧型標籤不使用最新的AI功能，因此不如增強的智慧型標籤服務精確。
 
 ## 檢閱資產和標籤 {#reviewing-assets-and-tags}
 
@@ -90,13 +90,13 @@ ht-degree: 7%
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-在為資料夾選取此選項後，Experience Manager會自動執行訓練工作流程，以便針對資料夾資產及其標籤來訓練Smart Content Service。 依預設，培訓工作流程每週在星期六的凌晨12:30執行。
+在為資料夾選擇此選項後， [!DNL Experience Manager] 將自動運行培訓工作流，以便對資料夾資產及其標籤上的Smart Content Service進行培訓。 依預設，培訓工作流程每週在星期六的凌晨12:30執行。
 
 ### 隨選培訓 {#on-demand-training}
 
 您可以在工作流程主控台(Workflow console)中，視需要訓練智慧型內容服務。
 
-1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]****[!UICONTROL >]**&#x200B;模型」。
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 1. 在「執 **[!UICONTROL 行工作流程]** 」對話方塊中，瀏覽至包含標籤資產的裝載資料夾，以訓練服務。
 1. 指定工作流程的標題並新增註解。 然後，按一下「 **[!UICONTROL 執行]**」。 資產和標籤會提交以供培訓。
@@ -111,7 +111,7 @@ ht-degree: 7%
 
 若要檢查智慧型內容服務是否在訓練資產集中的標籤上接受訓練，請從「報告」主控台檢閱訓練工作流程報告。
 
-1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
+1. 在介 [!DNL Experience Manager] 面中，前往「 **[!UICONTROL 工具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
 1. In the **[!UICONTROL Asset Reports]** page, click **[!UICONTROL Create]**.
 1. Select the **[!UICONTROL Smart Tags Training]** report, and then click **[!UICONTROL Next]** from the toolbar.
 1. 指定報表的標題和說明。在「 **[!UICONTROL 排程報表]**」下，保 **[!UICONTROL 留「現在]** 」選項。如果您想要排程報表以供稍後使用，請選 **[!UICONTROL 取]** 「稍後」並指定日期和時間。Then, click **[!UICONTROL Create]** from the toolbar.
@@ -153,7 +153,7 @@ ht-degree: 7%
 
 #### 從工作流程主控台標籤資產 {#tagging-assets-from-the-workflow-console}
 
-1. 在Experience Manager介面中，前往「工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流程]****[!UICONTROL >]**&#x200B;模型」。
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
@@ -167,7 +167,7 @@ ht-degree: 7%
 
 #### 從時間軸標籤資產 {#tagging-assets-from-the-timeline}
 
-1. 從「資產」使用者介面中，選取包含您要套用智慧標籤之資產或特定資產的檔案夾。
+1. 從使用 [!DNL Assets] 者介面中，選取包含您要套用智慧標籤之資產或特定資產的檔案夾。
 1. 從左上角開啟時間 **[!UICONTROL 軸]**。
 1. 從左側邊欄底部開啟動作，然後按一下「開 **[!UICONTROL 始工作流程」]**。
 
