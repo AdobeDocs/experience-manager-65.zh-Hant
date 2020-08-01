@@ -3,9 +3,9 @@ title: 查看資料夾資產和集合
 description: 為資料夾或系列中的資產設定審核工作流程，並與審核者或創意合作夥伴分享，以尋求意見回應。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '784'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 為資料夾或系列中的資產設定審核工作流程，並與審核者或創意合作夥伴分享，以尋求意見回應。
 
-Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定臨機審核工作流程，並與審核者或創意合作夥伴共用，以尋求意見回應。
+[!DNL Adobe Experience Manager Assets] 可讓您針對資料夾或系列中的資產設定臨機審核工作流程，並與審核者或創意合作夥伴共用該工作流程，以尋求意見回應。
 
 您可以將審閱工作流與項目關聯，也可以建立獨立的審閱任務。
 
@@ -25,7 +25,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
 
 ## 為資料夾建立審核任務 {#creating-a-review-task-for-folders}
 
-1. 從「資產」使用者介面中，選取您要為其建立審核工作的檔案夾。
+1. 從用戶 [!DNL Assets] 介面中，選擇要為其建立審閱任務的資料夾。
 1. 在工具欄中，按一下 **[!UICONTROL Create Review Task]** ![create review task](assets/do-not-localize/create-review-task.png) （建立審核任務）以開啟 **[!UICONTROL Review Task]** （審核任務）頁。 If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （可選）從「項 **[!UICONTROL 目]** 」清單中，選擇要與審閱任務關聯的項目。 預設情況下，選 **[!UICONTROL 擇「無]** 」選項。 如果不想將任何項目與審閱任務關聯，請保留此選項。
@@ -49,7 +49,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
    ![review_name](assets/review_name.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新任務的通知將發送給批准者。
-1. 以核准者身分登入資產，並導覽至資產UI。 若要核准資產，請按一 **[!UICONTROL 下「通知]** 」，然後從清單中選取審核工作。
+1. 以核准者身 [!DNL Assets] 分登入並導覽至 [!DNL Assets] UI。 若要核准資產，請按一 **[!UICONTROL 下「通知]** 」，然後從清單中選取審核工作。
 
    ![資產通知](assets/aemAssetsNotification.png)
 
@@ -59,7 +59,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
    ![review_task](assets/review_task.png)
 
 1. Click **[!UICONTROL Complete]** from the toolbar. 在對話方塊中，輸入註解，然後按一 **[!UICONTROL 下]** 「完成」確認。
-1. 導覽至「資產」使用者介面並開啟檔案夾。 資產的核准狀態圖示會顯示在卡片檢視和清單檢視中。
+1. 導覽至使 [!DNL Assets] 用者介面並開啟資料夾。 資產的核准狀態圖示會顯示在卡片檢視和清單檢視中。
 
    **卡片檢視**
 
@@ -91,7 +91,7 @@ Adobe Experience Manager Assets可讓您為資料夾或系列中的資產設定�
    ![task_details-collection](assets/task_details-collection.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新任務的通知將發送給批准者。
-1. 以核准者身分登入資產，並導覽至資產主控台。 若要核准資產，請按一 **[!UICONTROL 下「通知]** 」，然後從清單中選取審核工作。
+1. 以批准者身 [!DNL Assets] 份登入並導覽至主控 [!DNL Assets] 台。 若要核准資產，請按一 **[!UICONTROL 下「通知]** 」，然後從清單中選取審核工作。
 1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then click **[!UICONTROL Review]**.
 1. 系列中的所有資產都會顯示在檢閱頁面上。 選取資產，然後按一 **[!UICONTROL 下「核准／拒絕]** 」以核准或拒絕資產。
 
