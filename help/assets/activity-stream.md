@@ -1,11 +1,11 @@
 ---
-title: 時間軸中的活動串流
+title: 數位資產在時間軸檢視中的活動串流 [!DNL Experience Manager]。
 description: 本文說明如何在時間軸上顯示資產的活動記錄檔。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '216'
 ht-degree: 27%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 # 時間軸中的活動串流 {#activity-stream-in-timeline}
 
-此功能會在時間軸上顯示資產的活動記錄。 如果您在Adobe Experience Manager Assets中執行下列任一與資產相關的作業，活動串流功能會更新時間軸以反映活動。
+此功能會在時間軸上顯示資產的活動記錄。 如果您在中執行下列任何資產相關作業， [!DNL Adobe Experience Manager Assets]活動串流功能會更新時間軸以反映活動。
 
 活動流中記錄了以下操作：
 
@@ -26,7 +26,7 @@ ht-degree: 27%
 * 拒絕
 * 移動
 
-將從儲存日誌檔案的CRX位置提取要在時 `/var/audit/com.day.cq.dam/content/dam` 間軸中顯示的活動日誌。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into Experience Manager via [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/release-notes.html).
+將從儲存日誌檔案的CRX位置提取要在時 `/var/audit/com.day.cq.dam/content/dam` 間軸中顯示的活動日誌。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into [!DNL Experience Manager] via [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
