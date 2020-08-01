@@ -3,9 +3,9 @@ title: 處理資產以完成業務流程、進行審核、實現法規遵從性�
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '985'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 將工作流程套用至多個資產 {#applying-a-workflow-to-multiple-assets}
 
-1. 從「資產」主控台，導覽至您要啟動工作流程的資產所在的位置，然後選取資產。 從菜 **[!UICONTROL 單中選擇]** 「時間軸」(Timeline)以顯示時間軸。
+1. 從控 [!DNL Assets] 制台導覽至您要啟動工作流程的資產所在位置，然後選取資產。 從菜 **[!UICONTROL 單中選擇]** 「時間軸」(Timeline)以顯示時間軸。
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
