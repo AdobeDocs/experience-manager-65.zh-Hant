@@ -1,23 +1,23 @@
 ---
-title: 資產代理開發
-description: Proxy是Experience Manager實例，使用Proxy工作者來處理工作。 瞭解如何設定Experience Manager代理、支援的作業、代理元件，以及如何開發自訂的代理工作器。
+title: '[!DNL資產]代理開發'
+description: 代理是代 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] 理、支援的操作、代理元件，以及如何開發自定義代理工作器。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 
-# 資產代理開發 {#assets-proxy-development}
+# [!DNL Assets] 代理開發 {#assets-proxy-development}
 
-Adobe Experience Manager Assets會使用代理來分發特定工作的處理。
+[!DNL Adobe Experience Manager Assets] 使用代理來分發特定任務的處理。
 
-Proxy是特定（有時也是個別的）Experience Manager實例，它使用Proxy工作者作為負責處理工作和建立結果的處理者。 代理工作器可用於各種任務。 在「資產」代理中，此變數可用於載入資產以在「資產」中轉譯。 例如， [IDS代理工作器使用](indesign.md)[!DNL Adobe InDesign] Server來處理要用於Assets的檔案。
+Proxy是特定（有時也是個別的）Experience Manager實例，它使用Proxy工作者作為負責處理工作和建立結果的處理者。 代理工作器可用於各種任務。 在代理程式中，這 [!DNL Assets] 可用來載入資產，以便在「資產」中轉譯。 例如， [IDS代理工作器使用](indesign.md)[!DNL Adobe InDesign] Server來處理要用於Assets的檔案。
 
-當proxy是個別的Experience Manager例項時，這有助於減輕Experience Manager編寫例項的負載。 依預設，Assets會在相同JVM中執行資產處理工作（透過Proxy外部化），以減輕Experience Manager製作例項的負載。
+當proxy是個別的例 [!DNL Experience Manager] 項時，這有助於減輕Experience Manager製作例項的負載。 依預設， [!DNL Assets] 在相同JVM（透過Proxy外部化）中執行資產處理工作，以減輕Experience Manager製作例項的負載。
 
 ## 代理（HTTP存取） {#proxy-http-access}
 
@@ -109,7 +109,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 >
 >Proxy API的參考檔案可在下方取得 [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html)。
 
-代理和代理工作器配置都可通過雲服務配置獲得，您可從Assets **Tools控制台或下方訪問**`/etc/cloudservices/proxy`。 每個代理工作器都需要在下添加一個節點， `/etc/cloudservices/proxy` 以瞭解工作器特定的配置詳細資訊( `/etc/cloudservices/proxy/workername`例如)。
+代理和代理工作器配置都可通過雲服務配置獲得，可從「工具」控制台或 [!DNL Assets]**下訪問**`/etc/cloudservices/proxy`。 每個代理工作器都需要在下添加一個節點， `/etc/cloudservices/proxy` 以瞭解工作器特定的配置詳細資訊( `/etc/cloudservices/proxy/workername`例如)。
 
 >[!NOTE]
 >
@@ -132,9 +132,9 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### 開發自訂的Proxy Worker {#developing-a-customized-proxy-worker}
 
-IDS [代理工作者](indesign.md) (Proxy Worker)是資產代理工作者的範例，此代理工作者已提供現成可用的工具，以外包InDesign資產的處理。
+IDS [代理工作者](indesign.md)[!DNL Assets] ，就是已提供現成可用來委外處理InDesign資產的代理工作者的範例。
 
-您也可以開發和配置自己的資產代理員工，以建立專門的員工來派遣和外包您的資產處理任務。
+您也可以開發和配置自己的代理工 [!DNL Assets] 作者，以建立專門的工作者來派遣和外包處理 [!DNL Assets] 任務。
 
 要設定您自己的自定義代理工作器，您必須：
 
@@ -176,7 +176,7 @@ IDS [代理工作者](indesign.md) (Proxy Worker)是資產代理工作者的範�
 
 >[!NOTE]
 >
->資產代理框架不提供現成可用的池機制。
+>代理 [!DNL Assets] 框架不提供現成可用的池機制。
 >
 >整 [!DNL InDesign] 合可讓您存取伺服器 [!DNL InDesign] 池(IDSPool)。 此集區是專為整 [!DNL InDesign] 合而設，不屬於Proxy架構 [!DNL Assets] 的一部份。
 
