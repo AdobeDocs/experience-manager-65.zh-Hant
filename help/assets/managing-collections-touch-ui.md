@@ -4,9 +4,9 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2178'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 11%
 
 # 管理集合 {#managing-collections}
 
-系列是Adobe Experience Manager Assets中的一組資產。 使用系列在使用者之間共用資產。 該集可以是靜態集合或基於搜索結果的動態集合。
+系列是內部的一組資產 [!DNL Adobe Experience Manager Assets]。 使用系列在使用者之間共用資產。 該集可以是靜態集合或基於搜索結果的動態集合。
 
 與資料夾不同，系列可以包含不同位置的資產。 您可以與指派不同權限層級的不同使用者共用系列，包括檢視、編輯等。
 
@@ -28,7 +28,7 @@ ht-degree: 11%
 
 ## 存取系列主控台 {#navigating-the-collections-console}
 
-若要開啟 **[!UICONTROL 「系列]**」，請在Experience Manager介面中，前往「資 **[!UICONTROL 產]** >系 **[!UICONTROL 列]**」。
+若要開啟「 **[!UICONTROL 系列]**」，請在介面 [!DNL Experience Manager] 中，前往「 **[!UICONTROL 資產]** >系列 **[!UICONTROL 」]**。
 
 ## 建立系列 {#creating-a-collection}
 
@@ -52,15 +52,15 @@ ht-degree: 11%
 
    >[!NOTE]
    >
-   >Experience Manager Assets可讓您建立系列的審閱工作，就像建立資產檔案夾的審閱工作一樣。
+   >[!DNL Experience Manager Assets] 可讓您建立系列的審閱工作，類似為資產檔案夾建立審閱工作的方式。
 
-   若要新增資產至系列，請導覽至「資產」使用者介面。 如需詳細資訊，請 [參閱「新增資產至系列」](#adding-assets-to-a-collection)。
+   若要新增資產至系列，請導覽至使 [!DNL Assets] 用者介面。 如需詳細資訊，請 [參閱「新增資產至系列」](#adding-assets-to-a-collection)。
 
 ### 使用dropzone建立系列 {#create-collections-using-dropzone}
 
-您可以將資產從資產UI拖曳至系列。 您也可以建立系列的復本，並將資產拖曳至該處。
+您可以將資產從使用者介 [!DNL Assets] 面拖曳至系列。 您也可以建立系列的復本，並將資產拖曳至該處。
 
-1. 從「資產」使用者介面中，選取您要新增至系列的資產。
+1. 從使用 [!DNL Assets] 者介面中，選取您要新增至系列的資產。
 1. 將資產拖曳至「 **[!UICONTROL Drop in Collection]** 」區域。 或者，從工具 **[!UICONTROL 列按一下]** 「至系列」。
 
    ![drop_in_collection](assets/drop_in_collection.png)
@@ -78,7 +78,7 @@ ht-degree: 11%
 
 若要建立智慧型系列，請依照下列步驟進行：
 
-1. 導覽至「資產」使用者介面，然後按一下「搜尋」。
+1. 導覽至使用 [!DNL Assets] 者介面，然後按一下搜尋。
 
 1. 在Omnisearch方塊中輸入搜尋關鍵字，然後按 `Enter`。 開啟「篩選」面板並套用搜尋篩選。
 
@@ -108,7 +108,7 @@ ht-degree: 11%
 
 您可以將資產新增至包含參考資產或檔案夾清單的系列。 智慧型系列使用搜尋查詢來填入資產。 因此，資產和檔案夾的靜態參考不適用。
 
-1. 在「資產」使用者介面中，選取資產，然後從工具 **[!UICONTROL 列按一下「]**![新增至系列](assets/do-not-localize/add-to-collection.png) 」。
+1. 在設定 [!DNL A]使用者介面中，選取資產，然後從工具列 **[!UICONTROL 按一下「至]** 系列新增至系列」 ![](assets/do-not-localize/add-to-collection.png) 。
 或者，您也可以將資產拖曳至介 **[!UICONTROL 面上的「拖曳]** 」區域。 當地區標籤變更為「拖放至新增」時， **[!UICONTROL 新增資產]**。
 
 1. 在「新 **[!UICONTROL 增至系列]** 」頁面中，選取您要新增資產的系列。
@@ -119,9 +119,9 @@ ht-degree: 11%
 
 智慧型系列是透過儲存搜尋來建立的，因此您可以修改已儲存搜尋的搜尋參數來變更其 [內容](#saved-searches)。
 
-1. 在「資產」使用者介面中，按一下工具列中 ![的搜尋選項](assets/do-not-localize/search_icon.png) 「搜尋」選項。
+1. 在使用 [!DNL Assets] 者介面中，按一下工具列 ![中的搜尋選項](assets/do-not-localize/search_icon.png) 。
 1. 在Omnisearch框中，按Return鍵。
-1. 在Experience Manager介面中，開啟「篩選」面板。
+1. 在介面 [!DNL Experience Manager] 中，開啟「濾鏡」面板。
 1. 從「保 **[!UICONTROL 存的搜索]** 」清單中，選擇要修改的智慧系列。「搜尋」面板會顯示為儲存的搜尋設定的篩選器。
 
    ![select_smart_collection](assets/select_smart_collection.png)
@@ -156,7 +156,7 @@ ht-degree: 11%
 
    >[!NOTE]
    >
-   >* 在「屬 [!UICONTROL 性] 」頁面中，您可以取消選取系列，從系列清單中移除系列。 系列清單預設會選取所有系列。 Experience Manager不會更新您移除之系列的中繼資料。
+   >* 在「屬 [!UICONTROL 性] 」頁面中，您可以取消選取系列，從系列清單中移除系列。 系列清單預設會選取所有系列。 [!DNL Experience Manager] 不會更新您移除之系列的中繼資料。
    >* 在清單頂端，選取「標題」( **[!UICONTROL Title]** )附近的核取方塊，在選取系列和清除清單之間切換。
 
 
@@ -175,15 +175,15 @@ ht-degree: 11%
 
 ## 搜尋系列 {#searching-collections}
 
-您可以從「系列」主控台搜尋系列。 當您在Omnisearch方塊中搜尋關鍵字時，資產會搜尋系列名稱、中繼資料和新增至系列的標籤。
+您可以從「系列」主控台搜尋系列。 當您在Omnisearch方塊中搜尋關鍵字時， [!DNL Assets] 會搜尋系列名稱、中繼資料和新增至系列的標籤。
 
-如果您從頂層搜尋系列，搜尋結果中只會傳回個別的系列。 系列中的資產或檔案夾會被排除。 在所有其他情況下（例如，在個別系列或檔案夾階層中），會傳回所有相關資產、檔案夾和系列。
+如果您從頂層搜尋系列，搜尋結果中只會傳回個別的系列。 [!DNL Assets] 或系列中的檔案夾會排除。 在所有其他情況下（例如，在個別系列或檔案夾階層中），會傳回所有相關資產、檔案夾和系列。
 
 ## 在系列中搜尋 {#searching-within-collections}
 
 在「系列」控制台中，按一下系列以開啟它。
 
-在系列中，Experience Manager搜尋會限制在您所檢視之系列中的資產（及其標籤和中繼資料）。 當您在資料夾內搜尋時，會傳回目前資料夾內所有相符的資產和子資料夾。 當您在系列中搜尋時，只會傳回符合的資產、檔案夾和其他系列，這些系列是系列的直接成員。
+在系列中，搜 [!DNL Experience Manager] 尋會限制在您所檢視之系列中的資產（及其標籤和中繼資料）。 當您在資料夾內搜尋時，會傳回目前資料夾內所有相符的資產和子資料夾。 當您在系列中搜尋時，只會傳回符合的資產、檔案夾和其他系列，這些系列是系列的直接成員。
 
 ## 編輯系列設定 {#editing-collection-settings}
 
@@ -234,7 +234,7 @@ ht-degree: 11%
 
 ## Saved searches {#saved-searches}
 
-在「資產」使用者介面中，您可以根據特定規則、搜尋准則或自訂搜尋刻面來搜尋或篩選資產。如果您將這些項目儲存為「 **[!UICONTROL 已儲存的搜尋]**」，您稍後可從「篩選」面板的「已儲存的搜尋 **** 」清單中存取。建立儲存的搜尋也會建立智慧型系列。
+In the [!DNL Assets] user interface, you can search or filter assets based on certain rules, search criteria, or custom search facets. 如果您將這些項目儲存為「 **[!UICONTROL 已儲存的搜尋]**」，您稍後可從「篩選」面板的「已儲存的搜尋 **** 」清單中存取。建立儲存的搜尋也會建立智慧型系列。
 
 ![saved_searches_list](assets/saved_searches_list.png)
 
@@ -248,9 +248,9 @@ ht-degree: 11%
 
 要刪除保存的搜索，請執行以下步驟：
 
-1. 在「資產」使用者介面中，按一下「搜尋 ![搜尋」選項](assets/do-not-localize/search_icon.png)。
+1. 在使用者 [!DNL Assets] 介面中，按一下搜尋 ![搜尋選項](assets/do-not-localize/search_icon.png)。
 1. 在「Omnisearch」（搜索）欄位中，按Return鍵。
-1. 在Experience Manager介面中，開啟「篩選」面板。
+1. 在介面 [!DNL Experience Manager] 中，開啟「濾鏡」面板。
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection](assets/select_smart_collection.png)
