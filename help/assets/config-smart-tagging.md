@@ -3,9 +3,9 @@ title: 使用智慧型內容服務設定資產標籤。
 description: 瞭解如何使用智慧型內容服務來設定智慧型標籤 [!DNL Adobe Experience Manager]，以及增強智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1103'
 ht-degree: 42%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 42%
 <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
 -->
 
-除了上述功能外，若要啟用「增強智慧型標籤」，請另外安裝最新 [的AEM Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
+除了上述功能外，若要啟用「增強智慧型標籤」，請另外安裝最新 [的Experience Manager Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
 
 ## 取得公開憑證 {#obtain-public-certificate}
 
