@@ -4,9 +4,9 @@ description: 訓練Adobe Sensei的AI服務，將智慧標籤套用至資產
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '462'
 ht-degree: 7%
 
 ---
@@ -50,9 +50,9 @@ ht-degree: 7%
 
 * 無法辨識影像的細微差異。 例如，修身與普通襯衫。
 * 無法根據影像的微小圖樣／部分來識別標籤。 例如，T恤上的標誌。
-* 在支援Experience Manager的地區設定中支援標籤。 如需語言清單，請參閱智 [慧型內容服務版本注意事項](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
+* 在中支援的地區設定中 [!DNL Experience Manager] 支援標籤。 如需語言清單，請參閱智 [慧型內容服務版本注意事項](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
 
-若要使用智慧型標籤（一般或增強功能）搜尋資產，請使用資產搜尋（全文搜尋）。 智慧型標籤沒有個別的搜尋述詞。
+若要使用智慧型標籤（一般或增強功能）來搜尋資產，請使用 [!DNL Assets] Omnisearch（全文搜尋）。 智慧型標籤沒有個別的搜尋述詞。
 
 >[!NOTE]
 >
