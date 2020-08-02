@@ -2,10 +2,10 @@
 title: AEM 6.5發行說明
 description: AEM發行說明涵蓋有關最新版AEM的重要資訊，包括新增、支援的平台、已過時和已移除的功能，以及已知問題。
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 15%
+source-wordcount: '370'
+ht-degree: 14%
 
 ---
 
@@ -17,7 +17,7 @@ AEM發行說明涵蓋有關最新版AEM的重要資訊，包括新增、支援�
 ## 關鍵AEM文章
 
 * [開始使用AEM](https://helpx.adobe.com/experience-manager/get-started.html)
-* [最近的檔案更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用指南
@@ -39,14 +39,14 @@ AEM發行說明涵蓋有關最新版AEM的重要資訊，包括新增、支援�
 
 ## 關鍵AEM資源
 
-* [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
+* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 * [核心元件使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM 社群論壇](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
+* [AEM 社群論壇](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
 ## 版權、授權和免責聲明 {#copyright-licenses-and-disclaimers}
 
