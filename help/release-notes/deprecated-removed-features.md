@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5版本中已停用和移除的功能。
 description: Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 translation-type: tm+mt
-source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 7%
@@ -50,7 +50,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 開發人員 | CRXDE lite中的傳統UI對話框編輯器。 Adobe不打算進一步增強散發時隨附的Classic UI Dialog Editor（快速入門） | 沒有可替換的。 |
 | 表單 | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替換。 |
 
-## Removed Features {#removed-features}
+## 移除的功能 {#removed-features}
 
 本節列出已從AEM 6.5移除的功能。 舊版的這些功能已標示為已過時。
 
