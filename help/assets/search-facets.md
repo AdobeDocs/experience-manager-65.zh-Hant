@@ -3,9 +3,9 @@ title: 搜尋 Facet.
 description: 如何在中建立、修改和使用搜索小面 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2485'
 ht-degree: 16%
 
 ---
@@ -134,7 +134,7 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 「多值屬性」述詞可讓您搜尋資產以尋找多個值。 假設您在多個產品中有影像，而每個影 [!DNL Assets] 像的中繼資料包含與產品相關的SKU編號。 您可以使用此謂語，根據多個SKU編號搜尋產品影像。
 
-1. Click the [!DNL Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 在「搜尋表單」頁面上，選取「 **[!UICONTROL 資產管理搜尋邊欄]**」，按一下「編 **[!UICONTROL 輯]**![編輯」圖示](assets/do-not-localize/aemassets_edit.png)。
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. 也可以使用選擇對話框選擇節點。
