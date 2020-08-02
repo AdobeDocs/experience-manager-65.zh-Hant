@@ -1,18 +1,16 @@
 ---
 title: AEM Communities發行說明
 description: Adobe Experience Manager 6.5 Communities的發行說明。
-uuid: 1b436959-581c-4b34-b2df-cccc5727da59
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: c3505807-1550-491a-8619-e87839afca4f
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
 
-# AEM Communities發行說明{#aem-communities-release-notes}
+# AEM Communities發行說明 {#aem-communities-release-notes}
 
 閱讀自6.4版以來對AEM Communities的改進。 若要進一步瞭解新功能，請參閱 [AEM 6.5 Communities使用指南](https://helpx.adobe.com/experience-manager/6-4/communities/user-guide.html)。
 
@@ -28,11 +26,11 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
 
 社群使用者不需搜尋其名字、姓氏或使用者名稱，即可查看是否有人與他們聯絡或需要他們注意。 此外，它允許UGC作者向能夠最好地解決問題並添加投入的特定註冊用戶尋求回應。
 
-社群管理員需要**在社群元件上啟用提及**，讓已註冊的使用者能夠使用這些元件的功能。
+社群管理員需要在社群 **元件上啟用提及** ，以允許註冊使用者在這些元件上使用功能。
 
 **群組訊息**
 
-已註冊的社群成員現在可以透過單一電子郵件組合大量傳送直接訊息給群組，而不是個別傳送相同的訊息給群組成員。 要允許 [組消息](/help/communities/configure-messaging.md)，請啟用兩個 [消息操作服務實例](/help/communities/messaging.md#group-messaging)。
+註冊的社群成員現在可以透過單一電子郵件組合大量傳送直接訊息給群組，而不是個別傳送相同訊息給群組成員。 要允許 [組消息](/help/communities/configure-messaging.md)，請啟用兩個 [消息操作服務實例](/help/communities/messaging.md#group-messaging)。
 
 ![群組訊息](assets/group-messaging.png)
 
@@ -68,8 +66,10 @@ Github中 [提供示範](https://github.com/Adobe-Marketing-Cloud/aem-communitie
 
 AEM 6.5 Communities的啟用功能支援可分享的內容物件參考模型(Shareable Content Object Reference Model, SCORM)2017.1 [](https://rusticisoftware.com/blog/scorm-engine-2017-released/) 引擎。
 
-**AEM Communities中的鍵盤導覽支援啟用元件**AEM Communities中的啟用元件（例如目錄和課程播放、作業、檔案庫）支援鍵盤導覽，以改善協助工具。
+* 啟用元件上的鍵盤導覽支援
+* AEM Communities中的啟用元件（例如目錄和課程播放、工作、檔案庫）支援鍵盤導覽，以改善協助工具。
 
 ### 其他增強功能 {#other-enhancements}
 
-* **Solr 7支援**AEM 6.5社群支援Apache Solr 7.0版的搜尋平台，同時設定MSRP和DSRP。
+* Solr 7支援
+* AEM 6.5 Communities支援Apache Solr 7.0版的搜尋平台，同時設定MSRP和DSRP。
