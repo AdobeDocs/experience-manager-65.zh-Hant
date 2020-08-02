@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 2dad235c94c73c1c624fa05ff86a7260d4d4a01b
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2329'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 0%
 整合架構包含具有API的整合層。 這可讓您：
 
 * 外掛電子商務系統並將產品資料提取至AEM
+
 * 建立AEM元件，以提供獨立於特定電子商務引擎的商務功能
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
@@ -56,6 +57,7 @@ ht-degree: 0%
    * 實 `adaptTo` 施會在資源的 `cq:commerceProvider` 層次結構中查找屬性：
 
       * 如果找到，則使用該值來篩選商務服務查閱。
+
       * 如果找不到，則會使用排名最高的商務服務。
    * 使 `cq:Commerce` 用混合素，以便 `cq:commerceProvider` 將其添加到強型資源。
 
@@ -69,7 +71,7 @@ ht-degree: 0%
 請參閱下列範例：
 
 | `cq:commerceProvider = geometrixx` | 在標準AEM安裝中，需要特定實作； 例如，geometrixx範例，其中包含一般API的最小擴充功能 |
-|---|---|
+|--- |--- |
 | `cq:commerceProvider = hybris` | Hybris實現 |
 
 ### 範例 {#example}
@@ -117,6 +119,7 @@ ht-degree: 0%
 * 在OSGi配置管理器中：
 
    * 停用Hybris 5對預設回應剖析器服務的支援。
+
    * 請確定Hybris Basic Authentication Handler服務的服務排名低於Hybris OAuth Handler服務。
 
 ### 作業處理 {#session-handling}
@@ -124,7 +127,9 @@ ht-degree: 0%
 hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作階段ID會從Cookie中的 `JSESSIONID` Hybris傳回，而Cookie需要在後續的Hybris請求時傳送。 為避免將工作階段ID儲存在儲存庫中，會將其編碼在儲存在購物者瀏覽器中的其他Cookie中。 執行下列步驟：
 
 * 在第一次要求時，購物者的要求不會設定Cookie; 因此，請求會傳送至hybris例項以建立工作階段。
+
 * 作業Cookie會從回應中擷取，並編碼為新Cookie(例如 `hybris-session-rest`)，並在對購物者的回應上設定。 需要新Cookie中的編碼，因為原始Cookie僅對特定路徑有效，否則在後續的請求中不會從瀏覽器傳回。 路徑資訊也必須新增至Cookie的值。
+
 * 在後續的請求中，Cookie會從 `hybris-session-<*xxx*>` Cookie中解碼，並設定在HTTP用戶端上，用來從Hybris請求資料。
 
 >[!NOTE]
@@ -136,6 +141,7 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 * 此作業「擁有」購 **物車**
 
    * 執行添加／刪除／等
+
    * 對購物車執行各種計算；
 
       `commerceSession.getProductPrice(Product product)`
@@ -145,6 +151,7 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
    `CommerceSession.getUserContext()`
 
 * 也擁有付款 **處理** 連線
+
 * 也擁有履約 **連線** 。
 
 ### 產品同步與發佈 {#product-synchronization-and-publishing}
@@ -163,33 +170,34 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 * Hybris中的型錄變更會透過動態消息指示給AEM，然後傳播至AEM(b)
 
    * 針對型錄版本新增／刪除／變更產品。
+
    * 已核准產品。
 
 * hybris擴充功能提供輪詢匯入程式（「hybris」配置），可設定此匯入程式以指定的間隔（例如，每隔24小時，以秒為單位指定間隔）將變更匯入AEM:
 
-   * 
-
-      ```js
-      http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
-       {
-       * "jcr:mixinTypes": ["cq:PollConfig"],
-       * "enabled": true,
-       * "source": "hybris:outdoors",
-       * "jcr:primaryType": "cq:PageContent",
-       * "interval": 86400
-       }
-      ```
+   ```JavaScript
+       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
+        {
+        * "jcr:mixinTypes": ["cq:PollConfig"],
+        * "enabled": true,
+        * "source": "hybris:outdoors",
+        * "jcr:primaryType": "cq:PageContent",
+        * "interval": 86400
+        }
+   ```
 
 * AEM中的目錄設定可辨識 **Staged** and **Online目錄版本** 。
 
 * 在型錄版本之間同步產品需要（取消）啟動對應的AEM頁面(a、c)
 
    * 將產品新增至 **線上** 型錄版本需要啟動產品的頁面。
+
    * 移除產品時，必須停用。
 
 * 在AEM(c)中啟動頁面需要勾選(b)，而且只有在
 
    * 產品位於產品頁 **面的** 「線上目錄」版本。
+
    * 參考的產品可在其他頁 **面** （例如促銷活動頁面）的線上目錄版本中使用。
 
 * 啟動的產品頁面需要存取產品資料的 **線上** (d)版本。
@@ -213,7 +221,6 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 >[!NOTE]
 >
 >實際上，變型軸由任何返回項 `Product.getVariantAxes()` 決定：
->
 >* hybris為hybris實作定義它
 >
 >
@@ -224,7 +231,7 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
    >
 1. 再加一個
 >
->   
+>
 此額外變數是透過產品參 `variationAxis` 考的屬性選取(通常 `color` 適用於Geometrixx Outdoors)。
 
 #### 產品參考資料和產品資料 {#product-references-and-product-data}
@@ -237,7 +244,7 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 
 產品變化與產品資料節點之間必須有1:1的對應。
 
-產品參考也必須為每個呈現的變化提供一個節點——但不需要顯示所有的變化。 例如，如果產品有S、M、L變數，則產品資料可能是。
+產品參考也必須為每個呈現的變化提供一個節點——但不需要顯示所有的變化。 例如，如果產品有S、M、L變數，則產品資料可能是：
 
 ```shell
 etc
@@ -249,7 +256,7 @@ etc
 |       |──shirt-l
 ```
 
-而「大而高」型目錄可能只有它。
+雖然「高大」目錄可能只有：
 
 ```shell
 content
@@ -335,24 +342,30 @@ public class AxisFilter implements VariantFilter {
 
 * **通用儲存機制**
 
-   * 產品節點為nt:unstructured。
+   * 產品節點 `nt:unstructured`是。
+
    * 產品節點可以是：
 
       * 參考，其中產品資料儲存在其他位置：
 
          * 產品參考包含 `productData` 一個屬性，該屬性指向產品資料(通常在 `/etc/commerce/products`下)。
+
          * 產品資料是分層的； 產品屬性繼承自產品資料節點的祖先。
+
          * 產品參考也可以包含局部屬性，這些屬性會覆寫其產品資料中指定的屬性。
       * 產品本身：
 
          * 沒有屬 `productData` 性。
+
          * 在本機保存所有屬性（且不包含productData屬性）的產品節點會直接從其祖先繼承產品屬性。
 
 
 * **AEM-generic產品結構**
 
    * 每個變型都必須有自己的葉節點。
+
    * 產品介面既代表產品，也代表變型，但相關儲存庫節點是特定的。
+
    * 產品節點描述產品屬性和變型軸。
 
 #### 範例 {#example-1}
@@ -507,6 +520,7 @@ The owns `CommerceSession` the three elements:
 **付款處理**
 
 * 付款 `CommerceSession` 處理連線也歸您所有。
+
 * 實施者需要將特定呼叫（加入其選擇的付款處理服務）新增至實 `CommerceSession` 施。
 
 **訂單履行**
