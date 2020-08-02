@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+workflow-type: tm+mt
+source-wordcount: '1175'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * [WebSphere 8.5](#websphere)
 * [JBoss EAP 6.3.0/6.4.0](#jboss-eap)
-* [Oracle webLogic 12.1.3/12.2](#oracle-weblogic)
+* [Oracle WebLogic 12.1.3/12.2](#oracle-weblogic)
 * [Tomcat 8/8.5](#tomcat)
 
 有關安裝Web應用程式、伺服器配置以及如何啟動和停止伺服器的詳細資訊，請參閱相應的應用程式伺服器文檔。
@@ -46,7 +49,7 @@ AEM是要部署的單一戰爭檔案。
 如果部署了以下內容，則預設情況下會發生：
 
 * 運行模式為 `author`
-* 實例（儲存庫、Felix OSGI環境、捆綁包等）安裝在當 `${user.dir}/crx-quickstart`前工 `${user.dir}` 作目錄中，則此crx-quickstart路徑稱為 `sling.home`
+* 實例（儲存庫、Felix OSGI環境、捆綁包等） 安裝在當 `${user.dir}/crx-quickstart`前工 `${user.dir}` 作目錄中，則此crx-quickstart路徑稱為 `sling.home`
 
 * context root is the war file name, ef: `aem-6`
 
@@ -54,11 +57,11 @@ AEM是要部署的單一戰爭檔案。
 
 您可以以下列方式變更預設行為：
 
-* 運行模式：在部署 `sling.run.modes` 前，先在AEM `WEB-INF/web.xml` war檔案的檔案中設定參數
+* 運行模式： 在部署 `sling.run.modes` 前，先在AEM `WEB-INF/web.xml` war檔案的檔案中設定參數
 
-* sling.home:在部署 `sling.home` 前，先在AEM `WEB-INF/web.xml`war檔案的檔案中設定參數
+* sling.home: 在部署 `sling.home` 前，先在AEM `WEB-INF/web.xml`war檔案的檔案中設定參數
 
-* 上下文根：重新命名AEM war檔案
+* 上下文根： 重新命名AEM war檔案
 
 #### 發佈安裝 {#publish-installation}
 
@@ -85,8 +88,8 @@ AEM是要部署的單一戰爭檔案。
 1. 將sling.home參數變更為不同的路徑（可能有絕對和相對路徑）。
 1. 將sling.run.modes變更為publish執行個體的發佈。
 1. 回復web.xml檔案。
-1. 更名war檔案，使它們具有不同的名稱：例如，一個重新命名為aemauthor.war，另一個重新命名為aempublish.war。
-1. 使用較高的記憶體設定，例如，若是預設的AEM例項，則使用例如：-Xmx3072m
+1. 更名war檔案，使它們具有不同的名稱： 例如，一個重新命名為aemauthor.war，另一個重新命名為aempublish.war。
+1. 使用較高的記憶體設定，例如，若是預設的AEM例項，則使用例如： -Xmx3072m
 1. 部署兩個Web應用程式。
 1. 部署後，請停止兩個Web應用程式。
 1. 在作者和發佈例項中，都可確保在sling.properties檔案中，屬性felix.service.urlhandlers=false會設為false（預設值為true）。
@@ -102,7 +105,7 @@ AEM是要部署的單一戰爭檔案。
 
 * 讓基本驗證標題傳遞：
 
-   * 讓AEM驗證使用者的一種方式是停用WebSphere伺服器的全域管理安全性，以執行下列動作：轉至「Security -> Global Security」（安全性->全域安全性），並取消選中「Enable administrative security」（啟用管理安全性）複選框，保存並重新啟動伺服器。
+   * 讓AEM驗證使用者的一種方式是停用WebSphere伺服器的全域管理安全性，以執行下列動作： 轉到「安全性」->「全局安全性」並取消選中「啟用管理安全性」複選框，保存並重新啟動伺服器。
 
 * 設定`"JAVA_OPTS= -Xmx2048m"`
 * 如果您想使用內容根目錄= /安裝AEM，則必須先變更現有預設Web應用程式的內容根目錄
@@ -121,7 +124,7 @@ AEM是要部署的單一戰爭檔案。
 
    * 選擇上下文根目錄（如果您想要設定sling執行模式，則需要選取部署精靈的詳細步驟，然後在精靈的步驟6中指定）
 
-* 啟動AEM web應用程式
+* 啟動AEM Web應用程式
 
 #### JBoss EAP 6.3.0/6.4.0 {#jboss-eap}
 
@@ -147,7 +150,7 @@ AEM是要部署的單一戰爭檔案。
 
 * 啟用AEM網頁應用程式。
 
-#### Oracle webLogic 12.1.3/12.2 {#oracle-weblogic}
+#### Oracle WebLogic 12.1.3/12.2 {#oracle-weblogic}
 
 部署前，請閱讀上 [述一般說明](#general-description) 。
 
@@ -195,39 +198,39 @@ AEM是要部署的單一戰爭檔案。
    * Tomcat在安裝時不允許管理員或管理員訪問。 因此，您必須手動編輯才 `tomcat-users.xml` 能允許存取這些帳戶：
 
       * 編輯 `tomcat-users.xml` 以包含管理員和管理員的存取權。 配置看起來應類似下列範例：
-      * 
-         ```
+
+         ```xml
          <?xml version='1.0' encoding='utf-8'?>
-          <tomcat-users>
-          <role rolename="manager"/>
-          <role rolename="tomcat"/>
-          <role rolename="admin"/>
-          <role rolename="role1"/>
-          <role rolename="manager-gui"/>
-          <user username="both" password="tomcat" roles="tomcat,role1"/>
-          <user username="tomcat" password="tomcat" roles="tomcat"/>
-          <user username="admin" password="admin" roles="admin,manager-gui"/>
-          <user username="role1" password="tomcat" roles="role1"/>
-          </tomcat-users>
+         <tomcat-users>
+         role rolename="manager"/>
+         role rolename="tomcat"/>
+         <role rolename="admin"/>
+         <role rolename="role1"/>
+         <role rolename="manager-gui"/>
+         <user username="both" password="tomcat" roles="tomcat,role1"/>
+         <user username="tomcat" password="tomcat" roles="tomcat"/>
+         <user username="admin" password="admin" roles="admin,manager-gui"/>
+         <user username="role1" password="tomcat" roles="role1"/>
+         </tomcat-users>
          ```
    * 如果您想要部署內容根目錄&quot;/&quot;的AEM，則必須變更現有ROOT網頁應用程式的內容根目錄：
 
       * 停止和取消部署ROOT Webapp
       * 在tomcat的Webapps資料夾中更名ROOT.war資料夾
       * 再次啟動網頁應用程式
-   * 如果您使用Manager-gui安裝AEM web應用程式，則需要增加上傳檔案的最大大小，因為預設僅允許50MB的上傳大小。 若要開啟管理器網頁應用程式的web.xml,
+   * 如果您使用Manager-gui安裝AEM Web應用程式，則需要增加上傳檔案的最大大小，因為預設僅允許50MB的上傳大小。 若要開啟管理器網頁應用程式的web.xml,
 
       `webapps/manager/WEB-INF/web.xml`
 
-      並將最大檔案大小和最大請求大小增加至至少500MB，請參閱下 `multipart-config` 列此類檔案范 `web.xml` 例：
+      並將最大檔案大小和最大請求大小增加至至少500MB，請參閱下 `multipart-config` 列此類檔案范 `web.xml` 例。
 
-      ```
-        <multipart-config>
-         <!-- 500MB max -->
-         <max-file-size>524288000</max-file-size>
-         <max-request-size>524288000</max-request-size>
-         <file-size-threshold>0</file-size-threshold>
-         </multipart-config>
+      ```xml
+      <multipart-config>
+      <!-- 500MB max -->
+      <max-file-size>524288000</max-file-size>
+      <max-request-size>524288000</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+      </multipart-config>
       ```
 
 
@@ -252,4 +255,3 @@ AEM是要部署的單一戰爭檔案。
 有關處理安裝過程中可能出現的問題的資訊，請參見：
 
 * [疑難排解](/help/sites-deploying/troubleshooting.md)
-
