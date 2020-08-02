@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 0%
@@ -112,11 +112,7 @@ ht-degree: 0%
 
    `-P hybris4`
 
-   它會下載預先設定的Hybris 4散發，並內嵌在套件中：
-
-   ```
-   cq-commerce-hybris-server
-   ```
+   它會下載預先設定的Hybris 4散發，並內嵌在套件中 `cq-commerce-hybris-server`。
 
 * 在OSGi配置管理器中：
 
@@ -173,7 +169,7 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 
    * 
 
-      ```
+      ```js
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
        * "jcr:mixinTypes": ["cq:PollConfig"],
@@ -241,25 +237,25 @@ hybris使用使用者作業來儲存資訊，例如客戶的購物車。 工作�
 
 產品變化與產品資料節點之間必須有1:1的對應。
 
-產品參考也必須為每個呈現的變化提供一個節點——但不需要顯示所有的變化。 例如，如果產品有S、M、L變數，則產品資料可能是：
+產品參考也必須為每個呈現的變化提供一個節點——但不需要顯示所有的變化。 例如，如果產品有S、M、L變數，則產品資料可能是。
 
 ```shell
 etc
-  commerce
-    products
-      shirt
-        shirt-s
-        shirt-m
-        shirt-l
+|──commerce
+|  |──products
+|     |──shirt
+|       |──shirt-s
+|       |──shirt-m
+|       |──shirt-l
 ```
 
-雖然「高大」目錄可能只有：
+而「大而高」型目錄可能只有它。
 
 ```shell
 content
-  big-and-tall
-    shirt
-      shirt-l
+|──big-and-tall
+|  |──shirt
+|     |──shirt-l
 ```
 
 最後，不需要使用產品資料。 您可以將所有產品資料放在目錄的參考之下； 但是，若不複製所有產品資料，就無法真正擁有多個型錄。
@@ -457,9 +453,9 @@ The owns `CommerceSession` the three elements:
    購物車內容結構由API修正：
 
    ```java
-       public void addCartEntry(Product product, int quantity);
-       public void modifyCartEntry(int entryNumber, int quantity);
-       public void deleteCartEntry(int entryNumber);
+   public void addCartEntry(Product product, int quantity);
+   public void modifyCartEntry(int entryNumber, int quantity);
+   public void deleteCartEntry(int entryNumber);
    ```
 
 1. **定價**
@@ -467,12 +463,12 @@ The owns `CommerceSession` the three elements:
    API也會修正定價結構：
 
    ```java
-       public String getCartPreTaxPrice();
-       public String getCartTax();
-       public String getCartTotalPrice();
-       public String getOrderShipping();
-       public String getOrderTotalTax();
-       public String getOrderTotalPrice();
+   public String getCartPreTaxPrice();
+   public String getCartTax();
+   public String getCartTotalPrice();
+   public String getOrderShipping();
+   public String getOrderTotalTax();
+   public String getOrderTotalPrice();
    ```
 
 1. **訂單詳細資料**
@@ -480,16 +476,16 @@ The owns `CommerceSession` the three elements:
    但是，訂單詳細資 *料* ,API並未修正：
 
    ```java
-       public void updateOrderDetails(Map<String, String> orderDetails);
-       public Map<String, String> getOrderDetails();
-       public void submitOrder();
+   public void updateOrderDetails(Map<String, String> orderDetails);
+   public Map<String, String> getOrderDetails();
+   public void submitOrder();
    ```
 
 **發運計算**
 
 * 訂單通常需要提供多種運送選項（和價格）。
 * 價格可能根據訂單的項目和詳細資訊，例如重量和／或交貨地址。
-* The `CommerceSession` has access to all the dependiences, so the it can as simaly as approduct pricing:
+* The `CommerceSession` has access to all the dependiences, so the it can be as as simaly as product pricing:
 
    * 該公司 `CommerceSession` 擁有運費定價。
    * 可使用 `updateOrder(Map<String, Object> delta)`
@@ -534,7 +530,7 @@ The owns `CommerceSession` the three elements:
 
 ![chlimage_1-14](assets/chlimage_1-14a.png)
 
-這可使用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
+這會利用搜尋API來查詢選取的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection)):
 
 #### 搜尋API {#search-api}
 
@@ -592,7 +588,7 @@ AEM前端可定位在現有Hybris實作之前。 您也可以將hybris引擎新�
 
 * 必須實作介 `ImportHandler` 面
 
-* 可以擴展 `DefaultImportHandler`
+* 可以擴展 `DefaultImportHandler`。
 
 ```java
 /**
@@ -602,66 +598,66 @@ AEM前端可定位在現有Hybris實作之前。 您也可以將hybris引擎新�
  */
 public interface ImportHandler {
 
-    /**
-     * Not used.
-     */
-    public void createTaxonomie(ImporterContext ctx);
+  /**
+  * Not used.
+  */
+  public void createTaxonomie(ImporterContext ctx);
 
-    /**
-     * Creates a catalog with the given name.
-     * @param ctx   The importer context
-     * @param name  The catalog's name
-     * @return Path of created catalog
-     */
-    public String createCatalog(ImporterContext ctx, String name) throws Exception;
+  /**
+  * Creates a catalog with the given name.
+  * @param ctx   The importer context
+  * @param name  The catalog's name
+  * @return Path of created catalog
+  */
+  public String createCatalog(ImporterContext ctx, String name) throws Exception;
 
-    /**
-     * Creates a product from the given values.
-     * @param ctx                The importer context
-     * @param values             The product's properties
-     * @param parentCategoryPath The containing category's path
-     * @return Path of created product
-     */
-    public String createProduct(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
+  /**
+  * Creates a product from the given values.
+  * @param ctx                The importer context
+  * @param values             The product's properties
+  * @param parentCategoryPath The containing category's path
+  * @return Path of created product
+  */
+  public String createProduct(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
 
-    /**
-     * Creates a variant product from the given values.
-     * @param ctx             The importer context
-     * @param values          The product's properties
-     * @param baseProductPath The base product's path
-     * @return Path of created product
-     */
-    public String createVariantProduct(ImporterContext ctx, ValueMap values, String baseProductPath) throws Exception;
+  /**
+  * Creates a variant product from the given values.
+  * @param ctx             The importer context
+  * @param values          The product's properties
+  * @param baseProductPath The base product's path
+  * @return Path of created product
+  */
+  public String createVariantProduct(ImporterContext ctx, ValueMap values, String baseProductPath) throws Exception;
 
-    /**
-     * Creates an asset for a product. This is usually a product
-     * image.
-     * @param ctx             The importer context
-     * @param values          The product's properties
-     * @param baseProductPath The product's path
-     * @return Path of created asset
-     */
-    public String createAsset(ImporterContext ctx, ValueMap values, String productPath) throws Exception;
+  /**
+  * Creates an asset for a product. This is usually a product
+  * image.
+  * @param ctx             The importer context
+  * @param values          The product's properties
+  * @param baseProductPath The product's path
+  * @return Path of created asset
+  */
+  public String createAsset(ImporterContext ctx, ValueMap values, String productPath) throws Exception;
 
-    /**
-     * Creates a category from the given values.
-     * @param ctx           The importer context
-     * @param values        The category's properties
-     * @param parentPath    Path of parent category or base path of import in case of root category
-     * @return Path of created category
-     */
-    public String createCategory(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
+  /**
+  * Creates a category from the given values.
+  * @param ctx           The importer context
+  * @param values        The category's properties
+  * @param parentPath    Path of parent category or base path of import in case of root category
+  * @return Path of created category
+  */
+  public String createCategory(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
 }
 ```
 
-對於要由匯入工具識別的自訂處理常式，它必須指定 `service.ranking`值大於0的屬性； 例如：
+對於要由匯入工具識別的自訂處理常式，它必須指定 `service.ranking`值大於0的屬性； 例如。
 
 ```java
 @Component
 @Service
 @Property(name = "service.ranking", value = 100)
-public class MyImportHandler extends DefaultImportHandler {
-    ...
+public class MyImportHandler extends DefaultImportHandler
+{
+...
 }
 ```
-
