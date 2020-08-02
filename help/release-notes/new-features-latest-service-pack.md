@@ -4,10 +4,10 @@ description: Adobe Experience Manager 6.5 Service Pack 5的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 71c0d0263e1d0da7e33762a3b22773f38db3ba52
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '1873'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -56,7 +56,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 * 許多使用者介面元素、控制項和輸入表單欄位都可使用鍵盤存取。
 
-* 某些使用者介面元素的色彩和對比會更新，以便視覺有限的使用者或沒有色彩感知的使用者能夠區分這些使用者介面元素。 例如，星號分級圖示的顏色(例如在資產屬性( [!UICONTROL Properties] )或卡片檢視( [!UICONTROL Advanced Tab)的「分級(Rating] )」區段中)會變更，以取得適當的對比。
+* 某些使用者介面元素的顏色和對比已更新，以便視力不良和無法分辨顏色的使用者區分這些使用者介面元素。For example, the color of star rating icons (such as in [!UICONTROL Rating] section of [!UICONTROL Advanced] tab in asset [!UICONTROL Properties] or in card view) is changed for appropriate contrast.
 
    ![對比度改善的圖示分級](assets/star-rating-icons.png)
 
@@ -138,7 +138,7 @@ Adobe Experience Manager Forms包含下列協助工具增強功能：
 
 使用配置的步 [!DNL Experience Manager Assets] 驟會 [!DNL Brand Portal] 因您的版本、您是第 [!DNL Experience Manager] 一次進行配置還是升級現有配置而有所不同。 如需詳 [細資訊，請參閱設定Experience Manager資產與品牌入口](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
 
-#### 協助工具增強功能(6.5.4.0) {#accessibility-enhancements}
+#### Accessibility enhancements (6.5.4.0) {#accessibility-enhancements}
 
 [!DNL Experience Manager Assets] 包含下列協助工具增強功能：
 
@@ -193,7 +193,7 @@ For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份�
 
 將XFA表單中的文字欄位轉換為HTML5表單中的豐富式文字欄位。 如需詳細資訊，請 [參閱「設計HTML5表格的表格範本」](../forms/using/designing-form-template.md)。
 
-#### 協助工具增強功能(6.5.4.0) {#forms-accessibility-enhancements-6540}
+#### Accessibility enhancements (6.5.4.0) {#forms-accessibility-enhancements-6540}
 
 Experience Manager Forms包含下列協助工具增強功能：
 
@@ -208,7 +208,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 #### 為AEM Forms使用者(6.5.3.0)的「收件匣」項目設定不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
-您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
+您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
 
 #### 使用適用於AEM Forms(6.5.3.0)的Batch API產生多種互動式通訊 {#generate-multiple-ic}
 
