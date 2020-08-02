@@ -3,9 +3,9 @@ title: 登入並登出您的數位資產以進行編輯。
 description: 瞭解如何取出要編輯的資產，並在變更完成後將其存回。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,10 @@ ht-degree: 0%
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
 1. 在工具列中，按一下「 **[!UICONTROL 釋放鎖定」]**。 資產已登入，可供其他使用者編輯。
+
+## 最佳實務與限制 {#tips-limitations}
+
+* 可以刪除包含已簽 *出資產* 檔案的資料夾。 在刪除資料夾之前，請確定使用者未簽出任何數位資產。
 
 >[!MORELIKETHIS]
 >
