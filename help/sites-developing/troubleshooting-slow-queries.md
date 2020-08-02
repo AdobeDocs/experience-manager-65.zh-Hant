@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: 6d8680bcfb03197ac33bc7efb0e40796e38fef20
+workflow-type: tm+mt
+source-wordcount: '2267'
+ht-degree: 0%
 
 ---
 
@@ -41,15 +44,15 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 
 添加查詢限制和調整索引允許以優化格式儲存索引資料，從而提供快速的結果檢索，並且減少或消除了對潛在結果集的線性檢查的需要。
 
-在AEM 6.3中，預設情況下，當到達100,000的遍歷時，查詢會失敗並引發例外。 AEM 6.3之前的AEM版本中預設不存在此限制，但可透過Apache Jackrabbit查詢引擎設定OSGi組態和QueryEngineSettings JMX Bean（屬性LimitReads）來設定。
+在AEM 6.3中，預設情況下，當到達100,000的遍歷時，查詢會失敗並引發例外。 AEM 6.3之前的AEM版本中預設不存在此限制，但可透過Apache Jackrabbit查詢引擎設定OSGi設定和QueryEngineSettings JMX Bean（屬性LimitReads）來設定。
 
 ### 檢測無索引查詢 {#detecting-index-less-queries}
 
 #### 開發期間 {#during-development}
 
-解 **釋所有** ，並確保其查詢計畫不包含 **/&amp;ast;在它們中** ，遍歷解釋。 遍歷查詢計畫示例：
+解 **釋所有** ，並確保其查詢計畫不包含 **/&amp;ast; 在它們中** ，遍歷解釋。 遍歷查詢計畫示例：
 
-* **** 計畫： `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
+* **計畫：** `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
 
 #### 部署後 {#post-deployment}
 
@@ -69,7 +72,7 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 * 理想的查詢計畫涵蓋 `indexRules` 範圍適用於所有屬性限制，至少適用於查詢中緊密的屬性限制。
 * 對結果排序的查詢應解析為Lucene屬性索引，該索引具有按設定的屬性排序的索引規則 `orderable=true.`
 
-#### 例如，預設 `cqPageLucene``jcr:content/cq:tags` 的索引規則不適用於 {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}
+#### 例如，預設 `cqPageLucene` 不包含 `jcr:content/cq:tags` {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}
 
 新增cq:tags索引規則之前
 
@@ -79,16 +82,15 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 
 * **查詢建立工具查詢**
 
-   * 
-      ```
-      type=cq:Page
-       property=jcr:content/cq:tags
-       property.value=my:tag
-      ```
+   ```js
+   type=cq:Page
+   property=jcr:content/cq:tags
+   property.value=my:tag
+   ```
 
 * **查詢計畫**
 
-   * `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* where [a].[jcr:content/cq:tags] = 'my:tag' */`
+   `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* where [a].[jcr:content/cq:tags] = 'my:tag' */`
 
 此查詢解析為索 `cqPageLucene` 引，但由於沒有屬性索引規則 `jcr:content` 或 `cq:tags``cqPageLucene` ，因此在評估此限制時，會檢查索引中的每個記錄以確定匹配。 這表示如果索引包含100萬個節 `cq:Page` 點，則檢查100萬條記錄以確定結果集。
 
@@ -96,25 +98,23 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 
 * **cq：標籤索引規則**
 
-   * 
-      ```
-      /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
-       @name=jcr:content/cq:tags
-       @propertyIndex=true
-      ```
+   ```js
+   /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
+   @name=jcr:content/cq:tags
+   @propertyIndex=true
+   ```
 
 * **查詢建立工具查詢**
 
-   * 
-      ```
-      type=cq:Page
-       property=jcr:content/cq:tags
-       property.value=myTagNamespace:myTag
-      ```
+   ```js
+   type=cq:Page
+   property=jcr:content/cq:tags
+   property.value=myTagNamespace:myTag
+   ```
 
 * **查詢計畫**
 
-   * `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
+   `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
 
 在索引中加入indexRule `jcr:content/cq:tags` 可讓 `cqPageLucene` 以最 `cq:tags` 佳化的方式儲存資料。
 
@@ -146,7 +146,7 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 
 #### 部署後 {#post-deployment-2}
 
-* 監視日誌中觸發大節點遍歷或大堆記憶體消耗的查詢：&quot;
+* 監視日誌中觸發大節點遍歷或大堆記憶體消耗的查詢： &quot;
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * 優化查詢以減少遍歷的節點數
@@ -161,7 +161,7 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-在AEM 6.3中，上述2個參數預設已預先設定，並可透過OSGi queryEngineSettings加以修改。
+在AEM 6.3中，上述2個參數預設已預先設定，並可透過OSGi QueryEngineSettings加以修改。
 
 以下網址提供更多資訊： [https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 
@@ -185,43 +185,43 @@ AEM支援下列查詢語言：
 
 1. 新增nodetype限制，讓查詢解析至現有的Lucene屬性索引。
 
-   * **未最佳化查詢**
+* **未最佳化查詢**
 
-      * 
-         ```
-          property=jcr:content/contentType
-          property.value=article-page
-         ```
-   * **最佳化查詢**
+   ```js
+   property=jcr:content/contentType
+   property.value=article-page
+   ```
 
-      * 
-         ```
-          type=cq:Page
-          property=jcr:content/contentType
-          property.value=article-page
-         ```
+* **最佳化查詢**
+
+   ```js
+   type=cq:Page
+   property=jcr:content/contentType
+   property.value=article-page
+   ```
+
    缺乏nodetype限制的查詢會強制AEM假設nodetype，而 `nt:base` AEM中的每個節點都是nodetype的子類型，有效地產生nodetype限制。
 
    設定 `type=cq:Page` 會限制此查詢僅限 `cq:Page` 節點，並將查詢解析為AEM的cqPageLucene，並將結果限制為AEM中的節點子集(僅 `cq:Page` 節點)。
 
 1. 調整查詢的nodetype限制，使查詢解析為現有的Lucene屬性索引。
 
-   * **未最佳化查詢**
+* **未最佳化查詢**
 
-      * 
-         ```
-         type=nt:hierarchyNode
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
-   * **最佳化查詢**
+   ```js
+   type=nt:hierarchyNode
+   property=jcr:content/contentType
+   property.value=article-page
+   ```
 
-      * 
-         ```
-         type=cq:Page
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
+* **最佳化查詢**
+
+   ```js
+   type=cq:Page
+   property=jcr:content/contentType
+   property.value=article-page
+   ```
+
    `nt:hierarchyNode` 是的父節點類 `cq:Page`型，且假設 `jcr:content/contentType=article-page` 僅透過我們的自訂應 `cq:Page` 用程式套用至節點，此查詢只會傳回節點 `cq:Page` 的位置 `jcr:content/contentType=article-page`。 不過，這是次優的限制，因為：
 
    * 其他節點繼承 `nt:hierarchyNode` 自(如 `dam:Asset`)不必要地新增至一組潛在結果。
@@ -230,93 +230,92 @@ AEM支援下列查詢語言：
 
 1. 或者，調整屬性限制，使查詢解析為現有的屬性索引。
 
-   * **未最佳化查詢**
+* **未最佳化查詢**
 
-      * 
-         ```
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
-   * **最佳化查詢**
+   ```js
+   property=jcr:content/contentType
+   property.value=article-page
+   ```
 
-      * 
-         ```
-         property=jcr:content/sling:resourceType
-         property.value=my-site/components/structure/article-page
-         ```
+* **最佳化查詢**
+
+   ```js
+   property=jcr:content/sling:resourceType
+   property.value=my-site/components/structure/article-page
+   ```
+
    將屬性限制從 `jcr:content/contentType` （自訂值）變更為已知屬性 `sling:resourceType` ，可讓查詢解析為屬性索引，以 `slingResourceType` 依此索引所有內容 `sling:resourceType`。
 
    當查詢不由nodetype識別，而結果集中以單一屬性限制時，最好使用屬性索引（與Lucene屬性索引相反）。
 
 1. 將最緊密的路徑限制添加到查詢。 例如，偏好 `/content/my-site/us/en` 勝 `/content/my-site`過或 `/content/dam` 過去 `/`。
 
-   * **未最佳化查詢**
+* **未最佳化查詢**
 
-      * 
-         ```
-         type=cq:Page
-         path=/content
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
-   * **最佳化查詢**
+   ```js
+   type=cq:Page
+   path=/content
+   property=jcr:content/contentType
+   property.value=article-page
+   ```
 
-      * 
-         ```
-         type=cq:Page
-         path=/content/my-site/us/en
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
+* **最佳化查詢**
+
+   ```js
+   type=cq:Page
+   path=/content/my-site/us/en
+   property=jcr:content/contentType
+   property.value=article-page
+   ```
+
    將路徑限制範圍 `path=/content`從 `path=/content/my-site/us/en` 到允許索引減少需要檢查的索引條目數。 當查詢可以很好地限制路徑時，除了或 `/content` 以外 `/content/dam`，請確保索引已包含 `evaluatePathRestrictions=true`。
 
    請注意，使 `evaluatePathRestrictions` 用會增加索引大小。
 
-1. 盡可能避免查詢函式／操作查詢：隨 `LIKE` 著成 `fn:XXXX` 本的增加，成本會隨著限制結果的增加而增加。
+1. 盡可能避免查詢函式／操作查詢： `LIKE` 隨著 `fn:XXXX` 成本的增長，其成本會隨著限制結果的增加而增加。
 
-   * **未最佳化查詢**
+* **未最佳化查詢**
 
-      * 
-         ```
-         type=cq:Page
-         property=jcr:content/contentType
-         property.operation=like
-         property.value=%article%
-         ```
-   * **最佳化查詢**
+   ```js
+   type=cq:Page
+   property=jcr:content/contentType
+   property.operation=like
+   property.value=%article%
+   ```
 
-      * 
-         ```
-         type=cq:Page
-         fulltext=article
-         fulltext.relPath=jcr:content/contentType
-         ```
+* **最佳化查詢**
+
+   ```js
+   type=cq:Page
+   fulltext=article
+   fulltext.relPath=jcr:content/contentType
+   ```
+
    LIKE條件評估速度緩慢，因為如果文本以通配符(&quot;%。..&quot;)開頭，則不能使用索引。 jcr:contains條件允許使用全文索引，因此是首選條件。 這要求已解析的Lucene屬性索引具有的indexRule `jcr:content/contentType` 與 `analayzed=true`。
 
    使用查詢函式( `fn:lowercase(..)` 例如)可能較難進行最佳化，因為沒有更快的等效功能（在更複雜且更顯眼的索引分析器組態外）。 最好找出其他範圍界定限制，以改善整體查詢效能，要求函式在盡可能小的潛在結果集上運作。
 
-1. ***此調整是Query builder專用，不適用於JCR-SQL2或XPath。***
+1. ***此調整是Query Builder專用，不適用於JCR-SQL2或XPath。***
 
-   當完 [](/help/sites-developing/querybuilder-api.md#using-p-guesstotal-to-return-the-results) 整結果集為**不是立即需要**時，請使用Query Builder的guessTotal。
+   當不 [立即需要完整結果集時，請使](/help/sites-developing/querybuilder-api.md#using-p-guesstotal-to-return-the-results) 用 **** Query Builder的guessTotal。
 
    * **未最佳化查詢**
 
-      * 
-         ```
-         type=cq:Page
-         path=/content
-         ```
+      ```js
+      type=cq:Page
+      path=/content
+      ```
+
    * **最佳化查詢**
 
-      * 
-         ```
-         type=cq:Page
-         path=/content
-         p.guessTotal=100
-         ```
+      ```js
+      type=cq:Page
+      path=/content
+      p.guessTotal=100
+      ```
    對於查詢執行速度快但結果數量大的情況，p. `guessTotal` 是Query Builder查詢的關鍵優化。
 
-   `p.guessTotal=100` 告訴Query builder僅收集前100個結果，並設定布林值標幟，指出是否至少存在一個結果（但不包含多少個結果），因為計算此數字會導致速度變慢。 此最佳化優於分頁或無限載入使用案例，其中只會逐步顯示結果子集。
+   `p.guessTotal=100` 告訴Query Builder僅收集前100個結果，並設定布林值標幟，指出是否至少存在一個結果（但不包含多少個結果），因為計算此數字會導致速度變慢。 此最佳化優於分頁或無限載入使用案例，其中只會逐步顯示結果子集。
 
 ## 現有索引調整 {#existing-index-tuning}
 
@@ -326,22 +325,20 @@ AEM支援下列查詢語言：
 
    * **查詢建立工具查詢**
 
-      * 
-         ```
-         query type=cq:Page
-         path=/content/my-site/us/en
-         property=jcr:content/contentType
-         property.value=article-page
-         orderby=@jcr:content/publishDate
-         orderby.sort=desc
-         ```
+      ```js
+      query type=cq:Page
+      path=/content/my-site/us/en
+      property=jcr:content/contentType
+      property.value=article-page
+      orderby=@jcr:content/publishDate
+      orderby.sort=desc
+      ```
+
    * **XPath從Query Builder查詢產生**
 
-      * 
-         ```
-         /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
-         ```
-
+      ```js
+      /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
+      ```
 
 1. 將XPath（或JCR-SQL2）提供給 [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) ，以產生最佳化的Lucene屬性索引定義。
 
@@ -377,19 +374,17 @@ AEM支援下列查詢語言：
 
    * **查詢建立工具查詢**
 
-      * 
-         ```
-         type=myApp:Author
-         property=firstName
-         property.value=ira
-         ```
+      ```js
+      type=myApp:Author
+      property=firstName
+      property.value=ira
+      ```
+
    * **XPath從Query Builder查詢產生**
 
-      * 
-         ```
-         //element(*, myApp:Page)[@firstName = 'ira']
-         ```
-
+      ```js
+      //element(*, myApp:Page)[@firstName = 'ira']
+      ```
 
 1. 將XPath（或JCR-SQL2）提供給 [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) ，以產生最佳化的Lucene屬性索引定義。
 
@@ -446,7 +441,7 @@ AEM支援下列查詢語言：
 
 * **[索引管理員](/help/sites-administering/operations-dashboard.md#the-index-manager)**
 
-   * 顯示AEM例項索引的AEM Operations webUI;有助於瞭解哪些索引已存在，可以定位或擴展。
+   * 顯示AEM例項索引的AEM Operations WebUI; 有助於瞭解哪些索引已存在，可以定位或擴展。
 
 * **[記錄](/help/sites-administering/operations-dashboard.md#log-messages)**
 
@@ -478,4 +473,3 @@ AEM支援下列查詢語言：
 
    * Google Chrome網頁瀏覽器擴充功能，可在瀏覽器的開發工具主控台中公開每個請求記錄檔資料，包括已執行的查詢及其查詢計畫。
    * 需要 [在AEM上安裝並啟用Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) 。
-
