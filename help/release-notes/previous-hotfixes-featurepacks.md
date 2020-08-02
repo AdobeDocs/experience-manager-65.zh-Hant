@@ -3,7 +3,7 @@ title: Adobe Experience Manager 6.5舊版Service Pack發行說明
 description: Adobe Experience Manager 6.5 Service Pack 3及更舊版本的發行說明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '8108'
 ht-degree: 0%
@@ -291,7 +291,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 **修正**
 
-* 某些PDF檔案的中繼資料不會在標題修改時更新並儲存至PDF(NPR-31629)。
+* 某些PDF檔案的中繼資料在標題修改時不會更新並儲存至PDF(NPR-31629)。
 
 * 資產共用不適用於檔案名稱中加上(`+`)字元的資產(NPR-31547)。
 
@@ -399,7 +399,7 @@ Remove one mention of this fix.
 * 在非編輯器模式(在「作者」中(不含首碼和 `editor.html``wcmmode=disabled`，或在「發佈者」中)中開啟包含某些「體驗片段」的頁面時，請求會以HTTP狀態錯誤碼 `500` (NPR-30743)結束。
 * 使用者無法變更密碼並存取其描述檔頁面(NPR-31161)。
 
-### 搜尋與使用者介面 {#search-ui-interface}
+### 搜尋與使用者介面 {#ui-interface-and-search}
 
 * 從卡片檢視切換至搜尋結果頁面上的清單檢視時，在可捲動頁面之前會有延遲(NPR-31286)。
 
@@ -524,7 +524,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來所發佈的重要客戶修 **正和增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來的重要客戶修 **正與增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
 
 此Service Pack版本的一些主要亮點是：
 
