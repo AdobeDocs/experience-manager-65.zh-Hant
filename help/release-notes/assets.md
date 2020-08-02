@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager Assets發行說明
-description: Adobe Experience Manager 6.5 Assets的新功能和增強功能。
+title: 發行說明 [!DNL Adobe Experience Manager Assets] 6.5。
+description: ' [!DNL Adobe Experience Manager] 6.5的新功能和增強功能 [!DNL Assets]。'
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '901'
 ht-degree: 3%
 
 ---
 
 
-# Adobe Experience Manager Assets發行說明 {#aem-assets-release-notes}
+# [!DNL Adobe Experience Manager Assets] 發行說明 {#aem-assets-release-notes}
 
-以下是Adobe Experience Manager 6.5 Assets版本的主要功能與重點。
+以下是6.5版的主要功 [!DNL Adobe Experience Manager] 能和亮 [!DNL Assets] 點。
 
 ## 與創意工 [!DNL Adobe Creative Cloud] 作流程整合 {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
@@ -78,11 +78,11 @@ ht-degree: 3%
 
 您現在可以使用視訊本身的影格或儲存在DAM中的其他內容，自訂視訊資產的縮圖。 如需其他指示，請參 [閱關於視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
-### Accessibility Enhancements {#accessibility-enhancements}
+### 協助工具增強功能 {#accessibility-enhancements}
 
 [!DNL Dynamic Media] 檢視器現在支援增強的協助工具功能，例如Aria支援、螢幕閱讀程式和Alt-text。 如需詳細資訊，請參 [閱動態媒體檢視器發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
 
-## 搜尋體驗增強功能 {#search-experience-enhancement}
+## 搜尋體驗增強功能 {#experience-enhancement-for-searching}
 
 [!DNL Experience Manager] 6.5之後，行銷人員可以更快速地從搜尋結果頁面發現所需資產。 即使在套用搜尋篩選器之前，搜尋Facet也會以資產數目進行更新。 查看篩選的預期計數有助於使用者有效率地瀏覽搜尋結果。 如需詳細資訊，請參 [閱Experience Manager中的搜尋資產](../assets/search-assets.md)。
 
