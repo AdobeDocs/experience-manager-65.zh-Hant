@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+workflow-type: tm+mt
+source-wordcount: '1468'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +37,7 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 * **從已發佈的社群網站** 、
 * **為獎章** ，打分，
 * **檔案共用**,
-* **通知** 和活 **動串流**,
+* **通知** 和 **活動串流**,
 * 允許 **在「用戶生成** 」內容中標籤(@tornite)其他已註冊成員，以引起他們的注意。
 * 支援 **啟用元件** （例如目錄和課程播放、工作、檔案庫）上的鍵盤導覽。
 
@@ -59,22 +62,23 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 * 提供基本功能：
 
-   * 自適應設計：使用 [Twitter引導主題](https://getbootstrap.com)
+   * 自適應設計： 使用 [Twitter引導主題](https://getbootstrap.com)
 
-   * 登入：自助註冊、社 [交登入](/help/communities/social-login.md)、使用者個人檔案
+   * 登入： 自助註冊、社 [交登入](/help/communities/social-login.md)、使用者個人檔案
 
-      * 通知：會員會看到與其相關的事件，而使用者產生的內容會在其中 [@intigured](/help/communities/overview.md#mentionssupport)。
+      * 通知：
+會員會看到與其相關的事件，而使用者產生的內容會在其中 [@intigured](/help/communities/overview.md#mentionssupport)。
 
-      * 訊息：成員可以在社區站點內發送或接收消息。
-      * 搜尋：能夠在社群網站中搜尋。
-      * 語言切換：能夠為多語言網站選 [擇語言](/help/sites-administering/translation.md)。
+      * 訊息： 成員可以在社區站點內發送或接收消息。
+      * 搜尋： 能夠在社群網站中搜尋。
+      * 語言切換： 能夠為多語言網站選 [擇語言](/help/sites-administering/translation.md)。
 
-      * 管理：存取權，讓授權成員協調和管理社群網站中的使用者。
+      * 管理： 存取權，讓授權成員協調和管理社群網站中的使用者。
 
 * 免除許多頁面層級的製作步驟：
 
-   * 品牌：可選上傳橫幅影像，以便顯示在社群網站的所有頁面上
-      * 導覽功能表：為社群網站範本所包含的功能提供導覽連結。
+   * 品牌： 可選上傳橫幅影像，以便顯示在社群網站的所有頁面上
+   * 導覽功能表： 為社群網站範本所包含的功能提供導覽連結。
 
 若要體驗快速建立新社群網站的簡易性，請造訪「AEM社 [群快速入門」](/help/communities/getting-started.md)。
 
