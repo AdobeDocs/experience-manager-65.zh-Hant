@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -30,9 +30,9 @@ comment.hbs指令碼負責建立每個註解的整體HTML。
 1. 複製 `comment.hbs`自 `libs`至 `apps`
 
    1. 選取 `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
-   1. 選擇復 **制**
+   1. 選擇復 **[!UICONTROL 制]**
    1. 選取 `/apps/social/commons/components/hbs/comments/comment`
-   1. 選擇 **貼上**
+   1. 選擇 **[!UICONTROL 貼上]**
 
 1. 開啟覆蓋的 `comment.hbs`
 
