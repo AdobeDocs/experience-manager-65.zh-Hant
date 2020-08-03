@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+workflow-type: tm+mt
+source-wordcount: '1093'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +70,7 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 
 當MySQL工作台首次啟動時（除非已用於其他用途），它將不顯示任何連接：
 
-![chlimage_1-327](assets/chlimage_1-327.png)
+![mysqlconnection](assets/mysqlconnection.png)
 
 ### 新連線設定 {#new-connection-settings}
 
@@ -87,17 +90,17 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 
 #### 成功連接 {#successful-connection}
 
-![chlimage_1-328](assets/chlimage_1-328.png)
+![mysqlconnection1](assets/mysqlconnection1.png)
 
 #### 新啟用連線 {#new-enablement-connection}
 
-![chlimage_1-329](assets/chlimage_1-329.png)
+![mysqlconnection2](assets/mysqlconnection2.png)
 
 ## 資料庫設定 {#database-setup}
 
 開啟新的啟用連線時，請注意有測試架構和預設使用者帳戶。
 
-![chlimage_1-330](assets/chlimage_1-330.png)
+![資料庫設定](assets/database-setup.png)
 
 ### 獲取SQL指令碼 {#obtain-sql-scripts}
 
@@ -109,12 +112,12 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必 [須安裝SCOR
 1. 下載 `database_scormengine.sql`
 1. 下載 `database_scorm_integration.sql`
 
-![chlimage_1-331](assets/chlimage_1-331.png)
+![sqlscripts](assets/sqlscripts.png)
 
-下載架構的方法之一是
+下載架構的方法之一是：
 
-* 選擇 `jcr:content`sql檔案的節點。
-* 請注意，屬性的 `jcr:data`值是檢視連結。
+* 為sql文 `jcr:content` 件選擇節點。
+* 請注意，屬性的 `jcr:data` 值是檢視連結。
 * 選取檢視連結，將資料儲存至本機檔案。
 
 ### 建立SCORM資料庫 {#create-scorm-database}
@@ -124,7 +127,9 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必 [須安裝SCOR
 * 名稱: `ScormEngineDB`
 * 從指令碼建立：
    * 結構描述: `database_scormengine.sql`
-   * 資料：請依 `database_scorm_integration.sql`照下列步驟([開啟](#step-open-sql-file)，執 [行](#step-execute-sql-script))安裝每 [個SQL指令碼](#obtain-sql-scripts) 。 [必要時](#refresh) ，請重新整理以查看指令碼執行的結果。
+   * data: `database_scorm_integration.sql`
+Follow the steps below (
+[開啟](#step-open-sql-file)，執 [行](#step-execute-sql-script))以安裝每 [個SQL指令碼](#obtain-sql-scripts) 。 [必要時](#refresh) ，請重新整理以查看指令碼執行的結果。
 
 請務必先安裝架構，然後再安裝資料。
 
@@ -134,11 +139,12 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必 [須安裝SCOR
 >
 >* [JDBC配置](#configure-jdbc-connections)
 >* [SCORM設定](#configure-scorm)
+
 >
 
 
 
-#### 步驟1:開啟SQL檔案 {#step-open-sql-file}
+#### 步驟1: 開啟SQL檔案 {#step-open-sql-file}
 
 在MySQL工作台中
 
@@ -148,27 +154,27 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必 [須安裝SCOR
    1. `database_scormengine.sql`
    1. `database_scorm_integration.sql`
 
-![chlimage_1-332](assets/chlimage_1-332.png)
+![卷資料庫](assets/scrom-database.png)
 
-#### 步驟2:執行SQL指令碼 {#step-execute-sql-script}
+#### 步驟2: 執行SQL指令碼 {#step-execute-sql-script}
 
 在步驟1中開啟之檔案的「工作台」視窗中，選取要 `lightening (flash) icon` 執行指令碼的檔案。
 
 請注意，執行腳 `database_scormengine.sql` 本以建立SCORM資料庫可能需要一分鐘的時間。
 
-![chlimage_1-333](assets/chlimage_1-333.png)
+![scrom-database1](assets/scrom-database1.png)
 
 #### 重新整理 {#refresh}
 
 執行指令碼後，必須刷新該 `SCHEMAS` 部分才 `Navigator` 能查看新資料庫。 使用「方案」右側的刷新表徵圖：
 
-![chlimage_1-334](assets/chlimage_1-334.png)
+![scrom-database2](assets/scrom-database2.png)
 
-#### 結果：scormenginedb {#result-scormenginedb}
+#### 結果： scormenginedb {#result-scormenginedb}
 
 在安裝和刷新SCHEMAS後，將 `scormenginedb` 顯示。
 
-![chlimage_1-335](assets/chlimage_1-335.png)
+![scrom-database3](assets/scrom-database3.png)
 
 ## 配置JDBC連接 {#configure-jdbc-connections}
 
@@ -185,14 +191,14 @@ Day Commons JDBC連接池的OSGi **配置** ，配置MySQL JDBC驅動程式。
 * 找到 `Day Commons JDBC Connections Pool`
 * 選擇 `+` 表徵圖以建立新配置
 
-![chlimage_1-336](assets/chlimage_1-336.png)
+   ![jdbcconnection1](assets/jdbcconnection1.png)
 
 * 輸入下列值：
    * **[!UICONTROL JDBC驅動程式類]**: `com.mysql.jdbc.Driver`
-   * **DBC連接URIJ **:如`jdbc:mysql://localhost:3306/aem63reporting`果MySQL伺服器與&#39;this&#39; AEM伺服器不同，請指定伺服器來取代localhost。
-   * **[!UICONTROL 使用者名稱]**:為MySQL伺服器（如果不是&#39;root&#39;）輸入已配置的Username(root)或。
-   * **[!UICONTROL 密碼]**:如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令。
-   * **[!UICONTROL 資料來源名稱]**:為 [MySQL連接輸入的名稱](#new-connection-settings)，例如「啟用」。
+   * **DBC連接URIJ **:`jdbc:mysql://localhost:3306/aem63reporting`如果MySQL伺服器與&#39;this&#39; AEM伺服器不同，請指定伺服器取代localhost。
+   * **[!UICONTROL 使用者名稱]**: 為MySQL伺服器（如果不是&#39;root&#39;）輸入已配置的Username(root)或。
+   * **[!UICONTROL 密碼]**: 如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令。
+   * **[!UICONTROL 資料來源名稱]**: 為 [MySQL連接輸入的名稱](#new-connection-settings)，例如「啟用」。
 * 選擇 **[!UICONTROL 保存]**。
 
 ## 設定Scorm {#configure-scorm}
@@ -213,15 +219,17 @@ AEM Communities ScormEngine服務的OSGi設定 **** ，會針對啟用社群使�
    * 例如， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 * 找到 `AEM Communities ScormEngine Service`
 * 選取編輯圖示
-   ![chlimage_1-337](assets/chlimage_1-337.png)
-* 驗證以下參數值是否與 [JDBC連接配置一致](#configurejdbcconnectionspool) :
-   * **[!UICONTROL JDBC連接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` ScormEngineDB ** 是SQL指令碼中的預設資料庫名
-   * **[!UICONTROL 使用者名稱]**:為MySQL伺服器輸入已配置的Root用戶名（如果不是「root」）
-   * **[!UICONTROL 密碼]**:如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令
-* 關於下列參數：
-   * **[!UICONTROL Scorm使用者密碼]**:不要編輯
 
-      僅供內部使用：AEM Communities使用的特殊服務使用者可與Scorm引擎通訊。
+   ![chlimage_1-337](assets/chlimage_1-337.png)
+
+* 驗證以下參數值是否與 [JDBC連接配置一致](#configurejdbcconnectionspool) :
+   * **[!UICONTROL JDBC連接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB* 是SQL指令碼中的預設資料庫名
+   * **[!UICONTROL 使用者名稱]**: 為MySQL伺服器輸入已配置的Root用戶名（如果不是「root」）
+   * **[!UICONTROL 密碼]**: 如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令
+* 關於下列參數：
+   * **[!UICONTROL Scorm使用者密碼]**: 不要編輯
+
+      僅供內部使用： AEM Communities使用的特殊服務使用者可與Scorm引擎通訊。
 * 選擇保 **[!UICONTROL 存]**
 
 ### Adobe Granite CSRF濾鏡 {#adobe-granite-csrf-filter}
@@ -234,7 +242,7 @@ AEM Communities ScormEngine服務的OSGi設定 **** ，會針對啟用社群使�
 * 找到 `Adobe Granite CSRF Filter`。
 * 選擇編輯表徵圖。
 
-   ![chlimage_1-337](assets/chlimage_1-338.png)
+   ![jdbcconnection2](assets/jdbcconnection2.png)
 
 * 選擇要 `[+]` 添加安全用戶代理的表徵圖。
 * 輸入 `Mozilla/*`。
