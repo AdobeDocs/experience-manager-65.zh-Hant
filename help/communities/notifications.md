@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 1%
 
 ---
 
@@ -68,7 +71,7 @@ AEM Communities提供通知區段，可顯示已登入社群成員感興趣的�
 
 ## 來自下列的通知 {#notifications-from-following}
 
-![chlimage_1-243](assets/chlimage_1-243.png)
+![通知](assets/notifications.png)
 
 「跟 **[!UICONTROL 蹤]** 」按鈕提供了一種方法，可以跟蹤條目作為活動、訂閱和／或通知。 每次選取「 **[!UICONTROL 跟隨]** 」按鈕時，都可以開啟或關閉選取範圍。 只有 `Email Subscriptions` 在配置時，才會顯示選擇。
 
@@ -91,17 +94,17 @@ AEM Communities提供通知區段，可顯示已登入社群成員感興趣的�
 
 Web頻道一律啟用。
 
-![chlimage_1-244](assets/chlimage_1-244.png)
+![notifications14](assets/notifications1.png)
 
 電子郵件渠道依賴於電子郵件的 [正確配置](/help/communities/email.md)，它提供與Web渠道相同的設定。
 
 電子郵件頻道預設為關閉。
 
-![chlimage_1-245](assets/chlimage_1-245.png)
+![notifications2](assets/notifications2.png)
 
 成員可以開啟它，但仍取決於正在配置的電子郵件。
 
-![chlimage_1-246](assets/chlimage_1-246.png)
+![notifications3](assets/notifications3.png)
 
 ## 檢視通知 {#viewing-notifications}
 
@@ -111,13 +114,13 @@ Web頻道一律啟用。
 
 在造訪發佈網站時，選取連結 `Notifications` 會顯示成員的所有通知。
 
-![chlimage_1-247](assets/chlimage_1-247.png)
+![notifications4](assets/notifications4.png)
 
 ### 電子郵件通知 {#email-notifications}
 
 啟用電子郵件頻道後，會員會收到電子郵件，其中包含網路內容的連結。
 
-![chlimage_1-248](assets/chlimage_1-248.png)
+![notifications5](assets/notifications5.png)
 
 ## 自訂電子郵件通知 {#customize-email-notifications}
 
@@ -125,7 +128,7 @@ Web頻道一律啟用。
 
 例如，若要修改提及電子郵件通知（針對社群元件），請在您啟用 **@mentions支援的元件範本中，新增動詞提及的** if **條件****** 。
 
-若要修改部落格注釋中@提及的電子郵件通知範本，請將範本置於： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
+若要修改部落格注釋中@提及的電子郵件通知範本，請將範本置於： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/tw**
 
 ```java
 {{#equals this.verb "mention"}}\
