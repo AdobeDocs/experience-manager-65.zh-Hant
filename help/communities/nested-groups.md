@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '590'
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 在AEM Author例項上，從全域導覽：
 
-* 選擇**[!UICONTROL Communities] > **[!UICONTROL 網站]**。
+* 選擇 **[!UICONTROL Communities]** > **[!UICONTROL Sites]**。
 * 選擇 **[!UICONTROL Engage資料夾]** ，將其開啟。
 * 選取「快速入門教 **[!UICONTROL 學課程英文版]** 」網站的資訊卡。
 
@@ -34,11 +34,11 @@ ht-degree: 0%
 
 其結果是可觸及「群 [組」主控台](/help/communities/groups.md):
 
-![chlimage_1-91](assets/chlimage_1-91.png)
+![create-group](assets/create-group.png)
 
 群組函式將顯示為建立群組例項的資料夾。 選擇「群組」檔案夾以開啟它。 在發佈時建立的群組可見。
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![create-new-group](assets/create-new-group.png)
 
 ## Create Main Arts Group {#create-main-arts-group}
 
@@ -94,11 +94,11 @@ ht-degree: 0%
 
 在建立群組內巢狀的群 `arts` 組之前，將滑鼠指標暫留在資 `arts` 訊卡上，並選取發佈圖示以進行發佈。
 
-![對開元件](assets/liking-component.png)
+![publish-site](assets/publish-site.png)
 
 等候確認群組已發佈。
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![群組發佈](assets/group-published.png)
 
 群 `arts` 組也應包含資料夾，但 `groups` 是資料夾是空的，而且可在其中建立新群組。 導覽至藝術群組資料夾並建立3個巢狀群組，每個群組具有不同的成員資格設定：
 
@@ -133,11 +133,11 @@ ht-degree: 0%
 * 選 **[!UICONTROL 擇藝術卡]**
 * 選擇 **[!UICONTROL 群組]** 資料夾
 
-![configure-like](assets/configure-liking.png)
+![create-new-group2](assets/create-new-group2.png)
 
 ## 發佈群組 {#publishing-groups}
 
-![chlimage_1-96](assets/chlimage_1-96.png)
+![publish-site](assets/publish-site.png)
 
 發佈主社群網站後：
 
@@ -149,7 +149,7 @@ ht-degree: 0%
 
    * 所有群組都必須以自上而下的方式發佈。
 
-![chlimage_1-97](assets/chlimage_1-97.png)
+![群組發佈](assets/group-published.png)
 
 ## 發佈體驗 {#experience-on-publish}
 
