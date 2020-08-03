@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: b3cb8f12-197e-4f5e-bd7d-70b55e76b0ca
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 1%
 
 ---
 
@@ -27,6 +30,6 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * [http://localhost:4502/editor.html/content/community-components/en/comments.html](http://localhost:4502/editor.html/content/community-components/en/comments.html)
 
-![chlimage_1-125](assets/chlimage_1-125.png)
+![個評論](assets/comments.png)
 
 **[‹覆蓋注釋元件](overlay-comments.md)[建立節點‹](overlay-create-nodes.md)**
