@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 6%
 
 ---
 
@@ -56,7 +59,7 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
       * 按一下「 **[!UICONTROL Next]** （下一步）」直到 **[!UICONTROL 「OK（確定）」]**
 1. 選擇節 `comments` 點
 
-   * **[!UICONTROL 「建立>建立元件……」]**
+   * **[!UICONTROL 建立]** >創 **[!UICONTROL 建元件……]**
 
       * 輸入標籤： `comment`
       * Enter Title: `Comment`
@@ -79,6 +82,7 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
+
 >
 
 
@@ -95,5 +99,5 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 1. 選擇綠色 `[+] Add`
    * 選擇「 **[!UICONTROL 全部保存」]**
 
-![chlimage_1-4](assets/chlimage_1-4.png)
+![create-nodes](assets/create-nodes.png)
 
