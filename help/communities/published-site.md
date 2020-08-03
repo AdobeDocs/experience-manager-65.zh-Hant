@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
+source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
 workflow-type: tm+mt
 source-wordcount: '1202'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 `https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}`
 
-![chlimage_1-31](assets/chlimage_1-31.png)
+![authorplibed](assets/authorpublished.png)
 
 ## 匿名網站訪客 {#anonymous-site-visitor}
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 在右上角，選取並使 `Log in`用使用者名稱(aaron.mcdonald@mailinator.com)和密碼（密碼）簽名。 請注意，使用Twitter或Facebook認證登入的能力。
 
-![chlimage_1-32](assets/chlimage_1-32.png)
+![登錄](assets/login.png)
 
 以註冊社群成員身分登入後，請注意下列功能表項目，以點選並探索您的社群網站：
 
@@ -92,14 +92,14 @@ ht-degree: 0%
    1. 檢視您收到的直接訊息（收件匣）、傳送的訊息（已傳送的項目）和刪除的訊息（垃圾桶）。
    1. 編寫新的直接訊息，以傳送給個人和群組。
 
-* [通知](/help/communities/notifications.md) (Notifications)選項會引導您前往通知區段，您可在此處檢視感興趣的事件並編輯通知設定。
+* [通知](/help/communities/notifications.md) (Notifications)選項會引導您前往通知區段，您可在此檢視您感興趣的事件並編輯通知設定。
 * [管理](/help/communities/published-site.md#moderationlink) （如果您有協調權限）可將您導向「AEM Communities協調頁面」。
 
-![chlimage_1-33](assets/chlimage_1-33.png)
+![adminscreen](assets/adminscreen.png)
 
 請注意，「日曆」頁面是首頁，因為選擇的「參考網站範本」會先包含「日曆」功能，接著是「活動串流」功能、「論壇」功能等。 此結構可從「站點模板」 [控制台或在作者環境中修改站點屬性時顯示](/help/communities/sites.md#edit-site-template) :
 
-![chlimage_1-34](assets/chlimage_1-34.png)
+![sitetemplate](assets/sitetemplate.png)
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 網站訪客可以檢視貼文，並以多種方式加以排序。
 
-![chlimage_1-35](assets/chlimage_1-35.png)
+![forumlink](assets/forumlink.png)
 
 ### 群組連結 {#groups-link}
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 群組也可以在作者環境中建立，並在作者環境的社群網站(社群群組主控[台](/help/communities/groups.md))中管理。 本教學課程 [提供在作者上建立群組](/help/communities/nested-groups.md) 的後續經驗。
 
-![classic-ui](assets/classic-ui.png)
+![粗鏈](assets/grouplink.png)
 
 建立參考群組：
 
@@ -148,11 +148,11 @@ ht-degree: 0%
 
 1. 選擇 **建立群組**
 
-![classic-ui-website](assets/classic-ui-website.png)
+   ![creategroup](assets/creategroup.png)
 
 建立新群組後，請選 **取新的「運動」群組** ，以便在其中建立兩個群組（巢狀）。 由於網站結構無法以群組功能開始，因此在開啟「運動」群組後，必須選取「群組」連結：
 
-![classic-ui-create-page](assets/classic-ui-create-page.png)
+![grouplink1](assets/grouplink1.png)
 
 第二組連結(從開 `Blog`始)屬於目前選取的群組，即群 `Sports` 組。 選取「運動」(Sports) `Groups` 連結後，就可在「運動」(Sports)群組內巢狀內嵌兩個群組。
 
@@ -180,7 +180,7 @@ ht-degree: 0%
 
 群組的連結會顯示在主網站的連結下方，並產生下列顯示：
 
-![classic-ui-website-page](assets/classic-ui-website-page.png)
+![grouplink2](assets/grouplink2.png)
 
 在作者上——具有管理權限，導覽至 [Communities Groups主控台](/help/communities/members.md) ，並將Weston McCall新增至 `Community Engage Gymnastics <uid> Members` 群組。
 
@@ -195,7 +195,7 @@ ht-degree: 0%
 
 以Weston McCall(weston.mccall@dodgit.com /密碼)的身分登入，並導覽至相同的位置。 請注意，Weston可以使用 `Join` 開啟的 `Baseball` 群組 `enter or Leave` 和私人 `Gymnastics` 群組。
 
-![classic-ui-repository-view](assets/classic-ui-repository-view.png)
+![grouplink3](assets/grouplink3.png)
 
 ### 網頁連結 {#web-page-link}
 
@@ -203,7 +203,7 @@ ht-degree: 0%
 
 例如，前往作 **者例項** ，在 `engage` Communities Sites主控台中開啟資料夾 [，選取「開啟網站](/help/communities/sites-console.md)**** 」圖示以進入作者編輯模式。 然後選取預覽模式以選取連 `Web Page` 結，然後選取編輯模式以新增標題和文字元件。 最後，只重新發佈頁面或整個網站。
 
-![classic-ui-repository-path](assets/classic-ui-repository-path.png)
+![webpagelink](assets/webpagelink.png)
 
 ### 協調連結 {#moderationlink}
 
@@ -211,7 +211,7 @@ ht-degree: 0%
 
 使用瀏覽器的「上一步」按鈕可返回已發佈的網站。 在發佈環境中，大多數控制台都無法從全局導航訪問。 [](/help/communities/moderate-ugc.md)
 
-![chlimage_1-42](assets/chlimage_1-42.png)
+![協調連結](assets/moderationlink.png)
 
 ## 自助註冊 {#self-registration}
 
@@ -220,7 +220,9 @@ ht-degree: 0%
 * 選取 `Log In`
 * 選取 `Sign up for a new account`
 
-![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
+![註冊](assets/registration.png)
+
+![註冊](assets/signup.png)
 
 依預設，電子郵件地址為登入ID。 若未勾選，訪客可輸入其專屬的登入ID（使用者名稱）。 使用者名稱在發佈環境中必須是唯一的。
 
@@ -228,9 +230,9 @@ ht-degree: 0%
 
 登入後，第一頁即為其頁面， `Profile` 可供個人化。
 
-![chlimage_1-45](assets/chlimage_1-45.png)
+![側面像](assets/profile.png)
 
 如果成員忘記其登錄ID，則可以使用其電子郵件地址進行恢復。
 
-![chlimage_1-46](assets/chlimage_1-46.png)
+![forgotusername](assets/forgotusername.png)
 
