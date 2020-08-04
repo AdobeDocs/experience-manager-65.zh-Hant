@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: c71c24a291b728ab429b18a405123c96123cf617
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 11%
@@ -143,11 +143,7 @@ ht-degree: 11%
    >[!NOTE]
    >
    >1. 當內容頁面上已參考片段時，會顯示訊息。
-      >
-      >
-      >
-
-   2. 使用「切換側面板」圖示可隱藏／顯 **示側面板** 。
+   >2. 使用「切換側面板」圖示可隱藏／顯 **示側面板** 。
 
 
 1. 使用側面板中的圖示，在三種模式中導覽：
