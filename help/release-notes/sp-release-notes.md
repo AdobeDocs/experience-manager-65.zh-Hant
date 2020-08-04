@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5的發行說明。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 2f5072a73b11853bbfd63c4b4ce9ffcf186adad1
 workflow-type: tm+mt
-source-wordcount: '4496'
+source-wordcount: '4522'
 ht-degree: 0%
 
 ---
@@ -78,6 +78,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 從Experience Manager 6.2升級至Experience Manager 6.5時，靜態範本的Parsys元件無法正確顯示。 Parsys元件的高度設定為0，其內部元件不可見(NPR-33663)。
 * 當使用者複製並貼上相同頁面上的「版面容器」時，「版面容器」中的元件不會顯示(NPR-33648)。
 * Dispatcher health check在日 `Invalid cookie header` 志檔案中顯示警告消息(NPR-33629)。
+* PreferencesServlet中反映的XSS(NPR-33438)。
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -213,7 +214,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 * 在具有智慧型裁切設定檔的檔案夾下開啟PDF轉譯邊欄的記錄檔中，會發現異常(CQ-4294201)。
 
-* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用  「動態媒體同步模式」，則不會發佈影像預設集(CQ-4294200)。
+* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用 [!UICONTROL 「動態媒體同步模式」] (CQ-4294200)，則不會發佈影像預設集。
 
 * 大量上傳時的資產處理會停滯，而工作流程例項則會顯示DAM更新資產的停滯例項(CQ-4293916)。
 
@@ -238,6 +239,8 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 視訊360檢視器的版面配置如果使 `setVideo` 用則會中斷，而視訊會在使用時 `video= modifier` 向下移動(CQ-4263201)。
 
 * 安裝Experience Manager SDL軟體包時顯示錯誤資訊(NPR-33175)。
+
+* Experience Manager中的SSRF弱點(NPR-33435)。
 
 ### 平台 {#platform-6550}
 
@@ -264,6 +267,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 本機Experience Manager管理員群組中的授權IMS使用者無法建立或修改IMS組態(NPR-33045)。
 * Adobe Launch設定頁面不會顯示所有記錄(NPR-33011)。
 * 內容作者群組中的使用者無法編輯Adobe Target元件的屬性，因為發生JavaScript錯誤(NPR-32996)。
+* JSON的跨網站指令碼(NPR-32744)。
 
 ### 翻譯專案 {#translation-6550}
 
@@ -295,6 +299,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 使用者無法傳送電子郵件給社群中的其他使用者(NPR-32598)。
 * 提交的部落格在使用者重新整理頁面之前不會顯示(NPR-32391)。
 * 建立使用者產生的內容(UGC)的通知和訂閱版本時，會儲存來源頁面的錯誤ID(CQ-4279355、CQ-4289703)。
+* 跨網站指令碼問題(NPR-33203)。
 
 ### 工作流程 {#workflow-6550}
 
@@ -307,7 +312,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 >
 >Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
 
-* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序會混亂。
+* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序被混亂。
 * 最適化表單： 當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
 * 最適化表單： 用戶無法保存具有多個附件的自適應表單(NPR-32997)。
 * 最適化表單： 以最適化表單變更面板版面會導致錯誤(CQ-4293880)。
@@ -321,6 +326,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 後端整合： 表單資料模型請求會因重新整理Token因非作用中狀態不正確而失敗(NPR-33169)。
 * 設計人員： 螢幕閱讀程式會根據預設的地理順序來執行Tabbing順序，而非XDP檔案中定義的自訂Tabbing順序(NPR-32160)。
 * 設計人員： 如果啟用標籤選項，子表單邊框會消失在產生的PDF輸出中(NPR-32778)。
+* 將XSS與GuideSOMProviderServlet一起儲存(NPR-32700)。
 
 ## Install 6.5.5.0 {#install}
 
