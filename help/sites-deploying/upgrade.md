@@ -12,7 +12,10 @@ discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+workflow-type: tm+mt
+source-wordcount: '729'
+ht-degree: 4%
 
 ---
 
@@ -24,6 +27,7 @@ source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 * [規劃升級](/help/sites-deploying/upgrade-planning.md)
 * [用模式檢測器評估升級複雜度](/help/sites-deploying/pattern-detector.md)
 * [AEM 6.5中的向後相容性](/help/sites-deploying/backward-compatibility.md)
+* [使用離線重新索引以減少升級期間的停機時間](/help/sites-deploying/upgrade-offline-reindexing.md)
 * [升級程式](/help/sites-deploying/upgrade-procedure.md)
 * [升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [升級前維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
@@ -68,10 +72,10 @@ AEM最近推出 [Pattern Detector](/help/sites-deploying/pattern-detector.md) �
 
 如需最近AEM版本中其他變更的詳細資訊，請參閱完整的版本注意事項：
 
-* [https://helpx.adobe.com/tw/experience-manager/6-2/release-notes.html](https://helpx.adobe.com/experience-manager/6-2/release-notes.html)
-* [https://helpx.adobe.com/tw/experience-manager/6-3/release-notes.html](https://helpx.adobe.com/experience-manager/6-3/release-notes.html)
-* [https://helpx.adobe.com/tw/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/experience-manager/6-4/release-notes.html)
-* [https://helpx.adobe.com/tw/experience-manager/6-5/release-notes.html](https://helpx.adobe.com/experience-manager/6-5/release-notes.html)
+* [https://helpx.adobe.com/tw/experience-manager/6-2/release-notes.html](https://helpx.adobe.com/tw/experience-manager/6-2/release-notes.html)
+* [https://helpx.adobe.com/tw/experience-manager/6-3/release-notes.html](https://helpx.adobe.com/tw/experience-manager/6-3/release-notes.html)
+* [https://helpx.adobe.com/tw/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes.html)
+* [https://helpx.adobe.com/tw/experience-manager/6-5/release-notes.html](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes.html)
 
 ## 升級概觀 {#upgrade-overview}
 
@@ -83,7 +87,7 @@ AEM最近推出 [Pattern Detector](/help/sites-deploying/pattern-detector.md) �
 
 下圖顯示了建議的整體流程，重點說明了升級方法。 請注意我們所引進新功能的參考。 升級應從模式偵測器開始(請參閱 [Avasting the Upgrade Complexity with Pattern Detector](/help/sites-deploying/pattern-detector.md))，這可讓您根據產生的報表中的模式，決定要採取與AEM 6.4相容的路徑。
 
-在6.5中，我們著重討論如何讓所有新功能都向後相容，但是在您仍然看到某些向後相容性問題時，相容性模式可讓您暫時延遲開發，以維持自訂程式碼與6.5相容。此方法可協助您避免在升級後立即進行開發工作(請參閱 [AEM 6.5中的回溯相容性](/help/sites-deploying/backward-compatibility.md))。
+在6.5中，我們著重討論如何讓所有新功能都向後相容，但是在您仍然看到某些向後相容性問題時，相容性模式可讓您暫時延遲開發，以維持自訂程式碼與6.5相容。 此方法可協助您避免在升級後立即進行開發工作(請參閱 [AEM 6.5中的回溯相容性](/help/sites-deploying/backward-compatibility.md))。
 
 最後，在6.5開發週期中，「可持續升級」(請參閱「可持續升級」 [](/help/sites-deploying/sustainable-upgrades.md))中引進的功能可協助您遵循最佳實務，讓未來的升級更有效率、更順暢。
 
