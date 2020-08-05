@@ -12,7 +12,10 @@ discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+workflow-type: tm+mt
+source-wordcount: '865'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >由於大部分的AEM升級都是就地執行，因此升級作業層需要停機。 遵循這些最佳實務，可將發佈層停機時間減至最少或免除。
 
-在升級AEM環境時，您需要考慮在升級作者環境或發佈環境之間的方式差異，以便將您的作者和使用者的停機時間減至最少。 本頁概述升級目前在AEM 6.x版本上執行的AEM拓撲的高階程式。由於作者和發佈層以及基於Mongo和TarMK的部署之間的流程不同，因此每個層和微內核都列在單獨的部分中。 在執行部署時，我們建議您先升級您的作者環境、決定成功，然後繼續進行發佈環境。
+在升級AEM環境時，您需要考慮在升級作者環境或發佈環境之間的方式差異，以便將您的作者和使用者的停機時間減至最少。 本頁概述升級目前在AEM 6.x版本上執行的AEM拓撲的高階程式。 由於作者和發佈層以及基於Mongo和TarMK的部署之間的流程不同，因此每個層和微內核都列在單獨的部分中。 在執行部署時，我們建議您先升級您的作者環境，決定成功，然後繼續發佈環境。
+
+>[!IMPORTANT]
+>
+>通過在執行升級之前對儲存庫編製索引，可以顯著減少升級期間的停機時間。 如需詳細資訊，請參 [閱「使用離線重新索引來減少升級期間的停機時間」](/help/sites-deploying/upgrade-offline-reindexing.md)
 
 ## TarMK作者層 {#tarmk-author-tier}
 
@@ -108,7 +115,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![mongo-secondaries](assets/mongo-secondaries.jpg)
 
-1. 建立新的6.5 Author執行個體，連線至升級的Mongo執行個體
+1. 建立新的6.5 Author執行個體，並連接至升級的Mongo執行個體
 
 1. 重建從群集中刪除的MongoDB節點
 
@@ -118,7 +125,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 1. 刪除克隆的資料儲存。
 
-### 如果失敗（回滾） {#if-unsuccessful-rollback-2}
+### 如果失敗（回滾）  {#if-unsuccessful-rollback-2}
 
 ![mongo-rollback](assets/mongo-rollback.jpg)
 
