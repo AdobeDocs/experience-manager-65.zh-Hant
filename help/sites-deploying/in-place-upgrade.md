@@ -11,7 +11,10 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a8deb66b23e6ddde9c5f6379ef4f766668336369
+source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -20,17 +23,19 @@ source-git-commit: a8deb66b23e6ddde9c5f6379ef4f766668336369
 
 >[!NOTE]
 >
->本頁概述AEM 6.5的升級程式。如果您有已部署至應用程式伺服器的安裝，請參閱應用程 [式伺服器安裝的升級步驟](/help/sites-deploying/app-server-upgrade.md)。
+>本頁概述AEM 6.5的升級程式。 如果您有已部署至應用程式伺服器的安裝，請參閱應用程 [式伺服器安裝的升級步驟](/help/sites-deploying/app-server-upgrade.md)。
 
 ## 升級前步驟 {#pre-upgrade-steps}
 
 在執行升級之前，必須先執行數個步驟。 如需 [詳細資訊，請參閱](/help/sites-deploying/upgrading-code-and-customizations.md)[升級程式碼與自訂與升級前維護工作](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 。 此外，請確定您的系統符合新版AEM的需求。 瞭解模式檢測器如何協助您估計升級的複雜性，並參閱規劃升級的升級範圍和 [需求一節](/help/sites-deploying/upgrade-planning.md) ，以取得詳細資訊。
 
+最後，請注意，在執行升級之前，通過對儲存庫編製索引，可以顯 **著減少** 升級停機。 如需詳細資訊，請參 [閱「使用離線重新索引來減少升級期間的停機時間」](/help/sites-deploying/upgrade-offline-reindexing.md)
+
 ## 移轉先決條件 {#migration-prerequisites}
 
-* **** 最低需求Java版本：移轉工具僅適用於Java第7版（含）以上版本。 請注意，對於AEM 6.3和更新版本，Oracle的JRE 8和IBM的JRE 7 &amp; 8是唯一支援的版本。
+* **最低需求Java版本：** 移轉工具僅適用於Java第7版（含）以上版本。 請注意，對於AEM 6.3和更新版本，Oracle的JRE 8和IBM的JRE 7 &amp; 8是唯一支援的版本。
 
-* **** 升級實例：如果您是從5.6 **以上版本升級**，請依照6.0版升級檔案中所述的程式，確定您已執行就地升級至AEM 6.0。
+* **升級實例：** 如果您是從5.6 **以上版本升級**，請依照6.0版升級檔案中所述的程式，確定您已執行就地升級至AEM 6.0。
 
 ## 準備AEM Quickstart jar檔案 {#prep-quickstart-file}
 
@@ -46,7 +51,7 @@ source-git-commit: a8deb66b23e6ddde9c5f6379ef4f766668336369
 
 ## 內容儲存庫遷移 {#content-repository-migration}
 
-如果您要從AEM 6.3升級，則不需要進行此移轉。對於6.3以上版本，Adobe提供可用來將儲存庫移轉至AEM 6.3中出現的新版Oak Segment Tar的工具。它是快速啟動軟體包的一部分，對於將使用TarMK的任何升級都是強制性的。 使用MongoMK的環境的升級不需要儲存庫遷移。 如需新區段Tar格式的優點的詳細資訊，請參閱移轉至 [Oak區段Tar常見問答](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)。
+如果您要從AEM 6.3升級，則不需要進行此移轉。 對於6.3以上版本，Adobe提供可用來將儲存庫移轉至AEM 6.3中出現的新版Oak Segment Tar的工具。 它是快速啟動軟體包的一部分，對於將使用TarMK的任何升級都是強制性的。 使用MongoMK的環境的升級不需要儲存庫遷移。 如需新區段Tar格式的優點的詳細資訊，請參閱移轉至 [Oak區段Tar常見問答](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)。
 
 實際移轉是使用標準AEM快速入門jar檔案來執行，此檔案會使用新的 `-x crx2oak` 選項執行crx2oak工具，以簡化升級並使其更強穩。
 
@@ -55,6 +60,7 @@ source-git-commit: a8deb66b23e6ddde9c5f6379ef4f766668336369
 >如果您使用CRX2Oak Quickstart副檔名執行TarMK儲存庫內容遷移，則可以通過向遷移命令行添加以下內容來刪除 **samplecontent** runmode:
 >
 >* `--promote-runmode nosamplecontent`
+
 >
 
 
@@ -112,9 +118,9 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 * `mongo-host` 是MongoDB伺服器IP（例如127.0.0.1）
 
-* `mongo-port` 是MongoDB伺服器埠(例如：（郵編：27017）
+* `mongo-port` 是MongoDB伺服器埠(例如： （郵編：27017）
 
-* `mongo-database-name` 表示資料庫的名稱(例如：aem-author)
+* `mongo-database-name` 表示資料庫的名稱(例如： aem-author)
 
 **您可能還需要為以下情況提供額外的交換機：**
 
@@ -122,7 +128,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 * 如果您使用Java 7，請在參數 `-XX:MaxPermSize=2048m` 後面加入參 `-Xmx` 數。
 
-如需有關使用crx2oak工具的其他指示，請參閱「使用 [CRX2Oak移轉工具」](/help/sites-deploying/using-crx2oak.md)。 如果需要，可以手動升級crx2oak helper JAR，方法是在解壓縮快速啟動後手動將其替換為較新版本。 其在AEM安裝資料夾中的位置為： `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`。 CRX2Oak移轉工具的最新版本可從Adobe Repository下載，網址為： [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
+如需有關使用crx2oak工具的其他指示，請參閱「使用 [CRX2Oak移轉工具」](/help/sites-deploying/using-crx2oak.md)。 如果需要，可以手動升級crx2oak helper JAR，方法是在解壓縮快速啟動後手動將其替換為較新版本。 其在AEM安裝資料夾中的位置為： `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. CRX2Oak移轉工具的最新版本可從Adobe Repository下載，網址為： [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
 
 如果移轉成功完成，工具將退出，退出代碼為零。 此外，請檢查檔案中的 `upgrade.log` WARN和ERROR訊息(位於 `crx-quickstart/logs` AEM安裝目錄下)，因為這些訊息可能表示在移轉期間發生非致命錯誤。
 
@@ -134,7 +140,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 ## 疑難排解移轉問題 {#troubleshooting-migration-issues}
 
-如果您要從6.3升級，請略過本節。雖然提供的crx2oak設定檔應符合大部份客戶的需求，但有時需要額外的參數。 如果在遷移過程中遇到錯誤，則環境的某些方面可能需要提供額外的配置選項。 如果是，您可能會遇到下列錯誤：
+如果您要從6.3升級，請略過本節。 雖然提供的crx2oak設定檔應符合大部份客戶的需求，但有時需要額外的參數。 如果在遷移過程中遇到錯誤，則環境的某些方面可能需要提供額外的配置選項。 如果是，您可能會遇到下列錯誤：
 
 **不會複製查核點，因為未指定外部資料存放區。 這將導致在第一次啟動時對完整儲存庫重新編製索引。 使用—skip-chreckiptor強制遷移，或參閱https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration以取得更多資訊。**
 
