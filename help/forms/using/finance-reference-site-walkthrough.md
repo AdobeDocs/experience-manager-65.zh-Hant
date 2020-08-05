@@ -10,7 +10,10 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: c2937a1989c6cfe33cc3f56f89c307cb5fb8d272
+workflow-type: tm+mt
+source-wordcount: '9064'
+ht-degree: 0%
 
 ---
 
@@ -195,7 +198,7 @@ OSGi上的AEM Forms提供以表單為中心的工作流程，讓您建立以表�
 
 您也可以在下列URL中檢視歡迎套件：
 
-https://&lt;*host*> :&lt;*port*>/content/aemforms-refsite/doclink.html?document=/content/forms/af/we-finance/credit-card/creditcardwelcomekit&amp;customerId=197&amp;channel=web
+https://&lt;*host*> : &lt;*port*>/content/aemforms-refsite/doclink.html?document=/content/forms/af/we-finance/credit-card/creditcardwelcomekit&amp;customerId=197&amp;channel=web
 
 您可以在作者和發佈例項上存取它。
 
@@ -300,11 +303,13 @@ We.Finance會不時檢查其信用卡應用程式的效能，以檢查客戶可�
 
    `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
 
-   >[!NOTE] 在下次開啟表單前，從瀏 **覽器的Cookie永續性中移除名稱為** mbox的Cookie。 您會隨機看到表單的體驗A和B。
+   >[!NOTE]
+   > 
+   >在下次開啟表單前，從瀏 **覽器的Cookie永續性中移除名稱為** mbox的Cookie。 您會隨機看到表單的體驗A和B。
 
 1. 選取表單，按一下「 **更多**」，然後按 **一下「A/B測試報表」**。 您在報表中找不到許多資料，因為您剛開始測試。 現在，讓我們提供一些種子資料，瞭解A/B測試報表的外觀。
-1. 開啟CRXDE Lite並備份下列檔案：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
-1. 將上述檔案中 `onReportLoadSuccess` 的函式定義取代為下列檔案中的函式定義：/apps/we-finance/demo-artifacts/targetreport.js
+1. 開啟CRXDE Lite並備份下列檔案： /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
+1. 將上述檔案中 `onReportLoadSuccess` 的函式定義取代為下列檔案中的函式定義： /apps/we-finance/demo-artifacts/targetreport.js
 
    >[!NOTE]
    >
@@ -554,8 +559,8 @@ We.Finance會不時審查其抵押申請表現，以檢查客戶可能面臨的�
    > 在下次開啟表單前，從瀏 **覽器的Cookie永續性中移除名稱為** mbox的Cookie。 您會隨機看到表單的體驗A和B。
 
 1. 選取表單，按一下「 **更多**」，然後按 **一下「A/B測試報表」**。 您在報表中找不到許多資料，因為您剛開始測試。 現在，讓我們提供一些種子資料，瞭解A/B測試報表的外觀。
-1. 開啟CRXDE Lite並備份下列檔案：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
-1. 將上述檔案中 `onReportLoadSuccess` 的函式定義取代為下列檔案中的函式定義：/apps/we-finance/demo-artifacts/targetreport.js
+1. 開啟CRXDE Lite並備份下列檔案： /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
+1. 將上述檔案中 `onReportLoadSuccess` 的函式定義取代為下列檔案中的函式定義： /apps/we-finance/demo-artifacts/targetreport.js
 
    >[!NOTE]
    >
@@ -676,7 +681,7 @@ We.Finance家庭保險方案涉及以下人員：
 
 ### 莎拉覺得房產保險的報價很有趣，並選擇申請 {#sarah-finds-the-home-insurance-offer-interesting-and-chooses-to-apply}
 
-莎拉喜歡電子報中的家庭保險計畫，並決定申請。 她在電子報上按一下「立即申請」，這會在We.Finance入口網站上開啟首頁保險申請。 應用程式表單是使用卡片版面以章節組織。
+Sarah喜歡電子報中的家庭保險計畫，並決定申請。 她在電子報上按一下「立即申請」，這會在We.Finance入口網站上開啟首頁保險申請。 應用程式表單是使用卡片版面以章節組織。
 
 在「個人資訊」頁面上，當Sarah提供其社會安全號碼時，會提示她使用其認證登入。
 
@@ -796,13 +801,13 @@ Blue Chip Growth Fund招股說明書是一種互動式通訊方式。 它使用�
 
 圖表和表格從表單資料模型中檢索資料。 表單資料模型會連線至設定的資料來源，這是本逐步說明中的資料庫，以擷取基金專屬的資訊。 您可以在 `https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management`
 
-#### 親眼看看 {#see-it-yourself-15}
+#### 親眼看看  {#see-it-yourself-15}
 
 前往We.Finance的入口網站， `https://[publishHost]:[publishPort]/wefinance`點選Wealth Management，依資產類別擴充Funds，再點選We.Finance Blue Chip Growth Fund。 We.Finance藍籌增長基金招股說明書開幕。
 
 ### Sarah探索Blue Chip Growth Fund招股說明書，以瞭解該基金 {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
-Sarah在招股說明書的「概觀」、「價格與績效」、「投資組合管理」、「費用與最低值」和「稅金與付款」標籤中進行探索，以瞭解目前和歷史價格、歷史增長、與標普500指數的比較、以行業為導向的多元化、基金管理人員以及與基金相關的開支。 相關資訊被分隔到不同的標籤中。 招股說明書是互動式溝通。 互動式通訊具有互動式設計。 她可以在任何螢幕大小的裝置上開啟互動式通訊，而互動式通訊則會重排設計，以符合基礎裝置。
+Sarah在招股說明書的「概觀」、「價格與績效」、「投資組合管理」、「費用與最低值」和「稅金與付款」標籤中進行探索，以瞭解目前和歷史價格、歷史增長、與標普500指數的比較、以行業為導向的多元化、基金管理人員以及與基金相關的開支。 所述相關資訊被分隔成不同的標籤。 招股說明書是互動式溝通。 互動式通訊具有互動式設計。 她可以在任何螢幕大小的裝置上開啟互動式通訊，而互動式通訊則會重排設計，以符合基礎裝置。
 
 ![slide1-1](assets/slide1-1.png)
 
@@ -812,7 +817,7 @@ Blue Chip Growth Fund互動式通訊使用父代和子代面板，將相關資�
 
 上層標籤的版面設為「頂端標籤」，可將所有子面板轉換為標籤。 您可以在的編輯模式下查看互動式通信的面板 `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`。
 
-#### 親眼看看 {#see-it-yourself-16}
+#### 親眼看看  {#see-it-yourself-16}
 
 請至Blue Chip Growth Fund互動式通訊網站 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled`。 探索所有標籤。
 
@@ -828,7 +833,7 @@ Blue Chip Growth Fund招股說明書是一種互動式通訊方式。 它有網�
 
 ![財富管理](assets/wealth-management.png)
 
-#### 親眼看看 {#see-it-yourself-17}
+#### 親眼看看  {#see-it-yourself-17}
 
 若要下載PDF版本，請前往Blue Chip Growth Fund互動式通訊，點選「下 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`載PDF」。
 
@@ -843,7 +848,7 @@ We.Finance汽車保險應用程式方案涉及以下角色：
 
 Sarah Rose是We.Finance的現有客戶，已購買汽車保險單。 現在是續約其保險單的一年中之時。 We.Finance保險代理的康拉德·西姆斯向莎拉發出關於她續約保單的提醒。 提醒電子郵件包含PDF，內含政策續約詳細資訊以及互動式通訊網頁版本的連結。 互動式通訊具有行動友好且回應速度快的設計。 她可以在任何裝置上開啟互動式通訊，互動式通訊則會重排，以符合底層裝置的螢幕大小。 附加在電子郵件中的互動式通訊PDF版本有助於離線閱讀。
 
-Sarah會依照電子郵件中提供的指示進行，並成功重新推出程式。 下圖顯示了汽車保險應用程式逐步說明的工作流程： 自 ![動保險應用程式逐步解說](assets/auto-insurance-application-walkthrough.png)
+Sarah會依照電子郵件中提供的指示進行，並成功重新推出程式。 下圖顯示了汽車保險應用程式逐步說明的工作流程：  ![自動保險應用程式逐步](assets/auto-insurance-application-walkthrough.png)
 
 ### 康拉德從We.Finance發送保險單續約通訊 {#conrad-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
@@ -857,7 +862,7 @@ Conrad登入AEM例項，開啟「自動保險」控制面板，指定Sarah的 **
 
 ![自動保險工作流](assets/auto-insurance-workflow.png)
 
-#### 親眼看看 {#see-it-yourself-18}
+#### 親眼看看  {#see-it-yourself-18}
 
 以Conrad Simms(csimms/password)的身分登入 **We.Finance Auto Insurance Dashboard** 。 URL為 `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 指定 **客戶ID**。 Sarah Rose的客戶ID為900001。 按一 **下「續約原則**」。 互動式通訊會在Agent UI中開啟。 在代理用戶介面中，輸入有效的電子郵件地址以傳送附有原則檔案的電子郵件，然後按一下「送 **出**」。 螢幕上將顯示一條消息「已啟動提交」，然後在幾秒內顯示另一條消息「已成功提交」。 您的汽車保險續約 **主旨的電子郵件** ，會以指定的電子郵件地址寄送。 莎拉·羅斯的政策是優質政策。
 
@@ -878,7 +883,7 @@ Conrad登入AEM例項，開啟「自動保險」控制面板，指定Sarah的 **
 1. 將值設為 `FormFieldRequestParameter``/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. 點選「 **全部儲存**」。 該參考站點被配置為使用使用MS Dynamics作為資料源的互動式通信。
 
-現在，以Conrad Simms(csimms/password)的身分登入 **We.Finance Auto Insurance Dashboard** 。 URL為 `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 指定 **客戶ID**。 Sarah Rose的客戶ID為900001。 按一 **下「續約原則**」。 互動式通訊會在Agent UI中開啟。 在代理用戶介面中，輸入有效的電子郵件地址以傳送附有原則檔案的電子郵件，然後按一下「送 **出**」。 螢幕上將顯示一條消息「已啟動提交」，然後在幾秒內顯示另一條消息「已成功提交」。 您的汽車保險續約 **主旨的電子郵件** ，會以指定的電子郵件地址寄出。
+現在，以Conrad Simms(csimms/password)的身分登入 **We.Finance Auto Insurance Dashboard** 。 URL為 `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 指定 **客戶ID**。 Sarah Rose的客戶ID為900001。 按一 **下「續約原則**」。 互動式通訊會在Agent UI中開啟。 在代理UI中，輸入有效的電子郵件地址以傳送附有原則檔案的電子郵件，然後按一下「送 **出**」。 螢幕上將顯示一條消息「已啟動提交」，然後在幾秒內顯示另一條消息「已成功提交」。 您的汽車保險續約 **主旨的電子郵件** ，會以指定的電子郵件地址寄出。
 
 >[!NOTE]
 >
@@ -894,13 +899,13 @@ Sarah按一 **下「立即續約** 」，並轉至其汽車保險信函的網路
 
 ![自動保險續約——電子郵件](assets/auto-insurance-renewal-email.png)
 
-#### 運作方式 {#how-it-works-21}
+#### 運作方式  {#how-it-works-21}
 
 使用互動式通訊的多頻道功能建立汽車保險信的網路和列印輸出。 電子&#x200B;**郵件中的「立即續約** 」按鈕會連結至自動保險續約應用程式，此應用程式是發佈例項上的互動式通訊。
 
 ![ic-web版本](assets/ic-web-version.png)
 
-#### 親眼看看 {#see-it-yourself-19}
+#### 親眼看看  {#see-it-yourself-19}
 
 您必須已收到附加PDF的電子郵件。 PDF是您的汽車保險信的印刷版。 按一 **下「立即續約** 」以存取Web版的原則。 檢查您的個人資訊和政策詳細資訊，然後按一下「 **立即續約**」。 它會帶您進入適應性付款表單。
 
@@ -916,11 +921,11 @@ Sarah按一 **下「立即續約** 」，並轉至其汽車保險信函的網路
 
 ![支付自適應形式](assets/payment-adaptive-form.png)
 
-#### 運作方式 {#how-it-works-22}
+#### 運作方式  {#how-it-works-22}
 
 「立即續約」按鈕會將Sarah引導至付款頁面。 付款頁面是最適化表單。 Sarah會填寫信用卡詳細資訊，並按一下「 **送出」**。 她的信用卡付款會被處理，螢幕上會出現以最適化表單設定的感謝訊息。
 
-#### 親眼看看 {#see-it-yourself-20}
+#### 親眼看看  {#see-it-yourself-20}
 
 按一 **下「立即續約** 」以進入「付款」頁面。 填寫您的信用卡資訊，然後按一下「 **付款」**。 您可以在以下網址進入編寫實例中的付款頁面：
 
