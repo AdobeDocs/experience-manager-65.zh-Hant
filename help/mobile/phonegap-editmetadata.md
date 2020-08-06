@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 07b38da6-2efa-4a43-9afa-7151a241a5ad
 translation-type: tm+mt
-source-git-commit: 79914fa8fa28d5cf3fe7828d71a34ff920bc3e60
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +51,7 @@ source-git-commit: 79914fa8fa28d5cf3fe7828d71a34ff920bc3e60
 
 ## 新增和移除螢幕擷取 {#add-and-remove-screenshots}
 
-您可以將應用程式螢幕擷取畫面加入中繼資料統計。 有些廠商在將任何應用程式送出至其應用程式商店時，都需要精確的螢幕擷取畫面。 這些影像必須已存在於資產中。 請參 [閱「資產選擇器](../assets/search-assets.md#assetselector) 」以上傳螢幕擷取畫面。
+您可以將應用程式螢幕擷取畫面加入中繼資料統計。 有些廠商在將任何應用程式送出至其應用程式商店時，都需要精確的螢幕擷取畫面。 這些影像必須已存在於資產中。 請參 [閱「資產選擇器](../assets/search-assets.md#assetpicker) 」以上傳螢幕擷取畫面。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
