@@ -3,9 +3,9 @@ title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1533'
 ht-degree: 8%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 8%
 
 要使智慧內容服務應用正確的標籤，您必須對其進行培訓以識別分類。 若要訓練服務，請先組織一組最能說明這些資產的資產和標籤。 在資產上套用這些標籤，並執行培訓工作流程以協助服務學習。
 
-一旦標籤經過訓練並準備就緒後，服務現在可以透過標籤工作流程，將這些標籤套用在資產上。
+一旦標籤經過訓練並準備就緒後，服務現在可以透過標籤工作流程，將這些標籤套用至資產。
 
 在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
@@ -68,7 +68,7 @@ The Smart Content Service is available for purchase as an add-on to [!DNL Experi
 >[!NOTE]
 >
 >1. 培訓是不可撤銷的過程。 Adobe建議您在標籤上訓練智慧型內容服務之前，先檢視組織中資產的標籤。
->1. 請先閱讀智 [慧型內容服務訓練方針](smart-tags-training-guidelines.md) ，再針對任何標籤開始訓練。
+>1. 在進行標籤培訓之前，請參閱智慧型內 [容服務培訓方針](smart-tags-training-guidelines.md)。
 >1. 當您第一次訓練智慧型內容服務時，Adobe建議您至少在兩個不同的標籤上進行訓練。
 
 
