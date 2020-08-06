@@ -8,7 +8,10 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bc042696506bf1691c2eeffc6ab941be85fa274c
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+workflow-type: tm+mt
+source-wordcount: '1354'
+ht-degree: 0%
 
 ---
 
@@ -21,14 +24,14 @@ source-git-commit: bc042696506bf1691c2eeffc6ab941be85fa274c
 
 ### 如何配置無二進位分發？ {#how-do-i-configure-binary-less-distribution}
 
-通過共用資料儲存進行部署時支援無二進位分發，並且涉及使用基於Vault的分發包導出器(工廠PID: `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)封裝產生器。
+通過共用資料儲存進行部署時支援無二進位分發，並且涉及使用基於Vault的分發包導出器(工廠PID: `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)套件產生器。
 
 在啟用無二進位模式後，分發的內容封裝會包含二進位檔的參考，而非實際二進位檔。
 
 #### 如何啟用無二進位散發？ {#how-do-i-enable-binary-less-distribution}
 
 若要啟用無二進位散發，請使用共用的blob存放區進行部署。
-在OSGI `useBinaryReferences` 配置中檢查屬性，並檢查您的代理正在使用的出廠PID( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)*。
+在OSGI `useBinaryReferences` 配置中檢查屬性，並查看您的代理正在使用的出廠PID( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)*。
 
 #### 在AEM網站主控台中導覽頁面階層時，如何自訂錯誤訊息？ {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
 
@@ -64,17 +67,17 @@ Adobe Experience Manager(AEM)6.4隨附於SSL精靈，並提供使用者介面來
 
 若要依預設啟用SSL，請依預 [設參閱SSL](/help/sites-administering/ssl-by-default.md)。
 
-#### 從行動應用程式使用AEM的Content services時，建議使用什麼架構，最好是React Native? {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
+#### 從行動應用程式使用AEM的Content Services時，建議使用什麼架構，最好是React Native? {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
 
-Content services是以Sling Models為基礎，而AEM開發人員必須為匯出的每個元件提供Sling Model pojo。
+Content Services是以Sling Models為基礎，而AEM開發人員必須為匯出的每個元件提供Sling Model pojo。
 
-若要瞭解如何從React應用程式使用AEM內容服務，請參閱「 [AEM Content services快速入門」教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) 。
+若要瞭解如何從React應用程式使用AEM內容服務，請參閱「 [AEM Content Services快速入門」教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) 。
 
 此外，如果開發人員想要匯出元件樹狀結構，他們也可以實作 `ComponentExporter` 和 `ContainerExporter` 介面，並使用 `ModelFactory` 來循環子元件並傳回其模型表示。 請參閱以下資源：
 
 [1] [Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
-[2] [Apache Sling::Sling Models](https://sling.apache.org/documentation/bundles/models.html)
+[2] [Apache Sling:: Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
 #### 如何停用AEM 6.4調查快顯視窗？ {#how-to-disable-aem-survey-pop-up}
 
@@ -82,7 +85,7 @@ Content services是以Sling Models為基礎，而AEM開發人員必須為匯出�
 
 #### 是否有好的資源來強調升級至AEM 6.4的主要功能？ {#is-there-a-good-resource-that-highlights-the-key-features-for-upgrading-to-aem}
 
-請參閱「了 [解升級AEM的理由](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) 」，其中說明為考慮升級至最新版Adobe Experience manager的客戶所進行的主要功能高階劃分。
+請參閱「了 [解升級AEM的理由](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) 」，其中說明為考慮升級至最新版Adobe Experience Manager的客戶所進行的主要功能高階劃分。
 
 ## 資產 {#assets}
 
@@ -133,17 +136,17 @@ Granite UI Foundation的全新Sling元件集是為Coral3建立，位於 [/libs/g
 
 「簡單搜尋」實作是2017年峰會實驗室AEM Search Demystified的教材。
 
-#### AEM Assets和AEM mediaLibrary之間有何差異？ {#what-is-the-difference-between-aem-assets-and-aem-medialibrary}
+#### AEM Assets和AEM MediaLibrary之間有何差異？ {#what-is-the-difference-between-aem-assets-and-aem-medialibrary}
 
 AEM Assets是AEM Platform上的應用程式，可讓我們的客戶在網路儲存庫中管理其數位資產（影像、視訊、檔案和音訊片段），而AEM Media Library是AEM WCM內容儲存庫的指定部分，其中影像和其他共用資源都儲存在此處。
 
-如需詳細 [資訊，請參閱「AEM Assets與AEM mediaLibrary](/help/assets/medialibrary.md) 」。
+如需詳細 [資訊，請參閱「AEM Assets與AEM MediaLibrary](/help/assets/medialibrary.md) 」。
 
 #### 是否可建立WordPress增效模組，讓客戶存取Adobe Asset Picker以選取影像？ {#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
 
 是的，使用WordPress的客戶可以使用Adobe Asset Picker從其AEM Assets伺服器選取影像，以新增至其WordPress網站上的貼文。
 
-如需詳細 [資訊，請參閱資產](../assets/search-assets.md#assetselector) 選擇器。
+如需詳細 [資訊，請參閱資產](../assets/search-assets.md#assetpicker) 選擇器。
 
 #### 是否可以在AEM Assets中擴充搜尋Facet，以新增其他謂語？ {#is-it-possible-to-extend-the-search-facets-in-aem-assets-to-add-additional-predicates}
 
