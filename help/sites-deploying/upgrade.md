@@ -12,9 +12,9 @@ discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '720'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,8 @@ ht-degree: 4%
 * [規劃升級](/help/sites-deploying/upgrade-planning.md)
 * [用模式檢測器評估升級複雜度](/help/sites-deploying/pattern-detector.md)
 * [AEM 6.5中的向後相容性](/help/sites-deploying/backward-compatibility.md)
-* [使用離線重新索引以減少升級期間的停機時間](/help/sites-deploying/upgrade-offline-reindexing.md)
+
+<!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [升級程式](/help/sites-deploying/upgrade-procedure.md)
 * [升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [升級前維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
