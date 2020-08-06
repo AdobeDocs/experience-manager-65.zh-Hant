@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8f8134d6c4fcc0ef54f9cc8298936c5c7d746c09
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
 workflow-type: tm+mt
 source-wordcount: '5860'
 ht-degree: 5%
@@ -27,7 +27,7 @@ ht-degree: 5%
 | [搜尋排名與提升](#searchrank) | [文字擷取](#extracttextupload) | [智慧型系列](#collections) |
 | [進階搜尋： 篩選和搜尋範圍](#scope) | [自訂謂語](#custompredicates) | [瞭解意外結果和疑難排解](#troubleshoot-unexpected-search-results-and-issues) |
 | [從其他解決方案和應用程式搜尋](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[品牌入口網站](#brandportal)</li><li>[Experience Manager案頭應用程式](#desktopapp)</li><li>[Adobe Stock影像](#adobestock)</li><li>[動態媒體資產](#dynamicmedia)</li></ul> |  |  |
-| [資產選取器](#assetselector) |  |  |
+| [資產選取器](#assetpicker) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [圖示範例](#samples) |  |  |
 
@@ -226,7 +226,7 @@ ht-degree: 5%
 
 [!DNL Experience Manager] 搜尋功能支援搜尋系列和搜尋系列中的資產。 請參閱 [搜尋系列](/help/assets/managing-collections-touch-ui.md)。
 
-## 資產選取器 {#assetselector}
+## 資產選取器 {#assetpicker}
 
 「資產選擇器」可讓您以特殊方式搜尋、篩選及瀏覽DAM資產。 資產選擇器可在取得 `https://[aem-server]:[port]/aem/assetpicker.html`。 您可以使用此功能擷取您選取之資產的中繼資料。 您可以使用支援的請求參數來啟動它，例如資產類型（影像、視訊、文字）和選擇模式（單選或多選）。 這些參數會針對特定搜尋例項設定資產選擇器的上下文，並在整個選取範圍中保持不變。
 
