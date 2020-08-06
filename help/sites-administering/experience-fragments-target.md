@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1afda7c23dd71f7ba40c295c13cf24a4d52dbd1c
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 0%
    >   
    * 預設工作區。
    >   * 指定的工作區，在雲端設定中指定。
+      >     **注意：** 匯出至特定工作區需要Adobe Target Premium。
 >* AEM必須 [使用Adobe I/O與Adobe Target整合](/help/sites-administering/integration-ims-adobe-io.md)。
 
 >
@@ -55,7 +56,7 @@ AEM 6.5.0.0和6.5.1.0:
 * JSON: 支援無頭內容傳送
 * HTML 和 JSON
 
-AEM體驗片段可匯出至Adobe Target的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是透過Adobe I/O完成，AEM必須與Adobe Target [使用Adobe I/O整合](/help/sites-administering/integration-ims-adobe-io.md)。
+AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是透過Adobe I/O完成，AEM必須與Adobe Target [使用Adobe I/O整合](/help/sites-administering/integration-ims-adobe-io.md)。
 
 >[!NOTE]
 >
