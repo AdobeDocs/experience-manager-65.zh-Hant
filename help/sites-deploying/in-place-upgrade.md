@@ -11,9 +11,9 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 在執行升級之前，必須先執行數個步驟。 如需 [詳細資訊，請參閱](/help/sites-deploying/upgrading-code-and-customizations.md)[升級程式碼與自訂與升級前維護工作](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 。 此外，請確定您的系統符合新版AEM的需求。 瞭解模式檢測器如何協助您估計升級的複雜性，並參閱規劃升級的升級範圍和 [需求一節](/help/sites-deploying/upgrade-planning.md) ，以取得詳細資訊。
 
-最後，請注意，在執行升級之前，通過對儲存庫編製索引，可以顯 **著減少** 升級停機。 如需詳細資訊，請參 [閱「使用離線重新索引來減少升級期間的停機時間」](/help/sites-deploying/upgrade-offline-reindexing.md)
+<!--Finally, note that the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
 ## 移轉先決條件 {#migration-prerequisites}
 
