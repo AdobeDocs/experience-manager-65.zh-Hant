@@ -3,7 +3,7 @@ title: 透過DTM啟用資產見解
 description: 瞭解如何使用Adobe動態標籤管理(DTM)來啟用資產分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
 執行這些步驟，以透過DTM啟用資產分析。
 
-1. 按一下Experience Manager標誌，並前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 前瞻分析設定]**」。
+1. 按一下Experience Manager標誌，並前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 洞察」設定]**。
 1. [使用DTM Cloud服務配置Experience Manager部署](/help/sites-administering/dtm.md)
 
    當您登入https://dtm.adobe.com並造訪使用者設定檔中的「 [帳戶設定](https://dtm.adobe.com/) 」時， **** API Token應可供使用。 從資產前瞻分析的角度來看，此步驟不是必需的，因為Experience Manager Sites與資產前瞻分析的整合仍在進行中。
@@ -96,7 +96,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
              "",  /** eVar to put Asset ID for Asset Click Events in, e.g. 'eVar3' */
              "",  /** event to include in tracking-calls for Asset Impression Events, e.g. 'event8' */
              "",  /** event to include in tracking-calls for Asset Click Events, e.g. 'event7' */
-             sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, please include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
+             sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
              );
        sObj.usePlugins = true;
        sObj.doPlugins = assetAnalytics.core.updateContextData;
