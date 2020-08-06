@@ -3,9 +3,9 @@ title: 大量移 [!DNL Adobe Experience Manager Assets] 轉資產。
 description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及啟用資產以發佈例項。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1799'
 ht-degree: 8%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 8%
 
 #### 透過HTTP傳送 {#pushing-through-http}
 
-Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是一個小型Java應用程式，可從一個目錄將所有資產載入部署時的另一個 [!DNL Experience Manager] 目錄。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫中，而不是Glutton。
+Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是一個小型Java應用程式，可從一個目錄將所有資產載入部署時的另一個 [!DNL Experience Manager] 目錄。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫，而不是Glutton。
 
 使用推送https的方法有兩個主要的缺點：
 
@@ -75,7 +75,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 [ACS AEM Tools CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ，會從CSV檔案中為資產匯入提取檔案系統的資產和資產中繼資料。 Experience Manager Asset Manager API可用來將資產匯入系統並套用已設定的中繼資料屬性。 理想情況下，資產會透過網路檔案載入或透過外部磁碟機載入伺服器。
 
-由於資產不需要透過網路傳輸，因此整體效能大幅提升，而且通常認為此方法是將資產載入儲存庫的最有效方式。 此外，由於此工具支援中繼資料擷取，因此您可以在單一步驟中匯入所有資產和中繼資料，而不是建立第二個步驟，以透過個別工具套用中繼資料。
+由於資產不需要透過網路傳輸，因此整體效能會大幅提升，而且通常認為此方法是將資產載入儲存庫的最有效方式。 此外，由於此工具支援中繼資料擷取，因此您可以在單一步驟中匯入所有資產和中繼資料，而不是建立第二個步驟，以透過個別工具套用中繼資料。
 
 ### 處理轉譯 {#processing-renditions}
 
