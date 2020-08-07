@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1afda7c23dd71f7ba40c295c13cf24a4d52dbd1c
+source-git-commit: e6d02717811ac78b77dc459814941d654e94733f
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -37,11 +37,13 @@ ht-degree: 0%
    >   
    * 預設工作區。
    >   * 指定的工作區，在雲端設定中指定。
-      >     **注意：** 匯出至特定工作區需要Adobe Target Premium。
+   >   * **注意：** 匯出至特定工作區需要Adobe Target Premium。
+>
 >* AEM必須 [使用Adobe I/O與Adobe Target整合](/help/sites-administering/integration-ims-adobe-io.md)。
 
 >
 >
+
 AEM 6.5.0.0和6.5.1.0:
 >
 >* AEM體驗片段會匯出至Adobe Target的預設工作區。
@@ -52,11 +54,11 @@ AEM 6.5.0.0和6.5.1.0:
 
 將體驗片段匯出至Adobe Target有三種格式選項：
 
-* HTML（預設）: 支援網頁和混合式內容傳送
-* JSON: 支援無頭內容傳送
+* HTML（預設）:支援網頁和混合式內容傳送
+* JSON:支援無頭內容傳送
 * HTML 和 JSON
 
-AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是透過Adobe I/O完成，AEM必須與Adobe Target [使用Adobe I/O整合](/help/sites-administering/integration-ims-adobe-io.md)。
+AEM體驗片段可匯出至Adobe Target的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是透過Adobe I/O完成，AEM必須與Adobe Target [使用Adobe I/O整合](/help/sites-administering/integration-ims-adobe-io.md)。
 
 >[!NOTE]
 >
@@ -64,7 +66,7 @@ AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe
 
 >[!NOTE]
 >
->Adobe Target工作區可用來允許組織（群組）的成員僅能建立和管理此組織的選件和活動； 而不授予其他使用者存取權。 例如，全球關注的國家特定組織。
+>Adobe Target工作區可用來允許組織（群組）的成員僅能建立和管理此組織的選件和活動；而不授予其他使用者存取權。 例如，全球關注的國家特定組織。
 
 >[!NOTE]
 >
@@ -100,7 +102,7 @@ AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe
 * 選擇目標工作區作為目標
 * 選取外部化器網域，以在體驗片段中重寫參照（選用）
 
-在所需資料夾和／或片段的 **「頁面屬性** 」中可以選擇所需選項； 規範將視需要繼承。
+在所需資料夾和／或片段的 **「頁面屬性** 」中可以選擇所需選項；規範將視需要繼承。
 
 1. 導覽至 **Experience片段主控台** 。
 
