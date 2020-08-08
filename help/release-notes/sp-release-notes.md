@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 5的發行說明。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2f5072a73b11853bbfd63c4b4ce9ffcf186adad1
+source-git-commit: ca965d8495c0460b2b6bc5e08d8818b91f9fcdee
 workflow-type: tm+mt
-source-wordcount: '4522'
+source-wordcount: '4531'
 ht-degree: 0%
 
 ---
@@ -74,11 +74,12 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 當使用者以同步方式繼承時，父頁面的即時副本不會與Blueprint同步，並顯示不正確的狀態(NPR-32500)。
 * 載入Experience Manager Sites編輯器頁面需要超過15秒(NPR-32413)。
 * 某些欄位不顯示取消繼承選項(NPR-32362)。
-* 當您選取「體驗片段」元件的路徑並選取「開啟選取對話方塊」核取方塊時，不會導覽至「路徑瀏覽器」中的選取路徑(NPR-32308)。
+* 當您選取「體驗片段」元件的路徑並選取「開啟選擇對話方塊」核取方塊時，不會導覽至「路徑瀏覽器」中的選取路徑(NPR-32308)。
 * 從Experience Manager 6.2升級至Experience Manager 6.5時，靜態範本的Parsys元件無法正確顯示。 Parsys元件的高度設定為0，其內部元件不可見(NPR-33663)。
 * 當使用者複製並貼上相同頁面上的「版面容器」時，「版面容器」中的元件不會顯示(NPR-33648)。
 * Dispatcher health check在日 `Invalid cookie header` 志檔案中顯示警告消息(NPR-33629)。
 * PreferencesServlet中反映的XSS(NPR-33438)。
+* 匿名使用者可存取CRX DE Lite功能(GRANITE-27790)。
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -214,7 +215,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 * 在具有智慧型裁切設定檔的檔案夾下開啟PDF轉譯邊欄的記錄檔中，會發現異常(CQ-4294201)。
 
-* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用 [!UICONTROL 「動態媒體同步模式」] (CQ-4294200)，則不會發佈影像預設集。
+* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用  「動態媒體同步模式」，則不會發佈影像預設集(CQ-4294200)。
 
 * 大量上傳時的資產處理會停滯，而工作流程例項則會顯示DAM更新資產的停滯例項(CQ-4293916)。
 
@@ -312,27 +313,27 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 >
 >Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
 
-* 通信管理： 在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序被混亂。
-* 最適化表單： 當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
-* 最適化表單： 用戶無法保存具有多個附件的自適應表單(NPR-32997)。
-* 最適化表單： 以最適化表單變更面板版面會導致錯誤(CQ-4293880)。
-* 最適化表單： 自適應表單字典中字串的新行將字 `&#xa;` 符添加到字典(NPR-33266)。
-* 最適化表單協助功能： 當使用者將最適化表單預覽為HTML表格時，「 [!UICONTROL Scribble Signature] 」欄位無法保留標籤焦點(NPR-33159)。
-* 最適化表單協助功能： 提交最適化表單時顯示的錯誤訊息不會連結 `aria-describedBy` 至屬性(NPR-33071)。
-* 最適化表單協助功能： 在ARIA無障礙環境支援模式中，在最適化表單中標示為強制的欄位，沒有將強制屬性設為True(NPR-33070)。
-* PDFG服務： 當使用者將文字檔案轉換為PDF時，日文字元無法正確顯示(NPR-33238)。
+* 通信管理：在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序會混亂。
+* 最適化表單：當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
+* 最適化表單：用戶無法保存具有多個附件的自適應表單(NPR-32997)。
+* 最適化表單：以最適化表單變更面板版面會導致錯誤(CQ-4293880)。
+* 最適化表單：自適應表單字典中字串的新行將字 `&#xa;` 符添加到字典(NPR-33266)。
+* 最適化表單協助功能：當使用者將最適化表單預覽為HTML表格時，「 [!UICONTROL Scribble Signature] 」欄位無法保留標籤焦點(NPR-33159)。
+* 最適化表單協助功能：提交最適化表單時顯示的錯誤訊息不會連結 `aria-describedBy` 至屬性(NPR-33071)。
+* 最適化表單協助功能：在ARIA無障礙環境支援模式中，在最適化表單中標示為強制的欄位，沒有將強制屬性設為True(NPR-33070)。
+* PDFG服務：當使用者將文字檔案轉換為PDF時，日文字元無法正確顯示(NPR-33238)。
 * PDFG服務： `CreatePDF` 操作無法將PDF檔案轉換為PDF OCR格式(NPR-32994)。
-* PDFG服務： 第200個檔案例項的PDF轉換失 [!DNL OpenOffice] 敗(NPR-32766)。
-* 後端整合： 表單資料模型請求會因重新整理Token因非作用中狀態不正確而失敗(NPR-33169)。
-* 設計人員： 螢幕閱讀程式會根據預設的地理順序來執行Tabbing順序，而非XDP檔案中定義的自訂Tabbing順序(NPR-32160)。
-* 設計人員： 如果啟用標籤選項，子表單邊框會消失在產生的PDF輸出中(NPR-32778)。
+* PDFG服務：第200個檔案例項的PDF轉換失 [!DNL OpenOffice] 敗(NPR-32766)。
+* 後端整合：表單資料模型請求會因重新整理Token因非作用中狀態不正確而失敗(NPR-33169)。
+* 設計人員：螢幕閱讀程式會根據預設的地理順序來執行Tabbing順序，而非XDP檔案中定義的自訂Tabbing順序(NPR-32160)。
+* 設計人員：如果啟用標籤選項，子表單邊框會消失在產生的PDF輸出中(NPR-32778)。
 * 將XSS與GuideSOMProviderServlet一起儲存(NPR-32700)。
 
 ## Install 6.5.5.0 {#install}
 
 **設定需求**
 
-* AEM 6.5.5.0需要AEM 6.5。 如需詳 [細指示](/help/sites-deploying/upgrade.md) ，請參閱升級檔案。
+* AEM 6.5.5.0需要AEM 6.5。如需詳 [細指示](/help/sites-deploying/upgrade.md) ，請參閱升級檔案。
 * Adobe軟體散發提供Service Pack下 [載](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。
 * 在使用MongoDB和多個執行個體的部署中，使用「套件管理員」將AEM 6.5.5.0安裝在其中一個「作者」執行個體上。
 * 在安裝之前，請先拍下快照或AEM例項的新備份。
@@ -360,9 +361,9 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 
 在工作實例上自動安裝Adobe Experience Manager 6.5.5.0有兩種方法：
 
-答： 當伺服器聯機 `../crx-quickstart/install` 時，將軟體包放入資料夾。 軟體包會自動安裝。
+答：當伺服器聯機 `../crx-quickstart/install` 時，將軟體包放入資料夾。 軟體包會自動安裝。
 
-B. 使用套 [件管理員的HTTP API](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html)。 使 `cmd=install&recursive=true` 用以安裝巢狀包。
+B.使用套 [件管理員的HTTP API](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html)。 使 `cmd=install&recursive=true` 用以安裝巢狀包。
 
 >[!NOTE]
 >
@@ -414,7 +415,7 @@ UberJar for Experience Manager 6.5.5.0可在 [Adobe Public Maven儲存庫中取�
 
 ## 過時的功能 {#removed-deprecated-features}
 
-本節列出已標示為不再支援的AEM 6.5.5.0功能。 計畫在未來版本中移除的功能會先設為不建議使用，並提供替代選項。
+本節列出已標示為不再支援的AEM 6.5.5.0功能。計畫在未來版本中移除的功能會先設為不建議使用，並提供替代選項。
 
 建議客戶在目前的部署中是否使用功能，並規劃變更實施以使用替代選項。
 
@@ -431,7 +432,7 @@ UberJar for Experience Manager 6.5.5.0可在 [Adobe Public Maven儲存庫中取�
 
 * 在安裝AEM 6.5.5.0時，83版的更新 [!DNL Chrome] 會造成建立封裝時發生問題。 使用其他可用的瀏覽器(例如 [!DNL Internet Explorer] 和 [!DNL Firefox]或其他AEM標準套件安裝選項)來解決問題。 安裝AEM 6.5.5.0後，問題就會解決。
 
-* 無法使用AEM預設郵件寄件者，將電子郵件傳送至遠端SMTP伺服器，因為它僅允許使用TLS v1.2進行通訊。 從中刪 `javax.mail:mail:1.5.0-b01` 除包 `system/console` 並刷新包以解決問題。
+* 無法使用AEM預設郵件寄件者，將電子郵件傳送至遠端SMTP伺服器，因為它僅允許使用TLS v1.2進行通訊。從中刪 `javax.mail:mail:1.5.0-b01` 除包 `system/console` 並刷新包以解決問題。
 
 * 當使用者第一次選擇以最適化表單來設定欄位時，儲存設定的選項不會顯示在「屬性瀏覽器」中。 在相同編輯器中選取以設定最適化表單的其他欄位，可解決此問題。
 
@@ -439,7 +440,7 @@ UberJar for Experience Manager 6.5.5.0可在 [Adobe Public Maven儲存庫中取�
 
 * 在安裝AEM 6.5.x.x時，可能會顯示下列錯誤和警告訊息：
    * 「當使用Target Standard API（IMS驗證）在AEM中設定Target整合時，將「體驗片段」匯出至Target會導致建立錯誤的選件類型。 Target會以「HTML」/來源「Adobe Target Classic」類型建立數個選件，而非「Experience Fragment」/來源類型「Adobe Target Classic」。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler`: 在granite/operations/maintenance中找不到維護視窗。
+   * `com.adobe.granite.maintenance.impl.TaskScheduler`:在granite/operations/maintenance中找不到維護視窗。
    * 當使用SUM、MAX和MIN等集合函式時，Adaptive Form伺服器端驗證將失敗。 CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler` -在granite/operations/maintenance中找不到維護視窗。
    * 透過可購買橫幅檢視器預覽資產時，不會顯示動態媒體互動影像中的熱點。
