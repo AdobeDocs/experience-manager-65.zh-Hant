@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
    * widget_write
    * workflow_read
 
-   如需設定Adobe Sign應用程式的OAuth設定並取得金鑰的逐步資訊，請參閱應用程式開發人員文 [件的設定](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md) oAuth設定。
+   如需設定Adobe Sign應用程式的OAuth設定並取得金鑰的逐步資訊，請參閱應用程式開發人員文 [件的設定](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) oAuth設定。
 
    ![OAuth設定](assets/oauthconfig_new.png)
 
