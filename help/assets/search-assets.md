@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
 workflow-type: tm+mt
-source-wordcount: '5860'
+source-wordcount: '5858'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 5%
 | [搜尋建議](#searchsuggestions) | [必備中繼資料](#mandatorymetadata) | [下載](#download) |
 | [瞭解搜尋結果和行為](#searchbehavior) | [修改搜尋刻面](#searchfacets) | [大量中繼資料更新](#metadataupdates) |
 | [搜尋排名與提升](#searchrank) | [文字擷取](#extracttextupload) | [智慧型系列](#collections) |
-| [進階搜尋： 篩選和搜尋範圍](#scope) | [自訂謂語](#custompredicates) | [瞭解意外結果和疑難排解](#troubleshoot-unexpected-search-results-and-issues) |
+| [進階搜尋：篩選和搜尋範圍](#scope) | [自訂謂語](#custompredicates) | [瞭解意外結果和疑難排解](#troubleshoot-unexpected-search-results-and-issues) |
 | [從其他解決方案和應用程式搜尋](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[品牌入口網站](#brandportal)</li><li>[Experience Manager案頭應用程式](#desktopapp)</li><li>[Adobe Stock影像](#adobestock)</li><li>[動態媒體資產](#dynamicmedia)</li></ul> |  |  |
 | [資產選取器](#assetpicker) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
@@ -43,7 +43,7 @@ ht-degree: 5%
 
 ![瞭解Experience Manager Assets搜尋結果介面](assets/aem_search_results.png)
 
-*圖： 瞭解[!DNL Experience Manager Assets]搜尋結果介面。*
+*圖：瞭解[!DNL Experience Manager Assets]搜尋結果介面。*
 
 **答：** 將搜尋儲存為智慧型系列。 **B.** 篩選或謂語，以縮小搜尋結果。 **C.** Display files, folders, or both. **D.** 按一下「篩選器」以開啟或關閉左側邊欄。**E.** 搜尋位置為 DAM。**F.** Omnisearch欄位，包含使用者提供的搜尋關鍵字。 **G.** 選取載入的搜尋結果。 **H.** 顯示的搜尋結果總數。 **I.** 關閉搜 **尋J.** 在卡片檢視和清單檢視之間切換。
 
@@ -53,7 +53,7 @@ ht-degree: 5%
 
 ![在搜尋Facet中檢視資產的概約數目，而不篩選搜尋結果。](assets/asset_search_results_in_facets_filters.png)
 
-*圖： 在搜尋Facet中檢視資產的概約數目，而不篩選搜尋結果。*
+*圖：在搜尋Facet中檢視資產的概約數目，而不篩選搜尋結果。*
 
 ## 瞭解搜尋結果和行為 {#searchbehavior}
 
@@ -102,7 +102,7 @@ ht-degree: 5%
 
 ![輸入多個關鍵字以檢視符合所有關鍵字的建議](assets/search_suggestionsmanykeywords.gif)
 
-*圖： 輸入多個關鍵字以檢視符合所有關鍵字的建議。*
+*圖：輸入多個關鍵字以檢視符合所有關鍵字的建議。*
 
 ### 搜尋排名與提升 {#searchrank}
 
@@ -128,13 +128,13 @@ ht-degree: 5%
 
 [!DNL Experience Manager] 提供各種方法，例如套用至已搜尋資產的篩選，以協助您更快找到所需的資產。 以下說明一些常用的方法。 以下 [共用一些](#samples) 圖示範例。
 
-**搜索檔案或資料夾**: 在搜索結果中，查看檔案、資料夾或兩者。 從「篩 **[!UICONTROL 選器]** 」面板中，您可以選取適當的選項。 請參閱 [搜尋介面](#searchui)。
+**搜索檔案或資料夾**:在搜索結果中，查看檔案、資料夾或兩者。 從「篩 **[!UICONTROL 選器]** 」面板中，您可以選取適當的選項。 請參閱 [搜尋介面](#searchui)。
 
-**在資料夾中搜尋資產**: 您可以將搜尋限制在特定資料夾。 在「篩 **[!UICONTROL 選器]** 」面板中，新增資料夾的路徑。 一次只能選擇一個資料夾。
+**在資料夾中搜尋資產**:您可以將搜尋限制在特定資料夾。 在「篩 **[!UICONTROL 選器]** 」面板中，新增資料夾的路徑。 一次只能選擇一個資料夾。
 
 ![在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中](assets/search_folder_select.gif)
 
-*圖： 在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中。*
+*圖：在「篩選器」面板中新增檔案夾路徑，將搜尋結果限制在檔案夾中。*
 
 ### 尋找類似的影像 {#visualsearch}
 
@@ -142,7 +142,7 @@ ht-degree: 5%
 
 ![使用卡片檢視中的選項尋找類似的影像](assets/search_find_similar.png)
 
-*圖： 使用卡片檢視中的選項尋找類似的影像。*
+*圖：使用卡片檢視中的選項尋找類似的影像。*
 
 ### Adobe Stock影像 {#adobestock}
 
@@ -170,7 +170,7 @@ ht-degree: 5%
 | 到期日 | 過期：YYYY-MM-DDTHH |
 | 準時 | ontime:YYYY-MM-DDTHH |
 | 關閉時間 | offtime:YYYY-MM-DDTHH |
-| 時間範圍（過期的dateontime,offtime） | facet欄位： 下限……上界 |
+| 時間範圍（過期的dateontime,offtime） | facet欄位：下限……上界 |
 | 路徑 | /content/dam/&lt;資料夾名稱> |
 | PDF 標題 | pdftitle:「Adobe檔案」 |
 | 主旨 | 主旨：「訓練」 |
@@ -186,13 +186,13 @@ ht-degree: 5%
 
 以下是複雜查詢的搜尋格式範例：
 
-* 若要顯示具有多個刻面欄位的所有資產(例如： title=John Doe and creator tool = Adobe Photoshop): `tiltle:"John Doe" creatortool:Adobe*`
-* 若要在Facet值不是單字而是句子時顯示所有資產(例如： title=Scott Reynolds): `title:"Scott Reynolds"`
-* 若要顯示具有單一屬性多個值的資產(例如： title=Scott Reynolds或John Doe): `title:"Scott Reynolds" OR "John Doe"`
-* 若要顯示屬性值以特定字串開頭的資產(例如： 標題是Scott Reynolds): `title:Scott*`
-* 若要顯示屬性值以特定字串結尾的資產(例如： 標題是Scott Reynolds): `title:*Reynolds`
-* 若要顯示包含特定字串的屬性值的資產(例如： 標題=巴塞爾會議室): `title:*Meeting*`
-* 若要顯示包含特定字串且具有特定屬性值的資產(例如： 在具有title=John Doe的資產中搜尋字串Adobe): `*Adobe* title:"John Doe"`
+* 若要顯示具有多個刻面欄位的所有資產(例如：title=John Doe and creator tool = Adobe Photoshop): `tiltle:"John Doe" creatortool:Adobe*`
+* 若要在Facet值不是單字而是句子時顯示所有資產(例如：title=Scott Reynolds): `title:"Scott Reynolds"`
+* 若要顯示具有單一屬性多個值的資產(例如：title=Scott Reynolds或John Doe): `title:"Scott Reynolds" OR "John Doe"`
+* 若要顯示屬性值以特定字串開頭的資產(例如：標題是Scott Reynolds): `title:Scott*`
+* 若要顯示屬性值以特定字串結尾的資產(例如：標題是Scott Reynolds): `title:*Reynolds`
+* 若要顯示包含特定字串的屬性值的資產(例如：標題=巴塞爾會議室): `title:*Meeting*`
+* 若要顯示包含特定字串且具有特定屬性值的資產(例如：在具有title=John Doe的資產中搜尋字串Adobe): `*Adobe* title:"John Doe"`
 
 ## 從其他產品或介面 [!DNL Experience Manager] 搜尋資產 {#beyondomnisearch}
 
@@ -247,7 +247,7 @@ ht-degree: 5%
 
 ![在資產選擇器中瀏覽並選取資產](assets/assetpicker.png)
 
-*圖： 在資產選擇器中瀏覽並選取資產。*
+*圖：在資產選擇器中瀏覽並選取資產。*
 
 ## 限制 {#limitations}
 
@@ -278,9 +278,9 @@ ht-degree: 5%
 * 全文搜索支援運算子，如——和^。 要將這些字母作為字串文本搜索，請用雙引號將搜索表達式括起來。 例如，使用「筆記型電腦——美容」而非「筆記型電腦——美容」。
 * 如果搜尋結果太多，請將 [搜尋範圍限制](#scope) 為所要資產的零值。 當您對如何更好地尋找所需資產（例如特定檔案類型、特定位置、特定中繼資料等）有一些概念時，效果最佳。
 
-* **標籤**: 標籤可協助您將可以更有效率地瀏覽和搜尋的資產分類。 標籤有助於將適當的分類傳播給其他用戶和工作流。 [!DNL Experience Manager] 提供使用Adobe Sensei人為智慧服務自動標籤資產的方法，這些服務在使用和訓練中不斷改進對資產的標籤。 當您搜尋資產時，如果您的帳戶已啟用功能，智慧標籤會加入。 它可與內建搜尋功能搭配使用。 請參閱 [搜尋行為](#searchbehavior)。 若要最佳化搜尋結果的顯示順序，您可以提 [高少數選取資產的搜尋](#searchrank) 排名。
+* **標籤**:標籤可協助您將可以更有效率地瀏覽和搜尋的資產分類。 標籤有助於將適當的分類傳播給其他用戶和工作流。 [!DNL Experience Manager] 提供使用Adobe Sensei人為智慧服務自動標籤資產的方法，這些服務在使用和訓練中不斷改進對資產的標籤。 當您搜尋資產時，如果您的帳戶已啟用功能，智慧標籤會加入。 它可與內建搜尋功能搭配使用。 請參閱 [搜尋行為](#searchbehavior)。 若要最佳化搜尋結果的顯示順序，您可以提 [高少數選取資產的搜尋](#searchrank) 排名。
 
-* **索引**: 搜尋結果中只會傳回已建立索引的中繼資料和資產。 為了獲得更好的覆蓋面和效能，請確保正確編製索引並遵循最佳做法。 請參 [閱索引](#searchindex)。
+* **索引**:搜尋結果中只會傳回已建立索引的中繼資料和資產。 為了獲得更好的覆蓋面和效能，請確保正確編製索引並遵循最佳做法。 請參 [閱索引](#searchindex)。
 
 ## 一些範例說明搜尋 {#samples}
 
@@ -288,9 +288,9 @@ ht-degree: 5%
 
 ![使用引號和不使用引號的搜尋行為](assets/search_with_quotes.gif)
 
-*圖： 搜尋行為時有引號或無引號。*
+*圖：搜尋行為時有引號或無引號。*
 
-**使用星號通配符進行搜索**: 若要擴大搜尋範圍，請在搜尋字詞前後使用星號，以比對任意數目的字元。 例如，搜尋沒有星號的執行並不會傳回包含字詞變異的資產（包括在中繼資料中）。 星號可取代任意數字元。 例如，
+**使用星號通配符進行搜索**:若要擴大搜尋範圍，請在搜尋字詞前後使用星號，以比對任意數目的字元。 例如，搜尋沒有星號的執行並不會傳回包含字詞變異的資產（包括在中繼資料中）。 星號可取代任意數字元。 例如，
 
 * `run` 返回正確執行關鍵字的資產
 * `run*` 傳回資產，包括執行、執行、逃跑等。
@@ -299,9 +299,9 @@ ht-degree: 5%
 
 ![以範例說明在資產搜尋中使用星號萬用字元](assets/search_with_asterisk_run.gif)
 
-*圖： 以範例說明在資產搜尋中使用星號萬用字元。*
+*圖：以範例說明在資產搜尋中使用星號萬用字元。*
 
-**使用問號萬用字元搜尋**: 若要擴大搜尋範圍，請使用一或多個「?」 字元來比對字元數目。 例如，在下圖中，
+**使用問號萬用字元搜尋**:若要擴大搜尋範圍，請使用一或多個「?」 字元來比對字元數目。 例如，在下圖中，
 
 * `run???` 查詢不符合任何資產。
 
@@ -311,13 +311,13 @@ ht-degree: 5%
 
 ![使用範例說明在資產搜尋中使用問號萬用字元](assets/search_with_questionmark_run.gif)
 
-*圖： 以範例說明在資產搜尋中使用問號萬用字元。*
+*圖：以範例說明在資產搜尋中使用問號萬用字元。*
 
-**排除關鍵字**: 使用破折號來搜尋不含關鍵字的資產。 例如，查 `running -shoe` 詢會傳回包含但 `running`不包含的資產 `shoe`。 同樣地， `camp -night` 查詢會傳回包含但不包含 `camp` 的資產 `night`。 查詢會 `camp-night` 傳回同時包含和的 `camp` 資產 `night`。
+**排除關鍵字**:使用破折號來搜尋不含關鍵字的資產。 例如，查 `running -shoe` 詢會傳回包含但 `running`不包含的資產 `shoe`。 同樣地， `camp -night` 查詢會傳回包含但不包含 `camp` 的資產 `night`。 查詢會 `camp-night` 傳回同時包含和的 `camp` 資產 `night`。
 
 ![使用破折號來搜尋不含已排除關鍵字的資產](assets/search_dash_exclude_keyword.gif)
 
-*圖： 使用破折號來搜尋不含已排除關鍵字的資產。*
+*圖：使用破折號來搜尋不含已排除關鍵字的資產。*
 
 ## 與搜索功能相關的配置和管理任務 {#configadmin}
 
@@ -419,7 +419,7 @@ ht-degree: 5%
 
 ![排序搜尋資產的時間軸項目](assets/sort_timeline_search_results.gif)
 
-*圖： 排序搜尋資產的時間軸項目。*
+*圖：排序搜尋資產的時間軸項目。*
 
 ### 下載搜尋的資產 {#download}
 
@@ -457,6 +457,6 @@ ht-degree: 5%
 >[!MORELIKETHIS]
 >
 >* [Experience Manager搜尋實作指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
->* [多值和標籤搜尋謂語的進階設定](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html)
+>* [進階設定可大幅提升搜尋結果](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search-boost.html)
 >* [配置智慧翻譯搜索](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
 
