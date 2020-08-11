@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70052a5a8cba16dd2d73179e6e1d617347d716bc
+source-git-commit: e562ffe229543a1ee93467bcbc1a7be6c12927c6
 workflow-type: tm+mt
-source-wordcount: '3679'
+source-wordcount: '3643'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    ![簽署者——詳細資訊](assets/signer-details.png)
 
-   上述影像有兩個範例Adobe Sign Blocks: 個人資訊和辦公室詳細資訊
+   上述影像有兩個範例Adobe Sign Blocks:個人資訊和辦公室詳細資訊
 
    點選「Done ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」圖示。 簽章者已新增並設定。
 
@@ -206,9 +206,10 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 此外，只有所有簽署者簽署表格後，才會提交啟用Adobe Sign的最適化表格。 您可以在表單入口網站的「待簽」區段中找到部分簽署的表單。 Adobe Sign Configuration Service會定期輪詢Adobe Sign [伺服器](../../forms/using/adobe-sign-integration-adaptive-forms.md) ，以驗證簽名狀態。 如果所有簽署者都完成表單簽署，則會啟動提交動作服務並提交表單。 如果您使用自訂提交動作，而表單使用Adobe Sign，請更新自訂提交動作以使用提交動作服務。
 
+<!-- Remove when forms portal goes live
 >[!NOTE]
 >
->最適化表單的資料會暫時儲存在表單入口網站上。 建議您使用Forms Portal [的自訂儲存空間](/help/forms/using/configuring-draft-submission-storage.md)。 它可確保PII（個人識別資訊）資料不會儲存在AEM伺服器上。
+>Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. -->
 
 您的表單簽署體驗已就緒。 您可以預覽表單以驗證簽署體驗。 在發佈的表格上，當簽章者透過電子郵件收到表格進行簽署時，會顯示「Adobe Sign Block」欄位。 這種體驗也稱為表單外簽署體驗。 您也可以為第一個簽署者設定表單內簽署體驗，如需詳細步驟，請參閱「 [建立表單內簽署體驗」](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)。
 
@@ -238,8 +239,8 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    使用下列功能，將數位簽名套用至最適化表單：
 
-   * 雲端簽名： 使用信任服 [務供應商代管](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 的數位ID進行簽署。
-   * Adobe Acrobat或Reader: 使用Adobe Acrobat或Reader下載並開啟檔案，以使用智慧卡、USB Token或以檔案為基礎的數位ID進行簽署。
+   * 雲端簽名：使用信任服 [務供應商代管](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 的數位ID進行簽署。
+   * Adobe Acrobat或Reader:使用Adobe Acrobat或Reader下載並開啟檔案，以使用智慧卡、USB Token或以檔案為基礎的數位ID進行簽署。
 
    將雲端簽名欄位新增至最適化表單後，請執行下列步驟以完成設定程式：
 
@@ -267,15 +268,15 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 1. 將「簽名步驟」元 **件從「元件** 」瀏覽器拖放至表單。
 1. 選取新增的「簽名」步驟元件，並點選「設 **定**![設定](assets/configure.png) 」圖示。 它會開啟屬性瀏覽器並顯示「簽名」步驟屬性。 設定下列屬性：
 
-   * **元素名稱**: 指定元件的名稱。
+   * **元素名稱**:指定元件的名稱。
 
    * **標題：** 指定元件的唯一標題。
    * **範本訊息：** 指定在載入簽名PDF時要顯示的訊息。 Adobe Sign Services需要一些時間來準備和載入簽名PDF。
    * **簽署服務：** 選取 **Adobe Sign** 選項。
 
-   * **使用舊版電子簽名元件**: 如果您在 [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md)、AEM Forms應用程式中使用個別的最適化表單，或基礎的最適化表單有舊版電子簽名元件，請選取 **Use legacy E-sign元件選項** 。
+   * **使用舊版電子簽名元件**:如果您在 [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md)、AEM Forms應用程式中使用個別的最適化表單，或基礎的最適化表單有舊版電子簽名元件，請選取 **Use legacy E-sign元件選項** 。
 
-   * **配置**: 選取設定（Adobe Sign Cloud服務）。 下拉式方塊僅在啟用「使用舊 **版電子簽名元件** 」選項時可用。
+   * **配置**:選取設定（Adobe Sign Cloud服務）。 下拉式方塊僅在啟用「使用舊 **版電子簽名元件** 」選項時可用。
 
    點選「Done ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」圖示以儲存變更。
 
@@ -307,7 +308,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 **Ans:** 使用進階範本建立的最適化表單已設定為使用Adobe Sign。 若要解決錯誤，請建立並選取Adobe Sign雲端組態，並為最適化表單設定Adobe Sign簽章者。
 
-**Ans:** 是的，您可以在文字元件中使用文字標籤，將Adobe Sign欄位新增至啟用「記錄檔案 [](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) 」（僅限「自動產生記錄檔案」選項）的最適化表單。 若要瞭解建立文字標籤的程式和規則，請參閱 [Adobe Sign檔案](https://helpx.adobe.com/sign/help/text-tags.html)。 另請注意，最適化表單對文字標籤的支援有限。 您只能使用文字標籤來建立 [Adobe Sign Block支援的欄位](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) 。
+**Ans:** 是的，您可以在文字元件中使用文字標籤，將Adobe Sign欄位新增至啟用「記錄檔案 [](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) 」（僅限「自動產生記錄檔案」選項）的最適化表單。 若要瞭解建立文字標籤的程式和規則，請參閱 [Adobe Sign檔案](https://helpx.adobe.com/sign/using/text-tag.html)。 另請注意，最適化表單對文字標籤的支援有限。 您只能使用文字標籤來建立 [Adobe Sign Block支援的欄位](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) 。
 
 **Ans:** 您可以在表單中同時使用這兩個元件。 以下是使用這些元件的一些建議：
 
