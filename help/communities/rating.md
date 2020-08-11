@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 0051791da06d15a48b82cf93164a89b4ea42ce98
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 2%
 
 ---
 
@@ -27,19 +30,19 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 當包含 [所需的用戶端程式庫](rating-basics.md#essentials-for-client-side) ，元件的顯示方式 `Rating` 就是這樣。
 
-![chlimage_1-493](assets/chlimage_1-493.png)
+![評等](assets/rating.png)
 
 ## 設定評分 {#configuring-rating}
 
 選擇要訪問 `Rating` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-494](assets/chlimage_1-494.png)
+![configure-new](assets/configure-new.png)
 
 在「文 **[!UICONTROL 字與標籤]** 」索引標籤下，指定「評分」的內部識別碼。
 
-![chlimage_1-495](assets/chlimage_1-495.png)
+![tallyname](assets/tallyname.png)
 
-**[!UICONTROL Tally Name]**(*必要*)唯一識別此例項 `Rating`的簡單名稱。 必須為儲存庫的有效節點名。
+**[!UICONTROL Tally Name]**(*必要*)唯一識別此實例的 `Rating` 簡單名稱。 必須為儲存庫的有效節點名。
 
 ## 網站訪客體驗 {#site-visitor-experience}
 
