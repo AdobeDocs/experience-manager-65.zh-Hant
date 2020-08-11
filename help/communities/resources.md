@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 4e2fa3b0a64ae2e959dad85e3a1bc4a1027a2eef
+workflow-type: tm+mt
+source-wordcount: '2979'
+ht-degree: 4%
 
 ---
 
@@ -75,9 +78,9 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 在作者環境中，若要進入資源主控台
 
-* 從全域導覽：導覽 **[!UICONTROL >]** 社群 **[!UICONTROL >資]****[!UICONTROL 源]**
+* 從全域導覽： **[!UICONTROL 導覽]** >社 **[!UICONTROL 群]** >資 **[!UICONTROL 源]**
 
-   ![chlimage_1-163](assets/chlimage_1-163.png)
+   ![啟用網站](assets/enablement-sites.png)
 
 ### 選擇社群網站 {#select-a-community-site}
 
@@ -87,25 +90,25 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 一旦選擇了特定的社群網站，任何現有的啟用資源和學習路徑都可供管理和修改，並且可以建立新的啟用資源和學習路徑。
 
-![chlimage_1-164](assets/chlimage_1-164.png)
+![社群資源](assets/community-resources.png)
 
 #### 搜尋 {#search-features}
 
-![chlimage_1-165](assets/chlimage_1-165.png)
+![searchsite](assets/searchsite.png)
 
 選取側面板切換圖示，以搜尋啟用資源或學習路徑。 選取後，控制台左側的搜尋面板會開啟，並提供可輸入搜尋詞的文字方塊。
 
-![chlimage_1-166](assets/chlimage_1-166.png)
+![搜索結果](assets/search-result.png)
 
 #### 選擇模式 {#selection-mode}
 
 若要選取多個啟用資源，請將滑鼠指標暫留在資訊卡上並選取核取標籤圖示，以選取第一個。 選取後，選取任何其他卡片會將其新增至選取群組。 選取第二次時間會取消選取卡片。
 
-![chlimage_1-167](assets/chlimage_1-167.png)
+![選擇模式](assets/selection-mode.png)
 
 ## 建立資源 {#create-a-resource}
 
-![chlimage_1-168](assets/chlimage_1-168.png)
+![create-resource](assets/create-resource1.png)
 
 要向社群站點添加新的啟用資源
 
@@ -124,7 +127,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 1 Basic Info {#basic-info}
 
-![chlimage_1-169](assets/chlimage_1-169.png)
+![resource-basicinfo](assets/resource-basicinfo.png)
 
 * **[!UICONTROL 新增影像]**
 
@@ -168,13 +171,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 2 Add Content {#add-content}
 
-![chlimage_1-170](assets/chlimage_1-170.png)
+![資源添加內容](assets/resource-addcontent.png)
 
 雖然它看起來好像可以選擇多個啟用資源，但僅允許一個。
 
 在右 `'+' icon`上角選擇，通過標識源開始選擇資源的過程。
 
-![chlimage_1-171](assets/chlimage_1-171.png)
+![上傳資源](assets/upload-resource1.png)
 
 * **[!UICONTROL 從我的本機檔案上傳]**
 
@@ -228,7 +231,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 #### 新增視訊資源的範例 {#example-of-an-added-video-resource}
 
-![chlimage_1-172](assets/chlimage_1-172.png)
+![add-video](assets/add-video.png)
 
 * **[!UICONTROL 資源封面影像]**
 
@@ -240,7 +243,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 3 Settings {#settings}
 
-![chlimage_1-173](assets/chlimage_1-173.png)
+![資源設定](assets/resource-settings.png)
 
 >[!NOTE]
 >
@@ -283,7 +286,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 4 Assignments {#assignments}
 
-![chlimage_1-174](assets/chlimage_1-174.png)
+![資源分配](assets/resource-assignments.png)
 
 * **[!UICONTROL 新增被指定者]**
 
@@ -291,13 +294,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 * 選擇 **[!UICONTROL 建立]**。
 
-   ![chlimage_1-175](assets/chlimage_1-175.png)
+   ![resourceinfo](assets/resourceinfo.png)
 
 成功建立啟用資源將返回「資源」控制台，並選擇新建的資源。 通過此控制台，可以管 [理資源](#managing-a-resource)。
 
 ## Create a Learning Path {#create-a-learning-path}
 
-![chlimage_1-176](assets/chlimage_1-176.png)
+![新增——學習——路徑](assets/add-learning-path.png)
 
 若要新增學習路徑至社群網站
 
@@ -318,7 +321,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 基本資訊 {#basic-info-1}
 
-![chlimage_1-177](assets/chlimage_1-177.png)
+![學習路徑——基本](assets/learningpath-basic1.png)
 
 * **[!UICONTROL 新增影像]**
 
@@ -362,7 +365,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 新增必備條件 {#add-prerequisites}
 
-![chlimage_1-178](assets/chlimage_1-178.png)
+![學習路徑先決條件](assets/learningpath-prerequisites.png)
 
 * **[!UICONTROL 必備條件學習路徑]**
 
@@ -372,7 +375,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 新增資源 {#add-resources}
 
-![chlimage_1-179](assets/chlimage_1-179.png)
+![learningpath-addresource](assets/learningpath-addresource.png)
 
 * **[!UICONTROL 強制實施學習路徑中的排序]**
 
@@ -391,7 +394,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 設定 {#settings-1}
 
-![chlimage_1-180](assets/chlimage_1-180.png)
+![learningpath-settings1](assets/learningpath-settings1.png)
 
 * **[!UICONTROL 新增註冊]**
 
@@ -429,7 +432,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 編輯資源 {#edit-resource}
 
-![chlimage_1-181](assets/chlimage_1-181.png)
+![edit-resource](assets/edit-resource.png)
 
 通過選擇鉛筆表徵圖，使用用於建立啟用資源的顯示步驟，以便可以修改提供的任何資訊。
 
@@ -437,13 +440,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 刪除資源 {#delete-resource}
 
-![chlimage_1-182](assets/chlimage_1-182.png)
+![刪除資源](assets/delete-resource.png)
 
 通過選擇轉存器表徵圖，啟用資源將在確認 `Deleted` 之後。
 
 ### 發佈 {#publish}
 
-![chlimage_1-183](assets/chlimage_1-183.png)
+![publish-resource](assets/publish-resource1.png)
 
 學員必須先發佈它，才能看到指派的啟用資源：
 
@@ -455,25 +458,25 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 未發佈 {#unpublish}
 
-![chlimage_1-184](assets/chlimage_1-184.png)
+![解除發佈](assets/unpublish.png)
 
 若要暫時讓發佈環境中的成員無法存取啟用資源，而不要加以刪除，請使用資源的世界 `Unpublish` 圖示。
 
 ### 報表 {#report}
 
-![chlimage_1-185](assets/chlimage_1-185.png)
+![resource-reports](assets/resource-reports.png)
 
 「報表」圖示可讓學員在發佈環境中與指派的啟用資源互動時，存取產生的報表。 報表會依資源類型而異。
 
 對於所有學習路徑，您可以根據資源或學員( `User Report`.)來檢視報表
 
-![chlimage_1-186](assets/chlimage_1-186.png)
+![learningpath-info](assets/learningpath-info1.png)
 
 此報告專門針對目前的啟用資源或學習路徑。 提供的報表深度取決於 [Adobe Analytics](analytics.md) 是否已授權並啟用社群網站。 「時 [間軸](#timeline)」、「檢 [視器參與](#viewer-engagement)」和「依裝置 [的參與」報表會根據投票間隔從Adobe Analytics](#engagement-by-device)[](analytics.md#report-importer)匯入。
 
 對於所有啟用資源，不論Adobe Analytics是否啟用，都會有「受託人狀態」和「分級」的報表，以及「報表 [摘要](#assignee-status)[](#ratings)[](#report-summary) 」表格。
 
-![chlimage_1-187](assets/chlimage_1-187.png)
+![resource-report](assets/resource-report1.png)
 
 #### 時間軸 {#timeline}
 
@@ -563,7 +566,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 「報表摘要」表格可使用控制台上方的按鈕以CSV格式下載。
 
-* 對於啟用資源：按 `Download Resource Report as CSV` 鈕。
-* 學習途徑：按 `Download Learning Path Report as CSV` 鈕。
+* 對於啟用資源： `Download Resource Report as CSV` 按鈕。
+* 學習途徑： `Download Learning Path Report as CSV` 按鈕。
 
 無論選擇要顯示的欄，都會下載完整的報表摘要。
