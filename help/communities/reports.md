@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 0051791da06d15a48b82cf93164a89b4ea42ce98
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 7%
 
 ---
 
@@ -44,7 +47,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ### 社群網站的報表 {#reports-for-community-sites}
 
-* 從全域導覽：導覽 **[!UICONTROL >]** 社群 **[!UICONTROL >報]****[!UICONTROL 表]**
+* 從全域導覽： **[!UICONTROL 導覽]** >社 **[!UICONTROL 群]** >報 **[!UICONTROL 表]**
 
 * 選擇：
 
@@ -60,11 +63,11 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 
 
-![chlimage_1-236](assets/chlimage_1-236.png)
+![報表](assets/reports1.png)
 
 ### 啟用資源和學習路徑的報表 {#reports-for-enablement-resources-and-learning-paths}
 
-* 從全域導覽：導覽 **[!UICONTROL >]** 社群 **[!UICONTROL >資]****[!UICONTROL 源]**
+* 從全域導覽： **[!UICONTROL 導覽]** >社 **[!UICONTROL 群]** >資 **[!UICONTROL 源]**
 
 * 選取現有的啟用社群網站：
 
@@ -93,7 +96,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 報告提供有關其進度的資訊，以及所提供的任何意見或評分。
 
-![chlimage_1-237](assets/chlimage_1-237.png)
+![assignment-report](assets/assignment-report.png)
 
 選取報表的條件：
 
@@ -104,6 +107,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 * **使用者或群組**
    * 選取「使用者」，為一個學員產生報表。
    * 選取「群組」，為學員群組產生報表。
+
    隧道服務將從發佈環境訪問成員和成員組。
 
 * **指定任務**
@@ -112,13 +116,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 選擇 **生成** ，建立報表：
 
-![chlimage_1-238](assets/chlimage_1-238.png)
+![generate-report](assets/generate-assignment-report.png)
 
 ## 檢視報表 {#views-report}
 
 「檢視」控制台可讓報表在指定時段內，依社群功能在頁面檢視時產生。
 
-![chlimage_1-239](assets/chlimage_1-239.png)
+![view-report](assets/view-report.png)
 
 選擇報表的標準：
 
@@ -141,13 +145,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 選擇 **[!UICONTROL 產生]** ，以建立報表。
 
-![chlimage_1-240](assets/chlimage_1-240.png)
+![generate-views](assets/generate-views.png)
 
 ## 貼文報表 {#posts-report}
 
 「貼文」控制台可讓您針對特定時段內社群功能的貼文數產生報表。
 
-![chlimage_1-241](assets/chlimage_1-241.png)
+![貼文——報表](assets/posts-report.png)
 
 選擇報表的標準：
 
@@ -170,7 +174,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 選擇 **[!UICONTROL 產生]** ，以建立報表。
 
-![chlimage_1-242](assets/chlimage_1-242.png)
+![generate-report](assets/generate-posts-report.png)
 
 ## 疑難排解 {#troubleshooting}
 
