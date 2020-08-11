@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: e84c9a99ce9ec0447a5fb3e0ca5ba76b41c888cd
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 5%
 
 ---
 
@@ -25,15 +28,15 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
    * 例如， [http://localhost:4502/](http://localhost:4503/)
 * 從全域導覽中，選取「社 **[!UICONTROL 群]** >資源 **[!UICONTROL 」]**
 
-   ![chlimage_1-199](assets/chlimage_1-199.png)
+   ![資源](assets/resources.png)
 
-   ![chlimage_1-200](assets/chlimage_1-200.png)
+   ![啟用資源](assets/enablement-resource.png)
 * 選擇要向其添加啟用資源的社區站點：
    * 選擇 **[!UICONTROL 啟用教學課程]**。
 * 從菜單中，選擇「創 **[!UICONTROL 建」]**。
 * 選擇 **[!UICONTROL 資源]**。
 
-![chlimage_1-201](assets/chlimage_1-201.png)
+![create-resource](assets/create-enablement-resource.png)
 
 ### 基本資訊 {#basic-info}
 
@@ -63,7 +66,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
    在其「分配」視圖中添加一個映像以將資源表示到成員。
 
-   ![chlimage_1-202](assets/chlimage_1-202.png)
+   ![basic-info](assets/basic-info.png)
 
 * 選擇下 **[!UICONTROL 一步]**
 
@@ -73,11 +76,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 在右 `'+' icon`上角選擇，通過標識源開始選擇資源的過程。
 
-![chlimage_1-203](assets/chlimage_1-203.png) ![chlimage_1-204](assets/chlimage_1-204.png)
+![新增內容](assets/add-content.png)
+
+![上傳資源](assets/upload-resource.png)
 
 上傳資源。 如果視訊資源，請上傳自訂影像以在視訊開始播放前顯示，或允許從視訊產生縮圖（可能需要幾分鐘——不需要等待）。
 
-![chlimage_1-206](assets/chlimage_1-205.png)
+![上傳影片](assets/upload-video.png)
 
 * 選擇 **[!UICONTROL 下一步]**。
 
@@ -105,7 +110,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
    **注意**:如果使用者或群組不可見，請檢查是否已新增至群組，並 `Community Enable Members` 在發佈例 *項中* 「儲存」。
 
-   ![chlimage_1-205](assets/chlimage_1-206.png)
+   ![啟用設定](assets/enablement-settings.png)
 
 * 選擇下 **[!UICONTROL 一步]**
 
@@ -115,11 +120,11 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
    請保持未設定，因為此啟用資源將會新增至學習路徑。 如果將學員指派給個別的啟用資源以及包含啟用資源的學習路徑，則會將學員指派給啟用資源兩次。
 
-   ![chlimage_1-207](assets/chlimage_1-207.png)
+   ![添加分配](assets/add-assignments.png)
 
 * Select **[!UICONTROL Create]**
 
-   ![chlimage_1-208](assets/chlimage_1-208.png)
+   ![create-resource](assets/create-resource.png)
 
 成功建立資源將返回資源控制台，並選擇新建的資源。 在此主控台中，您可以發佈、新增學員並變更其他設定。
 
@@ -133,13 +138,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 啟動已確認並顯示成功訊息：
 
-![chlimage_1-209](assets/chlimage_1-209.png)
+![publish-resource](assets/publish-resource.png)
 
 ## 新增第二個啟用資源 {#add-a-second-enablement-resource}
 
 重複上述步驟，建立並發佈第二個相關的啟用資源，從中建立學習路徑。
 
-![chlimage_1-210](assets/chlimage_1-210.png)
+![添加資源](assets/add-resource.png)
 
 **發佈** 第二個資源。
 
@@ -147,7 +152,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 *提示：如果兩個資源都不可見，請重新整理頁面。*
 
-![chlimage_1-211](assets/chlimage_1-211.png)
+![refresh-resource](assets/refresh-resource.png)
 
 ## 新增學習路徑 {#add-a-learning-path}
 
@@ -156,7 +161,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 * 從資源控制台中，選擇 `+ Create`
 * 選擇學 **[!UICONTROL 習路徑]**
 
-![chlimage_1-212](assets/chlimage_1-212.png)
+![新增——學習——路徑](assets/add-learning-path.png)
 
 新增基 **[!UICONTROL 本資訊]**:
 
@@ -176,7 +181,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
    在資源控制台中表示學習路徑。
 
-   ![chlimage_1-213](assets/chlimage_1-213.png)
+   ![學習路徑——基本](assets/learningpath-basic.png)
 
 * 選擇 **[!UICONTROL 下一步]**。
 
@@ -197,13 +202,13 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 * 選擇 **[!UICONTROL 提交]**。
 
-   ![chlimage_1-214](assets/chlimage_1-214.png)
+   ![學習路徑](assets/learningpath-add.png)
 
-   ![chlimage_1-215](assets/chlimage_1-215.png)
+   ![建立學習路徑](assets/create-learningpath.png)
 
 * 選擇下 **[!UICONTROL 一步]**
 
-   ![chlimage_1-216](assets/chlimage_1-216.png)
+   ![學習路徑設定](assets/learningpath-settings.png)
 
 * **[!UICONTROL 新增被指定者]**
 
@@ -215,7 +220,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 * 選擇 **[!UICONTROL 建立]**。
 
-   ![chlimage_1-217](assets/chlimage_1-217.png)
+   ![learningpath-info](assets/learningpath-info.png)
 
 成功建立學習路徑將返回「資源」(Resources)控制台，並選擇新建的學習路徑。 在此主控台中，您可以發佈、新增學員並變更其他設定。
 
