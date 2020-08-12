@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+workflow-type: tm+mt
+source-wordcount: '3292'
+ht-degree: 3%
 
 ---
 
@@ -53,17 +56,17 @@ Communities Sites控制台可讓您存取：
 
 在作者環境中，要訪問Communities Sites控制台：
 
-* 從全域導覽：社 **[!UICONTROL 群]** >網 **[!UICONTROL 站]**
+* 從全域導覽： **[!UICONTROL 社群]** >網 **[!UICONTROL 站]**
 
 「社群網站」主控台會顯示任何現有的社群網站。 在此控制台中，可以建立、編輯、管理和刪除社區站點。
 
 若要建立新社群網站，請選取「建 **立** 」圖示。
 
-若要存取現有社群網站，請為編寫、修改、發佈、匯出或新增巢狀群組之目的，選取網站的檔案夾圖示。
+若要存取現有社群網站，為了製作、修改、發佈、匯出或新增巢狀群組，請選取網站的檔案夾圖示。
 
-例如，下圖顯示主Communities Sites控制台，顯示兩個社群站點的資料夾：啟 [用](/help/communities/getting-started-enablement.md) , [並參與](/help/communities/getting-started.md):
+例如，下圖顯示主Communities Sites控制台，顯示兩個社群站點的資料夾： [啟用](/help/communities/getting-started-enablement.md) 並 [吸引](/help/communities/getting-started.md):
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![site-console](assets/site-console.png)
 
 ## 網站建立 {#site-creation}
 
@@ -136,7 +139,7 @@ Communities Sites控制台可讓您存取：
 
 #### COMMUNITY SITE BRANDING {#community-site-branding}
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![網站品牌](assets/site-branding.png)
 
 社群網站品牌是顯示為每個頁面上方標題的影像。
 
@@ -228,7 +231,7 @@ Communities Sites控制台可讓您存取：
 
 #### TAGGING {#tagging}
 
-![chlimage_1-156](assets/chlimage_1-156.png)
+![網站標籤](assets/site-tagging.png)
 
 可套用至社群內容的標籤是透過選取「標籤控制台」先前定義的「標籤名稱空間」來 [控制的](/help/sites-administering/tags.md#tagging-console)。
 
@@ -262,7 +265,7 @@ Communities Sites控制台可讓您存取：
 
 #### MODERATION {#moderation}
 
-![chlimage_1-157](assets/chlimage_1-157.png)
+![網站協調](assets/site-moderation.png)
 
 協調使用者產生內容(UGC)的全域設定由這些設定控制。 個別元件有其他設定可控制協調。
 
@@ -276,14 +279,14 @@ Communities Sites控制台可讓您存取：
 
 #### ANALYTICS {#analytics}
 
-![chlimage_1-158](assets/chlimage_1-158.png)
+![網站分析](assets/site-analytics.png)
 
 * **啟動 Analytics**
 
    只有在Adobe Analytics已針對社群功能 [設定](/help/communities/analytics.md) 時才可用。
 預設為未勾選。 勾選後，會出現其他選擇功能表：
 
-![chlimage_1-159](assets/chlimage_1-159.png)
+![site-analytics-enable](assets/site-analytics-enable.png)
 
 * **雲端設定框架引用**
 
@@ -292,13 +295,13 @@ Communities Sites控制台可讓您存取：
 
 #### TRANSLATION {#translation}
 
-![chlimage_1-160](assets/chlimage_1-160.png)
+![站點轉換](assets/site-translation.png)
 
 * **允許機器翻譯**
 
    勾選後（預設為未勾選），網站內的UGC就會啟用機器轉譯。 這不會影響任何其他內容，例如頁面內容，即使網站設定為多語言網站亦然。 如需 [為AEM Communities設定授權翻譯服務的詳細資訊，請參閱轉譯使用者產生的內容](/help/communities/translate-ugc.md) 。 如需 [完整概觀，請參閱多語言網站的轉譯內容](/help/sites-administering/translation.md) 。
 
-![chlimage_1-161](assets/chlimage_1-161.png)
+![允許機器翻譯](assets/allow-machine-translation.png)
 
 * **為選取的語言啟用機器翻譯**
 
@@ -353,7 +356,7 @@ Communities Sites控制台可讓您存取：
 
 #### ENABLEMENT {#enablement}
 
-![chlimage_1-162](assets/chlimage_1-162.png)
+![網站啟用](assets/site-enablement.png)
 
 當選 `ENABLEMENT`擇的社群網站範本包含指派功能時，即可 [使用這些設定](/help/communities/functions.md#assignments-function)，當啟用功能獲得授權並設定時，即 [可使用](/help/communities/enablement.md)。 包括分配功能的參考站點模板是 `Reference Structured Learning Site Template.`
 
@@ -378,25 +381,23 @@ Communities Sites控制台可讓您存取：
 * 禁用社區站點模板不會影響建立的社區站點。
 * 通過修改社區站點 [的屬性](#modify-structure) ，可以編輯其STRUCTURE。
 
-![chlimage_1-163](assets/chlimage_1-163.png)
+![create-site](assets/create-site1.png)
 
 當程式完成時，新站點的資料夾將顯示在「社群站點」控制台中，作者可以從中添加頁面內容，或者管理員可以修改站點的屬性。
 
-![chlimage_1-164](assets/chlimage_1-164.png)
+![modify-site-property](assets/modify-site-property.png)
 
 要修改社區站點，請選擇其項目資料夾以將其開啟：
 
-![siteactions-1](assets/siteactions-1.png)
+![site-project](assets/site-project.png)
 
 當用滑鼠暫留在網站上或觸碰網站卡時，會出現允許以作者模式編輯網站、 [開啟網站以進行修改的圖示](#authoring-site-content)、網站發佈、網站發佈 [、](#modifying-site-properties)SiteProbishing、刪除The Site Probiste Administration的圖示 [](#publishing-the-site)[](#exporting-the-site)[](#deleting-the-site)，這些圖示允許以作者模式編輯網站。
 
 ## 製作網站內容 {#authoring-site-content}
 
-![chlimage_1-165](assets/chlimage_1-165.png)
-
 網站的內容可能與任何其他AEM網站使用相同的工具編寫。 若要開啟網站以進行製作，請選取 `Open Site` 滑鼠暫留在網站上的圖示。 該站點將在新頁籤中開啟，以便Communities Sites控制台仍可訪問。
 
-![chlimage_1-166](assets/chlimage_1-166.png)
+![網站內容](assets/site-content.png)
 
 >[!NOTE]
 >
@@ -405,13 +406,13 @@ Communities Sites控制台可讓您存取：
 
 ## 修改站點屬性 {#modifying-site-properties}
 
-![chlimage_1-167](assets/chlimage_1-167.png)
+![edit-site](assets/edit-site.png)
 
 在網站建立程式中指定的現有網站屬性，可透過選取滑鼠暫留在網 `Edit Site`站上的圖示來修改。
 
-`Details of the following properties match the descriptions provided in the` 「 [網站建立](#site-creation) 」區段。
+`Details of the following properties match the descriptions provided in the` [「網站建立](#site-creation) 」區段。
 
-![chlimage_1-168](assets/chlimage_1-168.png)
+![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
 ### 修改基本 {#modify-basic}
 
@@ -467,7 +468,7 @@ BASIC面板允許修改：
 
 #### 範例：將目錄函式添加到社區站點結構 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
-![chlimage_1-169](assets/chlimage_1-169.png)
+![add-catalog-site](assets/add-catalog-site.png)
 
 ### 修改設計 {#modify-design}
 
@@ -503,11 +504,11 @@ ENABLEMENT面板可讓您存取社群網站建立期間提供的設定。
 
 社群網站新建或修改後，可以選取滑鼠暫留在網站上方的圖示來發佈(啟 `Publish Site` 用)網站。
 
-![chlimage_1-170](assets/chlimage_1-170.png)
+![publish-site](assets/publish-site.png)
 
 網站成功發佈後，將會出現指示。
 
-![chlimage_1-171](assets/chlimage_1-171.png)
+![site-published](assets/site-published.png)
 
 ### 使用巢狀群組發佈 {#publishing-with-nested-groups}
 
@@ -515,7 +516,7 @@ ENABLEMENT面板可讓您存取社群網站建立期間提供的設定。
 
 ## 匯出網站 {#exporting-the-site}
 
-![chlimage_1-172](assets/chlimage_1-172.png)
+![導出站點](assets/export-site.png)
 
 選擇將滑鼠懸停在站點上的導出表徵圖，以建立同時儲存在包管理器中和已下載的社區站點 [的包](/help/sites-administering/package-manager.md) 。
 
@@ -575,7 +576,7 @@ ENABLEMENT面板可讓您存取社群網站建立期間提供的設定。
 
 * 選擇 **保存**。
 
-![chlimage_1-173](assets/chlimage_1-173.png)
+![驗證錯誤](assets/auth-error.png)
 
 ### 測試驗證重定向 {#test-authentication-redirection}
 
@@ -590,7 +591,7 @@ ENABLEMENT面板可讓您存取社群網站建立期間提供的設定。
 * 輸入明顯不正確的憑證，例如使用者名稱&quot;x&quot;和密碼&quot;x&quot;。
 * 登入頁面應顯示「無效登入」錯誤。
 
-![chlimage_1-174](assets/chlimage_1-174.png)
+![測試認證](assets/test-authentication.png)
 
 ## 從主站點控制台訪問社區站點 {#accessing-community-sites-from-main-sites-console}
 
@@ -598,5 +599,7 @@ ENABLEMENT面板可讓您存取社群網站建立期間提供的設定。
 
 雖然可以通過這種方式訪問社區站點，但對於管理任務，應從「社區站點」控制台訪問社區站點。
 
-![chlimage_1-175](assets/chlimage_1-175.png)
+![存取網站](assets/access-site.png)
+
+
 
