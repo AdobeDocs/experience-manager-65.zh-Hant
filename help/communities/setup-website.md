@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '549'
+ht-degree: 1%
 
 ---
 
@@ -40,6 +43,7 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 >* CRXDE中顯示的名稱是構成可定址內容路徑的節點名稱。
 >* 節點名稱可能包含空格，但在URI中使用時，空格必須編碼為&#39;%20&#39;或&#39;+&#39;。
 >* 節點名稱可能包含連字型大小和下划線，但是當它們被引用為Java檔案中的包名時，必須對其進行編碼。 連字型大小和下划線都會以下划線和其unicode值進行逸出：
+
    >
    >   
    * 連字型大小變為&#39;_002d&#39;
@@ -60,28 +64,29 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
    1. 按一下右鍵 **[!UICONTROL 建立]**...或下拉「建 **[!UICONTROL 立」...]** 菜單開啟它。
    1. 選擇 **[!UICONTROL 建立資料夾……]**.
    1. 在「建立 **[!UICONTROL 資料夾]** 」對話框中，輸入 `an-scf-sandbox`。
-   1. 按一下 **[!UICONTROL 確定]**。
+   1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
 1. 建立 **[!UICONTROL 元件]** 子資料夾。
 
    1. 選擇文 `/apps/an-scf-sandbox` 件夾。
    1. 按一 **[!UICONTROL 下「建立>建立資料夾]**」。
    1. 在「建立 **[!UICONTROL 資料夾]** 」對話框中，輸 **[!UICONTROL 入元件]**。
-   1. 按一下 **[!UICONTROL 確定]**。
+   1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
 1. 建立 **[!UICONTROL 範本]** 子資料夾。
 
    1. 選擇文 `/apps/an-scf-sandbox` 件夾。
    1. 按一 **[!UICONTROL 下「建立>建立資料夾]**」。
    1. 在「建立 **[!UICONTROL 資料夾]** 」對話框中，輸 **[!UICONTROL 入模板]**。
-   1. 按一下 **[!UICONTROL 確定]**。
+   1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
    1. 重新選取 `/apps/an-scf-sandbox`。
    1. 選擇「 **[!UICONTROL 全部保存]**」。
+
    和任何編輯程式一樣，經常節省成本。 如果您在輸入資料時遇到問題，可能是因為您的登入逾時，或是您需要儲存先前的編輯。
 
 1. CRXDE Lite的瀏覽器窗格中的結構現在應該如下所示：
 
-   ![chlimage_1-44](assets/chlimage_1-44.png)
+   ![crxde-template](assets/crxde-template.png)
 
 ## 設定設計目錄(/etc/designs) {#setup-the-design-directory-etc-designs}
 
@@ -95,12 +100,13 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
    輸入：
 
-   * 標題：SCF **[!UICONTROL 沙盒]**
-   * 名稱： **[!UICONTROL an-scf-沙盒]**
+   * 標題： **[!UICONTROL SCF沙盒]**
+   * 名稱： **[!UICONTROL an-scf-sandbox]**
    * 選取 **[!UICONTROL 設計頁面範本]**
+
    按一下&#x200B;**[!UICONTROL 建立]**。
 
-   ![chlimage_1-45](assets/chlimage_1-45.png)
+   ![設計——範本](assets/design-template.png)
 
 1. 如果未顯示「SCF沙盒」資料夾，請刷新瀏覽器窗格。
 
@@ -108,10 +114,10 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
    在CRXDE的右下窗格中，您可以查看「屬性」頁籤、「訪問控制」頁籤和「複製」頁籤，以查看使用「設計頁模板」定義的內容。
 
-   ![chlimage_1-46](assets/chlimage_1-46.png)
+   ![crxde-configure-template](assets/crxde-configure-template.png)
 
 ## 設定內容目錄（/內容） {#setup-the-content-directory-content}
 
 儲存庫中的/content目錄是網站內容所在的位置。 /content下的路徑包含瀏覽器請求的URL路徑。
 
-*在建立* 頁面範本 [](initial-app.md#createthepagetemplate) ，做為初始應用程式的一部分後，就可以根據範本建立初始頁面內容……. [**⇒**](initial-app.md)
+*在建立* 頁面範本 [](initial-app.md#createthepagetemplate) ，做為初始應用程式的一部分後，就可以根據範本建立初始頁面內容……. [**‡**](initial-app.md)
