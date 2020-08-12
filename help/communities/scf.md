@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '1505'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,7 @@ SocialComponent API可擴充，以提供用戶端對檢視層或HTTP用戶端所
 
 ### 如何為客戶呈現頁面 {#how-pages-are-rendered-for-client}
 
-![chlimage_1-25](assets/chlimage_1-25.png)
+![scf-page-rendering](assets/scf-overview.png)
 
 ### 元件自訂與擴充功能 {#component-customization-and-extension}
 
@@ -95,7 +98,7 @@ HTTP API支援PhoneGap應用程式、原生應用程式和其他整合與綜合�
 
 預設的GET servlet會監聽SocialComponent以可自訂JSON回應的。social.json請求。
 
-![chlimage_1-26](assets/chlimage_1-26.png)
+![scf-框架](assets/scf-framework.png)
 
 ### HTTP API —— 貼文要求 {#http-api-post-requests}
 
@@ -107,7 +110,7 @@ HTTP API支援PhoneGap應用程式、原生應用程式和其他整合與綜合�
 
 每個SocialComponent作業都有Sling POST:operation。 每個操作的業務邏輯和維護代碼都包在OperationService中，該OperationService可通過HTTP API或從其他位置作為OSGi服務訪問。 提供了支援可插拔操作擴展的鈎子，用於前／後動作。
 
-![chlimage_1-27](assets/chlimage_1-27.png)
+![scf-post-request](assets/scf-post-request.png)
 
 ### 儲存資源提供商(SRP) {#storage-resource-provider-srp}
 
