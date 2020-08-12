@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e562ffe229543a1ee93467bcbc1a7be6c12927c6
+source-git-commit: d1361296ee0161c36061543459056c25ebef0e97
 workflow-type: tm+mt
-source-wordcount: '3643'
+source-wordcount: '3839'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    ![簽署區塊](assets/sign_block_new.png)
 
-   依預設，Adobe Sign Block不會顯示在已發佈的最適化表單中。 只有簽署檔案才會顯示。 您可以從Adobe Sign Block元件的屬性變更Adobe Sign Block的可見度。
+   依預設，Adobe Sign Block不會顯示在已發佈的最適化表單中。 只有簽署檔案才會顯示。 您可以從Adobe Sign Block元件的屬性變更Adobe Sign Block的可見性。
 
    >[!NOTE]
    >
@@ -184,7 +184,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    * **簽署者和填寫表格的人員是否相同？:** 如果 ****&#x200B;表單填寫者和第一個簽署者是同一人，請選取「是」。 如果選項設定為 **No,** 則請勿在最適化表單中使用簽名步驟元件。 如果表單包含「簽名步驟」元件，則欄位會自動設為「是」。
 
-   * **簽署者電子郵件地址：** 指定簽署者的電子郵件地址。 簽署者會收到指定電子郵件地址上的已簽署檔案／表格。 您可以選擇使用表單欄位中提供的電子郵件地址、登入使用者的AEM使用者設定檔，或手動輸入電子郵件地址。 這是必要的一步。 請確定第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址與用於設定AEM雲端服務的Adobe Sign帳戶不相同。
+   * **簽署者電子郵件地址：** 指定簽署者的電子郵件地址。 簽署者會收到指定電子郵件地址上的已簽署檔案／表格。 您可以選擇使用表單欄位中提供的電子郵件地址、登入使用者的AEM使用者設定檔，或手動輸入電子郵件地址。 這是必要的步驟。 請確定第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址與用於設定AEM雲端服務的Adobe Sign帳戶不相同。
 
    * **簽署者驗證方法：** 指定在開啟表單進行簽署前先驗證使用者的方法。 您可以選擇電話、知識庫和社交身分驗證。
    >[!NOTE]
@@ -304,12 +304,16 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 ## 常見問題 {#frequently-asked-questions}
 
+**問：** 您可以將最適化表單嵌入另一個最適化表單。 內嵌的最適化表單是否可啟用Adobe Sign?
 **Ans:** 否，AEM Forms不支援使用可內嵌Adobe Sign的可調式表單進行簽署的可調式表單
 
+**問：** 當我使用進階範本建立最適化表單並開啟它進行編輯時，會出現錯誤訊息「電子簽名或簽署者未正確設定」。 的雙曲餘切值。 如何解決錯誤訊息？
 **Ans:** 使用進階範本建立的最適化表單已設定為使用Adobe Sign。 若要解決錯誤，請建立並選取Adobe Sign雲端組態，並為最適化表單設定Adobe Sign簽章者。
 
+**問：** 我可以在最適化表單的靜態文字元件中使用Adobe Sign文字標籤嗎？
 **Ans:** 是的，您可以在文字元件中使用文字標籤，將Adobe Sign欄位新增至啟用「記錄檔案 [](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) 」（僅限「自動產生記錄檔案」選項）的最適化表單。 若要瞭解建立文字標籤的程式和規則，請參閱 [Adobe Sign檔案](https://helpx.adobe.com/sign/using/text-tag.html)。 另請注意，最適化表單對文字標籤的支援有限。 您只能使用文字標籤來建立 [Adobe Sign Block支援的欄位](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) 。
 
+**問：** AEM Forms提供Adobe Sign區塊和簽章步驟元件。 這些功能是否可同時以最適化形式使用？
 **Ans:** 您可以在表單中同時使用這兩個元件。 以下是使用這些元件的一些建議：
 
 **Adobe Sign Block:** 您可以使用Adobe Sign Block，在最適化表單的任何位置新增Adobe Sign欄位。 此外，也有助於為簽署者指派特定欄位。 預覽最適化表單或發佈的Adobe Sign Block時，預設不會顯示。 這些區塊僅在簽署檔案中啟用。 在簽署檔案中，只會啟用指派給簽署者的欄位。 Adobe Sign區塊可用於第一個和後續的簽署者。
@@ -329,6 +333,14 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 * 如果您使用多個Adobe Sign Cloud服務，請將所有服 **[!UICONTROL 務的oAuth URL]** ，指向相同 **[!UICONTROL 的Adobe Sign分享卡]**。
 
 * 使用個別的電子郵件地址來設定Adobe Sign帳戶，以及第一個簽署者和單一簽署者的帳戶。 第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址不能與用於設定AEM雲端服務的Adobe Sign帳戶相同。
+
+
+**問題**&#x200B;當Adobe Sign設定為最適化表單時，使用「叫用表單工作流程」選項設定的工作流程不會啟動。
+
+**解析度**
+
+* 當您使用Adobe Sign而不使用「簽名」步驟，或表格需要多人簽名時，AEM Forms伺服器會等待排程器確認所有人已簽署表格。 調度器只有在所有人完成簽名後才提交自適應表單，而工作流只在成功提交自適應表單後才啟動。 您可以縮短排程器的間隔 [](adobe-sign-integration-adaptive-forms.md) ，以快速間隔檢查表單簽署狀態，並加快表單提交。
+
 
 ## 相關文章 {#related-articles}
 
