@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '1189'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
    * 使用AEM平台搜尋功能。
 
-說明檔案的本節內容對建立建立或管理UGC的自訂元件的開發人員十分有興趣。
+說明檔案的本節內容對於建立建立或管理UGC的自訂元件的開發人員而言十分有用。
 
 ## 安全性和陰影節點 {#security-and-shadow-nodes}
 
@@ -95,7 +98,7 @@ ACS AEM Commons提 [供Oak Index Manager](https://adobe-consulting-services.gith
 
 * `/oak:index/socialLucene`
 
-![chlimage_1-235](assets/chlimage_1-235.png)
+![social-lucene](assets/social-lucene.png)
 
 ## 索引搜索屬性 {#indexed-search-properties}
 
