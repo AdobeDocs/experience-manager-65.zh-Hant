@@ -3,7 +3,7 @@ title: 在中管理視訊資產 [!DNL Adobe Experience Manager]。
 description: 在中上傳、預覽、註解和發佈視訊資產 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 7%
@@ -79,7 +79,7 @@ ht-degree: 7%
 
    要退出注釋嚮導，請按一下「關 **[!UICONTROL 閉」]**。
 
-1. 尋找視訊中的特定點，在&#x200B;**「文字」**&#x200B;欄位中指定時間 (以秒為單位)，然後按一下&#x200B;**「跳至」**。例如，若要略過前 10 秒的視訊，請在文字欄位中輸入 20。
+1. 尋找視訊中的特定點，在&#x200B;**「文字」**&#x200B;欄位中指定時間 (以秒為單位)，然後按一下&#x200B;**「跳至」**。例如，若要略過前 20 秒的視訊，請在文字欄位中輸入 20。
 
    ![尋找視訊中要略過指定秒數的時間](assets/seek-in-video.png)
 
