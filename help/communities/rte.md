@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+workflow-type: tm+mt
+source-wordcount: '239'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 對於「社群」元件，雖然與作者環 [境中的Rich Text編輯器類似](../../help/sites-authoring/rich-text-editor.md)，但會影響在發佈環境中輸入的文字。
 
-![chlimage_1-410](assets/chlimage_1-410.png)
+![富格文本編輯器](assets/rich-text-editor.png)
 
 ## 啟用富格文字編輯器 {#enabling-rich-text-editor}
 
