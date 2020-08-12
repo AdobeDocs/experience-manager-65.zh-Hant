@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 1%
 
 ---
 
@@ -114,7 +117,7 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 * 選擇 **[!UICONTROL 保存]**。
 
-![chlimage_1-301](assets/chlimage_1-301.png)
+![create-user](assets/create-user.png)
 
 ## 啟用社交登入 {#enable-social-login}
 
@@ -140,7 +143,7 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 * `Tutorial: Arts / Auditory`
 * `Tutorial: Arts / History`
 
-![chlimage_1-302](assets/chlimage_1-302.png)
+![教學課程標籤](assets/tutorial-tags.png)
 
 然後，請依照指示執行：
 
