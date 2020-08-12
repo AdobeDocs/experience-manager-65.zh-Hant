@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 搜尋功能可與各種其他功能搭配使用，例如論壇，以提供搜尋內容的功能。
 
-新增搜尋社群成員輸入之貼文(稱為使用者產生的內容(UGC))的能力時，有兩個元件：搜尋 [和搜](#search) 尋結果 [](#search-results)。
+新增搜尋社群成員輸入之貼文(稱為使用者產生的內容(UGC))的能力時，有兩個元件： [搜尋](#search) 和 [搜尋結果](#search-results)。
 
 包含該元件的頁 `Search Results` 面支援搜索和結果顯示。
 
@@ -37,23 +40,24 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 當需要的用戶端程式庫( `cq.social.hbs.search`)包含時，這就是元件的 `Search` 顯示方式。
 
-![chlimage_1-373](assets/chlimage_1-373.png)
+![新增搜尋](assets/add-search.png)
 
 ### 設定新增的搜尋 {#configure-the-added-search}
 
 選擇要訪問 `Search` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-374](assets/chlimage_1-374.png)
+![configur](assets/configure-new.png)
 
 在「搜 **[!UICONTROL 尋設定]** 」標籤下，指定訪客輸入查詢時要搜尋的路徑。
 
-![chlimage_1-375](assets/chlimage_1-375.png)
+![搜尋設定](assets/search-settings.png)
 
 * **[!UICONTROL 搜尋路徑]**&#x200B;使用「新增項目」按鈕新增搜尋路徑，內容搜尋就受到限制。 例如，若要將搜尋限制在特定論壇，請選取位於頁面內的論壇元件：
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
-* **[!UICONTROL 結果頁]**：結果將顯示在使用瀏覽器選擇包含元件的頁所指定的單獨頁 `Search Results` 上。
+* **[!UICONTROL 結果頁]**：結果將顯示在使用瀏覽器選取包含 
+`Search Results` 元件.
 
 ## 搜尋結果 {#search-results}
 
@@ -71,17 +75,17 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 當需要的用戶端程式庫( `cq.social.hbs.search`)包含時，元件的顯示 `Search Result` 方式如下：
 
-![chlimage_1-376](assets/chlimage_1-376.png)
+![搜索結果](assets/search-result1.png)
 
 ### 設定新增的搜尋結果 {#configure-the-added-search-result}
 
 選擇要訪問 `Search Results` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-377](assets/chlimage_1-377.png)
+![配置](assets/configure-new.png)
 
 在「搜 **[!UICONTROL 尋結果設定]** 」標籤下，可指定訪客輸入查詢時，搜尋中包含哪些路徑。
 
-![chlimage_1-378](assets/chlimage_1-378.png)
+![search-result-settings](assets/search-result-settings.png)
 
 * **[!UICONTROL 每頁搜尋結果數]**
 
