@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+workflow-type: tm+mt
+source-wordcount: '1311'
+ht-degree: 2%
 
 ---
 
@@ -32,19 +35,19 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
 
-當包含 [所需的用戶端程式庫](reviews-basics.md#essentials-for-client-side) ，元件的顯示 `Reviews`方式就是這樣。
+當包含 [所需的用戶端程式庫](reviews-basics.md#essentials-for-client-side) ，元件的顯示方式 `Reviews` 就是這樣。
 
-![chlimage_1-340](assets/chlimage_1-340.png)
+![create-review](assets/create-review.png)
 
 ## 設定審核 {#configuring-reviews}
 
 選擇要訪問 `Reviews` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-341](assets/chlimage_1-341.png)
+![configure-new](assets/configure-new.png)
 
 在「允 **[!UICONTROL 許的評分]** 」標籤下，指定要顯示給成員的評分完整清單。 第一個評分應是整體／一般評分，因為它是提供元件平均評分的評 `Review Summary (Display)` 分。 預設設定中的後兩個分級應指定不同的標題，而非「Subrating 1」或「Subrating 2」。
 
-![chlimage_1-342](assets/chlimage_1-342.png)
+![允許評分](assets/configure-review1.png)
 
 * **[!UICONTROL 允許的評等]**
 
@@ -58,7 +61,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 在網站上，必要的分級標有星號。 如果項目是必要項目，但未標籤，則會向成員顯示一條消息，並拒絕提交，直到所有必需的評級都標籤為止。
 
-![chlimage_1-343](assets/chlimage_1-343.png)
+![必要評等](assets/configure-review2.png)
 
 * **[!UICONTROL 必要評等]**
 
@@ -75,7 +78,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 在「審 **[!UICONTROL 核]** 」標籤下，指定如何處理審核。
 
-![chlimage_1-344](assets/chlimage_1-344.png)
+![評論](assets/configure-review3.png)
 
 * **[!UICONTROL 允許回覆]**
 
@@ -111,7 +114,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 在「使用 **[!UICONTROL 者協調]** 」標籤下，指定如何管理已張貼的審核。 如需詳細資訊，請參閱 [協調使用者產生的內容](moderate-ugc.md)。
 
-![chlimage_1-345](assets/chlimage_1-345.png)
+![user-moderation](assets/configure-review4.png)
 
 * **[!UICONTROL 事先審核]**
 
@@ -161,7 +164,7 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 當包含 [所需的用戶端程式庫](reviews-basics.md#essentials-for-client-side) ，元件的顯示 `Reviews Summary (Display)`方式就是這樣。
 
-![chlimage_1-346](assets/chlimage_1-346.png)
+![review-summary](assets/configure-review5.png)
 
 >[!NOTE]
 >
@@ -172,11 +175,11 @@ source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 選擇要訪問 `Reviews Summary (Display)` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-347](assets/chlimage_1-347.png)
+![配置](assets/configure-new.png)
 
 在「查看摘 **[!UICONTROL 要」頁籤下]**
 
-![chlimage_1-348](assets/chlimage_1-348.png)
+![review-summary](assets/configure-review6.png)
 
 * `Review Path`
 
@@ -196,9 +199,9 @@ Reviews元件使用注釋系統。
 
 在已知自訂資源類型後，進入 [Design Mode](../../help/sites-authoring/default-components-designmode.md) ，然後連按兩下置入的元 `Comments` 件，以開啟具有其他標籤的對話方塊。
 
-在「資 **[!UICONTROL 源類型]** 」頁籤下，為元件的新實例指定自定義資源 `Comments or Voting`類型：
+在「資 **[!UICONTROL 源類型]** 」頁籤下，為元件的新實例指定自定義資源 `Comments or Voting` 類型：
 
-![chlimage_1-349](assets/chlimage_1-349.png)
+![留言投票](assets/configure-review7.png)
 
 * **[!UICONTROL 評論資源類型]**
 
@@ -224,12 +227,12 @@ Reviews元件使用注釋系統。
 
 ### 成員 {#members}
 
-當網站訪客登入時（視設定而定），他們可能會
+網站訪客登入時（視設定而定），可能會：
 
-* 張貼新審核。
-* 編輯其自己的審核。
-* 刪除其自己的審核。
-* 標籤其他人的審閱注釋。
+* 張貼新審核
+* 編輯其自己的審核
+* 刪除其自己的審核
+* 標籤其他人的審閱注釋
 
 每個成員僅允許一個分級。 會員可隨時變更其評級。
 
