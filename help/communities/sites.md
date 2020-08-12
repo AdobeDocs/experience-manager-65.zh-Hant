@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '463'
+ht-degree: 4%
 
 ---
 
@@ -28,11 +31,11 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 在作者環境中，若要進入社群網站主控台：
 
-* 從全域導覽：工 **[!UICONTROL 具>社群>網站範本]**
+* 從全域導覽： **[!UICONTROL 工具>社群>網站範本]**
 
 此控制台顯示可從中創 [建社區站點](sites-console.md) 的模板，並允許建立新站點模板。
 
-![chlimage_1-18](assets/chlimage_1-18.png)
+![站點模板](assets/site-template.png)
 
 ## 建立網站範本 {#create-site-template}
 
@@ -42,7 +45,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ### Basic info {#basic-info}
 
-![chlimage_1-19](assets/chlimage_1-19.png)
+![site-template-basicinfo](assets/site-template-basicinfo.png)
 
 在「基本資訊」面板上，會設定名稱、說明以及範本是啟用還是停用：
 
@@ -60,13 +63,13 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ### 縮圖 {#thumbnail}
 
-![chlimage_1-20](assets/chlimage_1-20.png)
+![site-thumbnail](assets/site-thumbnail.png)
 
 （可選）選取「上傳影像」圖示，以便向社群網站的建立者顯示縮圖以及名稱和說明。
 
 ### 結構 {#structure}
 
-![chlimage_1-21](assets/chlimage_1-21.png)
+![網站結構](assets/site-structure.png)
 
 若要新增社群功能，請依網站功能表連結的顯示順序，從右側拖曳至左側。 在建立網站時，樣式會套用至範本。
 
@@ -83,7 +86,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 >任何其他函式(例如頁 [面函式](functions.md#page-function))必須先包含並列出。
 
 
-![chlimage_1-22](assets/chlimage_1-22.png)
+![站點編輯器](assets/site-editor.png)
 
 ### 群組範本功能 {#group-templates-for-groups-function}
 
@@ -94,11 +97,11 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 >Groups函式不 *能是**網站結構中的* 第一個函式，也不能是唯一函式。
 
 
-![chlimage_1-23](assets/chlimage_1-23.png)
+![站點功能](assets/site-functions.png)
 
 選擇兩個或兩個以上的社群群組範本後，當實際在社群中建立新群組時，群組管理員便可選擇。
 
-![chlimage_1-24](assets/chlimage_1-24.png)
+![site-function](assets/site-functions1.png)
 
 ## 編輯網站範本{#edit-site-template}
 
