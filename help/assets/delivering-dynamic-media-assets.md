@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 3eacfe8a79d155dddde8908d05b05790d048b0c5
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '306'
 ht-degree: 1%
 
 ---
@@ -42,8 +42,9 @@ ht-degree: 1%
 * [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)
 * [為互動式網站提供最佳化影像](/help/assets/responsive-site.md)
 * [HTTP2內容傳送](/help/assets/http2.md)
-* 我驗 [證您的CDN快取內容](/help/assets/invalidate-cdn-cached-content.md)
+* [透過Dynamic Media Classic使CDN快取失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [使用規則集轉換URL](/help/assets/using-rulesets-to-transform-urls.md)
+
 
 ## HTTP/2傳送動態媒體資產 {#http-delivery-of-dynamic-media-assets}
 
