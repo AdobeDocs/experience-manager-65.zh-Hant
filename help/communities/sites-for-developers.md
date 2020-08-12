@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 0%
 
 ---
 
@@ -70,7 +73,7 @@ For example: `/content/sites/engage/en/configuration`
 
 `/content/sites/sample/en/configuration`
 
-![chlimage_1-80](assets/chlimage_1-80.png)
+![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
 請確定「全 **部儲存** 」並將自訂代碼複製至所有AEM例項（自訂代碼不包含在從主控台發佈社群網站內容時）。
 
