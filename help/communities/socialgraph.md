@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 0ce57ab1-e4c6-4c38-963d-556eef8757f2
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 1429a099288f038510cb0a194fb55632297ef371
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +36,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 當包含 [所需的用戶端程式庫](essentials-socialgraph.md#essentials-for-client-side) ，元件的顯示方式 `Following` 如下：
 
-![chlimage_1-447](assets/chlimage_1-447.png)
+![following](assets/following.png)
 
 ## 設定下列項目 {#configuring-following}
 
