@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 1429a099288f038510cb0a194fb55632297ef371
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 在AEM 6.1 `com.adobe.cq.social.ugcbase.SocialUtils` 中，此套件已過時。
 
-下表列出要用來取代SocialUtils方法的方法。
+下表列出了用來取代方法的 `SocialUtils` 方法。
 
-## SocialResourceUtilities套件 {#socialresourceutilities-package}
+## SocialResourceUtilities套件  {#socialresourceutilities-package}
 
 | com.adobe.cq.sosical.srp.utilities.api.SocialResourceUtilities中的方法 |
 |---|
