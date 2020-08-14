@@ -8,9 +8,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 4c4a5a15e9cbb5cc22bc5999fb40f1d6db3bb091
+source-git-commit: 5bbafd9006b04d761ffab218e8480c1e94903bb6
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '2060'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 使用代理UI準備互動式通訊時，代理會先在代理UI中管理互動式通訊的下列方面，再將它送出至後置程式：
 
-* **資料**: Agent UI的「資料」頁籤顯示「交互通信」中任何可代理編輯的變數和解鎖表單資料模型屬性。 這些變數／屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立。 「資料」標籤也包含XDP/列印頻道範本中建立的任何欄位。 僅當代理可編輯「互動式通信」中的任何變數、表單資料模型屬性或欄位時，才會顯示「資料」頁籤。
-* **內容**: 在「內容」索引標籤中，代理管理「互動式通訊」中的檔案片段和內容變數等內容。 在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
-* **附件**: 只有當Interactive Communication具有任何附件或Agent具有庫訪問權限時，「附件」頁籤才會出現在Agent UI。 工程師可以或不允許更改或編輯附件。
+* **資料**:Agent UI的「資料」頁籤顯示「交互通信」中任何可代理編輯的變數和解鎖表單資料模型屬性。 這些變數／屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立。 「資料」標籤也包含XDP/列印頻道範本中建立的任何欄位。 僅當代理可編輯「互動式通信」中的任何變數、表單資料模型屬性或欄位時，才會顯示「資料」頁籤。
+* **內容**:在「內容」索引標籤中，代理管理「互動式通訊」中的檔案片段和內容變數等內容。 在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
+* **附件**:只有當Interactive Communication具有任何附件或Agent具有庫訪問權限時，「附件」頁籤才會出現在Agent UI。 工程師可以或不允許更改或編輯附件。
 
 ## 使用代理UI準備互動式通訊 {#prepare-interactive-communication-using-the-agent-ui}
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
    ![openagentiui](assets/openagentiui.png)
 
-   根據Interactive Communication的內容和屬性，代理UI將顯示為以下三個頁籤： 資料、內容和附件。
+   根據Interactive Communication的內容和屬性，代理UI將顯示為以下三個頁籤：資料、內容和附件。
 
    ![agentitabs](assets/agentuitabs.png)
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 1. 視需要在「內容」索引標籤中編輯檔案片段。 若要將焦點放在內容階層中的相關片段上，您可以在「互動式通訊」預覽中點選相關行或段落，或直接在「內容」階層中點選片段。
 
-   例如，檔案片段的行為是「立即線上付款……」 」在下圖的預覽中選取，而「內容」索引標籤中也選取了相同的檔案片段。
+   例如，檔案片段的行為是「立即線上付款……」」在下圖的預覽中選取，而「內容」索引標籤中也選取了相同的檔案片段。
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
@@ -109,7 +109,7 @@ ht-degree: 0%
 
 ## 格式化文字 {#formattingtext}
 
-在代理UI中編輯文字片段時，工具列會依您選擇進行的編輯類型而變更： 字型、段落或清單：
+在代理UI中編輯文字片段時，工具列會依您選擇進行的編輯類型而變更：字型、段落或清單：
 
 ![typeofformattingtoolbar](assets/typeofformattingtoolbar.png) ![Font Toolbar](do-not-localize/fonttoolbar.png)
 
@@ -149,27 +149,27 @@ Agent UI已內建支援210個特殊字元。 管理員可 [以透過自訂新增
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
-* **向上／向下箭頭**: 在互動式通訊中向上或向下移動檔案片段的箭頭。
-* **刪除**: 如果允許，請從「互動式通訊」中刪除檔案片段。
-* **分頁前** （適用於目標區域的子片段）: 在文檔片段前插入分頁符。
-* **縮進**: 增加或減少文檔片段的縮進。
-* **Page Break After** （適用於目標區域的子片段）: 在文檔片段後面插入分頁符。
+* **向上／向下箭頭**:在互動式通訊中向上或向下移動檔案片段的箭頭。
+* **刪除**:如果允許，請從「互動式通訊」中刪除檔案片段。
+* **分頁前** （適用於目標區域的子片段）:在文檔片段前插入分頁符。
+* **縮進**:增加或減少文檔片段的縮進。
+* **Page Break After** （適用於目標區域的子片段）:在文檔片段後面插入分頁符。
 
 ![docfragoptions](assets/docfragoptions.png)
 
-* 編輯（僅限文字片段）: 開啟豐富式文字編輯器，以編輯文字檔案片段。 如需詳細資訊，請參閱格 [式化文字](#formattingtext)。
+* 編輯（僅限文字片段）:開啟豐富式文字編輯器，以編輯文字檔案片段。 如需詳細資訊，請參閱格 [式化文字](#formattingtext)。
 
-* 選取範圍（眼睛圖示）: 包含\排除「互動式通訊」中的檔案片段。
-* 未填充的值（資訊）: 指出檔案片段中未填入的變數數。
+* 選取範圍（眼睛圖示）:包含\排除「互動式通訊」中的檔案片段。
+* 未填充的值（資訊）:指出檔案片段中未填入的變數數。
 
 ### 列出檔案片段 {#list-document-fragments}
 
 ![清單選項](assets/listoptions.png)
 
-* 插入空白行： 插入新的空行。
-* 選取範圍（眼睛圖示）: 包含\排除「互動式通訊」中的檔案片段。
-* 跳過項目符號／編號： 啟用以跳過清單文檔片段中的項目符號／編號。
-* 未填充的值（資訊）: 指出檔案片段中未填入的變數數。
+* 插入空白行：插入新的空行。
+* 選取範圍（眼睛圖示）:包含\排除「互動式通訊」中的檔案片段。
+* 跳過項目符號／編號：啟用以跳過清單文檔片段中的項目符號／編號。
+* 未填充的值（資訊）:指出檔案片段中未填入的變數數。
 
 ## 將互動式通訊儲存為草稿 {#save-as-draft}
 
@@ -181,7 +181,12 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 
 預設情況下，「另存為拔模」(Save as a Draft)特徵不啟用。 執行下列步驟以啟用功能：
 
-1. 實施 [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) Service Provider Interface(SPI)。 SPI可讓您將互動式通信的草稿版本以草稿ID作為唯一標識符保存到資料庫。
+1. 實施 [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) Service Provider Interface(SPI)。
+
+   SPI可讓您將互動式通信的草稿版本以草稿ID作為唯一標識符保存到資料庫。 這些指示假設您先前已具備使用Maven專案建立OSGi套件的相關知識。
+
+   有關SPI實施示例，請參見 [Sample ccrDocumentInstance SPI實施](#sample-ccrDocumentInstance-spi)。
+1. 開啟並 `http://<hostname>:<port>/ system/console/bundles` 點選「 **[!UICONTROL 安裝／更新]** 」以上傳OSGi套件。 驗證已上載包的狀態是否顯示為「活 **動」**。 如果軟體包的狀態未顯示為「活動」，請重新啟動服 **務器**。
 1. 前往 `https://'[server]:[port]'/system/console/configMgr`.
 1. 點選「 **[!UICONTROL 建立對應設定」]**。
 1. 選取「 **[!UICONTROL 使用CCRDocumentInstanceService啟用儲存」]** ，然後點選「 **[!UICONTROL 儲存」]**。
@@ -209,3 +214,233 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 >[!NOTE]
 >
 >如果您在將「互動式通訊」儲存為草稿後對它進行任何變更，則草稿版本無法開啟。
+
+### ccrDocumentInstance SPI實施示例 {#sample-ccrDocumentInstance-spi}
+
+實作 `ccrDocumentInstance` SPI，將互動式通訊儲存為草稿。 以下是SPI的示例實 `ccrDocumentInstance` 現。
+
+```javascript
+package Implementation;
+
+import com.adobe.fd.ccm.ccr.ccrDocumentInstance.api.exception.CCRDocumentException;
+import com.adobe.fd.ccm.ccr.ccrDocumentInstance.api.model.CCRDocumentInstance;
+import com.adobe.fd.ccm.ccr.ccrDocumentInstance.api.services.CCRDocumentInstanceService;
+import org.apache.commons.lang3.StringUtils;
+import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.*;
+
+
+@Component(service = CCRDocumentInstanceService.class, immediate = true)
+public class CCRDraftService implements CCRDocumentInstanceService {
+
+ private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
+
+ private HashMap<String, Object> draftDataMap = new HashMap<>();
+
+ @Override
+ public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+     String documentInstanceName = ccrDocumentInstance.getName();
+     if (StringUtils.isNotEmpty(documentInstanceName)) {
+         logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
+         if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
+             ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
+         }
+     } else {
+         logger.error("Could not save data as draft name is empty");
+     }
+     return ccrDocumentInstance.getId();
+ }
+
+ @Override
+ public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+     String documentInstanceName = ccrDocumentInstance.getName();
+     if (StringUtils.isNotEmpty(documentInstanceName)) {
+         logger.info("Saving ccrData with name : {}", documentInstanceName);
+         mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
+     } else {
+         logger.error("Could not save data as draft Name is empty");
+     }
+ }
+
+ @Override
+ public CCRDocumentInstance get(String id) throws CCRDocumentException {
+     CCRDocumentInstance cCRDocumentInstance;
+     if (StringUtils.isEmpty(id)) {
+         logger.error("Could not retrieve data as draftId is empty");
+         cCRDocumentInstance = null;
+     } else {
+         cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
+     }
+     return cCRDocumentInstance;
+ }
+
+ @Override
+ public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
+                                         Map<String, Object> optionsParams) throws CCRDocumentException {
+     List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
+
+     HashMap<String, Object> allSavedDraft = mySQLGetALLData();
+     for (String key : allSavedDraft.keySet()) {
+         ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
+     }
+     return ccrDocumentInstancesList;
+ }
+
+ //The APIs call the service in the database using the following section.
+ private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
+     if(method.equals("SAVE")){
+
+         String autoGenerateId = draftDataMap.size() + 1 +"";
+         ccrDocumentInstance.setId(autoGenerateId);
+         draftDataMap.put(autoGenerateId, ccrDocumentInstance);
+         return ccrDocumentInstance;
+
+     }else if (method.equals("UPDATE")){
+
+         draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
+         return ccrDocumentInstance;
+
+     }else if(method.equals("GET")){
+
+         return (CCRDocumentInstance) draftDataMap.get(draftId);
+
+     }
+     return null;
+ }
+
+ private HashMap<String, Object> mySQLGetALLData(){
+     return draftDataMap;
+ }
+}
+```
+
+操作 `save``update``get``getAll` 調用資料庫服務，以將互動式通信另存為草稿、更新互動式通信、從資料庫中檢索資料，以及檢索資料庫中所有可用互動式通信的資料。 此示例 `mySQLDataBaseServiceCRUD` 用作資料庫服務的名稱。
+
+下表說明了示例 `ccrDocumentInstance` SPI實現。 在示例實 `save`施中， `update`將演示 `get`、操作和操 `getAll` 作如何調用資料庫服務。
+
+<table> 
+ <tbody>
+ <tr>
+  <td><p><strong>操作</strong></p></td>
+  <td><p><strong>資料庫服務示例</strong></p></td> 
+   </tr>
+  <tr>
+   <td><p>您可以建立互動式通訊的草稿，或直接送出。 儲存作業的API會檢查「互動式通訊」是否以草稿形式提交，並包含草稿名稱。 然後，API會以「儲存為輸入法」呼叫mySQLDataBaseServiceCRUD服務。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
+   <td><p>mySQLDataBaseServiceCRUD服務會驗證「另存為輸入方法」，並產生自動產生的草稿ID並將其傳回AEM。 產生草稿ID的邏輯會因資料庫而異。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   </tr>
+  <tr>
+   <td><p>更新操作的API會擷取互動式通訊草稿的狀態，並檢查互動式通訊是否包含草稿名稱。 API會呼叫mySQLDataBaseServiceCRUD服務，以在資料庫中更新該狀態。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
+   <td><p>mySQLDataBaseServiceCRUD服務將「更新」驗證為輸入方法，並將「交互通信」草稿的狀態保存在資料庫中。</br></p><img src="assets/update-operation-service.png"/></td>
+   </tr>
+   <tr>
+   <td><p>取得作業的API會檢查互動式通訊是否包含草稿ID。 然後，API會以Get作為輸入方法呼叫mySQLDataBaseServiceCRUD服務，以擷取互動式通訊的資料。</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
+   <td><p>mySQLDataBaseServiceCRUD服務驗證Get作為輸入方法，並基於草稿ID檢索互動式通信的資料。</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
+   </tr>
+   <tr>
+   <td><p>getAll操作的API調用mySQLGetALLData服務，以檢索資料庫中保存的所有互動式通信的資料。</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
+   <td><p>mySQLGetALLData服務檢索資料庫中保存的所有互動式通信的資料。</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
+   </tr>
+  </tbody>
+</table>
+
+以下是屬於實作 `pom.xml` 的檔案範例：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.adobe.livecycle</groupId>
+    <artifactId>draft-sample</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
+
+    <name>Interact</name>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.aemfd</groupId>
+            <artifactId>aemfd-client-sdk</artifactId>
+            <version>6.0.122</version>
+        </dependency>
+    </dependencies>
+
+
+    <!-- ====================================================================== -->
+    <!-- B U I L D D E F I N I T I O N -->
+    <!-- ====================================================================== -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.3.0</version>
+                <extensions>true</extensions>
+                <executions>
+                    <!--Configure extra execution of 'manifest' in process-classes phase to make sure SCR metadata is generated before unit test runs-->
+                    <execution>
+                        <id>scr-metadata</id>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <exportScr>true</exportScr>
+                    <instructions>
+                        <!-- Enable processing of OSGI DS component annotations -->
+                        <_dsannotations>*</_dsannotations>
+                        <!-- Enable processing of OSGI metatype annotations -->
+                        <_metatypeannotations>*</_metatypeannotations>
+                        <Bundle-SymbolicName>${project.groupId}-${project.artifactId}</Bundle-SymbolicName>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>autoInstall</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>
+```
+
+>[!NOTE]
+>
+>請確定您將檔 `aemfd-client-sdk` 案中的相依性更新為6.0.122 `pom.xml` 。
