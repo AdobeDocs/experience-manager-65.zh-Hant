@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 24d817bf8e52136980783ef14cea8531519ee622
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1927'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-AEM Forms提供一組表單，以從使用者取得資料： 最適化表單、HTML5表單和PDF表單。 它還提供工具來列出網頁上所有可用的表單、分析表單的使用情況，並根據用戶的個人檔案來定位用戶。 這些功能已包含在AEM Forms附加套件中。 附加元件套件已部署在AEM的「作者」或「發佈」例項上。
+AEM Forms提供一組表單，以從使用者取得資料：最適化表單、HTML5表單和PDF表單。 它還提供工具來列出網頁上所有可用的表單、分析表單的使用情況，並根據用戶的個人檔案來定位用戶。 這些功能已包含在AEM Forms附加套件中。 附加元件套件已部署在AEM的「作者」或「發佈」例項上。
 
 **最適化表單：** 這些表格會根據裝置的螢幕大小改變外觀，而且具有吸引力，而且具互動性。 Adaptive Forms也可以與Adobe Analytics、Adobe Sign和Adobe Target整合。 它可讓您根據使用者的人口結構和其他功能，為使用者提供個人化表單和流程導向的體驗。 您也可以將最適化表單與Adobe Sign整合。
 
@@ -44,10 +44,10 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 您至少只需�
 * 硬體和軟體基礎架構已就緒。 如需支援硬體和軟體的詳細清單，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md)。
 
 * AEM例項的安裝路徑不包含空格。
-* AEM例項已啟動並執行。 在AEM術語中，「例項」是在作者或發佈模式下伺服器上執行的AEM復本。 您至少需要兩個 [AEM例項（一個作者和一個發佈）](/help/sites-deploying/deploy.md) ，才能執行AEM Forms資料擷取功能：
+* AEM例項已啟動並執行。 對於Windows使用者，請以提升模式安裝AEM例項。 在AEM術語中，「例項」是在作者或發佈模式下伺服器上執行的AEM復本。 您至少需要兩個 [AEM例項（一個作者和一個發佈）](/help/sites-deploying/deploy.md) ，才能執行AEM Forms資料擷取功能：
 
-   * **作者**: 用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
-   * **發佈**: 透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
+   * **作者**:用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
+   * **發佈**:透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
@@ -124,6 +124,24 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 套件包含AEM 
 1. 安裝套件後，系統會提示您重新啟動AEM例項。 **不要立即重新啟動伺服器。** 在停止AEM Forms伺服器之前，請等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在檔案中，而 `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` 且記錄檔是穩定的。
 1. 對所有「作者」和「發佈」例項重複步驟1-7。
 
+### （僅限Windows）自動安裝Visual Studio可轉散發套件 {#automatic-installation-visual-studio-redistributables}
+
+如果您以提升模式安裝AEM實例，在安裝AEM Forms附加套件期間會自動安裝遺失的Visual Studio可轉散發套件。
+
+若要評估Visual Studio可轉發套件是否已自動安裝，請開啟 `error.log` 目錄中的可用 `/crx-repository/logs/` 檔案。 日誌包含以下消息：
+
+`Redist <service name> already installed on system, will not attempt re-installation`
+
+如果無法安裝可轉發套件，記錄檔會包含下列訊息：
+
+`Current user does not have elevated privileges, aborting installation of redist <service name>`
+
+若要解決此問題，請重新啟動AEM伺服器、以提升模式安裝AEM，然後安裝AEM Forms附加套件。
+
+如果權限檢查失敗，日誌將包含以下消息：
+
+`Privilege escalation check failed with error: <error message>`
+
 ## 安裝後配置 {#post-installation-configurations}
 
 AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastle庫和序列化代理。 選用的組態包括設定Dispatcher、Forms入口網站、Adobe Sign、Adobe Analytics和Adobe Target。
@@ -194,7 +212,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保�
 
 #### 為表單資料模型配置SSL通信 {#configure-ssl-communcation-for-form-data-model}
 
-您可以為表單資料模型啟用SSL通訊。 若要啟用表單資料模型的SSL通訊，請在啟動任何AEM Forms例項之前，將憑證新增至所有例項的Java信任存放區。 您可以執行以下命令來添加證書： &quot;
+您可以為表單資料模型啟用SSL通訊。 若要啟用表單資料模型的SSL通訊，請在啟動任何AEM Forms例項之前，將憑證新增至所有例項的Java信任存放區。 您可以執行以下命令來添加證書：&quot;
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
