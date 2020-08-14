@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5412d788ccebe00707f2d94dfb1e40da6cb0471c
+source-git-commit: 4c42e5e5274c41469824f12b228698a77bf5d4a6
 workflow-type: tm+mt
-source-wordcount: '5035'
+source-wordcount: '4738'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 ### 此包包含什麼 {#what-does-this-package-include}
 
-AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含數個其他子套件和服務的套件。 該軟體包包含以下模組：
+[AEM Forms We.Gov示範套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip) (**we-gov-forms.pkg.all-&lt;version>.zip**)是包含數個其他子套件和服務的套件。 該軟體包包含以下模組：
 
 * **we-gov-forms.pkg.all-&lt;version>.zip** —— 完整 *示範套件*
 
@@ -116,7 +116,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 ### 安裝新的軟體包版本 {#installing-new-package-versions}
 
-要安裝新軟體包版本，請遵循4.1和4.2中定義的步驟。 在已安裝其他較舊軟體包的情況下安裝較新軟體包版本是可行的，但建議先卸載較舊軟體包版本。 若要這麼做，請遵循下列步驟。
+要安裝新軟體包版本，請遵循4.1和4.2中定義的步驟。在已安裝其他較舊軟體包的情況下安裝較新軟體包版本是可行的，但建議先卸載較舊軟體包版本。 若要這麼做，請遵循下列步驟。
 
 1. 導覽至 *https://&lt;aemserver>:&lt;port>/crx/packmgr/index.jsp*
 1. 找到 **較舊的we-gov-forms.pkg.all-&lt;version>.zip** 檔案。
@@ -160,10 +160,10 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 
 1. 配置服務以連接到您選擇的SMTP伺服器：
 
-   1. **SMTP伺服器主機名**: 例如(smtp.gmail.com)
-   1. **伺服器埠**: 例如(465)使用SSL的gmail
+   1. **SMTP伺服器主機名**:例如(smtp.gmail.com)
+   1. **伺服器埠**:例如(465)使用SSL的gmail
    1. **SMTP用戶：** demo@ &lt;companyname>.com
-   1. **「寄件者」地址**: aemformsdemo@adobe.com
+   1. **「寄件者」地址**:aemformsdemo@adobe.com
 
    ![配置SMTP](assets/configure_smtp.jpg)
 
@@ -219,48 +219,6 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 1. 從已設定的Adobe Sign例項提供已設定的用戶端ID和用戶端密碼。
 1. 按一下「連線至Adobe Sign」。
 1. 成功連線後，按一下「儲存並關閉」以完成整合。
-
-### 填寫及簽署多份表格 {#fill-sign-multiple-forms}
-
-本檔案說明設定填寫及簽署多個表單的能力所需的步驟。 您也可以在這裡嘗 [試相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此範例會將此範例所需的必要資料儲存在AEM儲存庫中。 這麼做是為了確保在您的本機伺服器上部署示範資產時，體驗順暢無阻。 在現實生活中，我們會將您選擇的相同資訊儲存在RDMS中。
-
-#### 必備條件 {#pre-requisites-fill-sign-multiple-forms}
-
-* [配置日CQ郵件服務](https://docs.adobe.com/content/help/en/experience-manager-65/communities/administer/email.html)
-
-* [使用Adobe Sign設定AEM表格](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html)
-
-#### 在本機伺服器上設定範例 {#setup-sample-local-server}
-
-執行以下步驟以在本地伺服器上設定示例：
-
-1. 安裝軟體包。 此套件包含下列項目：
-   * 適用性表單. 表單位於formsandsigndemo資 **料夾**
-   * 自訂OSGI組合
-   * 工作流程
-1. 設定 [同意表](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/consentform.html) ，以使用您的Adobe Sign設定。
-1. 設定 [多狀態興趣鎖定表](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/multistateinterestratelock.html) ，以使用您的Adobe Sign設定。
-1. 開啟 [Formsandsigndemo](http://localhost:4502/editor.html/conf/global/settings/workflow/models/formsandsigningdemo.html) workflow模型：
-   1. 開啟「在CRX中儲存表格」步驟。
-   1. 將localhost變更為AEM Server的ip位址。
-   1. 儲存您的變更。
-   1. 同步工作流程以產生執行階段模型。
-
-      ![簽署多份表格](assets/sign-multiple-forms.jpg)
-
-   1. 開啟再 [融資表格](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。
-   1. 填寫必填欄位。 請確定您提供有效的電子郵件地址，並選取一或多個表單以簽署和送出表單。
-您會收到一封電子郵件，內含填寫及簽署表格的連結。
-
-#### 疑難排解 {#troubleshoot-sign-multiple-forms}
-
-* 除錯記錄檔會寫入 `signingmultipleforms.log` 至伺服器記錄檔資料夾中的檔案。
-
-* 要簽署的表格會儲存在下方 `/content/formsforsigning`。
-
-* 請確定所有的捆綁包都處於活動狀態。
-
-* 檢查您的電子郵件伺服器組態。
 
 ### （可選）MS Dynamics雲端組態 {#ms-dynamics-cloud-configuration}
 
@@ -324,7 +282,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
 1. 要找到資源URL/服務根URL，請導航到MS Dynamics實例儀表板。
 1. 在頂端導覽列中，按一下「銷售」或您自己的例項類型，然後按一下「選取設定」。
 1. 按一下右下角的「自訂」和「開發人員資源」。
-1. 您會在那裡找到服務根URL: e.g
+1. 您會在那裡找到服務根URL:e.g
 
    *[https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
 
@@ -430,7 +388,7 @@ AEM Forms We.Gov示範套件(**we-gov-forms.pkg.all-&lt;version>.zip**)是包含
    ![管理存取權](assets/aftia-admin-user-access.jpg)
 1. 使用者名稱和共用的機密資訊會出現在權限方塊的右側。
 1. 請注意，使用者名稱中會有冒號，冒號左側的所有資訊都是使用者名稱，而冒號右側的所有資訊都是公司名稱。
-   * 以下是其範例： *用戶名： 公司名稱*
+   * 以下是其範例： *用戶名：公司名稱*
 
 #### 在Adobe Analytics中設定使用者驗證 {#setup-user-authentication}
 
@@ -469,7 +427,7 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 
    ![分析與建議](assets/analytics_recommendations.jpg)
 
-1. 在此頁面上，您會看到從Adobe Analytics擷取的與AEM Sites頁面相關的資訊(注意： 設計時，會定期從Adobe Analytics重新整理此資訊，而不會即時顯示)。
+1. 在此頁面上，您會看到從Adobe Analytics擷取的與AEM Sites頁面相關的資訊(注意：設計時，會定期從Adobe Analytics重新整理此資訊，而不會即時顯示)。
 
    ![AEM Sites分析](assets/sites_analysis.jpg)
 
@@ -534,7 +492,7 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 1. 請勿繼續進行Adobe I/O中建立整合的其餘設定- [檢閱區段](#create-integration-adobeio)
 
 >[!NOTE]
-本節中建立的憑證將用於在Adobe I/O中建立整合服務。 使用者在整合服務中建立後，使用者就可以使用Adobe I/O中的資訊來完成設定。
+本節中建立的憑證將用於在Adobe I/O中建立整合服務。使用者在整合服務中建立後，使用者就可以使用Adobe I/O中的資訊來完成設定。
 
 #### 在Adobe I/O中建立整合 {#create-integration-adobeio}
 
@@ -793,7 +751,7 @@ Project DAM Assets也包含We.Gov標誌和影像。 這些資產可在以下網�
 
 若要先執行協助工具測試，您必須先安裝Chrome增效模組，請在這裡 [找到](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)。
 
-安裝後，請載入您要在Chrome瀏覽器中測試的頁面(注意： 開啟多個標籤可能會影響您的分數，但最好是只開啟一個標籤)。 載入頁面後&#x200B;**，在頁面上按一** 下滑鼠右鍵 **，然後選取「** 稽核」標籤。 開發人員可以選擇由協助工具外掛程式執行的稽核類型。 在選取所有所需選項後，使用者就可以選取「產生報表」按鈕。 這將產生PDF檔案，其中顯示整體協助工具評等，以及可用來提高整體協助工具評等的內容。
+安裝後，請載入您要在Chrome瀏覽器中測試的頁面(注意：開啟多個標籤可能會影響您的分數，但最好是只開啟一個標籤)。 載入頁面後&#x200B;**，在頁面上按一** 下滑鼠右鍵 **，然後選取「** 稽核」標籤。 開發人員可以選擇由協助工具外掛程式執行的稽核類型。 在選取所有所需選項後，使用者就可以選取「產生報表」按鈕。 這將產生PDF檔案，其中顯示整體協助工具評等，以及可用來提高整體協助工具評等的內容。
 
 報表一經執行，使用者就會看到下列內容：
 
