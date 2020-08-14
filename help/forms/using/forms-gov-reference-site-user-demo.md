@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f4dcf58d70ea5a17617ef1e80942de7db3233031
+source-git-commit: d1da42d7274e9a4257b9e8effae2b754e0104aa4
 workflow-type: tm+mt
-source-wordcount: '2464'
+source-wordcount: '2536'
 ht-degree: 0%
 
 ---
@@ -50,15 +50,15 @@ ht-degree: 0%
 
 We.Gov示範套件隨附下列內建虛擬使用者：
 
-* **譚雅**: 符合政府機關服務資格的公民
+* **譚雅**:符合政府機關服務資格的公民
 
 ![虛擬使用者](/help/forms/using/assets/aya_tan_new.png)
 
-* **喬治·朗**: We.Gov機構商業分析師
+* **喬治·朗**:We.Gov機構商業分析師
 
 ![虛擬使用者](/help/forms/using/assets/george_lang.png)
 
-* **卡米拉·桑托斯**: We.Gov Agency CX領導
+* **卡米拉·桑托斯**:We.Gov Agency CX領導
 
 ![虛擬使用者](/help/forms/using/assets/camila_santos.png)
 
@@ -77,40 +77,40 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
 ### 示範概觀詞語圖例 {#demo-overview-terms-legend}
 
-1. **模擬**: 在AEM展示中定義的使用者與群組。
-1. **按鈕**: 彩色矩形或環繞的箭頭，以進行導覽。
-1. **按一下**: 執行使用者動態中的動作。
-1. **連結**: 位於We.Gov網站主功能表頂端。
-1. **使用者指示**: 瀏覽使用者動態時要遵循的一組數值步驟。
+1. **模擬**:在AEM展示中定義的使用者與群組。
+1. **按鈕**:彩色矩形或環繞的箭頭，以進行導覽。
+1. **按一下**:執行使用者動態中的動作。
+1. **連結**:位於We.Gov網站主功能表頂端。
+1. **使用者指示**:瀏覽使用者動態時要遵循的一組數值步驟。
 1. **表單入口網站**: *https://&lt;aemserver>:&lt;port>/content/we-gov/formsportal.html*
 1. **Mobile View**:We.Gov使用者可使用重新調整大小的瀏覽器來複製行動檢視。
-1. **案頭檢視**: We.gov使用者可在膝上型電腦或桌上型電腦上檢視示範。
-1. **預螢幕擷取表單**: We.Gov網站首頁的表格。
-1. **最適化表單**: We.gov示範的註冊申請表。
+1. **案頭檢視**:We.gov使用者可在膝上型電腦或桌上型電腦上檢視示範。
+1. **預螢幕擷取表單**:We.Gov網站首頁的表格。
+1. **最適化表單**:We.gov示範的註冊申請表。
 
    *https://&lt;aemserver>:&lt;port>/content/forms/af/adobe-gov-forms/enrollment-application-for-health-benefits.html*
 
 1. **Adobe We.Gov網站**: *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html*
-1. **Adobe收件匣**: 位於AEM後端的 [頂端功能表列](assets/bell.svg) 「Bell」圖示。
+1. **Adobe收件匣**:位於AEM後端的 [頂端功能表列](assets/bell.svg) 「Bell」圖示。
 
    *https://&lt;aemserver>:&lt;port>/aem/start.html*
 
-1. **電子郵件客戶**: 檢視電子郵件的偏好方式(Gmail、Outlook)
-1. **CTA**: 行動要求
-1. **導覽**: 在瀏覽器頁面上找到特定的參考點。
-1. **AFC**: 自動化表單轉換
+1. **電子郵件客戶**:檢視電子郵件的偏好方式(Gmail、Outlook)
+1. **CTA**:行動要求
+1. **導覽**:在瀏覽器頁面上找到特定的參考點。
+1. **AFC**:自動化表單轉換
 
 ## 自動化表單轉換(Camila) {#automated-forms-conversion}
 
-**本節**: Camila the CX Lead現有的PDF表單是用於書面流程的一部分。 作為現代化工作的一部分，她想使用此PDF表格自動建立新的現代化最適化表格。
+**本節**:Camila the CX Lead現有的PDF表單是用於書面流程的一部分。 作為現代化工作的一部分，她想使用此PDF表格自動建立新的現代化最適化表格。
 
 ### 自動化表單轉換- We.Gov(Camila) {#automated-forms-conversion-wegov}
 
 1. 導覽至 *https://&lt;aemserver>:&lt;port>/aem/start.html*
 
 1. 登入方式：
-   * **使用者**: camila.santos
-   * **密碼**: 密碼
+   * **使用者**:camila.santos
+   * **密碼**:密碼
 1. 從首頁選擇「表單>表單與檔案> AEM Forms We.gov表單> AFC」。
 1. Camila將PDF上傳至AEM Forms。
 
@@ -122,7 +122,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
    >
    >請注意，AFC中的設定已為最終用戶預配置，這表示不應更改這些設定。
 
-   * **可選**: 如果希望使用「可訪問的Ultramarine」主題，只需按一下「指定自適應表單主題」，然後選擇出現在選項清單中的「可訪問的-Ultramarine」主題。
+   * **可選**:如果希望使用「可訪問的Ultramarine」主題，只需按一下「指定自適應表單主題」，然後選擇出現在選項清單中的「可訪問的-Ultramarine」主題。
 
    ![開始轉換](assets/aftia-start-conversion.jpg)
 
@@ -134,7 +134,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
    ![審核轉換](assets/aftia-review-conversion.jpg)
 
-1. 然後，Camilla會開始編輯她從「面板配置」下拉式選單>「選取核取方塊」中選取「根面板」>「編輯（扳手）」>「選取頂端標籤」的表單。
+1. 然後卡米拉開始編輯表單。 她從「面板配置」下拉式選單中選取「根面板」>「編輯（扳手）」>「選取頂端標籤」>選取「核取方塊」。
 
    ![查看屬性](assets/aftia-review-properties.jpg)
 
@@ -144,7 +144,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 
 ### 表單資料模型與資料來源(Camila) {#data-sources}
 
-**本節**: 在轉換並生成最適化表單後，Camila就需要將最適化表單連接至資料來源。
+**本節**:在轉換並生成最適化表單後，Camila就需要將最適化表單連接至資料來源。
 
 1. Camila會在表單上開啟屬性，該表單是在 [Automated Forms Conversion - We.Gov中轉換的](#automated-forms-conversion-wegov)。
 
@@ -153,6 +153,9 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 1. 按一下「儲存並關閉」按鈕。
 
    ![FDM選擇](assets/aftia-select-fdm.jpg)
+
+1. Camila按一下 **輸出資料夾** ，選取最適化表單，然後按一下「 **編輯** 」以開啟完成的We.Gov表單。
+1. Camila會選取最適化表單欄位，然後按一下「 ![設定」圖示](assets/configure-icon.svg)。 她使用「綁定參考」( **Bind Reference** )欄位建立與表單資料模型圖元的綁定。 她以最適化形式對所有欄位重複此步驟。
 
 ### 表單協助工具測試(Camila) {#form-accessibility-testing}
 
@@ -175,8 +178,8 @@ Camila也驗證建立的內容是否已正確建立且完全可依公司標準�
 1. 導覽至： *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html*
 1. 登入方式：
 
-   1. **使用者**: aya.tan
-   1. **密碼**: 密碼
+   1. **使用者**:aya.tan
+   1. **密碼**:密碼
 
 1. 重新調整瀏覽器視窗大小或使用瀏覽器模擬器來複製行動裝置大小。
 
@@ -184,7 +187,7 @@ Camila也驗證建立的內容是否已正確建立且完全可依公司標準�
 
 ![虛擬使用者](/help/forms/using/assets/aya_tan_new-1.png)
 
-**本節**: 阿亞是公民。 她從朋友那裡得知，她可能符合從政府機關獲得服務的資格。 Aya從手機瀏覽到We.Gov網站，進一步瞭解她有資格獲得的服務。
+**本節**:阿亞是公民。 她從朋友那裡得知，她可能符合從政府機關獲得服務的資格。 Aya從手機瀏覽到We.Gov網站，進一步瞭解她有資格獲得的服務。
 
 ### We.Gov Pre-Screener(Aya) {#aya-user-story-we-gov-pre-screener}
 
@@ -222,11 +225,11 @@ Aya需要先在家中審閱一些檔案，才能完成服務請求申請。 她�
 
 1. 使用下列動 **態邏輯** ，使用「族狀態」下拉式清單來展 **示動態功能** :
 
-   1. **單一**: 顯示親屬面板旁邊
-   1. **已婚**: 顯示婚姻相關面板
-   1. **離婚**: 顯示親屬面板旁邊
-   1. **寡居**: 顯示親屬面板旁邊
-   1. **你有孩子嗎？**: （是／否）選項按鈕以顯示子依存面板。
+   1. **單一**:顯示親屬面板旁邊
+   1. **已婚**:顯示婚姻相關面板
+   1. **離婚**:顯示親屬面板旁邊
+   1. **寡居**:顯示親屬面板旁邊
+   1. **你有孩子嗎？**:（是／否）選項按鈕以顯示子依存面板。
 
       1. （新增／移除）按鈕，以新增／移除多個子系相依面板。
 
@@ -267,7 +270,7 @@ Aya需要先在家中審閱一些檔案，才能完成服務請求申請。 她�
 
    提交Aya後，會收到「感謝」頁面。 （可選）她也會收到電子郵件，可以透過Adobe Sign開啟以電子方式簽署記錄檔案。
 
-### 可選： Adobe Sign(Aya) {#adobe-sign}
+### 可選：Adobe Sign(Aya) {#adobe-sign}
 
 **使用者指示：**
 
@@ -315,7 +318,7 @@ Aya需要先在家中審閱一些檔案，才能完成服務請求申請。 她�
 
    ![Health Benefits Application Review](/help/forms/using/assets/health_benefits.png)
 
-### 可選： AEM Inbox &amp; MS Dynamics(George) {#george-user-story-aem-inbox-and-ms-dynamics}
+### 可選：AEM Inbox &amp; MS Dynamics(George) {#george-user-story-aem-inbox-and-ms-dynamics}
 
 由於資料整合和自動化工作流程，Aya的應用程式會出現，而且會在提交資料時自動產生CRM記錄。
 
@@ -359,8 +362,8 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
    1. 登入方式：
 
-      1. **使用者**: camila.santos
-      1. **密碼**: 密碼
+      1. **使用者**:camila.santos
+      1. **密碼**:密碼
    1. 或模擬：
 
       1. 在「**Impersonate as**」欄位中輸&#x200B;**入「Camila**」。
@@ -435,11 +438,11 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
 ## （可選）表單資料模型(Camila) {#form-data-model}
 
-**本節**: Camila導覽至AEM Forms Data Integrations，在此她可以執行快速測試，查看透過「表單資料模型」整合傳送至外部資料來源的資訊確實存在。
+**本節**:Camila導覽至AEM Forms Data Integrations，在此她可以執行快速測試，查看透過「表單資料模型」整合傳送至外部資料來源的資訊確實存在。
 
 ### 表單資料模型(Camila) {#form-data-model-camila}
 
-**本節**: Camila導覽至「資料來源」頁面，以驗證伺服器已在Derby資料庫中複製的資料。
+**本節**:Camila導覽至「資料來源」頁面，以驗證伺服器已在Derby資料庫中複製的資料。
 
 1. 在使用者體驗完成且使用者提交完成後，Camila會導覽至AEM Forms中的「Data Sources」標籤(**Forms** > **Data Integrations**)
 
@@ -449,7 +452,7 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
    ![聯絡閱讀服務](assets/aftia-contact-read-service.jpg)
 
-1. 然後，Camila會提供測試服務以取得連絡人ID，然後按一下「測試」按鈕。
+1. 然後，Camila會提供測試服務以取得連絡人ID，然後按一下「測試」按鈕。 例如，1或2，如果您已提交表單。 如果您尚未提交表單，則不會傳回任何資料。
 
    ![聯絡閱讀服務](assets/aftia-test-service.jpg)
 
@@ -489,7 +492,7 @@ George核准Aya的應用程式，而且由於現有的自動化工作流程，�
 
    ![分析與建議](/help/forms/using/assets/analytics_recommendation.jpg)
 
-1. 在此頁面上，您會看到從Adobe Analytics擷取的與AEM Sites頁面相關的資訊(注意： 設計時，會定期從Adobe Analytics重新整理此資訊，而不會即時顯示)。
+1. 在此頁面上，您會看到從Adobe Analytics擷取的與AEM Sites頁面相關的資訊(注意：設計時，會定期從Adobe Analytics重新整理此資訊，而不會即時顯示)。
 
    ![Adobe Analytics關鍵量度](/help/forms/using/assets/analytics_key_metrics.jpg)
 
