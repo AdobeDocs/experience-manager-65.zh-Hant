@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
+source-git-commit: 1148ac87ef6ff1afa77788e9cbd180d883290bfe
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 * 啟用 [SSL的](/help/sites-administering/ssl-by-default.md) AEM Forms伺服器。
 * Adobe [Sign API應用程式](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
 * Adobe Sign API應用程式的認證（用戶端ID和用戶端密碼）。
+* 重新設定時，請從作者和發佈例項中移除現有的Adobe Sign設定。
 
 ## 使用AEM Forms設定Adobe Sign {#configure-adobe-sign-with-aem-forms}
 
@@ -51,7 +52,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 1. 在設定頁面上，點選「 **[!UICONTROL 建立]** 」以在AEM Forms中建立Adobe Sign設定。
 1. 在「建 **[!UICONTROL 立Adobe Sign設定]** 」頁面的「一般 **[!UICONTROL 」標籤中，為設定和Next]** (下一 ********&#x200B;步)指定名稱。 您可以選擇指定標題並瀏覽以選取設定的縮圖。
 
-   複製目前瀏覽器視窗中的URL。 您必須使用AEM Forms來設定Adobe Sign應用程式。
+1. 將您目前瀏覽器視窗中的URL複製至記事本。 您必須使用AEM Forms來設定Adobe Sign應用程式。
 
 1. 設定Adobe Sign應用程式的OAuth設定：
 
@@ -95,6 +96,9 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 1. 重複步驟1至12，以使用AEM Forms設定Adobe Sign。 使用相同的設定標題（如步驟3所指定）和相同的名稱（如步驟6所指定）來復製作者實例上所設定的設定。
 
    現在，Adobe Sign已與AEM Forms整合，可在最適化表單中使用。 若要 [在最適化表單中使用Adobe Sign服務](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，請在最適化表單屬性中指定上方建立的組態容器。
+
+   >[!NOTE]
+   > 如果您有硬化的環境，但無法存取URL `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`，請完成「作者」上的設定，並使用 [複製](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) ，在對應的發佈例項上建立相同的設定。
 
 ## 設定Adobe Sign排程器以同步簽署狀態 {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
