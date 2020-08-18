@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: ba6f94435a4d4945d54614db19f7ff612a317692
 workflow-type: tm+mt
 source-wordcount: '11830'
 ht-degree: 6%
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 本節說明在動態媒體中處理視訊。
 
-## 快速入門： 影片 {#quick-start-videos}
+## 快速入門：影片 {#quick-start-videos}
 
 下列逐步工作流程說明旨在協助您在動態媒體中使用可調式視訊集快速啟動並執行。 在每個步驟後，您都會交叉參考主題標題，以找到更多資訊。
 
@@ -139,7 +139,7 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 * 從多種支援的視訊格式和音訊格式上傳視訊，並將視訊編碼為MP4 H.264格式，以便在多種螢幕上播放。 您可以使用預先定義的最適化視訊預設集、單一視訊編碼預設集，或自訂您自己的編碼，以控制視訊的品質和大小。
 
    * 產生最適化視訊集時，會包含MP4視訊。
-   * **注意**: 主視訊／來源視訊不會新增至最適化視訊集。
+   * **注意**:主視訊／來源視訊不會新增至最適化視訊集。
 
 * 所有HTML5視訊檢視器中的視訊字幕。
 * 使用完整的中繼資料支援來組織、瀏覽和搜尋視訊，以有效管理視訊資產。
@@ -163,7 +163,7 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位
 
 另請參 [閱Adobe Scene7檢視器參考指南中的「AEM Assets的檢視器」和「Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) 」 [和「AEM資產的檢視器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 」。
 
-## 最佳實務： 使用HTML5視訊檢視器 {#best-practice-using-the-html-video-viewer}
+## 最佳實務：使用HTML5視訊檢視器 {#best-practice-using-the-html-video-viewer}
 
 動態媒體HTML5視訊檢視器預設集是強穩的視訊播放器。 您可以使用它們來避免許多與HTML5視訊播放相關的常見問題，以及行動裝置相關的問題，例如缺乏可調式串流傳送以及案頭瀏覽器觸及面有限。
 
@@ -173,7 +173,7 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位
 
 結合單一播放器，即可設計使用HTML5和CSS的播放元件、內嵌播放，並視瀏覽器功能而使用可調式和漸進式串流，讓您將豐富型媒體內容的觸及面擴展至案頭和行動使用者，並確保簡化視訊體驗。
 
-另請參 [閱Adobe Scene7檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 中的關於HTML5檢視器。
+另請參 [閱Adobe Scene7檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 中的「關於HTML5檢視器」。
 
 ### 使用HTML5視訊檢視器在桌上型電腦和行動裝置上播放視訊 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -207,7 +207,7 @@ HLS是Apple自適應視訊串流的標準，可根據網路頻寬容量自動調
   <tr>
    <td>桌面</td>
    <td>Internet Explorer 11+</td>
-   <td>在Windows 8和Windows 10上——每當要求HLS時，強制使用HTTPS。 已知限制： HLS上的HTTP無法在此瀏覽器／作業系統組合<br /><br /> 「On Windows 7 —— 漸進式下載」中運作。 使用標準邏輯來選擇HTTP與HTTPS通訊協定。</td>
+   <td>在Windows 8和Windows 10上——每當要求HLS時，強制使用HTTPS。 已知限制：HLS上的HTTP無法在此瀏覽器／作業系統組合<br /><br /> 「On Windows 7 —— 漸進式下載」中運作。 使用標準邏輯來選擇HTTP與HTTPS通訊協定。</td>
   </tr>
   <tr>
    <td>桌面</td>
@@ -280,7 +280,7 @@ HLS是Apple自適應視訊串流的標準，可根據網路頻寬容量自動調
 
 如需視訊編碼的建議，請參閱下列：
 
-* [串流101: 基本功能— 轉碼器、頻寬、資料速率和解析度](https://www.adobe.com/go/learn_s7_streaming101_en)。
+* [串流101:基本功能— 轉碼器、頻寬、資料速率和解析度](https://www.adobe.com/go/learn_s7_streaming101_en)。
 * [視訊編碼基礎](https://www.adobe.com/go/learn_s7_encoding_en)。
 
 ### 來源視訊檔案 {#source-video-files}
@@ -320,7 +320,7 @@ HLS是Apple自適應視訊串流的標準，可根據網路頻寬容量自動調
 | 1.78 | 16:9 |
 | 0.56 | 9:16 |
 
-例如，1440寬度x 1080高度的視訊的外觀比例為1440/1080或1.33。 在此例中，您選擇外觀比例為4:3的視訊編碼預設集，以編碼視訊檔案。
+例如，1440寬度x 1080高度的視訊的外觀比例為1440/1080或1.33。在此例中，您選擇外觀比例為4:3的視訊編碼預設集，以編碼視訊檔案。
 
 ### 位元速率 {#bitrate}
 
@@ -336,7 +336,7 @@ HLS是Apple自適應視訊串流的標準，可根據網路頻寬容量自動調
 如果視訊在整個視訊中包含類似的動作等級，請使用CBR。 CBR最常用於串流視訊內容。 另請參閱 [使用自訂的視訊編碼參數](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters)。
 
 * **[!UICONTROL 可變位元速率編碼]** (VBR)- VBR編碼會根據壓縮器所需的資料，將資料速率調低並調至您設定的上限。 這表示在VBR編碼處理期間，媒體檔案的位元速率會根據媒體檔案的位元速率需求動態增加或減少。
-VBR編碼時間較長，但結果最好； 媒體檔案的品質更優越。 VBR最常用於http漸進式傳送視訊內容。
+VBR編碼時間較長，但結果最好；媒體檔案的品質更優越。 VBR最常用於http漸進式傳送視訊內容。
 
 何時應使用VBR與CRB?
 在選擇VBR與CBR時，幾乎總是建議您將VBR用於媒體檔案。 VBR以競爭的位元速率提供更高品質的檔案。 使用VBR時，請務必搭配兩遍編碼使用，並將最大位元速率設定為目標視訊位元速率的1.5倍。
@@ -385,7 +385,7 @@ VBR編碼時間較長，但結果最好； 媒體檔案的品質更優越。 VBR
 
 ### Fps（每秒幀數） {#fps-frames-per-second}
 
-在美國和日本，大部分視訊的拍攝速度是每秒29.97畫格(fps); 在歐洲，大部分的視訊拍攝時速為25 fps。 影片以24 fps拍攝。
+在美國和日本，大部分視訊的拍攝速度是每秒29.97畫格(fps);在歐洲，大部分的視訊拍攝時速為25 fps。 影片以24 fps拍攝。
 
 選擇符合您主要來源視訊檔的fps速率的視訊編碼預設集。 例如，如果您的主要來源視訊是25 fps，請選擇25 fps的編碼預設集。 依預設，所有自訂編碼都使用主要來源視訊檔案的fps。 因此，在建立視訊編碼預設集時，您不需要明確指定fps設定。
 
@@ -436,7 +436,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 ### 設定Google Cloud設定 {#configuring-google-cloud-settings}
 
-若要發佈至YouTube，您需要Google帳戶。 如果你有GMAIL賬戶，那麼你已經有了谷歌賬戶； 如果您沒有Google帳戶，可以輕鬆建立一個帳戶。 您需要帳戶，因為您需要認證才能將視訊資產發佈至YouTube。 如果您已建立帳戶，請略過此工作，然後直接前往「 [Creating a YouTube channel](#creating-a-youtube-channel)」。
+若要發佈至YouTube，您需要Google帳戶。 如果你有GMAIL賬戶，那麼你已經有了谷歌賬戶；如果您沒有Google帳戶，可以輕鬆建立一個帳戶。 您需要帳戶，因為您需要認證才能將視訊資產發佈至YouTube。 如果您已建立帳戶，請略過此工作，然後直接前往「 [Creating a YouTube channel](#creating-a-youtube-channel)」。
 
 與Google Cloud搭配使用的帳戶和YouTube使用的Google帳戶不必相同。
 
@@ -465,7 +465,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 在「新建項目」對話框的「項目名稱」欄位中，鍵入新項目的名稱。
 
-   請注意，您的專案ID是以您的專案名稱為基礎。 因此，請謹慎選擇專案名稱； 在建立後無法變更。 此外，當您稍後在AEM中設定YouTube時，還需要再次輸入相同的專案ID; 你可能想寫下來。
+   請注意，您的專案ID是以您的專案名稱為基礎。 因此，請謹慎選擇專案名稱；在建立後無法變更。 此外，當您稍後在AEM中設定YouTube時，還需要再次輸入相同的專案ID;你可能想寫下來。
 
 1. Click **[!UICONTROL Create.]**
 
@@ -504,7 +504,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    例如， `https://1a2b3c.mycompany.com:4321`
 
-   **注意**: 上述路徑範例僅供圖例之用。
+   **注意**:上述路徑範例僅供圖例之用。
 
    ![6_5_googleaccount-apis-createcredentials-oauth](assets/6_5_googleaccount-apis-createcredentials-oauth.png)
 
@@ -514,7 +514,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    例如， `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   **注意**: 上述路徑範例僅供圖例之用。
+   **注意**:上述路徑範例僅供圖例之用。
 
 1. 按一 **[!UICONTROL 下「建立OAuth用戶端ID」。]**
 1. 在「 **[!UICONTROL 新增認證至您的專案]****** 」頁面的「設定OAuth 2.0同意書」畫面標題下方，選取您目前使用的Gmail電子郵件地址。
@@ -523,7 +523,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 在顯示 **[!UICONTROL 給使用者的產品名稱標題下]** ，在文字欄位中，輸入您要在同意畫面上顯示的內容。
 
-   當AEM管理員向YouTube驗證時，會顯示同意畫面； AEM將會聯絡YouTube以取得許可。
+   當AEM管理員向YouTube驗證時，會顯示同意畫面；AEM將會聯絡YouTube以取得許可。
 
 1. 按一下 **[!UICONTROL 繼續。]**
 1. On the Add credentials to your project page, step 4, under the **[!UICONTROL Download credentials]** heading, tap **[!UICONTROL Download.]**
@@ -552,7 +552,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 在YouTube頁面的右上角，按一下您的描述檔圖片（也可能會以純色圓圈中的字母顯示），然後按一下 **[!UICONTROL YouTube設定]** （圓齒輪圖示）。
 1. 在「概述」頁面的「其他功能」標題下，按一下「 **[!UICONTROL 查看我的所有渠道」或建立新渠道。]**
 1. 在「渠道」頁面上，按一 **[!UICONTROL 下「建立新渠道」。]**
-1. 在「品牌帳戶」頁面的「品牌帳戶名稱」欄位中，輸入您要將視訊資產發佈至何處的商業名稱或任何其他渠道名稱，然後按一下「建 **[!UICONTROL 立」。]**
+1. 在「品牌帳戶」頁面的「品牌帳戶名稱」欄位中，輸入您要將視訊資產發佈至何處的商業名稱或任何其他頻道名稱，然後按一下「建 **[!UICONTROL 立」。]**
 
    請記住您在此處輸入的名稱，因為當您在AEM中設定YouTube時，需要再次輸入名稱。
 
@@ -595,7 +595,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 在「建立YouTube設定」頁面的「Google cloud平台設定」下方的「應用程式名稱」欄位 **[!UICONTROL 中]** ，輸入Google專案ID。
 
    您最初設定Google Cloud設定時，已指定專案ID。
-將「建立YouTube設定」頁面保持開啟； 你馬上就回來。
+將「建立YouTube設定」頁面保持開啟；你馬上就回來。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -615,7 +615,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. YouTube/Google驗證隨即顯示。 如果您尚未登入Google Cloud帳戶，請略過此步驟。
 
    * 輸入與上述Google Project ID和JSON文字相關聯的Google使用者名稱和密碼。
-   * 視您的帳戶有多少個渠道而定，您會看到兩個或多個項目。 選取渠道。 不要選擇電子郵件地址； 它不是渠道。
+   * 視您的帳戶有多少個渠道而定，您會看到兩個或多個項目。 選取渠道。 不要選擇電子郵件地址；它不是渠道。
    * 在下一頁，點選「 **[!UICONTROL Accept]** 」（接受）以允許存取此頻道。
 
 1. 點選「 **[!UICONTROL 允許」。]**
@@ -643,7 +643,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 在「YouTube帳戶設定」對話方塊的「應用程式名 **[!UICONTROL 稱」欄位中]** ，輸入Google專案ID。
 
    您在最初設定Google Cloud設定時 [指定專案ID](/help/assets/video.md#configuring-google-cloud-settings) 。
-讓「YouTube帳戶設定」對話方塊保持開啟； 你馬上就回來。
+讓「YouTube帳戶設定」對話方塊保持開啟；你馬上就回來。
 
 1. 使用純文字編輯器，開啟您在「設定Google雲端設定」工作中先前下載並儲存的JSON檔案。
 1. 選取並複製整個JSON文字。
@@ -661,7 +661,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. YouTube/Google驗證隨即顯示。 如果您尚未登入Google Cloud帳戶，請略過此步驟。
 
    * 輸入與上述Google Project ID和JSON文字相關聯的Google使用者名稱和密碼。
-   * 視您的帳戶有多少個渠道而定，您會看到兩個或多個項目。 選取渠道。 不要選擇電子郵件地址； 它不是渠道。
+   * 視您的帳戶有多少個渠道而定，您會看到兩個或多個項目。 選取渠道。 不要選擇電子郵件地址；它不是渠道。
    * 在下一頁，點選「 **[!UICONTROL Accept]** 」（接受）以允許存取此頻道。
 
 1. 點選「 **[!UICONTROL 允許」。]**
@@ -823,7 +823,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 導覽至您要從YouTube頻道取消發佈的視訊資產。
 1. 在資產選擇模式中，選取一或多個已發佈的視訊資產。
-1. 在工具列上，按一下「管 **[!UICONTROL 理出版物」。]** 您可能需要點選三個點圖示(. . .) 在工具列上，查看「管 **[!UICONTROL 理出版物」。]**
+1. 在工具列上，按一下「管 **[!UICONTROL 理出版物」。]** 您可能需要點選三個點圖示(...) 在工具列上，查看「管 **[!UICONTROL 理出版物」。]**
 1. 在「管理出版物」頁面上，點選「取 **[!UICONTROL 消發佈」。]**
 1. 在頁面的右上角，點選「下一 **[!UICONTROL 步」。]**
 1. 在頁面的右上角，點選「解除發 **[!UICONTROL 布」。]**
@@ -1039,8 +1039,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
    * 在呼叫 `s7sdk.Utils.init();` 建立TrackingManager例項以追蹤事件後，請新增下列項目：
       `var trackingManager = new s7sdk.TrackingManager();`
 
-   * 執行下列動作，將元件連接至TrackingManager:
-在事件 `s7sdk.Event.SDK_READY` 處理常式中，將您要追蹤的元件附加至TrackingManager。
+   * 執行下列動作，將元件連接至TrackingManager:在事件 `s7sdk.Event.SDK_READY` 處理常式中，將您要追蹤的元件附加至TrackingManager。
 例如，如果元件為， `videoPlayer`則新增
       `trackingManager.attach(videoPlayer);`
 將元件附加至trackingManager。 若要追蹤頁面上的多個檢視器，請使用多個追蹤管理器元件。
@@ -1081,7 +1080,7 @@ Dynamic Media可將標題檔案轉換為JSON（JavaScript物件註解）格式�
 
    請確定您建立的檔案符合WebVTT(Web Video Text Tracks)標準。 字幕副檔名為。vtt。 您可以進一步瞭解WebVTT字幕標準。
 
-   請參 [閱WebVTT: 網頁視訊文字追蹤格式](https://dev.w3.org/html5/webvtt/)。
+   請參 [閱WebVTT:網頁視訊文字追蹤格式](https://dev.w3.org/html5/webvtt/)。
 
    您可以使用免費和優質的工具和服務，在動態媒體外部製作字幕／字幕檔案。 例如，若要建立沒有樣式的簡單視訊標題檔案，您可以使用下列免費的線上標題製作和編輯工具：
 
@@ -1100,7 +1099,7 @@ Dynamic Media可將標題檔案轉換為JSON（JavaScript物件註解）格式�
    通常，您要將標題VTT檔案命名為與視訊檔案相同的名稱，並附加語言地區設定，例如-EN、-FR或-DE等。 如此，它可協助您使用您現有的網頁內容管理系統自動產生視訊URL。
 
 1. 在AEM中，將您的WebVTT標題檔案上傳至DAM。
-1. 導覽至您要與您上傳的標題檔案建立關聯的*published *video資產。
+1. 導覽至您 *要與上* 傳的標題檔案關聯的已發佈視訊資產。
 
    請記住，URL僅可在您首次發 *布資產* 後 *複製* 。
 
@@ -1130,7 +1129,7 @@ Dynamic Media可將標題檔案轉換為JSON（JavaScript物件註解）格式�
 
 視需要，您可以建立自訂的視訊檢視器並加上章節，而不是使用視訊檢視器預設集。 如需有關使用章節導覽建立您自己的HTML5檢視器的指示，請參閱Adobe Scene7 Viewer SDK for HTML5指南中類別和下方的「使用修飾詞自訂行為」標 `s7sdk.video.VideoPlayer` 題 `s7sdk.video.VideoScrubber`。 Adobe Scene7 Viewer SDK可從 [Adobe Developer Connection下載](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)。
 
-您建立視訊的章節清單的方式與建立標題的方式大致相同。 即，建立WebVTT檔案。 但是，請注意，此檔案必須與您也可能使用的任何WebVTT標題檔案分開； 您無法將標題和章節結合為一個WebVTT檔案。
+您建立視訊的章節清單的方式與建立標題的方式大致相同。 即，建立WebVTT檔案。 但是，請注意，此檔案必須與您也可能使用的任何WebVTT標題檔案分開；您無法將標題和章節結合為一個WebVTT檔案。
 
 您可以使用下列範例作為建立WebVTT檔案時使用章節導覽的格式範例：
 
@@ -1156,7 +1155,7 @@ Cost-efficient access to rapidly evolving technology.
 
 由於您使用的是HTML5視訊檢視器，請確定您建立的章節檔案符合WebVTT(Web Video Text Tracks)標準。 章節副檔名為。vtt。 您可以進一步瞭解WebVTT字幕標準。
 
-請參 [閱WebVTT: 網頁視訊文字軌道格式](https://dev.w3.org/html5/webvtt/)
+請參 [閱WebVTT:網頁視訊文字軌道格式](https://dev.w3.org/html5/webvtt/)
 
 **若要將章節標籤新增至影片：**
 
@@ -1190,7 +1189,7 @@ Cost-efficient access to rapidly evolving technology.
        <li>導覽至您 <i>要 </i>與您上傳之章節檔案建立關聯的已發佈視訊資產。 請記住，URL僅可在您首次發 <i>布資產</i> 後 <i>複製</i> 。請參閱 <a href="/help/assets/publishing-dynamicmedia-assets.md">發佈資產。</a></li>
        <li>從下拉式選單中，按一下或點選「檢 <strong>視器</strong>」。</li>
        <li>在左側導軌中，點選或按一下視訊檢視器預設集名稱。 視訊的預覽會在個別頁面中開啟。</li>
-       <li>在左側導軌底部，按一下「內 <strong>嵌」</strong>。</li>
+       <li>在左側導軌底部，按一下「內嵌」 <strong></strong>。</li>
        <li>在「內嵌代碼」對話方塊中，選取整個代碼並將它複製至剪貼簿，然後貼到簡單的文字編輯器中。</li>
        <li>以下列語法附加視訊的內嵌代碼，將它與複製的URL建立關聯至您的章節檔案：<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
        </ol> </td>
@@ -1202,7 +1201,7 @@ Cost-efficient access to rapidly evolving technology.
 
 視訊縮圖是視訊影格或影像資產的縮小版本，代表視訊給客戶。 縮圖應該會鼓勵客戶點選影片。
 
-AEM中的所有影片都必須有相關聯的縮圖； 您不能刪除縮圖而不加以取代。 依預設，當您將影片上傳至AEM時，第一個影格會當做縮圖使用。 不過，例如，您可以自訂縮圖以用於品牌或視覺搜尋。 當您自訂視訊縮圖時，您可以播放視訊並暫停要使用的影格，也可以選取您已在數位資產管理員中上傳和發佈的影 *像* 。
+AEM中的所有影片都必須有相關聯的縮圖；您不能刪除縮圖而不加以取代。 依預設，當您將影片上傳至AEM時，第一個影格會當做縮圖使用。 不過，例如，您可以自訂縮圖以用於品牌或視覺搜尋。 當您自訂視訊縮圖時，您可以播放視訊並暫停要使用的影格，也可以選取您已在數位資產管理員中上傳和發佈的影 *像* 。
 
 請注意，您從視訊中選取的自訂視訊縮圖影像不會擷取並儲存在DAM中，成為個別的不同資產。 不過，您從現有影像資產中選取的自訂視訊縮圖會儲存至JCR。 選取資產的路徑會儲存在視訊資產的節點下，如下列範例路徑所示：
 
