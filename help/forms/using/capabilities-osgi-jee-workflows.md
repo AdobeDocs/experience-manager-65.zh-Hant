@@ -3,10 +3,10 @@ title: OSGi和AEM Forms JEE工作流程中表單導向AEM工作流程的動作�
 description: OSGi和AEM Forms JEE工作流程中表單導向AEM工作流程的動作和功能
 contentOwner: khsingh
 translation-type: tm+mt
-source-git-commit: d5d30e16d2561c020a82cdda847a9dd9b48acd3b
+source-git-commit: dfa5a0dbfdd2c63ea0ec66d805e8b452baa3d0ac
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 20%
+source-wordcount: '928'
+ht-degree: 21%
 
 ---
 
@@ -178,6 +178,41 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
    <td>支援</td>
    <td>支援</td>
   </tr>
+   <tr>
+   <td>網關，無等待 </td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+   <tr>
+   <td>儲存資料的變數 </td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>或，並分割</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>使用者頭像</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>在工作流程結束時傳送電子郵件</td>
+   <td>Supported <sup>[7]</sup></td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>從工作流程呼叫Web服務</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
+   <td>數位簽章</td>
+   <td>支援<br /> </td>
+   <td>支援<br /> </td>
+  </tr>
   <tr>
    <td>重設按鈕</td>
    <td>支援</td>
@@ -289,11 +324,6 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
    <td>支援</td>
   </tr>
   <tr>
-   <td>使用者頭像</td>
-   <td>支援</td>
-   <td>支援</td>
-  </tr>
-  <tr>
    <td>管理員檢視</td>
    <td>不支援</td>
    <td>支援<br /> </td>
@@ -329,17 +359,7 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
    <td>支援</td>
   </tr>
   <tr>
-   <td>在工作流程結束時傳送電子郵件</td>
-   <td>Supported <sup>[7]</sup></td>
-   <td>支援</td>
-  </tr>
-  <tr>
    <td>分散團體之間的委派</td>
-   <td>不支援</td>
-   <td>支援</td>
-  </tr>
-  <tr>
-   <td>從工作流程呼叫Web服務</td>
    <td>不支援</td>
    <td>支援</td>
   </tr>
@@ -349,22 +369,17 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
    <td>支援</td>
   </tr>
   <tr>
-   <td>網關，無等待 </td>
-   <td>支援</td>
-   <td>支援</td>
-  </tr>
-   <tr>
-   <td>儲存資料的變數 </td>
-   <td>支援</td>
-   <td>支援</td>
-  </tr>
-  <tr>
-   <td>或，並分割</td>
-   <td>不支援</td>
-   <td>支援</td>
-  </tr>
-  <tr>
    <td>動態任務優先順序</td>
+   <td>不支援</td>
+   <td>不支援</td>
+  </tr>
+  <tr>
+   <td>動態標題</td>
+   <td>不支援</td>
+   <td>不支援</td>
+  </tr>
+    <tr>
+   <td>動態說明</td>
    <td>不支援</td>
    <td>不支援</td>
   </tr>
