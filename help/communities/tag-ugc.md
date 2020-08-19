@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 3%
 
 ---
 
@@ -53,5 +56,5 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 以下是當管理員將讀取權限套用至群組時，在CRXDE中 `/etc/tag/discussions` 的顯示方式 `Community Engage Members`。
 
-![chlimage_1-74](assets/chlimage_1-74.png)
+![tag-permissions](assets/tag-permissions.png)
 
