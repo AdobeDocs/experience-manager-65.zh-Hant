@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 0%
 
 ---
 
@@ -59,7 +62,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 以下是當管理員將讀取權限套用至群組時，在CRXDE中 `/etc/tags/ski-catalog` 的顯示方式 `Community Enable Members`。
 
-![chlimage_1-420](assets/chlimage_1-420.png)
+![site-tags](assets/site-tags.png)
 
 ## 目錄標籤名稱空間 {#catalog-tag-namespaces}
 
@@ -67,7 +70,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 Catalog函式包含標籤設定，可定義目錄篩選器UI中所列的標籤。 設定「所有名稱空間」是指為社區站點選擇的標籤名稱空間的範圍。
 
-![chlimage_1-421](assets/chlimage_1-421.png)
+![catalog-namespace](assets/catalog-namespace.png)
 
 ## 套用標籤至啟用資源 {#applying-tags-to-enablement-resources}
 
@@ -88,7 +91,7 @@ Catalog函式包含標籤設定，可定義目錄篩選器UI中所列的標籤�
 
 將在啟用 `Ski Catalog` 資源發佈後顯示。
 
-![chlimage_1-422](assets/chlimage_1-422.png)
+![basic-info](assets/applytags-basicinfo.png)
 
 ## 在發佈時檢視目錄 {#viewing-catalog-on-publish}
 
@@ -100,5 +103,5 @@ Catalog函式包含標籤設定，可定義目錄篩選器UI中所列的標籤�
 
 如果在檢視目錄時選取標籤後未顯示啟用資源，請確定目錄的命名空間中有標籤套用至啟用資源。
 
-![chlimage_1-423](assets/chlimage_1-423.png)
+![view-catalog](assets/viewcatalog.png)
 
