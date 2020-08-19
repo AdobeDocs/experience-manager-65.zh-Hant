@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -241,7 +241,7 @@ ht-degree: 3%
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) ，會建置「標籤」篩選器，以根據特定標籤是否套用至使用者產生的內容來篩選UGC清單。 您可以遵循范常式式碼，並針對其他類似的UGC中繼資料欄位建立類似的篩選。
+Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) ，會建置「標籤」篩選器，以根據特定標籤是否套用至使用者產生的內容來篩選UGC清單。 您可以遵循范常式式碼，並針對其他類似的UGC中繼資料欄位建立類似的篩選。
 
 若要安裝「標籤」篩選器的範例：
 
