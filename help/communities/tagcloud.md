@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '571'
+ht-degree: 4%
 
 ---
 
@@ -37,22 +40,23 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 當包含 [所需的用戶端程式庫](tag.md#essentials-for-client-side) ，元件的顯示方式 `Social Tag Cloud` 如下：
 
-![chlimage_1-303](assets/chlimage_1-303.png)
+![social-tag](assets/social-tag.png)
 
 ## 設定Social標籤雲端 {#configuring-social-tag-cloud}
 
 選擇要訪問 `Social Tag Cloud` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-304](assets/chlimage_1-304.png)
+![配置](assets/configure-new.png)
 
 在「 **[!UICONTROL Social標籤雲端]** 」標籤下，指定要顯示的標籤，以及（如果標籤是作用中連結）搜尋結果頁面的位置：
 
-![chlimage_1-305](assets/chlimage_1-305.png)
+![social-tag-cloud](assets/social-tag-cloud.png)
 
 * **[!UICONTROL 顯示的社交標籤]**&#x200B;識別要顯示的UGC標籤。 下拉式選項包括：
 
    * `From page and child pages`
    * `All tags`
+
    預設值 `From page and child pages`為，其中「頁面」是指下 **方的** 「頁面」設定。
 
 * **[!UICONTROL 頁面]**
@@ -73,7 +77,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 使用「 **[!UICONTROL Social標籤雲端（設計）」標籤]** ，指定標籤的顯示方式。 標籤可以是簡單標籤、預設名稱空間中的單個單詞或分層分類：
 
-![chlimage_1-306](assets/chlimage_1-306.png)
+![social-tag-cloud-design](assets/social-tag-cloud-design.png)
 
 * **[!UICONTROL 顯示完整的標題路徑]**
 
@@ -83,6 +87,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
    * 已核取: `Geometrixx Media: Gadgets / Cars`
    * 未核取: `Cars`
+
    簡單標籤沒有區別。
 
    預設為未勾選。
@@ -100,7 +105,8 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
    `Geometrixx Media (the namespace)`、 `Gadgets`和 `Cars`
 
    * 已勾選：如果 `Cars` 套用，則只會顯示。
-   * 未勾選：並 `Geometrixx Media` 且如 `Gadgets`果套用 `Cars` ，也會顯示。
+   * 未勾選： `Geometrixx Media` 和 `Gadgets`也會顯 `Cars` 示（如果套用）。
+
    簡單的標籤是葉標籤。
 
    預設為未勾選。
