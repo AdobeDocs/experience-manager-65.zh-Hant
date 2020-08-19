@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 4%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ## 儲存配置控制台 {#storage-configuration-console}
 
-![chlimage_1-188](assets/chlimage_1-188.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
 在作者環境中，要訪問儲存配置控制台。
 
