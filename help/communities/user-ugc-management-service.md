@@ -11,9 +11,9 @@ topic-tags: administering
 discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規； 例如GDPR、CCPA等。
+>GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規；例如GDPR、CCPA等。
 
 
 AEM Communities提供現成可用的API，以管理使用者設定檔並大量管理使用者產生的內容(UGC)。 啟用後， **UserUgcManagement** service可讓特權使用者（社群管理員和協調者）停用使用者設定檔，並針對特定使用者大量刪除或大量匯出UGC。 這些API還讓客戶資料的掌控者和處理者能夠遵守歐盟的通用資料保護法規(GDPR)和其他受GDPR啟發的隱私權法規。
@@ -35,7 +35,7 @@ AEM Communities提供現成可用的API，以管理使用者設定檔並大量�
 >如果您在 [AEM Communities網站中設定了Adobe Analytics](/help/communities/analytics.md) ，則擷取的使用者資料會傳送至Adobe Analytics伺服器。 Adobe Analytics提供API，可讓您存取、匯出和刪除使用者資料，並符合GDPR。 如需詳細資訊，請參 [閱提交存取權和刪除請求](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)。
 
 
-若要使用這些API，您必須啟用 `/services/social/ugcmanagement` UserUgcManagement服務以啟用端點。 若要啟動此服務，請安 [裝](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet) GitHub.com上提供的範例servlet [](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet)。 然後，使用http請求，以適當參數點擊社群網站發佈例項上的端點，類似：
+若要使用這些API，您必須啟用 `/services/social/ugcmanagement` UserUgcManagement服務以啟用端點。 若要啟動此服務，請安 [裝](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) GitHub.com上提供的範例servlet [](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)。 然後，使用http請求，以適當參數點擊社群網站發佈例項上的端點，類似：
 
 `https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`. 不過，您也可以建立UI（使用者介面）來管理系統中的使用者設定檔和使用者產生的內容。
 
@@ -45,8 +45,8 @@ AEM Communities提供現成可用的API，以管理使用者設定檔並大量�
 
 **getUserUgc(ResourceResolver resourceResolver, String user, OutputStream)** ，幫助從系統中導出用戶的所有UGC。
 
-* **用戶**: 使用者的可授權ID。
-* **outputStream**: 結果會傳回為輸出串流，此為包含使用者產生之內容（如json檔案）和附件（包括使用者上傳的影像或視訊）的zip檔案。
+* **用戶**:使用者的可授權ID。
+* **outputStream**:結果會傳回為輸出串流，此為包含使用者產生之內容（如json檔案）和附件（包括使用者上傳的影像或視訊）的zip檔案。
 
 例如，若要匯出名為Weston McCall的使用者的UGC，而使用weston.mccall@dodgit.com做為可授權的ID來登入社群網站，您可以傳送類似下列的http GET要求：
 
@@ -56,7 +56,7 @@ AEM Communities提供現成可用的API，以管理使用者設定檔並大量�
 
 **deleteUserUgc(ResourceResolver resourceResolver, String user)** ，幫助從系統中刪除用戶的所有UGC。
 
-* **用戶**: 使用者的可授權ID。
+* **用戶**:使用者的可授權ID。
 
 例如，若要透過http-POST請求刪除具有可授權ID weston.mccall@dodgit.com的使用者的UGC，請使用下列參數：
 
@@ -65,7 +65,7 @@ AEM Communities提供現成可用的API，以管理使用者設定檔並大量�
 
 ### 從Adobe Analytics刪除UGC {#delete-ugc-from-adobe-analytics}
 
-若要從Adobe Analytics刪除使用者資料，請遵循 [GDPR Analytics工作流程](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html); 因為API不會從Adobe Analytics刪除使用者資料。
+若要從Adobe Analytics刪除使用者資料，請遵循 [GDPR Analytics工作流程](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html);因為API不會從Adobe Analytics刪除使用者資料。
 
 如需AEM Communities所使用的Adobe Analytics變數映射，請參閱下列影像：
 
@@ -75,7 +75,7 @@ AEM Communities提供現成可用的API，以管理使用者設定檔並大量�
 
 **deleteUserAccount(ResourceResolver resourceResolver, String user)** ，幫助禁用用戶帳戶。
 
-* **用戶**: 使用者的可授權ID。
+* **用戶**:使用者的可授權ID。
 
 >[!NOTE]
 >
