@@ -11,7 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 84dd0d551431169239f63cff62a015e15f998e7d
+workflow-type: tm+mt
+source-wordcount: '2043'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +25,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 HTML5表單功能會部署為內嵌AEM例項中的套件，並會使用REST風格的 [Apache Sling Architecture，以HTTP/S的REST端點形式呈現](https://sling.apache.org/)。
 
-`<style> .background{ display: none; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:1001; -moz-opacity: 0.8; opacity:.80; filter: alpha(opacity=80); } .content { display: none; position: fixed; top: 50%; left: 50%; width: 1200px; height: 756px; margin-left: -600px; margin-top: -378px; border:10px solid orange; background-color: white; z-index:1002; overflow: visible; } </style>` [![01-aem-forms-architecture](assets/01-aem-forms-architecture.jpg)*檢視完整大小&#x200B;*](javascript:void(0).md)
-
-[ ![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)](javascript:void(0).md)
+![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)
 
 ### 使用Sling Framework {#using-sling-framework}
 
@@ -95,7 +96,7 @@ HTML5表單使用快取來最佳化總處理能力和回應時間。 您可以�
   </tr>
   <tr>
    <td>攻擊性</td>
-   <td>快取轉譯的HTML內容<br /> 快取在「保守」層級快取所有快取的物件。<br /> 注 <strong>意</strong>:此策略可產生最佳效能，但會耗用更多記憶體來儲存快取的工件。</td>
+   <td>快取轉譯的HTML內容<br /> 快取在「保守」層級快取所有快取的物件。<br /> <strong>注意</strong>:此策略可產生最佳效能，但會耗用更多記憶體來儲存快取的工件。</td>
   </tr>
  </tbody>
 </table>
