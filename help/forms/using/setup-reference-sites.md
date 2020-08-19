@@ -10,9 +10,9 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 371ecbdaad97b7111353f40d1ddfb686e99d46c5
+source-git-commit: b0e071cb3bf972ceaa2af3b70a7887557e6f10f9
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2915'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 AEM Forms提供參考網站實作，以示範AEM Forms如何協助金融服務產業和政府機關將複雜的交易轉換為隨時隨地使用任何裝置的簡單而吸引人的數位體驗。
 
 We.Finance參考網站會繪製實際使用案例，以便直接從首次接觸開始，以個人化且具成本效益的方式，與現有和潛在客戶互動。
+
+使用軟體散發安裝We.Gov和We.Finance參考網 [站套件](https://docs.adobe.com/content/help/en/experience-cloud/software-distribution/home.html)。 如需詳細資訊，請參 [閱部署參考網站套件](#refsite)。
 
 參考網站可讓您探索並展示AEM Forms的下列主要功能。
 
@@ -150,7 +152,7 @@ We.Finance參考網站會繪製實際使用案例，以便直接從首次接觸�
 
 ## 設定Day CQ Link Externalizer設定 {#externalizer}
 
-在AEM中， **Externalizer** 是OSGI服務，可讓您以程式設計方式轉換資源路徑(例如 /path/to/my/page)，透過預先設定的DNS來預先固定路徑，以匯入外部和絕對URL(例如https://www.mycompany.com/path/to/my/page)。 請參 [閱外部化URL](/help/sites-developing/externalizer.md)。
+在AEM中， **Externalizer** 是OSGI服務，可讓您以程式設計方式轉換資源路徑(例如/path/to/my/page)，透過預先設定的DNS來預先固定路徑，以匯入外部和絕對URL(例如https://www.mycompany.com/path/to/my/page)。 請參 [閱外部化URL](/help/sites-developing/externalizer.md)。
 
 >[!CAUTION]
 >
@@ -217,7 +219,7 @@ We.Finance參考網站的電子郵件範本包含電子郵件中的個人化連�
 使用軟體分發安裝參考站 [點軟體包](https://docs.adobe.com/content/help/en/experience-cloud/software-distribution/home.html)。
 
 * [AEM Forms FSI參考網站套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-FSI-REF-SITE)
-* [AEM Forms Gov參考網站套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-GOV-REF-SITE)
+* [AEM Forms We.Gov示範套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=168&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fwe-gov-forms.pkg.all-2.0.2.zip)
 
 若要進一步瞭解如何使用套件，請參 [閱如何使用套件](/help/sites-administering/package-manager.md)。
 
