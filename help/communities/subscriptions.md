@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ## 下列訂閱 {#subscriptions-from-following}
 
-![chlimage_1-5](assets/chlimage_1-5.png)
+![訂閱追蹤](assets/subscription-following.png)
 
 「跟 **蹤** 」按鈕提供了一種方法，可以跟蹤條目作為活動、訂閱和／或通知。 每次選取「 **跟隨** 」按鈕時，都可以開啟或關閉選取範圍。
 
@@ -61,9 +64,9 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 如果回覆電子郵件，則回覆中輸入的內容會顯示為線上內容。
 
-![chlimage_1-6](assets/chlimage_1-6.png)
+![電子郵件回覆](assets/email-reply.png)
 
 回覆張貼的時間量由輪詢匯入工具的更 [新間隔控制](email.md#configure-polling-importer)。
 
-![chlimage_1-7](assets/chlimage_1-7.png)
+![QA](assets/qa.png)
 
