@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+workflow-type: tm+mt
+source-wordcount: '1141'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +33,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 >[!NOTE]
 >
 >**自訂元件**:對於AEM Communities的授權客戶，SRP API可供自訂元件的開發人員使用，以便存取UGC，而不考慮基礎的拓撲。 請參 [閱SRP和UGC Essentials](srp-and-ugc.md)。
+
 
 另請參閱:
 
