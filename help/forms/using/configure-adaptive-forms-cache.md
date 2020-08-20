@@ -10,18 +10,21 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 0%
 
 ---
 
 
-# 配置自適應表單快取{#configure-adaptive-forms-cache}
+# 配置自適應表單快取 {#configure-adaptive-forms-cache}
 
 快取是縮短資料存取時間、減少延遲並改善輸入／輸出(I/O)速度的機制。 最適化表單快取只儲存最適化表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 它有助於縮短在用戶端上轉換最適化表單或檔案所需的時間。 它專為最適化表單而設計，也支援最適化檔案。
 
 >[!NOTE]
 >
->使用最適化表單快取時，請使用AEM Dispatcher快取最適化表單或檔案的用戶端程式庫（CSS和JavaScript）。
+>使用最適化表單快取時，請使用AEM快 [!DNL Dispatcher] 取最適化表單或檔案的用戶端程式庫（CSS和JavaScript）。
 
 >[!NOTE]
 >
@@ -32,8 +35,8 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 執行以下步驟以配置自適應表單快取：
 
 1. 請前往https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM網頁主控台組態管理器。
-1. 按一 **下「最適化表單與互動式通訊Web頻道設定」** ，以編輯其設定值。
-1. 在「編輯設定值」對話方塊中，在「最適化表單數」欄位中指定AEM Forms伺服器執行個體可快取的表 **單或檔案數上限** 。 預設值為100。
+1. 按一 **[!UICONTROL 下「最適化表單與互動式通訊Web頻道設定」]** ，以編輯其設定值。
+1. 在「編 [!UICONTROL 輯設定值] 」對話方塊中 [!DNL Forms] ，在「最適化表單數」欄位中指定AEM伺服器例項可快取的表 **** 單或檔案數上限。 預設值為100。
 
    >[!NOTE]
    >
@@ -41,5 +44,4 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    ![最適化表單HTML快取的設定對話方塊](assets/cache-configuration-edit.png)
 
-1. 按一下 **保存** ，保存配置。
-
+1. 按一下 **[!UICONTROL 保存]** ，保存配置。
