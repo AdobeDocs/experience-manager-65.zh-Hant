@@ -1,6 +1,6 @@
 ---
-title: 表單入口網站|處理使用者資料
-seo-title: 表單入口網站|處理使用者資料
+title: 表單入口網站 |處理使用者資料
+seo-title: 表單入口網站 |處理使用者資料
 description: 'null'
 seo-description: 'null'
 uuid: 2ac2b2a9-b603-489a-86b8-a78b697f130d
@@ -9,14 +9,17 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+workflow-type: tm+mt
+source-wordcount: '859'
+ht-degree: 0%
 
 ---
 
 
-# 表單入口網站|處理使用者資料 {#forms-portal-handling-user-data}
+# 表單入口網站 |處理使用者資料 {#forms-portal-handling-user-data}
 
-AEM Forms入口網站提供您可用來在AEM Sites頁面上列出最適化表單、HTML5表單和其他表單資產的元件。 此外，您也可以設定它，以顯示已登入使用者的草稿並提交最適化表單和HTML5表單。 如需表單入口網站的詳細資訊，請參 [閱Portal上發佈表單的簡介](/help/forms/using/introduction-publishing-forms.md)。
+[!DNL AEM Forms] portal提供可用來列出頁面上最適化表單、HTML5表單和其他Forms資產的元 [!DNL AEM Sites] 件。 此外，您也可以設定它，以顯示已登入使用者的草稿並提交最適化表單和HTML5表單。 如需表單入口網站的詳細資訊，請 [參閱在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)。
 
 當登入使用者將最適化表單儲存為草稿或提交時，這些表單會顯示在表單入口網站的「草稿」和「提交」標籤中。 草稿或提交表單的資料會儲存在為AEM部署所設定的資料儲存區中。 匿名用戶的草稿和提交不顯示在表單門戶頁面上；但是，該資料儲存在配置的資料儲存中。 有關詳細資訊，請參 [閱為草稿和提交配置儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
 
@@ -70,7 +73,7 @@ AEM Forms入口網站提供您可用來在AEM Sites頁面上列出最適化表�
 
 #### 存取使用者資料 {#access-user-data}
 
-當登入使用者儲存草稿或提交表單時，會使用其使用者ID來建立子節點。 例如，其使用者ID儲存在AEM儲存庫節點中的Sarah rose的草稿 `srose` 和提交 `/content/forms/fp/srose/` 資料。 在用戶ID節點內，資料以分層結構組織。
+當登入使用者儲存草稿或提交表單時，會使用其使用者ID來建立子節點。 例如，其使用者ID儲存在AEM儲存庫節點的Sarah Rose的草稿 `srose` 和提交 `/content/forms/fp/srose/` 資料。 在用戶ID節點內，資料以分層結構組織。
 
 下表說明如何將所有草稿的資料儲 `srose` 存在AEM儲存庫中。
 
@@ -78,7 +81,7 @@ AEM Forms入口網站提供您可用來在AEM Sites頁面上列出最適化表�
 >
 >在節點下，會為 `drafts` 提交的表單複製一 `srose` 個精確 `/content/forms/fp/srose/submit/` 結構。
 >
->使用者的所有草稿和 `anonymous` 提交都會儲存在節點下， `/content/forms/fp/anonymous/` 節點會組織所有匿名使用者在節點和節點下的 `draft` 草稿和提 `submit` 交。
+>使用者的所有草稿和 `anonymous` 提交都會儲存在節點下， `/content/forms/fp/anonymous/` 節點會組織所有匿名使用者在節點和節點下的草 `draft` 稿和提 `submit` 交。
 
 | 節點 | 說明 |
 |---|---|
@@ -94,7 +97,7 @@ AEM Forms入口網站提供您可用來在AEM Sites頁面上列出最適化表�
 
 若要從AEM系統的已登入使用者的草稿和提交中完全刪除使用者資料，您必須從作者節 `user ID` 點刪除特定使用者的節點。 您必須從所有適用的AEM例項手動刪除資料。
 
-所有匿名使用者的草稿和提交資料會儲存在下方的公 `drafts` 用 `submit` 和節點 `/content/forms/fp/anonymous`中。 除非已知某些可識別資訊，否則無法尋找特定匿名使用者的資料。在此案例中，您可以搜尋AEM儲存庫中識別匿名使用者的資訊，並從所有適用的AEM例項手動刪除包含該資訊的節點，以從AEM系統移除資料。 不過，若要刪除所有匿名使用者的資料，您可以刪除節 `anonymous` 點，以移除所有匿名使用者的草稿和提交資料。
+所有匿名使用者的草稿和提交資料會儲存在下方的公 `drafts` 用 `submit` 和節點 `/content/forms/fp/anonymous`中。 除非已知某些可識別資訊，否則無法找到特定匿名使用者的資料。 在這種情況下，您可以搜尋識別AEM儲存庫中匿名使用者的資訊，並從所有適用的AEM例項手動刪除包含此資訊的節點，以從AEM系統移除資料。 不過，若要刪除所有匿名使用者的資料，您可以刪除節 `anonymous` 點，以移除所有匿名使用者的草稿和提交資料。
 
 ### 資料庫 {#database}
 
