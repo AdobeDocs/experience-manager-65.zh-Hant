@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 除了內容相關性外，計分演算法也會考量成員活動，例如投票和答案百分比。 雖然基本計分包括了定量計分，但進階計分則採用演算法。
 
-因此，先進的計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
+因此，高級計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
 
 設定進階計分與基本計分幾乎相同：
 
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 進階計分引擎提供OSGi組態，其參數會影響進階計分演算法。
 
-![chlimage_1-260](assets/chlimage_1-260.png)
+![進階計分引擎](assets/advanced-scoring-engine.png)
 
 * **評分權重**
 
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 請參 [閱計分子規則](/help/communities/implementing-scoring.md#scoring-sub-rules)。
 
-![chlimage_1-261](assets/chlimage_1-261.png)
+![進階計分類型](assets/advanced-scoring-type.png)
 
 ### 秒詞 {#stopwords}
 
@@ -123,7 +123,7 @@ ht-degree: 1%
 
 與其將點與徽章影像建立關聯，您只需識別允許的專家人數和要授予的徽章影像。
 
-![chlimage_1-262](assets/chlimage_1-262.png)
+![advanced-badging-rules](assets/advanced-badging-rules.png)
 
 <table>
  <tbody>
@@ -150,7 +150,7 @@ ht-degree: 1%
   <tr>
    <td>計分規則</td>
    <td>String[]</td>
-   <td><em>（可選）</em> ，多值字串，將標籤規則限制為由列出的分數規則識別的分數事件。<br /> 範例項目：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 預設為無限制。</td>
+   <td><em>（可選）</em> ，多值字串，將標籤規則限制為由列出的分數規則識別的分數事件。<br /> 範例項目：<br /><code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 預設為無限制。</td>
   </tr>
  </tbody>
 </table>
@@ -165,7 +165,7 @@ ht-degree: 1%
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-263](assets/chlimage_1-263.png)
+![專家徽章](assets/included-badge.png)
 
 要讓專家徽章顯示為活動的獎勵，請確定：
 
