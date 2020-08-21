@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6e6ffe09-c50b-4238-8b8c-597c133d0a9e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '1380'
+ht-degree: 7%
 
 ---
 
@@ -37,19 +40,21 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
 ## 新增問答論壇至頁面 {#adding-a-q-a-forum-to-a-page}
 
-要在作者模 `QnA` 式下將元件添加到頁面，請使用元件瀏覽 `Communities / QnA`器在QnA論壇應該出現的頁面上查找並拖動它。
+要在作者模 `QnA` 式下將元件添加到頁面，請使用元件瀏覽器來 `Communities / QnA` 查找並將其拖放到QnA論壇應出現的頁面上。
 
 如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/qna-essentials.md#essentials-for-client-side) ，元件的顯示方式 `QnA`如下：
+當包含 [所需的用戶端程式庫](/help/communities/qna-essentials.md#essentials-for-client-side) ，元件的顯示方式 `QnA` 如下：
 
-![chlimage_1](assets/chlimage_1.png)
+![qna元件](assets/qna-component.png)
 
 ### 配置QnA {#configuring-qna}
 
 選擇要訪問 `QnA` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-1](assets/chlimage_1-1.png) ![qna-config](assets/qna-config.png)
+![配置](assets/configure-new.png)
+
+![qna-config](assets/qna-config.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
@@ -214,7 +219,7 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
 * **排序方式**
 
-   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設為 `Newest, Oldest, Last Updated`。
+   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`。
 
 * **設為預設值**
 
