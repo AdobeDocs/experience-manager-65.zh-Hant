@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '1118'
+ht-degree: 0%
 
 ---
 
@@ -81,17 +84,17 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 * 選擇 **[!UICONTROL 雲端服務]**
 * 向下捲動到翻 **[!UICONTROL 譯整合]**
 
-   ![chlimage_1-65](assets/chlimage_1-65.png)
+   ![翻譯整合](assets/translation-integration.png)
 
 * 選擇 **[!UICONTROL 顯示配置]**
 
-   ![chlimage_1-66](assets/chlimage_1-66.png)
+   ![show-configuration](assets/translation-integration1.png)
 
 * 選擇 `[+]` 可用配置旁 **[!UICONTROL 邊的表徵圖]** ，以建立新配置
 
 #### 「建立配置」對話框 {#create-configuration-dialog}
 
-![chlimage_1-67](assets/chlimage_1-67.png)
+![create-configuration](assets/translation-integration2.png)
 
 * **[!UICONTROL 父設定]**
 
@@ -109,16 +112,18 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 
 #### 翻譯配置對話框 {#translation-config-dialog}
 
-![chlimage_1-68](assets/chlimage_1-68.png)
+![configuration-dialog](assets/translation-integration3.png)
 
 有關詳細說明，請 [訪問建立翻譯整合配置](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
 
 * **[!UICONTROL 「站點]** 」頁籤：可以保留為預設值。
 
 * **[!UICONTROL 「社群]** 」頁籤：
-   * **[!UICONTROL 翻譯提供]**&#x200B;者從下拉清單中選擇翻譯提供者。 預設為 `microsoft`試用服務。
+   * **[!UICONTROL 翻譯提供]**&#x200B;者從下拉清單中選擇翻譯提供者。 預設值為 
+`microsoft`、試用版服務。
 
-   * **[!UICONTROL 內容類]**&#x200B;別：選擇說明要翻譯內容的類別。 預設值為 `General.`
+   * **[!UICONTROL 內容類]**&#x200B;別：選擇說明要翻譯內容的類別。 預設值為 
+`General.`
 
    * **[!UICONTROL 選擇地區……]**（選擇性）透過選取儲存UGC的地區設定，所有語言副本的貼文都會出現在一個全域對話中。 依慣例，選擇網站基 [本語言的地](sites-console.md#translation) 區設定。 選擇 `No Common Store` 將禁用全局轉換。 預設情況下，全局轉換處於禁用狀態。
 
@@ -152,7 +157,7 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 
 當頁面自動翻譯為使用者偏好的語言時，仍可使用顯示原始文字和改善翻譯的UI。
 
-![chlimage_1-69](assets/chlimage_1-69.png)
+![user-profile](assets/translation-integration4.png)
 
 ### 社群網站設定 {#community-site-setting}
 
