@@ -9,7 +9,7 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 3cbcd23254e16231a199276aa2f9e70d6ff39b34
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 1. 在AEM登入頁面上輸入您的認證。
 
-   登入後，在左上角，點選「 **[!UICONTROL Adobe Experience Manager >表單>表單與檔案」]**。
+   登入後，在左上角，點選「 **[!UICONTROL Adobe Experience Manager]** >表單 **[!UICONTROL >表]** 單與檔案」 ****。
 
    >[!NOTE]
    >
@@ -48,6 +48,7 @@ ht-degree: 0%
    * [XFA表單範本](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)
    * [XML或JSON結構描述](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-xml-or-json-schema-p)
    * 無或沒有任何表單模型
+
    您可以從「添加屬性」頁 **[!UICONTROL 面的「表單模型]** 」頁籤 **[!UICONTROL 配置這些模型]** 。 預設情況下，選定的表單模型為「 **[!UICONTROL 無」]**。
 
 1. 點選「 **建立**」。 會建立最適化表單，並出現對話方塊以開啟表單以供編輯。
@@ -100,7 +101,7 @@ ht-degree: 0%
 1. 在「表單模型」頁籤的下拉清單中，選擇「表單模 **[!UICONTROL 板」]**。 所有透過AEM Forms UI上傳至儲存庫的表單範本都會列在清單中供選取。 從清單中選擇模板。
 
    ![將XFA表單範本與最適化表單建立關聯](assets/form_model_xfa_associate.png)
-   **圖：** *選擇表單範本*
+   **圖：***選擇表單範本*
 
    >[!NOTE]
    >
@@ -110,7 +111,7 @@ ht-degree: 0%
 
 XML和JSON結構描述資料由組織中的後端系統產生或使用的結構。 您可以將架構與最適化表單建立關聯，並使用其元素將動態內容新增至最適化表單。 架構的元素可在內容瀏覽器的「資料模型物件」索引標籤中使用，以製作最適化表單。 您可以拖放架構元素來建立表單。
 
-請參閱下列檔案，瞭解如何設計XML或JSON架構以製作最適化表單。
+請參閱下列檔案，以瞭解如何設計XML或JSON架構以製作最適化表單。
 
 * [使用XML架構建立最適化表單](/help/forms/using/adaptive-form-xml-schema-form-model.md)
 * [使用JSON結構描述建立最適化表單](/help/forms/using/adaptive-form-json-schema-form-model.md)
@@ -124,17 +125,18 @@ XML和JSON結構描述資料由組織中的後端系統產生或使用的結構�
 
    * **[!UICONTROL 從磁碟上傳]** -選取此選項，並點選「上傳結構描述定義」，從您的檔案系統瀏覽及上傳XML結構描述或JSON結構描述。 已上載的架構檔案駐留在表單中，而且無法訪問其他自適應表單。
    * **[!UICONTROL 在儲存庫中搜索]** -選擇此選項可從儲存庫中可用的方案定義檔案清單中進行選擇。 選取XML或JSON結構描述檔做為表單模型。 所選模式將與表單相關聯，並且可以訪問，以用於其他自適應表單。
+
    >[!CAUTION]
    >
-   >請確定JSON結構描述檔名的結尾 **為。schema.json**。 例如： mySchema.schema.json
+   >請確定JSON結構描述檔名的結尾 **為。schema.json**。 例如：mySchema.schema.json
 
    ![選取XML或JSON結構描述](assets/upload-schema.png)
-   **圖：** *選取XML或JSON結構描述*
+   **圖：***選取XML或JSON結構描述*
 
 1. （僅適用於XML架構）選擇或上傳XML架構後，請指定所選XSD檔案的根元素，以與最適化表單對應。
 
    ![選擇XSD根元素](assets/xsd-root-element.png)
-   **圖：** *選擇XSD根元素*
+   **圖：***選擇XSD根元素*
 
 >[!NOTE]
 >
@@ -182,10 +184,12 @@ XML和JSON結構描述資料由組織中的後端系統產生或使用的結構�
 
    * **[!UICONTROL 時間型：]** 選擇根據特定時間間隔開始保存內容的選項。
    * **[!UICONTROL 事件型：]** 選取在觸發事件時開始儲存內容的選項。
+
    選擇觸發器時，將啟用「策略配置」框。 「策略配置」框可讓您：
 
    * 如果選擇基於時間的觸發器，請 **[!UICONTROL 指定時間間隔]** 。
    * 如果您選取事件型觸發器，請指 **[!UICONTROL 定事件]** 名稱。
+
    您也可以建立並新增自己的自訂策略至清單。 如需詳細資訊，請 [參閱實作自訂策略以自動儲存表單](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)。
 
 1. （僅限基於時間的自動保存）執行以下步驟以配置基於時間的自動保存選項。
