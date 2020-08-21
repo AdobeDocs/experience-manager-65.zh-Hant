@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 4%
@@ -55,11 +55,11 @@ ht-degree: 4%
 
 選擇要訪問 `Community Activity List` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-55](assets/chlimage_1-55.png)
+![配置](assets/configure-new.png)
 
 在「注 **釋** 」標籤下，指定上傳檔案的注釋是否及顯示方式：
 
-![chlimage_1-56](assets/chlimage_1-56.png)
+![屬性](assets/activity-list-properties.png)
 
 * **類型**
 
@@ -118,13 +118,13 @@ ht-degree: 4%
 
 ### 包含4個元件的範例頁面 {#example-page-with-components}
 
-**熱門訪客** 設定： 類型=成員，活動類型=視圖
+**熱門訪客** 設定：類型=成員，活動類型=視圖
 
-**熱門參與者** (Top Contributors)設定： 類型=成員，活動類型=貼文
+**熱門參與者** (Top Contributors)設定：類型=成員，活動類型=貼文
 
-**主要內容** (Top Content)設定： 類型=內容，活動類型=檢視，
+**主要內容** (Top Content)設定：類型=內容，活動類型=檢視，
 
-**趨勢內容** 設定： 類型=內容，活動類型=貼文
+**趨勢內容** 設定：類型=內容，活動類型=貼文
 
-![chlimage_1-57](assets/chlimage_1-57.png)
+![元件](assets/activity-list-components.png)
 
