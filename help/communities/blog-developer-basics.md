@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 2%
@@ -71,8 +71,8 @@ ht-degree: 2%
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
-| [**included **](/help/communities/scf.md#add-or-include-a-communities-component) | 否 |
-| [**clientlibs **](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
+| [**included**](/help/communities/scf.md#add-or-include-a-communities-component) | 否 |
+| [**clientlibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **模板** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
 | **屬性** | 請參閱 [部落格功能](/help/communities/blog-feature.md) |
@@ -123,5 +123,5 @@ AEM平台會封鎖其他網站的連結，以防止XSS攻擊，如
 
 透過選取圖示，將豐富式媒體內嵌在部落格 `Embed Media from External Sites` 文章中：
 
-![chlimage_1-471](assets/chlimage_1-471.png)
+![媒體](assets/media-icon.png)
 
