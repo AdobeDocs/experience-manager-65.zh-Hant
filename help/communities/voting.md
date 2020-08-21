@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 
@@ -27,17 +30,17 @@ source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 當包含 [所需的用戶端程式庫](essentials-voting.md#essentials-for-client-side) ，元件的顯示方式 `Voting` 就是這樣。
 
-![chlimage_1-307](assets/chlimage_1-307.png)
+![投票元件](assets/voting-component.png)
 
 ## 設定投票 {#configuring-voting}
 
 選擇要訪問 `Voting` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-308](assets/chlimage_1-308.png)
+![配置](assets/configure-new.png)
 
 在「文 **[!UICONTROL 字與標籤]** 」索引標籤下，指定用來記錄投票的屬性。
 
-![chlimage_1-309](assets/chlimage_1-309.png)
+![投票標籤](assets/voting-label.png)
 
 * **[!UICONTROL 正面回應標籤]**
 
