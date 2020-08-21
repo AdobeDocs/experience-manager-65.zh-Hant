@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '677'
+ht-degree: 1%
 
 ---
 
@@ -61,10 +64,11 @@ source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
       * 找到 **AEM Communities公用程式設定** 。
       * 選擇以展開配置面板：
 
-         * *取消選中*`Cloud Storage`
+         * *取消選中* `Cloud Storage`
 
          * 選擇保 **存**
-      ![chlimage_1-176](assets/chlimage_1-176.png)
+
+      ![實用程式](assets/utilities.png)
 
 
 ### 現場儲存 {#on-premise-storage}
