@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b1cc29fbfdb80aff6b6fc5c6c4fc9093d12e418
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 1%
@@ -23,9 +23,9 @@ ht-degree: 1%
 
 ## 新增ClientLibraryFolder(clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
-建立名為的ClientLibraryFolder, `clientlibs`其中將包含用於呈現您網站頁面的JS和CSS。
+建立名為的ClientLibraryFolder, `clientlibs` 其中將包含用於呈現您網站頁面的JS和CSS。
 
-給 `categories`予此用戶端程式庫的屬性值是用來直接從內容頁面包含此clientlib，或將其內嵌在其他clientlib中的識別碼。
+給 `categories` 予此用戶端程式庫的屬性值是用來直接從內容頁面包含此clientlib，或將其內嵌在其他clientlib中的識別碼。
 
 1. 使用 **CRXDE Lite**，展開 `/etc/designs`
 
@@ -34,9 +34,9 @@ ht-degree: 1%
    * 名稱 : `clientlibs`
    * 類型 : `cq:ClientLibraryFolder`
 
-1. 按一下「 **確定」**
+1. Click **OK**
 
-![chlimage_1-220](assets/chlimage_1-220.png)
+![add-client-library](assets/add-client-library.png)
 
 在新節 **點的** 「屬性」選 `clientlibs` 項卡中，輸 **入類別** :
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 * Click **Add**
 * 按一下「 **全部儲存」**
 
-注意： 使用「應用程式」來預設類別值。 是將「擁有的應用程式」識別為位於/apps資料夾而非/libs的慣例。  重要： 新增預留位 `js.tx`置t和 **`css.txt`** 檔案。 （沒有cq:ClientLibraryFolder，它並非正式。）
+注意：使用「應用程式」來預設類別值。 是將「擁有的應用程式」識別為位於/apps資料夾而非/libs的慣例。  重要：新增預留位 `js.tx`置t和 **`css.txt`** 檔案。 （沒有cq:ClientLibraryFolder，它並非正式。）
 
 1. 按一下滑鼠右鍵 **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 選擇 **建立檔案……**
@@ -55,7 +55,7 @@ ht-degree: 1%
 1. Enter **Name:** `js.txt`
 1. 按一下「 **全部儲存」**
 
-![chlimage_1-221](assets/chlimage_1-221.png)
+![clientlibs-css](assets/clientlibs-css.png)
 
 css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本位置。
 
@@ -99,15 +99,15 @@ css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本�
       * **`cq.social.author.hbs.rating`**
       * **`cq.social.author.hbs.reviews`**
       * **`cq.social.author.hbs.voting`**
-      * 按一下「 **確定」**
+      * Click **OK**
 
 * 按一下「 **全部儲存」**
 
-![chlimage_1-222](assets/chlimage_1-222.png)
+![scf-clientlibs](assets/scf-clientlibs.png)
 
 這是現在 `/etc/designs/an-scf-sandbox/clientlibs` 在儲存庫中的顯示方式：
 
-![chlimage_1-223](assets/chlimage_1-223.png)
+![scf-clientlibs-view](assets/scf-clientlibs1.png)
 
 ### 在PlayPage範本中包含Clientlibs {#include-clientlibs-in-playpage-template}
 
@@ -115,11 +115,11 @@ css.txt和js.txt的第一行會識別從中可找到下列檔案清單的基本�
 
 例如，如果不包含clientlibs,SCF注釋元件將顯示為未樣式化：
 
-![chlimage_1-224](assets/chlimage_1-224.png)
+![clientlibs-comment](assets/clientlibs-comment.png)
 
 一旦包含apps.an-scf-sandbox clientlibs後，SCF注釋元件就會顯示樣式化：
 
-![chlimage_1-225](assets/chlimage_1-225.png)
+![clientlibs-comment-stleed](assets/clientlibs-comment1.png)
 
 include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation head.jsp`** 包含可重疊的指令碼： **`headlibs.jsp`**.
 
@@ -150,7 +150,7 @@ include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![chlimage_1-226](assets/chlimage_1-226.png)
+![社群娛樂](assets/community-play.png)
 
 ### 保存您的作品 {#saving-your-work-so-far}
 
@@ -163,23 +163,23 @@ include語句屬於指令碼 `head` 的部 `html` 分。 預設值 **`foundation
 * 從CRXDE Lite按一下「套 [件」圖示](https://localhost:4502/crx/packmgr/)
 * 按一下「 **建立套件」**
 
-   * 包名： an-scf-sandbox-minimal-pkg
-   * 版本： 0.1
+   * 包名：an-scf-sandbox-minimal-pkg
+   * 版本：0.1
    * 群組: `leave as default`
-   * 按一下「 **確定」**
+   * Click **OK**
 
 * 按一下「 **編輯」**
 
    * 「選擇篩 **選器** 」頁籤
 
       * 按一下「 **新增篩選」**
-      * 根路徑： 瀏覽至 `/apps/an-scf-sandbox`
+      * 根路徑：瀏覽至 `/apps/an-scf-sandbox`
       * 按一下「完 **成」**
       * 按一下「 **新增篩選」**
-      * 根路徑： 瀏覽至 `/etc/designs/an-scf-sandbox`
+      * 根路徑：瀏覽至 `/etc/designs/an-scf-sandbox`
       * 按一下「完 **成」**
       * 按一下「 **新增篩選」**
-      * 根路徑： 瀏覽至 `/content/an-scf-sandbox**`
+      * 根路徑：瀏覽至 `/content/an-scf-sandbox**`
       * 按一下「完 **成」**
    * Click **Save**
 
