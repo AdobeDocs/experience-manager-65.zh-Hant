@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10c17fc199c476ec66059cc6bf4cbb4a0ff1af40
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 4%
@@ -44,13 +44,13 @@ ht-degree: 4%
 
 當包含 [所需的用戶端程式庫](/help/communities/essentials-activities.md#essentials-for-client-side) ，元件的顯示方式 `Activity Streams` 如下：
 
-![chlimage_1-195](assets/chlimage_1-195.png)
+![活動串流](assets/activity-component.png)
 
 ### 設定活動串流 {#configuring-activity-streams}
 
 選擇要訪問 `Activity Streams` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-494](assets/chlimage_1-494.png)
+![配置](assets/configure-new.png)
 
 在「使用 **者活動** 」標籤下，指定要顯示的活動：
 
@@ -80,7 +80,7 @@ ht-degree: 4%
 
 必須配置元件以啟用以下功能。 允許以下功能：部落格 [、論壇](/help/communities/blog-feature.md)、 [QnQnPn](/help/communities/forum.md)、Filary [brary、elicary行事歷、](/help/communities/working-with-qna.md)[](/help/communities/calendar.md)[](/help/communities/file-library.md)[](/help/communities/comments.md)elicary注釋。
 
-![chlimage_1-5](assets/chlimage_1-5.png)
+![後視圖](assets/following-activities.png)
 
 「跟 **蹤** 」按鈕提供了一種方法，可將條目作為活動、通 [知](/help/communities/notifications.md)或訂 [閱跟蹤](/help/communities/subscriptions.md)。 每次選取「 **跟隨** 」按鈕時，都可以開啟或關閉選取範圍。 只有 `Email Subscriptions` 在配置時，才會顯示選擇。
 
