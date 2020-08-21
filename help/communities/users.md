@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 translation-type: tm+mt
-source-git-commit: 2422ed41b18bc558f0cfc9e80f7eb6f4923aa07c
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '2183'
+ht-degree: 0%
 
 ---
 
@@ -214,18 +217,18 @@ source-git-commit: 2422ed41b18bc558f0cfc9e80f7eb6f4923aa07c
    * 路徑必須 `/home/users/community`是。
 4. 選擇 **[!UICONTROL 建立]**。
 
-   ![chlimage_1-130](assets/chlimage_1-130.png)
+   ![create-community-user](assets/create-community-user.png)
 
 * 在左窗格中，搜尋新建立的使用者，並選擇顯示在右窗格中。
 
-   ![chlimage_1-135](assets/chlimage_1-131.png)
+   ![社群使用者](assets/view-community-user.png)
 
 在左窗格中：
 
 1. 清除搜索框，然後選擇「 **[!UICONTROL 隱藏用戶」]**。
 2. 找到並拖 `community-enablementmanagers` 曳至右 **** 窗格中新使用者的「群組」標籤。
 
-   ![chlimage_1-132](assets/chlimage_1-132.png)
+   ![assign-group](assets/assign-group.png)
 
 ### 社群管理員角色 {#community-administrators-role}
 
