@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '6053'
-ht-degree: 5%
+source-wordcount: '6050'
+ht-degree: 4%
 
 ---
 
@@ -39,7 +39,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 >[!NOTE]
 >
->如果您建立互動式視訊，以在使用者按一下縮圖影像時啟動網頁，有些裝置會封鎖快顯網頁。 在這種情況下，您必須變更裝置上的快顯封鎖程式設定。 例如，在Apple iPhone 6上，點選 **[!UICONTROL設定** > **Safari** > **Block快顯視窗**，然後將控制項滑入 ****[!UICONTROL Off. 現在，當您播放互動式視訊並按一下縮圖時，如果您要開啟快顯視窗，就會出現提示。 如果您接受，則會開啟網頁。
+>如果您建立互動式視訊，以在使用者按一下縮圖影像時啟動網頁，有些裝置會封鎖快顯網頁。 在這種情況下，您必須變更裝置上的快顯封鎖程式設定。 例如，在Apple iPhone 6上，點選「 **[!UICONTROL Settings]** > **Safari** > **Block快顯視窗」，然後將控制項滑入****** OffPhone。 現在，當您播放互動式視訊並按一下縮圖時，如果您要開啟快顯視窗，就會出現提示。 如果您接受，則會開啟網頁。
 
 ### 觀看互動式影片的製作方式 {#watch-how-interactive-videos-are-created}
 
@@ -53,7 +53,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 >[!NOTE]
 [在AEM Assets中使用互動式視訊、連結分享和YouTube分享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
 
-## 快速入門： 互動式影片 {#quick-start-interactive-videos}
+## 快速入門：互動式影片 {#quick-start-interactive-videos}
 
 下列逐步工作流程說明旨在協助您在動態媒體中快速上手使用互動式視訊。
 
@@ -70,11 +70,10 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 互動式視訊步驟：
 
 1. **（可選）識別Quickview變數** -首先，確定現有Quickview實施所使用的動態變數。 當您建立互動式視訊時，可使用變數將產品縮圖對應至其對應的產品Quickview。 請參 [閱（可選）識別Quickview變數](#optional-identifying-quickview-variables)。
-   *請注意，只有在以下所有步驟都正確時，才需要此步驟*:
-·您想要透過觸發快速檢視，為視訊新增互動功能。
+   *請注意，只有在以下所有步驟都正確時，才需要此步驟*:·您想要透過觸發快速檢視，為視訊新增互動功能。
 ·您的AEM實作不會使 *用* eCommerce整合架構，將產品資料從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 請參 [閱AEM Assets中的電子商務概念](/help/sites-administering/concepts.md)。
 
-1. **（可選）建立互動式視訊檢視器預設集** -自訂各種元件的外觀和行為，這些元件是播放器的組成部份，例如視訊Scrubber和互動式縮圖。
+1. **（可選）建立互動式視訊檢視器預設集** -自訂各種元件的外觀和行為，這些元件是播放器的組成部份，例如視訊筆畫和互動式縮圖。
 如果您想要使用現成可用的互動式視訊檢視器預設集，或改用現成可用的互動式視訊檢視器預設集，則不需要建立您自己的互動式視 `Shoppable_Video_Light` 訊檢視 `Shoppable_Video_Dark` 器預設集。
 請參 [閱建立新檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) （此為選用）和建 [立互動檢視器預設集的特殊考量事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
 
@@ -121,7 +120,7 @@ Quickview的大多數實施都採用以下模式：
 
 * 若要在Google Chrome中查看所有傳出的HTTP要求，請按 **F12** (Windows)或 **Command+Options+I** (Mac)以開啟「開發人員工具」面板，然後按一下「網 **路** 」標籤。
 
-* 在Firefox中，您可以按 **F12** (Windows)或 **Command+Option+I** (Mac)並使用其 **Net** )標籤來啟動Firebug外掛程式，或使用內建的偵測器工具及其網路標籤。
+* In Firefox, you can either activate the Firebug plug-in by pressing **F12** (Windows) or **Command+Option+I** (Mac) and use its **`[Net]`** tab, or you can use the built-in Inspector tool and its Network tab.
 
 * 在Internet Explorer中，按 **F12啟動除錯工具**。
 
@@ -223,7 +222,7 @@ Quickview的大多數實施都採用以下模式：
 
 在製作環境中按一下縮圖時，會出現「快速檢視」對話方塊的預覽。
 
-![chlimage_1-21](assets/chlimage_1-127.png)
+![chlimage_1-29](assets/chlimage_1-127.png)
 
 您可以選擇建立自訂的互動式視訊檢視器預設集。 您可決定視訊播放器的樣式、互動式縮圖和視訊結尾的縮圖格線檢視。
 
@@ -271,11 +270,11 @@ Quickview的大多數實施都採用以下模式：
 1. 在「資產」檢視中，導覽至您上傳並想要製作互動式影片。
 1. 執行下列任一項作業：
 
-   * Hover on the image, then tap **[!UICONTROL Select]** (checkmark icon). 在工具列上，點選「編 **[!UICONTROL 輯」。]**
+   * Hover on the image, then tap **[!UICONTROL Select]** (checkmark icon). 在工具列上，點選「 **[!UICONTROL 編輯」。]**
 
    * 將滑鼠指標暫留在影像上，然 **[!UICONTROL 後點選「更多動作]** 」（三個點圖示） **[!UICONTROL >「編輯」。]**
 
-   * 點選影像以在「詳細資料檢視」頁面中開啟影像。 在工具列上，點選「編 **[!UICONTROL 輯」。]**
+   * 點選影像以在「詳細資料檢視」頁面中開啟影像。 在工具列上，點選「 **[!UICONTROL 編輯」。]**
 
 1. 在「建立互動式視訊」頁面上，執行下列任一項作業：
 
@@ -342,7 +341,7 @@ Quickview的大多數實施都採用以下模式：
 
    螢幕擷取C
 
-   在上述的螢幕擷取C中，「時間軸縮放」設定已移至8秒。 請注意，包含產品縮圖的區段已縮小。 如果您有長視訊，而且想要看到通常符合頁面寬度的更多區段的概述，以這種方式縮小影片很有用。
+   在上述的螢幕擷取C中，「時間軸縮放」設定已移至8秒。 請注意，包含產品縮圖的區段已縮小。 如果您有長視訊，而且想要看到通常符合頁面寬度的更多區段的概述，以這種方式縮小影片會很有用。
 
 1. （可選）執行下列任一項作業：
 
@@ -355,6 +354,7 @@ Quickview的大多數實施都採用以下模式：
       * 點選前導藍色橢圓，即可直接在該區段的開頭尋找視訊。
       * 點選結尾的藍色橢圓，即可直接在該區段的結尾處尋找視訊。
       * 點選整個區段，將視訊播放傳回至該區段的開頭
+
    ![chlimage_1-26](assets/chlimage_1-132.png)
 
    重新定位時間軸段的結尾
@@ -426,7 +426,7 @@ Quickview的大多數實施都採用以下模式：
       </ul> 
        <ul> 
        <li>指定「體驗片段」的寬度和高度，如影片所示。</li>
-       </ul><strong>注意</strong>: 請注意，當您將檢視器內嵌在「體驗片段」時，不支援「互動式視訊」中的社交媒體分享工具。 若要解決這個問題，您可以使用或建立沒有社交媒體分享工具的檢視器預設集。 這些檢視器預設集可讓您成功將它內嵌在「體驗片段」中。</p></tr>&lt; 
+       </ul><strong>注意</strong>:請注意，當您將檢視器內嵌在「體驗片段」時，不支援「互動式視訊」中的社交媒體分享工具。 若要解決這個問題，您可以使用或建立沒有社交媒體分享工具的檢視器預設集。 這些檢視器預設集可讓您成功將它內嵌在「體驗片段」中。</p></tr>&lt; 
       <tr> 
       <td>若要編輯已指派給縮圖影像的動作</td> 
       <td>在時間軸區段中，點選文字標籤右側有連結的縮圖影像。 連結指示已為其指派操作。 點選「 <strong>動作</strong> 」標籤以進行變更。</td> 
@@ -484,7 +484,7 @@ Quickview的大多數實施都採用以下模式：
 
 1. 發佈互動式視訊。 發佈會建立內嵌代碼或URL，您最終會將其複製並貼至您的網站體驗。
 
-   如果您使用Quickviews新增互動功能，則只使用內嵌程式碼； 如果您使用超連結網頁新增互動功能，也可以使用發佈的URL。 不過請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
+   如果您使用Quickviews新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用發佈的URL。 不過請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
 
    請參閱 [發佈資產](publishing-dynamicmedia-assets.md)。
 
@@ -499,7 +499,7 @@ Quickview的大多數實施都採用以下模式：
 
 ## 將互動式視訊與您的網站整合 {#integrating-an-interactive-video-with-your-website}
 
-在您上傳影片、新增時間軸區段至影片，以及發佈互動式影片後，您現在可以將它新增至現有網站。
+在您上傳視訊、新增時間軸區段至該視訊並發佈互動式視訊後，您現在可以將它新增至現有網站。
 
 如果您是AEM Sites客戶，可將Interactive Media元件拖曳至您的頁面，以新增互動式視訊。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
@@ -507,7 +507,7 @@ Quickview的大多數實施都採用以下模式：
 
 1. 複製已發佈的互動式視訊的內嵌程式碼或URL。
 See [Embedding the Video or Image Viewer on a Web Page](/help/assets/embed-code.md).
-如果您使用Quickviews新增互動功能，則只使用內嵌程式碼； 如果您使用超連結網頁新增互動功能，也可以使用發佈的URL。 不過請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
+如果您使用Quickviews新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用發佈的URL。 不過請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
 
 1. 在目標的網頁程式碼中，識別靜態視訊的位置。
 1. 移除靜態視訊，並以您從AEM Assets複製的內嵌代碼或URL取代代碼，如同。
@@ -515,7 +515,7 @@ See [Embedding the Video or Image Viewer on a Web Page](/help/assets/embed-code.
 
 >[!NOTE]
 此時，如果您只新增超連結網頁的互動功能，就完成了。
-不過，如果您新增任何互動功能來觸發Quickview，則互動視訊旁的縮圖僅供顯示之用； 它們尚未與您現有的Quickviews整合。 在這種情況下，您現在需要將互動式視訊與網站上現有的Quickviews整合。
+不過，如果您新增任何互動功能來觸發Quickview，則互動視訊旁的縮圖僅供顯示之用；它們尚未與您現有的Quickviews整合。 在這種情況下，您現在需要將互動式視訊與網站上現有的Quickviews整合。
 
 **範例**
 
@@ -571,7 +571,7 @@ See [Embedding the Video or Image Viewer on a Web Page](/help/assets/embed-code.
 1. 或者，前端代碼將載入的Quickview資料轉換為HTML表示法。
 1. 前端程式碼會顯示模式對話方塊或面板，並轉譯HTML內容給使用者。
 
-這些呼叫可能不代表獨立的公用API呼叫，而網頁邏輯可透過任意步驟呼叫這些呼叫。 相反地，它是連結呼叫，在此連結呼叫中，前一步驟的最後一個階段（回呼）中隱藏了每個後續步驟。
+這些呼叫可能不代表獨立的公用API呼叫，而網頁邏輯可透過任意步驟呼叫這些呼叫。 相反地，它是連結呼叫，在此連結呼叫中，前一個步驟的最後一個階段（回呼）中將隱藏下一個步驟。
 
 在互動式視訊取代步驟1和部分步驟2的同時，當使用者按一下互動式視訊中的縮圖時，檢視器會處理這類使用者互動。 檢視器會將事件傳回網頁，其中包含先前新增至AEM的所有縮圖資料。
 
@@ -665,7 +665,7 @@ AEM傳回的內嵌代碼已經有現成的事件處理常式。 如下列反白�
   </tbody>
 </table>
 
-觸發Quickview URL並啟動Quickview面板的最後一個步驟很可能需要您IT部門的前端IT人員協助。 他們具備最佳的知識，可瞭解如何從正確的步驟準確觸發Quickview實施，並擁有現成可用的Quickview URL。
+觸發Quickview URL並啟動Quickview面板的最後一個步驟很可能需要IT部門的前端IT人員協助。 他們具備最佳的知識，可瞭解如何從正確的步驟準確觸發Quickview實施，並擁有現成可用的Quickview URL。
 
 您可以瞭解這些步驟如何套用至示範網站，以將互動式視訊與Quickview程式碼完全整合。 在本主題的前面，Quickview URL的結構已標識為：
 
