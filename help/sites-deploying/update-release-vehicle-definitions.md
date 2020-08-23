@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 32695db5-d62d-4959-8a24-3d56b4a19904
 translation-type: tm+mt
-source-git-commit: 6a5a8e64c6eaab816d07d8206601849c974d1e26
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 本檔案包含Adobe Experience Manager(AEM)各種版本的詳細資訊，包括Adobe提供給其客戶的完整版本、功能套件和服務套件。
 
->[!Note]
+>[!NOTE]
 >
 >如需AEM更新版本的發行排程，請參閱 [AEM更新版本藍圖](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)
 
@@ -282,5 +282,5 @@ ht-degree: 2%
  </tbody>
 </table>
 
-* [1]: OAK修正不會以個別Hotfix的形式提供。 不過，這些修補程式會包含在後續的Cumulative Oak Hotfix中。 如有必要，可以在最新COFP之上提供診斷版本。 前提是客戶擁有最新的COFP運行。 診斷構建版本僅提供與Hot Fix相同的級別品質保證。 因此，它們無法提供與累積修補程式套件、服務套件或產品發行相同等級的品質保證。 最終修正方案將隨下一個CFP提供。
+* [1]:OAK修正不會以個別Hotfix的形式提供。 不過，這些修補程式會包含在後續的Cumulative Oak Hotfix中。 如有必要，可以在最新COFP之上提供診斷版本。 前提是客戶擁有最新的COFP運行。 診斷構建版本僅提供與Hot Fix相同的級別品質保證。 因此，它們無法提供與累積修補程式套件、服務套件或產品發行相同等級的品質保證。 最終修正方案將隨下一個CFP提供。
 
