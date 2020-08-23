@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '4719'
+source-wordcount: '4718'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議運用觸控式UI，以運用最新技術。 [AEM Modernination Tools&amp;(moderniatzion-tools.md)可讓移轉更輕鬆。
+>Adobe建議運用觸控式UI，以運用最新技術。 [AEM Meduration Tools](modernization-tools.md) （AEM現代化工具）可讓移轉更輕鬆。
 
 ### 內容邏輯與轉換標籤  {#content-logic-and-rendering-markup}
 
@@ -115,7 +115,7 @@ HTL和JSP都可用來開發傳統和觸控式使用者介面的元件。 雖然�
 
 * 段落制度：
 
-   * 段落系統是網站管理段落清單的重要部分。 它用於保存和構建保存實際內容的各個元件。
+   * 段落系統是網站管理段落清單時的關鍵部分。 它用於保存和構建保存實際內容的各個元件。
    * 您可以在段落系統中建立、移動、複製和刪除段落。
    * 您也可以選取可在特定段落系統中使用的元件。
    * 標準例項中有各種可用的段落系統(例如 `parsys`, ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`)。
@@ -161,13 +161,14 @@ AEM元件的結構強大而有彈性，主要考量是：
 
    * jcr屬性：
 
-      jcr屬性清單； 這些是可變的，有些可能是可選的，儘管元件節點的基本結構、其屬性和子節點由定義定 `cq:Component` 義
+      jcr屬性清單；這些是可變的，有些可能是可選的，儘管元件節點的基本結構、其屬性和子節點由定義定 `cq:Component` 義
 
    * 資源:
 
       這些定義元件使用的靜態元素。
 
    * 指令碼:
+
    用於實現元件的結果實例的行為。
 
 * **根節點**:
@@ -176,8 +177,8 @@ AEM元件的結構強大而有彈性，主要考量是：
 
 * **重要屬性**:
 
-   * `jcr:title` -元件標題； 例如，當元件列在元件瀏覽器或sidekick中時，會當做標籤使用。
-   * `jcr:description` -元件說明； 可在元件瀏覽器或sidekick中當做滑鼠移過提示使用。
+   * `jcr:title` -元件標題；例如，當元件列在元件瀏覽器或sidekick中時，會當做標籤使用。
+   * `jcr:description` -元件說明；可在元件瀏覽器或sidekick中當做滑鼠移過提示使用。
    * 傳統 UI:
 
       * `icon.png` -此元件的表徵圖。
@@ -191,7 +192,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
    * `cq:editConfig (cq:EditConfig)` -定義元件的編輯屬性，並使元件顯示在「元件」瀏覽器或Sidekick中。
 
-      注意： 如果元件有對話方塊，則會自動出現在「元件」瀏覽器或Sidekick中，即使cq:editConfig不存在亦然。
+      注意：如果元件有對話方塊，則會自動出現在「元件」瀏覽器或Sidekick中，即使cq:editConfig不存在亦然。
 
    * `cq:childEditConfig (cq:EditConfig)` -控制未定義子元件的作者UI方面 `cq:editConfig`。
    * 啟用觸控的UI:
@@ -401,13 +402,13 @@ AEM元件的結構強大而有彈性，主要考量是：
 
 特定權益物業包括：
 
-* `jcr:title` -元件標題； 這可用來識別元件，例如，它會出現在元件瀏覽器或sidekick的元件清單中
-* `jcr:description` -元件說明； 可在sidekick內的元件清單中當做滑鼠移過提示使用
-* `sling:resourceSuperType`: 這表示擴展元件（通過覆蓋定義）時的繼承路徑
+* `jcr:title` -元件標題；這可用來識別元件，例如，它會出現在元件瀏覽器或sidekick的元件清單中
+* `jcr:description` -元件說明；可在sidekick內的元件清單中當做滑鼠移過提示使用
+* `sling:resourceSuperType`:這表示擴展元件（通過覆蓋定義）時的繼承路徑
 
 特別感興趣的子節點包括：
 
-* `cq:editConfig` ( `cq:EditConfig`-這控制視覺方面； 例如，它可以定義列或介面工具集的外觀，或可以新增自訂控制項
+* `cq:editConfig` ( `cq:EditConfig`-這控制視覺方面；例如，它可以定義列或介面工具集的外觀，或可以新增自訂控制項
 * `cq:childEditConfig` ( `cq:EditConfig`)-這可控制子元件的視覺方面，這些元件沒有自己的定義
 * 啟用觸控的UI:
    * `cq:dialog` ( `nt:unstructured`)-定義用於編輯此元件內容的對話框
@@ -430,6 +431,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 >
 >* 為了相容性，啟用觸控的UI可使用傳統UI對話方塊的定義，但尚未為啟用觸控的UI定義對話方塊。
 >* 也提 [供對話方塊轉換工具](/help/sites-developing/dialog-conversion.md) ，協助您擴充／轉換僅為傳統UI定義對話方塊的元件。
+
 >
 
 
@@ -443,6 +445,7 @@ AEM元件的結構強大而有彈性，主要考量是：
       * 可以具有一個屬 `helpPath` 性來定義在「幫助」表徵圖(? 表徵圖)。
          * 對於現成可用的元件，這通常會參照檔案中的頁面。
          * 如果未指 `helpPath` 定，則會顯示預設URL（檔案概述頁面）。
+
    ![chlimage_1-242](assets/chlimage_1-242.png)
 
    在對話方塊中，會定義個別欄位：
@@ -458,6 +461,7 @@ AEM元件的結構強大而有彈性，主要考量是：
       * 可以具有一個屬 `helpPath` 性來定義在選擇「幫助」按鈕時訪問的上下文相關幫助資源(絕對或相 **對路徑** )。
          * 對於現成可用的元件，這通常會參照檔案中的頁面。
          * 如果未指 `helpPath` 定，則會顯示預設URL（檔案概述頁面）。
+
    ![chlimage_1-243](assets/chlimage_1-243.png)
 
    在對話方塊中，會定義個別欄位：
@@ -466,7 +470,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
    在傳統對話方塊中：
 
-   * 您可以將對話框建立為 `cq:Dialog`，它將提供單個頁籤——如文本元件中的頁籤，或者如果需要多個頁籤，如同textimage元件一樣，可將對話框定義為 `cq:TabPanel`。
+   * 您可以將對話框建立為 `cq:Dialog`，它將提供單個頁籤——如文本元件中的頁籤，或者如果需要多個頁籤，如文本時間元件中的頁籤，則可以將對話框定義為 `cq:TabPanel`。
    * a `cq:WidgetCollection` ( `items`)用於為輸入欄位( `cq:Widget`)或其它頁籤( `cq:Widget`)提供基礎 此階層可加以擴充。
 
 
@@ -518,7 +522,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
 * 在內容中，這會產生保 `jcr:title` 存作者內容的屬性。
 
-定義的屬性取決於各個定義。 雖然可能比上面複雜，但它們仍然遵循相同的基本原則。
+定義的屬性取決於各個定義。 雖然可能比高，但仍遵循相同的基本原則。
 
 ## 元件層次和繼承 {#component-hierarchy-and-inheritance}
 
@@ -536,7 +540,7 @@ AEM中的元件受3種不同階層的規範：
 
    這用於將配置設定填充到子元件中，最常用於parsys方案。
 
-   例如，可在父元件上定義編輯欄按鈕、控制集佈局（編輯欄、變換）、對話框佈局（內嵌、浮動）的配置設定，並傳播到子元件。
+   例如，可在父元件上定義編輯欄按鈕、控制集佈局（編輯欄、變換）、對話框佈局（內嵌、浮動）的配置設定並傳播到子元件。
 
    中的配置設定（與編輯功能相關） `cq:editConfig` 和 `cq:childEditConfig` 傳播。
 
@@ -544,7 +548,7 @@ AEM中的元件受3種不同階層的規範：
 
    在執行時期，會依包含的順序加入。
 
-   設計人員會使用此階層，而設計人員則會依此層次來建立各種繪圖設計； 包括版面資訊、css資訊、parsys中的可用元件等。
+   設計人員會使用此階層，而設計人員則會依據此階層來呈現各種設計；包括版面資訊、css資訊、parsys中的可用元件等。
 
 ## 編輯行為 {#edit-behavior}
 
@@ -556,26 +560,26 @@ AEM中的元件受3種不同階層的規範：
 
 * [ `cq:editConfig` 節點屬性](#configuring-with-cq-editconfig-properties):
 
-   * `cq:actions` ( `String array`): 定義可在元件上執行的操作。
-   * `cq:layout` ( `String`): : 定義在傳統UI中編輯元件的方式。
-   * `cq:dialogMode` ( `String`): 定義在傳統UI中開啟元件對話方塊的方式
+   * `cq:actions` ( `String array`):定義可在元件上執行的操作。
+   * `cq:layout` ( `String`)::定義在傳統UI中編輯元件的方式。
+   * `cq:dialogMode` ( `String`):定義在傳統UI中開啟元件對話方塊的方式
 
       * 在觸控式使用者介面中，對話方塊一律會在案頭模式中浮動，並在行動裝置中自動以全螢幕方式開啟。
-   * `cq:emptyText` ( `String`): 定義當沒有視覺內容時顯示的文字。
-   * `cq:inherit` ( `Boolean`): 定義是否從其繼承的元件繼承缺失值。
-   * `dialogLayout` （字串）: 定義對話方塊的開啟方式。
+   * `cq:emptyText` ( `String`):定義當沒有視覺內容時顯示的文字。
+   * `cq:inherit` ( `Boolean`):定義是否從其繼承的元件繼承缺失值。
+   * `dialogLayout` （字串）:定義對話方塊的開啟方式。
 
 
 * [ `cq:editConfig` 子節點](#configuring-with-cq-editconfig-child-nodes):
 
-   * `cq:dropTargets` (節點類 `nt:unstructured`型): 定義可接受內容搜尋器資產的拖放目標的清單
+   * `cq:dropTargets` (節點類 `nt:unstructured`型):定義可接受內容搜尋器資產的拖放目標的清單
 
       * 傳統UI中僅提供多個放置目標。
       * 在觸控式UI中，允許單一放置目標。
-   * `cq:actionConfigs` (節點類 `nt:unstructured`型): 定義附加至cq:actions清單的新動作清單。
-   * `cq:formParameters` (節點類 `nt:unstructured`型): 定義添加到對話框表單的其他參數。
-   * `cq:inplaceEditing` (節點類 `cq:InplaceEditingConfig`型): 定義元件的就地編輯配置。
-   * `cq:listeners` (節點類 `cq:EditListenersConfig`型): 定義在元件上執行動作之前或之後所發生的動作。
+   * `cq:actionConfigs` (節點類 `nt:unstructured`型):定義附加至cq:actions清單的新動作清單。
+   * `cq:formParameters` (節點類 `nt:unstructured`型):定義添加到對話框表單的其他參數。
+   * `cq:inplaceEditing` (節點類 `cq:InplaceEditingConfig`型):定義元件的就地編輯配置。
+   * `cq:listeners` (節點類 `cq:EditListenersConfig`型):定義在元件上執行動作之前或之後所發生的動作。
 
 
 >[!NOTE]
@@ -600,7 +604,7 @@ AEM中的元件受3種不同階層的規範：
 
    `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 查找子節點， `cq:editConfig`例如可以搜索類 `cq:dropTargets`型的子節點 `cq:DropTargetConfig`; 您可以在** CRXDE Lite**中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
+* 查找子節點， `cq:editConfig`例如可以搜索類 `cq:dropTargets`型的子節點 `cq:DropTargetConfig`;您可以在** CRXDE Lite**中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
 
@@ -731,7 +735,7 @@ AEM中的元件受3種不同階層的規範：
 
 >[!NOTE]
 >
->在觸控式使用者介面中，對話方塊一律會在案頭模式中浮動，並在行動裝置中自動以全螢幕方式開啟。
+>在觸控式使用者介面中，對話方塊一律會在案頭模式中浮動，並自動在行動裝置中以全螢幕方式開啟。
 
 以下配置定義帶有編輯按鈕的編輯欄和浮動對話框：
 
@@ -890,9 +894,9 @@ AEM中的元件受3種不同階層的規範：
    <td><code>editorType</code></td>
    <td><p>(<code>String</code>)編輯器類型。 可用類型包括：</p>
     <ul>
-     <li>明文： 用於非HTML內容。<br /> </li>
-     <li>標題： 是增強的純文字編輯器，可在編輯開始前將圖形標題轉換為純文字。 由Geometrixx標題元件使用。<br /> </li>
-     <li>文字： 以用於HTML內容（使用Rich Text Editor）。<br /> </li>
+     <li>明文：用於非HTML內容。<br /> </li>
+     <li>標題：是增強的純文字編輯器，可在編輯開始前將圖形標題轉換為純文字。 由Geometrixx標題元件使用。<br /> </li>
+     <li>文字：以用於HTML內容（使用Rich Text Editor）。<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -975,7 +979,7 @@ AEM中的元件受3種不同階層的規範：
   </tr>
   <tr>
    <td><code>afterchildinsert</code></td>
-   <td>在將元件插入另一個元件（僅限容器）後，就會觸發處理常式。</td>
+   <td>在將元件插入其他元件（僅限容器）後，就會觸發處理常式。</td>
    <td> </td>
   </tr>
  </tbody>
@@ -993,7 +997,7 @@ AEM中的元件受3種不同階層的規範：
 >
 >對於嵌套元件，對於定義為節點上屬性的操作，存在某些 `cq:listeners` 限制：
 >
->* 對於嵌套元件，以下屬性的值 *必須*`REFRESH_PAGE`: >
+>* 對於嵌套元件，以下屬性的值 *必須*`REFRESH_PAGE`:>
 >  * `aftermove`
 >  * `aftercopy`
 
