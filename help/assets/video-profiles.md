@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3707'
 ht-degree: 15%
@@ -147,7 +147,7 @@ ht-degree: 15%
 * H264 設定檔
 * 音訊取樣速率
 
-如果值不相同，則可以繼續按原樣建立配置檔案。 不過，請注意，不可能進行自適應串流。 使用者將可體驗單位元速率串流。 建議您編輯編碼設定，以便在描述檔中的個別編碼預設集間使用相同的值。 （請注意，如果已啟用「最適化串流編碼」，視訊設定檔／預設集編輯器應強制同等使用最適化視訊編碼設定。）
+如果值不相同，則可以繼續按原樣建立配置檔案。 不過，請注意，不可能進行自適應串流。 使用者將可體驗單位元速率串流。 建議您編輯編碼設定，以便在描述檔中的個別編碼預設集間使用相同的值。 （請注意，如果已啟用「最適化串流編碼」，視訊設定檔／預設集編輯器應強制調整視訊編碼設定的奇偶校驗。）
 
 另請參閱 [建立漸進式串流的視訊編碼設定檔](#creating-a-video-encoding-profile-for-progressive-streaming)。
 
@@ -199,8 +199,8 @@ ht-degree: 15%
 
 視您執行的模式而定，支援的視訊格式轉碼器如下：
 
-* 動態媒體——場景7模式： H.264(.mp4)
-* 動態媒體——混合模式： H.264(.mp4)、WebM
+* 動態媒體——場景7模式：H.264(.mp4)
+* 動態媒體——混合模式：H.264(.mp4)、WebM
 
 另請參閱 [建立適應性串流的視訊編碼設定檔](#creating-a-video-encoding-profile-for-adaptive-streaming)。
 
@@ -329,7 +329,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 
 1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 在「視訊描述檔」頁面上，勾選一個視訊描述檔名稱。
-1. 在工具列上，點選「編 **[!UICONTROL 輯」。]**
+1. 在工具列上，點選「 **[!UICONTROL 編輯」。]**
 1. 在「視訊編碼描述檔」頁面上，視需要編輯名稱和說明。
 1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。點選資訊圖示以取得最適化串流的說明。（如果您正在編輯漸進式視訊設定檔，請勿選取此核取方塊）。
 1. 在「視訊編碼預設集」標題下，新增、編輯或刪除構成描述檔的視訊編碼預設集。
@@ -433,6 +433,6 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 ### 透過「屬性」從資料夾移除視訊描述檔 {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. 點選或按一下AEM標誌，並導覽至 **[!UICONTROL Assets]** ，然後導覽至您要從中移除視訊描述檔的檔案夾。
-1. 在資料夾上點選或按一下核取標籤以選取它，然後點選或按一下「 **屬性」。]**
+1. 在資料夾上，點選或按一下核取標籤以選取它，然後點選或按一下「屬 **[!UICONTROL 性」。]**
 1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，並從下拉式選單中選 **[!UICONTROL 取「無]** 」，然後按一下「 **[!UICONTROL 儲存並關閉」。]**&#x200B;已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
