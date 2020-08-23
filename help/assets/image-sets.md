@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 16%
+source-wordcount: '2076'
+ht-degree: 15%
 
 ---
 
@@ -29,13 +29,13 @@ ht-degree: 16%
 
 當您想要以不同的顏色、圖樣或完成顯示項目時，此應用程式特別有用。 若要使用色票建立影像集，您需要針對要呈現給使用者的不同顏色、圖樣或修飾建立一個影像。 您也需要一種顏色、圖樣或修飾色板來表示每種顏色、圖樣或修飾。
 
-例如，假設您想要呈現不同色彩表的頂蓋影像； 賬單是紅的，綠的，藍的。 在這種情況下，你需要三杯相同的帽子。 你需要一張紅的，一張綠的，一張藍的。 您也需要紅色、綠色和藍色色票。 顏色色票會當做縮圖，讓使用者在色票集檢視器中按一下，以查看紅嘴、綠嘴或藍嘴的帽子。
+例如，假設您想要呈現不同色彩表的頂蓋影像；賬單是紅的，綠的，藍的。 在這種情況下，你需要三杯相同的帽子。 你需要一張紅的，一張綠的，一張藍的。 您也需要紅色、綠色和藍色色票。 顏色色票會當做縮圖，讓使用者在色票集檢視器中按一下，以查看紅嘴、綠嘴或藍嘴的帽子。
 
 >[!NOTE]
 >
 >如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/managing-assets-touch-ui.md)。
 
-## 快速入門： 影像集 {#quick-start-image-sets}
+## 快速入門：影像集 {#quick-start-image-sets}
 
 要快速啟動並運行，請執行以下操作：
 
@@ -118,7 +118,7 @@ ht-degree: 16%
 >[!NOTE]
 >
 >You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets).
->**重要：**批集由IPS(Image Production System)建立，作為資產提取的一部分，並且僅在動態媒體- Scene7模式中可用。
+>**重要：** 批集由IPS(Image Production System)建立，作為資產提取的一部分，並且僅在動態媒體- Scene7模式中可用。
 
 當您將資產新增至集合時，資產會自動以字母數字順序新增。 您可以在資產新增後手動重新排序或排序。
 
@@ -184,11 +184,11 @@ ht-degree: 16%
 
    ![6_5_imageset-asset屬性](assets/6_5_imageset-assetproperties2.png)
 
-* 來自任何組的成員映像。選擇「 **[!UICONTROL集** 」菜單以顯示資產所屬的集。
+* 來自任何組的成員映像。Select the **[!UICONTROL Sets]** menu to display the sets that the asset is a member of.
 
    ![6_5_imageset-setspuldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* From search, you can select **[!UICONTROL Filter**, then expand **[!UICONTROL Dynamic Media** and select **[!UICONTROL Sets.]**
+* From search, you can select **[!UICONTROL Filter]**, then expand **[!UICONTROL Dynamic Media]** and select **[!UICONTROL Sets.]**
 
    搜尋會傳回在UI中手動建立或透過批次集預設集自動建立的相符集。 對於自動集，搜尋查詢是使用「以」搜尋准則進行，此搜尋准則與以「包含」搜尋准則為基礎的AEM搜尋不同。 將篩選器設 **[!UICONTROL 置為]** 「集」是搜索自動集的唯一方法。
 
