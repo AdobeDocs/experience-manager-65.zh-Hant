@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
@@ -59,8 +59,8 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
    <td><p>密鑰庫檔案的位置和名稱。</p><p>該位置可以包含檔案的絕對路徑。 或者，它可以相對於輸入keytool命令的命令提示符的當前目錄。</p></td>
    <td>
     <ul>
-     <li><p>自訂身分密鑰庫： <code>[</code><i>appserverdomain]</i><code>/adobe/</code><i>[伺服器名稱]</i><code>/ads-ssl.jks</code></p></li>
-     <li><p>自訂信任金鑰庫： <code>[</code><i>appserverdomain]</i><code>/adobe/</code><i>[伺服器名稱]</i><code>/ads-ca.jks</code></p></li>
+     <li><p>自訂身分密鑰庫： <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[伺服器名稱]</i><code>/ads-ssl.jks</code></p></li>
+     <li><p>自訂信任金鑰庫： <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[伺服器名稱]</i><code>/ads-ca.jks</code></p></li>
     </ul></td>
   </tr>
   <tr>
@@ -78,8 +78,8 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
    <td><p>保護密鑰庫內容的口令。 </p></td>
    <td>
     <ul>
-     <li><p>自訂身分密鑰庫： 密鑰庫密碼必須與為管理控制台的信任儲存元件指定的SSL憑證密碼對應。</p></li>
-     <li><p>自訂信任金鑰庫： 使用與您用於自訂身分密鑰庫的相同密碼。</p></li>
+     <li><p>自訂身分密鑰庫：密鑰庫密碼必須與為管理控制台的信任儲存元件指定的SSL憑證密碼對應。</p></li>
+     <li><p>自訂信任金鑰庫：使用與您用於自訂身分密鑰庫的相同密碼。</p></li>
     </ul></td>
   </tr>
   <tr>
@@ -151,7 +151,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
    >[!NOTE]
    >
-   >以安 `[JAVA_HOME]` 裝JDK的目錄取代，並以您自己的密碼取代 `store`*_*_和_`password``key`**`password`*_ 。*
+   >以安 `[JAVA_HOME]` 裝JDK的目錄取代，並以您自己的密碼取代 `store`*_* _和_ `password` `key`**`password`*_ 。*
 
    例如：
 
@@ -161,7 +161,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
 名為&quot;ads-ca.jks&quot;的自訂信任密鑰庫檔案會建立在 [appserverdomain]/adobe/&#39;server&#39;目錄中。
 
-設定WebLogic，使其使用您建立的自訂身分密鑰庫和自訂信任密鑰庫。 此外，禁用WebLogic主機名驗證功能，因為用於建立密鑰庫檔案的唯一判別名不包括托管WebLogic伺服器的電腦的名稱。
+設定WebLogic，使其使用您建立的自訂身分密鑰庫和自訂信任密鑰庫。 此外，由於用於建立密鑰庫檔案的唯一判別名不包括托管WebLogic伺服器的電腦名，因此禁用WebLogic主機名驗證功能。
 
 ## 設定WebLogic以使用SSL {#configure-weblogic-to-use-ssl}
 
@@ -170,7 +170,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 1. 在「常規」下，在「配置」中，確 **保選擇「啟用監聽端** 」 **和「啟用SSL監聽埠** 」。 如果未啟用，請執行下列動作：
 
    1. 在「變更中心」(Change Center)下，按一下「 **鎖定並編輯」(Lock &amp; Edit** )以修改選擇和值。
-   1. 選中「 **Listen Port Enabled(啟用監聽埠** )」和「 **SSL Listen Port Enabled(啟用SSL監聽埠** )」複選框。
+   1. 選中「 **Listen Port Enabled(啟用監聽埠** )」和「 **SSL Listen Port Enabled(啟用監聽埠** )」複選框。
 
 1. 如果此伺服器是受控伺服器，請將「監聽埠」更改為未使用的埠值（如8001），將「SSL監聽埠」更改為未使用的埠值（如8002）。 在獨立伺服器上，預設的SSL埠為7002。
 1. 按一 **下「發行設定**」。
@@ -182,7 +182,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
    **自訂身分密鑰庫**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks，其中*[appserverdomain] *是實際路徑，而 *[]* 伺服器名稱是應用程式伺服器的名稱。
 
-   **自訂身份密鑰庫類型**: JKS
+   **自訂身份密鑰庫類型**:JKS
 
    **自訂身分密鑰庫密碼**: *mypassword* （自訂身分密鑰庫密碼）
 
@@ -190,7 +190,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 
    **自定義信任密鑰庫檔案名**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`，其中 `*[appserverdomain]*` 是實際路徑
 
-   **自定義信任密鑰庫類型**: JKS
+   **自定義信任密鑰庫類型**:JKS
 
    **自訂信任金鑰庫密碼片語**: *mypassword* （自訂信任金鑰密碼）
 
@@ -198,7 +198,7 @@ keytool命令通常位於Java jre/bin目錄中，且必須包含數個選項和�
 1. 預設情況下，為「身份和信任位置」選擇「密鑰庫」。 否則，請將其更改為密鑰庫。
 1. 在「身分」下，指定下列值：
 
-   **私密金鑰別名**: ads-credentials
+   **私密金鑰別名**:ads-credentials
 
    **密碼短語**: *mypassword*
 
