@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '4814'
+source-wordcount: '4813'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-您可以在此處導覽影像（按一下數字）。 此外，投影片會根據您可自訂的時間間隔自動旋轉。 您在轉盤橫幅中新增的影像同時支援熱點和影像地圖，使用者可以點選或前往超連結或存取快速檢視視窗。
+您可以在這裡導覽影像（按一下數字）。 此外，投影片會根據您可自訂的時間間隔自動旋轉。 您在轉盤橫幅中新增的影像同時支援熱點和影像地圖，使用者可以點選或前往超連結或存取快速檢視視窗。
 
 在此範例中，使用者點選或點選影像地圖，並存取手套的快速檢視視窗：
 
@@ -43,15 +43,15 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->非管理使用者必須新增至 **[!UICONTROL dam-users]** 群組，才能建立或編輯轉盤橫幅。 如果您在建立或編輯時遇到問題，請洽詢系統管理員，讓系統管理員將您新 **[!UICONTROL 增至dam使用者群組&#x200B;]**。
+>非管理使用者必須新增至 **[!UICONTROL dam-users]** 群組，才能建立或編輯轉盤橫幅。 如果您在建立或編輯時遇到問題，請洽詢系統管理員，讓系統管理員將您新 **[!UICONTROL 增至dam使用者群組]** 。
 
-## 快速入門： 轉盤橫幅 {#quick-start-carousel-banners}
+## 快速入門：轉盤橫幅 {#quick-start-carousel-banners}
 
 要快速啟動並運行，請執行以下操作：
 
 1. [識別熱點和影像對應變數](#identifying-hotspot-and-image-map-variables) （僅適用於使用AEM Assets + Dynamic Media的客戶）
 
-   首先，識別現有快速檢視實作所使用的動態變數，以便您在AEM Assets中轉盤橫幅建立程式期間正確輸入熱點和影像地圖資料。
+   從識別現有快速檢視實作所使用的動態變數開始，如此您就可在AEM Assets中轉盤橫幅建立程式期間正確輸入熱點和影像地圖資料。
 
    >[!NOTE]
    >
@@ -86,12 +86,10 @@ ht-degree: 3%
 
 1. 執行下列任一項作業：
 
-   * [將轉盤橫幅新增至您的網站頁面
-      ](#adding-a-carousel-banner-to-your-website-page)您可以將您複製的轉盤橫幅URL或內嵌代碼新增至網站頁面。
+   * [將轉盤橫幅新增至您的網站頁面](#adding-a-carousel-banner-to-your-website-page) 。您可以新增已複製至網站頁面的轉盤橫幅URL或內嵌代碼。
 
       * [將轉盤橫幅與現有的Quickview整合](#integrating-the-carousel-banner-with-an-existing-quickview)。 如果您使用協力廠商的Web內容管理系統，您將需要將新的轉盤橫幅與網站上現有的Quickview實作整合。
-   * [在AEM中將轉盤橫幅新增至您的網站
-      ](/help/assets/adding-dynamic-media-assets-to-pages.md)如果您是AEM Sites客戶，您可以使用互動式媒體元件，將浮動切換集直接新增至AEM的頁面。
+   * [在AEM中將轉盤橫幅新增至您的網站](/help/assets/adding-dynamic-media-assets-to-pages.md) ：如果您是AEM Sites客戶，您可以使用互動式媒體元件將轉盤集直接新增至AEM的頁面。
 
 
 如果需要編輯轉盤集，請參閱編 [輯轉盤集。](#editing-carousel-sets) 此外，您還可以檢視和編輯「轉盤 [集」屬性](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)。
@@ -104,7 +102,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如果您是AEM Sites和／或AEM Ecommerce客戶，請略過此步驟。 您不需要手動識別熱點或影像地圖變數； 您可以使用與Ecommerce的整合進行產品整合。 請參閱有關設 [定電子商務的資訊](/help/sites-administering/generic.md)。 此外，您也可以使用互動式元件並將它新增至網頁。
+>如果您是AEM Sites和／或AEM Ecommerce客戶，請略過此步驟。 您不需要手動識別熱點或影像地圖變數；您可以使用與Ecommerce的整合進行產品整合。 請參閱有關設 [定電子商務的資訊](/help/sites-administering/generic.md)。 此外，您也可以使用互動式元件並將它新增至網頁。
 >
 >如果您是AEM Assets或Media客戶，請發佈URL或內嵌代碼，然後與您的協力廠商內容管理系統整合，並手動識別熱點和影像地圖。
 
@@ -132,9 +130,9 @@ ht-degree: 3%
 
 現在，在網路記錄檔中尋找快速檢視的Ajax URL，並複製已記錄的URL以供日後分析。 在大多數情況下，當您觸發快速檢視時，會有許多請求傳送至伺服器。 通常，快速檢視Ajax URL是清單中第一個檢視的URL。 它有複雜的查詢字串部分或路徑，其回應MIME類型為 `text/html`、 `text/xml`或 `text/javascript`。
 
-在此程式中，請務必造訪您網站的不同區域，以及不同的產品類別和類型。 原因是快速檢視URL可能有特定網站類別的共用部分，但只有在您造訪網站的不同區域時才會變更。
+在此程式中，請務必造訪您網站的不同區域，以及不同的產品類別和類型。 原因是快速檢視URL可能有特定網站類別的常見部分，但只有在您造訪網站的不同區域時才會變更。
 
-在最簡單的情況下，快速檢視URL中唯一的變數部分是產品SKU。 在此例中，SKU值是您在橫幅影像中新增熱點或影像地圖所需的唯一資料片段。
+在最簡單的情況下，快速檢視URL中唯一的變數部分是產品SKU。 在這種情況下，SKU值是您在橫幅影像中新增熱點或影像地圖時唯一需要的資料片段。
 
 但是，在複雜情況下，快速檢視URL除了SKU以外，還有不同的元素，例如類別ID、顏色代碼、大小代碼等。 在這種情況下，每個元素都是熱點中的個別變數，或轉盤橫幅功能中的影像地圖資料定義。
 
@@ -200,8 +198,7 @@ ht-degree: 3%
    * 在頁面左上角附近，點選「新增投 **[!UICONTROL 影片]** 」圖示。
 
    * 在頁面中間附近，點選「點選」 **[!UICONTROL 以開啟「資產選擇器」。]**
-
-   點選以選取您要納入轉盤集的資產。選取的資產上面有核取標籤圖示。完成後，在頁面右上角附近點選「 **[!UICONCONTROL選擇」**。
+   點選以選取您要納入轉盤集的資產。選取的資產上面有核取標籤圖示。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select]**.
 
    使用「資產選擇器」，您可以輸入關鍵字並點選或按一下「退貨」來搜尋 **[!UICONTROL 資產。]**&#x200B;您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後點選工具 **[!UICONTROL 列上的]** 「篩選」圖示。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
 
@@ -226,7 +223,7 @@ ht-degree: 3%
    >    * 動畫. 依預設，每張投影片轉場都是淡入。 您可以將它變更為投影片轉場。
    >    * 按鈕的樣式。 使用者可以點選每個點或數字，在橫幅中旋轉。 您可以變更設定指標按鈕的顯示位置（如果是數值或虛線樣式），以及其大小。
    >    * 更改影像映射或用於熱點的表徵圖的加亮樣式。
-   >    * 在編輯檢視器預設集之前，請選擇您要以預設集為基礎的樣式。 如果您不這麼做，當您開始編輯檢視器預設集時，如果您決定變更為其他預設集，將會遺失所有變更
+   >    * 在編輯檢視器預設集之前，請選擇您要以預設集為基礎的樣式。 如果您不這麼做，當您開始編輯檢視器預設集時，如果您決定變更為其他預設集，將會遺失您的所有變更
 
    >
    >
@@ -259,7 +256,7 @@ ht-degree: 3%
 >
 >當您在 [Interactive Image](/help/assets/interactive-images.md) 或Carousel橫幅中將熱點添加到影像時，熱點資訊儲存在相對於影像位置&amp;mdash的相同元資料位置中，而不管它是Interactive Image還是Carousel Banner。 這項功能表示，您可以在任一檢視器中，輕鬆地重複使用相同的影像及其定義的熱點資料。
 
->但是，請注意，轉盤橫幅支援影像上的影像地圖，這些影像也可能包含熱點； 互動式影像則否。 如果您想要建立使用相同影像的互動式影像或轉盤橫幅，請記住這一點。 您可能想要使用相同影像的個別副本來建立互動式影像和轉盤橫幅。
+>但是，請注意，轉盤橫幅支援影像上的影像地圖，這些影像也可能包含熱點；互動式影像則否。 如果您想要建立使用相同影像的互動式影像或轉盤橫幅，請記住這一點。 您可能想要使用相同影像的個別副本來建立互動式影像和轉盤橫幅。
 
 >[!NOTE]
 如果您正在編輯具有熱點的互動式影像並裁剪影像，則會刪除熱點。
@@ -274,8 +271,8 @@ ht-degree: 3%
 1. Near the upper-left corner of the page, tap **[!UICONTROL Hotspot]** or **[!UICONTROL Image Map.]**
 1. 執行下列任一項作業：
 
-   * 對於熱點： 在影像上，點選您要熱點出現的位置。
-   * 對於影像地圖： 在影像上按一下，然後從左上角拖曳至右下方，以建立影像對應區域。 您可以拖曳轉角來調整影像地圖的大小。
+   * 對於熱點：在影像上，點選您要熱點出現的位置。
+   * 對於影像地圖：在影像上按一下，然後從左上角拖曳至右下方，以建立影像對應區域。 您可以拖曳轉角來調整影像地圖的大小。
 
    如有必要，請將熱點或影像映射拖動到新位置。 視需要新增其他熱點或影像地圖。
 
@@ -356,7 +353,7 @@ ht-degree: 3%
    * 若要重新排序投影片，請將投影片拖曳至新位置（選取重新排序圖示以移動項目）。
    * 要添加熱點或影像映射，請按一下熱點或影像映射表徵圖，請參閱添 [加熱點和影像映射](#adding-hotspots-or-image-maps-to-an-image-banner)。
    * To edit the appearance or behavior of the carousel set, tap the **[!UICONTROL Appearance]** tab or **[!UICONTROL Behavior]** tab, then set the options you want.
-   * 要編輯熱點或影像映射，請在相應的幻燈片上選擇熱點或影像映射，並在「操作」( **[!UICONTROL Actions]** )頁籤下進行必要的更改。
+   * 要編輯熱點或影像映射，請在相應的幻燈片上選擇熱點或影像映射，並在「操作」( **[!UICONTROL Actions]** )頁籤下根據需要進行更改。
    * 若要刪除投影片，請選取它，然後點選工具 **[!UICONTROL 列上的「刪除投影片]** 」。
    * To apply a preset, near the upper-right corner of the page, tap the **[!UICONTROL Preset]** drop-down list, then select a viewer preset.
    * 若要刪除整個轉盤集，請導覽至轉盤集，選取它，然後點選「刪 **[!UICONTROL 除」。]**
@@ -383,7 +380,7 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 
    ![experience_fragment-carouselbanner-viewerdropfon](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. 點選「 **預覽」。]**
+1. 點選「 **[預覽」。]**
 1. 點選影像上的熱點或影像地圖，以測試其相關動作。
 
 **若要從檢視器清單預覽轉盤橫幅**
@@ -420,7 +417,7 @@ See [Embedding the Video or Image Viewer on a Web Page](/help/assets/embed-code.
 
 ## 將轉盤橫幅與現有快速檢視整合 {#integrating-the-carousel-banner-with-an-existing-quickview}
 
-注意： 此步驟僅適用於您是獨立AEM Assets客戶時。
+注意：此步驟僅適用於您是獨立AEM Assets客戶時。
 
 此程式的最後一個步驟是將轉盤橫幅與網站上現有的快速檢視實施整合。 每個快速檢視實作都是獨一無二的，而且需要一種最可能需要前端IT人員協助的特定方法。
 
@@ -434,7 +431,7 @@ See [Embedding the Video or Image Viewer on a Web Page](/help/assets/embed-code.
 1. 或者，前端代碼將載入的快速檢視資料轉換為HTML表示法。
 1. 前端程式碼會顯示模式對話方塊或面板，並轉譯HTML內容給使用者。
 
-這些呼叫可能不代表獨立的公用API呼叫，而網頁邏輯可透過任意步驟呼叫這些呼叫。 相反地，它是連結呼叫，在此連結呼叫中，前一步驟的最後一個階段（回呼）中隱藏了每個後續步驟。
+這些呼叫可能不代表獨立的公用API呼叫，而網頁邏輯可透過任意步驟呼叫這些呼叫。 相反地，它是連結呼叫，在此連結呼叫中，前一個步驟的最後一個階段（回呼）中將隱藏下一個步驟。
 
 在轉盤橫幅正在取代步驟1和部分步驟2的同時，當使用者按一下轉盤橫幅內的熱點或影像地圖時，檢視器會處理這類使用者互動。 檢視器會將事件傳回至網頁，其中包含先前新增的所有熱點或影像地圖資料。
 
