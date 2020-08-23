@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1952'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +32,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 除了開發 [新元件](/help/sites-developing/developing-components-samples.md) ，以用於表單外，您還可以：
 
 * [以值預先載入表格](#preloading-form-values)
-* [預先載入（特定）多個值的欄位
-   ](#preloading-form-fields-with-multiple-values)
+* [預先載入（特定）多個值的欄位](#preloading-form-fields-with-multiple-values)
 * [開發新動作](#developing-your-own-form-actions)
 * [開發新的限制](#developing-your-own-form-constraints)
 * [顯示或隱藏特定表單欄位](#showing-and-hiding-form-components)
@@ -39,7 +41,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 >[!NOTE]
 >
->本檔案著重於使用傳統UI中的 [Foundation Components](/help/sites-authoring/default-components-foundation.md) ，來開發表格。 Adobe建議在觸控式UI中 [運用新的核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)[和隱藏條件](/help/sites-developing/hide-conditions.md) ，以開發表格。
+>本檔案著重於使用傳統UI中的 [Foundation Components](/help/sites-authoring/default-components-foundation.md) ，來開發表格。 Adobe建議在觸控式UI中 [運用新的核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)[和隱藏條件](/help/sites-developing/hide-conditions.md) ，以開發表格。
 
 ## 預載表單值 {#preloading-form-values}
 
@@ -127,11 +129,12 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 1. 在資料夾中建立以下任一項：
 
    1. 貼文指令碼。
-指令碼的名稱是 `post.POST.<extension>`，例如，當提交表單以處理表單時，會叫用後置指令碼，其中包含處理從表單到達的資料的程式碼 `post.POST.jsp``POST`。
+指令碼的名稱是 `post.POST.<extension>`，例如，當提交表單以處理表單時，會叫用 `post.POST.jsp`後置指令碼，其中包含處理從表單到達的資料的程式碼 
+`POST`。
 
    1. 新增在提交表單時叫用的轉發指令碼。
 指令碼的名稱為 `forward.<extension`>，例如，此腳 `forward.jsp`本可以定義路徑。 然後，將當前請求轉發到指定的路徑。
-   必要的呼叫 `FormsHelper#setForwardPath` 是（2個變體）。 典型的情況是執行一些驗證或邏輯，以尋找目標路徑，然後轉送至該路徑，讓預設的Sling POST servlet在JCR中執行實際儲存。
+   必要的呼叫 `FormsHelper#setForwardPath` 是（2個變體）。 典型的案例是執行一些驗證或邏輯，以尋找目標路徑，然後轉送至該路徑，讓預設Sling POST servlet在JCR中執行實際儲存。
 
    也可能有另一個Servlet會執行實際處理，在這種情況下，表單動作 `forward.jsp` 和只會做為「黏合」程式碼。 其中一個示例是位於的郵件操 `/libs/foundation/components/form/actions/mail`作，它將詳細資訊轉 `<currentpath>.mail.html`發到郵件servlet所在的位置。
 
@@ -139,6 +142,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
    * a對 `post.POST.jsp` 於由操作本身完全完成的小操作非常有用
    * 而只 `forward.jsp` 需委託時，則很實用。
+
    指令碼的執行順序為：
 
    * 在轉譯表單( `GET`)時：
@@ -209,7 +213,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
       * `jcr:title` -指定您選擇的標題，此標題會顯示在選取清單中。 如果未設定，則顯示節點名稱
       * `hint` -使用者有關如何使用欄位的其他資訊
 
-1. 在此資料夾中，您可以需要下列指令碼：
+1. 在此資料夾內，您可以需要以下指令碼：
 
    * 客戶端驗證指令碼：指令碼的名稱是， `clientvalidation.<extension>`例如，在 `clientvalidation.jsp`呈現表單欄位時調用此名稱。 它可用於建立用戶端javascript，以驗證用戶端上的欄位。
 
@@ -257,7 +261,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 ![showhidedition](assets/showhidecondition.png)
 
-在Javascript中，條件會使用「元素名稱」屬性的值來參考欄位。 在上例中，Radio group元件的「元素名稱」屬性為 `contact`。 下列程式碼是該範例的等效Javascript程式碼：
+在Javascript中，條件會使用「元素名稱」屬性的值來參考欄位。 在上例中，Radio Group元件的「元素名稱」屬性為 `contact`。 下列程式碼是該範例的等效Javascript程式碼：
 
 `((contact == "Yes"))`
 
@@ -275,6 +279,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
       * **any** —— 如果只有一個或多個條件必須為true才能顯示或隱藏元件
    * 在條件行中（一個顯示為預設值），選擇元件、運算子，然後指定值。
    * 視需要按一下「新增條件」，新增 **更多條件**。
+
    例如：
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
