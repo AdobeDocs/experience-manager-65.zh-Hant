@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '7842'
 ht-degree: 0%
@@ -52,8 +52,8 @@ ht-degree: 0%
 
 「產生PDF」服務會將下列標準檔案格式轉換為PDF。
 
-* 視訊格式： SWF、FLV（僅限Windows）
-* 影像格式： JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
+* 視訊格式：SWF、FLV（僅限Windows）
+* 影像格式：JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
 * HTML（Windows、Sun™ Solaris™和Linux®）
 
 「產生PDF」服務會將PDF轉換為下列檔案格式（僅限Windows）:
@@ -189,7 +189,7 @@ ht-degree: 0%
 
 [步驟摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入門（SOAP模式）: 使用Java API將Microsoft Word檔案轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將Microsoft Word檔案轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -223,7 +223,7 @@ ht-degree: 0%
 1. 擷取檔案以轉換為PDF檔案。
 
    * 使用其 `BLOB` 建構函式建立物件。 對 `BLOB` 像用於儲存要轉換為PDF文檔的檔案。
-   * 通過調用 `System.IO.FileStream` 其建構子建立對象。 傳遞一個字串值，該值代表要轉換的檔案位置以及開啟檔案的模式。
+   * 通過調用 `System.IO.FileStream` 其建構子建立對象。 傳遞一個字串值，代表要轉換之檔案的檔案位置以及開啟檔案的模式。
    * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
    * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
    * 通過為 `BLOB` 其屬性指定字 `MTOM` 節陣列的內容來填充對象。
@@ -240,7 +240,7 @@ ht-degree: 0%
    * 可選物 `BLOB` 件，包含產生PDF檔案時要套用的設定。
    * 可選物 `BLOB` 件，包含要套用至PDF檔案的中繼資料資訊。
    * 由方法填 `BLOB` 入的輸出參 `CreatePDF2` 數。 該方 `CreatePDF2` 法使用轉換的文檔填充此對象。 （此參數值僅適用於Web服務調用）。
-   * 由方法填 `BLOB` 入的輸出參 `CreatePDF2` 數。 方 `CreatePDF2` 法會以記錄檔填入此物件。 （此參數值僅適用於Web服務調用）。
+   * 由方法填 `BLOB` 入的輸出參 `CreatePDF2` 數。 方 `CreatePDF2` 法使用日誌文檔填充此對象。 （此參數值僅適用於Web服務調用）。
 
 1. 擷取結果。
 
@@ -344,9 +344,9 @@ ht-degree: 0%
 
 [將HTML檔案轉換為PDF檔案](converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)
 
-[快速入門（SOAP模式）: 使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）: 使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -471,7 +471,7 @@ ht-degree: 0%
 
 1. 擷取要轉換的PDF檔案。
 
-   * 使用 `java.io.FileInputStream` 其建構函式建立代表PDF檔案的物件。 傳遞指定PDF檔案位置的字串值。
+   * 使用 `java.io.FileInputStream` 其建構函式建立代表PDF檔案的物件以進行轉換。 傳遞指定PDF檔案位置的字串值。
    * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
 
 1. 轉換PDF檔案。
@@ -497,7 +497,7 @@ ht-degree: 0%
 
 [步驟摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入門（SOAP模式）: 使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將HTML內容轉換為PDF檔案](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -585,7 +585,7 @@ ht-degree: 0%
 *AppMon是企業元件* ，與原生應用程式互動的方式，與使用者在應用程式顯示的對話方塊中導覽的方式相同。 AppMon用來指示應用程式（例如Microsoft Word）開啟和列印檔案的XML文字會包含下列循序工作：
 
 1. 通過選擇「檔案」>「開啟」開啟檔案
-1. 確保「開啟」對話框出現； 否則，處理錯誤
+1. 確保「開啟」對話框出現；否則，處理錯誤
 1. 在「檔案名」欄位中提供檔案名，然後按一下「開啟」按鈕
 1. 確保檔案實際開啟
 1. 通過選擇「檔案」>「打印」開啟「打印」對話框
@@ -595,11 +595,11 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 由於這些Win32 API的限制，AppMon無法將這些UI事件分派到某些特定類型的視窗，例如浮動式選單列（在TextPad等應用程式中），以及某些使用Win32 API無法擷取其內容的對話方塊。
 
-可以很容易地以視覺化方式識別浮動的菜單欄； 但是，可能無法只透過視覺檢查來識別特殊類型的對話框。 您需要協力廠商應用程式(例如Microsoft Spy++（Microsoft Visual C++開發環境的一部分）或其相當的WinID(可從 [https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)免費下載)來檢查對話方塊，以判斷AppMon是否能使用標準Win32 API與它互動。
+可以很容易地以視覺化方式識別浮動的菜單欄；但是，可能無法只透過視覺檢查來識別特殊類型的對話框。 您需要協力廠商應用程式(例如Microsoft Spy++（Microsoft Visual C++開發環境的一部分）或其相當的WinID(可從 [https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)免費下載)來檢查對話方塊，以判斷AppMon是否能使用標準Win32 API與它互動。
 
 如果WinID能夠擷取對話方塊內容，例如文字、子視窗、視窗類別ID等，AppMon也可以這麼做。
 
-此表列出了打印原始檔案格式時使用的資訊類型。
+此表列出了用於打印本地檔案格式的資訊類型。
 
 <table>
  <thead>
@@ -628,19 +628,19 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
   <tr>
    <td><p>應用程式特定對話方塊指示</p></td>
    <td><p>指定如何回應應用程式特定的對話方塊。 </p><p>包含此資訊的檔案是appmon。<i>「[appname]`</i>.dialog。<i>「[locale]`</i>.xml（例如appmon.word.en_US.xml）。</p></td>
-   <td><p>請勿修改此檔案。 </p><p>要為新的本地應用程式添加對話框說明，請參 <a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">閱建立或修改本地應用程式的其它對話框XML檔案</a>。</p></td>
+   <td><p>請勿修改此檔案。 </p><p>要為新的本地應用程式添加對話框說明，請參 <a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">閱建立或修改本地應用程式的其他對話框XML檔案</a>。</p></td>
   </tr>
   <tr>
    <td><p>其他應用程式特定對話方塊指示 </p></td>
    <td><p>指定對特定應用程式對話框指令的覆蓋和添加。 本節介紹了此類資訊的示例。 </p><p>包含此資訊的檔案是appmon。<i>「[appname]」</i>.addition。<i>「[區域設定]`</i>.xml。 例如appmon.addition.en_US.xml。</p></td>
-   <td><p>可使用XML編輯應用程式來建立和修改此類檔案。 (請參 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">閱為原生應用程式建立或修改其他對話XML檔案</a>。) </p><p><strong>重要</strong>: 您必須針對您的伺服器將支援的每個原生應用程式建立其他應用程式特定對話框指示。 </p></td>
+   <td><p>可使用XML編輯應用程式來建立和修改此類檔案。 (請參 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">閱為原生應用程式建立或修改其他對話XML檔案</a>。) </p><p><strong>重要</strong>:您必須針對您的伺服器將支援的每個原生應用程式建立其他應用程式特定對話框指示。 </p></td>
   </tr>
  </tbody>
 </table>
 
 ### 關於指令碼和對話框XML檔案 {#about-the-script-and-dialog-xml-files}
 
-指令碼XML檔案會引導「產生PDF」服務以使用者在應用程式對話方塊中導覽的方式，在應用程式對話方塊中導覽。 指令碼XML檔案也會指示「產生PDF」服務執行按鈕、選取或取消選取核取方塊或選取選單項目等動作，以回應對話方塊。
+指令碼XML檔案會引導「產生PDF」服務以使用者在應用程式對話方塊中導覽的方式，在應用程式對話方塊中導覽。 指令碼XML檔案也會指示「產生PDF」服務執行按鈕、選取或取消選取核取方塊或選取功能表項目等動作，以回應對話方塊。
 
 相反地，對話框XML檔案只對對話框做出響應，其操作類型與指令碼XML檔案中使用的操作類型相同。
 
@@ -715,14 +715,14 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 請注意下列問題：
 
 * Microsoft Spy++使用&amp;符號(&amp;)來識別標題的熱鍵，以顯示標題。 例如，Spy++將一個「打印」對話框的標題顯示為 `Pri&nt`，這表示熱鍵為 *n*。 指令碼和對話框XML檔案中的標題必須省略&amp;符號。
-* 有些標題包含分行符號。 「產生PDF」服務無法識別分行符號。 如果標題包含分行符號，請包含足夠的標題以區隔其他功能表項目，然後對省略的部分使用規則運算式。 例如( `^Long caption title$`)。]. (請參閱 [在標題屬性中使用規則運算式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
+* 有些標題包含分行符號。 「產生PDF」服務無法識別分行符號。 如果標題包含分行符號，請包含足夠的標題以區隔其他功能表項目，然後對省略的部分使用規則運算式。 例如( `^Long caption title$`)。 (請參閱 [在標題屬性中使用規則運算式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
 * 對保留的XML字元使用字元實體（也稱為轉義序列）。 例如，對於 `&` &amp;符號， `<` 對於 `>` 小於和大於符號，對於撇號 `&apos;` ，對於 `&quot;` 引號。
 
 如果您打算使用對話方塊或XML檔案指令碼，則應安裝應用程式Microsoft Spy++。
 
 #### 取消對話框和指令碼檔案的封裝 {#unpackaging-the-dialog-and-script-files}
 
-對話方塊和指令碼檔案位於appmondata.jar檔案中。 在可以修改這些檔案或添加新指令碼或對話框檔案之前，必須先取消打包此JAR檔案。 例如，假設您要新增對EditPlus應用程式的支援。 您可以建立兩個XML檔案，名為appmon.editplus.script.en_US.xml和appmon.editplus.script.addition.en_US.xml。 這些XML指令碼必須新增至位於兩個位置的adobe-appmondata.jar檔案，如下所述：
+對話框和指令碼檔案駐留在appmondata.jar檔案中。 在可以修改這些檔案或添加新指令碼或對話框檔案之前，必須先取消打包此JAR檔案。 例如，假設您要新增對EditPlus應用程式的支援。 您可以建立兩個XML檔案，名為appmon.editplus.script.en_US.xml和appmon.editplus.script.addition.en_US.xml。 這些XML指令碼必須新增至位於兩個位置的adobe-appmondata.jar檔案，如下所述：
 
 * adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.ear檔案位於匯出資料夾中，網址為 `[AEM forms install directory]\configurationManager`。 （如果AEM Forms已部署在其他J2EE應用程式伺服器上，請將adobe-livecycle-native-jboss-x86_win32.ear檔案取代為與您的J2EE應用程式伺服器對應的EAR檔案。）
 * adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar檔案位於adobe-generatepdf-dsc.jar檔案中）。 adobe-generatepdf-dsc.jar檔案位於資料夾 `[AEM forms install directory]\deploy` 中。
@@ -749,7 +749,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 1. 展開「活動服務」。 如果服務名正在運行，則服務名旁邊將顯示綠色箭頭。 否則，服務處於停止狀態。
 1. 如果服務處於停止狀態，請按一下右鍵服務名，然後選擇啟動服務。
 
-### 為本地應用程式建立或修改指令碼XML檔案 {#creating-or-modifying-a-script-xml-file-for-a-native-application}
+### 為本機應用程式建立或修改指令碼XML檔案 {#creating-or-modifying-a-script-xml-file-for-a-native-application}
 
 如果要將檔案定向到新的本地應用程式，則必須為該應用程式建立指令碼XML檔案。 如果您想要修改「產生PDF」服務與已受支援的原生應用程式互動的方式，您必須修改該應用程式的指令碼。
 
@@ -875,7 +875,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 **更新「產生PDF」服務設定檔**
 
-1. 選擇「 **首頁** 」>「 **服務** 」>「 **Adobe PDF Generator** 」>「配置檔案」，然後選 ********&#x200B;擇「導出配置檔案」來配置配置配置。
+1. 選擇「 **首頁** 」>「 **服務** 」>「 **Adobe PDF Generator** 」>「配置檔案」，然後選 ********&#x200B;擇「導出配置檔案」來配置配置。
 1. 視需 `filetype-settings` 要修改native2pdfconfig.xml檔案中的元素。
 1. 選擇「 **首頁** 」>「 **服務** 」>「 **Adobe PDF Generator** 」>「配置檔案導入」，然&#x200B;********&#x200B;後選擇「導入配置配置」。 設定資料會匯入「產生PDF」服務，取代先前的設定。
 
@@ -883,7 +883,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 >
 >應用程式的名稱會指定為元素屬 `GenericApp` 性的值 `name` 。 此值必須完全符合您為該應用程式開發的指令碼中指定的對應名稱。 同樣地，元 `GenericApp` 素的屬 `displayName` 性應完全符合對應指令碼的視窗 `expectedWindow` 標題。 在解析出現在或屬性中的任何規則運算式後，會評估此 `displayName` 等等 `caption` 效性。
 
-在此示例中，Generate PDF服務提供的預設配置資料已修改，以指定應使用記事本（而非Microsoft Word）來處理檔案副檔名為。txt的檔案。 在進行此修改之前，Microsoft Word已指定為應處理此類檔案的原生應用程式。
+在此示例中，Generate PDF服務提供的預設配置資料已修改，以指定應使用記事本（而非Microsoft Word）來處理檔案名副檔名為。txt的檔案。 在進行此修改之前，Microsoft Word已指定為應處理此類檔案的原生應用程式。
 
 **將文字檔案導向記事本的修改(native2pdfconfig.xml)**
 
