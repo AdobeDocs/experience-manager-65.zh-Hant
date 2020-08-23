@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1395'
+ht-degree: 10%
 
 ---
 
@@ -33,8 +36,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 請參閱下列其他主題：
 
-* [管理專案
-   ](/help/sites-authoring/touch-ui-managing-projects.md)
+* [管理專案](/help/sites-authoring/touch-ui-managing-projects.md)
 * [使用任務](/help/sites-authoring/task-content.md)
 * [使用專案工作流程](/help/sites-authoring/projects-with-workflows.md)
 * [創意專案與PIM整合](/help/sites-authoring/managing-product-information.md)
@@ -92,7 +94,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 ![chlimage_1-73](assets/chlimage_1-73.png)
 
-這些圖示會指出所呈現的體驗類型：網站、行動應用程式或出版物。 按一下+號或按一下「新增體驗」 **並選取體驗類型** ，以新增體驗。
+這些圖示會指出所呈現的體驗類型：網站、行動應用程式或出版物。按一下+號或按一下「新增體驗」 **並選取體驗類型** ，以新增體驗。
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
@@ -182,7 +184,7 @@ AEM隨附3種不同的範本：
 
 * 簡單專案——任何不符合其他類別的專案的參考範例（全部皆可）。 它包含三個基本角色（擁有者、編輯和觀察員）和四個工作流程（專案核准、請求啟動、請求著陸頁面和請求電子郵件）。
 * 媒體專案——媒體相關活動的參考範例專案。 它包含數個媒體相關專案角色（攝影師、編輯、文案撰稿人、設計人員、擁有者和觀察者）。 此外，它還包含兩個與媒體內容相關的工作流程- 「請求文案」（用於請求和檢閱文字）和「產品像片拍攝」（用於管理與產品相關的像片）
-* [產品像片拍攝專案](/help/sites-authoring/managing-product-information.md) -管理電子商務相關產品攝影的參考範例。 其中包括攝影師、編輯、像片製作人員、擁有者、創意總監、社交媒體行銷人員、行銷經理、審閱者和觀察者的角色。
+* [產品像片拍攝專案](/help/sites-authoring/managing-product-information.md) -管理電子商務相關產品攝影的參考範例。 其中包括攝影師、編輯、像片製作人員、擁有者、創意總監、社交媒體行銷人員、行銷經理、審閱者和觀察者等角色。
 * [翻譯項目](/help/sites-administering/translation.md) -用於管理翻譯相關活動的參考示例。 它包含三個基本角色（擁有者、編輯和觀察者）。 它包含兩個可在「工作流」使用者介面中存取的工作流程。
 
 根據您選取的範本，您有不同的選項可供使用，尤其是使用者角色和工作流程。
@@ -242,4 +244,4 @@ AEM隨附3種不同的範本：
 
 >[!NOTE]
 >
->當您建立專案並將使用者新增至各種角色時，系統會自動建立與專案相關的群組，以管理相關的權限。 例如，名為Myproject的專案會有三個群組 **Myproject Owners**、 **Myproject Editors**、 **Myproject Obsertors**。 不過，如果刪除專案，這些群組不會自動刪除。 管理員需要手動刪除「工具 **>安全** 性 **>** 群組 ****」。
+>當您建立專案並將使用者新增至各種角色時，系統會自動建立與專案相關的群組，以管理相關的權限。例如，名為Myproject的專案會有三個群組 **Myproject Owners**、 **Myproject Editors**、 **Myproject Obsertors**。不過，如果刪除專案，這些群組不會自動刪除。管理員需要手動刪除「工具 **>安全** 性 **>** 群組 ****」。
