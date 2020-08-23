@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2014e4f28c63f6268606d46b5019d654bbe4aa08
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3092'
 ht-degree: 7%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 7%
 
 1. 在AEM中，開啟您要新增動態媒體元件的頁面。
 1. 在頁面左側的面板（您可能需要切換側面板的顯示）中，按一下「元件」 **[!UICONTROL 圖示]** 。
-1. 在「元 **[!UICONTROL 件]** 」標題下方的下拉式清單中，選取「動態 **[!UICONTROL 媒體」。]**
+1. 在「元 **[!UICONTROL 件]** 」標題下方的下拉式清單中，選取「動 **[!UICONTROL 態媒體」。]**
 
    如果沒有可用的動態媒體元件清單，您可能需要啟用您要使用的動態媒體元件。 請參閱 [啟用動態媒體元件](#enabling-dynamic-media-components)。
 
@@ -196,9 +196,9 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 >
 >依預設，動態媒體視訊元件是可調式的。 如果要使其成為固定大小，請在元件中使用「高級」( **[!UICONTROL Advanced]** )頁籤中的「寬度」( **[!UICONTROL Width]** )和「高度」( **[!UICONTROL Height]** )來設定它。
 
-* **[!UICONTROL查看器預設集**-從下拉菜單中選擇現有視頻查看器預設集。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 請參閱管理檢視器預設集。
+* **[!UICONTROL 檢視器預設]**-從下拉式選單中選取現有的視訊檢視器預設。 如果您所尋找的檢視器預設集不可見，您可能需要將它顯示。 請參閱管理檢視器預設集。
 
-* **[!UICONTROL檢視器修飾元**-檢視器修飾元採用名稱=值配對與&amp;分隔字元的形式，讓您變更檢視器，如Adobe檢視器參考指南所述。 檢視器修飾詞的範例是 `posterimage=img.jpg&caption=text.vtt,1`
+* **[!UICONTROL 檢視器修飾元]**-檢視器修飾元採用名稱=值配對與&amp;分隔字元的形式，讓您變更檢視器，如Adobe檢視器參考指南所述。 檢視器修飾詞的範例是 `posterimage=img.jpg&caption=text.vtt,1`
 
    例如，使用檢視器修飾元，您可以執行下列動作：
 
@@ -207,7 +207,7 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
    You can edit the following Advanced Settings by clicking **[!UICONTROL Edit]** in the component.
 
-* **[!UICONCONTROL標題**-更改視頻的標題。
+* **[!UICONTROL 標題]**-變更影片標題。
 
 * **[!UICONTROL 寬度]**-如果希望影像為固定大小，請以像素輸入值。 將此值留空可讓資產具有適應性。
 
@@ -249,7 +249,7 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
 ### 互動式媒體元件 {#interactive-media-component}
 
-互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用 **[!UICONTROL 互動式媒體元件]** 。
+互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用互動式 **[!UICONTROL 媒體元件]** 。
 
 互動式媒體元件是智慧型的。 視您新增影像或視訊而定，您有各種選項。 此外，檢視器具有互動功能——螢幕大小會根據螢幕大小自動變更。 所有檢視器都是HTML5檢視器。
 
@@ -320,7 +320,7 @@ You can edit the following **[!UICONTROL General]** settings by tapping **[!UICO
 
 使用 **[!UICONTROL Video 360 Media]** （視訊360媒體）元件，在您的網頁上演算等方形視訊，以提供身歷其境的房間、房產、位置、風景或醫療程式檢視體驗。
 
-在平面顯示器上播放時，用戶可以控制視角； 在行動裝置上播放時，通常會運用其內建的陀螺控制項。
+在平面顯示器上播放時，用戶可以控制視角；在行動裝置上播放時，通常會運用其內建的陀螺控制項。
 
 檢視器包含傳送360個視訊資產的原生支援。 依預設，檢視或播放不需要其他設定。 您可使用標準的視訊副檔名（例如。mp4、.mkv和。mov）來傳送360視訊。 最常見的轉碼器是H.264。
 
