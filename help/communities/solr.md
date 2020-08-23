@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1491'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 Apache Solr [(](https://lucene.apache.org/solr/) Apache Solr [)安裝可以通過使用不同的](../../help/sites-deploying/data-store-config.md) 集合在節點儲存 [(Oak)和](working-with-srp.md) 公共儲存(SRP)之間共用。
 
-如果Oak和SRP系列都被大量使用，則可能會因效能原因安裝第二個Solr。
+如果Oak和SRP系列都被大量使用，則可基於效能原因安裝第二個Solr。
 
 對於生產環境， [SolrCloud模式比獨立模式](#solrcloud-mode) （單一本機Solr設定）提供了更佳的效能。
 
@@ -80,8 +80,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 
 #### 2.建立系列 {#create-a-collection}
 
-參考：[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create
-](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
+參考：[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
 使用狀況:
 ./bin/solr create \
