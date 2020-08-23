@@ -11,9 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 �
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>傳回將HTML事件轉換為XFA事件的地圖。 <br /> {<br /> blur: XFA_EXIT_EVENT,<br /><br /> }此示例顯示模糊是HTML事件，XFA_EXIT_EVENT是相應的XFA事件。 </td>
+   <td>傳回將HTML事件轉換為XFA事件的地圖。 <br /> {<br /> blur:XFA_EXIT_EVENT,<br /><br /> }此示例顯示模糊是HTML事件，XFA_EXIT_EVENT是相應的XFA事件。 </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -92,15 +92,19 @@ window.formBridge.registerConfig("widgetConfig",
 
 介面工具集設定是以JSON物件（索引鍵值配對的集合）提供，其中索引鍵識別欄位，而值代表要搭配這些欄位使用的介面工具集。 範例配置如下所示：
 
+```
 *{*
 
-*&quot;identifier1&quot; : &quot;customwidgetname&quot;,&quot;identifier2&quot; : &quot;customwidgetname2&quot;,...
+*“identifier1” : “customwidgetname”,
+“identifier2” : “customwidgetname2”,
+..
 }*
+```
 
 其中，「identifier」是jQuery CSS選擇器，代表特定欄位、特定類型的欄位集或所有欄位。 以下列出不同情況下識別碼的值：
 
 | 識別碼類型 | 識別碼 | 說明 |
 |---|---|---|
 | 具有名稱欄位名的特定欄位 | 識別碼：&quot;div.fieldname&quot; | 所有名稱為「fieldname」的欄位都會使用介面工具集呈現。 |
-| 所有類型為「type」的欄位（其中類型為NumericField、DateField等）。: | 識別碼： &quot;div.type&quot; | 對於Timefield和DateTimeField，類型為textfield，因為不支援這些欄位。 |
-| 所有欄位 | 識別碼： &quot;div.field&quot; |  |
+| 所有類型為「type」的欄位（其中類型為NumericField、DateField等）。: | 識別碼：&quot;div.type&quot; | 對於Timefield和DateTimeField，類型為textfield，因為不支援這些欄位。 |
+| 所有欄位 | 識別碼：&quot;div.field&quot; |  |
