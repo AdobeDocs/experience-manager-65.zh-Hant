@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '726'
 ht-degree: 19%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 19%
 
 在建立轉盤集、新增熱點和影像地圖、建立互動式視訊和影像時，您可以存取選擇器。
 
-例如，在此轉盤橫幅中，如果您要將熱點或影像地圖連結至Quickview頁面，請使用產品選擇器； 如果您要將熱點或影像地圖連結至超連結，請使用網站選擇器； 建立新投影片時，請使用「資產選擇器」。
+例如，在此轉盤橫幅中，如果您要將熱點或影像地圖連結至Quickview頁面，請使用產品選擇器；如果您要將熱點或影像地圖連結至超連結，請使用網站選擇器；建立新投影片時，請使用「資產選擇器」。
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
@@ -36,7 +36,7 @@ ht-degree: 19%
 
 1. 導覽至「轉盤集」、「互動式影像」或「互動式視訊」，然後點選「動作 **** 」標籤 (僅在您已定義熱點或影像地圖時可用)。
 
-   The Product selector is in the **[!UICONTROL Action Type** area.
+   The Product selector is in the **[!UICONTROL Action Type]** area.
 
    ![chlimage_1-521](assets/chlimage_1-521.png)
 
@@ -44,11 +44,11 @@ ht-degree: 19%
 
    ![chlimage_1-522](assets/chlimage_1-522.png)
 
-   您也可以點選「篩選」並輸入關鍵字，或選取標籤，或 **[!UICONTROL 同時選取]** 「篩選」，依關鍵字或標籤進行篩選。
+   您也可以點選「篩選」並輸入關鍵字，或選取標籤，或 **[!UICONTROL 同時選擇]** 「篩選」，依關鍵字或標籤進行篩選。
 
    ![chlimage_1-523](assets/chlimage_1-523.png)
 
-   您可以點選「瀏覽」並導覽至其他資料夾，以變更AEM **[!UICONTROL 瀏覽]** 產品資料的位置。
+   您可以點選「瀏覽」並導覽至其他檔案夾，以變更AEM **[!UICONTROL 瀏覽]** 產品資料的位置。
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
