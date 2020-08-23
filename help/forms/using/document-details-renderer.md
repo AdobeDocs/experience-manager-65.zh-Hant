@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Flex表格由SwfTaskForm轉譯，參考線則由HtmlTaskForm檢視轉譯。
 
 通訊是使用 `swfObject.postMessage` / `window.flexMessageHandler`。
 
-此協定由定義 `WsNextAdapter.swf`。 在新增 `flexMessageHandlers`視窗物件之前，會先從先前開啟的SWF表格移除現有的視窗物件。 邏輯還考慮在任務詳細資訊視圖中的表單頁籤和歷史記錄頁籤之間切換。 `WsNextAdapter.swf` 用於執行各種表單動作，例如儲存或送出。
+此協定由定義 `WsNextAdapter.swf`。 在新增 `flexMessageHandlers`視窗物件之前，會先移除先前開啟之SWF表格的現有視窗物件。 邏輯還考慮在任務詳細資訊視圖中的表單頁籤和歷史記錄頁籤之間切換。 `WsNextAdapter.swf` 用於執行各種表單動作，例如儲存或送出。
 
 >[!NOTE]
 >
@@ -92,7 +92,7 @@ AEM Forms工作區監聽 `window.global.postMessage([Message],[Payload])`
 
 **AEM Forms工作區與協力廠商應用程式通訊**
 
-如果AEM Forms工作區的直接動作按鈕可見，則會呼叫 `window.[External-App-Name].getMessage([Action])`，其中[ `Action]` 會從中讀取 `routeActionMap`。 協力廠商應用程式必須監聽此介面，然後透過 `postMessage ()` API通知AEM Forms工作區。
+如果AEM Forms工作區的直接動作按鈕可見，則會呼叫 `window.[External-App-Name].getMessage([Action])`，從 `[Action]` 其中讀取 `routeActionMap`。 協力廠商應用程式必須監聽此介面，然後透過 `postMessage ()` API通知AEM Forms工作區。
 
 例如，Flex應用程式可定義以 `ExternalInterface.addCallback('getMessage', listener)` 支援此通訊。 如果第三方應用程式希望通過其自己的按鈕處理表單提交，則您應指定 `hideDirectActions = true() in the runtimeMap` 並可跳過此偵聽程式。 因此，此構造是可選的。
 
