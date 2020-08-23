@@ -3,9 +3,9 @@ title: 監控部署的最 [!DNL Adobe Experience Manager Assets] 佳實務。
 description: 部署後監控部署環境與效 [!DNL Adobe Experience Manager] 能的最佳實務。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
@@ -28,17 +28,17 @@ ht-degree: 1%
 
 您應在開發的效能測試階段或在高負載情況下執行即時監控，以瞭解您環境的效能特性。 通常，應使用一套工具來執行即時監控。 以下是一些建議：
 
-* [可視虛擬機](https://visualvm.java.net/): Visual VM可讓您查看詳細的Java VM資訊，包括CPU使用量、Java記憶體使用量。 此外，它還可讓您取樣並評估在部署上執行的程式碼。
-* [頂部](https://man7.org/linux/man-pages/man1/top.1.html): 頂端是Linux命令，可開啟控制面板，顯示使用狀況統計資料，包括CPU、記憶體和IO使用狀況。 它提供執行個體現狀的高階概述。
-* [頂端](https://hisham.hm/htop/): Htop是互動式流程檢視器。 除了Top提供的功能外，它還提供詳細的CPU和記憶體使用情況。 Htop可以安裝在大部分的Linux系統上，使用 `yum install htop` 或 `apt-get install htop`。
+* [Visual VM](https://visualvm.java.net/):Visual VM可讓您查看詳細的Java VM資訊，包括CPU使用量、Java記憶體使用量。 此外，它還可讓您取樣並評估在部署上執行的程式碼。
+* [頂部](https://man7.org/linux/man-pages/man1/top.1.html):頂端是Linux命令，可開啟控制面板，顯示使用狀況統計資料，包括CPU、記憶體和IO使用狀況。 它提供執行個體現狀的高階概述。
+* [頂端](https://hisham.hm/htop/):Htop是互動式流程檢視器。 除了Top提供的功能外，它還提供詳細的CPU和記憶體使用情況。 Htop可以安裝在大部分的Linux系統上，使用 `yum install htop` 或 `apt-get install htop`。
 
-* [Iotop](https://guichaz.free.fr/iotop/): Iotop是磁碟IO使用情況的詳細儀表板。 它顯示了描述使用磁碟IO的進程及其使用量的條和米。 Iotop可以安裝在大部分的Linux系統上，使用 `yum install iotop` 或 `apt-get install iotop`。
+* [Iotop](https://guichaz.free.fr/iotop/):Iotop是磁碟IO使用情況的詳細儀表板。 它顯示了描述使用磁碟IO的進程及其使用量的條和米。 Iotop可以安裝在大部分的Linux系統上，使用 `yum install iotop` 或 `apt-get install iotop`。
 
-* [Iftop](https://www.ex-parrot.com/pdw/iftop/): Iftop顯示有關乙太網／網路使用的詳細資訊。 Iftop會根據使用乙太網的實體的通信通道統計資訊以及它們使用的頻寬量。 Iftop可使用或安裝在大多數Linux `yum install iftop` 系統 `apt-get install iftop`上。
+* [Iftop](https://www.ex-parrot.com/pdw/iftop/):Iftop顯示有關乙太網／網路使用的詳細資訊。 Iftop會根據使用乙太網的實體的通信通道統計資訊以及它們使用的頻寬量。 Iftop可使用或安裝在大多數Linux系 `yum install iftop` 統上 `apt-get install iftop`。
 
-* Java Flight Recorder(JFR): Oracle提供的一種商業工具，可在非生產環境中自由使用。 如需詳細資訊，請 [參閱如何使用Java Flight Recorder來診斷CQ執行階段問題](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
-* [!DNL Experience Manager] `error.log` 檔案： 您可以調查該 [!DNL Experience Manager] 檔案，以 `error.log` 瞭解系統中記錄的錯誤的詳細資訊。 使用命令 `tail -F quickstart/logs/error.log` 識別要調查的錯誤。
-* [工作流程主控台](/help/sites-administering/workflows.md): 運用工作流程主控台來監控落後或停滯的工作流程。
+* Java Flight Recorder(JFR):Oracle提供的一種商業工具，可在非生產環境中自由使用。 如需詳細資訊，請 [參閱如何使用Java Flight Recorder來診斷CQ執行階段問題](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
+* [!DNL Experience Manager] `error.log` 檔案：您可以調查該 [!DNL Experience Manager] 檔案，以 `error.log` 瞭解系統中記錄的錯誤的詳細資訊。 使用命令 `tail -F quickstart/logs/error.log` 識別要調查的錯誤。
+* [工作流程主控台](/help/sites-administering/workflows.md):運用工作流程主控台來監控落後或停滯的工作流程。
 
 通常，您會搭配使用這些工具，以全面瞭解部署的效 [!DNL Experience Manager] 能。
 
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 ![chlimage_1-33](assets/chlimage_1-143.png)
 
-*圖： 使用Visual VM工具進行即時監控。*
+*圖：使用Visual VM工具進行即時監控。*
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
@@ -83,7 +83,7 @@ ht-degree: 1%
 
 **JVM監控**
 
-與任何基於Java的應用程式堆棧一樣， [!DNL Experience Manager] 它依賴於通過基礎Java虛擬機提供給它的資源。 您可以透過JVM公開的平台MXBeans來監視其中許多資源的狀態。 有關MXBeans的詳細資訊，請參 [閱使用平台MBean伺服器和平台MXBeans](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)。
+與任何基於Java的應用程式堆棧一樣， [!DNL Experience Manager] 它依賴於通過基礎Java虛擬機提供給它的資源。 您可以透過JVM公開的平台MXBeans，來監視其中許多資源的狀態。 有關MXBeans的詳細資訊，請參 [閱使用平台MBean伺服器和平台MXBeans](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)。
 
 以下是一些可監視JVM的基線參數：
 
@@ -91,11 +91,11 @@ ht-degree: 1%
 
 * `MBean: lava.lang:type=Memory`
 * URL: `/system/console/jmx/java.lang:type=Memory`
-* 例項： 所有伺服器
-* 警報閾值： 當堆或非堆記憶體利用率超過相應最大記憶體的75%時。
-* 警報定義： 系統記憶體不足，或代碼中出現記憶體洩漏。 分析線程轉儲以獲得定義。
+* 例項：所有伺服器
+* 警報閾值：當堆或非堆記憶體利用率超過相應最大記憶體的75%時。
+* 警報定義：系統記憶體不足，或代碼中出現記憶體洩漏。 分析線程轉儲以獲得定義。
 
->[!Note]
+>[!NOTE]
 >
 >此Bean提供的資訊以位元組表示。
 
@@ -103,9 +103,9 @@ ht-degree: 1%
 
 * MBean: `java.lang:type=Threading`
 * URL: `/system/console/jmx/java.lang:type=Threading`
-* 例項： 所有伺服器
-* 警報閾值： 當線程數大於基線的150%時。
-* 警報定義： 要麼存在活動的失控進程，要麼低效操作消耗大量資源。 分析線程轉儲以獲得定義。
+* 例項：所有伺服器
+* 警報閾值：當線程數大於基線的150%時。
+* 警報定義：要麼存在活動的失控進程，要麼低效操作消耗大量資源。 分析線程轉儲以獲得定義。
 
 **顯示器[!DNL Experience Manager]**
 
@@ -117,12 +117,12 @@ ht-degree: 1%
 
 * MBean: `com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>”`
 * URL: `/system/console/jmx/com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>"`
-* 例項： 一個作者和所有發佈實例（用於刷新代理）
-* 警報閾值： 當值為或 `QueueBlocked` 值 `true` 大於基 `QueueNumEntries` 線的150%時。
+* 例項：一個作者和所有發佈實例（用於刷新代理）
+* 警報閾值：當值為或 `QueueBlocked` 值 `true` 大於基 `QueueNumEntries` 線的150%時。
 
-* 警報定義： 系統中存在阻止的隊列，表明複製目標已關閉或無法訪問。 通常，網路或基礎架構問題會導致過多條目被排入隊列，從而對系統效能產生不利影響。
+* 警報定義：系統中存在阻止的隊列，表明複製目標已關閉或無法訪問。 通常，網路或基礎架構問題會導致過多條目被排入隊列，從而對系統效能產生不利影響。
 
->[!Note]
+>[!NOTE]
 >
 >對於MBean和URL參數，請 `<AGENT_NAME>` 以要監視的複製代理的名稱替換。
 
@@ -130,9 +130,9 @@ ht-degree: 1%
 
 * MBean: `org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
 * URL: */system/console/jmx/org.apache.jackrabbit.oak:id=7,name=&quot;OakRepository Statistics&quot;,type*=&quot;RepositoryStats&quot;
-* 例項： 所有伺服器
-* 警報閾值： 當開啟的工作階段超過基準50%時。
-* 警報定義： 可透過程式碼來開啟工作階段，但絕不關閉。 這可能會隨著時間推移而緩慢發生，最終導致系統記憶體洩漏。 雖然會話數在系統上應會有所波動，但不應持續增加。
+* 例項：所有伺服器
+* 警報閾值：當開啟的工作階段超過基準50%時。
+* 警報定義：可透過程式碼來開啟工作階段，但絕不關閉。 這可能會隨著時間推移而緩慢發生，最終導致系統記憶體洩漏。 雖然會話數在系統上應會有所波動，但不應持續增加。
 
 健康狀態檢查
 
@@ -143,49 +143,49 @@ Health checks that are available in the [operations dashboard](/help/sites-admin
 * 系統檢查
    * MBean: `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
-   * 例項： 一個作者，所有發佈伺服器
-   * 警報閾值： 當狀態不正常時
-   * 警報定義： 其中一個量度的狀態為「警告」或「嚴重」。 檢查日誌屬性，瞭解有關問題原因的詳細資訊。
+   * 例項：一個作者，所有發佈伺服器
+   * 警報閾值：當狀態不正常時
+   * 警報定義：其中一個量度的狀態為「警告」或「嚴重」。 請查看log屬性，以取得問題原因的詳細資訊。
 
 * 複製隊列
 
    * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
-   * 例項： 一個作者，所有發佈伺服器
-   * 警報閾值： 當狀態不正常時
-   * 警報定義： 其中一個量度的狀態為「警告」或「嚴重」。 檢查日誌屬性，以瞭解有關導致此問題的隊列的詳細資訊。
+   * 例項：一個作者，所有發佈伺服器
+   * 警報閾值：當狀態不正常時
+   * 警報定義：其中一個量度的狀態為「警告」或「嚴重」。 檢查日誌屬性，以瞭解有關導致此問題的隊列的詳細資訊。
 
 * 回應效能
 
    * MBean: `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
-   * 例項： 所有伺服器
-   * 警報持續時間： 當狀態不正常時
-   * 警報定義： 其中一個度量的狀態為「警告」或「嚴重」。 檢查日誌屬性，以瞭解有關導致此問題的隊列的詳細資訊。
+   * 例項：所有伺服器
+   * 警報持續時間：當狀態不正常時
+   * 警報定義：其中一個度量的狀態為「警告」或「嚴重」。 檢查日誌屬性，以瞭解有關導致此問題的隊列的詳細資訊。
 
 * 查詢效能
 
    * MBean: `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
-   * 例項： 一個作者，所有發佈伺服器
-   * 警報閾值： 當狀態不正常時
-   * 警報定義： 一個或多個查詢在系統中運行緩慢。 有關導致此問題的查詢的詳細資訊，請查看日誌屬性。
+   * 例項：一個作者，所有發佈伺服器
+   * 警報閾值：當狀態不正常時
+   * 警報定義：一個或多個查詢在系統中運行緩慢。 有關導致此問題的查詢的詳細資訊，請查看日誌屬性。
 
 * 作用中組合
 
    * MBean: `org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
-   * 例項： 所有伺服器
-   * 警報閾值： 當狀態不正常時
-   * 警報定義： 系統上存在非活動或未解析的OSGi捆綁包。 請查看log屬性，以取得導致此問題的叢集的詳細資訊。
+   * 例項：所有伺服器
+   * 警報閾值：當狀態不正常時
+   * 警報定義：系統上存在非活動或未解析的OSGi捆綁包。 請查看log屬性，以取得導致此問題的叢集的詳細資訊。
 
 * 日誌錯誤
 
    * MBean: `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
-   * 例項： 所有伺服器
-   * 警報閾值： 當狀態不正常時
-   * 警報定義： 日誌檔案中出現錯誤。 檢查日誌屬性，瞭解有關問題原因的詳細資訊。
+   * 例項：所有伺服器
+   * 警報閾值：當狀態不正常時
+   * 警報定義：日誌檔案中出現錯誤。 請查看log屬性，以取得問題原因的詳細資訊。
 
 ## 常見問題和解決方案  {#common-issues-and-resolutions}
 
