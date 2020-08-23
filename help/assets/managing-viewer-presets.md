@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '4360'
-ht-degree: 13%
+source-wordcount: '4353'
+ht-degree: 14%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 13%
 
 ## Managing Viewer Presets {#managing-viewer-presets-1}
 
-You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM by tapping **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
+You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM by tapping **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets > Viewer Presets.]**
 
 ![6_5_tools-assets-viewerpresets](assets/6_5_tools-assets-viewerpresets.png)
 
@@ -89,7 +89,7 @@ You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM
   </tr>
   <tr>
    <td><strong>彈出式縮放</strong></td>
-   <td><p>在原始影像旁顯示縮放區域的第二個影像。 沒有可使用的控制項——使用者將選取範圍移至要檢視的區域。</p> <p>在決定此檢視器的完整頻寬使用時，請考慮主影像和彈出影像都會在檢視器中提供。 主影像大小（「舞台寬度」和「高度」）和「縮放比例」會決定彈出影像大小。 若要避免彈出檔案大小變得過大，請平衡下列兩個值： 如果您的主影像大小較大，請降低「縮放比例」值。 （「彈出寬度」和「彈出高度」會決定彈出視窗的大小，但不決定提供給檢視器的彈出影像的大小。）</p> <p>例如，如果您的主影像大小是350 x 350像素，而「縮放系數」是3，則產生的彈出影像是1050 x 1050像素。 如果您的主影像大小是300 x 300像素，而「縮放系數」是4，則彈出影像是1200 x 1200像素。 根據JPEG品質設定（建議的設定介於80-90之間），您可以大幅降低檔案大小。 建議的縮放系數為2.5到4，視主影像大小而定。</p> </td>
+   <td><p>在原始影像旁顯示縮放區域的第二個影像。 沒有可使用的控制項——使用者將選取範圍移至要檢視的區域。</p> <p>在決定此檢視器的完整頻寬使用時，請考慮主影像和彈出影像都會在檢視器中提供。 主影像大小（「舞台寬度」和「高度」）和「縮放比例」會決定彈出影像大小。 若要避免彈出檔案大小變得過大，請平衡下列兩個值：如果您的主影像大小較大，請降低「縮放比例」值。 （「彈出寬度」和「彈出高度」會決定彈出視窗的大小，但不決定提供給檢視器的彈出影像的大小。）</p> <p>例如，如果您的主影像大小是350 x 350像素，而「縮放系數」是3，則產生的彈出影像是1050 x 1050像素。 如果您的主影像大小是300 x 300像素，而「縮放系數」是4，則彈出影像是1200 x 1200像素。 根據JPEG品質設定（建議的設定介於80-90之間），您可以大幅降低檔案大小。 建議的縮放系數為2.5到4，視主影像大小而定。</p> </td>
   </tr>
   <tr>
    <td><strong>內嵌縮放</strong></td>
@@ -117,7 +117,7 @@ You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM
     <ul>
      <li>寬高比為2:1。</li>
      <li>使用關鍵字 <code>equirectangular</code>、 <code>spherical</code> 和 <code>panorama</code>或和 <code>spherical </code>標籤 <code>panoramic</code>。 請參 <a href="/help/sites-authoring/tags.md">閱使用標籤</a>。</li>
-    </ul> <p>外觀比例和關鍵字准則都適用於資產詳細資料頁面和「全景媒體」WCM元件的全景資產。</p> <p><strong>重要</strong>: 此檢視器僅適用於動態媒體- Scene7模式。</p> </td>
+    </ul> <p>外觀比例和關鍵字准則都適用於資產詳細資料頁面和「全景媒體」WCM元件的全景資產。</p> <p><strong>重要</strong>:此檢視器僅適用於動態媒體- Scene7模式。</p> </td>
   </tr>
   <tr>
    <td><strong>智慧型裁切視訊</strong><br /> </td>
@@ -129,7 +129,7 @@ You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM
   </tr>
   <tr>
    <td><strong>360視訊</strong></td>
-   <td><p>使用360/VR視訊檢視器來轉換等長形視訊，以提供身歷其境的房間、房產、位置、風景或醫療程式觀賞體驗。</p> <p>在平面顯示器上播放時，用戶可以控制視角； 在行動裝置上播放時，通常會運用其內建的陀螺控制項。</p> <p>檢視器包含傳送360個視訊資產的原生支援。 依預設，檢視或播放不需要其他設定。 您可使用標準的視訊副檔名（例如。mp4、.mkv和。mov）來傳送360視訊。 最常見的轉碼器是H.264。</p> <p><strong>重要</strong>: 此檢視器僅適用於動態媒體- Scene7模式。</p> </td>
+   <td><p>使用360/VR視訊檢視器來轉換等長形視訊，以提供身歷其境的房間、房產、位置、風景或醫療程式觀賞體驗。</p> <p>在平面顯示器上播放時，用戶可以控制視角；在行動裝置上播放時，通常會運用其內建的陀螺控制項。</p> <p>檢視器包含傳送360個視訊資產的原生支援。 依預設，檢視或播放不需要其他設定。 您可使用標準的視訊副檔名（例如。mp4、.mkv和。mov）來傳送360視訊。 最常見的轉碼器是H.264。</p> <p><strong>重要</strong>:此檢視器僅適用於動態媒體- Scene7模式。</p> </td>
   </tr>
   <tr>
    <td><strong>影片</strong></td>
@@ -156,7 +156,7 @@ You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM
 
 另請參閱 [即時示範](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)。
 
-如需檢視器支援的網頁瀏覽器和作業系統版本的詳細資訊，請參閱檢視器版本注意事項。
+如需檢視器支援網頁瀏覽器和作業系統版本的詳細資訊，請參閱檢視器版本注意事項。
 
 請參閱檢視器參考指南目錄中的「檢視器版本 [注意事項」](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
 
@@ -291,7 +291,7 @@ You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM
    <td><code>html5_videoviewer.css</code></td>
   </tr>
   <tr>
-   <td><p>Video360_social</p> <p>（包括基本的視訊播放控制項、視訊演算以立體視訊模式進行、手動的視點控制項已關閉，但已開啟回轉視訊控制項，且無社交媒體功能）</p> </td>
+   <td><p>Video360_social</p> <p>（包含基本的視訊播放控制項、視訊演算以立體視訊模式進行、手動的視點控制項已關閉，但已開啟回轉視訊控制項，而且沒有社交媒體功能）</p> </td>
    <td>Video_360</td>
    <td><code>html5_video360viewersocial.css</code></td>
   </tr>
@@ -418,7 +418,7 @@ AEM會在從「詳細資料檢視>檢視器」檢視資產時，顯示各種 **[
 
 **若要建立檢視器預設集**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets**.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets]**.
 
    ![6_5檢視器預設集](assets/6_5_viewerpresets.png)
 
@@ -520,7 +520,7 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 檢視器根據可用位置數量，在面板中顯示多少縮圖時，會使用下列邏輯：
 
 * 子區段數=捨入至下一個子區段（縮圖數／縮圖面板中可見的位置數，視瀏覽器視窗大小而定）。
-使用上表中的範例，9個縮圖/ 4個插槽= 2.25; 檢視器邏輯最多四捨五入3個子區段。
+使用上表中的範例，9個縮圖/ 4個插槽= 2.25;檢視器邏輯最多四捨五入3個子區段。
 
 * 縮圖數=最多捨入至下一個縮圖（縮圖數／視訊子區段數）。
 使用上表中的範例，9個縮圖/3個視訊子區段= 3個縮圖。
@@ -542,14 +542,14 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要啟用或停用檢視器預設集**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets.]**
 1. 在「檢視器預設」頁面的「狀態 **[!UICONTROL 」欄標題]** ，點選切換以啟用或停用檢視器預設。
 
-   啟動的檢視器預設集會在右側、藍色方塊內切換； 停用的檢視器預設集會讓切換畫面出現在左側的淺灰色方塊中。
+   啟動的檢視器預設集會在右側、藍色方塊內切換；停用的檢視器預設集會讓切換畫面出現在左側的淺灰色方塊中。
 
 ## 發佈檢視器預設集 {#publishing-viewer-presets}
 
-啟用（或開啟）檢視器預設集的狀態表示它可在動態媒體元件、互動媒體元件，以及您每次檢視資產時顯示。
+啟用（或開啟）檢視器預設集的狀態表示它可在動態媒體元件、互動式媒體元件，以及您每次檢視資產時顯示。
 
 不過，若要傳送* *包含檢視器預設集的資產，檢視器預設集也必須發佈。所有檢視器預設集都必須啟動*和*已發佈，才能取得資產的URL或內嵌程式碼。您必須啟動並發佈動態媒體隨附的所有現成可用的檢視器預設集。您建立和新增的自訂檢視器預設集會自動啟動，但也必須發佈。
 
@@ -559,13 +559,13 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要發佈檢視器預設集**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets.]**
 1. 選取一或多個您要發佈的檢視器預設集。
 1. 在工具列上，點選「發 **[!UICONTROL 布]** 」圖示。
 
 ## 排序檢視器預設集 {#sorting-viewer-presets}
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets.]**
 1. 按一 **[!UICONTROL 下「標題]**」、「類型」、「發佈國 **[!UICONTROL 」或「國]********** 家預設」，依該欄標題排序。例如，按一下「 **[!UICONTROL 類型]** 」，以字母或反字母順序排序檢視器預設集類型。
 
 ## 編輯檢視器預設集 {#editing-viewer-presets}
@@ -574,9 +574,9 @@ When you create or edit an Interactive Video viewer preset, you have the choice 
 
 **若要編輯檢視器預設集**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Asset > Viewer Presets.]**
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Asset]>[!UICONTROL Viewer Presets.]**
 1. 勾選檢視器預設集標題左側的方塊，以選取預設集。
-1. 在工具列上，點選「編 **[!UICONTROL 輯」。]**
+1. 在工具列上，點選「 **[!UICONTROL 編輯」。]**
 1. 在「檢 **[!UICONTROL 視器預設集編輯器]** 」頁面上，使用「外觀」和「行為」標籤上的選項，對檢視器預設集進行您想要的變更 ******** 。
 
    從「 **[!UICONTROL Appearance]** 」 (外觀) 頁籤 **[!UICONTROL ，在「Viewer Preset Editor」 (查看器預設編輯器) 頁面的左上角附近，點選「]** Desktop **[!UICONTROL 」 (案頭) 、]** Tablet **[!UICONTROL 、或「Phone]** 」 (手機) 以更改資產的演示模式。
