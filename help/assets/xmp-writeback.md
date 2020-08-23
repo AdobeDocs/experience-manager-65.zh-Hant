@@ -3,9 +3,9 @@ title: XMP回寫至轉譯
 description: 瞭解XMP回寫功能如何將資產的中繼資料變更傳播至資產的所有或特定轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '789'
 ht-degree: 4%
 
 ---
@@ -33,9 +33,9 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
 1. 要開啟配置管理器，請訪問 `https://[aem_server]:[port]/system/console/configMgr`。
 1. 開啟 **[!UICONTROL Adobe CQ DAM Rendition Maker設定]** 。
-1. 選擇**[!UICONTROL傳播XMP[!UICONTROL **選項，然後保存更改。
+1. 選擇「 **[!UICONTROL 傳播XMP]** 」選項，然後保存更改。
 
-   ![chlimage_1-135](assets/chlimage_1-346.png)
+   ![chlimage_1-133](assets/chlimage_1-346.png)
 
 ## 為特定轉譯啟用XMP回寫 {#enabling-xmp-writeback-for-specific-renditions}
 
