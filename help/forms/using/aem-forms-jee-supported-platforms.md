@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 456460d54650bcb71d8eee47fdf0e859a383b3d4
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3228'
 ht-degree: 0%
@@ -511,8 +511,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 如需其他需求，請參閱：
 
 * [JEE部署上的單一伺服器AEM表單的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
-* [JEE部署上的叢集AEM Forms的系統需求
-   ](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
+* [JEE部署上的叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
 
 ## JEE上AEM Forms的支援用戶端 {#supported-clients-for-aem-forms-on-jee}
 
@@ -538,7 +537,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 * 安裝的磁碟空間：僅適用於Workbench 1.7 GB，在單一硬碟上2.7 GB可完整安裝Workbench、Designer和範例元件400 MB（適用於臨時安裝目錄）- 200 MB（適用於使用者臨時目錄）和200 MB（適用於Windows臨時目錄）。 如果所有這些位置都駐留在單個驅動器上，則安裝期間必須有1.5 GB的可用空間。 安裝完成後，將刪除複製到臨時目錄的檔案。
 
 * 運行Workbench的記憶體：2GB的記憶體
-* 硬體需求：Intel® Pentium® 4或AMD相當等級，1 GHz處理器
+* 硬體需求：Intel® Pentium® 4或AMD等級，1 GHz處理器
 * 最低1024 X 768像素或更高的螢幕解析度（含16位元色彩或更高）
 * TCP/IPv4或TCP/IPv6網路連線至JEE伺服器上的AEM Forms
 * 您必須擁有管理權限，才能在Windows上安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
@@ -732,6 +731,6 @@ Adobe支援協力廠商在發行時發出的緊急或建議的修補程式，前
 
 在Adobe無法控制的情況下，宣稱回溯相容性的協力廠商修補程式可能會對Adobe產品或客戶環境造成負面影響。 在這種情況下，Adobe建議客戶先評估第三方的任何緊急修補程式，再將它們套用至關鍵系統。 Adobe將與第三方合作，以合理的商業努力來解決此類問題，不論是透過一般的Adobe支援計畫，還是透過協力廠商在修補程式中修正問題。 這並不保證Adobe支援的新發行協力廠商修補程式會如廠商所記錄，或與JEE上的AEM Forms一起運作。
 
-Adobe保留在任何指定時刻變更AEM Forms on JEE版本所支援之協力廠商參考平台及其支援修補程式定義的權利。
+Adobe保留在任何指定點變更AEM Forms on JEE版本所支援之協力廠商參考平台及其支援修補程式定義的權利。
 
 如需協力廠商修補程式的詳細資訊，請搜尋Adobe企業支援網站，以取得與您產品相關的知識庫文章。
