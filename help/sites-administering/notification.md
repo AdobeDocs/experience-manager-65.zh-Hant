@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1145'
+ht-degree: 1%
 
 ---
 
@@ -65,7 +68,7 @@ AEM若要能夠傳送電子郵件， **Day CQ Mail Service** 需要正確設定�
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel` 類型 `sling:OsgiConfig`
 
-1. 將屬性 `String` 添加到名為的節點] `email.from`。 請為值指定您要使用的電子郵件地址。
+1. 將屬性 `String` 添加到名為的節點 `email.from`。 請為值指定您要使用的電子郵件地址。
 
 1. 按一下「 **全部儲存**」。
 
@@ -294,7 +297,7 @@ subject=<text_1>
    * `/etc/notification/email/default/com.day.cq.collab.forum` :論壇通知
    * `/etc/workflow/notification/email/default` :工作流通知
 
-1. 將檔案調整為語言。
+1. 根據語言調整檔案。
 1. 儲存變更。
 
 >[!NOTE]
