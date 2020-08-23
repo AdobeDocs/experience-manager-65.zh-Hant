@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ba6f94435a4d4945d54614db19f7ff612a317692
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '11830'
+source-wordcount: '11828'
 ht-degree: 6%
 
 ---
@@ -161,7 +161,7 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位
 
 請參 [閱動態視訊播放](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480) 範例。
 
-另請參 [閱Adobe Scene7檢視器參考指南中的「AEM Assets的檢視器」和「Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) 」 [和「AEM資產的檢視器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 」。
+另請參 [閱Adobe Scene7檢視器參考指南中的「AEM Assets的檢視器」和「Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)[與AEM資產的檢視器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 」。
 
 ## 最佳實務：使用HTML5視訊檢視器 {#best-practice-using-the-html-video-viewer}
 
@@ -207,7 +207,7 @@ HLS是Apple自適應視訊串流的標準，可根據網路頻寬容量自動調
   <tr>
    <td>桌面</td>
    <td>Internet Explorer 11+</td>
-   <td>在Windows 8和Windows 10上——每當要求HLS時，強制使用HTTPS。 已知限制：HLS上的HTTP無法在此瀏覽器／作業系統組合<br /><br /> 「On Windows 7 —— 漸進式下載」中運作。 使用標準邏輯來選擇HTTP與HTTPS通訊協定。</td>
+   <td>在Windows 8和Windows 10上——每當要求HLS時，就強制使用HTTPS。 已知限制：HLS上的HTTP無法在此瀏覽器／作業系統組合<br /><br /> 「On Windows 7 —— 漸進式下載」中運作。 使用標準邏輯來選擇HTTP與HTTPS通訊協定。</td>
   </tr>
   <tr>
    <td>桌面</td>
@@ -688,7 +688,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. In the upper-left corner of AEM, click the AEM logo, then in the left rail, click **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas.]**
 1. 按一下 **[!UICONTROL 預設值。]** （請勿在「預設」左側的選取方塊中新增核取標籤。）
-1. On the **[!UICONTROL default]** page, check the box to the left of **[!UICONTROL video]**, then click **Edit.]**
+1. On the **[!UICONTROL default]** page, check the box to the left of **[!UICONTROL video]**, then click **[!UICONTROL Edit.]**
 1. 在「元資料結構編輯器」頁上，按一下「高 **[!UICONTROL 級]** 」頁籤。
 1. Under the YouTube Publishing heading, click **[!UICONTROL YouTube Category.]**
 1. 在頁面的右側，在「設定」標 **[!UICONTROL 簽下]** ，執行下列動作：
@@ -722,7 +722,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * （可選）在頁面右側的「設定」標籤下，在「欄位標籤」文字欄位中輸入 `YouTube Publishing`。
    * Click the **[!UICONTROL Build Form]** tab, then drag the component labeled **[!UICONTROL Multi Value Text]** and drop it below the **[!UICONTROL YouTube Publishing]** heading that you just created.
 
-   * Click **[!UICONTROL Field Label** to select the component.
+   * Click **[!UICONTROL Field Label]** to select the component.
    * 在頁面的右側，在「設定」標籤下，將您先前複製的YouTube發佈值（欄位標籤值和對應至屬性值）貼到表單上的各自欄位。 將「選擇」值貼入「預設值」欄位。
 
 1. 執行下列動作，將複製的YouTube隱私權值新增至描述檔：
@@ -1113,7 +1113,7 @@ Dynamic Media可將標題檔案轉換為JSON（JavaScript物件註解）格式�
 
       請注意 `,1` 標題路徑結尾處的。 緊接在路徑中的。vtt副檔名後，您可以選擇分別設定為或，以啟用（開啟）或停用（關閉）視訊播放器列上的隱藏字幕 `,1` 按 `,0`鈕。
 
-   * 如需內嵌的視訊檢視器體驗，請點選「 **[!UICONTROL 內嵌代碼」。]** 在「內嵌代碼」對話方塊中，選取內嵌代碼並將它複製至剪貼簿，然後將代碼貼入簡單的文字編輯器。 以下列語法附加複製的內嵌代碼：
+   * 如需內嵌的視訊檢視器體驗，請點選「 **[!UICONTROL 內嵌代碼」。]** 在「內嵌代碼」對話方塊中，選取內嵌代碼並將其複製至剪貼簿，然後將代碼貼入簡單的文字編輯器中。 以下列語法附加複製的內嵌代碼：
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -1199,7 +1199,7 @@ Cost-efficient access to rapidly evolving technology.
 
 ## 關於動態媒體- Scene7模式中的視訊縮圖 {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-視訊縮圖是視訊影格或影像資產的縮小版本，代表視訊給客戶。 縮圖應該會鼓勵客戶點選影片。
+視訊縮圖是視訊影格或影像資產的縮小版本，可代表視訊給客戶。 縮圖應該會鼓勵客戶點選影片。
 
 AEM中的所有影片都必須有相關聯的縮圖；您不能刪除縮圖而不加以取代。 依預設，當您將影片上傳至AEM時，第一個影格會當做縮圖使用。 不過，例如，您可以自訂縮圖以用於品牌或視覺搜尋。 當您自訂視訊縮圖時，您可以播放視訊並暫停要使用的影格，也可以選取您已在數位資產管理員中上傳和發佈的影 *像* 。
 
@@ -1226,7 +1226,7 @@ AEM中的所有影片都必須有相關聯的縮圖；您不能刪除縮圖而�
 
 1. 導覽至您要變更其縮圖影像的已上傳視訊資產。
 1. 在「清單檢視」或「資 **[!UICONTROL 產檢視]** 」的 ****&#x200B;資產選擇模式中，點選視訊資產。
-1. 在工具列上，點選 **[!UICONTROL屬性** （包含&quot;i&quot;的圓）。
+1. 在工具列上，點選 **[!UICONTROL 「屬性]** 」圖示（其中包含「i」的社交圈）。
 1. 在影片的「屬性」頁面上，點選「變更 **[!UICONTROL 縮圖」。]**
 1. 在「變更縮圖」頁面上，執行下列其中一項作業：
 
