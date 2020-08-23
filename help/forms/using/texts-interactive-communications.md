@@ -1,7 +1,7 @@
 ---
 title: 互動式通訊中的文字
 seo-title: 互動式通訊中的文字
-description: '建立和編輯要用於互動式通訊的文字檔案片段——文字是用於建立互動式通訊的四種檔案片段之一。 其他三種是條件、清單和版面片段。  '
+description: '建立和編輯要用於互動式通訊的文字檔案片段——文字是用於建立互動式通訊的四種檔案片段之一。 其他三個是條件、清單和版面片段。  '
 seo-description: 建立和編輯要用於互動式通訊的文字檔案片段
 uuid: fdac3dd8-c6d0-418e-b969-fc791b7bd509
 topic-tags: interactive-communications
@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '2493'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 1. 選擇「 **[!UICONTROL 建立]** > **[!UICONTROL 文字」]**。
 1. 指定下列資訊：
 
-   * **[!UICONTROL 標題]**:（可選）輸入文本文檔片段的標題。 標題不必是唯一的，而且可以有特殊字元和非英文字元。 文字會以標題（如果有的話）來參照，例如縮圖和屬性。
+   * **[!UICONTROL 標題]**:（可選）輸入文本文檔片段的標題。 標題不需要唯一，而且可以有特殊字元和非英文字元。 文字會以標題（如果有的話）來參照，例如縮圖和屬性。
    * **[!UICONTROL 名稱]**:資料夾內文字的唯一名稱。 任何狀態下，檔案夾中都不能有相同名稱的兩個檔案片段（文字、條件或清單）。 在「名稱」欄位中，您只能輸入英文字元、數字和連字型大小。 「名稱」欄位會根據「標題」欄位自動填入。 在「標題」欄位中輸入的特殊字元、空格、數字和非英文字元將在「名稱」欄位中替換為連字元。 雖然「標題」欄位中的值會自動複製到「名稱」，但您可以編輯值。
 
    * **[!UICONTROL 說明]**:鍵入文本的說明。
@@ -43,7 +46,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 1. 點選「 **[!UICONTROL 下一步]**」。
 
-   「建立文本」頁面。 如果您選擇建立基於表單資料模型的文本，則表單資料模型屬性將顯示在左窗格中。
+   「建立文本」頁面。 如果您選擇建立基於表單資料模型的文本，則表單資料模型屬性會顯示在左窗格中。
 
 1. 在文字中輸入，並使用下列選項來設定格式、條件化和在文字中插入表單資料模型屬性和變數：
 
@@ -59,6 +62,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
    * [特殊字元](#special)
    * [搜尋和取代文字](#searching)
    * [鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)
+
    >[!NOTE]
    >
    >您可以在文字編輯器中使用@符號來新增「表單資料模型」元素、「資料字典」元素和變數。 在文本編輯器中輸入前面帶有@的字串時，將搜索所有資料模型元素、資料字典元素和變數，並顯示包含搜索字串的元素或變數。 您可以瀏覽搜尋結果並選取元素或變數。 如果沒有匹配結果，則顯示「 *找不到匹配結果* 」消息。
@@ -85,7 +89,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 ![insertfdmelettext](assets/insertfdmelementtext.png)
 
-* 若要將表單資料模型屬性插入文字，請將游標置於要插入屬性的位置，然後點選左窗格中的 **[A]** 屬性，然後點選 **[!UICONTROL [B]Add Selected]**。 您也可以點選兩下屬性，將其插入**[ C ]**游標位置。 表單資料模型屬性會以褐色背景色彩反白顯示。
+* 若要將表單資料模型屬性插入文字，請將游標置於要插入屬性的位置，然後點選左窗格中的 **[A]** 屬性，然後點選 **[!UICONTROL [B]Add Selected]**。 您也可以點選兩下屬性，將其插入 **[C]** 游標位置。 表單資料模型屬性會以褐色背景色彩反白顯示。
 
 或者，您也可以使用文字編輯器中的@符號來搜尋和新增表單資料模型屬性。 將游標置於要插入屬性的位置。 鍵入@ ，後面跟搜索字串。 對文檔片段中可用的所有表單資料模型屬性和變數執行搜索操作。 會擷取包含搜尋字串的屬性或變數，並顯示為下拉式清單。 瀏覽搜尋結果，然後按一下您要在游標位置插入的屬性。 按Esc可隱藏搜尋結果。
 
@@ -161,6 +165,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
    * 關聯表單資料模型的屬性
    * 您所建立的任何變數
+
    選擇要評估的適當選項。
 
    ![規則編輯器](assets/ruleeditor.png) 、規 ![則編輯器fdm](assets/ruleeditorfdm.png)
@@ -193,11 +198,13 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 ## 格式化文字 {#formatting}
 
-在建立或編輯文字時，工具列會依您選擇進行的編輯類型而變更：段落、對齊或清單：[選 ![擇工具欄類型](do-not-localize/toolbarselection.png)
+在建立或編輯文字時，工具列會依您選擇進行的編輯類型而變更：段落、對齊或清單：
+
+![選擇工具列類型](do-not-localize/toolbarselection.png)
 
 選擇工具列類型：段落、對齊或清單
 
-](assets/toolbarselection.png)字型編 ![輯工具列](do-not-localize/paragraphtoolbar.png)
+![字型編輯工具列](do-not-localize/paragraphtoolbar.png)
 
 字型編輯工具列
 
@@ -264,6 +271,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
    * 如果找到搜索文本的另一個實例，該實例會在文本文檔片段中突出顯示。 如果再次點選「 **[!UICONTROL 取代]** 」(Replace)，則會替換突出顯示的實例，並且如果找到第三個實例，游標會向前移動。
    * 如果找不到其他例項，「尋找與取代」對話方塊會顯示訊息：已到模組結束。
+
    您也可以點選「全部取代」，在單次執行中取代所有相符項目。
 
    「尋找與取代」也包含功能強大的規則運算式搜尋。 若要在搜尋中使用規則運算式，請選取「 **[!UICONTROL Reg ex]** 」，然後點選「 **[!UICONTROL 尋找]** 」 **[!UICONTROL 或「取代]**」。
