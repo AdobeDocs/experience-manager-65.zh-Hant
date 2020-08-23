@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e6d02717811ac78b77dc459814941d654e94733f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -58,7 +58,7 @@ AEM 6.5.0.0和6.5.1.0:
 * JSON:支援無頭內容傳送
 * HTML 和 JSON
 
-AEM體驗片段可匯出至Adobe Target的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是透過Adobe I/O完成，AEM必須與Adobe Target [使用Adobe I/O整合](/help/sites-administering/integration-ims-adobe-io.md)。
+AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe Target的使用者定義工作區。 這是透過Adobe I/O完成，AEM必須與Adobe Target [使用Adobe I/O整合](/help/sites-administering/integration-ims-adobe-io.md)。
 
 >[!NOTE]
 >
@@ -119,7 +119,6 @@ AEM體驗片段可匯出至Adobe Target的預設工作區，或匯出至Adobe Ta
 
 1. 在「 **雲端服務設定**」下方，從下拉式清單中選取「 **Adobe Target** 」。
 
-1. 
    >[!NOTE]
    >
    >可自訂體驗片段選件的JSON格式。 若要這麼做，請定義客戶體驗片段元件，然後註解如何在元件Sling Model中匯出其屬性。
@@ -180,7 +179,7 @@ AEM體驗片段可匯出至Adobe Target的預設工作區，或匯出至Adobe Ta
 
    >[!NOTE]
    >
-   >[在控制台](/help/sites-authoring/experience-fragments.md#details-of-your-experience-fragment) 和屬性的「清單檢視 **」中，可看到** 匯出的各種 **詳細資訊**。
+   >[在控制台](/help/sites-authoring/experience-fragments.md#details-of-your-experience-fragment) 和屬性的「清單檢視」中 **，可看到各種匯出的** 詳細資訊 ****。
 
    >[!NOTE]
    >
