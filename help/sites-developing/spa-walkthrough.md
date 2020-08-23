@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 0%
@@ -39,8 +39,7 @@ SPA Editor提供完整的解決方案，以支援AEM中的SPA。 本文逐步說
 
 此逐步解說以標準AEM功能和範例We.Retail Journal應用程式為基礎。 必須符合下列要求：
 
-* [AEM 6.4版（含Service Pack 2或更新版本）
-   ](/help/release-notes/sp-release-notes.md)
+* [AEM 6.4版（含Service Pack 2或更新版本）](/help/release-notes/sp-release-notes.md)
 * [請在此處安裝GitHub上提供的範例We.Retail Journal應用程式。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
 >[!CAUTION]
@@ -82,7 +81,7 @@ SPA就像原生應用程式，不但對網頁的訪客，而且由於SPA的運�
 
 SPA的主要思想是減少對伺服器的呼叫和依賴，以將伺服器呼叫所造成的延遲降至最低，讓SPA接近原生應用程式的回應速度。
 
-在傳統的循序網頁中，只會載入立即頁面所需的資料。 這表示當訪客移至另一個頁面時，會呼叫伺服器以取得其他資源。 當訪客與頁面上的元素互動時，可能需要其他呼叫。 這些多次呼叫會產生延遲或延遲感，因為頁面必須趕上訪客的要求。
+在傳統的循序網頁中，只會載入立即頁面所需的資料。 這表示當訪客移至另一個頁面時，會呼叫伺服器以取得其他資源。 當訪客與頁面上的元素互動時，可能需要其他呼叫。 這些多次呼叫可能會延遲或延遲，因為頁面必須趕上訪客的要求。
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
@@ -235,7 +234,7 @@ SPA的主要思想是減少對伺服器的呼叫和依賴，以將伺服器呼�
 
    每個元件都會選擇它公開的內容及呈現方式（伺服器端與HTL或用戶端與React）。 當然，本文著重於使用React進行用戶端轉換。
 
-1. 模型也可以將頁面群組在一起，以便同步載入，以減少所需的頁面重新載入次數。
+1. 模型也可將頁面群組在一起，以便同步載入，以減少所需的頁面重新載入次數。
 
    在We.Retail Journal的範例中，由於訪客通常會 `home`瀏覽所有 `blog`這 `aboutus` 些頁面，因此會同步載入、和頁面。 不過， `weather` 頁面會以非同步方式載入，因為訪客不太可能造訪。
 
