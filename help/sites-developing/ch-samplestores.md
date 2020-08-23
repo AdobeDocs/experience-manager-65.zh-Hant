@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 translation-type: tm+mt
-source-git-commit: e37ff1c9e657c580c607f2656adca01a2b39f81f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '490'
+ht-degree: 1%
 
 ---
 
@@ -113,7 +116,7 @@ contexthub.geolocation儲存候選項會延伸 [`ContextHub.Store.PersistedJSONP
 
 儲存有關目前用戶端環境的資訊，例如裝置、視窗、瀏覽器、日期和時間。
 
-### 來源位置{#source-location-surferinfo
+### 源位置 {#source-location-surferinfo}
 
 `/libs/settings/cloudsettings/legacy/contexthub/surferinfo`
 
