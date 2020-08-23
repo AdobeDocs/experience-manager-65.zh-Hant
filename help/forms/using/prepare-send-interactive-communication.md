@@ -1,14 +1,14 @@
 ---
 title: 使用代理UI準備和傳送互動式通訊
 seo-title: 使用代理UI準備和傳送互動式通訊
-description: 代理UI允許代理準備併發送互動式通信到後置進程。 代理程式會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
+description: 代理UI允許代理準備併發送互動式通信到後置進程。 工程師會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 seo-description: 使用代理UI準備和傳送互動式通訊
 uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 5bbafd9006b04d761ffab218e8480c1e94903bb6
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用代理UI準備和傳送互動式通訊 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
-代理UI允許代理準備併發送互動式通信到後置進程。 代理程式會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
+代理UI允許代理準備併發送互動式通信到後置進程。 工程師會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 
 ## 概覽 {#overview}
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 使用代理UI準備互動式通訊時，代理會先在代理UI中管理互動式通訊的下列方面，再將它送出至後置程式：
 
 * **資料**:Agent UI的「資料」頁籤顯示「交互通信」中任何可代理編輯的變數和解鎖表單資料模型屬性。 這些變數／屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立。 「資料」標籤也包含XDP/列印頻道範本中建立的任何欄位。 僅當代理可編輯「互動式通信」中的任何變數、表單資料模型屬性或欄位時，才會顯示「資料」頁籤。
-* **內容**:在「內容」索引標籤中，代理管理「互動式通訊」中的檔案片段和內容變數等內容。 在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
+* **內容**:在「內容」索引標籤中，「代理」管理「互動式通訊」中的檔案片段和內容變數等內容。 在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
 * **附件**:只有當Interactive Communication具有任何附件或Agent具有庫訪問權限時，「附件」頁籤才會出現在Agent UI。 工程師可以或不允許更改或編輯附件。
 
 ## 使用代理UI準備互動式通訊 {#prepare-interactive-communication-using-the-agent-ui}
@@ -236,84 +236,84 @@ import java.util.*;
 @Component(service = CCRDocumentInstanceService.class, immediate = true)
 public class CCRDraftService implements CCRDocumentInstanceService {
 
- private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
+    private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
 
- private HashMap<String, Object> draftDataMap = new HashMap<>();
+    private HashMap<String, Object> draftDataMap = new HashMap<>();
 
- @Override
- public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
-     String documentInstanceName = ccrDocumentInstance.getName();
-     if (StringUtils.isNotEmpty(documentInstanceName)) {
-         logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
-         if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
-             ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
-         }
-     } else {
-         logger.error("Could not save data as draft name is empty");
-     }
-     return ccrDocumentInstance.getId();
- }
+    @Override
+    public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+        String documentInstanceName = ccrDocumentInstance.getName();
+        if (StringUtils.isNotEmpty(documentInstanceName)) {
+            logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
+            if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
+                ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
+            }
+        } else {
+            logger.error("Could not save data as draft name is empty");
+        }
+        return ccrDocumentInstance.getId();
+    }
 
- @Override
- public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
-     String documentInstanceName = ccrDocumentInstance.getName();
-     if (StringUtils.isNotEmpty(documentInstanceName)) {
-         logger.info("Saving ccrData with name : {}", documentInstanceName);
-         mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
-     } else {
-         logger.error("Could not save data as draft Name is empty");
-     }
- }
+    @Override
+    public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+        String documentInstanceName = ccrDocumentInstance.getName();
+        if (StringUtils.isNotEmpty(documentInstanceName)) {
+            logger.info("Saving ccrData with name : {}", documentInstanceName);
+            mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
+        } else {
+            logger.error("Could not save data as draft Name is empty");
+        }
+    }
 
- @Override
- public CCRDocumentInstance get(String id) throws CCRDocumentException {
-     CCRDocumentInstance cCRDocumentInstance;
-     if (StringUtils.isEmpty(id)) {
-         logger.error("Could not retrieve data as draftId is empty");
-         cCRDocumentInstance = null;
-     } else {
-         cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
-     }
-     return cCRDocumentInstance;
- }
+    @Override
+    public CCRDocumentInstance get(String id) throws CCRDocumentException {
+        CCRDocumentInstance cCRDocumentInstance;
+        if (StringUtils.isEmpty(id)) {
+            logger.error("Could not retrieve data as draftId is empty");
+            cCRDocumentInstance = null;
+        } else {
+            cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
+        }
+        return cCRDocumentInstance;
+    }
 
- @Override
- public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
-                                         Map<String, Object> optionsParams) throws CCRDocumentException {
-     List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
+    @Override
+    public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
+                                            Map<String, Object> optionsParams) throws CCRDocumentException {
+        List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
 
-     HashMap<String, Object> allSavedDraft = mySQLGetALLData();
-     for (String key : allSavedDraft.keySet()) {
-         ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
-     }
-     return ccrDocumentInstancesList;
- }
+        HashMap<String, Object> allSavedDraft = mySQLGetALLData();
+        for (String key : allSavedDraft.keySet()) {
+            ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
+        }
+        return ccrDocumentInstancesList;
+    }
 
- //The APIs call the service in the database using the following section.
- private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
-     if(method.equals("SAVE")){
+    //The APIs call the service in the database using the following section.
+    private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
+        if(method.equals("SAVE")){
 
-         String autoGenerateId = draftDataMap.size() + 1 +"";
-         ccrDocumentInstance.setId(autoGenerateId);
-         draftDataMap.put(autoGenerateId, ccrDocumentInstance);
-         return ccrDocumentInstance;
+            String autoGenerateId = draftDataMap.size() + 1 +"";
+            ccrDocumentInstance.setId(autoGenerateId);
+            draftDataMap.put(autoGenerateId, ccrDocumentInstance);
+            return ccrDocumentInstance;
 
-     }else if (method.equals("UPDATE")){
+        }else if (method.equals("UPDATE")){
 
-         draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
-         return ccrDocumentInstance;
+            draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
+            return ccrDocumentInstance;
 
-     }else if(method.equals("GET")){
+        }else if(method.equals("GET")){
 
-         return (CCRDocumentInstance) draftDataMap.get(draftId);
+            return (CCRDocumentInstance) draftDataMap.get(draftId);
 
-     }
-     return null;
- }
+        }
+        return null;
+    }
 
- private HashMap<String, Object> mySQLGetALLData(){
-     return draftDataMap;
- }
+    private HashMap<String, Object> mySQLGetALLData(){
+        return draftDataMap;
+    }
 }
 ```
 
@@ -328,7 +328,7 @@ public class CCRDraftService implements CCRDocumentInstanceService {
   <td><p><strong>資料庫服務示例</strong></p></td> 
    </tr>
   <tr>
-   <td><p>您可以建立互動式通訊的草稿，或直接送出。 儲存作業的API會檢查「互動式通訊」是否以草稿形式提交，並包含草稿名稱。 然後，API會以「儲存為輸入法」呼叫mySQLDataBaseServiceCRUD服務。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
+   <td><p>您可以建立互動式通訊的草稿，或直接提交。 儲存作業的API會檢查「互動式通訊」是否以草稿形式提交，並包含草稿名稱。 然後，API會以「儲存為輸入法」呼叫mySQLDataBaseServiceCRUD服務。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
    <td><p>mySQLDataBaseServiceCRUD服務會驗證「另存為輸入方法」，並產生自動產生的草稿ID並將其傳回AEM。 產生草稿ID的邏輯會因資料庫而異。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
    </tr>
   <tr>
