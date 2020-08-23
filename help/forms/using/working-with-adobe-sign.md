@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f34742a9d11909dcf8403e1b002b65a01e882a74
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3853'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    ![簽署區塊](assets/sign_block_new.png)
 
-   依預設，Adobe Sign Block不會顯示在已發佈的最適化表單中。 只有簽署檔案才會顯示。 您可以從Adobe Sign Block元件的屬性變更Adobe Sign Block的可見度。
+   依預設，Adobe Sign Block不會顯示在已發佈的最適化表單中。 只有簽署檔案才會顯示。 您可以從Adobe Sign Block元件的屬性變更Adobe Sign Block的可見性。
 
    >[!NOTE]
    >
@@ -160,7 +160,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    如果 **Adobe Sign Cloud服務清單為空白** ，請依照「使用AEM Forms文章 [設定Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md) 」來設定服務。
 
-1. 從「簽署者可以簽署」對 **話方塊中選取簽署順序** 。 Adobe Sign歌手可依序簽署最適 **化表單** -一個接一個的簽 **署者** ，或同時簽署。
+1. 從「簽署者可以簽署」對 **話方塊中選取簽署順序** 。 Adobe Sign歌手可依序簽署最適 **化表單** -一個接一個的簽署者，或 **同時簽署** -以任何順序。
 
    依循序序列，一次會有一個簽署者收到要簽署的表格。 簽署者完成簽署檔案後，表格會傳送給下一個簽署者，依此類推。
 
@@ -184,7 +184,7 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
    * **簽署者和填寫表格的人員是否相同？:** 如果 ****&#x200B;表單填寫者和第一個簽署者是同一人，請選取「是」。 如果選項設定為 **No,** 則請勿在最適化表單中使用簽名步驟元件。 如果表單包含「簽名步驟」元件，則欄位會自動設為「是」。
 
-   * **簽署者電子郵件地址：** 指定簽署者的電子郵件地址。 簽署者會收到指定電子郵件地址上的已簽署檔案／表格。 您可以選擇使用表單欄位中提供的電子郵件地址、登入使用者的AEM使用者設定檔，或手動輸入電子郵件地址。 這是必要的一步。 請確定第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址與用於設定AEM雲端服務的Adobe Sign帳戶不相同。
+   * **簽署者電子郵件地址：** 指定簽署者的電子郵件地址。 簽署者會收到指定電子郵件地址上的已簽署檔案／表格。 您可以選擇使用表單欄位中提供的電子郵件地址、登入使用者的AEM使用者設定檔，或手動輸入電子郵件地址。 這是必要的步驟。 請確定第一個簽署者或唯一簽署者（如果是單一簽署者）的電子郵件地址與用於設定AEM雲端服務的Adobe Sign帳戶不相同。
 
    * **簽署者驗證方法：** 指定在開啟表單進行簽署前先驗證使用者的方法。 您可以選擇電話、知識庫和社交身分驗證。
    >[!NOTE]
@@ -347,6 +347,4 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 
 * [將Adobe Sign與AEM Forms整合](../../forms/using/adobe-sign-integration-adaptive-forms.md)
 * [在最適化表單中使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
-
-* [搭配AEM Forms（視訊）使用Adobe Sign
-   ](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [搭配AEM Forms（視訊）使用Adobe Sign](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
