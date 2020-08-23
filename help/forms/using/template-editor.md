@@ -10,7 +10,10 @@ topic-tags: develop
 discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1984'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 建立資料夾後，開啟該資料夾並執行以下步驟以建立模板：
 
-1. 在範本主控台中，點選 **您在已建立的檔案夾中** 「建立」。
+1. 在範本主控台中，點選 **您在已建立的資料夾中** 「建立」。
 1. 在「挑選範本類型」區段中，選取「最適化表 **單範本」** ，然後點選「 **下一步」**。
 
 1. 在「範本詳細資料」區段中，提供範本標題並點選「建 **立**」。
@@ -119,7 +122,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 >
 >當您選取「儲存內容」或「儲存PDF」做為「提交動作」時，您可以選擇指定「儲存路徑」。 如果您在範本中指定路徑，則從中建立的所有表單都有相同的路徑。 您可以指定正確的儲存路徑，或確保表單作者更新該路徑，以防止每個表單的資料儲存在相同的位置。
 
-#### 使用標籤和面板建立最適化表單範本 {#creating-an-adaptive-form-template-with-tabs-and-panels-nbsp}
+#### 使用標籤和面板建立最適化表單範本  {#creating-an-adaptive-form-template-with-tabs-and-panels-nbsp}
 
 例如，您要建立具有下列標籤的範本：
 
@@ -139,15 +142,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 #### 在標籤中新增內容 {#adding-content-in-tabs}
 
-[在 ![最適化表單範本中新增欄位](assets/template-edit-initial-content.png)
+![在最適化表單範本中新增欄位](assets/template-edit-initial-content.png)
 
-在範本中新增欄位
-
-](assets/template-edit-initial-content-1.png)在您新增面板並將其結構為標籤後，您可以在標籤中新增欄位。 在編輯器中選擇頁籤時，可看到「將元件拖 **曳到此處** 」選項。 您可以拖放元件，例如文字方塊、清單項目和按鈕。 您可從側欄的元件瀏覽器拖放元件。
+在您新增面板並將其結構為標籤後，您可以在標籤內新增欄位。 在編輯器中選擇頁籤時，可看到「將元件拖 **曳到此處** 」選項。 您可以拖放元件，例如文字方塊、清單項目和按鈕。 您可從側欄的元件瀏覽器拖放元件。
 
 每個元件都具有增強資料擷取和控制的屬性。 例如，您可以啟用元 **件的「必要** 」欄位屬性。 您的作者可以指定客戶在略過填寫必要欄位時看到的訊息。 在「必填欄位訊息 **」屬性中指定訊息** 。
 
-在示例模板中，「一般資訊」頁籤中添加了「名稱」、「電話號碼」和「出生日期」欄位。 在「專業資訊」(Professional Information)頁籤中，添加「當前聘用」(Currently)、「雇傭類型」(Educational celification)欄位。
+在示例模板中，「一般資訊」頁籤中添加了「名稱」、「電話號碼」和「出生日期」欄位。 在「專業資訊」頁籤中，添加「當前聘用」、「就業類型」、「教育資格」欄位。
 
 新增欄位後，您可以新增「提交」和「重設」等按鈕。
 
@@ -169,7 +170,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 建立並啟用範本後，當您建立最適化表單時，範本就可在表單管理員中使用。 要使用模板並建立自適應表單，請參 [閱建立自適應表單](../../forms/using/creating-adaptive-form.md)。
 
-## 變更現成可用範本的顯示選項 {#change-display-option-of-out-of-the-box-templates}
+## 變更現成可用範本的顯示選項  {#change-display-option-of-out-of-the-box-templates}
 
 您可以建立自訂範本以自訂最適化表單，以定義基本結構和初始內容。 AEM Forms也提供一套現成可用的最適化表單範本。 您可以選擇顯示或隱藏範本。
 
