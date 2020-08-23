@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -132,7 +132,7 @@ ht-degree: 0%
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   在規 `[AEM_Instance`則中以AEM伺服器發佈URL取代]。
+   在規 `[AEM_Instance]` 則中以AEM伺服器發佈URL取代。
 
 如果您未將AEM伺服器載入內容路徑，Apache層的Proxy規則將如下：
 
