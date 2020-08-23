@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1722'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ To add the Dynamic Media functionality to assets you use on your websites, you c
 若要將動態媒體元件／檢視器新增至頁面：
 
 1. 在AEM中，開啟您要新增動態媒體元件的頁面。
-1. 如果沒有可用的動態媒體元件，請按一下 [!UICONTROL Sidekick] 中的尺標以進入 **[!UICONTROL Design]** 模式，按一下 **[!UICONTROL Edit]** parsys，然後選取 **** Dynamic Media Sys，讓動態媒體元件可用。
+1. 如果沒有可用的動態媒體元件，請按一下 [!UICONTROL Sidekick] 中的尺標以進入 **[!UICONTROL Design]** 模式，按一下 **[!UICONTROL Edit]** parsys，然後選取 **** Dynamic Media Parsys，讓動態媒體元件可用。
 
    >[!NOTE]
    >
@@ -145,7 +145,7 @@ You can edit the following [!UICONTROL Advanced] settings by clicking **[!UICONT
 
 ### 互動式媒體元件 {#interactive-media-component}
 
-互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用 **[!UICONTROL 互動式媒體元件]** 。
+互動式媒體元件適用於這些資產上具有互動功能的熱點或影像地圖。 如果您有互動式影像、互動式視訊或轉盤橫幅，請使用互動式 **[!UICONTROL 媒體元件]** 。
 
 互 [!UICONTROL 動式媒體] (Interactive Media)元件是智慧型的——視您新增影像或視訊而定，您有各種選項。 此外，檢視器回應速度快。 也就是說，螢幕大小會根據螢幕大小自動變更。 所有檢視器都是以HTML5為基礎的檢視器。
 
@@ -159,7 +159,7 @@ You can edit the following **[!UICONTROL General]** settings by clicking **[!UIC
 
 **[!UICONTROL 寬度和高度]** -如果您希望視訊大小固定，請輸入像素值。 將這些值留空可讓其適應性。
 
-You can edit the following **[!UICONTROL Add To Cart** settings by clicking **[!UICONTROL Edit]** in the component.
+You can edit the following **[!UICONTROL Add To Cart]** settings by clicking **[!UICONTROL Edit]** in the component.
 
 **[!UICONTROL 顯示產品資產]** -依預設，此值會選取。 產品資產會依「商務」模組中的定義，顯示產品的影像。 清除核取標籤，不會顯示產品資產。
 
