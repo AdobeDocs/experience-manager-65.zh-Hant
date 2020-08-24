@@ -3,9 +3,9 @@ title: 如何編輯或新增中繼資料
 description: 透過各種可編輯資 [!DNL Adobe Experience Manager Assets] 產中繼資料的方式，瞭解資產中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4748eed3ce484e8446b641ccbc7b5d76cb66f428
+source-git-commit: fc14ccc834c9a41b67eb8cf17dd8b34f5dff2406
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
    ![選取資產的屬性以檢視其中繼資料](assets/asset-metadata.png)
 
-   *圖： 在資產屬性頁面上編輯或新[!UICONTROL 增中繼資]料。*
+   *圖：在資產屬性頁面上編輯或新[!UICONTROL 增中繼資]料。*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
@@ -55,6 +55,10 @@ ht-degree: 0%
 1. 若要存取命名空間管理頁面，請按 **[!UICONTROL 一下頁面頂端的]** 「命名空間」。
 1. 若要新增命名空間，請 **[!UICONTROL 按一下]** 頁面底部的「新增」。
 1. 在XML命名空間慣例中指定自訂命名空間。 以URI的形式指定ID，並為ID指定相關首碼。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+
+## 提示與限制 {#best-practices-limitations}
+
+* 透過Touch-UI更新的中繼資料會變更命名空間中的中繼資料 `dc` 屬性。 透過HTTP API進行的任何更新都會變更命名空間中的中繼資料 `jcr` 屬性。 瞭解 [如何使用HTTP API更新中繼資料](/help/assets/mac-api-assets.md#update-asset-metadata)。
 
 >[!MORELIKETHIS]
 >
