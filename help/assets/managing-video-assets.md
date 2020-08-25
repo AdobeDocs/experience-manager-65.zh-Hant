@@ -3,7 +3,7 @@ title: 在中管理視訊資產 [!DNL Adobe Experience Manager]。
 description: 在中上傳、預覽、註解和發佈視訊資產 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
+source-git-commit: 268689d534f8bf649335269f9169455c381f9554
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 7%
@@ -31,7 +31,7 @@ ht-degree: 7%
 
 ## 上傳大於2 GB資產的設定 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
-根據預設， [!DNL Assets] 不會因為檔案大小限制而讓您上傳任何大於2 GB的資產。 不過，您可以進入CRXDE Lite並在目錄下建立節點，以覆蓋此限 `/apps` 制。 節點必須具有相同的節點名稱、目錄結構和順序的可比節點屬性。
+根據預設， [!DNL Assets] 不會因為檔案大小限制而讓您上傳任何大於2 GB的資產。 不過，您可以進入CRXDE Lite並在目錄下建立節點，以覆蓋此限 `/apps` 制。 節點必須具有相同的節點名稱、目錄結構和可比的節點順序屬性。
 
 除了設定 [!DNL Assets] 外，請變更下列設定以上傳大型資產：
 
@@ -51,8 +51,8 @@ ht-degree: 7%
 
    ![覆蓋節點](assets/overlay-node-path.png)
 
-1. 重新整理瀏覽器。 覆蓋節點 `/jcr_root/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` 被選取。
-1. 在「屬 **[!UICONTROL 性]** 」索引標籤中，輸入適當的值（以位元組為單位），將大小限制增加到所需大小。 例如，要將大小限制增加到30 GB，請輸入 `{sizeLimit : "32212254720"}` 值。
+1. 重新整理瀏覽器。 覆蓋節點 `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` 被選取。
+1. 在「屬 **[!UICONTROL 性]** 」索引標籤中，輸入適當的值（以位元組為單位），將大小限制增加到所需大小。 例如，要將大小限制增加到30 GB，請輸入 `32212254720` 值。
 
 1. 在工具列中，按一下「全 **[!UICONTROL 部儲存」]**。
 1. In [!DNL Experience Manager], click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
