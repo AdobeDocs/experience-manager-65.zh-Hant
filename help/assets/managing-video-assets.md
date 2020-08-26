@@ -3,9 +3,9 @@ title: 在中管理視訊資產 [!DNL Adobe Experience Manager]。
 description: 在中上傳、預覽、註解和發佈視訊資產 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 268689d534f8bf649335269f9169455c381f9554
+source-git-commit: 93b8fccc2a0c4663104150fdba3651ff5e4f6bbc
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '810'
 ht-degree: 7%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 7%
 
 視訊格式是組織數位資產的重要部分。 [!DNL Adobe Experience Manager] 提供成熟的產品和功能，以管理視訊資產在建立後的整個生命週期。
 
-瞭解如何在中管理和編輯視訊資產 [!DNL Adobe Experience Manager Assets]。 此外，如果您有使用授權，請 [!DNL Dynamic Media]參閱動態 [媒體視訊檔案](/help/assets/video.md)。
+瞭解如何在中管理和編輯視訊資產 [!DNL Adobe Experience Manager Assets]。 視訊編碼和轉碼（例如FFmpeg轉碼）可透過整合 [!DNL Dynamic Media] 進行。
 
 ## 上傳和預覽視訊資產 {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] 使用擴充功能MP4產生視訊資產的預覽。 如果資產的格式不是MP4，請安裝FFmpeg套件以產生預覽。 Fmpeg會建立OGG和MP4類型的視訊轉譯。 您可以在使用者介面中預覽 [!DNL Assets] 轉譯。
 
 1. 在數位資產檔案夾或子檔案夾中，導覽至您要新增數位資產的位置。
-1. 若要上傳資產，請按一下工 **[!UICONTROL 具列中的]** 「建立」，然後選擇「 **[!UICONTROL 檔案」]**。 或者，直接將它拖曳至資產區域。 如需上 [傳作業的詳細資訊](managing-assets-touch-ui.md#uploading-assets) ，請參閱上傳資產。
+1. 若要上傳資產，請按一下工 **[!UICONTROL 具列中]** 的「建立」，然後選 **[!UICONTROL 擇「檔案」]**。 或者，在用戶介面上拖動檔案。 如需詳 [細資訊，請參閱](managing-assets-touch-ui.md#uploading-assets) 「上傳資產」。
 1. 若要在「卡片」檢視中預覽視訊，請按一下 **[!UICONTROL 視訊資產]**![上的「播放](assets/do-not-localize/play.png) 」選項。 您只能在卡片檢視中暫停或播放影片。 「播 [!UICONTROL 放] 」和「暫 [!UICONTROL 停] 」選項在清單檢視中不可用。
 
 1. 若要在資產詳細資訊頁面中預覽視訊，請按一 **[!UICONTROL 下資訊卡]** 上的編輯。 視訊會在瀏覽器的原生視訊播放器中播放。 您可以播放、暫停、控制音量，以及將視訊縮放至全螢幕。
@@ -67,17 +67,15 @@ ht-degree: 7%
 
 ## 發佈視訊資產 {#publish-video-assets}
 
-發佈後，您可以將視訊資產加入網頁中做為URL，或直接內嵌資產。 如需詳細資訊，請參 [閱發佈動態媒體資產](/help/assets/publishing-dynamicmedia-assets.md)。
+發佈後，您可以將視訊資產加入網頁中做為URL，或直接內嵌資產。 如需詳細資訊，請參 [閱「發佈動態媒體資產」](/help/assets/publishing-dynamicmedia-assets.md)。
 
 ## 註解視訊資產 {#annotate-video-assets}
 
-1. 在控制 [!DNL Assets] 台中，按一 [!UICONTROL 下資產卡上的「編輯] 」，以顯示資產詳細資訊頁面。
-1. 若要播放影片，請按一下「 [!UICONTROL 預覽]」。
-1. 若要註解視訊，請按一下「注 **[!UICONTROL 解]** 」按鈕。 在視訊中的特定時間（畫格）加入註解。 在加上註解時，您可以在畫布上繪圖，並在繪圖中加入註解。 注釋會自動儲存。
+1. 在主控 [!DNL Assets] 台中，選取資 **[!UICONTROL 產卡上的「編輯]** 」以顯示資產詳細資訊頁面。
+1. 若要播放影片，請按一下「 **[!UICONTROL 預覽]**」。
+1. 若要註解視訊，請按一下「注 **[!UICONTROL 解」]**。 在視訊中的特定時間（畫格）加入註解。 在加上註解時，您可以在畫布上繪圖，並在繪圖中加入註解。 注釋會自動儲存。 要退出注釋嚮導，請按一下「關 **[!UICONTROL 閉」]**。
 
    ![在視訊影格上繪圖和加上註解](assets/annotate-video.png)
-
-   要退出注釋嚮導，請按一下「關 **[!UICONTROL 閉」]**。
 
 1. 尋找視訊中的特定點，在&#x200B;**「文字」**&#x200B;欄位中指定時間 (以秒為單位)，然後按一下&#x200B;**「跳至」**。例如，若要略過前 20 秒的視訊，請在文字欄位中輸入 20。
 
@@ -91,4 +89,5 @@ ht-degree: 7%
 >
 >* [在Experience Manager Assets中管理數位資產](/help/assets/managing-assets-touch-ui.md)
 >* [在Experience Manager Assets中管理系列](/help/assets/managing-collections-touch-ui.md)
+>* [動態媒體視訊檔案](/help/assets/video.md)。
 
