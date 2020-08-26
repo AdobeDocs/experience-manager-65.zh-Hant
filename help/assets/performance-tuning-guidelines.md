@@ -4,9 +4,9 @@ description: 針對配置、 [!DNL Experience Manager] 硬體、軟體和網路�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 2c8220aab9215efba2e4568961a2a6a544803920
 workflow-type: tm+mt
-source-wordcount: '2767'
+source-wordcount: '2748'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ### 臨時資料夾 {#temp-folder}
 
-若要改善資產上傳時間，請對Java暫存目錄使用高效能的儲存空間。 在Linux和Windows上，可使用RAM驅動器或SSD。 在雲端環境中，可使用等同的高速儲存類型。 例如，在Amazon EC2中，臨時 [資料夾可以使用臨時驅動器](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) 。
+若要改善資產上傳時間，請針對Java臨時目錄使用高效能的儲存空間。 在Linux和Windows上，可使用RAM驅動器或SSD。 在雲端環境中，可使用等同的高速儲存類型。 例如，在Amazon EC2中，臨時 [資料夾可以使用臨時驅動器](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) 。
 
 假設伺服器記憶體充足，請配置RAM驅動器。 在Linux上，運行以下命令以建立8 GB的RAM驅動器：
 
@@ -45,7 +45,7 @@ mkfs -q /dev/ram1 800000
 
 在Windows OS上，使用協力廠商驅動程式來建立RAM磁碟機，或只使用高效能的儲存空間，例如SSD。
 
-高效能臨時卷準備就緒後，請設定JVM參數 `-Djava.io.tmpdir`。 例如，您可將下列JVM參數新增至Experience `CQ_JVM_OPTS` Manager指令碼 `bin/start` 中的 [!DNLE變數]:
+高效能臨時卷準備就緒後，請設定JVM參數 `-Djava.io.tmpdir`。 例如，您可將下列JVM參數新增至 `CQ_JVM_OPTS` 下列指令碼 `bin/start` 中的變 [!DNL Experience Manager]數：
 
 `-Djava.io.tmpdir=/mnt/aem-tmp`
 
@@ -76,7 +76,7 @@ Adobe建議在 [!DNL Experience Manager Assets] Java 8上部署以取得最佳�
 
 ### 配置緩衝映像快取的最大大小 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-當將大量資產上傳至 [!DNLAAdobe Experience Manager]，以允許記憶體使用量出現意外的尖峰，並防止JVM因OutOfMemoryErrors而失敗時，請減少已設定的緩衝影像快取最大大小。 例如，您有一個系統的堆積(- `Xmx`param)上限為5 GB,Oak BlobCache設為1 GB，檔案快取設為2 GB。 在這種情況下，緩衝快取最多需要1.25 GB的記憶體，因此，當出現意外的尖峰時，僅需0.75 GB的記憶體。
+將大量資產上傳至時 [!DNL Adobe Experience Manager]，為了允許記憶體使用量出現意外的尖峰，並防止JVM因OutOfMemoryErrors而失敗，請減少已設定的緩衝影像快取最大大小。 例如，您有一個系統的堆積(- `Xmx`param)上限為5 GB,Oak BlobCache設為1 GB，檔案快取設為2 GB。 在這種情況下，緩衝快取最多需要1.25 GB的記憶體，因此，當出現意外的尖峰時，僅需0.75 GB的記憶體。
 
 在OSGi Web Console中配置緩衝快取大小。 在 `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`，以位元組為單 `cq.dam.image.cache.max.memory` 位設定屬性。 例如，1073741824是1 GB(1024 x 1024 x 1024 = 1 GB)。
 
@@ -115,12 +115,12 @@ accessKey=<snip>
 
 Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，這會對上傳和損毀檔案造成負面影響。 對於大型檔案上傳，請確定使用者有連線至網路，因為WiFi網路會快速飽和。 有關確定網路瓶頸的指導，請參 [閱資產規模指南](/help/assets/assets-sizing-guide.md)。 要通過分析網路拓撲來評估網路效能，請參 [閱Assets網路注意事項](/help/assets/assets-network-considerations.md)。
 
-主要是，您的網路最佳化策略取決於可用頻寬的數量，以及Experience Manager實例 [!DNLE的負載] 。 常見配置選項（包括防火牆或代理）有助於提高網路效能。 以下是需要記住的一些要點：
+主要的是，您的網路優化策略取決於可用頻寬的數量和實例的負 [!DNL Experience Manager] 載。 常見配置選項（包括防火牆或代理）有助於提高網路效能。 以下是需要記住的一些要點：
 
-* 視您的例項類型（小型、中型、大型）而定，請確定您有足夠的網路頻寬供您的Experience Manager例項使用。 如果Experience Manager是在AWS上代管， [!DNLE則適當的頻寬分配尤其重要] 。
-* 如果您 [!DNLE的Experience Manager] 實例是在AWS上托管的，則您可以通過使用多功能擴展策略來獲益。 如果使用者預期負載較高，請調整執行個體的大小。 縮小它的大小以適中／低負載。
-* HTTPS: 大部分使用者都有防火牆來監聽HTTP流量，這可能會對上傳檔案或在上傳作業期間損毀檔案造成負面影響。
-* 大型檔案上傳： 確保用戶有到網路的有線連接（WiFi連接快速飽和）。
+* 視您的例項類型（小型、中型、大型）而定，請確定您有足夠的網路頻寬供您的Experience Manager例項使用。 如果AWS代管頻寬，則 [!DNL Experience Manager] 頻寬分配特別重要。
+* 如果您 [!DNL Experience Manager] 的實例是在AWS上托管的，則您可以使用多功能擴展策略。 如果使用者預期負載較高，請調整執行個體的大小。 縮小它的大小以適中／低負載。
+* HTTPS:大部分使用者都有防火牆來監聽HTTP流量，這可能會對上傳檔案或在上傳作業期間損毀檔案造成負面影響。
+* 大型檔案上傳：確保用戶有到網路的有線連接（WiFi連接快速飽和）。
 
 ## 工作流程 {#workflows}
 
@@ -128,7 +128,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 盡可能將「 [!UICONTROL DAM更新資產」工作流程設為] 「暫時」。 此設定可大幅降低處理工作流程所需的開銷，因為在本例中，工作流程不需要經過一般的追蹤和封存程式。
 
-1. 導覽至 `/miscadmin` Experience Manager部 [!DNLE署中] ，網址為 `https://[aem_server]:[port]/miscadmin`。
+1. 導覽至 `/miscadmin` 部署中 [!DNL Experience Manager] 的位置 `https://[aem_server]:[port]/miscadmin`。
 
 1. 展開「 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流程]** > **[!UICONTROL 模型]** > **** dam」。
 
@@ -152,9 +152,9 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 ### 最大並行作業數 {#maximum-parallel-jobs}
 
-預設情 [!DNLE況下，Experience Manager] 運行的並行作業數量上限等於伺服器上的處理器數量。 此設定的問題在於，在負載較重的期間， [!UICONTROL DAM Update Asset] ( [!DNLEDAM更新資產)工作流程會佔用所有處理器，降低UI回應速度，並防止] Experience Manager（體驗管理器）執行其他程式，以保障伺服器效能和穩定性。 作為一個好做法，請通過執行以下步驟將此值設定為伺服器上可用處理器的一半：
+預設情況下， [!DNL Experience Manager] 運行的並行作業數量上限等於伺服器上的處理器數量。 此設定的問題在於，在負載較重的期間， [!UICONTROL DAM Update Asset] ( [!DNLEDAM更新資產)工作流程會佔用所有處理器，降低UI回應速度，並防止] Experience Manager（體驗管理器）執行其他程式，以保障伺服器效能和穩定性。 作為一個好做法，請通過執行以下步驟將此值設定為伺服器上可用處理器的一半：
 
-1. 在 [!DNLEExperience Manager] Author上，存取 `https://[aem_server]:[port]/system/console/slingevent`。
+1. 在「作 [!DNL Experience Manager] 者」上，存取 `https://[aem_server]:[port]/system/console/slingevent`。
 
 1. 按一 **[!UICONTROL 下與您的實作相關的每個工作流程佇列(例如]** Granite Transient Workflow Queue)上的「編輯」 ****。
 
@@ -178,9 +178,9 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 客戶在其網站上使用各種大小和格式的影像，或將影像發佈給商業合作夥伴。 由於每個轉譯都會增加資產在儲存庫中的佔用空間，Adobe建議您審慎地使用此功能。 為了減少處理和儲存影像所需的資源量，您可以在執行時期產生這些影像，而不是在擷取時當做轉譯。
 
-許多網站客戶會實作影像servlet，在要求影像時調整影像大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
+許多網站客戶會實作影像servlet，在要求影像時調整大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
 
-另一種方法是使用Scene7技術完全放棄影像控制。 此外，您還可以部署品牌入口網站，不僅負責從 [!DNLEExperience Manager] Infrastructure接管轉譯產生責任，還負責整個發佈層。
+另一種方法是使用Scene7技術完全放棄影像控制。 此外，您還可以部署品牌入口網站，不僅負責從基礎架構中產生轉譯 [!DNL Experience Manager] ，還負責整個發佈層。
 
 #### ImageMagick {#imagemagick}
 
