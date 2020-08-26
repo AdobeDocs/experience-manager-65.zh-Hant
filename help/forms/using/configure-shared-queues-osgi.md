@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: null
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 2c8220aab9215efba2e4568961a2a6a544803920
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 0%
@@ -43,7 +43,7 @@ AEM Inbox可讓您與其他使用者共用收件匣中的單一項目或所有�
 
 >[!NOTE]
 >
->（僅適用於以表單為中心的工作流程項目）啟用工作流 **[程中「指派任務」步驟的「允許受託人透過收件匣共用](aem-forms-workflow-step-reference.md)******」選項。 只有啟用上述選項的項目才會顯示給其他使用者。
+>（僅適用於以表單為中心的工作流程項目）啟用工作流 **[程中「指派任務」步驟的「允許受託人透過收件匣共用](aem-forms-workflow-step-reference.md)****** 」選項。 只有啟用上述選項的項目才會顯示給其他使用者。
 
 ### 共用個別項目
 
@@ -57,7 +57,7 @@ AEM Inbox可讓您與其他使用者共用收件匣中的單一項目或所有�
 
 >[!NOTE]
 >
->（僅適用於以表單為中心的工作流程項目）啟用工作流中 **[「指派任務」步驟的「允許受託人明確在收件匣中共用](aem-forms-workflow-step-reference.md)******」選項。 只有啟用上述選項的項目才會顯示給其他使用者。
+>（僅適用於以表單為中心的工作流程項目）啟用工作流中 **[「指派任務」步驟的「允許受託人明確在收件匣中共用](aem-forms-workflow-step-reference.md)****** 」選項。 只有啟用上述選項的項目才會顯示給其他使用者。
 
 ## Request access to Inbox items {#request-access}
 
@@ -75,7 +75,7 @@ AEM Inbox可讓您與其他使用者共用收件匣中的單一項目或所有�
 
 1. 登入您的AEM實例。 點選「收件匣」 ![圖示](assets/bell.svg) ，然後點選「 **[!UICONTROL 全部檢視」]**。
 1. 點選「 ![僅內容](assets/railleft.svg) 」圖示以開啟篩選選擇器。
-1. 點選「選 **[!UICONTROLS擇受託人]** 」下拉式清單以檢視並選取已與您共用其「收件匣」項目的使用者。
+1. 點選「選 **[!UICONTROL 擇受託人]** 」下拉式清單以檢視並選取已與您共用其「收件匣」項目的使用者。
 1. 選擇項目並點選「 **[!UICONTROL 報銷申請]**」。 項目會新增至您的收件匣。
 
 ## 釋放索賠項目 {#release-items}
