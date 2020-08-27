@@ -1,6 +1,6 @@
 ---
-title: Adobe IMS驗證和[!DNL Admin Console]支援AEM Managed Services
-seo-title: Adobe IMS驗證和[!DNL Admin Console]支援AEM Managed Services
+title: AEM Managed Services的Adobe IMS [!DNL Admin Console] 驗證與支援
+seo-title: AEM Managed Services的Adobe IMS [!DNL Admin Console] 驗證與支援
 description: 瞭解如何在AEM中使用[!DNL Admin Console]。
 seo-description: 瞭解如何在AEM中使用[!DNL Admin Console]。
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 translation-type: tm+mt
-source-git-commit: a9931024f5cd79e2e363ed46edaef5e3e66c6e14
+source-git-commit: 5a421c66930d8c7a9eb633c707b4b51d4549b303
+workflow-type: tm+mt
+source-wordcount: '1730'
+ht-degree: 10%
 
 ---
 
@@ -35,7 +38,7 @@ AEM登入可讓AEM Managed Services客 [!DNL Admin Console] 戶在單一主控�
 * Product Profiles in [!DNL Admin Console] will determine which instances a user can access
 * 支援使用客戶自己的SAML 2相容身分提供者的同盟驗證
 * 僅支援Enterprise ID或Federated ID（針對客戶單一登入），不支援個人Adobe ID。
-* [!DNL User Management](在Adobe [!DNL Admin Console]中)將繼續歸客戶管理員所有。
+* [!DNL User Management] (在Adobe [!DNL Admin Console]中)將繼續歸客戶管理員所有。
 
 ## 架構 {#architecture}
 
@@ -51,7 +54,7 @@ IMS驗證可在AEM和Adobe IMS端點之間使用OAuth通訊協定運作。 當�
 
 The customer onboarding to [!DNL Admin Console] is a pre-requisite to using Adobe IMS for AEM authentication.
 
-首先，客戶應在Adobe IMS中布建組織。 Adobe企業客戶在 [Adobe [!DNL管理控制台]中代表為IMS組織](https://helpx.adobe.com/enterprise/using/admin-console.html)。
+首先，客戶應在Adobe IMS中布建組織。 Adobe企業客戶在 [Adobe中以IMS組織的形式呈現 [!DNL Admin Console]](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)。
 
 AEM Managed Services customers should already have an organization provisioned, and as part of the IMS provisioning, the customer instances will be made available in the [!DNL Admin Console] for managing user entitlements and access.
 
@@ -69,11 +72,11 @@ AMS和客戶將攜手合作，將使用者驗證移轉至IMS，讓每個客戶�
 
 >[!NOTE]
 >
->如需Adobe Identity Management Basics（包括IDP設定）的詳細資訊，請參閱本 [頁文章。](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
+>如需Adobe Identity Management Basics（包括IDP設定）的詳細資訊，請參閱本 [頁文章。](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)
 >
->如需企業管理的詳細資訊，請 [!DNL Admin Console] 參閱本 [頁文章](https://helpx.adobe.com/enterprise/managing/user-guide.html)。
+>如需企業管理的詳細資訊，請 [!DNL Admin Console] 參閱本 [頁文章](https://helpx.adobe.com/tw/enterprise/managing/user-guide.html)。
 
-### 上線使用者至 [!DNL Admin Console]{#onboarding-users-to-the-admin-console}
+### 上線使用者至 [!DNL Admin Console] {#onboarding-users-to-the-admin-console}
 
 根據客戶的規模及其偏好設定，有三種方式可讓使用者上線：
 
@@ -103,7 +106,7 @@ When User Sync runs, it fetches a list of users from the organization’s Active
 
 此工具可讓系統管理員將客戶目錄中的使用者群組與產品設定以及新的 [!DNL Admin Console]UST版本中的使用者群組對應，也允許在中動態建立使用者群組 [!DNL Admin Console]。
 
-To set up User Sync, the organization needs to create a set of credentials in the same way they would use the [[!DNL User Management] API](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html).
+若要設定「使用者同步」，組織需先透過與 [[!DNL User Management]  API](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html) 相同的使用方式，建立一組憑證。
 
 ![image2018-9-23_13-36-56](assets/image2018-9-23_13-36-56.png)
 
@@ -201,7 +204,7 @@ AEM將繼續管理存取控制和權限，這可透過將來自IMS的使用者�
 
 以下範例中，我們會示範將同步的群組新增至本機 *Dam_Users* 群組。
 
-在這裡，用戶也被指派給中的幾個組 [!DNL Admin Console]。 (請注意，使用使用者同步工具或在本機建立使用者和群組可從LDAP同步，請參閱上述的「 **入門使用者[!DNL Admin Console]**」一節)。
+在這裡，用戶也被指派給中的幾個組 [!DNL Admin Console]。 (請注意，使用使用者同步工具或在本機建立使用者和群組可從LDAP同步，請參閱上述的「 **入門使用者[!DNL Admin Console]** 」一節)。
 
 &amp;ast；請注意，用戶只有在登錄到實例時，用戶組才會同步，對於擁有大量用戶和組的客戶，AMS可以運行組同步實用程式來預取組，以進行上述訪問控制和權限管理。
 
