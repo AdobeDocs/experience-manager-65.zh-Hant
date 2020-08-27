@@ -4,9 +4,9 @@ description: 針對配置、 [!DNL Experience Manager] 硬體、軟體和網路�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2c8220aab9215efba2e4568961a2a6a544803920
+source-git-commit: 5a421c66930d8c7a9eb633c707b4b51d4549b303
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2746'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 ### 最大並行作業數 {#maximum-parallel-jobs}
 
-預設情況下， [!DNL Experience Manager] 運行的並行作業數量上限等於伺服器上的處理器數量。 此設定的問題在於，在負載較重的期間， [!UICONTROL DAM Update Asset] ( [!DNLEDAM更新資產)工作流程會佔用所有處理器，降低UI回應速度，並防止] Experience Manager（體驗管理器）執行其他程式，以保障伺服器效能和穩定性。 作為一個好做法，請通過執行以下步驟將此值設定為伺服器上可用處理器的一半：
+預設情況下， [!DNL Experience Manager] 運行的並行作業數量上限等於伺服器上的處理器數量。 此設定的問題在於，在負載較重的時期， [!UICONTROL DAM更新資產工作流程會佔用所有處理器，降低UI回應速度，並防止執行其他][!DNL Experience Manager] 程式，以保障伺服器效能和穩定性。 作為一個好做法，請通過執行以下步驟將此值設定為伺服器上可用處理器的一半：
 
 1. 在「作 [!DNL Experience Manager] 者」上，存取 `https://[aem_server]:[port]/system/console/slingevent`。
 
