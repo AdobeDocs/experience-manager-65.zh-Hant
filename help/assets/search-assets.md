@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
+source-git-commit: 4efe5247d91fa846c4a444c81245b0fa1515a7b4
 workflow-type: tm+mt
 source-wordcount: '5858'
 ht-degree: 5%
@@ -146,7 +146,7 @@ ht-degree: 5%
 
 ### Adobe Stock影像 {#adobestock}
 
-使用者可 [!DNL Experience Manager] 以從使用者介面搜尋 [Adobe Stock資產](/help/assets/aem-assets-adobe-stock.md) ，並授權所需資產。 新增 `Location: Adobe Stock` 至Omnisearch列。 您也可以使用「篩選」面板來尋找所有授權或未授權的資產，或使用Adobe Stock檔案號碼搜尋特定資產。
+使用者可 [!DNL Experience Manager] 從使用者介面搜尋 [Adobe Stock資產](/help/assets/aem-assets-adobe-stock.md) ，並授權所需資產。 新增 `Location: Adobe Stock` 至Omnisearch列。 您也可以使用「篩選」面板來尋找所有授權或未授權的資產，或使用Adobe Stock檔案號碼搜尋特定資產。
 
 ### 動態媒體資產 {#dmassets}
 
@@ -200,7 +200,7 @@ ht-degree: 5%
 
 ### 從Adobe Asset Link面板搜尋資產 {#aal}
 
-使用Adobe Asset Link，創意專業人員現在可以存取儲存在中的內容，而 [!DNL Experience Manager Assets]不需離開支援的Adobe Creative Cloud應用程式。 創作人員可使用下列項目中的應用程式內面板，順暢地瀏覽、搜尋、結帳和登入資產 [!DNL Adobe Creative Cloud apps]: [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
+使用Adobe Asset Link，創意專業人員現在可以存取儲存在中的內容， [!DNL Experience Manager Assets]而不需離開支援的Adobe Creative Cloud應用程式。 創作人員可使用下列項目中的應用程式內面板，順暢地瀏覽、搜尋、結帳和登入資產 [!DNL Adobe Creative Cloud apps]: [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺化搜尋顯示結果由Adobe Sensei的機器學習演算法提供支援，並協助使用者尋找美學上類似的影像。 請參 [閱使用Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜尋及瀏覽資產。
 
 ### 在案頭應用程式中 [!DNL Experience Manager] 搜尋資產 {#desktopapp}
 
@@ -307,7 +307,7 @@ ht-degree: 5%
 
 * `run????` query與後4個字 `running` 元的字詞相符 `run`。
 
-* `??run` query與之前包含兩 `rerun` 個字元的單字相符 `run`。
+* `??run` query與之前包含兩 `rerun` 個字元的字詞相符 `run`。
 
 ![使用範例說明在資產搜尋中使用問號萬用字元](assets/search_with_questionmark_run.gif)
 
@@ -367,7 +367,7 @@ ht-degree: 5%
 
 您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
 
-如果文字擷取對您的部署而言太過耗費資源，請考慮停用 [文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
+如果文字擷取對您的部署而言太過耗費資源，請考慮停 [用文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
 ### 自訂謂語以篩選搜尋結果 {#custompredicates}
 
@@ -403,7 +403,7 @@ ht-degree: 5%
 
 ### 對搜索結果排序 {#sort}
 
-對搜尋結果排序，以更快發現所需資產。 You can sort the search results in list view and only when you select **[!UICONTROL [Files](#searchui)]**from the**[!UICONTROL  Filters ]**panel.[!DNL Experience Manager Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
+對搜尋結果排序，以更快發現所需資產。 You can sort the search results in list view and only when you select **[!UICONTROL [Files]](#searchui)** from the **[!UICONTROL Filters]** panel. [!DNL Experience Manager Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
 
 在清單檢視中，您可以像排序任何資料夾中的資產一樣，對搜尋結果進行排序。 排序功能適用於這些欄——名稱、標題、狀態、維度、大小、評分、使用狀況、（日期）建立、（日期）修改、（日期）發佈、工作流程和檢出。
 
