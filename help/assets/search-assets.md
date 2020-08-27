@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4efe5247d91fa846c4a444c81245b0fa1515a7b4
+source-git-commit: 5bbdc80f199a2af38631a5443c46daae827abb52
 workflow-type: tm+mt
 source-wordcount: '5858'
 ht-degree: 5%
@@ -403,7 +403,7 @@ ht-degree: 5%
 
 ### 對搜索結果排序 {#sort}
 
-對搜尋結果排序，以更快發現所需資產。 You can sort the search results in list view and only when you select **[!UICONTROL [Files]](#searchui)** from the **[!UICONTROL Filters]** panel. [!DNL Experience Manager Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
+對搜尋結果排序，以更快發現所需資產。 You can sort the search results in list view and only when you select **[[!UICONTROL Files]](#searchui)** from the **[!UICONTROL Filters]** panel. [!DNL Experience Manager Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
 
 在清單檢視中，您可以像排序任何資料夾中的資產一樣，對搜尋結果進行排序。 排序功能適用於這些欄——名稱、標題、狀態、維度、大小、評分、使用狀況、（日期）建立、（日期）修改、（日期）發佈、工作流程和檢出。
 
