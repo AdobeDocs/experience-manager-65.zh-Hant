@@ -8,16 +8,15 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '1435'
+ht-degree: 0%
 
 ---
 
 
 # 員工招聘參考網站漫步 {#employee-recruitment-reference-site-walkthrough}
-
-## 先決條件 {#prerequisite}
-
-依「設定和設定AEM Forms參考網站」中 [所述設定參考網站](/help/forms/using/setup-reference-sites.md)。
 
 ## 概覽 {#overview}
 
@@ -86,7 +85,7 @@ Sarah按一下「在發佈工作時套用」。 作業申請表單隨即開啟�
 
 We.Finance首頁和職業頁面是AEM Sites頁面。 職業頁面內嵌調適性表單，使用可重複的面板來使用服務擷取工作空缺，並將其列在頁面上。 您可以在上查看最適化表單 `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`。
 
-### 親眼看看 {#see-it-yourself}
+### 親自查看 {#see-it-yourself}
 
 前往並按 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 一下「 **[!UICONTROL 職業]**」。 按一 **[!UICONTROL 下「搜尋]** 」以填入工作清單，然後按一 **[!UICONTROL 下「套用工作]** 」。 在表單中填寫詳細資料並提交申請。
 
@@ -108,7 +107,7 @@ John&#39;s AEM Inbox
 
 「作業申請表」中的提交操作會觸發在John Jacob收件箱中建立任務以篩選申請的工作流。 當John審核並列出應用程式時，工作流程會在招聘經理Gloria的收件箱中建立一個任務。
 
-### 親眼看看 {#see-it-yourself-1}
+### 親自查看 {#see-it-yourself-1}
 
 前往並使 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`用jacobs/password作為John Jacobs的使用者名稱／密碼登入。 開啟「候選人配置檔案複查」任務，並列出申請人。
 
@@ -128,7 +127,7 @@ Gloria的AEM收件匣
 
 當Gloria核准面試候選人時，工作流程會在John Doe的AEM收件匣中建立工作，John Doe是We.Finance的招募人員。
 
-### 親眼看看 {#see-it-yourself-2}
+### 親自查看 {#see-it-yourself-2}
 
 前往並 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` 使用jjacobs/password登入，作為John Jacobs的使用者名稱／密碼。 開啟「候選人配置檔案複查」任務，並列出申請人。
 
@@ -148,7 +147,7 @@ John Doe會安排面試，並將詳細資訊發送給Sarah Rose
 
 ## 莎拉·羅絲收到電子郵件並安排面試 {#sarah-rose-receives-the-email-with-interview-schedule}
 
-Sarah rose會收到電子郵件，內含面試時間表、地點和其他詳細資訊。 她按下「接受」，表示她對面試時間表和場地沒問題。 在精確資訊的指引下，莎拉參加了面試。
+Sarah Rose會收到電子郵件，內含面試時間表、地點和其他詳細資訊。 她按下「接受」，表示她對面試時間表和場地沒問題。 在精確資訊的指引下，莎拉參加了面試。
 
 ![薩拉赫羅斯被採訪者郵件](assets/sarahroseinterviewemail.png)
 
@@ -172,11 +171,11 @@ Gloria的AEM收件匣
 
 ![johndoeinbox](assets/johndoeinbox.png)![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 
-John Doe向Sarah rose索取更多有關其教育與工作經驗的資訊
+John Doe向Sarah Rose索取更多有關其教育與工作經驗的資訊
 
 ## 莎拉·羅絲收到電子郵件，要求進一步資訊 {#sarah-rose-receives-an-email-requesting-further-information}
 
-Sarah rose收到一封電子郵件，通知她需要進一步資訊才能處理她的就業申請。 電子郵件包含表單的連結，以填寫所需資訊。
+Sarah Rose收到一封電子郵件，通知她需要進一步資訊才能處理她的就業申請。 電子郵件包含表單的連結，以填寫所需資訊。
 
 ![sarahroseemailmore詳細資訊](assets/sarahroseemailmoredetails.png)
 
@@ -194,7 +193,7 @@ Sarah會根據John Doe的要求填入其他資訊，然後按一下「提交」
 
 ## John Doe會檢閱選取的候選設定檔，以取得其他提供的資訊 {#john-doe-reviews-the-selected-candidate-profile-for-the-additional-information-provided}
 
-John Doe會選取候選審核請求並開啟它。 John Doe發現Sarah已根據需要填寫了所有資訊。 在檢閱應用程式後，John Doe按一下「核准」。 經John Doe批准，對Sarah rose進行背景調查的請求將轉發給John Jacobs。
+John Doe會選取候選審核請求並開啟它。 John Doe發現Sarah已根據需要填寫了所有資訊。 在檢閱應用程式後，John Doe按一下「核准」。 經John Doe批准，對Sarah Rose進行背景調查的請求將轉發給John Jacobs。
 
 ![johndoed附加資訊收件箱](assets/johndoeadditionainformationinbox.png)
 
