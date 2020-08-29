@@ -10,14 +10,17 @@ topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
 # 使用起點{#working-with-startpoints}
 
-起始點會叫用在「工作台」中建立的流程。 它與表單關聯，表單提交時會叫用流程。 請參 [閱Geometrixx Finance參考網站逐步說明](../../forms/using/finance-reference-site-walkthrough.md) ，以瞭解程式。
+起始點會叫用在「工作台」中建立的流程。 它與表單關聯，表單提交時會叫用流程。
 
 >[!NOTE]
 >
