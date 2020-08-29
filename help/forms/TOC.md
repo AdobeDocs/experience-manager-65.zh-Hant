@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Forms使用指南
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: a1ada0e747f46923dc834c872e522e648adae073
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '3719'
+source-wordcount: '3704'
 ht-degree: 1%
 
 ---
@@ -42,11 +42,8 @@ ht-degree: 1%
       + [教學課程：建立範本](using/create-templates-print-web.md)
       + [教學課程：建立互動式通訊](using/create-interactive-communication0.md)
    + AEM Forms參考資料 {#aem-forms-reference-collaterals}
-      + [設定和配置We.Finance和員工自助服務參考站點](using/setup-reference-sites.md)
-      + [設定和設定We.Gov參考網站](/help/forms/using/forms-install-configure-gov-reference-site.md)
-      + [We.Finance參考網站逐步說明](using/finance-reference-site-walkthrough.md)
-      + [We.Gov參考網站逐步說明](/help/forms/using/forms-gov-reference-site-user-demo.md)
-      + [員工自助服務參考網站逐步介紹](/help/forms/using/employee-self-service-reference-site.md)
+      + [設定和設定We.Gov和We.Finance參考網站](/help/forms/using/forms-install-configure-gov-reference-site.md)
+      + [We.Gov和We.Finance參考網站逐步說明](/help/forms/using/forms-gov-reference-site-user-demo.md)
       + [員工招聘參考網站漫步](/help/forms/using/employee-recruitment-reference-site.md)
       + [We.Finance汽車保險續約參考網站](/help/forms/using/finance-auto-insurance-renewal-reference-site-walkthrough.md)
       + [We.Gov參考網站FOIA逐步介紹](/help/forms/using/gov-reference-site-foia-walkthrough.md)
@@ -332,7 +329,7 @@ ht-degree: 1%
 + 將AEM Forms與Experience Cloud解決方案整合 {#integrate-aem-forms-with-experience-cloud-solutions}
    + [在AEM Forms中建立目標體驗](/help/forms/using/experience-targeting-forms.md)
    + [評估並改善表單的效能與轉換](using/measure-improve-performance-forms-documents.md)
-   + [設定分析和報告](using/configure-analytics-forms-documents.md)
+   + [設定分析和報表](using/configure-analytics-forms-documents.md)
    + [檢視並瞭解AEM Forms分析報表](using/view-understand-aem-forms-analytics-reports.md)
    + [針對最適化表單建立和管理A/B測試](using/ab-testing-adaptive-forms.md)
 + 發佈及處理AEM表單 {#publish-process-aem-forms}
@@ -584,7 +581,7 @@ ht-degree: 1%
    + [AEM Forms on JEE Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
    + [HTML5表單的Form Bridge API](using/form-bridge-apis.md)
    + [適用於Adaptive Forms的JavaScript程式庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
-   + [Assembler Service和DDX參考](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
+   + [Assembler Service和DDX Reference](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
    + [Workbench說明](http://www.adobe.com/go/learn_aemforms_workbench_65)
    + 在JEE上使用AEM Forms進行程式設計 {#programming-aem-forms-jee}
       + 在JEE上使用AEM Forms進行程式設計簡介 {#introduction-programming-aem-forms-jee}
