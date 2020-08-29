@@ -1,26 +1,26 @@
 ---
-title: We.Gov參考網站逐步說明
-seo-title: We.Gov參考網站逐步說明
-description: 使用虛構的使用者和群組，使用We.Gov示範套件來執行AEM Forms工作。
-seo-description: 使用虛構的使用者和群組，使用We.Gov示範套件來執行AEM Forms工作。
+title: We.Gov和We.Finance參考網站逐步說明
+seo-title: We.Gov和We.Finance參考網站逐步說明
+description: 使用虛構的使用者和群組，使用We.Gov和We.Finance示範套件來執行AEM Forms工作。
+seo-description: 使用虛構的使用者和群組，使用We.Gov和We.Finance示範套件來執行AEM Forms工作。
 uuid: 797e301a-36ed-4bae-9ea8-ee77285c786d
 contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1da42d7274e9a4257b9e8effae2b754e0104aa4
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '2536'
+source-wordcount: '2548'
 ht-degree: 0%
 
 ---
 
 
-# We.Gov參考網站逐步說明 {#we-gov-reference-site-walkthrough}
+# We.Gov和We.Finance參考網站逐步說明 {#we-gov-reference-site-walkthrough}
 
 ## 先決條件 {#pre-requisites}
 
-依照設定和設定We.Gov參考網 [站中所述設定參考網站](../../forms/using/forms-install-configure-gov-reference-site.md)。
+按照設定和配置We.Gov和We.Finance [參考站點中所述設定參考站點](../../forms/using/forms-install-configure-gov-reference-site.md)。
 
 ## 使用者動態 {#user-story}
 
@@ -85,7 +85,7 @@ We.Gov示範套件隨附下列內建虛擬使用者：
 1. **表單入口網站**: *https://&lt;aemserver>:&lt;port>/content/we-gov/formsportal.html*
 1. **Mobile View**:We.Gov使用者可使用重新調整大小的瀏覽器來複製行動檢視。
 1. **案頭檢視**:We.gov使用者可在膝上型電腦或桌上型電腦上檢視示範。
-1. **預螢幕擷取表單**:We.Gov網站首頁的表格。
+1. **預螢幕擷取表格**:We.Gov網站首頁的表格。
 1. **最適化表單**:We.gov示範的註冊申請表。
 
    *https://&lt;aemserver>:&lt;port>/content/forms/af/adobe-gov-forms/enrollment-application-for-health-benefits.html*
