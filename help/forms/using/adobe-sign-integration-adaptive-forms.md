@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6eb6ea86c5544329be5cb28500c59c632ccc9639
+source-git-commit: 2e5cf93eb3ce47b65298b8de13c7d874d1989073
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -90,6 +90,7 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 1. 開啟AEM Web Console。 URL是 `https://'[server]:[port]'/system/console/configMgr`
 1. 開啟 **Forms Common Configuration Service。**
 1. 在「允 **許** 」欄位中，選 **取「所有使用者** -所有使用者（匿名或登入）」，可預覽附件、驗證和簽署表格，然後按一下「儲 **存」。** 作者例項已設定為使用Adobe Sign。
+1. 發佈設定。
 1. 使用 [複製](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) ，在對應的發佈實例上建立相同的配置。
 
 現在，Adobe Sign已與AEM Forms整合，可在最適化表單中使用。 若要 [在最適化表單中使用Adobe Sign服務](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，請在最適化表單屬性中指定上方建立的組態容器。
