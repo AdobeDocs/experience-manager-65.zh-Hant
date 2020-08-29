@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 translation-type: tm+mt
-source-git-commit: dc7804c9985bf9a14bfad40f546e393b39615dab
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 5%
 
 ---
 
@@ -28,14 +31,10 @@ source-git-commit: dc7804c9985bf9a14bfad40f546e393b39615dab
 
 * 與表單資料模型立即可用的整合，讓您輕鬆簡化對後端資料庫和其他CRM系統（例如MS® Dynamics）的存取
 * 整合的製作介面，適用於列印和網頁通道，並可自動從列印通道產生網頁通道
-* 以易於理解的視覺格式呈現列印和網頁中的資訊圖表
+* 以易於理解的視覺格式呈現列印和網頁資訊的圖表
 * 檔案片段支援規則編輯器和表單資料模型
 * 代理用戶介面顯示互動式通信的打印和Web預覽
 * 拖放元件，以快速建構列印和網頁頻道
-
-## 範例使用案例 {#sample-use-case}
-
-信用 [卡客戶範例使用案例的歡迎套件](/help/forms/using/finance-reference-site-walkthrough.md#credit-card-application-walkthrough) ，展示互動式通訊的功能。
 
 ## Interactive Communication creation  {#interactive-communication-creation}
 
