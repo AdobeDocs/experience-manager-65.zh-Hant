@@ -1,64 +1,65 @@
 ---
 title: 為We.Finance參考網站的住房抵押工作流程配置Microsoft Dynamics 365
 seo-title: 為We.Finance參考網站的住房抵押工作流程配置Microsoft Dynamics 365
-description: Learn how to leverage the Microsoft® Dynamics 365 services through adaptive forms for the home mortgage workflow of the We.Finance Reference site
-seo-description: Learn how to leverage the Microsoft® Dynamics 365 services through adaptive forms for the home mortgage workflow of the We.Finance Reference site
+description: 瞭解如何透過We.Finance參考網站的住房抵押工作流程調整表單，運用Microsoft® Dynamics 365服務
+seo-description: 瞭解如何透過We.Finance參考網站的住房抵押工作流程調整表單，運用Microsoft® Dynamics 365服務
 uuid: a0656d90-84c7-46d1-9a16-dadcc19ff9ef
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: Configuration
 discoiquuid: 6b31397a-fb06-4043-9368-59fb4fce8afa
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 0%
 
 ---
 
 
-# Configure Microsoft Dynamics 365 for the home mortgage workflow of the We.Finance reference site {#configure-microsoft-dynamics-for-the-home-mortgage-workflow-of-the-we-finance-reference-site}
+# 為We.Finance參考網站的住房抵押工作流程配置Microsoft Dynamics 365 {#configure-microsoft-dynamics-for-the-home-mortgage-workflow-of-the-we-finance-reference-site}
 
-Learn how to leverage the Microsoft® Dynamics 365 services through adaptive forms for the home mortgage workflow of the We.Finance Reference site
+瞭解如何透過We.Finance參考網站的住房抵押工作流程調整表單，運用Microsoft® Dynamics 365服務
 
 ## 概覽 {#overview}
 
-Microsoft® Dynamics 365 is a Customer Relationship Management (CRM) and Enterprise Resource Planning (ERP) software that provides enterprise solutions for creating and managing customer accounts, contacts, leads, opportunities, and cases.
+Microsoft® Dynamics 365是客戶關係管理(CRM)和企業資源規劃(ERP)軟體，提供企業解決方案，以建立和管理客戶帳戶、聯絡人、潛在客戶、商機和案例。
 
-AEM Forms provides a cloud service to integrate Dynamics 365 with [Forms Data Integration](/help/forms/using/data-integration.md) module. The scenario [Home Mortgage application walkthrough with Microsoft® Dynamics](/help/forms/using/finance-reference-site-walkthrough.md#home-mortgage-application-walkthrough-with-microsoft-dynamics) showcases how a customer uses the We.Finance reference site to apply for a loan when the site is using Microsoft® Dynamics for Forms Data Integration. Before you can use the Home Mortgage application walkthrough with Microsoft® Dynamics scenario, you need to configure Microsoft® Dynamics 365 to be used with the We.Finance reference site.
+AEM Forms提供雲端服務，可將Dynamics 365與 [Forms Data Integration](/help/forms/using/data-integration.md) 模組整合。 在Microsoft® Dynamics案例中使用「家庭抵押」應用程式逐步說明之前，您必須設定Microsoft® Dynamics 365，以便與We.Finance參考網站搭配使用。
 
 ## 必備條件 {#prerequisites}
 
-Before you begin to set up and configure Dynamics 365, ensure that you have:
+在開始設定和設定Dynamics 365之前，請確定您已：
 
-* [Set up and configure AEM Forms reference sites](/help/forms/using/setup-reference-sites.md).
-
-* AEM 6.3 Forms Service Pack 1 and later
-* Microsoft® Dynamics 365 account
-* Registered application for Dynamics 365 service with Microsoft® Azure Active Directory
-* Client ID and client secret for the registered application
+* AEM 6.3 Forms Service Pack 1和更新版本
+* Microsoft® Dynamics 365帳戶
+* Microsoft® Azure Active Directory的Dynamics 365服務註冊應用程式
+* 註冊應用程式的用戶端ID和用戶端密碼
 
 ## 將首頁抵押電腦與您的網站首頁連結 {#link-the-home-mortgage-calculator-with-your-site-home-page}
 
-1. On the author instance, go to the following page:
+1. 在作者例項上，請前往下列頁面：
 
    `https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html`
 
-1. Scroll down to the Home Mortgage Calculator.
-1. Highlight the right column&#39;s (calculator&#39;s) panel and tap to display the pop-up menu. In the pop-up menu, tap Configure. The Edit AEM Forms Container dialog appears.
+1. 向下捲動至「房屋抵押計算器」。
+1. 選中右欄的（計算器）面板，點選以顯示快顯功能表。 在彈出式選單中，點選「設定」。 此時會顯示「編輯AEM Forms容器」對話方塊。
 
    ![計算器配置面板](assets/calculatorconfigurepanel.png)
 
-1. In the Edit AEM Forms Container dialog, browse the asset path and select home-mortgage-calculator at the following path and tap **Confirm**:
+1. 在「編輯AEM Forms容器」對話方塊中，瀏覽資產路徑，並在下列路徑選取家庭抵押計算器，然後點選「確 **認**:
 
    formsanddocuments/We.Finance/MS Dynamics/
 
    ![selectassetpath](assets/selectassetpath.png)
 
 1. 點選「 **完成**」。
-1. Publish the edited page.
+1. 發佈已編輯的頁面。
 
    >[!NOTE]
    >
-   >The binding of the calculator fields with the FDM is preconfigured through the We.Finance reference site package. To view the binding, you can open the form in the authoring mode and see the field bind references.
+   >計算器欄位與FDM的綁定是通過We.Finance參考站點包預配置的。 若要檢視系結，您可以在編寫模式中開啟表單，並查看欄位系結參考。
 
-1. To create a custom entity for storing applicant record for home mortgage application, import the AEMFormsFSIRefsite_1_0.zip solution package to your Microsoft® Dynamics instance:
+1. 若要建立自訂實體，以儲存房屋抵押申請的申請人記錄，請將AEMFormsFSIRefsite_1_0.zip解決方案套件匯入您的Microsoft® Dynamics例項：
 
    1. 從以下網址下載套件：
 
