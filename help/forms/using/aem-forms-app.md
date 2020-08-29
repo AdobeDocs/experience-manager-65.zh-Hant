@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
 workflow-type: tm+mt
 source-wordcount: '2470'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 概覽 {#overview}
 
-AEM Forms應用程式可讓您根據伺服器，在行動裝置上同步最適化表單、行動表單和表單。 您可以定義以OSGi或JEE的 [Forms工作流程為中心的](/help/forms/using/aem-forms-workflow.md)[工作流程](/help/forms/using/finance-reference-site-walkthrough.md#approving-the-application)。 例如，您經營一家銀行，並使用AEM Forms來管理客戶應用程式和通訊。 您的客戶填寫表格並送出以進行驗證。 如果您在行動裝置上啟用表單，您的客戶可以在AEM Forms應用程式中填寫表單。 您也可以在行動裝置上啟用驗證表單，以管理驗證工作流程。 您的現場工作人員可以攜帶行動裝置給客戶、驗證詳細資訊並提交表單。 AEM Forms應用程式會與AEM Forms伺服器同步，並擷取針對行動裝置啟用的表單。 如果應用程式已離線，它會將資料儲存在本機。
+AEM Forms應用程式可讓您根據伺服器，在行動裝置上同步最適化表單、行動表單和表單。 您可以定義以OSGi或JEE的 [Forms工作流程為中心的工作流程](/help/forms/using/aem-forms-workflow.md) 。 例如，您經營一家銀行，並使用AEM Forms來管理客戶應用程式和通訊。 您的客戶填寫表格並送出以進行驗證。 如果您在行動裝置上啟用表單，您的客戶可以在AEM Forms應用程式中填寫表單。 您也可以在行動裝置上啟用驗證表單，以管理驗證工作流程。 您的現場工作人員可以攜帶行動裝置給客戶、驗證詳細資訊並提交表單。 AEM Forms應用程式會與AEM Forms伺服器同步，並擷取針對行動裝置啟用的表單。 如果應用程式已離線，它會將資料儲存在本機。
 
 AEM Forms應用程式的原始碼可供客戶透過「軟體散發」取得。 「軟體分發」中的原始碼包可以從以下位置獲得： `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
 
@@ -150,7 +150,7 @@ AEM Forms應用程式支援動態適應使用者輸入的最適化表單。 也�
 
 AEM Forms應用程式提供行動解決方案，讓現場工作人員處理指派給他們的表單。 應用程式會從伺服器快取完整資料，並借由將所有工作儲存在本機，提供有效率的使用者體驗。 磁碟中的資料通過及時同步更新發送到伺服器。
 
-AEM Forms應用程式是以PhoneGap 5.0為基礎的應用程式，其中Backbone模型可有效率地用來透過檢視呈現儲存在模型中的資料。 所有原生作業都是透過PhoneGap外掛程式執行。
+AEM Forms應用程式是以PhoneGap 5.0為基礎的應用程式，Backbone模型可有效率地用來透過檢視呈現儲存在模型中的資料。 所有原生作業都是透過PhoneGap外掛程式執行。
 
 ## 自訂、建立和散發AEM Forms應用程式 {#customize-build-distribute}
 
@@ -164,11 +164,11 @@ AEM Forms應用程式可輕鬆自訂，以符合組織特定需求。 應用程�
 
 您可以自訂您的應用程式：
 
-**品牌**: 在AEM Forms應用程式中變更應用程式圖示、應用程式名稱、啟動影像和頁面。 您也可以變更文字，將應用程式當地語系化至特定地區。 如需AEM Forms應用程式品牌化的詳細資訊，請參閱「品牌 [化自訂」](/help/forms/using/branding-customization.md)。
+**品牌**:在AEM Forms應用程式中變更應用程式圖示、應用程式名稱、啟動影像和頁面。 您也可以變更文字，將應用程式當地語系化至特定地區。 如需AEM Forms應用程式品牌化的詳細資訊，請參閱「品牌 [化自訂」](/help/forms/using/branding-customization.md)。
 
-**主題**: 在AEM Forms應用程式使用者介面中變更顏色、字型和間距等樣式。 如需詳細資訊，請參閱 [主題自訂](/help/forms/using/theme-customization.md)。
+**主題**:在AEM Forms應用程式使用者介面中變更顏色、字型和間距等樣式。 如需詳細資訊，請參閱 [主題自訂](/help/forms/using/theme-customization.md)。
 
-**手勢**: 在AEM Forms應用程式使用者介面中變更手勢，例如向右滑動和向左滑動。 如需詳細資訊，請參閱「手 [勢自訂」](/help/forms/using/gesture-customization.md)。
+**手勢**:在AEM Forms應用程式使用者介面中變更手勢，例如向右滑動和向左滑動。 如需詳細資訊，請參閱「手 [勢自訂」](/help/forms/using/gesture-customization.md)。
 
 如需設定AEM Forms應用程式專案以進行自訂的詳細資訊，請參閱：
 
