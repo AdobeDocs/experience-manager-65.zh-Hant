@@ -1,5 +1,5 @@
 ---
-title: 設定和設定We.Gov參考網站
+title: 設定和設定We.Gov和We.Finance參考網站
 seo-title: 設定和設定We.Gov參考網站
 description: 安裝、設定和自訂AEM Forms示範套件。
 seo-description: 安裝、設定和自訂AEM Forms示範套件。
@@ -8,15 +8,15 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c42e5e5274c41469824f12b228698a77bf5d4a6
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '4738'
+source-wordcount: '4742'
 ht-degree: 1%
 
 ---
 
 
-# 設定和設定We.Gov參考網站 {#set-up-and-configure-we-gov-reference-site}
+# 設定和設定We.Gov和We.Finance參考網站 {#set-up-and-configure-we-gov-reference-site}
 
 ## 示範套件詳細資訊 {#demo-package-details}
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
       * **we-gov-forms.core-&lt;version>.jar** —— 包 *含所有OSGI服務、自訂工作流程步驟實作等。*
 
-      * **we-gov-forms.derby&lt;version>.jar** —— 包 *含所有OSGI服務、資料庫架構等。*
+      * **we-gov-forms.derby&lt;version>.jar** - *包含所有OSGI服務、資料庫模式等。*
 
       * **core.wcm.components.all-2.0.4.zip** —— 范 *例WCM元件的集合*
 
@@ -119,7 +119,7 @@ ht-degree: 1%
 要安裝新軟體包版本，請遵循4.1和4.2中定義的步驟。在已安裝其他較舊軟體包的情況下安裝較新軟體包版本是可行的，但建議先卸載較舊軟體包版本。 若要這麼做，請遵循下列步驟。
 
 1. 導覽至 *https://&lt;aemserver>:&lt;port>/crx/packmgr/index.jsp*
-1. 找到 **較舊的we-gov-forms.pkg.all-&lt;version>.zip** 檔案。
+1. 找到 **較舊的we-gov-forms.pkg.all-&lt;version>.zip檔** 。
 1. 選擇「更多」選項。
 1. 從下拉式清單中，選取「解除安裝」選項。
 
@@ -180,7 +180,7 @@ ht-degree: 1%
 **附註:**
 
 1. 導覽至https://&lt;aemserver>:&lt;port>/aem/inbox，您將可在此處完成上述參考檔案連結中說明的程式。
-1. 包 `we-gov-forms.pkg.all-[version].zip` 含範例SSL金鑰和憑證，可透過擷取包中的資 `we-gov-forms.pkg.all-[version].zip/ssl` 料夾來存取。
+1. 包 `we-gov-forms.pkg.all-[version].zip` 括示例SSL密鑰和證書，可通過提取包的 `we-gov-forms.pkg.all-[version].zip/ssl` 資料夾來訪問該證書。
 
 1. SSL憑證和金鑰詳細資訊：
 
@@ -277,7 +277,7 @@ ht-degree: 1%
 
 1. 在「設定」檢視中，按一下「金鑰」以檢視建立新金鑰（這會用作AEM中的「用戶端密碼」）。
 
-   1. 請務必保留金鑰副本，因為您以後無法在Azure或AEM中檢視它。
+   1. 請務必保留金鑰的副本，因為您以後無法在Azure或AEM中檢視它。
 
 1. 要找到資源URL/服務根URL，請導航到MS Dynamics實例儀表板。
 1. 在頂端導覽列中，按一下「銷售」或您自己的例項類型，然後按一下「選取設定」。
@@ -351,7 +351,7 @@ ht-degree: 1%
 
 * [檢視頁面分析資料](../../sites-authoring/pa-using.md)
 
-* [設定分析和報告](configure-analytics-forms-documents.md)
+* [設定分析和報表](configure-analytics-forms-documents.md)
 
 * [檢視並瞭解AEM Forms分析報表](view-understand-aem-forms-analytics-reports.md)
 
@@ -431,7 +431,7 @@ AEM Forms Analytics資料在離線時可用，如果已安裝套件，則 `we-go
 
    ![AEM Sites分析](assets/sites_analysis.jpg)
 
-1. 返回頁面檢視頁面（在步驟3中存取）時，您也可以變更顯示設定，以檢視「清單檢視」中的項目，以檢視頁面檢視資訊。
+1. 回到頁面檢視頁面（在步驟3.中存取），您也可以變更顯示設定以檢視「清單檢視」中的項目，來檢視頁面檢視資訊。
 1. 找到「View」（檢視）下拉式功能表，並選取「List View」（清單檢視）。
 
    ![清單檢視](assets/list_view.jpg)
@@ -729,7 +729,7 @@ Project DAM Assets也包含We.Gov標誌和影像。 這些資產可在以下網�
 
 由於某些限制，此工作流程包含數個指令碼和自訂OSGI工作流程程式步驟。 這些工作流程步驟已建立為一般步驟，而且尚未使用設定對話框建立。 目前，工作流步驟的配置依賴於進程參數。
 
-所有工作流程步驟Java程式碼都 **包含在we-gov-forms.core-&lt;version>.jar套件中** 。
+所有工作流程步驟Java程式碼都 **包含在we-gov-forms.core-&lt;version>.jar** bundle中。
 
 ## 示範注意事項和已知問題 {#demo-considerations-and-known-issues}
 
@@ -759,7 +759,7 @@ Project DAM Assets也包含We.Gov標誌和影像。 這些資產可在以下網�
 
 使用者面前顯示的數字是他們取得的整體協助工具分級。 此外，還說明如何在分數之後計算此值。
 
-如果使用者想要匯出此功能，可以按一下畫面右側的三個按鈕，然後從外掛程式提供的其他選項中選取。
+如果使用者想要匯出此功能，可以按一下畫面右側的三個按鈕，並從外掛程式提供的其他選項中選取。
 
 ![協助工具報告](assets/aftia-accessibility-report.jpg)
 
