@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+workflow-type: tm+mt
+source-wordcount: '537'
+ht-degree: 1%
 
 ---
 
@@ -27,11 +30,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 這可作為對升級至AEM 6.5所涉及的開發工作的評估。
 
-## 如何設定 {#how-to-set-up}
+## 設定方法 {#how-to-set-up}
 
 Pattern Detector會以單一套件的形 [式個別發行](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65) ，適用於以AEM 6.5升級為目標的6.1到6.5的任何來源AEM版本。 它可以使用「包管理器」( [Package Manager)安裝](/help/sites-administering/package-manager.md)。
 
-## 如何使用 {#how-to-use}
+## 使用方式 {#how-to-use}
 
 >[!NOTE]
 >
