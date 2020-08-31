@@ -10,7 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+workflow-type: tm+mt
+source-wordcount: '5029'
+ht-degree: 1%
 
 ---
 
@@ -48,23 +51,23 @@ ContextHub Javascript API所定義的常數值。
 | **常數** | **說明** | **值** |
 |---|---|---|
 | ContextHub.Constants.EVENT_UI_MODE_REGISTERED | 註冊模式時引發 | ui-mode註冊 |
-| ContextHub.Constants.EVENT_UI_MODE_UNECURRED | 未註冊模式時引發 | ui-mode-unregered |
+| ContextHub.Constants.EVENT_UI_MODE_UNREGISTERED | 未註冊模式時引發 | ui-mode-unregered |
 | ContextHub.Constants.EVENT_UI_MODE_RENDERER_REGISTERED | 在註冊模式轉換器時引發 | ui-mode-renderer-registered |
-| ContextHub.Constants.EVENT_UI_MODE_RENDERER_UNREGERRED | 當模式轉換器未註冊時引發 | ui-mode-renderer-unregerred |
+| ContextHub.Constants.EVENT_UI_MODE_RENDERER_UNREGISTERED | 當模式轉換器未註冊時引發 | ui-mode-renderer-unregerred |
 | ContextHub.Constants.EVENT_UI_MODE_ADDED | 新增模式時引發 | ui-mode-added |
 | ContextHub.Constants.EVENT_UI_MODE_REMOVED | 移除模式時引發 | ui-mode-removed |
 | ContextHub.Constants.EVENT_UI_MODE_SELECTED | 當使用者選取模式時引發 | ui-mode-selected |
 | ContextHub.Constants.EVENT_UI_MODULE_REGISTERED | 註冊新模組時引發 | ui-module-registered |
-| ContextHub.Constants.EVENT_UI_MODULE_UNECURRED | 未註冊模組時引發 | ui-module-unregered |
+| ContextHub.Constants.EVENT_UI_MODULE_UNREGISTERED | 未註冊模組時引發 | ui-module-unregered |
 | ContextHub.Constants.EVENT_UI_MODULE_RENDERER_REGISTERED | 在註冊模組轉譯器時引發 | ui-module-renderer-registered |
-| ContextHub.Constants.EVENT_UI_MODULE_RENDERER_UNECURRED | 在未註冊模組渲染器時引發 | ui-module-renderer-unregred |
+| ContextHub.Constants.EVENT_UI_MODULE_RENDERER_UNREGISTERED | 在未註冊模組渲染器時引發 | ui-module-renderer-unregred |
 | ContextHub.Constants.EVENT_UI_MODULE_ADDED | 新增模組時引發 | ui-module-added |
 | ContextHub.Constants.EVENT_UI_MODULE_REMOVED | 移除模組時引發 | ui-module-removed |
 | ContextHub.Constants.EVENT_UI_CONTAINER_ADDED | 將UI容器新增至頁面時引發 | ui-container-added |
 | ContextHub.Constants.EVENT_UI_CONTAINER_OPENED | 開啟ContextHub UI時引發 | ui-container-opened |
 | ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED | 在收合ContextHub UI時引發 | ui-container-closed |
 | ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED | 修改屬性時引發 | ui-property-modified |
-| ContextHub.Constants.EVENT_UI_RENDED | 每次轉譯ContextHub UI時引發（例如在屬性變更後） | ui-rendered |
+| ContextHub.Constants.EVENT_UI_RENDERED | 每次轉譯ContextHub UI時引發（例如在屬性變更後） | ui-rendered |
 | ContextHub.Constants.EVENT_UI_INITIALIZED | 初始化UI容器時引發 | ui-initialized |
 | ContextHub.Constants.ACTIVE_UI_MODE | 指示活動的UI模式 | /_/active-ui-mode |
 
@@ -99,7 +102,7 @@ var geoloc = allStores.geolocation
 
 **參數**
 
-* **** 名稱：註冊商店的名稱。
+* **名稱：** 註冊商店的名稱。
 
 **退貨**
 
@@ -165,15 +168,15 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 合併資料對象或陣列與儲存資料。 對象或陣列中的每個鍵／值對都添加到儲存中(通過函 `setItem` 數):
 
-* **** 物件：鍵是屬性名稱。
-* **** 陣列：鍵是陣列索引。
+* **物件：** 鍵是屬性名稱。
+* **陣列：** 鍵是陣列索引。
 
 請注意，值可以是物件。
 
 **參數**
 
-* **** 樹狀結構：（物件或陣列）要新增至儲存區的資料。
-* **** 選項：（物件）傳遞至setItem函式的選項選項物件。 如需詳細資訊，請 `options` 參閱 [setItem(key,value,options)的參數](/help/sites-developing/contexthub-api.md#setitem-key-value-options)。
+* **樹狀結構：** （物件或陣列）要新增至儲存區的資料。
+* **選項：** （物件）傳遞至setItem函式的選項選項物件。 如需詳細資訊，請 `options` 參閱 [setItem(key,value,options)的參數](/help/sites-developing/contexthub-api.md#setitem-key-value-options)。
 
 **退貨**
 
@@ -188,9 +191,9 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** 鍵：引用的鍵 `anotherKey`。
+* **鍵：** 引用的鍵 `anotherKey`。
 
-* **** 其他金鑰：參考的索引鍵 `key`。
+* **其他金鑰：** 參考的索引鍵 `key`。
 
 **退貨**
 
@@ -213,7 +216,7 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** 鍵：（字串）要傳回值的索引鍵。
+* **鍵：** （字串）要傳回值的索引鍵。
 
 **退貨**
 
@@ -225,7 +228,7 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** includeInternals:值包括 `true` 結果中內部使用的鍵。 這些鍵以下划線(&quot;_&quot;)字元開頭。 預設值為 `false`。
+* **includeInternals:** 值包括 `true` 結果中內部使用的鍵。 這些鍵以下划線(&quot;_&quot;)字元開頭。 預設值為 `false`。
 
 **退貨**
 
@@ -267,8 +270,8 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** 名稱：商店名稱。
-* **** config:包含配置屬性的對象：
+* **名稱：** 商店名稱。
+* **config:** 包含配置屬性的對象：
 
    * eventBerring:預設值為32。
    * 事件：此存 [儲的ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 對象。 預設值為ContextHub.eventing物件所使用的值。
@@ -299,8 +302,8 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** 鍵：（字串）要移除的索引鍵名稱。
-* **** 選項：（物件）選項的物件。 以下對象屬性有效：
+* **鍵：** （字串）要移除的索引鍵名稱。
+* **選項：** （物件）選項的物件。 以下對象屬性有效：
 
    * silent:值可避 `true` 免觸發事 `data` 件。 預設值為 `false`。
 
@@ -317,7 +320,7 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** 鍵：要刪除的鍵引用。 此參數與函 `key` 數的參 `addReference` 數。
+* **鍵：** 要刪除的鍵引用。 此參數與函 `key` 數的參 `addReference` 數。
 
 **退貨**
 
@@ -334,7 +337,7 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** keepRemainingData:（布林值）若值為true，則會保留非初始資料。 值false會移除除初始值以外的所有資料。
+* **keepRemainingData:** （布林值）若值為true，則會保留非初始資料。 值false會移除除初始值以外的所有資料。
 
 重設商店持續資料的初始值。 或者，您可以從商店移除所有其他資料。 重設商店時，會暫停此商店的事件。 此函式不返回值。
 
@@ -350,9 +353,9 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** 鍵：（字串）要解析引用的鍵。 此 `key` 參數與函 `key` 數的參數相 `addReference` 對應。
+* **鍵：** （字串）要解析引用的鍵。 此 `key` 參數與函 `key` 數的參數相 `addReference` 對應。
 
-* **** 重試：（數量）要使用的小版本數。
+* **重試：** （數量）要使用的小版本數。
 
 **退貨**
 
@@ -372,12 +375,12 @@ ContextHub.Utils.Persistence物件。 如需預設值和初始化的詳細資訊
 
 **參數**
 
-* **** 鍵：（字串）金鑰的名稱。
-* **** 選項：（物件）選項的物件。 以下對象屬性有效：
+* **鍵：** （字串）金鑰的名稱。
+* **選項：** （物件）選項的物件。 以下對象屬性有效：
 
    * silent:值可避 `true` 免觸發事 `data` 件。 預設值為 `false`。
 
-* **** 值：（物件）與索引鍵關聯的值。
+* **值：** （物件）與索引鍵關聯的值。
 
 **退貨**
 
@@ -402,7 +405,7 @@ ContextHub.Store.JSONPStore擴充 [了ContextHub.Store.Core](/help/sites-develop
 
 **參數**
 
-* **** serviceConfig:包含下列屬性的物件：
+* **serviceConfig:** 包含下列屬性的物件：
 
    * 主機：（字串）伺服器名稱或IP位址。
    * jsonp:（布爾值）值為true表示服務是JSONP服務，否則為false。 若為true，則為{callback:&quot;ContextHub.Callbacks.*Object.name*}物件會新增至service.params物件。
@@ -415,7 +418,7 @@ ContextHub.Store.JSONPStore擴充 [了ContextHub.Store.Core](/help/sites-develop
       * true:https://
       * false:https://
 
-* **** 覆蓋：（布林值）。 值使現 `true` 有服務配置被的屬性替換 `serviceConfig`。 值使現 `false` 有服務配置屬性與的屬性合併 `serviceConfig`。
+* **覆蓋：** （布林值）。 值使現 `true` 有服務配置被的屬性替換 `serviceConfig`。 值使現 `false` 有服務配置屬性與的屬性合併 `serviceConfig`。
 
 #### getRawResponse() {#getrawresponse}
 
@@ -433,13 +436,13 @@ ContextHub.Store.JSONPStore擴充 [了ContextHub.Store.Core](/help/sites-develop
 
 具有以下屬性的對象：
 
-* **** 主機：（字串）伺服器名稱或IP位址。
-* **** jsonp:（布爾值）值為true表示服務是JSONP服務，否則為false。 若為true，則為{callback:&quot;ContextHub.Callbacks.*Object.name*}物件會新增至service.params物件。
+* **主機：** （字串）伺服器名稱或IP位址。
+* **jsonp:** （布爾值）值為true表示服務是JSONP服務，否則為false。 若為true，則為{callback:&quot;ContextHub.Callbacks.*Object.name*}物件會新增至service.params物件。
 
-* **** params:（物件）URL參數，表示為物件屬性。 參數名稱是屬性名稱，參數值是屬性值。
-* **** 路徑：（字串）服務的路徑。
-* **** 埠：（編號）服務的埠號。
-* **** 安全：（字串或布林值）決定用於服務URL的通訊協定：
+* **params:** （物件）URL參數，表示為物件屬性。 參數名稱是屬性名稱，參數值是屬性值。
+* **路徑：** （字串）服務的路徑。
+* **埠：** （編號）服務的埠號。
+* **安全：** （字串或布林值）決定用於服務URL的通訊協定：
 
    * auto: //
    * true:https://
@@ -451,7 +454,7 @@ ContextHub.Store.JSONPStore擴充 [了ContextHub.Store.Core](/help/sites-develop
 
 **參數**
 
-* **** 解決：（布林值）判斷是否在URL中包含已解析的參數。 解析參 `true` 數的值， `false` 則否。
+* **解決：** （布林值）判斷是否在URL中包含已解析的參數。 解析參 `true` 數的值， `false` 則否。
 
 **退貨**
 
@@ -463,8 +466,8 @@ ContextHub.Store.JSONPStore擴充 [了ContextHub.Store.Core](/help/sites-develop
 
 **參數**
 
-* **** 名稱：（字串）商店名稱。
-* **** config:（對象）包含service屬性的對象。 JSONPStore物件使用物件的 `service` 屬性來建構JSONP服務的URL:
+* **名稱：** （字串）商店名稱。
+* **config:** （對象）包含service屬性的對象。 JSONPStore物件使用物件的 `service` 屬性來建構JSONP服務的URL:
 
    * eventBerring:32.
    * 事件：此商店的ContextHub.Utils.Eventing物件。 預設值是對 `ContextHub.eventing` 像。
@@ -493,7 +496,7 @@ ContextHub.Store.JSONPStore擴充 [了ContextHub.Store.Core](/help/sites-develop
 
 **參數**
 
-* **** 重新載入：（布爾值）值true會移除快取的回應，並強制呼叫JSONP服務。
+* **重新載入：** （布爾值）值true會移除快取的回應，並強制呼叫JSONP服務。
 
 #### 重設 {#reset}
 
@@ -503,7 +506,7 @@ ContextHub.Store.JSONPStore擴充 [了ContextHub.Store.Core](/help/sites-develop
 
 **參數**
 
-* **** keepRemainingData:（布林值）若值為true，則會保留非初始資料。 值false會移除除初始值以外的所有資料。
+* **keepRemainingData:** （布林值）若值為true，則會保留非初始資料。 值false會移除除初始值以外的所有資料。
 
 #### resolveParameter(f) {#resolveparameter-f}
 
@@ -533,9 +536,9 @@ ContextHub.Store.SessionStore可擴充 [ContextHub.Store.Core](/help/sites-devel
 
 **參數**
 
-* **** moduleType:（字串）UI模組轉譯器的識別碼。 如果已使用指定值註冊了渲染器，則在註冊此渲染器之前會先取消註冊現有渲染器。
-* **** 轉譯器：（字串）轉譯UI模組的類別名稱。
-* **** dontRender:（布林值）設 `true` 定為防止在註冊轉譯器後轉譯ContextHub UI。 預設值為 `false`。
+* **moduleType:** （字串）UI模組轉譯器的識別碼。 如果已使用指定值註冊了渲染器，則在註冊此渲染器之前會先取消註冊現有渲染器。
+* **轉譯器：** （字串）轉譯UI模組的類別名稱。
+* **dontRender:** （布林值）設 `true` 定為防止在註冊轉譯器後轉譯ContextHub UI。 預設值為 `false`。
 
 **範例**
 
@@ -557,7 +560,7 @@ ContextHub.UI.registerRenderer('contexthub.browserinfo', new SurferinfoRenderer(
 
 **參數**
 
-* **** 鍵：包 `String` 含您測試之Cookie之金鑰的A。
+* **鍵：** 包 `String` 含您測試之Cookie之金鑰的A。
 
 **退貨**
 
@@ -577,7 +580,7 @@ if (ContextHub.Utils.Cookie.exists("name")) {
 
 **參數**
 
-* **（可選）篩**&#x200B;選：符合Cookie金鑰的條件。 若要傳回所有Cookie，請指定無值。 支援下列類型：
+* （可選）篩 **選：** 符合Cookie金鑰的條件。 若要傳回所有Cookie，請指定無值。 支援下列類型：
 
    * 字串：字串會與Cookie金鑰比較。
    * 陣列：陣列中的每個項目都是篩選器。
@@ -600,7 +603,7 @@ ContextHub.Utils.Cookie.getAllItems([/^cq-authoring/, /^cq-editor/])
 
 **參數**
 
-* **** 鍵：您要其值的Cookie金鑰。
+* **鍵：** 您要其值的Cookie金鑰。
 
 **退貨**
 
@@ -618,7 +621,7 @@ ContextHub.Utils.Cookie.getItem("name");
 
 **參數**
 
-* **** filter:符合Cookie金鑰的條件。 支援下列類型：
+* **filter:** 符合Cookie金鑰的條件。 支援下列類型：
 
    * 字串：字串會與Cookie金鑰比較。
    * 陣列：陣列中的每個項目都是篩選器。
@@ -641,9 +644,9 @@ ContextHub.Utils.Cookie.getKeys([/^cq-authoring/, /^cq-editor/])
 
 **參數**
 
-* **** 鍵：代 `String` 表要移除之Cookie之金鑰的值。
+* **鍵：** 代 `String` 表要移除之Cookie之金鑰的值。
 
-* **** 選項：包含用於配置Cookie屬性的屬性值的對象。 如需詳細 ` [setItem](/help/sites-developing/contexthub-api.md#setitem-key-value-options)` 資訊，請參閱函式。 該屬 `expires` 性沒有作用。
+* **選項：** 包含用於配置Cookie屬性的屬性值的對象。 如需詳細 ` [setItem](/help/sites-developing/contexthub-api.md#setitem-key-value-options)` 資訊，請參閱函式。 該屬 `expires` 性沒有作用。
 
 **退貨**
 
@@ -661,9 +664,9 @@ ContextHub.Utils.Cookie.vanish([/^cq-authoring/, 'cq-scrollpos']);
 
 **參數**
 
-* **** 鍵：包含Cookie索引鍵的字串。
-* **** 值：包含Cookie值的字串。
-* **** 選項：（可選）包含下列任何屬性的物件，可設定Cookie屬性：
+* **鍵：** 包含Cookie索引鍵的字串。
+* **值：** 包含Cookie值的字串。
+* **選項：** （可選）包含下列任何屬性的物件，可設定Cookie屬性：
 
    * 過期：指定 `date` Cookie到 `number` 期時間的或值。 日期值指定到期的絕對時間。 數字（以天為單位）會將到期時間設定為目前時間加上數字。 預設值為 `undefined`。
    * 安全：指 `boolean` 定Cookie屬性 `Secure` 的值。 預設值為 `false`。
@@ -690,9 +693,9 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **參數**
 
-* **** filter:在 `filter` 函式調用中使用的 `[getKeys](/help/sites-developing/contexthub-api.md#getkeys-filter)` 參數。
+* **filter:** 在 `filter` 函式調用中使用的 `[getKeys](/help/sites-developing/contexthub-api.md#getkeys-filter)` 參數。
 
-* **** 選項：在 `options` 函式調用中使用的 `[removeItem](/help/sites-developing/contexthub-api.md#removeitem-key-options)` 參數。
+* **選項：** 在 `options` 函式調用中使用的 `[removeItem](/help/sites-developing/contexthub-api.md#removeitem-key-options)` 參數。
 
 **退貨**
 
@@ -710,9 +713,9 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **參數**
 
-* **** 名稱：您 [要解除函式系結的事件名稱](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 。
+* **名稱：** 您 [要解除函式系結的事件名稱](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 。
 
-* **** 選擇器：識別系結的選擇器。 (請參 `selector` 閱on和 [once函](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents) 數的參數 [](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents) )。
+* **選擇器：** 識別系結的選擇器。 (請參 `selector` 閱on和 [once函](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents) 數的參數 [](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents) )。
 
 **退貨**
 
@@ -724,12 +727,12 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **參數**
 
-* **** 名稱：（字串）您 [要系結函式之事](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 件的名稱。
+* **名稱：** （字串）您 [要系結函式之事](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 件的名稱。
 
-* **** handler:（函式）要系結至事件的函式。
-* **** 選擇器：（字串）系結的唯一識別碼。 如果要使用函式來移除系結，則需要選 `off` 取器來識別系結。
+* **handler:** （函式）要綁定到事件的函式。
+* **選擇器：** （字串）系結的唯一識別碼。 如果要使用函式來移除系結，則需要選 `off` 取器來識別系結。
 
-* **** triggerForPastEvents:（布林值）指出是否應針對過去發生的事件執行處理常式。 呼叫過去事 `true` 件的處理常式的值。 值呼叫 `false` 未來事件的處理者。 預設值為 `true`。
+* **triggerForPastEvents:** （布林值）指出是否應針對過去發生的事件執行處理常式。 呼叫過去事 `true` 件的處理常式的值。 值呼叫 `false` 未來事件的處理者。 預設值為 `true`。
 
 **退貨**
 
@@ -766,12 +769,12 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **參數**
 
-* **** 名稱：（字串）您 [要系結函式之事](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 件的名稱。
+* **名稱：** （字串）您 [要系結函式之事](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 件的名稱。
 
-* **** handler:（函式）要系結至事件的函式。
-* **** 選擇器：（字串）系結的唯一識別碼。 如果要使用函式來移除系結，則需要選 `off` 取器來識別系結。
+* **handler:** （函式）要綁定到事件的函式。
+* **選擇器：** （字串）系結的唯一識別碼。 如果要使用函式來移除系結，則需要選 `off` 取器來識別系結。
 
-* **** triggerForPastEvents:（布林值）指出是否應針對過去發生的事件執行處理常式。 呼叫過去事 `true` 件的處理常式的值。 值呼叫 `false` 未來事件的處理者。 預設值為 `true`。
+* **triggerForPastEvents:** （布林值）指出是否應針對過去發生的事件執行處理常式。 呼叫過去事 `true` 件的處理常式的值。 值呼叫 `false` 未來事件的處理者。 預設值為 `true`。
 
 **退貨**
 
@@ -794,8 +797,8 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **參數**
 
-* **** 子項：（對象）繼承的對象。
-* **** 父項：（對象）定義繼承的屬性和方法的對象。
+* **子項：** （對象）繼承的對象。
+* **父項：** （對象）定義繼承的屬性和方法的對象。
 
 ## ContextHub.Utils.JSON {#contexthub-utils-json}
 
@@ -809,7 +812,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **參數**
 
-* **** 資料：JSON格式的字串值。
+* **資料：** JSON格式的字串值。
 
 **退貨**
 
@@ -833,7 +836,7 @@ Object {
 
 **參數**
 
-* **** 資料：要序列化的值或對象。 此函式支援布林值、陣列、數字、字串和日期值。
+* **資料：** 要序列化的值或對象。 此函式支援布林值、陣列、數字、字串和日期值。
 
 **退貨**
 
@@ -863,8 +866,8 @@ ContextHub.Utils.JSON.stringify({
 
 **參數**
 
-* **** 樹狀結構：所複製的對象。
-* **** secondTree:與對象副本合併的對 `tree` 像。
+* **樹狀結構：** 所複製的對象。
+* **secondTree:** 與對象副本合併的對 `tree` 像。
 
 **退貨**
 
@@ -876,7 +879,7 @@ ContextHub.Utils.JSON.stringify({
 
 **參數**
 
-* **** 樹狀結構：要清理的物件。
+* **樹狀結構：** 要清理的物件。
 
 **退貨**
 
@@ -888,8 +891,8 @@ ContextHub.Utils.JSON.stringify({
 
 **參數**
 
-* **** 樹狀結構：資料物件。
-* **** 鍵：要檢索的值的鍵。
+* **樹狀結構：** 資料物件。
+* **鍵：** 要檢索的值的鍵。
 
 **退貨**
 
@@ -945,9 +948,9 @@ Object {
 
 **參數**
 
-* **** 樹狀結構：要從中檢索資料樹鍵的對象。
-* **** 父項：（可選）要檢索子項索引鍵的資料樹中項目的索引鍵。
-* **** 訂單：（可選）決定傳回索引鍵排序順序的函式。 (請參 [閱Mozilla Developer Network上的Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 。)
+* **樹狀結構：** 要從中檢索資料樹鍵的對象。
+* **父項：** （可選）要檢索子項索引鍵的資料樹中項目的索引鍵。
+* **訂單：** （可選）決定傳回索引鍵排序順序的函式。 (請參 [閱Mozilla Developer Network上的Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 。)
 
 **退貨**
 
@@ -1039,7 +1042,7 @@ myObject {
 
 使用合成的陣列建立可用密鑰。  **參數**
 
-* **** 鍵：淨化 `string` 環境。
+* **鍵：** 淨化 `string` 環境。
 
 **退貨**
 
@@ -1106,7 +1109,7 @@ myObject物件具有下列值：
 
 **參數**
 
-* **** storeType:（字串）商店類型的名稱。 請參閱 `storeType` 函式的參 [ 數 `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 。
+* **storeType:** （字串）商店類型的名稱。 請參閱 `storeType` 函式的參 [ 數 `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 。
 
 **退貨**
 
@@ -1114,7 +1117,7 @@ myObject物件具有下列值：
 
 #### getStoreFromCapponitals(storeType) {#getstorefromcandidates-storetype}
 
-從已註冊的候選者傳回商店類型。 如果註冊了多個同名的儲存類型，則函式將返回優先順序最高的儲存類型。
+從已註冊的候選者傳回商店類型。 如果註冊了多個同名的儲存類型，函式將返回優先順序最高的儲存類型。
 
 **參數**
 
@@ -1140,10 +1143,10 @@ myObject物件具有下列值：
 
 **參數**
 
-* **** 商店：（對象）要註冊為儲存候選的儲存對象。
-* **** storeType:（字串）商店候選者的名稱。 建立商店候選項的例項時，需要此值。
-* **** 優先順序：（數字）商店候選人的優先順序。
-* **** 項：（函式）用於調用的函式，評估儲存在當前環境中的可用性。 如果儲存適 `true` 用，則必須返回函式，否 `false` 則。 預設值是傳回true的函式： `function() {return true;}`
+* **商店：** （對象）要註冊為儲存候選的儲存對象。
+* **storeType:** （字串）商店候選者的名稱。 建立商店候選項的例項時，需要此值。
+* **優先順序：** （數字）商店候選人的優先順序。
+* **項：** （函式）用於調用的函式，評估儲存在當前環境中的可用性。 如果儲存適 `true` 用，則必須返回函式，否 `false` 則。 預設值是傳回true的函式： `function() {return true;}`
 
 **範例**
 
