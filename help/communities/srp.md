@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -150,7 +150,7 @@ ACL檢查使用一種實用程式方法，該方法返回適合於檢查應用�
 
 例如，假設部署是 [MSRP](msrp.md) ，並有TarMK發佈場。
 
-當成 [員在pub1](users.md) （儲存在MongoDB中）上發佈UGC時，會在pub1的JCR中建立陰影節點。
+當成 [員在pub1上](users.md) （儲存在MongoDB中）發佈UGC時，會在pub1的JCR中建立陰影節點。
 
 第一次在pub2上讀取UGC時，如果未設定任何內容，預設行為是建立陰影節點。
 
