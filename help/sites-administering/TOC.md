@@ -5,9 +5,9 @@ audience: admin-user
 user-guide-title: AEM 6.5管理使用指南
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '619'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 8%
 + 網站功能 {#introduction}
    + [網站管理](msm-and-translation.md)
    + [非同步作業](asynchronous-jobs.md)
-   + [重複使用內容： 多網站管理員和即時副本](msm.md)
+   + [重複使用內容：多網站管理員和即時副本](msm.md)
    + [即時副本概述主控台](msm-livecopy-overview.md)
    + [配置即時拷貝同步](msm-sync.md)
    + [建立和同步即時副本](msm-livecopy.md)
@@ -137,7 +137,6 @@ ht-degree: 8%
    + [AEM Livefyre Recipes](aem-livefyre-recipes.md)
    + [疑難排解整合問題](troubleshooting-integration-issues.md)
    + [與BrightEdge Content Optimizer整合](brightedge.md)
-   + [電子郵件範本的最佳做法](best-practices-for-email-templates.md)
    + [Catalog Producer](catalog-producer.md)
    + [設定與Experience Cloud和Creative Cloud的AEM資產整合](configure-assets-cc-integration.md)
    + [與Silverpop Engage整合](silverpop.md)
