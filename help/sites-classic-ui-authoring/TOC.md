@@ -5,17 +5,17 @@ audience: end-user
 user-guide-title: AEM 6.5 Classic UI編寫使用指南
 user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 25%
+source-wordcount: '257'
+ht-degree: 26%
 
 ---
 
 
 # AEM 6.5 Classic UI編寫使用指南 {#classic-ui}
 
-+ [Classic UI編寫指南概觀](home.md)
++ [Classic UI編寫指南總覽](home.md)
 + Classic UI編寫簡介 {#introduction}
    + [作者的第一步](classic-page-author-first-steps.md)
    + [在傳統UI中編寫](classicui.md)
@@ -61,10 +61,8 @@ ht-degree: 25%
 + 個性化 {#personalization}
    + [了解區段](classic-personalization-campaigns-segmentation.md)
    + [促銷活動管理](classic-personalization-campaigns.md)
-   + [預告與策略](classic-personalization-campaigns-teasers-strategy.md)
    + [著陸頁面](classic-personalization-campaigns-landingpage.md)
    + [Target選件](classic-personalization-campaigns-target-offers.md)
-   + [使用行銷活動管理員](classic-personalization-campaigns-mktg-manager.md)
    + [電子郵件行銷](classic-personalization-campaigns-email.md)
    + [追蹤已跳回的電子郵件](classic-personalization-campaigns-email-tracking-bounces.md)
    + [預告與策略](classic-personalization-campaigns-teasers-strategy.md)
