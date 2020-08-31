@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 translation-type: tm+mt
-source-git-commit: f465b6ffd1a93ddad3db0caf00d4ff797e1b189f
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -147,7 +147,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 **對生成的索引定義執行離線索引**
 
-Lucene可使用oak-run離線完成重新索引。 此過程將在下的磁碟中建立索引資料 `indexing-result/indices`。 它不 **會寫入** 儲存庫，因此不需要停止執行中的AEM例項。 已建立的文字儲存區會饋送至此程式：
+Lucene可使用oak-run離線完成重新索引。 此過程將在下的磁碟中建立索引資料 `indexing-result/indexes`。 它不 **會寫入** 儲存庫，因此不需要停止執行中的AEM例項。 已建立的文字儲存區會饋送至此程式：
 
 ```
 java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --reindex --doc-traversal-mode --checkpoint <checkpoint> --fds-path <datastore path> --index-definitions-file merge-index-definitions_target.json --pre-extracted-text-dir text-extraction/store
@@ -155,7 +155,7 @@ java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --re
 Sample <checkpoint> looks like r16c85700008-0-8
 —fds-path: path to data store.
 --pre-extracted-text-dir: Directory of pre-extracted text.
-merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indices in this file will be re-indexed.
+merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indexes in this file will be re-indexed.
 ```
 
 MongoMK安裝可 `--doc-traversal-mode` 以方便使用參數，因為它可通過將儲存庫內容假離線到本地平面檔案中，從而大大縮短重新索引時間。 但是，它需要儲存庫大小兩倍的額外磁碟空間。
@@ -164,9 +164,9 @@ MongoMK安裝可 `--doc-traversal-mode` 以方便使用參數，因為它可通�
 
 如需其他技術詳細資訊，請參 [閱oak-run檔案以索引](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)。
 
-### 導入索引 {#importing-indices}
+### 導入索引 {#importing-indexes}
 
-在AEM 6.4和更新版本中，AEM具備內建功能，可在啟動順序時從磁碟匯入索引。 在啟動 `<repository>/indexing-result/indices` 期間，會監視資料夾是否存在索引資料。 您可以在升級程式期間，先將預先建立的索引複製到上述 [位置](in-place-upgrade.md#performing-the-upgrade) ，再從新版本的 **target** AEM jar開始。 AEM會將它匯入儲存庫，並從系統移除對應的查核點。 因此完全避免了重新索引。
+在AEM 6.4和更新版本中，AEM具備內建功能，可在啟動順序時從磁碟匯入索引。 在啟動 `<repository>/indexing-result/indexes` 期間，會監視資料夾是否存在索引資料。 您可以在升級程式期間，先將預先建立的索引複製到上述 [位置](in-place-upgrade.md#performing-the-upgrade) ，再從新版本的 **target** AEM jar開始。 AEM會將它匯入儲存庫，並從系統移除對應的查核點。 因此完全避免了重新索引。
 
 ## 其他提示與疑難排解 {#troubleshooting}
 
