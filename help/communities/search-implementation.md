@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 4%
@@ -87,7 +87,7 @@ ht-degree: 4%
 
 如果自訂屬性正在使用中且搜尋速度緩慢，則需要為自訂屬性建立其他索引，以提高其效能。 若要維持可移植性，在建立可搜尋 [的自訂屬性時](#naming-of-custom-properties) ，請遵循命名要求。
 
-若要修改現有索引或建立自訂索引，請參 [閱Oak查詢和索引](../../help/sites-deploying/queries-and-indexing.md)。
+要修改現有索引或建立自定義索引，請參 [閱Oak查詢和索引](../../help/sites-deploying/queries-and-indexing.md)。
 
 ACS AEM Commons提 [供Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) 。 它提供：
 
