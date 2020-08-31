@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: f465b6ffd1a93ddad3db0caf00d4ff797e1b189f
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-升級Adobe Experience Manager的主要挑戰之一，是執行就地升級時與作者環境相關的停機時間。 內容作者在升級期間將無法存取環境。 因此，最好將執行升級所需的時間降到最低。 對於大型儲存庫，尤其是AEM Assets專案，這些專案通常擁有大型資料儲存空間和每小時高階的資產上傳，重新建立Oak索引索引的索引需要相當大比例的升級時間。
+升級Adobe Experience Manager的主要挑戰之一，是執行就地升級時與作者環境相關的停機時間。 內容作者在升級期間將無法存取環境。 因此，最好將執行升級所需的時間降到最低。 對於大型儲存庫，尤其是AEM Assets專案，這些專案通常擁有大型資料儲存空間和每小時高階的資產上傳，重新建立Oak索引的索引需要相當大比例的升級時間。
 
-本節介紹如何在執行升級前使用Oak-run工具重新索 **引儲存庫** ，從而減少實際升級期間的停機時間。 所呈現的步驟可套用至 [AEM 6.4版及更新版本的Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html) indices。
+本節介紹如何在執行升級前使用Oak-run工具重新索 **引儲存庫** ，從而減少實際升級期間的停機時間。 所呈現的步驟可套用至 [AEM 6.4版及更新版本的Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html) 索引。
 
 ## 概覽 {#overview}
 
-新版AEM會隨著功能集的擴充，對Oak索引定義進行變更。 升級AEM例項時，Oak indices的變更會強制重新建立索引。 重新建立索引對於資產部署而言十分昂貴，因為資產中的文字（例如，pdf檔案中的文字）會擷取並建立索引。 使用MongoMK儲存庫，資料將通過網路保存，從而進一步增加重新編製索引所需的時間。
+新版AEM會隨著功能集的擴充，對Oak索引定義進行變更。 升級AEM例項時，對Oak索引所做的變更會強制重新建立索引。 重新建立索引對於資產部署而言十分昂貴，因為資產中的文字（例如，pdf檔案中的文字）會擷取並建立索引。 使用MongoMK儲存庫，資料將通過網路保存，從而進一步增加重新編製索引所需的時間。
 
 大多數客戶在升級過程中遇到的問題是縮短停機時間。 解決方案是在升 **級期間** ，略過重新索引活動。 這可在執行升級前建立新 **的內** 容，然後在升級期間直接匯入。
 
