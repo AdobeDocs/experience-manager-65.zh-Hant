@@ -4,7 +4,7 @@ description: 針對配置、 [!DNL Experience Manager] 硬體、軟體和網路�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5a421c66930d8c7a9eb633c707b4b51d4549b303
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '2746'
 ht-degree: 0%
@@ -239,7 +239,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 >
 >Adobe不建議自動啟動資產。 不過，如有必要，Adobe建議您將此作為工作流程（通常是DAM更新資產）的最後步驟。
 
-## 搜尋索引 {#search-indexes}
+## 搜索索引 {#search-indexes}
 
 請確定您實作了最新的Service Pack和與效能相關的修補程式，因為它們通常包含系統索引的更新。 請參 [閱某些索引最佳化的](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) 「效能調整提示」。
 
