@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.5部署指南
 user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.5, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '328'
 ht-degree: 2%
 
 ---
@@ -68,6 +68,7 @@ ht-degree: 2%
    + [AEM 6.5中的向後相容性](backward-compatibility.md)
    + [升級程式](upgrade-procedure.md)
    + [執行就地升級](in-place-upgrade.md)
+   + [使用離線重新索引以減少升級期間的停機時間](upgrade-offline-reindexing.md)
    + [延遲內容移轉](lazy-content-migration.md)
    + [使用CRX2Oak移轉工具](using-crx2oak.md)
    + [升級前維護任務](pre-upgrade-maintenance-tasks.md)
