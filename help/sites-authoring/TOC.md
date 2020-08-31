@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.5編寫使用指南
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '272'
 ht-degree: 43%
 
 ---
@@ -53,7 +53,6 @@ ht-degree: 43%
    + [回應式版面](responsive-layout.md)
    + [內容分析](content-insights.md)
    + [建立可存取的內容 (符合 WCAG 2.1)](creating-accessible-content.md)
-   + [支架](scaffolding.md)
    + [在設計模式中設定元件](default-components-designmode.md)
    + [基礎元件](default-components-foundation.md)
    + [支架](scaffolding.md)
