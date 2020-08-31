@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Forms使用指南
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3700'
 ht-degree: 1%
 
 ---
@@ -501,7 +501,6 @@ ht-degree: 1%
       + [配置驗證消息](/help/forms/using/admin-help/configuring-validation-messages.md)
    + 配置輸出 {#configure-output}
       + [輸出服務概觀](/help/forms/using/admin-help/overview-8.md)
-      + [變更字元集](/help/forms/using/admin-help/change-character-set.md)
       + [指定XCI配置選項](/help/forms/using/admin-help/specify-xci-configuration-options.md)
       + [配置輸出快取](/help/forms/using/admin-help/configuring-caching-output.md)
       + [指定輸出的檔案位置](/help/forms/using/admin-help/specify-file-locations-output.md)
