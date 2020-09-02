@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6da27dfda2bb504fc7a1de24260e94141f1a22ab
+source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
 workflow-type: tm+mt
 source-wordcount: '4407'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
    *圖：[!UICONTROL 在「說明」功能表中]，搜尋[!UICONTROL 說明]。*
 
-   * 如果在 [!ICONTROL Impersonate as] field( [!UICONTROL User] 選項下的Impersonate as)欄位中輸入了錯誤值，並且焦點會正確移到文本欄位(NPR-33804)，則會出現錯誤消息。
+   * 如果在 [!UICONTROL Impersonate as] field( [!UICONTROL User] 選項下的Impersonate as)欄位中輸入了錯誤值，並且焦點會正確移到文本欄位(NPR-33804)，則會出現錯誤消息。
 
    ![頁首中的用戶菜單](assets/User_aem_header.png)
 
