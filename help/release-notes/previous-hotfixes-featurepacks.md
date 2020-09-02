@@ -3,15 +3,321 @@ title: Adobe Experience Manager 6.5舊版Service Pack發行說明
 description: Adobe Experience Manager 6.5 Service Pack 3及更舊版本的發行說明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 2639a57682c7f0696dd2515e0fe8f6d520d10c21
+source-git-commit: a842da57a155f56ad3efc268610c167fe140998b
 workflow-type: tm+mt
-source-wordcount: '8113'
+source-wordcount: '11431'
 ht-degree: 0%
 
 ---
 
 
 # 舊版Service Pack中包含的修補程式和功能套件 {#hotfixes-and-feature-packs-included-in-previous-service-packs}
+
+## Adobe Experience Manager 6.5.5.0 {#experience-manager-6550}
+
+Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月6.5版正式發行以來，新功能、客戶要求的重要增強功能，以及效能、穩定性和安全性 **增強**。 它可安裝在Adobe Experience Manager 6.5之上。
+
+Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包括：
+
+* 自訂顯示在Adobe Experience Manager收件匣中的欄名稱。
+
+* 已改善Experience Manager Web Content Management(WCM)中各個區域的協助功能，例如頁面編輯器、核心元件、RTE和管理員使用者介面。
+
+* 將草稿 [!DNL Interactive Communication] 另存為。
+
+* 在JEE上 [!DNL Oracle WebLogic 12] 支援Experience Manager Forms。
+
+* 已改善使用者介面流 [!DNL Adobe Experience Manager Assets] 程中的例外處理。
+
+* 若要取得Dynamic Media Scene7的發佈URL，會在介面中新 `getRemoteAssetPublishURL` 增新的 `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` 方法。
+
+* [符合Web內容協助](#assets-6550)[!DNL Adobe Experience Manager Assets] 工具准則(WCAG)的協助工具增強功能。
+
+* 已從Adobe Experience Manager移除套件共用整合。
+
+* 內建儲存庫(Apache Jackrabbit Oak)已更新至1.22.3版。
+
+如需Experience Manager 6.5 Service Pack 5中新增功能、主要重點、主要功能的完整清單，請參閱「 [Adobe Experience Manager 6.5 Service Pack 5的新增功能」](new-features-latest-service-pack.md) 。
+
+以下是6.5.5.0版中提供 [!DNL Experience Manager] 的修正清單。
+
+### [!DNL Sites] {#sites-6550}
+
+* Experience Manager Sites提供從別名發佈或取消發佈頁面的選項。 該選項無效(NPR-33415)。
+* 從包含多個範本的範本刪除版面容器時，範本無法正確呈現(NPR-33347)。
+* 當Experience Manager Sites頁面是包含多個即時副本的大型內容集的一部分時，頁面版本歷史記錄預覽無法載入(NPR-33311)。
+* 當您使用「移動」命令來重新命名Experience Manager Sites頁面時，不會更新頁面標題(NPR-33264)。
+* 當您在欄檢視中移動頁面時，欄會消失(NPR-33216)。
+* 當語言副本中的本地元件名稱與Blueprint中的元件名稱相同且從Blueprint中推出該元件時，不會將該術語添加到本地元件的名稱中( `_msm_moved` NPR-33208)。
+* 「頁面重新導向servlet」會附加。html至Experience Manager Sites URL，而ResourceType則不 `cq:Page` 在此URL中(NPR-33176)。
+* 貼上子樹時，沒有選項可決定是否貼上相應的子頁(NPR-33149)。
+* 元件即時使用結果的數目限制為49(NPR-33058)。
+* 當內容片段以架構為基礎且包含強制文字區域或路徑欄位時，內容片段無法儲存(NPR-33007)。
+* 當您使用預設的Experience Fragment元件建立自訂元件並在Experience Manager Sites頁面中使用時，Experience Manager不會顯示自訂元件的參考（使用）(NPR-32852)。
+* 當更名具有大量引用的資料夾時，不會更新該資料夾的許多引用(NPR-32765)。
+* 當您啟用來源編輯選項時，它將可用於內嵌全螢幕選項，但在富格文本編輯器的編輯對話框和全螢幕選項中仍會遺失(NPR-32763)。
+* 如果您有多欄位，且其在Blueprint的頁面屬性中包含必填欄位（例如下拉式清單或路徑欄位），則當卷出包含此多欄位的頁面時，即時副本的頁面屬性不會儲存(NPR-32751)。
+* 螢幕閱讀程式無法使用標題結構來導覽頁面。 此外，「元件」標籤有錯誤的標籤(NPR-32648)。
+* 當分頁開始時，「體驗片段選擇器」不會載入所有項目(NPR-32605)。
+* 讀取、修改、建立和刪除即時副本的作者權限將被撤銷。 每個作者都必須明確提供讀取和修改權限，才能在Blueprint中移動頁面(NPR-32550)。
+* 內容作者無法針對與Adobe Analytics整合的頁面建立Launch(NPR-32548)。
+* 當使用者以同步方式繼承時，父頁面的即時副本不會與Blueprint同步，並顯示不正確的狀態(NPR-32500)。
+* 載入Experience Manager Sites編輯器頁面需要超過15秒(NPR-32413)。
+* 某些欄位不顯示取消繼承選項(NPR-32362)。
+* 當您選取「體驗片段」元件的路徑並選取「開啟選取對話方塊」核取方塊時，不會導覽至「路徑瀏覽器」中的選取路徑(NPR-32308)。
+* 從Experience Manager 6.2升級至Experience Manager 6.5時，靜態範本的Parsys元件無法正確顯示。 Parsys元件的高度設定為0，其內部元件不可見(NPR-33663)。
+* 當使用者複製並貼上相同頁面上的「版面容器」時，「版面容器」中的元件不會顯示(NPR-33648)。
+* Dispatcher health check在日 `Invalid cookie header` 志檔案中顯示警告消息(NPR-33629)。
+* PreferencesServlet中反映的XSS(NPR-33438)。
+* 匿名使用者可存取CRX DE Lite功能(GRANITE-27790)。
+
+### [!DNL Assets] {#assets-6550}
+
+**Experience Manager Assets中的協助工具增強功能**
+
+* 現在，您可以將鍵盤焦點放在「 [!UICONTROL Comments] 」清單上，並在「在時間軸中建立資產的Create new version [!UICONTROL panel(NPR-33424)」下，將可點選的選項放在「] Comments  」版本的「注釋」下。
+
+* 現在可以使用鍵盤 [!UICONTROL 按鍵，觸及資產的「檢視設定] 」選項，並變更「 [!UICONTROL 檢視設定] 」對話方塊中的設定(NPR-33420)。
+
+* 組合方塊的清單方塊快顯視窗（位於不同頁面的各欄位中）現在會將項目顯示為螢幕閱讀程式可宣佈的選項清單(NPR-33516)。
+
+* 螢幕閱讀程式現在會公佈可排序標題(在清單檢視、時間軸檢視和 [!UICONTROL Manage Publication] page)的排序功能，而欄標題的排序控制項可透過鍵盤存取(NPR-32979)。
+
+* 可點選的元素，例如註解卡、版本更新、組合方塊和功能表的雪佛龍圖示，現在可以使用鍵盤加以關注並與之互動(NPR-33514)。
+
+* 螢幕閱讀程式現在可正確宣佈前瞻分析檢視( [!UICONTROL Insights View] )上前瞻分析圖示（用途、印象和點按）的功能（或動作目的）(NPR-33513)。
+
+* 唯讀表單欄位(例如，資產屬性 [!UICONTROL Basic] （基本）標籤上停用的欄位 )現在可以使用鍵盤(NPR-33493、CQ-4273031)加以集中。
+
+* 現在，各種輸入欄位中的標籤都是永久標籤（因此可存取），而不只是預留位置標籤，在輸入文字時就會消失(NPR-33475)。
+
+* 不同的標題級別（如頁標題和部分標題）現在被視為螢幕閱讀器用戶具有不同級別的標題(NPR-33471)。
+
+* 互動式使用者介面元素，例如連結和選項（在資產頁面的標題和縮放選項、檔案夾導覽），現在可使用鍵盤存取(NPR-33468、CQ-4271412)。
+
+* 「管 [!UICONTROL 理出版物]頁面」螢幕上的「選項」、「範圍」和「工作流程」進度指  標現在可正確讀出為「管理出版物頁面」讀取器，而非標籤(NPR-33416)。
+
+* 星號分級圖示的顏色(例如在資產 [!UICONTROL Properties] （屬性） [!UICONTROL Advanced（屬性）標籤的Rating] （評分）區段或在卡片檢視中)會變更，以便視覺有限且無色彩感知的使用者可看見適當的對比(NPR-33414)。
+
+* 現在，使用鍵盤 [!UICONTROL 鍵(NPR-33397)可存取資產詳細資訊頁面上「Comment] 」（註解）欄位旁的Chevron向上箭頭。
+
+* 畫面閱讀程式現在可正確 [!UICONTROL 宣佈資產屬性(] Properties  )和左側導軌導覽（在資產使用者介面上）上的「標籤(Tags)」對話方塊的展開和收合狀態(NPR-33396)。
+
+* Titles of all the browsed pages on [!DNL Adobe Experience Manager] Assets are now unique (NPR-33343).
+
+* 當導覽樹狀結構時，螢幕閱讀程式現在會正確宣佈樹狀檢視控制的各種元素(NPR-33304)。
+
+* 使用鍵盤按鍵，現 [!UICONTROL 在可存取資產詳細資訊頁面上] 「時間軸」檢視中不同版本的資產(NPR-33283)。
+
+* 現在螢幕閱讀程式在使用搜尋功能時，會公佈顯示在Omnisearch組合方塊中的搜尋建議名稱(NPR-33280)。
+
+* 螢幕閱讀程式 [!UICONTROL 現在會將可點按的元素和] 「跳至  參考」邊欄中的連結宣佈為可點按的元素(NPR-33278)。
+
+* 當對話方塊開啟時，螢幕閱讀程式不會再公佈「共用連結  」對話方塊的表格結構資訊（例如列1、儲存格1、表格）(NPR-33268)。
+
+* 螢幕閱讀程式現在可正確宣佈各種組合方塊元素（例如「路徑」欄位和在「資產屬性」的「基本」索引標籤中開啟「選擇」對話方塊的選項）的用途(NPR-33235)。
+
+* 現在，當鍵盤焦點位於螢幕閱讀器用戶上時，會將清單視圖表中可選擇的行的資訊發送給螢幕閱讀器用戶。 當指針懸停在行上時，螢幕閱讀器會宣佈該資訊(NPR-33234)。
+
+* 現在，螢幕閱讀器( [!UICONTROL NPR-33206])可以訪問用於刪除Basic [!UICONTROL （屬性）頁籤的Basic] （基本）選 [!UICONTROL 項卡中Basic] （屬性）頁籤下的Selected Tags(Basic(Basic  )欄位下的每個選定標籤的選項（具有x）。
+
+* 日曆日期選擇器現在可由螢幕閱讀器使用者和有視覺的鍵盤使用者使用鍵盤進行集中和操作(NPR-33200)。
+
+* 切換以在清單檢視和卡片檢視之間切換，現在可正確將其功能（調整檢視）顯示給螢幕閱讀程式(NPR-33069)。
+
+* 現在可存取左側導軌中的功能表。 螢幕閱讀程式已適當宣佈擴充功能表的功能與用途(NPR-33068)。
+
+* 清單方塊和許多其他使用者介面元素現在可供無視的螢幕閱讀程式使用者存取，螢幕閱讀程式會公佈下列相關資訊(NPR-33040):
+
+   * 在提交表單之前，是否需要在元素上輸入使用者。
+   * 元素是否不可編輯。
+   * 是否選取介面工具集。
+
+* 開啟篩選邊欄的選項現在可使用鍵盤存取(NPR-32842、CQ-4273018)。
+
+* 現在可存取清單檢視欄標題中的核取方塊控制項，螢幕閱讀程式已宣佈使用此控制項的目的(NPR-32722、NPR-33005)。
+
+* 日曆日期選擇器中小時(HH)和分鐘(mm)欄位的標籤現在是永久標籤，而非預留位置標籤，而且當使用者在這些欄位中輸入文字時，不會消失(NPR-32720)。
+
+* 通知的連結文字（在按一下鐘鈴圖示後出現）現在會向螢幕閱讀程式使用者宣佈，讓使用者使用標籤來存取每個連結(NPR-32645)。
+
+* [!UICONTROL 現在]，您可 [!UICONTROL 以使用鍵盤(NPR-32609)，在Asset cards](資產卡 [!UICONTROL )中選擇「下載」、「屬性」和「更多操作」選項(More Actions] on asset cards in Hinsights View Are access)。
+
+* 當使用鍵盤存取時，螢幕閱讀程式不會再公佈視覺化隱藏內容（例如搜尋結果上標題選單列的內容）(NPR-32606)。
+
+* 螢幕閱讀程式現在已宣佈，控制項標籤在日曆日期選擇器中移至下個月和前幾個月的用途(NPR-32604)。
+
+* 星號分級圖示現在可以使用鍵盤按鍵來集中執行(NPR-32513)。
+
+* 控制視訊音量的功能現在可透過標籤（聚焦在音量滑桿上）和鍵盤上的箭頭鍵（調整音量）存取(NPR-32065)。
+
+* 「檔案大小」篩選器的下界([!UICONTROL From])和上界(To)輸入欄位的用途現在已向無視螢幕閱讀器使用者宣佈(NPR-32064)。
+
+* 現在 [!UICONTROL 瀏覽模式] ，螢幕閱讀者可以存取「  建立和翻譯」表單中的「語言」功能表(CQ-4293906)。
+
+* 現 [!UICONTROL 在可存取] 「參考」面板，並具備下列增強功能(NPR-33261、CQ-4293798):
+
+   * 在瀏覽模式中，螢幕閱讀程式的焦點不會再移至「網站參考」、「資產參考」、「復本」和「表單參考」區段下的隱藏多行編輯欄位 [!UICONTROL (Site]References [!UICONTROL )、「]Copies [!UICONTROL 」和「] Form References」區段下。
+
+   * 螢幕閱讀程式現在會宣佈網站參 [!UICONTROL 考和語言][!UICONTROL 復本元素的角色] 。
+
+   * 瀏覽模式中螢幕閱讀器的焦點以有意義的順序轉移到各種元素。
+
+* [!UICONTROL 中繼資料結構編輯器] (Metadata Schema Editor)頁面及其元素現在可使用鍵盤存取，而且螢幕閱讀器方便使用(CQ-4290962、CQ-4272953)。
+
+* 螢幕閱 `X` 讀程式現在會宣佈移除選取標籤的符號用途，以及選取標籤的數目(CQ-4273017)。
+
+* 為避免使用螢幕閱讀程式的無視使用者混淆，螢幕閱讀程式現在會忽略裝飾性圖示和影像(CQ-4272944)。
+
+**Experience Manager Assets中修正的問題**
+
+[!DNL Adobe Experience Manager] 6.5.5.0 Assets可修正下列問題：
+
+* [!UICONTROL 系列中] 「建立工  作流程」對話方塊上的「開始」選項已停用，因此無法觸發工作流程(NPR-32471)。
+
+* 在中繼資料結構中使用階層式快顯功能時，在選取並儲存包含縮寫符號的下拉式選項（從子下拉式清單）時，在重新開啟資產 [!UICONTROL Properties] (NPR-32649)後，選取的縮寫符號選項就會消失。
+
+* [!UICONTROL 如果Asset Insights Sync Job遇到無效項目（在Analytics端）而未移至下一個項目(NPR-32674)，則會停止Asset Insights Sync Job] （資產分析同步工作）並失敗。
+
+* 由於全景檢視器中的行動瀏覽器預設會停用運動感應器，因此陀螺儀無法運作(CQ-4272937)。
+
+* [!UICONTROL 在6.5.1上安裝6.5.3時] ,「Connected Assets Configuration（連接的資產配置）」嚮導無法處理404錯誤(NPR-32730)。
+
+* 在XMP回寫程式中，所有自訂命名空間中繼資料屬性都會將自訂命名空間首碼變更為ns2，而非設定的命名空間首碼(NPR-32748)。
+
+* 不會觸發延遲載入，在選取來檢閱通知收件匣中的工作時，只會顯示100個資產(NPR-32750)。
+
+* `NullPointerException` 會因為新建立的使用者描述檔(SAML/SSO)中遺失節點偏好設定而觀察到。 此錯誤會阻止新登入的使用者 [!DNL Adobe Experience Manager Stock] 使用整合(NPR-32777)。
+
+* 在開啟包含超過10,000個資產的智慧型系列時，記錄檔會出現遍歷警告(NPR-32980)。
+
+* 在使用Dynamic Media Scene7執行模式時，將資產從一個檔案夾移至另一個檔案夾時， [!DNL Adobe Experience Manager] 資產名稱會變更為小寫(NPR-32995)。
+
+* 從搜尋結果導覽至其屬性，然後返回搜尋結果以刪除已搜尋的資產後，無法刪除該資產(NPR-32998)。
+
+* [!UICONTROL 在「移動] Assets」介面中選取目標資料夾時，「下一個」選項 [!UICONTROL 仍會停用] (NPR-33356)。
+
+* [!UICONTROL 在選擇父節點] （其中顯示單個子資料夾），然後選擇子資料夾時，未啟用「下一步」選項(NPR-33275)。
+
+* 即使已授予讀取、建立或修改等其他權限，Adobe Asset Link(AAL)的使用者也會停用登入和登出權限(AAL)。(NPR-33272)
+
+* 智慧型裁切轉譯無法在資產下載對話方塊中使用(NPR-33167)。
+
+* 在具有智慧型裁切設定檔的檔案夾下開啟PDF轉譯邊欄的記錄檔中，會發現異常(CQ-4294201)。
+
+* 如果Experience Manager的Dynamic Media Scene7執行模式預設為停用 [!UICONTROL 「動態媒體同步模式」] (CQ-4294200)，則不會發佈影像預設集。
+
+* 大量上傳時的資產處理會停滯，而工作流程例項則會顯示DAM更新資產的停滯例項(CQ-4293916)。
+
+* 在Experience Manager上建立動態媒體設定有效，但在使用者介面上，選取「儲存」時不會發生任何情況(CQ-4292442)。
+
+* 在Safari/Mac上漸進式播放時，F4V視訊資產的預覽無法運作(CQ-4289844)。
+
+* 在智慧型裁切資產時會建立額外的資料夾，該資產位於父資料夾內， `.` 名稱中含點字元(CQ-4289337)。
+
+* 縮圖中斷，而視訊處理橫幅在複製視訊時不會顯示(CQ-4284125)。
+
+* Dimensional檢視器會針對某些具有空白相機檢視的機型，在Firefox中錯誤顯示空白縮圖(CQ-4283447)。
+
+* 6.5.5.0中修正的效能問題有：(CQ-4279206):
+
+   * 將大型二進位檔上傳至動態媒體影像處理伺服器需要太長時間。
+
+   * Experience Manager的縮圖產生時間因為Dynamic Media Scene7架構而增加。
+
+* 對於擁有大量資產的客戶，動態Media Scene7移轉問題會失敗(CQ-4279206)。
+
+* 視訊360檢視器的版面配置如果使 `setVideo` 用則會中斷，而視訊會在使用時 `video= modifier` 向下移動(CQ-4263201)。
+
+* 安裝Experience Manager SDL軟體包時顯示錯誤資訊(NPR-33175)。
+
+* Experience Manager中的SSRF弱點(NPR-33435)。
+
+### 平台 {#platform-6550}
+
+* 如果 [!DNL Sling] 在下面建立了 `sling:match` 映射條目，則不會調 `/etc/maps` 用篩選器(NPR-33362)。
+* Experience Manager因區段錯誤而當機( [!DNL Apache Lucene] NPR-32988)。
+* [!DNL Jackson] Experience Manager uberjar檔案中遺失核心套件(NPR-32848)。
+* CRXDE Lite不會在未取得節點屬性讀取權限的情 `jcr:primaryType` 況下，為使用者載入內容(NPR-32611)。
+* [!DNL Granite] 維護任務調度程式在Experience Manager部署期間重新初始化的頻率過高(CQ-4294627)。
+* 當SQL查詢長時間執行（例如7小時）時，Experience Manager停止響應(NPR-33044)。
+
+### 使用者介面{#ui-6550}
+
+* 多欄位中不會持續選擇選項按鈕(NPR-33309)。
+* 清單檢視無法使用延遲載入限制(NPR-33124)。
+* 如果沒有相符項目，Omnisearch結果頁面不會顯示訊息(NPR-32974)。
+* Omnisearch篩選器會在節點下傳 `/content` 回忽略所選位置的所有相符項目(NPR-32849)。
+
+### 整合 {#integrations-6550}
+
+* 當發佈含有Adobe Target元件的頁面時，會清除內部快取(NPR-33162)。
+* 與Adobe Target的整合無法在 [!DNL Windows Internet Explorer] 11上運作(NPR-33111)。
+* 設定Adobe Target時，在選 [!UICONTROL 擇報表來源時] ,「公司」和「報  表套裝」欄位不會出現(NPR-32502)。
+* 使用Adobe [!DNL Experience Fragments] I/O匯出時，「來源產品」等中繼資料不會匯出至Adobe Target(NPR-32159)。
+* 本機Experience Manager管理員群組中的授權IMS使用者無法建立或修改IMS組態(NPR-33045)。
+* Adobe Launch設定頁面不會顯示所有記錄(NPR-33011)。
+* 內容作者群組中的使用者無法編輯Adobe Target元件的屬性，因為發生JavaScript錯誤(NPR-32996)。
+* JSON的跨網站指令碼(NPR-32744)。
+
+### 翻譯專案 {#translation-6550}
+
+* 翻譯的標籤不會從協力廠商翻譯服務匯入到Experience Manager(NPR-33154)。
+* 翻譯配置頁顯示的翻譯提供程式與用於翻譯的翻譯提供程式不正確(NPR-32971)。
+* 將體驗片段資料夾新增至現有的翻譯專案，會建立新專案(NPR-32843)。
+* 在運 `NullPointerException` 行翻譯作業的日誌中出現錯誤(NPR-32628)。
+
+### WCM {#wcm-6550}
+
+* 頁面編輯器 [!DNL Sites] -頁面編輯器不允許僅限鍵盤的使用者略過主要內容，而不是透過標題中的所有可用選項來切換標籤焦點(CQ-4293883)。
+* 頁面編輯器——使用Well元件並包含已儲存資料的面板不會因為更新版本 [!DNL Chrome] 而 [!DNL Firefox] 顯示(CQ-4292995)。
+* MSM —— 從頁面刪除元件並不會從頁面的發佈版本中刪除元件(CQ-4292360)。
+
+### [!DNL Brand Portal] {#assets-brand-portal-6550}
+
+* 從中移除已發佈的中繼 [!DNL Brand Portal] 資料架構會導致錯誤(CQ-4292063)。
+* 如果管理員透過 [!DNL Experience Manager Assets] Adobe Developer Console設定品牌入口網站為 [!DNL Brand Portal] 6.5.4，則使用者無法將貢獻資料夾的資產從發佈 [!DNL Brand Portal] 到 [!DNL Experience Manager] (NPR-33046)。
+* 重複複製父資料夾導致衝突(NPR-33001)。
+
+### [!DNL Communities] {#communities-6550}
+
+* 無法使用快速編輯功能表選項刪除協調主控台中的資訊卡(NPR-33117)。
+* 存取「活動串流」頁 [!UICONTROL 面時發生錯誤] (NPR-33146)。
+* 在作者例項上刪除的群組不會從所有發佈例項中移除(NPR-33199)。
+* 建立新群組後，作者不會重新導向至 [!DNL Internet Explorer] 11號的「社群群組」區段(NPR-33205)。
+* 在Experience Manager收件箱中訪問留言不會將留言的狀態更改為「已讀取」(NPR-32764)。
+* 編輯群 [!DNL Communities] 組並變更縮圖影像並不會更新群組縮圖影像(NPR-32599)。
+* 使用者無法傳送電子郵件給社群中的其他使用者(NPR-32598)。
+* 提交的部落格在使用者重新整理頁面之前不會顯示(NPR-32391)。
+* 建立使用者產生的內容(UGC)的通知和訂閱版本時，會儲存來源頁面的錯誤ID(CQ-4279355、CQ-4289703)。
+* 跨網站指令碼問題(NPR-33203)。
+
+### 工作流程 {#workflow-6550}
+
+* 左側 [!UICONTROL 導軌中的] 「時間軸」選項的載入時間比預期要長(NPR-32851)。
+* 重新啟動Experience Manager例項後，系列的審閱工作電子郵件會包含錯誤的裝載連結(NPR-32774)。
+
+### [!DNL Forms] {#forms-6550}
+
+>[!NOTE]
+>
+>Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
+
+* 通信管理：在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序被混亂。
+* 最適化表單：當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
+* 最適化表單：用戶無法保存具有多個附件的自適應表單(NPR-32997)。
+* 最適化表單：以最適化表單變更面板版面會導致錯誤(CQ-4293880)。
+* 最適化表單：自適應表單字典中字串的新行將字 `&#xa;` 符添加到字典(NPR-33266)。
+* 最適化表單協助功能：當使用者將最適化表單預覽為HTML表格時，「 [!UICONTROL Scribble Signature] 」欄位無法保留標籤焦點(NPR-33159)。
+* 最適化表單協助功能：提交最適化表單時顯示的錯誤訊息不會連結 `aria-describedBy` 至屬性(NPR-33071)。
+* 最適化表單協助功能：在ARIA無障礙環境支援模式中，在最適化表單中標示為強制的欄位，沒有將強制屬性設為True(NPR-33070)。
+* PDFG服務：當使用者將文字檔案轉換為PDF時，日文字元無法正確顯示(NPR-33238)。
+* PDFG服務： `CreatePDF` 操作無法將PDF檔案轉換為PDF OCR格式(NPR-32994)。
+* PDFG服務：第200個檔案例項的PDF轉換失 [!DNL OpenOffice] 敗(NPR-32766)。
+* 後端整合：表單資料模型請求會因重新整理Token因非作用中狀態不正確而失敗(NPR-33169)。
+* 設計人員：螢幕閱讀程式會根據預設的地理順序來執行Tabbing順序，而非XDP檔案中定義的自訂Tabbing順序(NPR-32160)。
+* 設計人員：如果啟用標籤選項，子表單邊框會消失在產生的PDF輸出中(NPR-32778)。
+* 將XSS與GuideSOMProviderServlet一起儲存(NPR-32700)。
 
 ## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
 
@@ -31,7 +337,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.10.8版。
 
-* 您現在可以將選擇性內容子樹狀結 *構同步至Dynamic Media - Scene7模式* ，而非所有可在取得 `content/dam`。
+* 您現在可以將選擇性內容子樹狀結構同步 *至Dynamic Media - Scene7模式* ，而不是所有可在取得 `content/dam`。
 
 * 與SOAP web service整合的表單資料模型現在支援元素上的選擇群組或屬性。
 
@@ -87,7 +393,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 * 資產收集頁面上觸發工作流程的按鈕已停用(NPR-32471)。
 
-* 在Experience Manager中使用Dynamic Media Scene7設定將資產從一個檔案夾移至另一個檔案夾時，無名稱的檔案夾會在SPS(Scene7 Publishing System)中建立。
+* 在Experience Manager中使用Dynamic Media Scene7設定將資產從一個檔案夾移至另一個檔案夾(NPR-32440)時，在SPS(Scene7 Publishing System)中建立無名稱的檔案夾。
 
 * 將所有資產（使用「全選」然後移動）移至包含已發佈資產的檔案夾的動作會失敗並出現錯誤(NPR-32366)。
 
@@ -155,7 +461,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 * 即使使用者有權在子資料夾中建立專案，使用者也看不到「建立」按鈕(NPR-31832)。
 
-### 專案翻譯 {#projects-translation-6540}
+### 專案轉譯 {#projects-translation-6540}
 
 * 在中激活「修剪空間」選項時，翻譯項目建立會中斷 `Apache Sling JSP Script Handler` UI(NPR-32154)。
 
@@ -386,8 +692,8 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 * 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結(NPR-30980)。
 * 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行(NPR-31182)。
 * 當使用者在功能表的description屬性中新增日文或韓文字元時，功能表會顯示日文和韓文文字的扭曲字元(NPR-31331)。
-* Rich Text Editor(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
-* 立即可用的Rich Text Editor(RTE)腳手架。 意外地將內嵌字型大小套用至元素(NPR-31284)。
+* 富格文本編輯器(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
+* 立即可用的架構Rich Text Editor(RTE)。 意外地將內嵌字型大小套用至元素(NPR-31284)。
 * 當使用者專注在左側欄位並使用鍵盤快速鍵貼上內容時，會貼上頁面編輯器剪貼簿的內容，而非從左側欄位複製的內容(NPR-31172)。
 * 當用戶將「檔案上傳」欄位添加到多欄位時，影像路徑儲存在元件節點中，而不是多欄位節點(NPR-30882)。
 * API `ResponsiveGridExporter` 不會傳回介 `com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter` 面。 該 `com.day.cq.wcm.foundation.model.impl` 包聲明為私有包(NPR-31398)。
@@ -449,7 +755,7 @@ Remove one mention of this fix.
 * 建立新的「貢獻」檔案夾時，「貢獻」檔案夾中不會顯示一或兩個子檔案夾（NEW和SHARED）(CQ-4282424)。
 * 當使用者從結尾處接收「貢獻」檔案夾中的新資產後，嘗試 [!DNL Experience Manager] 從 [!DNL Brand Portal] 發佈「貢獻」檔案夾時，系統會 [!DNL Brand Portal] 引發例外(CQ-4279740)。
 * 禁止在「貢獻」檔案夾（巢狀檔案夾）中建立「貢獻」檔案夾，以避免複雜性(CQ-4278391)。
-* 系統會在上傳從「管理控制台」 [!DNL Brand Portal] 匯入的使用者清單（.csv檔案）時引發 [!DNL Experience Manager] 異常。 .csv檔案中只有「電子郵件」、「名字」和「姓氏」欄位是必填欄位(CQ-4278390)。
+* 系統上傳從「管理控制台」 [!DNL Brand Portal] 匯入的使用者清單（.csv檔案）時發 [!DNL Experience Manager] 生異常。 .csv檔案中只有「電子郵件」、「名字」和「姓氏」欄位是必填欄位(CQ-4278390)。
 
 ### 社群 {#communities-6530}
 
@@ -524,7 +830,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來的重要客戶修 **正與增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是重要的發行版本，其中包括效能、穩定性、安全性，以及自2019年4月 [!DNL Adobe Experience Manager] 6.5正式推出以來所發佈的重要客戶修 **正和增強**。 它可安裝在 [!DNL Experience Manager] 6.5之上。
 
 此Service Pack版本的一些主要亮點是：
 
@@ -605,7 +911,7 @@ Remove one mention of this fix.
 * 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結(NPR-30980)。
 * 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行(NPR-31182)。
 * 文本元件的富格文本編輯器(RTE)插件顯示日文和韓文文本的扭曲字元(NPR-31331)。
-* Rich Text Editor(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
+* 富格文本編輯器(RTE)不允許將嵌入的表作為清單項插入(NPR-30879)。
 * 立即可用的架構Rich Text Editor(RTE)會意外地套用內嵌字型大小至元素(NPR-31284)。
 * 當使用者專注在左側欄位並使用鍵盤快速鍵貼上內容時，會貼上頁面編輯器剪貼簿的內容，而非從左側欄位複製的內容(NPR-31172)。
 * 當用戶將「檔案上傳」欄位添加到多欄位時，影像路徑儲存在元件節點中，而不是多欄位節點(NPR-30882)。
@@ -748,7 +1054,7 @@ Remove one mention of this fix.
 * Scene7視訊播放器在展開為全螢幕時的問題。 CQ-4266700的修補程式
 * ZoomVerticalViewer:如果使用單一影像資產，則不應顯示平移按鈕。 CQ-4264795的修補程式
 * 刪除即時副本中的子節點應分離liveRelationship。 CQ-4270395的修補程式
-* 中繼資料結構只包含全域設定中的項目，且遺失作用中租用戶中的項目。 formPath URL值即使在變更時也會回復為預設值。 NPR-29945:CQ-4262898的修補程式
+* 中繼資料結構只包含全域設定中的項目，且遺失作用中租用戶中的項目。 formPath URL值即使在變更時也會回復為預設值。 NPR-29944:CQ-4262898的修補程式
 * 發佈影像預設集失敗， [!DNL Brand Portal] 並加上500錯誤碼。 NPR-29510:CQ-4268659的修補程式
 
 ### 網站
@@ -848,7 +1154,7 @@ Remove one mention of this fix.
 
 **後端整合**
 
-* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29944:CQ-4270777的修補程式
+* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29945:CQ-4270777的修補程式
 * 在IBM [!DNL Experience Manager Forms] WebSphere上安裝時，基於SOAP建立表單資料模型失敗。 CQ-4251134的修補程式
 * 已針對Microsoft Dynamics內部部署整合啟用Active Directory Federation Services(ADFS)v3.0支援。 CQ-4270586的修補程式
 * 當資料來源的標題變更時，表單資料模型不會顯示更新的標題。 CQ-4265599的修補程式
@@ -868,7 +1174,7 @@ Remove one mention of this fix.
 * 最適化表單欄位驗證失敗中斷 [!DNL Adobe Sign]。 CQ-4269463的修補程式
 * 當例項 [!DNL Experience Manager Forms] 有超過20個可調式表單片段，且所有表單片段的名稱都以相同字串開頭時，搜尋不會傳回或只傳回最近20個建立的片段。 CQ-4264414、CQ-4264914的修補程式
 
-* 當Adaptive Forms應用程式與大型資料集搭配使用時的效能問題。. CQ-4235310的修補程式
+* Adaptive Forms應用程式與大型資料集搭配使用時的效能問題。. CQ-4235310的修補程式
 
 * 透過發佈例項上的匿名帳戶存取時，GuideRuntime指令碼無法載入。 CQ-4268679的修補程式
 
