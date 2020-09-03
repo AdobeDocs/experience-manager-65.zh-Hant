@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
+source-git-commit: 32addae877604a242c97eac3ed81bbc2f55ec60a
 workflow-type: tm+mt
-source-wordcount: '4407'
+source-wordcount: '4423'
 ht-degree: 0%
 
 ---
@@ -361,6 +361,8 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 * 當您開啟Designer時，「歡迎」畫面會顯示錯誤的年份(CQ-4295289)。
 
 * 當您安裝 [!DNL Acrobat DC] 在伺服器上時，「 **[!UICONTROL Distribute Form]** 」（散發表單）選項會停用(CQ-4296304)。
+
+如需安全性更新的詳細資訊，請參 [閱Experience Manager安全性公告頁面](https://helpx.adobe.com/security/products/experience-manager.html)。
 
 ## Install 6.5.6.0 {#install}
 
