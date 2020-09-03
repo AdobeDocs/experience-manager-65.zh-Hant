@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Experience Manager 6.5資產使用指南
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 32f8e42325314d5afbec3b3e1611fd696e1a4603
+source-git-commit: c57cc70fbdeabfdff1e8977d3bf8187f7c41ce77
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 38%
+source-wordcount: '651'
+ht-degree: 37%
 
 ---
 
@@ -73,7 +73,8 @@ ht-degree: 38%
    + [使用規則集轉換 URL](using-rulesets-to-transform-urls.md)
    + [發佈 Dynamic Media 資產](publishing-dynamicmedia-assets.md)
    + [在動態媒體中使用選擇性發佈](selective-publishing.md)
-   + [透過Dynamic Media Classic使CDN快取失效](invalidate-cdn-cache-dm-classic.md)
+   + [透過動態媒體使CDN快取失效](invalidate-cdn-cache-dynamic-media.md)
+   + [使用Dynamic Media Classic驗證CDN快取](invalidate-cdn-cache-dm-classic.md)
    + [安裝Feature Pack 18912以進行大量資產移轉](bulk-ingest-migrate.md)
    + [使用選取工具](working-with-selectors.md)
 + 擴充資產 {#extending}
