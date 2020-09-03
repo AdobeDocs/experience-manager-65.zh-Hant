@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6e7368663d18dd0b5b46be9e292dba17577acf70
+source-git-commit: 6890af51d240cbdf84d8d95215ac0ea80326c713
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 2%
@@ -202,6 +202,7 @@ ht-degree: 2%
    | 發佈至 Dynamic Media | 選擇性發佈 | 僅發佈至動態媒體。 |
    | 從 Dynamic Media 取消發佈 | 立即或在啟動時 | 未從AEM或Dynamic Media或兩者取消發佈。 |
    | 從 Dynamic Media 取消發佈 | 選擇性發佈 | 僅從動態媒體取消發佈。 |
+
 1. 在「 **[!UICONTROL 排程]**」下，設定取消啟動的時間。
 |選取的排程 |結果 |
 | — | — |
