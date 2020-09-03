@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 translation-type: tm+mt
-source-git-commit: 3eacfe8a79d155dddde8908d05b05790d048b0c5
+source-git-commit: 10eef47ec15aef1f17238702520848df4ed36342
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 24%
+source-wordcount: '718'
+ht-degree: 23%
 
 ---
 
@@ -22,7 +22,7 @@ CDN會快取動態媒體資產，以便快速傳送。 不過，當您更新資�
 
 >[!IMPORTANT]
 >
->下列步驟僅適用於AEM 6.5、Service Pack 5或更舊版本的Dynamic Media。
+>下列步驟僅適用於AEM 6.5、Service Pack 5(AEM 6.5.5)或更舊版本的Dynamic Media。<br>如果您在AEM 6.5、Service Pack 6(AEM 6.5.6)或更新版本中使用Dynamic Media，請依照 [Invalidating the CDN cache by Dynamic Media中的步驟進行](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 
 另請參閱 [Dynamic Media Classic(Scene7)中的快取概觀](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)。
 
