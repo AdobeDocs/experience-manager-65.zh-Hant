@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5bbdc80f199a2af38631a5443c46daae827abb52
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '5858'
+source-wordcount: '5878'
 ht-degree: 5%
 
 ---
@@ -354,6 +354,10 @@ ht-degree: 5%
 1. （可選）如果您有自訂的搜尋表單，請將節 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 點複製到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存變更。
 
 如需相關資訊，請參 [閱瞭解Experience Manager中的智慧標籤](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) , [以及如何管理智慧標籤](/help/assets/managing-smart-tags.md)。
+
+>[!CAUTION]
+>
+>如果Lucene索引完成不 [!DNL Adobe Experience Manager]了，則基於智慧標籤的搜索將無法如預期般運作。
 
 ### 必備中繼資料 {#mandatorymetadata}
 
