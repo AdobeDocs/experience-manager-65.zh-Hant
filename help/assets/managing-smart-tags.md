@@ -3,9 +3,9 @@ title: 管理智慧標籤和搜尋
 description: 更新或移除不正確的智慧型標籤，以改善標籤的相關性
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -44,3 +44,7 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 1. 的匹配 `woman running` 項。
 1. 在智慧型標 `woman running` 簽中的相符項目。
 1. 在智慧標 `woman` 記中 `running` 的相符項目。
+
+>[!CAUTION]
+>
+>如果Lucene索引完成不 [!DNL Adobe Experience Manager] 了，則基於智慧標籤的搜索無法如預期般工作。
