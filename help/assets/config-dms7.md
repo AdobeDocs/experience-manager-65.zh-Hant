@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: d357b5832a3bd95c372c26fd7553eba70583eb6f
 workflow-type: tm+mt
-source-wordcount: '5778'
+source-wordcount: '5944'
 ht-degree: 5%
 
 ---
@@ -71,17 +71,17 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 如需詳 [細資訊，請參閱安裝功能套件18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md) 。
 
-## 建立動態媒體設定 {#configuring-dynamic-media-cloud-services}
+## 在雲端服務中建立動態媒體設定 {#configuring-dynamic-media-cloud-services}
 
 **設定動態媒體之前**:在您收到具有動態媒體憑證的布建電子郵件後， [您必須登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**建立動態媒體配置**
+**在雲端服務中建立動態媒體設定**
 
-1. 在AEM中，點選AEM標誌以存取全域導覽主控台，點選或按一下「工具」圖示，然後點選「 **[!UICONTROL Cloud Services >動態媒體設定」。]**
+1. 在AEM中，點選AEM標誌以存取全域導覽主控台，並點選「工具」圖示，然後點選「 **[!UICONTROL Cloud Services >動態媒體設定」。]**
 1. On the Dynamic Media Configuration Browser page, in the left pane, tap **[!UICONTROL global]** (do not tap or select the folder icon to the left of **[!UICONTROL global]**), then tap **[!UICONTROL Create.]**
-1. 在「建立動態媒體設定」頁面上，輸入標題、動態媒體帳戶電子郵件地址、密碼，然後選取您的地區。 Adobe會在布建電子郵件中提供給您。 如果您未收到此訊息，請聯絡支援部門。
+1. 在「建 **[!UICONTROL 立動態媒體設定]** 」頁面上，輸入標題、動態媒體帳戶電子郵件地址、密碼，然後選取您的地區。 Adobe會在布建電子郵件中提供給您。 如果您未收到此訊息，請聯絡支援部門。
 
    Click **[!UICONTROL Connect to Dynamic Media.]**
 
@@ -89,7 +89,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    >
    >在您收到具有動態媒體憑證的布建電子郵件後，請 [登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud服務。
 
-1. 連接成功後，您還可以設定以下內容：
+1. 連接成功時，請設定以下內容。 需要星號(*)的標題：
 
    * **[!UICONTROL 公司]** -動態媒體帳戶的名稱。 您可能會針對不同子品牌、部門或不同的測試／生產環境擁有多個動態媒體帳戶。
 
@@ -98,6 +98,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL 發佈資產]** -您可以從下列三個選項中選擇：
       * **[!UICONTROL 立即]** ：當資產上傳時，系統會立即收錄資產並提供URL/內嵌。 發佈資產不需要使用者干預。
       * **[!UICONTROL 啟動後]** ，表示您必須先明確發佈資產，才能提供URL/內嵌連結。
+      * **[!UICONTROL 選擇性發佈]** ：這個選項可讓您控制在動態媒體中發佈哪些檔案夾，以便您能使用智慧型裁切或動態轉譯等功能，或哪些檔案夾在AEM中排他發佈以供預覽；這些相同資產 *不會* 發佈在Dynamic Media中，以便在公用網域中傳送。<br>您可以在 **[!UICONTROL Dynamic Media Cloud Configuration]** （動態媒體雲端設定）中設定此選項，或者，您也可以選擇在資料夾的「屬性」( **[!UICONTROL Properties)中，在資料夾層級設定此選項]**。<br>請參 [閱在動態媒體中使用選擇性發佈。](/help/assets/selective-publishing.md)<br>請注意，如果您稍後變更此設定，或稍後在資料夾層級變更此設定，這些變更只會影響您從該點開始上傳的新資產。 資料夾中現有資產的發佈狀態會維持原狀，直到您從「快速發佈」或「管理出版物」對話方塊 **[!UICONTROL 手動變更資產]****** 為止。
    * **[!UICONTROL 安全預覽伺服器]** -可讓您指定安全轉譯預覽伺服器的URL路徑。 也就是說，在產生轉譯後，AEM可以安全地存取和預覽遠端的「動態媒體」轉譯（不會將二進位檔傳回至AEM例項）。
 除非您有特殊安排可使用您公司的伺服器或特殊伺服器，否則Adobe Systems建議您依指定的方式保留此設定。
 
@@ -106,7 +107,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL Dynamic Media 同步處理模式]**
       * **[!UICONTROL 預設啟用]** -預設情況下，配置將應用於所有資料夾，除非您專門為排除標籤資料夾。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 預設禁用]** -在您明確標籤選定資料夾以同步到動態媒體之前，配置不會應用於任何資料夾。
-若要將選取的資料夾標示為同步至動態媒體，請選取資產資料夾，然後在工具列上按一下「屬 **[!UICONTROL 性」。]** 在「詳 **[!UICONTROL 細資訊]** 」標籤的「動態媒體同步模式 **** 」下拉式清單中，從下列三個選項中選擇。 完成時，點選「 **[!UICONTROL 儲存」。]** *記住：如果您選取「先同步所有內容」，這三個選&#x200B;**項將無法使用**。*
+若要將選取的資料夾標示為同步至動態媒體，請選取資產資料夾，然後在工具列上按一下「屬 **[!UICONTROL 性」。]** 在「詳 **[!UICONTROL 細資訊]** 」標籤的「動態媒體同步模式 **** 」下拉式清單中，從下列三個選項中選擇。 完成時，點選「 **[!UICONTROL 儲存」。]** *記住：如果您選取「先同步所有內容」，這三個選&#x200B;**項將無法使用**。* 另請參閱 [在動態媒體的資料夾層級使用選擇性發佈。](/help/assets/selective-publishing.md)
          * **[!UICONTROL 繼承]** -資料夾上沒有明確的同步值；相反，資料夾會繼承其上級資料夾或雲配置中預設模式的同步值。 繼承的詳細狀態會透過工具提示顯示。
          * **[!UICONTROL 啟用子資料夾]** -包含此子樹狀結構中的所有項目，以同步至動態媒體。 資料夾特定的設定會覆寫雲端設定中的預設模式。
          * **[!UICONTROL 子資料夾停用]** -排除此子樹狀結構中的所有項目，以免同步至動態媒體。
