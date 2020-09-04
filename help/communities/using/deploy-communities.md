@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
+source-git-commit: 7e05502b590fb2c7c36919f94611efe999262d32
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1890'
 ht-degree: 1%
 
 ---
@@ -106,8 +106,8 @@ AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communitie
 
 兩個社區功能使用MySQL資料庫：
 
-* 若要 [啟用](/help/communities/enablement.md) : 錄制SCORM活動和學員
-* 針對 [DSRP](/help/communities/dsrp.md) : 儲存使用者產生的內容(UGC)
+* 若要 [啟用](/help/communities/enablement.md) :錄制SCORM活動和學員
+* 針對 [DSRP](/help/communities/dsrp.md) :儲存使用者產生的內容(UGC)
 
 MySQL連接器必須單獨獲得和安裝。
 
@@ -122,7 +122,7 @@ MySQL連接器必須單獨獲得和安裝。
 
    * 例如，https://localhost:4502/system/console/bundles
    * select **`Install/Update`**
-   * 瀏覽…… 若要選取從下載的ZIP封存解壓縮的套件
+   * 瀏覽……若要選取從下載的ZIP封存解壓縮的套件
    * 檢查* Oracle Corporation的MySQLcom.mysql.jdbc* JDBC驅動程式是否處於活動狀態，如果沒有，則啟動它（或檢查日誌）
 
 1. 如果在配置JDBC後在現有部署上安裝，則通過從Web控制台中保存JDBC配置將JDBC重新綁定到新連接器：
@@ -136,7 +136,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 有關安裝捆綁的詳細資訊，請參閱「 [Web控制台](/help/sites-deploying/web-console.md#bundles) 」頁。
 
-#### 範例： 已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
+#### 範例：已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
 
 ![](../assets/chlimage_1-125.png)
 
@@ -152,7 +152,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 1. 從Package [Share安裝2.3.7版的cq-social-scorm-package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg)。
 1. 從cq `/libs/social/config/scorm/database_scormengine_data.sql` 實例下載並在mysql伺服器中執行它，以建立升級的scormEngineDB模式。
-1. 從「 `/content/communities/scorm/RecordResults` https://」新增CSRF篩選器中的「排除的路徑」屬性<hostname>:<port>/system/console/configMgr&#39;。
+1. 在發 `/content/communities/scorm/RecordResults` 布者的CSRF篩選器中新增「排除的路徑」 `https://<hostname>:<port>/system/console/configMgr` 屬性。
 
 #### SCORM記錄 {#scorm-logging}
 
@@ -202,9 +202,9 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 通用商店支援在發佈環境中協調和分析UGC，同時不需要復 [制](/help/communities/sync.md) UGC。
 
-* [社群內容商店](/help/communities/working-with-srp.md) : 討論AEM社群的SRP儲存選項
+* [社群內容商店](/help/communities/working-with-srp.md) :討論AEM社群的SRP儲存選項
 
-* [建議的拓撲](/help/communities/topologies.md) : 根據使用案例和SRP選擇討論要使用的拓撲
+* [建議的拓撲](/help/communities/topologies.md) :根據使用案例和SRP選擇討論要使用的拓撲
 
 ## 升級 {#upgrading}
 
@@ -260,7 +260,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
       1. 選擇「傳 **輸** 」頁籤
       1. 如果不是端 `4503`口，請編輯 **URI** ，以指定正確的埠
 
-      1. 如果不是用 `admin`戶，請編輯 **User** and **Password** ，以指定用戶組 `administrators` 的成員
+      1. 如果不是用 `admin`戶，請編 **輯用戶和** 密碼 **，以指定用戶組**`administrators` 的成員
 
 以下影像顯示將埠從4503更改為6103的結果：
 
