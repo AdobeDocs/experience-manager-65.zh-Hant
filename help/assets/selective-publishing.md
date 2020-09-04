@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 68e3e80b1c1dda8352ff30989f85f83e82bde261
+source-git-commit: 29f91713f5760ab0b5a557b5c811ef2efee1cc61
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 3%
@@ -114,6 +114,7 @@ ht-degree: 3%
 
 1. 在「管理出版物」頁面的右上 **[!UICONTROL 角]** ，點選「下 **[!UICONTROL 一步」。]**
 1. 在「管 **[!UICONTROL 理出版物——範圍]** 」頁中，執行下列任一操作：
+
    * 視需要，選取一或多個您要從發佈中移除的資產。
    * 在「管理出版物——範圍」頁 **[!UICONTROL 面的右上角]** ，點選「發佈 **[!UICONTROL 」或「]****[!UICONTROL 發佈至動態媒體」。]**
 1. 點選「 **[!UICONTROL 確定」。]**
