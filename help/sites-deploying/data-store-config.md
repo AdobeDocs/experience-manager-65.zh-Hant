@@ -12,7 +12,10 @@ discoiquuid: b97482f2-2791-4d14-ae82-388302d9eab3
 docset: aem65
 legacypath: /deploy/platform/data-store-config
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: f0ec3415ffef70c985828f17b32dc0d453c1ae7c
+workflow-type: tm+mt
+source-wordcount: '3427'
+ht-degree: 0%
 
 ---
 
@@ -52,7 +55,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 >
 >如果您從舊版Oak升級，請確定您先備份資料 `crx-quickstart/install`夾。 升級後，將資料夾的內容還原到升級的安裝，並將配置檔案的副檔名從 **.cfg** 修改 **為。config**。
 >
->如果您正在閱讀本文以準備從 **AEM 5.x安裝進行升級** ，請務必先參閱 [升級檔案](https://docs.adobe.com/content/docs/en/aem/6-0/deploy/upgrade.html) 。
+>如果您正在閱讀本文以準備從 **AEM 5.x安裝進行升級** ，請務必先參閱 [](https://docs.adobe.com/content/docs/en/aem/6-0/deploy/upgrade.html) 升級檔案。
 
 ### 區段節點儲存區 {#segment-node-store}
 
@@ -121,7 +124,7 @@ File Data Store提供比MongoDB更好的效能，而Mongo備份和恢復操作�
 
 >[!NOTE]
 >
->為啟用自訂資料存放區，您必須確 `customBlobStore` 定在 `true` Node Store組態檔(區段節點存放區[或](/help/sites-deploying/data-store-config.md#segment-node-store) 檔案節點存放區 [](/help/sites-deploying/data-store-config.md#document-node-store))中設定。
+>為啟用自訂資料存放區，您必須確 `customBlobStore` 定在 `true` Node Store設定檔(區段節點存放區[或](/help/sites-deploying/data-store-config.md#segment-node-store) 檔案節點存放區 [](/help/sites-deploying/data-store-config.md#document-node-store))中。
 
 ### 檔案資料存放區 {#file-data-store}
 
@@ -173,9 +176,11 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 返回已提取功能包的臨時位置，並複製以下資料夾的內容：
 
    * `jcr_root/libs/system/config`
+
    至
 
    * `<aem-install>/crx-quickstart/install`
+
    請確定您僅複製當前配置所需的配置檔案。 對於專用資料儲存和共用資料儲存設定，都會複製文 `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 件。
 
    >[!NOTE]
@@ -185,9 +190,9 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 編輯檔案並新增設定所需的設定選項。
 1. 啟動AEM。
 
-### 升級至新版1.8.x S3連接器 {#upgrading-to-a-new-version-of-the-x-s-connector}
+### 升級至1.10.x S3連接器的新版本 {#upgrading-to-a-new-version-of-the-x-s-connector}
 
-如果您需要升級至新版本的1.8.x S3連接器（例如，從1.8.0升級至1.8.1），請遵循下列步驟：
+如果您需要升級至新版本的1.10.x S3連接器（例如，從1.10.0升級至1.10.4），請遵循下列步驟：
 
 1. 停止AEM例項。
 
@@ -196,6 +201,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    * **oak-blob-cloud-1.6.1.jar**
    * **aws-java-sdk-osgi-1.10.76.jar**
+
    >[!NOTE]
    >
    >上述檔案名稱僅用於圖示用途，且未確定。
@@ -208,7 +214,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 您可以使用配置檔案和以下選項：
 
 * accessKey:AWS訪問密鑰。
-* secretKey:AWS秘密訪問密鑰。 **** 注意：或者， [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) ，可用於身份驗證。 如果您使用的是IAM角色，則不再需要指定 `accessKey` 和 `secretKey`。
+* secretKey:AWS秘密訪問密鑰。 **注意：** 或者， [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) ，可用於身份驗證。 如果您使用的是IAM角色，則不再需要指定 `accessKey` 和 `secretKey`。
 
 * s3Bucket:桶名。
 * s3地區：桶區域。
@@ -287,7 +293,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 上載完成後，檔案將移到主下載快取。 當測試快取大小超過其限制時，檔案會同步上傳至DataStore，直到先前的非同步上傳完成，而且測試快取中的空間又可用。 已上載檔案通過由參數配置間隔的週期性作業從轉移區域中 `stagingPurgeInterval` 刪除。
 
-失敗的上載（例如，由於網路中斷）將被置於重試隊列上並定期重試。 重試間隔是使用配置的 `stagingRetryInterval parameter`。
+失敗的上載（例如，由於網路中斷）將被放入重試隊列並定期重試。 重試間隔是使用配置的 `stagingRetryInterval parameter`。
 
 #### 使用Amazon S3配置無聯機複製 {#configuring-binaryless-replication-with-amazon-s}
 
@@ -306,7 +312,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 #### 使用S3和MongoDB建立群集 {#creating-a-cluster-using-s-and-mongodb}
 
-1. 使用以下命令解壓縮CQ快速啟動：
+1. 使用以下命令解壓縮CQ快速入門：
 
    `java -jar cq-quickstart.jar -unpack`
 
@@ -317,6 +323,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
    * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*。*config*
 
    * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*.*config*
+
    建立檔案後，視需要新增設定選項。
 
 1. 如上所述，安裝S3資料存放區所需的兩個組合。
@@ -413,7 +420,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 * accessKey=&quot;&quot;:儲存帳戶名稱。 如需Microsoft Azure驗證認證的詳細資訊，請參閱官方 [檔案](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account)。
 
 * secretKey=&quot;&quot;:儲存訪問密鑰。 請確定&#39;=&#39;字元已逸出為&#39;\=&#39;。
-* container=&quot;&quot;:Microsoft Azure blob儲存容器名稱。 容器是一組膨脹體的群組。 如需詳細資訊，請閱讀官 [方檔案](https://msdn.microsoft.com/en-us/library/dd135715.aspx)。
+* container=&quot;&quot;:Microsoft Azure Blob儲存容器名稱。 容器是一組膨脹體的群組。 如需詳細資訊，請閱讀官 [方檔案](https://msdn.microsoft.com/en-us/library/dd135715.aspx)。
 * maxConnections=&quot;&quot;:每個操作同時發出請求的併發數。 預設值為1。
 * maxErrorRetry=&quot;&quot;:每個請求的重試次數。 預設值為3。
 * socketTimeout=&quot;&quot;:請求使用的逾時間隔（以毫秒為單位）。 預設值為5分鐘。
@@ -474,5 +481,6 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
    1. 轉到JMX控制台並選擇Repository Manager Mbean。
    1. 按一下「 **Click startDataStoreGC(boolean markOnly)** 」連結。
    1. 在以下對話方塊中， `false` 再次輸入 `markOnly` 參數。
+
    這會整理使用之前使用的標籤階段找到的所有檔案，並刪除資料儲存區中未使用的其餘檔案。
 
