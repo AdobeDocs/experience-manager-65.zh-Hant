@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 6a44c4ac11f2fdf794895c28468c2a600a09b3c0
+source-git-commit: 54645149dc4968c1c4f85eedb5ce4d71f80c3b64
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->下列步驟僅適用於AEM 6.5、Service Pack 6(AEM 6.5.6)或更新版本的Dynamic Media - Scene7模式。 此CDN失效功能也要求您使用隨附於AEM Dynamic Media的現成可用CDN;不支援任何其他自訂CDN。<br>如果您在AEM 6.5、Service Pack 5(AEM 6.5.5)或更舊版本中使用Dynamic Media，請依照 [Dynamic Media Classic使CDN快取失效中的步驟進行](/help/assets/invalidate-cdn-cache-dm-classic.md)
+>下列步驟僅適用於AEM 6.5、Service Pack 6(AEM 6.5.6)或更新版本的Dynamic Media - Scene7模式。 此CDN失效功能也要求您使用隨附於AEM Dynamic Media的現成可用CDN;不支援任何其他自訂CDN。<br>如果您在AEM 6.5、Service Pack 5(AEM 6.5.5)或更舊版本中使用Dynamic Media，請依照 [Dynamic Media Classic中取消驗證CDN快取中的步驟進行。](/help/assets/invalidate-cdn-cache-dm-classic.md)
 
 另請參閱 [動態媒體中的快取概觀](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)。
 
