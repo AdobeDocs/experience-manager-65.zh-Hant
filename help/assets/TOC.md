@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Experience Manager 6.5資產使用指南
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: c57cc70fbdeabfdff1e8977d3bf8187f7c41ce77
+source-git-commit: d4cd304fccba9c06078790ea97bee74fc12d8df0
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '650'
 ht-degree: 37%
 
 ---
@@ -157,7 +157,7 @@ ht-degree: 37%
    + [不同步作業](asynchronous-jobs.md)
    + [燈箱](touch-ui-light-box.md)
    + [資產見解](touch-ui-asset-insights.md)
-   + [透過Adobe Launch獲得資產見解](touch-ui-using-dtm-for-asset-insights.md)
+   + [透過DTM獲得資產見解](touch-ui-using-dtm-for-asset-insights.md)
    + [設定資產見解](touch-ui-configuring-asset-insights.md)
    + [登入及登出資產](check-out-and-submit-assets.md)
    + [將翻譯雲端服務套用至資料夾](transition-cloud-services.md)
