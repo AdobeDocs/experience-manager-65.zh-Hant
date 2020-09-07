@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 097109edcf66cc06460c9d962037e49613e3405b
+source-git-commit: 8496c2fa298b5490bb2560f61de77876d66fd6f6
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '822'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ AEM Communities使用電子郵件：
 * [社群通知](notifications.md)
 * [社群訂閱](subscriptions.md)
 
-預設情況下，電子郵件功能不起作用，因為它需要指定SMTP伺服器和SMTP用戶。
+預設情況下，電子郵件功能無法正常工作，因為它需要指定SMTP伺服器和SMTP用戶。
 
 >[!CAUTION]
 >
@@ -112,7 +112,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 
 * 確認 **「從回覆電子郵件建立貼文** 」為 `unchecked`。
 
-![chlimage_1-100](assets/chlimage_1-100.png)
+![chlimage_1-100](assets/configure-email.png)
 
 ### 訂閱的設定 {#configuration-for-subscriptions}
 
@@ -122,7 +122,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 * 選擇編輯表徵圖。
 * 驗證 **名稱** 為 `subscriptions-email`。
 
-![chlimage_1-101](assets/chlimage_1-101.png)
+   ![chlimage_1-101](assets/configure-email-subscription.png)
 
 * **[!UICONTROL 名稱]**
 
@@ -138,9 +138,10 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 * **[!UICONTROL 主旨的長度上限]**
 
    如果追蹤器ID新增至主旨行，則此為主旨的最大長度（不包括追蹤ID），之後會加以修剪。 請注意，這應盡可能小，以免遺失追蹤的ID資訊。 預設值為200。
-* **[!UICONTROL 電子郵件「寄件者」地址]**
 
-   *（必要）* ：寄送通知電子郵件的地址。 可能與為默 **認郵件服務指定** 的 [SMTP](#configuredefaultmailservice)用戶相同。 預設為 `no-reply@example.com`。
+* **[!UICONTROL 「回覆」電子郵件地址]**
+
+   用作「回覆」電子郵件地址的地址。 預設為 `communities@adobe.com`。
 
 * **[!UICONTROL 回覆分隔字元]**
 
@@ -154,7 +155,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 
    如果將追蹤器ID新增至訊息內文，則會使用此首碼。 預設為 `Please do not remove this:`。
 
-* **[!UICONTROL 以HTML形式傳送電子郵件]**: 如果勾選，則電子郵件的「內容類型」會設為 `"text/html;charset=utf-8"`。 已勾選預設值。
+* **[!UICONTROL 以HTML形式傳送電子郵件]**:如果勾選，則電子郵件的「內容類型」會設為 `"text/html;charset=utf-8"`。 已勾選預設值。
 
 * **[!UICONTROL 預設用戶名]**
 
@@ -213,8 +214,8 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 * 以管理員權限登入主發行者，並瀏覽至 [https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling)。
 * 選擇新建立的配置並修改以下屬性：
 
-   * **feedType**: 取代 `pop3s` 為 **`emailreply`**
-   * **來源**: 將源協定替換為 `pop3s://` **`emailreply://`**
+   * **feedType**:取代 `pop3s` 為 **`emailreply`**
+   * **來源**:將源協定替換為 `pop3s://` **`emailreply://`**
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
