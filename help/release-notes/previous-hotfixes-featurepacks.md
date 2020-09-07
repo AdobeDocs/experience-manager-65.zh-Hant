@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Manager 6.5舊版Service Pack發行說明
-description: Adobe Experience Manager 6.5 Service Pack 3及更舊版本的發行說明。
+title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
+description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: a842da57a155f56ad3efc268610c167fe140998b
+source-git-commit: c27f44326f653bbdc61e866e89e60893e81a7a3b
 workflow-type: tm+mt
-source-wordcount: '11431'
+source-wordcount: '11438'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 0%
 
 # 舊版Service Pack中包含的修補程式和功能套件 {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.5.0 {#experience-manager-6550}
+## [!DNL Adobe Experience Manager] 6.5.5.0 {#experience-manager-6550}
 
 Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月6.5版正式發行以來，新功能、客戶要求的重要增強功能，以及效能、穩定性和安全性 **增強**。 它可安裝在Adobe Experience Manager 6.5之上。
 
-Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包括：
+6.5.5.0中引進的一些主要 [!DNL Adobe Experience Manager] 功能和增強功能包括：
 
-* 自訂顯示在Adobe Experience Manager收件匣中的欄名稱。
+* 不允許匿名存取CRXDE Lite。 而是將使用者導向登入畫面。 請參 [閱使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md)。
+
+* 自訂顯示在「收件匣」中的欄 [!DNL Adobe Experience Manager] 名稱。
 
 * 已改善Experience Manager Web Content Management(WCM)中各個區域的協助功能，例如頁面編輯器、核心元件、RTE和管理員使用者介面。
 
@@ -69,7 +71,7 @@ Adobe Experience Manager 6.5.5.0中引進的一些主要功能和增強功能包
 * 當使用者複製並貼上相同頁面上的「版面容器」時，「版面容器」中的元件不會顯示(NPR-33648)。
 * Dispatcher health check在日 `Invalid cookie header` 志檔案中顯示警告消息(NPR-33629)。
 * PreferencesServlet中反映的XSS(NPR-33438)。
-* 匿名使用者可存取CRX DE Lite功能(GRANITE-27790)。
+* 匿名使用者可存取CRXDE Lite功能(GRANITE-27790)。
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -1054,7 +1056,7 @@ Remove one mention of this fix.
 * Scene7視訊播放器在展開為全螢幕時的問題。 CQ-4266700的修補程式
 * ZoomVerticalViewer:如果使用單一影像資產，則不應顯示平移按鈕。 CQ-4264795的修補程式
 * 刪除即時副本中的子節點應分離liveRelationship。 CQ-4270395的修補程式
-* 中繼資料結構只包含全域設定中的項目，且遺失作用中租用戶中的項目。 formPath URL值即使在變更時也會回復為預設值。 NPR-29944:CQ-4262898的修補程式
+* 中繼資料結構只包含全域設定中的項目，且遺失作用中租用戶中的項目。 formPath URL值即使在變更時也會回復為預設值。 NPR-29945:CQ-4262898的修補程式
 * 發佈影像預設集失敗， [!DNL Brand Portal] 並加上500錯誤碼。 NPR-29510:CQ-4268659的修補程式
 
 ### 網站
