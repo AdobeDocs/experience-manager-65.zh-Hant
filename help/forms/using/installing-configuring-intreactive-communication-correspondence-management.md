@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: cbc43991143397c8bc0080b7402bfdc664522ab8
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1411'
 ht-degree: 1%
 
 ---
@@ -45,17 +45,17 @@ AEM Forms Interactive Communications會在AEM Forms的「作者」例項上執�
 * AEM例項的安裝路徑不包含空格。
 * AEM例項已啟動並執行。 在AEM術語中，「例項」是在作者或發佈模式下伺服器上執行的AEM復本。 您至少需要一個AEM例項（作者或處理）才能執行AEM Forms互動式通訊和通訊管理功能：
 
-   * **作者**: 用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
+   * **作者**:用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
    * **處理：** 處理例項是硬 [化的AEM Author例項](/help/forms/using/hardening-securing-aem-forms-environment.md) 。 您可以設定Author例項，並在執行安裝後加強它。
 
-   * **發佈**: 透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
+   * **發佈**:透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
    * 15 GB的臨時空間，用於基於Microsoft Windows的安裝。
    * 6 GB的臨時空間，用於基於UNIX的安裝。
 
-* 基於UNIX的系統的額外要求： 如果您使用基於UNIX的作業系統，請從相應作業系統的安裝介質安裝以下軟體包。
+* 基於UNIX的系統的額外要求：如果您使用基於UNIX的作業系統，請從相應作業系統的安裝介質安裝以下軟體包。
 
 <table>
  <tbody>
@@ -153,7 +153,7 @@ AEMFD相容性套件可讓您在AEM 6.5表單上使用AEM 6.4 Forms、AEM 6.3 Fo
 
 #### 配置Dispatcher {#configure-dispatcher}
 
-Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也可協助保護AEM伺服器不受攻擊。 您可搭配使用Dispatcher與企業級Web伺服器，以提高AEM例項的安全性。 如果您使 [用Dispatcher](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html)，請針對AEM Forms執行下列設定：
+Dispatcher是Adobe Experience Manager的快取和／或負載平衡工具，可與企業級Web伺服器搭配使用。 如果您使 [用Dispatcher](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html)，請針對AEM Forms執行下列設定：
 
 1. 設定AEM Forms的存取權：
 
