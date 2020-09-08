@@ -10,7 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 8f35717324cd2c1524fb2cf931b3ce21be05729a
+workflow-type: tm+mt
+source-wordcount: '2132'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Adobe Experience Manager(AEM)會安裝所有參數的預設設定，讓它「立
 AEM有許多方面可以設定：
 
 * 有些 [通常會針對每個專案安裝進行設定](#primary-configuration-considerations) ，而且必須進行審查，以確認這些設定是否適用於您的專案。
-* [進一步的配置](#further-configuration-considerations) ，可能是常見的，但並非必要；與功能或系統效能與穩定性相關。
+* [進一步配置](#further-configuration-considerations) ，可能是常見的，但並非必要；與功能或系統效能與穩定性相關。
 * 其他則僅是AEM的某些選用功能所需（這些功能會連同適當的功能一起記錄）。
 
 根據特定配置，這些更改可以使用：
@@ -92,19 +95,19 @@ AEM的所有元素（例如儲存庫、Dispatcher等）都可安裝在IPv4和IPv
 
 * IPv6地址
 
-   例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
+   for example `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4地址
 
-   例如 `https://123.1.1.4:4502`
+   for example `https://123.1.1.4:4502`
 
 * 伺服器名稱
 
-   例如， `https://www.yourserver.com:4502`
+   for example, `https://www.yourserver.com:4502`
 
 * 對於IPv4和 `localhost` IPv6網路安裝，將解釋預設情況
 
-   例如， `http://localhost:4502`
+   for example, `http://localhost:4502`
 
 ### 版本清除 {#version-purging}
 
@@ -136,7 +139,7 @@ AEM提供您設定：
 
 ### 單一登入 {#single-sign-on}
 
-單一登入(SSO)可讓使用者在提供驗證憑證（例如使用者名稱和密碼）一次後，存取多個系統。 另一個系統（稱為受信任驗證器）執行驗證，並為Experience manager提供用戶憑證。 Experience manager會檢查並強制使用者的存取權限（亦即決定允許使用者存取哪些資源）。
+單一登入(SSO)可讓使用者在提供驗證憑證（例如使用者名稱和密碼）一次後，存取多個系統。 另一個系統（稱為受信任驗證器）執行驗證，並為Experience Manager提供用戶憑證。 Experience Manager會檢查並強制使用者的存取權限（亦即決定允許使用者存取哪些資源）。
 
 如需詳 [細資訊](/help/sites-deploying/single-sign-on.md) ，請參閱單一登入。
 
@@ -159,7 +162,7 @@ AEM提供您設定：
 * 從Dispatcher快取明確清除內容。
 * 將使用者輸入（例如，表格輸入）從發佈環境傳回作者環境（在作者環境的控制下）。
 
-有關詳細資訊，請參 [閱複製](/help/sites-deploying/replication.md)。
+For further details see [Replication](/help/sites-deploying/replication.md).
 
 ### OSGi配置設定 {#osgi-configuration-settings}
 
@@ -179,19 +182,19 @@ LDAP身份驗證發生在儲存庫級別，因此由儲存庫直接處理。 如
 
 ### 配置Dispatcher {#configuring-the-dispatcher}
 
-Dispatcher是Adobe的快取和／或負載平衡工具。 使用Dispatcher也有助於保護您的AEM伺服器不受攻擊。 因此，您可以搭配使用 Dispatcher 與企業級 Web 伺服器，以提高 AEM 例項的安全性。
+Dispatcher是Adobe Experience Manager的快取和／或負載平衡工具，可與企業級Web伺服器搭配使用。
 
-有關完整 [的詳細資訊](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) ，請參見Dispatcher [，特別是](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) Configuring the Dispatcher，以瞭解更多配置詳細資訊。
+有關完整 [的詳細資訊](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) ，請參見Dispatcher [，特別是](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html) Configuring the Dispatcher，以瞭解更多配置詳細資訊。
 
 ### 設定AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 
-隨著AEM檔案服務和AEM檔案安全性的發行，我們現在可以叫用LiveCycle檔案服務來轉換XFA表單、將檔案轉換為PDF，以及原則保護檔案。 請閱讀 [AEM liveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) ，以取得詳細資訊。
+隨著AEM檔案服務和AEM檔案安全性的發行，我們現在可以叫用LiveCycle檔案服務來轉換XFA表單、將檔案轉換為PDF，以及原則保護檔案。 請閱讀 [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) ，以取得詳細資訊。
 
 ### 作業卸載和拓撲管理 {#job-offloading-and-topology-administration}
 
-[卸載](/help/sites-deploying/offloading.md) ，在拓撲中分發包含Experience manager實例的處理任務。 借由卸載，您可以使用特定的Experience manager實例來執行特定類型的處理。 專業化的處理可讓您最大化可用伺服器資源的使用。
+[卸載](/help/sites-deploying/offloading.md) ，在拓撲中分發包含Experience Manager實例的處理任務。 借由卸載，您可以使用特定的Experience Manager實例來執行特定類型的處理。 專業化的處理可讓您最大化可用伺服器資源的使用。
 
-拓撲是鬆散耦合的Experience manager群集，它們參與卸載。 群集由一個或多個Experience manager伺服器實例（單個實例被視為群集）組成。
+拓撲是鬆散耦合的Experience Manager群集，它們參與卸載。 群集由一個或多個Experience Manager伺服器實例（單個實例被視為群集）組成。
 
 有關如何查看或修改拓撲成員資格的詳細資訊，請參 [閱管理拓撲](/help/sites-deploying/offloading.md#administering-topologies) 。
 
@@ -264,7 +267,7 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
    預設情況下， `serverctl` 配置 `CQ_MAX_OPEN_FILES` 為 `8192`;這應該足以適用於大多數情況。
 
-### 設定Rich Text編輯器 {#configuring-the-rich-text-editor}
+### Configuring the Rich Text Editor {#configuring-the-rich-text-editor}
 
 Rich **Text Editor** (**RTE**)為作者提供多種功能， [](/help/sites-authoring/rich-text-editor.md) 以編輯其文字內容；提供圖示、選擇方塊和選單，以提供所見即所得的體驗。
 
