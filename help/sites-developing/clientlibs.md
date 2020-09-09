@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4db76ca1de97d8353ac88a6e66e14f41fb0b87db
+source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2740'
 ht-degree: 0%
 
 ---
@@ -51,16 +51,16 @@ ht-degree: 0%
   - channels (string) multiple
 ```
 
-預設情況下， `cq:ClientLibraryFolder` 節點可以放置在儲存庫的子樹中(這些預設值和其他設定可以通過 `/apps`System Console的 `/libs` Adobe Granite HTML Library Manager `/etc` ****[](https://localhost:4502/system/console/configMgr)panel控制)。
+預設情況下， `cq:ClientLibraryFolder` 節點可以放置在儲存庫的子樹中(這些預設值和其他設定可以通過 `/apps`System Console的 `/libs` Adobe Granite HTML Library Manager `/etc` 面板控制 ****[](https://localhost:4502/system/console/configMgr))。
 
 每 `cq:ClientLibraryFolder` 個檔案都會填入一組JS和／或CSS檔案，以及一些支援檔案（請參閱下面）。 屬性的配 `cq:ClientLibraryFolder` 置如下：
 
-* `categories`: 識別今秋JS和／或CSS檔案集所屬的 `cq:ClientLibraryFolder` 類別。 屬 `categories` 性是多值的，可讓資料庫資料夾成為多個類別的一部分（如需這項功能的實用方法，請參閱以下）。
+* `categories`:識別今秋JS和／或CSS檔案集所屬的 `cq:ClientLibraryFolder` 類別。 屬 `categories` 性是多值的，可讓資料庫資料夾成為多個類別的一部分（如需這項功能的實用方法，請參閱以下）。
 
-* `dependencies`: 這是此庫資料夾所依賴的其他客戶端庫類別的清單。 例如，給定兩個 `cq:ClientLibraryFolder` 節點 `F` ，如果檔案中的某個檔案需要另一個檔案才能 `G`正常工作，則至少該檔案中的一個應屬於 `F``G``categories``G``dependencies``F`Jame。
+* `dependencies`:這是此庫資料夾所依賴的其他客戶端庫類別的清單。 例如，給定兩個 `cq:ClientLibraryFolder` 節點 `F` ，如果檔案中的某個檔案需要另一個檔案才能 `G`正常工作，則至少該檔案中的一個應屬於 `F``G``categories``G``dependencies``F`Jame。
 
-* `embed`: 用於從其他程式庫內嵌程式碼。 如果節點F嵌入節點G和H，則產生的HTML將是節點G和H的內容集中。
-* `allowProxy`: 如果客戶端庫位於下 `/apps`面，則此屬性允許通過代理Servlet訪問它。 請參 [閱下面的查找客戶端庫資料夾和使用代理客戶端庫Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) 。
+* `embed`:用於從其他程式庫內嵌程式碼。 如果節點F嵌入節點G和H，則產生的HTML將是節點G和H的內容集中。
+* `allowProxy`:如果客戶端庫位於下 `/apps`面，則此屬性允許通過代理Servlet訪問它。 請參 [閱下面的查找客戶端庫資料夾和使用代理客戶端庫Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) 。
 
 ## 參考用戶端程式庫 {#referencing-client-side-libraries}
 
@@ -135,7 +135,7 @@ Web客戶端必須具有訪問節點的 `cq:ClientLibraryFolder` 權限。 您�
 
 >[!NOTE]
 >
->客戶端庫資料夾下的靜態資源必須位於名為resources的文 *件夾*。 如果您在資料夾資源下方沒有靜態資源（例如影像） **，則無法在發佈例項上參考它。 以下是範例： https://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
+>客戶端庫資料夾下的靜態資源必須位於名為resources的文 *件夾*。 如果您在資料夾資源下方沒有靜態資源（例如影像） **，則無法在發佈例項上參考它。 以下是範例：https://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
 
 >[!NOTE]
 >
@@ -157,7 +157,7 @@ Web客戶端必須具有訪問節點的 `cq:ClientLibraryFolder` 權限。 您�
 
 >[!CAUTION]
 >
->當使用proxied用戶端程式庫時，AEM Dispatcher組態可能需要更新，以確保允許使用擴充用戶端libs的URI。
+>當使用proxied用戶端程式庫時，AEM Dispatcher組態可能需要更新，以確保允許具有擴充用戶端libs的URI。
 
 >[!CAUTION]
 >
@@ -170,10 +170,10 @@ Web客戶端必須具有訪問節點的 `cq:ClientLibraryFolder` 權限。 您�
 1. 輸入庫檔案的名稱，然後在「類型」(Type)清單中選擇 `cq:ClientLibraryFolder`。 按一 **下「確定** 」，然後按一 **下「全部儲存」**。
 1. 要指定庫所屬的類別或類別，請選擇節點，添加 `cq:ClientLibraryFolder` 以下屬性，然後按一下「全 **部保存**:
 
-   * 名稱： 類別
-   * 類型： 字串
-   * 值： 類別名稱
-   * 多重： 選擇
+   * 名稱：類別
+   * 類型：字串
+   * 值：類別名稱
+   * 多重：選擇
 
 1. 以任何方式將來源檔案新增至程式庫資料夾。 例如，使用WebDav用戶端來複製檔案，或建立檔案並手動編寫內容。
 
@@ -182,8 +182,8 @@ Web客戶端必須具有訪問節點的 `cq:ClientLibraryFolder` 權限。 您�
 1. 選擇客戶端庫資料夾，然後按一下「 **建立」>「建立檔案」**。
 1. 在檔案名框中，鍵入以下檔案名之一，然後按一下確定：
 
-   * **`js.txt`:**使用此檔案名稱來產生JavaScript檔案。
-   * **`css.txt`:**使用此檔案名生成級聯樣式表。
+   * **`js.txt`:** 使用此檔案名稱來產生JavaScript檔案。
+   * **`css.txt`:** 使用此檔案名生成級聯樣式表。
 
 1. 開啟檔案並輸入下列文字，以識別來源檔案路徑的根目錄：
 
@@ -233,9 +233,9 @@ Web客戶端必須具有訪問節點的 `cq:ClientLibraryFolder` 權限。 您�
 * **類型：** 字串[]
 * **值：** 要嵌入的節點的類別屬 `cq:ClientLibraryFolder` 性的值。
 
-#### 使用內嵌功能將要求降至最低 {#using-embedding-to-minimize-requests}
+<!-- #### Using Embedding to Minimize Requests {#using-embedding-to-minimize-requests}
 
-在某些情況下，您可能會發現，您的發佈例項為典型頁面產生的最終HTML包含相當多的元素，尤其是當您的網站使用用戶端內容資訊進行分析或定位時。 `<script>` 例如，在未最佳化的專案中，您可能會在頁面的HTML中 `<script>` 找到下列系列元素：
+In some cases you may find that the final HTML generated for typical page by your publish instance includes a relatively large number of `<script>` elements, particularly if your site is using client context information for analaytics or targeting. For example, in a non-optimized project you might find the following series of `<script>` elements in the HTML for a page:
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery.js"></script>
@@ -247,9 +247,9 @@ Web客戶端必須具有訪問節點的 `cq:ClientLibraryFolder` 權限。 您�
 <script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
 ```
 
-在這種情況下，將所有必要的用戶端程式庫程式碼結合到單一檔案中，以減少頁面載入時的來回請求數，是很有用的。 若要這麼做，您可 `embed` 以使用節點的embed屬性，將必要的程式庫放入應用程式專用的用戶端程 `cq:ClientLibraryFolder` 式庫。
+In such cases, it can be useful to combine all the required client library code in to a single file so that the number of back and forth requests on page load is reduced. To do this you can `embed` the required libraries into you app-specific client library using the embed property of the `cq:ClientLibraryFolder` node.
 
-AEM包含下列用戶端程式庫類別。 您只應嵌入特定網站運作所需的內容。 不過， **您應維護下列訂單**:
+The following client library categories are incuded with AEM. You should embed only those that are required for he functioning of your particular site. However, **you should maintain the order listed here**:
 
 1. `browsermap.standard`
 1. `browsermap`
@@ -269,6 +269,10 @@ AEM包含下列用戶端程式庫類別。 您只應嵌入特定網站運作所�
 1. `cq.collab.toggle`
 1. `cq.collab.forum`
 1. `cq.cleditor`
+
+EDITOR NOTE: removed as requested on CQDOC-16765
+
+-->
 
 #### CSS檔案中的路徑 {#paths-in-css-files}
 
@@ -398,7 +402,7 @@ UYI在AEM中設為預設微調字元。 要將此更改為GCC，請執行以下�
 1. 請至Apache Felix Config Manager，網址為 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 1. 尋找並編輯 **Adobe Granite HTML Library Manager**。
 1. 啟用 **Minify** 選項（如果尚未啟用）。
-1. 將「 **JS處理器預設設定」值設為**`min:gcc`。
+1. 將值 **JS處理器預設配置設定**`min:gcc`。
 
    若以分號(例如 `min:gcc;obfuscate=true`.
 
@@ -449,6 +453,7 @@ AEM提供數種工具來除錯和測試用戶端程式庫資料夾。
    * 在網頁瀏覽器中開啟下列URL（視需要使用不同的主機和連接埠）:
 
       * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
+
    預設頁面顯示沒有類別屬性值之標籤的輸出。
 
 1. 若要查看類別的輸出，請鍵入用戶端程式庫屬性的值，然後按一 `categories` 下「提 **交查詢」**。
@@ -457,8 +462,8 @@ AEM提供數種工具來除錯和測試用戶端程式庫資料夾。
 
 HTML Library Manager服務會在執行 `cq:ClientLibraryFolder` 時期處理標籤並產生程式庫。 環境類型、開發或生產類型決定了您應如何配置服務：
 
-* 提高安全性： 停用除錯
-* 提高效能： 移除空白字元並壓縮程式庫。
-* 改善可讀性： 包含空格且不壓縮。
+* 提高安全性：停用除錯
+* 提高效能：移除空白字元並壓縮程式庫。
+* 改善可讀性：包含空格且不壓縮。
 
 如需設定服務的詳細資訊，請參 [閱「AEM HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager)」。
