@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5版本中已停用和移除的功能。
 description: Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 translation-type: tm+mt
-source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
+source-git-commit: 1e6feac534fe990d614997c4bd3ab999a4a8d479
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 7%
@@ -49,7 +49,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 開發人員 | 使用UI來壓縮／精簡JavaScript用戶端程式庫。 Adobe不打算進一步更新UYI程式庫。 在AEM 6.4之前，UYI預設為使用切換至Google Closure Compiler(GCC)的選項來精簡JavaScript。 從AEM 6.5開始，GCC為預設值。 | Adobe建議升級至AEM 6.5的客戶切換至GCC以進行實作 |
 | 開發人員 | CRXDE lite中的傳統UI對話框編輯器。 Adobe不打算進一步增強散發時隨附的Classic UI Dialog Editor（快速入門） | 沒有可替換的。 |
 | 表單 | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替換。 |  | 開發人員 | CRXDE lite中的傳統UI對話框編輯器。 Adobe不打算進一步增強散發時隨附的Classic UI Dialog Editor（快速入門） | 沒有可替換的。 |
-| 表單 | Lodash/下划線客戶端庫。 Adobe不打算進一步維護和更新Lodash/底線用戶端程式庫，此程式庫會隨散發（快速入門）一起出貨 | Adobe建議仍需使用Lodash/底線的客戶將程式碼新增至其專案程式碼庫。 |
+| 開發人員 | Lodash/下划線客戶端庫。 Adobe不打算進一步維護和更新Lodash/底線用戶端程式庫，此程式庫會隨散發（快速入門）一起出貨 | Adobe建議仍需使用Lodash/底線的客戶將程式碼新增至其專案程式碼庫。 |
 
 ## 移除的功能 {#removed-features}
 
