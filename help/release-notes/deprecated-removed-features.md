@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版本中已停用和移除的功能。
 description: Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1722'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 ## 過時的功能 {#deprecated-features}
 
-本節列出已標示為不再提倡的AEM 6.5功能。 通常，計畫在未來版本中移除的功能會先設為不建議使用，並提供其他選項。
+本節列出已標示為不再提倡的AEM 6.5功能。通常，計畫在未來版本中移除的功能會先設為不建議使用，並提供其他選項。
 
 建議客戶檢視是否在目前的部署中使用這些功能，並規劃變更實作，改為使用所提供的替代方案。
 
@@ -33,26 +33,27 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 資產 | `AssetDownloadServlet` 預設會停用發佈例項。 如需詳細資訊，請參 [閱AEM安全性檢查清單](/help/sites-administering/security-checklist.md)。 | AEM安全性檢查清 [單中說明的設定](/help/sites-administering/security-checklist.md)。 |
 | 資產 | 如果使用者沒有足夠的（讀取和寫入）權限， `/content/dam/collections`則使用者無法建立系列。 | 遵循使用者的存取控制設定，並確保適當的權限。 |
 | Adobe Search &amp; Promote | 不再提倡與Adobe Search &amp; Promote的整合。 Adobe不打算對「搜尋與促銷」整合做進一步的增強。 請注意，Search &amp; Promote整合仍完全受支援，但不建議使用。 |  |
-| DTM標籤管理器 | 不再提倡與DTM（動態標籤管理器）的整合。 | 切換使用Adobe Experience Platform Launch做為標籤管理程式。 |
+| DTM標籤管理器 | 不再支援與DTM（動態標籤管理器）的整合。 | 切換使用Adobe Experience Platform Launch做為標籤管理程式。 |
 | Adobe Target | 在AEM 6.5中新增AEM使用Adobe I/O架構的Adobe Target Standard API(Rest API)連線至Adobe Target服務的功能，Target Classic API(XML)方式已過時。 | 重新設定整合 [以使用新API](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html)。 |
 | Adobe Target | 不建議 `mbox.js` 在AEM中使用與Adobe Target的基本整合。 | 切換為使 `at.js` 用1.x。 |
-| 商務 | [CIF REST](https://github.com/adobe/commerce-cif-api) 於2018年提供為一套微型服務，以整合AEM和商務引擎。 在Adobe於2018年年中收購Magento後，Adobe決定改變其方式，原因有二。 Magento有自己的一組商務API（REST和GraphQL），維護兩組API並不好。 市場趨勢表明，客戶正在向GraphQL靠攏，因為GraphQL是一種更高效的資料查詢方式。 在2019年，Adobe已推出新的商務整合架構，使用Magento的GraphQL API作為真相來源。 Adobe並不打算進一步投資CIF REST。 強烈建議客戶使用更換解決方案。 | 若是AEM-Magento整合，請切換至 [AEM CIF Archetype](https://github.com/adobe/aem-cif-project-archetype)[和AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components)。 請參閱使用Commerce Integration Framework進行AEM [和Magento整合](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)。 我們的規劃藍圖中已列出支援協力廠商（Magento除外）與新方法整合的功能。 |
+| 商務 | [CIF REST](https://github.com/adobe/commerce-cif-api) 於2018年提供為一套微型服務，以整合AEM和商務引擎。 在Adobe於2018年年中收購Magento後，Adobe決定改變其方式，原因有二。 Magento有自己的一組商務API（REST和GraphQL），維護兩組API並不是很好的做法。 市場趨勢表明，客戶正在向GraphQL靠攏，因為GraphQL是一種更高效的資料查詢方式。 在2019年，Adobe已推出新的商務整合架構，使用Magento的GraphQL API作為真相來源。 Adobe並不打算進一步投資CIF REST。 強烈建議客戶使用更換解決方案。 | 若是AEM-Magento整合，請切換至 [AEM CIF Archetype](https://github.com/adobe/aem-cif-project-archetype)[和AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components)。 請參閱使用Commerce Integration Framework進行AEM [和Magento整合](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)。 我們的規劃藍圖中已列出支援協力廠商（Magento除外）與新方法整合的功能。 |
 | 元件(AEM Sites) | Adobe不打算對儲存在中的大部分Foundation Components進行進一步的增強 `/libs/foundation/components`。 在元件資 `cq:deprecated` 料夾 `cq:deprecatedReason` 中尋找和屬性。 AEM 6.5包含Foundation Components，而從舊版升級的客戶可依現狀繼續使用這些元件。 此外，即使已停用，Foundation Components仍完全受支援。 | Adobe建議未來專案使用核心元件。 現有網站可維持原狀，或使用 [AEM Modestance Tools Suite](https://github.com/adobe/aem-modernize-tools) ，重新調整網站以使用核心元件。 |
-| 元件(AEM Sites) | Design Importer元件 `/libs/wcm/designimporter/components` 已標示為6.5起已停用。 Adobe不打算對該設計匯入工具的實作進行進一步的增強。 | Adobe計畫在未來版本中提供使用案例的替代實作。 |
+| 元件(AEM Sites) | Design Importer元件 `/libs/wcm/designimporter/components` 已標示為6.5起已停用。Adobe不打算對該設計匯入工具的實作進行進一步的增強。 | Adobe計畫在未來版本中提供使用案例的替代實作。 |
 | 基礎 | 花崗岩卸載架構。 Adobe不打算對CQ 5.6.1中引進的卸載架構做進一步的增強，以將資產處理外部化。 | Adobe正在研發新一代雲端原生卸載架構。 |
 | 開發人員 | `Hobbes.js`. Adobe不打算對使用者介面測試架構進 `hobbes.js` 一步加強。 | Adobe建議客戶使用Selenium自動化。 |
 | 開發人員 | jQuery UI用戶端程式庫。 Adobe不打算進一步維護和更新發佈時隨附的jQuery UI用戶端程式庫（快速入門） | Adobe建議仍需要jQuery UI才能使用其程式碼的客戶，將其新增至專案程式碼庫。 |
-| 開發人員 | jQuery Animation用戶端程式庫(`granite.jquery.animation`)。 Adobe不打算進一步維護和更新作為分發一部分而出貨的jQuery Animation用戶端程式庫(Quickstart) | Adobe建議仍需jQuery Animations才能使用其程式碼的客戶，將其新增至專案程式碼庫。 |
+| 開發人員 | jQuery Animation用戶端程式庫(`granite.jquery.animation`)。 Adobe不打算進一步維護和更新作為散發一部分而隨附的jQuery Animation用戶端程式庫(Quickstart) | Adobe建議仍需jQuery Animations才能使用其程式碼的客戶，將其新增至專案程式碼庫。 |
 | 開發人員 | Handlebars客戶程式庫。 Adobe不打算進一步維護和更新Handlebar用戶端程式庫，此程式庫是做為散發的一部份(Quickstart) | Adobe建議仍需要Handlebars代碼的客戶，將其加入專案代碼庫。 |
 | 開發人員 | Lawnchair客戶資料庫。 Adobe不打算進一步維護和更新Lawnshair用戶端程式庫(Quickstart)，此程式庫會隨散發一起運送 | Adobe建議仍需Lawnchair才能使用程式碼的客戶，將其新增至專案程式碼庫。 |
 | 開發人員 | `Granite.Sling.js` 用戶端程式庫。 Adobe不打算進一步增強Granite.Sling.js用戶端程式庫，此程式庫會隨散發(Quickstart)一起出貨 | Adobe建議依賴程式庫功能的客戶重新調整其程式碼，以便不再使用。 |
 | 開發人員 | 使用UI來壓縮／精簡JavaScript用戶端程式庫。 Adobe不打算進一步更新UYI程式庫。 在AEM 6.4之前，UYI預設為使用切換至Google Closure Compiler(GCC)的選項來精簡JavaScript。 從AEM 6.5開始，GCC為預設值。 | Adobe建議升級至AEM 6.5的客戶切換至GCC以進行實作 |
 | 開發人員 | CRXDE lite中的傳統UI對話框編輯器。 Adobe不打算進一步增強散發時隨附的Classic UI Dialog Editor（快速入門） | 沒有可替換的。 |
-| 表單 | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替換。 |
+| 表單 | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替換。 |  | 開發人員 | CRXDE lite中的傳統UI對話框編輯器。 Adobe不打算進一步增強散發時隨附的Classic UI Dialog Editor（快速入門） | 沒有可替換的。 |
+| 表單 | Lodash/下划線客戶端庫。 Adobe不打算進一步維護和更新Lodash/底線用戶端程式庫，此程式庫會隨散發（快速入門）一起出貨 | Adobe建議仍需使用Lodash/底線的客戶將程式碼新增至其專案程式碼庫。 |
 
 ## 移除的功能 {#removed-features}
 
-本節列出已從AEM 6.5移除的功能。 舊版的這些功能已標示為已過時。
+本節列出已從AEM 6.5移除的功能。舊版的這些功能已標示為已過時。
 
 | 區域 | 功能 | 替代方案 |
 |--- |--- |--- |
