@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 32addae877604a242c97eac3ed81bbc2f55ec60a
+source-git-commit: 622fbe5eba3e737ebc25e6c57d7ed68d7bff9555
 workflow-type: tm+mt
 source-wordcount: '4423'
 ht-degree: 0%
@@ -434,7 +434,7 @@ B.使用套 [件管理員的HTTP API](https://docs.adobe.com/content/docs/en/crx
 
 ### UberJar {#uber-jar}
 
-UberJar for Experience Manager 6.5.6.0可在 [Adobe Public Maven儲存庫中取得](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6/)。
+UberJar for Experience Manager 6.5.6.0可在 [Adobe Public Maven儲存庫中取得](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/)。
 
 要在Maven項目中使用UberJar，請 [瞭解如何使用UberJar](/help/sites-developing/ht-projects-maven.md) ，並在項目POM中包括以下相關性：
 
@@ -442,7 +442,7 @@ UberJar for Experience Manager 6.5.6.0可在 [Adobe Public Maven儲存庫中取�
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.5.6</version>  
+      <version>6.5.6-1.0</version>  
       <scope>provided</scope>
 </dependency>
 ```
