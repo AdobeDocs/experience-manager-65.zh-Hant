@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5baef6f4d570aff738444e0620b982729b897f89
+source-git-commit: 8633216807061c73f4bc692d13f9eba37845cffc
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2028'
 ht-degree: 10%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 10%
 
 # 使用 Brand Portal 設定 AEM Assets {#configure-integration-65}
 
-Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console以品牌入口網站設定，Adobe Developer Console會購買IMS Token以授權您的品牌入口網站租用戶。
+Adobe Experience Manager(AEM)Assets是透過Adobe Developer Console設定品牌入口網站，該網站會購買IMS Token以授權您的品牌入口網站租用戶。
 
 >[!NOTE]
 >
@@ -357,6 +357,8 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    >[!NOTE]
    >
    >避免禁用任何複製代理。 這可能會導致某些資產的複製失敗。
+   >
+   >確保所有4個複製代理都配置為避免超時錯誤。 See [troubleshoot issues in parallel publishing to Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 您的AEM Assets作者實例已成功設定為品牌入口網站，您現在可以：
 
