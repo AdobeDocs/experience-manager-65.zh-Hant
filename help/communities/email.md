@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 8496c2fa298b5490bb2560f61de77876d66fd6f6
+source-git-commit: 50c1532b2bdc41555eff2be718cd478aad1f403a
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 3%
@@ -112,7 +112,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 
 * 確認 **「從回覆電子郵件建立貼文** 」為 `unchecked`。
 
-![chlimage_1-100](assets/configure-email.png)
+![configure-email-reply](assets/configure-email-reply.png)
 
 ### 訂閱的設定 {#configuration-for-subscriptions}
 
@@ -122,7 +122,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 * 選擇編輯表徵圖。
 * 驗證 **名稱** 為 `subscriptions-email`。
 
-   ![chlimage_1-101](assets/configure-email-subscription.png)
+   ![configure-email-subscription](assets/configure-email-subscriptions.png)
 
 * **[!UICONTROL 名稱]**
 
@@ -141,7 +141,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 
 * **[!UICONTROL 「回覆」電子郵件地址]**
 
-   用作「回覆」電子郵件地址的地址。 預設為 `communities@adobe.com`。
+   用作「回覆」電子郵件地址的地址。 預設為 `no-reply@example.com`。
 
 * **[!UICONTROL 回覆分隔字元]**
 
