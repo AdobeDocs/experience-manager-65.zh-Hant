@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
 source-wordcount: '2112'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 >
 >雖然AEM的SPA功能與架構無關，但目前僅支援React和Angular架構。
 
-若要讓作者使用AEM頁面編輯器來編輯「單頁應用程式」架構所公開的資料，專案必須能夠解譯模型的結構，以表示AEM儲存庫中應用程式所儲存資料的語義。 為了實現此目標，提供了兩個框架不可知庫： 還有 `PageModelManager` 那個 `ComponentMapping`。
+若要讓作者使用AEM頁面編輯器來編輯「單頁應用程式」架構所公開的資料，專案必須能夠解譯模型的結構，以表示AEM儲存庫中應用程式所儲存資料的語義。 為了實現此目標，提供了兩個框架不可知庫：還有 `PageModelManager` 那個 `ComponentMapping`。
 
 ### PageModelManager {#pagemodelmanager}
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 它代表SPA，抽象出代表實際內容結構的JSON結構的檢索與管理。 此外，它還負責與SPA同步，讓它知道何時必須重新演算元件。
 
-請參閱NPM [套件@adobe/cq-spa-page-model-manager](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
+請參閱NPM [套件@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 
 初始化應 `PageModelManager`用程式時，程式庫會先載入提供的應用程式根模型（透過參數、中繼屬性或目前的URL）。 如果庫標識當前頁的模型不屬於其讀取的根模型，並將其作為子頁的模型包含在內。
 
@@ -82,13 +82,13 @@ SPA元件必須與頁面模型同步，並隨之更新其內容。 必須使用�
 
 頁面模型運用JSON模型匯出器，它本身是以 [Sling Model](https://sling.apache.org/documentation/bundles/models.html) API為基礎。 可匯出的吊索模型會公開下列欄位清單，以便啟用基礎程式庫解譯資料模型：
 
-* `:type`: AEM資源的類型（預設=資源類型）
-* `:children`: 當前資源的分層子項。 子項不屬於當前資源的內部內容（可在代表頁面的項目上找到）
-* `:hierarchyType`: 資源的分層類型。 目前 `PageModelManager` 支援頁面類型
+* `:type`:AEM資源的類型（預設=資源類型）
+* `:children`:當前資源的分層子項。 子項不屬於當前資源的內部內容（可在代表頁面的項目上找到）
+* `:hierarchyType`:資源的分層類型。 目前 `PageModelManager` 支援頁面類型
 
-* `:items`: 目前資源的子內容資源（巢狀結構，僅存在於容器上）
-* `:itemsOrder`: 子代的有序清單。 JSON地圖物件無法保證其欄位順序。 API的使用者同時擁有地圖和目前的陣列，可享有這兩種架構的優點
-* `:path`: 項目的內容路徑（顯示在代表頁面的項目上）
+* `:items`:目前資源的子內容資源（巢狀結構，僅存在於容器上）
+* `:itemsOrder`:已排列子系的清單。 JSON地圖物件無法保證其欄位順序。 API的使用者同時擁有地圖和目前的陣列，可享有這兩種架構的優點
+* `:path`:項目的內容路徑（顯示在代表頁面的項目上）
 
 另請參 [閱「AEM Content Services快速入門」。](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html)
 
@@ -98,22 +98,22 @@ SPA元件必須與頁面模型同步，並隨之更新其內容。 必須使用�
 
 為了促進程式庫的互用性，Adobe建議架構特定模組整合下列程式庫。 如果需要，該層可以在將底層API暴露到項目之前封裝和調整它們。
 
-* [@adobe/cq-spa-page-model-manager](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [@adobe/cq-spa-component-mapping](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
+* [@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
 #### 實施 {#implementations}
 
 #### 反應 {#react}
 
-npm模組： [@adobe/cq-react-editable-components](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
+npm模組： [@adobe/aem-react-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
 #### 角度 {#angular}
 
-npm模組： 即將推出
+npm模組：即將推出
 
 ## 主要服務與元件 {#main-services-and-components}
 
-應按照每個框架的具體准則執行下列實體。 基於框架結構，實現方式可能差異很大，但必須提供描述的功能。
+下列實體應按照每個框架的具體准則予以實施。 基於框架結構，實現方式可能差異很大，但必須提供描述的功能。
 
 ### 模型提供者 {#the-model-provider}
 
@@ -129,14 +129,14 @@ Component Decorator負責裝飾每個元件實例的元素的外部HTML，並具
 
 下列中繼資料必須新增至專案元件產生的外部HTML元素。 它們可讓頁面編輯器擷取對應的編輯設定。
 
-* `data-cq-data-path`: 資源相對於 `jcr:content`
+* `data-cq-data-path`:資源相對於 `jcr:content`
 
 #### 編輯功能聲明和佔位符 {#editing-capability-declaration-and-placeholder}
 
 下列中繼資料和類別名稱必須新增至專案元件產生的外部HTML元素。 它們可讓頁面編輯器提供相關功能。
 
-* `cq-placeholder`: 用於標識空元件佔位符的類名
-* `data-emptytext`: 元件例項空白時，覆蓋顯示的標籤
+* `cq-placeholder`:用於標識空元件佔位符的類名
+* `data-emptytext`:元件例項空白時，覆蓋顯示的標籤
 
 **空元件的預留位置**
 
@@ -168,7 +168,7 @@ Component Decorator負責裝飾每個元件實例的元素的外部HTML，並具
 * `gridClassNames:` 為響應網格提供的類名
 * `columnClassNames:` 為響應列提供的類名
 
-另請參閱npm資 [源@adobe/cq-react-editable-componentsresponvegridjsx](https://www.npmjs.com/package/@adobe/cq-react-editable-components#srccomponentsresponsivegridjsx)
+另請參閱npm資 [源@adobe/aem-react-editable-components#srccomponentsresponvegridjsx](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)
 
 #### 回應式格線的預留位置 {#placeholder-of-the-reponsive-grid}
 
@@ -184,8 +184,9 @@ SPA元件會對應至圖形容器（例如回應式格線），且在製作內�
 >
 >頁面編輯器目前需要範例中使用的類別名稱。
 >
->* `"new section"`: 指出目前元素是容器的預留位置
->* `"aem-Grid-newComponent"`: 標準化版面製作的元件
+>* `"new section"`:指出目前元素是容器的預留位置
+>* `"aem-Grid-newComponent"`:標準化版面製作的元件
+
 >
 
 
@@ -241,7 +242,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 專案元件必須至少產生下列資料屬性，才能讓編輯者與它們互動。
 
-* `data-cq-data-path`: 由（例如，）提供的組 `PageModel` 件的相對路 `"root/responsivegrid/image"`徑。 不應將此屬性新增至頁面。
+* `data-cq-data-path`:由（例如，）提供的組 `PageModel` 件的相對路 `"root/responsivegrid/image"`徑。 不應將此屬性新增至頁面。
 
 總之，要讓頁面編輯器將項目元件解釋為可編輯，項目元件必須遵守以下合同：
 
