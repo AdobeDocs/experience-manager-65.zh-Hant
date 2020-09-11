@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '1203'
+ht-degree: 0%
 
 ---
 
@@ -58,9 +61,9 @@ SPA製作功能提供完整的解決方案，以支援AEM中的SPA。 本文介�
 
 ```
   "dependencies": {
-    "@adobe/cq-react-editable-components": "~1.0.3",
-    "@adobe/cq-spa-component-mapping": "~1.0.3",
-    "@adobe/cq-spa-page-model-manager": "~1.0.4"
+    "@adobe/aem-react-editable-components": "~1.0.4",
+    "@adobe/aem-spa-component-mapping": "~1.0.5",
+    "@adobe/aem-spa-page-model-manager": "~1.0.3"
   }
 ```
 
@@ -137,7 +140,7 @@ module.exports = {
 ```
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ModelManager, Constants } from "@adobe/cq-spa-page-model-manager";
+import { ModelManager, Constants } from "@adobe/aem-spa-page-model-manager";
 
 ...
 
@@ -162,7 +165,7 @@ ReactDOM.render(
 透過轉譯應用程 `index.js` 式， `App.js`呼叫會以簡化版本顯示，以專注於重要內容。
 
 ```
-import {Page, withModel } from '@adobe/cq-react-editable-components';
+import {Page, withModel } from '@adobe/aem-react-editable-components';
 
 ...
 
@@ -177,10 +180,10 @@ export default withModel(App);
 
 ### Page.js {#page-js}
 
-透過轉譯頁面，呼 `App.js` 叫會列 `Page.js` 在此處的簡化版本中。
+透過轉譯頁面，以簡 `App.js` 化版 `Page.js` 本列出此處的呼叫。
 
 ```
-import {Page, MapTo, withComponentMappingContext } from "@adobe/cq-react-editable-components";
+import {Page, MapTo, withComponentMappingContext } from "@adobe/aem-react-editable-components";
 
 ...
 
@@ -193,7 +196,7 @@ MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppP
 
 在此範例中， `AppPage` 類別會 `Page`延伸，其中包含內部內容方法，然後可加以使用。
 
-這 `Page` 會擷取頁面模型的JSON表示法，並處理內容以包覆／裝飾頁面的每個元素。 有關的詳細 `Page` 資訊，請參閱文 [件SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501)。
+這 `Page` 會擷取頁面模型的JSON表示法，並處理內容以包覆／裝飾頁面的每個元素。 有關的詳細資 `Page` 訊，請參閱檔案 [SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501)。
 
 ### Image.js {#image-js}
 
@@ -201,7 +204,7 @@ MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppP
 
 ```
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Image.css');
 
@@ -244,7 +247,7 @@ AEM中SPA的核心理念是將SPA元件對應至AEM元件，並在修改內容�
 
 ```
 import React, { Component } from 'react';
-import { MapTo } from '@cq/cq-react-editable-components';
+import { MapTo } from '@adobe/aem-react-editable-components';
 
 ...
 
