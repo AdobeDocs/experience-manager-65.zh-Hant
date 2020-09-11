@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 0%
 >如果MongoDB是在 *AEM後啟動* ，請重 **新啟動所有** AEM **** 例項，以便正確連線至MongoDB。
 
 
-### 示範製作選項： 設定MongoDB複製副本集 {#demo-production-option-setup-mongodb-replica-set}
+### 示範製作選項：設定MongoDB複製副本集 {#demo-production-option-setup-mongodb-replica-set}
 
 以下命令是在localhost上設定具有3個節點的複製副本集的示例：
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 * 從 [Apache Lucene下載Solr](https://archive.apache.org/dist/lucene/solr/):
 
    * 適用於任何作業系統。
-   * 使用4.10版或5版。
+   * Solr 7.0版。
    * Solr需要Java 1.7或更新版本。
 
 * 基本配置
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果Solr Console不可用，請檢查&lt;solrinstall>/example/logs下的日誌。 查看SOLR是否嘗試綁定到無法解析的特定主機名(如 「user-macbook-pro」)。
+>如果Solr Console不可用，請檢查&lt;solrinstall>/example/logs下的日誌。 查看SOLR是否嘗試綁定到無法解析的特定主機名(如「user-macbook-pro」)。
 如果是，請使用此主機名的新條目（如127.0.0.1 user-macbook-pro）更新etc/hosts檔案，Solr將正常啟動。
 
 
@@ -157,13 +157,13 @@ ht-degree: 0%
 1. 登入以張貼留言：
 1. 在注釋文字輸入方塊中輸入文字，然後按一下「貼 **[!UICONTROL 文」]**
 
-   ![chlimage_1-191](assets/chlimage_1-191.png)
+   ![chlimage_1-111](assets/chlimage_1-191.png)
 
 1. 只要檢視作者例項 [的注釋](http://localhost:4502/content/community-components/en/comments.html) （可能仍以管理員／管理員身分登入）。
 
-   ![chlimage_1-192](assets/chlimage_1-192.png)
+   ![chlimage_1-112](assets/chlimage_1-192.png)
 
-   注意： 雖然作者在asipath下有JCR節 *點* ，但這些節點是用於SCF框架的。 實際的UGC不在JCR中，它在MongoDB中。
+   注意：雖然作者在asipath下有JCR節 *點* ，但這些節點是用於SCF框架的。 實際的UGC不在JCR中，它在MongoDB中。
 
 1. 在mongodb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** >內容中檢視UGC ****
 
