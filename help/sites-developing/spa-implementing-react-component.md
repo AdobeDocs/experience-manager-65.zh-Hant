@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -69,14 +72,14 @@ We.Retail Journal應用程式的左上角有氣象元件。 它顯示已定義�
 
 在We.Retail Journal應用程式中檢閱自訂氣象 `Weather.js`元件()的程式碼：
 
-* **第16行**: React Open Weather Widget會視需要載入。
-* **第46行**: 此函 `MapTo` 數將此React元件與對應的AEM元件關聯，以便在SPA編輯器中編輯它。
+* **第16行**:React Open Weather Widget會視需要載入。
+* **第46行**:此函 `MapTo` 數將此React元件與對應的AEM元件關聯，以便在SPA編輯器中編輯它。
 
-* **第22-29行**: 已定 `EditConfig` 義，檢查城市是否已填入，並定義值（如果空）。
+* **第22-29行**:已定 `EditConfig` 義，檢查城市是否已填入，並定義值（如果空）。
 
-* **第31-44行**: Weather元件擴展了類 `Component` 別並提供React Open Weather元件的NPM使用文檔中定義的所需資料，並呈現元件。
+* **第31-44行**:Weather元件擴展了類 `Component` 別並提供React Open Weather元件的NPM使用文檔中定義的所需資料，並呈現元件。
 
-```
+```javascript
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  ~ Copyright 2018 Adobe Systems Incorporated
  ~
@@ -94,7 +97,7 @@ We.Retail Journal應用程式的左上角有氣象元件。 它顯示已定義�
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 import React, {Component} from 'react';
 import ReactWeather from 'react-open-weather';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Weather.css');
 
