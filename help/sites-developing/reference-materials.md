@@ -12,12 +12,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: d8c9c2db-6709-409a-93d0-11b802763ada
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b1cbb6fd42c78c068846243734798e658aa28d59
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
 
-# API指南{#api-guides}
+# API指南 {#api-guides}
 
 Adobe Experience Manager(AEM)提供數個API，以開發應用程式和擴充AEM。 下列清單提供AEM支援的API檔案：
 
@@ -31,10 +34,10 @@ Adobe Experience Manager(AEM)提供數個API，以開發應用程式和擴充AEM
 
 AEM Single-Page Application(SPA)Editor SDK架構JavaScript API參考：
 
-* [元件映射](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
-* [頁面模型管理員](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [反應可編輯的元件](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
-* [角度可編輯的元件](https://www.npmjs.com/package/@adobe/cq-angular-editable-components)
+* [元件映射](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+* [頁面模型管理員](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [反應可編輯的元件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [角度可編輯的元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 AEM傳送與內容管理API:
 
@@ -46,7 +49,7 @@ AEM傳送與內容管理API:
 
 * **資產**:資產HTTP API可讓您對資產執行建立——讀取——更新——刪除(CRUD)作業，包括二進位、中繼資料、轉譯和註解。 請參 [閱AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 
-* **內容片段** (CF):資產 [HTTP API和](/help/assets/assets-api-content-fragments.md)[AEM Assets API中的CF支援——內容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* **內容片段** (CF): [資產HTTP API和](/help/assets/assets-api-content-fragments.md) AEM Assets API中的CF [支援——內容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 
 以下外部資源僅供參考：
 
