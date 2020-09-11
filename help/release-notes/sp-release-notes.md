@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 622fbe5eba3e737ebc25e6c57d7ed68d7bff9555
+source-git-commit: 74f1fc80bb908f7b7114177c5f8355ff892b95ed
 workflow-type: tm+mt
-source-wordcount: '4423'
+source-wordcount: '4422'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 搜尋頁面和搜尋結果頁面現在提供更多資訊標題，以更好地瞭解螢幕閱讀程式使用者(NPR-34093)。
 
-* 螢幕閱讀程式現在會公佈刪除資產屬性按鈕 [!UICONTROL 「基本] 」標籤中選 取標籤的選項，以刪除選取的標籤(NPR-33972)。
+* 螢幕閱讀程式現在會宣佈刪除資產「屬性」按鈕的「 [!UICONTROL Basic] 」（基本）標籤中選取之標籤的選項，以刪除選取的標籤(NPR-33972)。
 
 * 現在，螢幕閱讀程式會將清單檢視中每一列的元素正確宣佈為同一列的元素(NPR-33932)。
 
