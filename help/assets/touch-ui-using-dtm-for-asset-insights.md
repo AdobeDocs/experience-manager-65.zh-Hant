@@ -3,9 +3,9 @@ title: 透過DTM啟用資產見解
 description: 瞭解如何使用Adobe動態標籤管理(DTM)來啟用資產分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 3fbf32ec0930b8e832f8bea5b466fcb6bd38fbd3
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,15 @@ ht-degree: 0%
 
 # 透過DTM啟用資產見解 {#enable-asset-insights-through-dtm}
 
-Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytics客戶可免費取得。
+Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytics客戶可免費取得。 您可以自訂追蹤代碼，讓協力廠商CMS解決方案使用「資產前瞻分析」，或使用DTM插入「資產前瞻分析」標籤。 只有影像才支援並提供見解。
 
-雖然您可以自訂追蹤代碼，讓協力廠商CMS解決方案能夠使用「資產前瞻分析」，但Adobe建議您使用DTM插入「資產前瞻分析」標籤。
-
->[!NOTE]
+>[!CAUTION]
 >
->只有影像才支援並提供見解。
+>Adobe DTM已過時，改用Adobe Experience Platform Launch，即將 [結束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您使用 [Launch獲取資產見解](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 執行這些步驟，以透過DTM啟用資產分析。
 
-1. 按一下Experience Manager標誌，並前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 洞察」設定]**。
+1. 按一下Experience Manager標誌，並前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 前瞻分析設定]**」。
 1. [使用DTM Cloud服務配置Experience Manager部署](/help/sites-administering/dtm.md)
 
    當您登入https://dtm.adobe.com並造訪使用者設定檔中的「 [帳戶設定](https://dtm.adobe.com/) 」時， **** API Token應可供使用。 從資產前瞻分析的角度來看，此步驟不是必需的，因為Experience Manager Sites與資產前瞻分析的整合仍在進行中。
