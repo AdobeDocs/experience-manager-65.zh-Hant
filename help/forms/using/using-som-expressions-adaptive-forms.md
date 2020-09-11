@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6b4bc58efd72900c54cb245878239e345d72ae3e
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -48,4 +48,3 @@ DOM樹
 使用面板工具列擷取SOM運算式
 
 GuideBridge中列出的 [某些API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) ，會使用元素的SOM運算式。 例如，若要以最適化形式將焦點放在特定欄位，請將對應的SOM運算式傳遞至 `getFocus`API `guideBridge`。
-
