@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.5開發使用指南
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 7%
+source-wordcount: '820'
+ht-degree: 8%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 7%
    + [設計與設計人員(Classic UI)](designer.md)
    + [移轉至Touch UI](/help/sites-developing/touch-ui-migration.md)
 + 平台{#platform}
-   + [Sling Cheatsheet](sling-cheatsheet.md)
-   + [使用Sling適配器](sling-adapters.md)
+   + [Sling 速查表](sling-cheatsheet.md)
+   + [使用 Sling 介面卡](sling-adapters.md)
    + [標籤庫](taglib.md)
    + 範本{#templates}
       + [範本](templates.md)
@@ -115,7 +115,7 @@ ht-degree: 7%
       + [SPA模型路由](spa-routing.md)
       + [SPA與Adobe Experience Platform Launch整合](spa-launch.md)
       + [SPA和伺服器端演算](spa-ssr.md)
-      + [SPA Javascript API參考](spa-reference-materials.md)
+      + [SPA參考資料](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
    + [內容片段](/help/assets/content-fragments/content-fragments.md)
    + [體驗片段](/help/sites-authoring/experience-fragments.md)
