@@ -10,7 +10,10 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '1053'
+ht-degree: 0%
 
 ---
 
@@ -57,9 +60,9 @@ SPA製作功能提供完整的解決方案，以支援AEM中的SPA。 本文介�
 
 ```
 "dependencies": {
-  "@adobe/cq-angular-editable-components": "~1.0.3",
-  "@adobe/cq-spa-component-mapping": "~1.0.3",
-  "@adobe/cq-spa-page-model-manager": "~1.0.4"
+  "@adobe/aem-angular-editable-components": "~1.0.3",
+  "@adobe/aem-spa-component-mapping": "~1.0.5",
+  "@adobe/aem-spa-page-model-manager": "~1.0.3"
 }
 ```
 
@@ -131,7 +134,7 @@ SPA的入口點是此處所示 `app.module.ts` 的檔案，可簡化以著重於
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SpaAngularEditableComponentsModule } from '@adobe/cq-angular-editable-components';
+import { SpaAngularEditableComponentsModule } from '@adobe/aem-angular-editable-components';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -160,8 +163,8 @@ export class AppModule {}
 ```
 // app.component.ts
 import { Component } from '@angular/core';
-import { ModelManager } from '@adobe/cq-spa-page-model-manager';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { ModelManager } from '@adobe/aem-spa-page-model-manager';
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-root',
@@ -195,7 +198,7 @@ export class AppComponent {
 import { Component } from '@angular/core';
 import { ModelManagerService }     from '../model-manager.service';
 import { ActivatedRoute } from '@angular/router';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-main',
@@ -220,7 +223,7 @@ export class MainContentComponent {
 }
 ```
 
-這 `MainComponent` 會擷取頁面模型的JSON表示法，並處理內容以包覆／裝飾頁面的每個元素。 有關的詳細 `Page` 資訊，請參閱文 [件SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501)。
+這 `MainComponent` 會擷取頁面模型的JSON表示法，並處理內容以包覆／裝飾頁面的每個元素。 有關的詳細資 `Page` 訊，請參閱檔案 [SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501)。
 
 ### image.component.ts {#image-component-ts}
 
@@ -280,7 +283,7 @@ AEM中SPA的核心理念是將SPA元件對應至AEM元件，並在修改內容�
 
 單頁應用程式中的元件必須定期共用資訊。 有幾種建議的方法可做到，如下列出，增加了複雜性。
 
-* **選項1:** 將邏輯集中並廣播到必要的元件，例如，將util類用作純物件導向的解決方案。
+* **選項1:** 例如，將util類用作純物件導向的解決方案，將邏輯和廣播集中到必要的元件。
 * **選項2:** 使用狀態庫（例如NgRx）來共用元件狀態。
 * **選項3:** 自訂和擴充容器元件，以運用物件階層。
 
