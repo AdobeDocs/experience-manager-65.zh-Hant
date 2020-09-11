@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 2%
@@ -120,7 +120,7 @@ ht-degree: 2%
 
 1. 按一下「 **[!UICONTROL 全部儲存]**」。
 
-**以編輯模式在瀏覽器中檢視頁面：**
+**在編輯模式下在瀏覽器中檢視頁面：**
 
 * 標準UI: [http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html](http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.md)
 
@@ -177,9 +177,9 @@ ht-degree: 2%
 * 在「高級」頁籤上
 
    * 若為「重新導向」項目，請瀏 **[!UICONTROL 覽至「網站]** > **[!UICONTROL SCF沙盒網站]** > **[!UICONTROL SCF沙盒」]**
-   * 按一下「 **[!UICONTROL 確定」]**
+   * Click **[!UICONTROL OK]**
 
-* 按一下「 **[!UICONTROL 確定」]**
+* Click **[!UICONTROL OK]**
 
 發佈網站後，瀏覽至發佈例項的根頁面會重新導向至英文頁面。
 
