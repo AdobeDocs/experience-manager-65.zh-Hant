@@ -10,7 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 8b4b0afc-8534-4010-8f34-cb10475a8e79
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
 
 請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) （SPA藍圖）檔案，以取得模型剖析和前端元件存取模型的詳細資訊。
 
-另請參閱npm套件： [https://www.npmjs.com/package/@adobe/cq-spa-component-mapping](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
+另請參閱npm套件： [https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
 ## 模型導向的單頁應用程式 {#model-driven-single-page-application}
 
