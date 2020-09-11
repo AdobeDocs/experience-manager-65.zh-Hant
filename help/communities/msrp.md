@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 412200c1bb0c7050c981fc5dc2a5430f37b3beb3
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1209'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 * [Apache Solr](https://lucene.apache.org/solr/):
 
-   * 4.10版或5版
+   * Solr 7.0版
    * Solr需要Java 1.7或更新版本
    * 無需服務
    * 運行模式選擇：
@@ -64,25 +64,25 @@ ht-degree: 1%
 
    * **[!UICONTROL mongoDB URI]**
 
-      *預設*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+      *預設*:mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL mongoDB 資料庫]**
 
-      *預設*: 社區
+      *預設*:社區
 
    * **[!UICONTROL mongoDB UGC 集合]**
 
-      *預設*: 內容
+      *預設*:內容
 
    * **[!UICONTROL mongoDB 附件集合]**
 
-      *預設*: 附件
+      *預設*:附件
 
 * **[!UICONTROL SolrConfiguration]**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper Host **
+   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper Host**
 
-      在外部ZooKeeper的 [SolrCloud模式下執行時](solr.md#solrcloud-mode) ，將此值設為 `HOST:PORT` ZooKeeper的值， *例如my.server.com:2181*
+      在外部ZooKeeper的 [SolrCloud模式中執行時](solr.md#solrcloud-mode) ，將此值設為 `HOST:PORT` ZooKeeper的值， *例如my.server.com:2181*
 
       對於ZooKeeper Ensemble，輸入逗號分 `HOST:PORT` 隔的值， *例如host1:2181,host2:2181*
 
@@ -92,11 +92,11 @@ ht-degree: 1%
       * **[!UICONTROL Solr URL]**在獨立模式下與Solr通訊的URL。
 如果在SolrCloud模式中執行，請留空。
 
-         *預設值*: https://127.0.0.1:8983/solr/
+         *預設值*:https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr系列]**Solr系列名稱。
 
-         *預設值*: collection1
+         *預設值*:collection1
 
 * 選擇「提 **[!UICONTROL 交」]**
 
@@ -166,7 +166,7 @@ MSRP必須被識別為所有作者和發佈例項上的公用商店。
 
 在安裝新配置檔案或修復損壞的Solr索引時，有一個HTTP端點用於為MSRP的Solr重新編製索引。
 
-MongoDB是MSRP的真 *相* ; 只需對MongoDB執行備份。
+MongoDB是MSRP的真 *相* ;只需對MongoDB執行備份。
 
 整個UGC樹可以重新編製索引，或僅對*path *data參數指定的特定子樹進行索引。
 
@@ -187,7 +187,7 @@ MongoDB是MSRP的真 *相* ; 只需對MongoDB執行備份。
 
 cURL -u *簽名* -d *data**reindex-url*
 
-*signin* = administrator-id:password例如： admin:admin
+*signin* = administrator-id:password例如：admin:admin
 
 *data* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
@@ -245,7 +245,7 @@ GitHub上提供開放原始碼工具，可用於：
 
 如果日誌中出現以下錯誤，表示Solr架構檔案配置不正確。
 
-#### JsonMappingException: 未定義的欄位provider_id {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException:未定義的欄位provider_id {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id
