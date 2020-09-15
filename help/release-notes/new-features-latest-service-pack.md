@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5cf27977d3d94d39c9dfec51eb50778048f76dfd
+source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
 workflow-type: tm+mt
 source-wordcount: '2482'
 ht-degree: 2%
@@ -17,8 +17,6 @@ ht-degree: 2%
 Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的增強功能以及效能、穩定性和安全性改進。 每季的上市情況讓您輕鬆存取和採用新功能和創新。
 
 本文重點介紹最新6.5 Service Pack中的功能、 [舊版6.5 Service Pack中的主要功能](#key-features-previous-service-packs)，以及Experience Manager 6.5.5.0版以來的 [部分主要版本](#key-releases-since-last-sp) 。
-
->[!VIDEO](https://video.tv.adobe.com/v/39867)
 
 ## Adobe網 [!DNL Experience Manager] 站 {#aem-sites}
 
