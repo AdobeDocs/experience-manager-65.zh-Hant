@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74f1fc80bb908f7b7114177c5f8355ff892b95ed
+source-git-commit: 74606bc3e9c768c3d94b7d05c722980f29e20e0e
 workflow-type: tm+mt
-source-wordcount: '4422'
+source-wordcount: '4418'
 ht-degree: 0%
 
 ---
@@ -47,9 +47,9 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 在自動化表單轉換服務中支援Adobe Sign文字標籤。
 
-* 支援SMB 2和SMB 3協定。
+* 支援使用將彩色表格轉換為可調式表格 [!DNL Automated Forms Conversion service]。
 
-* 支援使用自動化表單轉換服務，將彩色表單轉換為可調式表單。
+* 支援SMB 2和SMB 3協定。
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.22.4版。
 
