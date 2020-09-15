@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74606bc3e9c768c3d94b7d05c722980f29e20e0e
+source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
 workflow-type: tm+mt
-source-wordcount: '4418'
+source-wordcount: '4458'
 ht-degree: 0%
 
 ---
@@ -434,7 +434,7 @@ B.使用套 [件管理員的HTTP API](https://docs.adobe.com/content/docs/en/crx
 
 ### UberJar {#uber-jar}
 
-UberJar for Experience Manager 6.5.6.0可在 [Adobe Public Maven儲存庫中取得](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/)。
+UberJar for Experience Manager 6.5.6.0可在 [Maven Central儲存庫中取得](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/)。
 
 要在Maven項目中使用UberJar，請 [瞭解如何使用UberJar](/help/sites-developing/ht-projects-maven.md) ，並在項目POM中包括以下相關性：
 
@@ -446,6 +446,10 @@ UberJar for Experience Manager 6.5.6.0可在 [Adobe Public Maven儲存庫中取�
       <scope>provided</scope>
 </dependency>
 ```
+
+>[!NOTE]
+>
+>此版本之後，UberJar和其他相關對象可在Maven Central Repository(Adobe Public Maven Repository，而非Adobe Public Maven Repository(repo.adobe.com)上使用。 主UberJar檔案已更名為 `uber-jar-<version>.jar`。 因此，標籤沒 `classifier`有 `apis` 任何值和值 `dependency` 。
 
 ## 過時的功能 {#removed-deprecated-features}
 
