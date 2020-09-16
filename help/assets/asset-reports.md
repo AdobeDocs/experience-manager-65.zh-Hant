@@ -3,7 +3,7 @@ title: 有關數位資產的使用與分享的報告。
 description: 有關您資產的報 [!DNL Adobe Experience Manager Assets] 告，可協助您瞭解數位資產的使用、活動和共用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a8c4bc1992a48dd01a3f58498e9e924dcc9e886a
+source-git-commit: 2ac848fa360ad87ff4f87efc38ae1361ae890cb2
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 8%
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 ## 先決條件 {#prerequisite-for-reporting}
 
-若要產生報表，請確定下列項目：
+若要產生報表，請執行下列動作：
 
 * 從「 [!UICONTROL 工具」>「作業」]**[!UICONTROL >「Web主控台]** 」啟用「Day CQ DAM Event Recorder **[!UICONTROL 」]******&#x200B;服務。
 * 選擇您要報告的活動或事件。 例如，若要產生已下載資產的報表，請選取「已 [!UICONTROL 下載資產」(DOWNLOADED)]。
@@ -50,7 +50,7 @@ ht-degree: 8%
 
 1. 在介 [!DNL Experience Manager] 面中，按一下「 **[!UICONTROL 工具]** >資 **[!UICONTROL 產]** > **[!UICONTROL 報表]**」。
 
-![「工具」頁面，以導覽資產報表](assets/AssetsReportNavigation.png)
+   ![「工具」頁面，以導覽資產報表](assets/AssetsReportNavigation.png)
 
 1. 在「資 [!UICONTROL 產報表] 」頁面上，按 **[!UICONTROL 一下工具]** 列中的「建立」。
 1. 從「建 **[!UICONTROL 立報表]** 」頁面，選擇您要建立的報表，然後按一下「下 **[!UICONTROL 一步」]**。
@@ -59,11 +59,12 @@ ht-degree: 8%
 
    >[!NOTE]
    >
-   >依預設，「內容片段」和連結分享會包含在資產「下載 [!UICONTROL 」報] 表中。 選取適當的選項，以建立連結共用的報表，或從下載報表中排除內容片段。
+   >依預設，「內容片段」和連結分享會包含在「資產下載」 [!UICONTROL 報表] 。 選取適當的選項，以建立連結共用的報表，或從下載報表中排除內容片段。
 
    >[!NOTE]
    >
-   >「下 [!UICONTROL 載] 」報表只會顯示個別選取並使用「快速動作」下載或下載的資產的詳細資訊。 但是，它不包含已下載資料夾中資產的詳細資料。
+   >「下 [!UICONTROL 載] 」報表只會顯示在個別選取後下載或使用「快速動作」下載的資產詳細資訊。 但是，它不包含已下載資料夾中資產的詳細資料。
+
 1. 在儲存報表的CRX儲存庫中設定報表詳細資訊，例如標題、說明、縮圖和資料夾路徑。 預設情況下，資料夾路徑為 `/content/dam`。 您可以指定不同的路徑。
 
    ![新增報表詳細資訊的頁面](assets/report_configuration.png)
@@ -94,7 +95,7 @@ ht-degree: 8%
 
    ![「連結共用」報表的詳細資訊頁面](assets/link_share.png)
 
-1. 從工具 **[!UICONTROL 列按一下]** 「下一步」。
+1. Click **[!UICONTROL Next]** from the toolbar.
 
 1. 在「設 **[!UICONTROL 定欄]** 」頁面中，某些欄會依預設顯示在報表中。 您可以選取更多欄。 取消選取選取的欄，將其排除在報表中。
 
@@ -104,7 +105,7 @@ ht-degree: 8%
 
    ![選取或取消選取報表欄](assets/custom_columns.png)
 
-1. 從工具 **[!UICONTROL 列按一下]** 「建立」。 訊息會通知報表產生已開始。
+1. Click **[!UICONTROL Create]** from the toolbar. 訊息會通知報表產生已開始。
 1. 在「報 [!UICONTROL 表] 」頁面上，報表產生狀態是根據報表作業的目前狀態，例如 [!UICONTROL Success]、FailedFailed [!UICONTROL 、]Queued Asset或ScheduledScheduledReports。 通知收件箱中會顯示相同的狀態。要查看報告頁，請按一下報告連結。 或者，選取報表，然後從工具列按 **[!UICONTROL 一下]** 「檢視」。
 
    ![產生的報表](assets/report_page.png)
@@ -141,7 +142,7 @@ ht-degree: 8%
 
    若要新增更多自訂欄，請按一 **[!UICONTROL 下「新增]** 」，然後重複步驟5和6。
 
-1. 從工具 **[!UICONTROL 列按一下]** 「建立」。 訊息會通知報表產生已開始。
+1. Click **[!UICONTROL Create]** from the toolbar. 訊息會通知報表產生已開始。
 
 ## 配置清除服務 {#configure-purging-service}
 
