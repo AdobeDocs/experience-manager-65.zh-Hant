@@ -3,9 +3,9 @@ title: 設定Rich Text Editor外掛程式
 description: 瞭解如何設定Adobe Experience Manager Rich Text Editor外掛程式，以啟用個別功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 6f5e650c99017c4b2f04ca8495eea8481b3236cd
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4398'
 ht-degree: 1%
 
 ---
@@ -488,7 +488,7 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都包含featu
 
 在CRXDE中，保存屬性後，將顯示所表示的字元。 請參閱下方的一半範例。 重複上述步驟，讓作者可使用更多特殊字元。
 
-![在CRXDE中，添加一個要在RTE工具欄中提供的字元在RTE工具欄中](assets/chlimage_1-106.png "添加一個要在RTE工具欄中提供的單字元")
+![在CRXDE中，添加一個要在RTE工具欄中提供的單字元在RTE工具欄中](assets/chlimage_1-106.png "添加一個要在RTE工具欄中提供的單字元")
 
 ### 定義字元範圍 {#definerangechar}
 
@@ -584,7 +584,7 @@ RTE功能可透過一系列外掛程式提供，每個外掛程式都包含featu
 
 ### 在表格中設定隱藏的標題以供協助工具使用 {#hiddenheader}
 
-有時，您可能會在欄標題中建立不含視覺文字的資料表格，並假設標題的用途是由欄與其他欄的視覺關係所隱含。 在這種情況下，必須在標題儲存格的儲存格內提供隱藏的內文，讓螢幕閱讀程式和其他輔助技術協助有不同需求的讀者瞭解欄目的用途。
+有時，您可能會在欄標題中建立不含視覺文字的資料表格，並假設欄與其他欄的視覺關係暗示標題的用途。 在這種情況下，必須在標題儲存格的儲存格內提供隱藏的內文，讓螢幕閱讀程式和其他輔助技術協助有不同需求的讀者瞭解欄目的用途。
 
 為了增強此類場景中的輔助功能，RTE支援隱藏的標題單元格。 此外，它還提供與表格中隱藏標題相關的配置設定。 這些設定可讓您在編輯和預覽模式中，將CSS樣式套用至隱藏的標題。 若要協助作者在編輯模式中識別隱藏的標題，請在程式碼中加入下列參數：
 
@@ -731,7 +731,7 @@ RTE允許作者還原或重做最後幾次編輯。 依預設，50個編輯會�
       * **名稱** `cssExternal`
       * **類型** `String`
       * **值** CSS類的名稱（不帶前面的&#39;.&#39;）; for example, `cssClass` instead of `.cssClass`)
-   * 有效通 **訊協定的陣列** (包括、 `https://`、 `https://`以及 `file://``mailto:` 其他通訊協定)
+   * 有效通訊協 **定陣列**。 支援的通 `http://`訊協 `https://`定 `file://`有、、和 `mailto:`。
 
       * **名稱** `protocols`
       * **類型** `String[]`
