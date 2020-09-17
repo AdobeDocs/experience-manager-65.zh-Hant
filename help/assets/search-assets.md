@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
+source-git-commit: cdf22fea17f6c79e3a2b565a4c6f728bf0bbd23a
 workflow-type: tm+mt
-source-wordcount: '5878'
+source-wordcount: '5888'
 ht-degree: 5%
 
 ---
@@ -65,9 +65,7 @@ ht-degree: 5%
 
 為快速找到相關資產，豐富式介面提供篩選、排序和選擇機制。 您可以根據多個條件來篩選結果，並查看搜尋的資產數目，以找出各種篩選條件。 或者，您也可以在Omnisearch欄位中變更查詢，以重新執行搜尋。 當您變更搜尋詞或篩選器時，其他篩選器仍會套用，以保留您搜尋的上下文。
 
-當結果為許多資產時， [!DNL Experience Manager] 在卡片檢視中會顯示前100個，在清單檢視中顯示200個。 當使用者捲動時，會載入更多資產。 這是為了改善效能。
-
->[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
+當結果為許多資產時， [!DNL Experience Manager] 在卡片檢視中會顯示前100個，在清單檢視中顯示200個。 當使用者捲動時，會載入更多資產。 這是為了改善效能。 觀看顯示資產數 [目的影片展示](https://www.youtube.com/watch?v=LcrGPDLDf4o)。
 
 有時候，您會在搜尋結果中看到一些非預期的資產。 如需詳細資訊，請查看未 [預期的結果](#troubleshoot-unexpected-search-results-and-issues)。
 
@@ -371,7 +369,7 @@ ht-degree: 5%
 
 您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
 
-如果文字擷取對您的部署而言太過耗費資源，請考慮停 [用文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
+如果文字擷取對您的部署而言太過耗費資源，請考慮停用 [文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
 ### 自訂謂語以篩選搜尋結果 {#custompredicates}
 
