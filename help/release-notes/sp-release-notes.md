@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
+source-git-commit: b6db346f7ec2570972329a8edb089fe909120b75
 workflow-type: tm+mt
-source-wordcount: '4458'
+source-wordcount: '4402'
 ht-degree: 0%
 
 ---
@@ -106,37 +106,37 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 **Experience Manager Assets中的協助工具增強功能**
 
-* 使用者現在可使用鍵盤按鍵存取 [!UICONTROL References] （參考）資產清單中的互動式使用者介面選項(NPR-34115)。
+* 使用鍵盤按鍵，使用者現在可以存取並專注在資產 [!UICONTROL References] list（參考清單）中的互動式使用者介面選項(NPR-34115)。
 
-* 螢幕閱讀程式現在會宣佈搜尋篩選器中的選項為可展開的收合器(NPR-34104)。
+* 螢幕閱讀程式現在會宣佈搜尋頁面上謂詞的預期動作(NPR-34104)。
 
 * 搜尋頁面和搜尋結果頁面現在提供更多資訊標題，以更好地瞭解螢幕閱讀程式使用者(NPR-34093)。
 
-* 螢幕閱讀程式現在會宣佈刪除資產「屬性」按鈕的「 [!UICONTROL Basic] 」（基本）標籤中選取之標籤的選項，以刪除選取的標籤(NPR-33972)。
+* 螢幕閱讀程式現在會宣佈在資產「屬性」頁面的「 [!UICONTROL Basic] 」（基本）標籤中，刪除選  取的標籤選項(NPR-33972)。
 
-* 現在，螢幕閱讀程式會將清單檢視中每一列的元素正確宣佈為同一列的元素(NPR-33932)。
+* 現在，螢幕閱讀程式會將清單檢視中每一列的元素宣佈為同一列的元素(NPR-33932)。
 
-* 使用Tab鍵導覽時的使用者焦點現在可正確移至版本預覽中的關閉選項(NPR-33863)。
+* 使用鍵導覽時的使 `Tab` 用者焦點現在會移至版本預覽中的關閉選項(NPR-33863)。
 
-* 現在，在Omnisearch關閉後，使用者焦點會正確移至搜尋圖示(NPR-33705)。
+* Omnisearch關閉後，使用者焦點現在會移至搜尋圖示(NPR-33705)。
 
-* 可操作的使用者介面選項現在使用鍵盤按鍵聚焦時，視覺焦點更突出，對比也更強。 因此，有視力的鍵盤使用者現在可以區分重點區域(NPR-33542)。
+* 可操作的使用者介面選項現在使用鍵盤按鍵進行導覽時，視覺焦點更突出，對比也更強。 鍵盤使用者可識別重點區域(NPR-33542)。
 
-* 使用鍵盤的拖曳功能現在可在螢幕閱讀程式的 [!UICONTROL Metadata Schema Editor] （瀏覽模式）中正確運作(CQ-4296326)。
+* 使用鍵盤的拖曳功能現在可在螢幕閱讀程式的 [!UICONTROL 「中繼資料結構編輯器」] (CQ-4296326)中運作。
 
-* 在連結共用對話方塊中，當在瀏覽模式中導覽時，螢幕閱讀程式、
+* 在連結共用對話方塊中，當在瀏覽模式中導覽時，會顯示螢幕閱讀程式，
 
-   * 現在，在載入對話方塊後，請勿立即將表格資訊旁白化。
+   * 不會在載入對話方塊後立即對表格資訊進行旁白。
 
    * 可導覽至所有列出的自動建議。
 
-   * 現在會針對新增電子郵件位址/ [!UICONTROL 搜尋顯示的自動建議] (CQ-4294232)旁白顯示。
+   * 針對新增電子郵件地址／搜尋 [!UICONTROL 所顯示的自動建議] (CQ-4294232)進行旁白。
 
-* 使用Esc鍵從縮圖檢視中移除快速動作圖示，不會再移除最後一個焦點項目的鍵盤焦點(CQ-4293554)。
+* 使用鍵 `Esc` 將快速動作圖示從卡片檢視中移除，不會再移除最後焦點項目的鍵盤焦點(CQ-4293554)。
 
-* 螢幕閱讀程式現在會針對圖示（例如雪佛蘭），而非文字名稱(CQ-4272943)發佈說明其功能的替代文字。
+* 針對使用者介面上的互動式選項，螢幕閱讀程式現在會宣佈其用途，而非圖示的文字名稱(CQ-4272943)。
 
-* 現在，當使用動態Banner Dynamic Media的Keyboard Details Tab in Dynamic [!UICONTROL Banner時，鍵盤焦點成功移動至]Flyout [!UICONTROL 、] InlineZoom、DarkZoom、ShopCark_ZoomLightOptiom（垂直媒體中的鍵盤細節），使用鍵盤細節導覽KBinDDBanner時，將鍵盤焦點移至Man Man(CQ-4290605)。
+* 現在，當使用鍵盤細節導覽Banner [!UICONTROL Kay Dark Tab in]Banner(CCin)時，鍵盤焦點成功移動至 [!UICONTROL Flyout]、 [!UICONTROL InlineZoom、DarkZoom、ShopZoom][!DNL Dynamic Media] 、ShopZoomLightOptim Optiomin（垂直橫幅中），使用鍵盤導覽BanBanBanerBanerBanq-4290605)。
 
 * [!UICONTROL 現在，您可以使用鍵盤] 鍵(NPR-34107)來存取資產  「屬性」頁面上的「儲存並關閉」選項。
 
@@ -144,38 +144,35 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 在頁 [!DNL Experience Manager] 首區段中，在瀏覽模式中導覽時，螢幕閱讀程式現在會宣佈，
 
-   * 在「類型」中自動編 [!UICONTROL 輯建議，以便在Omnisearch] 中搜尋。
+   * 在Type中自動編輯建議， [!UICONTROL 以便在Omnisearch中] 搜尋。
 
-   * 「解決方案」、「幫助」、「收件箱」和「用 [!UICONTROL 戶]」選項的狀態為已擴展 [!UICONTROL 或已折疊]或已折疊  。
+   * 解決方案、說明、收件匣和 [!UICONTROL 使用者選項], [!UICONTROL 已展開或收] 合的狀態。
 
-   * 在「 [!UICONTROL Help] （幫助）」選項下的「Search for Help（搜索幫助）」欄位中輸入搜索字串時，將顯示「Searching Help（搜索幫助） [!UICONTROL 」狀態] 消息  。
+   * 當使 [!UICONTROL 用者在「搜尋說明」欄位的「說明」選項下輸入搜尋字串時，會顯示「搜尋說明] 」狀態 [!UICONTROL 訊息] 。
 
    ![頁首中的說明功能表](assets/Help_aem_header.png)
 
    *圖：[!UICONTROL 在「說明」功能表中]，搜尋[!UICONTROL 說明]。*
 
-   * 如果在 [!UICONTROL Impersonate as] field( [!UICONTROL User] 選項下的Impersonate as)欄位中輸入了錯誤值，並且焦點會正確移到文本欄位(NPR-33804)，則會出現錯誤消息。
+   * 如果在「模擬為」欄位中 [!UICONTROL 的「使用者] 」選項下輸入錯誤值，且焦點會正確移至文字欄位(NPR-33804)，則會出現錯誤訊息。
 
    ![頁首中的用戶菜單](assets/User_aem_header.png)
 
-   *圖：[!UICONTROL 在頁首的]「使用者[!UICONTROL 」選單]中模擬欄位*
+   *圖：[!UICONTROL 在頁首的]「使用者[!UICONTROL 」選單中]，模擬為欄位。*
 
-* 使用者現在可在下列位置使用鍵盤按鍵來移動焦點：
+* 使用者現在可以使用鍵盤來變更焦點：
 
-   * [!UICONTROL 在「連結共用」對話方塊中] ，搜尋／新 [!UICONTROL 增電子郵件地址] 。
+   * [!UICONTROL 在「連結共用」對話方塊中] ，搜尋／新增 [!UICONTROL 電子郵件地址] 。
 
-   * [!UICONTROL 在資料夾「屬性] 」的「權限」頁籤 [!UICONTROL 的「關閉的用戶組」下方，添加「用戶」或「組」字] 段  (NPR-34452)。
+   * [!UICONTROL 在資料夾「屬性] 」的「權限」頁籤 [!UICONTROL 的「關閉的用戶組」下方，添加「用戶」或「組」] 欄位  (NPR-34452)。
 
 **Experience Manager Assets中修正的問題**
 
-[!DNL Adobe Experience Manager] 6.5.6.0 Assets可修正下列問題：
+[!DNL Adobe Experience Manager] 6.5.6.0提供 [!DNL Assets] 下列問題的修正：
 
-* 預覽使用 [!DNL Adobe InDesign] (INDD)範本建立的行銷文宣資產（例如手冊、傳單和名片）不會保留分行和分段(NPR-34268)。
+* 預覽使用範本建立的行銷文宣資產（例如手冊、傳單和名片） [!DNL Adobe InDesign] 不會顯示分行和分段(NPR-34268)。
 
-* 已上傳PDF檔案的文字擷取無法運作，而PDF檔案中的某些字詞全文搜尋無法擷取該PDF檔案(NPR-34164)。
-
-   >[!NOTE]
-   >若要讓此修正有效，請在安裝Service Pack 6.5.6.0後重新啟動您的Adobe Experience Manager例項。
+* 文字擷取，因此無法完整搜尋已上傳的PDF檔案(NPR-34164)。 要修復它，請在安裝Service Pack 6 [!DNL sAdobe Experience Manager] 後重新啟動部署。
 
 * 多頁資產的時間軸會在時間軸檢視中瀏覽資產時顯示套用至所有子資產的註解，而非顯示特定子資產的註解(NPR-34100)。
 
@@ -205,11 +202,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 在「資料夾中繼資料結構表單」中 [!UICONTROL 建立下拉式清單規則時]，使用者無法從「欄位選擇  」欄中選取值(CQ-4297530)。
 
-* 在6.5 GA上安裝6.5 Service Pack 5或舊版軟體(NPR-34532)時，會刪除資產自訂工作流程模型的執行時期副本(在中建立 `/var/workflow/models/dam`)。
-
-   >[!NOTE]
-   >
-   >如果在6. [!DNL Experience Manager] 5 GA上安裝 [!DNL Experience Manager] 6.5 Service Pack 5或舊版時刪除了運行時拷貝，則升級到6.5 Service Pack 6不會檢索運行時拷貝。 若要擷取執行時期副本，請使用HTTP API將工作流程模型的設計時間副本與執行時期副本同步：
+* 在6.5上安裝 `/var/workflow/models/dam`6.5 Service Pack 5或舊版( [!DNL Experience Manager][!DNL Experience Manager] NPR-34532)時，會刪除資產自訂工作流程模型的執行時期副本（在中建立）。 若要擷取執行時期副本，請使用HTTP API將工作流程模型的設計時副本與執行時期副本同步：
    `<designModelPath>/jcr:content.generate.json`。
 
 **動態媒體中修正的問題**
@@ -410,7 +403,7 @@ B.使用套 [件管理員的HTTP API](https://docs.adobe.com/content/docs/en/crx
 
 1. 所有OSGi捆綁包都 **[!UICONTROL 是OSGi控制台中的]****[!UICONTROL ACTIVE或FRAGMENT]** (使用Web控制台： `/system/console/bundles`)。
 
-1. OSGI搭售版 `org.apache.jackrabbit.oak-core` 本為1.22.3或更高版本(使用Web Console: `/system/console/bundles`)。
+1. OSGi套件 `org.apache.jackrabbit.oak-core` 版本為1.22.3或更新版本(使用Web Console: `/system/console/bundles`)。
 
 若要瞭解經過認證可與此版本搭配使用的平台，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md)。
 
@@ -453,7 +446,7 @@ UberJar for Experience Manager 6.5.6.0可在 [Maven Central儲存庫中取得](h
 
 ## 過時的功能 {#removed-deprecated-features}
 
-本節列出已標示為不再支援的AEM 6.5.6.0功能。計畫在未來版本中移除的功能會先設為不建議使用，並提供替代選項。
+本節列出Experience Manager 6.5.6.0中已標示為已過時的功能和功能。計畫在未來版本中移除的功能會先設為不建議使用，並提供替代選項。
 
 建議客戶在目前的部署中是否使用功能，並規劃變更實施以使用替代選項。
 
@@ -464,7 +457,7 @@ UberJar for Experience Manager 6.5.6.0可在 [Maven Central儲存庫中取得](h
 
 ## 已知問題 {#known-issues}
 
-* 如果您在 [!DNL Experience Manager] 6.5 GA上安裝 `/var/workflow/models/dam`6.5 Service Pack 5或舊版軟體，則會刪除資產自訂工作流程模型（在中建立）的執行時期副本。
+* 如果您在 [!DNL Experience Manager][!DNL Experience Manager] 6.5上安裝 `/var/workflow/models/dam`6.5 Service Pack 5或舊版Service Pack，則會刪除資產自訂工作流程模型（在中建立）的執行時期副本。
 若要擷取您的執行時期副本，Adobe建議使用HTTP API，將自訂工作流程模型的設計時間副本與其執行時期副本同步：
    `<designModelPath>/jcr:content.generate.json`。
 
