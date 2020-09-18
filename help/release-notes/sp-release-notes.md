@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b6db346f7ec2570972329a8edb089fe909120b75
+source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
 workflow-type: tm+mt
-source-wordcount: '4402'
+source-wordcount: '4413'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 在自動化表單轉換服務中支援Adobe Sign文字標籤。
 
-* 支援使用將彩色表格轉換為可調式表格 [!DNL Automated Forms Conversion service]。
+* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
 
 * 支援SMB 2和SMB 3協定。
 
@@ -169,6 +169,8 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 **Experience Manager Assets中修正的問題**
 
 [!DNL Adobe Experience Manager] 6.5.6.0提供 [!DNL Assets] 下列問題的修正：
+
+* 從資產時間軸選取註解時，不會反白顯示(CQ-4302422)。
 
 * 預覽使用範本建立的行銷文宣資產（例如手冊、傳單和名片） [!DNL Adobe InDesign] 不會顯示分行和分段(NPR-34268)。
 
