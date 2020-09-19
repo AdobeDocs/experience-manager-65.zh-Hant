@@ -8,9 +8,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 65647a5e7c30991e06dd43125159547490fdddef
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2064'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >只有在建立互動式通訊時（在列印頻道的「檔案容器」屬性中）啟用資料庫存取時，才能使用「資料庫存取」圖示。
+   >只有在建立互動式通訊時（在列印頻道的「檔案容器」屬性中）啟用資料庫存取時，才可使用「資料庫存取」圖示。
 
 1. 如果在建立「交互通信」時未鎖定附件順序，則可以通過選擇附件並點選向下和向上箭頭來重新排序附件。
 1. 使用「網頁預覽和列印預覽」，查看這兩個輸出是否符合您的需求。
@@ -366,7 +366,7 @@ public class CCRDraftService implements CCRDocumentInstanceService {
         <dependency>
             <groupId>com.adobe.aemfd</groupId>
             <artifactId>aemfd-client-sdk</artifactId>
-            <version>6.0.122</version>
+            <version>6.0.146</version>
         </dependency>
     </dependencies>
 
@@ -443,4 +443,4 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 
 >[!NOTE]
 >
->請確定您將檔 `aemfd-client-sdk` 案中的相依性更新為6.0.122 `pom.xml` 。
+>請確定您已將檔 `aemfd-client-sdk` 案中的相依性更新為6.0.146或更新版本 `pom.xml` 。
