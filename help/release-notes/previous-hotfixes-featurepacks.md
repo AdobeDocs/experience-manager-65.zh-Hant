@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: c27f44326f653bbdc61e866e89e60893e81a7a3b
+source-git-commit: 5db4dd7ccc7d722f0503b22fdd5ff9e5508be4ea
 workflow-type: tm+mt
-source-wordcount: '11438'
+source-wordcount: '11482'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,10 @@ Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月6
 * 匿名使用者可存取CRXDE Lite功能(GRANITE-27790)。
 
 ### [!DNL Assets] {#assets-6550}
+
+>[!IMPORTANT]
+>
+>建議Windows使 [!DNL Experience Manager desktop app] 用者升級至 [案頭應用程式版本2.0.3.2](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html#whats-new-added) ，以存取例項上的DAM存放 [!DNL Adobe Experience Manager 6.5.5.0] 庫。 因為他們在使用案頭應用程式2.0.2版存取 [!DNL Adobe Experience Manager] 6.5.5.0例項上的DAM儲存庫時可能會遇到問題。
 
 **Experience Manager Assets中的協助工具增強功能**
 
@@ -599,7 +603,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 **修正**
 
-* 某些PDF檔案的中繼資料不會在標題修改時更新並儲存至PDF(NPR-31629)。
+* 某些PDF檔案的中繼資料在標題修改時不會更新並儲存至PDF(NPR-31629)。
 
 * 資產共用不適用於檔案名稱中加上(`+`)字元的資產(NPR-31547)。
 
