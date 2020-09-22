@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
+source-git-commit: 03e3bb3a6843ef19b63a4ed915d9821dd706c3d4
 workflow-type: tm+mt
 source-wordcount: '2760'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -58,7 +58,7 @@ Adobe Analytics可針對AEM Communities進行設定，如此當會員與支援�
 1. 建立AEM Analytics雲端 [服務](#aem-analytics-cloud-service-configuration) 和架 [構](#aem-analytics-framework-configuration)
 
 1. [啟用社群網站的Analytics](#enable-analytics-for-a-community-site)
-1. [**驗證&#x200B;**](#verify-analytics-to-aem-variable-mapping)Analytics與AEM變數對應
+1. [**驗證**](#verify-analytics-to-aem-variable-mapping) Analytics與AEM變數對應
 1. 識別主 [要發行者](#primary-publisher)
 1. [發佈](#publish-community-site-and-analytics-cloud-service) 社群網站
 1. 設 [定從Adobe Analytics匯入報表資料](#obtaining-reports-from-analytics) 至社群網站
@@ -153,7 +153,7 @@ Adobe Analytics可針對AEM Communities進行設定，如此當會員與支援�
 
 可 `Marketing Cloud Org Id` 以在建立社區站點時或更 [新時](/help/communities/sites-console.md#enablement) ，通過修改社 [區站點屬](/help/communities/sites-console.md#modifying-site-properties) 性來輸入。 [](#aem-analytics-cloud-service-configuration)
 
-![chlimage_1-264](assets/chlimage_1-264.png)
+![marketing-org-id](assets/marketing-org-id.png)
 
 啟用視訊心率分析時，視訊播放器的JavaScript(JS)程式碼會執行個體化視訊心率程式庫程式碼（也包含在JS中），此程式碼會處理每10秒傳送視訊狀態更新至Analytics視訊追蹤伺服器的所有邏輯（不可設定），並最終傳送視訊工作階段的累積報表至主要Analytics伺服器。
 
@@ -163,11 +163,11 @@ Adobe Analytics可針對AEM Communities進行設定，如此當會員與支援�
 
 若要建立新的Analytics整合，並使用作者例項上的標準UI，將Adobe Analytics與AEM社群網站整合：
 
-* 從全域導覽： **[!UICONTROL 工具>部署>雲端服務]**
+* 從全域導覽： **[!UICONTROL 工具]** >部 **[!UICONTROL 署]** >雲 **[!UICONTROL 端服務]**
 * 向下捲動至 **[!UICONTROL Adobe Analytics]**
 * 選擇 **[!UICONTROL 立即配置]** 或 **[!UICONTROL 顯示配置]**
 
-![chlimage_1-265](assets/chlimage_1-265.png)
+![雲端組態](assets/cloud-config1.png)
 
 ### 「建立配置」對話框 {#create-configuration-dialog}
 
@@ -175,7 +175,7 @@ Adobe Analytics可針對AEM Communities進行設定，如此當會員與支援�
 
 在「建立配置」對話框中，要輸入的值標識配置。
 
-![chlimage_1-266](assets/chlimage_1-266.png)
+![create-cloud-config](assets/cloud-config2.png)
 
 * **標題**
 
@@ -199,7 +199,7 @@ For example, enter *communities*
 
 初次建立新Analytics設定時，會顯示設定，並顯示新對話方塊以輸入Analytics設定。 此對話方塊需要從 [帳戶代表處取得](#prerequisites) 必要的帳戶資訊。
 
-![chlimage_1-267](assets/chlimage_1-267.png)
+![analytics-settings](assets/analytics-settings.png)
 
 * **公司**
 
@@ -245,7 +245,7 @@ For example, enter *communities*
 
 * 選擇 **確定**。
 
-   ![chlimage_1-268](assets/chlimage_1-268.png)
+   ![analytics-enablement-settings](assets/analytics-settings1.png)
 
 ### 建立框架 {#create-framework}
 
@@ -253,7 +253,7 @@ For example, enter *communities*
 
 * 選取 `[+]` 可用架構旁 **[!UICONTROL 的圖示]** ，以建立新架構
 
-   ![chlimage_1-269](assets/chlimage_1-269.png)
+   ![analytics-framework](assets/analytics-framework.png)
 
 * **標題**
 
@@ -276,20 +276,19 @@ For example, enter *communities*.
 
 此架構的目的是將AEM變數對應至Analytics變數（eVar和事件）。 可用於對應的Analytics變數 [在報表套裝中定義](#adobe-analytics-report-suite-for-video-reporting)。
 
-![chlimage_1-270](assets/chlimage_1-270.png)
+![analytics-enablement-framework](assets/analytics-framework1.png)
 
 ### 選擇報表套裝 {#select-report-suite}
 
 選取已針對視訊報表設定的報表套裝。
 
-如果報表套裝尚未建立或未正確設定，請參閱上一節：
-[適用於視訊報告的Adobe Analytics報表套裝](#adobe-analytics-report-suite-for-video-reporting)
+如果報表套裝尚未建立或未正確設定，請參閱上一節：[適用於視訊報告的Adobe Analytics報表套裝](#adobe-analytics-report-suite-for-video-reporting)
 
 不需要Sidekick且可將其最小化，以免妨礙存取「報表套裝」設定。
 
 #### 選擇「新增項目」前後的報表套裝對話方塊 {#report-suites-dialog-before-and-after-selecting-add-item}
 
-![chlimage_1-271](assets/chlimage_1-271.png)
+![report-suite](assets/report-suite.png)
 
 1. 選擇 **添加項目+**。
 
@@ -310,9 +309,9 @@ For example, enter *communities*.
 
 1. 選擇 **發佈**。
 
-![chlimage_1-272](assets/chlimage_1-272.png)
+![analytics-framework2](assets/analytics-framework2.png)
 
-Analytic雲端服務與架構現已完成。 在啟用此Analytics服務後，社群網站建立後，即會定義映射。
+Analytic雲端服務與架構現已完成。 在啟用此Analytics服務後建立社群網站後，將會定義對應。
 
 ## 啟用社群網站的Analytics {#enable-analytics-for-a-community-site}
 
@@ -378,7 +377,7 @@ Analytics會自動用於數個Communities功能。
 
 ### 元件配置 {#component-configuration}
 
-![chlimage_1-273](assets/chlimage_1-273.png)
+![component-configuration1](assets/component-configuration1.png)
 
 >[!NOTE]
 >
@@ -393,7 +392,7 @@ Analytics會自動用於數個Communities功能。
 
 以下是遵循快速入門教學課程後的預 [設映射範例](/help/communities/getting-started-enablement.md):
 
-![chlimage_1-274](assets/chlimage_1-274.png)
+![map-analytics](assets/map-analytics1.png)
 
 #### 與每個事件一起傳送的eVar映射 {#map-of-evars-sent-with-each-event}
 
@@ -521,13 +520,13 @@ Analytics會自動用於數個Communities功能。
 
 **eVar值的範例：**
 
-* *[MIME類型](https://www.iana.org/assignments/media-types)*: video/mp4
-* *[社群網站標題](/help/communities/sites-console.md#step13asitetemplate)*: Geometrixx Communities
-* *[社群函式名稱](/help/communities/functions.md)*: 論壇
-* *[社群群組名稱](/help/communities/creating-groups.md#creating-a-new-group)*: 遠足
+* *[MIME類型](https://www.iana.org/assignments/media-types)*:video/mp4
+* *[社群網站標題](/help/communities/sites-console.md#step13asitetemplate)*:Geometrixx Communities
+* *[社群函式名稱](/help/communities/functions.md)*:論壇
+* *[社群群組名稱](/help/communities/creating-groups.md#creating-a-new-group)*:遠足
 * *社群群組內容的路徑*: `/content/sites/<site name>/en/groups/hiking`
-* *[UGC元件resourceType](/help/communities/essentials.md)*:`social/forum/components/hbs/topic`
-* *UGC元件標題*: 遠足主題
+* *[UGC元件resourceType](/help/communities/essentials.md)*: `social/forum/components/hbs/topic`
+* *UGC元件標題*:遠足主題
 * *login(authorizableId)*: `aaron.mcdonald@mailinator.com`
 * *SRP到UGC的路徑*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
 或 
@@ -549,17 +548,17 @@ Analytics會自動用於數個Communities功能。
 >
 >在啟用Analytics的情況下發佈社群網站前，請務必重 [新對應](#publishing-the-community-site) ，否則就有資料遺失的風險。
 
-#### 範例步驟1: 將Analytics evar14拖曳至對應表格 {#example-step-dragging-analytics-evar-into-mapping-table}
+#### 範例步驟1:將Analytics evar14拖曳至對應表格 {#example-step-dragging-analytics-evar-into-mapping-table}
 
-![chlimage_1-275](assets/chlimage_1-275.png)
+![analytics-mapping-evar](assets/analytics-mapping-evar.png)
 
-#### 範例步驟2: 選取&#39;x&#39;以移除已取代的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
+#### 範例步驟2:選取&#39;x&#39;以移除已取代的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
 
-![chlimage_1-276](assets/chlimage_1-276.png)
+![analytics-mapping-evar1](assets/analytics-mapping-evar1.png)
 
-#### 範例步驟3: AEM var eventdata.siteId已重新映射至Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
+#### 範例步驟3:AEM var eventdata.siteId已重新映射至Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
 
-![chlimage_1-277](assets/chlimage_1-277.png)
+![analytics-mapping-evar2](assets/analytics-mapping-evar2.png)
 
 ## 發佈社群網站 {#publishing-the-community-site}
 
@@ -592,7 +591,7 @@ Analytics會自動用於數個Communities功能。
 
 依預設， `AEM Communities Publisher Configuration` OSGi設定會將其發佈例項識別為主要發佈者，如此發佈群中的所有發佈例項都會自行識別為主要發佈者。
 
-因此，必須編輯所有次要發佈例項的設定，才能取消選取「主要發佈者」核 **取方塊** 。
+因此，必須編輯所有次要發佈例項的設定，才能取消選取「主要發 **布者** 」核取方塊。
 
 有關具體說明，請參閱「部署社群」的主要發 [布者部分](/help/communities/deploy-communities.md#primary-publisher)。
 
@@ -632,7 +631,7 @@ Adobe Analytics認證會加密。 為方便作者與發佈者之間複製或傳�
 
 預設輪詢 **導入間隔** 設定為12小時。
 
-![chlimage_1-278](assets/chlimage_1-278.png)
+![report-importer](assets/report-importer.png)
 
 ### 元件報表自訂 {#component-report-customization}
 
@@ -657,7 +656,7 @@ Adobe Analytics認證會加密。 為方便作者與發佈者之間複製或傳�
    * 修改屬 **`interval`** 性會覆寫「報表匯入工具」間隔。
    * 值以秒為單位，並設為4小時（14400秒）。
 
-![chlimage_1-279](assets/chlimage_1-279.png)
+![component-report](assets/component-report.png)
 
 ## 在Analytics中管理使用者資料 {#manage-user-data-in-analytics}
 
