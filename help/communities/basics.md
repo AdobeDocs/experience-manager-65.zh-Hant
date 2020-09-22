@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
-source-git-commit: f1870c1222004f582ccf337a59e1f30e2dc2cf32
+source-git-commit: c77a353d43a3a6f33dffecf0b4e7672ed3e2dd3f
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 1%
@@ -47,11 +47,11 @@ ht-degree: 1%
 
 以下是選取一些Communities元件並在元件瀏覽器中檢視這些元件的影像：
 
-![chlimage_1-424](assets/chlimage_1-424.png)
+![元件設計](assets/component-design.png)
 
 現在，元件瀏覽器中可使用選取的元件：
 
-![chlimage_1-425](assets/chlimage_1-425.png)
+![component-design1](assets/component-design1.png)
 
 ## 必要的Clientlibs {#required-clientlibs}
 
@@ -59,13 +59,13 @@ ht-degree: 1%
 
 在將Communities元件新增至頁面時，如果結果是錯誤或非預期的外觀，首先要嘗試新增Communities元件所需的clientlibs。 如需詳細資訊，請參 [閱Clientlibs for Communities元件](clientlibs.md)。
 
-### 範例： 最初放置的審核沒有客戶端庫…… {#example-initially-placed-reviews-without-client-libraries}
+### 範例：最初放置的審核沒有客戶端庫…… {#example-initially-placed-reviews-without-client-libraries}
 
-![chlimage_1-426](assets/chlimage_1-426.png)
+![clientlibs1](assets/clientlibs1.png)
 
-### ... 使用用戶端程式庫 {#and-with-client-libraries}
+### ...使用用戶端程式庫 {#and-with-client-libraries}
 
-![chlimage_1-427](assets/chlimage_1-427.png)
+![clientlibs2](assets/clientlibs2.png)
 
 ## 標記 {#tagging}
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 若需管理資訊：
 
 * 建立標籤名稱空間（分類）: [管理標籤](../../help/sites-administering/tags.md)
-* 社群網站設定： 請參閱 [標籤](sites-console.md#tagging)
+* 社群網站設定：請參閱 [標籤](sites-console.md#tagging)
 * [標籤使用者產生的內容](../../help/sites-authoring/tags.md)
 * [標籤啟用資源](tag-resources.md)
 
