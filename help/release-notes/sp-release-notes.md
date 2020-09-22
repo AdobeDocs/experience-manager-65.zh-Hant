@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
+source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
 workflow-type: tm+mt
-source-wordcount: '4413'
+source-wordcount: '4485'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,11 @@ ht-degree: 0%
 | 版本 | 6.5.6.0 |
 | 類型 | Service Pack版本 |
 | 日期 | 2020年9月03日 |
-| 下載URL | [軟體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip) |
+| 下載URL | [軟體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
+
+>[!NOTE]
+>
+>AEM 6.5 Service Pack 6已推出更新版本。 如果您已安裝舊版Service Pack 6，請升級至最新的可用版本。
 
 ## Adobe Experience Manager 6.5.6.0包含的功能 {#what-s-included-in-aem}
 
@@ -377,7 +381,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 執行下列步驟，將Service Pack安裝在現有的Adobe Experience Manager 6.5實例上：
 
-1. 從「軟體散發」下載 [Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip)。
+1. 從「軟體散發」下載 [Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip)。
 
 1. 開啟「套件管理員」，然後按 **[!UICONTROL 一下「上傳套件]** 」以上傳套件。 要瞭解如何使用它，請參 [閱Package Manager](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
@@ -458,6 +462,17 @@ UberJar for Experience Manager 6.5.6.0可在 [Maven Central儲存庫中取得](h
 | 連接器 | AEM 6.5不再支援Adobe JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013。 | N/A |
 
 ## 已知問題 {#known-issues}
+
+* 如果安全性健康狀況檢查無效，且系統顯示以下錯誤消息：
+   `message: Could not verify users and could not test system account logins.`
+執行下列步驟以解決問題：
+   1. 前往https://&lt;*hostname*>:&lt;*port*>/system/console/configMgr。
+
+   1. 搜尋 `hc.impl`.
+
+   1. 在「 [!UICONTROL 服務映射]」中，單 `+` 擊並指定 `com.adobe.granite.repository.hc.impl=[user-reader-service]`。
+
+   1. 按一下 [!UICONTROL 保存] ，保存配置。
 
 * 如果您在 [!DNL Experience Manager][!DNL Experience Manager] 6.5上安裝 `/var/workflow/models/dam`6.5 Service Pack 5或舊版Service Pack，則會刪除資產自訂工作流程模型（在中建立）的執行時期副本。
 若要擷取您的執行時期副本，Adobe建議使用HTTP API，將自訂工作流程模型的設計時間副本與其執行時期副本同步：
