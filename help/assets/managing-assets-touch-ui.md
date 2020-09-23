@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2de85f2fc8daaf1cc30a1e12b7c18b20a640c747
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '9370'
+source-wordcount: '9368'
 ht-degree: 4%
 
 ---
@@ -94,7 +94,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >
 >觸發區塊上傳時的預設值為500 MB，區塊大小為50 MB。 如果您修改 [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) ，將資產上傳所花費的時間設為 `timeout configuration` 少於，則當資產上傳進行時，您可能會遇到作業逾時情形。 因此，您需要更改和 `chunkUploadMinFileSize` ，以便 `chunksize`每個區塊請求刷新會話。
 >
->考慮到憑證過期逾時、延遲、頻寬和預期的並行上傳，可讓您確定應選取下列兩項的最高值：
+>在憑證到期逾時、延遲、頻寬和預期的並行上傳時，可讓您確保選取下列項目的最高值：
 >
 >* 為了確保在上載進行時，對可能導致憑據過期的檔案啟用區塊上載。
    >
