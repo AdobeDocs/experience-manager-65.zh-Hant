@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1676'
 ht-degree: 6%
 
 ---
@@ -50,7 +50,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 >AEM 6.0及舊版中的部落格功能現在已移除。 它以範本為基礎，僅允許作者在作者環境中建立內容。
 
 
-## 將部落格元件新增至頁面 {#adding-blog-components-to-a-page}
+## 新增部落格元件至頁面 {#adding-blog-components-to-a-page}
 
 如果想要以作者模式將部落格新增至頁面，請使用元件瀏覽器來尋找
 
@@ -63,17 +63,13 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 當包含 [所需的用戶端程式庫](/help/communities/blog-developer-basics.md#essentials-for-client-side) ，元件的顯示方式 `Blog` 如下：
 
-![chlimage_1-147](assets/chlimage_1-147.png)
-
-以及將如何 `Blog Sidebar` 顯示：
-
-![chlimage_1-148](assets/chlimage_1-148.png)
+![add-blog-component](assets/add-blog-component.png)
 
 ### 設定部落格 {#configuring-blog}
 
 選擇要訪問 `Blog` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-149](assets/chlimage_1-149.png)
+![配置](assets/configure-new.png)
 
 ![部落格設定](assets/blog-configure.png)
 
@@ -153,7 +149,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -231,7 +227,7 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 * **標幟限制**
 
-   輸入主題或留言在公開檢視中隱藏前必須加以標幟的次數。 如果設為-1，則標籤的主題或留言永遠不會隱藏在公開檢視中。 否則，此數字必須大於或等於「協調臨界值」。 預設值為5。
+   輸入主題或留言在公開檢視中隱藏前必須加以標幟的次數。 如果設為-1，則標籤的主題或留言絕不會從公開檢視中隱藏。 否則，此數字必須大於或等於「協調臨界值」。 預設值為5。
 
 #### 「標籤」欄位頁籤 {#tag-field-tab}
 
@@ -257,13 +253,13 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
    用於部落格條目存檔的顯示格式。 格式使用遵循Java約定的佔位符。
 
-   * yyyy: 全年，就像2015年一樣
-   * yy: 短年，比如15年。
-   * MMMMMM: 整月，就像6月
-   * MMM: 短月，就像6月
-   * MM: 月數，例如06
+   * yyyy:全年，就像2015年一樣
+   * yy:短年，比如15年。
+   * MMMMMM:整月，就像6月
+   * MMM:短月，就像6月
+   * MM:月數，例如06
 
-   預設值為&quot;yyyy MMMMM&quot;，會顯示例如&quot;2015 June&quot;
+   預設值為&quot;yyyy MMMMM&quot;，會顯示例如&quot;2015年6月&quot;
 
 * **視圖類型**
 
@@ -307,11 +303,11 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 
 當登入的使用者具有協調者或管理員權限時，他們可以對張貼至部落格的所有部落格文章和留言執行 [協調任務](/help/communities/moderate-ugc.md) （依照元件組態的許可）。
 
-![chlimage_1-152](assets/chlimage_1-152.png)
+![協調者首頁](assets/moderator-homepage.png)
 
 #### 成員 {#members}
 
-當登入使用者是社群成員或特權 [成員](/help/communities/users.md#privileged-members-group) （視設定而定）時，他們可以選 `New Article` 擇建立並張貼新的部落格文章。
+當登入使用者是社群成員或特 [權成員](/help/communities/users.md#privileged-members-group) （視設定而定）時，他們可以選 `New Article` 擇建立並張貼新的部落格文章。
 
 具體而言，他們可能：
 
@@ -322,15 +318,15 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 * 刪除其自己的部落格或評論
 * 標籤其他人的部落格文章或留言
 
-![chlimage_1-153](assets/chlimage_1-153.png)
+![member-homepage](assets/member-homepage.png)
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![create-blog](assets/create-blog.png)
 
 #### 匿名 {#anonymous}
 
 未登入的網站訪客只能閱讀已張貼的部落格文章和留言、在受支援時加以翻譯，但不得新增部落格文章或留言，也不得為其他人的文章或留言加上旗標。
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![匿名——用戶——視圖](assets/anonymous-user-view.png)
 
 ## 其他資訊 {#additional-information}
 
