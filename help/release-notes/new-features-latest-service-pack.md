@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2492'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 ### 資產中的其他增強功能 {#other-enhancements-assets-6560}
 
-* 刪除專用資料夾後，專用資料夾的用戶組現在將從儲存庫中刪除。 刪除專用資料夾會清除孤立用戶組的儲存庫，這些用戶組在每次建立專用資料夾時都會建立。
+* 刪除專用資料夾後，專用資料夾的用戶組現在將從儲存庫中刪除。 刪除專用資料夾會清除孤立用戶組的儲存庫，這些用戶組在每次建立專用資料夾時都會建立。 如需詳細資訊，請 [參閱刪除資料夾時移除使用者群組](#group-removal-on-folder-deletion)。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -87,7 +87,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 如果AcroForm包含「文 [!DNL Adobe Sign] 字標籤」，這些欄位現在會在使用轉換的 [!DNL Adobe Sign] 最適化表單中辨識並呈現為欄位 [!DNL Automated Forms Conversion service]。 簽署者可在簽署最適化表單時填寫這些欄位。
 
-### 支援將彩色PDF表格轉換為可調整的表格 {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
 
 您可以使 [!DNL Automated Forms Conversion service] 用將彩色PDF表單轉換為最適化表單。
 
