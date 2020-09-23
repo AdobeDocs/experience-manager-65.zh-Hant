@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2480'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 ### 資產中的其他增強功能 {#other-enhancements-assets-6560}
 
-* 刪除專用資料夾後，專用資料夾的用戶組現在將從儲存庫中刪除。 刪除專用資料夾會清除孤立用戶組的儲存庫，這些用戶組在每次建立專用資料夾時都會建立。 如需詳細資訊，請 [參閱刪除資料夾時移除使用者群組](#group-removal-on-folder-deletion)。
+* 與資料夾（專用和非專用）關聯的用戶組現在將在刪除這些資料夾時 [從儲存庫中刪除](/help/assets/private-folder.md#delete-private-folder)。 但是，可以使用JMX從儲存庫清理現有的冗餘、孤立、未使用和自動生成的用戶組。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -290,7 +290,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 您可以與其他使用者共用您的收件匣項目。 當其他使用者存取您的「收件匣」項目時，使用者就可以對共用項目宣告並採取適當動作。 同樣地，您也可以請求其他使用者存取「收件匣」項目。 請參 [閱共用並請求訪問用戶的收件箱項目](../forms/using/configure-shared-queues-osgi.md)。
 
-#### 為Experience Manager Forms使用者(6.5.3.0)的「收件匣」項目設定離職設定 {#configure-out-of-office}
+#### 為Experience Manager Forms使用者(6.5.3.0)的「收件匣」項目設定不在辦公室的設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
 您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
