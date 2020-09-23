@@ -3,9 +3,9 @@ title: 私人資料夾位於 [!DNL Adobe Experience Manager Assets]
 description: 瞭解如何在中建立私人資料 [!DNL Adobe Experience Manager Assets] 夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: be97ef4f3bb6b904dabcfcd44025a4898bcf4dee
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
@@ -67,26 +67,30 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->要建立專用資料夾，需要對要建立專用資料夾的父資料夾具有讀取和編輯ACL權限。 如果您不是管理員，則這些權限依預設不會為您啟用 `/content/dam`。 在此情況下，請先取得使用者ID/群組的這些權限，再嘗試建立私人資料夾或檢視資料夾設定。
+>要建立專用資料夾，您需要對要建立專用資料夾的父 [資料夾](/help/sites-administering/security.md#permissions-in-aem) ，具有「讀取」和「修改」訪問控制權限。 如果您不是管理員，則這些權限依預設不會為您啟用 `/content/dam`。 在這種情況下，請先取得使用者ID/群組的這些權限，再嘗試建立私人資料夾。
 
 ## 刪除專用資料夾 {#delete-private-folder}
 
-通過選擇資料夾並從頂部菜單中選擇「刪除」選項，或使用鍵盤上的「回退空格」鍵，可以刪除專用資料夾。 
+您可以通過選擇資料夾並從頂部菜單中選擇「刪 [!UICONTROL 除] 」選項，或使用鍵盤上的Backspace鍵刪除資料夾。
 
-### 刪除資料夾時刪除用戶組 {#group-removal-on-folder-deletion}
-
-如果您使用上述方法從使用者介面刪除私人資料夾，則相關的使用者群組也會隨之刪除。 不過，使用 [JMX可以從資料庫清理現有的冗餘、未使用和自動生成的用戶組](#group-clean-up-jmx)。
+![頂部菜單中的刪除選項](assets/delete-option.png)
 
 >[!CAUTION]
 >
 >如果從CRXDE Lite刪除專用資料夾，則儲存庫中將保留冗餘用戶組。
 
+>[!NOTE]
+>
+>如果您使用上述方法從使用者介面刪除資料夾，則相關的使用者群組也會隨之刪除。
+不過，使用 [JMX可以從資料庫清理現有的冗餘、未使用和自動生成的用戶組](#group-clean-up-jmx)。
+
 ### 使用JMX來清除未使用的使用者群組 {#group-clean-up-jmx}
 
 要清除未使用用戶組的儲存庫，請執行以下操作：
 
-1. 開啟JMX以清除「資產」的冗餘群 `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`組。
+1. 開啟JMX以清除您作者例項中「資產」的 [!DNL Experience Manager] 冗餘群組 `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`。
+For example, `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
 
 1. 從此JMX `clean` 調用方法。
 
-您可以看到，所有冗餘用戶組或自動生成的組（在建立與先前刪除的組同名的專用資料夾時建立的組）都從路徑中刪除 `/home/groups/mac/default/<user_name>/<folder_name>`。
+您可以看到，所有冗餘用戶組或自動生成的組（建立名稱與先前刪除的組相同的資料夾時建立的組）都將從路徑中刪除 `/home/groups/mac/default/<user_name>/<folder_name>`。
