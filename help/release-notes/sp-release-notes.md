@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
+source-git-commit: bd67a41e493cbcf97956de09e088d16997ab0e93
 workflow-type: tm+mt
-source-wordcount: '4485'
+source-wordcount: '4495'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,6 @@ ht-degree: 0%
 | 類型 | Service Pack版本 |
 | 日期 | 2020年9月03日 |
 | 下載URL | [軟體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
-
->[!NOTE]
->
->AEM 6.5 Service Pack 6已推出更新版本。 如果您已安裝舊版Service Pack 6，請升級至最新的可用版本。
 
 ## Adobe Experience Manager 6.5.6.0包含的功能 {#what-s-included-in-aem}
 
@@ -319,6 +315,8 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 最適化表單有一些開放資源解析器。 這會導致提交失敗。 間歇性出現問題(CQ-4299407)。
 
+* 首次開啟欄位設定時，不會顯示屬性圖示(CQ-4296284)。
+
 **工作流程**
 
 * 當工作流程批准者上傳附件時，附件會重新命 `undefined` 名為(NPR-33699)。
@@ -386,6 +384,10 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 1. 開啟「套件管理員」，然後按 **[!UICONTROL 一下「上傳套件]** 」以上傳套件。 要瞭解如何使用它，請參 [閱Package Manager](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
 1. 選擇軟體包，然後按一下 **[!UICONTROL 安裝]**。
+
+>[!NOTE]
+>
+>由於已知問題，已提供更新的Service Pack包。 建議安裝此套件。
 
 >[!NOTE]
 >
