@@ -6,18 +6,21 @@ seo-description: 瞭解如何為AEM例項設定單一登入(SSO)。
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: configuring, Security
 content-type: reference
-topic-tags: Security
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '755'
+ht-degree: 0%
 
 ---
 
 
 # 單一登入 {#single-sign-on}
 
-單一登入(SSO)可讓使用者在提供驗證憑證（例如使用者名稱和密碼）一次後，存取多個系統。 另一個系統（稱為受信任驗證器）執行驗證，並為Experience manager提供用戶憑證。 Experience manager會檢查並強制使用者的存取權限（亦即決定允許使用者存取哪些資源）。
+單一登入(SSO)可讓使用者在提供驗證憑證（例如使用者名稱和密碼）一次後，存取多個系統。 另一個系統（稱為受信任驗證器）執行驗證，並為Experience Manager提供用戶憑證。 Experience Manager會檢查並強制使用者的存取權限（亦即決定允許使用者存取哪些資源）。
 
 SSO驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)會處理受信任驗證器提供的驗證結果。 SSO驗證處理程式會依此順序在下列位置中，將ssid（SSO標識符）搜索為特殊屬性的值：
 
@@ -42,20 +45,21 @@ SSO驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 
    例如，對於NTLM集：
 
-   * **** 路徑：視需要；例如， `/`
+   * **路徑：** 視需要；例如， `/`
    * **標題名稱**: `LOGON_USER`
    * **ID格式**: `^<DOMAIN>\\(.+)$`
 
       其中 `<*DOMAIN*>` 將由您自己的域名替換。
    針對CoSign:
 
-   * **** 路徑：視需要；例如， `/`
+   * **路徑：** 視需要；例如， `/`
    * **標題名稱**:remote_user
-   * **** ID格式：現狀
+   * **ID格式：** 現狀
+
    對於SiteMinder:
 
-   * **** 路徑：視需要；例如， `/`
-   * **** 標題名稱：SM_USER
+   * **路徑：** 視需要；例如， `/`
+   * **標題名稱：** SM_USER
    * **ID格式**:現狀
 
 
@@ -83,6 +87,7 @@ SSO驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 >
 >* `disp_iis.ini`
 >* IIS
+
 >
 >
 在集 `disp_iis.ini` 合中：
@@ -90,6 +95,7 @@ SSO驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 >
 >* `servervariables=1` （將IIS伺服器變數轉發為請求標題至遠端例項）
 >* `replaceauthorization=1` (以其「Basic」等值項取代任何名為「Authorization」（授權）以外的標題)
+
 >
 >
 在IIS中：
@@ -98,6 +104,7 @@ SSO驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
    >
    >
 * 啟用 **整合的Windows驗證**
+
 >
 
 
@@ -110,7 +117,7 @@ SSO驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
-### 例如 {#example}
+### 範例 {#example}
 
 對於Cookie請求(使用URL `http://localhost:4502/libs/wcm/content/siteadmin.html`):
 
@@ -153,7 +160,8 @@ Transfer-Encoding: chunked
 如果您要求：
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-或者，您可以使用下列curl命令將標題 `TestHeader` 傳送至 `admin:``curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
+或者，您可以使用下列curl命令將標題 `TestHeader` 傳送至 `admin:`
+`curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
