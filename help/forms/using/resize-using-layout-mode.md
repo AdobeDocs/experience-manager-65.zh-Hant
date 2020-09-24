@@ -5,19 +5,22 @@ description: '使用「版面」模式中可用的回應式格線來定義元件
 seo-description: '使用「版面」模式中可用的回應式格線來定義元件的位置 '
 uuid: 6b077ebe-caea-4ae3-b17a-be2dca94eeb3
 contentOwner: anujkapo
+topic-tags: interactive-communications, author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1128'
+ht-degree: 0%
 
 ---
 
 
 # 使用「版面」模式來調整元件大小{#use-layout-mode-to-resize-components}
 
-最適化表單和互動式通訊網頁頻道製作介面可讓您使用版面模式調整元件大小。 在欄內拖放藍點，以定義放置元件的起點和終點。 點選回應式格線內的元件後，會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影區分了一欄與另一欄。
+最適化表單和互動式通訊網頁頻道製作介面可讓您使用版面模式調整元件大小。 在欄內拖放藍點，以定義要放置元件的起點和終點。 點選回應式格線內的元件後，會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影區分了一欄與另一欄。
 
 您可以使用「版面」模式來調整所有裝置類型的元件大小，例如桌上型電腦、平板電腦、手機和其他較小的裝置。 平板電腦會自動從案頭版本衍生版面配置，而較小的裝置則從手機衍生版面配置。 不過，您可以覆寫自動衍生的組態，為每種裝置類型定義不同的組態。
 
@@ -44,13 +47,14 @@ source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
    * **父級：** 選擇元件的父代。
    * **浮動至新行：** 如果同一行中有多個元件，請將元件移到下一行。
-   您可以使用「還原斷點配置」（「還原斷點」）選項，還原所有調整大小的變更，並將預設配置套用至包含已重 **[!UICONTROL 新調整大小之元件的面板]**![](assets/reverttopreviouslypublishedversion.png)上。 點選已調整大小的元件的父項以檢視選項。
+
+   您可以使用「還原斷點配置」（「還原斷點」）選項，還原所有調整大小的變更，並將預設配置套用至包含已重 **[!UICONTROL 新調整大小之元件的面板]**![](assets/reverttopreviouslypublishedversion.png)上。 點選已重新調整大小的元件的父項以檢視選項。
 
    >[!NOTE]
    >
    >您無法使用「版面」模式來調整表格欄、工具列、工具列按鈕和目標區域元件的大小。 使用「樣式」模式來調整這些元件的大小。
 
-### 例如 {#example}
+### 範例 {#example}
 
 **目標：** 要插入表元件和影像元件，並在互動式通信中將它們平行放置。
 
