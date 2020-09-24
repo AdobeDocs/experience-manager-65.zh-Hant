@@ -6,11 +6,14 @@ seo-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協�
 uuid: 3bac1d73-9696-4c9b-8bdd-6f00fac40cf7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: site-features, best-practices
 content-type: reference
-topic-tags: best-practices
 discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '859'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 在設計網站結構時，請先檢查內容，並判斷語言內容的編寫位置和使用方式。 此位置應為您網站的頂層。
 * 最佳實務是以語 **言為基礎的結構** ，頂層製作與國家網站之間的層級不超過3。
-* 使用符合 **W3C標準的語言／國家網站命名慣例**。
+* 使用符合 **W3C標準的語言／國家／地區網站命名慣例**。
 * 決定內容如何依地區和國家／地區分發。 請考慮哪些國家／地區有共用語言。 建議您建立語言主版（未啟動頁面的層），在此處可以檢閱和修改翻譯內容，然後推送或提取到分享該語言的國家網站。
 * 建立語言大師的方法有兩種：使用語言復本，使用MSM/即時復本。
 
