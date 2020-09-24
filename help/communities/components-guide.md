@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 3da113e88784def54e0a94e280bf1a965de015ed
 workflow-type: tm+mt
 source-wordcount: '1203'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -70,25 +70,25 @@ ht-degree: 1%
 
 在「編輯」模式中，在作者實例上檢視的「元件指南」:
 
-![chlimage_1-404](assets/chlimage_1-404.png)
+![community-component1](assets/community-component1.png)
 
 ## 元件頁 {#component-pages}
 
 從頁面左側的清單中選取元件。
 
-![chlimage_1-405](assets/chlimage_1-405.png)
+![community-component-pages](assets/community-component2.png)
 
 此時將顯示指南的主體：
 
-1. 標題： 所選元件的名稱
-1. [用戶端程式庫](#client-side-libraries): 一或多個必要類別的清單
-1. [可包含](scf.md#add-or-include-a-communities-component): 如果元件可以動態包含，則可在作者編輯模式中切換狀態：
+1. 標題：所選元件的名稱
+1. [用戶端程式庫](#client-side-libraries):一或多個必要類別的清單
+1. [可包含](scf.md#add-or-include-a-communities-component):如果元件可以動態包含，則可在作者編輯模式中切換狀態：
 
-   * 如果新增，顯示的文字為： &quot;此元件通過其par節點包含。&quot;
-   * 如果包含，則顯示的文字為： &quot;此元件是動態包含的。&quot;
+   * 如果新增，顯示的文字為：&quot;此元件通過其par節點包含。&quot;
+   * 如果包含，則顯示的文字為：&quot;此元件是動態包含的。&quot;
    * 如果不包含，則不顯示任何文字
 
-1. 元件或功能範例： 元件或特徵的活動實例。 如果元件，則可隨著對標籤區段中提供的範本、CSS和資料所做的變更而變更。
+1. 元件或功能範例：元件或特徵的活動實例。 如果元件，則可隨著對標籤區段中提供的範本、CSS和資料所做的變更而變更。
 
 >[!NOTE]
 >
@@ -100,20 +100,22 @@ ht-degree: 1%
 
 在「社群元件」指南中，某些元件對話方塊設定會以「包含」切 [換狀態](scf.md#add-or-include-a-communities-component) 顯示。 要在使用現有資源或動態包含的資源之間切換，請在編輯模式下選擇元件和可包含文本，然後按兩下以開啟編輯對話框：
 
-![chlimage_1-406](assets/chlimage_1-406.png)
+![community-component3](assets/community-component3.png)
 
 在「範本 **」標籤** 下：
 
-![chlimage_1-407](assets/chlimage_1-407.png)
+![community-component4](assets/community-component4.png)
 
 * **包含 sling:include 的子元件**
 
    如果取消選中，「元件指南」將使用儲存庫中的現有資源（作為par節點子節點的jcr節點）。
 
-   * 顯示的文字為： &quot;此元件通過其par節點包含。&quot;
+   * 顯示的文字為：&quot;此元件通過其par節點包含。&quot;
+
    如果勾選，「元件指南」會使用sling來動態包含子節點resourceType（非現有資源）的元件。
 
-   * 顯示的文字為： &quot;此元件是動態包含的。&quot;
+   * 顯示的文字為：&quot;此元件是動態包含的。&quot;
+
    預設為未勾選。
 
 ### 發佈互動 {#publish-interactions}
@@ -171,7 +173,9 @@ ht-degree: 1%
 
 1. 請注意，範本、CSS和資料現在有3個標籤。
 
-![chlimage_1-408](assets/chlimage_1-408.png) ![chlimage_1-409](assets/chlimage_1-409.png)
+![community-component5](assets/community-component5.png)
+
+![community-component6](assets/community-component6.png)
 
 ### 範本標籤 {#templates-tab}
 
