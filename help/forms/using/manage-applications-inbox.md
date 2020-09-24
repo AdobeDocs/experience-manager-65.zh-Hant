@@ -5,12 +5,12 @@ description: AEM Inbox可讓您透過提交應用程式和管理工作，來啟�
 seo-description: AEM Inbox可讓您透過提交應用程式和管理工作，來啟動以表單為中心的工作流程。
 uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
-topic-tags: publish
+topic-tags: document_services, publish
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '952'
 ht-degree: 0%
@@ -113,7 +113,7 @@ AEM收件匣只會顯示作用中的工作。 完成的任務不會顯示在清�
 
 1. 點選以選取工作，然後按一下「 **[!UICONTROL 開啟]**」。
 
-此任務將開啟以顯示與任務相關聯的文檔或自適應表單。 對於最適化表單，任務會顯示唯讀最適化表單或其記錄的PDF文檔，如在「指派任務」工作流程步驟的「表單／文檔」選 [項卡中配置](/help/sites-developing/workflows-step-ref.md)。
+此任務將開啟以顯示與任務相關聯的文檔或自適應表單。 對於最適化表單，任務會顯示唯讀最適化表單或其記錄的PDF文檔，如「指派任務」工作流程步驟的「表單／文檔」選 [項卡中所配置](/help/sites-developing/workflows-step-ref.md)。
 
 任務詳細資訊部分顯示已執行的操作、任務狀態、開始日期和結束日期等資訊。
 
