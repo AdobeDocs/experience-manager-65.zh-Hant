@@ -6,10 +6,13 @@ seo-description: 瞭解如何建立您的第一個互動式通訊。
 uuid: ed5003c6-ba3a-4fcb-8645-c7b607b22fb5
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: interactive-communications
+topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![01-create-first-adaptive-form-hero-image](assets/01-create-first-adaptive-form-hero-image.png)
 
-互動式通訊可集中管理安全、個人化和互動式通訊的建立、組裝和傳遞，例如商業通訊、檔案、陳述、行銷郵件、帳單和歡迎套件。 互動式通訊可透過兩個通道提供：平面與網頁。 列印頻道用來建立PDF和紙本通訊，而網路頻道則用來提供線上體驗。
+互動式通訊可集中管理安全、個人化和互動式通訊的建立、組裝和傳遞，例如商業通訊、檔案、陳述、行銷郵件、帳單和歡迎套件。 互動式通訊可透過兩個通道提供：印刷與網頁。 列印頻道用來建立PDF和紙本通訊，而網路頻道則用來提供線上體驗。
 
 本教學課程提供端對端架構，以建立互動式通訊。 本教學課程分為使用案例和多本指南。 每個指南都可協助您建立用作建立區塊的功能，以建立互動式通訊。
 
@@ -126,7 +129,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 一旦您建立所有的建置區塊（例如表單資料模型、檔案片段和網頁版本的範本）後，就可以開始建立互動式通訊。
 
-互動式通訊可透過兩個通道提供：平面與網頁。 您也可以以主版的方式建立互動式的列印通訊管道。 列印為網頁頻道的主選項，可確保網頁頻道的內容、繼承和資料系結是從列印頻道衍生而來。
+互動式通訊可透過兩個通道提供：印刷與網頁。 您也可以以主版的方式建立互動式的列印通訊管道。 列印為網頁頻道的主選項，可確保網頁頻道的內容、繼承和資料系結是從列印頻道衍生而來。
 
 **目標：**
 
