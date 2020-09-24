@@ -5,12 +5,15 @@ description: 版面設計詳細資訊說明如何建立版面，以用於您的�
 seo-description: 版面設計詳細資訊說明如何建立版面，以用於您的信件或互動式通訊。
 uuid: 469a8a71-88f7-4102-bb02-38ed05390f6c
 content-type: reference
-topic-tags: interactive-communications
+topic-tags: correspondence-management, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 683809ac-089b-49bf-a72c-67d32439081f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '2190'
+ht-degree: 0%
 
 ---
 
@@ -83,6 +86,7 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
    1. 在「名稱」欄位中指定子表 **單的名** 稱。
    1. 從「 **資料系結** 」下拉式清 **單中選取「無資料系結** 」。
+
    重複步驟2到5，向XDP模板添加更多子表單。 只 [有在編寫互動式通訊時，才能將文字、檔案片段](create-interactive-communication.md#step2) 、影像和圖表新增至目標區域。
 
 1. 選擇 **「檔案** 」>「另 **** 存新檔」，將檔案保存到本地檔案系統：
@@ -229,5 +233,5 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
 將版面的伺服器轉譯格式使用至動態XML表單；否則，任何基於此版面的字母／互動式通訊都無法正確呈現。 預設情況下，Forms Designer中的伺服器渲染格式設定為動態XML表單。 要確保使用正確的格式：
 
-* 在設計工具中，按一 **下「檔案** >表單屬性 **>預設值******」，並確定「PDF演算／格式」設定已設為「動態XML表單」。
+* 在設計工具中，按一 **下「檔案** >表單屬性 **>預設值******」，並確定「PDF轉譯／格式」設定已設為「動態XML表單」。
 
