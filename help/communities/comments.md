@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
+source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 4%
@@ -47,7 +47,7 @@ ht-degree: 4%
 
 當包含 [所需的用戶端程式庫](/help/communities/essentials-comments.md#essentials-for-client-side) ，元件就會以此 `Comments` 顯示。
 
-![chlimage_1-428](assets/chlimage_1-428.png)
+![comments-component](assets/comments-component.png)
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ ht-degree: 4%
 
 * **允許的檔案類型**
 
-   僅在勾選「允許檔案上傳」時相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選「允許檔案上傳」時相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **RTF 編輯器**
 
@@ -166,7 +166,7 @@ ht-degree: 4%
 
 在「資 **源類型** 」頁籤下，為元件的新實例指定自定義資源 `Comments or Voting` 類型：
 
-![chlimage_1-429](assets/chlimage_1-429.png)
+![資源類型](assets/resource-type.png)
 
 * **評論資源類型**
 
