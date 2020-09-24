@@ -6,11 +6,14 @@ seo-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以�
 uuid: cbb598bb-ec8f-4985-97af-7c87f5891c66
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: site-features, best-practices
 content-type: reference
-topic-tags: best-practices
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '1530'
+ht-degree: 0%
 
 ---
 
@@ -34,6 +37,7 @@ MSM是可設定的架構，可自動化內容部署。 實作通常涉及網站�
 >
 >* [MSM常見問答集](https://helpx.adobe.com/experience-manager/kb/index/msm_faq.html)
 >* [MSM問題故障排除](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-msm-issues.html)
+
 >
 
 
@@ -43,7 +47,8 @@ MSM是可設定的架構，可自動化內容部署。 實作通常涉及網站�
 >您也可以使用「參 [考」元件](/help/sites-authoring/default-components-foundation.md#reference) ，以重複使用單一頁面或段落。 但請記住：
 >
 >* MSM更有彈性，可精確控制同步哪些內容及時間。
->* [現在建議](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) ，核心元件比基礎元件更重要。
+>* [現在建議](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) ，核心元件比基礎元件更重要。
+
 >
 
 
@@ -71,7 +76,7 @@ MSM是可設定的架構，可自動化內容部署。 實作通常涉及網站�
 
 這表示元件會被視為總結，在推出時，元件本身及其所有子系會以藍圖中的元件取代。 這表示，如果資源在本機新增至此類元件，則在開始時會遺失在藍圖的內容中。
 
-若要支援元件巢狀，以便在轉出中維護本機新增的元件，元件必須宣告為容器。 例如，預設parsys會宣告為容器，以便支援本機新增的內容。
+若要支援元件巢狀化，以便在轉出中維護本機新增的元件，元件必須宣告為容器。 例如，預設parsys會宣告為容器，以便支援本機新增的內容。
 
 >[!NOTE]
 >
