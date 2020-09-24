@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 2%
@@ -95,7 +95,7 @@ ht-degree: 2%
    * 新增多重屬性
 
       * 名稱: `se_resource-tags`
-      * 類型： 字串
+      * 類型：字串
       * 值： *&lt;輸入[TagID](#pre-filter-tagids)>*
          * 選擇 **[!UICONTROL 多]**
          * 選擇「添 **[!UICONTROL 加」]**
@@ -104,13 +104,13 @@ ht-degree: 2%
 
 * 重新發佈社群網站
 
-![chlimage_1-189](assets/chlimage_1-189.png)
+![configure-catalog](assets/configure-catalog.png)
 
 #### 預先篩選TagID {#pre-filter-tagids}
 
 預先篩選的 [TagID](../../help/sites-developing/framework.md#tagid) 必須完全符合套用至啟用資源的標籤。 這些值在站點的 `resources` 資料夾中顯示為屬性值 `se_resource-tags`。
 
-![chlimage_1-190](assets/chlimage_1-190.png)
+![configure-filters](assets/configure-catalog1.png)
 
 ### 參考API {#reference-apis}
 
