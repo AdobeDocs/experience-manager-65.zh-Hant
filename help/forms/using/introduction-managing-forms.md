@@ -6,11 +6,11 @@ seo-description: AEM Forms提供管理Adaptive Forms和相關資產的工具。 
 uuid: 2275a0b6-b31e-4d8e-8154-ccdfff3705aa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: introduction
+topic-tags: forms-manager, introduction
 discoiquuid: c0e4c9bb-e12a-4f9a-a8fa-1a8ad41d3995
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8d352255ace00499412a21564f45f61f45060f4d
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '1593'
 ht-degree: 1%
@@ -49,11 +49,11 @@ AEM除了提供建立表單、檔案和相關資產的選項外，還提供建�
 
 * **互動式通訊**:互動式通訊是個人化、互動式和裝置友好型的HTML數位通訊、陳述式或檔案。 互動式通訊在本質上是互動式的，並會根據使用者裝置和設定自動變更版面和設計。 如需詳細資訊，請參閱互動 [式通訊概觀](/help/forms/using/interactive-communications-overview.md)
 
-* **最適化表單：** 最適化表單是引人入勝且回應速度快的表單。 您可以根據使用者回應、裝置或工作環境，新增或移除表單區段，以自適應表單，以動態地配合使用者輸入。 製作 [最適化表單簡介](../../forms/using/introduction-forms-authoring.md) ，提供最適化表單的詳細資訊。
+* **最適化表單：** 最適化表單是引人入勝且回應速度快的表單。 您可以根據使用者回應、裝置或工作環境，新增或移除表單區段，以動態地配合使用者輸入，來製作自適應表單。 製作 [最適化表單簡介](../../forms/using/introduction-forms-authoring.md) ，提供最適化表單的詳細資訊。
 
 * **最適化表單片段：** 雖然每個表單都是專為特定用途而設計，但大部分表單中都有一些常見的區段，例如提供個人詳細資料，例如姓名和地址、家庭詳細資料、收入詳細資料等。 您可以為這些區段建立個別資產。 這些可重複使用、可獨立執行的區段稱為可調式表單片段。 如需詳細資訊，請參閱 [最適化表單片段](../../forms/using/adaptive-form-fragments.md) 文章。
 
-* **表單集：** 表單集是HTML5表單的集合，分組在一起，並以單一表單集的形式呈現給使用者。 當使用者開始填寫表格集時，表格會從一個表格順暢地轉換為另一個表格。 最後，使用者只需按一下，就可以以單一實體形式提交所有表格。 如需詳細資訊，請參 [閱「AEM Forms中的表單集」](../../forms/using/formset-in-aem-forms.md)。
+* **表單集：** 表單集是HTML5表單的集合，分組在一起，並以單一表單集的形式呈現給使用者。 當使用者開始填寫表格集時，表格會從一個表格順暢地轉換為另一個表格。 最後，使用者只需按一下，即可將所有表格以單一實體的形式提交。 如需詳細資訊，請參 [閱「AEM Forms中的表單集」](../../forms/using/formset-in-aem-forms.md)。
 
 * **資料夾：** AEM使 [!DNL Forms] 用者介面使用資料夾來排列資產。 它支援兩種類型的資料夾：
 
@@ -102,7 +102,7 @@ AEM工具面板包含各種元件的工具。 若要導覽至AEM Forms專用工�
 
 * **設定PDF產生器：** 管理員可以設定AEM [!DNL Forms] PDF產生器設定、新增使用者帳戶，以及將設定匯入或匯出至PDF產生器。
 * **發佈對應管理資產：** AEM [!DNL Forms] 可讓您一次從作者例項發佈所有字母、檔案片段和資料字典及相關相依性。 發佈的資產包括所有Correponsement Management資產和相關依存關係。 如需詳細資訊，請參 [閱發佈和取消發佈表單與檔案](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets)。
-* **匯出對應管理資產：** 您可以從AEM例項將所有Correponsement Management資產和相關相依性下載為套件 [!DNL Forms] 。 如需詳細步驟，請參 [閱匯入和匯出資產至AEM Forms](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
+* **匯出對應管理資產：** 您可以從AEM例項將所有Correponsement Management資產和相關相依性下載為套 [!DNL Forms] 件。 如需詳細步驟，請參 [閱匯入和匯出資產至AEM Forms](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
 
 ## 使用者介面的常見元素 {#commonelements}
 
