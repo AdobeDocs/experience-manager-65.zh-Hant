@@ -1,23 +1,26 @@
 ---
-title: '"Microsoft SQL server資料庫：微調配置"'
-seo-title: '"Microsoft SQL server資料庫：微調配置"'
-description: 瞭解如何微調Microsoft SQL server資料庫的配置。
-seo-description: 瞭解如何微調Microsoft SQL server資料庫的配置。
+title: '"Microsoft SQL Server資料庫：微調配置"'
+seo-title: '"Microsoft SQL Server資料庫：微調配置"'
+description: 瞭解如何微調Microsoft SQL Server資料庫的配置。
+seo-description: 瞭解如何微調Microsoft SQL Server資料庫的配置。
 uuid: 2d618aab-3c67-4edb-a28f-a20904689e6f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
+products: SG_EXPERIENCEMANAGER/6.5/FORMS, SG_AEMFORMS
 discoiquuid: 70559a94-42ea-411a-a32f-5f38bc17ff96
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 0%
 
 ---
 
 
-# Microsoft SQL server資料庫：微調配置 {#microsoft-sql-server-database-fine-tuning-the-configuration}
+# Microsoft SQL Server資料庫：微調配置 {#microsoft-sql-server-database-fine-tuning-the-configuration}
 
-使用Microsoft SQL server時，應更改預設配置設定。 按一下右鍵Oracle Enterprise Manager中的本地伺服器以訪問屬性對話框。
+使用Microsoft SQL Server時，應更改預設配置設定。 按一下右鍵Oracle Enterprise Manager中的本地伺服器以訪問屬性對話框。
 
 ## 記憶體設定 {#memory-settings}
 
@@ -25,11 +28,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 處理器設定 {#processor-settings}
 
-修改處理器設定，最重要的是，選中「Boost SQL Server Priority On Windows」（在Windows上提升SQL server優先順序）複選框，以便伺服器使用盡可能多的週期。 「使用NT纖維」(Use NT Fibres)設定不那麼重要，但您也可能希望選擇它。
+修改處理器設定，最重要的是，選中「Boost SQL Server Priority On Windows」（在Windows上提升SQL Server優先順序）複選框，以便伺服器使用盡可能多的週期。 「使用NT纖維」(Use NT Fibres)設定不那麼重要，但您也可能希望選擇它。
 
 ## 資料庫設定 {#database-settings}
 
-更改資料庫設定。 最重要的設定是「恢復間隔」，它指定當機後等待恢復的最長時間。 預設設定為一分鐘。 使用5到15分鐘的較大值可提高效能，因為它使伺服器有更多時間將資料庫日誌中的更改寫入資料庫檔案。
+更改資料庫設定。 最重要的設定是「恢復間隔」，它指定當機後等待恢復的最長時間。 預設設定為1分鐘。 使用5到15分鐘的較大值可提高效能，因為它使伺服器有更多時間將資料庫日誌中的更改寫入資料庫檔案。
 
 >[!NOTE]
 >
