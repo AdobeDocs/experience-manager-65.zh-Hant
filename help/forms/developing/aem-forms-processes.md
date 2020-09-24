@@ -7,17 +7,20 @@ uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: development-tools
+topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '791'
+ht-degree: 0%
 
 ---
 
 
 # 瞭解AEM Forms流程 {#understanding-aem-forms-processes}
 
-常見的使用案例是一組AEM Forms服務可在單一檔案上運作。 您可以使用Workbench建立流程，將請求傳送至服務容器。 流程代表您正在自動化的業務流程。 有關建立流程的資訊，請參 [閱使用工作台](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+常見的使用案例是，一組AEM Forms服務可在單一檔案上運作。 您可以使用Workbench建立流程，將請求傳送至服務容器。 流程代表您正在自動化的業務流程。 有關建立流程的資訊，請參 [閱使用工作台](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
 一旦程式被激活，它就會變成服務，並可像其他服務一樣被調用。 標準服務（如加密服務）和源自進程的服務之間的一個區別是，後者有一個操作可執行多個操作。 相反，標準服務有許多操作。 每個操作通常執行一個操作，例如將策略應用於文檔或加密文檔。
 
@@ -72,7 +75,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 下圖是長期處理的範例。
 
-當申請人提交貸款表時，將調用此流程。 在貸款官員批准或拒絕貸款申請之前，該程式尚未完成。 此長期流程的名稱是 *FirstAppSolution/PreLoanProcess* ，其操作是 `invoke_Async`。 必須以非同步方式呼叫此程式。 如需以程式設計方式叫用此長壽命程式的詳細資訊，請 [參閱叫用以人為中心的長壽命程式](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。
+當申請人提交貸款表時，將調用此流程。 在貸款官員批准或拒絕貸款申請之前，該程式尚未完成。 此長期流程的名稱是 *FirstAppSolution/PreLoanProcess* ，其操作為 `invoke_Async`。 必須以非同步方式呼叫此程式。 如需以程式設計方式叫用此長壽命程式的詳細資訊，請 [參閱叫用以人為中心的長壽命程式](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。
 
 >[!NOTE]
 >
