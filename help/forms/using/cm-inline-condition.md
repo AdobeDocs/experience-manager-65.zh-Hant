@@ -6,11 +6,11 @@ seo-description: 使用內嵌條件並在互動式通訊和信件中重複，您
 uuid: 32b48a8b-431d-4f9c-9f51-8e7e9ac624a0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4
-topic-tags: interactive-communications
+topic-tags: interactive-communications, correspondence-management
 discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -32,7 +32,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 * [通信管理概述](/help/forms/using/cm-overview.md)
 * [互動式通訊中的文字](../../forms/using/texts-interactive-communications.md)
 
-### 範例： 使用規則在互動式通訊中條件化內嵌文字 {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
+### 範例：在互動式通訊中使用規則條件化內嵌文字 {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
 
 若要在互動式通訊中條件化句子、段落或文字字串，您可以在適當的文字檔案片段中建立規則。 下列範例使用規則，只向互動式通訊的美國收件者顯示免付費電話。
 
@@ -40,7 +40,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
 在互動式通訊和代理中加入文字片段後，會使用代理UI來準備互動式通訊後，就會評估收件者的（表單資料模型）資料，而文字只會顯示給美國的收件者。
 
-### 範例： 在字母中使用內嵌條件來呈現適當的位址  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### 範例：在字母中使用內嵌條件來呈現適當的位址  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 通過在相應的文本模組中插入內嵌條件，可以在字母中插入內嵌條件。 下列範例使用兩個條件來評估並顯示以DD元素「性別」為基礎的信件中的適當位址Sir或Ma&#39;am。 使用類似的步驟，您可以建立其他條件。
 
@@ -95,9 +95,9 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
 此外，您可以在重複構造中指定規則／條件，以條件化在交互通信／字母中呈現的資訊／條目。
 
-### 範例： 在互動式通訊中使用重複，以格式化、建構及顯示信用卡交易清單 {#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 範例：在互動式通訊中使用重複，以格式化、建構及顯示信用卡交易清單 {#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
-以下範例提供使用重複來建構和轉換互動式通訊中信用卡交易的步驟。
+以下範例提供使用重複來建構並轉換互動式通訊中信用卡交易的步驟。
 
 1. 在基於表單資料模型的文本文檔片段中，插入相關的表單資料模型對象（以及標籤所需的嵌入文本，如本例所示）:
 
@@ -125,7 +125,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
    >[!NOTE]
    >
-   >此示例假設座席將在2018年3月底建立語句。 否則，您可以建立另一個規則以包含2018年3月後2018年4月01日之前的交易以排除2018年3月之後的交易。
+   >此示例假設座席將在2018年3月底建立語句。 否則，您可以建立另一個規則以包含2018年3月後2018年4月01日之前的交易，以排除2018年3月之後的交易。
 
    ![4_createrule](assets/4_createrule.png)
 
@@ -139,7 +139,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
    ![screen_shot_2018-03-09at155516copy](assets/screen_shot_2018-03-09at155516copy.png)
 
-### 範例： 以信函格式、結構和顯示信用卡交易清單重複使用 {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 範例：以信函格式、結構和顯示信用卡交易清單重複使用 {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
 以下範例提供使用重複來建構並轉換信用卡交易的步驟。 使用類似的步驟，您可以在不同的情況下使用重複。
 
@@ -186,8 +186,8 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
 1. 選取分隔符號以格式化動態文字，並點選核取標籤以儲存：
 
-   * **分行**: 在輸出字母中的每個事務處理條目之後插入分行符號。
-   * **文字**: 在輸出字母中的每個事務條目後面插入指定的文本字元。
+   * **分行**:在輸出字母中的每個事務處理條目之後插入分行符號。
+   * **文字**:在輸出字母中的每個事務條目後面插入指定的文本字元。
 
    插入條件後，帶有重複的文本將以紅色加亮，其左側將顯示一個控點。 您可以將滑鼠指標暫留在重複的左側控制滑塊上，以檢視重複的構造。
 
