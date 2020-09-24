@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+source-git-commit: f6aa95514a266a042c9bd1165634e30e80479ae7
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 * [使用用戶端程式庫](/help/sites-developing/clientlibs.md) ，提供使用詳細資訊以及除錯工具
 * [用於SCF的Clientlibs](/help/communities/client-customize.md#clientlibs) ，它在定制SCF元件時提供有用的資訊
-* [部落格： AEM Client Libraries（由範例說明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
+* [部落格：AEM Client Libraries（由範例說明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
 ## 為何需要Clientlibs {#why-clientlibs-are-required}
 
@@ -39,13 +39,13 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 
 當所需的clientlibs遺失時， [將Communities元件新增至頁面](/help/communities/author-communities.md) ，可能會導致javascript錯誤以及意外的外觀。
 
-### 範例： 未使用Clientlibs的置入審核 {#example-placed-reviews-without-clientlibs}
+### 範例：未使用Clientlibs的置入審核 {#example-placed-reviews-without-clientlibs}
 
-![chlimage_1-426](assets/chlimage_1-426.png)
+![置入審核](assets/placed-reviews.png)
 
-### 範例： 使用Clientlibs進行置入的審核 {#example-placed-reviews-with-clientlibs}
+### 範例：使用Clientlibs進行置入的審核 {#example-placed-reviews-with-clientlibs}
 
-![chlimage_1-427](assets/chlimage_1-427.png)
+![reviews-clientlibs](assets/reviews-clientlibs.png)
 
 ## 識別所需的客戶端 {#identifying-required-clientlibs}
 
@@ -58,7 +58,7 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 * cq.ckeditor
 * cq.social.hbs.reviews
 
-![chlimage_1-246](assets/chlimage_1-246.png)
+![clientlibs-reviews](assets/clientlibs-reviews.png)
 
 ## 添加必需的客戶端 {#adding-required-clientlibs}
 
@@ -94,5 +94,5 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 
 使用「 [AEM Communities快速入門](/help/communities/getting-started.md) 」範例(其中 `site-name` 為Engage **)，在新增審核元件時，clientliblist的顯示方式如下：
 
-![chlimage_1-247](assets/chlimage_1-247.png)
+![review-component](assets/review-component.png)
 
