@@ -3,9 +3,9 @@ title: 動態媒體電子報
 description: 'Dynamic Media Newsletter by Experience League是每月的電子報。 它可協助您快速上手使用Dynamic Media和Dynamic Media Classic，讓您立即開始實現價值。 本一站式商店電子報提供寶貴的知識建立資源，包括如何製作影片、解決方案概觀，以及介紹一些主要功能和功能，例如影像預設集、檢視器預設集、影片設定檔等。 '
 keywords: dynamic media;newsletter;product updates;tips and tricks;events;customer success;blog;blogs;images;videos;features;capabilities
 contentOwner: Rick Brough
-solution: Dynamic Media
+solution: Dynamic Media Classic, Experience Manager
 translation-type: tm+mt
-source-git-commit: aeb1dde163a295047ca515d9a8089238a112cdf4
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 0%
@@ -73,7 +73,7 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 5個全新的Skill Builder網路研討會，磨練您的Dynamic Media Classic技能。
    * 免費稽核，協助您從Dynamic Media Classic獲得更多價值。
    * 為我們的多媒體客戶帶來創紀錄的假日購物季。
-   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新功能的準備。
+   * 您選擇DAM(Digital Asset Manager)的首選指南，可符合您現今的需求，並為您做好迎接未來多媒體新增功能的準備。
    * 認識數位媒體專員Mark Dean。
 
 * **[2019年11月，總第11期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**
@@ -160,4 +160,4 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
    * 註冊參加我們的Dynamic Media Classic隱藏功能網路研討會。
    * 瞭解我們的隨選網路研討會系列，以協助您制定豐富型媒體策略。
    * 閱讀主要的豐富式媒體使用案例及我們為他們提供的解決方案。
-   * ... 還有更多！
+   * ...還有更多！
