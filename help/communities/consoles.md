@@ -1,6 +1,6 @@
 ---
 title: Communities Console
-seo-title: Communities Console
+seo-title: 管理台
 description: 社群主控台說明
 seo-description: 社群主控台說明
 uuid: 1c5b2600-9059-4b44-9741-f1b627423d3c
@@ -10,15 +10,15 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '345'
 ht-degree: 1%
 
 ---
 
 
-# Communities Console {#communities-consoles}
+# 管理台 {#communities-consoles}
 
 AEM Communities控制台可從全域導覽面板的作者環境取得，可讓您存取管理工作，例如：
 
@@ -41,8 +41,6 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 
 ## 全域導覽面板 {#global-navigation-panel}
 
-![chlimage_1-91](assets/chlimage_1-91.png)
-
 選取左 `Adobe Experience Manager` 上角的圖示，以開啟全域導覽面板並存取兩個圖示：
 
 * [導覽主控台](#navigation-console)
@@ -52,7 +50,7 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 
 要訪問各種Communities控制台，請從全局導航中選擇 **導航，Communities**。
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![社群](assets/communities.png)
 
 * [網站](sites-console.md)
 
@@ -60,7 +58,7 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 
 * [審核](moderation.md)
 
-   「協調控制台」可用於大量協調UGC和作者環境。 在發佈環境中可以存取類似的大量協調控制台，讓指派一或多個社群網站之社 [群協調者](users.md#publishenvironmentusersandgroups) 角色的社群成員也能存取。
+   「協調控制台」可用於大量協調UGC和作者環境。 在發佈環境中可以存取類似的大量協調控制台，讓指派一或多個社群網站之社群協調 [者角色的社群](users.md#publishenvironmentusersandgroups) 成員也能存取。
 
 * [成員、組](members.md)
 
