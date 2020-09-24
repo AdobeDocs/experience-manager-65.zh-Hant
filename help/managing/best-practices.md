@@ -6,12 +6,15 @@ seo-description: 若要管理專案以實作Adobe Experience Manager(AEM)，需�
 uuid: 859f73f4-535a-49a1-9ae4-a4aacd7f36dd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
+topic-tags: managing-checklist, introduction
 content-type: reference
-topic-tags: introduction
 discoiquuid: 2bfa287a-aad0-4681-9f9c-d48e8179684c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '3316'
+ht-degree: 1%
 
 ---
 
@@ -55,7 +58,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
 ## 依角色的狀態 {#status-by-role}
 
-按職 **責列出的狀態工作表顯示了Health** 、Quality [****和Phase Persona** By Phase Implective **By Phase Phise Alignments和Persona Persona****](#projectheartbeat)**[](#phases-and-milestones)****[](#persona)**的詳細細目。
+按職 **責列出的狀態工作表顯示了Health** 、Quality [****&#x200B;和Phase Persona **By Phase Implective** By Phase Phise Alignments和Persona Persona ****](#projectheartbeat)**[](#phases-and-milestones)****[](#persona)**&#x200B;的詳細細目。
 
 ## 階段和里程碑 {#phases-and-milestones}
 
@@ -199,6 +202,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
    * 他們如何與彼此及使用者互動。
    * 應用程式要消耗和產生的資料，而非其內部結構。
+
    定義應涵蓋：
 
    * 專案的基本程式碼結構
@@ -238,7 +242,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
    在開發之前，應設定部署、發佈、測試和報告問題所需的所有支援程式。
 
-   另請參閱 [Adobe支援入口網站](https://helpx.adobe.com/marketing-cloud/contact-support.html)。
+   另請參閱 [Adobe支援入口網站](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
 ### 運營規劃和運營 {#operations-planning-and-operations}
 
@@ -257,6 +261,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
    * 定義影響發佈環境的權限的使用；例如， `replicate`
    * 對於具有最低權限的用戶，應定義工作流
    * 群組中的 `editor` 使用者不應擁有 `admin` 任何權限，也不應屬於群 `administrators` 組
+
    如需詳細資訊，請參 [閱使用者管理與安全性](/help/sites-administering/security.md)。
 
 * **監控與維護**
@@ -264,8 +269,9 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
    監控和維護是確保解決方案上線後順利運作的關鍵方面。 為此，您需要定義：
 
    * 需要監控的項目
-   * 維護任務；既有正常情況，也有特殊情況
-   如需詳細 [資訊，請參閱](/help/sites-deploying/monitoring-and-maintaining.md) 「監控與維護」。
+   * 維護任務；都是經常和特殊情況
+
+   如需詳細 [資訊，請參閱監](/help/sites-deploying/monitoring-and-maintaining.md) 控與維護。
 
 * **移轉**
 
@@ -285,7 +291,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
    規劃並記錄您的開發環境，包括：
 
-   * 建築
+   * 架構
    * [開發工具](/help/sites-developing/dev-tools.md)
 
       * 典型的環境包括：
@@ -305,7 +311,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
    規劃並記錄您的測試環境，包括：
 
-   * 建築
+   * 架構
    * 對發展建設的依賴；包括夜間建置
    * 測試協力廠商軟體整合／相依性的可能性或限制
    * 測試工具
@@ -315,7 +321,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
    規劃並記錄您的生產環境，包括：
 
-   * 建築
+   * 架構
    * 部署順序
    * 協力廠商軟體整合／相依性
    * 安全性設定
@@ -367,6 +373,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
    * 此解決方案滿足用戶／客戶需求
    * 客戶／使用者接受解決方案（功能、設計和效能）
+
    客戶移交應有一份正式的檢查清單；最理想的是自動化，並針對快照每晚執行。 應將結果傳送給專案經理和開發團隊
 
 * **效能與負載測試**
@@ -487,7 +494,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
 * 負責解決方案和系統的高級設計。
 * 協助定義AEM的實作策略。 例如，是要實作叢集安裝、還是冷待機，或是需要內容傳送網路(CDN)。
-* 此外，還可根據用戶端需求定義AEM解決方案架構。 這可包括使用者角色（具有相關權限）的概念、範本和元件之間的關係，或何時使用多網站管理。
+* 此外，還可根據用戶端需求定義AEM解決方案架構。 這可包括使用者角色（具有相關權限）的概念、範本與元件之間的關係，或何時使用多網站管理。
 
 ### 商業分析師 {#business-analyst}
 
@@ -556,7 +563,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
 * 訓練人員
 
-   * 根據項目的規模和性質，可利用專門培訓人員為相關群體制定和舉辦培訓課程。
+   * 根據項目的規模和性質，可利用專門培訓人員為相關群體制定和提供培訓課程。
 
 * 技術撰稿人
 
@@ -590,7 +597,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
 對於每個里程碑，適當的角色負責提供特定文檔，從而實現其對特定里程碑的責任。
 
-對於每個 **交付項** ，人格必須指明：
+對於每個 **交付項** ，角色必須指明：
 
 * **Y/N**:是否已完成。
 
@@ -602,7 +609,7 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
 * 與管理AEM專案相關的其他最佳實務和准則：
    * [硬體尺寸指南](/help/managing/hardware-sizing-guidelines.md)
-   * [企業開發營運](/help/managing/enterprise-devops.md)
+   * [企業 DevOps](/help/managing/enterprise-devops.md)
    * [SEO和URL管理最佳實務](/help/managing/seo-and-url-management.md)
    * [AEM與網頁協助工具准則](/help/managing/web-accessibility.md)
    * [一般資料保護法規](/help/managing/data-protection-and-privacy.md)*部 [署和維護最佳做法](/help/sites-deploying/best-practices.md)
@@ -616,13 +623,13 @@ source-git-commit: 810d4e9fa93bd0913ba6c928a2508587c605c07e
 
    * [安全性](/help/sites-developing/security.md)
    * [建議的部署](/help/sites-deploying/recommended-deploys.md)
-   * [企業開發營運](/help/managing/enterprise-devops.md)
+   * [企業 DevOps](/help/managing/enterprise-devops.md)
    * [硬體調整大小](/help/managing/hardware-sizing-guidelines.md)
    * AEM的概念：
 
       * [開發——基本概念](/help/sites-developing/the-basics.md)
       * [MSM概念](/help/sites-administering/msm.md)
-      * [HTML範本語言(HTL)](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+      * [HTML範本語言(HTL)](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 
 * 相關檔案
 
