@@ -7,10 +7,13 @@ uuid: 89f2fd3d-63d7-4b70-b335-47314441f3ec
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: development-tools
+topic-tags: coding, development-tools
 discoiquuid: dd9c0ec4-a195-4b78-8992-81d0efcc0a7e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '909'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td><p>網站服務</p></td>
-   <td><p>AEM Forms支援網站服務標準，例如SOAP/HTTP。 服務可以公開為Web服務，而WSDL符合W3C所定義的Web服務標準。</p><p>可以從任何Web服務堆棧（包括。NET Framework和Sun™ Web Services SDK）調用服務。 (請參 <a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">閱使用Web services叫用AEM Forms</a>)。</p></td>
+   <td><p>AEM Forms支援網站服務標準，例如SOAP/HTTP。 服務可以公開為Web服務，而WSDL符合W3C所定義的Web服務標準。</p><p>可以從任何Web服務堆棧（包括。NET Framework和Sun™ Web Services SDK）調用服務。 (請參 <a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">閱使用Web Services叫用AEM Forms</a>)。</p></td>
   </tr>
   <tr>
    <td><p>REST請求</p></td>
@@ -87,7 +90,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [使用Java API叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[使用Web services叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)
+[使用Web Services叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)
 
 [調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
