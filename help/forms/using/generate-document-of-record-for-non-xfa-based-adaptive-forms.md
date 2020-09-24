@@ -5,12 +5,15 @@ description: 說明如何為記錄檔案(DoR)產生範本以用於最適化表�
 seo-description: 說明如何為記錄檔案(DoR)產生範本以用於最適化表單。
 uuid: 2dc7e0de-fff9-43fa-9426-e9b047eb2595
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14975f409a0e17183b3da6bdc5a42c8073080108
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '2781'
+ht-degree: 2%
 
 ---
 
@@ -56,7 +59,7 @@ source-git-commit: 14975f409a0e17183b3da6bdc5a42c8073080108
 
 ## 自動產生記錄檔案的元件 {#components-to-automatically-generate-a-document-of-record}
 
-要為自適應表單生成記錄文檔，您需要以下元件：
+要生成適應性表單的記錄文檔，您需要以下元件：
 
 **最適化表單** ：您要為其產生記錄檔案的最適化表單。
 
@@ -319,6 +322,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
    * **包含未綁定到資料模型的表單對象**
    * **從記錄檔案排除隱藏欄位**
    * **隱藏面板描述**
+
    >[!NOTE]
    >
    >如果您使用6.3之前由設計人員版本建立的最適化表單範本，以便「重音色彩」和「字型系列」屬性運作，請確定下列項目在根子表單下的最適化表單範本中：
@@ -353,7 +357,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 ## 記錄檔案設定 {#document-of-record-settings}
 
-記錄文檔設定允許您選擇要包含在記錄文檔中的選項。 例如，銀行接受表單中的姓名、年齡、社會保障號碼和電話號碼。 表單會產生銀行帳號和分行詳細資訊。 您可以選擇只在記錄檔案中顯示姓名、社交保險號碼、銀行帳戶和分行詳細資料。
+記錄文檔設定允許您選擇要包含在記錄文檔中的選項。 例如，銀行接受表單中的姓名、年齡、社會保障號碼和電話號碼。 表單會產生銀行帳號和分行詳細資訊。 您可以選擇只在記錄檔案中顯示姓名、社交保險號碼、銀行帳戶和分支明細。
 
 元件的記錄設定文檔可在其屬性下使用。 若要存取元件的屬性，請選取元件，然後按一 ![下覆蓋](assets/cmppr.png) 中的cmppr。 這些屬性列在側欄中，您可在其中找到下列設定。
 
@@ -361,14 +365,14 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 * **從記錄檔案排除**:將屬性設為true會將欄位從記錄檔案中排除。 這是名為的可指令碼屬性 `excludeFromDoR`。 其行為取決於隱藏 **的表單層級屬性時** ，從DoR排除欄位。
 
-* **** 將面板顯示為表格：如果面板中的欄位少於6個，將屬性設定為記錄檔案中的表格。 僅適用於面板。
-* **** 從記錄檔案排除標題：設定屬性會從記錄檔案中排除面板／表格的標題。 僅適用於面板和表格。
-* **** 從記錄檔案排除說明：設定屬性會從記錄文檔中排除面板／表的說明。 僅適用於面板和表格。
+* **將面板顯示為表格：** 如果面板中的欄位少於6個，將屬性設定為記錄檔案中的表格。 僅適用於面板。
+* **從記錄檔案排除標題：** 設定屬性會從記錄檔案中排除面板／表格的標題。 僅適用於面板和表格。
+* **從記錄檔案排除說明：** 設定屬性會從記錄文檔中排除面板／表的說明。 僅適用於面板和表格。
 
 **表單層級設定**
 
-* **** 在DoR中包含未系結的欄位：設定屬性時，記錄文檔中包含基於模式的自適應表單的未綁定欄位。 依預設為true。
-* **** 如果隱藏，則從DoR排除欄位：設定屬性會覆寫「從記錄檔案排除」欄位層級屬性的行為（若非真）。 如果在表單提交時隱藏欄位，如果屬性設為true，則這些欄位將從記錄檔案中排除，但不要設定「從記錄檔案排除」屬性。
+* **在DoR中包含未系結的欄位：** 設定屬性時，記錄文檔中包含基於模式的自適應表單的未綁定欄位。 依預設為true。
+* **如果隱藏，則從DoR排除欄位：** 設定屬性會覆寫「從記錄檔案排除」欄位層級屬性的行為（若非真）。 如果在表單提交時隱藏欄位，如果屬性設為true，則這些欄位將從記錄檔案中排除，但不要設定「從記錄檔案排除」屬性。
 
 ## 使用記錄檔案時的主要考量 {#key-considerations-when-working-with-document-of-record}
 
