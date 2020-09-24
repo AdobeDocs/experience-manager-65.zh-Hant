@@ -6,12 +6,15 @@ seo-description: 在AEM Forms 6.4上安裝Compatibility套件可讓您使用AEM 
 uuid: b49633d6-2cb3-422c-a314-25f3b8a37b7f
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: correspondence-management
+topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 73e8ccc6-f857-493e-b6e3-878f93e2a356
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dca52c05c413fc96bf7fab012a3be52f6769c2e0
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '343'
+ht-degree: 2%
 
 ---
 
