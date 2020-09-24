@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 5%
@@ -42,15 +42,15 @@ ht-degree: 5%
 
 當包含 [所需的用戶端程式庫](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) ，元件的顯示方式 `Calendar` 就是這樣。
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![calendar-component](assets/calendar-component.png)
 
 ### 設定日曆 {#configuring-calendar}
 
 選擇要訪問 `Calendar` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
 
-![chlimage_1-113](assets/chlimage_1-113.png)
+![配置](assets/configure-new.png)
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![configure-calendar](assets/configure-calendar1.png)
 
 #### 「設定」頁籤 {#settings-tab}
 
@@ -90,7 +90,7 @@ ht-degree: 5%
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -134,7 +134,7 @@ ht-degree: 5%
 
 * **關閉 / 重新開啟事件**
 
-   如果勾選，受信任的成員協調者可以關閉事件以進一步編輯和留言，也可以重新開啟事件。 已勾選預設值。
+   如果勾選，受信任的成員協調者可關閉事件以進一步編輯和留言，也可重新開啟事件。 已勾選預設值。
 
 * **標籤貼文**
 
@@ -154,7 +154,7 @@ ht-degree: 5%
 
 * **標幟限制**
 
-   輸入事件或留言在公開檢視中隱藏前必須加以標幟的次數。 如果設為-1，則標籤的主題或留言永遠不會隱藏在公開檢視中。 否則，此數字必須大於或等於「協調臨界值」。 預設值為5。
+   輸入事件或留言在公開檢視中隱藏前必須加以標幟的次數。 如果設為-1，則標籤的主題或留言絕不會從公開檢視中隱藏。 否則，此數字必須大於或等於「協調臨界值」。 預設值為5。
 
 #### 「標籤」欄位頁籤 {#tag-field-tab}
 
@@ -193,7 +193,7 @@ ht-degree: 5%
 
 當登入的使用者具有協調者或管理員權限時，他們就可以對張貼至事件的所有日曆事件和留言執行協調 [任務](/help/communities/moderate-ugc.md) （依照元件的設定許可）。
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![協調者檢視](assets/moderators-view.png)
 
 #### 成員 {#members}
 
@@ -207,19 +207,19 @@ ht-degree: 5%
 * 刪除其自己的日曆事件或留言
 * 標籤其他人的日曆事件或注釋
 
-![chlimage_1-116](assets/chlimage_1-116.png)
+![create-event](assets/configure-calendar2.png)
 
-![chlimage_1-117](assets/chlimage_1-117.png)
+![event-post](assets/configure-calendar3.png)
 
 #### 匿名 {#anonymous}
 
 未登入的網站訪客只能閱讀已張貼的日曆事件、翻譯事件（如果支援），但不得新增事件或留言，也不得標籤其他人的事件或留言。
 
-![chlimage_1-118](assets/chlimage_1-118.png)
+![匿名——用戶——視圖](assets/anonymous-user-view1.png)
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人員 [的「行事歷](/help/communities/calendar-basics-for-developers.md) 」頁面。
+如需詳細資訊，請參閱開發人 [員的Calendar Essentials](/help/communities/calendar-basics-for-developers.md) （行事歷）頁面。
 
 如需日曆事件和留言的協調，請參閱協 [調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
