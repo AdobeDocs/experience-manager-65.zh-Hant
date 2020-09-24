@@ -5,14 +5,17 @@ description: 移轉公用程式可讓您將AEM Forms資產和檔案從AEM 6.3 Fo
 seo-description: 移轉公用程式可讓您將AEM Forms資產和檔案從AEM 6.3 Forms或舊版移轉至AEM 6.4 Forms。
 uuid: a3fdf940-7fc2-441c-91c8-ad66ba47e5f2
 content-type: reference
-topic-tags: installing
+topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-strategy: max-2018
 discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1809'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 >[!NOTE]
 >
->如果升級不到位，對於Correponsement Management資產，您可以在每次導入資產時運行遷移。 對於通信管理遷移，您需要安裝Forms Compatibility Package。
+>如果升級不到位，對於Commentering Management資產，您可以在每次導入資產時運行遷移。 對於通信管理遷移，您需要安裝Forms Compatibility Package。
 
 ## 移轉方法 {#approach-to-migration}
 
@@ -99,6 +102,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
       * 主題
       * 字母
       * 資料字典
+
    >[!NOTE]
    >
    >在資產移轉期間，您會發現警告訊息，例如「找到衝突……」。 這些消息表示無法遷移自適應表單中某些元件的規則。 例如，如果元件有同時具有規則和指令碼的事件，則規則在任何指令碼之後發生，則不會遷移元件的規則。 不過，這些規則可透過在最適化表單製作中開啟規則編輯器來移轉。
@@ -118,6 +122,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
    >
    >
    >    * 若要移轉範本（從6.3和6.4升級時不需要），請點選「最適化表單範本移轉」，然後在下一個畫面中點選「開始移轉」。 以下是移轉的項目：
+
       >
       >
       >
@@ -135,7 +140,8 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
    * 若要移轉最適化表單範本，請點選「 **最適化表單範本移轉** 」，然後在「自訂元件移轉」頁面中點選「 **開始移轉」**。 以下是移轉的項目：
 
       * 使用AEM範本編輯器在/apps或/conf下建立的最適化表單範本。
-   * 移轉AEM Forms cloud設定服務，以運用全新的內容感應雲端服務範例，其中包含觸控功能UI（在/conf下）。 當您移轉AEM Forms Cloud Configuration服務時，/etc中的雲端服務會移至/conf。 如果您沒有任何雲端服務自訂，這些自訂會依賴舊式路徑(/etc)，建議您在升級至6.5後立即執行移轉公用程式，並使用雲端設定Touch UI進行任何進一步的工作。 如果您有任何現有的雲端服務自訂，請在升級的設定上繼續使用傳統UI，直到自訂內容更新為與已移轉的路徑(/conf)一致，然後執行移轉公用程式。
+   * 移轉AEM Forms Cloud設定服務，以運用全新的內容感應雲端服務範例，其中包含觸控功能UI（在/conf下）。 當您移轉AEM Forms Cloud Configuration服務時，/etc中的雲端服務會移至/conf。 如果您沒有任何雲端服務自訂，這些自訂會依賴舊式路徑(/etc)，建議您在升級至6.5後立即執行移轉公用程式，並使用雲端設定Touch UI進行任何進一步的工作。 如果您有任何現有的雲端服務自訂，請在升級的設定上繼續使用傳統UI，直到自訂內容更新為與已移轉的路徑(/conf)一致，然後執行移轉公用程式。
+
    若要移轉 **AEM Forms雲端服務**（包括下列服務），請點選「AEM Forms雲端設定移轉」（雲端設定移轉獨立於AEMFD相容套件），點選「AEM Forms雲端設定移轉」，然後在「設定移轉」頁面上，點選「 **開始移轉」**:
 
    * 表單資料模型雲端服務
@@ -154,10 +160,12 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
       * 源路徑：/etc/cloudservices/typekit
       * 目標路徑：/conf/global/settings/cloudconfigs/typekit
+
    移轉程式進行時，瀏覽器視窗會顯示下列內容：
 
    * 更新資產時：資產已成功更新。
    * 移轉完成後：完成資產移轉。
+
    執行時，遷移實用程式執行以下操作：
 
    * **新增標籤至資產**:新增標籤「Correponsements Management:移轉資產」/「最適化表單：移轉資產」。 移轉資產，讓使用者能夠識別移轉的資產。 運行遷移實用程式時，系統中的所有現有資產都標籤為「已遷移」。
