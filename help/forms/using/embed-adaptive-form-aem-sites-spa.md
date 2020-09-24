@@ -4,12 +4,12 @@ seo-title: 在AEM Sites頁面中內嵌最適化表單或互動式通訊
 description: 在AEM Sites頁面中內嵌最適化表單或互動式通訊。 使用者可以填寫和提交表單，而不需離開「網站」頁面。
 seo-description: 您可以在AEM Sites頁面中內嵌最適化表單或互動式通訊。 使用者可以填寫和提交表單，而不需離開「網站」頁面。
 uuid: 4c75494e-e9d2-43b9-bbae-562e0eda8abb
-topic-tags: interactive-communications
+topic-tags: author, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a74ed6c1-3006-4baf-bd77-ad4045e23c22
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 0%
@@ -71,10 +71,10 @@ AEM Forms可讓表單開發人員將調適性表單和互動式通訊順暢地�
 
    * **資產類型：** 選取要內嵌的資產類型。 選項包括最適 **化表單** 和互 **動式通訊**
 
-   * **資產路徑**: 瀏覽並選取要內嵌的最適化表單或互動式通訊。 如果使用「資產」瀏覽器插入最適化表單或「互動式通訊」，則會自動填入欄位。
-   * **頻道** （僅限互動式通訊）: 選取要內嵌的互動式渠道類型。 選項包括網 **路頻道****和列印頻道**。
+   * **資產路徑**:瀏覽並選取要內嵌的最適化表單或互動式通訊。 如果使用「資產」瀏覽器插入最適化表單或「互動式通訊」，則會自動填入欄位。
+   * **頻道** （僅限互動式通訊）:選取要內嵌的互動式渠道類型。 選項包括網 **路頻道****和列印頻道**。
 
-   * **主題**: 選取一個主題，定義最適化表單或互動式通訊元件的樣式。 樣式包括外觀屬性，如字型樣式、背景顏色、尺寸和對齊方式。
+   * **主題**:選取一個主題，定義最適化表單或互動式通訊元件的樣式。 樣式包括外觀屬性，如字型樣式、背景顏色、尺寸和對齊方式。
 
 1. 點選 ![done_icon](assets/done_icon.png) 以儲存設定。 最適化表單或互動式通訊現在內嵌在頁面中。
 
@@ -93,7 +93,7 @@ AEM網站頁面會在AEM Forms容器中維護最適化表單和互動式通訊�
 要修改嵌入式自適應表單和互動式通信的任何配置或屬性，請執行以下操作之一。
 
 * 以最適化表單或個別編輯器中的互動式通訊方式開啟原始表單，並加以修改。
-* 以編輯模式從「網站」頁麵點選最適化表單或互動式通訊，然後在新視 **窗中點選「編輯」**。 原始表單在編輯模式下開啟。
+* 在「網站」頁面中以編輯模式點選最適化表單或互動式通訊，然後在新視 **窗中點選「編輯」**。 原始表單在編輯模式下開啟。
 
 ## Considerations and best practices {#considerations-and-best-practices}
 
