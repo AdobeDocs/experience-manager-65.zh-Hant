@@ -5,12 +5,15 @@ description: 授予對規則編輯器的限制訪問權以選擇用戶組。
 seo-description: 授予對規則編輯器的限制訪問權以選擇用戶組。
 uuid: efa2570a-20ac-4b43-8a0e-38247f84d02f
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ab694a93-00d2-44d7-8ded-68ab2ad50693
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 您可能有不同類型的使用者，具備不同的技巧，可搭配使用Adaptive Forms。 雖然專家使用者可能擁有使用指令碼和複雜規則的適當知識，但是可能有基本層級使用者需要只使用最適化表單的版面配置和基本屬性。
 
-AEM Forms可讓您根據使用者的角色或函式，限制規則編輯器的存取權。 在Adaptive Forms Configuration service設定中，您可以指定可以查 [看和訪問規則編輯器](/help/sites-administering/security.md) 的用戶組。
+AEM Forms可讓您根據使用者的角色或函式，限制規則編輯器的存取權。 在Adaptive Forms Configuration Service設定中，您可以指定可以查 [看和訪問規則編輯器](/help/sites-administering/security.md) 的用戶組。
 
 ## 指定可存取規則編輯器的使用者群組 {#specify-user-groups-that-can-access-rule-editor}
 
