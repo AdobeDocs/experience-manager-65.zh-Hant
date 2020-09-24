@@ -8,7 +8,10 @@ contentOwner: admin
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 discoiquuid: 20ca99e3-4843-4254-b3e9-0255cc752363
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '1763'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
    * 選取要搜尋的網域、選取要顯示的項目數，然後按一下「尋找 **[!UICONTROL 」]**。
    * （可選）若要檢視群組詳細資訊，請選取群組名稱，然後按一下「 **[!UICONTROL 確定]** 」以返回搜尋結果頁面。
    * 選中該組的複選框，然後按一下「確 **[!UICONTROL 定」]**。
-   * 按一 **[!UICONTROL 下「下一步]**」。
+   * 按一下&#x200B;**[!UICONTROL 下一步]**。
 
 1. （可選）要為用戶分配角色，請按一下「查 **[!UICONTROL 找角色]**」，選中要分配角色的複選框，然後按一下「確 **[!UICONTROL 定」]**。
 1. 按一 **[!UICONTROL 下完成]**。
@@ -88,7 +91,7 @@ AEM表單無法區分擁有相同使用者ID和密碼但屬於不同網域的使
 
 使用SQL Server作為資料庫時，不能建立超過255個字元的用戶ID。
 
-使用MySQL時，用戶ID可以包含擴展字元。 但是，當比較兩個字串（例如abcde和abcdè）時，它們會被視為相同。 例如，同步時，如果新用戶已添加到資料庫，則會進行比較以檢查資料庫中是否存在具有相同用戶ID的用戶。 如果在 *添加新用戶**âbcdè時，資料庫中已存在用戶Abcdè* ，則無法區分這兩個名稱。 假定用戶已存在於資料庫中，並且新用戶被忽略且不添加。
+使用MySQL時，用戶ID可以包含擴展字元。 但是，當比較兩個字串（例如abcde和abcdè）時，它們會被視為相同。 例如，同步時，如果新用戶已添加到資料庫，則會進行比較以檢查資料庫中是否存在具有相同用戶ID的用戶。 如果在 *添加新用戶**âbcdè時，資料庫中已經存在用戶Abcdè* ，則無法區分這兩個名稱。 假定用戶已存在於資料庫中，並且新用戶被忽略且不添加。
 
 請避免建立以數字元號(#)開頭的使用者名稱。 執行任務搜索不會返回這些用戶名的結果。 (See [Working with tasks](/help/forms/using/admin-help/tasks.md#working-with-tasks).)
 
@@ -127,6 +130,7 @@ AEM表單無法區分擁有相同使用者ID和密碼但屬於不同網域的使
 
    * 按一 **[!UICONTROL 下「尋找群組]** 」並填妥搜尋資訊。
    * 若要將使用者新增至新群組，請選取該群組的核取方塊，按一下「 **[!UICONTROL 確定]**」，然後按一下「 **[!UICONTROL 儲存]**」。
+
    >[!NOTE]
    >
    >無法將本地用戶添加到目錄組。 但是，目錄用戶可以添加到本地組。
