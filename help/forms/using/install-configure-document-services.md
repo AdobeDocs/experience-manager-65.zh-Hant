@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
 workflow-type: tm+mt
 source-wordcount: '4295'
 ht-degree: 0%
@@ -25,7 +25,7 @@ AEM Forms提供一組OSGi服務，以完成不同的檔案層級作業，例如�
 
 * **Barcoded Forms服務：** 可讓您從條碼的電子影像擷取資料。 該服務接受包含一個或多個條形碼的TIFF和PDF檔案作為輸入，並提取條形碼資料。 如需詳細資訊，請參 [閱Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md)。
 
-* **DocAssurance服務：** 可讓您加密和解密檔案、以額外的使用權限擴充Adobe Reader的功能，並在檔案中新增數位簽章。 Doc Assurance服務包含三項服務： 簽名、加密和Reader擴充功能。 如需詳細資訊，請參 [閱DocAssurance Service](/help/forms/using/overview-aem-document-services.md)。
+* **DocAssurance服務：** 可讓您加密和解密檔案、以額外的使用權限擴充Adobe Reader的功能，以及在檔案中新增數位簽章。 Doc Assurance服務包含三項服務：簽名、加密和Reader擴充功能。 如需詳細資訊，請參 [閱DocAssurance Service](/help/forms/using/overview-aem-document-services.md)。
 
 * **加密服務：** 可讓您加密和解密檔案。 當文檔加密時，其內容將變得不可讀。 授權用戶可以解密文檔以獲得對其內容的訪問。 如需詳細資訊，請參 [閱加密服務](/help/forms/using/overview-aem-document-services.md#encryption-service)。
 
@@ -66,8 +66,8 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 通常，您只�
 * AEM例項的安裝路徑不包含空格。
 * AEM例項已啟動並執行。 在AEM術語中，「例項」是在作者或發佈模式下伺服器上執行的AEM復本。 通常，您只需要一個AEM例項（作者或發佈）即可執行AEM Forms檔案服務：
 
-   * **作者**: 用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
-   * **發佈**: 透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
+   * **作者**:用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
+   * **發佈**:透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
@@ -76,8 +76,8 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 通常，您只�
 
 * PDF產生器在Microsoft Windows和Linux上執行轉換所需的用戶端軟體已安裝：
 
-   * **Microsoft Windows**: 安裝 [Microsoft](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)Office或 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
-   * **Linux**: 安裝 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
+   * **Microsoft Windows**:安裝 [Microsoft](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)Office或 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
+   * **Linux**:安裝 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
 
 >[!NOTE]
 >
@@ -346,7 +346,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 通常，您只�
 
 ### （僅限Windows）禁用錯誤報告服務 {#disable-error-reporting-service}
 
-在Windows Server上使用PDF Generator服務將檔案轉換為PDF時，Windows Server偶爾會報告執行檔遇到問題，需要關閉。 但是，它不會影響PDF的轉換，因為它會在背景繼續。
+在Windows Server上使用PDF Generator服務將檔案轉換為PDF時，Windows Server偶爾會報告執行檔遇到問題，需要關閉。 但是，當PDF繼續在背景時，它不會影響其轉換。
 
 為避免收到錯誤，您可以禁用Windows錯誤報告。 有關禁用錯誤報告的詳細資訊，請參 [閱https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx)。
 
@@ -416,7 +416,6 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
 
    ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
-   sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
 
 1. （僅限AIX）將下列屬性新增至sling.properties檔案：
@@ -484,9 +483,9 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
 
 ### （僅限Windows）為PDF Generator服務設定Acrobat {#configure-acrobat-for-the-pdf-generator-service}
 
-在Microsoft Windows上，PDF Generator服務使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 請執行下列步驟，為PDF Generator服務設定Adobe Acrobat:
+在Microsoft Windows上，PDF Generator服務使用Adobe Acrobat將支援的檔案格式轉換為PDF檔案。 執行下列步驟，為PDF Generator服務設定Adobe Acrobat:
 
-1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選 **[!UICONTROL 擇自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
+1. 開啟Acrobat並選取「 **[!UICONTROL 編輯]**>偏好設 **[!UICONTROL 定]**> **[!UICONTROL 更新程式]**」。 在檢查更新中，取消選擇 **[!UICONTROL 自動安裝更新]**，然後單 **[!UICONTROL 擊確定]**。 關閉Acrobat。
 1. 連按兩下系統上的PDF檔案。 當Acrobat首次啟動時，會出現登入、歡迎畫面和EULA的對話方塊。 針對所有已設定為使用PDF產生器的使用者，關閉這些對話方塊。
 1. 執行PDF Generator公用程式批次檔案，為PDF Generator服務設定Acrobat:
 
@@ -512,7 +511,7 @@ AEM Forms附加元件套件是部署在AEM上的應用程式。 此套件包含A
 
 ### （僅限Windows）設定HTML至PDF轉換的主要路由 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF產生器服務提供多種路由，以將HTML檔案轉換為PDF檔案： Webkit、Acrobat WebCapture（僅限Windows）和PhantomJS。 Adobe建議使用PhantomJS路由，因為它可處理動態內容，而且不需要依賴32位元程式庫、32位元JDK，或不需要額外的字型。 此外，PhantomJS路由不需要sudo或root存取權來執行轉換。
+PDF產生器服務提供多種路由，以將HTML檔案轉換為PDF檔案：Webkit、Acrobat WebCapture（僅限Windows）和PhantomJS。 Adobe建議使用PhantomJS路由，因為它可處理動態內容，而且不需要依賴32位元程式庫、32位元JDK，或不需要額外的字型。 此外，PhantomJS路由不需要sudo或root存取權來執行轉換。
 
 HTML轉換至PDF的預設主要路由是Webkit。 要更改轉換路由，請執行以下操作：
 
