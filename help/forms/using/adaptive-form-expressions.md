@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2767'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 最適化表單提供最佳化和簡化的表單填寫體驗，讓使用者能使用動態指令碼功能。 它可讓您編寫運算式，以新增各種行為，例如動態顯示／隱藏欄位和面板。 它也可讓您新增計算欄位、讓欄位變成唯讀、新增驗證邏輯等。 動態行為是以使用者輸入或預先填入的資料為基礎。
 
-JavaScript是最適化表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用最適化表單指令碼模型API。 這些運算式會傳回特定類型的值。 如需最適化表單類別、事件、物件和公用API的完整清單，請參閱適 [化表單的JavaScript程式庫API參考](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html)。
+JavaScript是最適化表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用最適化表單指令碼模型API。 這些運算式會傳回特定類型的值。 如需最適化表單類別、事件、物件和公用API的完整清單，請參閱適 [化表單的JavaScript程式庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)。
 
 ## 編寫陳述式的最佳範例 {#best-practices-for-writing-expressions}
 
@@ -48,51 +48,51 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 在最適化表單中，您可以編寫運算式來新增動態顯示／隱藏欄位和面板等行為。 您也可以編寫運算式來新增計算欄位、讓欄位變成唯讀、驗證邏輯等。 最適化表單支援下列運算式：
 
-* **[存取運算式](#access-expression-enablement-expression)**: 啟用／停用欄位。
-* **[計算表達式](#calculate-expression)**: 自動計算欄位的值。
-* **[按一下運算式](#click-expression)**: 來處理按鈕的按一下事件上的操作。
-* **[初始化指令碼](#initialization-script):**對欄位的初始化執行操作。
-* **[選項運算式](#options-expression)**: 以動態填寫下拉式清單。
-* **[摘要運算式](#summary)**: 動態計算accordion的標題。
-* **[驗證運算式](#validate-expression)**: 來驗證欄位。
-* **[值提交指令碼](#value-commit-script):**變更欄位值後的表單元件。
-* **[可見度運算式](#visibility-expression)**: 以控制欄位和面板的可見度。
-* **[步驟完成運算式](#step-completion-expression)**: 以防止使用者進入精靈的下一步。
+* **[存取運算式](#access-expression-enablement-expression)**:啟用／停用欄位。
+* **[計算表達式](#calculate-expression)**:自動計算欄位的值。
+* **[按一下運算式](#click-expression)**:來處理按鈕的按一下事件上的操作。
+* **[初始化指令碼](#initialization-script):** 對欄位的初始化執行操作。
+* **[選項運算式](#options-expression)**:以動態填寫下拉式清單。
+* **[摘要運算式](#summary)**:動態計算accordion的標題。
+* **[驗證運算式](#validate-expression)**:來驗證欄位。
+* **[值提交指令碼](#value-commit-script):** 變更欄位值後的表單元件。
+* **[可見度運算式](#visibility-expression)**:以控制欄位和面板的可見度。
+* **[步驟完成運算式](#step-completion-expression)**:以防止使用者進入精靈的下一步。
 
 ### 存取運算式（啟用運算式） {#access-expression-enablement-expression}
 
 您可以使用存取運算式來啟用或停用欄位。 如果表達式使用欄位的值，則每當欄位的值更改時，都會檢索表達式。
 
-**適用於**: 欄位
+**適用於**:欄位
 
-**退貨類型**: 運算式會傳回布林值，代表欄位是啟用還是停用。 **true** 代表欄位已啟用， **false** 代表欄位已停用。
+**退貨類型**:運算式會傳回布林值，代表欄位是啟用還是停用。 **true** 代表欄位已啟用， **false** 代表欄位已停用。
 
-**範例**: 若要僅在欄位1的值設 **置為****X**&#x200B;時啟用欄位，訪問表達式為： `field1.value == "X"`
+**範例**:若要僅在欄位1的值設 **置為****X**&#x200B;時啟用欄位，訪問表達式為： `field1.value == "X"`
 
 ### 計算表達式 {#calculate-expression}
 
 計算表達式用於使用表達式自動計算欄位的值。 通常，此表達式使用其他欄位的值屬性。 For example, `field2.value + field3.value`. 每當或的值 `field2`變 `field3`更時，都會檢索表達式並重新計算值。
 
-**適用於**: 欄位
+**適用於**:欄位
 
-**退貨類型**: 運算式會傳回與顯示運算式結果的欄位相容的值（例如小數）。
+**退貨類型**:運算式會傳回與顯示運算式結果的欄位相容的值（例如小數）。
 
-**範例**: 顯示欄位1中兩個欄位之和的計 **算表達式** 為：
+**範例**:顯示欄位1中兩個欄位之和的計 **算表達式** 為：
 `field2.value + field3.value`
 
 ### 按一下運算式 {#click-expression}
 
 點按運算式可處理對按鈕點按事件所執行的動作。 GuideBridge現成可提供API來執行各種功能，例如提交、驗證與點按運算式一起使用。 如需API的完整清單，請參 [閱GuideBridge API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)。
 
-**適用於**: 按鈕欄位
+**適用於**:按鈕欄位
 
-**退貨類型**: 點按運算式不會傳回任何值。 如果任何運算式傳回值，則會忽略該值。
+**退貨類型**:點按運算式不會傳回任何值。 如果任何運算式傳回值，則會忽略該值。
 
-**範例**: 若要在按鈕的點 **按動作上填入文字方塊文字方塊1** ，請使用值 **AEM Forms**，按鈕的點按運算式為 `textbox1.value="AEM Forms"`
+**範例**:若要在按鈕的點 **按動作上填入文字方塊文字方塊1** ，請使用值 **AEM Forms**，按鈕的點按運算式為 `textbox1.value="AEM Forms"`
 
 ### 初始化指令碼 {#initialization-script}
 
-初始化指令碼在初始化自適應表單時觸發。 初始化指令碼的行為方式取決於方案：
+初始化指令碼在初始化自適應表單時被觸發。 初始化指令碼的行為方式取決於方案：
 
 * 當在沒有資料預填的情況下呈現自適應表單時，初始化指令碼會在表單初始化後執行。
 * 當以資料預填呈現最適化表格時，指令碼會在預填寫作業完成後執行。
@@ -109,11 +109,11 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 選項運算式可用來動態填入下拉式清單欄位的選項。
 
-**適用於**: 下拉式清單欄位
+**適用於**:下拉式清單欄位
 
-**退貨類型**: 選項表達式返回字串值的陣列。 每個值都可以是簡單的字串，例如 **Male**，或是key=value對格式，例如 **1=Male**
+**退貨類型**:選項表達式返回字串值的陣列。 每個值都可以是簡單的字串，例如 **Male**，或是key=value對格式，例如 **1=Male**
 
-**範例**: 要根據另一個欄位的值填充欄位的值，請提供一個簡單的選項表達式。 例如，若要根據在另一欄位中 **表示的「婚姻狀態**」填入一個欄位Number of Kids **** ，其運算式為：
+**範例**:要根據另一個欄位的值填充欄位的值，請提供一個簡單的選項表達式。 例如，若要根據在另一欄位中 **表示的「婚姻狀態**」填入一個欄位Number of Kids **** ，其運算式為：
 
 **`marital_status.value == "married" ? ["1=One", "2=two"] : ["0=Zero"]`.**
 
@@ -129,20 +129,20 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 **退貨類型：** 運算式會傳回成為accordion標題的字串。
 
-**範例：** &quot;帳號： &quot;+ textbox1.value
+**範例：** &quot;帳號：&quot;+ textbox1.value
 
 ### 驗證運算式 {#validate-expression}
 
 validate運算式可用來使用指定運算式來驗證欄位。 通常，這些運算式會使用規則運算式與欄位值來驗證欄位。 將檢索表達式，並根據欄位值的任何變化重新計算欄位的驗證狀態。
 
-**適用於**: 欄位
+**適用於**:欄位
 
-**退貨類型**: 運算式會傳回布林值，代表欄位的驗證狀態。 值 **false** 表示欄位無效， **true** 表示欄位有效。
-**範例**: 對於代表英國郵遞區號的欄位，驗證運算式為：
+**退貨類型**:運算式會傳回布林值，代表欄位的驗證狀態。 值 **false** 表示欄位無效， **true** 表示欄位有效。
+**範例**:對於代表英國郵遞區號的欄位，驗證運算式為：
 
 (**this.value** &amp;&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
 
-在上例中，如果非空值與模式不匹配，則表達式返回 **false** ，以指示欄位無效。
+在上例中，如果非空值與模式不匹配，則表達式將返回 **false** ，以指示欄位無效。
 
 >[!NOTE]
 >
@@ -170,21 +170,21 @@ Value Commit指令碼在以下情況下觸發：
 
 「可見性」運算式可用來控制欄位／面板的可見性。 通常，可見性運算式會使用欄位的值屬性，當該值變更時就會擷取。
 
-**適用於**: 欄位和面板
+**適用於**:欄位和面板
 
-**退貨類型**: 運算式會傳回布林值，表示欄位／面板是否可見。 **false** 代表欄位或面板不可見，true代表欄位或面板可見。
+**退貨類型**:運算式會傳回布林值，表示欄位／面板是否可見。 **false** 代表欄位或面板不可見，true代表欄位或面板可見。
 
-**範例**: 對於僅當field1的值設為 **Male** 時才會變為可見的面板 ****，可見性表達式為： `field1.value == "Male"`
+**範例**:對於僅當field1的值設為 **Male** 時才會變為可見的面板 ****，可見性表達式為： `field1.value == "Male"`
 
 ### 步驟完成運算式 {#step-completion-expression}
 
 步驟完成運算式可用來防止使用者進入精靈版面的下一步。 當面板具有精靈版面時，會使用這些運算式（一次顯示一個步驟的多步驟表單）。 只有當目前區段中的所有必要值都已填入且有效時，使用者才可移至下一個步驟、面板或子區段。
 
-**適用於**: 將項目版面設為精靈的面板。
+**適用於**:將項目版面設為精靈的面板。
 
-**退貨類型**: 運算式會傳回布林值，表示目前面板有效與否。 **True** 表示目前面板有效，使用者可導覽至下一個面板。
+**退貨類型**:運算式會傳回布林值，表示目前面板有效與否。 **True** 表示目前面板有效，使用者可導覽至下一個面板。
 
-**範例**: 在以各種面板組織的表單中，在導覽至下一個面板之前，會先驗證目前的面板。 在這種情況下，會使用步驟完成運算式。 通常，這些運算式會使用GuideBridge驗證API。 步驟完成運算式的範例為：
+**範例**:在以各種面板組織的表單中，在導覽至下一個面板之前，會先驗證目前的面板。 在這種情況下，會使用步驟完成運算式。 通常，這些運算式會使用GuideBridge驗證API。 步驟完成運算式的範例為：
 `window.guideBridge.validate([],this.panel.navigationContext.currentItem.somExpression)`
 
 ## 最適化表單中的驗證 {#validations-in-adaptive-form}
@@ -195,7 +195,7 @@ Value Commit指令碼在以下情況下觸發：
 
 ### 必要 {#required}
 
-要使元件成為必備元件，可在元件的「編 **輯** 」對話框中選擇選項「標題」和「文本」>「必 **要」**。 您也可以新增適當 **的必要訊息** （選用）。 .
+要使元件成為必備元件，可在元件的「編 **輯** 」對話框中選擇選項「標題」和「文本」>「必 **要」**。 您也可以新增適當 **的必要訊息** （選用）。.
 
 ### 驗證模式 {#validation-patterns}
 
@@ -203,7 +203,7 @@ Value Commit指令碼在以下情況下觸發：
 
 ### 驗證運算式 {#validation-expressions}
 
-您也可以使用不同欄位上的運算式來計算欄位的驗證。 這些運算式會寫入 **在元件「編輯** 」對話方塊的「指令碼 **」索引標籤的「驗證指令****** 碼」欄位中。 欄位的驗證狀態取決於表達式返回的值。 有關如何編寫此類表達式的資訊，請參 [閱驗證表達式](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)。
+您也可以使用不同欄位上的運算式來計算欄位的驗證。 這些運算式會寫入 **在元件「編輯** 」對話方塊的「指令碼 **」索引標籤的「驗證****** 指令碼」欄位中。 欄位的驗證狀態取決於表達式返回的值。 有關如何編寫此類表達式的資訊，請參 [閱驗證表達式](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)。
 
 ## 其他資訊 {#additional-information}
 
@@ -281,8 +281,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 建立資料夾以維護自訂圖樣。 在/apps目錄下，建立sling:folder類型的節點。 例如，建立名稱為的節點 `customPatterns`。 在此節點下，建立另一個類型的節 `nt:unstructed` 點並將其命名 `textboxpatterns`。 此節點包含您要新增的各種自訂模式。
 1. 開啟已建立節點的「屬性」頁籤。 例如，開啟的「屬性」頁籤 `textboxpatterns`。 將屬性 `guideComponentType` 新增至此節點，並將其值設 *為fd/af/components/formatter/guideTextBox*。
 
-1. 此屬性的值會根據要定義陣列的欄位而有所不同。 對於數值欄位，屬 `guideComponentType` 性的值 *為fd/af/components/formatter/guideNumericBox*。 「日期選擇器」欄位的值 *為fd/af/components/formatter/guideDatepicker*。
-&quot;
+1. 此屬性的值會根據要定義陣列的欄位而有所不同。 對於數值欄位，屬 `guideComponentType` 性的值 *為fd/af/components/formatter/guideNumericBox*。 「日期選擇器」欄位的值 *為fd/af/components/formatter/guideDatepicker*。&quot;
 1. 通過為節點分配屬性，可以添加自定義模 `textboxpatterns` 式。 新增名稱的屬性(例如 `pattern1`)，並將其值設定至您要新增的模式。 例如，新增值為 `pattern1` Fax=text{99-999-999999}的屬性。 此模式適用於您在「最適化表單」中使用的所有文字方塊。
 
    ![在CrxDe中建立欄位的自訂圖樣](assets/creating-custom-patterns.png)
