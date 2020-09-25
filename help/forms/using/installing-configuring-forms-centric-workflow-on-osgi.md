@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-企業會收集和處理來自多個表單、後端系統和其他資料來源的資料。 資料處理包括審核和核准程式、重複性工作以及資料封存。 例如，檢閱表單並將其轉換為PDF檔案。 手動完成重複性任務時，可能需要大量的時間和資源。
+企業會收集和處理來自多個表單、後端系統和其他資料來源的資料。 資料處理包括審核和核准程式、重複性工作以及資料封存。 例如，檢閱表格並將其轉換為PDF檔案。 手動完成重複性任務時，可能需要大量的時間和資源。
 
 您可以在OSGi上 [使用以表單為中心的工作流程](../../forms/using/aem-forms-workflow.md) ，快速建立以表單為主的調適性工作流程。 這些工作流程可協助您自動化審閱和核准工作流程、商業程式工作流程和其他重複性工作。 這些工作流程也有助於處理檔案（建立、組合、分發和封存PDF檔案、新增數位簽章以限制檔案存取、解碼條碼表格等），並搭配表格和檔案使用Adobe Sign簽章工作流程。
 
@@ -57,17 +57,17 @@ OSGi上的AEM Forms以表單為中心的工作流程會在AEM Forms的「作者�
 * AEM例項的安裝路徑不包含空格。
 * AEM例項已啟動並執行。 在AEM術語中，「例項」是在作者或發佈模式下伺服器上執行的AEM復本。 您至少需要一個AEM例項（作者或處理），才能在OSGi上執行以表單為中心的工作流程：
 
-   * **作者**: 用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
+   * **作者**:用於建立、上傳和編輯內容以及管理網站的AEM例項。 內容一旦準備好上線，就會複製到發佈實例。
    * **處理：** 處理例項是硬 [化的AEM Author例項](/help/forms/using/hardening-securing-aem-forms-environment.md) 。 您可以設定Author例項，並在執行安裝後加強它。
 
-   * **發佈**: 透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
+   * **發佈**:透過網際網路或內部網路為大眾提供已發佈內容的AEM例項。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
    * 15 GB的臨時空間，用於基於Microsoft Windows的安裝。
    * 6 GB的臨時空間，用於基於UNIX的安裝。
 
-* 基於UNIX的系統的額外要求： 如果您使用基於UNIX的作業系統，請從相應作業系統的安裝介質安裝以下軟體包。
+* 基於UNIX的系統的額外要求：如果您使用基於UNIX的作業系統，請從相應作業系統的安裝介質安裝以下軟體包。
 
 <table>
  <tbody>
@@ -134,8 +134,7 @@ AEM Forms有一些必備和選用的設定。 必備配置包括配置BuncyCastl
 1. 將下列屬性新增至sling.properties檔案：
 
    ```shell
-   sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
-   sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
+   sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*  
    ```
 
 1. 儲存並關閉檔案，然後啟動AEM例項。
