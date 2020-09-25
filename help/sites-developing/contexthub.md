@@ -10,7 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +39,7 @@ ContextHub會在用戶端上儲存持續的上下文資料。 ContextHub Javascr
 每個ContextHub儲存都是預定義儲存類型的實例：
 
 * ContextHub提供數種 [範例商店類型](/help/sites-developing/ch-samplestores.md)。
-* 使用AEM主控台 [建立商店](/help/sites-administering/contexthub-config.md#creating-a-contexthub-store)。
+* 使用AEM主控台 [建立商店](ch-configuring.md#creating-a-contexthub-store)。
 * 開發人員可 [以建立自訂商店類型](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)。
 * 開發人員可 [以透過Javascript存取](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) 儲存資料。
 
@@ -51,7 +54,7 @@ ContextHub工 [](/help/sites-authoring/ch-previewing.md) 具列可讓行銷人�
 每個ContextHub UI模組都是預先定義模組類型的例項：
 
 * ContextHub提供了幾 [種模組類型](/help/sites-developing/ch-samplemodules.md)。
-* 使用AEM主控台 [新增UI模組](/help/sites-administering/contexthub-config.md#adding-a-ui-module)，並 [在UI模式中分組](/help/sites-administering/contexthub-config.md#adding-a-ui-mode)。
+* 使用AEM主控台 [新增UI模組](ch-configuring.md#adding-a-ui-module)，並 [在UI模式中分組](ch-configuring.md#adding-a-ui-mode)。
 
 * 開發人員可 [以建立自訂模組類型](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)。
 
