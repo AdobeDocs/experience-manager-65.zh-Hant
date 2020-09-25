@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '2202'
 ht-degree: 0%
@@ -72,8 +72,8 @@ ht-degree: 0%
 
 若要這麼做，您必須指定要將Adobe Target雲端設定與下列項目連接的A4T雲端設定：
 
-1. 透過 **AEM logo** > **Deployment** Tools **> Cloud Services，導覽至「AEM Cloud Services」(AEM logo** > **部署工具> Cloud****** Services)。
-1. 在「 **Adobe Target** 」區段中，按一 **下「立即設定」**。
+1. 透過 **AEM logo** > **Deployment** Tools **> Cloud Services**********，導覽至Cloud Services。
+1. 在「 **Adobe Target」區段中** ，按一下「 **立即設定」**。
 1. 重新連線至您的Adobe Target設定。
 1. 在 **A4T Analytics Cloud設定下拉式選單中** ，選取架構。
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-   按一下 **確定**。 當您使用Adobe Target定位內容時，可以選 [取報表來源](/help/sites-authoring/content-targeting-touch.md)。
+   按一下&#x200B;**「確定」**。當您使用Adobe Target定位內容時，可以選 [取報表來源](/help/sites-authoring/content-targeting-touch.md)。
 
 ## Manually Integrating with Adobe Target {#manually-integrating-with-adobe-target}
 
@@ -117,11 +117,11 @@ AT.js提供多項mbox.js程式庫的改進：
 
 請依照下列步驟，在AEM中建立Target雲端設定：
 
-1. 透過 **AEM logo** > **Deployment** Tools **> Cloud Services，導覽至「AEM Cloud Services」(AEM logo** > **部署工具> Cloud****** Services)。 ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. 透過 **AEM logo** > **Deployment** Tools **> Cloud Services**********，導覽至Cloud Services。 ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
    隨即 **會開啟Adobe Marketing Cloud** 總覽頁面。
 
-1. 在「 **Adobe Target** 」區段中，按一 **下「立即設定」**。
+1. 在「 **Adobe Target」區段中** ，按一下「 **立即設定」**。
 1. 在「建立 **配置** 」對話框中：
 
    1. 為配置指定 **標題**。
@@ -142,18 +142,18 @@ AT.js提供多項mbox.js程式庫的改進：
 
 1. 在對話框中，提供這些屬性的值。
 
-   * **用戶端代碼**: 目標帳戶用戶端代碼
-   * **電子郵件**: 目標帳戶電子郵件。
-   * **密碼**: 目標帳戶密碼。
-   * **API類型**: REST或XML
-   * **A4T Analytics雲端設定**: 選取用於目標活動目標和度量的Analytics雲端設定。 如果您在定位內容時使用Adobe Analytics做為報告來源，則需要此功能。 如果您看不到雲端設定，請參閱「設定 [A4T Analytics雲端設定」中的附註](#configuring-a-t-analytics-cloud-configuration)。
+   * **用戶端代碼**:目標帳戶用戶端代碼
+   * **電子郵件**:目標帳戶電子郵件。
+   * **密碼**:目標帳戶密碼。
+   * **API類型**:REST或XML
+   * **A4T Analytics雲端設定**:選取用於目標活動目標和度量的Analytics雲端設定。 如果您在定位內容時使用Adobe Analytics做為報告來源，則需要此功能。 如果您看不到雲端設定，請參閱「設定 [A4T Analytics雲端設定」中的附註](#configuring-a-t-analytics-cloud-configuration)。
 
    * **使用精確的定位：** 預設情況下，此複選框處於選中狀態。 如果選取此選項，雲端服務設定會等待載入內容後再載入內容。 請參閱以下附註。
    * **從Adobe Target同步區段：** 選取這個選項可下載在Target中定義的區段，以便在AEM中使用。 當「API類型」屬性為REST時，您必須選取此選項，因為不支援內嵌區段，而且您一律需要使用Target中的區段。 （請注意，「區段」的AEM詞語等同於「目標對象」。）
    * **用戶端程式庫：** 選取您要mbox.js或AT.js用戶端程式庫。
    * **使用DTM來傳送用戶端程式庫** -選取此選項，以使用DTM或其他標籤管理系統的AT.js或mbox.js。 您必須 [設定DTM整合](/help/sites-administering/dtm.md) ，才能使用此選項。 Adobe建議您使用DTM而非AEM來傳送程式庫。
-   * **自訂mbox.js**: 如果您勾選DTM方塊或使用預設mbox.js，請留空。 或者，上傳您的自訂mbox.js。 只有在您選取了mbox.js時才會顯示。
-   * **自訂AT.js**: 如果您勾選DTM方塊或使用預設AT.js，請留空。 或者，上傳您的自訂AT.js。 只有在您選取了AT.js時才會顯示。
+   * **自訂mbox.js**:如果您勾選DTM方塊或使用預設mbox.js，請留空。 或者，上傳您的自訂mbox.js。 只有在您選取了mbox.js時才會顯示。
+   * **自訂AT.js**:如果您勾選DTM方塊或使用預設AT.js，請留空。 或者，上傳您的自訂AT.js。 只有在您選取了AT.js時才會顯示。
 
    >[!NOTE]
    在您選擇加入Adobe Target設定精靈時，預設會啟用「精確定位」。
@@ -167,7 +167,7 @@ AT.js提供多項mbox.js程式庫的改進：
 
 ### 新增Target架構 {#adding-a-target-framework}
 
-設定Target雲端設定後，請新增Target架構。 此架構可識別從可用的 [Client Context](/help/sites-administering/client-context.md) 或 [ContextHub元件傳送至Adobe Target的預設參](/help/sites-administering/contexthub-config.md) 數。 Target會使用參數來決定套用至目前上下文的區段。
+設定Target雲端設定後，請新增Target架構。 此架構可識別從可用的 [Client Context](/help/sites-administering/client-context.md) 或 [ContextHub元件傳送至Adobe Target的預設參](/help/sites-developing/ch-configuring.md) 數。 Target會使用參數來決定套用至目前上下文的區段。
 
 您可以為單一Target設定建立多個架構。 當您需要針對網站的不同區段傳送不同的參數集至Target時，多個架構非常實用。 為需要傳送的每組參數建立架構。 將網站的每個區段與適當的架構建立關聯。 請注意，網頁一次只能使用一個架構。
 
@@ -176,7 +176,7 @@ AT.js提供多項mbox.js程式庫的改進：
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-   框架頁面隨即開啟。 Sidekick提供代表您可映射之 [Client Context](/help/sites-administering/client-context.md)[或ContextHub](/help/sites-administering/contexthub-config.md) 資訊的元件。
+   框架頁面隨即開啟。 Sidekick提供代表您可映射之 [Client Context](/help/sites-administering/client-context.md)[或ContextHub](/help/sites-developing/ch-configuring.md) 資訊的元件。
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
@@ -208,7 +208,7 @@ AT.js提供多項mbox.js程式庫的改進：
 
 * If the **xt_only** options is **not** enabled on the Adobe Target tenant (clientcode), then you can create **both** XT and A/B activities in AEM.
 
-**其他附註：** **xt_only** options是套用在特定Target租用戶(clientcode)上的設定，只能在Adobe Target中直接修改。 您無法在AEM中啟用或停用此選項。
+**其他附註：****xt_only** options是套用在特定Target租用戶(clientcode)上的設定，只能在Adobe Target中直接修改。 您無法在AEM中啟用或停用此選項。
 
 ### 將Target架構與您的網站建立關聯 {#associating-the-target-framework-with-your-site}
 
