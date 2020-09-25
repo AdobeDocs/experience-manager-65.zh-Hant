@@ -1,6 +1,6 @@
 ---
-title: 使用ContextHub資料預覽頁面
-seo-title: 使用ContextHub資料預覽頁面
+title: 使用 ContextHub 資料預覽頁面
+seo-title: 使用 ContextHub 資料預覽頁面
 description: ContextHub工具列顯示來自ContextHub商店的資料，並讓您變更商店資料，對於預覽內容非常有用
 seo-description: ContextHub工具列顯示來自ContextHub商店的資料，並讓您變更商店資料，對於預覽內容非常有用
 uuid: 0150555a-0a92-4692-a706-bbe59fd34d6a
@@ -10,12 +10,15 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
 
-# 使用ContextHub資料預覽頁面{#previewing-pages-using-contexthub-data}
+# 使用 ContextHub 資料預覽頁面{#previewing-pages-using-contexthub-data}
 
 ContextHub工 [具列顯示](/help/sites-developing/contexthub.md) ContextHub儲存區的資料，並讓您變更儲存區資料。 ContextHub工具列對於預覽由ContextHub商店中的資料所決定的內容非常有用。
 
@@ -24,7 +27,7 @@ ContextHub工 [具列顯示](/help/sites-developing/contexthub.md) ContextHub儲
 * UI模式是顯示在工具列左側的圖示。 當您按一下或點選圖示時，工具列會顯示其包含的UI模組。
 * UI模組顯示來自一個或多個ContextHub儲存的資料。 部分UI模組也可讓您控制儲存資料。
 
-ContextHub會安裝數種UI模式和UI模組。 您的管理員可能已 [設定ContextHub](/help/sites-administering/contexthub-config.md) ，以顯示不同的ContextHub。
+ContextHub會安裝數種UI模式和UI模組。 您的管理員可能已 [設定ContextHub](/help/sites-developing/ch-configuring.md) ，以顯示不同的ContextHub。
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 
