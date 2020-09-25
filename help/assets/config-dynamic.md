@@ -10,7 +10,7 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '7912'
 ht-degree: 1%
@@ -140,13 +140,13 @@ ht-degree: 1%
 
 ## 啟用動態媒體 {#enabling-dynamic-media}
 
-[動態媒體](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) ，預設為停用。 若要運用動態媒體功能，您必須使用執行模式(例如 `dynamicmedia` 執行模式)來啟用動態 `publish` 媒體。 在啟用之前，請務必檢閱技 [術需求。](/help/sites-deploying/technical-requirements.md#dynamicmediaaddonprerequisites)
+[動態媒體](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) ，預設為停用。 若要運用動態媒體功能，您必須使用執行模式(例如 `dynamicmedia` 執行模式)來啟用動態 `publish` 媒體。 在啟用之前，請務必檢閱技 [術需求。](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)
 
 >[!NOTE]
 >
 >透過執行模式啟用動態媒體會取代AEM 6.1和AEM 6.0中的功能，您可透過將標幟設定為 `dynamicMediaEnabled`**[!UICONTROL true來啟用動態媒體。]** 此標幟在AEM 6.2和更新版本中沒有功能。 此外，您不需要重新啟動快速入門，就能啟用動態媒體。
 
-透過啟用動態媒體，動態媒體功能將可在UI中使用，而且每個上傳的影像資產都會收到 *cqdam.pyramid.tiff* 轉譯，用於快速傳送動態影像轉譯。 這些PTIFF具有顯著的優點，包括(1)僅能管理單一主要來源影像，並即時產生無限轉譯，毋需額外儲存空間，以及(2)可使用互動式視覺化功能，例如縮放、平移、回轉等。
+透過啟用動態媒體，動態媒體功能將可在UI中使用，而且每個上傳的影像資產都會收到 *cqdam.pyramid.tiff* 轉譯，用於快速傳送動態影像轉譯。 這些PTIFF具有顯著的優點，包括(1)僅能管理單一主要來源影像，並即時產生無限轉譯，毋需額外儲存空間，以及(2)能夠使用互動式視覺效果，例如縮放、平移、回轉等。
 
 如果您想在AEM中使用Dynamic Media Classic(Scene7)，除非您使用特定藍本，否則不應啟用「動態 [媒體」](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。 除非您透過執行模式啟用動態媒體，否則動態媒體會停用。
 
@@ -174,14 +174,14 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >若要疑難排解動態媒體的問題，請參閱目錄中的下列記 `crx-quickstart/logs/` 錄檔：
+   >若要疑難排解Dynamic Media的問題，請參閱目錄中的下列記 `crx-quickstart/logs/` 錄檔：
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer日誌提供用於分析內部ImageServer進程行為的統計和分析資訊。
 
    影像伺服器記錄檔名的範例： `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access記錄透過和記錄對Dynamic Media提出的每個 `/is/image` 請求 `/is/content`。
 
-   這些記錄檔僅在啟用動態媒體時使用。 它們不包含在從頁 **面產生的Download Full** `system/console/status-Bundlelist` Package中； 如果您有動態媒體問題，請在呼叫客戶支援時，將這兩個記錄檔附加至問題。
+   這些記錄檔僅在啟用動態媒體時使用。 它們不包含在從頁 **面產生的Download Full** `system/console/status-Bundlelist` Package中；如果您有動態媒體問題，請在呼叫客戶支援時，將這兩個記錄檔附加至問題。
 
 ### 如果您將AEM安裝至不同的連接埠或內容路徑…… {#if-you-installed-aem-to-a-different-port-or-context-path}
 
@@ -193,7 +193,7 @@ ht-degree: 1%
 
 在AEM中：
 
-* 外 **部化器中** 的自 [我網域](/help/sites-developing/externalizer.md) ，用於擷取埠號和內容路徑。
+* 外 **部化器** 中的自 [](/help/sites-developing/externalizer.md) 我網域用來擷取埠號和內容路徑。
 * 如果未 **配置自** 體域，則從Jetty HTTP服務檢索埠號和上下文路徑。
 
 在AEM QuickStart WAR部署中，無法衍生連接埠號碼和內容路徑，因此您必須設定 **自我** 網域。 請參 [閱外部化說明文](/help/sites-developing/externalizer.md) 件，瞭解如何設 **定self** 網域。
@@ -227,7 +227,7 @@ ht-degree: 1%
 
 如果您要將AEM Dynamic Media從6.3升級至6.5（現在包含零停機部署的功能），您必須執行下列curl命令，才能將所有預設集和組態從CRXDE `/etc` Lite移轉 `/conf` 至CRXDE Lite。
 
-**注意**: 如果您以相容模式執行AEM例項，即您已安裝相容性套件，則不需要執行這些命令。
+**注意**:如果您以相容模式執行AEM例項（即，您已安裝相容性套件），就不需要執行這些命令。
 
 對於所有升級，不論是否有相容性套件，您都可以執行下列Linux curl命令，複製Dynamic Media原本隨附的預設立即可用檢視器預設集：
 
@@ -281,7 +281,7 @@ ht-degree: 1%
 
 1. 在「編 **[!UICONTROL 輯用戶設定：動態媒體複製]** 」頁面上，展開「從KeyStore檔案添加專用密鑰 **** 」區域並添加以下內容（請參見以下影像）:
 
-   * 在「 **[!UICONTROL 新別名]** 」欄位中，輸入稍後在複製配置中使用的別名的名稱； 例如， `replication`。
+   * 在「 **[!UICONTROL 新別名]** 」欄位中，輸入稍後在複製配置中使用的別名的名稱；例如， `replication`。
    * 點選「 **[!UICONTROL KeyStore檔案」。]** 導覽至Adobe提供給您的KeyStore檔案，選取它，然後點選「開 **[!UICONTROL 啟」。]**
    * 在「KeyStore檔 **[!UICONTROL 案密碼」欄位中]** ，輸入「KeyStore檔案密碼」。 這不是 **您在步驟** 5中建立的KeyStore密碼，而是Adobe在布建期間傳送給您的歡迎電子郵件中提供的KeyStore檔案密碼。 如果您未收到KeyStore檔案密碼，請聯絡Adobe客戶服務。
    * 在「私 **[!UICONTROL 密金鑰密碼]** 」欄位中，輸入私密金鑰密碼（可能與前一步驟中提供的私鑰密碼相同）。 Adobe會在布建期間傳送給您的歡迎電子郵件中提供私密金鑰密碼。 如果您未收到私密金鑰密碼，請聯絡Adobe客戶服務。
@@ -301,9 +301,9 @@ ht-degree: 1%
 1. 點選「 **[!UICONTROL 設定]** 」標籤，然後輸入下列：
 
    * **[!UICONTROL 啟用]** -選中此複選框可啟用複製代理。
-   * **[!UICONTROL 地區]** -設為適當的地區： 北美、歐洲或亞洲
+   * **[!UICONTROL 地區]** -設為適當的地區：北美、歐洲或亞洲
    * **[!UICONTROL 租用戶ID]** —— 此值是您發佈至複製服務的公司／租用戶的名稱。 此值是Adobe在布建期間傳送給您的歡迎電子郵件中提供的租用戶ID。 如果您未收到此訊息，請聯絡Adobe客戶服務。
-   * **[!UICONTROL 密鑰儲存別名]** -該值與在設定身份驗證中生成密鑰時設定的**新別名** [值相同](#setting-up-authentication); 例如， `replication`。 (請參閱設定驗 [證的步驟](#setting-up-authentication)7)。
+   * **[!UICONTROL 密鑰儲存別名]** -此值與在設定身份驗證中生成密鑰時設定的**新別名** [值相同](#setting-up-authentication);例如， `replication`。 (請參閱設定驗 [證的步驟](#setting-up-authentication)7)。
    * **[!UICONTROL Key Store Password]** —— 這是您點選「Create KeyStore」時建立的KeyStore **[!UICONTROL 密碼。]** Adobe不提供此密碼。 請參閱設定驗 [證的步驟5](#setting-up-authentication)。
 
    下圖顯示了具有示例資料的複製代理：
@@ -343,7 +343,7 @@ Replication test succeeded
 
 在設定驗證時，以下是您在其解決方案中可能遇到的一些問題。 在選中這些選項之前，請確保已設定複製。
 
-#### 問題： HTTP狀態碼401含訊息——需要授權 {#problem-http-status-code-with-message-authorization-required}
+#### 問題：HTTP狀態碼401含訊息——需要授權 {#problem-http-status-code-with-message-authorization-required}
 
 此問題可能是由於無法為用戶設定KeyStore所導致 `dynamic-media-replication` 的。
 
@@ -366,9 +366,9 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**解決方案**: 檢查是否 `KeyStore` 已將 **保存到動態媒體複製用戶** ，並提供了正確的密碼。
+**解決方案**:檢查是否 `KeyStore` 已將 **保存到動態媒體複製用戶** ，並提供了正確的密碼。
 
-#### 問題： 無法解密密鑰——無法解密資料 {#problem-could-not-decrypt-key-could-not-decrypt-data}
+#### 問題：無法解密密鑰——無法解密資料 {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
 ```xml
 Replication test to s7delivery:https://<localhost>:8580/is-publish/
@@ -382,9 +382,9 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 17.06.2016 19:00:16 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1466215216662, userId='admin', revision='null'}. java.lang.SecurityException: java.security.UnrecoverableKeyException: Could not decrypt key: Could not decrypt data.
 ```
 
-**解決方案**: 檢查密碼。 保存在複製代理中的密碼與用於建立密鑰庫的密碼不同。
+**解決方案**:檢查密碼。 保存在複製代理中的密碼與用於建立密鑰庫的密碼不同。
 
-#### 問題： InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
+#### 問題：InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
 
 此問題是由AEM Author例項中的設定錯誤所造成。 作者上的Java進程未獲得正確的資訊 `javax.net.ssl.trustStore`。 在複製日誌中看到以下錯誤：
 
@@ -402,9 +402,9 @@ java.io.IOException: Failed to execute request 'https://replicate-na.assetsadobe
         at com.scene7.is.catalog.service.publish.atomic.PublishingServiceHttp.executePost(PublishingServiceHttp.scala:195)
 ```
 
-**解決方案**: 請確定AEM Author上的java進程已將系統屬性設 `-Djavax.net.ssl.trustStore=` 定為有效的信任庫。
+**解決方案**:請確定AEM Author上的java進程已將系統屬性設 `-Djavax.net.ssl.trustStore=` 定為有效的信任庫。
 
-#### 問題： KeyStore未設定或未初始化 {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
+#### 問題：KeyStore未設定或未初始化 {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
 
 此問題可能是由Hot Fix，或功能套件覆寫動態媒體使用者或金鑰庫節點所造成。
 
@@ -425,7 +425,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 1. 定位至「用戶管理」頁：
    `localhost:4502/libs/granite/security/content/useradmin.html`
 1. 在「使用者管理」頁面上，導覽至使 `dynamic-media-replication` 用者，然後點選以開啟。
-1. 按一下「 **[!UICONTROL KeyStore]** 」標籤。 如果出 **[!UICONTROL 現「Create KeyStore]** 」按鈕，則需要重做「Setting up Authentication arel [(以前設定驗證](#setting-up-authentication) )」下的步驟。
+1. Click the **[!UICONTROL KeyStore]** tab. 如果出 **[!UICONTROL 現「Create KeyStore]** 」按鈕，則需要重做「Setting up Authentication arel [(以前設定驗證](#setting-up-authentication) )」下的步驟。
 1. 如果必須重做KeyStore設定，則可能還需要 [再次配置複製代理](/help/assets/config-dynamic.md#configuring-the-replication-agent) 。
 
    重新配置s7delivery Replication Agent。
@@ -433,7 +433,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. 點選 **[!UICONTROL 測試連線]** ，以驗證設定是否有效。
 
-#### 問題： 發佈代理使用SSL而非OAuth {#problem-publish-agent-is-using-ssl-instead-of-oauth}
+#### 問題：發佈代理使用SSL而非OAuth {#problem-publish-agent-is-using-ssl-instead-of-oauth}
 
 此問題可能是由Hot Fix或無法正確安裝或覆寫設定的功能套件所造成。
 
@@ -505,7 +505,7 @@ Dynamic Media Cloud服務支援雲端服務，例如混合發佈和傳送影像�
 1. 如果您要設定視訊的動態媒體，
 
    * 在「注 **[!UICONTROL 冊ID」欄位]** ，輸入您的註冊ID。
-   * 在「視 **[!UICONTROL 訊服務URL ]**」欄位中，輸入動態媒體閘道的視訊服務URL。
+   * 在「視 **[!UICONTROL 訊服務URL]** 」欄位中，輸入動態媒體閘道的視訊服務URL。
 
 1. 如果您要設定Dynamic Media以進行影像處理，請在「 **[!UICONTROL Image Service URL]** 」（影像服務URL）欄位中，輸入Dynamic Media閘道的影像服務URL。
 1. 點選「 **[!UICONTROL 儲存]** 」可返回「動態媒體設定瀏覽器」頁面。
@@ -633,7 +633,7 @@ AEM 6.4及更新版本將此預設集儲存在 `/conf/global/settings/dam/dm/pre
 如需詳 [細資訊，請參閱Publishing Viewer](/help/assets/managing-viewer-presets.md#publishing-viewer-presets) Presets。
 
 >[!NOTE]
-By default, the system shows a variety of renditions when you select **[!UICONTROL Renditions]** and a variety of viewer presets when you select **[!UICONTROL Viewers]** in the asset&#39;s detail view. 您可以增加或減少顯示的數目。 See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+By default, the system shows a variety of renditions when you select **[!UICONTROL Renditions]** and a variety of viewer presets when you select **[!UICONTROL Viewers]** in the asset&#39;s detail view. 您可以增加或減少顯示的數目。 See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 ## 篩選複製資產 {#filtering-assets-for-replication}
 
@@ -874,7 +874,7 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
    | **屬性** | **預設值** | **說明** |
    |---|---|---|
    | 已啟用快取 | 已核取 | 是否啟用響應快取。 |
-   | 快取根 | 快取 | 指向響應快取資料夾的一個或多個路徑。 相對路徑會針對內部s7imaging bundle資料夾進行解析。 |
+   | 快取根 | 快取 | 到響應快取資料夾的一個或多個路徑。 相對路徑會針對內部s7imaging bundle資料夾進行解析。 |
    | 快取最大大小 | 200000000 | 響應快取的最大大小（以位元組為單位）。 |
    | 快取最大登入次數 | 100000 | 快取中允許的最大條目數。 |
 
@@ -928,7 +928,7 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
   <tr>
    <td>jpegquality</td>
    <td>80</td>
-   <td><p>預設JPEG編碼屬性。 指定JPEG回覆影像的預設屬性。</p> <p>整數和標幟，以逗號分隔。 第一個值在1.100範圍內，並定義品質。 第二個值可以是0表示正常行為，或者1表示禁用JPEG編碼器通常採用的RGB色度下採樣。</p> <p>另請參 <a href="https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/image_catalog/r_jpegquality.html">閱「影像伺服</a> API」中的JpegQuality。</p> </td>
+   <td><p>預設JPEG編碼屬性。 指定JPEG回覆影像的預設屬性。</p> <p>整數和標幟，以逗號分隔。 第一個值在1.100範圍內，並定義品質。 第二個值可以是0表示正常行為，或者1表示禁用JPEG編碼器通常採用的RGB色度下採樣。</p> <p>另請參 <a href="https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/image_catalog/r_jpegquality.html">閱「影像服務</a> API」中的JpegQuality。</p> </td>
   </tr>
   <tr>
    <td>maxpix</td>
@@ -948,7 +948,7 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
   <tr>
    <td>thumbnaitime</td>
    <td>1%,11%,21%,31%,41%,51%,61%,71%,81%,91%</td>
-   <td>這些值代表視訊播放時間的快照，並會傳遞 <a href="https://encoding.com/">至encoding.com</a>。 如需詳 <a href="/help/assets/video.md#aboutvideothumbnails">細資訊，請參閱</a> 「關於視訊縮圖」。</td>
+   <td>這些值代表視訊播放時間的快照，並會傳遞 <a href="https://encoding.com/">至encoding.com</a>。 如需詳 <a href="/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode">細資訊，請參閱</a> 「關於視訊縮圖」。</td>
   </tr>
  </tbody>
 </table>
@@ -990,7 +990,7 @@ Adobe色彩管理使用ICC描述檔，這是由國際色彩協會(ICC)定義的�
 
 **若要設定預設色彩描述檔**
 
-1. 在「工 **[!UICONTROL 具>一般> CRXDE Lite]**」中，導覽 `/conf/global/settings/dam/dm/imageserver/jcr:content` 至包含預設Adobe色彩描述檔。
+1. 在「工 **[!UICONTROL 具>一般> CRXDE Lite]**」中，導覽至 `/conf/global/settings/dam/dm/imageserver/jcr:content` 其中包含預設的Adobe色彩描述檔。
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
