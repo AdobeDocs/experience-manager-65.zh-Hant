@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -72,11 +72,11 @@ Both the aspect ratio and keyword criteria apply to panoramic assets for the ass
 
 如果您將影像放入WCM的Panoramic Media元件中，而元件預留位置已收合，您可能會想要疑難排解下列問題：
 
-* 如果您遇到403 Forbidden錯誤，可能是由於要求的影像大小過大所致。 檢閱「設 **[!UICONTROL 定動態媒體經典]** (Scene7)」 [中的「回覆影像大小限制」設定](/help/assets/panoramic-images.md#configuring%20dynamic%20media%20classic%20(scene7))。
+* 如果您遇到403 Forbidden錯誤，可能是由於要求的影像大小過大所致。 檢閱「設 **[!UICONTROL 定動態媒體經典]** (Scene7)」 [中的「回覆影像大小限制」設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)。
 
 * 對於頁面上顯示的資產上的「無效鎖定」或「剖析錯誤」，請勾選「請求模糊化模式」和「請求鎖定模式」，以確保它們已停用。
 * 對於受污染的畫布錯誤，請為影像資產的先前請求設定規則集定義檔案路徑並使CTN無效。
-* 如果影像要求的大小超過支援的限制，影像品質變得非常低，請檢查 **** JPEG編碼屬性>品質設定是否不為空。 「品質」( **[!UICONTROL Quality]** )欄位的典型設定為 `95`。 您可以在「影像伺服器發佈」頁面上找到設定。 若要存取頁面，請參 [閱設定動態媒體經典(Scene7)](/help/assets/panoramic-images.md#configuring%20dynamic%20media%20classic%20(scene7))。
+* 如果影像要求的大小超過支援的限制，影像品質變得非常低，請檢查 **** JPEG編碼屬性>品質設定是否不為空。 「品質」( **[!UICONTROL Quality]** )欄位的典型設定為 `95`。 您可以在「影像伺服器發佈」頁面上找到設定。 若要存取頁面，請參 [閱設定動態媒體經典(Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)。
 
 ## 預覽全景影像 {#previewing-panoramic-images}
 
