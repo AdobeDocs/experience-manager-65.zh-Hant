@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # 360/VR Video {#vr-video}
 
-360度影片可同時錄制每個方向的檢視。 它們是使用全方位的相機或一組相機拍攝的。 在平面顯示器上播放時，用戶可以控制視角； 在行動裝置上播放時，通常會運用其內建的陀螺控制項。
+360度影片可同時錄制每個方向的檢視。 它們是使用全方位的相機或一組相機拍攝的。 在平面顯示器上播放時，用戶可以控制視角；在行動裝置上播放時，通常會運用其內建的陀螺控制項。
 
 動態媒體- Scene7模式包含傳送360個視訊資產的原生支援。 依預設，檢視或播放不需要其他設定。 您可使用標準的視訊副檔名（例如。mp4、.mkv和。mov）來傳送360視訊。 最常見的轉碼器是H.264。
 
 本節說明如何與360/VR視訊檢視器搭配使用，以產生等長形視訊，提供身歷其境的房間、財產、位置、風景、醫療程式等觀賞體驗。
 
-目前不支援空間音訊； 如果音訊混合在立體聲中，則餘額(L/R)不會隨著客戶變更相機視角而改變。
+目前不支援空間音訊；如果音訊混合在立體聲中，則餘額(L/R)不會隨著客戶變更相機視角而改變。
 
 另請參閱「 [管理檢視器預設集」](/help/assets/managing-viewer-presets.md)。
 
@@ -62,25 +62,25 @@ ht-degree: 0%
       * 2160p - 3840 x 2160，稱為4K、UHD或Ultra HD解析度。 這種超大的顯示解析度，最常出現在優質的電視機和電腦螢幕上。 2160p的解析度通常稱為「4K」，因為寬度接近4000像素。 換言之，它提供1080p像素的4倍。
    * [建立具有更高品質轉譯的自訂最適化視訊設定檔](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) 。 例如，您可能想要建立包含下列三種設定的最適化視訊描述檔：
 
-      * width=auto; height=720; 位元速率=2500 kbps
-      * width=auto; height=1080; 位元速率=5000 kbps
-      * width=auto; height=1440; 位元速率=6600 kbps
+      * width=auto;height=720;位元速率=2500 kbps
+      * width=auto;height=1080;位元速率=5000 kbps
+      * width=auto;height=1440;位元速率=6600 kbps
    * 在專屬於360個視訊資產的資料夾中處理360個視訊內容。
 
    請注意，此方法也會對使用者的網路和CPU提出更高的需求。
 
-1. [將視訊上傳至資料夾](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
+1. [將視訊上傳至資料夾](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
 ## 覆寫360個視訊的預設外觀比例  {#overriding-the-default-aspect-ratio-of-videos}
 
 若要將已上傳的資產視為您要搭配360視訊檢視器使用的360視訊，資產的外觀比例必須為2。
 
-依預設，如果視訊的長寬比（寬／高）為2.0,AEM會將視訊偵測為「360」。 如果您是管理員，則可以在CRXDE Lite中設定選用屬性，以下列位置覆寫預設外觀 `s7video360AR` 比例設定2:
+依預設，如果視訊的長寬比（寬／高）為2.0,AEM會將視訊偵測為「360」。如果您是管理員，則可以在CRXDE Lite中設定選用屬性，以下列位置覆寫預設外觀 `s7video360AR` 比例設定2:
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **屬性類型**: Double
-   * **值**: 浮點外觀比例，預設為2.0。
+   * **屬性類型**:Double
+   * **值**:浮點外觀比例，預設為2.0。
 
 設定此屬性後，它會立即對現有視訊和新上傳的視訊生效。
 
@@ -115,7 +115,7 @@ See [Adding Dynamic Media Assets to pages.](https://helpx.adobe.com/experience-m
    從「檢視器」清單中，點選 **[!UICONTROL Video360_social]**，然後執行下列其中一項作業：
 
    * 將滑鼠指標拖曳至視訊上，以變更靜態場景的檢視角度。
-   * 點選影片的「播 **[!UICONTROL 放]** 」按鈕開始播放； 當視訊播放時，拖曳滑鼠指標至視訊上，以改變您的檢視角度。
+   * 點選影片的「播 **[!UICONTROL 放]** 」按鈕開始播放；當視訊播放時，拖曳滑鼠指標至視訊上，以改變您的檢視角度。
 
    ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360視訊螢幕擷取。*
 
