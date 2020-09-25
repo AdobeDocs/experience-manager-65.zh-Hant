@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '3707'
 ht-degree: 15%
@@ -372,7 +372,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 
 您可以將視訊描述檔套用至特定資料夾，或全域套用至所有資產。
 
-您可以重新處理已有現有視訊設定檔的資料夾中的資產，您稍後會加以變更。 請參 [閱編輯資料夾的處理設定檔後，重新處理資產](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)。
+您可以重新處理已有現有視訊設定檔的資料夾中的資產，您稍後會加以變更。 請參 [閱編輯資料夾的處理設定檔後，重新處理資產](processing-profiles.md#reprocessing-assets)。
 
 ### 將視訊描述檔套用至特定資料夾 {#applying-video-profiles-to-specific-folders}
 
@@ -380,7 +380,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
-另請參閱 [編輯資料夾的處理設定檔後重新處理資產](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)。
+另請參閱 [編輯資料夾的處理設定檔後重新處理資產](processing-profiles.md#reprocessing-assets)。
 
 #### 透過描述檔使用者介面，將視訊描述檔套用至資料夾 {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
@@ -401,7 +401,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 
 除了將描述檔套用至檔案夾外，您也可以全域套用一個，如此任何檔案夾中上傳至AEM資產的內容都會套用選取的描述檔。
 
-另請參閱 [編輯資料夾的處理設定檔後重新處理資產](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)。
+另請參閱 [編輯資料夾的處理設定檔後重新處理資產](processing-profiles.md#reprocessing-assets)。
 
 **若要全域套用視訊設定檔**,
 
