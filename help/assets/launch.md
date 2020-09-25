@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '6623'
 ht-degree: 17%
@@ -133,13 +133,13 @@ Adobe Launch中的下列範例設定示範如何在檢視器載入時追蹤資�
 
 ## 使用動態媒體檢視器擴充功能 {#using-the-dynamic-media-viewers-extension}
 
-如整合的 [使用案例中所述](#use%20cases%20for%20the%20integration)，您可在AEM Sites中使用新的Adobe Launch整合，以及使用內嵌代碼來追蹤動態媒體檢視器。
+如整合的 [使用案例中所述](#use-cases-for-the-integration)，您可在AEM Sites中使用新的Adobe Launch整合，以及使用內嵌代碼來追蹤動態媒體檢視器。
 
 ### 追蹤AEM Sites中的動態媒體檢視器 {#tracking-dynamic-media-viewers-in-aem-sites}
 
 若要追蹤AEM Sites中的「動態媒體」檢視器，必須執行「設定所 [有整合項目](#configuring-all-the-integration-pieces) 」區段下列出的所有步驟。 具體而言，您必須建立IMS設定和Adobe Launch Cloud設定。
 
-在正確設定後，您使用動態媒體支援的WCM元件新增至「網站」頁面的任何動態媒體檢視器，都會自動追蹤資料至Adobe Analytics、Adobe Analytics for Video，或兩者皆有。
+在正確設定後，您使用動態媒體支援的WCM元件新增至「網站」頁面的任何動態媒體檢視器，都會自動追蹤資料至Adobe Analytics、Adobe Analytics for Video，或兩者。
 
 <!-- To be reviewed and updated:
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
@@ -149,7 +149,7 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 未使用AEM Sites或將Dynamic Media檢視器內嵌至AEM Sites以外網頁（或兩者皆未使用）的客戶，仍可使用Adobe Launch整合。
 
-您必須完成「設定Adobe Analytics」和「 [設定Adobe Launch](#configuringadobeanalytics)[」區段的設定步驟](#configuringadobelaunch) 。不過，不需要AEM相關的設定步驟。
+您必須完成「設定Adobe Analytics」和「 [設定Adobe Launch](#configuring-adobe-analytics-for-the-integration)[」區段的設定步驟](#configuring-adobe-launch-for-the-integration) 。不過，不需要AEM相關的設定步驟。
 
 在正確設定後，您可以使用Dynamic Media檢視器將Adobe Launch支援新增至網頁。
 
@@ -162,7 +162,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 **若要使用內嵌程式碼追蹤動態媒體檢視器**:
 
 1. 讓網頁準備好嵌入動態媒體檢視器。
-1. 先登入Adobe Launch，以取得Adobe Launch程式庫的內嵌代碼(請參 [閱設定Adobe Launch](#configuringadobelaunch))。
+1. 先登入Adobe Launch，以取得Adobe Launch程式庫的內嵌代碼(請參 [閱設定Adobe Launch](#configuring-adobe-launch-for-the-integration))。
 1. 按一 **[!UICONTROL 下「屬性]**」，然後按一下「 **[!UICONTROL 環境]** 」標籤。
 1. 選擇與網頁環境相關的環境級別。 然後，在「安 **[!UICONTROL 裝]** 」欄中按一下方塊圖示。
 1. **[!UICONTROL 在「網頁安裝指示]** 」對話方塊中，複製完整的Adobe Launch程式庫內嵌程式碼以及周圍的 `<script/>` 標籤。
@@ -575,7 +575,7 @@ Adobe Launch中所有可用的擴充功能都列在「擴充功能> **[!UICONTRO
 
 請參 [閱在Adobe Launch中建立屬性](#creating-a-property-in-adobe-launch)。
 
-安裝和安裝擴充功能後，至少會在「擴充功能>安裝」區域列出下列五個擴充功能（若您未追蹤視訊，則會列出四個擴充功能）。
+安裝和安裝擴充功能後，至少會在「擴充功能>安裝」區域列出下列五個擴充功能（若您未追蹤視訊則為四個）。
 
 ![image2019-7-22_12-7-36](assets/image2019-7-22_12-7-36.png)
 
