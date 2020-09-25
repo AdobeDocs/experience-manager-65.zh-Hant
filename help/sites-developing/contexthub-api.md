@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '5029'
 ht-degree: 1%
@@ -532,7 +532,7 @@ ContextHub.Store.SessionStore可擴充 [ContextHub.Store.Core](/help/sites-devel
 
 #### registerRenderer(moduleType, renderer, dontRender) {#registerrenderer-moduletype-renderer-dontrender}
 
-向ContextHub註冊UI模組轉換器。 在註冊轉譯器後，它可用來建立 [UI模組](/help/sites-administering/contexthub-config.md#adding-a-ui-module)。 當您擴充ContextHub.UI.BaseModuleRenderer以建 [立自訂UI模組轉譯器時](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types) ，請使用此函式。
+向ContextHub註冊UI模組轉換器。 在註冊轉譯器後，它可用來建立 [UI模組](ch-configuring.md#adding-a-ui-module)。 當您擴充ContextHub.UI.BaseModuleRenderer以建 [立自訂UI模組轉譯器時](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types) ，請使用此函式。
 
 **參數**
 
