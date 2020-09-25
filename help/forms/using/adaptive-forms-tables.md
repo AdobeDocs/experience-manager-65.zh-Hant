@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2302'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 * 資料模型對象屬性
 * 靜態文字與資料模型物件屬性的組合
 
-要對表列應用排序，表列單元格必須包含以下任何元件： 數值方塊、數值步進器、日期輸入欄位、日期選擇器、文字或文字方塊。
+要對表列應用排序，表列單元格必須包含以下任何元件：數值方塊、數值步進器、日期輸入欄位、日期選擇器、文字或文字方塊。
 
 要啟用排序：
 
@@ -152,14 +152,14 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 >
 >如果XFA變更／退出指令碼也套用至相同欄位，XFA變更／退出指令碼會在「值提交」指令碼之前執行。
 
-* **計算表達式**: 自動計算欄位的值。
-* **驗證運算式**: 來驗證欄位。
-* **存取運算式**: 啟用／停用欄位。
-* **可見度運算式**: 以控制欄位和面板的可見度。
+* **計算表達式**:自動計算欄位的值。
+* **驗證運算式**:來驗證欄位。
+* **存取運算式**:啟用／停用欄位。
+* **可見度運算式**:以控制欄位和面板的可見度。
 
 表或行的可見性表達式可在其對應的「編輯」元件對話框的「面板屬性」(Panel properties)頁籤中定義。 儲存格的運算式可在其「編輯」元件對話方塊的「指令碼」索引標籤中定義。
 
-如需最適化表單類別、事件、物件和公用API的完整清單，請參閱適 [化表單的JavaScript程式庫API參考](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html)。
+如需最適化表單類別、事件、物件和公用API的完整清單，請參閱適 [化表單的JavaScript程式庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)。
 
 ## 行動版面 {#mobile-layouts}
 
@@ -189,7 +189,7 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 
 以下影像會比較表格在具有收合和展開欄的裝置上的外觀。
 
-![collabess-column](assets/collapsed-column.png)
+![collapsed-column](assets/collapsed-column.png)
 
 表格的收合欄，行動裝置上只顯示兩欄
 
