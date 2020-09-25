@@ -12,7 +12,10 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '2204'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 1. **模式偵測器**[](/help/sites-deploying/pattern-detector.md) -如升級規劃中所述及本頁中的詳細說明，執行模式偵測器，以取得模式偵測器報表，其中包含除了AEM Target版本中無法使用的API/組合以外，還需要解決的區域的詳細資訊。 「模式偵測」報表應指出程式碼中有任何不相容之處，如果沒有相容，則您的部署已相容於6.5，您仍可選擇使用6.5功能進行新開發，但您不需要它來維持相容性。 如果報告了不相容性，則可以選擇a)以相容性模式運行，並推遲開發新6.5功能或相容性； b)在升級後決定進行開發，然後轉到步驟2。 請參閱「AEM 6.5 [中的向後相容性」](/help/sites-deploying/backward-compatibility.md) ，以取得詳細資訊。
 
-1. **開發6.5版程式碼庫**-為Target版本的程式碼庫建立專用的分支或儲存庫。 使用升級前相容性的資訊來規劃要更新的程式碼區域。
+1. **開發6.5版的程式碼庫**-為Target版本的程式碼庫建立專用的分支或儲存庫。 使用升級前相容性的資訊來規劃要更新的程式碼區域。
 1. **使用6.5 Uberjar編譯**-將代碼庫POM更新為指向6.5 Uberjar並編譯代碼。
 1. **更新AEM自訂*** - *AEM的任何自訂或擴充功能都應更新／驗證，以便在6.5版中運作，並新增至6.5版程式碼庫。 包含UI搜尋表單、資產自訂、任何使用/mnt/overlay的項目
 
@@ -42,7 +45,7 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 除了升級程式碼庫和自訂以搭配新AEM版本使用的選項外，6.5還可協助您使用本頁所述的「向後相容性」功能，更有效率地管理自 [訂](/help/sites-deploying/backward-compatibility.md)。
 
 如上圖所示，如下圖所示，在第一個步驟中執行 [Pattern Detector](/help/sites-deploying/pattern-detector.md) ，將協助您評估升級的整體複雜性，以及您是要以相容模式執行，還是更新自訂以使用所有新的AEM 6.5功能。 如需詳細資 [訊，請參閱「AEM 6.5中的向後相容性](/help/sites-deploying/backward-compatibility.md) 」頁面。
-[ ![opt_scheint](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
+[ ![opt_schient](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
 
 ## 升級程式碼庫 {#upgrade-code-base}
 
@@ -90,7 +93,7 @@ AEM 6.5仍提供傳統UI編寫功能，但已不再提倡。 如需詳細資訊�
 
 因此，必須移動一些設定，使其不再 `/etc` 像過去那樣駐留。 若要檢視完整的儲存庫重組顧慮，而這些顧慮必須在更新至AEM 6.4時加以檢視和修正，請參閱「AEM 6.4中的 [儲存庫重組」](/help/sites-deploying/repository-restructuring.md)。
 
-## AEM自訂 {#aem-customizations}
+## AEM自訂  {#aem-customizations}
 
 AEM來源版本中AEM製作環境的所有自訂項目都必須加以識別。 在識別後，建議您將每個自訂項目儲存在版本控制中，或至少儲存在內容套件的備份中。 所有自訂都應在生產升級之前，在執行AEM目標版本的QA或測試環境中部署和驗證。
 
@@ -146,7 +149,7 @@ Adobe建議將自訂指令碼放在 `/apps/settings/dam/indesign/scripts` 位置
 
 ### 恢復ContextHub配置 {#recovering-contexthub-configurations}
 
-ContextHub組態受升級影響。 有關如何恢復現有ContextHub配置的說明，請參 [閱](/help/sites-administering/contexthub-config.md#recovering-contexthub-configurations-after-upgrading)。
+ContextHub組態受升級影響。 有關如何恢復現有ContextHub配置的說明，請參 [閱](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading)。
 
 ### 工作流程自訂 {#workflow-customizations}
 
@@ -172,7 +175,7 @@ ContextHub組態受升級影響。 有關如何恢復現有ContextHub配置的�
 
 此處概述的升級程式應如您的自訂執行手冊中所述，在開發與QA環境中進行測試(請參 [閱規劃升級](/help/sites-deploying/upgrade-planning.md))。 應重複升級過程，直到升級運行手冊中記錄了所有步驟，並且升級過程很順暢。
 
-### 實作測試區 {#implementation-test-areas-}
+### 實作測試區  {#implementation-test-areas-}
 
 以下是任何AEM實作的重要部分，在環境升級並部署升級的程式碼庫後，測試計畫應涵蓋這些部分。
 
