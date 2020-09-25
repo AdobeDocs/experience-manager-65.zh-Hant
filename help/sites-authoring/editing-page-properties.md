@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1781'
+ht-degree: 8%
 
 ---
 
@@ -43,6 +46,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
       * 然後，新標籤會在右側顯示，並加上一個小星號，表示它是新標籤。
    * 透過下拉式功能，您可從現有標籤中選取。
    * 當您將滑鼠移至選取方塊中的標籤項目上時，會顯示x，可用來移除此頁面的標籤。
+
    如需標籤的詳細資訊，請參 [閱使用標籤](/help/sites-authoring/tags.md)。
 
 * **於導覽中隱藏**
@@ -85,7 +89,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    >[!CAUTION]
    >
-   >虛名URL:
+   >虛名 URL:
    >
    >* 必須是唯一的，因此您應該注意該值尚未被其他頁面使用。
    >* 不支援regex圖樣。
@@ -146,11 +150,11 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    >[!NOTE]
    >
-   >頁面的已關閉使用者群組是在「權限」標籤 **[上定義](/help/sites-authoring/editing-page-properties.md#permissions)**。
+   >頁面的已關閉使用者群組是在「權限」標籤 **[上定義](/help/sites-authoring/editing-page-properties.md#permissions)** 。
 
    >[!CAUTION]
    >
-   >「權 **[限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」標籤允許根據混音的存在編輯CUG配`granite:AuthenticationRequired`置。 如果頁面權限是使用已過時的CUG設定來設定，則會根據屬性的存在情況，在「驗證要求」下顯示警告訊息，且選項將不可編輯，也不可編輯`cq:cugEnabled`權限&#x200B;****[](/help/sites-authoring/editing-page-properties.md#permissions)。
+   >「權 **[限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 」標籤允許根據混音的存在編輯CUG配 `granite:AuthenticationRequired` 置。 如果頁面權限是使用已過時的CUG設定來設定，則會根據屬性的存在情況，在「驗證要求」下顯示警告訊息，且選項將不可編輯，也不可編輯 `cq:cugEnabled` 權限 ****[](/help/sites-authoring/editing-page-properties.md#permissions) 。
    >
    >
    >在這種情況下，必須在傳統UI中編輯CUG [權限](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)。
@@ -203,7 +207,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 * **ContextHub 組態**
 
-   選取「 [ContextHub設定](/help/sites-administering/contexthub-config.md) 」和「 [區段路徑」](/help/sites-administering/segmentation.md)。
+   選取「 [ContextHub設定](/help/sites-developing/ch-configuring.md) 」和「 [區段路徑」](/help/sites-administering/segmentation.md)。
 
 * **定位組態**
 
@@ -224,7 +228,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
    * 檢視有效 [權限](/help/sites-administering/user-group-ac-admin.md)
    >[!CAUTION]
    >
-   >「權 **限** 」標籤允許根據混音的存在編輯CUG配 `granite:AuthenticationRequired` 置。 如果頁面權限是使用已過時的CUG設定來設定的，則會根據屬性的存在而顯示警告訊息，且CUG權限將不可編輯，也不會編輯「 `cq:cugEnabled` Advanced [](/help/sites-authoring/editing-page-properties.md#advanced) 」（進階）標籤上的「Authentication Requirement」（驗證要求）。
+   >「權 **限** 」標籤允許根據混音的存在編輯CUG配 `granite:AuthenticationRequired` 置。 如果頁面權限是使用已過時的CUG設定來設定的，則會根據屬性的存在而顯示警告訊息，且CUG權限將不可編輯， `cq:cugEnabled` Advanced [](/help/sites-authoring/editing-page-properties.md#advanced) （進階）標籤上的「驗證要求」也將不可編輯。
    >
    >
    >在這種情況下，必須在傳統UI中編輯CUG [權限](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)。
@@ -276,6 +280,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選擇模式](/help/sites-authoring/basic-handling.md#selectionmode)
+
    頁面屬性將使用適當的標籤顯示。
 
 1. 視需要檢視或編輯屬性。
@@ -347,6 +352,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
       * 只有具有公用值的屬性才會顯示在「視圖」模式中。
       * 當欄位為多值（例如「標籤」）時，只有所有值都是共 *用* ，才會顯示值。 如果只有某些是常見的，則只有在編輯時才會顯示。
+
    當不存在具有公用值的屬性時，將顯示一條消息。
 
 * **編輯**
