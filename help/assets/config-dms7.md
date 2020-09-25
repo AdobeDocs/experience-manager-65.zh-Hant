@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d357b5832a3bd95c372c26fd7553eba70583eb6f
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '5944'
 ht-degree: 5%
@@ -132,19 +132,19 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 您現在已完成基本配置；您已準備好使用Dynamic Media - Scene7模式。
 
-如果您想要進一步自訂設定，可以選擇性地完成「在動態媒體- Scene7模式中設定進階設定」 [（選用）下的任何工作](#optionalconfigurationofadvancedsettingindynamicmediascene7mode)。
+如果您想要進一步自訂設定，可以選擇性地完成「在動態媒體- Scene7模式中設定進階設定」 [（選用）下的任何工作](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)。
 
 ## （可選）在動態媒體- Scene7模式中設定進階設定 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
 如果您想要進一步自訂動態媒體- Scene7模式的設定和設定，或最佳化其效能，則可以完成下列一或多項選 *擇* :
 
-* [（選用）動態媒體的設定與設定- Scene7模式設定](#optionalsetupandconfigurationofdynamicmediascene7modesettings)
+* [（選用）動態媒體的設定與設定- Scene7模式設定](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
 
 * [（可選）調整動態媒體- Scene7模式的效能](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [（可選）篩選複製資產](#optional-filtering-assets-for-replication)
 
-### （選用）動態媒體的設定與設定- Scene7模式設定</p> {#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings-p}
+### （選用）動態媒體的設定與設定- Scene7模式設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
 當您處於執行模式 `dynamicmedia_scene7`時，您會使用Dynamic Media Classic(Scene7)使用者介面來變更動態媒體設定。
 
@@ -196,7 +196,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 >[!NOTE]
 >
->依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。您可以提高此限制。See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+>依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。您可以提高此限制。See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 
 #### 設定色彩管理 {#configuring-color-management}
