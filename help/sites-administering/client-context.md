@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1889'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
 >[!NOTE]
 >
->ContextHub已取代用戶端內容。 如需詳細資訊，請參閱相關 [的設定](/help/sites-administering/contexthub-config.md) 和開 [發人](/help/sites-developing/contexthub.md) 員檔案。
+>ContextHub已取代用戶端內容。 如需詳細資訊，請參 []閱相關的configurationch-configuring.md)和開發 [人員](/help/sites-developing/contexthub.md) 。
 
 「用戶端內容」是一種機制，可提供您目前頁面和訪客的特定資訊。 可使用 **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac)開啟：
 
@@ -64,7 +67,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
 促銷活動解決方案通常以促銷活動的優先順序屬性為基礎。 通常會根據區段來選取體驗。
 
-**購物車** ：顯示購物車資訊，包括產品項目（標題、數量、價格格式化等）、已解決的促銷活動（標題、訊息等）和憑證（代碼、說明等）。
+**購物車** ：顯示購物車資訊，包括產品項目（標題、數量、價格格式化等）、已解決的促銷活動（標題、訊息等） 和憑證（代碼、說明等）。
 
 購物車作業商店也會使用ClientContextCartServlet通知伺服器已解決的促銷變更（根據區段變更）。
 
@@ -72,13 +75,13 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
 Generic Store必須設定JS轉譯器，以自訂方式顯示資料。
 
-**通用商店屬性** ：顯示商店內容的通用元件。 它是Generic Store元件的更高級版本。
+**通用商店屬性** ：顯示商店內容的通用元件。 它是Generic Store元件的更高級別版本。
 
 「一般商店屬性」元件包含預設轉譯器，列出已設定的屬性（連同縮圖）。
 
 **地理位置** ：顯示用戶端的經緯度。 它使用HTML5地理位置API來查詢瀏覽器的目前位置。 這會導致快顯畫面顯示給訪客，瀏覽器會在此詢問訪客是否同意分享其位置。
 
-當顯示在Context cloud中時，元件會使用Google API將地圖顯示為縮圖。 此元件受Google API使用限制 [約束](https://developers.google.com/maps/documentation/staticmaps/intro#Limits)。
+當顯示在Context Cloud中時，元件會使用Google API將地圖顯示為縮圖。 此元件受Google API使用限制 [約束](https://developers.google.com/maps/documentation/staticmaps/intro#Limits)。
 
 >[!NOTE]
 >
@@ -210,7 +213,7 @@ JSONP商店和其他商店一樣，但是它會載入來自其他網域的資訊
 
 ### 刪除屬性元件 {#removing-a-property-component}
 
-在開啟ClientContext設計頁 **面後**，您也可以 **Remove** a property（如果不再需要）。 其中包括現成可用的屬性；如 **果已移除** ,「重設」將重建這些項目。
+在開啟ClientContext設計頁 **面後**，您也可以 **Remove** a property（如果不再需要）。 其中包括現成可用的屬性； **如果已移除** ,Reset將會重新建立這些檔案。
 
 ## 通過JSONP在客戶端上下文中儲存資料 {#storing-data-in-client-context-via-jsonp}
 
@@ -242,7 +245,7 @@ JSONP商店和其他商店一樣，但是它會載入來自其他網域的資訊
    ![](assets/chlimage_1-40.png)
 
 1. 按一下「確定」。
-1. 返回Geometrixx Outdoors首頁並重新整理頁面。 Client Context現在包含來自JSONP store元件的資訊。
+1. 返回Geometrixx Outdoors首頁並重新整理頁面。 Client Context現在包含來自JSONP Store元件的資訊。
 
    ![](assets/chlimage_1-41.png)
 
@@ -260,7 +263,7 @@ JSONP商店和其他商店一樣，但是它會載入來自其他網域的資訊
 
    1. 在「Title（標題）」中，鍵入Winter。
    1. 選取區段範本。
-   1. 按一下「建立」。
+   1. 按一下建立。
 
 1. 按一下右鍵「冬季」段，然後按一下「開啟」。
 1. 將「一般商店屬性」拖曳至預設的AND容器。
