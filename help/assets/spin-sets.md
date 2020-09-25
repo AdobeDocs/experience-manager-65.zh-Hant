@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 9%
@@ -31,7 +31,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 >
 >如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/managing-assets-touch-ui.md)。
 
-## 快速入門： 回轉集 {#quick-start-spin-sets}
+## 快速入門：回轉集 {#quick-start-spin-sets}
 
 若要快速啟動並執行回轉集，請依照下列步驟進行：
 
@@ -47,7 +47,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 
    >[!NOTE]
    >
-   >您也可以透過批次集預設集自動 [建立回轉集](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)。**重要：** 批集由IPS(Image Production System)建立，作為資產提取的一部分，並且僅在動態媒體- Scene7模式中可用。
+   >您也可以透過批次集預設集自動 [建立回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。**重要：** 批集由IPS(Image Production System)建立，作為資產提取的一部分，並且僅在動態媒體- Scene7模式中可用。
 
 1. 視需要 [設定回轉集檢視器預設](/help/assets/managing-viewer-presets.md)。
 
@@ -63,7 +63,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 
 1. [預覽回轉集。](/help/assets/previewing-assets.md)
 
-   選取「回轉集」(Spin Set)，您就可以預覽它。 旋轉回轉集。 您可以從左側導軌下拉式選單 **[!UICONTROL 的「檢視器]** 」選單中，選擇不同的檢視器。
+   選取「回轉集」(Spin Set)，您就可以預覽它。 旋轉回轉集。 您可以從左側導軌下拉式選單 **[!UICONTROL 的「檢視器]** 」選單中選擇不同的檢視器。
 
 1. [發佈回轉集。](/help/assets/publishing-dynamicmedia-assets.md)
 
@@ -90,7 +90,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 以下是回轉集影像的一些最佳實務。 一般而言，旋轉集中的影像越多，影像旋轉效果就越好。 不過，在集合中加入許多影像也會增加影像載入所花的時間。 AEM建議拍攝影像的下列准則，以用於回轉集：
 
 * 至少，在一維回轉集中使用8-12張影像，在二維回轉集中使用16-24張影像。 至少需要8張影像才能旋轉360度。 一維回轉集比較常見，因為建立二維回轉集耗費大量人力。
-* 使用無損格式； 建議使用TIFF和PNG。
+* 使用無損格式；建議使用TIFF和PNG。
 * 遮色所有影像，讓項目出現在純白色或其他高對比背景上。 （可選）添加陰影。
 * 請確定產品詳細資訊已清楚標示，並且已集中注意。
 * 為具有人體模型或模特兒的時尚服裝拍攝旋轉影像。 通常，假人模型要麼是完全遮色的（使用玻璃模型），要麼在圖中顯示風格化的假人模型／服裝。 通過定義角度數，可建立模型上的回轉集。 在地板上用磁帶標籤每個角度，以引導模型向每個拍攝方向步移和查看。
@@ -101,9 +101,9 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 
 >[!NOTE]
 >
->您也可以透過批次集預設集自動 [建立回轉集](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)。**重要：** 批集由IPS(Image Production System)建立，作為資產提取的一部分，並且僅在動態媒體- Scene7模式中可用。
+>您也可以透過批次集預設集自動 [建立回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。**重要：** 批集由IPS(Image Production System)建立，作為資產提取的一部分，並且僅在動態媒體- Scene7模式中可用。
 >
->請參閱「設定動態媒體- Scene7模式」中的「建立批次集預設集以自動產 [生影像集和回轉集」](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)。
+>請參閱「設定動態媒體- Scene7模式」中的「建立批次集預設集以自動產 [生影像集和回轉集」](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。
 
 
 >[!NOTE]
@@ -155,7 +155,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 
 ## 查看回轉集 {#viewing-spin-sets}
 
-您可以在使用者介面中建立回轉集，或使用批次集預 [設集自動建立](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)。 不過，使用批集預設集建立的集 *合* ，不會顯示在使用者介面中。 您可以三種不同的方式存取透過批次集預設集建立的集合。 （即使您在使用者介面中建立回轉集，這些方法也可用）。
+您可以在使用者介面中建立回轉集，或使用批次集預 [設集自動建立](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。 不過，使用批集預設集建立的集 *合* ，不會顯示在使用者介面中。 您可以三種不同的方式存取透過批次集預設集建立的集合。 （即使您在使用者介面中建立回轉集，這些方法也可用）。
 
 >[!NOTE]
 >
