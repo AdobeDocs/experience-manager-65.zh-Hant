@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 3%
@@ -223,11 +223,10 @@ ht-degree: 3%
    >    * 動畫. 依預設，每張投影片轉場都是淡入。 您可以將它變更為投影片轉場。
    >    * 按鈕的樣式。 使用者可以點選每個點或數字，在橫幅中旋轉。 您可以變更設定指標按鈕的顯示位置（如果是數值或虛線樣式），以及其大小。
    >    * 更改影像映射或用於熱點的表徵圖的加亮樣式。
-   >    * 在編輯檢視器預設集之前，請選擇您要以預設集為基礎的樣式。 如果您不這麼做，當您開始編輯檢視器預設集時，如果您決定變更為其他預設集，將會遺失您的所有變更
+   >    * 在編輯檢視器預設集之前，請選擇您要以預設集為基礎的樣式。 如果您不這麼做，當您開始編輯檢視器預設集時，如果您決定變更為其他預設集，將會遺失您的所有變更。
 
    >
-   >
-   >如需 [檢視器編輯器的詳細指示和詳細資訊](/help/assets/viewer-presets.md#specialconsiderationsforcreatingacarouselbannerviewerpreset) ，請參閱轉盤橫幅的特殊考量。
+   >如需 [檢視器編輯器的詳細指示和詳細資訊](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset) ，請參閱轉盤橫幅的特殊考量。
 
    您也可以預覽轉盤橫幅的外觀。 請參 [閱（可選）預覽轉盤橫幅](#optional-previewing-carousel-banners)。
 
