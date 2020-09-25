@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: bd67a41e493cbcf97956de09e088d16997ab0e93
+source-git-commit: 74ab94126383d53dac5f55171266c66c28757969
 workflow-type: tm+mt
-source-wordcount: '4495'
+source-wordcount: '4518'
 ht-degree: 0%
 
 ---
@@ -290,6 +290,16 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 >[!NOTE]
 >
 >[!DNL Experience Manager] Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的附 [!DNL Forms] 加套件傳送。 此外，還會發行包含JEE修正的累 [!DNL Experience Manager Forms] 積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
+
+安裝 [!DNL Experience Manager Forms] 6.5.6.0附加軟體包後：
+
+* 停止實 [!DNL Experience Manager Forms] 例。
+
+* 從目 `bcpkix-1.51`錄中刪 `bcmail-1.51`除、刪 `bcprov-1.51` 除和刪除JAR `crx-repository\launchpad\ext` 檔案。
+
+* 從檔案中` sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider` ，刪除屬 `sling.properties` 性。
+
+* 重新啟動 [!DNL Experience Manager Forms] 實例。
 
 **適用性表單**
 
