@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: 9a7a31f9-aeb8-455f-a07e-7b1d1f0a88b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 8%
@@ -110,4 +110,4 @@ ht-degree: 8%
 
 1. In the Navigation console, click or tap **Personalization**. 按一下或點選「 **觀眾**」。
 1. 點選或按一下您要編輯的ContextHub或Client Context區段旁的圖示，然後點選或按一下「編 **輯」**。
-1. 在區段編輯器中進行任何編輯。 請參 [閱Client Context](/help/sites-administering/campaign-segmentation.md) 或 [ContextHub檔案](/help/sites-administering/contexthub-config.md) 。
+1. 在區段編輯器中進行任何編輯。 請參 [閱Client Context](/help/sites-administering/campaign-segmentation.md) 或 [ContextHub檔案](/help/sites-developing/ch-configuring.md) 。
