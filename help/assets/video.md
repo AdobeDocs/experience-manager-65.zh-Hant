@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '11828'
 ht-degree: 6%
@@ -51,7 +51,7 @@ ht-degree: 6%
       * 進一步瞭解組 [織數位資產](/help/assets/organize-assets.md)。
    * 將您的主要來源影片上傳至資料夾。 您可以上傳每個高達15 GB的視訊檔案。 當您將視訊新增至資料夾時，會根據您指派至資料夾的視訊處理設定檔進行編碼。
 
-      * [上傳您的影片](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
+      * [上傳您的影片](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * 進一步瞭解支 [援的輸入檔案格式](/help/assets/assets-formats.md#supported-multimedia-formats)。
    * 從資產 [或工作流程檢視](#monitoring-video-encoding-and-youtube-publishing-progress) ，監控視訊編碼的進度。
 
@@ -64,7 +64,7 @@ ht-degree: 6%
 
       * [組織數位資產](/help/assets/organize-assets.md)進一步了 [解使用處理設定檔組織數位資產的最佳實務](organize-assets.md)
 
-      * [搜尋視訊資產](search-assets.md#custompredicates) 或搜 [尋資產](managing-assets-touch-ui.md#search-assets)
+      * [搜尋視訊資產](search-assets.md#custompredicates) 或搜 [尋資產](/help/assets/search-assets.md)
    * 預覽和發佈視訊資產
 
       * 檢視視訊的來源視訊和編碼轉譯，以及其相關縮圖：
@@ -1222,7 +1222,7 @@ AEM中的所有影片都必須有相關聯的縮圖；您不能刪除縮圖而�
    * 已為您的視訊資產建立資料夾。
    * [將視訊描述檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
 
-   * [已將您的影片上傳至資料夾](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
+   * [已將您的影片上傳至資料夾](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
 1. 導覽至您要變更其縮圖影像的已上傳視訊資產。
 1. 在「清單檢視」或「資 **[!UICONTROL 產檢視]** 」的 ****&#x200B;資產選擇模式中，點選視訊資產。
