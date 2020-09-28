@@ -1,11 +1,11 @@
 ---
-title: '[!DNL資產]網路注意事項和要求。'
+title: 網路考量與需求
 description: 討論設計和部署時的網路 [!DNL Adobe Experience Manager Assets] 注意事項。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 在從公司網路到網際網路的上行鏈路上，可以有其他使用頻寬的服務。 請務必瞭解資產的專用頻寬或優先順序。 例如，如果1 Gbps鏈路的利用率已達80%，則最多只能為分配20%的頻寬 [!DNL Experience Manager Assets]。
 
-企業防火牆和Proxy也可以以多種不同的方式改變頻寬。 此類裝置可使用服務品質、使用者頻寬限制或主機位元速率限制來排定頻寬優先順序。 這些是需要檢查的重要選項，因為它們可以大幅影響使 [!DNL Assets] 用者體驗。
+企業防火牆和Proxy也可以以多種不同的方式改變頻寬。 此類型的裝置可使用服務品質、使用者的頻寬限制或主機的位元速率限制來排列頻寬優先順序。 這些是需要檢查的重要選項，因為它們可以顯著影響 [!DNL Assets] 使用體驗。
 
 在此示例中，企業有10 Gbps上行鏈路。 它應該足夠大，適合多個客戶。 此外，防火牆規定主機速率限制為10 Mbps。 此限制可能會將到單台主機的流量限制為10 Mbps，即使到Internet的上行鏈路為10 Gbps。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ## 環境的拓 [!DNL Experience Manager] 撲 {#topology-of-the-aem-environment}
 
-![chlimage_1-354](assets/chlimage_1-356.png)
+![chlimage_1-356](assets/chlimage_1-356.png)
 
 設計環境的拓撲需 [!DNL Experience Manager] 要詳細瞭解系統配置以及網路在用戶環境中的連接方式。
 
