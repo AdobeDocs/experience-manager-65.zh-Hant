@@ -1,11 +1,11 @@
 ---
-title: 處理資產以完成業務流程、進行審核、實現法規遵從性並保持基本的健全性
+title: 使用工作流程處理資產
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '975'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ![部分預設工作流程](assets/aem-default-workflows.png)
 
-*圖： 中提供的部分預設工作流程[!DNL Experience Manager]。*
+*圖：中提供的部分預設工作流程[!DNL Experience Manager]。*
 
 ## 將工作流程套用至處理資產 {#applying-workflows-to-assets}
 
@@ -95,9 +95,9 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 * 製作 [!UICONTROL DAM更新資產工作流程的副本] ，並加以修改以在特定資料夾階層上執行。 此方法對於一些資料夾非常有用。
 * 可以使用 [OR拆分來添加額外的處理步驟](/help/sites-developing/workflows-step-ref.md#or-split) ，該OR拆分條件性地適用於所需數量的資料夾。
 
-## 最佳實務與限制 {#best-practices-limitations-tips}
+## 最佳做法和限制 {#best-practices-limitations-tips}
 
-* 設計工作流程時，請考慮您對所有類型轉譯的需求。 如果您未預見未來需要轉譯，請從工作流程中移除其建立步驟。 之後無法大量刪除轉譯。 長期使用後，不需要的轉譯可能會佔用大量儲存空間 [!DNL Experience Manager]。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂以 [!DNL Experience Manager] 刪除特定轉譯，或刪除資產並再次上傳這些資產。
+* 在設計工作流程時，請考慮您對所有類型轉譯的需求。 如果您未預見未來需要轉譯，請從工作流程中移除其建立步驟。 之後無法大量刪除轉譯。 長期使用後，不需要的轉譯可能會佔用大量儲存空間 [!DNL Experience Manager]。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂以 [!DNL Experience Manager] 刪除特定轉譯，或刪除資產並再次上傳這些資產。
 * 依預設，  DAM更新資產工作流程包含一些建立縮圖和網頁轉譯的步驟。 如果從工作流程移除任何預設轉譯，則其使用者介面 [!DNL Assets] 無法正確呈現。
 
 >[!MORELIKETHIS]
