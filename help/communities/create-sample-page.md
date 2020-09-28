@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 2%
@@ -38,26 +38,26 @@ ht-degree: 2%
 
 從作者實例的全域導覽中，選擇「 **[!UICONTROL 工具]** >社 **[!UICONTROL 群]** >網 **[!UICONTROL 站範本]**」。
 
-![chlimage_1-82](assets/chlimage_1-82.png)
+![create-site-template](assets/create-site-template1.png)
 
 * 選取 `Create button`
 * 基本資訊
 
-   * `Name`: 單頁範本
-   * `Description`: 由單一頁面函陣列成的範本。
+   * `Name`:單頁範本
+   * `Description`:由單一頁面函陣列成的範本。
    * 選取 `Enabled`
 
-![chlimage_1-83](assets/chlimage_1-83.png)
+![site-template-editor](assets/site-template-editor.png)
 
 * 結構
 
    * 將函式 `Page` 拖曳至範本產生器
    * 對於配置函式詳細資訊，請輸入
 
-      * `Title`: 單頁
+      * `Title`:單頁
       * `URL`: 頁面
 
-![chlimage_1-84](assets/chlimage_1-84.png)
+![站點——模板——編輯器——結構](assets/site-template-editor1.png)
 
 * 為配 **`Save`** 置選擇
 * 為網 **`Save`** 站範本選擇
@@ -68,22 +68,23 @@ ht-degree: 2%
 
 在建立網站範本後，從全域導覽中選取「社群> **[!UICONTROL 網站」]**。
 
-![chlimage_1-85](assets/chlimage_1-85.png)
+![create-community-site](assets/create-community-site1.png)
 
 * 選擇圖 **`Create`** 標
 
 * 步驟 `1 - Site Template`
 
-   * `Title`: 簡單社群網站
-   * `Description`: 由單一頁面組成的社群網站，可供實驗。
+   * `Title`:簡單社群網站
+   * `Description`:由單一頁面組成的社群網站，可供實驗。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
-   * `Name`: 樣本
+   * `Name`:樣本
 
       * url = http://localhost:4502/content/sites/sample
 
-      * `Template`: 選擇 `Single Page Template`
-      ![chlimage_1-86](assets/chlimage_1-86.png)
+      * `Template`:選擇 `Single Page Template`
+
+      ![create-community-site-template](assets/create-community-site-template.png)
 
 
 * 選取 `Next`
@@ -98,23 +99,23 @@ ht-degree: 2%
 
 * 選取 `Create`
 
-   ![chlimage_1-87](assets/chlimage_1-87.png)
+   ![create-community-site](assets/create-community-site.png)
 
 ## 發佈網站 {#publish-the-site}
 
-![chlimage_1-88](assets/chlimage_1-88.png)
+![publish-site](assets/publish-site.png)
 
 在社群網 [站主控台](sites-console.md)，選取要發佈網站的發佈圖示，依預設為http://localhost:4503。
 
 ## 在編輯模式中開啟作者網站 {#open-the-site-on-author-in-edit-mode}
 
-![chlimage_1-89](assets/chlimage_1-89.png)
+![開放網站](assets/open-site.png)
 
 選取開啟的網站圖示，以編輯模式檢視網站。
 
 網址為http://localhost:4502/editor.html/content/sites/sample/en.html(英 [文)](http://localhost:4502/editor.html/content/sites/sample/en.html)
 
-![chlimage_1-90](assets/chlimage_1-90.png)
+![author-site](assets/author-site.png)
 
 在簡單的首頁上，您可以透過社群功能和範本查看預先串連的內容，並播放新增和設定社群元件的功能。
 
