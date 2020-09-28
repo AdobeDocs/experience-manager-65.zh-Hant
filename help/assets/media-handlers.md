@@ -1,11 +1,11 @@
 ---
-title: 使用中的媒體處理常式和工作流程來處理資產 [!DNL Adobe Experience Manager]。
+title: 使用媒體處理常式和工作流程處理資產
 description: 瞭解媒體處理常式以及如何使用工作流程對您的數位資產執行工作。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2108'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 媒體處理常式是通常與工作流程結合使用的服務。
 
-[!DNL Experience Manager] 有一些預設的工作流程來處理資產。 要查看它們，請開啟「工作流」(Workflow)控制台，然後按一下「模 **[!UICONTROL 型」(Models]** )頁籤： 以開頭的工作流程標題 [!DNL Assets] 是資產特定的標題。
+[!DNL Experience Manager] 有一些預設的工作流程來處理資產。 要查看它們，請開啟「工作流」(Workflow)控制台，然後按一下「模 **[!UICONTROL 型」(Models]** )頁籤：以開頭的工作流程標題 [!DNL Assets] 是資產特定的標題。
 
 可擴充現有的工作流程，並建立新的工作流程，以根據特定需求處理資產。
 
@@ -76,7 +76,7 @@ ht-degree: 3%
 
 1. 在瀏覽器中，導覽至 `https://<host>:<port>/system/console/components`。
 1. 按一下 **[!UICONTROL 媒體處理程式名稱旁邊的「禁用]** 」。 For example: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
-1. 重新整理頁面： 媒體處理常式旁會顯示圖示，指出其已停用。
+1. 重新整理頁面：媒體處理常式旁會顯示圖示，指出其已停用。
 1. 若要啟用媒體處理常式，請按一 **[!UICONTROL 下媒體處理常式]** 名稱旁的「啟用」。
 
 ### 建立新的媒體處理常式 {#creating-a-new-media-handler}
@@ -85,15 +85,15 @@ ht-degree: 3%
 
 #### 重要類別和介面 {#important-classes-and-interfaces}
 
-開始實施的最佳方式是繼承所提供的抽象實施，以處理大部分事物並提供合理的預設行為： 班 `com.day.cq.dam.core.AbstractAssetHandler` 級。
+開始實施的最佳方式是繼承所提供的抽象實施，以處理大部分事物並提供合理的預設行為：班 `com.day.cq.dam.core.AbstractAssetHandler` 級。
 
 此類已提供抽象服務描述符。 因此，如果您繼承此類別並使用maven-sling-plugin，請確定您將inherit標幟設為 `true`。
 
 實施下列方法：
 
-* `extractMetadata()`: 擷取所有可用的中繼資料。
-* `getThumbnailImage()`: 在傳遞的資產中建立縮圖影像。
-* `getMimeTypes()`: 傳回資產MIME類型。
+* `extractMetadata()`:擷取所有可用的中繼資料。
+* `getThumbnailImage()`:在傳遞的資產中建立縮圖影像。
+* `getMimeTypes()`:傳回資產MIME類型。
 
 以下是範例範本：
 
@@ -103,30 +103,30 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 介面和類包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 介面： 此介面說明新增支援特定MIME類型的服務。 要添加新的MIME類型，必須實施此介面。 介麵包含匯入和匯出特定檔案、建立縮圖和擷取中繼資料的方法。
-* `com.day.cq.dam.core.AbstractAssetHandler` 類別： 此類別可做為所有其他資產處理常式實作的基礎，並提供常用的功能。
+* `com.day.cq.dam.api.handler.AssetHandler` 介面：此介面說明新增支援特定MIME類型的服務。 要添加新的MIME類型，必須實施此介面。 介麵包含匯入和匯出特定檔案、建立縮圖和擷取中繼資料的方法。
+* `com.day.cq.dam.core.AbstractAssetHandler` 類別：此類別可做為所有其他資產處理常式實作的基礎，並提供常用的功能。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` 類別：
    * 此類別可做為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取常用功能。
-   * 開始實施的最佳方式是繼承所提供的抽象實施，以處理大部分事物並提供合理的預設行為： com.day.cq.dam.core.AbstractAssetHandler類別。
+   * 開始實施的最佳方式是繼承所提供的抽象實施，以處理大部分事物並提供合理的預設行為：com.day.cq.dam.core.AbstractAssetHandler類別。
    * 此類已提供抽象服務描述符。 因此，如果您繼承此類別並使用maven-sling-plugin，請確定您將inherit標幟設為true。
 
 需要實施下列方法：
 
-* `extractMetadata()`: 此方法會擷取所有可用的中繼資料。
-* `getThumbnailImage()`: 此方法會從傳遞的資產中建立縮圖影像。
-* `getMimeTypes()`: 此方法會傳回資產MIME類型。
+* `extractMetadata()`:此方法會擷取所有可用的中繼資料。
+* `getThumbnailImage()`:此方法會從傳遞的資產中建立縮圖影像。
+* `getMimeTypes()`:此方法會傳回資產MIME類型。
 
 以下是範例範本：
 
-封裝my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot;true&quot; &amp;ast; @scr.service &amp;ast;/ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement relevant parts }
+封裝my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;true&quot; &amp;ast;@scr.service &amp;ast;/ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement relevant parts }
 
 介面和類包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 介面： 此介面說明新增支援特定MIME類型的服務。 要添加新的MIME類型，必須實施此介面。 介麵包含匯入和匯出特定檔案、建立縮圖和擷取中繼資料的方法。
-* `com.day.cq.dam.core.AbstractAssetHandler` 類別： 此類別可做為所有其他資產處理常式實作的基礎，並提供常用的功能。
-* `com.day.cq.dam.core.AbstractSubAssetHandler` 類別： 此類別可做為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取的常用功能。
+* `com.day.cq.dam.api.handler.AssetHandler` 介面：此介面說明新增支援特定MIME類型的服務。 要添加新的MIME類型，必須實施此介面。 介麵包含匯入和匯出特定檔案、建立縮圖和擷取中繼資料的方法。
+* `com.day.cq.dam.core.AbstractAssetHandler` 類別：此類別可做為所有其他資產處理常式實作的基礎，並提供常用的功能。
+* `com.day.cq.dam.core.AbstractSubAssetHandler` 類別：此類別可做為所有其他資產處理常式實作的基礎，並提供常用功能以及子資產擷取的常用功能。
 
-#### 範例： 建立特定文字處理常式 {#example-create-a-specific-text-handler}
+#### 範例：建立特定文字處理常式 {#example-create-a-specific-text-handler}
 
 在本節中，您將建立特定的文字處理常式，以產生含浮水印的縮圖。
 
@@ -144,9 +144,9 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
    1. 定義專 [!DNL Maven] 案：
 
       * 群組ID: `com.day.cq5.myhandler`.
-      * 對象ID: myBundle。
-      * 名稱： 我的 [!DNL Experience Manager] 包裹。
-      * 說明： 這是我的 [!DNL Experience Manager] 包裹。
+      * 對象ID:myBundle。
+      * 名稱：我的 [!DNL Experience Manager] 包裹。
+      * 說明：這是我的 [!DNL Experience Manager] 包裹。
    1. 按一 **[!UICONTROL 下完成]**。
 
 
@@ -158,7 +158,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
       * 編譯器合規性級別
       * 生成的。class檔案相容性
       * 原始碼相容性
-   1. 按一下 **[!UICONTROL 確定]**。 在對話框窗口中，按一下「 **[!UICONTROL 是」]**。
+   1. 按一下&#x200B;**[!UICONTROL 「確定」]**。在對話框窗口中，按一下「 **[!UICONTROL 是」]**。
 
 
 1. 將檔案中的程式 `pom.xml` 碼取代為下列程式碼：
@@ -471,7 +471,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 安裝 [!DNL ImageMagick] 在托管伺服器的磁 [!DNL Experience Manager] 盤上：
 
-1. 安裝 [!DNL ImageMagick]: 請參 [閱ImageMagick檔案](https://www.imagemagick.org/script/download.php)。
+1. 安裝 [!DNL ImageMagick]:請參 [閱ImageMagick檔案](https://www.imagemagick.org/script/download.php)。
 1. 設定工具，以便在命令行上運行轉換。
 1. 要查看工具是否已正確安裝，請在命令行上運 `convert -h` 行以下命令。
 
@@ -503,13 +503,13 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 |---|---|
 | mime:&lt;mime-type> | 可選引數。 如果資產與其中一個引數的MIME類型相同，則會套用此程式。 <br>可定義數種MIME類型。 |
 | tn:&lt;width>:&lt;height> | 可選引數。 該過程建立具有在參數中定義的尺寸的縮略圖。 <br>可定義數個縮圖。 |
-| cmd: &lt;command> | 定義所執行的命令。 語法取決於命令行工具。 只能定義一個命令。 <br>以下變數可用來建立命令：<br>`${filename}`: 輸入檔案的名稱，例如original.jpg <br> `${file}`: 輸入檔案的完整路徑名稱，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: 目錄，例如 `/tmp/cqdam0816.tmp`<br>`${basename}`: 輸入檔案的名稱（不帶副檔名），例如原始檔案 <br>`${extension}`: 輸入檔案的副檔名，例如JPG。 |
+| cmd:&lt;command> | 定義所執行的命令。 語法取決於命令行工具。 只能定義一個命令。 <br>以下變數可用來建立命令：<br>`${filename}`:輸入檔案的名稱，例如original.jpg <br> `${file}`:輸入檔案的完整路徑名稱，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`:目錄，例如 `/tmp/cqdam0816.tmp`<br>`${basename}`:輸入檔案的名稱（不帶副檔名），例如原始檔案 <br>`${extension}`:輸入檔案的副檔名，例如JPG。 |
 
-例如，如果 [!DNL ImageMagick] 安裝在托管伺服器的磁碟上，並且 [!DNL Experience Manager] 使用 [!UICONTROL CommandLineProcess作為實施建立流程步驟，並使用下列值作為流] 程參數 :
+例如，如果 [!DNL ImageMagick] 安裝在托管伺服器的磁碟上，並且 [!DNL Experience Manager] 使用 [!UICONTROL CommandLineProcess] as Implementation和以下值作為Process Arguments建立進程步驟 :
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-然後，當工作流程執行時，此步驟僅會套用至具有或作為 `image/gif``mime:image/tiff``mime-types`，它會建立原始影像的翻轉影像，並將其轉換為JPG，並建立三個尺寸縮圖： 140x100、48x48和10x250。
+然後，當工作流程執行時，此步驟僅會套用至具有或作為 `image/gif``mime:image/tiff``mime-types`，它會建立原始影像的翻轉影像，並將其轉換為JPG，並建立三個尺寸縮圖：140x100、48x48和10x250。
 
 使用下列 [!UICONTROL Process Arguments] （進程參數）建立三個標準縮圖 [!DNL ImageMagick]:
 
