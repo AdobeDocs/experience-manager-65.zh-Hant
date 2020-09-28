@@ -1,11 +1,11 @@
 ---
-title: 數位版權管理 [!DNL Adobe Experience Manager Assets]。
+title: 資產的數位版權管理
 description: 瞭解如何管理中授權資產的資產到期狀態和資訊 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1422'
+source-wordcount: '1423'
 ht-degree: 6%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 6%
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*圖： 在資訊卡檢視中，資訊卡上的標幟表示已到期的資產。*
+*圖：在資訊卡檢視中，資訊卡上的標幟表示已到期的資產。*
 
 ![expired_flag_list](assets/expired_flag_list.png)
 
-*圖： 在清單視圖中，「狀[!UICONTROL 態]」列顯示[!UICONTROL 「已到期]」橫幅。*
+*圖：在清單視圖中，「狀[!UICONTROL 態]」列顯示[!UICONTROL 「已到期]」橫幅。*
 
 您可以在左側導軌的「時間軸」中檢視資 [!UICONTROL 產的] 「到期狀態」。
 
@@ -58,7 +58,7 @@ ht-degree: 6%
 
 您可以在「搜尋」面板中搜尋過期的資產，包括過期的子資產。
 
-1. 在控制 [!DNL Assets] 台中，按一下工具列 **[!UICONTROL 中的「搜尋]** 」，以顯示「Omnisearch」方塊。
+1. 在控制 [!DNL Assets] 台中，按一下工具列 **[!UICONTROL 中的「搜尋]** 」，以顯示「搜尋」方塊。
 
 1. 在「Omnisearch」（搜索）框中，按Enter鍵可顯示搜索結果頁。
 
@@ -111,7 +111,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 若要顯示其資產詳細資訊頁面，請在介面中 [!DNL Assets] 選取資產，然後按一下「屬 **[!UICONTROL 性]** 」 ![檢視屬性](assets/do-not-localize/info-circle-icon.png)。
+1. 若要顯示其資產詳細資訊頁面，請在介面 [!DNL Assets] 中選取資產，然後按一下「屬 **[!UICONTROL 性]** 」 ![檢視屬性](assets/do-not-localize/info-circle-icon.png)。
 
 1. 在「進 [!UICONTROL 階] 」索引標籤中 **[!UICONTROL ，從「過期」欄位設定資產的到]** 期日。
 
