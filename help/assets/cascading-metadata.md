@@ -1,9 +1,9 @@
 ---
-title: 中的級聯元資料 [!DNL Adobe Experience Manager Assets]。
+title: 在 [!DNL Assets]
 description: 本文說明如何定義資產的階層式中繼資料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c92215a6cb1f4c3d02e9a5f5b3fd36c65fc002ce
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 # 階層式中繼資料 {#cascading-metadata}
 
-在擷取資產的中繼資料資訊時，使用者會在各種可用欄位中提供資訊。 您可以顯示特定的中繼資料欄位或欄位值，這些欄位值取決於在其他欄位中選取的選項。 這種元資料的條件顯示稱為級聯元資料。 換言之，您可以在特定中繼資料欄位／值與一或多個欄位及／或其值之間建立相依關係。
+在擷取資產的中繼資料資訊時，使用者會在各種可用欄位中提供資訊。 您可以顯示特定的中繼資料欄位或欄位值，這些欄位值取決於在其他欄位中選取的選項。 這種元資料的條件顯示稱為級聯元資料。 換言之，您可以在特定中繼資料欄位／值與一或多個欄位及／或其值之間建立相依性。
 
 使用中繼資料結構來定義顯示階層式中繼資料的規則。 例如，如果中繼資料結構包含資產類型欄位，您可以根據使用者選擇的資產類型定義要顯示的相關欄位集。
 
