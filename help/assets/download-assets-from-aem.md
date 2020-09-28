@@ -1,11 +1,11 @@
 ---
-title: 從下載數位資產 [!DNL Adobe Experience Manager]。
+title: 下載資產
 description: 瞭解如何從指令下 [!DNL Adobe Experience Manager] 載資產，以啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '850'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 3%
 
    ![從Experience Manager Assets下載資產時的可用選項](/help/assets/assets/asset-download1.png)
 
-   *圖： 下載對話框選項。*
+   *圖：下載對話框選項。*
 
 1. 在「下載」對話方塊中，選取您想要的下載選項。
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 
 1. 在對話方塊中，點選「 **[!UICONTROL 下載。]**.
 
-當您選擇要下載的檔案夾時，會下載該檔案夾下的完整資產階層。 若要將您下載的每個資產（包括父資料夾下巢狀內嵌的子資料夾中的資產）納入個別資料夾，請選取「為每個資 **[!UICONTROL 產建立個別資料夾」]**。
+當您選擇要下載的檔案夾時，會下載該檔案夾下的完整資產階層。 若要將您下載的每個資產（包括父資料夾下巢狀內嵌之子資料夾中的資產）納入個別資料夾，請為每個資產選 **[!UICONTROL 取「建立個別資料夾」]**。
 
 ## 啟用資產下載servlet {#enable-asset-download-servlet}
 
