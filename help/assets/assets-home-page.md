@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Adobe Experience Manager Assets]首頁體驗。'
+title: '[!DNL資產]首頁體驗'
 description: 個人 [!DNL Experience Manager Assets] 化首頁，提供多樣化的歡迎畫面體驗，包括資產相關活動的快照。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '562'
 ht-degree: 1%
 
 ---
@@ -65,11 +65,11 @@ ht-degree: 1%
 * 最近
 * 探索
 
-**活動**: 在本節中，「我的活動 **** 」介面工具集會顯示登入使用者使用資產（包括無轉譯的資產）執行的最新活動，例如資產上傳、下載、資產建立、編輯、留言、註解和分享。
+**活動**:在本節中，「我的活動 **** 」介面工具集會顯示登入使用者使用資產（包括無轉譯的資產）執行的最新活動，例如資產上傳、下載、資產建立、編輯、留言、註解和分享。
 
-**最近**: 此區 **[!UICONTROL 段下的「最近檢視]** 」介面工具集會顯示登入使用者最近存取的實體，包括資料夾、系列和專案。
+**最近**:此區 **[!UICONTROL 段下的「最近檢視]** 」介面工具集會顯示登入使用者最近存取的實體，包括資料夾、系列和專案。
 
-**Discover**: 此區 **[!UICONTROL 段下的]** 「新增」介面工具集會顯示最近上傳至部署的資產和轉 [!DNL Assets] 譯。
+**Discover**:此區 **[!UICONTROL 段下的]** 「新增」介面工具集會顯示最近上傳至部署的資產和轉 [!DNL Assets] 譯。
 
 要啟用清除用戶活動資料，請從配置管理 **[!UICONTROL 器啟用DAM事件清除服務]** 。 啟用此服務後，系統將刪除超過指定數目的登入使用者活動。
 
