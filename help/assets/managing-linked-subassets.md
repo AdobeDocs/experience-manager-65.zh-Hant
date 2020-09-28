@@ -1,11 +1,11 @@
 ---
-title: 使用中的參考和多頁資產管理複合資產 [!DNL Adobe Experience Manager]。
+title: 使用參考和多頁管理複合資產
 description: 瞭解如何從內部建立數位資產的參考 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -38,11 +38,11 @@ ht-degree: 0%
 
    ![chlimage_1-85](assets/chlimage_1-259.png)
 
-1. 按一下工 **[!UICONTROL 具欄中的]** 「查看屬性」。 在「屬 [!UICONTROL 性] 」頁面中，參考目前資產的檔案清單會顯示在「基本」標籤的「參考 **[!UICONTROL 」欄]** 下方 **** 。
+1. 按一下工 **[!UICONTROL 具欄中的]** 「查看屬性」。 在「屬 [!UICONTROL 性] 」頁面中，參考目前資產的檔案清單會出現在「基本」索引標籤的「參考 **[!UICONTROL 」欄]** 下方 **** 。
 
    ![在資產詳細資訊的「引用」列中查看Experience Manager資產的引用](assets/asset-references.png)
 
-   *圖： 資產詳細資料中的資產參考。*
+   *圖：資產詳細資料中的資產參考。*
 
 ## 將數位資產新增為 [!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -95,8 +95,8 @@ ht-degree: 0%
 
 若要產生子資產，請執行下列其中一項作業：
 
-* 新資產： 「 [!UICONTROL DAM更新資產] 」工作流程會對任何上傳至的新資產執行 [!DNL Experience Manager]。 子資產會針對新的多頁資產自動產生。
-* 現有多頁資產： 遵循下列任 [!UICONTROL 一步驟手動執行DAM更新資產] :
+* 新資產：「 [!UICONTROL DAM更新資產] 」工作流程會對任何上傳至的新資產執行 [!DNL Experience Manager]。 子資產會針對新的多頁資產自動產生。
+* 現有多頁資產：遵循下列任 [!UICONTROL 一步驟手動執行DAM更新資產] :
 
    * 選取資產，然後按一下「 [!UICONTROL 時間軸] 」以開啟左側面板。 或者，使用鍵盤快速鍵 `alt + 3`。 按一 [!UICONTROL 下「工作流]」，選取「 [!UICONTROL DAM更新資產」]，按一下「開始 [!UICONTROL 」，然後按一]下「繼續啟動」。
    * 選取資產，然後從工具 [!UICONTROL 列按一下] 「建 [!UICONTROL 立] >工作流程」。 從彈出式對話方塊中，選取「 [!UICONTROL DAM更新資產」工作流程] ，按一下「 [!UICONTROL 開始]」，然後按一下「 [!UICONTROL 繼續]」。
@@ -117,7 +117,7 @@ ht-degree: 0%
 
 對於 [!DNL InDesign]您，可以使用擷取頁面 [!DNL InDesign Server]。 如果在建立檔案時儲存頁面 [!DNL InDesign] 的預覽，則頁 [!DNL InDesign Server] 面擷取不需要。
 
-下列選項可在工具列、左側導軌和頁面檢視器控制項中使用：
+工具列、左側導軌和頁面檢視器控制項中提供下列選項：
 
 * **[!UICONTROL 案頭動作]** ，以使用案頭應用程式開啟或顯示特定 [!DNL Experience Manager] 子資產。 瞭解如何設 [定案頭動作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) (如果您使用案頭應用 [!DNL Experience Manager] 程式)。
 
