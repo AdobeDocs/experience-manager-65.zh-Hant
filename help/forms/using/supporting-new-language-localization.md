@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -30,17 +30,28 @@ ht-degree: 0%
 
 ### 自適應表單的定位 {#how-localization-of-adaptive-form-works}
 
-呈現最適化表單時，它會依指定順序查看下列參數，以識別所要求的地區設定：
+有兩種方法可識別最適化表單的地區。 在呈現最適化表單時，它會依下列項目識別所要求的地區設定：
 
-* 請求參 `afAcceptLang`數若要覆寫使用者的瀏覽器地區設定，您可以傳遞 
+* 在最適化 `[local]` 表單URL中檢視選擇器。 The format of the URL is `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`. 使用選 `[local]` 擇器可快取最適化表單。
+
+* 按指定順序查看以下參數：
+
+   * 請求參 `afAcceptLang`數若要覆寫使用者的瀏覽器地區設定，您可以傳遞 
 `afAcceptLang` 請求參數來強制地區設定。 例如，下列URL將強制在日文地區中轉換表單：
-   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* 為用戶設定的瀏覽器區域設定，該設定在使用標題的請求中指 `Accept-Language` 定。
+   * 為用戶設定的瀏覽器區域設定，該設定在使用標題的請求中指 `Accept-Language` 定。
 
-* AEM中指定之使用者的語言設定。
+   * AEM中指定之使用者的語言設定。
 
-一旦識別了地區設定，最適化表單就會挑選特定表單的字典。 如果找不到所請求地區的表單特定字典，則使用英文（英文）字典。
+   * 預設會啟用瀏覽器地區設定。 若要變更瀏覽器地區設定，
+      * 開啟配置管理器。 URL是 `http://[server]:[port]/system/console/configMgr`
+      * 找到並開啟 **[!UICONTROL 最適化表單和互動式通訊Web頻道設定]** 。
+      * 變更「使用瀏覽器 **[!UICONTROL 區域設定]** 」選項和「 **[!UICONTROL 儲存]** 」設定的狀態。
+
+一旦識別了地區設定，最適化表單就會挑選特定表單的字典。 如果找不到所請求地區的表單特定字典，則會使用該字典編寫最適化表單的語言。
+
+如果沒有地區設定資訊，則會以表單的原始語言傳送最適化表單。 原始語言是開發適應性表單時使用的語言。
 
 如果所請求地區的用戶端程式庫不存在，則會檢查地區中是否存在語言程式碼的用戶端程式庫。 例如，如果請求的地區設定為 `en_ZA` （南非英文），而用戶端程式庫不存在，則最適化表單會使用用戶端程式庫 `en_ZA``en` （英文）語言（如果存在）。 但是，如果這些表單都不存在，則最適化表單會使用字典進行地區 `en` 設定。
 
@@ -82,7 +93,7 @@ I18N.js
 
 ### 為地區設定新增最適化表單用戶端程式庫 {#add-adaptive-form-client-library-for-a-locale-br}
 
-在下建立類型 `cq:ClientLibraryFolder` 的節 `etc/<folderHierarchy>`點，其類別為 `guides.I18N.<locale>` ，從屬關係為， `xfaforms.3rdparty`和 `xfaforms.I18N.<locale>``guide.common`。 &quot;
+在下建立類型 `cq:ClientLibraryFolder` 的節 `etc/<folderHierarchy>`點，其類別為 `guides.I18N.<locale>` ，從屬關係為， `xfaforms.3rdparty`和 `xfaforms.I18N.<locale>``guide.common`。&quot;
 
 將下列檔案新增至用戶端程式庫：
 
