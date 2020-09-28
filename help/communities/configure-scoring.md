@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -102,7 +102,7 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 
 
 
-![chlimage_1-248](assets/chlimage_1-248.png)
+![debug-scoring-log](assets/debug-scoring-log.png)
 
 要查看日誌條目：
 
@@ -118,7 +118,7 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 
    * 例如， `.../crx-quickstart/logs/scoring-debug.log`
 
-![chlimage_1-249](assets/chlimage_1-249.png)
+![計分日誌](assets/scoring-log.png)
 
 ## UGC的計分與簽章 {#ugc-for-scoring-and-badging}
 
@@ -126,9 +126,9 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 
 存取計分和標籤資料的說明使用JSRP，因為UGC可使用 [CRXDE Lite輕鬆存取](/help/sites-developing/developing-with-crxde-lite.md)。
 
-**作者JSRP**: 在作者環境中進行實驗會產生只有作者環境才能看到的UGC。
+**作者JSRP**:在作者環境中進行實驗會產生只有作者環境才能看到的UGC。
 
-**發佈時的JSRP**: 同樣地，如果在發佈環境上進行測試，則必須以發佈實例的管理權限訪問CRXDE Lite。 如果發佈例項在生產模 [式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行 [，則必須啟](/help/sites-administering/enabling-crxde-lite.md)用CRXDE Lite。
+**發佈時的JSRP**:同樣地，如果在發佈環境上進行測試，則必須以發佈實例的管理權限訪問CRXDE Lite。 如果發佈例項在生產模 [式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式）中執行 [，則必須啟](/help/sites-administering/enabling-crxde-lite.md)用CRXDE Lite。
 
 UGC在JSRP上的基本位置為 `/content/usergenerated/asi/jcr/`。
 
@@ -139,7 +139,7 @@ UGC在JSRP上的基本位置為 `/content/usergenerated/asi/jcr/`。
 * [com.adobe.cq.sosical.scoring.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/scoring/api/package-summary.html)
 * [com.adobe.cq.social.badging.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/badging/api/package-summary.html)
 
-Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 請參 [閱使用Maven for Communities: Javadocs](/help/communities/maven.md#javadocs)。
+Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 請參 [閱使用Maven for Communities:Javadocs](/help/communities/maven.md#javadocs)。
 
 **UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
 
@@ -217,19 +217,20 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
    由於使用者已獲得兩枚銅牌，並獲得協調者徽章，因此使用者在論壇參加項目時，會以這種方式呈現。
 
-![chlimage_1-250](assets/chlimage_1-250.png)
+   ![協調者](assets/moderator.png)
 
 >[!NOTE]
 >
 >此範例不遵循下列最佳實務：
 >
->* 計分規則名稱應全局唯一； 他們不應以同名結尾。
-   >  不要做 *的* :
-   >  /libs/settings/community/scornimy/groin/rules/site1/forums-scorning
+>* 計分規則名稱應全局唯一；不應以同名結尾。
+   >  不要做 *的* 範例：
+   >  /libs/settings/community/scorning/rules/site1/forums-scorning
    >  /libs/settings/community/scornimy/rules/site2/forums-scorning
    >
    >
 * 為不同的AEM網站建立獨特的徽章影像
+
 >
 
 
@@ -254,7 +255,7 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 分數會儲存在屬性中， `scoreValue_tl` 該屬性可能僅直接包含值或間接引用atomicCounter。
 
-![chlimage_1-251](assets/chlimage_1-251.png)
+![access-scoring-ugc](assets/access-scoring-ugc.png)
 
 ### 存取標籤UGC {#access-badging-ugc}
 
@@ -270,11 +271,11 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 
 #### 獎章 {#awarded-badge}
 
-![chlimage_1-252](assets/chlimage_1-252.png)
+![榮獲徽章](assets/access-badging-ugc.png)
 
 #### 指派的徽章 {#assigned-badge}
 
-![chlimage_1-253](assets/chlimage_1-253.png)
+![已指派徽章](assets/assigned-badge.png)
 
 ## 其他資訊 {#additional-information}
 
