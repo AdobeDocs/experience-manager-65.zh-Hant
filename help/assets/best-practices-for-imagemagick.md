@@ -1,11 +1,11 @@
 ---
-title: 安裝並設定ImageMagick以搭配使用 [!DNL Adobe Experience Manager Assets]。
+title: 安裝和配置ImageMagick
 description: 瞭解ImageMagick軟體、如何安裝、設定命令列處理步驟，以及使用它編輯、合成和產生影像縮圖。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '693'
 ht-degree: 0%
 
 ---
