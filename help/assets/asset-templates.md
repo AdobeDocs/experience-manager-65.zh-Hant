@@ -1,11 +1,11 @@
 ---
-title: 中的資產模板 [!DNL Adobe Experience Manager Assets]。
+title: 資產範本
 description: 瞭解資產範本 [!DNL Adobe Experience Manager Assets] ，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 1. 從可編輯欄位清單中選取影像欄位，然後從資產選擇器拖曳所要的影像至可編輯欄位。
 
-   ![chlimage_1-114](assets/chlimage_1-319.png)
+   ![chlimage_1-115](assets/chlimage_1-319.png)
 
    您也可以使用關鍵字、標籤，並根據其發佈狀態來搜尋影像。 您可以瀏覽整個存 [!DNL Experience Manager Assets] 儲庫，並瀏覽到所需映像的位置。
 
@@ -196,6 +196,6 @@ ht-degree: 0%
    >
    >您以後無法編輯合併的宣傳品，也無法用它來建立其他宣傳品。
 
-## 最佳實務與限制 {#best-practices-limitations-tips}
+## 最佳做法和限制 {#best-practices-limitations-tips}
 
 * 編輯 [!DNL InDesign] 器在標 [!DNL Experience Manager] 記層級運作，而單一標籤下的所有文字都視為單一實體。 若要在編輯時保留文字格式和樣式，請個別標籤每個段落（或使用不同樣式的文字）。
