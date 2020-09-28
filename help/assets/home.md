@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager 6.5 Assets使用指南
-seo-title: Adobe Experience Manager 6.5 Assets使用指南
+title: 資產指南
+seo-title: Adobe Experience Manager 6.5資產指南
 description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 seo-description: 涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 11%
+source-wordcount: '371'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Assets使用指南
+# Adobe Experience Manager 6.5資產指南
 
 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 
@@ -23,10 +23,10 @@ ht-degree: 11%
 
 * [Experience Manager快速入門](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Experience Manager 6.5發行說明](/help/release-notes/home.md)
-* [最近的檔案更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [安全性檢查清單](/help/sites-administering/security-checklist.md)
 
-## Experience Manager 6.5使用指南
+## Experience Manager 6.5指南
 
 | 使用手冊 | 說明 |
 |--- |---|
