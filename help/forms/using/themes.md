@@ -10,9 +10,9 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '6067'
+source-wordcount: '6062'
 ht-degree: 1%
 
 ---
@@ -348,7 +348,7 @@ AEM Forms中的主題支援在表單和互動式通訊的面板版面中設定�
 * **切換側面板** (Toggle Side Panel ![)](assets/toggle-side-panel.png)切換側面板(Toggle-side-panel):可讓您顯示或隱藏邊欄。
 * **主題選項**![主題選項](assets/theme-options.png):提供3種選項
 
-   * 設定：提供選項來選擇預覽表單或互動式通訊、基本clientlib和typekit設定。
+   * 設定：提供選項來選擇預覽表單或互動式通訊、基本clientlib和Adobe字型設定。
    * 檢視主題CSS:為選取的主題產生CSS。
    * 管理樣式：提供管理文字和影像樣式的選項
    * 說明：執行主題編輯器的影像導覽指南。
@@ -438,7 +438,7 @@ AEM Forms中的主題支援在表單和互動式通訊的面板版面中設定�
 
 ### 設定元件的樣式 {#styling-a-component}
 
-例如，在表單中，您有兩種文字方塊：一個僅接受數字值，另一個接受字母數字值。 您可以為僅接受數值的文本框（數值框）定制樣式。
+例如，在表單中，您有兩種文字方塊：一個僅接受數字值，另一個接受字母數字值。 您可以為僅接受數值的文本框（數字框）定制樣式。
 
 執行以下步驟為特定元件定制樣式（本示例中的數字框）:
 
@@ -485,23 +485,23 @@ AEM Forms中的主題支援在表單和互動式通訊的面板版面中設定�
 
 ### 在主題中使用網頁字型 {#using-web-fonts-in-a-theme}
 
-您現在可以以最適化形式或互動式通訊方式，在web-service中使用可用的字型。 Adobe的網頁字型服務 [Typekit](https://typekit.com/)，現成可用的設定。 若要使用Typekit，請建立套件及其中的字型，並從 [Typekit網站取得套件ID](https://typekit.com/)。
+您現在可以以最適化形式或互動式通訊方式，在web-service中使用可用的字型。 Adobe的網頁字型服務 [Adobe Fonts](https://fonts.adobe.com/)，現成可用的設定。 若要使用Adobe字型，請建立套件、在其中新增字型，並從 [Adobe Fonts取得套件ID](https://fonts.adobe.com/)。
 
-執行下列步驟，在AEM中設定Typekit:
+執行下列步驟，在AEM中設定Adobe字型：
 
 1. 在作者例項中，按一 ![](assets/adobeexperiencemanager.png)下「Adobe Experience Manager >工具槌 ![子](assets/hammer.png) >部署>雲端服務」。
-1. 在「 **Cloud Services** 」頁面上，導覽至「協力 **廠商服務** > **Typekit」，然後按一下「Typekit下****** 的「立即設定」。 如果配置已可用，請按一下 **+** 按鈕以建立新實例。
+1. 在「 **Cloud Services** 」頁面上，導覽至並開 **啟「Adobe字型** 」選項。 開啟設定資料夾，然後按一下「 **建立**」。
 1. 在「創 **建配置** 」對話框中，指定配置的標題，然後按一下「 **建立」**。
 
    系統會將您重新導向至設定頁面。
 
 1. 在出現的「編輯元件」對話方塊中，提供您的套件ID，然後按一下「 **確定**」。
 
-執行以下步驟來配置主題以使用TypeKit配置：
+請執行下列步驟，將主題設定為使用Adobe Fonts設定：
 
 1. 在作者實例上，在主題編輯器中開啟一個主題。
 1. 在主題編輯器中，導覽至「主 **題選項**![主題選項](assets/theme-options.png) >設 **定**」。
-1. 在「 **Typekit設定** 」欄位中，選取套件，然後按一下「 **儲存」**。
+1. 在「 **Adobe字型設定** 」欄位中，選取套件，然後按一下「 **儲存」**。
 
    現在，您可以看到這些字型已新增至主題的font-family屬性中。
 
