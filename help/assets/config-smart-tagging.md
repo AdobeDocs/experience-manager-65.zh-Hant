@@ -1,11 +1,11 @@
 ---
-title: 使用智慧型內容服務設定資產標籤。
+title: 使用智慧型內容服務設定資產標籤
 description: 瞭解如何使用智慧型內容服務來設定智慧型標籤 [!DNL Adobe Experience Manager]，以及增強智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 506b965e4f1c18230357f25532d3fdd10f526ef0
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1240'
 ht-degree: 35%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 35%
 <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
 -->
 
-除了上述功能外，若要啟用「增強的智慧型標籤」，請另外安裝最新的 [Experience Manager Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
+除了上述功能外，若要啟用「增強智慧型標籤」，請另外安裝最新 [的Experience Manager Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
 
 ## 建立智慧型內容服務設定以取得 {#obtain-public-certificate}
 
@@ -61,7 +61,7 @@ ht-degree: 35%
    ![Experience Manager Smart Content Service對話框，用於提供內容服務URL](assets/aem_scs.png)
 
 
-   *圖： 「智慧型內容服務」對話方塊，提供內容服務URL*
+   *圖：「智慧型內容服務」對話方塊，提供內容服務URL*
 
    >[!NOTE]
    >
@@ -72,7 +72,7 @@ ht-degree: 35%
    ![為智慧標籤服務建立的設定的表示](assets/smart-tags-download-public-cert.png)
 
 
-   *圖： 智慧型標籤服務的設定*
+   *圖：智慧型標籤服務的設定*
 
 ### Reconfigure when a certificate expires {#certrenew}
 
@@ -113,12 +113,12 @@ ht-degree: 35%
 
 1. 在&#x200B;**[!UICONTROL 選取產品設定檔]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 「智慧內容服務」]**。按一下&#x200B;**[!UICONTROL 「儲存已設定的 API」]**。
 
-   此時會出現一個頁面，顯示更多關於設定的資訊。請保持此頁面的開啟，以複製並新增這些值至中的 [!UICONTROL Assets Smart Tagging Service Settings] （雲端設定的資產智慧標籤服務設定）, [!DNL Experience Manager] 以設定智慧標籤。
+   此時會出現一個頁面，顯示更多關於設定的資訊。請保持此頁面的開啟狀態，以複製並新增這些值至中的 [!UICONTROL Assets智慧標籤服務設定(Smart Tagging Service Settings] of cloud configuration), [!DNL Experience Manager] 以設定智慧標籤。
 
    ![在「概覽」索引標籤中，您可以檢閱為整合提供的資訊。](assets/integration_details.png)
 
 
-   *圖： Adobe Developer Console中的整合詳細資訊*
+   *圖：Adobe Developer Console中的整合詳細資訊*
 
 ## 設定智慧型內容服務 {#configure-smart-content-service}
 
@@ -172,21 +172,21 @@ ht-degree: 35%
    ![設定DAM更新資產工作流程並新增智慧標籤步驟](assets/smart-tag-step-properties-workflow1.png)
 
 
-   *圖： 設定DAM更新資產工作流程並新增智慧標籤步驟*
+   *圖：設定DAM更新資產工作流程並新增智慧標籤步驟*
 
 1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **** 」。
 
    ![設定DAM更新資產工作流程，以新增智慧型標籤步驟並預先選取處理常式](assets/smart-tag-step-properties-workflow2.png)
 
 
-   *圖： 設定DAM更新資產工作流程，以新增智慧型標籤步驟並預先選取處理常式*
+   *圖：設定DAM更新資產工作流程，以新增智慧型標籤步驟並預先選取處理常式*
 
    若無論是否對資料夾啟用智慧標記，都要在資產上傳時標記資產，請選取&#x200B;**[!UICONTROL 「忽略智慧標記旗標」]**。
 
    ![設定DAM更新資產工作流程以新增智慧型標籤步驟，並選取忽略智慧型標籤標幟](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *圖： 設定DAM更新資產工作流程以新增智慧型標籤步驟，並選取忽略智慧型標籤標幟*
+   *圖：設定DAM更新資產工作流程以新增智慧型標籤步驟，並選取忽略智慧型標籤標幟*
 
 1. 按一下&#x200B;**[!UICONTROL 「確定」]**&#x200B;關閉程序步驟，然後儲存工作流程。
 
