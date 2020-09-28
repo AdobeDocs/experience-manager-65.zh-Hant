@@ -1,11 +1,11 @@
 ---
-title: 搜尋 Facet.
-description: 如何在中建立、修改和使用搜索小面 [!DNL Adobe Experience Manager]。
+title: 搜尋Facet以篩選搜尋結果
+description: 如何在中建立、修改和使用搜索刻面 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2489'
 ht-degree: 16%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 16%
 1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 
-   ![尋找並選取資產或管理搜尋邊欄](assets/assets_admin_searchrail.png)
+   ![尋找並選取「資產」或「管理搜尋邊欄」](assets/assets_admin_searchrail.png)
 
    >[!NOTE]
    >
@@ -46,7 +46,7 @@ ht-degree: 16%
 
    ![按並移動謂詞以自訂搜尋篩選器](assets/drag_predicate.png)
 
-   *圖： 按並移動謂語以自訂搜尋篩選。*
+   *圖：按並移動謂語以自訂搜尋篩選。*
 
 1. 在「設定」標籤中，輸入謂語的欄位標籤、預留位置文字和說明。 為要與謂詞關聯的元資料屬性指定有效名稱。
 
@@ -164,7 +164,7 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
    ![在輸入標籤名稱時，Experience Manager提供的建議](assets/tag-suggestion.png)
 
-   *圖： 在輸入標籤名稱時，Experience Manager提供的建議。*
+   *圖：在輸入標籤名稱時，Experience Manager提供的建議。*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
