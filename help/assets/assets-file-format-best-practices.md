@@ -1,11 +1,11 @@
 ---
-title: 處理各種支援檔案格式的最佳範例 [!DNL Adobe Experience Manager Assets]。
+title: 處理支援檔案格式的最佳範例
 description: 使用處理各種支援檔案類型的最佳實務 [!DNL Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
