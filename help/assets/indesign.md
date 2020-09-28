@@ -1,9 +1,9 @@
 ---
-title: 整 [!DNL Adobe Experience Manager Assets] 合 [!DNL Adobe InDesign Server]
+title: 整 [!DNL Assets] 合 [!DNL InDesign Server]
 description: 瞭解如何 [!DNL Adobe Experience Manager Assets] 整合 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 * 一個代理，用於分配特定處理任務的負載。 代理是與代理工 [!DNL Experience Manager] 作者通信以完成特定任務的實例，而其他實例 [!DNL Experience Manager] 則用於傳遞結果。
 * 用於定義和管理特定任務的代理工作器。
-這些工作可以涵蓋各種任務； 例如，使用 [!DNL InDesign Server] 處理檔案。
+這些工作可以涵蓋各種任務；例如，使用 [!DNL InDesign Server] 處理檔案。
 
 若要完全上傳您 [!DNL Experience Manager Assets] 使用Proxy建立 [!DNL Adobe InDesign] 的檔案。 這會使用代理工作器與通信， [!DNL Adobe InDesign Server]在此處 [運行指令碼](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) ，以提取元資料並生成各種格式副本 [!DNL Experience Manager Assets]。 代理工作器可啟用雲配置中實例與實 [!DNL InDesign Server] 例之 [!DNL Experience Manager] 間的雙向通信。
 
@@ -84,7 +84,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   >如果要將輸出消息保存到檔案，則使用重定向； 例如，在Windows下：
+   >如果要將輸出消息保存到檔案，則使用重定向；例如，在Windows下：
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
 ### 設定工作 [!DNL Experience Manager Assets] 流程 {#configuring-the-aem-assets-workflow}
@@ -108,9 +108,9 @@ ht-degree: 3%
 
 媒體擷取引數和指令碼路徑
 
-* **ExtendScript程式庫**: 這是其他指令碼所需的簡單http get/post方法程式庫。
+* **ExtendScript程式庫**:這是其他指令碼所需的簡單http get/post方法程式庫。
 
-* **擴充指令碼**: 您可以在此處指定不同的指令碼組合。 如果希望在上執行自己的指令碼， [!DNL InDesign Server]請將指令碼保存在 `/apps/settings/dam/indesign/scripts`。
+* **擴充指令碼**:您可以在此處指定不同的指令碼組合。 如果希望在上執行自己的指令碼， [!DNL InDesign Server]請將指令碼保存在 `/apps/settings/dam/indesign/scripts`。
 
 如需指令碼的相 [!DNL Adobe InDesign] 關資訊，請參 [閱InDesign開發人員檔案](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
 
@@ -118,7 +118,7 @@ ht-degree: 3%
 >
 >請 勿變更ExtendScript程式庫。此程式庫提供與Sling通訊所需的HTTP功能。 此設定指定要發送到的庫以 [!DNL InDesign Server] 便在其中使用。
 
-「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 此轉譯用於「流程縮圖」工作流步驟，以生成所需的靜態轉譯 [!DNL Experience Manager]。
+「媒 `ThumbnailExport.jsx` 體擷取」工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 「處理縮圖」工作流程步驟會使用此格式副本，以產生所需的靜態格式副本 [!DNL Experience Manager]。
 
 您可以設定「處理縮圖」工作流程步驟，以產生不同大小的靜態轉譯。 請確定您未移除預設值，因為介面需要這些預設 [!DNL Experience Manager Assets] 值。 最後，「刪除影像預覽轉譯」工作流程步驟會移除JPG縮圖轉譯，因為不再需要它。
 
@@ -130,19 +130,19 @@ ht-degree: 3%
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **頁面擷取處理常式**: 從彈出式清單中，選取您要使用的處理常式。 擷取處理常式會針對由相關人員選擇的特定轉譯 `RenditionPicker` 進行操作(請參 `ExtractionHandler` 閱API)。
+* **頁面擷取處理常式**:從彈出式清單中，選取您要使用的處理常式。 擷取處理常式會針對由相關人員選擇的特定轉譯 `RenditionPicker` 進行操作(請參 `ExtractionHandler` 閱API)。
 In a standard [!DNL Experience Manager] installation the following is available:
-   * IDML Export Extraction句柄： 對在「媒體擷 `IDML` 取」步驟中產生的轉譯進行操作。
+   * IDML Export Extraction句柄：對在「媒體擷 `IDML` 取」步驟中產生的轉譯進行操作。
 
-* **頁面名稱**: 指定您要指派給產生頁面的名稱。 若保留空白，則名稱為「page」（若「page」已存在，則為衍生值）。
+* **頁面名稱**:指定您要指派給產生頁面的名稱。 若保留空白，則名稱為「page」（若「page」已存在，則為衍生值）。
 
-* **頁面標題**: 指定您要指派給產生頁面的標題。
+* **頁面標題**:指定您要指派給產生頁面的標題。
 
-* **頁面根路徑**: 結果頁面的根位置路徑。 如果保留空白，則會使用保留資產轉譯的節點。
+* **頁面根路徑**:結果頁面的根位置路徑。 如果保留空白，則會使用保留資產轉譯的節點。
 
-* **頁面範本**: 產生產生頁面時要使用的範本。
+* **頁面範本**:產生產生頁面時要使用的範本。
 
-* **頁面設計**: 產生產生頁面時要使用的頁面設計。
+* **頁面設計**:產生產生頁面時要使用的頁面設計。
 
 ### 為配置代理工作器 [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
 
@@ -181,7 +181,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 要配置並行IDS作業數：
 
-1. 開啟 **[!UICONTROL Felix]** Console的「設定」標籤； 例如： `https://[aem_server]:[port]/system/console/configMgr`.
+1. 開啟 **[!UICONTROL Felix]** Console的「設定」標籤；例如： `https://[aem_server]:[port]/system/console/configMgr`.
 
 1. 在下選擇IDS處理隊列 `Apache Sling Job Queue Configuration`。
 
@@ -208,7 +208,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 >
 >此外，在配 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 置下，設定參數的正值，該參數在將IDS從作業處理程式清單中 `max.errors.to.blacklist` 禁止之前確定作業檢索的數量。
 >
->預設情況下，在IDS工作器經過可配`retry.interval.to.whitelist.name`置（分鐘）時間後重新驗證。 如果線上找到該工作器，則會將其從被阻止的清單中刪除。
+>預設情況下，在IDS工作`retry.interval.to.whitelist.name`器經過幾分鐘的可配置()時間後重新驗證。 如果線上找到該工作器，則會將其從被阻止的清單中刪除。
 
 ## 啟用10.0或 [!DNL InDesign Server] 更新版本的支援 {#enabling-support-for-indesign-server-or-later}
 
