@@ -1,11 +1,11 @@
 ---
-title: 私人資料夾位於 [!DNL Adobe Experience Manager Assets]
+title: 共用資產的私人資料夾
 description: 瞭解如何在中建立私人資料 [!DNL Adobe Experience Manager Assets] 夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: be97ef4f3bb6b904dabcfcd44025a4898bcf4dee
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
