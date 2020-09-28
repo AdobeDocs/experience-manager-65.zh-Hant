@@ -1,12 +1,12 @@
 ---
-title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manager Sites] authoring workflow.
+title: 使用「連線資產」在 中共用 DAM 資產 [!DNL Sites]
 description: 使用遠程部署中可用 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 的資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 28c55333e0eebb68ada46ee89785f5f6475abf9e
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 43%
+source-wordcount: '2103'
+ht-degree: 44%
 
 ---
 
@@ -32,16 +32,16 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
    |  | [!DNL Sites] 雲端服務 | [!DNL Experience Manager] 6.5 [!DNL Sites] on AMS. | [!DNL Experience Manager] 6.5內 [!DNL Sites] 部部署 |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]雲端服務&#x200B;** | 支援 | 支援 | 支援 |
+   | **[!DNL Experience Manager Assets]雲端服務** | 支援 | 支援 | 支援 |
    | **[!DNL Experience Manager]6.5[!DNL Assets]on AMS.** | 支援 | 支援 | 支援 |
-   | **[!DNL Experience Manager]6.5內[!DNL Assets]部部署&#x200B;** | 不支援 | 不支援 | 不支援 |
+   | **[!DNL Experience Manager]6.5內[!DNL Assets]部部署** | 不支援 | 不支援 | 不支援 |
 
 ### 支援的檔案格式 {#mimetypes}
 
 作者在Content Finder中搜尋影像和下列類型的檔案，並在「頁面編輯器」中使用搜尋的資產。 文檔將添加到元件 `Download` 中，影像將添加到組 `Image` 件中。 Authors also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. 支援的格式包括：
 
-* **影像格式**: Image元件支 [持的格式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html) 。 [!DNL Dynamic Media] 不支援影像。
-* **檔案格式**: 請參閱支 [援的檔案格式](assets-formats.md#supported-document-formats)。
+* **影像格式**:Image元件支 [持的格式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html) 。 [!DNL Dynamic Media] 不支援影像。
+* **檔案格式**:請參閱支 [援的檔案格式](assets-formats.md#supported-document-formats)。
 
 ### 相關使用者和群組 {#users-and-groups-involved}
 
