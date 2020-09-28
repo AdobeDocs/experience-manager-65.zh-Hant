@@ -1,11 +1,11 @@
 ---
-title: Lightbox做為您的個人影像收藏館 [!DNL Adobe Experience Manager Assets]。
+title: 燈箱作為您的個人影像收藏館
 description: 在Adobe Experience Manager Assets中瞭解Lightbox作為您的個人影像收藏館]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
