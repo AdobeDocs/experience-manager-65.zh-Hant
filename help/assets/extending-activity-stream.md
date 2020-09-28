@@ -1,9 +1,9 @@
 ---
-title: 與活 [!DNL Assets] 動串流整合。
+title: 與活 [!DNL Assets] 動串流整合
 description: 說明其錄制功 [!DNL Experience Manager] 能，以及如何設定它以錄制特定事件。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
