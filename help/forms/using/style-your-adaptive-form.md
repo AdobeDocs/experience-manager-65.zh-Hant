@@ -8,9 +8,9 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
+source-git-commit: 0b3884301e09eba6860891f00a98508033d12ec8
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2058'
 ht-degree: 7%
 
 ---
@@ -308,7 +308,7 @@ ht-degree: 7%
    | 浮點 | 左 |
    | 寬度 | 10% |
 
-1. 點選「 **[!UICONTROL Government approved address proof]** (政府機關核准的位址證明 ![)」選項，然後點](assets/aem_6_3_edit.png)選「aem_6_3_editicon」。 設定下列屬性：
+1. 點選「 **[!UICONTROL Government approved address proof]** (政府機關核准的地址證明 ![)」選項，然後點](assets/aem_6_3_edit.png)選「aem_6_3_editicon」。 設定下列屬性：
 
    <table> 
     <tbody> 
@@ -442,18 +442,18 @@ ht-degree: 7%
 
 您可以使用各種字型來設計最適化表單。 在檢視最適化表單的所有裝置上，可能沒有用於設計最適化表單的字型。 您可以使用網頁字型服務，將必要的字型傳送至目標裝置。
 
-[!DNL Adobe Typekit] 是網頁字型服務。 您可以設定並使用具有最適化表單的服務。 要在最適 [!DNL Adobe Typekit] 化形式中使用：
+[!DNL Adobe Fonts] 是網頁字型服務。 您可以設定並使用具有最適化表單的服務。 要在最適 [!DNL Adobe Fonts] 化形式中使用：
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts現在稱為](assets/typekit-to-adobe-fonts.png)[!DNL Typekit] Adobe Fonts，並隨附於Creative Cloud和其他訂閱。 [了解更多](https://fonts.adobe.com/).
+>![typekit-to-adobe-fonts現在稱為](assets/typekit-to-adobe-fonts.png) Adobe Fonts [!DNL Typekit] ，並隨附於Creative Cloud和其他訂閱。 [了解更多](https://fonts.adobe.com/).
 
-1. 建立 [Adobe Typekit帳戶](https://typekit.com/) 、建立套件、將Myriad Pro字型加入套件、發佈套件並取得套件ID。 必須在最適化 [!DNL Adobe Typekit] 表單中使用字型（Web字型）。
-1. 在AEM伺 [!DNL Forms] 服器中，導覽至 ![adobe Experience Manager](assets/adobeexperiencemanager.png) Adobe Experience Manager **** Manager **[!UICONTROL > Ammer Tools]**![](assets/hammer.png)********> Deployment Alignment Cloud Services。 在「雲端服務」頁面上，導覽至「第 **[!UICONTROL 三方服務]** > **[!UICONTROL Typekit]**」，然後按一下「 **[!UICONTROL Typekit Now」下]** 的「Configure Now」。 如果配置已可用，請按一下+按鈕以建立新實例。
+1. 建立 [Adobe Fonts](https://typekit.com/) 帳戶、建立套件、將Myriad Pro字型加入套件、發佈套件並取得套件ID。 必須在最適化 [!DNL Adobe Fonts] 表單中使用（網頁字型）。
+1. 在AEM伺 [!DNL Forms] 服器中，導覽至 ![adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL Experience Manager]** > **[!UICONTROL HammerTools]**![](assets/hammer.png)****> Adobe FontsChammerChammerTools。 現在，開啟配置資料夾。 如果配置已可用，請按一下「創 **[!UICONTROL 建]** 」按鈕建立新實例。
 
    在「建立配置」對話框中，為配 **置指定Title** ，然後按一下「 **[!UICONTROL 建立」]**。 系統會將您重新導向至設定頁面。 在出現的「 [!UICONTROL 編輯元件] 」對話方塊中，提供您的套 **件ID** ，然後按一下「 **[!UICONTROL 確定]**」。
 
-1. 設定您的主題以使用 [!DNL TypeKit] 設定。 在作者實例上，在主題編 **[!UICONTROL 輯器中開啟]** 「全局主題」。 在主題編輯器中，導覽至「主 **[!UICONTROL 題選項]**![主題選項](assets/theme-options.png) >設 **[!UICONTROL 定]**」。 在「 **[!UICONTROL Typekit設定]** 」欄位中，選取套件，然後按一下「 **[!UICONTROL 儲存」]**。
+1. 設定您的主題以使用 [!DNL Adobe Fonts] 設定。 在作者實例上，在主題編 **[!UICONTROL 輯器中開啟]** 「全局主題」。 在主題編輯器中，導覽至「主 **[!UICONTROL 題選項]**![主題選項](assets/theme-options.png) >設 **[!UICONTROL 定]**」。 在「 **[!UICONTROL Adobe字型設定]** 」欄位中，選取套件，然後按一下「 **[!UICONTROL 儲存」]**。
 
-   新增至 [!UICONTROL Typekit的字型] ，可供所有元件的 **[!UICONTROL Text]** accordion中選取。
+   新增至 **[!UICONTROL Adobe Fonts的字型]** ，可在所有元件的 **[!UICONTROL Text]** accordion中選取。
 
