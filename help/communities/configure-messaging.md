@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9d952604-f9ef-498f-937b-871817c80226
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 3%
@@ -41,7 +41,9 @@ ht-degree: 3%
 
 **G** —— 恢復已刪除的消息
 
-![消息部分](assets/messaging-section.png)![還原消息](assets/restore-message.png)
+![消息部分](assets/messaging-section.png)
+
+![還原消息](assets/restore-message.png)
 
 要啟用和修改消息傳遞功能，請參閱：
 
