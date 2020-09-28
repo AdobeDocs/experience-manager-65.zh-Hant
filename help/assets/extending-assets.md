@@ -1,9 +1,9 @@
 ---
-title: 自訂和擴充 [!DNL Adobe Experience Manager Assets]。
+title: 自訂和擴充 [!DNL Assets]
 description: 瞭解如何自訂和擴充資產共用與資產編輯器，為使用者提供特別自訂的介面和功能集。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -30,9 +30,9 @@ ht-degree: 0%
 
 可自訂資產編輯器外觀和感覺的下列方面：
 
-* 標誌： 您可以將您自己組織的標誌新增至介面。
-* 顏色和字型： 您可以變更介面中使用的顏色和字型。
-* HTML程式碼： 若要更徹底地自訂，您可以變更定義介面的基礎HTML程式碼。
+* 標誌：您可以將您自己組織的標誌新增至介面。
+* 顏色和字型：您可以變更介面中使用的顏色和字型。
+* HTML程式碼：若要更徹底地自訂，您可以變更定義介面的基礎HTML程式碼。
 
 ## 自訂轉譯 {#customizing-renditions}
 
