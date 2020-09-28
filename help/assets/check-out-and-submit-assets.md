@@ -1,11 +1,11 @@
 ---
-title: 登入並登出您的數位資產以進行編輯。
+title: 登入及登出資產以進行編輯
 description: 瞭解如何取出要編輯的資產，並在變更完成後將其存回。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 1. 在工具列中，按一下「 **[!UICONTROL 釋放鎖定」]**。 資產已登入，可供其他使用者編輯。
 
-## 最佳實務與限制 {#tips-limitations}
+## 最佳做法和限制 {#tips-limitations}
 
 * 可以刪除包含已簽 *出資產* 檔案的資料夾。 在刪除資料夾之前，請確定使用者未簽出任何數位資產。
 
