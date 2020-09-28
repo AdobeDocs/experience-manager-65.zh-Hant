@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -20,21 +20,11 @@ ht-degree: 0%
 
 # 配置自適應表單快取 {#configure-adaptive-forms-cache}
 
-快取是縮短資料存取時間、減少延遲並改善輸入／輸出(I/O)速度的機制。 最適化表單快取只儲存最適化表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 它有助於縮短在用戶端上轉換最適化表單或檔案所需的時間。 它專為最適化表單而設計，也支援最適化檔案。
+快取是縮短資料存取時間、減少延遲並改善輸入／輸出(I/O)速度的機制。 最適化表單快取只儲存最適化表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 它有助於縮短在用戶端上轉換最適化表單所需的時間。 它專為最適化表單而設計。
 
->[!NOTE]
->
->使用最適化表單快取時，請使用AEM快 [!DNL Dispatcher] 取最適化表單或檔案的用戶端程式庫（CSS和JavaScript）。
+## 在作者和發佈例項處配置自適應表單快取 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
->[!NOTE]
->
->在開發自訂元件時，在用於開發的伺服器上，請停用最適化表單快取。
-
-## 配置快取 {#configure-the-cache}
-
-執行以下步驟以配置自適應表單快取：
-
-1. 請前往https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM網頁主控台組態管理器。
+1. 請前往AEM網頁主控台組態管理器(網址 `https://[server]:[port]/system/console/configMgr`)。
 1. 按一 **[!UICONTROL 下「最適化表單與互動式通訊Web頻道設定」]** ，以編輯其設定值。
 1. 在「編 [!UICONTROL 輯設定值] 」對話方塊中 [!DNL Forms] ，在「最適化表單數」欄位中指定AEM伺服器例項可快取的表 **** 單或檔案數上限。 預設值為100。
 
@@ -45,3 +35,149 @@ ht-degree: 0%
    ![最適化表單HTML快取的設定對話方塊](assets/cache-configuration-edit.png)
 
 1. 按一下 **[!UICONTROL 保存]** ，保存配置。
+
+您的環境已配置為使用快取自適應表單和相關資產。
+
+
+## （可選）在調度器上配置自適應表單快取 {#configure-the-cache}
+
+您也可以在Dispatcher中設定自適應表單快取，以進一步提升效能。
+
+### 先決條件 {#pre-requisites}
+
+* 啟用在 [用戶端合併或預填充資料](prepopulate-adaptive-form-fields.md#prefill-at-client) 。 它有助於合併每個預先填入表單實例的唯一資料。
+* [為每個發佈實例啟用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。 它可協助針對最適化表單取得更佳的快取效能。 刷新代理的預設URL為 `http://[server]:[port]]/etc/replication/agents.publish/flush.html`。
+
+### 在調度器上快取自適應表單的注意事項 {#considerations}
+
+* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher] 快取最適化表單的用戶端程式庫（CSS和JavaScript）。
+* 在開發自訂元件時，在用於開發的伺服器上，請停用最適化表單快取。
+* 不會快取無副檔名的URL。 例如，會快取具有模式模式的URL`/content/forms/[folder-structure]/[form-name].html` ，而快取會忽略具有模式的URL `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`。 因此，請搭配使用URL和擴充功能，以充份運用快取功能。
+* 本地化最適化表單的考量事項：
+   * 使用URL格 `http://host:port/content/forms/af/<afName>.<locale>.html` 式來要求本地化版本的最適化表單，而非 `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
+   * [針對格式化的URL](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) ，停用使用瀏覽器地區 `http://host:port/content/forms/af/<adaptivefName>.html`設定。
+   * 當您使用URL格 `http://host:port/content/forms/af/<adaptivefName>.html`式，並停 **** 用設定管理員中的「使用瀏覽器地區設定」時，就會提供最適化表單的非本地化版本。 非本地化語言是開發自適應表單時使用的語言。 不會考慮為瀏覽器設定的地區設定（瀏覽器地區設定），而且會提供最適化表單的非本地化版本。
+   * 當您使用URL格 `http://host:port/content/forms/af/<adaptivefName>.html`式，並啟 **** 用設定管理員中的「使用瀏覽器地區設定」時，就會提供最適化表單的本地化版本（如果有的話）。 本地化的最適化表單語言是以您瀏覽器所設定的地區（瀏覽器地區）為基礎。 它只能導致 [自適應表單的第一個實例]。 若要防止問題在您的例項上發生，請參閱疑難 [排解](#only-first-insatnce-of-adptive-forms-is-cached)。
+
+### 在調度程式中啟用快取
+
+執行下列步驟，以啟用和配置分發程式上的快取自適應表單：
+
+1. 為您環境的每個發佈實例開啟以下URL並配置複製代理：
+   `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
+
+1. [將以下內容添加到dispatcher.any檔案中](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
+
+   ```JSON
+      /invalidate
+      {
+      /0000
+      {
+      /glob "*"
+      /type "deny"
+      }
+      /0001
+      {
+      # Consider all HTML files stale after an activation.
+      /glob "*.html"
+      /type "allow"
+      }
+      /0002
+      {
+      # Exclude htmls present in AF directories
+      /glob "/content/forms/**/*.html"
+      /type "deny"
+      }
+   ```
+
+   當您新增上述項目時：
+
+   * 最適化表單會保留在快取中，直到未發佈更新的表單版本為止。
+
+   * 當發佈自適應表單中引用的較新版本資源時，受影響的自適應表單會自動失效。 引用資源的自動失效有一些例外。 有關異常的解決方法，請參 [閱疑難排](#troubleshooting) 解部分。
+1. [新增下列rules dispatcher.any或自訂規則檔案](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。 它會排除不支援快取的URL。 例如，互動式通訊。
+
+   ```JSON
+      /0000 {
+            /glob "*"
+            /type "allow"
+      }
+      ## Don't cache csrf login tokens
+      /0001 {
+            /glob "/libs/granite/csrf/token.json"
+            /type "deny"
+      }
+      ## Don't cache IC - print channel
+      /0002 {
+            /glob "/content/forms/**/channels/print.html"
+            /type "deny"
+      }
+      ## Don't cache IC - web channel
+      /0003 {
+            /glob "/content/forms/**/channels/web.html"
+            /type "deny"
+      }
+   ```
+
+1. [將下列參數新增至忽略URL參數清單](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters):
+
+   ```JSON
+      /ignoreUrlParams {
+      /0001 { /glob "*" /type "deny" }
+      # added for AEM forms specific use cases.
+      /0003 { /glob "dataRef" /type "allow" }
+      }
+   
+您的AEM環境已設定為快取最適化表單。 它會快取所有類型的調適性表單。 如果您在傳送快取頁面之前需要檢查頁面的使用者存取權限，請參閱快取保 [護的內容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+
+## 疑難排解 {#troubleshooting}
+
+### 有些包含影像或視訊的最適化表單不會自動從分派器快取中失效 {#videos-or-images-not-auto-invalidated}
+
+#### 問題 {#issue1}
+
+當您透過資產瀏覽器選取影像或視訊並新增至最適化表單，而且這些影像和視訊是在資產編輯器中編輯時，包含這些影像的最適化表單不會自動從分派器快取中失效。
+
+#### 解決方案 {#Solution1}
+
+發佈影像和視訊後，請明確取消發佈並發佈參照這些資產的最適化表單。
+
+### 某些包含內容片段或體驗片段的最適化表單不會自動從分派器快取中失效 {#content-or-experience-fragment-not-auto-invalidated}
+
+#### 問題 {#issue2}
+
+當您將內容片段或體驗片段新增至最適化表單，而這些資產會獨立編輯和發佈時，最適化表單中會包含這些資產，這些資產不會自動從分派器快取中失效。
+
+#### 解決方案 {#Solution2}
+
+發佈更新的內容片段或體驗片段後，請明確取消發佈並發佈使用這些資產的最適化表單。
+
+### 僅快取最適化表單的第一個例項{#only-first-insatnce-of-adptive-forms-is-cached}
+
+#### 問題 {#issue3}
+
+當最適化表單URL沒有任何本地化資訊，且啟用組態管理員中的 **[!UICONTROL Use Browser Locale]** ，就會提供適化表單的本地化版本，而且只會快取並傳送最適化表單的第一個例項給每個後續使用者。
+
+#### 解決方案 {#Solution3}
+
+執行下列步驟以解決問題：
+
+1. 開啟conf.d/httpd-dispatcher.conf或任何其他設定檔，設定為在執行時期載入。
+
+1. 將下列程式碼新增至您的檔案並儲存。 它是一個范常式式碼，可依您的環境加以修改。
+
+```XML
+   <VirtualHost *:80>
+        # Set log level high during development / debugging and then turn it down to whatever is appropriate
+    LogLevel rewrite:trace6
+        # Start Rewrite Engine
+    RewriteEngine On
+        # Handle actual URL convention (just pass through)
+        RewriteRule "^/content/forms/af/(.*)[.](.*).html$" "/content/forms/af/$1.$2.html" [PT]
+ 
+        # Handle selector based redirection basded on browser language
+        # The Rewrite Cond(ition) is looking for the Accept-Lanague header and if found takes the first two character which most likely will be the desired language selector.
+        RewriteCond %{HTTP:Accept-Language} ^(..).*$ [NC]
+        RewriteRule "^/content/forms/af/(.*).html$" "/content/forms/af/$1.%1.html" [R]
+   </VirtualHost>
+```
