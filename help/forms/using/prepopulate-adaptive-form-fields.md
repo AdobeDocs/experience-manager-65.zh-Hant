@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 12b2b73b6363c90d784527b260d664e48c746496
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2200'
 ht-degree: 0%
 
 ---
@@ -81,9 +81,9 @@ ht-degree: 0%
 
 XFA自適應表單的預填充XML和提交的XML結構如下：
 
-* **預填充XML結構**: 預先填入XFA自適應表單的XML必須與XFA表單範本的資料架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住 `/afData/afBoundData` 標籤。
+* **預填充XML結構**:預先填入XFA自適應表單的XML必須與XFA表單範本的資料架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住 `/afData/afBoundData` 標籤。
 
-* **已提交的XML結構**: 當未使用預填充XML時，提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式也相同。 如果預填充XML沒有包裝函 `afData/afBoundData`式，而是直接從結構根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
+* **已提交的XML結構**:當未使用預填充XML時，提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式也相同。 如果預填充XML沒有包裝函 `afData/afBoundData`式，而是直接從結構根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
 
 Prefill-Submit-Data-ContentPackage.zip
 
@@ -93,8 +93,8 @@ Prefill-Submit-Data-ContentPackage.zip
 
 基於XML架構的自適應表單預填充XML和提交XML的結構如下：
 
-* **預填充XML結構**: 預填充XML必須與關聯的XML架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住/afData/afBoundData標籤。
-* **已提交的XML結構**: 如果未使用預填充XML，則提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式相同。 如果預填充XML沒有包裝函 `afData/afBoundData` 式，而是直接從模式根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
+* **預填充XML結構**:預填充XML必須與關聯的XML架構相容。 若要預先填入未系結的欄位，請將預先填入的XML結構包住/afData/afBoundData標籤。
+* **已提交的XML結構**:如果未使用預填充XML，則提交的XML會包含包裝函式標籤中綁定和未綁定欄位 `afData` 的資料。 如果使用預填充XML，則提交的XML與預填充XML的結構相同。 如果預填充XML以根標 `afData` 記開頭，則輸出XML的格式相同。 如果預填充XML沒有包裝函 `afData/afBoundData` 式，而是直接從模式根標籤（如）開始 `employeeData`，則提交的XML也會以標籤 `employeeData` 開始。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -146,8 +146,8 @@ Prefill-Submit-Data-ContentPackage.zip
 
 對於以JSON結構描述為基礎的最適化表單，以下說明預先填寫JSON和已提交JSON的結構。 如需詳細資訊，請參 [閱「使用JSON結構描述建立最適化表單](../../forms/using/adaptive-form-json-schema-form-model.md)」。
 
-* **預填JSON結構**: 預先填入JSON必須與關聯的JSON結構描述相容。 或者，如果您也想要預先填寫未系結的欄位，可將它包裝在/afData/afBoundData物件中。
-* **已提交的JSON結構**: 如果未使用預先填寫JSON，則提交的JSON會包含afData包裝函式標籤中已系結和未系結欄位的資料。 如果使用預先填入JSON，則提交的JSON與預先填入JSON的結構相同。 如果預先填寫JSON以afData根物件開頭，則輸出JSON的格式會相同。 如果預先填入JSON沒有afData/afBoundData包裝函式，而是直接從結構根物件（例如使用者）啟動，則提交的JSON也會從使用者物件開始。
+* **預填JSON結構**:預先填入JSON必須與關聯的JSON結構描述相容。 或者，如果您也想要預先填寫未系結的欄位，可將它包裝在/afData/afBoundData物件中。
+* **已提交的JSON結構**:如果未使用預先填寫JSON，則提交的JSON會包含afData包裝函式標籤中已系結和未系結欄位的資料。 如果使用預先填入JSON，則提交的JSON與預先填入JSON的結構相同。 如果預先填寫JSON以afData根物件開頭，則輸出JSON的格式會相同。 如果預先填入JSON沒有afData/afBoundData包裝函式，而是直接從結構根物件（例如使用者）啟動，則提交的JSON也會從使用者物件開始。
 
 ```json
 {
@@ -263,7 +263,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->根據經驗，如果綁定和未綁定欄位與最終用戶在未綁定欄位中填充的資料相交，則不要混用這些欄位。 如果可能，您應修改架構或XFA表單模板，並為未綁定欄位添加一個條目，以便它也被綁定，其資料與提交資料中的其他欄位一樣可用。
+>根據經驗，如果綁定和未綁定欄位與最終用戶在未綁定欄位中填充的資料交叉，則不要混用這些欄位。 如果可能，您應修改架構或XFA表單模板，並為未綁定欄位添加一個條目，以便它也被綁定，其資料與提交資料中的其他欄位一樣可用。
 
 ## 支援的預先填入使用者資料通訊協定 {#supported-protocols-for-prefilling-user-data}
 
@@ -371,3 +371,20 @@ prefill-page component.zip
 1. 在「屬性」主控台中，導覽至「AEM Forms容器>基本>預填服務」。
 1. 選擇「預設預填服務」，然後按一下「 **[!UICONTROL 儲存]**」。 服務與表單相關聯。
 
+## 在用戶端預先填入資料 {#prefill-at-client}
+
+當您預先填寫最適化表格時，AEM Forms伺服器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
+
+您可以設定AEM Forms伺服器，以在用戶端而非伺服器上執行資料合併動作。 它可大幅縮短預先填寫和轉換最適化表單的時間。 依預設，功能會停用。 可以從「配置管理器」或命令行啟用它。
+
+* 要從配置管理器啟用或禁用：
+   1. 開啟AEM Configuration Manager。
+   1. 定位並開啟自適應表單和互動式通信Web通道配置
+   1. 啟用Configuration.af.clientside.datamerge.enabled.name選項
+* 要從命令行啟用或禁用：
+   * 若要啟用，請執行下列cURL命令：
+      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+
+   * 若要停用，請執行下列cURL命令：
+      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+   若要充份運用用戶端選項的預先填入資料，請更新您的預先填入服務以傳回 [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) 和 [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
