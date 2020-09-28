@@ -1,11 +1,11 @@
 ---
-title: 有關數位資產的使用與分享的報告。
+title: 關於資產使用與共用的報告
 description: 有關您資產的報 [!DNL Adobe Experience Manager Assets] 告，可協助您瞭解數位資產的使用、活動和共用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2ac848fa360ad87ff4f87efc38ae1361ae890cb2
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1047'
 ht-degree: 8%
 
 ---
