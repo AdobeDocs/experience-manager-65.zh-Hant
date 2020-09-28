@@ -1,9 +1,9 @@
 ---
-title: 多語言資產和資產翻譯.
+title: 多語言資產和資產翻譯
 description: 瞭解如何自動化工作流程，將資產（包括二進位檔、中繼資料和標籤）翻譯成多種語言。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 2%
@@ -13,13 +13,13 @@ ht-degree: 2%
 
 # 多語言資產 {#multilingual-assets}
 
-[!DNL Adobe Experience Manager Assets] 可讓您自動處理資產（包括二進位檔、中繼資料和標籤）的翻譯工作流程，以產生其他語言的資產，以便用於多語言專案。
+[!DNL Adobe Experience Manager Assets] 可讓您自動處理資產（包括二進位檔、中繼資料和標籤）的翻譯工作流程，以產生其他語言的資產，以用於多語言專案。
 
-為了自動化翻譯工作流程，您將翻譯服務提供商與 [!DNL Experience Manager] 項目整合，並建立將資產翻譯成多種語言的項目。 [!DNL Experience Manager] 支援人文和機器翻譯工作流程。
+為自動化翻譯工作流程，您將翻譯服務提供商與 [!DNL Experience Manager] 項目整合，並建立將資產翻譯成多種語言的項目。 [!DNL Experience Manager] 支援人文和機器翻譯工作流程。
 
-人類翻譯： 轉換的資產會傳回並匯入 [!DNL Experience Manager]。 當翻譯提供者與之整合時， [!DNL Experience Manager]資產會自動在與翻譯提供 [!DNL Experience Manager] 者之間傳送。
+人類翻譯：轉換的資產會傳回並匯入 [!DNL Experience Manager]。 當翻譯提供者與之整合時， [!DNL Experience Manager]資產會自動在與翻譯提供 [!DNL Experience Manager] 者之間傳送。
 
-機器翻譯： 機器翻譯服務會立即轉譯資產的中繼資料和標籤。
+機器翻譯：機器翻譯服務會立即轉譯資產的中繼資料和標籤。
 
 折算資產包括下列各項：
 
