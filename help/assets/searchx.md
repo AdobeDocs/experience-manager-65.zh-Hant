@@ -1,11 +1,11 @@
 ---
-title: 擴充的搜尋功能 [!DNL Adobe Experience Manager Assets]。
+title: 擴充搜尋功能。
 description: 將搜尋功能擴 [!DNL Adobe Experience Manager Assets] 充至預設值以外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '840'
 ht-degree: 18%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 18%
 
 最佳做法是複製現有謂詞並調整它。 範例謂語位於 **/libs/cq/search/components/predicates中**。
 
-### 範例： 建立簡單屬性謂詞 {#example-build-a-simple-property-predicate}
+### 範例：建立簡單屬性謂詞 {#example-build-a-simple-property-predicate}
 
 要構建屬性謂語：
 
@@ -147,7 +147,7 @@ ht-degree: 18%
    >
    >搜尋時，請務必準確輸入詞語，包括正確的大小寫。
 
-### 範例： 建立簡單群組述詞 {#example-build-a-simple-group-predicate}
+### 範例：建立簡單群組述詞 {#example-build-a-simple-group-predicate}
 
 若要建立群組述詞：
 
