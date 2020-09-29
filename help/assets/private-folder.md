@@ -3,9 +3,9 @@ title: 共用資產的私人資料夾
 description: 瞭解如何在中建立私人資料 [!DNL Adobe Experience Manager Assets] 夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 63d08f932b09e375e1b0da92cde27a60ec6e7f56
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -82,15 +82,4 @@ ht-degree: 0%
 >[!NOTE]
 >
 >如果您使用上述方法從使用者介面刪除資料夾，則相關的使用者群組也會隨之刪除。
-不過，使用 [JMX可以從資料庫清理現有的冗餘、未使用和自動生成的用戶組](#group-clean-up-jmx)。
-
-### 使用JMX來清除未使用的使用者群組 {#group-clean-up-jmx}
-
-要清除未使用用戶組的儲存庫，請執行以下操作：
-
-1. 開啟JMX以清除您作者例項中「資產」的 [!DNL Experience Manager] 冗餘群組 `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`。
-For example, `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
-
-1. 從此JMX `clean` 調用方法。
-
-您可以看到，所有冗餘用戶組或自動生成的組（建立名稱與先前刪除的組相同的資料夾時建立的組）都將從路徑中刪除 `/home/groups/mac/default/<user_name>/<folder_name>`。
+不過，您可在作者例項中，使用 `clean` JMX中的方法(http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redunt+groups+for+Assets)，從儲存庫中清除現有的冗餘、未使用和自動產生的使用者群組。
