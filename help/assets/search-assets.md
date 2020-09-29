@@ -4,9 +4,9 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cdf22fea17f6c79e3a2b565a4c6f728bf0bbd23a
+source-git-commit: 7b3282f086ba1f0a2f1e5430b90a6742ddf946d6
 workflow-type: tm+mt
-source-wordcount: '5888'
+source-wordcount: '5955'
 ht-degree: 5%
 
 ---
@@ -224,24 +224,29 @@ ht-degree: 5%
 
 [!DNL Experience Manager] 搜尋功能支援搜尋系列和搜尋系列中的資產。 請參閱 [搜尋系列](/help/assets/managing-collections-touch-ui.md)。
 
-## 資產選取器 {#assetpicker}
+## Asset selector {#assetpicker}
 
-「資產選擇器」可讓您以特殊方式搜尋、篩選及瀏覽DAM資產。 資產選擇器可在取得 `https://[aem-server]:[port]/aem/assetpicker.html`。 您可以使用此功能擷取您選取之資產的中繼資料。 您可以使用支援的請求參數來啟動它，例如資產類型（影像、視訊、文字）和選擇模式（單選或多選）。 這些參數會針對特定搜尋例項設定資產選擇器的上下文，並在整個選取範圍中保持不變。
+>[!NOTE]
+>
+>在舊版中，資產選 [取器稱為](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html) 「資產選擇器」 [!DNL Adobe Experience Manager]。
 
-資產選擇器使用HTML5訊 `Window.postMessage` 息，將所選資產的資料傳送給收件者。 「資產選擇器」僅在瀏覽模式下工作，且僅能與Omnisearch結果頁搭配使用。
+資產選擇器可讓您以特殊方式瀏覽、搜尋及篩選DAM資產。 您可以使用啟動實例中的資 [!DNL Experience Manager] 產選擇器 `https://[aem-server]:[port]/aem/assetpicker.html`。 此URL會在瀏覽模式中開啟資產選擇器。 使用支援的請求參數做為字尾，例 `mode` 如（單選或多選），或搭配 `viewmode``assettype` （影像、視訊、文字）和 `mimetype`。 這些參數會為特定搜尋例項設定資產選取器的上下文，並在整個選取範圍中保持不變。 您也可以使用此功能擷取您選取之資產的中繼資料。
 
-您可以在URL中傳遞下列請求參數，以在特定內容中啟動資產選擇器：
+資產選擇器會使用HTML5 `Window.postMessage` 訊息，將所選資產的資料傳送給收件者。 它僅在瀏覽模式下運作，且僅適用於Omnisearch結果頁面。
+
+在URL中傳遞下列請求參數，以在特定內容中啟動資產選擇器：
 
 | 名稱 | 值 | 範例 | 目的 |
 |---|---|---|---|
-| 資源尾碼(B) | 資料夾路徑作為URL中的資源尾碼：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 若要啟動已選取特定檔案夾的資產選擇器，例如在選取檔案 `/content/dam/we-retail/en/activities` 夾時，URL應為： [https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在啟動資產選擇器時需要選取特定資料夾，請將其作為資源尾碼傳遞。 |
+| 資源尾碼(B) | 資料夾路徑作為URL中的資源尾碼：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 若要啟動已選取特定檔案夾的資產選擇器，例如已選取 `/content/dam/we-retail/en/activities` 檔案夾，URL應為： [https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在啟動資產選擇器時需要選取特定資料夾，請將其作為資源尾碼傳遞。 |
 | 模式 | 單一，多重 | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 在多個模式中，您可以使用資產選擇器同時選取多個資產。 |
-| mimetype | 資產的mimetype(s`/jcr:content/metadata/dc:format`)（也支援萬用字元） | <ul><li>[https://localhost:4502/aem/assetpicker.html?mimetype=image/png](https://localhost:4502/aem/assetpicker.html?mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它以MIME類型篩選資產 |
 | 對話方塊 | true, false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用這些參數將資產選擇器開啟為「花崗岩」對話方塊。 只有當您透過Granite路徑欄位啟動資產選擇器，並將其設定為pickerSrc URL時，此選項才適用。 |
-| assettype(S) | 影像、檔案、多媒體、封存 | <ul><li>[https://localhost:4502/aem/assetpicker.html?assettype=images](https://localhost:4502/aem/assetpicker.html?assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=multimedia](https://localhost:4502/aem/assetpicker.html?assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=archives](https://localhost:4502/aem/assetpicker.html?assettype=archives)</li></ul> | 使用這個選項可根據傳遞的值來篩選資產類型。 |
 | 根 | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities) | 使用此選項可指定資產選擇器的根資料夾。 在這種情況下，資產選擇器可讓您只選取根資料夾下的子資產（直接／間接）。 |
+| viewmode | 搜尋 |  | 若要在搜尋模式中啟動資產選擇器，請使用資產類型和mimetype參數。 |
+| assettype | 影像、檔案、多媒體、封存 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives)</li></ul> | 使用這個選項可根據傳遞的值來篩選資產類型。 |
+| mimetype | 資產的mimetype(s`/jcr:content/metadata/dc:format`)（也支援萬用字元） | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它以MIME類型篩選資產 |
 
-要訪問資產選擇器介面，請轉至 `https://[aem_server]:[port]/aem/assetpicker`。 導覽至所要的檔案夾，並選取一或多個資產。 或者，從Omnisearch方塊中搜尋所要的資產、視需要套用篩選，然後選取它。
+若要存取資產選擇器介面，請前往 `https://[aem_server]:[port]/aem/assetpicker`。 導覽至所要的檔案夾，並選取一或多個資產。 或者，從Omnisearch方塊中搜尋所要的資產、視需要套用篩選，然後選取它。
 
 ![在資產選擇器中瀏覽並選取資產](assets/assetpicker.png)
 
@@ -369,7 +374,7 @@ ht-degree: 5%
 
 您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
 
-如果文字擷取對您的部署而言太過耗費資源，請考慮停用 [文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
+如果文字擷取對您的部署而言太過耗費資源，請考慮停 [用文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
 ### 自訂謂語以篩選搜尋結果 {#custompredicates}
 
