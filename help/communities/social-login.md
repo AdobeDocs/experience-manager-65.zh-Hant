@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 42606e76742fe7698c4c186208e515ed22adc5a4
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
       * 建立和發佈 [Twitter Connect雲端服務](#create-a-twitter-connect-cloud-service)。
 
 
-1. [**啟用&#x200B;**社群網站](#enable-social-login)的社交登入。
+1. [**啟用** 社群網站](#enable-social-login) 的社交登入。
 
 有兩個基本概念：
 
@@ -96,7 +99,7 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ### 建立Facebook Connect Cloud服務 {#create-a-facebook-connect-cloud-service}
 
-Adobe Granite OAuth應用程式和Provider [](https://chl-author.corp.adobe.com/content/help/en/experience-manager/6-4/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) （透過建立雲端服務設定實例化）例項可識別新增使用者的Facebook應用程式和成員群組。
+Adobe Granite OAuth應用程式和Provider [](#adobe-granite-oauth-application-and-provider) （透過建立雲端服務設定實例化）例項可識別新增使用者的Facebook應用程式和成員群組。
 
 1. 在AEM作者例項上，以管理員權限登入。
 1. 從全域導覽中，選 **[!UICONTROL 取「工具]** > **[!UICONTROL 雲端服務]** > **[!UICONTROL Facebook Social登入設定」]**。
@@ -120,6 +123,7 @@ Adobe Granite OAuth應用程式和Provider [](https://chl-author.corp.adobe.com/
    * **[!UICONTROL 遮色片使用者ID]**:保持未選定狀態。
    * **[!UICONTROL 範圍電子郵件]**:應從Facebook擷取使用者的電子郵件ID。
    * **[!UICONTROL 「新增至使用者群組]** 」選取「新增使用者群組」，為要新增使用者的社群 [網站](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) ，選擇一或多個成員群組。
+
    >[!NOTE]
    >
    >您可隨時新增或移除群組。 但現有使用者的會籍不會受到影響。 自動會籍僅適用於在此欄位更新後建立的新使用者。 對於匿名用戶被禁用的站點，選擇將用戶添加到為該封閉社區站點指定的相應社區成員組。
@@ -174,7 +178,7 @@ AEM Communities提供者可擴充 [Adobe Granite OAuth應用程式和提供者�
 
    * **[!UICONTROL 啟用欄位]**
 
-      如果勾選，則會在向Facebook要求使用者驗證和資訊時指定列出的欄位。 預設值為取消選中。
+      勾選後，列出的欄位會在向Facebook要求使用者驗證和資訊時指定。 預設值為取消選中。
 
    * **[!UICONTROL 欄位]**
 
@@ -191,6 +195,7 @@ AEM Communities提供者可擴充 [Adobe Granite OAuth應用程式和提供者�
       * updated_time
       * 已驗證
       * 電子郵件
+
    如果添加或更改了任何欄位，請更新相應的預設同步處理程式配置以更正映射。
 
    * **[!UICONTROL 更新使用者]**
@@ -209,7 +214,7 @@ Facebook和Twitter的後續步驟相同：
 
 ### 建立Twitter應用程式 {#create-a-twitter-app}
 
-必須有已設定的Twitter應用程式才能啟用Twitter社交登入。
+必須有已設定的Twitter應用程式，才能啟用Twitter社交登入。
 
 請依照最新指示，在https://apps.twitter.com建立新的Twitter應用 [程式](https://apps.twitter.com/)。
 
@@ -226,7 +231,7 @@ Facebook和Twitter的後續步驟相同：
    >
    >若要開發，https://127.0.0.1/將有效。
 
-1. 建立應用程式後，請找出「 **[!UICONTROL 消費者(API)金鑰]** 」 **[!UICONTROL 和「消費者(API)密碼」]**。 設定 [Twitter雲端服務時，需要此資訊](#createatwittercloudservice)。
+1. 建立應用程式後，請找出 **[!UICONTROL 使用者(API)金鑰]****[!UICONTROL 和使用者(API)密碼]**。 設定 [Twitter雲端服務時，需要此資訊](#createatwittercloudservice)。
 
 #### 權限 {#permissions}
 
@@ -310,6 +315,7 @@ AEM Communities設定可擴充 [Adobe Granite OAuth應用程式和提供者例�
    ![twitteroauth_png](assets/twitteroauth_png.png)
 
    * **[!UICONTROL OAuth提供者ID]**
+
    (必&#x200B;*要*)預設值 *為soco -twitter*。 不要編輯。
 
    * **[!UICONTROL 雲端服務設定]**
