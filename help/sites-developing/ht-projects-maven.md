@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: add17f46dfb292aeaf8425e5f75cfe955ed93cbc
 workflow-type: tm+mt
-source-wordcount: '2424'
+source-wordcount: '2468'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Apache Maven是開放原始碼工具，可自動建立並提供高品質專案�
 * 不受IDE限制的開發環境
 * Adobe提供的Maven原型和文物使用
 * 使用Apache Sling和Apache Felix工具集進行Maven開發設定
-* 輕鬆匯入IDE; 例如，Eclipse和／或IntelliJ
+* 輕鬆匯入IDE;例如，Eclipse和／或IntelliJ
 * 輕鬆與持續整合系統整合
 
 ### Maven Project Archetypes {#maven-project-archetypes}
@@ -52,7 +52,7 @@ Adobe提供兩種Maven原型，可做為AEM專案的基準。 請參閱下列連
 
 過去，開發人員必須管理相對大量的個別相依性，以至於不同AEM程式庫，而且當使用每個新API時，必須將一或多個個別相依性新增至專案。 在一個項目中，UberJar的引入導致30個單獨的依賴項被從項目中刪除。
 
-從AEM 6.5開始，Adobe提供兩個UberJar: 一個包含過時的介面，另一個包含刪除那些過時的介面。 透過在建置時明確參照某個程式碼，客戶一定會瞭解他們是否對不建議使用的程式碼有依賴性。
+從AEM 6.5開始，Adobe提供兩個UberJar:一個包含過時的介面，另一個包含刪除那些過時的介面。 透過在建置時明確參照某個程式碼，客戶一定會瞭解他們是否對不建議使用的程式碼有依賴性。
 
 第二個Uber Jar會移除任何已過時的類別、方法和屬性，讓客戶可以編譯並瞭解自訂代碼是否是未來證明。
 
@@ -60,8 +60,12 @@ Adobe提供兩種Maven原型，可做為AEM專案的基準。 請參閱下列連
 
 AEM 6.5提供兩種Uber Jar:
 
-1. Uber Jar —— 僅包含未標示為取代的公用介面。 這是建議 **使用的** UberJar，因為它可協助防範未來的程式碼基底，避免依賴已過時的API。
+1. Uber Jar —— 僅包含未標示為取代的公共介面。 這是建議 **使用的** UberJar，因為它可協助防範未來的程式碼基底，避免依賴已過時的API。
 1. Uber Jar含過時的API —— 包含所有公用介面，包括未來AEM版本中標示為淘汰的介面。
+
+>[!NOTE]
+>
+>從AEM 6.5.6開始，UberJar和其他相關工件可在 [Maven Central儲存庫中取用](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/) ，而非Adobe Public Maven儲存庫(repo.adobe.com)。 主UberJar檔案已更名為 `uber-jar-<version>.jar`。 因此，標籤沒 `classifier`有 `apis` 任何值和值 `dependency` 。
 
 ### 我要如何使用UberJars? {#how-do-i-use-the-uberjars}
 
@@ -97,7 +101,7 @@ AEM 6.5提供兩種Uber Jar:
 </dependency>
 ```
 
-如果您的公司已使用Maven Repository Manager（如Sonatype Nexus、Apache Archiva或JFrog Artifactory），請將適當的配置添加到項目中以引用此儲存庫管理器，並將Adobe的Maven儲存庫([https://repo.adobe.com/nexus/content/groups/public/](https://repo.adobe.com/nexus/content/groups/public/))添加到儲存庫管理器。
+如果您的公司已使用Maven Repository Manager（如Sonatype Nexus、Apache Archiva或JFrog Artifactory），請將適當的配置添加到項目中以引用此儲存庫管理器，並將Adobe的Maven儲存庫([https://repo.maven.apache.org/maven2/](https://repo.maven.apache.org/maven2/))添加到儲存庫管理器。
 
 如果您不使用儲存庫管理器，則需要將儲存庫元 *素添加* 到 ** pom.xml檔案中：
 
@@ -106,7 +110,7 @@ AEM 6.5提供兩種Uber Jar:
     <repository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </repository>
 </repositories>
@@ -114,7 +118,7 @@ AEM 6.5提供兩種Uber Jar:
     <pluginRepository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </pluginRepository>
 </pluginRepositories>
@@ -431,7 +435,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 </workspaceFilter>
 ```
 
-您還需要將maven-resources-plugin重新配置為不將這些檔案包含在包中： filter.xml檔案不會在安裝套件時套用，但只有在使用套件管理員重新建立套件時才會套用。
+您還需要將maven-resources-plugin重新配置為不將這些檔案包含在包中：filter.xml檔案不會在安裝套件時套用，但只有在使用套件管理員重新建立套件時才會套用。
 
 依此方 `<resources>` 式變更內容中的區段：
 
@@ -455,7 +459,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 ### 如何使用JSP {#how-to-work-with-jsps}
 
-目前所述的Maven設定會建立內容套件，其中也可包含元件及其對應的JSP。 不過，Maven會將這些檔案視為內容套件中的任何其他檔案，甚至不會將它們辨識為JSP。
+目前所述的Maven設定會建立內容套件，其中也可包含元件及其對應的JSP。 不過，Maven會將它們視為屬於內容套件的任何其他檔案，甚至不會將它們辨識為JSP。
 
 產生的元件在AEM中都能運作，但讓Maven知道JSP有兩個主要優點
 
@@ -488,7 +492,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 * 我們告訴它要編譯 `${project.build.directory}/jsps-to-compile`
 * 並將結果輸 `${project.build.directory}/ignoredjspc` 出至 `myproject/content/target/ignoredjspc`(
 
-* 我們設定maven-resources-plugin，將JSP複製到 `${project.build.directory}/jsps-to-compile``libs/` generate-sources階段，並設定它不複製資料夾(因為這是AEM產品程式碼，我們不想產生我們專案編譯的相依性，也不需要驗證它是否編譯。
+* 我們設定maven-resources-plugin，將JSP複製到 `${project.build.directory}/jsps-to-compile``libs/` generate-sources階段，並設定它不複製資料夾(因為這是AEM產品程式碼，我們不想產生我們專案編譯的相依性，也不需要驗證它是否已編譯。
 
 如上所述，我們的主要目標是驗證JSP，並確保如果JSP包含錯誤，則生成過程會失敗。 這就是為什麼我們將它們編譯到一個單獨的目錄中，而這個目錄會被忽略（事實上，隨後會立即刪除，如您稍後所見）。
 
