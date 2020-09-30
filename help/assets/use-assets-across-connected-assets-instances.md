@@ -3,10 +3,10 @@ title: 使用「連線資產」在 中共用 DAM 資產 [!DNL Sites]
 description: 使用遠程部署中可用 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 的資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 7790c9c90953e0f5c5b6be38f5d54346fb595e8f
 workflow-type: tm+mt
-source-wordcount: '2103'
-ht-degree: 44%
+source-wordcount: '2159'
+ht-degree: 42%
 
 ---
 
@@ -157,7 +157,9 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 擷取的資產可設為其他任何本機資產以供使用，只是相關聯的中繼資料無法編輯。
 
-## 限制 {#limitations}
+## Limitations and best practices {#tips-and-limitations}
+
+* 若要取得資產使用情況的深入資訊，請在例 [項上設定Asset Insight](/help/assets/touch-ui-asset-insights.md)[!DNL Sites] 功能。
 
 ### 權限與資產管理 {#permissions-and-managing-assets}
 
@@ -165,7 +167,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 * 本機資產為唯讀副本。[!DNL Experience Manager] 元件會對資產執行非破壞性的編輯作業。不允許執行其他編輯作業。
 * 本機擷取的資產僅適用於編寫用途。無法套用資產更新工作流程，也無法編輯中繼資料。
 * 僅支援影像和列出的文件格式。[!DNL Dynamic Media] 不支援資產、內容片段和體驗片段。
-* 不會擷取中繼資料結構。
+* [!DNL Experience Manager] 不會擷取中繼資料結構。 這表示可能無法顯示所有擷取的中繼資料。 如果模式單獨更新，則顯示所有屬性。
 * 所有 [!DNL Sites] 作者都對讀取的副本具有讀取權限，即使作者無法訪問遠程DAM部署。
 * 不提供 API 以支援自訂整合。
 * 此功能可支援順暢的搜尋作業及使用遠端資產。若要在本機部署中一次提供多個遠端資產，不妨考慮移轉資產。請參閱[資產移轉指南](assets-migration-guide.md)。
@@ -184,6 +186,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 * 擷取作業會於 5 秒後逾時。如果有網路或其他方面的問題，作者擷取資產時就可能遇到問題。Authors can reattempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
 * 您可以對擷取的資產執行非破壞性的簡單編輯作業，也能執行透過 `Image` 元件支援的編輯工作。資產僅供唯讀。
 * 唯一可重新擷取資產的方法，就是將資產拖曳至頁面上。 沒有API支援或其他方法可重新擷取資產以進行更新。
+* 如果資產從DAM中終止運作，這些資產仍會繼續在頁面上 [!DNL Sites] 使用。
 
 ## 疑難排解問題 {#troubleshoot}
 
