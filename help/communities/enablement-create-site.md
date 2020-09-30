@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1728'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 * 選擇 **建立**。
 
-### 步驟1: 網站範本 {#step-site-template}
+### 步驟1:網站範本 {#step-site-template}
 
 ![啟用網站範本](assets/enablement-site-template.png)
 
@@ -43,10 +43,10 @@ ht-degree: 2%
 
 * **社群網站說明**: `A site for enabling the community to learn.`
 
-* **社群網站根**: (對於預設根，保留空白 `/content/sites`)
+* **社群網站根**:(對於預設根，保留空白 `/content/sites`)
 
-* **雲端設定**: （若未指定雲端設定，請留空）提供指定雲端設定的路徑。
-* **社群網站基本語言**: (對於單一語言，請保持不變： 英文)使用下拉式清單，從 *可用語言* (德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、中文（繁體）和簡體中文)選擇一或多種基本語言。 會針對新增的每種語言建立一個社群網站，並依照多語言網站翻譯內容中所述的最佳實務，存在於相 [同的網站資料夾中](/help/sites-administering/translation.md)。 每個網站的根頁面將包含一個子頁面，該子頁面由其中一種語言的語言代碼命名，例如英文的&#39;en&#39;或法文的&#39;fr&#39;。
+* **雲端設定**:（若未指定雲端設定，請留空）提供指定雲端設定的路徑。
+* **社群網站基本語言**:(對於單一語言，請保持不變：英文)使用下拉式清單，從 *可用語言* (德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、中文（繁體）和簡體中文)選擇一或多種基本語言。 會針對新增的每種語言建立一個社群網站，並依照多語言網站翻譯內容中所述的最佳實務，存在於相 [同的網站資料夾中](/help/sites-administering/translation.md)。 每個網站的根頁面將包含一個子頁面，該子頁面由其中一種語言的語言代碼命名，例如英文的&#39;en&#39;或法文的&#39;fr&#39;。
 
 * **社群網站名稱**: `enable`
 
@@ -54,11 +54,11 @@ ht-degree: 2%
    * 若為有效的URL，請附加基本語言代碼+ &quot;。html&quot;
       *例如*,https://localhost:4502/content/sites/ `enable/en.html`
 
-* **參考網站範本**: 向下拉選擇 `Reference Structured Learning Site Template`
+* **參考網站範本**:向下拉選擇 `Reference Structured Learning Site Template`
 
 選擇 **下一步**。
 
-### 步驟2: 設計 {#step-design}
+### 步驟2:設計 {#step-design}
 
 「設計」步驟會分兩節顯示，供您選取主題和品牌橫幅：
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 選擇 **下一步**。
 
-### 步驟3: 設定 {#step-settings}
+### 步驟3:設定 {#step-settings}
 
 在「設定」步驟中，在選取 `Next`之前，請注意有7個區段可提供使用者管理、標籤、角色、協調、分析、翻譯和啟用等組態的存取權。
 
@@ -102,7 +102,7 @@ ht-degree: 2%
 
 此外，為社群網站選取「標籤名稱空間」會限制定義型錄和啟用資源時顯示的選擇。 如需重 [要資訊，請參閱標籤](/help/communities/tag-resources.md) 啟用資源。
 
-使用預先輸入搜尋功能，輕鬆尋找命名空間。 例如，
+使用預先輸入搜尋功能，尋找名稱空間十分簡單。 例如，
 
 * 類型 `tut`
 * 選取 `Tutorial`
@@ -166,7 +166,7 @@ ht-degree: 2%
 
 選擇 **下一步**。
 
-### 步驟4: 建立社群網站 {#step-create-community-site}
+### 步驟4:建立社群網站 {#step-create-community-site}
 
 Select **Create.**
 
@@ -319,13 +319,13 @@ Select **Create.**
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-#### 疑難排解： 保存映射時出錯 {#troubleshooting-error-saving-map}
+#### 疑難排解：保存映射時出錯 {#troubleshooting-error-saving-map}
 
 如果無法保存更改，請確保節點名為 `localhost.4503`，帶有「dot」分隔符，而不帶 `localhost:4503` 「冒號」分隔符，因為 `localhost` 它不是有效的命名空間前置詞。
 
 ![chlimage_1-365](assets/chlimage_1-365.png)
 
-#### 疑難排解： 無法重新導向 {#troubleshooting-fail-to-redirect}
+#### 疑難排解：無法重新導向 {#troubleshooting-fail-to-redirect}
 
 規則運算式&#x200B;**字串結尾的&#39;**`sling:match``https://localhost:4503/` $&#39;至關重要，因此只會正確映射，否則重新導向值會優先於URL中server:port之後可能存在的任何路徑。 因此，當AEM嘗試重新導向至登入頁面時，它會失敗。
 
@@ -350,7 +350,7 @@ Select **Create.**
 
 如果網站結構已包含目錄功能，則可變更其標題。
 
-要修改站點的結構，請導航至 **Communities、Sites** Console、開啟資料夾，並選擇「 `enable` Edit Site **」表徵圖以訪問的屬性**`Enablement Tutorial`。
+要修改站點的結構，請導航至 **[!UICONTROL Communities]** > **[!UICONTROL Sites]** 控制台，開啟資料夾，然後選擇 `enable` Edit Site表徵圖以訪問Adobe的 ****`Enablement Tutorial`屬性。
 
 選擇「結構」面板以添加目錄或修改現有目錄：
 
@@ -358,13 +358,13 @@ Select **Create.**
 
 * **URL**: `catalog`
 
-* **選擇所有名稱空間**: 保留為預設值。
+* **選擇所有名稱空間**:保留為預設值。
 
 * 選擇 **保存**。
 
 ![chlimage_1-299](assets/chlimage_1-299.png)
 
-使用「位置」表徵圖將「目錄」功能移動到「工作」後的第二個位置。
+使用「位置」表徵圖將「目錄」功能移動到「分配」後的第二個位置。
 
 ![chlimage_1-300](assets/chlimage_1-300.png)
 
