@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
+source-git-commit: 9d549e19a22b06f010b99e5dfff1d4cef05a5bed
 workflow-type: tm+mt
-source-wordcount: '2480'
+source-wordcount: '2518'
 ht-degree: 2%
 
 ---
@@ -199,6 +199,12 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份，YYYY是年份，DD是兩位數格式的日，HH是24小時軍用格式的小時，而mm是分鐘。
 
 * 螢幕閱讀程式現在 `X` 會宣佈要移除所選標籤的符號，以及選取的標籤數。
+
+#### 清單檢視中資產建立日期的可排序欄(6.5.3.0) {#sortable-date-created-column}
+
+在DAM清單檢視中新增資產建立日期的可排序新欄，並在清單檢視中新增資產搜尋結果。
+
+![建立日期的可排序列](assets/asset-created-date.png)
 
 #### 視覺搜 [!DNL Adobe Experience Manager Assets] 尋(6.5.2.0) {#visual-search}
 
