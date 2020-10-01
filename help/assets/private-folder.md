@@ -3,9 +3,9 @@ title: 共用資產的私人資料夾
 description: 瞭解如何在中建立私人資料 [!DNL Adobe Experience Manager Assets] 夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 63d08f932b09e375e1b0da92cde27a60ec6e7f56
+source-git-commit: 2bd850ff421494dda83bafb59fa695365498bbbe
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -82,4 +82,4 @@ ht-degree: 0%
 >[!NOTE]
 >
 >如果您使用上述方法從使用者介面刪除資料夾，則相關的使用者群組也會隨之刪除。
-不過，您可在作者例項中，使用 `clean` JMX中的方法(http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redunt+groups+for+Assets)，從儲存庫中清除現有的冗餘、未使用和自動產生的使用者群組。
+不過，您可以在作者實例( `clean``http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`)中，使用JMX中的方法，從儲存庫中清理現有的冗餘、未使用和自動生成的用戶組。
