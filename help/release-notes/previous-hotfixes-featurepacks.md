@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 5db4dd7ccc7d722f0503b22fdd5ff9e5508be4ea
+source-git-commit: 359eb60c0ba3845d7aa0ca58488aa945a9f45aea
 workflow-type: tm+mt
-source-wordcount: '11482'
+source-wordcount: '11484'
 ht-degree: 0%
 
 ---
@@ -307,7 +307,7 @@ Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月6
 
 >[!NOTE]
 >
->Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱「在JEE上安裝AEM Forms附加元件](#install-aem-forms-add-on-package)[和安裝AEM Forms」](#install-aem-forms-jee-installer)。
+>Experience Manager Service Pack不包含修正 [!DNL Forms]。 它們是使用個別的Forms附加套件傳送。 此外，還會發行包含JEE上AEM Forms修正的累積安裝程式。 如需詳細資訊，請 [參閱在JEE上安裝Experience Manager Forms附加元件](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[和安裝Experience Manager Forms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 * 通信管理：在提交信件(NPR-33359、NPR-33153)後，目標區域內資產的順序被混亂。
 * 最適化表單：當使用者編輯最適化表單時，「頁面資 [!UICONTROL 訊」選單中的「開始工作流程] 」選項無法運作(NPR-33004)。
@@ -603,7 +603,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 **修正**
 
-* 某些PDF檔案的中繼資料在標題修改時不會更新並儲存至PDF(NPR-31629)。
+* 某些PDF檔案的中繼資料不會在標題修改時更新並儲存至PDF(NPR-31629)。
 
 * 資產共用不適用於檔案名稱中加上(`+`)字元的資產(NPR-31547)。
 
@@ -970,7 +970,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack不包含修正 [!DNL Experience Manager Forms]。 它們是使用個別的附 [!DNL Forms] 加套件傳送。 此外，還會發行包含JEE修正的累 [!DNL Experience Manager Forms] 積安裝程式。 如需詳細資訊，請 [參閱安裝Experience Manager Forms附加元件](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[和安裝Experience Manager Forms JEE安裝程式](#forms-jee-installer)。
+>[!DNL Experience Manager] Service Pack不包含修正 [!DNL Experience Manager Forms]。 它們是使用個別的附 [!DNL Forms] 加套件傳送。 此外，還會發行包含JEE修正的累 [!DNL Experience Manager Forms] 積安裝程式。 如需詳細資訊，請 [參閱在JEE上安裝Experience Manager Forms附加元件](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[和安裝Experience Manager Forms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 6.5.2.0表 [!DNL Experience Manager] 格的主要重點為：
 
