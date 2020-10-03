@@ -4,10 +4,10 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cb531bfc009fc766bab20d28cf332856b1e95c7b
+source-git-commit: 087940d0a51c43125a309b34b82831030e7e54b4
 workflow-type: tm+mt
-source-wordcount: '9408'
-ht-degree: 4%
+source-wordcount: '9618'
+ht-degree: 3%
 
 ---
 
@@ -450,7 +450,14 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    >
    >在貼 **[!UICONTROL 上操作完成]** 之前，工具列中會提供「貼上」選項。
 
-### 移動或重新命名資產 {#moving-or-renaming-assets}
+## 移動及重新命名資產 {#moving-or-renaming-assets}
+
+當您將資產（或檔案夾）移至其他位置時，資產（或檔案夾）不會複製，這與複製資產時不同。 資產（或資料夾）會放置在目標位置，並從來源位置移除。 您也可以在將資產移至新位置時重新命名資產。
+如果您要將已發佈的資產移至其他位置，則可以選擇重新發佈資產。 根據預設，已發佈資產的移動操作會自動取消發佈。 如果作者在移動資產時選取「重新發佈」 [!UICONTROL 選項，則會重新發佈已移動的資產] 。
+
+![您可以在移動已發佈的資產時重新發佈該資產](assets/republish-on-move.png)
+
+移動資產或資料夾：
 
 1. 導覽至您要移動的資產所在的位置。
 
@@ -486,6 +493,14 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    * 按一下 **[!UICONTROL 取消]** ，停止移動操作。
 
    如果您不更新參照，則參照會繼續指向資產的先前路徑。 如果您調整參照，它們會更新為新資產路徑。
+
+### 使用拖曳作業來移動資產 {#move-using-drag}
+
+您可以將資產（或資料夾）拖曳至目標位置，將資產（或資料夾）移至同級資料夾、 [!UICONTROL Lightbox] 系列或其他系列，而不是使用者介面中的 [!UICONTROL Move] （移動）選項。 不過，此操作只能在清單視圖中進行。
+
+拖曳資產並移動資產並不會開啟「 [!UICONTROL 移動資產] 」精靈，因此在移動資產時，您無法取得重新命名資產的選項。 此外，已發佈的資產會在拖曳後重新發佈，而不需徵求使用者的同意才可重新發佈。
+
+![將資產拖曳至同級資料夾](assets/move-by-drag.gif)
 
 ## 管理轉譯 {#managing-renditions}
 
