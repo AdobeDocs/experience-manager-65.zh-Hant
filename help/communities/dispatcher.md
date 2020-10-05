@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 1%
@@ -44,7 +44,7 @@ AEM Communities的Dispatcher快取功能是讓Dispatcher提供社群網站頁面
 
 ### 需求 {#requirements}
 
-* Dispatcher 4.1.2版或更新版本(請參 [閱安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) for the latest version)
+* Dispatcher 4.1.2版或更新版本(請參 [閱安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) 以取得最新版本)
 * [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 3.3.2版或更新版本
@@ -61,7 +61,7 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 * 尋找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 選擇「+」表徵圖以建立新連接配置
 
-   ![chlimage_1-339](assets/chlimage_1-339.png)
+   ![Dispatcher ](assets/dispatcher.png)
 
 * **篩選模式**
 
