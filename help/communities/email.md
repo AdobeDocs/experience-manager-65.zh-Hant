@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 50c1532b2bdc41555eff2be718cd478aad1f403a
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 3%
@@ -48,7 +48,7 @@ AEM Communities使用電子郵件：
 
 例如（填入值僅供說明之用）:
 
-![chlimage_1-98](assets/chlimage_1-98.png)
+![email-config](assets/email-config.png)
 
 * **[!UICONTROL SMTP伺服器主機名]**
 
@@ -98,7 +98,7 @@ AEM Communities使用電子郵件：
 
 * 找到 `AEM Communities Email Reply Configuration`。
 
-![chlimage_1-99](assets/chlimage_1-99.png)
+![電子郵件——回復——組態](assets/email-reply-config.png)
 
 ### 通知的設定 {#configuration-for-notifications}
 
@@ -177,7 +177,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 
 * 選擇「添 **[!UICONTROL 加」]**
 
-   ![chlimage_1-102](assets/chlimage_1-102.png)
+   ![polling-importer](assets/polling-importer.png)
 
 * **[!UICONTROL 類型]**
 
@@ -207,7 +207,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
 
 ### 調整新輪詢導入程式的協定 {#adjust-protocol-for-new-polling-importer}
 
-儲存新的輪詢設定後，必須進一步修改訂閱電子郵件匯入工具的屬性，才能將通訊協定從變更 `POP3` 為 `emailreply`
+儲存新的輪詢設定後，必須進一步修改訂閱電子郵件匯入工具的屬性，才能將通訊協定從變 `POP3` 更為 `emailreply`。
 
 使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
@@ -217,7 +217,7 @@ OSGi組態與 `AEM Communities Email Reply Configuration` 名稱電子郵件的�
    * **feedType**:取代 `pop3s` 為 **`emailreply`**
    * **來源**:將源協定替換為 `pop3s://` **`emailreply://`**
 
-![chlimage_1-103](assets/chlimage_1-103.png)
+![輪詢協定](assets/polling-protocol.png)
 
 紅色三角形表示已修改的屬性。 請務必儲存變更：
 
