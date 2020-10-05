@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: a99313c35872d3f481c3dc6f42b372cc603e7549
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -157,26 +157,26 @@ ht-degree: 0%
 1. 登入以張貼留言：
 1. 在注釋文字輸入方塊中輸入文字，然後按一下「貼 **[!UICONTROL 文」]**
 
-   ![chlimage_1-111](assets/chlimage_1-191.png)
+   ![留言後](assets/post-comment.png)
 
 1. 只要檢視作者例項 [的注釋](http://localhost:4502/content/community-components/en/comments.html) （可能仍以管理員／管理員身分登入）。
 
-   ![chlimage_1-112](assets/chlimage_1-192.png)
+   ![view-comment](assets/view-comment.png)
 
-   注意：雖然作者在asipath下有JCR節 *點* ，但這些節點是用於SCF框架的。 實際的UGC不在JCR中，它在MongoDB中。
+   注意：雖然作者在asipath下有JCR節 *點* ，但這些節點是用於SCF框架。 實際的UGC不在JCR中，它在MongoDB中。
 
 1. 在mongodb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** >內容中檢視UGC ****
 
-   ![chlimage_1-193](assets/chlimage_1-193.png)
+   ![ugc-content](assets/ugc-content.png)
 
 1. 在Solr中檢視UGC:
 
-   * 瀏覽至Solr控制面板： [http://localhost:8983/solr/](http://localhost:8983/solr/)
-   * 要選 `core selector` 擇的用戶 `collection1`
-   * 選取 `Query`
-   * 選取 `Execute Query`
+   * 瀏覽至Solr控制面板： [http://localhost:8983/solr/](http://localhost:8983/solr/).
+   * 使用者 `core selector` 來選取 `collection1`。
+   * 選取 `Query`.
+   * 選取 `Execute Query`.
 
-   ![chlimage_1-194](assets/chlimage_1-194.png)
+   ![ugc-solr](assets/ugc-solr.png)
 
 ## 疑難排解 {#troubleshooting}
 
@@ -186,14 +186,9 @@ ht-degree: 0%
 
 1. 請確定MSRP已設定為預設提供者：
 
-   * 在所有作者和發佈AEM例項上，請重新造訪「儲 [存設定」主控台](srp-config.md)
+   * 在所有作者和發佈AEM例項上，請重新造訪 [Storage Configuration Console](srp-config.md) ，或檢查AEM存放庫：
 
-   或者，檢查AEM存放庫：
-
-   * 在JCR中，如 [果/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
-
-   * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，這表示儲存提供程式是JSRP
-   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將MSRP定義為預設提供程式
-
+   * 在JCR中，如果 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) 不包含 [](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) srpc節點，表示儲存提供程式是JSRP。
+   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將MSRP定義為預設提供程式。
 
 1. 請確定AEM在選取MSRP後重新啟動。
