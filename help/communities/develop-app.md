@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 2%
@@ -44,7 +44,7 @@ ht-degree: 2%
 1. 按一下綠色 **[!UICONTROL +添加按鈕]** 。
 1. 按一下「 **[!UICONTROL 全部儲存]**」。
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![page-script](assets/page-script.png)
 
 ### 頭部和身體指令碼 {#head-and-body-scripts}
 
@@ -128,13 +128,13 @@ ht-degree: 2%
 
 當兩個側面板都開啟且視窗足夠寬，以便同時顯示側面內容和頁面內容時，就會看到「資產／元件」側面板。
 
-![chlimage_1-232](assets/chlimage_1-232.png)
+![檢視頁面](assets/view-page.png)
 
 * 傳統UI: [http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
 
 以下是播放頁面在傳統UI中的顯示方式，包括內容搜尋器(cf):
 
-![chlimage_1-233](assets/chlimage_1-233.png)
+![play-page-view](assets/play-page-view.png)
 
 ## 社群元件 {#communities-components}
 
