@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -94,7 +94,7 @@ ht-degree: 1%
 * `Tutorial: Arts / Auditory`
 * `Tutorial: Arts / History`
 
-![chlimage_1-417](assets/chlimage_1-417.png)
+![教學課程標籤](assets/tutorial-tags.png)
 
 然後，請依照指示執行：
 
@@ -109,7 +109,7 @@ ht-degree: 1%
 
 對於啟用社群網站，網站訪客不應能夠自 [行註冊或使用社交登入](sites-console.md#user-management)。
 
-相反，在啟用 [通道服務後](#enable-the-tunnel-service) ,「成 [](members.md) 員」控制台用於在發佈環境中註冊新成員。
+相反，在啟用 [通道服務](#enable-the-tunnel-service) ,「成員」 [](members.md) 控制台用於在發佈環境中註冊新成員。
 
 在本教學課程中，會在發佈環境中建立三個成員。 兩個成員將成為指派給學習路徑的使用者群組的成員，而第三個成員將成為啟用資源聯絡人。
 
@@ -128,42 +128,42 @@ ht-degree: 1%
 
 [建立將新增至](members.md#create-new-member) 「學員」群組（社群滑雪課程群組）的成員。
 
-* **ID**: 賴萊
-* **電子郵件**: riley.taylor@mailinator.com
-* **密碼**: 密碼
-* **確認密碼**: 密碼
-* **名字**: 萊利
-* **姓氏**: 泰勒
+* **ID**:賴萊
+* **電子郵件**:riley.taylor@mailinator.com
+* **密碼**:密碼
+* **確認密碼**:密碼
+* **名字**:萊利
+* **姓氏**:泰勒
 
 ### Sidney Croft —— 註冊人 {#sidney-croft-enrollee}
 
 [建立將添加到](members.md#create-new-member) 「社區滑雪類」組的第二個成員。
 
-* **ID**: 西德尼
-* **電子郵件**: sidney.croft@mailinator.com
-* **密碼**: 密碼
-* **確認密碼**: 密碼
-* **名字**: 西德尼
-* **姓氏**: 克羅夫特
+* **ID**:西德尼
+* **電子郵件**:sidney.croft@mailinator.com
+* **密碼**:密碼
+* **確認密碼**:密碼
+* **名字**:西德尼
+* **姓氏**:克羅夫特
 
 ### Quinn Harper —— 啟用資源聯絡與協調人 {#quinn-harper-enablement-resource-contact-and-moderator}
 
-[建立成員](members.md#create-new-member) ，在建立站點後，該成員將添加到社區站點的成員組。 此會籍可讓會員在為網站建立啟用資源時， [被指派為啟用資源連絡人](resources.md#settings) 。
+[建立成員](members.md#create-new-member) ，在建立該站點後，該成員將添加到社區站點的成員組。 此會籍可讓會員在為網站建立啟用資源時， [被指派為啟用資源連絡人](resources.md#settings) 。
 
-* **ID**: 奎恩
-* **電子郵件**: quinn.harper@mailinator.com
-* **密碼**: 密碼
-* **確認密碼**: 密碼
-* **名字**: 奎恩
-* **姓氏**: 哈珀
+* **ID**:奎恩
+* **電子郵件**:quinn.harper@mailinator.com
+* **密碼**:密碼
+* **確認密碼**:密碼
+* **名字**:奎恩
+* **姓氏**:哈珀
 
 ### 新增使用者群組——社群滑雪課程 {#add-a-user-group-community-ski-class}
 
 [新增名為](members.md#create-new-group) Community Ski Class的群組。
 
-* **ID**: 社區滑雪課
-* **名稱**: 社區滑雪課
-* **說明**: 指派啟用資源的範例群組
+* **ID**:社區滑雪課
+* **名稱**:社區滑雪課
+* **說明**:指派啟用資源的範例群組
 * **將成員添加到組** 「添加」:
 
    * 賴萊
@@ -173,7 +173,7 @@ ht-degree: 1%
 
 ### 社區滑雪課屬性 {#community-ski-class-properties}
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![ski-class-properties](assets/ski-class-properties.png)
 
 >[!NOTE]
 >
@@ -196,17 +196,17 @@ ht-degree: 1%
 
    * 例如，使用者名稱&#39;admin&#39; /密碼&#39;admin&#39;
 
-* 從主控制台瀏覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 操作]** >安 **[!UICONTROL 全性]****[!UICONTROL >用]**&#x200B;戶」。
+* 從主控制台瀏覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 操作]** >安 **[!UICONTROL 全性]****[!UICONTROL >]**&#x200B;用戶」。
 * 從「編輯 **[!UICONTROL 」功能表]** ，選擇「 **[!UICONTROL 新增使用者」]**。
 
 * 在對話 `Create New User` 框中輸入：
 
-   * **ID&amp;ast;**: 天狼星
-   * **電子郵件地址**: sirius.nilson@mailinator.com
-   * **Password&amp;ast;**: 密碼
-   * **確認密碼&amp;ast;**: 密碼
-   * **名字**: 天狼星
-   * **姓氏&amp;ast;**: 尼爾森
+   * **ID&amp;ast;**:天狼星
+   * **電子郵件地址**:sirius.nilson@mailinator.com
+   * **Password&amp;ast;**:密碼
+   * **確認密碼&amp;ast;**:密碼
+   * **名字**:天狼星
+   * **姓氏&amp;ast;**:尼爾森
 
 ### 將Sirius指派給社區管理員群組 {#assign-sirius-to-community-administrators-group}
 
@@ -219,5 +219,5 @@ ht-degree: 1%
 
 * 選擇保 **[!UICONTROL 存]**
 
-![chlimage_1-419](assets/chlimage_1-419.png)
+![admin-role](assets/admin-role.png)
 
