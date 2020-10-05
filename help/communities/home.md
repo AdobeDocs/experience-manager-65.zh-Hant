@@ -1,18 +1,18 @@
 ---
-title: AEM 6.5 Communities使用指南
-seo-title: AEM 6.5 Communities使用指南
+title: Adobe Experience Manager 6.5社群指南
+seo-title: Adobe Experience Manager 6.5社群指南
 description: 本指南涵蓋所有AEM Communities工作，例如建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
 seo-description: 涵蓋所有AEM Communities工作，例如建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 15%
+source-wordcount: '389'
+ht-degree: 17%
 
 ---
 
 
-# AEM 6.5 Communities使用指南
+# Adobe Experience Manager 6.5社群指南
 
 本指南涵蓋所有AEM Communities工作，例如建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
 
@@ -20,7 +20,7 @@ ht-degree: 15%
 
 * [AEM快速入門](https://helpx.adobe.com/experience-manager/get-started.html)
 * [AEM 6.5發行說明](/help/release-notes/home.md)
-* [最近的檔案更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用指南
@@ -44,7 +44,7 @@ ht-degree: 15%
 ## 關鍵AEM資源
 
 * [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 * [核心元件使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
