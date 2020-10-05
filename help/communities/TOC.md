@@ -6,7 +6,7 @@ user-guide-title: AEM 6.5 Communities使用指南
 breadcrumb-title: Communities Guide
 user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: 42606e76742fe7698c4c186208e515ed22adc5a4
+source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 3%
@@ -14,9 +14,9 @@ ht-degree: 3%
 ---
 
 
-# AEM 6.5 Communities使用指南 {#communities}
+# Adobe Experience Manager 6.5社群指南 {#communities}
 
-+ [AEM Communities概觀](home.md)
++ [社群指南](home.md)
 + Introduction to AEM Communities {#introduction}
    + [社群網站](administer-landing.md)
    + [AEM Communities概觀](overview.md)
@@ -36,7 +36,7 @@ ht-degree: 3%
    + [升級至AEM 6.5 Communities](upgrade.md)
    + [推薦的社區拓撲](topologies.md)
    + [配置Dispatcher for Communities](dispatcher.md)
-+ 管理 {#administer}
++ Administering {#administer}
    + [AEM Communities中的使用者與UGC管理服務](user-ugc-management-service.md)
    + [社群網站](administer-landing.md)
    + [Communities Console](consoles.md)
@@ -118,7 +118,7 @@ ht-degree: 3%
    + [Social Graph Essentials](essentials-socialgraph.md)
    + [SRP和UGC Essentials](srp-and-ugc.md)
    + [Tag Essentials](tag.md)
-   + [使用者](tally.md)
+   + [Tally Essentials](tally.md)
    + [Potting Essentials](essentials-voting.md)
    + [設定網站結構](setup-website.md)
    + [建立SCF沙盒](an-scf-sandbox.md)
