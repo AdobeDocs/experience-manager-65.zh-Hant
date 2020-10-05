@@ -1,22 +1,21 @@
 ---
 title: 資產指南
-seo-title: Adobe Experience Manager 6.5資產指南
 description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
-seo-description: 涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
+user-guide-title: 資產指南
 translation-type: tm+mt
-source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
+source-git-commit: e460a23ef4df14ff494d8d1472ab234787f220d7
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 12%
+source-wordcount: '339'
+ht-degree: 13%
 
 ---
 
 
-# Adobe Experience Manager 6.5資產指南
+# 資產指南
 
-本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
+本指南涵蓋所 [!DNL Experience Manager Assets] 有工作，例如如何建立、管理、提供和最佳化數位資產。
 
-## Experience Manager重要文章
+## 主要文 [!DNL Experience Manager] 章
 
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
@@ -26,7 +25,7 @@ ht-degree: 12%
 * [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [安全性檢查清單](/help/sites-administering/security-checklist.md)
 
-## Experience Manager 6.5指南
+## [!DNL Experience Manager] 6.5指南
 
 | 使用手冊 | 說明 |
 |--- |---|
@@ -43,7 +42,7 @@ ht-degree: 12%
 | [行動使用指南](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 | [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南說明如何與共用使用者產生的內容 [!DNL Livefyre]。 |
 
-## 主要Experience Manager資源
+## 關鍵資 [!DNL Experience Manager] 源
 
 * [Experience Manager教學課程影片](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
