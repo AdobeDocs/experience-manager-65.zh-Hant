@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 2%
@@ -48,7 +48,7 @@ MySQL安裝可通過使用不同的資料庫（模式）名稱和不同的連接
 
 Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(SRP)之間共用。
 
-如果Oak和SRP系列都被大量使用，則可能會因效能原因安裝第二個Solr。
+如果Oak和SRP系列都被大量使用，則可基於效能原因安裝第二個Solr。
 
 對於生產環境，SolrCloud模式比獨立模式（單一本機Solr設定）提供更佳的效能。
 
@@ -71,7 +71,7 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(S
       >[!NOTE]
       >
       >預設儲存配置現在儲存在conf路徑(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而不是etc路徑(`/etc/socialconfig/srpc/defaultconfiguration`)中。 建議您依照移轉步 [驟](#zerodt-migration-steps) ，讓預設srp如預期般運作。
-   ![chlimage_1-128](assets/chlimage_1-128.png)
+   ![dsrp-config](assets/dsrp-config.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **資料庫設定**
@@ -80,17 +80,17 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(S
 
       給定給MySQL連接的名稱必須與在 [JDBC OSGi配置中輸入的名稱相同](dsrp-mysql.md#configurejdbcconnections)
 
-      *預設*: 社區
+      *預設*:社區
 
    * **[!UICONTROL 資料庫名稱]**
 
       為 [init_schema.sql指令碼中的架構指定的名稱](dsrp-mysql.md#obtain-the-sql-script)
 
-      *預設*: 社區
+      *預設*:社區
 
 * **SolrConfiguration**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper Host **
+   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper Host**
 
       如果使用內部ZooKeeper執行Solr，請將此值留空。 否則，在 [SolrCloud模式下與外部ZooKeeper一起運行時](solr.md#solrcloud-mode) ，將此值設定為ZooKeeper的URI，如 *my.server.com:80*
 
@@ -98,11 +98,11 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(S
 
    * **[!UICONTROL Solr URL]**
 
-      *預設*: https://127.0.0.1:8983/solr/
+      *預設*:https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr 集合]**
 
-      *預設*: collection1
+      *預設*:collection1
 
 * 選擇 **[!UICONTROL 提交]**。
 
