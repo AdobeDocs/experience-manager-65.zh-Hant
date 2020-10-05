@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: ade3747ba608164a792a62097b82c55626245891
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 1. 在內嵌的程式碼中：
 
-   * 變更 *options.path變數的值* ，以及最適化表單的發佈URL路徑。 如果AEM伺服器是在內容路徑上執行，請確定URL包含內容路徑。 例如，上述程式碼和adaptive from位於相同的aem表單伺服器上，因此此範例使用adaptive form /content/forms/af/locbasic.html的上下文路徑。
+   * 變更 *options.path變數的值* ，以及最適化表單的發佈URL路徑。 如果AEM伺服器是在內容路徑上執行，請確定URL包含內容路徑。 請務必提及最適化表單的完整名稱，包括副檔名。   例如，上述程式碼和adaptive from位於相同的AEM表單伺服器上，因此此範例使用adaptive form /content/forms/af/locbasic.html的上下文路徑。
    * 將 *options.dataRef* 取代為要以URL傳遞的屬性。 您可以使用dataref變數來預 [先填寫最適化表格](/help/forms/using/prepopulate-adaptive-form-fields.md)。
    * 將 *options.themePath* 取代為主題的路徑，而非在最適化表單中設定的主題。 或者，您也可以使用request屬性來指定主題路徑。
    * CSS_Selector是內嵌最適化表單之表單容器的CSS選擇器。 例如，.customafsection css類是上述範例中的CSS選擇器。
