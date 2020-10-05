@@ -10,9 +10,9 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
+source-git-commit: 42386f6e580d85efb972f2e63c5ab89112b3f734
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3145'
 ht-degree: 2%
 
 ---
@@ -146,7 +146,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>檔案附件</td>
-   <td><p>新增按鈕，讓使用者瀏覽支援檔案並附加至表單。 可以將多個檔案附加到檔案附件元件。</p> <p><strong> 注意: </strong><ul> <li> 若要將多個檔案附加至在Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 不能一次選擇並附加多個檔案。</li> <li>「檔案附件」元件支援預先定義的一組檔案格式，其格式為適用於Adobe Sign的最適化表單。 如需詳細資訊，請參閱「 <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>」。 </li> </ul></p> </td>
+   <td><p>新增按鈕，讓使用者瀏覽支援檔案並附加至表單。 可以將多個檔案附加到檔案附件元件。</p> <p><strong> 注意: </strong><ul> <li> 該元件不支援以字元(.)開頭的檔案（包含字元\ / :）附加檔案* ? " &lt; &gt; |;% $，或包含為Windows作業系統保留的特殊檔名，例如nul、prn、con、lpt或com。 </li> <li> 若要將多個檔案附加至在Apple Safari瀏覽器中開啟的檔案附件元件，請逐一選取並附加檔案。 不能一次選擇並附加多個檔案。</li> <li>「檔案附件」元件支援預先定義的一組檔案格式，其格式為適用於Adobe Sign的最適化表單。 如需詳細資訊，請參閱「 <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支援的檔案格式</a>」。 </li> </ul></p> </td>
   </tr>
   <tr>
    <td>檔案附件清單</td>
