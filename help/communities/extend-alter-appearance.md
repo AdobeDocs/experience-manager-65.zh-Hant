@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 618464d1e01986786a47a4e9c6ecce87e2a77ec3
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 變更外觀(HBS) {#alter-the-appearance-hbs}
 
-現在，應用程式目錄(/apps)中自訂註解系統的元件已就緒，resourceSuperType會參照預設註解系統並註冊自訂模型／檢視，因此可修改實施。
+現在，應用程式目錄(/apps)中自訂註解系統的元件已就緒，resourceSuperType會參照預設註解系統，並註冊自訂模型／檢視，因此可修改實施。
 
 若要進行簡單展示，會移除張貼評論之已登入使用者所顯示的視覺功能。
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 [繼續在發佈例項](/help/communities/extend-sample-page.md#publish-sample-page) （仍以相同使用者的身分登入）上的體驗，現在可以在發佈環境中重新整理頁面，以檢視修改以移除頭像：
 
-![chlimage_1-81](assets/chlimage_1-81.png)
+![視圖——修改內容](assets/view-modified-content.png)
 
 ### 範例注釋擴充功能套件 {#sample-comment-extension-package}
 
