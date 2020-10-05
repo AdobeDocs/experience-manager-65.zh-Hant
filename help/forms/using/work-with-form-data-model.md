@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 39ae3d8348b0c149c047c9fb3ac2eb673b610645
 workflow-type: tm+mt
-source-wordcount: '4102'
+source-wordcount: '4162'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 使用表單資料模型{#work-with-form-data-model}
 
-![](do-not-localize/data-integeration.png)
+![資料整合](do-not-localize/data-integeration.png)
 
 表單資料模型編輯器提供直覺式使用者介面和工具，以編輯和設定表單資料模型。 使用編輯器，您可以在表單資料模型中，從相關資料來源新增及設定資料模型物件、屬性和服務。 此外，它還可讓您建立資料模型物件和屬性，毋需使用資料來源，並在稍後以個別的資料模型物件和屬性加以系結。 您也可以針對資料模型物件屬性產生和編輯範例資料，以便在預覽時用來預先填寫最適化表單和互動式通訊。 您可以測試在表單資料模型中設定的資料模型物件和服務，以確保它與資料來源正確整合。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必須是 **fdm-author和** forms-user **** 組的成員，才能建立和使用表單資料模型。 請連絡您的AEM管理員，以成為群組的成員。
+>您必須是 **fdm-author** 和 **forms-user** 組的成員，才能建立和使用表單資料模型。 請連絡您的AEM管理員，以成為群組的成員。
 
 ## 新增資料模型物件和服務 {#add-data-model-objects-and-services}
 
@@ -177,9 +177,9 @@ ht-degree: 0%
 
 從「 **[!UICONTROL 系結至」下拉式選]** 單中選取「使用者描述檔屬性」 **[!UICONTROL ，並在「系結值」欄位中輸入]** 屬性名稱 **** 。 系統會根據屬性名稱，從資料來源擷取登入AEM例項的使用者詳細資訊。
 
-在「綁定值」欄位中指 **[!UICONTROL 定的屬性名稱]** ，必須包括完整的綁定路徑，直到用戶的屬性名稱為止。 開啟下列URL以存取CRXDE的使用者詳細資訊：
+「綁定值」欄位中指 **[!UICONTROL 定的屬性名稱]** ，必須包括完整的綁定路徑，直到用戶的屬性名為止。 開啟下列URL以存取CRXDE的使用者詳細資訊：
 
-https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
+`https://[server-name]:[port]/crx/de/index.jsp#/home/users/`
 
 ![使用者設定檔](assets/binding_crxde_user_profile_new.png)
 
@@ -195,15 +195,29 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 1. 從「 **[!UICONTROL 系結至」下拉式選]** 單中選取「請求屬性 **[!UICONTROL 」，並在「系結值」欄位中輸入]** 屬性名稱 **** 。
 
-1. 開啟head.jsp以定義CRXDE上的屬性詳細資訊：\
-   `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+1. 建立 [head](../../../help/sites-developing/overlays.md) .jsp的覆蓋。 若要建立覆蓋，請開啟CRX DE並將檔案復 `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` 制至 `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
 
-1. 在head.jsp檔案中包含以下文本：
+   >[!NOTE]
+   >
+   > * 如果您使用靜態範本，請在以下位置覆蓋head.jsp:/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp
+   > * 如果您使用可編輯的範本，請覆蓋aftemplatedpage.jsp，網址為：/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp
 
-   ```jsp
+
+1. 設定 [!DNL paramMap] 請求屬性。 例如，在apps資料夾的。jsp檔案中加入下列程式碼：
+
+   ```javascript
    <%Map paraMap = new HashMap();
     paraMap.put("<request_attribute>",request.getParameter("<request_attribute>"));
-    request.setAttribute("paramMap",paraMap);%>
+    request.setAttribute("paramMap",paraMap);
+   ```
+
+   例如，使用以下代碼從資料源中檢索petid值：
+
+
+   ```javascript
+   <%Map paraMap = new HashMap();
+   paraMap.put("petId",request.getParameter("petId"));
+   request.setAttribute("paramMap",paraMap);%>
    ```
 
 根據請求中指定的屬性名稱從資料源檢索詳細資訊。
@@ -277,9 +291,9 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 1. 選中資料模型對象、屬性或表單資料模型中服務旁邊的複選框。
 1. 點選「 **[!UICONTROL 編輯屬性]**」。 將打 **[!UICONTROL 開選定模型對象]** 、屬性或服務的「編輯屬性」窗格。
 
-   * **資料模型物件**: 指定讀寫服務並編輯引數。
-   * **屬性**: 指定屬性的類型、子類型和格式。 您也可以指定所選屬性是否為資料模型對象的主鍵。
-   * **服務**: 指定服務的輸入模型對象、輸出類型和參數。 對於Get服務，您可以指定是否需要返回陣列。
+   * **資料模型物件**:指定讀寫服務並編輯引數。
+   * **屬性**:指定屬性的類型、子類型和格式。 您也可以指定所選屬性是否為資料模型對象的主鍵。
+   * **服務**:指定服務的輸入模型對象、輸出類型和參數。 對於Get服務，您可以指定是否需要返回陣列。
 
    ![edit-properties-service](assets/edit-properties-service.png)
 
@@ -293,7 +307,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 例如，您可以建立計算屬性 **FullName** ，其值是現有 **FirstName** 和 **** LastName屬性串連的結果。 若要這麼做：
 
-1. 使用其資料類型為「字串」 `FullName` 的名稱建立新屬性。
+1. 建立資料類型為「字串」 `FullName` 的名稱新屬性。
 1. 啟用 **[!UICONTROL Computed]** ，並點選 **[!UICONTROL Done]** 以建立屬性。
 
    ![計算](assets/computed.png)
@@ -347,7 +361,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 </EntityType>
 ```
 
-當您在表單資料模型中設定OData服務時，實體容器中的所有導覽屬性都可透過表單資料模型中的服務取得。 在此TripPin OData服務範例中，實體容器中的三個導覽屬性 `Person` 可使用表單資料模型中 `GET LINK` 的一個服務來讀取。
+當您在表單資料模型中設定OData服務時，實體容器中的所有導覽屬性都可透過表單資料模型中的服務取得。 在此TripPin OData服務範例中，實體容器中的三個導覽屬性可 `Person` 以使用表單資料模型中 `GET LINK` 的一個服務來讀取。
 
 以下摘要說 `GET LINK of Person /People` 明表單資料模型中的服務，此服務是TripPin OData服務實體中三個導覽屬 `Person` 性的組合服務。
 
@@ -407,9 +421,9 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 此標幟可設為下列任一值：
 
-* **完整**: FDM基於所有約束執行驗證
-* **關閉**: 無驗證
-* **基本**: FDM基於「必需」和「可空」約束執行驗證
+* **完整**:FDM基於所有約束執行驗證
+* **關閉**:無驗證
+* **基本**:FDM基於「必需」和「可空」約束執行驗證
 
 如果沒有為標籤設定 `ValidationOptions`值，則 **對輸入資料執行BASIC** 驗證。
 
