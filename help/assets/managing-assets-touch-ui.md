@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 087940d0a51c43125a309b34b82831030e7e54b4
+source-git-commit: 0c6a1afff62d4a962edfc8c2e6574d65a18534ac
 workflow-type: tm+mt
-source-wordcount: '9618'
+source-wordcount: '9619'
 ht-degree: 3%
 
 ---
@@ -94,7 +94,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >
 >觸發區塊上傳時的預設值為500 MB，區塊大小為50 MB。 如果您修改 [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) ，將資產的上傳時間設為 `timeout configuration` 少於所需時間，則在資產上傳進行中時，您可能會遇到作業逾時情形。 因此，您需要更改和 `chunkUploadMinFileSize` ，以便 `chunksize`每個區塊請求刷新會話。
 >
->在憑證到期逾時、延遲、頻寬和預期的並行上傳時，可讓您確保選取下列項目的最高值：
+>在憑證到期逾時、延遲、頻寬和預期的並行上傳的情況下，可讓您確保選取下列項目的最高值：
 >
 >* 為了確保在上載進行時，對可能導致憑據過期的檔案啟用區塊上載。
    >
@@ -432,7 +432,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 保留其他屬性和元資料資訊。 複製資產時不會建立部分復本。
 
-1. 在介 [!DNL Assets] 面中，選取一或多個資產，然後從工具列 **[!UICONTROL 按一下]** 「複製」。 或者，從資 **[!UICONTROL 產卡]** ，在資產介面中選取工具列中的 ![](assets/do-not-localize/copy_icon.png) 「複製」選項。
+1. 在介 [!DNL Assets] 面中，選取一或多個資產，然後從工具 **[!UICONTROL 列按一下]** 「複製」。 或者，從資 **[!UICONTROL 產卡]** ，在資產介面中選取工具列中的 ![](assets/do-not-localize/copy_icon.png) 「複製」選項。
 
    >[!NOTE]
    >
@@ -453,7 +453,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 ## 移動及重新命名資產 {#moving-or-renaming-assets}
 
 當您將資產（或檔案夾）移至其他位置時，資產（或檔案夾）不會複製，這與複製資產時不同。 資產（或資料夾）會放置在目標位置，並從來源位置移除。 您也可以在將資產移至新位置時重新命名資產。
-如果您要將已發佈的資產移至其他位置，則可以選擇重新發佈資產。 根據預設，已發佈資產的移動操作會自動取消發佈。 如果作者在移動資產時選取「重新發佈」 [!UICONTROL 選項，則會重新發佈已移動的資產] 。
+如果您要將已發佈的資產移至其他位置，則可以選擇重新發佈資產。 根據預設，已發佈資產的移動操作會自動取消發佈。 如果作者在移動資產時選取「重新發佈」 [!UICONTROL 選項，則已移動的資產會重新發佈] 。
 
 ![您可以在移動已發佈的資產時重新發佈該資產](assets/republish-on-move.png)
 
@@ -498,7 +498,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 您可以將資產（或資料夾）拖曳至目標位置，將資產（或資料夾）移至同級資料夾、 [!UICONTROL Lightbox] 系列或其他系列，而不是使用者介面中的 [!UICONTROL Move] （移動）選項。 不過，此操作只能在清單視圖中進行。
 
-拖曳資產並移動資產並不會開啟「 [!UICONTROL 移動資產] 」精靈，因此在移動資產時，您無法取得重新命名資產的選項。 此外，已發佈的資產會在拖曳後重新發佈，而不需徵求使用者的同意才可重新發佈。
+拖曳資產並移動資產並不會開啟「移 [!UICONTROL 動資產] 」精靈，因此您在移動資產時無法取得重新命名資產的選項。 此外，已發佈的資產會在拖曳後重新發佈，而不需徵求使用者的同意才可重新發佈。
 
 ![將資產拖曳至同級資料夾](assets/move-by-drag.gif)
 
