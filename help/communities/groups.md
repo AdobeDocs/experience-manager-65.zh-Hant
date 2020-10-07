@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
+source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -32,21 +32,21 @@ ht-degree: 2%
 
 社群群組的不同面包括：
 
-* **建立**: 可在作者上建立新群組，也可在發佈例項上建立新群組。
-* **控制**: 群組可以是開放或秘密。
-* **巢狀**: 群組可以包含零或多個群組。
+* **建立**:可在作者上建立新群組，也可在發佈例項上建立新群組。
+* **控制**:群組可以是開放或秘密。
+* **巢狀**:群組可以包含零或多個群組。
 
 <!-- This is a 404 on helpx. Please update or remove.
 >[!NOTE]
 >
->Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.-->
+>Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.
+-->
 
 >[!NOTE]
 >
 >此組控制台僅能從Communities Sites控制台訪問，不要與管理成員組的成員 [組控制台](/help/communities/members.md) 混淆。
 >
 >成員組是在發佈環境中註冊的用戶組，可通過隧道服務從作者環境 [訪問](/help/communities/deploy-communities.md#tunnel-service-on-author)。
-
 
 ## 群組建立 {#group-creation}
 
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 * 選擇「 **建立群組** 」按鈕。
 
-### 步驟1: 社群群組範本 {#step-community-group-template}
+### 步驟1:社群群組範本 {#step-community-group-template}
 
 ![多語言社群群組](assets/multi-lingual-group.png)
 
@@ -107,7 +107,7 @@ ht-degree: 2%
 
    使用下拉式清單選擇可用的社 [群群組範本](/help/communities/tools.md)。
 
-### 步驟2: 設計 {#step-design}
+### 步驟2:設計 {#step-design}
 
 ### COMMUNITY GROUP THEME {#community-group-theme}
 
@@ -138,7 +138,7 @@ ht-degree: 2%
    * 小於瀏覽器的寬度，影像會水準重複。
    * 大於瀏覽器的寬度，影像會看起來被裁切。
 
-### 步驟3: 設定 {#step-settings}
+### 步驟3:設定 {#step-settings}
 
 **協調**
 
@@ -188,7 +188,7 @@ ht-degree: 2%
 
 ![thumbnail-image](assets/thumbnail-image.png)
 
-### 步驟4: 建立群組 {#step-create-group}
+### 步驟4:建立群組 {#step-create-group}
 
 ![社群——建立群組](assets/community-create-group.png)
 
@@ -202,8 +202,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->群組會以所有語言建立，如步驟1所 [指定： 社群群組範本](/help/communities/groups.md#step-community-group-template) ，位於各社群網站的社群群組主控台中，以其他可用社群群組語言提供。
-
+>群組會以所有語言建立，如步驟1所 [指定：社群群組範本](/help/communities/groups.md#step-community-group-template) ，位於各社群網站的社群群組主控台中，以其他可用社群群組語言提供。
 
 ## 作者群組內容 {#author-group-content}
 
@@ -256,15 +255,13 @@ STRUCTURE面板允許修改最初從作者或發佈環境建立子社區站點�
 >
 >例如，重新命名URL不會移動現有的UGC，因此會產生「遺失」UGC的效果。
 
-
 >[!CAUTION]
 >
 >群組函式不 *能是**網站結構中的* 第一個函式，也不能是唯一函式。
 >
 >任何其他函式(例如頁 [面函式](/help/communities/functions.md#page-function))必須先包含並列出。
 
-
-**範例： 將日曆函式添加到子社區（組）結構**
+**範例：將日曆函式添加到子社區（組）結構**
 
 ![community-group-add-calendar](assets/community-group-add-calendar.png)
 
@@ -304,7 +301,6 @@ THUMBNAIL [(縮圖](#thumbnail) )面板允許上傳影像，以在發佈環境�
 >父社區站點和父組應已發佈。
 >
 >社群網站和巢狀群組應以自上而下的方式發佈。
-
 
 ## 刪除群組 {#delete-the-group}
 
