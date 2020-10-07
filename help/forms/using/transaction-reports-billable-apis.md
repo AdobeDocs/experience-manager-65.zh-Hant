@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 13016df927448d93af86899f746199e1815fdfe7
+workflow-type: tm+mt
+source-wordcount: '1963'
+ht-degree: 6%
 
 ---
 
@@ -29,9 +32,9 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
 
 帳單API不會計入頁數、檔案或表單的長度，或轉譯檔案的最終格式。 事務報表將事務分為兩類：已轉譯的檔案和已提交的表單。
 
-* **** 提交的表單：當從使用AEM Forms建立的任何類型表單提交資料，且資料會提交至任何資料儲存存放庫或資料庫時，即視為表單提交。 例如，提交最適化表單、HTML5表單、PDF表單和表單集都會視為提交的表單。 表單集中的每個表單都被視為提交。 例如，如果表單集有5個表單，提交表單集時，事務報告服務會將其計為5個提交。
+* **提交的表單：** 當從使用AEM Forms建立的任何類型表單提交資料，且資料會提交至任何資料儲存存放庫或資料庫時，即視為表單提交。 例如，提交最適化表單、HTML5表單、PDF表單和表單集都會視為提交的表單。 表單集中的每個表單都被視為提交。 例如，如果表單集有5個表單，提交表單集時，事務報告服務會將其計為5個提交。
 
-* **** 轉譯的檔案：通過組合模板和資料、數字地簽名或認證文檔、使用文檔服務的可計費文檔服務API或將文檔從一種格式轉換為另一種格式來生成文檔，被視為所呈現的文檔。
+* **轉譯的檔案：** 通過組合模板和資料、數字地簽名或認證文檔、使用文檔服務的可計費文檔服務API或將文檔從一種格式轉換為另一種格式來生成文檔，被視為所呈現的文檔。
 
 >[!NOTE]
 >
@@ -307,11 +310,12 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
 >
 >* 匯編器服務的調用API可以根據輸入在內部調用另一服務的計費API。 因此，調用API可以作為無、單個或多個事務處理來處理。 計算的交易數量取決於輸入和呼叫的內部API。
 >* 使用匯編器服務生成的單個PDF文檔可以作為無、單個或多個事務處理來處理。 計算的交易數量取決於提供的DDX代碼。
+
 >
 
 
 
-### PDF公用程式服務 {#pdf-utility-service}
+### PDF公用程式服務  {#pdf-utility-service}
 
 <table>
  <tbody>
@@ -332,7 +336,7 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
 
 ## 計費資料擷取API {#billable-data-capture-apis}
 
-最適化表單、HTML5表單和表單集的所有提交事件都視為交易。 依預設，提交PDF表單不會算作交易。 使用提供的 [交易記錄API](transaction-reports-billable-apis.md#recordingbillableapisastransactionsforcustomcode) ，將PDF表單提交記錄為交易。
+最適化表單、HTML5表單和表單集的所有提交事件都視為交易。 依預設，提交PDF表單不會算作交易。 使用提供的 [交易記錄API](record-transaction-custom-implementation.md) ，將PDF表單提交記錄為交易。
 
 ### 適用性表單 {#adaptive-forms}
 
@@ -435,7 +439,7 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">轉換</a> （轉換為PDF）</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">演算</a> （轉換為PDF）</td>
    <td>產生互動式通訊的PDF版本。</td>
    <td>已呈交的文件</td>
    <td>
@@ -445,7 +449,7 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
  </tbody>
 </table>
 
-### OSGi上的表單導向AEM工作流程 {#form-centric-aem-workflows-on-osgi}
+### OSGi上的表單導向AEM工作流程  {#form-centric-aem-workflows-on-osgi}
 
 <table>
  <tbody>
