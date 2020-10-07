@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0c6a1afff62d4a962edfc8c2e6574d65a18534ac
+source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
 workflow-type: tm+mt
-source-wordcount: '9619'
+source-wordcount: '9613'
 ht-degree: 3%
 
 ---
@@ -432,7 +432,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 保留其他屬性和元資料資訊。 複製資產時不會建立部分復本。
 
-1. 在介 [!DNL Assets] 面中，選取一或多個資產，然後從工具 **[!UICONTROL 列按一下]** 「複製」。 或者，從資 **[!UICONTROL 產卡]** ，在資產介面中選取工具列中的 ![](assets/do-not-localize/copy_icon.png) 「複製」選項。
+1. 在介 [!DNL Assets] 面中，選取一或多個資產，然後從工具列 **[!UICONTROL 按一下]** 「複製」。 或者，從資 **[!UICONTROL 產卡]** ，在資產介面中選取工具列中的 ![](assets/do-not-localize/copy_icon.png) 「複製」選項。
 
    >[!NOTE]
    >
@@ -496,7 +496,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ### 使用拖曳作業來移動資產 {#move-using-drag}
 
-您可以將資產（或資料夾）拖曳至目標位置，將資產（或資料夾）移至同級資料夾、 [!UICONTROL Lightbox] 系列或其他系列，而不是使用者介面中的 [!UICONTROL Move] （移動）選項。 不過，此操作只能在清單視圖中進行。
+您可以將資產（或資料夾）拖曳至目標位置，將資產（或資料夾）移至同級資料夾，而不是在使用者介面中使 [!UICONTROL 用「移動] 」選項。 不過，此操作只能在清單視圖中進行。
 
 拖曳資產並移動資產並不會開啟「移 [!UICONTROL 動資產] 」精靈，因此您在移動資產時無法取得重新命名資產的選項。 此外，已發佈的資產會在拖曳後重新發佈，而不需徵求使用者的同意才可重新發佈。
 
