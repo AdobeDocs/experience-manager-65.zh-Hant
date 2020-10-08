@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1728'
 ht-degree: 2%
@@ -123,7 +123,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >[隧道服務](/help/communities/deploy-communities.md#tunnel-service-on-author) ，允許選擇僅存在於發佈環境中的成員和組。
-
 
 ![啟用角色](assets/site-admin.png)
 
@@ -316,7 +315,6 @@ Select **Create.**
 >
 >若要停用，只需在屬性值 `sling:match` 前加上&#39;x&#39; - `xlocalhost.4503/$` —— 和 **全部儲存**。
 
-
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
 #### 疑難排解：保存映射時出錯 {#troubleshooting-error-saving-map}
@@ -340,7 +338,6 @@ Select **Create.**
 >[!NOTE]
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
-
 
 ### 新增目錄 {#add-a-catalog}
 
