@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 4%
@@ -24,8 +24,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->用於建立社區站點的控 [制台](sites-console.md)、社 [區站點模板](sites.md)、 [社區組模板和社](tools-groups.md)[](functions.md) 區功能僅在作者環境中使用。
-
+>用於建立社區站點的控 [制台](sites-console.md)、社 [區站點模板](sites.md)、 [社區組模板和社區功](tools-groups.md)[](functions.md) 能僅供作者環境使用。
 
 ## 網站範本主控台 {#site-templates-console}
 
@@ -85,7 +84,6 @@ ht-degree: 4%
 >
 >任何其他函式(例如頁 [面函式](functions.md#page-function))必須先包含並列出。
 
-
 ![站點編輯器](assets/site-editor.png)
 
 ### 群組範本功能 {#group-templates-for-groups-function}
@@ -95,7 +93,6 @@ ht-degree: 4%
 >[!CAUTION]
 >
 >Groups函式不 *能是**網站結構中的* 第一個函式，也不能是唯一函式。
-
 
 ![站點功能](assets/site-functions.png)
 
