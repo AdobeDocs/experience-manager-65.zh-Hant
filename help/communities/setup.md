@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 1%
@@ -44,7 +44,6 @@ ht-degree: 1%
 >[!NOTE]
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](../../help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
-
 
 ## 安裝最新的Communities版本 {#install-latest-communities-release}
 
@@ -94,8 +93,8 @@ ht-degree: 1%
 
    * 例如，使用者名稱&#39;admin&#39; /密碼&#39;admin&#39;
 
-* 從主控制台瀏覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 操作]** >安 **[!UICONTROL 全性]****[!UICONTROL >用]**&#x200B;戶」。
-* 從「編輯」 **菜單中&#x200B;**，選擇「添**[!UICONTROL 加用戶」]**
+* 從主控制台瀏覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 操作]** >安 **[!UICONTROL 全性]****[!UICONTROL >]**&#x200B;用戶」。
+* 從「編輯」 **菜單中** ，選擇「添 **[!UICONTROL 加用戶」]**
 
 * 在對話 `Create New User` 框中輸入：
 
