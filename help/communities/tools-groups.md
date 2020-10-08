@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 3%
@@ -31,8 +31,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->用於建立社區站點的控 [制台](/help/communities/sites-console.md)、社 [區站點模板](/help/communities/sites.md)、 [社區組模板和社](/help/communities/tools-groups.md)[](/help/communities/functions.md) 區功能僅在作者環境中使用。
-
+>用於建立社區站點的控 [制台](/help/communities/sites-console.md)、社 [區站點模板](/help/communities/sites.md)、 [社區組模板和社區功](/help/communities/tools-groups.md)[](/help/communities/functions.md) 能僅供作者環境使用。
 
 ## 群組範本主控台 {#group-templates-console}
 
@@ -83,7 +82,6 @@ ht-degree: 3%
 >自Communities [FP1起，巢狀群組功能就可使用](/help/communities/communities.md#latestfeaturepack)。
 >
 >仍不允許將群組函式新增為範本中的第一個或唯一函式。
-
 
 ![群組範本編輯器](assets/template-editor.png)
 
