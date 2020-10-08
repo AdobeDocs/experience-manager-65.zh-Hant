@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 6%
@@ -26,7 +26,6 @@ ht-degree: 6%
 >
 >不會編輯/libs資料夾的內容，因為任何重新安裝或升級都可能會刪除或取代/libs資料夾，而/apps資料夾的內容則未受影響。
 
-
 在作 [者例項上使用CRXDE](../../help/sites-developing/developing-with-crxde-lite.md) Lite，首先在/apps檔案夾中建立路徑，該路徑與/libs檔案夾中重疊元件的路徑相同。
 
 要複製的路徑為：
@@ -38,7 +37,7 @@ ht-degree: 6%
 1. 瀏覽至 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. 建 `/apps/social` 立（如果尚不存在）
    * 選擇節 `/apps` 點
-   * **[!UICONTROL 建立>資料夾……]**
+   * **[!UICONTROL 「建立>資料夾……」]**
       * 輸入名稱: `social`
 1. 選擇節 `social` 點
    * **[!UICONTROL 建立]** >資 **[!UICONTROL 料夾……]**
@@ -82,9 +81,6 @@ ht-degree: 6%
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
-
->
-
 
 
 覆蓋本身(屬 `Type`性 `sling:resourceType`)必須是相對的自我參考，如此在/apps中找不到的任何內容就會在/libs中尋找。
