@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -47,7 +47,6 @@ ht-degree: 1%
 >[!NOTE]
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](../../help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
-
 
 ## 安裝最新的Communities版本 {#install-latest-communities-release}
 
@@ -123,7 +122,6 @@ ht-degree: 1%
 >
 >但是，稍後會將其指 [派給成員群組](enablement-create-site.md#assignuserstocommunityenablemembersgroup)。
 
-
 ### Riley Taylor —— 註冊人 {#riley-taylor-enrollee}
 
 [建立將新增至](members.md#create-new-member) 「學員」群組（社群滑雪課程群組）的成員。
@@ -178,7 +176,6 @@ ht-degree: 1%
 >[!NOTE]
 >
 >在建立社區站點期間，現有成員和組可以添加到社區站點的成員組中。
-
 
 ## 社區管理員角色 {#community-administrator-role}
 
