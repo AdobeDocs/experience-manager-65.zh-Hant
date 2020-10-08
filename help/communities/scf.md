@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1505'
 ht-degree: 0%
@@ -146,7 +146,7 @@ HTTP存取。hbs檔案不得禁止。
 
 Most Communities元件必須 *新增* ，做為Sling可定址資源。 在模板中可以包含一 *些Communities元件* ，作為非現有資源，以允許動態地包含和定制用戶生成內容(UGC)的寫入位置。
 
-在這兩種情況下，元件的必 [要用戶端程式庫](clientlibs.md) ，也必須存在。
+無論哪種情況，元件的必 [要客戶端庫](clientlibs.md) 都必須存在。
 
 **新增元件**
 
@@ -183,7 +183,6 @@ Most Communities元件必須 *新增* ，做為Sling可定址資源。 在模板
 >[!NOTE]
 >
 >若要動態新增元件至頁面，而非將元件新增或加入範本中，請參閱元 [件側載](sideloading.md)。
-
 
 ### Handlebars Helpers {#handlebars-helpers}
 
