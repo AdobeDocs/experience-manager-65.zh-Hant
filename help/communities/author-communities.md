@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 27%
@@ -34,7 +34,6 @@ ht-degree: 27%
 >[!NOTE]
 >
 >如果不熟悉編寫環境，請檢視基本處理 [的說明檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
-
 
 ## 可用的社群元件 {#available-communities-components}
 
@@ -82,7 +81,6 @@ ht-degree: 27%
 >[!NOTE]
 >
 >Experience Manager Communities不再提供民調問答元件並提供支援。
-
 
 ## 相關社群檔案 {#related-communities-documentation}
 
