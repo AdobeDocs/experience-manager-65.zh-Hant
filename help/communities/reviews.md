@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
-source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 2%
@@ -27,7 +27,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >不支援匿名張貼審核。 網站訪客必須註冊（成為會員）並登入以參與。 已登入的訪客可隨時更新其審核。
-
 
 ## 新增審核至頁面 {#adding-a-review-to-a-page}
 
@@ -75,7 +74,6 @@ ht-degree: 2%
 >
 >如果項目是在「必要 **[!UICONTROL 評分]****** 」標籤上輸入，但未在「允許的評分」標籤上指定，則它不會包含在要評分的項目中。
 
-
 在「審 **[!UICONTROL 核]** 」標籤下，指定如何處理審核。
 
 ![評論](assets/configure-review3.png)
@@ -92,7 +90,7 @@ ht-degree: 2%
 
    如果勾選，允許上傳檔案附件以供審核。 預設為未勾選。
 
-* **最大檔案大小&#x200B;**
+* **最大檔案大小**
 
    僅在勾選「允 **[!UICONTROL 許檔案上傳]** 」時相關。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為10 MB。
 
@@ -169,7 +167,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >「平均值」會反映摘要審閱「允許評分」標籤上所列第一個項目的投票數。
-
 
 ### 設定審核摘要（顯示） {#configuring-reviews-summary-display}
 
