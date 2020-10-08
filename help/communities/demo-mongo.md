@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: a99313c35872d3f481c3dc6f42b372cc603e7549
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -74,7 +74,6 @@ ht-degree: 0%
 >
 >如果MongoDB是在 *AEM後啟動* ，請重 **新啟動所有** AEM **** 例項，以便正確連線至MongoDB。
 
-
 ### 示範製作選項：設定MongoDB複製副本集 {#demo-production-option-setup-mongodb-replica-set}
 
 以下命令是在localhost上設定具有3個節點的複製副本集的示例：
@@ -133,7 +132,6 @@ ht-degree: 0%
 >
 >如果Solr Console不可用，請檢查&lt;solrinstall>/example/logs下的日誌。 查看SOLR是否嘗試綁定到無法解析的特定主機名(如「user-macbook-pro」)。
 如果是，請使用此主機名的新條目（如127.0.0.1 user-macbook-pro）更新etc/hosts檔案，Solr將正常啟動。
-
 
 ### SolrCloud {#solrcloud}
 
