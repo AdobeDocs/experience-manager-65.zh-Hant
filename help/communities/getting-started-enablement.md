@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 translation-type: tm+mt
-source-git-commit: 341fef2b8f040848a59381b0d4996c29f352b929
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -21,12 +24,11 @@ AEM Communities可協助品牌建立跨數位和面對面通道的一致體驗�
 
 以下是快速設定啟用社群的教 [學課程](overview.md#enablement-community) ，以進行示範或開發。
 
-如需快速設定參與社群的教 [學課程](overview.md#engagement-community)，請 [造訪「AEM社群快速入門」](getting-started.md)。
+如需快速設定參與社群的教 [學課程](overview.md#engagement-community)，請 [造訪「AEM Communities快速入門」](getting-started.md)。
 
 >[!NOTE]
 >
 >本教學課程假設安裝 [Communities功能套件1](deploy-communities.md#latestfeaturepack) 或更新版本。
-
 
 * [初始設定](enablement-setup.md)
 
