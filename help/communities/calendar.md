@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 5%
@@ -171,7 +171,6 @@ ht-degree: 5%
 >[!NOTE]
 >
 >請造 [訪管理標籤](/help/sites-administering/tags.md) ，瞭解如何新增標籤命名空間（分類）。
-
 
 #### 翻譯標籤 {#translation-tab}
 
