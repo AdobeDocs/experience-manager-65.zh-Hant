@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 42606e76742fe7698c4c186208e515ed22adc5a4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2787'
+ht-degree: 1%
 
 ---
 
@@ -71,7 +71,6 @@ ht-degree: 0%
 >
 >對於舊版AEM，如果您在記錄檔中遇到例外 **Can&#39;t extract a token from this**，請升級至該AEM版本的最新CFP。
 
-
 如需Facebook圖形API版本資訊，請參閱 [Facebook API變更記錄](https://developers.facebook.com/docs/apps/changelog)。
 
 ### 建立Facebook應用程式 {#create-a-facebook-app}
@@ -93,7 +92,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >若要開發，http://localhost:4503將有效。
-
 
 建立應用程式後，請找出「應用程式 **[!UICONTROL ID」和「應用程式]****[!UICONTROL 密碼」設定]** 。 設定 [Facebook雲端服務時需要此資訊](#createafacebookcloudservice)。
 
@@ -130,7 +128,6 @@ Adobe Granite OAuth應用程式和Provider [](#adobe-granite-oauth-application-a
 
    * 選擇 **[!UICONTROL 保存]**。
    * **[!UICONTROL 發佈]**.
-
 
 
 
@@ -394,7 +391,6 @@ Facebook和Twitter的後續步驟相同：
 >[!CAUTION]
 >
 >請小心不要將驗證處理常式與 *Adobe Granite OAuth應用程式和提供者的Facebook或Twitter例項混淆*。
-
 
 ![chlimage_1-490](assets/chlimage_1-490.png)
 
