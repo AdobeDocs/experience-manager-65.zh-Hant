@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 0%
@@ -52,7 +52,6 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 >
 >對於生產系統，需要許可的翻譯服務。 如果未獲得許可，則應關閉預設的翻 [譯服務](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)。
 
-
 ## UGC的全球翻譯 {#global-translation-of-ugc}
 
 當網站有多種語 [言副本](../../help/sites-administering/tc-prep.md)，預設翻譯服務不會識別在某個網站上輸入的UGC可能與在另一個網站上輸入的UGC有關，因為UGC實際上是由同一元件（包含該元件的頁面的語言副本）產生。
@@ -70,7 +69,6 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 >雖然UGC仍位於 [公用商店](working-with-srp.md)，但它位於語言特定的UGC位置，而設定全域轉譯後新增的新內容則從全域共用商店位置擷取。
 >
 >沒有移轉工具可將特定語言的內容移入或合併至全域共用商店。
-
 
 ### 翻譯整合配置 {#translation-integration-configuration}
 
@@ -145,7 +143,6 @@ AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md
 >首選語言是當網站訪客登入並指定語言偏好設定時，在使用者描述檔中設定的語言偏好設定。
 >
 >當網站訪客是匿名的，或未在其描述檔中指定語言偏好設定時，首選語言是頁面範本的基本語言。
-
 
 ### 使用者偏好設定 {#user-preference}
 
