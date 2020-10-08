@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -27,7 +27,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >不支 [持延伸](client-customize.md#overlays) 覆蓋元件。
-
 
 ## 範例 {#example}
 
