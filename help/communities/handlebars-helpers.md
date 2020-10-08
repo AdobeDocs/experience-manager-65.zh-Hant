@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
-source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '1534'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +35,6 @@ Handlebars Helpers（幫手）是可從Handlebars指令碼調用的方法，以�
 >[!NOTE]
 >
 >請務必安裝最 [新的Communities功能套件](deploy-communities.md#latestfeaturepack)。
-
 
 ## 縮寫 {#abbreviate}
 
@@ -62,7 +64,7 @@ Handlebars Helpers（幫手）是可從Handlebars指令碼調用的方法，以�
 
    （可選）若為true，則傳回Handlebars.SafeString()。 預設為false。
 
-### 範例 {#examples}
+### Examples {#examples}
 
 ```
 {{abbreviate subject maxWords=2}}
@@ -114,7 +116,7 @@ Then abbreviate would return
 
    （選用）布林值，指出在傳回結果之前是否要套用Handlebars.SafeString()。 預設為false。
 
-### 例如 {#example}
+### 範例 {#example}
 
 ```
 {{content-loadmore  context numChars=32  moreText="go on"  ellipsesText="..." }}
@@ -142,7 +144,7 @@ Then content-loadmore would return
 
    （選用）要套用的日期格式。 預設值為&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot;，結果顯示為&quot;2015-03-18T18:17:13-07:00&quot;
 
-### 範例 {#examples-1}
+### Examples {#examples-1}
 
 ```
 {{dateUtil this.memberSince format="dd MMM yyyy, hh:mm"}}
@@ -170,7 +172,7 @@ Then content-loadmore would return
 
    要比較的右側值。
 
-### 例如 {#example-1}
+### 範例 {#example-1}
 
 ```
 {{#equals  value "some-value"}}
@@ -194,7 +196,7 @@ Then content-loadmore would return
 
    （選用）以逗號分隔的 [WCM模式清單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) ，以測試是否已設定。
 
-### 例如 {#example-2}
+### 範例 {#example-2}
 
 ```xml
 {{#if-wcm-mode mode="DESIGN, EDIT"}}
@@ -224,7 +226,7 @@ Then content-loadmore would return
 
    （可選）翻譯提示
 
-### 例如 {#example-3}
+### 範例 {#example-3}
 
 ```
 {{i18n "hello"}}
@@ -267,7 +269,7 @@ Then content-loadmore would return
 
    （可選）預設為false。 僅供內部使用。
 
-### 例如 {#example-4}
+### 範例 {#example-4}
 
 ```
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
@@ -299,7 +301,7 @@ Then content-loadmore would return
 
    （可選）逗號分隔的用戶端程式庫類別清單。 這將包含指定類別的所有CSS程式庫。
 
-### 範例 {#examples-2}
+### Examples {#examples-2}
 
 ```
 // all: js + theme (theme-js + css)
@@ -358,7 +360,7 @@ Then content-loadmore would return
 
    切換到實際日期前的天數。 預設值為60。
 
-### 例如 {#example-5}
+### 範例 {#example-5}
 
 ```
 {{pretty-time this.published daysCutoff=7}}
@@ -386,7 +388,7 @@ Depending on how long in the past, may return
 
    要編碼的HTML。
 
-### 例如 {#example-6}
+### 範例 {#example-6}
 
 ```
 <p>{{xss-html forum-ugc}}</p>
@@ -404,7 +406,7 @@ Depending on how long in the past, may return
 
    要編碼的HTML。
 
-### 例如 {#example-7}
+### 範例 {#example-7}
 
 ```
 <div id={{xss-htmlAttr id}} />
@@ -422,7 +424,7 @@ Depending on how long in the past, may return
 
    要編碼的HTML。
 
-### 例如 {#example-8}
+### 範例 {#example-8}
 
 ```
 var input = {{xss-jsString topic-title}}
@@ -440,7 +442,7 @@ var input = {{xss-jsString topic-title}}
 
    要淨化的URL。
 
-### 例如 {#example-9}
+### 範例 {#example-9}
 
 ```
 <a href="{{xss-validHref url}}">my link</a>
@@ -566,7 +568,6 @@ public class FooTextHelper implements TemplateHelper<String>{
 >還必須為伺服器端建立幫助程式。
 >
 >該元件在登錄用戶的客戶端上重新呈現，如果找不到客戶端幫助程式，則該元件將消失。
-
 
 ### 用戶端自訂協助工具 {#client-side-custom-helpers}
 
