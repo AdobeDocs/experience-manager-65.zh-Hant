@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -224,15 +224,14 @@ Adobe儲存庫的開發人員可使用已安裝功能套件的最新Javadoc。 �
 >此範例不遵循下列最佳實務：
 >
 >* 計分規則名稱應全局唯一；不應以同名結尾。
-   >  不要做 *的* 範例：
-   >  /libs/settings/community/scorning/rules/site1/forums-scorning
-   >  /libs/settings/community/scornimy/rules/site2/forums-scorning
-   >
-   >
-* 為不同的AEM網站建立獨特的徽章影像
-
 >
-
+>  
+不要做 *的* 範例：
+>
+>  /libs/settings/community/scorning/rules/site1/forums-scorning
+>  /libs/settings/community/scornimy/rules/site2/forums-scorning
+>
+>* 為不同的AEM網站建立獨特的徽章影像
 
 
 ### 存取計分UGC {#access-scoring-ugc}
