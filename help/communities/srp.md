@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -33,7 +33,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >**自訂元件**:對於AEM Communities的授權客戶，SRP API可供自訂元件的開發人員使用，以便存取UGC，而不考慮基礎的拓撲。 請參 [閱SRP和UGC Essentials](srp-and-ugc.md)。
-
 
 另請參閱:
 
@@ -68,7 +67,6 @@ JCR和OAK通常都用來參照AEM存放庫。
 >如需 [范常式式碼和其他詳細資訊，請參閱SRP](srp-and-ugc.md) 和UGC Essentials。
 >
 >請參 [閱使用SRP存取UGC](accessing-ugc-with-srp.md) ，以取得編碼時的最佳實務。
-
 
 ### ASRP {#asrp}
 
@@ -130,7 +128,6 @@ ACL檢查使用一種實用程式方法，該方法返回適合於檢查應用�
 >[!CAUTION]
 >
 >由於陰影節點有多種用途，因此存在陰影節 *點並不* 表示元件是NER。
-
 
 ### 儲存位置 {#storage-location}
 
