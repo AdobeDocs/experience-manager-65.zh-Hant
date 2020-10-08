@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -71,7 +71,7 @@ AEM Communities的訊息功能可讓登入網站訪客（成員）彼此傳送�
 
    傳送失敗訊息範本根目錄的絕對路徑。 預設值 *為/etc/notification/messaging/default*。
 
-* **無重試次數**
+* **重試次數**
 
    嘗試重新傳送失敗訊息的次數。 預設值 *為3*。
 
@@ -135,7 +135,6 @@ AEM Communities的訊息功能可讓登入網站訪客（成員）彼此傳送�
 >
 >要允許除列出的塊外的所有檔案副檔名，請使用「**-**」表徵圖刪除單個空條目（再次），然後按一下「 **保存」**。
 
-
 ## 群組訊息 {#group-messaging}
 
 要允許註冊用戶批量向用戶組發送直接消息，請確保在以下兩個 **Messaging Operation Services配置實例中啟用組消息** 傳遞 **** :
@@ -143,11 +142,11 @@ AEM Communities的訊息功能可讓登入網站訪客（成員）彼此傳送�
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-console`
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-messaging`
 
-**消息傳遞操作服務： 社交主控台**
+**消息傳遞操作服務：社交主控台**
 
 ![social-console-op-service](assets/social-console-op-service.png)
 
-**消息傳遞操作服務： 社交訊息**
+**消息傳遞操作服務：社交訊息**
 
 ![social-message-op-service](assets/social-message-op-service.png)
 
