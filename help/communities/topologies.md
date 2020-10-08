@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 自AEM Communities 6.1起，已採用獨特的方式來處理網站訪客（成員）從發佈環境提交的使用者產生內容(UGC)。
 
-此方法與AEM平台處理一般由作者環境管理的網站內容的方式有根本不同。
+此方法與AEM平台處理一般由作者環境管理之網站內容的方式有根本不同。
 
 AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AEM Communities則會針對從未複製的UGC使用單一、通用的儲存區。
 
@@ -43,7 +46,6 @@ AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AE
 >[!NOTE]
 >
 >如需AEM平台的詳細資訊，請參 [閱Recommended Deployments](../../help/sites-deploying/recommended-deploys.md) [and Introduction to the AEM Platform](../../help/sites-deploying/data-store-config.md)。
-
 
 ## 適用於生產 {#for-production}
 
