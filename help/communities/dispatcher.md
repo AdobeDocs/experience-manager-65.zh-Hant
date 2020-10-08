@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 1%
@@ -92,8 +92,8 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 >[!NOTE]
 >
 >**屬性名稱範例**
+>
 >顯示的所有屬性名稱(如 **/0050** 和 **/0170**)都應調整為適合現有dispatcher.any配置檔案。
-
 
 應將下列條目添加到/filter節的結尾，尤其是在所有拒絕條目之後。
 
