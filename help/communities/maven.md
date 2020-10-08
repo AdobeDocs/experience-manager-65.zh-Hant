@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: f05d7c19e3284c0627e29b9590db4749be100229
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,6 @@ AEM Communities檔案的此區段除了：
 >建議您隨時更新最新的社群版本。
 >
 >請造訪「 [最新版本](deploy-communities.md#latest-releases) 」區段，以識別最新版本。
-
 
 ## Maven相關性示例 {#maven-dependency-example}
 
