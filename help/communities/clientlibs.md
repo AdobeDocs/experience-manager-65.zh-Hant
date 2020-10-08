@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f6aa95514a266a042c9bd1165634e30e80479ae7
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -90,7 +90,6 @@ Clientlibs是元件正確運作(JavaScript)和樣式(CSS)的必要條件。
 >[!NOTE]
 >
 >如果網站不是社群網站，則需要搜尋網站所用用戶端程式庫的存在或位置。
-
 
 使用「 [AEM Communities快速入門](/help/communities/getting-started.md) 」範例(其中 `site-name` 為Engage **)，在新增審核元件時，clientliblist的顯示方式如下：
 
