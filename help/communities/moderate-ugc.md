@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 1%
@@ -25,14 +25,14 @@ ht-degree: 1%
 
 當會員（登入網站訪客）透過與下列其中一個社群元件互動，從已發佈的社群網站張貼內容時，就會建立社群內容，也稱為使用者產生的內容(UGC):
 
-* [部落格](/help/communities/blog-feature.md): 會員張貼部落格文章或留言。
-* [日曆](/help/communities/calendar.md): 成員會張貼日曆事件或留言。
-* [注釋](/help/communities/comments.md): 成員會張貼留言或回覆留言。
+* [部落格](/help/communities/blog-feature.md):會員張貼部落格文章或留言。
+* [日曆](/help/communities/calendar.md):成員會張貼日曆事件或留言。
+* [注釋](/help/communities/comments.md):成員會張貼留言或回覆留言。
 
-* [論壇](/help/communities/forum.md): 成員會發佈新主題或回覆主題。
-* [概念](/help/communities/ideation-feature.md): 會員張貼構想或留言。
-* [QnA](/help/communities/working-with-qna.md): 成員會建立問題或回答問題。
-* [評論](/help/communities/reviews.md): 成員在評分項目時張貼評論。
+* [論壇](/help/communities/forum.md):成員會發佈新主題或回覆主題。
+* [概念](/help/communities/ideation-feature.md):會員張貼構想或留言。
+* [QnA](/help/communities/working-with-qna.md):成員會建立問題或回答問題。
+* [評論](/help/communities/reviews.md):成員在評分項目時張貼評論。
 
 UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾訊息和辱罵性語言）。 UGC可從以下幾種環境協調：
 
@@ -230,7 +230,6 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 >
 >垃圾訊息偵測只會針對英文地區設定實作。
 
-
 ### 情緒 {#sentiment}
 
 情緒是根據貼文(UGC)中顯示的正面和負[面關鍵字](#configuringwatchwords)（關注字詞）數目來計算。
@@ -241,10 +240,10 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 
 /libs元件中定義的規則包括：
 
-* 規則1: 如果沒有正面字詞且至少有一個負面字詞，請將值設為1。
-* 規則2: 如果沒有否定字詞且至少有一個正面字詞，請將值設為10。
-* 規則3: 如果有比正面字詞更多的負面字詞，請將值設為3。
-* 規則4: 如果正面字詞多於負面字詞，請將值設為8。
+* 規則1:如果沒有正面字詞且至少有一個負面字詞，請將值設為1。
+* 規則2:如果沒有否定字詞且至少有一個正面字詞，請將值設為10。
+* 規則3:如果有比正面字詞更多的負面字詞，請將值設為3。
+* 規則4:如果正面字詞多於負面字詞，請將值設為8。
 
 若要覆寫或新增規則，請依照預設規則的結構，在/apps目錄中建立一組規則。 編輯情緒設定，以識別規則的位置。
 
