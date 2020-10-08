@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 0%
@@ -55,11 +55,9 @@ For example: `/content/sites/engage/en/configuration`
 >
 >覆蓋路徑中的所有節點都只需要類型 `Folder`。
 
-
 >[!CAUTION]
 >
 >如果自訂範本的名稱為 *sitepage.hbs*，則會自訂所有社群網站。
-
 
 ### 自訂網站範本範例 {#custom-site-template-example}
 
