@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 除了內容相關性外，計分演算法也會考量成員活動，例如投票和答案百分比。 雖然基本計分包括了定量計分，但進階計分則採用演算法。
 
-因此，高級計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
+因此，先進的計分引擎需要足夠的資料，使分析具有意義。 隨著演算法不斷調整所建立內容的量與品質，成為專家的成就臨界值會不斷重新評估。 還有一個概念 *是* ，成員的舊職位會衰落。 如果專家成員停止參與獲得專家地位的主題，在某個預先確定的點(請參閱計分引擎配置 [](#configurable-scoring-engine))，他們可能失去專家的地位。
 
 設定進階計分與基本計分幾乎相同：
 
@@ -56,7 +56,6 @@ ht-degree: 1%
 >[!NOTE]
 >
 >若要使用進階的計分和標籤功能，請安裝「專 [家識別」套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
-
 
 ## 可配置計分引擎 {#configurable-scoring-engine}
 
