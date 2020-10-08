@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 * 搜尋欄位
 * 登入連結
 * 品牌橫幅
-* 「參考網站範本」中所包含元件的功能表連結。
+* 「參考網站範本」中元件的功能表連結。
 
 如果您選取各種連結，您會發現這些連結是唯讀模式。
 
@@ -92,7 +92,7 @@ ht-degree: 1%
    1. 檢視您收到的直接訊息（收件匣）、傳送的訊息（已傳送的項目）和刪除的訊息（垃圾桶）。
    1. 編寫新的直接訊息，以傳送給個人和群組。
 
-* [通知](/help/communities/notifications.md) (Notifications)選項會引導您前往通知區段，您可在此檢視您感興趣的事件並編輯通知設定。
+* [通知](/help/communities/notifications.md) (Notifications)選項會引導您前往通知區段，您可在此處檢視感興趣的事件並編輯通知設定。
 * [管理](/help/communities/published-site.md#moderationlink) （如果您有協調權限）可將您導向「AEM Communities協調頁面」。
 
 ![adminscreen](assets/adminscreen.png)
@@ -107,9 +107,6 @@ ht-degree: 1%
 >
 >* [社群元件](/help/communities/author-communities.md) （適用於作者）
 >* [元件、功能和功能基本工具](/help/communities/essentials.md) （適用於開發人員）
-
->
-
 
 
 ### 論壇連結 {#forum-link}
