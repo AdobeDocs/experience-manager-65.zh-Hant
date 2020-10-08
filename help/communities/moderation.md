@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2110'
+ht-degree: 3%
 
 ---
 
@@ -62,7 +62,6 @@ ht-degree: 0%
 >
 >只有當所選SRP實作一般商店時，發佈環境中的UGC才會在作者身上顯示。 例如，預設儲存空間為JSRP，對於作者和發佈而言，JSRP不是常用的儲存空間。 請參 [閱社群內容儲存](/help/communities/working-with-srp.md)。
 
-
 ![協調主題作者](assets/moderationconsoleauthor.png)
 
 ## 協調控制台UI {#moderation-console-ui}
@@ -109,7 +108,6 @@ ht-degree: 0%
 > 
 >內容區域具有無 *限捲動*，這表示您可繼續捲動，直到內容結束為止。 即使在捲動時，工具列仍會保持在內容區域上方的固定可見位置。
 
-
 ### 濾鏡邊欄 {#ootbfilters}
 
 ![開放濾鏡](assets/open-filterrail.png)
@@ -126,10 +124,9 @@ ht-degree: 0%
 >
 >社群協調者可以在協調控制台UI上為預先定義的篩選建立書籤。 當這些篩選條件附加至URL結尾（作為查詢字串參數）時，協調者稍後可返回書籤化篩選條件，並共用這些連結。
 
-
 ![searchicon](assets/searchicon.png)
 
-當篩選邊欄開啟時，「搜尋」圖示會切換側面板關閉。 不過，若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅內容」選項。
+當篩選邊欄開啟時，「搜尋」圖示會切換側面板關閉。 不過，若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅限內容」選項。
 
 #### 內容路徑 {#content-path}
 
@@ -154,7 +151,6 @@ ht-degree: 0%
 >當管理員存取大量協調控制台時，會顯示UGC的所有參考，包括未使用網站建立精靈建立的網 [站](/help/communities/sites-console.md)，例如Geometrixx範例。
 >
 >當受信任的社群成員在發佈時存取大量協調控制台時，只會顯示對為該成員獲授權協調的社群網站所建立之UGC的參考，並可使用網站篩選器加以篩選。
-
 
 #### 內容類型 {#content-type}
 
@@ -205,7 +201,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >如果只選取「未回答」狀態，則協調者將會看到除回答問題之外的所有內容（適用於所有內容類型）。 因為在未回答的問題和其他內容（例如論壇主題、部落格文章或留言）中，不存在負責回答問題的屬性。
-
 
 ![狀態](assets/statuses.png)
 
@@ -270,7 +265,7 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 [在內容區域](/help/communities/moderate-ugc.md#moderation-actions) ，或在檢視內容詳細資訊時，可對一或多個選取項目執行協調動作。
 
-若要大量協調貼文，請在內容區域中按一下貼文上的「選取(選取![](assets/selecticon.png))」圖示，該圖示會以滑鼠（案頭）暫留在貼文上，或在貼文上按住手指（行動裝置）。 執行此動作後，您就會進入多選模式，現在只要按一下後續的貼文，即可選取要大量協調的貼文。 使用工具列上顯示的按鈕，對選取的貼文執行協調動作。 所有動作都會提示您確認。
+若要大量協調貼文，請在內容區域中按一下貼文上的「選取(選取![](assets/selecticon.png))」圖示，該圖示會以滑鼠（案頭）暫留在貼文上，或在貼文上按住手指（行動裝置）。 執行此動作後，您就會進入多選模式，現在只要按一下貼文，就可以選取後續的大量協調貼文。 使用工具列上顯示的按鈕，對選取的貼文執行協調動作。 所有動作都會提示您確認。
 
 若要協調內容區域中的單一貼文，請將滑鼠（案頭）暫留在貼文上，或按住貼文（行動裝置）上的手指，讓按鈕出現在貼文上。 在單一內容詳細資料上作業時，只有刪除動作會提示確認。
 
@@ -319,7 +314,7 @@ Github [上的範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ![回覆](assets/reply.png)
 
-使用單一貼文時，如果UGC類型支援回覆且設定為允許回覆，則會顯示「回覆」圖示。
+使用單一貼文時，如果UGC類型支援回覆且設定為允許回覆，就會出現「回覆」圖示。
 
 #### 允許 {#allow}
 
