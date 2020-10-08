@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ## 建立第一頁 {#create-first-pages}
 
-現在有了頁面范 [本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
+現在有了頁面 [範本](initial-app.md#createthepagetemplate)，我們可以在/content目錄中建立網站的根頁面。
 
 1. 標準UI目前提供建立網站的藍圖。 由於本教學課程是建立簡單網站，因此傳統的UI十分實用。
 
@@ -109,5 +109,3 @@ ht-degree: 2%
 >[!NOTE]
 >
 >使用是可 `cq:designPath` 選的，與使用clientlibs無關 [，這是SCF元件使用clientlibs來管理其JS和CSS時的必](develop-app.md#includeclientlibsintemplate)[](client-customize.md#clientlibs-for-scf) 要條件。
-
-
