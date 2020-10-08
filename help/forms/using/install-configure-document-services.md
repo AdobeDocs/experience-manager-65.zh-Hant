@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '4295'
 ht-degree: 0%
@@ -553,8 +553,7 @@ DocAssurance服務可以對PDF檔案套用使用權。 若要套用PDF檔案的�
 
    >[!NOTE]
    >
-   >* 在生產環境中，以生產認證取代您的評估認證。 在更新過期或評估憑證之前，請確定您已刪除舊的Reader Extensions憑證。
-
+   >在生產環境中，以生產認證取代您的評估認證。 在更新過期或評估憑證之前，請確定您已刪除舊的Reader Extensions憑證。
 
 1. 按一 **[!UICONTROL 下「編輯使用者]** 設定」頁 **[!UICONTROL 面上的「儲存並關閉]** 」。
 
