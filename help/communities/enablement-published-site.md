@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: 8738989c18c6f09452da95d0b9f2c05b0a2a1a81
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 1%
@@ -50,8 +50,8 @@ ht-degree: 1%
 >[!NOTE]
 >
 >不允許網站訪客自行註冊，就可授予對啟用網站的匿名存取權。
+>
 >如果啟用資源設 `show in catalog` 為 `allow anonymous access`且，匿名網站訪客將可檢視目錄中的資源。
-
 
 ### 防止對JCR的匿名訪問 {#prevent-anonymous-access-on-jcr}
 
@@ -251,7 +251,7 @@ ht-degree: 1%
 
 * 在作者上，以管理權限登入。
 * 導覽至「 **[!UICONTROL 社群]** >報 **[!UICONTROL 表]** >檢 **[!UICONTROL 視報表]**」。
-* 從下 **拉式功能表&#x200B;**(選取`Enablement Tutorial`)中選取「網站」。
+* 從下 **拉式功能表** (選取 `Enablement Tutorial`)中選取「網站」。
 
 * 選擇 **[!UICONTROL 內容類型]** (選擇 `all`)。
 
