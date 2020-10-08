@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 建立中繼資料、影像或視訊描述檔後，您會將其指派給一或多個檔案夾，以用作新上傳資產的目的地。
 
 在AEM Assets中使用描述檔的重要概念是，這些描述檔會指派給檔案夾。 描述檔中包含中繼資料描述檔的設定，以及視訊描述檔或影像描述檔。 這些設定將處理資料夾的內容及其任何子資料夾。 因此，如何命名檔案和檔案夾、如何排列子檔案夾，以及如何處理這些檔案夾中的檔案，都會對描述檔處理這些資產的方式產生重大影響。
-透過使用一致且適當的檔案和檔案夾命名策略，以及良好的中繼資料實務，您可以充份運用您的數位資產收集，並確保正確的檔案由正確的描述檔處理。
+透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料實務，您可以充份運用您的數位資產收集，並確保正確的檔案由正確的描述檔處理。
 
 >[!NOTE]
 >
@@ -48,23 +48,24 @@ ht-degree: 0%
 
 您可以在已有現有處理設定檔的資料夾中重新處理資產，而您稍後會加以變更。
 
-例如，假設您建立了影像描述檔，並將其指派給資料夾。 上傳至資料夾的任何影像資產都會自動將影像描述檔套用至資產。 不過，稍後您決定將新的智慧型裁切比例新增至描述檔。 現在，您只需執行 *Scene7: 重新處理資產* 工作流程。
+例如，假設您建立了影像描述檔，並將其指派給資料夾。 上傳至資料夾的任何影像資產都會自動將影像描述檔套用至資產。 不過，稍後您決定將新的智慧型裁切比例新增至描述檔。 現在，您只需執行 *Scene7:重新處理資產* 工作流程。
 
 您可以對第一次處理失敗的資產執行重新處理工作流程。 因此，即使您尚未編輯處理設定檔或套用處理設定檔，您仍可隨時對資產資料夾執行重新處理工作流程。
 
-您可以選擇調整重新處理工作流的批大小，從預設的50個資產調整到1000個資產。 當您執行 _Scene7時： 重新處理資料夾上的_ 「資產」工作流程，資產會分批分組，然後傳送至Dynamic Media伺服器進行處理。 在處理後，整個批次集中每個資產的中繼資料會在AEM上更新。 如果批次大小很大，您可能會遇到處理延遲。 或者，如果批次大小太小，則可能導致往返Dynamic Media伺服器的次數過多。
+您可以選擇調整重新處理工作流的批大小，從預設的50個資產調整到1000個資產。 當您執行 _Scene7時：重新處理資料夾上的_ 「資產」工作流程，資產會分批分組，然後傳送至Dynamic Media伺服器進行處理。 在處理後，整個批次集中每個資產的中繼資料會在AEM上更新。 如果批次大小很大，您可能會遇到處理延遲。 或者，如果批次大小太小，則可能導致往返Dynamic Media伺服器的次數過多。
 
 請參 [閱調整重新處理工作流的批大小](#adjusting-load)。
 
 >[!NOTE]
 >
 >如果您要從Dynamic Media Classic將資產大量移轉至AEM，則必須在Dynamic Media伺服器上啟用Migration複製代理。 移轉完成後，請務必停用代理。
-移轉發佈代理必須在Dynamic Media伺服器上停用，讓重新處理工作流程如預期般運作。
+>
+>移轉發佈代理必須在Dynamic Media伺服器上停用，讓重新處理工作流程如預期般運作。
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
 **若要重新處理資料夾中的資產**:
-1. 在AEM中，從「資產」頁面導覽至資產資料夾，該資產資料夾已指派處理設定檔給該資產，且您要套用 **Scene7: 重新處理資產** ,
+1. 在AEM中，從「資產」頁面導覽至資產資料夾，該資產資料夾已指派處理設定檔給該資產，且您要套用 **Scene7:重新處理資產** ,
 
    已指派處理描述檔的檔案夾，會在「卡片檢視」的檔案夾名稱正下方顯示描述檔名稱。
 
@@ -80,7 +81,7 @@ ht-degree: 0%
    ![重新處理資產工作流程1](/help/assets/assets/reprocess-assets1.png)
 
 1. 按一下「 **[!UICONTROL 開始工作流程」。]**
-1. 從「開 **[!UICONTROL 始工作流程]** 」下拉式清單中，選擇 **[!UICONTROL Scene7: 重新處理資產。]**
+1. 從「開 **[!UICONTROL 始工作流程]** 」下拉式清單中，選擇 **[!UICONTROL Scene7:重新處理資產。]**
 1. （可選）在「輸 **入工作流的標題** 」文本欄位中輸入工作流的名稱。 如有必要，可以使用名稱來引用工作流實例。
 
    ![重新處理資產2](/help/assets/assets/reprocess-assets2.png)
@@ -96,12 +97,12 @@ ht-degree: 0%
 **（可選）調整重新處理工作流的批大小**
 
 1. In Experience Manager, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL Workflow > Models.]**
-1. 在「工作流程模型」頁面的「卡片檢視」或「清單檢視」中，選取 **[!UICONTROL Scene7: 重新處理資產。]**
+1. 在「工作流程模型」頁面的「卡片檢視」或「清單檢視」中，選取 **[!UICONTROL Scene7:重新處理資產。]**
 
-   ![「工作流程模型」頁面與Scene7: 重新處理卡片檢視中選取的資產工作流程](/help/assets/assets-dm/reprocess-assets7.png)
+   ![「工作流程模型」頁面與Scene7:重新處理卡片檢視中選取的資產工作流程](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. 在工具列上，按一下「編 **[!UICONTROL 輯」。]** 新的瀏覽器標籤會開啟Scene7: 「重新處理資產」工作流模型頁。
-1. 在Scene7: 重新處理「資產」工作流程頁面，靠近右上角，按一下「 **[!UICONTROL 編輯]** 」以「解除鎖定」工作流程。
+1. 在工具列上，按一下「編 **[!UICONTROL 輯」。]** 新的瀏覽器標籤會開啟Scene7:「重新處理資產」工作流模型頁。
+1. 在Scene7:重新處理「資產」工作流程頁面，靠近右上角，按一下「 **[!UICONTROL 編輯]** 」以「解除鎖定」工作流程。
 1. 在工作流程中，選取「Scene7批次上傳」元件以開啟工具列，然後按一下工具列 **[!UICONTROL 上的]** 「設定」。
 
    ![Scene7批次上傳元件](/help/assets/assets-dm/reprocess-assets8.png)
@@ -118,11 +119,11 @@ ht-degree: 0%
 
 1. 在「批次上傳至Scene7 —— 步驟屬 **[!UICONTROL 性」對話方塊的右上角]** ，按一下「 **[!UICONTROL 完成」。]**
 
-1. 在Scene7的右上角： 重新處理「資產」工作流模型頁面，按一下「 **[!UICONTROL 同步」。]** 當您看到「已 **[!UICONTROL 同步]**」時，工作流程執行階段模型已成功同步，並可重新處理資料夾中的資產。
+1. 在Scene7的右上角：重新處理「資產」工作流模型頁面，按一下「 **[!UICONTROL 同步」。]** 當您看到「已 **[!UICONTROL 同步]**」時，工作流程執行階段模型已成功同步，並可重新處理資料夾中的資產。
 
    ![同步化工作流程模型](/help/assets/assets-dm/reprocess-assets1.png)
 
-1. 關閉顯示Scene7的瀏覽器標籤： 重新處理資產工作流程模型。
+1. 關閉顯示Scene7的瀏覽器標籤：重新處理資產工作流程模型。
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
 1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite.]**
