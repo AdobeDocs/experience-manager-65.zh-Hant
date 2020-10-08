@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 1%
@@ -124,7 +124,6 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 >[!NOTE]
 >
 >[隧道服務](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) ，允許選擇僅存在於發佈環境中的成員和組。
-
 
 ![新站點中的用戶角色](assets/site-admin-1.png)
 
