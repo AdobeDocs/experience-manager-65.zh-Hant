@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: 3da113e88784def54e0a94e280bf1a965de015ed
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 2%
@@ -62,7 +62,6 @@ ht-degree: 2%
 >如需一般製作資訊，請檢視 [製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
 >
 >如果不熟悉AEM，請檢視基本處理的 [檔案](../../help/sites-authoring/basic-handling.md)。
-
 
 ### 首頁 {#home-page}
 
