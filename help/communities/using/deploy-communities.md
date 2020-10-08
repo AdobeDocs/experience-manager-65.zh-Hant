@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c0834e9b70266e8b678771510fb1756c8091ea8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 1%
@@ -329,7 +329,6 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 >
 >如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請 [聯絡客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
-
 #### 儲存庫複製 {#repository-replication}
 
 如同AEM 6.2及舊版軟體一樣，將關鍵資料儲存在儲存庫中，可在每個AEM例項的首次啟動時指定下列系統屬性（會建立初始儲存庫），以保留它：
@@ -339,7 +338,6 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 >[!NOTE]
 >
 >請務必驗證作者上的復 [制代理是否正確](#replication-agents-on-author) 配置。
-
 
 在儲存庫中儲存密鑰材料後，將加密密鑰從作者複製到其他實例的方式如下：
 
