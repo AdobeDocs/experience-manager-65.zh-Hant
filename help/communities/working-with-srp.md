@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '921'
+ht-degree: 0%
 
 ---
 
@@ -32,13 +35,11 @@ source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 >
 >SRP僅適用於社群內容。 它不會影響網站內容的儲存位置(節點儲存[)，也不會影響AEM例項之間使用者註冊、使用者設定檔和使用者群組的安全處理(另請參閱](/help/sites-deploying/data-store-config.md)管理使用者資料 [](#managing-user-data))。
 
-
 >[!CAUTION]
 >
 >自AEM 6.1起， [UGC將不複製](#ugc-never-replicated)。
 >
 >當部署不包含公用商店(例如預設 [JSRP](/help/communities/topologies.md#jsrp) 拓撲)時，UGC只會顯示在輸入AEM發佈或作者例項上。 只有當拓撲包含發佈群集時，UGC才會顯示在任何發佈實例上。
-
 
 ## SRP選項的特點 {#characteristics-of-srp-options}
 
@@ -60,7 +61,6 @@ ASRP適合：
 >
 >ASRP中的貼文（或留言）上傳附件的限制為50 MB。
 
-
 [MSRP - MongoDB儲存資源提供程式](/help/communities/msrp.md)
 
 使用此選項，UGC會直接保存在本地MongoDB實例中。
@@ -81,7 +81,7 @@ ASRP適合：
 
 使用此選項，UGC將直接保存在本地MySQL資料庫實例中。
 
-DSRP需要：
+DSRP要求：
 
 * 本地安裝MySQL以儲存社區內容。
 * 本機安裝Apache Solr。
@@ -132,7 +132,7 @@ JSRP:
 
 ### 管理使用者資料 {#managing-user-data}
 
-此外，CommunitIes也感興趣的 [*是使用者&#x200B;*、*&#x200B;使用者群組&#x200B;**&#x200B;和使用者個人檔案&#x200B;*](/help/communities/users.md)。 當拓撲為發佈場時，在發佈環境中建立和更新此用戶相關資料時，需要將其提供給其他發佈實例[使用](/help/sites-deploying/recommended-deploys.md#tarmk-farm)。
+此外，CommunitIes也感興趣的 [*是使用者*、 *使用者群組**和使用者個人檔案*](/help/communities/users.md)。 當拓撲為發佈場時，在發佈環境中建立和更新此用戶相關資料時，需要將其提供給其他發佈實例 [使用](/help/sites-deploying/recommended-deploys.md#tarmk-farm)。
 
 自AEM Communities 6.1起，使用Sling散發而非複製來同步使用者相關資料。 有關詳細資訊，請 [訪問用戶同步](/help/communities/sync.md)。
 
