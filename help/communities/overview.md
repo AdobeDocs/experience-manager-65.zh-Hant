@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 1%
@@ -62,23 +62,22 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 * 提供基本功能：
 
-   * 自適應設計： 使用 [Twitter引導主題](https://getbootstrap.com)
+   * 自適應設計：使用 [Twitter引導主題](https://getbootstrap.com)
 
-   * 登入： 自助註冊、社 [交登入](/help/communities/social-login.md)、使用者個人檔案
+   * 登入：自助註冊、社 [交登入](/help/communities/social-login.md)、使用者個人檔案
 
-      * 通知：
-會員會看到與其相關的事件，而使用者產生的內容會在其中 [@intigured](/help/communities/overview.md#mentionssupport)。
+      * 通知：會員會看到與其相關的事件，而使用者產生的內容會在其中 [@intigured](/help/communities/overview.md#mentionssupport)。
 
-      * 訊息： 成員可以在社區站點內發送或接收消息。
-      * 搜尋： 能夠在社群網站中搜尋。
-      * 語言切換： 能夠為多語言網站選 [擇語言](/help/sites-administering/translation.md)。
+      * 訊息：成員可以在社區站點內發送或接收消息。
+      * 搜尋：能夠在社群網站中搜尋。
+      * 語言切換：能夠為多語言網站選 [擇語言](/help/sites-administering/translation.md)。
 
-      * 管理： 存取權，讓授權成員協調和管理社群網站中的使用者。
+      * 管理：存取權，讓授權成員協調和管理社群網站中的使用者。
 
 * 免除許多頁面層級的製作步驟：
 
-   * 品牌： 可選上傳橫幅影像，以便顯示在社群網站的所有頁面上
-   * 導覽功能表： 為社群網站範本所包含的功能提供導覽連結。
+   * 品牌：可選上傳橫幅影像，以顯示在社群網站的所有頁面上
+   * 導覽功能表：為社群網站範本所包含的功能提供導覽連結。
 
 若要體驗快速建立新社群網站的簡易性，請造訪「AEM社 [群快速入門」](/help/communities/getting-started.md)。
 
@@ -86,7 +85,7 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 為改善社群內容的效能與同步化，AEM Communities需要專為所有AEM（作者和發佈）例項之間共用的使用者產生內容(UGC)而設定的公用儲存。
 
-通過儲存資源提供商(SRP)輕鬆訪問社區內容，該提供商提供一個層，用於將訪問與底層拓撲分開，並支援UGC的公共儲存。
+社區內容可通過儲存資源提供器(SRP)輕鬆訪問，該提供器提供一個層，用於將訪問與底層拓撲分開，並支援UGC的公共儲存。
 
 若要進一步瞭解社群內容永續性和建議的部署，請參閱：
 
@@ -157,7 +156,7 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 ## 社群功能 {#community-functions}
 
-社群體驗預期的功能已廣為人知。 有了AEM Communities，這些功能即可做為建置區塊，稱為社群功能。
+社群體驗預期的功能眾所周知。 有了AEM Communities，這些功能即可做為建置區塊，稱為社群功能。
 
 社群功能是一般的AEM頁面，其中包含連結在功能中的元件，可輕鬆整合在社群網站範本中。
 
@@ -244,7 +243,6 @@ AEM Demo Machine需要有效的AEM授權。
 >[!NOTE]
 >
 >檢視 [AEM Demo Machine](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) (13:26)的簡介影片。
-
 
 ## AEM Communities檔案 {#aem-communities-documentation}
 
