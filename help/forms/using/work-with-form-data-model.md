@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 39ae3d8348b0c149c047c9fb3ac2eb673b610645
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '4162'
+source-wordcount: '4148'
 ht-degree: 0%
 
 ---
@@ -199,8 +199,10 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > * 如果您使用靜態範本，請在以下位置覆蓋head.jsp:/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp
-   > * 如果您使用可編輯的範本，請覆蓋aftemplatedpage.jsp，網址為：/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp
+   > * 如果您使用靜態範本，請在以下位置覆蓋head.jsp:
+      >   `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+   > * 如果您使用可編輯的範本，請覆蓋aftemplatedpage.jsp，網址為：
+      >   `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
 
 
 1. 設定 [!DNL paramMap] 請求屬性。 例如，在apps資料夾的。jsp檔案中加入下列程式碼：
