@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 覆蓋是透過修改/**apps目錄中預設元件的復本** ，而非修改/**libs目錄中的原始元件來完成** 。 元件是使用相同的相對路徑建構的，但「libs」會取代為「apps」。
 
-/apps目錄是第一個搜尋以解決請求的位置，如果找不到，則會使用位於/libs目錄中的預設版本。
+首先搜尋/apps目錄來解決請求，如果找不到，則會使用位於/libs目錄中的預設版本。
 
 不得修改/libs目錄中的預設元件，因為以後的修補程式和升級可以在維護公共介面的同時，以任何必要的方式自由更改/libs目錄。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 元件的HBS指令碼必須系結至實作此功能的JavaScript物件、模型和檢視。
 
-屬性的值可 `data-scf-component` 以是預設值，例如 **`social/tally/components/hbs/rating`**，或是自訂功能的擴充（自訂）元件，例如 **weretail/components/hbs/rating**。
+屬性的值 `data-scf-component` 可以是預設值，例如 **`social/tally/components/hbs/rating`**，或是自訂功能的擴充（自訂）元件，例如 **weretail/components/hbs/rating**。
 
 要綁定元件，必須將整個元件指令碼包含在&lt;div>元素中，並包含以下屬性：
 
@@ -109,7 +109,6 @@ ht-degree: 0%
 >
 >雖然類 `scf-js` 不影響樣式，但類名可以用在樣式表中，但須注意，由於它們控制元素的狀態，可能會有副作用。
 
-
 ## 擴充Javascript {#extending-javascript}
 
 若要擴充元件Javascript實作，您必須：
@@ -120,7 +119,7 @@ ht-degree: 0%
 1. 擴充方法。
 1. 使用SCF.registerComponent()註冊所有具有預設值或自定義對象和視圖的方法。
 
-### forum.js: 論壇的範例擴充- HBS  {#forum-js-sample-extension-of-forum-hbs}
+### forum.js:論壇的範例擴充- HBS  {#forum-js-sample-extension-of-forum-hbs}
 
 ```xml
 (function($CQ, _, Backbone, SCF) {
@@ -194,7 +193,7 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別�
 * 客戶端資料夾節點： `/libs/social/forum/hbs/forum/clientlibs`
 * 類別屬性： `cq.social.author.hbs.forum`
 
-注意： 雖然作者clientlibs從不嵌入其他程式庫，但是他們確實會列出其相依性。 嵌入到其他庫時，不會自動提取從屬關係，也必須嵌入。
+注意：雖然作者clientlibs從不嵌入其他程式庫，但是他們確實會列出其相依性。 嵌入到其他庫時，不會自動提取從屬關係，也必須嵌入。
 
 在「社群元件指南」中為每個SCF元件列出的clientlibs中插入&quot;author&quot;，即可識別所需的作者 [clientlibs](components-guide.md)。
 
@@ -202,8 +201,8 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別�
 
 每個網站在管理用戶端程式庫的方式上都不同。 各種因素包括：
 
-* 整體速度： 可能是希望網站能夠回應，但是第一個頁面載入速度稍微慢一點，是可以接受的。 如果許多頁面使用相同的Javascript，則可將各種Javascript內嵌至一個clientlib，並從第一頁參考以載入。 此次下載中的Javascript會維持快取狀態，將後續頁面的資料下載量減至最少。
-* 第一頁的簡短時間： 可能是希望第一頁能快速載入。 在這種情況下，Javascript位於多個小檔案中，只有在需要時才會參考。
+* 整體速度：可能是希望網站能夠回應，但是第一個頁面載入速度稍微慢一點，是可以接受的。 如果許多頁面使用相同的Javascript，則可將各種Javascript內嵌至一個clientlib，並從第一頁參考以載入。 此次下載中的Javascript會維持快取狀態，將後續頁面的資料下載量減至最少。
+* 第一頁的簡短時間：可能是希望第一頁能快速載入。 在這種情況下，Javascript位於多個小檔案中，只有在需要時才會參考。
 * 第一頁載入與後續下載之間的平衡。
 
 | **[‹功能基本工具](essentials.md)** | **[伺服器端自訂‹](server-customize.md)** |
