@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 1%
@@ -96,7 +96,6 @@ Communities Sites控制台提供了嚮導，可引導用戶完成建立社區站
 >[!NOTE]
 >
 >對於生產環境，必須建立自訂的Facebook和Twitter應用程式。 請參 [閱使用Facebook和Twitter的社交登入](/help/communities/social-login.md)。
-
 
 ![社群網站設定](assets/site-settings.png)
 
@@ -228,9 +227,6 @@ Select **Create.**
 >1. 選擇 **[!UICONTROL 確定]**。
 >1. （可選）選擇「 **[!UICONTROL 清除]** 」或「 **[!UICONTROL 強制重試]** 」以重設複製隊列。
 
->
-
-
 
 ### 選擇發佈 {#select-publish}
 
@@ -318,7 +314,6 @@ Select **Create.**
 >
 >若要停用，只需在屬 `sling:match` 性值前加上&#39;x&#39; - `xlocalhost.4503/$` —— 和 **全部儲存**。
 
-
 ![optional-steps](assets/optional-steps.png)
 
 #### 疑難排解：保存映射時出錯 {#troubleshooting-error-saving-map}
@@ -342,5 +337,3 @@ Select **Create.**
 >[!NOTE]
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
-
-
