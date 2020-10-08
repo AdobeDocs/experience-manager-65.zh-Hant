@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 1%
@@ -140,11 +140,8 @@ Follow the steps below (
 >* [JDBC配置](#configure-jdbc-connections)
 >* [SCORM設定](#configure-scorm)
 
->
 
-
-
-#### 步驟1: 開啟SQL檔案 {#step-open-sql-file}
+#### 步驟1:開啟SQL檔案 {#step-open-sql-file}
 
 在MySQL工作台中
 
@@ -156,7 +153,7 @@ Follow the steps below (
 
 ![卷資料庫](assets/scrom-database.png)
 
-#### 步驟2: 執行SQL指令碼 {#step-execute-sql-script}
+#### 步驟2:執行SQL指令碼 {#step-execute-sql-script}
 
 在步驟1中開啟之檔案的「工作台」視窗中，選取要 `lightening (flash) icon` 執行指令碼的檔案。
 
@@ -170,7 +167,7 @@ Follow the steps below (
 
 ![scrom-database2](assets/scrom-database2.png)
 
-#### 結果： scormenginedb {#result-scormenginedb}
+#### 結果：scormenginedb {#result-scormenginedb}
 
 在安裝和刷新SCHEMAS後，將 `scormenginedb` 顯示。
 
@@ -195,10 +192,10 @@ Day Commons JDBC連接池的OSGi **配置** ，配置MySQL JDBC驅動程式。
 
 * 輸入下列值：
    * **[!UICONTROL JDBC驅動程式類]**: `com.mysql.jdbc.Driver`
-   * **DBC連接URIJ **:`jdbc:mysql://localhost:3306/aem63reporting`如果MySQL伺服器與&#39;this&#39; AEM伺服器不同，請指定伺服器取代localhost。
-   * **[!UICONTROL 使用者名稱]**: 為MySQL伺服器（如果不是&#39;root&#39;）輸入已配置的Username(root)或。
-   * **[!UICONTROL 密碼]**: 如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令。
-   * **[!UICONTROL 資料來源名稱]**: 為 [MySQL連接輸入的名稱](#new-connection-settings)，例如「啟用」。
+   * **DBC連接URIJ**: `jdbc:mysql://localhost:3306/aem63reporting` 如果MySQL伺服器與&#39;this&#39; AEM伺服器不同，請指定伺服器取代localhost。
+   * **[!UICONTROL 使用者名稱]**:為MySQL伺服器（如果不是&#39;root&#39;）輸入已配置的Username(root)或。
+   * **[!UICONTROL 密碼]**:如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令。
+   * **[!UICONTROL 資料來源名稱]**:為 [MySQL連接輸入的名稱](#new-connection-settings)，例如「啟用」。
 * 選擇 **[!UICONTROL 保存]**。
 
 ## 設定Scorm {#configure-scorm}
@@ -224,12 +221,12 @@ AEM Communities ScormEngine服務的OSGi設定 **** ，會針對啟用社群使�
 
 * 驗證以下參數值是否與 [JDBC連接配置一致](#configurejdbcconnectionspool) :
    * **[!UICONTROL JDBC連接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB* 是SQL指令碼中的預設資料庫名
-   * **[!UICONTROL 使用者名稱]**: 為MySQL伺服器輸入已配置的Root用戶名（如果不是「root」）
-   * **[!UICONTROL 密碼]**: 如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令
+   * **[!UICONTROL 使用者名稱]**:為MySQL伺服器輸入已配置的Root用戶名（如果不是「root」）
+   * **[!UICONTROL 密碼]**:如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令
 * 關於下列參數：
-   * **[!UICONTROL Scorm使用者密碼]**: 不要編輯
+   * **[!UICONTROL Scorm使用者密碼]**:不要編輯
 
-      僅供內部使用： AEM Communities使用的特殊服務使用者可與Scorm引擎通訊。
+      僅供內部使用：AEM Communities使用的特殊服務使用者可與Scorm引擎通訊。
 * 選擇保 **[!UICONTROL 存]**
 
 ### Adobe Granite CSRF濾鏡 {#adobe-granite-csrf-filter}
