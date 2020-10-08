@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
-source-git-commit: 33c3126fbba4b324941338ee4d2a418d216408cd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 2%
@@ -22,8 +22,8 @@ ht-degree: 2%
 
 在本節中，您將建立以下內容：
 
-* 用 **[於在](#createthepagetemplate)**範例網站中建立內容頁面的範本。
-* 用 **[於呈現網站頁面的元件](#create-the-template-s-rendering-component)**和指令碼。
+* 用 **[於在](#createthepagetemplate)** 範例網站中建立內容頁面的範本。
+* 用 **[於呈現網站頁面的元件](#create-the-template-s-rendering-component)** 和指令碼。
 
 ## 建立內容範本 {#create-the-content-template}
 
@@ -42,11 +42,11 @@ ht-degree: 2%
    * 標題: `An SCF Sandbox Play Template`
    * 說明: `An SCF Sandbox template for play pages`
    * 資源類型: `an-scf-sandbox/components/playpage`
-   * 排名： &lt;leave as default>
+   * 排名：&lt;leave as default>
 
    Label用於節點名稱。
 
-   資源類型將作為屬 `playpage`性顯示在jcr:content節點上 `sling:resourceType`。 它可識別在瀏覽器要求時轉譯內容的元件（資源）。
+   資源類型將作為屬 `playpage`性顯示在jcr:content節點上 `sling:resourceType`。 它可識別當瀏覽器要求時轉譯內容的元件（資源）。
 
    在這種情況下，使用模板建立的所有頁 `playpage` 都由元件呈現 `an-scf-sandbox/components/playpage` 。 依慣例，元件的路徑是相對的，可讓Sling先在資料夾中搜尋資源，若找不到， `/apps` 則在資料夾中 `/libs` 搜尋。
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
    若要新增路徑，請按一下加號按 `+` 鈕並 `/content(/.&ast;)?` 在顯示的文字方塊中輸入。 如果使用複製／貼上，請確定沒有前導或尾隨空格。
 
-   注意： 允許路徑屬性的值是規則運 *算式*。 路徑與運算式相符的內容頁面可以使用範本。 在這種情況下，規則運算式與 **/content資料夾的路徑** 及其所有子頁面相符。
+   注意：允許路徑屬性的值是規則運 *算式*。 路徑與運算式相符的內容頁面可以使用範本。 在這種情況下，規則運算式與 **/content資料夾的路徑** 及其所有子頁面相符。
 
    當作者在下面建立頁面 `/content`時，標 `playpage` 題為「SCF沙盒頁面範本」的範本會出現在可用範本清單中。
 
@@ -93,7 +93,7 @@ ht-degree: 2%
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   與播放頁範本的「資源類型」(可選減去路徑 **`/apps/`** 的初始部分)對應。
+   與播放頁範本的「資源類型」(可選減去路徑的 **`/apps/`** 初始部分)相對應。
 
    在「創 **[!UICONTROL 建元件]** 」對話框中，鍵入以下屬性值：
 
