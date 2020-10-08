@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 0%
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 ### 系統管理員 {#system-administrators}
 
-管理員群組的成員是系統管理員，可針對作者和發佈環境執行AEM安裝的初始設定。
+管理員群組的成員是系統管理員，他們可以針對作者和發佈環境執行AEM安裝的初始設定。
 
 為了進行展示和開發，管理員群組的使用者ID為admin, *密碼* 為admin *的成員*。
 
@@ -110,7 +110,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >如果網站訪客註冊為一個開放社群網站的成員，他們會自動成為相同發佈環境中其他開放社群網站的成員。
-
 
 ### 發佈群組角色 {#publish-group-roles}
 
@@ -151,7 +150,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >將用戶添加到社區站點的特權成員組中時，如果用戶也是同一社區站點的成員，則僅授予他們建立權限。
-
 
 ## 建立社區成員 {#creating-community-members}
 
