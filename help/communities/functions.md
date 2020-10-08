@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1b200f9dd5fc99b37bcc629be7a785e02e8320c0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 6%
@@ -28,7 +28,6 @@ ht-degree: 6%
 >[!NOTE]
 >
 >用於建立社區站點 [的控制台](/help/communities/sites-console.md)、社 [區站點模](/help/communities/sites.md)板、社區組模板 [,](/help/communities/tools-groups.md)[](/help/communities/functions.md) 以及社區功能的控制台僅用於作者環境。
-
 
 ## 社群功能主控台 {#community-functions-console}
 
@@ -81,13 +80,13 @@ ht-degree: 6%
 
 #### 設定功能詳細資料 {#configuration-function-details-1}
 
-![chlimage_1-302](assets/chlimage_1-382.png)
+![chlimage_1-382](assets/chlimage_1-382.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
 * **顯示「我的活動」檢視**
 
-   如果選中此選項，「活動」頁將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動來篩選活動。 已選取預設值。
+   如果選中此選項，「活動」頁將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動進行篩選。 已選取預設值。
 
 * **顯示「所有活動」檢視**
 
@@ -184,7 +183,7 @@ ht-degree: 6%
 
 精選內容功能是具備「精選內容」元 [件的頁面](/help/communities/featured.md) ，可允許新增和刪除註解。
 
-可以允許或按元件(請參閱 [Function](#blog-function)、 [Calendar Function](#calendar-function)、 [Forum Function](#forum-function)、 [](#ideation-function)[](#qna-function)Ideation Function、A Function Qn blog)對內容進行功能化。
+可以允許或按元件(請參閱 [Function](#blog-function)、 [Calendar Function](#calendar-function)、 [Forum Function](#forum-function)、 [](#ideation-function)[](#qna-function)Ideation Function、A Function Qn Blog)對內容進行功能化。
 
 新增至範本時，唯一的設定是「標題」 [和「URL設定」](#title-and-url-settings)。
 
@@ -233,7 +232,6 @@ ht-degree: 6%
 >群組函式不 *能是**網站結構* 或社群網站範本中的第一個，也不能是唯一的函式。
 >
 >任何其他函式(例如頁 [面函式](#page-function))必須先包含並列出。
-
 
 群組功能可讓社群成員在發佈環境中在社群網站內建立子社群。
 
@@ -292,7 +290,7 @@ Ideation函式是具有一個Ideation元件 [的頁面](/help/communities/ideati
 
 排行榜功能是包含一個「排行榜」組 [件的頁面](/help/communities/enabling-leaderboard.md)。
 
-**注意**: 在從包含Leederboard功能的社區模板 *建立社區站點* 後，Leenderboard元件需要進一步配置。 指定Leaderboard元件的規 [則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於社 [區站點的計分和標章](/help/communities/implementing-scoring.md) 。
+**注意**:在從包含Leederboard功能的社區模 *板建立社區站點* 後，Leederboard元件需要進一步配置。 指定Leaderboard元件的規 [則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於社 [區站點的計分和標章](/help/communities/implementing-scoring.md) 。
 
 新增至範本時，會開啟下列對話方塊，指定範本的預設標題和URL名稱，以及預設顯示設定：
 
@@ -317,7 +315,7 @@ Ideation函式是具有一個Ideation元件 [的頁面](/help/communities/ideati
 
 ### 頁面功能 {#page-function}
 
-頁面功能會將空白頁面新增至社群網站，並將其連線至社群網站的功能： 登入、選單、通知、訊息、主題和品牌。 內容會使用標準的AEM製作模 [式新增至頁面](/help/sites-authoring/editing-content.md)。
+頁面功能會將空白頁面新增至社群網站，並將其連線至社群網站的功能：登入、選單、通知、訊息、主題和品牌。 內容會使用標準的AEM製作模 [式新增至頁面](/help/sites-authoring/editing-content.md)。
 
 新增至範本時，唯一的設定是「標題」 [和「URL設定」](#title-and-url-settings)。
 
