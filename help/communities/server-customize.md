@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '896'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,6 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 >[!NOTE]
 >
 >當從一個主要版本升級至下一個版本時，Communities API的封裝位置可能會有所變更。
-
 
 ### SocialComponent介面 {#socialcomponent-interface}
 
@@ -56,7 +58,7 @@ SocialComponentFactory.getPriority()方法的實作應傳回最高值，以便�
 
 ### SocialComponentFactoryManager介面 {#socialcomponentfactorymanager-interface}
 
-SocialComponentFactoryManager（管理員）管理所有在架構中註冊的SocialComponents，並負責選擇SocialComponentFactory以用於指定的資源(resourceType)。 如果沒有為特定資源類型註冊工廠，則經理將返回具有給定資源最接近超類型的工廠。
+SocialComponentFactoryManager（管理員）會管理在架構中註冊的所有SocialComponents，並負責選擇SocialComponentFactory以用於指定的資源(resourceType)。 如果沒有為特定資源類型註冊工廠，則經理將返回具有給定資源最接近超類型的工廠。
 
 SocialComponentFactoryManager是OSGi服務，可存取其他OSGi服務，這些服務可透過建構函式傳遞至SocialComponent。
 
@@ -76,9 +78,9 @@ The `PostOperation` receives the results from the `SocialOperation` and resurt t
 
 #### SocialOperation類 {#socialoperation-class}
 
-每個 `SocialOperation` 端點都會擴展AbstractSocialOperation類並覆蓋該方法 `performOperation()`。 此方法會執行完成作業並傳回或擲出 `SocialOperationResult``OperationException`（否則）所需的所有動作，此時會傳回含訊息的HTTP錯誤狀態（如果有的話），以取代一般的JSON回應或成功的HTTP狀態碼。
+每個 `SocialOperation` 端點都會擴展AbstractSocialOperation類並覆蓋該方法 `performOperation()`。 此方法會執行完成作業並傳回或擲出 `SocialOperationResult``OperationException`（否則）所需的所有動作，在此情況下，會傳回含訊息的HTTP錯誤狀態（如果有），以取代一般的JSON回應或成功的HTTP狀態碼。
 
-擴充功 `AbstractSocialOperation` 能可重複使用來 `SocialComponents` 傳送JSON回應。
+擴充功 `AbstractSocialOperation` 能可重複使用JSON `SocialComponents` 回應來傳送。
 
 #### SocialOperationResult類 {#socialoperationresult-class}
 
@@ -96,7 +98,7 @@ The `PostOperation` receives the results from the `SocialOperation` and resurt t
 
 #### OperationException類 {#operationexception-class}
 
-如果 `OperationExcepton` 請求無效或發生其他錯誤，例如內部錯誤、參數值錯誤、權限不當等，則在執行操作時可能會拋出。 由 `OperationException` HTTP狀態代碼和錯誤消息組成，這些消息作為對的響應返回給客戶 `PostOperatoin`。
+如果 `OperationExcepton` 請求無效或發生其他錯誤，例如內部錯誤、參數值錯誤、權限不當等，則在執行操作時可能會拋出。 由 `OperationException` HTTP狀態代碼和錯誤消息組成，這些消息作為對的響應返回給客戶端 `PostOperatoin`。
 
 #### OperationService類 {#operationservice-class}
 
@@ -119,7 +121,7 @@ The `PostOperation` receives the results from the `SocialOperation` and resurt t
 
 范常式式碼可在 [Adobe Marketing Cloud GitHub儲存庫中取得](https://github.com/Adobe-Marketing-Cloud) 。 搜尋前置詞為或的 `aem-communities` 專案 `aem-scf`。
 
-## Best Practices {#best-practices}
+## 最佳作法 {#best-practices}
 
 檢視「 [編碼准則](code-guide.md) 」區段，以取得AEM Communities開發人員的各種編碼准則和最佳實務。
 
