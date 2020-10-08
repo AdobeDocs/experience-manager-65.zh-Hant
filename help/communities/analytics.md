@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 03e3bb3a6843ef19b63a4ed915d9821dd706c3d4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 3%
@@ -382,7 +382,6 @@ Analytics會自動用於數個Communities功能。
 >[!NOTE]
 >
 >日誌元件用於實施部落格功能。
-
 
 ### 將Analytics對應至AEM變數 {#mapped-analytics-to-aem-variables}
 
