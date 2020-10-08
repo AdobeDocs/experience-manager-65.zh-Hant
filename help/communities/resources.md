@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: 4e2fa3b0a64ae2e959dad85e3a1bc4a1027a2eef
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 4%
@@ -35,12 +35,9 @@ ht-degree: 4%
 >
 >如果在建立社群網站後安裝了SCORM，則必須重新建立安裝SCORM前所顯示的任何啟用資源。
 
-
-
 >[!NOTE]
 >
 >隨著 [AEM 6.3](deploy-communities.md#latestfeaturepack) 和相當的社群功能套件 [AEM 6.2 FP3](deploy-communities.md#latestfeaturepack) 和 [AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest功能套件)的推出，啟用功能不再需要 [](mysql.md)aMySQL資料庫(C)。
-
 
 ## 術語 {#terminology}
 
@@ -235,7 +232,7 @@ ht-degree: 4%
 
 * **[!UICONTROL 資源封面影像]**
 
-   所述封面影像是當第一次查看所述啟用資源時要顯示的影像。 例如，當視訊資源尚未播放時，會顯示封面影像。 如果未上傳自訂影像，則會顯示預設影像。 對於視訊資源，可能會產生縮 [圖](enablement.md#ffmpeg)，但只有在上傳時，而非在視訊參照為URL時。 對於位置資源，影像可用來提供其他資訊。
+   所述封面影像是當第一次查看所述啟用資源時要顯示的影像。 例如，當視訊資源尚未播放時，會顯示封面影像。 如果未上傳自訂影像，則會顯示預設影像。 對於視訊資源，可能會產生縮 [圖](enablement.md#ffmpeg)，但只會在上傳時產生，而非在視訊參照為URL時產生。 對於位置資源，影像可用來提供其他資訊。
 
    封面影像的建議大小為640 x 360 px。
 
@@ -250,7 +247,6 @@ ht-degree: 4%
 >學員不應直接註冊要從學習路徑參考的啟用資源。 學員只需在學習路徑中註冊。
 >
 >如果成員同時註冊了資源和參考該資源的學習路徑，則其分配將同時顯示學習路徑中的單個資源和資源。
-
 
 * **[!UICONTROL 社會化設定]**
 
@@ -389,7 +385,6 @@ ht-degree: 4%
 >
 >您只能選擇與學習路徑位於同一級別的可用資源。 例如，對於在群組中建立的學習路徑，只有群組層級資源可供使用；對於在社群網站中建立的學習路徑，該網站中的資源可供新增至學習路徑。
 
-
 * 選擇 **[!UICONTROL 下一步]**。
 
 ### 設定 {#settings-1}
@@ -398,7 +393,7 @@ ht-degree: 4%
 
 * **[!UICONTROL 新增註冊]**
 
-   使用下拉菜單從社區站點成員組的成員和成員組（以粗體顯示）中選擇 [成員](#members-group)。 首次建立學習路徑時，不需要添加指派。 可修改學習路徑屬性，以便稍後新增學員。
+   使用下拉菜單從社區站點成員組的成員和成員組（以粗體列出）中選 [擇](#members-group)。 首次建立學習路徑時，不需要添加指派。 可修改學習路徑屬性，以便稍後新增學員。
 
 * **[!UICONTROL Learning Path Contact&amp;ast;]**
 
@@ -411,7 +406,6 @@ ht-degree: 4%
 >從學習路徑參考的啟用資源不應列出相同的受助者（學員）（如果有）。
 >
 >如果成員同時註冊了啟用資源和參考該資源的學習路徑，則其分配將同時顯示學習路徑中的單個資源和資源。
-
 
 ## 管理資源 {#managing-a-resource}
 
