@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c03ba5e2ec7954cca8b129f453919d151956df5
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2084'
 ht-degree: 8%
@@ -32,16 +32,14 @@ AEM Assets已透過Adobe Developer Console設定品牌入口網站，該網站�
 >
 >從2020年4月6日起，不再支援透過舊版OAuth閘道進行的設定，並變更為Adobe Developer Console。
 
-
 >[!TIP]
 >
 >***僅限現有客戶***
 >
 >建議您繼續使用現有的舊版OAuth閘道設定。 萬一您遇到舊版OAuth閘道設定的問題，請刪除現有的設定，並透過Adobe Developer Console建立新的設定。
 
-
-
 本說明說明下列兩個使用案例：
+
 * [新配置](#configure-new-integration-65):如果您是新的品牌入口網站使用者，並想要使用品牌入口網站設定您的AEM Assets作者例項，您可以透過Adobe Developer Console建立設定。
 * [升級配置](#upgrade-integration-65):如果您是現有的品牌入口網站使用者，在舊版OAuth閘道上有設定，請刪除現有的設定，並透過Adobe Developer Console建立新的設定。
 
@@ -58,7 +56,6 @@ AEM Assets已透過Adobe Developer Console設定品牌入口網站，該網站�
 * 具有最新Service Pack的啟動和執行AEM Assets作者實例
 * 品牌入口網站租用戶URL
 * 對品牌入口網站的IMS組織具有系統管理員權限的使用者
-
 
 [下載並安裝AEM 6.5](#aemquickstart)
 
@@ -94,12 +91,9 @@ AEM Assets已透過Adobe Developer Console設定品牌入口網站，該網站�
 1. 在AEM Assets中，使用IMS帳戶和品牌入口端端點（組織URL）來設定品牌入口網站雲端服務。
 1. 將資產從AEM Assets發佈至品牌入口網站，以測試您的設定。
 
-
 >[!NOTE]
 >
 >AEM Assets作者實例僅應設定一個品牌入口網站租戶。
-
-
 
 如果您是第一次使用品牌入口網站設定AEM資產，請在所列順序中執行下列步驟：
 1. [取得公開憑證](#public-certificate)
@@ -269,7 +263,6 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![IMS 帳戶設定](assets/create-new-integration6.png)
 
-
 1. Select the IMS account configuration and click **[!UICONTROL Check Health]**.
 
    在對 **[!UICONTROL 話方塊中]** ，按一下「勾選」。 成功設定時，會顯示訊息，指出 *Token已成功擷取*。
@@ -281,8 +274,6 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 >您只能有一個IMS設定。
 >
 >確保IMS配置通過健康檢查。 如果配置未通過健康檢查，則無效。 您必須刪除它並建立新的有效設定。
-
-
 
 ### 設定雲端服務 {#configure-the-cloud-service}
 
@@ -326,11 +317,9 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![](assets/test-integration3.png)
 
-
    >[!NOTE]
    >
    >複製代理並行工作，共用作業分配，使發佈速度提高了原始速度的四倍。 在設定雲端服務後，不需要額外的設定，就可啟用依預設啟用的複製代理，以啟用多個資產的並行發佈。
-
 
 1. To verify the connection between AEM Assets and Brand Portal, click on the **[!UICONTROL Test Connection]** icon.
 
