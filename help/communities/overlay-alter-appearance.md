@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -61,7 +61,6 @@ comment.hbs指令碼負責建立每個註解的整體HTML。
 >[!NOTE]
 >
 >更強穩的複製形式是在Package Manager中建立包並 [激活](/help/sites-administering/package-manager.md#replicating-packages) 。 可以導出和歸檔包。
-
 
 從全局導航中，選擇「 **[!UICONTROL 工具]** 」 > 「部署 **[!UICONTROL 」]** > 「複製 **[!UICONTROL 」 ，然後按一下「激]******&#x200B;活樹模式」。
 
