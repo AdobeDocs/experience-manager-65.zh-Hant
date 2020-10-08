@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 6%
@@ -48,7 +48,6 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 >元件 `Journal` 和 `Journal Sidebar` 的標題 `Blog` 為和 `Blog Sidebar`。
 >
 >AEM 6.0及舊版中的部落格功能現在已移除。 它以範本為基礎，僅允許作者在作者環境中建立內容。
-
 
 ## 新增部落格元件至頁面 {#adding-blog-components-to-a-page}
 
@@ -112,8 +111,8 @@ AEM Communities的部落格功能已從編寫活動轉變為真正的社群活�
 >[!NOTE]
 >
 >「日誌標題」用於自動建立部落格的URL。
+>
 >您在此處指定的日誌標題中，最多使用50個字元（另外還有5個字元）來建立部落格的URL。
-
 
 * **日誌說明**
 
