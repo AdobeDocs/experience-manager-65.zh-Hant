@@ -12,9 +12,9 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
+source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
 workflow-type: tm+mt
-source-wordcount: '2897'
+source-wordcount: '2884'
 ht-degree: 2%
 
 ---
@@ -31,6 +31,7 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 * [指派標章](#assign-and-revoke-badges) ，以識別社群中成員的角色。
 
 * [授予會員基本標誌](#enable-scoring) ，以鼓勵其參與（建立的內容數量）。
+
 * [進階授與徽章](/help/communities/advanced.md) ，將會員識別為專家（建立的內容品質）。
 
 **請注意** ，預設不會 [啟用標章授予](/help/communities/implementing-scoring.md#main-pars-text-237875536)。
@@ -38,7 +39,6 @@ AEM Communities評分和標章功能提供識別和獎勵社群成員的能力�
 >[!CAUTION]
 >
 >在CRXDE Lite中可見的實作結構可能會在UI可用時變更。
-
 
 ## 徽章 {#badges}
 
@@ -76,7 +76,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
    `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
-![chlimage_1-98](assets/chlimage_1-98.png)
+   ![指派徽章](assets/assigned-badges.png)
 
 ### 獎章 {#awarded-badges}
 
@@ -101,14 +101,13 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
    `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-![chlimage_1-99](assets/chlimage_1-99.png)
+   ![獎章](assets/awarded-badges.png)
 
 >[!NOTE]
 >
 >評分規則可設定為為標示為不適當之貼文指派負點，進而影響分數值。 不過，一旦獲得徽章，就不會因為計分點減少或計分規則變更而自動移除徽章。
 >
 >吊銷獎章的方式與吊銷標章相同。 請參閱「 [指派和撤銷標章](#assign-and-revoke-badges) 」一節。 未來的改進將包括管理會員徽章的UI。
-
 
 ### 自訂標章 {#custom-badges}
 
@@ -140,13 +139,12 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 | **屬性** | **類型** | **說明** |
 |---|---|---|
-| badgingRules | String[] | 標籤規則的數 [組清單](#badging-rules) |
-| 計分規則 | String[] | 計分規則的數 [組清單](#scoring-rules) |
+| badgingRules | 字串 | 標籤規則的數 [組清單](#badging-rules) |
+| 計分規則 | 字串 | 計分規則的數 [組清單](#scoring-rules) |
 
 >[!NOTE]
 >
 >如果評分規則似乎對獎勵徽章沒有影響，請確定評分規則未被評分規則的scoringRules屬性封鎖。 請參閱標籤規 [則一節](#badging-rules)。
-
 
 ### 啟用元件標章 {#enable-badges-for-component}
 
@@ -154,14 +152,13 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 布爾屬性 `allowBadges`啟用／禁用元件實例的標誌顯示。 它可在論壇、QnA的組 [件編輯對話框中配置](/help/communities/author-communities.md) ，並通過標有「顯示標章」的複選框對元件 **進行注釋**。
 
-#### 範例： 「論壇」元件實例的allowBadges {#example-allowbadges-for-forum-component-instance}
+#### 範例：「論壇」元件實例的allowBadges {#example-allowbadges-for-forum-component-instance}
 
-![chlimage_1-100](assets/chlimage_1-100.png)
+![enable-badges-component](assets/enable-badges-component.png)
 
 >[!NOTE]
 >
 >任何元件都可重疊，以顯示標章，例如論壇、QnA和註解中的HBS程式碼。
-
 
 ## 計分規則 {#scoring-rules}
 
@@ -186,14 +183,14 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 >[!NOTE]
 >
->最佳實務： 為每個計分規則指定唯一名稱。
+>最佳實務：為每個計分規則指定唯一名稱。
 >
->計分規則名稱應全局唯一； 他們不應以同名結尾。
+>計分規則名稱應全局唯一；不應以同名結尾。
 >
 >不要做 *的* 範例：
->/libs/settings/community/scornimy/groin/rules/site1/forums-scorning
+>
+>/libs/settings/community/scorning/rules/site1/forums-scorning
 >/libs/settings/community/scornimy/rules/site2/forums-scorning
-
 
 ### 計分子規則 {#scoring-sub-rules}
 
@@ -228,7 +225,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
    <td>長整數</td>
    <td>
     <ul>
-     <li>必要； 動詞與事件動作相對應</li>
+     <li>必要；動詞與事件動作相對應</li>
      <li>至少有一個動詞屬性</li>
      <li>動詞必須輸入全部大寫</li>
      <li>有多個動詞屬性，但沒有重複</li>
@@ -239,11 +236,11 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
   </tr>
   <tr>
    <td><code>topics</code></td>
-   <td>String[]</td>
+   <td>字串</td>
    <td>
     <ul>
-     <li>可選； 將子規則限制為由事件主題標識的社區元件</li>
-     <li>如果已指定： 值是事件主題的多值字串</li>
+     <li>可選；將子規則限制為由事件主題標識的社區元件</li>
+     <li>如果已指定：值是事件主題的多值字串</li>
      <li>發行中的主題清單位於「主題和動 <a href="#topics-and-verbs">詞」部分</a></li>
      <li>default is to apply to all topics associated with verb(s)</li>
     </ul> </td>
@@ -253,7 +250,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
    <td>布林值 (Boolean)</td>
    <td>
     <ul>
-     <li>可選； 與會員根據其擁有的內容行事無關</li>
+     <li>可選；與會員根據其擁有的內容行事無關</li>
      <li>若為真，則對所處理內容的擁有者套用分數</li>
      <li>如果為false，請將分數套用至執行動作的成員</li>
      <li>default is false</li>
@@ -264,7 +261,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
    <td>字串</td>
    <td>
     <ul>
-     <li>可選； 識別計分引擎</li>
+     <li>可選；識別計分引擎</li>
      <li>如果為"basic"，則根據數量指定計分引擎
       <ul>
        <li>包含在發行中</li>
@@ -289,7 +286,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 1. /libs/settings/community/scorning/rules/forums-scorning
 
-   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-forum-create/libs/settings/comment-receive-pote/libs/settings/community/scoring/sub-rules/member-is-is-is-hared
+   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-forum-create/libs/settings/community/scoring/sub-rules/member-receive-vote/goring/sub-rules/sub-is-reles/mers-is-is-thared
 
 **附註:**
 
@@ -310,8 +307,8 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 標籤規則會指定下列項目，將計分規則連結至標章：
 
-* 計分規則。
-* 必須獲得特定徽章的分數。
+* 計分規則
+* 需要獲得特定徽章的分數
 
 標籤規則是具有屬性的節 `cq:Page` 點類型的節點，屬 `jcr:content` 性會將計分規則與分數和標籤建立關聯。
 
@@ -335,10 +332,9 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 >[!NOTE]
 >
->最佳實務： 建立每個AEM網站專屬的徽章影像。
+>最佳實務：建立每個AEM網站專屬的徽章影像。
 
-
-![chlimage_1-101](assets/chlimage_1-101.png)
+![badging-rule-configuration](assets/badging-rule-configuration.png)
 
 <table>
  <tbody>
@@ -349,7 +345,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
   </tr>
   <tr>
    <td>閾值</td>
-   <td>String[]</td>
+   <td>字串</td>
    <td><em>（必要）</em> 「number|path」格式的多值字串
     <ul>
      <li>數字=分數</li>
@@ -364,7 +360,7 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
   </tr>
   <tr>
    <td>計分規則</td>
-   <td>String[]</td>
+   <td>字串</td>
    <td>(可<em>選</em>)多值字串，可將標籤規則限制為由計分規則識別的計分事件</td>
   </tr>
  </tbody>
@@ -374,9 +370,9 @@ Communities [Badges控制台](/help/communities/badges.md) （Communities Badges
 
 此發行包含兩個與論壇和留言計分規則對 [應的標籤規則](#includedscoringrules)。
 
-* /libs/settings/community/badging/rules/comments-badging
+* `/libs/settings/community/badging/rules/comments-badging`
 
-* /libs/settings/community/badging/rules/forums-badging
+* `/libs/settings/community/badging/rules/forums-badging`
 
 **附註:**
 
@@ -399,15 +395,15 @@ cURL -i -X POST *H標頭* -u *signin* -F *operation* -F ***badgeChember-profile-
 
 *header* = &quot;Accept:application/json&quot;自訂標題，以傳遞至伺服器（必要）
 
-*signin* = administrator-id:password，例如： admin:admin
+*signin* = administrator-id:password，例如：admin:admin
 
 *operation* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
 *badge* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* = badge映像檔案在儲存庫中的位置，例如： /libs/settings/community/badging/images/colduator/jcr/content/moderator.png
+*badge-image-file* = badge映像檔案在儲存庫中的位置，例如：/libs/settings/community/badging/images/colduator/jcr/content/moderator.png
 
-*member-profile-url* =發佈時成員配置檔案的端點，例如： https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* =發佈時成員配置檔案的端點，例如：https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
@@ -415,9 +411,6 @@ cURL -i -X POST *H標頭* -u *signin* -F *operation* -F ***badgeChember-profile-
 >
 >* 如果已啟用「隧道服務」，則 [可參考作者實例](/help/communities/users.md#tunnel-service) 。
 >* 可能是模糊的隨機名稱——請參閱安全性檢 [查清單](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) ，瞭解可授權ID。
-
->
-
 
 
 ### Examples: {#examples}
@@ -454,8 +447,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 >
 >新的布林屬性 `allowBadges`，可啟用／停用元件例項的標章顯示。 它可透過標示為「顯示標章」的核 [取方塊，在更新的元件編輯](/help/communities/author-communities.md) 對話 **方塊中設定**。
 
-
-**[行事歷元](/help/communities/calendar.md)**件SocialEvent`topic`= com/adobe/cq/social/calendar
+**[行事歷元](/help/communities/calendar.md)**&#x200B;件SocialEvent `topic`= com/adobe/cq/social/calendar
 
 | **動詞** | **說明** |
 |---|---|
@@ -464,7 +456,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | 會編輯成員的日曆事件或注釋 |
 | 刪除 | 會員的日曆事件或留言已刪除 |
 
-**[Comments Component](/help/communities/comments.md)**SocialEvent`topic`= com/adobe/cq/social/comment
+**[Comments Component](/help/communities/comments.md)** SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **動詞** | **說明** |
 |---|---|
@@ -473,7 +465,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | 已編輯成員的注釋 |
 | 刪除 | 會員的注釋已刪除 |
 
-**[檔案庫元件](/help/communities/file-library.md)**SocialEvent`topic`= com/adobe/cq/social/fileLibrary
+**[檔案庫元件](/help/communities/file-library.md)** SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
 | **動詞** | **說明** |
 |---|---|
@@ -482,7 +474,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | 成員更新資料夾或檔案 |
 | 刪除 | 成員刪除資料夾或檔案 |
 
-**[論壇元件](/help/communities/forum.md)**SocialEvent`topic`= com/adobe/cq/social/forum
+**[論壇元件](/help/communities/forum.md)** SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **動詞** | **說明** |
 |---|---|
@@ -491,7 +483,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | 編輯成員的論壇主題或回覆 |
 | 刪除 | 會員的論壇主題或回覆被刪除 |
 
-**[Journal Component](/help/communities/blog-feature.md)**SocialEvent`topic`= com/adobe/cq/social/journal
+**[Journal Component](/help/communities/blog-feature.md)** SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **動詞** | **說明** |
 |---|---|
@@ -500,7 +492,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | 會編輯會員的部落格文章或留言 |
 | 刪除 | 會員的部落格文章或留言已刪除 |
 
-**[QnA元件](/help/communities/working-with-qna.md)**SocialEvent`topic`= com/adobe/cq/social/qna
+**[QnA元件](/help/communities/working-with-qna.md)** SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **動詞** | **說明** |
 |---|---|
@@ -511,7 +503,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 取消選擇 | 會員的答案為取消選擇 |
 | 刪除 | 刪除成員的QnA問題或答案 |
 
-**[Reviews Component](/help/communities/reviews.md)**SocialEvent`topic`= com/adobe/cq/social/review
+**[Reviews Component](/help/communities/reviews.md)** SocialEvent `topic`= com/adobe/cq/social/review
 
 | **動詞** | **說明** |
 |---|---|
@@ -519,14 +511,14 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | 會員的審核已編輯 |
 | 刪除 | 會員的審核已刪除 |
 
-**[評分元件](/help/communities/rating.md)**SocialEvent`topic`= com/adobe/cq/social/tally/rating
+**[評分元件](/help/communities/rating.md)** SocialEvent `topic`= com/adobe/cq/social/tally/rating
 
 | **動詞** | **說明** |
 |---|---|
 | 新增評分 | 會員的內容已被評級 |
 | 移除評分 | 會員的內容已降級 |
 
-**[投票元件](/help/communities/voting.md)**SocialEvent`topic`= com/adobe/cq/social/tally/poting
+**[投票元件](/help/communities/voting.md)** SocialEvent `topic`= com/adobe/cq/social/tally/poting
 
 | **動詞** | **說明** |
 |---|---|
@@ -603,7 +595,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 * 選擇「 **全部保存**」。
 
-![chlimage_1-102](assets/chlimage_1-102.png)
+![測評標籤](assets/test-scoring-badging.png)
 
 接下來，請確定論壇和注釋元件允許顯示標章：
 
@@ -618,18 +610,18 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
    * **類型**: `Boolean`
    * **值**: `true`
 
-![chlimage_1-103](assets/chlimage_1-103.png)
+![test-forum-component](assets/test-forum-component.png)
 
 接著， [重新發佈](/help/communities/sites-console.md#publishing-the-site) 社群網站。
 
 最後，
 
 * 瀏覽至發佈例項上的元件。
-* 以社群成員身分登入(例如： weston.mccall@dodgit.com)。
+* 以社群成員身分登入(例如：weston.mccall@dodgit.com)。
 * 張貼新論壇主題。
 * 頁面必須重新整理，才能顯示徽章。
 
-   * 註銷並作為不同的社區成員登錄(例如： aaron.mcdonald@mailinator.com/password)。
+   * 註銷並作為不同的社區成員登錄(例如：aaron.mcdonald@mailinator.com/password)。
 
 * 選擇論壇。
 
