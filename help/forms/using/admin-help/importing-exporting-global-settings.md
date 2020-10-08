@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '1281'
+ht-degree: 0%
 
 ---
 
@@ -73,11 +76,11 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 特殊 *路由設定* ，在工作區中指定特殊路由的屬性，批准和拒絕。 在某些情況下，這些路由的按鈕會顯示在工作區的任務卡上，用戶無需開啟表單即可選擇它們。 您可以修改全域設定檔中的specialRoutes設定，以新增自訂名稱以核准和拒絕，或建立其他路由。
 
-**client_specialRoutes_routes_approve_style:** 位於「工作區」主題中的樣式名稱，用於標識批准按鈕表徵圖。 樣式必須包含已啟用圖示和停用圖示的值。 要定義自定義按鈕的樣式，必須使用以下模板：工` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }` 作區CSS檔案內嵌在workspace-theme.swf檔案中，此檔案位於adobe-workspace-client.ear > adobe-workspace-client.war檔案中。 若要變更工作區的外觀，您必須重新編譯工作區-theme.swf檔案。
+**client_specialRoutes_routes_approve_style:** 位於「工作區」主題中的樣式名稱，用於標識批准按鈕表徵圖。 樣式必須包含已啟用圖示和停用圖示的值。 要定義自定義按鈕的樣式，必須使用以下模板：` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }` 工作區CSS檔案內嵌在workspace-theme.swf檔案中，此檔案位於adobe-workspace-client.ear > adobe-workspace-client.war檔案中。 若要變更工作區的外觀，您必須重新編譯工作區-theme.swf檔案。
 
 **client_specialRoutes_routes_deny_names:** Workbench使用者可用來解讀為「拒絕」的字串種類。 字串區分大小寫。 例如，預設值為deny。 如果Workbench使用者在流程中使用「拒絕」字詞，則無法識別該字詞。 必須在此設定中添加「拒絕」一詞，才能自定義路由按鈕並將樣式應用到該按鈕。
 
-**client_specialRoutes_routes_deny_style:** 位於「工作區」主題檔案中的樣式名稱，用於標識拒絕按鈕表徵圖。 樣式必須包含已啟用圖示和停用圖示的值。 要定義自定義按鈕的樣式，必須使用以下模板：`  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }`**client_specialRoutes_routes_approve_names:** Workbench使用者可用來解讀為「核准」的字串種類。 字串區分大小寫。 例如，預設值是核准的。 如果Workbench使用者在流程中使用「核准」字詞，則不會識別該字詞。 必須在此設定中添加「批准」字詞，才能自定義路由按鈕並將樣式應用到該按鈕。
+**client_specialRoutes_routes_deny_style:** 位於「工作區」主題檔案中的樣式名稱，用於標識拒絕按鈕表徵圖。 樣式必須包含已啟用圖示和停用圖示的值。 要定義自定義按鈕的樣式，必須使用以下模板：`  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }` **client_specialRoutes_routes_approve_names:** Workbench使用者可用來解讀為「核准」的字串種類。 字串區分大小寫。 例如，預設值是核准的。 如果Workbench使用者在流程中使用「核准」字詞，則不會識別該字詞。 必須在此設定中添加「批准」字詞，才能自定義路由按鈕並將樣式應用到該按鈕。
 
 **client_specialRoutes_names:** 用於從資源檔案中查找自定義字串值的鍵。 此設定中的每個條目都需要包含名稱和樣式的值。
 
@@ -111,7 +114,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ### 其他設定 {#other-settings}
 
-**client_mimeTypes_openOutsideBrowser:** 將在Workspace瀏覽器實例外部開啟的文檔的MIME類型。 如果貴組織的程式需要額外的MIME類型，請在此處指定。 預設值為：
+**client_mimeTypes_openOutsideBrowser:** 將在Workspace瀏覽器實例外部開啟的文檔的MIME類型。 如果您組織的程式需要額外的MIME類型，請在此處指定。 預設值為：
 
 * `application/msword`
 * `application/msexcel`
@@ -131,4 +134,6 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 >[!NOTE]
 >
->對於示範應用程式，預設顯示名稱為 **Citizen**。 對於您所建立的自訂應用程式，預設顯示名稱為「 **系統內容帳戶」**。***client_idleTimeout:** 當使用者在特定時間段內仍處於非活動狀態時，AEM Forms Workspace工作階段會過期。 若要啟用此功能，請新增項目至「全域設定」&lt;client_idleTimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idleTimeout>。 您可以指定值0以停用閒置逾時。 時間量以秒為單位指定。
+>對於示範應用程式，預設顯示名稱為 **Citizen**。 對於您所建立的自訂應用程式，預設顯示名稱為「 **系統內容帳戶」**。
+>
+>**client_idleTimeout:** 當使用者在特定時間段內仍處於非活動狀態時，AEM Forms Workspace工作階段會過期。 若要啟用此功能，請新增項目至「全域設定」&lt;client_idleTimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idleTimeout>。 您可以指定值0以禁用空閒超時。 時間量以秒為單位指定。
