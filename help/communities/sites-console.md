@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '3292'
 ht-degree: 3%
@@ -33,7 +33,6 @@ Communities Sites控制台可讓您存取：
 >[!NOTE]
 >
 >用於建立社區站點的主要「社 [區」菜單](/help/communities/sites-console.md)、 [社區站點模板](/help/communities/sites.md)、社 [區組模板](/help/communities/tools-groups.md) ，以及社區功 [](/help/communities/functions.md) 能的社區功能僅供作者環境使用。
-
 
 ## 必備條件 {#prerequisites}
 
@@ -180,7 +179,6 @@ Communities Sites控制台可讓您存取：
 >
 >這是通過為作者環 ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` 境啟用來實現的。
 
-
 #### USER MANAGEMENT {#user-management}
 
 ![createsitesettings](assets/createsitesettings.png)
@@ -190,7 +188,6 @@ Communities Sites控制台可讓您存取：
 >建議將啟用社 [群網站私用](/help/communities/overview.md#enablement-community) （如需詳細資訊，請連絡您的帳戶代表）。
 >
 >當匿名網站訪客被拒絕存取、無法自行註冊且不能使用社交登入時，社群網站是私密的。
-
 
 * **允許使用者註冊**
 
@@ -202,7 +199,7 @@ Communities Sites控制台可讓您存取：
 
    如果勾選，社群網站會*開啟*任何網站訪客都可存取網站。
 若未勾選，則只有登入會員可存取網站。
-取消勾選*private *community站點。 已勾選預設值。
+取消勾選*私有*社區站點。 已勾選預設值。
 
 * **允許傳訊**
 
@@ -227,7 +224,6 @@ Communities Sites控制台可讓您存取：
 >**允許社交登入**
 >
 >雖然範例Facebook和Twitter設定可能存在且可供選取，但對於生 [產環境](/help/sites-administering/production-ready.md)，則必須建立自訂Facebook和Twitter應用程式。 請參 [閱使用Facebook和Twitter的社交登入](/help/communities/social-login.md)。
-
 
 #### TAGGING {#tagging}
 
@@ -403,7 +399,6 @@ Communities Sites控制台可讓您存取：
 >
 >如果不熟悉AEM，請檢視基本處理 [相關檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
-
 ## 修改站點屬性 {#modifying-site-properties}
 
 ![edit-site](assets/edit-site.png)
@@ -450,7 +445,6 @@ BASIC面板允許修改：
 >
 >您可以變更「網站結構」中除頂部函式外的所有函式順序。 因此，無法變更社群網站的首頁。
 
-
 >[!CAUTION]
 >
 >* 雖然顯示標題可以不產生副作用而變更，但不建議編輯屬於社群網站之社群函式的URL名稱。
@@ -458,13 +452,11 @@ BASIC面板允許修改：
 >
 例如，重新命名URL不會移動現有的UGC，因此會產生「遺失」UGC的效果。
 
-
 >[!CAUTION]
 >
 >群組函式不 *能是**網站結構中的* 第一個函式，也不能是唯一函式。
 >
 >任何其他函式(例如頁 [面函式](/help/communities/functions.md#page-function))必須先包含並列出。
-
 
 #### 範例：將目錄函式添加到社區站點結構 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
@@ -551,7 +543,6 @@ ENABLEMENT面板可讓您存取社群網站建立期間提供的設定。
 >
 >
 建立後，應將已套 [用的Facebook雲端服務](/help/communities/social-login.md#createafacebookcloudservice) ，設定為新增使用者至此群組。
-
 
 ## 配置驗證錯誤 {#configure-for-authentication-error}
 
