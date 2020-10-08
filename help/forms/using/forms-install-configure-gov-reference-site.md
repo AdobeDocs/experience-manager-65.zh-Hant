@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '4742'
 ht-degree: 1%
@@ -788,10 +788,10 @@ Package Manager，使用者可導覽至 **Forms** > **Themes** > Reference Theme
 
 1. 開啟服務定義，並啟用選定服務以在工作流中調用。
 
->[!NOTE]
-僅僅因為用戶在「配置管理器」(Configuration Manager)頁中啟用了服務，用戶仍需設定服務配置以便與請求的外部服務通信。
+   >[!NOTE]
+   僅僅因為用戶在「配置管理器」(Configuration Manager)頁中啟用了服務，用戶仍需設定服務配置以便與請求的外部服務通信。
 
-![wee govforms package](assets/aftia-configuration-options.jpg)
+   ![wee govforms package](assets/aftia-configuration-options.jpg)
 
 1. 完成後，按一下「保存」按鈕以保存設定。
 
