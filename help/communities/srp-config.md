@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 4%
@@ -59,5 +59,3 @@ JCR不是 *作者* 和發佈環境共用的公用商店。 社群內容只會從
 >[!NOTE]
 >
 >缺少下面的節 `srpc` 點 `/etc/socialconfig` 表示預設 [JCR儲存](jsrp.md)。
-
-
