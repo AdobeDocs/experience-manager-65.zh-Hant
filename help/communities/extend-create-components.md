@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -32,7 +32,6 @@ ht-degree: 1%
 >每個網站頁面僅允許一個注釋系統。
 >
 >許多Communities功能已包含注釋系統，其resourceType可修改以參考擴充的注釋系統。
-
 
 ## 建立注釋元件 {#create-the-comments-component}
 
@@ -164,7 +163,7 @@ ht-degree: 1%
 
    * **名稱**: `css.txt`
    * **名稱**: `js.txt`
-   * **名稱**: customcommentsystem.js
+   * **名稱**:customcommentsystem.js
 
 * 輸入&#39;customcommentsystem.js&#39;作為 `js.txt`
 * 選擇「 **[!UICONTROL 全部保存」]**
