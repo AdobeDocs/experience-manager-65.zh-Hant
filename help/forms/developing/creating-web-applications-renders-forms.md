@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 0%
@@ -82,7 +82,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 
 ### 建立網頁專案 {#creating-a-web-project}
 
-要建立包含可調用Forms服務的Java Servlet的Web應用程式，第一步是建立新Web項目。 本檔案所基於的Java IDE是Eclipse 3.3。 使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 最後，將名為 *index.html的HTML頁面* ，以及Java servlet新增至您的專案。
+要建立包含可調用Forms服務的Java Servlet的Web應用程式，第一步是建立新Web項目。 本檔案所基於的Java IDE是Eclipse 3.3。使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 最後，將名為 *index.html的HTML頁面* ，以及Java servlet新增至您的專案。
 
 以下清單指定必須添加到Web項目的JAR檔案：
 
@@ -119,7 +119,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至 `C:\Ado
 
 >[!NOTE]
 >
->有關建立調用 `RenderFormFragment` Java servlet的HTML頁的資訊，請[參閱建立網頁](/help/forms/developing/rendering-forms.md#creating-the-web-page)。
+>有關建立調用 `RenderFormFragment` Java servlet的HTML頁的資訊，請參 [閱建立網頁](/help/forms/developing/rendering-forms.md#creating-the-web-page)。
 
 ### 建立Servlet的Java應用程式邏輯 {#creating-java-application-logic-for-the-servlet}
 
@@ -379,7 +379,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 1. 在「項 **目瀏覽器** 」窗口中，按一下右鍵項 `FragmentsWebApplication` 目並選擇「導 **出** 」>「 **WAR檔案」**。
 1. 在「 **Web模組** 」文本框中， `FragmentsWebApplication` 鍵入Java項目的名稱。
-1. 在「目 **標** 」文本框中， `FragmentsWebApplication.war`**鍵入&#x200B;**檔案名，指定WAR檔案的位置，然後按一下「完成」。
+1. 在「目 **標** 」文本框中， `FragmentsWebApplication.war`**鍵入**&#x200B;檔案名，指定WAR檔案的位置，然後按一下「完成」。
 
 ### 將WAR檔案部署至J2EE應用程式伺服器 {#deploying-the-war-file-to-the-j2ee-application-server}
 
