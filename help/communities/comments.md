@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 4%
@@ -34,7 +34,6 @@ ht-degree: 4%
 >
 >不支援匿名張貼留言。 網站訪客必須註冊（成為會員）並登入以參與。
 
-
 ### 新增注釋至頁面 {#adding-comments-to-a-page}
 
 若要在作 `Comments` 者模式中將元件新增至頁面，請使用元件瀏覽器來尋找
@@ -52,7 +51,6 @@ ht-degree: 4%
 >[!NOTE]
 >
 >頁面上 `Comments` 只能存在一個元件。 請注意，數個社群功能已包含注釋，例如部落格、行事歷、論壇、QnA和評論。
-
 
 ### 設定注釋 {#configuring-comments}
 
