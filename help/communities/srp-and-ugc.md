@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -46,7 +46,6 @@ SRP API不是抽象類，它是介面。 自訂實作不應輕易進行，因為
 >
 >如需取代公用程式，請參 [閱SocialUtils重構](socialutils.md)。
 
-
 ## 訪問UGC的實用方法 {#utility-method-to-access-ugc}
 
 若要存取UGC，請使用SocialResourceUtilities套件中的方法，傳回適合從SRP存取UGC的路徑，並取代SocialUtils套件中找到的已過時方法。
@@ -73,7 +72,6 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 >[!CAUTION]
 >
 >返回的路徑resourceToUGCStoragePath()不 *適* 於 [ACL檢查](srp.md#for-access-control-acls)。
-
 
 ## 訪問ACL的實用方法 {#utility-method-to-access-acls}
 
@@ -102,7 +100,6 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 >
 >resourceToACLPath()返回的路徑 *不適*[合用](#utility-method-to-access-acls) 於訪問UGC。
 
-
 ## 與UGC相關的儲存位置 {#ugc-related-storage-locations}
 
 以下儲存位置說明在使用JSRP或MSRP進行開發時可能會有幫助。 目前沒有UI可存取儲存在ASRP中的UGC，因為JSRP([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP（MongoDB工具）。
@@ -117,7 +114,7 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 **陰影節點位置**
 
-建立UGC還會建立 [一個影子節點](srp.md#about-shadow-nodes-in-jcr) ，以便應用必要的ACL。 到本地儲存庫中相應卷影節點的路徑是在元件路徑中預置卷影節點根路徑的結果：
+建立UGC還會建立 [一個影子節點](srp.md#about-shadow-nodes-in-jcr) ，以便應用必要的ACL。 到本地儲存庫中相應卷影節點的路徑是在元件路徑中預先放置卷影節點根路徑的結果：
 
 * 根路徑 = `/content/usergenerated`
 * 注釋陰影節點= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
@@ -136,4 +133,3 @@ UGC不是在這兩個位置中建立的，且僅應使用叫用SRP API的 [公�
 * [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
 * [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
 * [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
-
