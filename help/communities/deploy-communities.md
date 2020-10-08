@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85d4cdf0e2cfcb8b5e70387ce2dc556df9033257
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 1%
@@ -105,8 +105,8 @@ AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communitie
 
 兩個社區功能使用MySQL資料庫：
 
-* 若要 [啟用](/help/communities/enablement.md): 錄制SCORM活動和學員
-* 針對 [DSRP](/help/communities/dsrp.md): 儲存使用者產生的內容(UGC)
+* 若要 [啟用](/help/communities/enablement.md):錄制SCORM活動和學員
+* 針對 [DSRP](/help/communities/dsrp.md):儲存使用者產生的內容(UGC)
 
 MySQL連接器必須單獨獲得和安裝。
 
@@ -121,7 +121,7 @@ MySQL連接器必須單獨獲得和安裝。
 
    * 例如，https://localhost:4502/system/console/bundles
    * 選取 **`Install/Update`**
-   * 瀏覽…… 若要選取從下載的ZIP封存解壓縮的套件
+   * 瀏覽……若要選取從下載的ZIP封存解壓縮的套件
    * 檢查 *Oracle Corporation的MySQLcom.mysql.jdbc* JDBC驅動程式是否處於活動狀態，如果沒有，則啟動它（或檢查日誌）
 
 1. 如果在配置JDBC後在現有部署上安裝，則通過從Web控制台中保存JDBC配置，將JDBC重新綁定到新連接器：
@@ -134,7 +134,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 有關安裝捆綁的詳細資訊，請參閱「 [Web控制台](/help/sites-deploying/web-console.md) 」頁。
 
-#### 範例： 已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
+#### 範例：已安裝MySQL連接器包 {#example-installed-mysql-connector-bundle}
 
 ![chlimage-bundles](assets/chlimage-bundles.png)
 
@@ -201,9 +201,9 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 
 通用商店支援在發佈環境中協調和分析UGC，同時不需要復 [制](/help/communities/sync.md) UGC。
 
-* [社群內容商店](/help/communities/working-with-srp.md) : 討論AEM社群的SRP儲存選項
+* [社群內容商店](/help/communities/working-with-srp.md) :討論AEM社群的SRP儲存選項
 
-* [建議的拓撲](/help/communities/topologies.md) : 根據使用案例和SRP選擇討論要使用的拓撲
+* [建議的拓撲](/help/communities/topologies.md) :根據使用案例和SRP選擇討論要使用的拓撲
 
 ## 升級 {#upgrading}
 
@@ -282,7 +282,7 @@ AEM Communities SCORM引擎是啟用功能的必 [要](/help/communities/overvie
 * 以管理權限登入您的作者實例。
 * 如果發佈者不是localhost:4503或傳輸用戶不是， `admin`則 [配置複製代理](#replication-agents-on-author)
 
-* 存取 [Web Console](/help/sites-deploying/configuring-osgi.md)
+* 存取 [Web主控台](/help/sites-deploying/configuring-osgi.md)
 
    * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
@@ -327,7 +327,6 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 >
 >如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請 [聯絡客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
-
 #### 儲存庫複製 {#repository-replication}
 
 如同AEM 6.2及舊版軟體一樣，將關鍵資料儲存在儲存庫中，可在每個AEM例項的首次啟動時指定下列系統屬性（會建立初始儲存庫），以保留它：
@@ -337,7 +336,6 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 >[!NOTE]
 >
 >請務必驗證作者上的復 [制代理是否正確](#replication-agents-on-author) 配置。
-
 
 將密鑰材料儲存在儲存庫中後，將加密密鑰從作者複製到其他實例的方式如下：
 
