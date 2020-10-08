@@ -1,6 +1,6 @@
 ---
 title: Communities Console
-seo-title: 管理台
+seo-title: Communities Console
 description: 社群主控台說明
 seo-description: 社群主控台說明
 uuid: 1c5b2600-9059-4b44-9741-f1b627423d3c
@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 管理台 {#communities-consoles}
+# Communities Console {#communities-consoles}
 
 AEM Communities控制台可從全域導覽面板的作者環境取得，可讓您存取管理工作，例如：
 
@@ -37,7 +37,6 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 >[!NOTE]
 >
 >在發佈環境中，當登入 [會員具有適當權限](sites-console.md) ，社群網站 `Administration` 就會顯示功能表項目。
-
 
 ## 全域導覽面板 {#global-navigation-panel}
 
