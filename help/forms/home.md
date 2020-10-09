@@ -1,18 +1,18 @@
 ---
-title: AEM 6.5 Forms使用指南
-seo-title: AEM 6.5 Forms使用指南
+title: Adobe Experience Manager 6.5 Forms指南
+seo-title: AEM 6.5 表單使用指南
 description: 本指南涵蓋所有AEM Forms工作，包括如何建立、管理、發佈和更新數位表單。
 seo-description: 涵蓋所有AEM Forms工作，包括如何建立、管理、發佈和更新數位表單。
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 15%
+source-wordcount: '370'
+ht-degree: 24%
 
 ---
 
 
-# AEM 6.5 Forms使用指南
+# Adobe Experience Manager 6.5 Forms指南
 
 本指南涵蓋所有AEM Forms工作，包括如何建立、管理、發佈和更新數位表單。
 
@@ -20,7 +20,7 @@ ht-degree: 15%
 
 * [AEM快速入門](https://helpx.adobe.com/experience-manager/get-started.html)
 * [AEM 6.5發行說明](/help/release-notes/home.md)
-* [最近的檔案更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用指南
@@ -44,7 +44,7 @@ ht-degree: 15%
 ## 關鍵AEM資源
 
 * [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
-* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 * [核心元件使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
