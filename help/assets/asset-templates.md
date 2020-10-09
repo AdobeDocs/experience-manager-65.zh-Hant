@@ -3,9 +3,9 @@ title: 資產範本
 description: 瞭解資產範本 [!DNL Adobe Experience Manager Assets] ，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1544'
 ht-degree: 0%
 
 ---
@@ -50,17 +50,11 @@ ht-degree: 0%
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
 1. 將一或多個INDD範本上傳至並提 [!DNL Experience Manager] 前使用。 選擇手冊的範本，然後按一下「下 **[!UICONTROL 一步]**」。
-
-   ![chlimage_1-103](assets/chlimage_1-308.png)
-
 1. 指定手冊的名稱和選用說明。
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
 1. （可選）按一 **[!UICONTROL 下「標籤]** 」，然後為手冊選取一或多個標籤。 按一 **[!UICONTROL 下「確認]** 」以確認您的選擇。
-
-   ![chlimage_1-105](assets/chlimage_1-310.png)
-
 1. 按一下&#x200B;**[!UICONTROL 建立]**。對話方塊會確認已建立新的手冊。 按一 **[!UICONTROL 下「開啟]** 」，以編輯模式開啟手冊。
 
    <!--![chlimage_1-106](assets/.png) -->
@@ -92,8 +86,6 @@ ht-degree: 0%
 
    可編輯的內容會顯示在右側。 若要在中編輯欄位，范 [!DNL Experience Manager Assets]本中的對應欄位必須在中標籤 [!DNL InDesign]。 換言之，它們應在中標示為可編輯 [!DNL InDesign]。
 
-   ![chlimage_1-110](assets/chlimage_1-315.png)
-
    >[!NOTE]
    >
    >請確定您的 [!DNL Experience Manager] 部署已與整合， [!DNL InDesign Server] 以便 [!DNL Experience Manager Assets] 從範本擷取資料並 [!DNL InDesign] 加以編輯。 如需詳細資訊，請 [參閱將Experience Manager Assets與InDesign Server整合](/help/assets/indesign.md)。
@@ -106,27 +98,18 @@ ht-degree: 0%
 
 1. 按一 **[!UICONTROL 下「預覽]** 」以預覽文字變更。
 
-   ![檢視變更](assets/view-changes.png)
-
-1. 若要交換影像，請按一下「資 **[!UICONTROL 產搜尋器」]**。
-
-   ![chlimage_1-113](assets/chlimage_1-318.png)
+1. 若要交換影像，請按一 **[!UICONTROL 下Asset Finder]** ![chlimage_1-113](assets/chlimage_1-318.png)。
 
 1. 從可編輯欄位清單中選取影像欄位，然後從資產選擇器拖曳所要的影像至可編輯欄位。
 
-   ![chlimage_1-115](assets/chlimage_1-319.png)
+   ![chlimage_1-114](assets/chlimage_1-319.png)
 
    您也可以使用關鍵字、標籤，並根據其發佈狀態來搜尋影像。 您可以瀏覽整個存 [!DNL Experience Manager Assets] 儲庫，並瀏覽到所需映像的位置。
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
 1. 按一 **[!UICONTROL 下「預覽]** 」以預覽影像。
-
-   ![檢視變更](assets/view-changes.png)
-
 1. 要編輯多頁宣傳品中的特定頁面，請使用底部的頁面導覽器。
-
-   ![頁面導覽器](assets/page-navigator.png)
 
 1. 按一 **[!UICONTROL 下工具列上的]** 「預覽」，以預覽所有變更。 按一下 **[!UICONTROL 完成]** ，保存對宣傳品的編輯更改。
 
@@ -175,11 +158,7 @@ ht-degree: 0%
 
    您可以瀏覽儲存庫 [!DNL Experience Manager Assets] 或系列，並導航到所需模板的位置，然後選擇這些模板進行合併。
 
-   ![chlimage_1-124](assets/chlimage_1-329.png)
-
    您可以套用各種篩選條件來搜尋所需的範本。 例如，您可以根據檔案類型或標籤來搜尋範本。
-
-   ![chlimage_1-125](assets/chlimage_1-330.png)
 
 1. Click **[!UICONTROL Next]** from the toolbar.
 1. 在「預 **[!UICONTROL 覽與重新排序]** 」畫面中，視需要重新排列範本，並預覽要合併的範本選擇。 然後，從工具 **[!UICONTROL 列按一下]** 「下一步」。
