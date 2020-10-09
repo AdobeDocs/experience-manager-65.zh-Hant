@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '9613'
+source-wordcount: '9565'
 ht-degree: 3%
 
 ---
@@ -94,7 +94,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >
 >觸發區塊上傳時的預設值為500 MB，區塊大小為50 MB。 如果您修改 [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) ，將資產的上傳時間設為 `timeout configuration` 少於所需時間，則在資產上傳進行中時，您可能會遇到作業逾時情形。 因此，您需要更改和 `chunkUploadMinFileSize` ，以便 `chunksize`每個區塊請求刷新會話。
 >
->在憑證到期逾時、延遲、頻寬和預期的並行上傳時，可讓您確保選取下列項目的最高值：
+>在憑證到期逾時、延遲、頻寬和預期的並行上傳的情況下，可讓您確保選取下列項目的最高值：
 >
 >* 為了確保在上載進行時，對可能導致憑據過期的檔案啟用區塊上載。
    >
@@ -508,9 +508,6 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 按一下資產以開啟其頁面。
 1. 在Experience Manager介面中，從清單中選 **[!UICONTROL 取「轉譯]** 」。
-
-   ![左側欄以開啟選單，並選取「轉譯」選項](assets/renditions_menu.png)
-
 1. 在「轉 **[!UICONTROL 譯]** 」面板中，檢視為資產產生的轉譯清單。
 
    ![「資產詳細資料」頁面上的轉譯面板](assets/renditions_panel.png)
@@ -666,10 +663,6 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 在清單檢視和欄檢視中，當您將指標 **[!UICONTROL 暫留在資產縮圖上時]** ，會顯示「選取」選項。
 
-![在清單檢視中選取資產](assets/select_quick_in_listview.png)
-
-![在欄檢視中選取資產](assets/select_quick_in_columnview.png)
-
 在卡片檢視中，「選 **[!UICONTROL 取]** 」選項會顯示為快速動作。
 
 ![在資訊卡檢視上選擇快速動作](assets/select_quick_action.png)
@@ -690,9 +683,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
    * 選取資產，然後按一下工 **[!UICONTROL 具列中]** 的編輯。
    * 按一 **[!UICONTROL 下]** 「編輯」選項，該選項會顯示在卡片檢視中的資產上。
-   * 按一下工具列中的&#x200B;**[!UICONTROL 「編輯」]**。
-
-   ![工具列中的編輯選項](assets/do-not-localize/edit_icon.png)
+   * 按一下工 **[!UICONTROL 具欄]** 「編輯」(Edit ![)](assets/do-not-localize/edit_icon.png)選項中的「編輯」(Edit)。
 
 1. 若要裁切影像，請按一 **[!UICONTROL 下「裁]** 切 ![選項」來裁切影像](assets/do-not-localize/crop.png)。
 
@@ -751,9 +742,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 1. 按一下下 **[!UICONTROL 列任一項]** 中的「注釋」(Annotate)選項：
 
    * [快速動作](/help/assets/managing-assets-touch-ui.md#quick-actions)
-   * 在選取資產或導覽至資產頁面後，從工具列
-
-   ![註解選項](assets/annotate-option.png)
+   * 在選取資產或導覽至資產頁面後，從工具列中。
 
 1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
 
@@ -768,8 +757,6 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
    >對於非管理員使用者，只有當使用者在CRXDE的路徑上具有讀取權限時，才會 `/home` 顯示建議。
 
 1. 添加註釋後，按一下「 **[!UICONTROL 添加]** 」(Add)保存注釋。 註解通知會傳送給Aaron。
-
-   ![添加按鈕以保存注釋](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -799,12 +786,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 1. 要查看資產的已保存批注，請定位至資產的位置並開啟資產的資產頁。
 
 1. 在Experience Manager介面中，選擇「時間 **[!UICONTROL 軸」]**。
-
-   ![Experience Manager中提供的時間軸選項](assets/view-timeline.png)
-
 1. 從時間軸 **[!UICONTROL 的「顯示全部]** 」清單中，選取「注 **[!UICONTROL 釋]** 」以根據註解來篩選結果。
-
-   ![在時間軸中顯示全部清單](assets/timeline-show-all-option.png)
 
    在「時間軸」( **[!UICONTROL Timeline]** )面板中按一下注釋，查看影像上的相應注釋。
 
@@ -833,8 +815,6 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
    要僅打印審閱狀態，請從時間軸中選擇它。
 
 1. Click **[!UICONTROL Print]** from the toolbar.
-
-   ![工具列中的列印選項](assets/do-not-localize/print.png)
 
 1. 從「列印」對話方塊中，選擇您要在PDF上顯示註解／審閱狀態的位置。 例如，如果您希望註解／狀態列印在包含已列印影像之頁面的右上角，請使用左上 **角設定** 。 預設會選取它。
 
@@ -923,8 +903,6 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
    * 按一 **[!UICONTROL 下「在時間軸中]** 顯 [!UICONTROL 示全部」]。
    * 按一 **[!UICONTROL 下版本]**。 為資產建立的所有版本都會列在左側邊欄。
-
-      ![ 從時間軸中選擇「版本」選項](assets/versions_option.png)
 
    * 選取資產的特定版本，然後按一下「預 **[!UICONTROL 覽版本」]**。
 
