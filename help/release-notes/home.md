@@ -1,18 +1,18 @@
 ---
-title: AEM 6.5發行說明
-description: AEM發行說明涵蓋有關最新版AEM的重要資訊，包括新增、支援的平台、已過時和已移除的功能，以及已知問題。
+title: Adobe Experience Manager 6.5發行說明
+description: AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 14%
+source-wordcount: '374'
+ht-degree: 33%
 
 ---
 
 
-# AEM 6.5發行說明
+# Adobe Experience Manager 6.5發行說明
 
-AEM發行說明涵蓋有關最新版AEM的重要資訊，包括新增、支援的平台、已過時和已移除的功能，以及已知問題。
+AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 
 ## 關鍵AEM文章
 
