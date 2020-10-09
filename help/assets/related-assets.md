@@ -3,9 +3,9 @@ title: 相關資產
 description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -44,8 +44,6 @@ ht-degree: 0%
    * 要關聯派生檔案，請從列 **[!UICONTROL 表中選擇]** 「派生」。
    * 若要在資產之間建立雙向關係，請從清單中選 **[!UICONTROL 取]** 「其他」。
 
-   ![chlimage_1-276](assets/chlimage_1-276.png)
-
 1. 從「選 **[!UICONTROL 取資產]** 」畫面，導覽至您要建立關聯的資產所在的位置，然後加以選取。
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
@@ -55,9 +53,7 @@ ht-degree: 0%
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. 若要解除資產的關聯，請按一下工 **[!UICONTROL 具列中的]** 「解除關聯」。
-
-   ![非關聯資產](assets/do-not-localize/link-unrelate-icon.png)
+1. 若要解除資產關聯，請按一下工 **[!UICONTROL 具列中]**![的「解除關聯](assets/do-not-localize/link-unrelate-icon.png) 」。
 
 1. 從「移除關係」( **[!UICONTROL Remove Relations]** )對話框中選取要解除關聯的資產，然後按一下「取 **[!UICONTROL 消關聯」(Unrelate)]**。
 
@@ -75,13 +71,11 @@ ht-degree: 0%
 
 ![「資產屬性」頁顯示要包括在轉換中的相關資產的源檔案](assets/asset-properties-source-asset.png)
 
-*圖： 相關資產的來源資產，以便進行折算。*
+*圖：相關資產的來源資產，以便進行折算。*
 
 1. 遵循「建立新翻譯專案」中的步驟，將來源檔案夾中的資產翻譯 [成目標語言](translation-projects.md#create-a-new-translation-project)。 例如，在此例中，請將您的資產翻譯為法文。
 
 1. 從「項 [!UICONTROL 目] 」頁開啟翻譯資料夾。
-
-   ![chlimage_1-283](assets/chlimage_1-283.png)
 
 1. 按一下專案圖格以開啟詳細資訊頁面。
 
@@ -97,8 +91,4 @@ ht-degree: 0%
 
 1. 若要確認是否已轉換與來源相關的資產，請按一下來源資產。
 
-   ![chlimage_1-287](assets/chlimage_1-287.png)
-
 1. 選取與來源相關的資產，然後按一下「在資 **[!UICONTROL 產中顯現」]**。 會顯示已轉換的相關資產。
-
-   ![chlimage_1-288](assets/chlimage_1-288.png)
