@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 359eb60c0ba3845d7aa0ca58488aa945a9f45aea
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '11484'
+source-wordcount: '11487'
 ht-degree: 0%
 
 ---
@@ -1160,7 +1160,7 @@ Remove one mention of this fix.
 
 **後端整合**
 
-* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29945:CQ-4270777的修補程式
+* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29944:CQ-4270777的修補程式
 * 在IBM [!DNL Experience Manager Forms] WebSphere上安裝時，基於SOAP建立表單資料模型失敗。 CQ-4251134的修補程式
 * 已針對Microsoft Dynamics內部部署整合啟用Active Directory Federation Services(ADFS)v3.0支援。 CQ-4270586的修補程式
 * 當資料來源的標題變更時，表單資料模型不會顯示更新的標題。 CQ-4265599的修補程式
@@ -1259,7 +1259,7 @@ Remove one mention of this fix.
 
 #### 資產——包含
 
-* 已啟用對的多站點管理器支 [!DNL Experience Manager Assets]持。 如需詳細資訊，請參 [閱「使用MSM為Experience Manager Assets重複使用資產」](https://helpx.adobe.com/experience-manager/6-5/help/assets/reuse-assets-using-msm.html)。 NPR-29199:CQ-4259922的修補程式
+* 已啟用對的多站點管理器支 [!DNL Experience Manager Assets]持。 如需詳細資訊，請參 [閱「使用MSM為Experience Manager Assets重複使用資產」](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html)。 NPR-29199:CQ-4259922的修補程式
 
 #### 網站——隨附
 
