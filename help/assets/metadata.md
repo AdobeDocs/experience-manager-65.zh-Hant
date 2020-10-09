@@ -3,9 +3,9 @@ title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]�
 description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]**
 * 資產的說明。
 * 指派給資產的標籤。
 
-更多中繼資料可協助您進一步分類資產，並隨著數位資訊的增加而有所幫助。 僅根據檔名管理幾百個檔案是可能的。 但是，這種方法不具可擴充性。 當涉案人數和管理的資產數量增加時，這個數字就會不夠。
+更多中繼資料可協助您進一步分類資產，並隨著數位資訊的增加而有所幫助。 僅根據檔名管理幾百個檔案是可能的。 但是，這種方法不具可擴充性。 當涉案人數和管理的資產數量增加時，這個數字就不夠。
 
 隨著中繼資料的增加，數位資產的價值會增加，因為資產會變成，
 
@@ -133,10 +133,10 @@ To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]**
 
 在檔案中內嵌中繼資料有多種方式。 支援多種編碼標準：
 
-* XMP: 用於將提 [!DNL Assets] 取的元資料儲存在儲存庫中。
-* ID3: 音訊和視訊檔案。
-* 例如： 的雙曲餘切值。
-* 其他／舊版： 從 [!DNL Microsoft Word]、 [!DNL PowerPoint][!DNL Excel]等。
+* XMP:用於將提 [!DNL Assets] 取的元資料儲存在儲存庫中。
+* ID3:音訊和視訊檔案。
+* 例如：的雙曲餘切值。
+* 其他／舊版：從 [!DNL Microsoft Word]、 [!DNL PowerPoint][!DNL Excel]等。
 
 ### XMP {#xmp}
 
@@ -219,7 +219,7 @@ Exif定義的中繼資料欄位通常具有技術性，在描述性中繼資料�
 ### 列印專用的中繼資料 {#print-specific-metadata}
 
 * PDF和PDF/X - Adobe PDF和協力廠商應用程式。
-* PRISM —— 發佈 [業界標準中繼資料的需求](https://www.prismstandard.org)。
+* PRISM —— 發佈 [業界標準中繼資料的需求](https://www.idealliance.org/prism-metadata/)。
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` -分頁文字的XMP中繼資料。
 
