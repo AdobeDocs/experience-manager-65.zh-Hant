@@ -3,7 +3,7 @@ title: 整 [!DNL Assets] 合 [!DNL InDesign Server]
 description: 瞭解如何 [!DNL Adobe Experience Manager Assets] 整合 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 3%
@@ -47,7 +47,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   >IDML是以XML為基礎的格式，可轉譯檔案的所有 [!DNL InDesign] 內容。 它會使用 [ZIP壓縮儲存為壓縮的](https://www.techterms.com/definition/zip) 套件。 如需詳細資訊，請 [參閱InDesign Interchange Formats INX和IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
+   >IDML是以XML為基礎的格式，可轉譯檔案的所有 [!DNL InDesign] 內容。 它會使用 [ZIP壓縮儲存為壓縮的](https://www.techterms.com/definition/zip) 套件。 如需詳細資訊，請 [參閱InDesign Interchange Formats INX和IDML](https://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
 
    >[!CAUTION]
    >
