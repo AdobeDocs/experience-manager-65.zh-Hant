@@ -8,9 +8,9 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 #### 如何啟用無二進位散發？ {#how-do-i-enable-binary-less-distribution}
 
 若要啟用無二進位散發，請使用共用的blob存放區進行部署。
-在OSGI `useBinaryReferences` 配置中檢查屬性，並查看您的代理正在使用的出廠PID( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)*。
+在OSGI `useBinaryReferences` 配置中檢查屬性，並查看您的代理正在使用的出廠PID( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* 。
 
 #### 在AEM網站主控台中導覽頁面階層時，如何自訂錯誤訊息？ {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
 
@@ -77,7 +77,7 @@ Content Services是以Sling Models為基礎，而AEM開發人員必須為匯出�
 
 [1] [Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
-[2] [Apache Sling:: Sling Models](https://sling.apache.org/documentation/bundles/models.html)
+[2] [Apache Sling::Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
 #### 如何停用AEM 6.4調查快顯視窗？ {#how-to-disable-aem-survey-pop-up}
 
@@ -118,7 +118,7 @@ Adobe Experience Manager(AEM)6.5目前可讓您一次上傳最多2 GB的資產�
 
 #### 如何使用AEM 6.5例項設定資產分析？ {#how-to-configure-asset-insights-with-aem-instance}
 
-若要設定並設定透過Adobe Activation(DTM)部署的Experience Manager資產前瞻分析，請參閱「使用AEM [資產設定資產前瞻分析」](https://helpx.adobe.com/experience-manager/kt/assets/using/asset-insights-tutorial-setup.html)。
+若要設定並設定透過Adobe Activation(DTM)部署的Experience Manager資產前瞻分析，請參閱如何 [使用AEM Assets設定資產前瞻分析](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 #### 如何自訂管理控制台？ {#how-to-customize-admin-consoles}
 
