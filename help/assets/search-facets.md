@@ -3,9 +3,9 @@ title: 搜尋Facet以篩選搜尋結果
 description: 如何在中建立、修改和使用搜索刻面 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '2489'
+source-wordcount: '2438'
 ht-degree: 16%
 
 ---
@@ -42,19 +42,13 @@ ht-degree: 16%
    >1. 儲存變更。
 
 
-1. In the Edit Search Forms page, drag a predicate from the **[!UICONTROL Select Predicate]** tab to the main pane. 例如，拖曳 **[!UICONTROL Property Predicate]**。
+1. In the [!UICONTROL Edit Search Forms] page, drag a predicate from the **[!UICONTROL Select Predicate]** tab to the main pane. 例如，拖曳 **[!UICONTROL Property Predicate]**。
 
    ![按並移動謂詞以自訂搜尋篩選器](assets/drag_predicate.png)
 
    *圖：按並移動謂語以自訂搜尋篩選。*
 
-1. 在「設定」標籤中，輸入謂語的欄位標籤、預留位置文字和說明。 為要與謂詞關聯的元資料屬性指定有效名稱。
-
-   「設定」頁籤中的標題標籤標識所選謂詞的類型。
-
-   ![使用「設定」頁籤提供謂語的必需選項](assets/settings.png)
-
-   使用「設定」頁籤提供謂語的必需選項
+1. 在「設 [!UICONTROL 定] 」標籤中，輸入謂語的欄位標籤、預留位置文字和說明。 為要與謂詞關聯的元資料屬性指定有效名稱。 「設定」標籤中的標 [!UICONTROL 題標籤] ，可識別所選謂語的類型。
 
 1. 在「屬 **[!UICONTROL 性名稱]** 」欄位中，指定您要與謂語關聯的中繼資料屬性的有效名稱。它是根據其執行搜索的名稱。例如，輸入 `jcr:content/metadata/dc:description` 或 `./jcr:content/metadata/dc:description`。
 
@@ -154,17 +148,9 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 1. 配置此謂語的Root標籤路徑屬性，以在「標籤」清單中填充各種標籤。
 1. 選取 **[!UICONTROL 「顯示符合所有標籤」選項]** ，以搜尋包含您所指定之所有標籤的資產。
 
-   ![Typical settings of Tags predicate](assets/tags_predicate.png)
-
-   Typical settings of Tags predicate
-
 1. 在「說 **[!UICONTROL 明]** 」欄位中，輸入選用的說明，然後按一下「 **[!UICONTROL 完成」]**。
 1. 導覽至「搜尋」面板。 The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. 指定您要依據其搜尋資產或從建議清單中選取的標籤。
-
-   ![在輸入標籤名稱時，Experience Manager提供的建議](assets/tag-suggestion.png)
-
-   *圖：在輸入標籤名稱時，Experience Manager提供的建議。*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
