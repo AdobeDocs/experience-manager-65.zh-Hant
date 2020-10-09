@@ -70,6 +70,7 @@ Solr安裝可以通過使用不同的集合在節點儲存(Oak)和公共儲存(S
       >[!NOTE]
       >
       >預設儲存配置現在儲存在conf路徑(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而不是etc路徑(`/etc/socialconfig/srpc/defaultconfiguration`)中。 建議您依照移轉步 [驟](#zerodt-migration-steps) ，讓預設srp如預期般運作。
+
    ![dsrp-config](assets/dsrp-config.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
