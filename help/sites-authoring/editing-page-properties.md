@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
 workflow-type: tm+mt
 source-wordcount: '1781'
 ht-degree: 8%
@@ -310,7 +310,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Assets也提供大量屬性編輯功能。 很相似，但有幾點不同。 如需詳 [細資訊，請參閱編輯多個資產的屬性](/help/assets/managing-multiple-assets.md) 。
+>Assets也提供大量屬性編輯功能。 很相似，但有幾點不同。 如需詳 [細資訊，請參閱編輯多個資產的屬性](/help/assets/metadata.md) 。
 >
 >此外還有「 [Bulk Editor](/help/sites-administering/bulk-editor.md)」（批量編輯器），它允許您使用GQL（Google查詢語言）從多個頁面搜索內容，然後直接在批量編輯器中編輯內容，然後將更改保存到原始頁面。
 
