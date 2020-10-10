@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: 資產指南
+user-guide-title: Assets 指南
 breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '619'
 ht-degree: 37%
 
 ---
 
 
-# 資產指南 {#assets}
+# Assets 指南 {#assets}
 
 + [[!DNL Assets] 使用者指南](home.md)
 + [Experience Manager 6.5 Assets發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
@@ -23,6 +23,7 @@ ht-degree: 37%
 + 使用Experience Manager Assets {#using}
    + [資產首頁體驗](assets-home-page.md)
    + [搜尋數位資產](search-assets.md)
+   + [使用資產中繼資料](metadata.md)
    + [多語言資產](multilingual-assets.md)
    + [資產 [!DNL Adobe Stock] 中的使用資產](aem-assets-adobe-stock.md)
    + [預覽3D資產](previewing-3d-assets.md)
@@ -91,28 +92,24 @@ ht-degree: 37%
 + 管理資產 {#administer}
    + [支援的檔案格式](assets-formats.md)
    + [搜尋 Facet](search-facets.md)
-   + [管理資產的中繼資料](metadata.md)
+   + [瞭解中繼資料概念](metadata-concepts.md)
+   + [中繼資料功能的設定](metadata-config.md)
    + [XMP回寫至轉譯](xmp-writeback.md)
    + [資產連結共用](link-sharing.md)
    + [資產報表](asset-reports.md)
    + [增強型智慧標記](enhanced-smart-tags.md)
    + [處理中繼資料、影像和視訊的設定檔](processing-profiles.md)
-   + [階層式中繼資料](cascading-metadata.md)
    + [「建立和配置資產編輯器」頁](assets-finder-editor.md)
    + [資產規模調整指南](assets-sizing-guide.md)
-   + [中繼資料圖式參考](meta-ref.md)
    + [翻譯資產的最佳實務](best-practices-for-translating-assets-efficiently.md)
    + [資產效能調整指南](performance-tuning-guidelines.md)
-   + [如何新增或編輯中繼資料](meta-edit.md)
    + [資產移轉指南](assets-migration-guide.md)
-   + [XMP 中繼資料](xmp.md)
    + [資產網路考量](assets-network-considerations.md)
    + [資產和媒體庫](medialibrary.md)
    + [使用PDF點陣化器](aem-pdf-rasterizer.md)
    + [設定上傳限制](configuring-asset-upload-restrictions.md)
    + [Experience Manager與Creative Cloud整合](aem-cc-integration-best-practices.md)
    + [與InDesign Server整合](indesign.md)
-   + [中繼資料設定檔](metadata-profiles.md)
    + [資產中的數位版權管理](drm.md)
    + [使用示範套件獲取資產見解](touch-ui-using-demo-package-for-asset-insights.md)
    + [資產檔案格式最佳實務](assets-file-format-best-practices.md)
@@ -120,14 +117,11 @@ ht-degree: 37%
    + [Camera Raw支援](camera-raw.md)
    + [使用Apache Tika偵測資產的MIME類型](detect-asset-mime-type-with-tika.md)
    + [影像轉碼程式庫](imaging-transcoding-library.md)
-   + [支援IPTC中繼資料](iptc-support.md)
    + [中繼資料結構](metadata-schemas.md)
    + [適用於系列、程式碼片段和程式碼片段範本的多租用功能](multi-tenancy.md)
    + [浮水印您的資產](watermarking.md)
-   + [大量中繼資料匯入和匯出](metadata-import-export.md)
    + [資產範本](asset-templates.md)
    + [與Creative Cloud共用資料夾的最佳實務](aem-cc-folder-sharing-best-practices.md)
-   + [資料夾中繼資料結構](folder-metadata-schema.md)
    + [管理智慧標籤](managing-smart-tags.md)
 + 品牌入口網站 {#brandportal}
    + [使用 Brand Portal 設定 Assets](configure-aem-assets-with-brand-portal.md)
@@ -147,7 +141,6 @@ ht-degree: 37%
 + Manage Assets {#managing}
    + [管理數位資產](managing-assets-touch-ui.md)
    + [管理集合](managing-collections-touch-ui.md)
-   + [管理多個資產和系列](managing-multiple-assets.md)
    + [使用智慧型內容服務設定標籤](config-smart-tagging.md)
    + [啟用重複偵測](duplicate-detection.md)
    + [組織數位資產](organize-assets.md)
