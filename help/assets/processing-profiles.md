@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 37b3a553758ecd249a08e0d7d6e29becdcb018c2
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 這些規則可包括新增中繼資料、智慧裁切影像或建立視訊編碼設定檔。 在AEM中，您可以建立三種描述檔類型，這些描述檔在下列連結中有詳細說明：
 
-* [中繼資料設定檔](/help/assets/metadata-profiles.md)
+* [中繼資料設定檔](/help/assets/metadata-config.md#metadata-profiles)
 * [影像描述檔](/help/assets/image-profiles.md)
 * [視訊設定檔](/help/assets/video-profiles.md)
 
