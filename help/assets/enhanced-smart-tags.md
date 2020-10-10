@@ -3,9 +3,9 @@ title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 78a101cdf0b4762ff9a3e7320db464df5b96300d
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1587'
 ht-degree: 8%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 8%
 
 要使智慧內容服務應用正確的標籤，您必須對其進行培訓以識別分類。 若要訓練服務，請先組織一組最能說明這些資產的資產和標籤。 在資產上套用這些標籤，並執行培訓工作流程以協助服務學習。
 
-一旦標籤經過訓練並準備就緒後，服務現在可以透過標籤工作流程，將這些標籤套用至資產。
+一旦標籤經過訓練並準備就緒後，服務現在可以透過標籤工作流程，將這些標籤套用在資產上。
 
 在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
-智慧型內容服務是Adobe I/O上代管的雲端服務。 若要在中使 [!DNL Adobe Experience Manager]用，系統管理員必須將您的 [!DNL Experience Manager] 部署與Adobe I/O整合。
+智慧型內容服務是Adobe I/O上代管的雲端服務。若要在中使 [!DNL Adobe Experience Manager]用，系統管理員必須將您的 [!DNL Experience Manager] 部署與Adobe I/O整合。
 
 總而言之，以下是使用智慧型內容服務的主要步驟：
 
@@ -44,6 +44,7 @@ ht-degree: 8%
 
 * Adobe ID 帳戶具有組織的管理員權限。
 * 您的組織已啟用智慧型內容服務。
+* 智慧型內容服務基本套件只能新增至已授權基本 [!DNL Sites] 套件和 [!DNL Assets] 附加元件的部署。
 
 ## 入門 {#onboarding}
 
@@ -179,3 +180,7 @@ The Smart Content Service is available for purchase as an add-on to [!DNL Experi
 >[!NOTE]
 >
 >在後續的標籤週期中，只有修改過的資產會再次使用新訓練過的標籤進行標籤。但是，如果標籤工作流程的最後一個標籤週期與目前標籤週期之間的間隔超過24小時，則甚至會標籤未更改的資產。 對於定期標籤工作流程，未變更的資產會在時間間隔超過6個月時加以標籤。
+
+## 提示與限制 {#tips-best-practices-limitations}
+
+* 智慧型內容服務的使用限制為每年最多200萬個標籤影像。 處理和標籤的任何重複影像都會計為標籤影像。
