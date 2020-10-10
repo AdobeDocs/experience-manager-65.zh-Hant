@@ -2,7 +2,7 @@
 title: 發行說明 [!DNL Adobe Experience Manager Assets] 6.5。
 description: ' [!DNL Adobe Experience Manager] 6.5的新功能和增強功能 [!DNL Assets]。'
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 3%
@@ -38,11 +38,11 @@ ht-degree: 3%
 
 ![從Experience Manager Assets預覽Adobe Stock影像和授權](assets/stock_image_preview_license_options.png)
 
-*圖： 從內[!DNL Adobe Stock]部預覽影像和授權[!DNL Experience Manager Assets]。*
+*圖：從內[!DNL Adobe Stock]部預覽影像和授權[!DNL Experience Manager Assets]。*
 
 ![在Experience Manager中搜尋及篩選已授權的Adobe Stock影像](assets/aem-search-filters2.jpg)
 
-*圖： 在中搜尋及篩選[!DNL Adobe Stock]授權影像[!DNL Experience Manager]。*
+*圖：在中搜尋及篩選[!DNL Adobe Stock]授權影像[!DNL Experience Manager]。*
 
 ### 動態參照 [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
@@ -62,13 +62,13 @@ ht-degree: 3%
 
 ![將資產從部署中 [!DNL Experience Manager] 拖曳至不同 [!DNL Sites] 部署的頁 [!DNL Experience Manager] 面](assets/connected-assets-drag-and-drop-only.gif)
 
-*圖： 將資產從部署中[!DNL Experience Manager]拖曳至不同[!DNL Sites]部署之頁面上的[!DNL Experience Manager]部署。*
+*圖：將資產從部署中[!DNL Experience Manager]拖曳至不同[!DNL Sites]部署之頁面上的[!DNL Experience Manager]部署。*
 
 ## 動態媒體 {#dynamic-media}
 
 [!DNL Dynamic Media] 提供增強的豐富式媒體製作與發佈功能， [!DNL Experience Manager Assets] 以提供如臨現場且個人化的尖端體驗。 透過上傳單一高品質的主資產，並使用我們的進階雲端演算和檢視器，您可以即時提供任何轉譯組合，以支援組織的媒體策略。
 
-如需新功能的詳細資 [!DNL Dynamic Media] 訊，請 [參閱動態媒體發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
+如需新功能的詳細資 [!DNL Dynamic Media] 訊，請參 [閱動態媒體發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
 
 ### 360視訊支援 {#video-support}
 
@@ -88,7 +88,7 @@ ht-degree: 3%
 
 ![在搜尋刻面中查看資產數量，而不篩選搜尋結果](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
-*圖： 在搜尋刻面中查看資產數目，而不篩選搜尋結果。*
+*圖：在搜尋刻面中查看資產數目，而不篩選搜尋結果。*
 
 ## 可用性增強功能 {#usability-enhancement}
 
@@ -96,13 +96,13 @@ ht-degree: 3%
 
 ![使用「全選」選項，只要按一下，即可選取所有載入的資產。](assets/select-all-in-aem-assets.gif)
 
-*圖： 使用「全選」選項，只要按一下，即可選取所有載入的資產。*
+*圖：使用「全選」選項，只要按一下，即可選取所有載入的資產。*
 
 ## 中繼資料增強功能 {#metadata-enhancements}
 
-[!DNL Assets] 可讓您為資產資料夾建立中繼資料結構，以定義資料夾屬性頁面中顯示的配置和中繼資料。 您現在可以將資料夾元資料架構分配給現有資料夾或建立新資料夾。 如需詳細資訊，請參閱資 [料夾中繼資料結構](/help/assets/folder-metadata-schema.md)。
+[!DNL Assets] 可讓您為資產資料夾建立中繼資料結構，以定義資料夾屬性頁面中顯示的配置和中繼資料。 您現在可以將資料夾元資料架構分配給現有資料夾或建立新資料夾。 如需詳細資訊，請參閱資 [料夾中繼資料結構](/help/assets/metadata-config.md#folder-metadata-schema)。
 
-指定階層式中繼資料時，可在執行時期從JSON檔案載入選項，例如，而不需在表單中手動輸入。 如需詳細資訊，請參 [閱階層式中繼資料](/help/assets/cascading-metadata.md)。
+指定階層式中繼資料時，可在執行時期從JSON檔案載入選項，例如，而不需在表單中手動輸入。 如需詳細資訊，請參閱 [階層式中繼資料](/help/assets/metadata-schemas.md#cascading-metadata)。
 
 ## 報告增強功能 {#reporting-enhancements}
 
