@@ -1,11 +1,11 @@
 ---
 title: '中繼資料結構，以定義中的中繼資料屬性頁面配置 [!DNL Adobe Experience Manager Assets]。 '
-description: 中繼資料結構定義屬性頁面的版面配置，以及資產所顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
+description: 中繼資料結構定義屬性頁面的版面配置，以及為資產顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '3601'
 ht-degree: 7%
 
 ---
@@ -25,11 +25,11 @@ ht-degree: 7%
 
    ![資產屬性的「基本」標籤，其中無法變更資產類型](assets/asset-properties-basic-tab.png)
 
-*圖： 資產屬性上的「基[!UICONTROL 本」標籤]。*
+*圖：資產屬性上的「基[!UICONTROL 本」標籤]。*
 
 若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳 [細資訊，請參閱編輯中繼資料結構](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) 表單。 如果您修改MIME類型的中繼資料結構，資產和所有子類型的屬性頁面配置都會被修改。 例如，在下修改jpeg架構時， `default/image` 僅會修改MIME類型資產的中繼資料配置（資產屬性） `image/jpeg`。 不過，如果您編輯預設結構，您的變更會修改所有類型資產的中繼資料配置。
 
-## 中繼資料結構表單 {#default-metadata-schema-forms}
+## Metadata Schema forms {#default-metadata-schema-forms}
 
 若要檢視表單或範本清單，請在介面中導 [!DNL Experience Manager] 覽至「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中繼資 **[!UICONTROL 料結構]**」。
 
@@ -40,8 +40,8 @@ ht-degree: 7%
 | [!UICONTROL 預設] |  | 資產的基本中繼資料結構表單。 |
 |  | 以下子表單繼承預設表單的 [!UICONTROL 屬性] : |  |
 |  | <ul><li>[!UICONTROL dm_video]</li></ul> | 動態媒體影片的架構表單。 |
-|  | <ul><li>[!UICONTROL 影像]</li></ul> | 具有MIME類型（如和）的映像的 `image/jpeg` 架構表 `image/png`單。 <br> 影 [!UICONTROL 像表單] 包含下列子表單範本： <ul><li> [!UICONTROL jpeg]: 子類型 [!UICONTROL jpeg資產的架構表單]。</li> <li>[!UICONTROL tiff]: 子類型為TIFF的資產的架構表單。</li></ul> |
-|  | <ul><li>[!UICONTROL 應用程式]</li></ul> | 具有MIME類型（如和）的資產的 `application/pdf` 架構表 `application/zip`格。 <br>[!UICONTROL pdf]: 子類型為PDF的資產的架構表單。 |
+|  | <ul><li>[!UICONTROL 影像]</li></ul> | 具有MIME類型（如和）的映像的 `image/jpeg` 架構表 `image/png`單。 <br> 影 [!UICONTROL 像表單] 包含下列子表單範本： <ul><li> [!UICONTROL jpeg]:子類型 [!UICONTROL jpeg資產的架構表單]。</li> <li>[!UICONTROL tiff]:子類型為TIFF的資產的架構表單。</li></ul> |
+|  | <ul><li>[!UICONTROL 應用程式]</li></ul> | 具有MIME類型（如和）的資產的 `application/pdf` 架構表 `application/zip`格。 <br>[!UICONTROL pdf]:子類型為PDF的資產的架構表單。 |
 |  | <ul><li>[!UICONTROL 視訊]</li></ul> | 具有MIME類型（如和）的視訊資產的 `video/avi` 架構表 `video/mp4`格。 |
 | [!UICONTROL 集合] |  | 系列的結構表單。 |
 | [!UICONTROL contentfragment] |  | [內容片段的架構表單](/help/sites-developing/customizing-content-fragments.md)。 |
@@ -74,7 +74,7 @@ ht-degree: 7%
 
    ![「元資料結構編輯器：自定義資產屬性」頁](assets/metadata-schema-editor.png)
 
-   *圖： 「元數[!UICONTROL 據結構表單編輯器」頁]，帶有可用頁籤。*
+   *圖：「元數[!UICONTROL 據結構表單編輯器」頁]，帶有可用頁籤。*
 
 1. 要配置元件，請選擇該元件並在「設定」頁籤中修改 **[!UICONTROL 其屬]** 性。
 
@@ -103,27 +103,27 @@ ht-degree: 7%
 
 要編輯表單上元資料元件的屬性，請按一下該元件以編輯「設定」頁籤中的以下全部或子 **[!UICONTROL 集]** 。
 
-**欄位標籤**: 顯示在資產屬性頁面上的中繼資料屬性名稱。
+**欄位標籤**:顯示在資產屬性頁面上的中繼資料屬性名稱。
 
-**對應至屬性**: 此屬性指定資產節點的相對路徑或名稱，該資產節點保存在CRX儲存庫中。 它以開 `./` 頭表示路徑位於資產的節點下。
+**對應至屬性**:此屬性指定資產節點的相對路徑或名稱，該資產節點保存在CRX儲存庫中。 它以開 `./` 頭表示路徑位於資產的節點下。
 
 以下是此屬性的有效值：
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資產的中繼資料節點，做為屬性 `dc:title`。
 
-* `./jcr:created`: 儲存資產的建立日期和時間。 它是受保護的屬性。 如果您設定這些屬性，Adobe建議您將其標示為「停用編輯」。
+* `./jcr:created`:儲存資產的建立日期和時間。 它是受保護的屬性。 如果您設定這些屬性，Adobe建議您將其標示為「停用編輯」。
 
 為確保元資料架構表單中的元件正確顯示，屬性路徑不應包含任何空格。
 
-* **預留位置**: 使用此屬性可指定與中繼資料屬性相關的預留位置文字。
-* **必要**: 使用此屬性可將中繼資料屬性標示為屬性頁面上的必要屬性。
-* **停用編輯**: 使用此屬性可禁止對屬性頁面上的屬性進行任何編輯。
-* **在唯讀中顯示空白欄位**: 標籤此屬性，即使其沒有值，也可在屬性頁面上顯示中繼資料屬性。 預設情況下，當中繼資料屬性沒有值時，該屬性不會列在屬性頁面上。
-* **顯示順序清單**: 使用此屬性可顯示選擇的有序清單。
-* **選擇**: 使用此屬性可指定清單中的選擇。
-* **說明** : 使用此屬性可為中繼資料元件新增簡短說明。
-* **類別**: 屬性與關聯的對象類。
-* **刪除**: 按一下 [!UICONTROL 刪除] ，從架構表單中刪除元件。
+* **預留位置**:使用此屬性可指定與中繼資料屬性相關的預留位置文字。
+* **必要**:使用此屬性可將中繼資料屬性標示為屬性頁面上的必要屬性。
+* **停用編輯**:使用此屬性可禁止對屬性頁面上的屬性進行任何編輯。
+* **在唯讀中顯示空白欄位**:標籤此屬性，即使其沒有值，也可在屬性頁面上顯示中繼資料屬性。 預設情況下，當中繼資料屬性沒有值時，該屬性不會列在屬性頁面上。
+* **顯示順序清單**:使用此屬性可顯示選擇的有序清單。
+* **選擇**:使用此屬性可指定清單中的選擇。
+* **說明** :使用此屬性可為中繼資料元件新增簡短說明。
+* **類別**:屬性與關聯的對象類。
+* **刪除**:按一下 [!UICONTROL 刪除] ，從架構表單中刪除元件。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ ht-degree: 7%
 
 ![上下文中繼資料清單上選取的標籤會顯示在資產屬性頁面上](assets/contextual-metadata-asset-properties.png)
 
-*圖： 資產屬性頁面中的內容相關中繼資料。*
+*圖：資產屬性頁面中的內容相關中繼資料。*
 
 ### 在JSON檔案中指定屬性 {#specify-properties-in-json-file}
 
@@ -157,6 +157,114 @@ ht-degree: 7%
 
 ![使用中繼資料結構編輯器新增或刪除標籤](assets/metadata-schema-form-new-tab.png)
 
+## 階層式中繼資料 {#cascading-metadata}
+
+在擷取資產的中繼資料資訊時，使用者會在各種可用欄位中提供資訊。 您可以顯示特定的中繼資料欄位或欄位值，這些欄位值取決於在其他欄位中選取的選項。 這種元資料的條件顯示稱為級聯元資料。 換言之，您可以在特定中繼資料欄位／值與一或多個欄位及／或其值之間建立相依關係。
+
+使用中繼資料結構來定義顯示階層式中繼資料的規則。 例如，如果中繼資料結構包含資產類型欄位，您可以根據使用者選擇的資產類型定義要顯示的相關欄位集。
+
+>[!CAUTION]
+>
+>內容片段不支援階層式中繼資料。
+
+以下是您可定義階層式中繼資料的一些使用案例：
+
+* 在需要使用者位置的地方，根據使用者的國家／地區和州選擇顯示相關城市名稱。
+* 根據使用者對產品類別的選擇，將相關品牌名稱載入清單中。
+* 根據在另一個欄位中指定的值，切換特定欄位的可見性。 例如，如果用戶希望以不同的地址交付發運，則顯示單獨的發運地址欄位。
+* 根據在另一個欄位中指定的值，指定欄位為必填欄位。
+* 根據在另一個欄位中指定的值，變更特定欄位顯示的選項。
+* 根據其他欄位中指定的值，在特定欄位中設定預設中繼資料值。
+
+### 在 [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
+
+請考慮您要根據選取的資產類型顯示階層式中繼資料的藍本。 部分範例
+
+* 對於視訊，請顯示適用欄位，例如格式、轉碼器、持續時間等。
+* 對於Word或PDF檔案，顯示欄位，例如頁數、作者等。
+
+不論選擇的資產類型為何，請將版權資訊顯示為必填欄位。
+
+1. 在介 [!DNL Experience Manager] 面中，前往「工 **[!UICONTROL 具]** >資 **[!UICONTROL 產]** >中 **[!UICONTROL 繼資料結構]**」。
+1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
+
+   ![select_form](assets/select_form.png)
+
+1. （可選）在中繼資料結構編輯器中，建立新欄位以條件化。 在「設定」索引標籤中指定名稱 **[!UICONTROL 和屬]** 性路徑。
+
+   若要建立新的標籤，請按一 `+` 下以新增標籤，然後新增中繼資料欄位。
+
+   ![add_tab](assets/add_tab.png)
+
+1. 新增資產類型的下拉式欄位。 在「設定」索引標籤中指定名稱 **[!UICONTROL 和屬]** 性路徑。 新增可選說明。
+
+   ![asset_type_field](assets/asset_type_field.png)
+
+1. 鍵值配對是提供給表單使用者的選項。 您可以手動或從JSON檔案提供金鑰值配對。
+
+   * 若要手動指定值，請選取「手動 **[!UICONTROL 新增]**」，然後按一 **[!UICONTROL 下「新增選擇]** 」並指定選項文字和值。 例如，指定「視訊」、「PDF」、「Word」和「影像」資產類型。
+
+   * 若要動態擷取JSON檔案中的值，請選取「 **[!UICONTROL 透過JSON路徑新增]** 」並提供JSON檔案的路徑。 [!DNL Experience Manager] 當表單顯示給用戶時，即時讀取鍵值對。
+
+   這兩種選項互斥。 您無法從JSON檔案匯入選項並手動編輯。
+
+   ![add_choice](assets/add_choice.png)
+
+   >[!NOTE]
+   >
+   >當您新增JSON檔案時，索引鍵值配對不會顯示在中繼資料結構描述編輯器中，但可在發佈的表單中使用。
+
+   >[!NOTE]
+   >
+   >添加選項時，如果按一下「下拉清單」欄位，則介面會扭曲，並且選項的刪除選項將停止工作。 儲存變更前，請勿按一下下拉式清單。 如果您遇到此問題，請儲存結構並再次開啟結構以繼續編輯。
+
+1. （可選）新增其他必填欄位。 例如，資產類型視訊的格式、codec和持續時間。
+
+   同樣地，為其他資產類型新增相依欄位。 例如，新增欄位頁數和檔案資產的作者，例如PDF和Word檔案。
+
+   ![video_dependent_fields](assets/video_dependent_fields.png)
+
+1. 要在資產類型欄位和其他欄位之間建立相關性，請選擇相關欄位並開啟「規 **[!UICONTROL 則]** 」頁籤。
+
+   ![select_dependentfield](assets/select_dependentfield.png)
+
+1. Under **[!UICONTROL Requirement]**, choose the **[!UICONTROL Required, based on new rule]** option.
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。Click **[!UICONTROL Done]** to save the changes.
+
+   ![define_rule](assets/define_rule.png)
+
+   >[!NOTE]
+   >
+   >含有手動預先定義值的下拉式清單可與規則搭配使用。 具有已設定JSON路徑的下拉式選單無法與使用預先定義值來套用條件的規則搭配使用。 如果值是在執行時期從JSON載入，則無法套用預先定義的規則。
+
+1. 在「可 **[!UICONTROL 見性]**」下，選擇「可 **[!UICONTROL 見」，根據新規則選項]** 。
+
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。Click **[!UICONTROL Done]** to save the changes.
+
+   ![define_visibilityrule](assets/define_visibilityrule.png)
+
+   >[!NOTE]
+   >
+   >按一下空白（或值以外的任何位置）會重設值。 如果發生此情況，請重新選取值。
+
+   >[!NOTE]
+   >
+   >您可以套用 **[!UICONTROL 「需求]** 」條件 **[!UICONTROL 和「可見性]** 」條件，它們彼此獨立。
+
+1. 同樣地，在「資產類型」欄位中的「視訊」值與其他欄位（例如「轉碼器」和「持續時間」）之間建立相依關係。
+1. 在「資產類型」欄位和「頁數」和「作者」欄位中，重複這些步驟以建立檔案資產(PDF和Word [!UICONTROL )之間的相依性]。
+1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。將中繼資料結構套用至資料夾。
+
+1. 導覽至您套用中繼資料結構的資料夾，並開啟資產的屬性頁面。 根據您在「資產類型」欄位中的選擇，會顯示相關的階層式中繼資料欄位。
+
+   ![視訊資產的階層式中繼資料](assets/video_asset.png)
+
+   *圖：視訊的階層式中繼資料。*
+
+   ![檔案資產的階層式中繼資料](assets/doc_type_fields.png)
+
+   *圖：檔案的階層式中繼資料。*
+
 ## 刪除中繼資料結構表單 {#delete-metadata-schema-forms}
 
 [!DNL Experience Manager] 可讓您僅刪除自訂結構描述表單。 它不允許您刪除預設模式表單／模板。 不過，您可以刪除這些表單中的任何自訂變更。
@@ -166,7 +274,7 @@ ht-degree: 7%
 >[!NOTE]
 >
 >* 刪除對預設表單的自定義更改後，關閉的鎖 ![在表單](assets/do-not-localize/lock_closed_icon.svg) 之前重新顯示。 它表示表單已回復為預設狀態。
->* 您不能刪除中的預設元資料架構表 [!DNL Assets]單。
+>* 您無法刪除中的預設元資料架構表 [!DNL Assets]單。
 
 
 ## MIME類型的架構表單 {#schema-forms-for-mime-types}
@@ -229,7 +337,7 @@ ht-degree: 7%
 
    ![添加到元資料結構表單編輯器的文本欄位](assets/text-field-metadata-schema-editor.png)
 
-   *圖： 已新增文字欄位至中繼資料結構表單編輯器。*
+   *圖：已新增文字欄位至中繼資料結構表單編輯器。*
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。已修改的表單列在「元資料結構表 **[!UICONTROL 單」頁中]** 。
 1. 按一 **[!UICONTROL 下工具列中的「套用至資料夾」]** ，將自訂中繼資料套用至資料夾。
@@ -257,7 +365,7 @@ ht-degree: 7%
 
    ![在元資料結構表單編輯器中選擇「規則」頁籤中的「必需」，將強制欄位添加到元資料表單](assets/mandatory-field-metadata-schema-editor.png)
 
-   *圖： 中繼資料結構表單編輯器中的必填欄位。*
+   *圖：中繼資料結構表單編輯器中的必填欄位。*
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。已修改的表單列在「元資料結構表 **[!UICONTROL 單」頁中]** 。 選取表單，然後按一 **[!UICONTROL 下工具列中的「套用至資料夾」]** ，將自訂中繼資料套用至資料夾。
 
