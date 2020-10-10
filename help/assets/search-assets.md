@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c94220ca6e31716b6de4dac99dfb98ac1ba1faff
+source-git-commit: 421f18bef4b0dbcad74e91316eead70036c9750e
 workflow-type: tm+mt
 source-wordcount: '5955'
 ht-degree: 5%
@@ -436,7 +436,7 @@ ht-degree: 5%
 
 您可大量更新多個資產的常用中繼資料欄位。 從搜尋結果中，選取一或多個資產。 按一 **[!UICONTROL 下工具列]** 中的「屬性」，並視需要更新中繼資料。 完成 **[!UICONTROL 時，按一下「儲存]** 」並關閉。 會覆寫更新欄位中先前存在的中繼資料。
 
-對於單一資料夾或系列中可用的資產，不需要使用搜尋功能，就 [能更輕鬆地大量更新中繼](/help/assets/managing-multiple-assets.md) 資料。 對於跨資料夾可用或符合一般准則的資產，透過搜尋大量更新中繼資料會更快速。
+對於單一資料夾或系列中可用的資產，不需要使用搜尋功能，就 [能更輕鬆地大量更新中繼](/help/assets/metadata.md) 資料。 對於跨資料夾可用或符合一般准則的資產，透過搜尋大量更新中繼資料會更快速。
 
 ### 智慧型系列 {#collections-1}
 
