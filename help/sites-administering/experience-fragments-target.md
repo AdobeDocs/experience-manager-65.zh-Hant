@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 410858ee7d1b8022070445937731644724a90155
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 0%
 >6.5.3.0
 >
 >* **現在可以選取Externalizer** Domains。
+   >  **注意：** 「外部化器網域」僅與傳送至Target之「體驗片段」的內容相關，而與中繼資料（例如「檢視選件內容」）無關。
 >
 >
 6.5.2.0:
@@ -136,7 +137,11 @@ AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe
 
    >[!CAUTION]
    >
-   >外部化器網域為選擇性。 當您想要匯出的內容指向特定發佈網域時，會設定AEM外 *部* 式。 如需詳細資訊，請 [參閱「設定AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)」。
+   >外部化器網域為選擇性。
+   >
+   > 當您想要匯出的內容指向特定發佈網域時，會設定AEM外 *部* 式。 如需詳細資訊，請 [參閱「設定AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)」。
+   >
+   > 另請注意，Externalizer網域僅與傳送至Target之體驗片段的內容相關，而與中繼資料（例如檢視選件內容）無關。
 
    例如，對於資料夾：
 
