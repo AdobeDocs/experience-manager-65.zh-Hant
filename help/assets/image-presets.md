@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 13%
+source-wordcount: '325'
+ht-degree: 12%
 
 ---
 
@@ -29,6 +29,10 @@ ht-degree: 13%
 >智慧型影像功能可與您現有的影像預設集搭配使用，並在傳送時的最後一毫秒使用智慧功能，根據瀏覽器或網路連線速度進一步降低影像檔案大小。 如需詳 [細資訊](imaging-faq.md) ，請參閱智慧型影像。
 
 您可以隨時預覽影像，將影像預設集套用至影像。
+
+>[!NOTE]
+>
+>在動態媒體- Scene7模式中，影像預設集僅支援影像資產。
 
 **套用動態媒體影像預設集**
 
