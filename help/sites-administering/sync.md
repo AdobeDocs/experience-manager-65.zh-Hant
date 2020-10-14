@@ -1,8 +1,8 @@
 ---
 title: 用戶同步
 seo-title: 用戶同步
-description: 瞭解AEM中的使用者同步化。
-seo-description: 瞭解AEM中的使用者同步化。
+description: 瞭解AEM中的使用者同步。
+seo-description: 瞭解AEM中的使用者同步。
 uuid: 0a519daf-21b7-4adc-b419-eeb8c404c54f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
+source-git-commit: 8ed7409740cdd3e45fad006dc6e470a06acc60fe
+workflow-type: tm+mt
+source-wordcount: '2436'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 
 在一個發佈實例上進行的註冊和修改必須與其他發佈實例同步，以便它們能夠訪問相同的用戶資料。
 
-自AEM 6.1起，當啟用使用者同步時，使用者資料會自動在群組中的發佈例項間同步，而不會在作者上建立。
+自AEM 6.1起，當啟用使用者同步時，使用者資料會自動在群組中的發佈執行個體間同步，而不會在作者上建立。
 
 ## Sling Distribution {#sling-distribution}
 
@@ -123,6 +126,7 @@ source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 >
 >* 指派的預設使用者為 **`admin`**。
 >* 請勿使用 `communities-user-admin user.`
+
 >
 
 
@@ -137,7 +141,7 @@ source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 * 在右窗格中，選擇選 `Access Control` 項卡
 * 選擇 `+` 按鈕以添加ACL條目
 
-   * **負責人**:搜索 *為用戶同步建立的用戶*
+   * **負責人**: *搜索為用戶同步建立的用戶*
    * **類型**: `Allow`
    * **權限**: `jcr:all`
    * **限制** rep:glob: `*/activities/*`
@@ -152,7 +156,7 @@ source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 * [存取權限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)
 * 疑難排解部 [分在響應處理過程中修改操作異常](#modify-operation-exception-during-response-processing)。
 
-### 3.Apache Sling Distribution Transport憑證——以使用者憑證為基礎的DistributionTransportSecretProvider {#adobegraniteencpasswrd}
+### 3.Adobe Granite Distribution —— 加密密碼傳輸機密提供者 {#adobegraniteencpasswrd}
 
 **設定權限**
 
@@ -164,7 +168,7 @@ source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
    * 訪問 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * 定位 `Apache Sling Distribution Transport Credentials - User Credentials based DistributionTransportSecretProvider`
+   * 定位 `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
    * 選取要開啟以進行編輯的現有設定（鉛筆圖示）確認 `property name`: **`socialpubsync-publishUser`**
 
    * 在步驟2中，將使用者名稱 [和密碼設為](#createauthuser) 「發佈時建立的授權使用者」
@@ -190,7 +194,7 @@ source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 
       * 選中複選 `Enabled` 框
       * select `Save`
-   * **對每個發佈例項重複**
+   * **重複**每個發佈例項
 
 
 
