@@ -3,9 +3,9 @@ title: 中繼資料功能的設定和管理。
 description: 配置和管理與元 [!DNL Experience Manager Assets] 資料添加和管理相關的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1953'
 ht-degree: 5%
 
 ---
@@ -109,7 +109,7 @@ To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]**
 1. 按一 **[!UICONTROL 下工具列中的刪除中繼資料]** 設定檔。
 1. 在對話方塊中，按一下「 **[!UICONTROL 刪除]** 」以確認刪除作業。 元資料配置檔案將從清單中刪除。
 
-<!-- TBD: Revisit to find out the correct config. and update these steps.
+<!-- TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
 These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
@@ -269,7 +269,6 @@ To apply a metadata profile globally, follow these steps:
 >[!MORELIKETHIS]
 >
 >* [中繼資料概念與理解](metadata-concepts.md)。
->* [編輯多個系列的中繼資料屬性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
 >* [編輯多個系列的中繼資料屬性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
 >* [在Experience Manager Assets中匯入和匯出中繼資料](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
 >* [處理中繼資料、影像和視訊的設定檔](processing-profiles.md)。
