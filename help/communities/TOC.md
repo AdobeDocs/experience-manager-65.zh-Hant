@@ -2,21 +2,21 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Communities使用指南
-breadcrumb-title: Communities Guide
-user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
+user-guide-title: AEM 6.5 Communities 使用指南
+breadcrumb-title: Communities 指南
+user-guide-description: 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
 translation-type: tm+mt
 source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 3%
+source-wordcount: '481'
+ht-degree: 7%
 
 ---
 
 
-# Adobe Experience Manager 6.5社群指南 {#communities}
+# Adobe Experience Manager 6.5 Communities Guide {#communities}
 
-+ [社群指南](home.md)
++ [Communities 指南](home.md)
 + Introduction to AEM Communities {#introduction}
    + [社群網站](administer-landing.md)
    + [AEM Communities概觀](overview.md)
@@ -36,7 +36,7 @@ ht-degree: 3%
    + [升級至AEM 6.5 Communities](upgrade.md)
    + [推薦的社區拓撲](topologies.md)
    + [配置Dispatcher for Communities](dispatcher.md)
-+ Administering {#administer}
++ 管理 {#administer}
    + [AEM Communities中的使用者與UGC管理服務](user-ugc-management-service.md)
    + [社群網站](administer-landing.md)
    + [Communities Console](consoles.md)
