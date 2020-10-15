@@ -3,9 +3,9 @@ title: 使用「連線資產」在 中共用 DAM 資產 [!DNL Sites]
 description: 使用遠程部署中可用 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 的資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d2bc8c7c52084a415faaf8a5b68be7dc6fc461c4
+source-git-commit: c5972647d23b7e7bfd2fcd791648cb26de1fdb68
 workflow-type: tm+mt
-source-wordcount: '2224'
+source-wordcount: '2247'
 ht-degree: 41%
 
 ---
@@ -194,4 +194,6 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 * If you cannot search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
 * 從遠端Dam擷取的資產可能因一個或多個原因無法發佈在網頁上。 它不存在於遠程伺服器上，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠端DAM移除。 請確定已有適當的權限，並符合先決條件。 重新嘗試將資產新增至頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
-* 如果您無法從本機部署存取遠端DAM部 [!DNL Sites] 署，請確定允許跨網站Cookie。 如果跨網站Cookie遭到封鎖，則兩個部署的 [!DNL Experience Manager] 可能無法驗證。 例如，在 [!DNL Google Chrome] Incognito模式下，可能會阻止第三方Cookie。 在 [!DNL Chrome]中，按一下位址列中的「眼睛」圖示，允許Cookie，或查看 [如何啟用第三方Cookie的說明](https://support.google.com/chrome/answer/95647)。
+* 如果您無法從本機部署存取遠端DAM部 [!DNL Sites] 署，請確定允許跨網站Cookie。 如果跨網站Cookie遭到封鎖，則兩個部署的 [!DNL Experience Manager] 可能無法驗證。 例如，在 [!DNL Google Chrome] Incognito模式下，可能會阻止第三方Cookie。 若要允許瀏覽器 [!DNL Chrome] 中的Cookie，請按一下位址列中的「眼睛」圖示，導覽至「網站無法運作>已封鎖」，選取「遠端DAM URL」，並允許登入Token Cookie。 或者，請參閱 [如何啟用協力廠商Cookie的說明](https://support.google.com/chrome/answer/95647)。
+
+![Chrome在Incognito模式中發生Cookie錯誤](assets/chrome-cookies-incognito-dialog.png)
