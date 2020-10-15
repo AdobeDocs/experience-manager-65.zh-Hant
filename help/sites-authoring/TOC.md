@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5編寫使用指南
-breadcrumb-title: Authoring Guide
-user-guide-description: Learn key concepts for creating content and authoring in AEM.
+user-guide-title: AEM 6.5 Authoring 使用指南
+breadcrumb-title: Authoring 指南
+user-guide-description: 了解在 AEM 中建立內容和編寫的重要概念。
 translation-type: tm+mt
 source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 43%
+source-wordcount: '284'
+ht-degree: 48%
 
 ---
 
 
-# AEM 6.5編寫使用指南 {#authoring}
+# AEM 6.5 Authoring 使用指南 {#authoring}
 
 + [編寫使用指南概觀](home.md)
 + AEM編寫的基本工作、工具和概念 {#essentials}
