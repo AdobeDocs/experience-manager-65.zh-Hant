@@ -3,7 +3,7 @@ title: 使用媒體處理常式和工作流程處理資產
 description: 瞭解媒體處理常式以及如何使用工作流程對您的數位資產執行工作。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 3%
@@ -447,7 +447,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 * 使用ImageMagick和 [Ghostscript進行EPS](https://www.imagemagick.org/script/index.php)[和AI轉換](https://www.ghostscript.com/)。
 * 使用FFmpeg進行FLV視 [訊轉碼](https://ffmpeg.org/)。
 * 使用 [LAME進行MP3編碼](https://lame.sourceforge.io/)。
-* 使用 [SOX處理音訊](http://sox.sourceforge.net/)。
+* 使用 [SOX處理音訊](https://sox.sourceforge.net/)。
 
 >[!NOTE]
 >
