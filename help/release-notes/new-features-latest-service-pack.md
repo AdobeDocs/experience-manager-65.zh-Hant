@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9d549e19a22b06f010b99e5dfff1d4cef05a5bed
+source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
 workflow-type: tm+mt
-source-wordcount: '2518'
+source-wordcount: '2561'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 ### 在用戶端預先填寫最適化表格 {#prefill-merge-data-at-client}
 
 當您預先填寫最適化表格時，伺服 [!DNL Experience Manager Forms] 器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
-您現在可以配置服 [!DNL Experience Manager Forms] 務器，以便在客戶端而不是伺服器上執行資料合併操作。 它可大幅縮短預先填寫和轉換最適化表單的時間。
+您現在可以設定伺 [!DNL Experience Manager Forms] 服器， [在用戶端（而非伺服器）執行資料合併動作](../../help/forms/using/prepopulate-adaptive-form-fields.md) 。 它可大幅縮短預先填寫和轉換最適化表單的時間。
 
 ### 在具有雙向SSL實作的伺服器上，與REST風格的API整合表單資料模型 {#fdm-integration-rest-apis-two-way-ssl}
 
@@ -87,7 +87,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 如果AcroForm包含「文 [!DNL Adobe Sign] 字標籤」，這些欄位現在會在使用轉換的 [!DNL Adobe Sign] 最適化表單中辨識並呈現為欄位 [!DNL Automated Forms Conversion service]。 簽署者可在簽署最適化表單時填寫這些欄位。
 
-### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colored-PDF-forms}
 
 您可以使 [!DNL Automated Forms Conversion service] 用將彩色PDF表單轉換為最適化表單。
 
@@ -97,7 +97,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 ### 增強的轉譯自適應表單頁快取功能 {#enhanced-caching-translated-adaptive-forms}
 
-您現在可以指定地區設定為選取器，而非URL引數。 它可協助快取轉譯的最適化表單 [!DNL Experience Manager Dispatcher]。
+您現在可以在 [最適化表單URL中指定地區設定為選擇器，而非在最適化表單URL中指定引數](../../help/forms/using/supporting-new-language-localization.md)。 它可協助快取轉譯的最適化表單 [!DNL Experience Manager Dispatcher]。 在舊版中無法快取轉換的最適化表單。 如需在最適化表單URL中設定使用地區設定做為選擇器的快取的詳細資訊，請參 [閱在dispatcher中設定最適化表單快取](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
 ### 將表單資料模型服務的輸出保存到變數 {#save-fdm-service-to-variable}
 
@@ -105,7 +105,9 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 ### 為檔案附件元件附加多個檔案 {#attach-multiple-files}
 
-您現在可以將多個檔案附加到最適化表 [!UICONTROL 單的「檔案附件] 」元件。
+您現在可以 [將多個檔案附加到](../../help/forms/using/introduction-forms-authoring.md)[!UICONTROL 最適化表單的「檔案附件] 」元件。
+
+
 
 ## 舊版Experience Manager 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
 
@@ -296,7 +298,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 您可以與其他使用者共用您的收件匣項目。 當其他使用者存取您的「收件匣」項目時，使用者就可以對共用項目宣告並採取適當動作。 同樣地，您也可以請求其他使用者存取「收件匣」項目。 請參 [閱共用並請求訪問用戶的收件箱項目](../forms/using/configure-shared-queues-osgi.md)。
 
-#### 為Experience Manager Forms使用者(6.5.3.0)的「收件匣」項目設定不在辦公室的設定 {#configure-out-of-office}
+#### 為Experience Manager Forms使用者(6.5.3.0)的「收件匣」項目設定離職設定 {#configure-out-of-office}
 
 如果您計畫離開辦公室，您可以指定該期間指派給您的項目會發生什麼情況。
 您可以選擇指定開始日期和時間，以及結束日期和時間，讓您的離職設定生效。 您可以設定預設人員，將您的所有書籍項目傳送至該人員。 請參 [閱「設定不在辦公室」設定](../forms/using/configure-out-of-office-settings.md)。
