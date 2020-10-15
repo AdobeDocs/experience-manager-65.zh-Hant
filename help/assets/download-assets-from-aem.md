@@ -3,9 +3,9 @@ title: 下載資產
 description: 瞭解如何從指令下 [!DNL Adobe Experience Manager] 載資產，以啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '866'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 3%
 
    ![從Experience Manager Assets下載資產時的可用選項](/help/assets/assets/asset-download1.png)
 
-   *圖：下載對話框選項。*
+   *圖：下載對話方塊中提供的選項。*
 
 1. 在「下載」對話方塊中，選取您想要的下載選項。
 
@@ -73,6 +73,7 @@ ht-degree: 3%
 
 >[!MORELIKETHIS]
 >
+>* [使用品牌入口網站下載資產](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [下載受DRM保護的資產](drm.md)。
 >* [在Win或Mac案頭上使用Experience Manager案頭應用程式下載資產](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)。
 >* [從支援的Adobe Creative Cloud應用程式中，使用Adobe Assets Link下載資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html)。
