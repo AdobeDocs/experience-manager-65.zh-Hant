@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: fa3d5923784a8d89e2b440412d2b88790de3e39e
 workflow-type: tm+mt
-source-wordcount: '2781'
+source-wordcount: '2663'
 ht-degree: 2%
 
 ---
@@ -277,10 +277,6 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
    **生成記錄文檔** ：選擇此選項可將XDP檔案用作定義記錄文檔的樣式和外觀的基本模板。 選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
 
-   **[!UICONTROL 選擇此選項可將XDP檔案用作定義記錄文檔的樣式和外觀的基本模板。 選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。]**
-
-   **選擇表單模板作為基本模板以生成記錄文檔** 。選擇此選項可將XDP檔案用作基本模板以定義記錄文檔的樣式和外觀。 選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
-
    >[!NOTE]
    >
    >在下列情況下，確保用於建立XFA表單的自適應表單和模式（資料模式）的模式相同：
@@ -378,10 +374,8 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 在處理適應性表單的記錄檔案時，請記住下列考量與限制。
 
-* 記錄範本檔案不支援RTF。 因此，靜態自適應格式或最終用戶填寫的資訊中的任何富文本都顯示為記錄文檔中的純文字檔案。
+* 記錄範本檔案不支援豐富式文字。 因此，靜態自適應格式或最終用戶填寫的資訊中的任何富文本都顯示為記錄文檔中的純文字檔案。
 * 最適化表單中的檔案片段不會出現在記錄檔案中。 不過，支援最適化表單片段。
-* 記錄檔案僅用於列印用途。
-* 不支援在為基於XML Schema的自適應表單生成的記錄文檔中的內容綁定。
 * 不支援在為基於XML Schema的自適應表單生成的記錄文檔中的內容綁定。
 * 當用戶請求呈現記錄文檔時，會根據地區設定的要求建立記錄文檔的本地化版本。 記錄文檔的定位與適應性表單的定位同時發生。 如需記錄檔案與最適化表單本地化的詳細資訊，請參閱「使用 [AEM轉換工作流程來本地化最適化表單與記錄檔案」](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
 
