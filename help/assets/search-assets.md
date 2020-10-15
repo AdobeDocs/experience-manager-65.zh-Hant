@@ -4,15 +4,15 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 421f18bef4b0dbcad74e91316eead70036c9750e
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '5955'
+source-wordcount: '5968'
 ht-degree: 5%
 
 ---
 
 
-# 在 [!DNL Adobe Experience Manager] {#search-assets-in-aem}
+# 在 [!DNL Adobe Experience Manager] {#assets-search-in-aem}
 
 [!DNL Adobe Experience Manager Assets] 提供強穩的資產搜尋方法，協助您提高內容速度。 您的團隊使用現成可用的功能和自訂方法，提供順暢、智慧的搜尋體驗，縮短上市時間。 搜尋資產是數位資產管理系統的核心使用，不論是供創意人員進一步使用、由商業使用者和行銷人員強穩管理資產，或由DAM管理員管理。 簡單、進階和自訂的搜尋功能，您可透過使用者介面或其 [!DNL Assets] 他應用程式和介面來執行，以協助您完成這些使用案例。
 
@@ -43,7 +43,7 @@ ht-degree: 5%
 
 ![瞭解Experience Manager Assets搜尋結果介面](assets/aem_search_results.png)
 
-*圖：瞭解[!DNL Experience Manager Assets]搜尋結果介面。*
+*圖：瞭解 [!DNL Experience Manager Assets] 搜尋結果介面。*
 
 **答：** 將搜尋儲存為智慧型系列。 **B.** 篩選或謂語，以縮小搜尋結果。 **C.** Display files, folders, or both. **D.** 按一下「篩選器」以開啟或關閉左側邊欄。**E.** 搜尋位置為 DAM。**F.** Omnisearch欄位，包含使用者提供的搜尋關鍵字。 **G.** 選取載入的搜尋結果。 **H.** 顯示的搜尋結果總數。 **I.** 關閉搜 **尋J.** 在卡片檢視和清單檢視之間切換。
 
@@ -178,13 +178,13 @@ ht-degree: 5%
 | 影像高度 | 高度：下限。上界 |
 | 人員 | 人：John |
 
-屬性、 `path`、 `limit`和不 `size`能與任 `orderby` 何其 *他屬性* 「或」連接。
+屬性、 `path`、 `limit`、和不能 `size`與任何其他屬性 `orderby``OR` 搭配使用運算子來組合。
 
 使用者產生屬性的關鍵字是屬性編輯器中的小寫欄位標籤，並移除空格。
 
 以下是複雜查詢的搜尋格式範例：
 
-* 若要顯示具有多個刻面欄位的所有資產(例如：title=John Doe and creator tool = Adobe Photoshop): `tiltle:"John Doe" creatortool:Adobe*`
+* 若要顯示具有多個刻面欄位的所有資產(例如：title=John Doe and creator tool = Adobe Photoshop): `title:"John Doe" creatortool:Adobe*`
 * 若要在Facet值不是單字而是句子時顯示所有資產(例如：title=Scott Reynolds): `title:"Scott Reynolds"`
 * 若要顯示具有單一屬性多個值的資產(例如：title=Scott Reynolds或John Doe): `title:"Scott Reynolds" OR "John Doe"`
 * 若要顯示屬性值以特定字串開頭的資產(例如：標題是Scott Reynolds): `title:Scott*`
@@ -285,6 +285,8 @@ ht-degree: 5%
 
 * **索引**:搜尋結果中只會傳回已建立索引的中繼資料和資產。 為了獲得更好的覆蓋面和效能，請確保正確編製索引並遵循最佳做法。 請參 [閱索引](#searchindex)。
 
+* 若要從搜尋結果中排除特定資產，請使 `excludedPath` 用Lucene索引中的屬性。
+
 ## 一些範例說明搜尋 {#samples}
 
 在關鍵字周圍使用雙引號，以尋找包含使用者指定之確切順序之確切片語的資產。
@@ -328,7 +330,7 @@ ht-degree: 5%
 
 資產發現需要建立DAM內容的索引，包括中繼資料。 更快速且精確的資產發現有賴於最佳化索引和適當的組態。 請參 [閱搜尋索引](/help/assets/performance-tuning-guidelines.md#search-indexes)、 [oak查詢和索引](/help/sites-deploying/queries-and-indexing.md)，以及 [最佳實務](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
-若要從搜尋結果中排除特定資產，請使 `excludedPath` 用Lucene索引上的屬性。
+若要從搜尋結果中排除特定資產，請使 `excludedPath` 用Lucene索引中的屬性。
 
 ### 視覺化或相似性搜尋 {#configvisualsearch}
 
@@ -374,7 +376,7 @@ ht-degree: 5%
 
 您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
 
-如果文字擷取對您的部署而言太過耗費資源，請考慮停用 [文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
+如果文字擷取對您的部署而言太過耗費資源，請考慮停 [用文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
 ### 自訂謂語以篩選搜尋結果 {#custompredicates}
 
@@ -438,7 +440,7 @@ ht-degree: 5%
 
 對於單一資料夾或系列中可用的資產，不需要使用搜尋功能，就 [能更輕鬆地大量更新中繼](/help/assets/metadata.md) 資料。 對於跨資料夾可用或符合一般准則的資產，透過搜尋大量更新中繼資料會更快速。
 
-### 智慧型系列 {#collections-1}
+### 智慧型系列 {#smart-collections}
 
 系列是一組有序的資產，可包含不同位置的資產，因為系列僅包含這些資產的參考。 系列有下列兩種類型：
 
@@ -463,7 +465,7 @@ ht-degree: 5%
 
 >[!MORELIKETHIS]
 >
->* [Experience Manager搜尋實作指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
+>* [[!DNL Experience Manager] 搜尋實作指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [進階設定可大幅提升搜尋結果](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search-boost.html)
 >* [配置智慧翻譯搜索](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
 
