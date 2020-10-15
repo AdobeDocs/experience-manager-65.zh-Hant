@@ -3,13 +3,13 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Assets 指南
-breadcrumb-title: Assets Guide
-user-guide-description: Create, manage, deliver, and optimize digital assets.
+breadcrumb-title: Assets 指南
+user-guide-description: 建立、管理、提供和最佳化數位資產。
 translation-type: tm+mt
 source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 35%
+source-wordcount: '595'
+ht-degree: 36%
 
 ---
 
