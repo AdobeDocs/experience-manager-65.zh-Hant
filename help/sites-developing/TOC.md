@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5開發使用指南
-breadcrumb-title: Developing Guide
-user-guide-description: This guide covers how to build out your AEM instance.
+user-guide-title: AEM 6.5 Developing 使用指南
+breadcrumb-title: Developing 指南
+user-guide-description: 本指南涵蓋如何建立您的 AEM 執行個體。
 translation-type: tm+mt
 source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 8%
+source-wordcount: '835'
+ht-degree: 11%
 
 ---
 
 
-# AEM 6.5開發使用指南 {#developing}
+# AEM 6.5 Developing 使用指南 {#developing}
 
 + [開發使用指南概觀](home.md)
 + 開發人員簡介{#introduction}
