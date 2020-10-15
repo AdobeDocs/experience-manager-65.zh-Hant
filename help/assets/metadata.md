@@ -3,9 +3,9 @@ title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]�
 description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2423'
 ht-degree: 10%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 10%
 
    ![選取資產的屬性以檢視其中繼資料](assets/asset-metadata.png)
 
-   *圖：在資產屬性頁面上編輯或新[!UICONTROL 增中繼資]料。*
+   *圖：在資產屬性頁面上編輯或新 [!UICONTROL 增中繼資] 料。*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
@@ -68,7 +68,7 @@ ht-degree: 10%
 * 將中繼資料屬性變更為公用值
 * 新增或修改標籤
 
-若要自訂中繼資料屬性頁面，包括新增、修改、刪除中繼資料屬性，請使用架構編輯器。
+若要自訂中繼資料屬性頁面，包括新增、修改、刪除中繼資料屬性，請使用架構 [編輯器](metadata-config.md#folder-metadata-schema)。
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ ht-degree: 10%
 
 您可以重新處理已有現有視訊設定檔的資料夾中的資產，您稍後會加以變更。 請參 [閱編輯資料夾的處理設定檔後，重新處理資產](processing-profiles.md#reprocessing-assets)。
 
-### 從Profiles使用者介面將中繼資料描述檔套用至資料夾 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+### 從Profiles使用者介面將中繼資料描述檔套 [!UICONTROL 用至資料夾] 。 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 請依照下列步驟來套用中繼資料描述檔：
 
@@ -196,7 +196,7 @@ ht-degree: 10%
 1. 選擇要應用於資料夾或多個資料夾的元資料配置檔案。
 1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
-### 從屬性將中繼資料描述檔套用至資料夾 {#applying-metadata-profiles-to-folders-from-properties}
+### 從屬性將中繼資料描述檔套用至資 [!UICONTROL 料夾] {#applying-metadata-profiles-to-folders-from-properties}
 
 1. 在左側導軌中，按一下「 **[!UICONTROL 資產]** 」，然後導覽至您要套用中繼資料描述檔的檔案夾。
 1. 在資料夾上，按一下複選標籤以選擇它，然後按一下「屬 **[!UICONTROL 性」]**。
@@ -205,9 +205,11 @@ ht-degree: 10%
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
-### 全域套用中繼資料設定檔 {#metadata-profile-global}
+<!-- TBD: Commenting as the topic in metadata-config.md is incomplete.
 
-如需詳細資訊，請參 [閱全域套用中繼資料設定檔的設定](/help/assets/metadata-config.md#apply-a-metadata-profile-globally)。
+### Apply metadata profile globally {#metadata-profile-global}
+
+For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
 ### 從資料夾移除中繼資料描述檔 {#removing-a-metadata-profile-from-folders}
 
