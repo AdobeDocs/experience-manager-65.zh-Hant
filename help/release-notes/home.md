@@ -27,8 +27,8 @@ AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、�
 | [Assets 使用手冊](/help/assets/home.md) | 建立、管理、提供和最佳化數位資產。 |
 | [表單使用指南](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
 | [社群使用指南](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [管理指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
-| [編寫指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫內容的概念。 |
+| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
+| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫內容的概念。 |
 | [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM中編寫內容的概念。 |
 | [畫面使用指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數位標牌解決方案，以發佈動態互動式數位體驗。 |
 | [部署使用指南](/help/sites-deploying/home.md) | 本指南會向您展示AEM的基本資訊。 |
