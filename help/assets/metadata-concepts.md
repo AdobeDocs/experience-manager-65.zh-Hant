@@ -3,7 +3,7 @@ title: 瞭解中繼資料概念
 description: 瞭解中繼資料的需求和類型，以便更輕鬆地分類和組織資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
 source-wordcount: '2732'
 ht-degree: 6%
@@ -120,7 +120,7 @@ Exif定義的中繼資料欄位通常具有技術性，在描述性中繼資料�
 * 相簿- [!DNL Adobe Photoshop Album].
 * CQ —— 使用者 [!DNL Experience Manager Assets]。
 * DAM —— 用於 [!DNL Experience Manager Assets]。
-* DEX - [Optima SC描述檔案總管](http://www.optimasc.com/products/dex/index.html) ，是Windows作業系統中中繼資料和檔案管理工具的集合。
+* DEX - [Optima SC描述檔案總管](https://www.optimasc.com/products/dex/index.html) ，是Windows作業系統中中繼資料和檔案管理工具的集合。
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html)。
 * LR - [!DNL Adobe Lightroom].
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro)。
