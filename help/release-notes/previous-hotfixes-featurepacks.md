@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
 workflow-type: tm+mt
-source-wordcount: '11487'
+source-wordcount: '11483'
 ht-degree: 0%
 
 ---
@@ -693,7 +693,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 * 在輪詢資產 [!DNL Experience Manager] 的作業詳細資訊時，會顯示例外(CQ-4283569)。
 
-### 網站 {#sites}
+### 網站
 
 * 如果LiveCopy繼承中斷，即時副本頁面會顯示語言副本連結，而非LiveCopy連結(NPR-30980)。
 * 對於新的Blueprint，如果記錄數超過40，則只會顯示前40個記錄。 Blueprint會為其餘的記錄顯示空白行(NPR-31182)。
@@ -725,7 +725,7 @@ Remove one mention of this fix.
 
 * 在翻譯工作中選擇「到期日期」選項時，會出現兩個日曆彈出式選項(NPR-31270)。
 
-### 平台 {#platform}
+### 平台
 
 * Web控制台中的Mime類型選項無效(NPR-31108)。
 
@@ -745,7 +745,7 @@ Remove one mention of this fix.
 
 * 包 `org.apache.sling.distribution.api` 在配置管理器中隱藏，因此無法用於定制包(NPR-31720)。
 
-### 專案 {#projects}
+### 專案
 
 * 切換日曆視圖無效(NPR-31271)。
 
@@ -854,7 +854,7 @@ Remove one mention of this fix.
 * 修正以確保「資產UI」欄檢視僅顯示租用戶特定內容。
 * 修正可讓樣式accordion變更反映在搜尋結果中。
 
-### 資產 {#assets}
+### 資產
 
 **產品增強功能**
 
@@ -961,7 +961,7 @@ Remove one mention of this fix.
 
 * 從6.3.3.2升級到6.5的實例會導致OSGi配置重複。 NPR-30130:CQ-4274016的修補程式
 
-### Integration {#integration}
+### 整合
 
 * 在重新啟動執行個體之前，自訂內容無法正確顯示在發佈執行個體上。 NPR-30377:CQ-4273706的修補程式
 * 在網站上設定啟動時，程式庫位址會加上斜線(/)，導致每次手動干預。 NPR-30694:CQ-4275501的修補程式
@@ -976,7 +976,7 @@ Remove one mention of this fix.
 
 * 在 `RenderAtClient` Forms OSGi的API中新增「自動」 `PDFFormRenderOptions`[!DNL Experience Manager] 設定。
 
-#### Forms附加套件 {#forms-add-on-package}
+#### Forms附加套件
 
 **後端整合**
 
@@ -1006,7 +1006,7 @@ Remove one mention of this fix.
 
 * 當在瀏覽模式中使用非視覺案頭存取來讀取HTML5表格時，Chrome瀏覽器會在表單設計中的每個可縮放向量圖形(SVG)之前讀取「圖形」。 NPR-30449:CQ-4274732的修補程式
 
-#### Forms JEE安裝程式 {#forms-jee-installer}
+#### Forms JEE安裝程式
 
 **表單——檔案安全性**
 
@@ -1021,7 +1021,7 @@ Remove one mention of this fix.
 * HTMLtoPDF服務在JMX主控台中不會顯示maxReuseCount。 NPR-30134、NPR-30304:CQ-4273763的修補程式
 * 從 [!DNL Experience Manager Forms] Workbench叫用web services，新增或編輯Web Service連線會引發錯誤：ClassNotFoundException org.apache.axis.message.SOAPBodyElement。 NPR-30105:CQ-4273217的修補程式
 
-### 隨附的功能套件 {#feature-packs-included}
+### 隨附的功能套件
 
 >[!NOTE]
 >
