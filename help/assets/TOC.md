@@ -6,10 +6,10 @@ user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、提供和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
+source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 36%
+source-wordcount: '585'
+ht-degree: 37%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 36%
    + [資產 [!DNL Adobe Stock] 中的使用資產](aem-assets-adobe-stock.md)
    + [預覽3D資產](previewing-3d-assets.md)
    + [查看資料夾資產和集合](bulk-approval.md)
+   + [增強型智慧標記](enhanced-smart-tags.md)
    + [時間軸中的活動串流](activity-stream.md)
    + [處理資產](assets-workflow.md)
    + [新增影像地圖](image-maps.md)
@@ -93,11 +94,12 @@ ht-degree: 36%
    + [支援的檔案格式](assets-formats.md)
    + [搜尋 Facet](search-facets.md)
    + [瞭解中繼資料概念](metadata-concepts.md)
-   + [中繼資料功能的設定](metadata-config.md)
+   + [設定中繼資料功能](metadata-config.md)
+   + [中繼資料結構](metadata-schemas.md)
    + [XMP回寫至轉譯](xmp-writeback.md)
    + [資產連結共用](link-sharing.md)
    + [資產報表](asset-reports.md)
-   + [增強型智慧標記](enhanced-smart-tags.md)
+   + [配置Smart Content Service以標籤](config-smart-tagging.md)
    + [處理中繼資料、影像和視訊的設定檔](processing-profiles.md)
    + [「建立和配置資產編輯器」頁](assets-finder-editor.md)
    + [資產規模調整指南](assets-sizing-guide.md)
@@ -117,12 +119,10 @@ ht-degree: 36%
    + [Camera Raw支援](camera-raw.md)
    + [使用Apache Tika偵測資產的MIME類型](detect-asset-mime-type-with-tika.md)
    + [影像轉碼程式庫](imaging-transcoding-library.md)
-   + [中繼資料結構](metadata-schemas.md)
    + [適用於系列、程式碼片段和程式碼片段範本的多租用功能](multi-tenancy.md)
    + [浮水印您的資產](watermarking.md)
    + [資產範本](asset-templates.md)
    + [與共用資料夾的最佳做法 [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
-   + [管理智慧標籤](managing-smart-tags.md)
 + 品牌入口網站 {#brandportal}
    + [配 [!DNL Assets] 置 [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
    + [將資產發佈至 [!DNL Brand Portal]](brand-portal-publish-assets.md)
@@ -141,7 +141,6 @@ ht-degree: 36%
 + Manage Assets {#managing}
    + [管理數位資產](managing-assets-touch-ui.md)
    + [管理集合](managing-collections-touch-ui.md)
-   + [使用智慧型內容服務設定標籤](config-smart-tagging.md)
    + [啟用重複偵測](duplicate-detection.md)
    + [組織數位資產](organize-assets.md)
    + [管理影片資產](managing-video-assets.md)
@@ -158,5 +157,4 @@ ht-degree: 36%
    + [管理複合資產](managing-linked-subassets.md)
    + [相關資產](related-assets.md)
    + [私人資料夾共用](private-folder.md)
-   + [智慧型內容服務的訓練指引](smart-tags-training-guidelines.md)
    + [視訊轉譯](video-renditions.md)
