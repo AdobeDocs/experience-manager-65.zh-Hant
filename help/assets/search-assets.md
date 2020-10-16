@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
 workflow-type: tm+mt
 source-wordcount: '5968'
 ht-degree: 5%
@@ -358,7 +358,7 @@ ht-degree: 5%
 1. 在CRXDE的節 `/oak-index/damAssetLucene` 點中，將屬 `reindex` 性設定為 `true`。 儲存變更。
 1. （可選）如果您有自訂的搜尋表單，請將節 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 點複製到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存變更。
 
-如需相關資訊，請參 [閱瞭解Experience Manager中的智慧標籤](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) , [以及如何管理智慧標籤](/help/assets/managing-smart-tags.md)。
+如需相關資訊，請參 [閱瞭解Experience Manager中的智慧標籤](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) , [以及如何管理智慧標籤](/help/assets/enhanced-smart-tags.md)。
 
 >[!CAUTION]
 >
@@ -376,7 +376,7 @@ ht-degree: 5%
 
 您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
 
-如果文字擷取對您的部署而言太過耗費資源，請考慮停 [用文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
+如果文字擷取對您的部署而言太過耗費資源，請考慮停用 [文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
 ### 自訂謂語以篩選搜尋結果 {#custompredicates}
 
