@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 283802809d665cd979e2f1a4fa969b6ddc491ed6
 workflow-type: tm+mt
-source-wordcount: '5473'
+source-wordcount: '5487'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## AEM/Dynamic Media Classic整合與Dynamic Media {#aem-scene-integration-versus-dynamic-media}
 
-AEM使用者可以選擇兩種解決方案來搭配動態媒體： 將其AEM實例與Dynamic Media Classic整合，或使用整合至AEM的Dynamic Media解決方案。
+AEM使用者可以選擇兩種解決方案來搭配動態媒體：將其AEM實例與Dynamic Media Classic整合，或使用整合至AEM的Dynamic Media解決方案。
 
 使用下列准則來判斷要選擇的解決方案：
 
@@ -53,7 +53,7 @@ AEM使用者可以選擇兩種解決方案來搭配動態媒體： 將其AEM實�
 當您在此解決方案中使用資產時，請執行下列其中一項作業：
 
 * 直接將資產上傳至Dynamic Media Classic，然後透過 **** Dynamic Media Classic內容瀏覽器存取，以製作頁面或
-* 上傳至AEM Assets，然後啟用自動發佈至Dynamic Media Classic; 您可透過 **Assets** 內容瀏覽器存取頁面製作
+* 上傳至AEM Assets，然後啟用自動發佈至Dynamic Media Classic;您可透過 **Assets** 內容瀏覽器存取頁面製作
 
 您用於此整合的元件位於 **Design模式中的Dynamic Media Classic** 元件 [區域。](/help/sites-authoring/author-environment-tools.md#page-modes)
 
@@ -127,7 +127,7 @@ AEM Dynamic Media是直接在AEM平台中統一Dynamic Media Classic功能。
     </tr>
     <tr>
     <td>動態媒體與範本的新功能</td>
-    <td>使用動態媒體進行影像和視訊處理。 在Dynamic Media Classic中編寫影像範本，並使用Dynamic Media Classic內容搜尋器，將範本加入「網站」頁面。</td>
+    <td>使用動態媒體進行影像和視訊處理。 在Dynamic Media Classic中編寫影像範本，並使用Dynamic Media Classic內容搜尋器，將範本加入Sites頁面。</td>
     <td><p>開啟</p> <p>（請參閱步驟3）</p> </td>
     <td><a href="/help/assets/adding-dynamic-media-assets-to-pages.md">開啟</a></td>
     <td><a href="/help/assets/scene7.md#scene-content-browser">開啟</a></td>
@@ -160,12 +160,12 @@ AEM Dynamic Media是直接在AEM平台中統一Dynamic Media Classic功能。
     </tbody>
     </table>
 
-1. (可選； 請參閱使用案例表)-設定 [Dynamic Media雲端設定](/help/assets/config-dynamic.md) , [並啟用Dynamic Media伺服器](/help/assets/config-dynamic.md)。
-1. (可選； 請參閱使用案例表格)-如果您選擇啟用「從資產自動上傳至Dynamic Media Classic」，則需要新增下列項目：
+1. (可選；請參閱使用案例表)-設定 [Dynamic Media雲端設定](/help/assets/config-dynamic.md) , [並啟用Dynamic Media伺服器](/help/assets/config-dynamic.md)。
+1. (可選；請參閱使用案例表格)-如果您選擇啟用「從資產自動上傳至Dynamic Media Classic」，則需要新增下列項目：
 
    1. 設定自動上傳至Dynamic Media Classic。
    1. 在Dam更新 **資產工作流程結束時** ，在所有Dynamic Media工作流程步驟之 *後新增* Dynamic Media Classic上傳步 **** 驟( `https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`
-   1. （可選）依 [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl中的MIME類型限制動態媒體經典資產上傳](http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl)。 此清單中未包含的資產MIME類型將不會上傳至Dynamic Media Classic伺服器。
+   1. （可選）依 [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl中的MIME類型限制Dynamic Media Classic資產上傳](http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl)。 此清單中未包含的資產MIME類型將不會上傳至Dynamic Media Classic伺服器。
    1. （可選）在Dynamic Media Classic設定中設定視訊。 您可以同時啟用動態媒體和動態媒體經典的視訊編碼。 動態轉譯會用於在AEM例項中本機預覽和播放，而Dynamic Media Classic視訊轉譯則會產生並儲存在Dynamic Media Classic伺服器上。 為Dynamic Media和Dynamic Media Classic設定視訊編碼服務時，請將視訊處理設定檔 [套用至](/help/assets/video-profiles.md) Dynamic Media Classic資產資料夾。
    1. （選用）在 [Dynamic Media Classic中設定安全預覽](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)。
 
@@ -216,8 +216,8 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
 若要設定Dynamic Media Classic以與AEM整合，您必須完成下列步驟：
 
-1. [定義雲端設定](#creating-a-cloud-configuration-for-scene) -定義Dynamic Media Classic檔案夾和Assets檔案夾之間的對應。 即使您只想要單向(AEM Assets to Dynamic Media Classic)同步，您仍需要完成此步驟。
-1. [在 **OSGi主控台中啟用Adobe CQ s7dam Dam Listener **](#enabling-the-adobe-cq-scene-dam-listener)- Done。
+1. [定義雲端設定](#creating-a-cloud-configuration-for-scene) -定義Dynamic Media Classic檔案夾和Assets檔案夾之間的對應。 即使您只想要單向(AEM Assets to Dynamic Media Classic)同步化，您仍需要完成此步驟。
+1. [在 **OSGi主控台中啟用Adobe CQ s7dam Dam Listener**](#enabling-the-adobe-cq-scene-dam-listener) - Done  。
 1. 如果您想要AEM資產自動上傳至Dynamic Media Classic，您必須開啟該選項，並將Dynamic Media Classic新增至 [!UICONTROL DAM Update Asset] workflow。 您也可以手動上傳資產。
 1. 將Dynamic Media Classic元件新增至sidekick。 這可讓使用者在其AEM頁面上使用Dynamic Media Classic元件。
 1. [將設定對應至AEM](#enabling-scene-for-wcm) —— 此步驟是檢視您在Dynamic Media Classic中建立的任何視訊預設集的必要步驟。 如果您需要從CQ目標資料夾外部執行資產發佈至Dynamic Media Classic，則此為必要項目。
@@ -303,7 +303,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
 >[!NOTE]
 >
->您可以有多種配置： 一個雲端組態代表Dynamic Media Classic公司的一位使用者。 如果您想要存取其他Dynamic Media Classic公司或使用者，則需要建立多種組態。
+>您可以有多種配置：一個雲端組態代表Dynamic Media Classic公司的一位使用者。 如果您想要存取其他Dynamic Media Classic公司或使用者，則需要建立多種組態。
 
 若要設定AEM以能夠發佈資產至Dynamic Media Classic:
 
@@ -323,7 +323,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
 1. 輸入Dynamic Media Classic帳戶的電子郵件地址、密碼和地區，然後點選「連 **[!UICONTROL 接至Dynamic Media Classic」。]** 您已連線至Dynamic Media Classic伺服器，對話方塊會展開，並提供更多選項。
 
-1. 輸入公 **[!UICONTROL 司名稱和]** 根路徑 **** (這是發佈的伺服器名稱以及您要指定的任何路徑； 如果您不知道已發佈的伺服器名稱，請在Dynamic Media Classic中，前往「設定>應 **[!UICONTROL 用程式設定」]**)。
+1. 輸入公 **[!UICONTROL 司名稱和]** 根路徑 **** (這是發佈的伺服器名稱以及您要指定的任何路徑；如果您不知道已發佈的伺服器名稱，請在Dynamic Media Classic中，前往「設定>應 **[!UICONTROL 用程式設定」]**)。
 
    >[!NOTE]
    >
@@ -335,7 +335,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
    ![chlimage_1-298](assets/chlimage_1-298.png)
 
-1. 按一下 **[!UICONTROL 確定。]** AEM會儲存您的設定。
+1. 按一下&#x200B;**[!UICONTROL 「確定」。]** AEM會儲存您的設定。
 
 >[!NOTE]
 >
@@ -373,7 +373,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
    >[!NOTE]
    >
-   >最佳實務： 大部分資產最多在幾分鐘內收集（例如影像）。 但在某些情況下（例如較大的視訊），逾時值應增加至7200秒（2小時），以容納長的處理時間。 否則，此Dynamic Media Classic上傳工作在JCR中繼資料中 **[!UICONTROL 會標示為UploadFailed]** 。
+   >最佳實務：大部分資產最多在幾分鐘內收集（例如影像）。 但在某些情況下（例如較大的視訊），逾時值應增加至7200秒（2小時），以容納長的處理時間。 否則，此Dynamic Media Classic上傳工作在JCR中繼資料中 **[!UICONTROL 會標示為UploadFailed]** 。
 
 1. 點選「 **[!UICONTROL 儲存」。]**
 
@@ -394,7 +394,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
    >[!NOTE]
    >
-   >如需 [將資產推送至未發佈狀態之Dynamic Media Classic的詳細資訊，請參閱設定推送至Dynamic Media](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) Classic的資產狀態（已發佈／未發佈）。
+   >如需 [將資產推送至Dynamic Media Classic](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) （未發佈）狀態的資訊，請參閱設定推送至Dynamic Media Classic的資產狀態（已發佈／未發佈）。
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
@@ -425,7 +425,7 @@ Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中�
 
 您必須先設定下列項目，才能將資產推送至Dynamic Media Classic而不發佈：
 
-1. 請連絡Dynamic Media Classic客戶服務(s7support@adobe.com)，為您的Dynamic Media Classic帳戶啟用安全預覽。
+1. [使用Admin Console建立支援案例。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 在您的支援案例中，請求您的Dynamic Media Classic帳戶啟用安全預覽。
 1. 請依照指示， [為您的Dynamic Media Classic帳戶設定安全預覽。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
 
 這些步驟與您在Dynamic Media Classic中建立任何安全測試設定時所遵循的步驟相同。
@@ -458,7 +458,7 @@ Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中�
 
    如需 [在公開前測試資產的詳細資訊](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html) ，請參閱Dynamic Media Classic檔案。
 
-   ![chlimage_1-382](assets/chlimage_1-302.png)
+   ![chlimage_1-302](assets/chlimage_1-302.png)
 
 1. 點選「 **[!UICONTROL 確定」。]**
 
