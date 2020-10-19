@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: ee2b13f2fc1f044f119ff54f332844d458663287
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1802'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
    >    
    >    
    >    1. 請轉至https://&#39;[server]:[port]&#39;/system/console/crypto。
-   >    1. 在「純 **[!UICONTROL 文本]** 」欄位中，指定要加密的口令或任何字串，然後按一下「保 **[!UICONTROL 護」]**。
+   >    1. 在「純 **[!UICONTROL 文字]** 」欄位中，指定密碼或任何字串以加密並點選「保 **[!UICONTROL 護」]**。
 
    >    
    >    
@@ -126,13 +126,15 @@ REST風格的Web服務可在Swagger定義檔 [案中使用](https://swagger.io/s
    * 從「Swagger來源」下拉式清單中選取「URL」或「檔案」，並據以指定Swagger定義檔案的Swagger URL，或從本機檔案系統上傳Swagger檔案。
    * 根據Swagger來源輸入，下列欄位會預先填入值：
 
-      * 方案： REST API使用的傳輸通訊協定。 下拉式清單中顯示的方案類型數目取決於Swagger來源中定義的方案。
-      * 主機： 提供REST API的主機的域名或IP地址。 這是一個強制欄位。
-      * 基本路徑： 所有API路徑的URL首碼。 此欄位為選擇性欄位。\
+      * 方案：REST API使用的傳輸通訊協定。 下拉式清單中顯示的方案類型數目取決於Swagger來源中定義的方案。
+      * 主機：提供REST API的主機的域名或IP地址。 這是一個強制欄位。
+      * 基本路徑：所有API路徑的URL首碼。 此欄位為選擇性欄位。\
          如有必要，請編輯這些欄位的預先填入值。
-   * 選擇驗證類型— 無、OAuth2.0、基本驗證、API金鑰或自訂驗證— 訪問REST風格的服務，並相應地提供驗證的詳細資訊。
+   * 選擇驗證類型— 無、OAuth2.0、基本驗證、API金鑰、自訂驗證或相互驗證— 訪問REST風格的服務，並相應地提供驗證的詳細資訊。
 
    如果您選 **[!UICONTROL 取API金鑰]** ，則請指定API金鑰的值。 API金鑰可以以請求標題或查詢參數的形式傳送。 從「位置」( **[!UICONTROL Location]** )下拉式清單中選取其中一個選項，並在「參數名稱」(Parameter Name)欄位中指定標題或查詢 **[!UICONTROL 參數的名稱]** 。
+
+   如果您選擇「 **[!UICONTROL 互相驗證]** 」作為驗證類型，請 [參閱「RESTful和SOAP web services的基於證書的相互驗證」](#mutual-authentication)。
 
 1. 點選 **[!UICONTROL 「建立]** 」以建立REST風格服務的雲端設定。
 
@@ -149,10 +151,12 @@ REST風格的Web服務可在Swagger定義檔 [案中使用](https://swagger.io/s
 
    * Web服務的WSDL URL。
    * 服務端點. 在此欄位中指定一個值，以覆蓋WSDL中提及的服務端點。
-   * 選擇驗證類型— 無、OAuth2.0、基本驗證、自訂驗證或X509 Token — 存取SOAP服務，並據以提供驗證的詳細資訊。
+   * 選擇驗證類型— 無、OAuth2.0、基本驗證、自訂驗證、X509 Token或相互驗證— 存取SOAP服務，並據以提供驗證的詳細資訊。
 
-      如果您選取「X509 Token」做為「驗證」類型，請設定X509憑證。 如需詳細資訊，請參 [閱設定憑證](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
+      如果您選 **[!UICONTROL 擇X509 Token]** 作為驗證類型，請設定X509憑證。 如需詳細資訊，請參 [閱設定憑證](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
 在「金鑰別名」欄位中指定X509憑證的 **[!UICONTROL KeyStore別名]** 。 在「到線時間」欄位中，指定驗證要求保持有效的 **[!UICONTROL 時間(秒]** )。 （可選）選擇簽署消息正文或時間戳標題或兩者。
+
+      如果您選擇「 **[!UICONTROL 互相驗證]** 」作為驗證類型，請 [參閱「RESTful和SOAP web services的基於證書的相互驗證」](#mutual-authentication)。
 
 1. 點選 **[!UICONTROL 「建立]** 」以建立SOAP網站服務的雲端設定。
 
@@ -177,6 +181,19 @@ OData服務由其服務根URL標識。 若要在AEM雲端服務中設定OData服
    您必須選擇OAuth 2.0驗證類型，以OData端點作為服務根目錄與Microsoft Dynamics服務連接。
 
 1. 點選 **「建立** 」以建立OData服務的雲端設定。
+
+## 針對RESTful和SOAP web services的憑證式相互驗證 {#mutual-authentication}
+
+當您為表單資料模型啟用相互驗證時，執行表單資料模型的資料來源和AEM Server都會先驗證彼此的身分，然後再共用任何資料。 您可以對基於REST和SOAP的連接（資料源）使用相互驗證。 若要在AEM Forms環境上為表單資料模型設定相互驗證：
+
+1. 將私密金鑰（憑證）上傳至伺 [!DNL AEM Forms] 服器。 要上傳私密金鑰：
+   1. 以管理員身 [!DNL AEM Forms] 份登入您的伺服器。
+   1. 導覽至「 **[!UICONTROL 工具]** >安 **[!UICONTROL 全性]** >使 **[!UICONTROL 用者]**」。 選取使用者 `fd-cloudservice` 並點選「 **[!UICONTROL 屬性]**」。
+   1. 開啟「 **[!UICONTROL Keystore]** 」標籤、展開「從 **[!UICONTROL KeyStore檔案新增私密金鑰」選項、上傳KeyStore檔案、指定別名、密碼並點選「]** 送出」 ****。 憑證已上傳。  私鑰別名在證書中提及，在建立證書時設定。
+1. 上傳信任憑證至全域信任商店。 若要上傳憑證：
+   1. 導覽至「 **[!UICONTROL 工具]** >安 **[!UICONTROL 全性]** >信 **[!UICONTROL 任商店」]**。
+   1. 展開「從 **[!UICONTROL CER檔案添加證書]** 」選項，單 **[!UICONTROL 擊「選擇證書檔案」]**，上傳證書，然後按一下「提 **[!UICONTROL 交」]**。
+1. 將 [SOAP](#configure-soap-web-services) 或 [REST風格的Web服務配置為資料源，並選擇](#configure-restful-web-services) Mutual authentication **** （相互驗證）作為驗證類型。 如果您為用戶配置多個自簽名證 `fd-cloudservice` 書，請指定證書的密鑰別名。
 
 ## 後續步驟 {#next-steps}
 
