@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 283802809d665cd979e2f1a4fa969b6ddc491ed6
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1730'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 
 * 針對Chrome、Firefox、Microsoft Edge、Android和Opera等瀏覽器自動轉換為WebP。
 * 針對Safari等瀏覽器，自動轉換為JPEG2000。
-* 針對瀏覽器（例如Internet Explorer 9+）自動轉換為JPEG。
+* 針對Internet Explorer 9+等瀏覽器自動轉換為JPEG。
 * 對於不支援這些格式的瀏覽器，會提供原本要求的影像格式。
 
 如果原始影像大小小於智慧型影像產生的大小，則會提供原始影像。
@@ -115,10 +115,10 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings.]** 查找標有�
 
 ## 為我的帳戶啟用Smart Imaging的過程是什麼？ {#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
-您必須提出使用智慧型影像的要求； 不會自動啟用。
+您必須提出使用智慧型影像的要求；不會自動啟用。
 
-1. 啟動技術支援要求(電子郵件： `s7support@adobe.com`)。
-1. 在您的支援要求中提供下列資訊：
+1. [使用Admin Console建立支援案例。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
+1. 在您的支援案例中提供下列資訊：
 
    1. 主要聯絡人姓名、電子郵件、電話。
    1. 要啟用智慧映像的所有域(即 `images.company.com` 或 `mycompany.scene7.com`)。
@@ -140,7 +140,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings.]** 查找標有�
 
 1. 技術支援將根據提交請求的順序將您添加到Smart Imaging客戶等待清單。
 1. 當Adobe準備好處理您的要求時，支援人員將會聯絡您以協調並設定目標日期。
-1. **可選**: 您可以選擇在Staging中測試智慧型影像，然後Adobe將新功能推展至生產環境。
+1. **可選**:您可以選擇在Staging中測試智慧型影像，然後Adobe將新功能推展至生產環境。
 1. 完成後，支援會通知您。
 1. 為充份提升智慧型影像處理的效能，Adobe建議將「存留時間(TTL)」設定為24小時或更長。 TTL會定義CDN快取資產的時間長度。 要更改此設定，請：
 
@@ -152,7 +152,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings.]** 查找標有�
 請求的處理順序依技術支援部門接收的順序，依等待清單而定。
 
 >[!NOTE]
-啟用智慧型影像需要Adobe清除快取，因此可能需要較長的前置時間。 因此，在任何指定時間，都只能處理少數客戶轉場。
+啟用智慧型影像可能需要較長的前置時間，因為Adobe會清除快取。 因此，在任何指定時間，都只能處理少數客戶轉場。
 
 ## 切換到使用Smart Imaging時有哪些風險？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
