@@ -1,17 +1,17 @@
 ---
-title: 資產指南
+title: Assets 指南
 description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
-user-guide-title: 資產指南
+user-guide-title: Assets 指南
 translation-type: tm+mt
-source-git-commit: e460a23ef4df14ff494d8d1472ab234787f220d7
+source-git-commit: 1fa79a49ce3590fcba63e6e7d1a63586650251d2
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 13%
+source-wordcount: '344'
+ht-degree: 20%
 
 ---
 
 
-# 資產指南
+# Assets 指南
 
 本指南涵蓋所 [!DNL Experience Manager Assets] 有工作，例如如何建立、管理、提供和最佳化數位資產。
 
@@ -22,7 +22,7 @@ ht-degree: 13%
 
 * [Experience Manager快速入門](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Experience Manager 6.5發行說明](/help/release-notes/home.md)
-* [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [近期文件更新](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## [!DNL Experience Manager] 6.5指南
@@ -32,8 +32,8 @@ ht-degree: 13%
 | [發行說明](/help/release-notes/home.md) | 提供最新版本的重要資訊，包括新增的、支援的平台、已過時和已移除的功能，以及已知問題 |
 | [表單使用指南](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
 | [社群使用指南](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [管理指南](/help/sites-administering/home.md) | 瞭解如何管理Experience Manager。 |
-| [編寫指南](/help/sites-authoring/home.md) | 本指南說明在Experience Manager中編寫內容的概念。 |
+| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理Experience Manager。 |
+| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在Experience Manager中編寫內容的概念。 |
 | [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中，在Experience Manager中編寫內容的概念。 |
 | [畫面使用指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數位標牌解決方案，以發佈動態互動式數位體驗。 |
 | [部署使用指南](/help/sites-deploying/home.md) | 本指南將向您展示Experience Manager的基本概念。 |
