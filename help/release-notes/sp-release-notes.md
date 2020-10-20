@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74ab94126383d53dac5f55171266c66c28757969
+source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
 workflow-type: tm+mt
-source-wordcount: '4518'
+source-wordcount: '4530'
 ht-degree: 0%
 
 ---
@@ -39,15 +39,15 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 和的預設選 `test` 項 `aiprocess` 會從Dynamic Media `Thumbnail`的先前版本更新為， `Rasterize` 以確保使用者只需建立縮圖，並略過頁面擷取和關鍵字擷取。
 
-* 在用戶端預先填寫最適化表格。
+* [在用戶端預先填寫最適化表格](../../help/forms/using/prepopulate-adaptive-form-fields.md#prefill-at-client)。
 
-* 在具有雙向SSL實作的伺服器上，與REST風格的API整合，以建立資料模型。
+* [在具有雙向SSL實作的伺服器上，與REST風格的API整合，以建立資料模型](../../help/forms/using/configure-data-sources.md)。
 
-* 增強轉譯的可調式表單頁面快取功能。
+* [增強轉譯的可調式表單頁面快取](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
-* 在自動化表單轉換服務中支援Adobe Sign文字標籤。
+* 在自動 [化表單轉換服務中支援Adobe Sign文字標籤](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。
 
-* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
+* 支援使用 [將彩色表格轉換為可調式表格](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)[!DNL Automated Forms Conversion service]。
 
 * 支援SMB 2和SMB 3協定。
 
@@ -152,13 +152,13 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
    ![頁首中的說明功能表](assets/Help_aem_header.png)
 
-   *圖：[!UICONTROL 在「說明」功能表中]，搜尋[!UICONTROL 說明]。*
+   *圖： [!UICONTROL 在「說明」功能表中] ，搜尋 [!UICONTROL 說明] 。*
 
    * 如果在「模擬為」欄位中 [!UICONTROL 的「使用者] 」選項下輸入錯誤值，且焦點會正確移至文字欄位(NPR-33804)，則會出現錯誤訊息。
 
    ![頁首中的用戶菜單](assets/User_aem_header.png)
 
-   *圖：[!UICONTROL 在頁首的]「使用者[!UICONTROL 」選單中]，模擬為欄位。*
+   *圖： [!UICONTROL 在頁首的] 「使用者 [!UICONTROL 」選單中] ，模擬為欄位。*
 
 * 使用者現在可以使用鍵盤來變更焦點：
 
