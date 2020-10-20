@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 若要在 **Mac OS X上安裝FFmpeg**，請依照下列步驟進行：
 
-1. 請在developer.apple.com/xcode上安裝 [Xcode](hhttps://developer.apple.com/xcode/)。
+1. 請在developer.apple.com/xcode上安裝 [Xcode](https://developer.apple.com/xcode/)。
 1. 請在 [XQuartz安裝](https://www.xquartz.org) ，以 [獲得X11](https://support.apple.com/en-us/HT201341)。
 1. 安裝MacPorts，網址 [為www.macports.org](https://www.macports.org/)。
 1. 在控制台中，執 `sudo port install ffmpeg` 行命令並遵循螢幕上的說明。 確保將執行檔 `FFmpeg` 的路徑添加到系統 `PATH` 變數中。
@@ -78,4 +78,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->升級AEM例項時，不會保留預設現成可用(OOTB)工作流程模型的變更。 Adobe建議您先複製已修改的工作流程模型，再加以編輯。 例如，在編輯 [!UICONTROL DAM Update Asset] model中的「 [!UICONTROL FFmpeg轉碼」步驟之前，請複製OOTB] DAM更新資產模型，以挑選在升級前已存在的視訊描述檔名稱。 然後，您可以覆蓋節 `/apps` 點，讓AEM擷取對OOTB模型的自訂變更。
+>升級AEM例項時，不會保留預設現成可用(OOTB)工作流程模型的變更。 Adobe建議您先複製已修改的工作流程模型，再加以編輯。 例如，在編輯 [!UICONTROL DAM Update Asset] model中的「 [!UICONTROL FFmpeg轉碼」步驟之前，先複製OOTB] DAM更新資產模型，以挑選在升級前已存在的視訊描述檔名稱。 然後，您可以覆蓋節 `/apps` 點，讓AEM擷取對OOTB模型的自訂變更。
