@@ -7,16 +7,16 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 translation-type: tm+mt
-source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
+source-git-commit: 5b5937303dd543195b6c8300e6579a58e03a97d1
 workflow-type: tm+mt
-source-wordcount: '3711'
+source-wordcount: '3710'
 ht-degree: 1%
 
 ---
 
 # Adobe Experience Manager 6.5 Forms 指南 {#forms}
 
-+ [AEM 6.5 Forms 使用指南](home.md)
++ [AEM 6.5表單指南](home.md)
 + 發行說明 {#release-notes-new-features}
    + [發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/release-notes.html#experience-manager-forms)
    + [新功能摘要](using/whats-new.md)
