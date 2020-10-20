@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 149e505eb4dac0d9a56c53036ce1c6b8d16ad0f1
 workflow-type: tm+mt
 source-wordcount: '3065'
 ht-degree: 1%
@@ -136,7 +136,7 @@ AEM提供直覺式使用者介面，可使用提供的工作流程步驟來建�
 >
 >您必須是fd-administrator組的成員，才能建立和管理工作流應用程式。
 
-1. 在您的AEM作者例項上，請前往 ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]**> Manage Workflow Application **[!UICONTROL ，然後點選]****** CreateCreate。
+1. 在您的AEM作者例項上，請前往 ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Manage Workflow Application]** ，然後點選 **** CreateCreate。
 1. 在「建立工作流應用程式」窗口中，為以下欄位提供輸入，然後點選「創 **建**」。 會建立新應用程式，並列在「工作流程應用程式」畫面中。
 
 <table>
@@ -218,7 +218,7 @@ AEM Forms應用程式與AEM Forms伺服器同步，可讓您變更帳戶中的�
 
 管理員（fd-administrators組的成員）可以配置網路資料夾，以在用戶將檔案（如PDF檔案）放在資料夾中時運行預配置的工作流。 工作流完成後，它可以將結果檔案保存到指定的輸出資料夾。 此類資料夾稱為「 [Watched Folder」](../../forms/using/watched-folder-in-aem-forms.md)。 請執行下列程式，以設定受監視的資料夾以啟動工作流程：
 
-1. 在您的AEM作者例項上，前往 ![tools-1](assets/tools-1.png) > **Forms****> Configure Watched Folder。** 將顯示已配置的監視資料夾的清單。
+1. 在您的AEM作者例項上，前往 ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**。 將顯示已配置的監視資料夾的清單。
 1. 點選 **[!UICONTROL 新]**。 隨即顯示欄位清單。 為下列欄位指定值，以設定工作流程的「監看資料夾」:
 
 <table>
