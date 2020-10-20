@@ -11,9 +11,9 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
+source-git-commit: 1718aac3d39662fb35336a4db3e3403641f9529a
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本頁概述AEM 6.5的升級程式。 如果您有已部署至應用程式伺服器的安裝，請參閱應用程 [式伺服器安裝的升級步驟](/help/sites-deploying/app-server-upgrade.md)。
+>本頁概述AEM 6.5的升級程式。如果您有已部署至應用程式伺服器的安裝，請參閱應用程 [式伺服器安裝的升級步驟](/help/sites-deploying/app-server-upgrade.md)。
 
 ## 升級前步驟 {#pre-upgrade-steps}
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## 內容儲存庫遷移 {#content-repository-migration}
 
-如果您要從AEM 6.3升級，則不需要進行此移轉。 對於6.3以上版本，Adobe提供可用來將儲存庫移轉至AEM 6.3中出現的新版Oak Segment Tar的工具。 它是快速啟動軟體包的一部分，對於將使用TarMK的任何升級都是強制性的。 使用MongoMK的環境的升級不需要儲存庫遷移。 如需新區段Tar格式的優點的詳細資訊，請參閱移轉至 [Oak區段Tar常見問答](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)。
+如果您要從AEM 6.3升級，則不需要進行此移轉。對於6.3以上版本，Adobe提供可用來將儲存庫移轉至AEM 6.3中出現的新版Oak Segment Tar的工具。它是快速啟動軟體包的一部分，對於將使用TarMK的任何升級都是強制性的。 使用MongoMK的環境的升級不需要儲存庫遷移。 如需新區段Tar格式的優點的詳細資訊，請參閱移轉至 [Oak區段Tar常見問答](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)。
 
 實際移轉是使用標準AEM快速入門jar檔案來執行，此檔案會使用新的 `-x crx2oak` 選項執行crx2oak工具，以簡化升級並使其更強穩。
 
@@ -118,9 +118,9 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 * `mongo-host` 是MongoDB伺服器IP（例如127.0.0.1）
 
-* `mongo-port` 是MongoDB伺服器埠(例如： （郵編：27017）
+* `mongo-port` 是MongoDB伺服器埠(例如：（郵編：27017）
 
-* `mongo-database-name` 表示資料庫的名稱(例如： aem-author)
+* `mongo-database-name` 表示資料庫的名稱(例如：aem-author)
 
 **您可能還需要為以下情況提供額外的交換機：**
 
@@ -140,7 +140,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 ## 疑難排解移轉問題 {#troubleshooting-migration-issues}
 
-如果您要從6.3升級，請略過本節。 雖然提供的crx2oak設定檔應符合大部份客戶的需求，但有時需要額外的參數。 如果在遷移過程中遇到錯誤，則環境的某些方面可能需要提供額外的配置選項。 如果是，您可能會遇到下列錯誤：
+如果您要從6.3升級，請略過本節。雖然提供的crx2oak設定檔應符合大部份客戶的需求，但有時需要額外的參數。 如果在遷移過程中遇到錯誤，則環境的某些方面可能需要提供額外的配置選項。 如果是，您可能會遇到下列錯誤：
 
 **不會複製查核點，因為未指定外部資料存放區。 這將導致在第一次啟動時對完整儲存庫重新編製索引。 使用—skip-chreckiptor強制遷移，或參閱https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration以取得更多資訊。**
 
@@ -175,6 +175,10 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 ### 確定正確的升級開始命令 {#determining-the-correct-upgrade-start-command}
 
 若要執行升級，請務必使用jar檔案啟動AEM以啟動執行個體。 若要升級至6.5，另請參閱 [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) （懶惰內容移轉）中的其他內容重組和移轉選項，您可使用upgrade命令進行選擇。
+
+>[!IMPORTANT]
+>
+>如果您正在執行Oracle Java 11（或通常8以上的Java版本），則啟動AEM時，需要將其他開關添加到命令行中。 如需詳細資訊，請參 [閱Java 11考量事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)。
 
 請注意，從開始指令碼開始AEM將不會開始升級。 大部分客戶都使用開始指令碼來啟動AEM，並自訂此開始指令碼，以加入環境組態的開關，例如記憶體設定、安全憑證等。 因此，我們建議按照此過程確定正確的升級命令：
 
