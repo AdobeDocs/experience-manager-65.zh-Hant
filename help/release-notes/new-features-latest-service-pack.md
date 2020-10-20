@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
+source-git-commit: 4865d4fb666f58ea8abe9e438ea69e9272961c43
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 ### 使CDN快取內容無效 {#invalidate-cdn-cached-content}
 
-您現在可以使用使用者介面[!DNL  Dynamic Media] ，使內容傳送網路(CDN)快取內容失效。 因此，更新的資產可立即使用，而不需等待快取過期。 您可以透過下列方式使CDN失效：
+您現在可以使用使 [!DNL Dynamic Media] 用者介面來使內容傳送網路(CDN)快取內容失效。 因此，更新的資產可立即使用，而不需等待快取過期。 您可以透過下列方式使CDN失效：
 
 * 建立CDN失效範本：選取資產和表單相關範本型URL
 
