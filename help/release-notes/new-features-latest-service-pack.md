@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4865d4fb666f58ea8abe9e438ea69e9272961c43
+source-git-commit: 750e3729a33718d54dca8b2514468d4a40910d4c
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 2%
@@ -81,7 +81,8 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 ### 在具有雙向SSL實作的伺服器上，與REST風格的API整合表單資料模型 {#fdm-integration-rest-apis-two-way-ssl}
 
-[!DNL Experience Manager Forms] 表單資料模型現在可與在具備雙向SSL的伺服器上的REST風格API整合。
+[!DNL Experience Manager Forms] 表單資料模型現 [在可與在具備雙向SSL的伺服器上的REST風格API整合](../../help/forms/using/configure-data-sources.md)。
+
 
 ### 新增對Automated Forms [!DNL Adobe Sign] Conversion Service中文字標籤的支援 {#sign-integration-acroform-afcs}
 
