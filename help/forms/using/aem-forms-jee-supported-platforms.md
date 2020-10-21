@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 23aee6802e625e82d18a205586eb77341b6ef16e
+source-git-commit: d97cc2ad393fc10ff545ae374180426eb1574ba9
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3276'
 ht-degree: 0%
 
 ---
@@ -264,7 +264,7 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
    <td>服務包和重要更新</td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7（內核3.x）（64位）</p> </td>
+   <td><p>Red Hat Enterprise Linux 7（內核3.x）（64位）注</br><b>意：</b> Red Hat Enterprise Linux 6在2020年11月30日進入維護階段並過渡到延長生命週期階段。 Adobe建議使用Red Hat Enterprise Linux 7升級和新安裝。</p> </td>
    <td><p>答：支援</p> </td>
    <td><p>次要版本、累計更新和重要更新</p> </td>
   </tr>
