@@ -4,9 +4,9 @@ seo-title: AEM 6.5表單指南
 description: 本指南涵蓋所有AEM Forms工作，包括如何建立、管理、發佈和更新數位表單。
 seo-description: 涵蓋所有AEM Forms工作，包括如何建立、管理、發佈和更新數位表單。
 translation-type: tm+mt
-source-git-commit: 5b5937303dd543195b6c8300e6579a58e03a97d1
+source-git-commit: d97cc2ad393fc10ff545ae374180426eb1574ba9
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '368'
 ht-degree: 26%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 26%
 * [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
-## AEM 6.5使用指南
+## AEM 6.5指南
 
 | 使用手冊 | 說明 |
 |--- |---|
