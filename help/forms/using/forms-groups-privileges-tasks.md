@@ -11,7 +11,7 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbb99875cc6f3c8810670ffe923756f7c13d4ace
+source-git-commit: 494551d3d886c1ed70d252a28b03cfa9d8e82a6a
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 您可以 [在AEM中](/help/sites-administering/user-group-ac-admin.md#group-administration) ，建立群組 [，並指派原則](/help/sites-administering/user-group-ac-admin.md#user-administration) 和使用者至群組。 這些原則可控制屬於群組的使用者的權限。
 
-在您安裝 [AEM Forms附加套件後](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文提及的群組（例如forms-user和forms-power-user）會自動可供指派。 下表列出使用者可根據群組指派，對OSGi上的AEM Forms執行的工作：
+在您安裝 [AEM Forms附加套件後](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文提及的群組（例如forms-users和forms-power-user）會自動可供指派。 下表列出使用者可根據群組指派，對OSGi上的AEM Forms執行的工作：
 
 <table>
  <tbody>
@@ -32,7 +32,7 @@ ht-degree: 1%
    <td>任務</td> 
   </tr>
   <tr>
-   <td>forms-user <sup>[1]</sup></td> 
+   <td>forms-users <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>建立、預覽、發佈及提交最適化表單</li> 
