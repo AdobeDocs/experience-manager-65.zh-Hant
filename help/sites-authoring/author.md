@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b9cc4df476ab95707284c4255f9cf35f257a1258
+source-git-commit: 18dcbf04bd88f63335ef36e2ec7ea81835e11b51
+workflow-type: tm+mt
+source-wordcount: '544'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +30,7 @@ AEM提供您兩種環境：
 
 這些互動功能可讓您在網站上提供內容——讓您的訪客能夠閱讀。
 
-作者環境提供在實際發佈內容之前建立、更新和檢閱此內容的機制：
+作者環境提供在實際發佈內容之前建立、更新和檢視此內容的機制：
 
 * 作者會建立並審閱內容(這可以是幾種類型；例如頁面、資產、出版物等)
 * 在某個時候，它將發佈到您的網站。
@@ -35,10 +38,6 @@ AEM提供您兩種環境：
 ![chlimage_1-132](assets/chlimage_1-132.png)
 
 在作者環境中，AEM的功能可透過兩個UI使用。 針對發佈環境，您設計的整個介面外觀和感覺都提供給您的使用者。
-
->[!NOTE]
->
->AEM和Dispatcher可用來發佈此AEM檔案。
 
 ### 作者環境 {#author-environment}
 
@@ -59,7 +58,7 @@ AEM提供您兩種環境：
 * 移動、複製或刪除內容頁面、資產等
 * 發佈（或取消發佈）頁面、資產等
 
-此外，還有一些管理工作可協助您管理內容：
+此外，還有管理工作可協助您管理內容：
 
 * 控制變更管理的工作流程；例如。 在發佈前強制執行審核
 * 協調單個任務的項目
@@ -74,7 +73,7 @@ AEM提供您兩種環境：
 
 通常，發佈環境位於非軍事區內；換言之，它可供Internet使用，但不再受到內部網路的完全保護。
 
-當AEM網站是社群網站 [，或包含](/help/communities/overview.md)Communities元件時 [](/help/communities/author-communities.md)，登入網站訪客（成員）可能會與社群功能互動。 例如，他們可張貼至論壇、張貼意見或關注其他成員。 會員可以獲得執行通常限於作者環境的活動的權限，例如建立新頁面（社群群組）、部落格文章和協調其他成員的貼文。
+當AEM網站是社群網站 [，或包含](/help/communities/overview.md)Communities元件時 [](/help/communities/author-communities.md)，登入網站訪客（成員）可能會與社群功能互動。 例如，他們可張貼至論壇、張貼意見或關注其他成員。 會員可以獲得執行通常限於作者環境的活動的權限，例如建立新頁面（社群群組）、部落格文章，以及協調其他成員的貼文。
 
 >[!NOTE]
 >
@@ -96,4 +95,4 @@ AEM提供您兩種環境：
 
 #### Dispatcher {#dispatcher}
 
-為了最佳化網站訪客的效能，Dispatcher **[實作](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)**負載平衡和快取。
+為了最佳化網站訪客的效能，Dispatcher **[實作](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** 負載平衡和快取。
