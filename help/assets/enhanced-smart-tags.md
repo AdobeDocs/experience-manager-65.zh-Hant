@@ -3,15 +3,15 @@ title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: e124025295f29d6f3999dc52467301d48bceee75
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1525'
 ht-degree: 1%
 
 ---
 
 
-# 增強型智慧標記 {#enhanced-smart-tags}
+# 瞭解、套用和組織智慧型標籤 {#enhanced-smart-tags}
 
 處理數位資產的組織越來越多地在資產中繼資料中使用分類控制辭彙。 基本上，它包含員工、合作夥伴和客戶常用來參照和搜尋特定類別數位資產的關鍵字清單。 使用分類控制的辭彙來標籤資產，可確保透過標籤搜尋輕鬆識別和擷取資產。
 
