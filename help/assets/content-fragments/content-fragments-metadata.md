@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 148803f3-1e7b-4d35-99c5-e0d82f3adf24
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 10%
@@ -28,7 +28,7 @@ ht-degree: 10%
 1. 在「資 **產** 」主控台中，導覽至內容片段的位置。
 1. 其中之一：
 
-   * 選擇「 [**查看屬性&#x200B;**」以開啟對話框](/help/assets/managing-assets-touch-ui.md#editing-properties)。 開啟供檢視後，您也可以編輯。
+   * 選擇「 [**查看屬性** 」以開啟對話框](/help/assets/manage-assets.md#editing-properties)。 開啟供檢視後，您也可以編輯。
    * 開啟「編 [輯」的內容片段](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor)，然後從側 **面面板選取「中繼資料** 」。
 
    ![cfm-6420-06](assets/cfm-6420-06.png)
