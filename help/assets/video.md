@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '11828'
 ht-degree: 6%
@@ -70,7 +70,7 @@ ht-degree: 6%
       * 檢視視訊的來源視訊和編碼轉譯，以及其相關縮圖：
          [預覽影片](managing-video-assets.md#upload-and-preview-video-assets) 或預 [覽資產](previewing-assets.md)
          [檢視視訊轉譯](video-renditions.md)
-         [管理視訊轉譯](managing-assets-touch-ui.md#managing-renditions)
+         [管理視訊轉譯](manage-assets.md#managing-renditions)
 
       * [管理檢視器預設集](managing-viewer-presets.md)
       * [發佈資產](publishing-dynamicmedia-assets.md)
@@ -80,16 +80,16 @@ ht-degree: 6%
          [檢視視訊轉譯屬性](video-renditions.md)
 
       * 編輯視訊的屬性，例如標題、說明和標籤、自訂中繼資料欄位：
-         [編輯視訊屬性](managing-assets-touch-ui.md#editing-properties)
+         [編輯視訊屬性](manage-assets.md#editing-properties)
 
       * [管理數位資產的中繼資料](metadata.md)
       * [中繼資料結構](metadata-schemas.md)
    * 檢閱、核准和註解視訊，並維持完整的版本控制
 
-      * [為影片加上註解](managing-video-assets.md#annotate-video-assets) ，或為 [資產加上註解](managing-assets-touch-ui.md#annotating)
+      * [為影片加上註解](managing-video-assets.md#annotate-video-assets) ，或為 [資產加上註解](manage-assets.md#annotating)
 
-      * [建立版本](managing-assets-touch-ui.md#asset-versioning)
-      * [將工作流程套用至資產](assets-workflow.md) ，或 [請參閱在資產上啟動工作流程](managing-assets-touch-ui.md#starting-a-workflow-on-an-asset)
+      * [建立版本](manage-assets.md#asset-versioning)
+      * [將工作流程套用至資產](assets-workflow.md) ，或 [請參閱在資產上啟動工作流程](manage-assets.md#starting-a-workflow-on-an-asset)
 
       * [檢閱資料夾資產](bulk-approval.md)
       * [專案](../sites-authoring/projects.md)
@@ -1164,7 +1164,7 @@ Cost-efficient access to rapidly evolving technology.
    通常，您要將章節VTT檔案命名為與視訊檔案相同的名稱，並附加章節。 如此，它可協助您使用您現有的網頁內容管理系統自動產生視訊URL。
 1. 在AEM中，上傳您的WebVTT章節檔案。
 
-   請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+   請參閱 [上傳資產](/help/assets/manage-assets.md#uploading-assets)。
 
 1. 執行下列任一項作業：
 
