@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 750e3729a33718d54dca8b2514468d4a40910d4c
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 2%
@@ -194,7 +194,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 [!DNL Experience Manager Assets] 包含下列協助工具增強功能：
 
-* 鍵盤上的箭頭鍵可用來移動和平移縮放影像中的區域。 如需詳細資訊，請參閱 [僅使用鍵盤按鍵預覽資產](../assets/managing-assets-touch-ui.md#previewing-assets)。
+* 鍵盤上的箭頭鍵可用來移動和平移縮放影像中的區域。 如需詳細資訊，請參閱 [僅使用鍵盤按鍵預覽資產](../assets/manage-assets.md#previewing-assets)。
 
 * 「篩選器」面板中的混合狀態複選框（除非您選擇了所有嵌套的謂詞，否則不會選擇並刪除第一級複選框）由螢幕閱讀器讀取。
 
