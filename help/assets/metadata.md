@@ -3,7 +3,7 @@ title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]�
 description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: e49fa8ec19411648841b19bad4b8c1e0efcc1dc1
 workflow-type: tm+mt
 source-wordcount: '2423'
 ht-degree: 10%
@@ -163,7 +163,7 @@ ht-degree: 10%
 
 ## 編輯系列的中繼資料 {#collections-metadata}
 
-如需詳細資訊，請 [參閱檢視和編輯系列中繼資料](/help/assets/managing-collections-touch-ui.md#view-edit-collection-metadata) , [以及大量編輯多個系列的中繼資料](/help/assets/managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
+如需詳細資訊，請 [參閱檢視和編輯系列中繼資料](/help/assets/manage-collections.md#view-edit-collection-metadata) , [以及大量編輯多個系列的中繼資料](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk)。
 
 ## 將中繼資料描述檔套用至資料夾 {#applying-a-metadata-profile-to-folders}
 
@@ -242,7 +242,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >[!MORELIKETHIS]
 >
 >* [中繼資料概念與理解](metadata-concepts.md)。
->* [編輯多個系列的中繼資料屬性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+>* [編輯多個系列的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)
 >* [在Experience Manager Assets中匯入和匯出中繼資料](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
