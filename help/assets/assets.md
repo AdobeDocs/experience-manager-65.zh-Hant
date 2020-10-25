@@ -3,7 +3,7 @@ title: Introduction to [!DNL Adobe Experience Manager Assets].
 description: 瞭解什麼是數位資產管理、其使用案例 [!DNL Adobe Experience Manager Asset] 和分支。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 12%
@@ -55,21 +55,21 @@ ht-degree: 12%
 
 在中使用數位資產時， [!DNL Experience Manager]您需要瞭解下列術語：
 
-* **系列**: 資產的集合，根據實體位置（資料夾）、常用屬性（儲存的搜尋資料夾）或使用者選擇（燈箱資料夾）。
+* **系列**:資產的集合，根據實體位置（資料夾）、常用屬性（儲存的搜尋資料夾）或使用者選擇（燈箱資料夾）。
 
-* **中繼資料**[!DNL Assets] 有中繼資料； 例如，作者、過期日期、DRM資訊（數位版權管理）等。 中繼資料受到存取控制。 [!DNL Assets] 支援以下各種現成的常用元資料模式：
+* **中繼資料**[!DNL Assets] 有中繼資料；例如，作者、過期日期、DRM資訊（數位版權管理）等。 中繼資料受到存取控制。 [!DNL Assets] 支援以下各種現成的常用元資料模式：
 
-   * Dublin Core: 包括作者、說明、日期、主旨等。
-   * IPTC: 包括事件、模型、位置等。
-   * WCM: 包括頁面屬 [!UICONTROL 性、] 「按 [!UICONTROL 時」和「關機]」等等。
+   * Dublin Core:包括作者、說明、日期、主旨等。
+   * IPTC:包括事件、模型、位置等。
+   * WCM:包括頁面屬 [!UICONTROL 性、] 「按 [!UICONTROL 時」和「關機]」等等。
 
 * **標籤**: [!DNL Assets] 可以標籤和分類。 請參閱 [組織資產](/help/assets/organize-assets.md)。
 
-* **轉譯**: 轉譯是資產的二進位表示法。 [!DNL Assets] 一律有主要表示法——上傳檔案的主要表示法。 它們可以有不限數量的其他表示法，例如，可能是由自訂的工作流程步驟或在上傳資產時所建立。轉譯可能有不同大小、不同解析度、加上浮水印，或其他某個已變更的特性。
+* **轉譯**:轉譯是資產的二進位表示法。 [!DNL Assets] 一律有主要表示法——上傳檔案的主要表示法。 它們可以有不限數量的其他表示法，例如，可能是由自訂的工作流程步驟或在上傳資產時所建立。轉譯可能有不同大小、不同解析度、加上浮水印，或其他某個已變更的特性。
 
-* **版本**: 版本修訂會在特定時間點建立數位資產的快照。 您可以將資產還原為舊版。 請參 [閱「資產」中的版本](managing-assets-touch-ui.md#asset-versioning)。
+* **版本**:版本修訂會在特定時間點建立數位資產的快照。 您可以將資產還原為舊版。 請參 [閱「資產」中的版本](manage-assets.md#asset-versioning)。
 
-* **子資產**: 子資產是組成資產的資產，例如，檔案中的圖層或PDF [!DNL Adobe Photoshop] 檔案中的頁面。 In [!DNL Assets], you can manage sub-assets as you would assets.
+* **子資產**:子資產是組成資產的資產，例如，檔案中的圖層或PDF [!DNL Adobe Photoshop] 檔案中的頁面。 In [!DNL Assets], you can manage sub-assets as you would assets.
 
 ### 如何使用資產 {#how-to-work-with-assets}
 
@@ -78,8 +78,8 @@ ht-degree: 12%
 您可以使用這些預先設定的工作流程執行的工作：
 
 * 將資產儲存在儲存庫中，或從中刪除資產。
-* 擷取及儲存資產的中繼資料； 個別的中繼資料項目會儲存為XMP。
-* 產生資產的轉譯和縮圖； 包括視需要自動調整大小和裁切。
+* 擷取及儲存資產的中繼資料；個別的中繼資料項目會儲存為XMP。
+* 產生資產的轉譯和縮圖；包括視需要自動調整大小和裁切。
 * 視需要轉碼資產。 例如，行動與網路使用的視訊會轉碼為每秒24個畫格，下載每秒30個畫格的視訊。 行動與網路使用的音訊會以128 Kbps轉碼，以192 Kbps的音訊下載。
 
 當然，您也可以手動套用工作流程。 如需預 [設工作流程](/help/assets/media-handlers.md)的清單，請參閱Assets Media Handler。
