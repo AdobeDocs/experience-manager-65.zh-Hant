@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2076'
 ht-degree: 15%
@@ -33,7 +33,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/managing-assets-touch-ui.md)。
+>如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/manage-assets.md)。
 
 ## 快速入門：影像集 {#quick-start-image-sets}
 
@@ -83,7 +83,7 @@ ht-degree: 15%
 
    請參 [閱連結影像集至網頁](/help/assets/linking-urls-to-yourwebapplication.md)[和內嵌影片或影像檢視器](/help/assets/embed-code.md)。
 
-若要編輯影像集，請參閱 [編輯影像集。](#editing-image-sets) 此外，您還可以檢視和編輯 [影像集屬性](/help/assets/managing-assets-touch-ui.md#editing-properties)。
+若要編輯影像集，請參閱 [編輯影像集。](#editing-image-sets) 此外，您還可以檢視和編輯 [影像集屬性](/help/assets/manage-assets.md#editing-properties)。
 
 如果您在建立集時遇到問題，請參閱「疑難排解動態媒體- [Scene7模式」中的影像和集](/help/assets/troubleshoot-dms7.md#images-and-sets)。
 
@@ -91,7 +91,7 @@ ht-degree: 15%
 
 首先，上傳影像集的影像。 由於使用者可在影像集檢視器中放大影像，因此當您選擇影像時，請考慮放大影像。 請確定影像在最大尺寸中至少為2000像素。「影像集」支援許多影像檔案格式，但建議使用無損TIFF、PNG和EPS影像。
 
-您可以像上傳資產中的任何其他資產一樣， [上傳影像集的影像](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+您可以像上傳資產中的任何其他資產一樣， [上傳影像集的影像](/help/assets/manage-assets.md#uploading-assets)。
 
 ### 準備影像集資產以進行上傳 {#preparing-image-set-assets-for-upload}
 
