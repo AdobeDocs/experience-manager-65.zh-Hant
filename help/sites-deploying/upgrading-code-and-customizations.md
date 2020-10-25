@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '2204'
 ht-degree: 0%
@@ -133,7 +133,7 @@ AEM來源版本中AEM製作環境的所有自訂項目都必須加以識別。 �
 
 ### 為現有資產產生資產ID {#generating-asset-ids-for-existing-assets}
 
-若要為現有資產產生資產ID，請在您升級AEM實例以執行AEM 6.5時升級資產。這是啟用「資產分析」功 [能的必要條件](/help/assets/touch-ui-asset-insights.md)。 如需詳細資訊，請參 [閱新增內嵌代碼](/help/assets/touch-ui-using-page-tracker.md#add-embed-code)。
+若要為現有資產產生資產ID，請在您升級AEM實例以執行AEM 6.5時升級資產。這是啟用「資產分析」功 [能的必要條件](/help/assets/asset-insights.md)。 如需詳細資訊，請參 [閱新增內嵌代碼](/help/assets/use-page-tracker.md#add-embed-code)。
 
 若要升級資產，請在JMX主控台中設定Associate Asset IDs套件。 根據儲存庫中的資產數量，可能 `migrateAllAssets` 需要很長時間。 我們的內部測試估計，TarMK上的12.5萬個資產大約需要一小時。
 
