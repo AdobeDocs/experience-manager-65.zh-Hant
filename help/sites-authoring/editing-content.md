@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '3064'
+ht-degree: 7%
 
 ---
 
@@ -134,7 +137,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 您可以使用元件瀏覽器來新增 [元件](/help/sites-authoring/author-environment-tools.md#components-browser)。 元 [件預留位置](#component-placeholder) (Component placeholder)顯示元件的位置：
 
-1. 請確定您的頁面處於「編 [**輯&#x200B;**」模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
+1. 請確定您的頁面處於「編 [**輯** 」模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
 1. 開啟元 [件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)。
 1. 將所需元件拖曳至 [所需位置](#component-placeholder)。
 
@@ -148,14 +151,16 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 可以使用段落系統的「將元件拖 **曳到此處** 」框添加新元件：
 
-1. 請確定您的頁面處於「編 [**輯&#x200B;**」模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
+1. 請確定您的頁面處於「編 [**輯** 」模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
 1. 從段落系統中選擇和添加新元件有兩種方法：
 
-   * 從現有 **元件的工具列或「拖曳元件到此處」(** Drag components here **)方塊中，選取「插入元件」(Insert Component** )選項(+)。
+   * Select the **Insert Component** option (+) from either the toolbar of an existing component or the **Drag components here** box.
+
    ![screen_shot_2018-03-22at112536](assets/screen_shot_2018-03-22at112536.png)
 
    * 如果您使用桌上型裝置，可以按兩下「拖曳元件至 **此處** 」方塊。
-   將會 **開啟「插入新元件** 」(Insert New Component)對話框，允許您選擇所需元件：
+
+   The **Insert New Component** dialog will open to allow you to select your required component:
 
    ![screen_shot_2018-03-22at112650](assets/screen_shot_2018-03-22at112650.png)
 
@@ -186,7 +191,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
    <td>產品</td>
   </tr>
   <tr>
-   <td>視訊</td>
+   <td>影片</td>
    <td>閃光燈</td>
   </tr>
   <tr>
@@ -198,11 +203,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 >[!NOTE]
 >
->您可以針對安裝設定此行為。 如需 [詳細資訊，請參閱設定段落系統，讓拖曳資產可建立元件例項](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 。
+>此行為可針對您的安裝進行設定。 如需 [詳細資訊，請參閱設定段落系統，讓拖曳資產可建立元件例項](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 。
 
 要通過拖動上述資產類型之一來建立元件，請執行以下操作：
 
-1. 請確定您的頁面處於「編 [**輯&#x200B;**」模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
+1. 請確定您的頁面處於「編 [**輯** 」模式](/help/sites-authoring/author-environment-tools.md#page-modes)。
 1. 開啟資 [產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)。
 1. 將所需資產拖曳至所需位置。 元件 [預留位置](#component-placeholder) ，會顯示元件的位置。
 
@@ -214,7 +219,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >在行動裝置上，資產瀏覽器會填滿整個螢幕。 當您開始拖曳資產後，瀏覽器會關閉以再次顯示頁面，好讓您放置資產。
 
-如果瀏覽資產時發現您需要快速變更資產，可以按一下資產名稱旁的編輯圖示，直接從瀏覽器啟動 [資產編輯器](/help/assets/managing-assets-touch-ui.md) 。
+如果瀏覽資產時發現您需要快速變更資產，可以按一下資產名稱旁的編輯圖示，直接從瀏覽器啟動 [資產編輯器](/help/assets/manage-assets.md) 。
 
 ![screen_shot_2018-03-22at112735](assets/screen_shot_2018-03-22at112735.png)
 
@@ -269,6 +274,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
    * 您可以貼到相同的頁面或不同的頁面。
    * 貼上的項目會貼至您選取貼上動作的項目上方。
    * 只有剪貼簿上有內容時，才會顯示「平移」動作。
+
    ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
 
    >[!NOTE]
@@ -308,7 +314,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ### 元件編輯對話框 {#component-edit-dialog}
 
-您可以使用元件工具列的「編輯（鉛筆）」圖示， [開啟元件以編輯內容](#edit-configure-copy-cut-delete-paste)。
+您可以使用元件工具列的「編輯 (鉛筆) 」圖示， [開啟元件以編輯內容](#edit-configure-copy-cut-delete-paste)。
 
 確切的編輯選項將取決於元件。 對於某些元 [件，所有動作只能在全螢幕模式下使用](#edit-content-full-screen-mode)。 例如：
 
@@ -329,7 +335,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * 影像元件——全螢幕
 
-   [進入影像元件的全螢幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) ，可讓您有更多空間編輯影像，並顯示額外的編輯選項，例如「啟動地圖」和「重設縮放」 ********。 此外，全螢幕還允許選取裁切預設集。
+   [進入影像元件的全螢幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) ，可讓您有更多空間編輯影像，並顯示額外的編輯選項，例如「啟動地圖」和「重設縮放」 ********。此外，全螢幕還允許選取裁切預設集。
 
    ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
 
@@ -346,7 +352,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 | 影像 | 影像 |
 | 文件 | 下載 |
 | 產品 | 產品 |
-| 視訊 | 閃光燈 |
+| 影片 | 閃光燈 |
 | 內容片段 | 內容片段 |
 
 ## 編輯（內容）全螢幕模式 {#edit-content-full-screen-mode}
@@ -367,7 +373,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 要移動段落元件，請執行以下操作：
 
-1. 選取要以點選並按住或按住的方式移動的段落。
+1. 選擇要使用點選並按住或按一下並按住移動的段落。
 1. 將段落拖曳至新位置。 AEM會指出可將段落存放在何處。 將它拖放至您所要的位置。
 
    ![screen_shot_2018-03-22at121821](assets/screen_shot_2018-03-22at121821.png)
@@ -380,7 +386,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 編輯元件配置 {#edit-component-layout}
 
-您可以選取元件的 [Layout](/help/sites-authoring/responsive-layout.md)**** （配置）動作，以變更元件的配置，並節省時間，而不需離開編輯模式，而不需重複從編輯切換到配置模式來調整元件。
+您可以選取元件的 [Layout](/help/sites-authoring/responsive-layout.md)****  (配置) 動作，以變更元件的配置，並節省時間，而不需離開編輯模式，而不需重複從編輯切換到配置模式來調整元件。
 
 1. 在站點控 **制台的** 「編輯」模式下，選擇元件會顯示元件的工具欄。
 
@@ -395,6 +401,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
    * 元件顯示的調整大小控制點。
    * 模擬器工具欄顯示在螢幕頂部。
    * 元件工具列上會顯示版面動作，而非標準編輯動作。
+
    ![screen_shot_2018-03-22at133843](assets/screen_shot_2018-03-22at133843.png)
 
    您現在可以像在版面模式中一樣修改元件的 [版面](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)。
@@ -445,7 +452,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 編輯頁面範本 {#editing-the-page-template}
 
-如果頁面基於可編輯的 [模板](/help/sites-authoring/templates.md#editable-and-static-templates)，則可以通過在「頁資訊」菜單中選擇「編輯模板」( [Edit Template](/help/sites-authoring/templates.md#editing-templates-template-authors)****[](/help/sites-authoring/author-environment-tools.md#page-information))，輕鬆切換到模板編輯器。
+如果頁面基於可編輯的模板 [，則可以通過在「頁面資訊」菜單中選擇「編輯」模板來輕鬆切換到](/help/sites-authoring/templates.md#editable-and-static-templates)模板編輯器 [](/help/sites-authoring/templates.md#editing-templates-template-authors)****[](/help/sites-authoring/author-environment-tools.md#page-information)。
 
 如果頁面是以靜態范 [本為基礎](/help/sites-authoring/templates.md#editable-and-static-templates)，您可以使用工具列上的頁面模式選擇器，切換至「設計」模式 [](/help/sites-authoring/default-components-designmode.md)[](/help/sites-authoring/author-environment-tools.md#page-modes) ，以啟用／停用要在頁面上使用的元件。
 
@@ -479,6 +486,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >* 內容中的連結是可見的，但在「編輯」模式中無法存取。
 >* 如果您想使用連結進行導覽，請使用其中一個預覽選項。
 >* 使用鍵 [盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)`Ctrl-Shift-M` ，在預覽和上次選取的模式之間切換。
+
 >
 
 
@@ -513,12 +521,13 @@ AEM可讓您鎖定頁面，讓其他人無法修改內容。 當您對特定頁�
 
    1. 選擇具有選擇模 [式的頁面](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
    1. 選擇鎖定表徵圖。
+
    ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
 
 * **頁面編輯器**
 
    1. 選取「頁 **面資訊** 」圖示以開啟功能表。
-   1. 選取「 **鎖定頁面** 」選項。
+   1. Select the **Lock Page** option.
 
 鎖定後，控制台視圖資訊將更新，編輯鎖定符號時，工具欄中將顯示該資訊。
 
@@ -579,6 +588,7 @@ AEM會儲存您執行之動作的記錄和執行動作的順序，如此您就�
 >* 只要您自使用還原後未進行頁面編輯，就可重做動作。
 >* 最多可還原20個編輯動作（預設設定）。
 >* 此外，您也可 [以使用鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ，來還原和重做。
+
 >
 
 
