@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 15%
@@ -28,7 +28,7 @@ ht-degree: 15%
 * [輸入片段的內容](#authoring-your-content) ,
 * [建立並管理主版](#managing-variations) ( **Master** )內容的變化
 
-根據正在編輯的資料類型執行一系列其他操作； 例如：
+根據正在編輯的資料類型執行一系列其他操作；例如：
 
 * [將視覺資產插入您的片段](#inserting-assets-into-your-fragment) （影像）
 * 在富格 [文字](#rich-text)、純 [文字和標籤](#plain-text) 之間選 [](#markdown) 擇
@@ -83,7 +83,7 @@ ht-degree: 15%
 
 ### 動作 {#actions}
 
-當全螢幕編輯器( [即多行文字](#formats))開啟時，也可使用下列動作（適用於所有格式）:
+當全螢幕編輯器(即多行文字 [](#formats))開啟時，也可使用下列動作（適用於所有格式）:
 
 * 選擇格 [式](#formats) ([Rich Text](#rich-text)、 [Plain Text](#plain-text) 、 [Markdown](#markdown)Markdown)
 
@@ -92,7 +92,7 @@ ht-degree: 15%
 * [上傳內容](#uploading-content)
 * [與主版同步](#synchronizing-with-master) （編輯變數時）
 * [摘要文字](#summarizing-text)
-* [註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) ，您的文字
+* [註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) 您的文字
 
 * [將視覺資產插入您的片段](#inserting-assets-into-your-fragment) （影像）
 
@@ -113,16 +113,16 @@ ht-degree: 15%
 * 粗體
 * 斜體
 * 底線
-* 對齊： 左，中，右
+* 對齊：左，中，右
 * 項目符號清單
 * 編號清單
-* 縮排： 增加，減少
+* 縮排：增加，減少
 * 建立／中斷超連結
 * 開啟全螢幕編輯器，其中提供下列格式選項：
 
    * 貼上文字／從Word
    * 插入表格
-   * 段落樣式： 第1/2/3段
+   * 段落樣式：第1/2/3段
    * [插入視覺資產](#inserting-assets-into-your-fragment)
    * 搜尋
    * 尋找/取代
@@ -183,7 +183,7 @@ ht-degree: 15%
 
 >[!CAUTION]
 >
->內容片段必須有有效的語言（ISO代碼）資料夾做為祖先； 這可用來決定要使用的語言模型。
+>內容片段必須有有效的語言（ISO代碼）資料夾做為祖先；這可用來決定要使用的語言模型。
 >
 >例如， `en/` 如下列路徑：
 >
@@ -256,9 +256,9 @@ ht-degree: 15%
 
 ### 將資產插入片段 {#inserting-assets-into-your-fragment}
 
-若要簡化製作內容片段的程式，您可以直接將 [Assets](/help/assets/managing-assets-touch-ui.md) （影像）新增至片段。
+若要簡化製作內容片段的程式，您可以直接將 [Assets](/help/assets/manage-assets.md) （影像）新增至片段。
 
-這些文字將加到片段的段落序列中，不需任何格式； 當頁面上使用／參 [考片段時，可執行格式設定](/help/sites-authoring/content-fragments.md)。
+這些文字將加到片段的段落序列中，不需任何格式；當頁面上使用／參 [考片段時，可執行格式設定](/help/sites-authoring/content-fragments.md)。
 
 >[!CAUTION]
 >
@@ -363,7 +363,7 @@ ht-degree: 15%
 >
 >同步只適用於多 **行文本** -資料類型。
 >
->將變 *更從變更傳輸&#x200B;**至Master ***，不提供選項。
+>將變 *更從變更傳輸&#x200B;**至Master*** ，不提供選項。
 
 1. 在片段編輯器中開啟您的內容片段。 請確定已 **編輯主** 版。
 1. 選擇特定的變化，然後從以下任一項中選擇適當的同步操作：
