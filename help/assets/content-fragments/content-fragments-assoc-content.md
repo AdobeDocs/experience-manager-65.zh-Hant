@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 14%
@@ -29,7 +29,7 @@ ht-degree: 14%
 >
 >有各種方法可將視 [覺資產（例如影像）新增至片段和](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) /或頁面。
 
-若要建立關聯，您首先需 [要將媒體資產新增至系列](/help/assets/managing-collections-touch-ui.md#adding-assets-to-a-collection)。 完成後，您可以：
+若要建立關聯，您首先需 [要將媒體資產新增至系列](/help/assets/manage-collections.md#adding-assets-to-a-collection)。 完成後，您可以：
 
 1. 開啟您的片段，然後從 **側面板選取** 「關聯內容」。
 
@@ -38,7 +38,7 @@ ht-degree: 14%
 1. 選 **取「關聯內容** 」或「 **關聯繫列** 」 (視情況而定，視系統是否已關聯)。
 1. 選取所需的系列。
 
-   您可以選擇將片段本身新增至選取的系列； 這個艾滋病追蹤。
+   您可以選擇將片段本身新增至選取的系列；這個艾滋病追蹤。
 
    ![cfm-6420-04](assets/cfm-6420-04.png)
 
