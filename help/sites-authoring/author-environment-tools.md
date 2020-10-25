@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2451f4994a18b1566ea0efddbefcaa5bb8e41c99
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '2239'
+ht-degree: 10%
 
 ---
 
@@ -22,7 +25,7 @@ AEM的製作環境提供多種機制來組織和編輯您的內容。 提供的�
 
 ## 管理您的網站 {#managing-your-site}
 
-Sites **** Console可讓您使用標題列、工具列、動作圖示（適用於選取的資源）、導覽路徑標示，以及選取時的輔助導軌（例如時間軸和參考），來導覽和管理您的網站。
+The **Sites** console allows you to navigate and manage your website, using the header bar, toolbar, action icons (applicable for the selected resource), breadcrumbs and when selected, secondary rails (for example, timeline and references).
 
 例如，列視圖：
 
@@ -46,7 +49,7 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 
 編輯頁面時，可 **從** :
 
-* 頁面 [**資訊選擇&#x200B;**](/help/sites-authoring/editing-page-properties.md#page-properties)器；這將顯示介紹性投影片（如您第一次存取編輯器時所顯示）。
+* 頁面 [**資訊選擇**](/help/sites-authoring/editing-page-properties.md#page-properties) 器；這將顯示介紹性投影片（如您第一次存取編輯器時所顯示）。
 * 特定 [元件的](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 「設定」對話方塊(使用 表徵圖);這會顯示內容相關的說明。
 
 控制台 [提供更多與幫助相關的資源](/help/sites-authoring/basic-handling.md#accessing-help)。
@@ -55,7 +58,7 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 
 元件瀏覽器會顯示目前頁面上可用的所有元件。 這些內容可拖曳至適當位置，然後進行編輯以新增內容。
 
-元件瀏覽器是側面板中的標籤(連同資產 [瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)[和內容樹](/help/sites-authoring/author-environment-tools.md#content-tree))。 要開啟（或關閉）側面板，請使用工具欄左上角的表徵圖：
+元件瀏覽器是側面板中的標籤(連同資產 [瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)[和內容樹](/help/sites-authoring/author-environment-tools.md#content-tree))。要開啟 (或關閉) 側面板，請使用工具欄左上角的表徵圖：
 
 ![ateat-03](assets/ateat-03.png)
 
@@ -91,11 +94,13 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 
       * 標準元件的圖示為單色。
       * 縮寫始終是元件名稱的前兩個字元。
+
    從「元件」瀏覽器的頂端工 **具列** ，您可以：
 
    * 依名稱篩選元件。
    * 使用下拉式選取範圍，將顯示限制在特定群組。
-   如需元件的詳細說明，您可以在「元件」瀏覽器中按一下或點選元件旁的資訊圖示(如果 **有** )。 例如，對於「版面 **容器」**:
+
+   如需元件的詳細說明，您可以在「元件」瀏覽器中按一下或點選元件旁的資訊圖示(如果 **有** )。例如，對於「版面 **容器」**:
 
    ![ateat-06](assets/ateat-06.png)
 
@@ -105,7 +110,7 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 
 資產瀏覽器會顯 [示](/help/assets/home.md) ，您目前頁面上可直接使用的所有資產。
 
-資產瀏覽器是側面板中的標籤，以及元件瀏 [覽](/help/sites-authoring/author-environment-tools.md#components-browser)器和 [內容樹](/help/sites-authoring/author-environment-tools.md#content-tree)。 要開啟或關閉側面板，請使用工具欄左上角的表徵圖：
+The assets browser is a tab within the side panel along with the [components browse](/help/sites-authoring/author-environment-tools.md#components-browser)r and [content tree](/help/sites-authoring/author-environment-tools.md#content-tree). 要開啟或關閉側面板，請使用工具欄左上角的表徵圖：
 
 ![ateat-03-1](assets/ateat-03-1.png)
 
@@ -162,7 +167,7 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 
    ![ateat-10](assets/ateat-10.png)
 
-如果您需要快速變更資產，可以按一下資產名稱旁的編輯圖示，直接從資 [產瀏覽器啟動資產編輯器](/help/assets/managing-assets-touch-ui.md) 。
+如果您需要快速變更資產，可以按一下資產名稱旁的編輯圖示，直接從資 [產瀏覽器啟動資產編輯器](/help/assets/manage-assets.md) 。
 
 ![](do-not-localize/screen_shot_2018-03-22at142448.png)
 
@@ -170,7 +175,7 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 
 「內 **容樹」** (Content Tree)概述了階層中頁面上的所有元件，讓您一目瞭然地瞭解頁面的構成方式。
 
-「內容樹」是側面板（連同元件和資產瀏覽器）中的標籤。 要開啟（或關閉）側面板，請使用工具欄左上角的表徵圖：
+「內容樹」是側面板（連同元件和資產瀏覽器）中的標籤。 要開啟 (或關閉) 側面板，請使用工具欄左上角的表徵圖：
 
 ![](do-not-localize/screen_shot_2018-03-22at142042.png)
 
@@ -262,7 +267,7 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 
 ## 頁面資訊 {#page-information}
 
-「頁面資訊（均衡器圖示）」會開啟一個功能表，其中也提供上次編輯和上次發佈的詳細資訊。 視頁面、其網站和您的例項的特性而定，可能有更多或更少的選項可用：
+「頁面資訊 (均衡器圖示) 」會開啟一個功能表，其中也提供上次編輯和上次發佈的詳細資訊。視頁面、其網站和您的例項的特性而定，可能有更多或更少的選項可用：
 
 ![ateat-17](assets/ateat-17.png)
 
@@ -316,6 +321,7 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 >* 存取某些模式需要適當的權限／權限。
 >* 由於空間限制，行動裝置無法使用開發人員模式。
 >* 有一個鍵 [盤](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`可切換 **)，在「預覽」和目前選取的模式之間切換(例如，「編輯」、「排版**********」等)。
+
 >
 
 
@@ -345,9 +351,9 @@ Sites **** Console可讓您使用標題列、工具列、動作圖示（適用�
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * 在選取資源後，對話 **框右上方** 的「選擇」按鈕就會變為活動狀態。 按一下或點選以確認選取範圍，或 **取消** 以中止。
-* 如果上下文允許選擇多個資源，則選擇資源也會激活「選擇 **** 」按鈕，但也會向窗口的右上角添加選定資源的計數。 按一下 **數字旁** 的X，取消選取全部。
+* 如果上下文允許選擇多個資源，則選擇資源也會激活「選擇 **** 」按鈕，但也會向窗口的右上角添加選定資源的計數。按一下 **數字旁** 的X，取消選取全部。
 * 在樹狀結構中導覽時，您的位置會反映在對話方塊頂端的階層連結中。 這些網站導覽路徑標示也可用來快速跳入資源階層。
-* 您隨時都可以使用對話方塊頂端的搜尋欄位。 按一下 **搜尋欄位** 中的X以清除搜尋。
+* 您隨時都可以使用對話方塊頂端的搜尋欄位。 按一下 **搜尋欄位** 中的X，以清除搜尋。
 * 若要縮小搜尋範圍，您可以顯示篩選選項並根據特定路徑篩選結果。
 
    ![ateat-21](assets/ateat-21.png)
