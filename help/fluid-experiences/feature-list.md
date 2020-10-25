@@ -3,10 +3,10 @@ title: AEM流暢體驗功能清單
 description: 流暢的體驗功能清單
 index: n
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 33abb544c5f12f7d7a44fc326f07fe9b53ebc9d3
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -32,14 +32,14 @@ AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用�
 
 |  |
 |---|
-| [內容儲存庫](/help/assets/managing-assets-touch-ui.md) |
+| [內容儲存庫](/help/assets/manage-assets.md) |
 | [資產類型](/help/assets/assets-formats.md) |
 | [影像轉譯](/help/assets/image-presets.md) |
 | [中繼資料和標籤管理](/help/assets/metadata.md) |
-| [搜尋](/help/assets/managing-assets-touch-ui.md) |
-| [系列](/help/assets/managing-collections-touch-ui.md) 和燈 [箱](/help/assets/touch-ui-light-box.md) |
+| [搜尋](/help/assets/manage-assets.md) |
+| [系列](/help/assets/manage-assets.md) 和燈 [箱](/help/assets/light-box.md) |
 | [設定檔](/help/assets/processing-profiles.md) |
-| [版本控制](/help/assets/managing-assets-touch-ui.md) |
+| [版本控制](/help/assets/manage-assets.md) |
 | [重複偵測](/help/assets/duplicate-detection.md) |
 | [智慧標記](/help/assets/enhanced-smart-tags.md) |
 
@@ -63,7 +63,7 @@ AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用�
 | [使用者管理](/help/sites-administering/user-group-ac-admin.md) |
 | [多語言資產管理](/help/assets/multilingual-assets.md) |
 | [國際化](/help/sites-developing/i18n.md) |
-| [內容轉譯](/help/sites-administering/translation.md) |
+| [內容翻譯](/help/sites-administering/translation.md) |
 | [監控](/help/sites-deploying/monitoring-and-maintaining.md) |
 | [備份](/help/sites-administering/backup-and-restore.md) |
 | [雲端管理員](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) |
@@ -83,7 +83,7 @@ AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用�
 ## 了解更多 {#learn-more}
 
 * [無頭使用案例的流暢體驗](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
-* [AEM Content Service: 什麼，為什麼，怎麼？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
+* [AEM Content Service:什麼，為什麼，怎麼？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
 * [使用Content Services](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 * [開發行動應用程式](https://docs.adobe.com/content/help/en/experience-manager-64/mobile/developing/developing-content-services.html)
 * [協力廠商存取的常見問答集](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
