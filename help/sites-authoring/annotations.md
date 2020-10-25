@@ -10,7 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 0%
 
 ---
 
@@ -49,8 +52,9 @@ source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
 >
 >您可以註解各種資源：
 >
->* [為資產加上註解](/help/assets/managing-assets-touch-ui.md#annotating)
+>* [為資產加上註解](/help/assets/manage-assets.md#annotating)
 >* [為視訊資產加上註解](/help/assets/managing-video-assets.md#annotate-video-assets)
+
 >
 
 
@@ -88,9 +92,11 @@ source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
    ![](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * 選擇／變更顏色：
+
    ![](do-not-localize/chlimage_1-19.png)
 
    * 刪除注釋。
+
    ![](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. 可通過按一下／點選對話框外部的來關閉注釋對話框。 注釋的截斷視圖（第一個字）和任何草繪一起顯示：
