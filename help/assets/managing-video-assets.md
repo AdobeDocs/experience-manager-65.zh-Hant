@@ -3,7 +3,7 @@ title: 管理影片資產
 description: 在中上傳、預覽、註解和發佈視訊資產 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 7%
@@ -22,7 +22,7 @@ ht-degree: 7%
 [!DNL Adobe Experience Manager Assets] 使用擴充功能MP4產生視訊資產的預覽。 如果資產的格式不是MP4，請安裝FFmpeg套件以產生預覽。 Fmpeg會建立OGG和MP4類型的視訊轉譯。 您可以在使用者介面中預覽 [!DNL Assets] 轉譯。
 
 1. 在數位資產檔案夾或子檔案夾中，導覽至您要新增數位資產的位置。
-1. 若要上傳資產，請按一下工 **[!UICONTROL 具列中]** 的「建立」，然後選 **[!UICONTROL 擇「檔案」]**。 或者，在用戶介面上拖動檔案。 如需詳 [細資訊，請參閱](managing-assets-touch-ui.md#uploading-assets) 「上傳資產」。
+1. 若要上傳資產，請按一下工 **[!UICONTROL 具列中]** 的「建立」，然後選 **[!UICONTROL 擇「檔案」]**。 或者，在用戶介面上拖動檔案。 如需詳 [細資訊，請參閱](manage-assets.md#uploading-assets) 「上傳資產」。
 1. 若要在「卡片」檢視中預覽視訊，請按一下 **[!UICONTROL 視訊資產]**![上的「播放](assets/do-not-localize/play.png) 」選項。 您只能在卡片檢視中暫停或播放影片。 「播 [!UICONTROL 放] 」和「暫 [!UICONTROL 停] 」選項在清單檢視中不可用。
 
 1. 若要在資產詳細資訊頁面中預覽視訊，請按一 **[!UICONTROL 下資訊卡]** 上的編輯。 視訊會在瀏覽器的原生視訊播放器中播放。 您可以播放、暫停、控制音量，以及將視訊縮放至全螢幕。
@@ -87,7 +87,7 @@ ht-degree: 7%
 
 >[!MORELIKETHIS]
 >
->* [在Experience Manager Assets中管理數位資產](/help/assets/managing-assets-touch-ui.md)
->* [在Experience Manager Assets中管理系列](/help/assets/managing-collections-touch-ui.md)
+>* [在Experience Manager Assets中管理數位資產](/help/assets/manage-assets.md)
+>* [在Experience Manager Assets中管理系列](/help/assets/manage-collections.md)
 >* [動態媒體視訊檔案](/help/assets/video.md)。
 
