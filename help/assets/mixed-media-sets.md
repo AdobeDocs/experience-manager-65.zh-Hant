@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 22%
@@ -27,7 +27,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/managing-assets-touch-ui.md)。
+>如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/manage-assets.md)。
 
 ## 快速入門：混合媒體集 {#quick-start-mixed-media-sets}
 
@@ -67,7 +67,7 @@ ht-degree: 22%
 
    請參 [閱將混合媒體集連結至網頁](/help/assets/linking-urls-to-yourwebapplication.md)[和內嵌視訊或影像檢視器](/help/assets/embed-code.md)。
 
-如果需要，可以編輯混 [合媒體集](#editing-mixed-media-sets)。 此外，您還可以檢視和修改混 [合媒體集屬性](/help/assets/managing-assets-touch-ui.md#editing-properties)。
+如果需要，可以編輯混 [合媒體集](#editing-mixed-media-sets)。 此外，您還可以檢視和修改混 [合媒體集屬性](/help/assets/manage-assets.md#editing-properties)。
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ ht-degree: 22%
 
 ## 編輯混合媒體集 {#editing-mixed-media-sets}
 
-您可以直接在使用者介面中，對混合媒體集中的資產執行各種編輯工作，就像對資產 [中的任何資產一樣](/help/assets/managing-assets-touch-ui.md)。 您也可以在混合媒體集中執行下列動作：
+您可以直接在使用者介面中，對混合媒體集中的資產執行各種編輯工作，就像對資產 [中的任何資產一樣](/help/assets/manage-assets.md)。 您也可以在混合媒體集中執行下列動作：
 
 * 將資產新增至混合媒體集。
 * 在混合媒體集中重新排序資產。
