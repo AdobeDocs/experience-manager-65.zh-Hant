@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '5487'
 ht-degree: 1%
@@ -35,12 +35,12 @@ ht-degree: 1%
 
 ### 群組 {#groups}
 
-群組是使用者和／或其他群組的集合； 這些都稱為群組成員。
+群組是使用者和／或其他群組的集合；這些都稱為群組成員。
 
 其主要目的是透過減少要更新的實體數目來簡化維護程式，因為對群組所做的變更會套用至群組的所有成員。 群組通常反映：
 
-* 應用程式中的角色； 例如，允許瀏覽內容的人，或允許提供內容的人。
-* 您自己的組織； 當內容樹狀結構中的貢獻者被限制在不同分支時，您可能想要擴充角色，以區分不同部門的貢獻者。
+* 應用程式中的角色；例如，允許瀏覽內容的人，或允許提供內容的人。
+* 您自己的組織；當內容樹狀結構中的貢獻者被限制在不同分支時，您可能想要擴充角色，以區分不同部門的貢獻者。
 
 因此，群組往往保持穩定，而使用者來來回的頻率則更高。
 
@@ -66,10 +66,10 @@ AEM WCM會安裝許多使用者和群組。 在安裝後首次存取Security Con
    <td>建議</td>
   </tr>
   <tr>
-   <td><p>管理員</p> <p>預設密碼： 管理員</p> </td>
+   <td><p>管理員</p> <p>預設密碼：管理員</p> </td>
    <td>使用者</td>
    <td><p>具有完全訪問權限的系統管理帳戶。</p> <p>此帳戶用於AEM WCM和CRX之間的連線。</p> <p>如果意外刪除了此帳戶，系統將在資料庫重新啟動時（在預設設定中）重新建立該帳戶。</p> <p>管理員帳戶是AEM平台的需求。 因此，此帳戶無法刪除。</p> </td>
-   <td><p>Adobe強烈建議將此使用者帳戶的密碼從預設值變更。</p> <p>優選地，在安裝時，儘管可以在安裝後完成。</p> <p>注意： 此帳戶不要與CQ Servlet引擎的管理員帳戶混淆。</p> </td>
+   <td><p>Adobe強烈建議將此使用者帳戶的密碼從預設值變更。</p> <p>優選地，在安裝時，儘管可以在安裝後完成。</p> <p>注意：此帳戶不要與CQ Servlet引擎的管理員帳戶混淆。</p> </td>
   </tr>
   <tr>
    <td><p>匿名</p> <p> </p> </td>
@@ -78,7 +78,7 @@ AEM WCM會安裝許多使用者和群組。 在安裝後首次存取Security Con
    <td>請避免刪除或停用此帳戶，因為這會對作者例項的運作造成負面影響。 如果有安全性要求您必須刪除它，請務必先正確測試它對系統的影響。</td>
   </tr>
   <tr>
-   <td><p>作者</p> <p>預設密碼： 作者</p> </td>
+   <td><p>作者</p> <p>預設密碼：作者</p> </td>
    <td>使用者</td>
    <td><p>允許寫入/content的作者帳戶。 涵蓋投稿人和衝浪者特權。</p> <p>可以作為網站管理員使用，因為它可以訪問整個/content樹。</p> <p>這不是內建使用者，而是其他geometrixx展示使用者</p> </td>
    <td><p>Adobe建議完全刪除帳戶，或從預設值變更密碼。</p> <p>優選地，在安裝時，儘管可以在安裝後完成。</p> </td>
@@ -134,7 +134,7 @@ AEM WCM會安裝許多使用者和群組。 在安裝後首次存取Security Con
   <tr>
    <td>workflow-users</td>
    <td>群組</td>
-   <td><p>參與工作流程的使用者必須是群組工作流程使用者的成員。 這可讓他或她完全存取： /etc/workflow/instances，讓他／她可以更新工作流程例項。</p> <p>此群組已包含在標準安裝中，但您必須手動將使用者新增至群組。</p> </td>
+   <td><p>參與工作流程的使用者必須是群組工作流程使用者的成員。 這可讓他或她完全存取：/etc/workflow/instances，讓他／她可以更新工作流程例項。</p> <p>此群組已包含在標準安裝中，但您必須手動將使用者新增至群組。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -205,7 +205,7 @@ AEM使用ACL來判斷使用者或群組可以執行哪些動作，以及可在�
 
 >[!NOTE]
 >
->AEM會自動為Collections中的角色指派（擁有者、編輯者、檢視器）產生使用 [者群組](/help/assets/managing-collections-touch-ui.md)。 不過，手動新增此類群組的ACL可能會在AEM中造成安全性弱點。 Adobe建議您避免手動添加ACL。
+>AEM會自動為Collections中的角色指派（擁有者、編輯者、檢視器）產生使用 [者群組](/help/assets/manage-collections.md)。 不過，手動新增此類群組的ACL可能會在AEM中造成安全性弱點。 Adobe建議您避免手動添加ACL。
 
 ### 訪問控制清單及其評估方式 {#access-control-lists-and-how-they-are-evaluated}
 
@@ -217,9 +217,9 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 >
 >示例中包含一些ACL。 建議您檢閱並判斷哪些應用程式適合您的應用程式。 要查看包含的ACL，請轉至**CRXDE **，並為以下節點選擇 **Access Control** （訪問控制）頁籤：
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`: 允許每個人讀取。
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`: 允許每個人讀取。
->`/home/users/geometrixx-outdoors`: 允許每個人讀取 `*/profile*` 和
+>`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:允許每個人讀取。
+>`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:允許每個人讀取。
+>`/home/users/geometrixx-outdoors`:允許每個人讀取 `*/profile*` 和
 >`*/social/relationships/following/*`。
 >
 >您的自訂應用程式可能會設定其他關係的存取權， `*/social/relationships/friend/*` 例如 `*/social/relationships/pending-following/*`或。
@@ -346,7 +346,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
 這表示使用者帳戶可以指定其他帳戶，以便與其帳戶一起運作。 換言之，如果允許user-B模擬使用者-A，則user-B可使用user-A的完整帳戶詳細資訊採取動作。
 
-這可讓模擬帳戶完成工作，就像使用其模擬的帳戶； 例如，在缺勤期間或在短期內共用過多負荷。
+這可讓模擬帳戶完成工作，就像使用其模擬的帳戶；例如，在缺勤期間或在短期內共用過多負荷。
 
 >[!NOTE]
 >
@@ -371,7 +371,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 | 規則 | 原因 |
 |--- |--- |
 | *使用群組* | 避免依使用者指派存取權限。 原因有幾：<ul><li>您的使用者比群組多，因此群組可簡化結構。</li><li>群組可協助提供所有帳戶的概觀。</li> <li>對於群組，繼承更簡單。</li><li>使用者來來去。 群體是長期的。</li></ul> |
-| *積極* | 請務必使用「允許」陳述式來指定群組的權利（盡可能）。 避免使用Deny語句。 群組依順序評估，而順序的定義可能與使用者不同。 換句話說： 您可能對語句的實施和評估順序幾乎沒有控制權。 如果您只使用「允許」陳述式，則訂單無關緊要。 |
+| *積極* | 請務必使用「允許」陳述式來指定群組的權利（盡可能）。 避免使用Deny語句。 群組依順序評估，而順序的定義可能與使用者不同。 換句話說：您可能對語句的實施和評估順序幾乎沒有控制權。 如果您只使用「允許」陳述式，則訂單無關緊要。 |
 | *保持簡單* | 在配置新安裝時投入一些時間和思考，將獲得很好的回報。 套用清楚的結構可簡化持續的維護與管理，確保您目前的同事和／或未來的繼任者都能輕鬆瞭解正在實施的內容。 |
 | *測試* | 使用測試安裝來練習並確保您瞭解不同使用者和群組之間的關係。 |
 | *預設使用者／群組* | 安裝後請立即更新預設使用者和群組，協助避免任何安全性問題。 |
@@ -417,7 +417,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 | 屬性 | 列出有關可包含電子郵件資訊、說明和名稱資訊之使用者或群組的資訊。 也允許您更改用戶的密碼。 請參 [閱「建立用戶和組](#creating-users-and-groups)、 [修改用戶和組屬性](#modifying-user-and-group-properties)[和更改用戶密碼」](#changing-a-user-password)。 |
 | 群組 | 列出選定用戶或組所屬的所有組。 您可以將選取的使用者或群組指派給其他群組，或從群組中移除。 請參閱 [群組](#adding-users-or-groups-to-a-group)。 |
 | 成員 | 僅適用於群組。 列出特定群組的成員。 請參 [閱成員](#members-adding-users-or-groups-to-a-group)。 |
-| 權限 | 您可以為使用者或群組分配權限。 可讓您控制下列項目：<ul><li>與特定頁面／節點相關的權限。 請參 [閱設定權限](#setting-permissions)。 </li><li>與建立和刪除頁面及階層修改相關的權限。 ??? 可讓您 [分配權限](#settingprivileges)，例如階層修改，讓您建立和刪除頁面，</li><li>與複製權 [限相關的權限](#setting-replication-privileges) （通常從作者到發佈），根據路徑。</li></ul> |
+| 權限 | 您可以為使用者或群組分配權限。 可讓您控制下列項目：<ul><li>與特定頁面／節點相關的權限。 請參 [閱設定權限](#setting-permissions)。 </li><li>與建立和刪除頁面及階層修改相關的權限。???可讓您 [分配權限](#settingprivileges)，例如階層修改，讓您建立和刪除頁面，</li><li>與複製權 [限相關的權限](#setting-replication-privileges) （通常從作者到發佈），根據路徑。</li></ul> |
 | Impersonator | 讓其他使用者模擬帳戶。 當您需要使用者代表其他使用者時，就很有用。 請參閱 [模擬使用者](#impersonating-another-user)。 |
 | 偏好設定 | 設定 [組或用戶的首選項](#setting-user-and-group-preferences)。 例如，語言偏好設定。 |
 
@@ -504,7 +504,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
    ![cqsecurityuserpassword](assets/cqsecurityuserpassword.png)
 
-1. 輸入新密碼兩次； 由於它們未顯示在明文中，因此這是供確認的——如果它們不匹配，系統將顯示錯誤。
+1. 輸入新密碼兩次；由於它們未顯示在明文中，因此這是供確認的——如果它們不匹配，系統將顯示錯誤。
 1. 按一 **下「設定** 」以啟用帳戶的新密碼。
 
 ### 新增使用者或群組至群組 {#adding-users-or-groups-to-a-group}
@@ -701,7 +701,7 @@ AEM提供三種從群組移除使用者或群組的不同方式：
 1. 按一下「 **模擬** 」標籤。
 1. 按一下您要能夠模擬所選使用者的使用者。 將使用者（將模擬的使用者）從清單拖曳至「模擬」窗格。 名稱會出現在清單中。
 
-   ![chlimage_1-115](assets/chlimage_1-115.png)
+   ![chlimage_1-114](assets/chlimage_1-115.png)
 
 1. 按一下&#x200B;**「儲存」**。
 
@@ -740,7 +740,7 @@ AEM提供三種從群組移除使用者或群組的不同方式：
 
 權限註冊機制反映在「儲存庫配置」下的 **UI中**。
 
-新（自定義）權限的註冊本身受到必須在儲存庫級別(在JCR中： 將&#39;null&#39;傳入ac mgt api中作為&#39;absPath&#39;參數，如需詳細資訊，請參閱jsr 333)。 依預設，管 **理員** 和管理員的所有成員都具有該權限。
+新（自定義）權限的註冊本身受到必須在儲存庫級別(在JCR中：將&#39;null&#39;傳入ac mgt api中作為&#39;absPath&#39;參數，如需詳細資訊，請參閱jsr 333)。 依預設，管 **理員** 和管理員的所有成員都具有該權限。
 
 >[!NOTE]
 >
