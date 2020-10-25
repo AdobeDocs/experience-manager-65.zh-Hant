@@ -4,7 +4,10 @@ seo-title: 瞭解AEM 6.5功能
 description: 說明AEM 6.5的基本功能
 seo-description: 說明AEM 6.5的基本功能
 translation-type: tm+mt
-source-git-commit: 57622324b80660caebd8c5501929aec107ade9eb
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 4%
 
 ---
 
@@ -19,8 +22,8 @@ AEM Sites是Adeobe Experience Manager中的內容管理系統，可讓您在網�
 
 AEM Assets可讓您的組織從多租用戶雲端平台輕鬆建立、管理、提供和最佳化數位資產。 [深入探討我們有關AEM Assets的新視訊功能教學課程。](https://helpx.adobe.com/experience-manager/kt/assets/index/aem-6-4-assets.html)
 
-* [使用AEM Assets](/help/assets/managing-assets-touch-ui.md)
-* [使用動態媒體](/help/assets/dynamic-media.md)
+* [使用AEM Assets](/help/assets/manage-assets.md)
+* [使用 Dynamic Media](/help/assets/dynamic-media.md)
 * [AEM Assets發行說明](/help/release-notes/assets.md)
 
 ## AEM Forms {#aem-forms}
@@ -36,15 +39,15 @@ AEM Forms將表單製作、管理和發佈功能，以及通訊管理功能、�
 
 ## AEM Screens {#aem-screens}
 
-畫面是Adobe Experience manager的功能，可讓您發佈動態互動式數位體驗和互動，其中涉及不同螢幕類型，並搭配完整的數位行銷平台。  [了解更多.](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+畫面是Adobe Experience Manager的功能，可讓您發佈動態互動式數位體驗和互動，其中涉及不同螢幕類型，並搭配完整的數位行銷平台。  [了解更多.](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## AEM Communities {#aem-communities}
 
-社群是Adobe Experience manager的功能，可協助您建立對客戶、員工和品牌有價值的線上社群體驗，包括論壇、使用者群組、學習資源和其他社交功能。 [了解更多.](http://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
+社群是Adobe Experience Manager的功能，可協助您建立對客戶、員工和品牌有價值的線上社群體驗，包括論壇、使用者群組、學習資源和其他社交功能。 [了解更多.](http://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre是全新的Adobe Experience manager功能，可讓您點選網路上共用的一切，在您自己的網站上建立持續不斷的新鮮高品質內容。 [進一步瞭解](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) ，或 [直接進入我們的指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre是全新的Adobe Experience Manager功能，可讓您點選網路上共用的一切，在您自己的網站上建立持續不斷的新鮮高品質內容。 [進一步瞭解](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) ，或 [直接進入我們的指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
 ## AEM Foundation {#aem-foundation}
 
