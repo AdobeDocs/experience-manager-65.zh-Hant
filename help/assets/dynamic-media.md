@@ -8,7 +8,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 6%
@@ -28,7 +28,7 @@ ht-degree: 6%
 
 ## Dynamic Media的功能 {#what-you-can-do-with-dynamic-media}
 
-動態媒體可讓您在發佈資產之前先管理資產。 使用數位資產中會詳細說明如何使用 [資產](managing-assets-touch-ui.md)。 一般主題包括上傳、下載、編輯和發佈資產； 檢視和編輯屬性，以及搜尋資產。
+動態媒體可讓您在發佈資產之前先管理資產。 使用數位資產中會詳細說明如何使用 [資產](manage-assets.md)。 一般主題包括上傳、下載、編輯和發佈資產；檢視和編輯屬性，以及搜尋資產。
 
 僅限動態媒體的功能包括：
 
