@@ -3,7 +3,7 @@ title: 組織您的數位資產
 description: 使用Experience Manager組織您的數位資產、影像、檔案、檔案夾等。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bf49f515adb75bf4c0d50a53d0eaa7bb915389a9
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Microsoft Office和PDF檔案的所有數位資產、中繼資料和內容都會�
 
 ## 在資料夾中組織資產 {#organize-using-folders}
 
-組織資產的最基本方式是將資產儲存在檔案夾中。 它類似於在本地檔案系統中組織資料夾中的檔案。 如需如何建立和管理資料夾的詳細資訊，請參閱「管 [理資產」](managing-assets-touch-ui.md)。 如何命名檔案和檔案夾、如何排列子檔案夾，以及如何處理這些檔案夾中的檔案，都會對這些資產的處理方式產生重大影響。 透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料實務，您可以充份運用您的數位資產儲存庫。
+組織資產的最基本方式是將資產儲存在檔案夾中。 它類似於在本地檔案系統中組織資料夾中的檔案。 如需如何建立和管理資料夾的詳細資訊，請參閱「管 [理資產」](manage-assets.md)。 如何命名檔案和檔案夾、如何排列子檔案夾，以及如何處理這些檔案夾中的檔案，都會對這些資產的處理方式產生重大影響。 透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料實務，您可以充份運用您的數位資產儲存庫。
 
 * 在大多數情況下，您的數位資產存放庫會一直在成長。 因此，在內容建立週期的初期，必須正式化中繼資料的使用、檔案夾結構和檔案命名。
 * 僅使用資料夾，為您的數位資產建立一致的儲存結構。 此一致性有助於您的流程，並更好地管理資產。 例如，置於下列類型資料夾中的資產可協助您使用適當的 [描述檔來處理資產](processing-profiles.md):
@@ -53,7 +53,7 @@ Microsoft Office和PDF檔案的所有數位資產、中繼資料和內容都會�
 
 有了資產收集功 [!DNL Experience Manager Assets]能，您就可以簡化在使用者之間建立、編輯和共用資產的功能。 根據您的使用方式建立數種系列，包括包含資產、檔案夾和系列之靜態參考清單的系列，以及根據搜尋准則提取資產的系列。  您也可以使用不同位置的資產建立系列，並與具有不同存取、檢視和編輯權限等級的多名使用者共用。
 
-如需詳細資訊，請參閱「管 [理系列」](managing-collections-touch-ui.md)
+如需詳細資訊，請參閱「管 [理系列」](manage-collections.md)
 
 <!-- TBD items: add screenshots where applicable
 Any hints/recommendations of when to use what method of organizing? Some examples of how organizing helps towards a better taxonomy and improved content velocity.
