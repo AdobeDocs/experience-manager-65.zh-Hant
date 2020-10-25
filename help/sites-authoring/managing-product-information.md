@@ -1,8 +1,8 @@
 ---
 title: 創意專案與PIM整合
 seo-title: 創意專案與PIM整合
-description: Creative project簡化了整個像片拍攝工作流程，包括產生像片拍攝要求、上傳像片拍攝、協作像片拍攝，以及封裝核准的資產
-seo-description: Creative project簡化了整個像片拍攝工作流程，包括產生像片拍攝要求、上傳像片拍攝、協作像片拍攝，以及封裝核准的資產
+description: Creative Project簡化了整個像片拍攝工作流程，包括產生像片拍攝要求、上傳像片拍攝、協作像片拍攝，以及封裝核准的資產
+seo-description: Creative Project簡化了整個像片拍攝工作流程，包括產生像片拍攝要求、上傳像片拍攝、協作像片拍攝，以及封裝核准的資產
 uuid: 09f27d36-e725-45cb-88d1-27383aedceed
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,19 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 0e5d0a45-c663-4d91-b793-03d39119d103
 translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '3013'
+ht-degree: 0%
 
 ---
 
 
 # 創意專案與PIM整合{#creative-project-and-pim-integration}
 
-如果您是行銷人員或創意專業人員，則可以使用Adobe Experience Manager(AEM)中的Creative project工具來管理組織內與電子商務相關的產品攝影和相關的創意程式。
+如果您是行銷人員或創意專業人員，則可以使用Adobe Experience Manager(AEM)中的Creative Project工具來管理組織內與電子商務相關的產品攝影和相關的創意程式。
 
-尤其是，您可以使用Creative project簡化像片拍攝工作流程中的下列工作：
+尤其是，您可以使用Creative Project簡化像片拍攝工作流程中的下列工作：
 
 * 產生像片拍攝要求
 * 上傳像片
@@ -30,9 +33,9 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 >
 >如需 [將使用者角色和工作流程指派給特定類型使用者的詳細資訊](/help/sites-authoring/projects.md#user-roles-in-a-project) ，請參閱專案使用者角色。
 
-## 探索產品像片拍攝工作流程 {#exploring-product-photo-shoot-workflows}
+## 探索產品像片拍攝工作流程  {#exploring-product-photo-shoot-workflows}
 
-Creative project提供各種專案範本，以符合不同的專案需求。 「產 **品像片拍攝專案** 」範本現已推出。 此範本包含像片拍攝工作流程，可讓您開始並管理產品像片拍攝要求。 它也包含一系列工作，讓您透過適當的審查與核准程式，取得產品的數位影像。
+Creative Project提供各種專案範本，以符合不同的專案需求。 「產 **品像片拍攝專案** 」範本現已推出。 此範本包含像片拍攝工作流程，可讓您開始並管理產品像片拍攝要求。 它也包含一系列工作，讓您透過適當的審查與核准程式，取得產品的數位影像。
 
 範本包含下列工作流程：
 
@@ -64,7 +67,7 @@ Creative project提供各種專案範本，以符合不同的專案需求。 「
 
 若要起始像片拍攝請求，請點選或按一下專案，然後點選／按一下專案詳細資訊頁面中的「 **Add Work** 」（新增作品），以開始工作流程。
 
-![chlimage_1-135](assets/chlimage_1-135a.png)
+![chlimage_1-133](assets/chlimage_1-135a.png)
 
 產品像片拍攝專案包含下列現成可用的工作流程：
 
@@ -141,7 +144,7 @@ Creative project提供各種專案範本，以符合不同的專案需求。 「
 
    * 任務的名稱
    * 接收任務的預設用戶（角色）
-   * 任務的預設優先順序，顯示在用戶的任務清單中
+   * 任務的預設優先順序，該優先順序顯示在用戶的任務清單中
    * 工作負責人開啟任務時將顯示的任務說明
    * 任務的到期日期，根據任務開始的時間計算
 
@@ -153,6 +156,7 @@ Creative project提供各種專案範本，以符合不同的專案需求。 「
    * 潤飾產品像片拍攝
    * 拍照評論
    * 移至生產環境
+
    執行類似的程式，在「產品像片拍攝(商 **務整合)」工作流程中設定工作**。
 
 本節說明如何將產品資訊管理與您的創意專案整合。
@@ -219,6 +223,7 @@ Creative project提供各種專案範本，以符合不同的專案需求。 「
    * 與產品階層對應的資產會建立在與工作流程標題同名的檔案夾中。
    * 即使在攝影師提供影像之前，資產的中繼資料也會使用「資產」主控台進行編輯。
    * 會建立「像片拍攝」檔案夾，儲存攝影師提供的影像。 「像片拍攝」檔案夾包含「拍攝清單」中每個產品項目的子檔案夾。
+
    對於「產品像片拍攝」（不含商務整合）工作流程，「上傳像片清單」是第一項工作。 點選／按一 **下「上傳鏡頭清單** 」以上 **傳shotlist.csv檔案** 。 CSV檔案應包含產品ID。 其他欄位則為選用。 您可使用它們將資產對應至產品。
 
 ### 上傳鏡頭清單工作 {#upload-shot-list-task}
@@ -229,11 +234,11 @@ Creative project提供各種專案範本，以符合不同的專案需求。 「
 
 產品清單或CSV檔案可包含欄位，例如「 **類別」、「產品」、「Id」、「說明**」和 **「路徑」**。 「 **Id** 」欄位是必填欄位，並包含產品ID。 其他欄位則為選用。
 
-產品可以屬於特定類別。 產品類別可以列在「類別」欄下方的CSV **中** 。 「產 **品** 」欄位包含產品名稱。 在「說 **明** 」欄位中，輸入攝影師的產品說明或指示。
+產品可屬於特定類別。 產品類別可以列在「類別」欄下方的CSV **中** 。 「產 **品** 」欄位包含產品名稱。 在「說 **明** 」欄位中，輸入攝影師的產品說明或指示。
 
 >[!NOTE]
 >
->要上傳的影像名稱應以&quot;**&lt;ProductId>_&quot;開頭** ，其中產品ID是從Shotlist.csv檔案的 **Id欄位** 引用的 ** 。 例如，對於 **Id 397122**&#x200B;的拍攝清單中的產品，您可以上傳名稱為 **397122_highcontrast.jpg**、 **397122_lowlight.png**，依此類推。
+>要上傳的影像名稱應以「**&lt;ProductId>_」開頭** ，其中Product ID是從Shotlist.csv檔案的 **Id欄位** 引用的 ** 。 例如，對於 **Id 397122**&#x200B;的拍攝清單中的產品，您可以上傳名稱為 **397122_highcontrast.jpg**、 **397122_lowlight.png**，依此類推。
 
 1. 在專案資料夾中，點選／按一下「工作卡」中的省略號 [](#tracking-project-progress) ，以檢視工作流程中的工作清單。
 1. 選取「上 **傳鏡頭清單** 」工作，然後點選／按一下工具列中的「 **Open** 」圖示。
@@ -282,7 +287,7 @@ Creative project提供各種專案範本，以符合不同的專案需求。 「
 
    ![chlimage_1-155](assets/chlimage_1-155a.png)
 
-   如有需要，請使用Adobe Creative cloud應用程式編輯影像。
+   如有需要，請使用Adobe Creative Cloud應用程式編輯影像。
 
    ![chlimage_1-156](assets/chlimage_1-156a.png)
 
@@ -316,7 +321,7 @@ Creative project提供各種專案範本，以符合不同的專案需求。 「
 
 點選／按一下下一個層級，以根據您的產品資料階層來檢視產品。
 
-Creative project會將已核准的資產與參考的產品建立關聯。 資產中繼資料會以產品參考和基本資訊更新，這些資料會顯示在「 **Product Data** 」標籤的「AEM資產中繼資料」區段中的資產屬性下。
+Creative Project會將已核准的資產與參考的產品建立關聯。 資產中繼資料會以產品參考和基本資訊更新，這些資料會顯示在「 **Product Data** 」標籤的「AEM資產中繼資料」區段中的資產屬性下。
 
 >[!NOTE]
 在「產品像片拍攝」工作流程中（未整合商務），已核准的影像與產品沒有任何關聯。
@@ -338,13 +343,13 @@ Creative project會將已核准的資產與參考的產品建立關聯。 資產
 
    ![chlimage_1-162](assets/chlimage_1-162a.png)
 
-   點選／按一 **下「移至生產」**。 關閉確認消息。 資產會移至上述路徑，並根據資料夾階層，為每個產品的已核准資產自動建立回轉集。
+   點選／按一 **下「移至生產」**。 關閉確認訊息。資產會移至上述路徑，並根據資料夾階層，為每個產品的已核准資產自動建立回轉集。
 
-1. 點選／按一下工 **具列中** 「完成」圖示。 當最後一個步驟標示為完成時，工作流程便會完成。
+1. Tap/click the **Complete** icon from the toolbar. 當最後一個步驟標示為完成時，工作流程便會完成。
 
 ## 檢視DAM資產中繼資料 {#viewing-dam-asset-metadata}
 
-在您核准後，資產會連結至對應的產品。 核准 [資產的「屬性](/help/assets/managing-assets-touch-ui.md#editing-properties) 」頁面現在有額外的「產品 **資料** 」（連結的產品資訊）標籤。 此標籤會顯示連結資產的產品詳細資訊、SKU編號和其他產品相關的詳細資訊。 點選／按一下「 **編輯** 」圖示以更新資產屬性。 產品相關資訊仍為唯讀。
+在您核准後，資產會連結至對應的產品。 核准 [資產的「屬性](/help/assets/manage-assets.md#editing-properties) 」頁面現在有額外的「產品 **資料** 」（連結的產品資訊）標籤。 此標籤會顯示連結資產的產品詳細資訊、SKU編號和其他產品相關的詳細資訊。 點選／按一下「 **編輯** 」圖示以更新資產屬性。 產品相關資訊仍為唯讀。
 
 點選／按一下顯示的連結，以導覽至與資產相關聯之產品主控台中各自的產品詳細資料頁面。
 
