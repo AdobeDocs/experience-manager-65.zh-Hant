@@ -3,7 +3,7 @@ title: 使用參考和多頁管理複合資產
 description: 瞭解如何從內部建立數位資產的參考 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 1. 使用 [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 導覽至您要參考之資產的檔案系統位置。
 1. 將資產從本機資料夾拖曳至檔 [!DNL Illustrator] 案。
 
-1. 將檔案 [!DNL Illustrator] 保存到掛載的驅動器，或 [上傳](/help/assets/managing-assets-touch-ui.md#uploading-assets) 到儲存 [!DNL Experience Manager] 庫。
+1. 將檔案 [!DNL Illustrator] 保存到掛載的驅動器，或 [上傳](/help/assets/manage-assets.md#uploading-assets) 到儲存 [!DNL Experience Manager] 庫。
 
 1. 工作流程完成後，請前往資產的資產詳細資訊頁面。 現有數位資產的參考會列在「參 **[!UICONTROL 考]** 」欄的「相 **[!UICONTROL 依性]** 」下。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
-1. 將檔案 [!DNL Photoshop] 保存到掛載的驅動器或 [上載](/help/assets/managing-assets-touch-ui.md#uploading-assets) 到儲存庫 [!DNL Experience Manager] 。
+1. 將檔案 [!DNL Photoshop] 保存到掛載的驅動器或 [上載](/help/assets/manage-assets.md#uploading-assets) 到儲存庫 [!DNL Experience Manager] 。
 1. 工作流程完成後，資產詳細資 [!DNL Experience Manager] 料頁面中會列出現有資產的參考。
 
    若要檢視參考的資產，請關閉 [資產詳細資](/help/sites-authoring/basic-handling.md#rail-selector) 料頁面中的邊欄。
