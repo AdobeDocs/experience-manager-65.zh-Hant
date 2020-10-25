@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 9%
@@ -29,7 +29,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 
 >[!NOTE]
 >
->如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/managing-assets-touch-ui.md)。
+>如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/manage-assets.md)。
 
 ## 快速入門：回轉集 {#quick-start-spin-sets}
 
@@ -63,7 +63,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 
 1. [預覽回轉集。](/help/assets/previewing-assets.md)
 
-   選取「回轉集」(Spin Set)，您就可以預覽它。 旋轉回轉集。 您可以從左側導軌下拉式選單 **[!UICONTROL 的「檢視器]** 」選單中選擇不同的檢視器。
+   選取「回轉集」(Spin Set)，您就可以預覽它。 旋轉回轉集。 您可以從左側導軌下拉式選單 **[!UICONTROL 的「檢視器]** 」選單中，選擇不同的檢視器。
 
 1. [發佈回轉集。](/help/assets/publishing-dynamicmedia-assets.md)
 
@@ -77,13 +77,13 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** 此
 
    請參 [閱將回轉集連結至網頁](/help/assets/linking-urls-to-yourwebapplication.md)[和內嵌視訊或影像檢視器](/help/assets/embed-code.md)。
 
-如果需要，可以編 [輯回轉集](#editing-spin-sets)。 此外，您還可以查看和修改回轉 [集屬性](/help/assets/managing-assets-touch-ui.md#editing-properties)。
+如果需要，可以編 [輯回轉集](#editing-spin-sets)。 此外，您還可以查看和修改回轉 [集屬性](/help/assets/manage-assets.md#editing-properties)。
 
 ## 上傳回轉集的資產 {#uploading-assets-for-spin-sets}
 
 至少，一維自旋集需要8-12個項目鏡頭，二維自旋集需要16-24個項目鏡頭。 拍攝時間必須定期，以呈現項目旋轉和翻轉的印象。 例如，如果一維回轉集包含12個鏡頭，請針對每個鏡頭旋轉項目30度(360/12)。
 
-您可以像上傳AEM Assets中的任何其他資產一樣， [上傳回轉集的影像](/help/assets/managing-assets-touch-ui.md)。
+您可以像上傳AEM Assets中的任何其他資產一樣， [上傳回轉集的影像](/help/assets/manage-assets.md)。
 
 ### 擷取回轉集影像的指引 {#guidelines-for-shooting-spin-set-images}
 
