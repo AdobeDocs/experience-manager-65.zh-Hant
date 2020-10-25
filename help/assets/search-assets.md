@@ -4,7 +4,7 @@ description: 瞭解如何使用「篩選器」面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5968'
 ht-degree: 5%
@@ -35,7 +35,7 @@ ht-degree: 5%
 
 使用「篩 **[!UICONTROL 選器]** 」面板，根據各種選項（謂語）篩選搜尋結果，以縮小搜尋範圍，例如檔案類型、檔案大小、上次修改日期、資產狀態、前瞻分析資料和Adobe Stock授權。 您的管理員可以自訂「篩選」面板，並使用搜尋Facet新增或移除搜尋謂語。 「篩 [!UICONTROL 選器] 」面板中的「檔案類型  」篩選器具有混合狀態核取方塊。 因此，除非選擇所有嵌套的謂語（或格式），否則第一級複選框將被部分選中。
 
-[!DNL Experience Manager] 搜尋功能支援搜尋系列和搜尋系列中的資產。 請參閱 [搜尋系列](/help/assets/managing-collections-touch-ui.md)。
+[!DNL Experience Manager] 搜尋功能支援搜尋系列和搜尋系列中的資產。 請參閱 [搜尋系列](/help/assets/manage-collections.md)。
 
 ## 瞭解搜尋介面 {#searchui}
 
@@ -222,7 +222,7 @@ ht-degree: 5%
 
 ### 搜尋系列 {#collections}
 
-[!DNL Experience Manager] 搜尋功能支援搜尋系列和搜尋系列中的資產。 請參閱 [搜尋系列](/help/assets/managing-collections-touch-ui.md)。
+[!DNL Experience Manager] 搜尋功能支援搜尋系列和搜尋系列中的資產。 請參閱 [搜尋系列](/help/assets/manage-collections.md)。
 
 ## Asset selector {#assetpicker}
 
@@ -374,7 +374,7 @@ ht-degree: 5%
 
 ### 上傳資產時擷取文字 {#extracttextupload}
 
-您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+您可以設 [!DNL Experience Manager] 定在使用者上傳資產（例如PSD或PDF檔案）時，從資產擷取文字。 [!DNL Experience Manager] 索引擷取的文字，並協助使用者根據擷取的文字搜尋這些資產。 請參閱 [上傳資產](/help/assets/manage-assets.md#uploading-assets)。
 
 如果文字擷取對您的部署而言太過耗費資源，請考慮停用 [文字擷取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
@@ -447,7 +447,7 @@ ht-degree: 5%
 * 資產、檔案夾和其他系列的靜態參考清單。
 * 動態清單（智慧型系列），會根據搜尋准則填入系列中的資產。
 
-您可以根據搜尋准則建立智慧型系列。從「濾鏡 **[!UICONTROL 器]** 」面板中，選 **[!UICONTROL 擇「檔案]** 」並單 **[!UICONTROL 擊「保存智慧集」]**。請參閱 [管理系列](/help/assets/managing-collections-touch-ui.md)。
+您可以根據搜尋准則建立智慧型系列。從「濾鏡 **[!UICONTROL 器]** 」面板中，選 **[!UICONTROL 擇「檔案]** 」並單 **[!UICONTROL 擊「保存智慧集」]**。請參閱 [管理系列](/help/assets/manage-collections.md)。
 
 ## 疑難排解未預期的搜尋結果和問題 {#troubleshoot-unexpected-search-results-and-issues}
 
