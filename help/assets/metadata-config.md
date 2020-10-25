@@ -3,7 +3,7 @@ title: 中繼資料功能的設定和管理。
 description: 配置和管理與元 [!DNL Experience Manager Assets] 資料添加和管理相關的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 5%
@@ -269,7 +269,7 @@ To apply a metadata profile globally, follow these steps:
 >[!MORELIKETHIS]
 >
 >* [中繼資料概念與理解](metadata-concepts.md)。
->* [編輯多個系列的中繼資料屬性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
+>* [編輯多個系列的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)。
 >* [在Experience Manager Assets中匯入和匯出中繼資料](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
 >* [處理中繼資料、影像和視訊的設定檔](processing-profiles.md)。
 >* [最佳實務：組織您的數位資產，以使用處理設定檔](/help/assets/organize-assets.md)。
