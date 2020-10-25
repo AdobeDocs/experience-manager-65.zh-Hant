@@ -6,7 +6,7 @@ user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、提供和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 37%
@@ -113,7 +113,7 @@ ht-degree: 37%
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] 整合](aem-cc-integration-best-practices.md)
    + [與 [!DNL InDesign Server]](indesign.md)
    + [資產中的數位版權管理](drm.md)
-   + [使用示範套件獲取資產見解](touch-ui-using-demo-package-for-asset-insights.md)
+   + [使用示範套件獲取資產見解](use-demo-package-for-asset-insights.md)
    + [資產檔案格式最佳實務](assets-file-format-best-practices.md)
    + [監控資產的最佳實務](assets-monitoring-best-practices.md)
    + [Camera Raw支援](camera-raw.md)
@@ -139,21 +139,21 @@ ht-degree: 37%
    + [內容片段——標籤](content-fragments/content-fragments-markdown.md)
    + [建立內容片段的翻譯專案](creating-translation-projects-for-content-fragments.md)
 + Manage Assets {#managing}
-   + [管理數位資產](managing-assets-touch-ui.md)
-   + [管理集合](managing-collections-touch-ui.md)
+   + [管理數位資產](manage-assets.md)
+   + [管理集合](manage-collections.md)
    + [啟用重複偵測](duplicate-detection.md)
    + [組織數位資產](organize-assets.md)
    + [管理影片資產](managing-video-assets.md)
    + [建立翻譯專案](translation-projects.md)
    + [準備翻譯資產](preparing-assets-for-translation.md)
    + [從Experience Manager下載資產](download-assets-from-aem.md)
-   + [燈箱](touch-ui-light-box.md)
-   + [資產見解](touch-ui-asset-insights.md)
-   + [透過DTM獲得資產見解](touch-ui-using-dtm-for-asset-insights.md)
-   + [設定資產見解](touch-ui-configuring-asset-insights.md)
+   + [燈箱](light-box.md)
+   + [資產見解](asset-insights.md)
+   + [透過DTM獲得資產見解](use-dtm-for-asset-insights.md)
+   + [設定資產見解](configure-asset-insights.md)
    + [登入及登出資產](check-out-and-submit-assets.md)
    + [將翻譯雲端服務套用至資料夾](transition-cloud-services.md)
-   + [在網頁中使用頁面追蹤器和內嵌代碼](touch-ui-using-page-tracker.md)
+   + [在網頁中使用頁面追蹤器和內嵌代碼](use-page-tracker.md)
    + [管理複合資產](managing-linked-subassets.md)
    + [相關資產](related-assets.md)
    + [私人資料夾共用](private-folder.md)
