@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5944'
 ht-degree: 5%
@@ -237,7 +237,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 * 點陣化Adobe Illustrator檔案(.AI)或Adobe Photoshop封裝的Postscript檔案(.EPS)。
 * 注意：「視訊設定檔」和「影像設定檔」可分別用來定義視訊和影像的處理。
 
-請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+請參閱 [上傳資產](/help/assets/manage-assets.md#uploading-assets)。
 
 **若要設定資產處理**
 
@@ -428,7 +428,7 @@ spin-01-01
 
    您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
 
-1. 在頁面頂部附近的導航欄上，按一下「 **[!UICONTROL Setup]>應用程式設定[!UICONTROL >批集預設集]>** Set Preset批」。
+1. 在頁面頂部附近的導航欄上，按一下「 **[!UICONTROL Setup] >應用程式設定 [!UICONTROL >批集預設集] > ** Set Preset批」。
 
    請注 **[!UICONTROL 意，如「詳細資料]**」頁面右上角所設定，「檢視表單」是預設檢視。
 
