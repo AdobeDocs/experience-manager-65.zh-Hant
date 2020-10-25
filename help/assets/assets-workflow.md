@@ -3,7 +3,7 @@ title: 使用工作流程處理資產
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 3%
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ![部分預設工作流程](assets/aem-default-workflows.png)
 
-*圖：中提供的部分預設工作流程[!DNL Experience Manager]。*
+*圖：中提供的部分預設工作流程 [!DNL Experience Manager]。*
 
 ## 將工作流程套用至處理資產 {#applying-workflows-to-assets}
 
@@ -84,7 +84,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 將工作流程套用至系列 {#applying-a-workflow-to-a-collection}
 
-請參 [閱套用系列的工作流程](/help/assets/managing-collections-touch-ui.md#running-a-workflow-on-a-collection)。
+請參 [閱套用系列的工作流程](/help/assets/manage-collections.md#running-a-workflow-on-a-collection)。
 
 ## 自動啟動工作流程，有條件地處理資產 {#auto-execute-workflow-on-some-assets}
 
