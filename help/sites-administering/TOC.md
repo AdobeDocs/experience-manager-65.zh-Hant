@@ -4,11 +4,11 @@ product: adobe experience manager
 audience: admin-user
 user-guide-title: AEM 6.5 管理使用指南
 breadcrumb-title: Administering 指南
-user-guide-description: 了解關於管理 AEM。
+user-guide-description: 了解 AEM 的管理事項。
 translation-type: tm+mt
-source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
+source-git-commit: c7de7bee2368a558620aafdff5272e4bd07aae00
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '630'
 ht-degree: 10%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 10%
    + [語言複製精靈](tc-wizard.md)
    + [翻譯增強功能](tc-enhancements.md)
    + [翻譯最佳做法](tc-bp.md)
+   + [配置和配置瀏覽器](configurations.md)
    + [AEM常見問答集](aem-faqs.md)
 + 運作 {#operations}
    + [控制面板](dashboards.md)
