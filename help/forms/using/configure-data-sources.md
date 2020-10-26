@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ee2b13f2fc1f044f119ff54f332844d458663287
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,7 @@ AEM中的所有雲端服務設定都會整合在AEM `/conf` 儲存庫的資料�
 要為雲端服務配置配置資料夾：
 
 1. 前往「工 **[!UICONTROL 具>一般>設定瀏覽器]**」。
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. 請執行下列動作，為雲端設定啟用全域資料夾，或略過此步驟，為雲端服務設定建立並設定另一個資料夾。
 
    1. 在配置瀏 **[!UICONTROL 覽器中]**，選擇檔案 `global` 夾並點選 **[!UICONTROL 屬性]**。
