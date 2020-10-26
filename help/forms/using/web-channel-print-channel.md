@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 96d2b1cc-3252-4cc7-8b06-a897cbef8599
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 0%
 
 ---
 
@@ -49,6 +52,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 1. 如果您尚未建立範本，請建立範本檔案夾以保留您的互動式通訊網頁範本。 如需詳細資訊，請參閱「頁面範本中的范 [本資料夾——可編輯](/help/sites-developing/page-templates-editable.md)」。
 
    1. 點選「 **[!UICONTROL 工具]**![>設定](assets/tools.png) 瀏覽器 ****」。
+      * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
    1. 在「設定瀏覽器」頁面中，點選「 **[!UICONTROL 建立]**」。
    1. 在「建立配置」對話框中，指定資料夾的標題，選中「可編 **[!UICONTROL 輯模板]**」，然後點 **[!UICONTROL 選「建立」]**。
 
