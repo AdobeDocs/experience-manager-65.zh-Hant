@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Adobe Experience Manager(AEM)內容片段可讓您設計、建立、組織和發
 
 本頁及下列各頁涵蓋建立、設定和維護內容片段的工作：
 
-* [管理內容片段](/help/assets/content-fragments/content-fragments-managing.md) -建立您的內容片段； 然後編輯、發佈和參考
+* [管理內容片段](/help/assets/content-fragments/content-fragments-managing.md) -建立您的內容片段；然後編輯、發佈和參考
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md) -啟用、建立和定義模型
 * [變數——製作片段內容](/help/assets/content-fragments/content-fragments-variations.md) -製作片段內容並建立主版的變數
 * [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) —— 使用Markdown語法建立片段
@@ -43,8 +43,8 @@ Adobe Experience Manager(AEM)內容片段可讓您設計、建立、組織和發
 
 通訊頻道的數量逐年增加。 通常渠道是指傳送機制，例如：
 
-* 物理通道； 例如桌上型電腦、行動裝置。
-* 實體渠道的交付形式； 例如，「產品詳細資訊頁面」、「產品類別頁面」（適用於桌上型電腦）或「行動網頁」（適用於行動裝置）、「行動應用程式」（適用於行動裝置）。
+* 物理通道；例如桌上型電腦、行動裝置。
+* 實體渠道的交付形式；例如，「產品詳細資訊頁面」、「產品類別頁面」（適用於桌上型電腦）或「行動網頁」（適用於行動裝置）、「行動應用程式」（適用於行動裝置）。
 
 不過，您（可能）不想針對所有通道使用完全相同的內容——您需要根據特定通道最佳化您的內容。
 
@@ -70,15 +70,15 @@ AEM Content Services的設計目的，是將AEM中／來自AEM的內容描述和
 
 傳送是以JSON格式進行。
 
-AEM內容片段可用來描述和管理結構化內容。 結構化內容定義在可包含多種內容類型的模型中； 包括文字、數值資料、布林值、日期和時間等。
+AEM內容片段可用來描述和管理結構化內容。 結構化內容定義在可包含多種內容類型的模型中；包括文字、數值資料、布林值、日期和時間等。
 
 此結構化內容可搭配AEM核心元件的JSON匯出功能，用來將AEM內容傳送至AEM頁面以外的通道。
 
 >[!NOTE]
 >
->**「內容片段** 」和「 **[體驗片段](/help/sites-authoring/experience-fragments.md)**」是AEM中的不同功能：
+>**「內容片段** 」和「 **[體驗片段](/help/sites-authoring/experience-fragments.md)** 」是AEM中的不同功能：
 >* **內容片段** 是編輯內容，主要是文字和相關影像。 它們是純粹的內容，不需要設計和版面配置。
->* **體驗片段** ，內容已完整排版； 網頁的片段。
+>* **體驗片段** ，內容已完整排版；網頁的片段。
 
 >
 >
@@ -132,7 +132,7 @@ AEM內容片段可用來描述和管理結構化內容。 結構化內容定義�
 
 為了讓作者更能控制其內容，可將影像新增至內容片段及／或與內容片段整合。
 
-資產可以幾種方式與內容片段搭配使用； 各自各有優勢：
+資產可以幾種方式與內容片段搭配使用；各自各有優勢：
 
 * **將資產插入** （混合媒體片段）
 
@@ -146,7 +146,7 @@ AEM內容片段可用來描述和管理結構化內容。 結構化內容定義�
 
 * **相關聯的內容**
 
-   * 連接到碎片； 但不是片段的固定部分(請參閱 [內容片段的組成部分](#constituent-parts-of-a-content-fragment))。
+   * 連接到碎片；但不是片段的固定部分(請參閱 [內容片段的組成部分](#constituent-parts-of-a-content-fragment))。
    * 提供一定的定位彈性。
    * 在頁面上使用片段時，可輕鬆使用（當成中間內容）。
    * 如需詳 [細資訊](/help/assets/content-fragments/content-fragments-assoc-content.md) ，請參閱關聯內容。
@@ -176,7 +176,7 @@ AEM內容片段可用來描述和管理結構化內容。 結構化內容定義�
    * 文字區塊，即：
 
       * 由垂直空格分隔（歸位）
-      * 在多行文字元素中； 簡單或結構化片段
+      * 在多行文字元素中；簡單或結構化片段
    * 在富 [文本](/help/assets/content-fragments/content-fragments-variations.md#rich-text)[](/help/assets/content-fragments/content-fragments-variations.md#markdown) 和標籤下拉模式中，段落可以格式化為標題，在這種情況下，它和以下段落作為一個單位一起組成。
 
    * 在製作頁面時啟用內容控制。
@@ -198,16 +198,16 @@ AEM內容片段可用來描述和管理結構化內容。 結構化內容定義�
 
    >[!NOTE]
    >
-   >在頁面上使用 [片段時](/help/sites-authoring/content-fragments.md#using-associated-content) ，也可將資產新增為額外（中間）內容； 使用「資產」瀏覽器中的「關聯內容」或「資產」。
+   >在頁面上使用 [片段時](/help/sites-authoring/content-fragments.md#using-associated-content) ，也可將資產新增為額外（中間）內容；使用「資產」瀏覽器中的「關聯內容」或「資產」。
 
 * **相關聯的內容**
 
    * 這是片段外部的內容，但與編輯相關。 通常是影像、視訊或其他片段。
    * 當系列中的個別資產新增至頁面時，可與頁面編輯器中的片段搭配使用。 這表示它們是可選的，具體取決於特定渠道的要求。
-   * 這些資產會 [透過系列關聯至片段](/help/assets/content-fragments/content-fragments-assoc-content.md); 關聯的系列可讓作者決定在編寫頁面時要使用哪些資產。
+   * 這些資產會 [透過系列關聯至片段](/help/assets/content-fragments/content-fragments-assoc-content.md);關聯的系列可讓作者決定在編寫頁面時要使用哪些資產。
 
       * 系列可以透過範本、預設內容或作者在片段製作期間，與片段建立關聯。
-      * [資產(DAM)集合](/help/assets/managing-collections-touch-ui.md) ，是片段相關內容的基礎。
+      * [資產(DAM)集合](/help/assets/manage-collections.md) ，是片段相關內容的基礎。
    * （可選）您也可以將片段本身新增至系列，以協助追蹤。
 
 
@@ -238,8 +238,8 @@ AEM內容片段可用來描述和管理結構化內容。 結構化內容定義�
 
 * **變數**
 
-   * 轉譯特定於編輯目的的片段文字； 可以與頻道相關，但非強制性，也可以是臨機本機修改。
-   * 建立為主版的副 **本**，但可根據需要進行編輯； 這些變化本身之間通常有內容重疊。
+   * 轉譯特定於編輯目的的片段文字；可以與頻道相關，但非強制性，也可以是臨機本機修改。
+   * 建立為主版的副 **本**，但可根據需要進行編輯；這些變化本身之間通常有內容重疊。
    * 可在片段製作期間定義，或在片段範本中預先定義。
    * 儲存在片段中，以協助避免內容復本散布。
    * 如果主版內 [容已更新](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) ，則可與主版同步變數。
@@ -268,20 +268,20 @@ AEM內容片段可用來描述和管理結構化內容。 結構化內容定義�
    * 啟 [用，然後使用工具建立](/help/assets/content-fragments/content-fragments-models.md)。
    * 建立結 [構化片段所需](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments)。
    * 定義片段的結構（標題、內容元素、標籤定義）。
-   * 內容模型定義需要一個標題和一個資料元素； 其他一切都是可選的。 模型會定義片段的最小範圍，並定義預設內容（如果適用）。 製作片段內容時，作者無法變更已定義的結構。
+   * 內容模型定義需要一個標題和一個資料元素；其他一切都是可選的。 模型會定義片段的最小範圍，並定義預設內容（如果適用）。 製作片段內容時，作者無法變更已定義的結構。
 
 * **片段範本**
 
    * 建立簡 [單片段所需](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments)。
    * Usually [developed during project implementation](/help/sites-developing/content-fragment-templates.md); cannot be created when authoring.
    * 定義簡單片段的基本屬性 (標題、文字元素數目、標記定義)。
-   * 範本定義需要一個標題和一個文字元素； 其他一切都是可選的。 範本會定義片段的最小範圍和預設內容（如果適用）。 作者稍後可將片段延伸至範本中定義的範圍以外。
+   * 範本定義需要一個標題和一個文字元素；其他一切都是可選的。 範本會定義片段的最小範圍和預設內容（如果適用）。 作者稍後可將片段延伸至範本中定義的範圍以外。
 
 * **內容片段元件**
 
    * 有助於以HTML和／或JSON格式傳送片段。
    * 在頁面 [上參考片段時需要](/help/sites-authoring/content-fragments.md)。
-   * 負責片段的排版和傳送； 即頻道。
+   * 負責片段的排版和傳送；即頻道。
    * 片段需要一個或多個專用元件來定義版面，並傳送部分或所有元素／變化和相關內容。
    * 將片段拖曳至編寫時的頁面，將會自動關聯所需的元件。
 
