@@ -1,5 +1,5 @@
 ---
-title: 「教學課程： 建立範本」
+title: 「教學課程：建立範本」
 seo-title: 建立互動式通訊的列印和網頁範本
 description: 建立互動式通訊的列印和網頁範本
 seo-description: 建立互動式通訊的列印和網頁範本
@@ -9,15 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1812'
 ht-degree: 0%
 
 ---
 
 
-# 教學課程： 建立範本{#tutorial-create-templates}
+# 教學課程：建立範本{#tutorial-create-templates}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
@@ -47,13 +47,13 @@ ht-degree: 0%
 
 根據使 [用案例](/help/forms/using/create-your-first-interactive-communication.md)[和解剖結](/help/forms/using/planning-interactive-communications.md)構，在XDP範本中建立下列子表單：
 
-* 帳單詳細資訊： 包含檔案片段
-* 客戶詳細資訊： 包含檔案片段
-* 清單匯總： 包含檔案片段
-* 摘要： 包含文檔片段（費用子表單）和圖表（圖表子表單）
-* 明細呼叫： 包含表格（版面片段）
-* 立即付款： 包含影像
-* 增值服務： 包含影像
+* 帳單詳細資訊：包含檔案片段
+* 客戶詳細資訊：包含檔案片段
+* 清單匯總：包含檔案片段
+* 摘要：包含文檔片段（費用子表單）和圖表（圖表子表單）
+* 明細呼叫：包含表格（版面片段）
+* 立即付款：包含影像
+* 增值服務：包含影像
 
 ![create_print_template](assets/create_print_template.gif)
 
@@ -89,7 +89,7 @@ ht-degree: 0%
    * BillDetails
    * 客戶詳細資訊
    * BillSummary
-   * 摘要——選擇子 **表單** (Subform **)頁籤，然後從此子表單的「內容** 」(Content **** )下拉清單中選擇「定位」(Positioned)。 在「摘要」子表單中插入 **以下子表** 單。
+   * 摘要——選擇子 **表單** (Subform **)頁籤，然後從此子表單的「內容」(Content** )下拉清單中選擇「定位」(Positioned **** )。 在「摘要」子表單中插入 **以下子表** 單。
 
       * 費用
       * 圖表
@@ -97,7 +97,7 @@ ht-degree: 0%
    * PayNow
    * ValueAddedServices
 
-   為節省時間，您也可以複製並貼上現有的子表單，以建立新的子表單。
+   為節省時間，您也可以複製並貼上現有的子表單以建立新的子表單。
 
    要將 **Charts** 子表單移到Charges子表單的右側，請從左窗格中選擇 **Charts** 子表單，選擇 **Layout** 頁籤，然後為 **** XAnchor欄位指定值。 值必須大於Charges子表單的 **Width** 欄位 **的值** 。 選擇「 **費用** 」子表單，然後選擇「 **佈局** 」頁籤以查看「寬 **度** 」欄位的值。
 
@@ -140,9 +140,9 @@ ht-degree: 0%
 
 1. 在表 **1旁的左窗格中點選** + **** ，然後按一下右鍵「單元格1 **」並選擇Oracle Object********** Rename to Date。
 
-   同樣地，將 **Cell2**、 **Cell3、Cell3**、 **Cell4、TimeCell4、** TimeCell Number、CellNumber、CellDeserCharges分別重新命名為Cell2、 **Cell3、Cell3、Cell4、****************** Cell5。
+   同樣地，將 **Cell2**、Cell3 **、Cell3**、 **Cell4、TimeCell4、** TimeCell Number、CellNumber、CellDeserCharges分別重新命名為Cell2、Cell3、 ******************** Cell3、Cell4、TimeCell4。
 
-1. 按一下「設計器」( **View** )中的「頁首」(Header)欄位，並將它們更名為 **Time**、 **Number**、Duration和Charges ******** Charges。
+1. 按一下「設計器」( **View** )中的「頁首」(Header)欄位，並將它們更名為「 **Time**」（時間）、「 **Number**」（編號）、「Acchirgs」（持續時間）和「Charges ********」（收費）。
 
    ![版面片段](assets/layout_fragment_print_new.png)
 
@@ -180,8 +180,9 @@ ht-degree: 0%
 執行以下步驟為可編輯模板建立資料夾：
 
 1. 點選 **「工** 具 ![槌子圖示](assets/hammer-icon.svg) >設定 **瀏覽器**」。
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. 在「設定瀏覽器」頁面中，點選「 **建立**」。
-1. 在「創 **建配置** 」對話框中，指定 **Create_First_IC_templates** 作為資料夾的標題，選中「可編輯模板 **」，然後******&#x200B;點選「建立」。
+1. 在「創 **建配置** 」對話框中，指定 **Create_First_IC_templates** 作為資料夾的標題，選中「 **Editable Templates**」，然後 ****&#x200B;點選「建立」。
 
    ![設定網頁範本](assets/create_first_ic_web_template_new.png)
 
@@ -191,13 +192,13 @@ ht-degree: 0%
 
 根據使用 [案例](/help/forms/using/create-your-first-interactive-communication.md)[和解剖結](/help/forms/using/planning-interactive-communications.md)構，在Web範本中建立下列面板：
 
-* 帳單詳細資訊： 包含檔案片段
-* 客戶詳細資訊： 包含檔案片段
-* 清單匯總： 包含檔案片段
-* 費用匯總： 包含檔案片段和圖表（雙欄版面）
-* 明細呼叫： 包含表格
-* 立即付款： 包含「 **立即付** 款」按鈕和影像
-* 增值服務： 包含影像和「訂閱」 **按鈕** 。
+* 帳單詳細資訊：包含檔案片段
+* 客戶詳細資訊：包含檔案片段
+* 清單匯總：包含檔案片段
+* 費用匯總：包含檔案片段和圖表（雙欄版面）
+* 明細呼叫：包含表格
+* 立即付款：包含「 **立即付** 款」按鈕和影像
+* 增值服務：包含影像和「訂閱」 **按鈕** 。
 
 ![create_web_template](assets/create_web_template.gif)
 
@@ -217,7 +218,7 @@ ht-degree: 0%
 
    ![範本編輯器](assets/template_editor_initial_content_new.png)
 
-1. 點選 **「根面板** 」，然後點選 **** +以檢視可新增至範本的元件清單。
+1. 點選 **「Root Panel** （根面板）」，然 **** 後點選+以檢視您可新增至範本的元件清單。
 1. 從清 **單中選擇** 「面板」，在「根面板」上方新 **增面板**。
 1. 在左窗格 **中選擇** 「內容」標籤。 在步驟8中新增的新面板會顯示在內容樹 **的「根面板** 」下方。
 
@@ -232,7 +233,7 @@ ht-degree: 0%
 
    1. 點選 ![](/help/forms/using/assets/done_icon.png) 以儲存屬性。
 
-   面板的名稱會更新為內容樹 **中的Bill Details** 。
+   面板的名稱會更新為內容樹 **中的Bill Details** （清單詳細資訊）。
 
 1. 重複步驟7 - 11，將具有下列屬性的面板新增至範本：
 
@@ -241,7 +242,7 @@ ht-degree: 0%
    | customerdetails | 客戶詳細資訊 | 1 |
    | 開單匯總 | 清單摘要 | 1 |
    | 摘要費用 | 費用匯總 | 2 |
-   | itemisedcalls | 明細呼叫 | 1 |
+   | itimisedcalls | 明細呼叫 | 1 |
    | paynow | 立即付款 | 2 |
    | vas | 增值服務 | 1 |
 
