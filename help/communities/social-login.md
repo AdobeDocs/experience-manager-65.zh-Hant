@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '2787'
+source-wordcount: '2803'
 ht-degree: 1%
 
 ---
@@ -109,6 +109,8 @@ Adobe Granite OAuth應用程式和Provider [](#adobe-granite-oauth-application-a
 1. 前往「工 **[!UICONTROL 具]** >一 **[!UICONTROL 般]** >設 **[!UICONTROL 定瀏覽器]**」。 選取您的上下文並編輯屬性。 如果尚未啟用，請啟用雲端設定。
 
    ![config-propertiespng](assets/config-propertiespng.png)
+
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 
 1. **建立／編輯** Facebook雲端服務設定。
 
@@ -259,6 +261,8 @@ Adobe Granite OAuth應用程式和Provider [](#adobe-granite-oauth-application-a
 1. 前往「工 **[!UICONTROL 具]** >一 **[!UICONTROL 般]** >設 **[!UICONTROL 定瀏覽器]**」。 選取您的上下文並編輯屬性。 如果尚未啟用，請啟用雲端設定。
 
    ![twitterconfigpropping](assets/twitterconfigproppng.png)
+
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 
 1. 建立／編輯Twitter雲端服務設定。
 
@@ -459,7 +463,7 @@ Facebook和Twitter的後續步驟相同：
 
 在作者例項上，以管理權限登入：
 
-1. 從全域導覽：選 **擇「工[具」,CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md)。**
+1. 從全域導覽：選 **擇「工 [具」,CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md)。**
 1. 從ntBaseLucene的副本建立名為ntBaseLucene-oauth的索引：
 
    * 在節點下 `/oak:index`
