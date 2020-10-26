@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: d6ae8bffa2d9d59f5656b9344d8826128f12885c
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1661'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,10 @@ AEM 6.5隨附預先安裝的Livefyre功能套件1.2.6。 此套件僅包含與AE
 
    如需功能套件的詳細資訊和版本注意事項，請參閱 [功能套件](https://helpx.adobe.com/experience-manager/6-3/release-notes/feature-packs-release-notes.html)。
 
-### 設定AEM以使用Livefyre: 建立配置資料夾 {#configure-aem-to-use-livefyre-create-a-configuration-folder}
+### 設定AEM以使用Livefyre:建立配置資料夾 {#configure-aem-to-use-livefyre-create-a-configuration-folder}
 
 1. 在AEM首頁中，按一下左側邊 **欄的** 「工具」圖示，然後導覽至「一般> **設定瀏覽器」**。
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. 按一下 **建立** ，開啟建立配置對話框。
 1. 命名您的設定，並勾選「雲端 **設定」核取方塊** 。
 
@@ -59,7 +60,7 @@ AEM 6.5隨附預先安裝的Livefyre功能套件1.2.6。 此套件僅包含與AE
 
    ![livefyre-aem-create-config-folder](assets/livefyre-aem-create-config-folder.png)
 
-### 設定AEM以使用Livefyre: 建立Livefyre設定 {#configure-aem-to-use-livefyre-create-a-livefyre-configuration}
+### 設定AEM以使用Livefyre:建立Livefyre設定 {#configure-aem-to-use-livefyre-create-a-livefyre-configuration}
 
 設定AEM以使用您組織的Livefyre授權認證，允許Livefyre與AEM之間通訊。
 
@@ -70,7 +71,7 @@ AEM 6.5隨附預先安裝的Livefyre功能套件1.2.6。 此套件僅包含與AE
 
    >[!NOTE]
    >
-   >資料夾的屬性必須啟用雲端設定，才能將Livefyre設定新增至資料夾。 配置資料夾是在配置瀏覽器中建立和管理的。
+   >資料夾的屬性必須啟用雲端設定，才能將Livefyre設定新增至資料夾。 配置資料夾是在配置瀏覽器中建立和 [管理的。](/help/sites-administering/configurations.md)
    >
    >不能為配置建立名稱——該名稱由配置所在資料夾的路徑引用。 每個資料夾只能有一個配置。
 
@@ -141,7 +142,7 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre的SSO服務之�
 
 >[!NOTE]
 >
->在使用「資產」匯入UGC之前，您必須先在Livefyre Studio中設定「Social帳戶」和「Rights Requests」帳戶。 請參閱 [設定： 權限要求](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html) ，以取得詳細資訊。
+>在使用「資產」匯入UGC之前，您必須先在Livefyre Studio中設定「Social帳戶」和「Rights Requests」帳戶。 請參閱 [設定：權限要求](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html) ，以取得詳細資訊。
 
 若要將UGC匯入AEM資產：
 
@@ -156,7 +157,7 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre的SSO服務之�
    * 按一下Twitter或Instagram標籤，即可從Twitter和Instagram取得。 使用搜尋或篩選器來尋找內容。
 
 1. 選取您要匯入的資產。 您選取的資產會自動計算並儲存在「選取的」標 **簽下** 。
-1. **可選**: 按一下「 **選取** 」標籤，並檢視選取的UGC內容以匯入。
+1. **可選**:按一下「 **選取** 」標籤，並檢視您選取的UGC內容以匯入。
 1. 按一下&#x200B;**下一步**。
 
    ![livefyre-aem-import-ugc2](assets/livefyre-aem-import-ugc2.png)
