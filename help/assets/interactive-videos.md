@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '6050'
 ht-degree: 4%
@@ -222,7 +222,7 @@ Quickview的大多數實施都採用以下模式：
 
 在製作環境中按一下縮圖時，會出現「快速檢視」對話方塊的預覽。
 
-![chlimage_1-29](assets/chlimage_1-127.png)
+![chlimage_1-21](assets/chlimage_1-127.png)
 
 您可以選擇建立自訂的互動式視訊檢視器預設集。 您可決定視訊播放器的樣式、互動式縮圖和視訊結尾的縮圖格線檢視。
 
@@ -236,14 +236,14 @@ Quickview的大多數實施都採用以下模式：
 
 如果您已上傳視訊和縮圖資產，請繼續「新增 [視訊的互動功能」](#adding-interactivity-to-your-video)。
 
-如果您上傳的視訊或影像不正確，或您想要刪除已上傳的視訊或影像，而您不再需要，請參閱刪 [除資產](/help/assets/managing-assets-touch-ui.md#deleting-assets)。
+如果您上傳的視訊或影像不正確，或您想要刪除已上傳的視訊或影像，而您不再需要，請參閱刪 [除資產](/help/assets/manage-assets.md#deleting-assets)。
 
 若要上傳視訊及其相關縮圖資產：
 
 1. 將視訊和相關的縮圖資產上傳至您想要的檔案夾或檔案夾。
 
-   請參閱 [上傳資產](/help/assets/managing-assets-touch-ui.md)。
-請參 [閱使用FTP工作排程上傳資產](/help/assets/managing-assets-touch-ui.md)。
+   請參閱 [上傳資產](/help/assets/manage-assets.md)。
+請參 [閱使用FTP工作排程上傳資產](/help/assets/manage-assets.md)。
 
    現在，為您的視訊加入互動功能。
 
