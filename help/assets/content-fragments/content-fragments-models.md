@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 20%
@@ -30,7 +30,7 @@ ht-degree: 20%
 
 若要啟用內容片段模型，您必須：
 
-* 在配置管理器中啟用內容片段模型
+* 在配置瀏覽器中啟用內容片段 [模型](/help/sites-administering/configurations.md)
 * 將設定套用至您的「資產」檔案夾
 
 ### 在Configuration Manager中啟用內容片段模型 {#enable-content-fragment-models-in-configuration-manager}
@@ -81,11 +81,11 @@ ht-degree: 20%
 1. 導覽至「 **工具**」、「資 **產」**，然後開啟「 **內容片段模型」**。
 
 1. 導覽至包含內容片段模型的檔案夾。
-1. 開啟所需的編輯 **模型**; 使用快速動作，或從工具列中選取模型和動作。
+1. 開啟「編輯」( **Edit)所需的模型**;使用快速動作，或從工具列中選取模型和動作。
 
    開啟模型編輯器後，會顯示：
 
-   * 左： 欄位已定義
+   * 左：欄位已定義
    * 右：資 **料類型** ，可用於建立欄位( **和屬性** ，以供建立欄位後使用)
 
    >[!NOTE]
