@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3954178cc660368a2b374bbb4d05d93d7309d4eb
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3218'
 ht-degree: 1%
 
 ---
@@ -201,7 +201,7 @@ ht-degree: 1%
 
    * 類型: `String`
 
-   * 值： 您要顯示在「範本」控制台中的標題(資料 **夾** )。
+   * 值：您要顯示在「範本」控制台中的標題(資料 **夾** )。
 
 1. 除了 *標準編寫權限* (例如 `content-authors`)，您現在需要指派群組，並定義作者在新資料夾中建立範本所需的存取權限(ACL)。
 
@@ -218,14 +218,16 @@ ht-degree: 1%
 1. 按一下&#x200B;**建立**。
 1. 在「創 **建配置** 」對話框中，需要配置以下欄位：
 
-   * **標題**: 提供配置資料夾的標題
-   * **可編輯的範本**: 勾選以允許在此資料夾內編輯範本
+   * **標題**:提供配置資料夾的標題
+   * **可編輯的範本**:勾選以允許在此資料夾內編輯範本
 
 1. Click **Create**
 
 >[!NOTE]
 >
 >在「配置瀏覽器」中，如果您希望在此資料夾內建立模板，則可以編輯全局資料夾並激活「可編輯模板 **** 」選項，但建議不要這樣做。
+>
+>See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 
 ### ACL和組 {#acls-and-groups}
 
@@ -366,7 +368,7 @@ We.Retail參考實作的范 [本資料夾](/help/sites-developing/we-retail.md) 
 * 範本類型可有效提供範本的範本。 建立新模板時，將使用所選模板類型的結構和初始內容建立新模板。
 
    * 模板類型將被複製以建立模板。
-   * 複製完成後，範本和範本類型之間的唯一連接，就是用於資訊目的的靜態參考。
+   * 複製完成後，範本和範本類型之間的唯一連接，就是供參考之用的靜態參考。
 
 * 範本類型可讓您定義：
 
@@ -505,7 +507,7 @@ GITHUB代碼
 
 定義結果頁的結構：
 
-* 在建立新頁面時會與 `/initial`初始內容()合併。
+* 會在建立新頁面時與 `/initial`初始內容()合併。
 * 對結構所做的變更將反映在使用範本建立的任何頁面中。
 * ( `root` )節 `structure/jcr:content/root`點定義將在結果頁面中提供的元件清單。
 
@@ -576,13 +578,13 @@ GITHUB代碼
 
       * 定義屬性：
 
-         * 名稱： 狀態
-         * 類型： 字串
+         * 名稱：狀態
+         * 類型：字串
          * 值: `enabled`
 
 1. **允許的範本**
 
-   * [在子分支的適當頁面或根頁 **面的&#x200B;**](/help/sites-authoring/templates.md#allowing-a-template-author)「頁面屬性」上定義允許的範本路徑。
+   * [在子分支的適當頁面或根頁 **面的**](/help/sites-authoring/templates.md#allowing-a-template-author) 「頁面屬性」上定義允許的範本路徑。
    * 設定屬性：
       `cq:allowedTemplates`
 在 
@@ -600,7 +602,7 @@ GITHUB代碼
 * 對範本和範本類型中保存的資訊有引用。 這是通過具有以下 `jcr:content` 屬性的節點實現的：
 
    * `cq:template`
-提供實際模板的動態參考； 可讓範本的變更反映在實際頁面上。
+提供實際模板的動態參考；可讓範本的變更反映在實際頁面上。
 
    * `cq:templateType`
 提供範本類型的參考。
@@ -628,7 +630,7 @@ GITHUB代碼
    * 頁面元件將合併模 `structure/jcr:content` 板的樹和頁 `jcr:content` 面的樹。
 
    * 頁面元件僅允許作者編輯已標幟為可編輯的範本結構節點（以及任何子系）。
-   * 在頁面上呈現元件時，該元件的相對路徑會從節點中取 `jcr:content` 得； 然後，將搜索模 `policies/jcr:content` 板節點下的相同路徑。
+   * 在頁面上呈現元件時，該元件的相對路徑會從節點中取 `jcr:content` 得；然後，將搜索模 `policies/jcr:content` 板節點下的相同路徑。
 
       * 此節 `cq:policy` 點的屬性指向實際內容策略（即它包含該元件的設計配置）。
 
