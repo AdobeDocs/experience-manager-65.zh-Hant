@@ -10,9 +10,9 @@ topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,7 @@ AEM Forms支援最適化表單中的CAPTCHA。 您可以使用Google的reCAPTCHA
 1. 建立雲端服務的設定容器。
 
    1. 前往「工 **[!UICONTROL 具>一般>設定瀏覽器]**」。
+      * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
    1. 請執行下列動作，為雲端設定啟用全域資料夾，或略過此步驟，為雲端服務設定建立並設定另一個資料夾。
 
       1. 在「設定瀏覽器」中，選取全域 **[!UICONTROL 資料夾]** ，然後點選「 **[!UICONTROL 屬性」]**。
