@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '4530'
 ht-degree: 0%
@@ -248,7 +248,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 ### 使用者介面{#ui-6560}
 
 * 卸載瀏覽器介面不顯示所有作業主題(NPR-34308)。
-* 配置瀏覽器介面不顯示所有配置(NPR-33644)。
+* 配置 [瀏覽器](/help/sites-administering/configurations.md) (Configuration Browser)介面不顯示所有配置(NPR-33644)。
 * 在搜尋 `Esc` 要模擬的使用者時按下鍵時，會關閉 **[!UICONTROL User]** （使用者）對話方塊，而非使用者清單(NPR-34084)。
 
 ### 整合 {#integrations-6560}
