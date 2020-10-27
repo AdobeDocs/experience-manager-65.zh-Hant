@@ -1,12 +1,13 @@
 ---
 cloud: experience-cloud
 product: adobe experience manager
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Developing 使用指南
 breadcrumb-title: Developing 指南
-user-guide-description: 本指南涵蓋如何建立您的 AEM 執行個體。
+user-guide-description: 本指南說明如何建立 AEM 執行個體。
 translation-type: tm+mt
-source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
+source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
 workflow-type: tm+mt
 source-wordcount: '835'
 ht-degree: 11%
