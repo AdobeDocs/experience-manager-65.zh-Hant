@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: 0d5ee29141c897284f3f298d921f4f8528216f8f
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 0%
@@ -50,7 +50,7 @@ ht-degree: 0%
 **若要上傳資產以搭配360視訊檢視器使用：**
 
 1. 已建立專用於360視訊資產的資料夾。
-1. [將最適化視訊描述檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
+1. [將最適化視訊描述檔套用至資料夾。](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
 
    轉譯360視訊內容比標準非360視訊內容對來源視訊解析度和編碼轉譯解析度的要求更高。
 
@@ -96,8 +96,8 @@ ht-degree: 0%
 
 當您對360視訊感到滿意時，就可以發佈它。
 
-See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html).
-See [Linking URLs to your web application](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). 請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
+See [Embedding the Video or Image Viewer on a Web Page.](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)
+請參 [閱連結URL至您的Web應用程式](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)。 請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
 See [Adding Dynamic Media Assets to pages.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
 
 **若要預覽360個視訊**
