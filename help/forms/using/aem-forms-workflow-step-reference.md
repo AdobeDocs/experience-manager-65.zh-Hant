@@ -4,13 +4,12 @@ seo-title: OSGi上的表單導向工作流程——步驟參考
 description: OSGi步驟的表單導向工作流程可讓您快速建立以表單為基礎的調適性工作流程。
 seo-description: OSGi步驟的表單導向工作流程可讓您快速建立以表單為基礎的調適性工作流程。
 uuid: 6f791c45-0e35-4c55-9106-5340caab94b7
-contentOwner: null
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: aff67332de7295936ea45e3f38cd204fd448a570
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
 source-wordcount: '7109'
 ht-degree: 0%
@@ -423,7 +422,7 @@ AEM檔案服務是一組用來建立、組合和保護PDF檔案的服務。 AEM 
 
    * **若要使用自訂值**:在常值方塊中輸入地區代碼，或選取包含地區代碼的字串變數。 如需支援地區設定代碼的完整清單，請參閱http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html。
 
-* **[!UICONTROL 副本]**:一個整數值，它指定要為輸出生成的副本數。 預設值為2。
+* **[!UICONTROL 副本]**:一個整數值，它指定要為輸出生成的副本數。 預設值為1。
 
 * **[!UICONTROL 雙面打印]**: 指定是使用雙面打印還是單面打印的分頁值。 支援PostScript和PCL的打印機使用此值。如果提供常值，請選擇以下值之一：
    * **[!UICONTROL 雙工長邊]**:使用長邊分頁功能，使用雙面列印和列印。
