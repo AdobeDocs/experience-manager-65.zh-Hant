@@ -1,19 +1,21 @@
 ---
-title: Document Security|處理使用者資料
-seo-title: Document Security|處理使用者資料
-description: 'null'
-seo-description: 'null'
+title: Document Security |處理使用者資料
+seo-title: Document Security |處理使用者資料
+description: Document Security |處理用戶資料
 uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 0%
 
 ---
 
 
-# Document Security|處理使用者資料 {#document-security-handling-user-data}
+# Document Security |處理使用者資料 {#document-security-handling-user-data}
 
 AEM Forms檔案安全性可讓您建立、儲存並套用預先定義的保全設定至檔案。 它可確保只有授權的使用者才能使用檔案。 您可以使用原則來保護檔案。 原則是包含安全性設定和授權使用者清單的資訊集合。 您可以套用原則至一或多份檔案，並授權在AEM Forms JEE使用者管理中新增的使用者。
 
@@ -156,6 +158,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. 開啟或表中每行的XML blob `EdcPolicyXMLEntity` 並 `EdcPolicyArchiveEntity` 提取XML檔案。 XML檔案類似於下方所示的檔案。
    1. 編輯XML檔案以刪除主ID的blob。
    1. 對另一個檔案重複步驟1和2。
+
    >[!NOTE]
    >
    >您必須刪除主ID標籤中的完 `Principal` 整blob，否則策略XML可能會損壞或不可用。
@@ -194,6 +197,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. 以管理員身分，登入Forms JEE管理主控台，網址為https://[*server*]:[*port*]/adminui。
    1. 導覽至「 **[!UICONTROL 服務> Document Security >原則集」]**。
    1. 開啟策略集並從策略中刪除用戶。
+
    **使用檔案安全性網頁**
 
    具有建立個人原則權限的檔案安全性使用者可從其原則中刪除使用者資料。 若要這麼做：
@@ -201,10 +205,11 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. 擁有個人原則的使用者可登入其檔案安全網頁https://[*server*]:[*port*]/edc。
    1. 導覽至「 **[!UICONTROL 服務> Document Security >我的原則」]**。
    1. 開啟原則，並從原則中刪除使用者。
+
    >[!NOTE]
    >
    >管理員可使用管理控制台，從「服務> Document Security >我的原則」中，從其他使用者的個人原則搜尋、存取和刪除 **[!UICONTROL 使用者]** 資料。
 
-1. 從用戶管理資料庫中刪除承擔者ID的資料。 如需詳細步驟，請參 [閱Forms使用者管理|處理使用者資料](/help/forms/using/user-management-handling-user-data.md)。
+1. 從用戶管理資料庫中刪除承擔者ID的資料。 如需詳細步驟，請參 [閱Forms使用者管理 |處理使用者資料](/help/forms/using/user-management-handling-user-data.md)。
 1. 啟動AEM Forms伺服器。
 
