@@ -1,19 +1,21 @@
 ---
-title: 表單使用者管理|處理使用者資料
-seo-title: 表單使用者管理|處理使用者資料
-description: 'null'
-seo-description: 'null'
+title: 表單使用者管理 |處理使用者資料
+seo-title: 表單使用者管理 |處理使用者資料
+description: 表單使用者管理 |處理使用者資料
 uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 0%
 
 ---
 
 
-# 表單使用者管理|處理使用者資料 {#forms-user-management-handling-user-data}
+# 表單使用者管理 |處理使用者資料 {#forms-user-management-handling-user-data}
 
 使用者管理是AEM Forms JEE元件，可讓AEM Forms使用者建立、管理和授權存取AEM Forms。 用戶管理使用域作為獲取用戶資訊的目錄。 支援下列網域類型：
 
@@ -122,6 +124,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
    >
    >
 * Replace `EdcPrincipalGrpCtmntEntity` with `EdcPrincipalGrpCtmntEnti`
+
 >
 
 
