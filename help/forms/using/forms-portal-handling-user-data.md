@@ -1,17 +1,16 @@
 ---
 title: 表單入口網站 |處理使用者資料
 seo-title: 表單入口網站 |處理使用者資料
-description: 'null'
-seo-description: 'null'
+description: 表單入口網站 |處理使用者資料
 uuid: 2ac2b2a9-b603-489a-86b8-a78b697f130d
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
 translation-type: tm+mt
-source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -81,7 +80,7 @@ ht-degree: 0%
 >
 >在節點下，會為 `drafts` 提交的表單複製一 `srose` 個精確 `/content/forms/fp/srose/submit/` 結構。
 >
->使用者的所有草稿和 `anonymous` 提交都會儲存在節點下， `/content/forms/fp/anonymous/` 節點會組織所有匿名使用者在節點和節點下的草 `draft` 稿和提 `submit` 交。
+>使用者的所有草稿和 `anonymous` 提交都會儲存在節點下， `/content/forms/fp/anonymous/` 節點會組織所有匿名使用者在節點和節點下的 `draft` 草稿和提 `submit` 交。
 
 | 節點 | 說明 |
 |---|---|
