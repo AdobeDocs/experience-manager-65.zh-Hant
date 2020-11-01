@@ -2,12 +2,13 @@
 title: 安裝工作台
 seo-title: 安裝工作台
 description: 安裝工作台。
-uuid: null
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: null
 translation-type: tm+mt
-source-git-commit: 39ec61c3d6a49be10b50d031e8f747b66901110f
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '2246'
+ht-degree: 0%
 
 ---
 
@@ -31,19 +32,19 @@ source-git-commit: 39ec61c3d6a49be10b50d031e8f747b66901110f
   </tr>
   <tr>
    <td><p>Workbench的程式資訊</p> </td>
-   <td><p><a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">工作台說明</a><br /><br /> </p> </td>
+   <td><p><a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbench說明</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>AEM Forms的一般資訊，以及它如何與其他Adobe產品整合</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms概觀</a><br /><br /> </p> </td>
+   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms概觀</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>AEM Forms的所有檔案</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms檔案</a><br /><br /> </p> </td>
+   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms檔案</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>此產品版本的修補程式更新、技術說明及其他資訊</p> </td>
-   <td><p>聯絡Adobe企業支援</a><br /><br /> </p> </td>
+   <td><p>聯絡Adobe企業支援</a><br /> <br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -110,10 +111,10 @@ Workbench是一套整合式開發環境(IDE)，開發人員和表單製作人員
    <td><p><strong>必要動作</strong></p> </td>
   </tr>
   <tr>
-   <td><p>Acrobat pro或Acrobat Pro Extended（包括設計人員）</p> </td>
+   <td><p>Acrobat Pro或Acrobat Pro Extended（包括設計人員）</p> </td>
    <td><p>無.<br /> 
-Workbench安裝會偵測您電腦上與Acrobat pro或Acrobat Pro Extended一起安裝的Designer例項。<br />
-Designer的不同版本可以共存於同一系統，例如Workbench 6.4的Designer 6.4.x和Workbench 6.5的Designer 6.5.0.x。您不需要解除安裝隨Acrobat 10 pro或Acrobat 10 Pro Extended或更新版本安裝的Designer版本。
+Workbench安裝會偵測您電腦上與Acrobat Pro或Acrobat Pro Extended一起安裝的Designer例項。<br />
+Designer的不同版本可以共存於同一系統，例如Workbench 6.4的Designer 6.4.x和Workbench 6.5的Designer 6.5.0.x。您不需要解除安裝隨Acrobat 10 Pro或Acrobat 10 Pro Extended或更新版本安裝的Designer版本。
 <br /></p> </td>
   </tr>
   <tr>
@@ -135,13 +136,14 @@ Designer的不同版本可以共存於同一系統，例如Workbench 6.4的Desig
 
 ### 安裝和執行Workbench {#installing-and-running-workbench}
 
-在安裝Workbench之前，您必須確保您的環境包含執行Workbench所需的軟體和硬體(請參閱章節：安 **裝前**)。
+在安裝Workbench之前，您必須確保您的環境包含執行Workbench所需的軟體和硬體(請參閱章節： **安裝前**)。
 
 **要安裝並運行Workbench，請執行以下操作：**
 
 1. 執行下列任務之一：
    * 導覽至安裝媒體上的\workbench目錄，然後按兩下run_windows_installer.bat檔案。
    * 將Workbench下載並解壓縮至您的檔案系統。 下載後，導覽至\workbench目錄，然後按兩下run_windows_installer.bat檔案。
+
    >[!IMPORTANT]
    >
    >Workbench安裝程式僅從本機磁碟機執行。 無法從遠程站點運行。
@@ -168,7 +170,7 @@ Designer的不同版本可以共存於同一系統，例如Workbench 6.4的Desig
 1. 查看安裝摘要。 選取「啟動AEM Forms Workbench」以啟動「工作台」，然後按一下「下一步」。
 1. 檢閱發行說明，然後按一下完成。
 1. 您的電腦現在安裝了下列項目：
-   * **工作台**:若要從「開始」功能表執行「工作台」，請選取「所有程式集> AEM Forms > Workbench」（如果您選擇將捷徑檔案夾儲存在此處）。 如需詳細資訊，請參閱「使 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">用工作台</a> 」檔案。
+   * **工作台**:若要從「開始」功能表執行「工作台」，請選取「所有程式> AEM Forms > Workbench」（如果您選擇將捷徑檔案夾儲存在此）。 如需詳細資訊，請參閱使 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">用工作台</a> 檔案。
    * **設計人員**:您可以從Workbench內部存取設計人員。 如需詳細資訊，請參閱設計人員說明中的 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">快速入門主題</a>。
    * **AEM Forms SDK**:如需使用SDK的詳細資訊，請參閱「使 <a href="http://www.adobe.com/go/learn_aemforms_programming_65">用AEM表格進行程式設計」</a>。
 
