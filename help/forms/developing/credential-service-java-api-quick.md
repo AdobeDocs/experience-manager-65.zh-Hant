@@ -1,8 +1,7 @@
 ---
 title: 憑證服務Java API QuickStart(SOAP)
 seo-title: 憑證服務Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 憑證服務Java API QuickStart(SOAP)
 uuid: a00eabfa-3a52-41dd-bcba-c60d00394384
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -20,11 +19,11 @@ ht-degree: 0%
 
 # 憑證服務Java API快速入門(SOAP) {#credential-service-java-api-quickstart-soap}
 
-Java API快速入門(SOAP)適用於憑證服務。
+Java API Quick Start(SOAP)適用於憑證服務。
 
-[快速入門（SOAP模式）: 使用Java API匯入認證](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API匯入認證](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
-[快速入門（SOAP模式）: 使用Java API刪除認證](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API刪除認證](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
@@ -36,7 +35,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 >
 >不能使用Web服務執行憑據服務操作。
 
-## 快速入門（SOAP模式）: 使用Java API匯入認證 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API匯入認證 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
 下列程式碼範例會根據名為 *cred.p12的檔案匯入憑證*。 用於導入憑據的別名值為 `Secure`。 (請參 [閱使用Trust Manager API匯入認證](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)。)
 
@@ -137,7 +136,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）: 使用Java API刪除認證 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API刪除認證 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
 下面的代碼示例基於安全的別名值刪除 *憑據*。 (請參 [閱使用Trust Manager API刪除認證](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api)。)
 
