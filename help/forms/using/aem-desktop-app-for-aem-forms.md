@@ -1,8 +1,7 @@
 ---
 title: AEM Forms的AEM案頭應用程式
 seo-title: AEM Forms的AEM案頭應用程式
-description: 'null'
-seo-description: 'null'
+description: AEM Forms的AEM案頭應用程式
 uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +9,10 @@ topic-tags: manage
 discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 translation-type: tm+mt
-source-git-commit: 3460909eb77cc078b728d1af4becd47cc4377b73
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +33,7 @@ AEM案頭應用程式可讓您將Adobe Experience Manager(AEM)Assets存放庫和
 
 ## 啟用AEM案頭應用程式的AEM Forms {#enable-aem-forms-for-aem-desktop-app}
 
-AEM案頭應用程式在Microsoft windows上使用WebDAV通訊協定，在Mac OS x上使用SMB1連線至AEM Forms伺服器。 現成可用的AEM Forms伺服器無法與WebDAV或SMB用戶端同步二進位檔案和其他資產。 執行下列步驟，以啟用AEM案頭應用程式的AEM Forms:
+AEM案頭應用程式在Microsoft Windows上使用WebDAV通訊協定，在Mac OS X上使用SMB1連線至AEM Forms伺服器。 現成可用的AEM Forms伺服器無法與WebDAV或SMB用戶端同步二進位檔案和其他資產。 執行下列步驟，以啟用AEM案頭應用程式的AEM Forms:
 
 1. 以管理員身分登入AEM Forms。
 1. 在作者例項中，按一 ![下Adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL 「Adobe Experience Manager > Tools]** hammer ![> Deployment > Operations](assets/hammer.png)****> Web Console」。 「Web控制台」在新視窗中開啟。
