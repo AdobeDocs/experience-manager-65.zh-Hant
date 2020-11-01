@@ -1,19 +1,21 @@
 ---
-title: Forms JEE工作流程|處理使用者資料
-seo-title: Forms JEE工作流程|處理使用者資料
-description: 'null'
-seo-description: 'null'
+title: Forms JEE工作流程 |處理使用者資料
+seo-title: Forms JEE工作流程 |處理使用者資料
+description: Forms JEE工作流程 |處理使用者資料
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '1371'
+ht-degree: 0%
 
 ---
 
 
-# Forms JEE工作流程|處理使用者資料 {#forms-jee-workflows-handling-user-data}
+# Forms JEE工作流程 |處理使用者資料 {#forms-jee-workflows-handling-user-data}
 
 AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 工作流進程由一系列按指定順序執行的步驟組成。 每個步驟都會執行特定動作，例如指派工作給使用者或傳送電子郵件訊息。 程式可與資產、使用者帳戶和服務互動，並可使用下列任一方法來觸發：
 
@@ -78,9 +80,9 @@ AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 
 
 ### 識別將使用者資料儲存在基本變數中的流程例項ID {#primitive}
 
-可以設計工作流，以便用戶資料被捕獲到一個變數中，該變數作為blob儲存在資料庫中。 在這種情況下，只有當使用者資料儲存在下列原始類型變數中時，您才能查詢使用者資料：
+可以設計工作流，以便用戶資料被捕獲到一個變數中，該變數作為blob儲存在資料庫中。 在這種情況下，只有當使用者資料儲存在下列原始類型變數中時，您才可以查詢使用者資料：
 
-* **字串**:直接包含用戶ID或作為子字串，可使用SQL查詢。
+* **字串**:直接包含用戶ID或作為子字串包含用戶ID，可使用SQL查詢。
 * **數值**:直接包含使用者ID。
 * **XML**:在儲存為資料庫文字欄的文字中，以子字串形式包含使用者ID，並可像字串一樣查詢。
 
@@ -130,7 +132,7 @@ AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 
 
 1. 檢查工作流實例的狀態。 如果狀態不是2(COMPLETE)或4(TERMINATED)，請先呼叫下列方法以終止例項：
 
-   `ProcessManager.terminateProcess(<long_lived_invocation_id>)`.
+   `ProcessManager.terminateProcess(<long_lived_invocation_id>)`。
 
 1. 通過調用以下方法清除工作流實例：
 
@@ -166,6 +168,7 @@ AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 
       * `_wfattach<task_id>`
       * `_wftask<fd_id>`
       * `_wftaskformid<fd_id>`
+
       具有這些副檔名的檔案是標籤檔案。 這些檔案會以下列格式儲存為檔案名稱：
 
       `<file_name_guid>.session<session_id_string>`
