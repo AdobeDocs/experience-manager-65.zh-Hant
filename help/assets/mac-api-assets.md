@@ -1,9 +1,9 @@
 ---
-title: '[!DNL資產] HTTP API。'
+title: '[!DNL Assets] HTTP API。'
 description: 使用中的HTTP API建立、讀取、更新、刪除、管理數位資產 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: add8be813ce377384ee4d90600f54a1455a1ab0d
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
@@ -183,7 +183,7 @@ HTTP [!DNL Assets] API包含下列功能：
 
 ### 同步中繼資料更新，在與命名空 `dc` 間之 `jcr` 間 {#sync-metadata-between-namespaces}
 
-API方法會更新命名空間中的中繼資料 `jcr` 屬性。 使用Touch-UI進行的更新會變更命名空間中的中繼資料 `dc` 屬性。 若要同步與命名空間之 `dc` 間的中 `jcr` 繼資料值，您可以建立工作流程，並設定Experience Manager在資產編輯時執行工作流程。 使用ECMA指令碼來同步所需的中繼資料屬性。 下列範例指令碼會同步與之間的標題 `dc:title` 字串 `jcr:title`。
+API方法會更新命名空間中的中繼資料 `jcr` 屬性。 使用使用者介面進行的更新會變更命名空間中的中繼資料 `dc` 屬性。 若要同步與命名空間之 `dc` 間的中 `jcr` 繼資料值，您可以建立工作流程，並設定Experience Manager在資產編輯時執行工作流程。 使用ECMA指令碼來同步所需的中繼資料屬性。 下列範例指令碼會同步與之間的標題 `dc:title` 字串 `jcr:title`。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
