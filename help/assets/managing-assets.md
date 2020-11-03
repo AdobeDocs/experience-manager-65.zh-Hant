@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 13%
+source-wordcount: '114'
+ht-degree: 14%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 13%
 
 在預覽時，您也可以套用影像預設集（僅限影像）或檢視器預設集（視訊和影像）。 您不能同時套用至資產。 請參 [閱套用檢視器預設集](/help/assets/viewer-presets.md) 和套 [用影像預設集](/help/assets/image-sets.md)。
 
-有關管理資產的一般資訊，請參 [閱使用Touch UI管理資產](/help/assets/manage-assets.md)。
+有關管理資產的一般資訊，請參閱「管 [理資產」](/help/assets/manage-assets.md)。
 
 下列主題說明您管理動態媒體資產時需要做什麼：
 
@@ -30,4 +30,3 @@ ht-degree: 13%
 * [預覽 Dynamic Media 資產](/help/assets/previewing-assets.md)
 * [發佈動態媒體資產](/help/assets/publishing-dynamicmedia-assets.md)
 * [使用選取工具](/help/assets/working-with-selectors.md)
-
