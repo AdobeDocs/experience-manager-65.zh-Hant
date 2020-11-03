@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2072'
 ht-degree: 15%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/manage-assets.md)。
+>如需「資產」使用者介面的詳細資訊，請參閱「管 [理資產」](/help/assets/manage-assets.md)。
 
 ## 快速入門：影像集 {#quick-start-image-sets}
 
@@ -105,7 +105,7 @@ ht-degree: 15%
 >
 >此外，如果您使用縮圖來表示產品色票，則需要執行下列動作：
 >
->您需要相同影像的暈映或不同像片，以不同的顏色、圖樣或光潔度顯示。 您也需要對應不同顏色、圖樣或修飾的縮圖檔案。 例如，若要以影像集呈現縮圖，並以黑色、棕色和綠色顯示相同的外套，您需要：
+>您需要相同影像的暈映或不同像片，以不同的顏色、圖樣或光潔度顯示。 您也需要對應不同顏色、圖樣或結束的縮圖檔案。 例如，若要以影像集呈現縮圖，並以黑色、棕色和綠色顯示相同的外套，您需要：
 >
 >* 黑色、棕色和綠色的相同夾克。
 >* 黑色、棕色和綠色縮圖。
