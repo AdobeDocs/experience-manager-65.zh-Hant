@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4803'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 3%
    * [在AEM中將轉盤橫幅新增至您的網站](/help/assets/adding-dynamic-media-assets-to-pages.md) ：如果您是AEM Sites客戶，您可以使用互動式媒體元件將轉盤集直接新增至AEM的頁面。
 
 
-如果需要編輯轉盤集，請參閱編 [輯轉盤集。](#editing-carousel-sets) 此外，您還可以檢視和編輯「轉盤 [集」屬性](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)。
+如果需要編輯轉盤集，請參閱編 [輯轉盤集。](#editing-carousel-sets) 此外，您還可以檢視和編輯「轉盤 [集」屬性](manage-assets.md#editing-properties)。
 
 ## 識別熱點和影像地圖變數 {#identifying-hotspot-and-image-map-variables}
 
