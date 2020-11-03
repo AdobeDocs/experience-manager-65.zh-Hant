@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1465'
 ht-degree: 22%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->如需「資產」使用者介面的詳細資訊，請參 [閱「使用Touch UI管理資產」](/help/assets/manage-assets.md)。
+>如需「資產」使用者介面的詳細資訊，請參閱「管 [理資產」](/help/assets/manage-assets.md)。
 
 ## 快速入門：混合媒體集 {#quick-start-mixed-media-sets}
 
