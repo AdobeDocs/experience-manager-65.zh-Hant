@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: d5efcec4a0397d99c899643ff13a883a0ed02c81
+source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
 workflow-type: tm+mt
-source-wordcount: '4249'
+source-wordcount: '4296'
 ht-degree: 0%
 
 ---
@@ -26,10 +26,10 @@ Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單
 
 此外，以下是一般AEM最佳實務的建議讀取：
 
-* [最佳實務： 部署和維護AEM](/help/sites-deploying/best-practices.md)
-* [最佳實務： 製作內容](/help/sites-authoring/best-practices.md)
-* [最佳實務： 管理AEM](/help/sites-administering/administer-best-practices.md)
-* [最佳實務： 開發解決方案](/help/sites-developing/best-practices.md)
+* [最佳實務：部署和維護AEM](/help/sites-deploying/best-practices.md)
+* [最佳實務：製作內容](/help/sites-authoring/best-practices.md)
+* [最佳實務：管理AEM](/help/sites-administering/administer-best-practices.md)
+* [最佳實務：開發解決方案](/help/sites-developing/best-practices.md)
 
 ## 設定和設定AEM Forms {#set-up-and-configure-aem-forms}
 
@@ -65,10 +65,10 @@ Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單
 * 最適化表單範本是專用的AEM頁面，可定義最適化表單的結構和頁首——頁尾資訊。 範本具有預先設定的版面配置、樣式和最適化表單的基本結構。 AEM Forms提供現成可用的範本和元件，讓您用來製作最適化表單。 不過，您可以根據需求建立自訂範本和元件。 建議您收集在最適化表單中需要的其他範本和元件需求。 如需詳細資訊，請參 [閱自訂最適化表單和元件](/help/forms/using/adaptive-forms-best-practices.md#customize-components)。
 * AEM Forms可讓您根據下清單單模型建立最適化表單。 表單模型充當表單與AEM系統之間資料交換的介面，並為最適化表單內外的資料流提供XML架構。 另外，表單模型以模式和XFA約束的形式對自適應表單施加規則和約束。
 
-   * **無**: 使用此選項建立的最適化表單不會使用任何表單模型。 從這種表單中生成的資料XML具有平坦的結構，具有欄位和相應的值。
-   * **XML或JSON結構描述**: XML和JSON結構描述資料由組織中的後端系統產生或使用的結構。 您可以將架構與最適化表單建立關聯，並使用其元素將動態內容新增至最適化表單。 架構的元素可在內容瀏覽器的「資料模型物件」索引標籤中使用，以製作最適化表單。 您可以拖放架構元素來建立表單。
-   * **XFA表單範本**: 如果您投資於以XFA為基礎的HTML5表單，這是理想的表單模型。 它提供將XFA型表單轉換為最適化表單的直接方式。 任何現有的XFA規則都會保留在相關的最適化表單中。 產生的最適化表單支援XFA結構，例如驗證、事件、屬性和模式。
-   * **表單資料模型**: 如果您想要整合後端系統（例如資料庫、網站服務和AEM使用者設定檔），以預先填寫最適化表單，並將提交的表單資料寫回後端系統，則此為偏好的表單模型。 表單資料模型編輯器可讓您定義並設定表單資料模型中的實體和服務，以便用來建立最適化表單。 如需詳細資訊，請參 [閱「AEM Forms資料整合」](/help/forms/using/data-integration.md)。
+   * **無**:使用此選項建立的最適化表單不會使用任何表單模型。 從這種表單中生成的資料XML具有平坦的結構，具有欄位和相應的值。
+   * **XML或JSON結構描述**:XML和JSON結構描述資料由組織中的後端系統產生或使用的結構。 您可以將架構與最適化表單建立關聯，並使用其元素將動態內容新增至最適化表單。 架構的元素可在內容瀏覽器的「資料模型物件」索引標籤中使用，以製作最適化表單。 您可以拖放架構元素來建立表單。
+   * **XFA表單範本**:如果您投資於以XFA為基礎的HTML5表單，這是理想的表單模型。 它提供將XFA型表單轉換為最適化表單的直接方式。 任何現有的XFA規則都會保留在相關的最適化表單中。 產生的最適化表單支援XFA結構，例如驗證、事件、屬性和模式。
+   * **表單資料模型**:如果您想要整合後端系統（例如資料庫、網站服務和AEM使用者設定檔），以預先填寫最適化表單，並將提交的表單資料寫回後端系統，則此為偏好的表單模型。 表單資料模型編輯器可讓您定義並設定表單資料模型中的實體和服務，以便用來建立最適化表單。 如需詳細資訊，請參 [閱「AEM Forms資料整合」](/help/forms/using/data-integration.md)。
 
 請務必謹慎選擇不僅符合您需求的資料模型，而且延伸您對XFA和XSD資產的現有投資（如果有的話）。 建議使用XSD模型來建立表單範本，因為產生的XML會依照架構定義的XPATH包含資料。 使用XSD模型作為表單資料模型的預設選擇，也有助於將表單設計與處理和使用資料的後端系統解耦，而且由於表單欄位的一對一對應，因此可改善表單的效能。 此外，欄位的BindRef也可以使其資料值在XML中的XPATH。
 
@@ -124,13 +124,13 @@ AEM Forms提供規 [則編輯器](/help/forms/using/rule-editor.md) ，可讓您
 * 在處理複雜或常用的規則時，請考慮將商業邏輯編寫為個別用戶端程式庫中的函式，以便您指定並跨調適性表單重複使用。 用戶端程式庫應是獨立的程式庫，除jQuery和Undershore.js外，不應有任何外部相依性。 您也可以使用用戶端程式庫來強制 [伺服器端重新驗證已提交的表](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 單資料。
 * 最適化表單提供一組API，您可用來與最適化表單通訊，並對其執行動作。 部分關鍵API如下。 如需詳細資訊，請參 [閱適用於Adaptive Forms的JavaScript程式庫API參考](https://adobe.com/go/learn_aemforms_documentation_63)。
 
-   * `guideBridge.reset()`: 重設表單。
-   * `guideBridge.submit()`: 提交表格。
-   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`: 將焦點設定為欄位。
-   * `guideBridge.validate(errorList, somExpression, focus)`: 驗證表單。
-   * `guideBridge.getDataXML(options)`: 以XML格式取得表單資料。
-   * `guideBridge.resolveNode(somExpression)`: 獲取表單對象。
-   * `guideBridge.setProperty(somList, propertyName, valueList)`: 設定表單對象的屬性。
+   * `guideBridge.reset()`:重設表單。
+   * `guideBridge.submit()`:提交表格。
+   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`:將焦點設定為欄位。
+   * `guideBridge.validate(errorList, somExpression, focus)`:驗證表單。
+   * `guideBridge.getDataXML(options)`:以XML格式取得表單資料。
+   * `guideBridge.resolveNode(somExpression)`:獲取表單對象。
+   * `guideBridge.setProperty(somList, propertyName, valueList)`:設定表單對象的屬性。
    * 此外，您還可使用下列欄位屬性：
 
       * `field.value` 來更改欄位的值。
@@ -207,9 +207,9 @@ AEM Forms提供規 [則編輯器](/help/forms/using/rule-editor.md) ，可讓您
 
 * 根據自適應表單所基於的表單資料模型，可以按如下方式為DoR配置模板：
 
-   * **XFA表單範本**: 使用關聯的XDP檔案作為DoR模板。
-   * **XSD架構**: 使用與最適化表單使用相同XML架構的相關XFA範本。
-   * **無**: 使用自動產生的DoR。
+   * **XFA表單範本**:使用關聯的XDP檔案作為DoR模板。
+   * **XSD架構**:使用與最適化表單使用相同XML架構的相關XFA範本。
+   * **無**:使用自動產生的DoR。
 
 * 直接從最適化表單編輯器的「記錄檔案」索引標籤，設定頁首、頁尾、影像、顏色、字型等。
 * 使用 `DoRService` 以程式設計方式產生DoR。
@@ -266,8 +266,8 @@ AEM提供翻譯工作流程，讓您用來本地化最適化表單。 如需詳�
 
 您可以設定位於安全區防火牆後方的額外AEM Forms伺服器例項。 您可將此例項用於：
 
-* **批次處理**: 以大量負載的批次重複或排程的作業。 例如，列印陳述式、產生對應，以及使用檔案服務（例如PDF產生器、輸出和匯編器）。
-* **儲存PII資料**: 將PII資料儲存至處理伺服器。 如果您已使用自訂儲存提供者來儲存PII資料，則不需要此選項。
+* **批次處理**:以大量負載的批次重複或排程的作業。 例如，列印陳述式、產生對應，以及使用檔案服務（例如PDF產生器、輸出和匯編器）。
+* **儲存PII資料**:將PII資料儲存至處理伺服器。 如果您已使用自訂儲存提供者來儲存PII資料，則不需要此選項。
 
 ### 將專案移至其他環境 {#moving-project-to-another-environment}
 
@@ -305,11 +305,13 @@ AEM提供翻譯工作流程，讓您用來本地化最適化表單。 如需詳�
 
 在生產環境中，建議不要將提交的表單資料儲存在AEM儲存庫中。 Forms Portal Store、Store Content和Store PDF提交動作的預設實作會將表單資料儲存在AEM儲存庫中。 這些提交動作僅用於演示目的。 此外，「儲存和繼續」和「自動儲存」功能預設會使用入口儲存空間。 因此，請考慮以下建議：
 
-* **儲存草稿資料**: 如果您使用最適化表單的「草稿」功能，則應實作自訂的「服務提供介面」(SPI)，將草稿資料儲存在更安全的儲存中，例如資料庫。 如需詳細資訊，請參 [閱將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)。
+* **儲存草稿資料**:如果您使用最適化表單的「草稿」功能，則應實作自訂的「服務提供介面」(SPI)，將草稿資料儲存在更安全的儲存中，例如資料庫。 如需詳細資訊，請參 [閱將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)。
 
-* **儲存提交資料**: 如果您使用表單入口提交儲存，則應實施自定義SPI以將提交資料儲存在資料庫中。 如需 [整合草稿和提交元件與資料庫的範例](/help/forms/using/integrate-draft-submission-database.md) ，請參閱範例。
+* **儲存提交資料**:如果您使用表單入口提交儲存，則應實施自定義SPI以將提交資料儲存在資料庫中。 如需 [整合草稿和提交元件與資料庫的範例](/help/forms/using/integrate-draft-submission-database.md) ，請參閱範例。
 
    您也可以撰寫自訂的提交動作，將表單資料和附件儲存在安全儲存空間中。 如需詳 [細資訊，請參閱撰寫最適化表單的自訂提交動作](/help/forms/using/custom-submit-action-form.md) 。
+
+* **草稿ID的長度**:將最適化表單另存為草稿時，會產生草稿ID以唯一識別草稿。 草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設為26個以上字元。
 
 ### 處理個人識別資訊 {#handling-personally-identifiable-information}
 
