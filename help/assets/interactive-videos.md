@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '6050'
+source-wordcount: '6056'
 ht-degree: 4%
 
 ---
@@ -88,7 +88,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 1. **在AEM中將互動式視訊新增至您的網站或網站**：如果您使用AEM Sites、AEM eCommerce或兩者，您可將互動式視訊直接拖曳至AEM的網頁，即可將互動式視訊新增至AEM中的網頁。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 使用內嵌程式碼或URL，將您的互動式視訊與網站體驗整合。 請參 [閱整合互動式視訊與您的網站](#integrating-an-interactive-video-with-your-website)。
 如果您使用協力廠商WCM(Web Content Manager)，您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參 [閱整合互動式視訊與現有的Quickview](#integrating-an-interactive-video-with-an-existing-quickview)。
-   [](/help/assets/adding-dynamic-media-assets-to-pages.md)
+   [新增動態媒體資產至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## （可選）識別Quickview變數 {#optional-identifying-quickview-variables}
 
@@ -467,7 +467,7 @@ Quickview的大多數實施都採用以下模式：
       在時間軸上，點選您要分成一半的區段，然後點選工具列上的 **[!UICONTROL 分割區段]** 。
 
       選取兩或多個區段會停用「分割 **[!UICONTROL 區段]** 」功能。
-   ![chlimage_1-135](assets/chlimage_1-135.png)
+   ![chlimage_1-133](assets/chlimage_1-135.png)
 
    將選取的10秒區段分割為兩個區段，每個區段5秒。
 
