@@ -3,9 +3,9 @@ title: 下載資產
 description: 瞭解如何從指令下 [!DNL Adobe Experience Manager] 載資產，以啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 3%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 3%
 
 若要下載資產，請依照下列步驟進行：
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]**.
-1. 在「導覽」頁面上，點選「 **[!UICONTROL 資產]** >檔 **[!UICONTROL 案」。]**
+1. 在左上角，按一下標誌。 在左側導軌中，按一下「導 **[!UICONTROL 覽」]**。
+1. 在「導 [!UICONTROL 覽] 」頁面上，按一 **[!UICONTROL 下「資產]** > **[!UICONTROL 檔案」。]**
 1. 導覽至包含您要下載之資產的檔案夾。
 1. 選取資料夾或選取資料夾內的一或多個資產。
-1. 在工具列上，點選「 **[!UICONTROL 下載」。]**
+1. 在工具列上，按一下「 **[!UICONTROL 下載」。]**
 
    ![從Experience Manager Assets下載資產時的可用選項](/help/assets/assets/asset-download1.png)
 
@@ -44,7 +44,7 @@ ht-degree: 3%
    | **[!UICONTROL 智慧裁切]** | 選取這個選項，可從AEM下載所選資產的所有智慧型裁切轉譯。 系統會建立包含「智慧型裁切」轉譯的zip檔案，並下載至您的本機電腦。 |
    | **[!UICONTROL 動態轉譯]** | 選取此選項，即時產生一連串的替代轉譯。 當您選取此選項時，也可以從「影像預設集」清單中選取您要動態建立的轉 [譯](image-presets.md) 。 <br>此外，您還可以選取大小和單位、格式、色域、解析度，以及任何可選的影像修飾元，例如反轉影像。 此選項僅在您已啟用時才可 [!DNL Dynamic Media] 用。 |
 
-1. 在對話方塊中，點選「 **[!UICONTROL 下載。]**.
+1. 在對話方塊中，按一下「 **[!UICONTROL 下載」]**。
 
 當您選擇要下載的檔案夾時，會下載該檔案夾下的完整資產階層。 若要將您下載的每個資產（包括父資料夾下巢狀內嵌之子資料夾中的資產）納入個別資料夾，請為每個資產選 **[!UICONTROL 取「建立個別資料夾」]**。
 
