@@ -3,9 +3,9 @@ title: 共用資產的私人資料夾
 description: 瞭解如何在中建立私人資料 [!DNL Adobe Experience Manager Assets] 夾，並與其他使用者共用資料夾，以及為他們指派各種權限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -47,11 +47,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >您可以將各種角色（例如編輯者、擁有者或檢視器）指派給您共用資料夾的使用者。 如果您為用戶分配了「所有者」角色，則用戶對資料夾具有編輯者權限。 此外，使用者也可以與其他人共用資料夾。 如果您指派了編輯者角色，使用者可以編輯私人資料夾中的資產。 如果您指派檢視器角色，使用者只能檢視您私人資料夾中的資產。
+   >您可以指派各種角色， `Editor`例如 `Owner`、 `Viewer` 或指派給您共用資料夾的使用者。 如果您指派角 `Owner` 色給使用者，使用者就擁有 `Editor` 資料夾的權限。 此外，使用者也可以與其他人共用資料夾。 如果您指派角 `Editor` 色，使用者可以編輯私人資料夾中的資產。 如果您指派檢視器角色，使用者只能檢視您私人資料夾中的資產。
 
    >[!NOTE]
    >
-   >私人資料夾至少有一個擁有擁有者角色的成員。 因此，管理員無法從專用資料夾中刪除所有所有者成員。 但是，要從專用資料夾中刪除現有所有者（和管理員本身），管理員必須將其他用戶添加為所有者。
+   >私人資料夾至少有一個具有角色的 `Owner` 成員。 因此，管理員無法從專用資料夾中刪除所有所有者成員。 但是，要從專用資料夾中刪除現有所有者（和管理員本身），管理員必須將其他用戶添加為所有者。
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。根據您指派的角色，當使用者登入時，會為使用者指派一組權限給您的私人資料夾 [!DNL Assets]。
 1. 按一下 **[!UICONTROL 確定]** ，關閉確認消息。
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 按一下「通知」以開啟通知清單。
+1. 按一 [!UICONTROL 下] 「通知」以開啟通知清單。
 
    ![通知清單](assets/Assets-Notification.png)
 
@@ -83,4 +83,4 @@ ht-degree: 0%
 >
 >如果您使用上述方法從使用者介面刪除資料夾，則相關的使用者群組也會隨之刪除。
 >
->不過，您可以在作者實例( `clean``http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`)中，使用JMX中的方法，從儲存庫中清理現有的冗餘、未使用和自動生成的用戶組。
+>但是，使用作者實例( `clean``http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`)中JMX中的方法，可以從儲存庫中刪除現有的冗餘、未使用和自動生成的用戶組。
