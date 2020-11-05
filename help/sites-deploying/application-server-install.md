@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 0a082d3cff66b82ef6de551a735a16a001446a1e
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 0%
@@ -51,17 +51,17 @@ AEM是要部署的單一戰爭檔案。
 * 運行模式為 `author`
 * 實例（儲存庫、Felix OSGI環境、捆綁包等） 安裝在當 `${user.dir}/crx-quickstart`前工 `${user.dir}` 作目錄中，則此crx-quickstart路徑稱為 `sling.home`
 
-* context root is the war file name, ef: `aem-6`
+* context root is the war file name efe: `aem-6`
 
 #### 設定 {#configuration}
 
 您可以以下列方式變更預設行為：
 
-* 運行模式： 在部署 `sling.run.modes` 前，先在AEM `WEB-INF/web.xml` war檔案的檔案中設定參數
+* 運行模式：在部署 `sling.run.modes` 前，先在AEM `WEB-INF/web.xml` war檔案的檔案中設定參數
 
-* sling.home: 在部署 `sling.home` 前，先在AEM `WEB-INF/web.xml`war檔案的檔案中設定參數
+* sling.home:在部署 `sling.home` 前，先在AEM `WEB-INF/web.xml`war檔案的檔案中設定參數
 
-* 上下文根： 重新命名AEM war檔案
+* 上下文根：重新命名AEM war檔案
 
 #### 發佈安裝 {#publish-installation}
 
@@ -88,8 +88,8 @@ AEM是要部署的單一戰爭檔案。
 1. 將sling.home參數變更為不同的路徑（可能有絕對和相對路徑）。
 1. 將sling.run.modes變更為publish執行個體的發佈。
 1. 回復web.xml檔案。
-1. 更名war檔案，使它們具有不同的名稱： 例如，一個重新命名為aemauthor.war，另一個重新命名為aempublish.war。
-1. 使用較高的記憶體設定，例如，若是預設的AEM例項，則使用例如： -Xmx3072m
+1. 更名war檔案，使它們具有不同的名稱：例如，一個重新命名為aemauthor.war，另一個重新命名為aempublish.war。
+1. 使用較高的記憶體設定，例如，若是預設的AEM例項，則使用例如：-Xmx3072m
 1. 部署兩個Web應用程式。
 1. 部署後，請停止兩個Web應用程式。
 1. 在作者和發佈例項中，都可確保在sling.properties檔案中，屬性felix.service.urlhandlers=false會設為false（預設值為true）。
@@ -105,7 +105,7 @@ AEM是要部署的單一戰爭檔案。
 
 * 讓基本驗證標題傳遞：
 
-   * 讓AEM驗證使用者的一種方式是停用WebSphere伺服器的全域管理安全性，以執行下列動作： 轉到「安全性」->「全局安全性」並取消選中「啟用管理安全性」複選框，保存並重新啟動伺服器。
+   * 讓AEM驗證使用者的一種方式是停用WebSphere伺服器的全域管理安全性，以執行下列動作：轉至「Security -> Global Security」（安全性->全域安全性），並取消選中「Enable administrative security」（啟用管理安全性）複選框，保存並重新啟動伺服器。
 
 * 設定`"JAVA_OPTS= -Xmx2048m"`
 * 如果您想使用內容根目錄= /安裝AEM，則必須先變更現有預設Web應用程式的內容根目錄
@@ -136,7 +136,7 @@ AEM是要部署的單一戰爭檔案。
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-如果您使用deployment-scanner來安裝AEM網頁應用程式，則最好在例項的xml檔案中增加該 `deployment-timeout,` 設定 `deployment-tiimeout` 屬性的值(例如 `configuration/standalone.xml)`:
+如果您使用deployment-scanner來安裝AEM網頁應用程式，則最好在例項的xml檔案中增加該 `deployment-timeout,` 設定 `deployment-timeout` 屬性的值(例如 `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
