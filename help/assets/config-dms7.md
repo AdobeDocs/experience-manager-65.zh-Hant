@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 648b9601445a46b6a2734d5a47545c0439b9c283
 workflow-type: tm+mt
-source-wordcount: '5944'
+source-wordcount: '5964'
 ht-degree: 5%
 
 ---
@@ -155,8 +155,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 * [影像伺服器的發佈設定](#publishing-setup-for-image-server)
 * [配置應用程式常規設定](#configuring-application-general-settings)
 * [設定色彩管理](#configuring-color-management)
-* [設定資產處理](#configuring-asset-processing)
-* [為不支援的格式添加自定義MIME類型](#adding-custom-mime-types-for-unsupported-formats)
+* [編輯支援格式的MIME類型](#editing-mime-types-for-supported-formats)
+* [為不支援的格式添加MIME類型](#adding-mime-types-for-unsupported-formats)
 * [建立批次集預設集以自動產生影像集和回轉集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
 #### 影像伺服器的發佈設定 {#publishing-setup-for-image-server}
@@ -228,18 +228,18 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 * 傳回RGB輸出的動態轉譯，會傳回到*sRGB *色彩空間。
 * 傳回CMYK輸出的動態轉譯，會傳回至 *WebCopated* 色彩空間。
 
-#### 設定資產處理 {#configuring-asset-processing}
+#### 編輯支援格式的MIME類型 {#editing-mime-types-for-supported-formats}
 
 您可以定義Dynamic Media應處理哪些資產類型，並自訂進階資產處理參數。 例如，您可以指定資產處理參數以執行下列動作：
 
 * 將Adobe PDF轉換為eCatalog資產。
 * 將Adobe Photoshop檔案(.PSD)轉換為橫幅範本資產，以利個人化。
 * 點陣化Adobe Illustrator檔案(.AI)或Adobe Photoshop封裝的Postscript檔案(.EPS)。
-* 注意：「視訊設定檔」和「影像設定檔」可分別用來定義視訊和影像的處理。
+* [視訊設定檔](/help/assets/video-profiles.md) 和 [](/help/assets/image-profiles.md) 影像設定檔可分別用來定義視訊和影像的處理。
 
 請參閱 [上傳資產](/help/assets/manage-assets.md#uploading-assets)。
 
-**若要設定資產處理**
+**要編輯支援格式的MIME類型**
 
 1. 在AEM中，按一下AEM標誌以存取全域導覽主控台，然後按一下「工 **[!UICONTROL 具>一般> CRXDE Lite」。]**
 1. 在左側導軌中，導覽至下列項目：
@@ -262,11 +262,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 1. 在頁面的左上角，點選 **[!UICONTROL CRXDE Lite]** ，返回AEM。
 
-#### 為不支援的格式添加自定義MIME類型 {#adding-custom-mime-types-for-unsupported-formats}
+#### 為不支援的格式添加MIME類型 {#adding-mime-types-for-unsupported-formats}
 
 您可以針對AEM Assets中不支援的格式新增自訂MIME類型。To ensure that any new node you add in CRXDE Lite is not deleted by AEM, you must ensure that you move the MIME type before `image_` and its enabled value is set to **[!UICONTROL false.]**
 
-**要為不支援的格式添加自定義MIME類型**
+**要為不支援的格式添加MIME類型**
 
 1. From AEM, tap **[!UICONTROL Tools > Operations > Web Console.]**
 
@@ -521,11 +521,13 @@ Adobe建議對PDF、Postscript和PSD檔案使用下列「已調整」的工作�
 
 1. 在「最大 **[!UICONTROL 並行作業數]** 」欄位中，將數字更改為所需值。
 
-   預設情況下，並行作業的最大數量取決於可用CPU內核的數量。 例如，在4核伺服器上，它分配2個工作線程。 （0.0到1.0之間的值是基於比率的，或者任何大於1的數字都將分配工作線程數。）
+   您可以增加「 **[!UICONTROL 最大並行作業數]** 」，以充份支援將檔案大量上傳至動態媒體。 確切值取決於硬體容量。 在某些情況下（即初始移轉或一次性大量上傳），您可以使用大值。 但是，請注意，使用大值（如兩倍的內核數）可能會對其他併發活動產生負面影響。 因此，您應根據您的特定使用案例來測試和調整值。
 
-   Adobe建議您設定32 **[!UICONTROL 個最大並行作業]** ，以充份支援將檔案重量上傳至Dynamic Media Classic(Scene7)。
+<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
-   ![chlimage_1](assets/chlimage_1.jpeg)
+   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic (Scene7). -->
+
+![chlimage_1](assets/chlimage_1.jpeg)
 
 1. 點選「 **[!UICONTROL 儲存」。]**
 
