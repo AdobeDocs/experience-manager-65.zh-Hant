@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 283802809d665cd979e2f1a4fa969b6ddc491ed6
+source-git-commit: b4b500cc80c6d498baaabe3a6863a3843b904f9b
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '2085'
 ht-degree: 1%
 
 ---
@@ -60,11 +60,23 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 
 ## 智慧型影像處理如何運作？ {#how-does-smart-imaging-work}
 
-智慧型影像功能使用Adobe Sensei根據瀏覽器功能，自動將影像轉換為最佳的格式、大小和品質：
+當消費者要求影像時，我們會檢查使用者的特性，並根據使用中的瀏覽器轉換為適當的影像格式。 這些格式轉換的方式不會降低視覺精確度。 智慧型影像功能可根據瀏覽器功能，以下列方式自動將影像轉換為不同格式。
 
-* 針對Chrome、Firefox、Microsoft Edge、Android和Opera等瀏覽器自動轉換為WebP。
-* 針對Safari等瀏覽器，自動轉換為JPEG2000。
-* 針對Internet Explorer 9+等瀏覽器自動轉換為JPEG。
+* 針對下列瀏覽器自動轉換為WebP:
+   * Chrome
+   * Firefox
+   * Microsoft Edge
+   * Safari 14.0 +
+      * Safari 14僅包含iOS 14.0和更新版本，以及macOS BigSur和更新版本
+   * Android
+   * Opera
+* 舊版瀏覽器支援：
+
+   | 瀏覽器 | 瀏覽器／作業系統版本 | 格式 |
+   | --- | --- | --- |
+   | Safari | iOS 14.0或更舊版本 | JPEG2000 |
+   | Edge | 18或舊版 | JPEGXR |
+   | Internet Explorer | 9+ | JPEGXR |
 * 對於不支援這些格式的瀏覽器，會提供原本要求的影像格式。
 
 如果原始影像大小小於智慧型影像產生的大小，則會提供原始影像。
@@ -90,11 +102,15 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 
 ## 我是否必須變更任何URL、影像預設集，或在我的網站上部署智慧型影像的新程式碼？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-否. 智慧型影像功能可與您現有的影像URL和影像預設集完美搭配運作。 此外，智慧型影像功能不需要您在網站上新增任何程式碼來偵測使用者的瀏覽器。 所有這些都會自動處理。
+如果您在現有的自訂網域上設定Smart Imaging,Smart Imaging將可與您現有的影像URL和影像預設集順暢地運作。 此外，智慧型影像功能不需要您在網站上新增任何程式碼來偵測使用者的瀏覽器。 所有這些都會自動處理。
 
-<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
+如果您需要設定新的自訂網域以使用智慧型影像，則需要更新URL以反映此自訂網域。
 
 另外，請看 [我是否符合使用Smart Imaging的資格？](#am-i-eligible-to-use-smart-imaging) 瞭解智慧型影像的預先要求。
+
+<!-- No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add any code on your website to detect a user's browser. All of this is handled automatically. -->
+
+<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
 ## 智慧型影像是否可與HTTPS搭配運作？ HTTP/2如何？ {#does-smart-imaging-working-with-https-how-about-http}
 
@@ -177,6 +193,34 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings.]** 查找標有�
 並非所有影像都會轉換。 Smart Imaging決定是否需要轉換來改善效能。 在某些情況下，若沒有預期的效能提升，或格式不是JPEG或PNG，則不會轉換影像。
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
+
+## 我要如何知道效能的提升？ 是否有辦法注意到Smart Imaging的優點？ {#performance-gain}
+
+**關於智慧型影像標題**
+
+智慧型影像報頭值只有在目前提供非快取請求時才有效。 這樣做是為了保持當前快取的相容性，並避免當通過快取服務影像時需要計算。
+
+若要使用智慧型影像標題，您必須在請求中`cache=off`新增修飾元。 請參[閱動態媒體影像伺服與轉換API中的快取](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-cache.html)。
+
+使用範例 `cache=off` （僅供圖例之用）:
+
+`https://domain.scene7.com/is/image/companyName/imageName?cache=off` 
+
+在您使用此類請求後，在「回應標題」區段中，您可以看到標 `-x-adobe-smart-imaging` 題。 請參閱下列反白顯示的螢幕 `-x-adobe-smart-imaging` 擷取。
+
+![智慧型影像頭](/help/assets/assets-dm/smart-imaging-header2.png) 
+
+此標題值表示：
+
+* Smart Imaging為公司效力。
+* 正值(>=0)表示轉換成功。 此時會傳回新影像（此處為webP）。
+* 負值(&lt;0)表示轉換失敗。 在此情況下，會傳回原始的要求影像（若未指定，預設為JPEG）。
+* 該值表示請求的映像和新映像之間的位元組差。 在此例中，儲存的位元組為75048，對於一個影像來說約為75 KB。 
+   * 負值表示請求的影像小於新影像。 雖然顯示的是負大小差，但提供的影像只是原始要求的影像
+
+**何時使用智慧型影像標題？**
+
+智慧型影像回應標頭可用於除錯用途，或僅在反白顯示智慧型影像的優點時啟用。 在一般`cache=off`情況下使用會大幅影響載入時間。
 
 ## 是否可以針對任何請求關閉智慧映像？ {#turning-off-smart-imaging}
 
