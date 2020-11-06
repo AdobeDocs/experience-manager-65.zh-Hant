@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 6的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2e56a44fce08bc127a7ec920d2cb985ce2842bbc
+source-git-commit: b23b66e9d57742f6771bc4b26753a47b334e06bc
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4557'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ ht-degree: 0%
 Adobe Experience Manager 6.5.6.0是重要的更新，其中包括自2019年4月6.5版正式發行以來，新功能、客戶要求的重要增強功能，以及效能、穩定性和安全性 **增強**。 它可安裝在Adobe Experience Manager 6.5之上。
 
 Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
+
+* 選擇性地將資產發佈或取消發佈 [!DNL Experience Manager] 至或 [!DNL Dynamic Media] 使 [!UICONTROL 用「快速發佈] 」 [!UICONTROL 或「管理出版物] 」精靈。
+
+* 使用使 [!DNL Dynamic Media] 用者介面來使內容傳送網路(CDN)快取內容無效。
 
 * 現在也支援透過Proxy伺服器將資產貢獻資料夾從Brand Portal發佈至Experience Manager Assets。
 
