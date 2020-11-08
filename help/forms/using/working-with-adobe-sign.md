@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
 workflow-type: tm+mt
-source-wordcount: '3853'
+source-wordcount: '3904'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,10 @@ Adobe Sign與AEM Forms的整合支援：
    1. 指定最適 **化表單****的「名稱** 」和「標題」。
 
    1. 選取在使 [](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) 用AEM Forms設定Adobe Sign時建立的設定容器。
+
+      >[!NOTE]
+      >
+      >「 **[!UICONTROL Adobe Sign Cloud Service]** 」下拉式清單會顯示您在此欄位中選取之組態容器中設定的雲端服務。 當您選 **[!UICONTROL 取「啟用Adobe Sign]** 」選項時，可在最適化表單屬性的「電子簽名 **[!UICONTROL 」區段中取得「Adobe Sign Cloud Service]****** 」下拉式清單。
 
 1. 在「表 **[!UICONTROL 單模型]** 」(Form Model)頁籤中，選擇以下選項之一：
 
