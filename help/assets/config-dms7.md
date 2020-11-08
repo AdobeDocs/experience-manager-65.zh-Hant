@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 648b9601445a46b6a2734d5a47545c0439b9c283
+source-git-commit: ee527712b4d7f6ebf9ef2996de1405f6f9c3d335
 workflow-type: tm+mt
 source-wordcount: '5964'
 ht-degree: 5%
@@ -73,7 +73,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## 在雲端服務中建立動態媒體設定 {#configuring-dynamic-media-cloud-services}
 
-**設定動態媒體之前**:在您收到具有動態媒體憑證的布建電子郵件後， [您必須登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
+**在您設定動態媒體** -收到具有動態媒體認證的布建電子郵件後，您必須登 [入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
