@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,10 @@ Adobe Sign可針對最適化表單啟用電子簽名工作流程。 電子簽名
 
    >[!NOTE]
    >
-   >請確定雲端服務設定頁面的URL以 **HTTPS開頭**。 若未啟用， [請為AEM](/help/sites-administering/ssl-by-default.md) Forms伺服器啟用SSL。
+   >您可以執行步驟1-4，以建立新的設定容器並在容器中建立Adobe Sign設定，或使用 `global` Tools **** Hammer ![>](assets/hammer.png) Services ********> Adobe SignSignCloud中的現有資料夾。 如果您在新的設定容器中建立設定，請在建立最適化表單時，確定在「 **[!UICONTROL Configuration Container]** 」（設定容器）欄位中指定容器名稱。
+
+   >[!NOTE]
+   請確定雲端服務設定頁面的URL以 **HTTPS開頭**。 若未啟用， [請為AEM](/help/sites-administering/ssl-by-default.md) Forms伺服器啟用SSL。
 
 1. 在設定頁面上，點選「 **[!UICONTROL 建立]** 」以在AEM Forms中建立Adobe Sign設定。
 1. 在「建 **[!UICONTROL 立Adobe Sign設定]** 」頁面的「一般 **[!UICONTROL 」標籤中，為設定和Next]** (下一 ********&#x200B;步)指定名稱。 您可以選擇指定標題並瀏覽以選取設定的縮圖。
