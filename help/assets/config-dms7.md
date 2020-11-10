@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ee527712b4d7f6ebf9ef2996de1405f6f9c3d335
+source-git-commit: 24ad36d3ff329885efff319404e0d5321e8ce46d
 workflow-type: tm+mt
-source-wordcount: '5964'
+source-wordcount: '5990'
 ht-degree: 5%
 
 ---
@@ -545,9 +545,7 @@ Adobe建議對PDF、Postscript和PSD檔案使用下列「已調整」的工作�
 
 1. 在「最大 **[!UICONTROL 並行作業數]** 」欄位中，將數字更改為所需值。
 
-   預設情況下，並行作業的最大數量取決於可用CPU內核的數量。 例如，在4核伺服器上，它分配2個工作線程。 （0.0到1.0之間的值是基於比率的，或者任何大於1的數字都將分配工作線程數。）
-
-   對於大多數使用案例，0.5預設設定已足夠。
+   您可以增加「最大並行作業數」，以充分支援將檔案大量上傳至動態媒體。 確切值取決於硬體容量。 在某些情況下（即初始移轉或一次性大量上傳），您可以使用大值。 但是，請注意，使用大值（如兩倍的內核數）可能會對其他併發活動產生負面影響。 因此，您應根據您的特定使用案例來測試和調整值。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
