@@ -3,9 +3,9 @@ title: 使用智慧型內容服務設定資產標籤
 description: 瞭解如何使用智慧型內容服務來設定智慧型標籤 [!DNL Adobe Experience Manager]，以及增強智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1fa79a49ce3590fcba63e6e7d1a63586650251d2
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2179'
 ht-degree: 26%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 26%
    <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
   -->
 
-* 安裝最新 [的Experience Manager Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+* 安裝最新 [的Experience Manager Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 ## 使用 Adobe 開發人員控制台進行整合 {#integrate-adobe-io}
 
@@ -281,12 +281,12 @@ ht-degree: 26%
 
    * 無法辨識影像的細微差異。 例如，修身與普通襯衫。
    * 無法根據影像的微小圖樣／部分來識別標籤。 例如，T恤上的標誌。
-   * 在中支援的地區設定中 [!DNL Experience Manager] 支援標籤。 如需語言清單，請參閱智 [慧型內容服務版本注意事項](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
+   * 在中支援的地區設定中 [!DNL Experience Manager] 支援標籤。 如需語言清單，請參閱智 [慧型內容服務版本注意事項](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
 
 * 若要使用智慧型標籤（一般或增強功能）來搜尋資產，請使用 [!DNL Assets] Omnisearch（全文搜尋）。 智慧型標籤沒有個別的搜尋述詞。
 
 >[!MORELIKETHIS]
 >
 >* [智慧型標籤的概觀與訓練方法](enhanced-smart-tags.md)
->* [有關如何設定智慧標籤的教學課程影片](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)
+>* [智慧型標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 
