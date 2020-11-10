@@ -3,9 +3,9 @@ title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]�
 description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e49fa8ec19411648841b19bad4b8c1e0efcc1dc1
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '2423'
+source-wordcount: '2421'
 ht-degree: 10%
 
 ---
@@ -243,7 +243,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >
 >* [中繼資料概念與理解](metadata-concepts.md)。
 >* [編輯多個系列的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)
->* [在Experience Manager Assets中匯入和匯出中繼資料](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
