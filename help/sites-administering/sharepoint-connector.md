@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
+source-git-commit: cc3a2ce7cb3dc020f5466a4b65cf5a9714e7a344
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ SharePoint連接器支援下列基本功能：
 >
 >AEM 6.1 Service Pack 2也支援SharePoint Connector。 連接器不再支援虛擬儲存庫裝載，因此無法裝載它。 如果要使用Java API訪問Sharepoint儲存庫，請在項目中使用Sharepoint連接器的JCR儲存庫實施。
 >
->SharePoint伺服器和相關IT基礎架構的安裝、配置、管理和IT操作不在本文檔的範圍內。 有關這些主題的 [資訊，請參閱](https://www.microsoft.com/sharepoint) SharePoint上的廠商檔案。 連接器要求正確安裝、配置和操作基礎架構的這些部分。
+>SharePoint伺服器和相關IT基礎架構的安裝、配置、管理和IT操作不在本文檔的範圍之內。 有關這些主題的 [資訊，請參閱](https://www.microsoft.com/sharepoint) SharePoint上的廠商檔案。 連接器要求正確安裝、配置和操作基礎架構的這些部分。
 
 
 ## Getting started {#getting-started}
@@ -45,7 +45,7 @@ SharePoint連接器支援下列基本功能：
 要開始使用連接器，請執行以下操作：
 
 * 請確定您至少已安裝Java 7。
-* 從Package Share下載連接器套件散發檔案。
+* 從「軟體分發」下載連接器軟體包分發檔案。
 * 將有效 *的license.properties* 檔案複製到包含 *cq-quickstart-6.4.0.jar檔案的目錄中* 。
 
 * 按兩下／點選。jar檔案以啟動AEM，或從命令列啟動它。
@@ -66,7 +66,7 @@ SharePoint連接器支援下列基本功能：
 * CRX和SharePoint資料庫的使用者憑證和權限
 * [支援的平台](#supported-platforms)
 
-SharePoint連接器可從Packageshare下載 [使用](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673)。
+SharePoint連接器可從「軟體散發」 [下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673)。
 
 ### 支援的平台 {#supported-platforms}
 
@@ -89,9 +89,8 @@ SharePoint連接器可從Packageshare下載 [使用](https://www.adobeaemcloud.c
 
 ### 標準安裝 {#standard-installation}
 
-AEM Package Share可用來散發產品功能、範例和Hotfix。 如需詳細資訊，請參閱「套 [件共用」檔案](/help/sites-administering/package-manager.md#package-share)。
+「軟體散發」是用來散發產品功能、範例和修補程式。 如需詳細資訊，請參閱軟 [體散發檔案](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution)。
 
-若要存取「AEM歡迎」頁面上的「套件共用」，請點選／按一下「工 **具** 」，然後選 **取「套件共用」**。 您需要有效的Adobe ID，其中包含您公司的電子郵件地址。 此外，登入您的帳戶後，請套用「封裝共用」存取權。
 
 #### 與AEM整合 {#integrating-with-aem}
 
@@ -102,7 +101,7 @@ AEM Package Share可用來散發產品功能、範例和Hotfix。 如需詳細�
 1. 點選／按一 **下套件** 「說明」頁面中的「安裝」。
 1. 在「安裝 **套件」對話方塊中** ，點選／按一下「 **安裝」**。
 
-   **注意**: 請確定您是以管理員身分登入。
+   **注意**:請確定您是以管理員身分登入。
 
 1. 安裝軟體包後，點選／按一下「 **Close（關閉）**」。
 
@@ -128,14 +127,13 @@ AEM Package Share可用來散發產品功能、範例和Hotfix。 如需詳細�
 
 依預設，連接器會公開單一JCR工作區。 此工作區公開的SharePoint伺服器是透過「Sharepoint伺服器URL」設定參數來設定。
 
-連接器也可以配置為多個工作區。 在這種情況下，每個工作區都與通過工作區公開的各個SharePoint伺服器的URL相關聯。 若要新增工作區，請新增工作區定義至「工作區」參數。 工作區定義具有以下格式：
-`<name>`= `<url>` where`<name>` is the name of the JCR workspace`<url>` and is the SharePoint server for that workspace.
+連接器也可以配置為多個工作區。 在這種情況下，每個工作區都與通過工作區公開的各個SharePoint伺服器的URL相關聯。 若要新增工作區，請新增工作區定義至「工作區」參數。 工作區定義具有以下格式：`<name>`= `<url>` where`<name>` is the name of the JCR workspace`<url>` and is the SharePoint server for that workspace.
 
 在AEM中，請執行上述設定步驟以外的另一個步驟。 允許列出「**com.day.cq.dam.cq-dam-jcr-connectors**」套件。
 
 若要允許AEM中的清單組合，請執行下列步驟：
 
-1. 導覽至OSGi Management Console: http://localhost:4502/system/console/configMgr。
+1. 導覽至OSGi Management Console:http://localhost:4502/system/console/configMgr。
 1. 搜尋「Apache Sling Login Admin Whitelist」服務。
 1. 選擇 **繞過白名單**。
 1. 新增 `com.day.cq.dam.cq-dam-jcr-connectors` 白名單組合預設值
@@ -195,10 +193,10 @@ Sharepoint包含「經典」和「基於索賠的」驗證方法，這兩種方�
 * 基本索賠
 * 基於索賠表單
 
-AEM JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013,4.0版。 支援基於索賠的驗證（由Microsoft建議），該驗證在以下模式下運行：
+AEM JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013,4.0版。支援基於索賠的驗證（由Microsoft建議），該驗證在以下模式下運行：
 
-* **基本/NTLM身份驗證**: 連接器首先嘗試使用基本驗證進行連接。 如果不可用，則切換到基於NTLM的身份驗證。
-* **表單式驗證**: Sharepoint會根據使用者在登入表單（通常是網頁）中輸入的認證來驗證使用者。 該系統為已驗證的請求發出令牌，該令牌包含用於為後續請求重新建立標識的密鑰。
+* **基本/NTLM身份驗證**:連接器首先嘗試使用基本驗證進行連接。 如果不可用，則切換到基於NTLM的身份驗證。
+* **表單式驗證**:Sharepoint會根據使用者在登入表單（通常是網頁）中輸入的認證來驗證使用者。 該系統為已驗證的請求發出令牌，該令牌包含用於為後續請求重新建立標識的密鑰。
 
 **配置基於表單的驗證**
 
@@ -245,7 +243,7 @@ AEM JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013,4.0�
 
 ### 停用Token驗證 {#disable-token-authentication}
 
-1. 下載並安裝套件 `basic auth`。 `zip` 從Package Share。
+1. 下載並安裝套件 `basic auth`。 `zip` 從「軟體散發」。
 
 1. 關閉快速入門。
 1. 開啟檔案 *\crx-quickstart\repository\repository.xml*。
