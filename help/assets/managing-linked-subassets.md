@@ -3,9 +3,9 @@ title: 使用參考和多頁管理複合資產
 description: 瞭解如何從內部建立數位資產的參考 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 您可以從檔案中參考現有的數位資 [!DNL Adobe Illustrator] 產。
 
-1. 使用 [Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 導覽至您要參考之資產的檔案系統位置。
+1. 使用 [[!DNL Experience Manager] 案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)，擷取本機檔案系統上的數位資產。 導覽至您要參考之資產的檔案系統位置。
 1. 將資產從本機資料夾拖曳至檔 [!DNL Illustrator] 案。
 
 1. 將檔案 [!DNL Illustrator] 保存到掛載的驅動器，或 [上傳](/help/assets/manage-assets.md#uploading-assets) 到儲存 [!DNL Experience Manager] 庫。
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ## 將數位資產新增為 [!DNL Adobe Photoshop] {#refps}
 
-1. 使用 [!DNL Experience Manager] 案頭應用程式存取 [!DNL Experience Manager Assets]。 下載並顯示本機檔案系統上的資產。 使用中 [!UICONTROL 的「置入連結] 」功能 [!DNL Adobe Photoshop]。 請參閱 [將資產置於案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
+1. 使用 [!DNL Experience Manager] 案頭應用程式存取 [!DNL Experience Manager Assets]。 下載並顯示本機檔案系統上的資產。 使用中 [!UICONTROL 的「置入連結] 」功能 [!DNL Adobe Photoshop]。 請參閱 [將資產置於案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
@@ -119,7 +119,7 @@ ht-degree: 0%
 
 工具列、左側導軌和頁面檢視器控制項中提供下列選項：
 
-* **[!UICONTROL 案頭動作]** ，以使用案頭應用程式開啟或顯示特定 [!DNL Experience Manager] 子資產。 瞭解如何設 [定案頭動作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) (如果您使用案頭應用 [!DNL Experience Manager] 程式)。
+* **[!UICONTROL 案頭動作]** ，以使用案頭應用程式開啟或顯示特定 [!DNL Experience Manager] 子資產。 瞭解如何設 [定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) (如果您使用案頭應用 [!DNL Experience Manager] 程式)。
 
 * **[!UICONTROL 「屬性]** 」(Properties [!UICONTROL )選項可打] 開特定子資產的「屬性」(Properties)頁面。
 
@@ -135,8 +135,8 @@ ht-degree: 0%
 
 >[!MORELIKETHIS]
 >
->* [使用Adobe Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
->* [在Adobe Experience Manager中設定案頭動作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [使用Adobe Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [在Adobe Experience Manager中設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [在Adobe Photoshop中建立連結的智慧型物件](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [在Adobe InDesign中置入圖形](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 
