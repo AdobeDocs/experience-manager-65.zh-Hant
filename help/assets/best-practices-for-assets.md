@@ -3,10 +3,10 @@ title: 最佳實務 [!DNL Assets]
 description: 通過識別並遵守取決於部署和配置的最佳實踐，提高系統負載下的穩定性和效能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 1%
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -24,5 +24,5 @@ ht-degree: 1%
 * 資產 [移轉指南](/help/assets/assets-migration-guide.md):如果您想要將舊式系統中的資產移轉至「資產」，請考慮幾個步驟以簡化移轉程式。 移轉指南包含有關您執行之任務的最佳實務，以便以階 [!DNL Experience Manager] 段方式將資產納入。 這包括套用中繼資料、產生轉譯，以及啟動資產以發佈例項。
 * Assets網 [路考量事項檔案](/help/assets/assets-network-considerations.md):在處理部 [!DNL Experience Manager] 署時，瞭解網路拓撲對於瞭解網路效能、識別阻塞點和描述預期的用戶體驗至關重要。 網路考 [!DNL Assets] 量事項檔案會討論在設計資產部署時的網路考量事項。
 * 資產 [監控指南](/help/assets/assets-monitoring-best-practices.md):部署完 [!DNL Experience Manager] 成後，您應監視某些任務和一般系統，以確保系統的完整性和操作效率。 「監控」指南包含監控系統各個方面的最佳實踐。
-* [Experience Manager案頭應用程式最佳實務](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/introduction.html): [!DNL Experience Manager] 案頭應用程式會將您的數位資產管理(DAM)解決方案連結至您的案頭，讓您可以直接在案頭上開啟網頁使用者介面 [!DNL Experience Manager] 中提供的檔案。 案頭應用程式的簡單好用工作流程，是使用案頭作業系統提供的網路共用技術來啟用的。 本指南說明主要功能及建議使用案頭應用 [!DNL Experience Manager] 程式。
+* [Experience Manager案頭應用程式最佳實務](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html): [!DNL Experience Manager] 案頭應用程式會將您的數位資產管理(DAM)解決方案連結至您的案頭，讓您可以直接在案頭上開啟網頁使用者介面 [!DNL Experience Manager] 中提供的檔案。 案頭應用程式的簡單好用工作流程，是使用案頭作業系統提供的網路共用技術來啟用的。 本指南說明主要功能及建議使用案頭應用 [!DNL Experience Manager] 程式。
 * [Experience Manager與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md):您可以透過多種方 [!DNL Experience Manager] 式將部署 [!DNL Creative Cloud] 與部署整合。 遵循一些最佳實務，以簡化您的整合與資產轉讓工作流程，協助您達到最高效率。 本指南包含與整合的最佳 [!DNL Assets] 實務 [!DNL Adobe Creative Cloud]。
