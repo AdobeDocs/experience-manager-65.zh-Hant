@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c59726cc1e6656f16a237aac703f37f3f38a87f9
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '9565'
 ht-degree: 3%
@@ -94,7 +94,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >
 >觸發區塊上傳時的預設值為500 MB，區塊大小為50 MB。 如果您修改 [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) ，將資產的上傳時間設為 `timeout configuration` 少於所需時間，則在資產上傳進行中時，您可能會遇到作業逾時情形。 因此，您需要更改和 `chunkUploadMinFileSize` ，以便 `chunksize`每個區塊請求刷新會話。
 >
->在憑證到期逾時、延遲、頻寬和預期的並行上傳時，可讓您確保選取下列項目的最高值：
+>在憑證到期逾時、延遲、頻寬和預期的並行上傳的情況下，可讓您確保選取下列項目的最高值：
 >
 >* 為了確保在上載進行時，對可能導致憑據過期的檔案啟用區塊上載。
    >
@@ -879,7 +879,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 * 上傳檔案名稱與位於相同位置的資產。 它可以是新資產或相同資產的修改版本。
 * 在中編輯影像 [!DNL Experience Manager] 並儲存變更。
 * 編輯資產的中繼資料。
-* 使用 [!DNL Experience Manager] 案頭應用程式來勾選現有資產、編輯資產並上 [傳變更](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
+* 使用 [!DNL Experience Manager] 案頭應用程式來勾選現有資產、編輯資產並上 [傳變更](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#edit-assets-upload-updated-assets)。
 
 您也可以透過工作流程啟用自動版本修訂。 當您為資產建立版本時，中繼資料和轉譯會與版本一起儲存。 轉譯是相同影像的替代格式，例如已上傳JPEG檔案的PNG轉譯。
 
