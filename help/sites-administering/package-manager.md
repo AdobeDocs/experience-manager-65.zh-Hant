@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5e10ddb0e5cf24e1915d0840cd380520374e93ea
+source-git-commit: 03967fcdc9685c9a8bf1dead4bd5e389603ff91b
+workflow-type: tm+mt
+source-wordcount: '3934'
+ht-degree: 1%
 
 ---
 
@@ -24,9 +27,9 @@ source-git-commit: 5e10ddb0e5cf24e1915d0840cd380520374e93ea
 
 * [Package Manager](#package-manager)，您可使用它來管理本機AEM例項中的封裝。
 
-* [Package Share](#package-share)，一種集中式伺服器，可同時持有公開可用的套件，以及您公司專用的套件。 公開套件可包含修補程式、新功能、檔案等。
+* [軟體散發](#software-distribution)(Software Distribution)，此集中式伺服器同時持有公開可用的套件和您公司專用的套件。 公開套件可包含修補程式、新功能、檔案等。
 
-您可以在包管理器、包共用和檔案系統之間傳輸包。
+您可以在軟體包管理器、軟體分發和檔案系統之間傳輸軟體包。
 
 ## 什麼是套件？ {#what-are-packages}
 
@@ -56,8 +59,8 @@ source-git-commit: 5e10ddb0e5cf24e1915d0840cd380520374e93ea
 * 執行乾式運行安裝
 * 安裝套件（AEM不會在上傳後自動安裝套件）
 * 刪除包
-* 從「套件共用」程式庫下載套件，例如修補程式
-* 將封裝上傳至封裝共用程式庫的公司內部區段
+* 從「軟體散發程式庫」下載套件，例如修補程式
+* 將套件上傳至「軟體散發程式庫」的公司內部區段
 
 ## 包資訊 {#package-information}
 
@@ -172,7 +175,7 @@ source-git-commit: 5e10ddb0e5cf24e1915d0840cd380520374e93ea
   </tr>
   <tr>
    <td> 加入</td>
-   <td>您可以定義路徑，或使用規則運算式來指定要包括的所有節點。<br /> 包 <br /> 含目錄將：
+   <td>您可以定義路徑，或使用規則運算式來指定要包括的所有節點。<br /> <br /> 包含目錄將：
     <ul>
      <li>包括該 <i>目錄</i> ，以及該目錄中的所有檔案和資料夾（即整個子樹）</li>
      <li><strong>不包含</strong> 指定根路徑下的其他檔案或資料夾</li>
@@ -181,7 +184,7 @@ source-git-commit: 5e10ddb0e5cf24e1915d0840cd380520374e93ea
   </tr>
   <tr>
    <td> 排除</td>
-   <td>您可以指定路徑或使用規則運算式來指定要排除的所有節點。<br /> 排 <br /> 除目錄將排除該目錄 <i>及該目錄中</i> （即整個子樹）的所有檔案和資料夾。<br /> </td>
+   <td>您可以指定路徑或使用規則運算式來指定要排除的所有節點。<br /> <br /> 排除目錄將排除該目 <i>錄</i> ，並排除該目錄中的所有檔案和資料夾（即整個子樹）。<br /> </td>
    <td>/libs/wcm/foundation/components(/)。*)?</td>
   </tr>
  </tbody>
@@ -285,27 +288,27 @@ Package Manager會管理您本機AEM安裝上的套件。 分配了必 [要的�
 
    編輯完 **成設定後** ，按一下「確定」。
 
-1. 視需 **[要將螢幕擷取](#package-screenshots)**(Screenshots)新增至套件。 建立套件時，有一個例項可供使用，若有需要，請使用「套件的螢幕擷取」(**Package Screeston**from sidekick)新增更多。
+1. 視需 **[要將螢幕擷取](#package-screenshots)** (Screenshots)新增至套件。 建立套件時，有一個例項可供使用，若有需要，請使用「套件的螢幕擷取」( **Package Screeston** from sidekick)新增更多。
 
    按兩下「螢幕擷取」區域中的影像元件，新增影像，然後按一下「確 **定」******。
 
-1. 定義「 **[套件篩選](#package-filters)**」，方法是將「篩選定義&#x200B;****」的例項從側腳拖曳，然後按兩下以開啟以進行編輯：
+1. 定義「 **[套件篩選](#package-filters)** 」，方法是將「篩選定義 **** 」的例項從側腳拖曳，然後按兩下以開啟以進行編輯：
 
    ![packagesfilter](assets/packagesfilter.png)
 
-   指定：
+   指定下列設定：
 
    * **根路徑**&#x200B;要封裝的內容；這可以是子樹的根。
    * **規則**&#x200B;規則是選用的；對於簡單的套件定義，不需要指定包含或排除規則。
 
-      如有需要，您可以定義「包 [**含&#x200B;**」或「**&#x200B;排除」規則&#x200B;**](#package-filters)，以精確定義套件內容。
+      如有需要，您可以定義「包 [**含** 」或「 **排除」規則**](#package-filters) ，以精確定義套件內容。
 
-      使用+符號 **新增規則** ，或使用 **-符號移除規則** 。 規則會根據其順序套用，因此使用「向上」和「向下」按 **鈕** , **依需要定** 位。
+      使用+符號 **新增規則** ，或使用 **** -符號移除規則。 規則會根據其順序套用，因此使用「向上」和「向下」按 **鈕** , **依需要定** 位。
    然後按一 **下「確定** 」以儲存篩選。
 
    >[!NOTE]
    >
-   >您可以視需要使用任意數量的篩選定義，但必須小心確保這些定義不發生衝突。 使用 **預覽** ，確認封裝內容將包含哪些內容。
+   >您可以視需要使用任意數量的篩選定義，但必須小心確保這些定義不發生衝突。 使用 **預覽** ，確認封裝內容。
 
 1. 若要確認套件將包含的內容，您可使用「預 **覽」**。 這會執行建立程式的乾式執行，並列出實際建立時要新增至封裝的所有項目。
 1. 您現在可以 [建立](#building-a-package) 套件。
@@ -330,7 +333,7 @@ Package Manager會管理您本機AEM安裝上的套件。 分配了必 [要的�
    >
    >當您重建包時，當將覆寫包內容時，這特別重要。
 
-1. 按一下 **確定**。 AEM將建立套件，並列出新增至套件的所有內容。 完成時，AEM會顯示已建立套件的確認，並（當您關閉對話方塊時）更新套件清單資訊。
+1. 按一下&#x200B;**「確定」**。AEM將建立套件，並列出新增至套件的所有內容。 完成時，AEM會顯示已建立套件的確認，並（當您關閉對話方塊時）更新套件清單資訊。
 
 ### 重新包裝包 {#rewrapping-a-package}
 
@@ -338,11 +341,11 @@ Package Manager會管理您本機AEM安裝上的套件。 分配了必 [要的�
 
 重新包裝會變更套件資訊- *而不* 變更套件內容。 套件資訊是縮圖、說明等，換言之，您可使用「套件設定」對話方塊編輯的一切 **資訊** (以開啟此按一下「 ****&#x200B;編輯」)。
 
-重新包裝的主要使用案例是準備套件共用時。 例如，您可能已有現有的套件，並決定與其他人共用。 您想要新增縮圖並新增說明。 您可以重新建立整個套件，而不需使用其所有功能（這可能需要一些時間，並承擔套件不再與原始套件相同的風險），只要重新包住它，然後新增縮圖和說明即可。
+重新包裝的主要使用案例是準備套件時。 例如，您可能已有現有的套件，並決定與其他人共用。 您想要新增縮圖並新增說明。 您可以重新建立整個套件，而不需使用其所有功能（這可能需要一些時間，並承擔套件不再與原始套件相同的風險），只要重新包住它，然後新增縮圖和說明即可。
 
 1. 從「包管理器」( **Package Manager** )開啟包定義（按一下包表徵圖或名稱）。
 
-1. 按一 **下「編輯** 」，並視需 **[要更新「封裝設定](#package-settings)**」。 按一&#x200B;**下「確定**」以儲存。
+1. 按一 **下「編輯** 」，並視需 **[要更新「封裝設定](#package-settings)** 」。 按一 **下「確定** 」以儲存。
 
 1. 按一 **下「重排**」，對話方塊會要求確認。
 
@@ -382,21 +385,6 @@ Package Manager會管理您本機AEM安裝上的套件。 分配了必 [要的�
 
 本節說明如何使用 **Package Manager，將套件從AEM下載至您的檔案系統**。
 
->[!NOTE]
->
->如需 [](#package-share) 從公共區域和您公司內部的套件共用區域下載修補程式、功能套件和套件的詳細資訊，請參閱套件共用。
->
->從「包共用」中，您可以：
->
->* 直接從「套件共 [用」下載套件至您的本機AEM實例](#downloading-and-installing-packages-from-package-share)。
-   >  下載軟體包後，將其導入儲存庫中，之後，您可以使用軟體包管理器立即將其安裝到本地實 **例中**。 這些套件包括修補程式和其他共用套件。
-   >
-   >
-* 從「套件共 [用」下載套件至您的檔案系統](#downloading-packages-to-your-file-system-from-package-share)。
->
-
-
-
 1. 在「AEM歡迎」畫面上，按一下「套 **件」**，然後選 **取「套件管理員」**。
 1. 導覽至您要下載的套件。
 
@@ -409,11 +397,6 @@ Package Manager會管理您本機AEM安裝上的套件。 分配了必 [要的�
 ### 從檔案系統上載包 {#uploading-packages-from-your-file-system}
 
 套件上傳可讓您從檔案系統上傳套件至AEM Package Manager。
-
->[!NOTE]
->
->請參 [閱上傳封裝至公司內部的封裝共用](#uploading-packages-to-the-company-internal-package-share) ，將封裝上傳至您公司的「封裝共用」私用區。
-
 要上載包：
 
 1. 導覽至「套 **件管理員」**。 然後，將包上傳到您希望其中的組資料夾。
@@ -426,7 +409,7 @@ Package Manager會管理您本機AEM安裝上的套件。 分配了必 [要的�
 
    * **檔案**
 
-      **您可以直接鍵入檔案名，或使用「瀏**&#x200B;覽……」對話框，從本地檔案系統中選擇所需的包(選擇後按一下「 **確定**」)。
+      您可以直接鍵入檔案名，或使用「瀏 **覽……」** 對話框，從本地檔案系統中選擇所需的包(選擇後按一下「 **確定**」)。
 
    * **強制上傳**
 
@@ -554,6 +537,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 >* `osgiPackageImports`
 >* `overlays`
 >* `acls`
+
 >
 >
 若未傳遞， `type` 則預設 `osgiPackageImports` 值為值。
@@ -576,7 +560,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
 上傳套件後，您必須安裝內容。 要安裝軟體包內容並使其正常工作，它必須同時具備：
 
-* 載入至AEM(從您的檔 [案系統上傳](#uploading-packages-from-your-file-system) , [或從套件共用下載](#downloading-and-installing-packages-from-package-share))
+* 載入至AEM(從您的檔 [案系統上傳](#uploading-packages-from-your-file-system) ，或從「軟體 [散發」下載](#software-distribution))
 
 * 已安裝
 
@@ -592,6 +576,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
    >
 * 請參閱套件內容清單：
    >  開啟套件，然後按一 **下內容**。
+
 >
 
 
@@ -637,7 +622,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
 >[!NOTE]
 >
->您也可以在第一次啟動例項之前先執行此動作。 為此，您需要手動建立檔案 `crx-quickstart` 夾，在其下 `install` 建立資料夾，並將資料夾放在那裡。 然後，當您第一次啟動實例時，這些軟體包將按字母順序安裝。
+>您也可以先執行此動作，然後再第一次啟動執行個體。 為此，您需要手動建立檔案 `crx-quickstart` 夾，在其下 `install` 建立資料夾，並將資料夾放在那裡。 然後，當您第一次啟動實例時，這些軟體包將按字母順序安裝。
 
 ### 卸載軟體包 {#uninstalling-packages}
 
@@ -667,6 +652,7 @@ AEM可讓您解除安裝套件。 此操作將恢復在軟體包安裝前立即�
 
    * 在工具 **列選單中** ，按一下「刪除」。
    * 按一下右鍵並選擇「刪 **除」**。
+
    ![包刪除](assets/packagesdelete.png)
 
 1. AEM會要求確認您要刪除套件。 按一 **下「確定** 」以確認刪除。
@@ -684,219 +670,19 @@ AEM可讓您解除安裝套件。 此操作將恢復在軟體包安裝前立即�
 1. 按一下要複製的包的表徵圖或名稱以展開它。
 1. 在工具 **列的** 「更多」下拉式選單中，選取「復 **制」**。
 
-## Package Share {#package-share}
+## 套件共用 {#package-share}
 
 Package Share是公開提供來共用Content-Packages的集中式伺服器。
 
-透過Package Share，您可以下載這些套件，其中可包含正式的修補程式、功能集、更新或其他使用者產生的範例內容。
+已由「軟體散發」 [取代](#software-distribution)。
 
-您也可以在公司內上傳及共用套件。
+## 軟體散發 {#software-distribution}
 
-### 對包共用的訪問 {#access-to-package-share}
+[Software Distribution](https://downloads.experiencecloud.adobe.com) 是專為簡化AEM套件的搜尋和下載而設計的全新使用者介面。
 
-對包共用沒有匿名訪問；也就是說，只有註冊的使用者才能檢視、下載和上傳套件。
-
-我們的合作夥伴和客戶可以存取套件共用。 必須提交註冊詳細資訊，才能分配訪問權限。
-
-要獲得對包共用的訪問權：
-
-* 使用登 [入頁面](#signing-in-to-package-share)
-* 第一次使用登入頁面時，您需要：
-
-   * [註冊Adobe ID](#registering-for-package-share) 和／或驗 [證您現有的Adobe ID](#validating-your-adobe-id)
-   * 以便您的 [套件共用帳戶](#package-share-account) (Package Share Account)
-
->[!NOTE]
->
->任何尚未指派給客戶的Package Share用戶，都必須加入社群，才能查看這些資源，方法是按一下Package Share login旁邊的 **Join** 。
-
-#### 登入套件共用 {#signing-in-to-package-share}
-
-1. 在「AEM歡迎」畫面上，按一下「 **工具**」。
-1. 然後選擇「 **Package Share」（封裝共用）**。 您必須執行下列任一操作：
-
-   * 使用您的Adobe ID登入
-   * [建立Adobe ID](#registering-for-package-share)
-   >[!NOTE]
-   >
-   >您第一次使用Adobe ID登入時，必須完成電子 [郵件位址的驗證](#validating-your-adobe-id)。
-
-   >[!NOTE]
-   >
-   >如果您忘記密碼，請使用「說 [明頁面](https://enterprise-dev.adobe.com/content/edev/en/registration/account.html) 」連結（也位於登入對話方塊中）。
-
-#### 驗證您的Adobe ID {#validating-your-adobe-id}
-
-您第一次使用Adobe ID登入「套件共用」時，您的電子郵件位址將會經過驗證。
-
-1. 您將會收到一封包含連結的電子郵件。
-1. 您必須按一下此連結。
-1. 網頁將會開啟。
-
-   以開啟此網頁的動作為驗證。
-
-1. 登入將會繼續。
-
-1. 您將會收到一封包含連結的電子郵件。
-1. 您必須按一下此連結。
-1. 網頁將會開啟。 以開啟此網頁的動作為驗證。
-1. 登入將會繼續。
-
-#### 註冊軟體包共用 {#registering-for-package-share}
-
-如果您需要存取「封裝共用」，則必須註冊Adobe ID:
-
-* 「套 [件共用登入」頁面](#signing-in-to-package-share) ，提供註冊Adobe ID的連結。
-* 您可以從特定Adobe案頭軟體註冊Adobe ID。
-* 或者，您也可以在 [Adobe登入頁面上線上註冊](https://www.adobe.com/cfusion/membership/index.cfm?nf=1&nl=1)。
-
-Adobe ID可透過提供：
-
-* 您的電子郵件地址
-* 您選擇的密碼
-* 您的姓名和居住地國家等其他資訊
-
-#### 套件共用帳戶 {#package-share-account}
-
-您的應用程式的有效性將會在下列之前檢查：
-
-* 您的使用者帳戶是使用必要／允許的權限建立。
-* 您的帳戶會新增至您公司的群組。
-
->[!NOTE]
->
->來自其中一個合作夥伴公司的使用者也可以是其客戶群的成員。
-
-#### 網路考量事項 {#network-considerations}
-
-**IPv6**
-
-嘗試從純IPv6環境訪問包共用時可能會遇到問題。
-
-這是因為軟體包共用是伺服器上托管的服務，這意味著您的連接是通過網際網路上的各種網路建立的。 不能保證所有連接網路都支援IPv6;如果不是，連接可能會失敗。
-
-為避免此問題，您可以從IPv4網路訪問「包共用」，下載該包，然後將其上傳到IPv6環境。
-
-**HTTP代理**
-
-如果您的公司執行需要驗證的http proxy，則目前無法使用「封裝共用」。
-
-只有當您的AEM伺服器可存取網際網路而不需要驗證時，才能使用Package Share。 若要為使用http用戶端（包括套件共用）的所有服務設定proxy，請使用Day Commons HTTP Client 3.1套件的 [OSGi組態](/help/sites-deploying/osgi-configuration-settings.md)。
-
-### 內部封裝共用 {#inside-package-share}
-
-In Package Share包排列在樹子樹中：
-
-* Adobe提供的Adobe套件。
-* 由其他公司提供且由Adobe公開的共用套件。
-* 您的公司套件為私人。
-
-![chlimage_1-110](assets/chlimage_1-110.png)
-
-### 搜索和篩選包 {#searching-and-filtering-packages}
-
-「封裝共用」提供搜尋列，您可用來搜尋特定關鍵字或／和標籤。 關鍵字和標籤都支援多個值。
-
-* 若要搜尋多個關鍵字，您必須依空格分隔每個關鍵字。
-* 要搜索多個標籤，您必須在包樹中選擇每個標籤。
-
-您也可以將篩選摘要列右側的條件運算子從OR變更為AND。
-
-### 從包共用下載和安裝包 {#downloading-and-installing-packages-from-package-share}
-
-若要從Package Share下載套件並將它們安裝在您的本機執行個體上，從AEM執行個體存取Package Share會更輕鬆。 這將下載軟體包，並立即在軟體包管理器中註冊它，從中可以安裝軟體包。
-
-1. 在「AEM歡迎」畫面中，按一下「 **工具**」，然後選 **取「套件共用** 」以開啟「套件共用」頁面。
-1. 使用您的帳戶詳細資訊，登入「套件共用」。 會顯示著陸頁面，列出Adobe資料夾、共用資料夾和您公司專屬的資料夾。
-
-   >[!NOTE]
-   >
-   >在開始從Package Share下載套件之前，請確定您擁有必要 [的存取權](#access-to-package-share)。
-
-1. 導覽至您要下載的套件，然後按一下「下 **載」**。
-
-1. 返回或導覽至AEM例 **項上的Package Manager** 。 然後導覽至您剛下載的套件。
-
-   >[!NOTE]
-   >
-   >若要尋找您下載的套件，請依照與「套件共用」中相同的路徑進行。 例如，如果您從「套件共用」中的下列路徑下載套件：
-   >
-   >**套件** >公 **用** >修補 **程式**
-   然後，在本地實例的「包管理器」中，該包也將顯示在：
-   **套件** >公 **用** >修補 **程式**
-
-1. 按一 **下「安裝** 」，將套件安裝至您的本機AEM安裝。
-
-   >[!NOTE]
-   如果實例上已安裝了軟體包，則軟體包旁會出現「 **Installed** （已安裝）」指示符，而不是「 **Install** （安裝）」按鈕。
-
-   >[!CAUTION]
-   安裝軟體包可以覆蓋儲存庫中的現有內容。 因此，我們建議您先執行「 **測試安裝** 」。 這可讓您檢查套件包含的內容是否與您現有的內容衝突。
-
-### 從包共用將包下載到檔案系統 {#downloading-packages-to-your-file-system-from-package-share}
-
-[下載和安裝](#downloading-and-installing-packages-from-package-share) ，非常方便，但如有需要，您也可以下載套件並儲存至本機檔案系統：
-
-1. 在「套件共用」中，按一下套件圖示或名稱。
-1. 按一下「 **資產** 」標籤。
-1. 按一 **下「下載至磁碟」**。
-
-### 上傳套件 {#uploading-a-package}
-
-透過「封裝共用」，您可以將封裝上傳至您公司內部的封裝共用區域。 這可讓您在公司內分享。
-
-這些套件 *不適用於* 一般AEM社群，但適用於所有在您公司註冊的使用者。
-
-若要上傳您公司內部的套件共用套件：
+如需詳細資訊，請參閱「軟體散 [發」檔案](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)。
 
 >[!CAUTION]
-若要將套件上傳至「封裝共用」，您必須先在本機「套件管理員」上建立以貴公司命名的群組資料夾。 例如geometrixx。 所有要上載以供共用的包都必須放置在此組資料夾中。
-不能共用「包管理器」主清單或其他資料夾中的包。
-
-1. 開啟「套 **件管理器** 」，並導覽至您要上傳的套件。
-
-1. 按一下套件圖示以開啟它。
-1. 按一 **下「共用** 」以開啟對話方塊，將套件上傳至「套件共用」。
-1. 如果尚未登錄到「包共用」，則需要輸入您的登錄憑據。
-
-   當您登入時，AEM會顯示要上傳之套件的詳細資訊：
-
-   ![chlimage_1-111](assets/chlimage_1-111.png)
-
-1. 按一 **下「** Share」（共用），將套件上傳至您公司的內部「Package Share」（套件共用）。
-
-   AEM會顯示狀態並指出封裝完成上傳的時間，之後您可以按一下 **x** （右上角）以退出「 **Share Package** 」（共用封裝）視窗。
-
-1. 上傳完成後，您可以導覽至公司的內部資料夾，以查看您剛共用的套件。
-
->[!NOTE]
-若要修改「封裝共用」上可用的封裝，您必須下載它、重新建立它，然後再將它上傳至「封裝共用」。
-
-### 刪除包 {#deleting-a-package}
-
-您只能刪除由上載的包，如下所述：
-
-1. 在公司樹中，檢查包含該包的包組。
-1. 按一下套件。
-1. 按一下刪除按鈕。
-
-   ![chlimage_1-18](do-not-localize/chlimage_1-30.png)
-
-1. 按一 **下「刪除** 」，確認您要刪除套件。
-
-### 將包設為半私有 {#making-packages-semi-private}
-
-您可以在組織外部共用套件，但不能公開共用。 這些方案將被視為半私有。 若要共用這些半私用套件，您需要Adobe支援的協助。 若要這麼做，請開啟Adobe支援的票證，要求將套件提供給組織以外的機構使用。 他們會要求您提供您要授與套件存取權的Adobe ID清單。
-
-## 軟體散發（測試版） {#software-distribution-beta}
-
-[Software Distribution](https://downloads.experiencecloud.adobe.com) 是專為簡化AEM套件的搜尋和下載而設計的全新使用者介面。 它目前為測試版狀態，且僅能以雲端服務客戶及Adobe員工身分存取Adobe Managed Services和AEM。
-
->[!NOTE]
-* [Package Share](#package-share) 將一直運作，直到所有客戶都能存取「軟體散發」。
-* 所有軟體包都可從「軟體包共用」和「軟體分發」中獲得。
-
-
->[!CAUTION]
-目前，AEM套件管理程式無法與「軟體散發」搭配使用，您可將套件下載至本機磁碟。
+>
+>目前，AEM套件管理程式無法與「軟體散發」搭配使用，您可將套件下載至本機磁碟。
 
