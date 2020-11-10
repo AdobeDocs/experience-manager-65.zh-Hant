@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d12ebf77d2af389e0a3aea5c7f311c828ecd7c17
+source-git-commit: 26efba567985dcb89b2610935cab18943b7034b3
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -231,6 +231,17 @@ AEM與Adobe Target透過Target Standard API整合需要設定Adobe IMS（身分�
 
    * **驗證**:IMS
    * **租用戶ID**:adobe IMS租用戶ID
+
+      >[!NOTE]
+      >
+      >對於IMS，此值必須取自Target本身。 您可以登入Target，並從URL擷取租用戶ID。
+      >
+      >例如，若URL為：
+      >
+      >`https://experience.adobe.com/#/@yourtenantid/target/activities`
+      >
+      >那就用 `yourtenantid`。
+
    * **IMS設定**:選擇IMS設定的名稱
    * **API類型**:REST
    * **A4T Analytics雲端設定**:選取用於目標活動目標和度量的Analytics雲端設定。 如果您在定位內容時使用Adobe Analytics做為報告來源，則需要此功能。 如果您看不到雲端設定，請參閱「設定 [A4T Analytics雲端設定」中的附註](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)。
