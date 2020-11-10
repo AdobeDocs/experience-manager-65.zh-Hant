@@ -3,9 +3,9 @@ title: 資料夾共用 [!DNL Adobe Creative Cloud] 至最佳實務
 description: 設 [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 定以與Adobe Creative Cloud(CC)使用者交換資料夾。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->「至 [!DNL Experience Manager] 資料 [!DNL Creative Cloud] 夾共用」功能已過時。 Adobe強烈建議使用較新的功能，例如 [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)[或Experience Manager案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。 進一步了 [解Experience Manager和Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)。
+>「至 [!DNL Experience Manager] 資料 [!DNL Creative Cloud] 夾共用」功能已過時。 Adobe強烈建議使用較新的功能，例如 [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)[或Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)。 進一步了 [解Experience Manager和Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)。
 
 [!DNL Adobe Experience Manager] 可設定為允許中的使用者 [!DNL Assets] 與應用程式的使用者共用資料夾， [!DNL Adobe Creative Cloud] 以便在資產服務中以共用資料夾的形 [!DNL Adobe Creative Cloud] 式使用。 此功能可用於創意團隊和使用者之間交換檔案 [!DNL Assets] ，尤其是當創意使用者無法存取部署時(他們不在企業網 [!DNL Assets] 路上)。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 整合包含下列元素：
 
 * **[!DNL Experience Manager Assets]** 部署在企業網路（受管理服務或內部部署）中：資料夾共用會從這裡開始。
-* **[!DNL Adobe Marketing Cloud Assets]核心服務**:充當儲存服務與儲存服 [!DNL Experience Manager] 務之 [!DNL Creative Cloud] 間的中介。 使用整合的組織管理員需要在Marketing Cloud組織與部署之間建立信任關 [!DNL Assets] 系。 他們也 [會定義已核准的Creative Cloud共同作業人員清單](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)，讓使 [!DNL Assets] 用者也可以共用資料夾，以提高安全性。
+* **[!DNL Adobe Marketing Cloud Assets]核心服務**:充當儲存服務與儲存服 [!DNL Experience Manager] 務之 [!DNL Creative Cloud] 間的中介。 使用整合的組織管理員需要在Marketing Cloud組織與部署之間建立信任關 [!DNL Assets] 系。 他們也 [會定義已核准的Creative Cloud共同作業人員清單](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)，讓使 [!DNL Assets] 用者也可以共用資料夾，以提高安全性。
 
 * **[!DNL Creative Cloud]資產web services** (儲存空間和檔 [!DNL Creative Cloud] 案web UI):這是特定Creative Cloud應用程式使用者(共用資料夾 [!DNL Assets] 的使用者)可接受邀請並在其Creative Cloud帳戶儲存空間中查看資料夾的地方。
 * **Creative Cloud案頭應用程式**:（可選）允許透過與資產儲存空間同步，從創意使用者的案頭直接存取共用資料夾/ [!DNL Creative Cloud] 檔案。
