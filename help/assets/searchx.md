@@ -3,9 +3,9 @@ title: 擴充搜尋功能。
 description: 將搜尋功能擴 [!DNL Adobe Experience Manager Assets] 充至預設值以外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 18%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 18%
 
 >[!CAUTION]
 >
->自 [!DNL Experience Manager] 6.4起，Classic UI已過時。 如需公告，請參 [閱已過時和移除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建議使用啟用觸控的UI。 如需自訂，請參 [閱搜尋Facet](/help/assets/search-facets.md)。
+>自 [!DNL Experience Manager] 6.4起，Classic UI已過時。 如需公告，請參 [閱已過時和移除的功能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建議使用啟用觸控的UI。 如需自訂，請參 [閱搜尋Facet](/help/assets/search-facets.md)。
 
 ## 覆蓋 {#overlaying}
 
