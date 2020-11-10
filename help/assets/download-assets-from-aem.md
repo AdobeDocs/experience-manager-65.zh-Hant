@@ -3,9 +3,9 @@ title: 下載資產
 description: 瞭解如何從指令下 [!DNL Adobe Experience Manager] 載資產，以啟用或停用下載功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '856'
 ht-degree: 3%
 
 ---
@@ -67,14 +67,14 @@ ht-degree: 3%
 
 您可 `Asset Download Servlet` 以在「發佈」例項上停用此功能，方法是更新 [!DNL Experience Manager] 分派器組態以封鎖任何資產下載請求。 也可以通過OSGi控制台手動禁用servlet。
 
-1. 若要透過分派器設定封鎖資產下載請求，請編 `dispatcher.any` 輯設定並新增規則至篩 [選區段](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)。 `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. 若要透過分派器設定封鎖資產下載請求，請編 `dispatcher.any` 輯設定並新增規則至篩 [選區段](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)。 `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
 1. 若要在Publish實例上禁用OSGi元件，請訪問位於的OSGi控制台 `http://[aem_server]:[port]/system/console/components`。 找到並 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` 按一下「 **[!UICONTROL Disable]**（禁用）」。
 
 >[!MORELIKETHIS]
 >
->* [使用品牌入口網站下載資產](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
+>* [使用品牌入口網站下載資產](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [下載受DRM保護的資產](drm.md)。
->* [在Win或Mac案頭上使用Experience Manager案頭應用程式下載資產](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)。
+>* [在Win或Mac案頭上使用Experience Manager案頭應用程式下載資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)。
 >* [從支援的Adobe Creative Cloud應用程式中，使用Adobe Assets Link下載資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html)。
 
