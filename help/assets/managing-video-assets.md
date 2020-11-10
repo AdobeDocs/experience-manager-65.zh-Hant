@@ -3,9 +3,9 @@ title: 管理影片資產
 description: 在中上傳、預覽、註解和發佈視訊資產 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '807'
 ht-degree: 7%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 7%
 除了設定 [!DNL Assets] 外，請變更下列設定以上傳大型資產：
 
 * 增加代號過期時間。 請參 [!UICONTROL 閱網頁主控台中的] Adobe Granite CSRF Servlet `https://[aem_server]:[port]/system/console/configMgr`。 如需詳細資訊，請參 [閱CSRF保護](/help/sites-developing/csrf-protection.md)。
-* 增加Dispatcher `receiveTimeout` 配置中的。 如需詳細資訊，請參 [閱Experience Manager Dispatcher設定](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
+* 增加Dispatcher `receiveTimeout` 配置中的。 如需詳細資訊，請參 [閱Experience Manager Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
 
 >[!NOTE]
 >
