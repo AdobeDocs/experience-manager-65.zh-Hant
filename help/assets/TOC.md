@@ -7,9 +7,9 @@ user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、提供和最佳化數位資產。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '583'
 ht-degree: 37%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 37%
 # Assets 指南 {#assets}
 
 + [[!DNL Assets] 使用者指南](home.md)
-+ [[!DNL Experience Manager] 6.5資產發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [[!DNL Experience Manager] 6.5資產發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [關於DAM](assets.md)
 + [資產的最佳實務](best-practices-for-assets.md)
 + 使用Experience Manager Assets {#using}
