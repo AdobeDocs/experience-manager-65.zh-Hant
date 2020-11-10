@@ -3,9 +3,9 @@ title: 登入及登出資產以進行編輯
 description: 瞭解如何取出要編輯的資產，並在變更完成後將其存回。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,6 @@ ht-degree: 0%
 
 >[!MORELIKETHIS]
 >
->* [瞭解Experience Manager案頭應用程式的登入與登出](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#how-app-works2)
->* [教學課程影片，以瞭解在Assets中存回和取出](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
+>* [瞭解Experience Manager案頭應用程式的登入與登出](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
+>* [教學課程影片，以瞭解在Assets中存回和取出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 
