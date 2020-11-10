@@ -3,9 +3,9 @@ title: 透過DTM啟用資產見解
 description: 瞭解如何使用Adobe動態標籤管理(DTM)來啟用資產分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d13381d961f7663366b041168da369c0b01c9336
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
 >[!CAUTION]
 >
->Adobe DTM已過時，改用Adobe Experience Platform Launch，即將 [結束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您使用 [Launch獲取資產見解](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
+>Adobe DTM已過時， [!DNL Adobe Experience Platform Launch] 即將 [結束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您使用 [ [!DNL Launch] 資產見解](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 執行這些步驟，以透過DTM啟用資產分析。
 
@@ -31,7 +31,7 @@ Adobe動態標籤管理是可啟動數位行銷工具的工具。 Adobe Analytic
 
    * 選擇「 **[!UICONTROL Web屬性]** 」標籤，然後按一 **[!UICONTROL 下「新增屬性」]**。
 
-   * 視需要更新欄位，然後按一下「 **[!UICONTROL 建立屬性」]**。 請參 [閱檔案](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
+   * 視需要更新欄位，然後按一下「 **[!UICONTROL 建立屬性」]**。 請參 [閱檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
 
    ![建立編輯Web屬性](assets/Create-edit-web-property.png)
 
