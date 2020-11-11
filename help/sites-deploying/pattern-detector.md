@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: d510decba9b2af23bab54c78779f98a36a6172d4
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# 用模式檢測器評估升級複雜度{#assessing-the-upgrade-complexity-with-the-pattern-detector}
+# 用模式檢測器評估升級複雜度
 
 ## 概覽 {#overview}
 
@@ -43,9 +43,10 @@ Pattern Detector會以單一套件的形 [式個別發行](https://www.adobeaemc
 >* 提高檢測率
 >* 避免業務關鍵型實例出現任何慢速
 
-
->同時，建議在與生產環境 **最接近的測試環境** （在使用者應用程式、內容和設定方面）上執行它。
 >
+>
+同時，建議在與生產環境 **最接近的測試環境** （在使用者應用程式、內容和設定方面）上執行它。
+
 您可以使用數種方法來檢查圖樣檢測器輸出：
 
 * **透過Felix Inventory主控台：**
@@ -56,7 +57,6 @@ Pattern Detector會以單一套件的形 [式個別發行](https://www.adobeaemc
    ![screapth-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **透過以反應文字為基礎的或一般的JSON介面**
-
 * **透過反應式JSON線條介面，**可在每行中產生個別的JSON檔案。
 
 以下兩種方法均詳述：
@@ -211,7 +211,8 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 ```
 
 >[!NOTE]
-建議的方法是將捲動的整個輸出儲存到檔案中，然後透過或篩選 `jq` 資訊 `grep` 類型加以處理。
+>
+>建議的方法是將捲動的整個輸出儲存到檔案中，然後透過或篩選 `jq` 資訊 `grep` 類型加以處理。
 
 ## 檢測範圍 {#scope}
 
@@ -224,5 +225,5 @@ Currently Pattern Detector允許檢查：
 * rep：用戶節點相容性（在OAuth配置的上下文中）
 
 >[!NOTE]
-請注意，模式偵測器會嘗試準確預測升級警告。 但是，在某些情況下可能會產生誤報。
-
+>
+>請注意，模式偵測器會嘗試準確預測升級警告。 但是，在某些情況下可能會產生誤報。
