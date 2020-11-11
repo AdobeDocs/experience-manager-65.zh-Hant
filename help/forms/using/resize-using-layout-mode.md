@@ -1,40 +1,30 @@
 ---
-title: 使用「版面」模式來調整元件大小
-seo-title: 使用「版面」模式來調整元件大小
+title: 使用版面模式調整最適化表單的元件大小
 description: '使用「版面」模式中可用的回應式格線來定義元件的位置 '
-seo-description: '使用「版面」模式中可用的回應式格線來定義元件的位置 '
-uuid: 6b077ebe-caea-4ae3-b17a-be2dca94eeb3
-contentOwner: anujkapo
-topic-tags: interactive-communications, author
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
 
 
-# 使用「版面」模式來調整元件大小{#use-layout-mode-to-resize-components}
+# 使用「版面」模式來調整元件大小 {#use-layout-mode-to-resize-components}
 
-最適化表單和互動式通訊網頁頻道製作介面可讓您使用版面模式調整元件大小。 在欄內拖放藍點，以定義要放置元件的起點和終點。 點選回應式格線內的元件後，會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影區分了一欄與另一欄。
+最適化表單製作介面可讓您使用版面模式來調整元件大小。 在欄內拖放藍點，以定義要放置元件的起點和終點。 點選回應式格線內的元件後，會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影區分了一欄與另一欄。
 
 您可以使用「版面」模式來調整所有裝置類型的元件大小，例如桌上型電腦、平板電腦、手機和其他較小的裝置。 平板電腦會自動從案頭版本衍生版面配置，而較小的裝置則從手機衍生版面配置。 不過，您可以覆寫自動衍生的組態，為每種裝置類型定義不同的組態。
 
-如果您使用列印頻道作為互動式通訊的主版 [](../../forms/using/create-interactive-communication.md) ，則可用來調整大小的元件也包含使用列印頻道在網頁頻道中自動產生的子表單和欄位。 網頁色版會在「版面」模式中保留列印色版元素的版面。
-
 ## 存取配置模式 {#access-layout-mode}
 
-從下 **拉式清單中選取** 「版面」，此下拉式清單會顯示在最適化表單的頂端，而「預覽」選項旁的「互動式通訊製作」介 **面中** 。 表單會以「版面」模式顯示。
+從下 **拉式清單中選取** 「版面」，該下拉式清單會顯示在「預覽」選項旁的最適化表單製作介面 **頂端** 。 表單會以「版面」模式顯示。
 
 1. 登入AEM作者例項並導覽至 **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**。
-1. [建立新表格](../../forms/using/create-interactive-communication.md) ，或開啟現有的最適化表格或互動式通訊。
+1. 建立新表格或開啟現有的 [最適化表格](../../forms/using/creating-adaptive-form.md)。
 1. 從「 **預覽** 」選項旁顯示於頂端的下拉式清單中選取「 **版面** 」。 表單會以「版面」模式顯示。
 
-   ![互動式通訊的版面模式](assets/layout_mode_ic_new.png)
+   ![版面模式](assets/layout_mode_ic_new.png)
 
 ## 調整元件大小 {#resize-components}
 
@@ -56,9 +46,9 @@ ht-degree: 0%
 
 ### 範例 {#example}
 
-**目標：** 要插入表元件和影像元件，並在互動式通信中將它們平行放置。
+**目標：** 要插入表元件和影像元件，並以自適應形式將它們平行放置。
 
-1. 在Web頻道中使用編輯模式插入表格和影像元件。 影像元件在表元件後面顯示。
+1. 使用最適化表單中的編輯模式插入表格和影像元件。 影像元件在表元件後面顯示。
 1. 切換至「版面」模式，然後點選「表格」元件。 藍點可調整元件在第1欄和第12欄的顯示大小。
 1. 將第12欄的藍點拖放至回應式格線的第6欄。
 
