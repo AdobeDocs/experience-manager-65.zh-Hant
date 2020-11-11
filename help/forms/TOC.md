@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3716'
 ht-degree: 1%
 
 ---
@@ -193,6 +193,7 @@ ht-degree: 1%
    + [列印頻道和網頁頻道](using/web-channel-print-channel.md)
    + [互動式通訊設定屬性](using/interactive-communication-configuration-properties.md)
    + [產生多種互動式通訊](using/generate-multiple-interactive-communication-using-batch-api.md)
+   + [使用「版面」模式來調整元件大小](using/resize-using-layout-mode-interactive-communication.md)
 + 工作流程 {#workflows}
    + [OSGi上的表單導向工作流程](using/aem-forms-workflow.md)
    + [OSGi上的表單導向工作流程——步驟參考](using/aem-forms-workflow-step-reference.md)
