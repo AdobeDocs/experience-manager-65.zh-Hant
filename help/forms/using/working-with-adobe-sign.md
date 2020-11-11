@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
+source-git-commit: 11f3e2f7cb742340388bc9421a3ea8f25deabec5
 workflow-type: tm+mt
-source-wordcount: '3904'
+source-wordcount: '3949'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,8 @@ Adobe Sign有各種欄位，可放置在最適化表單上。 這些欄位接受
 1. 從已設定的Adobe Sign Cloud Services清單中選取雲端服務。
 
    如果 **Adobe Sign Cloud服務清單為空白** ，請依照「使用AEM Forms文章 [設定Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md) 」來設定服務。
+
+   下拉式清單會列出「工具>雲端服務 `global` > **[!UICONTROL Adobe Sign」中資料夾中存在的雲端服務]******。 此外，下拉式清單也會列出您在建立最適化表單時，在「設定容器」欄位中選取之資料夾中存在的雲端服務。 ****
 
 1. 從「簽署者可以簽署」對 **話方塊中選取簽署順序** 。 Adobe Sign歌手可依序簽署最適 **化表單** -一個接一個的簽署者，或 **同時簽署** -以任何順序。
 
