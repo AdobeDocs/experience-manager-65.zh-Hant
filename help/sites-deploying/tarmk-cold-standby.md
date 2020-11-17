@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c5e6098b62ff7e3e787b5f0f3c3b32a35e3981c6
+source-git-commit: a99c5794cee88d11ca3fb9eeed443c4d0178c7b3
+workflow-type: tm+mt
+source-wordcount: '2731'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 在主要AEM例項上，會開啟TCP連接埠，並監聽傳入的訊息。 目前，從系統將向主系統發送兩種消息：
 
 * 請求當前頭段ID的消息
-* 要求具有指定ID之區段資料的訊息
+* 以指定ID要求區段資料的訊息
 
 備用設備定期請求主設備當前頭的段ID。 如果區段在本機未知，則會擷取該區段。 如果區段已顯示，則會比較區段，並視需要要求參考區段。
 
@@ -71,7 +74,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 >
 >建議在作為Coldy備用設定一部分的Dispatcher和伺服器之間添加負載平衡器。 應將負載平衡器配置為僅將用戶流量引導到主實 **例** ，以確保一致性，並防止內容通過Cold Standby機制以外的其他方式被複製到備用實例。
 
-## 建立AEM tarMK Cold Standby設定 {#creating-an-aem-tarmk-cold-standby-setup}
+## 建立AEM TarMK Cold Standby設定 {#creating-an-aem-tarmk-cold-standby-setup}
 
 >[!CAUTION]
 >
@@ -79,6 +82,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 >
 >* 來自org.apache.jackrabbit.oak。**plugins**.segment.standby.standby.StandbyStoreService to org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
 >* 來自org.apache.jackrabbit.oak。**plugins**.segment.SegmentNodeStoreService to org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
+
 >
 >
 請務必進行必要的組態調整，以反映此變更。
@@ -94,19 +98,21 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 
    1. 檢查並刪除您可能在 `aem-primary/crx-quickstart/install`
 
-   1. 建立檔案夾，名為 `install.primary``aem-primary/crx-quickstart/install`
+   1. 建立檔案夾，名為 `install.primary` `aem-primary/crx-quickstart/install`
 
    1. 在 `aem-primary/crx-quickstart/install/install.primary`
    1. 在相同位置創 `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config` 建名為的檔案，並相應地進行配置。 有關配置選項的詳細資訊，請參 [閱Configuration](/help/sites-deploying/tarmk-cold-standby.md#configuration)。
 
-   1. 如果您正將AEM tarMK例項與外部資料存放區搭配使用，請建立名為 `crx3` 的檔 `aem-primary/crx-quickstart/install` 案夾 `crx3`
+   1. 如果您正將AEM TarMK例項與外部資料存放區搭配使用，請建立名為 `crx3` 的檔 `aem-primary/crx-quickstart/install` 案夾 `crx3`
 
    1. 將資料儲存配置檔案放在資料夾 `crx3` 中。
+
    例如，如果您使用外部檔案資料存放區執行AEM TarMK例項，則需要下列設定檔案：
 
    * `aem-primary/crx-quickstart/install/install.primary/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
    * `aem-primary/crx-quickstart/install/install.primary/org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
    * `aem-primary/crx-quickstart/install/crx3/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`
+
    以下是主要實例的示例配置：
 
    **org** .apache. **jackrabbit.oak.segment.SegmentNodeStoreService.config的範例**
@@ -157,6 +163,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 
       * org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config
    1. 編輯檔案並建立必要的設定。
+
    以下是典型備用實例的示例配置檔案：
 
    **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config的範例**
@@ -204,9 +211,8 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 >[!NOTE]
 >
 >您可以隨時檢查例項的角色，方法是檢查Sling Settings Web Console中主 **要****或備用執行模** 式的存在。
-
->若要這麼做，請前往 *https://localhost:4502/system/console/status-slingsettings* ，並勾 **選「執行模式」** 行。
 >
+>若要這麼做，請前往 *https://localhost:4502/system/console/status-slingsettings* ，並勾 **選「執行模式」** 行。
 
 ## 首次同步 {#first-time-synchronization}
 
@@ -264,31 +270,34 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 
 以下OSGi設定可用於Cold Standby服務：
 
-* **** 持續配置：如果啟用，則會將配置儲存在儲存庫中，而不是傳統的OSGi配置檔案中。 建議在生產系統上禁用此設定，以使備用系統不會提取主配置。
+* **持續配置：** 如果啟用，則會將配置儲存在儲存庫中，而不是傳統的OSGi配置檔案中。 建議在生產系統上禁用此設定，以使備用系統不會提取主配置。
 
-* **`mode`模式(**):這將選擇實例的運行模式。
+* **模式(`mode`):** 這將選擇實例的運行模式。
 
-* **** 埠（埠）:用於通信的埠。 預設值為 `8023`。
+* **埠（埠）:** 用於通信的埠。 預設值為 `8023`。
 
-* **`primary.host`主主機(**):-主實例的主機。 此設定僅適用於備用設備。
-* **`interval`同步間隔(**):-此設定確定同步請求之間的間隔，並且僅適用於備用實例。
+* **主主機(`primary.host`):** -主實例的主機。 此設定僅適用於備用設備。
+* **同步間隔(`interval`):** -此設定確定同步請求之間的間隔，並且僅適用於備用實例。
 
-* **`primary.allowed-client-ip-ranges`允許的IP範圍(**):-主伺服器允許連接的IP範圍。
-* **`secure`安全(**):啟用SSL加密。 為了使用此設定，必須在所有例項上啟用此設定。
-* **`standby.readtimeout`備用讀超時(**):從備用實例發出的請求超時（以毫秒為單位）。 建議的逾時設定為43200000。 通常建議您將逾時值設為至少12小時。
+* **允許的IP範圍(`primary.allowed-client-ip-ranges`):** -主伺服器允許連接的IP範圍。
+* **安全(`secure`):** 啟用SSL加密。 為了使用此設定，必須在所有例項上啟用此設定。
+* **備用讀超時(`standby.readtimeout`):** 從備用實例發出的請求超時（以毫秒為單位）。 建議的逾時設定為43200000。 通常建議您將逾時值設為至少12小時。
 
-* **`standby.autoclean`備用自動清除(**):如果同步週期中儲存的大小增加，請調用清除方法。
+* **備用自動清除(`standby.autoclean`):** 如果同步週期中儲存的大小增加，請調用清除方法。
 
 >[!NOTE]
-強烈建議主資料庫ID和備用資料庫ID不同，以便對於「卸載」之類的服務可以單獨區分。
-確保涵蓋此內容的最佳方式是在待機裝置上刪除 *sling.id* 檔案，然後重新啟動執行個體。
+>
+>強烈建議主資料庫ID和備用資料庫ID不同，以便對於「卸載」之類的服務可以單獨區分。
+>
+>確保涵蓋此內容的最佳方式是在待機裝置上刪除 *sling.id* 檔案，然後重新啟動執行個體。
 
 ## 故障切換過程 {#failover-procedures}
 
 如果主實例因任何原因而失敗，您可以通過更改以下詳細說明的啟動運行模式，將其中一個備用實例設定為承擔主實例的角色：
 
 >[!NOTE]
-還需要修改配置檔案，以便它們與用於主實例的設定匹配。
+>
+>還需要修改配置檔案，以便它們與用於主實例的設定匹配。
 
 1. 轉到安裝備用實例的位置，然後停止它。
 
@@ -365,10 +374,12 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 ### 修訂清除 {#revision-clean}
 
 >[!NOTE]
-如果在主實 [例上運行「聯機修訂清除](/help/sites-deploying/revision-cleanup.md) 」，則不需要下面顯示的手動過程。 此外，如果您使用「線上修訂清除」，則 `cleanup ()` 將自動執行備用實例的操作。
+>
+>如果在主實 [例上運行「聯機修訂清除](/help/sites-deploying/revision-cleanup.md) 」，則不需要下面顯示的手動過程。 此外，如果您使用「線上修訂清除」，則 `cleanup ()` 將自動執行備用實例的操作。
 
 >[!NOTE]
-請勿在備用系統上運行離線修訂清除。 不需要它，也不會降低區段儲存區大小。
+>
+>請勿在備用系統上運行離線修訂清除。 不需要它，也不會降低區段儲存區大小。
 
 Adobe建議定期執行維護作業，以防止儲存庫隨著時間過長而增長。 要手動執行冷備用儲存庫維護，請執行以下步驟：
 
@@ -394,6 +405,8 @@ Adobe建議定期執行維護作業，以防止儲存庫隨著時間過長而增
 
    * 在主系統上，如本文所述，透過相關的JMX Bean執行資料存放區廢棄項目 [收集](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)。
    * 在待機狀態下，資料存放區廢棄項目收集僅能透過 **BlobGarbageCollection** MBean使用 `startBlobGC()`。 **RepositoryManagement **MBean不可用於備用。
+
    >[!NOTE]
-   如果您未使用共用資料存放區，則必須先在主要儲存區上執行廢棄項目收集，然後再在備用儲存區上執行。
+   >
+   >如果您未使用共用資料存放區，則必須先在主要儲存區上執行廢棄項目收集，然後再在備用儲存區上執行。
 
