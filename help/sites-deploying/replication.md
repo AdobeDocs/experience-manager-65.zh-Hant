@@ -11,7 +11,10 @@ topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d281ea4a5e7711aafa906bc0c43009c3c2cc8947
+source-git-commit: 480e1f62e34783295133d10451ec409cf3a8bb0b
+workflow-type: tm+mt
+source-wordcount: '3661'
+ht-degree: 2%
 
 ---
 
@@ -79,6 +82,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 >
 >* 作者代理：反向複製代理(publish_reverse)
 >* 發佈時的代理：反向複製（輸出盒）
+
 >
 >
 要檢查代理或隊列的狀態，請使用「工具」 **控制台** 。
@@ -87,7 +91,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 #### 複製（要發佈的作者） {#replication-author-to-publish}
 
 1. 導覽至作者環境的支援頁面。
-   **https://localhost:4502/content/we-retail/us/en/experience.html**`<pi>`
+   **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
 1. 編輯頁面以新增一些新文字。
 1. **啟動頁面** ，以發佈變更。
 1. 在發佈環境上開啟支援頁面：
@@ -98,7 +102,8 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 
 * **預設代理（發佈）**此代理將內容複製到預設發佈例項。
 有關此（配置和日誌）的詳細資訊，可從作者環境的「工具」控制台訪問；或：
-   `https://localhost:4502/etc/replication/agents.author/publish.html`.
+
+   `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
 #### 複製代理——立即可用 {#replication-agents-out-of-the-box}
 
@@ -157,6 +162,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 
    * 從作者環境收集和封裝內容
    * 在發佈環境上建立和寫入內容
+
    將此欄位保留為空白，以使用系統使用者帳戶(sling中定義為管理員使用者的帳戶；預設為 `admin`)。
 
    >[!CAUTION]
@@ -178,6 +184,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
    * `Error`:僅記錄錯誤
    * `Info`:將記錄錯誤、警告和其他資訊性消息
    * `Debug`:消息中將會使用高級別的詳細資訊，主要用於調試目的
+
    預設: `Info`
 
 * **用於反向複寫**
@@ -198,6 +205,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 
    * 預設代理可以複製到 `https://localhost:4503/bin/receive`
    * Dispatcher Flush代理可以複製到 `https://localhost:8000/dispatcher/invalidate.cache`
+
    此處指定的協定（HTTP或HTTPS）將決定傳輸方法。
 
    對於Dispatcher Flush代理，只有在使用基於路徑的虛擬主機條目來區分場時，才使用URI屬性，您使用此欄位來定位要失效的場。 例如，場#1的虛擬主機為，場#2 `www.mysite.com/path1/*` 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用的URL來 `/path1/invalidate.cache` 定位第一個群體， `/path2/invalidate.cache` 以及定位第二個群體。
@@ -277,11 +285,13 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
    * `CQ-Action:{action}`
    * `CQ-Handle:{path}`
    * `CQ-Path:{path}`
-   這些參數會在適當時用於指示刷新控制滑塊或路徑時要使用的操作。 子參數是動態的：
+
+   這些參數會在適當時用於指示刷新控制滑塊或路徑時使用的操作。 子參數是動態的：
 
    * `{action}` 表示複製操作
 
    * `{path}` 指示路徑
+
    它們被與請求相關的路徑／動作所取代，因此不需要「硬式編碼」:
 
    >[!NOTE]
@@ -353,7 +363,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 1. 存取AEM中 **的** 「工具」索引標籤。
 1. 按一下 **複製** （左窗格開啟資料夾）。
 1. 連按兩下 **作者上的Agent** （左窗格或右窗格）。
-1. 按一下相應的代理名（即連結）以顯示有關該代理的詳細資訊。
+1. 按一下相應的代理名稱（即連結）以顯示有關該代理的詳細資訊。
 1. 按一下 **編輯** ，開啟配置對話框：
 
    ![chlimage_1-22](assets/chlimage_1-22.png)
@@ -407,7 +417,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 
 1. 在AEM中 **開啟** 「工具」標籤。
 1. 在左 **面板中**，依次選 **擇「複製** 」和「作者上的代理」。
-1. **選擇**&#x200B;新建…….
+1. 選擇 **新建……**.
 1. 設定「 **標題** 」和「名 **稱」**，然後選 **擇「複製代理**」。
 1. 按一下 **建立** ，建立新代理。
 1. 連按兩下新代理項目以開啟設定面板。
@@ -423,7 +433,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
    * 在「傳 **輸** 」標籤中：
 
       * 輸入新發佈實例所需的URI;例如，
-         `https://localhost:4504/bin/receive`.
+         `https://localhost:4504/bin/receive`。
 
       * 輸入用於複製的站點特定用戶帳戶。
       * 您可以視需要設定其他參數。
@@ -444,6 +454,7 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
 >1. 配置複製代理以複製到該發佈環境。
 >1. 設定使用者帳戶；具有讀取將複製到該特定發佈環境的內容所需的訪問權限。
 >1. 將用戶帳戶指 **定為複製代理的代理用戶Id** 。
+
 >
 
 
@@ -468,10 +479,11 @@ AEM標準安裝隨附的we-retail網站可用來說明複製。
    * 在「傳 **輸** 」標籤中：
 
       * 輸入新發佈實例所需的URI;例如，
-         `https://localhost:80/dispatcher/invalidate.cache`.
+         `https://localhost:80/dispatcher/invalidate.cache`。
 
       * 輸入用於複製的站點特定用戶帳戶。
       * 您可以視需要設定其他參數。
+
    對於Dispatcher Flush代理，只有在使用基於路徑的虛擬主機條目來區分場時，才使用URI屬性，您使用此欄位來定位要失效的場。 例如，場#1的虛擬主機為，場#2 `www.mysite.com/path1/*` 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用的URL來 `/path1/invalidate.cache` 定位第一個群體， `/path2/invalidate.cache` 以及定位第二個群體。
 
    >[!NOTE]
@@ -505,7 +517,7 @@ Dispatcher Flush **複製代理** (Dispatcher Flush Replication Agent)在作者�
 * `agents.publish`
 * `treeactivation`
 
-這兩個保 `agents` 留有關相應環境的配置資訊，並且僅在該環境運行時處於活動狀態。 例如， `agents.publish` 將僅用於發佈環境。 下列螢幕擷取顯示作者環境中的發佈代理，如AEM WCM所附：
+這兩個保 `agents` 存有關相應環境的配置資訊，並且僅在該環境運行時處於活動狀態。 例如， `agents.publish` 將僅用於發佈環境。 下列螢幕擷取顯示作者環境中的發佈代理，如AEM WCM所附：
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -533,14 +545,16 @@ Dispatcher Flush **複製代理** (Dispatcher Flush Replication Agent)在作者�
 
    * **查看日誌** ，以訪問複製代理所執行的任何操作的日誌。
    * **測試與目標實例的連接** 。
-   * **如有需要** ，請對任何佇列項目強制重試。
+   * **如有需要** ，對任何佇列項目強制重試。
+
    >[!CAUTION]
    >
    >請勿在發佈實例的「反向複製輸出」框中使用「測試連接」連結。
    >
    >
    >如果對Outbox隊列執行複製測試，則所有早於測試複製的項目都將通過每個反向複製重新處理。
-
+   >
+   >
    >如果此類項目已存在於隊列中，則可使用以下XPath JCR查詢找到，並應將其刪除。
    >
    >
@@ -577,4 +591,4 @@ Dispatcher Flush **複製代理** (Dispatcher Flush Replication Agent)在作者�
 
 如需其他資訊，Adobe有一系列與複製相關的知識庫文章：
 
-[https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html](https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html)https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html[](https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html)[https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html](https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html)https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html[https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.htmlhttps://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationListener.htmlhttps://helpx.adobe.com/experience-manager/kb/replication-stuck.htmlhttps://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.htmlhttps://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.htmlhttps://helpx.adobe.com/experience-manager/kb/ACLReplication.htmlhttps://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.htmlDoDoDoDoDoDoDoDeProProPhotePhoterPhoterPhoterPhoterPhon](https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html)[](https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html)[](https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html)[](https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html)[](https://helpx.adobe.com/experience-manager/kb/replication-stuck.html)[](https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html)[](https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html)[](https://helpx.adobe.com/experience-manager/kb/ACLReplication.html)[](https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html)[](https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html)https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.htmlhttps://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html
+[https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html](https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html)https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html[](https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html)[https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html](https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html)https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html[](https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html)[](https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html)[](https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html)[](https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html)[](https://helpx.adobe.com/experience-manager/kb/replication-stuck.html)[](https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html)[](https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html)[](https://helpx.adobe.com/experience-manager/kb/ACLReplication.html)[](https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html)[](https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html)https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.htmlhttps://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationListener.htmlhttps://helpx.adobe.com/experience-manager/kb/replication-stuck.htmlhttps://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.htmlhttps://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.htmlhttps://helpx.adobe.com/experience-manager/kb/ACLReplication.htmlhttps://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.htmlDoDoDoDoDoDoDoDeProPhoteProdePhotePhoterPhoterhttps://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.htmlDoHoterPhadiPaPhahttps://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.htmlhttps://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html
