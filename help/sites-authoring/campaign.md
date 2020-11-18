@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 translation-type: tm+mt
-source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
+source-git-commit: 69226ffeb79e0b425b28456cbc64192432863f5d
+workflow-type: tm+mt
+source-wordcount: '2780'
+ht-degree: 0%
 
 ---
 
@@ -76,7 +79,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 此外，您也可能需要選取Adobe Campaign範本，並變更主題，並為不會以HTML檢視電子郵件的使用者新增純文字內容。
 
-您可以在建立雲端服務後，從「 **Sites** 」標籤或從電子郵件／電子報內選取該服務。
+您可以在建立雲端服務後，從「 **Sites** 」索引標籤或從電子郵件／電子報中選取該服務。
 
 建議您從「網站」標籤 **中選取** 「雲端服務」。 從電子郵件／電子報選取雲端服務需要因應措施。
 
@@ -91,7 +94,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
    ![chlimage_1-17](assets/chlimage_1-17a.png)
 
 1. 從下拉式清單中選取符合您Adobe Campaign例項的設定，然後按一下「儲存」進行 **確認**。
-1. 您可以按一下** Adobe Campaign**標籤，檢視電子郵件已套用至範本。 如果您想要選取其他範本，可以在編輯時從電子郵件中存取該範本。
+1. 您可以按一下「Adobe Campaign」標籤，以檢視電子郵件已套用&#x200B;**到的範本** 。 如果您想要選取其他範本，可以在編輯時從電子郵件中存取該範本。
 
    如果您想要套用特定電子郵件傳送範本（來自Adobe Campaign），而非預設郵件範本（位於「屬性」中） **，請選取** Adobe Campaign **** 標籤。 在相關的Adobe Campaign例項中輸入電子郵件傳送範本的內部名稱。
 
@@ -157,6 +160,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 >
 >* 只會考慮Adobe Campaign定位 **維度的** 「Campaign設定檔」欄位。
 >* 從網站檢視「 **屬性**」時，您無法存取Adobe Campaign內容欄位。 您可以在編輯時直接從電子郵件存取這些內容。
+
 >
 
 
@@ -177,6 +181,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
    >
    >* 可用的上下文欄位會對應 **至** Adobe Campaign中的「設定檔定位」維度。
    >* 請參 [閱將AEM頁面連結至Adobe Campaign電子郵件](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)。
+
    >
    >**對於Adobe Campaign Classic:**
    >
@@ -238,7 +243,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 >[!NOTE]
 未核准的內容可與Adobe Campaign中的傳送同步，但無法執行傳送。 只能透過促銷活動傳送傳送已核准的內容。
 
-## 將AEM與Adobe Campaign standard和Adobe Campaign Classic連結 {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
+## 將AEM與Adobe Campaign Standard和Adobe Campaign Classic連結 {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
 
 AEM與Adobe Campaign的連結或同步方式取決於您是使用訂閱型Adobe Campaign Standard或內部部署型Adobe Campaign Classic。
 
@@ -286,6 +291,7 @@ Adobe Campaign Standard可讓您以下列方式復原並連結在AEM中建立的
    * AEM中內容的核准狀態。 如果內容未獲核准，您可以同步內容，但必須在傳送前先加以核准。 不過，您可以執行某些操作，例如傳送校樣或預覽測試。
    * 上次修改內容的日期。
    * 任何已連結至傳送的內容。
+
    >[!NOTE]
    依預設，已與傳送同步的內容會隱藏。 不過，您可以顯示並使用它。 例如，如果您想將內容當做數個傳送的範本。
 
@@ -316,8 +322,7 @@ Adobe Campaign可讓您將在AEM中建立的內容復原並同步化至：
 
 >[!NOTE]
 如果電子報連結至數個傳送，則會顯示連結的傳送次數（但不會顯示每個ID）。
-
->[!NOTE]
+[!NOTE]
 AEM 6.1中不 **再提倡「發佈至Adobe Campaign** 」的工作流程步驟。此步驟是AEM 6.0與Adobe Campaign整合的一部分，不再需要。
 
 若要將在AEM中建立的內容與Adobe Campaign的傳送同步化：
@@ -341,6 +346,7 @@ AEM 6.1中不 **再提倡「發佈至Adobe Campaign** 」的工作流程步驟�
    * AEM中內容的核准狀態。 如果內容未獲核准，您可以同步內容，但必須在傳送前先加以核准。 不過，您可以執行某些操作，例如傳送BAT或預覽測試。
    * 內容上次修改的日期。
    * 任何已連結至傳送的內容。
+
    >[!NOTE]
    依預設，已與傳送同步的內容會隱藏。 不過，您可以顯示並使用它。 例如，如果您想將內容當做數個傳送的範本。
 
