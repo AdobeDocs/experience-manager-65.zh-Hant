@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 188434543403fab48f79be06356b86e132e2888a
+workflow-type: tm+mt
+source-wordcount: '1094'
+ht-degree: 6%
 
 ---
 
@@ -71,12 +74,14 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 >在恢復頁面時，所建立的版本將是新分支的一部分。
 >
 >要說明：
-
+>
 >1. 建立任何頁面的版本。
 >1. 初始標籤和版本節點名稱為1.0、1.1、1.2等。
-1. 恢復第一個版本；即1.0。
-1. 再次建立新版本。
-1. 產生的標籤和節點名稱現在會是1.0.0、1.0.1、1.0.2等。
+>1. 恢復第一個版本；即1.0。
+>1. 再次建立新版本。
+>1. 產生的標籤和節點名稱現在會是1.0.0、1.0.1、1.0.2等。
+
+>
 
 
 
@@ -84,7 +89,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 1. 導覽以顯示您要回復為舊版的頁面。
 1. 在選擇模式 [下選擇頁](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. 開啟「時 **間軸** 」欄，然後選 **取「全部顯示** 」 **或「版本**」。 將列出所選頁面的頁面版本。
+1. 開啟「時 **間軸** 」欄，然後選 **取「全部顯示** 」 **或「版本**」。將列出所選頁面的頁面版本。
 1. 選擇要回復的版本。 可能的選項將顯示：
 
    ![screen-shot_2019-03-05at112505](assets/screen-shot_2019-03-05at112505.png)
@@ -105,8 +110,10 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 1. 選擇「 **預覽**」。 頁面將顯示在新標籤中。
 
    >[!CAUTION]
-   如果頁面已移動，您無法再對移動前進行的任何版本執行預覽。
-   * 如果您在預覽時遇到問題，請檢查頁 [面的時間軸](/help/sites-authoring/basic-handling.md#timeline) ，以查看頁面是否已移動。
+   >
+   >如果頁面已移動，您無法再對移動前進行的任何版本執行預覽。
+   >
+   >* 如果您在預覽時遇到問題，請檢查頁 [面的時間軸](/help/sites-authoring/basic-handling.md#timeline) ，以查看頁面是否已移動。
 
 
 ## 比較版本與目前頁面 {#comparing-a-version-with-current-page}
@@ -143,7 +150,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
    ![wwpv-01](assets/wwpv-01.png)
 
-1. 在對話方塊中設定目標日期和時間，然後按一下或點選「設 **定日期」**。 如果您未選取時間，則預設為目前時間。
+1. 在對話方塊中設定目標日期和時間，然後按一下或點選「設 **定日期」**。如果您未選取時間，則預設為目前時間。
 
    ![wwpv-02](assets/wwpv-02.png)
 
@@ -164,4 +171,5 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 * **時間彎曲僅基於頁面內容** -如果轉換網站的元素（例如程式碼、css、資產／影像等）已變更，檢視會與原本的檢視不同，因為這些項目未在儲存庫中版本化。
 
 >[!CAUTION]
-時間彎曲功能是設計為工具，可協助作者瞭解並建立其內容。 它不是作為審計日誌或用於法律目的。
+>
+>時間彎曲功能是設計為工具，可協助作者瞭解並建立其內容。 它不是作為審計日誌或用於法律目的。
