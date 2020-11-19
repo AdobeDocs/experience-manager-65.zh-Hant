@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 translation-type: tm+mt
-source-git-commit: 69226ffeb79e0b425b28456cbc64192432863f5d
+source-git-commit: 8e663a3c11523796a2bad15e9c088e484f2b573b
 workflow-type: tm+mt
 source-wordcount: '2780'
 ht-degree: 0%
@@ -53,7 +53,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >新增電子郵件範本時，請務必在 **/content/campaigns下加入** ，以使其可用。
-
 
 #### 建立新的電子郵件內容 {#creating-new-email-content-1}
 
@@ -161,9 +160,6 @@ ht-degree: 0%
 >* 只會考慮Adobe Campaign定位 **維度的** 「Campaign設定檔」欄位。
 >* 從網站檢視「 **屬性**」時，您無法存取Adobe Campaign內容欄位。 您可以在編輯時直接從電子郵件存取這些內容。
 
->
-
-
 
 要插入個人化，請：
 
@@ -212,7 +208,7 @@ ht-degree: 0%
 
 1. 若要預覽個人化，請按一下／點選工具列中的對應圖示，以開啟ContextHub。 個人化欄位標籤現在會由所選角色的種子資料取代。 瞭解變數在ContextHub中切換角色時如何調整。
 
-   ![chlimage_1-29](assets/chlimage_1-29a.png)
+   ![chlimage_1-21](assets/chlimage_1-29a.png)
 
 1. 您可以檢視來自Adobe Campaign的種子資料，這些資料與目前選取的角色相關聯。 若要這麼做，請按一下／點選ContextHub列中的Adobe Campaign模組。 這將開啟一個對話框，顯示當前配置檔案的所有種子資料。 同樣地，當切換至不同的角色時，資料會適應。
 
