@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '6169'
+ht-degree: 7%
 
 ---
 
@@ -93,7 +96,7 @@ source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
 
 #### 屬性 {#properties}
 
-該對話框允許您編輯最適化影像元件實例的屬性，其中許多屬性與其所基於的影像元件相同。 屬性可在兩個標籤中使用：
+該對話框允許您編輯最適化影像元件實例的屬性，其中許多屬性與其所基於的影像元件相同。 這些屬性可在兩個標籤中使用：
 
 * **影像**
 
@@ -151,7 +154,8 @@ source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
          * **父頁面**&#x200B;手動或使用選擇器指定路徑。 留空可將目前頁面用作父頁面。
       * **固定清單的選項**
 
-         * **頁面**&#x200B;選擇頁面清單。 使 `+` 用新增更多項目和上／下按鈕來調整順序。
+         * **頁面**&#x200B;選擇頁面清單。 使用 
+`+` 以新增更多項目和上／下按鈕來調整順序。
       * **搜尋選項**
 
          * **開始於**&#x200B;手動或使用選擇器輸入起始路徑。
@@ -161,7 +165,8 @@ source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
 
          * **Querybuilder謂詞符號**您可以使用Querybuilder謂詞符號輸入搜索查詢。 例如，您可以輸入&quot;fulltext=Marketing&quot;，讓內容中具有&quot;Marketing&quot;的所有頁面都顯示在轉盤中。
 如需 [查詢運算式和進一步範例的完整討論，請參閱QueryBuilder API](/help/sites-developing/querybuilder-api.md) 。
-   * **依順序**&#x200B;從下拉 `jcr:title`式選 `jcr:created`單中選 `cq:lastModified`取、 `cq:template` 或選取。
+   * **依選擇訂**&#x200B;購 
+`jcr:title`、 `jcr:created`、 `cq:lastModified`或 `cq:template` 從下拉菜單中。
 
    * **限**&#x200B;制您要在轉盤中使用的項目數上限；這是可選的。
 
@@ -170,7 +175,7 @@ source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
 
 
 >[!NOTE]
-您可以為Adobe Experience manager建立自訂轉盤元件，以顯示位於AEM DAM中的數位資產。 如需詳細資訊，請 [參閱「建立Adobe Experience Manager的自訂轉盤元件」](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)。
+您可以為Adobe Experience Manager建立自訂轉盤元件，以顯示位於AEM DAM中的數位資產。 如需詳細資訊，請 [參閱「建立Adobe Experience Manager的自訂轉盤元件」](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)。
 
 ### 圖表 {#chart}
 
@@ -303,10 +308,9 @@ Flash元件可讓您載入Flash影片。 您可將Flash資產從內容搜尋器�
 ![dc_image](assets/dc_image.png)
 
 >[!NOTE]
-無法使用Internet explorer監控上傳進度。
-Internet explorer使用者需要上傳影像並按一下「 **Ok** 」（確定），然後重新開啟影像，在預覽中查看已上傳的檔案，並能夠執行修改（即裁切）。
-
->如需AEM所 [](/help/release-notes/release-notes.md#certifiedplatforms) 使用之HTML5功能的詳細資訊，請參閱「認證平台」一節。
+無法使用Internet Explorer監控上傳進度。
+Internet Explorer使用者需要上傳影像並按一下「 **Ok** 」（確定），然後重新開啟影像，在預覽中查看已上傳的檔案，並能夠執行修改（即裁切）。
+如需AEM所 [](/help/release-notes/release-notes.md#certifiedplatforms) 使用之HTML5功能的詳細資訊，請參閱「認證平台」一節。
 
 載入影像時，您可以設定下列項目：
 
@@ -619,7 +623,7 @@ Reference **** （參考）元件可讓您參考AEM網站（在目前例項中�
 ### 表格 {#table}
 
 >[!NOTE]
-表 **元件** (Table [)是以Rich Text編輯器(](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)Rich Text editor **[)為基礎，](#text)**Text元件亦然。
+表 **元件** (Table [)是以Rich Text編輯器(](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)Rich Text editor **[)為基礎，](#text)** Text元件亦然。
 建議使用表的 **Table** （表）元件，但也可以使用 **Text（文本）元件來構建表** 。
 
 「表 **格** 」元件已預配置為可讓您構建、填充和格式化表格。 使用對話框，您可以通過以下方式配置表並建立內容：
@@ -639,7 +643,7 @@ Reference **** （參考）元件可讓您參考AEM網站（在目前例項中�
 
 ![dc_tagclouduse](assets/dc_tagclouduse.png)
 
-設定Tag cloud元件時，您可以指定：
+設定Tag Cloud元件時，您可以指定：
 
 * **要顯示的標**&#x200B;記要顯示的標籤從何處收集。 從頁面、包含所有子項或所有標籤的頁面中進行選擇。
 
@@ -652,7 +656,7 @@ Reference **** （參考）元件可讓您參考AEM網站（在目前例項中�
 ### 文字 {#text}
 
 >[!NOTE]
-Text **元件是以** Rich Text編輯器為基礎 [，表元件也](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)是 **[](#table)**。
+Text **元件是以** Rich Text編輯器為基礎 [，表元件也](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)是 **[](#table)** 。
 建議使用表的 **Table** （表）元件，但也可以使用 **Text（文本）元件來構建表** 。
 
 Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並具備Rich Text編輯器 [提供的功能](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)。 選取的圖示可讓您設定文字的格式，包括字型特性、對齊方式、連結、清單和縮排。
@@ -743,7 +747,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並具備Rich Text
 
 ![dc_title_use](assets/dc_title_use.png)
 
-### Video {#video}
+### 影片 {#video}
 
 Video **元件** 可讓您將預先定義、現成可用的視訊元素置於頁面上。
 
@@ -751,7 +755,7 @@ Video **元件** 可讓您將預先定義、現成可用的視訊元素置於頁
 
 將元件例項放在您的頁面上後，您可以設定：
 
-* 視訊
+* 影片
 
    * **視訊資產**
 
@@ -1258,7 +1262,7 @@ Captcha元件要求使用者輸入螢幕上顯示的英數字串。 字串會隨
 
 您可以指定各種參數，包括可使用專業頁籤使用的名稱空間：
 
-* **標籤欄位**
+* **標記欄位**
 
    * **允許的命名空間**
 
