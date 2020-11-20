@@ -11,7 +11,10 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '2854'
+ht-degree: 4%
 
 ---
 
@@ -88,9 +91,9 @@ source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
 >[!NOTE]
 >
 >就地編輯器在編輯時會使用影像的原始大小和外觀比例。 您也可以指定高度和寬度屬性。 儲存編輯變更時，會套用屬性中定義的任何大小和外觀比例限制。
-
->根據您的例項，頁面設計可能也會施加最 [小和最大限制](/help/sites-developing/designer.md);這些是在項目實施期間開發的。
 >
+>根據您的例項，頁面設計可能也會施加最 [小和最大限制](/help/sites-developing/designer.md);這些是在項目實施期間開發的。
+
 在全螢幕編輯模式中，還有幾種其他選項可供選擇；例如，映射和縮放：
 
 ![](do-not-localize/chlimage_1-11.png)
@@ -117,8 +120,10 @@ source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
 * **大小**&#x200B;設定影像的高度和寬度。
 
 >[!NOTE]
-您必須在「進階」索引標籤的 **「替代文字****** 」欄位中輸入資訊，否則影像無法儲存，而您會看到下列錯誤訊息：
-`Validation failed. Verify the values of the marked fields.`
+>
+>您必須在「進階」索引標籤的 **「替代文字****** 」欄位中輸入資訊，否則影像無法儲存，而您會看到下列錯誤訊息：
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 下列範例顯示顯示的影像（促銷活動）元件。
@@ -135,13 +140,16 @@ source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
 
 * **連結工具提**&#x200B;示新增有關如何使用連結的其他資訊。
 
-* **LinkType**&#x200B;在下拉式清單中，選取自訂URL和 **最適化** 檔案 ****。 此欄位為必填欄位. 如果您選取「自訂URL」，則可提供「連結URL」。 如果選擇「最適化文檔」，則可以提供文檔路徑。
+* **LinkType**&#x200B;在下拉式清單中，在 
+**自訂URL** 和最 **適化檔案**。 此欄位為必填欄位. 如果您選取「自訂URL」，則可提供「連結URL」。 如果選擇「最適化文檔」，則可以提供文檔路徑。
 
 * **其他URL參數**&#x200B;新增任何其他URL參數。 按一下「新增項目」以新增多個項目。
 
 >[!NOTE]
-您必須在「 **URL Info** 」（URL資訊）標籤的「連結類型 **」(Link Type** )欄位中輸入資訊，否則元件無法儲存，而您會看到下列錯誤訊息：
-`Validation failed. Verify the values of the marked fields.`
+>
+>您必須在「 **URL Info** 」（URL資訊）標籤的「連結類型 **」(Link Type** )欄位中輸入資訊，否則元件無法儲存，而您會看到下列錯誤訊息：
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 下列範例顯示所顯示的連結（促銷活動）元件。
@@ -205,8 +213,10 @@ source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
    * **大小**&#x200B;設定影像的高度和寬度。
 
 >[!NOTE]
-「高 **級」(** Advanced **)頁籤中的「替代文本」(Alt Text** )欄位是必需欄位，或者元件無法保存，您會看到以下錯誤消息：
-`Validation failed. Verify the values of the marked fields.`
+>
+>「高 **級」(** Advanced **)頁籤中的「替代文本」(Alt Text** )欄位是必需欄位，或者元件無法保存，您會看到以下錯誤消息：
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 下列範例顯示顯示的文字與影像（促銷活動）元件。
@@ -215,7 +225,7 @@ source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
 
 ### 文字與個人化 (行銷活動) {#text-personalization-campaign}
 
-「文字與個人化（促銷活動）」元件可讓您使用WYSIWYG編輯器輸入文字區塊，並具備 [Rich Text編輯器提供的功能](/help/sites-authoring/rich-text-editor.md)。 此外，此元件可讓您使用Adobe Campaign提供的內容欄位和個人化區塊；另請參閱 [插入個人化](/help/sites-authoring/campaign.md#inserting-personalization)。
+「文字與個人化（促銷活動）」元件可讓您使用WYSIWYG編輯器輸入文字區塊，並具備 [Rich Text編輯器的功能](/help/sites-authoring/rich-text-editor.md)。 此外，此元件可讓您使用Adobe Campaign提供的內容欄位和個人化區塊；另請參閱 [插入個人化](/help/sites-authoring/campaign.md#inserting-personalization)。
 
 選取圖示可讓您設定文字的格式，包括字型特性、對齊方式、連結、清單和縮排。 雖然外觀和感覺不 [同](/help/sites-authoring/editing-content.md)，但這兩個UI的功能基本相同：
 
@@ -224,15 +234,19 @@ source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
 在就地編輯器中，您可以新增文字、變更對齊方式、新增和移除連結、新增內容欄位或個人化區塊，以及進入全螢幕模式。 新增文字／個人化後，選取核取標籤以儲存變更（或x以取消）。 如需詳 [細資訊](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) ，請參閱就地編輯。
 
 >[!NOTE]
-* 可用的個人化欄位取決於您的電子報所連結的Adobe Campaign範本。
-* 從ContextHub選擇角色後，個人化欄位會自動由選取的描述檔資料取代。
+>
+>* 可用的個人化欄位取決於您的電子報所連結的Adobe Campaign範本。
+>* 從ContextHub選擇角色後，個人化欄位會自動由選取的描述檔資料取代。
 
+>
+>
 請參閱 [插入個人化](/help/sites-authoring/campaign.md#inserting-personalization)。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
 >[!NOTE]
-只考慮在 **nms:seedMember** schema中定義的欄位或其中一個副檔名。 連結到 **nms:seedMember的表的屬性不可用** 。
+>
+>只考慮在 **nms:seedMember** schema中定義的欄位或其中一個副檔名。 連結到 **nms:seedMember的表的屬性不可用** 。
 
 ## Adobe Campaign表單元件 {#adobe-campaign-form-components}
 
@@ -307,7 +321,7 @@ Adobe Campaign元件具有所有元件（加密的主要金鑰和隱藏的協調
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-* **標題**：如果您想使用元素名稱以外的名稱，請在此處輸入。
+* **標題**：如果要使用元素名稱以外的名稱，請在此處輸入它。
 
 * **隱藏標題**&#x200B;如果您不想看到標題，請選取此核取方塊。
 
@@ -365,7 +379,7 @@ Adobe Campaign元件具有所有元件（加密的主要金鑰和隱藏的協調
 
 ### 加密的主要金鑰 (行銷活動) {#encrypted-primary-key-campaign}
 
-此元件定義URL參數的名稱，其中將包含Adobe Campaign設定檔的識別碼(**Main Resource Identifier****** 或Encrypted primary key, in Adobe Campaign Standard和6.1)。
+此元件定義URL參數的名稱，其中將包含Adobe Campaign設定檔的識別碼(**Main Resource Identifier****或Encrypted primary key** in Adobe Campaign Standard和6.1)。
 
 每個顯示和修改Adobe Campaign描述檔資料的表 **單都必須** 包含「加密的主要金鑰」元件。
 
@@ -433,7 +447,8 @@ Adobe Campaign元件具有所有元件（加密的主要金鑰和隱藏的協調
 新增至表單時，此元件會將所有可用的訂閱顯示為核取方塊，並讓使用者選取所需的訂閱。 當使用者送出表單時，此元件會根據表單動作類型，將使用者訂閱或取消訂閱選取的服務(**Adobe Campaign:訂閱服務** 或 **Adobe Campaign:取消訂閱服務**)。
 
 >[!NOTE]
-該元件不檢查用戶已訂閱／取消訂閱的服務。
+>
+>該元件不檢查用戶已訂閱／取消訂閱的服務。
 
 您可以 [在「訂閱檢查清單](#settings-common-to-most-components) （促銷活動）」元件中設定大多數Adobe Campaign元件的共同設定。 （此元件沒有可用的Adobe Campaign設定。）
 
