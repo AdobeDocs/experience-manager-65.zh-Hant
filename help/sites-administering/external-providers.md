@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '442'
+ht-degree: 0%
 
 ---
 
@@ -55,7 +58,7 @@ _gaq.push(['_trackPageview']);
 >[!CAUTION]
 >
 >Geometrixx-Outdoors示範網站的設定，讓「頁面屬性」中提供的屬性附加至對應指令碼的html原始碼(剛好在 `</html>` endtag的正上 `js` 方)。
-
+>
 >如果您自 `/apps` 己不繼承預設頁面元件( `/libs/foundation/components/page`)，您（或您的開發人員）必須確定已包含對應的指令碼，例如 `js``cq/cloudserviceconfigs/components/servicescomponents`，包括或使用類似機制。
 >
 >若沒有這項功能，則所有服務（一般、分析、目標等）都無法運作。
@@ -102,4 +105,5 @@ _gaq.push(['_trackPageview']);
    經過適當的時間後，您就可以檢視已收集的統計資料。
 
    >[!NOTE]
-   如果配置附加到具有子頁面的頁面，則服務也由這些頁面繼承。
+   >
+   >如果配置附加到具有子頁面的頁面，則服務也由這些頁面繼承。
