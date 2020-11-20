@@ -9,7 +9,10 @@ topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '3720'
+ht-degree: 0%
 
 ---
 
@@ -41,6 +44,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
    * forms-users（若要在作者例項上預覽）
    * cm-agent-users（用於發佈實例上的轉譯）
+
    如果您沒有必要的權限，請向管理員要求適當的存取權。 如需建立使用者及新增使用者至群組的詳細資訊，請 [參閱新增使用者或群組至群組](/help/sites-administering/security.md)。 如果您嘗試在沒有適當權限的情況下轉譯對應內容，則會顯示404錯誤頁面。
 
 1. 如果您已選取「預 **覽** >自 **訂**」，則會開啟對話方塊。 在對話框中，選擇與資料字典對應的資料檔案，以預覽字母，然後選擇「預 **覽」**。 基於特定字母的資料字典建立資料檔案。 如需資料檔案的詳細資訊，請參閱資 [料字典](../../forms/using/data-dictionary.md#p-working-with-test-data-p)。
@@ -54,7 +58,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
    有三個標籤：資料、內容和附件。 如果沒有資料元素（預留位置變數和版面欄位），則字母會直接在中開啟，並顯示「內容」索引標籤。 附件頁籤僅在附件存在或庫訪問被啟用時可用。
 
    >[!NOTE]
-
+   >
    >有關在字母預覽的HTML或PDF轉譯模式之間切換的詳細資訊，請參閱 [更改字母轉譯模式](#changerenditionmode)。 如需Correpence Management和AEM中PDF支援的詳細資訊，請參閱 [Distination of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html)。
 
 ### Enter data {#enterdata}
@@ -126,6 +130,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
    * 貨幣符號，例如€、¥和英鎊
    * 數學符號，如∑、√、÷和^
    * 標點符號‟，例如&quot;
+
    ![特殊字元](assets/specialcharacters.png)
 
    Commense Management已內建210個特殊字元的支援。 管理員可 [以透過自訂新增更多／自訂特殊字元的支援](../../forms/using/custom-special-characters.md)。
@@ -156,6 +161,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
    * 必填欄位。
    * 版面欄位（若為必填欄位），並系結至使用者。
    * 僅唯一變數例項。 如果模組、目標區域或字母模板包含兩個或兩個以上相同變數的實例，計數將顯示為1(1)。 但是，對於每個實例，計數顯示為1。
+
    未填入的變數計數不包含取消選取的模組。 如果模組包含在字母模板中，但不在字母中，則不顯示此模組中未填充變數的計數。
 
    對於目標區域、模組和變數，計數顯示在字母模板中每個對象的右側。 不過，對於完整範本，計數會顯示在「建立對應」狀態列中。
@@ -166,6 +172,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
    * **條件** ：顯示條件中包含的唯一非填充條件變數和結果模組中包含的變數的總和。
    * **清單** ：顯示指派給清單之模組中所含所有唯一未填入變數的總和。
    * **目標區域** ：顯示指派給目標區域的模組中所包含之所有唯一未填色變數的總和。
+
    請注意以下關於具有預設值的變數：
 
    * 布林變數欄位預設為 *false*。 不過，變數會被視為未填入。 這表示變數計數包含所有具有值false的布林變數 *欄位*。
@@ -332,7 +339,8 @@ AEM Forms Correponse Management會在「建立對應UI」中將字母顯示為HT
 * **瀏覽器支援**:瀏覽器逐漸支援NPAPI，這會影響PDF的字母預覽。 HTML/行動表單字母預覽不受此影響。
 * **在字母中反白標示可編輯的內容**:在「建立對應」使用者介面中，您可以點選「反白標示可編輯內容」，以灰色反白標示字母中的所有可編輯內容。 如需詳細資訊，請參 [閱管理內容](#managecontent)。
 
-`<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` PDF `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`預`<li>` 覽的 `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>``<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`**優點**
+`<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`
+`<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`  **PDF預覽的優點**
 
 * **分頁符**:在PDF預覽中，您可以確切檢視字母中的分頁符號如何影響其輸出。
 * **最終預覽**:在PDF預覽中，您可以檢視字母的確切格式和外觀，因為字母會出現在其輸出中。
