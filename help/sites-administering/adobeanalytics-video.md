@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 1%
@@ -21,13 +21,13 @@ ht-degree: 1%
 
 # 設定Adobe Analytics的視訊追蹤{#configuring-video-tracking-for-adobe-analytics}
 
-有數種可追蹤視訊事件的方法，其中2種是舊版Adobe Analytics的舊版選項。 這些舊版選項包括： 舊里程碑和舊秒數。
+有數種可追蹤視訊事件的方法，其中2種是舊版Adobe Analytics的舊版選項。 這些舊版選項包括：舊里程碑和舊秒數。
 
 >[!NOTE]
 >
->繼續之前，請確定** **您已在AEM中上傳** **可播放的視訊。
-
->若要確保您的影片在頁面上播放，請參 **[閱本教學課程](/help/sites-authoring/default-components-foundation.md#video)**，以取得如何在AEM中轉碼影片檔的詳細資訊。
+>在繼續之前，請確定您已在AEM中 **上傳可播放** 的視訊。
+>
+>若要確保您的影片在頁面上播放，請參 **[閱本教學課程](/help/sites-authoring/default-components-foundation.md#video)** ，以取得如何在AEM中轉碼影片檔的詳細資訊。
 
 請依照下列步驟，使用每個方法來設定視訊追蹤的架構。
 
@@ -82,7 +82,7 @@ XX字尾是定義里程碑的軌道偏移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.videoName </td>
-   <td>若在DAM中設定，則映射 <strong>至此變數的變數將包含視訊的</strong> (<strong>Title</strong>)使用者友好名稱； 如果未設定，則會改 <strong>為傳送視訊</strong> 的檔案名稱。 播放視訊時，只傳送一次。</td>
+   <td>若在DAM中設定，則映射 <strong>至此變數的變數將包含視訊的</strong> (<strong>Title</strong>)使用者友好名稱；如果未設定，則會改 <strong>為傳送視訊</strong> 的檔案名稱。 播放視訊時，只傳送一次。</td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -114,7 +114,7 @@ XX字尾是定義里程碑的軌道偏移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.a.contentType </td>
-   <td>每個里程碑都傳送； 在Adobe Analytics呼叫中顯示為pev3，通常以「視訊」傳送<br /> </td>
+   <td>每個里程碑都傳送；在Adobe Analytics呼叫中顯示為pev3，通常以「視訊」傳送<br /> </td>
   </tr>
   <tr>
    <td>eventdata.a.media.name </td>
@@ -293,13 +293,13 @@ eventdata.events.milestoneXX
 
    * e.g.10,50,75,100
 
-   此外，傳送至Adobe Analytics的資訊可自訂性較低； 僅有3個變數可用於映射：
+   此外，傳送至Adobe Analytics的資訊可自訂性較低；僅有3個變數可用於映射：
 
 <table>
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>若在DAM中設定，則映射 <strong>至此變數的變數將包含視訊的</strong> (<strong>Title</strong>)使用者友好名稱； 如果未設定「標題」，則會改 <strong>為傳送視訊的檔</strong> 案名稱。 播放視訊時，只傳送一次。<br /> </td>
+   <td>若在DAM中設定，則映射 <strong>至此變數的變數將包含視訊的</strong> (<strong>Title</strong>)使用者友好名稱；如果未設定「標題」，則會改 <strong>為傳送視訊的檔</strong> 案名稱。 播放視訊時，只傳送一次。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -355,7 +355,7 @@ eventdata.events.milestoneXX
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>若在DAM中設定，則映射 <strong>至此變數的變數將包含視訊的</strong> (<strong>Title</strong>)使用者友好名稱； 如果未設定「標題」，則會改 <strong>為傳送視訊的檔</strong> 案名稱。 播放視訊時，只傳送一次。<br /> </td>
+   <td>若在DAM中設定，則映射 <strong>至此變數的變數將包含視訊的</strong> (<strong>Title</strong>)使用者友好名稱；如果未設定「標題」，則會改 <strong>為傳送視訊的檔</strong> 案名稱。 播放視訊時，只傳送一次。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
