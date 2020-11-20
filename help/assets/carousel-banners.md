@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
-source-wordcount: '4803'
+source-wordcount: '4802'
 ht-degree: 3%
 
 ---
@@ -255,8 +255,7 @@ ht-degree: 3%
 >[!NOTE]
 >
 >當您在 [Interactive Image](/help/assets/interactive-images.md) 或Carousel橫幅中將熱點添加到影像時，熱點資訊儲存在相對於影像位置&amp;mdash的相同元資料位置中，而不管它是Interactive Image還是Carousel Banner。 這項功能表示，您可以在任一檢視器中，輕鬆地重複使用相同的影像及其定義的熱點資料。
-
->但是，請注意，轉盤橫幅支援影像上的影像地圖，這些影像也可能包含熱點；互動式影像則否。 如果您想要建立使用相同影像的互動式影像或轉盤橫幅，請記住這一點。 您可能想要使用相同影像的個別副本來建立互動式影像和轉盤橫幅。
+但是，請注意，轉盤橫幅支援影像上的影像地圖，這些影像也可能包含熱點；互動式影像則否。 如果您想要建立使用相同影像的互動式影像或轉盤橫幅，請記住這一點。 您可能想要使用相同影像的個別副本來建立互動式影像和轉盤橫幅。
 
 >[!NOTE]
 如果您正在編輯具有熱點的互動式影像並裁剪影像，則會刪除熱點。
