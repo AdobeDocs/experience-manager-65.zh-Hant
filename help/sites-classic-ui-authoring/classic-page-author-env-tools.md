@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -60,7 +63,7 @@ Content Finder是編輯頁面時在儲存庫中尋找資產和／或內容的快
 * [文件](#finding-documents)
 * [影片](#finding-movies)
 * [Scene7 媒體瀏覽器](/help/sites-administering/scene7.md#scene7contentbrowser)
-* [](#products) 頁 [面](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
+* [](#products) [頁面](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
 
 * [段落](#referencing-paragraphs-from-other-pages)
 * [產品](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#products)
@@ -96,13 +99,13 @@ Content Finder是編輯頁面時在儲存庫中尋找資產和／或內容的快
 
 此標籤列出任何產品。 在頁面上建立適當的段落（例如「產品」）後，您可以拖曳項目並拖曳至段落中。
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![chlimage_1-115](assets/chlimage_1-114.png)
 
 ### 尋找頁面 {#finding-pages}
 
 此標籤顯示所有頁面。 連按兩下任何頁面以開啟頁面進行編輯。
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![chlimage_1-114](assets/chlimage_1-115.png)
 
 ### 參考其他頁面的段落 {#referencing-paragraphs-from-other-pages}
 
@@ -161,7 +164,7 @@ AEM可讓您檢視哪些頁面已連結至您目前正在處理的頁面。
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **選擇**&#x200B;顯示參照……AEM會開啟「參考」視窗，並顯示哪些頁面參照所選頁面，包括其路徑。
+1. 選擇 **顯示參照……** AEM會開啟「參考」視窗，並顯示哪些頁面參照所選頁面，包括其路徑。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -201,12 +204,11 @@ Sidekick底部的一列圖示可用來切換使用頁面的模式：
 >[!NOTE]
 >
 >其他選項也可供使用：
-
+>
 >* [支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
 >* [ClientContext](/help/sites-administering/client-context.md)
-* 網站——將開啟網站主控台。
-* 重新載入——將重新整理頁面。
-
+>* 網站——將開啟網站主控台。
+>* 重新載入——將重新整理頁面。
 
 
 ## 鍵盤快速鍵 {#keyboard-shortcuts}
