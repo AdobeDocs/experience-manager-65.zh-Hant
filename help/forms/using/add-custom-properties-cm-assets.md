@@ -105,7 +105,6 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-
    >您新增之所有資產的通用屬性會顯示在資產屬性的基本標籤中。 依預設，所有資產新增的常用屬性會出現在屬性頁面和資產建立頁面上。 若要隱藏常用屬性，您必須 <!--link to show / hide properties]-->。
 
 ### 方案： 新增自訂下拉式清單和值至自訂屬性／欄位 {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
