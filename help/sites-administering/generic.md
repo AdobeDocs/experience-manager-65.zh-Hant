@@ -1,5 +1,5 @@
 ---
-ttitle: Administering generic eCommerce
+title: 管理一般電子商務
 seo-title: 管理一般電子商務
 description: AEM一般解決方案提供管理存放在儲存庫中的商務資訊的方法。
 seo-description: AEM一般解決方案提供管理存放在儲存庫中的商務資訊的方法。
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9167cbe2-2efb-422d-b58b-0c24b9476fe6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 06d6696a5493f0e166e400bcd9a379b7be062c1e
 workflow-type: tm+mt
-source-wordcount: '3008'
+source-wordcount: '3011'
 ht-degree: 2%
 
 ---
@@ -80,7 +80,7 @@ AEM一般解決方案提供管理存放在儲存庫中的商務資訊的方法�
 
    * **來源**
 
-      要導入的檔案； 您可以使用瀏覽器來選擇檔案。
+      要導入的檔案；您可以使用瀏覽器來選擇檔案。
 
    * **增量匯入**
 
@@ -120,7 +120,7 @@ AEM一般解決方案提供管理存放在儲存庫中的商務資訊的方法�
 
    * **商務提供程式**
 
-      您的商務提供者 [的匯入工具](/help/sites-administering/concepts.md#commerce-providers); 預設為Geometrixx。
+      您的商務提供者 [的匯入工具](/help/sites-administering/concepts.md#commerce-providers);預設為Geometrixx。
 
    * **來源檔案**
 
@@ -188,7 +188,7 @@ AEM一般解決方案提供管理存放在儲存庫中的商務資訊的方法�
 
 ### 顯示產品參考 {#showing-product-references}
 
-#### 顯示產品參考——最佳化觸控式使用者介面 {#showing-product-references-touch-optimized-ui}
+#### 顯示產品參考——最佳化觸控式UI {#showing-product-references-touch-optimized-ui}
 
 1. 使用產 **品主控台** (透過 **商務**)導覽至您的產品資訊。
 1. 使用圖示開啟「參照」的次導軌：
@@ -502,14 +502,14 @@ Search&amp;Promote整合可讓您：
 
    例如，開啟「標 **記／關鍵字** 」欄位以選取「活動」，然後從「Geometrixx-Outdoors」區段選取「游泳」。
 
-1. 按一 **下「確定** 」以儲存您的屬性； 範例產品會顯示在Blueprint頁 **面的「產品選擇條件** 」下。
+1. 按一 **下「確定** 」以儲存您的屬性；範例產品會顯示在Blueprint頁 **面的「產品選擇條件** 」下。
 1. 按一下「 **轉出變更……」**，選取「轉出」頁 **面和所有子頁面**，然後按一下「 **下一** 步」 ****&#x200B;然後「轉出」。 成功完成轉出後，「狀 **態** 」指標將顯示為綠色。
-1. 您現在可以按一 **下「關閉** 」並檢查新目錄區段； 例如，on和under:
+1. 您現在可以按一 **下「關閉** 」並檢查新目錄區段；例如，on和under:
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
-1. 再次從Blueprint頁面按一下「 **編輯Blueprint** 」，然後在「屬性」對話方 **塊中開啟「** 產生的頁面 **** 」標籤。 在「橫幅」清單欄位中，選取您要顯示的影像； 例如， `summer.jpg`
-1. 按一 **下「確定** 」以儲存您的屬性； 橫幅資訊會顯示在Blueprint頁面 **的「產品選擇條件** 」下。
+1. 再次從Blueprint頁面按一下「 **編輯Blueprint** 」，然後在「屬性」對話方 **塊中開啟「** 產生的頁面 **** 」標籤。 在「橫幅」清單欄位中，選取您要顯示的影像；例如， `summer.jpg`
+1. 按一 **下「確定** 」以儲存您的屬性；橫幅資訊會顯示在Blueprint頁面 **的「產品選擇條件** 」下。
 1. 推出這些新變更。
 
 ### 推出目錄 {#rolling-out-a-catalog}
@@ -647,7 +647,7 @@ Search&amp;Promote整合可讓您：
 >
 >應該記住，現成可用的AEM不具備與訂購相關的標準功能所需的動作，例如退貨、更新訂單狀態、完成、產生包裝單。 主要是以技術預覽為目的。
 >
->AEM中的一般訂單管理一直維持基本； 嚮導中可用的欄位取決於腳手架：
+>AEM中的一般訂單管理一直維持基本；嚮導中可用的欄位取決於腳手架：
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
 >如果您建立自訂的Scaffold，則可儲存更多訂單資訊。
