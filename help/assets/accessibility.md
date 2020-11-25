@@ -3,9 +3,9 @@ title: 無障礙環境支援 [!DNL Experience Manager Assets]
 description: 瞭解協助工具功能 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 如何協助殘障人士。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 00f5a6194c8c29d358f362441c155c9c2a52cac7
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1919'
 ht-degree: 1%
 
 ---
@@ -42,8 +42,7 @@ Possible topics to cover in this article are below.
 
 要閱讀包含法規遵從性級別詳細資訊的報告，請參 [閱輔助功能符合性報告](https://www.adobe.com/accessibility/compliance.html) (ACR)頁。
 
-<!-- TBD: Add link after release.
-To know how [!DNL Dynamic Media] is accessible, see [accessibility in [!DNL Dynamic Media]](/). -->
+要瞭解如何 [!DNL Dynamic Media] 訪問，請參 [閱中的 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)。
 
 ## 輔助技術 {#at-support}
 
@@ -175,7 +174,7 @@ Review CQ-4282133 before adding - Close button in a coral-dialog wasn't accessib
 
 ## 搜尋數位資產 {#search-assets}
 
-快速順暢的資產搜尋體驗可大幅提升內容速度。 內容速度使用案例是核心功能的一 [!DNL Assets] 部分。 若要從Omnisearch列開始搜尋，使用者可以使用鍵盤快速鍵，或 `/` 搭配螢幕 `Tab` 閱讀程式使用，以快速找到搜尋選項。 當焦點在搜尋選項搜尋選項時，螢幕閱讀程式會將選項名稱旁白為「搜尋 ![按鈕」](assets/do-not-localize/search_icon.png)。 使用者可以選 `Return` 取以開啟Omnisearch方塊。 螢幕閱讀器不僅會說明搜尋方塊中輸入的關鍵字，也會說明所提供的建議 [!DNL Experience Manager Assets]。 使用者可使用方向鍵組合 `Return`，並 `Tab` 存取各種選項以觸發搜尋。
+快速順暢的資產搜尋體驗可大幅提升內容速度。 內容速度使用案例是核心功能的一 [!DNL Assets] 部分。 若要從Omnisearch列開始搜尋，使用者可以使用鍵盤快速鍵，或 `/` 搭配螢幕 `Tab` 閱讀程式使用，以快速找到搜尋選項。 當焦點在搜尋選項搜尋選項時，螢幕閱讀程式會將選項名稱旁白為「搜尋 ![按鈕」](assets/do-not-localize/search_icon.png)。 使用者可 `Return` 以選取以開啟Omnisearch方塊。 螢幕閱讀器不僅會說明搜尋方塊中輸入的關鍵字，也會說明所提供的建議 [!DNL Experience Manager Assets]。 使用者可使用方向鍵組合 `Return`，並 `Tab` 存取各種選項以觸發搜尋。
 
 搜尋功能可透過下列功能存取：
 
@@ -224,7 +223,8 @@ Review CQ-4282133 before adding - Close button in a coral-dialog wasn't accessib
 
 >[!MORELIKETHIS]
 >
->* [每個版本中增強功能的發行說明](/help/release-notes/new-features-latest-service-pack.md)。
+>* [中的輔助功能 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)。
+>* [每個Service Pack版本中增強功能的發行說明](/help/release-notes/new-features-latest-service-pack.md)。
 >* [[!DNL Adobe Experience Manager] 協助工具指引](/help/managing/web-accessibility.md)。
 >* [Adobe解決方案的符合性報告(ACR)和VPAT清單](https://www.adobe.com/accessibility/compliance.html)。
 
