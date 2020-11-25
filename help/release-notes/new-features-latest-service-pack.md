@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2704'
 ht-degree: 1%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 1%
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* 使用者可以在「卡片」和「欄」檢視中排序數位資產。
+* [!DNL Assets] 並提供 [!DNL Dynamic Media] 多種協助工具增強功能。 這些增強功能與鍵盤導覽、螢幕閱讀程式的使用，以及類似的增強功能，以利使用輔助技術(AT)有關。 請參 [[!DNL Assets] 閱增強](/help/release-notes/sp-release-notes.md#assets-6570) 和 [[!DNL Dynamic Media] 增強功能](/help/release-notes/sp-release-notes.md#dynamic-media-6570)。
 
-* [!DNL Assets] 並提供 [!DNL Dynamic Media] 多種協助工具增強功能。 這些增強功能與鍵盤導覽、螢幕閱讀程式的使用，以及類似的增強功能，以利使用輔助技術(AT)有關。 請參 [閱資產增強](/help/release-notes/sp-release-notes.md#assets-6570) 和 [[!DNL Dynamic Media] 增強功能](/help/release-notes/sp-release-notes.md#dynamic-media-6570)。 <!-- TBD: Add link to a11y article after go-live. Adding RN link for now. -->
+* 使用者可以在「卡片」和「欄」檢視中排序數位資產。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
