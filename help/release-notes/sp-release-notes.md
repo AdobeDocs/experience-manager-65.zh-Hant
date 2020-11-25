@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '3787'
+source-wordcount: '3796'
 ht-degree: 0%
 
 ---
@@ -139,7 +139,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager] 6.5.7.0修 [!DNL Assets] 正了下列問題並提供下列增強功能。
 
-* 下列增強功能適用於協助工具，位於 [!DNL Experience Manager Assets]:
+* 本版次針對協助工具執行下 [!DNL Experience Manager Assets] 列增強功能。 如需詳細資訊，請參 [閱中的協助功能 [!DNL Assets]](/help/assets/accessibility.md)。
 
    * 使用鍵盤導覽時間軸時， `Esc` 鍵可以收合「全 [!UICONTROL 部顯示] 」選項，而不會失去焦點(CQ-4293598)。
    * 使用鍵盤標籤鍵導覽時，從新增的標籤移除最後一個標籤後，標籤欄位會保留焦點(NPR-35109)。
@@ -193,7 +193,7 @@ ht-degree: 0%
 
 #### [!DNL Dynamic Media] {#dynamic-media-6570}
 
-* 下列主要增強功能是針對協助工具 [!DNL Dynamic Media] 進行的(CQ-4290306)。 如需詳細資訊，請參閱中的協助工具功 [!DNL Dynamic Media]能。  <!-- TBD: link to DM content post GA -->
+* 下列增強功能適用於協助工具( [!DNL Dynamic Media] CQ-4290306)。 如需詳細資訊，請參 [閱中的協助功能 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)。
 
    * 螢幕閱讀程式（JAWS，旁白）會在「內嵌大小」功能表選項(CQ-4290927)中，說明功能表項目的名稱、角色和狀態。
    * 使用者可使用金鑰來導覽「電子郵件 `Tab` 連結」對話方塊(CQ-4290926)。
