@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1117'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ UGC的轉譯可讓網站訪客和成員透過移除語言障礙，體驗全球�
 
 ## 預設翻譯服務 {#the-default-translation-service}
 
-AEM Communities隨附試用授 [權](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) ，針對多種語言 [啟用預設翻譯服務](../../help/sites-administering/tc-msconf.md) 。
+AEM Communities包含針對 [多種語言](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) ，啟用 [預設翻譯服務的試用授權](../../help/sites-administering/tc-msconf.md) 。
 
 在創 [建社區站點](sites-console.md)，從 `Allow Machine Translation` TRANSLATION [](sites-console.md#translation) 子面板選中預設翻譯服務時將啟用。
 
