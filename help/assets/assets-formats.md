@@ -3,9 +3,9 @@ title: 支援的檔案格式和MIME類型
 description: 支援的檔案格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 類型，以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c2c0f38d0c8e403264db05064d4423ef46880d9a
+source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1615'
 ht-degree: 9%
 
 ---
@@ -237,7 +237,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 ## 其他支援的格式 {#other-supported-formats}
 
-許多檔案格式都支援一般的DAM功能，例如儲存、版本修訂、ACL、工作流程、發佈和中繼資料 [!DNL Dynamic Media] 管理（傳送除外）。 以下說明幾種特定檔案格式的功能適用性。
+以下說明DAM通常功能對於一些特定檔案格式的適用性。
 
 | 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 動態媒體傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
