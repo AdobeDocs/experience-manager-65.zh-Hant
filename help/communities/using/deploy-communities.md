@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1890'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 安裝檢查清單 {#installation-checklist}
 
-**針對[AEM平台](/help/sites-deploying/deploy.md#what-is-aem)**:
+**針對 [AEM平台](/help/sites-deploying/deploy.md#what-is-aem)**:
 
 * 安裝最新 [的AEM 6.5更新](#aem64updates)。
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 * [複製加密密鑰](#replicate-the-crypto-key)
 * 如果支援全球化， [請設定自動翻譯](/help/sites-administering/translation.md)（提供示例設定以用於開發）。
 
-**針對社[群功能](/help/communities/overview.md)**:
+**針對社 [群功能](/help/communities/overview.md)**:
 
 * 如果部署發 [布群](/help/sites-deploying/recommended-deploys.md#tarmk-farm), [請識別主要發佈者](#primary-publisher)
 
@@ -90,7 +90,7 @@ ht-degree: 1%
 
 ## Latest Releases {#latest-releases}
 
-AEM 6.5 Communities GA隨附Communities套件。 若要瞭解AEM 6.5 [Communities的更新](/help/release-notes/release-notes.md#experiencemanagercommunities)，請 [參閱AEM 6.5發行說明](/help/release-notes/release-notes.md#communities-release-notes.html)。
+AEM 6.5 Communities GA包含Communities套件。 若要瞭解AEM 6.5 [Communities的更新](/help/release-notes/release-notes.md#experiencemanagercommunities)，請 [參閱AEM 6.5發行說明](/help/release-notes/release-notes.md#communities-release-notes.html)。
 
 ### AEM 6.5更新 {#aem-updates}
 
