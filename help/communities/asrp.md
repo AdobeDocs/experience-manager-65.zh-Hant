@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
+source-git-commit: ef57d53fc780bd222abbe994fc71e133ce8a77fc
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 使用ASRP需要額外的授權。
 
-若要設定您的AEM Communities網站以使用UGC的ASRP，請確定您有下列項目：
+若要設定您的AEM Communities網站以使用UGC的ASRP，請連絡您的帳戶代表，以取得：
 
 * 資料中心URL（ASRP端點的位址）
 * 消費者金鑰
