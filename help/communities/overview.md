@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 4533fa42fa3fa9f157d5ca8fee1251005b1d587e
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1446'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,9 @@ ht-degree: 1%
 
 Adobe Experience Manager(AEM)Communities提供快速建立內部部署社群網站的功能，可改善效能、改善網站管理，並鼓勵網站訪客轉換為有價值的社群成員。
 
-請連絡您的客戶代表，以取得有關AEM Communities授權的資訊，以及啟用功能和Adobe Analytics的其他授權。
+<!--
+Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
+-->
 
 ## 社群功能 {#communities-features}
 
