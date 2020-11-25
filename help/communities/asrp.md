@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 使用ASRP需要額外的授權。
 
-若要設定您的AEM Communities網站以使用UGC的ASRP，請連絡您的帳戶代表，以取得：
+若要設定您的AEM Communities網站以使用UGC的ASRP，請確定您有下列項目：
 
 * 資料中心URL（ASRP端點的位址）
 * 消費者金鑰
@@ -54,10 +54,10 @@ ht-degree: 0%
 
 以下資訊來自設定過程：
 
-* **資料中心URL**: 下拉式清單，以選擇由您的帳戶代表所識別的生產資料中心。
-* **預設報表套裝**: 輸入預設報表套裝的名稱。
-* **消費者金鑰**: 輸入消費者金鑰。
-* **秘密**: 輸入密碼。
+* **資料中心URL**:下拉式清單，以選擇由您的帳戶代表所識別的生產資料中心。
+* **預設報表套裝**:輸入預設報表套裝的名稱。
+* **消費者金鑰**:輸入消費者金鑰。
+* **秘密**:輸入密碼。
 * 選擇 **提交**。
 
 準備發佈例項：
@@ -99,7 +99,7 @@ ASRP必須被識別為所有作者和發佈實例上的公用商店。
 
 * 從主菜單導航到「工 **[!UICONTROL 具」>「操作」>「複製]**」。
 * 選擇 **激活樹**
-* **開始路徑**: 瀏覽至 `/etc/socialconfig/srpc/`
+* **開始路徑**:瀏覽至 `/etc/socialconfig/srpc/`
 * 僅取消選 **擇已修改**
 * 選取「啟 **動」**
 
