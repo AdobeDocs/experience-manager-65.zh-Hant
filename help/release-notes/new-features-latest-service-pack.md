@@ -1,118 +1,54 @@
 ---
-title: Adobe Experience Manager 6.5 Service Pack 6的新增功能
-description: Adobe Experience Manager 6.5 Service Pack 6的新增功能
+title: Adobe Experience Manager 6.5 Service Pack 7的新增功能
+description: Adobe Experience Manager 6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
 workflow-type: tm+mt
-source-wordcount: '2561'
-ht-degree: 2%
+source-wordcount: '2705'
+ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Service Pack 6的新增功能 {#aem-whats-new-service-pack-6}
+# Adobe Experience Manager 6.5 Service Pack 7的新增功能 {#aem-whats-new-service-pack}
 
-Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的增強功能以及效能、穩定性和安全性改進。 每季的上市情況讓您輕鬆存取和採用新功能和創新。
+![Whats-new](assets/whatsnew.jpeg)
 
-本文重點介紹最新6.5 Service Pack中的功能、 [舊版6.5 Service Pack中的主要功能](#key-features-previous-service-packs)，以及Experience Manager 6.5.5.0版以來的 [部分主要版本](#key-releases-since-last-sp) 。
+[!DNL Adobe Experience Manager] 6.5 Service Pack每季提供新功能、客戶要求的增強功能，以及效能、穩定性和安全性的改善。 每季的上市情況讓您輕鬆存取和採用新功能和創新。
 
-## Adobe網 [!DNL Experience Manager] 站 {#aem-sites}
+本文著重說明最新6.5 Service Pack中包含的功能、 [舊版6.5 Service Pack中包含的主要功能](#key-features-previous-service-packs)，以及自上一版 [Service Pack發行以來的主要AEM版本](#key-releases-since-last-sp) 。
 
-### 非同步模式下頁面移動操作的可用性 {#page-move-asynchronous}
+## Adobe [!DNL Experience Manager Sites] {#aem-sites}
 
-「頁面移動」操作現在可在非同步模式下使用。 除了立即執行外，您還可以計畫頁面移動操作以便稍後執行。
+### 排序可用於轉出的即時副本頁面 {#sort-livecopy-pages}
 
-## [!DNL Dynamic Media] {#dynamic-media}
+您現在可以使用「名稱」、「上次修改日期」和「上次轉出日期 [!UICONTROL 」屬性，來排序可供轉]出的即時 [!UICONTROL Copy頁面] 。 頁面 [!UICONTROL 的上次推出日期] ，是本版次中引進的新屬性。
 
-### 使CDN快取內容無效 {#invalidate-cdn-cached-content}
+### 頁面移動和MSM推出的可用性作為非同步操作 {#page-moves-msm-asynchronous}
 
-您現在可以使用使 [!DNL Dynamic Media] 用者介面來使內容傳送網路(CDN)快取內容失效。 因此，更新的資產可立即使用，而不需等待快取過期。 您可以透過下列方式使CDN失效：
-
-* 建立CDN失效範本：選取資產和表單相關範本型URL
-
-* 透過資產選擇器選取資產和相關的預設集
-
-* 新增完整的資產URL
-
-### 選擇性發佈資產至 [!DNL Experience Manager] 和 [!DNL Dynamic Media] {#selective-publishing}
-
-您現在可以選擇選擇性地將資產發佈或取消發佈至 [!DNL Experience Manager] 或使 [!DNL Dynamic Media] 用「快 [!UICONTROL 速發佈] 」 [!UICONTROL 或「管理出版物] 」精靈。 您也可以在資料夾 `Publish` 層級 `Unpublish` 設定或模式。
+您現在可以將頁面移動和MSM展開作為非同步操作來執行，以降低它們對執行時期效能的影響。 您可以安排操作以立即執行或稍後執行。 關聯作業和流程步驟的狀態顯示在控制台中，這有助於監控大規模MSM部署。
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-### 協助工具增強功能 {#accessibility-assets-6560}
+* 使用者可以在「卡片」和「欄」檢視中排序數位資產。
 
-* **增強鍵盤導覽時的使用者介面焦點**，例如：
-
-   * `x` 表徵圖(在 [!UICONTROL 時間軸中] 「版本預覽」對話框中 [!UICONTROL )]。
-
-   * 可操作的使用者介面選項。
-
-   * 「共用連結」對話 [!UICONTROL 框上的「電子郵件」欄位] ，以及檔案夾「屬性」的「權限」索引標籤中新增已關閉使用者群組的欄位 。
-
-* **使用鍵盤按鍵的增強功能**
-
-   使用者可以使用鍵盤按鍵，在螢幕閱讀程式的瀏覽模式中，拖曳中繼資料結構表單編輯器中的控制項。
-
-* **由於下列原因**，螢幕閱讀程式使用者的可用性增強：
-
-   * 螢幕閱讀程式會宣佈視訊和音訊播放器的用途。
-
-   * 螢幕閱讀程式會宣佈使用者介面選項的用途，以移除使用資產屬性上的「標籤 [!UICONTROL 選擇」對話方塊] 所選 [!UICONTROL 的標籤]。
-
-   * 螢幕閱讀程式會公佈表格的列標題和列項目，讓使用者知道哪些項目屬於同一列。
-
-   * 搜尋頁面的描述性和有意義的頁面標題。
-
-   * 螢幕閱讀程式會將搜尋篩選面板中的選項宣佈為可展開的收合式。
-
-### 資產中的其他增強功能 {#other-enhancements-assets-6560}
-
-* 與資料夾（專用和非專用）關聯的用戶組現在將在刪除這些資料夾時 [從儲存庫中刪除](/help/assets/private-folder.md#delete-private-folder)。 但是，可以使用JMX從儲存庫清理現有的冗餘、孤立、未使用和自動生成的用戶組。
+* [!DNL Assets] 並提供 [!DNL Dynamic Media] 多種協助工具增強功能。 這些增強功能與鍵盤導覽、螢幕閱讀程式的使用，以及類似的增強功能，以利使用輔助技術(AT)有關。 請參 [閱資產增強](/help/release-notes/sp-release-notes.md#assets-6570) 和 [[!DNL Dynamic Media] 增強功能](/help/release-notes/sp-release-notes.md#dynamic-media-6570)。 <!-- TBD: Add link to a11y article after go-live. Adding RN link for now. -->
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
-### 在用戶端預先填寫最適化表格 {#prefill-merge-data-at-client}
+>[!NOTE]
+>
+>[!DNL Experience Manager Forms] 在計畫的Service Pack發行一週後，將提供附加 [!DNL Experience Manager] 套件。 [!DNL Experience Manager] 6.5 Service Pack 7(6.5.7.0)預計於2020年11月26日發行。
 
-當您預先填寫最適化表格時，伺服 [!DNL Experience Manager Forms] 器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
-您現在可以設定伺 [!DNL Experience Manager Forms] 服器， [在用戶端（而非伺服器）執行資料合併動作](../../help/forms/using/prepopulate-adaptive-form-fields.md) 。 它可大幅縮短預先填寫和轉換最適化表單的時間。
+## 舊版 [!DNL Experience Manager] 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
 
-### 在具有雙向SSL實作的伺服器上，與REST風格的API整合表單資料模型 {#fdm-integration-rest-apis-two-way-ssl}
+### [!DNL Experience Manager Sites] {#aem-sites-previous-service-packs}
 
-[!DNL Experience Manager Forms] 表單資料模型現 [在可與在具備雙向SSL的伺服器上的REST風格API整合](../../help/forms/using/configure-data-sources.md)。
+#### 非同步模式(6.5.6.0)中頁面移動操作的可用性 {#page-move-asynchronous}
 
-
-### 新增對Automated Forms [!DNL Adobe Sign] Conversion Service中文字標籤的支援 {#sign-integration-acroform-afcs}
-
-如果AcroForm包含「文 [!DNL Adobe Sign] 字標籤」，這些欄位現在會在使用轉換的 [!DNL Adobe Sign] 最適化表單中辨識並呈現為欄位 [!DNL Automated Forms Conversion service]。 簽署者可在簽署最適化表單時填寫這些欄位。
-
-### Support to convert colored PDF forms to adaptive forms {#colored-PDF-forms}
-
-您可以使 [!DNL Automated Forms Conversion service] 用將彩色PDF表單轉換為最適化表單。
-
-### 支援SMB 2和SMB 3協定 {#smb-support}
-
-[!DNL Experience Manager Forms] 現在支援SMB 2和SMB 3協定。
-
-### 增強的轉譯自適應表單頁快取功能 {#enhanced-caching-translated-adaptive-forms}
-
-您現在可以在 [最適化表單URL中指定地區設定為選擇器，而非在最適化表單URL中指定引數](../../help/forms/using/supporting-new-language-localization.md)。 它可協助快取轉譯的最適化表單 [!DNL Experience Manager Dispatcher]。 在舊版中無法快取轉換的最適化表單。 如需在最適化表單URL中設定使用地區設定做為選擇器的快取的詳細資訊，請參 [閱在dispatcher中設定最適化表單快取](../../help/forms/using/configure-adaptive-forms-cache.md)。
-
-### 將表單資料模型服務的輸出保存到變數 {#save-fdm-service-to-variable}
-
-表單資料模型可讓您將表單資料模型服務的輸出儲存至變數。 [!DNL Experience Manager Forms] 現在會自動將表單資料模型服務的類型對應至變數的類型。
-
-### 為檔案附件元件附加多個檔案 {#attach-multiple-files}
-
-您現在可以 [將多個檔案附加到](../../help/forms/using/introduction-forms-authoring.md)[!UICONTROL 最適化表單的「檔案附件] 」元件。
-
-
-
-## 舊版Experience Manager 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
-
-### Experience Manager Sites {#aem-sites-previous-service-packs}
+「頁面移動」操作現在可在非同步模式下使用。 除了立即執行外，您還可以計畫頁面移動操作以便稍後執行。
 
 #### 協助工具改良(6.5.5.0) {#accessibility-sites}
 
@@ -158,6 +94,36 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 
 ### [!DNL Adobe Experience Manager Assets] {#aem-assets-previous-service-packs}
 
+#### Accessibility enhancements (6.5.6.0) {#accessibility-assets-6560}
+
+* **增強鍵盤導覽時的使用者介面焦點**，例如：
+
+   * `x` 表徵圖(在 [!UICONTROL 時間軸中] 「版本預覽」對話框中 [!UICONTROL )]。
+
+   * 可操作的使用者介面選項。
+
+   * 「共用連結」對話 [!UICONTROL 框上的「電子郵件」欄位] ，以及檔案夾「屬性」的「權限」索引標籤中新增已關閉使用者群組的欄位 。
+
+* **使用鍵盤按鍵的增強功能**
+
+   使用者可以使用鍵盤按鍵，在螢幕閱讀程式的瀏覽模式中，拖曳中繼資料結構表單編輯器中的控制項。
+
+* **由於下列原因**，螢幕閱讀程式使用者的可用性增強：
+
+   * 螢幕閱讀程式會宣佈視訊和音訊播放器的用途。
+
+   * 螢幕閱讀程式會宣佈使用者介面選項的用途，以移除使用資產屬性上的「標籤 [!UICONTROL 選擇」對話方塊] 所選 [!UICONTROL 的標籤]。
+
+   * 螢幕閱讀程式會公佈表格的列標題和列項目，讓使用者知道哪些項目屬於同一列。
+
+   * 搜尋頁面的描述性和有意義的頁面標題。
+
+   * 螢幕閱讀程式會將搜尋篩選面板中的選項宣佈為可展開的收合式。
+
+#### (6.5.6.0) [!DNL Assets] 中的其他增強功能 {#other-enhancements-assets-6560}
+
+* 與資料夾（專用和非專用）關聯的用戶組現在將在刪除這些資料夾時 [從儲存庫中刪除](/help/assets/private-folder.md#delete-private-folder)。 但是，可以使用JMX將現有的冗餘、孤立、未使用和自動生成的用戶組從儲存庫中刪除。
+
 #### (6.5.5.0) [!DNL Assets] 中的協助工具增強功能 {#assets-accessibility}
 
 [!DNL Experience Manager Assets] 現在可依照網頁內容協助工具准則(WCAG)更容易存取。 協助工具已改善，因為下列增強功能：
@@ -201,7 +167,7 @@ Adobe Experience Manager 6.5服務套件每季提供新功能、客戶要求的�
 * 日期和時間格式約束在日期欄位的欄位標籤中提供，使用戶能夠使用鍵盤以正確的格式輸入日期。
 For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份，YYYY是年份，DD是兩位數格式的日，HH是24小時軍用格式的小時，而mm是分鐘。
 
-* 螢幕閱讀程式現在 `X` 會宣佈要移除所選標籤的符號，以及選取的標籤數。
+* 螢幕閱讀程式會宣佈移除選取標籤(`X` 符號)的選項，以及選取標籤的數目。
 
 #### 清單檢視中資產建立日期的可排序欄(6.5.3.0) {#sortable-date-created-column}
 
@@ -215,6 +181,20 @@ For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份�
 
 ### 動態媒體 {#dynamic-media-previous-service-packs}
 
+#### 使CDN快取內容(6.5.6.0)無效 {#invalidate-cdn-cached-content}
+
+您現在可以使用使 [!DNL Dynamic Media] 用者介面來使內容傳送網路(CDN)快取內容失效。 因此，更新的資產可立即使用，而不需等待快取過期。 您可以透過下列方式使CDN失效：
+
+* 建立CDN失效範本：選取資產和表單相關範本型URL
+
+* 透過資產選擇器選取資產和相關的預設集
+
+* 新增完整的資產URL
+
+#### 選擇性發佈資 [!DNL Experience Manager] 產至 [!DNL Dynamic Media] 和(6.5.6.0) {#selective-publishing}
+
+您現在可以選擇選擇性地將資產發佈或取消發佈至 [!DNL Experience Manager] 或使 [!DNL Dynamic Media] 用「快 [!UICONTROL 速發佈] 」 [!UICONTROL 或「管理出版物] 」精靈。 您也可以在資料夾 `Publish` 層級 `Unpublish` 設定或模式。
+
 #### 適用於動態媒體的智慧型影像 {#smart-imaging}
 
 智慧型影像處理運用每位使用者獨特的檢視特性，自動提供最符合其體驗的影像，進而提高效能和參與度。 智慧型影像功能可與您現有的影像預設集搭配使用，並在傳送時的最後一毫秒使用智慧功能，根據瀏覽器或網路連線速度進一步降低影像檔案大小。 請參閱 [智慧型影像](../assets/imaging-faq.md)。
@@ -225,7 +205,40 @@ For example, `On Time (MM-DD-YYYY HH:mm)`. 其中MM是兩位數格式的月份�
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
 
-#### 自訂Adobe Experience Manager收件匣欄(6.5.5.0){#customize-aem-inbox-columns}
+#### 在用戶端(6.5.6.0)預先填寫最適化表格 {#prefill-merge-data-at-client}
+
+當您預先填寫最適化表格時，伺服 [!DNL Experience Manager Forms] 器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
+您現在可以設定伺 [!DNL Experience Manager Forms] 服器， [在用戶端（而非伺服器）執行資料合併動作](../../help/forms/using/prepopulate-adaptive-form-fields.md) 。 它可大幅縮短預先填寫和轉換最適化表單的時間。
+
+#### 在具有雙向SSL實作(6.5.6.0)的伺服器上，與REST風格的API整合表單資料模型 {#fdm-integration-rest-apis-two-way-ssl}
+
+[!DNL Experience Manager Forms] 表單資料模型現 [在可與在具備雙向SSL的伺服器上的REST風格API整合](../../help/forms/using/configure-data-sources.md)。
+
+#### 新增對 [!DNL Adobe Sign] Automated Forms Conversion Service(6.5.6.0)中文字標籤的支援 {#sign-integration-acroform-afcs}
+
+如果AcroForm包含「文 [!DNL Adobe Sign] 字標籤」，這些欄位現在會在使用轉換的 [!DNL Adobe Sign] 最適化表單中辨識並呈現為欄位 [!DNL Automated Forms Conversion service]。 簽署者可在簽署最適化表單時填寫這些欄位。
+
+#### Support to convert colored PDF forms to adaptive forms (6.5.6.0) {#colored-PDF-forms}
+
+您可以使 [!DNL Automated Forms Conversion service] 用將彩色PDF表單轉換為最適化表單。
+
+#### 支援SMB 2和SMB 3協定(6.5.6.0) {#smb-support}
+
+[!DNL Experience Manager Forms] 現在支援SMB 2和SMB 3協定。
+
+#### 增強轉譯的可調式表單頁面快取(6.5.6.0) {#enhanced-caching-translated-adaptive-forms}
+
+您現在可以在 [最適化表單URL中指定地區設定為選擇器，而非在最適化表單URL中指定引數](../../help/forms/using/supporting-new-language-localization.md)。 它可協助快取轉譯的最適化表單 [!DNL Experience Manager Dispatcher]。 在舊版中無法快取轉換的最適化表單。 如需在最適化表單URL中設定使用地區設定做為選擇器的快取的詳細資訊，請參 [閱在dispatcher中設定最適化表單快取](../../help/forms/using/configure-adaptive-forms-cache.md)。
+
+#### 將表單資料模型服務的輸出儲存至變數(6.5.6.0) {#save-fdm-service-to-variable}
+
+表單資料模型可讓您將表單資料模型服務的輸出儲存至變數。 [!DNL Experience Manager Forms] 現在會自動將表單資料模型服務的類型對應至變數的類型。
+
+#### 為檔案附件元件(6.5.6.0)附加多個檔案 {#attach-multiple-files}
+
+您現在可以 [將多個檔案附加到](../../help/forms/using/introduction-forms-authoring.md)[!UICONTROL 最適化表單的「檔案附件] 」元件。
+
+#### 自訂Adobe Experience Manager收件匣欄(6.5.5.0) {#customize-aem-inbox-columns}
 
 您可以自訂收件 [!DNL Experience Manager] 匣以變更欄的預設標題、重新排序欄位，並根據工作流程的資料顯示其他欄位。 成員 `administrators` 或 `workflow-administrators` 組可以自定義列。 如需詳細資訊，請參 [閱管理控制](../sites-authoring/inbox.md#inbox-admin-control)。
 
@@ -308,21 +321,23 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 您可以使用Batch API，從範本產生多種互動式通訊。 範本是互動式通訊，不含任何資料。 批次API將資料與範本結合，以產生互動式通訊。 API在大量製作互動式通訊時很實用。 例如，電話帳單、多名客戶的信用卡帳單。 請參 [閱使用批次API產生多種互動式通訊](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-## Adobe Experience Manager 6.5 SP5以來的主要版本 {#key-releases-since-last-sp}
+## Adobe Experience Manager 6.5 SP6以來的主要版本 {#key-releases-since-last-sp}
 
-在2020年6月04日至2020年9月03日期間，Adobe除了發行Service Pack和累積修補程式套件外，還發行下列軟體：
+在2020年9月03日至2020年11月26日期間，Adobe除了發行Service Pack和累積修補程式套件外，還發行下列產品：
 
-* [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) is available to download Experience Manager Service Packs、cumulative Fix Packs、Hotfix和Feature Packs。
+* [!DNL Adobe Experience Manager] 作為雲服務 [2020.9.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-9-0.html?lang=en#release-notes)[和2020.10.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-10-0.html?lang=en#release-notes)。
 
-* [!DNL Adobe Experience Manager as a cloud service] [2020.7.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-7-0.html) 和 [2020.8.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html)。
+* [[!DNL Experience Manager] 案頭應用程式2.0(2.0.3.2)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
 
-* [Experience Manager案頭應用程式2.0(2.0.3.2)](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/release-notes.html)。
+* [WKND參考網站- 0.0.6](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-0.0.6)
 
-* [Experience Manager畫面：功能套件202008](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202008.html)
+* [Experience Manager畫面：功能套件202008](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202008.html)
+
+* [Adobe Asset Link v2.2](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager 6.5檔案](../user-guide/home.md)
->* [Adobe Experience Manager 6.5的一般發行說明](release-notes.md)
->* [Adobe Experience Manager 6.5的Service Pack發行說明](sp-release-notes.md)
+>* [[!DNL Adobe Experience Manager] 6.5檔案](../user-guide/home.md)
+>* [ [!DNL Adobe Experience Manager] 6.5的一般發行說明](release-notes.md)
+>* [ [!DNL Adobe Experience Manager] 6.5版Service Pack發行說明](sp-release-notes.md)
 
