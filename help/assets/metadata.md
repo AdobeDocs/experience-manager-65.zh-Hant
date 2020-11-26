@@ -3,7 +3,7 @@ title: 管理您的數位資產的中繼資料 [!DNL Adobe Experience Manager]�
 description: 瞭解中繼資料的類型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根據資產的中繼資料自動組織和處理資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: d070f5dca569dfb90d3034b74c2940fd68d8ceab
 workflow-type: tm+mt
 source-wordcount: '2421'
 ht-degree: 10%
@@ -112,7 +112,7 @@ ht-degree: 10%
 1. 導覽至使 [!DNL Assets] 用者介面，然後按一下工 **[!UICONTROL 具列中的]** 「建立」。
 1. 從功能表中，選取「中繼 **[!UICONTROL 資料]**」。
 1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. 選取包含中繼資料的CSV檔案。
-1. 指定下列參數。 請參閱中繼資料匯 [入範例檔案。csv的範例CSV檔案](assets/metadata-import-sample-file.csv)。
+1. 指定下列參數。 請參閱中繼資料匯 [入範例檔案。csv的範例CSV檔案](/help/assets/assets/metadata-import-sample-file.csv)。
 
    | 中繼資料匯入參數 | 說明 |
    |:---|:---|
