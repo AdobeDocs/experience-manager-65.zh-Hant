@@ -1,13 +1,13 @@
 ---
-title: 無障礙環境支援 [!DNL Dynamic Media]
+title: 動態媒體中的協助功能
 description: 瞭解動態媒體和動態媒體檢視器中的協助功能
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 383f84b1a984683b3e2ce60f1a3f2191749a1561
+source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
