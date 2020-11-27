@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 62a04c1d9f62a5a5fa6f97f415015001daa94747
+source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
 workflow-type: tm+mt
-source-wordcount: '14760'
+source-wordcount: '14804'
 ht-degree: 0%
 
 ---
@@ -326,6 +326,8 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 * 最適化表單有一些開放資源解析器。 這會導致提交失敗。 間歇性出現問題(CQ-4299407)。
 
 * 首次開啟欄位設定時，不會顯示屬性圖示(CQ-4296284)。
+
+* 使用者在提交最適化表單時，可 `afPath`以編輯 `afSubmissionTime` 提交 `signers`中繼資料，例如和。 為瞭解決此問題，會從用戶端的表單提交資料中移除中繼資料值。 使用者可使 `FormSubmitInfo` 用物件從伺服器擷取這些值(NPR-33654)。
 
 **工作流程**
 
@@ -1418,7 +1420,7 @@ Remove one mention of this fix.
 * Scene7視訊播放器在展開為全螢幕時的問題。 CQ-4266700的修補程式
 * ZoomVerticalViewer:如果使用單一影像資產，則不應顯示平移按鈕。 CQ-4264795的修補程式
 * 刪除即時副本中的子節點應分離liveRelationship。 CQ-4270395的修補程式
-* 中繼資料結構只包含全域設定中的項目，且遺失作用中租用戶中的項目。 formPath URL值即使在變更時也會回復為預設值。 NPR-29945:CQ-4262898的修補程式
+* 中繼資料結構只包含全域設定中的項目，且遺失作用中租用戶中的項目。 formPath URL值即使在變更時也會回復為預設值。 NPR-29944:CQ-4262898的修補程式
 * 發佈影像預設集失敗， [!DNL Brand Portal] 並加上500錯誤碼。 NPR-29510:CQ-4268659的修補程式
 
 ### 網站
@@ -1518,7 +1520,7 @@ Remove one mention of this fix.
 
 **後端整合**
 
-* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29944:CQ-4270777的修補程式
+* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29945:CQ-4270777的修補程式
 * 在IBM [!DNL Experience Manager Forms] WebSphere上安裝時，基於SOAP建立表單資料模型失敗。 CQ-4251134的修補程式
 * 已針對Microsoft Dynamics內部部署整合啟用Active Directory Federation Services(ADFS)v3.0支援。 CQ-4270586的修補程式
 * 當資料來源的標題變更時，表單資料模型不會顯示更新的標題。 CQ-4265599的修補程式
