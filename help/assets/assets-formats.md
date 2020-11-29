@@ -3,9 +3,9 @@ title: 支援的檔案格式和MIME類型
 description: 支援的檔案格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 類型，以及每種格式支援的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
+source-git-commit: eaff176bf3ffc197607b8eb39b15c1e945927f8e
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1639'
 ht-degree: 9%
 
 ---
@@ -246,6 +246,10 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（當設定有自己的傳送網域時） | − | − | − | − | − | ✓ |
+
+>[!NOTE]
+>
+>上傳和散發JavaScript檔案可能是安全的，也可能不安全。 如有需要，可使用覆蓋來防止使用者上傳JS檔案。
 
 ## Supported MIME types {#supported-mime-types}
 
