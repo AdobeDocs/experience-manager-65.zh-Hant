@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0389508f7870dd2ce6ed7bfc5fb8a9bc88fedffb
+source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
 workflow-type: tm+mt
-source-wordcount: '3796'
+source-wordcount: '3789'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ ht-degree: 0%
    * 使用鍵盤標籤鍵導覽時，從新增的標籤移除最後一個標籤後，標籤欄位會保留焦點(NPR-35109)。
    * [!DNL Experience Manager] 元件現在包含螢幕閱讀程式使用之名稱、角色和值的適當資訊(NPR-34255)。
    * 刪除「文字／大小」組合框、「連結」組合框、「語言」組合框或「文本」編輯框後，鍵盤焦點將返回下一個或上一個用戶介面元素或更相關的用戶介面元素(CQ-4293585)。
-   * 當將指標暫留在各種選項上時，會出現「選取」和「下載」等提示。 使用螢幕放大率的使用者可能會因懸停而無法檢視檔案縮圖，因為顯示的內容。 現在，在使用鍵移除選項後，可以保 `Escape` 留焦點(CQ-4293554)。
+   * 當將指標暫留在選項上時，會顯示「選取」和「下載」等提示。 使用螢幕放大鏡的使用者可能看不到檔案縮圖，因為這些提示。 現在，在使用鍵移除選項後，可以保留焦點 `Escape` 。 (CQ-4293554).
    * 從頁面中顯示的格線選取格線儲存格後，焦點會移至螢幕上顯示的動作列(CQ-4282127)。
    * 視覺使用者可區分一般文字和連結，因為首頁中所有解決方案的連結會顯示視覺線索（底線和雪佛龍圖示）( [!DNL Experience Manager] CQ-4282072)。
 
