@@ -10,7 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: e5e00cc181c2dc3a28e25beb52f9a4c459ee313a
+workflow-type: tm+mt
+source-wordcount: '1779'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +35,7 @@ AEM可讓您輕鬆個人化使用者的體驗。 此外，還可讓您驗證區�
 
 ## 存取區段 {#accessing-segments}
 
-Audiences [主控台](/help/sites-authoring/managing-audiences.md) ，用來管理ContextHub或Client Context的區段，以及Adobe target帳戶的觀眾。 本檔案涵蓋管理ContextHub的區段。 如需 [「用戶端內容](/help/sites-administering/campaign-segmentation.md) 」區段和Adobe Target區段，請參閱相關檔案。
+Audiences [主控台](/help/sites-authoring/managing-audiences.md) ，用來管理ContextHub或Client Context的區段，以及Adobe Target帳戶的觀眾。 本檔案涵蓋管理ContextHub的區段。 如需 [「用戶端內容](/help/sites-administering/campaign-segmentation.md) 」區段和Adobe Target區段，請參閱相關檔案。
 
 若要存取您的區段，請在全域導覽中選取「導 **覽>個人化>觀眾」**。
 
@@ -129,7 +132,9 @@ Audiences [主控台](/help/sites-authoring/managing-audiences.md) ，用來管�
 
 要定義新段，請執行以下操作：
 
-1. 存 [取區段後](/help/sites-administering/segmentation.md#accessing-segments)，按一下或點選「建立」按鈕，然後選 **取「建立ContextHub區段」**。
+1. 存 [取區段後](/help/sites-administering/segmentation.md#accessing-segments), [導覽至您要建立區段的資料夾](#organizing-segments) ，或將其保留在根目錄中。
+
+1. 按一下或點選「建立」按鈕，然後選 **取「建立ContextHub區段**」。
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
@@ -150,7 +155,7 @@ Audiences [主控台](/help/sites-authoring/managing-audiences.md) ，用來管�
    請盡量設 **定「資料類型** 」，以確保正確評估您的比較。 如需詳 [細資訊](/help/sites-administering/segmentation.md#comparisons) ，請參閱比較。
 
 1. 按一 **下「確定** 」以儲存定義：
-1. 視需要新增更多元件。 您可以使用AND和OR比較的容器元件來建立布林運算式(請參 [閱下方的使用AND和Or](/help/sites-administering/segmentation.md#using-and-and-or-containers) Containers)。 使用區段編輯器，您可以刪除不再需要的元件，或將它們拖曳至陳述式中的新位置。
+1. 視需要新增更多元件。 您可以使用AND和OR比較的容器元件來建立布林運算式(請參 [閱下方的使用AND和Or](/help/sites-administering/segmentation.md#using-and-and-or-containers) Containers)。 使用區段編輯器，您可以刪除不再需要的元件，或將元件拖曳至陳述式中的新位置。
 
 ### 使用AND和OR容器 {#using-and-and-or-containers}
 
@@ -222,6 +227,75 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. 建立ContextHub區段。
 1. 將 **Script Reference** （指令碼參考）元件新增至區段的所需位置。
 1. 開啟「指令碼參考」元件 **的編輯對話** 方塊。 如果 [已正確設定](/help/sites-administering/segmentation.md#defining-a-script-to-reference)，則指令碼應可在「指令碼名稱 **** 」下拉式清單中使用。
+
+## 組織區段 {#organizing-segments}
+
+如果您有許多區段，它們將變得難以管理為平面清單。 在這種情況下，建立資料夾以管理區段會很有用。
+
+### 建立新資料夾 {#create-folder}
+
+1. 存取 [區段後](#accessing-segments)，按一下或點選「建立」按鈕，然後選取「資料夾」(Folder ********)。
+
+   ![新增資料夾](assets/contexthub-create-segment.png)
+
+1. 提供資 **料夾的** 「 **標題** 」和「名稱」。
+   * 標 **題** (Title)應為描述性。
+   * Name **** （名稱）將成為儲存庫中的節點名稱。
+      * 它會根據標題自動產生，並根據 [AEM命名慣例進行調整。](/help/sites-developing/naming-conventions.md)
+      * 如有需要，可加以調整。
+
+   ![建立資料夾](assets/contexthub-create-folder.png)
+
+1. 點選或按一下「 **建立**」。
+
+   ![確認資料夾](assets/contexthub-confirm-folder.png)
+
+1. 資料夾會出現在區段清單中。
+   * 對列的排序方式將影響新資料夾在清單中的顯示位置。
+   * 您可以點選或按一下欄標題來調整排序。
+      ![新資料夾](assets/contexthub-folder.png)
+
+### 修改現有資料夾 {#modify-folders}
+
+1. 存 [取區段後](#accessing-segments)，按一下或點選您要修改的資料夾以選取它。
+
+   ![選取檔案夾](assets/contexthub-select-folder.png)
+
+1. 點選或按一下工 **具列中的** 「重新命名」，以重新命名檔案夾。
+
+1. 提供新的資 **料夾標題** ，然後點選或按一 **下儲存**。
+
+   ![更名資料夾](assets/contexthub-rename-folder.png)
+
+>[!NOTE]
+>
+>重新命名資料夾時，只能變更標題。 無法更改名稱。
+
+### 刪除資料夾
+
+1. 存 [取區段後](#accessing-segments)，按一下或點選您要修改的資料夾以選取它。
+
+   ![選取檔案夾](assets/contexthub-select-folder.png)
+
+1. 點選或按一 **下工具列** 中的「刪除」，以刪除資料夾。
+
+1. 對話框顯示選定進行刪除的資料夾清單。
+
+   ![確認刪除](assets/contexthub-confirm-segment-delete.png)
+
+   * 點選或按一下「 **刪除** 」以確認。
+   * 點選或按一 **下「取消** 」以中止。
+
+1. 如果任何選取的檔案夾包含子檔案夾或區段，則必須確認其刪除。
+
+   ![確認刪除子項](assets/contexthub-confirm-segment-child-delete.png)
+
+   * 點選或按一下「 **強制刪除** 」以確認。
+   * 點選或按一 **下「取消** 」以中止。
+
+>[!NOTE]
+>
+> 無法將區段從一個資料夾移至另一個資料夾。
 
 ## 測試區段的應用程式 {#testing-the-application-of-a-segment}
 
