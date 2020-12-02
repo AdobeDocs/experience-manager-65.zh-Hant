@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 translation-type: tm+mt
 source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
 
 # 控制台的鍵盤快速鍵{#keyboard-shortcuts-for-consoles}
 
-AEM中提供各種鍵盤快速鍵。 有些適用於控制台的使用，有的則適用於頁 [面編輯](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)。
+AEM中提供各種鍵盤快速鍵。 有些適用於控制台的使用，有些適用於[頁面編輯](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
->AEM鍵 [盤快速鍵所需的](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) 修飾鍵會視作業系統而異。
+>AEM鍵盤快速鍵所需的[修飾鍵](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)會視作業系統而異。
 
 ## 鍵盤快速鍵 {#keyboard-shortcuts}
 
@@ -37,9 +40,9 @@ AEM中提供各種鍵盤快速鍵。 有些適用於控制台的使用，有的�
 | 控制台——列視圖 | `Shift-Up/Down Arrow` | 向上移動同一級別的頁面清單 |
 |  | `Esc` | 向上移動同一級別的頁面清單 |
 | 控制台 | `?` | 鍵盤快速鍵說明 |
-|  | `/` | 叫用搜 [尋](/help/sites-authoring/search.md) |
-|  | `Alt+`&lt;`Number`> | 切換要檢 [視的邊欄選](/help/sites-authoring/basic-handling.md#rail-selector) 擇器選項 |
-|  | ` | 隱藏邊欄 |
+|  | `/` | 叫用[search](/help/sites-authoring/search.md) |
+|  | `Alt+`&lt;`Number`> | 切換要檢視的[滑軌選擇器](/help/sites-authoring/basic-handling.md#rail-selector)選項 |
+|  | 「 | 隱藏邊欄 |
 |  | `e` | 編輯 |
 |  | `p` | 屬性 |
 |  | `m` | 移動 |
@@ -48,11 +51,11 @@ AEM中提供各種鍵盤快速鍵。 有些適用於控制台的使用，有的�
 |  | `Backspace` | 刪除 |
 | 屬性頁面 | `Ctrl+s` | 儲存 |
 
-鍵組合與Windows修飾鍵一 [起列出](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)。
+鍵組合與Windows [修飾鍵](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)一起列出。
 
-當使用頁面編輯器來製作頁面時，案頭使用者也可使用 [各種鍵盤](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 快速鍵。
+當使用[頁面編輯器](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)來製作頁面時，案頭使用者也可使用各種鍵盤快速鍵。
 
-## 作業系統特定的修飾鍵 {#os-specific-modifier-keys}
+## 作業系統專用的修飾鍵{#os-specific-modifier-keys}
 
 用於鍵盤快速鍵的修飾符鍵會因用戶端使用的作業系統而異。
 
@@ -61,7 +64,7 @@ AEM中提供各種鍵盤快速鍵。 有些適用於控制台的使用，有的�
 | `Alt` | `Option` |
 | `Ctrl` | `Command` |
 
-## 瀏覽器和鍵盤快速鍵 {#browsers-and-keyboard-shortcuts}
+## 瀏覽器和鍵盤快速鍵{#browsers-and-keyboard-shortcuts}
 
 AEM可避免常用瀏覽器已使用的常用捷徑，但AEM捷徑不會覆寫預設的瀏覽器行為。
 
@@ -75,11 +78,11 @@ AEM可避免常用瀏覽器已使用的常用捷徑，但AEM捷徑不會覆寫�
 
 >[!CAUTION]
 >
->AEM鍵盤快速鍵可能會干擾螢幕閱讀程式、部分瀏覽器功能和其他協助工具。
+>AEM鍵盤快速鍵可能會干擾螢幕閱讀器、部分瀏覽器功能和其他協助工具。
 >
->Adobe建議 [在使用螢幕閱讀器時停用AEM鍵盤](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) 快速鍵。
+>Adobe建議在使用螢幕閱讀程式時，[停用AEM鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
-## 停用鍵盤快速鍵 {#deactivating-keyboard-shortcuts}
+## 停用鍵盤快速鍵{#deactivating-keyboard-shortcuts}
 
 AEM提供一些常用功能（編輯、屬性、複製／貼上、顯示各種側欄選單等）的鍵盤快速鍵。
 
@@ -88,7 +91,7 @@ AEM提供一些常用功能（編輯、屬性、複製／貼上、顯示各種�
 您可以停用兩個位置的鍵盤快速鍵：
 
 * [我的喜好設定](/help/sites-authoring/user-properties.md#my-preferences)
-* 說明 [功能表](/help/sites-authoring/basic-handling.md#accessing-help)
+* [幫助菜單](/help/sites-authoring/basic-handling.md#accessing-help)
 
 >[!NOTE]
 >
