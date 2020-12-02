@@ -10,6 +10,9 @@ discoiquuid: 0d6c12b3-3a70-48e9-a83b-974360a8b0b6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+workflow-type: tm+mt
+source-wordcount: '1081'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 * [XML架構](https://www.w3.org/TR/xmlschema-2/)
 
-## 使用XML架構作為表單模型 {#using-an-xml-schema-as-form-model}
+## 使用XML架構作為表單模型{#using-an-xml-schema-as-form-model}
 
 AEM Forms支援使用現有的XML架構做為表單模型來建立最適化表單。 此XML架構代表組織中後端系統產生或使用資料的結構。
 
@@ -78,7 +81,7 @@ XML架構由簡單而複雜的元素類型組成。 這些元素具有向元素�
  </tbody>
 </table>
 
-## 範例XML架構 {#sample-xml-schema}
+## 範例XML架構{#sample-xml-schema}
 
 這是XML架構的範例。
 
@@ -126,7 +129,7 @@ XML架構由簡單而複雜的元素類型組成。 這些元素具有向元素�
 >
 >請確定您的XML架構只有一個根元素。 不支援具有多個根元素的XML架構。
 
-## 使用XML架構將特殊屬性新增至欄位 {#adding-special-properties-to-fields-using-xml-schema}
+## 使用XML架構{#adding-special-properties-to-fields-using-xml-schema}將特殊屬性新增至欄位
 
 您可以將以下屬性添加到XML架構元素中，以向相關自適應表單的欄位添加特殊屬性。
 
@@ -139,7 +142,7 @@ XML架構由簡單而複雜的元素類型組成。 這些元素具有向元素�
   </tr>
   <tr>
    <td><code>use=required </code></td>
-   <td>將欄位標示為必填<br /> </td>
+   <td>標籤必填欄位<br /> </td>
    <td>屬性</td>
   </tr>
   <tr>
@@ -167,11 +170,12 @@ XML架構由簡單而複雜的元素類型組成。 這些元素具有向元素�
 >
 >* 將元素名稱的第一個字元大寫
 >* 在駝峰大小寫邊界插入空格。
->
->
-例如，如果您新增模式元 `userFirstName` 素，則在最適化表單中產生的標題為 `User First Name`。
 
-## 限制最適化表單元件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
+>
+>
+例如，如果您新增`userFirstName`架構元素，則最適化表單中產生的標題為`User First Name`。
+
+## 限制最適化表單元件{#limit-acceptable-values-for-an-adaptive-form-component}的可接受值
 
 您可以將下列限制新增至XML架構元素，以限制最適化表單元件可接受的值：
 
@@ -285,25 +289,25 @@ XML架構由簡單而複雜的元素類型組成。 這些元素具有向元素�
  </tbody>
 </table>
 
-## Frequently asked questions {#frequently-asked-questions}
+## 常見問題 {#frequently-asked-questions}
 
 **我要如何知道樹中的哪個元素與哪個XML元素相關聯？**
 
-當您連按兩下「內容搜尋器」中的元素時，快顯視窗會顯示欄位名稱和名為的屬性 `bindRef`。 此屬性將樹元素映射到方案中的元素或屬性。
+當您連按兩下「內容搜尋器」中的元素時，快顯視窗會顯示欄位名稱和名為`bindRef`的屬性。 此屬性將樹元素映射到方案中的元素或屬性。
 
 ![XML架構元素的bindref欄位](assets/dblclick.png)
 
-bindRef</code> 欄位顯示樹元素與模式中的元素或屬性之間的關聯。
+bindRef</code>欄位顯示樹元素與模式中的元素或屬性之間的關聯。
 
 >[!NOTE]
 >
->屬性的值 `@` 中有一個符 `bindRef`號，可以與元素區分。 例如， `/config/projectDetails/@duration`。
+>屬性的`bindRef`值中有一個`@`符號，以區別它們與元素。 例如，`/config/projectDetails/@duration`。
 
 **為什麼我無法將子表單的個別元素（從任何複雜類型產生的結構）拖曳至可重複的子表單（minOccours或maxOccuns值大於1）?**
 
 在可重複的子表單中，您必須使用完整的子表單。 如果您只想要選擇欄位，請使用整個結構並刪除不要的欄位。
 
-**我在Content Finder中有很長的複雜結構。 如何尋找特定元素？**
+**我在Content Finder中有很長的複雜結構。如何尋找特定元素？**
 
 您有兩個選項：
 
@@ -312,4 +316,4 @@ bindRef</code> 欄位顯示樹元素與模式中的元素或屬性之間的關�
 
 **什麼是bindRef?**
 
-A `bindRef` 是自適應表單元件與模式元素或屬性之間的連接。 它指定從 `XPath` 此元件或欄位捕獲的值在輸出XML中可用的位置。 從 `bindRef`預先填入（預先填入）的XML中預先填入欄位值時，也會使用。
+`bindRef`是自適應表單元件與模式元素或屬性之間的連接。 它指定了`XPath`，從此元件或欄位捕獲的值可用於輸出XML。 從預先填入（預先填入）的XML中預先填入欄位值時，也會使用`bindRef`。
