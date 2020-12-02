@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# SocialUtils重構 {#socialutils-refactoring}
+# SocialUtils重構{#socialutils-refactoring}
 
-## SocialUtils套件已過時 {#socialutils-package-deprecated}
+## SocialUtils套件已過時{#socialutils-package-deprecated}
 
-在AEM 6.1 `com.adobe.cq.social.ugcbase.SocialUtils` 中，此套件已過時。
+AEM 6.1中不建議使用套件`com.adobe.cq.social.ugcbase.SocialUtils`。
 
-下表列出了用來取代方法的 `SocialUtils` 方法。
+下表列出了用來取代`SocialUtils`方法的方法。
 
-## SocialResourceUtilities套件  {#socialresourceutilities-package}
+## SocialResourceUtilities軟體包{#socialresourceutilities-package}
 
 | com.adobe.cq.sosical.srp.utilities.api.SocialResourceUtilities中的方法 |
 |---|
@@ -44,13 +44,13 @@ ht-degree: 0%
 | 字串UGCToResourcePath（字串ugcPath） | 更改簽名 |
 | 字串UGCToResourcePath（字串ugcPath，資源解析器） | 新 |
 
-| utilities.resource.api. `com.adobe.cq.social.`SocialResourceUtilities中的方法 |
+| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities中的方法 |
 |---|
 | SocialResourceProvider getSocialResourceProvider（資源資源） | 取代SocialResourceProvider getConfiguredProvider（資源資源） |
 
-## SCFUtilities套件 {#scfutilities-package}
+## SCFUtilities軟體包{#scfutilities-package}
 
-| 實用程 `com.adobe.cq.social.`序。scf.api.SCFUtilites中的方法 |
+| `com.adobe.cq.social.`utilities.scf.api.SCFUtilites中的方法 |
 |---|
 | 字串getAvatar(UserProperties userProperties) |
 | 字串getAvatar(UserProperties userProperties, int size) |
@@ -60,7 +60,7 @@ ht-degree: 0%
 | 字串getSocialProfileURL（字串使用者名稱、資源解析程式、頁面頁面） |
 | UserProperties getUserProperties(ResourceResolver、String userId) |
 
-## For Internal Use Only {#for-internal-use-only}
+## 僅供內部使用{#for-internal-use-only}
 
 | 布林canAddNode（作業階段，字串路徑） |
 |---|
@@ -79,12 +79,12 @@ ht-degree: 0%
 | 布爾型mayPost（資源解析器、資源資源） |
 | 字串prepareUserGeneratedContent(ResourceResolver, String path) |
 
-## 不再提供方法 {#methods-no-longer-available}
+## 方法不再可用{#methods-no-longer-available}
 
 | Node createNode（ResourceResolver解析器、字串路徑、字串nodeType） |
 |---|
 | 資源getResourceAtPath（資源解析器，字串路徑） |
-| 資源getResourceAtPath（資源解析器，字串路徑，字串resourceType） |
+| 資源getResourceAtPath（資源解析器、字串路徑、字串resourceType） |
 | 配置getStorageCloudServiceConfig（資源資源） |
 | TranslationManager getTranslationManager() |
 | TranslationSaveQueue getTranslationSaveQueue() |
