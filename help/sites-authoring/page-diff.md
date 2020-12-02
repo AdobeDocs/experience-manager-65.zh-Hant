@@ -29,9 +29,9 @@ ht-degree: 1%
 
 >[!TIP]
 >
->如需 [此功能的詳細技術資訊，請參閱開發與頁面比較](/help/sites-developing/pagediff.md#operation-details) 。
+>如需此功能的詳細技術資訊，請參閱[開發與頁面差異](/help/sites-developing/pagediff.md#operation-details)。
 
-## 使用 {#use}
+## 使用{#use}
 
 並排比較可以比較：
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 請參見有關如何在這些上下文中啟動差異的各個主題。
 
-### 差異的呈現 {#presentation-of-differences}
+### 差異的呈現{#presentation-of-differences}
 
 無論比較的內容為何，比較的呈現方式都保持不變。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 >
 >在比較語言版本時，反白顯示會停用，因為在翻譯中，所有變更和反白顯示都無益。
 
-### 全螢幕與退出 {#fullscreen-and-exiting}
+### 全螢幕與退出{#fullscreen-and-exiting}
 
 為了專注於特定內容，您可以按一下並排比較的任一「側」全螢幕圖示，將其放大至全瀏覽器視窗。
 
@@ -101,7 +101,7 @@ ht-degree: 1%
 * 比較無法檢測到影像旋轉。
 * 如果移動了頁面，則無法再對移動前進行的任何版本執行比較。
 
-   * 如果您遇到比較問題，請查看頁 [面的時間軸](/help/sites-authoring/basic-handling.md#timeline) ，以查看頁面是否已移動。
+   * 如果您遇到比較問題，請查看頁面的[時間軸](/help/sites-authoring/basic-handling.md#timeline)，以查看頁面是否已移動。
 
 >[!NOTE]
 >
@@ -109,4 +109,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需頁面差異機制運作的詳細資訊以及可能影響頁面差異的限制，請參閱此功能的開 [發人員檔案](/help/sites-developing/pagediff.md) 。
+>有關頁面差異機制的操作以及可能影響頁面差異的限制的詳細資訊，請參閱此功能的[開發人員文檔](/help/sites-developing/pagediff.md)。
