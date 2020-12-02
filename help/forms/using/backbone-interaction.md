@@ -11,23 +11,26 @@ discoiquuid: 538591fe-29e4-40c4-a045-06095cc0c6b8
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
 
-# 骨幹互動{#backbone-interaction}
+# 骨幹交互{#backbone-interaction}
 
-Backbone是一個資料庫，可協助在Web應用程式中建立和遵循MVC架構。 Backbone的基本思想是將您的介面組織成邏輯檢視，並以模型為後盾，當模型變更時，每個模型都可獨立更新，而不需重繪頁面。 有關Backbone的更多資訊，請參 [閱https://backbonejs.org](https://backbonejs.org/)。
+Backbone是一個資料庫，可協助在Web應用程式中建立和遵循MVC架構。 Backbone的基本思想是將您的介面組織成邏輯檢視，並以模型為後盾，當模型變更時，每個模型都可獨立更新，而不需重繪頁面。 有關Backbone的詳細資訊，請參見[https://backbonejs.org](https://backbonejs.org/)。
 
 主要概念如下：
 
-**骨幹模型** ：包含資料，且大部分邏輯與此資料相關。
+**骨幹** 模型包含資料，以及大部分與此資料相關的邏輯。
 
-**骨幹視圖** （用於表示相應模型的狀態）。 骨幹檢視的運作方式實際上就像控制器一樣，會監聽使用者點按等使用者介面事件，或模擬事件（如資料變更），並視需要修改使用者介面。
+**骨** 乾視圖用於表示相應模型的狀態。骨幹檢視的運作方式實際上就像控制器一樣，會監聽使用者點按等使用者介面事件，或模擬事件（如資料變更），並視需要修改使用者介面。
 
-**HTML範本** ：包裝函式範本，其預留位置由模型填入。
+**HTML范** 本包裝函式範本，其預留位置由模型填入。
 
-**AEM Forms工作區** 「包含數個個別元件」。 每個元件：
+**AEM Forms工作區** 包含數個個別元件。每個元件：
 
 * 表示單個邏輯用戶介面元素。
 * 可以是類似元件的集合。
