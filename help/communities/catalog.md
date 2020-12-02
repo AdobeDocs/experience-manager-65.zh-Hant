@@ -18,16 +18,16 @@ ht-degree: 1%
 ---
 
 
-# 目錄功能 {#catalog-feature}
+# 目錄功能{#catalog-feature}
 
-在元 [`Enablement Assignments`](assignments.md) 件瀏 `Enablement Catalog` 覽器的「社群」群組中找到的元件和元件是啟用社群 [的元件](overview.md#enablement-community)。
+在元件瀏覽器中的「團體」組中找到的[`Enablement Assignments`](assignments.md)和`Enablement Catalog`元件是[啟用團體](overview.md#enablement-community)的元件。
 
-該 `Enablement Catalog` 元件允許社區成員訪問支援資源 [的目錄](resources.md)。 使用AEM標籤是管理目錄中啟用資源清單的重要部分(請參閱「標籤 [啟用資源](tag-resources.md)」)。
+`Enablement Catalog`元件允許社區成員訪問[啟用資源](resources.md)的目錄。 使用AEM標籤是管理目錄中啟用資源清單的重要部分（請參閱[標籤啟用資源](tag-resources.md)）。
 
-從「AEM Communities [的啟用快速入門」教學課程](getting-started-enablement.md) ，請參閱「體驗發佈網站」區段中的會員 [](enablement-published-site.md) 工作和型錄檢視。
+從[啟用AEM社群快速入門教學課程](getting-started-enablement.md)中，請參閱[體驗發佈網站](enablement-published-site.md)區段中成員對工作和型錄的檢視。
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱適用於開發人 [員的Catalog Essentials](catalog-developer-essentials.md) （目錄基本工具）頁面。
+如需詳細資訊，請參閱開發人員的[Catalog Essentials](catalog-developer-essentials.md)頁面。
 
-建立社 [群網站時](functions.md#catalog-function) ，可使用目錄 [功能](sites-console.md)。
+建立[社區站點](sites-console.md)時，[目錄函式](functions.md#catalog-function)可用。
