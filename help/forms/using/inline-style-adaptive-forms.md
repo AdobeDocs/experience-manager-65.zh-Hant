@@ -10,20 +10,23 @@ discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 2%
 
 ---
 
 
-# 最適化表單元件的內嵌樣式 {#inline-styling-of-adaptive-form-components}
+# 最適化表單元件的內嵌樣式{#inline-styling-of-adaptive-form-components}
 
-您可以使用主題編輯器指定樣式，以定義最適化表單的整體外 [觀和樣式](../../forms/using/themes.md)。 此外，您也可以將內嵌CSS樣式套用至個別的可調式表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
+您可以使用[主題編輯器](../../forms/using/themes.md)指定樣式，來定義最適化表單的整體外觀和樣式。 此外，您也可以將內嵌CSS樣式套用至個別的可調式表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
 
-## 套用內嵌CSS屬性 {#apply-inline-css-properties}
+## 套用內嵌CSS屬性{#apply-inline-css-properties}
 
 若要新增內嵌樣式至元件：
 
-1. 在表單編輯器中開啟您的表單，並將模式變更為樣式模式。 若要將模式變更為樣式模式，請在頁面工具列中，點選「畫 ![布下拉式清單](assets/canvas-drop-down.png) >樣 **式」**。
-1. 在頁面中選取元件，然後點選「編輯」按鈕 ![edit-button](assets/edit-button.png)。 樣式屬性會在側欄中開啟。
+1. 在表單編輯器中開啟您的表單，並將模式變更為樣式模式。 若要將模式變更為樣式模式，請在頁面工具列中，點選![canvas-drop-down](assets/canvas-drop-down.png) > **Style**。
+1. 在頁面中選擇一個元件，然後點選編輯按鈕![edit-button](assets/edit-button.png)。 樣式屬性會在側欄中開啟。
 
    您也可以從側欄的表單階層樹狀結構中選取元件。 表單階層樹狀結構在側欄中可作為表單物件使用。
 
@@ -40,10 +43,10 @@ source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
    * 特效（陰影、洞察力）
    * 進階（可讓您編寫元件的自訂CSS）
 
-1. 同樣地，您也可以套用元件其他部分的樣式，例如Widget、Caption和Help。
-1. 點選 **「完成** 」以確認變更，或點選「取 **消** 」以放棄變更。
+1. 同樣地，您也可以套用元件其他部分的樣式，例如介面工具集、標題和說明。
+1. 點選&#x200B;**Done**&#x200B;確認變更，或點選&#x200B;**Cancel**&#x200B;捨棄變更。
 
-## 範例：欄位元件的內嵌樣式 {#example-inline-styles-for-a-field-component}
+## 範例：欄位元件{#example-inline-styles-for-a-field-component}的內嵌樣式
 
 下列影像會描述套用內嵌樣式前後的文字欄位。
 
