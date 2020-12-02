@@ -25,28 +25,28 @@ AEM Forms工作區支援管理表單和檔案的任務指派和完成活動。 �
 
 例如，讓我們將「通信管理」視為與AEM Forms工作區整合的範例候選項。 「信件管理」的概念是「信件」，可轉譯並允許執行動作。
 
-## 建立對應管理資產 {#create-correspondence-management-assets}
+## 建立對應管理資產{#create-correspondence-management-assets}
 
-首先，建立在AEM Forms工作區中轉譯的範例「對應管理」範本。 如需詳細資訊，請參 [閱建立信函範本](../../forms/using/create-letter.md)。
+首先，建立在AEM Forms工作區中轉譯的範例「對應管理」範本。 有關詳細資訊，請參閱[建立字母模板](../../forms/using/create-letter.md)。
 
-在其URL中存取「對應管理」範本，以驗證「對應管理」範本是否可成功轉譯。 URL的模式類似於 `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
+在其URL中存取「對應管理」範本，以驗證「對應管理」範本是否可成功轉譯。 URL的模式類似於`https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
-其中 `encodedLetterId` 是URL編碼的字母Id。 在「工作台」中定義工作區任務的演算程式時，請指定相同的字母Id。
+其中`encodedLetterId`是URL編碼的字母Id。 在「工作台」中定義工作區任務的演算程式時，請指定相同的字母Id。
 
-## 在AEM Workspace中建立要演算和送出信函的工作 {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## 在AEM Workspace {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}中建立要演算並送出字母的任務
 
 在執行這些步驟之前，請確定您是下列群組的成員：
 
 * cm-agent-users
 * 工作區使用者
 
-如需詳細資訊，請參 [閱新增和設定使用者](/help/forms/using/admin-help/adding-configuring-users.md)。
+如需詳細資訊，請參閱[新增及設定使用者](/help/forms/using/admin-help/adding-configuring-users.md)。
 
 使用下列步驟建立要在AEM工作區中演算和送出信函的工作：
 
 1. 啟動工作台。 以管理員身份登錄到localhost。
-1. 按一下「檔案>新增>應用程式」。 在「應用程式名稱」欄位中，輸入， `CMDemoSample` 然後按一下「完成」。
-1. 選 `CMDemoSample/1.0` 取並按一下滑鼠右鍵 `NewProcess`。 在名稱欄位中，輸入，然 `CMRenderer` 後按一下完成。
+1. 按一下「檔案>新增>應用程式」。 在「應用程式名稱」欄位中，輸入`CMDemoSample` ，然後按一下「完成」。
+1. 選擇`CMDemoSample/1.0` ，按一下右鍵`NewProcess`。 在名稱欄位中，輸入`CMRenderer` ，然後按一下「完成」。
 1. 拖曳「起始點」活動選擇器並加以設定：
 
    1. 在簡報資料中，選取「使用CRX資產」。
@@ -57,7 +57,7 @@ AEM Forms工作區支援管理表單和檔案的任務指派和完成活動。 �
 
       ![字母標籤](assets/letter_tab_new.png)
 
-   1. 選擇適當的字母，然後按一下「 **確定」**。
+   1. 選擇相應的字母並按一下&#x200B;**確定**。
 
 1. 按一下「管理動作設定檔」。 此時將顯示「管理操作配置檔案」對話框。 請確定已適當選取「演算程式」和「提交程式」。
 1. 若要使用資料XML檔案開啟字母，請瀏覽並選取「準備資料處理」中的適當資料檔案。
@@ -102,12 +102,13 @@ AEM Forms工作區支援管理表單和檔案的任務指派和完成活動。 �
    }
    ```
 
-   [獲取檔案](assets/dscsample.zip)下載DSC: 上述DSCSample.zip檔案中提供範例DSC。 下載並解壓縮DSCSample.zip檔案。 在使用DSC服務之前，您需要對其進行配置。 有關資訊，請參 [閱配置DSC服務](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
+   [獲取](assets/dscsample.zip)
+檔案下載DSC:上述DSCSample.zip檔案中提供範例DSC。下載並解壓縮DSCSample.zip檔案。 在使用DSC服務之前，您需要對其進行配置。 有關資訊，請參見[配置DSC服務](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
 
-   在「定義活動」對話方塊中，選取適當的活動，例如getLetterInstanceInfo，然後按一下「 **確定**」。
+   在「定義活動」對話框中，選擇相應的活動，如getLetterInstanceInfo，然後按一下&#x200B;**確定**。
 
 1. 部署應用程式。 如果出現提示登入並儲存資產。
-1. 登入AEM表單工作區，網址為[https://&#39; server]:[port]&#39;/lc/content/ws。
+1. 登入AEM表單工作區：https://&#39;[server]:[port]&#39;/lc/content/ws。
 1. 開啟您新增的工作，CMRender。 此時將出現「Correportence Management（通信管理）」信函。
 
    ![cminworkspace](assets/cminworkspace.png)
