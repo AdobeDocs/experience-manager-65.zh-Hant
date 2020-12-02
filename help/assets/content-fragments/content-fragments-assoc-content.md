@@ -21,15 +21,15 @@ ht-degree: 14%
 
 # 相關聯的內容{#associated-content}
 
-關聯內容提供連接，以便當資產（即，可選）被添加到內容頁面時可與片段一起使用。 這提供了彈性， [當在頁面上使用內容片段時](/help/sites-authoring/content-fragments.md#using-associated-content)，提供可存取的資產範圍，同時也有助於縮短搜尋適當資產所需的時間。
+關聯內容提供連接，以便當資產（即，可選）被添加到內容頁面時可與片段一起使用。 這提供了[在使用頁面](/help/sites-authoring/content-fragments.md#using-associated-content)上的內容片段時可存取的資產範圍的彈性，同時也有助於縮短搜尋適當資產所需的時間。
 
-## 新增相關內容 {#adding-associated-content}
+## 添加關聯內容{#adding-associated-content}
 
 >[!NOTE]
 >
->有各種方法可將視 [覺資產（例如影像）新增至片段和](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) /或頁面。
+>有各種方法可將[視覺資產（例如，影像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)新增至片段和／或頁面。
 
-若要建立關聯，您首先需 [要將媒體資產新增至系列](/help/assets/manage-collections.md#adding-assets-to-a-collection)。 完成後，您可以：
+若要建立關聯，您首先需要[將媒體資產新增至系列](/help/assets/manage-collections.md#adding-assets-to-a-collection)。 完成後，您可以：
 
 1. 開啟您的片段，然後從 **側面板選取** 「關聯內容」。
 
@@ -46,12 +46,12 @@ ht-degree: 14%
 
    ![cfm-6420-05](assets/cfm-6420-05.png)
 
-## 編輯關聯內容 {#editing-associated-content}
+## 編輯關聯內容{#editing-associated-content}
 
 在您關聯繫列後，您可以：
 
-* **移除** 關聯。
-* **將資產新增** 至系列。
+* **移** 除關聯。
+* **新增** 資產至系列。
 * 選擇資產以執行進一步動作。
 * 編輯資產。
 
