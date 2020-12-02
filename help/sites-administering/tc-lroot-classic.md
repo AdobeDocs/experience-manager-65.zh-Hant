@@ -12,23 +12,27 @@ discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# 使用Classic UI建立語言根目錄{#creating-a-language-root-using-the-classic-ui}
+# 使用Classic UI{#creating-a-language-root-using-the-classic-ui}建立語言根目錄
 
-下列程式使用傳統UI來建立網站的語言根目錄。 如需詳細資訊，請 [參閱建立語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root)。
+下列程式使用傳統UI來建立網站的語言根目錄。 如需詳細資訊，請參閱[建立語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root)。
 
 1. 在「網站」主控台的「網站」樹狀結構中，選取網站的根頁面。 ([http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#))
 1. 新增代表網站語言版本的子頁面：
 
    1. 按一下「新增>新增頁面」。
-   1. 在對話方塊中，指定「標題」和「名稱」。 名稱的格式必須為 `<language-code>` 或 `<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
+   1. 在對話方塊中，指定「標題」和「名稱」。 名稱的格式必須為`<language-code>`或`<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
 
       * 支援的語言程式碼為小寫、由ISO-639-1定義的雙字母程式碼
       * 支援的國家／地區代碼為小寫或大寫，由ISO 3166定義的雙字母代碼
    1. 選取範本，然後按一下建立。
+
    ![newpagefr](assets/newpagefr.png)
 
 1. 在「網站」主控台的「網站」樹狀結構中，選取網站的根頁面。
