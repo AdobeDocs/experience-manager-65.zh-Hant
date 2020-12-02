@@ -25,24 +25,24 @@ ht-degree: 1%
 
 資料字典是描述基礎資料結構及其相關屬性之中繼資料的獨立表示法。 使用商業辭彙來建立資料字典。 它可以映射到一個或多個基礎資料模型。
 
-資料字典由三種類型的元素組成： 簡單、複合和系列元素。 簡單DDE是基本元素，如字串、數字、日期和布林值，它們包含城市名稱等資訊。 複合DDE包含其它DDE，其類型可以是基元、複合或集合。 例如，地址，由街道地址、城市、省、國家和郵遞區號組成。 「系列」是類似「簡單」或「複合」DDE的清單。 例如，具有多個地點或不同帳單和運送地址的客戶。
+資料字典由三種類型的元素組成：簡單、複合和系列元素。 簡單DDE是基本元素，如字串、數字、日期和布林值，它們包含城市名稱等資訊。 複合DDE包含其它DDE，其類型可以是基元、複合或集合。 例如，地址，由街道地址、城市、省、國家和郵遞區號組成。 「系列」是類似「簡單」或「複合」DDE的清單。 例如，具有多個地點或不同帳單和運送地址的客戶。
 
 「對應管理」使用根據資料字典的結構儲存的後端、客戶或收件者特定資料，來建立針對不同客戶的對應。 例如，可以使用好記的名稱建立檔案，例如「親愛的{First Name}」、「先生」。 {姓氏}&quot;.
 
 一般而言，商業使用者不需要具備中繼資料表示法的知識，例如XSD（XML架構）和Java類別。 但是，通常需要訪問這些資料結構和屬性才能構建解決方案。
 
-### 資料字典工作流程 {#data-dictionary-workflow}
+### 資料字典工作流程{#data-dictionary-workflow}
 
-1. 作者會 [透過上傳結構](#createdatadictionary) ，或從頭開始建立資料字典。
+1. 作者[會透過上傳結構或從頭開始建立資料字典](#createdatadictionary)。
 1. 作者根據資料字典建立字母和互動式通訊，並視需要將字母和互動式通訊中的資料字典元素建立關聯。
 1. 作者可以下載基於資料字典模式的樣本資料XML檔案。 作者可以修改樣本資料XML檔案，該檔案可以作為測試資料與資料字典相關聯。 在字母預覽期間使用的相同項目。
-1. 在預 [覽字母時](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)，作者會選擇預覽含有資料的字母（自訂預覽）。 此信件會開啟，並預先填入作者提供的資料。 這會在建立對應介面中開啟。 正在預覽此信件的代理商可以修改此信件中的內容、資料和附件，並提交最終信件。 有關建立字母的詳細資訊，請參閱 [建立通信](../../forms/using/create-letter.md)。
+1. 當[預覽字母](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)時，作者選擇預覽含有資料的字母（自訂預覽）。 此信件會開啟，並預先填入作者提供的資料。 這會在建立對應介面中開啟。 正在預覽此信件的代理商可以修改此信件中的內容、資料和附件，並提交最終信件。 有關建立字母的詳細資訊，請參閱[建立對應](../../forms/using/create-letter.md)。
 
-## 先決條件 {#prerequisite}
+## 先決條件{#prerequisite}
 
-安裝 [Compatibility Package](compatibility-package.md) ，在Forms頁面上 **查看Data Dictorianes** （資料字典） **選項** 。
+安裝[相容性軟體包](compatibility-package.md)以查看&#x200B;**表單**&#x200B;頁上的&#x200B;**資料字典**&#x200B;選項。
 
-## 建立資料字典 {#createdatadictionary}
+## 建立資料字典{#createdatadictionary}
 
 您可以使用資料字典編輯器來建立資料字典，或上傳XSD結構檔案以建立以此為基礎的資料字典。 然後，您可以新增更多必要資訊（包括欄位）來擴充資料字典。 無論資料字典的建立方式如何，業務流程所有者都不需要後端系統的知識。 業務流程所有者只需要對域對象及其定義的知識，即可對其流程進行瞭解。
 
@@ -50,28 +50,28 @@ ht-degree: 1%
 >
 >對於需要類似元素的多個字母，您可以建立通用資料字典。 但是，具有大量元素的大資料字典在使用資料字典和載入元素（例如字母和檔案片段）時，可能會導致效能問題。 如果您遇到效能問題，請嘗試為不同的字母建立個別的資料字典。
 
-1. 選擇「 **表單** >資 **料字典」**。
-1. 點選「 **建立資料字典」**。
+1. 選擇&#x200B;**Forms** > **資料字典**。
+1. 點選&#x200B;**建立資料字典**。
 1. 在「屬性」畫面中，新增下列項目：
 
-   * **標題：** （可選）輸入資料字典的標題。 標題不需要唯一，而且可以有特殊字元和非英文字元。 字母和其他檔案片段會以其標題（如果有的話）轉介，例如縮圖和資產屬性。 資料字典是以其名稱而非標題來參照。
-   * **名稱：** 資料字典的唯一名稱。 在「名稱」欄位中，您只能輸入英文字元、數字和連字型大小。 「名稱」欄位會根據「標題」欄位自動填入，而「標題」欄位中輸入的特殊字元、空格、數字和非英文字元會以連字型大小取代。 雖然「標題」欄位中的值會自動複製到「名稱」，但您可以編輯值。
+   * **標題：** （可選）輸入資料字典的標題。標題不需要唯一，而且可以有特殊字元和非英文字元。 字母和其他檔案片段會以其標題（如果有的話）轉介，例如縮圖和資產屬性。 資料字典是以其名稱而非標題來參照。
+   * **名稱：** 資料字典的唯一名稱。在「名稱」欄位中，您只能輸入英文字元、數字和連字型大小。 「名稱」欄位會根據「標題」欄位自動填入，而「標題」欄位中輸入的特殊字元、空格、數字和非英文字元會以連字型大小取代。 雖然「標題」欄位中的值會自動複製到「名稱」，但您可以編輯值。
 
-   * **說明**: （選用）資料字典的說明。
-   * **標籤：** （可選）若要建立自訂標籤，請在文字欄位中輸入值，然後按Enter。 您可以在標籤的文字欄位下方看到標籤。 儲存此文字時，也會建立新增的標籤。
-   * **擴展屬性**: （可選）點選「 **新增欄位** 」以指定資料字典的中繼資料屬性。 在「屬性名稱」列中，輸入唯一的屬性名稱。 在「值」列中，輸入要與屬性關聯的值。
+   * **說明**:（選用）資料字典的說明。
+   * **標籤：** （可選）若要建立自訂標籤，請在文字欄位中輸入值，然後按Enter。您可以在標籤的文字欄位下方看到標籤。 儲存此文字時，也會建立新增的標籤。
+   * **擴展屬性**:（可選）點選「 **新增** 欄位」以指定資料字典的中繼資料屬性。在「屬性名稱」列中，輸入唯一的屬性名稱。 在「值」列中，輸入要與屬性關聯的值。
 
    ![德文指定的資料字典屬性](do-not-localize/1_ddproperties.png)
 
-1. （可選）若要上傳資料字典的XSD結構定義，請在「資料字典結構」窗格下，點選「上 **傳XML結構」**。 瀏覽至XSD檔案，選取它，然後點選「 **Open**」。 根據上傳的XML架構建立資料字典。 您需要調整資料字典中元素的顯示名稱和說明。 若要這麼做，請點選元素名稱，並在右窗格的欄位中編輯其說明、顯示名稱和其他詳細資訊。
+1. （可選）若要上傳資料字典的XSD架構定義，請在「資料字典結構」窗格下，點選&#x200B;**上傳XML架構**。 瀏覽至XSD檔案，選取它，然後點選&#x200B;**Open**。 根據上傳的XML架構建立資料字典。 您需要調整資料字典中元素的顯示名稱和說明。 若要這麼做，請點選元素名稱，並在右窗格的欄位中編輯其說明、顯示名稱和其他詳細資訊。
 
-   有關計算DD元素的詳細資訊，請參 [閱計算資料字典元素](#computedddelements)。
+   有關計算DD元素的詳細資訊，請參閱[計算資料字典元素](#computedddelements)。
 
    >[!NOTE]
    >
    >您可以略過上傳架構檔案，並使用使用者介面從頭開始建立資料字典。 若要這麼做，請略過此步驟，然後繼續下一步。
 
-1. 點選「 **下一步**」。
+1. 點選&#x200B;**Next**。
 1. 在「新增屬性」畫面中，將元素新增至資料字典。 如果您已上傳結構以取得資料字典的基本結構，您也可以新增／刪除元素並編輯其詳細資料。
 
    您可以點選元素右側的三個點，並新增元素至資料字典結構。
@@ -92,17 +92,17 @@ ht-degree: 1%
    * 父DDE（複合）不能有兩個同名的子代。
    * enums僅包含基本字串類型。
 
-   有關複合、收集和基本元素以及使用資料字典元素的詳細資訊，請參 [閱將資料字典元素映射到XML架構](#mappingddetoschema)。
+   有關複合、收集和基本元素以及使用資料字典元素的詳細資訊，請參閱[將資料字典元素映射到XML架構](#mappingddetoschema)。
 
-   有關資料字典中驗證的資訊，請參 [閱資料字典編輯器驗證](#ddvalidations)。
+   有關資料字典中驗證的資訊，請參閱[資料字典編輯器驗證](#ddvalidations)。
 
    ![2_adddproperties基本](assets/2_addddpropertiesbasic.png)
 
-1. （可選）選取元素後，您可以在「進階」索引標籤中新增屬性（屬性）。 您也可以點選「 **新增欄位** 」，並延伸DD元素的屬性。
+1. （可選）選取元素後，您可以在「進階」索引標籤中新增屬性（屬性）。 您也可以點選「新增欄位」，並延伸DD元素的屬性。****
 
    ![3_adddpropertysadvanced](assets/3_addddpropertiesadvanced.png)
 
-1. （可選）您可以點選元素右側的三個點並選取「刪除」，以移除任何 **元素**。
+1. （可選）您可以點選元素右側的三個點並選取&#x200B;**Delete**&#x200B;來移除任何元素。
 
    ![4_deleteelement](assets/4_deleteelement.png)
 
@@ -111,9 +111,9 @@ ht-degree: 1%
    >刪除包含子節點的複合／收集元素也會刪除其子節點。
 
 1. （可選）在「資料字典結構」窗格中，以及「欄位和變數清單」面板中選取元素。 變更或新增任何與元素相關聯的必要屬性。
-1. 點選「 **儲存**」。
+1. 點選&#x200B;**Save**。
 
-### 建立一或多個資料字典的復本 {#create-copies-of-one-or-more-data-dictionary}
+### 建立一個或多個資料字典的副本{#create-copies-of-one-or-more-data-dictionary}
 
 若要快速建立一或多個資料字典，其屬性和元素類似於現有的資料字典，您可以複製和貼上它們。
 
@@ -123,7 +123,7 @@ ht-degree: 1%
 1. 如有需要，請編輯您要儲存資料字典副本的「標題」和「名稱」。
 1. 點選「貼上」。 建立資料字典的副本。 現在，您可以在新建立的資料字典中進行必要的變更。
 
-## 請參閱參照資料字典元素的檔案片段或檔案 {#see-the-document-fragments-or-documents-that-refer-to-a-data-dictionary-element}
+## 請參閱參考資料字典元素{#see-the-document-fragments-or-documents-that-refer-to-a-data-dictionary-element}的檔案片段或檔案
 
 在編輯或檢視資料字典時，您可以看到資料字典中哪些元素是參照文字、條件、字母和互動式通訊的元素。
 
@@ -141,7 +141,7 @@ ht-degree: 1%
 
 1. 點選「借出內容」。
 
-   「借出內容」索引標籤隨即出現，並包含下列項目： 文字、條件、信件和互動式通訊。 這些標題中的每個標題也會顯示所選元素的參考數。
+   「借出內容」索引標籤隨即出現，並包含下列項目：文字、條件、信件和互動式通訊。 這些標題中的每個標題也會顯示所選元素的參考數。
 
 1. 點選標題可查看參照元素的資產名稱。
 
@@ -150,11 +150,11 @@ ht-degree: 1%
 1. 若要檢視其他元素的借出內容，請點選元素。
 1. 若要顯示參照元素的資產，請點選其名稱。 瀏覽器會顯示資產、信件或互動式通訊。
 
-## 使用測試資料 {#working-with-test-data}
+## 使用測試資料{#working-with-test-data}
 
-1. 在「資料字典」頁面上，點選「選 **取」**。
-1. 點選您要下載測試資料的資料字典，然後點選「下 **載範例XML資料」**。
-1. 在警 **報訊息中** ，點選「確定」。 下載XML檔案。
+1. 在「資料字典」頁面上，點選&#x200B;**選擇**。
+1. 點選您要下載測試資料的資料字典，然後點選&#x200B;**下載範例XML資料**。
+1. 在警報訊息中點選&#x200B;**確定**。 下載XML檔案。
 1. 使用記事本或其他XML編輯器開啟XML檔案。 XML檔案的結構與元素中的資料字典和預留位置字串相同。 將預留位置字串取代為您要測試字母的資料。
 
    ```xml
@@ -200,13 +200,14 @@ ht-degree: 1%
 
 1. 在建立資料項目後，當您使用測試資料預覽字母時，可使用此XML檔案。
 
-   您可以使用DD來新增此測試資料（選取DD並點選「上傳測試資料」並上傳此xml檔案）。因此，在此之後，當您正常預覽字母（非自訂）時，此XML資料會用於字母中。 您也可以點選「自訂」，然後上傳此XML。
+   您可以使用DD新增此測試資料（選取DD並點選「上傳測試資料」並上傳此xml檔案）
+因此，當您正常預覽字母（非自訂）時，此XML資料會用於字母中。 您也可以點選「自訂」，然後上傳此XML。
 
-## 示例 {#samples}
+## 示例{#samples}
 
 下列程式碼範例顯示「資料字典」的實施詳細資訊。
 
-### 可上傳至資料字典的範例結構 {#sample-schema-that-can-be-uploaded-to-the-data-dictionary}
+### 可上載到資料字典{#sample-schema-that-can-be-uploaded-to-the-data-dictionary}的示例方案
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -260,7 +261,7 @@ ht-degree: 1%
 </xs:schema>
 ```
 
-## 與DDE關聯的通用屬性 {#common-attributes-associated-with-a-dde}
+## 與DDE {#common-attributes-associated-with-a-dde}關聯的常見屬性
 
 下表詳細說明了與DDE關聯的常見屬性：
 
@@ -274,10 +275,10 @@ ht-degree: 1%
   <tr>
    <td>名稱</td>
    <td>字串</td>
-   <td>必要.<br /> DDE的名稱。 它必須是唯一的。</td>
+   <td>必要.<br /> DDE的名稱。它必須是唯一的。</td>
   </tr>
   <tr>
-   <td>Reference<br /> Name</td>
+   <td>Reference<br />名稱</td>
    <td>字串</td>
    <td>必要. DDE的唯一引用名稱，允許對DDE的引用獨立於對資料字典的層次結構或結構的更改。 文本模組使用此名稱進行映射</td>
   </tr>
@@ -294,12 +295,12 @@ ht-degree: 1%
   <tr>
    <td>elementType</td>
    <td>字串</td>
-   <td>必要. DDE的類型： 字串、數字、日期、布林值、複合、系列。</td>
+   <td>必要. DDE的類型：字串、數字、日期、布林值、複合、系列。</td>
   </tr>
   <tr>
    <td>elementSubType</td>
    <td>字串</td>
-   <td>DDE的子類型： 列舉。 僅允許STRING和NUMBER elementType。</td>
+   <td>DDE的子類型：列舉。 僅允許STRING和NUMBER elementType。</td>
   </tr>
   <tr>
    <td>關鍵</td>
@@ -339,13 +340,13 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 計算資料字典元素 {#computedddelements}
+### 計算資料字典元素{#computedddelements}
 
 資料字典也可以包括計算元素。 計算資料字典元素始終與表達式相關聯。 此運算式會評估為在執行時期取得資料字典元素的值。 計算的DDE值是其它DDE值或文字的函式。 預設情況下，支援JSP表達式語言(EL)表達式。 EL運算式使用${ }字元，而有效的運算式可包含文字、運算子、變數（資料字典元素參考）和函式呼叫。 在引用表達式中的資料字典元素時，使用DDE的引用名稱。 參考名稱對於資料字典內的每個資料字典元素都是唯一的。
 
 計算的DDE PersonFullName可與EL串連運算式關聯，例如${PersonFirstName} ${PersonLastName}。
 
-## XSD與資料字典之間的資料類型對應 {#data-type-mapping-between-xsd-and-data-dictionary-br}
+## XSD與資料字典之間的資料類型對應{#data-type-mapping-between-xsd-and-data-dictionary-br}
 
 匯出XSD需要特定的資料對應，如下表所述。 DDI列指示DDI中可用的DDE值類型。
 
@@ -357,28 +358,28 @@ ht-degree: 1%
    <td>DDI（實例值資料類型）<br /> </p> </td>
   </tr>
   <tr>
-   <td><p>xs：類型元素——複合類型<br /> </p> </td>
-   <td>DDE類型——複合<br /> </p> </td>
+   <td><p>xs:type的元素——複合類型<br /> </p> </td>
+   <td>DDE類型- COMPOSITE<br /> </p> </td>
    <td>java.util.Map<br /> </td>
   </tr>
   <tr>
-   <td><p>xs:maxOccurs的元素&gt; 1<br /> </p> </td>
-   <td>DDE類型- COLLECTION-<br /> DDE節點建立在COLLECTION DDE旁邊，該DDE從父COLLECTION節點捕獲資訊。 為簡單／複合資料類型的集合建立的集合相同。 每當您有類型複合的COLLECTION時，「資料字典」樹將捕獲為捕獲類型資訊而建立的DDE子代中的組成欄位。<br /> - DDE(COLLECTION)<br /> - DDE(COMPOSITE for type info)<br /> - DDE(STRING)欄位1<br /> - DDE(STRING)欄位2<br /> <br /> </p> </td>
+   <td><p>xs:maxOccurns &gt; 1<br />的元素 </p> </td>
+   <td>類型DDE - COLLECTION-<br /> DDE節點建立在COLLECTION DDE旁邊，該DDE節點從父COLLECTION節點捕獲資訊。 為簡單／複合資料類型的集合建立的集合相同。 每當您有類型複合的COLLECTION時，「資料字典」樹將捕獲為捕獲類型資訊而建立的DDE子代中的組成欄位。<br /> - DDE(COLLECTION)<br /> - DDE(COMPOSITE for type info)<br /> - DDE(STRING)欄位1<br /> - DDE(STRING)欄位2<br /> <br /> </p> </td>
    <td>java.util.List<br /> </td>
   </tr>
   <tr>
    <td>類型屬性- xs:id <br /> </p> </td>
-   <td>DDE類型——字串 <br /> </td>
+   <td>DDE of type - STRING <br /> </td>
    <td>java.lang.String<br /> </td>
   </tr>
   <tr>
    <td>xs:attribute /xs:type - xs:string類型的元素</p> </td>
-   <td>DDE類型——字串<br /> </td>
+   <td>DDE類型- STRING<br /> </td>
    <td>java.lang.String<br /> </td>
   </tr>
   <tr>
-   <td>xs:attribute /xs:element type - xs: 布林值 <br /> </td>
-   <td>DDE類型——布爾型 <br /> </td>
+   <td>xs:attribute /xs:element type - xs:布林值<br /> </td>
+   <td>DDE of type - Boolean <br /> </td>
    <td>java.lang.Boolean<br /> </td>
   </tr>
   <tr>
@@ -403,31 +404,31 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>enum類型的元素和baseType - xs:string</td>
-   <td>DDE of<br /> type - STRING<br /> subtype - ENUM值集<br /> - ENUM的允許值<br /> </td>
+   <td><br />類型的DDE - STRING<br />子類型- ENUM<br />值集- ENUM<br />的允許值 </td>
    <td>java.lang.String</td>
   </tr>
  </tbody>
 </table>
 
-## 從資料字典下載範例資料檔案 {#download-a-sample-data-file-from-a-data-dictionary}
+## 從資料字典{#download-a-sample-data-file-from-a-data-dictionary}下載範例資料檔案
 
 建立資料字典後，您就可以將它下載為XML範例資料檔案，以便在其中輸入文字。
 
-1. 在「資料字典」頁面中，點選「 **選取** 」，然後點選資料字典以選取它。
-1. Select **Download Sample XML Data**.
-1. 在警 **報訊息中** ，點選「確定」。
+1. 在「資料字典」頁面中，點選&#x200B;**選擇**，然後點選資料字典以選取它。
+1. 選擇&#x200B;**下載範例XML資料**。
+1. 在警報訊息中點選&#x200B;**確定**。
 
-   「對應管理」會根據選取的資料字典結構建立XML檔案，並將它下載至您的電腦，名稱為&lt;data-dictionary-name>-SampleData。 現在，您可以在XML或文字編輯器中編輯此檔案，以在建立字母時 [輸入資料](../../forms/using/create-letter.md)。
+   「對應管理」會根據選取的資料字典結構建立XML檔案，並將它下載至您的電腦，名稱為&lt;data-dictionary-name>-SampleData。 現在，您可以在XML或文字編輯器中編輯此檔案，以便在[建立字母](../../forms/using/create-letter.md)時輸入資料。
 
-## 元資料的國際化 {#internationalization-of-meta-data}
+## 元資料的國際化{#internationalization-of-meta-data}
 
 當您想要以不同語言傳送相同的字母給客戶時，您可以將資料字典和資料字典元素的顯示名稱、說明和列舉值集當地語系化。
 
-### 本地化資料字典 {#localize-data-dictionary}
+### 本地化資料字典{#localize-data-dictionary}
 
-1. 在「資料字典」頁面上，點選「 **選取** 」，然後點選資料字典以選取它。
-1. 點選「 **下載本地化資料**」。
-1. 在警 **報中點選** 「確定」。 「通信管理」會將郵遞區號檔案下載至您的電腦，其名稱為DataDictionary-&lt;Dname>.zip。
+1. 在「資料字典」頁面上，點選&#x200B;**選擇**，然後點選資料字典以選取它。
+1. 點選&#x200B;**下載本地化資料**。
+1. 在警報中點選&#x200B;**確定**。 「通信管理」會將郵遞區號檔案下載至您的電腦，其名稱為DataDictionary-&lt;Dname>.zip。
 1. Zip檔案包含。properties檔案。 此檔案定義已下載的資料字典。 屬性檔案的內容類似於：
 
    ```ini
@@ -456,10 +457,10 @@ ht-degree: 1%
 
 1. 將。properties檔案（或多個地區設定的檔案）封存為單一。zip檔案。
 
-1. 在「資料字典」頁面中，選 **取「更多** >上 **傳本地化資料** 」，並選取包含本地化屬性檔案的zip檔案。
+1. 在「資料字典」頁中，選擇&#x200B;**更多** > **上傳本地化資料** ，並選擇包含本地化屬性檔案的zip檔案。
 1. 若要檢視本地化變更，請變更您的瀏覽器地區設定。
 
-## 資料字典驗證 {#ddvalidations}
+## 資料字典驗證{#ddvalidations}
 
 在建立或更新資料字典時，資料字典編輯器將強制執行以下驗證。
 
@@ -501,13 +502,13 @@ ht-degree: 1%
 * 系列DDE的XML系結不得映射至屬性。
 * XML綁定語法必須有效，例如，只顯示一個@，僅當後面跟有屬性名稱時才允許@。
 
-## 將資料字典元素對應至XML架構 {#mappingddetoschema}
+## 將資料字典元素映射到XML架構{#mappingddetoschema}
 
 您可以從XML架構建立資料字典，或使用資料字典使用者介面建立資料字典。 資料字典內的所有資料字典元素(DDE)都有XML系結欄位，以儲存DDE與XML架構中的元素的系結。 每個DDE中的綁定相對於父DDE。
 
 下列詳細資訊範例模型和程式碼範例，顯示資料字典的實作詳細資訊。
 
-## 映射簡單（基本）元素 {#mapping-simple-primitive-elements}
+## 映射簡單（基本）元素{#mapping-simple-primitive-elements}
 
 原始DDE表示在本質上是原子的欄位或屬性。 在複雜類型（複合DDE）或重複元素（集合DDE）範圍之外定義的基本DDE可以儲存在XML架構中的任何位置。 與基本DDE對應的資料位置不取決於其父DDE的映射。 Primitive DDE使用「XML綁定」欄位中的映射資訊來確定其值，並將映射轉換為以下值之一：
 
@@ -531,7 +532,7 @@ ht-degree: 1%
 | 年齡 | /年齡 |
 | 價格 | /價格 |
 
-### 映射複合元素 {#mapping-composite-elements}
+### 映射複合元素{#mapping-composite-elements}
 
 複合元素不支援系結，如果提供系結，則會忽略它。 所有原始類型的構成子DDE的綁定必須是絕對的。 允許對複合DDE的子元素進行絕對映射，在XPath綁定方面提供了更大的靈活性。 將複合DDE映射到XML架構中的複雜類型元素會限制其子元素的綁定範圍。
 
@@ -579,9 +580,9 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 對應收集元素 {#mapping-collection-elements}
+### 映射收集元素{#mapping-collection-elements}
 
-系列元素只會映射至其他基數> 1的系列元素。 系列DDE的子DDE與其父XML綁定相關（本地）XML綁定。 由於收集元素的子DDE必須與父項的基數相同，因此相對綁定的強制要求是確保基數約束，以便子DDE不指向非重複的XML架構元素。 在下列範例中，「TokenID」的基數必須與「Token」相同，後者是其父系列DDE。
+系列元素只會映射至其他基數> 1的系列元素。 系列DDE的子DDE與其父XML綁定有相對（本地）XML綁定。 由於收集元素的子DDE必須與父項的基數相同，因此相對綁定的強制要求是確保基數約束，以便子DDE不指向非重複的XML架構元素。 在下列範例中，「TokenID」的基數必須與「Token」相同，後者是其父系列DDE。
 
 將集合DDE映射到XML架構元素時：
 
