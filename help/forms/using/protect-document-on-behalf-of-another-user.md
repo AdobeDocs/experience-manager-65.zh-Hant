@@ -14,18 +14,18 @@ ht-degree: 0%
 ---
 
 
-# 代表其他使用者保護檔案 {#protect-a-document-on-behalf-of-another-user}
+# 代表其他使用者保護檔案{#protect-a-document-on-behalf-of-another-user}
 
 AEM Forms Document Security Java SDK提供API，讓使用者帳戶可以代表其他使用者保護檔案，而不需取得編輯檔案的權限。 您可以在工作流程中使用API，或以程式設計方式將API當做檔案服務。 新的API包括：
 
-* **protectDocument** 使用ProtectDocument API代表
+* **保** 護檔案使用ProtectDocument API代表
 
    另一個使用者帳戶。 用於套用原則的使用者帳戶權限仍限於保護檔案。 它沒有獲得開啟和查看文檔的權利。 RMSecureDocumentResult protectDocument（Document inDoc, String documentName, String policySetName, String policyName, RMLocale地區設定，布林bExactMatchForNames）
 
-* **createLicense** 使用CreateLicense API，代表其他使用者帳戶建立原則的授權。 PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
-* **protectDocumentWithCoverPage使用** ProtectDocumentWithCoverPage API來套用原則，並代表其他使用者將封面頁面新增至檔案。 用於套用原則的使用者帳戶權限仍限於保護檔案。 它沒有獲得開啟和查看文檔的權利。 RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, bExactMatchForNames)
+* **** createLicense使用CreateLicense API，代表其他使用者帳戶建立原則的授權。PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
+* **** protectDocumentWithCoverPageUseProtectDocumentWithCoverPage API，以代表其他使用者套用原則並新增封面至檔案。用於套用原則的使用者帳戶權限仍限於保護檔案。 它沒有獲得開啟和查看文檔的權利。 RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, bExactMatchForNames)
 
-## 使用API代表其他使用者保護檔案 {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
+## 使用API代表其他使用者{#using-the-apis-to-protect-a-document-on-behalf-of-another-user}保護檔案
 
 請執行下列步驟，以代表其他使用者保護檔案，而不取得編輯檔案的權限：
 
