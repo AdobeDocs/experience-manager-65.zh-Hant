@@ -12,25 +12,28 @@ topic-tags: operations
 discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 translation-type: tm+mt
 source-git-commit: ab401a8007f6ea85c0e52169091ce7a38b3dbe5c
+workflow-type: tm+mt
+source-wordcount: '1664'
+ht-degree: 0%
 
 ---
 
 
-# 在用戶端轉換表單 {#rendering-forms-at-the-client}
+# 在客戶端{#rendering-forms-at-the-client}處呈現表單
 
-## 在用戶端轉換表單 {#rendering-forms-at-the-client-inner}
+## 在客戶端{#rendering-forms-at-the-client-inner}處呈現表單
 
 您可以使用Acrobat或Adobe Reader的用戶端轉譯功能，最佳化PDF內容的傳送，並改善Forms服務處理網路負載的能力。 此程式稱為在客戶端上呈現表單。 若要在用戶端上轉譯表格，用戶端裝置（通常是網頁瀏覽器）必須使用Acrobat 7.0或Adobe Reader 7.0或更新版本。
 
-伺服器端指令碼執行對表單所做的變更不會反映在用戶端上呈現的表單中，除非根子表單包含設 `restoreState` 定為的屬性 `auto`。 有關此屬性的詳細資訊，請參 [閱Forms Designer。](https://www.adobe.com/go/learn_aemforms_designer_63)
+對伺服器端指令碼執行的表單所做的更改不會反映在客戶端呈現的表單中，除非根子表單包含設定為`auto`的`restoreState`屬性。 有關此屬性的詳細資訊，請參閱[表單設計器。](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱「AEM Forms [的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary-of-steps}
+### 步驟{#summary-of-steps}摘要
 
-要在客戶端上呈現表單，請執行以下任務：
+要在客戶端上渲染表單，請執行以下任務：
 
 1. 包含專案檔案。
 1. 建立Forms用戶端API物件。
@@ -44,13 +47,13 @@ source-git-commit: ab401a8007f6ea85c0e52169091ce7a38b3dbe5c
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。 如果您使用Java API，請建立物 `FormsServiceClient` 件。 如果您使用Forms web service API，請建立物 `FormsService` 件。
+您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms web service API，請建立`FormsService`物件。
 
 **設定客戶端渲染運行時選項**
 
-您必須將客戶端渲染運行時選項設定為，以便在客戶端上渲染表 `RenderAtClient` 單，方法是將運行時選項設定為 `true`。 這會導致表單被傳送至要轉譯的用戶端裝置。 如果 `RenderAtClient` 是 `auto` （預設值），表單設計會決定是否在用戶端上呈現表單。 表單設計必須是具有可流動版面的表單設計。
+您必須將`RenderAtClient`運行時選項設定為`true`，將客戶端渲染運行時選項設定為在客戶端渲染表單。 這會導致表單被傳送至要轉譯的用戶端裝置。 如果`RenderAtClient`是`auto`（預設值），表單設計會決定表單是否在用戶端呈現。 表單設計必須是具有可流動版面的表單設計。
 
-您可以設定的可選執行時期選項為 `SeedPDF` 選項。 此選 `SeedPDF` 項結合了PDF容器（種子PDF檔案）與表單設計和XML資料。 表單設計和XML資料都會傳送至Acrobat或Adobe Reader，然後在Acrobat或Adobe Reader中轉譯表單。 當用 `SeedPDF` 戶端電腦沒有表單中使用的字型時，可使用此選項，例如當使用者未取得授權使用表單擁有者有權使用的字型時。
+您可以設定的選用執行時期選項是`SeedPDF`選項。 `SeedPDF`選項結合了PDF容器（種子PDF檔案）與表單設計和XML資料。 表單設計和XML資料都會傳送至Acrobat或Adobe Reader，然後在Acrobat或Adobe Reader中轉譯表單。 `SeedPDF`選項可在用戶端電腦沒有表單中使用的字型時使用，例如當使用者未取得授權使用表單擁有者有權使用的字型時。
 
 您可以使用Designer建立簡單的動態PDF檔案，做為種子PDF檔案。 執行此任務需要執行以下步驟：
 
@@ -86,7 +89,7 @@ Forms服務會建立必須寫入客戶端Web瀏覽器的表單資料流。 當�
 
 [建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-### 使用Java API在用戶端演算表格 {#render-a-form-at-the-client-using-the-java-api}
+### 使用Java API {#render-a-form-at-the-client-using-the-java-api}在用戶端演算表格
 
 使用Forms API(Java)在用戶端演算表格：
 
@@ -96,34 +99,35 @@ Forms服務會建立必須寫入客戶端Web瀏覽器的表單資料流。 當�
 
 1. 建立Forms用戶端API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
 
 1. 設定客戶端渲染運行時選項
 
-   * 使用其 `PDFFormRenderSpec` 建構函式建立物件。
-   * 調用 `RenderAtClient` 物件的方法並傳遞 `PDFFormRenderSpec` 列舉值， `setRenderAtClient` 以設定執行時期選項 `RenderAtClient.Yes`。
+   * 使用其建構子建立`PDFFormRenderSpec`對象。
+   * 調用`PDFFormRenderSpec`物件的`setRenderAtClient`方法並傳遞列舉值`RenderAtClient.Yes`，以設定`RenderAtClient`執行時期選項。
 
 1. 在用戶端上演算表格
 
-   叫用物 `FormsServiceClient` 件的方 `renderPDFForm` 法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於AEM Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 包 `com.adobe.idp.Document` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞空 `com.adobe.idp.Document` 物件。
-   * 存 `PDFFormRenderSpec` 儲在客戶端上渲染表單所需運行時選項的對象。
-   * 包 `URLSpec` 含Forms服務渲染表單所需的URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
-   該方 `renderPDFForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於AEM Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
+   * `PDFFormRenderSpec`物件，儲存在用戶端上轉譯表單所需的執行時期選項。
+   * `URLSpec`物件，包含Forms服務呈現表單所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
+
+   `renderPDFForm`方法返回一個`FormsResult`對象，該對象包含必須寫入客戶端Web瀏覽器的表單資料流。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
-   * 通過調用對象的方 `com.adobe.idp.Document` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `com.adobe.idp.Document` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 調用 `java.io.InputStream` 物件的方 `com.adobe.idp.Document` 法以建立物 `getInputStream` 件。
-   * 建立位元組陣列，並借由調用物件的方法並將 `InputStream` 位元組陣列 `read` 傳入為引數，以表單資料流填入。
-   * 叫用物 `javax.servlet.ServletOutputStream` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
+   * 通過調用`getContentType`方法獲取`com.adobe.idp.Document`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`com.adobe.idp.Document`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 建立位元組陣列，並以`InputStream`物件的`read`方法來填入表單資料流，並將位元組陣列傳入為引數。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
@@ -133,7 +137,7 @@ Forms服務會建立必須寫入客戶端Web瀏覽器的表單資料流。 當�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API在用戶端演算表格 {#render-a-form-at-the-client-using-the-web-service-api}
+### 使用web service API {#render-a-form-at-the-client-using-the-web-service-api}在用戶端演算表格
 
 使用Forms API(web service)在用戶端演算表格：
 
@@ -144,37 +148,38 @@ Forms服務會建立必須寫入客戶端Web瀏覽器的表單資料流。 當�
 
 1. 建立Forms用戶端API物件
 
-   建立對 `FormsService` 像並設定驗證值。
+   建立`FormsService`對象並設定驗證值。
 
 1. 設定客戶端渲染運行時選項
 
-   * 使用其 `PDFFormRenderSpec` 建構函式建立物件。
-   * 調用 `RenderAtClient` 物件的方法並傳遞字串值， `PDFFormRenderSpec` 以設定 `setRenderAtClient` 執行時期選項 `RenderAtClient.Yes`。
+   * 使用其建構子建立`PDFFormRenderSpec`對象。
+   * 調用`PDFFormRenderSpec`物件的`setRenderAtClient`方法並傳遞字串值`RenderAtClient.Yes`，以設定`RenderAtClient`執行時期選項。
 
 1. 在用戶端上演算表格
 
-   叫用物 `FormsService` 件的方 `renderPDFForm` 法並傳遞下列值：
+   叫用`FormsService`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 包 `BLOB` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞 `null`。 (請參 [閱使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)
-   * 存 `PDFFormRenderSpec` 儲在客戶端上渲染表單所需運行時選項的對象。
-   * 包 `URLSpec` 含Forms服務所需URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
-   * 由方 `com.adobe.idp.services.holders.BLOBHolder` 法填充的空對象。 此參數用於儲存轉譯的PDF表單。
-   * 由方 `javax.xml.rpc.holders.LongHolder` 法填充的空對象。 （此引數將儲存表單中的頁數）。
-   * 由方 `javax.xml.rpc.holders.StringHolder` 法填充的空對象。 （此引數將儲存地區值）。
-   * 包含 `com.adobe.idp.services.holders.FormsResultHolder` 此操作結果的空對象。
-   該方 `renderPDFForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。 （請參閱[使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）。
+   * `PDFFormRenderSpec`物件，儲存在用戶端上轉譯表單所需的執行時期選項。
+   * `URLSpec`物件，包含Forms服務所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
+   * 由方法填充的空`com.adobe.idp.services.holders.BLOBHolder`對象。 此參數用於儲存轉譯的PDF表單。
+   * 由方法填充的空`javax.xml.rpc.holders.LongHolder`對象。 （此引數將儲存表單中的頁數）。
+   * 由方法填充的空`javax.xml.rpc.holders.StringHolder`對象。 （此引數將儲存地區值）。
+   * 空的`com.adobe.idp.services.holders.FormsResultHolder`對象，將包含此操作的結果。
+
+   `renderPDFForm`方法會以必須寫入用戶端網頁瀏覽器的表單資料流填入作為最後一個參數值傳遞的`com.adobe.idp.services.holders.FormsResultHolder`物件。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 獲取 `FormResult` 對象資料成員的 `com.adobe.idp.services.holders.FormsResultHolder` 值以建立 `value` 對象。
-   * 呼叫 `BLOB` 物件的方法，以建立包含表 `FormsResult` 單資料的物 `getOutputContent` 件。
-   * 通過調用對象的方 `BLOB` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `BLOB` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 建立位元組陣列，並透過叫用物件的方 `BLOB` 法來填入該 `getBinaryData` 陣列。 此任務將對象的內 `FormsResult` 容分配給位元組陣列。
-   * 叫用物 `javax.servlet.http.HttpServletResponse` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 獲取`com.adobe.idp.services.holders.FormsResultHolder`對象`value`資料成員的值，建立`FormResult`對象。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
+   * 通過調用`getContentType`方法獲取`BLOB`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`BLOB`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
+   * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
