@@ -12,15 +12,18 @@ discoiquuid: 502c0916-6c54-440c-be8c-eae56001fa26
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
 
-# 覆蓋社群元件 {#overlay-communities-components}
+# 覆蓋社群元件{#overlay-communities-components}
 
-覆蓋缺 [省元件](/help/communities/client-customize.md#overlays) （對於元件的所有相對參照）的意圖是全局更改元件的外觀或行為。 在/libs檔案夾中搜尋前，會依循sling的性質來解析至/apps檔案夾。 因此，元件的路徑與預設元件的路徑相同，只不過它位於/apps檔案夾而非/libs檔案夾中。
+[覆蓋](/help/communities/client-customize.md#overlays)預設元件的意圖是針對元件的所有相關參照，全域變更元件的外觀或行為。 在/libs檔案夾中搜尋前，會依循sling的性質來解析至/apps檔案夾。 因此，元件的路徑與預設元件的路徑相同，只不過它位於/apps檔案夾而非/libs檔案夾中。
 
-## 例如 {#example}
+## 範例 {#example}
 
 **覆蓋註解元件**
 
@@ -34,9 +37,9 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 **覆蓋通知電子郵件**
 
-假設您想要自訂電子郵件通知的訊息，您可以 [在](/help/communities/client-customize.md#overlays)**/libs/settings/community/templates/email/html上覆寫範本**。
+假設您想要自訂電子郵件通知的訊息，您可以透過[覆蓋](/help/communities/client-customize.md#overlays)**/libs/settings/community/templates/email/html**&#x200B;範本來自訂。
 
-例如，若要修改提及電子郵件通知（針對建立ugc的特定社群元件），請在您啟用 **@mentions支援的元件範本中，新增動詞提及的** if **條件****** 。
+例如，若要修改提及電子郵件通知（針對建立ugc的特定社群元件），請在您啟用&#x200B;**@mentions**&#x200B;支援的元件範本中，新增&#x200B;**if**&#x200B;條件，用於動詞&#x200B;**提及**。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -44,4 +47,4 @@ source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 {{/equals}}\
 ```
 
-若要修改部落格注釋中@提及的電子郵件通知範本，請將範本置於： `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+若要修改部落格注釋中@提及的電子郵件通知範本，請將範本置於：`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
