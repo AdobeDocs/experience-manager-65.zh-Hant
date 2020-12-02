@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '467'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 您可以輸入基本標準來執行一般搜索、執行詳細搜索的特定屬性，或輸入基本標準和特定屬性的組合來執行組合搜索。
 
-## 執行一般搜尋 {#perform-a-general-search}
+## 執行常規搜索{#perform-a-general-search}
 
 如果您知道流程實例的流程ID、查找一組相關的流程實例，或者只運行了幾個流程實例，則最適合對流程進行常規搜索。
 
@@ -30,14 +33,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在管理控制台中，按一下「服務>表單工作流程>流程搜尋」。
 1. 在「流程搜索」頁的「常規搜索」下，提供以下條件：
 
-   * **** 進程ID:標識每個唯一進程實例的正整數。
-   * **** 流程狀態：從清單中選擇狀態。
-   * **** 應用程式：從清單中選擇一個應用程式。 僅顯示已部署的應用程式。
-   * **** 進程名稱——版本：從菜單中選擇進程名。 僅顯示已部署的進程。
+   * **流程ID：標** 識每個唯一流程實例的正整數。
+   * **流程狀態：** 從清單中選擇狀態。
+   * **應用程** 式：從清單中選取應用程式。僅顯示已部署的應用程式。
+   * **流程名稱——版本：** 從菜單中選擇流程名稱。僅顯示已部署的進程。
 
 1. 按一下「搜尋」。 此時將顯示「流程實例」頁，列出找到的實例。
 
-## 對流程執行詳細搜索 {#perform-a-detailed-search-for-a-process}
+## 對進程{#perform-a-detailed-search-for-a-process}執行詳細搜索
 
 您可以輸入特定屬性來執行詳細搜索。 如果您有許多流程實例正在運行，並且需要根據特定條件縮小可能的查找範圍，則最適合進行詳細搜索。
 
@@ -55,7 +58,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [關於流程實例狀態](/help/forms/using/admin-help/processes.md#about-process-instance-statuses)
 
-## 對流程執行組合搜索 {#perform-a-combined-search-for-a-process}
+## 對進程{#perform-a-combined-search-for-a-process}執行組合搜索
 
 要基於常規搜索和詳細搜索建立搜索，並在區域之間使用默示AND，請在「流程搜索」頁的「常規搜索」和「詳細搜索」區域中輸入搜索標準。
 
