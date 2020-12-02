@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 設定網站結構 {#setup-website-structure}
+# 設定網站結構{#setup-website-structure}
 
 若要設定您的網站，下列指示說明要在下列位置建立的檔案夾：
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
    這是可下載網頁的所在位置。
 
-本教學課程中的程式碼將依賴應用程式、設計和內容的主資料夾名稱相同。 如果您為網站選擇其他名稱，請一律以您 `an-scf-sandbox` 選擇的名稱取代。
+本教學課程中的程式碼將依賴應用程式、設計和內容的主資料夾名稱相同。 如果您為網站選擇其他名稱，請一律以您選擇的名稱取代`an-scf-sandbox`。
 
 >[!NOTE]
 >
@@ -50,37 +50,37 @@ ht-degree: 1%
    >   * 下划線變為&#39;_005f&#39;
 
 
-## 設定應用程式目錄（/應用程式） {#setup-the-application-directory-apps}
+## 設定應用程式目錄(/apps){#setup-the-application-directory-apps}
 
 儲存庫中的/apps目錄包含代碼，該代碼實現了從/content目錄提供的頁面的行為和呈現。
 
 /apps目錄受到保護，無法像/content和/etc/designs目錄一樣公開存取。
 
-1. Create `/apps/an-scf-sandbox` folder.
+1. 建立`/apps/an-scf-sandbox`資料夾。
 
-   使用 **[!UICONTROL CRXDE Lite]**，在檔案總管窗格中
+   使用&#x200B;**[!UICONTROL CRXDE Lite]**，在檔案總管窗格中
 
-   1. 選擇文 `/apps` 件夾。
-   1. 按一下右鍵 **[!UICONTROL 建立]**...或下拉「建 **[!UICONTROL 立」...]** 菜單開啟它。
-   1. 選擇 **[!UICONTROL 建立資料夾……]**.
-   1. 在「建立 **[!UICONTROL 資料夾]** 」對話框中，輸入 `an-scf-sandbox`。
+   1. 選擇`/apps`資料夾。
+   1. 按一下右鍵&#x200B;**[!UICONTROL 建立]**...或下拉「建立……」]**功能表。**[!UICONTROL 
+   1. 選擇&#x200B;**[!UICONTROL 建立資料夾……]**。
+   1. 在&#x200B;**[!UICONTROL 建立資料夾]**&#x200B;對話框中，輸入`an-scf-sandbox`。
    1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
-1. 建立 **[!UICONTROL 元件]** 子資料夾。
+1. 建立&#x200B;**[!UICONTROL 元件]**&#x200B;子資料夾。
 
-   1. 選擇文 `/apps/an-scf-sandbox` 件夾。
-   1. 按一 **[!UICONTROL 下「建立>建立資料夾]**」。
-   1. 在「建立 **[!UICONTROL 資料夾]** 」對話框中，輸 **[!UICONTROL 入元件]**。
+   1. 選擇`/apps/an-scf-sandbox`資料夾。
+   1. 按一下&#x200B;**[!UICONTROL 建立>建立資料夾]**。
+   1. 在&#x200B;**[!UICONTROL 建立資料夾]**&#x200B;對話框中，輸入&#x200B;**[!UICONTROL 元件]**。
    1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
-1. 建立 **[!UICONTROL 範本]** 子資料夾。
+1. 建立&#x200B;**[!UICONTROL templates]**&#x200B;子資料夾。
 
-   1. 選擇文 `/apps/an-scf-sandbox` 件夾。
-   1. 按一 **[!UICONTROL 下「建立>建立資料夾]**」。
-   1. 在「建立 **[!UICONTROL 資料夾]** 」對話框中，輸 **[!UICONTROL 入模板]**。
+   1. 選擇`/apps/an-scf-sandbox`資料夾。
+   1. 按一下&#x200B;**[!UICONTROL 建立>建立資料夾]**。
+   1. 在&#x200B;**[!UICONTROL 建立資料夾]**&#x200B;對話框中，輸入&#x200B;**[!UICONTROL templates]**。
    1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
-   1. 重新選取 `/apps/an-scf-sandbox`。
-   1. 選擇「 **[!UICONTROL 全部保存]**」。
+   1. 重新選擇`/apps/an-scf-sandbox`。
+   1. 選擇&#x200B;**[!UICONTROL 全部保存]**。
 
    和任何編輯程式一樣，經常節省成本。 如果您在輸入資料時遇到問題，可能是因為您的登入逾時，或是您需要儲存先前的編輯。
 
@@ -88,21 +88,21 @@ ht-degree: 1%
 
    ![crxde-template](assets/crxde-template.png)
 
-## 設定設計目錄(/etc/designs) {#setup-the-design-directory-etc-designs}
+## 設定設計目錄(/etc/designs){#setup-the-design-directory-etc-designs}
 
 /etc/designs目錄包含要與頁面內容一起下載的映像、指令碼和樣式表。
 
-1. 若要在Classic UI中使用設計工具，請瀏 [覽至https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin)。
+1. 若要在Classic UI中使用Designer工具，請瀏覽至[https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin)。
 
-   注意：如果使用CRXDE Lite建立類型的節點 `cq:Page`，則Access Control和Replication不會設定為頁面的預設設定。
+   注意：如果使用CRXDE Lite建立類型`cq:Page`的節點，則訪問控制和複製不會設定為頁面的預設設定。
 
-1. 在檔案總管窗格中，選取「 **[!UICONTROL Designs]** 」檔案夾，然後按一下「 **[!UICONTROL New]** > **[!UICONTROL New Page]**」。
+1. 在瀏覽器窗格中，選擇&#x200B;**[!UICONTROL Designs]**&#x200B;資料夾，然後按一下&#x200B;**[!UICONTROL New]** > **[!UICONTROL New Page]**。
 
    輸入：
 
-   * 標題： **[!UICONTROL SCF沙盒]**
-   * 名稱： **[!UICONTROL an-scf-sandbox]**
-   * 選取 **[!UICONTROL 設計頁面範本]**
+   * 標題：**[!UICONTROL SCF沙盒]**
+   * 名稱：**[!UICONTROL an-scf-sandbox]**
+   * 選擇&#x200B;**[!UICONTROL 設計頁面範本]**
 
    按一下&#x200B;**[!UICONTROL 建立]**。
 
@@ -116,8 +116,8 @@ ht-degree: 1%
 
    ![crxde-configure-template](assets/crxde-configure-template.png)
 
-## 設定內容目錄（/內容） {#setup-the-content-directory-content}
+## 設定內容目錄(/content){#setup-the-content-directory-content}
 
 儲存庫中的/content目錄是網站內容所在的位置。 /content下的路徑包含瀏覽器請求的URL路徑。
 
-*在建立* 頁面範本 [](initial-app.md#createthepagetemplate) ，做為初始應用程式的一部分後，就可以根據範本建立初始頁面內容……. [**‡**](initial-app.md)
+*在* 初始 [應](initial-app.md#createthepagetemplate) 用程式中建立頁面範本後，可以根據範本建立初始頁面內容……. [**‡**](initial-app.md)
