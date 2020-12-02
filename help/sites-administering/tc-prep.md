@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '692'
+ht-degree: 0%
 
 ---
 
@@ -33,19 +36,19 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
              |- zh
 ```
 
-網站的每個語言分支都稱為語言副本。 語言副本的根頁面（稱為語言根目錄）可識別語言副本中內容的語言。 例如， `/content/geometrixx/fr` 是法文語言副本的語言根目錄。 語言副本必須使用 [正確配置的語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root) ，以便在執行源站點翻譯時定位正確的語言。
+網站的每個語言分支都稱為語言副本。 語言副本的根頁面（稱為語言根目錄）可識別語言副本中內容的語言。 例如，`/content/geometrixx/fr`是法文語言副本的語言根目錄。 語言副本必須使用[正確配置的語言root](/help/sites-administering/tc-prep.md#creating-a-language-root)，以便在執行源站點的翻譯時定位正確的語言。
 
 您最初為其製作網站內容的語言副本是語言主版。 語言主版是翻譯成其他語言的源。
 
 使用下列步驟來準備您的網站進行翻譯：
 
-1. 建立您語言主版的語言根目錄。 例如，英文Geometrixx示範網站的語言根目錄為/content/geometrixx/tw。 確保根據建立語言根目錄中的資訊正確配置 [了語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root)。
+1. 建立您語言主版的語言根目錄。 例如，英文Geometrixx示範網站的語言根目錄為/content/geometrixx/tw。 確保根據[建立語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root)中的資訊正確配置語言根目錄。
 1. 編寫您的語言大師的內容。
 1. 為您的網站建立每個語言副本的語言根目錄。 例如，Geometrixx範例網站的法文語言副本為/content/geometrixx/fr。
 
-在準備翻譯內容後，您可以自動在語言副本和相關的翻譯項目中建立缺少的頁面。 (請參 [閱建立翻譯項目](/help/sites-administering/tc-manage.md)。)如需AEM中內容轉譯程式的概觀，請參閱「多語 [言網站的轉譯內容」](/help/sites-administering/translation.md)。
+在準備翻譯內容後，您可以自動在語言副本和相關的翻譯項目中建立缺少的頁面。 （請參閱[建立翻譯項目](/help/sites-administering/tc-manage.md)。） 如需AEM中內容轉譯程式的概觀，請參閱[多語言網站的轉譯內容](/help/sites-administering/translation.md)。
 
-## 建立語言根 {#creating-a-language-root}
+## 建立語言根{#creating-a-language-root}
 
 建立語言根目錄作為識別內容語言的語言副本的根頁面。 建立語言根目錄後，可以建立包含語言副本的翻譯項目。
 
@@ -55,9 +58,9 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 * `<language-code>_<country-code>` 或 `<language-code>-<country-code>`者，支援的國家／地區代碼是ISO 3166定義的小寫或大寫雙字母代碼 `en_US`, `en_us`例如， `en_GB`、 `en-gb`。
 
-您可以根據您為全域網站選擇的結構，使用任一格式。  例如，Geometrixx網站的法文語言副本的根頁面 `fr` 為Name屬性。 請注意，Name屬性用作儲存庫中頁節點的名稱，因此確定了頁的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
+您可以根據您為全域網站選擇的結構，使用任一格式。  例如，Geometrixx網站的法文語言副本的根頁面具有`fr`作為Name屬性。 請注意，Name屬性用作儲存庫中頁節點的名稱，因此確定了頁的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
 
-下列程式使用觸控最佳化的UI來建立網站的語言副本。 如需使用Classic UI的指示，請參 [閱使用Classic UI建立語言根目錄](/help/sites-administering/tc-lroot-classic.md)。
+下列程式使用觸控最佳化的UI來建立網站的語言副本。 如需使用Classic UI的說明，請參閱[使用Classic UI](/help/sites-administering/tc-lroot-classic.md)建立語言根目錄。
 
 1. 導覽至網站。
 1. 按一下或點選您要建立語言副本的網站。
@@ -66,16 +69,16 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 1. 按一下或點選「建立」，然後按一下或點選「建立頁面」。
 
-   ![chlimage_1-21](assets/chlimage_1-21a.png)
+   ![chlimage_1-29](assets/chlimage_1-21a.png)
 
 1. 選取頁面範本，然後按一下或點選「下一步」。
-1. 在「名稱」欄位中，以或格式 `<language-code>` 輸入國 `<language-code>_<country-code>`家代碼， `en`例如， `en_US`、 `en_us`、 `en_GB`、 `en_gb`。 輸入頁面的標題。
+1. 在「名稱」欄位中，以`<language-code>`或`<language-code>_<country-code>`格式輸入國家代碼，例如`en`、`en_US`、`en_us`、`en_GB`、`en_gb`。 輸入頁面的標題。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. 按一下或點選「建立」。 在確認對話方塊中，按一下或點選 **Done** （完成）以返回Sites主控台，或點選 **Open** （開啟）以開啟語言副本。
+1. 按一下或點選「建立」。 在確認對話方塊中，按一下或點選&#x200B;**Done**&#x200B;以返回Sites主控台，或點選&#x200B;**Open**&#x200B;以開啟語言副本。
 
-## 語言根的地位 {#seeing-the-status-of-language-roots}
+## 看語言根的狀態{#seeing-the-status-of-language-roots}
 
 觸控最佳化UI提供「參考」面板，顯示已建立的語言根目錄清單。
 
@@ -83,9 +86,9 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 下列程式使用觸控最佳化的UI來開啟頁面的「參考」面板。
 
-1. 在「網站」主控台上，選取網站的頁面，然後按一下或點選「參 **考」**。
+1. 在「站點」控制台上，選擇站點的一個頁面，然後按一下或點選&#x200B;**References**。
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
-1. 在參照面板中，按一下或點選「語 **言副本」**。 「語言副本」面板顯示網站的語言副本。
+1. 在參考面板中，按一下或點選&#x200B;**語言副本**。 「語言副本」面板顯示網站的語言副本。
 
