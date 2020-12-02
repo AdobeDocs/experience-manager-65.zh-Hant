@@ -11,38 +11,41 @@ discoiquuid: ff97424d-b384-4149-9a3c-b4f00aaa1def
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 0%
 
 ---
 
 
-# 設定AEM Forms以將表單資料提交至JEE程式上的AEM Forms{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
+# 設定AEM Forms以提交表單資料至JEE程式上的AEM Forms{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
 
 最適化表單支援將資料提交至JEE上的AEM表單程式，以進一步處理。 它可讓您使用已提交表單中的可用資料，觸發AEM Forms on JEE流程。 請執行下列步驟，讓您的AEM Forms例項能夠將最適化表單提交至JEE流程的AEM Forms:
 
-## 設定您的AEM Forms伺服器 {#configure-your-aem-forms-server}
+## 設定您的AEM Forms伺服器{#configure-your-aem-forms-server}
 
 請執行下列步驟，讓您的AEM Forms伺服器將資料送出至JEE伺服器上的AEM Forms:
 
-1. 請前往https://[*host*]:[*port*]/system/console/configMgr的AEM web組態主控台。
+1. 前往https://[*host*]&#x200B;的AEM Web組態主控台：[*port*]/system/console/configMgr。
 
-1. 找到並按一下 **Adobe liveCycle Client SDK Configuration** （Adobe LiveCycle用戶端SDK組態）元件。
+1. 找到並按一下&#x200B;**Adobe LiveCycle Client SDK Configuration**&#x200B;元件。
 1. 按一下以編輯JEE伺服器上AEM Forms的設定伺服器URL、使用者名稱和密碼。
-1. 檢閱設定，然後按一下「 **儲存**」。
+1. 查看設定並按一下&#x200B;**保存**。
 
 ![Adobe LiveCycle Client SDK組態](assets/clientsdkconfiguration.jpg)
 
-## 使用流程欄位映射資料 {#map-data-with-process-fields}
+## 使用進程欄位{#map-data-with-process-fields}映射資料
 
 在您的AEM Forms設定完成後，將資料XML和附件從提交的表單對應至AEM Forms on JEE流程中的欄位。 要執行此操作：
 
-1. 在AEM web組態主控台中，按一下以編輯 **Guide LiveCycle Process Locator和Invoker組態** 。
+1. 在AEM Web組態主控台中，按一下以編輯&#x200B;**指南LiveCycle Process Locator和Invoker**&#x200B;組態。
 1. 指定下列參數：
 
-   * **資料xml參數的名稱** （必填）:指定AEM Forms on JEE程式的XML屬性檔案，以處理提交的資料。 預設值為 **dataxml**。
+   * **資料xml參數的名稱** （必填）:指定AEM Forms on JEE程式的XML屬性檔案，以處理提交的資料。預設值為&#x200B;**dataxml**。
 
-   * **檔案附件參數的名稱** （可選）:指定AEM Forms on JEE程式需要處理的檔案物件清單。 預設值為 **fileAttachmentsList**。
+   * **檔案附件參數的名稱** （可選）:指定AEM Forms on JEE程式需要處理的檔案物件清單。預設值為&#x200B;**fileAttachmentsList**。
 
-1. 檢閱設定，然後按一下「 **儲存**」。
+1. 查看設定並按一下&#x200B;**保存**。
 
 ![指南LiveCycle流程貨位和發票商](assets/test3.jpg)
 
