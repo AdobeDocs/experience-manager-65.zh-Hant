@@ -18,47 +18,47 @@ ht-degree: 5%
 ---
 
 
-# 使用贊 {#using-liking}
+# 使用按贊{#using-liking}
 
-該 `Liking` 元件是一種實用工具，允許用戶對特定內容（如論壇中的注釋）表達意見。 使用元 `Liking` 件時，成員會選擇心臟圖示以指出正面意見。
+`Liking`元件是實用的工具，可讓使用者對特定內容（例如論壇中的注釋）發表意見。 使用`Liking`元件，成員選擇心臟圖示以指出正面意見。
 
-## 新增對頁面按贊 {#adding-liking-to-a-page}
+## 新增對頁面按贊{#adding-liking-to-a-page}
 
-若要在作 `Liking` 者模式中將元件新增至頁面，請使用元件瀏覽器來尋找
+若要在作者模式下將`Liking`元件新增至頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Liking`
 
 並將它拖曳至頁面上的位置，例如使用者喜歡的功能相對位置。
 
-如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](basics.md)。
 
-當包含 [所需的用戶端程式庫](essentials-liking.md#essentials-for-client-side) ，元件的顯示方式 `Liking` 就是這樣。
+當包含[必要的用戶端程式庫](essentials-liking.md#essentials-for-client-side)時，`Liking`元件的顯示方式就是這樣。
 
 ![對開元件](assets/liking-component.png)
 
-## 設定贊 {#configuring-liking}
+## 配置按贊{#configuring-liking}
 
-選擇要訪問 `Liking` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`Liking`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![configure-new](assets/configure-new.png)
 
-在「文 **[!UICONTROL 字與標籤]** 」索引標籤下，指定用來記錄按贊的屬性。
+在&#x200B;**[!UICONTROL 文字與標籤]**&#x200B;標籤下，指定用來記錄按贊的屬性。
 
 ![configure-like](assets/configure-liking.png)
 
 * **[!UICONTROL 正面回應標籤]**
 
-   (必&#x200B;*要*)正面回應的屬性名稱。
+   （*必要*）正面回應的屬性名稱。
 
 * **[!UICONTROL 負面回應標籤]**
 
-   (必&#x200B;*要*)負面回應的屬性名稱。
+   （*必要*）負回應的屬性名稱。
 
 * **[!UICONTROL 記帳名稱]**
 
-   (必&#x200B;*要*)此投票元件例項的內部、可識別屬性名稱。
+   (*Required*)此投票元件實例的內部可識別屬性名稱。
 
-## 網站訪客體驗 {#site-visitor-experience}
+## 網站訪客體驗{#site-visitor-experience}
 
 ### 成員 {#members}
 
@@ -70,4 +70,4 @@ ht-degree: 5%
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人 [員的「按贊基本功能](essentials-liking.md) 」頁面。
+如需詳細資訊，請參閱開發人員的[按贊Essentials](essentials-liking.md)頁面。
