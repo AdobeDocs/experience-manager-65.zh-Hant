@@ -11,11 +11,14 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '398'
+ht-degree: 1%
 
 ---
 
 
-# 選擇AEM Forms安裝的永續性類型 {#choosing-a-persistence-type-for-an-aem-forms-installation}
+# 選擇AEM Forms安裝的永續性類型{#choosing-a-persistence-type-for-an-aem-forms-installation}
 
 明智地選擇永續性類型。 它可協助您建立有效率且可擴充的AEM Forms環境。
 
@@ -56,12 +59,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </tbody>
 </table>
 
-TarMK是針對效能而設計，而MongoMK和RDBMK則是針對可擴充性而設計。 Adobe強烈建議將TarMK做為所有AEM Forms部署藍本的預設永續性技術，適用於作者和發佈執行個體，但在 [Choosing Mongo或Relational Database Microkernel over TarMK一節中概述的使用案例除外](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p)。
+TarMK是針對效能而設計，而MongoMK和RDBMK則是針對可擴充性而設計。 Adobe強烈建議TarMK做為所有AEM Forms部署藍本（作者和發佈例項）的預設永續性技術，但[選擇Mongo或關聯式資料庫微內核(Relational Database Microkernel over TarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p)一節所述的使用案例除外。
 
-如需支援的Microkernels清單，請參閱「OSGi技術需求上的 [AEM Forms](/help/sites-deploying/technical-requirements.md) 」或「 [JEE支援的平台組合文章上的AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md) 」。
+如需支援的微內核清單，請參閱OSGi Technical Requirements](/help/sites-deploying/technical-requirements.md)或[AEM Forms on JEE支援的平台組合](/help/forms/using/aem-forms-jee-supported-platforms.md)文章上的[AEM Forms。
 
-## 選擇Mongo或TarMK上的關係資料庫微內核 {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
+## 選擇Mongo或關係資料庫微內核(TarMK {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk})
 
 可擴充（叢集）的AEM Forms環境是兩個或兩個以上水準設定的作用中作者執行個體的集合。 如果單一伺服器支援所有並行編寫活動，而無法持續執行，您可以選擇執行多個作者例項。
 
-JEE環境上的可擴充（叢集）AEM Forms僅支援MongoMK和RDBMK永續性類型。 每個安裝的伺服器數量或可擴展環境的大小都有所不同。 如需考量事項和範例的清單，請參閱「 [Recommended Deployments](/help/sites-deploying/recommended-deploys.md)[and or Architecture and deployment topologies for AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md) 」文章。 您也可以聯絡AEM Forms支援，以取得有關AEM Forms與RDBMK和TarMK的容量規劃詳細資訊。
+JEE環境上的可擴充（叢集）AEM Forms僅支援MongoMK和RDBMK永續性類型。 每個安裝的伺服器數量或可擴展環境的大小都有所不同。 如需考量事項和範例的清單，請參閱[建議部署](/help/sites-deploying/recommended-deploys.md)和[AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md)的架構和部署拓撲文章。 您也可以聯絡AEM Forms支援，以取得有關AEM Forms與RDBMK和TarMK的容量規劃詳細資訊。
