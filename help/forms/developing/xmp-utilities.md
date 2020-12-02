@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用XMP實用程式 {#working-with-xmp-utilities}
+# 使用XMP實用程式{#working-with-xmp-utilities}
 
 **關於XMP實用程式服務**
 
@@ -28,20 +28,20 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 您可以使用XMP Utilities服務完成下列工作：
 
-* 將中繼資料匯入PDF檔案。 (請參閱 [將中繼資料匯入PDF檔案](xmp-utilities.md#importing-metadata-into-pdf-documents)。)
-* 從PDF檔案匯出中繼資料。 (請參 [閱從PDF檔案匯出中繼資料](xmp-utilities.md#exporting-metadata-from-pdf-documents)。)
+* 將中繼資料匯入PDF檔案。 （請參閱[將中繼資料匯入PDF檔案](xmp-utilities.md#importing-metadata-into-pdf-documents)。）
+* 從PDF檔案匯出中繼資料。 （請參閱[從PDF檔案匯出中繼資料](xmp-utilities.md#exporting-metadata-from-pdf-documents)）。
 
 >[!NOTE]
 >
->如需XMP公用程式服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需XMP公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 將中繼資料匯入PDF檔案 {#importing-metadata-into-pdf-documents}
+## 將中繼資料匯入PDF檔案{#importing-metadata-into-pdf-documents}
 
 您可以使用XMP公用程式Java和web service API，以程式設計方式將XMP中繼資料匯入PDF檔案。 中繼資料提供有關PDF檔案的資訊，例如檔案的作者和與檔案相關的關鍵字。 中繼資料可位於檔案的「檔案屬性」對話方塊中，如下圖所示。
 
 ![ww_ww_metadatadialog](assets/ww_ww_metadatadialog.png)
 
-若要以程式設計方式將中繼資料匯入PDF檔案，您可以使用指定中繼資料值的現有XML檔案，或使用類型物件 `XMPUtilityMetadata`。 (請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
+若要以程式設計方式將中繼資料匯入PDF檔案，您可以使用指定中繼資料值的現有XML檔案，或使用類型`XMPUtilityMetadata`的物件。 （請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)）。
 
 >[!NOTE]
 >
@@ -114,9 +114,9 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 >[!NOTE]
 >
->如需XMP公用程式服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需XMP公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary-of-steps}
+### 步驟{#summary-of-steps}摘要
 
 若要將XMP中繼資料匯入PDF檔案，請執行下列步驟：
 
@@ -130,7 +130,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 **建立XMPUtilityService客戶端**
 
-您必須先建立XMPutilityService用戶端，才能以程式設計方式執行XMP公用程式作業。 使用Java API，您就可建立物件來完成 `XMPUtilityServiceClient` 此作業。 使用web service API，這是透過使用物件來 `XMPUtilityServiceService` 完成。
+您必須先建立XMPutilityService用戶端，才能以程式設計方式執行XMP公用程式作業。 使用Java API，您可建立`XMPUtilityServiceClient`物件來完成此作業。 使用web service API，這是使用`XMPUtilityServiceService`物件來完成的。
 
 **叫用XMP中繼資料匯入作業**
 
@@ -146,7 +146,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API匯入XMP中繼資料 {#import-xmp-metadata-using-the-java-api}
+### 使用Java API {#import-xmp-metadata-using-the-java-api}匯入XMP中繼資料
 
 使用XMP公用程式API(Java)匯入XMP中繼資料：
 
@@ -160,23 +160,23 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 1. 建立XMPUtilityService客戶端
 
-   使用其 `XMPUtilityServiceClient` 建構函式並傳遞包含連線屬性 `ServiceClientFactory` 的物件，以建立物件。
+   使用其建構子並傳遞包含連接屬性的`ServiceClientFactory`對象，建立`XMPUtilityServiceClient`對象。
 
 1. 叫用XMP中繼資料匯入作業
 
-   若要修改XMP中繼資料，請叫 `XMPUtilityServiceClient` 用物件的方 `importMetadata` 法或其 `importXMP` 方法。
+   若要修改XMP中繼資料，請叫用`XMPUtilityServiceClient`物件的`importMetadata`方法或其`importXMP`方法。
 
-   如果您使用 `importMetadata` 方法，請傳入下列值：
+   如果您使用`importMetadata`方法，請傳入下列值：
 
-   * 代表 `com.adobe.idp.Document` PDF檔案的物件。
-   * 包 `XMPUtilityMetadata` 含要導入的元資料的對象。
+   * 代表PDF檔案的`com.adobe.idp.Document`物件。
+   * `XMPUtilityMetadata`物件，包含要匯入的中繼資料。
 
-   如果您使用 `importXMP` 方法，請傳入下列值：
+   如果您使用`importXMP`方法，請傳入下列值：
 
-   * 代表 `com.adobe.idp.Document` PDF檔案的物件。
-   * 表 `com.adobe.idp.Document` 示包含要導入的元資料的XML檔案的對象。
+   * 代表PDF檔案的`com.adobe.idp.Document`物件。
+   * `com.adobe.idp.Document`物件，代表包含要匯入之中繼資料的XML檔案。
 
-   無論何種情況，傳回的值都是 `com.adobe.idp.Document` 一個物件，代表包含新匯入中繼資料的PDF檔案。 然後，可以將此對象保存到磁碟。
+   無論何種情況，傳回的值都是`com.adobe.idp.Document`物件，代表包含新匯入中繼資料的PDF檔案。 然後，可以將此對象保存到磁碟。
 
 **另請參閱**
 
@@ -186,34 +186,34 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API匯入XMP中繼資料 {#importing-xmp-metadata-using-the-web-service-api}
+### 使用web service API {#importing-xmp-metadata-using-the-web-service-api}匯入XMP中繼資料
 
 若要使用XMP公用程式網站服務API以程式設計方式匯入XMP中繼資料，請執行下列工作：
 
 1. 包含專案檔案
 
-   * 建立一個使用XMP實用程式服務WSDL檔案的Microsoft .NET客戶端元件。 (請參 [閱使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding))。
-   * 參考Microsoft .NET客戶端元件。 (請參 [閱建立使用Base64編碼的。NET客戶端元件](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)。)
+   * 建立一個使用XMP實用程式服務WSDL檔案的Microsoft .NET客戶端元件。 （請參閱[使用Base64編碼叫用AEM Forms。）](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+   * 參考Microsoft .NET客戶端元件。 （請參閱[建立使用Base64編碼的。NET客戶端元件。）](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
 1. 建立XMPUtilityService客戶端
 
-   使用您 `XMPUtilityServiceService` 的proxy類別建構函式建立物件。
+   使用proxy類別建構函式建立`XMPUtilityServiceService`物件。
 
 1. 叫用XMP中繼資料匯入作業
 
-   若要修改XMP中繼資料，請叫 `XMPUtilityServiceService` 用物件的方 `importMetadata` 法或其 `importXMP` 方法。
+   若要修改XMP中繼資料，請叫用`XMPUtilityServiceService`物件的`importMetadata`方法或其`importXMP`方法。
 
-   如果您使用 `importMetadata` 方法，請傳入下列值：
+   如果您使用`importMetadata`方法，請傳入下列值：
 
-   * 代表 `BLOB` PDF檔案的物件。
-   * 包 `XMPUtilityMetadata` 含要導入的元資料的對象。
+   * 代表PDF檔案的`BLOB`物件。
+   * `XMPUtilityMetadata`物件，包含要匯入的中繼資料。
 
-   如果您使用 `importXMP` 方法，請傳入下列值：
+   如果您使用`importXMP`方法，請傳入下列值：
 
-   * 代表 `BLOB` PDF檔案的物件。
-   * 表 `BLOB` 示包含要導入的元資料的XML檔案的對象。
+   * 代表PDF檔案的`BLOB`物件。
+   * `BLOB`物件，代表包含要匯入之中繼資料的XML檔案。
 
-   無論何種情況，傳回的值都是 `BLOB` 一個物件，代表包含新匯入中繼資料的PDF檔案。 然後，可以將此對象保存到磁碟。
+   無論何種情況，傳回的值都是`BLOB`物件，代表包含新匯入中繼資料的PDF檔案。 然後，可以將此對象保存到磁碟。
 
 **另請參閱**
 
@@ -225,15 +225,15 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [建立使用Base64編碼的。NET客戶端元件](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## 從PDF檔案匯出中繼資料 {#exporting-metadata-from-pdf-documents}
+## 從PDF檔案匯出中繼資料{#exporting-metadata-from-pdf-documents}
 
 您可以使用XMP公用程式Java和web service API，以程式設計方式從PDF檔案擷取和儲存XMP中繼資料。
 
 >[!NOTE]
 >
->如需XMP公用程式服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需XMP公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-1}
+### 步驟{#summary_of_steps-1}摘要
 
 若要從PDF檔案匯出XMP中繼資料，請執行下列步驟：
 
@@ -247,7 +247,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 **建立XMPUtilityService客戶端**
 
-您必須先建立XMPutilityService用戶端，才能以程式設計方式執行XMP公用程式作業。 使用Java AP，如果這是通過建立對象來完 `XMPUtilityServiceClient` 成的。 使用web service API，這是使用物件來完 `XMPUtilityServiceService` 成。
+您必須先建立XMPutilityService用戶端，才能以程式設計方式執行XMP公用程式作業。 使用Java AP，如果通過建立`XMPUtilityServiceClient`對象來完成此操作。 使用web service API，這是使用`XMPUtilityServiceService`物件來完成的。
 
 **叫用XMP中繼資料匯出作業**
 
@@ -263,7 +263,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API匯出XMP中繼資料 {#export-xmp-metadata-using-the-java-api}
+### 使用Java API {#export-xmp-metadata-using-the-java-api}匯出XMP中繼資料
 
 使用XMP公用程式API(Java)匯出XMP中繼資料：
 
@@ -277,13 +277,13 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 1. 建立XMPUtilityService客戶端
 
-   使用其 `XMPUtilityServiceClient` 建構函式並傳遞包含連線屬性 `ServiceClientFactory` 的物件，以建立物件。
+   使用其建構子並傳遞包含連接屬性的`ServiceClientFactory`對象，建立`XMPUtilityServiceClient`對象。
 
 1. 叫用XMP中繼資料匯入作業
 
-   若要檢查XMP中繼資料，請叫 `XMPUtilityServiceClient` 用物件的方 `exportMetadata` 法並傳入 `com.adobe.idp.Document` 代表PDF檔案的物件。 該方法返回包 `XMPUtilityMetadata` 含檢索到的元資料的對象。
+   若要檢查XMP中繼資料，請叫用`XMPUtilityServiceClient`物件的`exportMetadata`方法，並傳入代表PDF檔案的`com.adobe.idp.Document`物件。 該方法返回包含檢索到的元資料的`XMPUtilityMetadata`對象。
 
-   若要擷取並儲存XMP中繼資料，請叫 `XMPUtilityServiceClient` 用物件的方 `exportXMP` 法並傳入 `com.adobe.idp.Document` 代表PDF檔案的物件。 該方法返回包 `com.adobe.idp.Document` 含檢索到的元資料的對象，您隨後可將其另存為XML檔案。
+   若要擷取並儲存XMP中繼資料，請叫用`XMPUtilityServiceClient`物件的`exportXMP`方法，並傳入代表PDF檔案的`com.adobe.idp.Document`物件。 該方法返回包含檢索到的元資料的`com.adobe.idp.Document`對象，您隨後可將其另存為XML檔案。
 
 **另請參閱**
 
@@ -293,7 +293,7 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API匯出XMP中繼資料 {#export-xmp-metadata-using-the-web-service-api}
+### 使用web service API {#export-xmp-metadata-using-the-web-service-api}匯出XMP中繼資料
 
 使用XMP Utilities API(web service)匯出XMP中繼資料：
 
@@ -304,13 +304,13 @@ XMP公用程式服務可從PDF檔案擷取和儲存XMP中繼資料，並將XMP�
 
 1. 建立XMPUtilityService客戶端
 
-   使用您 `XMPUtilityServiceService` 的proxy類別建構函式建立物件。
+   使用proxy類別建構函式建立`XMPUtilityServiceService`物件。
 
 1. 叫用XMP中繼資料匯入作業
 
-   若要檢查XMP中繼資料，請叫 `XMPUtilityServiceClient` 用物件的方 `exportMetadata` 法並傳入 `BLOB` 代表PDF檔案的物件。 該方法返回包 `XMPUtilityMetadata` 含檢索到的元資料的對象。
+   若要檢查XMP中繼資料，請叫用`XMPUtilityServiceClient`物件的`exportMetadata`方法，並傳入代表PDF檔案的`BLOB`物件。 該方法返回包含檢索到的元資料的`XMPUtilityMetadata`對象。
 
-   若要擷取並儲存XMP中繼資料，請叫 `XMPUtilityServiceClient` 用物件的方 `exportXMP` 法並傳入 `BLOB` 代表PDF檔案的物件。 該方法返回包 `BLOB` 含檢索到的元資料的對象，您隨後可將其另存為XML檔案。
+   若要擷取並儲存XMP中繼資料，請叫用`XMPUtilityServiceClient`物件的`exportXMP`方法，並傳入代表PDF檔案的`BLOB`物件。 該方法返回包含檢索到的元資料的`BLOB`對象，您隨後可將其另存為XML檔案。
 
 **另請參閱**
 
