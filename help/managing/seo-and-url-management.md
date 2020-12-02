@@ -12,272 +12,280 @@ discoiquuid: 7c8f2cec-870b-41a8-8d98-70e29b495587
 docset: aem65
 translation-type: tm+mt
 source-git-commit: c623724df8d849f4cc01f5dc134c775dc24dafc7
+workflow-type: tm+mt
+source-wordcount: '3119'
+ht-degree: 98%
 
 ---
 
 
 # SEO和URL管理最佳實務{#seo-and-url-management-best-practices}
 
-搜尋引擎最佳化(SEO)已成為許多行銷人員最關心的問題。 因此，許多AEM專案都需要解決SEO問題。
+搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案都需要解決SEO問題。
 
-本檔案首先說明在AEM實 [作上達成這些目標的一些](#seo-best-practices) SEO最佳實務和建議。 然後，本文檔將更深入探討第一節中提出的 [一些更複雜的實作](#aem-configurations) 步驟。
+本文件首先會說明在 AEM 實作中達成上述目標的幾項 [SEO 最佳作法](#seo-best-practices)與建議。接著，本文件會於第一節中再深入探討幾項更[複雜的實作步驟](#aem-configurations)。
 
-## SEO最佳實務 {#seo-best-practices}
+## SEO 最佳作法 {#seo-best-practices}
 
-本節說明一些一般的SEO最佳實務。
+本節說明幾項一般 SEO 最佳作法。
 
 ### URL {#urls}
 
-在URL方面，有一些公認的最佳實務。
+處理 URL 時，業界有一些普遍接受的最佳作法。
 
-在您的AEM專案中，評估URL時，請自問：
+在評估 AEM 專案的 URL 時，請先自問以下問題：
 
-「如果使用者要檢視此URL，而頁面上沒有任何內容，他們能否描述此頁面是什麼？」
+「使用者能在尚未過目任何網頁內容之下，光是看到此 URL 就能描述頁面內容嗎？」
 
-如果答案為是，則URL很可能適用於搜尋引擎。
+如果答案是可以，則此 URL 在搜尋引擎中很可能成效良好。
 
-以下是有關如何建構SEO之URL的一般提示：
+以下為幾項針對 SEO 建構 URL 的常見訣竅：
 
-* 使用連字型大小來分隔字詞。
+* 使用連字號來分隔字詞。
 
-   * 使用連字型大小(-)作為分隔符來命名頁面。
-   * 避免使用駝峰大小寫、底線和空格。
+   * 請將連字號當作分隔符號來命名網頁。
+   * 避免使用駝峰式大小寫、底線和空格。
 
-* 盡可能避免使用查詢參數。 如有需要，請限制為兩個或兩個以下。
+* 可行的話，避免使用查詢參數。如需使用，請不要超過兩個。
 
-   * 使用目錄結構來指示資訊體系結構（如果可用）。
-   * 如果目錄結構不是選項，請在URL中使用Sling選擇器，而非查詢字串。 除了它們提供的SEO值外，sling選擇器也會讓頁面可供分派程式快取。
+   * 如果可用，請使用目錄結構來指示資訊架構。
+   * 如果無法使用目錄結構，請在 URL 中使用 Sling 選擇器，而非查詢字串。除了可提供 SEO 值，Sling 選擇器也會使網頁可供 Dispatcher 進行快取。
 
-* URL的人性化程度越高越好；在URL中顯示關鍵字會大幅提升值。
+* URL 越容易透過字面理解越好；如果 URL 中存在關鍵字，SEO 值會大幅提升。
 
-   * 在頁面上使用選擇器時，偏好提供語義值的選擇器。
-   * 如果人無法讀取您的URL，搜尋引擎也無法讀取。
+   * 在網頁上使用選擇器時，建議使用提供語意值的選取器。
+   * 如果使用者無法透過字面理解您的 URL，則搜尋引擎也無法。
    * 例如：
       `mybrand.com/products/product-detail.product-category.product-name.html`
-優先於 `mybrand.com/products/product-detail.1234.html`
+比  更適合 
+`mybrand.com/products/product-detail.1234.html`
 
-* 盡可能避免子網域，因為搜尋引擎會將子網域視為不同的實體，將網站的SEO值分割。
+* 盡可能避免子網域，因為搜尋引擎會將子網域視為不同的實體，進而分割網站的 SEO 值。
 
-   * 請改用第一層子路徑。 例如，使用 `es.mybrand.com/home.html`代替 `www.mybrand.com/es/home.html`。
+   * 請使用第一層子路徑。舉例來說，請避免使用 `es.mybrand.com/home.html`，改用 `www.mybrand.com/es/home.html`。
 
-   * 根據本准則，規劃內容階層以符合內容呈現方式。
+   * 請根據本指引規劃內容階層，以便符合內容呈現方式。
 
-* URL中的關鍵字效能會隨著URL長度和關鍵字位置的增加而降低。 換句話說，較短就更好。
+* URL 的長度和關鍵字的位置增加，URL 中關鍵字的有效性就會降低。換句話說，URL 越短越好。
 
-   * 使用URL縮短技術和AEM提供的功能來移除不必要的URL片段。
-   * 例如， `mybrand.com/en/myPage.html` 優先於 `mybrand.com/content/my-brand/en/myPage.html`。
+   * 請使用 AEM 提供的 URL 縮短技術和功能來移除不必要的 URL 片段。
+   * 舉例來說，`mybrand.com/en/myPage.html` 比 `mybrand.com/content/my-brand/en/myPage.html` 更適合。
 
-* 使用標準URL。
+* 使用標準 URL。
 
-   * 當URL可從不同路徑或使用不同參數或選擇器提供時，請務必在頁面 `rel=canonical` 上使用標籤。
+   * 如果 URL 可從不同路徑或透過不同參數或選擇器運作，請務必在網頁上使用 `rel=canonical` 標籤。
 
-   * 這可納入AEM範本的程式碼中。
+   * 此標籤可納入 AEM 範本的程式碼中。
 
-* 盡可能將URL與頁面標題相符。
+* 盡可能使 URL 與網頁標題相符。
 
-   * 應鼓勵內容作者遵循此慣例。
+   * 建議內容作者遵循這項作法。
 
-* 支援URL要求不區分大小寫。
+* 支援在 URL 請求中不區分大小寫。
 
-   * 將調度程式配置為將所有入站請求重寫為小寫字母。
-   * 訓練內容作者使用小寫字母建立所有頁面。
+   * 將 Dispatcher 設定為將所有傳入請求重新寫入為小寫字母。
+   * 請訓練內容作者使用小寫字母來建立所有網頁。
 
-* 請確定每個頁面都只從一個通訊協定提供。
+* 每個網頁都必須只經由一個通訊協定來提供。
 
-   * 有時，網站會在使用者 `http` 進入頁面（例如結帳或登入表格）後，才可供其切換至 `https`。 當從此頁面連結時，如果使用者可返回頁面並 `http` 透過存取頁面，搜尋引擎 `https`會將這些頁面當成兩個獨立頁面來追蹤。
+   * 有時，網站會透過 `http` 提供，直到使用者以結帳或登入形式抵達網頁後，才會切換為透過 `https` 提供。從這個頁面連結時，如果使用者可返回 `http` 頁面並透過 `https` 存取，搜尋引擎會將這些頁面當成兩個獨立頁面來追蹤。
 
-   * Google目前偏好頁 `https` 面而非 `http` 頁面。 因此，它通常讓每個人的生活更輕鬆，為整個網站服務 `https`。
+   * 目前 Google 偏好使用 `https` 頁面，而非 `http` 頁面。因為這個原因，透過 `https` 提供整個網站通常才能讓每個人的生活更便利。
 
-### Server configuration {#server-configuration}
+### 伺服器設定 {#server-configuration}
 
-就伺服器組態而言，您可執行下列步驟，以確保只搜尋正確的內容：
+進行伺服器設定時，您可以執行下列步驟，確保系統只對正確的內容進行編目：
 
-* 使用文 `robots.txt` 件來阻止任何不應編製索引的內容的搜索。
+* 使用 `robots.txt` 檔案來阻止系統對任何不應納入索引的內容進行編目。
 
-   * 封鎖 **測試環境** 上的所有編目。
+   * 封鎖測試環境上的&#x200B;**所有**&#x200B;編目動作。
 
-* 啟動具有更新URL的新網站時，請實作301重新導向，以確保您現有的SEO排名不會遺失。
-* 加入您網站的首頁。
-* 建置XML網站地圖，讓搜尋引擎更輕鬆地搜尋內容。 請確定包含行動及／或回應式網站的行動網站地圖。
+* 如果要啟動的新網站有更新過的 URL，請實作 301 重新導向，確保現有的 SEO 排名不會遺失。
+* 加入您網站的 Favicon。
+* 實作 XML Sitemap，讓搜尋引擎更容易對您的內容進行編目。請務必加入行動 Sitemap 供行動及/或回應式網站使用。
 
-## AEM Configurations {#aem-configurations}
+## AEM 設定 {#aem-configurations}
 
-本節說明設定AEM以遵循這些SEO建議所需的實施步驟。
+本節說明設定 AEM 的所需實作步驟，以便遵循上述 SEO 建議。
 
-### 使用Sling選擇器 {#using-sling-selectors}
+### 使用 Sling 選擇器 {#using-sling-selectors}
 
-以前，使用查詢參數是建立企業Web應用程式時普遍接受的做法。
+過去，業界在建置企業網路應用程式時普遍使用查詢參數。
 
-近年來的趨勢是移除這些URL，讓URL更容易閱讀。 在許多平台上，這包括在網頁伺服器或內容傳送網路(CDN)上實作重新導向，但Sling讓這項作業變得簡單明瞭。 Sling選擇器：
+但近年來，趨勢已改為移除這些參數，以便讓 URL 從字面上更易於理解。在許多平台上，這種趨勢包括在網頁伺服器或內容傳遞網路 (CDN) 上實作重新導向，但 Sling 可讓這項作業變得簡單明瞭。Sling 選擇器：
 
-* 改善URL可讀性。
-* 讓您在調度器上快取頁面，通常會提高安全性。
-* 允許您直接處理內容，而不是擁有檢索內容的通用servlet。 這將授予您應用到儲存庫的ACL和應用到調度程式的篩選器的好處。
+* 改善 URL 可讀性。
+* 讓您在 Dispatcher 上對網頁進行快取，且通常可提高安全性。
+* 您可以直接處理內容，而不是採用一般 servlet 來擷取內容。此特性可讓您將 ACL 的優勢應用在存放庫，並將篩選器應用在 Dispatcher。
 
-#### 使用servlet的選擇器 {#using-selectors-for-servlets}
+#### 針對 servlet 使用選擇器 {#using-selectors-for-servlets}
 
-AEM為我們提供兩種編寫servlet的選項：
+AEM 提供兩種編寫 servlet 的選項：
 
 * **bin** servlet
-* **Sling** servlets
+* **Sling** servlet
 
-下列範例說明如何註冊同時遵循這兩種模式的servlet，以及使用Sling servlet所獲益處。
+下列範例說明如何註冊同時符合以下兩種模式的 servlet，以及使用 Sling servlet 所獲的益處。
 
-#### Bin servlet（向下一級） {#bin-servlets-one-level-down}
+#### Bin servlet (向下一個層級) {#bin-servlets-one-level-down}
 
-**Bin** servlet遵循許多開發人員習慣於使用J2EE程式設計的模式。 Servlet會在特定路徑註冊，在AEM通常位於下方的情況下， `/bin`您會從查詢字串擷取所需的請求參數。
+**Bin** servlet 符合許多開發人員在 J2EE 程式設計中慣用的模式。Servlet 會註冊於特定路徑，這種情況下 AEM 通常位於 `/bin` 下，而您必須從查詢字串擷取所需請求參數。
 
-此類servlet的SCR注釋如下所示：
+此類 servlet 的 SCR 注釋如下所示：
 
 ```
 @SlingServlet(paths = "/bin/myApp/myServlet", extensions = "json", methods = "GET")
 ```
 
-然後，通過方法中包含的對 `SlingHttpServletRequest` 像從查詢字串中提取參 `doGet` 數；例如：
+您接著會透過 `doGet` 方法中所包含的 `SlingHttpServletRequest` 物件從查詢字串中擷取參數；舉例來說：
 
 ```
 String myParam = req.getParameter("myParam");
 ```
 
-所使用的產生URL如下所示：
+最後產生的所用 URL 如下所示：
 
 `https://www.mydomain.com/bin/myApp/myServlet.json?myParam=myValue`
 
-這種方法需要考慮以下幾點：
+採用這種方法需要考量以下幾點：
 
-* URL本身會遺失SEO值。 存取網站（包括搜尋引擎）的使用者不會從URL收到任何語義值，因為URL代表程式化路徑，而非內容階層。
-* URL中存在查詢參數意味著調度程式將無法快取響應。
-* 如果要保護此servlet的安全，您需要在servlet中實施自己的自定義安全邏輯。
-* 必須（小心）配置調度程式才能公開 `/bin/myApp/myServlet`。 僅僅公開 `/bin` 即可存取某些不應對網站訪客開放的servlet。
+* URL 本身會遺失 SEO 值。存取網站 (包括搜尋引擎) 的使用者不會從 URL 收到任何語意值，因為 URL 代表程式設計路徑，而非內容階層。
+* URL 中存在查詢參數，代表 Dispatcher 將無法對回應進行快取。
+* 如果要保護此 servlet 的安全，您需要在 servlet 中實作自己的自訂安全邏輯。
+* Dispatcher 必須經過審慎設定以公開 `/bin/myApp/myServlet`。僅僅公開 `/bin`，會使網站訪客可存取不應向他們開放的特定 servlet。
 
-#### Sling servlets（向下一級） {#sling-servlets-one-level-down}
+#### Sling servlet (向下一個層級) {#sling-servlets-one-level-down}
 
-**Sling** servlets可讓您以相反的方式註冊您的servlet。 您不需要編址servlet並指定您希望servlet根據查詢參數呈現的內容，而是需要指定您想要的內容，並指定應根據Sling選擇器來呈現內容的servlet。
+**Sling** servlet 可讓您以相反的方式註冊 servlet。您不需要指定 servlet 位址並指定要讓 servlet 根據查詢參數轉譯的內容，僅需指出您想要的內容，並指定應根據 Sling 選擇器轉譯內容的 servlet。
 
-此類servlet的SCR注釋如下所示：
+此類 servlet 的 SCR 注釋如下所示：
 
 ```
 @SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json”, methods=”GET”)
 ```
 
-在這種情況下，URL地址（資源的實例）在Servlet中 `myPageType` 可自動訪問的資源。 若要存取，請致電：
+在這種情況下，URL 所處理的資源 (`myPageType` 資源的例項) 可在 servlet 中自動供訪客存取。如要存取該資源，請呼叫：
 
 ```
 Resource myPage = req.getResource();
 ```
 
-所使用的產生URL如下所示：
+最後產生的所用 URL 如下所示：
 
 `https://www.mydomain.com/content/my-brand/my-page.myRenderer.json`
 
 此方法的優點包括：
 
-* 您可以將SEO值加入網站階層和頁面名稱中所呈現的語義。
-* 由於沒有查詢參數，因此調度程式可以快取響應。 此外，對已定址頁面進行的任何更新會在頁面被激活時使此快取失效。
-* 當用戶嘗試訪 `/content/my-brand/my-page` 問此servlet時，應用到的所有ACL都將生效。
-* 調度程式已配置為將此內容作為服務網站的函式。 不需要額外的設定。
+* 您可以控制經由網站階層和網頁名稱中所呈現語意而獲得的 SEO 值。
+* 由於不存在查詢參數，因此 Dispatcher 可以對回應進行快取。此外，已定址網頁一經啟用，對該網頁所做的任何更新都會使這個快取失效。
+* 如有使用者嘗試存取此 servlet，套用到 `/content/my-brand/my-page` 的所有 ACL 都會生效。
+* Dispatcher 將會已預先設定為將此內容當作為網站供應內容的函式來提供，無需額外設定。
 
-### URL重寫 {#url-rewriting}
+### URL 重新寫入 {#url-rewriting}
 
-在AEM中，您的所有網頁都會儲存在下方 `/content/my-brand/my-content`。 雖然從資料庫資料管理的角度來看，這可能很有用，但並不一定是您希望客戶查看網站的方式，而且可能與SEO指引相衝突，以盡可能縮短URL。 此外，您可能是從相同的AEM例項和不同的網域名稱，為多個網站提供服務。
+在 AEM 中，所有網頁都儲存在下方 `/content/my-brand/my-content`。雖然從存放庫資料管理的角度來看，這樣的設定很實用，但卻未必是您希望客戶看到網站的方式，而且可能與 SEO 指導方針有衝突，不符合盡可能縮短 URL 的原則。此外，您可能會從同一個 AEM 例項及不同網域名稱為多個網站供應內容。
 
-本節將檢視AEM中可用來管理這些URL的選項，並以更易讀和SEO友好的方式呈現給使用者。
+本節將說明在 AEM 管理這些 URL 並且以更容易從字面理解的 SEO 建議方法向使用者呈現的可用選項。
 
-#### 虛名URL {#vanity-urls}
+#### 虛名 URL {#vanity-urls}
 
-如果作者想要從第二個位置存取頁面以用於促銷目的，AEM的虛名URL（逐頁定義）可能會很有用。 若要新增頁面的虛名URL，請在 **Sites** Console中導覽至該頁面，並編輯頁面屬性。 在「基本 **** 」索引標籤底部，您會看到可新增虛名URL的區段。 請記住，透過多個URL存取頁面會分割頁面的SEO值，因此應將標準URL標籤新增至頁面，以避免此問題。
+如果作者為了推銷目的而想要讓某個網頁可從第二個位置存取，採用以逐頁方式定義的 AEM 虛名 URL 也許是個好方法。若要新增網頁的虛名 URL，請在&#x200B;**網站**&#x200B;控制台導覽至該頁面，並編輯頁面屬性。在&#x200B;**基本**&#x200B;標籤底部，您會看到可新增虛名 URL 的區段。別忘了，如果某個網頁可透過多個 URL 存取，該頁的 SEO 值就會遭到分割，因此您應將標準 URL 標籤新增至該頁才能避免此問題。
 
-#### 本地化頁面名稱 {#localized-page-names}
+#### 本地化的網頁名稱 {#localized-page-names}
 
-您可能想要向翻譯內容的使用者顯示本地化的頁面名稱。 例如：
+建議向翻譯內容的使用者顯示本地化的網頁名稱 。例如：
 
-* 而不是讓講西班牙語的使用者導覽至：
+* 與其讓講西班牙語的使用者導覽至：
    `www.mydomain.com/es/home.html`
 
-* URL最好：
-   `www.mydomain.com/es/casa.html`.
+* 建議讓 URL 顯示為：
+   `www.mydomain.com/es/casa.html`。
 
-AEM平台上許多可用的本地化工具都需要讓不同地區的頁面名稱相符，才能讓內容保持同步。
+本地化網頁名稱時會面對的困難是，許多 AEM 平台上可用的本地化工具都需要不同位置的網頁有相符的名稱，才能讓內容保持同步。
 
-酒店 `sling:alias` 讓您擁有我們的蛋糕，也可以享用。 `sling:alias` 可以作為屬性添加到任何資源，以允許該資源的別名。 在上例中，您會有：
+`sling:alias` 屬性不僅讓您看得到好處，也享用得到好處。您可以在任何資源中將 `sling:alias` 新增為屬性，允許資源使用別名。在上一個範例中：
 
-* JCR中的頁面：
+* 原本在 JCR 的網頁是：
    `…/es/home`
 
-* 然後新增屬性至：
+* 新增屬性後變成：
    `sling:alias` = `casa`
 
-這可讓AEM轉譯工具（例如多網站管理員）繼續維持以下關係：
+這樣一來，AEM 翻譯工具 (例如多網站管理員) 就能繼續維護以下兩者的關聯性：
 
 * `/en/home`
 
 * `/es/home`
 
-同時允許使用者以其原生語言與頁面名稱互動。
+同時允許使用者以自己的原生語言與網頁名稱互動。
 
 >[!NOTE]
 >
->在編 `sling:alias` 輯頁面屬性時，可使用 [Alias屬性來設定屬性](/help/sites-authoring/editing-page-properties.md#advanced)。
+>[在編輯網頁屬性時，您可使用別名屬性](/help/sites-authoring/editing-page-properties.md#advanced)來設定 `sling:alias` 屬性。
 
 #### /etc/map {#etc-map}
 
-在標準AEM安裝中：
+在標準的 AEM 配置中：
 
-* 用於OSGi配置
-   **Apache Sling Resource Resolver Factory**( `org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`)
+* OSGi 設定為
+   **Apache Sling Resource Resolver Factory**
+( 
+`org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`)
 
-* 屬性
+* 屬性為
    **對應位置** ( `resource.resolver.map.location`)
 
-* defaults to `/etc/map`.
+* 預設為 `/etc/map`。
 
-您可以在此位置新增對應定義，以對應傳入請求、重寫AEM中頁面上的URL，或兩者。
+您可以在此位置新增對應定義，以便對應傳入請求、重新寫入 AEM 中的網頁 URL，或兩者皆執行。
 
-要建立新映射，請在或下的 `sling:Mapping` 此位置中建立新 `/http` 節點 `/https`。 AEM會根據 `sling:match` 此節點 `sling:internalRedirect` 上設定的和屬性，將符合的URL的所有流量重新導向至屬性中指定的 `internalRedirect` 值。
+如要建立新對應，則在此位置的 `/http` 或 `/https` 之下建立新 `sling:Mapping` 節點。AEM 會根據設定在此節點上的 `sling:match` 和 `sling:internalRedirect` 屬性，將相符 URL 的所有流量重新導向至在 `internalRedirect` 屬性指定的值。
 
-雖然這是官方AEM和Sling檔案中記錄的方法，但與直接使用的選項相比，此實作提供的規則運算式支援在範圍上有限 `SlingResourceResolver` 。 此外，以這種方式實施映射可能會導致發送程式快取失效的問題。
+雖然上述方法已記錄在官方 AEM 和 Sling 文件中，但與直接使用 `SlingResourceResolver` 時的可用選項相比，這種實作方法支援的規則運算式卻範圍有限。此外，以這種方式實作對應可能會導致 Dispatcher 快取失效的問題。
 
-以下是此問題發生的範例：
+以下是此問題發生的例子：
 
-1. 使用者瀏覽您的網站並提出要求 `https://www.mydomain.com/my-page.html`
-1. 調度程式將此請求轉發到發佈伺服器。
-1. 使用 `/etc/map`時，發佈伺服器會解析此請求， `/content/my-brand/my-page` 並轉譯頁面。
+1. 使用者造訪您的網站並請求 `https://www.mydomain.com/my-page.html`
+1. Dispatcher 將此請求轉發到發佈伺服器。
+1. 發佈伺服器使用 `/etc/map` 將此請求解析到 `/content/my-brand/my-page`，並轉譯網頁。
 
-1. 調度程式在中快取響 `/my-page.html` 應，並將響應返回給用戶。
-1. 內容作者會變更此頁面並加以啟動。
-1. 調度器刷新代理髮送失效請求 `/content/my-brand/my-page`**。**由於調度程式在此路徑上沒有快取頁面，因此舊內容將保持快取並過時。
+1. Dispatcher 在 `/my-page.html` 對回應進行快取，並將回應回傳給使用者。
+1. 內容作者對此網頁作出變更並加以啟用。
+1. Dispatcher 排清代理程式傳送 `/content/my-brand/my-page`**的無效請求。** 由於 Dispatcher 在此路徑上沒有經過快取的網頁，因此系統會維持對舊內容進行快取，導致內容過時。
 
-有些方法可設定自訂的分派清單規則，將較短的URL對應至較長的URL，以便快取失效。
+有些方法可以設定自訂發送排清規則，針對快取失效將較短的 URL 對應至較長的 URL。
 
-不過，管理這個問題的方法也比較簡單：
+不過，另外也有更簡單的方法可用於管理這個問題：
 
-1. **SlingResourceResolver規則**
+1. **SlingResourceResolver 規則**
 
-   使用Web主控台（例如localhost:4502/system/console/configMgr），您可以設定Sling資源解析程式：
+   您可以使用 Web 控制台 (例如 localhost:4502/system/console/configMgr) 設定 Sling Resource Resolver：
 
    * **Apache Sling Resource Resolver Factory**
-      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`.
-   建議您建立將URL縮短為規則運算式所需的映射，然後在您建立的OsgiConfignode下定義這 `config.publish`些設定。
 
-   您不需在中定義您 `/etc/map`的映射，而是可以直接指派給屬性 **URL映射** ( `resource.resolver.mapping`):
+      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`。
+   建議您建置所需對應來將 URL 縮短為規則運算式，然後在包含在您所建置項目的 OsgiConfignode `config.publish` 下定義這些設定。
+
+   您不必在 `/etc/map` 定義對應，因為這些對應可以直接指派給屬性&#x200B;**URL 對應** ( `resource.resolver.mapping`)：
 
    ```xml
    resource.resolver.mapping="[/content/my-brand/(.*)</$1]"
    ```
 
-   在這個簡單範例中，您會從 `/content/my-brand/` 任何URL的開頭移除它。
+   在這個簡單範例中，您會從任何存在 `/content/my-brand/` 的 URL 開頭中將之移除。
 
-   這會轉換URL:
+   於是 URL 會：
 
    * 從 `/content/my-brand/my-page.html`
-   * to just `/my-page.html`
-   這符合建議的將URL盡量短的做法。
+   * 轉換成 `/my-page.html`
 
-1. **對應頁面上的URL輸出**
+   這個結果就符合將 URL 盡量縮短的建議做法。
 
-   在Apache Sling Resource Resolver中定義映射後，您需要在元件中使用這些映射，以確保您在頁面上輸出的URL簡短且整齊。 您可以使用的map函式來完成此操作 `ResourceResolver`。
+1. **在網頁上對應 URL 輸出**
 
-   例如，如果您實作的自訂導覽元件會列出目前頁面的子系，則可使用如下對應方法：
+   在 Apache Sling Resource Resolver 中定義對應後，您必須在元件中使用這些對應，確保您輸出在網頁上的 URL 簡短且整齊。您可以使用 `ResourceResolver` 的對應函式來完成此操作。
+
+   舉例來說，如果您要實作一項自訂導覽元件來列出目前頁面的子項，則可使用如下對應方法：
 
    ```
    for (Page child : children) {
@@ -288,11 +296,11 @@ AEM平台上許多可用的本地化工具都需要讓不同地區的頁面名�
 
 #### Apache HTTP Server mod_rewrite {#apache-http-server-mod-rewrite}
 
-目前，您已實作映射與元件中的邏輯，以便在將URL輸出至我們的頁面時使用這些映射。
+至此，您已與元件中的邏輯一併實作完成對應，以便在將 URL 輸出至頁面時使用這些對應。
 
-拼圖的最後一塊，是當這些縮短的URL進入調度程式時，它們就會 `mod_rewrite` 在其中運作。 使用URL的最大優 `mod_rewrite` 點是，URL在傳送到調度器模 *塊之前* ，會映射回其長格式。 這表示分派器會從發佈伺服器要求長URL，並據以快取它。 因此，來自發佈伺服器的任何調度器清除請求都可以成功使此內容無效。
+最後一個步驟，就是在這些縮短的 URL 進入 `mod_rewrite` 會發揮作用的 Dispatcher 時處理這些 URL。使用 `mod_rewrite` 的最大優點，就是 URL 在傳送到 Dispatcher 模組&#x200B;*之前*&#x200B;會先重新對應到原本的較長格式。也就是說，Dispatcher 會從發佈伺服器請求長 URL 並加以進行快取。因此，任何來自發佈伺服器的 Dispatcher 排清請求都可以成功使該內容無效。
 
-要實施這些規則，可以在 `RewriteRule` Apache HTTP server配置的虛擬主機下添加元素。 如果您想從前例展開縮短的URL，則可實作如下的規則：
+要實作這些規則，您可以在 Apache HTTP 伺服器設定的虛擬主機下新增 `RewriteRule` 元素。如果您想要拉長上個範例中縮短的 URL，則可實作如下規則：
 
 ```
 <VirtualHost *:80>
@@ -303,83 +311,83 @@ AEM平台上許多可用的本地化工具都需要讓不同地區的頁面名�
 </VirtualHost>
 ```
 
-### 標準URL標籤 {#canonical-url-tags}
+### 標準 URL 標籤 {#canonical-url-tags}
 
-標準URL標籤是置入HTML檔案標題的連結標籤，可釐清搜尋引擎在建立內容索引時應如何處理頁面。 他們提供的好處是，即使頁面的URL可能包含差異，也能確保（不同版本的）頁面的索引相同。
+標準 URL 標籤是放置在 HTML 文件開頭的連結標籤，可釐清搜尋引擎在建立內容索引時應如何處理網頁。它們可帶來的好處是，即使連向網頁的 URL 可能有些差異，也可確保系統對其他版本的網頁建立相同索引。
 
-例如，如果網站要提供適合印表機的頁面版本，搜尋引擎可能會將此頁面與一般頁面版本分開建立索引。 標準標籤會告訴搜尋引擎它們是相同的。
+舉例來說，如果網站想要提供適合列印的網頁版本，搜尋引擎可能會對此版本與一般版本分開建立索引。但標準標籤會告訴搜尋引擎兩者是相同版本。
 
 範例：
 
 * https://www.mydomain.com/my-brand/my-page.html
 * https://www.mydomain.com/my-brand/my-page.print.html
 
-兩者都會將下列標籤套用至頁面的標題：
+兩者都會在網頁開頭套用下列標籤：
 
 ```xml
 <link rel=”canonical” href=”my-brand/my-page.html”/>
 ```
 
-可以 `href` 是相對的或絕對的。 程式碼應包含在頁面標籤中，以判斷頁面的標準URL並輸出此標籤。
+`href` 可以是相對或絕對的值。程式碼應包含在網頁標記中，以便判斷網頁的標準 URL 並輸出此標籤。
 
-### 配置分發程式以區分大小寫 {#configuring-the-dispatcher-for-case-insensitivity}
+### 將 Dispatcher 設定為不區分大小寫 {#configuring-the-dispatcher-for-case-insensitivity}
 
-最佳實務是使用小寫字母來支援所有頁面。 但是，當使用者使用其URL中的大寫字母存取您的網站時，您不希望使用者取得404。 因此，Adobe建議您在Apache HTTP Server設定中新增重寫規則，將所有傳入的URL對應至小寫。 此外，內容作者必須接受訓練，才能建立其小寫名稱的頁面。
+使用小寫字母來提供所有網頁是建議的最佳作法。但是，您也不應讓使用者在 URL 中輸入大寫字母來存取網站時，收到 404 錯誤訊息。因此，Adobe 建議您在 Apache HTTP 伺服器設定中新增重新寫入規則，以便將所有傳入的 URL 對應至小寫。此外，內容作者必須接受訓練以小寫名稱建立網頁。
 
-要配置Apache以強制所有入站通信量使用小寫，請將以下內容添加到配 `vhost` 置中：
+如要設定 Apache 以強制所有轉入流量都轉換為小寫，請將以下內容新增到 `vhost` 設定中：
 
 ```xml
 RewriteEngine On
 RewriteMap lowercase int:tolower
 ```
 
-此外，將下列項目新增至檔案的最上 `htaccess` 方：
+此外，將下列內容新增至 `htaccess` 檔案的最上方：
 
 ```xml
 RewriteCond $1 [A-Z]
 RewriteRule ^(.*)$ /${lowercase:$1} [R=301,L]
 ```
 
-### 實作robots.txt以保護開發環境 {#implementing-robots-txt-to-protect-development-environments}
+### 實作 robots.txt 以保護開發環境 {#implementing-robots-txt-to-protect-development-environments}
 
-搜尋引 *擎* ，在搜尋您的網站 `robots.txt` 之前，應先檢查您網站根目錄中是否有檔案。 這裡應該強調，因為雖然Google、Yahoo或Bing等主要搜尋引擎都尊重這一點，但有些外國搜尋引擎卻不尊重。
+搜尋引擎在對網站進行編目之前，*必須*&#x200B;先檢查網站的根目錄中是否有 `robots.txt` 檔案。我們在此強調「必須」，是因為雖然 Google、Yahoo 或 Bing 等主流搜尋引擎都會這麼做，但有些外國搜尋引擎卻並不如此。
 
-封鎖對整個網站的存取最簡單的方式，是將名為根網站的檔 `robots.txt` 案置於下列內容：
+封鎖使用者存取整個網站的最簡單方式，是將名為 `robots.txt` 的檔案置於網站根目錄中，且含有以下內容：
 
 ```xml
 User-agent: *
 Disallow: /
 ```
 
-或者，在即時環境中，您可以選擇不允許某些不希望建立索引的路徑。
+或者，您可以在即時環境中選擇不允許某些不希望建立索引的路徑。
 
-將檔案置於網站根 `robots.txt` 目錄時的注意事項是，分派程式清除請求可能會清除此檔案，而URL映射可能會將網站根目錄置於與Apache HTTP Server設定中所定義的 `DOCROOT` 不同之處。 因此，通常將此檔案放置在作者例項的根目錄上，並複製到發佈例項。
+將 `robots.txt` 檔案置於網站根目錄時應注意，Dispatcher 排清請求可能會清除此檔案，且 URL 對應可能會將網站根目錄置於與 Apache HTTP 伺服器設定中已定義的 `DOCROOT` 不同之處。因此，常見的方式是將此檔案放置在根目錄的作者例項上，並複製到發佈例項。
 
-### 在AEM上建立XML網站地圖 {#building-an-xml-sitemap-on-aem}
+### 在 AEM 上建置 XML Sitemap {#building-an-xml-sitemap-on-aem}
 
-Crawler使用XML網站地圖，以更好地瞭解網站的結構。 雖然無法保證提供網站地圖可改善SEO排名，但這是一項經商同意的最佳實務。 您可以手動維護網站伺服器上的XML檔案以用作網站地圖，但建議以程式設計方式產生網站地圖，以確保當作者建立新內容時，網站地圖會自動反映其變更。
+編目程式可透過 XML Sitemap 加強瞭解網站的結構。雖然提供 Sitemap 並不保證可改善 SEO 排名，但這是一項普遍採用的最佳作法。您可以手動在網頁伺服器上維護 XML 檔案，以便將它當作 Sitemap 使用，但建議以程式設計方式產生 Sitemap，確保當作者建立新內容時，Sitemap 會自動反映變更。
 
-若要以程式設計方式產生sitemap，請註冊Sling Servlet監聽呼 `sitemap.xml` 叫。 然後，Servlet可以使用通過servlet API提供的資源查看當前頁及其子頁，輸出XML。 然後，XML將在調度程式中快取。 此位置應在檔案的sitemap屬性中引 `robots.txt` 用。 此外，需要實作自訂的清除規則，以確保每當啟動新頁面時，都能清除此檔案。
+若要以程式設計方式產生 Sitemap，請針對 `sitemap.xml` 呼叫註冊 Sling Servlet 監聽。於是，Servlet 就可使用經由 Servlet API 提供的資源查看當前網頁及其子頁，進而輸出 XML。然後，系統就會在 Dispatcher 對 XML 進行快取。系統應在 `robots.txt` 檔案的 Sitemap 屬性中參照此位置。此外，您必須實作自訂排清規則，確保每次啟用新網頁時都能排清此檔案。
 
 >[!NOTE]
 >
->您可以註冊Sling Servlet，以監聽具有副檔名 `sitemap` 的選取器 `xml`。 這將導致Servlet在任何請求URL時處理請求，該URL會結束於：
+>您可以註冊 Sling Servlet，監聽副檔名為 `xml` 的選擇器 `sitemap`。這樣一來，每當結尾如下所示的 URL 受到請求時，Servlet 就會處理請求：
 >    `/<path-to>/page.sitemap.xml`
-然後，您就可以從請求中取得請求的資源，並使用JCR API從內容樹中的該點產生網站地圖。
-這樣做的好處是，當您有多個網站從同一個實例中提供服務時。 請求將產 `/content/siteA.sitemap.xml` 生網站地圖，而請 `siteA` 求將產生網站地圖，而不需 `/content/siteB.sitemap.xml``siteB` 要編寫其他程式碼。
+接著，您就可以從請求中取得受請求的資源，並使用 JCR API 在內容樹狀結構中從該時間點產生 Sitemap。
+如果您從同一個例項為多個網站提供內容，採用這種方法就能受益。`/content/siteA.sitemap.xml` 的請求會產生 `siteA` Sitemap，而 `/content/siteB.sitemap.xml` 的請求則會產生 `siteB` Sitemap，不需要編寫其他程式碼。
 
-### 建立舊版URL的301重新導向 {#creating-redirects-for-legacy-urls}
+### 為舊版 URL 建立 301 重新導向 {#creating-redirects-for-legacy-urls}
 
-在以新結構啟動網站時，在Apache HTTP server中實作和測試301重新導向很重要，原因有二：
+以新結構啟動網站時，務必在 Apache HTTP 伺服器中實作並測試 301 重新導向，理由有二：
 
-* 舊版URL已累積了一段時間的SEO值。 透過實作重新導向，搜尋引擎可將此值套用至新URL。
-* 您網站的使用者可能已建立這些頁面的書籤。 透過實作重新導向，您可以確定將使用者導向新網站上最符合他們嘗試在舊網站上瀏覽位置的頁面。
+* 舊版 URL 已累積一段時間的 SEO 值了。實作重新導向，搜尋引擎才可將此值套用至新 URL。
+* 您的網站使用者可能已建立連向這些網頁的書籤了。實作重新導向，您才能確實將使用者導向新網站上與他們在嘗試進入舊網站時所前往位置最相符的網頁。
 
-請務必檢查後面的其他資源區段，以取得實作301重新導向的指示，以及測試重新導向是否如預期般運作的工具。
+請務必參閱下方的其他資源章節，瞭解實作 301 重新導向的操作指示，並以工具測試重新導向是否如期運作。
 
 ## 其他資源 {#additional-resources}
 
-如需詳細資訊，請參閱下列其他資源：
+如需詳細資訊，請參考下列其他資源：
 
 * [資源映射](/help/sites-deploying/resource-mapping.md)
 * [https://moz.com/blog/seo-cheat-sheet-anatomy-of-a-url](https://moz.com/blog/seo-cheat-sheet-anatomy-of-a-url)
