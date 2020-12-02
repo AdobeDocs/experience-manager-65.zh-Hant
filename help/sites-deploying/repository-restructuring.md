@@ -11,11 +11,14 @@ topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
 translation-type: tm+mt
 source-git-commit: 97b2da315fac6f84fcba6d4464bf8dd1d690cfd1
+workflow-type: tm+mt
+source-wordcount: '550'
+ht-degree: 0%
 
 ---
 
 
-# AEM 6.5中的資料庫重組{#repository-restructuring-in-aem}
+# AEM 6.5{#repository-restructuring-in-aem}中的資料庫重組
 
 ## 簡介 {#introduction}
 
@@ -28,21 +31,21 @@ source-git-commit: 97b2da315fac6f84fcba6d4464bf8dd1d690cfd1
 * AEM產品程式碼永遠會放在/libs中，而自訂程式碼不能覆寫它
 * 自訂代碼應放置在/apps、/content和/conf中
 
-## 對6.5升級的影響 {#impact-on-upgrades}
+## 對6.5升級的影響{#impact-on-upgrades}
 
 升級至AEM 6.5時，/etc下的大部分內容會複製到儲存庫中的其他資料夾。 這些新位置是參考內容的首選位置。 不過，我們已嘗試將AEM 6.5升級版向後相容於/etc檔案夾中的先前位置，因此在大多數情況下，舊位置仍會繼續由AEM程式碼參考，直到在客戶的應用程式中主動進行變更（在許多情況下是手動進行）。 從時間軸的角度來看，有兩類變更：
 
 * 有了6.5升級版——少數幾項重組變更無法向後相容，因此應規劃並實作為AEM 6.5升級的一部分。
 * 未來升級前——絕大多數的重組更改都可以延遲到將來升級後的某個時間。 如前所述，AEM 6.5程式碼將繼續參照舊位置，直到修改作為客戶版本的一部分實施為止。 雖然沒有強制變更的時間表，但建議在未來升級之前進行，因為未來的功能可能會依賴參考的新位置。 此外，特定功能的檔案將依慣例參照新位置，因此，如果仍在使用舊位置，則可能會令人混淆。
 
-### 重組指導 {#restructuring-guidance}
+### 重組指南{#restructuring-guidance}
 
 在規劃升級至AEM 6.5時，應參考下列各解決方案頁面，以評估工作成果：
 
 * [所有AEM解決方案共同的儲存庫重組](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md)
 * [AEM Sites儲存庫重組](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md)
 * [AEM Assets儲存庫重組](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md)
-* [AEM Assets Dynamic media儲存庫重組](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
+* [AEM Assets Dynamic Media儲存庫重組](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
 * [AEM Forms資料庫重組](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)
 * [AEM Communities儲存庫重組](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md)
 * [AEM Commerce儲存庫重組](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
