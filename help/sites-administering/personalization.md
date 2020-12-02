@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1684'
+ht-degree: 1%
 
 ---
 
 
 # 個性化{#personalization}
 
-## 什麼是個人化？ {#what-is-personalization}
+## 什麼是個人化？{#what-is-personalization}
 
 現在，有越來越多的內容可供使用，不論是透過網際網路、外部網站或內部網路網站。
 
@@ -27,7 +30,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **使用者**
 
-* 擁有個人和群組的個人檔案。 這些描述檔包含一些特性（例如工作描述、位置、興趣），可用來個人化他們可看到的內容。
+* 擁有個人和群組的個人檔案。 這些描述檔包含一些特性（例如工作描述、位置、興趣），可用來個人化他們可看見的內容。
 * 採取行動。 然後可根據行為規則來分析和比對這些內容，以量身打造其所見內容。
 
 **內容**
@@ -52,7 +55,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 簡單篩選：根據用戶和／或組級別的預定義配置檔案進行選擇。
 * 協作／建議篩選：用戶行為根據預定義規則進行註冊。 這些規則是基於與志同道合的個人觀察到的行為。 所收集的資訊用於定制向用戶顯示的資訊，特別是以建議的形式顯示的資訊。
 
-## 如何及何時使用個人化？ {#how-and-when-can-personalization-be-used}
+## 如何及何時使用個人化？{#how-and-when-can-personalization-be-used}
 
 個人化可在許多情況下使用，例如：
 
@@ -63,7 +66,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **特定、有限的目標用戶組（外部網）**
 
-* 用戶需要登錄才能獲得授權；這會連結至個人化所需資訊的個人檔案；可能的詳細資訊，例如其位置、與產品的關係、使用記錄、預算責任等。
+* 用戶需要登錄才能獲得授權；這將與提供個人化所需資訊的個人檔案連結；可能的詳細資訊，例如其位置、與產品的關係、使用記錄、預算責任等。
 * 這類例項可以跨越網站，例如：
 * 向其市場中高度專業化的部門提供網站的公司，例如為醫生提供專業網站的製藥公司。
 * 提供網站，讓客戶可檢視往來帳戶和帳單資訊的公司；例如，電話供應商。
@@ -74,9 +77,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **搜尋網站**
 
-* 許多主要的搜尋引擎網站都有功能強大的分析工具，可記錄使用者行為、使用的搜尋詞以及實際造訪的網站。 然後，這用於自訂所提供的內容——特別是關於顯示廣告。
+* 許多主要的搜尋引擎網站都有功能強大的分析工具，可記錄使用者行為、使用的搜尋詞以及實際造訪的網站。 然後，這用於自訂所提供的內容——尤其是顯示廣告。
 
-### 個人化的優勢及注意事項 {#strengths-of-personalization-and-points-to-consider}
+### 個人化的優勢和注意事項{#strengths-of-personalization-and-points-to-consider}
 
 以下是應使用個人化的理由：
 
@@ -118,7 +121,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 許多用戶都對資料保護和安全性感到擔心。 尤其是關於追蹤其在網路上瀏覽時的行為時擷取的資料。
 
-## 個人化與存取 {#personalization-and-access}
+## 個人化與存取{#personalization-and-access}
 
 個人化應與存取控制分開考慮，但它們確實相互關聯。
 
@@ -126,7 +129,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 不過，存取控制可用來建立個人化的形式。 如果您允許或拒絕使用者存取內容，這必然會影響使用者選擇可用的內容，進而個人化其網路體驗。
 
-## 適用於個人化的元件 {#components-available-for-personalization}
+## 個人化{#components-available-for-personalization}的可用元件
 
 AEM針對個人化提供了各種元件。 有些允許使用者登入並編輯其設定檔，有些則允許使用者設定特定頁面：
 
@@ -140,7 +143,7 @@ AEM針對個人化提供了各種元件。 有些允許使用者登入並編輯�
 | 表單核取方塊群組 | 將多個項目組織成一個清單，前面加上核取方塊。 使用者可以選取多個核取方塊。 |
 | 表單下拉式清單 | 將多個項目組織成下拉式清單。 「多選項」(Multi Selectable)開關指定是否可從清單中選擇多個元素。 |
 | 表單結束 | 終止表單定義。 |
-| 表單檔案上傳 | 可讓使用者將檔案上傳至伺服器的上傳元素。 |
+| 表單檔案上傳 | 允許用戶將檔案上載到伺服器的上載元素。 |
 | 表單隱藏欄位 | 此欄位不會顯示給使用者。 它可用來將值傳送至用戶端，再傳回至伺服器。 此欄位不應受到任何限制。 |
 | 「表單影像」按鈕 | 以影像形式呈現的表單的額外送出按鈕。 |
 | 表單密碼欄位 | 與文字欄位相同，但僅允許單行，而且在欄位中看不到使用者輸入的文字。 |
@@ -161,11 +164,11 @@ AEM針對個人化提供了各種元件。 有些允許使用者登入並編輯�
 | 標記雲 | 標籤雲端，以圖形方式顯示網站中標籤的選取範圍 |
 | Teaser | 顯示在首頁面上的內容（通常是影像），以「逗弄」使用者存取基礎內容。 |
 
-## 個人化與社群內容 {#personalization-and-community-content}
+## 個人化與社群內容{#personalization-and-community-content}
 
-社群功能（例如部落格、論壇和日曆）可建立社群內容，通常稱為使用者產生的內容(UGC)。 當在包含多個AEM例項(發佈場 [](/help/communities/topologies.md))的發佈環境中輸入UGC時，一個主要問題是如何在所有例項間同步UGC。
+社群功能（例如部落格、論壇和日曆）可建立社群內容，通常稱為使用者產生的內容(UGC)。 當在包含多個AEM例項([publish farm](/help/communities/topologies.md))的發佈環境中輸入UGC時，一個主要問題就是如何在所有例項間同步UGC。
 
-有了 [AEM Communities 6.1擴充功能](/help/communities/overview.md) ，這個問題就可以透過UGC的 [通用商店解決](/help/communities/working-with-srp.md)。 在個人化方面，社群包含 [Social登入](/help/communities/social-login.md) -提供網站訪客登入Facebook和Twitter的選項。
+透過[AEM Communities 6.1](/help/communities/overview.md)擴充功能，此問題可透過使用UGC](/help/communities/working-with-srp.md)的[通用商店來解決。 在個人化方面，社群包含[社交登入](/help/communities/social-login.md) —— 提供網站訪客登入Facebook和Twitter的選項。
 
 若沒有社群擴充功能，可探索各種解決UGC一致性問題的方法：
 
