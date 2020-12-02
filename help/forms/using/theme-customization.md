@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 主題自訂 {#theme-customization}
+# 主題自訂{#theme-customization}
 
 您可以自訂HTML程式碼和CSS檔案，為AEM Forms應用程式提供獨特的組織特定外觀和感覺。 例如，您可以變更工作或「起點」的背景顏色和高度。 以下範例提供變更的指示：
 
@@ -30,17 +30,17 @@ ht-degree: 0%
 
 1. 開啟您的專案。
 
-   * 若為iOS，請在Xcode `Capture.xcodeproj` 中開啟
+   * 對於iOS，在Xcode中開啟`Capture.xcodeproj`
    * 若是Android，請在Eclipse中開啟Android專案。
-   * 在Windows中，在Visual `MWSWindows.sln` Studio中開啟。
+   * 對於Windows，請在Visual Studio中開啟`MWSWindows.sln`。
 
 1. 導覽至範本檔案夾。
 
-   * 在Xcode中，導覽至「 **Capture > www > wsmobile > js > runtime > templates** 」檔案夾。
-   * 在Eclipse中，導覽至「資 **產> www > wsmobile > js >執行階段>範本」資料夾** 。
-   * 在Visual Studio中，導覽至「 **MWSwindows > www > wsmobile > js > runtime > templates」檔案夾** 。
+   * 在Xcode中，導覽至「**擷取> www > wsmobile > js > runtime > templates**」檔案夾。
+   * 在Eclipse中，導覽至&#x200B;**assets > www > wsmobile > js > runtime > templates**&#x200B;資料夾。
+   * 在Visual Studio中，導覽至&#x200B;**MWSwindows > www > wsmobile > js > runtime > templates**&#x200B;資料夾。
 
-1. 開啟檔 `template.html` 案以進行編輯。
+1. 開啟`template.html`檔案進行編輯。
 1. 找到下列字串：
 
    ```jsp
@@ -51,9 +51,9 @@ ht-degree: 0%
                  <%} else
    ```
 
-   以取代 `<%`。
+   將其更換為`<%`。
 
-1. 在檔案中找到下列程 `template.html` 式碼：
+1. 在`template.html`檔案中找到下列程式碼：
 
    ```jsp
    <ul id="task_menu_list">
@@ -75,13 +75,13 @@ ht-degree: 0%
 
 1. 導覽至css資料夾。
 
-   * 在Xcode中，導覽至「 **Capture > www > wsmobile > css」**。
-   * 在Eclipse中，導覽至 **資產> www > wsmobile > css**。
-   * 在Visual Studio中，導覽至 **MWSwindows > www > wsmobile > css**。
+   * 在Xcode中，導覽至「**Capture > www > wsmobile > css**」。
+   * 在Eclipse中，導覽至&#x200B;**assets > www > wsmobile > css**。
+   * 在Visual Studio中，導覽至&#x200B;**MWSwindows > www > wsmobile > css**。
 
-1. 開啟檔 `_style.css` 案以進行編輯。
-1. 對於「背景」影像，請 `#323232` 變更為 `#fff`。
-1. 儲存變更並關閉 `_style.css` 檔案。
+1. 開啟`_style.css`檔案進行編輯。
+1. 對於背景影像，請將`#323232`更改為`#fff`。
+1. 保存更改並關閉`_style.css`檔案。
 1. 開啟AEM Forms應用程式。
 
    AEM Forms應用程式現在會顯示指示而非說明。
