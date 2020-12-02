@@ -11,16 +11,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 0%
 
 ---
 
 
-# 刪除域 {#delete-a-domain}
+# 刪除域{#delete-a-domain}
 
 使用「域管理」頁可以將現有域標籤為過時。
 
 如果建立的域與刪除的域同名，則刪除的域將恢復，並恢復其中包含的資訊。 無法刪除DefaultDom網域。
 
-1. 在管理控制台中，按一 **[!UICONTROL 下「設定>使用者管理>網域管理]**」。
-1. 選擇要刪除的域的複選框，按一下「刪 **[!UICONTROL 除]**」，然後按一下「 **[!UICONTROL 確定」]**。
+1. 在管理控制台中，按一下「設定>使用者管理>網域管理&#x200B;**[!UICONTROL 」。]**
+1. 選擇要刪除的域的複選框，按一下&#x200B;**[!UICONTROL Delete]** ，然後按一下&#x200B;**[!UICONTROL OK]**。
 
