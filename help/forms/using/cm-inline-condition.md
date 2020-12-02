@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 內嵌條件，並在互動式通訊和信件中重複{#inline-condition-and-repeat-in-interactive-communications-and-letters}
+# 內嵌條件，並在互動式通訊和字母中重複{#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
-## 內嵌條件 {#inline-conditions}
+## 內嵌條件{#inline-conditions}
 
 AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴與表單資料模型（在互動式通訊中）或資料字典（以字母表示）相關的內容或資料的文字。 內嵌條件會根據條件評估為true或false來顯示特定內容。
 
@@ -32,15 +32,15 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 * [通信管理概述](/help/forms/using/cm-overview.md)
 * [互動式通訊中的文字](../../forms/using/texts-interactive-communications.md)
 
-### 範例：在互動式通訊中使用規則條件化內嵌文字 {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
+### 範例：使用規則在互動式通訊中條件化內嵌文字{#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
 
 若要在互動式通訊中條件化句子、段落或文字字串，您可以在適當的文字檔案片段中建立規則。 下列範例使用規則，只向互動式通訊的美國收件者顯示免付費電話。
 
-如需詳細資訊，請參閱互動式通訊中文字 [中的建立規則](../../forms/using/texts-interactive-communications.md)。
+如需詳細資訊，請參閱互動式通訊中[文字中的「建立規則」。](../../forms/using/texts-interactive-communications.md)
 
 在互動式通訊和代理中加入文字片段後，會使用代理UI來準備互動式通訊後，就會評估收件者的（表單資料模型）資料，而文字只會顯示給美國的收件者。
 
-### 範例：在字母中使用內嵌條件來呈現適當的位址  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### 範例：在字母中使用內嵌條件來呈現適當的地址{#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 通過在相應的文本模組中插入內嵌條件，可以在字母中插入內嵌條件。 下列範例使用兩個條件來評估並顯示以DD元素「性別」為基礎的信件中的適當位址Sir或Ma&#39;am。 使用類似的步驟，您可以建立其他條件。
 
@@ -48,7 +48,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 >
 >如果您的現有資產包含舊的條件／重複運算式（6.2 SP1 CFP 4之前版本），則資產會顯示舊的條件語法並重複。 但是，舊的條件／重複操作有效。 新舊條件／重複表達式相互相容，以建立新舊條件／重複表達式的嵌套混合。
 
-1. 在相關的文本模組中，選擇要條件化的文本部分並點選「條 **件**」。
+1. 在相關文本模組中，選擇要條件化的文本部分，然後點選&#x200B;**條件**。
 
    ![1_selecttext](assets/1_selecttext.png)
 
@@ -58,7 +58,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
    >[!NOTE]
    >
-   >無法儲存空白或無效的條件運算式。 必須有有效的條件運算式內 `${}` 部才能儲存運算式。
+   >無法儲存空白或無效的條件運算式。 `${}`內必須有有效的條件運算式，才能儲存運算式。
 
 1. 請執行下列動作來建立條件，以評估選取／條件化文字是否出現在字母中，然後點選核取標籤以儲存運算式：
 
@@ -68,13 +68,13 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
    ${DD_creditcard_Gender=="Male"}
    ```
 
-   如需有關建立運算式的詳細資訊，請參閱「運 **算式產生器」中的「使用運算式產生器建立運算式** 和遠端 [函式」](../../forms/using/expression-builder.md)。 運算式中指定的值必須支援資料字典中的元素。 如需詳細資訊，請參 [閱資料字典](../../forms/using/data-dictionary.md)。
+   如需有關建立運算式的詳細資訊，請參閱[運算式產生器](../../forms/using/expression-builder.md)中的&#x200B;**使用運算式產生器**&#x200B;建立運算式和遠端函式。 運算式中指定的值必須支援資料字典中的元素。 如需詳細資訊，請參閱[資料字典](../../forms/using/data-dictionary.md)。
 
    插入條件後，可將滑鼠指標暫留在條件左側的控點上，以檢視該條件。 您可以點選控點來檢視條件的快顯功能表，讓您編輯或移除條件。
 
-   ![3_slaph Handle](assets/3_hoverhandle.png) ![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
+   ![3_stlaff handle](assets/3_hoverhandle.png) ![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
 
-1. 選取文字以插入類似條件 `Ma'am`。
+1. 選擇文本`Ma'am`插入類似條件。
 
    ```javascript
    ${DD_creditcard_Gender == "Female"}
@@ -85,7 +85,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
    * 在預覽含範例資料的字母時，根據相關資料字典建立範例XML資料檔案。
    * 附加至相關資料字典的XML資料檔案。
 
-   如需詳細資訊，請參 [閱資料字典](../../forms/using/data-dictionary.md)。
+   如需詳細資訊，請參閱[資料字典](../../forms/using/data-dictionary.md)。
 
    ![5_letteroutput](assets/5_letteroutput.png)
 
@@ -95,7 +95,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
 此外，您可以在重複構造中指定規則／條件，以條件化在交互通信／字母中呈現的資訊／條目。
 
-### 範例：在互動式通訊中使用重複，以格式化、建構及顯示信用卡交易清單 {#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 範例：在互動式通訊中使用重複，以格式化、建構及顯示信用卡交易清單{#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
 以下範例提供使用重複來建構並轉換互動式通訊中信用卡交易的步驟。
 
@@ -139,7 +139,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
    ![screen_shot_2018-03-09at155516copy](assets/screen_shot_2018-03-09at155516copy.png)
 
-### 範例：以信函格式、結構和顯示信用卡交易清單重複使用 {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 範例：以信函格式、結構重複使用，並顯示信用卡交易清單{#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
 以下範例提供使用重複來建構並轉換信用卡交易的步驟。 使用類似的步驟，您可以在不同的情況下使用重複。
 
@@ -172,7 +172,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
    ![2_repeat_selecttext](assets/2_repeat_selecttext.png)
 
-1. 點選「 **重複**」。 出現「重複」對話框，其中包含空的內嵌條件。
+1. 點選&#x200B;**重複**。 出現「重複」對話框，其中包含空的內嵌條件。
 
    ![3_repeat_dialog](assets/3_repeat_dialog.png)
 
@@ -182,7 +182,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
    ${DD_creditcard_TransactionAmount > 0.5}
    ```
 
-   否則，如果您不需要選擇性地轉譯資訊（此處的交易），請在對話方塊中刪除下列項目，將條件保留為空白： `${}`. 當重複運算式視窗為空時（不需要重複時不含${}），或包含有效的重複條件時，會啟用儲存重複運算式。
+   否則，如果您不需要選擇性地轉譯資訊（此處的交易），請在對話方塊中刪除下列項目，將條件保留為空白：`${}`。 當重複運算式視窗為空時（不需要重複時不含${}），或包含有效的重複條件時，會啟用儲存重複運算式。
 
 1. 選取分隔符號以格式化動態文字，並點選核取標籤以儲存：
 
@@ -202,7 +202,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
    * 在預覽含範例資料的字母時，根據相關資料字典建立範例XML資料檔案。
    * 附加至相關資料字典的XML資料檔案。
 
-   如需詳細資訊，請參 [閱資料字典](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)。
+   如需詳細資訊，請參閱[資料字典](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)。
 
    ![6_repeatoutputpreview](assets/6_repeatoutputpreview.png)
 
@@ -212,9 +212,9 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
    >
    >您只能在建立或編輯相關文字模組時插入條件並重複。 在預覽字母時，雖然您可以編輯文字模組，但無法插入條件或重複。
 
-## 使用內嵌條件並重複——某些使用案例  {#using-inline-condition-and-repeat-some-use-cases}
+## 使用內嵌條件並重複——某些使用案例{#using-inline-condition-and-repeat-some-use-cases}
 
-### 在條件中重複 {#repeat-within-condition}
+### 在條件{#repeat-within-condition}內重複
 
 您可能需要在條件內使用重複。 「對應管理」允許您在內嵌條件結構內使用重複。
 
@@ -230,7 +230,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 * 重複內的一個或多個條件
 * 條件和在條件或重複內重複的組合
 
-### 空的內嵌條件 {#empty-inline-condition}
+### 空的內嵌條件{#empty-inline-condition}
 
 您可能需要稍後插入空白的內嵌條件以及內嵌文字和DD元素。 「通信管理」允許您執行此操作。
 
