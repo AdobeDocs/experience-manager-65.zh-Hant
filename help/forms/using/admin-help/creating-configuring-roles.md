@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
 translation-type: tm+mt
 source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+workflow-type: tm+mt
+source-wordcount: '2556'
+ht-degree: 0%
 
 ---
 
@@ -21,73 +24,73 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 用戶管理有兩種角色：
 
-**** 可變角色：可以編輯和刪除此類型的角色，並可以從這些角色類型中添加和刪除角色權限。 您建立的任何角色都被視為可變角色。 您可以新增或移除指派給可變角色的使用者和群組。
+**可變角色：** 可以編輯和刪除此類型的角色，也可以從這些角色類型中添加和刪除角色權限。您建立的任何角色都被視為可變角色。 您可以新增或移除指派給可變角色的使用者和群組。
 
-**** 不可變角色：「用戶管理」中包含的預設角色是不可變的角色。 無法編輯或刪除這些角色。 但是，您可以添加或刪除分配給不可變角色的用戶和組。
+**不可變角色：** 「用戶管理」中包含的預設角色是不可變角色。無法編輯或刪除這些角色。 但是，您可以添加或刪除分配給不可變角色的用戶和組。
 
 您也可以透過AEM Forms API建立可變和不可變的角色。
 
-## 預設角色 {#default-roles}
+## 預設角色{#default-roles}
 
 「用戶管理」資料庫中包含以下預設角色。
 
-**** 管理控制台使用者：可存取管理控制台。
+**管理控制台使用者：** 可存取管理控制台。
 
-**** 應用程式管理員：可使用所有Workbench功能。 可以使用管理控制台中的「應用程式」和「服務」頁面來設定服務執行時期屬性、端點和安全性。
+**應用程式管理員：** 可使用所有工作台功能。可以使用管理控制台中的「應用程式」和「服務」頁面來設定服務執行時期屬性、端點和安全性。
 
-**** AEM Forms Administrator:可以對所有已安裝的服務執行所有任務。
+**AEM Forms Administrator：可** 以對所有已安裝的服務執行所有工作。
 
-**** 安全管理員：控制「用戶管理」設定，並管理與任何「用戶管理器」域關聯的用戶和組
+**安全管理員：** 控制「用戶管理」設定，並管理與任何「用戶管理員」域關聯的用戶和組
 
-**** 服務使用者：可檢視和叫用任何服務
+**服務用戶：可** 以查看和調用任何服務
 
-**** 超級管理員：可訪問系統中的所有管理功能，包括服務
+**超級管理員：** 可以訪問系統中的所有管理功能，包括服務
 
-**** 信任管理員：可以管理PKI信任設定和PKI憑證，這些設定和PKI憑證是從管理控制台的「信任商店管理」頁面管理
+**信任管理員：** 可以管理管理控制台中「信任商店管理」頁面中管理的PKI信任設定和PKI憑證
 
-### 其他預設角色 {#additional-default-roles}
+### 其他預設角色{#additional-default-roles}
 
 視您安裝的AEM表單元件而定，可能會包含下列其他預設角色
 
-**** 檔案上傳應用程式使用者：可使用Flex Remoting上傳檔案。
+**檔案上傳應用程式使用者：** 可使用Flex Remoting來上傳檔案。
 
-**** 表單管理員：可以從「管理控制台」的「表單」頁面檢視和修改設定
+**Forms管理員：可** 以在管理控制台的「表單」頁面中查看和修改設定
 
-**** AEM Forms Contentspace Administrator:可從管理控制台的「內容服務（已過時）」頁面檢視和修改設定
+**AEM Forms Contentspace管理員：可** 以在管理控制台的「內容服務（已過時）」頁面中檢視和修改設定
 
-**** AEM Forms Contentspace使用者：可登入Contentspace（已過時）網頁
+**AEM Forms Contentspace使用者：** 可登入Contentspace（已過時）網頁
 
-**** Documentum Connector Administrator:可以從管理控制台的「Connector for EMC Documentum」頁查看和修改設定
+**Documentum Connector Administrator：可** 以在管理控制台的「Connector for EMC Documentum」頁中查看和修改設定
 
-**** AEM forms FileNet Connector Administrator:可從管理控制台的「IBM FileNet連接器」頁查看和修改設定
+**AEM forms FileNet Connector Administrator:** 可在管理控制台中，從「IBM FileNet連接器」頁面檢視和修改設定
 
-**** AEM forms IBM CM Connector Administrator:可從管理控制台的「Connector for IBM Content Manager」（IBM Content Manager連接器）頁面中查看和修改設定
+**AEM forms IBM CM Connector Administrator:** 可在管理控制台的「Connector for IBM Content Manager」（連接器for IBM Content Manager）頁面中檢視和修改設定
 
-**** Rights Management管理員：在相關的Rights Management頁上執行所有伺服器配置所需的所有任務
+**Rights Management管理員：執** 行相關Rights Management頁上所有伺服器配置所需的所有任務
 
-**** Rights Management最終用戶：可以訪問Rights Management最終用戶網頁
+**Rights Management最終用戶：** 可訪問Rights Management最終用戶網頁
 
-**** Rights Management邀請使用者：可邀請使用者
+**Rights Management邀請使用者：可** 以邀請使用者
 
-**** Rights Management管理已邀請和本機使用者：可以執行管理相關「Rights Management」頁面上所有受邀使用者和本機使用者所需的工作
+**Rights Management管理已邀請的和本地用戶：可** 以執行管理相關Rights Management頁面上所有已邀請和本地用戶所需的任務
 
-**** Rights Management策略集管理員：執行相關Rights Management頁面上所有策略集所需的所有任務
+**Rights Management策略集管理員：執** 行相關Rights Management頁上所有策略集所需的所有任務
 
-**** Rights Management超級管理員：執行「Rights Management」頁中需要的所有任務
+**Rights Management超級管理員：執** 行「Rights Management」頁中所需的所有任務
 
-**** AEM Forms Workspace Administrator:可從「管理控制台」的「工作區」頁面檢視和修改設定
+**AEM表單工作區管理員：可** 以在「管理控制台」的「工作區」頁面中檢視和修改設定
 
 ***注意&#x200B;**:AEM表單版本不建議使用Flex Workspace。*
 
-**** 工作區使用者：可以登入Workspace一般使用者應用程式
+**工作區用** 戶：可以登錄到工作區最終用戶應用程式
 
-**** 輸出管理員：可以從「管理控制台」的「輸出」頁面檢視和修改設定
+**輸出管理員：** 可以在管理控制台的「輸出」頁面中查看和修改設定
 
-**** PDFG管理員：可從管理控制台的「PDF產生器」頁面檢視和修改設定
+**PDFG管理員：可** 以在管理控制台中，從「PDF產生器」頁面檢視和修改設定
 
-**** PDFG用戶：可存取PDF產生器的所有非管理功能
+**PDFG使用者：** 可存取PDF產生器的所有非管理功能
 
-**** Acrobat Reader DC擴充功能網頁應用程式：可使用Acrobat Reader DC擴充功能網頁應用程式
+**Acrobat Reader DC擴充功能Web應用程式：** 可使用Acrobat Reader DC擴充功能Web應用程式
 
 >[!NOTE]
 >
@@ -97,7 +100,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 >
 >AEM表單版本不建議使用Flex Workspace。
 
-## 建立角色 {#create-a-role}
+## 建立角色{#create-a-role}
 
 1. 在管理控制台中，按一下「設定>使用者管理>角色管理」，然後按一下「新增角色」。
 1. 在「角色名稱」框中，鍵入角色的名稱，並（可選）鍵入角色的說明，然後按一下「下一步」。
@@ -119,7 +122,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 1. 若要檢視使用者和群組詳細資訊，請選取實體。
 1. 按一下「確定」，然後按一下「完成」。
 
-## 編輯角色 {#edit-a-role}
+## 編輯角色{#edit-a-role}
 
 1. 在管理控制台中，按一下「設定>使用者管理>角色管理」，然後按一下「角色名稱」。
 
@@ -136,7 +139,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
    * 若要將角色指派給新的使用者和群組，請按一下「尋找使用者／群組」，並填寫搜尋資訊。 選中每個用戶和組的複選框以將此角色分配給，按一下確定，然後按一下保存。
    * 若要移除角色，請選取使用者或群組的核取方塊，按一下「取消指派」，然後按一下「儲存」。
 
-## 刪除角色 {#delete-a-role}
+## 刪除角色{#delete-a-role}
 
 您可以刪除您建立的任何角色，但不能刪除產品中包含的預設AEM表單角色。
 
@@ -146,7 +149,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 1. 選擇要刪除的角色的複選框，按一下刪除，然後按一下確定。
 
-## 為用戶和組指派角色 {#assign-a-role-to-users-and-groups}
+## 為用戶和組分配角色{#assign-a-role-to-users-and-groups}
 
 1. 在管理控制台中，按一下「設定>使用者管理>使用者和群組」。
 1. 指定資訊以縮小搜尋範圍，然後按一下「尋找」。 搜尋結果會列在頁面底部。 您可以按一下任何欄標題來排序清單。
@@ -155,7 +158,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 您也可以使用「角色管理」頁面來指派角色。
 
-## 確定指派給角色的人員 {#determine-who-is-assigned-to-a-role}
+## 確定指派給角色{#determine-who-is-assigned-to-a-role}的人員
 
 1. 在管理控制台中，按一下「設定>使用者管理>角色管理」，然後按一下「角色名稱」。
 
@@ -163,7 +166,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 1. 在「角色詳細資訊」頁上，按一下角色用戶頁籤。 此時將顯示與角色直接關聯的用戶和組的清單。
 
-## 變更角色權限 {#change-role-permissions}
+## 更改角色權限{#change-role-permissions}
 
 您可以變更您所建立之任何角色的權限。 您無法變更產品中所包含之預設AEM表單角色的權限。
 
@@ -175,167 +178,167 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 1. 若要變更這些權限，請按一下「尋找權限」，選取要新增至角色之權限的核取方塊，按一下「確定」，然後按一下「儲存」。
 1. 若要刪除權限，請選取權限，按一下「刪除」，然後按一下「儲存」。
 
-### AEM表單權限 {#aem-forms-permissions}
+### AEM表單權限{#aem-forms-permissions}
 
-**** ADD_REMOVE_ENDPOINT_PERM:添加、刪除和修改服務的端點
+**ADD_REMOVE_ENDPOINT_PERM：添** 加、刪除和修改服務的端點
 
-**** 管理控制台登入：檢視管理控制台
+**管理控制台登入：檢** 視管理控制台
 
-**** 證書修改：修改信任商店中任何憑證的信任設定
+**證書修改：** 修改信任儲存中任何證書的信任設定
 
-**** 憑證讀取：閱讀信任商店中的任何憑證
+**憑證讀取：** 讀取信任存放區中的任何憑證
 
-**** 憑證寫入：新增憑證至信任商店
+**證書寫入：** 將證書添加到信任儲存
 
-**** 元件新增：在系統中安裝新元件
+**元件添加：** 在系統中安裝新元件
 
-**** 元件刪除：刪除系統中的任何元件
+**元件刪除：刪** 除系統中的任何元件
 
-**** 元件讀取：讀取系統中的任何元件
+**元件讀取：** 讀取系統中的任何元件
 
-**** Contentspace管理員：Contentspace（已過時）管理員的權限
+**Contentspace管理員：** Contentspace的權限（已過時）管理員
 
-**** Contentspace控制台登錄：Contentspace（已過時）控制台登錄權限
+**Contentspace控制台登錄：** Contentspace的權限（已過時）控制台登錄
 
-**** 核心設定控制：管理控制台中「核心繫統設定」頁面的設定
+**核心設定控制：** 管理控制台中「核心繫統設定」頁面的設定
 
-**** CREATE_VERSION_PERM:建立服務的新版本
+**CREATE_VERSION_PERM:** 建立服務的新版本
 
-**** 憑證修改：在信任存放區中修改任何簽署憑證
+**憑據修改：** 修改信任儲存中的任何簽名憑據
 
-**** 憑據讀取：在信任商店中閱讀任何簽署憑證
+**憑證讀取：** 在信任存放區中讀取任何簽署憑證
 
-**** 憑證寫入：新增簽署憑證至信任存放區
+**憑證寫入：** 將簽署憑證新增至信任存放區
 
-**** CRL修改：修改信任存放區中的任何CRL（證書撤銷清單）
+**CRL修改：** 修改信任儲存中的任何CRL（證書撤銷清單）
 
-**** CRL讀取：在信任存放區中讀取任何CRL
+**CRL讀取：** 讀取信任儲存中的任何CRL
 
-**** CRL寫入：將CRL添加到信任儲存
+**CRL寫入：** 將CRL添加到信任儲存
 
-**** 委派：在資源上設定ACL
+**委派：** 在資源上設定ACL
 
-**** DELETE_VERSION_PERM:刪除服務版本
+**DELETE_VERSION_PERM：刪** 除服務的版本
 
-**** 檔案上傳：在AEM表單中上傳檔案
+**檔案上傳：在** AEM表單中上傳檔案
 
-**** 網域控制：建立、刪除或修改任何使用者管理網域的設定，包括其驗證和目錄提供者
+**網域控制：** 建立、刪除或修改任何使用者管理網域的設定，包括其驗證和目錄提供者
 
-**** 事件類型編輯：編輯事件類型
+**事件類型編輯：** 編輯事件類型
 
-**** 身份冒用控制：在User manager中模擬身份
+**身份冒用控制：** User Manager中的身份冒用
 
-**** INVOKE_PERM:調用服務上的所有操作
+**INVOKE_PERM：調** 用服務上的所有操作
 
-**** LCDS資料模型控制：在資料服務中讀取和部署資料模型
+**LCDS資料模型控制：在** 資料服務中讀取和部署資料模型
 
-**** License manager更新：更新授權資訊
+**License Manager更新：更** 新授權資訊
 
-**** MODIFY_CONFIG_PERM:修改服務的配置
+**MODIFY_CONFIG_PERM：修** 改服務的配置
 
-**TERM** 修改服務版本
+**修** 改服務版本
 
-**** PDFGAdminPermission:PDFG管理員
+**PDFGAdminPermission:** PDFG管理員
 
-**** PDFGUserPermission:PDFG使用者
+**PDFGUserPermission:** PDFG用戶
 
-**** PERM_DCTM_ADMIN:Documentum Connector管理員
+**PERM_DCTM_ADMIN:** Documentum Connector管理員
 
-**** PERM_FILENET_ADMIN:FileNet Connector管理員
+**PERM_FILENET_ADMIN:** FileNet Connector管理員
 
-**** PERM_FORMS_ADMIN:表單管理員
+**PERM_FORMS_ADMIN:** Forms管理員
 
-**** PERM_IBMCM_ADMIN:IBM CM Connector管理員
+**PERM_IBMCM_ADMIN:** IBM CM Connector Administrator
 
-**** PERM_OUTPUT_ADMIN:輸出管理員
+**PERM_OUTPUT_ADMIN：輸** 出管理員
 
-**** PERM_READER_EXTENSIONS_WEB_APPLICATION:使用Acrobat Reader DC擴充功能網頁應用程式
+**PERM_READER_EXTENSIONS_WEB_APPLICATION：使** 用Acrobat Reader DC擴充功能Web應用程式
 
-**** PERM_SP_ADMIN:管理SharePoint連接器設定
+**PERM_SP_ADMIN：管理** SharePoint連接器設定
 
-**** PERM_WORKSPACE_ADMIN:管理工作區設定
+**PERM_WORKSPACE_ADMIN：管理工** 作區設定
 
-**** PERM_WORKSPACE_USER:登入Workspace一般使用者應用程式
+**PERM_WORKSPACE_USER：登** 入Workspace最終用戶應用程式
 
-**** 主要控制：管理任何網域的使用者和群組，並管理任何網域中所有使用者和群組的角色指派
+**承擔者控制：** 管理任何網域的使用者和群組，以及管理任何網域中所有使用者和群組的角色指派
 
-**** 進程記錄讀取／刪除：列出和檢索工作流審計實例
+**進程記錄讀取／刪除：列** 出和檢索工作流審覈實例
 
-**** PROCESS_OWNER_PERM:查看趨勢資料並對從流程建立的服務執行管理操作
+**PROCESS_OWNER_PERM：查** 看趨勢資料並對從流程建立的服務執行管理操作
 
-**** 閱讀：閱讀資源的內容
+**讀取：** 讀取資源的內容
 
-**** READ_PERM:閱讀或檢視服務
+**READ_PERM：讀** 取或查看服務
 
-**** 續約斷言：在用戶管理中續訂斷言
+**續約斷言：使** 用者管理中的斷言續約
 
-**** 儲存庫委派：在資源上設定ACL
+**儲存庫委派：** 在資源上設定ACL
 
-**** 儲存庫讀取：閱讀資源的內容
+**儲存庫讀** 取：讀取資源的內容
 
-**** 儲存庫遍歷：在清單資源請求中包含資源或讀取資源的元資料
+**儲存庫遍歷：** 將資源包括在清單資源請求中或讀取資源的元資料
 
-**** 儲存庫寫入：寫入儲存庫元資料和內容
+**儲存庫寫入：** 寫入儲存庫元資料和內容
 
-**** Rights Management更改策略所有者：更改策略所有者
+**Rights Management更改策略所有者：更** 改策略所有者
 
-**** Rights Management最終用戶控制台登錄：登入Rights Management使用者UI
+**Rights Management最終用戶控制台登錄：** 登錄到Rights Management最終用戶UI
 
-**** Rights Management管理配置：管理伺服器組態
+**Rights Management管理配置：管** 理伺服器配置
 
-**** Rights Management管理已邀請和本機使用者：管理受邀的使用者和本機使用者
+**Rights Management管理邀請的和本地用戶：管** 理邀請的和本地用戶
 
-**** Rights Management管理策略集：管理任何策略集內的所有策略和文檔
+**Rights Management管理策略集：管** 理任何策略集中的所有策略和文檔
 
-**** Rights Management策略集添加協調員：新增、移除和變更原則集協調者的權限
+**Rights Management策略集添加協調器：** 添加、刪除和更改策略集協調器的權限
 
-**** Rights Management策略集建立策略：為策略集建立新策略
+**Rights Management策略集建立策略：** 為策略集建立新策略
 
-**** Rights Management策略集刪除策略：從策略集中刪除策略
+**Rights Management策略集刪除策略：從** 策略集中刪除策略
 
-**** Rights Management策略集編輯策略：編輯策略集中的策略
+**Rights Management策略集編輯策略：** 編輯策略集中的策略
 
-**** Rights Management策略集管理文檔發佈者：當您建立原則集時，您會指派使用者檔案發佈者的角色。 文檔發佈者是使用策略保護文檔的用戶。
+**Rights Management策略集管理文檔發行者：** 建立策略集時，可以為用戶分配文檔發佈者的角色。文檔發佈者是使用策略保護文檔的用戶。
 
-**** Rights Management策略集刪除協調程式：從策略集中刪除策略集協調器
+**Rights Management策略集刪除協調器：從** 策略集中刪除策略集協調器
 
-**** Rights Management策略集撤銷文檔：撤銷對策略集中文檔的訪問權
+**Rights Management策略集撤銷文檔：撤** 銷對策略集中文檔的訪問權
 
-**** Rights Management策略集交換機策略：切換檔案的原則
+**Rights Management策略集切換策略：** 文檔的切換策略
 
-**** Rights Management策略集取消撤銷文檔：取消撤銷檔案
+**Rights Management策略集取消撤銷文檔：** 取消撤銷文檔
 
-**** Rights Management策略集查看事件：查看策略集中任何策略或文檔的策略和文檔事件
+**Rights Management策略集查看事件：查** 看策略集內任何策略或文檔的策略和文檔事件
 
-**** Rights Management查看伺服器事件：搜尋並檢視所有稽核事件
+**Rights Management查看伺服器事件：搜** 索和查看所有審計事件
 
-**** 角色控制：在用戶管理中建立、刪除和修改角色
+**角色控制：** 在用戶管理中建立、刪除和修改角色
 
-**** 服務激活：啟動任何服務，使其可用於調用
+**服務激活：啟** 動任何服務，使其可用於調用
 
-**** 服務添加：將新服務部署到服務註冊表。 這包括添加新的流程和流程變型
+**服務添加：** 將新服務部署到服務註冊表。這包括添加新的流程和流程變型
 
-**** 服務停用：停止系統中的任何服務
+**服務停用：** 停止系統中的任何服務
 
-**** 服務刪除：刪除系統中的任何服務，包括進程和進程變型
+**服務刪除：刪** 除系統中的任何服務，包括進程和進程變型
 
-**** 服務調用：在運行時調用服務註冊表中的任何服務
+**服務調用：** 在運行時調用服務註冊表中的任何服務
 
-**** 服務修改：修改系統中任何服務的配置屬性。 這包括在IDE中鎖定和解鎖服務，以及從服務中添加或刪除端點
+**修改服務：** 修改系統中任何服務的配置屬性。這包括在IDE中鎖定和解鎖服務，以及從服務中添加或刪除端點
 
-**** 服務讀取：閱讀系統中的任何服務。 這包括所有流程和流程變型
+**服務讀取：** 讀取系統中的任何服務。這包括所有流程和流程變型
 
-**** 服務代理服務：查看從流程建立的服務的資料並與流程實例交互
+**SERVICE_AGENT_PERM：查** 看從進程建立的服務的資料並與進程實例交互
 
-**** SERVICE_MANAGER_PERM:對從流程建立的服務執行負載平衡和其他管理操作
+**SERVICE_MANAGER_PERM：對** 從進程建立的服務執行負載平衡和其他管理操作
 
-**** START_STOP_PERM:啟動或停止服務
+**START_STOP_PERM：啟** 動或停止服務
 
-**** SUPERVISOR_PERM:查看從流程建立的服務的流程實例資料
+**SUPERVISOR_PERM：查** 看從進程建立的服務的進程實例資料
 
-**** 橫移：在清單資源請求中包含資源或讀取資源的元資料
+**Traverse:** 在清單資源請求中包含資源或讀取資源的元資料
 
-**** 寫：寫入儲存庫元資料和內容
+**寫入：** 寫入儲存庫元資料和內容
 
 **在工作台中開啟檔案**
 
@@ -346,7 +349,7 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 * 服務調用
 * 服務讀取
 
-## 從角色中移除用戶或組 {#remove-a-user-or-group-from-a-role}
+## 從角色{#remove-a-user-or-group-from-a-role}中刪除用戶或組
 
 使用「角色管理」頁可以從特定角色中刪除用戶和組。 如果用戶或組繼承了角色分配，則不能刪除用戶或組級別的角色。 從繼承樹中刪除用戶或組，或從父樹中刪除角色。
 
