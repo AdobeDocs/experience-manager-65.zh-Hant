@@ -18,18 +18,18 @@ ht-degree: 4%
 ---
 
 
-# 啟用資源主控台 {#enablement-resources-console}
+# 啟用資源控制台{#enablement-resources-console}
 
-對於AEM Communities,「資源」主控台是「 [Enablement Managers](users.md) 」建立、管理和指派資源給啟用社群網站成員的地方。
+對於AEM Communities,「資源」主控台是[啟用管理員](users.md)建立、管理和指派資源給啟用社群網站成員的位置。
 
-## 需求 {#requirements}
+## 要求{#requirements}
 
 在新增社群網站的啟用資源之前，AEM例項必須正確設定，包括：
 
 * SCORM
 * FFmpeg
 
-如需詳細資訊，請參 [閱設定啟用](enablement.md)。
+如需詳細資訊，請參閱[設定啟用](enablement.md)。
 
 >[!CAUTION]
 >
@@ -37,13 +37,13 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->隨著 [AEM 6.3](deploy-communities.md#latestfeaturepack) 和相當的社群功能套件 [AEM 6.2 FP3](deploy-communities.md#latestfeaturepack) 和 [AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest功能套件)的推出，啟用功能不再需要 [](mysql.md)aMySQL資料庫(C)。
+>隨著[AEM 6.3](deploy-communities.md#latestfeaturepack)的發行，以及相當的社群功能套件[AEM 6.2 FP3](deploy-communities.md#latestfeaturepack)和[AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest功能套件)的推出，啟用功能不再需要[MySQL資料庫a7/>。](mysql.md)
 
 ## 術語 {#terminology}
 
 ### 資源 {#resource}
 
-資源對實施社群 [至關重要](overview.md#enablement-community)。 它們是指派給成員的材料，可讓他們提高技能。
+資源對[啟用社群](overview.md#enablement-community)至關重要。 它們是指派給成員的材料，可讓他們提高技能。
 
 資源的特性：
 
@@ -59,27 +59,27 @@ ht-degree: 4%
 
 學習路徑是一組邏輯上的啟用資源，可分組在一起，以方便指派給成員。
 
-### 成員組 {#members-group}
+### 成員組{#members-group}
 
-在建立社群網站時，URL的指定網站名稱會用於建立以各種角色的不同權限設定的 [網站特定使用者群組](users.md) 。 所有這些自動建立的群組都會加上前置詞 `Community <site-name>`。
+在建立社區站點時，為URL指定給站點的名稱用於建立為各種角色配置的[站點特定用戶組](users.md)。 所有這些自動建立的群組都會加上前置詞`Community <site-name>`。
 
-其中一個使用者群 `Community <site-name> Members` 組是群組，可將發佈環境中的註冊使用者識別為社群成員。 如需範例， [請參閱AEM Communities的教學課程](getting-started-enablement.md) 「快速入門」。
+其中一個使用者群組是`Community <site-name> Members`群組，可將發佈環境中的註冊使用者識別為社群成員。 如需範例，請參閱教學課程[AEM Communities快速入門](getting-started-enablement.md)。
 
-對於 [參與社群](overview.md#egagementcommunity)，允許網站訪客自行註冊或使用社交登入是合理的，在此時，網站訪客會自動新增至成員群組。
+對於[參與社群](overview.md#egagementcommunity)，允許網站訪客自行註冊或使用社交登入是合理的，在此時，這些訪客會自動新增至成員群組。
 
-若要 [啟用社群](overview.md#enablement-community)，建議將網站設為私用，然後需要管理員將使用者新增至成員群組。
+對於[啟用社群](overview.md#enablement-community)，建議將網站設為私密，然後管理員必須將使用者新增至成員群組。
 
-## 存取社群網站的啟用資源 {#accessing-a-community-site-s-enablement-resources}
+## 訪問社區站點的啟用資源{#accessing-a-community-site-s-enablement-resources}
 
-### 導覽至社群資源 {#navigate-to-communities-resources}
+### 導航至Communities資源{#navigate-to-communities-resources}
 
 在作者環境中，若要進入資源主控台
 
-* 從全域導覽： **[!UICONTROL 導覽]** >社 **[!UICONTROL 群]** >資 **[!UICONTROL 源]**
+* 從全域導覽：**[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Resources]**
 
    ![啟用網站](assets/enablement-sites.png)
 
-### 選擇社群網站 {#select-a-community-site}
+### 選擇社區站點{#select-a-community-site}
 
 「社群資源」控制台將顯示所有社群網站。
 
@@ -103,14 +103,14 @@ ht-degree: 4%
 
 ![選擇模式](assets/selection-mode.png)
 
-## 建立資源 {#create-a-resource}
+## 建立資源{#create-a-resource}
 
 ![create-resource](assets/create-resource1.png)
 
 要向社群站點添加新的啟用資源
 
-* 選擇圖 `Create` 標。
-* 從顯示的子菜單中，選擇「資 **[!UICONTROL 源」]**。
+* 選擇`Create`表徵圖。
+* 從顯示的子菜單中，選擇&#x200B;**[!UICONTROL 資源]**。
 
 這會啟動下列項目的逐步程式：
 
@@ -122,57 +122,57 @@ ht-degree: 4%
 
 當資源是課程的一部分（學習路徑）時，成員只應被指派到學習路徑。 可在建立啟用資源後添加分配。
 
-### 1 Basic Info {#basic-info}
+### 1基本資訊{#basic-info}
 
 ![resource-basicinfo](assets/resource-basicinfo.png)
 
 * **[!UICONTROL 新增影像]**
 
-   (可&#x200B;*選*)要在成員的分配頁以及資源控制台中顯示在啟用資源卡上的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
+   （*可選*）要在成員的分配頁以及資源控制台中用於啟用資源的卡上顯示的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
 
-   ***注意***:建議的影像大小不僅是480 x 480像素。 由於卡片的回應式設計會隨各種瀏覽器尺寸而改變，所以顯示大小會從220 X 165像素變更為400 x 165像素。
+   ***注意***:建議的影像大小不僅是480 x 480像素。由於卡片的回應式設計會隨各種瀏覽器尺寸而改變，所以顯示大小會從220 X 165像素變更為400 x 165像素。
 
 * **[!UICONTROL 網站名稱]**
 
-   (*唯讀*)要向其添加資源的社區站點。
+   (*readonly*)要向其添加資源的社區站點。
 
 * **[!UICONTROL 資源名稱]**
 
-   (必&#x200B;*要*)資源的顯示名稱。 根據顯示名稱建立有效的節點名稱。
+   （*必要*）資源的顯示名稱。 根據顯示名稱建立有效的節點名稱。
 
 * **[!UICONTROL 標記]**
 
-   (可&#x200B;*選*)可以選擇一個或多個標籤，其將啟用資源與一個或多個目錄關聯。 請參閱 [標籤啟用資源](tag-resources.md)。
+   （*可選*）可以選擇一個或多個標籤，其將啟用資源與一個或多個目錄相關聯。 請參閱[標籤啟用資源](tag-resources.md)。
 
 * **[!UICONTROL 在目錄中顯示]**
 
-   取消選取後，啟用資源將不會顯示在任何目錄中。 如果勾選，除非預先篩選或UI中的成員篩選，否 [則啟用資源](catalog-developer-essentials.md#pre-filters) 將會顯示在所有目錄中。 預設為未勾選。
+   取消選取後，啟用資源將不會顯示在任何目錄中。 如果勾選，除非預先篩選[或UI中的成員篩選器，否則啟用資源會顯示在所有目錄中。 ](catalog-developer-essentials.md#pre-filters)預設為未勾選。
 
 * **[!UICONTROL 說明]**
 
-   (可&#x200B;*選*)要顯示啟用資源的說明。
+   （*可選*）要顯示啟用資源的說明。
 
 * **[!UICONTROL 小型資產]**
 
-   (選&#x200B;*用*)從AEM Assets中選取。 代表發佈環境（例如目錄）中資源的縮圖影像。
+   (*Optional*)從AEM Assets中選取。 代表發佈環境（例如目錄）中資源的縮圖影像。
 
 * **[!UICONTROL 大型資產]**
 
-   (選&#x200B;*用*)從AEM Assets中選取。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
+   (*Optional*)從AEM Assets中選取。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
 
 * **[!UICONTROL 內容片段資產]**
 
-   (選&#x200B;*用*)從AEM Assets中選取。 內容片段，可在發佈環境中參考，但預設未使用。
+   (*Optional*)從AEM Assets中選取。 內容片段，可在發佈環境中參考，但預設未使用。
 
-* 選擇下 **[!UICONTROL 一步]**
+* 選擇&#x200B;**[!UICONTROL Next]**
 
-### 2 Add Content {#add-content}
+### 2新增內容{#add-content}
 
 ![資源添加內容](assets/resource-addcontent.png)
 
 雖然它看起來好像可以選擇多個啟用資源，但僅允許一個。
 
-在右 `'+' icon`上角選擇，通過標識源開始選擇資源的過程。
+選擇右上角的`'+' icon`以通過標識源開始選擇資源的過程。
 
 ![上傳資源](assets/upload-resource1.png)
 
@@ -214,7 +214,7 @@ ht-degree: 4%
 
 * **[!UICONTROL 定義外部資源]**
 
-   輸入要呈現物料的位置。 成功狀態和分數的值會手動輸入(請參 [閱報表](reports.md))。 上傳的封面影像可用來提供其他資訊。
+   輸入要呈現物料的位置。 成功狀態和分數的值是手動輸入的（請參閱[報表](reports.md)）。 上傳的封面影像可用來提供其他資訊。
 
    在開啟的對話框中，輸入：
 
@@ -226,19 +226,19 @@ ht-degree: 4%
 
       實體網站的位置，例如教室。
 
-#### 新增視訊資源的範例 {#example-of-an-added-video-resource}
+#### 新增視訊資源的範例{#example-of-an-added-video-resource}
 
 ![add-video](assets/add-video.png)
 
 * **[!UICONTROL 資源封面影像]**
 
-   所述封面影像是當第一次查看所述啟用資源時要顯示的影像。 例如，當視訊資源尚未播放時，會顯示封面影像。 如果未上傳自訂影像，則會顯示預設影像。 對於視訊資源，可能會產生縮 [圖](enablement.md#ffmpeg)，但只會在上傳時產生，而非在視訊參照為URL時產生。 對於位置資源，影像可用來提供其他資訊。
+   所述封面影像是當第一次查看所述啟用資源時要顯示的影像。 例如，當視訊資源尚未播放時，會顯示封面影像。 如果未上傳自訂影像，則會顯示預設影像。 對於視訊資源，[可產生縮圖](enablement.md#ffmpeg)，但只有在上傳時，而非在視訊參照為URL時。 對於位置資源，影像可用來提供其他資訊。
 
    封面影像的建議大小為640 x 360 px。
 
-* 選擇 **[!UICONTROL 下一步]**。
+* 選擇&#x200B;**[!UICONTROL Next]**。
 
-### 3 Settings {#settings}
+### 3設定{#settings}
 
 ![資源設定](assets/resource-settings.png)
 
@@ -250,7 +250,7 @@ ht-degree: 4%
 
 * **[!UICONTROL 社會化設定]**
 
-   這些設定可控制學員是否能夠提供有關啟用資源的輸入。 協調 [設定](sites-console.md#moderation) ，是父社群網站的協調設定。
+   這些設定可控制學員是否能夠提供有關啟用資源的輸入。 [協調設定](sites-console.md#moderation)是父社群網站的設定。
 
    * **[!UICONTROL 允許評論]**
 
@@ -266,42 +266,42 @@ ht-degree: 4%
 
 * **[!UICONTROL 到期日期]**
 
-   *（可選）* ，可以選擇完成分配的日期。
+   *（可選）* 可以選擇完成分配的日期。
 
 * **[!UICONTROL 資原作者]**
 
-   *（選擇性）* ，啟用資源的作者。 使用下拉菜單從成員組的成員中選 [擇](#members-group)。
+   *（選擇性）* 啟用資源的作者。使用下拉菜單從[成員組](#members-group)的成員用戶中選擇。
 
-* **[!UICONTROL 資源Contact&amp;ast;]**
+* **[!UICONTROL 資源聯絡與發佈；]**
 
-   *（必要）* ，會員可聯絡有關啟用資源的人員。 使用下拉菜單從成員組的成員中選 [擇](#members-group)。
+   *（必要）* 會員可聯絡有關啟用資源的人員。使用下拉菜單從[成員組](#members-group)的成員用戶中選擇。
 
 * **[!UICONTROL 資源專家]**
 
-   *（可選）* ，會員可聯絡的人員，其具備相關啟用資源的專業知識。 使用下拉菜單從成員組成員中選擇 [用戶](#members-group)。
+   *（選擇性）* 會員可聯絡的人員，其具備相關啟用資源的專業知識。使用下拉菜單從[成員組](#members-group)的成員用戶中選擇。
 
-### 4 Assignments {#assignments}
+### 4任務{#assignments}
 
 ![資源分配](assets/resource-assignments.png)
 
 * **[!UICONTROL 新增被指定者]**
 
-   使用下拉式選單，從 [會員](#members-group) -以粗體列出的使用者和使用者群組——將註冊為學員。 當會員登入社群網站時，其註冊的啟用資源（和學習路徑）會顯示在其「工作總攬」 [頁面](functions.md#assignments-function) 。
+   使用下拉菜單從[members](#members-group) —— 要註冊為學員的用戶和用戶組（以粗體列出）中進行選擇。 當會員登入社群網站時，其註冊的啟用資源（和學習路徑）會顯示在其[「工作」](functions.md#assignments-function)頁面上。
 
 * 選擇 **[!UICONTROL 建立]**。
 
    ![resourceinfo](assets/resourceinfo.png)
 
-成功建立啟用資源將返回「資源」控制台，並選擇新建的資源。 通過此控制台，可以管 [理資源](#managing-a-resource)。
+成功建立啟用資源將返回「資源」控制台，並選擇新建的資源。 在此控制台中，[可以管理資源](#managing-a-resource)。
 
-## Create a Learning Path {#create-a-learning-path}
+## 建立學習路徑{#create-a-learning-path}
 
 ![新增——學習——路徑](assets/add-learning-path.png)
 
 若要新增學習路徑至社群網站
 
-* 選擇圖 `Create` 標
-* 從顯示的子菜單中，選擇「學習路 **[!UICONTROL 徑」]**。
+* 選擇`Create`圖示
+* 從顯示的子菜單中，選擇&#x200B;**[!UICONTROL 學習路徑]**。
 
 這會啟動下列項目的逐步程式：
 
@@ -321,43 +321,43 @@ ht-degree: 4%
 
 * **[!UICONTROL 新增影像]**
 
-   (可&#x200B;*選*)要在成員的分配頁以及資源控制台中學習路徑的卡片上顯示的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
+   （*可選*）要在成員的分配頁面和資源控制台中學習路徑的卡上顯示的影像。 從伺服器的本地檔案系統中選擇映像。 如果未提供影像，則會為上傳的資源產生縮圖。
 
-   ***注意***:建議的影像大小不再是480 x 480像素。 由於卡片的回應式設計會隨各種瀏覽器尺寸而改變，所以顯示大小會從220 X 165像素變更為400 x 165像素。
+   ***注意***:建議的影像大小不再是480 x 480像素。由於卡片的回應式設計會隨各種瀏覽器尺寸而改變，所以顯示大小會從220 X 165像素變更為400 x 165像素。
 
 * **[!UICONTROL 網站名稱]**
 
-   (*唯讀*)要向其添加資源的社區站點。
+   （*只讀*）要向其添加資源的社區站點。
 
 * **[!UICONTROL 學習路徑名稱]**
 
-   (必&#x200B;*要*)學習路徑的顯示名稱。 根據顯示名稱建立有效的節點名稱。
+   （*必要*）學習路徑的顯示名稱。 根據顯示名稱建立有效的節點名稱。
 
 * **[!UICONTROL 標記]**
 
-   (可&#x200B;*選*)可以選擇一個或多個標籤，將學習路徑與一個或多個目錄關聯。 請參閱 [標籤啟用資源](tag-resources.md)。
+   （*可選*）可以選擇一個或多個標籤，其將學習路徑與一個或多個目錄相關聯。 請參閱[標籤啟用資源](tag-resources.md)。
 
 * **[!UICONTROL 在目錄中顯示]**
 
-   如果取消選中，學習路徑將不顯示在任何目錄中。 如果勾選，除非預先篩選或UI中的成員篩選，否則學習 [路徑會顯示在](catalog-developer-essentials.md#pre-filters) 所有目錄中。 在目錄中顯示學習路徑將間接授予其所有包含資源的READ訪問權。 預設為未勾選。
+   如果取消選中，學習路徑將不顯示在任何目錄中。 如果勾選，除非[預先篩選](catalog-developer-essentials.md#pre-filters)或UI中的成員篩選，否則學習路徑會顯示在所有目錄中。 在目錄中顯示學習路徑將間接授予其所有包含資源的READ訪問權。 預設為未勾選。
 
 * **[!UICONTROL 說明]**
 
-   (可&#x200B;*選*)要顯示啟用資源的說明。
+   （*可選*）要顯示啟用資源的說明。
 
 * **[!UICONTROL 小型資產]**
 
-   (選&#x200B;*用*)從AEM Assets中選取。 代表發佈環境（例如目錄）中資源的縮圖影像。
+   (*Optional*)從AEM Assets中選取。 代表發佈環境（例如目錄）中資源的縮圖影像。
 
 * **[!UICONTROL 大型資產]**
 
-   (選&#x200B;*用*)從AEM Assets中選取。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
+   (*Optional*)從AEM Assets中選取。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
 
 * **[!UICONTROL 內容片段資產]**
 
-   (選&#x200B;*用*)從AEM Assets中選取。 內容片段，可在發佈環境中參考，但預設未使用。
+   (*Optional*)從AEM Assets中選取。 內容片段，可在發佈環境中參考，但預設未使用。
 
-* 選擇 **[!UICONTROL 下一步]**。
+* 選擇&#x200B;**[!UICONTROL Next]**。
 
 ### 新增必備條件 {#add-prerequisites}
 
@@ -365,9 +365,9 @@ ht-degree: 4%
 
 * **[!UICONTROL 必備條件學習路徑]**
 
-   (可&#x200B;*選*)選取其他已發佈的學習路徑時，必須先完成這些路徑，學員才能選取此學習路徑。
+   （*可選*）選取其他已發佈的學習路徑時，必須先完成這些路徑，學員才能選取此學習路徑。
 
-* 選擇 **[!UICONTROL 下一步]**。
+* 選擇&#x200B;**[!UICONTROL Next]**。
 
 ### 新增資源 {#add-resources}
 
@@ -375,31 +375,31 @@ ht-degree: 4%
 
 * **[!UICONTROL 強制實施學習路徑中的排序]**
 
-   (可&#x200B;*選*)如果設為「開啟」，則新增啟用資源的順序是學員在學習路徑中的學習順序。 預設為「關閉」。
+   （*可選*）如果設為「開啟」，則新增啟用資源的順序是學員在學習路徑中進行學習的順序。 預設為「關閉」。
 
 * **[!UICONTROL 資源]**
 
-   從為目前社群網站所建立的已發佈 *啟用資源* ，選擇一或多個資源。
+   從為當前社區站點建立的&#x200B;*published*&#x200B;啟用資源中選擇的一個或多個資源。
 
 >[!NOTE]
 >
 >您只能選擇與學習路徑位於同一級別的可用資源。 例如，對於在群組中建立的學習路徑，只有群組層級資源可供使用；對於在社群網站中建立的學習路徑，該網站中的資源可供新增至學習路徑。
 
-* 選擇 **[!UICONTROL 下一步]**。
+* 選擇&#x200B;**[!UICONTROL Next]**。
 
 ### 設定 {#settings-1}
 
-![learningpath-settings1](assets/learningpath-settings1.png)
+![學習路徑設定1](assets/learningpath-settings1.png)
 
 * **[!UICONTROL 新增註冊]**
 
-   使用下拉菜單從社區站點成員組的成員和成員組（以粗體列出）中選 [擇](#members-group)。 首次建立學習路徑時，不需要添加指派。 可修改學習路徑屬性，以便稍後新增學員。
+   使用下拉菜單從社區站點的[成員組](#members-group)的成員組（以粗體列出）中選擇。 首次建立學習路徑時，不需要添加指派。 可修改學習路徑屬性，以便稍後新增學員。
 
-* **[!UICONTROL Learning Path Contact&amp;ast;]**
+* **[!UICONTROL 學習路徑連絡與快速；]**
 
-   *（必要）* ，會員可聯絡有關學習路徑的人員。 使用下拉菜單從社區站點成員組的成員中選 [擇](#members-group)。
+   *（必要）* 會員可聯絡的學習路徑相關人員。使用下拉菜單從社區站點的[成員組](#members-group)的成員中選擇。
 
-* Select **[!UICONTROL Create]**
+* 選擇&#x200B;**[!UICONTROL 建立]**
 
 >[!NOTE]
 >
@@ -407,11 +407,11 @@ ht-degree: 4%
 >
 >如果成員同時註冊了啟用資源和參考該資源的學習路徑，則其分配將同時顯示學習路徑中的單個資源和資源。
 
-## 管理資源 {#managing-a-resource}
+## 管理資源{#managing-a-resource}
 
 要管理單個啟用資源，請執行以下操作：
 
-* 從「資 **[!UICONTROL 源]** 」控制台中，選擇包含資源的社區站點。
+* 從&#x200B;**[!UICONTROL 資源]**&#x200B;控制台中，選擇包含資源的社區站點。
 * 選擇資源。
 
 對於選定的啟用資源，您可以：
@@ -436,7 +436,7 @@ ht-degree: 4%
 
 ![刪除資源](assets/delete-resource.png)
 
-通過選擇轉存器表徵圖，啟用資源將在確認 `Deleted` 之後。
+通過選擇轉存器表徵圖，在確認後啟用資源將為`Deleted`。
 
 ### 發佈 {#publish}
 
@@ -444,9 +444,9 @@ ht-degree: 4%
 
 學員必須先發佈它，才能看到指派的啟用資源：
 
-* 選擇要顯示的全球表徵圖 `Publish`。
-* 在彈出的對話方塊中，再次選 **[!UICONTROL 取「發佈]** 」。
-* 選擇 **[!UICONTROL 關閉]**。
+* 選擇`Publish`的世界圖示。
+* 在彈出的對話框中，再次選擇&#x200B;**[!UICONTROL Publish]**。
+* 選擇&#x200B;**[!UICONTROL 關閉]**。
 
 即使對話方塊指出動作已排入佇列，但通常也會立即發佈。
 
@@ -454,7 +454,7 @@ ht-degree: 4%
 
 ![解除發佈](assets/unpublish.png)
 
-若要暫時讓發佈環境中的成員無法存取啟用資源，而不要加以刪除，請使用資源的世界 `Unpublish` 圖示。
+若要暫時讓發佈環境中的成員無法存取啟用資源，而不要加以刪除，請使用資源的`Unpublish`世界圖示。
 
 ### 報表 {#report}
 
@@ -462,13 +462,13 @@ ht-degree: 4%
 
 「報表」圖示可讓學員在發佈環境中與指派的啟用資源互動時，存取產生的報表。 報表會依資源類型而異。
 
-對於所有學習路徑，您可以根據資源或學員( `User Report`.)來檢視報表
+對於所有學習路徑，您可以根據資源或學員檢視報表(`User Report`)。
 
 ![learningpath-info](assets/learningpath-info1.png)
 
-此報告專門針對目前的啟用資源或學習路徑。 提供的報表深度取決於 [Adobe Analytics](analytics.md) 是否已授權並啟用社群網站。 「時 [間軸](#timeline)」、「檢 [視器參與](#viewer-engagement)」和「依裝置 [的參與」報表會根據投票間隔從Adobe Analytics](#engagement-by-device)[](analytics.md#report-importer)匯入。
+此報告專門針對目前的啟用資源或學習路徑。 提供的報表深度取決於Adobe Analytics[是否取得社群網站的授權並啟用。 ](analytics.md)[時間軸](#timeline)、[檢視器參與](#viewer-engagement)和[「依裝置參與](#engagement-by-device)」報表是根據[輪詢間隔](analytics.md#report-importer)從Adobe Analytics匯入。
 
-對於所有啟用資源，不論Adobe Analytics是否啟用，都會有「受託人狀態」和「分級」的報表，以及「報表 [摘要](#assignee-status)[](#ratings)[](#report-summary) 」表格。
+對於所有啟用資源，不論是否啟用Adobe Analytics，都有[受託人狀態](#assignee-status)和[評分](#ratings)的報表，以及[報表摘要](#report-summary)表格。
 
 ![resource-report](assets/resource-report1.png)
 
@@ -526,7 +526,7 @@ ht-degree: 4%
 
 「評分」報表以已對啟用資源評分的學員人數為基礎，顯示每個星號評分的數目，接著是評分總數和平均評分的摘要。
 
-#### 報表摘要 {#report-summary}
+#### 報告摘要{#report-summary}
 
 對於啟用資源，「報表摘要」是表格清單。
 
@@ -554,13 +554,13 @@ ht-degree: 4%
    * 已完成的資源數。
    * 他們的身份。
 
-通過使用選擇器選擇列，可以調整表的顯 `Show / hide columns` 示。
+使用`Show / hide columns`選擇器選擇列，可以調整表的顯示。
 
-#### Download Report as CSV {#download-report-as-csv}
+#### 以CSV格式下載報表{#download-report-as-csv}
 
 「報表摘要」表格可使用控制台上方的按鈕以CSV格式下載。
 
-* 對於啟用資源： `Download Resource Report as CSV` 按鈕。
-* 學習途徑： `Download Learning Path Report as CSV` 按鈕。
+* 對於啟用資源：`Download Resource Report as CSV`按鈕。
+* 學習途徑：`Download Learning Path Report as CSV`按鈕。
 
 無論選擇要顯示的欄，都會下載完整的報表摘要。
