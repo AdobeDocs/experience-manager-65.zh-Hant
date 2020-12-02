@@ -12,11 +12,14 @@ discoiquuid: 28529cae-6fbd-4879-a5b8-3ec8e1bcd586
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 6%
 
 ---
 
 
-# 檢視頁面分析資料{#seeing-page-analytics-data}
+# 查看頁面分析資料{#seeing-page-analytics-data}
 
 使用頁面分析資料來評估其頁面內容的有效性。
 
@@ -25,9 +28,9 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 頁面分析資料會顯示在「網站」主控台中。 當站點以清單格式顯示時，預設情況下可使用以下列：
 
 * 頁面檢視
-* 獨特訪客
+* 不重複訪客
 * 頁面逗留時間
 
 >[!NOTE]
 >
->直接在主控台中顯示網站分析資料，僅適用於觸控最佳化UI。 如需詳 [細資訊，請參閱標準製作檔案中的](/help/sites-authoring/page-analytics-using.md) 「檢視頁面分析資料」。
+>直接在主控台中顯示網站分析資料，僅適用於觸控最佳化的UI。 如需詳細資訊，請參閱標準編寫檔案中的[查看頁面分析資料](/help/sites-authoring/page-analytics-using.md)。
