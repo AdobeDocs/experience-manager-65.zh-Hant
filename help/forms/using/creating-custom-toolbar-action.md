@@ -22,9 +22,9 @@ ht-degree: 0%
 
 ## 必備條件 {#prerequisite}
 
-在建立自訂工具列動作之前，請熟悉使 [用用戶端程式庫](/help/sites-developing/clientlibs.md)[和使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md)。
+在建立自訂工具列動作之前，請熟悉[使用用戶端程式庫](/help/sites-developing/clientlibs.md)和[使用CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)進行開發。
 
-## 什麼是動作 {#what-is-an-action-br}
+## 什麼是動作{#what-is-an-action-br}
 
 最適化表單提供工具列，可讓表單作者設定一組選項。 這些選項定義為最適化表單的動作。 按一下「面板工具列」中的「編輯」按鈕，以設定最適化表單支援的動作。
 
@@ -32,30 +32,30 @@ ht-degree: 0%
 
 除了預設提供的動作集外，您也可以在工具列中建立自訂動作。 例如，您可以新增動作，讓使用者在提交表單之前，先檢閱所有最適化的表單欄位。
 
-## 在最適化表單中建立自訂動作的步驟 {#steps}
+## 在最適化表單中建立自訂動作的步驟{#steps}
 
 為了說明如何建立自訂工具列動作，下列步驟會引導您建立按鈕，讓使用者在提交填寫的表單之前，先檢閱所有最適化的表單欄位。
 
-1. 最適化表單支援的所有預設動作都會顯示在資料 `/libs/fd/af/components/actions` 夾中。 在CRXDE中，將節 `fileattachmentlisting` 點從復 `/libs/fd/af/components/actions/fileattachmentlisting` 制到 `/apps/customaction`。
+1. 最適化表單支援的所有預設動作都位於`/libs/fd/af/components/actions`資料夾中。 在CRXDE中，將`fileattachmentlisting`節點從`/libs/fd/af/components/actions/fileattachmentlisting`複製到`/apps/customaction`。
 
-1. 將節點複製到資料夾 `apps/customaction` 後，將節點名稱更名為 `reviewbeforesubmit`。 此外，還可以更 `jcr:title` 改節 `jcr:description` 點的和屬性。
+1. 將節點複製到`apps/customaction`資料夾後，將節點名稱更名為`reviewbeforesubmit`。 此外，還更改節點的`jcr:title`和`jcr:description`屬性。
 
-   屬 `jcr:title` 性包含工具欄對話框中顯示的操作的名稱。 該 `jcr:description` 屬性包含當用戶將指針暫留在操作上時顯示的詳細資訊。
+   `jcr:title`屬性包含工具欄對話框中顯示的操作名稱。 `jcr:description`屬性包含當使用者將指標暫留在動作上時所顯示的更多資訊。
 
    ![用於自定義工具欄的節點層次](assets/action3.png)
 
-1. 在節 `cq:template` 點中選擇 `reviewbeforesubmit` 節點。 請確定屬性的值 `guideNodeClass` 為，並 `guideButton` 據以變 `jcr:title` 更屬性。
-1. 更改節點中的type屬 `cq:Template` 性。 對於當前示例，將type屬性更改為按鈕。
+1. 在`reviewbeforesubmit`節點中選擇`cq:template`節點。 請確定`guideNodeClass`屬性的值為`guideButton`，並相應地更改`jcr:title`屬性。
+1. 更改`cq:Template`節點中的type屬性。 對於當前示例，將type屬性更改為按鈕。
 
    類型值會新增為元件所產生HTML中的CSS類別。 使用者可使用該CSS類別來設定其動作的樣式。 行動與桌上型裝置的預設樣式都提供給按鈕、送出、重設及儲存類型值。
 
 1. 從最適化表單編輯工具列對話方塊中選取自訂動作。 面板的工具列中會顯示「檢閱」按鈕。
 
-   ![自訂動作可在工具列中使用](assets/custom_action_available_in_toolbar.png) 「 ![顯示自訂建立的工具列動作」](assets/action7.png)
+   ![自訂動作可在工具列中使](assets/custom_action_available_in_toolbar.png) ![用顯示自訂建立的工具列動作](assets/action7.png)
 
-1. 若要提供「檢閱」按鈕的功能，請在init.jsp檔案中新增一些JavaScript和CSS程式碼以及伺服器端程式碼，這些程式碼會出現在節 `reviewbeforesubmit` 點中。
+1. 若要提供「檢閱」按鈕的功能，請在init.jsp檔案中新增一些JavaScript和CSS程式碼，以及伺服器端程式碼，此檔案位於`reviewbeforesubmit`節點內。
 
-   在中新增下列程式碼 `init.jsp`。
+   在`init.jsp`中新增下列程式碼。
 
    ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
@@ -113,7 +113,7 @@ ht-degree: 0%
    </div><!-- /.modal -->
    ```
 
-   在檔案中新增下列程 `ReviewBeforeSubmit.js` 式碼。
+   在`ReviewBeforeSubmit.js`檔案中新增下列程式碼。
 
    ```javascript
    /*anonymous function to handle show of review before submit view */
@@ -148,7 +148,7 @@ ht-degree: 0%
    });
    ```
 
-   將下列程式碼新增至 `ReviewBeforeSubmit.css` 檔案。
+   將下列程式碼新增至`ReviewBeforeSubmit.css`檔案。
 
    ```css
    .modal-list .reviewlabel {
@@ -181,11 +181,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >程式 `GuideBridge` 庫不會以編寫模式載入。 因此，此自訂動作無法在編寫模式中運作。
+   >`GuideBridge`程式庫未在編寫模式中載入。 因此，此自訂動作無法在編寫模式中運作。
 
    ![展示自訂審核按鈕的動作](assets/action9.png)
 
-## 示例 {#samples}
+## 示例{#samples}
 
 以下封存包含內容套件。 此套件包含與上述自訂工具列動作示範相關的最適化表單。
 
