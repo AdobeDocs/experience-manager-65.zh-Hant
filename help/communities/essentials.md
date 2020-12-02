@@ -18,15 +18,15 @@ ht-degree: 17%
 ---
 
 
-# 元件、功能和功能基本工具  {#component-function-and-feature-essentials}
+# 元件、功能和功能基本工具{#component-function-and-feature-essentials}
 
-AEM Communities功能要求網站訪客成為會員並登入社 [群網站](overview.md#communitiessites) ，才能張貼內容。 因此， [從中建立社群網站的社群網站范](sites.md)本 [](sites-console.md)，設計為包含登入功能以及使用者設定檔、傳訊、搜尋、協調和翻譯。
+AEM Communities功能要求網站訪客成為成員，並先登入[社群網站](overview.md#communitiessites)，才能張貼內容。 因此，[社群網站範本](sites.md)被設計為包含登入功能以及使用者設定檔、傳訊、搜尋、協調和翻譯。[](sites-console.md)
 
-當社群群組功能包含在選取的社群網站範本中時，社群 [網站將支援成員](functions.md#groups-function) ，以建立社群群組。
+當[社群群組函式](functions.md#groups-function)包含在所選社群網站範本中時，社群網站將支援建立社群群組的成員。
 
 以下是社群元件、功能和功能的基本資訊連結。
 
-## 基本元件 {#base-components}
+## 基本元件{#base-components}
 
 * [評論](essentials-comments.md)
 * [評論](reviews-basics.md)
@@ -37,7 +37,7 @@ AEM Communities功能要求網站訪客成為會員並登入社 [群網站](over
    * [投票](essentials-voting.md)
    * *民調問答（不再提供）*
 
-## 具有函式的元件 {#components-with-functions}
+## 具有{#components-with-functions}函式的元件
 
 * [活動資料流](essentials-activities.md)
 * [指定任務](essentials-assignments.md)
@@ -70,10 +70,10 @@ AEM Communities功能要求網站訪客成為會員並登入社 [群網站](over
 
 ## Javadocs {#javadocs}
 
-線 [上javadoc](../../help/sites-developing/reference-materials.md) 反映AEM 6.3版本中可用的API。
-社群API位於套 `com.adobe.cq.social.*` 件中。
+[線上javadocs](../../help/sites-developing/reference-materials.md)反映AEM 6.3版本中可用的API。
+社群API位於`com.adobe.cq.social.*`套件中。
 
-對於每 [個功能包](deploy-communities.md#latestfeaturepack)，都可使用javadocjar。 如需詳細資訊，請造 [訪使用Maven for Communities](maven.md#javadocs)。
+對於每個[功能包](deploy-communities.md#latestfeaturepack) ，都可使用javadocjar。 如需詳細資訊，請造訪[使用Maven for Communities](maven.md#javadocs)。
 
 ## 其他資訊 {#additional-information}
 
