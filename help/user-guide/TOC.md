@@ -13,10 +13,10 @@ ht-degree: 1%
 ---
 
 
-# AEM 6.5 User Guide {#user-guide}
+# AEM 6.5使用指南{#user-guide}
 
 + [AEM 6.5使用指南中樞](home.md)
-+ 使用指南和資源{#user-guides}
++ 使用手冊和資源{#user-guides}
    + [AEM Capabilities使用指南](capabilities.md)
    + [AEM實作使用指南](implementation.md)
    + [AEM資源](resources.md)
