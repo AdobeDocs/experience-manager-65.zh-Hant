@@ -18,11 +18,11 @@ ht-degree: 1%
 ---
 
 
-# 設定啟用功能 {#configuring-enablement-features}
+# 設定啟用功能{#configuring-enablement-features}
 
 ## 概覽 {#overview}
 
-啟用功能提供建立啟用社群 [的能力](overview.md#enablement-community)。
+啟用功能提供建立[啟用社群](overview.md#enablement-community)的能力。
 
 * 此功能需要額外的授權才能用於生產環境。
 
@@ -40,13 +40,13 @@ ht-degree: 1%
 
 * **FFmpeg**
 
-   FFmpeg是轉換和串流音訊和視訊的解決方案，當安裝時，會用來正確轉碼視訊 [資產](../../help/sites-authoring/default-components-foundation.md#video)。 對於啟用社群，它會用於作者環境，以取得已上傳資源的中繼資料，並產生縮圖以在列出資源時顯示。
+   FFmpeg是轉換和串流音訊和視訊的解決方案，當安裝時，會用來正確轉碼[視訊資產](../../help/sites-authoring/default-components-foundation.md#video)。 對於啟用社群，它會用於作者環境，以取得已上傳資源的中繼資料，並產生縮圖以在列出資源時顯示。
 
 設定：
 
 * **社群管理員**
 
-   對於啟用社群，只能將使用者群組的 `Community Enablement Managers` 成員指派為其角色，其權限可能 `Community Site Enablement Manager`包括內容建立、指派及發佈環境中的成員管理。
+   對於啟用社群，只能將`Community Enablement Managers`使用者群組的成員指派為`Community Site Enablement Manager`的角色，其權限可能包括在發佈環境中建立內容、指派和成員管理。
 
 可選配置：
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 * **Dispatcher**
 
-## 配置步驟 {#configuration-steps}
+## 配置步驟{#configuration-steps}
 
 以下是啟用社群的必要步驟。
 
@@ -66,14 +66,14 @@ ht-degree: 1%
 
 1. **[安裝MySQL的JDBC驅動程式](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   使用Web Console（捆綁包）: *http://localhost:4502/system/console/bundles*
+   使用Web Console（捆綁包）:*http://localhost:4502/system/console/bundles*
 
-   安裝 *SCORM套件* 之前先安裝
+   安裝&#x200B;*before*&#x200B;安裝SCORM軟體包
 
 1. **[安裝SCORM套件](deploy-communities.md#scorm-package)**
 
 
-   使用包管理器： *http://localhost:4502/crx/packmgr/*
+   使用包管理器：*http://localhost:4502/crx/packmgr/*
 
 **在任何伺服器上：**
 
@@ -93,21 +93,21 @@ ht-degree: 1%
 
 1. **[配置JDBC連接池](mysql.md#configure-jdbc-connections)**
 
-   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
 1. **[設定SCORM引擎服務](mysql.md#aem-communities-scormengine-service)**
 
-   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
 1. **[設定CSRF篩選器](mysql.md#adobe-granite-csrf-filter)**
 
-   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
 **在作者實例上：**
 
-1. (可&#x200B;*選*) **[設定Analytics服務](analytics.md)**
+1. （*可選*）**[設定Analytics服務](analytics.md)**
 
-   使用工具、部署、雲端服務主控台： *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   使用工具、部署、雲端服務主控台：*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[設定FFmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
@@ -115,11 +115,11 @@ ht-degree: 1%
 
 1. **[啟用隧道服務](deploy-communities.md#tunnel-service-on-author)**
 
-   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
 1. **[建立社群管理員](users.md#creating-community-members)**
 
-   對於作者環境，請使用classic-UI安全控制台： *http://localhost:4502/useradmin*
+   對於作者環境，請使用classic-UI安全控制台：*http://localhost:4502/useradmin*
 
    使用路徑= /home/users/community建立使用者
 
@@ -130,4 +130,4 @@ ht-degree: 1%
 
 ## Dispatcher {#dispatcher}
 
-當部署包含 [AEM的Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)，為了讓啟用功能正常運作，需要修改 `clientheader` 和 `filter` 區段。 請參 [閱配置Dispatcher for Communities](dispatcher.md#enablement)。
+當部署包含[AEM的Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)時，為了讓啟用功能正常運作，`clientheader`和`filter`區段需要修改。 請參閱[配置Dispatcher for Communities](dispatcher.md#enablement)。
