@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe Experience Manager資料保護與資料隱私法規的準備 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager資料保護與資料隱私法規準備{#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需Adobe對隱私權問題之回應，以及這對您身為Adobe客戶意味著什麼的詳細資訊，請參 [閱Adobe的隱私權中心](https://www.adobe.com/privacy.html)。
+>如需Adobe對隱私權問題之回應，以及這對您身為Adobe客戶意味著什麼的詳細資訊，請參閱[Adobe的隱私權中心](https://www.adobe.com/privacy.html)。
 
 Adobe提供檔案和程式（當有API時），讓客戶隱私權管理員或AEM管理員處理資料保護和資料隱私權要求，並協助客戶遵守這些規定。 說明的程式可讓客戶手動或從外部入口網站或服務呼叫API（若有的話），以執行法規要求。
 
@@ -39,7 +39,7 @@ Adobe提供檔案和程式（當有API時），讓客戶隱私權管理員或AEM
 >
 >來自其他Adobe隨選服務的資料，連同任何相關的隱私權要求，都需要對該服務採取行動。
 >
->如需詳細資訊， [請參閱Adobe的隱私權中心](https://www.adobe.com/privacy.html)。
+>如需詳細資訊，請參閱[Adobe的隱私權中心](https://www.adobe.com/privacy.html)。
 
 ## 簡介 {#introduction}
 
@@ -87,31 +87,31 @@ Adobe提供處理與Adobe Experience Manager的存取、刪除和選擇退出相
 
 ![資料保護與隱私權](assets/data-protection-and-privacy-01.png)
 
-## Adobe Experience Manager與法規準備 {#aem-and-regulatory-readiness}
+## Adobe Experience Manager與法規準備{#aem-and-regulatory-readiness}
 
 如需AEM產品區域的法規檔案，請參閱以下章節。
 
 ## AEM Foundation {#aem-foundation}
 
-請參 [閱「處理AEM Foundation的資料保護與隱私權要求」](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)。
+請參閱「處理AEM Foundation[的資料保護與隱私權要求」。](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)
 
-## AEM Opting Into Aggregate Usage Statistics Collection {#aem-opting-into-aggregate-usage-statistics-collection}
+## AEM選擇匯總使用統計資料收集{#aem-opting-into-aggregate-usage-statistics-collection}
 
-請參 [閱匯總使用統計資訊收集](/help/sites-deploying/opt-in-aggregated-usage-statistics.md)。
+請參閱[匯總使用統計資料收集](/help/sites-deploying/opt-in-aggregated-usage-statistics.md)。
 
 ## AEM Sites {#aem-sites}
 
-請參 [閱「AEM網站——資料保護與隱私權準備」。](/help/sites-administering/gdpr-compliance-sites.md)
+請參閱[AEM網站——資料保護與隱私權準備。](/help/sites-administering/gdpr-compliance-sites.md)
 
 ## AEM Commerce {#aem-commerce}
 
-請參 [閱「AEM商務——資料保護與隱私權準備](/help/sites-administering/gdpr-compliance-commerce.md)」。
+請參閱[AEM商務——資料保護與隱私權準備](/help/sites-administering/gdpr-compliance-commerce.md)。
 
 ## AEM Mobile {#aem-mobile}
 
-請參 [閱AEM Mobile —— 資料保護與隱私權準備](/help/mobile/aem-mobile-gdpr-compliance.md)。
+請參閱[AEM Mobile —— 資料保護與隱私權準備](/help/mobile/aem-mobile-gdpr-compliance.md)。
 
-## AEM與Adobe Target和Adobe Analytics整合 {#aem-integration-with-adobe-target-adobe-analytics}
+## AEM與Adobe Target和Adobe Analytics的整合{#aem-integration-with-adobe-target-adobe-analytics}
 
 這些Adobe Experience Manager整合包含資料保護與隱私權（例如GDPR或CCPA）就緒服務。 AEM中不會儲存Adobe Target或Adobe Analytics中與整合相關的個人資料。
 如需詳細資訊，請參閱：
@@ -122,7 +122,7 @@ Adobe提供處理與Adobe Experience Manager的存取、刪除和選擇退出相
 
 ## AEM Communities {#aem-communities}
 
-AEM Communities賦予資料主體資料可攜性、存取權和透過現成可用的API [被遺忘權](/help/communities/user-ugc-management-service.md)。 這些API可大量刪除和大量匯出使用者產生的內容，並停用透過其可授權ID識別的使用者帳戶。 但是，通過刪除CRXDE Lite中的用戶節點，可以實現永久刪除用戶帳戶，這滿足了從系統中輕鬆退出的需要。
+AEM Communities透過[現成可用的API，賦予資料主體資料可攜性、存取權及被遺忘權。 ](/help/communities/user-ugc-management-service.md)這些API可大量刪除和大量匯出使用者產生的內容，並停用透過其可授權ID識別的使用者帳戶。 但是，通過刪除CRXDE Lite中的用戶節點，可以實現永久刪除用戶帳戶，這滿足了從系統中輕鬆退出的需要。
 
 此外，AEM Communities由於其Bulk Moderation主控台（可讓特權會員尋找和刪除使用者的貢獻和詳細資料），所以設計上提供隱私權。 「會員管理控制台」可限制到禁止參與者的程度。 此外，它授權資料主體刪除由其撰寫的稿件。
 
