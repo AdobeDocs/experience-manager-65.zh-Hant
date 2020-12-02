@@ -11,11 +11,14 @@ topic-tags: best-practices
 discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '438'
+ht-degree: 8%
 
 ---
 
 
-# 部署最佳實務{#deploying-best-practices}
+# 部署最佳做法{#deploying-best-practices}
 
 部署最佳實務說明如何以最有效率且最有效的方式部署或維護AEM。 這份不斷增加的主題清單包含AEM中的多個領域。
 
@@ -36,7 +39,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## OAK {#oak}
 
-[Oak](/help/sites-deploying/platform.md) 是可擴充且具效能的階層式內容儲存庫，是AEM的基礎。
+[Oakis是](/help/sites-deploying/platform.md) 可擴充且具效能的階層式內容存放庫，是AEM的基礎。
 
 <table>
  <tbody>
@@ -84,7 +87,7 @@ AEM Communities可簡化內部部署社群的建立和管理。 以下說明AEM 
 
 AEM目前有兩個UI:在同一版本中提供經典和觸控最佳化UI。 因此，客戶必須決定在專案實施期間要使用哪些項目。 本檔案旨在協助您找到正確的選擇。
 
-## 效能 {#performance}
+## 效能{#performance}
 
 以下列出有關效能的最佳實踐：
 
@@ -93,7 +96,7 @@ AEM目前有兩個UI:在同一版本中提供經典和觸控最佳化UI。 因�
   <tr>
    <td>質量保證的最佳做法</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">質量保證的最佳做法</a></td>
-   <td>針對發佈環境上的效能測試，明確定義測試概念所涉及問題的標準 <em>化概</em> 述。 QA工程師、項目經理和系統管理員對此感興趣。</td>
+   <td>標準化概述在<em>publish</em>環境中為效能測試專門定義測試概念所涉及的問題。 QA工程師、項目經理和系統管理員對此感興趣。</td>
   </tr>
   <tr>
    <td>搭配使用 Dispatcher 與 CDN</td>
