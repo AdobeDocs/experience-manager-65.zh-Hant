@@ -10,19 +10,22 @@ topic-tags: hTML5_forms
 discoiquuid: 445e24af-cd1a-414d-bd01-9feb6631bbef
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 4%
 
 ---
 
 
-# 將HTML5表格儲存為草稿 {#saving-an-html-form-as-a-draft}
+# 將HTML5表單儲存為草稿{#saving-an-html-form-as-a-draft}
 
 您可以將HTML5表格儲存為草稿，然後在稍後階段繼續填寫表格。 Forms Portal可讓任何使用者儲存和還原HTML5表格。 要啟用「另存為草稿」功能，請將以下配置添加到配置檔案節點：
 
-## 「自訂描述檔」允許「另存為草稿」功能 {#custom-profile-to-allow-save-as-draft-feature}
+## 「自訂描述檔」可允許「另存為草稿」功能{#custom-profile-to-allow-save-as-draft-feature}
 
-AEM Forms現成可用，提供「另存 **為草稿** 」描述檔。 您可以使用「另存為草稿」描述檔來轉換表單，以啟用HTML5表單的草稿功能。 您可以在 [Forms Manager中指定表單的HTML演算描述檔](/help/forms/using/introduction-managing-forms.md)。
+AEM Forms現成可用，提供&#x200B;**另存為草稿**&#x200B;描述檔。 您可以使用「另存為草稿」描述檔來轉換表單，以啟用HTML5表單的草稿功能。 您可以在[Forms Manager](/help/forms/using/introduction-managing-forms.md)中指定表單的HTML演算描述檔。
 
-若要為現有的自訂描述檔啟用「另存為草稿」 [功能](/help/forms/using/custom-profile.md)，請新增下列屬性至您的自訂描述檔節點：
+要為現有的[自定義配置檔案](/help/forms/using/custom-profile.md)啟用「另存為草稿」功能，請將以下屬性添加到自定義配置檔案節點：
 
 <table>
  <tbody>
@@ -47,9 +50,9 @@ AEM Forms現成可用，提供「另存 **為草稿** 」描述檔。 您可以�
  </tbody>
 </table>
 
-## 草稿儲存和清單 {#drafts-storage-and-listing}
+## 草稿儲存和清單{#drafts-storage-and-listing}
 
-啟用表單的「另存為草稿」功能後；保存表單時，表單會列在「草稿和提 [交」元件中](/help/forms/using/draft-submission-component.md)。 您可以檢索並開始填寫「草稿和提交」元件中保存的表單。
+啟用表單的「另存為草稿」功能後；保存表單時，它會列在[草稿和提交元件](/help/forms/using/draft-submission-component.md)中。 您可以檢索並開始填寫「草稿和提交」元件中保存的表單。
 
 要為「草稿」和「提交」元件啟用表單清單，請向配置檔案節點添加以下屬性：
 
@@ -65,9 +68,9 @@ AEM Forms現成可用，提供「另存 **為草稿** 」描述檔。 您可以�
    <td>fp.enablePortalSubmit</td>
    <td>字串</td>
    <td>true</td>
-   <td>若要讓草稿和表格在提交後列在<br /> Forms Portal的「草稿和提交」元件中</td>
+   <td>在提交後，啟用草稿和表格以列在<br /> Forms Portal Drafts &amp; Submissions元件中</td>
   </tr>
  </tbody>
 </table>
 
-依預設，AEM Forms會在「發佈」例項的/content/forms/fp節點中，儲存與表單草稿和提交相關聯的使用者資料。 您可以新增自訂儲存提供者，以取得詳細資訊，請參閱「草稿 [和提交的自訂儲存」元件](/help/forms/using/adding-custom-storage-provider-forms.md)。
+依預設，AEM Forms會在「發佈」例項的/content/forms/fp節點中，儲存與表單草稿和提交相關聯的使用者資料。 您可以新增自訂儲存提供者，以取得詳細資訊，請參閱[草稿和提交的自訂儲存元件](/help/forms/using/adding-custom-storage-provider-forms.md)。
