@@ -12,7 +12,7 @@ ht-degree: 4%
 ---
 
 
-# 在AEM中預覽3D資產{#previewing-3d-assets-aem}
+# 在AEM{#previewing-3d-assets-aem}中預覽3D資產
 
 Adobe Experience Manager支援3D資產的上傳、傳送和互動式預覽，做為製作程式的一部分。
 
@@ -20,20 +20,20 @@ Adobe Experience Manager支援3D資產的上傳、傳送和互動式預覽，做
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
-## AEM中支援的3D預覽格式 {#supported-3d-previewing-assets}
+## AEM {#supported-3d-previewing-assets}中支援的3D預覽格式
 
 互動式3D預覽支援下列檔案格式：
 
 | 3D副檔名 | 檔案格式 | MIME類型 | 附註 |
 |---|---|---|---|
 | GLB | 二進位GL傳輸 | 模型/gltf-binary |  |
-| GLTF | GL傳輸格式 | model/gltf+json | 請參 **閱下** 「附註」。 |
+| GLTF | GL傳輸格式 | model/gltf+json | 請參閱下面的&#x200B;**注意**。 |
 | OBJ | WaveFront 3D物件檔案 | application/x-tgif |  |
 | STL | 立體成形 | application/vnd.ms-pki.stl |  |
 | DN | Adobe Dimension | model/x-adobe-dn | 僅支援擷取；預覽無法使用。 |
 | USDZ | 通用場景描述Zip封存 | model/vnd.usdz+zip | 僅支援擷取；預覽無法使用。 |
 
-**注意**:如果材料未在gLTF模型的預覽中渲染，請確保它們的命名正確，並且位於與模型相同的根資料夾中，類似 `textures` 於以下內容：
+**注意**:如果材料未在gLTF模型的預覽中渲染，請確保它們的命名正確，並且位於與模型相同的根資料夾中， `textures` 類似於以下內容：
 
     Asset(folder)
     model.
@@ -42,7 +42,7 @@ Adobe Experience Manager支援3D資產的上傳、傳送和互動式預覽，做
     material_0_baseColor.
     jpegmaterial_0_normal.jpeg
 
-## 在AEM中預覽3D資產時的效能考量{#performance-3d-previewing-assets}
+## 在AEM{#performance-3d-previewing-assets}中預覽3D資產時的效能考量
 
 在資產詳細資訊檢視頁面中開啟3D資產所花的時間，視頻寬、影像複雜性和伺服器延遲等因素而定。
 
@@ -51,8 +51,8 @@ Adobe Experience Manager支援3D資產的上傳、傳送和互動式預覽，做
 **若要在AEM中預覽3D資產**
 
 1. 請確定您已將3D資產上傳至AEM。
-See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/manage-assets.md#uploading-assets).
-1. 在AEM的「導覽」頁面 **[!UICONTROL 上]** ，點選「 **[!UICONTROL 資產>檔案」。]**
+請參閱[3D預覽支援的格式](#supported-3d-previewing-assets)和[上傳資產](/help/assets/manage-assets.md#uploading-assets)。
+1. 從AEM，在&#x200B;**[!UICONTROL Navigation]**&#x200B;頁面上，點選&#x200B;**[!UICONTROL 資產>檔案。]**
 
    ![導覽頁面](/help/assets/assets-dm/navigation-assets.png)
 
@@ -78,7 +78,7 @@ See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Upl
    * **重新輸入相機**-將相機重新輸入到3D場景中某個物件的某個點。
       * _滑鼠_:按兩下。
       * _觸控螢幕_:點兩下。
-   * **重設**-靠近頁面的右下角，點選「重設」圖示，將檢視目標點還原至3D資產的中心。 Reset也會使攝影機更靠近或更遠，以便以合理的檢視大小顯示整個資產。
+   * **重設**-靠近頁面的右下角，點選「重設」圖示，將檢視目標點還原至3D資產的中心。Reset也會使攝影機更靠近或更遠，以便以合理的檢視大小顯示整個資產。
    * **全螢幕模式**-若要進入全螢幕模式，請在頁面的右下角點選全螢幕圖示。
 
-1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close.]**
+1. 完成後，在頁面右上角附近點選&#x200B;**[!UICONTROL 關閉。]**
