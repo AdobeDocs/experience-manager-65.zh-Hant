@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: a87834c9-247c-49fa-9978-a969230db91c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1290'
+ht-degree: 1%
 
 ---
 
@@ -21,21 +24,21 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
 
-「應 **用程式儀表板** 」上的「管理應用程式圖格」可讓您修改應用程式的詳細資訊。 若要開啟「詳細資料」頁面，請按一下「管理應用程式」圖格的詳細資料連結。 在「管理應用程式」頁面中，您可以編輯PhoneGap應用程式設定(config.xml)設定，並準備您的應用程式以送出至各種應用程式商店。
+「應用程式儀表板」上的「管理應用程式」(**Manage App** Tile)可讓您修改應用程式的詳細資訊。 若要開啟「詳細資料」頁面，請按一下「管理應用程式」圖格的詳細資料連結。 在「管理應用程式」頁面中，您可以編輯PhoneGap應用程式設定(config.xml)設定，並準備您的應用程式以送出至各種應用程式商店。
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-## 瞭解管理應用程式圖格 {#understanding-the-manage-app-tile}
+## 瞭解管理應用程式圖格{#understanding-the-manage-app-tile}
 
-您可以按一下「 **Manage App** 」（管理應用程式）方塊中的每個方塊來檢視或編輯詳細資訊 在右下角。
+您可以按一下「...」，深入檢視&#x200B;**管理應用程式**&#x200B;圖格中的每個圖格，以檢視或編輯詳細資訊 在右下角。
 
-### 「基本」頁籤 {#the-basic-tab}
+### 「Basic（基本）」頁籤{#the-basic-tab}
 
-您可以從此標籤中編 **輯應用程式的名稱**、作者、簡 **短說明**，以及您應 ******** 用程式的說明。
+您可以從此標籤編輯應用程式的&#x200B;**名稱**、**作者**、**簡短說明**&#x200B;和&#x200B;**說明**。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
-### 進階標籤 {#the-advanced-tab}
+### 「Advanced（高級）」頁籤{#the-advanced-tab}
 
 每個行動應用程式平台都會說明所收集的資料，並特別針對每個應用程式商店。
 
@@ -54,7 +57,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >AEM Verify應用程式提供在AEM中直接將螢幕擷取畫面傳送至您的應用程式詳細資訊的功能。
 >
->如需詳 [細資訊，請參閱AEM的Mobile快速入門](/help/mobile/phonegap-mobile-quickstart.md) (Quickstart)。
+>如需詳細資訊，請參閱[ AEM的Mobile Quickstart Verify](/help/mobile/phonegap-mobile-quickstart.md)。
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
@@ -62,7 +65,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->熟悉「管理應用程式」圖 **格後** ，請參閱「編 [輯應用程式中繼資料](/help/mobile/phonegap-editmetadata.md) 」以檢視和編輯中繼資料。
+>熟悉&#x200B;**管理應用程式**&#x200B;圖格後，請參閱[編輯應用程式中繼資料](/help/mobile/phonegap-editmetadata.md)以檢視和編輯中繼資料。
 
 #### 常見中繼資料 {#common-metadata}
 
@@ -72,11 +75,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在本節中，您定義Content Update Server URL、行動應用程式的登陸頁面、用於編譯的PhoneGap版本、應用程式版本、名稱、說明等。
 
-**應用程式版本** (App Version)是您應用程式的運作版本。 通常的最佳實務是使用3小數記號，並在第一個版本之前從1.0.0以下開始。
+**App** Version是您應用程式的正常版本。通常的最佳實務是使用3小數記號，並在第一個版本之前從1.0.0以下開始。
 
-**PhoneGap Version** 是您希望使用PhoneGap編譯應用程式的版本。 最佳實務是跟上最新版本，以確保您取得最新、最好的功能和錯誤修正。
+**PhoneGap** Version是您希望使用PhoneGap編譯應用程式的版本。最佳實務是跟上最新版本，以確保您取得最新、最好的功能和錯誤修正。
 
-**Content Update Server URL** （內容更新伺服器URL）是您的應用程式用來呼叫ContentSync更新的URL。 它必須設定為您的Dispatcher URL，或（若未使用Dispatcher）設定為其中一個發佈例項，用以將ContentSync更新提供給您的應用程式。
+**Content Update Server** URL是您的應用程式用來呼叫ContentSync更新的URL。它必須設定為您的Dispatcher URL，或（若未使用Dispatcher）設定為其中一個發佈例項，用以將ContentSync更新提供給您的應用程式。
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -86,7 +89,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >在詳細資訊檢視的頂端，您會看到「應用程式版本」、「PhoneGap版本」和「更新URL」，這些值都可在「常用中繼資料」區段中設定。 不過，無法編輯應用程式ID。
 
-#### 平台中繼資料 {#platform-metadata}
+#### 平台中繼資料{#platform-metadata}
 
 在PhoneGap config.xml中定義的每個平台都可包含自訂平台屬性。 AEM開發人員必須提供內容結構才能擷取這些屬性。 如需iOS平台特定屬性的提供範例，請參閱。
 
@@ -102,7 +105,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Apple AppStore需要額外的中繼資料，才能送出您的應用程式以進行散發。 iOS中繼資料區段會嘗試收集Apple的iTMSTransporter工具可用來將中繼資料發佈至相關Apple開發人員帳戶的必要資訊。
 
-若要取得Apple特定的中繼資料，您必須先在https://itunesconnect.apple.com上建立應用程 [式](https://itunesconnect.apple.com/)。 在建立您的應用程式時，如果您想使用Apple iTMSTransporter工具來驗證中繼資料並上傳至itunesconnect.apple.com,Apple將會產生iOS中繼資料區段所需的中繼資料。 如果您只想要取得中繼資料以收集內容，則不一定需要填寫iOS專用的中繼資料。 您仍可匯出將合併iOS和常用中繼資料的中繼資料，並將所有螢幕擷取畫面收集到Zip檔案中，以便隨時下載。
+若要取得Apple特定的中繼資料，您必須先在[https://itunesconnect.apple.com](https://itunesconnect.apple.com/)上建立應用程式。 在建立您的應用程式時，如果您想使用Apple iTMSTransporter工具來驗證中繼資料並上傳至itunesconnect.apple.com,Apple將會產生iOS中繼資料區段所需的中繼資料。 如果您只想要取得中繼資料以收集內容，則不一定需要填寫iOS專用的中繼資料。 您仍可匯出將合併iOS和常用中繼資料的中繼資料，並將所有螢幕擷取畫面收集到Zip檔案中，以便隨時下載。
 
 下載的zip檔案包含一個itmsp檔案，可檢查metadata.xml的檔案。 itmsp檔案包含匯出的中繼資料（在metadata.xml檔案中），以及所有相關的螢幕擷取畫面。
 
@@ -130,29 +133,29 @@ Content Update Server URL屬性是必須指向發佈實例的URL;直接或透過
 >
 >如果您的「作者」伺服器例項正在複製至多個發佈伺服器例項（AEM的通用架構），每個發佈伺服器都會有相同的更新內容，因為更新是建立在作者上，並複製至所有發佈例項。 基本上，完全支援負載平衡和故障切換。
 
-### 外掛程式標籤 {#the-plugins-tab}
+### 外掛程式標籤{#the-plugins-tab}
 
-「外 **掛程式** 」標籤會說明與您的應用程式相關聯的外掛程式。 此資訊將用於在建立期間擷取適當的外掛程式。
+**Plugins**&#x200B;標籤說明與您的應用程式相關聯的外掛程式。 此資訊將用於在建立期間擷取適當的外掛程式。
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 
-### 「螢幕擷取」標籤 {#the-screenshots-tab}
+### 「螢幕擷取」標籤{#the-screenshots-tab}
 
-「熒 **幕擷取** 」標籤會顯示不同平台上支援的螢幕擷取解析度。
+**螢幕擷取**&#x200B;標籤會顯示不同平台上支援的螢幕擷取解析度。
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
 >[!NOTE]
 >
->若要新增和移除螢幕擷取畫面，請參閱「編 [輯應用程式中繼資料](/help/mobile/phonegap-editmetadata.md)」。
+>若要新增和移除螢幕擷取畫面，請參閱[編輯應用程式中繼資料](/help/mobile/phonegap-editmetadata.md)。
 
-### 驗證頁籤 {#the-authentication-tab}
+### 「Authentication（驗證）」頁籤{#the-authentication-tab}
 
-「驗 **證** 」標籤可讓您選取要與應用程式關聯的OAuth用戶端，讓開發人員運用Adobe Experience Manager的OAuth驗證。
+**Authentication**&#x200B;標籤可讓您選取要與您應用程式關聯的OAuth用戶端，讓開發人員運用Adobe Experience Manager的OAuth驗證。
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
-### 後續步驟 {#the-next-steps}
+### 後續步驟{#the-next-steps}
 
 在您瞭解應用程式儀表板中管理應用程式圖格後，請參閱下列其他編寫角色的資源：
 
