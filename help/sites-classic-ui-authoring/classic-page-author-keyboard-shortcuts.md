@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '336'
+ht-degree: 2%
 
 ---
 
 
 # 編輯頁面時的鍵盤快速鍵{#keyboard-shortcuts-when-editing-pages}
 
-AEM中提供各種鍵盤快速鍵。 有的在編輯頁面時套用，有的則套用 [在控制台上](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
+AEM中提供各種鍵盤快速鍵。 有些在編輯頁面時套用，有些則適用於[控制台的使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
->在下表中，對於「快速鍵」欄中的鍵組 **合** ,Ctrl和Command鍵都可在macOS上運作。
+>在下表中，對於&#x200B;**Shortcut**&#x200B;欄中的鍵組合，Ctrl鍵和Command鍵都可在macOS上運作。
 
 >[!NOTE]
 >
@@ -29,11 +32,12 @@ AEM中提供各種鍵盤快速鍵。 有的在編輯頁面時套用，有的則�
 >
 >* Windows:按住Ctrl鍵並按一下所需元件。
 >* Mac:Cmd+按一下必要的元件。
+
 >
 
 
 
-## 編輯鍵盤快速鍵 {#editing-keyboard-shortcuts}
+## 編輯鍵盤快速鍵{#editing-keyboard-shortcuts}
 
 <table>
  <tbody>
@@ -70,7 +74,7 @@ AEM中提供各種鍵盤快速鍵。 有的在編輯頁面時套用，有的則�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>剪下選取的段落。<strong><br /></strong> 注意：剪下的段落在貼上到新位置之前不會消失。</td>
+   <td>剪下選取的段落。<strong><br /> 注意：</strong> 剪下的段落在貼到新位置之前不會消失。</td>
   </tr>
   <tr>
    <td> </td>
@@ -95,12 +99,12 @@ AEM中提供各種鍵盤快速鍵。 有的在編輯頁面時套用，有的則�
   <tr>
    <td> </td>
    <td><strong><code>Alt-right-click</code></strong></td>
-   <td>強制預設（瀏覽器）內容選單。<br /><strong> 注 </strong>意：AEM內容功能表只會出現在傳統UI中。</td>
+   <td>強制預設（瀏覽器）內容選單。<br /> <strong>注意： </strong> AEM內容功能表只會出現在傳統UI中。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Alt-c</code></strong></td>
-   <td>顯示客戶 <a href="/help/sites-administering/client-context.md">端上下文</a>。</td>
+   <td>顯示<a href="/help/sites-administering/client-context.md">客戶端上下文</a>。</td>
   </tr>
   <tr>
    <td>RTF 編輯器<br /> </td>
@@ -110,7 +114,7 @@ AEM中提供各種鍵盤快速鍵。 有的在編輯頁面時套用，有的則�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-I</code></strong><br /> </td>
-   <td>Italic<br /> </td>
+   <td>斜體<br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -150,9 +154,9 @@ AEM中提供各種鍵盤快速鍵。 有的在編輯頁面時套用，有的則�
  </tbody>
 </table>
 
-使用主控台時，案頭使用者也可使用各種鍵盤快速 [鍵](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
+使用[console](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)時，案頭使用者也可使用各種鍵盤快速鍵。
 
-## 開發的鍵盤快速鍵 {#keyboard-shortcuts-for-development}
+## 開發的鍵盤快速鍵{#keyboard-shortcuts-for-development}
 
 使用頁面編輯器時，案頭開發人員可使用其他鍵盤快速鍵。
 
@@ -165,7 +169,7 @@ AEM中提供各種鍵盤快速鍵。 有的在編輯頁面時套用，有的則�
   </tr>
   <tr>
    <td>編輯模式</td>
-   <td><br /> 在URL中設定下列字尾：然 <code>?debugClientLibs=true</code><br /> 後使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>在URL中設定下列字尾：<br /> <code>?debugClientLibs=true</code><br />然後使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>若要查看頁面載入的時間統計資料。</td>
   </tr>
  </tbody>
