@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 translation-type: tm+mt
 source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+workflow-type: tm+mt
+source-wordcount: '6722'
+ht-degree: 1%
 
 ---
 
@@ -19,33 +22,34 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 >[!NOTE]
 >
->有關效能的一般准則，請閱讀「性 [能准則](/help/sites-deploying/performance-guidelines.md) 」頁。
+>有關效能的一般准則，請閱讀[效能准則](/help/sites-deploying/performance-guidelines.md)頁。
 >
->有關疑難排解和修復效能問題的詳細資訊，另請參閱 [效能樹](/help/sites-deploying/performance-tree.md)。
+>有關故障排除和修復效能問題的詳細資訊，另請參閱[效能樹](/help/sites-deploying/performance-tree.md)。
 >
->此外，您還可以閱讀「效能調整提示」的「知識 [庫」文章。](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+>此外，您還可以在[效能調整提示上檢閱知識庫文章。](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
 
 關鍵問題是您的網站回應訪客要求所花的時間。 雖然此值會因每個請求而異，但可以定義平均目標值。 一旦這個值被證明是可實現和可維護的，它就可以用來監控網站的效能並指出潛在的問題。
 
 您要針對的回應時間在作者和發佈環境上會有所不同，反映目標讀者的不同特性：
 
-## 作者環境 {#author-environment}
+## 作者環境{#author-environment}
 
 此環境由作者輸入和更新內容使用。 當更新內容頁面和這些頁面上的個別元素時，它必須迎合少數使用者的需求，而每位使用者都會產生大量效能密集的要求。
 
-## 發佈環境 {#publish-environment}
+## 發佈環境{#publish-environment}
 
 此環境包含您提供給使用者的內容。 在這裡，請求數量更大，速度也同樣重要，但由於請求的性質不那麼動態，因此可以應用額外的效能增強機制；例如快取內容或負載平衡。
 
 >[!NOTE]
 >
->* 在進行效能優化配置後，請按照 [Tough Day](/help/sites-developing/tough-day.md) （艱難日）中的步驟來測試大負載環境。
->* 另請參閱 [效能調整提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)。
+>* 在進行效能優化配置後，請按照[Tough Day](/help/sites-developing/tough-day.md)中的步驟來測試負載較重的環境。
+>* 另請參閱[效能調整提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)。
+
 >
 
 
 
-## 效能最佳化方法 {#performance-optimization-methodology}
+## 效能優化方法{#performance-optimization-methodology}
 
 CQ專案的效能最佳化方法可歸納為五個非常簡單的規則，可遵循這些規則以避免從一開始就發生效能問題：
 
@@ -57,7 +61,7 @@ CQ專案的效能最佳化方法可歸納為五個非常簡單的規則，可遵
 
 這些規則在很大程度上適用於Web專案，並與專案經理和系統管理員相關，以確保其專案在啟動時不會面臨效能挑戰。
 
-### 優化規劃 {#planning-for-optimization}
+### 優化計畫{#planning-for-optimization}
 
 ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
@@ -69,29 +73,29 @@ CQ專案的效能最佳化方法可歸納為五個非常簡單的規則，可遵
 
 由於系統負載變化，且系統的效能配置檔案會隨時間而改變，因此應以6-12個月的間隔計畫效能「調整」或「運行狀況檢查」。
 
-### 模擬真實 {#simulate-reality}
+### 模擬真實{#simulate-reality}
 
 ![chlimage_1-4](assets/chlimage_1-4.jpeg)
 
 如果您上線使用網站，並在發佈後發現您遇到效能問題，只有一個原因：您的負載和效能測試並不足以模擬實際情況。
 
-模擬現實很困難，而您在「實現」上合理想投入多少精力，取決於您專案的性質。 「真實」不僅指「真實程式碼」和「真實流量」，也指「真實內容」，尤其是關於內容大小和結構。 請記住，根據儲存庫的大小和結構，模板的行為可能完全不同。
+模擬現實是困難的，而您在合理地想要投入多少精力來實現「真實」，取決於您專案的性質。 「真實」不僅指「真實程式碼」和「真實流量」，也指「真實內容」，尤其是關於內容大小和結構。 請記住，根據儲存庫的大小和結構，模板的行為可能完全不同。
 
-### 建立堅實的目標 {#establish-solid-goals}
+### 建立堅實的目標{#establish-solid-goals}
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)
 
 正確制定業績目標的重要性不容低估。 通常，一旦人們將注意力集中在具體的績效目標上，就很難在以後改變這些目標，即使這些目標基於瘋狂的假設。
 
-建立良好、穩固的效能目標，確實是最棘手的領域之一。 通常最好從可比網站（例如新網站的前代網站）收集實際記錄和基準。
+建立良好、穩固的效能目標，確實是最棘手的領域之一。 通常最好從可比網站（例如新網站的前代網站）收集實際日誌和基準。
 
-### 保持相關性 {#stay-relevant}
+### 保持相關{#stay-relevant}
 
 ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
 一次優化一個瓶頸非常重要。 如果您嘗試在不驗證單一最佳化影響的情況下並行執行，您將無法追蹤哪個最佳化度量真正有幫助。
 
-### 敏捷迭代週期 {#agile-iteration-cycles}
+### 敏捷迭代週期{#agile-iteration-cycles}
 
 ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
@@ -99,7 +103,7 @@ CQ專案的效能最佳化方法可歸納為五個非常簡單的規則，可遵
 
 這主要表示實施最佳化的開發人員應快速判斷最佳化是否已達到目標。 這是有價值的資訊，因為當達到目標時，優化就結束了。
 
-## 基本效能指引 {#basic-performance-guidelines}
+## 基本效能指南{#basic-performance-guidelines}
 
 一般而言，請將未快取的html要求保留在100毫秒以內。 更具體地說，以下可能是准則：
 
@@ -128,11 +132,11 @@ JVM和OS層級調整通常不會導致效能大幅提升，因此應在最佳化
 
 在通常的效能最佳化練習中，您最好的朋友包括：
 
-* the `request.log`
+* `request.log`
 * 基於元件的定時
 * 最後，但至少是java設定器。
 
-### 載入和編輯數位資產時的效能 {#performance-when-loading-and-editing-digital-assets}
+### 載入和編輯數位資產時的效能{#performance-when-loading-and-editing-digital-assets}
 
 由於載入和編輯數位資產時涉及大量資料，因此效能可能成為問題。
 
@@ -155,11 +159,11 @@ JVM和OS層級調整通常不會導致效能大幅提升，因此應在最佳化
 
 * 80%的編輯都會在20%的時間內完成，因此在高峰時期，您的資料速率是平均數的4倍。 這是您的績效目標。
 
-## 效能監控 {#performance-monitoring}
+## 效能監控{#performance-monitoring}
 
 效能（或缺乏效能）是您的使用者最先注意到的事項之一，因此，如同使用者介面的應用程式，效能至關重要。 若要最佳化CQ安裝的效能，您需要監控執行個體的各種屬性及其行為。
 
-有關如何執行效能監視的資訊，請參 [閱監視效能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)。
+有關如何執行效能監視的資訊，請參見[監視效能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)。
 
 導致效能問題的問題通常很難追蹤，即使其效果很容易看到。
 
@@ -171,9 +175,9 @@ JVM和OS層級調整通常不會導致效能大幅提升，因此應在最佳化
 
 效能也是卷和容量之間的平衡：
 
-**卷** ：系統處理和傳送的輸出量。
+**卷** 系統處理和傳送的輸出量。
 
-**容量** ：系統提供容量的能力。
+**容** 量系統提供容量的能力。
 
 這可以在整個Web鏈的不同位置加以說明。
 
@@ -185,30 +189,30 @@ JVM和OS層級調整通常不會導致效能大幅提升，因此應在最佳化
 * 應用程式（您的專案）程式碼
 * 搜尋功能
 
-### 關於績效的基本規則 {#basic-rules-regarding-performance}
+### 效能{#basic-rules-regarding-performance}的基本規則
 
 在最佳化效能時，應牢記某些規則：
 
-* 效能調 *整必須* 是每個專案的一部分。
+* 效能調整&#x200B;*必須*&#x200B;是每個項目的一部分。
 * 請勿在開發週期初期進行最佳化。
 * 效能僅與最薄弱的環節一樣好。
 * 請務必考慮容量與容量。
 * 首先優化重要事物。
-* 沒有現實的目標， *絕不* 能最佳化。
+* 沒有&#x200B;*逼真的*&#x200B;目標，絕不要進行最佳化。
 
 >[!NOTE]
 >
 >請記住，您用來測量效能的機制通常會影響您嘗試測量的內容。 你應該總是設法解決這些差異，盡可能消除它們的影響；尤其是瀏覽器外掛程式應盡可能取消啟動。
 
-## 效能配置 {#configuring-for-performance}
+## 為效能配置{#configuring-for-performance}
 
 CQ（和／或基礎CRX）的某些方面可以配置為優化效能。 以下是可能性和建議，您必須先確定是否或如何使用相關功能，才能進行變更。
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱知識 [庫文章](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)。
+>如需詳細資訊，請參閱[KB文章](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)。
 
-### 搜尋索引 {#search-indexing}
+### 搜索索引{#search-indexing}
 
 從AEM 6.0開始，Adobe Experience Manager使用Oak資料庫架構。
 
@@ -217,7 +221,7 @@ CQ（和／或基礎CRX）的某些方面可以配置為優化效能。 以下�
 * [查詢和索引的最佳做法](/help/sites-deploying/best-practices-for-queries-and-indexing.md)
 * [查詢和索引](/help/sites-deploying/queries-and-indexing.md)
 
-### 併發工作流處理 {#concurrent-workflow-processing}
+### 併發工作流處理{#concurrent-workflow-processing}
 
 限制同時執行的工作流程進程數，以提升效能。 預設情況下，工作流引擎並行處理的工作流數量與Java VM可用的處理器數量相同。 當工作流程步驟需要大量的處理資源（RAM或CPU）時，並行執行其中數個工作流程可能會對可用伺服器資源產生高需求。
 
@@ -226,25 +230,25 @@ CQ（和／或基礎CRX）的某些方面可以配置為優化效能。 以下�
 工作流引擎使用Apache Sling作業佇列來處理和排程工作項目處理。 下列工作佇列服務已依預設從Apache Sling Job Queue Configuration服務工廠建立，以處理工作流程工作：
 
 * Granite工作流程佇列：大部分的工作流程步驟（例如處理DAM資產的步驟）都使用Granite Workflow Queue服務。
-* Granite工作流外部進程作業隊列：此服務用於特殊的外部工作流步驟，通常用於聯繫外部系統和輪詢結果。 例如，InDesign「媒體擷取程式」步驟會實作為外部程式。 工作流程引擎使用外部佇列來處理輪詢。 (請參 [閱com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。)
+* Granite工作流外部進程作業隊列：此服務用於特殊的外部工作流步驟，通常用於聯繫外部系統和輪詢結果。 例如，InDesign「媒體擷取程式」步驟會實作為外部程式。 工作流程引擎使用外部佇列來處理輪詢。 (請參閱[com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html))。
 
 配置這些服務以限制併發運行的工作流進程的最大數量。
 
-**注意：** 配置這些作業隊列會影響所有工作流，除非您為特定工作流模型建立了作業隊列(請參閱下面的 [Configure the Queue for a Specific Workflow Model](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) )。
+**注意：** 除非您為特定工作流模型建立了作業隊列，否則配置這些作業隊列會影響所有工作流(請參閱 [下面的「為特定工作流模型配置](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) 隊列」)。
 
 **儲存庫中的配置**
 
-如果您使用sling:OsgiConfig [節點設定服務](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)，則需要尋找現有服務的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台來發現PID。
+如果您使用sling:OsgiConfig node](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)來設定服務[，則需要尋找現有服務的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台來發現PID。
 
 您需要配置名為queue.maxparallel的屬性。
 
 **Web控制台中的配置**
 
-若要使用Web Console [來設定這些服務](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，請在Apache Sling Job Queue Configuration服務工廠下方找出現有的設定項目。
+若要使用Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)來設定這些服務[，請在Apache Sling Job Queue Configuration服務工廠下方找出現有的設定項目。
 
 您需要配置名為「最大並行作業數」的屬性。
 
-### 為特定工作流配置隊列 {#configure-the-queue-for-a-specific-workflow}
+### 配置特定工作流{#configure-the-queue-for-a-specific-workflow}的隊列
 
 為特定工作流模型建立作業隊列，以便您可以為該工作流模型配置作業處理。 這樣，您的配置會影響特定工作流的處理，而預設的「Granite工作流隊列」的配置則控制其他工作流的處理。
 
@@ -253,15 +257,15 @@ CQ（和／或基礎CRX）的某些方面可以配置為優化效能。 以下�
 * com/adobe/granite/workflow/job&amp;ast;
 * com/adobe/granite/workflow/external/job&amp;ast;
 
-工作流模型生成的實際作業主題包括模型特定的尾碼。 例如，  DAM更新資產工作流模型生成具有以下主題的作業：
+工作流模型生成的實際作業主題包括模型特定的尾碼。 例如，[!UICONTROL DAM更新資產]工作流程模型會產生具有下列主題的工作：
 
 com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model
 
 因此，您可以為主題建立與工作流模型的作業主題匹配的作業隊列。 配置隊列的效能相關屬性只影響生成與隊列主題匹配的作業的工作流模型。
 
-以下過程使用 [!UICONTROL DAM Update Asset工作流為工作流建立作業隊列] 。
+以下過程使用[!UICONTROL DAM更新資產]工作流建立工作流的作業隊列。
 
-1. 執行要為其建立作業隊列的工作流模型，以便生成主題統計資訊。 例如，將影像新增至「資產」以執行 [!UICONTROL DAM更新資產工作流程] 。
+1. 執行要為其建立作業隊列的工作流模型，以便生成主題統計資訊。 例如，將影像新增至「資產」以執行[!UICONTROL DAM更新資產]工作流程。
 1. 開啟Sling Jobs主控台。 ([http://localhost:4502/system/console/slingevent](http://localhost:4502/system/console/slingevent))
 1. 在主控台中探索與工作流程相關的主題。 對於DAM更新資產，可找到下列主題：
 
@@ -271,15 +275,15 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 1. 為每個主題建立一個作業隊列。 若要建立工作佇列，請建立Apache Sling Job Queue factory服務的工廠設定。
 
-   工廠配置與「併發工作流處理」中描述的「Granite工作流隊列」類似 [](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)，但「主題」屬性與工作流作業的主題匹配。
+   工廠配置與[併發工作流處理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)中描述的Granite工作流隊列相似，但「主題」屬性與工作流作業的主題匹配。
 
-### CQ5 DAM資產同步服務 {#cq-dam-asset-synchronization-service}
+### CQ5 DAM Asset Synchronization Service {#cq-dam-asset-synchronization-service}
 
-用於 `AssetSynchronizationService` 同步來自掛載儲存庫（包括LiveLink 、 Documentum等）的資產。 預設情況下，每300秒（5分鐘）進行一次常規檢查，因此，如果不使用掛載資料庫，則可禁用此服務。
+`AssetSynchronizationService`用於同步來自掛載儲存庫（包括LiveLink 、 Documentum等）的資產。 預設情況下，每300秒（5分鐘）進行一次常規檢查，因此，如果不使用掛載資料庫，則可禁用此服務。
 
-這是通過配 [置OSGi服務](/help/sites-deploying/configuring-osgi.md)**CQ DAM Asset Synchronization Service** ，將同步期間( ****`scheduler.period`)設定為（最小值為）1年（以秒為單位）來完成的。
+通過[配置OSGi服務](/help/sites-deploying/configuring-osgi.md) **CQ DAM資產同步服務**&#x200B;將&#x200B;**同步週期**(`scheduler.period`)設定為（最少為）1年（以秒為單位），可以完成此操作。
 
-### 多個DAM例項 {#multiple-dam-instances}
+### 多個DAM實例{#multiple-dam-instances}
 
 部署多個DAM實例有助於在以下情況下的效能：
 
@@ -291,13 +295,13 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 * 將「進行中的作品」與「最終的」出版分開
 * 將作者的內部使用者與發佈時的外部訪客／使用者分開（例如代理、新聞代表、客戶、學生等）。
 
-## 質量保證的最佳做法 {#best-practices-for-quality-assurance}
+## 質量保證的最佳做法{#best-practices-for-quality-assurance}
 
 效能對您的發佈環境至關重要。 因此，在實施專案時，您必須仔細規劃並分析要針對發佈環境進行的效能測試。
 
-本節旨在標準化概述在發佈環境中為效能測試專門定義測試概念所涉及的 *問題* 。 QA工程師、項目經理和系統管理員對此感興趣。
+本節旨在對在&#x200B;*publish*&#x200B;環境中為效能測試專門定義測試概念時涉及的問題進行標準化概述。 QA工程師、項目經理和系統管理員對此感興趣。
 
-以下說明在 *Publish環境中針對CQ應用程式進行效能測試的標準* 化方法。 這包括下列5個階段：
+以下介紹在&#x200B;*Publish*&#x200B;環境中對CQ應用程式進行效能測試的標準方法。 這包括下列5個階段：
 
 * [知識驗證](#verification-of-knowledge)
 * [範圍定義](#scope-definition)
@@ -307,26 +311,26 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 控制是一個附加的、全方位的過程——這是必要的，但不限於測試。
 
-### 知識驗證 {#verification-of-knowledge}
+### 知識驗證{#verification-of-knowledge}
 
 第一步是記錄您在開始測試之前需要知道的基本資訊：
 
 * 測試環境的架構
 * 詳細說明需要測試的內部元素的應用程式地圖（分離和組合）
 
-#### 測試架構 {#test-architecture}
+#### 測試體系結構{#test-architecture}
 
 您應清楚記錄用於效能測試的測試環境的體系結構。
 
 您需要與Dispatcher和Load Balancer一起複製您計畫的生產Publish環境。
 
-#### 應用程式地圖 {#application-map}
+#### 應用程式映射{#application-map}
 
 若要取得清楚的概觀，您可以建立整個應用程式的地圖（您很可能會從作者環境的測試中取得此地圖）。
 
-以圖形表示應用程式的內部元素，可以給出測試需求的概述；使用色彩編碼，也可做為報告的基礎。
+以圖形表示應用程式的內部元素，可提供測試需求的概觀；使用色彩編碼，也可做為報告的基礎。
 
-### 範圍定義 {#scope-definition}
+### 範圍定義{#scope-definition}
 
 應用程式通常會有一系列使用案例。 有些將非常重要，有些則不那麼重要。
 
@@ -347,13 +351,13 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 * 空閒連接數
 * 系統資源，例如CPU和I/O訪問
 
-### 測試方法 {#test-methodologies}
+### 測試方法{#test-methodologies}
 
 此概念有4種用於定義和測試效能目標的方案：
 
 * 單一元件測試
 * 組合元件測試
-* *「上線* 」藍本
+* *Going* Livescenario
 * 錯誤方案
 
 根據以下原則：
@@ -370,7 +374,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 * 術語事務用於表示完整網頁的請求，包括頁面本身和所有後續呼叫；例如頁面要求、任何AJAX呼叫、影像和其他物件。**請求追溯**
 * 若要完全分析每個請求，您可以代表呼叫堆疊的每個元素，然後合計每個請求的平均處理時間。
 
-### 定義績效目標 {#defining-the-performance-goals}
+### 定義績效目標{#defining-the-performance-goals}
 
 定義範圍和相關KPI後，即可設定特定的績效目標。 這包括設計測試藍本和目標值。
 
@@ -378,7 +382,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 您從現有網站收集的任何經驗或統計資料，在決定未來目標時也會很有用；例如，來自您即時網站的熱門流量。
 
-#### 單一元件測試 {#single-component-tests}
+#### 單元測試{#single-component-tests}
 
 關鍵元件需要在平均和峰值條件下進行測試。
 
@@ -388,17 +392,17 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 |---|---|---|---|---|---|
 | 首頁單一使用者 | 平均 | 1 | 1 |  |  |
 |  | 峰 | 1 | 3 |  |  |
-| 首頁100位使用者 | 平均 | 100 | 3 |  |  |
+| 首頁100位使用者 | 平均 | 100 | 1 |  |  |
 |  | 峰 | 100 | 3 |  |
 
-#### 組合元件測試 {#combined-component-tests}
+#### 組合元件測試{#combined-component-tests}
 
 組合測試元件可更詳細地反映應用程式的行為。 必須再次測試平均和峰值條件。
 
 | 藍本 | 元件 | #使用者 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
 | 混合平均 | 首頁 | 10 | 1 |  |  |
-|  | 搜尋 | 10 | 1 |  |  |
+|  | 搜尋 | 10 | 3 |  |  |
 |  | 新聞 | 10 | 2 |  |  |
 |  | 事件 | 10 | 1 |  |  |
 |  | 啟動 | 10 | 3 |  | 作者行為模擬。 |
@@ -408,7 +412,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 |  | 事件 | 100 | 10 |  |  |
 |  | 啟動 | 20 | 20 |  | 作者行為模擬。 |
 
-#### 進行即時測試 {#going-live-tests}
+#### 進行即時測試{#going-live-tests}
 
 在您的網站推出後的頭幾天，您會預期興趣會提高。 這可能比您測試的峰值還大。 強烈建議測試「上線」藍本，以確保系統能夠滿足此情況。
 
@@ -420,7 +424,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 |  | 事件 | 200 | 20 |  |  |
 |  | 啟動 | 20 | 20 |  | 作者行為模擬。 |
 
-#### 錯誤藍本測試 {#error-scenario-tests}
+#### 錯誤方案測試{#error-scenario-tests}
 
 還必須測試錯誤情況，以確保系統能正確、正確地反應。 不僅在於錯誤本身的處理方式，還在於它對效能的影響。 例如：
 
@@ -436,7 +440,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 |  | 空字串 | 10 | 1 |  | 搜索空字串。 |
 |  | 特殊字元 | 10 | 1 |  | 搜尋特殊字元。 |
 
-#### 耐力測試 {#endurance-tests}
+#### 耐力測試{#endurance-tests}
 
 系統連續運行一段時間後，才會遇到某些問題；不管是幾個小時，甚至幾天。 使用耐久性測試來測試在所需時間段內的恆定平均載荷。 然後，可以分析任何效能降級。
 
@@ -446,9 +450,9 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 |  | 搜尋 | 10 | 1 |  |  |
 |  | 新聞 | 20 | 2 |  |  |
 |  | 事件 | 10 | 1 |  |  |
-|  | 啟動 | 1 | 3 |  | 作者行為模擬。 |
+|  | 啟動 | 3 | 3 |  | 作者行為模擬。 |
 
-### 最佳化 {#optimization}
+### 最佳化{#optimization}
 
 在實作的後期階段，您需要最佳化應用程式，以達成／最大化效能目標。
 
@@ -461,7 +465,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 * [JMeter](https://jakarta.apache.org/jmeter/)
 * [載入運行者](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
-* [Determyne](https://www.determyne.com/) InsideApps
+* [DetermyneInsideApps](https://www.determyne.com/) 
 * [InfraRED](https://www.infraredsoftware.com/)
 * [Java Interactive Profile](https://jiprof.sourceforge.net/)
 * 還有更多……
@@ -479,9 +483,9 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 * 在測試期間所做的任何假設
 * 任何因測試而產生的建議
 
-## 使用Dispatcher時的效能優化 {#optimizing-performance-when-using-the-dispatcher}
+## 使用Dispatcher {#optimizing-performance-when-using-the-dispatcher}時的效能優化
 
-Dispatcher [](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 是Adobe的快取和／或負載平衡工具。 使用Dispatcher時，您應考慮最佳化您的網站，以獲得快取效能。
+[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)是Adobe的快取和／或負載平衡工具。 使用Dispatcher時，您應考慮最佳化您的網站，以獲得快取效能。
 
 >[!NOTE]
 >
@@ -497,47 +501,48 @@ Dispatcher提供許多內建機制，如果您的網站利用這些機制，您�
 >
 >* 可以快取您可儲存為頁面並使用URL要求的所有項目
 >* 無法儲存其他項目，例如Cookie、作業資料和表單資料。
+
 >
 >
 一般而言，許多快取策略都需要選取好的URL，而不需仰賴此額外資料。
 >
->使用Dispatcher 4.1.11版，您也可以快取回應標題，請參閱快 [取HTTP回應標題](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)。
+>有了Dispatcher 4.1.11版，您也可以快取響應標頭，請參閱[快取HTTP響應標頭](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)。
 
 
-### 計算Dispatcher快取比 {#calculating-the-dispatcher-cache-ratio}
+### 計算Dispatcher快取比{#calculating-the-dispatcher-cache-ratio}
 
-快取比率公式估計快取處理的請求佔進入系統的請求總數的百分比。 要計算快取比率，您需要：
+快取比率公式估計快取處理的請求佔進入系統的請求總數的百分比。 要計算快取比率，您需要以下各項：
 
-* 請求總數。 Apache中提供了此資訊 `access.log`。 如需詳細資訊，請參閱 [Apache正式檔案](https://httpd.apache.org/docs/2.4/logs.html#accesslog)。
+* 請求總數。 Apache `access.log`中提供此資訊。 如需詳細資訊，請參閱[官方的Apache檔案](https://httpd.apache.org/docs/2.4/logs.html#accesslog)。
 
-* Publish例項所提供的請求數。 此資訊可在實例中 `request.log` 獲得。 如需詳細資訊，請 [參閱解譯request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log)[和尋找記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files)。
+* Publish例項所提供的請求數。 此資訊可在實例的`request.log`中獲得。 如需詳細資訊，請參閱[解讀request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log)和[尋找記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files)。
 
 計算快取比率的公式為：
 
-* (請求總數減去 **發佈** (Publish)上的請求數 **除以請** 求總數。
+* （請求總數&#x200B;**減去**&#x200B;的發佈請求數）**除以**&#x200B;請求總數。
 
-例如，如果請求總數為129491，而Publish實例所提供的請求數為58959，則快取比率為： **(129491 - 58959)/129491= 54.5%**。
+例如，如果請求總數為129491，而Publish實例所提供的請求數為58959，則快取比率為：**(129491 - 58959)/129491= 54.5%**。
 
-如果您沒有一對一的發佈者／發佈者配對，您將需要新增所有發佈者和發佈者的請求，以取得精確的測量。 另請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md)。
+如果您沒有一對一的發佈者／發佈者配對，您將需要新增所有發佈者和發佈者的請求，以取得精確的測量。 另請參閱[建議部署](/help/sites-deploying/recommended-deploys.md)。
 
 >[!NOTE]
 >
 >為獲得最佳效能，Adobe建議快取比率為90%至95%。
 
-#### 使用一致的頁面編碼 {#using-consistent-page-encoding}
+#### 使用一致的頁面編碼{#using-consistent-page-encoding}
 
 使用Dispatcher 4.1.11版，您可以快取回應標題。 如果您不是Dispatcher上的快取回應標題，則如果您將頁面編碼資訊儲存在標題中，可能會發生問題。 在這種情況下，當Dispatcher從快取中服務頁面時，該頁面將使用Web伺服器的預設編碼。 要避免此問題，有兩種方法：
 
 * 如果您只使用一個編碼，請確定網頁伺服器上使用的編碼與AEM網站的預設編碼相同。
-* 在HTML `<META>` 區段中使用標 `head` 記來設定編碼，如下列範例所示：
+* 請在HTML `head`區段中使用`<META>`標籤來設定編碼，如下列範例所示：
 
 ```xml
         <META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 ```
 
-#### 避免URL參數 {#avoid-url-parameters}
+#### 避免URL參數{#avoid-url-parameters}
 
-如果可能，請避免您要快取之頁面的URL參數。 例如，如果您有圖片收藏館，則不會快取下列URL(除非已據以設 [定Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)):
+如果可能，請避免您要快取之頁面的URL參數。 例如，如果您有圖片庫，則不會快取下列URL（除非Dispatcher已據以設定[](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)）:
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -553,7 +558,7 @@ www.myCompany.com/pictures/gallery.christmas.1.html
 >
 >此URL會呼叫與gallery.html相同的頁面和範本。 在範本定義中，您可以指定要轉譯頁面的指令碼，或對所有頁面使用相同的指令碼。
 
-#### 依URL自訂 {#customize-by-url}
+#### 依URL {#customize-by-url}自訂
 
 如果您允許使用者變更字型大小（或任何其他版面自訂），請確定URL中會反映不同的自訂。
 
@@ -575,7 +580,7 @@ www.myCompany.com/news/main.large.html
 >
 >使用範本定義的指令碼全域化，您可以指定個別的指令碼，以轉譯列印頁面。
 
-#### 使用作標題的影像檔案無效化 {#invalidating-image-files-used-as-titles}
+#### 使用作標題的映像檔案失效{#invalidating-image-files-used-as-titles}
 
 如果您將頁面標題或其他文字轉譯為圖片，則建議儲存檔案，以便在頁面內容更新時刪除這些檔案：
 
@@ -590,7 +595,7 @@ www.myCompany.com/news/main.large.html
 >
 >影像檔案不一定實際存在於AEM例項上。 您可以使用動態建立影像檔案的指令碼。 然後，Dispatcher將檔案儲存在Web伺服器上。
 
-#### 使用於導覽的影像檔無效化 {#invalidating-image-files-used-for-navigation}
+#### 導覽{#invalidating-image-files-used-for-navigation}時使用的影像檔無效化
 
 如果您使用圖片來輸入導覽項目，這個方法基本上就和標題一樣，只是稍微複雜一點。 將所有導覽影像與目標頁面一起儲存。 如果您使用兩張圖片來處理正常和活動，則可使用下列指令碼：
 
@@ -615,17 +620,18 @@ Dispatcher無法快取個人化資料，因此建議您將個人化限制在必�
 >
 >不過，如果您必須這麼做，您可以：
 >
->* 使用iFrames將頁面分割為一個對所有用戶都相同的部分，以及對用戶所有頁面都相同的部分。 然後，您可以快取這兩個部件。
->* 使用用戶端JavaScript來顯示個人化資訊。 不過，您必須確保在使用者關閉JavaScript時，頁面仍能正確顯示。
+>* 使用iFrames將頁面分割為一個對所有用戶都相同的部分，以及對用戶所有頁面都相同的部分。 然後，您可以快取這兩部分。
+>* 使用用戶端JavaScript來顯示個人化資訊。 不過，您必須確定當使用者關閉JavaScript時，頁面仍能正確顯示。
+
 >
 
 
 
-#### 自黏連線 {#sticky-connections}
+#### 自黏連線{#sticky-connections}
 
-[嚴格連線](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) ，確保一個使用者的檔案都是在同一部伺服器上撰寫。 如果使用者離開此資料夾，並稍後返回，連線仍會持續。 定義一個檔案夾，以存放所有需要網站嚴格連線的檔案。 請盡量不要在其中加入其他檔案。 如果您使用個人化頁面和作業資料，這會影響負載平衡。
+[自黏](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) 連線確保一個使用者的檔案都是在同一伺服器上撰寫。如果使用者離開此資料夾，並稍後返回，連線仍會持續。 定義一個檔案夾，以存放所有需要網站嚴格連線的檔案。 請盡量不要在其中加入其他檔案。 如果您使用個人化頁面和作業資料，這會影響負載平衡。
 
-#### MIME Types {#mime-types}
+#### MIME類型{#mime-types}
 
 瀏覽器有兩種方式可決定檔案類型：
 
@@ -646,13 +652,13 @@ Dispatcher無法快取個人化資料，因此建議您將個人化限制在必�
 * 請確定檔案的副檔名一律正確。
 * 請避免使用一般檔案伺服指令碼，這些指令碼具有URL，例如download.jsp?file=2214。 重寫指令碼，使用包含檔案規範的URL;在上一個範例中，此為download.2214.pdf。
 
-## 備份效能 {#backup-performance}
+## 備份效能{#backup-performance}
 
 本節介紹一系列基準，用於評估CQ備份的效能以及備份活動對應用程式效能的影響。 CQ備份在運行時對系統造成很大的負載，我們測量了這一點，以及嘗試調制這些效果的備份延遲設定的影響。 其目標是提供一些關於實際配置和生產資料量中備份預期效能的參考資料，並就如何估計計畫系統的備份時間提供指導。
 
-### 參考環境 {#reference-environment}
+### 參考環境{#reference-environment}
 
-#### 物理系統 {#physical-system}
+#### 物理系統{#physical-system}
 
 本文中所報告的結果是從參考環境中運行的基準（具有以下配置）獲得的。 此配置設計為類似於資料中心中的典型生產環境：
 
@@ -667,7 +673,7 @@ Dispatcher無法快取個人化資料，因此建議您將個人化限制在必�
 
 CQ配置將儲存庫和資料儲存庫與所有作業系統和CQ軟體放在同一邏輯卷上。 備份的目標目錄也駐留在此邏輯檔案系統上。
 
-#### 資料卷 {#data-volumes}
+#### 資料卷{#data-volumes}
 
 下表說明了備份基準中使用的資料卷的大小。 首先安裝初始基準內容，然後添加額外的已知資料量以增加備份內容的大小。 備份將以特定的增量建立，以代表內容和一天內可能產生的內容大幅增加。 內容（頁面、影像、標籤）的分發大致會以實際的製作資產組合為基礎。 頁面、影像和標籤最多可限制為800個子頁面。 每個頁面都包含標題、Flash、文字／影像、視訊、投影片、表格、表格、雲端和轉盤元件。 將從400個大小從37 kB到594 kB的唯一檔案池上傳映像。
 
@@ -682,7 +688,7 @@ CQ配置將儲存庫和資料儲存庫與所有作業系統和CQ軟體放在同�
   </tr>
   <tr>
    <td>基本安裝</td>
-   <td>69,610</td>
+   <td>6.961萬</td>
    <td>562</td>
    <td>256</td>
    <td>237</td>
@@ -706,13 +712,13 @@ CQ配置將儲存庫和資料儲存庫與所有作業系統和CQ軟體放在同�
 
 備份基準與每次重複時添加的附加內容集重複。
 
-#### 基準藍本 {#benchmark-scenarios}
+#### 基準藍本{#benchmark-scenarios}
 
 備份基準包括兩個主要情況：備份時，備份系統處於大量應用程式負載，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時，備份時。 雖然一般建議在CQ系統盡可能空閒時執行備份，但有時需要在系統負載時運行備份。
 
-**在CQ上執行空閒狀態** 「備份」時不會執行任何其他活動。
+**在CQ** 上執行空閒狀態備份時不會執行其他活動。
 
-**在「Load** Backups（載入備份）」下，當系統從聯機進程載入不足80%時執行備份。 備份延遲會隨著負載變化而變化。
+**在「** LoadBackups」下執行時，系統的負載低於聯機進程的80%。備份延遲會隨著負載變化而變化。
 
 從CQ伺服器日誌獲取備份時間和結果備份的大小。 通常建議在CQ空閒時（如半夜）將備份安排為關閉時間。 此方案代表建議的方法。
 
@@ -720,13 +726,13 @@ CQ配置將儲存庫和資料儲存庫與所有作業系統和CQ軟體放在同�
 
 負載對備份效能的影響可以通過使用和不使用此應用程式負載時的效能差異來估計。 備份對應用程式吞吐量的影響是通過比較每小時在進行併發備份時和沒有進行並行備份時的事務中的場景吞吐量，以及使用不同的「備份延遲」設定運行的備份來發現的。
 
-**延遲設定** ：對於多種情況，我們還使用10毫秒（預設）、1毫秒和0毫秒的值更改備份延遲設定，以瞭解此設定如何影響備份效能。
+**延遲設** 置對於幾種情況，我們還使用10毫秒（預設）、1毫秒和0毫秒的值更改備份延遲設定，以瞭解此設定對備份效能的影響。
 
-**備份類型** ：所有備份都是儲存庫的外部備份，這些備份都是儲存庫建立到備份目錄而不建立zip，但是在一次比較中，直接使用tar命令的情況除外。 由於增量備份不能建立到zip檔案，或者當前的完全備份是zip檔案時，備份目錄方法是生產情況中最常使用的方法。
+**備份** 類型所有備份都是將儲存庫的外部備份建立到備份目錄而不建立zip ，但是在一次比較中直接使用tar命令的情況除外。由於增量備份不能建立到zip檔案，或者當前的完全備份是zip檔案時，備份目錄方法是生產情況中最常使用的方法。
 
-### 結果摘要 {#summary-of-results}
+### 結果摘要{#summary-of-results}
 
-#### 備份時間和吞吐量 {#backup-time-and-troughput}
+#### 備份時間和吞吐量{#backup-time-and-troughput}
 
 這些基準的主要結果是顯示備份時間隨備份類型和資料總量而變化。 下表顯示了使用預設備份配置獲得的備份時間，這是頁數總數的函式。
 
@@ -740,7 +746,7 @@ CQ配置將儲存庫和資料儲存庫與所有作業系統和CQ軟體放在同�
 
 此圖表說明增量備份和完整備份都遵循一種簡單的大小與時間模式，我們可以將其作為吞吐量來衡量。 空閒實例的備份時間相當一致，平均為0.61 MB/秒，而不考慮基準環境中的完整或增量備份。
 
-#### 備份延遲 {#backup-delay}
+#### 備份延遲{#backup-delay}
 
 提供備份延遲參數以限制備份可能干擾生產工作負載的程度。 該參數指定以毫秒為單位的等待時間，該等待時間會逐個插入到備份操作中。 整體效果部分取決於受影響的檔案大小。 以MB/秒為單位測量備份效能提供了比較延遲對備份的影響的合理方法。
 
