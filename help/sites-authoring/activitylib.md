@@ -21,7 +21,7 @@ ht-degree: 12%
 
 # 管理活動{#managing-activities}
 
-「活動」主控台可讓您建立、組織和管理品牌的 [行銷活](/help/sites-authoring/personalization.md#activities) 動：
+「活動」主控台可讓您建立、組織和管理品牌的行銷[活動](/help/sites-authoring/personalization.md#activities):
 
 * 新增品牌。
 * 針對每個品牌新增及設定活動。
@@ -29,11 +29,11 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->如果您使用Adobe Target做為定位引擎，您也可以檢 [視活動的效能資料](#viewing-performance-and-converting-winning-experiences-a-b-test)。 如果您使用A/B測試，可以轉換 [贏家](#viewing-performance-and-converting-winning-experiences-a-b-test)。
+>如果您使用Adobe Target做為定位引擎，您也可以[檢視活動的效能資料](#viewing-performance-and-converting-winning-experiences-a-b-test)。 如果您使用A/B測試，您可以[轉換贏家](#viewing-performance-and-converting-winning-experiences-a-b-test)。
 
-在「活動」控制台上，活動按品牌組織。 您可以使用品牌和資料夾來組織您的活動。 您可以點選／按一下「個人化」並點選／按一下「活 **動** 」，以導覽至「活動 **」主控台**。
+在「活動」控制台上，活動按品牌組織。 您可以使用品牌和資料夾來組織您的活動。 您可以點選／按一下&#x200B;**個人化**&#x200B;並點選／按一下&#x200B;**活動**，以導覽至「活動」主控台。
 
-活動可在「定位」模式下，用 [於製作目標內容](/help/sites-authoring/content-targeting-touch.md)，您也可以在此建立活動。 您在「定位」模式下建立的活動會顯示在「活動」主控台中。
+活動可在[製作目標內容](/help/sites-authoring/content-targeting-touch.md)的「定位」模式中使用，您也可在此建立活動。 您在「定位」模式下建立的活動會顯示在「活動」主控台中。
 
 活動會顯示一個標籤，說明定義的活動類型：
 
@@ -41,42 +41,42 @@ ht-degree: 12%
 * A/B - Adobe Target A/B測試
 * AEM - Adobe Experience Manager目標鎖定（contexthub或clientcontext driven）
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![chlimage_1-115](assets/chlimage_1-114.png)
 
 >[!NOTE]
 >
 >可用的活動類型由以下各項決定：
 >
->* If the **xt_only** option is enabled on the Adobe Target tenant (clientcode) used on the AEM side to connect to Adobe Target, then you can create **only** XT activities in AEM.
+>* 如果在AEM端用來連線至Adobe Target的Adobe Target租用戶(clientcode)上啟用&#x200B;**xt_only**&#x200B;選項，則您只能在AEM中建立&#x200B;**** XT活動。
    >
    >
-* If the **xt_only** options is **not** enabled on the Adobe Target tenant (clientcode), then you can create **both** XT and A/B activities in AEM.
+* 如果&#x200B;**xt_only**&#x200B;選項在Adobe Target租用戶(clientcode)上啟用&#x200B;**not**，則您可以在AEM中建立&#x200B;**** XT和A/B活動。
 >
 >
-**其他附註：****xt_only** options是套用在特定Target租用戶(clientcode)上的設定，只能在Adobe Target中直接修改。 您無法在AEM中啟用或停用此選項。
+**其他附註：** **xt_** only選項是套用於特定Target租用戶（用戶端程式碼）的設定，只能在Adobe Target中直接修改。您無法在AEM中啟用或停用此選項。
 
 >[!CAUTION]
 >
->您必須保護發佈例項上的活動設 **定節點cq:ActivitySettings** ，如此一般使用者便無法存取它。 處理Adobe Target活動同步的服務只能訪問活動設定節點。
+>您必須保護發佈例項上的活動設定節點&#x200B;**cq:ActivitySettings**，讓一般使用者無法存取。 處理Adobe Target活動同步的服務只能訪問活動設定節點。
 >
->如需詳 [細資訊，請參閱與Adobe Target整合的必要條件](/help/sites-administering/target-requirements.md#securingtheactivitysettings) 。
+>如需詳細資訊，請參閱[與Adobe Target整合的必要條件](/help/sites-administering/target-requirements.md#securingtheactivitysettings)。
 
-## 使用活動控制台建立品牌 {#creating-a-brand-using-the-activities-console}
+## 使用活動控制台{#creating-a-brand-using-the-activities-console}建立品牌
 
 建立您要管理行銷活動的品牌。
 
-當您使用「活動」主控台建立品牌時，該品牌也會出現在「選件」主控台中 [](/help/sites-authoring/offerlib.md) ，您可在此處建立選件，以供您的活動體驗使用。
+當您使用「活動」主控台建立品牌時，該品牌也會出現在[選件主控台](/help/sites-authoring/offerlib.md)中，您可在此主控台中建立選件，以供您活動的體驗使用。
 
-1. In the Navigation console, click or tap **Personalization**. 按一下或點選「 **活動**」。
+1. 在導覽主控台中，按一下或點選&#x200B;**個人化**。 按一下或點選「**活動**」。
 
    ![screen_shot_2018-03-21at151821](assets/screen_shot_2018-03-21at151821.png)
 
-1. 在「活動」主控台中，按一下或點選「 **建立**」**，然後點選「建立品牌」**。
-1. 選取品牌範本，然後按一下或點選「下 **一步**」。
+1. 在「活動」控制台中，按一下或點選&#x200B;**建立**，然後按一下&#x200B;**建立品牌**。
+1. 選取品牌範本，然後按一下或點選&#x200B;**Next**。
 1. 在「活動」和「選件」控制台中，輸入您想要該品牌的標題。 （可選）鍵入或選擇一個或多個標籤以與品牌關聯。
-1. Click or tap **Create**. 您的品牌會出現在「活動」主控台中。
+1. 按一下或點選「**建立**」。 您的品牌會出現在「活動」主控台中。
 
-## 使用活動控制台添加／編輯活動 {#adding-editing-an-activity-using-the-activities-console}
+## 使用活動控制台{#adding-editing-an-activity-using-the-activities-console}添加／編輯活動
 
 新增活動或編輯現有活動，將行銷工作集中在特定受眾。 當您建立／編輯活動時，請指定下列資訊：
 
@@ -100,8 +100,8 @@ ht-degree: 12%
 
 要添加活動，請執行以下操作：
 
-1. Click or tap the brand for which you are creating the activity, and then click or tap **Create **then** Create Activity. **If editing, select the activity in the Master Area screen and clicking or tapping **Edit Activity**.
-1. 提供下列資訊，然後按一下或點選「下 **一步**」:
+1. 按一下或點選您要建立活動的品牌，然後按一下或點選**建立&#x200B;**，然後點選**&#x200B;建立活動。 **如果編輯，請在「主版區域」畫面中選取活動，然後按一下或點選「編輯活動&#x200B;**」。**
+1. 提供下列資訊，然後按一下或點選&#x200B;**Next**:
 
    * 活動的名稱。
    * 要使用的定位引擎。 預設會選取ContextHub(AEM)。 如果您需要使用Adobe Target，請在目標內容編輯器中建立活動。
@@ -113,38 +113,38 @@ ht-degree: 12%
 1. 如果您使用AEM定位或Adobe Target體驗定位：
 
    1. 按一下或點選**選取對象**，然後選取您的體驗目標群體。
-   1. 按一下或點選「 **新增體驗**」，輸入名稱，然後按一下或點選「 **確定」**。
+   1. 按一下或點選「新增體驗」，輸入名稱，然後按一下或點選「確定」。********
 
-   1. 按一下或點選「 **下一步**」。
+   1. 按一下或點選&#x200B;**Next**。
 
    如果您使用Adobe Target A/B測試：
 
    1. 按一下或點選「觀眾」方塊中的鉛筆，以選取觀眾。
-   1. 按一下或點選「 **新增體驗**」，輸入名稱，然後按一下或點選「 **確定」**。
+   1. 按一下或點選「新增體驗」，輸入名稱，然後按一下或點選「確定」。********
 
    1. 輸入顯示每個體驗的流量百分比。
-   1. 按一下或點選「 **下一步**」。
+   1. 按一下或點選&#x200B;**Next**。
 
 
-1. 若要指定活動何時啟動，請使用「 **開始** 」下拉式功能表來選取下列值之一：
+1. 要指定活動何時啟動，請使用&#x200B;**Start**&#x200B;下拉菜單選擇以下值之一：
 
-   * **啟動時：** 活動會在包含目標內容的頁面被啟用時開始。
-   * **指定的日期和時間：** 特定時間。 選取此選項時，按一下或點選日曆圖示，選取日期，並指定啟動活動的時間。
+   * **啟用時：** 活動會在包含目標內容的頁面啟動時啟動。
+   * **指定的日期和時間：** 特定時間。選取此選項時，按一下或點選日曆圖示，選取日期，並指定啟動活動的時間。
 
 1. 要指定活動何時結束，請使用「結束」下拉菜單選擇以下值之一：
 
    * **停用時**:當包含目標內容的頁面停用時，活動便會結束。
-   * **指定的日期和時間**:特定時間。 選取此選項時，按一下或點選日曆圖示，選取日期，並指定結束活動的時間。
+   * **指定的日期和時間**:特定時間。選取此選項時，按一下或點選日曆圖示，選取日期，並指定結束活動的時間。
 
-1. 要指定活動的優先順序，請使用滑塊選擇「低 **」**、「 **正常**」或「 **高」**。
-1. 如果您使用Adobe Target做為定位引擎，請選取您要使用此活動來測量的項目。 如需 [可用成功度量的詳細資訊](/help/sites-authoring/content-targeting-touch.md) ，請參閱設定活動和設定目標。 您必須至少選擇一個目標。
-1. 按一下或點選「 **儲存**」。
+1. 要指定活動的優先順序，請使用滑塊選擇&#x200B;**Low**、**Normal**&#x200B;或&#x200B;**High**。
+1. 如果您使用Adobe Target做為定位引擎，請選取您要使用此活動來測量的項目。 如需可用成功度量的詳細資訊，請參閱[設定活動與設定目標](/help/sites-authoring/content-targeting-touch.md)。 您必須至少選擇一個目標。
+1. 按一下或點選&#x200B;**Save**。
 
    >[!NOTE]
    >
    >建立活動後，您必須發佈活動，才能使用。
 
-## 發佈和取消發佈活動 {#publishing-and-unpublishing-activities}
+## 發佈和取消發佈活動{#publishing-and-unpublishing-activities}
 
 您需要發佈活動才能使活動可供使用。 相反地，您可能想要取消發佈活動，讓活動無法使用。
 
@@ -159,41 +159,41 @@ ht-degree: 12%
 
    ![screen-shot_2019-03-05at123846](assets/screen-shot_2019-03-05at123846.png)
 
-1. 若要發佈，請點選或按一下「 **發佈**」。 若要解除發佈，請點選或按一下「 **解除發佈**」。 您的活動或活動會在「活動」主控台中發佈或取消發佈，且其狀態會變更（可能需要重新整理）。
+1. 若要發佈，請點選或按一下&#x200B;**Publish**。 若要解除發佈，請點選或按一下「解除發佈&#x200B;**」。**&#x200B;您的活動或活動會在「活動」主控台中發佈或取消發佈，且其狀態會變更（可能需要重新整理）。
 
-## 作者與發佈例項的活動 {#activities-on-author-and-publish-instances}
+## 作者與發佈例項的活動{#activities-on-author-and-publish-instances}
 
 啟用使用Adobe Target目標引擎的活動時，會在發佈例項上建立第二個活動：
 
 * 作者例項上的活動會追蹤作者例項上的活動，對於模擬訪客體驗非常有用。 針對此活動記錄的分析只反映作者例項的發生。
 * 發佈實例上的活動反映並響應發佈伺服器上的活動。 這是在公共網站上執行的活動。 只有發佈活動與追蹤和分析實際公開網站的使用情況相關。
 
-## 檢視效能和轉換成功體驗（A/B測試） {#viewing-performance-and-converting-winning-experiences-a-b-test}
+## 檢視效能和轉換成功體驗（A/B測試）{#viewing-performance-and-converting-winning-experiences-a-b-test}
 
 您可以看到任何Adobe Target活動（XT或A/B）的效能。 如果您使用A/B測試，您也可以轉換成功體驗，然後變成預設體驗。
 
 若要檢視活動效能並轉換成功體驗：
 
-1. 在「 **個人化**」中，按一下或點選「 **活動** 」以導覽至「活 **動** 」主控台。
+1. 在&#x200B;**個人化**&#x200B;中，按一下或點選&#x200B;**活動**&#x200B;以導覽至&#x200B;**活動**&#x200B;主控台。
 1. 按一下或點選您要查看其活動的品牌。
 1. 選取活動，然後按一下或點選「 **檢視屬性** 」，然後按一下「報表 **** 」標籤，然後選取您要檢視成功體驗之效能/轉換成功體驗的活動。將顯示效能資料。
 
    ![chlimage_1-114](assets/chlimage_1-115.png)
 
-1. 按一下或點選「 **推播成功者** 」連結，將該體驗推送為預設體驗。
+1. 按一下或點選「推播成功者&#x200B;**」連結，將該體驗推送為預設體驗。**
 
    轉換成功者會執行下列動作：
 
    * 它會停用目前的活動
-   * 修改所有頁面，並以成功體驗的實際內容取代目標內容。 成功體驗的內容會成為正常頁面的一部分，而無 **目標** 。
+   * 修改所有頁面，並以成功體驗的實際內容取代目標內容。 成功體驗的內容會成為一般頁面&#x200B;**中不含**&#x200B;定位的一部分。
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
    成功體驗是指根據轉換率在報表中產生更多提升度的體驗。
 
-1. 按一下或點 **選「是** 」以確認您要轉換成功者、停用目前的體驗並以成功體驗的內容取代。
+1. 按一下或點選「是」(**Yes**)以確認您要轉換成功者、停用目前的體驗並以成功體驗的內容取代。
 
-## 與Adobe Target同步化活動 {#synchronizing-activities-with-adobe-target}
+## 與Adobe Target {#synchronizing-activities-with-adobe-target}同步活動
 
 使用Adobe Target定位引擎的活動會與Adobe Target促銷活動同步。 當符合下列條件時，活動會自動同步至Adobe Target:
 
@@ -206,7 +206,7 @@ ht-degree: 12%
 同步活動時，Adobe Target會建立對應的促銷活動：
 
 * 發佈例項上的活動與對應的Adobe Target促銷活動具有相同名稱。
-* 作者例項上的活動會與名稱相同且加上尾碼的Target促銷 `_author` 活動。
+* 作者例項上的活動會與名稱相同且字尾為`_author`的Target促銷活動對應。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -214,9 +214,9 @@ ht-degree: 12%
 
 當活動發佈至AEM發佈例項時，會同步發佈活動。
 
-## 活動同步疑難排解 {#troubleshooting-activity-synchronization}
+## 活動同步疑難排解{#troubleshooting-activity-synchronization}
 
-當AEM與Adobe Target同步活動時，AEM會包含名為的活動屬性 `thirdPartyId`。 此屬性的值以AEM儲存庫中活動的路徑為基礎。 Adobe Target中沒有兩個促銷活動可以具有相同的屬性 `thirdPartyId` 值。 因此，如果Adobe Target中的現有促銷活動（AB,XT類型不同）使用相同的值，則無法同步活動 `thirdPartyId`。
+當AEM將活動與Adobe Target同步時，AEM會包含名為`thirdPartyId`的活動屬性。 此屬性的值以AEM儲存庫中活動的路徑為基礎。 Adobe Target中沒有兩個促銷活動可以具有與`thirdPartyId`屬性相同的值。 因此，如果Adobe Target中的現有促銷活動（AB,XT類型不同）使用與`thirdPartyId`相同的值，則活動將無法同步。
 
 這種情況可能發生在以下情況下：
 
@@ -232,7 +232,7 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->當您在Adobe Target中建立促銷活動時，會指派一個名為每個促銷活動 `thirdPartyId t`的屬性。 當您在Adobe Target中刪除促銷活動時， `thirdPartyId` 不會刪除。 您無法針對不同類 `thirdPartyId` 型(AB、XT)的促銷活動重新使用，且無法手動移除。 為避免此問題，請為每個促銷活動命名一個唯一的名稱；因此，促銷活動名稱無法重複用於不同的促銷活動類型。
+>當您在Adobe Target中建立促銷活動時，會為每個促銷活動指派一個名為`thirdPartyId t`的屬性。 在Adobe Target中刪除促銷活動時，不會刪除`thirdPartyId`。 您無法針對不同類型(AB、XT)的促銷活動重新使用`thirdPartyId`，而且無法手動移除它。 為避免此問題，請為每個促銷活動命名一個唯一的名稱；因此，促銷活動名稱無法重複用於不同的促銷活動類型。
 >
 >如果您在相同的促銷活動類型中使用相同的名稱，您將會覆寫現有的促銷活動。
 >
