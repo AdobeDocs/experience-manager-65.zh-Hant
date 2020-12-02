@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '1047'
+ht-degree: 1%
 
 ---
 
 
-# 為EMC Documentum配置連接器 {#configuring-connector-for-emc-documentum}
+# 為EMC Documentum {#configuring-connector-for-emc-documentum}配置連接器
 
-EMC Documentum的Connector支援AEM表單與EMC Documentum之間的通信。 如需其他背景資訊，請參閱服務參考中的「ECM連接器」 [(Connectors for ECM)](https://www.adobe.com/go/learn_aemforms_services_63)。
+EMC Documentum的Connector支援AEM表單與EMC Documentum之間的通信。 有關其他背景資訊，請參閱[服務參考](https://www.adobe.com/go/learn_aemforms_services_63)中的「ECM連接器」。
 
 為EMC Documentum設定Connector涉及配置伺服器連接和儲存庫憑據。
 
@@ -25,7 +28,7 @@ EMC Documentum的Connector支援AEM表單與EMC Documentum之間的通信。 如
 >
 >在舊版中，資產可以儲存在ECM儲存庫中。 在目前版本中，資產會儲存在AEM表單原生儲存庫中，且資料庫提供者服務已不受支援。 當您執行AEM表單升級時，會將資產從ECM儲存庫移轉至AEM表單儲存庫。 如需詳細資訊，請參閱您應用程式伺服器的AEM表單升級指南。
 
-## 配置伺服器連接 {#configuring-the-server-connection}
+## 配置伺服器連接{#configuring-the-server-connection}
 
 本主題介紹了可在「配置設定」頁上執行的EMC Documentum Connector的任務。
 
@@ -33,7 +36,7 @@ EMC Documentum的Connector支援AEM表單與EMC Documentum之間的通信。 如
 >
 >如果您同時設定所有設定，只需按一下「儲存」一次。
 
-### 配置伺服器 {#configure-the-server}
+### 配置伺服器{#configure-the-server}
 
 您需要配置連接代理伺服器資訊。 在連接到Documentum內容儲存庫並啟動Connector for EMC Documentum時，需要此資訊。
 
@@ -41,7 +44,7 @@ EMC Documentum的Connector支援AEM表單與EMC Documentum之間的通信。 如
 1. 在「Documentum配置資訊」區域中，輸入連接代理的主機名或IP地址和埠號。 埠號必須是正整數（例如1489）。
 1. 按一下「儲存」。
 
-### 配置承擔者憑據 {#configure-principal-credentials}
+### 配置承擔者憑據{#configure-principal-credentials}
 
 配置承擔者憑據時，您提供的儲存庫名稱取決於登錄過程中是否提供了顯式儲存庫名稱。
 
@@ -55,29 +58,29 @@ EMC Documentum的Connector支援AEM表單與EMC Documentum之間的通信。 如
 1. 如果在登錄過程中未提供明確的儲存庫名稱，請輸入與憑據關聯的儲存庫名稱。
 1. 按一下「儲存」。
 
-### 更改儲存庫服務提供程式 {#change-the-repository-service-provider}
+### 更改儲存庫服務提供程式{#change-the-repository-service-provider}
 
 您可以配置要與Documentum一起使用的儲存庫服務提供方。 儲存庫服務調用被委派給您配置的提供程式。 可使用下列選項：
 
 **當前儲存庫服務提供方名稱：** 當前儲存庫服務提供方的名稱
 
-**ECM Documentum儲存庫提供方：** 使Documentum儲存庫提供程式成為儲存庫的提供程式。 此選項已過時
+**ECM Documentum儲存庫提供方：** 使Documentum儲存庫提供方成為儲存庫的提供方。此選項已過時
 
-**儲存庫提供方：** 使本機儲存庫提供程式成為儲存庫的提供程式
+**儲存庫提供** 程式：使本機儲存庫提供程式成為儲存庫的提供程式
 
 >[!NOTE]
 >
->要選擇所列的儲存庫服務提供方以外的儲存庫服務提供方，請在「應用程式和服務」>「服務管理」中配置RepositoryService。 <!-- Fix broken link (See Managing Services) -->。
+>要選擇所列的儲存庫服務提供方以外的儲存庫服務提供方，請在「應用程式和服務」>「服務管理」中配置RepositoryService。<!-- Fix broken link (See Managing Services) -->。
 
 1. 在管理控制台中，按一下「服務」>「EMC Documentum的連接器」>「配置設定」。
 1. 在儲存庫服務提供方資訊區中，選擇替代儲存庫服務提供方。
 1. 按一下「儲存」。
 
-## 配置儲存庫憑據 {#configuring-repository-credentials}
+## 配置儲存庫憑據{#configuring-repository-credentials}
 
 Documentum憑證資訊會用於AEM表單系統內容。 儲存庫憑據是Documentum中特定儲存庫的特定憑據。 您可以為任意數量的儲存庫提供憑據；但是，每個儲存庫只能指定一組憑據。
 
-### 添加儲存庫憑據 {#add-a-repository-credential}
+### 添加儲存庫憑據{#add-a-repository-credential}
 
 1. 在管理控制台中，按一下「服務」>「EMC Documentum的連接器」>「儲存庫憑據設定」。
 1. 按一下「新增」。此時將顯示「Documentum系統憑據資訊」頁。
@@ -87,12 +90,12 @@ Documentum憑證資訊會用於AEM表單系統內容。 儲存庫憑據是Docume
 
 如果Content Repository Connector for EMC Documentum服務和／或Repository Service for EMC Documentum正在運行，則在將憑據資訊儲存到資料庫中之前，會根據指定的儲存庫對憑據資訊進行驗證。 如果憑據無效或存在，則會顯示錯誤消息。
 
-### 刪除儲存庫憑據 {#remove-a-repository-credential}
+### 刪除儲存庫憑據{#remove-a-repository-credential}
 
 1. 在管理控制台中，按一下「服務」>「EMC Documentum的連接器」>「配置設定」。
 1. 選擇儲存庫旁邊的複選框以從中刪除憑據，然後按一下刪除。 所選儲存庫的憑據將從資料庫中刪除。
 
-### 更改儲存庫憑據的用戶名和密碼 {#change-the-user-name-and-password-for-a-repository-credential}
+### 更改儲存庫憑據{#change-the-user-name-and-password-for-a-repository-credential}的用戶名和密碼
 
 1. 在管理控制台中，按一下「服務」>「EMC Documentum的連接器」>「配置設定」。
 1. 按一下儲存庫的名稱可編輯憑據。
@@ -101,7 +104,7 @@ Documentum憑證資訊會用於AEM表單系統內容。 儲存庫憑據是Docume
 
 如果Content Repository Connector for EMC Documentum服務和／或Repository Service for EMC Documentum正在運行，則在將憑據資訊儲存到資料庫中之前，會根據指定的儲存庫對憑據資訊進行驗證。 如果憑據無效或存在，則會顯示錯誤消息。
 
-## 啟用Workspace任務隊列共用請求 {#enable-the-request-for-sharing-of-workspace-task-queues}
+## 啟用Workspace任務隊列共用請求{#enable-the-request-for-sharing-of-workspace-task-queues}
 
 需要一些手動步驟，以確保Workspace中「請求共用任務隊列」功能與Connector for EMC Documentum一起正常運行。
 
