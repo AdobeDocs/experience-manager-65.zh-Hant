@@ -11,15 +11,18 @@ topic-tags: operations
 discoiquuid: 9d4dba7f-49d8-4112-bc8a-04dafc99a936
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 0%
 
 ---
 
 
-# 以程式設計方式管理偏好設定節點 {#programmatically-managing-the-preferencesnodes}
+# 以程式設計方式管理偏好設定節點{#programmatically-managing-the-preferencesnodes}
 
 本主題說明如何使用Preferences Manager Service API(Java)以程式設計方式管理Preferences Nodes。
 
-您可以從管理員UI手動變更組態設定。 若要變更選項，請導覽至 `Home>Settings>User Management> Configuration>Manual Configuration`。 在進 `config.xml` 行更改後導入，您會注意到除在節點進行的更改外的所有更改 `/Adobe/Adobe Experience Manager Forms/Config/UM persist` 都將丟失。 「使用者管理匯入與匯出」的預覽不支援變更其他元件的組態設定。 現在，這些變更可以使用API `PreferencesManagerServiceClient` 進行。
+您可以從管理員UI手動變更組態設定。 若要變更選項，請導覽至`Home>Settings>User Management> Configuration>Manual Configuration`。 在進行更改後導入`config.xml`，您會發現除在節點`/Adobe/Adobe Experience Manager Forms/Config/UM persist`上所做的更改外的所有更改都將丟失。 「使用者管理匯入與匯出」的預覽不支援變更其他元件的組態設定。 現在，您可使用`PreferencesManagerServiceClient` API進行這些變更。
 
 **步驟摘**&#x200B;要要要以寫程式方式管理首選項節點，請執行以下步驟：
 
