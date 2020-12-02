@@ -11,13 +11,16 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: a8deb66b23e6ddde9c5f6379ef4f766668336369
+workflow-type: tm+mt
+source-wordcount: '924'
+ht-degree: 0%
 
 ---
 
 
-# Introduction to AEM Forms{#introduction-to-aem-forms}
+# AEM Forms簡介{#introduction-to-aem-forms}
 
-如需AEM Forms中最新功能與增強功能的詳細資訊，請 [參閱「AEM Forms的新增功能](../../forms/using/whats-new.md)」。
+如需AEM Forms最新功能與增強功能的詳細資訊，請參閱[「AEM Forms的新增功能」](../../forms/using/whats-new.md)。
 
 ## 關於AEM Forms {#about-aem-forms}
 
@@ -27,11 +30,11 @@ AEM Forms將表單製作、管理和發佈功能，以及通訊管理功能、�
 
 在大型企業中，表單通常只要建立一次，就可複製至內容管理系統以重複使用。 保持大型表格資料庫的最新狀態並讓這些表格可供探索是相當大的挑戰。 AEM提供可自訂的表單入口網站，可確保客戶在網路和行動通道上都能找到並存取所需的表單。
 
-AEM Forms提供表單管理工具，不僅可讓您管理最適化表單，還可讓您管理XFA表單、PDF表單和相關資產。 如需詳細資訊，請參 [閱管理表單的簡介](../../forms/using/introduction-managing-forms.md)。
+AEM Forms提供表單管理工具，不僅可讓您管理最適化表單，還可讓您管理XFA表單、PDF表單和相關資產。 如需詳細資訊，請參閱[管理表單的簡介](../../forms/using/introduction-managing-forms.md)。
 
 ![](do-not-localize/4th-draft.gif)
 
-### 主要功能 {#key-capabilities}
+### 關鍵功能{#key-capabilities}
 
 總而言之，AEM Forms提供強大的表單管理功能，例如下列功能，可減少手動程式並提高客戶滿意度。
 
@@ -43,11 +46,11 @@ AEM Forms提供表單管理工具，不僅可讓您管理最適化表單，還�
 * 與Adobe Document Cloud eSign Services或Scribble整合，以電子方式簽署包含機密資訊的檔案
 * 自動化表單發佈功能，以及透過多個通道提供即時、個人化且一致的通訊
 
-## AEM表格類型 {#aem-form-types}
+## AEM表單類型{#aem-form-types}
 
 AEM Forms可讓您擴充新表單和現有表單，以建立：
 
-* 像素精確、編頁的HTML和PDF表單，看起來幾乎像紙張，或
+* 像素精確、編頁的HTML和PDF表單，看起來幾乎像紙本，或
 * 可自動為使用者裝置和瀏覽器轉譯的最適化表單。
 
 **PDF表格**
@@ -62,7 +65,7 @@ HTML5瀏覽器表單可在行動裝置和案頭瀏覽器中檢視。 您可以�
 
 最適化表單可視需要新增或移除欄位或區段，以動態地配合使用者回應。 AEM可讓您重複使用Adobe XML表格範本，以建立最適化表格。
 
-### 支援的功能 {#supported-features}
+### 支援的功能{#supported-features}
 
 所有表單類型都支援下列功能：
 
@@ -75,9 +78,9 @@ HTML5瀏覽器表單可在行動裝置和案頭瀏覽器中檢視。 您可以�
 * 支援檔案附件
 * 與HTML Workspace整合以進行資料擷取
 
-## 離線資料收集 {#offline-data-collection}
+## 離線資料收集{#offline-data-collection}
 
-提交表單資料後，Adobe Experience manager會將表單資料與現有系統、業務規則及所需人員連接。
+提交表單資料後，Adobe Experience Manager會將表單資料與現有系統、業務規則及所需人員連接。
 
 AEM Forms提供Forms Workspace，這是將您的數位商業程式延伸至行動裝置的行動應用程式。 使用表單工作區，您即使離線也能收集和記錄資料。 表單工作區可運用行動裝置的功能，讓您擷取像片、視訊並收集資料，例如時間戳記和其他資訊。 下次連接到網路時，可以同步收集的資料。
 
@@ -95,9 +98,9 @@ AEM Forms提供Forms Workspace，這是將您的數位商業程式延伸至行�
 
 ![](do-not-localize/3rd-draft.gif)
 
-## 個人化通訊 {#personalized-communication}
+## 個人化通訊{#personalized-communication}
 
-有效率的自助服務數位體驗的重要組成部分，就是即時溝通個人化資訊，讓使用者隨處都可從任何裝置存取。 個人化且即時的通訊可改善轉換率和使用者滿意度。
+有效率的自助服務數位體驗的重要組成部分，就是即時傳達個人化資訊，讓使用者隨處都可從任何裝置存取。 個人化且即時的通訊可改善轉換率和使用者滿意度。
 
 使用AEM Forms，商業使用者可以自訂檔案範本、整合後端程式的資訊，以及包含互動式元件，以建立引人入勝的個人化使用者體驗。 直覺式使用者介面可協助非技術使用者開發商業規則，以決定何時根據查詢產生通訊，或啟動使用者產生的回應。
 
