@@ -12,11 +12,14 @@ discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 1%
 
 ---
 
 
-# 如何在AEM中審核使用者管理作業{#how-to-audit-user-management-operations-in-aem}
+# 如何在AEM{#how-to-audit-user-management-operations-in-aem}中審核使用者管理作業
 
 ## 簡介 {#introduction}
 
@@ -28,23 +31,24 @@ AEM已推出記錄權限變更的功能，讓您稍後可進行審核。
 * 新增至群組的使用者
 * 現有使用者或群組的權限變更
 
-預設情況下，條目將寫入文 `error.log` 件。 為了更輕鬆地進行監控，建議將監控重新導向至個別的記錄檔。 以下段落中有關如何執行此動作的詳細資訊。
+預設情況下，條目將寫入`error.log`檔案。 為了更輕鬆地進行監控，建議將監控重新導向至個別的記錄檔。 以下段落中有關如何執行此動作的詳細資訊。
 
-## 將輸出重定向到單獨的日誌檔案 {#redirecting-the-output-to-a-separate-log-file}
+## 將輸出重定向到單獨的日誌檔案{#redirecting-the-output-to-a-separate-log-file}
 
-若要將記錄輸出重新導向至個別的記錄檔，您將需要建立新的 **Apache Sling Logging Logger** configuration。 我們將在下 `useraudit.log` 例中作為單獨檔案的名稱。
+若要將記錄輸出重新導向至個別的記錄檔，您將需要建立新的&#x200B;**Apache Sling Logging Logger**&#x200B;組態。 我們將使用`useraudit.log`作為下例中單獨檔案的名稱。
 
-1. 瀏覽至https://serveraddress:serverport/system/console/configMgr以前往Web Console(網頁控制 *台)*
-1. 搜尋 **Apache Sling Logging Logger Configuration**。 然後，按條目右側的&quot;+&quot;以建立新的工廠配置。
+1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*，前往Web主控台
+1. 搜尋&#x200B;**Apache Sling Logging Logger Configuration**。 然後，按條目右側的&quot;+&quot;以建立新的工廠配置。
 1. 建立下列設定：
 
-   * **** 記錄層級：資訊
-   * **** 日誌檔案：logs/useraudit.log
-   * **** 消息模式：leved default
-   * **** 記錄器：com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
-   要在 **Logger** 欄位中輸入兩個記錄器，您需要輸入第一個記錄器的名稱，然後通過按&quot;+&quot;按鈕並輸入第二個記錄器的名稱來建立另一個欄位。
+   * **日誌級別：信** 息
+   * **日誌檔案：** logs/useraudit.log
+   * **消息模式：** 級別預設
+   * **Logger:** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizedServlet
 
-## 輸出範例 {#example-output}
+   要在&#x200B;**Logger**&#x200B;欄位中輸入兩個記錄器，您需要輸入第一個記錄器的名稱，然後按&quot;+&quot;按鈕並輸入第二個記錄器的名稱來建立另一個欄位。
+
+## 輸出示例{#example-output}
 
 如果配置正確，輸出應如下所示：
 
