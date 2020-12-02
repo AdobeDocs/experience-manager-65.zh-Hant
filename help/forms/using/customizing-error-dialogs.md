@@ -17,13 +17,13 @@ ht-degree: 3%
 ---
 
 
-# 自定義錯誤對話框 {#customizing-error-dialogs}
+# 自定義錯誤對話框{#customizing-error-dialogs}
 
-AEM Forms工作區可讓您自訂錯誤對話方塊。 執行AEM Forms [工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md) ，然後執行下列步驟以自訂錯誤對話方塊。
+AEM Forms工作區可讓您自訂錯誤對話方塊。 執行AEM Forms工作區自訂的[一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)，然後執行下列步驟以自訂錯誤對話方塊。
 
-## 自訂文字 {#customizing-text}
+## 自訂文字{#customizing-text}
 
-1. 在檔 `/apps/ws/locales/en-US/translation.json` 案中，將值變更 `wserror` 為自訂值。 例如：
+1. 在`/apps/ws/locales/en-US/translation.json`檔案中，將`wserror`的值變更為自訂值。 例如：
 
    ```json
    "wserror" : {
@@ -53,7 +53,7 @@ AEM Forms工作區可讓您自訂錯誤對話方塊。 執行AEM Forms [工作�
 
 ## 自訂CSS {#customizing-css}
 
-1. 您可在檔案中新增下列程式碼片段，以更新對話方塊、標題、內容區域、足鍵、足鍵按鈕和其他資 `/apps/ws/css/newStyle.css` 料：
+1. 您可在`/apps/ws/css/newStyle.css`檔案中新增下列程式碼片段，以更新對話方塊、標題、內容區域、腳條、腳條按鈕和其他抵押品：
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -188,7 +188,7 @@ AEM Forms工作區可讓您自訂錯誤對話方塊。 執行AEM Forms [工作�
    }
    ```
 
-1. 對於腳條按鈕跨度，請將和按 `.error-dialog` 鈕跨 `.foot-bar` 度與複合清單分開。 若要進行此變更，請在newStyle.css檔案中新增下列項目：
+1. 對於腳條按鈕跨度，請將`.error-dialog`和`.foot-bar`按鈕跨度從複合清單中分開。 若要進行此變更，請在newStyle.css檔案中新增下列項目：
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -225,9 +225,9 @@ AEM Forms工作區可讓您自訂錯誤對話方塊。 執行AEM Forms [工作�
 
 >[!NOTE]
 >
->如果您要參照其他影像，請在所要的階層下方新增 `/apps/ws/images`。
+>如果您轉介至其他影像，請在`/apps/ws/images`下方所要的階層新增影像。
 
-## Examples {#examples}
+## 範例{#examples}
 
 * **要自定義錯誤對話框，請更改：**
 
