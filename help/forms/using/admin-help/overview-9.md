@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 1%
 
 ---
 
 
-# 表單工作流程概觀 {#overview-of-forms-workflow}
+# 表單工作流程簡介{#overview-of-forms-workflow}
 
 表單工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，使用者也可以管理將系統與人員連結的自動化商業程式應用程式。
 
