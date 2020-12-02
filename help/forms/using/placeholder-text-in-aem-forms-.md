@@ -10,11 +10,14 @@ discoiquuid: f9ff2cc5-3f0a-4b2f-a206-2fe0985646ea
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
 
-# AEM Forms中的預留位置文字 {#placeholder-text-in-aem-forms}
+# AEM Forms {#placeholder-text-in-aem-forms}中的預留位置文字
 
 預留位置文字代表單字或短片語。 它旨在幫助用戶在控制項沒有值時輸入資料。 預留位置文字可以是範例值或預期格式的簡短說明。 預留位置文字會在使用者輸入值之前顯示，當使用者輸入或選取值時會移除。
 
@@ -24,15 +27,15 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ![含有和不含預留位置文字的日期元件](assets/dat-picker-place-holder-text.png)
 
-******答：日期元件及預留位置文字** B。不含預留位置文字的日期元件
+**A.** Date元件，含預留位置文字 **B.** Date元件，不含預留位置文字
 
 AEM Forms支援「密碼」方塊、「日期選擇器」、「數值」方塊和文字方塊欄位的預留位置文字。\
 原生HTML5日期介面工具集不支援預留位置文字。 要指定佔位符文本，請執行以下操作：
 
-1. 按一下右鍵支援佔位符文本的元件，然後按一下「編 **輯」**。 將出現「編輯元件」(Edit component)對話框。
+1. 按一下右鍵支援預留位置文本的元件，然後按一下&#x200B;**編輯**。 將出現「編輯元件」(Edit component)對話框。
 
-1. 開啟「標 **題與文字」索引標籤** 。
-1. 在「預留位置」文字方塊中指定單字 **或短片語**。 按一下 **確定**。
+1. 開啟&#x200B;**標題和文字**&#x200B;標籤。
+1. 在&#x200B;**預留位置文字方塊**&#x200B;中指定字詞或短片。 按一下&#x200B;**「確定」**。
 
 >[!NOTE]
 >
