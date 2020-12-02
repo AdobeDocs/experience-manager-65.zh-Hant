@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d0d4f96-fc72-4e2b-a2cc-5741b0a30f74
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 0%
 
 ---
 
 
-# 添加、啟用、修改或刪除端點 {#adding-enabling-modifying-or-removing-endpoints}
+# 添加、啟用、修改或刪除端點{#adding-enabling-modifying-or-removing-endpoints}
 
-## 向服務添加端點 {#add-an-endpoint-to-a-service}
+## 向服務{#add-an-endpoint-to-a-service}添加端點
 
 端點只能新增至服務。 端點不能單獨存在；它必須與服務相關聯。
 
@@ -40,7 +43,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 按一下「新增」。
 
-## 啟用或禁用端點 {#enable-or-disable-an-endpoint}
+## 啟用或禁用端點{#enable-or-disable-an-endpoint}
 
 依預設，會自動啟用新端點。 但是，如果您已禁用端點，則需要啟用該端點才能使其正常運行。
 
@@ -49,7 +52,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在管理控制台中，按一下「服務>應用程式與服務>端點管理」。
 1. 在「端點管理」頁面上，選中要啟用或禁用端點的複選框，然後按一下啟用或禁用。
 
-## 修改端點 {#modify-an-endpoint}
+## 修改端點{#modify-an-endpoint}
 
 >[!NOTE]
 >
@@ -67,7 +70,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 您也可以從「服務管理」頁中執行此任務，方法是選擇服務，然後按一下「端點」頁籤。
 
-## 移除端點 {#remove-an-endpoint}
+## 刪除端點{#remove-an-endpoint}
 
 1. 在管理控制台中，按一下「服務>應用程式與服務>端點管理」。
 1. 在「端點管理」(Endpoint Management)頁面上，選中要刪除的端點的複選框，然後按一下「刪除」(Remove)。 不再顯示端點。
