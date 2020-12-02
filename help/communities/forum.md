@@ -35,33 +35,33 @@ ht-degree: 8%
 本檔案章節說明：
 
 * 新增論壇功能至AEM網站。
-* 元件的配置 `Forum` 設定。
+* `Forum`元件的配置設定。
 
-### 新增論壇至頁面 {#adding-a-forum-to-a-page}
+### 將論壇添加到頁面{#adding-a-forum-to-a-page}
 
-若要在作 `Forum` 者模式中將元件新增至頁面，請使用元件瀏覽器來尋找
+若要在作者模式下將`Forum`元件新增至頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Forum`
 
 並將它拖曳至論壇應出現的頁面上。
 
-如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side) ，元件的顯示方式 `Forum` 如下：
+當包含[必要的用戶端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side)時，`Forum`元件的顯示方式如下：
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-### 設定論壇 {#configuring-a-forum}
+### 配置論壇{#configuring-a-forum}
 
-選擇要訪問 `Forum` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`Forum`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
 ![論壇——組態](assets/forum-config.png)
 
-#### 「設定」頁籤 {#settings-tab}
+#### 「設定」頁籤{#settings-tab}
 
-在「設 **定** 」標籤下，指定主題和回覆的設定：
+在&#x200B;**Settings**&#x200B;標籤下，指定主題和回覆的設定：
 
 * **允許附件縮圖**
 
@@ -94,7 +94,7 @@ ht-degree: 8%
 
 * **允許標記**
 
-   如果勾選，允許成員將標籤標籤新增至其貼文(請參 **閱「標籤欄位** 」標籤)。 預設為未勾選。
+   如果勾選，允許成員將標籤標籤新增至其貼文（請參閱&#x200B;**標籤欄位**&#x200B;標籤）。 預設為未勾選。
 
 * **允許檔案上傳**
 
@@ -102,7 +102,7 @@ ht-degree: 8%
 
 * **允許關注**
 
-   如果勾選，請為論壇貼文加入下列功能，讓會員得 [到](/help/communities/notifications.md) 新貼文的通知。 預設為未勾選。
+   如果勾選，請為論壇貼文加入下列功能，讓成員能夠收到新貼文的[通知。 ](/help/communities/notifications.md)預設為未勾選。
 
 * **允許釘選**
 
@@ -110,21 +110,22 @@ ht-degree: 8%
 
 * **允許主要內容**
 
-   若勾選，此構想即可識別為特 [色內容](/help/communities/featured.md)。 預設為未勾選。
+   如果勾選，該構想可識別為[特色內容](/help/communities/featured.md)。 預設為未勾選。
 
 * **允許電子郵件訂閱**
 
-   如果勾選，允許會員透過電子郵件（訂閱）收到新貼文[的通](/help/communities/subscriptions.md)知。 需要 `Allow Following` 檢查並設定電 [子郵件](/help/communities/email.md)。 預設為未勾選。
+   如果勾選，允許會員透過電子郵件收到新貼文的通知([subscription](/help/communities/subscriptions.md))。 需要檢查`Allow Following`並配置[電子郵件](/help/communities/email.md)。 預設為未勾選。
 
 * **最大檔案大小**
 
-   僅在勾選時 `Allow File Uploads` 相關。 此欄位將限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600(10 Mb)。
+   僅當選中`Allow File Uploads`時相關。 此欄位將限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600(10 Mb)。
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅當選中`Allow File Uploads`時相關。 以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
-* **僅當勾選「允許上傳檔案**」時，附加影像檔案大小的上限才相關。 上傳的影像檔案的位元組數上限。 預設值為2097152(2 Mb)。
+* **最大附加影像檔案大**
+小只有在勾選「允許檔案上傳」時，才相關。上傳的影像檔案的位元組數上限。 預設值為2097152(2 Mb)。
 
 * **允許執行緒式回覆**
 
@@ -144,7 +145,7 @@ ht-degree: 8%
 
 * **顯示徽章**
 
-   如果勾選，則使用成員的 [部落格項目](/help/communities/implementing-scoring.md) ，顯示已獲得和已指派的徽章。 預設為未勾選。
+   如果勾選，則顯示已獲得且已指派[badges](/help/communities/implementing-scoring.md)及成員的部落格項目。 預設為未勾選。
 
 * **允許有特殊權限的成員**
 
@@ -168,15 +169,15 @@ ht-degree: 8%
 
 * **UI 提及模式**
 
-   將已授權的模式字串指定為貼文中已註冊使用者的標籤（@提及）。 For example `~{{familyName}}{{givenName}}`.
+   將已授權的模式字串指定為貼文中已註冊使用者的標籤（@提及）。 例如`~{{familyName}}{{givenName}}`。
 
 >[!NOTE]
 >
->可能需要同時檢查和 `AllowThreaded Replies` 啟 `Allow users to Delete Comments and Topics` 用對主題的注釋。
+>可能需要同時檢查`AllowThreaded Replies`和`Allow users to Delete Comments and Topics`以啟用對主題的注釋。
 
-#### 使用者協調標籤 {#user-moderation-tab}
+#### 使用者協調標籤{#user-moderation-tab}
 
-在「使用 **者協調** 」標籤下，指定如何管理已張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+在&#x200B;**使用者協調**&#x200B;標籤下，指定如何管理已張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
 * **拒絕貼文**
 
@@ -210,50 +211,50 @@ ht-degree: 8%
 
    輸入主題或留言在公開檢視中隱藏前必須加以標幟的次數。 如果設為-1，則標籤的主題或留言絕不會從公開檢視中隱藏。 否則，此數字必須大於或等於「協調臨界值」。 預設值為5。
 
-#### 「標籤」欄位頁籤 {#tag-field-tab}
+#### 標籤欄位標籤{#tag-field-tab}
 
-在「標 **記」欄位** (Tag field **** )標籤下，可套用的標籤（如果允許）會根據選擇的名稱空間加以限制。
+在&#x200B;**Tag欄位**&#x200B;頁籤下，如果允許在&#x200B;**Settings**&#x200B;頁籤下應用的標籤會根據選擇的名稱空間進行限制。
 
 * **允許的命名空間**
 
-   如果已勾選 `Allow Tagging` 「設定」標籤下 **的選項** ，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
+   如果在&#x200B;**Settings**&#x200B;標籤下勾選`Allow Tagging`，則相關。 可套用的標籤僅限於已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
 
 * **建議限制**
 
    輸入要作為建議顯示給發佈到論壇的成員的標籤數。 預設值為**-**1（無限制）。
 
-#### 翻譯標籤 {#translation-tab}
+#### 翻譯頁籤{#translation-tab}
 
-在「轉 **譯** 」標籤下，如果為社群網站啟用了翻譯，則可以設定翻譯來翻譯整個主題或選定的帖子。
+在&#x200B;**Translation**&#x200B;標籤下，如果為社區站點啟用了翻譯，則可以設定翻譯來翻譯整個主題或選定的帖子。
 
 * **全部轉換**
 
    如果勾選此選項，論壇線程將轉換為用戶首選的語言。 預設為未勾選。
 
-#### 「排序設定」頁籤 {#sort-settings-tab}
+#### 排序設定頁籤{#sort-settings-tab}
 
-在「排 **序設定** 」標籤下，指定顯示張貼留言的排序方式。
+在&#x200B;**排序設定**&#x200B;標籤下，指定顯示張貼留言的排序方式。
 
 * **排序方式**
 
-   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`。
+   檢查所有允許的排序選擇：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設值為`Newest, Oldest, Last Updated`。
 
 * **設為預設值**
 
-   下拉式清單以選取其中一個核取的排序選項，以顯示為預設值。 預設為 `Newest`。
+   下拉式清單以選取其中一個核取的排序選項，以顯示為預設值。 預設值為`Newest`。
 
 * **選取 Analytics 排序的時間選項**
 
-   下拉式選擇下列選項之一： `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
+   下拉式選擇下列選項之一：`All, Last 24 Hours, Last 7 Days, Last 30 Days`。
 
-   預設為 `All`。
+   預設值為`All`。
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人 [員適用的論壇](/help/communities/essentials-forum.md) Essentials頁面。
+如需詳細資訊，請參閱開發人員的[Forum Essentials](/help/communities/essentials-forum.md)頁面。
 
-如需協調已張貼主題和留言的資訊，請參 [閱協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+如需協調已張貼主題和留言的資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-如需標籤已張貼的主題和留言，請參 [閱標籤使用者產生的內容](/help/communities/tag-ugc.md)。
+如需標籤已張貼的主題和留言，請參閱[標籤使用者產生的內容](/help/communities/tag-ugc.md)。
 
-如需已張貼主題和留言的轉譯，請參閱轉 [譯使用者產生的內容](/help/communities/translate-ugc.md)。
+如需已張貼主題和留言的轉譯，請參閱[轉譯使用者產生的內容](/help/communities/translate-ugc.md)。
