@@ -10,6 +10,9 @@ discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '597'
+ht-degree: 0%
 
 ---
 
@@ -32,9 +35,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >您不能將XFA架構的最適化表單／片段用作子表單或父表單。
 
-## 幕後秘辛 {#behind-the-scenes}
+## 幕後{#behind-the-scenes}
 
-您可以在父表單中新增以XSD為基礎的最適化表單和片段。 父表單的結構與任何最適化表 [單相同](../../forms/using/prepopulate-adaptive-form-fields.md)。 當您將最適化表單新增為子表單時，它會新增為父表單中的面板。 綁定子表單的資料儲存在父表 `data`單的XML `afBoundData` 架構部分的根目錄下。
+您可以在父表單中新增以XSD為基礎的最適化表單和片段。 父窗體的結構與任何自適應窗體[相同。 ](../../forms/using/prepopulate-adaptive-form-fields.md)當您將最適化表單新增為子表單時，它會新增為父表單中的面板。 綁定子表單的資料儲存在父表單的XML架構的`afBoundData`部分的`data`根下。
 
 例如，您的客戶會填寫申請表。 表單的前兩個欄位是名稱和身分。 其XML為：
 
@@ -52,7 +55,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 </afData>
 ```
 
-您在應用程式中新增另一個表格，讓客戶填寫其辦公室地址。 子表單的模式根為 `officeAddress`。 套 `bindref` 用 `/application/officeAddress` 或 `/officeAddress`。 如果 `bindref`未提供，則子表單將添加為子 `officeAddress` 樹。 請參閱下清單格的XML:
+您在應用程式中新增另一個表格，讓客戶填寫其辦公室地址。 子表單的模式根為`officeAddress`。 套用`bindref` `/application/officeAddress`或`/officeAddress`。 如果未提供`bindref`，則子表單將添加為`officeAddress`子樹。 請參閱下清單格的XML:
 
 ```xml
 <afData>
@@ -72,7 +75,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 </afData>
 ```
 
-如果您插入另一個表單，讓客戶提供住宅地址，請套用 `bindref` XML `/application/houseAddress or /houseAddress.`的外觀如下：
+如果您插入其他可讓客戶提供住宅地址的表格，請套用`bindref` `/application/houseAddress or /houseAddress.` XML外觀：
 
 ```xml
 <afData>
@@ -96,9 +99,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 </afData>
 ```
 
-如果要保留與方案根（在本示例中）相同的 `Address`子根名稱，請使用索引bindrefs。
+如果希望與方案根（在本示例中為`Address`）保持相同的子根名稱，請使用索引的bindrefs。
 
-例如，套用bindrefs `/application/address[1]` 或 `/address[1]` and `/application/address[2]` or `/address[2]`。 表單的XML為：
+例如，套用bindrefs `/application/address[1]`或`/address[1]`和`/application/address[2]`或`/address[2]`。 表單的XML為：
 
 ```xml
 <afData>
@@ -122,24 +125,24 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 </afData>
 ```
 
-可以使用屬性更改自適應表單／片段的預設子 `bindRef` 樹。 該 `bindRef` 屬性可以指定指向XML架構樹結構中某個位置的路徑。
+可以使用`bindRef`屬性更改自適應表單／片段的預設子樹。 `bindRef`屬性可讓您指定指向XML架構樹結構中某個位置的路徑。
 
-如果子表單未綁定，則其資料將存 `data`儲在父表 `afUnboundData` 單的XML架構部分的根目錄下。
+如果子表單未綁定，則其資料儲存在父表單XML架構的`afUnboundData`部分的`data`根下。
 
-您可以多次將最適化表單新增為子表單。 請確定已正 `bindRef` 確修改，以便每個使用的自適應表單實例都指向資料根目錄下的不同子根目錄。
+您可以多次將最適化表單新增為子表單。 請確定`bindRef`已正確修改，以便每個使用的自適應表單實例指向資料根目錄下的不同子根目錄。
 
 >[!NOTE]
 >
 >如果不同的表單／片段對應至相同的子根，則會覆寫資料。
 
-## 使用資產瀏覽器將最適化表單新增為子表單 {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
+## 使用資產瀏覽器{#adding-an-adaptive-form-as-a-child-form-using-asset-browser}將最適化表單新增為子表單
 
 執行下列步驟，使用資產瀏覽器將最適化表單新增為子表單。
 
 1. 在編輯模式中開啟父表格。
-1. 在側欄中，按一下「 **Assets** - ![browser](assets/assets-browser.png)」。 在「資產」下方， **從下拉式清單中選取「最適化表單** 」。
-   [ 在「資 ![產」下選擇最適化表單](assets/asset.png)](assets/asset-1.png)
+1. 在側欄中，按一下「資產」****![assets-browser](assets/assets-browser.png)。 在「資產」下，從下拉式清單中選擇「最適化表單」。****
+   [ ![在「資產」下選取最適化表單](assets/asset.png)](assets/asset-1.png)
 
 1. 拖放您要新增為子表單的最適化表單。
-   [ 拖 ![放網站中的最適化表](assets/drag-drop.png)](assets/drag-drop-1.png)單您拖放的最適化表單會新增為子表單。
+   [ ![將最適化表單拖放至您的網](assets/drag-drop.png)](assets/drag-drop-1.png)站中拖放最適化表單會新增為子表單。
 
