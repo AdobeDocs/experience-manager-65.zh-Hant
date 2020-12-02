@@ -11,17 +11,20 @@ topic-tags: forms-workspace
 discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
 
-# 更改介面的顏色配置 {#changing-the-color-scheme-of-the-interface}
+# 更改介面{#changing-the-color-scheme-of-the-interface}的顏色配置
 
-您可以修改AEM Forms工作區使用者介面部分的色彩配置，以符合您的需求。 以下是代表性色彩配置自訂的一些範例。 除了本文章討論的步驟外，請參閱「AEM Forms工 [作區自訂的一般步驟」](/help/forms/using/generic-steps-html-workspace-customization.md)。
+您可以修改AEM Forms工作區使用者介面部分的色彩配置，以符合您的需求。 以下是代表性色彩配置自訂的一些範例。 除了本文章討論的步驟外，請參閱「AEM Forms工作區自訂的一般步驟[」。](/help/forms/using/generic-steps-html-workspace-customization.md)
 
-## 頂端導覽列 {#top-navigation-bar}
+## 頂端導覽列{#top-navigation-bar}
 
-### 使用背景影像 {#using-background-image}
+### 使用背景影像{#using-background-image}
 
 若要更新AEM Forms工作區頂端的導覽列。
 
@@ -30,7 +33,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    >[!NOTE]
    >
-   >如需WebDAV存取的詳細資訊，請參閱 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)。
+   >有關WebDAV訪問的詳細資訊，請參見[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)。
 
 1. 在/apps/ws/css/newStyle.css中新增下列樣式，以參考新的背景影像。
 
@@ -40,7 +43,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    }
    ```
 
-### 在CSS中使用顏色屬性 {#using-color-property-in-css}
+### 在CSS {#using-color-property-in-css}中使用顏色屬性
 
 1. 在newStyle.css中新增下列樣式，網址為/apps/ws/css
 
@@ -51,10 +54,10 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    }
    ```
 
-## 類別元件 {#category-component}
+## 類別元件{#category-component}
 
-類別元件會在左側面板中顯示您的工作的各種類別。 若要變更其顏色，請在CSS檔案的元 `.category` 素中定義背景顏色。
+類別元件會在左側面板中顯示您的工作的各種類別。 若要變更其顏色，請在CSS檔案的`.category`元素中定義背景顏色。
 
-## 任務元件 {#task-component}
+## 任務元件{#task-component}
 
 任務顯示在名為TaskList元件的中間面板中。 要更改其顏色，請修改樣式表中與。task選擇器關聯的樣式。
