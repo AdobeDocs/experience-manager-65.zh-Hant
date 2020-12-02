@@ -10,32 +10,32 @@ ht-degree: 0%
 ---
 
 
-# AEM Foundation和儲存庫 {#aem-foundation-repository}
+# AEM Foundation和Repository {#aem-foundation-repository}
 
-## 變更清單 {#list-of-changes}
+## 變更清單{#list-of-changes}
 
 ### 存放庫 {#repository}
 
-* Adobe Experience Manager 6.5的基礎建立在OSGi架構（Apache Sling和Apache Felix）和Java內容存放庫的更新版本之上： Apache Jackrabbit Oak 1.10.2.
-* 如需已修正問題的概觀，請參閱 [Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、 [Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt) 和 [Apache Jackrabbit Oak Jira v. 1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)。
+* Adobe Experience Manager 6.5的基礎建立在OSGi架構（Apache Sling和Apache Felix）和Java內容存放庫的更新版本之上：Apache Jackrabbit Oak 1.10.2.
+* 如需已修正問題的概觀，請參閱[Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt)和[Apache Jackrabbit Oak Jira v. 1.1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)。
 
 >[!CAUTION]
 >
->自AEM 6.3以來，Oak Segment Tar的新版本需要儲存庫移轉。 如果您要從舊版TarMK升級，或想要從其他永續性類型切換新的區段Tar，此步驟為必要步驟。 如需新區段Tar的優點的詳細資訊，請參閱移轉至 [Oak區段Tar常見問答](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar)。
+>自AEM 6.3以來，Oak Segment Tar的新版本需要儲存庫移轉。 如果您要從舊版TarMK升級，或想要從其他永續性類型切換新的區段Tar，此步驟為必要步驟。 如需新區段Tar的優點的詳細資訊，請參閱[移轉至Oak區段Tar常見問答集](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar)。
 
-### Java支援 {#java-support}
+### Java支援{#java-support}
 
 * Java 11以及已支援的Java 8的新支援。
-* 為獲得最佳效能，請用其他值覆蓋預設GC值。 如需詳細資訊，請參閱「安 [裝與更新](/help/sites-deploying/custom-standalone-install.md) 」一節。
+* 為獲得最佳效能，請用其他值覆蓋預設GC值。 如需詳細資訊，請參閱[安裝與更新](/help/sites-deploying/custom-standalone-install.md)一節。
 * Java 11和Java 8維護更新由Adobe分發，以便客戶在AEM相關專案中使用，但Oracle未公開提供。
 
 ### OSGI {#osgi}
 
 * 已新增OSGi Promises和Converter公用程式庫。
 
-### 專案和工作流程 {#projects-and-workflows}
+### 專案和工作流程{#projects-and-workflows}
 
-* 6.4版中引進的全新工作流程模型編輯器已經過改良，加入更多作業，例如複製和發佈、工作流程步驟中的變數支援，以及增強和分割 `OR` 功 `AND` 能。
+* 6.4版中新增的「工作流程模型」編輯器已經過改良，加入更多作業，例如「複製」和「發佈」、「工作流程」步驟中的「變數」支援，以及增強的`OR`和`AND`分割。
 
 ### 搜尋 {#searching}
 
@@ -58,15 +58,15 @@ UI已做了各種增強功能，讓它更有生產力，也更容易使用。
 
 >[!CAUTION]
 >
->Adobe不會對Classic UI做進一步的增強。 Experience Manager 6.5包含Classic UI，以提供回溯相容性。 Classic UI仍完全受支援，但已過時，請閱 [讀詳細內容](/help/sites-deploying/ui-recommendations.md)。
+>Adobe不會對Classic UI做進一步的增強。 Experience Manager 6.5包含Classic UI，以提供回溯相容性。 Classic UI仍完全受支援，不再提倡[閱讀更多內容](/help/sites-deploying/ui-recommendations.md)。
 
-### 升級 {#upgrade}
+### 升級{#upgrade}
 
 * 升級程式在6.5中基本保持不變。
-* 我們繼續支援6.4版中推出的回溯相容性、升級複雜性評估和持續升級功能。 在需要時，已對這些區域進行了特定版本的更新。
+* 我們繼續支援6.4版中推出的回溯相容性、升級複雜性評估和持續升級功能。在需要時，已對這些區域進行了特定版本的更新。
 * Pattern Detector封裝已經簡化，而且將有一個封裝評估可用來源版本的6.5升級。
-* 如需升級程式的詳細資訊，請參閱升 [級檔案](/help/sites-deploying/upgrade.md)。
+* 有關升級過程的詳細資訊，請參閱[升級文檔](/help/sites-deploying/upgrade.md)。
 
-### Web伺服器 {#web-server}
+### Web伺服器{#web-server}
 
 * Quickstart散發使用Eclipse Jetty 9.4.15做為servlet引擎（AEM 6.4隨附9.3.22）。
