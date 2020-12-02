@@ -12,6 +12,9 @@ discoiquuid: e972ee05-f0cb-40ca-9ae2-34395791c709
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 46610888fd61900c52b197e73a8a5850dc9c4c35
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 1%
 
 ---
 
@@ -124,15 +127,15 @@ AEM eCommerce可協助行銷人員跨網路、行動裝置和社交觸點提供�
 
 >[!NOTE]
 >
->若要與外部電子商務提供者使用整合架構，您必須先安裝所需的套件。 如需詳細資訊，請參 [閱部署電子商務](/help/sites-deploying/ecommerce.md)。
+>若要與外部電子商務提供者使用整合架構，您必須先安裝所需的套件。 如需詳細資訊，請參閱[部署電子商務](/help/sites-deploying/ecommerce.md)。
 >
->如需擴充電子商務功能的詳細資訊，請參 [閱開發電子商務](/help/sites-developing/ecommerce.md)。
+>如需擴充電子商務功能的詳細資訊，請參閱[開發電子商務](/help/sites-developing/ecommerce.md)。
 
-## 主要功能 {#main-features}
+## 主要功能{#main-features}
 
 AEM eCommerce提供：
 
-* 許多現 **成可用的AEM元件** ，以說明您的專案可取得哪些成果：
+* 許多&#x200B;**現成可用的AEM元件**，以說明您的專案可取得哪些成果：
 
    * 產品展示
    * 購物車
@@ -140,6 +143,7 @@ AEM eCommerce提供：
    * 最近檢視的產品
    * 憑單
    * 及其他
+
    ![](assets/chlimage_1-130.png)
 
    >[!NOTE]
@@ -152,20 +156,22 @@ AEM eCommerce提供：
    * 電子商務系統的研究
    * 協力廠商搜尋（例如Search&amp;Promote）
    * 或其組合。
+
    ![](assets/chlimage_1-131.png)
 
-* 使用AEM功能，在多 **個頻道上呈現您的內容**，不論是完整的瀏覽器視窗或行動裝置。 這會以訪客所需的格式提供您的內容。
+* 使用AEM功能，將您的內容呈現在多個頻道&#x200B;**（無論是完整的瀏覽器視窗或行動裝置）。**&#x200B;這會以訪客所需的格式提供您的內容。
 
    ![](assets/chlimage_1-132.png)
 
-* 能夠根據 **AEM eCommerce架構開發您自己的整[合實作](#the-framework)**。
+* 能夠根據&#x200B;**AEM eCommerce架構[開發您自己的整合實作。](#the-framework)**
 
    目前可用的兩個實作都是以相同的基礎建立——以一般API（架構）為基礎。 實作新整合只涉及實作您整合所需的功能。 任何新的實作都可以使用前端元件，因為它們使用介面（因此與實作無關）。
 
-* 基於購物者資 **料和活動開發體驗驅動型商務的可能性**。 這可讓您瞭解許多情形：
+* 基於購物者資料和活動&#x200B;**開發體驗驅動型商務的可能性。**&#x200B;這可讓您瞭解許多情形：
 
    * 例如，當訂單總量超過特定金額時，可能會降低運費。
    * 另一種可能可讓您提供使用描述檔資料的季節性選件（例如位置）。 然後，視需要依其他因素，再加亮這些項目。
+
    在下列範例中，一個摘要顯示為購物車內容小於$75:
 
    ![](assets/chlimage_1-133.png)
@@ -180,18 +186,18 @@ AEM eCommerce提供：
    * 完整訂單記錄
    * 快速目錄更新
 
-## 框架 {#the-framework}
+## 框架{#the-framework}
 
-Concepts [部分](/help/sites-administering/concepts.md) (Concepts)更詳細地介紹了框架，但以下部分提供了框架的高級、高速視圖：
+[Concepts](/help/sites-administering/concepts.md)一節更詳細地介紹了框架，但以下內容提供了框架的高級、高速視圖：
 
-### 什麼？ {#what}
+### 什麼？{#what}
 
 * 整合架構提供API、一系列元件來說明功能，以及數種擴充功能來提供連線方法的範例。
 * 該框架提供了項目實施所需的基本結構。
 * 該框架具有可擴充性。
 * 此架構不提供現成可用的網站。 為了配合您的規格調整架構，一律需要進行一定量的開發工作。
 
-### 為什麼？ {#why}
+### 為什麼？{#why}
 
 * 提供快速實現自訂電子商務網站所需的基本機制。
 * 提供開發實際電子商務網站所需的彈性。
