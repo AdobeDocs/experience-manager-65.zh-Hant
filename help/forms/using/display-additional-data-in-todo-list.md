@@ -20,24 +20,24 @@ ht-degree: 0%
 
 # 在ToDo清單中顯示其他資料{#displaying-additional-data-in-todo-list}
 
-依預設，AEM Forms工作區待辦事項清單會顯示工作顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示的樣式。
+依預設，AEM Forms工作區待辦項目清單會顯示工作顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示的樣式。
 
 ![查看顯示預設配置的「HTML工作區待辦事項」頁籤](assets/html-todo-list.png)
 
 本文詳細說明在「待辦事項」清單中新增要顯示每個工作資訊的步驟。
 
-## 可新增的功能 {#what-can-be-added}
+## 可添加的{#what-can-be-added}
 
-您可以新增伺服器所傳送 `task.json` 的可用資訊。 這些資訊可以新增為純文字，或您可使用樣式來設定資訊的格式。
+您可以添加伺服器發送的`task.json`中的可用資訊。 這些資訊可以新增為純文字，或您可使用樣式來設定資訊的格式。
 
-如需JSON物件說明的詳細資訊，請參閱 [本](/help/forms/using/html-workspace-json-object-description.md) 文。
+如需JSON物件說明的詳細資訊，請參閱[this](/help/forms/using/html-workspace-json-object-description.md)文章。
 
-## 顯示任務資訊 {#displaying-information-on-a-task}
+## 顯示有關任務{#displaying-information-on-a-task}的資訊
 
-1. 請遵循「 [AEM Forms工作區自訂的一般步驟」](../../forms/using/generic-steps-html-workspace-customization.md)。
-1. 要顯示任務的附加資訊，必須在的任務塊中添加相應的鍵值對 `translation.json`。
+1. 請依照[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)進行。
+1. 要顯示任務的其他資訊，必須在`translation.json`的任務塊中添加相應的鍵值對。
 
-   例如，英文 `/apps/ws/locales/en-US/translation.json` 的變更：
+   例如，英文的`/apps/ws/locales/en-US/translation.json`變更：
 
    ```json
    "task" : {
@@ -122,9 +122,9 @@ ht-degree: 0%
    }
    ```
 
-## 定義新屬性的CSS {#defining-css-for-the-new-property}
+## 定義新屬性{#defining-css-for-the-new-property}的CSS
 
-1. 您可以將樣式應用於添加到任務中的資訊（屬性）。 若要這麼做，您必須新增新增至的新屬性的樣式資訊 `/apps/ws/css/newStyle.css`。
+1. 您可以將樣式應用於添加到任務中的資訊（屬性）。 若要這麼做，您必須新增新增至`/apps/ws/css/newStyle.css`之新屬性的樣式資訊。
 
    例如，新增：
 
@@ -136,7 +136,7 @@ ht-degree: 0%
    }
    ```
 
-## 在HTML範本中新增項目 {#adding-entry-in-the-html-template}
+## 在HTML模板{#adding-entry-in-the-html-template}中添加條目
 
 最後，您需要在dev套件中包含您要新增至工作的每個屬性的項目。 若要建立AEM Forms工作區代碼，請參閱「建立AEM Forms工作區代碼」。
 
@@ -145,9 +145,9 @@ ht-degree: 0%
    * 從: `/libs/ws/js/runtime/templates/`
    * 至: `/apps/ws/js/runtime/templates/`
 
-1. 將新資訊添加到 `/apps/ws/js/runtime/templates/task.html`。
+1. 將新資訊添加到`/apps/ws/js/runtime/templates/task.html`。
 
-   例如，在 `div class="taskProperties"`:
+   例如，在`div class="taskProperties"`下添加：
 
    ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
