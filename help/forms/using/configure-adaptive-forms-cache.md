@@ -12,52 +12,52 @@ docset: aem65
 translation-type: tm+mt
 source-git-commit: ade3747ba608164a792a62097b82c55626245891
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
 
 
-# 配置自適應表單快取 {#configure-adaptive-forms-cache}
+# 配置自適應表單快取{#configure-adaptive-forms-cache}
 
 快取是縮短資料存取時間、減少延遲並改善輸入／輸出(I/O)速度的機制。 最適化表單快取只儲存最適化表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 它有助於縮短在用戶端上轉換最適化表單所需的時間。 它專為最適化表單而設計。
 
-## 在作者和發佈例項處配置自適應表單快取 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
+## 在作者處配置自適應表單快取和發佈例項{#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
-1. 請前往AEM網頁主控台組態管理器(網址 `https://[server]:[port]/system/console/configMgr`)。
-1. 按一 **[!UICONTROL 下「最適化表單與互動式通訊Web頻道設定」]** ，以編輯其設定值。
-1. 在「編 [!UICONTROL 輯設定值] 」對話方塊中 [!DNL Forms] ，在「最適化表單數」欄位中指定AEM伺服器例項可快取的表 **** 單或檔案數上限。 預設值為100。
+1. 前往`https://[server]:[port]/system/console/configMgr`的AEM網頁主控台組態管理器。
+1. 按一下&#x200B;**[!UICONTROL 自適應表單和互動式通信Web通道配置]**&#x200B;以編輯其配置值。
+1. 在[!UICONTROL 編輯配置值]對話框中，在&#x200B;**[!UICONTROL Number of Adaptive Forms]**&#x200B;欄位中指定AEM [!DNL Forms]伺服器實例可以快取的最大表單或文檔數。 預設值為100。
 
    >[!NOTE]
    >
-   >要禁用快取，請將「最適化表單數」欄位中的值設定為 **0**。 當禁用或更改快取配置時，將重置快取，並從快取中刪除所有表單和文檔。
+   >要禁用快取，請將「最適化表單數」欄位中的值設定為&#x200B;**0**。 當禁用或更改快取配置時，將重置快取，並從快取中刪除所有表單和文檔。
 
    ![最適化表單HTML快取的設定對話方塊](assets/cache-configuration-edit.png)
 
-1. 按一下 **[!UICONTROL 保存]** ，保存配置。
+1. 按一下&#x200B;**[!UICONTROL 保存]**&#x200B;保存配置。
 
 您的環境已配置為使用快取自適應表單和相關資產。
 
 
-## （可選）在調度器上配置自適應表單快取 {#configure-the-cache}
+## （可選）在Dispatcher {#configure-the-cache}配置自適應表單快取
 
 您也可以在Dispatcher中設定自適應表單快取，以進一步提升效能。
 
-### 先決條件 {#pre-requisites}
+### 先決條件{#pre-requisites}
 
-* 啟用在 [用戶端合併或預填充資料](prepopulate-adaptive-form-fields.md#prefill-at-client) 。 它有助於合併每個預先填入表單實例的唯一資料。
-* [為每個發佈實例啟用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。 它可協助針對最適化表單取得更佳的快取效能。 刷新代理的預設URL為 `http://[server]:[port]]/etc/replication/agents.publish/flush.html`。
+* 啟用[合併或預填充客戶端的資料選項。 ](prepopulate-adaptive-form-fields.md#prefill-at-client)它有助於合併每個預先填入表單實例的唯一資料。
+* [為每個發佈實例啟用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。它可協助針對最適化表單取得更佳的快取效能。 刷新代理的預設URL為`http://[server]:[port]]/etc/replication/agents.publish/flush.html`。
 
-### 在調度器上快取自適應表單的注意事項 {#considerations}
+### 在調度程式{#considerations}上快取自適應表單的注意事項
 
-* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher] 快取最適化表單的用戶端程式庫（CSS和JavaScript）。
+* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher]快取最適化表單的用戶端程式庫（CSS和JavaScript）。
 * 在開發自訂元件時，在用於開發的伺服器上，請停用最適化表單快取。
-* 不會快取無副檔名的URL。 例如，會快取具有模式模式的URL`/content/forms/[folder-structure]/[form-name].html` ，而快取會忽略具有模式的URL `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`。 因此，請搭配使用URL和擴充功能，以充份運用快取功能。
+* 不會快取無副檔名的URL。 例如，會快取模式為pattern`/content/forms/[folder-structure]/[form-name].html`的URL，並忽略模式為`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`的URL快取。 因此，請搭配使用URL和擴充功能，以充份運用快取功能。
 * 本地化最適化表單的考量事項：
-   * 使用URL格 `http://host:port/content/forms/af/<afName>.<locale>.html` 式來要求本地化版本的最適化表單，而非 `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
-   * [針對格式化的URL](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) ，停用使用瀏覽器地區 `http://host:port/content/forms/af/<adaptivefName>.html`設定。
-   * 當您使用URL格 `http://host:port/content/forms/af/<adaptivefName>.html`式，並停 **** 用設定管理員中的「使用瀏覽器地區設定」時，就會提供最適化表單的非本地化版本。 非本地化語言是開發自適應表單時使用的語言。 不會考慮為瀏覽器設定的地區設定（瀏覽器地區設定），而且會提供最適化表單的非本地化版本。
-   * 當您使用URL格 `http://host:port/content/forms/af/<adaptivefName>.html`式，並啟 **** 用設定管理員中的「使用瀏覽器地區設定」時，就會提供最適化表單的本地化版本（如果有的話）。 本地化的最適化表單語言是以您瀏覽器所設定的地區（瀏覽器地區）為基礎。 它只能導致 [自適應表單的第一個實例]。 若要防止問題在您的例項上發生，請參閱疑難 [排解](#only-first-insatnce-of-adptive-forms-is-cached)。
+   * 使用URL格式`http://host:port/content/forms/af/<afName>.<locale>.html`來請求本地化版本的自適應表單，而非`http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
+   * [針對格式化](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) 的URL停用瀏覽器本 `http://host:port/content/forms/af/<adaptivefName>.html`位。
+   * 當您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，且在配置管理器中禁用了「使用瀏覽器語言環境&#x200B;]**」時，將提供自適應表單的非本地化版本。**[!UICONTROL &#x200B;非本地化語言是開發自適應表單時使用的語言。 不會考慮為瀏覽器設定的地區設定（瀏覽器地區設定），而且會提供最適化表單的非本地化版本。
+   * 當您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，並且在配置管理器中啟用了「使用瀏覽器區域設定」(Use Browser Locale)時，如果可用，則會提供最適化表單的本地化版本。 ****&#x200B;本地化的最適化表單語言是以您瀏覽器所設定的地區（瀏覽器地區）為基礎。 它只能導致[自適應表單]的第一個實例快取。 若要防止問題在實例上發生，請參閱[疑難排解](#only-first-insatnce-of-adptive-forms-is-cached)。
 
 ### 在調度程式中啟用快取
 
@@ -94,8 +94,8 @@ ht-degree: 0%
 
    * 最適化表單會保留在快取中，直到未發佈更新的表單版本為止。
 
-   * 當發佈自適應表單中引用的較新版本資源時，受影響的自適應表單會自動失效。 引用資源的自動失效有一些例外。 有關異常的解決方法，請參 [閱疑難排](#troubleshooting) 解部分。
-1. [新增下列rules dispatcher.any或自訂規則檔案](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。 它會排除不支援快取的URL。 例如，互動式通訊。
+   * 當發佈自適應表單中引用的較新版本資源時，受影響的自適應表單會自動失效。 引用資源的自動失效有一些例外。 有關例外的解決方法，請參閱[疑難排解](#troubleshooting)一節。
+1. [新增下列rules dispatcher.any或自訂規則檔案](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。它會排除不支援快取的URL。 例如，互動式通訊。
 
    ```JSON
       /0000 {
@@ -129,37 +129,37 @@ ht-degree: 0%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有類型的調適性表單。 如果您在傳送快取頁面之前需要檢查頁面的使用者存取權限，請參閱快取保 [護的內容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+您的AEM環境已設定為快取最適化表單。 它會快取所有類型的調適性表單。 如果您需要在傳送快取頁面之前檢查頁面的使用者存取權限，請參閱[快取保護內容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
 
 ## 疑難排解 {#troubleshooting}
 
-### 有些包含影像或視訊的最適化表單不會自動從分派器快取中失效 {#videos-or-images-not-auto-invalidated}
+### 某些包含影像或視頻的自適應表單不會自動從調度器快取中失效{#videos-or-images-not-auto-invalidated}
 
 #### 問題 {#issue1}
 
 當您透過資產瀏覽器選取影像或視訊並新增至最適化表單，而且這些影像和視訊是在資產編輯器中編輯時，包含這些影像的最適化表單不會自動從分派器快取中失效。
 
-#### 解決方案 {#Solution1}
+#### 解決方案{#Solution1}
 
 發佈影像和視訊後，請明確取消發佈並發佈參照這些資產的最適化表單。
 
-### 某些包含內容片段或體驗片段的最適化表單不會自動從分派器快取中失效 {#content-or-experience-fragment-not-auto-invalidated}
+### 某些包含內容片段或體驗片段的最適化表單不會自動從Dispatcher Cache {#content-or-experience-fragment-not-auto-invalidated}中失效
 
 #### 問題 {#issue2}
 
 當您將內容片段或體驗片段新增至最適化表單，而這些資產會獨立編輯和發佈時，最適化表單中會包含這些資產，這些資產不會自動從分派器快取中失效。
 
-#### 解決方案 {#Solution2}
+#### 解決方案{#Solution2}
 
 發佈更新的內容片段或體驗片段後，請明確取消發佈並發佈使用這些資產的最適化表單。
 
-### 僅快取最適化表單的第一個例項{#only-first-insatnce-of-adptive-forms-is-cached}
+### 僅快取自適應表單的第一個實例{#only-first-insatnce-of-adptive-forms-is-cached}
 
 #### 問題 {#issue3}
 
-當最適化表單URL沒有任何本地化資訊，且啟用組態管理員中的 **[!UICONTROL Use Browser Locale]** ，就會提供適化表單的本地化版本，而且只會快取並傳送最適化表單的第一個例項給每個後續使用者。
+當最適化表單URL沒有任何本地化資訊，並且在配置管理器中啟用「使用瀏覽器區域設定」(**[!UICONTROL Use Browser Locale]**)時，就會提供最適化表單的本地化版本，並且只會快取並傳送最適化表單的第一個實例給每個後續使用者。
 
-#### 解決方案 {#Solution3}
+#### 解決方案{#Solution3}
 
 執行下列步驟以解決問題：
 
