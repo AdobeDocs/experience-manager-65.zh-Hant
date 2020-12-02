@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 translation-type: tm+mt
 source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 本頁提供使用問題和答案(QnA)論壇功能的基本資訊。
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 <table>
  <tbody>
@@ -45,14 +48,14 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
   </tr>
   <tr>
    <td> 屬性</td>
-   <td>請參 <a href="working-with-qna.md">閱問答論壇功能</a></td>
+   <td>請參閱<a href="working-with-qna.md">問答論壇功能</a></td>
   </tr>
  </tbody>
 </table>
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [QnA API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
@@ -62,21 +65,21 @@ source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 ### QnA 功能 {#qna-function}
 
-包含 [QnA函式的社群網站結構](functions.md#qna-function) ，將具有已設定的 `QnA` 元件，以及影響協調與標籤的設定。 QnA函式支援標識特 [權成員用戶組](users.md#privileged-members-group)。
+包含[QnA函式](functions.md#qna-function)的社群網站結構將具有已配置的`QnA`元件以及影響協調和標籤的設定。 QnA函式支援標識[特權成員用戶組](users.md#privileged-members-group)。
 
-### 存取QnA論壇貼文(UGC) {#accessing-qna-forum-posts-ugc}
+### 訪問QnA論壇帖子(UGC){#accessing-qna-forum-posts-ugc}
 
 UGC應使用其中一種標準的協調方法來協調。
-請參 [閱協調使用者產生的內容](moderate-ugc.md)。
+請參閱[協調使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括程式化存取UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用[通用商店](working-with-srp.md)做為UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP），都可程式化存取UGC。
 
 **UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
 
 請參閱：
 
 * [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
+* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP實用程式方法和示例。
+* [使用SRP](accessing-ugc-with-srp.md) -編碼准則存取UGC。
+* [SocialUtils重構](socialutils.md) -將淘汰的公用程式方法對應至目前的SRP公用程式方法。
 
