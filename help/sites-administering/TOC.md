@@ -15,10 +15,10 @@ ht-degree: 10%
 ---
 
 
-# AEM 6.5 管理使用指南 {#administering}
+# AEM 6.5 管理使用指南  {#administering}
 
 + [管理使用指南概觀](home.md)
-+ 網站功能 {#introduction}
++ 網站功能{#introduction}
    + [網站管理](msm-and-translation.md)
    + [非同步作業](asynchronous-jobs.md)
    + [重複使用內容：多網站管理員和即時副本](msm.md)
@@ -106,7 +106,7 @@ ht-degree: 10%
    + [設定區段](campaign-segmentation.md)
    + [擴充及設定著陸頁面的Design Importer](extending-the-design-importer-for-landingpages.md)
    + [整合著陸頁面與Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
-+ 電子商務 {#ecommerce}
++ 電子商務{#ecommerce}
    + [電子商務](ecommerce.md)
    + [概念](concepts.md)
    + [管理一般電子商務](generic.md)
@@ -114,7 +114,7 @@ ht-degree: 10%
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
    + [AEM商務- GDPR就緒性](gdpr-compliance-commerce.md)
-+ Integration {#integration}
++ 整合{#integration}
    + [與第三方服務整合](third-party-services.md)
    + [與Salesforce整合](salesforce.md)
    + [整合 Adobe Target](target.md)
@@ -163,7 +163,7 @@ ht-degree: 10%
    + [AEM Sites - GDPR就緒性](gdpr-compliance-sites.md)
    + [處理AEM Foundation的GDPR要求](handling-gdpr-requests-for-aem-platform.md)
    + [AEM商務- GDPR就緒性](gdpr-compliance-commerce.md)
-+ 內容管理 {#contentmanagement}
++ 內容管理{#contentmanagement}
    + [如何使用套件](package-manager.md)
    + [管理標籤](tags.md)
    + [頁面匯出器](page-exporter.md)
