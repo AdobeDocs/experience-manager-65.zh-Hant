@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -23,16 +26,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->若要根據現有的標準網站建立行動網站，請建立標準網站的即時副本。 (請參 [閱「建立不同渠道的即時副本](/help/sites-administering/msm-livecopy.md)」)。
+>若要根據現有的標準網站建立行動網站，請建立標準網站的即時副本。 （請參閱[為不同通道建立即時副本](/help/sites-administering/msm-livecopy.md)）。
 >
->AEM開發人員可以建立新的裝置群組。 (請參 [閱建立裝置群組篩選](/help/sites-developing/groupfilters.md)。)
+>AEM開發人員可以建立新的裝置群組。 （請參閱[建立設備組過濾器](/help/sites-developing/groupfilters.md)。）
 
 請依照下列程式來製作行動頁面：
 
-1. 從全域導覽開啟 **Sites** Console。
-1. 開啟 **We.Retail** -> **United States** ->英 **文**。
+1. 從全局導航開啟&#x200B;**Sites**&#x200B;控制台。
+1. 開啟頁面&#x200B;**We.Retail** -> **美國** -> **英文**。
 
-1. Switch to **Preview** mode.
+1. 切換到&#x200B;**預覽**&#x200B;模式。
 1. 按一下頁面頂端的裝置圖示，即可切換至所需的模擬器。
 1. 將元件從元件瀏覽器拖放至頁面。
 
