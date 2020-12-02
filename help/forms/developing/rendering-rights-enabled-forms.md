@@ -12,15 +12,18 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 translation-type: tm+mt
 source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+workflow-type: tm+mt
+source-wordcount: '1441'
+ht-degree: 0%
 
 ---
 
 
-# 轉換具權限的表單 {#rendering-rights-enabled-forms}
+# 呈現啟用權限的表單{#rendering-rights-enabled-forms}
 
-Forms服務可以呈現已套用使用權限的表單。 使用權限與Acrobat預設為Acrobat但Adobe reader未提供的功能相關，例如在表格中新增註解或填寫表格欄位並儲存表格的功能。 具有套用使用權限的表單稱為啟用權限的表單。 在Adobe Reader中開啟具權限的表格的使用者，可以執行為該表格啟用的作業。
+Forms服務可以呈現已套用使用權限的表單。 使用權限與Acrobat預設為Acrobat但Adobe Reader未提供的功能相關，例如在表格中新增註解或填寫表格欄位並儲存表格的功能。 具有套用使用權限的表單稱為啟用權限的表單。 在Adobe Reader中開啟具權限的表格的使用者，可以執行為該表格啟用的作業。
 
-若要將使用權套用至表單，Acrobat Reader DC擴充功能服務必須是AEM表單安裝的一部分。 此外，您必須擁有有效的憑證，才能將使用權套用至PDF檔案。 也就是說，您必須先正確設定Acrobat Reader DC擴充功能服務，才能轉換具權限的表格。 (請參 [閱關於Acrobat Reader DC擴充功能服務](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service))。
+若要將使用權套用至表單，Acrobat Reader DC擴充功能服務必須是AEM表單安裝的一部分。 此外，您必須擁有有效的憑證，才能將使用權套用至PDF檔案。 也就是說，您必須先正確設定Acrobat Reader DC擴充功能服務，才能轉換具權限的表格。 （請參閱[關於Acrobat Reader DC擴充功能服務](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service)）。
 
 >[!NOTE]
 >
@@ -28,13 +31,13 @@ Forms服務可以呈現已套用使用權限的表單。 使用權限與Acrobat�
 
 >[!NOTE]
 >
->當您指定下列使用權限時，無法預先填入XML資料的表格： `enableComments`、 `enableCommentsOnline``enableEmbeddedFiles`或 `enableDigitalSignatures`。 (請參 [閱使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)
+>當您指定下列使用權限時，無法預先填入XML資料的表格：`enableComments`、`enableCommentsOnline`、`enableEmbeddedFiles`或`enableDigitalSignatures`。 （請參閱[使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱「AEM Forms [的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 步驟摘要 {#summary-of-steps}
+## 步驟{#summary-of-steps}摘要
 
 要呈現啟用權限的表單，請執行以下任務：
 
@@ -74,7 +77,7 @@ Forms服務可以呈現已套用使用權限的表單。 使用權限與Acrobat�
 
 [使用web service API演算具權限的表格](#render-rights-enabled-forms-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -84,7 +87,7 @@ Forms服務可以呈現已套用使用權限的表單。 使用權限與Acrobat�
 
 [建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-### 使用Java API演算啟用權限的表單 {#render-rights-enabled-forms-using-the-java-api}
+### 使用Java API {#render-rights-enabled-forms-using-the-java-api}演算啟用權限的表格
 
 使用Forms API(Java)來轉譯啟用權限的表格：
 
@@ -94,48 +97,50 @@ Forms服務可以呈現已套用使用權限的表單。 使用權限與Acrobat�
 
 1. 建立Forms用戶端API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
 
 1. 設定使用權限運行時選項
 
-   * 使用其 `ReaderExtensionSpec` 建構函式建立物件。
-   * 調用物件的方法以指定憑證的 `ReaderExtensionSpec` 別名，並 `setReCredentialAlias` 指定代表別名值的字串值。
-   * 通過調用屬於對象的相應方法來設定每個使用 `ReaderExtensionSpec` 權。 不過，您只能在您引用的憑證允許您進行設定時，設定正確的使用方式。 也就是說，如果憑據不允許您設定，則不能設定正確的使用情形。 例如。 若要設定使用權，讓使用者可填寫表單欄位並儲存表單、叫用物 `ReaderExtensionSpec` 件的方 `setReFillIn` 法並傳遞 `true`。
+   * 使用其建構子建立`ReaderExtensionSpec`對象。
+   * 調用`ReaderExtensionSpec`物件的`setReCredentialAlias`方法以指定憑證的別名，並指定代表別名值的字串值。
+   * 通過調用屬於`ReaderExtensionSpec`對象的相應方法來設定每個使用權限。 不過，您只能在您引用的憑證允許您進行設定時，設定正確的使用方式。 也就是說，如果憑據不允許您設定，則不能設定正確的使用情形。 例如。 若要設定使用權，讓使用者可填寫表格欄位並儲存表格，請叫用`ReaderExtensionSpec`物件的`setReFillIn`方法並傳遞`true`。
+
    >[!NOTE]
    >
-   >您不需要叫用物 `ReaderExtensionSpec` 件的方 `setReCredentialPassword` 法。 Forms服務不會使用此方法。
+   >您不需要叫用`ReaderExtensionSpec`物件的`setReCredentialPassword`方法。 Forms服務不會使用此方法。
 
 1. 轉譯啟用權限的表單
 
-   叫用物 `FormsServiceClient` 件的方 `renderPDFFormWithUsageRights` 法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderPDFFormWithUsageRights`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 包 `com.adobe.idp.Document` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞空 `com.adobe.idp.Document` 物件。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。
-   * 存 `ReaderExtensionSpec` 儲使用權限運行時選項的對象。
-   * 包 `URLSpec` 含Forms服務所需URI值的對象。
-   該方 `renderPDFFormWithUsageRights` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。
+   * `ReaderExtensionSpec`物件，可儲存使用權限執行時間選項。
+   * `URLSpec`物件，包含Forms服務所需的URI值。
+
+   `renderPDFFormWithUsageRights`方法返回一個`FormsResult`對象，該對象包含必須寫入客戶端Web瀏覽器的表單資料流。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
-   * 通過調用對象的方 `com.adobe.idp.Document` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `com.adobe.idp.Document` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 調用 `java.io.InputStream` 物件的方 `com.adobe.idp.Document` 法以建立物 `getInputStream` 件。
-   * 呼叫物件的方法，並將位元組陣列傳 `InputStream` 入為引數， `read` 以表格資料流的方式建立位元組陣列。
-   * 叫用物 `javax.servlet.ServletOutputStream` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
+   * 通過調用`getContentType`方法獲取`com.adobe.idp.Document`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`com.adobe.idp.Document`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 呼叫`InputStream`物件的`read`方法，並將位元組陣列傳入為引數，以填入表單資料流的位元組陣列。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
 [快速入門（SOAP模式）:使用Java API轉譯具權限的表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用web service API演算具權限的表格 {#render-rights-enabled-forms-using-the-web-service-api}
+## 使用web service API {#render-rights-enabled-forms-using-the-web-service-api}轉譯啟用權限的表單
 
 使用Forms API(web service)來轉譯具有權限的表格：
 
@@ -146,33 +151,34 @@ Forms服務可以呈現已套用使用權限的表單。 使用權限與Acrobat�
 
 1. 建立Forms用戶端API物件
 
-   建立對 `FormsService` 像並設定驗證值。
+   建立`FormsService`對象並設定驗證值。
 
 1. 設定使用權限運行時選項
 
-   * 使用其 `ReaderExtensionSpec` 建構函式建立物件。
-   * 調用物件的方法以指定憑證的 `ReaderExtensionSpec` 別名，並 `setReCredentialAlias` 指定代表別名值的字串值。
-   * 通過調用屬於對象的相應方法來設定每個使用 `ReaderExtensionSpec` 權。 不過，您只能在您引用的憑證允許您進行設定時，設定正確的使用方式。 也就是說，如果憑據不允許您設定，則不能設定正確的使用情形。 若要設定使用權，讓使用者可填寫表格欄位並儲存表格，請叫用物 `ReaderExtensionSpec` 件的方 `setReFillIn` 法並傳遞 `true`。
+   * 使用其建構子建立`ReaderExtensionSpec`對象。
+   * 調用`ReaderExtensionSpec`物件的`setReCredentialAlias`方法以指定憑證的別名，並指定代表別名值的字串值。
+   * 通過調用屬於`ReaderExtensionSpec`對象的相應方法來設定每個使用權限。 不過，您只能在您引用的憑證允許您進行設定時，設定正確的使用方式。 也就是說，如果憑據不允許您設定，則不能設定正確的使用情形。 若要設定使用權，讓使用者可填寫表格欄位並儲存表格，請叫用`ReaderExtensionSpec`物件的`setReFillIn`方法並傳遞`true`。
 
 1. 轉譯啟用權限的表單
 
-   叫用物 `FormsService` 件的方 `renderPDFFormWithUsageRights` 法並傳遞下列值：
+   叫用`FormsService`物件的`renderPDFFormWithUsageRights`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 包 `BLOB` 含要與表單合併的資料的對象。 如果您不想將資料與表單合併，則必須傳遞以空 `BLOB` 白XML資料來源為基礎的物件。 不能傳遞 `BLOB` 空的對象；否則，會拋出異常。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。
-   * 存 `ReaderExtensionSpec` 儲使用權限運行時選項的對象。
-   * 包 `URLSpec` 含Forms服務所需URI值的對象。
-   該方 `renderPDFFormWithUsageRights` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `BLOB`物件，包含要與表單合併的資料。 如果您不想將資料與表單合併，則必須傳遞以空XML資料來源為基礎的`BLOB`物件。 不能傳遞`BLOB`對象為null;否則，會拋出異常。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。
+   * `ReaderExtensionSpec`物件，可儲存使用權限執行時間選項。
+   * `URLSpec`物件，包含Forms服務所需的URI值。
+
+   `renderPDFFormWithUsageRights`方法返回一個`FormsResult`對象，該對象包含必須寫入客戶端Web瀏覽器的表單資料流。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 呼叫 `BLOB` 物件的方法，以建立包含表 `FormsResult` 單資料的物 `getOutputContent` 件。
-   * 通過調用對象的方 `BLOB` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `BLOB` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 建立位元組陣列，並透過叫用物件的方 `BLOB` 法來填入該 `getBinaryData` 陣列。 此任務將對象的內 `FormsResult` 容分配給位元組陣列。
-   * 叫用物 `javax.servlet.http.HttpServletResponse` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
+   * 通過調用`getContentType`方法獲取`BLOB`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`BLOB`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
+   * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
