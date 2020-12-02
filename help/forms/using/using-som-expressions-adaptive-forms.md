@@ -23,13 +23,13 @@ ht-degree: 0%
 
 可以使用指令碼對象模型(SOM)來引用特定文檔對象模型(DOM)中的值、屬性和方法。 DOM將記憶體對象和屬性組織在樹層次中。 SOM表達式引用欄位／繪製元素和面板。
 
-下圖描述了在向表單添加元件時，自適應表單轉換為的節點結構。 例如，您可以新增面板至根面板，並在面板中新增選項按鈕，在執行時期轉換為DOM。 自適應格式的單選按鈕欄位的SOM表達式指定為 `guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`。
+下圖描述了在向表單添加元件時，自適應表單轉換為的節點結構。 例如，您可以新增面板至根面板，並在面板中新增選項按鈕，在執行時期轉換為DOM。 最適化格式的單選按鈕欄位的SOM表達式指定為`guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`。
 
 ![DOM樹](assets/hierarchy.png)
 
 DOM樹
 
-自適應形式中任何元素的SOM表達式都以前置詞 `guide[0].guide1[0]`。 元件在節點結構層次中的位置用於導出其SOM表達式。
+自適應形式中任何元素的SOM表達式都由`guide[0].guide1[0]`前置詞。 元件在節點結構層次中的位置用於導出其SOM表達式。
 
 ![具有兩個單選按鈕的DOM樹](assets/hierarchy_radio_button.png)
 
@@ -47,4 +47,4 @@ DOM樹
 
 使用面板工具列擷取SOM運算式
 
-GuideBridge中列出的 [某些API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) ，會使用元素的SOM運算式。 例如，若要以最適化形式將焦點放在特定欄位，請將對應的SOM運算式傳遞至 `getFocus`API `guideBridge`。
+[GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)中列出的某些API會使用元素的SOM運算式。 例如，要以自適應形式將焦點放在特定欄位中，請將相應的SOM表達式傳遞到`guideBridge`中的`getFocus`API。
