@@ -18,18 +18,18 @@ ht-degree: 0%
 ---
 
 
-# 更新檔案的連結 {#updating-the-link-to-the-documentation}
+# 更新文檔{#updating-the-link-to-the-documentation}的連結
 
-您可以選取「說明>工作區說明」，以存取AEM Forms工作區 **的預設說明內容**。 它指向Adobe網站上的線上檔案。 不過，您可將其更新為指向任何其他URL。
+您可以選取「**說明>工作區說明**」，來存取AEM Forms工作區的預設說明內容。 它指向Adobe網站上的線上檔案。 不過，您可將其更新為指向任何其他URL。
 
 請考慮下列使用案例，您可能想要變更預設說明URL:
 
 * 提供您所選語言的本地化說明。
 * 針對您的自訂工作區提供自訂說明內容。
 
-若要更新線上檔案的URL，請遵循自訂的 [一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md) ，然後遵循下列步驟。
+要更新聯機文檔的URL，請遵循[自定義的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)，然後執行以下步驟。
 
-1. 將檔 `userinfo.html` 案從復 `/libs/ws/js/runtime/templates` 制到 `/apps/ws/js/runtime/templates`。
+1. 將`userinfo.html`檔案從`/libs/ws/js/runtime/templates`複製至`/apps/ws/js/runtime/templates`。
 1. 變更：
 
    ```html
@@ -51,4 +51,4 @@ ht-degree: 0%
 1. 執行下列動作：
 
    1. 開啟/apps/ws/js/registry.js進行編輯。
-   1. 搜尋並取代 `text!/lc/libs/ws/js/runtime/templates/userinfo.html` 為 `text!/lc/apps/ws/js/runtime/templates/userinfo.html`。
+   1. 搜尋並將`text!/lc/libs/ws/js/runtime/templates/userinfo.html`取代為`text!/lc/apps/ws/js/runtime/templates/userinfo.html`。
