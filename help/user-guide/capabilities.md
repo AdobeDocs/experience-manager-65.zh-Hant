@@ -7,12 +7,12 @@ translation-type: tm+mt
 source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
 source-wordcount: '153'
-ht-degree: 9%
+ht-degree: 32%
 
 ---
 
 
-# AEM 6.5功能使用指南 {#aem-65-capabilities-user-guides}
+# AEM 6.5功能使用手冊{#aem-65-capabilities-user-guides}
 
 ## AEM Foundation {#aem-foundation}
 
