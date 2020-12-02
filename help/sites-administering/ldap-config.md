@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 translation-type: tm+mt
 source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+workflow-type: tm+mt
+source-wordcount: '1661'
+ht-degree: 0%
 
 ---
 
 
-# 使用AEM 6設定LDAP {#configuring-ldap-with-aem}
+# 使用AEM 6 {#configuring-ldap-with-aem}設定LDAP
 
-LDAP(輕量型目 ****&#x200B;錄訪 ****&#x200B;問協 ****&#x200B;議)用 ****&#x200B;於訪問集中式目錄服務。 這有助於減少管理使用者帳戶所需的工作，因為使用者帳戶可供多個應用程式存取。 Active Directory是此類LDAP伺服器之一。 LDAP通常用於實現單一登入，允許用戶在登錄一次後訪問多個應用程式。
+LDAP（**L** 8 **D**&#x200B;目錄&#x200B;**A**&#x200B;訪問&#x200B;**P**&#x200B;協定）用於訪問集中式目錄服務。 這有助於減少管理使用者帳戶所需的工作，因為使用者帳戶可供多個應用程式存取。 Active Directory是此類LDAP伺服器之一。 LDAP通常用於實現單一登入，允許用戶在登錄一次後訪問多個應用程式。
 
 用戶帳戶可以在LDAP伺服器和儲存庫之間同步，LDAP帳戶詳細資訊將保存在儲存庫中。 這允許將帳戶分配給儲存庫組以分配所需的權限和權限。
 
@@ -40,15 +43,15 @@ LDAP(輕量型目 ****&#x200B;錄訪 ****&#x200B;問協 ****&#x200B;議)用 ****
 
 >[!NOTE]
 >
->觀看 [Oak的外部登入模組——使用LDAP和Expeind](https://docs.adobe.com/content/ddc/en/gems/oak-s-external-login-module---authenticating-with-ldap-and-beyon.html#) ，深入探討外部登入模組。
+>觀看[Oak的外部登錄模組——使用LDAP驗證和Beyond](https://docs.adobe.com/content/ddc/en/gems/oak-s-external-login-module---authenticating-with-ldap-and-beyon.html#)深入探討外部登錄模組。
 >
->若要閱讀使用Apache DS設定Experience Manager的範例，請參 [閱設定Adobe Experience Manager 6.5以使用Apache Directory Service。](https://helpx.adobe.com/experience-manager/using/configuring-aem64-apache-directory-service.html)
+>若要閱讀使用Apache DS配置Experience Manager的範例，請參閱[設定Adobe Experience Manager 6.5以使用Apache Directory Service。](https://helpx.adobe.com/experience-manager/using/configuring-aem64-apache-directory-service.html)
 
-## 配置LDAP身份提供程式 {#configuring-the-ldap-identity-provider}
+## 配置LDAP身份提供程式{#configuring-the-ldap-identity-provider}
 
 LDAP身份提供程式用於定義如何從LDAP伺服器檢索用戶。
 
-它位於管理主控台的 **Apache Jackrabbit Oak LDAP身分提供者名稱下** 。
+它位於管理主控台的&#x200B;**Apache Jackrabbit Oak LDAP身分提供者**&#x200B;名稱下。
 
 LDAP身份提供程式可使用以下配置選項：
 
@@ -145,11 +148,11 @@ LDAP身份提供程式可使用以下配置選項：
  </tbody>
 </table>
 
-## 配置同步處理程式 {#configuring-the-synchronization-handler}
+## 配置同步處理程式{#configuring-the-synchronization-handler}
 
 同步處理程式將定義Indentity Provider用戶和組與儲存庫的同步方式。
 
-它位於管理主控 **台的Apache Jackrabbit Oak Default Sync Handler** name下方。
+它位於管理主控台的&#x200B;**Apache Jackrabbit Oak Default Sync Handler**&#x200B;名稱下。
 
 以下配置選項可用於同步處理程式：
 
@@ -177,11 +180,11 @@ LDAP身份提供程式可使用以下配置選項：
   </tr>
   <tr>
    <td><strong>使用者會籍有效期</strong></td>
-   <td>會籍的過期時間。<br /> </td>
+   <td>會籍過期的時間。<br /> </td>
   </tr>
   <tr>
    <td><strong>使用者會籍巢狀深度</strong></td>
-   <td>傳回在成員關係同步時群組巢狀的最大深度。 值0可有效停用群組成員資格查閱。 值1隻會新增使用者的直接群組。 此值僅在同步使用者會籍祖先時，才會在同步個別群組時產生任何效果。</td>
+   <td>傳回在成員關係同步時群組巢狀的最大深度。 值0可有效停用群組成員資格查閱。 值1隻會新增使用者的直接群組。 此值僅在同步使用者會籍祖先時，才會在同步個別群組時產生作用。</td>
   </tr>
   <tr>
    <td><strong>群組到期時間</strong></td>
@@ -202,13 +205,13 @@ LDAP身份提供程式可使用以下配置選項：
  </tbody>
 </table>
 
-## 外部登錄模組 {#the-external-login-module}
+## 外部登錄模組{#the-external-login-module}
 
-外部登入模組位於 **Apache Jackrabbit Oak External Login Module** ，位於管理控制台下。
+外部登錄模組位於管理控制台下的&#x200B;**Apache Jackrabbit Oak外部登錄模組**&#x200B;下。
 
 >[!NOTE]
 >
->Apache Jackrabbit Oak外部登入模組實作Java驗證與授權服務(JAAS)規格。 有關詳 [細資訊，請參閱官方的Oracle Java Security Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) 。
+>Apache Jackrabbit Oak外部登入模組實作Java驗證與授權服務(JAAS)規格。 有關詳細資訊，請參閱[官方的Oracle Java Security Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html)。
 
 其工作是定義要使用的身份提供者和同步處理程式，有效地綁定兩個模組。
 
@@ -229,7 +232,7 @@ LDAP身份提供程式可使用以下配置選項：
 
 AEM 6可依下列程式設定，以透過SSL使用LDAP進行驗證：
 
-1. 在配置 **LDAP身分提供** 器時，選中「使用SSL **」或「使用TLS** 」複選框 [](#configuring-the-ldap-identity-provider)。
+1. 在配置&#x200B;**LDAP身份提供程式[時，選中「使用SSL**&#x200B;或&#x200B;**使用TLS**」複選框。](#configuring-the-ldap-identity-provider)
 1. 根據您的設定配置同步處理程式和外部登錄模組。
 1. 視需要在Java VM中安裝SSL憑證。 您可使用keytool:
 
@@ -237,13 +240,13 @@ AEM 6可依下列程式設定，以透過SSL使用LDAP進行驗證：
 
 1. 測試與LDAP伺服器的連接。
 
-### 建立SSL憑證 {#creating-ssl-certificates}
+### 建立SSL證書{#creating-ssl-certificates}
 
 當設定AEM以透過SSL向LDAP驗證時，可使用自簽名憑證。 以下是產生要與AEM搭配使用之憑證的工作程式範例。
 
 1. 請確定您已安裝並運作SSL程式庫。 此程式將以OpenSSL為例。
 
-1. 建立自訂的OpenSSL設定(cnf)檔案。 您可複製預設的**openssl.cnf **組態檔並加以自訂，即可完成此作業。 在UNIX系統上，它通常位於 `/usr/lib/ssl/openssl.cnf`
+1. 建立自訂的OpenSSL設定(cnf)檔案。 您可複製預設的**openssl.cnf **組態檔並加以自訂，即可完成此作業。 在UNIX系統上，它通常位於`/usr/lib/ssl/openssl.cnf`
 
 1. 通過在終端機中運行以下命令，繼續建立CA根密鑰：
 
@@ -255,7 +258,7 @@ AEM 6可依下列程式設定，以透過SSL使用LDAP進行驗證：
 
    `openssl req -new -x509 -days [number of days for certification] -key certificatefile.key -out root-ca.crt -config CA/openssl.cnf`
 
-1. 檢查新產生的憑證，確保一切順序：
+1. 檢查新產生的憑證，確保一切順序正確：
 
    `openssl x509 -noout -text -in root-ca.crt`
 
@@ -268,7 +271,7 @@ AEM 6可依下列程式設定，以透過SSL使用LDAP進行驗證：
 
 1. 最後，將憑證新增至Java金鑰庫。
 
-## 啟用除錯記錄 {#enabling-debug-logging}
+## 啟用調試日誌{#enabling-debug-logging}
 
 可以為LDAP身份提供程式和外部登錄模組啟用調試日誌記錄，以排除連接問題。
 
@@ -287,7 +290,7 @@ AEM 6可依下列程式設定，以透過SSL使用LDAP進行驗證：
 * 消息模式：{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
 * 記錄器：org.apache.jackrabbit.oak.spi.security.authentication.external
 
-## 團體關係論 {#a-word-on-group-affiliation}
+## 小議小組關係{#a-word-on-group-affiliation}
 
 透過LDAP同步化的使用者可以是AEM中不同群組的一部分。 這些群組可以是外部LDAP群組，這些LDAP群組將作為同步程式的一部分新增至AEM，但也可以是個別新增且不屬於原始LDAP群組附屬機制的群組。
 
@@ -295,9 +298,9 @@ AEM 6可依下列程式設定，以透過SSL使用LDAP進行驗證：
 
 如果從LDAP伺服器上的群組移除使用者，同步時變更也會反映在AEM端。 但是，LDAP未添加的用戶的所有其他組從屬關係都將保留。
 
-AEM會偵測並處理使用者從外部群組中清除的情 `rep:externalId` 況。 此屬性會自動添加到由同步處理程式同步的任何用戶或組，並包含有關原始身份提供程式的資訊。
+AEM會使用`rep:externalId`屬性來偵測並處理從外部群組清除使用者的動作。 此屬性會自動添加到由同步處理程式同步的任何用戶或組，並包含有關原始身份提供程式的資訊。
 
-如需詳細資訊，請參閱「使用者與群組同步」 [上的Apache Oak檔案](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html)。
+如需詳細資訊，請參閱[使用者與群組同步](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html)上的Apache Oak檔案。
 
 ## 已知問題 {#known-issues}
 
