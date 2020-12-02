@@ -31,7 +31,7 @@ ht-degree: 5%
 
 本文列出在最適化表單中採用的支援XFA事件、屬性和驗證，並說明如何在最適化表單中覆寫它們。
 
-## 支援的XFA元素及其在最適化表單中的對應 {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
+## 支援的XFA元素及其在最適化形式{#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}中的映射
 
 ### 欄位 {#fields}
 
@@ -125,55 +125,55 @@ ht-degree: 5%
    <td><p>以最適化形式映射至enabled屬性。 您可以使用「存取」運算式來覆寫它。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能： 角色 </p> </td>
+   <td><p>協助功能：角色 </p> </td>
    <td><p>映射至最適化格式的角色屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能： speakPriority </p> </td>
+   <td><p>協助功能：speakPriority </p> </td>
    <td><p>以最適化形式映射至speakPriority屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能： speakText</p> </td>
+   <td><p>協助功能：speakText</p> </td>
    <td><p>以最適化格式對應至自訂協助工具文字。</p> </td>
   </tr>
   <tr>
-   <td><p>協助功能： 工具提示 </p> </td>
+   <td><p>協助功能：工具提示 </p> </td>
    <td><p>映射至最適化格式的簡短描述屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>標題<em> （所有欄位類型）</em></p> </td>
+   <td><p>標題<em>（所有欄位類型）</em></p> </td>
    <td><p>以最適化形式映射至Title屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>displayFormat<em> （所有欄位類型）</em></p> </td>
+   <td><p>displayFormat<em>（所有欄位類型）</em></p> </td>
    <td><p>以最適化形式映射至「顯示模式」。</p> </td>
   </tr>
   <tr>
-   <td><p>rawValue<em> （所有欄位類型）</em></p> </td>
+   <td><p>rawValue<em>（所有欄位類型）</em></p> </td>
    <td><p>映射至最適化表單中的值屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>項目<em> （清單框、複選框）</em></p> </td>
+   <td><p>items<em>（清單框，複選框）</em></p> </td>
    <td><p>以最適化格式映射至選項屬性。 您可以使用「選項」運算式來覆寫它。</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em> （文字欄位）</em></p> </td>
+   <td><p>maxChar<em>（文字欄位）</em></p> </td>
    <td><p>以最適化格式映射至「允許的字元數上限」屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>多行<em> （文字欄位）</em></p> </td>
+   <td><p>multiline<em>（文字欄位）</em></p> </td>
    <td><p>映射至最適化格式的「允許多行」屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>fracDigit<em> （數值欄位、小數欄位）</em></p> </td>
+   <td><p>fracDigit<em>（數值欄位，小數欄位）</em></p> </td>
    <td><p>以最適化形式映射到Frac digits屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>leadDigit<em> （數值欄位、小數欄位）</em></p> </td>
+   <td><p>leadDigit<em>（數值欄位，小數欄位）</em></p> </td>
    <td><p>以最適化形式映射至Lead digits屬性。</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em> （清單框）</em></p> </td>
+   <td><p>multiSelect<em>（清單框）</em></p> </td>
    <td><p>以最適化形式映射至「允許多選項」屬性。</p> </td>
   </tr>
  </tbody>
@@ -203,7 +203,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>validationState </p> </td>
-   <td><p>此指令碼會在執行時期執行，無法以最適化格式覆寫。<br /> </p> </td>
+   <td><p>此指令碼在運行時執行，不能以最適化形式覆蓋。<br /> </p> </td>
   </tr>
   <tr>
    <td><p>退出 </p> </td>
@@ -228,7 +228,7 @@ ht-degree: 5%
  </tbody>
 </table>
 
-### 驗證 {#validations}
+### 驗證{#validations}
 
 下表顯示了XFA驗證如何映射到自適應表單中的驗證。
 
