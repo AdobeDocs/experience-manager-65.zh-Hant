@@ -11,6 +11,9 @@ discoiquuid: a6ff50df-273d-48f7-b0c6-0e69e900b97f
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 0%
 
 ---
 
@@ -31,48 +34,48 @@ Process Reporting由以下模組組成：
 * [查詢資料servlet](#querydataservlet-service-br-p)
 * [流程報告用戶介面](#process-reporting-user-interface-br-p)
 
-## 流程報告體系結構 {#process-reporting-architecture-br}
+## 進程報告體系結構{#process-reporting-architecture-br}
 
 ![處理報告架構](assets/processreportingarchitecture.png)
 
-## 流程報告模組 {#process-reporting-modules}
+## 流程報告模組{#process-reporting-modules}
 
-### ProcessDataPublisher服務 {#processdatapublisher-service-br}
+### ProcessDataPublisher服務{#processdatapublisher-service-br}
 
 ProcessDataPublisher伺服器會定期在AEM Forms資料庫上執行，並擷取自上次執行服務後變更的資料。 然後，它將資料發佈到「流程資料儲存」服務。
 
-有關配置服務的詳細資訊，請參 [閱Configure ProcessDataPublisher服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)。
+有關配置服務的詳細資訊，請參閱[配置ProcessDataPublisher服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)。
 
-### ProcessDataStorageProvider服務 {#processdatastorageprovider-service-br}
+### ProcessDataStorageProvider服務{#processdatastorageprovider-service-br}
 
 ProcessDataStorageProvider服務從ProcessDataPublisher服務接收流程資料，並將資料保存到Process Reporting儲存庫。
 
-有關配置服務的詳細資訊，請參 [閱配置ProcessDataStorageProvider服務](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p)。
+有關配置服務的詳細資訊，請參見[ Configure ProcessDataStorageProvider service](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p)。
 
-### OSGi服務 {#osgi-service-br}
+### OSGi服務{#osgi-service-br}
 
 QueryDataServlet使用此服務從「進程報告」儲存庫中獲取報告資料。
 
-### QueryDataServlet服務 {#querydataservlet-service-br}
+### QueryDataServlet服務{#querydataservlet-service-br}
 
 QueryDataServlet服務接受來自Process Reporting用戶介面的查詢。
 
 然後，該服務使用OSGi服務獲取相關的報告資料，處理資料，並將資料返回到用戶介面。
 
-### 流程報告用戶介面 {#process-reporting-user-interface-br}
+### 進程報告用戶介面{#process-reporting-user-interface-br}
 
 「流程報告」用戶介面是基於Web瀏覽器的介面。 您可使用此介面來檢視從AEM Forms資料庫發佈的程式和任務資訊。
 
-有關Process Reporting用戶介面的簡介，請參 [閱Process Reporting用戶介面](/help/forms/using/process-reporting/introduction-process-reporting.md)。
+有關Process Reporting用戶介面的介紹，請參閱[Process Reporting用戶介面](/help/forms/using/process-reporting/introduction-process-reporting.md)。
 
-### QueryDataServlet服務 {#querydataservlet-service-br-1}
+### QueryDataServlet服務{#querydataservlet-service-br-1}
 
 QueryDataServlet服務接受來自Process Reporting用戶介面的查詢。
 
 然後，該服務使用OSGi服務獲取相關的報告資料，處理資料，並將資料返回到用戶介面。
 
-### 自訂報表 {#custom-reports-br}
+### 自訂報表{#custom-reports-br}
 
 您可以建立自己的自訂報表，並在「流程報表」使用者介面的「自訂報表」標籤中顯示這些報表。
 
-如需建立自訂報表的步驟，請參閱「在流程報表中自訂報表」文章中的「 [若要建立自訂報表」](/help/forms/using/process-reporting/process-reporting-custom-reports.md)。
+如需建立自訂報表的步驟，請參閱[Custom Reporting in Process](/help/forms/using/process-reporting/process-reporting-custom-reports.md)文章中的「建立自訂報表」。
