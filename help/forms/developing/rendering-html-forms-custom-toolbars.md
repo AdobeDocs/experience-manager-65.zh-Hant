@@ -19,9 +19,9 @@ ht-degree: 0%
 ---
 
 
-# 使用CustomToolbars轉換HTML表格 {#rendering-html-forms-with-customtoolbars}
+# 使用CustomToolbars {#rendering-html-forms-with-customtoolbars}轉換HTML表格
 
-## 使用自訂工具列來轉換HTML表格 {#rendering-html-forms-with-custom-toolbars}
+## 使用自訂工具列呈現HTML表格{#rendering-html-forms-with-custom-toolbars}
 
 Forms服務可讓您自訂使用HTML表格轉譯的工具列。 您可自訂工具列，以覆寫預設的CSS樣式來改變其外觀，並借由覆寫Java指令碼來新增動態行為。 使用名為fscmenu.xml的XML檔案自定義工具欄。 預設情況下，Forms服務從內部指定的URI位置檢索此檔案。
 
@@ -40,19 +40,19 @@ Forms服務可讓您自訂使用HTML表格轉譯的工具列。 您可自訂工�
 * fscmenu-ie.css
 * fscdialog.css
 
-fscJS是與每個節點相關聯的Java指令碼。 必須為節點提供一個，並 `div#fscmenu` 可選地為節點 `ul#fscmenuItem` 提供。 JS檔案會實作核心工具列功能，而預設檔案也能運作。
+fscJS是與每個節點相關聯的Java指令碼。 必須為`div#fscmenu`節點提供一個，也可為`ul#fscmenuItem`節點提供一個。 JS檔案會實作核心工具列功能，而預設檔案也能運作。
 
-fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工具列外觀。 *fscVCSS* 是垂直工具列的樣式表，顯示在轉譯的HTML表格左側。 *fscIECSS* 是用於在Internet Explorer中呈現的HTML表單的樣式表。
+fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工具列外觀。 ** fscVCSS是垂直工具列的樣式表，顯示在轉譯的HTML表格左側。** fscIECSS是用於在Internet Explorer中轉譯的HTML表單的樣式表。
 
-請確定fscmenu.xml檔案中已參考上述所有檔案。 也就是說，在fscmenu.xml檔案中，指定指向這些檔案的URI位置，讓Forms服務找到這些檔案。 依預設，這些檔案可在URI位置使用，從內部關鍵字 `FSWebRoot` 開始 `ApplicationWebRoot`。
+請確定fscmenu.xml檔案中已參考上述所有檔案。 也就是說，在fscmenu.xml檔案中，指定指向這些檔案的URI位置，讓Forms服務找到這些檔案。 預設情況下，這些檔案可在以內部關鍵字`FSWebRoot`或`ApplicationWebRoot`開始的URI位置使用。
 
-若要自訂工具列，請使用外部關鍵字來取代關鍵字 `FSToolBarURI`。 此關鍵字代表在執行時期傳遞至Forms服務的URI（本節稍後會顯示此方法）。
+若要自訂工具列，請使用外部關鍵字`FSToolBarURI`來取代關鍵字。 此關鍵字代表在執行時期傳遞至Forms服務的URI（本節稍後會顯示此方法）。
 
-您也可以指定這些JS和CSS檔案的絕對位置，例如https://www.mycompany.com/scripts/misc/fscmenu.js。 在這種情況下，您不需要使用關鍵 `FSToolBarURI` 字。
+您也可以指定這些JS和CSS檔案的絕對位置，例如https://www.mycompany.com/scripts/misc/fscmenu.js。 在這種情況下，您不需要使用`FSToolBarURI`關鍵字。
 
 >[!NOTE]
 >
->不建議您混用這些檔案的參考方式。 也就是說，所有URI都應使用關鍵字或絕 `FSToolBarURI` 對位置來參考。
+>不建議您混用這些檔案的參考方式。 也就是說，應使用`FSToolBarURI`關鍵字或絕對位置來參考所有URI。
 
 您可以開啟adobe-forms-&lt;appserver>.ear檔案，以取得JS和CSS檔案。 在此檔案中，開啟adobe-forms-res.war。 這些檔案都位於WAR檔案中。 adobe-forms-&lt;appserver>.ear檔案位於AEM forms安裝資料夾(C:\ is the installation directory)中。 您可以使用檔案擷取工具（例如WinRAR）開啟adobe-forms-&lt;appserver>.ear。
 
@@ -97,10 +97,10 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 下列項目說明如何自訂工具列：
 
-* 使用本節中 `fscJS`介紹的方法之一（例如，），更改、、 `fscCSS``fscVCSS``fscIECSS``fscJS="FSToolBarURI/scripts/fscmenu.js"`、屬性的值（在fscmenu.xml檔案中），以反映所引用檔案的自定義位置。
+* 更改`fscJS`、`fscCSS`、`fscVCSS`、`fscIECSS`屬性（在fscmenu.xml檔案中）的值，以使用本節中介紹的方法之一（例如`fscJS="FSToolBarURI/scripts/fscmenu.js"`）來反映引用檔案的自定義位置。
 * 必須指定所有CSS和JS檔案。 如果未修改任何檔案，請在自訂位置提供預設檔案。 您可以按本節所述開啟各種檔案，以取得預設檔案。
 * 允許為任何檔案提供絕對參考(例如https://www.example.com/scripts/custom-vertical-fscmenu.css)。
-* 節點需要的JS和CSS檔 `div#fscmenu` 案是工具列功能的必備工具。 個別 `ul#fscmenuItem` 節點可能或可能不具備支援的JS或CSS檔案。
+* `div#fscmenu`節點需要的JS和CSS檔案是工具列功能的必備工具。 個別`ul#fscmenuItem`節點可能或可能不支援JS或CSS檔案。
 
 **變更本機值**
 
@@ -149,15 +149,15 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 >
 >與此部分關聯的「快速入門」使用此XML檔案顯示法文自定義工具欄，如上圖所示。
 
-此外，您也可以叫用物件的方法，並傳 `HTMLRenderSpec` 遞指定地區 `setLocale` 值的字串值，以指定有效的地區值。 例如，通過指 `fr_FR` 定法文。 Forms服務與本地化工具列搭售。
+此外，也可以叫用`HTMLRenderSpec`物件的`setLocale`方法，並傳遞指定地區值的字串值，以指定有效的地區值。 例如，傳遞`fr_FR`以指定法文。 Forms服務與本地化工具列搭售。
 
 >[!NOTE]
 >
->在您演算使用自訂工具列的HTML表格之前，您必須瞭解HTML表格的轉換方式。 (請參 [閱「將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)」)。
+>在您演算使用自訂工具列的HTML表格之前，您必須瞭解HTML表格的轉換方式。 （請參閱[將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)）。
 
-如需Forms服務的詳細資訊，請參閱「AEM Forms [的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary-of-steps}
+### 步驟{#summary-of-steps}摘要
 
 若要轉換包含自訂工具列的HTML表格，請執行下列工作：
 
@@ -177,7 +177,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 **參考自訂fscmenu XML檔案**
 
-要渲染包含自定義工具欄的HTML表單，請參考描述該工具欄的fscmenu XML檔案。 （本節提供fscmenu XML檔案的兩個示例。） 此外，請確定fscmenu.xml檔案會正確指定所有參照檔案的位置。 如本節稍早所述，請確定所有檔案皆由關鍵字或其絕 `FSToolBarURI` 對位置參考。
+要渲染包含自定義工具欄的HTML表單，請參考描述該工具欄的fscmenu XML檔案。 （本節提供fscmenu XML檔案的兩個示例。） 此外，請確定fscmenu.xml檔案會正確指定所有參照檔案的位置。 如本節稍早所述，請確定所有檔案皆由`FSToolBarURI`關鍵字或其絕對位置引用。
 
 **轉換HTML表格**
 
@@ -207,7 +207,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 [建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-### 使用Java API，使用自訂工具列來轉換HTML表格 {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}
+### 使用Java API {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}轉換具有自訂工具列的HTML表格
 
 使用Forms Service API(Java)演算包含自訂工具列的HTML表單：
 
@@ -217,53 +217,53 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 1. 建立Forms Java API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
 
 1. 參考自訂fscmenu XML檔案
 
-   * 使用其 `HTMLRenderSpec` 建構函式建立物件。
-   * 若要使用工具列來轉換HTML表格，請叫 `HTMLRenderSpec` 用物件的方 `setHTMLToolbar` 法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`。
-   * 調用物件的方法並傳遞指定XML檔 `HTMLRenderSpec` 案URI位 `setToolbarURI` 置的字串值，以指定fscmenu XML檔案的位置。
-   * 如果適用，請調用物件的方法並傳 `HTMLRenderSpec` 遞指定地區值 `setLocale` 的字串值，以設定地區值。 預設值為英文。
+   * 使用其建構子建立`HTMLRenderSpec`對象。
+   * 若要使用工具列來轉換HTML表格，請叫用`HTMLRenderSpec`物件的`setHTMLToolbar`方法並傳遞`HTMLToolbar`列舉值。 例如，若要顯示垂直HTML工具列，請傳遞`HTMLToolbar.Vertical`。
+   * 調用`HTMLRenderSpec`物件的`setToolbarURI`方法並傳遞指定XML檔案URI位置的字串值，以指定fscmenu XML檔案的位置。
+   * 如果適用，請調用`HTMLRenderSpec`物件的`setLocale`方法並傳遞指定地區值的字串值，以設定地區值。 預設值為英文。
 
    >[!NOTE]
    >
-   >與此部分關聯的快速啟動將此值設定為 `fr_FR`*。*
+   >與此部分關聯的快速啟動將此值設定為&#x200B;`fr_FR`*。*
 
 1. 轉換HTML表格
 
-   叫用物 `FormsServiceClient` 件的方 `renderHTMLForm` 法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderHTMLForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 指定 `TransformTo` HTML首選項類型的枚舉值。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定 `TransformTo.MSDHTML`。
-   * 包 `com.adobe.idp.Document` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞空 `com.adobe.idp.Document` 物件。
-   * 儲存 `HTMLRenderSpec` HTML執行時期選項的物件。
-   * 指定標題值的字 `HTTP_USER_AGENT` 串值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-   * 存 `URLSpec` 儲呈現HTML表單所需URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不要將檔案附加到表單。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `TransformTo`列舉值，指定HTML偏好設定類型。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定`TransformTo.MSDHTML`。
+   * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
+   * 儲存HTML運行時選項的`HTMLRenderSpec`對象。
+   * 指定`HTTP_USER_AGENT`標題值的字串值，例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+   * `URLSpec`物件，儲存轉換HTML表單所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，則可以指定`null`。
 
-   該方 `renderHTMLForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
+   `renderHTMLForm`方法返回一個`FormsResult`對象，該對象包含必須寫入客戶端Web瀏覽器的表單資料流。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
-   * 通過調用對象的方 `com.adobe.idp.Document` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `com.adobe.idp.Document` 類型。
-   * 建立 `javax.servlet.ServletOutputStream` 物件，以呼叫物件的方法，將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器 `getOutputStream` 中。
-   * 調用 `java.io.InputStream` 物件的方 `com.adobe.idp.Document` 法以建立物 `getInputStream` 件。
-   * 建立位元組陣列，並借由調用物件的方法並將 `InputStream` 位元組陣列 `read` 傳入為引數，以表單資料流填入。
-   * 叫用物 `javax.servlet.ServletOutputStream` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
+   * 通過調用`getContentType`方法獲取`com.adobe.idp.Document`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`com.adobe.idp.Document`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 建立`javax.servlet.ServletOutputStream`物件，以叫用`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，將表單資料串流寫入用戶端Web瀏覽器。
+   * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 建立位元組陣列，並以`InputStream`物件的`read`方法來填入表單資料流，並將位元組陣列傳入為引數。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
-[快速入門（SOAP模式）: 使用Java API使用自訂工具列來轉換HTML表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API使用自訂工具列來轉換HTML表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API，使用自訂工具列轉譯HTML表格 {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}
+### 使用web service API {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}轉換具有自訂工具列的HTML表單
 
 使用Forms Service API(web service)演算包含自訂工具列的HTML表格：
 
@@ -274,48 +274,48 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 1. 建立Forms Java API物件
 
-   建立對 `FormsService` 像並設定驗證值。
+   建立`FormsService`對象並設定驗證值。
 
 1. 參考自訂fscmenu XML檔案
 
-   * 使用其 `HTMLRenderSpec` 建構函式建立物件。
-   * 若要使用工具列來轉換HTML表格，請叫 `HTMLRenderSpec` 用物件的方 `setHTMLToolbar` 法並傳遞 `HTMLToolbar` 列舉值。 例如，若要顯示垂直HTML工具列，請傳遞 `HTMLToolbar.Vertical`。
-   * 調用物件的方法並傳遞指定XML檔 `HTMLRenderSpec` 案URI位 `setToolbarURI` 置的字串值，以指定fscmenu XML檔案的位置。
-   * 如果適用，請調用物件的方法並傳 `HTMLRenderSpec` 遞指定地區值 `setLocale` 的字串值，以設定地區值。 預設值為英文。
+   * 使用其建構子建立`HTMLRenderSpec`對象。
+   * 若要使用工具列來轉換HTML表格，請叫用`HTMLRenderSpec`物件的`setHTMLToolbar`方法並傳遞`HTMLToolbar`列舉值。 例如，若要顯示垂直HTML工具列，請傳遞`HTMLToolbar.Vertical`。
+   * 調用`HTMLRenderSpec`物件的`setToolbarURI`方法並傳遞指定XML檔案URI位置的字串值，以指定fscmenu XML檔案的位置。
+   * 如果適用，請調用`HTMLRenderSpec`物件的`setLocale`方法並傳遞指定地區值的字串值，以設定地區值。 預設值為英文。
 
    >[!NOTE]
    >
-   >與此部分關聯的快速啟動將此值設定為 `fr_FR`*。*
+   >與此部分關聯的快速啟動將此值設定為&#x200B;`fr_FR`*。*
 
 1. 轉換HTML表格
 
-   叫用物 `FormsService` 件的方 `renderHTMLForm` 法並傳遞下列值：
+   叫用`FormsService`物件的`renderHTMLForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 指定 `TransformTo` HTML首選項類型的枚舉值。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定 `TransformTo.MSDHTML`。
-   * 包 `BLOB` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞 `null`。
-   * 儲存 `HTMLRenderSpec` HTML執行時期選項的物件。
-   * 指定標題值( `HTTP_USER_AGENT` 如)的字串 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`值。 如果您不想設定此值，可以傳遞空字串。
-   * 存 `URLSpec` 儲呈現HTML表單所需URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 此參數為可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
-   * 由方 `com.adobe.idp.services.holders.BLOBHolder` 法填入的空對 `renderHTMLForm` 像。 此參數值儲存渲染的表單。
-   * 由方 `com.adobe.idp.services.holders.BLOBHolder` 法填入的空對 `renderHTMLForm` 像。 此參數儲存輸出XML資料。
-   * 由方 `javax.xml.rpc.holders.LongHolder` 法填入的空對 `renderHTMLForm` 像。 此引數會儲存表單中的頁數。
-   * 由方 `javax.xml.rpc.holders.StringHolder` 法填入的空對 `renderHTMLForm` 像。 此引數儲存地區值。
-   * 由方 `javax.xml.rpc.holders.StringHolder` 法填入的空對 `renderHTMLForm` 像。 此引數儲存所使用的HTML轉換值。
-   * 包含 `com.adobe.idp.services.holders.FormsResultHolder` 此操作結果的空對象。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `TransformTo`列舉值，指定HTML偏好設定類型。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定`TransformTo.MSDHTML`。
+   * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。
+   * 儲存HTML運行時選項的`HTMLRenderSpec`對象。
+   * 指定`HTTP_USER_AGENT`標題值（如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`）的字串值。 如果您不想設定此值，可以傳遞空字串。
+   * `URLSpec`物件，儲存轉換HTML表單所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此參數為可選參數，如果您不想將檔案附加到表單，則可以指定`null`。
+   * 由`renderHTMLForm`方法填入的空`com.adobe.idp.services.holders.BLOBHolder`對象。 此參數值儲存渲染的表單。
+   * 由`renderHTMLForm`方法填入的空`com.adobe.idp.services.holders.BLOBHolder`對象。 此參數儲存輸出XML資料。
+   * 由`renderHTMLForm`方法填入的空`javax.xml.rpc.holders.LongHolder`對象。 此引數會儲存表單中的頁數。
+   * 由`renderHTMLForm`方法填入的空`javax.xml.rpc.holders.StringHolder`對象。 此引數儲存地區值。
+   * 由`renderHTMLForm`方法填入的空`javax.xml.rpc.holders.StringHolder`對象。 此引數儲存所使用的HTML轉換值。
+   * 空的`com.adobe.idp.services.holders.FormsResultHolder`對象，將包含此操作的結果。
 
-   該方 `renderHTMLForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
+   `renderHTMLForm`方法會以必須寫入用戶端網頁瀏覽器的表單資料流填入作為最後一個參數值傳遞的`com.adobe.idp.services.holders.FormsResultHolder`物件。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 獲取 `FormResult` 對象資料成員的 `com.adobe.idp.services.holders.FormsResultHolder` 值以建立 `value` 對象。
-   * 呼叫 `BLOB` 物件的方法，以建立包含表 `FormsResult` 單資料的物 `getOutputContent` 件。
-   * 通過調用對象的方 `BLOB` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `BLOB` 類型。
-   * 建立 `javax.servlet.ServletOutputStream` 物件，以呼叫物件的方法，將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器 `getOutputStream` 中。
-   * 建立位元組陣列，並透過叫用物件的方 `BLOB` 法來填入該 `getBinaryData` 陣列。 此任務將對象的內 `FormsResult` 容分配給位元組陣列。
-   * 叫用物 `javax.servlet.http.HttpServletResponse` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 獲取`com.adobe.idp.services.holders.FormsResultHolder`對象`value`資料成員的值，建立`FormResult`對象。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
+   * 通過調用`getContentType`方法獲取`BLOB`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`BLOB`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 建立`javax.servlet.ServletOutputStream`物件，以叫用`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，將表單資料串流寫入用戶端Web瀏覽器。
+   * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
+   * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
