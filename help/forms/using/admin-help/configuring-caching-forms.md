@@ -11,39 +11,42 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8a07dddf-1281-45ac-a55e-4333b860a261
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1625'
+ht-degree: 0%
 
 ---
 
 
-# 設定表單的快取{#configuring-caching-for-forms}
+# 設定Forms的快取{#configuring-caching-for-forms}
 
-Forms服務會採用在Designer中建立的表單設計，並以各種格式呈現。
+Forms服務採用在Designer中建立的表單設計，並以各種格式呈現。
 
 管理控制台中的「表單」頁面包含控制Forms服務快取項目的方式的設定。 您可以調整這些設定，以最佳化Forms服務的效能。
 
 Forms服務會快取下列項目：
 
-* **** 表單設計：Forms服務會快取其從儲存庫或HTTP來源擷取的表單設計。 此快取可改善效能，因為對於後續的轉譯請求，Forms服務會從快取中擷取表單設計，而非從儲存庫中擷取。
-* **** 片段和影像：Forms服務可快取表單設計中使用的片段和影像。 當Forms服務快取這些對象時，它會提高效能，因為片段和映像僅從第一個請求時從儲存庫中讀取。
-* **** 表單：Forms服務會快取其轉譯的表單。 這種快取類型可改善效能，因為Forms服務不需要在後續請求中解析並轉譯相同的表單。
+* **表單設計：** Forms服務會快取從儲存庫或HTTP來源擷取的表單設計。此快取可改善效能，因為對於後續的轉譯請求，Forms服務會從快取中擷取表單設計，而非從儲存庫中擷取。
+* **片段和影像：** Forms服務可快取用於表單設計的片段和影像。當Forms服務快取這些對象時，它會提高效能，因為片段和映像僅從第一個請求時從儲存庫中讀取。
+* **forms: Forms** 服務會快取其轉譯的表單。這種快取類型可改善效能，因為Forms服務不需要在後續請求中解析並轉譯相同的表單。
 
 表單將快取儲存在兩個位置：
 
-* **** 記憶體中：項目儲存在記憶體中，以便快速存取。 記憶體中快取的大小有限，當您重新啟動伺服器時將被刪除。
-* **** 磁碟上：項目會儲存在伺服器的檔案系統中。 磁碟快取的容量比記憶體快取大，當您重新啟動伺服器時，它將保留。 磁碟快取的位置取決於您的應用程式伺服器。 有關更改磁碟快取位置的資訊，請參 [閱配置表單位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。
+* **記憶體中：** 項目會儲存在記憶體中，以便快速存取。記憶體中快取的大小有限，當您重新啟動伺服器時將被刪除。
+* **在磁碟上：** 項目會儲存在伺服器的檔案系統中。磁碟快取的容量比記憶體快取大，當您重新啟動伺服器時，它將保留。 磁碟快取的位置取決於您的應用程式伺服器。 有關更改磁碟快取位置的資訊，請參見[配置Forms的位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。
 
-## 指定快取模式 {#specifying-the-cache-mode}
+## 指定快取模式{#specifying-the-cache-mode}
 
 表單支援兩種快取模式：
 
 * 無條件
 * 使用快取檢查點
 
-如果您在快取模式之間切換，請重新啟動Forms服務，使更改生效。 若要重新啟動此服務，請使用Workbench或參閱「啟 [動或停止與AEM表單模組相關的服務](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) 」以取得指示。
+如果您在快取模式之間切換，請重新啟動Forms服務，使更改生效。 若要重新啟動此服務，請使用Workbench或參閱[啟動或停止與AEM表單模組相關的服務，以取得指示。](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)
 
 在模式之間切換時，快取檢查點時間會自動重置。
 
-### 使用無條件快取 {#using-unconditional-caching}
+### 使用無條件快取{#using-unconditional-caching}
 
 在此模式中，當Forms服務收到請求時，會驗證所需的資源（表單設計和任何相關資產，例如片段和影像）。 Forms服務將儲存庫中資源的時間戳與快取中資源的時間戳進行比較。 如果快取中的資源較舊，Forms服務會更新它。
 
@@ -54,7 +57,7 @@ Forms服務會快取下列項目：
 1. 在管理控制台中，按一下「服務>表單」。
 1. 在「表單快取控制設定」下，選取「無條件」，然後按一下「儲存」。
 
-### 使用快取檢查點 {#use-the-cache-check-point}
+### 使用快取檢查點{#use-the-cache-check-point}
 
 在此模式下，當快取資源的時間戳早於快取檢查點時間時，Forms服務僅會檢查儲存庫中是否有較新版本的資源。 最後一個快取檢查點時間會顯示在「管理控制台」的「表單」頁面上。
 
@@ -77,7 +80,7 @@ Forms服務會快取下列項目：
 1. 在管理控制台中，按一下「服務>表單」。
 1. 在「表單快取控制設定」下，按一下「重設快取」。
 
-## 配置快取設定 {#configuring-cache-settings}
+## 配置快取設定{#configuring-cache-settings}
 
 您可以指定Forms用於快取的設定，以最佳化AEM表單環境的效能。
 
@@ -87,53 +90,53 @@ Forms服務會快取下列項目：
 >
 >快取的磁碟要求應等於儲存庫。
 
-### 指定全域快取設定 {#specifying-global-cache-settings}
+### 指定全局快取設定{#specifying-global-cache-settings}
 
-「全域快取設 **定」區域中的設定** ，會影響所有快取類型。 如果您變更其中任一設定，請重新啟動Forms服務，讓變更生效。 若要重新啟動此服務，請使用Workbench或參閱「啟 [動或停止與AEM表單模組相關的服務](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) 」以取得指示。
+**全域快取設定**&#x200B;區域中的設定會影響所有快取類型。 如果您變更其中任一設定，請重新啟動Forms服務，讓變更生效。 若要重新啟動此服務，請使用Workbench或參閱[啟動或停止與AEM表單模組相關的服務，以取得指示。](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)
 
-**** 最大快取文檔大小(KB):表單設計或其他資源的最大大小（以千位元組為單位），可儲存在任何記憶體快取中。 此為全域設定，適用於所有記憶體內快取。 如果資源大於此值，則不會在記憶體中快取該資源。 預設值為1024 KB。 此設定不會影響磁碟快取。
+**最大快取文檔大小(KB)：表** 單設計或其他資源的最大大小（以KB為單位），可儲存在任何記憶體快取中。此為全域設定，適用於所有記憶體內快取。 如果資源大於此值，則不會在記憶體中快取該資源。 預設值為1024 KB。 此設定不會影響磁碟快取。
 
-**** 表單轉換快取已啟用：依預設會選取此選項，這表示已轉譯的表單會快取以供後續擷取。 此設定可改善效能，因為Forms服務只需轉譯特定表單一次，就可使用快取版本。 此選項可搭配表單設計的快取屬性使用。 如需在表單設計中設定此值的詳細資訊，請參閱設計人員說明。
+**表單轉換快取已啟** 用：依預設，會選取此選項，這表示已轉換的表單會快取以供後續擷取。此設定可改善效能，因為Forms服務只需轉譯特定表單一次，就可使用快取版本。 此選項可搭配表單設計的快取屬性使用。 如需在表單設計中設定此值的詳細資訊，請參閱設計人員說明。
 
-### 快取表格設計 {#caching-form-designs}
+### 快取表單設計{#caching-form-designs}
 
 當Forms服務收到演算請求時，它會從儲存庫中擷取表單設計並快取它。 此快取可改善效能，因為對於後續的轉譯請求，Forms服務會從快取中擷取表單設計，而非從儲存庫中擷取。
 
-Forms服務會永遠在磁碟上快取表格設計。 如果表單設計儲存在伺服器上，這些檔案會視為磁碟快取。 Forms服務還根據「記憶體模板快取」區中的設定，在記憶體中 **快取表單設計** 。 如果您變更其中任何設定，請重新啟動Forms服務，讓變更生效。 若要重新啟動此服務，請使用Workbench或參閱「啟 [動或停止與AEM表單模組相關的服務](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) 」以取得指示。
+Forms服務會永遠在磁碟上快取表格設計。 如果表單設計儲存在伺服器上，這些檔案會視為磁碟快取。 Forms服務還根據&#x200B;**記憶體模板快取**&#x200B;區中的設定在記憶體中快取表單設計。 如果您變更其中任何設定，請重新啟動Forms服務，讓變更生效。 若要重新啟動此服務，請使用Workbench或參閱[啟動或停止與AEM表單模組相關的服務，以取得指示。](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)
 
-**** 模板配置快取大小：要保留在記憶體中的模板配置對象的最大數量。 預設值為100。 建議您將此值設定為大於或等於「範本快取大小」值。 此設定不會影響磁碟快取。
+**模板配置快取大** 小：要保留在記憶體中的模板配置對象的最大數量。預設值為100。 建議您將此值設定為大於或等於「範本快取大小」值。 此設定不會影響磁碟快取。
 
-**** 範本快取大小：要記憶的範本內容物件數上限。 預設值為100。 此設定不會影響磁碟快取。
+**範本快取大** 小：記憶體中要保留的範本內容物件數目上限。預設值為100。 此設定不會影響磁碟快取。
 
-**** 啟用：預設情況下，此複選框處於選中狀態，表示表單模板將快取在記憶體中。 如果未選取此選項，表單範本只會快取在磁碟上。
+**啟用：** 依預設，此核取方塊已選取，表示表單範本會快取在記憶體中。如果未選取此選項，表單範本只會快取在磁碟上。
 
-### 快取轉換的表單 {#caching-rendered-forms}
+### 快取轉換的表單{#caching-rendered-forms}
 
 Forms服務會快取轉譯的表單，以免在後續請求中解析並轉譯相同的表單。 轉換的表單會同時快取在磁碟和記憶體中。
 
-這些設定位於「記憶體表 **單轉換快取」區** 。 如果您變更其中任一設定，請重新啟動Forms服務，讓變更生效。 若要重新啟動此服務，請使用Workbench或參閱「啟 [動或停止與AEM表單模組相關的服務](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) 」以取得指示。
+這些設定位於&#x200B;**記憶體表單渲染快取**&#x200B;區域。 如果您變更其中任一設定，請重新啟動Forms服務，讓變更生效。 若要重新啟動此服務，請使用Workbench或參閱[啟動或停止與AEM表單模組相關的服務，以取得指示。](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)
 
-**** 快取大小：指定可駐留在記憶體快取中的已渲染表單的最大數量。 預設值為100。 此設定不會影響磁碟快取。
+**快取大** 小：指定可駐留在記憶體快取中的最大渲染表單數。預設值為100。 此設定不會影響磁碟快取。
 
-**** 啟用：依預設會選取此選項，表示轉換的表單會快取在記憶體中。 如果未選取此選項，則只會在磁碟上快取轉譯的表單。
+**啟用：** 依預設會選取此選項，表示轉換的表單會快取在記憶體中。如果未選取此選項，則只會在磁碟上快取轉譯的表單。
 
-### 快取片段和影像 {#caching-fragments-and-images}
+### 快取片段和影像{#caching-fragments-and-images}
 
 Forms服務會在磁碟上快取表單設計中使用的片段和影像。 這會改善效能，因為片段和影像只會在第一個請求時從儲存庫讀取。 接著，在後續的要求時，Forms服務會從磁碟快取中讀取片段和影像。 片段和影像只會快取在磁碟上，而不會快取在記憶體中。
 
-您可以使用下列設定來控製片段和影像的磁碟上快取。 這些設定位於「範本資源快 **取設定」區** :
+您可以使用下列設定來控製片段和影像的磁碟上快取。 這些設定位於&#x200B;**模板資源快取設定**&#x200B;區域：
 
-**資源快取** ：從清單中選擇以下選項之一：
+**資源** 快取從清單中選擇以下選項之一：
 
-**** 為片段和影像啟用：Forms服務會快取片段和影像。 這是預設選項。
+**為片段和影像啟用：** Forms服務會快取片段和影像。這是預設選項。
 
-**** 為片段啟用：Forms服務會快取片段，但不會快取影像。
+**為片段啟用：** Forms服務會快取片段，但不會快取影像。
 
-**** 停用：Forms服務不會快取片段或影像。
+**停用：** Forms服務不會快取片段或影像。
 
-**** 清除間隔（秒）:指定Forms服務刪除舊無效快取檔案的頻率。 Forms服務不會移除有效的快取檔案。 如果更改了清除間隔，請重新啟動Forms服務，使更改生效。 若要重新啟動此服務，請使用Workbench或參閱啟動或停止與AEM表單模組相關的服務，以取得指示。 預設值為600秒。
+**清除間隔（秒）：指** 定Forms服務刪除舊無效快取檔案的頻率。Forms服務不會移除有效的快取檔案。 如果更改了清除間隔，請重新啟動Forms服務，使更改生效。 若要重新啟動此服務，請使用Workbench或參閱啟動或停止與AEM表單模組相關的服務，以取得指示。 預設值為600秒。
 
-## 快取的叢集考量 {#clustering-considerations-for-caches}
+## 快取{#clustering-considerations-for-caches}的群集注意事項
 
 在群集環境中，每個節點都維護其自己的記憶體和磁碟快取。 每個節點上的快取內容取決於該節點上已呈現哪些表單。
 
