@@ -10,15 +10,18 @@ topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
 
-# 參考信函範本 {#reference-letter-templates}
+# 參考字母模板{#reference-letter-templates}
 
 在「對應管理」中，字母範本包含一般表單欄位、頁首和頁尾等版面功能，以及內容放置的空白「目標區域」。
 
-Correponse Management在AEM Forms套件 [AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES中提供信函範本](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES)。 有關安裝軟體包的資訊，請 [參見How to Work With Packages](/help/sites-administering/package-manager.md)。 您可以根據您的品牌和業務需求，在Designer中自訂範本。 套件包含下列範本：
+Correponse Management在AEM Forms套件[AEM-FORMS.-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES)中提供信函範本。 有關安裝軟體包的資訊，請參見[How to Work With Packages](/help/sites-administering/package-manager.md)。 您可以根據您的品牌和業務需求，在Designer中自訂範本。 套件包含下列範本：
 
 * 傳統
 * Classic Simple
@@ -51,7 +54,7 @@ Classic範本上方有標誌，適合用於簡單的專業信件。
 
 使用Classic範本建立之信件的PDF預覽
 
-## Classic Simple {#classic-simple}
+## 經典簡單{#classic-simple}
 
 包含擷取電話號碼和電子郵件地址的欄位。 「傳統型簡單」模板與「傳統型」模板類似，只不過它沒有可以輸入收件人地址的欄位。
 
@@ -59,7 +62,7 @@ Classic範本上方有標誌，適合用於簡單的專業信件。
 
 使用Classic Simple範本建立之信件的PDF預覽
 
-## 平衡左 {#balanced-left}
+## 平衡左{#balanced-left}
 
 「平衡左側」範本在字母左側包含標誌。
 
@@ -67,7 +70,7 @@ Classic範本上方有標誌，適合用於簡單的專業信件。
 
 使用「平衡左側」範本建立之字母的PDF預覽
 
-## 平衡的權利 {#balanced-right}
+## 平衡右{#balanced-right}
 
 「平衡右側」範本的左側有公司標誌，並為在信件本身輸入收件人地址提供空間。 「平衡右側」範本也包含頁尾，當您的信件有多頁時，頁尾會重新排列。
 
@@ -75,7 +78,7 @@ Classic範本上方有標誌，適合用於簡單的專業信件。
 
 使用「平衡右側」範本建立之信函的PDF預覽
 
-## 視覺左側 {#visual-left}
+## 視覺化左{#visual-left}
 
 「視覺化左側」範本的頁面左側有一個側標題，而公司標誌置於側標題上。 「視覺化左側」範本有主旨欄位，但沒有頁尾。
 
@@ -83,7 +86,7 @@ Classic範本上方有標誌，適合用於簡單的專業信件。
 
 使用「視覺化左側」範本建立之字母的PDF預覽
 
-## 視覺頂端 {#visual-top}
+## 視覺化頂端{#visual-top}
 
 「視覺化頂端」範本的頂端有視覺化邊界。 「視覺化頂端」範本有一個欄位，可在頁面本身輸入收件者的位址。 「視覺化頁首」範本具有主題欄位和頁尾，可重排延伸至多頁的字母。
 
