@@ -11,15 +11,18 @@ topic-tags: best-practices
 discoiquuid: c64fa860-92ef-4b47-a779-1e7d8ac56e16
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
 
-# 效能與可擴充性{#performance-scalability}
+# 效能和可擴充性{#performance-scalability}
 
-## 白皮書：AEM可擴充性、效能和災難恢復 {#white-paper-aem-scalability-performance-and-disaster-recovery}
+## 白皮書：AEM Scalability, Performance, and Disaster Recovery {#white-paper-aem-scalability-performance-and-disaster-recovery}
 
-本白皮書討論Adobe Experience manager中的可擴充性，以及出色的效能指標和優異的災難恢復功能。
+本白皮書討論Adobe Experience Manager中的可擴充性，以及出色的效能指標和優異的災難恢復功能。
 
 靈活、可擴展的平台，可提升技術靈活性、高效能和可靠的災難恢復功能。
 
