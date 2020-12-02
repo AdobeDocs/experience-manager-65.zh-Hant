@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 translation-type: tm+mt
 source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# 在AEM中啟用CRXDE Lite{#enabling-crxde-lite-in-aem}
+# 在AEM{#enabling-crxde-lite-in-aem}中啟用CRXDE Lite
 
-為確保AEM安裝盡可能安全，安全性檢查清單建議在生產環 [境中停用WebDAV](/help/sites-administering/security-checklist.md#disable-webdav) 。
+為確保AEM安裝盡可能安全，安全性檢查清單建議[在生產環境中停用WebDAV](/help/sites-administering/security-checklist.md#disable-webdav)。
 
-不過，CRXDE Lite依賴搭售才能正 `org.apache.sling.jcr.davex` 常運作，因此停用WebDAV也可有效停用CRXDE Lite。
+不過，CRXDE Lite依賴`org.apache.sling.jcr.davex`套件才能正常運作，因此停用WebDAV也可有效停用CRXDE Lite。
 
-發生此情況時，瀏覽至 `https://serveraddress:4502/crx/de/index.jsp` 將顯示空的根節點，而對CRXDE Lite資源的所有HTTP請求將失敗：
+當發生此情況時，瀏覽至`https://serveraddress:4502/crx/de/index.jsp`將顯示空的根節點，而對CRXDE Lite資源的所有HTTP請求將失敗：
 
 ```xml
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
@@ -31,7 +34,7 @@ source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
 
 如果禁用，則可通過以下過程開啟CRXDE Lite:
 
-1. 前往OSGi元件主控台，網址為 `http://localhost:4502/system/console/components`
+1. 前往位於`http://localhost:4502/system/console/components`的「OSGi Components（OSGi元件）」控制台
 1. 搜尋下列元件：
 
    * `org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`
@@ -43,7 +46,7 @@ source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
 1. 建立下列設定：
 
    * **根路徑:** `/crx/server`
-   * 勾選「使用絕 **對URI」(Use absolute URIs)下方的方塊**。
+   * 勾選「使用絕對URI **」下方的方塊。**
 
 1. 使用完CRXDE Lite後，請務必再次停用WebDAV。
 
@@ -53,7 +56,7 @@ source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
 curl -u admin:admin -F "jcr:primaryType=sling:OsgiConfig" -F "alias=/crx/server" -F "dav.create-absolute-uri=true" -F "dav.create-absolute-uri@TypeHint=Boolean" http://localhost:4502/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
 ```
 
-## 其他資源 {#other-resources}
+## 其他資源{#other-resources}
 
 如需AEM 6安全性功能的詳細資訊，請參閱下列頁面：
 
