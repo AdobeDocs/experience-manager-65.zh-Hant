@@ -14,11 +14,11 @@ ht-degree: 13%
 ---
 
 
-# Adobe Experience Manager 6.5 Release Notes {#release-notes}
+# Adobe Experience Manager 6.5發行說明{#release-notes}
 
 + [AEM 6.5概觀](home.md)
 + [一般發行說明](release-notes.md)
-+ Service Pack發行說明 {#service-pack}
++ Service Pack發行說明{#service-pack}
    + [新增功能](new-features-latest-service-pack.md)
    + [Service Pack 7發行說明](sp-release-notes.md)
    + [先前的Service Pack發行說明](previous-hotfixes-featurepacks.md)
