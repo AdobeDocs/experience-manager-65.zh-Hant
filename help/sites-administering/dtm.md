@@ -11,42 +11,46 @@ content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '2222'
+ht-degree: 1%
 
 ---
 
 
-# 與Adobe動態標籤管理整合 {#integrating-with-adobe-dynamic-tag-management}
+# 與Adobe動態標籤管理整合{#integrating-with-adobe-dynamic-tag-management}
 
-將 [Adobe動態標籤管理與AEM整合](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html) ，讓您可以使用動態標籤管理網頁屬性來追蹤AEM網站。 動態標籤管理可讓行銷人員管理收集資料的標籤，並跨數位行銷系統分發資料。 例如，使用「動態標籤管理」收集AEM網站的使用資料，並在Adobe Analytics或Adobe Target中分發資料以進行分析。
+將[Adobe動態標籤管理](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html)與AEM整合，讓您可以使用動態標籤管理網頁屬性來追蹤AEM網站。 動態標籤管理可讓行銷人員管理收集資料的標籤，並跨數位行銷系統分發資料。 例如，使用「動態標籤管理」收集AEM網站的使用資料，並在Adobe Analytics或Adobe Target中分發資料以進行分析。
 
-在整合之前，您必須建立動態標籤管 [理Web屬性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties) ，以追蹤AEM網站的網域。 必 [須設定Web屬性的代管選項](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) ，以便您能夠設定AEM以存取動態標籤管理程式庫。
+在整合之前，您必須建立動態標籤管理[網頁屬性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties)，以追蹤AEM網站的網域。 必須設定Web屬性的[代管選項](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab)，以便您設定AEM以存取動態標籤管理程式庫。
 
 在您設定整合後，變更動態標籤管理部署工具和規則不需要您在AEM中變更動態標籤管理設定。 AEM會自動使用這些變更。
 
 >[!NOTE]
 >
->如果您將DTM與自訂的Proxy設定搭配使用，您需要將HTTP Client proxy設定同時設定為AEM的某些功能是使用3.x API，而其他部分則使用4.x API:
+>如果您將DTM與自訂的Proxy設定搭配使用，您需要將HTTP Client Proxy設定同時設定為AEM的某些功能是使用3.x API，而其他部分則使用4.x API:
 >
->* 3.x已設定為 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
->* 4.x已設定為 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>* 3.x配置有[http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>* 4.x配置有[http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+
 >
 
 
 
-## 部署選項 {#deployment-options}
+## 部署選項{#deployment-options}
 
 下列部署選項會影響與動態標籤管理整合的設定。
 
-### 動態標籤管理托管 {#dynamic-tag-management-hosting}
+### 動態標籤管理代管{#dynamic-tag-management-hosting}
 
 AEM支援在雲端托管或在AEM托管的動態標籤管理。
 
 * 雲端托管：「動態標籤管理」Javascript程式庫會儲存在雲端，而您的AEM頁面會直接參照這些程式庫。
 * AEM代管：動態標籤管理會產生javascript程式庫。 AEM使用工作流程模型來取得和安裝程式庫。
 
-您的實作所使用的代管類型，會決定您執行的部分設定與實作工作。 如需代管選項的詳細資訊，請參 [閱動態標籤管理說明中的代管](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) -內嵌標籤。
+您的實作所使用的代管類型，會決定您執行的部分設定與實作工作。 如需代管選項的詳細資訊，請參閱動態標籤管理說明中的[代管——內嵌標籤](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab)。
 
-### 測試與生產程式庫 {#staging-and-production-library}
+### 測試和生產庫{#staging-and-production-library}
 
 決定您的AEM作者實例是使用動態標籤管理測試或生產程式碼。
 
@@ -54,25 +58,25 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
 
 視需要，您的作者例項可以使用生產程式庫。 網頁瀏覽器外掛程式可讓您在雲端托管程式庫時，切換使用測試程式庫以進行測試。
 
-### 使用動態標籤管理部署掛接 {#using-the-dynamic-tag-management-deployment-hook}
+### 使用動態標籤管理部署掛接{#using-the-dynamic-tag-management-deployment-hook}
 
 當AEM托管動態標籤管理程式庫時，您可以使用動態標籤管理部署掛接服務，自動將程式庫更新推送至AEM。 當對程式庫進行變更時（例如編輯動態標籤管理Web屬性時）會推送程式庫更新。
 
-若要使用部署掛接，「動態標籤管理」必須能夠連線至裝載程式庫的AEM例項。 您必須 [啟用動態標籤管理伺服器的AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) 存取權。
+若要使用部署掛接，「動態標籤管理」必須能夠連線至裝載程式庫的AEM例項。 您必須[啟用動態標籤管理伺服器的AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service)存取權。
 
 在某些情況下，AEM可能無法連線，例如當AEM位於防火牆後。 在這些情況下，您可以使用AEM輪詢匯入工具選項來定期擷取程式庫。 cron作業運算式指定程式庫下載的排程。
 
-## 啟用部署掛接服務的訪問 {#enabling-access-for-the-deployment-hook-service}
+## 啟用部署掛接服務{#enabling-access-for-the-deployment-hook-service}的訪問
 
 啟用動態標籤管理部署掛接服務以存取AEM，讓服務可以更新AEM代管的程式庫。 指定動態標籤管理伺服器的IP位址，以視需要更新測試和生產程式庫：
 
 * 分段: `107.21.99.31`
-* 生產： `23.23.225.112` 和 `204.236.240.48`
+* 生產：`23.23.225.112`和`204.236.240.48`
 
-使用 [Web Console或節點執行配](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)[`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 置：
+使用[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)節點執行配置：
 
 * 在Web Console中，使用「設定」頁面上的「Adobe DTM部署掛接設定」項目。
-* 對於OSGi配置，服務PID為 `com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`。
+* 對於OSGi配置，服務PID為`com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`。
 
 下表說明要配置的屬性。
 
@@ -81,13 +85,13 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
 | 測試DTM IP白名單 | `dtm.staging.ip.whitelist` | 更新測試程式庫的動態標籤管理伺服器的IP位址。 |
 | 生產DTM IP白名單 | `dtm.production.ip.whitelist` | 更新生產程式庫的動態標籤管理伺服器的IP位址。 |
 
-## 建立動態標籤管理設定 {#creating-the-dynamic-tag-management-configuration}
+## 建立動態標籤管理組態{#creating-the-dynamic-tag-management-configuration}
 
 建立雲端設定，讓AEM例項可以使用「動態標籤管理」進行驗證，並與您的Web屬性互動。
 
 >[!NOTE]
 >
->當您的DTM網頁屬性包含Adobe Analytics工具且您也在使用內容分析時，請避免在您的頁面上包含兩個Adobe Analytics追蹤 [代碼](/help/sites-authoring/content-insights.md)。 在您的 [Adobe Analytics雲端設定中](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)，選取「不包含追蹤代碼」選項。
+>當您的DTM網頁屬性包含Adobe Analytics工具且您也使用[Content Insight](/help/sites-authoring/content-insights.md)時，請避免在您的頁面上包含兩個Adobe Analytics追蹤代碼。 在您的[Adobe Analytics雲端設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)中，選取「不包含追蹤代碼」選項。
 
 ### 一般設定 {#general-settings}
 
@@ -116,11 +120,11 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
  </tbody>
 </table>
 
-### 自行代管屬性——測試與生產 {#self-hosting-properties-staging-and-production}
+### 自行托管屬性——測試和生產{#self-hosting-properties-staging-and-production}
 
 「動態標籤管理」設定的下列屬性可讓AEM主控「動態標籤管理」程式庫。 屬性可讓AEM下載並安裝程式庫。 或者，您可以自動更新程式庫，以確保它們能反映動態標籤管理應用程式中所做的任何變更。
 
-有些屬性會使用您從「動態標籤管理」Web屬性的「內嵌」標籤的「程式庫下載」區段中取得的值。 如需詳細資訊，請 [參閱動態標籤管理](https://microsite.omniture.com/t2/help/en_US/dtm/#Library_Download) 「說明」中的「程式庫下載」。
+有些屬性會使用您從「動態標籤管理」Web屬性的「內嵌」標籤的「程式庫下載」區段中取得的值。 如需詳細資訊，請參閱動態標籤管理說明中的[程式庫下載](https://microsite.omniture.com/t2/help/en_US/dtm/#Library_Download)。
 
 >[!NOTE]
 >
@@ -148,15 +152,15 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
   </tr>
   <tr>
    <td>網域提示</td>
-   <td><p>（選用）裝載動態標籤管理程式庫的AEM伺服器網域。 指定值以覆寫為 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服務設定的預設網域</a>。</p> <p>連線至「動態標籤管理」時，AEM會使用此值來設定「動態標籤管理」Web屬性的「程式庫下載」屬性的「測試HTTP路徑」或「生產HTTP路徑」。</p> </td>
+   <td><p>（選用）裝載動態標籤管理程式庫的AEM伺服器網域。 指定值以覆寫為<a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服務</a>配置的預設域。</p> <p>連線至「動態標籤管理」時，AEM會使用此值來設定「動態標籤管理」Web屬性的「程式庫下載」屬性的「測試HTTP路徑」或「生產HTTP路徑」。</p> </td>
   </tr>
   <tr>
    <td>安全域提示</td>
-   <td><p>（選用）AEM伺服器的網域，此網域是透過HTTPS代管動態標籤管理程式庫。 指定值以覆寫為 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服務設定的預設網域</a>。</p> <p>連線至「動態標籤管理」時，AEM會使用此值來設定「動態標籤管理」Web屬性的「程式庫下載」屬性的「測試HTTPS路徑」或「生產HTTPS路徑」。</p> </td>
+   <td><p>（選用）AEM伺服器的網域，此網域是透過HTTPS代管動態標籤管理程式庫。 指定值以覆寫為<a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer服務</a>配置的預設域。</p> <p>連線至「動態標籤管理」時，AEM會使用此值來設定「動態標籤管理」Web屬性的「程式庫下載」屬性的「測試HTTPS路徑」或「生產HTTPS路徑」。</p> </td>
   </tr>
   <tr>
    <td>共用機密</td>
-   <td><p>（選擇性）用於解密下載的共用機密。 從動態標籤管理的「程式庫下載」頁面的「共用密碼」欄位取得此值。</p> <p><strong></strong> 注意：您必須在安 <a href="https://www.openssl.org/docs/apps/openssl.html">裝AEM的電腦上安裝OpenSSL</a> Libraries，如此AEM才能解密下載的程式庫。</p> </td>
+   <td><p>（選擇性）用於解密下載的共用機密。 從動態標籤管理的「程式庫下載」頁面的「共用密碼」欄位取得此值。</p> <p><strong>注意：</strong> 您必須在安裝AEM的 <a href="https://www.openssl.org/docs/apps/openssl.html"></a> 電腦上安裝OpenSSLlibraries，如此AEM才能解密下載的程式庫。</p> </td>
   </tr>
   <tr>
    <td>啟用 Polling Importer</td>
@@ -164,14 +168,14 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
   </tr>
   <tr>
    <td>排程運算式</td>
-   <td>（當選取「啟用輪詢匯入工具」時，會顯示並為必要項目。）控制下載動態標籤管理程式庫時的cron運算式。</td>
+   <td>（當選取「啟用輪詢匯入工具」時，會顯示並為必要項目。） 控制下載動態標籤管理程式庫時的cron運算式。</td>
   </tr>
  </tbody>
 </table>
 
 ![chlimage_1-352](assets/chlimage_1-352.png)
 
-### 雲端代管屬性——測試與生產 {#cloud-hosting-properties-staging-and-production}
+### 雲端托管屬性——測試與生產{#cloud-hosting-properties-staging-and-production}
 
 當雲端托管動態標籤設定時，您可為動態標籤管理設定設定下列屬性。
 
@@ -205,6 +209,7 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
 
    * 如果這是您新增的第一個設定，請按一下「立即設定」。
    * 如果已建立一個或多個配置，請按一下「顯示配置」，然後按一下「可用配置」旁邊的+連結。
+
    ![chlimage_1-354](assets/chlimage_1-354.png)
 
 1. 輸入設定的標題，然後按一下「建立」。
@@ -223,7 +228,7 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
 1. 如果您在作者例項上使用測試程式碼，請取消選取「在作者上包含生產程式碼」。
 1. 視需要提供「測試設定」標籤和「生產設定」標籤上屬性的值，然後按一下「確定」。
 
-## 手動下載動態標籤管理程式庫 {#manually-downloading-the-dynamic-tag-management-library}
+## 手動下載動態標籤管理程式庫{#manually-downloading-the-dynamic-tag-management-library}
 
 手動下載動態標籤管理程式庫，以立即在AEM上更新。 例如，當您想在排程輪詢匯入工具自動下載程式庫之前測試更新的程式庫時，請手動下載。
 
@@ -235,19 +240,20 @@ AEM支援在雲端托管或在AEM托管的動態標籤管理。
 
 >[!NOTE]
 >
->下載的檔案儲存在下方 `/etc/clientlibs/dtm/my config/companyID/propertyID/servertype`。
+>下載的檔案儲存在`/etc/clientlibs/dtm/my config/companyID/propertyID/servertype`下。
 >
->以下是直接從您的 [DTM設定中取得](#creating-the-dynamic-tag-management-configuration)。
+>以下是直接從[DTM配置](#creating-the-dynamic-tag-management-configuration)中獲取的。
 >
 >* `myconfig`
 >* `companyID`
 >* `propertyID`
 >* `servertype`
+
 >
 
 
 
-## 將動態標籤管理組態與您的網站建立關聯 {#associating-a-dynamic-tag-management-configuration-with-your-site}
+## 將動態標籤管理組態與您的網站{#associating-a-dynamic-tag-management-configuration-with-your-site}建立關聯
 
 將您的「動態標籤管理」設定與您網站的頁面建立關聯，讓AEM將必要的指令碼新增至頁面。 將您網站的根頁面與設定關聯。 該頁的所有子代都繼承關聯。 如果需要，您可以覆蓋子體頁面上的關聯。
 
