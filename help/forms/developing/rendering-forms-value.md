@@ -12,11 +12,14 @@ topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 translation-type: tm+mt
 source-git-commit: 66bfd6870b4c09dc2ca1b66058e0b9e040a71507
+workflow-type: tm+mt
+source-wordcount: '1812'
+ht-degree: 0%
 
 ---
 
 
-# 依值轉換表單 {#rendering-forms-by-value}
+# 依值{#rendering-forms-by-value}轉換表單
 
 通常，在設計器中建立的表單設計會參照Forms服務來傳遞。 表單設計可以很大，因此，參照傳遞表單設計會更有效率，以避免需要依值來調整表單設計位元組。 Forms服務也可以快取表格設計，如此在快取時，就不需要持續讀取表格設計。
 
@@ -40,9 +43,9 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱「AEM Forms [的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 步驟摘要 {#summary-of-steps}
+## 步驟{#summary-of-steps}摘要
 
 要按值呈現表單，請執行以下步驟：
 
@@ -62,7 +65,7 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 **參考表單設計**
 
-按值呈現表單時，您必須建立包含要呈 `com.adobe.idp.Document` 現的表單設計的物件。 您可以參考現有的XDP檔案，也可以在執行時期動態建立表單設計，並填入 `com.adobe.idp.Document` 該資料。
+按值呈現表單時，必須建立`com.adobe.idp.Document`對象，該對象包含要渲染的表單設計。 您可以參考現有的XDP檔案，也可以在執行時期動態建立表單設計，並將該資料填入`com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -70,11 +73,11 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 **依值演算表格**
 
-若要依值來轉換表單，請將包含 `com.adobe.idp.Document` 表單設計的例項傳遞至轉換方法的參數 `inDataDoc` (可以是物件的任何轉換方 `FormsServiceClient` 法， `renderPDFForm``(Deprecated) renderHTMLForm`等等)。 此參數值通常保留給與表單合併的資料。 同樣地，將空字串值傳遞至參 `formQuery` 數。 通常，此參數需要一個字串值來指定表單設計的名稱。
+若要依值呈現表單，請將包含表單設計的`com.adobe.idp.Document`例項傳遞至呈現方法的`inDataDoc`參數（可以是`FormsServiceClient`物件的任何呈現方法，例如`renderPDFForm`、`(Deprecated) renderHTMLForm`等）。 此參數值通常保留給與表單合併的資料。 同樣地，將空字串值傳遞至`formQuery`參數。 通常，此參數需要一個字串值，它指定表單設計的名稱。
 
 >[!NOTE]
 >
->如果您想要在表單中顯示資料，則必須在元素中指定 `xfa:datasets` 資料。 如需XFA架構的詳細資訊，請前往 [https://partners.adobe.com/public/developer/xml/index_arch.html](https://partners.adobe.com/public/developer/xml/index_arch.html)。
+>如果要在表單中顯示資料，必須在`xfa:datasets`元素中指定資料。 有關XFA體系結構的資訊，請轉至[https://partners.adobe.com/public/developer/xml/index_arch.html](https://partners.adobe.com/public/developer/xml/index_arch.html)。
 
 **將表單資料串流寫入用戶端網頁瀏覽器**
 
@@ -96,7 +99,7 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 [建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## 使用Java API依值演算表格 {#render-a-form-by-value-using-the-java-api}
+## 使用Java API {#render-a-form-by-value-using-the-java-api}依值演算表格
 
 使用Forms API(Java)依值演算表格：
 
@@ -106,35 +109,36 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 1. 建立Forms用戶端API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
 
 1. 參考表單設計
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定XDP檔案位置的字串值，以建立表示要演算之表單設計的物件。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 建立`java.io.FileInputStream`對象，該對象表示要渲染的表單設計，方法是使用其建構子並傳遞指定XDP檔案位置的字串值。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 依值演算表格
 
-   叫用物 `FormsServiceClient` 件的方 `renderPDFForm` 法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderPDFForm`方法並傳遞下列值：
 
    * 空字串值。 （通常，此參數需要一個字串值，它指定表單設計的名稱。）
-   * 包 `com.adobe.idp.Document` 含表單設計的物件。 通常，此參數值會保留給與表單合併的資料。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此為可選參數，您可以指 `null` 定是否不想指定執行時選項。
-   * 包 `URLSpec` 含Forms服務所需URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
-   該方 `renderPDFForm` 法返回包 `FormsResult` 含表單資料流的對象，該表單資料流可以寫入客戶端Web瀏覽器。
+   * 包含表單設計的`com.adobe.idp.Document`物件。 通常，此參數值會保留給與表單合併的資料。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。 此為可選參數，如果您不想指定執行時選項，可以指定`null`。
+   * `URLSpec`物件，包含Forms服務所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
+
+   `renderPDFForm`方法返回`FormsResult`對象，該對象包含可寫入客戶端Web瀏覽器的表單資料流。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
-   * 通過調用對象的方 `com.adobe.idp.Document` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `com.adobe.idp.Document` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 調用 `java.io.InputStream` 物件的方 `com.adobe.idp.Document` 法以建立物 `getInputStream` 件。
-   * 建立位元組陣列並分配對象的大 `InputStream` 小。 叫用 `InputStream` 物件的方 `available` 法，以取得物件的大 `InputStream` 小。
-   * 調用物件的方法，並將位元組陣列傳 `InputStream` 遞為引數， `read`以表格資料流填入位元組陣列。
-   * 叫用物 `javax.servlet.ServletOutputStream` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
+   * 通過調用`getContentType`方法獲取`com.adobe.idp.Document`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`com.adobe.idp.Document`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 建立位元組陣列並分配`InputStream`對象的大小。 調用`InputStream`物件的`available`方法，以取得`InputStream`物件的大小。
+   * 調用`InputStream`物件的`read`方法，並將位元組陣列傳入為引數，以表格資料流填入位元組陣列。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
@@ -146,7 +150,7 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用web service API，依值演算表格 {#render-a-form-by-value-using-the-web-service-api}
+## 使用web service API {#render-a-form-by-value-using-the-web-service-api}依值呈現表格
 
 使用Forms API(web service)，依值演算表格：
 
@@ -157,40 +161,41 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 1. 建立Forms用戶端API物件
 
-   建立對 `FormsService` 像並設定驗證值。
+   建立`FormsService`對象並設定驗證值。
 
 1. 參考表單設計
 
-   * 使用其 `java.io.FileInputStream` 建構函式建立物件。 傳遞指定XDP檔案位置的字串值。
-   * 使用其 `BLOB` 建構函式建立物件。 該 `BLOB` 物件用於儲存使用密碼加密的PDF檔案。
-   * 建立儲存物件內容的位元組 `java.io.FileInputStream` 陣列。 您可以使用物件的方法，來取得物件的大 `java.io.FileInputStream` 小，以判斷位元組陣列的 `available` 大小。
-   * 調用物件的方法並傳遞位元組陣列， `java.io.FileInputStream` 以串流資 `read` 料填入位元組陣列。
-   * 調用對 `BLOB` 像的方法並傳遞字 `setBinaryData` 節陣列來填充對象。
+   * 使用其建構子建立`java.io.FileInputStream`對象。 傳遞指定XDP檔案位置的字串值。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存使用密碼加密的PDF檔案。
+   * 建立儲存`java.io.FileInputStream`對象內容的位元組陣列。 您可以使用`available`方法來取得`java.io.FileInputStream`物件的大小，以判斷位元組陣列的大小。
+   * 調用`java.io.FileInputStream`物件的`read`方法並傳遞位元組陣列，以串流資料填入位元組陣列。
+   * 調用`setBinaryData`方法並傳遞位元組陣列，以填充`BLOB`對象。
 
 1. 依值演算表格
 
-   叫用物 `FormsService` 件的方 `renderPDFForm` 法並傳遞下列值：
+   叫用`FormsService`物件的`renderPDFForm`方法並傳遞下列值：
 
    * 空字串值。 （通常，此參數需要一個字串值，它指定表單設計的名稱。）
-   * 包 `BLOB` 含表單設計的物件。 通常，此參數值會保留給與表單合併的資料。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此為可選參數，您可以指 `null` 定是否不想指定執行時選項。
-   * 包 `URLSpec` 含Forms服務所需URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
-   * 由方 `com.adobe.idp.services.holders.BLOBHolder` 法填充的空對象。 這可用來儲存轉譯的PDF表單。
-   * 由方 `javax.xml.rpc.holders.LongHolder` 法填充的空對象。 （此引數會儲存表單中的頁數。）
-   * 由方 `javax.xml.rpc.holders.StringHolder` 法填充的空對象。 （此引數儲存地區值。）
-   * 包含 `com.adobe.idp.services.holders.FormsResultHolder` 此操作結果的空對象。
-   該方 `renderPDFForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
+   * 包含表單設計的`BLOB`物件。 通常，此參數值會保留給與表單合併的資料。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。 此為可選參數，如果您不想指定執行時選項，可以指定`null`。
+   * `URLSpec`物件，包含Forms服務所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
+   * 由方法填充的空`com.adobe.idp.services.holders.BLOBHolder`對象。 這可用來儲存轉譯的PDF表單。
+   * 由方法填充的空`javax.xml.rpc.holders.LongHolder`對象。 （此引數會儲存表單中的頁數。）
+   * 由方法填充的空`javax.xml.rpc.holders.StringHolder`對象。 （此引數儲存地區值。）
+   * 空的`com.adobe.idp.services.holders.FormsResultHolder`對象，將包含此操作的結果。
+
+   `renderPDFForm`方法會以必須寫入用戶端網頁瀏覽器的表單資料流填入作為最後一個參數值傳遞的`com.adobe.idp.services.holders.FormsResultHolder`物件。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 獲取 `FormResult` 對象資料成員的 `com.adobe.idp.services.holders.FormsResultHolder` 值以建立 `value` 對象。
-   * 呼叫 `BLOB` 物件的方法，以建立包含表 `FormsResult` 單資料的物 `getOutputContent` 件。
-   * 通過調用對象的方 `BLOB` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `BLOB` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 建立位元組陣列，並透過叫用物件的方 `BLOB` 法來填入該 `getBinaryData` 陣列。 此任務將對象的內 `FormsResult` 容分配給位元組陣列。
-   * 叫用物 `javax.servlet.http.HttpServletResponse` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 獲取`com.adobe.idp.services.holders.FormsResultHolder`對象`value`資料成員的值，建立`FormResult`對象。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
+   * 通過調用`getContentType`方法獲取`BLOB`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`BLOB`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
+   * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
