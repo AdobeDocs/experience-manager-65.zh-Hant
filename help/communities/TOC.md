@@ -14,10 +14,10 @@ ht-degree: 7%
 ---
 
 
-# Adobe Experience Manager 6.5 Communities Guide {#communities}
+# Adobe Experience Manager 6.5社群指南{#communities}
 
 + [Communities 指南](home.md)
-+ Introduction to AEM Communities {#introduction}
++ AEM Communities {#introduction}簡介
    + [社群網站](administer-landing.md)
    + [AEM Communities概觀](overview.md)
    + [AEM Communities發行說明](/help/release-notes/communities-release-notes.md)
@@ -31,12 +31,12 @@ ht-degree: 7%
    + [製作新的社群網站以利啟用](enablement-create-site.md)
    + [建立並指派啟用資源](resource.md)
    + [體驗發佈的啟用網站](enablement-published-site.md)
-+ 部署 {#deploy}
++ 部署{#deploy}
    + [部署社群](deploy-communities.md)
    + [升級至AEM 6.5 Communities](upgrade.md)
    + [推薦的社區拓撲](topologies.md)
    + [配置Dispatcher for Communities](dispatcher.md)
-+ 管理 {#administer}
++ 管理{#administer}
    + [AEM Communities中的使用者與UGC管理服務](user-ugc-management-service.md)
    + [社群網站](administer-landing.md)
    + [Communities Console](consoles.md)
