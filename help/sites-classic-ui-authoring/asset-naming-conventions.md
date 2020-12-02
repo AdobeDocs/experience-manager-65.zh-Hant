@@ -1,8 +1,8 @@
 ---
 title: 資產測試的命名慣例
 seo-title: 資產的命名慣例
-description: 儲存庫中的節點受Java內容儲存庫的命名約定的約束。 不過，Adobe Experience manager會針對資產節點的名稱進一步規定。
-seo-description: 儲存庫中的節點受Java內容儲存庫的命名約定的約束。 不過，Adobe Experience manager會針對資產節點的名稱進一步規定。
+description: 儲存庫中的節點受Java內容儲存庫的命名約定的約束。 不過，Adobe Experience Manager會針對資產節點的名稱進一步規定。
+seo-description: 儲存庫中的節點受Java內容儲存庫的命名約定的約束。 不過，Adobe Experience Manager會針對資產節點的名稱進一步規定。
 uuid: 6b622a60-90e8-461e-9b67-42c11c7038f9
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 55e66c66-0120-4ed4-94c5-d65a434bb59b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '159'
+ht-degree: 1%
 
 ---
 
 
 # 資產測試的命名慣例{#naming-conventions-for-assets-testing}
 
-儲存庫中的節點受 [Java內容儲存庫的命名約定所約束](/help/sites-developing/the-basics.md#java-content-repository)。 不過，Adobe Experience manager會針對資產節點的名稱進一步規定。
+儲存庫中的節點受[Java內容儲存庫](/help/sites-developing/the-basics.md#java-content-repository)命名約定的約束。 不過，Adobe Experience Manager會針對資產節點的名稱進一步規定。
 
 ## 傳統 UI {#classic-ui}
 
