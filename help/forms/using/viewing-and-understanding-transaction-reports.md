@@ -17,18 +17,18 @@ ht-degree: 0%
 ---
 
 
-# 查看和瞭解事務處理報表{#viewing-and-understanding-transaction-reports}
+# 查看和瞭解事務報表{#viewing-and-understanding-transaction-reports}
 
-交易報表可讓您擷取並追蹤已提交表單、已處理檔案和已轉譯檔案的數量。 追蹤這些交易的目的，是為產品使用做出明智的決定，並重新平衡對硬體和軟體的投資。 如需詳細資訊，請參 [閱「AEM Forms交易報表概觀」](../../forms/using/transaction-reports-overview.md)。
+交易報表可讓您擷取並追蹤已提交表單、已處理檔案和已轉譯檔案的數量。 追蹤這些交易的目的，是為產品使用做出明智的決定，並重新平衡對硬體和軟體的投資。 如需詳細資訊，請參閱[AEM Forms交易報表概述](../../forms/using/transaction-reports-overview.md)。
 
-## 設定事務處理報告  {#setting-up-transaction-reports}
+## 設定事務報告{#setting-up-transaction-reports}
 
-交易報表功能是AEM表單附加元件套件的一部分。 如需在所有作者和發佈例項上安裝附加元件套件的詳細資訊，請參 [閱安裝和設定AEM表單](/help/forms/using/installing-configuring-aem-forms-osgi.md)。 安裝AEM Forms附加套件後，請執行下列動作：
+交易報表功能是AEM表單附加元件套件的一部分。 如需在所有作者和發佈例項上安裝附加套件的詳細資訊，請參閱[安裝和設定AEM表單](/help/forms/using/installing-configuring-aem-forms-osgi.md)。 安裝AEM Forms附加套件後，請執行下列動作：
 
 * 在所有發佈實例上啟用反向複製
 * 啟用交易報表
 * 提供查看交易報告的權限
-* （可選）配置事務處理刷新期間和出貨箱 [](/help/forms/using/installing-configuring-aem-forms-osgi.md)
+* （可選）配置事務處理刷新期間和外框[](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 
 >[!NOTE]
 >
@@ -40,60 +40,60 @@ ht-degree: 0%
 
 
 
-### 在所有發佈實例上啟用反向複製 {#enable-reverse-replication-on-all-the-publish-instances}
+### 在所有發佈實例上啟用反向複製{#enable-reverse-replication-on-all-the-publish-instances}
 
-事務報表使用反向複製來合併從發佈實例到作者實例的事務計數。 在所有發佈實例上設定反向複製。 有關設定反向複製的詳細說明，請參見 [複製](/help/sites-deploying/replication.md)。
+事務報表使用反向複製來合併從發佈實例到作者實例的事務計數。 在所有發佈實例上設定反向複製。 有關設定反向複製的詳細說明，請參見[replication](/help/sites-deploying/replication.md)。
 
-### 啟用交易報表 {#enable-transaction-reports}
+### 啟用事務報告{#enable-transaction-reports}
 
 事務報表預設會停用。 您可以從AEM Web Console啟用報表。 若要在AEM Forms環境中啟用交易報表，請對所有作者和發佈例項執行下列步驟：
 
-1. 以管理員身分登入AEM例項。 前往「工 **具** >作 **業** > **Web主控台」**。
-1. 找到並開啟 **Forms Transaction Reporting服務** 。
+1. 以管理員身分登入AEM例項。 轉至「**工具** > **操作** > **Web控制台**」。
+1. 找到並開啟&#x200B;**Forms Transaction Reporting**&#x200B;服務。
 1. 選擇「記錄事務處理」複選框。 按一下&#x200B;**「儲存」**。
 
    對所有作者和發佈例項重複步驟1-3。
 
-### 提供查看交易報告的權限 {#provide-rights-to-view-a-transaction-report}
+### 提供查看事務報告{#provide-rights-to-view-a-transaction-report}的權限
 
-只有fd-administrator組的成員才能查看事務報告。 要允許用戶查看事務報告，請使用戶成為fd-administrator組的成員。 如需讓使用者成為AEM群組成員的指示，請參閱「使用者、群 [組和存取權限管理」](/help/sites-administering/user-group-ac-admin.md)。
+只有fd-administrator組的成員才能查看事務報告。 要允許用戶查看事務報告，請使用戶成為fd-administrator組的成員。 如需讓使用者成為AEM群組成員的指示，請參閱[「使用者、群組和存取權限管理」](/help/sites-administering/user-group-ac-admin.md)。
 
-### （可選）配置事務處理刷新期間和出貨箱 {#optional-configure-transaction-flush-period-and-outboxes}
+### （可選）配置事務處理刷新期間和外框{#optional-configure-transaction-flush-period-and-outboxes}
 
 事務在儲存到儲存庫之前快取在記憶體中。 依預設，快取期間（交易刷新期間）會設為60秒。 執行下列步驟以變更預設快取期間：
 
-1. 以管理員身分登入以製作例項。 前往「工 **具** >作 **業** > **Web主控台」**。
-1. 找到並開啟 **Forms Transaction Repository儲存提供程式服務** 。
-1. 在「事務處理刷新期間」 **欄位中指定秒數** 。 按一下&#x200B;**「儲存」**。
+1. 以管理員身分登入以製作例項。 轉至「**工具** > **操作** > **Web控制台**」。
+1. 找到並開啟&#x200B;**Forms Transaction Repository Storage Provider**&#x200B;服務。
+1. 在&#x200B;**事務刷新期間**&#x200B;欄位中指定秒數。 按一下&#x200B;**「儲存」**。
 
 反向複製會將事務資料複製到作者實例的預設外框。 您可以將交易資料放入自訂的外框。 執行下列步驟以指定自訂外框：
 
-1. 以管理員身分登入以製作例項。 前往「工 **具** >作 **業** > **Web主控台」**。
-1. 找到並開啟 **Forms Transaction Repository儲存提供程式服務** 。
-1. 在「輸出方塊」欄位中指定自訂 **輸出方塊** 。 按一下&#x200B;**「儲存」**。所有作者實例上都會建立具有指定名稱的輸出框。
+1. 以管理員身分登入以製作例項。 轉至「**工具** > **操作** > **Web控制台**」。
+1. 找到並開啟&#x200B;**Forms Transaction Repository Storage Provider**&#x200B;服務。
+1. 在&#x200B;**Outbox**&#x200B;欄位中指定自訂外框的名稱。 按一下&#x200B;**「儲存」**。所有作者實例上都會建立具有指定名稱的輸出框。
 
-## 查看事務處理報表 {#viewing-the-transaction-report}
+## 查看事務報告{#viewing-the-transaction-report}
 
 您可以檢視有關作者或發佈例項的交易報表。 作者實例的事務報表提供在已配置的作者和發佈實例上發生的所有事務的匯總。 發佈例項上的交易報表提供僅在基礎發佈例項上發生的交易計數。 執行下列步驟以檢視報表：
 
-1. 請登入AEM Forms伺服器，網址為 `https://[hostname]:'port'`。
-1. 導覽至「 **工具** >表 **單**>檢視交易報&#x200B;**表」**。
+1. 登入`https://[hostname]:'port'`的AEM Forms伺服器。
+1. 導覽至「**工具** > **表單**>**檢視交易報表**」。
 
-## 瞭解報表 {#understanding-the-report}
+## 瞭解報表{#understanding-the-report}
 
 AEM Forms會顯示自設定日期起的交易報表，如以下摘要報表所示：
 
 ![sample-transaction-report-author](assets/sample-transaction-report-author.png)
 
-* 使用「 **將日期重設為今天** 」選項來重設交易記錄。 將日期重設為今天時，所有先前的交易記錄都會遺失。 當您重設作者例項的日期時，變更不會影響「發佈」例項的交易報表，反之亦然。
-* 使用「 **僅顯示發佈實例的事務」** ，查看僅在已配置的發佈實例或發佈場上發生的所有事務。
-* 使用類別： **Document Processed**、Documents **Rendered**, and **Forms Submitted** to view corresponds transactions. 有關這些類別中入帳的事務處理類型，請參 [閱：可開單事務處理報表API](../../forms/using/transaction-reports-billable-apis.md)。
+* 使用&#x200B;**將日期重設為今天**&#x200B;選項來重設交易記錄。 將日期重設為今天時，所有先前的交易記錄都會遺失。 當您重設作者例項的日期時，變更不會影響「發佈」例項的交易報表，反之亦然。
+* 使用&#x200B;**僅顯示發佈實例的事務**&#x200B;查看僅在配置的發佈實例或發佈群上發生的所有事務。
+* 使用類別：**Document Processed**、**Documents Rendered**&#x200B;和&#x200B;**Forms Submitted**&#x200B;以檢視對應的交易。 有關這些類別中入帳的事務處理類型，請參閱[可開單事務處理報表API](../../forms/using/transaction-reports-billable-apis.md)。
 
-## 查看事務報告日誌 {#view-transaction-reporting-logs}
+## 查看事務日誌{#view-transaction-reporting-logs}
 
-交易報表會將報表中顯示的所有資訊以及記錄檔中的某些其他資訊。 記錄檔中提供的資訊對進階使用者有幫助。 例如，記錄檔將交易分為多個細分類別，與報表中顯示的三個統一類別比較。 這些日誌可在目錄中 `error.log` 的檔案中 `/crx-repository/logs/` 使用。 即使您未從AEM Web Console啟用交易報表，記錄檔也可供使用。
+交易報表會將報表中顯示的所有資訊以及記錄檔中的某些其他資訊。 記錄檔中提供的資訊對進階使用者有幫助。 例如，記錄檔將交易分為多個細分類別，與報表中顯示的三個統一類別比較。 日誌在`/crx-repository/logs/`目錄的`error.log`檔案中可用。 即使您未從AEM Web Console啟用交易報表，記錄檔也可供使用。
 
-## 相關文章 {#related-articles}
+## 相關文章{#related-articles}
 
 * [事務處理報表概覽](../../forms/using/transaction-reports-overview.md)
 * [事務處理報表可開單API](../../forms/using/transaction-reports-billable-apis.md)
