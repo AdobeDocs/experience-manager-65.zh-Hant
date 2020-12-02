@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# 即時使用者布建 {#just-in-time-user-provisioning}
+# 及時用戶設定{#just-in-time-user-provisioning}
 
 AEM表格支援使用者管理中尚未存在的使用者即時布建。 使用即時布建功能，使用者憑證成功驗證後，就會自動新增至「使用者管理」。 此外，相關角色和群組會動態指派給新使用者。
 
-## 需要及時的用戶布建 {#need-for-just-in-time-user-provisioning}
+## 需要及時的用戶設定{#need-for-just-in-time-user-provisioning}
 
 傳統驗證的運作方式如下：
 
@@ -30,20 +30,20 @@ AEM表格支援使用者管理中尚未存在的使用者即時布建。 使用�
 1. 驗證提供者會驗證憑證。
 1. 然後驗證提供者會檢查使用者是否存在於使用者管理資料庫中。 可能會產生下列結果：
 
-   **存在：** 如果使用者是最新且已解除鎖定，「使用者管理」會傳回驗證成功。 不過，如果使用者不是最新或已鎖定，使用者管理會傳回驗證失敗。
+   **存在：如** 果使用者是最新且已解除鎖定，「使用者管理」會傳回驗證成功。不過，如果使用者不是最新或已鎖定，使用者管理會傳回驗證失敗。
 
-   **不存在：** 使用者管理傳回驗證失敗。
+   **不存在：用戶管** 理返回驗證失敗。
 
-   **無效：** 使用者管理傳回驗證失敗。
+   **無效：用** 戶管理返回驗證失敗。
 
 1. 驗證提供者傳回的結果會進行評估。 如果驗證提供者傳回驗證成功，則允許使用者登入。 否則，使用者管理會檢查下一個驗證提供者（步驟2-3）。
 1. 如果沒有可用的驗證提供者驗證使用者憑證，則會傳回驗證失敗。
 
 當實作即時布建時，如果其中一個驗證提供者驗證使用者的認證，就會在使用者管理中動態建立新使用者。 （在傳統驗證程式的步驟3後，請參閱上文。）
 
-## 實作即時使用者布建 {#implement-just-in-time-user-provisioning}
+## 實施及時用戶設定{#implement-just-in-time-user-provisioning}
 
-### 適用於即時布建的API {#apis-for-just-in-time-provisioning}
+### 適用於即時布建{#apis-for-just-in-time-provisioning}的API
 
 AEM表格提供下列API以供即時布建：
 
@@ -82,34 +82,34 @@ public Boolean assign(User user);
 }
 ```
 
-### 建立啟用時間限制的網域時的考量事項 {#considerations-while-creating-a-just-in-time-enabled-domain}
+### 建立剛啟用時間的域{#considerations-while-creating-a-just-in-time-enabled-domain}時的注意事項
 
-* 建立混合網 `IdentityCreator` 域的自訂時，請確定已為本機使用者指定虛擬密碼。 請勿將此密碼欄位留空。
-* 建議： 使用 `DomainSpecificAuthentication` 來驗證特定網域的使用者憑證。
+* 為混合域建立自定義`IdentityCreator`時，請確保為本地用戶指定虛擬口令。 請勿將此密碼欄位留空。
+* 建議：使用`DomainSpecificAuthentication`來驗證特定網域的用戶憑據。
 
-### 建立啟用時間的網域 {#create-a-just-in-time-enabled-domain}
+### 建立啟用時間限制的網域{#create-a-just-in-time-enabled-domain}
 
 1. 在「API for just-in-time provisioning」區段中撰寫實施API的DSC。
 1. 將DSC部署到表單伺服器。
 1. 建立啟用時間的網域：
 
    * 在「管理控制台」中，按一下「設定>使用者管理>網域管理>新建企業網域」。
-   * 配置域並選擇「Enable Just In Time Provisioning」（啟用準時設定）。 <!--Fix broken link (See Setting up and managing domains).-->
+   * 配置域並選擇「Enable Just In Time Provisioning」（啟用準時設定）。<!--Fix broken link (See Setting up and managing domains).-->
    * 新增驗證提供者。 新增驗證提供者時，在「新增驗證」畫面上，選取已註冊的Identity Creator和Assignment Provider。
 
 1. 儲存新網域。
 
-## 幕後秘辛 {#behind-the-scenes}
+## 幕後{#behind-the-scenes}
 
 假設使用者嘗試登入AEM表單，且驗證提供者接受其使用者認證。 如果使用者尚未存在於「使用者管理」資料庫中，則使用者的身分檢查會失敗。 AEM表格現在會執行下列動作：
 
-1. 使用驗 `UserProvisioningBO` 證資料建立對象，並將其放入憑據映射中。
-1. 根據由返回的域信 `UserProvisioningBO`息，讀取並調用已註冊 `IdentityCreator` 域 `AssignmentProvider` 和域的。
-1. 叫用 `IdentityCreator`。 如果傳回成功 `AuthResponse`，請從 `UserInfo` 憑證映射擷取。 將其傳遞至群 `AssignmentProvider` 組／角色指派，以及建立使用者後進行的任何其他後處理。
+1. 使用驗證資料建立`UserProvisioningBO`對象，並將其放入憑據映射中。
+1. 根據`UserProvisioningBO`返回的域資訊，讀取並調用已註冊的`IdentityCreator`和`AssignmentProvider`域。
+1. 叫用`IdentityCreator`。 如果返回成功的`AuthResponse`，請從憑據映射中提取`UserInfo`。 將它傳遞至`AssignmentProvider`，以便在建立使用者後進行群組／角色指派和任何其他後處理。
 1. 如果用戶建立成功，則返回用戶登錄嘗試的成功。
 1. 對於混合域，從提供給驗證提供者的驗證資料中提取用戶資訊。 如果成功擷取此資訊，請即時建立使用者。
 
 >[!NOTE]
 >
->即時布建功能隨附於預設實作，您可 `IdentityCreator` 用來動態建立使用者。 建立用戶時，會使用與域中的目錄相關的資訊。
+>Just-in-time provisioning功能隨附於預設的`IdentityCreator`實作，您可用來動態建立使用者。 建立用戶時，會使用與域中的目錄相關的資訊。
 
