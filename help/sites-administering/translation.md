@@ -13,11 +13,14 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '267'
+ht-degree: 0%
 
 ---
 
 
-# 翻譯多語言網站的內容 {#translating-content-for-multilingual-sites}
+# 翻譯多語言網站的內容{#translating-content-for-multilingual-sites}
 
 自動翻譯頁面內容、資產和使用者產生的內容，以建立和維護多語言網站。 為自動化翻譯工作流程，您將翻譯服務供應商與AEM整合，並建立專案，將內容翻譯成多種語言。 AEM支援人文和機器翻譯工作流程。
 
@@ -26,12 +29,12 @@ source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
 
 翻譯內容需要執行下列步驟：
 
-1. [將AEM與您的翻譯服務提供者連接](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) ，並 [建立翻譯整合架構設定](/help/sites-administering/tc-tic.md)。
-1. [將語言主版頁面與翻譯服務](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) 和框架配置關聯。
-1. [識別要翻譯的內容類型](/help/sites-administering/tc-rules.md) 。
-1. [編寫語言主版](/help/sites-administering/tc-prep.md) ，並建立語言副本的根頁面，以準備翻譯內容。
-1. [建立翻譯專案](/help/sites-administering/tc-manage.md) ，以收集要翻譯的內容並準備翻譯程式。
-1. 使用翻譯專案來 [管理內容翻譯程式](/help/sites-administering/tc-manage.md)。
+1. [將AEM與您的翻譯服務提供者](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) 連接， [並建立翻譯整合架構設定](/help/sites-administering/tc-tic.md)。
+1. [將您語言的首頁與翻](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) 譯服務和框架配置相關聯。
+1. [識別要翻譯的](/help/sites-administering/tc-rules.md) 內容類型。
+1. [編寫語言主版](/help/sites-administering/tc-prep.md) 並建立語言副本的根頁面，以準備翻譯內容。
+1. [建立轉](/help/sites-administering/tc-manage.md) 譯專案以收集要翻譯的內容並準備轉譯程式。
+1. 使用翻譯項目到[管理內容翻譯流程](/help/sites-administering/tc-manage.md)。
 
 如果您的翻譯服務供應商未提供與AEM整合的連接器，AEM支援以XML格式手動擷取和重新插入翻譯內容。
 
@@ -39,6 +42,6 @@ source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
 >
 >您的使用者必須是專案管理員群組的成員，才能使用「語言複製」功能。
 
-## Best Practices {#best-practices}
+## 最佳作法 {#best-practices}
 
-「轉 [譯最佳實務](/help/sites-administering/tc-bp.md) 」頁面包含有關您實作的重要資訊。
+[翻譯最佳實踐](/help/sites-administering/tc-bp.md)頁包含有關您實施的重要資訊。
