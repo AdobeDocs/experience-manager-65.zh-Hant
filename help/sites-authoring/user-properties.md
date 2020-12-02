@@ -12,29 +12,32 @@ discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '538'
+ht-degree: 10%
 
 ---
 
 
-# 設定您的帳戶環境{#configuring-your-account-environment}
+# 配置帳戶環境{#configuring-your-account-environment}
 
 AEM提供您設定帳戶的功能，以及作者環境的某些方面。
 
 使用頁 [首和相關「我的首選項](/help/sites-authoring/user-properties.md#user-settings) 」對話框中的「用戶」選項 [](/help/sites-authoring/basic-handling.md#the-header)[](#userpreferences) ，可以修改用戶選項，例如。
 
-首先，存取頁 [首中](/help/sites-authoring/user-properties.md#user-settings) 「使用者」選項。
+首先，在標題中存取[User](/help/sites-authoring/user-properties.md#user-settings)選項。
 
 ## 使用者設定 {#user-settings}
 
-「用 **戶設定** 」對話框允許您訪問：
+**User**&#x200B;設定對話方塊可讓您存取：
 
 * 模擬為
 
-   * 使用 [Impersonate(模擬](/help/sites-administering/security.md#impersonating-another-user) )功能，使用者可以代表其他使用者工作。
+   * 使用[Impersonate as](/help/sites-administering/security.md#impersonating-another-user)功能，使用者可以代表其他使用者工作。
 
 * 設定檔
 
-   * 提供使用者設定的方便 [連結](/help/sites-administering/security.md))
+   * 提供您[使用者設定](/help/sites-administering/security.md)的便利連結)
 
 * [我的喜好設定](/help/sites-authoring/user-properties.md#my-preferences)
 
@@ -44,7 +47,7 @@ AEM提供您設定帳戶的功能，以及作者環境的某些方面。
 
 ### 我的喜好設定 {#my-preferences}
 
-「我 **的偏好設定** 」對話方塊是透過頁首中的「使 [用者](/help/sites-authoring/user-properties.md#user-settings) 」選項來存取。
+**My Preferences**&#x200B;對話方塊是透過標題中的[User](/help/sites-authoring/user-properties.md#user-settings)選項存取。
 
 每位使用者都可自行設定特定屬性。
 
@@ -88,7 +91,7 @@ AEM提供您設定帳戶的功能，以及作者環境的某些方面。
    * **一律顯示確切日期**:一律會顯示確切日期（從不是相對日期）。
    * **1天**:相對日期會顯示為一天內的日期，否則會顯示確切日期。
 
-   * **7天（預設值）**:相對日期會顯示在7天內的日期，否則會顯示確切日期。
+   * **7天（預設值）**:相對日期會顯示在7天內的日期，否則會顯示確切的日期。
 
    * **1個月**:相對日期會顯示一個月內的日期，否則會顯示確切日期。
 
@@ -102,11 +105,12 @@ AEM提供您設定帳戶的功能，以及作者環境的某些方面。
 
    * [編輯頁面的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [控制台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
+
    此選項可啟用鍵盤快速鍵。 依預設會啟用這些功能，但可停用（例如，如果使用者有特定的協助工具需求）。
 
 * **使用傳統製作體驗**
 
-   此選項可啟 [用傳統的UI](/help/sites-classic-ui-authoring/home.md)-based頁面編寫。 預設會使用標準UI。
+   此選項可啟用[傳統UI](/help/sites-classic-ui-authoring/home.md)的頁面編寫功能。 預設會使用標準UI。
 
 * **啟用資產首頁**
 
@@ -114,4 +118,4 @@ AEM提供您設定帳戶的功能，以及作者環境的某些方面。
 
 * **Stock 設定**
 
-   此選項可指定偏好的Adobe Stock設定，且只有在系統管理員啟用 [Adobe Stock整合時才可用](/help/assets/aem-assets-adobe-stock.md)。
+   此選項可指定偏好的Adobe Stock設定，且只有在系統管理員已啟用[Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md)時，才可使用。
