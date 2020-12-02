@@ -22,13 +22,13 @@ ht-degree: 1%
 
 ## AEM Communities {#aem-communities}
 
-對於AEM Communities，必須設定Dispatcher，以確保社群網站正常 [運作](overview.md#community-sites)。 當包含啟用社群和社交登入等功能時，需要額外的設定。
+對於AEM Communities，必須設定Dispatcher，以確保[社群網站](overview.md#community-sites)正常運作。 當包含啟用社群和社交登入等功能時，需要額外的設定。
 
 瞭解您特定部署和網站設計的必要項目
 
-* 聯絡 [客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)
+* 聯絡[客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)
 
-另請參見主要 [Dispatcher文檔](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
+另請參見主[Dispatcher documentation](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
 
 ## Dispatcher Caching {#dispatcher-caching}
 
@@ -42,9 +42,9 @@ AEM Communities的Dispatcher快取功能是讓Dispatcher提供社群網站頁面
 
 配置為支援調度程式快取時，基於TTL的「最大存留期」過期時間將添加到標頭中，以確保調度程式快取頁是最新的。
 
-### 需求 {#requirements}
+### 要求{#requirements}
 
-* Dispatcher 4.1.2版或更新版本(請參 [閱安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) 以取得最新版本)
+* Dispatcher 4.1.2版或更新版本（有關最新版本，請參見[安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)）
 * [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 3.3.2版或更新版本
@@ -52,32 +52,32 @@ AEM Communities的Dispatcher快取功能是讓Dispatcher提供社群網站頁面
 
 ### 設定 {#configuration}
 
-OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Dispatcher Cache控制標題——最大年齡）會設定出現在指定路徑下的快取頁面到期時間。
+OSGi組態&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**&#x200B;會設定出現在指定路徑下的快取頁面到期時間。
 
-* 從網 [路主控台](../../help/sites-deploying/configuring-osgi.md)
+* 從[Web控制台](../../help/sites-deploying/configuring-osgi.md)
 
-   * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 尋找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 找到`ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 選擇「+」表徵圖以建立新連接配置
 
    ![Dispatcher ](assets/dispatcher.png)
 
 * **篩選模式**
 
-   *（必要）* ，一或多個社群頁面路徑。 For example, `/content/sites/engage/(.*)`.
+   *（必要）* 一或多個社群頁面的路徑。例如，`/content/sites/engage/(.*)`。
 
 * **快取控制最大使用時間**
 
-   *（必要）* ，要新增至「快取控制」標題的最大時段（以秒為單位）。 值必須大於零(0)。
+   *（必要）* 要新增至「快取控制」標題的最大時間（以秒為單位）。值必須大於零(0)。
 
-## Dispatcher Client標題 {#dispatcher-client-headers}
+## Dispatcher Client標頭{#dispatcher-client-headers}
 
-在的/clientheaders區段中 `dispatcher.any`，如果列出特定的標題集，則必須加入， `"CSRF-Token"` 以便 [](enablement.md) 啟用功能正常運作。
+在`dispatcher.any`的/clientheaders區段中，如果列出特定標題集，則必須包含`"CSRF-Token"`,[啟用功能](enablement.md)才能正常運作。
 
 ## Dispatcher Filters {#dispatcher-filters}
 
-檔案的/filter部分在「配 `dispatcher.any` 置對內容的 [訪問- /filter」中介紹](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter)。
+`dispatcher.any`檔案的/filter區段記錄在[設定內容存取權- /filter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter)中。
 
 本節說明Communities功能正常運作可能需要的項目。
 
@@ -92,12 +92,12 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 >[!NOTE]
 >
 >**屬性名稱範例**
->顯示的所有屬性名稱(如 **/0050** 和 **/0170**)都應調整為適合現有dispatcher.any配置檔案。
+>顯示的所有屬性名稱（如&#x200B;**/0050**&#x200B;和&#x200B;**/0170**）都應調整為適合現有dispatcher.any配置檔案。
 
 
 >[!CAUTION]
 >
->有關使用Dispatcher限制 [訪問時的進一步注意事項，請參閱Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) 。 此外，請閱讀 [AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) ，以取得有關AEM安裝的其他安全性詳細資訊。
+>有關使用Dispatcher限制訪問時的進一步考慮事項，請參見[ Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)。 此外，請閱讀[AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html)，以取得有關AEM安裝的其他安全性詳細資訊。
 
 
 應將下列條目添加到/filter節的結尾，尤其是在所有拒絕條目之後。
@@ -174,7 +174,7 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 
 ## Dispatcher Rules {#dispatcher-rules}
 
-的規則區段定 `dispatcher.any` 義應根據請求的URL快取哪些回應。 對於「社群」，規則區段用於定義不應快取的項目。
+`dispatcher.any`的規則區段定義應根據請求的URL快取哪些回應。 對於「社群」，規則區段用於定義不應快取的項目。
 
 ```shell
 # Never cache the client-side .social.json calls
@@ -201,9 +201,9 @@ OSGi組態 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （Di
 
 第一個過濾器模式通常用於拒絕所有內容，以便後續過濾器以受控方式恢復訪問。 當多個篩選套用至請求時，套用的最後一個篩選是有效的。
 
-## dispatcher.any示例 {#sample-dispatcher-any}
+## dispatcher.any {#sample-dispatcher-any}示例
 
-以下是包含Communities `dispatcher.any` /filters和/rules的範例檔案。
+以下是包含Communities /filters和/rules的範例`dispatcher.any`檔案。
 
 ```shell
 # Each farm configures a set of load balanced renders (i.e. remote servers)
