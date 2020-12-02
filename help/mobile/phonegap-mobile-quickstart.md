@@ -11,18 +11,21 @@ topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 2de6bafb-47cf-4aca-84a3-0cace2858d5c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 1%
 
 ---
 
 
-# 行動快速入門 {#mobile-quickstart}
+# 行動快速入門{#mobile-quickstart}
 
 >[!NOTE]
 >
 >Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
 
-## AEM驗證應用程式 {#aem-verify-app}
+## AEM Verify App {#aem-verify-app}
 
 >[!CAUTION]
 >
->AEM驗證應用程式已過時。 應用程式已從Apple appStore和Android playStore移除。
+>AEM驗證應用程式已過時。 應用程式已從Apple AppStore和Android PlayStore移除。
