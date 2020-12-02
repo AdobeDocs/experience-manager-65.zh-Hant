@@ -1,8 +1,8 @@
 ---
 title: 使用API列出網頁上的表格
 seo-title: 使用API列出網頁上的表格
-description: 以程式設計方式查詢Forms Manager以擷取已篩選的表單清單並顯示在您自己的網頁上。
-seo-description: 以程式設計方式查詢Forms Manager以擷取已篩選的表單清單並顯示在您自己的網頁上。
+description: 以程式設計方式查詢Forms Manager，以擷取已篩選的表單清單並顯示在您自己的網頁上。
+seo-description: 以程式設計方式查詢Forms Manager，以擷取已篩選的表單清單並顯示在您自己的網頁上。
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,13 +17,13 @@ ht-degree: 1%
 ---
 
 
-# 使用API列出網頁上的表格 {#listing-forms-on-a-web-page-using-apis}
+# 使用API {#listing-forms-on-a-web-page-using-apis}在網頁上列出表格
 
 AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查詢和擷取符合搜尋准則的一組表單。 您可以使用API根據各種篩選條件來搜尋表單。 回應物件包含表單屬性、屬性和轉譯表單端點。
 
-若要使用REST API搜尋表單，請使用下列所述的查詢參數，傳送GET `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 要求至伺服器。
+若要使用REST API搜尋表單，請使用下列說明的查詢參數，傳送GET要求至`https://'[server]:[port]'/libs/fd/fm/content/manage.json`伺服器。
 
-## Query parameters {#query-parameters}
+## 查詢參數{#query-parameters}
 
 <table>
  <tbody>
@@ -32,10 +32,10 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
    <td><strong>說明<br /> </strong></td>
   </tr>
   <tr>
-   <td>函式<br /> </td>
-   <td><p>指定要調用的函式。 要搜索表單，請將屬性的 <code>func </code>值設定為 <code>searchForms</code>。</p> <p>例如， <code class="code">
+   <td>func<br /> </td>
+   <td><p>指定要調用的函式。 要搜索表單，請將<code>func </code>屬性的值設定為<code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此參數為強制參數。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此參數為必填參數。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
@@ -50,12 +50,12 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
     </ul> </td>
   </tr>
   <tr>
-   <td>關係<br /> </td>
+   <td>relation<br /> </td>
    <td>指定要讀取的相關資產以及搜尋結果。 您可以選擇下列其中一個選項來擷取相關資產：
     <ul>
-     <li><strong>NO_RELATION</strong>: 請勿擷取相關資產。</li>
-     <li><strong>立即</strong>: 擷取與搜尋結果直接相關的資產。</li>
-     <li><strong>全部</strong>: 直接及間接相關資產。</li>
+     <li><strong>NO_RELATION</strong>:請勿擷取相關資產。</li>
+     <li><strong>立即</strong>:擷取與搜尋結果直接相關的資產。</li>
+     <li><strong>全部</strong>:直接及間接相關資產。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -78,9 +78,9 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
        statement.put("value", "SimpleSurveyAF");
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上述範例中， </p>
     <ul>
-     <li><strong>名稱</strong>: 指定要搜索的屬性的名稱。</li>
-     <li><strong>值</strong>: 指定要搜索的屬性的值。</li>
-     <li><strong>運算元</strong>: 指定在搜索時應用的運算子。 支援下列運算子：
+     <li><strong>名稱</strong>:指定要搜索的屬性的名稱。</li>
+     <li><strong>值</strong>:指定要搜索的屬性的值。</li>
+     <li><strong>運算元</strong>:指定在搜索時應用的運算子。支援下列運算子：
       <ul>
        <li>EQ —— 等於 </li>
        <li>NEQ —— 不等於</li>
@@ -94,7 +94,7 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
        <li>ENDSWITH —— 如果B是A的結尾部分，則A以B結尾</li>
        <li>LIKE —— 實作LIKE運算子</li>
        <li>AND —— 合併多個陳述式</li>
-      </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ和LTEQ算子適用於線性類型的屬性，如LONG、DOUBLE和DATE。</em></p> </li>
+      </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ和LTEQ運算子適用於線性類型的屬性，例如LONG、DOUBLE和DATE。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -106,8 +106,8 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>名稱</strong>: 指定用於排序搜索結果的屬性的名稱。</li>
-     <li><strong>准則</strong>: 指定結果的順序。 order屬性接受以下值：
+     <li><strong>名稱</strong>:指定用於排序搜索結果的屬性的名稱。</li>
+     <li><strong>准則</strong>:指定結果的順序。order屬性接受以下值：
       <ul>
        <li>ASC —— 使用ASC以升序排列結果。<br /> </li>
        <li>DES —— 使用DES以降序排列結果。</li>
@@ -116,7 +116,7 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>指定是否檢索二進位內容。 該 <code>includeXdp</code> 屬性適用於類型、 <code>FORM</code>和 <code>PDFFORM</code>的資產 <code>PRINTFORM</code>。</td>
+   <td>指定是否檢索二進位內容。 <code>includeXdp</code>屬性適用於<code>FORM</code>、<code>PDFFORM</code>和<code>PRINTFORM</code>類型的資產。</td>
   </tr>
   <tr>
    <td>assetType</td>
@@ -125,7 +125,7 @@ AEM Forms提供以REST為基礎的搜尋API，讓網頁開發人員可用來查�
  </tbody>
 </table>
 
-## 請求範例 {#sample-request}
+## 請求範例{#sample-request}
 
 ```json
 func : searchForms
@@ -145,7 +145,7 @@ statements: [{"name":"name","value":"*Claim.xdp","operator":"CONTAINS"},
 orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 ```
 
-## 範例回應 {#sample-response}
+## 響應示例{#sample-response}
 
 ```json
 [
@@ -173,7 +173,7 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 * [啟用表單入口元件](/help/forms/using/enabling-forms-portal-components.md)
 * [建立表單入口網頁](/help/forms/using/creating-form-portal-page.md)
-* [使用API在網頁上列出表格](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [使用API列出網頁上的表單](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交元件](/help/forms/using/draft-submission-component.md)
 * [自訂草稿和提交表單的儲存](/help/forms/using/draft-submission-component.md)
 * [將草稿和提交元件與資料庫整合的示例](/help/forms/using/integrate-draft-submission-database.md)
