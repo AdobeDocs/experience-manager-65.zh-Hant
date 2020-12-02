@@ -10,11 +10,14 @@ topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 0%
 
 ---
 
 
-# 下載XFA或PDF表單範本 {#download-an-xfa-or-a-pdf-form-template}
+# 下載XFA或PDF表單範本{#download-an-xfa-or-a-pdf-form-template}
 
 如名稱所示，下載操作可讓您將表單從儲存庫導出到本地系統。 此操作與上載操作相結合，可幫助您將表單從一個儲存庫遷移到另一個儲存庫。
 
@@ -26,29 +29,29 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Forms支援個別下載這些表格類型，或在包含一或多個支援表格的檔案夾中下載。
 
-除了這些資產外，如果資 `Resource` 產存在於資料夾中，您也可以下載資產類型。 此功能可讓您下載XFA表單所參照的資源以及表單。
+除了這些資產外，如果`Resource`類型的資產存在於資料夾中，您也可以下載該資產。 此功能可讓您下載XFA表單所參照的資源以及表單。
 
-## 下載一或多個表格 {#download-one-or-more-forms}
+## 下載一或多個表單{#download-one-or-more-forms}
 
-1. 請登入AEM Forms使用者介面，網址為 `https://<server>:<port>/aem/forms.html`。
+1. 登入`https://<server>:<port>/aem/forms.html`的AEM Forms使用者介面。
 
 1. 導覽至您要下載的資產所在的位置。
 
-1. 選取資產。 按一下 **[!UICONTROL 工具]** 列 ![中的「下載aem6forms_download](assets/aem6forms_download.png) 」圖示。
+1. 選取資產。 按一下工具列中的&#x200B;**[!UICONTROL Download]** ![ aem6forms_download](assets/aem6forms_download.png)圖示。
 
    >[!NOTE]
    >
    >您只能選擇一個表單供下載。 如果您想要下載多個表格，則必須將其下載為資料夾。
 
-1. 在出現的對話方塊中，按一下「下 **[!UICONTROL 載」]**。
+1. 在出現的對話方塊中，按一下「下載&#x200B;**[!UICONTROL 」。]**
 
    AEM Forms會產生包含選取檔案或選取資料夾的ZIP檔案。
 
    如果您正在下載資料夾，資料夾內的受支援資產會下載至其現有階層。
 
-   ZIP檔案會儲存至您系 `Downloads` 統的資料夾。
+   ZIP檔案將保存到系統上的`Downloads`資料夾。
 
-## 上載操作的相關注意事項 {#related-considerations-for-the-upload-operation}
+## 上載操作{#related-considerations-for-the-upload-operation}的相關注意事項
 
 * 您可以將ZIP檔案上載到同一儲存庫或另一個儲存庫中的任何其他位置
 * 在上傳作業期間，資料夾中資產的階層會保留
