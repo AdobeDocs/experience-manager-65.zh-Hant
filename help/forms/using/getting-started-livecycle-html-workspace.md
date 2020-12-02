@@ -11,11 +11,14 @@ topic-tags: forms-workspace
 discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 translation-type: tm+mt
 source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+workflow-type: tm+mt
+source-wordcount: '1016'
+ht-degree: 0%
 
 ---
 
 
-# AEM Forms工作區快速入門 {#getting-started-with-aem-forms-workspace}
+# AEM Forms工作區{#getting-started-with-aem-forms-workspace}快速入門
 
 您可以使用AEM Forms工作區來執行下列工作：
 
@@ -23,7 +26,7 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 * 檢視指派給您或您有權存取的其他待辦事項清單的工作並採取行動
 * 追蹤屬於您啟動或參與之程式的工作
 
-## 導覽AEM Forms工作區 {#navigating-html-workspace}
+## 導覽AEM Forms工作區{#navigating-html-workspace}
 
 AEM Forms工作區使用者介面中顯示的項目，視您正在處理的程式和工作而定。 您隨時可能看不到「摘要」、「表單」、「詳細資料」、「歷史記錄」、「附件」或「附註」標籤，或本「說明」中說明的所有按鈕。
 
@@ -37,7 +40,7 @@ AEM Forms工作區使用者介面中顯示的項目，視您正在處理的程�
 * 在「歷史記錄」頁籤上，選擇一個任務以顯示該任務的「附件」和「分配」頁籤。
 * 使用Tab鍵、方向鍵和空格鍵，在AEM Forms工作區中導覽，毋需使用滑鼠。
 
-## 搭配螢幕閱讀程式使用AEM Forms工作區 {#using-html-workspace-with-screen-readers}
+## 搭配螢幕閱讀程式使用AEM Forms工作區{#using-html-workspace-with-screen-readers}
 
 AEM Forms工作區是網頁型HTML應用程式，與螢幕閱讀程式相容。 您可以使用鍵盤在AEM Forms工作區介面中導覽。
 
@@ -47,7 +50,7 @@ AEM Forms工作區是網頁型HTML應用程式，與螢幕閱讀程式相容。 
 * AEM Forms工作區中的所有導覽都是透過錨記進行，這些標籤可透過標籤輕鬆存取。
 * 表單可能需要數秒的時間載入。 螢幕閱讀程式無法聽見通知您表單已載入，您必須等候。
 
-## 使用鍵盤導覽AEM Forms工作區 {#navigating-html-workspace-using-a-keyboard}
+## 使用鍵盤{#navigating-html-workspace-using-a-keyboard}導覽AEM Forms工作區
 
 當您使用鍵盤導覽AEM Forms工作區時，導覽會符合HTML協助工具慣例。 在某些情況下，Tabbing順序不遵循典型的常規順序。 下列提示可協助您導覽介面：
 
@@ -57,24 +60,24 @@ AEM Forms工作區是網頁型HTML應用程式，與螢幕閱讀程式相容。 
 
    對於PDF表單，當您切換至表單結尾或提交表單時，游標焦點會跳至瀏覽器位址列。 您必須再次在功能表間切換（但不是整個表格），才能移至「另存為草稿」和「完成」等表格動作按鈕。 如果表單仍然開啟，您也可以在按鈕之前加上標籤，再回到表單中。
 
-## 管理偏好設定 {#managing-preferences}
+## 管理首選項{#managing-preferences}
 
 您可以在下列類別中設定各種AEM Forms工作區偏好設定：
 
-**離職：** 設定偏好設定，以控制在您離開辦公室時，如何指派工作給其他人。 請參 [閱設定離職偏好設定](todo-lists.md#setting-out-of-office-preferences)。
+**不在辦公室：設** 定偏好設定，以控制在您不在辦公室時如何指派工作給其他人。請參閱[設定離職偏好設定](todo-lists.md#setting-out-of-office-preferences)。
 
-**隊列：** 設定與其他使用者共用您的待辦事項清單或要求存取其他使用者清單的偏好設定。 請參 [閱使用組和共用隊列中的任務](todo-lists.md#working-with-tasks-from-group-and-shared-queues)。
+**佇列：設** 定與其他使用者共用待辦事項清單或要求存取其他使用者清單的偏好設定。請參閱[使用群組和共用佇列中的工作](todo-lists.md#working-with-tasks-from-group-and-shared-queues)。
 
-**UI設定：** 設定您與AEM Forms工作區互動的偏好設定。 請參 [閱設定用戶介面首選項](#set-user-interface-preferences)。
+**UI設定：設** 定您與AEM Forms工作區互動的偏好設定。請參閱[設定用戶介面首選項](#set-user-interface-preferences)。
 
-### 設定用戶介面首選項 {#set-user-interface-preferences}
+### 設定用戶介面首選項{#set-user-interface-preferences}
 
 在「偏好設定> UI Settings」標籤中設定使用者介面偏好設定。 可使用下列首選項。
 
-* **開始位置：** 指定當您登入AEM Forms工作區時顯示的頁面。 四個可用選項是「開始程式」、「待辦事項」、「追蹤」和「我的最愛」。
-* **註銷提示：** 指定在按一下「註銷」後是否提示您確認要註銷。
+* **開始位置：** 指定登入AEM Forms工作區時顯示的頁面。四個可用選項是「開始程式」、「待辦事項」、「追蹤」和「我的最愛」。
+* **註銷提示：** 指定在按一下「註銷」後是否提示您確認您要註銷。
 * **日期格式：** 指定AEM Forms工作區使用的日期顯示格式。
 * **時間格式**:指定在AEM Forms工作區中使用的時間顯示格式。
-* **通過電子郵件通知任務事件：** 指定您是否收到任務事件的電子郵件通知，包括任務分配、提醒和待辦清單和您所屬組待辦清單中的任務期限。
-* **在電子郵件中附加表格：** 指定表單副本是否附加到電子郵件通知消息。 附件僅支援PDF和XDP表單。
-* **定期儲存草稿：** 指定您的表單草稿是否定期自動儲存。 若要定期儲存草稿，請啟用此選項，並將自動儲存持續時間從1分鐘設為30分鐘。 當啟用自動儲存且使用者正在處理草稿時，草稿會在指定的分鐘數後定期儲存。 僅當自上次保存或自動保存後草稿中發生更改時，草稿才會自動保存。 當草稿儲存時，畫面上會出現警告訊息。
+* **透過電子郵件通知任務事件：指** 定您是否收到任務事件的電子郵件通知，包括任務分配、提醒和任務的期限，這些是待辦清單和您所屬的待辦事項組中的任務。
+* **在電子郵件中附加表** 單：指定表單副本是否附加至電子郵件通知訊息。附件僅支援PDF和XDP表單。
+* **定期儲存草稿：** 指定您的表單草稿是否定期自動儲存。若要定期儲存草稿，請啟用此選項，並將自動儲存持續時間從1分鐘設為30分鐘。 當啟用自動儲存且使用者正在處理草稿時，草稿會在指定的分鐘數後定期儲存。 僅當自上次保存或自動保存後草稿中發生更改時，草稿才會自動保存。 當草稿儲存時，畫面上會出現警告訊息。
