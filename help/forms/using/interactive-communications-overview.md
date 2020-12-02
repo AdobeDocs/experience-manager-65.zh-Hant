@@ -17,7 +17,7 @@ ht-degree: 5%
 ---
 
 
-# 互動式通訊概觀 {#interactive-communications-overview}
+# 互動式通訊概觀{#interactive-communications-overview}
 
 本文包括概述、範例使用案例、建立工作流程，以及互動式通訊與信函之間的差異。
 
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 互動式通訊可集中管理安全、個人化及互動式通訊的建立、組裝與傳遞，例如商業通訊、檔案、陳述、利益通知、行銷郵件、帳單和歡迎套件。
 
-## 主要功能 {#key-capabilities}
+## 關鍵功能{#key-capabilities}
 
 以下是互動式通訊的主要功能：
 
@@ -36,19 +36,19 @@ ht-degree: 5%
 * 代理用戶介面顯示互動式通信的打印和Web預覽
 * 拖放元件，以快速建構列印和網頁頻道
 
-## Interactive Communication creation  {#interactive-communication-creation}
+## 互動式通訊建立{#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
 ### 工作流程 {#workflow}
 
-若要建立互動式通訊，請準備好 [互動式通訊的](#buildingblocks) 「建立區塊」，然後完成下列步驟：
+要建立互動式通信，請準備好[用於互動式通信的構建塊](#buildingblocks)，然後完成以下步驟：
 
-1. 選擇建立 [互動式通訊](/help/forms/using/create-interactive-communication.md)。
+1. 選擇[建立互動式通信](/help/forms/using/create-interactive-communication.md)。
 
-1. 指定表 [單資料模型](/help/forms/using/data-integration.md)、預填服務，以 [及列印和網路頻道範本](/help/forms/using/web-channel-print-channel.md)。 您可以選擇從列印頻道產生網頁頻道。
+1. 指定[表單資料模型](/help/forms/using/data-integration.md)、預填服務，以及[列印和網路頻道範本](/help/forms/using/web-channel-print-channel.md)。 您可以選擇從列印頻道產生網頁頻道。
 
-1. 使用 [拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，視需要新增檔案片段、影像、元件以列印和網路通路。
+1. 使用[拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，視需要新增要列印的檔案片段、影像、元件和互動式通訊的Web頻道。
 1. 為插入的元件配置屬性，例如：
 
    1. [影像](/help/forms/using/create-interactive-communication.md#step2)
@@ -57,7 +57,7 @@ ht-degree: 5%
    1. [檔案片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. 預覽列印和網路頻道，並視需要編輯互動式通訊。
-1. 代理使用代理UI來準 [備Interactive Communication](/help/forms/using/prepare-send-interactive-communication.md) ，以便將它發送給收件人／後置進程。
+1. 代理使用代理UI來準備Interactive Communication[，以便將它發送到收件人／帖子進程。](/help/forms/using/prepare-send-interactive-communication.md)
 
 ### 建置區塊 {#buildingblocks}
 
@@ -67,11 +67,11 @@ ht-degree: 5%
 * [列印和網頁頻道範本](/help/forms/using/web-channel-print-channel.md)
 * [檔案片段](/help/forms/using/document-fragments.md)
 * 影像
-* [Web頻道](/help/forms/using/themes.md) 的主題
+* [適](/help/forms/using/themes.md) 用於Web頻道的Themes
 
-## 互動式通訊與通訊管理 {#interactive-communications-vs-correspondence-management}
+## 互動式通訊與通訊管理{#interactive-communications-vs-correspondence-management}
 
-互動式通訊是建立客戶通訊的預設和建議方式。 若要繼續使用AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您必須安 [裝相容套件](/help/forms/using/compatibility-package.md)。 以下是互動式通訊和信函功能的比較。
+互動式通訊是建立客戶通訊的預設和建議方式。 若要繼續使用在AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您需要[安裝相容性套件](/help/forms/using/compatibility-package.md)。 以下是互動式通訊和信函功能的比較。
 
 <table>
  <tbody>
