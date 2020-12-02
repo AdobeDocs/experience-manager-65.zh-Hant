@@ -11,6 +11,9 @@ discoiquuid: fb2b7ff6-6b29-425b-a86e-d1f80faab9e0
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 當您啟動AEM Forms應用程式時，首先需要提供您的登入認證和AEM Forms伺服器URL。
 
-## 若要啟動應用程式 {#to-start-the-app}
+## 啟動應用程式{#to-start-the-app}
 
 1. 在您的行動裝置上點選AEM Forms應用程式圖示。
 1. 若要登入應用程式，請輸入使用者名稱、密碼和AEM Forms伺服器URL。
@@ -32,7 +35,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    >    * 您可以選取要透過應用程式登入的AEM Forms伺服器URL。
 
 
-當您登入應用程式時，會將您導向至「首 [**頁&#x200B;**」畫面](../../forms/using/home-screen.md)。
+當您登入應用程式時，會將您導向至&#x200B;[**首頁**&#x200B;畫面](../../forms/using/home-screen.md)。
 
 >[!NOTE]
 >
