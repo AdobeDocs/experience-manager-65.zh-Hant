@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: f3b4d49b-5873-4825-91b9-71a3204516b1
 translation-type: tm+mt
 source-git-commit: 5d93296ddfa250ffae0c3cd51cf70642a94c9887
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 11%
 
 ---
 
 
 # 使用資產{#working-with-assets}
 
-「作 [者環境與工具](/help/sites-authoring/author-environment-tools.md) 」區段提供有關在編輯頁面時使用 [!UICONTROL Content Finder] 尋找和使用資產的資訊。 AEM Assets提供使用資產的其他方法：
+[作者環境與工具](/help/sites-authoring/author-environment-tools.md)區段提供有關使用[!UICONTROL 內容搜尋器]在編輯頁面時尋找與使用資產的資訊。 AEM Assets提供使用資產的其他方法：
 
 * [將Dynamic Media Classic功能新增至您的頁面](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
-* [使用動態媒體](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
+* [使用 Dynamic Media](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
 * [資產的命名慣例](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
 
