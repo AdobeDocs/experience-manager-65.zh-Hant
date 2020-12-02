@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 變更外觀(HBS) {#alter-the-appearance-hbs}
+# 變更外觀(HBS){#alter-the-appearance-hbs}
 
 現在，應用程式目錄(/apps)中自訂註解系統的元件已就緒，resourceSuperType會參照預設註解系統，並註冊自訂模型／檢視，因此可修改實施。
 
@@ -29,11 +29,11 @@ ht-degree: 0%
 >
 >若要使用擴充功能，受影響網站(/content)中之留言系統的例項必須將其resourceType設為自訂留言系統。
 
-## 修改HBS指令碼 {#modify-the-hbs-scripts}
+## 修改HBS指令碼{#modify-the-hbs-scripts}
 
-使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
+使用[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* Open [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* 開啟[/apps/custom/components/comments/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
    * 注釋掉包含評論貼文（~行21）之頭像的標籤：
 
@@ -43,7 +43,7 @@ ht-degree: 0%
          -->
       ```
 
-* Open [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* 開啟[/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
    * 注釋掉包含頭像的標籤，以供下一個注釋項目使用(~ line 44):
 
@@ -53,9 +53,9 @@ ht-degree: 0%
          -->
       ```
 
-* 選擇「 **全部保存」**
+* 選擇&#x200B;**全部保存**
 
-### 複製自訂應用程式 {#replicate-custom-app}
+### 複製自訂應用程式{#replicate-custom-app}
 
 修改應用程式後，必須重新複製自訂元件。
 
@@ -63,19 +63,19 @@ ht-degree: 0%
 
 * 從主菜單
 
-   * 選擇「 **[!UICONTROL 工具]** 」>「 **[!UICONTROL 操作]** 」 **[!UICONTROL >「復]**&#x200B;制」。
-   * 選擇「 **[!UICONTROL 激活樹]**」。
-   * 設 `Start Path` 為 `/apps/custom`。
-   * 取消選 **[!UICONTROL 擇僅修改]**。
-   * 選擇「 **[!UICONTROL 啟動]** 」按鈕。
+   * 選擇&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 複製]**。
+   * 選擇&#x200B;**[!UICONTROL 激活樹]**。
+   * 將`Start Path`設為`/apps/custom`。
+   * 取消選擇&#x200B;**[!UICONTROL 僅修改]**。
+   * 選擇&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。
 
-### 在發佈的範例頁面上檢視已修改的註解 {#view-modified-comment-on-published-sample-page}
+### 在已發佈範例頁面上檢視已修改的註解{#view-modified-comment-on-published-sample-page}
 
-[繼續在發佈例項](/help/communities/extend-sample-page.md#publish-sample-page) （仍以相同使用者的身分登入）上的體驗，現在可以在發佈環境中重新整理頁面，以檢視修改以移除頭像：
+[繼續發](/help/communities/extend-sample-page.md#publish-sample-page) 布例項的體驗，仍以相同使用者的身分登入，現在可以在發佈環境中重新整理頁面，以檢視修改以移除頭像：
 
 ![視圖——修改內容](assets/view-modified-content.png)
 
-### 範例注釋擴充功能套件 {#sample-comment-extension-package}
+### 注釋擴展包{#sample-comment-extension-package}示例
 
 附加是本教學課程中建立的自訂註解應用程式套件。
 
