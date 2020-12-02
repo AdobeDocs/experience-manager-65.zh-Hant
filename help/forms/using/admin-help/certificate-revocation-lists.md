@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9744cc2d-5e6b-4341-9270-43d479bdca04
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '154'
+ht-degree: 1%
 
 ---
 
 
-# 管理憑證轉換清單{#managing-certificate-revocationlists}
+# 管理憑證重設清單{#managing-certificate-revocationlists}
 
 使用信任商店管理，您可以匯入、編輯和刪除憑證撤銷清單(CRL)。 支援Base64和DER編碼的憑證撤銷清單。
 
