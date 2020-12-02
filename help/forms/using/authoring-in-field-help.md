@@ -10,6 +10,9 @@ discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 本文討論表單作者在製作最適化表單時如何新增內容相關說明。
 
-## 新增內容相關說明 {#add-in-context-help}
+## 新增內容相關說明{#add-in-context-help}
 
 您可以使用側邊欄屬性標籤的「說明內容」區段中的下列選項，來指定內容相關說明。
 
@@ -35,7 +38,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 >
 >詳細說明會覆寫「簡短說明」。 如果您同時指定了兩者，則只會顯示「詳細說明」。
 
-### Short description {#short-description}
+### 簡短說明{#short-description}
 
 「簡短說明」欄位是提供填入表單欄位的快速和簡短提示。 將滑鼠暫留在欄位上時，「簡短說明」欄位中指定的文字會顯示為工具提示。
 
@@ -43,27 +46,27 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 >[!NOTE]
 >
->選擇「 **永遠顯示簡短說明** 」，在欄位下方永久顯示說明文字。
+>選擇&#x200B;**一律顯示簡短說明**&#x200B;以永久顯示欄位下方的說明文字。
 
 ![欄位下方的永久簡短內容相關說明](assets/short1.png)
 
-### Long description {#long-description}
+### 詳細說明{#long-description}
 
 您可以使用「詳細說明」欄位來指定長篇文字或內嵌多媒體內容，包括視訊，做為內容相關說明。 例如，下圖顯示如何將視訊內嵌為內容相關說明。
 
 ![新增豐富式媒體作為表格欄位的內容相關說明](assets/long-descriptions.png)
 
-新增詳細說明會顯示 **?** 表徵圖。 按一下圖示會顯示在詳細說明區段中新增的內容。
+新增詳細說明會顯示&#x200B;**?** 表徵圖。按一下圖示會顯示在詳細說明區段中新增的內容。
 
 ![豐富式媒體內容相關說明範例](assets/photoshop.png)
 
-### 面板層級說明 {#panel-level-help}
+### 面板級幫助{#panel-level-help}
 
 除了表格欄位的內容相關說明外，您也可以在面板編輯對話方塊的「說明內容」索引標籤中，在面板層級指定說明。
 
 ![新增表格面板的內容相關說明](assets/panel-level-help.png)
 
-新增面板說明時，會顯示 **?** 表徵圖。 按一下圖示會顯示在面板編輯對話方塊的「說明內容」區段中新增的內容。
+新增面板說明會顯示&#x200B;**?** 表徵圖。按一下圖示會顯示在面板編輯對話方塊的「說明內容」區段中新增的內容。
 
 ![表單面板層級的內容相關說明範例](assets/photoshop-1.png)
 
