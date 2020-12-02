@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
 source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+workflow-type: tm+mt
+source-wordcount: '310'
+ht-degree: 0%
 
 ---
 
@@ -21,21 +24,21 @@ Tally是抽象類別，提供一套標準方法，可收集會員對特定產品
 
 可通過擴展抽象計數類來建立自定義計數元件。
 
-[贊](essentials-liking.md) ，是一種簡單的表達正面意見的方式，
+[](essentials-liking.md) Liking是一種簡單的表達積極意見的統計。
 
-[投票](essentials-voting.md) ，是一種簡單的表達正面或負面意見的表決方式。
+[沃](essentials-voting.md) 廷格是一種簡單的表達正面或負面意見的方式。
 
-[評分](rating-basics.md) (Rating)是指使用星型系統來表達從正面到負面的一系列意見的統計。
+[Rating是](rating-basics.md) 一種實施統計的方法，它使用星型系統來表達從正面到負面的一系列觀點。
 
 自AEM 6.1起，民調問答元件不再可用。
 
-[Reviews](reviews-basics.md) 是SCF元件，是注釋和評 [分的](essentials-comments.md) 混合 [](rating-basics.md)。
+[回](reviews-basics.md) 顧SCF元件，它是注釋和評 [](essentials-comments.md) 分的 [混合](rating-basics.md)。
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [計數API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -43,19 +46,19 @@ Tally是抽象類別，提供一套標準方法，可收集會員對特定產品
 
 * [伺服器端自訂](server-customize.md)
 
-### 存取已張貼的記錄(UGC) {#accessing-posted-tallies-ugc}
+### 存取已張貼的記錄(UGC){#accessing-posted-tallies-ugc}
 
 UGC應使用其中一種標準的協調方法來協調。
-請參 [閱協調使用者產生的內容](moderate-ugc.md)。
+請參閱[協調使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括程式化存取UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用[通用商店](working-with-srp.md)做為UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP），都可程式化存取UGC。
 
 **UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
 
 請參閱：
 
 * [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP實用程式方法和示例。
+* [使用SRP](accessing-ugc-with-srp.md) -編碼准則存取UGC。
 * [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
