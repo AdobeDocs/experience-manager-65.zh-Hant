@@ -11,16 +11,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1220'
+ht-degree: 0%
 
 ---
 
 
-# 管理已邀請和本機使用者帳戶 {#managing-invited-and-local-user-accounts}
+# 管理已邀請和本地用戶帳戶{#managing-invited-and-local-user-accounts}
 
 使用「已邀請的使用者」和「本機使用者」頁面來管理已邀請的使用者和本機使用者。 只有在符合下列要求時，才會顯示此頁面：
 
-* 您是管理員，被指派為Document Security Manage Incomted and Local Users角色和管理控制台用戶角色。 (請參 [閱建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。)
-* 已啟用邀請的使用者註冊。 (請參閱 [設定邀請的使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。)
+* 您是管理員，被指派為Document Security Manage Incomted and Local Users角色和管理控制台用戶角色。 （請參閱[建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。）
+* 已啟用邀請的使用者註冊。 （請參閱[設定邀請的使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
 
 「已邀請」和「本機使用者」頁面包含兩個標籤，您可用來搜尋、檢視、編輯、鎖定、解除鎖定和刪除已邀請的使用者帳戶和本機使用者帳戶。
 
@@ -30,18 +33,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >邀請的使用者也可以直接透過檔案安全性參考的LDAP目錄新增，或當使用者或管理員在建立或編輯原則時邀請新使用者時，則可啟動註冊邀請電子郵件。 如果您啟用「已邀請的用戶註冊」頁面上的「啟用已邀請的用戶註冊」選項，用戶可以將新的已邀請用戶添加到策略。
 
-## 新增已邀請的使用者 {#add-an-invited-user}
+## 新增已邀請的使用者{#add-an-invited-user}
 
 您一次可以新增一或多個受邀使用者帳戶，以記錄安全性。 若要新增已邀請的使用者帳戶，您需要使用者的電子郵件地址。 當您新增使用者時，檔案安全性會傳送一封邀請使用者註冊的註冊電子郵件。
 
 1. 在管理主控台中，按一下「服務> Document Security >已邀請和本機使用者」，然後按一下「邀請新使用者」。
 1. 輸入您要邀請之使用者的電子郵件地址。 在一行中輸入多個地址，以逗號分隔。
 
-   啟用邀請的使用者註冊時建立的訊息會傳送給使用者。 (請參閱 [設定邀請的使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。)
+   啟用邀請的使用者註冊時建立的訊息會傳送給使用者。 （請參閱[設定邀請的使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
 
 1. 按一下「確定」。
 
-## 檢視本機使用者的相關資訊 {#view-information-about-a-local-user}
+## 查看有關本地用戶{#view-information-about-a-local-user}的資訊
 
 您可以檢視有關本機使用者的資訊，包括姓名、電子郵件地址、組織、註冊狀態和網域。
 
@@ -50,7 +53,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    會顯示使用者詳細資訊，您可以重設使用者密碼並停用帳戶。
 
-## 傳送電子郵件給未註冊的外部使用者 {#send-an-email-to-an-unregistered-external-user}
+## 傳送電子郵件給未註冊的外部用戶{#send-an-email-to-an-unregistered-external-user}
 
 當您新增受邀的使用者時，檔案安全性會自動傳送註冊電子郵件要求給使用者。 您也可以手動產生註冊電子郵件，以傳送給尚未註冊的受邀使用者。 例如，您可能想要在受邀使用者的註冊電子郵件過期時傳送新邀請。
 
@@ -58,17 +61,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在使用者清單中，選取每個使用者要傳送註冊電子郵件給的核取方塊，然後按一下「重新傳送邀請電子郵件」。
 1. 查看所選用戶的清單，然後按一下「確定」。
 
-## 重設本機使用者密碼 {#reset-a-local-user-password}
+## 重設本地用戶密碼{#reset-a-local-user-password}
 
-您可以重設已啟用的已邀請使用者的密碼，這些使用者已使用Document security註冊，但忘記密碼。 當您重設密碼時，會產生包含使用者新暫時密碼的電子郵件。
+您可以重設已啟用的已邀請使用者的密碼，這些使用者已使用Document Security註冊，但忘記密碼。 當您重設密碼時，會產生包含使用者新暫時密碼的電子郵件。
 
-當您啟用邀請的使用者註冊程式時，會建立電子郵件訊息，並傳送給使用者提示他們重設密碼。 (請參閱 [設定邀請的使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。)
+當您啟用邀請的使用者註冊程式時，會建立電子郵件訊息，並傳送給使用者提示他們重設密碼。 （請參閱[設定邀請的使用者註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
 
 1. 在管理主控台中，按一下「服務> Document Security >已邀請和本機使用者」，然後按一下「本機使用者」標籤。
 1. 在用戶清單中，選擇適當的用戶。
 1. 在「管理本機使用者」頁面上，按一下「重設密碼」，然後按一下「確定」。 系統會傳送包含新密碼的重設密碼電子郵件給使用者。
 
-## 啟用或禁用用戶帳戶 {#enable-or-disable-a-user-account}
+## 啟用或禁用用戶帳戶{#enable-or-disable-a-user-account}
 
 您可以停用本機使用者帳戶，以暫時限制使用者登入檔案安全性。 當您停用帳戶時，使用者將無法使用受原則保護的檔案或建立或套用原則。
 
@@ -86,7 +89,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在用戶清單中，選擇適當的用戶。
 1. 在「本機使用者詳細資料」頁面上，按一下「帳戶啟用」。
 
-## 移除已邀請的使用者帳戶 {#remove-an-invited-user-account}
+## 移除已邀請的使用者帳戶{#remove-an-invited-user-account}
 
 您可以從檔案保全中刪除已邀請的使用者帳戶。 例如，當使用者變更其個人電子郵件帳戶資訊時，您可能會想要刪除帳戶。
 
@@ -99,28 +102,28 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在管理主控台中，按一下「服務> Document Security >已邀請的使用者和本機使用者」，然後按一下「已邀請的使用者」標籤。
 1. 選取一或多個使用者旁的核取方塊，按一下「刪除」，然後按一下「確定」。
 
-## 搜尋已邀請的使用者帳戶 {#search-for-an-invited-user-account}
+## 搜尋已邀請的使用者帳戶{#search-for-an-invited-user-account}
 
 您可以使用電子郵件地址來搜尋已邀請的使用者帳戶。
 
 1. 在管理主控台中，按一下「服務> Document Security >已邀請和本機使用者」。
 1. 在「尋找電子郵件」方塊中，輸入使用者的電子郵件地址，然後按一下「尋找」。
 
-## 搜尋本機使用者帳戶 {#search-for-a-local-user-account}
+## 搜索本地用戶帳戶{#search-for-a-local-user-account}
 
 您可以使用使用者的電子郵件地址或名稱及網域來搜尋本機使用者。
 
 1. 在管理主控台中，按一下「服務> Document Security >已邀請和本機使用者」，然後按一下「本機使用者」標籤。
 1. 在「尋找」方塊中輸入搜尋准則，選取「名稱」或「電子郵件」，然後按一下「尋找」。
 
-## 移除本機使用者帳戶 {#remove-a-local-user-account}
+## 刪除本地用戶帳戶{#remove-a-local-user-account}
 
 您可以從檔案安全性中刪除本機使用者帳戶。 例如，當使用者變更其個人電子郵件帳戶資訊時，您可能會想要刪除帳戶。
 
 1. 在管理主控台中，按一下「服務> Document Security >已邀請和本機使用者」，然後按一下「本機使用者」標籤。
 1. 選取一或多個使用者旁的核取方塊，按一下「刪除」，然後按一下「確定」。
 
-## 排序用戶清單 {#sort-the-user-list}
+## 對用戶清單{#sort-the-user-list}排序
 
 您可以更輕鬆地依欄標題排序使用者清單。 欄標題旁的三角形圖示指出目前用來排序的欄：
 
