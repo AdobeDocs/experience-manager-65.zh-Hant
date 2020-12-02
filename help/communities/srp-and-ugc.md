@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-如果不熟悉儲存資源提供商(SRP)及其與用戶生成內容(UGC)的關係，請訪問 [社區內容儲存](working-with-srp.md)[和儲存資源提供商概述](srp.md)。
+如果不熟悉儲存資源提供商(SRP)及其與用戶生成內容(UGC)的關係，請訪問[社區內容儲存](working-with-srp.md)和[儲存資源提供商概述](srp.md)。
 
 本文檔的這一部分提供了有關SRP和UGC的一些基本資訊。
 
@@ -38,15 +38,15 @@ SRP API不是抽象類，它是介面。 自訂實作不應輕易進行，因為
 
 使用SRP API的方式是透過提供的公用程式，例如SocialResourceUtilities套件中的公用程式。
 
-從AEM 6.0或更舊版本升級時，必須移轉所有SRP的UGC，而Open Source工具可供使用。 請參 [閱「升級至AEM Communities 6.3」](upgrade.md)。
+從AEM 6.0或更舊版本升級時，必須移轉所有SRP的UGC，而Open Source工具可供使用。 請參閱[升級至AEM Communities 6.3](upgrade.md)。
 
 >[!NOTE]
 >
 >過去，SocialUtils套件中會找到用於存取UGC的公用程式，而SocialUtils套件已不再存在。
 >
->如需取代公用程式，請參 [閱SocialUtils重構](socialutils.md)。
+>如需取代公用程式，請參閱[SocialUtils Reforcating](socialutils.md)。
 
-## 訪問UGC的實用方法 {#utility-method-to-access-ugc}
+## 訪問UGC {#utility-method-to-access-ugc}的實用方法
 
 若要存取UGC，請使用SocialResourceUtilities套件中的方法，傳回適合從SRP存取UGC的路徑，並取代SocialUtils套件中找到的已過時方法。
 
@@ -65,15 +65,15 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-如需其他SocialUtils替代項目，請參 [閱SocialUtils重構](socialutils.md)。
+如需其他SocialUtils替代項目，請參閱[SocialUtils重構](socialutils.md)。
 
-如需編碼准則，請造 [訪使用SRP存取UGC](accessing-ugc-with-srp.md)。
+有關編碼准則，請造訪[使用SRP存取UGC](accessing-ugc-with-srp.md)。
 
 >[!CAUTION]
 >
->返回的路徑resourceToUGCStoragePath()不 *適* 於 [ACL檢查](srp.md#for-access-control-acls)。
+>返回的路徑resourceToUGCStoragePath()為&#x200B;*not*，適合[ACL檢查](srp.md#for-access-control-acls)。
 
-## 訪問ACL的實用方法 {#utility-method-to-access-acls}
+## 訪問ACL的實用方法{#utility-method-to-access-acls}
 
 某些SRP實施（如ASRP和MSRP）將社區內容儲存在不提供ACL驗證的資料庫中。 卷影節點在本地儲存庫中提供可應用ACL的位置。
 
@@ -98,38 +98,38 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->resourceToACLPath()返回的路徑 *不適*[合用](#utility-method-to-access-acls) 於訪問UGC。
+>resourceToACLPath()返回的路徑為&#x200B;*not*，適合[訪問UGC](#utility-method-to-access-acls)本身。
 
-## 與UGC相關的儲存位置 {#ugc-related-storage-locations}
+## 與UGC相關的儲存位置{#ugc-related-storage-locations}
 
-以下儲存位置說明在使用JSRP或MSRP進行開發時可能會有幫助。 目前沒有UI可存取儲存在ASRP中的UGC，因為JSRP([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP（MongoDB工具）。
+以下儲存位置說明在使用JSRP或MSRP進行開發時可能會有幫助。 目前沒有UI可存取儲存在ASRP中的UGC，因為JSRP([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP（MongoDB工具）有UGC。
 
 **元件位置**
 
 當成員在發佈環境中輸入UGC時，他們會與AEM網站的元件互動。
 
-此類元件的示例是存在 [於「社群元件指南](http://localhost:4502/content/community-components/en/comments.html) 」站點 [中的注釋元件](components-guide.md) 。 本地儲存庫中注釋節點的路徑為：
+此類元件的示例是[注釋元件](http://localhost:4502/content/community-components/en/comments.html)，它存在於[社區元件指南](components-guide.md)站點中。 本地儲存庫中注釋節點的路徑為：
 
-* Component path = `/content/community-components/en/comments/jcr:content/content/includable/comments`
+* 元件路徑= `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **陰影節點位置**
 
-建立UGC還會建立 [一個影子節點](srp.md#about-shadow-nodes-in-jcr) ，以便應用必要的ACL。 到本地儲存庫中相應卷影節點的路徑是在元件路徑中預先放置卷影節點根路徑的結果：
+建立UGC還會建立[卷影節點](srp.md#about-shadow-nodes-in-jcr)，以應用所需的ACL。 到本地儲存庫中相應卷影節點的路徑是在元件路徑中預先放置卷影節點根路徑的結果：
 
 * 根路徑 = `/content/usergenerated`
-* 注釋陰影節點= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
+* 注釋卷影節點= `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC位置**
 
-UGC不是在這兩個位置中建立的，且僅應使用叫用SRP API的 [公用程式方法](#utility-method-to-access-ugc) 來存取。
+UGC不是在這兩個位置中建立的，只應使用[實用程式方法](#utility-method-to-access-ugc)訪問，該方法調用SRP API。
 
 * 根路徑 = `/content/usergenerated/asi/srp-choice`
 * JSRP的UGC節點= `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*請注意*，對於JSRP,UGC節點將只 *會出現* （作者或發佈）在輸入AEM例項上。 如果在發佈例項上輸入，則無法從作者的協調控制台進行協調。
+*請注意*，對於JSRP,UGC節點只 ** 會出現在輸入AEM例項的AEM例項（作者或發佈）上。如果在發佈例項上輸入，則無法從作者的協調控制台進行協調。
 
-## 相關資訊 {#related-information}
+## 相關資訊{#related-information}
 
 * [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [使用SRP](accessing-ugc-with-srp.md) -編碼准則存取UGC。
 * [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
