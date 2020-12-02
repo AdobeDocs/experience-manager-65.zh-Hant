@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '955'
+ht-degree: 3%
 
 ---
 
 
-# Acrobat Reader DC擴充功能使用的憑證類型 {#certificate-types-used-by-acrobat-reader-dc-extensions}
+# Acrobat Reader DC擴充功能{#certificate-types-used-by-acrobat-reader-dc-extensions}使用的憑證類型
 
 「憑證檢視器」提供下列憑證相關資訊：
 
@@ -24,7 +27,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 有效期
 * Acrobat Reader DC擴充功能的使用權限
 
-## 證書「友好」名稱 {#certificate-friendly-name}
+## 證書「友好」名稱{#certificate-friendly-name}
 
 Acrobat Reader DC擴充功能憑證的「好記」名稱是描述憑證屬性的字串，如下列範例所示：
 
@@ -32,17 +35,17 @@ ARE 2D條形碼完整生產V6.1 P8 0002054
 
 字串包含下列元素：
 
-**** 憑證類型：說明憑證所啟動的AEM表單模組，以及啟動的層級，例如ARE 2D Barcode Full。 有關可用證書類型的清單，請參閱「證書配置檔案」部分表格中的「類型」列。
+**憑證類型：** 說明憑證所啟動的AEM表單模組，以及啟動層級，例如ARE 2D Barcode Full。有關可用證書類型的清單，請參閱「證書配置檔案」部分表格中的「類型」列。
 
-**** 部署類型：指出憑證的預定用途，例如「生產」。 值可以是「評估」或「生產」。 有關與每個證書類型關聯的部署類型清單，請參閱「證書配置檔案」部分表格中的「部署類型」列。
+**部署類型：** 指出憑證的預定用途，例如「生產」。值可以是「評估」或「生產」。 有關與每個證書類型關聯的部署類型清單，請參閱「證書配置檔案」部分表格中的「部署類型」列。
 
-**** 使用權限版本：說明憑證可用於的使用權限演算法版本，例如V6.1。此版本不表示Acrobat或Acrobat Reader DC擴充功能的版本。
+**使用權限版** 本：說明憑證可用於的使用權限演算法版本，例如V6.1。此版本不表示Acrobat或Acrobat Reader DC擴充功能的版本。
 
-**** 描述檔代碼：描述檔程式碼是完整憑證屬性的速記說明，例如P8。 有關與每種檔案類型關聯的配置檔案代碼的清單，請參閱「證書配置檔案」部分表格中的「配置檔案代碼」列。
+**描述檔程** 式碼：描述檔程式碼是完整憑證屬性的速記說明，例如P8。有關與每種檔案類型關聯的配置檔案代碼的清單，請參閱「證書配置檔案」部分表格中的「配置檔案代碼」列。
 
-**** 序號：Adobe核發的每個憑證都會指派序號，例如0002054。 Adobe企業支援或Adobe企業客戶代表可以使用此序號，將憑證追蹤至特定產品訂單或OEM關係。
+**序號：** Adobe核發的每個憑證都會指派序號，例如0002054。Adobe企業支援或Adobe企業客戶代表可以使用此序號，將憑證追蹤至特定產品訂單或OEM關係。
 
-## 憑證設定檔 {#certificate-profiles}
+## 證書配置檔案{#certificate-profiles}
 
 下表列出您分析Acrobat Reader DC擴充功能憑證時可能遇到的憑證設定檔。
 
@@ -143,7 +146,7 @@ ARE 2D條形碼完整生產V6.1 P8 0002054
  </tbody>
 </table>
 
-## 有效期 {#validity-period}
+## 有效期{#validity-period}
 
 評估憑證會核發給客戶和開發人員，讓他們可以評估和開發產品的範例應用程式。 這些證書的有效期為60至90天。 它們會在問題資料之後的第二個月底到期。
 
@@ -151,13 +154,13 @@ ARE 2D條形碼完整生產V6.1 P8 0002054
 
 Adobe內部使用憑證可用於支援軟體開發、整合、建立原型和展示。 該等證書自發行日期起計有效期為兩年。
 
-生產憑證會核發給購買Acrobat Reader DC擴充功能的客戶。 這些憑證的有效期限為憑證授權機構(CA)所允許的最長期間，如「憑證設定檔 ** 」表格中的「最大值」所示。
+生產憑證會核發給購買Acrobat Reader DC擴充功能的客戶。 這些證書的有效期限為證書頒發機構(CA)所允許的最長期限，如「證書配置檔案」(Certificate Profiles)表中的&#x200B;*Max*&#x200B;所示。
 
-## Acrobat Reader DC擴充功能的使用權限 {#acrobat-reader-dc-extensions-usage-rights}
+## Acrobat Reader DC擴充功能使用權限{#acrobat-reader-dc-extensions-usage-rights}
 
 當您在憑證檢視器中檢查Acrobat Reader DC擴充功能憑證時，可以從「詳細資訊」標籤（如果已設定）中選取使用權限項目，以查看憑證可啟用的Adobe Reader使用權限明細清單。 在特定文檔上啟用的使用權限可以是由證書啟用的使用權限的子集。
 
-如果非協作環境中需要線上註解，請聯絡Adobe支援以取得詳細資訊。 Mode屬性與部署類型相符，是生產 *或**評估*。
+如果非協作環境中需要線上註解，請聯絡Adobe支援以取得詳細資訊。 Mode屬性與部署類型相符，且為&#x200B;*production*&#x200B;或&#x200B;*evaluation*。
 
 允許的Acrobat Reader DC擴充功能使用權限包含一或多個特定元素。 這些元素會以不同的組合來使用，以達成各種授權產品功能。
 
@@ -191,7 +194,7 @@ Adobe內部使用憑證可用於支援軟體開發、整合、建立原型和展
   </tr>
   <tr>
    <td><p>簽署</p></td>
-   <td><p>數位簽署並儲存PDF檔案，並清除數位簽名。</p></td>
+   <td><p>數位簽署和儲存PDF檔案，並清除數位簽章。</p></td>
   </tr>
   <tr>
    <td><p>AnnotModify</p></td>
