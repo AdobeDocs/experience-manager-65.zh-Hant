@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 製作{#authoring}
 
-## 製作（和發佈）的概念 {#concept-of-authoring-and-publishing}
+## 製作（和發佈）的概念{#concept-of-authoring-and-publishing}
 
 AEM提供您兩種環境：
 
@@ -39,9 +39,9 @@ AEM提供您兩種環境：
 
 在作者環境中，AEM的功能可透過兩個UI使用。 針對發佈環境，您設計的整個介面外觀和感覺都提供給您的使用者。
 
-### 作者環境 {#author-environment}
+### 作者環境{#author-environment}
 
-作者的工作環境稱為作 **者環境**。 這為建立內容提供了易於使用的介面(圖形用戶介面（GUI或UI）)。 它通常位於提供完整保護的公司防火牆後方，並要求作者使用已指派適當存取權限的帳戶登入。
+作者在&#x200B;**author環境**&#x200B;中工作。 這為建立內容提供了易於使用的介面(圖形用戶介面（GUI或UI）)。 它通常位於提供完整保護的公司防火牆後方，並要求作者使用已指派適當存取權限的帳戶登入。
 
 >[!NOTE]
 >
@@ -65,15 +65,15 @@ AEM提供您兩種環境：
 
 >[!NOTE]
 >
->AEM也由作 [者環境](/help/sites-administering/home.md) （針對大部分工作）管理。
+>AEM也是[從作者環境管理的](/help/sites-administering/home.md)（針對大部分工作）。
 
-#### 發佈環境 {#publish-environment}
+#### 發佈環境{#publish-environment}
 
-準備就緒後，AEM網站的內容會發佈至發 **布環境**。 在這裡，網站的頁面會根據設計介面的外觀和感覺提供給預期的讀者。
+準備就緒後，AEM網站的內容會發佈至&#x200B;**發佈環境**。 在這裡，網站的頁面會根據設計介面的外觀和感覺提供給預期的讀者。
 
 通常，發佈環境位於非軍事區內；換言之，它可供Internet使用，但不再受到內部網路的完全保護。
 
-當AEM網站是社群網站 [，或包含](/help/communities/overview.md)Communities元件時 [](/help/communities/author-communities.md)，登入網站訪客（成員）可能會與社群功能互動。 例如，他們可張貼至論壇、張貼意見或關注其他成員。 會員可以獲得執行通常限於作者環境的活動的權限，例如建立新頁面（社群群組）、部落格文章，以及協調其他成員的貼文。
+當AEM網站是[社群網站](/help/communities/overview.md)，或包含[社群元件](/help/communities/author-communities.md)時，登入網站訪客（成員）可能會與社群功能互動。 例如，他們可張貼至論壇、張貼意見或關注其他成員。 會員可以獲得執行通常限於作者環境的活動的權限，例如建立新頁面（社群群組）、部落格文章，以及協調其他成員的貼文。
 
 >[!NOTE]
 >
@@ -95,4 +95,4 @@ AEM提供您兩種環境：
 
 #### Dispatcher {#dispatcher}
 
-為了最佳化網站訪客的效能，Dispatcher **[實作](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** 負載平衡和快取。
+為了最佳化網站訪客的效能，**[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)**&#x200B;實作負載平衡和快取。
