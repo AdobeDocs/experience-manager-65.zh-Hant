@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 0%
 
 ---
 
@@ -25,21 +28,21 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 若要執行下列範例，您將需要使用Xcode執行OSx(Mac)的系統，或使用安裝Android SDK的Mac/Win/Linux系統。
 
-## 引導您的開發環境 {#bootstrap-your-development-environment}
+## 引導您的開發環境{#bootstrap-your-development-environment}
 
 [設定PhoneGap CLI](https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
 針對iOS:若要針對iPhone和iPad進行開發，您需要Apple的Xcode IDE。
 
-* 在這裡免費下 [載](https://developer.apple.com/xcode/downloads/)。
+* 免費下載[這裡](https://developer.apple.com/xcode/downloads/)。
 * [PhoneGap iOS平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
 針對Android:若要針對iPhone和iPad進行開發，您需要使用Google的Android Stuido IDE。
 
-* 在這裡免費下 [載](https://developer.android.com/sdk/index.html)。
-* [PhoneGap android平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
+* 免費下載[這裡](https://developer.android.com/sdk/index.html)。
+* [PhoneGap Android平台指南](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
-## 下載來源 {#download-the-source}
+## 下載源{#download-the-source}
 
 在您成功啟動開發環境後，請從「AEM App Build Tile」（AEM應用程式組建圖格）下載來源：
 
@@ -56,18 +59,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >開發來源包含應用程式的最新狀態，同時包含未暫存的變更。 使用「測試」來源建立要送出至應用程式商店廠商的發行申請。
 >
->如果您從未儲存應用程式，選取「測試」將會觸發測試工作流程(提示：這將會在AppStore和Google playStore中的PhoneGap Enterprise Viewer應用程式中顯示為分段應用程式)。
+>如果您從未儲存應用程式，選取「測試」將會觸發測試工作流程(提示：這將會在AppStore和Google PlayStore中的PhoneGap Enterprise Viewer應用程式中顯示為分段應用程式)。
 
 * 按一下「下載」並儲存ZIP至您的電腦。
 * 將下載的zip檔案解壓縮至您的工作區。
 
-## 建立和載入應用程式（從來源） {#build-and-load-the-app-from-source}
+## 建立並載入應用程式（從來源）{#build-and-load-the-app-from-source}
 
 PhoneGap CLI可以建立平台專案、編譯來源，並以單一命令部署應用程式。
 
 >[!NOTE]
 >
->您可以分別執行這些步驟，請參 [閱PhoneGap CLI檔案](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/)。
+>您可以分別執行這些步驟，請參閱[PhoneGap CLI文檔](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/)。
 
 1. 請確定您已安裝PhoneGap CLI，請參閱上文。
 1. 在控制台（或終端機）視窗中，導覽至擷取來源的根目錄。
@@ -91,15 +94,16 @@ phonegap run ios
 >1. 導覽至helloWorld(cd helloWorld)
 >1. 執行&#39;phonegap run android（或如上所示，以ios取代android）。
 >1. 模擬器會開啟，執行您新建立的PhoneGap應用程式，如果JavaScript原生橋接器運作正常，則會說「裝置就緒」。
+
 >
 >
 這將驗證您的PhoneGap CLI開發環境是否已正常啟動並正常運行。
 
-## 使用Safari和IOS除錯來除錯Javascript {#debug-javascripts-with-safari-and-ios-debug}
+## 使用Safari和IOS除錯{#debug-javascripts-with-safari-and-ios-debug}對Javascripts進行除錯
 
 您可以使用Safari的開發人員工具來除錯應用程式的JavaScript，就像使用Web應用程式一樣。
 
-## 啟用Safari開發人員工具 {#enable-safari-developer-tools}
+## 啟用Safari Developer Tools {#enable-safari-developer-tools}
 
 若要啟用開發人員工具：
 
@@ -137,7 +141,7 @@ phonegap run <platform> --emulator
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
-## 使用Safari的Web Inspector對JavaScript進行除錯 {#debug-javascript-with-safari-s-web-inspector}
+## 使用Safari的Web Inspector {#debug-javascript-with-safari-s-web-inspector}對JavaScript進行除錯
 
 您可以在來源中的任意位置設定中斷點。 當您與模擬器或裝置互動時，應用程式的執行將停止在這些中斷點處。 您可以逐步執行並檢查變數中的值。
 
@@ -156,6 +160,6 @@ phonegap run <platform> --emulator
 >
 >若要查看變數的值，請將滑鼠暫留在目前方法中。
 
-## 後續步驟 {#the-next-steps}
+## 後續步驟{#the-next-steps}
 
-在您瞭解使用PhoneGap CLI開發應用程式後，請參閱 [存取裝置功能](/help/mobile/phonegap-access-device-features.md)。
+一旦您瞭解了使用PhoneGap CLI開發應用程式的相關知識，請參閱[存取裝置功能](/help/mobile/phonegap-access-device-features.md)。
