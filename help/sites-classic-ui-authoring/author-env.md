@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 1%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->以下檔案著重於傳統UI。 如需有關在現代觸控式UI中製作內容的詳細資訊，請參閱標準 [的製作檔案](/help/assets/assets.md)。
+>以下檔案著重於傳統UI。 如需有關在現代觸控式UI中編寫內容的詳細資訊，請參閱[標準編寫檔案](/help/assets/assets.md)。
 
 作者環境允許您執行與以下內容相關的任務：
 
-* [編寫](/help/sites-authoring/author.md) (包括 [頁面編寫](/help/sites-authoring/qg-page-authoring.md) , [以及管理資產](/help/assets/assets.md))
+* [編寫](/help/sites-authoring/author.md) (包括 [頁](/help/sites-authoring/qg-page-authoring.md) 面製作和 [管理資產](/help/assets/assets.md))
 
-* [管理](/help/sites-administering/administer-best-practices.md) ，產生和維護網站內容時所需的工作
+* [管](/help/sites-administering/administer-best-practices.md) 理產生和維護網站內容時所需的工作
 
 提供兩個圖形使用者介面來達成此目的，這些介面可透過任何現代瀏覽器存取：
 
@@ -35,19 +38,22 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 它主要是綠色的。
    * 它是專為桌上型裝置所設計。
    * 它不再被維護。
-   * 以下檔案著重於此傳統UI。 如需有關在現代觸控式UI中製作內容的詳細資訊，請參閱標準 [的製作檔案](/help/sites-authoring/author.md)。
+   * 以下檔案著重於此傳統UI。 如需有關在現代觸控式UI中製作內容的詳細資訊，請參閱[標準製作檔案](/help/sites-authoring/author.md)。
+
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
 1. 觸控式UI
 
    * 這是現代、標準的AEM UI。
    * 它以灰色為主，介面簡潔平整。
-   * 它專為在觸控和桌上型裝置上使用而設計（針對觸控最佳化）。 所有裝置的外觀和感覺都相同，不過檢視和選 [取資源時](/help/sites-authoring/basic-handling.md) （點選與點選）略有不同。
-   * 如需如何 [使用觸控式UI來製作的詳細資訊](/help/sites-authoring/author.md) ，請參閱標準的編寫檔案。 以下檔案著重於傳統UI。
+   * 它專為在觸控和桌上型裝置上使用而設計（針對觸控最佳化）。 所有裝置的外觀和感覺都相同，不過[檢視和選取資源](/help/sites-authoring/basic-handling.md)略有不同（點選與點選）。
+   * 如需如何使用觸控式UI來製作內容的詳細資訊，請參閱[標準編寫檔案](/help/sites-authoring/author.md)。 以下檔案著重於傳統UI。
 
    * 桌面:
+
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
    * 平板電腦裝置（或桌上型電腦，寬度小於1024像素）:
+
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
