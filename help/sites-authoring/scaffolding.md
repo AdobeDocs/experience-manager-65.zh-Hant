@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 1%
 
 ---
 
@@ -23,5 +26,5 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->雖然有支架模 [式](/help/sites-authoring/author-environment-tools.md#page-modes) ，但是在傳統的UI中，支架的維護和建立以及從支架建立新頁面都會完成。 如需詳 [細資訊，請參閱](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) 「傳統UI製作檔案中的支架」。
+>雖然支架[模式](/help/sites-authoring/author-environment-tools.md#page-modes)已推出，但是在傳統的UI中，支架的維護和建立以及從支架建立新頁面都會完成。 如需詳細資訊，請參閱傳統UI製作檔案中的[Stawbler](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。
 
