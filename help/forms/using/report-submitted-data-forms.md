@@ -17,19 +17,19 @@ ht-degree: 4%
 ---
 
 
-# 在表單入口網站上處理提交表單的API {#apis-to-work-with-submitted-forms-on-forms-portal}
+# 在表單入口網站{#apis-to-work-with-submitted-forms-on-forms-portal}上處理提交表單的API
 
 AEM Forms提供API，您可用來查詢透過表單入口網站提交的表單資料。 此外，您也可以使用本檔案中說明的API，張貼意見或更新已提交表單的屬性。
 
 >[!NOTE]
 >
->將叫用API的使用者必須新增至審核者群組，如將提交審核者 [與表單建立關聯中所述](/help/forms/using/adding-reviewers-form.md)。
+>將調用API的用戶必須按[將提交審核者與表單關聯中所述添加到審核者組。](/help/forms/using/adding-reviewers-form.md)
 
 ## GET /content/forms/portal/submission.review.json?func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
 傳回所有合格表單的清單。
 
-### URL parameters {#url-parameters}
+### URL參數{#url-parameters}
 
 此API不需要其他參數。
 
@@ -63,7 +63,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 傳回所有已提交表單的詳細資料。 不過，您可使用URL參數來限制結果。
 
-### URL parameters {#url-parameters-1}
+### URL參數{#url-parameters-1}
 
 在請求URL中指定下列參數：
 
@@ -79,27 +79,27 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>offset</code> (可選)</td>
-   <td>指定結果集索引中的起始點。 預設值為 <strong>0</strong>。</td>
+   <td>指定結果集索引中的起始點。 預設值為<strong>0</strong>。</td>
   </tr>
   <tr>
    <td><code>limit</code> (可選)</td>
-   <td>限制結果數。 預設值為 <strong>30</strong>。</td>
+   <td>限制結果數。 預設值為<strong>30</strong>。</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> (可選)</td>
-   <td>指定對結果排序的屬性。 預設值為 <strong>jcr:lastModified</strong>，會根據上次修改的時間對結果排序。</td>
+   <td>指定對結果排序的屬性。 預設值為<strong>jcr:lastModified</strong>，它根據上次修改的時間對結果進行排序。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> (可選)</td>
-   <td>指定排序結果的順序。 預設值為 <strong>desc</strong>，會以遞減順序排序結果。 您可以指定 <code>asc</code> 以遞增順序排序結果。</td>
+   <td>指定排序結果的順序。 預設值為<strong>desc</strong>，它以降序排序結果。 您可以指定<code>asc</code>，以遞增順序排序結果。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (可選)</td>
-   <td>指定要包含在結果中的表單屬性的逗號分隔清單。 預設屬性為：<br /><code>formName</code>、 <code>formPath</code>、 <code>submitID</code>、 <code>formType</code>、 <code>jcr:lastModified</code>、 <code>owner</code></td>
+   <td>指定要包含在結果中的表單屬性的逗號分隔清單。 預設屬性為：<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>、 <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (可選)</td>
-   <td>在表單屬性中搜尋指定值，並傳回具有相符值的表單。 預設值為 <strong>""</strong>。</td>
+   <td>在表單屬性中搜尋指定值，並傳回具有相符值的表單。 預設值為<strong>""</strong>。</td>
   </tr>
  </tbody>
 </table>
@@ -133,7 +133,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 將注釋添加到指定的提交實例。
 
-### URL parameters {#url-parameters-2}
+### URL參數{#url-parameters-2}
 
 在請求URL中指定下列參數：
 
@@ -164,7 +164,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 傳回在指定的提交實例上張貼的所有注釋。
 
-### URL parameters {#url-parameters-3}
+### URL參數{#url-parameters-3}
 
 在請求URL中指定下列參數：
 
@@ -202,7 +202,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 更新指定已提交表單實例的指定屬性的值。
 
-### URL parameters {#url-parameters-4}
+### URL參數{#url-parameters-4}
 
 在請求URL中指定下列參數：
 
