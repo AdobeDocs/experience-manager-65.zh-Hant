@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4a3a2ad7-40b0-4f19-a012-167453f58bc2
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '150'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 如果您管理促銷活動（包括著陸頁面），您可能需要執行下列動作：
 
 * **定義區段** -您需要為目標內容定義區段和策略。
-* **為著陸頁面準備HTML** —— 著陸頁面可讓作者快速輕鬆地將設計和內容直接匯入AEM頁面。 您必須準備HTML，才能正確匯入資產。 在建立僅在限定時間內有效且需要快速建立的行銷著陸頁面時，著陸頁面很實用。
+* **為著陸頁面準備HTML**  —— 著陸頁面可讓作者快速輕鬆地將設計和內容直接匯入AEM頁面。您必須準備HTML，才能正確匯入資產。 在建立僅在限定時間內有效且需要快速建立的行銷著陸頁面時，著陸頁面很實用。
 * **與SiteCatalyst整合** -您可以將著陸頁面與SiteCatalyst整合。
 
 請參閱下列頁面：
