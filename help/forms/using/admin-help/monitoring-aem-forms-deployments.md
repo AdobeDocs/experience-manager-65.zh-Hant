@@ -18,20 +18,20 @@ ht-degree: 0%
 ---
 
 
-# 監控AEM表單部署 {#monitoring-aem-forms-deployments}
+# 監控AEM表單部署{#monitoring-aem-forms-deployments}
 
-您可以從系統層級和內部層級監控AEM表單部署。 您可以使用專業管理工具，例如HP OpenView、IBM Tivoli和CA UniCenter，以及名為 *JConsole的協力廠商JMX監視器* ，專門監控Java活動。 實施監控策略可改善AEM表單部署的可用性、可靠性和效能。
+您可以從系統層級和內部層級監控AEM表單部署。 您可以使用專業管理工具，例如HP OpenView、IBM Tivoli和CA UniCenter，以及名為&#x200B;*JConsole*&#x200B;的協力廠商JMX監視器，來專門監控Java活動。 實施監控策略可改善AEM表單部署的可用性、可靠性和效能。
 
-如需監控AEM表單部署的詳細資訊，請參 [閱「監控AEM表單部署的技術指南」](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf)。
+如需監控AEM表單部署的詳細資訊，請參閱[監控AEM表單部署的技術指南](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf)。
 
-## 使用MBeans進行監控 {#monitoring-using-mbeans}
+## 使用MBeans {#monitoring-using-mbeans}進行監控
 
 AEM表格提供兩個已註冊的MBean，可提供導覽和統計資訊。 以下是唯一支援整合和檢查的MBean:
 
-* **服務統計：** 此MBean提供有關服務名稱及其版本的資訊。
-* **OperationStatistics:** 此MBean提供每個表單伺服器服務的統計資料。 管理員可在此處獲取有關特定服務的資訊，如調用時間、錯誤數等。
+* **ServiceStatistic：此** MBean提供有關服務名稱及其版本的資訊。
+* **OperationStatistics:** 此MBean提供每個表單伺服器服務的統計資料。管理員可在此處獲取有關特定服務的資訊，如調用時間、錯誤數等。
 
-### ServiceStatisticMbean公共介面 {#servicestatisticmbean-public-interfaces}
+### ServiceStatisticMbean公共介面{#servicestatisticmbean-public-interfaces}
 
 ServiceStatistic MBean的以下公共介面可用於測試：
 
@@ -41,7 +41,7 @@ ServiceStatistic MBean的以下公共介面可用於測試：
  public int getMinorVersion();
 ```
 
-### OperationStatisticMbean公共介面 {#operationstatisticmbean-public-interfaces}
+### OperationStatisticMbean公共介面{#operationstatisticmbean-public-interfaces}
 
 OperationStatistic MBean的以下公共介面可用於測試：
 
@@ -69,43 +69,43 @@ OperationStatistic MBean的以下公共介面可用於測試：
  public void setExceptionMessage(String errorMessage);
 ```
 
-### MBean樹和操作統計資訊 {#mbean-tree-operation-statistics}
+### MBean樹和操作統計資訊{#mbean-tree-operation-statistics}
 
 使用JMX控制台(JConsole)，可使用OperationStatistic MBean的統計資訊。 這些統計資料是MBean的屬性，可在下列階層樹狀結構下導覽：
 
 **MBean樹**
 
-**Adobe網域名稱：** 取決於應用程式伺服器。 如果應用程式伺服器未定義網域，預設為adobe.com。
+**Adobe網域名稱：取** 決於應用程式伺服器。如果應用程式伺服器未定義網域，預設為adobe.com。
 
-**服務類型：** AdobeService是用來列出所有服務的名稱。
+**ServiceType:** AdobeService是用於列出所有服務的名稱。
 
-**AdobeServiceName:** 服務名稱或服務ID。
+**AdobeServiceName：服** 務名稱或服務ID。
 
 **版本：** 服務版本。
 
 **操作統計資訊**
 
-**調用時間：** 執行方法所花的時間。 這不包括請求序列化、從用戶端傳送至伺服器，以及取消序列化的時間。
+**調用時間：** 執行方法所花費的時間。這不包括請求序列化、從用戶端傳送至伺服器以及取消序列化的時間。
 
 **調用計數：** 調用服務的次數。
 
-**平均呼叫時間：** 自伺服器啟動以來已執行的所有調用的平均時間。
+**平均調用時間：** 自伺服器啟動以來已執行的所有調用的平均時間。
 
-**最大調用時間：** 自伺服器啟動以來執行的最長調用的持續時間。
+**最大調用時** 間：自伺服器啟動以來執行的最長調用的持續時間。
 
-**最小調用時間：** 自伺服器啟動以來執行的最短調用的持續時間。
+**最小調用時** 間：自伺服器啟動以來執行的最短調用的持續時間。
 
 **例外計數：** 導致失敗的調用數。
 
-**例外消息：** 發生的最後一個例外的錯誤消息。
+**例外消息：** 最後發生的例外的錯誤消息。
 
-**上次取樣日期時間：** 上次調用的日期。
+**上次抽樣日期時** 間：上次調用的日期。
 
 **時間單位：** 預設值為毫秒。
 
 若要啟用JMX監控，應用程式伺服器通常需要一些設定。 請參閱應用程式伺服器檔案以取得詳細資訊。
 
-### 如何設定開放JMX存取的範例 {#examples-of-how-to-set-up-open-jmx-access}
+### 如何設定開啟的JMX訪問{#examples-of-how-to-set-up-open-jmx-access}的示例
 
 **JBoss 4.0.3/4.2.0 —— 配置JVM啟動**
 
@@ -120,7 +120,7 @@ OperationStatistic MBean的以下公共介面可用於測試：
 
 **WebLogic 9.2 /10 —— 配置JVM啟動**
 
-1. 編輯位於下方的startWebLogic.bat檔案 `[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin`。
+1. 編輯位於`[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin`下方的startWebLogic.bat檔案。
 1. 查找JAVA_OPTS行並添加以下內容：
 
    ```shell
