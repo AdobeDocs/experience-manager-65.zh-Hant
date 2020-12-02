@@ -21,7 +21,7 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
 
 ## 獲得靈感。 隨時掌握最新資訊。
 
-[註冊](https://www.adobe.com/subscription/dynamic-media-newsletter.html) ，每月在您的收件匣中接收動態媒體電子報。
+[登入](https://www.adobe.com/subscription/dynamic-media-newsletter.html) 即可在您的收件匣中每月收到動態媒體電子報。
 
 ## 錯過了動態媒體電子報？
 
@@ -53,7 +53,7 @@ Experience League每月推出的Dynamic Media電子報旨在協助您快速上�
 
    >[!IMPORTANT]
    >
-   >我們想確定我們只傳送動態媒體電子報給想要收到它的人。 若要在此期刊之後繼續收到電子報，請在這裡注 [冊](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)。
+   >我們想確定我們只傳送動態媒體電子報給想要收到它的人。 若要在此期刊後繼續收到電子報，請在[這裡](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)註冊。
 
 * **[2020年2月，第二期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
