@@ -11,6 +11,9 @@ noindex: true
 redirecttarget: /content/help/en/experience-manager/6-4/mobile/using/administer-mobile-apps
 translation-type: tm+mt
 source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+workflow-type: tm+mt
+source-wordcount: '1332'
+ht-degree: 1%
 
 ---
 
@@ -25,21 +28,21 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 身為開發人員，您應熟悉儲存庫中的模型結構。 您可以根據應用程式需求建立自己的模型和實體。
 
-## 建立模型類型 {#creating-model-types}
+## 建立模型類型{#creating-model-types}
 
-在 */libs/settings/mobileapps/model-types下有兩種系統提供的型號類型*。 如果要覆蓋系統模型類型， *Mobileapps/model-types* node will need to be created under the configuration node you wish the override to on.
+在&#x200B;*/libs/settings/mobileapps/model-types*&#x200B;下有兩種系統提供的型號類型。 如果要覆蓋系統型號類型，則需要在您希望覆蓋發生在的配置節點下建立&#x200B;*mobileapps/model-types*&#x200B;節點。
 
-例如，如果您已在 */conf/myconf1* 和 */conf/myconf2* 上建立配置，並且希望僅覆蓋 *conf1上的系統模型類型，則您會在Conf1的設定下建立***** mobileapps/model-nodeNode。
+例如，如果您已在&#x200B;*/conf/myconf1*&#x200B;和&#x200B;*/conf/myconf2*&#x200B;上建立了配置，並希望僅覆蓋&#x200B;*conf1*&#x200B;上的系統型號類型，則應在&#x200B;*的設定下建立一個* mobileapps/model-types *節點a9/>。*
 
-如果要允許將資料類型添加到模型中，模型類型必須有一個名為「scq:Page」類型的子節點和資源類型為 *wcm/swables/components/swables*。
+如果要允許將資料類型添加到模型中，模型類型必須有一個名為「cq:Page」類型的子節點，並且資源類型為&#x200B;*wcm/swarble/components/swarble*。
 
-支架頁面也必須包含 *PageContent節點上的dataTypesConfig* 屬性，指出將允許使用此類型建立的資料類型模型。
+支架頁面也必須包含PageContent節點上的&#x200B;*dataTypesConfig*&#x200B;屬性，指出將允許使用此類型建立的資料類型模型。
 
 >[!NOTE]
 >
->「支 **架** 」是定義實體可根據模型編輯的資料類型的頁面。 您也可以設定每個資料類型，以定義欄位在UI中的呈現方式，以及資料值的保存方式。
+>**Shawblare**&#x200B;是定義實體可根據模型編輯的資料類型的頁面。 您也可以設定每個資料類型，以定義欄位在UI中的呈現方式，以及資料值的保存方式。
 
-### 資料類型設定 {#data-types-config}
+### 資料類型配置{#data-types-config}
 
 資料類型配置節點包含資料類型項的清單。 每個資料類型項指定資料類型在模型編輯器中的顯示方式，以及資料類型在最終由實體呈現時需要如何保存。
 
@@ -47,22 +50,22 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 |---|---|
 | fieldIcon | coralUI圖示類別，以表示資料類型 |
 | fieldPropResourceType | 用於顯示配置資料類型的所有屬性的元件 |
-| fieldProperties | fieldPropResourceType為 *mobileapps/caas/gui/components/models/editor/datatypes/field時使用的屬性元件多值清單* |
+| fieldProperties | fieldPropResourceType為&#x200B;*mobileapps/caas/gui/components/models/editor/datatypes/field*&#x200B;時使用的屬性元件多值清單 |
 | fieldResourceType | resourceData類型（即將在實體編輯器中呈現屬性的元件）的持續節點類型 |
 | fieldViewResourceType | 元件，用於在模型編輯器視圖中呈現資料類型（如果省略此屬性，將使用fieldResourceType） |
 | fieldTitle | 將在模型編輯器中顯示的資料類型的名稱 |
 | multiFieldResourceType | 在選擇多值時用於持久節點的資源類型 |
 | renderType | 用戶端轉換提示 |
 
-### 資料類型設定覆蓋 {#data-types-config-overlay}
+### 資料類型設定覆蓋{#data-types-config-overlay}
 
 &#39;dataTypesConfig&#39;屬性支援Sling資源合併。 這表示系統模型類型（甚至自訂模型類型）所使用的資料類型，可使用覆蓋節點加以自訂。
 
-需要建 *立/libs/settings/mobileapps/models/formbuilderconfig/datatypes的覆蓋* ，然後視需要自訂。
+需要建立&#x200B;*/libs/settings/mobileapps/models/formbuilderconfig/datatypes*&#x200B;的覆蓋，然後視需要自訂。
 
 例如，可新增字串資料類型的覆蓋，以便將fieldResourceType變更為自訂元件。
 
-如需Sling Resource Merging的詳細資訊，請參閱 [Using Sling Resource Merger in AEM](/help/sites-developing/sling-resource-merger.md)。
+如需Sling Resource Merging的詳細資訊，請參閱[Using Sling Resource Mergarine in AEM](/help/sites-developing/sling-resource-merger.md)。
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
@@ -72,19 +75,19 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 請參閱「/libs/mobileapps/caas/components/form/contentreference」作為自訂資料類型的範例。
 
-所有原始資料類型都使用現有的Granite表格元件。 請參閱： [https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html)
+所有原始資料類型都使用現有的Granite表格元件。 請參閱：[https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html)
 
 然後，任何自訂資料類型都可新增至資料類型設定，供模型編輯器使用。
 
-## 建立模型 {#creating-models}
+## 建立模型{#creating-models}
 
 所有所需的模型類型和資料類型都開發完成後，您就可以開始建立模型。 作者最終將使用模型來建立實體，內容服務會使用這些實體來轉換其資料。
 
 建立模型包括根據當前配置選擇允許的模型類型，然後提供標題和說明。
 
-若要瞭解如何從儀表板建立和管理模型，請參閱「行動應 [用程式」的編寫章節下的「建立模型](/help/mobile/administer-mobile-apps.md) 」。
+若要瞭解如何從控制面板建立和管理模型，請參閱「行動應用程式」的編寫區段下的「建立模型」。[](/help/mobile/administer-mobile-apps.md)
 
-### 模型的屬性 {#properties-of-a-model}
+### 模型{#properties-of-a-model}的屬性
 
 下表顯示為模型定義的屬性：
 
@@ -99,11 +102,11 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 >[!NOTE]
 >
->允 *許的子項*** 和允許的父項屬性遵循與「頁面」模板相同的規則。 如需詳細資訊，請參 [閱頁面範本](/help/sites-developing/page-templates-static.md)。
+>*allowed children*&#x200B;和&#x200B;*allowed parents*&#x200B;屬性遵循與頁面範本相同的規則。 如需詳細資訊，請參閱[頁面範本](/help/sites-developing/page-templates-static.md)。
 >
->參照 *Model Type* 屬性，所有模型都必須有超類型的 *mobileapps/caas/components/data/entity* ，但可以有允許自訂內容傳送的子類型。 確保所有模型類型都是獨一無二的，也有助於內容服務的客戶區分資料中的物件。
+>參照&#x200B;*Model Type*&#x200B;屬性，所有模型都必須具有超類型&#x200B;*mobileapps/caas/components/data/entity*，但可具有允許自訂內容傳送的子類型。 確保所有模型類型都是獨一無二的，也有助於內容服務的客戶區分資料中的物件。
 
-### 編輯模型 {#editing-a-model}
+### 編輯模型{#editing-a-model}
 
 編輯模型時，需要開啟與模型相關的支架對話框表單以進行編輯。 通常，腳手架是模型的子節點，但如果需要，它可以使用&#39;cq:swatherble&#39;屬性指定其路徑，以定位在模型外。 如果您想要在多個需要不同屬性的模型之間共用相同的支架，這是很有用的。
 
@@ -111,26 +114,26 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 >[!NOTE]
 >
->所有模型都是範本，因此它們會遵循所有AEM範本規則。 這允許使用屬性，如 ** allowedParent和 *allowedChildren* properties。 這些在基於模型建立新圖元時是有效的。 模板規則將確保實體只能基於某些模型（取決於其層次）。
+>所有模型都是範本，因此它們會遵循所有AEM範本規則。 這允許使用&#x200B;*allowedParents*&#x200B;和&#x200B;*allowedChildren*&#x200B;屬性等屬性。 這些在基於模型建立新圖元時是有效的。 模板規則將確保實體只能基於某些模型（取決於其層次）。
 >
->若要瞭解如何從控制面板編輯模型，請參閱「行 [動應用程式」的「編寫」區段下的「建立模型](/help/mobile/administer-mobile-apps.md) 」。
+>若要瞭解如何從控制面板編輯模型，請參閱「行動應用程式」的編寫區段下的「建立模型」。[](/help/mobile/administer-mobile-apps.md)
 
-### 系統型號 {#system-models}
+### 系統型號{#system-models}
 
 提供兩種預定義的系統模型，以便簡單地重複使用。 無法編輯這些模型。
 
-**頁面模型** 「頁面」模型提供快速方法，可重複使用網站中的現有內容，以便透過內容服務傳送。
+**頁面** 模型頁面模型提供快速方法，可重複使用網站中的現有內容，以便透過內容服務傳送。
 
 基於「頁面」模型的ersourceType實體為：mobileapps/caas/components/data/pages
 
 路徑：「網站」頁面的路徑。 內容服務處理常式會呈現此路徑（及其子系）的內容。
 
-**資產模型** 「資產」模型提供快速方法，可重複使用Assets中的現有內容，以便透過內容服務傳遞。
+**資** 產模型資產模型提供快速方法，可重複使用資產中的現有內容，以便透過內容服務傳遞。
 
-基於「頁面」模型的ersourceType實體為： *mobileapps/caas/components/data/assets。*
+基於「頁面」模型的ersourceType實體為：*mobileapps/caas/components/data/assets.*
 
-資產清單：資產的路徑清單。 每個資產都會新增為子實體節點，其resourceType為 *wcm/foundation/components/image*。
+資產清單：資產的路徑清單。 每個資產將作為子實體節點添加，其resourceType為&#x200B;*wcm/foundation/components/image*。
 
 >[!NOTE]
 >
->若要進一步瞭解如何使用這些範本從儀表板建立模型，請參閱「行動應 [用程式」的「製作」區段下的「建立模型](/help/mobile/administer-mobile-apps.md) 」。
+>若要進一步瞭解如何使用這些範本從控制面板建立模型，請參閱「行動應用程式」的編寫區段下的「建立模型」。[](/help/mobile/administer-mobile-apps.md)
