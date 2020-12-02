@@ -9,11 +9,14 @@ topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 2%
 
 ---
 
 
-# 預覽表格 {#previewing-a-form}
+# 預覽表單{#previewing-a-form}
 
 ## 概覽 {#overview}
 
@@ -35,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>PDF表格</td>
-   <td>PDF預覽與預覽資料<br /> </td>
+   <td>使用資料預覽PDF<br /> </td>
   </tr>
   <tr>
    <td>自適應形式</td>
@@ -43,18 +46,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>表單範本</td>
-   <td>PDF預覽、PDF預覽與資料、HTML預覽與HTML預覽與資料<br /> </td>
+   <td>PDF預覽、PDF預覽與資料、HTML預覽、HTML預覽與資料<br /> </td>
   </tr>
  </tbody>
 </table>
 
-## 預覽表格 {#previewing-a-form-1}
+## 預覽表單{#previewing-a-form-1}
 
-1. 選取您要預覽的資產，然後按一下動作工具 ![列中的「預覽aem6forms_preview](assets/aem6forms_preview.png) 」。
+1. 選取您要預覽的資產，然後按一下動作工具列中的「預覽![ aem6forms_preview](assets/aem6forms_preview.png)」。
 
    >[!NOTE]
    >
-   >若要選取資產，請從預設的卡片檢視切換至清單檢視。 按一 ![下aem6forms_viewlist](assets/aem6forms_viewlist.png) 或 ![aem6forms_viewcard](assets/aem6forms_viewcard.png) ，以切換檢視。
+   >若要選取資產，請從預設的卡片檢視切換至清單檢視。 按一下![aem6forms_viewlist](assets/aem6forms_viewlist.png)或![aem6forms_viewcard](assets/aem6forms_viewcard.png)以切換檢視。
 
 1. 按一下「預覽」會列出適用於所選資產類型的可能預覽選項。 按一下所要的選項，在新標籤中呈現選取的資產。
 
@@ -66,8 +69,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 以資料預覽 {#preview-with-data}
 
-當您選取「使 **用資料預覽**」時，您可以看到表格與輸入的實際資料的外觀。 「使用資料預覽」選項可讓您上傳包含範例使用者資料的XML。 範例使用者資料可用來以您選擇的格式填入預覽表格。
+當您選取「預覽資料」(**Preview with Data)時，您就可以看到表格與輸入的實際資料的外觀。**「使用資料預覽」選項可讓您上傳包含範例使用者資料的XML。 範例使用者資料可用來以您選擇的格式填入預覽表格。
 
-1. 選取資產，按一下「預 ![覽aem6forms_preview](assets/aem6forms_preview.png)」，然後選取「 **預覽資料」**。
+1. 選取資產，按一下「預覽![aem6forms_preview](assets/aem6forms_preview.png)」，然後選取「預覽與資料&#x200B;**」。**
 1. 在「預覽表單」對話方塊中，將FormData提供為XML檔案。 按一下「預覽」，以XML中合併的資料來轉換表格。
 
