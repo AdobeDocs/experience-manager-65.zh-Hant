@@ -1,8 +1,8 @@
 ---
 title: AEM Mobile隨選
 seo-title: AEM Mobile隨選
-description: 請依照本頁開始管理AEM Mobile On-Demand services應用程式。 它提供隨選服務AEM管理員的角色和責任概觀。
-seo-description: 請依照本頁開始管理AEM Mobile On-Demand services應用程式。 它提供隨選服務AEM管理員的角色和責任概觀。
+description: 請依照本頁開始管理AEM Mobile On-Demand Services應用程式。 它提供隨選服務AEM管理員的角色和責任概觀。
+seo-description: 請依照本頁開始管理AEM Mobile On-Demand Services應用程式。 它提供隨選服務AEM管理員的角色和責任概觀。
 uuid: fd99c032-287a-489b-9690-b18980c55c29
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -11,11 +11,14 @@ topic-tags: administering-on-demand-services-app
 discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 1%
 
 ---
 
 
-# AEM Mobile隨選 {#aem-mobile-on-demand}
+# AEM Mobile On-Demand {#aem-mobile-on-demand}
 
 >[!NOTE]
 >
@@ -23,30 +26,30 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->如果您不是使用AEM做為內容管理來源，請參閱 [AEM Mobile隨選服務說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
+>如果您未將AEM用作內容管理來源，請參閱[AEM Mobile隨選服務說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
 
-## AEM管理員 {#aem-administrator}
+## AEM 管理員 {#aem-administrator}
 
 >[!NOTE]
 >
 >**先決條件：**
 >
->在您開始設定AEM Mobile隨選服務的環境之前，請參閱 [AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
+>開始設定AEM Mobile隨選服務的環境之前，請參閱[AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
 
-AEM管理員 ****** (Administrator)負責將新應用程式新增至AEM mobile目錄，方法是使用建立精靈建立新應用程式，或匯入現有的應用程式。 使用AEM mobile的建立精靈建立新應用程式的AEM管理員通常會從我們的現成可用的參考範例或（在大多數情況下） ***AEM開發人員建立的自訂應用程式範本中，選取所要的應用程式範本。*
+***AEM管理員***&#x200B;負責將新應用程式新增至AEM Mobile目錄，方法是使用建立精靈建立新應用程式，或匯入現有的應用程式。 使用AEM Mobile的&#x200B;*建立精靈*&#x200B;建立新應用程式的AEM管理員通常會從我們的現成可用的參考範例或（在大多數情況下）由&#x200B;*AEM開發人員建立的自訂應用程式範本中，選取其中一個所需的應用程式範本。*
 
 >[!NOTE]
 >
->如需設定AEM群組和權限的詳細資訊，請按一下「線上說 [明」中的「建立使用者角色](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 」和「授與存取權」。
+>如需設定AEM群組和權限的詳細資訊，請按一下「線上說明」中的「建立使用者角色和授與存取權」[。](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)
 
 AEM管理員在使用AEM Mobile隨選服務建立應用程式時，負責下列工作：
 
 * [設定AEM Mobile](/help/mobile/aem-mobile-setup.md)，其涵蓋
 
    * AEM Mobile布建
-   * 建立AEM mobile專案
+   * 建立AEM Mobile專案
    * 設定AEM Mobile連接器
-   * 新增AEM mobile使用者角色和指派權限
+   * 新增AEM Mobile使用者角色和指派權限
 
 * [設定您的使用者和使用者群組](/help/mobile/aem-mobile-configure-users.md)
 * [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)
