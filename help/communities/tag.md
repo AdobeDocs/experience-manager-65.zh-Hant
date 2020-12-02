@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '267'
+ht-degree: 2%
 
 ---
 
@@ -21,15 +24,15 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 在發佈環境中套用之標籤的基礎架構與在作者環境中套用至內容（例如頁面和資產）的標籤相同：
 
-* 如需 [建立和管理](../../help/sites-administering/tags.md) 標籤 [](tag-ugc.md) 的相關資訊，請參閱管理標籤和標籤使用者產生的內容(UGC)。
+* 如需建立和管理標籤的相關資訊，請參閱[管理標籤](../../help/sites-administering/tags.md)和[標籤使用者產生的內容](tag-ugc.md)(UGC)。
 
-* 如需 [自訂應用程式中標籤框](../../help/sites-developing/tags.md) 架 [，以及包含和擴充標籤的相關資訊，請參閱「為開發人員](../../help/sites-developing/framework.md) 標籤」 [](../../help/sites-developing/building.md)。
+* 有關[標籤框架](../../help/sites-developing/framework.md)以及在[自訂應用程式](../../help/sites-developing/building.md)中包含和擴展標籤的資訊，請參閱[為開發人員](../../help/sites-developing/tags.md)標籤。
 
-* 如需 [作者如何新增元件至頁面以反白標示發佈環境中套用至](tagcloud.md)`social tag cloud` UGC之標籤的詳細資訊，請參閱使用Social Tag Cloud。
+* 如需作者如何將`social tag cloud`元件新增至頁面以反白標示發佈環境中套用至UGC的標籤的資訊，請參閱[使用Social Tag Cloud](tagcloud.md)。
 
-* 如需標 [記目錄資源的詳細資訊](tag-resources.md) ，請參閱標籤啟用資源。
+* 如需標籤目錄資源的詳細資訊，請參閱[標籤啟用資源](tag-resources.md)。
 
-在設定社群網站或下列功能之一 [時](sites-console.md#tagging) ，可啟用UGC標籤：
+在配置[社區站點](sites-console.md#tagging)或以下功能之一時，可以啟用UGC標籤：
 
 * [部落格](blog-feature.md)
 * [日曆](calendar.md)
@@ -37,9 +40,9 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 * [論壇](forum.md)
 * [QnA](working-with-qna.md)
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
-### Social Tag Cloud {#social-tag-cloud}
+### 社交標籤雲{#social-tag-cloud}
 
 <table>
  <tbody>
@@ -65,14 +68,14 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>請參 <a href="tagcloud.md">閱使用Social Tag Cloud</a></td>
+   <td>請參閱<a href="tagcloud.md">使用社交標籤雲端</a></td>
   </tr>
  </tbody>
 </table>
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [Social Tag Cloud API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
@@ -80,8 +83,8 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 * [伺服器端自訂](server-customize.md)
 
-## 標籤搜尋 {#tag-searching}
+## 標籤搜索{#tag-searching}
 
-從功 [能包1](deploy-communities.md#latestfeaturepack) (FP1)開始，使用標籤標題執行標 [簽搜尋](../../help/sites-developing/framework.md#tag-characteristics)。
+從[功能包1](deploy-communities.md#latestfeaturepack)(FP1)開始，使用[標籤標題](../../help/sites-developing/framework.md#tag-characteristics)執行標籤搜尋。
 
-在FP1之前，使用標籤ID進 [行搜尋](../../help/sites-developing/framework.md#tagid)。
+在FP1之前，使用[標籤ids](../../help/sites-developing/framework.md#tagid)執行搜尋。
