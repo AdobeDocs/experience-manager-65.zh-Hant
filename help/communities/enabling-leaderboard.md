@@ -19,49 +19,49 @@ ht-degree: 9%
 ---
 
 
-# 排行榜功能 {#leaderboard-feature}
+# 排行榜功能{#leaderboard-feature}
 
 ## 簡介 {#introduction}
 
-該 `Leaderboard` 元件通過根據獲得的點數（基本分數）或其專業知識（高級分數）對成員進行排名，從而獲得成員在社區內如何交互的感知。
+`Leaderboard`元件可根據獲得的點數（基本分數）或其專業知識（進階分數）對成員進行排名，以獲得成員在社群內互動的感覺。
 
-在將排行榜元件包括在頁面之前，必須配置社 [區評分和標章](/help/communities/implementing-scoring.md)。
+在將排行榜元件包括在頁面之前，必須配置[社群評分和標章](/help/communities/implementing-scoring.md)。
 
 本檔案章節說明：
 
-* 將元件 `Leaderboard` 新增至社 [群網站](/help/communities/overview.md#community-sites)。
-* 元件的配置 `Leaderboard` 設定。
+* 將`Leaderboard`元件添加到[社區站點](/help/communities/overview.md#community-sites)。
+* `Leaderboard`元件的配置設定。
 
-### 新增排行榜至頁面 {#adding-a-leaderboard-to-a-page}
+### 將排行榜添加到頁面{#adding-a-leaderboard-to-a-page}
 
-若要在作 `Leaderboard` 者模式下將元件新增至頁面，請找出元件
+若要在作者模式下將`Leaderboard`元件新增至頁面，請找出該元件
 
 * `Communities / Leaderboard`
 
 並將它拖曳至頁面上的位置。
 
-如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
 
 首次放置在社群網站頁面時，元件的顯示方式如下：
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
-### 配置排行榜 {#configuring-leaderboard}
+### 配置Leaderboard {#configuring-leaderboard}
 
-選擇要訪問 `Leaderboard` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`Leaderboard`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
 ![chlimage_1-10](assets/chlimage_1-10.png)
 
-#### 「設定」頁籤 {#settings-tab}
+#### 「設定」頁籤{#settings-tab}
 
-在「設 **[!UICONTROL 置]** 」頁籤下，指定將顯示與成員相關的資訊：
+在&#x200B;**[!UICONTROL Settings]**&#x200B;標籤下，指定顯示與成員相關的資訊：
 
 * **顯示名稱**
 
    用於顯示展示板的描述性名稱，反映為顯示標章和分數所選取的規則。
-如果未輸 `Leaderboard`入任何內容，則預設為。
+預設值為`Leaderboard`，如果未輸入。
 
 * **徽章**
 
@@ -78,9 +78,9 @@ ht-degree: 9%
    如果勾選，成員的頭像影像將包含在排行榜中，位於其成員配置檔案的名稱連結旁邊。
 預設為未勾選。
 
-#### 規則標籤 {#rules-tab}
+#### 規則標籤{#rules-tab}
 
-在「規 **則** 」索引標籤下，社群網站及其計分和標籤規則
+在&#x200B;**規則**&#x200B;標籤下，社群網站及其計分和標籤規則
 
 * **規則位置**
 
@@ -98,7 +98,7 @@ ht-degree: 9%
 
    每頁要顯示的成員數。預設值為10。
 
-### 範例： 參與者領導委員會 {#example-participants-leaderboard}
+### 範例：參與者排行榜{#example-participants-leaderboard}
 
 此排行榜會報告套用基本計分規則的結果。
 
@@ -122,7 +122,7 @@ Leaderboard元件配置：
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
-### 範例： 專家排行榜 {#example-experts-leaderboard}
+### 範例：專家排行榜{#example-experts-leaderboard}
 
 此排行榜會報告套用進階計分規則的結果。
 
@@ -147,6 +147,6 @@ Leaderboard元件配置：
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人 [員的Leaderboard](/help/communities/leaderboard.md) Essentials頁面。
+有關詳細資訊，請參閱開發人員的[ Leaderboard Essentials](/help/communities/leaderboard.md)頁。
 
-管理員的「社群計分與標章」頁面 [中提供建立規則的指示](/help/communities/implementing-scoring.md) 。
+管理員可在[Communities Scoring and Badges](/help/communities/implementing-scoring.md)頁面上提供建立規則的指示。
