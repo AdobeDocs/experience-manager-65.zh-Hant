@@ -25,19 +25,19 @@ ht-degree: 1%
 
 當社群成員關注感興趣的帖子或其他社區成員時，跟隨能力會添加另一組活動。
 
-所有 [社群網站](/help/communities/overview.md#communitiessites) ，都包含已登入會員的使用者設定檔頁面，以相同方式顯示會員活動。
+所有[社區站點](/help/communities/overview.md#communitiessites)都包含已登錄成員的用戶配置檔案頁，該用戶配置檔案頁將以相同的方式顯示成員活動。
 
-## 概念 {#concepts}
+## 概念{#concepts}
 
-活 *動流* ，是成員最近執行的活動的清單，或是內容單一線程（如論壇主題或部落格）上最近執行的活動的清單。
+*活動流*&#x200B;是成員最近執行的活動的清單，或是內容單一線程（如論壇主題或部落格）上最近執行的活動的清單。
 
 會員可以跟隨其他個人或內容，跟隨活動流。
 
-新 *聞饋送* ，是將成員跟隨的活動串流合併為單一串流。
+*新聞饋送*&#x200B;是活動流的合併，隨後是成員到單個流。
 
-社 *[交圖表](/help/communities/essentials-socialgraph.md)*，會擷取一個成員與另一個成員的下列關係。
+*[social圖表](/help/communities/essentials-socialgraph.md)*&#x200B;會擷取一個成員與另一個成員的下列關係。
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 <table>
  <tbody>
@@ -63,14 +63,14 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱 <a href="/help/communities/activities.md">活動串流功能</a></td>
+   <td>請參閱<a href="/help/communities/activities.md">活動串流功能</a></td>
   </tr>
  </tbody>
 </table>
 
 * [用戶端自訂](/help/communities/client-customize.md)
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [活動串流API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
@@ -80,4 +80,4 @@ ht-degree: 1%
 
 ### 活動資料流功能 {#activity-stream-function}
 
-一種包括活動流功能的社 [區站點結構](/help/communities/functions.md#activity-stream-function)，包括配置的 `activity streams` 元件。
+一種包括[活動流函式](/help/communities/functions.md#activity-stream-function)的社區站點結構，包括配置的`activity streams`元件。
