@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 社群網站基本功能 {#community-site-essentials}
+# 社群網站基本功能{#community-site-essentials}
 
-## 自訂網站範本 {#custom-site-template}
+## 自訂網站範本{#custom-site-template}
 
 可以為社區站點的每個語言副本單獨指定自定義站點模板。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 * 建立自訂範本。
 * 覆蓋預設網站範本路徑。
 * 新增自訂範本至覆蓋路徑。
-* 將屬性新增至節點，以指 `page-template` 定自訂范 `configuration` 本。
+* 將`page-template`屬性新增至`configuration`節點，以指定自訂範本。
 
 **預設範本**:
 
@@ -49,68 +49,69 @@ ht-degree: 0%
 
 `/content/community site path/lang/configuration`
 
-For example: `/content/sites/engage/en/configuration`
+例如：`/content/sites/engage/en/configuration`
 
 >[!NOTE]
 >
->覆蓋路徑中的所有節點都只需要類型 `Folder`。
+>覆蓋路徑中的所有節點只需要類型`Folder`。
 
 >[!CAUTION]
 >
->如果自訂範本的名稱為 *sitepage.hbs*，則會自訂所有社群網站。
+>如果自訂範本的名稱為&#x200B;*sitepage.hbs*，則會自訂所有社群網站。
 
-### 自訂網站範本範例 {#custom-site-template-example}
+### 自訂網站範本範例{#custom-site-template-example}
 
-例如，網站范 `vertical-sitepage.hbs` 本會導致功能表連結在頁面左側垂直放置，而非橫幅下方水準放置。
+例如，`vertical-sitepage.hbs`是網站範本，會導致功能表連結垂直放置在頁面左側，而非橫幅下方。
 
-[取得檔](assets/vertical-sitepage.hbs)案將自訂網站範本置於覆蓋資料夾：
+[取得](assets/vertical-sitepage.hbs)
+檔案將自訂網站範本置於覆蓋資料夾：
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
-通過向配置節點添加屬 `page-template` 性來標識自定義模板：
+通過向配置節點添加`page-template`屬性來標識自定義模板：
 
 `/content/sites/sample/en/configuration`
 
 ![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
-請確定「全 **部儲存** 」並將自訂代碼複製至所有AEM例項（自訂代碼不包含在從主控台發佈社群網站內容時）。
+請務必&#x200B;**「全部儲存」**，並將自訂代碼複製至所有AEM例項（自訂代碼不包含在從主控台發佈社群網站內容時）。
 
-複製自訂程式碼的建議做法是 [建立套件](../../help/sites-administering/package-manager.md#creating-a-new-package) ，並將它部署在所有例項上。
+複製自訂程式碼的建議做法是[建立套件](../../help/sites-administering/package-manager.md#creating-a-new-package)，並將它部署在所有例項上。
 
-## 導出社區站點 {#exporting-a-community-site}
+## 導出社區站點{#exporting-a-community-site}
 
 在建立社群網站後，就可以將網站匯出為儲存在套件管理員中的AEM套件，並可供下載和上傳。
 
-這可從 [Communities Sites控制台獲得](sites-console.md#exporting-the-site)。
+這可從[Communities Sites控制台](sites-console.md#exporting-the-site)獲得。
 
 請注意，社群網站套件中不包含UGC和自訂代碼。
 
-若要匯出UGC，請使用 [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)，這是GitHub上提供的開放原始碼移轉工具。
+若要匯出UGC，請使用[AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)，這是GitHub上提供的開放原始碼移轉工具。
 
-## 刪除社群網站 {#deleting-a-community-site}
+## 刪除社區站點{#deleting-a-community-site}
 
-自AEM Communities 6.3 Service Pack 1起，「刪除網站」圖示會顯示在從 **[!UICONTROL Communities]** > **[!UICONTROL Sites]** 主控台的社群網站上。 在開發期間，如果想要刪除社群網站並重新開始，您可以使用此功能。 刪除社群網站時，會移除與該網站相關的下列項目：
+自AEM Communities 6.3 Service Pack 1起，「刪除網站」圖示會顯示在從&#x200B;**[!UICONTROL Communities]** > **[!UICONTROL Sites]**&#x200B;主控台暫留在社群網站上。 在開發期間，如果想要刪除社群網站並重新開始，您可以使用此功能。 刪除社群網站時，會移除與該網站相關的下列項目：
 
 * [UGC](#user-generated-content)
 * [使用者群組](#community-user-groups)
 * [資產](#enablement-assets)
 * [資料庫記錄](#database-records)
 
-### 社群獨特網站ID {#community-unique-site-id}
+### 社群唯一網站ID {#community-unique-site-id}
 
 要標識與社區站點關聯的唯一站點ID，請使用CRXDE:
 
-* 導覽至網站的語言根目錄，例如 `/content/sites/*<site name>*/en/rep:policy`。
+* 導覽至網站的語言根目錄，例如`/content/sites/*<site name>*/en/rep:policy`。
 
-* 查找 `allow<#>` 具有此格 `rep:principalName` 式的節點 `rep:principalName = *community-enable-nrh9h-members*`。
+* 以此格式`rep:principalName = *community-enable-nrh9h-members*`查找`rep:principalName`的`allow<#>`節點。
 
-* 網站ID是 `rep:principalName`
+* 站點ID是`rep:principalName`的第3個元件
 
-   例如，若 `rep:principalName = community-enable-nrh9h-members`
+   例如，若`rep:principalName = community-enable-nrh9h-members`
 
-   * **網站名稱** =啟 *用*
-   * **網站ID** = *nrh9h*
-   * **唯一網站ID** = *enable-nrh9h*
+   * **站點名稱** =  *enable*
+   * **網站ID** =  *nrh9h*
+   * **唯一網站ID** =  *enable-nrh9h*
 
 ### 使用者產生的內容 {#user-generated-content}
 
@@ -124,27 +125,27 @@ For example: `/content/sites/engage/en/configuration`
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
-這只會移除使用者產生的內容（在發佈時輸入）及未編寫的內容（在作者時輸入）。 因此，影 [子節點](srp.md#shadownodes) 不受影響。
+這只會移除使用者產生的內容（在發佈時輸入）及未編寫的內容（在作者時輸入）。 因此，[陰影節點](srp.md#shadownodes)不受影響。
 
-### 社群使用者群組 {#community-user-groups}
+### 社群使用者群組{#community-user-groups}
 
-在所有作者和發佈例項上，從安 [全性主控台](../../help/sites-administering/security.md)，找出並移 [除下列使用者群組](users.md) :
+在所有作者和發佈實例上，從[安全控制台](../../help/sites-administering/security.md)中，找到並刪除[用戶組](users.md)，這些是：
 
-* 前置詞 `community`
-* 後跟唯 [一的網站ID](#community-unique-site-id)
+* 前置詞`community`
+* 後跟[唯一網站id](#community-unique-site-id)
 
-For example, `community-engage-x0e11-members`.
+例如，`community-engage-x0e11-members`。
 
-### 啟用資產 {#enablement-assets}
+### 啟用資產{#enablement-assets}
 
 從主控制台：
 
-* Select **[!UICONTROL Assets]**.
-* 進入 **[!UICONTROL 選擇]** 模式。
-* 選取以唯一網站Id命名 [的檔案夾](#community-unique-site-id)。
-* 選擇 **[!UICONTROL 刪除]** (可能需要從更 **[!UICONTROL 多……]**)。
+* 選擇&#x200B;**[!UICONTROL 資產]**。
+* 進入&#x200B;**[!UICONTROL 選擇]**&#x200B;模式。
+* 選擇以[唯一站點Id](#community-unique-site-id)命名的資料夾。
+* 選擇&#x200B;**[!UICONTROL 刪除]**（可能需要從&#x200B;**[!UICONTROL 更多……中選擇）。]**)。
 
-### 資料庫記錄 {#database-records}
+### 資料庫記錄{#database-records}
 
 沒有工具可選擇性地刪除某個特定啟用社群網站的資料庫項目。
 
