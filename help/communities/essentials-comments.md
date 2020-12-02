@@ -24,7 +24,7 @@ ht-degree: 3%
 
 該注釋元件建立注釋系統，使得每個單獨的帖子由注釋元件（單數）表示。 它是包含在頁面上的注釋系統。 注釋系統會在呼叫時建立個別注釋。
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 <table>
  <tbody>
@@ -34,7 +34,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>included</strong></a></td>
-   <td>是——可在設計模式中編輯 <i>屬 </i>性</td>
+   <td>是——在<i>design </i>模式中可編輯屬性</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
@@ -50,14 +50,14 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td> 請參閱 <a href="comments.md">使用注釋</a></td>
+   <td> 請參閱<a href="comments.md">使用注釋</a></td>
   </tr>
  </tbody>
 </table>
 
 [用戶端自訂](client-customize.md)
 
-### 每頁一個例項 {#one-instance-per-page}
+### 每頁{#one-instance-per-page}一個例項
 
 分頁和使用URL進行快取和連結需要URL在每個留言系統中都是唯一的。 因此，每頁僅允許一個注釋系統實例。
 
@@ -70,7 +70,7 @@ ht-degree: 3%
 * [QnA](qna-essentials.md)
 * [評論](reviews-basics.md)
 
-### 標籤原因清單 {#flag-reason-list}
+### 標籤原因清單{#flag-reason-list}
 
 您可自訂標籤原因清單，方法是將flagreasonlist.hbs新增至應用程式以覆寫
 
@@ -78,7 +78,7 @@ ht-degree: 3%
 
 這適用於擴充注釋系統的任何元件。
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [注釋API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
@@ -86,19 +86,19 @@ ht-degree: 3%
 
 * [伺服器端自訂](server-customize.md)
 
-### 存取已張貼的留言(UGC) {#accessing-posted-comments-ugc}
+### 存取已張貼的留言(UGC){#accessing-posted-comments-ugc}
 
 UGC應使用其中一種標準的協調方法來協調。
-請參 [閱協調使用者產生的內容](moderate-ugc.md)。
+請參閱[協調使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括程式化存取UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用[通用商店](working-with-srp.md)做為UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP），都可程式化存取UGC。
 
 **UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
 
 請參閱：
 
 * [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP實用程式方法和示例。
+* [使用SRP](accessing-ugc-with-srp.md) -編碼准則存取UGC。
 * [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
