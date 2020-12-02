@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# 使用代理UI準備和傳送互動式通訊 {#prepare-and-send-interactive-communication-using-the-agent-ui}
+# 使用代理UI {#prepare-and-send-interactive-communication-using-the-agent-ui}準備和發送互動式通信
 
 代理UI允許代理準備併發送互動式通信到後置進程。 工程師會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 
@@ -26,14 +26,14 @@ ht-degree: 0%
 
 使用代理UI準備互動式通訊時，代理會先在代理UI中管理互動式通訊的下列方面，再將它送出至後置程式：
 
-* **資料**:Agent UI的「資料」頁籤顯示「交互通信」中任何可代理編輯的變數和解鎖表單資料模型屬性。 這些變數／屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立。 「資料」標籤也包含XDP/列印頻道範本中建立的任何欄位。 僅當代理可編輯「互動式通信」中的任何變數、表單資料模型屬性或欄位時，才會顯示「資料」頁籤。
-* **內容**:在「內容」索引標籤中，「代理」管理「互動式通訊」中的檔案片段和內容變數等內容。 在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
-* **附件**:只有當Interactive Communication具有任何附件或Agent具有庫訪問權限時，「附件」頁籤才會出現在Agent UI。 工程師可以或不允許更改或編輯附件。
+* **資料**:Agent UI的「資料」頁籤顯示「交互通信」中任何可代理編輯的變數和解鎖表單資料模型屬性。這些變數／屬性是在編輯或建立包含在互動式通訊中的檔案片段時建立。 「資料」標籤也包含XDP/列印頻道範本中建立的任何欄位。 僅當代理可編輯「互動式通信」中的任何變數、表單資料模型屬性或欄位時，才會顯示「資料」頁籤。
+* **內容**:在「內容」索引標籤中，「代理」管理「互動式通訊」中的檔案片段和內容變數等內容。在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加／刪除文檔片段和添加分頁符。
+* **附件**:只有當Interactive Communication具有任何附件或Agent具有庫訪問權限時，「附件」頁籤才會出現在Agent UI。工程師可以或不允許更改或編輯附件。
 
-## 使用代理UI準備互動式通訊 {#prepare-interactive-communication-using-the-agent-ui}
+## 使用代理UI {#prepare-interactive-communication-using-the-agent-ui}準備互動式通信
 
-1. 選擇「 **[!UICONTROL 表單]** 」>「 **[!UICONTROL 表單與檔案」]**。
-1. 選擇適當的互動式通訊，並點選「 **[!UICONTROL Open Agent UI]**」。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
+1. 選擇適當的「Interactive Communication（互動式通信）」 ，然後按一下「Open Agent UI（開啟代理UI）」。****
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### 輸入資料 {#enter-data}
 
-1. 在「資料」索引標籤中，視需要輸入變數、表單資料模型屬性和列印範本(XDP)欄位的資料。 填寫所有標有星號(&amp;ast;)的必填欄位，以啟用「提 **交** 」按鈕。
+1. 在「資料」索引標籤中，視需要輸入變數、表單資料模型屬性和列印範本(XDP)欄位的資料。 填寫所有標有星號(&amp;ast;)的必填欄位，以啟用&#x200B;**Submit**&#x200B;按鈕。
 
    在「互動式通訊」預覽中點選資料欄位值，以在「資料」索引標籤中反白顯示對應的資料欄位，反之亦然。
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 在「內容」索引標籤中，管理「互動式通訊」中的檔案片段和內容變數等內容。
 
-1. Select **[!UICONTROL Content]**. 此時將顯示「互動式通信」的內容頁籤。
+1. 選擇&#x200B;**[!UICONTROL 內容]**。 此時將顯示「互動式通信」的內容頁籤。
 
    ![agentuicontentab](assets/agentuicontenttab.png)
 
@@ -67,9 +67,9 @@ ht-degree: 0%
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
-   在「內容」或「資料」索引標籤中，點選預覽左上角的「在內容中反白顯示選取的模組(反白顯示選取的模組incontentccr ![](assets/highlightselectedmodulesincontentccr.png))」，可停用或啟用功能，以在預覽中點選／選取相關文字、段落或資料欄位時移至檔案片段。
+   在「內容」或「資料」索引標籤中，點選預覽左上角的「反白標示內容中選取的模組」（![反白標示選取的模組incontentccr](assets/highlightselectedmodulesincontentccr.png)），可停用或啟用在預覽中點選／選取相關文字、段落或資料欄位時移至檔案片段的功能。
 
-   建立交互通信時允許代理編輯的片段具有「編輯選定內容」(iconedited selected content ![](assets/iconeditselectedcontent.png))表徵圖。 點選「編輯選取的內容」圖示，以編輯模式啟動片段並在其中進行變更。 使用下列選項來格式化和管理文字：
+   建立交互通信時允許由代理編輯的片段具有編輯選定內容(![iconedited content](assets/iconeditselectedcontent.png))表徵圖。 點選「編輯選取的內容」圖示，以編輯模式啟動片段並在其中進行變更。 使用下列選項來格式化和管理文字：
 
    * [格式選項](#formattingtext)
 
@@ -78,9 +78,9 @@ ht-degree: 0%
    * [特殊字元](#specialcharacters)
    * [鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)
 
-   有關Agent用戶介面中各種文檔片段可用操作的詳細資訊，請參閱 [Agent用戶介面中的「操作」和「資訊」](#actionsagentui)。
+   有關Agent用戶介面中各種文檔片段的可用操作的詳細資訊，請參閱[Agent用戶介面中的可用操作和資訊。](#actionsagentui)
 
-1. 若要將分頁符新增至互動式通訊的列印輸出，請將游標置於您要插入分頁符的位置，然後選取「分頁符前面」或「分頁符後面」( ![pagebreakfereafter](assets/pagebreakbeforeafter.png))。
+1. 要將分頁符添加到互動式通信的打印輸出中，請將游標置於要插入分頁符的位置，然後選擇「分頁前」或「分頁後」(![pagebreakafter](assets/pagebreakbeforeafter.png))。
 
    在「互動式通訊」中插入明確的分頁符預留位置。 若要檢視明確的分頁符號如何影響互動式通訊，請參閱列印預覽。
 
@@ -88,30 +88,30 @@ ht-degree: 0%
 
    繼續管理互動式通訊的附件。
 
-### 管理附件 {#manage-attachments}
+### 管理附件{#manage-attachments}
 
-1. 選擇 **[!UICONTROL 附件]**。 Agent UI顯示建立交互通信時設定的可用附件。
+1. 選擇&#x200B;**[!UICONTROL 附件]**。 Agent UI顯示建立交互通信時設定的可用附件。
 
    您可以點選檢視圖示，選擇不隨附件一起提交「互動式通訊」，也可以點選附件中的交叉點以從「互動式通訊」中刪除附件（如果允許代理刪除或隱藏附件）。 對於在建立互動式通信時指定為必備附件的附件，將禁用「查看」和「刪除」表徵圖。
 
    ![附件Agentui](assets/attachmentsagentui.png)
 
-1. 點選「資料庫存取」( ![資料庫存取](assets/libraryaccess.png))圖示以存取「內容庫」，將DAM資產插入為附件。
+1. 點選「資料庫存取」（![資料庫存取](assets/libraryaccess.png)）圖示，以存取「內容庫」，將DAM資產插入為附件。
 
    >[!NOTE]
    >
-   >只有在建立互動式通訊時（在列印頻道的「檔案容器」屬性中）啟用資料庫存取時，才可使用「資料庫存取」圖示。
+   >只有在建立互動式通訊時（在列印頻道的「檔案容器」屬性中）啟用資料庫存取時，才能使用「資料庫存取」圖示。
 
 1. 如果在建立「交互通信」時未鎖定附件順序，則可以通過選擇附件並點選向下和向上箭頭來重新排序附件。
 1. 使用「網頁預覽和列印預覽」，查看這兩個輸出是否符合您的需求。
 
-   如果您發現預覽結果令人滿意，請點選「 **[!UICONTROL Submit]** 」（提交）以提交／傳送互動式通訊至貼文程式。 或者，若要進行變更，請退出預覽，返回進行變更。
+   如果您發現預覽結果令人滿意，請點選&#x200B;**[!UICONTROL Submit]**&#x200B;以提交／傳送互動式通訊至貼文程式。 或者，若要進行變更，請退出預覽，返回進行變更。
 
-## 格式化文字 {#formattingtext}
+## 格式化文本{#formattingtext}
 
 在代理UI中編輯文字片段時，工具列會依您選擇進行的編輯類型而變更：字型、段落或清單：
 
-![typeofformattingtoolbar](assets/typeofformattingtoolbar.png) ![Font Toolbar](do-not-localize/fonttoolbar.png)
+![文字](assets/typeofformattingtoolbar.png) ![格式工具列字型工具列](do-not-localize/fonttoolbar.png)
 
 字型工具列
 
@@ -123,29 +123,29 @@ ht-degree: 0%
 
 清單工具列
 
-### 反白顯示／強調部分文字 {#highlightemphasize}
+### 突出顯示／強調部分文本{#highlightemphasize}
 
 若要反白\強調可編輯片段中的部分文字，請選取文字並點選「反白顯示顏色」。
 
 ![highlighttextagentui](assets/highlighttextagentui.png)
 
-### 貼上格式化文字 {#pasteformattedtext}
+### 貼上格式化文字{#pasteformattedtext}
 
 ![pastedtext](assets/pastedtext.png)
 
-### 在文字中插入特殊字元 {#specialcharacters}
+### 在文字{#specialcharacters}中插入特殊字元
 
-Agent UI已內建支援210個特殊字元。 管理員可 [以透過自訂新增更多／自訂特殊字元的支援](/help/forms/using/custom-special-characters.md)。
+Agent UI已內建支援210個特殊字元。 管理員可以透過自訂[新增對更多／自訂特殊字元的支援。](/help/forms/using/custom-special-characters.md)
 
-#### 附件遞送 {#attachmentdelivery}
+#### 附件遞送{#attachmentdelivery}
 
 * 當使用伺服器端API將互動式通訊轉譯為互動式或非互動式PDF時，轉譯的PDF會將附件包含為PDF附件。
 * 當與互動式通訊相關聯的貼文程式載入為使用代理程式UI提交的一部分時，附件會以List&lt;com.adobe.idp.Document> inAttachmentDocs參數的形式傳遞。
 * 傳送機制工作流程（例如電子郵件和列印）也會傳送附件以及互動式通訊的PDF版本。
 
-## 代理用戶介面中可用的操作和資訊 {#actionsagentui}
+## 代理用戶介面{#actionsagentui}中可用的操作和資訊
 
-### Document fragments {#document-fragments}
+### 檔案片段{#document-fragments}
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
@@ -157,12 +157,12 @@ Agent UI已內建支援210個特殊字元。 管理員可 [以透過自訂新增
 
 ![docfragoptions](assets/docfragoptions.png)
 
-* 編輯（僅限文字片段）:開啟豐富式文字編輯器，以編輯文字檔案片段。 如需詳細資訊，請參閱格 [式化文字](#formattingtext)。
+* 編輯（僅限文字片段）:開啟豐富式文字編輯器，以編輯文字檔案片段。 如需詳細資訊，請參閱[格式化文字](#formattingtext)。
 
 * 選取範圍（眼睛圖示）:包含\排除「互動式通訊」中的檔案片段。
 * 未填充的值（資訊）:指出檔案片段中未填入的變數數。
 
-### 列出檔案片段 {#list-document-fragments}
+### 列出文檔片段{#list-document-fragments}
 
 ![清單選項](assets/listoptions.png)
 
@@ -171,53 +171,53 @@ Agent UI已內建支援210個特殊字元。 管理員可 [以透過自訂新增
 * 跳過項目符號／編號：啟用以跳過清單文檔片段中的項目符號／編號。
 * 未填充的值（資訊）:指出檔案片段中未填入的變數數。
 
-## 將互動式通訊儲存為草稿 {#save-as-draft}
+## 將互動式通訊儲存為草稿{#save-as-draft}
 
 您可以使用Agent UI為每個「互動式通訊」儲存一或多個草稿，並稍後擷取草稿以繼續處理。 您可以為每個草稿指定不同的名稱以加以識別。
 
 Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿。
 
-### 啟用「另存為拔模」(Save as a Draft)功能 {#before-save-as-draft}
+### 啟用「另存為草稿」功能{#before-save-as-draft}
 
 預設情況下，「另存為拔模」(Save as a Draft)特徵不啟用。 執行下列步驟以啟用功能：
 
-1. 實施 [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) Service Provider Interface(SPI)。
+1. 實施[ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)服務提供商介面(SPI)。
 
    SPI可讓您將互動式通信的草稿版本以草稿ID作為唯一標識符保存到資料庫。 這些指示假設您先前已具備使用Maven專案建立OSGi套件的相關知識。
 
-   有關SPI實施示例，請參見 [Sample ccrDocumentInstance SPI實施](#sample-ccrDocumentInstance-spi)。
-1. 開啟並 `http://<hostname>:<port>/ system/console/bundles` 點選「 **[!UICONTROL 安裝／更新]** 」以上傳OSGi套件。 驗證已上載包的狀態是否顯示為「活 **動」**。 如果軟體包的狀態未顯示為「活動」，請重新啟動服 **務器**。
+   有關SPI實施示例，請參見[Sample ccrDocumentInstance SPI實施](#sample-ccrDocumentInstance-spi)。
+1. 開啟`http://<hostname>:<port>/ system/console/bundles`並點選&#x200B;**[!UICONTROL 安裝／更新]**&#x200B;以上傳OSGi套件。 驗證已上載包的狀態是否顯示為&#x200B;**活動**。 如果軟體包的狀態未顯示為&#x200B;**活動**，請重新啟動伺服器。
 1. 前往 `https://'[server]:[port]'/system/console/configMgr`.
-1. 點選「 **[!UICONTROL 建立對應設定」]**。
-1. 選取「 **[!UICONTROL 使用CCRDocumentInstanceService啟用儲存」]** ，然後點選「 **[!UICONTROL 儲存」]**。
+1. 點選&#x200B;**[!UICONTROL 建立對應設定]**。
+1. 選擇「使用CCRDocumentInstanceService **[!UICONTROL 啟用儲存」，然後點選「儲存」。]******
 
-### 將互動式通訊儲存為草稿 {#save-as-draft-agent-ui}
+### 將互動式通訊儲存為草稿{#save-as-draft-agent-ui}
 
 執行以下步驟將互動式通信另存為草稿：
 
-1. 在Forms Manager中選取「互動式通訊」，然後點選「 **[!UICONTROL Open Agent UI]**」。
+1. 在Forms Manager中選擇「互動式通訊」，然後點選&#x200B;**[!UICONTROL Open Agent UI]**。
 
-1. 在代理UI中進行適當的變更，然後點選「另 **[!UICONTROL 存為草稿」]**。
+1. 在代理UI中進行適當的更改，然後點選「另存為草稿」。****
 
-1. 在「名稱」欄位中指定「草稿」的名 **[!UICONTROL 稱]** ，然後點選「 **[!UICONTROL 完成」]**。
+1. 在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中指定草稿名稱，然後點選&#x200B;**[!UICONTROL Done]**。
 
-將「互動式通訊」儲存為草稿後，點選「 **[!UICONTROL 儲存變更]** 」以儲存對草稿的任何進一步變更。
+將「互動式通訊」儲存為草稿後，請點選「儲存變更&#x200B;**[!UICONTROL 」以儲存對草稿的任何進一步變更。]**
 
-### 擷取互動式通訊的草稿 {#retrieve-draft}
+### 檢索互動式通信的草稿{#retrieve-draft}
 
 將互動式通訊儲存為草稿後，您可以擷取它以繼續處理它。 使用下列方法檢索互動式通信：
 
 `https://server:port/aem/forms/createcorrespondence.hmtl?draftid=[draftid]`
 
-[draftid] 是指在將互動式通訊儲存為草稿後產生的草稿版本的唯一識別碼。
+[將] 互動式通訊儲存為草稿後產生之草稿版本的唯一識別碼。
 
 >[!NOTE]
 >
 >如果您在將「互動式通訊」儲存為草稿後對它進行任何變更，則草稿版本無法開啟。
 
-### ccrDocumentInstance SPI實施示例 {#sample-ccrDocumentInstance-spi}
+### ccrDocumentInstance SPI實現示例{#sample-ccrDocumentInstance-spi}
 
-實作 `ccrDocumentInstance` SPI，將互動式通訊儲存為草稿。 以下是SPI的示例實 `ccrDocumentInstance` 現。
+實作`ccrDocumentInstance` SPI，將互動式通訊儲存為草稿。 以下是`ccrDocumentInstance` SPI的示例實現。
 
 ```javascript
 package Implementation;
@@ -317,9 +317,9 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 }
 ```
 
-操作 `save``update``get``getAll` 調用資料庫服務，以將互動式通信另存為草稿、更新互動式通信、從資料庫中檢索資料，以及檢索資料庫中所有可用互動式通信的資料。 此示例 `mySQLDataBaseServiceCRUD` 用作資料庫服務的名稱。
+`save`、`update`、`get`和`getAll`操作調用資料庫服務，以將互動式通信另存為草稿、更新互動式通信、從資料庫檢索資料，以及檢索資料庫中所有可用互動式通信的資料。 此示例使用`mySQLDataBaseServiceCRUD`作為資料庫服務的名稱。
 
-下表說明了示例 `ccrDocumentInstance` SPI實現。 在示例實 `save`施中， `update`將演示 `get`、操作和操 `getAll` 作如何調用資料庫服務。
+下表說明了示例`ccrDocumentInstance` SPI實現。 它演示了`save`、`update`、`get`和`getAll`操作在示例實施中如何調用資料庫服務。
 
 <table> 
  <tbody>
@@ -346,7 +346,7 @@ public class CCRDraftService implements CCRDocumentInstanceService {
   </tbody>
 </table>
 
-以下是屬於實作 `pom.xml` 的檔案範例：
+以下是實施中`pom.xml`檔案的範例：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -443,4 +443,4 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 
 >[!NOTE]
 >
->請確定您將檔 `aemfd-client-sdk` 案中的相依性更新為6.0.160 `pom.xml` 。
+>確保將`pom.xml`檔案中的`aemfd-client-sdk`相關性更新為6.0.160。
