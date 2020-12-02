@@ -17,21 +17,21 @@ ht-degree: 0%
 ---
 
 
-# 自訂路由動作中使用的影像 {#customize-images-used-in-route-actions}
+# 自訂路由動作{#customize-images-used-in-route-actions}中使用的影像
 
-若要自訂路由動作中使用的影像，請執行「自訂的一般步驟 [](/help/forms/using/generic-steps-html-workspace-customization.md) 」中所述的步驟，然後執行本文所述的步驟。
+要自定義路由操作中使用的映像，請執行[自定義](/help/forms/using/generic-steps-html-workspace-customization.md)的一般步驟中所述的步驟，然後執行本文中所述的步驟。
 
-## 路由動作的影像 {#images-for-route-actions}
+## 路由動作的影像{#images-for-route-actions}
 
 1. 在CSS中為新路由動作的下列位置新增定義影像的樣式：
 
    `/apps/ws/css/newStyle.css`
 
-   例如： 新增名為下方 `myStyle1`所示的新樣式，並使用WebDAV用戶 `myStyleIcon1.png` 端將影 `/apps/ws/image`像檔案上傳至s資料夾。
+   例如：新增名為`myStyle1`的新樣式，如下所示，並使用WebDAV用戶端將影像檔案`myStyleIcon1.png`上傳至`/apps/ws/image`s資料夾。
 
    >[!NOTE]
    >
-   >如需WebDAV存取的詳細資訊，請參閱 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)。
+   >有關WebDAV訪問的詳細資訊，請參見[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)。
 
    >[!NOTE]
    >
@@ -45,13 +45,13 @@ ht-degree: 0%
        }
    ```
 
-## 任務清單任務操作彈出窗口 {#task-list-task-action-popup}
+## 任務清單任務操作彈出菜單{#task-list-task-action-popup}
 
-1. 建立工作清單動作快顯功能，請參 [閱「建立AEM Forms工作區代碼」](introduction-customizing-html-workspace.md#building-html-workspace-code)。 需要使用dev套件。
+1. 建立工作清單動作快顯視窗，請參閱「建立AEM Forms工作區程式碼[」。 ](introduction-customizing-html-workspace.md#building-html-workspace-code)需要使用dev套件。
 
-1. 複製 `/libs/ws/js/runtime/templates/task.html` 至 `/apps/ws/js/runtime/templates/task.html`。
+1. 將`/libs/ws/js/runtime/templates/task.html`複製到`/apps/ws/js/runtime/templates/task.html`。
 
-1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱相同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/task.html`:
+1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱相同，請在`/apps/ws/js/runtime/templates/task.html`中修改以下代碼：
 
    ```jsp
    <%if(routeList == null){%>
@@ -81,7 +81,7 @@ ht-degree: 0%
                <%}%>
    ```
 
-1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱不同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/task.html`。 它添加一個servlet條件堆 `if-else` 棧，以用路由操作名映射樣式。
+1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱不同，請在`/apps/ws/js/runtime/templates/task.html`中修改以下代碼。 它添加`if-else` servlet條件的堆棧，以用路由操作名映射樣式。
 
 ```jsp
 <%if(routeList == null){%>
@@ -117,11 +117,11 @@ To
             <%}%>
 ```
 
-## 任務詳細資訊任務操作彈出菜單 {#task-details-task-action-popup}
+## 任務詳細資訊任務操作彈出菜單{#task-details-task-action-popup}
 
-1. 複製 `/libs/ws/js/runtime/templates/taskdetails.html` 至 `/apps/ws/js/runtime/templates/taskdetails.html`。
+1. 將`/libs/ws/js/runtime/templates/taskdetails.html`複製到`/apps/ws/js/runtime/templates/taskdetails.html`。
 
-1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱相同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/taskdetails.html`:
+1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱相同，請在`/apps/ws/js/runtime/templates/taskdetails.html`中修改以下代碼：
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -141,7 +141,7 @@ To
                        <%}%>
    ```
 
-1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱不同，請在中修改以下代碼 `/apps/ws/js/runtime/templates/taskdetails.html`。 它添加一堆 `if-else` servlet條件，以用路由操作名映射樣式。
+1. 如果CSS樣式的名稱與來自伺服器的路由操作名稱不同，請在`/apps/ws/js/runtime/templates/taskdetails.html`中修改以下代碼。 它添加`if-else` servlet條件堆棧，以用路由操作名映射樣式。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -169,7 +169,7 @@ To
                <%}%>
    ```
 
-1. 開啟 `/apps/ws/js/registry.js` 以進行編輯並尋找下列文字：
+1. 開啟`/apps/ws/js/registry.js`進行編輯，並尋找下列文字：
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
 1. 將文字取代為：
