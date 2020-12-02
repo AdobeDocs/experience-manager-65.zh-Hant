@@ -10,13 +10,16 @@ topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 1%
 
 ---
 
 
-# 通信管理：疑難排解 {#correspondence-management-troubleshooting}
+# 通信管理：疑難排解{#correspondence-management-troubleshooting}
 
-## 保存信件時出錯 {#errors-when-saving-a-letter}
+## 保存字母{#errors-when-saving-a-letter}時出錯
 
 ### 問題 {#issue}
 
@@ -32,23 +35,23 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 * 資料字典系結至字母，但不存在於伺服器上。
 * 資料字典系結至字母，但名稱中有底線(_)。
 
-### 解決方法 {#workaround}
+### 解決方法{#workaround}
 
 請確定您在字母中使用的資料字典在伺服器上存在，且名稱中沒有底線(_)。
 
-## 預覽字母時出錯 {#error-when-previewing-a-letter}
+## 預覽字母{#error-when-previewing-a-letter}時出錯
 
 ### 問題 {#issue-1}
 
 在預覽字母時，出現「載入字母時出錯：無法從XML輸入匯入資產」，即使先前未發佈的文字資產已發佈在信函中，也會顯示。
 
-### 解決方法 {#workaround-1}
+### 解決方法{#workaround-1}
 
 使用以下步驟重設發佈實例上的字母快取，然後重試查看字母：
 
-1. 前往並 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 以管理員身分登入。
-1. 選擇「 **對應管理配置」**。
-1. 在「對 **應管理配置」中**，禁用「 **啟用字母快取」,**&#x200B;然後按一下&#x200B;**「保存」。**
-1. 啟用 **字母快取** ，然後按一 **下儲存**。
+1. 前往&#x200B;**`https://'[server]:[port]'/[contextPath]/system/console/configMgr`**&#x200B;並以管理員身分登入。
+1. 選擇&#x200B;**Corresponce Management Configurations**。
+1. 在&#x200B;**通信管理配置**&#x200B;中，禁用&#x200B;**啟用字母快取**，然後按一下&#x200B;**保存。**
+1. 啟用&#x200B;**啟用字母快取** ，然後按一下&#x200B;**保存**。
 1. 重試查看信函。
 
