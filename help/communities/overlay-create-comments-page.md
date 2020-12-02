@@ -18,13 +18,13 @@ ht-degree: 1%
 ---
 
 
-# 「建立注釋」頁 {#create-comments-page}
+# 「建立注釋」頁{#create-comments-page}
 
-**[‹覆蓋注釋元件](overlay-comments.md)[建立節點‹](overlay-create-nodes.md)**
+**[‹覆蓋注釋組](overlay-comments.md) [件建立節點‹](overlay-create-nodes.md)**
 
-## 「注釋」頁 {#comments-page}
+## 「注釋」頁{#comments-page}
 
-「社 [群元件」指南](components-guide.md) ，可讓您輕鬆體驗覆蓋注釋元件。
+[社群元件指南](components-guide.md)提供輕鬆體驗覆蓋注釋元件的功能。
 
 檢視作者例項的頁面：
 
@@ -32,4 +32,4 @@ ht-degree: 1%
 
 ![個評論](assets/comments.png)
 
-**[‹覆蓋注釋元件](overlay-comments.md)[建立節點‹](overlay-create-nodes.md)**
+**[‹覆蓋注釋組](overlay-comments.md) [件建立節點‹](overlay-create-nodes.md)**
