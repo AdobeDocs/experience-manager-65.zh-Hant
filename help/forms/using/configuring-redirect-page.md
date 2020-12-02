@@ -10,6 +10,9 @@ discoiquuid: 0ffbb4d3-9371-4705-8496-f98e22d9c4a6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +21,9 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 表單作者可以為每個表單設定一個頁面，表單使用者在送出表單後會重新導向至該頁面。
 
-1. 在編輯模式中，選取元件，然後按一下欄 ![位層級](assets/field-level.png) > **最適化表單容器**，然後按 ![一下cmppr](assets/cmppr.png)。
+1. 在編輯模式中，選擇元件，然後按一下![field-level](assets/field-level.png) > **最適化表單容器**，然後按一下![cmppr](assets/cmppr.png)。
 
-1. 在側欄中，按一下「 **提交」**。
+1. 在側欄中，按一下&#x200B;**提交**。
 
 1. 在「提交」區段的「感謝頁面」下方，提供重新導向頁面的URL。
 1. （可選）在「提交操作」下，對於「提交到REST端點」操作，您可以配置要傳遞到重定向頁的參數。
@@ -29,13 +32,13 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 重新導向頁面設定
 
-表單作者可以使用下列參數，這些參數會傳遞至「感謝」頁面。 對於所有可用的提交動作， `status` 會傳 `owner` 遞參數。 除了這兩個參數外，還會為下列提交動作傳遞一些額外參數：
+表單作者可以使用下列參數，這些參數會傳遞至「感謝」頁面。 對於所有可用的提交操作，將傳遞`status`和`owner`參數。 除了這兩個參數外，還會為下列提交動作傳遞一些額外參數：
 
 * **儲存內容動作** （已過時）: `contentPath`-將傳遞已提交資料儲存在儲存庫中的節點路徑。
 
-* **儲存PDF動作** （已過時）:將 `contentPath`傳遞已提交的資料和儲存在儲存庫中的PDF檔案節點的路徑。
+* **儲存PDF動作** （已過時）: `contentPath`-將傳遞已提交的資料和到儲存庫中PDF檔案的節點的路徑。
 
 * **提交至表單工作流程**:會傳遞從表單工作流程傳回的輸出參數。
 
-* **提交到REST端點**:系統會傳遞為在欄位內映射至參數所新增的參數。 `status` 而參 `owner` 數不會在此提交動作中傳遞。 有關詳細資訊，請 [參閱配置提交到REST端點提交操作](../../forms/using/configuring-submit-actions.md)。
+* **提交到REST端點**:系統會傳遞為在欄位內映射至參數所新增的參數。`status` 而參 `owner` 數不會在此提交動作中傳遞。有關詳細資訊，請參閱[配置提交到REST端點提交操作](../../forms/using/configuring-submit-actions.md)。
 
