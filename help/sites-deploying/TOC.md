@@ -15,10 +15,10 @@ ht-degree: 9%
 ---
 
 
-# AEM 6.5 Deploying User Guide {#deploying}
+# AEM 6.5部署使用指南{#deploying}
 
 + [部署使用指南](home.md)
-+ AEM平台簡介 {#introduction}
++ AEM平台簡介{#introduction}
    + [AEM平台簡介](platform.md)
    + [技術需求](technical-requirements.md)
    + [AEM 6.5中的儲存元素](storage-elements-in-aem-6.md)
@@ -79,7 +79,7 @@ ht-degree: 9%
    + [升級程式碼和自訂](upgrading-code-and-customizations.md)
    + [應用程式伺服器安裝的升級步驟](app-server-upgrade.md)
    + [升級後卸載的過時捆綁包清單](obsolete-bundles.md)
-+ 儲存庫重組 {#restructuring}
++ 資料庫重組{#restructuring}
    + [AEM 6.5中的資料庫重組](repository-restructuring.md)
    + [AEM 6.5中的通用資料庫重組](all-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的Sites Repository Restructing](sites-repository-restructuring-in-aem-6-5.md)
@@ -88,7 +88,7 @@ ht-degree: 9%
    + [AEM 6.5中的Forms Repository Restructing](forms-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的電子商務資料庫重組](ecommerce-repository-restructuring-in-aem-6-5.md)
    + [6.5版中AEM Communities的儲存庫重組](communities-repository-restructuring-in-aem-6-5.md)
-+ 電子商務 {#ecommerce}
++ 電子商務{#ecommerce}
    + [電子商務概觀](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
