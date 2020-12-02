@@ -12,10 +12,13 @@ discoiquuid: 23386353-b2bf-49f1-947a-dd7587bba175
 noindex: true
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 0%
 
 ---
 
 
-# PDF Generator備份限制 {#pdf-generator-backup-limitations}
+# PDF Generator備份限制{#pdf-generator-backup-limitations}
 
 無法備份PDF產生器用於轉換檔案的暫存目錄。 即使服務會正確還原，但資料可能會遺失，因為PDF產生器會以設定的間隔審閱並清除暫存目錄的內容。
