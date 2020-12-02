@@ -18,38 +18,38 @@ ht-degree: 0%
 ---
 
 
-# 防止CSRF攻擊 {#preventing-csrf-attacks}
+# 防止CSRF攻擊{#preventing-csrf-attacks}
 
-## CSRF攻擊的運作方式 {#how-csrf-attacks-work}
+## CSRF攻擊如何運作{#how-csrf-attacks-work}
 
 跨網站要求偽造(CSRF)是一項網站弱點，有效使用者的瀏覽器可用來傳送惡意要求（可能是透過iFrame）。 由於瀏覽器會依網域傳送Cookie，因此，如果使用者目前已登入應用程式，使用者的資料可能會受到危害。
 
 例如，假設您在瀏覽器中登入管理主控台。 您會收到包含連結的電子郵件訊息。 您按一下連結，會在瀏覽器中開啟新的標籤。 您開啟的頁面包含隱藏的iFrame，會使用已驗證的AEM表單工作階段中的Cookie，對表單伺服器提出惡意要求。 由於「使用者管理」會收到有效的Cookie，因此會傳遞請求。
 
-## CSRF相關術語 {#csrf-related-terms}
+## 與CSRF相關的詞語{#csrf-related-terms}
 
-**參考：** 來自要求的來源頁面地址。 例如，site1.com的網頁包含site2.com的連結。 按一下連結會將要求張貼至site2.com。 此請求的參考者為site1.com，因為此請求是從來源為site1.com的頁面提出。
+**Referer:** 要提出請求的來源頁面的位址。例如，site1.com的網頁包含site2.com的連結。 按一下連結會將要求張貼至site2.com。 此請求的參考者為site1.com，因為此請求是從來源為site1.com的頁面提出。
 
-**允許列出的URI:** URI可識別所請求表單伺服器上的資源，例如/adminui或/contentspace。 某些資源可能允許請求從外部站點輸入應用程式。 這些資源被視為允許列出的URI。 表單伺服器從不從允許列出的URI中執行引用檢查。
+**允許列出的URI:** URI可識別所請求表單伺服器上的資源，例如/adminui或/contentspace。某些資源可能允許請求從外部站點輸入應用程式。 這些資源被視為允許列出的URI。 表單伺服器從不從允許列出的URI中執行引用檢查。
 
-**空引用器：** 當您開啟新的瀏覽器視窗或標籤時，輸入位址並按Enter，則反向連結為null。 這項要求是全新的，並非源自父網頁； 因此，沒有請求的參考。 表單伺服器可接收來自下列網站的空值參考者：
+**Null referer：當** 您開啟新的瀏覽器視窗或標籤，然後輸入位址並按Enter鍵時，referer為null。這項要求是全新的，並非源自父網頁；因此，沒有請求的參考。 表單伺服器可接收來自下列網站的空值參考者：
 
 * 在SOAP或REST端點上從Acrobat提出的要求
 * 對AEM表單SOAP或REST端點進行HTTP要求的任何案頭用戶端
 * 開啟新的瀏覽器視窗，並輸入任何AEM表單網頁應用程式登入頁面的URL時
 
-允許在SOAP和REST端點上使用空值引用器。 也允許所有URI登入頁面（例如/adminui和/contentspace）及其對應的映射資源上有空引用器。 例如，/contentspace的映射servlet為/contentspace/faces/jsp/login.jsp，這應為空引用器異常。 只有在您為Web應用程式啟用GET篩選時，才需要此例外。 您的應用程式可以指定是否允許空值參照器。 請參閱「AEM表單的強化與安全性」中的「防止跨 [網站要求偽造攻擊」](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html)。
+允許在SOAP和REST端點上使用空值引用器。 也允許所有URI登入頁面（例如/adminui和/contentspace）及其對應的映射資源上有空引用器。 例如，/contentspace的映射servlet為/contentspace/faces/jsp/login.jsp，這應為空引用器異常。 只有在您為Web應用程式啟用GET篩選時，才需要此例外。 您的應用程式可以指定是否允許空值參照器。 請參閱[Harding and Security for AEM forms](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html)中的「Protecting for Cross-Site Request Furshing attacks」（防止跨網站要求偽造攻擊）。
 
-**允許的引用例外：** 允許的引用例外是允許的引用的清單的子清單，從中阻止請求。 允許參考例外是Web應用程式的特定情況。 如果不允許允許的引用程式的子集調用特定Web應用程式，則可以通過允許的引用例外來阻止引用程式。 允許的引用例外是在您應用程式的web.xml檔案中指定。 （請參閱「說明與教學課程」頁面上「AEM表單的強化與安全性」中的「防止跨網站要求偽造攻擊」）。
+**允許的引用例外：** 允許的引用例外是允許的引用的清單的子清單，從中阻止請求。允許參考例外是Web應用程式的特定情況。 如果不允許允許的引用程式的子集調用特定Web應用程式，則可以通過允許的引用例外來阻止引用程式。 允許的引用例外是在您應用程式的web.xml檔案中指定。 （請參閱「說明與教學課程」頁面上「AEM表單的強化與安全性」中的「防止跨網站要求偽造攻擊」）。
 
-## 如何允許參考者運作 {#how-allowed-referers-work}
+## 允許的反向連結如何運作{#how-allowed-referers-work}
 
 AEM表格提供反向連結篩選，可協助防止CSRF攻擊。 以下是反向連結篩選的運作方式：
 
 1. Forms伺服器檢查用於調用的HTTP方法：
 
    * 如果是POST，表單伺服器將執行反向連結標題檢查。
-   * 如果是GET，表單伺服器會繞過參考者檢查，除非CSRF_CHECK_GETS設定為true，否則它會執行參考者標頭檢查。 CSRF_CHECK_GETS是在應用程式的web.xml檔案中指定。 (請參閱「強化與安全性指南」中的「防止跨網站要求偽造 [攻擊」](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html))。
+   * 如果是GET，表單伺服器會繞過參考者檢查，除非CSRF_CHECK_GETS設定為true，否則它會執行參考者標頭檢查。 CSRF_CHECK_GETS是在應用程式的web.xml檔案中指定。 （請參閱[強化與安全指南](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html)中的「防止跨網站要求偽造攻擊」。）
 
 1. Forms伺服器檢查是否允許列出請求的URI:
 
@@ -66,15 +66,15 @@ AEM表格提供反向連結篩選，可協助防止CSRF攻擊。 以下是反向
    * 如果允許空引用，則會傳遞請求。
    * 如果不允許空引用，伺服器會檢查請求的URI是否為空引用的例外，並相應地處理請求。
 
-## 設定允許的參考者 {#configure-allowed-referers}
+## 配置允許的引用器{#configure-allowed-referers}
 
 運行Configuration Manager時，預設主機和IP地址或表單伺服器將添加到「允許的引用」清單中。 您可以在管理控制台中編輯此清單。
 
-1. 在管理控制台中，按一下「設定>使用者管理>設定>設定允許的參考URL」。 「允許的參考」清單會顯示在頁面底部。
+1. 在管理控制台中，按一下「設定>使用者管理>設定>設定允許的參考URL」。「允許的參考」清單會顯示在頁面底部。
 1. 若要新增允許的參考者：
 
    * 在「允許的參考」方塊中輸入主機名稱或IP位址。 要一次添加多個允許的引用器，請在新行上鍵入每個主機名或IP地址。
-   * 在「HTTP埠」和「HTTPS埠」框中，指定允許HTTP、HTTPS或兩者的埠。 如果保留這些框為空，則使用預設埠（HTTP的埠80和HTTPS的埠443）。 如果在框 `0` 中輸入（零），則該伺服器上的所有埠都將啟用。 您也可以輸入特定的埠號，以僅啟用該埠。
+   * 在「HTTP埠」和「HTTPS埠」框中，指定允許HTTP、HTTPS或兩者的埠。 如果保留這些框為空，則使用預設埠（HTTP的埠80和HTTPS的埠443）。 如果在框中輸入`0`（零），則該伺服器上的所有埠都將啟用。 您也可以輸入特定的埠號，以僅啟用該埠。
    * 按一下「新增」。
 
 1. 要從「允許的引用」清單中刪除條目，請從清單中選擇項，然後按一下「刪除」。
