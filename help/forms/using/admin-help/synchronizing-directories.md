@@ -11,19 +11,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1040'
+ht-degree: 0%
 
 ---
 
 
-# 同步目錄 {#synchronizing-directories}
+# 同步目錄{#synchronizing-directories}
 
-要同步域，您可以選擇執行手動或計畫的同步。 手動 *同步* ，可同步任何選定域。 計畫 *的同步* ，將同步所有域。
+要同步域，您可以選擇執行手動或計畫的同步。 *手動同步*&#x200B;將同步任何選定的域。 *計畫同步*&#x200B;將同步所有域。
 
 目錄同步用於將您在目錄設定中指定的目錄伺服器的詳細資訊提取到用戶管理資料庫中。 之後，如果目錄伺服器上發生更改或更新，您也可以手動同步。 例如，如果新增使用者和群組或變更使用者帳戶，您可以進行手動同步。
 
 您也可以設定每日同步計畫，以便自動同步用戶管理資料庫與源目錄伺服器的更改或更新。 但是，請注意，此程式使用網路和伺服器資源。 選擇低使用時段，並避免調度不必要的同步，以便將系統和網路資源關聯起來。 要最小化不必要的同步，請改用立即同步選項。
 
-您也可以指定在同步網域時，是否將使用者和群組資訊推送至Adobe liveCycle Content Services 9（已過時）。
+您也可以指定在同步網域時，是否將使用者和群組資訊推送至Adobe LiveCycle Content Services 9（已過時）。
 
 >[!NOTE]
 >
@@ -35,9 +38,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（已過時）是與LiveCycle一起安裝的內容管理系統。 它可讓使用者設計、管理、監控和最佳化以人為中心的流程。 內容服務（已過時）支援將於2014年12月31日截止。 請參閱 [Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。 如需有關設定Content Services（已過時）的資訊，請參 [閱管理Content Services](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)。
+>Adobe® LiveCycle® Content Services ES（已過時）是與LiveCycle一起安裝的內容管理系統。 它可讓使用者設計、管理、監控和最佳化以人為中心的流程。 內容服務（已過時）支援將於2014年12月31日截止。 請參閱[Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。 若要瞭解如何設定Content Services（已過時），請參閱[管理Content Services](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)。
 
-## 啟用增量目錄同步 {#enable-delta-directory-synchronization}
+## 啟用增量目錄同步{#enable-delta-directory-synchronization}
 
 增量目錄同步提高了目錄同步的效率。 啟用增量目錄同步時，用戶管理僅同步自上次同步以來添加或更新的用戶和組。
 
@@ -53,16 +56,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. 在「增量同步」(Delta Synch)下，選中該複選框，然後按一下「保存」(Save)。
-1. 編輯將使用delta目錄同步功能的每個企業域的目錄設定。 在「用戶設定」和「組設定」頁上，找到「修改時間戳記」設定並輸 `modify TimeStamp` 入作為值。 如需編輯企業網域的詳細資訊，請參 [閱編輯和轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)。
+1. 編輯將使用delta目錄同步功能的每個企業域的目錄設定。 在「用戶設定」和「組設定」頁上，找到「修改時間戳記」設定並輸入`modify TimeStamp`作為值。 如需編輯企業網域的詳細資訊，請參閱[編輯和轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)。
 
-## 在同步期間啟用或禁用詳細記錄 {#enable-or-disable-detailed-logging-during-synchronization}
+## 在同步{#enable-or-disable-detailed-logging-during-synchronization}期間啟用或禁用詳細記錄
 
 預設情況下，用戶管理在同步過程中記錄詳細的統計資訊。
 
 1. 在管理控制台中，按一下「設定>使用者管理>設定>設定進階系統屬性」。
 1. 在同步統計記錄下，取消選中複選框以禁用詳細記錄，或選擇該複選框以啟用記錄，然後按一下保存。
 
-## 配置目錄同步重試選項 {#configure-the-directory-synchronization-retry-option}
+## 配置目錄同步重試選項{#configure-the-directory-synchronization-retry-option}
 
 您可以配置用戶管理以定期檢查是否有任何失敗的目錄同步嘗試。 然後，用戶管理將嘗試完成失敗的同步。
 
@@ -71,7 +74,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    預設值為0 0/13 &amp;ast;? &amp;ast;，這表示每13分鐘檢查一次。
 
-## 手動同步目錄 {#manually-synchronize-directories}
+## 手動同步目錄{#manually-synchronize-directories}
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. （可選）若要將使用者和群組資訊推送至Content Services（已過時），請選取「選取此選項」，將使用者和群組推送至已註冊的外部主要儲存提供者」選項。 當透過「使用者和群組」頁面新增使用者和群組時，也會套用此選項。
@@ -79,7 +82,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    如果選擇多個域，則可以同時運行所有域的域同步。 但是，如果單獨選擇域，則一次只能運行一個域同步。
 
-## 計畫目錄同步 {#schedule-directory-synchronization}
+## 計畫目錄同步{#schedule-directory-synchronization}
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. 計畫同步：
@@ -93,7 +96,7 @@ cron表達式的使用基於Quartz開源作業調度系統1.4.0版。
 * （可選）若要將使用者和群組資訊推送至Content Services（已過時），請選取「選取此選項」，將使用者和群組推送至已註冊的外部主要儲存提供者」選項。 當透過「使用者和群組」頁面新增使用者和群組時，也會套用此選項。
 * 按一下「儲存」。
 
-## 停止當前正在進行的所有目錄同步 {#stop-all-directory-synchronizations-currently-in-progress}
+## 停止當前正在進行的所有目錄同步{#stop-all-directory-synchronizations-currently-in-progress}
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. 按一下「中止」。 此按鈕僅在目錄同步進行時顯示。
