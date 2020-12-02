@@ -10,13 +10,16 @@ topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1200'
+ht-degree: 2%
 
 ---
 
 
-# 最適化和HTML5表單的外觀架構 {#appearance-framework-for-adaptive-and-html-forms}
+# 最適化和HTML5表單的外觀架構{#appearance-framework-for-adaptive-and-html-forms}
 
-表單（最適化表單和HTML5表單）使 [用jQuery](https://jquery.com/)、 [Backbone.js](https://backbonejs.org/) 和 [](https://underscorejs.org/) Undershore.js庫進行外觀和指令碼編寫。 表單也會針對表單中 [的所有互動元素（例如欄位和按鈕）使用jQuery UI](https://jqueryui.com/) **** Widgets架構。 此架構可讓表單開發人員在表單中使用一組豐富的可用jQuery Widget和外掛程式。 您也可以在擷取來自使用者（例如leadDigits/trailDigits限制或實作圖片子句）的資料時，實作表格特定邏輯。 表單開發人員可建立並使用自訂的附加功能，以改善資料擷取體驗，並讓它更方便使用。
+表單（最適化表單和HTML5表單）使用[jQuery](https://jquery.com/)、[Backbone.js](https://backbonejs.org/)和[Undershore.js](https://underscorejs.org/)程式庫來呈現外觀和指令碼。 表單中的所有互動元素（例如欄位和按鈕）也使用[jQuery UI](https://jqueryui.com/)**Widgets**&#x200B;架構。 此架構可讓表單開發人員在表單中使用一組豐富的可用jQuery Widget和外掛程式。 您也可以在擷取來自使用者（例如leadDigits/trailDigits限制或實作圖片子句）的資料時，實作表格特定邏輯。 表單開發人員可建立並使用自訂的附加功能，以改善資料擷取體驗，並讓它更方便使用。
 
 本文是為對jQuery和jQuery Widget有充分認識的開發人員而設計。 它提供外觀架構的洞察力，讓開發人員可為表單欄位建立替代外觀。
 
@@ -26,7 +29,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 * 外觀是合約的一部分，會觸發一組事件，例如進入和退出。
 * 實施一組函式時需要外觀。 有些函式是常用的，而有些函式是特定於欄位類型函式。
 
-## 常用選項 {#common-options}
+## 常用選項{#common-options}
 
 以下是設定全局選項。 這些選項適用於每個欄位。
 
@@ -85,11 +88,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 除了這些選項外，框架還提供了一些其他選項，這些選項會因欄位類型而異。 欄位特定選項的詳細資訊列於下方。
 
-### 與表單架構互動 {#interaction-with-forms-framework}
+### 與表單框架{#interaction-with-forms-framework}的交互
 
 若要與表單架構互動，Widget會觸發一些事件，讓表單指令碼運作。 如果介面工具集未擲出這些事件，則在該欄位表單中編寫的某些指令碼將無法運作。
 
-#### 由介面工具集觸發的事件 {#events-triggered-by-widget}
+#### 由Widget {#events-triggered-by-widget}觸發的事件
 
 <table>
  <tbody>
@@ -99,24 +102,24 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>每當欄位處於焦點時，就會觸發此事件。 它允許在欄位上運行"enter"指令碼。 觸發事件的語法為<br /> (widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>每當欄位處於焦點時，就會觸發此事件。 它允許在欄位上運行"enter"指令碼。 觸發事件的語法為<br />(widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>每當使用者離開欄位時，就會觸發此事件。 它可讓引擎設定欄位的值，並執行其「退出」指令碼。 觸發事件的語法為<br /> (widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>每當使用者離開欄位時，就會觸發此事件。 它可讓引擎設定欄位的值，並執行其「退出」指令碼。 觸發事件的語法為<br />(widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>觸發此事件可讓引擎執行寫入欄位的「變更」指令碼。 觸發事件的語法為<br /> (widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>觸發此事件可讓引擎執行寫入欄位的「變更」指令碼。 觸發事件的語法為<br />(widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>只要按一下欄位，就會觸發此事件。 它可讓引擎執行寫入欄位的「點按」指令碼。 觸發事件的語法為<br /> (widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>只要按一下欄位，就會觸發此事件。 它可讓引擎執行寫入欄位的「點按」指令碼。 觸發事件的語法為<br />(widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
 
-#### 由介面工具集實作的API {#apis-implemented-by-widget}
+#### 由Widget {#apis-implemented-by-widget}實作的API
 
 外觀框架調用在自定義Widget中實現的Widget的一些功能。 介面工具集必須實作下列功能：
 
@@ -135,7 +138,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td>將焦點放在欄位上，並呼叫XFA_CLICK_EVENT。</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> err <br /><em>orMessage:代表 </em>error<br /> <em>errorType的字串：字串("warning"/"error")</em></p> <p><strong>注意</strong>:僅適用於HTML5表單。</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em> errorMessage:字串</em>代表error<br /> <em>errorType:字串("warning"/"error")</em></p> <p><strong>注意</strong>:僅適用於HTML5表單。</p> </td>
    <td>傳送錯誤訊息和錯誤類型至介面工具集。 介面工具集會顯示錯誤。</td>
   </tr>
   <tr>
@@ -145,11 +148,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
  </tbody>
 </table>
 
-## 欄位類型的特定選項 {#options-specific-to-type-of-field}
+## 欄位類型{#options-specific-to-type-of-field}的特定選項
 
 所有自訂Widget都應符合上述規格。 若要使用不同欄位的功能，介面工具集必須符合該特定欄位的准則。
 
-### 文字編輯：文字欄位 {#textedit-text-field}
+### 文字編輯：文字欄位{#textedit-text-field}
 
 <table>
  <tbody>
@@ -172,7 +175,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
  </tbody>
 </table>
 
-### ChoiceList:下拉式清單、ListBox {#choicelist-dropdownlist-listbox}
+### ChoiceList:DropDownList, ListBox {#choicelist-dropdownlist-listbox}
 
 <table>
  <tbody>
@@ -182,15 +185,15 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   </tr>
   <tr>
    <td>值<br /> </td>
-   <td>選取值的陣列。<br /> </td>
+   <td>選定值的陣列。<br /> </td>
   </tr>
   <tr>
    <td>項目<br /> </td>
-   <td>要顯示為選項的對象陣列。 每個對象包含兩個屬性-<br /> save:要保存的值，顯示：值。<br /> <br /> </td>
+   <td>要顯示為選項的對象陣列。 每個對象包含兩個屬性-<br />保存：要保存的值，顯示：值以顯示。<br /> <br /> </td>
   </tr>
   <tr>
    <td><p>可編輯</p> <p><strong>注意</strong>:僅適用於HTML5表單。<br /> </p> </td>
-   <td>如果值為true，則會在介面工具集中啟用自訂文字輸入。<br /> </td>
+   <td>如果值為true，則在Widget中啟用自訂文字輸入。<br /> </td>
   </tr>
   <tr>
    <td>displayValue<br /> </td>
@@ -212,11 +215,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <th>說明</th>
   </tr>
   <tr>
-   <td><p>addItem:<em> function(itemValues)<br /> itemValues:包含顯示的物件並儲存值 <br /> {sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;保存值&gt;}</em></p> </td>
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues:包含顯示和保存值<br /> {sDisplayVal的對象：&lt;displayValue&gt;, sSaveVal:&lt;save value&gt;}</em></p> </td>
    <td>新增項目至清單。</td>
   </tr>
   <tr>
-   <td>deleteItem<em>:函式(nIndex)<br /> nIndex:要從清單中刪除的項的索引<br /></em><br /><br /> </td>
+   <td>deleteItem<em>:函式(nIndex)<br /> nIndex:要從清單<br /> </em><br /> <br />中刪除的項的索引 </td>
    <td>從清單中刪除選項。</td>
   </tr>
   <tr>
@@ -236,7 +239,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 | 零 | 欄位區域設定中零的字串表示。 |
 | 小數點 | 欄位區域設定中小數的字串表示。 |
 
-### CheckButton:RadioButton、CheckBox {#checkbutton-radiobutton-checkbox}
+### CheckButton:RadioButton, CheckBox {#checkbutton-radiobutton-checkbox}
 
 <table>
  <tbody>
@@ -246,7 +249,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
   </tr>
   <tr>
    <td>values</td>
-   <td><p>值陣列（開／關/中性）。</p> <p>它是checkButton不同狀態的值陣列。 值[0]是狀態為ON時的值，值[1]是狀態為OFF時的值，<br /> 值[2]是狀態為NEUTRAL時的值。 值陣列的長度等於狀態選項的值。<br /> </p> </td>
+   <td><p>值陣列（開／關/中性）。</p> <p>它是checkButton不同狀態的值陣列。 值[0]是狀態為ON時的值，值[1]是狀態為OFF時的值，<br />值[2]是狀態為NEUTRAL時的值。 值陣列的長度等於狀態選項的值。<br /> </p> </td>
   </tr>
   <tr>
    <td>州</td>
@@ -259,7 +262,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
  </tbody>
 </table>
 
-### DateTimeEdit:（日期欄位） {#datetimeedit-datefield}
+### DateTimeEdit:(DateField){#datetimeedit-datefield}
 
 | 選項 | 說明 |
 |---|---|
