@@ -18,15 +18,15 @@ ht-degree: 6%
 ---
 
 
-# 建立節點 {#create-nodes}
+# 建立節點{#create-nodes}
 
-將注釋系統與自訂版本重疊，方法是將所需的最少檔案從複製 `/libs` 到 `/apps` 並在中修改 `/apps`。
+將從`/libs`至`/apps`所需的最少檔案數複製至`/apps`並修改至&lt;a2/>，以自訂版本覆蓋註解系統。
 
 >[!CAUTION]
 >
 >不會編輯/libs資料夾的內容，因為任何重新安裝或升級都可能會刪除或取代/libs資料夾，而/apps資料夾的內容則未受影響。
 
-在作 [者例項上使用CRXDE](../../help/sites-developing/developing-with-crxde-lite.md) Lite，首先在/apps檔案夾中建立路徑，該路徑與/libs檔案夾中重疊元件的路徑相同。
+在作者實例上使用[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)，首先在/apps資料夾中建立路徑，該路徑與/libs資料夾中覆蓋元件的路徑相同。
 
 要複製的路徑為：
 
@@ -34,66 +34,66 @@ ht-degree: 6%
 
 路徑中的某些節點是資料夾，有些是元件。
 
-1. 瀏覽至 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. 建 `/apps/social` 立（如果尚不存在）
-   * 選擇節 `/apps` 點
+1. 瀏覽至[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
+1. 建立`/apps/social`（如果尚未存在）
+   * 選擇`/apps`節點
    * **[!UICONTROL 「建立>資料夾……」]**
       * 輸入名稱: `social`
-1. 選擇節 `social` 點
-   * **[!UICONTROL 建立]** >資 **[!UICONTROL 料夾……]**
+1. 選擇`social`節點
+   * **[!UICONTROL 建立]** > **[!UICONTROL 資料夾……]**
       * 輸入名稱: `commons`
-1. 選擇節 `commons` 點
+1. 選擇`commons`節點
    * **[!UICONTROL 建立>資料夾……]**
       * 輸入名稱: `components`
-1. 選擇節 `components` 點
+1. 選擇`components`節點
    * **[!UICONTROL 建立>資料夾。.]**.
       * 輸入名稱: `hbs`
-1. 選擇節 `hbs` 點
+1. 選擇`hbs`節點
    * **[!UICONTROL 建立]** >創 **[!UICONTROL 建元件……]**
-      * 輸入標籤： `comments`
-      * Enter Title: `Comments`
-      * Enter Description: `List of comments without showing avatars`
+      * 輸入標籤：`comments`
+      * 輸入標題：`Comments`
+      * 輸入說明：`List of comments without showing avatars`
       * 超級類型: `social/commons/components/comments`
-      * 輸入組： `Communities`
-      * 按一下「 **[!UICONTROL Next]** （下一步）」直到 **[!UICONTROL 「OK（確定）」]**
-1. 選擇節 `comments` 點
+      * 輸入組：`Communities`
+      * 按一下&#x200B;**[!UICONTROL Next]**&#x200B;直到&#x200B;**[!UICONTROL OK]**
+1. 選擇`comments`節點
 
    * **[!UICONTROL 建立]** >創 **[!UICONTROL 建元件……]**
 
-      * 輸入標籤： `comment`
-      * Enter Title: `Comment`
-      * Enter Description: `A comment instance without avatars`
+      * 輸入標籤：`comment`
+      * 輸入標題：`Comment`
+      * 輸入說明：`A comment instance without avatars`
       * 超級類型: `social/commons/components/comments/comment`
-      * 輸入組： `.hidden`
-      * 按一下「 **[!UICONTROL Next]** （下一步）」直到 **[!UICONTROL 「OK（確定）」]**
-   * 選擇「 **[!UICONTROL 全部保存」]**
-1. 刪除預設值 `comments.jsp`
-   * 選擇節點 `/apps/social/commons/components/hbs/comments/comments.jsp`
-   * 選擇刪 **[!UICONTROL 除]**
+      * 輸入組：`.hidden`
+      * 按一下&#x200B;**[!UICONTROL Next]**&#x200B;直到&#x200B;**[!UICONTROL OK]**
+   * 選擇&#x200B;**[!UICONTROL 全部保存]**
+1. 刪除預設`comments.jsp`
+   * 選擇節點`/apps/social/commons/components/hbs/comments/comments.jsp`
+   * 選擇&#x200B;**[!UICONTROL Delete]**
 1. 刪除預設注釋。jsp
-   * 選擇節點 `/apps/social/commons/components/hbs/comments/comment/comment.jsp`
-   * 選擇刪 **[!UICONTROL 除]**
-   * 選擇「 **[!UICONTROL 全部保存」]**
+   * 選擇節點`/apps/social/commons/components/hbs/comments/comment/comment.jsp`
+   * 選擇&#x200B;**[!UICONTROL Delete]**
+   * 選擇&#x200B;**[!UICONTROL 全部保存]**
 
 >[!NOTE]
 >
->為保留繼承鏈，覆蓋元件的 `Super Type` (屬性 `sling:resourceSuperType`)設定為與要覆蓋的元件 `Super Type` 的相同值，在這種情況下：
+>為保留繼承鏈，覆蓋元件的`Super Type`（屬性`sling:resourceSuperType`）設為與要覆蓋元件的`Super Type`相同的值，在這種情況下：
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
 
 
-覆蓋本身(屬 `Type`性 `sling:resourceType`)必須是相對的自我參考，如此在/apps中找不到的任何內容就會在/libs中尋找。
+覆蓋本身的`Type`（屬性`sling:resourceType`）必須是相對的自我參考，如此在/apps中找不到的任何內容就會在/libs中尋找。
 * 名稱: `sling:resourceType`
 * 類型: `String`
 * 值: `social/commons/components/hbs/comments`
 
-1. 選擇綠色 `[+] Add`
+1. 選擇綠色`[+] Add`
    * 名稱: `sling:resourceType`
    * 類型: `String`
    * 值: `social/commons/components/hbs/comments/comment`
-1. 選擇綠色 `[+] Add`
-   * 選擇「 **[!UICONTROL 全部保存」]**
+1. 選擇綠色`[+] Add`
+   * 選擇&#x200B;**[!UICONTROL 全部保存]**
 
 ![create-nodes](assets/create-nodes.png)
 
