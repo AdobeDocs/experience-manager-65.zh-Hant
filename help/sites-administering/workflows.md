@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 0%
 
 ---
 
@@ -36,18 +39,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >如需詳細資訊，請參閱：
 >
->* 套用和參與工作流程：使 [用工作流程](/help/sites-authoring/workflows.md)。
->* 建立工作流程模型並擴充工作流程功能：開 [發和延伸工作流程](/help/sites-developing/workflows.md)。
->* 改善使用大量伺服器資源的工作流程的效能：併發 [工作流處理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)。
+>* 套用和參與工作流程：[使用工作流](/help/sites-authoring/workflows.md)。
+>* 建立工作流程模型並擴充工作流程功能：[開發與擴充工作流程](/help/sites-developing/workflows.md)。
+>* 改善使用大量伺服器資源的工作流程的效能：[並行工作流處理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)。
+
 >
 
 
 
-## 工作流程模型與例項 {#workflow-models-and-instances}
+## 工作流模型和實例{#workflow-models-and-instances}
 
-[AEM中的工作流程模型](/help/sites-developing/workflows.md#model) ，是業務流程的表示與實作：
+[AEM中](/help/sites-developing/workflows.md#model) 的工作流模型是業務流程的表示和實現：
 
-* 通常，他們會在頁面或資產上行動，以達成特定結果。
+* 通常，他們會在頁面或資產上採取行動，以達成特定結果。
 * 這些頁面和／或資產稱為工作流程裝載。
 * 工作流模型由執行特定任務的一系列步驟組成。
 * 當工作流程進行時，裝載會從步驟傳遞至步驟。
@@ -56,7 +60,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!CAUTION]
 >
->執行的步驟是生成實例時由 *工作流模型定義的步驟*。 如需詳細 [資訊，請參閱](/help/sites-developing/workflows.md#model) 「開發工作流程」。
+>執行的步驟是當生成實例時由工作流模型&#x200B;*定義的步驟。*&#x200B;如需詳細資訊，請參閱[開發工作流程](/help/sites-developing/workflows.md#model)。
 
 工作流程例項會在下列生命週期中進行：
 
@@ -73,7 +77,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM提供許多有用的工作流程模型。 此外，您組織中的開發人員也可以根據您業務流程的特定需求，建立自訂的工作流程模型。
 
-## 工作流程步驟 {#workflow-steps}
+## 工作流步驟{#workflow-steps}
 
 執行工作流步驟時，這些步驟與工作流實例相關聯。 工作流程例項的歷史記錄包含為例項執行之每個步驟的相關資訊。 這些資訊對於調查執行期間發生的問題非常有用。
 
@@ -86,7 +90,7 @@ AEM提供許多有用的工作流程模型。 此外，您組織中的開發人�
 >
 >如果發生錯誤，服務／步驟實作應處理錯誤情景的行為。 工作流引擎本身將重試作業，然後記錄錯誤並停止例項。
 
-## 工作流狀態和操作 {#workflow-status-and-actions}
+## 工作流狀態和操作{#workflow-status-and-actions}
 
 工作流可以具有以下狀態之一：
 
@@ -95,15 +99,15 @@ AEM提供許多有用的工作流程模型。 此外，您組織中的開發人�
 
 * **暫停**:工作流實例已暫停。
 * **中止**:工作流實例已終止。
-* **過時**:工作流實例的推進需要執行後台作業，但是在系統中找不到該作業。 當執行工作流程時發生錯誤時，可能會發生這種情況。
+* **過時**:工作流實例的推進需要執行後台作業，但是在系統中找不到該作業。當執行工作流程時發生錯誤時，可能會發生這種情況。
 
 >[!NOTE]
 >
->當執行「流程步驟」導致錯誤時，該步驟會出現在管理員的收件箱中，並且工作流狀態為 **RUNNING**。
+>當執行「流程步驟」導致錯誤時，該步驟將出現在管理員的收件箱中，工作流狀態為&#x200B;**RUNNING**。
 
 根據當前狀態，當需要干預工作流實例的正常進展時，您可以對運行的工作流實例執行操作：
 
-* **暫停**:暫時停止工作流的執行。 當您不希望工作流程繼續（例如維護）時，暫停在例外情況下很有用。 暫停會將工作流程狀態變更為「暫停」。
+* **暫停**:暫時停止工作流的執行。當您不希望工作流程繼續（例如維護）時，暫停在例外情況下很有用。 暫停會將工作流程狀態變更為「暫停」。
 * **繼續**:使用相同的配置在暫停的執行點重新啟動暫停的工作流。
-* **終止**:結束工作流執行並將狀態更改為 **ABORTED**。 無法重新啟動中止的工作流程實例。
+* **終止**:結束工作流執行並將狀態更改為 **ABORTED**。無法重新啟動中止的工作流程實例。
 
