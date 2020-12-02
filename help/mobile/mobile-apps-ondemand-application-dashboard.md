@@ -11,11 +11,14 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 42a38399-f5a7-4d2f-aa6a-d409a7ec60f7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 2%
 
 ---
 
 
-# AEM Mobile應用程式儀表板 {#aem-mobile-application-dashboard}
+# AEM Mobile應用程式儀表板{#aem-mobile-application-dashboard}
 
 >[!NOTE]
 >
@@ -35,9 +38,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 最後，管理員策略性地發佈更新的應用程式內容。
 
-## 管理應用程式圖格 {#the-manage-app-tile}
+## 管理應用程式圖格{#the-manage-app-tile}
 
-「管 **理應用程式圖格** 」會顯示可用的應用程式資訊：
+**管理應用程式**&#x200B;圖格會顯示可用的應用程式資訊：
 
 * 標題
 * 說明
@@ -47,9 +50,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-## 管理連接表徵圖 {#the-manage-connection-tile}
+## 管理連接表徵圖{#the-manage-connection-tile}
 
-「管 **理連線** 」方塊會顯示AEM Mobile On-Demand services連線資訊：
+**管理連線**&#x200B;方塊會顯示AEM Mobile隨選服務連線資訊：
 
 * 庫配置名稱
 * 專案名稱和ID
@@ -57,13 +60,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->按一下右上方的齒輪，以設定Mobile On-Demand cloud設定。
+>按一下右上方的齒輪，以設定Mobile On-Demand Cloud設定。
 >
->如需 [詳細資訊，請參閱設定Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) 。
+>如需詳細資訊，請參閱[設定Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-## 管理實體 {#managing-entities}
+## 管理實體{#managing-entities}
 
 這3個圖格提供應用程式內容狀態的概述：
 
@@ -73,9 +76,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 每個圖格都可展開，按一下右下角的省略號(...)，提供更詳細的清單檢視。 這些清單檢視提供存取常用「行動隨選」動作（例如刪除、上傳和編輯屬性）的替代方式。
 
-### 管理橫幅圖格 {#the-manage-banners-tile}
+### 管理橫幅表徵圖{#the-manage-banners-tile}
 
-「管 **理橫幅** 」方塊可讓您管理橫幅的內容。 橫幅會顯示下列資訊：
+**管理橫幅**&#x200B;方塊可讓您管理橫幅的內容。 橫幅會顯示下列資訊：
 
 * 影像
 * **標題**:橫幅的名稱
@@ -84,17 +87,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * **已發佈**:上次發佈的請求表單AEM
 * **來源**:來源（AEM本機或遠端自Mobile On Demand）
 
-下列影像顯示「AEM Mobile應 **用程式儀表板** 」中的「管理橫幅」圖格：
+下列影像顯示「AEM Mobile應用程式儀表板」中的「管理橫幅&#x200B;**」圖格：**
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
 >[!NOTE]
 >
->請參 **[閱管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)**，以建立、刪除或更新橫幅。
+>請參閱&#x200B;**[管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)**&#x200B;以建立、刪除或更新橫幅。
 
-### 管理文章圖格 {#the-manage-articles-tile}
+### 管理文章圖格{#the-manage-articles-tile}
 
-「管 **理文章** 」方塊可讓您管理文章的內容。 文章會顯示下列資訊：
+**管理文章**&#x200B;方塊可讓您管理文章的內容。 文章會顯示下列資訊：
 
 * 影像
 * **標題**:文章的名稱
@@ -103,17 +106,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * **已發佈**:上次發佈的請求表單AEM
 * **來源**:來源（AEM本機或遠端自Mobile On-Demand）
 
-下列影像顯示「AEM Mobile應用 **程式儀表板** 」中的「管理文章」圖格：
+下圖顯示「AEM Mobile應用程式儀表板」中的「管理文章」方塊：****
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
 >[!NOTE]
 >
->請參 [**閱管理文章&#x200B;**](/help/mobile/mobile-on-demand-managing-articles.md)，以建立、刪除或更新文章。
+>請參閱&#x200B;[**管理文章**](/help/mobile/mobile-on-demand-managing-articles.md)&#x200B;以建立、刪除或更新文章。
 
-### 管理系列圖格 {#the-manage-collections-tile}
+### 管理系列圖格{#the-manage-collections-tile}
 
-「管 **理系列** 」方塊可讓您管理系列的內容。 系列會顯示下列資訊：
+**管理系列**&#x200B;方塊可讓您管理系列的內容。 系列會顯示下列資訊：
 
 * 影像
 * **標題**:系列的名稱
@@ -122,15 +125,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * **已發佈**:上次發佈的請求表單AEM
 * **來源**:來源（AEM本機或遠端自Mobile On-Demand）
 
-下圖顯示「AEM Mobile應用程 **式儀表板」中** 「管理系列」圖格：
+下圖顯示「AEM Mobile應用程式儀表板」中的「管理系列」圖格：****
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
 >[!NOTE]
 >
->請參 **[閱管理系列](/help/mobile/mobile-on-demand-managing-collections.md)**，以建立、刪除或更新系列。
+>請參閱&#x200B;**[管理系列](/help/mobile/mobile-on-demand-managing-collections.md)**&#x200B;以建立、刪除或更新系列。
 
-### 後續步驟 {#the-next-steps}
+### 後續步驟{#the-next-steps}
 
 熟悉應用程式儀表板後，請參閱下列建立行動應用程式的資源：
 
