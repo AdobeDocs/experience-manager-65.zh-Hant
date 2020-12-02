@@ -10,15 +10,18 @@ topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# 開啟任務 {#opening-a-task}
+# 開啟任務{#opening-a-task}
 
 如果AEM Forms應用程式與AEM Forms伺服器同步，您可以處理指派給您的工作。 工作是在工作台或AEM工作流程編輯器中定義之「工作流程」中的步驟。
 
-其他表格會儲存為「草稿」標籤中的草稿。 請參 [閱儲存草稿](/help/forms/using/save-as-draft.md)。
+其他表格會儲存為「草稿」標籤中的草稿。 請參閱[儲存草稿](/help/forms/using/save-as-draft.md)。
 
 **要開啟任務**
 
@@ -31,11 +34,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 點選工作以開啟它。
 
-   您可以點選「 **檢視摘要** 」，以檢視「工作台」程式中指定的其他指示。
+   您可以點選「檢視摘要」「**」，以檢視「工作台」程式中指定的其他指示。**
 
 **若要開啟應用程式**
 
-1. 點選「表 **單** 」標籤中的 **應用程式** 。
+1. 點選&#x200B;**Forms**&#x200B;標籤中的&#x200B;**application**。
 
    當您選擇應用程式時，應用程式的說明會顯示在應用程式名稱下方。 在說明後，將顯示與應用程式關聯的用戶操作／操作。
 
@@ -44,4 +47,4 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 點選工作以開啟它。
 
-   您可以點選「 **檢視摘要** 」以檢視為應用程式指定的其他指示。
+   您可以點選&#x200B;**檢視摘要**&#x200B;以檢視為應用程式指定的其他指示。
