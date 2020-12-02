@@ -11,9 +11,9 @@ ht-degree: 21%
 ---
 
 
-# OSGi和AEM Forms JEE工作流程中表單導向AEM工作流程的動作和功能 {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+# OSGi和AEM Forms JEE工作流程的表單導向AEM工作流程動作與功能{#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-## AEM收件匣和HTML工作區 {#aem-inbox-and-html-workspace}
+## AEM Inbox和HTML Workspace {#aem-inbox-and-html-workspace}
 
 您可以使用AEM Inbox在OSGi上執行和監控以表單為中心的AEM工作流程。 但是，HTML工作區可讓您執行和監控AEM Forms JEE工作流程。 下表可協助您瞭解OSGi上的「AEM Inbox for Forms導向的AEM工作流程」和AEM Forms JEE工作流程的「HTML工作區」中提供的各種重要動作。
 
@@ -97,7 +97,7 @@ ht-degree: 21%
  </tbody>
 </table>
 
-## OSGi和AEM Forms JEE工作流程上的表單導向AEM工作流程 {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+## OSGi和AEM Forms JEE的表單導向AEM工作流程{#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
 OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Management)有不同的功能集。 下表可協助您瞭解在OSGi和AEM Forms on JEE工作流程中，以表單為中心的AEM工作流程中提供的重要功能：
 
@@ -105,7 +105,7 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
  <tbody>
   <tr>
    <td>功能</td>
-   <td>OSGi上的表單導向AEM工作流程<br /> </td>
+   <td>OSGi<br />上的表單導向AEM工作流程 </td>
    <td>AEM Forms JEE工作流程</td>
   </tr>
   <tr>
@@ -155,18 +155,18 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
   </tr>
   <tr>
    <td>電子簽名(Adobe Sign)</td>
-   <td>Supported <sup>[1]</sup></td>
-   <td>Supported <sup>[5]</sup></td>
+   <td>支援<sup>[1]</sup></td>
+   <td>支援<sup>[5]</sup></td>
   </tr>
   <tr>
    <td>管理任務和表單應用程式</td>
-   <td>Supported <sup>[2]</sup><br /> </td>
-   <td>Supported <sup>[2]</sup></td>
+   <td>支援<sup>[2]</sup><br /> </td>
+   <td>支援<sup>[2]</sup></td>
   </tr>
   <tr>
    <td>檔案服務</td>
-   <td>Supported <sup>[3]</sup></td>
-   <td>Supported <sup>[3]</sup></td>
+   <td>支援<sup>[3]</sup></td>
+   <td>支援<sup>[3]</sup></td>
   </tr>
   <tr>
    <td>將完成的工作演算為最適化表單或PDF檔案</td>
@@ -200,7 +200,7 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
   </tr>
   <tr>
    <td>在工作流程結束時傳送電子郵件</td>
-   <td>Supported <sup>[7]</sup></td>
+   <td>支援<sup>[7]</sup></td>
    <td>支援</td>
   </tr>
   <tr>
@@ -335,7 +335,7 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
   </tr>
   <tr>
    <td>與協力廠商應用程式整合</td>
-   <td>Not Supported <sup>[6]</sup></td>
+   <td>不支援<sup>[6]</sup></td>
    <td>支援</td>
   </tr>
   <tr>
@@ -386,18 +386,18 @@ OSGi和AEM Forms JEE的表單導向AEM工作流程(AEM Forms on JEE Process Mana
  </tbody>
 </table>
 
-1. 您可以在OSGi上使用表單導向的AEM工作流程來簽署填充的最適化表單。 OSGi上的表單導向AEM工作流程支援表單簽署。 不 [支援表單簽署](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) 。
+1. 您可以在OSGi上使用表單導向的AEM工作流程來簽署填充的最適化表單。 OSGi上的表單導向AEM工作流程支援表單簽署。 不支援[表單簽署](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)體驗。
 
 1. 您必須存取AEM Inbox，才能在AEM Forms OSGi和HTML Workspace上執行和監控「表單導向」工作流程，以執行和監控AEM Forms JEE工作流程。
 1. 原生AEM Forms Document Services適用於OSGi上的表單導向AEM工作流程和JEE工作流程上的AEM Forms。 AEM Workflow使用原生檔案服務，在OSGi和AEM Forms JEE（流程管理）工作流程中使用表單導向的AEM工作流程。
 1. AEM Forms JEE Workflows只能轉譯最適化表單。 它不支援將最適化表單轉換為PDF檔案。
-1. AEM表單JEE工作流程沒有Adobe Sign的個別步驟。 您需要AEM表單JEE工作流程中啟用Adobe Sign的最適化表單。 如需詳細資訊，請參 [閱Adobe Sign檔案](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
-1. 您可以使用「調 [用表單資料模型服務](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) 」步驟來叫用web-service服務，並張貼或擷取第三方應用程式的資料。
-1. 您可以使用「傳送 [電子郵件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step) 」步驟來傳送電子郵件。
+1. AEM表單JEE工作流程沒有Adobe Sign的個別步驟。 您需要AEM表單JEE工作流程中啟用Adobe Sign的最適化表單。 如需詳細資訊，請參閱[Adobe Sign檔案](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
+1. 您可以使用[叫用表單資料模型服務](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p)步驟來叫用web-service服務，並張貼或擷取來自第三方應用程式的資料。
+1. 您可以使用[傳送電子郵件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step)步驟來傳送電子郵件。
 
-## AEM Inbox和AEM Forms應用程式功能的差異 {#differences-between-aem-inbox-and-aem-forms-app-features}
+## AEM Inbox和AEM Forms應用程式功能{#differences-between-aem-inbox-and-aem-forms-app-features}之間的差異
 
-啟動「表單導向」工作流程的兩種主要方式是使用 [AEM Inbox](../../forms/using/manage-applications-inbox.md) 和AEM Forms應用程式。 不過，AEM Inbox和AEM Forms應用程式的功能不同。 AEM Inbox只能與 [Forms導向的工作流程搭配使用](../../forms/using/aem-forms-workflow.md) ，而AEM Forms應用程式則可與Forms導向的工作流程以及流程管理搭配使用。
+啟動以表單為中心的工作流程的兩種主要方式是使用[AEM Inbox](../../forms/using/manage-applications-inbox.md)和AEM Forms應用程式。 不過，AEM Inbox和AEM Forms應用程式的功能不同。 AEM Inbox僅適用於[以表單為中心的工作流程](../../forms/using/aem-forms-workflow.md)，而AEM Forms應用程式則適用於以表單為中心的工作流程以及流程管理。
 
 下表列出AEM Inbox和AEM Forms應用程式的功能：
 
