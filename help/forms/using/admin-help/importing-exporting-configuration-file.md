@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c1636537-f7dc-48d8-a3f0-9052bcd28b62
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
 
-# 導入和導出配置檔案 {#importing-and-exporting-the-configuration-file}
+# 導入和導出配置檔案{#importing-and-exporting-the-configuration-file}
 
 使用「手動配置」頁可以下載XML格式的配置設定副本。 此檔案中的設定控制所有伺服器首選項。 然後，您可以編輯檔案並將其上傳回伺服器。 您也可以使用檔案來設定其他AEM表單產品例項。
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->匯入設定檔案會根據檔案中的資訊重新設定AEM表單。 只有熟悉AEM表單產品和XML的系統管理員或專業服務顧問才應考慮修改設定檔。 例如，他們可能需要編輯配置檔案以重新配置損壞的設定。
+>匯入設定檔案會根據檔案中的資訊重新設定AEM表單。 只有熟悉AEM表單產品和XML的系統管理員或專業服務顧問才應考慮修改設定檔案。 例如，他們可能需要編輯配置檔案以重新配置損壞的設定。
 
 **匯出設定資訊**
 
