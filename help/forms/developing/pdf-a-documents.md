@@ -11,24 +11,27 @@ topic-tags: operations
 discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2342'
+ht-degree: 0%
 
 ---
 
 
-# 使用PDF/A檔案 {#working-with-pdf-a-documents}
+# 使用PDF/A檔案{#working-with-pdf-a-documents}
 
 **關於DocConverter服務**
 
 DocConverter服務可將PDF檔案轉換為PDA/A檔案。 您可以使用此服務完成以下任務：
 
-* 將PDF檔案轉換為PDF/A檔案。 (請參 [閱將檔案轉換為PDF/A檔案](pdf-a-documents.md#converting-documents-to-pdf-a-documents)。)
-* 確定PDF檔案是否為PDF/A檔案。 (請參 [閱程式設計決定PDF/A相容](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)。)
+* 將PDF檔案轉換為PDF/A檔案。 （請參閱[將檔案轉換為PDF/A檔案](pdf-a-documents.md#converting-documents-to-pdf-a-documents)）。
+* 確定PDF檔案是否為PDF/A檔案。 （請參閱[程式設計決定PDF/A相容性](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)）。
 
 >[!NOTE]
 >
->如需DocConverter服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關DocConverter服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 將檔案轉換為PDF/A檔案 {#converting-documents-to-pdf-a-documents}
+## 將檔案轉換為PDF/A檔案{#converting-documents-to-pdf-a-documents}
 
 您可以使用DocConverter服務將PDF檔案轉換為PDF/A檔案。 由於PDF/A是長期保存檔案內容的封存格式，所以所有字型都已內嵌，檔案也未壓縮。 因此，PDF/A檔案通常比標準PDF檔案大。 此外，PDF/A檔案不包含音訊和視訊內容。 在將PDF檔案轉換為PDF/A檔案之前，請確定PDF檔案不是PDF/A檔案。
 
@@ -38,9 +41,9 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 >[!NOTE]
 >
->如需DocConverter服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關DocConverter服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary-of-steps}
+### 步驟{#summary-of-steps}摘要
 
 若要將PDF檔案轉換為PDF/A檔案，請執行下列步驟：
 
@@ -60,14 +63,14 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立DocConvert客戶端**
 
-在以寫程式方式執行DocConverter操作之前，必須建立DocConverter客戶端。 如果您使用Java API，請建立物 `DocConverterServiceClient` 件。 如果您使用DocConverter web服務API，請建立對 `DocConverterServiceService` 像。
+在以寫程式方式執行DocConverter操作之前，必須建立DocConverter客戶端。 如果您使用Java API，請建立`DocConverterServiceClient`物件。 如果您使用DocConverter Web服務API，請建立`DocConverterServiceService`對象。
 
 **參考PDF檔案以轉換為PDF/A檔案**
 
@@ -91,13 +94,13 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [使用web service API將檔案轉換為PDF/A檔案](pdf-a-documents.md#convert-documents-to-pdf-a-documents-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [以程式設計方式決定PDF/A相容性](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)
 
-### 使用Java API將檔案轉換為PDF/A檔案 {#convert-documents-to-pdf-a-documents-using-the-java-api}
+### 使用Java API {#convert-documents-to-pdf-a-documents-using-the-java-api}將檔案轉換為PDF/A檔案
 
 使用Java API將PDF檔案轉換為PDF/A檔案：
 
@@ -107,32 +110,33 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 1. 建立DocConvert客戶端
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocConverterServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocConverterServiceClient`對象。
 
 1. 參考PDF檔案以轉換為PDF/A檔案
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定PDF檔案位置的字串值，建立代表PDF檔案的物件以進行轉換。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用PDF檔案的建構函式並傳遞指定PDF檔案位置的字串值，建立代表要轉換之PDF檔案的`java.io.FileInputStream`物件。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 設定追蹤資訊
 
-   * 使用其 `PDFAConversionOptionSpec` 建構函式建立物件。
-   * 調用物件的方法並傳遞指 `PDFAConversionOptionSpec` 定追蹤層級 `setLogLevel` 的字串值，以設定資訊追蹤層級。 例如，傳遞值 `FINE`。 如需不同值的詳細資訊，請參 `setLogLevel` 閱「 [AEM Forms API參考」中的方法](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   * 使用其建構子建立`PDFAConversionOptionSpec`對象。
+   * 調用`PDFAConversionOptionSpec`物件的`setLogLevel`方法並傳遞指定追蹤層級的字串值，以設定資訊追蹤層級。 例如，傳遞值`FINE`。 如需不同值的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`setLogLevel`方法。
 
 1. 轉換檔案
 
-   調用物件的方法並傳遞下列值，將PDF `DocConverterServiceClient` 檔案轉 `toPDFA` 換為PDF/A檔案：
+   調用`DocConverterServiceClient`物件的`toPDFA`方法並傳遞下列值，將PDF檔案轉換為PDF/A檔案：
 
-   * 包 `com.adobe.idp.Document` 含要轉換的PDF檔案的物件
-   * 指定 `PDFAConversionOptionSpec` 追蹤資訊的物件
-   此方 `toPDFA` 法會傳回 `PDFAConversionResult` 包含PDF/A檔案的物件。
+   * 包含要轉換的PDF文檔的`com.adobe.idp.Document`對象
+   * 指定追蹤資訊的`PDFAConversionOptionSpec`物件
+
+   `toPDFA`方法返回包含PDF/A文檔的`PDFAConversionResult`對象。
 
 1. 儲存PDF/A檔案
 
-   * 叫用物件的方法，以擷取 `PDFAConversionResult` PDF/A文 `getPDFA` 件。 此方法傳回 `com.adobe.idp.Document` 代表PDF/A檔案的物件。
-   * 建立 `java.io.File` 代表PDF/A檔案的物件。 請確定副檔名為。pdf。
-   * 調用物件的方法並傳遞物件，以PDF/A `com.adobe.idp.Document` 資料填 `copyToFile` 入檔案 `java.io.File` 中。
+   * 叫用`PDFAConversionResult`物件的`getPDFA`方法，擷取PDF/A檔案。 此方法會傳回代表PDF/A檔案的`com.adobe.idp.Document`物件。
+   * 建立代表PDF/A檔案的`java.io.File`物件。 請確定副檔名為。pdf。
+   * 調用`com.adobe.idp.Document`物件的`copyToFile`方法並傳遞`java.io.File`物件，以PDF/A資料填入檔案。
 
 **另請參閱**
 
@@ -140,11 +144,11 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [快速入門（SOAP模式）:使用Java API將檔案轉換為PDF/A檔案](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API將檔案轉換為PDF/A檔案 {#convert-documents-to-pdf-a-documents-using-the-web-service-api}
+### 使用web service API {#convert-documents-to-pdf-a-documents-using-the-web-service-api}將檔案轉換為PDF/A檔案
 
 使用DocConverter API(web service)將PDF檔案轉換為PDF/A檔案：
 
@@ -155,37 +159,38 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 1. 建立DocConvert客戶端
 
-   * 使用Microsoft .NET客戶端元件，通過調用其缺 `DocConverterServiceService` 省建構子建立對象。
-   * 使用指 `DocConverterServiceService` 定用戶名 `Credentials` 和口令值的 `System.Net.NetworkCredential` 值來設定對象的資料成員。
+   * 使用Microsoft .NET客戶端元件，通過調用其預設建構子建立`DocConverterServiceService`對象。
+   * 將`DocConverterServiceService`物件的`Credentials`資料成員設定為`System.Net.NetworkCredential`值，以指定使用者名稱和密碼值。
 
 1. 參考PDF檔案以轉換為PDF/A檔案
 
-   * 使用其 `BLOB` 建構函式建立物件。 對 `BLOB` 像用於儲存轉換為PDF/A文檔的PDF文檔。
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示PDF文檔的檔案位置和開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
-   * 為對象 `BLOB` 賦值其屬性， `binaryData` 使其包含位元組陣列的內容。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存轉換為PDF/A檔案的PDF檔案。
+   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示PDF文檔的檔案位置和開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
+   * 通過為`binaryData`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 設定追蹤資訊
 
-   * 使用其 `PDFAConversionOptionSpec` 建構函式建立物件。
-   * 為物件的資料成員指派指定追蹤層級的值，以設定 `PDFAConversionOptionSpec` 資訊追蹤 `logLevel` 層級。 例如，將值指派給 `FINE` 此資料成員。
+   * 使用其建構子建立`PDFAConversionOptionSpec`對象。
+   * 為`PDFAConversionOptionSpec`物件的`logLevel`資料成員指派指定追蹤層級的值，以設定資訊追蹤層級。 例如，將值`FINE`分配給此資料成員。
 
 1. 轉換檔案
 
-   調用物件的方法並傳遞下列值，將PDF `DocConverterServiceService` 檔案轉 `toPDFA` 換為PDF/A檔案：
+   調用`DocConverterServiceService`物件的`toPDFA`方法並傳遞下列值，將PDF檔案轉換為PDF/A檔案：
 
-   * 包 `BLOB` 含要轉換的PDF檔案的物件
-   * 指定 `PDFAConversionOptionSpec` 追蹤資訊的物件
-   此方 `toPDFA` 法會傳回 `PDFAConversionResult` 包含PDF/A檔案的物件。
+   * 包含要轉換的PDF文檔的`BLOB`對象
+   * 指定追蹤資訊的`PDFAConversionOptionSpec`物件
+
+   `toPDFA`方法返回包含PDF/A文檔的`PDFAConversionResult`對象。
 
 1. 儲存PDF/A檔案
 
-   * 取得 `BLOB` 物件資料成員的值，以建立儲存PDF/A `PDFAConversionResult` 檔案的 `PDFADocument` 物件。
-   * 建立位元組陣列，該陣列儲存使用對 `BLOB` 像返回的對象的內 `PDFAConversionResult` 容。 取得物件資料成員的值，以填 `BLOB` 入位元組 `binaryData` 陣列。
-   * 調用 `System.IO.FileStream` 其建構函式並傳遞代表PDF/A檔案檔案位置的字串值，以建立物件。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
-   * 調用物件的方法並傳遞位元組陣列，將位元組 `System.IO.BinaryWriter` 的內容 `Write` 寫入PDF檔案。
+   * 透過取得`PDFAConversionResult`物件`PDFADocument`資料成員的值，建立儲存PDF/A檔案的`BLOB`物件。
+   * 建立一個位元組陣列，用於儲存使用`PDFAConversionResult`對象返回的`BLOB`對象的內容。 獲取`BLOB`對象`binaryData`資料成員的值，以填充位元組陣列。
+   * 調用`System.IO.FileStream`對象的建構子並傳遞一個字串值，該字串值表示PDF/A文檔的檔案位置。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
 
@@ -195,15 +200,15 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [建立使用Base64編碼的。NET客戶端元件](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## 以程式設計方式決定PDF/A相容性 {#programmatically-determining-pdf-a-compliancy}
+## 以程式設計方式決定PDF/A相容性{#programmatically-determining-pdf-a-compliancy}
 
-您可以使用DocConverter服務來判斷PDF檔案是否與PDF/A相容。 如需有關PDF/A檔案以及如何將PDF檔案轉換為PDF/A檔案的資訊，請參 [閱將檔案轉換為PDF/A檔案](pdf-a-documents.md#converting-documents-to-pdf-a-documents)。
+您可以使用DocConverter服務來判斷PDF檔案是否與PDF/A相容。 如需有關PDF/A檔案以及如何將PDF檔案轉換為PDF/A檔案的詳細資訊，請參閱[將檔案轉換為PDF/A檔案](pdf-a-documents.md#converting-documents-to-pdf-a-documents)。
 
 >[!NOTE]
 >
->如需DocConverter服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關DocConverter服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-1}
+### 步驟{#summary_of_steps-1}摘要
 
 若要判斷PDF/A相容性，請執行下列步驟：
 
@@ -222,14 +227,14 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application server上，則為必需）
+* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
+* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立DocConvert客戶端**
 
-在以寫程式方式執行DocConverter操作之前，必須建立DocConverter客戶端。 如果您使用Java API，請建立物 `DocConverterServiceClient` 件。 如果您使用DocConverter web服務API，請建立對 `DocConverterServiceService` 像。
+在以寫程式方式執行DocConverter操作之前，必須建立DocConverter客戶端。 如果您使用Java API，請建立`DocConverterServiceClient`物件。 如果您使用DocConverter Web服務API，請建立`DocConverterServiceService`對象。
 
 **參考用來判斷PDF/A相容性的PDF檔案**
 
@@ -249,11 +254,11 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [使用web service API判斷PDF/A符合性](pdf-a-documents.md#determine-pdf-a-compliancy-using-the-web-service-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API判斷PDF/A符合性 {#determine-pdf-a-compliancy-using-the-java-api}
+### 使用Java API {#determine-pdf-a-compliancy-using-the-java-api}判斷PDF/A相容性
 
 使用Java API來判斷PDF/A符合性：
 
@@ -263,27 +268,28 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 1. 建立DocConvert客戶端
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocConverterServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocConverterServiceClient`對象。
 
 1. 參考用來判斷PDF/A相容性的PDF檔案
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定PDF檔案位置的字串值，建立代表PDF檔案的物件以進行轉換。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用PDF檔案的建構函式並傳遞指定PDF檔案位置的字串值，建立代表要轉換之PDF檔案的`java.io.FileInputStream`物件。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 設定執行時期選項
 
-   * 使用其 `PDFAValidationOptionSpec` 建構函式建立物件。
-   * 調用物件的方法並傳遞， `PDFAValidationOptionSpec` 以設定 `setCompliance` 相容性等級 `PDFAValidationOptionSpec.Compliance.PDFA_1B`。
-   * 調用物件的方法並傳遞指 `PDFAValidationOptionSpec` 定追蹤層級 `setLogLevel` 的字串值，以設定資訊追蹤層級。 例如，傳遞值 `FINE`。 如需不同值的詳細資訊，請參 `setLogLevel` 閱「 [AEM Forms API參考」中的方法](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   * 使用其建構子建立`PDFAValidationOptionSpec`對象。
+   * 調用`PDFAValidationOptionSpec`物件的`setCompliance`方法並傳遞`PDFAValidationOptionSpec.Compliance.PDFA_1B`，以設定相容性層級。
+   * 調用`PDFAValidationOptionSpec`物件的`setLogLevel`方法並傳遞指定追蹤層級的字串值，以設定資訊追蹤層級。 例如，傳遞值`FINE`。 如需不同值的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`setLogLevel`方法。
 
 1. 擷取PDF檔案的相關資訊
 
-   調用物件的方法並傳遞下 `DocConverterServiceClient` 列值，以 `isPDFA` 判斷PDF/A相容性：
+   調用`DocConverterServiceClient`物件的`isPDFA`方法並傳遞下列值，以判斷PDF/A相容性：
 
-   * 包 `com.adobe.idp.Document` 含PDF檔案的物件。
-   * 指定 `PDFAValidationOptionSpec` 運行時選項的對象。
-   方 `isPDFA` 法返回 `PDFAValidationResult` 包含此操作結果的對象。
+   * 包含PDF文檔的`com.adobe.idp.Document`對象。
+   * 指定運行時選項的`PDFAValidationOptionSpec`對象。
+
+   `isPDFA`方法返回包含此操作結果的`PDFAValidationResult`對象。
 
 **另請參閱**
 
@@ -291,11 +297,11 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [快速入門（SOAP模式）:使用Java API判斷PDF/A相容性](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API判斷PDF/A符合性 {#determine-pdf-a-compliancy-using-the-web-service-api}
+### 使用web service API {#determine-pdf-a-compliancy-using-the-web-service-api}判斷PDF/A相容性
 
 使用web service API來判斷PDF/A符合性：
 
@@ -306,30 +312,31 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 1. 建立DocConvert客戶端
 
-   * 使用Microsoft .NET客戶端元件，通過調用其缺 `DocConverterServiceService` 省建構子建立對象。
-   * 使用指 `DocConverterServiceService` 定用戶名 `Credentials` 和口令值的 `System.Net.NetworkCredential` 值來設定對象的資料成員。
+   * 使用Microsoft .NET客戶端元件，通過調用其預設建構子建立`DocConverterServiceService`對象。
+   * 將`DocConverterServiceService`物件的`Credentials`資料成員設定為`System.Net.NetworkCredential`值，以指定使用者名稱和密碼值。
 
 1. 參考用來判斷PDF/A相容性的PDF檔案
 
-   * 使用其 `BLOB` 建構函式建立物件。 對 `BLOB` 像用於儲存轉換為PDF/A文檔的PDF文檔。
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示PDF文檔的檔案位置和開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
-   * 為對象 `BLOB` 賦值其屬性， `binaryData` 使其包含位元組陣列的內容。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存轉換為PDF/A檔案的PDF檔案。
+   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示PDF文檔的檔案位置和開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
+   * 通過為`binaryData`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 設定執行時期選項
 
-   * 使用其 `PDFAValidationOptionSpec` 建構函式建立物件。
-   * 將物件的資料成員指派 `PDFAValidationOptionSpec` 為值，以 `compliance` 設定相容性層級 `PDFAConversionOptionSpec_Compliance.PDFA_1B`。
-   * 將物件的資料成員指派 `PDFAValidationOptionSpec` 為值，以 `resultLevel` 設定資訊追蹤層級 `PDFAValidationOptionSpec_ResultLevel.DETAILED`。
+   * 使用其建構子建立`PDFAValidationOptionSpec`對象。
+   * 通過將`PDFAValidationOptionSpec`對象的`compliance`資料成員分配為值`PDFAConversionOptionSpec_Compliance.PDFA_1B`來設定法規遵從性級別。
+   * 將`PDFAValidationOptionSpec`物件的`resultLevel`資料成員指派為值`PDFAValidationOptionSpec_ResultLevel.DETAILED`，以設定資訊追蹤層級。
 
 1. 擷取PDF檔案的相關資訊
 
-   調用物件的方法並傳遞下 `DocConverterServiceService` 列值，以 `isPDFA` 判斷PDF/A相容性：
+   調用`DocConverterServiceService`物件的`isPDFA`方法並傳遞下列值，以判斷PDF/A相容性：
 
-   * 包 `BLOB` 含PDF檔案的物件。
-   * 包 `PDFAValidationOptionSpec` 含運行時選項的對象。
-   方 `isPDFA` 法返回 `PDFAValidationResult` 包含此操作結果的對象。
+   * 包含PDF文檔的`BLOB`對象。
+   * 包含運行時選項的`PDFAValidationOptionSpec`對象。
+
+   `isPDFA`方法返回包含此操作結果的`PDFAValidationResult`對象。
 
 **另請參閱**
 
