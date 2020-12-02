@@ -18,11 +18,11 @@ ht-degree: 1%
 ---
 
 
-# 論壇基本功能 {#forum-essentials}
+# 論壇基本知識{#forum-essentials}
 
 本頁提供使用論壇功能的基本資訊。
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 <table>
  <tbody>
@@ -48,14 +48,14 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱 <a href="forum.md">論壇功能</a></td>
+   <td>請參閱<a href="forum.md">論壇功能</a></td>
   </tr>
  </tbody>
 </table>
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [論壇API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
@@ -65,21 +65,21 @@ ht-degree: 1%
 
 ### 論壇功能 {#forum-function}
 
-包含論壇功能的社群網站結 [構](functions.md#forum-function)，包含已設定的 `forum` 元件，以及影響協調、標籤和翻譯的設定。
+包含[論壇函式](functions.md#forum-function)的社群網站結構，包含已設定的`forum`元件，以及影響協調、標籤和翻譯的設定。
 
-### 存取論壇貼文(UGC) {#accessing-forum-posts-ugc}
+### 存取論壇貼文(UGC){#accessing-forum-posts-ugc}
 
 UGC應使用其中一種標準的協調方法來協調。
-請參 [閱協調使用者產生的內容](moderate-ugc.md)。
+請參閱[協調使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括程式化存取UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用[通用商店](working-with-srp.md)做為UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP），都可程式化存取UGC。
 
 **UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
 
 請參閱：
 
 * [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP實用程式方法和示例。
-* [使用SRP存取UGC](accessing-ugc-with-srp.md) —— 編碼准則。
+* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP實用程式方法和示例。
+* [使用SRP](accessing-ugc-with-srp.md) -編碼准則存取UGC。
 * [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
 
