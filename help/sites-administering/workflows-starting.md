@@ -11,22 +11,25 @@ content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 4%
 
 ---
 
 
-# 啟動工作流程{#starting-workflows}
+# 啟動工作流{#starting-workflows}
 
 在管理工作流程時，您可以使用多種方法來啟動工作流程：
 
 * 手動:
 
-   * 從工作流 [模型](#workflow-models)。
-   * 使用工作流包進行 [批處理](#workflow-packages-for-batch-processing)。
+   * 從[工作流模型](#workflow-models)。
+   * 使用[批次處理](#workflow-packages-for-batch-processing)的工作流包。
 
 * 自動：
 
-   * 響應節點變化；使 [用啟動器](#workflows-launchers)。
+   * 響應節點變化；[使用啟動器](#workflows-launchers)。
 
 >[!NOTE]
 >
@@ -36,19 +39,20 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >* [如何將工作流程套用至DAM資產](/help/assets/assets-workflow.md)
 >* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [翻譯專案](/help/sites-administering/tc-manage.md)
+
 >
 
 
 
 ## 工作流程模型 {#workflow-models}
 
-可以根據「工作流 [模型」(Workflow Models)控制台中列出的其中一個模型](/help/sites-administering/workflows.md#workflow-models-and-instances) ，啟動工作流。 唯一的必要資訊是裝載，不過也可以新增標題和／或註解。
+您可以根據「工作流模型」控制台中列出的其中一個模型](/help/sites-administering/workflows.md#workflow-models-and-instances)啟動工作流[。 唯一的必要資訊是裝載，不過也可以新增標題和／或註解。
 
-## 工作流程啟動器 {#workflows-launchers}
+## 工作流程啟動器{#workflows-launchers}
 
 Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點的位置和資源類型啟動工作流。
 
-使用 **Launcher** ，您可以：
+使用&#x200B;**Launcher**，您可以：
 
 * 請參閱已針對特定節點啟動的工作流程。
 * 選擇在建立／修改／刪除特定節點／節點類型時要啟動的工作流。
@@ -57,7 +61,7 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
 可以為任何節點建立啟動程式。 不過，對某些節點所做的變更不會啟動工作流程。 變更下列路徑下的節點不會導致工作流程啟動：
 
 * `/var/workflow/instances`
-* 任何位於分支中任意位置的工作流收件箱節 `/home/users` 點
+* 位於`/home/users`分支中任意位置的任何工作流收件箱節點
 * `/tmp`
 * `/var/audit`
 * `/var/classes`
@@ -66,13 +70,13 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
 * `/var/mobile`
 * `/var/statistics`
 
-   * 例外：對下方節點的變 `/var/statistics/tracking` 更 *會導致* 工作流程啟動。
+   * 例外：對`/var/statistics/tracking` *do*&#x200B;下節點的更改會啟動工作流。
 
 標準安裝中包含各種定義。 這些用於數位資產管理和社交協作工作：
 
 ![wf-100](assets/wf-100.png)
 
-## 批處理的工作流包 {#workflow-packages-for-batch-processing}
+## 批處理的工作流包{#workflow-packages-for-batch-processing}
 
 工作流程套件是可傳遞至工作流程的套件，做為處理的負載，可處理多個資源。
 
@@ -84,18 +88,18 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
 * 可多次使用。
 * 可由使用者（新增或移除資源）在實際執行工作流程例項時進行變更。
 
-## 從「模型控制台」啟動工作流 {#starting-a-workflow-from-the-models-console}
+## 從Models Console {#starting-a-workflow-from-the-models-console}啟動工作流
 
-1. 然後使用「工 **具** 」、「工作流 **程」導**&#x200B;航至「模 **型」控******&#x200B;制台。
+1. 使用&#x200B;**工具**、**工作流**&#x200B;和&#x200B;**模型**&#x200B;導覽至&#x200B;**Models**&#x200B;控制台。
 1. 選擇工作流（根據控制台視圖）;您也可以視需要使用搜尋（左上）:
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >「暫 **[時](/help/sites-developing/workflows.md#transient-workflows)**」指示符顯示不會保存工作流歷史記錄的工作流。
+   >**[Transient](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;指示器顯示工作流歷史不會持續存在的工作流。
 
-1. 從工 **具列選擇「開始** 」 「工作流」。
+1. 從工具欄中選擇「啟動工作流」。****
 1. 將會開啟「執行工作流程」對話方塊，讓您指定：
 
    * **裝載**
@@ -111,10 +115,10 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
       可選注釋，幫助指明此實例的詳細資訊。
    ![wf-104](assets/wf-104.png)
 
-## 建立啟動器配置 {#creating-a-launcher-configuration}
+## 建立啟動器配置{#creating-a-launcher-configuration}
 
-1. 然後使用工具、工 **作流啟動器** 、Workflow **Sharticles**&#x200B;導覽至Workflow Console ********。
-1. 選擇 **建立**，然 **後選擇添加啟動器** ，開啟對話框：
+1. 使用&#x200B;**工具**、**工作流**&#x200B;和&#x200B;**啟動器**&#x200B;導覽至&#x200B;**Workflow Sharticles**&#x200B;控制台。
+1. 選擇&#x200B;**建立**，然後選擇&#x200B;**添加啟動程式**&#x200B;以開啟對話框：
 
    ![wf-105](assets/wf-105.png)
 
@@ -135,7 +139,7 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
 
    * **執行模式**
 
-      工作流啟動程式應用的伺服器類型。 選取「 **作者**」、「發 **布**」或「作 **者與發佈」**。
+      工作流啟動程式應用的伺服器類型。 選擇「**作者**」、「**發佈**」或「**作者與發佈**」。
 
    * **條件**
 
@@ -148,6 +152,7 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
       要啟用的功能清單。 使用下拉式選取器選取所需的功能。
 
    * **停用的功能**
+
    要停用的功能清單。 使用下拉式選取器選取所需的功能。
 
    * **工作流程模型**
@@ -162,8 +167,8 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
 
       控制是否激活了工作流啟動程式：
 
-      * 選擇「 **啟用** 」(Enable)，在滿足配置屬性時啟動工作流。
-      * 選擇 **「在工作流不應執行時禁用** 」（即使在配置屬性滿足時也不能執行）。
+      * 選擇&#x200B;**啟用**&#x200B;以在滿足配置屬性時啟動工作流。
+      * 選擇&#x200B;**Disable**&#x200B;在工作流不應執行時（即使配置屬性已滿足）。
    * **排除清單**
 
       這可指定在決定是否應觸發工作流時要排除的任何JCR事件（即忽略）。
@@ -171,7 +176,8 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
       此啟動程式屬性是以逗號分隔的項目清單：&quot;
 
       * `property-name` 忽略在 `jcr` 指定屬性名稱上觸發的任何事件。&quot;
-      * `event-user-data:<*someValue*>` 忽略任何包含 `*<someValue*`>透過 `user-data` API [`ObservationManager`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)設定的事件。
+      * `event-user-data:<*someValue*>` 忽略任何包含 `*<someValue*`> `user-data` 透過 [ `ObservationManager` API設定的]事件(https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)。
+
       例如：
 
       `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
@@ -184,10 +190,10 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
 
 
 
-1. 選擇 **建立**，建立啟動程式並返回控制台。
+1. 選擇&#x200B;**建立**&#x200B;以建立啟動程式並返回控制台。
 
    發生適當事件後，啟動程式便會觸發，並啟動工作流程。
 
-## 管理啟動器配置 {#managing-a-launcher-configuration}
+## 管理啟動程式配置{#managing-a-launcher-configuration}
 
-建立啟動程式配置後，可以使用相同的控制台來選擇實例，然後選擇「 **View Properties** ( and edit them **)」或「** Delete」。
+建立啟動程式配置後，可以使用相同的控制台來選擇實例，然後選擇&#x200B;**查看屬性**（並編輯屬性）或&#x200B;**刪除**。
