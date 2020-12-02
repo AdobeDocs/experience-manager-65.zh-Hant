@@ -18,19 +18,19 @@ ht-degree: 0%
 ---
 
 
-# Microsoft SQL Server資料庫：微調配置 {#microsoft-sql-server-database-fine-tuning-the-configuration}
+# Microsoft SQL Server資料庫：微調配置{#microsoft-sql-server-database-fine-tuning-the-configuration}
 
 使用Microsoft SQL Server時，應更改預設配置設定。 按一下右鍵Oracle Enterprise Manager中的本地伺服器以訪問屬性對話框。
 
-## 記憶體設定 {#memory-settings}
+## 記憶體設定{#memory-settings}
 
 將最小記憶體分配更改為盡可能大的數字。 如果資料庫在單獨的電腦上運行，請使用所有記憶體。 預設設定不會積極分配記憶體，這會阻礙幾乎任何資料庫的效能。 在生產機器上分配記憶體時，您應該最積極。
 
-## 處理器設定 {#processor-settings}
+## 處理器設定{#processor-settings}
 
 修改處理器設定，最重要的是，選中「Boost SQL Server Priority On Windows」（在Windows上提升SQL Server優先順序）複選框，以便伺服器使用盡可能多的週期。 「使用NT纖維」(Use NT Fibres)設定不那麼重要，但您也可能希望選擇它。
 
-## 資料庫設定 {#database-settings}
+## 資料庫設定{#database-settings}
 
 更改資料庫設定。 最重要的設定是「恢復間隔」，它指定當機後等待恢復的最長時間。 預設設定為1分鐘。 使用5到15分鐘的較大值可提高效能，因為它使伺服器有更多時間將資料庫日誌中的更改寫入資料庫檔案。
 
