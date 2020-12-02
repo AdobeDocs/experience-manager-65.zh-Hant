@@ -18,7 +18,7 @@ ht-degree: 4%
 ---
 
 
-# 特色內容功能 {#featured-content-feature}
+# 精選內容功能{#featured-content-feature}
 
 ## 簡介 {#introduction}
 
@@ -37,57 +37,57 @@ ht-degree: 4%
 本檔案章節說明：
 
 * 將精選內容新增至社群網站。
-* 元件的配置 `Featured Content` 設定。
+* `Featured Content`元件的配置設定。
 
-## 將精選內容新增至頁面 {#adding-featured-content-to-a-page}
+## 新增精選內容至頁面{#adding-featured-content-to-a-page}
 
-若要在作 `Featured Content` 者模式中將元件新增至頁面，請使用元件瀏覽器來尋找
+若要在作者模式下將`Featured Content`元件新增至頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Featured Content`
 
 並將它拖曳至應出現精選內容的頁面上。
 
-如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](basics.md)。
 
-當包含 [所需的用戶端程式庫](essentials-featured.md#essentials-for-client-side) ，元件的顯示方式 `Featured Content` 如下：
+當包含[必要的用戶端程式庫](essentials-featured.md#essentials-for-client-side)時，`Featured Content`元件的顯示方式如下：
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-## 設定精選內容 {#configuring-featured-content}
+## 設定精選內容{#configuring-featured-content}
 
-選擇要訪問 `Featured Content` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`Featured Content`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
-### 「設定」頁籤 {#settings-tab}
+### 「設定」頁籤{#settings-tab}
 
-在「設 **[!UICONTROL 定]** 」標籤下，識別要具備的內容：
+在&#x200B;**[!UICONTROL Settings]**&#x200B;標籤下，識別要使用的內容：
 
 * **[!UICONTROL 顯示名稱]**
 
-   精選內容清單的標題。 For example `Featured Questions` or `Featured Ideas`. 如果留 `Featured Content` 空，則預設為。
+   精選內容清單的標題。 例如`Featured Questions`或`Featured Ideas`。 如果保留空白，預設值為`Featured Content`。
 
 * **[!UICONTROL 主要內容的位置]**
 
-   *（必要）* ，瀏覽至包含可能是功能之內容的頁面（該頁面的元件必須設定為「允許功能內容」）。 For example, `/content/sites/engage/en/forum`.
+   *（必要）瀏* 覽至包含可能是功能之內容的頁面（該頁面的元件必須設定為「允許功能內容」）。例如，`/content/sites/engage/en/forum`。
 
 * **[!UICONTROL 顯示限制]**
 
    要顯示的特色內容數上限。 預設值為5。
 
-## 網站訪客體驗 {#site-visitor-experience}
+## 網站訪客體驗{#site-visitor-experience}
 
 將內容標幟為特色內容的能力需要協調者權限。
 
-協調者檢視張貼的內容時，可存取內容內容協調標幟，其中包含新標 `Feature` 幟。
+協調者檢視張貼的內容時，可存取內容內容協調標幟，其中包含新的`Feature`標幟。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-標籤為功能後，模型標幟就會變 `Unfeature`成。
+標籤為功能後，模型標幟就會變成`Unfeature`。
 
-包含元件 `Featured Content` 的頁面現在會包含此貼文。
+包含`Featured Content`元件的頁面現在會包含此貼文。
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -95,6 +95,6 @@ ht-degree: 4%
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發 [人員的「主要內容](essentials-featured.md) 」頁面。
+開發人員可在[精選內容](essentials-featured.md)頁面上找到更多資訊。
 
-如需將內容標示為特色，請參閱 [協調使用者產生的內容](moderate-ugc.md)。
+如需將內容標幟為特色，請參閱[協調使用者產生的內容](moderate-ugc.md)。
