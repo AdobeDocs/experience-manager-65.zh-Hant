@@ -10,11 +10,14 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '728'
+ht-degree: 0%
 
 ---
 
 
-# 註冊為用戶 {#registering-as-a-user}
+# 註冊為用戶{#registering-as-a-user}
 
 即使您是使用者組織外部人員，您也可以使用從檔案安全性使用者收到的受原則保護檔案。 若要使用受原則保護的檔案，您必須向檔案安全性註冊。 如果您之前未受邀註冊，檔案安全性會在發生下列事件時啟動註冊程式：
 
@@ -33,7 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >如果您收到受原則保護的檔案，但未收到註冊電子郵件邀請，請連絡將檔案傳送給您的人員，以取得詳細資訊。
 
-## 註冊為受邀的使用者 {#register-as-an-invited-user}
+## 註冊為受邀的使用者{#register-as-an-invited-user}
 
 如果您是受邀的使用者，而您收到來自檔案安全性的電子郵件註冊訊息，則可使用訊息中的URL開啟線上註冊頁面進行註冊。 在您註冊後，您將會收到有關啟用帳戶的第二份通知。
 
@@ -42,7 +45,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在適當的方塊中輸入您的姓名、電話號碼、地址、組織和密碼，然後在「確認密碼」方塊中重新輸入密碼。 您的密碼可以是8個字元的任意組合。
 1. 按一下「儲存」。此時會出現一則感謝訊息，通知您檢查您的電子郵件是否有啟動電子郵件訊息。 您現在必須啟用帳戶，才能完成註冊程式。
 
-## 啟用您的受邀使用者帳戶 {#activate-your-invited-user-account}
+## 啟用您的受邀使用者帳戶{#activate-your-invited-user-account}
 
 在您註冊後，檔案安全性會寄送啟動電子郵件給您。 您必須使用訊息中的URL來啟用您的帳戶。 然後，您可以登入檔案安全性，以使用您可存取的受原則保護檔案。 根據管理員為外部用戶啟用的功能，您可能具有建立策略、將策略應用到文檔以及將其他外部用戶添加到策略的權限。
 
@@ -54,7 +57,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在「使用者名稱」方塊中，輸入您透過檔案安全性註冊的電子郵件地址。 此電子郵件地址是您的預設檔案安全性使用者名稱。
 1. 在「密碼」方塊中，輸入您註冊時建立的密碼，然後按一下「登入」。
 
-## 重設密碼 {#reset-your-password}
+## 重設密碼{#reset-your-password}
 
 如果您忘記密碼，原則管理員可為您重設密碼。 重設密碼會產生一封邀請您使用暫時密碼登入的電子郵件。 然後，您可以建立新密碼。
 
