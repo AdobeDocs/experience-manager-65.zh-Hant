@@ -12,6 +12,9 @@ discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '2158'
+ht-degree: 0%
 
 ---
 
@@ -37,29 +40,29 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * [旋轉日誌檔案](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#rotate-log-files)
 
-## 確保有足夠的磁碟空間 {#ensure-sufficient-disk-space}
+## 確保有足夠的磁碟空間{#ensure-sufficient-disk-space}
 
 執行升級時，除了內容和代碼升級活動外，還需要執行儲存庫遷移。 遷移將以新的段Tar格式建立儲存庫的副本。 因此，您需要足夠的磁碟空間來保留第二個可能更大的儲存庫版本。
 
 ## 完全備份AEM {#fully-back-up-aem}
 
-AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應用程式安裝、資料儲存和Mongo實例（如果適用）。 如需有關備份和還原AEM例項的詳細資訊，請參 [閱備份和還原](/help/sites-administering/backup-and-restore.md)。
+AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應用程式安裝、資料儲存和Mongo實例（如果適用）。 有關備份和還原AEM實例的詳細資訊，請參閱[備份和還原](/help/sites-administering/backup-and-restore.md)。
 
-## 備份/etc的更改 {#backup-changes-etc}
+## 備份對/etc {#backup-changes-etc}的更改
 
-升級過程在維護和合併儲存庫中現有內容和配置方面做 `/apps` 得 `/libs` 很好。 對於路徑所做的 `/etc` 更改（包括上下文集線器配置），通常需要在升級後重新應用這些更改。 雖然升級將對任何無法合併的更改進行備份，但我們建議在開始升級之 `/var`前手動備份這些更改。
+升級過程在維護和合併儲存庫中`/apps`和`/libs`路徑下的現有內容和配置方面做得很好。 對於對`/etc`路徑所做的更改（包括上下文集線器配置），通常需要在升級後重新應用這些更改。 雖然升級將會對`/var`下無法合併的任何更改進行備份，但建議在開始升級之前手動備份這些更改。
 
-## 生成quickstart.properties檔案 {#generate-quickstart-properties}
+## 生成快速啟動。properties檔案{#generate-quickstart-properties}
 
-從jar檔案啟動AEM時，會在 `quickstart.properties` 下產生檔案 `crx-quickstart/conf`。 如果AEM過去只是以start指令碼啟動，此檔案將不存在，而且升級將會失敗。 請務必檢查此檔案是否存在，並從jar檔案重新啟動AEM（若未存在）。
+從jar檔案啟動AEM時，`crx-quickstart/conf`下會產生`quickstart.properties`檔案。 如果AEM過去只是以start指令碼啟動，此檔案將不存在，而且升級將會失敗。 請務必檢查此檔案是否存在，並從jar檔案重新啟動AEM（若未存在）。
 
-## 配置工作流和審核日誌清除 {#configure-wf-audit-purging}
+## 配置工作流和審核日誌清除{#configure-wf-audit-purging}
 
-這些 `WorkflowPurgeTask` 和任 `com.day.cq.audit.impl.AuditLogMaintenanceTask` 務需要單獨的OSGi配置，沒有它們將無法工作。 如果在升級前任務執行期間失敗，則最可能的原因是缺少配置。 因此，如果您不想運行這些任務，請務必為這些任務添加OSGi配置，或將它們從升級前優化任務清單中完全刪除。 如需設定工作流程清除工作的檔案，請參閱「管理工作流程例項 [」(](/help/sites-administering/workflows-administering.md) Administering Workflow Instances [)，而「稽核記錄維護」(audit log Maintenance in AEM 6](/help/sites-administering/operations-audit-log.md))則提供稽核記錄維護工作設定。
+`WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任務需要單獨的OSGi配置，沒有這些配置將無法工作。 如果在升級前任務執行期間失敗，則最可能的原因是缺少配置。 因此，如果您不想運行這些任務，請務必為這些任務添加OSGi配置，或將它們從升級前優化任務清單中完全刪除。 有關配置工作流清除任務的文檔，請訪問[管理工作流實例](/help/sites-administering/workflows-administering.md) ，並可在[ AEM 6](/help/sites-administering/operations-audit-log.md)中的審核日誌維護中找到審核日誌維護任務配置。
 
-如需CQ 5.6上的工作流程和稽核記錄清除，以及AEM 6.0上的稽核記錄清除，請參閱「清 [除工作流程和稽核節點」](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)。
+如需CQ 5.6上的工作流程和稽核記錄清除，以及AEM 6.0上的稽核記錄清除，請參閱[清除工作流程和稽核節點](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)。
 
-## 安裝、配置和運行升級前任務 {#install-configure-run-pre-upgrade-tasks}
+## 安裝、配置和運行升級前任務{#install-configure-run-pre-upgrade-tasks}
 
 由於AEM所允許的自訂層級，環境通常無法遵循統一的升級方式。 因此，建立標準化的升級程式是個困難的程式。
 
@@ -71,7 +74,7 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
 
 升級前最佳化步驟中包含的所有工作都與AEM 6.0以後的所有版本相容。
 
-### 如何設定 {#how-to-set-it-up}
+### 如何設定{#how-to-set-it-up}
 
 在AEM 6.3和更新版本中，快速啟動jar中包含升級前維護最佳化工作。 如果您是從舊版AEM 6升級，則可透過個別的套件取得，您可從「套件管理員」下載。
 
@@ -83,13 +86,13 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
 
 * [從AEM 6.2升級](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/product/pre-upgrade-tasks-content-cq62)
 
-### How to Use It {#how-to-use-it}
+### 如何使用{#how-to-use-it}
 
-OSGI `PreUpgradeTasksMBean` 元件已預先設定好升級前維護工作清單，可一次執行。 您可以按照以下過程配置任務：
+`PreUpgradeTasksMBean` OSGI元件預配置了可一次運行的升級前維護任務清單。 您可以按照以下過程配置任務：
 
-1. 瀏覽至https://serveraddress:serverport/system/console/configMgr以前往Web Console(網頁控制 *台)*
+1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*，前往Web主控台
 
-1. 搜尋「預&#x200B;**升級任務**」，然後按一下第一個相符的元件。 元件的完整名稱為 `com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl`
+1. 搜索「**預升級任務**」，然後按一下第一個匹配元件。 元件的全名為`com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl`
 
 1. 修改需要運行的維護任務清單，如下所示：
 
@@ -112,7 +115,7 @@ OSGI `PreUpgradeTasksMBean` 元件已預先設定好升級前維護工作清單�
   <tr>
    <td><code>DataStoreGarbageCollectionTask</code></td>
    <td>crx2</td>
-   <td>會進行標籤和掃描。 對於共用資料存放區，請移除此步驟<br /> ，然後在執行前手動或正確準備執行個體。</td>
+   <td>會進行標籤和掃描。 對於共用資料儲存，請刪除此步驟，然後在執行前手動或正確地準備實例。<br /></td>
   </tr>
   <tr>
    <td><code>ConsistencyCheckTask</code></td>
@@ -144,30 +147,30 @@ OSGI `PreUpgradeTasksMBean` 元件已預先設定好升級前維護工作清單�
 
 >[!CAUTION]
 >
->`DataStoreGarbageCollectionTask` 正在調用帶有標籤和掃描階段的資料儲存廢棄項目收集操作（如果使用）。 對於使用共用資料儲存的部署，請確保重新配置或正確地準備實例，以避免刪除其他實例引用的項。 這可能需要在觸發此升級前任務之前，在所有實例上手動運行標籤階段。
+>`DataStoreGarbageCollectionTask` 正在調用帶有標籤和掃描階段的資料儲存廢棄項目收集操作（如果使用）。對於使用共用資料儲存的部署，請確保重新配置或正確地準備實例，以避免刪除其他實例引用的項。 這可能需要在觸發此升級前任務之前，在所有實例上手動運行標籤階段。
 
-### Pre-Upgrade Health Checks的預設配置 {#default-configuration-of-the-pre-upgrade-health-checks}
+### Default Configuration of the Pre-Upgrade Health Checks {#default-configuration-of-the-pre-upgrade-health-checks}
 
-OSGI `PreUpgradeTasksMBeanImpl` 元件會預先設定升級前狀態檢查標籤清單，以便在呼叫方法時 `runAllPreUpgradeHealthChecks` 執行：
+`PreUpgradeTasksMBeanImpl` OSGI元件預配置了升級前運行狀況檢查標籤清單，在調用`runAllPreUpgradeHealthChecks`方法時執行：
 
 * **system** - granite維護健康檢查所使用的標籤
 
-* **pre-upgrade** —— 這是自訂標籤，可新增至您可設定為在升級前執行的所有健康狀況檢查
+* **pre-upgrade**  —— 這是自訂標籤，可新增至所有可設定為在升級前執行的健康狀態檢查
 
-可編輯清單。 您可以使用標 **簽以外的加號** (+)和減號 **** (-)按鈕來新增更多自訂標籤，或移除預設標籤。
+可編輯清單。 您可以使用標籤以外的加號&#x200B;**(+)**&#x200B;和減號&#x200B;**(-)**&#x200B;按鈕來新增更多自訂標籤，或移除預設標籤。
 
 **MBean方法**
 
-可使用 [JMX控制台訪問受管理的Bean功能](/help/sites-administering/jmx-console.md)。
+可使用[JMX控制台](/help/sites-administering/jmx-console.md)訪問受管理的Bean功能。
 
 您可以通過以下方式訪問MBean:
 
-1. 前往JMX主控台，網址為 *https://serveraddress:serverport/system/console/jmx*
-1. 搜索 **PreUpgradeTasks** ，然後按一下結果
+1. 前往JMX控制台&#x200B;*https://serveraddress:serverport/system/console/jmx*
+1. 搜索&#x200B;**PreUpgradeTasks**&#x200B;並按一下結果
 
-1. 從「操作」( **Operations** )部分選擇任何方法，並在以 **下窗口中選擇「調用** 」(Invoke)。
+1. 從&#x200B;**Operations**&#x200B;區段中選擇任何方法，並在以下窗口中選擇&#x200B;**Invoke**。
 
-以下是所有可用方法的清單，這些方法會公 `PreUpgradeTasksMBeanImpl` 開：
+以下是`PreUpgradeTasksMBeanImpl`公開的所有可用方法的清單：
 
 <table>
  <tbody>
@@ -199,12 +202,12 @@ OSGI `PreUpgradeTasksMBeanImpl` 元件會預先設定升級前狀態檢查標籤
   <tr>
    <td><code>isRunAllPreUpgradeTaskRunning()</code></td>
    <td>ACTION_INFO</td>
-   <td>檢查任務 <code>runAllPreUpgradeTasksmaintenance</code> 當前是否正在運行。</td>
+   <td>檢查<code>runAllPreUpgradeTasksmaintenance</code>任務當前是否正在運行。</td>
   </tr>
   <tr>
    <td><code>getAnyPreUpgradeTaskRunning()</code></td>
    <td>ACTION_INFO</td>
-   <td>檢查是否當前正在運行任何升級前維護任務<br /> ，並返回包含當前正在運行任務名稱的陣列。</td>
+   <td>檢查是否當前正在運行任何升級前維護任務，並<br />返回包含當前運行任務名稱的陣列。</td>
   </tr>
   <tr>
    <td><code>getPreUpgradeTaskLastRunTime(preUpgradeTaskName)</code></td>
@@ -219,12 +222,12 @@ OSGI `PreUpgradeTasksMBeanImpl` 元件會預先設定升級前狀態檢查標籤
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
    <td>動作</td>
-   <td><p>執行所有升級前的健康狀況檢查，並將其狀態儲存在位於sling <code>preUpgradeHCStatus.properties</code> home路徑中的名稱檔案中。 如果參 <code>shutDownOnSuccess</code> 數設為 <code>true</code>,AEM例項將會關閉，但前提是所有升級前的健康狀況檢查都有「正常」狀態。</p> <p>屬性檔案將用作將來任何升級的先決條件<br /> ，如果升級前運行狀況檢查執行失敗，升級過程將停止<br /> 。 如果您想忽略升級前運行狀況檢查的結果<br /> ，並且仍要啟動升級，則可以刪除該檔案。</p> </td>
+   <td><p>執行所有升級前的健康狀況檢查，並將其狀態儲存在位於sling home路徑中名為<code>preUpgradeHCStatus.properties</code>的檔案中。 如果<code>shutDownOnSuccess</code>參數設為<code>true</code>，則AEM例項將會關閉，但前提是所有升級前的健康狀況檢查都有「正常」狀態。</p> <p>屬性檔案將用作任何以後升級的先決條件<br /> ，如果升級前運行狀況檢查<br />執行失敗，則升級過程將停止。 如果您要忽略升級前的<br />運行狀況檢查的結果並且仍要啟動升級，則可以刪除該檔案。</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
    <td>動作</td>
-   <td>列出在升級至指定的AEM版本時<br /> ，將不再符合的所有匯入封裝。 目標AEM版本必須以參數<br /> 形式提供。</td>
+   <td>列出當<br />升級至指定的AEM版本時，將不再符合的所有匯入封裝。 目標AEM版本必須<br />指定為參數。</td>
   </tr>
  </tbody>
 </table>
@@ -236,23 +239,24 @@ OSGI `PreUpgradeTasksMBeanImpl` 元件會預先設定升級前狀態檢查標籤
 >* JMX主控台
 >* 連線至JMX的任何外部應用程式
 >* cURL
+
 >
 
 
 
-## 禁用自定義登錄模組 {#disable-custom-login-modules}
+## 禁用自定義登錄模組{#disable-custom-login-modules}
 
 >[!NOTE]
 >
 >只有當您從AEM 5版本升級時，才需要此步驟。 您可完全略過它，以取得舊版AEM 6的升級。
 
-在Apache Oak中， `LoginModules` 在資料庫層級設定自訂驗證的方式已發生根本改變。
+在Apache Oak中，自訂`LoginModules`在儲存庫層級的驗證配置方式已發生根本性改變。
 
-在使用CRX2組態的AEM版本中，會將它放在檔案中，而從 `repository.xml` AEM 6開始，則會透過Web Console在Apache Felix JAAS Configuration Factory服務中完成。
+在使用CRX2組態的AEM版本中，`repository.xml`檔案會放入AEM 6之後，則會透過Web Console在Apache Felix JAAS Configuration Factory服務中完成。
 
 因此，升級後，必須停用並重新建立Apache Oak的任何現有組態。
 
-要禁用在的JAAS配置中定義的自定義模 `repository.xml`塊，您需要修改配置以使用預設 `LoginModule`值，如以下示例：
+要禁用`repository.xml`的JAAS配置中定義的自定義模組，您需要修改配置以使用預設`LoginModule`，如本例所示：
 
 ```xml
 <Security >
@@ -273,43 +277,43 @@ OSGI `PreUpgradeTasksMBeanImpl` 元件會預先設定升級前狀態檢查標籤
 
 >[!NOTE]
 >
->如需詳細資訊，請參 [閱使用外部登入模組進行驗證](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)。
+>如需詳細資訊，請參閱[使用外部登入模組進行驗證](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)。
 >
->如需AEM 6中 `LoginModule` 的設定範例，請參 [閱「使用AEM 6設定LDAP](/help/sites-administering/ldap-config.md)」。
+>如需AEM 6中`LoginModule`組態的範例，請參閱[使用AEM 6](/help/sites-administering/ldap-config.md)設定LDAP。
 
-## 從/install目錄中刪除更新 {#remove-updates-install-directory}
+## 從/install目錄{#remove-updates-install-directory}中刪除更新
 
 >[!NOTE]
 >
 >只會在關閉AEM例項後，從crx-quickstart/install目錄移除套件。 這是開始就地升級程式之前的最後步驟之一。
 
-刪除通過本地檔案系統上的目錄部署的所有服務包 `crx-quickstart/install` 、功能包或修補程式。 如此可避免在更新完成後，在新AEM版本之上意外安裝舊的修補程式和服務套件。
+刪除通過本地檔案系統上的`crx-quickstart/install`目錄部署的所有服務包、功能包或修補程式。 如此可避免在更新完成後，在新AEM版本之上意外安裝舊的修補程式和服務套件。
 
-## 停止任何冷備用實例 {#stop-tarmk-coldstandby-instance}
+## 停止任何冷備用實例{#stop-tarmk-coldstandby-instance}
 
 如果使用TarMK冷備用，請停止任何冷備用實例。 這些功能可確保在升級時有效率地回到線上。 升級成功後，需要從升級的主實例重建冷備用實例。
 
-## 停用自訂排程工作 {#disable-custom-scheduled-jobs}
+## 停用自訂排程工作{#disable-custom-scheduled-jobs}
 
 停用應用程式程式碼中包含的任何OSGi排程工作。
 
-## 執行離線修訂清除 {#execute-offline-revision-cleanup}
+## 執行離線修訂清除{#execute-offline-revision-cleanup}
 
 >[!NOTE]
 >
 >此步驟僅對於TarMK安裝是必要的
 
-如果使用TarMK，您應在升級前執行離線修訂清除。 這將使儲存庫遷移步驟和後續升級任務的執行速度大大加快，並有助於確保線上修訂清除功能在升級完成後能夠成功執行。 有關運行離線修訂清除的資訊，請參 [閱執行離線修訂清除](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup)。
+如果使用TarMK，您應在升級前執行離線修訂清除。 這將使儲存庫遷移步驟和後續升級任務的執行速度大大加快，並有助於確保線上修訂清除功能在升級完成後能夠成功執行。 有關運行離線修訂清除的資訊，請參閱[執行離線修訂清除](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup)。
 
-## 執行資料儲存廢棄項目收集 {#execute-datastore-garbage-collection}
+## 執行資料儲存廢棄項目收集{#execute-datastore-garbage-collection}
 
 >[!NOTE]
 >
 >只有執行crx3的例項才需要此步驟
 
-對CRX3實例運行修訂清除後，您應運行資料儲存廢棄項目收集來刪除資料儲存中任何未引用的blob。 如需指示，請參閱 [Data Store Garbage Collection的檔案](/help/sites-administering/data-store-garbage-collection.md)。
+對CRX3實例運行修訂清除後，您應運行資料儲存廢棄項目收集來刪除資料儲存中任何未引用的blob。 如需指示，請參閱[Data Store Garbage Collection](/help/sites-administering/data-store-garbage-collection.md)上的說明檔案。
 
-## 視需要升級資料庫模式 {#upgrade-the-database-schema-if-needed}
+## 如果需要，請升級資料庫模式{#upgrade-the-database-schema-if-needed}
 
 通常，用於永續性的基礎Apache Oak stack AEM會視需要負責升級資料庫架構。
 
@@ -320,11 +324,11 @@ OSGI `PreUpgradeTasksMBeanImpl` 元件會預先設定升級前狀態檢查標籤
 1. 關閉需要升級的AEM例項。
 1. 升級資料庫模式。 請查閱您的資料庫類型檔案，以瞭解您要達到此目的，需要使用哪些工具。
 
-   如需Oak如何處理架構升級的詳細資訊，請參 [閱Apache網站的本頁](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)。
+   如需Oak如何處理架構升級的詳細資訊，請參閱Apache網站](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)上的[本頁。
 
 1. 繼續升級AEM。
 
-## 刪除可能妨礙升級的用戶 {#delete-users-that-might-hinder-the-upgrade}
+## 刪除可能妨礙升級的用戶{#delete-users-that-might-hinder-the-upgrade}
 
 >[!NOTE]
 >
@@ -332,6 +336,7 @@ OSGI `PreUpgradeTasksMBeanImpl` 元件會預先設定升級前狀態檢查標籤
 >
 >* 您是從AEM 6.3以前的AEM版本升級
 >* 在升級期間，您會遇到下列任何錯誤。
+
 >
 
 
@@ -348,7 +353,7 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 為瞭解決此問題，請確定您執行下列動作：
 
 1. 將例項與生產流量分離
-1. 建立導致問題的用戶的備份。 您可以通過「包管理器」執行此操作。 如需詳細資訊，請參 [閱如何使用套件。](/help/sites-administering/package-manager.md)
+1. 建立導致問題的用戶的備份。 您可以通過「包管理器」執行此操作。 有關詳細資訊，請參閱[如何使用包。](/help/sites-administering/package-manager.md)
 1. 刪除導致問題的用戶。 以下是可能屬於此類別的使用者清單：
 
    1. `dynamic-media-replication`
@@ -358,6 +363,6 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
    1. `oauthservice`
    1. `sling-scripting`
 
-## 旋轉日誌檔案 {#rotate-log-files}
+## 旋轉日誌檔案{#rotate-log-files}
 
 建議您在開始升級之前，先封存您目前的記錄檔。 這樣，在升級期間和升級後監視和掃描日誌檔案將更加容易，以識別和解決可能發生的任何問題。
