@@ -11,11 +11,14 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 translation-type: tm+mt
 source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
+workflow-type: tm+mt
+source-wordcount: '369'
+ht-degree: 20%
 
 ---
 
 
-# 內容屬性和節點 {#content-properties-and-nodes}
+# 內容屬性和節點{#content-properties-and-nodes}
 
 >[!NOTE]
 >
@@ -27,7 +30,7 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 下表說明內容屬性和節點。
 
-## 通用整合屬性 {#common-integration-properties}
+## 通用整合屬性{#common-integration-properties}
 
 | **屬性名稱** | **類型** | **預設值或預期值** | **說明** |
 |---|---|---|---|
@@ -38,7 +41,7 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 | dps-lastUploaded | 日期 |  | 上次從AEM上傳至AEM Mobile的日期 |
 | dps-lastUploadedBy | 字串：userid |  | ID使用者，此使用者已執行從AEM到AEM Mobile的上傳請求 |
 
-## 核心中繼資料屬性 {#core-metadata-properties}
+## 核心中繼資料屬性{#core-metadata-properties}
 
 | 屬性名稱 | 類型 | 預設值或預期值 |
 |--- |--- |--- |
@@ -49,8 +52,8 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 | dps-department | 字串 |  |
 | dps-category | 字串 |  |
 | dps-keywords | String[] |  |
-| dps-internalKeywords | String[] |  |
-| dps-importance | String[] | 重要性來自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
+| dps-internalKeywords | 字串[] |  |
+| dps-importance | 字串[] | 重要性來自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
 
 ### 文章 {#articles}
 
@@ -83,13 +86,13 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 | dps-openDefault | 字串 | 來自{&quot;browsePage&quot;,&quot;contentView&quot;} |
 | dps-layout | 字串 |  |
 
-## 內容節點 {#content-nodes}
+## 內容節點{#content-nodes}
 
-### 公共節點 {#common-nodes}
+### 公共節點{#common-nodes}
 
 | 節點名稱 | 類型 | 預設值或預期值 | 說明 |
 |--- |--- |--- |--- |
-| 影像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
+| 影像 | jcr:primaryType=nt:antructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### 實體 {#entities}
 
@@ -97,7 +100,7 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 | 節點名稱 | 類型 | 預期值的預設值 | 說明 |
 |--- |--- |--- |--- |
-| social-share-image |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
+| social-share-image |  | jcr:primaryType=nt:antructured <br> sling:resourceType=foundation/components/image |  |
 
 #### 橫幅 {#banners-1}
 
@@ -109,4 +112,4 @@ source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 | 節點名稱 | 類型 | 預期值的預設值 | 說明 |
 |--- |--- |--- |--- |
-| 背景影像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
+| 背景影像 | jcr:primaryType=nt:antructured <br> sling:resourceType=foundation/components/image |  |  |
