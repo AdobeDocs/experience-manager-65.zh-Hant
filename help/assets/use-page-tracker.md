@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 在網頁中使用頁面追蹤器和內嵌代碼 {#using-page-tracker-and-embed-code-in-web-pages}
+# 在網頁{#using-page-tracker-and-embed-code-in-web-pages}中使用頁面追蹤器和內嵌代碼
 
-「頁面追蹤器」是JavaScript程式碼的一部分，您會將它加入協力廠商網站的程式碼中，讓Adobe Analytics能夠擷取這些網站的使 [!DNL Adobe Experience Manager Assets] 用資料。
+「頁面追蹤器」是JavaScript程式碼的一部分，您會在協力廠商網站的程式碼中加入，讓Adobe Analytics可擷取這些網站[!DNL Adobe Experience Manager Assets]的使用資料。
 
 若要擷取資產專屬的事件（例如點按等），您也可在協力廠商網站的程式碼中加入內嵌程式碼。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 </html>
 ```
 
-## 新增頁面追蹤器代碼 {#adding-page-tracker-code}
+## 新增頁面追蹤器代碼{#adding-page-tracker-code}
 
 您可將頁面追蹤器程式碼新增至網站程式碼的標題區段中。 下列程式碼片段會顯示範例網頁中包含的「頁面追蹤器」程式碼：
 
@@ -79,7 +79,7 @@ ht-degree: 0%
  </head>
 ```
 
-## 新增內嵌代碼 {#add-embed-code}
+## 新增內嵌代碼{#add-embed-code}
 
 您可將內嵌代碼新增至網站代碼的正文中。 下列程式碼片段會顯示範例網頁中包含的內嵌程式碼：
 
