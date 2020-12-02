@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# AEM Forms鍵盤快速鍵 {#aem-forms-keyboard-shortcuts}
+# AEM Forms鍵盤快速鍵{#aem-forms-keyboard-shortcuts}
 
 本文列出可與Windows和Macintosh作業系統的最適化表單編輯器、主題編輯器、內容瀏覽器和對應管理搭配使用的鍵盤快速鍵。
 
-## 最適化表單編輯器 {#adaptiveformeditor}
+## 最適化表單編輯器{#adaptiveformeditor}
 
 | **動作** | **Windows上的捷徑** | **Mac OS上的捷徑** |
 |---|---|---|
@@ -71,7 +71,7 @@ ht-degree: 0%
 >
 >標有&#39;&amp;ast;&#39;的快速鍵可在Mac OS上搭配Ctrl和Command鍵運作。
 
-## 內容瀏覽器  {#contentbrowser}
+## 內容瀏覽器{#contentbrowser}
 
 | **動作** | **Windows上的捷徑** | **Mac OS上的捷徑** |
 |---|---|---|
@@ -82,17 +82,17 @@ ht-degree: 0%
 | 在「表單對象」樹中選擇下一個項 | 向下鍵 | 向下鍵 |
 | 在「表單對象」樹中選擇上一個項 | 向上鍵 | 向上鍵 |
 
-[1取代] Windows的Ctrl +向右鍵，Mac OS的Command +向右鍵。\
-[2] 取代Windows的Ctrl +向左箭頭，以及Mac OS的Command +向左箭頭。
+[1取] 代Windows的Ctrl +向右鍵，以及Mac OS的Command +向右鍵。\
+[2取] 代Windows的Ctrl +向左箭頭，以及Mac OS的Command +向左箭頭。
 
-## 信件管理 {#correspondence-management}
+## 通信管理{#correspondence-management}
 
 本節列出了各種鍵盤和輔助功能快速鍵，可在「通信管理」文本編輯器中使用。 您可以在下列情況下使用這些捷徑：
 
-* 建立或編輯文 [字資產](texts-interactive-communications.md)
-* 在建立對應時點選相關的「編輯」圖示( ![edittextmodule](assets/edittextmodule.png))後， [編輯文字模組](/help/forms/using/create-correspondence.md)。
+* 建立或編輯[Text](texts-interactive-communications.md)資產
+* 當[建立對應](/help/forms/using/create-correspondence.md)時，點選相關的「編輯」圖示(![edittextmodule](assets/edittextmodule.png))後編輯文字模組。
 
-### 文字選取和移動游標 {#text-selection-and-moving-the-cursor-around}
+### 文本選擇和在{#text-selection-and-moving-the-cursor-around}周圍移動游標
 
 <table> 
  <tbody>
@@ -129,7 +129,7 @@ ht-degree: 0%
   <tr>
    <td><p>將游標移到下一個單詞的開頭</p> </td> 
    <td><p>Ctrl+向右鍵</p> </td> 
-   <td>Option+向右鍵 <em><sup>[1]</sup></em></td> 
+   <td>Option+向右鍵<em><sup>[1]</sup></em></td> 
   </tr>
   <tr>
    <td><p>將游標移至前一個單詞的開頭</p> </td> 
@@ -210,7 +210,7 @@ ht-degree: 0%
 </table>
 
 
-### 文字對齊 {#text-alignment}
+### 文字對齊{#text-alignment}
 
 <table> 
  <tbody>
@@ -242,7 +242,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-### 還原和重做動作 {#undo-and-redo-actions}
+### 還原和重做動作{#undo-and-redo-actions}
 
 <table> 
  <tbody>
@@ -264,7 +264,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-### 變更字型大小 {#changing-font-size}
+### 變更字型大小{#changing-font-size}
 
 <table> 
  <tbody>
@@ -286,7 +286,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-### 刪除單字 {#deleting-a-word}
+### 刪除單字{#deleting-a-word}
 
 <table> 
  <tbody>
@@ -308,7 +308,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-### 複製和貼上 {#copy-and-paste}
+### 複製並貼上{#copy-and-paste}
 
 <table> 
  <tbody>
