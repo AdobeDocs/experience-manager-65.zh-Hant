@@ -42,11 +42,11 @@ ht-degree: 0%
 
 ## 註解 {#annotations}
 
-建立和 [查看注釋時](/help/sites-authoring/author-environment-tools.md#page-modes) ，使用特殊模式。
+特殊的[mode](/help/sites-authoring/author-environment-tools.md#page-modes)用於建立和查看注釋。
 
 >[!NOTE]
 >
->請記住，您也可 [以在頁面](/help/sites-authoring/basic-handling.md#timeline) 上提供意見回應。
+>別忘了，[comments](/help/sites-authoring/basic-handling.md#timeline)也提供頁面上的意見回應。
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 
 
-### 為元件加上註解 {#annotating-a-component}
+### 為元件{#annotating-a-component}添加註釋
 
 「註解」模式可讓您在內容上建立、編輯、移動或刪除註解：
 
@@ -121,7 +121,7 @@ ht-degree: 0%
 >
 >註解無法新增至已被其他使用者鎖定的頁面。
 
-### 注釋指示器 {#annotation-indicator}
+### 注釋指示符{#annotation-indicator}
 
 註解不會顯示在「編輯」模式中，但工具列右上角的標章會顯示目前頁面的註解數。 徽章會取代預設的「註解」圖示，但仍可當成快速連結，切換至「註解」模式：
 
