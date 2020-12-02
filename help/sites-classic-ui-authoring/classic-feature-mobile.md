@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 430a27b5-f344-404f-8bf8-0d91b49b605e
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 0%
 
 ---
 
@@ -23,22 +26,22 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->若要根據現有的標準網站建立行動網站，請建立標準網站的即時副本。 (請參 [閱「建立不同渠道的即時副本](/help/sites-administering/msm-livecopy.md)」)。
+>若要根據現有的標準網站建立行動網站，請建立標準網站的即時副本。 （請參閱[為不同通道建立即時副本](/help/sites-administering/msm-livecopy.md)）。
 >
->AEM開發人員可以建立新的裝置群組。 (請參 [閱建立裝置群組篩選器](/help/sites-developing/groupfilters.md))。
+>AEM開發人員可以建立新的裝置群組。 （請參閱[建立設備組過濾器。](/help/sites-developing/groupfilters.md)）
 
 請依照下列程式來製作行動頁面：
 
-1. 在您的瀏覽器中，前往網 **站管理** 主控台。
-1. 開啟「 **Websites** >> **Geometrixx Mobile Demo Site** > **English」(網站>>Geometrixx行動展示網站** >英文)下 ****&#x200B;的「Products」（產品）頁面。
+1. 在您的瀏覽器中，前往&#x200B;**網站管理**&#x200B;主控台。
+1. 開啟&#x200B;**Products**&#x200B;頁面，位於&#x200B;**Websites** >>**Geometrixx Mobile Demo Site** >>**English**&#x200B;下方。
 
 1. 切換至不同的模擬器。 若要這麼做，您可以：
 
    * 按一下頁面頂端的裝置圖示。
-   * 按一 **下Sidekick中的Edit** （編輯） **按鈕** ，然後在下拉式選單中選取裝置。
+   * 按一下&#x200B;**Sidekick**&#x200B;中的&#x200B;**編輯**&#x200B;按鈕，然後在下拉菜單中選擇設備。
 
-1. 將Text &amp; Image **** 元件從Sidekick的Mobile標籤拖放至頁面。
-1. 編輯元件並新增一些文字。 按一下 **確定** ，保存更改。
+1. 將&#x200B;**Text &amp; Image**&#x200B;元件從Sidekick的「行動」標籤拖放至頁面。
+1. 編輯元件並新增一些文字。 按一下&#x200B;**確定**&#x200B;保存更改。
 
 頁面外觀與下列相同：
 
