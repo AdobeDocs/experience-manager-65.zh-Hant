@@ -12,25 +12,25 @@ discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
 source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
 
-# 會員繳費限制 {#member-contribution-limits}
+# 成員貢獻限制{#member-contribution-limits}
 
 ## 概覽 {#overview}
 
 貢獻限制功能可限制社群成員的貢獻，以防垃圾郵件。
 
-當會員受限時，任何超過允許之稿數的貼文都會產生警告，指出已超出限制且貼文遭拒。 然後，社群成員可前往社群訊息中心，並聯絡社群經理，如有需要，可移除限制。
+當會員受限時，任何超過允許之稿數的貼文，都會產生超出限制且貼文遭拒的警告。 然後，社群成員可前往社群訊息中心，並聯絡社群經理，如有需要，可移除限制。
 
-貢獻限制可以從「成員」控制台 [單獨啟用](members.md) ，和／或設定為在網站訪客成為新成員時自動啟用。
+貢獻限制可以從[成員控制台](members.md)單獨啟用，和／或配置為在站點訪客成為新成員時自動啟用。
 
 使用「成員」控制台，社區管理員可以隨時主動為成員刪除貢獻限制，或在成員向提出此類請求的社區管理員發送消息時主動刪除貢獻限制。
 
-## AEM Communities使用者產生的內容貢獻限制設定 {#aem-communities-user-generated-content-contribution-limits-configuration}
+## AEM Communities使用者產生的內容貢獻限制設定{#aem-communities-user-generated-content-contribution-limits-configuration}
 
 此OSGi配置：
 
@@ -42,18 +42,18 @@ ht-degree: 0%
 
 * 在主要發行者上：
 * 以管理員權限登入。
-* 存取 [Web Console](../../help/sites-deploying/configuring-osgi.md)。
+* 訪問[Web控制台](../../help/sites-deploying/configuring-osgi.md)。
 
-   * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 找到 `AEM Communities User Generated Content Contribution Limits Configuration`。
+* 找到`AEM Communities User Generated Content Contribution Limits Configuration`。
 * 選擇編輯表徵圖。
 
 ![configure-limits](assets/configure-limits.png)
 
 * **[!UICONTROL 自動套用UGC貢獻限制]**
 
-   如果勾選，會在使用者註冊為社群成員時，自動設定其貢獻限制。 這反映在社區成員的配置檔案中，可以從成員控制台啟用／禁 [用](members.md)。 從允許的網域清單中取得電子郵件地址的新成員永遠不受限制。
+   如果勾選，會在使用者註冊為社群成員時，自動設定其貢獻限制。 這反映在社區成員的配置檔案中，並可從[成員控制台](members.md)啟用／禁用。 從允許的網域清單中取得電子郵件地址的新成員永遠不受限制。
 
    預設為未勾選。
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
    一或多個電子郵件網域的允許清單。 選擇+表徵圖以進行其他條目。
 
-   自動套用UGC貢獻限制時，網域允許清單中包含電子郵件地址的使用者不受影響。 例如，如果網域 `mycompany.com` 新增至網域清單，則永遠不會限制具有電子郵件地址 `me@mycompany.com` 的成員張貼。
+   自動套用UGC貢獻限制時，網域允許清單中包含電子郵件地址的使用者不受影響。 例如，如果將域`mycompany.com`添加到域清單中，則電子郵件地址`me@mycompany.com`的成員絕不會被限制發佈。
 
    預設為空的allowlist。
 
@@ -85,4 +85,4 @@ ht-degree: 0%
 
    預設為無訊息收件者。
 
-注意： 預設設定會在一小時內限制10篇貼文。
+注意：預設設定會在一小時內限制10篇貼文。
