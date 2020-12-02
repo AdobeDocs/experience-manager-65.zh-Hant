@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
 source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 這些範例可協助您學習和使用AEM 6.1 Communities [social元件架構(SCF)](scf.md)。
 
-## 用戶端自訂 {#client-side-customization}
+## 用戶端自訂{#client-side-customization}
 
 另請參閱:
 
@@ -31,11 +34,11 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 * [擴充注釋元件](extend-comments.md)
 
-## 伺服器端自訂 {#server-side-customization}
+## 伺服器端自訂{#server-side-customization}
 
-另請參見 [SCF伺服器端定制](server-customize.md)。
+另請參見[SCF伺服器端定制](server-customize.md)。
 
-范常式式碼可在 [Adobe Marketing Cloud GitHub儲存庫中取得](https://github.com/Adobe-Marketing-Cloud) :
+范常式式碼可在[Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud)儲存庫中取用：
 
 * [定制SCF元件示例](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
@@ -43,7 +46,7 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 * [擴展SCF元件樣本](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
-## 操作說明 {#how-to-instructions}
+## 操作說明{#how-to-instructions}
 
 * [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
@@ -57,15 +60,15 @@ source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 * [建立範例頁面](create-sample-page.md)
 
-## 示範使用者 {#demo-users}
+## 示範使用者{#demo-users}
 
-Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）與只要Geometrixx範例套件仍未安裝，在使用 [Community Components指南進行瀏覽時，您可以使用這些使用者來模擬登入狀態之間的體驗通常會有差異](components-guide.md)。
+Geometrixx範例套件包含示範使用者。 身為訪客（未登入）或成員（已登入）與只要Geometrixx範例套件尚未安裝，在使用[社群元件指南](components-guide.md)進行瀏覽時，您可以使用這些使用者模擬登入狀態，兩者的體驗通常會有所不同。
 
-如需示範使用者的完整清單，請使用「導覽至工具 **[!UICONTROL >]** 作業 **[!UICONTROL >安]** 全性>使用者」導覽 ****。 或者，使用Classic UI安 [全性主控台](http://localhost:4502/useradmin) ，來管理使用者和群組。
+如需示範使用者的完整清單，請使用邊欄導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 安全性>使用者]**。 或者，使用Classic UI [安全控制台](http://localhost:4502/useradmin)來管理用戶和組。
 
-如果已 [建立社群網站](getting-started.md)，則可將示範使用者指派給其社 [群使用者群組](users.md)。
+如果已建立[社區站點](getting-started.md)，則可以將演示用戶分配給其[社區用戶組](users.md)。
 
-***用戶ID */*密碼***:
+***user id* /  *password***:
 
 * aaron.mcdonald@mailinator.com
 * emily.andrews@mailinator.com
