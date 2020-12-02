@@ -27,7 +27,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!CAUTION]
 >
->「內容片段管理」的完整功能不適用於傳統UI。 請參 [閱標準製作檔案中的](/help/sites-authoring/content-fragments.md) 「使用內容片段製作頁面」。
+>「內容片段管理」的完整功能不適用於傳統UI。 請參閱標準製作檔案中的[使用內容片段製作頁面](/help/sites-authoring/content-fragments.md)。
 >
 >您可在傳統UI側鍵中看到「內容片段」元件，但無法使用其他功能。
 
