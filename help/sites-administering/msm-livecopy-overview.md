@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 2%
 
 ---
 
 
-# 即時副本概述主控台{#live-copy-overview-console}
+# 即時副本概述控制台{#live-copy-overview-console}
 
-即時 **副本概述** ，可讓您：
+**即時副本概述**&#x200B;可讓您：
 
 * 檢視／管理整個網站的繼承：
 
@@ -27,19 +30,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 執行轉出動作
 
-## 開啟即時副本概述 {#opening-the-live-copy-overview}
+## 開啟即時副本概述{#opening-the-live-copy-overview}
 
 您可以從以下位置開啟即時副本概述：
 
 * [藍圖頁面的參考側面板（網站主控台）](#opening-live-copy-overview-references-for-a-blueprint-page)
 * [Blueprint頁面的屬性](#opening-live-copy-overview-properties-of-a-blueprint-page)
 
-### 開啟即時副本概述- Blueprint頁面的參考 {#opening-live-copy-overview-references-for-a-blueprint-page}
+### 開啟即時副本概述- Blueprint頁面{#opening-live-copy-overview-references-for-a-blueprint-page}的參考
 
-您可 **以從Sites主控台的「參考」側面板開啟「即時複製概觀** 」(Live Copy Overview ******** ):
+**即時副本概述**&#x200B;可從&#x200B;**Sites**&#x200B;控制台的&#x200B;**參考**&#x200B;側面板開啟：
 
-1. 在Sites控 **制台** ，導 [覽至您的Blueprint頁面並加以選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. 開啟「參 **[照](/help/sites-authoring/basic-handling.md#references)**」面板並選&#x200B;**取「即時副本」**。
+1. 在&#x200B;**Sites**&#x200B;控制台中，[瀏覽至您的Blueprint頁面並選取它](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
+1. 開啟&#x200B;**[References](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板並選擇&#x200B;**Live Copies**。
 
    ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -47,36 +50,36 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    >
    >您也可以先開啟「參照」，然後選取藍圖。
 
-1. 選擇 **即時副本概述** ，以顯示並使用與所選藍圖相關的所有即時副本的概述。
-1. 使用 **Close** 退出並返回 **Sites** 主控台。
+1. 選擇&#x200B;**即時副本概述**&#x200B;以顯示並使用與所選藍圖相關的所有即時副本概述。
+1. 使用&#x200B;**Close**&#x200B;退出並返回到&#x200B;**Sites**&#x200B;控制台。
 
-### 開啟即時副本概述- Blueprint頁面的屬性 {#opening-live-copy-overview-properties-of-a-blueprint-page}
+### 開啟即時副本概述- Blueprint頁面的屬性{#opening-live-copy-overview-properties-of-a-blueprint-page}
 
-檢視 **藍圖頁面的屬性時** ，可以開啟即時副本概述：
+在檢視Blueprint頁面的屬性時，可以開啟&#x200B;**即時副本概述**:
 
-1. 開啟適 **當藍圖** 頁面的屬性。
-1. 開啟「 **Blueprint** 」標籤-「即時 **副本概述** 」選項會顯示在頂端工具列中：
+1. 開啟&#x200B;**屬性**&#x200B;以取得適當的藍圖頁面。
+1. 開啟&#x200B;**Blueprint**&#x200B;標籤-**即時副本概述**&#x200B;選項會顯示在頂端工具列：
 
    ![chlimage_1-360](assets/chlimage_1-360.png)
 
-1. 選擇 **即時副本概述** ，以顯示並使用與目前藍圖相關的所有即時副本的概述。
+1. 選擇&#x200B;**即時副本概述**&#x200B;以顯示並使用與當前藍圖相關的所有即時副本的概述。
 
    >[!NOTE]
    >
-   >如需詳細資訊，另請參閱知識文 [庫文章Livecopy狀態訊息——最新／綠色／同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
+   >如需詳細資訊，請參閱知識庫文章[Livecopy狀態訊息——最新／綠色／同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
 
-1. 使用 **Close** 退出並返回 **Sites** 主控台。
+1. 使用&#x200B;**Close**&#x200B;退出並返回到&#x200B;**Sites**&#x200B;控制台。
 
-## 使用即時副本概觀 {#using-the-live-copy-overview}
+## 使用即時副本概述{#using-the-live-copy-overview}
 
-「即 **時副本概述** 」也可用於執行即時副本上的動作：
+**即時副本概述**&#x200B;也可用於執行即時副本上的動作：
 
-1. 開啟即 **時副本概觀**。
-1. 選擇所需的藍圖或即時副本頁面——工具列將會更新以顯示可用的動作。 可用 [的動作](/help/sites-administering/msm.md#terms-used) ，取決於您選擇的是Blueprint [](#actions-for-a-blueprint-page)[，還](#actions-for-a-live-copy-page) 是即時復本：
+1. 開啟&#x200B;**即時副本概述**。
+1. 選擇所需的藍圖或即時副本頁面——工具列將會更新以顯示可用的動作。 可用的[動作](/help/sites-administering/msm.md#terms-used)取決於您是選擇[blueprint](#actions-for-a-blueprint-page)還是[即時副本](#actions-for-a-live-copy-page)頁面：
 
-### Blueprint頁面的動作 {#actions-for-a-blueprint-page}
+### 藍圖頁面{#actions-for-a-blueprint-page}的動作
 
-當您選取Blueprint頁面時，可執行下列動作：
+當您選取藍圖頁面時，可執行下列動作：
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
@@ -88,7 +91,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * 執行轉出，將變更從來源推送至即時副本。
 
-### 即時副本頁面的動作 {#actions-for-a-live-copy-page}
+### 即時副本頁面的動作{#actions-for-a-live-copy-page}
 
 當您選取即時複製頁面時，可執行下列動作：
 
@@ -124,18 +127,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 關係狀態 {#relationship-status}
 
-「關 **系狀態** 」控制台有兩個標籤，提供一系列功能：
+**關係狀態**&#x200B;控制台具有兩個頁籤，提供一系列功能：
 
 * [關係狀態資訊](#relationship-status-information)
 * [即時副本資訊](#live-copy-information)
 
-### 關係狀態資訊 {#relationship-status-information}
+### 關係狀態資訊{#relationship-status-information}
 
 此標籤提供藍圖與即時副本之間關係狀態的詳細資訊：
 
 ![chlimage_1-363](assets/chlimage_1-363.png)
 
-### 即時副本資訊 {#live-copy-information}
+### 即時副本資訊{#live-copy-information}
 
 此標籤可讓您檢視和編輯即時副本設定：
 
