@@ -22,7 +22,7 @@ ht-degree: 0%
 
 本節包含可協助您疑難排解之記錄檔的詳細資訊，並包含有關您可能在AEM中遇到之部分問題的資訊。
 
-## 疑難排解作者效能 {#troubleshoot-author-performance}
+## 疑難排解作者效能{#troubleshoot-author-performance}
 
 分析編寫例項的效能變得相當複雜。 首先需要確定效能正在下降的技術堆疊級別。
 
@@ -30,25 +30,25 @@ ht-degree: 0%
 
 ![chlimage_1-75](assets/chlimage_1-75.png)
 
-## 基本最佳化 {#basic-optimization}
+## 基本優化{#basic-optimization}
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-## 配置日誌檔案和審核日誌 {#configuring-log-files-and-audit-logs}
+## 配置日誌檔案和審核日誌{#configuring-log-files-and-audit-logs}
 
-AEM會記錄詳細記錄，您可能想要設定這些記錄，以疑難排解安裝問題。 有關資訊，請參 [閱使用審計記錄和日誌檔案](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 。
+AEM會記錄詳細記錄，您可能想要設定這些記錄，以疑難排解安裝問題。 有關資訊，請參閱[使用審計記錄和日誌檔案](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)部分。
 
-## 使用詳細選項 {#using-the-verbose-option}
+## 使用詳細選項{#using-the-verbose-option}
 
 當您啟動AEM WCM時，可將-v(verbose)選項新增至命令列，如：java -jar cq-wcm-quickstart-&lt;version>.jar -v.
 
 詳細選項顯示控制台上的一些快速啟動日誌輸出，以便用於故障排除。
 
-## 常見安裝問題 {#common-installation-issues}
+## 常見安裝問題{#common-installation-issues}
 
 下節將說明某些安裝問題及其解決方案。
 
-### 按兩下快速啟動jar沒有任何作用，或者使用其他程式開啟jar檔案（例如，存檔管理器） {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
+### 按兩下快速啟動jar沒有任何作用，或者使用其他程式開啟jar檔案（例如，歸檔管理器）{#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
 
 這通常表示作業系統案頭環境配置為開啟副檔名為。jar的檔案的方式有問題。 它也可能表示您未安裝Java，或您使用的是不支援的Java版本。
 
@@ -65,11 +65,11 @@ AEM會記錄詳細記錄，您可能想要設定這些記錄，以疑難排解�
 * 有時重新安裝支援的Java版本有助於恢復正確的關聯。
 * 您始終可以使用命令行運行CRX ，或者像本文檔前面所述的啟動／停止指令碼。
 
-### 我在CRX上執行的應用程式會擲出記憶體不足的錯誤 {#my-application-running-on-crx-throws-out-of-memory-errors}
+### 我在CRX上運行的應用程式拋出記憶體不足錯誤{#my-application-running-on-crx-throws-out-of-memory-errors}
 
 >[!NOTE]
 >
->另請參閱 [分析記憶體問題](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)。
+>另請參閱[分析記憶體問題](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)。
 
 
 CRX本身的記憶體使用量很低。 如果在CRX中運行的應用程式記憶體要求較高或請求大量記憶體操作（例如，大事務），則需要使用適當的記憶體設定來啟動CRX運行的JVM實例。
@@ -84,9 +84,9 @@ CRX本身的記憶體使用量很低。 如果在CRX中運行的應用程式記�
 
 java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
-這將生成堆轉儲檔案(**java_...hprof**)，每當程式記憶體不足時。 生成堆轉儲後，該進程可繼續運行。 通常，一個堆轉儲檔案足以分析問題。
+這將生成堆轉儲檔案(**java_...hprof**)。 生成堆轉儲後，該進程可繼續運行。 通常，一個堆轉儲檔案足以分析問題。
 
-### 連按兩下「AEM快速入門」後，「AEM歡迎」畫面不會顯示在瀏覽器中 {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
+### 連按兩下「AEM快速入門{#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}」後，「AEM歡迎」畫面不會在瀏覽器中顯示
 
 在某些情況下，即使儲存庫本身已成功執行，AEM WCM歡迎畫面也不會自動顯示。 這可能取決於作業系統設定、瀏覽器組態或類似因素。
 
@@ -98,21 +98,21 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 如果其他一切都失敗，請查看記錄，以瞭解發生了什麼。
 
-## 使用應用程式伺服器進行安裝故障排除 {#troubleshooting-installations-with-an-application-server}
+## 使用應用程式伺服器{#troubleshooting-installations-with-an-application-server}進行安裝故障排除
 
-### 請求geometrixx-outdoor頁面時傳回「找不到頁面」 {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
+### 請求geometrixx-outdour頁面{#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}時傳回頁面找不到
 
 **適用於WebLogic 10.3.5和JBoss 5.1**
 
 當geometrixx-outdoors/en page的請求傳回404(Page Not Foun)時，您可重新檢查您是否已在這些特定Application Servers所需的sling.properties檔案中設定其他sling屬性。
 
-如需詳細資訊， *請參閱「部署AEM網頁應用程式* 」步驟。
+如需詳細資訊，請參閱&#x200B;*部署AEM網頁應用程式*&#x200B;步驟。
 
-### 回應標題大小可以大於4Kb {#response-header-size-can-be-greater-than-kb}
+### 響應報頭大小可以大於4Kb {#response-header-size-can-be-greater-than-kb}
 
 502錯誤可能表示Web伺服器無法處理AEM HTTP回應標頭的大小。 AEM可產生HTTP回應標頭，其中包含大小大於4Kb的Cookie。 請確定您的servlet容器已設定好，以便最大回應標題大小可超過4kb。
 
-例如，對於Tomcat 7.0, [](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) HTTP連接器的maxHttpHeaderSize屬性可控制標題大小的限制。
+例如，對於Tomcat 7.0,[HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html)的maxHttpHeaderSize屬性控制標題大小的限制。
 
 ## 解除安裝Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
@@ -126,6 +126,7 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 如果您的AEM安裝使用外部儲存（例如資料庫伺服器），移除資料夾並不會自動移除資料，但會移除儲存設定，因此很難還原JCR內容。
 
-### JSP檔案不在JBoss上編譯 {#jsp-files-are-not-compiled-on-jboss}
+### JSP檔案未在JBoss {#jsp-files-are-not-compiled-on-jboss}上編譯
 
-如果您在JBoss上將JSP檔案安裝或更新到Experience Manager，且未編譯相應的servlet，請確保正確配置了JBoss JSP編譯器。 如需詳細資訊，請參閱[JBoss中的JSP編譯問題](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) 。
+如果您在JBoss上將JSP檔案安裝或更新到Experience Manager，且未編譯相應的servlet，請確保正確配置了JBoss JSP編譯器。 如需詳細資訊，請參閱
+[JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html)文章中的JSP編譯問題。
