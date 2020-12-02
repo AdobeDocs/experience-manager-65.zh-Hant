@@ -11,6 +11,9 @@ discoiquuid: 4e83ed7b-3f48-4bf6-be4c-89f79949c1df
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '309'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 此外，「流程報告」還提供一個介面，可執行臨機查詢，並將自訂報表檢視整合至「流程報告」使用者介面。
 
-如需支援的瀏覽器清單，請參閱「 [AEM Forms支援的平台」](/help/forms/using/aem-forms-jee-supported-platforms.md)。
+如需支援的瀏覽器清單，請參閱[AEM Forms Supported Platforms](/help/forms/using/aem-forms-jee-supported-platforms.md)。
 
 流程報告建立在以下模組上：
 
@@ -33,9 +36,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 * 將流程資料發佈到嵌入式流程報告儲存庫
 * 提供以瀏覽器為基礎的使用者介面，以檢視報表
 
-## 主要功能 {#key-capabilities}
+## 關鍵功能{#key-capabilities}
 
-### 永不中斷的報告功能 {#always-on-reporting}
+### 永遠開啟報告{#always-on-reporting}
 
 ![站點管理](assets/site-management.png)
 
@@ -43,7 +46,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 「流程報表」也提供以CSV格式匯出報表和查詢資料的選項。
 
-### 臨機報表 {#adhoc-reports}
+### 臨機報表{#adhoc-reports}
 
 ![列印與色彩](assets/print-&-colour.png)
 
@@ -55,7 +58,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 然後，您可以儲存報表篩選，以便在稍後的日期或時間執行。
 
-### 進程／任務歷史記錄 {#process-task-history}
+### 進程／任務歷史記錄{#process-task-history}
 
 ![檔案管理](assets/file-management.png)
 
