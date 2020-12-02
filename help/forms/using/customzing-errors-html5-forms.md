@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# 自訂HTML5表單的錯誤訊息 {#customizing-error-messages-for-html-forms}
+# 自訂HTML5表單{#customizing-error-messages-for-html-forms}的錯誤訊息
 
 在HTML5表單中，立即可用的錯誤訊息和警告具有固定的位置和外觀（字型和顏色），錯誤只會針對選取的欄位顯示，而且只會顯示一個錯誤。
 
@@ -38,8 +38,8 @@ ht-degree: 0%
 
 若要自訂錯誤訊息的位置，請針對每個錯誤和警告欄位新增&lt;div>標籤，將&lt;div>標籤置於左或右，並在&lt;div>標籤上套用css樣式。 如需詳細步驟，請參閱下列程式：
 
-1. 導覽至資 `CustomErrorManager-1.0-SNAPSHOT`料夾並開啟資 `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` 料夾。
-1. 開啟檔 `customErrorManager.js` 案以進行編輯。 檔案 `markError` 中的函式接受以下參數：
+1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`資料夾並開啟`etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`資料夾。
+1. 開啟`customErrorManager.js`檔案進行編輯。 檔案中的`markError`函式接受以下參數：
 
    |  |  |
    |---|---|
@@ -77,7 +77,7 @@ ht-degree: 0%
    ```
 
 1. 儲存並關閉檔案。
-1. 導覽至檔 `CustomErrorManager-1.0-SNAPSHOT` 案夾並建立jcr_root和META-INF檔案夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
+1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`檔案夾，並建立jcr_root和META-INF檔案夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
 1. 使用套件管理器來上傳及安裝套件。
 
 ## 顯示多個欄位的錯誤訊息  {#display-error-messages-for-multiple-fields-nbsp}
@@ -120,9 +120,9 @@ ht-degree: 0%
 
 ## 使用新的描述檔來轉換表格。  {#render-the-form-with-the-new-profile-nbsp}
 
-現成可用的html5表格會使用預設描述檔： https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
+現成可用的html5表格會使用預設描述檔：https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
 
-若要檢視含有自訂錯誤訊息的表單，請轉換含有錯誤描述檔的表單： https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
+若要檢視含有自訂錯誤訊息的表單，請轉換含有錯誤描述檔的表單：https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
 
 >[!NOTE]
 >
