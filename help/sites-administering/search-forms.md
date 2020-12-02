@@ -1,6 +1,6 @@
 ---
-title: 配置搜索表單
-seo-title: 配置搜索表單
+title: 設定搜尋表單
+seo-title: 設定搜尋表單
 description: 瞭解如何設定搜尋表單。
 seo-description: 瞭解如何設定搜尋表單。
 uuid: 0d30921c-0d4d-4ab6-b796-7833cd321e5d
@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: abc27987-960e-48da-9580-1008a2bdc94c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2065'
+ht-degree: 12%
 
 ---
 
 
-# 配置搜索表單{#configuring-search-forms}
+# 設定搜尋表單{#configuring-search-forms}
 
-使用 **Search Forms** ，自訂在各種AEM控制台和／或作者環境面板中可用的搜尋面板中使用的搜尋謂語選擇。 自訂這些面板可讓搜尋功能根據您的特定需求而變得多功能。
+使用&#x200B;**Search Forms**&#x200B;自訂在各種AEM控制台和／或作者環境面板中可用的搜尋面板中使用的搜尋謂語選擇。 自訂這些面板可讓搜尋功能根據您的特定需求而變得多功能。
 
-預 [測語](#predicates-and-their-settings)的範圍是現成可用的。 您可以新增多個謂語，包括（其中包括）全文搜尋的Fulltext謂語、搜尋符合您所指定單一屬性的資產的Property謂語，或搜尋符合您為特定屬性指定之一或多個值的資產的Options謂語。
+[predicate](#predicates-and-their-settings)s的範圍是可用的出廠設定。 您可以新增多個謂語，包括（其中包括）全文搜尋的Fulltext謂語、搜尋符合您所指定單一屬性的資產的Property謂語，或搜尋符合您為特定屬性指定之一或多個值的資產的Options謂語。
 
-您可以 [設定各種控制台和資產瀏覽器](#configuring-your-search-forms) （編輯頁面時）中使用的搜尋表單。 可 [以通過以下方式訪問用於配置這些表單](#configuring-your-search-forms) 的對話框：
+您可以[設定在各種控制台和資產瀏覽器（編輯頁面時）中使用的搜尋表單](#configuring-your-search-forms)。 可通過以下方式訪問用於配置這些表單的[對話框：](#configuring-your-search-forms)
 
 * **工具**
 
@@ -29,7 +32,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
       * **搜尋表單**
 
-首次訪問此控制台時，您可以看到所有配置都有掛鎖符號。 這表示適當的組態是預設（現成可用）組態——且無法刪除。 在您自訂配置後，鎖定將消失——除非您刪 [除自訂配置](#deleting-a-configuration-to-reinstate-the-default)，否則將恢復預設（和掛鎖指示器）。
+首次訪問此控制台時，您可以看到所有配置都有掛鎖符號。 這表示適當的組態是預設（現成可用）組態——且無法刪除。 自訂配置後，鎖定將消失——除非您[刪除自訂配置](#deleting-a-configuration-to-reinstate-the-default)，否則將恢復預設（和掛鎖指示器）。
 
 ![chlimage_1-374](assets/chlimage_1-374.png)
 
@@ -97,9 +100,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    此配置定義了用戶在搜索項目時可用的搜索選項。
 
-## 謂語及其設定 {#predicates-and-their-settings}
+## 謂語及其設定{#predicates-and-their-settings}
 
-### 謂語 {#predicates}
+### 謂語{#predicates}
 
 以下謂語可用，取決於配置：
 
@@ -126,7 +129,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>元件 </td>
-   <td>允許作者搜尋／篩選含有特定元件的頁面。 例如影像收藏館。<br /> </td>
+   <td>允許作者搜尋／篩選含有特定元件的頁面。 例如，影像圖庫。<br /> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -203,7 +206,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>選項 </td>
-   <td><p>這些選項是用戶建立的內容節點。</p> <p>如需詳 <a href="#addinganoptionspredicate">細資訊，請參閱新增選項</a> 「謂詞」。</p> </td>
+   <td><p>這些選項是用戶建立的內容節點。</p> <p>如需詳細資訊，請參閱<a href="#addinganoptionspredicate">新增選項謂詞</a>。</p> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -285,7 +288,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>評等 </td>
-   <td>根據資產的評分搜尋資產。<br /> </td>
+   <td>根據資產評等搜尋資產。<br /> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -296,7 +299,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>相對日期 </td>
-   <td>根據資產建立的相對日期來搜尋資產<br /> </td>
+   <td>根據資產建立的相對日期搜尋資產<br /> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -350,11 +353,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 僅與網站管理員（傳統UI）相關的搜尋謂語位於：
    > `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
    >   * 這些版本已過時，僅適用於向後相容性。
->
->
-此資訊僅供參考，您不得變更 `/libs`。
 
-### 謂詞設定 {#predicate-settings}
+>
+>
+此資訊僅供參考，您不得變更`/libs`。
+
+### 謂詞設定{#predicate-settings}
 
 Dependent on the predicate a selection of settings are available for configuration:
 
@@ -372,9 +376,9 @@ Dependent on the predicate a selection of settings are available for configurati
 
 * **屬性名稱**
 
-   要搜索的屬性。 它使用相對路徑，而萬用字元 `*/*/*` 指定屬性相對於節點的深度(每個星 `jcr:content` 號代表一個節點層級)。
+   要搜索的屬性。 它使用相對路徑，通配符`*/*/*`指定屬性相對於`jcr:content`節點的深度（每個星號代表一個節點級別）。
 
-   如果只想搜索在節點上具有該屬性的資源的第一級子 `x` 節點上 `jcr:content` 使用 `*/jcr:content/x`
+   如果只想在`jcr:content`節點上具有`x`屬性的資源的第一級子節點上搜索，請使用`*/jcr:content/x`
 
 * **屬性深度**
 
@@ -382,40 +386,44 @@ Dependent on the predicate a selection of settings are available for configurati
 
 * **屬性值**
 
-   屬性值是絕對字串或運算式語言；例如， `cq:Page` 或
+   屬性值是絕對字串或運算式語言；例如，`cq:Page`或
 
-   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
+   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`。
 
 * **範圍文字**
 
-   日期範圍謂語中的範圍欄 **位標籤** 。
+   **日期範圍**&#x200B;謂語中範圍欄位的標籤。
 
 * **選項路徑**
 
-   用戶可以使用謂詞設定頁籤中的路徑瀏覽器來選擇路徑。 選取+圖 **示後** ，會將選取範圍新增至有效選項清單(如有需要， **** 則會移除——圖示)。
+   用戶可以使用謂詞設定頁籤中的路徑瀏覽器來選擇路徑。 在選擇&#x200B;**+**&#x200B;圖示後，會將選擇項目新增至有效選項清單（然後視需要移除&#x200B;**-**&#x200B;圖示）。
 
    這些選項是由用戶建立的內容節點，具有以下結構：
 
    `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
-* **Options node path**（選項節點路徑）與 **** Options Path（選項路徑）有效相同，僅此欄位位於公用謂語欄位中，而另一個欄位則特定於資產。
+* **選項節點**
+路徑與 
+**Options Path**, only this is in the common predicate field, the other is specific for assets.
 
-* **單選選**&#x200B;項如果選中，選項將顯示為僅允許單選項的複選框。 如果錯誤選取，則可取消選取核取方塊。
+* **單選**
+項選中後，選項將顯示為僅允許單選項的複選框。如果錯誤選取，則可取消選取核取方塊。
 
-* **Publish和Live copy屬性名稱Sites**&#x200B;特定述詞的publish和live copy核取方塊標籤。
+* **Publish和Live Copy屬性名稱Sites**
+特定述詞的publish和live copy核取方塊標籤。
 
-* &amp;ast;在「設定」標籤的欄 **位標籤上** ，表示欄位為必填，若留空，則會顯示錯誤訊息
+* &amp;ast;在&#x200B;**Settings**&#x200B;標籤中的欄位標籤上，表示欄位為必填，若留空，則會顯示錯誤訊息
 
-## 設定搜尋表單 {#configuring-your-search-forms}
+## 配置搜索表單{#configuring-your-search-forms}
 
-### 建立／開啟自定義配置 {#creating-opening-a-customized-configuration}
+### 建立／開啟自定義配置{#creating-opening-a-customized-configuration}
 
-1. 導覽至「 **工具**」、「 **作業**」、「 **搜尋表格**」。
+1. 導覽至&#x200B;**Tools**、**Operations**、**Search Forms**。
 
 1. 選擇要定製的配置。
-1. 使用「編 **輯** 」表徵圖開啟要更新的配置。
-1. 如果有新的自訂，您可能想要新 [增謂詞欄位，並視需要定義](#add-edit-a-predicate-field-and-define-field-settings) 設定。 如果現有自訂，您可以選取現有欄位並 [更新設定](#add-edit-a-predicate-field-and-define-field-settings)。
-1. 選擇「 **完成** 」以保存配置。
+1. 使用&#x200B;**Edit**&#x200B;表徵圖開啟要更新的配置。
+1. 如果是新的自訂，您可能想要[新增謂詞欄位，並視需要定義設定](#add-edit-a-predicate-field-and-define-field-settings)。 如果現有的自訂功能，您可以選取現有欄位，並[更新設定](#add-edit-a-predicate-field-and-define-field-settings)。
+1. 選擇&#x200B;**Done**&#x200B;保存配置。
 
    >[!NOTE]
    >
@@ -425,12 +433,12 @@ Dependent on the predicate a selection of settings are available for configurati
    >* `/apps/commerce/gui/content/facets/<option>`
 
 
-### 添加／編輯謂詞欄位和定義欄位設定 {#add-edit-a-predicate-field-and-define-field-settings}
+### 添加／編輯謂詞欄位和定義欄位設定{#add-edit-a-predicate-field-and-define-field-settings}
 
 您可以新增或編輯欄位，並定義／更新其設定：
 
-1. [開啟自訂的設定](#creating-opening-a-customized-configuration) ，以進行更新。
-1. 如果要添加新欄位，請開啟「選 **擇謂詞** 」頁籤，並將所需的謂詞拖動到所需位置。 例如，日 **期範圍謂語**:
+1. [開啟自訂的](#creating-opening-a-customized-configuration) 設定以進行更新。
+1. 如果要添加新欄位，請開啟&#x200B;**選擇謂詞**&#x200B;頁籤，並將所需的謂詞拖動到所需位置。 例如，**日期範圍謂詞**:
 
    ![chlimage_1-375](assets/chlimage_1-375.png)
 
@@ -438,18 +446,18 @@ Dependent on the predicate a selection of settings are available for configurati
 
    * 您正在添加新欄位：
 
-      添加謂詞後，「 **設定** 」頁籤將開啟並顯示可定義的屬性。
+      添加謂語後，**Settings**&#x200B;頁籤將開啟並顯示可定義的屬性。
 
    * 要更新現有謂詞：
 
-      選擇謂詞欄位（在右側），然後開啟「設 **置** 」頁籤。
-   例如，「日期範圍謂詞」 **的設定**:
+      選擇謂詞欄位（在右側），然後開啟&#x200B;**Settings**&#x200B;頁籤。
+   例如，**日期範圍謂詞**&#x200B;的設定：
 
    ![chlimage_1-376](assets/chlimage_1-376.png)
 
-1. 視需要進行變更，然後使用「完成」 **確認**。
+1. 視需要進行變更，並使用&#x200B;**Done**&#x200B;確認。
 
-### 預覽搜尋設定 {#previewing-the-search-configuration}
+### 預覽搜索配置{#previewing-the-search-configuration}
 
 1. 選取「預覽」圖示：
 
@@ -459,20 +467,20 @@ Dependent on the predicate a selection of settings are available for configurati
 
    ![chlimage_1-377](assets/chlimage_1-377.png)
 
-1. **關閉** 「預覽」以返回並完成配置。
+1. **關** 閉預覽以返回並完成配置。
 
-### 刪除謂詞欄位 {#deleting-a-predicate-field}
+### 刪除謂詞欄位{#deleting-a-predicate-field}
 
-1. [開啟自訂的設定](#creating-opening-a-customized-configuration) ，以進行更新。
-1. 選擇謂詞欄位（在右側），開啟「 **Settings** （設定）」頁籤，然後選擇「 **Delete** （刪除）」表徵圖（左下）。
+1. [開啟自訂的](#creating-opening-a-customized-configuration) 設定以進行更新。
+1. 選擇謂詞欄位（在右側），開啟&#x200B;**Settings**&#x200B;頁籤，然後選擇&#x200B;**Delete**&#x200B;表徵圖（左下）。
 
    ![](do-not-localize/chlimage_1-32.png)
 
 1. 對話方塊會要求確認刪除動作。
 
-1. 使用「完成」確認此變更和任何其 **他變更**。
+1. 使用&#x200B;**Done**&#x200B;確認此變更和任何其他變更。
 
-### 刪除配置（以恢復預設值） {#deleting-a-configuration-to-reinstate-the-default}
+### 刪除配置（恢復預設值）{#deleting-a-configuration-to-reinstate-the-default}
 
 在您自訂設定後，這將覆寫預設值。 您可以刪除自訂的設定，重新設定預設的設定。
 
@@ -482,13 +490,13 @@ Dependent on the predicate a selection of settings are available for configurati
 
 從控制台刪除自定義配置：
 
-1. 選擇所需的配置(例如，頁 **面編輯器（段落搜尋）**)，然後在工具列中選 **** 擇刪除圖示：
+1. 選擇所需的配置(例如，**頁面編輯器（段落搜索）**)，然後選擇工具欄中的&#x200B;**刪除**&#x200B;表徵圖：
 
    ![chlimage_1-378](assets/chlimage_1-378.png)
 
 1. 將刪除自定義配置並恢復預設配置（這由控制台中重新出現掛鎖符號表示）。
 
-### 添加選項謂語 {#adding-options-predicates}
+### 添加選項謂語{#adding-options-predicates}
 
 選項謂語（選項、選項屬性）可讓您設定要搜尋的項目。 通常用來搜尋頁面下方的內容；例如，頁面節點上的屬性。
 
@@ -502,26 +510,27 @@ Dependent on the predicate a selection of settings are available for configurati
 
    * `jcr:title` -要在搜索邊欄中顯示的欄位標籤
    * `value` -要搜索的屬性值
+
    ![chlimage_1-379](assets/chlimage_1-379.png)
 
    >[!NOTE]
    >
-   >您 ***不得*** 更改路徑中的任 `/libs` 何內容。
+   >您&#x200B;***必須***&#x200B;不要變更`/libs`路徑中的任何項目。
    >
-   >這是因為下次升級 `/libs` 實例時會覆寫的內容（套用修補程式或功能套件時可能會覆寫）。
+   >這是因為下次升級實例時會覆寫`/libs`的內容（套用修補程式或功能套件時，很可能會覆寫）。
    >
    >配置和其他更改的建議方法為：
    >
-   >1. 重新建立所需項目，如其中 `/libs`所存在 `/apps`。 在本例中，來源為：
+   >1. 在`/libs`中，在`/apps`下重新建立所需項目。 在本例中，來源為：
    >1. `/libs/cq/gui/content/common/options/predicates`
-   >1. 在 `/apps.`
+   >1. 在`/apps.`中進行任何更改
 
 
-1. 開啟「 **搜尋表單** 」主控台，並選取您要更新的組態。 例如，「網 **站管理搜尋邊欄」**。
+1. 開啟&#x200B;**搜尋表單**&#x200B;主控台，並選取您要更新的組態。 例如，**網站管理搜尋邊欄**。
 
-   然後按一下／點選「編 **輯搜尋表單** 」圖示。
+   然後按一下／點選&#x200B;**編輯搜尋表單**&#x200B;圖示。
 
-1. 視配置而定，將「選 **項** 」 **或「選項屬性** 」添加到配置。
+1. 視配置而定，將&#x200B;**選項**&#x200B;或&#x200B;**選項屬性**&#x200B;添加到配置中。
 1. 更新欄位，尤其是：
 
    * **屬性名稱**
@@ -537,8 +546,8 @@ Dependent on the predicate a selection of settings are available for configurati
       `/apps/cq/gui/content/common/options/predicates/templatetype`
    ![chlimage_1-380](assets/chlimage_1-380.png)
 
-1. 選擇 **完成** ，保存配置。
-1. 導覽至適當的主控台(在此範例中 **為Sites**)，並開啟 **Search邊欄** 。 新定義的搜尋表單以及各種選項將會顯示。 選擇所需選項以查看搜索結果：
+1. 選擇&#x200B;**Done**&#x200B;以保存配置。
+1. 導覽至適當的主控台（在此範例中為&#x200B;**Sites**），並開啟&#x200B;**Search**&#x200B;邊欄。 新定義的搜尋表單以及各種選項將會顯示。 選擇所需選項以查看搜索結果：
 
    ![chlimage_1-381](assets/chlimage_1-381.png)
 
@@ -554,15 +563,15 @@ Dependent on the predicate a selection of settings are available for configurati
   </tr>
   <tr>
    <td>編輯 </td>
-   <td>讀取、寫入節點 <code>/apps </code>權限。</td>
+   <td>對<code>/apps </code>節點的讀取、寫入權限。</td>
   </tr>
   <tr>
    <td>刪除</td>
-   <td>節點上的讀取、寫入、刪除權 <code>/apps</code> 限</td>
+   <td><code>/apps</code>節點上的讀、寫、刪除權限</td>
   </tr>
   <tr>
    <td>預覽</td>
-   <td>讀取、寫入、刪除節點上的權 <code>/var/dam/content</code> 限。<br /> 讀取、寫入節點的 <code>/apps</code> 權限。</td>
+   <td>對<code>/var/dam/content</code>節點執行讀取、寫入、刪除權限。<br /> 讀取、寫入節點 <code>/apps</code> 權限。</td>
   </tr>
  </tbody>
 </table>
