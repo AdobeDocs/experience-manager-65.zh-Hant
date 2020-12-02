@@ -70,7 +70,7 @@ ht-degree: 2%
     <td><a href="/help/assets/interactive-images.md#integrating-an-interactive-image-with-your-website" target="_blank">將互動式影像與您的網站整合</a>。<br /> </td>
     </tr>
     <tr>
-    <td>Interactive video<br /> </td>
+    <td>互動式視訊<br /> </td>
     <td><a href="/help/assets/interactive-videos.md#integrating-an-interactive-video-with-your-website" target="_blank">將互動式視訊與您的網站整合</a>。<br /> </td>
     </tr>
     <tr>
@@ -82,13 +82,14 @@ ht-degree: 2%
 
 1. 您使用的檢視器現在需要瞭解如何使用Quickview。
 
-   若要這麼做，檢視器會使用名為的處理常式 `QuickViewActive`。
+   若要這麼做，檢視器會使用名為`QuickViewActive`的處理常式。
 
-   **範例**&#x200B;假設您在網頁上使用下列互動式影像的範例內嵌程式碼：
+   **范**
+例假設您在網頁上使用下列互動式影像的範例內嵌程式碼：
 
    ![chlimage_1-291](assets/chlimage_1-291.png)
 
-   處理常式會使用下列方式載入檢視器 `setHandlers`:
+   處理常式會使用`setHandlers`載入檢視器：
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
@@ -105,16 +106,17 @@ ht-degree: 2%
    })
    ```
 
-   如需進一步了 `setHandlers()` 解方法，請參閱：
+   如需`setHandlers()`方法的詳細資訊，請參閱：
 
-   * 互動式影像檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
-   * 互動式視訊檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
+   * 互動式影像檢視器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
+   * 互動式視訊檢視器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. 您現在需要設定處理 `quickViewActivate` 常式。
+1. 您現在需要設定`quickViewActivate`處理常式。
 
-   處理 `quickViewActivate` 常式會控制檢視器中的Quickviews。 處理常式包含變數清單和函式呼叫，以便與Quickview搭配使用。 內嵌代碼提供Quickview中SKU變數集的對應，以及範例函式 `loadQuickView` 呼叫。
+   `quickViewActivate`處理常式控制檢視器中的Quickviews。 處理常式包含變數清單和函式呼叫，以便與Quickview搭配使用。 內嵌代碼提供Quickview中設定的SKU變數對應，以及範例`loadQuickView`函式呼叫。
 
-   **變數對**&#x200B;應Map變數，以用於您的網頁，並與Quickview中包含的SKU值和一般變數對應：
+   **變**
+數mappingMap變數，用於您的網頁中，以至Quickview中包含的SKU值和一般變數：
 
    `var *variable1*= inData.*quickviewVariable*`
 
@@ -129,25 +131,26 @@ ht-degree: 2%
     var <i>variable3</i>= inData.<i>quickviewVariable3</i>
    ```
 
-   **函式調**&#x200B;用處理常式也需要函式呼叫，讓Quickview運作。 您的主機頁面會假設該函式可存取。 內嵌代碼提供範例函式呼叫：
+   **函式**
+呼叫處理常式也需要函式呼叫，讓Quickview運作。您的主機頁面會假設該函式可存取。 內嵌代碼提供範例函式呼叫：
 
    `loadQuickView(sku)`
 
-   示例函式調用假定該函式存 `loadQuickView()` 在且可訪問。
+   示例函式調用假定函式`loadQuickView()`存在且可訪問。
 
-   如需進一步了 `quickViewActivate` 解方法，請參閱：
+   如需`quickViewActivate`方法的詳細資訊，請參閱：
 
-   * 互動式影像檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
-   * 互動式視訊檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
-   * 互動式視訊檢視器中的互動式資料支援： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
+   * 互動式影像檢視器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
+   * 互動式視訊檢視器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
+   * 互動式視訊檢視器中的互動式資料支援：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
 
 1. 執行下列動作：
 
    * 取消對embed代碼的setHandlers部分的注釋。
    * 映射Quickview中包含的任何其他變數。
 
-      * 如果您要 `loadQuickView(sku,*var1*,*var2*)` 新增其他變數，請更新呼叫。
-   * 在檢視器 `loadQuickView` 外部的頁面上建立簡單()函式。
+      * 如果您要新增其他變數，請更新`loadQuickView(sku,*var1*,*var2*)`呼叫。
+   * 在檢視器外部的頁面上建立簡單的`loadQuickView`()函式。
 
       例如，下列程式將sku值寫入瀏覽器主控台：
 
@@ -163,8 +166,8 @@ ht-degree: 2%
 
 
 
-1. 您現在可以使用函式來叫用Quickview中的簡單快顯視窗。 下列範例會使用快 `DIV` 顯視窗。
-1. 以下列方式設 `DIV` 定快顯視窗的樣式。 視需要新增您自己的其他樣式。
+1. 您現在可以使用函式來叫用Quickview中的簡單快顯視窗。 下列範例會針對快顯視窗使用`DIV`。
+1. 按以下方式設定彈出式菜單`DIV`的樣式。 視需要新增您自己的其他樣式。
 
    ```xml
    <style type="text/css">
@@ -176,9 +179,9 @@ ht-degree: 2%
    </style>
    ```
 
-1. 將快顯功能 `DIV` 放在HTML頁面的正文中。
+1. 將快顯視窗`DIV`置於HTML頁面的正文中。
 
-   其中一個元素會以ID設定，當使用者叫用Quickview時，ID會以sku值更新。 此範例也包含一個簡單按鈕，可在快顯視窗顯示後再次隱藏。
+   其中一個元素會以ID設定，當使用者叫用Quickview時，ID會以sku值更新。 此範例也包含一個簡單按鈕，可在快顯視窗顯示後再次隱藏快顯視窗。
 
    ```xml
    <div id="quickview_div" >
@@ -189,7 +192,7 @@ ht-degree: 2%
    </div>
    ```
 
-1. 新增函式以更新快顯視窗中的sku值； 取代步驟5中建立的簡單函式，讓快顯視覺化。 與下列項目搭配：
+1. 新增函式以更新快顯視窗中的sku值；取代步驟5中建立的簡單函式，讓快顯視覺化。 與下列項目搭配：
 
    ```xml
    <script type="text/javascript">
@@ -200,23 +203,23 @@ ht-degree: 2%
    </script>
    ```
 
-1. 將測試HTML頁面上傳至您的網站伺服器並開啟。 當使用者叫用Quickview時，檢 `DIV` 視器會顯示快顯視窗。
+1. 將測試HTML頁面上傳至您的網站伺服器並開啟。 當使用者叫用Quickview時，檢視器會顯示快顯視窗`DIV`。
 1. **如何以全螢幕模式顯示自訂快顯視窗**
 
    有些檢視器（例如互動式視訊檢視器）支援全螢幕模式顯示。 不過，如前述步驟所述，使用快顯功能會使它在全螢幕模式下顯示在檢視器後方。
 
-   若要在標準和全螢幕模式中都顯示快顯視窗，請將快顯視窗附加至檢視器容器。 要完成此操作，可使用第二個處理程式方法 `initComplete`。
+   若要在標準和全螢幕模式中都顯示快顯視窗，請將快顯視窗附加至檢視器容器。 要完成此操作，可使用第二個處理程式方法`initComplete`。
 
-   在檢 `initComplete` 視器初始化後，就會叫用處理器。
+   在初始化檢視器後，會呼叫`initComplete`處理器。
 
    ```xml
    "initComplete":function() { code block }
    ```
 
-   如需進一步了 `init()` 解方法，請參閱：
+   如需`init()`方法的詳細資訊，請參閱：
 
-   * 互動式影像檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
-   * 互動式視訊檢視器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
+   * 互動式影像檢視器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
+   * 互動式視訊檢視器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
 
 1. 若要將先前步驟中描述的快顯功能附加至檢視器，請使用下列程式碼：
 
@@ -260,9 +263,10 @@ ht-degree: 2%
 
    `*viewerInstance.*init()`
 
-   **範例**&#x200B;此範例使用互動式影像檢視器。
+   **范**
+例此範例使用互動式影像檢視器。
 
    `s7interactiveimageviewer.init()`
 
-   將檢視器內嵌至主機頁面後，請務必先建立檢視器例項，然後載入處理常式，再使用呼叫檢視器 `init()`。
+   將檢視器內嵌至主機頁面後，請務必先建立檢視器例項，然後再載入處理常式，再使用`init()`呼叫檢視器。
 
