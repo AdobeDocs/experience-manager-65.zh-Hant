@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 translation-type: tm+mt
 source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+workflow-type: tm+mt
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +29,14 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
    * 立即配置：當未建立配置時，將顯示此連結。
    * 顯示配置：建立一個或多個配置後，將顯示此連結。
+
    ![chlimage_1-4](assets/chlimage_1-4a.png)
 
-1. 如果按一下「Show Configurations（顯示配置）」 ，請按一下「Available Configurations（可用配置）」旁邊的+連結。
-1. 鍵入配置的標題。 （可選）鍵入用於將配置儲存在儲存庫中的節點的名稱。 按一下「建立」。
+1. 如果按一下了「Show Configurations（顯示配置）」 ，請按一下「Available Configurations（可用配置）」旁邊的+連結。
+1. 鍵入配置的標題。 （可選）鍵入用於將配置儲存在儲存庫中的節點的名稱。 按一下建立。
 1. 在「BrightEdge Content Optimizer Configuration」（BrightEdge內容優化程式配置）對話框中，鍵入BrightEdge帳戶的用戶名和密碼，然後按一下「確定」。
 
-## 編輯BrightEdge組態 {#editing-a-brightedge-configuration}
+## 編輯BrightEdge配置{#editing-a-brightedge-configuration}
 
 視需要修改BrightEdge組態的使用者名稱和密碼。 這些修改會影響使用此設定的所有頁面。
 
@@ -44,7 +48,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 1. 按一下要編輯的配置的名稱。
 1. 按一下「編輯」、修改屬性值，然後按一下「確定」。
 
-## 將頁面與BrightEdge組態關聯 {#associating-pages-with-a-brightedge-configuration}
+## 將頁面與BrightEdge配置{#associating-pages-with-a-brightedge-configuration}關聯
 
 將頁面與BrightEdge組態關聯，以傳送頁面資料至BrightEdge服務進行分析。 將頁面與配置關聯時，子頁面繼承關聯。 通常，您會將網站的首頁建立關聯，讓所有頁面的資料都傳送至BrightEdge。
 
@@ -56,7 +60,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
    ![chlimage_1-6](assets/chlimage_1-6a.png)
 
-## 啟動BrightEdge配置 {#activating-a-brightedge-configuration}
+## 激活BrightEdge配置{#activating-a-brightedge-configuration}
 
 啟動BrightEdge組態，將它複製至發佈執行個體，並讓發佈頁面與BrightEdge服務互動。
 
