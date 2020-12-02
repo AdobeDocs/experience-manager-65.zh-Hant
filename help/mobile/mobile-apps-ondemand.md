@@ -1,8 +1,8 @@
 ---
 title: Mobile On-Demand
-seo-title: Mobile On-Demand
-description: 請依照本頁來瞭解AEM Mobile On-Demand services作者的角色和責任。
-seo-description: 請依照本頁來瞭解AEM Mobile On-Demand services作者的角色和責任。
+seo-title: 行動隨選
+description: 請依照本頁來瞭解AEM Mobile On-Demand Services作者的角色和責任。
+seo-description: 請依照本頁來瞭解AEM Mobile On-Demand Services作者的角色和責任。
 uuid: dd0184d8-1220-4f6a-96b2-acdb31caae17
 contentOwner: msm-service
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 2ae7ea8d-fc58-4647-bc83-915d9f4b7dd8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 4%
 
 ---
 
@@ -23,28 +26,28 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->如果您不是使用Adobe Experience Manager(AEM)做為內容管理來源，請參閱 [AEM Mobile隨選服務說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
+>如果您不是使用Adobe Experience Manager(AEM)做為內容管理來源，請參閱[AEM Mobile隨選服務說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
 
 >[!NOTE]
 >
 >**先決條件：**
 >
->在使用AEM Mobile On-Demand services並依照本快速入門手冊中的步驟進行之前，使用者應先熟悉 [AEM](/help/sites-deploying/deploy.md)。
+>在使用AEM Mobile隨選服務並遵循本快速入門手冊中的步驟之前，使用者應先熟悉[AEM](/help/sites-deploying/deploy.md)。
 
-## AEM Mobile作者 {#aem-mobile-author}
+## AEM Mobile作者{#aem-mobile-author}
 
-***AEM Author *(或*Marketer *)**（使用自訂開發或立即可用的範本和元件）來新增和編輯頁面、拖放元件，以及從DAM新增各種類型的媒體，包括影像、視訊和文字片段（內容片段）。 然後**AEM作者會使用AEM的內建內容編輯器，在應用程式中建立豐富且相關的體驗，包括與Adobe Marketing cloud的其他整合。
+***AEM Author*（或&#x200B;*Marketer*）**使用自訂開發或現成可用的範本和元件來新增和編輯頁面、拖放元件以及新增DAM中所有類型的媒體，包括影像、視訊和文字片段（內容片段）。 然後，*AEM作者*會使用AEM的內建內容編輯器，在應用程式中建立豐富且相關的體驗，包括與Adobe Marketing Cloud的其他整合。
 
-AEM作者在使用AEM Mobile On Demand services建立應用程式時，負責下列工作。
+AEM作者在使用AEM Mobile On Demand Services建立應用程式時，負責下列工作。
 
-**製作AEM Mobile On-Demand Services應用程式的AEM內容** ，需執行下列動作：
+**編寫AEM Mobile隨選服務應用程式的AEM內容** 需執行下列動作：
 
 * [AEM Mobile應用程式儀表板](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [應用程式建立和配置操作](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [雲端設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [管理內容](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-若要瞭解 **Content Services**，請參 [閱Content Services Overview](/help/mobile/develop-content-as-a-service.md) （內容服務概觀）。
+若要瞭解&#x200B;**Content Services**，請參閱[Content Services概述](/help/mobile/develop-content-as-a-service.md)以開始使用。
 
 >[!NOTE]
 >
@@ -52,6 +55,7 @@ AEM作者在使用AEM Mobile On Demand services建立應用程式時，負責下
 >
 >* [範本](/help/sites-developing/templates.md)
 >* [元件](/help/sites-developing/components.md)
+
 >
 
 
