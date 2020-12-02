@@ -1,6 +1,6 @@
 ---
-title: 使用標籤
-seo-title: 使用標籤
+title: 使用標記
+seo-title: 使用標記
 description: 標籤是快速且簡單的網站內容分類方法。 標籤可視為可附加至頁面、資產或其他內容的關鍵字或標籤，以便搜尋以尋找該內容及相關內容。
 seo-description: 標籤是快速且簡單的網站內容分類方法。 標籤可視為可附加至頁面、資產或其他內容的關鍵字或標籤，以便搜尋以尋找該內容及相關內容。
 uuid: 9799131f-4043-4022-a401-af8be93a1bf6
@@ -11,18 +11,21 @@ topic-tags: site-features
 discoiquuid: c117b9d1-e4ae-403f-8619-6e48d424a761
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 1%
 
 ---
 
 
-# 使用標籤{#using-tags}
+# 使用標記{#using-tags}
 
 標籤是快速且簡單的網站內容分類方法。 標籤可視為可附加至頁面、資產或其他內容的關鍵字或標籤，以便搜尋以尋找該內容及相關內容。
 
-* 如需 [有關建立和管理標籤](/help/sites-administering/tags.md) ，以及已套用內容標籤的資訊，請參閱管理標籤。
-* 如需 [標籤架構的相關資訊](/help/sites-developing/tags.md) ，請參閱為開發人員標籤，以及在自訂應用程式中包含和擴充標籤。
+* 如需建立和管理標籤以及已套用內容標籤的相關資訊，請參閱[管理標籤](/help/sites-administering/tags.md)。
+* 如需標籤框架以及在自訂應用程式中包含和擴充標籤的相關資訊，請參閱[為開發人員標籤](/help/sites-developing/tags.md)。
 
-## 使用標籤的十個理由 {#ten-reasons-to-use-tagging}
+## 使用標籤{#ten-reasons-to-use-tagging}的十個理由
 
 1. 組織內容：標籤可讓作者更輕鬆地組織內容，因為他們可以事半功倍地快速組織內容。
 1. 組織標籤：當標籤組織內容時，階層式分類／命名空間會組織標籤。
@@ -37,15 +40,15 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 當設計網站的內容結構和資產的中繼資料架構時，請考慮提供的輕量型和可存取的方法標籤。
 
-## 套用標籤 {#applying-tags}
+## 套用標籤{#applying-tags}
 
-在作者環境中，作者可以存取頁面屬性並在「標籤／關鍵字」欄位中輸入一或多個標籤，以套 **用標籤** 。
+在作者環境中，作者可以通過訪問頁面屬性並在&#x200B;**Tags/Keywords**&#x200B;欄位中輸入一個或多個標籤來應用標籤。
 
-若要套 [用預先定義的標籤](/help/sites-administering/tags.md)，請在「頁面屬性 **」視窗中，使用欄**`Tags/Keywords` 位下拉式清單，從頁面允許的標籤清單中選取。 「標 **準標籤** 」標籤是預設的命名空間，這表示分類 `namespace-string:` 沒有前置詞。
+要應用[預定義的標籤](/help/sites-administering/tags.md)，請在&#x200B;**「頁面屬性**」窗口中使用`Tags/Keywords`欄位下拉清單從頁面允許的標籤清單中進行選擇。 **標準標籤**&#x200B;標籤是預設的命名空間，這表示分類沒有預先固定的`namespace-string:`。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
-### 發佈標籤 {#publishing-tags}
+### 發佈標籤{#publishing-tags}
 
 與頁面一樣，您可以對標籤和名稱空間執行下列動作：
 
@@ -63,19 +66,19 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 * 停用選取的標籤。
 
-## 標籤雲端 {#tag-clouds}
+## 標籤雲{#tag-clouds}
 
 標籤雲端會顯示一組標籤，可用於目前頁面、整個網站或最常存取的標籤。 標籤雲端是反白顯示使用者感興趣（已經）的問題的方式。 用來顯示標籤的文字大小視其使用而定。
 
-Tag Cloud [](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud) component(General component group)是用來將Tag cloud新增至頁面的。
+[Tag Cloud](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud)元件（一般元件群組）用來新增標籤雲至頁面。
 
-## 在標籤上搜尋 {#searching-on-tags}
+## 在標籤上搜索{#searching-on-tags}
 
 您可以在作者和發佈環境中搜尋標籤。
 
-### 使用搜尋元件 {#using-search-component}
+### 使用搜索元件{#using-search-component}
 
-將 [Search元件新增至頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) ，可提供包含標籤的搜尋功能，並可用於作者和發佈環境。
+將[Search元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search)新增至頁面可提供搜尋功能，其中包含標籤，並可用於作者和發佈環境。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
