@@ -21,21 +21,21 @@ ht-degree: 0%
 
 # 在HTML5表單中建立自訂外觀{#create-custom-appearances-in-html-forms}
 
-您可以將自訂Widget插入Mobile Forms。 您可以擴充現有的jQuery Widget，或使用外觀架構開發您自己的自訂Widget。 XFA引擎使用各種Widget，如需詳細資 [訊，請參閱最適化和HTML5表單的](/help/forms/using/introduction-widgets.md) Appearance架構。
+您可以將自訂Widget插入Mobile Forms。 您可以擴充現有的jQuery Widget，或使用外觀架構開發您自己的自訂Widget。 XFA引擎使用各種Widget，如需詳細資訊，請參閱[最適化和HTML5表單的外觀架構](/help/forms/using/introduction-widgets.md)。
 
 ![預設和自訂介面工具集的範例](assets/custom-widgets.jpg)
 
 預設和自訂介面工具集的範例
 
-## 將自訂Widget與HTML5表單整合 {#integrating-custom-widgets-with-html-forms}
+## 將自訂Widget與HTML5表單{#integrating-custom-widgets-with-html-forms}整合
 
 ### 建立描述檔  {#create-a-profile-nbsp}
 
-您可以建立描述檔或選擇現有的描述檔以新增自訂介面工具集。 如需建立描述檔的詳細資訊，請參 [閱建立自訂描述檔](/help/forms/using/custom-profile.md)。
+您可以建立描述檔或選擇現有的描述檔以新增自訂介面工具集。 有關建立配置檔案的詳細資訊，請參閱[建立自定義配置檔案](/help/forms/using/custom-profile.md)。
 
-### 建立介面工具集 {#create-a-widget}
+### 建立介面工具集{#create-a-widget}
 
-HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 實作是jQuery Widget abstractWidget ** ，可擴充以編寫新Widget。 只有延伸／覆寫下列功能，才能讓新介面工具集運作。
+HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 實作是jQuery Widget *abstractWidget*，可擴充以編寫新Widget。 只有延伸／覆寫下列功能，才能讓新介面工具集運作。
 
 <table>
  <tbody>
@@ -49,7 +49,7 @@ HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 �
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>傳回將HTML事件轉換為XFA事件的地圖。 <br /> {<br /> blur:XFA_EXIT_EVENT,<br /><br /> }此示例顯示模糊是HTML事件，XFA_EXIT_EVENT是相應的XFA事件。 </td>
+   <td>傳回將HTML事件轉換為XFA事件的地圖。 <br /> {<br /> blur:XFA_EXIT_EVENT,<br /> }此<br /> 範例顯示模糊是HTML事件，XFA_EXIT_EVENT是對應的XFA事件。 </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -70,7 +70,7 @@ HTML5表格提供Widget架構的實作，可加以擴充以建立新Widget。 �
  </tbody>
 </table>
 
-若要建立您自己的介面工具集，請在上述建立的描述檔中，包含JavaScript檔案的參考，其中包含覆寫的函式和新增的函式。 例如，sliderNumericFieldWidget *是數值欄位的介面工具集* 。 若要在頁首區段中使用描述檔中的介面工具集，請加入下列行：
+若要建立您自己的介面工具集，請在上述建立的描述檔中，包含JavaScript檔案的參考，其中包含覆寫的函式和新增的函式。 例如，*sliderNumericFieldWidget*&#x200B;是數值欄位的介面工具集。 若要在頁首區段中使用描述檔中的介面工具集，請加入下列行：
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
@@ -78,7 +78,7 @@ window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 
 ### 使用XFA指令碼引擎註冊自訂Widget  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
-當自訂介面工具集程式碼準備就緒時，請使用 `registerConfig`API for [Form Bridge，向指令碼引擎註冊介面工具集](/help/forms/using/form-bridge-apis.md)。 它以widgetConfigObject為輸入。
+當自訂介面工具集程式碼準備就緒時，請使用`registerConfig`[表單Bridge](/help/forms/using/form-bridge-apis.md)的API，向指令碼引擎註冊介面工具集。 它以widgetConfigObject為輸入。
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig",
