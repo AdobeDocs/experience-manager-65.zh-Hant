@@ -12,15 +12,18 @@ discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 35%
 
 ---
 
 
 # 匯出為 CSV{#export-to-csv}
 
-**「建立CSV報表** 」可讓您將有關頁面的資訊匯出至本機系統上的CSV檔案。
+**建立CSV** 可讓您將頁面相關資訊匯出至本機系統上的CSV檔案。
 
-* 下載的檔案稱為 `export.csv`
+* 下載的檔案稱為`export.csv`
 * 內容取決於您選擇的屬性。
 * 可定義路徑和導出深度。
 
@@ -41,7 +44,7 @@ source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
       * 已翻譯
    * 分析
       * 頁面檢視
-      * 獨特訪客
+      * 不重複訪客
       * 頁面逗留時間
 * 深度
    * 父路徑
@@ -49,11 +52,11 @@ source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
    * 其他層級的子項
    * 層級
 
-產生的 `export.csv` 檔案可在Excel或任何其他相容應用程式中開啟。
+產生的`export.csv`檔案可在Excel或任何其他相容應用程式中開啟。
 
 ![etc-01](assets/etc-01.png)
 
-瀏覽Sites **控制台時** （在「清單」檢視中），可使用「建立 **CSV報表** 」選項：它是「建立」( **Create** )下拉菜單的選項：
+瀏覽&#x200B;**Sites**&#x200B;控制台時（在「清單」視圖中），可使用建立&#x200B;**CSV報告**&#x200B;選項：它是&#x200B;**建立**&#x200B;下拉式功能表的選項：
 
 ![etc-02](assets/etc-02.png)
 
