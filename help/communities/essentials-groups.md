@@ -18,15 +18,15 @@ ht-degree: 1%
 ---
 
 
-# Community Group Essentials  {#community-group-essentials}
+# 社區組基本工具{#community-group-essentials}
 
 社群群組功能是讓來自發佈和作者環境的授權使用者在社群網站中動態建立子社群的能力。
 
-自Communities功 [能套件1起](deploy-communities.md#latestfeaturepack)，群組可能會巢狀內嵌在其他群組中
+從Communities [功能套件1](deploy-communities.md#latestfeaturepack)開始，群組可能會巢狀內嵌在其他群組中
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
-### 社區組成員清單 {#community-groups-member-list}
+### 社區組成員清單{#community-groups-member-list}
 
 <table>
  <tbody>
@@ -48,7 +48,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>請參閱 <a href="creating-groups.md">社群群組</a></td>
+   <td>請參閱<a href="creating-groups.md">社群群組</a></td>
   </tr>
  </tbody>
 </table>
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [社群群組API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
@@ -86,17 +86,17 @@ ht-degree: 1%
 
 * [伺服器端自訂](server-customize.md)
 
-### 群組函式 {#groups-function}
+### 群組函式{#groups-function}
 
-包含「群組」功能的社群網 [站結構](functions.md#groups-function) ，將支援從發佈和作者 `community groups` 環境建立新的網站。 所建立的社群群組將包含 `community groups member list` 一個元件，列出群組成員。
+包含[Groups函式](functions.md#groups-function)的社群網站結構將支援從發佈和作者環境建立新`community groups`。 所建立的社區組將包含`community groups member list`元件，該元件將列出該組的成員。
 
-當功能被 [添加到社區站點模板或嵌套在社區組模板中時，可為「組」功能配置一個或多](tools-groups.md)個社區組模板 [](sites.md) ，該模板提供社區組頁的設計。
+當將該函式添加到[社區站點模板](sites.md)或嵌套在社區組模板中時，可為「組」功能配置一個或多個提供社區組頁設計的[社區組模板](tools-groups.md)。
 
-加入多個社群群組範本後，在為社群網站建立新社群群組時，會選擇向授權使用者呈現設計，如作者的社群群 [組](creating-groups.md) 。
+加入多個社群群組範本後，在為社群網站建立新社群群組時，會向授權使用者呈現多種設計選擇，如作者[社群群組](creating-groups.md)一節所示。
 
-### 巢狀群組 {#nested-groups}
+### 巢狀群組{#nested-groups}
 
-自Communities [FP1起](deploy-communities.md#latestfeaturepack)，群組功能可能會包含在群組範本中，因此允許巢狀群組（子社群）。
+從社群[FP1](deploy-communities.md#latestfeaturepack)開始，群組功能可能會包含在群組範本中，因此允許巢狀群組（子社群）。
 
 當社群網站或群組範本包含「群組」功能時，可以：
 
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 在作者環境中建立群組時，必須先發佈社群網站，然後發佈群組。 發佈社群站點將發佈組的頁面，而不建立ACL所設定的子社區成員組。 因此，在明確發佈組之前，可以看到受限（秘密）組。
 
-## 連結與相關資訊 {#links-and-related-information}
+## 連結和相關資訊{#links-and-related-information}
 
 * [管理使用者和使用者群組](users.md)
 * [社群群組主控台](groups.md)
