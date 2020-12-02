@@ -26,21 +26,21 @@ ht-degree: 0%
 
 AEM Mobile應用程式是以定義頁面結構和屬性的藍圖為基礎。 您可以設定下列應用程式屬性：
 
-* **標題：** 應用程式標題。
-* **目標路徑：** 儲存應用程式的儲存庫中的位置。 保留預設值，以根據應用程式名稱建立路徑。
+* **標題：應** 用程式標題。
+* **目標路徑：** 儲存應用程式的儲存庫中的位置。保留預設值，以根據應用程式名稱建立路徑。
 
-* **名稱：** 預設值是Title屬性的值，並刪除空格字元。 AEM中使用名稱來引用應用程式，例如代表應用程式的儲存庫節點。
+* **名稱：** 預設值是Title屬性的值，並移除空格字元。AEM中使用名稱來引用應用程式，例如代表應用程式的儲存庫節點。
 * **說明：** 應用程式的說明。
-* **伺服器URL:** 提供Over-the-Air(OTA)內容更新至應用程式的URL。 預設值是用來建立應用程式（取自外部化器服務）之例項的發佈伺服器URL。 請注意，此為發佈伺服器例項，而非需要驗證的作者。
+* **伺服器URL:** 提供應用程式Over-the-Air(OTA)內容更新的URL。預設值是用來建立應用程式（取自外部化器服務）之例項的發佈伺服器URL。 請注意，此為發佈伺服器例項，而非需要驗證的作者。
 
 您也可以提供影像檔案做為應用程式縮圖，選取要使用的PhoneGap Build設定，然後選取要使用的行動應用程式分析設定。 此影像僅用作縮圖，以在Experience Manager的行動應用程式主控台中呈現您的行動應用程式。
 
 建立雲端服務並將Adobe Mobile Services SDK外掛程式整合至應用程式時，會有其他（和選用）標籤。
 
-* 構建： 按一下「管理設定」，並在此處設定build.phonegap.com組建服務。 然後，您就可以從下拉式清單中選取新建立的PhoneGap組建雲端服務。
-* 分析： 按一下「管理組態」，並設定 [您的Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html) cloud服務。 然後，您就可以從下拉式清單中，選取新建立的Mobile Service，以整合到您的行動應用程式中。
+* 構建：按一下「管理設定」，並在此處設定build.phonegap.com組建服務。 然後，您就可以從下拉式清單中選取新建立的PhoneGap組建雲端服務。
+* 分析：按一下「管理組態」並設定您的[Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html)雲端服務。 然後，您就可以從下拉式清單中，選取新建立的Mobile Service，以整合到您的行動應用程式中。
 
-## 使用應用程式範本 {#using-app-templates}
+## 使用應用程式範本{#using-app-templates}
 
 應用程式範本提供簡單的方式，來運用開發人員建立的現有設計，以便在AEM中建立新應用程式。
 
@@ -49,24 +49,24 @@ AEM Mobile應用程式是以定義頁面結構和屬性的藍圖為基礎。 您
 
 您必須有現有的行動應用程式範本（或已安裝應用程式範本的應用程式），才能使用此功能。
 
-最新的AEM Apps範例套件包含Geometrixx應用程式的更新版本及應用程式範本。 或者，您也可以安裝 [StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) ，該StarterKit也提供範本。
+最新的AEM Apps範例套件包含Geometrixx應用程式的更新版本及應用程式範本。 或者，您也可以安裝[StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)，該&lt;a0/>還提供了模板。
 
 根據應用程式範本建立新應用程式的步驟：
 
-1. 導覽至AEM Mobile應用程式目錄： &lt;*server-url*>aem/apps.html/content/mobileapps
-1. 選取「 **建立** 」，然後選擇「 **應用程式** 」，如下所示
+1. 導覽至AEM Mobile應用程式目錄：&lt;*server-url*>aem/apps.html/content/mobileapps
+1. 選擇&#x200B;**Create**，然後選擇&#x200B;**App**，如下所示
 
 ![chlimage_1-158](assets/chlimage_1-158.png)
 
-選取AEM開發人員提供給您的應用程式範本。 請參 [閱「AEM Mobile應用程式的結構」](/help/mobile/phonegap-structure-an-app.md) ，以取得開發人員協助。
+選取AEM開發人員提供給您的應用程式範本。 如需開發人員協助，請參閱[AEM Mobile應用程式結構](/help/mobile/phonegap-structure-an-app.md)。
 
 ![chlimage_1-159](assets/chlimage_1-159.png)
 
-視需要填寫新應用程式的詳細資訊，包括選擇性地變更其縮圖影像。 這些值稍後可從「管理應用程式」方 **塊中編輯** 。
+視需要填寫新應用程式的詳細資訊，包括選擇性地變更其縮圖影像。 這些值稍後可從&#x200B;**管理應用程式**&#x200B;圖格進行編輯。
 
 ![chlimage_1-160](assets/chlimage_1-160.png)
 
-## 後續步驟 {#the-next-steps}
+## 後續步驟{#the-next-steps}
 
 請參閱下列資源以進一步瞭解其他編寫角色：
 
