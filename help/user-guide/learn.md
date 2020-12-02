@@ -12,11 +12,11 @@ ht-degree: 4%
 ---
 
 
-# 瞭解AEM 6.5功能 {#learn-about-aem-64-capabilities}
+# 瞭解AEM 6.5功能{#learn-about-aem-64-capabilities}
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites是Adeobe Experience Manager中的內容管理系統，可讓您在網站、行動網站和現場螢幕上建立、管理和提供數位體驗，讓這些體驗在觸及面上具有全球性，但具備個人相關性和吸引力。 [進一步瞭解](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) ，或 [深入探討我們的新視訊功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites是Adeobe Experience Manager中的內容管理系統，可讓您在網站、行動網站和現場螢幕上建立、管理和提供數位體驗，讓這些體驗在觸及面上具有全球性，但具備個人相關性和吸引力。 [進一](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 步了 [解或深入探討我們的新視訊功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -47,8 +47,8 @@ AEM Forms將表單製作、管理和發佈功能，以及通訊管理功能、�
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre是全新的Adobe Experience Manager功能，可讓您點選網路上共用的一切，在您自己的網站上建立持續不斷的新鮮高品質內容。 [進一步瞭解](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) ，或 [直接進入我們的指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre是全新的Adobe Experience Manager功能，可讓您點選網路上共用的一切，在您自己的網站上建立持續不斷的新鮮高品質內容。 [進一](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 步了 [解或直接進入指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
 ## AEM Foundation {#aem-foundation}
 
-進一步瞭解 [Adobe Experience Manager 6.5基礎和我們的受管理服務部署模型](/help/sites-deploying/home.md) ，或深入探討本版次中 [新功能的新視訊簡介。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+進一步瞭解[Adobe Experience Manager 6.5基礎](/help/sites-deploying/home.md)和我們的受管理服務部署模型，或深入瞭解我們推出的[本版次功能介紹新視訊。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
