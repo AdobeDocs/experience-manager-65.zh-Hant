@@ -18,53 +18,53 @@ ht-degree: 0%
 ---
 
 
-# AEM Sites - GDPR就緒性{#aem-sites-gdpr-readiness}
+# AEM Sites - GDPR Readiness{#aem-sites-gdpr-readiness}
 
 >[!IMPORTANT]
 >
->GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規； 例如GDPR、CCPA等。
+>GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規；例如GDPR、CCPA等。
 
 歐盟的資料隱私權通用資料保護條例自2018年5月起生效。
 
 AEM Sites已準備好協助客戶履行其GDPR合規性義務。 本頁面會引導客戶完成在AEM Sites中處理GDPR要求的程式。 它說明儲存的私人資料位置，以及如何手動或使用程式碼移除這些資料。
 
-如需詳細資訊，請 [參閱Adobe隱私權中心的GDPR頁面](https://www.adobe.com/privacy/general-data-protection-regulation.html)。
+如需詳細資訊，請參閱Adobe隱私權中心](https://www.adobe.com/privacy/general-data-protection-regulation.html)的[ GDPR頁面。
 
 >[!NOTE]
 >
->如需詳 [細資訊，請參閱AEM GDPR準備](/help/managing/data-protection-and-privacy.md) 。
+>如需詳細資訊，請參閱[AEM GDPR Readiness](/help/managing/data-protection-and-privacy.md)。
 
-## 作者伺服器 {#author-server}
+## 作者伺服器{#author-server}
 
-作者伺服器上的使用者帳戶和UGC內容皆包含在 [Platform GDPR檔案中](/help/managing/data-protection-and-privacy.md)。
+作者伺服器上的使用者帳戶和UGC內容在[平台GDPR檔案](/help/managing/data-protection-and-privacy.md)中涵蓋。
 
-## 發佈伺服器 {#publish-server}
+## 發佈伺服器{#publish-server}
 
-用於驗證網站訪客的使用者帳戶，以及發佈伺服器上的UGC內容，均在 [Platform GDPR檔案中涵蓋](/help/managing/data-protection-and-privacy.md)。
+[平台GDPR檔案](/help/managing/data-protection-and-privacy.md)中涵蓋用來驗證網站訪客的使用者帳戶和發佈伺服器上的UGC內容。
 
 依預設，AEM Sites元件不會儲存訪客在發佈伺服器上輸入的表單資料。 建議將資料轉送至協力廠商系統或Adobe Campaign以進一步處理。
 
-## 選擇加入／選擇退出 {#opt-in-opt-out}
+## 選擇加入／選擇退出{#opt-in-opt-out}
 
-AEM有 [Cookie選擇退出服務](/help/sites-developing/cookie-optout.md) ，可用來管理使用者的選擇加入／選擇退出。
+AEM有[Cookie選擇退出服務](/help/sites-developing/cookie-optout.md)，可用來管理使用者的選擇加入／選擇退出。
 
-## Analytics的增強見解 {#enhanced-insights-by-analytics}
+## Analytics的增強見解{#enhanced-insights-by-analytics}
 
 AEM Sites包含Analytics的「增強前瞻分析」(Enhanced Insights by Analytics)的選購整合，此功能使用Adobe Analytics隨選服務中的功能。
 
-如需有關管理與Adobe Analytics相關的GDPR資料主體要求的詳細資訊，請參 [閱Adobe Analytics和GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)。
+有關管理與Adobe Analytics相關的GDPR資料主體要求的詳細資訊，請參閱[Adobe Analytics和GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)。
 
-## 依Target強化個人化 {#enhanced-personalization-by-target}
+## Target {#enhanced-personalization-by-target}的增強個人化
 
 AEM Sites包含與Enhanced Personalization by Target的選購整合，此整合使用Adobe Target隨選服務中的功能。
 
-如需有關管理與Adobe Target相關之GDPR資料主體要求的詳細資訊，請參閱 [Adobe Target —— 隱私與一般資料保護規則](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)。
+有關管理與Adobe Target相關之GDPR資料主體要求的詳細資訊，請參閱[Adobe Target —— 隱私權與一般資料保護規則](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)。
 
 ## ContextHub {#contexthub}
 
-AEM提供包含 [ContextHub的選用資料層](/help/sites-developing/contexthub.md)。 如此可保留瀏覽器中特定訪客的資料，以便用於規則型個人化。
+AEM提供包含[ContextHub](/help/sites-developing/contexthub.md)的選用資料層。 如此可保留瀏覽器中特定訪客的資料，以便用於規則型個人化。
 
-依預設，此訪客資料不會儲存在AEM中； AEM會傳送規則至資料層，以便在瀏覽器中做個人化決策。
+依預設，此訪客資料不會儲存在AEM中；AEM會傳送規則至資料層，以便在瀏覽器中做個人化決策。
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ AEM提供包含 [ContextHub的選用資料層](/help/sites-developing/contexthub
 >
 >Adobe CQ 5.5及更早版本現已開放使用，本檔案不涵蓋此類軟體。
 
-### 實作選擇加入／選擇退出 {#implementing-opt-in-opt-out}
+### 實作選擇加入／選擇退出{#implementing-opt-in-opt-out}
 
 網站擁有者必鬚根據下列准則建置退出元件。
 
@@ -104,11 +104,11 @@ AEM提供包含 [ContextHub的選用資料層](/help/sites-developing/contexthub
    // if isOptedOut is true, ContextHub is running in opt-out mode
    ```
 
-### 預覽ContextHub的永續性 {#previewing-persistence-of-contexthub}
+### 預覽ContextHub {#previewing-persistence-of-contexthub}的永續性
 
 若要預覽使用ContextHub的永久性，使用者可以：
 
-* 使用瀏覽器的主控台； 例如：
+* 使用瀏覽器的主控台；例如：
 
    * Chrome:
 
@@ -192,7 +192,7 @@ var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persiste
 console.log(storage.getTree());
 ```
 
-### 清除ContextHub的永續性 {#clearing-persistence-of-contexthub}
+### 清除ContextHub {#clearing-persistence-of-contexthub}的持久性
 
 要清除ContextHub持久性，請執行以下操作：
 
@@ -209,7 +209,7 @@ console.log(storage.getTree());
    ContextHub.resetAllStores();
    ```
 
-* 清除特定的持久層； 例如，sessionStorage:
+* 清除特定的持久層；例如，sessionStorage:
 
    ```
    var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });
