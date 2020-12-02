@@ -30,22 +30,25 @@ ht-degree: 2%
 >
 >基於XFA的自適應表單不支援自動產生記錄檔案。 不過，您可以使用用來建立最適化表單作為記錄檔案的XDP。
 
-## 最適化表單類型及其記錄檔案 {#adaptive-form-types-and-their-documents-of-record}
+## 最適化表單類型及其記錄檔案{#adaptive-form-types-and-their-documents-of-record}
 
 建立自適應表單時，可以選擇表單模型。 您的選項包括：
 
-* [表單範本](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)可讓您為最適化表單選取XFA範本。 當您選擇XFA範本時，可以如上所述，將相關的XDP檔案用於記錄檔案。
+* [表單](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)
+範本可讓您為最適化表單選取XFA範本。當您選擇XFA範本時，可以如上所述，將相關的XDP檔案用於記錄檔案。
 
-* [XML架構](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)可讓您為最適化表單選擇XML架構定義。 為最適化表單選擇XML架構時，您可以：
+* [XML架](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)
+構可讓您為最適化表單選擇XML架構定義。為最適化表單選擇XML架構時，您可以：
 
    * 將XFA範本關聯至記錄檔案。 確保關聯的XFA範本使用與最適化表單相同的XML架構
    * 自動產生記錄檔案
 
-* 無可讓您建立沒有表單模型的最適化表單。 記錄檔案會針對您的最適化表單自動產生。
+* 無
+可讓您建立不含表單模型的最適化表單。 記錄檔案會針對您的最適化表單自動產生。
 
-當您選擇表單模型時，請使用記錄文檔模板配置下的選項來配置記錄文檔。 See [Document of Record Template Configuration](#document-of-record-template-configuration).
+當您選擇表單模型時，請使用記錄文檔模板配置下的選項來配置記錄文檔。 請參閱[記錄模板配置](#document-of-record-template-configuration)。
 
-## 自動產生的記錄檔案 {#automatically-generated-document-of-record}
+## 自動生成記錄{#automatically-generated-document-of-record}的文檔
 
 記錄檔案可讓客戶保留已提交表單的副本，以供列印之用。 當您自動產生記錄檔案時，每次變更表格時，其記錄檔案都會立即更新。 例如，您會移除選擇美國作為其國家的客戶的年齡欄位。 當此類客戶產生記錄檔案時，記錄檔案中不會顯示年齡欄位。
 
@@ -57,27 +60,27 @@ ht-degree: 2%
 * 它可讓您使用不同的基本範本來嘗試不同的樣式和外觀，並為記錄檔案選擇最佳樣式和外觀。 樣式外觀是可選的，如果不指定樣式，系統樣式將設定為預設樣式。
 * 它可確保任何表格變更都立即反映在記錄檔案中。
 
-## 自動產生記錄檔案的元件 {#components-to-automatically-generate-a-document-of-record}
+## 自動生成記錄文檔{#components-to-automatically-generate-a-document-of-record}的元件
 
 要生成適應性表單的記錄文檔，您需要以下元件：
 
-**最適化表單** ：您要為其產生記錄檔案的最適化表單。
+**最適** 化表單您要為其產生記錄檔案的最適化表單。
 
-**在AEM Designer中建立的基本範本（建議）** XFA範本（XDP檔案）。 基本模板用於指定記錄模板文檔的樣式和品牌資訊。
+**在AEM Designer中建立的基本範本（建議）** XFA範本（XDP檔案）。基本模板用於指定記錄模板文檔的樣式和品牌資訊。
 
-請參 [閱記錄文檔的基本模板](#base-template-of-a-document-of-record)
+請參閱記錄文檔的[基本模板](#base-template-of-a-document-of-record)
 
 >[!NOTE]
 >
 >記錄文檔的基本模板也稱為記錄文檔的元模板。
 
-**從最適化表單產生的記錄範本** XFA範本（XDP檔案）檔案。
+**記錄範本文** 件XFA範本（XDP檔案），由最適化表單產生。
 
-See [Document of Record Template Configuration](#document-of-record-template-configuration).
+請參閱[記錄模板配置](#document-of-record-template-configuration)。
 
-**表單資料** ：使用者以最適化表單填入的資訊。 它與記錄文檔模板合併，生成記錄文檔。
+**表單** 資料使用者以最適化表單填入的資訊。它與記錄文檔模板合併，生成記錄文檔。
 
-## 最適化表單元素的對應 {#mapping-of-adaptive-form-elements}
+## 最適化表單元素{#mapping-of-adaptive-form-elements}的對應
 
 以下各節將說明最適化表單元素在記錄檔案中的顯示方式。
 
@@ -172,7 +175,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
  </tbody>
 </table>
 
-### 容器 {#containers}
+### 容器{#containers}
 
 <table>
  <tbody>
@@ -189,7 +192,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
  </tbody>
 </table>
 
-### 靜態元件 {#static-components}
+### 靜態元件{#static-components}
 
 | 最適化表單元件 | 對應的XFA元件 | 附註 |
 |---|---|---|
@@ -200,42 +203,42 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 >
 >在傳統的UI中，您會取得不同的標籤來編輯欄位屬性。
 
-### Tables {#tables}
+### 表{#tables}
 
 自適應表單表元件（如頁首、頁尾和行映射）與對應的XFA元件。 您可以將可重複的面板映射至記錄檔案中的表格。
 
-## 記錄檔案的基本範本 {#base-template-of-a-document-of-record}
+## 記錄文檔的基本模板{#base-template-of-a-document-of-record}
 
 基本範本為記錄檔案提供樣式和外觀資訊。 它可讓您自訂自動產生的記錄檔案的預設外觀。 例如，您想在標題中新增公司標誌，並在記錄檔案的頁尾中新增版權資訊。 基本模板的首頁用作記錄模板文檔的首頁。 主版頁面可以包含頁首、頁尾和頁碼等資訊，您可以套用至記錄檔案。 您可以使用基本範本將此類資訊套用至記錄檔案，以自動產生記錄檔案。 使用基本模板可以更改欄位的預設屬性。
 
-設計基本 [範本時](#base-template-conventions) ，請遵循基本範本慣例。
+設計基本模板時，請遵循[基本模板約定](#base-template-conventions)。
 
-## 基本範本慣例 {#base-template-conventions}
+## 基本範本慣例{#base-template-conventions}
 
 基本範本用於定義記錄檔案的頁首、頁尾、樣式和外觀。 頁首和頁尾可包含公司標誌和版權文字等資訊。 基本模板中的第一個首頁將被複製並用作記錄文檔的首頁，該首頁包含頁眉、頁腳、頁碼或記錄文檔中所有頁應顯示的任何其他資訊。 如果您使用不符合基本模板慣例的基本模板，則記錄模板文檔中仍使用基本模板的第一個首頁。 強烈建議您依其慣例設計基本範本，並使用它自動產生記錄檔案。
 
 **主版頁面慣例**
 
-* 在基本範本中，您應將根子表單命 `AF_METATEMPLATE` 名為，將主版頁命名為 `AF_MASTERPAGE`。
+* 在基本模板中，您應將根子表單命名為`AF_METATEMPLATE` ，將首頁命名為`AF_MASTERPAGE`。
 
-* 主版頁面的名稱位 `AF_MASTERPAGE` 於根子表 `AF_METATEMPLATE` 單下，優先擷取頁首、頁尾和樣式資訊。
+* 在`AF_METATEMPLATE`根子表單下方的主版頁面名稱為`AF_MASTERPAGE`，優先擷取頁首、頁尾和樣式資訊。
 
-* 如果 `AF_MASTERPAGE` 不存在，則使用基本模板中存在的第一主版頁面。
+* 如果`AF_MASTERPAGE`不存在，則使用基本模板中存在的第一個首頁。
 
 **欄位的樣式慣例**
 
-* 要對記錄文檔中的欄位應用樣式，基本模板將提供位於根子表單下 `AF_FIELDSSUBFORM` 子表單中 `AF_METATEMPLATE` 的欄位。
+* 要對記錄文檔中的欄位應用樣式，基本模板提供位於`AF_METATEMPLATE`根子表單下`AF_FIELDSSUBFORM`子表單中的欄位。
 
-* 這些欄位的屬性將應用於記錄文檔中的欄位。 這些欄位應遵循命 `AF_<name of field in all caps>_XFO` 名慣例。 例如，核取方塊的欄位名稱應為 `AF_CHECKBOX_XFO`。
+* 這些欄位的屬性將應用於記錄文檔中的欄位。 這些欄位應遵循`AF_<name of field in all caps>_XFO`命名慣例。 例如，核取方塊的欄位名稱應為`AF_CHECKBOX_XFO`。
 
 若要建立基本範本，請在AEM Designer中執行下列動作。
 
-1. 按一 **下「檔案>新增**」。
-1. 選取「 **根據範本** 」選項。
+1. 按一下「**檔案>新建**」。
+1. 選擇&#x200B;**基於模板**&#x200B;選項。
 
-1. 選擇「 **表單——記錄文檔」類** 。
-1. 選擇 **DoR基本模板**。
-1. 按一 **下** 「下一步」，並提供所需資訊。
+1. 選擇&#x200B;**Forms - Document of Record**&#x200B;類別。
+1. 選擇&#x200B;**DoR基本模板**。
+1. 按一下&#x200B;**Next**&#x200B;並提供所需資訊。
 
 1. （可選）修改要應用於記錄文檔中欄位的欄位的樣式和外觀。
 1. 儲存表格。
@@ -258,24 +261,23 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 執行以下步驟，為最適化表單配置記錄文檔：
 
-1. 在AEM作者例項中，按一下「表 **單>表單與檔案」。**
-1. 選擇一個表單，然後按一下「查 **看屬性」**。
-1. 在「屬性」窗口中，按一下「表 **單模型」**。
-建立表單時，也可以選取表單模型。
+1. 在AEM作者例項中，按一下「**表單>表單和檔案」。**
+1. 選擇表單，然後按一下&#x200B;**查看屬性**。
+1. 在「Properties（屬性）」窗口中，按一下「Form Model（表單模型）」 **。**&#x200B;建立表單時，也可以選取表單模型。
 
    >[!NOTE]
    >
-   >在「表單模型」頁籤中，確保從「 **選擇自** 」下拉 **式選** 項卡中選擇「方案」或「無 **** 」。 **[!UICONTROL 以表單範本為表單模型的XFA或最適化表單不支援記錄檔案。]**
+   >在「表單模型」頁籤中，確保從「從&#x200B;**選擇**」下拉式清單中選擇&#x200B;**方案**&#x200B;或&#x200B;**無**。 **[!UICONTROL 以表單範本為表單模型的XFA或最適化表單不支援記錄檔案。]**
 
 1. 在「表單模型」頁籤的「記錄模板配置文檔」部分中，選擇以下選項之一。
 
-   **無** ：如果您不想為表單配置記錄文檔，請選擇此選項。
+   **無** 如果不想為表單配置記錄文檔，請選擇此選項。
 
-   **將表單模板與記錄模板關聯** 如果您有要用作記錄文檔模板的XDP檔案，請選擇此選項。 選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
+   **將表單模板與記錄模板關** 聯如果您有要用作記錄文檔的模板的XDP檔案，請選擇此選項。選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
 
    選定的XDP檔案與最適化表單相關聯。
 
-   **生成記錄文檔** ：選擇此選項可將XDP檔案用作定義記錄文檔的樣式和外觀的基本模板。 選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
+   **生成記錄文** 檔選擇此選項可將XDP檔案用作定義記錄文檔的樣式和外觀的基本模板。選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
 
    >[!NOTE]
    >
@@ -284,19 +286,19 @@ See [Document of Record Template Configuration](#document-of-record-template-con
    >
    >
    >    * 您的最適化表單是架構型表單
-   >    * 您正在將「 **關聯表單模板」用作記錄文檔的「記錄模板** 」選項
+   >    * 您使用&#x200B;**關聯表單模板作為記錄文檔的記錄模板**&#x200B;選項
 
 
-1. 按一下「 **完成」。**
+1. 按一下&#x200B;**完成。**
 
-## 自訂記錄檔案中的品牌資訊 {#customize-the-branding-information-in-document-of-record}
+## 自訂記錄檔案{#customize-the-branding-information-in-document-of-record}中的品牌資訊
 
 在生成記錄文檔時，可以在「記錄文檔」頁籤上更改記錄文檔的品牌資訊。 「記錄檔案」索引標籤包含標誌、外觀、版面、頁首和頁尾、免責聲明，以及您是否要包含未選取的核取方塊和選項按鈕選項等選項。
 
 若要本地化您在「記錄檔案」索引標籤中輸入的品牌資訊，您必須確保瀏覽器的地區設定正確。 要自定義記錄文檔的品牌資訊，請完成以下步驟：
 
-1. 在記錄檔案中選取面板（根面板），然後點選「設 ![定」](assets/configure.png)。
-1. 點選 ![dortab](assets/dortab.png)。 此時將顯示「記錄文檔」頁籤。
+1. 在記錄檔案中選取一個面板（根面板），然後點選![configure](assets/configure.png)。
+1. 點選![dortab](assets/dortab.png)。 此時將顯示「記錄文檔」頁籤。
 1. 選擇預設模板或自定義模板以呈現記錄文檔。 如果您選取預設範本，記錄檔案的縮圖預覽會顯示在「範本」下拉式清單下方。
 
    ![brandingtemplate](assets/brandingtemplate.png)
@@ -337,7 +339,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 1. 若要儲存品牌變更，請點選「完成」。
 
-## 記錄檔案中面板的表格和欄版面 {#table-and-column-layouts-for-panels-in-document-of-record}
+## 記錄檔案{#table-and-column-layouts-for-panels-in-document-of-record}中面板的表格和欄位版面
 
 您的最適化表格可能是冗長的表格，包含數個表格欄位。 您可能不想將記錄文檔另存為最適化表單的精確副本。 現在，您可以選擇表格或欄版面配置，將一或多個最適化表單面板儲存在記錄PDF的檔案中。
 
@@ -351,31 +353,31 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 在記錄檔案的欄版面中轉譯的面板中的欄位
 
-## 記錄檔案設定 {#document-of-record-settings}
+## 記錄檔案設定{#document-of-record-settings}
 
 記錄文檔設定允許您選擇要包含在記錄文檔中的選項。 例如，銀行接受表單中的姓名、年齡、社會保障號碼和電話號碼。 表單會產生銀行帳號和分行詳細資訊。 您可以選擇只在記錄檔案中顯示姓名、社交保險號碼、銀行帳戶和分支明細。
 
-元件的記錄設定文檔可在其屬性下使用。 若要存取元件的屬性，請選取元件，然後按一 ![下覆蓋](assets/cmppr.png) 中的cmppr。 這些屬性列在側欄中，您可在其中找到下列設定。
+元件的記錄設定文檔可在其屬性下使用。 若要存取元件的屬性，請選取元件，然後按一下覆蓋中的![cmppr](assets/cmppr.png)。 這些屬性列在側欄中，您可在其中找到下列設定。
 
 **欄位層級設定**
 
-* **從記錄檔案排除**:將屬性設為true會將欄位從記錄檔案中排除。 這是名為的可指令碼屬性 `excludeFromDoR`。 其行為取決於隱藏 **的表單層級屬性時** ，從DoR排除欄位。
+* **從記錄檔案排除**:將屬性設為true會將欄位從記錄檔案中排除。這是名為`excludeFromDoR`的可指令碼屬性。 其行為取決於DoR中的&#x200B;**排除欄位（如果隱藏**&#x200B;表單級別屬性）。
 
-* **將面板顯示為表格：** 如果面板中的欄位少於6個，將屬性設定為記錄檔案中的表格。 僅適用於面板。
-* **從記錄檔案排除標題：** 設定屬性會從記錄檔案中排除面板／表格的標題。 僅適用於面板和表格。
-* **從記錄檔案排除說明：** 設定屬性會從記錄文檔中排除面板／表的說明。 僅適用於面板和表格。
+* **將面板顯示為表格：** 如果面板中的欄位少於6個，請將屬性顯示面板設為記錄檔案中的表格。僅適用於面板。
+* **從記錄檔案排除標題：** 設定屬性會排除記錄檔案中的面板／表格標題。僅適用於面板和表格。
+* **從記錄檔案排除說明：設** 定屬性會排除記錄檔案中面板／表格的說明。僅適用於面板和表格。
 
 **表單層級設定**
 
-* **在DoR中包含未系結的欄位：** 設定屬性時，記錄文檔中包含基於模式的自適應表單的未綁定欄位。 依預設為true。
-* **如果隱藏，則從DoR排除欄位：** 設定屬性會覆寫「從記錄檔案排除」欄位層級屬性的行為（若非真）。 如果在表單提交時隱藏欄位，如果屬性設為true，則這些欄位將從記錄檔案中排除，但不要設定「從記錄檔案排除」屬性。
+* **在DoR中包含未綁定欄位：** 設定屬性時，在記錄文檔中包含基於模式的自適應表單中未綁定的欄位。依預設為true。
+* **如果隱藏，則從DoR排除欄位：** 設定屬性會覆寫「從記錄檔案排除」欄位層級屬性的行為（如果不是真）。如果在表單提交時隱藏欄位，如果屬性設為true，則這些欄位將從記錄檔案中排除，但不要設定「從記錄檔案排除」屬性。
 
-## 使用記錄檔案時的主要考量 {#key-considerations-when-working-with-document-of-record}
+## 使用記錄文檔{#key-considerations-when-working-with-document-of-record}時的主要考慮事項
 
 在處理適應性表單的記錄檔案時，請記住下列考量與限制。
 
 * 記錄範本檔案不支援豐富式文字。 因此，靜態自適應格式或最終用戶填寫的資訊中的任何富文本都顯示為記錄文檔中的純文字檔案。
 * 最適化表單中的檔案片段不會出現在記錄檔案中。 不過，支援最適化表單片段。
 * 不支援在為基於XML Schema的自適應表單生成的記錄文檔中的內容綁定。
-* 當用戶請求呈現記錄文檔時，會根據地區設定的要求建立記錄文檔的本地化版本。 記錄文檔的定位與適應性表單的定位同時發生。 如需記錄檔案與最適化表單本地化的詳細資訊，請參閱「使用 [AEM轉換工作流程來本地化最適化表單與記錄檔案」](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
+* 當用戶請求呈現記錄文檔時，會根據地區設定的要求建立記錄文檔的本地化版本。 記錄文檔的定位與適應性表單的定位同時發生。 有關記錄文檔和適應性表單本地化的詳細資訊，請參閱[使用AEM翻譯工作流程本地化最適化表單和記錄文檔](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
 
