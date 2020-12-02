@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 667645a0-53d0-4f9b-a0ba-cc7e366a23a1
 translation-type: tm+mt
 source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 0%
 
 ---
 
@@ -27,13 +30,13 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 **建立SSL憑證**
 
-1. 在命令提示符下，導航到 *`[JAVA HOME]`*/bin並鍵入以下命令以建立證書和密鑰庫：
+1. 在命令提示符下，導航至&#x200B;*`[JAVA HOME]`*/bin ，然後鍵入以下命令以建立證書和密鑰庫：
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*主機名&#x200B;*組名稱`, OU=`*NameName* Name `, O=`*StateConturyCountry *D&quot;LC Journame Company NameNameNameName`,L=`*StateCountryContity*`, S=`**`, C=`**`" -alias`**`-keypass``key`****`-keystore`**&quot;Lc JourdCordentJaccordLinameCyCreminameCompayLinedC`.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*主機* `, OU=`*名稱* `, O=`*群組名稱* `,L=`*公司名稱城市名* `, S=`** `, C=`*稱國家代碼* `" -alias`*&quot;LC Cert&quot;* `-keypass` `key`** ** `-keystore`*_passwordkeystorename* `.keystore`
 
    >[!NOTE]
    >
-   >以安 *`[JAVA_HOME]`裝JDK的目錄取代，並以與您的環境對應的值取代斜體文字。*
+   >將&#x200B;*`[JAVA_HOME]`替換為安裝JDK的目錄，並將斜體文本替換為與您的環境對應的值。*
 
-1. 鍵 `changeit` 入密碼。 此密碼是Java安裝的預設密碼，系統管理員可能已對其進行更改。
+1. 鍵入`changeit`作為口令。 此密碼是Java安裝的預設密碼，系統管理員可能已對其進行更改。
 
