@@ -1,6 +1,6 @@
 ---
-title: 目標內容的多網站管理結構
-seo-title: 目標內容的多網站管理結構
+title: 如何架構目標內容的多網站管理
+seo-title: 如何架構目標內容的多網站管理
 description: 圖表顯示多網站對目標內容的支援結構
 seo-description: 圖表顯示多網站對目標內容的支援結構
 uuid: 2d30cdf0-ab77-490d-aac0-db3a0d417a58
@@ -11,15 +11,18 @@ topic-tags: personalization
 discoiquuid: 7dd851ab-3fa7-426e-89cb-08b67e9b5999
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 12%
 
 ---
 
 
-# 目標內容的多網站管理結構{#how-multisite-management-for-targeted-content-is-structured}
+# 如何架構目標內容的多網站管理{#how-multisite-management-for-targeted-content-is-structured}
 
 下圖說明如何建構針對目標內容的多網站支援。
 
-區域會出現在 **/content/campaigns/&lt;brand>下方** ，而且依預設，每個品牌都有一個主區域，會自動建立。 每個區域都包含其專屬的活動、體驗和選件集。
+區域會出現在&#x200B;**/content/campaigns/&lt;brand>**&#x200B;下方，依預設，每個品牌都有自動建立的主區域。 每個區域都包含其專屬的活動、體驗和選件集。
 
 ![chlimage_1-268](assets/chlimage_1-268.png)
 
