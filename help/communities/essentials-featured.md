@@ -18,14 +18,14 @@ ht-degree: 5%
 ---
 
 
-# 主要內容基本功能  {#featured-content-essentials}
+# 精選內容基本工具{#featured-content-essentials}
 
 本頁提供使用特色內容的基本資訊。
 
 與將貼文釘在論壇頂端不同，此功能可讓社群網站內的任何位置反白顯示內容。
 
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 <table>
  <tbody>
@@ -51,7 +51,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>檢視 <a href="featured.md">精選內容</a></td>
+   <td>請參閱<a href="featured.md">精選內容</a></td>
   </tr>
  </tbody>
 </table>
@@ -60,4 +60,4 @@ ht-degree: 5%
 
 ### 檔案庫功能 {#file-library-function}
 
-一種包含「特色內容」功能 [的社群網站結構](functions.md#featured-content-function)，包含已設定的 `featured content` 元件。
+一種包括[特色內容功能](functions.md#featured-content-function)的社區站點結構，包括配置的`featured content`元件。
