@@ -11,23 +11,26 @@ discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 3%
 
 ---
 
 
-# 整合建立對應UI與您的自訂入口網站{#integrating-create-correspondence-ui-with-your-custom-portal}
+# 將「建立對應UI」與您的自訂入口網站整合{#integrating-create-correspondence-ui-with-your-custom-portal}
 
 ## 概覽 {#overview}
 
-本文詳述如何將「建立通信解決方案」與您的環境整合。
+本文詳細說明如何將「建立通信解決方案」與您的環境整合。
 
-## 以URL為基礎的呼叫 {#url-based-invocation}
+## 基於URL的調用{#url-based-invocation}
 
 從自訂入口網站呼叫「建立對應」應用程式的一種方式，是使用下列請求參數來準備URL:
 
 * 字母範本的識別碼（使用cmLetterId參數）。
 
-* the URL to the XML data fetched from the desired data source (using the cmDataUrl parameter).
+* 從所需資料來源擷取的XML資料的URL（使用cmDataUrl參數）。
 
 例如，自訂入口網站會將URL準備為\
 `https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，這可以是入口網站上連結的href。
@@ -40,11 +43,11 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 >
 >在呼叫「建立對應」應用程式之前，儲存並上傳資料，以在指定dataURL呼叫「建立對應」UI。 這可從自訂入口網站本身或透過另一個後端程式完成。
 
-## 內嵌資料式呼叫 {#inline-data-based-invocation}
+## 內嵌資料式呼叫{#inline-data-based-invocation}
 
-另一個（也是更安全的）呼叫「建立對應」應用程式的方式是，只要點擊https://&#39;[server]:port[&#39;/]contextPath[]/aem/forms/createcorrespondence.html的URL，同時傳送參數和資料以POST要求呼叫「建立對應」應用程式（隱藏於使用者）。 這也表示您現在可以將XML資料傳遞至內嵌的「建立對應」應用程式（使用cmData參數做為相同要求的一部分），這在先前的方法中是不可能的／理想的。
+呼叫「建立對應」應用程式的另一種（以及更安全的）方式是，只要點擊https://&#39;[server]的URL:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html，同時傳送參數和資料以POST要求呼叫「建立對應」應用程式（隱藏於使用者）。 這也表示您現在可以將XML資料傳遞至內嵌的「建立對應」應用程式（使用cmData參數做為相同要求的一部分），這在先前的方法中是不可能的／理想的。
 
-### 用於指定字母的參數 {#parameters-for-specifying-letter}
+### 指定字母{#parameters-for-specifying-letter}的參數
 
 | **名稱** | **類型** | **說明** |
 |---|---|---|
@@ -53,7 +56,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 表中參數的順序指定用於載入字母的參數的首選項。
 
-### 指定XML資料來源的參數 {#parameters-for-specifying-the-xml-data-source}
+### 指定XML資料源{#parameters-for-specifying-the-xml-data-source}的參數
 
 <table>
  <tbody>
@@ -82,7 +85,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 表中參數的順序指定用於載入XML資料的參數的首選項。
 
-### 其他參數 {#other-parameters}
+### 其他參數{#other-parameters}
 
 <table>
  <tbody>
@@ -94,7 +97,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
   <tr>
    <td>cmPreview<br /> </td> 
    <td>布林值 (Boolean)</td> 
-   <td>True可在預覽模式中開啟字母<br /> </td> 
+   <td>True以預覽模式開啟字母<br /> </td> 
   </tr>
   <tr>
    <td>隨機</td> 
