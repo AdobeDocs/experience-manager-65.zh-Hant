@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 動態填入下拉式清單 {#dynamically-populating-drop-down-lists}
+# 動態填入下拉式清單{#dynamically-populating-drop-down-lists}
 
 ## 必備條件 {#prerequisites}
 
@@ -27,9 +27,9 @@ ht-degree: 0%
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 * [製作最適化表單](../../forms/using/introduction-forms-authoring.md)
 
-## 動態填入下拉式清單的程式 {#procedure-to-dynamically-populate-drop-down-lists}
+## 動態填入下拉式清單的程式{#procedure-to-dynamically-populate-drop-down-lists}
 
-請考慮您要根據您在「國家／地區」下拉式清單中選取的值，填入「狀態 ******** 」下拉式清單的藍本。 如果您在「國家 **」下拉式清單中選取「澳洲」,「州****** 」下拉式清單會顯示「澳洲」內的州。 以下過程說明如何完成此任務。
+請考慮您要根據您在&#x200B;**Country**&#x200B;下拉式清單中選取的值填入&#x200B;**State**&#x200B;下拉式清單的藍本。 如果您在&#x200B;**Country**&#x200B;下拉式清單中選取「澳洲」，則&#x200B;**State**&#x200B;下拉式清單會顯示「澳洲」內的狀態。 以下過程說明如何完成此任務。
 
 1. 使用下列模組建立專案：
 
@@ -147,7 +147,7 @@ ht-degree: 0%
    }
    ```
 
-1. 在應用程式中特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 請確定節 `sling:resourceType` 點的參數與servlet點(/apps/populatedropdown)所在的參數相同。
+1. 在應用程式中特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 請確定節點的`sling:resourceType`參數與servlet指向的參數(/apps/populatedropdown)相同。
 
    ![建立下拉式節點](assets/dropdown-node.png)
 
@@ -156,7 +156,7 @@ ht-degree: 0%
 
    新增要顯示在「國家／地區」清單中的國家／地區名稱。 在「國家／地區」清單中，新增指令碼，以根據「國家／地區」清單中的國家／地區名稱填入指令碼。
 
-   ![新增國家／地區名稱](assets/country-dropdown.png)![新增指令碼以填入國家／地區名稱](assets/state-dropdown.png) 「 ![國家／地區」下拉式清單以收集](assets/2dropdowns.png)
+   ![新增國](assets/country-dropdown.png) ![家／地區名稱新增指令碼以填](assets/state-dropdown.png) ![入州名國家／地區和州下拉式清單以收集](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(
