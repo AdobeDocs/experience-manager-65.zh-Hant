@@ -17,13 +17,13 @@ ht-degree: 0%
 ---
 
 
-# 在摘要URL中獲取任務變數 {#getting-task-variables-in-summary-url}
+# 在摘要URL {#getting-task-variables-in-summary-url}中獲取任務變數
 
 摘要頁面會顯示與任務相關的資訊。 本文說明如何在摘要頁面中重複使用與任務相關的資訊。
 
 在此範例協調中，員工會提交請假申請表。 然後申請表會送至員工的經理進行核准。
 
-1. 為resourcesType Employees/PtoApplication建立示例HTML轉 **換器(html.esp)**。
+1. 為resourcesType **Employees/PtoApplication**&#x200B;建立範例HTML轉譯器(html.esp)。
 
    渲染器假定要在節點上設定以下屬性：
 
@@ -59,30 +59,30 @@ ht-degree: 0%
    </html>
    ```
 
-1. 修改協調，從提交的表單資料中擷取四個屬性。 之後，在CRX中建立 **Employees/PtoApplication類型的節點**，並填充屬性。
+1. 修改協調，從提交的表單資料中擷取四個屬性。 之後，在CRX中建立&#x200B;**Employees/PtoApplication**&#x200B;類型的節點，並填充屬性。
 
-   1. 建立流程 **建立PTO匯總** ，並在協調中的「分配任務 **** 」操作之前將其用作子流程。
-   1. 在新流 **程中定義employeeName**、employeeID **、** ptoReason **、** Days Name和NodeNameTotalName為輸入變數的employeeName ******** 、employeeID、ptoReason。 這些變數會以提交的表單資料傳遞。
+   1. 建立流程&#x200B;**建立PTO匯總**，並將其用作協調中&#x200B;**分配任務**&#x200B;操作之前的子流程。
+   1. 將&#x200B;**employeeName**、**employeeID**、**ptoReason**、**totalDays**&#x200B;和&#x200B;**nodeName**&#x200B;定義為新流程中的輸入變數。 這些變數會以提交的表單資料傳遞。
 
-      此外，還定義輸出變 **量ptoNodePath** ，在設定摘要Url時將使用它。
+      此外，還定義輸出變數&#x200B;**ptoNodePath**，該變數將用於設定摘要Url。
 
-   1. 在建立 **PTO匯總流程中** ，使用 **set value** component來設定nodeProperty **(****** nodePropsMap)映射中的輸入詳細資訊。
+   1. 在&#x200B;**建立PTO摘要**&#x200B;過程中，使用&#x200B;**set value**&#x200B;元件在&#x200B;**nodeProperty**(**nodeProps**)映射中設定輸入詳細資訊。
 
       此地圖中的索引鍵應與前一步驟中HTML轉譯器中定義的索引鍵相同。
 
-      此外，在地圖 **中新增具有值** Employees/PtoApplication **** 的sling:resourceType索引鍵。
+      此外，在地圖中新增&#x200B;**sling:resourceType**&#x200B;索引鍵，其值為&#x200B;**Employees/PtoApplication**。
 
-   1. 在建立PTO **摘要流程中，使用** ContentRepositoryConnector服務中的子流 **程storeContent****** 。 此子進程將建立CRX節點。
+   1. 使用&#x200B;**建立PTO摘要**&#x200B;流程中&#x200B;**ContentRepositoryConnector**&#x200B;服務中的子流程&#x200B;**storeContent**。 此子進程將建立CRX節點。
 
       它需要三個輸入變數：
 
-      * **資料夾路徑**: 建立新CRX節點的路徑。 將路徑設為 **/content**。
-      * **節點名稱**: 將輸入變數nodeName指派給此欄位。 這是唯一的節點名稱字串。
-      * **節點類型**: 將類型定義為 **nt:unstructured**。 此進程的輸出是nodePath。 nodePath是新建立的節點的CRX路徑。 ndoePath將是建立PTO匯總流程的 **最終輸出** 。
-   1. 將提交的表單資料(**employee** Name、 **employee** ID **、** TotalDays Reason和TotalDays ********)作為輸入傳遞至新流程Oracle Process Create PTO SummaryPo。 將輸出作為 **ptoSummaryNodePath**。
+      * **資料夾路徑**:建立新CRX節點的路徑。將路徑設為&#x200B;**/content**。
+      * **節點名稱**:將輸入變數nodeName指派給此欄位。這是唯一的節點名稱字串。
+      * **節點類型**:將類型定義為 **nt:unstructured**。此進程的輸出是nodePath。 nodePath是新建立的節點的CRX路徑。 ndoePath將是&#x200B;**建立PTO**&#x200B;摘要流程的最終輸出。
+   1. 將提交的表單資料（**employeeName**、**employeeID**、**ptoReason**&#x200B;和&#x200B;**totalDays**）作為新流程的輸入，**建立PTO摘要**。 將輸出作為&#x200B;**ptoSummaryNodePath**。
 
 
-1. 將摘要Url定義為包含伺服器詳細資訊以及 **ptoSummaryNodePath的XPath表達式**。
+1. 將摘要Url定義為包含伺服器詳細資訊以及&#x200B;**ptoSummaryNodePath**&#x200B;的XPath表達式。
 
    XPath: `concat('https://[*server*]:[*port*]/lc',/process_data/@ptoSummaryNodePath,'.html')`.
 
