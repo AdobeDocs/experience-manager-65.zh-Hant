@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 4f62078d-b5b0-4eb9-bd9b-7647a093dec2
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 1%
 
 ---
 
@@ -23,12 +26,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->在標準製作檔案中的「啟動」( [Launchs](/help/sites-authoring/launches.md) )中，詳細說明啟動背後的理論。
+>在標準編寫檔案的[Launches](/help/sites-authoring/launches.md)中，詳細說明了啟動背後的理論。
 >
->有關在傳統UI中使用啟動的特定資訊，請參閱下列檔案以及「建立啟動 [次數](/help/sites-classic-ui-authoring/classic-launches-creating.md)」、「編 [輯啟動次](/help/sites-classic-ui-authoring/classic-launches-editing.md)數」和「促銷啟動次數 [](/help/sites-classic-ui-authoring/classic-launches-promoting.md)」。
+>有關在傳統UI中使用啟動的特定資訊，請參閱以下文檔：[建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md)和[升級啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md)。
 
 >[!CAUTION]
 >
 >傳統UI中無法提供多個啟動來源分支。
 
-您可以透過http://localhost:4502/libs/launches/content/admin.html直接存取啟動控制 [台](http://localhost:4502/libs/launches/content/admin.html)
+The Launches console can directly accessed with [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
