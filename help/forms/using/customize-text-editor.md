@@ -36,14 +36,14 @@ ht-degree: 0%
 1. [在CRX中編輯tbxeditor-config.xml檔案以自訂字型](#customizefonts)
 1. [將自訂字型新增至用戶端電腦](#addcustomfonts)
 
-## 在CRX中編輯tbxeditor-config.xml檔案以自訂字型 {#customizefonts}
+## 在CRX {#customizefonts}中編輯tbxeditor-config.xml檔案以自訂字型
 
 若要透過編輯tbxeditor-config.xml檔案來自訂字型，請執行下列動作：
 
-1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`，以管理員身分登入。
 1. 在應用程式檔案夾中，使用類似設定檔案夾的路徑／結構建立名為config的檔案夾，該檔案夾位於libs/fd/cm/config中，請執行下列步驟：
 
-   1. 以滑鼠右鍵按一下下列路徑上的items資料夾，然後選取「覆 **蓋節點」**:
+   1. 在下列路徑的items資料夾上按一下滑鼠右鍵，然後選取「覆蓋節點」**:**
 
       `/libs/fd/cm/config`
 
@@ -55,22 +55,22 @@ ht-degree: 0%
 
       **位置：** /apps/
 
-      **匹配節點類型：** 已選取
+      **匹配節點類型：選** 定
 
       ![覆蓋節點](assets/2.png)
 
    1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
-   1. 按一下「 **全部儲存**」。
+   1. 按一下&#x200B;**保存全部**。
 
 1. 使用以下步驟，在新建的config資料夾中建立tbxeditor-config.xml檔案的副本：
 
-   1. 在libs/fd/cm/config處按一下右鍵tbxeditor-config.xml檔案，然後選擇「 **複製」**。
-   1. 按一下右鍵以下資料夾，然後選擇「 **貼上」:**
+   1. 按一下右鍵libs/fd/cm/config處的tbxeditor-config.xml檔案，然後選擇&#x200B;**Copy**。
+   1. 按一下右鍵以下資料夾，然後選擇&#x200B;**貼上：**
 
       `apps/fd/cm/config`
 
-   1. 預設情況下，貼上檔案的名稱為「將檔案更名為」( `copy of tbxeditor-config.xml.` Rename the file to)，然 `tbxeditor-config.xml` 後按一下「 **全部保存」(Save All)**。
+   1. 預設情況下，貼上檔案的名稱為`copy of tbxeditor-config.xml.`將檔案更名為`tbxeditor-config.xml` ，然後按一下&#x200B;**全部保存**。
 
 1. 在apps/fd/cm/config處開啟tbxeditor-config.xml檔案，然後進行必要的變更。
 
@@ -168,27 +168,27 @@ ht-degree: 0%
       * 字型系列和大小、高度、字母間距和日期格式的預設值
       * 項目符號縮排
 
-      例如，若要新增名為Sazanami Mincho Medium的日文字型，您必須在XML檔案中輸入下列項目： `<font>Sazanami Mincho Medium</font>`. 您也需要將此字型安裝在用戶端機器上，以便存取及使用字型自訂。 如需詳細資訊，請參 [閱「將自訂字型新增至用戶端電腦」](#addcustomfonts)。
+      例如，若要新增名為Sazanami Mincho Medium的日文字型，您必須在XML檔案中輸入下列項目：`<font>Sazanami Mincho Medium</font>`。 您也需要將此字型安裝在用戶端機器上，以便存取及使用字型自訂。 如需詳細資訊，請參閱[將自訂字型新增至用戶端電腦](#addcustomfonts)。
 
       您也可以變更文字各個方面的預設值，並借由移除項目，從文字編輯器移除字型。
 
-   1. 按一下「 **全部儲存**」。
+   1. 按一下&#x200B;**保存全部**。
 
 
-## 將自訂字型新增至用戶端電腦 {#addcustomfonts}
+## 將自訂字型新增至用戶端電腦{#addcustomfonts}
 
 當您在「對應管理」文字編輯器中存取字型時，字型必須出現在您用來存取「對應管理」的用戶端機器中。 若要在文字編輯器中使用自訂字型，您必須先在用戶端機器上安裝相同的字型。
 
 如需安裝字型的詳細資訊，請參閱下列：
 
 * [在Windows上安裝或解除安裝字型](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
-* [Mac基本功能： 字型簿](https://support.apple.com/en-us/HT201749)
+* [Mac基本功能：字型簿](https://support.apple.com/en-us/HT201749)
 
-## 存取字型自訂 {#access-font-customizations}
+## 存取字型自訂{#access-font-customizations}
 
 在CRX的tbxeditor-config.xml檔案中變更字型，並在用來存取AEM Forms的用戶端機器上安裝必要的字型後，這些變更就會出現在文字編輯器中。
 
-例如，在 [Customize fonts by editing the tbxeditor-config.xml file in CRX](#customizefonts) procedure中添加的Sazanami Mincho Medium字型會以如下方式顯示在文本編輯器用戶介面中：
+例如，在[編輯CRX](#customizefonts)程式中的tbxeditor-config.xml檔案以自訂字型，在「自訂字型」中新增的Sazanami Mincho Medium字型會顯示在文字編輯器UI中，如下所示：
 
 ![sazanaminchointext](assets/sazanamiminchointext.png)
 
