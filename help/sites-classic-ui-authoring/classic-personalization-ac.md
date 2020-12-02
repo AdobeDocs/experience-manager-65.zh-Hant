@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a62ddf8b-97ea-40b9-9c3b-0922fe134567
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Adobe Campaign是一套解決方案，可讓您跨所有線上和線下通道個
 * [Adobe Campaign元件](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)
 * [鎖定您的Adobe Campaign](/help/sites-classic-ui-authoring/classic-personalization-ac-target.md)
 
-您先前必須已 [將AEM與Adobe Campaign整合](/help/sites-administering/campaign.md)。
+您之前必須有[與Adobe Campaign](/help/sites-administering/campaign.md)整合的AEM。
 
 此外，如果您想要自訂整合，請參閱下列主題：
 
