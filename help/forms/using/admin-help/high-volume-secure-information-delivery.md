@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b76d7d93-23a5-4c08-81f5-a56267b1556a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
 
-# 大量安全資訊傳遞 {#high-volume-secure-information-delivery}
+# 大量安全資訊傳遞{#high-volume-secure-information-delivery}
 
 在大量生產環境（例如為電信公司生成安全的月發票）中，建立特定於每個文檔的許可證可以成為資源密集型過程。 在這種情況下，檔案安全性支援將授權與使用者關聯，而非與檔案關聯。 為使用者產生的授權會用於為該使用者提供保護的所有檔案。
 
@@ -27,4 +30,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 只有檔案安全性Java SDK才支援建立抽象原則。 但是，您可以管理從Document Security網頁的抽象原則建立的原則。 使用此方法建立的原則在行為上與從Document Security網頁建立的原則相同。
 
-如需詳 [細資訊，請參閱「使用AEM表格進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63) 」。
+如需詳細資訊，請參閱[使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。
