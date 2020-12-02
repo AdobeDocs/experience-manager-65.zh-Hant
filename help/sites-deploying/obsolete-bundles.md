@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 797a6f3b-d2a8-4835-81ab-a1602677417f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
-# 升級後卸載的過時捆綁包清單{#list-of-obsolete-bundles-uninstalled-after-the-upgrade}
+# 在Upgrade{#list-of-obsolete-bundles-uninstalled-after-the-upgrade}解除安裝過時的捆綁包清單
 
 >[!NOTE]
 >
