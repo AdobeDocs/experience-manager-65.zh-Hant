@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 安裝工作台 {#install-workbench}
+# 安裝工作台{#install-workbench}
 
 本檔案提供安裝和設定AEM Forms Workbench的指示。 安裝程式也會安裝Forms Designer。
 
-## 誰應該閱讀本檔案？ {#who-should-read-this-doc}
+## 誰應該閱讀本檔案？{#who-should-read-this-doc}
 
 本檔案適用於負責安裝、設定、管理或部署Workbench的管理員或開發人員。 此外，還包含設定系統以支援升級AEM Forms程式的必要資訊。 所提供的資訊是基於以下假設：閱讀本檔案的人熟悉Microsoft® Windows®作業系統。
 
@@ -53,9 +53,9 @@ ht-degree: 0%
 >
 >AEM Forms不建議使用Flex Workspace。 它適用於AEM Forms版本。
 
-## 安裝前 {#before-you-install}
+## 安裝{#before-you-install}之前
 
-### 工作台安裝概觀 {#workbench-installation-overview}
+### 工作台安裝概觀{#workbench-installation-overview}
 
 Workbench是一套整合式開發環境(IDE)，開發人員和表單製作人員可使用它來建立自動化商業程式和表單。 它還用於管理流程和表單所使用的資源和服務。
 
@@ -69,13 +69,14 @@ Workbench是一套整合式開發環境(IDE)，開發人員和表單製作人員
 
 ![default-render-form](assets/installing-workbench.png)
 
-## 系統先決條件 {#system-prerequisites}
+## 系統先決條件{#system-prerequisites}
 
 本節概述硬體和軟體需求以及支援的平台。
 
-### 最低硬體和軟體需求 {#minimum-hardware-software-requirements}
+### 最低硬體和軟體要求{#minimum-hardware-software-requirements}
 
-**Workbench**&#x200B;建議使用下列最低需求：安裝的磁碟空間：
+**工**
+作台建議以下最低需求：安裝的磁碟空間：
 * 僅限工作台680 MB。
 * 在單一磁碟機上安裝2.15 GB，以完整安裝Workbench、Designer和樣本元件。
 * 臨時安裝目錄400 MB —— 用戶\temp目錄為200 MB,Windows臨時目錄為200 MB。
@@ -95,11 +96,11 @@ Workbench是一套整合式開發環境(IDE)，開發人員和表單製作人員
 >
 >您必須擁有管理權限才能安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
 
-### 支援的平台 {#supported-platforms}
+### 支援的平台{#supported-platforms}
 
-請參閱「 [AEM Forms支援的平台」中Workbench的完整支援平台清單](http://adobe.com/go/learn_aemforms_supportedplatforms_65)。
+請參閱Workbench支援的完整平台清單，網址為[AEM Forms Supported Platforms](http://adobe.com/go/learn_aemforms_supportedplatforms_65)。
 
-## 設計人員安裝注意事項 {#designer-installation-considerations}
+## 設計人員安裝注意事項{#designer-installation-considerations}
 
 依預設，Workbench安裝包含對應的英文版設計工具。 如果Workbench安裝應用程式在您的電腦上檢測到現有的Designer版本，則安裝可能會終止，並且您必須先刪除當前版本的Designer，然後才能繼續。
 下表列出您在安裝Workbench時可能遇到的Designer安裝方案以及您必須執行的任何操作的完整清單。
@@ -119,24 +120,24 @@ Designer的不同版本可以共存於同一系統，例如Workbench 6.4的Desig
   </tr>
   <tr>
    <td><p>設計人員（獨立）</p> </td>
-   <td><p>無. <br />Workbench隨附的Designer版本僅提供英文版。 <br />Workbench安裝程式不會重新安裝新版Designer。 Workbench安裝程式隨附的更新版本將會修補。 這也可讓您在Workbench中使用您的本地化版本的設計人員。<br /> </p> </td>
+   <td><p>無. <br />Workbench隨附的Designer版本僅提供英文版。<br />Workbench安裝程式不會重新安裝新版Designer。Workbench安裝程式隨附的更新版本將會修補。 這也允許您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
 
-### 在Windows 10上卸載Designer（獨立） {#uninstall-designer-standalone-windows10}
+### 在Windows 10 {#uninstall-designer-standalone-windows10}上卸載Designer（獨立）
 
-1. 前往「控 **制面板>程式集>程式和功能」**
-1. 在「目前安裝的程式」清單中，選取 **Adobe Designer**。
-1. 按一 **下「解除安裝** 」，然後按 **「是」**。
+1. 前往「**控制面板>程式集>程式和功能**」
+1. 在「當前安裝的程式」清單中，選擇&#x200B;**Adobe Designer**。
+1. 按一下「**解除安裝**」，然後按一下「是」。****
 
-## 安裝工作台 {#installing-workbench}
+## 安裝Workbench {#installing-workbench}
 
 本章介紹如何安裝Workbench。
 
-### 安裝和執行Workbench {#installing-and-running-workbench}
+### 安裝並運行Workbench {#installing-and-running-workbench}
 
-在安裝Workbench之前，您必須確保您的環境包含執行Workbench所需的軟體和硬體(請參閱章節： **安裝前**)。
+在安裝Workbench之前，您必須確保您的環境包含執行Workbench所需的軟體和硬體(請參閱章節：**安裝前**)。
 
 **要安裝並運行Workbench，請執行以下操作：**
 
@@ -160,7 +161,7 @@ Designer的不同版本可以共存於同一系統，例如Workbench 6.4的Desig
    >
    >您可以取消選取此選項，繼續使用隨Acrobat 10安裝的Designer。
 
-1. 接受列出的預設目錄，或按一下「選擇」並導覽至您要安裝Workbench的目錄，然後按一下「下一步」。
+1. 接受列出的預設目錄或   按一下「選擇」並導覽至您要安裝Workbench的目錄，然後按一下「下一步」。
 
    >[!NOTE]
    >
@@ -170,15 +171,15 @@ Designer的不同版本可以共存於同一系統，例如Workbench 6.4的Desig
 1. 查看安裝摘要。 選取「啟動AEM Forms Workbench」以啟動「工作台」，然後按一下「下一步」。
 1. 檢閱發行說明，然後按一下完成。
 1. 您的電腦現在安裝了下列項目：
-   * **工作台**:若要從「開始」功能表執行「工作台」，請選取「所有程式> AEM Forms > Workbench」（如果您選擇將捷徑檔案夾儲存在此）。 如需詳細資訊，請參閱使 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">用工作台</a> 檔案。
-   * **設計人員**:您可以從Workbench內部存取設計人員。 如需詳細資訊，請參閱設計人員說明中的 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">快速入門主題</a>。
+   * **工作台**:若要從「開始」功能表執行「工作台」，請選取「所有程式> AEM Forms > Workbench」（如果您選擇將捷徑檔案夾儲存在此）。如需詳細資訊，   請參閱「使用Workbench<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">」檔案。</a>
+   * **設計人員**:您可以從Workbench內部存取設計人員。如需詳細資訊，請參閱<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">設計人員說明</a>中的快速入門主題。
    * **AEM Forms SDK**:如需使用SDK的詳細資訊，請參閱「使 <a href="http://www.adobe.com/go/learn_aemforms_programming_65">用AEM表格進行程式設計」</a>。
 
-## 升級程式 {#upgrading-processes}
+## 升級進程{#upgrading-processes}
 
 JEE程式上的AEM Forms可使用「升級精靈」升級至AEM Forms應用程式。 如需詳細資訊，請參閱工作台說明中的升級舊式物件檔案。
 
-### 配置並登錄到伺服器 {#configuring-and-logging-server}
+### 配置並登錄到伺服器{#configuring-and-logging-server}
 
 若要使用Workbench，您必須執行AEM Forms的例項，通常是在個別電腦上。 您必須有使用者名稱和密碼才能登入AEM Forms，以及伺服器位置的詳細資訊。
 
@@ -186,17 +187,17 @@ JEE程式上的AEM Forms可使用「升級精靈」升級至AEM Forms應用程�
 >
 >如果您已將AEM Forms配置為使用EMC Documentum或IBM FileNet儲存庫提供程式，並且您想要登錄到除在AEM Forms管理控制台中配置為預設值的儲存庫以外的儲存庫，請提供用戶名為username@Repository。
 
-### 配置超時設定 {#configuring-timeout-settings}
+### 配置超時設定{#configuring-timeout-settings}
 
-依預設，Workbench會在兩小時後逾時，不論活動或閒置。 若要編輯逾時設定，請參閱管理控制台說明中的「設定使用者管理>設定進階 <a href="https://docs.adobe.com/content/help/en/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">系統屬性」</a>。
+依預設，Workbench會在兩小時後逾時，不論活動或閒置。 要編輯超時設定，請參閱<a href="https://docs.adobe.com/content/help/en/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理控制台幫助</a>中的「配置用戶管理>配置高級系統屬性」。
 
-### 設定Workbench以透過HTTPS連線 {#configuring-workbench-to-connect-over-HTTPS}
+### 設定Workbench以透過HTTPS {#configuring-workbench-to-connect-over-HTTPS}連線
 
-若要透過HTTPS將Workbench連接至AEM Forms伺服器，您必須確保核發公開金鑰的憑證授權機構(CA)被Workbench認為受信任。 如果證書未被識別為來自受信任的源，則必須更新 [Workbench_HOME]/workbench/jre/lib/security目錄中的cacert檔案。
+若要透過HTTPS將Workbench連接至AEM Forms伺服器，您必須確保核發公開金鑰的憑證授權機構(CA)被Workbench認為受信任。 如果證書未被識別為來自受信任源，則必須更新位於[Workbench_HOME]/workbench/jre/lib/security目錄中的cacert檔案。
 
 >[!NOTE]
 >
->[Workbench_HOME] 代表您安裝Workbench的目錄。 預設位置為C:\Program Files (x86)\Adobe Experience Manager表單工作台。
+>[Workbench_] HOME代表您安裝Workbench的目錄。預設位置為C:\Program Files (x86)\Adobe Experience Manager表單工作台。
 
 請確定您使用憑證中指定的名稱來連線至HTTPS。 此名稱通常是完全限定的主機名。
 
@@ -205,22 +206,22 @@ JEE程式上的AEM Forms可使用「升級精靈」升級至AEM Forms應用程�
 
    >[!NOTE]
    >
-   >若要匯出憑證，請開啟Web瀏覽器並登入管理主控台，在瀏覽器中安裝憑證，然後將憑證從瀏覽器匯出至暫存位置(或直接匯出至 [Workbench_HOME]/workbench/jre/lib/security目錄)。
+   >若要匯出憑證，請開啟Web瀏覽器並登入管理主控台，在瀏覽器中安裝憑證，然後將憑證從瀏覽器匯出至暫存位置（或直接匯出至[Workbench_HOME]/workbench/jre/lib/security目錄）。
 
-1. 將憑證複製至 [Workbench_HOME]/workbench/jre/lib/security目錄。
+1. 將憑證複製至[Workbench_HOME]/workbench/jre/lib/security目錄。
 
-1. 開啟命令提示視窗，導覽至 [Workbench_HOME]/workbench/jre/bin，然後輸入下列命令：
+1. 開啟命令提示視窗，導覽至[Workbench_HOME]/workbench/jre/bin，然後輸入下列命令：
    `keytool -import -storepass changeit -file [Workbench_HOME]\workbench\jre\lib\security\ssl_cert_for_certname.cer -keystore [Workbench_HOME]\workbench\jre\lib\security\cacerts -alias example`
 其中：
    * changeit是快取密鑰庫的預設密碼。
    * certname是您在步驟1中選擇的證書。
    * 示例是您為證書選擇的別名。 此值可以變更
 
-1. 當系統提示您信任憑證時，請輸入「是」並按一下「輸入」金鑰。 keytool會繼續將cacerts檔案匯入 [Workbench_HOME]/workbench/jre/lib/security目錄。
+1. 當系統提示您信任憑證時，請輸入「是」並按一下「輸入」金鑰。 keytool會繼續將cacerts檔案匯入至[Workbench_HOME]/workbench/jre/lib/security目錄。
 
 1. 關閉並重新啟動Workbench以套用變更。
 
-### 為動態生成的模板配置快取設定 {#configuring-cache-settings-for-dynamically-generated-templates}
+### 為動態生成的模板配置快取設定{#configuring-cache-settings-for-dynamically-generated-templates}
 
 如果您的應用程式會自動更新XFA內容，以即時產生唯一範本，則應考慮下列快取操作方面。 實際上，每個交易都使用新的唯一範本。
 
@@ -228,7 +229,7 @@ JEE程式上的AEM Forms可使用「升級精靈」升級至AEM Forms應用程�
 
 * **範本檔案名稱**:用作快取表單主要唯一識別碼的範本位置和檔案名稱。
 * **時間戳**:範本檔案包含用來決定表單上次更新時間的時間戳記。
-* **範本UUID**:設計人員會在每個範本中插入表單及其版本的唯一識別碼(UUID)。 每次更新表單時，就會更新內嵌的UUID。 例如，XDP範本可能會顯示下列內容：
+* **範本UUID**:設計人員會在每個範本中插入表單及其版本的唯一識別碼(UUID)。每次更新表單時，就會更新內嵌的UUID。 例如，XDP範本可能會顯示下列內容：
 
    `<?xml version="1.0" encoding="UTF-8"?>`
    `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=http://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="http://www.xfa.org/schema/xfa-template/2.6/">`
@@ -237,8 +238,8 @@ JEE程式上的AEM Forms可使用「升級精靈」升級至AEM Forms應用程�
 
 
 Forms服務會參照檔案名稱或儲存庫位置，或參照記憶體中的XML物件值來接收範本。
-* **參考傳遞的範本**:使用內容根目錄和表單名稱。 如果使用此方法在每個請求中傳遞具有不同檔案名的唯一模板，則磁碟快取將不斷增長，並且永遠不會重複使用。 為避免此情況，應以相同檔案名稱傳遞唯一範本，以確保所有請求都會更新相同的快取。
-* **以值傳遞的範本**:使用theinDataDoc參數，使用與資料一起傳遞的範本位元組。 如果使用此方法傳遞具有不同UUID的唯一模板，磁碟快取將會無限增長，並且永遠不會重複使用。 為避免這種情況，應從所有模板中刪除UUID屬性，以確保不為模板建立快取。 或者，傳遞相同的非空UUID允許建立快取對象，但確保同一快取會隨每個請求而更新。
+* **參考傳遞的範本**:使用內容根目錄和表單名稱。如果使用此方法在每個請求中傳遞具有不同檔案名的唯一模板，則磁碟快取將不斷增長，並且永遠不會重複使用。 為避免此情況，應以相同檔案名稱傳遞唯一範本，以確保所有請求都會更新相同的快取。
+* **以值傳遞的範本**:使用theinDataDoc參數，使用與資料一起傳遞的範本位元組。如果使用此方法傳遞具有不同UUID的唯一模板，磁碟快取將會無限增長，並且永遠不會重複使用。 為避免這種情況，應從所有模板中刪除UUID屬性，以確保不為模板建立快取。 或者，傳遞相同的非空UUID允許建立快取對象，但確保同一快取會隨每個請求而更新。
 
 為防止快取無限成長，請考量下列因素，以使用新的AEM Forms API（即renderHTMLForm2和renderPDFForm2）來轉換動態產生的範本。
 
@@ -255,21 +256,21 @@ Forms服務會參照檔案名稱或儲存庫位置，或參照記憶體中的XML
    * 移除UUID或在所有動態產生的範本中傳遞相同的UUID。
    * 通過模板位元組或磁碟上相同檔案名生成文檔。
 
-### 解除安裝工作台 {#uninstalling-workbench}
+### 卸載Workbench {#uninstalling-workbench}
 
 使用「控制面板」中的「添加或刪除程式」功能啟動卸載程式。 Workbench和Designer應用程式有個別的解除安裝程式。
 
-## 設定AEM Forms XDC編輯器 {#configuring-aem-forms-xdc-editor}
+## 設定AEM Forms XDC編輯器{#configuring-aem-forms-xdc-editor}
 
 使用XDC編輯器，網路印表機管理員可以建立和修改XML Forms架構裝置組態(XDC)檔案。 XDC檔案描述了打印機的功能，如打印機語言或紙張大小和紙盒位置之間的關聯。
 
 在網路打印機管理員使用XDC編輯器之前，請重新定位示例XDC檔案，並參閱使用XDC編輯器建立設備配置檔案。
 
 **要獲取示例XDC檔案**:
-1. 在AEM Forms伺服器上，在 [AEM Forms根目錄\sdk\samples\Output\IVS中找到XDC資]料夾。
+1. 在AEM Forms伺服器上，找到[AEM Forms root]\sdk\samples\Output\IVS中的XDC資料夾。
 1. 將此資料夾的內容複製至可從Workbench或Eclipse系統存取的目錄。
 
 **要獲取XDC編輯器幫助**:
 1. 前往AEM Forms檔案網站。
-1. 按一下「 **開發** 」標籤，並導覽至「使用XDC編輯器建立裝置描述檔」。 下載xdc_editor_help_web.zip檔案，並依照讀我檔案中的指示安裝說明檔案。
+1. 按一下&#x200B;**Develop**&#x200B;頁籤，然後導航至使用XDC Editor建立設備配置檔案。 下載xdc_editor_help_web.zip檔案，並依照讀我檔案中的指示安裝說明檔案。
 
