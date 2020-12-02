@@ -1,8 +1,8 @@
 ---
 title: AEM Forms工作區不提供Flex工作區的功能
 seo-title: AEM Forms工作區不提供Flex工作區的功能
-description: AEM Forms工作區在以Flex為基礎的工作區之外有創新。 閱讀功能與功能的差異。
-seo-description: AEM Forms工作區在以Flex為基礎的工作區之外有創新。 閱讀功能與功能的差異。
+description: AEM Forms工作區在Flex工作區以外提供創新。 閱讀功能與功能的差異。
+seo-description: AEM Forms工作區在Flex工作區以外提供創新。 閱讀功能與功能的差異。
 uuid: 128729b3-2367-42e8-8159-a080595e8455
 contentOwner: robhagat
 content-type: reference
@@ -11,11 +11,14 @@ topic-tags: forms-workspace
 discoiquuid: ef5c957a-9d5a-42be-ad85-bdca876f56bc
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
 
-# AEM Forms工作區不提供Flex工作區的功能 {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
+# AEM Forms工作區{#features-of-flex-workspace-not-available-in-aem-forms-workspace}中未提供Flex工作區的功能
 
 AEM Forms工作區是全新的工作區。 以下是AEM Forms工作區中無法使用的Flex工作區功能。
 
