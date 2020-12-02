@@ -8,11 +8,14 @@ content-type: reference
 docset: aem65
 translation-type: tm+mt
 source-git-commit: f466193a259d9e8869d7f79eafda1be20869e4af
+workflow-type: tm+mt
+source-wordcount: '512'
+ht-degree: 2%
 
 ---
 
 
-# 關於從動態媒體——混合媒體移轉至動態媒體-Scene7 {#about-migrating}
+# 關於從Dynamic Media-Hybrid移至Dynamic Media-Scene7 {#about-migrating}
 
 Dynamic Media-Hybrid是與Adobe Experience Manager整合的舊版Dynamic Media。 Hybrid版本是首次在AEM(Adobe Experience Manager)6.1中推出。雖然Adobe仍繼續支援混合模式，但並非偏好模式（Dynamic Media-Scene7為偏好模式）。 它也不支援新功能，例如智慧型裁切和全景影像。 而Dynamic Media-Scene7則提供。
 
@@ -29,7 +32,7 @@ Dynamic Media-Hybrid和Dynamic Media-Scene7之間的其他主要差異包括：
 >
 >Adobe建議您不要在即時製作執行個體上將動態媒體——混合實作移轉至Dynamic Media-Scene7。
 
-## 選項1 —— 在AEM上布建新的Dynamic Media-Scene7例項 {#provision-new-dms7}
+## 選項1 —— 在AEM {#provision-new-dms7}上布建新的Dynamic Media-Scene7例項
 
 請考慮在Adobe Experience Manager上使用全新布建的Dynamic Media-Scene7例項，以全新開始。 除了透過Dynamic Media Cloud Service擷取和處理資產外，強烈建議Adobe對資產使用、工作流程和元件進行稽核。 在許多情況下，自訂元件和工作流程可以由新的立即可用功能取代。
 
@@ -46,5 +49,5 @@ Dynamic Media-Hybrid和Dynamic Media-Scene7之間的其他主要差異包括：
 | 7 | 瀏覽每個「網頁內容管理」參考的資產，並更新其相關的URL。 |  |
 | 8 | 移轉任何自訂工作流程，以支援新的Dynamic Media-Scene7模式（手動更新）。 |  |
 | 9 | 驗證您的「網頁內容管理」上傳和設定。 |  |
-| 10 | 經過驗證後，請取得核准以停用動態媒體混合作者（維持為後退）。 |  |
+| 10 | 經過驗證後，請取得核准以停用動態媒體混合作者（維持為後退版）。 |  |
 | 11 | 在Dynamic Media-Scene7成功使用約一個月後，請刪除Dynamic Media-Hybrid Author例項。 |  |
