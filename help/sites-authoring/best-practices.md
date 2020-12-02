@@ -1,6 +1,6 @@
 ---
-title: 最佳實務
-seo-title: 最佳實務
+title: 最佳作法
+seo-title: 最佳作法
 description: 如何以最有效率、最有效的方式使用AEM
 seo-description: 如何以最有效率、最有效的方式使用AEM
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 translation-type: tm+mt
 source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 5%
 
 ---
 
 
-# Best Practices{#best-practices}
+# 最佳作法{#best-practices}
 
 編寫最佳實務說明如何以最有效率且最有效的方式使用AEM。 這份不斷增加的主題清單包含AEM中的多個領域。
 
@@ -69,7 +72,7 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 |  |  |  |
 |---|---|---|
 | 製作工具 | [製作環境與工具](/help/sites-authoring/author-environment-tools.md) | 提供用於製作頁面的工具的概述。 |
-| 組織頁面 | [建立和組織頁面](/help/sites-authoring/managing-pages.md) | 提供如何最佳組織頁面的概觀，包括命名慣例。 |
+| 組織頁面 | [建立及組織頁面](/help/sites-authoring/managing-pages.md) | 提供如何最佳組織頁面的概觀，包括命名慣例。 |
 
 ## 表單 {#forms}
 
