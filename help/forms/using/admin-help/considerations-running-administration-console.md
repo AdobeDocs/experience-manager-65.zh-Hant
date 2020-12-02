@@ -11,19 +11,23 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 525c4afc-e109-4546-b78c-1efee63edc43
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '146'
+ht-degree: 0%
 
 ---
 
 
-# 運行管理控制台時的注意事項 {#considerations-when-running-administrationconsole}
+# 運行管理控制台{#considerations-when-running-administrationconsole}時的注意事項
 
 以下是運行管理控制台時要考慮的事項：
 
-* 如果您使用URL存取管理控制台， `https://[hostname]:'port'/adminui`則指定的主機名稱不能包含底線字元。 否則，指向管理控制台某些區域的連結可能無法正常運作。
+* 如果您使用URL `https://[hostname]:'port'/adminui`存取管理控制台，則指定的主機名稱不能包含底線字元。 否則，指向管理控制台某些區域的連結可能無法正常運作。
 * 如果您在日文作業系統的Windows檔案總管中執行管理主控台，可能會遇到下列問題：
 
    * 按一下連結會返回登入頁面，而非預期的連結。
    * 按一下連結會顯示權限錯誤。
+
    最佳實務是從其他瀏覽器（例如Mozilla Firefox）執行管理控制台，以確保沒有連結會失敗。
 
 * 在管理控制台中執行搜尋時，請勿使用反斜線字元()。
