@@ -11,27 +11,30 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 0%
 
 ---
 
 
-# 將Form Bridge與HTML5表單的自訂入口網站整合{#integrating-form-bridge-with-custom-portal-for-html-forms}
+# 將表單Bridge與HTML5表單的自訂入口網站整合{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBridge API參考，請參閱 [FormBridge API參考](/help/forms/using/form-bridge-apis.md)。
+FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBridge API參考，請參閱[FormBridge API參考](/help/forms/using/form-bridge-apis.md)。
 
 您可以使用FormBridge API從HTML頁面取得或設定表單欄位的值，並送出表單。 例如，您可以使用API來建立類似精靈的體驗。
 
 現有的HTML應用程式可運用FormBridge API與表單互動，並將它內嵌在HTML頁面中。 您可以使用下列步驟，使用Form Bridge API來設定欄位的值。
 
-## 將HTML5表格整合至網頁 {#integrating-html-forms-to-a-web-page}
+## 將HTML5表格整合至網頁{#integrating-html-forms-to-a-web-page}
 
 1. **選擇描述檔或建立描述檔**
 
-   1. 在CRX DE介面中，導航至： `https://'[server]:[port]'/crx/de`。
+   1. 在CRX DE介面中，導航至：`https://'[server]:[port]'/crx/de`。
    1. 使用管理員憑證登入。
    1. 建立描述檔或選擇現有描述檔。
 
-      有關如何建立配置檔案的詳細資訊，請參 [閱建立新配置檔案](/help/forms/using/custom-profile.md)。
+      有關如何建立配置式的詳細資訊，請參閱[建立新配置式](/help/forms/using/custom-profile.md)。
 
 1. **修改HTML描述檔**
 
@@ -73,24 +76,24 @@ FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBrid
 
    >[!NOTE]
    >
-   >第9 **行包含** CSS樣式和JavaScript檔案的其他JSP參考，以設計頁面。
+   >**第9行**&#x200B;包含用於設計頁面的CSS樣式和JavaScript檔案的額外JSP參考。
    >
    >
-   >第18行的&lt;div id=&quot;rightdiv&quot;>標 **簽包含** XFA表單的HTML程式碼片段。
-   頁面樣式化為兩個容器： **左****右**。 正確的容器有表格。 左側容器有兩個輸入欄位，並包含外部HTML頁面的一部分。
+   >**line 18**&#x200B;上的&lt;div id=&quot;rightdiv&quot;>標籤包含XFA表單的HTML程式碼片段。
+   頁面樣式化為兩個容器：**left**&#x200B;和&#x200B;**right**。 正確的容器有表格。 左側容器有兩個輸入欄位，並包含外部HTML頁面的一部分。
    下列螢幕擷取畫面顯示表單在瀏覽器中的顯示方式。
 
    ![入口](assets/portal.jpg)
 
-   左側是 **HTML頁面的一部分**。 包含欄位的右側是 **xfa表格**。
+   左側是&#x200B;**HTML頁面**&#x200B;的一部分。 包含欄位的右側是&#x200B;**xfa表格**。
 
 1. **從頁面存取表格欄位**
 
    以下是您可新增的範例指令碼，以在表單欄位中設定值。
 
-   例如，如果要使用欄位 **名字和** 姓氏中的值設定 **EmployeeName** ，請調用 ******** window.formBridge.setFieldValue函式。
+   例如，如果您想使用「欄位&#x200B;**名字**&#x200B;和&#x200B;**姓氏**&#x200B;中的值來設定&#x200B;**EmployeeName**，請呼叫&#x200B;**window.formBridge.setFieldValue**&#x200B;函式。
 
-   同樣地，您也可以呼叫 **window.formBridge.getFieldValue** API來讀取值。
+   同樣地，您也可以呼叫&#x200B;**window.formBridge.getFieldValue** API來讀取值。
 
    ```javascript
    $(function() {
