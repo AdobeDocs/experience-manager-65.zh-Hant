@@ -11,11 +11,14 @@ topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 8fb7d088-94bf-4799-98b3-8fa58eef83df
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
 
-# 將您的反向連結篩選設定為允許空白{#setting-your-referrer-filter-to-allow-empty}
+# 將反向連結篩選設為允許空{#setting-your-referrer-filter-to-allow-empty}
 
 >[!NOTE]
 >
@@ -25,6 +28,6 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 如果您不想使用Application Viewer來檢視處於開發和測試狀態的應用程式，則不需要變更反向連結篩選器的預設設定。
 
-在您執行中的AEM「作者」例項中，導覽至： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) ，並搜尋&#39;Apache Sling Referrer Filter&#39;。 按一下以編輯反向連結篩選並勾選「允許空白」核取方塊（請參閱下圖）。 接著按一下儲存按鈕並關閉瀏覽器頁面。
+在您執行中的AEM「作者」例項中，導覽至：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)並搜尋&#39;Apache Sling Referrer Filter&#39;。 按一下以編輯反向連結篩選並勾選「允許空白」核取方塊（請參閱下圖）。 接著按一下儲存按鈕並關閉瀏覽器頁面。
 
 ![反向連結篩選設定](assets/chlimage_1-106.png)
