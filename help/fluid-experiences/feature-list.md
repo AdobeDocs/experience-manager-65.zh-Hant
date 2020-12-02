@@ -5,8 +5,8 @@ index: n
 translation-type: tm+mt
 source-git-commit: 33abb544c5f12f7d7a44fc326f07fe9b53ebc9d3
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Adobe Experience Manager Fluid Experiences利用AEM Sites、AEM Dynamic Media和AEM Assets等強大功能集，為無頭內容傳遞提供強大的解決方案。
 
-AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用案例已解決。 完整的AEM Sites、Assets和Dynamic Media解決方案可提供Headful內容製作和傳送，以及AEM對混合使用案例的強 [大支援。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用案例已解決。 [完整的AEM Sites、Assets和Dynamic Media解決方案提供有頭腦式內容製作和傳送，以及AEM對混合使用案例的強大支援。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
 下表定義AEM流暢體驗的功能，並連結至相關的支援檔案。
 
@@ -28,7 +28,7 @@ AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用�
 >
 >AEM流暢體驗是AEM功能的子集。 這些表格中連結的功能可能包括AEM中的其他功能，但不包括AEM Fluid Experiences中的其他功能。
 
-## 儲存庫功能 {#repository-features}
+## 儲存庫功能{#repository-features}
 
 |  |
 |---|
@@ -37,13 +37,13 @@ AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用�
 | [影像轉譯](/help/assets/image-presets.md) |
 | [中繼資料和標籤管理](/help/assets/metadata.md) |
 | [搜尋](/help/assets/manage-assets.md) |
-| [系列](/help/assets/manage-assets.md) 和燈 [箱](/help/assets/light-box.md) |
+| [收](/help/assets/manage-assets.md) 集和燈 [箱](/help/assets/light-box.md) |
 | [設定檔](/help/assets/processing-profiles.md) |
 | [版本控制](/help/assets/manage-assets.md) |
 | [重複偵測](/help/assets/duplicate-detection.md) |
 | [智慧標記](/help/assets/enhanced-smart-tags.md) |
 
-## 存取、API和傳送功能 {#access-api-and-delivery-features}
+## 存取、API和傳送功能{#access-api-and-delivery-features}
 
 |  |
 |---|
@@ -56,7 +56,7 @@ AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用�
 | [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) |
 | [動態媒體](/help/assets/dynamic-media.md) |
 
-## 管理與整合功能 {#admin-and-integration-features}
+## 管理與整合功能{#admin-and-integration-features}
 
 |  |
 |---|
@@ -72,7 +72,7 @@ AEM Fluid Experiences與傳統AEM有所不同，因為只有無頭傳送使用�
 | [工作流程](/help/sites-administering/workflows-starting.md) |
 | 連接（雲端服務） |
 
-## 分析與個人化 {#analytics-and-personalization}
+## Analytics and Personalization {#analytics-and-personalization}
 
 |  |
 |---|
