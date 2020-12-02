@@ -11,40 +11,43 @@ topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '747'
+ht-degree: 0%
 
 ---
 
 
-# AEM Forms工作區疑難排解指引 {#troubleshooting-guidelines-for-aem-forms-workspace}
+# AEM Forms工作區{#troubleshooting-guidelines-for-aem-forms-workspace}的疑難排解指引
 
 本文討論如何透過啟用記錄以及在瀏覽器中使用除錯程式來除錯AEM Forms工作區。 此外，它也說明使用AEM Forms工作區時可能會遇到的一些常見問題及解決方法。
 
-## 無法安裝AEM Forms工作區套件 {#unable-to-install-aem-forms-workspace-package}
+## 無法安裝AEM Forms工作區套件{#unable-to-install-aem-forms-workspace-package}
 
-安裝修補程式後，請開啟AEM Forms工作區。 如果遇到「找不到資源」錯誤，請開啟CRX包管理器並重新安裝包 `adobe-lc-workspace-pkg-<version>.zip` 。
+安裝修補程式後，請開啟AEM Forms工作區。 如果遇到「找不到資源」錯誤，請開啟CRX包管理器並重新安裝`adobe-lc-workspace-pkg-<version>.zip`包。
 
-在安裝軟體包時，如果遇到錯誤， `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`請執行以下步驟：
+在安裝軟體包時，如果遇到`javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`錯誤，請執行以下步驟：
 
-1. 登入CRX DE lite。 預設URL為 `https://[localhost]:'port'/lc/crx/de/index.jsp`
+1. 登入CRX DE lite。 預設URL為`https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. 刪除以下節點：
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. 轉至「包管理器」。 預設URL為 `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
-1. 搜尋並安裝套 `adobe-lc-workspace-pkg-[version].zip` 件。
+1. 轉至「包管理器」。 預設URL為`https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
+1. 搜索並安裝`adobe-lc-workspace-pkg-[version].zip`軟體包。
 1. 重新啟動應用程式伺服器。
 
-## AEM Forms工作區記錄 {#aem-forms-workspace-nbsp-logging}
+## AEM Forms工作區記錄{#aem-forms-workspace-nbsp-logging}
 
 您可以在不同層級產生記錄檔，以最佳化錯誤疑難排解。 例如，在複雜的應用程式中，在元件層級登入有助於除錯和疑難排解特定元件。
 
 在AEM Forms工作區中：
 
-* 若要取得特定元件檔案的記錄資訊，請在URL `/log/<ComponentFile>/<LogLevel>` 中附加，然後按 `Enter`。 在指定日誌級別上，元件檔案的所有日誌資訊都打印在控制台上。
+* 若要取得特定元件檔案的記錄資訊，請在URL中附加`/log/<ComponentFile>/<LogLevel>`，然後按`Enter`。 在指定日誌級別上，元件檔案的所有日誌資訊都打印在控制台上。
 
-* 若要取得所有元件檔案的記錄資訊，請 `/log/all/trace` 在URL中附加，然後按 `Enter`。
+* 若要取得所有元件檔案的記錄資訊，請在URL中附加`/log/all/trace`，然後按`Enter`。
 
-* 日誌格式： `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
+* 日誌格式：`<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
 
 >[!NOTE]
 >
@@ -52,7 +55,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 * 用戶設定的日誌級別僅用於該瀏覽器會話。 當使用者重新整理頁面時，所有元件的記錄層級都會設為其初始值。
 
-### AEM Forms工作區中的元件檔案清單 {#list-of-component-files-in-nbsp-aem-forms-workspace}
+### AEM Forms工作區{#list-of-component-files-in-nbsp-aem-forms-workspace}中的元件檔案清單
 
 <table>
  <tbody>
@@ -107,7 +110,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    <td><p>userinfoModel</p> </td>
   </tr>
   <tr>
-   <td><p>outofoficeModel</p> </td>
+   <td><p>outofofficeModel</p> </td>
    <td><p>startpointlistView</p> </td>
    <td><p>userinfoView</p> </td>
   </tr>
@@ -139,7 +142,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
  </tbody>
 </table>
 
-### AEM Forms工作區中可用的記錄層級 {#log-levels-available-in-nbsp-aem-forms-workspace}
+### AEM Forms工作區{#log-levels-available-in-nbsp-aem-forms-workspace}中可用的記錄層級
 
 * 致命
 * 錯誤
@@ -149,17 +152,17 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 * TRACE
 * 關閉
 
-## 瀏覽器的除錯資訊 {#debugging-information-for-browsers}
+## 瀏覽器{#debugging-information-for-browsers}的除錯資訊
 
 指令碼和樣式可在不同的瀏覽器中除錯。
 
-* **在IE中除錯**:若要在IE中除錯AEM Forms工作區，請參閱： [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx)。
+* **在IE中除錯**:若要在IE中除錯AEM Forms工作區，請參閱： [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
 
-* **在Chrome中除錯**:若要在Chrome中開啟除錯程式，請使用捷徑：Ctrl+Shift+I。如需詳細資訊，請參閱： [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html)。
+* **在Chrome中除錯**:若要在Chrome中開啟除錯程式，請使用捷徑：Ctrl+Shift+I。如需詳細資訊，請參閱： [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
 
-* **在Firefox中除錯**:Firefox中有數個可用來除錯指令碼和樣式的附加元件。 例如，Firebug是這類除錯公用程式([https://getfirebug.com](https://getfirebug.com))。
+* **在Firefox中除錯**:Firefox中有數個可用來除錯指令碼和樣式的附加元件。例如，Firebug是這類除錯公用程式([https://getfirebug.com](https://getfirebug.com))。
 
-## 常見問答集 {#faqs}
+## 常見問題{#faqs}
 
 1. PDF表格不會在Google Chrome中轉譯或提交。
 
