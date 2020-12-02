@@ -14,17 +14,17 @@ ht-degree: 8%
 ---
 
 
-# AEM 6.5 Mobile 使用指南 {#mobile}
+# AEM 6.5 Mobile 使用指南  {#mobile}
 
 + [行動使用指南總覽](home.md)
-+ Introduction to AEM Mobile {#introduction}
++ AEM Mobile {#introduction}簡介
    + [AEM Mobile快速入門](getting-started-aem-mobile.md)
    + [AEM Mobile隨選](getting-started-aem-mobile-on-demand.md)
    + [行動應用程式](mobile-apps.md)
    + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
    + [AEM Mobile - GDPR就緒性](aem-mobile-gdpr-compliance.md)
    + [開發行動應用程式](develop-mobile-apps.md)
-+ 製作隨選服務應用程式 {#authoring}
++ 製作隨選服務應用程式{#authoring}
    + [Mobile On-Demand](mobile-apps-ondemand.md)
    + [管理內容](mobile-apps-ondemand-manage-content-ondemand.md)
    + [發佈取消發佈內容](mobile-on-demand-publishing-unpublishing.md)
@@ -34,7 +34,7 @@ ht-degree: 8%
    + [上傳共用資源](mobile-on-demand-shared-resources.md)
    + [雲端設定](mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
    + [管理橫幅](mobile-on-demand-managing-banners.md)
-+ 開發隨選服務應用程式 {#developing}
++ 開發隨選服務應用程式{#developing}
    + [AEM Mobile隨選](aem-mobile-on-demand.md)
    + [應用程式範本和元件](app-templates-and-components1.md)
    + [內容屬性和節點](content-properties.md)
@@ -48,7 +48,7 @@ ht-degree: 8%
    + [演算和傳送](rendering-and-delivery.md)
    + [Content Services](developing-content-services.md)
    + [內容傳送](develop-content-as-a-service.md)
-+ 管理隨選服務應用程式 {#administering}
++ 管理隨選服務應用程式{#administering}
    + [AEM Mobile隨選](aem-mobile.md)
    + [AEM Mobile SetUp](aem-mobile-setup.md)
    + [設定您的使用者和使用者群組](aem-mobile-configure-users.md)
