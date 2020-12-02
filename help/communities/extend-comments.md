@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# 擴充注釋元件  {#extend-comments-component}
+# 擴展注釋元件{#extend-comments-component}
 
-擴展缺 [省元件](client-customize.md#extensions) (Extending a default component)的意圖是改變元件的外觀或行為以用於特定用途。
+[extending](client-customize.md#extensions)預設元件的用意是改變元件的外觀或行為以用於特定用途。
 
 元件的路徑是唯一的，並將預設元件作為超級資源類型引用。 與元件覆蓋的全域範圍相比，範圍有限，因此風險較低。
 
 >[!NOTE]
 >
->不支 [持延伸](client-customize.md#overlays) 覆蓋元件。
+>不支援延伸[覆蓋](client-customize.md#overlays)元件。
 
 ## 範例 {#example}
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 若要實作此解決方案，請建立可延伸（覆寫）現有元件並修改Handlebars指令碼的新元件。 使用新注釋的網站區域可以使用擴充的注釋，而使用預設外觀的網站則不受影響。
 
-注釋元件實際上是構成注釋系統的兩個元件之一。 因此，需要擴展兩個元件： *留言* 和 *留言*。 要編輯的指令碼位於 *comment*`header.hbs` 元件的檔案中，而父 *注釋元件* （注釋系統）則是作者實際新增至頁面的內容。
+注釋元件實際上是構成注釋系統的兩個元件之一。 因此，需要擴展兩個元件：*comments*&#x200B;和&#x200B;*comment*。 要編輯的指令碼位於&#x200B;*comment*&#x200B;元件的`header.hbs`檔案中，而父&#x200B;*comments*&#x200B;元件（注釋系統）是作者實際添加到頁面的內容。
 
 若要延伸意見，您必須：
 
