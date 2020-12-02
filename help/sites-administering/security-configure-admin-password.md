@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 00806e6e-3578-4caa-bafa-064f200a871f
 translation-type: tm+mt
 source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
 
-# 在安裝時設定管理員密碼{#configure-the-admin-password-on-installation}
+# 在安裝時配置管理員密碼{#configure-the-admin-password-on-installation}
 
 ## 概覽 {#overview}
 
@@ -27,9 +30,9 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 >[!CAUTION]
 >
->請注意，Felix Console不包含此功能，需手動變更密碼。 如需詳細資訊，請參閱相關的安 [全性檢查清單一節](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts)。
+>請注意，Felix Console不包含此功能，需手動變更密碼。 如需詳細資訊，請參閱相關的[安全性檢查清單區段](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts)。
 
-## 我要如何使用它？ {#how-do-i-use-it}
+## 我要如何使用它？{#how-do-i-use-it}
 
 如果您選擇透過命令列安裝AEM，而不是從檔案系統檔案總管連按兩下JAR，此功能將會自動觸發。
 
@@ -47,9 +50,9 @@ java -jar aem6.3.jar
 >
 >只有在安裝新AEM例項時，才會出現變更管理員密碼的提示。
 
-## 使用-nointeractive標籤 {#using-the-nointeractive-flag}
+## 使用-nointeractive標籤{#using-the-nointeractive-flag}
 
-您也可以選擇從屬性檔案指定密碼。 這是使用與系統屬性 `-nointeractive` 結合的標誌`-Dadmin.password.file` 。
+您也可以選擇從屬性檔案指定密碼。 這是通過結合`-nointeractive`系統屬性使用`-Dadmin.password.file`標誌來完成的。
 
 以下是範例：
 
@@ -57,7 +60,7 @@ java -jar aem6.3.jar
 java -Dadmin.password.file =/path/to/passwordfile.properties -jar aem6.3.jar -nointeractive
 ```
 
-檔案內的密 `passwordfile.properties` 碼必須具備下列格式：
+`passwordfile.properties`檔案內的密碼必須有下列格式：
 
 ```xml
 admin.password = 12345678
@@ -65,5 +68,5 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->如果您只是使用參 `-nointeractive` 數而不使用系統屬性 `-Dadmin.password.file` ,AEM會使用預設的管理員密碼，而不會要求您變更它，實際上是從舊版複製行為。 此非互動模式可用於使用安裝指令碼中的命令行進行自動安裝。
+>如果您只是使用`-nointeractive`參數而不使用`-Dadmin.password.file`系統屬性，AEM將使用預設的管理員密碼，而不會要求您變更，實際上是從舊版複製行為。 此非互動模式可用於使用安裝指令碼中的命令行進行自動安裝。
 
