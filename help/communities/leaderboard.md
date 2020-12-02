@@ -22,11 +22,11 @@ ht-degree: 5%
 
 本頁提供使用排行榜功能的基本資訊。
 
-在將排行榜元件包括在頁面之前，必須配置社 [區評分和標章](implementing-scoring.md)。
+在將排行榜元件包括在頁面之前，必須配置[社群評分和標章](implementing-scoring.md)。
 
-請參 [閱Scoring and Badges Essentials](configure-scoring.md)。
+請參閱[Scoring and Badges Essentials](configure-scoring.md)。
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 <table>
  <tbody>
@@ -52,7 +52,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱 <a href="enabling-leaderboard.md">排行榜功能</a></td>
+   <td>請參閱<a href="enabling-leaderboard.md">排行榜功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -61,4 +61,4 @@ ht-degree: 5%
 
 ### 檔案庫功能 {#file-library-function}
 
-一種社區站點結構，包括 [Leederboard功能](functions.md#leaderboard-function)，包括配置的組 `leaderboard` 件。
+一種社區站點結構，包括[Lederboard函式](functions.md#leaderboard-function)，包括配置的`leaderboard`元件。
