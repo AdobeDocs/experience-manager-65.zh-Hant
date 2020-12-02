@@ -77,13 +77,13 @@ Web標準日新月異，而DHTML是較舊的Web開發技術，很快被HTML5所�
 
    在您的程式碼中尋找&quot;sj_deviceDetect.js&quot;的JS包含。
 
-   這已由新的JS裝置偵測程式碼取代，網址為： [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers) .
+   這已由新的JS裝置偵測程式碼取代，網址為：[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers)。
 
 **什麼是取代檢視器平台？**
 
 取代DHTML的是Scene7 HTML5檢視器平台，包括：
 
-* HTML5立即可用的檢視器，可針對多種檢視器類型提供行動最佳化互動功能，包括基本縮放、彈出縮放、影像集、色票集、多維回轉和混合媒體。 如需這些檢視器的完整最新範例，請參閱： [https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
+* HTML5立即可用的檢視器，可針對多種檢視器類型提供行動最佳化互動功能，包括基本縮放、彈出縮放、影像集、色票集、多維回轉和混合媒體。 如需這些檢視器的完整最新範例，請參閱：[https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
 * HTML5檢視器SDK可針對HTML5支援的網站和裝置（例如iOS和Android）廣泛自訂Adobe Scene7檢視器，為品牌化檢視器外觀和互動功能提供最大的彈性和創意。 可重複使用效能最佳化元件的優點可降低檢視器開發的整體成本，並加速自訂開發。
 
 **HTML5檢視器平台何時會具備從DHTML檢視器平台轉換所需的功能？**
@@ -102,10 +102,10 @@ Scene7於2011年秋季發行第一個HTML5檢視器SDK，並推出5.5版。自�
 
 若要將檢視器轉換至HTML5平台，Scene7提供下列選項：
 
-1. 使用其中一個Scene7現成可用的HTML5檢視器，其範例可在以下網址找到： [https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
-1. 在SPS應用程式設定下，設定其中一個Scene7現成可用的HTML5檢視器。 這可讓您自訂特定行為，例如檢視器大小、轉場、縮放行為等： [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html)
-1. 修改CSS以自訂Scene7現成可用的HTML5檢視器外觀和感覺，以變更視覺設計，例如按鈕圖稿、位置、透明度、背景顏色等： [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers)
-1. 使用SDK從頭開始建立自訂HTML5檢視器，您可從這裡下載： [https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html). 您可以與專業服務合作來建立自訂檢視器，或由您自己的網頁開發團隊來建立。
+1. 使用其中一個Scene7現成可用的HTML5檢視器，其範例可在以下網址找到：[https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
+1. 在SPS應用程式設定下，設定其中一個Scene7現成可用的HTML5檢視器。 這可讓您自訂特定行為，例如檢視器大小、轉場、縮放行為等：[https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html)
+1. 修改CSS以自訂Scene7現成可用的HTML5檢視器外觀和感覺，以變更視覺設計，例如按鈕圖稿、位置、透明度、背景顏色等：[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers)
+1. 使用SDK從頭開始建立自訂HTML5檢視器，您可從這裡下載：[https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html)。 您可以與專業服務合作來建立自訂檢視器，或由您自己的網頁開發團隊來建立。
 
 **不支援HTML5的瀏覽器呢？**
 
@@ -131,4 +131,4 @@ HTML5在許多行動裝置和網頁瀏覽器上都受支援，並持續獲得推
 
 **如需詳細資訊，請與誰聯絡？**
 
-如果此常見問答集未回答您的所有問題，請使 [用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) ，或聯絡您的Adobe客戶經理。
+如果此常見問答集未回答您的所有問題，請[使用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)，或聯絡您的Adobe客戶經理。
