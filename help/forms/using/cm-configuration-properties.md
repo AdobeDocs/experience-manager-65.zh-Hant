@@ -10,13 +10,16 @@ topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '877'
+ht-degree: 3%
 
 ---
 
 
-# 對應管理配置屬性 {#correspondence-management-configuration-properties}
+# 通信管理配置屬性{#correspondence-management-configuration-properties}
 
-若要設定這些屬性，請在瀏覽器中開啟下列URL:並選 `https://<server>:<port>/<contextPath>/system/console/configMgr` 擇「對 **應管理配置」**。
+若要設定這些屬性，請在瀏覽器中開啟下列URL:`https://<server>:<port>/<contextPath>/system/console/configMgr`並選擇&#x200B;**對應管理配置**。
 
 Correponsence Management具有以下配置屬性：
 
@@ -31,19 +34,19 @@ Correponsence Management具有以下配置屬性：
   <tr>
    <td><p>縮排</p> </td>
    <td>模組上的縮進<p> </p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12.7毫米</p> </td>
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
    <td>最小寬度數</td>
    <td>使用羅馬數字以外的編號清單時，項目符號／數字欄位應用的最小寬度</td>
-   <td>8.0mm</td>
+   <td>8.0毫米</td>
    <td>任何數字</td>
   </tr>
   <tr>
    <td><p>羅馬數字最小寬度</p> </td>
    <td><p>使用羅馬數字時，項目符號／數字欄位應用的最小寬度</p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12.7毫米</p> </td>
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
@@ -152,13 +155,13 @@ Correponsence Management具有以下配置屬性：
    <td><p>資料顯示格式</p> </td>
    <td><p>指定資料的地區設定特定顯示格式</p> </td>
    <td><p>locale=en_US;dateFormat=dd-MM-yyyy;numberDecimalSeparator=。;numberGroupSeparator=,;numberUseGroupSeparator=truelocale=de_DE;dateFormat=dd-MM-yyyy;numberDecimalSeparator=,;numberGroupSeparator=。;numberUseGroupSeparator=truelocale=fr_FR;dateFormat=dd-MM-yyyy;numberDecimalSeparator=,;numberGroupSeparator= ;numberUseGroupSeparator=truelocale=ja_JP;dateFormat=dd-MM-yyyy;numberDecimalSeparator=。;numberGroupSeparator=,;numberUseGroupSeparator=true</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
   </tr>
   <tr>
    <td><p>資料編輯格式</p> </td>
    <td><p>編輯資料格式。 將資料寫入為字串或從字串剖析資料時，會使用此功能</p> </td>
    <td><p>locale=en_US;dateFormat=dd-MM-yyyy;numberDecimalSeparator=。;numberGroupSeparator=,;numberUseGroupSeparator=true</p> </td>
-   <td>--<p> </p> </td>
+   <td>—<p> </p> </td>
   </tr>
   <tr>
    <td><p>在發佈時管理字母例項</p> </td>
@@ -241,18 +244,18 @@ Correponsence Management具有以下配置屬性：
   <tr>
    <td><p>CM用戶根</p> </td>
    <td><p>包含所有Correponsement Management用戶資產的資料夾的URL</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
    <td><p>有效的資料夾位置</p> </td>
   </tr>
   <tr>
    <td><p>字母快取大小</p> </td>
-   <td><p>指定要保存在快取中的字母數上限。</p> <p>更改此值將導致清除快取 <code>in-memory</code> 。</p> </td>
+   <td><p>指定要保存在快取中的字母數上限。</p> <p>更改此值將導致清除<code>in-memory</code>快取。</p> </td>
    <td><p>100</p> </td>
    <td><p>任何數值</p> </td>
   </tr>
   <tr>
    <td><p>啟用字母快取</p> </td>
-   <td><p>啟用／停用字母快取。</p> <p>更改此值將導致清除快取 <code>in-memory </code> 。</p> </td>
+   <td><p>啟用／停用字母快取。</p> <p>更改此值將導致清除<code>in-memory </code>快取。</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -271,7 +274,7 @@ Correponsence Management具有以下配置屬性：
   <tr>
    <td>臨時資料夾</td>
    <td>臨時資料夾的位置。</td>
-   <td>acm.tpm資料夾</td>
+   <td>acm.tpmFolder</td>
    <td> </td>
   </tr>
   <tr>
@@ -288,7 +291,7 @@ Correponsence Management具有以下配置屬性：
   </tr>
   <tr>
    <td><p>調試目錄 </p> <p> </p> </td>
-   <td>用於調試的檔案系統資料夾位置。 如果目錄未執行， <code>exists</code>則不會產生任何除錯轉儲。</td>
+   <td>用於調試的檔案系統資料夾位置。 如果目錄不是<code>exists</code>，則不會生成調試轉儲。</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>
