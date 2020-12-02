@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
   <tr>
    <td><p>SystemInfo.properties</p></td>
    <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties`</p></td>
-   <td><p>此API是system.getProperties <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">Java API的包裝函式</a> 。 它檢索當前工作環境的配置。 </p></td>
+   <td><p>此API是<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API的包裝函式。 它檢索當前工作環境的配置。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>
