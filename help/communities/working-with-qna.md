@@ -36,29 +36,29 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 檔案說明：
 
 * 新增QnA論壇功能至AEM網站。
-* 元件的配置 `QnA`設定。
+* `QnA`元件的配置設定。
 
-## 新增問答論壇至頁面 {#adding-a-q-a-forum-to-a-page}
+## 新增問答論壇至頁面{#adding-a-q-a-forum-to-a-page}
 
-要在作者模 `QnA` 式下將元件添加到頁面，請使用元件瀏覽器來 `Communities / QnA` 查找並將其拖放到QnA論壇應出現的頁面上。
+要在作者模式下將`QnA`元件添加到頁面，請使用元件瀏覽器找到`Communities / QnA`並將其拖放到應出現QnA論壇的頁面上。
 
-如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/qna-essentials.md#essentials-for-client-side) ，元件的顯示方式 `QnA` 如下：
+當包含[必要的用戶端程式庫](/help/communities/qna-essentials.md#essentials-for-client-side)時，`QnA`元件的顯示方式如下：
 
 ![qna元件](assets/qna-component.png)
 
 ### 配置QnA {#configuring-qna}
 
-選擇要訪問 `QnA` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`QnA`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![配置](assets/configure-new.png)
 
 ![qna-config](assets/qna-config.png)
 
-#### 「設定」頁籤 {#settings-tab}
+#### 「設定」頁籤{#settings-tab}
 
-在「設 **定** 」標籤下，指定主題（問題）和回覆（答案）的設定：
+在&#x200B;**Settings**&#x200B;標籤下，指定主題（問題）和回覆（答案）的設定：
 
 * **允許附件縮圖**
 
@@ -94,7 +94,7 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
 * **允許標記**
 
-   如果勾選，允許成員將標籤標籤新增至其貼文(請參 **閱「標籤欄位** 」標籤)。 已取消選取預設值。
+   如果勾選，允許成員將標籤標籤新增至其貼文（請參閱&#x200B;**標籤欄位**&#x200B;標籤）。 已取消選取預設值。
 
 * **允許檔案上傳**
 
@@ -102,7 +102,7 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
 * **允許關注**
 
-   如果勾選，請為論壇貼文加入下列功能，讓會員得 [到](/help/communities/notifications.md) 新貼文的通知。 已取消選取預設值。
+   如果勾選，請為論壇貼文加入下列功能，讓成員能夠收到新貼文的[通知。 ](/help/communities/notifications.md)已取消選取預設值。
 
 * **允許釘選**
 
@@ -110,15 +110,15 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
 * **允許電子郵件訂閱**
 
-   如果勾選，允許會員透過電子郵件（訂閱）收到新貼文[的通](/help/communities/subscriptions.md)知。 需要勾選「允許追蹤」並設定 [電子郵件](/help/communities/email.md)。 已取消選取預設值。
+   如果勾選，允許會員透過電子郵件收到新貼文的通知([subscription](/help/communities/subscriptions.md))。 需要檢查「允許跟蹤」並[配置](/help/communities/email.md)電子郵件。 已取消選取預設值。
 
 * **最大檔案大小**
 
-   僅在勾選時 `Allow File Uploads` 相關。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600(10 Mb)。
+   僅當選中`Allow File Uploads`時相關。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600(10 Mb)。
 
 * **允許的檔案類型**
 
-   僅在勾選時 `Allow File Uploads` 相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許** **所有檔案類型。
+   僅當選中`Allow File Uploads`時相關。 以逗號分隔的副檔名清單，並加上&quot;dot&quot;分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定任何檔案類型，則不允許上傳未指定的檔案類型。 未指定預設值，因此允許** **所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -149,11 +149,11 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
    如果勾選，第一個顯示的答案是選取的答案。 已取消選取預設值。
 * **顯示徽章**
 
-   如果勾選，則使用成員的 [部落格項目](/help/communities/implementing-scoring.md) ，顯示已獲得和已指派的徽章。 已取消選取預設值。
+   如果勾選，則顯示已獲得且已指派[badges](/help/communities/implementing-scoring.md)及成員的部落格項目。 已取消選取預設值。
 
 * **允許主要內容**
 
-   如果勾選，此構想就可識別為特 [色內容](/help/communities/featured.md)。 已取消選取預設值。
+   如果勾選，則可將構想識別為[特色內容](/help/communities/featured.md)。 已取消選取預設值。
 
 * **啟用提及功能**
 
@@ -165,11 +165,11 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤（@提及）貼文中的註冊使用者。 For example, `~{{familyName}}{{givenName}}`.
+   指定允許的模式字串，以標籤（@提及）貼文中的註冊使用者。 例如，`~{{familyName}}{{givenName}}`。
 
-#### 使用者協調標籤 {#user-moderation-tab}
+#### 使用者協調標籤{#user-moderation-tab}
 
-在「使用 **者協調** 」標籤下，指定如何管理已張貼的主題（問題）和答案（使用者產生的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+在&#x200B;**使用者協調**&#x200B;標籤下，指定如何管理已張貼的主題（問題）和答案（使用者產生的內容）。 如需詳細資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
 * **拒絕回答**
 
@@ -179,7 +179,8 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
    如果勾選，受信任的成員協調者可以關閉問題（主題）以進一步編輯和回答，也可以重新開啟問題。 已取消選取預設值。
 
-* **移動主題**&#x200B;如果勾選，則允許發佈端協調者移動問題。 已取消選取預設值。
+* **移動**
+主題如果勾選，允許發佈端協調者移動問題。已取消選取預設值。
 
 * **標籤貼文**
 
@@ -201,45 +202,45 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
    輸入在公開檢視中隱藏某個問題或答案之前，必須標籤該問題或答案的次數。 如果設為-1，則標籤的問題或答案永遠不會隱藏在公開檢視中。 否則，此數字必須大於或等於「協調臨界值」。 預設值為5。
 
-#### 「標籤」欄位頁籤 {#tag-field-tab}
+#### 標籤欄位標籤{#tag-field-tab}
 
-在「標 **記」欄位** (Tag field **** )標籤下，可套用的標籤（如果允許）會根據選擇的名稱空間加以限制。
+在&#x200B;**Tag欄位**&#x200B;頁籤下，如果允許在&#x200B;**Settings**&#x200B;頁籤下應用的標籤，將根據選擇的名稱空間進行限制。
 
 * **允許的命名空間**
 
-   如果已勾選 `Allow Tagging` 「設定」標籤下 **的選項** ，則相關。 可套用的標籤會限制在已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
+   如果在&#x200B;**Settings**&#x200B;標籤下勾選`Allow Tagging`，則相關。 可套用的標籤會限制在已勾選之命名空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，表示允許所有命名空間。
 
 * **建議限制**
 
    輸入要作為建議顯示給發佈到論壇的成員的標籤數。 值**-**1表示沒有限制。 預設值為0。
 
-#### 「排序設定」頁籤 {#sort-settings-tab}
+#### 排序設定頁籤{#sort-settings-tab}
 
-在「排 **序設定** 」標籤下，指定顯示張貼留言的排序方式。
+在&#x200B;**排序設定**&#x200B;標籤下，指定顯示張貼留言的排序方式。
 
 * **排序方式**
 
-   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`。
+   檢查所有允許的排序選擇：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設值為`Newest, Oldest, Last Updated`。
 
 * **設為預設值**
 
-   下拉式清單以選取其中一個核取的排序選項，以顯示為預設值。 預設為 `Newest`。
+   下拉式清單以選取其中一個核取的排序選項，以顯示為預設值。 預設值為`Newest`。
 
 * **選取 Analytics 排序的時間選項**
 
-   下拉式清單以選取其中一個 `All, Last 24 Hours, Last 7 Days, Last 30 Days`。 預設為 `All`。
+   下拉式清單以選取`All, Last 24 Hours, Last 7 Days, Last 30 Days`中的一個。 預設值為`All`。
 
-## 網站訪客體驗 {#site-visitor-experience}
+## 網站訪客體驗{#site-visitor-experience}
 
-### 識別答案 {#identifying-answers}
+### 確定答案{#identifying-answers}
 
-一個答案可以使用按鈕標示為正確或有用的 `Select Answer` 答案。 一旦將「問題」標示為「已回答」，則必須使用按鈕取消選取第一個答案，才能選取另一個 `Unmark Chosen Answer` 答案。
+使用`Select Answer`按鈕，一個答案可標示為正確或有用的答案。 將「問題」標示為「已回答」後，除非使用`Unmark Chosen Answer`按鈕取消選取第一個答案，否則無法選取另一個答案。
 
-一旦選取為可行答案，就可使用按鈕取消選 `Unmark Chosen Answer` 取。
+一旦選擇為可行答案，就可以使用`Unmark Chosen Answer`按鈕取消選擇。
 
-在選擇答案作為可行答案後，主QnA頁面上的問題主題旁 `Answered` 邊將顯示問題的指示。
+在將答案選為可行答案後，主QnA頁面上的問題主題旁將顯示問題`Answered`的指示。
 
-#### 協調者與管理員 {#moderators-and-administrators}
+#### 協調者和管理員{#moderators-and-administrators}
 
 當登入的使用者具有協調者或管理員權限時，他們可以執行元件設定所允許的協調工作，不論問題或答案的作者為何。
 
@@ -260,8 +261,8 @@ QnA（問題與答案）論壇功能為社群成員提供問答問題的區域�
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發 [人員適用的QnA](/help/communities/qna-essentials.md) Essentials頁面。
+如需詳細資訊，請參閱開發人員的[QnA Essentials](/help/communities/qna-essentials.md)頁面。
 
-如需協調已張貼主題和留言的資訊，請參 [閱協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+如需協調已張貼主題和留言的資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-如需標籤已張貼的主題和留言，請參 [閱標籤使用者產生的內容](/help/communities/tag-ugc.md)。
+如需標籤已張貼的主題和留言，請參閱[標籤使用者產生的內容](/help/communities/tag-ugc.md)。
