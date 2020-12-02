@@ -12,6 +12,9 @@ discoiquuid: e6b01ade-7ea3-42a7-872d-cc35a3d2782a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '228'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 您需要下列硬體、軟體和授權才能建立和部署AEM Forms應用程式：
 
-## 適用於Windows裝置 {#for-windows-devices}
+## 對於Windows設備{#for-windows-devices}
 
 * Microsoft Windows 10
 * Microsoft Visual Studio 2015
 * 適用於Apache Cordova的Microsoft Visual Studio工具
 
-## 適用於iOS裝置 {#for-ios-devices}
+## 對於iOS裝置{#for-ios-devices}
 
 * 執行Mac OS X 10.9.5或更新版本的Intel架構Apple Mac
 * iOS SDK 8.4或更新版本
@@ -35,11 +38,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 * 散發內建iOS應用程式的企業憑證
 * 含iOS 8.4或更新版本的Apple iPad
 
-## 適用於Android裝置 {#for-android-devices}
+## 對於Android裝置{#for-android-devices}
 
-* Android開發工具套件（ADT套件），可從https://developer.android.com/sdk/index.html下 [載](https://developer.android.com/sdk/index.html)
-* 如果環境是在MAC系統上設定的，則應將ADT安裝在Applications資料夾中。
-* 如果ADT安裝在MAC的任何其他位置，或是在Windows系統上設定環境，則ADT SDK路徑必須更新在解壓縮來源封存檔的資料夾中 `local.properties``src\android` ，檔案中的檔案中 `mobileworkspace-src.zip`。 在此檔案中，將變 `sdk.dir` 數指向案頭上的ADT SDK位置。
+* Android開發工具套件（ADT套件），可從[https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)下載
+* 如果環境是在MAC系統上設定的，則ADT應安裝在Applications資料夾中。
+* 如果ADT安裝在MAC的任何其他位置，或者如果環境是在Windows系統上設定，則ADT SDK路徑必須更新在`local.properties`檔案中，此檔案位於解壓縮之來源封存檔`mobileworkspace-src.zip`的`src\android`檔案夾中。 在此檔案中，將`sdk.dir`變數指向案頭上的ADT SDK位置。
 
 >[!NOTE]
 >
