@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4559218a-65ba-4577-ad26-7721e28971bc
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
 
-# 識別PDF檔案中的有效及過期憑證 {#recognizing-valid-and-expired-certificates-in-pdf-documents}
+# 識別PDF檔案{#recognizing-valid-and-expired-certificates-in-pdf-documents}中的有效和過期的憑證
 
 當在Adobe Reader中開啟具有Reader Extensions套用之使用權限的PDF檔案時，會出現狀態列，說明PDF檔案中啟用的特定使用權限。
 
