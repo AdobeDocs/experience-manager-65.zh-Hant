@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 教學課程：建立您的第一個互動式通訊 {#tutorial-create-your-first-interactive-communication}
+# 教學課程：建立您的第一個互動式通訊{#tutorial-create-your-first-interactive-communication}
 
 瞭解如何建立您的第一個互動式通訊。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 * 建立互動式通訊
 * 測試和發佈互動式通訊
 
-## 使用案例 {#use-case}
+## 使用案例{#use-case}
 
 這個旅程從瞭解使用案例開始：
 
@@ -50,11 +50,11 @@ ht-degree: 0%
 ## 必備條件 {#prerequisites}
 
 * 設定AEM作者例項。
-* 在作 [者例項上安裝](/help/forms/using/installing-configuring-aem-forms-osgi.md) AEM Forms附加元件
+* 在作者例項上安裝[AEM Forms add-on](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 * 設定MYSQL資料庫
-* 從資料庫提供程式獲取JDBC資料庫驅動程式（JAR檔案）。 教程中的示例基於MySQL資料庫，並使用Oracle的 [MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
+* 從資料庫提供程式獲取JDBC資料庫驅動程式（JAR檔案）。 教程中的示例基於MySQL資料庫，並使用Oracle的[MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
-## 步驟1:規劃互動式通訊 {#step-plan-the-interactive-communication}
+## 步驟1:規劃互動式通信{#step-plan-the-interactive-communication}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
@@ -72,11 +72,11 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/planning-interactive-communications.md)
 
-## Step 2: Create form data model {#step-create-form-data-model}
+## 步驟2:建立表單資料模型{#step-create-form-data-model}
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-表單資料模型可讓您將互動式通訊連接至不同的資料來源。 例如，AEM使用者設定檔、REST風格的web services、SOAP架構的web services、OData服務和關係式資料庫。 表單資料模型是在連接資料源中可用的業務實體和服務的統一資料表示模式。 您可搭配互動式通訊使用表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱「 [AEM Forms資料整合」](/help/forms/using/data-integration.md)。
+表單資料模型可讓您將互動式通訊連接至不同的資料來源。 例如，AEM使用者設定檔、REST風格的web services、SOAP架構的web services、OData服務和關係式資料庫。 表單資料模型是在連接資料源中可用的業務實體和服務的統一資料表示模式。 您可搭配互動式通訊使用表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms Data Integration](/help/forms/using/data-integration.md)。
 
 **目標：**
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-form-data-model0.md)
 
-## 步驟3:建立檔案片段 {#step-create-document-fragments}
+## 步驟3:建立檔案片段{#step-create-document-fragments}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-document-fragments.md)
 
-## 步驟4:建立範本 {#step-create-templates}
+## 步驟4:建立模板{#step-create-templates}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-templates-print-web.md)
 
-## 步驟5:建立互動式通訊 {#step-create-an-interactive-communication}
+## 步驟5:建立互動式通信{#step-create-an-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
 
@@ -142,7 +142,7 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-interactive-communication0.md)
 
-## 步驟6:測試您的互動式通訊 {#step-test-your-interactive-communication}
+## 步驟6:測試您的互動式通訊{#step-test-your-interactive-communication}
 
 ![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
 
@@ -154,7 +154,7 @@ ht-degree: 0%
 * 建立測試案例
 * 執行測試案例
 
-## 步驟7:發佈您的互動式通訊 {#step-publish-your-interactive-communication}
+## 步驟7:發佈您的互動式通訊{#step-publish-your-interactive-communication}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
