@@ -18,43 +18,43 @@ ht-degree: 4%
 ---
 
 
-# 使用投票 {#using-voting}
+# 使用投票{#using-voting}
 
-組 `Voting` 件是一個有用的工具，它允許社區成員對特定內容進行評分，例如QnA元件中的答案。 在元件 `Voting` 中，成員選擇向上或向下箭頭以指明其意見。
+`Voting`元件是一個有用的工具，它允許社區成員對特定內容評分，如QnA元件中的答案。 在`Voting`元件中，成員選擇向上或向下箭頭以指出其意見。
 
-## 新增投票至頁面 {#adding-voting-to-a-page}
+## 新增投票至頁面{#adding-voting-to-a-page}
 
-若要在作 `Voting``Communities / Voting` 者模式下將元件新增至頁面，請使用元件瀏覽器來尋找並拖曳元件至頁面上的位置，例如相對於功能的位置，供使用者投票。
+若要在作者模式下將`Voting`元件新增至頁面，請使用元件瀏覽器來找出`Communities / Voting`並將它拖曳至頁面上，例如使用者投票時相對於該功能的位置。
 
-如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](basics.md)。
 
-當包含 [所需的用戶端程式庫](essentials-voting.md#essentials-for-client-side) ，元件的顯示方式 `Voting` 就是這樣。
+當包含[必要的用戶端程式庫](essentials-voting.md#essentials-for-client-side)時，`Voting`元件的顯示方式就是這樣。
 
 ![投票元件](assets/voting-component.png)
 
-## 設定投票 {#configuring-voting}
+## 配置投票{#configuring-voting}
 
-選擇要訪問 `Voting` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`Voting`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![配置](assets/configure-new.png)
 
-在「文 **[!UICONTROL 字與標籤]** 」索引標籤下，指定用來記錄投票的屬性。
+在&#x200B;**[!UICONTROL 文字與標籤]**&#x200B;標籤下，指定用來記錄投票的屬性。
 
 ![投票標籤](assets/voting-label.png)
 
 * **[!UICONTROL 正面回應標籤]**
 
-   (必&#x200B;*要*)正面回應的內部屬性名稱。
+   （*必要*）正面回應的內部屬性名稱。
 
 * **[!UICONTROL 負面回應標籤]**
 
-   (必&#x200B;*要*)負面回應的內部屬性名稱。
+   （*必要*）負面回應的內部屬性名稱。
 
 * **[!UICONTROL 記帳名稱]**
 
-   (必&#x200B;*要*)此投票元件例項的內部、可識別屬性名稱。
+   (*Required*)此投票元件實例的內部可識別屬性名稱。
 
-## 網站訪客體驗 {#site-visitor-experience}
+## 網站訪客體驗{#site-visitor-experience}
 
 ### 成員 {#members}
 
@@ -66,4 +66,4 @@ ht-degree: 4%
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人 [員的Opting Essentials](essentials-voting.md) （投票基本工具）頁面。
+開發人員的[Opting Essentials](essentials-voting.md)頁面中有更多資訊。
