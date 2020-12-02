@@ -15,10 +15,10 @@ ht-degree: 48%
 ---
 
 
-# AEM 6.5 Authoring 使用指南 {#authoring}
+# AEM 6.5 Authoring 使用指南  {#authoring}
 
 + [編寫使用指南概觀](home.md)
-+ AEM編寫的基本工作、工具和概念 {#essentials}
++ AEM Authoring的基本工作、工具和概念{#essentials}
    + [作者的第一步](first-steps.md)
    + [頁面編寫](page-authoring.md)
    + [編寫頁面的快速指南](qg-page-authoring.md)
@@ -45,7 +45,7 @@ ht-degree: 48%
    + [編寫時疑難排解AEM](troubleshooting.md)
    + [編輯頁面時的鍵盤快速鍵](page-authoring-keyboard-shortcuts.md)
    + [最佳作法](best-practices.md)
-+ 網站和頁面功能 {#siteandpage}
++ 網站和頁面功能{#siteandpage}
    + [使用標記](tags.md)
    + [建立頁面範本](templates.md)
    + [樣式系統](style-system.md)
@@ -75,7 +75,7 @@ ht-degree: 48%
    + [將工作流程套用至頁面](workflows-applying.md)
    + [參與工作流程](workflows-participating.md)
    + [使用專案工作流程](projects-with-workflows.md)
-+ 頁面效能 {#page-performance}
++ 頁面效能{#page-performance}
    + [內容分析](content-insights.md)
    + [分析頁面效能](ci-analyze.md)
    + [檢視頁面分析資料](pa-using.md)
