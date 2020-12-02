@@ -10,6 +10,9 @@ discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+workflow-type: tm+mt
+source-wordcount: '2322'
+ht-degree: 3%
 
 ---
 
@@ -20,11 +23,11 @@ source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
 
 瞭解CSS和LESS架構。
 
-## 可自訂的內容 {#what-can-be-customized}
+## 可自訂的{#what-can-be-customized}
 
-文章會列出可公開使用的最適化表單css類別。 您可以利用這些類別來設定最適化表單的各種元件樣式。 撰寫元件的樣式，例如顯示警告的對話方塊和狀態列，超出本文的範圍。 只有當您無法使用主題編輯器來設定元件的樣式時，才可使用這些樣式結構來建立樣 [式（使用CSS或Less）](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)。
+文章會列出可公開使用的最適化表單css類別。 您可以利用這些類別來設定最適化表單的各種元件樣式。 撰寫元件的樣式，例如顯示警告的對話方塊和狀態列，超出本文的範圍。 只有當您無法使用[主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)來設定元件樣式時，才可使用這些樣式結構來建立樣式（使用CSS或更少）。
 
-## 自訂最適化表單中的樣式 {#customizing-styles-in-adaptive-forms}
+## 自訂最適化表單中的樣式{#customizing-styles-in-adaptive-forms}
 
 LESS架構可簡化使用案例，以自訂最適化表單的樣式。 此架構可讓您使用一組變數和函式（混合）來定義樣式。 LESS框架有助於減少捆綁代碼的大小並增加其可重用性。
 
@@ -33,7 +36,7 @@ LESS架構可簡化使用案例，以自訂最適化表單的樣式。 此架構
 * 變更主題
 * 更改元件的樣式
 
-## 變更主題 {#changing-theme}
+## 變更主題{#changing-theme}
 
 您可以變更最適化表單的主題，以確保其外觀與嵌入最適化表單的網頁一致。
 
@@ -51,7 +54,7 @@ LESS架構可簡化使用案例，以自訂最適化表單的樣式。 此架構
 
 目前，LESS變數僅針對自適應形式中各種元素的這些屬性進行定義。
 
-## 變更元件樣式 {#changing-component-style}
+## 更改元件樣式{#changing-component-style}
 
 您可以變更元素的外觀、版面、位置和可見度。 若要完成此工作，請建立或更新您的自訂。css檔案，以包含本文中所列的樣式結構。
 
@@ -61,7 +64,7 @@ LESS架構可簡化使用案例，以自訂最適化表單的樣式。 此架構
 
 本文討論的元件有其預先定義的CSS類別。 您可以編輯變數以修改CSS類別中的樣式。 或者，您也可以重寫整個類。 本節介紹可使用變數修改的元件和樣式中的類。
 
-## 容器樣式 {#container-styling}
+## 容器樣式{#container-styling}
 
 容器是頂層元件。 其他面板和欄位位於容器元件下方。
 
@@ -99,9 +102,9 @@ LESS架構可簡化使用案例，以自訂最適化表單的樣式。 此架構
  </tbody>
 </table>
 
-## 欄位樣式 {#field-styling}
+## 欄位樣式{#field-styling}
 
-最適化表單包括各種欄位類型。 每個欄位都有一個唯一的類名，即欄位的名稱。 該欄位還具有公用類名 `guideFieldNode`。
+最適化表單包括各種欄位類型。 每個欄位都有一個唯一的類名，即欄位的名稱。 該欄位還具有公用類名`guideFieldNode`。
 
 欄位包括標籤、Widget、說明說明（包括長篇和短篇說明）和欄位說明圖示（問號）。
 
@@ -135,9 +138,9 @@ LESS架構可簡化使用案例，以自訂最適化表單的樣式。 此架構
  </tbody>
 </table>
 
-## 標籤樣式 {#label-styling}
+## 標籤樣式{#label-styling}
 
-用於欄 **位的** HTML元素標籤包 **含左側****** 或上側的類，視標籤位於上側或左側而定。
+用於欄位的HTML元素&#x200B;**label**&#x200B;包括&#x200B;**left**&#x200B;或&#x200B;**top**&#x200B;類，具體取決於標籤在頂部還是左側。
 
 <table>
  <tbody>
@@ -177,11 +180,11 @@ LESS架構可簡化使用案例，以自訂最適化表單的樣式。 此架構
  </tbody>
 </table>
 
-標籤的CSS規則會使用guideFieldLabel標 **簽套用** 。 如果您是作者，請覆寫此規則，讓您的自訂變更可見。
+標籤的CSS規則是使用&#x200B;**guideFieldLabel**&#x200B;標籤套用。 如果您是作者，請覆寫此規則，讓您的自訂變更可見。
 
-## Widget樣式 {#widgets-styling}
+## Widget樣式{#widgets-styling}
 
-Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldWidget` 類別。 隨HTML提供的Widget通常使用標準HTML元素輸入並選取。 樣式會據此進行。 您無法變更變數，以自訂介面工具集的樣式設定。
+Widget也會依其類型而包含類別。 通常，Widget包含`guideFieldWidget`類別。 隨HTML提供的Widget通常使用標準HTML元素輸入並選取。 樣式會據此進行。 您無法變更變數，以自訂介面工具集的樣式設定。
 
 <table>
  <tbody>
@@ -281,13 +284,13 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
  </tbody>
 </table>
 
-### 介面工具集樣式限制 {#limitations-in-widget-styling}
+### 介面工具集樣式的限制{#limitations-in-widget-styling}
 
 焦點、強制和停用欄位的樣式會使用變數加以限制。 不過，您可以覆寫樣式來變更樣式。 使用變數的限制主要是為了保持變數數目的檢查。 如果場的外觀發生顯著變化，則可以放鬆限制，因為它位於前面討論的任何狀態中。
 
-## 說明說明 {#help-description}
+## 幫助說明{#help-description}
 
-作者可以使用簡短和詳細說明元件，在欄位中指定說明內容。 這兩個元件都有一 `.guideHelpDescription` 個公用類 `.long`/ `.short`，具體取決於說明類型。 「說明」內容會隨附在段落元素中，以覆寫說明的樣式。 說明說明（包括長篇和短篇）會使用以widgetshelp開頭的變數來修改，如下表所述：
+作者可以使用簡短和詳細說明元件，在欄位中指定說明內容。 這兩個元件都具有公用類`.guideHelpDescription`和另一個類`.long`/ `.short`，具體取決於說明類型。 「說明」內容會隨附在段落元素中，以覆寫說明的樣式。 說明說明（包括長篇和短篇）會使用以widgetshelp開頭的變數來修改，如下表所述：
 
 <table>
  <tbody>
@@ -326,7 +329,7 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
  </tbody>
 </table>
 
-## Terms and Conditions {#terms-and-conditions}
+## 條款和條件 {#terms-and-conditions}
 
 「條款與條件」(TnC `` ``)介面工具集可讓您指定條款與條件。 您可以使用下表所述的變數來自訂介面工具集。
 
@@ -351,7 +354,7 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
 
 按鈕也是Widget。 不過，其樣式與Widget略有不同。 在最適化表單中，下列任一項皆構成按鈕：
 
-* 輸[入類型=文本]
+* input[type = text]
 * 按鈕
 * 元素與類別。button
 
@@ -450,7 +453,7 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
   </tr>
   <tr>
    <td><p><code>button-warning-background-color</code></p> </td>
-   <td><p>警告樣式的按鈕的背景顏色（類別為。buttonwarning的按鈕）</p> </td>
+   <td><p>警告樣式的按鈕的背景顏色（具有類。buttonwarning的按鈕）</p> </td>
   </tr>
   <tr>
    <td><p><code>button-warning-font-color</code></p> </td>
@@ -475,7 +478,7 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
  </tbody>
 </table>
 
-## Question mark {#question-mark}
+## 問號{#question-mark}
 
 對於介面工具集，當作者在「說明」內容中新增詳細說明時，就會顯示問號。 使用引導中提供的預設表徵圖。 若要使用自訂圖示，您可以自訂引導圖示。
 
@@ -517,15 +520,15 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
   </tr>
   <tr>
    <td><p><code>table-header-bg-color</code></p> </td>
-   <td><p>標題列的背景顏色。 預設值為 <code>#333</code>。<br /> </p> </td>
+   <td><p>標題列的背景顏色。 預設值為<code>#333</code>。<br /> </p> </td>
   </tr>
   <tr>
    <td><p><code>table-odd-row-bg-color</code></p> </td>
-   <td><p>奇數內文行的背景顏色。 預設值為 <code>rgb(255, 255, 255)</code>。</p> </td>
+   <td><p>奇數內文行的背景顏色。 預設值為<code>rgb(255, 255, 255)</code>。</p> </td>
   </tr>
   <tr>
    <td><p><code>table-even-row-bg-color</code></p> </td>
-   <td><p>偶數內文行的背景顏色。 預設值為 <code>#eee</code>。</p> </td>
+   <td><p>偶數內文行的背景顏色。 預設值為<code>#eee</code>。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -567,7 +570,7 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
  </tbody>
 </table>
 
-## 導覽樣式 {#navigator-styles}
+## 導航樣式{#navigator-styles}
 
 導覽標籤有四種類型。 這些頁籤包括嚮導和accordion中左側、頂部的頁籤。 每個導航器都有不同的類。
 
@@ -638,7 +641,7 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
 
 `</div>`
 
-您可以使用CSS規則來變更導覽器的樣式，這些規則會使用子系選擇器來選 **擇元** 素。 例如，若要新增文字裝飾樣式至錨記：
+您可以使用CSS規則來變更導覽器的樣式，這些規則會使用&#x200B;**後代**&#x200B;選擇器來選取元素。 例如，若要新增文字裝飾樣式至錨記：
 
 上方的標籤導覽器：
 
@@ -705,7 +708,7 @@ Widget也會依其類型而包含類別。 通常，Widget會包含 `guideFieldW
  </tbody>
 </table>
 
-guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導覽器的預設圖示。
+guideNavIcon類別提供標籤導覽器（左側和上側）和精靈導覽器的預設圖示。
 
 <table>
  <tbody>
@@ -718,7 +721,7 @@ guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導�
 
 >[!NOTE]
 >
->您可以在製作時在面板上提供CSS類別，以&lt;CLASS_NAME>格式，來變更特定導覽器的圖示。 您可以 **為導航器的表徵圖添加&lt;CLASS_NAME>** _nav。
+>您可以在製作時在面板上提供CSS類別，以&lt;CLASS_NAME>格式，來變更特定導覽器的圖示。 您可以為導航器表徵圖添加&#x200B;**&lt;CLASS_NAME>_nav**。
 
 <table>
  <tbody>
@@ -885,7 +888,7 @@ guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導�
  </tbody>
 </table>
 
-## 面板樣式 {#panel-styling}
+## 面板樣式{#panel-styling}
 
 「面板」包含選用工具列及其內容。
 
@@ -939,13 +942,13 @@ guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導�
  </tbody>
 </table>
 
-面板節點被分為導覽器和內容。 內 `` `` 容沒有單獨的樣式元件。 描述的變數會套用在導覽器和內容上。
+面板節點被分為導覽器和內容。 `` ``不是內容的單獨樣式元件。 描述的變數會套用在導覽器和內容上。
 
 最上方的面板(RootPanel)沒有此類。
 
-## 行動樣式 {#mobile-styling}
+## 行動樣式{#mobile-styling}
 
-## Header bar {#header-bar}
+## 標題欄{#header-bar}
 
 這些變數會影響行動裝置或小型螢幕裝置上可見的標題列，這些裝置包含面板標題以及下一個和後一個導覽器。
 
@@ -979,7 +982,7 @@ guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導�
  </tbody>
 </table>
 
-## 捲動指示器 {#scroll-indicator}
+## 滾動指示器{#scroll-indicator}
 
 這些變數會影響「捲動」指示器，此指示器是顯示在行動裝置或小型螢幕裝置上的橙色箭頭。 「捲動」指示符指示螢幕的可見部分以外有內容。 您可以向下捲動以檢視。 當您按下內容結尾時，箭頭會消失。
 
@@ -1017,7 +1020,7 @@ guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導�
  </tbody>
 </table>
 
-## 行動固定工具列版面特定變數 {#mobile-fixed-toolbar-layout-specific-variables}
+## 行動裝置固定工具列版面特定變數{#mobile-fixed-toolbar-layout-specific-variables}
 
 下表中的這些變數會影響行動固定工具列的版面配置。
 
@@ -1071,9 +1074,9 @@ guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導�
  </tbody>
 </table>
 
-## 主題特定變數 {#theme-specific-variable}
+## 主題特定變數{#theme-specific-variable}
 
-位於 **/etc/clientlibs/fd/af/guidetheme/simpleEnrollment的Simple enrollment** 主題和類別 `guide.theme.simpleEnrollment` 也引入了一些變數。 如果您想要建立增強簡單註冊的主題，可以使用下列「額外變數」:
+**簡單註冊**&#x200B;主題/etc/clientlibs/fd/af/guidetheme/simpleEnrollment和類別`guide.theme.simpleEnrollment`也引入了一些變數。 如果您想要建立增強簡單註冊的主題，可以使用下列「額外變數」:
 
 <table>
  <tbody>
