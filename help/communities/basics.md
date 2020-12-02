@@ -18,31 +18,31 @@ ht-degree: 1%
 ---
 
 
-# 社群元件基礎知識 {#communities-components-basics}
+# Communities Components Basics {#communities-components-basics}
 
 ## 概覽 {#overview}
 
 說明檔案的編寫章節說明以作者編輯模式將社群功能新增至AEM網站，以及說明元件組態。
 
-您可使用AEM例項和互動式社群元件指南來探 [索元件](components-guide.md)。
+您可使用AEM例項和互動式[社群元件指南](components-guide.md)來探索元件。
 
-## 訪問社群元件 {#accessing-communities-components}
+## 訪問社區元件{#accessing-communities-components}
 
 製作頁面內容時，如果基礎範本允許變更頁面設計，則可啟用在網站設計中元件瀏覽器中尚未提供的元件。
 
-此處列出了可用的Communities [元件](author-communities.md#available-communities-components)。
+可用的Communities元件列在[此處](author-communities.md#available-communities-components)。
 
 >[!NOTE]
 >
->如需一般製作資訊，請檢視 [製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
+>有關一般編寫資訊，請檢視[編寫頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
 >
->如果不熟悉AEM，請檢視基本處理的 [檔案](../../help/sites-authoring/basic-handling.md)。
+>如果不熟悉AEM，請檢視[basic handling](../../help/sites-authoring/basic-handling.md)的說明檔案。
 
-### 進入設計模式 {#entering-design-mode}
+### 進入設計模式{#entering-design-mode}
 
-如果在 **元件瀏覽器** (sidekick)中找不到Communities元件，則必須輸入才能 `Design Mode` 新增其他Communities元件。 [也可能需要新增必要的用戶端程式庫](#required-clientlibs) (clientlibs)。
+如果元件瀏覽器(sidekick)中未找到&#x200B;**Communities**&#x200B;元件，則必須輸入`Design Mode`以添加其他Communities元件。 [也可能需要新增必要的用戶端程式庫](#required-clientlibs) (clientlibs)。
 
-如需詳細資訊，請 [參閱「在設計模式中設定元件」](../../help/sites-authoring/default-components-designmode.md)。
+如需詳細資訊，請參閱[在設計模式中設定元件](../../help/sites-authoring/default-components-designmode.md)。
 
 以下是選取一些Communities元件並在元件瀏覽器中檢視這些元件的影像：
 
@@ -52,17 +52,17 @@ ht-degree: 1%
 
 ![component-design1](assets/component-design1.png)
 
-## 必要的Clientlibs {#required-clientlibs}
+## 必需的Clientlibs {#required-clientlibs}
 
 [需要用戶端程式庫](../../help/sites-developing/clientlibs.md) (clientlibs)，才能正確運作元件(JavaScript)和樣式(CSS)。
 
-在將Communities元件新增至頁面時，如果結果是錯誤或非預期的外觀，首先要嘗試新增Communities元件所需的clientlibs。 如需詳細資訊，請參 [閱Clientlibs for Communities元件](clientlibs.md)。
+在將Communities元件新增至頁面時，如果結果是錯誤或非預期的外觀，首先要嘗試新增Communities元件所需的clientlibs。 如需詳細資訊，請參閱[Clientlibs for Communities Components](clientlibs.md)。
 
-### 範例：最初放置的審核沒有客戶端庫…… {#example-initially-placed-reviews-without-client-libraries}
+### 範例：最初放置的審核沒有客戶端庫……{#example-initially-placed-reviews-without-client-libraries}
 
 ![clientlibs1](assets/clientlibs1.png)
 
-### ...使用用戶端程式庫 {#and-with-client-libraries}
+### ...使用客戶端庫{#and-with-client-libraries}
 
 ![clientlibs2](assets/clientlibs2.png)
 
@@ -70,11 +70,11 @@ ht-degree: 1%
 
 許多社群功能可設定為允許成員標籤在發佈環境中輸入（發佈）的內容。
 
-如果允許標籤，則可以設定社區站點的配置，以限制發佈環境中成員顯示的名稱空間。 請參閱社 [群網站主控台](sites-console.md#tagging)。
+如果允許標籤，則可以設定社區站點的配置，以限制發佈環境中成員顯示的名稱空間。 請參閱[社群站點控制台](sites-console.md#tagging)。
 
-允許標籤的功能： [部落格](blog-feature.md)，日 [歷](calendar.md)，檔 [案庫](file-library.md)，論 [壇](forum.md)
+允許標籤的功能：[blog](blog-feature.md)、[日曆](calendar.md)、[檔案庫](file-library.md)、[論壇](forum.md)
 
-使用標籤的功能： [目錄](catalog.md)、搜 [尋](search.md)、社 [交標籤雲](tagcloud.md)
+使用標籤的功能：[catalog](catalog.md)、[search](search.md)、[social tag cloud](tagcloud.md)
 
 製作資訊：
 
@@ -82,8 +82,8 @@ ht-degree: 1%
 
 若需管理資訊：
 
-* 建立標籤名稱空間（分類）: [管理標籤](../../help/sites-administering/tags.md)
-* 社群網站設定：請參閱 [標籤](sites-console.md#tagging)
+* 建立標籤名稱空間（分類）:[管理標籤](../../help/sites-administering/tags.md)
+* 社群網站設定：請參閱[TAGGING](sites-console.md#tagging)
 * [標籤使用者產生的內容](../../help/sites-authoring/tags.md)
 * [標籤啟用資源](tag-resources.md)
 
