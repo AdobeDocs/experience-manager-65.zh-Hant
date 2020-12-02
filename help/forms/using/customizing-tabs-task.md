@@ -17,16 +17,16 @@ ht-degree: 0%
 ---
 
 
-# 自定義任務的頁籤 {#customizing-tabs-for-a-task}
+# 自定義任務{#customizing-tabs-for-a-task}的頁籤
 
-您可以在Uber檢視中自訂 `Start Process` 元件的標籤名稱， `Start Process` 在 `Task Details` Uber檢視中自訂元件 `ToDo` 的標籤名稱。
+您可以在`Start Process` Uber視圖中為`Start Process`元件自定義頁籤名稱，在`ToDo` Uber視圖中為`Task Details`元件自定義頁籤名稱。
 
-1. 請遵循「 [AEM Forms工作區自訂的一般步驟」](/help/forms/using/generic-steps-html-workspace-customization.md)。
-1. 更改檔案 `tabname`中的 `translation.json` 值。
+1. 請依照[AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)進行。
+1. 變更`translation.json`檔案中的`tabname`值。
 
-   例如，將英 `/apps/ws/locales/en-US/translation.json` 文變更為下列。
+   例如，將英文的`/apps/ws/locales/en-US/translation.json`變更為下列。
 
-   * 對於在啟動進程中啟動的任務，請使用塊中的以下代碼 `"startprocess" : {}` 段。
+   * 對於在啟動進程中啟動的任務，請使用`"startprocess" : {}`塊中的以下代碼片段。
 
    ```json
    "tabname" : {
@@ -37,7 +37,7 @@ ht-degree: 0%
            }
    ```
 
-   * 對於To-do中的任務，請使用塊中的以下代碼 `"todo" : {}` 片段。
+   * 對於To-do中的任務，請使用`"todo" : {}`塊中的以下代碼片段。
 
    ```json
    "tabname" : {
