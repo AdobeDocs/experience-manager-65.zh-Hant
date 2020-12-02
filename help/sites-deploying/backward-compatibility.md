@@ -12,23 +12,26 @@ discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
 translation-type: tm+mt
 source-git-commit: c863e438df45fd54c29c1b99114eea07aaeb6162
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 1%
 
 ---
 
 
-# AEM 6.5中的向後相容性{#backward-compatibility-in-aem}
+# AEM 6.5{#backward-compatibility-in-aem}的回溯相容性
 
 ## 概覽 {#overview}
 
 >[!NOTE]
 >
->如需不在「相容性套件」範圍內的內容和設定變更清單，請參閱「AEM中的 [儲存庫重組」](/help/sites-deploying/repository-restructuring.md)。
+>如需不在「相容性套件」範圍內的內容和設定變更清單，請參閱「AEM[中的資料庫重組」。](/help/sites-deploying/repository-restructuring.md)
 
 在AEM 6.5中，所有功能都已在開發時考慮到向後相容性。
 
 在大多數情況下，執行AEM 6.3的客戶在進行升級時，不必變更程式碼或自訂設定。 對於AEM 6.1和6.2客戶，沒有比升級至6.3時所面臨的額外突破性變更。
 
-如果功能無法保持向後相容，則可透過安裝6.4版相容性套件來緩解套件和內容的向後相容問題（請參閱以下如何設定，以取得下載位置的詳細資訊）。 在大部分情況下，此Compat套件將有助於恢復與AEM 6.4相容的應用程式的相容性。
+如果功能無法保持向後相容，則可透過安裝6.4版相容性套件來緩解套件和內容的向後相容問題（請參閱以下如何設定，以取得下載位置的詳細資訊）。 在大部分情況下，此Compat套件將有助於恢復符合AEM 6.4的應用程式的相容性。
 
 「相容性套件」可讓您在相容性模式下執行AEM，並針對新的AEM功能延遲自訂開發：
 
@@ -38,7 +41,7 @@ source-git-commit: c863e438df45fd54c29c1b99114eea07aaeb6162
 
 ![sase](assets/sase.png)
 
-Compatibility Package有兩種模式：啟 **用路由** , **禁用路由**。
+Compatibility Package有兩種模式：**啟用路由**&#x200B;和&#x200B;**禁用路由**。
 
 這可讓AEM 6.5以三種模式執行：
 
@@ -58,12 +61,12 @@ Compatibility Package有兩種模式：啟 **用路由** , **禁用路由**。
 
 ![sapte](assets/sapte.png)
 
-## 如何設定 {#how-to-set-up}
+## 設定方法 {#how-to-set-up}
 
-AEM 6.3相容性套件將可使用此連結上的「套件管理員」，以套件的形式 [安裝](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)。
+AEM 6.3相容性套件將可使用此[link](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)處的「套件管理員」，以套件形式安裝。
 
 在安裝Compatibility Package後，可以使用OSGI配置中的交換機啟用或禁用路由，如下所示：
 
 ![screen_shot_2017-11-27at122421pm](assets/screen_shot_2017-11-27at122421pm.png)
 
-安裝並設定相容性軟體包後，將根據選擇的相容性模式使用這些功能。
+安裝並設定相容性軟體包後，將根據已選擇的相容性模式使用這些功能。
