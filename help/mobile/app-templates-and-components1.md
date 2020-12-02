@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 1%
 
 ---
 
@@ -25,34 +28,34 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 每個範本都會提供可供使用的元件選擇。
 
-* 範本由元件組 [成](/help/sites-developing/components.md);
+* 範本由[Components](/help/sites-developing/components.md)建立；
 * 元件使用並允許存取Widget，而這些元件則用來轉換內容。
 
 >[!NOTE]
 >
->若要瞭解如何使用CRXDE Lite來開發AEM應用程式，請參 [閱「使用CRXDE Lite開發」](/help/sites-developing/developing-with-crxde-lite.md)。
+>若要瞭解如何使用CRXDE Lite來開發AEM應用程式，請參閱「使用CRXDE Lite[開發」。](/help/sites-developing/developing-with-crxde-lite.md)
 
 範本是頁面的基礎。
 
-若要建立頁面，必須將範本複製(node-tree **/apps/&lt;myapp>/templates/&lt;mytemplate>**)至網站樹中的對應位置：如果使用「網站」標籤建立頁面，就會發 **生這** 些。
+若要建立頁面，必須將範本複製(node-tree **/apps/&lt;myapp>/templates/&lt;mytemplate>**)至site-tree中的對應位置：如果使用&#x200B;**Websites**&#x200B;標籤建立頁面，就會發生這種情況。
 
 此複製動作也會提供頁面的初始內容（通常為僅限Top-Level Content）和屬性sling:resourceType，用於呈現頁面的頁面元件路徑（子節點jcr:content中的所有項目）。
 
-## 範本結構 {#structure-of-a-template}
+## 範本結構{#structure-of-a-template}
 
 需要考慮兩個方面：
 
 * 範本本身的結構
 * 使用範本時產生的內容結構
 
-在類型為 **cq:Template的節點下建立模板**。
+在類型&#x200B;**cq:Template**&#x200B;的節點下建立模板。
 
 可以設定各種屬性，特別是：
 
-* **jcr:title** —— 範本的title;顯示在對話框中。
-* **jcr:description** —— 模板的說明；顯示在對話框中。
+* **jcr:title** - title for the template;顯示在對話框中。
+* **jcr:description** - the template的description;顯示在對話框中。
 
-該節點包 *含一個jcr:content(cq:PageContent)* 節點，作為生成頁面的內容節點的基礎；此參照使用 *sling:resourceType*，此元件用於呈現新頁面的實際內容。
+此節點包含&#x200B;*a jcr:content(cq:PageContent)*&#x200B;節點，用作產生頁面的內容節點；此參照會使用&#x200B;*sling:resourceType*，來呈現新頁面的實際內容。
 
 >[!NOTE]
 >
@@ -60,6 +63,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >* [範本](/help/sites-developing/templates.md)
 >* [元件](/help/sites-developing/components.md)
+
 >
 
 
@@ -68,7 +72,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * [建立和添加模板和元件](/help/mobile/mobile-ondemand-app-templates.md)
 * [使用內容屬性匯出內容](/help/mobile/on-demand-content-properties-exporting.md)
-* [最佳實務](/help/mobile/best-practices-aem-mobile.md)
+* [最佳作法](/help/mobile/best-practices-aem-mobile.md)
 * [開發AEM Mobile內容服務](//help/mobile/developing-content-services.md)
 
 ### 其他資源 {#additional-resources}
