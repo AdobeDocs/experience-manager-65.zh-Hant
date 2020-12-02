@@ -12,11 +12,14 @@ discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
 
-# 語言複製精靈{#language-copy-wizard}
+# 語言複製嚮導{#language-copy-wizard}
 
 「語言複製」精靈是建立和檢測多語言內容結構的引導式體驗。 現在建立語言版本變得簡單又快速。
 
@@ -34,19 +37,19 @@ source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
 
-1. 使 **用嚮導的** 「選擇源」步驟可以添加／刪除頁。 您也可以選擇包含或排除子頁面。
+1. 使用嚮導的&#x200B;**選擇源**&#x200B;步驟可以添加／刪除頁。 您也可以選擇包含或排除子頁面。
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
-1. 「下 **一步** 」按鈕會帶您進入 **精靈的「設定** 」步驟。 您可以在這裡新增／移除語言，並選取翻譯方法。
+1. **Next**&#x200B;按鈕可帶您進入嚮導的&#x200B;**Configure**&#x200B;步驟。 您可以在這裡新增／移除語言，並選取翻譯方法。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)
 
    >[!NOTE]
    >
-   >預設情況下，只有一個翻譯設定。 若要能夠選取其他設定，您必須先設定雲端組態。 請參 [閱配置翻譯整合框架](/help/sites-administering/tc-tic.md)。
+   >預設情況下，只有一個翻譯設定。 若要能夠選取其他設定，您必須先設定雲端組態。 請參閱[配置翻譯整合框架](/help/sites-administering/tc-tic.md)。
 
-1. 「下 **一步** 」按鈕將帶您進入向 **導的** 「翻譯」步驟。 在這裡，您可以選擇僅建立結構、建立新翻譯項目或添加到現有翻譯項目。
+1. **Next**&#x200B;按鈕可帶您進入嚮導的&#x200B;**Translate**&#x200B;步驟。 在這裡，您可以選擇僅建立結構、建立新翻譯項目或添加到現有翻譯項目。
 
    >[!NOTE]
    >
@@ -54,7 +57,7 @@ source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. 「創 **建** 」按鈕結束嚮導。
+1. **Create**&#x200B;按鈕會結束精靈。
 
    ![chlimage_1-14](assets/chlimage_1-14.jpeg)
 
