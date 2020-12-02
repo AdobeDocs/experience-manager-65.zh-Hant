@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
 source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ AEM與PhoneGap整合，讓您可以使用AEM頁面輕鬆建立應用程式。 Ph
 
 >[!NOTE]
 >
->開始使用Adobe PhoneGap使用AEM Mobile之前，請務必先設定您的環境，然後開始使用 [AEM Mobile應用程式儀表板](/help/mobile/phonegap-authoring-apps.md)。
+>開始使用Adobe PhoneGap使用AEM Mobile之前，請務必先設定您的環境，然後開始使用[AEM Mobile Application Dashboard](/help/mobile/phonegap-authoring-apps.md)。
 
 下列資源將協助您開始使用Adobe PhoneGap的AEM Mobile:
 
@@ -34,15 +37,15 @@ AEM與PhoneGap整合，讓您可以使用AEM頁面輕鬆建立應用程式。 Ph
 
 * [AEM Mobile Content Services:概觀](/help/mobile/develop-content-as-a-service.md)
 
-   * 若要啟用「內容服務」和「資料模型」，請參閱「管 [理內容服務」](/help/mobile/developing-content-services.md)
-   * 要瞭解建立模型，請參閱開 [發模型](/help/mobile/administer-mobile-apps.md)
-   * 如需有關轉換和傳送的資訊，請參 [閱轉換和傳送內容服務](/help/mobile/rendering-and-delivery.md)
+   * 若要啟用「內容服務」和「資料模型」，請參閱[管理內容服務](/help/mobile/developing-content-services.md)
+   * 要瞭解建立模型，請參閱[開發模型](/help/mobile/administer-mobile-apps.md)
+   * 如需有關轉換和傳送的資訊，請參閱[轉換和傳送內容服務](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
 >
->若要在任何iOS或Android行動裝置上執行AEM Mobile應用程式，請參閱「使用AEM驗證應用程式 [的Mobile快速入門」](/help/mobile/phonegap-mobile-quickstart.md)。
+>若要在任何iOS或Android行動裝置上執行您的AEM行動應用程式，請參閱「使用AEM驗證應用程式快速入門」([ Mobile Quickstart using AEM Verify App](/help/mobile/phonegap-mobile-quickstart.md))。
 
-## 搶先一步 {#getting-ahead}
+## 搶先一步{#getting-ahead}
 
 要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 
