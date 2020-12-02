@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 8%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **標題**
 
-   頁面標題會顯示在不同的位置。 例如，「網站 **」標籤清單** ，以及「網 **站** 」卡片／清單檢視。
+   頁面標題會顯示在不同的位置。 例如，**Websites**&#x200B;標籤清單和&#x200B;**Sites**&#x200B;卡片／清單檢視。
 
    這是必要欄位。
 
@@ -53,7 +56,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **導覽標題**
 
-   您可以指定個別標題以用於導覽（例如，如果您想要更簡潔的內容）。 如果為空白， **則使** 用「標題」。
+   您可以指定個別標題以用於導覽（例如，如果您想要更簡潔的內容）。 如果為空，則使用&#x200B;**Title**。
 
 * **子標題**
 
@@ -79,11 +82,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    可讓您輸入此頁面的虛名URL。 這可讓您擁有更短、表達能力更強的URL。
 
-   例如，如果「虛名URL」設為w `elcome`至由網站h的路徑／所 `v1.0/startpage`識別的頁 `ttp://example.com,` 面，則h `ttp://example.com/welcome`會是h的虛名URL `ttp://example.com/content/v1.0/startpage`
+   例如，如果將虛名URL設為w `elcome`，設為由網站h `ttp://example.com,`的路徑/ `v1.0/startpage`所識別的頁面，則h `ttp://example.com/welcome`會是h `ttp://example.com/content/v1.0/startpage`的虛名URL
 
    >[!CAUTION]
    >
-   >虛名URL:
+   >虛名 URL:
    >
    >* 必須是唯一的，因此您應該注意該值尚未被其他頁面使用。
    >* 不支援regex模式。
@@ -105,7 +108,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **設計**
 
-   指定要 [用於](/help/sites-developing/designer.md) 本頁的設計。
+   指出要用於此頁的[design](/help/sites-developing/designer.md)。
 
 * **別名**
 
@@ -113,7 +116,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **啟用已關閉的使用者群組**
 
-   啟用（或停用）關閉 [的使用者群組](/help/sites-administering/cug.md) (CUG)。
+   啟用（或禁用）[已關閉的用戶組](/help/sites-administering/cug.md)(CUG)的使用。
 
 * **登入頁面**
 
@@ -149,47 +152,47 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **雲端服務**
 
-   定義雲端服 [務的屬性](/help/sites-developing/extending-cloud-config.md)。
+   定義[雲端服務](/help/sites-developing/extending-cloud-config.md)的屬性。
 
 ### 個性化 {#personalization}
 
 * **個性化**
 
-   選取品 [牌以指定定位範圍](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)。
+   選擇[品牌以指定定位範圍](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)。
 
 ### 權限 {#permissions}
 
 * **權限** （觸控最佳化UI）
 
-   檢視有 [效權限並新增權限](/help/sites-administering/user-group-ac-admin.md)。
+   檢視[有效權限並新增權限](/help/sites-administering/user-group-ac-admin.md)。
 
 ### Blueprint {#blueprint}
 
 * **Blueprint**
 
-   在多網站管理中定義Blueprint [頁面的屬性](/help/sites-administering/msm.md)。 控制修改將傳播至即時副本的情況。
+   在[多網站管理](/help/sites-administering/msm.md)中定義Blueprint頁面的屬性。 控制修改將傳播至即時副本的情況。
 
 ### 即時副本 {#live-copy}
 
 * **即時副本**
 
-   在多網站管理中定義即時副 [本頁面的屬性](/help/sites-administering/msm.md)。 控制從Blueprint傳播修改的情況。
+   在[多網站管理](/help/sites-administering/msm.md)中定義即時副本頁面的屬性。 控制從Blueprint傳播修改的情況。
 
 ### 網站結構 {#site-structure}
 
-* 提供提供整個網站功能的頁面連結，例如 **「註冊頁面**」 **、「離線頁面**」等。
+* 提供提供全網站功能的頁面連結，例如&#x200B;**註冊頁面**、**離線頁面**&#x200B;等。
 
-## 編輯頁面屬性 {#editing-page-properties-2}
+## 編輯頁面屬性{#editing-page-properties-2}
 
-### 編輯特定頁面的頁面屬性 {#editing-page-properties-for-a-specific-page}
+### 編輯特定頁面的頁面屬性{#editing-page-properties-for-a-specific-page}
 
 「頁面屬性」可定義頁面在網站上出現的各種屬性，例如標題等。
 
 1. 開啟您要編輯的頁面。
 
-1. 在sidekick中開啟「頁 **面** 」標籤，然 **後選取「頁面屬性……」**
+1. 在sidekick中，開啟&#x200B;**Page**&#x200B;標籤，然後選取&#x200B;**Page Properties...**
 
    這會開啟包含多個標籤的對話方塊。
 
-1. 進行所需的更改，然後按一下「 **確定** 」保存。
+1. 進行所需的更改，然後按一下&#x200B;**OK**&#x200B;保存。
 
