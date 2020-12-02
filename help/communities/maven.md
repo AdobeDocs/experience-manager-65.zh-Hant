@@ -28,10 +28,10 @@ AEM Communities檔案的此區段除了：
 
 現在有兩種「優步」文物可取代個別文物：
 
-* AEM [Communities APIjar](#communities-api-jar-artifact)
+* AEM [Communities API jar](#communities-api-jar-artifact)
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
-## Communities API Jar對象 {#communities-api-jar-artifact}
+## Communities API Jar對象{#communities-api-jar-artifact}
 
 以下是AEM Communities API jar的GAV範例：
 
@@ -47,9 +47,9 @@ AEM Communities檔案的此區段除了：
 請確定指定的版本與AEM Communities所安裝的Communities套件版本相符。 要驗證已安裝的版本號：
 
 1. 以管理權限登入。
-1. 瀏覽至 [Package Manager](../../help/sites-administering/package-manager.md)。 例如， [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
+1. 瀏覽至[Package Manager](../../help/sites-administering/package-manager.md)。 例如，[http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-1. 找到包： `cq-socialcommunities-pkg-1.x.xxx`
+1. 找到包：`cq-socialcommunities-pkg-1.x.xxx`
 1. 從包名稱中抽取版本：
    * AEM 6.3的第一個版本是1.11.170版。
    * 功能套件版本為1.12.xxx。
@@ -58,9 +58,9 @@ AEM Communities檔案的此區段除了：
 >
 >建議您隨時更新最新的社群版本。
 >
->請造訪「 [最新版本](deploy-communities.md#latest-releases) 」區段，以識別最新版本。
+>請造訪[最新版本](deploy-communities.md#latest-releases)區段，以識別最新版本。
 
-## Maven相關性示例 {#maven-dependency-example}
+## Maven Dependency Example {#maven-dependency-example}
 
 必須在Uber APIjar之前指定Communities APIjar。
 
