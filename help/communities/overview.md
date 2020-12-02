@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# AEM Communities概觀 {#aem-communities-overview}
+# AEM Communities概觀{#aem-communities-overview}
 
 Adobe Experience Manager(AEM)Communities提供快速建立內部部署社群網站的功能，可改善效能、改善網站管理，並鼓勵網站訪客轉換為有價值的社群成員。
 
@@ -27,34 +27,34 @@ Adobe Experience Manager(AEM)Communities提供快速建立內部部署社群網�
 Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
 -->
 
-## 社群功能 {#communities-features}
+## 社群功能{#communities-features}
 
 AEM Communities可讓您與網站訪客建立關係，其中：
 
-* **透過部落格** 、Q&amp;A和事件日曆來通知您，
-* 透過 **論壇** 、留言和其他社群內容獲得見解，通常稱為使用者產生的內容(UGC)。
-* 它可讓受 **信任的** 「發佈」環境成員進行協調，
-* **使用Twitter** 和Facebook進行社交登入，
-* **社群內容** 、
-* **從已發佈的社群網站** 、
-* **為獎章** ，打分，
+* **透** 過部落格、問答和活動日曆，
+* 而&#x200B;**透過論壇、留言和其他社群內容獲得見解**，通常稱為使用者產生的內容(UGC)。
+* 它允許發佈環境中受信任的成員&#x200B;**協調**,
+* **社交** 登入Twitter和Facebook,
+* **內嵌** 翻譯社群內容、
+* **社群群群** 組從已發佈的社群網站建立，
+* **** 獎章，
 * **檔案共用**,
-* **通知** 和 **活動串流**,
-* 允許 **在「用戶生成** 」內容中標籤(@tornite)其他已註冊成員，以引起他們的注意。
-* 支援 **啟用元件** （例如目錄和課程播放、工作、檔案庫）上的鍵盤導覽。
+* **通** 知和 **活動流**,
+* 允許&#x200B;**標籤**（@提及）用戶生成內容中其他已註冊成員，以引起他們的注意。
+* 支援啟用元件（例如目錄和課程播放、作業、檔案庫）上的&#x200B;**鍵盤導覽**。
 
-社群功能可使用GitHub.com上公開提供的 [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) ，或與新的We.Retail參考實作一起展示。
+使用GitHub.com公開提供的[AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki)或與新的We.Retail參考實作搭配使用，可展示社群功能。
 
 ## 社群網站 {#community-sites}
 
 社群網站是使用簡單精靈建立的AEM網站，可產生網站，其中包含許多預先連線至網站的常用功能。
 
-站點 [建立嚮導](/help/communities/sites-console.md):
+[站點建立嚮導](/help/communities/sites-console.md) :
 
-* 根據選取的社群網站範本，組合 [網站的功能](/help/communities/sites.md) ，即：
+* 根據選定的[社區站點模板](/help/communities/sites.md)組合站點的功能，即：
 
-   * 由社區功 [能構建](#community-functions)
-   * 可選 [社群群組功能](#communitygroups)
+   * 由[社區函式](#community-functions)構建
+   * 可選[社區組](#communitygroups)功能
 
 * 使用設定來設定：
 
@@ -64,15 +64,16 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 * 提供基本功能：
 
-   * 自適應設計：使用 [Twitter引導主題](https://getbootstrap.com)
+   * 自適應設計：使用[Twitter引導主題](https://getbootstrap.com)
 
-   * 登入：自助註冊、社 [交登入](/help/communities/social-login.md)、使用者個人檔案
+   * 登入：自我註冊， [社交登入](/help/communities/social-login.md)，使用者設定檔
 
-      * 通知：會員會看到與其相關的事件，而使用者產生的內容會在其中 [@intigured](/help/communities/overview.md#mentionssupport)。
+      * 通知：
+成員會看到與其相關的事件，而使用者產生的內容則位於[@intected](/help/communities/overview.md#mentionssupport)的位置。
 
       * 訊息：成員可以在社區站點內發送或接收消息。
       * 搜尋：能夠在社群網站中搜尋。
-      * 語言切換：能夠為多語言網站選 [擇語言](/help/sites-administering/translation.md)。
+      * 語言切換：能夠為[多語言站點](/help/sites-administering/translation.md)選擇語言。
 
       * 管理：存取權，讓授權成員協調和管理社群網站中的使用者。
 
@@ -81,9 +82,9 @@ AEM Communities可讓您與網站訪客建立關係，其中：
    * 品牌：可選上傳橫幅影像，以顯示在社群網站的所有頁面上
    * 導覽功能表：為社群網站範本所包含的功能提供導覽連結。
 
-若要體驗快速建立新社群網站的簡易性，請造訪「AEM社 [群快速入門」](/help/communities/getting-started.md)。
+若要體驗快速建立新社群網站的便利性，請造訪[AEM Communities](/help/communities/getting-started.md)快速入門。
 
-## 社群內容永續性 {#community-content-persistence}
+## 社群內容永續性{#community-content-persistence}
 
 為改善社群內容的效能與同步化，AEM Communities需要專為所有AEM（作者和發佈）例項之間共用的使用者產生內容(UGC)而設定的公用儲存。
 
@@ -97,56 +98,56 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 ## Communities Console {#communities-consoles}
 
-在作者環境中，全域導覽主控台提供對 [Communities主控台的存取](/help/communities/consoles.md)，其中包含：
+在作者環境中，全域導覽主控台提供對[Communities主控台](/help/communities/consoles.md)的存取，其中包含：
 
-* [Sites](/help/communities/sites-console.md) Console
+* [Sitesconsole](/help/communities/sites-console.md) 
 
    * 網站建立
    * 網站編輯
    * 網站管理
-   * [社群群組](/help/communities/groups.md) 主控台
+   * [社群群群組](/help/communities/groups.md) 主控台
 
-* [協調控制](/help/communities/moderation.md) 台
+* [協調控](/help/communities/moderation.md) 制台
 
    * 作者和發佈環境的常見大量協調UI。
    * 新的篩選條件。
 
-* [成員和組管理控制台](/help/communities/members.md) (Members and Groups Management Console)
+* [成員和組管](/help/communities/members.md) 理控制台
 
    * 提供從作者環境建立和管理發布端使用者（成員）的能力。
    * 提供禁止成員的能力。
    * 提供從作者環境建立和管理發布端使用者群組（成員群組）的能力。
 
-* [Reports](/help/communities/reports.md) console
+* [Reportsconsole(報](/help/communities/reports.md) 告控制台)
 
    * 提供產生指派、貼文和檢視報告的能力。
 
-* [資源](/help/communities/resources.md) Console
+* [資源](/help/communities/resources.md) 控制台
 
    * 提供建立啟用資源和學習路徑的能力。
    * 提供對啟用資源和學習路徑報告的存取。
 
 全域工具主控台可存取下列社群工具：
 
-* [網站範本](/help/communities/tools.md#sitetemplatesconsole) 主控台
+* [網站範本控](/help/communities/tools.md#sitetemplatesconsole) 制台
 
    * 建立和管理社群網站範本。
 
-* [群組範本](/help/communities/tools.md#grouptemplatesconsole) 主控台
+* [群組範本控](/help/communities/tools.md#grouptemplatesconsole) 制台
 
    * 建立和管理社群群組範本。
 
-* [社群功能控制](/help/communities/tools.md#communityfunctionsconsole) 台
+* [社群功能](/help/communities/tools.md#communityfunctionsconsole) 主控台
 
    * 建立和管理社群功能。
 
-* [儲存配置控制台](/help/communities/tools.md#storageconfiguratonconsole) (Storage Configuration Console)
+* [儲存配置](/help/communities/tools.md#storageconfiguratonconsole) 控制台
 
-   * 選擇並設定 [網站的](/help/communities/working-with-srp.md) 「公用商店」。
+   * 選擇並配置站點的[公共儲存](/help/communities/working-with-srp.md)。
 
 * [元件指南](/help/communities/components-guide.md)
 
-   * 示例站點「社 [區元件](https://localhost:4502/editor.html/content/community-components/en.html)」，它提供所有社區元件的示例，包括其預設配置和實驗功能。
+   * 一個示例站點[社區元件](https://localhost:4502/editor.html/content/community-components/en.html)，它提供了所有社區元件的示例，包括其預設配置和實驗能力。
 
 ## 社群網站範本 {#community-site-templates}
 
@@ -154,7 +155,7 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 社群網站範本由社群功能和社群群組範本組成，提供社群網站的結構，包括登入、使用者設定檔、傳訊、網站選單、搜尋、主題和品牌功能。
 
-請參閱網 [站範本主控台](/help/communities/sites.md)。
+請參閱[網站範本主控台](/help/communities/sites.md)。
 
 ## 社群功能 {#community-functions}
 
@@ -162,31 +163,31 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 
 社群功能是一般的AEM頁面，其中包含連結在功能中的元件，可輕鬆整合在社群網站範本中。
 
-請參閱社 [群功能主控台](/help/communities/functions.md)。
+請參閱[社群功能控制台](/help/communities/functions.md)。
 
-## 社群群組和群組範本 {#community-groups-and-group-templates}
+## 社群群組和群組範本{#community-groups-and-group-templates}
 
 社群群組功能是讓來自作者和發佈環境的授權使用者和社群成員在社群網站中動態建立子社群的能力。
 
-當範本的結構包含群組功能時，可從作者環境在現有社群網站中建立社群群組（子社群），或在現有群組中巢 [狀化](/help/communities/functions.md#groups-function)。
+當模板的結構包含[組函式](/help/communities/functions.md#groups-function)時，可從作者環境在現有社區站點中建立社區組（子社區）或在現有組內嵌套。
 
 建立社區組需要選擇提供社區組頁面設計的社區組模板。 將「群組」功能新增至範本結構時，其設定為指定一個群組範本，或在建立新社群群組時提供範本選擇。
 
 另請參閱:
 
-* [網站群組主控台](/help/communities/groups.md) ，可在作者環境中建立子社群。
-* [群組範本主控台](/help/communities/tools-groups.md) ，以建立群組的網站結構。
-* [AEM Communities快速入門教學課程](/help/communities/getting-started.md) ，以快速建立包含巢狀群組的社群網站。
+* [網站群組](/help/communities/groups.md) 控制台，可在作者環境中建立子社群。
+* [群組範本](/help/communities/tools-groups.md) 控制台，以建立群組的網站結構。
+* [AEM社群快速入門](/help/communities/getting-started.md) 教學課程，以快速建立包含巢狀群組的社群網站。
 
-## 社群元件 {#community-components}
+## 社群元件{#community-components}
 
-從 [中建立社群網站的社群元件](/help/communities/author-communities.md) ，可用來將社群功能新增至任何AEM網站。
+建立社群網站的[社群元件](/help/communities/author-communities.md)可用於將社群功能新增至任何AEM網站。
 
-社群 [元件指南](/help/communities/components-guide.md) ，可供互動式探索各元件。
+[社群元件指南](/help/communities/components-guide.md)可供互動探索元件。
 
-## 社群類型 {#types-of-communities}
+## 社區類型{#types-of-communities}
 
-### 參與社群 {#engagement-community}
+### 參與社群{#engagement-community}
 
 參與社群是社群網站，主要吸引客戶提供資訊、徵求意見，並讓客戶以社群成員的身分互動。
 
@@ -208,33 +209,33 @@ AEM Communities可讓您與網站訪客建立關係，其中：
 * 計分和徽章
 * Analytics報表
 
-若要體驗快速建立新參與社群的簡易性，請造訪「AEM社 [群快速入門」](/help/communities/getting-started.md)。
+若要體驗快速建立新參與社群的簡易性，請造訪[AEM Communities](/help/communities/getting-started.md)快速入門。
 
-### 啟用社群 {#enablement-community}
+### 啟用社群{#enablement-community}
 
 啟用社群是包含線上學習功能的社群網站。
 
 啟用社群的功能可能包括：
 
-* 參與社群的所有 [功能](#engagement-community)。
+* [參與社群](#engagement-community)的所有功能。
 * 指派內容與學習的能力。 資源。
 * 支援SCORM內容，例如隨堂測驗和測試。
 * 跟蹤任務完成。
 * 存取報告與分析。
 * 透過論壇、訊息、留言和評分進行學習資源相關對話的能力。
 
-當設定啟用附加元件時 [](/help/communities/enablement.md)，可建立啟用社群，這需要額外的授權才能在生產環境中使用。 啟用社群網站將包含指 [派功能](#community-functions)。
+當配置[啟用附加元件](/help/communities/enablement.md)時，可建立啟用社區，該附加元件需要額外的許可以用於生產環境。 啟用社群網站將包含[指派函式](#community-functions)。
 
-若要體驗建立新啟用社群的便利性，請造訪「AEM社 [群啟用快速入門」](/help/communities/getting-started-enablement.md)。
+若要體驗建立新啟用社群的便利性，請造訪[AEM Communities for Enablement](/help/communities/getting-started-enablement.md)快速入門。
 
 ## AEM Demo Machine {#aem-demo-machine}
 
-AEM Demo Machine [管理並執行AEM Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) 、 [Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites)、 [Communities、Apps](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)和Forms的AEM Demos，通常需要的設定比啟動QuickStart例項的設定更多。 AEM Demo Machine將設定其他基礎 [架構](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) ，例如MongoDB、Solr、MySQL、FFmpeg和電子郵件伺服器。
+[AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine)管理並執行AEM [Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites)、[Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)、[Communities](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)、[Apps](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)和[Forms&lt;a111/>的示範程式，這通常需要更多的設定，而不只是啟動QuickStart實例。 ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)AEM Demo Machine將設定額外的[基礎架構](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure)，例如MongoDB、Solr、MySQL、FFmpeg和電子郵件伺服器。
 
 AEM Demo Machine包含：
 
-* 圖形 [使用者介面](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/User%20Interface)。
-* 具有可配置屬性和目 [標的](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Properties) Apache ANT [指令碼](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Command%20Line)。
+* A [圖形用戶介面](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/User%20Interface)。
+* 具有可配置[屬性](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Properties)和[目標](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Command%20Line)的Apache ANT指令碼。
 
 * 要安裝的軟體包。
 
@@ -244,12 +245,12 @@ AEM Demo Machine需要有效的AEM授權。
 
 >[!NOTE]
 >
->檢視 [AEM Demo Machine](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) (13:26)的簡介影片。
+>檢視AEM Demo Machine(13:26)的[影片簡介](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be)。
 
-## AEM Communities檔案 {#aem-communities-documentation}
+## AEM Communities Documentation {#aem-communities-documentation}
 
-* 請造 [訪部署社群](deploy-communities.md) ，以瞭解建議的部署。
-* 請造 [訪管理社群網站](administer-landing.md) ，以瞭解如何建立社群網站、新增社群群組、設定社群網站範本、協調社群內容、管理成員、標籤、通知、計分和標章。
-* 請造 [訪開發社群](communities.md) ，以瞭解社交元件架構(SCF)及自訂社群元件與功能。
-* 請造 [訪編寫社群元件](author-communities.md) ，以瞭解如何使用和設定社群元件。
+* 請造訪[部署社群](deploy-communities.md)以瞭解建議的部署。
+* 請造訪[管理社群網站](administer-landing.md)，以瞭解如何建立社群網站、新增社群群組、設定社群網站範本、協調社群內容、管理成員、標籤、通知、計分和標章。
+* 請造訪[開發社群](communities.md)以瞭解社交元件架構(SCF)和自訂社群元件和功能。
+* 請造訪[編寫社群元件](author-communities.md)，以瞭解如何編寫和設定社群元件。
 
