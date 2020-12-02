@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 1%
 
 ---
 
 
-# 微調運行狀況監視器效能{#fine-tuning-health-monitor-performance}
+# 微調健康監視器效能{#fine-tuning-health-monitor-performance}
 
 收集填入Health Monitor的系統統計資料會對AEM表單環境的效能產生一定影響。 您可以透過設定應用程式伺服器中下列的Java選項來控制此影響。
 
@@ -34,7 +37,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    <td><p>true</p></td>
   </tr>
   <tr>
-   <td><p>adobe.cache.statistics已啟用</p></td>
+   <td><p>adobe.cache.statistics-enabled</p></td>
    <td><p>開啟或關閉Gemfire快取</p></td>
    <td><p>true</p></td>
   </tr>
@@ -64,7 +67,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 ## 將Java選項添加到JBoss {#add-java-options-to-jboss}
 
 1. 停止JBoss應用程式伺服器。
-1. 在編輯 *[器中開]*&#x200B;啟appserver root /bin/run.bat(Windows)或run.sh（Linux或UNIX），並視需要新增任何Java選項。
+1. 在編輯器中開啟&#x200B;*[appserver root]*/bin/run.bat(Windows)或run.sh（Linux或UNIX），並根據需要添加任何Java選項。
 1. 重新啟動伺服器。
 
 ## 將Java選項新增至WebLogic {#add-java-options-to-weblogic}
@@ -73,11 +76,11 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 鍵入您為WebLogic Server域建立的用戶名和密碼，然後按一下「更改中心」下的「日誌」，按一下「鎖定和編輯」。
 1. 在「域結構」下，按一下「環境」>「伺服器」，然後在右窗格中按一下受控伺服器名稱。
 1. 在下一個畫面中，按一下「設定」標籤>「伺服器開始」標籤。
-1. 在「參數」框中，將所需參數附加到當前內容的末尾。 例如，添加——禁用 `Dadobe.healthmonitor.enabled=false` Health Monitor。
+1. 在「參數」框中，將所需參數附加到當前內容的末尾。 例如，添加- `Dadobe.healthmonitor.enabled=false`禁用Health Monitor。
 1. 按一下「儲存」，然後按一下「啟用變更」。
 1. 重新啟動WebLogic受控伺服器。
 
-## 將Java選項新增至WebSphere {#add-java-options-to-websphere}
+## 將Java選項添加到WebSphere {#add-java-options-to-websphere}
 
 1. 在WebSphere管理控制台導覽樹中，為應用程式伺服器執行下列動作：
 
@@ -86,7 +89,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    (WebSphere 7.x)按一下「伺服器>伺服器類型> WebSphere應用程式伺服器」
 
 1. 在右窗格中，按一下伺服器名稱。
-1. 在「伺服器基礎架構」下，按一下「Java和表單工作流」>「進程定義」。
+1. 在「伺服器基礎架構」下，按一下「Java和表單工作流」>「流程定義」。
 1. 在「其他屬性」下，按一下「Java虛擬機」。
 1. 在「通用JVM參數」框中，鍵入所需參數。
 1. 按一下「確定」或「應用」，然後按一下「直接保存到主配置」。
