@@ -11,27 +11,30 @@ content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 7%
 
 ---
 
 
-# 編寫時疑難排解AEM{#troubleshooting-aem-when-authoring}
+# 疑難排解編寫AEM{#troubleshooting-aem-when-authoring}
 
 下節涵蓋您使用AEM時可能遇到的一些問題，以及如何疑難排解的建議。
 
 >[!NOTE]
 >
->當遇到問題時，也有必要檢查實例( [發行版和服務包](/help/release-notes/known-issues.md) )的已知問題清單。
+>當遇到問題時，也有必要檢查實例（發行和服務包）的[已知問題](/help/release-notes/known-issues.md)清單。
 
 >[!NOTE]
 >
->具有管理員權限且想要疑難排解AEM問題的使用者，可以使用疑難排解AEM（適用於管理員）中 [所述的疑難排解方法](/help/sites-administering/troubleshoot.md)。 如果您沒有足夠的權限，請洽詢您的系統管理員有關疑難排解AEM的資訊。
+>具有管理員權限且想要疑難排解AEM問題的使用者，可使用[疑難排解AEM（適用於管理員）](/help/sites-administering/troubleshoot.md)中所述的疑難排解方法。 如果您沒有足夠的權限，請洽詢您的系統管理員有關疑難排解AEM的資訊。
 
-## 舊頁面版本仍在發佈網站上 {#old-page-version-still-on-published-site}
+## 已發佈網站{#old-page-version-still-on-published-site}上仍有舊版頁面
 
 * **問題**:
 
-   * 您已變更頁面並將頁面複製至發佈網站，但 *舊版* 「頁面」仍會顯示在發佈網站上。
+   * 您已對頁面進行變更，並將頁面複製至發佈網站，但是頁面的&#x200B;*old*&#x200B;版本仍會顯示在發佈網站上。
 
 * **原因**:
 
@@ -42,14 +45,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 這裡有各種可能：
    * 確認頁面已正確複製。 檢查頁狀態以及複製隊列的狀態（如果需要）。
    * 清除本機瀏覽器中的快取，並再次存取您的頁面。
-   * 新 `?` 增至頁面URL的結尾。 例如：
+   * 將`?`新增至頁面URL的結尾。 例如：
 
       * `http://localhost:4502/sites.html/content?`
       * 這會直接從AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
    * 如果複製隊列存在問題，請與系統管理員聯繫。
 
 
-## 工具欄上不顯示元件操作 {#component-actions-not-visible-on-toolbar}
+## 工具欄{#component-actions-not-visible-on-toolbar}上不顯示元件操作
 
 * **問題**:
 
