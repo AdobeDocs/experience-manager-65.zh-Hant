@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# JSRP - JCR儲存資源提供商 {#jsrp-jcr-storage-resource-provider}
+# JSRP - JCR儲存資源提供程式{#jsrp-jcr-storage-resource-provider}
 
 ## 關於JSRP {#about-jsrp}
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 由於部署簡單，JSRP通常最適合用於一個發佈實例和一個作者實例的演示或開發環境。
 
-另請參 [閱SRP選項和建議的](working-with-srp.md#characteristics-of-srp-options)[拓撲特性](topologies.md)。
+另請參見[SRP選項的特性](working-with-srp.md#characteristics-of-srp-options)和[建議拓撲](topologies.md)。
 
 ## 設定 {#configuration}
 
@@ -34,56 +34,56 @@ ht-degree: 0%
 
 預設情況下，JSRP是UGC的儲存選項。
 
-存 [儲配置控制台](srp-config.md) (Storage Configuration Console)允許選擇預設儲存配置，該配置標識要使用的SRP實施。
+[儲存配置控制台](srp-config.md)允許選擇預設儲存配置，該配置標識要使用的SRP實施。
 
 在作者環境中，要訪問儲存配置控制台
 
-* 從全域導覽： **[!UICONTROL 工具]** >社 **[!UICONTROL 群]** >儲 **[!UICONTROL 存設定]**
+* 從全域導覽：**[!UICONTROL 工具]** > **[!UICONTROL 社區]** > **[!UICONTROL 儲存配置]**
 
-* Select **[!UICONTROL JCR Storage Resource Provider (JSRP)]**
+* 選擇&#x200B;**[!UICONTROL JCR儲存資源提供程式(JSRP)]**
 
-* 選擇「提 **[!UICONTROL 交」]**
+* 選擇&#x200B;**[!UICONTROL 提交]**
 
 ![jsrp-configuration](assets/jsrp-configuration.png)
 
-### 發佈設定 {#publishing-the-configuration}
+### 發佈配置{#publishing-the-configuration}
 
 雖然JSRP是預設設定，但若要確保在發佈環境中設定相同的設定：
 
-* 從全域導覽： **[!UICONTROL 工具]** >部 **[!UICONTROL 署]** >復 **[!UICONTROL 制]**
-* 選擇「 **[!UICONTROL 激活樹]** 」>「 **[!UICONTROL 開始路徑」]**:
+* 從全域導覽：**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 複製]**
+* 選擇&#x200B;**[!UICONTROL 激活樹]** > **[!UICONTROL 啟動路徑]**:
 
-   * 瀏覽至 `/conf/global/settings/community/srpc/`
+   * 瀏覽至`/conf/global/settings/community/srpc/`
 
-* 選取「啟 **[!UICONTROL 動」]**
+* 選擇&#x200B;**[!UICONTROL 激活]**
 
-## 管理使用者資料 {#managing-user-data}
+## 管理用戶資料{#managing-user-data}
 
-如需有關使用者 *、使用者****、使用者*&#x200B;設定檔和使用者群組的資訊，請造訪：
+有關&#x200B;*用戶*、*用戶概要檔案*&#x200B;和&#x200B;*用戶組*&#x200B;的資訊，請訪問：
 
 * [用戶同步](sync.md)
 * [管理使用者和使用者群組](users.md)
 
 ## 疑難排解 {#troubleshooting}
 
-### UGC在JCR中不可見 {#ugc-not-visible-in-jcr}
+### UGC在JCR {#ugc-not-visible-in-jcr}中不可見
 
 通過檢查儲存選項的配置，確保JSRP已配置為預設提供程式。 預設情況下，儲存資源提供方是JSRP。
 
 在所有作者和發佈AEM例項上，請重新造訪「儲存組態控制台」或檢查AEM存放庫：
 
-* 在JCR中，如果 [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
+* 在JCR中，如果[/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * 不包含srpc節 [點](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) ，表示儲存提供程式是JSRP。
-   * 如果srpc節點存在並包含節點 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將JSRP定義為預設提供程式。
+   * 不包含[srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)節點，表示儲存提供程式是JSRP。
+   * 如果srpc節點存在並包含節點[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將JSRP定義為預設提供程式。
 
-### UGC在作者例項上不可見 {#ugc-not-visible-on-author-instance}
+### 作者實例{#ugc-not-visible-on-author-instance}上不顯示UGC
 
 這不是錯誤。 JSRP的特點是，在發佈環境中輸入的社群內容只能在發佈環境中顯示。
 
-### UGC在發佈例項上不可見 {#ugc-not-visible-on-publish-instance}
+### UGC在發佈實例{#ugc-not-visible-on-publish-instance}上不可見
 
-如果單個發佈實例或已部署發佈群集，請遵循「 [UGC Not Visible in JCR」(在JCR中不可見](#ugc-not-visible-in-jcr)UGC)的說明。
+如果單個發佈實例或已部署發佈群集，則按照[UGC Not Visible in JCR](#ugc-not-visible-in-jcr)的說明操作。
 
 如果部署了發佈群，JSRP的一個特點是，社群內容只會顯示在發佈實例上。
 
