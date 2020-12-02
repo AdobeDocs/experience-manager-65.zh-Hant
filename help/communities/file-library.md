@@ -28,33 +28,33 @@ ht-degree: 6%
 本檔案章節說明：
 
 * 新增檔案庫功能至AEM網站。
-* 元件的配置 `File Library` 設定。
+* `File Library`元件的配置設定。
 
-### 新增檔案庫至頁面 {#adding-a-file-library-to-a-page}
+### 將檔案庫添加到頁面{#adding-a-file-library-to-a-page}
 
-若要在作 `File Library` 者模式下將元件新增至頁面，請找出元件：
+要在作者模式下將`File Library`元件添加到頁面，請找到該元件：
 
 * `Communities / File Library`
 
 並將它拖曳至頁面上的位置。
 
-如需必要資訊，請造 [訪Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
 
-當包含 [所需的用戶端程式庫](/help/communities/essentials-file-library.md#essentials-for-client-side) ，元件的顯示方式 `File Library` 如下：
+當包含[必要的用戶端程式庫](/help/communities/essentials-file-library.md#essentials-for-client-side)時，`File Library`元件的顯示方式如下：
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
-### 配置檔案庫 {#configuring-file-library}
+### 配置檔案庫{#configuring-file-library}
 
-選擇要訪問 `File Library` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`File Library`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![chlimage_1-431](assets/chlimage_1-431.png)
 
 ![chlimage_1-432](assets/chlimage_1-432.png)
 
-#### 「注釋」頁籤 {#comments-tab}
+#### 「注釋」頁籤{#comments-tab}
 
-在「注 **釋** 」標籤下，指定上傳檔案的注釋是否及顯示方式：
+在&#x200B;**Comments**&#x200B;標籤下，指定上傳檔案的注釋是否及顯示方式：
 
 * **允許在檔案上填寫意見**
 
@@ -62,7 +62,7 @@ ht-degree: 6%
 
 * **每頁的評論數**
 
-   限制每頁顯示的留言數，以及顯示的回覆數。 預設值 **為10**。
+   限制每頁顯示的留言數，以及顯示的回覆數。 預設值為&#x200B;**10**。
 
 * **最大檔案大小**
 
@@ -74,7 +74,7 @@ ht-degree: 6%
 
 * **允許的檔案類型**
 
-   以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   以逗號分隔的副檔名清單，並以&quot;dot&quot;分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **RTF 編輯器**
 
@@ -102,7 +102,7 @@ ht-degree: 6%
 
 * **允許關注**
 
-   如果勾選，請為部落格文章加入下列功能，讓成員得 [到](/help/communities/notifications.md) 新貼文的通知。 預設為未勾選。
+   如果勾選，請為部落格文章加入下列功能，讓成員能夠收到新貼文的[通知。 ](/help/communities/notifications.md)預設為未勾選。
 
 * **啟用提及功能**
 
@@ -120,9 +120,9 @@ ht-degree: 6%
 
    如果勾選，則允許回覆已張貼的留言。 預設為未勾選。
 
-#### 使用者協調標籤 {#user-moderation-tab}
+#### 使用者協調標籤{#user-moderation-tab}
 
-在「使用 **者協調** 」標籤下，設定留言的協調（如果允許留言）:
+在&#x200B;**使用者協調**&#x200B;標籤下，設定留言的協調（如果允許留言）:
 
 * **事先審核**
 
@@ -154,13 +154,13 @@ ht-degree: 6%
 
 * **協調臨界值**
 
-   輸入在通知協調者之前，訪客必須標籤留言的次數。 預設值為一次(**1**)。
+   輸入在通知協調者之前，訪客必須標籤留言的次數。 預設為一次(**1**)。
 
 * **標幟限制**
 
-   輸入留言在公開檢視中隱藏前必須標籤的次數。 此數字必須大於或等於「協調臨界 **值」**。 預設值為5。
+   輸入留言在公開檢視中隱藏前必須標籤的次數。 此數字必須大於或等於&#x200B;**協調臨界值**。 預設值為5。
 
-### 「排序設定」頁籤 {#sort-settings-tab}
+### 排序設定頁籤{#sort-settings-tab}
 
 排序方式
 
@@ -168,8 +168,8 @@ ht-degree: 6%
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人員 [的「檔案庫](/help/communities/essentials-file-library.md) 」 Essentials頁面。
+如需詳細資訊，請參閱開發人員的[File Library Essentials](/help/communities/essentials-file-library.md)頁面。
 
-如需協調已張貼主題和留言的資訊，請參 [閱協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+如需協調已張貼主題和留言的資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
 
-如需標籤已張貼的主題和留言，請參 [閱標籤使用者產生的內容](/help/communities/tag-ugc.md)。
+如需標籤已張貼的主題和留言，請參閱[標籤使用者產生的內容](/help/communities/tag-ugc.md)。
