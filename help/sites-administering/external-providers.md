@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Analytics與外部提供者 {#analytics-with-external-providers}
+# 外部提供者{#analytics-with-external-providers}的分析
 
 Analytics可為您提供網站使用方式的重要且有趣的資訊。
 
@@ -28,13 +28,13 @@ Analytics可為您提供網站使用方式的重要且有趣的資訊。
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
 
-您也可以設定您自己的一般分析 **程式碼片段例項** ，以定義新的服務設定。
+您也可以設定您自己的&#x200B;**一般分析程式碼片段例項，以定義新的服務設定。**
 
 然後，通過添加到網頁的代碼的小片段收集資訊。 例如：
 
 >[!CAUTION]
 >
->指令碼不得包含在標 `script` 記中。
+>指令碼不能封閉在`script`標籤中。
 
 ```
 var _gaq = _gaq || [];
@@ -57,19 +57,19 @@ _gaq.push(['_trackPageview']);
 
 >[!CAUTION]
 >
->Geometrixx-Outdoors示範網站的設定，讓「頁面屬性」中提供的屬性附加至對應指令碼的html原始碼(剛好在 `</html>` endtag的正上 `js` 方)。
+>Geometrixx-Outdoors示範網站的設定，讓「頁面屬性」中提供的屬性附加至對應`js`指令碼的html原始碼（剛好在`</html>` endtag上方）。
 >
->如果您自 `/apps` 己不繼承預設頁面元件( `/libs/foundation/components/page`)，您（或您的開發人員）必須確定已包含對應的指令碼，例如 `js``cq/cloudserviceconfigs/components/servicescomponents`，包括或使用類似機制。
+>如果您自己的`/apps`未繼承預設頁面元件(`/libs/foundation/components/page`)，您（或您的開發人員）必須確定已包含對應的`js`指令碼，例如包含`cq/cloudserviceconfigs/components/servicescomponents`或使用類似機制。
 >
 >若沒有這項功能，則所有服務（一般、分析、目標等）都無法運作。
 
-## 使用一般程式碼片段建立新服務 {#creating-a-new-service-with-a-generic-snippet}
+## 使用一般程式碼片段{#creating-a-new-service-with-a-generic-snippet}建立新服務
 
 對於基本配置：
 
-1. 開啟「工 **具** 」主控台。
-1. 從左窗格展開「 **雲端服務設定」**。
-1. 連按兩下「 **一般分析程式碼片段** 」以開啟頁面：
+1. 開啟&#x200B;**工具**&#x200B;控制台。
+1. 從左窗格展開&#x200B;**雲服務配置**。
+1. 連按兩下&#x200B;**一般分析程式碼片段**&#x200B;以開啟頁面：
 
    ![](assets/analytics_genericoverview.png)
 
@@ -77,28 +77,28 @@ _gaq.push(['_trackPageview']);
 
    ![](assets/analytics_addconfig.png)
 
-1. 按一 **下「建立**」，程式碼片段對話方塊會立即開啟——將適當的javascript程式碼片段貼入欄位：
+1. 按一下「建立&#x200B;****」，程式碼片段對話方塊會立即開啟——將適當的javascript程式碼片段貼入欄位：
 
    ![](assets/analytics_snippet.png)
 
-1. 按一 **下「確定** 」以儲存。
+1. 按一下&#x200B;**確定**&#x200B;保存。
 
-## 在頁面上使用您的新服務 {#using-your-new-service-on-pages}
+## 在{#using-your-new-service-on-pages}頁面上使用您的新服務
 
 已建立服務配置後，您現在需要配置所需的頁以使用它：
 
 1. 導覽至頁面。
-1. 開啟「 **Page Properties from sidekick** 」(頁面屬性 **)，然後** 開啟「Cloud Services」標籤。
-1. 按一 **下「新增服務**」，然後選取所需的服務；例如，「 **一般分析程式碼片段**:
+1. 從sidekick開啟&#x200B;**頁面屬性**，然後開啟&#x200B;**雲端服務**&#x200B;標籤。
+1. 按一下&#x200B;**添加服務** ，然後選擇所需服務；例如&#x200B;**一般分析程式碼片段**:
 
    ![](assets/analytics_selectservice.png)
 
-1. 按一 **下「確定** 」以儲存。
-1. 您將會返回「雲端服 **務」標籤** 。 「 **一般分析程式碼片段** 」現在會隨訊息一併列出 `Configuration reference missing`。 使用下拉式清單來選擇您的特定服務例項；例如google-analytics:
+1. 按一下&#x200B;**確定**&#x200B;保存。
+1. 您將返回至&#x200B;**雲端服務**&#x200B;標籤。 **一般分析程式碼片段**&#x200B;現在會隨訊息`Configuration reference missing`一併列出。 使用下拉式清單來選擇您的特定服務例項；例如google-analytics:
 
    ![](assets/analytics_selectspecificservice.png)
 
-1. 按一 **下「確定** 」以儲存。
+1. 按一下&#x200B;**確定**&#x200B;保存。
 
    如果您檢視頁面的「頁面來源」，現在可以看到此程式碼片段。
 
