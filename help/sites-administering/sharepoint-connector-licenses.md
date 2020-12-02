@@ -12,6 +12,9 @@ discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 5%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 本節列出所有必須與Day JCR Connector for MS SharePoint一起明示的授權、版權聲明和免責聲明。
 
-## Connector第三方庫概述 {#overview-of-connector-rd-party-libraries}
+## 連接器第三方庫概述{#overview-of-connector-rd-party-libraries}
 
 下表列出SharePoint Connector核心庫中使用的第三方庫，以及這些庫所涵蓋的許可證、版權聲明或免責聲明：
 
@@ -61,7 +64,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 | xml-api | [Apache](#apache) （包含Public Domain和W3C軟體授權涵蓋的部分） |
 | XmlSchema | [Apache](#apache) |
 
-## CRX第三方資料庫概觀 {#overview-of-crx-rd-party-libraries}
+## CRX第三方庫{#overview-of-crx-rd-party-libraries}概述
 
 下表列出CRX中使用的第三方資料庫，以及其涵蓋的授權、著作權聲明或免責聲明：
 
@@ -153,7 +156,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
  </tbody>
 </table>
 
-## CQSE第三方資料庫概觀 {#overview-of-cqse-rd-party-libraries}
+## CQSE第三方庫{#overview-of-cqse-rd-party-libraries}概述
 
 下表列出了Porneat Servlet引擎中使用的第三方庫，以及它們所涵蓋的許可證、版權聲明或免責聲明：
 
@@ -424,7 +427,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      limitations under the License.
 ```
 
-## 並行 {#concurrent}
+## 併發{#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -565,7 +568,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      implementations, and test suites thereof.
 ```
 
-## Hypersonic SQL組 {#hypersonic-sql-group}
+## 高超聲速SQL組{#hypersonic-sql-group}
 
 ```xml
      COPYRIGHTS AND LICENSES
@@ -1092,7 +1095,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      (LFI#95810/Form ID#011801)
 ```
 
-## W3C檔案 {#w-c-document}
+## W3C檔案{#w-c-document}
 
 ```xml
      This license came from: https://www.w3.org/Consortium/Legal/
@@ -1178,7 +1181,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      (last updated by reagle on 1999/04/99.)
 ```
 
-## W3C軟體 {#w-c-software}
+## W3C軟體{#w-c-software}
 
 ```xml
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>
