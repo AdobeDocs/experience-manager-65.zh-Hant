@@ -12,6 +12,9 @@ discoiquuid: 7f378b94-5233-4358-8d93-a7b3386df00b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+workflow-type: tm+mt
+source-wordcount: '1236'
+ht-degree: 5%
 
 ---
 
@@ -22,29 +25,29 @@ source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
 
 >[!NOTE]
 >
->AEM 6.2已淘汰Teaser元件。請改用 [Target元件](/help/sites-authoring/content-targeting-touch.md) 。
+>AEM 6.2已淘汰Teaser元件。請改用[Target元件](/help/sites-authoring/content-targeting-touch.md)。
 
-* **品牌頁面** ，會儲存在網站的「促銷活動」區段中。 品牌包含個別的促銷活動。
-* **促銷活動頁面** ，會儲存在網站的「促銷活動」區段中。 每個促銷活動都有個別頁面，摘要定義會在其中保留。 容器（或概述）頁面也包含與個別摘要頁面相關的特定資訊和統計資料。
+* **品牌** 頁面會儲存在網站的「促銷活動」區段中。品牌包含個別的促銷活動。
+* **促銷** 活動頁面會儲存在網站的「促銷活動」區段中。每個促銷活動都有個別頁面，摘要定義會在其中保留。 容器（或概述）頁面也包含與個別摘要頁面相關的特定資訊和統計資料。
 
 AEM中的茶匙由數個部分組成：
 
-* **摘要頁面** 會儲存在適當的促銷活動頁面下，並保留每個特定促銷活動可用摘要段落的定義。 這些定義用於顯示摘要段落；包括內容變化、用於選擇變化的區段和提升系數。
-* Teaser **元件現成可用** ，可讓您在內容頁面中建立特定Teaser段落的例項。 您可以從sidekick拖曳Teaser元件，然後指定您的Teaser定義，以建立您自己的Teaser段落。 **** 注意：AEM 6.2已淘汰Teaser元件。請改用 [Target元件](/help/sites-authoring/content-targeting-touch.md) 。
-* **摘要段落** ，是內容頁面中摘要的實際例項。 這些策略吸引了部分訪客，他們通過關注其興趣的內容來吸引他們。
+* **摘要** 頁面會儲存在適當的促銷活動頁面下，並保留每個特定促銷活動可用摘要段落的定義。這些定義用於顯示摘要段落；包括內容變化、用於選擇變化的區段和提升系數。
+* **摘要元件**&#x200B;現成可用，可讓您在內容頁面中建立特定摘要段落的例項。 您可以從sidekick拖曳Teaser元件，然後指定您的Teaser定義，以建立您自己的Teaser段落。 **注意：** Teaser元件已在AEM 6.2中過時。請改用 [Target元](/help/sites-authoring/content-targeting-touch.md) 件。
+* **摘要** 段落是內容頁面中摘要的實際例項。這些策略吸引了部分訪客，他們通過關注其興趣的內容來吸引他們。
 * 將促銷活動內容放在特定訪客群體的頁面。 通常摘要段落會將訪客引導至此類頁面。
 
 ## 策略 {#strategies}
 
-將摘要段落新增至頁面時，您需要定義 **策略**。
+在將摘要段落新增至頁面時，您需要定義&#x200B;**Strategy**。
 
-若有數個預告可供選擇，因為其指派的區段都能成功解析。 然後 **Strategy** 會指定額外標準，用於選取顯示的摘要：
+若有數個預告可供選擇，因為其指派的區段都能成功解析。 然後，**Strategy**&#x200B;會指定用於選擇顯示的摘要的額外標準：
 
-* **點按流分數**，是根據訪客用戶端內容中所保留的標籤和相關標籤點擊（顯示訪客點按包含個別標籤的頁面的頻率）。 比較摘要頁面上定義之標籤的點擊率。
+* **點按流分數**，是根據訪客用戶端內容中所保留的標籤和相關標籤點擊（顯示訪客點按包含個別標籤的頁面的頻率）。比較摘要頁面上定義之標籤的點擊率。
 * **隨機**，用於「隨機」選擇；使用為頁面產生的隨機因素，這可與用戶端內容一 [起檢視](/help/sites-administering/client-context.md)。
-* **在已解** 決區段清單中，首先列出。 順序是促銷活動容器頁面中的預告。
+* **固** 定已解析的區段清單。順序是促銷活動容器頁面中的預告。
 
-區 [段的Boost](/help/sites-administering/campaign-segmentation.md#boost-factor) Factor也會影響選擇。 這是新增至區段定義的加權因子，以增加／減少選取區段的相對可能性。
+區段的[Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-factor)也會影響選擇。 這是新增至區段定義的加權因子，以增加／減少選取區段的相對可能性。
 
 以範例最能說明各種選擇准則的程式與相互關係（此方法也可用來確保您的廣告會觸及所需的觀眾）。
 
@@ -110,10 +113,10 @@ AEM中的茶匙由數個部分組成：
 
 若我們將此套用至下列位置的訪客：
 
-* **S1**、 **S2** 和 **S6成功解析**
+* **S1**、 **S2** 和 **S6成** 功解決
 
-* 標籤行 **銷** 3個點擊
-* 標籤業 **務** 6次點擊
+* 標籤&#x200B;**marketing**&#x200B;有3次點擊
+* 標籤&#x200B;**business**&#x200B;有6次點擊
 
 我們可以看到結果：
 
@@ -127,7 +130,7 @@ AEM中的茶匙由數個部分組成：
  <tbody>
   <tr>
    <td>行銷活動</td>
-   <td>Teaser</td>
+   <td>摘要</td>
    <td>指派的區段</td>
    <td>標記 </td>
    <td>成功匹配？</td>
@@ -191,7 +194,7 @@ AEM中的茶匙由數個部分組成：
  </tbody>
 </table>
 
-這些值會根據套用至摘要段落的策略，用來判斷訪客將看到的摘 **要** :
+這些值會根據套用至摘要段落的&#x200B;**策略**，用來判斷訪客將看到的摘要：
 
 <table>
  <tbody>
@@ -203,7 +206,7 @@ AEM中的茶匙由數個部分組成：
   <tr>
    <td>第一個</td>
    <td>T5</td>
-   <td>只有T5和T6被視為其細分都有決 <i>心</i> ，而且其提升系數最高。 返回的清單按T5、T6順序排列；因此，T5已選取並顯示。</td>
+   <td>只有T5和T6被視為其細分，它們都能分辨出<i>和</i>它們具有最高的升壓系數。 返回的清單按T5、T6順序排列；因此，T5已選取並顯示。</td>
   </tr>
   <tr>
    <td>隨機</td>
@@ -230,25 +233,27 @@ AEM中的茶匙由數個部分組成：
 
 建立您的品牌和促銷活動後，您可以建立和設定您的摘要體驗。
 
-### 為摘要建立觸點 {#creating-a-touchpoint-for-your-teaser}
+### 為摘要建立接觸點{#creating-a-touchpoint-for-your-teaser}
 
 >[!NOTE]
 >
->AEM 6.2已淘汰Teaser元件。請改用 [Target元件](/help/sites-authoring/content-targeting-touch.md) 。
+>AEM 6.2已淘汰Teaser元件。請改用[Target元件](/help/sites-authoring/content-targeting-touch.md)。
 
 1. 導覽至您要放置廣告段落的內容頁面，該段落將引導您的促銷活動頁面。
-1. 將 **Teaser** 元件(可在Sidekick的「個人化」區段 **中取得** )新增至所需位置。 首次建立時，它會顯示促銷活動路徑尚未設定：
+1. 將&#x200B;**Teaser**&#x200B;元件（可在側腳的&#x200B;**Personalization**&#x200B;區段中取得）新增至所需位置。 首次建立時，它會顯示促銷活動路徑尚未設定：
 
    ![chlimage_1](assets/chlimage_1.png)
 
 1. 編輯摘要元件以新增：
 
-   * **促銷活動路**&#x200B;徑包含個別摘要頁面之促銷活動頁面的路徑；區段會決定確切顯示的摘要。
+   * **促銷活**
+動路徑路徑至包含個別摘要頁面的促銷活動頁面；區段會決定確切顯示的摘要。
 
-   * **[策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)**方法，用於在成功解析多個區段時進行選取。
+   * **[StrategyMethod](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)**
+，用於在成功解析多個區段時進行選取。
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
-1. 按一 **下「確定** 」以儲存。 根據您在摘要上設定的區段以及您目前以此身分登入之使用者的設定檔，將會顯示適當的內容：
+1. 按一下&#x200B;**確定**&#x200B;保存。 根據您在摘要上設定的區段以及您目前以此身分登入之使用者的設定檔，將會顯示適當的內容：
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
@@ -256,11 +261,11 @@ AEM中的茶匙由數個部分組成：
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-### 摘要概述 {#teaser-overview}
+### 摘要概述{#teaser-overview}
 
 除了MCM中的促銷活動檢視外，促銷活動頁面也會提供與其連結的廣告的相關資訊：
 
-1. 從網站 **主控台** ，開啟促銷活動頁面；例如：
+1. 從&#x200B;**Websites**&#x200B;主控台開啟促銷活動頁面；例如：
 
    `https://localhost:4502/content/campaigns/geometrixx-outdoors/storefront/summer.html`
 
