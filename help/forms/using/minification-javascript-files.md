@@ -18,19 +18,19 @@ ht-degree: 0%
 ---
 
 
-# JavaScript檔案的精簡化 {#minification-of-the-javascript-files}
+# JavaScript檔案的精簡化{#minification-of-the-javascript-files}
 
 精簡功能會從原始程式碼中移除多餘的字元，例如空格、新行和註解。 如此可減少程式碼的大小，以改善效能。 雖然精簡化不會影響功能，但會降低程式碼的可讀性。
 
 要生成用於語義更改的精簡代碼，請遵循以下步驟。
 
-1. 從文 `client-html/src/main/webapp/js` 件系統上的src-package複製。
+1. 從檔案系統上的src-package複製`client-html/src/main/webapp/js`。
 
    >[!NOTE]
    >
-   >如需 [套件的詳細資訊，請參閱自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md) 。
+   >如需套件的詳細資訊，請參閱[自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md)。
 
-1. 更新位於client-html/src/main/webapp/js `main.js` 下方的路徑，以取得已新增／更新的模型／檢視。
+1. 更新位於client-html/src/main/webapp/js下方的`main.js`中路徑，以取得已新增／更新的模型／檢視。
 
    例如，新增新的Sharequeue模型（例如mySharequeue），請變更：
 
@@ -44,7 +44,7 @@ ht-degree: 0%
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. 更 `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` 新，以防中更改／添加別名 `main.js`。
+1. 更新`registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,`，以備`main.js`中更改／添加別名。
 
    例如，新增新的Sharequeue模型（例如mySharequeue），請變更：
 
