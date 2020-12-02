@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +28,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->若要進一步瞭解AEM mobile應用程式的設計考量，請參閱「線上說 [明」中的「AEM mobile應用程式的設計考量](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 」。
+>若要進一步瞭解AEM Mobile應用程式的設計考量，請參閱「線上說明」中的「AEM Mobile應用程式的設計考量」[。](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 
-## 發佈／取消發佈內容 {#publishing-unpublishing-the-content}
+## 發佈／取消發佈內容{#publishing-unpublishing-the-content}
 
 這與「AEM發佈」不同。 我們不會將內容推送至AEM Publish伺服器例項，以便公開檢視。 在此，我們會通知Mobile On-Demand，選取的內容應該在即時Mobile On-Demand應用程式中公開。
 
@@ -49,7 +52,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-9](assets/chlimage_1-9.gif)
 
-### 後續步驟 {#the-next-steps}
+### 後續步驟{#the-next-steps}
 
 在您瞭解建立和發佈內容後，請參閱
 
