@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 257f3e4a-4b59-4cbb-bf61-f72f173676e6
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
