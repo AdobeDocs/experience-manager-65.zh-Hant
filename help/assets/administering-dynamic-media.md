@@ -14,15 +14,15 @@ ht-degree: 0%
 ---
 
 
-# Setting Up Dynamic Media {#setting-up-dynamic-media}
+# 設定動態媒體{#setting-up-dynamic-media}
 
-[動態媒體](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) (Dynamic Media)可協助您管理資產，提供豐富的視覺化銷售和隨選行銷資產，並可自動縮放，以供網頁、行動裝置和社交網站使用。 Dynamic Media使用一組主要來源資產，透過其全球、可擴充、最佳化效能的網路，即時產生並提供多種多樣化內容變化。
+[動態](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media可協助您管理資產，提供豐富的視覺化銷售和隨選行銷資產，並可自動縮放，以供網頁、行動裝置和社交網站使用。Dynamic Media使用一組主要來源資產，透過其全球、可擴充、最佳化效能的網路，即時產生並提供多種多樣化內容變化。
 
 >[!NOTE]
 >
->本檔案說明直接整合至AEM的Dynamic Media功能。 如果您使用整合至AEM的Dynamic Media Classic（先前稱為Scene7），請參閱 [Dynamic Media Classic整合檔案](/help/sites-administering/scene7.md)。
+>本檔案說明直接整合至AEM的Dynamic Media功能。 如果您使用整合至AEM的Dynamic Media Classic（先前稱為Scene7），請參閱[Dynamic Media Classic整合檔案](/help/sites-administering/scene7.md)。
 >
->請參 [閱「雙重使用藍本](/help/sites-administering/scene7.md#dual-use-scenario) 」，以瞭解您可能想要搭配使用與Dynamic Media Classic整合的AEM和Dynamic Media的時機。
+>請參閱[雙重使用藍本](/help/sites-administering/scene7.md#dual-use-scenario)，以瞭解當您想要將AEM與Dynamic Media Classic與Dynamic Media整合時的使用情形。
 
 如果您管理動態媒體，請關注下列主題：
 
