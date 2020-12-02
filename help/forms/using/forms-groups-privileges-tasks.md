@@ -19,11 +19,11 @@ ht-degree: 1%
 ---
 
 
-# OSGi群組和權限上的AEM Forms{#aem-forms-on-osgi-groups-and-privileges}
+# OSGi Groups and Privileges上的AEM Forms{#aem-forms-on-osgi-groups-and-privileges}
 
-您可以 [在AEM中](/help/sites-administering/user-group-ac-admin.md#group-administration) ，建立群組 [，並指派原則](/help/sites-administering/user-group-ac-admin.md#user-administration) 和使用者至群組。 這些原則可控制屬於群組的使用者的權限。
+您可以[建立群組](/help/sites-administering/user-group-ac-admin.md#group-administration)，並將原則和[使用者](/help/sites-administering/user-group-ac-admin.md#user-administration)指派給AEM中的群組。 這些原則可控制屬於群組的使用者的權限。
 
-在您安裝 [AEM Forms附加套件後](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文提及的群組（例如forms-users和forms-power-user）會自動可供指派。 下表列出使用者可根據群組指派，對OSGi上的AEM Forms執行的工作：
+在您安裝[AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)後，本文中提及的群組（例如forms-users和forms-power-user）就會自動可供指派。 下表列出使用者可根據群組指派，對OSGi上的AEM Forms執行的工作：
 
 <table>
  <tbody>
@@ -62,7 +62,7 @@ ht-degree: 1%
     </ul> </td> 
   </tr>
   <tr>
-   <td>範本作者 <sup>[2]</sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>建立並預覽最適化表單或互動式通訊範本</li> 
@@ -94,7 +94,7 @@ ht-degree: 1%
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>使用AEM收件匣應用程式<br /><strong>注意： </strong>您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的Interactive Communications Agent UI。</li> 
+     <li>使用AEM收件箱應用程式<br /> <strong>注意：</strong>您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的Interactive Communications Agent UI。</li> 
      <li>管理工作流程例項</li> 
     </ul> </td> 
   </tr>
