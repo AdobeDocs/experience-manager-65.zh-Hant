@@ -12,6 +12,9 @@ discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '789'
+ht-degree: 0%
 
 ---
 
@@ -24,16 +27,16 @@ Apache Jackrabbit Oak致力於建置可擴充且具效能的階層式內容儲�
 
 它是Jackrabbit 2的後繼版本，AEM 6會將其用作其內容存放庫CRX的預設後端。
 
-## 設計原則與目標 {#design-principles-and-goals}
+## 設計原則和目標{#design-principles-and-goals}
 
-Oak建置 [JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html) (JCR 2.0)規格。 其主要設計目標是：
+Oak實作[JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html)(JCR 2.0)規格。 其主要設計目標是：
 
 * 更好地支援大型儲存庫
 * 多個分佈式群集節點以實現高可用性
 * 更佳的效能
 * 支援許多子節點和訪問控制級別
 
-## 架構概念 {#architecture-concept}
+## 體系結構概念{#architecture-concept}
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -62,11 +65,11 @@ Oak JCR的主要目的是將JCR語義轉換為樹操作。 它還負責：
 
 此外，非Java實作現在也已可能，並成為Oak JCR概念的一部分。
 
-## 儲存空間概觀 {#storage-overview}
+## 儲存概述{#storage-overview}
 
 Oak儲存層提供實際儲存內容的抽象層。
 
-目前，AEM6提供兩種儲存空間實作：Tar **Storage** 和 **MongoDB Storage**。
+目前，AEM6提供兩種儲存空間實作：**Tar Storage**&#x200B;和&#x200B;**MongoDB Storage**。
 
 ### Tar Storage {#tar-storage}
 
@@ -118,7 +121,7 @@ MongoDB儲存通過每次修改將資料添加到文檔中。 但是，只有明
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-## Jackrabbit 2有什麼不同？ {#what-is-different-from-jackrabbit}
+## Jackrabbit 2有什麼不同？{#what-is-different-from-jackrabbit}
 
 由於Oak的設計是向後相容於JCR 1.0標準，所以使用者層級幾乎不會有任何變更。 不過，在設定Oak架構的AEM安裝時，您需要考慮一些明顯的差異：
 
@@ -126,7 +129,7 @@ MongoDB儲存通過每次修改將資料添加到文檔中。 但是，只有明
 * 與Jackrabbit 2不同，Jackrabbit 2中的作業一律會反映存放庫的最新狀態，而Oak a作業則會反映從取得作業時儲存庫的穩定檢視。 這是由於Oak所依據的MVCC模型。
 * Oak中不支援同名同級(SNS)。
 
-## 其他平台相關檔案 {#other-platform-related-documentation}
+## 其他平台相關檔案{#other-platform-related-documentation}
 
 如需AEM平台的詳細資訊，請另行查看下列文章：
 
