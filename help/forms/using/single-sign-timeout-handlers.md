@@ -11,28 +11,31 @@ topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
 
-# 單一登入和逾時處理常式 {#single-sign-on-and-timeout-handlers}
+# 單一登入和逾時處理常式{#single-sign-on-and-timeout-handlers}
 
-AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式（例如Forms Manager或PDF Generator）使用者介面，並在相同的瀏覽器作業階段存取AEM Forms工作區，則使用者已登入AEM Forms工作區，反之亦然。
+AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式（例如Forms Manager或PDF Generator）使用者介面，並在相同的瀏覽器作業階段存取AEM Forms工作區，則使用者會登入AEM Forms工作區，反之亦然。
 
-## 在AEM Forms工作區中處理伺服器逾時 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
+## 處理AEM Forms工作區{#handling-server-timeout-in-nbsp-aem-forms-workspace}中的伺服器逾時
 
 可在管理控制台中設定使用者的作業逾時。
 
-若要設定逾時，請登入至 `https://'[server]:[port]'/adminui`，導覽至「 **設定>使用者管理>設定>設定進階系統屬性**」，然後進行所需的設定。
+若要設定逾時，請登入`https://'[server]:[port]'/adminui`，導覽至「設定>使用者管理>設定>設定>設定進階系統屬性」，並進行所需的設定。****
 
 在AEM Forms工作區中，逾時的處理方式為：
 
-* 用戶的會話持續時間可用於響應初始化用 `initialize` 戶會話的調用。
+* 用戶的會話持續時間可響應初始化用戶會話的`initialize`調用。
 * 彈出式對話方塊會通知使用者作業即將過期（在作業過期前15秒）。
 
 在此彈出式對話方塊中：
 
-* 按一下「確定」結束用戶會話。
+* 按一下確定結束用戶會話。
 * 按一下「取消」以重新初始化使用者作業。
 
 >[!NOTE]
