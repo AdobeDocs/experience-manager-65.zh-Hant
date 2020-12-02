@@ -9,11 +9,14 @@ topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 4%
 
 ---
 
 
-# 最適化表單關鍵字 {#adaptive-forms-keywords}
+# 最適化表單關鍵字{#adaptive-forms-keywords}
 
 最適化表單關鍵字是預先定義、保留的識別碼，對最適化表單有特殊意義。 您無法在最適化表單中使用這些關鍵字作為識別碼。 下表列出所有為最適化表單保留識別碼的關鍵字。
 
@@ -237,4 +240,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </tbody>
 </table>
 
-除了上述關鍵字外，請避免使用與最適化表單JavaScript API [類似的名稱](https://adobe.com/go/learn_aemforms_javascript_api_63)。
+除了上述關鍵字外，請避免使用與[adaptive forms JavaScript APIs](https://adobe.com/go/learn_aemforms_javascript_api_63)類似的名稱。
