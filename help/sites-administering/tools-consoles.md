@@ -1,8 +1,8 @@
 ---
-title: 工具控制台
-seo-title: 工具控制台
-description: 瞭解AEM中的不同工具主控台。
-seo-description: 瞭解AEM中的不同工具主控台。
+title: 工具主控台
+seo-title: 工具主控台
+description: 了解 AEM 中各種不同的工具主控台。
+seo-description: 了解 AEM 中各種不同的工具主控台。
 uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,16 @@ discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 translation-type: tm+mt
 source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
+workflow-type: tm+mt
+source-wordcount: '618'
+ht-degree: 34%
 
 ---
 
 
-# 工具控制台{#tools-consoles}
+# 工具主控台{#tools-consoles}
 
-「工 **具** 」主控台可讓您存取許多專業工具，以協助您管理網站、數位資產和內容存放庫的其他方面。 工具控制台目前有兩種 **類型** ，視您使用的UI而定：
+**「工具」**&#x200B;主控台可供存取多種特殊工具，協助您管理網站、數位資產和內容存放庫的其他方面。**Tools**&#x200B;控制台目前有兩種類型，取決於您使用的UI:
 
 * [工具——觸控最佳化UI](#tools-touch-optimized-ui)
 * [工具- Classic UI](#tools-classic-ui)
@@ -27,7 +30,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
 
 >[!NOTE]
 >
->這些控制台可從全域導 [覽的「工具面板」存取](/help/sites-authoring/basic-handling.md#tools-panel)。
+>這些主控台可從[全域導覽的「工具面板」](/help/sites-authoring/basic-handling.md#tools-panel)存取。
 
 >[!NOTE]
 >
@@ -96,7 +99,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>失敗</td>
   </tr>
   <tr>
-   <td>作業</td>
+   <td>運作</td>
    <td> </td>
   </tr>
   <tr>
@@ -105,7 +108,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
   </tr>
   <tr>
    <td> </td>
-   <td>Web 控制台<br /> </td>
+   <td>Web 主控台<br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -121,7 +124,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
   </tr>
   <tr>
    <td> </td>
-   <td>健康狀況報告</td>
+   <td>健全狀態報表</td>
   </tr>
   <tr>
    <td> </td>
@@ -181,7 +184,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
   </tr>
   <tr>
    <td> </td>
-   <td>分析設定</td>
+   <td>Insights 設定</td>
   </tr>
   <tr>
    <td> </td>
@@ -221,11 +224,11 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
   </tr>
   <tr>
    <td> </td>
-   <td>封裝</td>
+   <td>套件</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Package Share</td>
+   <td>套件共用</td>
   </tr>
   <tr>
    <td> </td>
@@ -376,11 +379,11 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
   </tr>
   <tr>
    <td>客戶端上下文配置<br /> </td>
-   <td>「用戶端內容」代表動態組合的使用者資料集合。 預設和行銷雲端組態會保留在這裡。<br /> </td>
+   <td>「用戶端內容」代表動態組合的使用者資料集合。 預設和行銷雲端組態保留在這裡。<br /> </td>
   </tr>
   <tr>
-   <td>雲端服務組態<br /> </td>
-   <td>保留與Adobe Marketing cloud整合相關的設定。</td>
+   <td>雲服務配置<br /> </td>
+   <td>保留與Adobe Marketing Cloud整合相關的設定。</td>
   </tr>
   <tr>
    <td>雲端設定<br /> </td>
@@ -423,7 +426,7 @@ source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
    <td>協助您建立專為行動裝置設計的網站。</td>
   </tr>
   <tr>
-   <td>封裝</td>
+   <td>套件</td>
    <td>「封裝管理員」的替代連結，顯示已為AEM WCM載入的封裝。 類似於CRX的包管理器中顯示的資訊。</td>
   </tr>
   <tr>
