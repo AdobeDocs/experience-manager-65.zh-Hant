@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# 在「任務摘要」窗格中顯示資訊 {#displaying-information-in-the-task-summary-pane}
+# 在「任務摘要」窗格中顯示資訊{#displaying-information-in-the-task-summary-pane}
 
 當您在AEM Forms工作區中開啟工作時，「工作摘要」窗格會顯示工作摘要。 這項額外的相關工作資訊為AEM Forms工作區的使用者增加了更多價值。
 
 AEM Forms工作區可讓您在「任務摘要」窗格中顯示您選擇的網頁。 可以建立一個流程，以使用「工作台」顯示「任務匯總」窗格。
 
-1. 在工作台中建立分配任務流程。 有關「分配任務」操作的詳細資訊，請參閱「工作台幫助」中的「服務 [參考」主題](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)。
+1. 在工作台中建立分配任務流程。 有關「分配任務」操作的詳細資訊，請參閱[Workbench Help](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)中的「服務參考」主題。
 
    >[!NOTE]
    >
@@ -33,9 +33,9 @@ AEM Forms工作區可讓您在「任務摘要」窗格中顯示您選擇的網�
 1. 配置任務摘要URL欄位。 您可以指定常值、範本、變數或XPath運算式。
 1. 下面是顯示「任務摘要」頁上資訊的示例。
 
-   * 請登錄到CRXDE Lite環境，網址為 `https://'[server]:[port]'/lc/crx/de`。
-   * `Create a node`**SampleSummary **/` under `contentnt:` with type `unstructredsling:`. In the properties of this node, add `resourceTypeSampleSummaryPERM_WORKSPACE_` of type String and value ``. In the Access Control List of this node, add an entry for `` allowing `USERjcr:read` privileges.`
-   * `Create a folder`**SampleSummary **，在`/apps`下。 在的「訪問控制列`/apps/SampleSummary`表」中，添加允許的`PERM_WORKSPACE_USER`條目`jcr:readprivileges`。
+   * 在`https://'[server]:[port]'/lc/crx/de`登錄到CRXDE Lite環境。
+   * `Create a node`**SampleSummary** ` under `/` with type `contentnt:`. In the properties of this node, add `unstructredsling:` of type String and value ``. In the Access Control List of this node, add an entry for `resourceTypeSampleSummaryPERM_WORKSPACE_` allowing `USERjcr:read` privileges.`
+   * `Create a folder`**范** 例摘要 `/apps`。在`/apps/SampleSummary`的「訪問控制清單」中，為`PERM_WORKSPACE_USER`添加允許`jcr:readprivileges`的條目。
    * `Create a file `html.esp` at `/apps/`. For example, add the following lines in `SampleSummaryhtml.esp`.`
 
    ```html
@@ -51,5 +51,5 @@ AEM Forms工作區可讓您在「任務摘要」窗格中顯示您選擇的網�
    </html>
    ```
 
-   * 設定任務摘要URL的值，如「分配任 `/lc/content/SampleSummary.html` 務」步驟中。
-   * 當在AEM Forms工作區中開啟與此「指派任務」步驟相關聯的工作時， `html.esp` at會 `/apps/SampleSummary` 在任務摘要窗格中呈現。
+   * 在「分配任務」步驟中，將任務摘要url的值設定為`/lc/content/SampleSummary.html`。
+   * 當在AEM Forms工作區中開啟與此「指派任務」步驟相關聯的任務時，`/apps/SampleSummary`的`html.esp`會呈現在任務摘要窗格中。
