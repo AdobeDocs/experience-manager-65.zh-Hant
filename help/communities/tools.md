@@ -19,11 +19,11 @@ ht-degree: 0%
 ---
 
 
-# 社群工具 {#communities-tools}
+# 社群工具{#communities-tools}
 
 若要存取Communities工具主控台，請登入您的作者實例：
 
-* 從全域導覽： **[!UICONTROL 工具]** >社 **[!UICONTROL 群]**。
+* 從全域導覽：**[!UICONTROL 工具]** > **[!UICONTROL 社群]**。
 
    ![社群](assets/communities-home.png)
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 * [社群功能](functions.md) -用於建立和管理社群功能的主控台。
 
-* [儲存配置](srp-config.md) -用於配置和選擇預設SRP的 [控制台](working-with-srp.md)。
+* [儲存配置](srp-config.md) -控制台，用於配置和選擇預設 [SRP](working-with-srp.md)。
 
 * [元件指南](components-guide.md) -開啟一個互動式站點，允許對SCF元件的工作方式以及如何配置或定制它們進行實驗。
 
