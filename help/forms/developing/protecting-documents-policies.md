@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用原則保護檔案 {#protecting-documents-with-policies}
+# 使用策略{#protecting-documents-with-policies}保護文檔
 
 **關於Document Security Service**
 
@@ -39,24 +39,24 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 您可以使用Document Security服務完成下列工作：
 
-* 建立原則。 有關資訊，請參 [閱建立策略](protecting-documents-policies.md#creating-policies)。
-* 修改策略。 有關資訊，請參 [閱修改策略](protecting-documents-policies.md#modifying-policies)。
-* 刪除原則。 有關資訊，請參 [閱刪除策略](protecting-documents-policies.md#deleting-policies)。
-* 套用原則至PDF檔案。 如需詳細資訊，請 [參閱套用原則至PDF檔案](protecting-documents-policies.md#applying-policies-to-pdf-documents)。
-* 從PDF檔案移除原則。 如需詳細資訊，請 [參閱從PDF檔案移除原則](protecting-documents-policies.md#removing-policies-from-pdf-documents)。
-* 檢查受原則保護的檔案。 如需詳細資訊，請參 [閱檢查受原則保護的PDF檔案](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)。
-* 撤銷PDF檔案的存取權。 如需詳細資訊，請 [參閱廢止檔案存取權](protecting-documents-policies.md#revoking-access-to-documents)。
-* 恢復對已撤銷文檔的訪問。 有關資訊，請參 [閱恢復對已撤銷文檔的訪問](protecting-documents-policies.md#reinstating-access-to-revoked-documents)。
-* 建立浮水印。 如需詳細資訊，請參 [閱建立浮水印](protecting-documents-policies.md#creating-watermarks)。
-* 搜尋事件。 如需詳細資訊，請 [參閱搜尋事件](protecting-documents-policies.md#searching-for-events)。
+* 建立原則。 有關資訊，請參見[建立策略](protecting-documents-policies.md#creating-policies)。
+* 修改策略。 有關資訊，請參見[修改策略](protecting-documents-policies.md#modifying-policies)。
+* 刪除原則。 有關資訊，請參見[刪除策略](protecting-documents-policies.md#deleting-policies)。
+* 套用原則至PDF檔案。 如需詳細資訊，請參閱[套用原則至PDF檔案](protecting-documents-policies.md#applying-policies-to-pdf-documents)。
+* 從PDF檔案移除原則。 如需詳細資訊，請參閱[從PDF檔案移除原則](protecting-documents-policies.md#removing-policies-from-pdf-documents)。
+* 檢查受原則保護的檔案。 如需詳細資訊，請參閱[檢查受原則保護的PDF檔案](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)。
+* 撤銷PDF檔案的存取權。 如需詳細資訊，請參閱[廢止檔案存取權](protecting-documents-policies.md#revoking-access-to-documents)。
+* 恢復對已撤銷文檔的訪問。 如需詳細資訊，請參閱[恢復對已撤銷檔案的存取](protecting-documents-policies.md#reinstating-access-to-revoked-documents)。
+* 建立浮水印。 如需詳細資訊，請參閱[建立浮水印](protecting-documents-policies.md#creating-watermarks)。
+* 搜尋事件。 如需詳細資訊，請參閱[搜尋事件](protecting-documents-policies.md#searching-for-events)。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 建立策略 {#creating-policies}
+## 建立策略{#creating-policies}
 
-您可以使用Document Security Java API或web service API，以程式設計方式建立原則。 原 *則* 是包含檔案安全性設定、授權使用者和使用權限的資訊集合。 您可以使用適合不同情況和使用者的安全性設定，來建立和儲存任何數量的原則。
+您可以使用Document Security Java API或web service API，以程式設計方式建立原則。 *policy*&#x200B;是包含檔案安全性設定、授權使用者和使用權限的資訊集合。 您可以使用適合不同情況和使用者的安全性設定，來建立和儲存任何數量的原則。
 
 策略允許您執行以下任務：
 
@@ -65,7 +65,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 * 隨時變更存取權與安全性設定，即使在您散發受原則保護的檔案後亦然。
 * 在您散發檔案後，請監控檔案的使用情況。 您可以看到檔案的使用方式以及使用者。 例如，您可以瞭解某人何時開啟檔案。
 
-### 使用web services建立原則 {#creating-a-policy-using-web-services}
+### 使用web services {#creating-a-policy-using-web-services}建立策略
 
 使用web service API建立原則時，請參考描述該原則的現有可攜式檔案權限語言(PDRL)XML檔案。 策略權限和承擔者在PDRL文檔中定義。 以下XML文檔是PDRL文檔的示例。
 
@@ -133,9 +133,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary-of-steps}
+### 步驟{#summary-of-steps}摘要
 
 要建立策略，請執行以下步驟：
 
@@ -164,7 +164,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 * adobe-utilities.jar
 * jbossall-client.jar（如果AEM Forms未部署在JBoss上，請使用不同的JAR檔案）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立Document Security Client API物件**
 
@@ -187,15 +187,15 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 設定屬於策略的屬性時，還可以設定加密設定。 這些加密設定會在原則套用至檔案時生效。 您可以指定下列加密值：
 
-* **AES256**: 表示使用256位元金鑰的AES加密演算法。
-* **AES128**: 以128位元金鑰表示AES加密演算法。
-* **無加密：** 不表示加密。
+* **AES256**:表示使用256位元金鑰的AES加密演算法。
+* **AES128**:以128位元金鑰表示AES加密演算法。
+* **NoEncryption：表** 示無加密。
 
-指定選 `NoEncryption` 項時，不能將選 `PlaintextMetadata` 項設定為 `false`。 如果您嘗試這麼做，則會擲回例外。
+指定`NoEncryption`選項時，不能將`PlaintextMetadata`選項設定為`false`。 如果您嘗試這麼做，則會擲回例外。
 
 >[!NOTE]
 >
->如需您可設定之其他屬性的詳細資訊，請參閱 `Policy` 「 [AEM Forms API參考」中的介面說明](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+>如需您可設定之其他屬性的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`Policy`介面說明。
 
 **建立策略條目**
 
@@ -211,7 +211,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 必須先註冊新策略，才能使用新策略。 在註冊原則後，您就可以使用它來保護檔案。
 
-### 使用Java API建立原則 {#create-a-policy-using-the-java-api}
+### 使用Java API {#create-a-policy-using-the-java-api}建立原則
 
 使用Document Security API(Java)建立原則：
 
@@ -221,39 +221,39 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocumentSecurityClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentSecurityClient`對象。
 
 1. 設定原則的屬性。
 
-   * 調用 `Policy` 物件的靜態方 `InfomodelObjectFactory` 法來建立物 `createPolicy` 件。 此方法返回對 `Policy` 像。
-   * 調用物件的方法並傳遞指定原則名 `Policy` 稱的字串值， `setName` 以設定原則的名稱屬性。
-   * 調用物件的方法並傳 `Policy` 遞指定原則 `setDescription` 說明的字串值，以設定原則的說明。
-   * 通過調用對象的方法並傳遞指定策略集名 `Policy` 稱的字 `setPolicySetName` 符串值，設定新策略所屬的策略集。 (可以為此 `null` 參數值指定，這會導致將策略添加到「我的策 *略* 」策略集。)
-   * 調用物件的靜態方法，以建立 `InfomodelObjectFactory` 原則的有效 `createValidityPeriod` 期。 此方法返回對 `ValidityPeriod` 像。
-   * 調用物件的方法，並傳遞指定天數的整數值，以設定受原則保護 `ValidityPeriod` 檔案 `setRelativeExpirationDays` 可存取的天數。
-   * 調用物件的方法並傳遞物件，以 `Policy` 設定原則的 `setValidityPeriod` 有效期 `ValidityPeriod` 間。
+   * 通過調用`InfomodelObjectFactory`對象的靜態`createPolicy`方法建立`Policy`對象。 此方法返回`Policy`對象。
+   * 調用`Policy`物件的`setName`方法並傳遞指定原則名稱的字串值，以設定原則的名稱屬性。
+   * 調用`Policy`物件的`setDescription`方法並傳遞指定原則說明的字串值，以設定原則的說明。
+   * 通過調用`Policy`對象的`setPolicySetName`方法並傳遞指定策略集名稱的字串值，設定新策略所屬的策略集。 （可以為此參數值指定`null`，該參數值導致策略被添加到&#x200B;*My Policies*&#x200B;策略集。）
+   * 叫用`InfomodelObjectFactory`物件的靜態`createValidityPeriod`方法，以建立原則的有效期。 此方法返回`ValidityPeriod`對象。
+   * 調用`ValidityPeriod`物件的`setRelativeExpirationDays`方法並傳遞指定天數的整數值，以設定受原則保護檔案可存取的天數。
+   * 調用`Policy`物件的`setValidityPeriod`方法並傳遞`ValidityPeriod`物件，以設定原則的有效期。
 
 1. 建立策略條目。
 
-   * 調用物件的靜態方 `InfomodelObjectFactory` 法以建立原則 `createPolicyEntry` 項目。 此方法返回對 `PolicyEntry` 像。
-   * 呼叫物件的靜態方法，以指 `InfomodelObjectFactory` 定原則的權 `createPermission` 限。 傳遞屬於表示權限的介面 `Permission` 的靜態資料成員。 此方法返回對 `Permission` 像。 例如，若要新增允許使用者從受原則保護的PDF檔案複製資料的權限，請傳遞 `Permission.COPY`。 （對要添加的每個權限重複此步驟）。
-   * 調用物件的方法並傳遞物件，將權 `PolicyEntry` 限新增 `addPermission` 至原則項 `Permission` 目。 (請對您建立的每個 `Permission` 物件重複此步驟)。
-   * 調用物件的靜態方 `InfomodelObjectFactory` 法，以建立原則主 `createSpecialPrincipal` 體。 傳遞屬於表示承擔者 `InfomodelObjectFactory` 的對象的資料成員。 此方法返回對 `Principal` 像。 例如，要將文檔的發佈者添加為承擔者，請通過 `InfomodelObjectFactory.PUBLISHER_PRINCIPAL`。
-   * 調用物件的方法並傳遞物件，將承擔者 `PolicyEntry` 新增 `setPrincipal`至原則項目 `Principal` 中。
-   * 調用物件的方法並傳遞物件，將原 `Policy` 則項目新 `addPolicyEntry` 增至原 `PolicyEntry` 則。
+   * 通過調用`InfomodelObjectFactory`對象的靜態`createPolicyEntry`方法建立策略條目。 此方法返回`PolicyEntry`對象。
+   * 調用`InfomodelObjectFactory`物件的靜態`createPermission`方法，以指定原則的權限。 傳遞屬於代表權限的`Permission`介面的靜態資料成員。 此方法返回`Permission`對象。 例如，若要新增允許使用者從受原則保護的PDF檔案複製資料的權限，請傳遞`Permission.COPY`。 （對要添加的每個權限重複此步驟）。
+   * 調用`PolicyEntry`物件的`addPermission`方法並傳遞`Permission`物件，將權限新增至原則項目。 （對您建立的每個`Permission`對象重複此步驟）。
+   * 通過調用`InfomodelObjectFactory`對象的靜態`createSpecialPrincipal`方法來建立策略承擔者。 傳遞屬於代表承擔者的`InfomodelObjectFactory`對象的資料成員。 此方法返回`Principal`對象。 例如，要將文檔的發佈者添加為承擔者，請傳遞`InfomodelObjectFactory.PUBLISHER_PRINCIPAL`。
+   * 調用`PolicyEntry`對象的`setPrincipal`方法並傳遞`Principal`對象，將承擔者添加到策略條目。
+   * 調用`Policy`物件的`addPolicyEntry`方法並傳遞`PolicyEntry`物件，將原則項目新增至原則。
 
 1. 註冊原則。
 
-   * 調用 `PolicyManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getPolicyManager` 件。
-   * 呼叫物件的方法並傳 `PolicyManager` 遞下列值， `registerPolicy` 以註冊原則：
+   * 調用`DocumentSecurityClient`物件的`getPolicyManager`方法，以建立`PolicyManager`物件。
+   * 調用`PolicyManager`物件的`registerPolicy`方法並傳遞下列值，以註冊原則：
 
-      * 代 `Policy` 表要註冊的策略的對象。
+      * 代表要註冊的策略的`Policy`對象。
    * 一個字串值，它表示策略所屬的策略集。
 
-   如果您在連線設定中使用AEM Forms管理員帳戶來建立物 `DocumentSecurityClient` 件，請在呼叫方法時指定原則集名 `registerPolicy` 稱。 如果為策略集 `null` 傳遞值，則會在管理員「我的策略」策略集 *中建立策略* 。
+   如果您在連線設定中使用AEM Forms管理員帳戶來建立`DocumentSecurityClient`物件，則在您叫用`registerPolicy`方法時指定原則集名稱。 如果為策略集傳遞`null`值，則策略是在管理員&#x200B;*My Policys*&#x200B;策略集中建立的。
 
-   如果您在連線設定中使用Document Security使用者，則可以叫用只接受原則 `registerPolicy` 的多載方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為「我的策略」的 *策略集中*。 如果不想將新策略添加到此策略集，則在調用該方法時指定策略集名 `registerPolicy` 稱。
+   如果您在連接設定中使用Document Security用戶，則可以調用僅接受策略的多載`registerPolicy`方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為&#x200B;*My Policys*&#x200B;的策略集中。 如果不想將新策略添加到此策略集，則在調用`registerPolicy`方法時指定策略集名稱。
 
    >[!NOTE]
    >
@@ -261,42 +261,42 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API建立原則」
+* &quot;快速啟動（SOAP模式）:使用Java API建立原則」
 
-### 使用web service API建立原則 {#create-a-policy-using-the-web-service-api}
+### 使用web service API {#create-a-policy-using-the-web-service-api}建立原則
 
 使用Document Security API(web service)建立原則：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 設定原則的屬性。
 
-   * 使用其 `PolicySpec` 建構函式建立物件。
-   * 為物件的資料成員指派字串值，以設 `PolicySpec` 定原則的 `name` 名稱。
-   * 將字串值指派給物件的資料成員，以設定 `PolicySpec` 原則的 `description` 說明。
-   * 為物件的資料成員指派字串值，以設定原則所屬的 `PolicySpec` 原則 `policySetName` 集。 必須指定現有策略集名稱。 (您可以為 `null` 此參數值指定，使策略被添加到「我的 *策略*」)。
-   * 將整數值指派給物件的資料成員，以設定原則的離 `PolicySpec` 線租用 `offlineLeasePeriod` 期間。
-   * 使用表 `PolicySpec` 示PDRL XML資料 `policyXml` 的字串值來設定物件的資料成員。 要執行此任務，請使用。NET對 `StreamReader` 像的建構子建立。 將表示策略的PDRL XML檔案的位置傳遞給建構子 `StreamReader` 。 接著，叫用 `StreamReader` 物件的方 `ReadLine` 法，並將傳回值指派給字串變數。 重複該對 `StreamReader` 像，直到 `ReadLine` 方法返回null。 將字串變數指派給 `PolicySpec` 物件的資 `policyXml` 料成員。
+   * 使用其建構子建立`PolicySpec`對象。
+   * 為`PolicySpec`物件的`name`資料成員指派字串值，以設定原則的名稱。
+   * 為`PolicySpec`物件的`description`資料成員指派字串值，以設定原則的說明。
+   * 通過為`PolicySpec`對象的`policySetName`資料成員分配字串值來設定策略所屬的策略集。 必須指定現有策略集名稱。 （可以為此參數值指定`null`，這將導致策略被添加到&#x200B;*我的策略*。）
+   * 為`PolicySpec`物件的`offlineLeasePeriod`資料成員指派整數值，以設定原則的離線租用期間。
+   * 使用代表PDRL XML資料的字串值，設定`PolicySpec`物件的`policyXml`資料成員。 要執行此任務，請使用。NET `StreamReader`對象的建構子建立一個對象。 將表示策略的PDRL XML檔案的位置傳遞給`StreamReader`建構子。 接著，呼叫`StreamReader`物件的`ReadLine`方法，並將傳回值指派給字串變數。 重複`StreamReader`物件，直到`ReadLine`方法傳回null。 將字串變數指派給`PolicySpec`物件的`policyXml`資料成員。
 
 1. 建立策略條目。
 
@@ -304,14 +304,14 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 註冊原則。
 
-   叫用物件的方法並傳 `DocumentSecurityServiceClient` 遞下列值， `registerPolicy` 以註冊原則：
+   調用`DocumentSecurityServiceClient`物件的`registerPolicy`方法並傳遞下列值，以註冊原則：
 
-   * 代 `PolicySpec` 表要註冊的策略的對象。
-   * 一個字串值，它表示策略所屬的策略集。 您可以指定 `null` 導致策略被添加到 ** MyPolices策略集的值。
+   * 代表要註冊的策略的`PolicySpec`對象。
+   * 一個字串值，它表示策略所屬的策略集。 您可以指定`null`值，以將策略添加到&#x200B;*MyPolices*&#x200B;策略集。
 
-   如果您在連線設定中使用AEM Forms管理員帳戶來建立物 `DocumentSecurityClient` 件，請在呼叫方法時指定原則集 `registerPolicy` 名稱。
+   如果您在連線設定中使用AEM Forms管理員帳戶來建立`DocumentSecurityClient`物件，請在叫用`registerPolicy`方法時指定原則集名稱。
 
-   如果您在連線設定中使用Document SecurityDocument Security使用者，則可以叫用只接受原則 `registerPolicy` 的多載方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為「我的策略」的 *策略集中*。 如果不想將新策略添加到此策略集，則在調用該方法時指定策略集名 `registerPolicy` 稱。
+   如果您在連接設定中使用Document SecurityDocument Security用戶，則可以調用僅接受策略的多載`registerPolicy`方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為&#x200B;*My Policys*&#x200B;的策略集中。 如果不想將新策略添加到此策略集，則在調用`registerPolicy`方法時指定策略集名稱。
 
    >[!NOTE]
    >
@@ -319,22 +319,22 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API建立原則」
-* 「快速入門(SwaRef): 使用web service API建立原則」
+* 「快速入門(MTOM):使用web service API建立原則」
+* 「快速入門(SwaRef):使用web service API建立原則」
 
-## 修改策略 {#modifying-policies}
+## 修改策略{#modifying-policies}
 
 您可以使用Document Security Java API或web service API修改現有原則。 要更改現有策略，請檢索該策略、修改該策略，然後更新伺服器上的策略。 例如，假設您檢索現有策略並延長其有效期。 在更改生效之前，您必須更新策略。
 
 當業務需求變更且政策不再反映這些需求時，您可以修改政策。 您不必建立新策略，只需更新現有策略即可。
 
-要使用Web服務修改策略屬性（例如，使用使用JAX-WS建立的Java代理類），必須確保策略已向Document Security服務註冊。 然後，可以使用方法引用現有策略， `PolicySpec.getPolicyXml` 並使用適用的方法修改策略屬性。 例如，您可以叫用方法來修改離線租用 `PolicySpec.setOfflineLeasePeriod` 期間。
+要使用Web服務修改策略屬性（例如，使用使用JAX-WS建立的Java代理類），必須確保策略已向Document Security服務註冊。 然後，可以使用`PolicySpec.getPolicyXml`方法引用現有策略，並使用適用的方法修改策略屬性。 例如，您可以叫用`PolicySpec.setOfflineLeasePeriod`方法來修改離線租用期間。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-1}
+### 步驟{#summary_of_steps-1}摘要
 
 要修改現有策略，請執行以下步驟：
 
@@ -350,27 +350,27 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **建立Document Security Client API物件**
 
-在以程式設計方式執行Document Securityservice作業之前，您必須先建立Document Security服務用戶端物件。 如果您使用Java API，請建立物 `RightsManagementClient` 件。 如果您使用Document Security web service API，請建立物 `RightsManagementServiceService` 件。
+在以程式設計方式執行Document Securityservice作業之前，您必須先建立Document Security服務用戶端物件。 如果您使用Java API，請建立`RightsManagementClient`物件。 如果您使用Document Security web service API，請建立`RightsManagementServiceService`物件。
 
 **檢索現有策略**
 
-您必須檢索現有策略才能對其進行修改。 要檢索策略，請指定策略名稱和策略所屬的策略集。 如果為策略 `null` 集名稱指定值，則會從「我的策略」策 ** 略集檢索策略。
+您必須檢索現有策略才能對其進行修改。 要檢索策略，請指定策略名稱和策略所屬的策略集。 如果為策略集名稱指定`null`值，則從&#x200B;*My Policies*&#x200B;策略集檢索策略。
 
 **設定原則的屬性**
 
 要修改策略，請修改策略屬性的值。 唯一不能更改的策略屬性是name屬性。 例如，若要變更原則的離線租用期間，您可以修改原則的離線租用期間屬性值。
 
-使用web service修改原則的離線租用期間時，介 `offlineLeasePeriod` 面上的欄 `PolicySpec` 位會被忽略。 要更新離線租用期間，請修改PDRL `OfflineLeasePeriod` XML文檔中的元素。 然後，使用介面的資料成員，參考更 `PolicySpec` 新的PDRL `policyXML` XML檔案。
+使用Web服務修改策略的離線租用期間時，會忽略`PolicySpec`介面上的`offlineLeasePeriod`欄位。 要更新離線租用期間，請修改PDRL XML文檔中的`OfflineLeasePeriod`元素。 然後，使用`PolicySpec`介面的`policyXML`資料成員，參考更新的PDRL XML檔案。
 
 >[!NOTE]
 >
->如需您可設定之其他屬性的詳細資訊，請參閱 `Policy` 「 [AEM Forms API參考」中的介面說明](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+>如需您可設定之其他屬性的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`Policy`介面說明。
 
 **更新原則**
 
 在您對原則所做的變更生效之前，您必須使用Document Security服務更新原則。 在下次將受原則保護的檔案與Document Security服務同步時，會更新保護檔案的原則變更。
 
-### 使用Java API修改現有策略 {#modify-existing-policies-using-the-java-api}
+### 使用Java API {#modify-existing-policies-using-the-java-api}修改現有策略
 
 使用Document Security API(Java)修改現有原則：
 
@@ -380,60 +380,60 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `RightsManagementClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`RightsManagementClient`對象。
 
 1. 檢索現有策略。
 
-   * 調用 `PolicyManager` 物件的方 `RightsManagementClient` 法以建立物 `getPolicyManager` 件。
-   * 建立 `Policy` 代表要更新之原則的物件，方法 `PolicyManager` 是叫用物 `getPolicy` 件的方法並傳遞下列值。」
+   * 調用`RightsManagementClient`物件的`getPolicyManager`方法，以建立`PolicyManager`物件。
+   * 建立`Policy`對象，該對象表示要更新的策略，方法是調用`PolicyManager`對象的`getPolicy`方法並傳遞以下值&quot;
 
-      * 一個字串值，它表示策略所屬的策略集名稱。 您可以指 `null` 定導致使用 `MyPolicies` 策略集的結果。
+      * 一個字串值，它表示策略所屬的策略集名稱。 您可以指定`null`，以使用`MyPolicies`原則集。
       * 代表原則名稱的字串值。
 
 1. 設定原則的屬性。
 
-   變更政策屬性以符合您的業務需求。 例如，若要變更原則的離線租用期間，請叫 `Policy` 用物件的方 `setOfflineLeasePeriod` 法。
+   變更政策屬性以符合您的業務需求。 例如，若要變更原則的離線租用期間，請叫用`Policy`物件的`setOfflineLeasePeriod`方法。
 
 1. 更新原則。
 
-   調用物件的方 `PolicyManager` 法以更新原 `updatePolicy` 則。 傳遞代 `Policy` 表要更新的策略的對象。
+   調用`PolicyManager`物件的`updatePolicy`方法來更新原則。 傳遞代表要更新的策略的`Policy`對象。
 
 **程式碼範例**
 
-如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）: 使用Java API部分修改策略。
+如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）:使用Java API部分修改策略。
 
-### 使用web service API修改現有策略 {#modify-existing-policies-using-the-web-service-api}
+### 使用web service API {#modify-existing-policies-using-the-web-service-api}修改現有策略
 
 使用Document Security API(web service)修改現有原則：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`RightsManagementServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 檢索現有策略。
 
-   通過調 `PolicySpec` 用對象的方法並傳遞以下值，建立表示要修 `RightsManagementServiceClient` 改的 `getPolicy` 策略的對象：
+   通過調用`RightsManagementServiceClient`對象的`getPolicy`方法並傳遞以下值，建立代表要修改的策略的`PolicySpec`對象：
 
-   * 一個字串值，它指定策略所屬的策略集名稱。 您可以指 `null` 定導致使用 `MyPolicies` 策略集的結果。
+   * 一個字串值，它指定策略所屬的策略集名稱。 您可以指定`null`，以使用`MyPolicies`原則集。
    * 指定策略名稱的字串值。
 
 1. 設定原則的屬性。
@@ -442,24 +442,24 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 更新原則。
 
-   調用物件的方 `RightsManagementServiceClient` 法並傳遞 `updatePolicyFromSDK` 代表要更 `PolicySpec` 新之原則的物件，以更新原則。
+   調用`RightsManagementServiceClient`物件的`updatePolicyFromSDK`方法並傳遞代表要更新之原則的`PolicySpec`物件，以更新原則。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API修改原則&quot;
-* 「快速入門(SwaRef): 使用web service API修改原則&quot;
+* 「快速入門(MTOM):使用web service API修改原則&quot;
+* 「快速入門(SwaRef):使用web service API修改原則&quot;
 
-## 刪除策略 {#deleting-policies}
+## 刪除策略{#deleting-policies}
 
 您可以使用Document Security Java API或web service API刪除現有原則。 刪除原則後，便無法再用來保護檔案。 不過，使用原則的現有受原則保護檔案仍受到保護。 當有較新的策略可用時，可以刪除策略。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-2}
+### 步驟{#summary_of_steps-2}摘要
 
 要刪除現有策略，請執行以下步驟：
 
@@ -473,13 +473,13 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **建立Document Security Client API物件**
 
-您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立物 `RightsManagementClient` 件。 如果您使用Document Security web service API，請建立物 `RightsManagementServiceService` 件。
+您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立`RightsManagementClient`物件。 如果您使用Document Security web service API，請建立`RightsManagementServiceService`物件。
 
 **刪除原則**
 
-要刪除策略，請指定要刪除的策略和策略所屬的策略集。 使用其設定來叫用AEM Forms的使用者必須擁有刪除原則的權限； 否則會發生異常。 同樣地，如果您嘗試刪除不存在的策略，則會出現例外。
+要刪除策略，請指定要刪除的策略和策略所屬的策略集。 使用其設定來叫用AEM Forms的使用者必須擁有刪除原則的權限；否則會發生異常。 同樣地，如果您嘗試刪除不存在的策略，則會出現例外。
 
-### 使用Java API刪除原則 {#delete-policies-using-the-java-api}
+### 使用Java API {#delete-policies-using-the-java-api}刪除策略
 
 使用Document Security API(Java)刪除原則：
 
@@ -489,64 +489,64 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `RightsManagementClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`RightsManagementClient`對象。
 
 1. 刪除原則。
 
-   * 調用 `PolicyManager` 物件的方 `RightsManagementClient` 法以建立物 `getPolicyManager` 件。
-   * 叫用物件的方 `PolicyManager` 法並傳 `deletePolicy` 遞下列值，以刪除原則：
+   * 調用`RightsManagementClient`物件的`getPolicyManager`方法，以建立`PolicyManager`物件。
+   * 調用`PolicyManager`物件的`deletePolicy`方法並傳遞下列值，以刪除原則：
 
-      * 一個字串值，它指定策略所屬的策略集名稱。 您可以指 `null` 定導致使用 `MyPolicies` 策略集的結果。
+      * 一個字串值，它指定策略所屬的策略集名稱。 您可以指定`null`，以使用`MyPolicies`原則集。
       * 一個字串值，它指定要刪除的策略的名稱。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API刪除策略」
+* &quot;快速啟動（SOAP模式）:使用Java API刪除策略」
 
-### 使用web service API刪除原則 {#delete-policies-using-the-web-service-api}
+### 使用Web服務API {#delete-policies-using-the-web-service-api}刪除策略
 
 使用Document Security API(web service)刪除原則：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`RightsManagementServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 刪除原則。
 
-   調用物件的方法並傳 `RightsManagementServiceClient` 遞下列值， `deletePolicy` 以刪除原則：
+   調用`RightsManagementServiceClient`物件的`deletePolicy`方法並傳遞下列值，以刪除原則：
 
-   * 一個字串值，它指定策略所屬的策略集名稱。 您可以指 `null` 定導致使用 `MyPolicies` 策略集的結果。
+   * 一個字串值，它指定策略所屬的策略集名稱。 您可以指定`null`，以使用`MyPolicies`原則集。
    * 一個字串值，它指定要刪除的策略的名稱。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API刪除策略&quot;
-* 「快速入門(SwaRef): 使用web service API刪除策略&quot;
+* 「快速入門(MTOM):使用web service API刪除策略&quot;
+* 「快速入門(SwaRef):使用web service API刪除策略&quot;
 
-## 套用原則至PDF檔案 {#applying-policies-to-pdf-documents}
+## 將原則套用至PDF檔案{#applying-policies-to-pdf-documents}
 
 您可以套用原則至PDF檔案，以保護檔案的安全。 將原則套用至PDF檔案，即可限制對檔案的存取。 如果文檔已使用策略保護，則不能將策略應用於文檔。
 
@@ -556,9 +556,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-3}
+### 步驟{#summary_of_steps-3}摘要
 
 若要將原則套用至PDF檔案，請執行下列步驟：
 
@@ -574,7 +574,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **建立Document Security用戶端API物件**
 
-在以程式設計方式執行Document Security服務操作之前，請先建立Document Security服務用戶端物件。 如果您使用Java API，請建立物 `DocumentSecurityClient` 件。 如果您使用Document Security web service API，請建立物 `DocumentSecurityServiceService` 件。
+在以程式設計方式執行Document Security服務操作之前，請先建立Document Security服務用戶端物件。 如果您使用Java API，請建立`DocumentSecurityClient`物件。 如果您使用Document Security web service API，請建立`DocumentSecurityServiceService`物件。
 
 **擷取PDF檔案**
 
@@ -596,7 +596,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [廢止檔案存取權](protecting-documents-policies.md#revoking-access-to-documents)
 
-### 使用Java API將原則套用至PDF檔案 {#apply-a-policy-to-a-pdf-document-using-the-java-api}
+### 使用Java API {#apply-a-policy-to-a-pdf-document-using-the-java-api}將原則套用至PDF檔案
 
 使用Document Security API(Java)將原則套用至PDF檔案：
 
@@ -606,42 +606,42 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `RightsManagementClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`RightsManagementClient`對象。
 
 1. 擷取PDF檔案。
 
-   * 使用 `java.io.FileInputStream` 其建構函式建立代表PDF檔案的物件。 傳遞指定PDF檔案位置的字串值。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用PDF檔案的建構函式建立代表PDF檔案的`java.io.FileInputStream`物件。 傳遞指定PDF檔案位置的字串值。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 將現有原則套用至PDF檔案。
 
-   * 調用 `DocumentManager` 物件的方 `RightsManagementClient` 法以建立物 `getDocumentManager` 件。
-   * 調用物件的方法並傳遞下列值，以套 `DocumentManager` 用原則 `protectDocument` 至PDF檔案：
+   * 調用`RightsManagementClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
+   * 調用`DocumentManager`物件的`protectDocument`方法並傳遞下列值，以套用原則至PDF檔案：
 
-      * 包 `com.adobe.idp.Document` 含套用原則之PDF檔案的物件。
+      * 包含套用原則之PDF檔案的`com.adobe.idp.Document`物件。
       * 指定文檔名稱的字串值。
-      * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定 `null` 導致使用策略 `MyPolicies` 集的值。
+      * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定一個`null`值，使用`MyPolicies`策略集。
       * 指定策略名稱的字串值。
       * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null（如果此參數為null，則下一個參數值必須為null）。
-      * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可 `null` 以是(如果此參數為null，則上一個參數值必須 `null`是)。
-      * 表 `com.adobe.livecycle.rightsmanagement.Locale` 示用於選擇MS Office模板的區域設定。 此參數值是可選的，不用於PDF文檔。 若要保護PDF檔案，請指定 `null`。
+      * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可以是`null`（如果此參數為null，則上一個參數值必須是`null`）。
+      * `com.adobe.livecycle.rightsmanagement.Locale`，表示用於選擇MS Office模板的區域設定。 此參數值是可選的，不用於PDF文檔。 若要保護PDF檔案，請指定`null`。
 
-      此方 `protectDocument` 法會傳回包 `RMSecureDocumentResult` 含受原則保護PDF檔案的物件。
+      `protectDocument`方法會傳回包含受原則保護PDF檔案的`RMSecureDocumentResult`物件。
 
 
 1. 儲存PDF檔案。
 
-   * 叫用物 `RMSecureDocumentResult` 件的方 `getProtectedDoc` 法以取得受原則保護的PDF檔案。 此方法返回對 `com.adobe.idp.Document` 像。
-   * 建立物 `java.io.File` 件，並確定副檔名為PDF。
-   * 叫用 `com.adobe.idp.Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `Document` 由方法傳回的物 `Document``getProtectedDoc` 件)。
+   * 叫用`RMSecureDocumentResult`物件的`getProtectedDoc`方法，以取得受原則保護的PDF檔案。 此方法返回`com.adobe.idp.Document`對象。
+   * 建立`java.io.File`物件，並確定副檔名為PDF。
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法，將`Document`物件的內容複製至檔案（請確定您使用`getProtectedDoc`方法傳回的`Document`物件）。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（EJB模式）: 使用Java API將原則套用至PDF檔案」
-* &quot;快速啟動（SOAP模式）: 使用Java API將原則套用至PDF檔案」
+* &quot;快速啟動（EJB模式）:使用Java API將原則套用至PDF檔案」
+* &quot;快速啟動（SOAP模式）:使用Java API將原則套用至PDF檔案」
 
 **另請參閱**
 
@@ -649,80 +649,80 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API將原則套用至PDF檔案 {#apply-a-policy-to-a-pdf-document-using-the-web-service-api}
+### 使用web service API {#apply-a-policy-to-a-pdf-document-using-the-web-service-api}將原則套用至PDF檔案
 
 使用Document Security API(web service)將原則套用至PDF檔案：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`RightsManagementServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 擷取PDF檔案。
 
-   * 使用其 `BLOB` 建構函式建立物件。 對 `BLOB` 像用於儲存應用策略的PDF文檔。
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 透過取得物件的屬性，來 `System.IO.FileStream` 判斷位元組陣列 `Length` 大小。
-   * 調用物件的方法，以串流資料填 `System.IO.FileStream` 入位元組 `Read` 陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存套用原則的PDF檔案。
+   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示PDF文檔的檔案位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 取得`System.IO.FileStream`物件的`Length`屬性，以決定位元組陣列大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 將現有原則套用至PDF檔案。
 
-   調用物件的方法並傳遞下列值，以套 `RightsManagementServiceClient` 用原則 `protectDocument` 至PDF檔案：
+   調用`RightsManagementServiceClient`物件的`protectDocument`方法並傳遞下列值，以套用原則至PDF檔案：
 
-   * 包 `BLOB` 含套用原則之PDF檔案的物件。
+   * 包含套用原則之PDF檔案的`BLOB`物件。
    * 指定文檔名稱的字串值。
-   * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定 `null` 導致使用策略 `MyPolicies` 集的值。
+   * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定一個`null`值，使用`MyPolicies`策略集。
    * 指定策略名稱的字串值。
-   * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null(如果此參數為null，則下一個參數值必須 `null`為)。
-   * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可以是空值(如果此參數為空值，則上一個參數值必須 `null`為)。
-   * 指 `RMLocale` 定地區值(例如 `RMLocale.en`)的值。
+   * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null（如果此參數為null，則下一個參數值必須為`null`）。
+   * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可以是null（如果此參數為null，則上一個參數值必須為`null`）。
+   * 一個`RMLocale`值，它指定地區值（例如`RMLocale.en`）。
    * 用於儲存策略標識符值的字串輸出參數。
    * 用來儲存受原則保護識別碼值的字串輸出參數。
-   * 用於儲存MIME類型(例如， `application/pdf`)的字串輸出參數。
+   * 用於儲存MIME類型的字串輸出參數（例如`application/pdf`）。
 
-   此方 `protectDocument` 法會傳回包 `BLOB` 含受原則保護PDF檔案的物件。
+   `protectDocument`方法會傳回包含受原則保護PDF檔案的`BLOB`物件。
 
 1. 儲存PDF檔案。
 
-   * 叫用 `System.IO.FileStream` 其建構函式並傳遞字串值來建立物件，此字串值代表受原則保護PDF檔案的檔案位置。
-   * 建立一個位元組陣列，該陣列儲存由方 `BLOB` 法返回的對象的資料內 `protectDocument` 容。 取得物件資料成員的值，以填 `BLOB` 入位元組 `MTOM` 陣列。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
-   * 調用物件的方法並傳遞位元組陣列，將位元組 `System.IO.BinaryWriter` 的內容 `Write` 寫入PDF檔案。
+   * 叫用其建構函式並傳遞字串值，以建立`System.IO.FileStream`物件，此字串值代表受原則保護PDF檔案的檔案位置。
+   * 建立一個位元組陣列，用於儲存`protectDocument`方法返回的`BLOB`對象的資料內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API將原則套用至PDF檔案」
-* 「快速入門(SwaRef): 使用web service API將原則套用至PDF檔案」
+* 「快速入門(MTOM):使用web service API將原則套用至PDF檔案」
+* 「快速入門(SwaRef):使用web service API將原則套用至PDF檔案」
 
-## 從PDF檔案移除原則 {#removing-policies-from-pdf-documents}
+## 從PDF文檔中刪除策略{#removing-policies-from-pdf-documents}
 
 您可以從受原則保護的檔案中移除原則，以便從檔案中移除安全性。 也就是說，如果您不想讓檔案受到原則的保護。 如果您想要使用較新的原則更新受原則保護的檔案，則切換原則會更有效率，而不是移除原則並新增更新的原則。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-4}
+### 步驟{#summary_of_steps-4}摘要
 
 若要從受原則保護的PDF檔案移除原則，請執行下列步驟：
 
@@ -746,7 +746,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **從PDF檔案移除原則**
 
-只要在連線設定中指定管理員，您就可以從受原則保護的PDF檔案中移除原則。 否則，用於保護文檔的策略必須包含權 `SWITCH_POLICY` 限，才能從PDF文檔中刪除策略。 此外，在AEM Forms連線設定中指定的使用者也必須擁有該權限。 否則，會拋出異常。
+只要在連線設定中指定管理員，您就可以從受原則保護的PDF檔案中移除原則。 否則，用於保護文檔的策略必須包含`SWITCH_POLICY`權限，才能從PDF文檔中刪除策略。 此外，在AEM Forms連線設定中指定的使用者也必須擁有該權限。 否則，會拋出異常。
 
 **儲存不安全的PDF檔案**
 
@@ -760,7 +760,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [套用原則至PDF檔案](protecting-documents-policies.md#applying-policies-to-pdf-documents)
 
-### 使用Java API從PDF檔案移除原則 {#remove-a-policy-from-a-pdf-document-using-the-java-api}
+### 使用Java API {#remove-a-policy-from-a-pdf-document-using-the-java-api}從PDF檔案移除原則
 
 使用Document Security API(Java)，從受原則保護的PDF檔案移除原則：
 
@@ -770,80 +770,80 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocumentSecurityClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentSecurityClient`對象。
 
 1. 擷取受原則保護的PDF檔案。
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定PDF檔案位置的字串值，建立代表受原則保護PDF檔案的物件。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用其建構函式並傳遞指定PDF檔案位置的字串值，建立代表受原則保護PDF檔案的`java.io.FileInputStream`物件。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 從PDF檔案移除原則。
 
-   * 調用 `DocumentManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getDocumentManager` 件。
-   * 叫用物件的方法並傳遞包含受原則保 `DocumentManager` 護的PDF檔案的 `removeSecurity` 物件， `com.adobe.idp.Document` 從PDF檔案中移除原則。 此方法傳回包 `com.adobe.idp.Document` 含不安全PDF檔案的物件。
+   * 調用`DocumentSecurityClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
+   * 叫用`DocumentManager`物件的`removeSecurity`方法，並傳遞包含受原則保護PDF檔案的`com.adobe.idp.Document`物件，從PDF檔案移除原則。 此方法傳回包含不安全PDF檔案的`com.adobe.idp.Document`物件。
 
 1. 儲存不安全的PDF檔案。
 
-   * 建立物 `java.io.File` 件，並確定副檔名為PDF。
-   * 叫用 `Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `Document` 由方法傳回的物 `Document``removeSecurity` 件)。
+   * 建立`java.io.File`物件，並確定副檔名為PDF。
+   * 叫用`Document`物件的`copyToFile`方法，將`Document`物件的內容複製至檔案（請確定您使用`removeSecurity`方法傳回的`Document`物件）。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API從PDF檔案移除原則」
+* &quot;快速啟動（SOAP模式）:使用Java API從PDF檔案移除原則」
 
-### 使用web service API移除原則 {#remove-a-policy-using-the-web-service-api}
+### 使用web service API {#remove-a-policy-using-the-web-service-api}刪除策略
 
 使用Document Security API(web service)從受原則保護的PDF檔案移除原則：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 擷取受原則保護的PDF檔案。
 
-   * 使用其 `BLOB` 建構函式建立物件。 此物 `BLOB` 件用來儲存受原則保護的PDF檔案，從中移除原則。
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存移除原則之受原則保護的PDF檔案。
+   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示PDF文檔的檔案位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 從PDF檔案移除原則。
 
-   叫用物件的方法並傳遞包含受原則保 `DocumentSecurityServiceClient` 護的PDF檔案的 `removePolicySecurity` 物件， `BLOB` 從PDF檔案移除原則。 此方法傳回包 `BLOB` 含不安全PDF檔案的物件。
+   叫用`DocumentSecurityServiceClient`物件的`removePolicySecurity`方法，並傳遞包含受原則保護PDF檔案的`BLOB`物件，以移除PDF檔案中的原則。 此方法傳回包含不安全PDF檔案的`BLOB`物件。
 
 1. 儲存不安全的PDF檔案。
 
-   * 調用 `System.IO.FileStream` 其建構函式並傳遞字串值，以建立物件，此字串值代表不安全PDF檔案的檔案位置。
-   * 建立一個位元組陣列，該陣列儲存由方 `BLOB` 法返回的對象的資料內 `removePolicySecurity` 容。 取得物件欄位的值，以填入 `BLOB` 位元組陣 `MTOM` 列。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示不安全PDF文檔的檔案位置。
+   * 建立一個位元組陣列，用於儲存`removePolicySecurity`方法返回的`BLOB`對象的資料內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API從PDF檔案移除原則」
-* 「快速入門(SwaRef): 使用web service API從PDF檔案移除原則」
+* 「快速入門(MTOM):使用web service API從PDF檔案移除原則」
+* 「快速入門(SwaRef):使用web service API從PDF檔案移除原則」
 
 **另請參閱**
 
@@ -851,7 +851,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 廢止檔案存取權 {#revoking-access-to-documents}
+## 廢止檔案存取權{#revoking-access-to-documents}
 
 您可以撤銷對受原則保護PDF檔案的存取權，使用者無法存取該檔案的所有副本。 當使用者嘗試開啟已撤銷的PDF檔案時，會將其重新導向至可檢視修訂檔案的指定URL。 必須以程式設計方式指定使用者重新導向的URL。 當您廢止檔案的存取權時，這項變更會在使用者下次透過線上開啟受原則保護的檔案與Document Security服務同步時生效。
 
@@ -859,9 +859,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-5}
+### 步驟{#summary_of_steps-5}摘要
 
 要撤銷受原則保護的檔案，請執行下列步驟：
 
@@ -902,7 +902,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [恢復對已撤銷文檔的訪問](protecting-documents-policies.md#reinstating-access-to-revoked-documents)
 
-### 使用Java API撤銷檔案的存取權 {#revoke-access-to-documents-using-the-java-api}
+### 使用Java API {#revoke-access-to-documents-using-the-java-api}撤銷對檔案的存取權
 
 使用Document Security API(Java)撤銷對受原則保護PDF檔案的存取權：
 
@@ -912,80 +912,80 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocumentSecurityClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentSecurityClient`對象。
 
 1. 擷取受原則保護的PDF檔案
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定PDF檔案位置的字串值，以建立代表受原則保護PDF檔案的物件。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用其建構函式並傳遞指定PDF檔案位置的字串值，建立代表受原則保護PDF檔案的`java.io.FileInputStream`物件。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 撤銷受原則保護的檔案
 
-   * 調用 `DocumentManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getDocumentManager` 件。
-   * 叫用物件的方法，以擷取受原則保護檔案的 `DocumentManager` 授權識別 `getLicenseId` 碼值。 傳遞代 `com.adobe.idp.Document` 表受原則保護檔案的物件。 此方法會傳回代表授權識別碼值的字串值。
-   * 調用 `LicenseManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getLicenseManager` 件。
-   * 調用物件的方法並傳遞下 `LicenseManager` 列值，以撤 `revokeLicense` 銷受原則保護的檔案：
+   * 調用`DocumentSecurityClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
+   * 叫用`DocumentManager`物件的`getLicenseId`方法，擷取受原則保護檔案的授權識別碼值。 傳遞代表受原則保護檔案的`com.adobe.idp.Document`物件。 此方法會傳回代表授權識別碼值的字串值。
+   * 調用`DocumentSecurityClient`物件的`getLicenseManager`方法，以建立`LicenseManager`物件。
+   * 叫用`LicenseManager`物件的`revokeLicense`方法並傳遞下列值，以撤銷受原則保護的檔案：
 
-      * 一個字串值，指定受原則保護檔案的授權識別碼值(指定物件方法 `DocumentManager` 的傳回 `getLicenseId` 值)。
-      * 介面的靜態資料成 `License` 員，它指定撤銷文檔的原因。 例如，您可以指定 `License.DOCUMENT_REVISED`。
-      * 一 `java.net.URL` 個值，它指定修訂文檔所在的位置。 如果您不想將使用者重新導向至其他URL，則可以傳遞 `null`。
+      * 指定受原則保護檔案之授權識別碼值的字串值（指定`DocumentManager`物件`getLicenseId`方法的傳回值）。
+      * `License`介面的靜態資料成員，它指定撤銷文檔的原因。 例如，您可以指定`License.DOCUMENT_REVISED`。
+      * 一個`java.net.URL`值，它指定修訂文檔所在的位置。 如果您不想將使用者重新導向至其他URL，則可以傳遞`null`。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API廢止檔案」
+* &quot;快速啟動（SOAP模式）:使用Java API廢止檔案」
 
-### 使用web service API撤銷檔案的存取權 {#revoke-access-to-documents-using-the-web-service-api}
+### 使用web service API {#revoke-access-to-documents-using-the-web-service-api}撤銷對檔案的存取權
 
 使用Document Security API(web service)撤銷對受原則保護PDF檔案的存取權：
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件
 
-   * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 擷取受原則保護的PDF檔案
 
-   * 使用其 `BLOB` 建構函式建立物件。 此物 `BLOB` 件用來儲存已撤銷受原則保護的PDF檔案。
-   * 呼叫 `System.IO.FileStream` 其建構函式並傳遞字串值來建立物件，此字串值代表要廢止之受原則保護PDF檔案的檔案位置，以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件可用來儲存已撤銷受原則保護的PDF檔案。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示要撤銷的受原則保護PDF文檔的檔案位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 撤銷受原則保護的檔案
 
-   * 借由叫用物件的方法並傳遞代表受原則保護 `DocumentSecurityServiceClient` 檔案的物件， `getLicenseID` 擷取受 `BLOB` 原則保護檔案的授權識別碼值。 此方法會傳回代表授權識別碼的字串值。
-   * 調用物件的方法並傳遞下 `DocumentSecurityServiceClient` 列值，以撤 `revokeLicense` 銷受原則保護的檔案：
+   * 叫用`DocumentSecurityServiceClient`物件的`getLicenseID`方法並傳遞代表受原則保護檔案的`BLOB`物件，以擷取受原則保護檔案的授權識別碼值。 此方法會傳回代表授權識別碼的字串值。
+   * 叫用`DocumentSecurityServiceClient`物件的`revokeLicense`方法並傳遞下列值，以撤銷受原則保護的檔案：
 
-      * 一個字串值，指定受原則保護檔案的授權識別碼值(指定物件方法 `DocumentSecurityServiceService` 的傳回 `getLicenseId` 值)。
-      * 枚舉的靜態資料成 `Reason` 員，它指定撤銷文檔的原因。 例如，您可以指定 `Reason.DOCUMENT_REVISED`。
-      * 一 `string` 個值，它指定修訂文檔所在的URL位置。 如果您不想將使用者重新導向至其他URL，則可以傳遞 `null`。
+      * 指定受原則保護檔案之授權識別碼值的字串值（指定`DocumentSecurityServiceService`物件`getLicenseId`方法的傳回值）。
+      * `Reason`列舉的靜態資料成員，它指定撤銷文檔的原因。 例如，您可以指定`Reason.DOCUMENT_REVISED`。
+      * `string`值，指定修訂文檔所在的URL位置。 如果您不想將使用者重新導向至其他URL，則可以傳遞`null`。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API廢止檔案」
-* 「快速入門(SwaRef): 使用web service API廢止檔案」
+* 「快速入門(MTOM):使用web service API廢止檔案」
+* 「快速入門(SwaRef):使用web service API廢止檔案」
 
 **另請參閱**
 
@@ -995,15 +995,15 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 恢復對已撤銷文檔的訪問 {#reinstating-access-to-revoked-documents}
+## 恢復對已撤銷文檔的訪問{#reinstating-access-to-revoked-documents}
 
 您可以恢復對已撤銷PDF檔案的存取權，讓使用者可存取已撤銷檔案的所有副本。 當使用者開啟已撤銷的復原檔案時，使用者可以檢視該檔案。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-6}
+### 步驟{#summary_of_steps-6}摘要
 
 要恢復對已撤銷的PDF文檔的訪問權，請執行以下步驟：
 
@@ -1018,7 +1018,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **建立Document Security Client API物件**
 
-您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立物 `DocumentSecurityClient` 件。 如果您使用Document Security web service API，請建立物 `DocumentSecurityServiceService` 件。
+您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立`DocumentSecurityClient`物件。 如果您使用Document Security web service API，請建立`DocumentSecurityServiceService`物件。
 
 **擷取已撤銷PDF檔案的授權識別碼**
 
@@ -1038,7 +1038,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [廢止檔案存取權](protecting-documents-policies.md#revoking-access-to-documents)
 
-### 使用Java API恢復對已撤銷文檔的訪問 {#reinstate-access-to-revoked-documents-using-the-java-api}
+### 使用Java API {#reinstate-access-to-revoked-documents-using-the-java-api}恢復對已撤銷文檔的訪問
 
 使用Document Security API(Java)重新建立對已撤銷檔案的存取權：
 
@@ -1048,72 +1048,72 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocumentSecurityClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentSecurityClient`對象。
 
 1. 擷取已撤銷PDF檔案的授權識別碼。
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定PDF檔案位置的字串值，建立代表已撤銷PDF檔案的物件。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
-   * 調用 `DocumentManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getDocumentManager` 件。
-   * 叫用物件的方法並傳遞代表已撤銷檔案的物 `DocumentManager` 件，以擷取已 `getLicenseId` 撤銷 `com.adobe.idp.Document` 檔案的授權識別碼值。 此方法會傳回代表授權識別碼的字串值。
+   * 使用其建構函式並傳遞指定PDF檔案位置的字串值，建立代表已撤銷PDF檔案的`java.io.FileInputStream`物件。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
+   * 調用`DocumentSecurityClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
+   * 叫用`DocumentManager`物件的`getLicenseId`方法並傳遞代表已撤銷檔案的`com.adobe.idp.Document`物件，以擷取已撤銷檔案的授權識別碼值。 此方法會傳回代表授權識別碼的字串值。
 
 1. 恢復對已撤銷PDF檔案的存取權。
 
-   * 調用 `LicenseManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getLicenseManager` 件。
-   * 叫用物件的方法並傳遞已撤銷檔案的授 `LicenseManager` 權識別碼值， `unrevokeLicense` 以重新建立對已撤銷PDF檔案的存取權。
+   * 調用`DocumentSecurityClient`物件的`getLicenseManager`方法，以建立`LicenseManager`物件。
+   * 叫用`LicenseManager`物件的`unrevokeLicense`方法並傳遞已撤銷檔案的授權識別碼值，以重新建立對已撤銷PDF檔案的存取權。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用web service API恢復對已撤銷文檔的訪問權&quot;
+* &quot;快速啟動（SOAP模式）:使用web service API恢復對已撤銷文檔的訪問權&quot;
 
-### 使用Web服務API恢復對已撤銷檔案的存取權 {#reinstate-access-to-revoked-documents-using-the-web-service-api}
+### 使用Web服務API {#reinstate-access-to-revoked-documents-using-the-web-service-api}恢復對已撤銷文檔的訪問
 
 使用Document Security API(web service)重新建立對已撤銷檔案的存取權：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 擷取已撤銷PDF檔案的授權識別碼。
 
-   * 使用其 `BLOB` 建構函式建立物件。 對 `BLOB` 像用於儲存撤消的PDF文檔，恢復其訪問權。
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示已撤銷的PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存已撤銷的PDF檔案，以便恢復存取權。
+   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示已撤銷的PDF文檔的檔案位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 恢復對已撤銷PDF檔案的存取權。
 
-   * 叫用物件的方法並傳遞代表已撤銷檔案的物 `DocumentSecurityServiceClient` 件，以擷取已 `getLicenseID` 撤銷 `BLOB` 檔案的授權識別碼值。 此方法會傳回代表授權識別碼的字串值。
-   * 調用物件的方法，並傳遞 `DocumentSecurityServiceClient` 指定已撤銷PDF檔案之授權識別碼值的字串值（傳遞物件方法的傳回值），以重新建立對已撤銷 `unrevokeLicense` PDF檔案的 `DocumentSecurityServiceClient``getLicenseId` 存取。
+   * 叫用`DocumentSecurityServiceClient`物件的`getLicenseID`方法並傳遞代表已撤銷檔案的`BLOB`物件，以擷取已撤銷檔案的授權識別碼值。 此方法會傳回代表授權識別碼的字串值。
+   * 呼叫`DocumentSecurityServiceClient`物件的`unrevokeLicense`方法，並傳遞指定已撤銷PDF檔案之授權識別碼值的字串值，以重新建立對已撤銷PDF檔案的存取權（傳遞`DocumentSecurityServiceClient`物件`getLicenseId`方法的傳回值）。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API恢復對已撤銷文檔的訪問權&quot;
-* 「快速入門(SwaRef): 使用web service API恢復對已撤銷文檔的訪問權&quot;
+* 「快速入門(MTOM):使用web service API恢復對已撤銷文檔的訪問權&quot;
+* 「快速入門(SwaRef):使用web service API恢復對已撤銷文檔的訪問權&quot;
 
 **另請參閱**
 
@@ -1121,7 +1121,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 檢查受原則保護的PDF檔案 {#inspecting-policy-protected-pdf-documents}
+## 檢查受原則保護的PDF檔案{#inspecting-policy-protected-pdf-documents}
 
 您可以使用Document Security Service API（Java和web service）來檢查受原則保護的PDF檔案。 檢查受原則保護的PDF檔案會傳回受原則保護的PDF檔案的相關資訊。 例如，您可以確定用於保護文檔的策略以及保護文檔的日期。
 
@@ -1129,9 +1129,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-7}
+### 步驟{#summary_of_steps-7}摘要
 
 若要檢查受原則保護的PDF檔案，請執行下列步驟：
 
@@ -1146,7 +1146,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **建立Document Security Client API物件**
 
-在以程式設計方式執行Document Security服務操作之前，請先建立Document Security服務用戶端物件。 如果您使用Java API，請建立物 `RightsManagementClient` 件。 如果您使用Document Security web service API，請建立物 `RightsManagementServiceService` 件。
+在以程式設計方式執行Document Security服務操作之前，請先建立Document Security服務用戶端物件。 如果您使用Java API，請建立`RightsManagementClient`物件。 如果您使用Document Security web service API，請建立`RightsManagementServiceService`物件。
 
 **擷取受原則保護的檔案以進行檢查**
 
@@ -1160,9 +1160,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 在檢查受原則保護的PDF檔案後，您可以取得相關資訊。 例如，您可以決定用於保護檔案的原則。
 
-如果您使用屬於「我的策略」的策略保護文檔，然後調用或 `RMInspectResult.getPolicysetName` ，則 `RMInspectResult.getPolicysetId`返回null。
+如果您使用屬於「我的策略」的策略保護文檔，然後調用`RMInspectResult.getPolicysetName`或`RMInspectResult.getPolicysetId`，則返回null。
 
-如果文檔使用包含在策略集（「我的策略」除外）中的策略進行保護，則返回 `RMInspectResult.getPolicysetName` 有效 `RMInspectResult.getPolicysetId` 的字串。
+如果文檔使用包含在策略集（「我的策略」除外）中的策略進行保護，則`RMInspectResult.getPolicysetName`和`RMInspectResult.getPolicysetId`將返回有效字串。
 
 **另請參閱**
 
@@ -1170,87 +1170,87 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API檢查受原則保護的PDF檔案 {#inspect-policy-protected-pdf-documents-using-the-java-api}
+### 使用Java API {#inspect-policy-protected-pdf-documents-using-the-java-api}檢查受原則保護的PDF檔案
 
 使用Document Security Service API(Java)檢查受原則保護的PDF檔案：
 
 1. 包含專案檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-rightsmanagement-client.jar。 如需這些檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-rightsmanagement-client.jar。 如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。 (請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
-   * 使用其 `RightsManagementClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。 （請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`RightsManagementClient`對象。
 
 1. 擷取受原則保護的檔案以進行檢查。
 
-   * 使用 `java.io.FileInputStream` 其建構函式建立代表受原則保護PDF檔案的物件。 傳遞指定PDF檔案位置的字串值。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用其建構函式建立`java.io.FileInputStream`物件，以代表受原則保護的PDF檔案。 傳遞指定PDF檔案位置的字串值。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 檢查檔案。
 
-   * 調用 `DocumentManager` 物件的方 `RightsManagementClient` 法以建立物 `getDocumentManager` 件。
-   * 調用物件的方法，以檢查受原 `LicenseManager` 則保護的 `inspectDocument` 檔案。 傳遞包 `com.adobe.idp.Document` 含受原則保護PDF檔案的物件。 此方法傳回 `RMInspectResult` 包含受原則保護檔案資訊的物件。
+   * 調用`RightsManagementClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
+   * 調用`LicenseManager`物件的`inspectDocument`方法，以檢查受原則保護的檔案。 傳遞包含受原則保護PDF檔案的`com.adobe.idp.Document`物件。 此方法傳回包含受原則保護檔案相關資訊的`RMInspectResult`物件。
 
 1. 取得受原則保護檔案的相關資訊。
 
-   若要取得受原則保護檔案的相關資訊，請叫用屬於物件的適當 `RMInspectResult` 方法。 例如，若要擷取原則名稱，請叫 `RMInspectResult` 用物件的方 `getPolicyName` 法。
+   若要取得受原則保護檔案的相關資訊，請叫用屬於`RMInspectResult`物件的適當方法。 例如，若要擷取原則名稱，請叫用`RMInspectResult`物件的`getPolicyName`方法。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API檢查受原則保護的PDF檔案」
+* &quot;快速啟動（SOAP模式）:使用Java API檢查受原則保護的PDF檔案」
 
-### 使用web service API檢查受原則保護的PDF檔案 {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
+### 使用web service API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}檢查受原則保護的PDF檔案
 
 使用Document Security Service API(web service)檢查受原則保護的PDF檔案：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`RightsManagementServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 擷取受原則保護的檔案以進行檢查。
 
-   * 使用其 `BLOB` 建構函式建立物件。 此物 `BLOB` 件用來儲存要檢查的PDF檔案。
-   * 通過調用 `System.IO.FileStream` 其建構子建立對象。 傳遞一個字串值，代表PDF檔案的檔案位置，以及在中開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法，以串流資料填 `System.IO.FileStream` 入位元組 `Read` 陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存要檢查的PDF檔案。
+   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，代表PDF檔案的檔案位置，以及在中開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 檢查檔案。
 
-   調用物件的方法，以檢查受原 `RightsManagementServiceClient` 則保護的 `inspectDocument` 檔案。 傳遞包 `BLOB` 含受原則保護PDF檔案的物件。 此方法傳回 `RMInspectResult` 包含受原則保護檔案資訊的物件。
+   調用`RightsManagementServiceClient`物件的`inspectDocument`方法，以檢查受原則保護的檔案。 傳遞包含受原則保護PDF檔案的`BLOB`物件。 此方法傳回包含受原則保護檔案相關資訊的`RMInspectResult`物件。
 
 1. 取得受原則保護檔案的相關資訊。
 
-   若要取得受原則保護檔案的相關資訊，請取得屬於物件的適當欄位 `RMInspectResult` 值。 例如，若要擷取原則名稱，請取得物件欄 `RMInspectResult` 位的值 `policyName` 。
+   若要取得受原則保護檔案的相關資訊，請取得屬於`RMInspectResult`物件的適當欄位值。 例如，若要擷取原則名稱，請取得`RMInspectResult`物件的`policyName`欄位值。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API檢查受原則保護的PDF檔案」
-* 「快速入門(SwaRef): 使用web service API檢查受原則保護的PDF檔案」
+* 「快速入門(MTOM):使用web service API檢查受原則保護的PDF檔案」
+* 「快速入門(SwaRef):使用web service API檢查受原則保護的PDF檔案」
 
 **另請參閱**
 
@@ -1258,7 +1258,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 建立浮水印 {#creating-watermarks}
+## 建立水印{#creating-watermarks}
 
 浮水印可以透過唯一識別檔案並控製版權侵權來確保檔案的安全性。 例如，您可以建立水印，並將該水印標示為檔案所有頁面上的機密。 在建立浮水印後，您可以將它加入原則中。 也就是說，您可以使用新建立的浮水印來設定原則的浮水印屬性。 將包含浮水印的原則套用至檔案後，浮水印就會出現在受原則保護的檔案中。
 
@@ -1268,9 +1268,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-8}
+### 步驟{#summary_of_steps-8}摘要
 
 要建立水印，請執行以下步驟：
 
@@ -1285,7 +1285,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **建立Document Security Client API物件**
 
-您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立物 `RightsManagementClient` 件。 如果您使用Document Security web service API，請建立物 `RightsManagementServiceService` 件。
+您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立`RightsManagementClient`物件。 如果您使用Document Security web service API，請建立`RightsManagementServiceService`物件。
 
 **設定浮水印屬性**
 
@@ -1324,7 +1324,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:IS_CUSTOMTEXT_ENABLED</code></p></td>
-   <td><p>如果此值為true，則必須使用指定自訂文字的值 <code>WaterBackCmd:SRCTEXT</code>。</p></td>
+   <td><p>如果此值為true，則必須使用<code>WaterBackCmd:SRCTEXT</code>指定自訂文字的值。</p></td>
    <td><p>True或False</p></td>
   </tr>
   <tr>
@@ -1339,7 +1339,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:SCALE</code></p></td>
-   <td><p>如果指定此值，則 <code>WaterBackCmd:IS_SIZE_ENABLED</code> 必須存在且值必須為true。 如果未指定此屬性，則預設行為符合頁面大小。</p></td>
+   <td><p>如果指定此值，則<code>WaterBackCmd:IS_SIZE_ENABLED</code>必須存在，且值必須為true。 如果未指定此屬性，則預設行為符合頁面大小。</p></td>
    <td><p>大於0.0且小於或等於1.0的值。</p></td>
   </tr>
   <tr>
@@ -1364,7 +1364,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:SRCTEXT</code></p></td>
-   <td><p>指定浮水印的自訂文字。 如果此值存在，則 <code>WaterBackCmd:IS_CUSTOMTEXT_ENABLED</code> 也必須存在並設定為true。</p></td>
+   <td><p>指定浮水印的自訂文字。 如果此值存在，則<code>WaterBackCmd:IS_CUSTOMTEXT_ENABLED</code>也必須存在，並設為true。</p></td>
    <td><p>True或False</p></td>
   </tr>
  </tbody>
@@ -1391,85 +1391,85 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [套用原則至PDF檔案](protecting-documents-policies.md#applying-policies-to-pdf-documents)
 
-### 使用Java API建立浮水印 {#create-watermarks-using-the-java-api}
+### 使用Java API {#create-watermarks-using-the-java-api}建立浮水印
 
 使用Document Security API(Java)建立浮水印：
 
 1. 包含專案檔案。
 
-   在Java專案的類別路徑中 `adobe-rightsmanagement-client.jar`包含用戶端JAR檔案，例如。
+   在Java專案的類別路徑中包含用戶端JAR檔案，例如`adobe-rightsmanagement-client.jar`。
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `RightsManagementClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`RightsManagementClient`對象。
 
 1. 設定水印屬性
 
-   * 調用 `Watermark` 物件的靜態方 `InfomodelObjectFactory` 法來建立物 `createWatermark` 件。 此方法返回對 `Watermark` 像。
-   * 調用物件的方法並傳遞指定原則 `Watermark` 名稱的字 `setName` 串值，以設定浮水印的名稱屬性。
-   * 調用物件的方法並傳遞，以設定 `Watermark` 水印的 `setBackground` 背景屬性 `true`。 通過設定此屬性，水印將出現在文檔的背景中。
-   * 調用物件的方法並傳遞代表浮水印 `Watermark` 文字的字串值， `setCustomText` 以設定浮水印的自訂文字屬性。
-   * 調用物件的方法並傳遞指定不 `Watermark` 透明度等級的 `setOpacity` 整數值，以設定浮水印的不透明度屬性。 值100表示水印完全不透明，值0表示水印完全透明。
+   * 通過調用`InfomodelObjectFactory`對象的靜態`createWatermark`方法建立`Watermark`對象。 此方法返回`Watermark`對象。
+   * 調用`Watermark`物件的`setName`方法並傳遞指定原則名稱的字串值，以設定浮水印的名稱屬性。
+   * 調用`Watermark`物件的`setBackground`方法並傳遞`true`，以設定浮水印的背景屬性。 通過設定此屬性，水印將出現在文檔的背景中。
+   * 調用`Watermark`物件的`setCustomText`方法並傳遞代表浮水印文字的字串值，以設定浮水印的自訂文字屬性。
+   * 調用`Watermark`物件的`setOpacity`方法並傳遞指定不透明度等級的整數值，以設定浮水印的不透明度屬性。 值100表示水印完全不透明，值0表示水印完全透明。
 
 1. 註冊水印。
 
-   * 調用 `WatermarkManager` 物件的方 `RightsManagementClient` 法以建立物 `getWatermarkManager` 件。 此方法返回對 `WatermarkManager` 像。
-   * 調用物件的方 `WatermarkManager` 法並將代 `registerWatermark` 表水印的物 `Watermark` 件傳遞至註冊，以註冊水印。 此方法會傳回代表浮水印識別值的字串值。
+   * 調用`RightsManagementClient`物件的`getWatermarkManager`方法，以建立`WatermarkManager`物件。 此方法返回`WatermarkManager`對象。
+   * 調用`WatermarkManager`物件的`registerWatermark`方法，並傳遞代表要註冊之水印的`Watermark`物件，以註冊水印。 此方法會傳回代表浮水印識別值的字串值。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API建立浮水印&quot;
+* &quot;快速啟動（SOAP模式）:使用Java API建立浮水印&quot;
 
-### 使用web service API建立浮水印 {#create-watermarks-using-the-web-service-api}
+### 使用web service API {#create-watermarks-using-the-web-service-api}建立浮水印
 
 使用Document Security API(web service)建立浮水印：
 
 1. 建立Document Security Client API物件。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`RightsManagementServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 設定水印屬性。
 
-   * 通過調 `WatermarkSpec` 用建構子建立對 `WatermarkSpec` 像。
-   * 為物件的資料成員指派字串值，以設定浮 `WatermarkSpec` 水印的 `name` 名稱。
-   * 將字串值指派 `id` 給物件的資料成員，以設 `WatermarkSpec` 定浮水印的 `id` 屬性。
-   * 對於要設定的每個水印屬性，請建立一個單獨的 `MyMapOf_xsd_string_To_xsd_anyType_Item` 對象。
-   * 將值指派給物件的資料成 `MyMapOf_xsd_string_To_xsd_anyType_Item` 員以設 `key` 定索引鍵值(例如 `WaterBackCmd:OPACITY)`。
-   * 將值指派給物件的資 `MyMapOf_xsd_string_To_xsd_anyType_Item` 料成員 `value` (例如 `.25`)。
-   * 建立對 `MyArrayOf_xsd_anyType` 像。 對於每 `MyMapOf_xsd_string_To_xsd_anyType_Item` 個物件，請叫 `MyArrayOf_xsd_anyType` 用物件的方 `Add` 法。 傳遞物 `MyMapOf_xsd_string_To_xsd_anyType_Item` 件。
-   * 將物 `MyArrayOf_xsd_anyType` 件指派給物 `WatermarkSpec` 件的資料 `values` 成員。
+   * 通過調用`WatermarkSpec`建構子建立`WatermarkSpec`對象。
+   * 為`WatermarkSpec`物件的`name`資料成員指派字串值，以設定浮水印的名稱。
+   * 為`WatermarkSpec`物件的`id`資料成員指派字串值，以設定浮水印的`id`屬性。
+   * 對於要設定的每個水印屬性，請建立一個單獨的`MyMapOf_xsd_string_To_xsd_anyType_Item`對象。
+   * 通過為`MyMapOf_xsd_string_To_xsd_anyType_Item`對象的`key`資料成員（例如`WaterBackCmd:OPACITY)`）分配值來設定鍵值。
+   * 通過為`MyMapOf_xsd_string_To_xsd_anyType_Item`對象的`value`資料成員（例如`.25`）分配值來設定值。
+   * 建立`MyArrayOf_xsd_anyType`對象。 對於每個`MyMapOf_xsd_string_To_xsd_anyType_Item`對象，調用`MyArrayOf_xsd_anyType`對象的`Add`方法。 傳遞`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。
+   * 將`MyArrayOf_xsd_anyType`物件指派給`WatermarkSpec`物件的`values`資料成員。
 
 1. 註冊水印。
 
-   調用物件的方 `RightsManagementServiceClient` 法並將代 `registerWatermark` 表水印的物 `WatermarkSpec` 件傳遞至註冊，以註冊水印。
+   調用`RightsManagementServiceClient`物件的`registerWatermark`方法，並傳遞代表要註冊之水印的`WatermarkSpec`物件，以註冊水印。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API建立浮水印&quot;
-* 「快速入門(SwaRef): 使用web service API建立浮水印&quot;
+* 「快速入門(MTOM):使用web service API建立浮水印&quot;
+* 「快速入門(SwaRef):使用web service API建立浮水印&quot;
 
 **另請參閱**
 
@@ -1477,7 +1477,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 修改浮水印 {#modifying-watermarks}
+## 修改水印{#modifying-watermarks}
 
 您可以使用Document Security Java API或web service API修改現有的浮水印。 要更改現有水印，可以檢索它、修改其屬性，然後在伺服器上更新它。 例如，假設您檢索水印並修改其不透明度屬性。 在更改生效之前，您必須更新水印。
 
@@ -1489,9 +1489,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-9}
+### 步驟{#summary_of_steps-9}摘要
 
 要修改水印，請執行以下步驟：
 
@@ -1507,7 +1507,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **建立Document Security Client API物件**
 
-您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立物 `DocumentSecurityClient` 件。 如果您使用Document Security web service API，請建立物 `DocumentSecurityServiceService` 件。
+您必須先建立Document Security服務用戶端物件，才能以程式設計方式執行Document Security服務作業。 如果您使用Java API，請建立`DocumentSecurityClient`物件。 如果您使用Document Security web service API，請建立`DocumentSecurityServiceService`物件。
 
 **檢索要修改的水印**
 
@@ -1515,7 +1515,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **設定浮水印屬性**
 
-要修改現有水印，請更改一個或多個水印屬性的值。 當使用Web服務以程式設計方式更新水印時，您必須設定所有原本設定的屬性，即使值未變更亦然。 例如，假設已設定以下水印屬性： `WaterBackCmd:IS_USERID_ENABLED`、 `WaterBackCmd:IS_CUSTOMTEXT_ENABLED`、 `WaterBackCmd:OPACITY`和 `WaterBackCmd:SRCTEXT`。 雖然您要修改的唯一屬性是 `WaterBackCmd:OPACITY`，但您必須將其他值設定為正確。
+要修改現有水印，請更改一個或多個水印屬性的值。 當使用Web服務以程式設計方式更新水印時，您必須設定所有原本設定的屬性，即使值未變更亦然。 例如，假設已設定以下水印屬性：`WaterBackCmd:IS_USERID_ENABLED`、`WaterBackCmd:IS_CUSTOMTEXT_ENABLED`、`WaterBackCmd:OPACITY`和`WaterBackCmd:SRCTEXT`。 雖然您要修改的唯一屬性是`WaterBackCmd:OPACITY`，但您必須將其他值設定為良好。
 
 >[!NOTE]
 >
@@ -1523,7 +1523,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->有關水印屬性名稱的資訊，請參 [閱建立水印](protecting-documents-policies.md#creating-watermarks)。
+>有關水印屬性名稱的資訊，請參見[建立水印](protecting-documents-policies.md#creating-watermarks)。
 
 **更新浮水印**
 
@@ -1537,7 +1537,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [建立浮水印](protecting-documents-policies.md#creating-watermarks)
 
-### 使用Java API修改浮水印 {#modify-watermarks-using-the-java-api}
+### 使用Java API {#modify-watermarks-using-the-java-api}修改浮水印
 
 使用Document Security API(Java)修改浮水印：
 
@@ -1547,16 +1547,16 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocumentSecurityClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentSecurityClient`對象。
 
 1. 檢索要修改的水印。
 
-   調用物 `WatermarkManager` 件的方法，並 `DocumentSecurityClient` 傳遞指定浮 `getWatermarkManager` 水印名稱的字串值，以建立物件。 此方法返回 `Watermark` 表示要修改的水印的對象。
+   調用`DocumentSecurityClient`對象的`getWatermarkManager`方法並傳遞指定水印名稱的字串值，以建立`WatermarkManager`對象。 此方法返回一個`Watermark`對象，該對象表示要修改的水印。
 
 1. 設定水印屬性。
 
-   調用物件的方法並傳遞指定不 `Watermark` 透明度等級的 `setOpacity` 整數值，以設定浮水印的不透明度屬性。 值100表示水印完全不透明，值0表示水印完全透明。
+   調用`Watermark`物件的`setOpacity`方法並傳遞指定不透明度等級的整數值，以設定浮水印的不透明度屬性。 值100表示水印完全不透明，值0表示水印完全透明。
 
    >[!NOTE]
    >
@@ -1564,61 +1564,61 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 1. 更新浮水印。
 
-   * 調用物件的方 `WatermarkManager` 法並傳 `updateWatermark` 遞屬性已修 `Watermark` 改的物件，以更新水印。
+   * 調用`WatermarkManager`物件的`updateWatermark`方法並傳遞其屬性已修改的`Watermark`物件，以更新浮水印。
 
 **程式碼範例**
 
-如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）: 使用Java API部分修改水印。
+如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）:使用Java API部分修改水印。
 
-### 使用web service API修改浮水印 {#modify-watermarks-using-the-web-service-api}
+### 使用web service API {#modify-watermarks-using-the-web-service-api}修改浮水印
 
 使用Document Security API(web service)修改浮水印：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 檢索要修改的水印。
 
-   調用物件的方法來擷取要修 `DocumentSecurityServiceClient` 改的浮水印 `getWatermarkByName` 。 傳遞指定浮水印名稱的字串值。 此方法返回 `WatermarkSpec` 表示要修改的水印的對象。
+   調用`DocumentSecurityServiceClient`物件的`getWatermarkByName`方法來擷取要修改的浮水印。 傳遞指定浮水印名稱的字串值。 此方法返回一個`WatermarkSpec`對象，該對象表示要修改的水印。
 
 1. 設定水印屬性。
 
-   * 對於要更新的每個水印屬性，請建立一個單獨的 `MyMapOf_xsd_string_To_xsd_anyType_Item` 對象。
-   * 將值指派給物件的資料成 `MyMapOf_xsd_string_To_xsd_anyType_Item` 員以設 `key` 定索引鍵值(例如 `WaterBackCmd:OPACITY)`。
-   * 將值指派給物件的資 `MyMapOf_xsd_string_To_xsd_anyType_Item` 料成員 `value` (例如 `.50`)。
-   * 建立對 `MyArrayOf_xsd_anyType` 像。 對於每 `MyMapOf_xsd_string_To_xsd_anyType_Item` 個物件，請叫 `MyArrayOf_xsd_anyType` 用物件的方 `Add` 法。 傳遞物 `MyMapOf_xsd_string_To_xsd_anyType_Item` 件。
-   * 將物 `MyArrayOf_xsd_anyType` 件指派給物 `WatermarkSpec` 件的資料 `values` 成員。
+   * 對於要更新的每個水印屬性，請建立一個單獨的`MyMapOf_xsd_string_To_xsd_anyType_Item`對象。
+   * 通過為`MyMapOf_xsd_string_To_xsd_anyType_Item`對象的`key`資料成員（例如`WaterBackCmd:OPACITY)`）分配值來設定鍵值。
+   * 通過為`MyMapOf_xsd_string_To_xsd_anyType_Item`對象的`value`資料成員（例如`.50`）分配值來設定值。
+   * 建立`MyArrayOf_xsd_anyType`對象。 對於每個`MyMapOf_xsd_string_To_xsd_anyType_Item`對象，調用`MyArrayOf_xsd_anyType`對象的`Add`方法。 傳遞`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。
+   * 將`MyArrayOf_xsd_anyType`物件指派給`WatermarkSpec`物件的`values`資料成員。
 
 1. 更新浮水印。
 
-   調用物件的方 `DocumentSecurityServiceClient` 法並傳遞 `updateWatermark` 代表要修 `WatermarkSpec` 改的物件，以更新水印。
+   調用`DocumentSecurityServiceClient`物件的`updateWatermark`方法並傳遞代表要修改之浮水印的`WatermarkSpec`物件，以更新浮水印。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API修改水印&quot;
+* 「快速入門(MTOM):使用web service API修改水印&quot;
 
-## 搜尋事件 {#searching-for-events}
+## 搜索事件{#searching-for-events}
 
 Rights Management服務會在特定動作發生時追蹤這些動作，例如將原則套用至檔案、開啟受原則保護的檔案，以及廢止檔案存取權。 必須為Rights Management服務啟用事件審核，否則不會追蹤事件。
 
@@ -1633,9 +1633,9 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 >[!NOTE]
 >
->如需Rights Management服務的詳細資訊，請參閱「AEM [表格的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Rights Management服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-10}
+### 步驟{#summary_of_steps-10}摘要
 
 要搜索Rights Management事件，請執行以下步驟：
 
@@ -1650,7 +1650,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **建立Rights Management用戶端API物件**
 
-在以寫程式方式執行Rights Management服務操作之前，必須建立Rights Management服務客戶端對象。 如果您使用Java API，請建立物 `DocumentSecurityClient` 件。 如果您使用Rights Management web service API，請建立物 `DocumentSecurityServiceService` 件。
+在以寫程式方式執行Rights Management服務操作之前，必須建立Rights Management服務客戶端對象。 如果您使用Java API，請建立`DocumentSecurityClient`物件。 如果您使用Rights Management web服務API，請建立`DocumentSecurityServiceService`物件。
 
 **指定要搜尋的事件**
 
@@ -1666,7 +1666,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API搜尋事件 {#search-for-events-using-the-java-api}
+### 使用Java API {#search-for-events-using-the-java-api}搜尋事件
 
 使用Rights Management API(Java)搜尋事件：
 
@@ -1676,62 +1676,62 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 1. 建立Rights Management用戶端API物件
 
-   使用其 `DocumentSecurityClient` 建構函式並傳遞包含連線屬性 `ServiceClientFactory` 的物件，以建立物件。
+   使用其建構子並傳遞包含連接屬性的`ServiceClientFactory`對象，建立`DocumentSecurityClient`對象。
 
 1. 指定要搜尋的事件
 
-   * 調用 `EventManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getEventManager` 件。 此方法返回對 `EventManager` 像。
-   * 通過調用 `EventSearchFilter` 其建構子建立對象。
-   * 通過調用對象的方法並傳遞屬於表示要搜索的 `EventSearchFilter` 事件的類的 `setEventCode` 靜態資料成員，指定要搜索的 `EventManager` 事件。 例如，要搜索策略建立事件，請傳遞 `EventManager.POLICY_CREATE_EVENT`。
+   * 調用`DocumentSecurityClient`物件的`getEventManager`方法，以建立`EventManager`物件。 此方法返回`EventManager`對象。
+   * 通過調用`EventSearchFilter`對象的建構子建立&lt;a0/>對象。
+   * 通過調用`EventSearchFilter`對象的`setEventCode`方法並傳遞屬於`EventManager`類的靜態資料成員（表示要搜索的事件），指定要搜索的事件。 例如，要搜索策略建立事件，請傳遞`EventManager.POLICY_CREATE_EVENT`。
 
    >[!NOTE]
    >
-   >您可以叫用物件方法來定義其他 `EventSearchFilter` 搜尋准則。 例如，叫用方 `setUserName` 法以指定與事件關聯的使用者。
+   >您可以叫用`EventSearchFilter`物件方法來定義其他搜尋准則。 例如，請叫用`setUserName`方法，以指定與事件關聯的使用者。
 
 1. 搜尋事件
 
-   調用物件的方法並傳 `EventManager` 遞定義事件搜 `searchForEvents` 尋准則的 `EventSearchFilter` 物件，以搜尋事件。 此方法會傳回物件 `Event` 陣列。
+   調用`EventManager`物件的`searchForEvents`方法並傳遞定義事件搜尋准則的`EventSearchFilter`物件，以搜尋事件。 此方法返回`Event`對象的陣列。
 
 **程式碼範例**
 
 如需使用Rights Management服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速入門(SOAP): 使用Java API搜尋事件&quot;
+* &quot;快速入門(SOAP):使用Java API搜尋事件&quot;
 
-### 使用網站服務API搜尋事件 {#search-for-events-using-the-web-service-api}
+### 使用web service API {#search-for-events-using-the-web-service-api}搜尋事件
 
 使用Rights Management API(web service)搜尋事件：
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Rights Management用戶端API物件
 
-   * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 指定要搜尋的事件
 
-   * 使用其 `EventSpec` 建構函式建立物件。
-   * 透過設定物件的資料成員，以例項來指 `EventSpec` 定事件發生的 `firstTime.date` 時 `DataTime` 段開始時間，例項代表事件發生時的日期範圍開始時間。
-   * 將值指 `true` 派給物 `EventSpec` 件的資料 `firstTime.dateSpecified` 成員。
-   * 透過使用例項來設定物件的資料 `EventSpec` 成員，以 `lastTime.date` 指 `DataTime` 定事件發生時的期間結束。
-   * 將值指 `true` 派給物 `EventSpec` 件的資料 `lastTime.dateSpecified` 成員。
-   * 將字串值指派給物件的資料成員，以設定要 `EventSpec` 搜尋的 `eventCode` 事件。 下表列出了可分配給此屬性的數值：
+   * 使用其建構子建立`EventSpec`對象。
+   * 使用`DataTime`例項設定`EventSpec`物件的`firstTime.date`資料成員，以指定事件發生的時段開始，該例項代表事件發生時的日期範圍開始。
+   * 將值`true`指派給`EventSpec`物件的`firstTime.dateSpecified`資料成員。
+   * 使用`DataTime`例項設定`EventSpec`物件的`lastTime.date`資料成員，以指定事件發生期間的結束時間，該例項代表事件發生時的日期範圍結束時間。
+   * 將值`true`指派給`EventSpec`物件的`lastTime.dateSpecified`資料成員。
+   * 為`EventSpec`物件的`eventCode`資料成員指派字串值，以設定要搜尋的事件。 下表列出了可分配給此屬性的數值：
 
    <table>
     <thead>
@@ -1787,63 +1787,63 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
     </tr>
     <tr>
     <td><p><code>DOCUMENT_VIEW_EVENT </code></p></td>
-    <td><p>2000</p></td>
+    <td><p>2000年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_PRINT_LOW_EVENT </code></p></td>
-    <td><p>2001</p></td>
+    <td><p>2001年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_PRINT_HIGH_EVENT </code></p></td>
-    <td><p>2002</p></td>
+    <td><p>2002年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_SIGN_EVENT </code></p></td>
-    <td><p>2003</p></td>
+    <td><p>2003年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_ADD_ANNOTATION_EVENT </code></p></td>
-    <td><p>2004</p></td>
+    <td><p>2004年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_FORM_FILL_EVENT </code></p></td>
-    <td><p>2005</p></td>
+    <td><p>2005年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_CLOSE_EVENT </code></p></td>
-    <td><p>2006</p></td>
+    <td><p>2006年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_MODIFY_EVENT </code></p></td>
-    <td><p>2007</p></td>
+    <td><p>2007年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_CHANGE_SECURITY_HANDLER_EVENT </code></p></td>
-    <td><p>2008</p></td>
+    <td><p>2008年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_SWITCH_POLICY_EVENT </code></p></td>
-    <td><p>2009</p></td>
+    <td><p>2009年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_REVOKE_EVENT </code></p></td>
-    <td><p>2010</p></td>
+    <td><p>2010年</p></td>
     </tr>
     <tr>
     <td><p><code>$1</code></p></td>
-    <td><p>2011</p></td>
+    <td><p>2011年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_SECURE_EVENT </code></p></td>
-    <td><p>2012</p></td>
+    <td><p>2012年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_UNKNOWN_CLIENT_EVENT </code></p></td>
-    <td><p>2013</p></td>
+    <td><p>2013年</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_CHANGE_REVOKE_URL_EVENT </code></p></td>
-    <td><p>2014</p></td>
+    <td><p>2014年</p></td>
     </tr>
     <tr>
     <td><p><code>POLICY_CHANGE_EVENT </code></p></td>
@@ -1851,19 +1851,19 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
     </tr>
     <tr>
     <td><p><code>POLICY_ENABLE_EVENT </code></p></td>
-    <td><p>3001</p></td>
+    <td><p>二〇〇一年</p></td>
     </tr>
     <tr>
     <td><p><code>POLICY_DISABLE_EVENT </code></p></td>
-    <td><p>3002</p></td>
+    <td><p>三零零二年</p></td>
     </tr>
     <tr>
     <td><p><code>POLICY_CREATE_EVENT </code></p></td>
-    <td><p>3003</p></td>
+    <td><p>三零零三年</p></td>
     </tr>
     <tr>
     <td><p><code>POLICY_DELETE_EVENT </code></p></td>
-    <td><p>3004</p></td>
+    <td><p>三零零四年</p></td>
     </tr>
     <tr>
     <td><p><code>POLICY_CHANGE_OWNER_EVENT </code></p></td>
@@ -1923,7 +1923,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
     </tr>
     <tr>
     <td><p><code>DELETED_POLICYSET_EVENT</code></p></td>
-    <td><p>7001</p></td>
+    <td><p>郵編：7001</p></td>
     </tr>
     <tr>
     <td><p><code>MODIFIED_POLICYSET_EVENT</code></p></td>
@@ -1934,14 +1934,14 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 1. 搜尋事件
 
-   調用物件的方法並傳 `DocumentSecurityServiceClient` 遞代表要搜尋之事 `searchForEvents` 件的物 `EventSpec` 件，以及結果的最大數目，以搜尋事件。 此方法會傳回 `MyArrayOf_xsd_anyType` 每個元素都是例項的 `AuditSpec` 系列。 使用例 `AuditSpec` 項，您可以取得事件的相關資訊，例如事件發生的時間。 實 `AuditSpec` 例包含指定 `timestamp` 此資訊的資料成員。
+   調用`DocumentSecurityServiceClient`物件的`searchForEvents`方法並傳遞`EventSpec`物件，用以表示要搜尋的事件和結果的最大數目，以搜尋事件。 此方法會傳回`MyArrayOf_xsd_anyType`系列，其中每個元素都是`AuditSpec`例項。 使用`AuditSpec`實例，您可以獲取有關事件的資訊，如事件發生的時間。 `AuditSpec`實例包含指定此資訊的`timestamp`資料成員。
 
 **程式碼範例**
 
 如需使用Rights Management服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API搜尋事件&quot;
-* 「快速入門(SwaRef): 使用web service API搜尋事件&quot;
+* 「快速入門(MTOM):使用web service API搜尋事件&quot;
+* 「快速入門(SwaRef):使用web service API搜尋事件&quot;
 
 **另請參閱**
 
@@ -1949,7 +1949,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 [使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 將原則套用至Word檔案 {#applying-policies-to-word-documents}
+## 將原則套用至Word檔案{#applying-policies-to-word-documents}
 
 除了PDF檔案外，Rights Management服務還支援其他檔案格式，例如Microsoft Word檔案（DOC檔案）和其他Microsoft Office檔案格式。 例如，您可以將原則套用至Word檔案，以保護其安全。 將原則套用至Word檔案，即可限制對檔案的存取。 如果文檔已使用策略保護，則不能將策略應用於文檔。
 
@@ -1957,9 +1957,9 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-11}
+### 步驟{#summary_of_steps-11}摘要
 
 要將策略應用於Word文檔，請執行以下步驟：
 
@@ -1997,7 +1997,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 [廢止檔案存取權](protecting-documents-policies.md#revoking-access-to-documents)
 
-### 使用Java API將原則套用至Word檔案 {#apply-a-policy-to-a-word-document-using-the-java-api}
+### 使用Java API {#apply-a-policy-to-a-word-document-using-the-java-api}將原則套用至Word檔案
 
 使用Document Security API(Java)將原則套用至Word檔案：
 
@@ -2007,117 +2007,117 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 1. 建立Document Security Client API物件。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `DocumentSecurityClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentSecurityClient`對象。
 
 1. 擷取Word檔案。
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定Word檔案位置的字串值，以建立代表Word檔案的物件。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用Word文檔的建構子並傳遞指定Word文檔位置的字串值，建立代表Word文檔的`java.io.FileInputStream`對象。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 將現有原則套用至Word檔案。
 
-   * 調用 `DocumentManager` 物件的方 `DocumentSecurityClient` 法以建立物 `getDocumentManager` 件。
-   * 調用物件的方法並傳遞下列值，以套 `DocumentManager` 用原則 `protectDocument` 至Word檔案：
+   * 調用`DocumentSecurityClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
+   * 調用`DocumentManager`物件的`protectDocument`方法並傳遞下列值，以套用原則至Word檔案：
 
-      * 包 `com.adobe.idp.Document` 含套用原則之Word檔案的物件。
+      * 包含套用原則之Word檔案的`com.adobe.idp.Document`物件。
       * 指定文檔名稱的字串值。
-      * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定 `null` 導致使用策略 `MyPolicies` 集的值。
+      * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定一個`null`值，使用`MyPolicies`策略集。
       * 指定策略名稱的字串值。
       * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null（如果此參數為null，則下一個參數值必須為null）。
-      * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可 `null` 以是(如果此參數 `null`為，則前一個參數值必須 `null`是)。
-      * 表 `com.adobe.livecycle.rightsmanagement.Locale` 示用於選擇MS Office模板的區域設定。 此參數值是可選的，您可以指定 `null`。
+      * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可以是`null`（如果此參數為`null`，則上一個參數值必須是`null`）。
+      * `com.adobe.livecycle.rightsmanagement.Locale`，表示用於選擇MS Office模板的區域設定。 此參數值是可選的，您可以指定`null`。
 
-      此方 `protectDocument` 法會傳回包 `RMSecureDocumentResult` 含受原則保護Word檔案的物件。
+      `protectDocument`方法傳回包含受原則保護Word檔案的`RMSecureDocumentResult`物件。
 
 
 1. 儲存Word檔案。
 
-   * 叫用物 `RMSecureDocumentResult` 件的方 `getProtectedDoc` 法以取得受原則保護的Word檔案。 此方法返回對 `com.adobe.idp.Document` 像。
-   * 建立對 `java.io.File` 像並確保檔案副檔名為DOC。
-   * 叫用 `com.adobe.idp.Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `Document` 由方法傳回的物 `Document``getProtectedDoc` 件)。
+   * 叫用`RMSecureDocumentResult`物件的`getProtectedDoc`方法，以取得受原則保護的Word檔案。 此方法返回`com.adobe.idp.Document`對象。
+   * 建立`java.io.File`對象並確保檔案副檔名為DOC。
+   * 叫用`com.adobe.idp.Document`物件的`copyToFile`方法，將`Document`物件的內容複製至檔案（請確定您使用`getProtectedDoc`方法傳回的`Document`物件）。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API將原則套用至Word檔案」
+* &quot;快速啟動（SOAP模式）:使用Java API將原則套用至Word檔案」
 
-### 使用web service API將原則套用至Word檔案 {#apply-a-policy-to-a-word-document-using-the-web-service-api}
+### 使用web service API {#apply-a-policy-to-a-word-document-using-the-web-service-api}將原則套用至Word檔案
 
 使用Document Security API(web service)將原則套用至Word檔案：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/DocumentSecurityService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/DocumentSecurityService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
-   * 使用其 `DocumentSecurityServiceClient` 預設建構函式建立物件。
-   * 使用建 `DocumentSecurityServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `DocumentSecurityServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 擷取Word檔案。
 
-   * 使用其 `BLOB` 建構函式建立物件。 對 `BLOB` 像用於儲存應用策略的Word文檔。
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示Word文檔的檔案位置以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 透過取得物件的屬性，來 `System.IO.FileStream` 判斷位元組陣列 `Length` 大小。
-   * 調用物件的方法，以串流資料填 `System.IO.FileStream` 入位元組 `Read` 陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`對象用於儲存應用策略的Word文檔。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示Word文檔的檔案位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 取得`System.IO.FileStream`物件的`Length`屬性，以決定位元組陣列大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 將現有原則套用至Word檔案。
 
-   調用物件的方法並傳遞下列值，以套 `DocumentSecurityServiceClient` 用原則 `protectDocument` 至Word檔案：
+   調用`DocumentSecurityServiceClient`物件的`protectDocument`方法並傳遞下列值，以套用原則至Word檔案：
 
-   * 包 `BLOB` 含套用原則之Word檔案的物件。
+   * 包含套用原則之Word檔案的`BLOB`物件。
    * 指定文檔名稱的字串值。
-   * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定 `null` 導致使用策略 `MyPolicies` 集的值。
+   * 一個字串值，它指定策略所屬的策略集的名稱。 您可以指定一個`null`值，使用`MyPolicies`策略集。
    * 指定策略名稱的字串值。
-   * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null(如果此參數為null，則下一個參數值必須 `null`為)。
-   * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可以是空值(如果此參數為空值，則上一個參數值必須 `null`為)。
-   * 指 `RMLocale` 定地區值(例如 `RMLocale.en`)的值。
+   * 一個字串值，它表示作為文檔發佈者的用戶的用戶管理域的名稱。 此參數值是可選的，可以是null（如果此參數為null，則下一個參數值必須為`null`）。
+   * 一個字串值，它表示作為文檔發佈者的用戶管理器用戶的標準名稱的名稱。 此參數值是可選的，可以是null（如果此參數為null，則上一個參數值必須為`null`）。
+   * 一個`RMLocale`值，它指定地區值（例如`RMLocale.en`）。
    * 用於儲存策略標識符值的字串輸出參數。
    * 用來儲存受原則保護識別碼值的字串輸出參數。
-   * 用於儲存MIME類型(例如， `application/doc`)的字串輸出參數。
+   * 用於儲存MIME類型的字串輸出參數（例如`application/doc`）。
 
-   此方 `protectDocument` 法會傳回包 `BLOB` 含受原則保護Word檔案的物件。
+   `protectDocument`方法傳回包含受原則保護Word檔案的`BLOB`物件。
 
 1. 儲存Word檔案。
 
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示受原則保護Word文檔的檔案位置。
-   * 建立一個位元組陣列，該陣列儲存由方 `BLOB` 法返回的對象的資料內 `protectDocument` 容。 取得物件資料成員的值，以填 `BLOB` 入位元組 `MTOM` 陣列。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
-   * 調用物件的方法並傳遞位元組陣列，將位元組 `System.IO.BinaryWriter` 的內容 `Write` 寫入Word檔案。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示受原則保護的Word文檔的檔案位置。
+   * 建立一個位元組陣列，用於儲存`protectDocument`方法返回的`BLOB`對象的資料內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入Word檔案。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API將原則套用至Word檔案」
+* 「快速入門(MTOM):使用web service API將原則套用至Word檔案」
 
-## 從Word檔案移除原則 {#removing-policies-from-word-documents}
+## 從Word文檔{#removing-policies-from-word-documents}中刪除策略
 
 您可以從受原則保護的Word檔案移除原則，以移除檔案的安全性。 也就是說，如果您不想讓檔案受到原則的保護。 如果您想要使用較新的原則更新受原則保護的Word檔案，則切換原則會更有效率，而不是移除原則並新增更新的原則。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-12}
+### 步驟{#summary_of_steps-12}摘要
 
-要從受原則保護的Word檔案移除原則，請執行下列步驟：
+若要從受原則保護的Word檔案移除原則，請執行下列步驟：
 
 1. 包含專案檔案
 1. 建立Document Security Client API物件。
@@ -2139,7 +2139,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **從Word檔案移除原則**
 
-只要在連線設定中指定管理員，您就可以從受原則保護的Word檔案移除原則。 否則，用於保護文檔的策略必須包含權限， `SWITCH_POLICY` 才能從Word文檔中刪除策略。 此外，在AEM Forms連線設定中指定的使用者也必須擁有該權限。 否則，會拋出異常。
+只要在連線設定中指定管理員，您就可以從受原則保護的Word檔案移除原則。 否則，用於保護文檔的策略必須包含`SWITCH_POLICY`權限，才能從Word文檔中刪除策略。 此外，在AEM Forms連線設定中指定的使用者也必須擁有該權限。 否則，會拋出異常。
 
 **儲存不安全的Word檔案**
 
@@ -2153,7 +2153,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 [將原則套用至Word檔案](protecting-documents-policies.md#applying-policies-to-word-documents)
 
-### 使用Java API從Word檔案移除原則 {#remove-a-policy-from-a-word-document-using-the-java-api}
+### 使用Java API {#remove-a-policy-from-a-word-document-using-the-java-api}從Word檔案移除原則
 
 使用Document Security API(Java)，從受原則保護的Word檔案移除原則：
 
@@ -2163,79 +2163,79 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 1. 建立Document Security Client API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `RightsManagementClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`RightsManagementClient`對象。
 
 1. 擷取受原則保護的Word檔案
 
-   * 使用 `java.io.FileInputStream` 其建構函式並傳遞指定Word檔案位置的字串值，建立代表受原則保護Word檔案的物件。
-   * 使用其 `com.adobe.idp.Document` 建構函式並傳遞物件，以建立物 `java.io.FileInputStream` 件。
+   * 使用其建構函式並傳遞指定Word檔案位置的字串值，建立代表受原則保護Word檔案的`java.io.FileInputStream`物件。
+   * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
 1. 從Word檔案移除原則
 
-   * 調用 `DocumentManager` 物件的方 `RightsManagementClient` 法以建立物 `getDocumentManager` 件。
-   * 調用物件的方法並傳遞包含受原則保 `DocumentManager` 護之Word文 `removeSecurity` 件的物 `com.adobe.idp.Document` 件，以移除Word檔案中的原則。 此方法傳回包 `com.adobe.idp.Document` 含不安全Word檔案的物件。
+   * 調用`RightsManagementClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
+   * 調用`DocumentManager`物件的`removeSecurity`方法，並傳遞包含受原則保護Word檔案的`com.adobe.idp.Document`物件，從Word檔案移除原則。 此方法傳回包含不安全Word檔案的`com.adobe.idp.Document`物件。
 
 1. 儲存不安全的Word檔案
 
-   * 建立對 `java.io.File` 像並確保檔案副檔名為DOC。
-   * 叫用 `Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `Document` 由方法傳回的物 `Document``removeSecurity` 件)。
+   * 建立`java.io.File`對象並確保檔案副檔名為DOC。
+   * 叫用`Document`物件的`copyToFile`方法，將`Document`物件的內容複製至檔案（請確定您使用`removeSecurity`方法傳回的`Document`物件）。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* &quot;快速啟動（SOAP模式）: 使用Java API從Word檔案移除原則」
+* &quot;快速啟動（SOAP模式）:使用Java API從Word檔案移除原則」
 
-### 使用web service API從Word檔案移除原則 {#remove-a-policy-from-a-word-document-using-the-web-service-api}
+### 使用web service API {#remove-a-policy-from-a-word-document-using-the-web-service-api}從Word檔案移除原則
 
 使用Document Security API(web service)，從受原則保護的Word檔案移除原則：
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立Document Security Client API物件
 
-   * 使用其 `RightsManagementServiceClient` 預設建構函式建立物件。
-   * 使用建 `RightsManagementServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/RightsManagementService?WSDL`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `RightsManagementServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`RightsManagementServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `RightsManagementServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 
 1. 擷取受原則保護的Word檔案
 
-   * 使用其 `BLOB` 建構函式建立物件。 對 `BLOB` 像用於儲存從中刪除策略的受策略保護Word文檔。
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示Word文檔的檔案位置以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存移除原則之受原則保護Word檔案。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示Word文檔的檔案位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 從Word檔案移除原則
 
-   調用物件的方法並傳遞包含受原則保 `RightsManagementServiceClient` 護之Word文 `removePolicySecurity` 件的物 `BLOB` 件，從Word檔案移除原則。 此方法傳回包 `BLOB` 含不安全Word檔案的物件。
+   調用`RightsManagementServiceClient`物件的`removePolicySecurity`方法，並傳遞包含受原則保護Word檔案的`BLOB`物件，從Word檔案移除原則。 此方法傳回包含不安全Word檔案的`BLOB`物件。
 
 1. 儲存不安全的Word檔案
 
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞一個字串值來建立對象，該字串值表示不安全Word文檔的檔案位置。
-   * 建立一個位元組陣列，該陣列儲存由方 `BLOB` 法返回的對象的資料內 `removePolicySecurity` 容。 取得物件欄位的值，以填入 `BLOB` 位元組陣 `MTOM` 列。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示不安全Word文檔的檔案位置。
+   * 建立一個位元組陣列，用於儲存`removePolicySecurity`方法返回的`BLOB`對象的資料內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
 
 **程式碼範例**
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門(MTOM): 使用web service API從Word檔案移除原則」
+* 「快速入門(MTOM):使用web service API從Word檔案移除原則」
 
 **另請參閱**
 
