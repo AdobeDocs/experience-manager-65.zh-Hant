@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 translation-type: tm+mt
 source-git-commit: 0885fb6eb6b6a6b8fefd522b2656c8f64e0a537e
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 0%
 
 ---
 
@@ -27,15 +30,15 @@ source-git-commit: 0885fb6eb6b6a6b8fefd522b2656c8f64e0a537e
 
    * [翻譯多語言網站的內容](/help/sites-administering/translation.md)
 
-* 這兩項功能可結合為多語系和多語系網 [站提供](#multinational-and-multilingual-sites)。
+* 這兩項功能可結合，以符合[跨國和多語言](#multinational-and-multilingual-sites)網站的需求。
 
-## 跨國和多語言網站 {#multinational-and-multilingual-sites}
+## 多國和多語言網站{#multinational-and-multilingual-sites}
 
 您可以透過結合使用「多網站管理員」和翻譯工作流程，為跨國網站和多語言網站有效率地建立內容。 以一種語言為特定國家／地區建立主體網站，然後將該內容作為其他網站的基礎，視需要使用翻譯：
 
-* [將主版網站](/help/sites-administering/translation.md) (master site)翻譯成不同的語言。
+* [將主](/help/sites-administering/translation.md) 版網站翻譯成不同的語言。
 
-* 使用 [多網站管理員](/help/sites-administering/msm.md) ，您可以：
+* 使用[多站點管理器](/help/sites-administering/msm.md)可以：
 
    * 重複使用主版網站的內容及翻譯，為其他國家和文化建立網站。
    * 請務必將「多網站管理員」的使用限制在一種語言的內容中，例如：國家網站的英文主版->英文分支、法文主版->國家網站的法文分支。
@@ -49,8 +52,9 @@ source-git-commit: 0885fb6eb6b6a6b8fefd522b2656c8f64e0a537e
 >
 >在這種情況下，MSM不會管理不同的語言版本。
 >
->* [MSM](/help/sites-administering/msm.md) 管理從藍圖（如全域主版）到即時副本（如本地站點）的語言邊界內的翻譯內容的部署。
->* AEM [的翻譯整合](/help/sites-administering/translation.md) 功能與協力廠商的翻譯管理服務搭配使用，可管理語言並將內容翻譯成這些不同的語言。
+>* [](/help/sites-administering/msm.md) MSM管理從藍圖（例如全域主版）到即時副本（例如本機網站）的語言邊界內部翻譯內容的部署。
+>* AEM的[translation](/help/sites-administering/translation.md)整合功能與協力廠商翻譯管理服務搭配使用，可管理語言並將內容翻譯成這些不同的語言。
+
 >
 >
 若是更進階的使用案例，MSM也可跨語言母版使用。
@@ -60,8 +64,10 @@ source-git-commit: 0885fb6eb6b6a6b8fefd522b2656c8f64e0a537e
 >針對所有使用案例，建議您閱讀下列最佳實務：
 >
 >* [MSM的最佳實務](/help/sites-administering/msm-best-practices.md);特別是：
->
->   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
->   * [MSM與多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+   >
+   >   
+   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
+   >   * [MSM與多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻譯的最佳做法](/help/sites-administering/tc-bp.md)
+
