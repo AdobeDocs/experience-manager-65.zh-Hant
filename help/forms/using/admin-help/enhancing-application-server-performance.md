@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 translation-type: tm+mt
 source-git-commit: a26bc4e4ea10370dd2fc3403500004b9e378c418
+workflow-type: tm+mt
+source-wordcount: '1886'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: a26bc4e4ea10370dd2fc3403500004b9e378c418
 
 此內容說明您可設定的選用設定，以改善AEM表單應用程式伺服器的效能。
 
-## 配置應用程式伺服器資料源 {#configuring-application-server-data-sources}
+## 配置應用程式伺服器資料源{#configuring-application-server-data-sources}
 
 AEM表單會使用AEM表單儲存庫做為其資料來源。 AEM表單儲存庫會儲存應用程式資產，而且在執行時期，服務可從儲存庫擷取資產，以完成自動化商業程式。
 
-根據您執行的AEM表單模組數目和存取應用程式的並行使用者人數，資料來源的存取權可能相當重要。 使用連接集區可以優化資料源訪問。 *連接集區* (Connection pooling)是一種技術，用於避免每次應用程式或伺服器對象需要訪問資料庫時建立新資料庫連接的開銷。 連線集區通常用於網路和企業應用程式，通常由應用程式伺服器處理，但不限於應用程式伺服器。
+根據您執行的AEM表單模組數目和存取應用程式的並行使用者人數，資料來源的存取權可能相當重要。 使用連接集區可以優化資料源訪問。 *連接* 池是一種技術，用於避免每次應用程式或伺服器對象需要訪問資料庫時建立新資料庫連接的開銷。連線集區通常用於網路和企業應用程式，通常由應用程式伺服器處理，但不限於應用程式伺服器。
 
 請務必正確配置連接池參數，以便您永不斷開連接，這會導致應用程式效能惡化。
 
@@ -33,7 +36,7 @@ AEM表單會使用AEM表單儲存庫做為其資料來源。 AEM表單儲存庫�
 
 當應用程式伺服器管理員確定正確的連接池設定時，該用戶必須將此資訊通知資料庫管理員。 資料庫管理員需要此資訊，因為資料庫連接數等於資料源的連接池中的連接數。 然後，請完成以下步驟，為應用程式伺服器和資料源類型配置連接池設定。
 
-### 為Oracle和MySQL的WebLogic配置連接池設定 {#configure-connection-pool-settings-for-weblogic-for-oracle-and-mysql}
+### 為Oracle和MySQL {#configure-connection-pool-settings-for-weblogic-for-oracle-and-mysql}的WebLogic配置連接池設定
 
 1. 在「域結構」下，按一下「服務」>「JDBC」>「資料源」，然後在右窗格中按一下「IDP_DS」。
 1. 在下一個螢幕中，按一下「配置」>「連接池」頁籤，然後在以下框中輸入值：
@@ -46,7 +49,7 @@ AEM表單會使用AEM表單儲存庫做為其資料來源。 AEM表單儲存庫�
 1. 按一下「儲存」，然後按一下「啟用變更」。
 1. 重新啟動WebLogic受控伺服器。
 
-### 為SQLServer的WebLogic配置連接池設定 {#configure-connection-pool-settings-for-weblogic-for-sqlserver}
+### 為SQLServer {#configure-connection-pool-settings-for-weblogic-for-sqlserver}的WebLogic配置連接池設定
 
 1. 在「變更中心」下，按一下「鎖定與編輯」。
 1. 在「域結構」下，按一下「服務」>「JDBC」>「資料源」，然後在右窗格中按一下「EDC_DS」。
@@ -60,28 +63,28 @@ AEM表單會使用AEM表單儲存庫做為其資料來源。 AEM表單儲存庫�
 1. 按一下「儲存」，然後按一下「啟用變更」。
 1. 重新啟動WebLogic受控伺服器。
 
-### 為DB2的WebSphere配置連接池設定 {#configure-connection-pool-settings-for-websphere-for-db2}
+### 為DB2 {#configure-connection-pool-settings-for-websphere-for-db2}的WebSphere配置連接池設定
 
 1. 在導航樹中，按一下「資源」>「JDBC」>「JDBC提供程式」。 在右窗格中，按一下您建立的資料源，即DB2通用JDBC驅動程式提供程式或LiveCycle - db2 - IDP_DS。
 1. 在「其他屬性」下，按一下「資料來源」，然後選取IDP_DS。
 1. 在下一個螢幕的「Additional Properties（附加屬性）」下，按一下「Connection Pool Properties（連接池屬性）」 ，然後在「Maximum Connections（最大連接）」框和「Minimum Connections（最小連接）」框中輸入值。
 1. 按一下「確定」或「應用」，然後按一下「直接保存到主配置」。
 
-### 為WebSphere for Oracle配置連接池設定 {#configure-connection-pool-settings-for-websphere-for-oracle}
+### 為Oracle {#configure-connection-pool-settings-for-websphere-for-oracle}的WebSphere配置連接池設定
 
 1. 在導航樹中，按一下「資源」>「JDBC」>「JDBC提供程式」。 在右窗格中，按一下您建立的Oracle JDBC驅動程式資料源。
 1. 在「其他屬性」下，按一下「資料來源」，然後選取IDP_DS。
 1. 在下一個螢幕的「Additional Properties（附加屬性）」下，按一下「Connection Pool Properties（連接池屬性）」 ，然後在「Maximum Connections（最大連接）」框和「Minimum Connections（最小連接）」框中輸入值。
 1. 按一下「確定」或「應用」，然後按一下「直接保存到主配置」。
 
-### 為SqlServer的WebSphere配置連接池設定 {#configure-connection-pool-settings-for-websphere-for-sqlserver}
+### 為SqlServer {#configure-connection-pool-settings-for-websphere-for-sqlserver}的WebSphere配置連接池設定
 
 1. 在導航樹中，按一下「資源」>「JDBC」>「JDBC提供程式」，然後在右窗格中按一下您建立的用戶定義JDBC驅動程式資料源。
 1. 在「其他屬性」下，按一下「資料來源」，然後選取IDP_DS。
 1. 在下一個螢幕的「Additional Properties（附加屬性）」下，按一下「Connection Pool Properties（連接池屬性）」 ，然後在「Maximum Connections（最大連接數）」框和「Minimum Connections（最小連接數）」框中輸入值：
 1. 按一下「確定」或「應用」，然後按一下「直接保存到主配置」。
 
-## 最佳化內嵌檔案並對JVM記憶體的影響 {#optimizing-inline-documents-and-impact-on-jvm-memory}
+## 最佳化內嵌檔案並對JVM記憶體{#optimizing-inline-documents-and-impact-on-jvm-memory}的影響
 
 如果您通常處理的檔案大小相對較小，則可以改善與檔案傳輸速度和儲存空間相關的效能。 若要這麼做，請實作下列AEM表單產品設定：
 
@@ -90,7 +93,7 @@ AEM表單會使用AEM表單儲存庫做為其資料來源。 AEM表單儲存庫�
 
 管理控制台中已設定最大內嵌大小和儲存目錄（AEM表單暫存檔案目錄和GDS目錄）。
 
-### 檔案大小和最大內嵌大小 {#document-size-and-maximum-inline-size}
+### 檔案大小和最大內嵌大小{#document-size-and-maximum-inline-size}
 
 當AEM表單所傳送的檔案小於或等於預設檔案的最大內嵌大小時，檔案會內嵌儲存在伺服器上，而檔案會以Adobe檔案物件的形式序列化。 將檔案內嵌儲存可大幅提升效能。 不過，如果您使用表單工作流程，內容也可能會儲存在資料庫中，以利追蹤。 因此，增加最大內嵌大小可能會影響資料庫大小。
 
@@ -119,7 +122,7 @@ AEM表單會使用AEM表單儲存庫做為其資料來源。 AEM表單儲存庫�
 >
 >預設的最大內嵌大小為65536位元組。
 
-### JVM最大堆大小 {#jvm-maximum-heap-size}
+### JVM最大堆大小{#jvm-maximum-heap-size}
 
 增加最大內嵌大小需要更多記憶體來儲存序列化文檔。 因此，它通常也需要增加JVM的最大堆大小。
 
@@ -147,47 +150,47 @@ JVM最大堆大小必須增加50 MB，總計為562 MB。
 
 要考慮堆碎片問題，內嵌文檔大小不能設定為高於堆總大小的0.1%。 例如，JVM最大堆大小為512 MB時，最大內嵌大小為512 MB x 0.001 = 0.512 MB或512 KB。
 
-## WebSphere Application Server增強功能 {#websphere-application-server-enhancements}
+## WebSphere Application Server增強功能{#websphere-application-server-enhancements}
 
 本節介紹WebSphere Application Server環境的特定設定。
 
-### 增加分配給JVM的最大記憶體 {#increasing-the-maximum-memory-allocated-to-the-jvm}
+### 增加分配給JVM {#increasing-the-maximum-memory-allocated-to-the-jvm}的最大記憶體
 
-如果您正在運行Configuration Manager或嘗試使用命令行實用程式 *ejbdeploy* ，並且出現OutOfMemory錯誤，則增加分配給JVM的記憶體量。
+如果您正在運行Configuration Manager或嘗試使用命令行實用程式&#x200B;*ejbdeploy*&#x200B;生成企業JavaBeans(EJB)部署代碼，並且出現OutOfMemory錯誤，請增加分配給JVM的記憶體量。
 
-1. 在 *[appserver root]*/deploytool/itp/目錄中編輯ejbdeploy指令碼：
+1. 在&#x200B;*[appserver root]*/deploytool/itp/目錄中編輯ejbdeploy指令碼：
 
    * (Windows) `ejbdeploy.bat`
-   * （Linux和UNIX） `ejbdeploy.sh`
+   * （Linux和UNIX）`ejbdeploy.sh`
 
-1. 尋找參 `-Xmx256M` 數並將其變更為較高的值，例如 `-Xmx1024M`。
+1. 尋找`-Xmx256M`參數，並將其變更為較高的值，例如`-Xmx1024M`。
 1. 儲存檔案。
-1. 使用Configuration Manager運 `ejbdeploy` 行命令或重新部署。
+1. 運行`ejbdeploy`命令或使用Configuration Manager重新部署。
 
-## 使用LDAP提高Windows Server 2003效能 {#improving-windows-server-2003-performance-with-ldap}
+## 使用LDAP {#improving-windows-server-2003-performance-with-ldap}改進Windows Server 2003效能
 
 本內容說明Microsoft Windows Server 2003作業系統環境的特定設定。
 
 在搜索連接上使用連接池可將所需埠數減少多達50%。 這是因為該連接始終對給定域使用相同的憑據，並且上下文和相關對象被顯式關閉。
 
-### 為連接池配置Windows伺服器 {#configure-your-windows-server-for-connection-pooling}
+### 為連接池{#configure-your-windows-server-for-connection-pooling}配置Windows伺服器
 
-1. 按一下「開始」>「運行」以啟動註冊表編輯器，然後在「開啟」框中鍵入並 `regedit` 按一下「確定」。
-1. 轉到註冊表鍵 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
+1. 按一下「開始」>「運行」以啟動註冊表編輯器，並在「開啟」框中鍵入`regedit`並按一下「確定」。
+1. 轉至註冊表鍵`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 1. 在註冊表編輯器的右窗格中，查找TcpTimedWaitDelay值名稱。 如果未顯示名稱，請從菜單欄中選擇「編輯」>「新建」>「DWORD值」以添加名稱。
-1. 在「名稱」(Name)框中，鍵入 `TcpTimedWaitDelay`
+1. 在「Name（名稱）」框中，鍵入`TcpTimedWaitDelay`
 
    >[!NOTE]
    >
-   >如果未看到閃爍的游標並在框內 `New Value #` ，請在右側面板內按一下右鍵，選擇「更名」，然後在「名稱」框中鍵入 `TcpTimedWaitDelay`*。*
+   >如果您在框內未看到閃爍的游標和`New Value #` ，請在右側面板內按一下右鍵，選擇「更名」，然後在「名稱」框中鍵入&#x200B;`TcpTimedWaitDelay`*。*
 
 1. 對值名稱MaxUserPort、MaxHashTableSize和MaxFreeTcbs重複步驟4。
-1. 在右窗格內按兩下以設定TcpTimedWaitDelay值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `30`。
-1. 在右窗格中按兩下，以設定MaxUserPort值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `65534`。
-1. 在右窗格內按兩下，以設定MaxHashTableSize值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `65536`。
-1. 在右窗格內按兩下以設定MaxFreeTcbs值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `16000`。
+1. 在右窗格內按兩下以設定TcpTimedWaitDelay值。 在「基本」(Base)下，選擇「小數」(Decimal)，並在「值」(Value)框中鍵入`30`。
+1. 在右窗格中按兩下，以設定MaxUserPort值。 在「基本」(Base)下，選擇「小數」(Decimal)，並在「值」(Value)框中鍵入`65534`。
+1. 在右窗格內按兩下，以設定MaxHashTableSize值。 在「基本」(Base)下，選擇「小數」(Decimal)，並在「值」(Value)框中鍵入`65536`。
+1. 在右窗格內按兩下以設定MaxFreeTcbs值。 在「基本」(Base)下，選擇「小數」(Decimal)，並在「值」(Value)框中鍵入`16000`。
 
 >[!NOTE]
 >
->如果使用註冊表編輯器或使用其他方法錯誤地修改註冊表，可能會出現嚴重問題。 這些問題可能需要重新安裝作業系統。 自行修改註冊表。
+>如果使用註冊表編輯器或使用其他方法錯誤地修改了註冊表，可能會出現嚴重問題。 這些問題可能需要重新安裝作業系統。 自行修改註冊表。
 
