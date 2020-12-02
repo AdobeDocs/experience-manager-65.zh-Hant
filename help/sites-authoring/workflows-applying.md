@@ -1,8 +1,8 @@
 ---
 title: 將工作流程套用至頁面
 seo-title: 將工作流程套用至頁面
-description: 撰寫時，您可以叫用工作流程，在頁面上採取行動； 您也可以套用多個工作流程。
-seo-description: 撰寫時，您可以叫用工作流程，在頁面上採取行動； 您也可以套用多個工作流程。
+description: 撰寫時，您可以叫用工作流程，在頁面上採取行動；您也可以套用多個工作流程。
+seo-description: 撰寫時，您可以叫用工作流程，在頁面上採取行動；您也可以套用多個工作流程。
 uuid: 652d9a23-907d-43ad-9eef-7ab1d07918cd
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -21,13 +21,13 @@ ht-degree: 15%
 
 # 將工作流程套用至頁面{#applying-workflows-to-pages}
 
-撰寫時，您可以叫用工作流程，在頁面上採取行動； 您也可以套用多個工作流程。
+撰寫時，您可以叫用工作流程，在頁面上採取行動；您也可以套用多個工作流程。
 
 應用工作流時，您指定以下資訊：
 
 * 要套用的工作流程。您可以套用您有權存取的任何工作流程 (由AEM管理員指派)。
 * （可選）幫助標識用戶收件箱中工作流實例的標題。
-* 工作流負載； 這可以是一或多個頁面。
+* 工作流負載；這可以是一或多個頁面。
 
 工作流程可從以下網址啟動：
 
@@ -47,9 +47,9 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->AEM管理員可以使 [用數種其他方法來啟動工作流程](/help/sites-administering/workflows-starting.md)。
+>AEM管理員可以[使用數種其他方法啟動工作流程](/help/sites-administering/workflows-starting.md)。
 
-## 從Sites Console啟動工作流 {#starting-a-workflow-from-the-sites-console}
+## 從站點控制台{#starting-a-workflow-from-the-sites-console}啟動工作流
 
 您可以從以下任一位置啟動工作流：
 
@@ -60,41 +60,41 @@ ht-degree: 15%
 
 * [在「建立工作流嚮導」中指定「工作流詳細資訊」](#specifying-workflow-details-in-the-create-workflow-wizard)。
 
-### 從Sites工具列啟動工作流程 {#starting-a-workflow-from-the-sites-toolbar}
+### 從Sites工具欄{#starting-a-workflow-from-the-sites-toolbar}啟動工作流
 
-您可以從Sites主控台的工具列啟動工 **作流程** :
+您可以從&#x200B;**Sites**&#x200B;控制台的工具欄啟動工作流：
 
 1. 導覽至並選取所需頁面。
 
-1. 您現在可 **以從工具列的** 「建立」選項中選取「工 **作流程」**。
+1. 從工具列的&#x200B;**Create**&#x200B;選項，您現在可以選擇&#x200B;**Workflow**。
 
    ![screen_shot_2019-03-06at121237pm](assets/screen_shot_2019-03-06at121237pm.png)
 
-1. 「創 **建工作流** 」嚮導將幫助您 [指定工作流詳細資訊](#specifying-workflow-details-in-the-create-workflow-wizard)。
+1. **「建立工作流**」嚮導將幫助您[指定工作流詳細資訊](#specifying-workflow-details-in-the-create-workflow-wizard)。
 
-### 從時間軸啟動工作流 {#starting-a-workflow-from-the-timeline}
+### 從時間軸{#starting-a-workflow-from-the-timeline}啟動工作流
 
-從時 **間軸** ，可以啟動要應用於選定資源的工作流。
+從&#x200B;**時間軸**，可以啟動要應用於選定資源的工作流。
 
-1. [選擇資源](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) ，然後打 [開時間軸](/help/sites-authoring/basic-handling.md#timeline) （或開啟時間軸，然後選擇資源）。
-1. 注釋欄位旁的箭頭可用來顯示「開始工 **作流程**:
+1. [選擇資](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) 源並打 [開時間軸](/help/sites-authoring/basic-handling.md#timeline) （或開啟時間軸，然後選擇資源）。
+1. 注釋欄位的箭頭可用於顯示&#x200B;**啟動工作流**:
 
    ![screen-shot_2019-03-05at120026](assets/screen-shot_2019-03-05at120026.png)
 
-1. 「創 **建工作流** 」嚮導將幫助您 [指定工作流詳細資訊](#specifying-workflow-details-in-the-create-workflow-wizard)。
+1. **「建立工作流**」嚮導將幫助您[指定工作流詳細資訊](#specifying-workflow-details-in-the-create-workflow-wizard)。
 
-### 在建立工作流嚮導中指定工作流詳細資訊 {#specifying-workflow-details-in-the-create-workflow-wizard}
+### 在建立工作流嚮導{#specifying-workflow-details-in-the-create-workflow-wizard}中指定工作流詳細資訊
 
-「創 **建工作流** 」嚮導將幫助您選擇工作流並指定所需的詳細資訊。
+**「建立工作流**」嚮導將幫助您選擇工作流並指定所需的詳細資訊。
 
-在從以下任一 **項開啟「建立工作流** 」嚮導後：
+從以下任一位置開啟&#x200B;**建立工作流**&#x200B;嚮導後：
 
 * [「站點」工具欄的「建立」選項](#starting-a-workflow-from-the-sites-toolbar)。
 * [sites主控台的時間軸邊欄](#starting-a-workflow-from-the-timeline)。
 
 您可以指定詳細資訊：
 
-1. 在「屬 **性** 」(Properties)步驟中，定義了工作流的基本選項：
+1. 在&#x200B;**屬性**&#x200B;步驟中，定義了工作流的基本選項：
 
    * **工作流程模型**
    * **工作流程標題**
@@ -111,18 +111,17 @@ ht-degree: 15%
    >
    >當為「 **** 多資源支援」配置了工作流且已選擇多個資源時，「保留工作流包」選項可用。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
 
-   完成後，請使 **用** Next繼續。
+   完成後，使用&#x200B;**Next**&#x200B;繼續。
 
    ![wf-52](assets/wf-52.png)
 
-1. 在「范 **圍** 」步驟中，您可以選擇：
+1. 在&#x200B;**Scope**&#x200B;步驟中，您可以選擇：
 
-   * **新增內容** ，以開啟路 [徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) ，並選取其他資源； 在瀏覽器中，按一下／點選「選 **取** 」，將內容新增至工作流程例項。
+   * **添加** Content以開啟路徑瀏 [覽](/help/sites-authoring/author-environment-tools.md#path-browser) 器並選擇其他資源；在瀏覽器中，按一下／點選「選 **** 取」，將內容新增至工作流程例項。
 
    * 查看其他操作的現有資源：
 
-      * **包含子項** ，以指定該資源的子項將包含在工作流中。
-將開啟一個對話框，允許您根據以下內容調整選擇：
+      * **包** 含子項，以指定該資源的子項將包含在工作流中。將開啟一個對話框，允許您根據以下內容調整選擇：
 
          * 僅包含直接子項.
          * 僅包含修改過的頁面.
@@ -130,7 +129,7 @@ ht-degree: 15%
 
          所有指定的子項都將添加到將應用工作流的資源清單中。
 
-      * **刪除選擇** ，從工作流中刪除該資源。
+      * **刪除選** 擇以從工作流中刪除該資源。
 
    ![wf-53](assets/wf-53.png)
 
@@ -138,10 +137,10 @@ ht-degree: 15%
    >
    >如果添加其他資源，則可以使用「上 **一步** 」( **Back** )在「屬性」(Properties)步驟中調整「保留工作流程包 **」(Keep workflow package** )的設定。
 
-1. 使用 **「建立** 」關閉嚮導並建立工作流實例。 通知會顯示在「網站」主控台中。
+1. 使用&#x200B;**Create**&#x200B;關閉嚮導並建立工作流實例。 通知會顯示在「網站」主控台中。
 
-## 從頁面編輯器啟動工作流 {#starting-a-workflow-from-the-page-editor}
+## 從頁面編輯器{#starting-a-workflow-from-the-page-editor}啟動工作流
 
-編輯頁面時，您可以從工具 **列選取「頁面資訊** 」。 下拉式選單中有「開始 **工作流程」選項**。 這將會開啟對話方塊，您可在其中指定所需的工作流程，並視需要加上標題：
+編輯頁面時，可以從工具欄中選擇&#x200B;**頁面資訊**。 下拉式功能表具有「開始於工作流程」選項&#x200B;**。**&#x200B;這將會開啟對話方塊，您可在其中指定所需的工作流程，並視需要加上標題：
 
 ![wf-54](assets/wf-54.png)
