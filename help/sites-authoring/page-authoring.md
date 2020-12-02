@@ -12,6 +12,9 @@ discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
@@ -26,25 +29,33 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 >[!NOTE]
 >
->本節介紹編寫內容頁面時涉及的任務。 「編寫指南」的其他章節中涵蓋了許多與頁面編寫密切相關的 [其他功能](/help/sites-authoring/home.md)。
+>本節介紹編寫內容頁面時涉及的任務。 有許多與頁面製作密切相關的其他功能，請參閱[製作指南](/help/sites-authoring/home.md)的其他章節。
 
-## 快速概觀用於製作頁面的功能 {#quick-overview-of-features-used-for-authoring-pages}
+## 製作頁面的快速概觀{#quick-overview-of-features-used-for-authoring-pages}功能
 
 為協助您製作頁面時，作者環境提供下列功能：
 
-* **拖放元件**（例如文字、影像）和數位資產（例如影像）只要將它們拖放至所需位置，就可放在頁面上。
+* **拖放元**
+件（例如文字、影像）和數位資產（例如影像）只要將它們拖放至所需位置，就可放在頁面上。
 
-* **編輯**：一旦定位在您的頁面上，就可以開啟元件特定的對話方塊，以輸入內容和／或設定該元件的特性（例如影像大小）。
+* **編**
+輯：一旦位於頁面上，就可開啟元件特定對話方塊，以輸入內容和／或設定該元件的特性（例如影像大小）。
 
-* **就地編輯**&#x200B;文字和影像元件可直接在網頁上編輯，毋需開啟對話方塊或明確的儲存動作。
+* **就地編輯**
+文字和影像元件可直接在網頁上編輯，毋需開啟對話方塊或明確的儲存動作。
 
-* **[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**在可編輯頁面的左側，可開啟滑動式瀏覽器；您可從此處將元件拖曳至頁面，然後進行編輯。
+* **[元件](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**
+瀏覽器在可編輯頁面的左側，可開啟滑動瀏覽器；您可從此處將元件拖曳至頁面，然後進行編輯。
 
-* **[資產瀏覽](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**器在可編輯頁面的左側，可開啟滑動瀏覽器；資產可從此處拖曳至頁面；例如定位資產或建立其他頁面的連結。
+* **[資產](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
+瀏覽器在可編輯頁面的左側，可開啟滑動式瀏覽器；資產可從此處拖曳至頁面；例如定位資產或建立其他頁面的連結。
 
-* **元件工具列**：單鍵或慢動雙鍵／點選都會顯示適當的工具列（單鍵用於就地編輯工具列，慢動雙鍵用於完整工具列）。
+* **元件工**
+具列單鍵或慢動雙鍵／點選都會顯示適當的工具列（就地編輯工具列而言為單鍵，就地編輯工具列而言為慢動雙鍵）。
 
-* **[自適應版面](/help/sites-authoring/responsive-layout.md)**：這提供了段落系統，可讓您將元件定位在自適應格線中。
+* **[回應式](/help/sites-authoring/responsive-layout.md)**
+版面配置這提供段落系統，可讓您將元件定位在回應式格線中。
 
-* **在您輸入時搜尋**(在某些藍本中（例如，編輯對話方塊中的路徑選擇），在您輸入查詢時，透過AEM介面搜尋內容會呈現動態符合。
+* **在您鍵入時**
+進行搜尋在特定藍本（例如，編輯對話方塊中的路徑選擇）中，透過AEM介面搜尋內容時，當您輸入查詢時，會呈現動態符合。
 
