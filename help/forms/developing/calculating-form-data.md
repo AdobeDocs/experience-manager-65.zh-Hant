@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 計算表單資料 {#calculating-form-data}
+# 計算表單資料{#calculating-form-data}
 
 Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若要計算表單資料，您必須執行兩項工作。 首先，您建立可計算表單資料的表單設計指令碼。 表單設計支援三種類型的指令碼。 一種指令碼類型在客戶端上運行，另一種指令碼類型在伺服器上運行，第三種指令碼類型在伺服器和客戶端上運行。 本主題中討論的指令碼類型在伺服器上運行。 HTML、PDF和表單指南（已過時）轉換支援伺服器端計算。
 
@@ -27,10 +27,10 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 用戶在表單中輸入值，然後按一下「計算」按鈕查看結果。 下列程式說明可讓使用者計算資料的範例應用程式：
 
-* 使用者存取名為StartLoan.html的HTML頁面，該頁面可當成網頁應用程式的開始頁面。 此頁調用名為的Java Servlet `GetLoanForm`。
-* Servlet `GetLoanForm` 會轉換貸款表單。 此表單包含指令碼、互動式欄位、計算按鈕和送出按鈕。
-* 使用者在表單欄位中輸入值，然後按一下「計算」按鈕。 表單會傳送至執行指令 `CalculateData` 碼的Java Servlet。 表單會傳回給使用者，其計算結果會顯示在表單中。
-* 用戶繼續輸入和計算值，直到顯示滿意的結果。 當使用者滿意時，會按一下「提交」按鈕以處理表單。 表單會傳送至另一個名為Java Servlet的表 `ProcessForm` 單，負責擷取已提交的資料。 (請參 [閱處理提交的表單](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。)
+* 使用者存取名為StartLoan.html的HTML頁面，該頁面可當成網頁應用程式的開始頁面。 此頁調用名為`GetLoanForm`的Java Servlet。
+* `GetLoanForm` servlet將呈現貸款表單。 此表單包含指令碼、互動式欄位、計算按鈕和送出按鈕。
+* 使用者在表單欄位中輸入值，然後按一下「計算」按鈕。 表單會傳送至執行指令碼的`CalculateData` Java Servlet。 表單會傳回給使用者，其計算結果會顯示在表單中。
+* 用戶繼續輸入和計算值，直到顯示滿意的結果。 當使用者滿意時，會按一下「提交」按鈕以處理表單。 表單會傳送至另一個名為`ProcessForm`的Java Servlet，負責擷取已提交的資料。 （請參閱[處理提交的表單](/help/forms/developing/rendering-forms.md#handling-submitted-forms)）。
 
 
 下圖顯示應用程式的邏輯流程。
@@ -49,15 +49,15 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>從 <code>GetLoanForm</code> HTML開始頁調用Java Servlet。 </p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet是從HTML開始頁調用的。 </p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Java <code>GetLoanForm</code> Servlet使用Forms服務客戶端API將貸款表格轉換到客戶端Web瀏覽器。 呈現包含配置為在伺服器上運行的指令碼的表單和呈現不包含指令碼的表單之間的區別在於，您必須指定用於執行指令碼的目標位置。 如果未指定目標位置，則不會執行配置為在伺服器上運行的指令碼。 例如，請考慮本節中介紹的應用程式。 Java <code>CalculateData</code> Servlet是執行指令碼的目標位置。</p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務客戶端API將貸款表格呈現給客戶端Web瀏覽器。 呈現包含配置為在伺服器上運行的指令碼的表單和呈現不包含指令碼的表單之間的區別在於，您必須指定用於執行指令碼的目標位置。 如果未指定目標位置，則不會執行配置為在伺服器上運行的指令碼。 例如，請考慮本節中介紹的應用程式。 <code>CalculateData</code> Java Servlet是執行指令碼的目標位置。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>使用者將資料輸入互動欄位，然後按一下「計算」按鈕。 表單會傳送至 <code>CalculateData</code> Java Servlet，並在其中執行指令碼。 </p></td>
+   <td><p>使用者將資料輸入互動欄位，然後按一下「計算」按鈕。 表單會傳送至執行指令碼的<code>CalculateData</code> Java Servlet。 </p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
@@ -65,7 +65,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>當值滿意時，使用者會按一下「提交」按鈕。 表單會傳送至另一個名為的Java Servlet <code>ProcessForm</code>。</p></td>
+   <td><p>當值滿意時，使用者會按一下「提交」按鈕。 表單會傳送至另一個名為<code>ProcessForm</code>的Java Servlet。</p></td>
   </tr>
  </tbody>
 </table>
@@ -76,7 +76,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 ![cf_cf_caldata](assets/cf_cf_caldata.png)
 
-**答：** 名為NumericField1 **B的欄位。** 名為NumericField2 **C.** A的欄位名為NumericField3
+**A.** A欄位，名為NumericField1  **B.** A欄位，名為NumericField2  **C.** A欄位，名為NumericField3
 
 位於此表單設計中的指令碼語法如下：
 
@@ -84,17 +84,17 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
      NumericField3 = NumericField2 + NumericField1
 ```
 
-在此表單設計中，「計算」按鈕是命令按鈕，而指令檔位於此按鈕的事 `Click` 件中。 當使用者在前兩個欄位（NumericField1和NumericField2）中輸入值，然後按一下「計算」按鈕時，表格會傳送至Forms服務，並執行指令碼。 Forms服務會將表單轉譯回用戶端裝置，計算結果會顯示在NumericField3欄位中。
+在此表單設計中，「計算」按鈕是命令按鈕，而指令檔位於此按鈕的`Click`事件中。 當使用者在前兩個欄位（NumericField1和NumericField2）中輸入值，然後按一下「計算」按鈕時，表格會傳送至Forms服務，並執行指令碼。 Forms服務會將表單轉譯回用戶端裝置，計算結果會顯示在NumericField3欄位中。
 
 >[!NOTE]
 >
->如需建立表單設計指令碼的詳細資訊，請參閱 [表單設計器](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>有關建立表單設計指令碼的資訊，請參閱[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱「AEM Forms [的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 步驟摘要 {#summary-of-steps}
+## 步驟{#summary-of-steps}摘要
 
 要計算表單資料，請執行以下任務：
 
@@ -109,23 +109,29 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。 如果您使用Java API，請建立物 `FormsServiceClient` 件。 如果您使用Forms web service API，請建立物 `FormsServiceService` 件。
+您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms web service API，請建立`FormsServiceService`物件。
 
 **檢索包含計算指令碼的表單**
 
-您可使用Forms服務用戶端API來建立應用程式邏輯，以處理包含設定為在伺服器上執行之指令碼的表單。 此程式類似於處理提交的表單。 (請參 [閱處理提交的表單](/help/forms/developing/handling-submitted-forms.md)。)
+您可使用Forms服務用戶端API來建立應用程式邏輯，以處理包含設定為在伺服器上執行之指令碼的表單。 此程式類似於處理提交的表單。 （請參閱[處理提交的表單](/help/forms/developing/handling-submitted-forms.md)）。
 
-驗證與提交表單關聯的處理狀態是否為 `1``(Calculate)`，這表示Forms服務正在對表單資料執行計算操作，且結果必須寫回給用戶。 在這種情況下，將自動執行配置為在伺服器上運行的指令碼。
+驗證與提交表單關聯的處理狀態為`1` `(Calculate)`，這表示Forms服務正在對表單資料執行計算操作，且結果必須寫回給用戶。 在這種情況下，將自動執行配置為在伺服器上運行的指令碼。
 
 **將表單資料流寫回用戶端網頁瀏覽器**
 
-在驗證與已提交表單關聯的處理狀態為 `1`後，您必須將結果寫回用戶端網頁瀏覽器。 當顯示表單時，計算值會出現在適當的欄位中。
+在驗證與提交的表單相關聯的處理狀態為`1`後，您必須將結果寫回客戶端Web瀏覽器。 當顯示表單時，計算值會出現在適當的欄位中。
 
 **另請參閱**
 
-[使用Web服務API](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)Setting使用Web服務API計算表單資料使用Web服務API API計算表單資料[Java連接屬性](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)[](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)[](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)[](/help/forms/developing/rendering-interactive-pdf-forms.md)[Forms Service Forms Quick StartsInteractive Pdf Forms Renderinged Web Applications，使用Web服務APIAPIAPIAPI SpipiaSSiSS PriProSSS Pr PreS PromSSSSSSSSSSSSProSSSSSSSS PriSSiSSSiSSSSProSiSSinSSinSSSSSS Pr](/help/forms/developing/creating-web-applications-renders-forms.md)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[使用Java ](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)
+[APIC計算表單資料使用web service ](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)
+[APISeting connection propertiesForms Service API快速啟動轉譯互動式PDF](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[表單建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## 使用Java API計算表單資料 {#calculate-form-data-using-the-java-api}
+## 使用Java API {#calculate-form-data-using-the-java-api}計算表單資料
 
 使用Forms API(Java)計算表單資料：
 
@@ -135,38 +141,39 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 1. 建立Forms用戶端API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
 
 1. 檢索包含計算指令碼的表單
 
-   * 若要擷取包含計算指令碼的表單資料，請使 `com.adobe.idp.Document` 用其建構函式建立物件，並從建構函式 `javax.servlet.http.HttpServletResponse` 內叫用 `getInputStream` 物件的方法。
-   * 叫用物 `FormsServiceClient` 件的方 `processFormSubmission` 法並傳遞下列值：
+   * 若要擷取包含計算指令碼的表單資料，請使用其建構函式建立`com.adobe.idp.Document`物件，並從建構函式中叫用`javax.servlet.http.HttpServletResponse`物件的`getInputStream`方法。
+   * 叫用`FormsServiceClient`物件的`processFormSubmission`方法並傳遞下列值：
 
-      * 包 `com.adobe.idp.Document` 含表單資料的物件。
-      * 一個字串值，它指定包括所有相關HTTP標題的環境變數。 必須通過為環境變數指定一個或多個值來指定要處理的內 `CONTENT_TYPE` 容類型。 例如，若要處理XML和PDF資料，請為此參數指定下列字串值： `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
-      * 指定標題值的 `HTTP_USER_AGENT` 字串值； 例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 存 `RenderOptionsSpec` 儲運行時選項的對象。
+      * 包含表單資料的`com.adobe.idp.Document`物件。
+      * 一個字串值，它指定包括所有相關HTTP標題的環境變數。 必須通過為`CONTENT_TYPE`環境變數指定一個或多個值來指定要處理的內容類型。 例如，若要處理XML和PDF資料，請為此參數指定下列字串值：`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
+      * 指定`HTTP_USER_AGENT`標題值的字串值；例如，`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+      * 儲存運行時選項的`RenderOptionsSpec`對象。
 
-      該方 `processFormSubmission` 法返回包 `FormsResult` 含表單提交結果的對象。
+      `processFormSubmission`方法返回包含表單提交結果的`FormsResult`對象。
 
-   * 請叫用物件的方法，以確認與已提交表 `1` 單相關聯的處 `FormsResult` 理狀態 `getAction` 為。 如果此方法返回值 `1`，則會執行計算，並將資料寫回客戶端Web瀏覽器。
+   * 呼叫`FormsResult`物件的`getAction`方法，確認與提交表單相關的處理狀態為`1`。 如果此方法返回值`1`，則會執行計算並將資料寫回客戶端Web瀏覽器。
 
 
 1. 將表單資料流寫回用戶端網頁瀏覽器
 
-   * 建立用 `javax.servlet.ServletOutputStream` 於傳送表單資料串流至用戶端網頁瀏覽器的物件。
-   * 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
-   * 調用 `java.io.InputStream` 物件的方 `com.adobe.idp.Document` 法以建立物 `getInputStream` 件。
-   * 建立位元組陣列，並借由調用物件的方法並將 `InputStream` 位元組陣列 `read` 傳入為引數，以表單資料流填入。
-   * 叫用物 `javax.servlet.ServletOutputStream` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料串流至用戶端網頁瀏覽器。
+   * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
+   * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 建立位元組陣列，並以`InputStream`物件的`read`方法來填入表單資料流，並將位元組陣列傳入為引數。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
 
-[包含AEM Forms Java程式庫檔案設](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[包含AEM Forms Java程式庫檔案設](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用web service API計算表單資料 {#calculate-form-data-using-the-web-service-api}
+## 使用web service API {#calculate-form-data-using-the-web-service-api}計算表單資料
 
 使用Forms API(web service)計算表單資料：
 
@@ -177,41 +184,42 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 1. 建立Forms用戶端API物件
 
-   建立對 `FormsService` 像並設定驗證值。
+   建立`FormsService`對象並設定驗證值。
 
 1. 檢索包含計算指令碼的表單
 
-   * 要檢索張貼到Java Servlet的表單資料，請使用其 `BLOB` 建構子建立對象。
-   * 使用 `java.io.InputStream` 物件的方法 `javax.servlet.http.HttpServletResponse` 建立物 `getInputStream` 件。
-   * 使用 `java.io.ByteArrayOutputStream` 其建構函式並傳遞物件長度，以建立物 `java.io.InputStream` 件。
-   * 將對象的內 `java.io.InputStream` 容複製到對 `java.io.ByteArrayOutputStream` 像。
-   * 叫用物件的方法，以 `java.io.ByteArrayOutputStream` 建立位元組 `toByteArray` 陣列。
-   * 調用對 `BLOB` 像的方法並將字 `setBinaryData` 節陣列作為引數傳遞，以填充對象。
-   * 使用其 `RenderOptionsSpec` 建構函式建立物件。 調用物件的方法並傳 `RenderOptionsSpec` 遞指定地區 `setLocale` 值的字串值，以設定地區值。
-   * 叫用物 `FormsServiceClient` 件的方 `processFormSubmission` 法並傳遞下列值：
+   * 要檢索張貼到Java Servlet的表單資料，請使用其建構子建立`BLOB`對象。
+   * 使用`javax.servlet.http.HttpServletResponse`物件的`getInputStream`方法建立`java.io.InputStream`物件。
+   * 使用其建構子並傳遞`java.io.InputStream`對象的長度，建立`java.io.ByteArrayOutputStream`對象。
+   * 將`java.io.InputStream`對象的內容複製到`java.io.ByteArrayOutputStream`對象中。
+   * 通過調用`java.io.ByteArrayOutputStream`對象的`toByteArray`方法建立位元組陣列。
+   * 調用`setBinaryData`方法並將位元組陣列作為參數傳遞，以填充`BLOB`對象。
+   * 使用其建構子建立`RenderOptionsSpec`對象。 調用`RenderOptionsSpec`物件的`setLocale`方法並傳遞指定地區值的字串值，以設定地區值。
+   * 叫用`FormsServiceClient`物件的`processFormSubmission`方法並傳遞下列值：
 
-      * 包 `BLOB` 含表單資料的物件。
-      * 指定環境變數的字串值包括所有相關的HTTP標頭。 例如，您可以指定下列字串值： `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * 指定標題值的 `HTTP_USER_AGENT` 字串值； 例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 存 `RenderOptionsSpec` 儲運行時選項的對象。 如需詳細資訊，請造訪。
-      * 由方 `BLOBHolder` 法填充的空對象。
-      * 由方 `javax.xml.rpc.holders.StringHolder` 法填充的空對象。
-      * 由方 `BLOBHolder` 法填充的空對象。
-      * 由方 `BLOBHolder` 法填充的空對象。
-      * 由方 `javax.xml.rpc.holders.ShortHolder` 法填充的空對象。
-      * 由方 `MyArrayOf_xsd_anyTypeHolder` 法填充的空對象。 此參數用於儲存隨表單一起提交的檔案附件。
-      * 由方 `FormsResultHolder` 法填入的空對象，其表單為已提交。
+      * 包含表單資料的`BLOB`物件。
+      * 指定環境變數的字串值包括所有相關的HTTP標頭。 例如，您可以指定下列字串值：`HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
+      * 指定`HTTP_USER_AGENT`標題值的字串值；例如，`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+      * 儲存運行時選項的`RenderOptionsSpec`對象。 如需詳細資訊，請造訪。
+      * 由方法填充的空`BLOBHolder`對象。
+      * 由方法填充的空`javax.xml.rpc.holders.StringHolder`對象。
+      * 由方法填充的空`BLOBHolder`對象。
+      * 由方法填充的空`BLOBHolder`對象。
+      * 由方法填充的空`javax.xml.rpc.holders.ShortHolder`對象。
+      * 由方法填充的空`MyArrayOf_xsd_anyTypeHolder`對象。 此參數用於儲存隨表單一起提交的檔案附件。
+      * 由方法填入的空`FormsResultHolder`對象，其表單為已提交。
 
-      方 `processFormSubmission` 法會以表 `FormsResultHolder` 單提交的結果填入參數。 該方 `processFormSubmission` 法返回包 `FormsResult` 含表單提交結果的對象。
+      `processFormSubmission`方法會以表單提交的結果填入`FormsResultHolder`參數。 `processFormSubmission`方法返回包含表單提交結果的`FormsResult`對象。
 
-   * 請叫用物件的方法，以確認與已提交表 `1` 單相關聯的處 `FormsResult` 理狀態 `getAction` 為。 如果此方法返回值 `1`，則會執行計算，並將資料寫回客戶端Web瀏覽器。
+   * 呼叫`FormsResult`物件的`getAction`方法，確認與提交表單相關的處理狀態為`1`。 如果此方法返回值`1`，則會執行計算並將資料寫回客戶端Web瀏覽器。
 
 
 1. 將表單資料流寫回用戶端網頁瀏覽器
 
-   * 建立用 `javax.servlet.ServletOutputStream` 於傳送表單資料串流至用戶端網頁瀏覽器的物件。
-   * 呼叫 `BLOB` 物件的方法，以建立包含表 `FormsResult` 單資料的物 `getOutputContent` 件。
-   * 建立位元組陣列，並透過叫用物件的方 `BLOB` 法來填入該 `getBinaryData` 陣列。 此任務將對象的內 `FormsResult` 容分配給位元組陣列。
-   * 叫用物 `javax.servlet.http.HttpServletResponse` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料串流至用戶端網頁瀏覽器。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
+   * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
+   * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
-**另請參閱**[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+**另請**
+[參閱使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
