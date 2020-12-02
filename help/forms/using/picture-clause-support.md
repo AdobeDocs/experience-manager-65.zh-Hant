@@ -11,22 +11,25 @@ topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '636'
+ht-degree: 1%
 
 ---
 
 
-# HTML5表單的Picture子句支援 {#picture-clause-support-for-html-forms}
+# HTML5表單{#picture-clause-support-for-html-forms}的Picture子句支援
 
 HTML5表單支援XFA Picture子句，用於日期、文字和數值符號的顯示值和格式化值。 支援以下Picture子句表達式：
 
-* category(locale){picture-clause}| category(locale){picture-clause}| category(locale){picture-clause}
+* category(locale){picture-clause} | category(locale){picture-clause} | category(locale){picture-clause}
 * category.subcategory{}
 
 >[!NOTE]
 >
 >目前，Mobile Forms不支援Edit Picture子句。 此外，DateTime和Time Picture子句符號也不受支援。
 
-## 支援的日期欄位符號 {#supported-date-field-symbols}
+## 支援的日期欄位符號{#supported-date-field-symbols}
 
 支援的Date Picture子句表達式：
 
@@ -53,15 +56,15 @@ HTML5表單支援XFA Picture子句，用於日期、文字和數值符號的顯�
   </tr>
   <tr>
    <td>DD</td>
-   <td>每月01-31個零填充兩位數。<br /> </td>
+   <td>每月01-31天補零。<br /> </td>
   </tr>
   <tr>
    <td>M</td>
-   <td>1或2位數(1-12)的月份。<br /> </td>
+   <td>1-或2位數(1-12)的月份。<br /> </td>
   </tr>
   <tr>
    <td>MM</td>
-   <td>每年0.01至12個月，填補零位。<br /> </td>
+   <td>每年0.01-12個月，補零。<br /> </td>
   </tr>
   <tr>
    <td>MMM</td>
@@ -81,7 +84,7 @@ HTML5表單支援XFA Picture子句，用於日期、文字和數值符號的顯�
   </tr>
   <tr>
    <td>YY</td>
-   <td>2位數的年份，其中00 = 2000, 29 = 2029, 30 = 1930, 99 = 1999<br /> </td>
+   <td>2位元年份，其中00 = 2000, 29 = 2029, 30 = 1930, 99 = 1999<br /> </td>
   </tr>
   <tr>
    <td>YYYY</td>
@@ -90,21 +93,21 @@ HTML5表單支援XFA Picture子句，用於日期、文字和數值符號的顯�
  </tbody>
 </table>
 
-## Numeric Picture子句 {#numeric-picture-clause}
+## 數值圖片子句{#numeric-picture-clause}
 
 HTML5表格支援數值圖片符號。 不過，PDF表單和HTML表單的支援有所不同。
 
-在 **PDF Forms**&#x200B;中，數字的格式化與Picture子句中符號的數目無關
+在&#x200B;**PDF Forms**&#x200B;中，不論Picture子句中的符號數目是多少，都會格式化數字
 
-在 **HTML Forms**&#x200B;中，只有當數字小於Picture子句中符號數時，才會格式化數字。
+在&#x200B;**HTML Forms**&#x200B;中，只有在數字小於Picture子句中符號數時，才格式化數字。
 
 **範例**:請考慮Picture子句：num{zzz,zzz,zz9}。
 
-編號 **10000** ，在HTML和PDF表 **單中都格式化為10,000** 。
+數字&#x200B;**10000**&#x200B;在HTML和PDF表單中都格式化為&#x200B;**10,000**。
 
 編號1000000的PDF格式為1,000,000。 但是，在HTML Forms中，數字仍未格式化為100000。
 
-**HTML Forms中Numeric Picture子句的支援運算式** :
+**HTML Forms**&#x200B;中Numeric Picture子句的支援表達式為：
 
 * num.integer{}
 * num.decimal{}
@@ -121,32 +124,32 @@ HTML5表格支援數值圖片符號。 不過，PDF表單和HTML表單的支援�
   </tr>
   <tr>
    <td>9</td>
-   <td><strong>輸出格式</strong>:一位數。 或者，若輸入資料空白或位於對應位置的空格，則為零位。<br /> </td>
+   <td><strong>輸出格式</strong>:一位數。或者，若輸入資料空白或對應位置有空白，則為零位。<br /> </td>
    <td>單位數</td>
   </tr>
   <tr>
    <td>Z</td>
-   <td><strong>輸出格式</strong>:一位數。 或者，如果輸入資料為空，則對應位置中的空格、空格或零位。<br /> </td>
+   <td><strong>輸出格式</strong>:一位數。或者，如果輸入資料為空，則對應位置的空格、空格或零位。<br /> </td>
    <td>單位或空格</td>
   </tr>
   <tr>
    <td>z</td>
-   <td><strong>輸出格式</strong>:一位數。 或者，如果輸入資料是空的、空的或者對應位置的零位，則不用考慮。<br /> </td>
+   <td><strong>輸出格式</strong>:一位數。或者，如果輸入資料為空、空格或對應位置的零位，則不用考慮。<br /> </td>
    <td>一位數或零</td>
   </tr>
   <tr>
    <td>錯誤</td>
-   <td><strong>輸出格式</strong>:由指數符號(E)組成的浮點數的指數部分。 後面接著可選的加號或減號。 後跟指數值。<br /> </td>
+   <td><strong>輸出格式</strong>:由指數符號(E)組成的浮點數的指數部分。後面接著可選的加號或減號。 後跟指數值。<br /> </td>
    <td>與輸出格式相同</td>
   </tr>
   <tr>
-   <td>CR或CR<br /> </td>
+   <td>CR或cr<br /> </td>
    <td>信用符號(CR)（若數字為負數）。 否則就沒有。</td>
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>S或s<br /> </td>
-   <td>輸出格式：如果數字為負數，則為減號。 其他空間。<br /> </td>
+   <td>輸出格式：如果數字為負數，則為減號。 Else space.<br /> </td>
    <td>如果數字為負數，則減號。 加號（如果數字為正數）</td>
   </tr>
   <tr>
@@ -160,7 +163,7 @@ HTML5表格支援數值圖片符號。 不過，PDF表單和HTML表單的支援�
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>.</td>
+   <td>。</td>
    <td>當前地區設定的小數基數。</td>
    <td><br type="_moz" /> </td>
   </tr>
@@ -197,7 +200,7 @@ HTML5表格支援數值圖片符號。 不過，PDF表單和HTML表單的支援�
  </tbody>
 </table>
 
-## 文本圖片子句 {#text-picture-clause}
+## 文本圖片子句{#text-picture-clause}
 
 HTML5表單支援下列Text Picture子句運算式：
 
