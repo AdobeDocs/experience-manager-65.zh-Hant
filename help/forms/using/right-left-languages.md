@@ -10,11 +10,14 @@ topic-tags: hTML5_forms
 discoiquuid: b8465471-0458-42d6-8209-8ba90f41154a
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '109'
+ht-degree: 0%
 
 ---
 
 
-# HTML5表格中的從右至左語言 {#right-to-left-languages-in-html-forms}
+# HTML5表單中的從右到左語言{#right-to-left-languages-in-html-forms}
 
 HTML5表格支援從右至左語言，例如希伯來文。 您可以以從右到左語言顯示和填寫HTML5表格。 您使用相同格式的由右至左和由左至右語言。 例如，您可以在公用欄位中同時使用英文和希伯來文。 行動表單使用地區設定，在表單中顯示本地化的日期和日期資訊。
 
