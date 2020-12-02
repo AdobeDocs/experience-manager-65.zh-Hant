@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 卸載伺服器基礎架構中的請求。
 * 當瀏覽器在瀏覽器快取中快取物件時，可提高頁面載入的效能。
 
-過期時間由HTTP標準指定，與檔案的「過期」有關(例如，請參閱 [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot;超文本傳輸協定— HTTP 1.1&quot;的第14.21章)。 此標準使用標題來允許用戶端快取物件，直到物件被視為過時；這些對象被快取指定的時間長度，而不對源伺服器進行任何狀態檢查。
+過期由HTTP標準指定有關檔案「過期」的規定（例如，請參見[RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot;超文本傳輸協定— HTTP 1.1&quot;的第14.21章）。 此標準使用標題來允許用戶端快取物件，直到物件被視為過時；這些對象被快取指定的時間長度，而不對源伺服器進行任何狀態檢查。
 
 >[!NOTE]
 >
@@ -36,7 +39,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!CAUTION]
 >
->在定義對象被視為最新的時間段時，必須小心。 由於在指 *定的時段到期之前沒有檢查*，所以客戶端最終可以從快取中呈現舊內容。
+>在定義對象被視為最新的時間段時，必須小心。 由於在指定的時段過期之前沒有檢查&#x200B;*，因此客戶端最終可以從快取中呈現舊內容。*
 
 1. **對於「作者」實例：**
 
@@ -72,7 +75,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    </Location>
    ```
 
-   這允許中間快取（例如瀏覽器快取）在用戶端快取中儲存CSS、Javascript、PNG和GIF檔案，最多一天。 雖然此範例說明下列和項目的全域 `/content` 設定 `/etc/designs`，但您應更精細。
+   這允許中間快取（例如瀏覽器快取）在用戶端快取中儲存CSS、Javascript、PNG和GIF檔案，最多一天。 雖然此範例說明`/content`和`/etc/designs`下所有項目的全域設定，但您應更精細地說明。
 
    您也可以考慮快取HTML頁面，視網站的更新頻率而定。 合理的時段為1小時：
 
@@ -82,4 +85,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    </Location>
    ```
 
-配置靜態對象後，在選擇包含這些對象的頁 `request.log`面時，請掃描，以確認沒有對靜態對象發出（不必要）請求。
+配置靜態對象後，在選擇保存這些對象的頁時掃描`request.log` ，以確認沒有對靜態對象發出（不必要）請求。
