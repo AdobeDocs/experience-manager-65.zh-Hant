@@ -11,6 +11,9 @@ discoiquuid: e65925ff-1fbf-4da6-bf09-0cf056c86e5a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '721'
+ht-degree: 3%
 
 ---
 
@@ -21,28 +24,28 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 當您選取一或多個准則並指定文字字串時，會傳回文字與准則的交集作為搜尋結果。 搜尋結果和提供的表單和資產中繼資料一樣好。
 
-按一 ![下aem6forms_search](assets/aem6forms_search.png)，以顯示或隱藏搜尋面板。
+按一下![aem6forms_search](assets/aem6forms_search.png)以顯示或隱藏搜尋面板。
 
-## 基本搜尋 {#basic-search}
+## 基本搜索{#basic-search}
 
 基本搜尋是預設搜尋，執行時不需指定任何篩選。 AEM Forms會針對中繼資料屬性執行全文搜尋。
 
 若要執行基本搜尋，請在文字欄位中輸入搜尋查詢並點擊傳回。 您也可以輸入萬用字元(*)，以符合任意數目的字元。
 
-Adobe Experience manager會在中繼資料屬性中搜尋輸入的文字，並傳回對應的結果。 如果您鍵入多個單字，則搜索操作將匹配要搜索的完整文本。
+Adobe Experience Manager會在中繼資料屬性中搜尋輸入的文字，並傳回對應的結果。 如果您鍵入多個單字，則搜索操作將匹配要搜索的完整文本。
 
 請注意以下關於基本搜索的要點：
 
 * 使用表單和資產中繼資料屬性進行搜尋。
 * 如果您鍵入多個單字，則搜索操作將匹配要搜索的完整文本。
-* 搜尋不區分大小寫。 例如，當您輸入時， `geometrixx`具有標題的資產 `Geometrixx`、 `GEOMETRIXX`和會 `GeoMetRixx` 顯示在搜尋結果中。
+* 搜尋不區分大小寫。 例如，當您鍵入`geometrixx`時，標題為`Geometrixx`、`GEOMETRIXX`和`GeoMetRixx`的資產會顯示在搜尋結果中。
 
 * 不支援單字的部分相符項目。 若要使用部分字串進行搜尋，請使用*萬用字元。 不過，如果搜尋查詢符合完整字詞，則會顯示對應的表單或資產。
-* 額外空格受到尊重，在搜尋期間不會修剪。 例如， `My form` 與不同的搜尋查詢 `My form`。
+* 額外空格受到尊重，在搜尋期間不會修剪。 例如，`My form`與`My form`不是相同的搜尋查詢。
 
 * 如果中繼資料屬性中欄位的資料和顯示值不同，則無法使用顯示值作為搜尋參數。 例如，您無法根據狀態（如「已修改」或「已發佈」）進行搜尋，因為這些屬性會以不同的格式儲存。
 
-## Advanced search {#advanced-search}
+## 進階搜尋{#advanced-search}
 
 在搜索准則中，除了查詢外，還可以指定一些搜索參數，使基本搜索更加有效和集中。
 
@@ -87,7 +90,7 @@ AEM表單和資產搜尋的搜尋欄位和參數或篩選器
   </tr>
   <tr>
    <td>表單範本<br /> </td> 
-   <td>搜尋所有表格範本。<br /> </td> 
+   <td>在所有表單範本中搜尋。<br /> </td> 
   </tr>
   <tr>
    <td>PDF表格</td> 
@@ -98,12 +101,12 @@ AEM表單和資產搜尋的搜尋欄位和參數或篩選器
    <td>搜尋所有檔案。</td> 
   </tr>
   <tr>
-   <td>Adaptive Form<br /> </td> 
+   <td>最適化表單<br /> </td> 
    <td>在所有最適化表單中搜尋。</td> 
   </tr>
   <tr>
    <td>資源</td> 
-   <td>搜尋所有資源。<br /> </td> 
+   <td>搜索所有資源。<br /> </td> 
   </tr>
  </tbody>
 </table>
