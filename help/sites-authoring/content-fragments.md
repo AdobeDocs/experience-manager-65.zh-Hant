@@ -29,10 +29,10 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!NOTE]
 >
->**「內容片段** 」和「 **[體驗片段](/help/sites-authoring/experience-fragments.md)** 」是AEM中的不同功能：
+>**內容** 片段和 **[體驗](/help/sites-authoring/experience-fragments.md)** 片段是AEM中的不同功能：
 >
->* **內容片段** 是編輯內容，主要是文字和相關影像。 它們是純粹的內容，不需要設計和版面配置。
->* **體驗片段** ，內容已完整排版；網頁的片段。
+>* **內容** 片段是編輯內容，主要是文字和相關影像。它們是純粹的內容，不需要設計和版面配置。
+>* **體驗** 片段內容已完整排版；網頁的片段。
 
 >
 >
@@ -40,7 +40,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!CAUTION]
 >
->此頁面必須與「使用內容片段 [](/help/assets/content-fragments/content-fragments.md) （及相關頁面）」一起閱讀，因為它提供基本術語和概念，以及建立和管理片段。
+>此頁面必須與[使用內容片段](/help/assets/content-fragments/content-fragments.md)（及相關頁面）一起閱讀，因為它提供基本術語和概念，以及建立和管理片段。
 
 內容片段可啟用：
 
@@ -68,22 +68,22 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
    * 可依賴已策劃的相關媒體內容來產生關聯性。
    * 可即時建立臨機內容變化，同時仍可確保這些變化在片段中仍能集中管理。
 
-## 新增內容片段至您的頁面 {#adding-a-content-fragment-to-your-page}
+## 新增內容片段至您的頁面{#adding-a-content-fragment-to-your-page}
 
 1. 開啟您的頁面進行編輯。
 
-1. 新增內 **容片段** ;從「元件」瀏 **覽器** ，或「插入 **新元件」**。
+1. 添加&#x200B;**內容片段**&#x200B;元件；從&#x200B;**元件**&#x200B;瀏覽器或&#x200B;**插入新元件**。
 
 1. 您可以:
 
-   * 開啟「 **Assets** 」瀏覽器並篩選 **「內容片段** 」（預設為「影像」）。 然後將所需片段拖曳至元件例項。
+   * 開啟&#x200B;**Assets**&#x200B;瀏覽器並篩選&#x200B;**內容片段**（預設為影像）。 然後將所需片段拖曳至元件例項。
 
-   * 選擇內容片段元件，然後從工 **具欄中** 「配置」。 在對話方塊中，您可以開啟選取對話方塊，以瀏覽並選取所需的 **內容片段**。
+   * 選擇內容片段元件，然後從工具欄中選擇&#x200B;**Configure**。 在該對話框中，可以開啟選擇對話框以瀏覽並選擇所需的&#x200B;**內容片段**。
    >[!NOTE]
    >
    >另一種方法是將特定內容片段直接拖曳至頁面上。 這會自動建立關聯的元件（內容片段）。
 
-1. 一開始會顯示 **Main** Element和 **Master** (variation)的內容。 您可以 [視需要選取其他元素和／或變](#selecting-the-element-or-variation) 化。
+1. 首先，將顯示&#x200B;**Main**&#x200B;元素和&#x200B;**Master**（變化）的內容。 您可以視需要[選擇其他元素和／或變化](#selecting-the-element-or-variation)。
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -97,9 +97,9 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
    >    * [編輯頁面內容](/help/sites-authoring/editing-content.md)
 
 
-### 選取元素或變數 {#selecting-the-element-or-variation}
+### 選擇元素或變化{#selecting-the-element-or-variation}
 
-開啟片段的「設 **定** 」對話方塊，以設定要在目前頁面上使用的片段。 對話方塊可視使用的元件而定。
+開啟片段的&#x200B;**Configuration**&#x200B;對話框，以配置要在當前頁上使用的片段。 對話方塊可視使用的元件而定。
 
 在適當的設定對話方塊中，您可以選取可用的參數，包括：
 
@@ -115,7 +115,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 * **元素**
 
-   * The default **Main** will always be available.
+   * 預設&#x200B;**Main**&#x200B;將始終可用。
    * 如果片段是使用適當的範本建立，則可使用選取範圍。
 
    >[!NOTE]
@@ -130,31 +130,31 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 * **段落**:指定要包含的段落範圍：
 
    * **全部**
-   * **範圍**:例如 `1`, `3-5`, `9-*`
+   * **範圍**:例如 `1`, `3-5`,  `9-*`
 
       * **將標題當作其段落的一部分來處理**
 
 * **將標題當作其段落的一部分來處理**
 
-### 快速連線至片段編輯器 {#quick-connection-to-fragment-editor}
+### 快速連線至片段編輯器{#quick-connection-to-fragment-editor}
 
-您可以使用元件工具列上的「編輯」圖示，開啟片段來源以 **進行編輯** （資產）。 這可讓您編輯 [和管理內容片段](/help/assets/content-fragments/content-fragments.md)。
+您可以使用元件工具欄上的&#x200B;**Edit**&#x200B;表徵圖開啟片段源進行編輯（資產）。 這可讓您編輯和管理內容片段[。](/help/assets/content-fragments/content-fragments.md)
 
 >[!CAUTION]
 >
 >和以往一樣，編輯片段來源會影響參照該內容片段的所有頁面。
 
-### 新增內容 {#adding-in-between-content}
+### 在內容之間添加{#adding-in-between-content}
 
-將特定內容片段新增至頁面時，片段的每個HTML段落（以及片段的上／下）之間都會有 **Drag components** here預留位置。
+將特定內容片段新增至頁面時，在片段的每個HTML段落（以及片段的上／下）之間會有&#x200B;**「拖曳元件至此處**&#x200B;預留位置」。
 
-這可讓您在中間( [亦即中間內容)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) （在任何可用點）新增額外內容，而不需變更根片段。
+這可讓您新增額外的內容[介於（亦即介於內容）](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments)片段內容（在任何可用點），而不需變更根片段。
 
 對於中介內容，您可以：
 
-* 從「元件」瀏覽器 [新增元件](/help/sites-authoring/author-environment-tools.md#components-browser)。
-* 從「資產」瀏覽器 [新增資產](/help/sites-authoring/author-environment-tools.md#assets-browser)。
-* 使 [用關聯內容](#using-associated-content) ，作為中間內容的來源。
+* 從[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)新增元件。
+* 從[資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)新增資產。
+* 使用[關聯內容](#using-associated-content)作為中間內容的來源。
 
 >[!CAUTION]
 >
@@ -164,7 +164,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!NOTE]
 >
->您也可以 [將視覺資產（影像）插入片段本身](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
+>您也可以[將視覺資產（影像）插入片段本身](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
 >
 >插入到片段本身的視覺資產附加到片段的前一段。 這表示您無法在視覺資產和前段之間放置內容。
 
@@ -184,27 +184,27 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 
 
-### 使用關聯的內容 {#using-associated-content}
+### 使用關聯內容{#using-associated-content}
 
 如果您有 [與內容片段](/help/assets/content-fragments/content-fragments-assoc-content.md)[相關的內容](/help/assets/content-fragments/content-fragments.md) ，這些資產將可從側面板使用 (在您將片段放在內容頁面後)。關聯內容實際上是中間內容的特 [殊內容來源](#adding-in-between-content)。
 
 >[!NOTE]
 >
->有各種方法可將視 [覺資產（例如影像）新增至片段和](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) /或頁面。
+>有各種方法可將[視覺資產（例如，影像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)新增至片段和／或頁面。
 
 >[!NOTE]
 >
->如果您在單一頁面上有多個內容片段，「關聯的 **內容** 」索引標籤會顯示適合所有片段的資產。
+>如果您在單一頁面上有多個內容片段，**關聯內容**&#x200B;標籤將顯示適合所有片段的資產。
 
-在將含有關聯內容的片段新增至頁面後，會在側面板中開啟新的標&#x200B;**簽(關聯內容**)。
+在將具有關聯內容的片段新增至頁面後，會在側面板中開啟新的標籤（**關聯內容**）。
 
 您可以從這裡將資產拖曳至所需位置（拖曳至現有元件，或拖曳至建立適當元件的必要位置）:
 
 ![cfm-6420-03](assets/cfm-6420-03.png)
 
-### 插入片段的資產 {#assets-inserted-into-the-fragment}
+### 插入片段{#assets-inserted-into-the-fragment}的資產
 
-如果資產（例如影像）已插入片段本身，則頁面編輯器中編輯這些資產的選項會受到限制。 <!-- Removed link as it was a 404 on helpx -->
+如果資產（例如影像）已插入片段本身，則頁面編輯器中編輯這些資產的選項會受到限制。<!-- Removed link as it was a 404 on helpx -->
 
 例如，若是影像，您可以
 
@@ -219,6 +219,6 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 片段必須發佈，才能用於您發佈的網頁：
 
-* 在「資產」主控台中建 [立片段後，可發佈片段](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment)。
-* 如果在 *發佈的頁面上使用未發佈的片段* ，則此時也可以發佈該片段。
+* 在[在「資產」控制台](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment)中建立片段後可發佈片段。
+* 如果在正在發佈的頁面上使用&#x200B;*未發佈的片段*，則此時也可以發佈該片段。
 
