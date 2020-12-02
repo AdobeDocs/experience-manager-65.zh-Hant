@@ -11,15 +11,18 @@ topic-tags: forms-workspace
 discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1257'
+ht-degree: 9%
 
 ---
 
 
-# 可重複使用的元件說明 {#description-of-reusable-components}
+# 可重複使用的元件說明{#description-of-reusable-components}
 
-AEM Forms工作區由可重複使 [用的元件組成](/help/forms/using/integrating-html-ws-components-web.md) ，這些元件會組織在CRX [](/help/forms/using/folder-structure.md) ™的特定資料夾結構中。 每個元件在資料夾結構中指定的位置都有模型、檢視和範本檔案、與其他元件檔案的JavaScript™相依性、由元件監聽的事件，以及在AEM Forms工作區中觸發這些事件的JavaScript物件。 此處提供可重複使用的元件的完整清單，其中包含組成檔案名稱和相依性。
+AEM Forms工作區由[可重複使用的](/help/forms/using/integrating-html-ws-components-web.md)元件組成，這些元件在CRX™中以特定[檔案夾結構](/help/forms/using/folder-structure.md)組織。 每個元件在資料夾結構中指定的位置都有模型、檢視和範本檔案、與其他元件檔案的JavaScript™相依性、由元件監聽的事件，以及在AEM Forms工作區中觸發這些事件的JavaScript物件。 此處提供可重複使用的元件的完整清單，其中包含組成檔案名稱和相依性。
 
-## 任務清單 {#tasklist}
+## TaskList {#tasklist}
 
 <table>
  <tbody>
@@ -261,7 +264,7 @@ AEM Forms工作區由可重複使 [用的元件組成](/help/forms/using/integra
 
 >[!NOTE]
 >
->TeamFilter獲取指示從TaskList元件中選擇了哪個任務的事件。 雖然這些元件共用模型類，但沒有其它相關性。
+>TeamFilter獲取指示已從TaskList元件中選擇哪個任務的事件。 雖然這些元件共用模型類，但沒有其它相關性。
 
 ## TaskDetails {#taskdetails}
 
@@ -321,7 +324,7 @@ AEM Forms工作區由可重複使 [用的元件組成](/help/forms/using/integra
  </tbody>
 </table>
 
-## 類別清單 {#categorylist}
+## CategoryList {#categorylist}
 
 <table>
  <tbody>
@@ -806,7 +809,7 @@ AEM Forms工作區由可重複使 [用的元件組成](/help/forms/using/integra
      <li><p>queueAccessGranted - sharequeue模型</p> </li>
      <li><p>queueAccessRequested - sharequeue模型</p> </li>
      <li><p>grantedUsersReacted - sharequeue模型</p> </li>
-     <li>accessibleUsersReacted - sharequeue模型</li>
+     <li>accessibleUsersReached - sharequeue模型</li>
      <li><p>queueAccessExpeded - sharequeue模型</p> </li>
      <li><p>queueAccessRemoved - sharequeue模型</p> </li>
      <li><p>principalSelected - principalsearch視圖</p> </li>
@@ -922,7 +925,7 @@ AEM Forms工作區由可重複使 [用的元件組成](/help/forms/using/integra
    <td>
     <ul>
      <li>userImageUrlRechated - userinfo模型</li>
-     <li>sessionRenewed - userinfo模型 <br /> </li>
+     <li>sessionRenewed - userinfo model <br /> </li>
      <li>sessionExpired - userinfo模型 </li>
     </ul> </td>
   </tr>
