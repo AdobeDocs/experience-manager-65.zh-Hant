@@ -19,13 +19,13 @@ ht-degree: 0%
 ---
 
 
-# 轉換互動式PDF表單 {#rendering-interactive-pdf-forms}
+# 轉換互動式PDF表單{#rendering-interactive-pdf-forms}
 
 Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 在轉譯互動式表單後，使用者可以在表單欄位中輸入資料，然後按一下表單上的提交按鈕，將資訊傳回至Forms服務。 Adobe Reader或Acrobat必須安裝在用戶端網頁瀏覽器的電腦上，才能顯示互動式PDF表格。
 
 >[!NOTE]
 >
->在使用Forms服務演算表單之前，請先建立表單設計。 通常，表單設計是在Designer中建立，並儲存為XDP檔案。 有關建立表單設計的資訊，請參 [閱表單設計器](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>在使用Forms服務演算表單之前，請先建立表單設計。 通常，表單設計是在Designer中建立，並儲存為XDP檔案。 有關建立表單設計的資訊，請參閱[表單設計器](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 **貸款申請範例**
 
@@ -45,40 +45,40 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>Java <code>GetLoanForm</code> Servlet是從HTML頁面呼叫。 </p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet是從HTML頁調用的。 </p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Java <code>GetLoanForm</code> Servlet使用Forms服務客戶端API將貸款表格轉換到客戶端Web瀏覽器。 (請參 <a href="#render-an-interactive-pdf-form-using-the-java-api">閱使用Java API演算互動式PDF表單</a>。)</p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務客戶端API將貸款表格呈現給客戶端Web瀏覽器。 （請參閱<a href="#render-an-interactive-pdf-form-using-the-java-api">使用Java API</a>轉換互動式PDF表單。）</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>當使用者填入貸款表單並按一下提交按鈕後，資料就會送出至 <code>HandleData</code> Java Servlet。 (請參 <i>閱「貸款表」</i>。)</p></td>
+   <td><p>當使用者填入貸款表單並按一下提交按鈕後，資料就會送出至<code>HandleData</code> Java Servlet。 （請參閱<i>"貸款表"</i>）。</p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p>Java <code>HandleData</code> Servlet使用Forms服務客戶端API來處理表單提交和檢索表單資料。 然後，該資料被儲存在企業資料庫中。 (請參 <a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">閱處理提交的表單</a>。)</p></td>
+   <td><p><code>HandleData</code> Java Servlet使用Forms服務客戶端API處理表單提交和檢索表單資料。 然後，該資料被儲存在企業資料庫中。 （請參閱<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">處理提交的表單</a>）。</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>確認表單會轉譯回網頁瀏覽器。 使用者的名字和姓氏等資料會在轉譯前與表單合併。 (請參 <a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">閱使用可排程版面預填表單</a>。)</p></td>
+   <td><p>確認表單會轉譯回網頁瀏覽器。 使用者的名字和姓氏等資料會在轉譯前與表單合併。 （請參閱<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">使用可排程版面預填表單</a>）。</p></td>
   </tr>
  </tbody>
 </table>
 
 **貸款表**
 
-此互動式貸款表格由範例貸款應用程式的 `GetLoanForm` Java Servlet轉譯。
+此互動式貸款表格由範例貸款應用程式的`GetLoanForm` Java Servlet轉譯。
 
 ![ri_ri_loanform](assets/ri_ri_loanform.png)
 
 **確認表單**
 
-此表單由範例貸款應用程式的 `HandleData` Java Servlet轉譯。
+此表單由範例貸款應用程式的`HandleData` Java Servlet轉譯。
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字和姓氏以及金額。 在預先填入表單後，會將它傳送至用戶端網頁瀏覽器。 (請參 [閱使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
+`HandleData` Java Servlet會預先填入此表單中使用者的名字和姓氏以及金額。 在預先填入表單後，會將它傳送至用戶端網頁瀏覽器。 （請參閱[使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）
 
 **Java Servlet**
 
@@ -98,11 +98,11 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
              }
 ```
 
-通常，您不會將Forms服務用戶端API程式碼置於Java Servlet或方 `doGet` 法 `doPost` 中。 將此程式碼放在個別類別中、從方法（或方法）實例化該類別，並呼叫 `doPost` 適當的方 `doGet` 法，是更好的程式設計實務。 不過，若是程式碼簡寫，本節中的程式碼範例會維持在最小值，而程式碼範例則會置於方法 `doPost` 中。
+通常，您不會將Forms服務用戶端API程式碼置於Java Servlet的`doGet`或`doPost`方法中。 最好的程式設計實務是將此程式碼放置在個別的類別中、從`doPost`方法（或`doGet`方法）實例化類別，並呼叫適當的方法。 但是，對於代碼簡寫，本節中的代碼示例將保持在最小值，代碼示例將放在`doPost`方法中。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱「AEM Forms [的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 **步驟摘要**
 
@@ -121,19 +121,19 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms Client API物件，才能以程式設計方式執行Forms服務用戶端API作業。 如果您使用Java API，請建立物 `FormsServiceClient` 件。 如果您使用Forms web service API，請建立物 `FormsService` 件。
+您必須先建立Forms Client API物件，才能以程式設計方式執行Forms服務用戶端API作業。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms web service API，請建立`FormsService`物件。
 
 **指定URI值**
 
-您可以指定Forms服務呈現表單所需的URI值。 使用內容根URI值可以參考儲存為Forms應用程式一部分的表單設計 `repository:///`。 例如，請考慮以下名為 *Loan.xdp的表單設計* ，位於名為 *FormsApplication的Forms應用程式*&#x200B;中：
+您可以指定Forms服務呈現表單所需的URI值。 使用內容根URI值`repository:///`可以參照儲存為Forms應用程式一部分的表單設計。 例如，請考慮以下名為&#x200B;*Loan.xdp*&#x200B;的表單設計，它位於名為&#x200B;*FormsApplication*&#x200B;的Forms應用程式中：
 
 ![ri_ri_formrepository](assets/ri_ri_formrepository.png)
 
-若要存取此表單設計，請 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` 指定為表單名稱(傳遞至方法的第一個參 `renderPDFForm` 數) `repository:///` 和內容根URI值。
+若要存取此表單設計，請指定`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`作為表單名稱（傳遞至`renderPDFForm`方法的第一個參數），並指定`repository:///`作為內容根URI值。
 
 >[!NOTE]
 >
->有關使用工作台建立表單應用程式的資訊，請參 [閱工作台幫助](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+>有關使用Workbench建立Forms應用程式的資訊，請參閱[Workbench幫助](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
 位於Forms應用程式中的資源路徑為：
 
@@ -152,11 +152,11 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 如果目標URL是在表單設計中定義的，請勿使用Forms服務用戶端API覆寫它。 也就是說，使用Forms API設定目標URL會將表單設計中指定的URL重設為使用API指定的URL。 如果您想要將PDF表單提交至表單設計中指定的目標URL，請以程式設計方式將目標URL設為空字串。
 
-如果您的表單包含提交按鈕和計算按鈕（具有在伺服器上執行的對應指令碼），則可以程式設計方式定義表單傳送至何處以執行指令碼的URL。 使用表單設計上的提交按鈕，指定表單資料張貼的URL。 (請參閱 [計算表單資料](/help/forms/developing/calculating-form-data.md)。)
+如果您的表單包含提交按鈕和計算按鈕（具有在伺服器上執行的對應指令碼），則可以程式設計方式定義表單傳送至何處以執行指令碼的URL。 使用表單設計上的提交按鈕，指定表單資料張貼的URL。 （請參閱[計算表單資料](/help/forms/developing/calculating-form-data.md)）。
 
 >[!NOTE]
 >
->您也可以將例項傳遞至Forms服務，而不是指定URL值以 `com.adobe.idp.Document` 參考XDP檔案。 實 `com.adobe.idp.Document` 例包含表單設計。 (請參 [閱將檔案傳送至Forms服務](/help/forms/developing/passing-documents-forms-service.md))。
+>您也可以將`com.adobe.idp.Document`例項傳遞至Forms服務，而不是指定URL值以參考XDP檔案。 `com.adobe.idp.Document`實例包含表單設計。 （請參閱[將檔案傳遞至Forms Service](/help/forms/developing/passing-documents-forms-service.md)。）
 
 **將檔案附加至表單**
 
@@ -168,17 +168,17 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 **轉換互動式PDF表單**
 
-若要轉換表單，請使用在Designer中建立並儲存為XDP或PDF檔案的表單設計。 此外，您也可以轉換使用Acrobat建立並儲存為PDF檔案的表格。 若要轉換互動式PDF表單，請叫 `FormsServiceClient` 用物件的方 `renderPDFForm` 法或 `renderPDFForm2` 方法。
+若要轉換表單，請使用在Designer中建立並儲存為XDP或PDF檔案的表單設計。 此外，您也可以轉換使用Acrobat建立並儲存為PDF檔案的表格。 若要轉換互動式PDF表單，請叫用`FormsServiceClient`物件的`renderPDFForm`方法或`renderPDFForm2`方法。
 
-使 `renderPDFForm` 用對 `URLSpec` 像。 XDP檔案的內容根目錄會使用物件的方法傳遞 `URLSpec` 至Forms服 `setContentRootURI` 務。 表單設計名稱( `formQuery`)會作為單獨的參數值傳遞。 這兩個值會串連起來，以取得表單設計的絕對參照。
+`renderPDFForm`使用`URLSpec`物件。 使用`URLSpec`物件的`setContentRootURI`方法，將XDP檔案的內容根目錄傳遞至Forms服務。 表單設計名稱(`formQuery`)會作為單獨的參數值傳遞。 這兩個值會串連起來，以取得表單設計的絕對參照。
 
-該方 `renderPDFForm2` 法接受包 `com.adobe.idp.Document` 含要渲染的XDP或PDF文檔的實例。
+`renderPDFForm2`方法接受包含要渲染的XDP或PDF文檔的`com.adobe.idp.Document`實例。
 
 >[!NOTE]
 >
 >如果輸入檔案是PDF檔案，則無法設定標籤的PDF執行時期選項。 如果輸入檔案是XDP檔案，則可以設定標籤的PDF選項。
 
-## 使用Java API演算互動式PDF表單 {#render-an-interactive-pdf-form-using-the-java-api}
+## 使用Java API {#render-an-interactive-pdf-form-using-the-java-api}轉換互動式PDF表單
 
 使用Forms API(Java)演算互動式PDF表格：
 
@@ -188,51 +188,51 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 1. 建立Forms用戶端API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
 
 1. 指定URI值
 
-   * 使用 `URLSpec` 其建構子建立儲存URI值的對象。
-   * 叫用物 `URLSpec` 件的方 `setApplicationWebRoot` 法，並傳遞代表應用程式Web根目錄的字串值。
-   * 叫用物 `URLSpec` 件的方 `setContentRootURI` 法並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定 `repository:///`。
-   * 叫用物 `URLSpec` 件的方 `setTargetURL` 法，並傳遞字串值，指定表單資料張貼的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
+   * 使用`URLSpec`的建構函式建立儲存URI值的&lt;a0/>物件。
+   * 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
+   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定`repository:///`。
+   * 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
 
 1. 將檔案附加至表單
 
-   * 使用建 `java.util.HashMap` 構函式建立物件以儲存檔案附件。
-   * 調用每 `java.util.HashMap` 個檔案的 `put` 物件方法，以附加至轉譯的表單。 將下列值傳遞至此方法：
+   * 使用`java.util.HashMap`物件的建構函式建立檔案附件。
+   * 調用每個檔案的`java.util.HashMap`物件的`put`方法，以附加至轉譯的表單。 將下列值傳遞至此方法：
 
       * 一個字串值，它指定檔案附件的名稱，包括檔案副檔名。
-   * 包 `com.adobe.idp.Document` 含檔案附件的對象。
+   * 包含檔案附件的`com.adobe.idp.Document`對象。
 
    >[!NOTE]
    >
-   >對要附加到表單的每個檔案重複此步驟。 此步驟為可選步驟，如果您 `null` 不想發送檔案附件，則可以通過。
+   >對要附加到表單的每個檔案重複此步驟。 此步驟為可選步驟，如果您不想發送檔案附件，則可以通過`null`。
 
 1. 轉換互動式PDF表單
 
-   叫用物 `FormsServiceClient` 件的方 `renderPDFForm` 法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 包 `com.adobe.idp.Document` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞空 `com.adobe.idp.Document` 物件。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此為可選參數，您可以指 `null` 定是否不想指定執行時選項。
-   * 包 `URLSpec` 含Forms服務所需URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。 此為可選參數，如果您不想指定執行時選項，可以指定`null`。
+   * `URLSpec`物件，包含Forms服務所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
 
-   該方 `renderPDFForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
+   `renderPDFForm`方法返回一個`FormsResult`對象，該對象包含必須寫入客戶端Web瀏覽器的表單資料流。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
-   * 通過調用對象的方 `com.adobe.idp.Document` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `com.adobe.idp.Document` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 調用 `java.io.InputStream` 物件的方 `com.adobe.idp.Document` 法以建立物 `getInputStream` 件。
-   * 建立位元組陣列，並借由調用物件的方法並將 `InputStream` 位元組陣列 `read` 傳入為引數，以表單資料流填入。
-   * 叫用物 `javax.servlet.ServletOutputStream` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
+   * 通過調用`getContentType`方法獲取`com.adobe.idp.Document`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`com.adobe.idp.Document`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 建立位元組陣列，並以`InputStream`物件的`read`方法來填入表單資料流，並將位元組陣列傳入為引數。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
-## 使用web service API轉譯互動式PDF表單 {#render-an-interactive-pdf-form-using-the-web-service-api}
+## 使用web service API {#render-an-interactive-pdf-form-using-the-web-service-api}轉譯互動式PDF表單
 
 使用Forms API(web service)來轉換互動式PDF表格：
 
@@ -243,22 +243,22 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 1. 建立Forms用戶端API物件
 
-   建立對 `FormsService` 像並設定驗證值。
+   建立`FormsService`對象並設定驗證值。
 
 1. 指定URI值
 
-   * 使用 `URLSpec` 其建構子建立儲存URI值的對象。
-   * 叫用物 `URLSpec` 件的方 `setApplicationWebRoot` 法，並傳遞代表應用程式Web根目錄的字串值。
-   * 叫用物 `URLSpec` 件的方 `setContentRootURI` 法並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定 `repository:///`。
-   * 叫用物 `URLSpec` 件的方 `setTargetURL` 法，並傳遞字串值，指定表單資料張貼的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
+   * 使用`URLSpec`的建構函式建立儲存URI值的&lt;a0/>物件。
+   * 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
+   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定`repository:///`。
+   * 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
 
 1. 將檔案附加至表單
 
-   * 使用建 `java.util.HashMap` 構函式建立物件以儲存檔案附件。
-   * 調用每 `java.util.HashMap` 個檔案的 `put` 物件方法，以附加至轉譯的表單。 將下列值傳遞至此方法：
+   * 使用`java.util.HashMap`物件的建構函式建立檔案附件。
+   * 調用每個檔案的`java.util.HashMap`物件的`put`方法，以附加至轉譯的表單。 將下列值傳遞至此方法：
 
       * 指定檔案附件名稱的字串值，包括檔案副檔名
-   * 包 `BLOB` 含檔案附件的對象
+   * 包含檔案附件的`BLOB`對象
 
    >[!NOTE]
    >
@@ -266,29 +266,29 @@ Java `HandleData` Servlet會預先填入此表單，並填入使用者的名字�
 
 1. 轉換互動式PDF表單
 
-   叫用物 `FormsService` 件的方 `renderPDFForm` 法並傳遞下列值：
+   叫用`FormsService`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參照屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 包 `BLOB` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞 `null`。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此為可選參數，您可以指 `null` 定是否不想指定執行時選項。
-   * 包 `URLSpec` 含Forms服務所需URI值的對象。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 這是可選參數，您可以指 `null` 定是否不想將檔案附加到表單。
-   * 由方 `com.adobe.idp.services.holders.BLOBHolder` 法填充的空對象。 這可用來儲存轉譯的PDF表單。
-   * 由方 `javax.xml.rpc.holders.LongHolder` 法填充的空對象。 （此引數將儲存表單中的頁數。）
-   * 由方 `javax.xml.rpc.holders.StringHolder` 法填充的空對象。 （此引數將儲存地區值。）
-   * 包含 `com.adobe.idp.services.holders.FormsResultHolder` 此操作結果的空對象。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。 此為可選參數，如果您不想指定執行時選項，可以指定`null`。
+   * `URLSpec`物件，包含Forms服務所需的URI值。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
+   * 由方法填充的空`com.adobe.idp.services.holders.BLOBHolder`對象。 這可用來儲存轉譯的PDF表單。
+   * 由方法填充的空`javax.xml.rpc.holders.LongHolder`對象。 （此引數將儲存表單中的頁數。）
+   * 由方法填充的空`javax.xml.rpc.holders.StringHolder`對象。 （此引數將儲存地區值。）
+   * 空的`com.adobe.idp.services.holders.FormsResultHolder`對象，將包含此操作的結果。
 
-   該方 `renderPDFForm` 法用必 `com.adobe.idp.services.holders.FormsResultHolder` 須寫入客戶端Web瀏覽器的表單資料流填充作為最後一個參數值傳遞的對象。
+   `renderPDFForm`方法會以必須寫入用戶端網頁瀏覽器的表單資料流填入作為最後一個參數值傳遞的`com.adobe.idp.services.holders.FormsResultHolder`物件。
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 獲取 `FormResult` 對象資料成員的 `com.adobe.idp.services.holders.FormsResultHolder` 值以建立 `value` 對象。
-   * 呼叫 `BLOB` 物件的方法，以建立包含表 `FormsResult` 單資料的物 `getOutputContent` 件。
-   * 通過調用對象的方 `BLOB` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `BLOB` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 建立位元組陣列，並透過叫用物件的方 `BLOB` 法來填入該 `getBinaryData` 陣列。 此任務將對象的內 `FormsResult` 容分配給位元組陣列。
-   * 叫用物 `javax.servlet.http.HttpServletResponse` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 獲取`com.adobe.idp.services.holders.FormsResultHolder`對象`value`資料成員的值，建立`FormResult`對象。
+   * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
+   * 通過調用`getContentType`方法獲取`BLOB`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`BLOB`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
+   * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **將表單資料串流寫入用戶端網頁瀏覽器**
 
