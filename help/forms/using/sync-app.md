@@ -12,15 +12,18 @@ discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 0%
 
 ---
 
 
 # 同步化應用程式{#synchronizing-the-app}
 
-## 同步化應用程式 {#synchronizing-the-app-1}
+## 同步應用程式{#synchronizing-the-app-1}
 
-您應用程式中的表格會從AEM Forms伺服器下載。 表單會下載在「工作」和「表單」標籤下。 從表單建立的草稿會下載到「草稿」索引標籤中，從工作建立的草稿則會下載到「工作」索引標籤中。 對於OSGi伺服器上的獨立表單，表單和草稿會分別下載在「表單」和「草稿」標籤中。
+您應用程式中的表格會從AEM Forms伺服器下載。 表單會下載在「工作」和「表單」標籤下。 從表單建立的草稿會下載到「草稿」索引標籤中，而從工作建立的草稿則會下載到「工作」索引標籤中。 對於OSGi伺服器上的獨立表單，表單和草稿會分別下載在「表單」和「草稿」標籤中。
 
 當您完成並送出表格時，如果應用程式線上，表格會立即上傳回AEM Forms伺服器。 當應用程式同步時，會從伺服器擷取表格。 不過，如果應用程式線上，草稿會立即與伺服器同步。
 
@@ -28,11 +31,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 **若要手動同步應用程式**
 
-點選主畫面 ![右下角的](assets/sync-app.png) 「同步」按鈕sync-app。
+點選主畫面右下角的「同步化」按鈕![sync-app](assets/sync-app.png)。
 
 **更改同步頻率**
 
-1. 若要前往「Setting（設定）」畫面，請點選「Home（首頁）」畫面左上角的功能表按鈕，然後點選「 **Settings（設定）**」。
+1. 若要前往「Setting（設定）」畫面，請點選「Home（主畫面）」左上角的功能表按鈕，然後點選「Settings（設定）」**。**
 1. 在「設定」畫面中，點選「一般」標籤。
 
    ![「常規設定」窗口中的同步頻率設定](assets/gen-settings-2.png)
@@ -40,7 +43,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 1. 在「同步頻率」選項上，點選「同步頻率」右側的值。
 1. 在下拉清單中，選擇新的同步頻率。
 
-### 技術規格 {#technical-specifications}
+### 技術規格{#technical-specifications}
 
 * 將離線應用程式資料送出至AEM Forms伺服器的主要邏輯包含在runtime/offline/util/offline.js中。
 * 在。js中，對processOfflineSubmittedSavedTasks(...)函式的調用將已保存／已提交的任務發送到伺服器。 它還可處理同步過程中的任何錯誤或衝突。 如果提交任務失敗，應用程式上的任務會標示為失敗。 此外，該任務仍保留在您的Outbox中。
