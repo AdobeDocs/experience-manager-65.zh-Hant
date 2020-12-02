@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8e107abb-861f-4063-b600-c87e34639019
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
 
-# 設定SSL的概述 {#overview-of-configuring-ssl}
+# 配置SSL {#overview-of-configuring-ssl}的概述
 
 您可以建立安全通訊端層(SSL)憑證，並在應用程式伺服器上設定SSL，以增強與應用程式伺服器通訊的安全性。
 
@@ -31,4 +34,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >建立SSL安全憑證和憑證時，請使用與您用來執行應用程式伺服器相同的使用者帳戶權限。 如果應用程式伺服器是使用其他使用者權限執行，當ContentRootURI指向https時，表單可能無法正確呈現PDFForm轉譯。
 
-如果您有啟用SSL的LDAP伺服器，請設定「使用者管理」以搭配使用。 (請參 [閱為啟用SSL的LDAP伺服器配置用戶管理](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server)。)
+如果您有啟用SSL的LDAP伺服器，請設定「使用者管理」以搭配使用。 （請參閱[為啟用SSL的LDAP伺服器配置用戶管理](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server)）。
