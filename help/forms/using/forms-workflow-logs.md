@@ -22,7 +22,7 @@ ht-degree: 5%
 
 表單工作流程步驟可方便地提供詳細的記錄檔，以除錯與工作流程相關的問題。 啟用AEM Forms工作流程的除錯記錄功能，以檢視記錄檔。
 
-預設情況下，所有日誌資訊都可 **以在** /crx-repository/logs/目錄的error.log ** 檔案中使用。
+預設情況下，**error.log**&#x200B;檔案中的&#x200B;*/crx-repository/logs/*&#x200B;目錄下的所有日誌資訊都可用。
 
 表單工作流程的除錯記錄檔包括：
 
@@ -77,7 +77,7 @@ ht-degree: 5%
 
 如果有例外，您可以檢視完整的堆疊追蹤，以評估錯誤的原因。
 
-## 啟用AEM Forms工作流程的除錯記錄 {#enable-debug-logging-for-aem-forms-workflows}
+## 啟用AEM Forms工作流程的除錯記錄{#enable-debug-logging-for-aem-forms-workflows}
 
 執行下列步驟，以啟用AEM Forms工作流程的除錯記錄：
 
@@ -85,13 +85,13 @@ ht-degree: 5%
 
    https://&#39;[server]:[port]&#39;/system/console/configMgr
 
-1. 選取 **[!UICONTROL Sling]** > **[!UICONTROL Log Support]**。
-1. 點選 **[!UICONTROL 新增記錄程式。]**
-1. 選擇 **[!UICONTROL Debug]** （調試） **[!UICONTROL 作為Log Level]**。
-1. 指定日誌檔案的位置。 日誌檔案的預設位置為： *logs\error.log*
-1. 在 **Logger欄中，將套件的名稱指** 定為com.adobe.granite.workflow.core **** 。
+1. 選擇&#x200B;**[!UICONTROL Sling]** > **[!UICONTROL Log Support]**。
+1. 點選&#x200B;**[!UICONTROL Add new Logger.]**
+1. 選擇&#x200B;**[!UICONTROL Debug]**&#x200B;作為&#x200B;**[!UICONTROL 日誌級別]**。
+1. 指定日誌檔案的位置。 日誌檔案的預設位置為：*logs\error.log*
+1. 在&#x200B;**[!UICONTROL Logger]**&#x200B;欄中，將套件名稱指定為&#x200B;**com.adobe.granite.workflow.core**。
 
-   執行這些步驟可儲存 **com.adobe.granite.workflow.core套件的除錯記錄** 。 點選 **[!UICONTROL +]** ，並將下列套件名稱新增至清單：
+   執行這些步驟可以儲存&#x200B;**com.adobe.granite.workflow.core**&#x200B;軟體包的調試日誌。 點選&#x200B;**[!UICONTROL +]**&#x200B;並將下列套件名稱新增至清單：
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace
