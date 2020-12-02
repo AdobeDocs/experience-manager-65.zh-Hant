@@ -12,6 +12,9 @@ discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+workflow-type: tm+mt
+source-wordcount: '1904'
+ht-degree: 0%
 
 ---
 
@@ -29,13 +32,13 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 * 工作流程負載
 * 在DAM演算期間暫時建立的資產
 
-當這些臨時對象中的任何一個都足夠大，需要在資料儲存中儲存，並且當對象最終被淘汰時，資料儲存記錄本身將保持為「垃圾」。 在典型的WCM作者／發佈應用程式中，這類最大的廢棄項目來源通常是發佈啟動程式。 當資料複製至「發佈」時，如果資料是先以名為「Durbo」的有效資料格式收集並儲存在下方的儲存庫中，則會收集到資料 `/var/replication/data`。 資料包通常大於資料儲存的關鍵大小閾值，因此最終儲存為資料儲存記錄。 複製完成後，中的節點將被刪 `/var/replication/data` 除，但資料儲存記錄仍保持為「廢棄項」。
+當這些臨時對象中的任何一個都足夠大，需要在資料儲存中儲存，並且當對象最終被淘汰時，資料儲存記錄本身將保持為「垃圾」。 在典型的WCM作者／發佈應用程式中，這類最大的廢棄項目來源通常是發佈啟動程式。 將資料複製到「發佈」時，如果首先以名為「Durbo」的高效資料格式收集到集合中，並儲存在`/var/replication/data`下的儲存庫中，則資料將被複製到「發佈」中。 資料包通常大於資料儲存的關鍵大小閾值，因此最終儲存為資料儲存記錄。 複製完成後，`/var/replication/data`中的節點將被刪除，但資料儲存記錄仍為「廢棄項」。
 
 可恢復垃圾的另一個來源是包。 與其他所有內容一樣，包資料儲存在儲存庫中，因此儲存在資料儲存中的包大於4KB。 在開發項目過程中或在維護系統的同時，可以多次構建和重建包，每個構建都生成新的資料儲存記錄，同時將先前構建的記錄保存。
 
-## 資料儲存廢棄項目收集的運作方式？ {#how-does-data-store-garbage-collection-work}
+## 資料儲存廢棄項目收集的運作方式？{#how-does-data-store-garbage-collection-work}
 
-如果資料庫已配置外部資料存放區，資料存放 [區廢棄項目收集會自動執行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) ，做為「每週維護」視窗的一部分。 系統管理員也可 [以視需要手動執行資料儲存廢棄項目收集](#running-data-store-garbage-collection) 。 一般建議定期執行資料儲存廢棄項目收集，但在規劃資料儲存廢棄項目收集時應考量下列因素：
+如果儲存庫已配置了外部資料儲存，[資料儲存廢棄項目收集將作為「每週維護」窗口的一部分自動運行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection)。 系統管理員還可以根據需要手動[運行資料儲存廢棄項目收集。 ](#running-data-store-garbage-collection)一般建議定期執行資料儲存廢棄項目收集，但在規劃資料儲存廢棄項目收集時應考量下列因素：
 
 * 資料儲存廢棄項目收集需要時間，而且可能會影響效能，因此應據以規劃。
 * 刪除資料儲存廢棄記錄不會影響正常效能，因此這不是效能優化。
@@ -56,14 +59,14 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 >
 >在叢集或共用資料存放區設定（使用Mongo或區段Tar）中執行廢棄項目收集時，記錄檔可能會顯示有關無法刪除特定點滴ID的警告。 這是因為在先前廢棄項目收集中刪除的blob ID被其他沒有ID刪除資訊的群集或共用節點重新錯誤引用。 因此，在執行廢棄項目收集時，當嘗試刪除上次執行中已刪除的ID時，它會記錄警告。 此行為不會影響效能或功能。
 
-## Running Data Store Garbage Collection {#running-data-store-garbage-collection}
+## 運行Data Store Garbage Collection {#running-data-store-garbage-collection}
 
 根據執行AEM的資料存放區設定，執行資料存放區廢棄項目收集有三種方式：
 
-1. Via [Revision Cleanup](/help/sites-deploying/revision-cleanup.md) —— 一種廢棄項目收集機制，通常用於節點儲存清理。
+1. 通過[Revision Cleanup](/help/sites-deploying/revision-cleanup.md) —— 通常用於節點儲存清理的廢棄項目收集機制。
 
-1. 透過 [資料存放區廢棄項目收集](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard) -可在「作業控制面板」上使用的廢棄項目收集機制，它專用於外部資料存放區。
-1. 透過 [JMX主控台](/help/sites-administering/jmx-console.md)。
+1. 透過[Data Store Garbage Collection](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard) —— 可在「作業控制面板」上使用的針對外部資料存放區的廢棄項目收集機制。
+1. 通過[JMX控制台](/help/sites-administering/jmx-console.md)。
 
 如果TarMK同時用作節點儲存和資料儲存，則「修訂清除」可用於對節點儲存和資料儲存進行垃圾回收。 但是，如果已設定外部資料存放區（例如檔案系統資料存放區），則資料存放區廢棄項目收集必須與「修訂清除」分開明確觸發。 資料存放區廢棄項目收集可透過「作業控制面板」或JMX主控台觸發。
 
@@ -99,20 +102,20 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
  </tbody>
 </table>
 
-### 透過「作業控制面板」執行Data Store廢棄項目收集 {#running-data-store-garbage-collection-via-the-operations-dashboard}
+### 透過Operations Dashboard {#running-data-store-garbage-collection-via-the-operations-dashboard}執行Data Store Garbage Collection
 
-內建的「每週維護」視窗可透過 [Operations Dashboard](/help/sites-administering/operations-dashboard.md)，包含內建工作，可在週日1點觸發Data Store Garbage Collection。
+內建每週維護視窗（可透過[ Operations Dashboard](/help/sites-administering/operations-dashboard.md)取得）包含內建工作，可在星期日上午1點觸發Data Store Garbage Collection。
 
 如果您需要在此時間以外執行資料儲存廢棄項目收集，則可透過「作業控制面板」手動觸發。
 
 在運行資料儲存廢棄項收集之前，您應檢查當時是否沒有運行任何備份。
 
-1. 通過導航開啟「操 **作控制** 板」 -> **Tools** -> **Operations** - **** Maintenance Alignment。
-1. 按一下或點選「 **Weekly Maintenance Window**」。
+1. 通過&#x200B;**Navigation** -> **Tools** -> **Operations** -> **Maintenance**&#x200B;開啟「操作儀表板」。
+1. 按一下或點選&#x200B;**Weekly Maintenance Window**。
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. 選取「 **Data Store Garbage Collection** 」工作，然後按一下或點選「 **Run** 」圖示。
+1. 選擇&#x200B;**Data Store Garbage Collection**&#x200B;任務，然後按一下或點選&#x200B;**Run**&#x200B;表徵圖。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -122,11 +125,11 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 
 >[!NOTE]
 >
->只有在您已設定外部檔案資料存放區時，才會顯示「資料存放區廢棄項目收集」工作。 如需 [如何設定檔案資料儲存區的詳細資訊](/help/sites-deploying/data-store-config.md#file-data-store) ，請參閱「在AEM 6中設定節點儲存區和資料儲存區」。
+>只有在您已設定外部檔案資料存放區時，才會顯示「資料存放區廢棄項目收集」工作。 如需如何設定檔案資料儲存區的詳細資訊，請參閱「設定AEM 6[的節點儲存區與資料儲存區」。](/help/sites-deploying/data-store-config.md#file-data-store)
 
-### 透過JMX主控台執行Data Store Garbage Collection {#running-data-store-garbage-collection-via-the-jmx-console}
+### 透過JMX主控台{#running-data-store-garbage-collection-via-the-jmx-console}執行Data Store Garbage Collection
 
-本節內容是關於透過JMX主控台手動執行資料儲存廢棄項目收集。 如果您的安裝是在沒有外部資料存放區的情況下設定，則這不適用於您的安裝。 請參閱維護儲存庫下如何運行修訂清 [除的說明](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)。
+本節內容是關於透過JMX主控台手動執行資料儲存廢棄項目收集。 如果您的安裝是在沒有外部資料存放區的情況下設定，則這不適用於您的安裝。 請參閱[維護儲存庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)下有關如何運行修訂清除的說明。
 
 >[!NOTE]
 >
@@ -134,16 +137,16 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 
 若要執行廢棄項目收集：
 
-1. 在Apache Felix OSGi Management console中，選中「 **Main** 」（主）頁籤，然後從以 **下菜單中選擇** JMX。
-1. 接著，搜索並按一下 **Repository Manager** MBean(或轉至 `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`)。
-1. 按一 **下startDataStoreGC(boolean markOnly)**。
-1. 如果需要`true`，請為參 `markOnly` 數輸入&quot;&quot;:
+1. 在Apache Felix OSGi管理控制台中，反白標示&#x200B;**Main**&#x200B;標籤，然後從下列功能表選擇&#x200B;**JMX**。
+1. 接下來，搜索並按一下&#x200B;**儲存庫管理器** MBean（或轉至`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`）。
+1. 按一下&#x200B;**startDataStoreGC(boolean markOnly)**。
+1. 如果需要，請為`markOnly`參數輸入&quot;`true`&quot;:
 
    | **選項** | **說明** |
    |---|---|
    | 布林markOnly | 設定為true，在標籤和掃描操作中僅標籤參照而不進行掃描。 當基礎BlobStore在多個不同儲存庫之間共用時，將使用此模式。 對於所有其他情況，請將其設為false以執行完全廢棄項目收集。 |
 
-1. 按一 **下叫用**。 CRX會執行廢棄項目收集，並指出其完成時間。
+1. 按一下&#x200B;**叫用**。 CRX會執行廢棄項目收集，並指出其完成時間。
 
 >[!NOTE]
 >
@@ -151,13 +154,13 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 
 >[!NOTE]
 >
->只有在您配置了外部檔案資料儲存時，才會啟動資料儲存廢棄項目收集任務。 如果尚未配置外部檔案資料儲存，則任務將在調用後返回 `Cannot perform operation: no service of type BlobGCMBean found` 消息。 如需 [如何設定檔案資料儲存區的詳細資訊](/help/sites-deploying/data-store-config.md#file-data-store) ，請參閱「在AEM 6中設定節點儲存區和資料儲存區」。
+>只有在您配置了外部檔案資料儲存時，才會啟動資料儲存廢棄項目收集任務。 如果尚未配置外部檔案資料儲存，則任務將在調用後返回消息`Cannot perform operation: no service of type BlobGCMBean found`。 如需如何設定檔案資料儲存區的詳細資訊，請參閱「設定AEM 6[的節點儲存區與資料儲存區」。](/help/sites-deploying/data-store-config.md#file-data-store)
 
-## Automating Data Store Garbage Collection {#automating-data-store-garbage-collection}
+## 自動化資料存放區廢棄項目收集{#automating-data-store-garbage-collection}
 
 如果可能，應在系統負載較小時（例如在早上）執行資料儲存廢棄項目收集。
 
-內建的「每週維護」視窗可透過 [Operations Dashboard](/help/sites-administering/operations-dashboard.md)，包含內建工作，可在週日1點觸發Data Store Garbage Collection。 您還應檢查此時是否未運行任何備份。 視需要透過控制面板自訂維護視窗的開始。
+內建每週維護視窗（可透過[ Operations Dashboard](/help/sites-administering/operations-dashboard.md)取得）包含內建工作，可在星期日上午1點觸發Data Store Garbage Collection。 您還應檢查此時是否未運行任何備份。 視需要透過控制面板自訂維護視窗的開始。
 
 >[!NOTE]
 >
@@ -167,7 +170,7 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 
 >[!CAUTION]
 >
->在以下示例中， `curl` 可能需要為實例配置各種參數；例如，實際資料 `localhost`存放廢棄項目收集的主機名稱()、埠( `4502`)、管理密碼( `xyz`)和各種參數。
+>在以下示例中，`curl`命令可能需要為實例配置各種參數；例如，實際資料存放廢棄項目收集的主機名稱(`localhost`)、連接埠(`4502`)、管理密碼(`xyz`)和各種參數。
 
 以下是透過命令列叫用資料儲存廢棄項目收集的curl命令範例：
 
@@ -177,15 +180,15 @@ curl -u admin:admin -X POST --data markOnly=true  https://localhost:4503/system/
 
 curl命令會立即返回。
 
-## 檢查資料儲存一致性 {#checking-data-store-consistency}
+## 檢查資料儲存一致性{#checking-data-store-consistency}
 
 資料存放區一致性檢查會報告遺失但仍被參考的資料存放區二進位檔案。 要啟動一致性檢查，請執行以下步驟：
 
-1. 前往JMX主控台。 如需如何使用JMX主控台的詳細資訊，請參 [閱本文](/help/sites-administering/jmx-console.md#using-the-jmx-console)。
-1. 搜尋 **BlobGarbageCollection** Mbean，然後按一下。
-1. 按一下 `checkConsistency()` 連結。
+1. 前往JMX主控台。 如需如何使用JMX主控台的詳細資訊，請參閱[本文](/help/sites-administering/jmx-console.md#using-the-jmx-console)。
+1. 搜索&#x200B;**BlobGarbageCollection** Mbean並按一下它。
+1. 按一下`checkConsistency()`連結。
 
-一致性檢查完成後，將顯示報告為缺少的二進位檔案數。 如果數字大於0，請查看以了 `error.log` 解有關缺少二進位檔案的詳細資訊。
+一致性檢查完成後，將顯示報告為缺少的二進位檔案數。 如果數字大於0，請查看`error.log`以取得有關遺失二進位檔案的詳細資訊。
 
 以下是如何在記錄檔中報告遺失二進位檔案的範例：
 
