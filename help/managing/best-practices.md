@@ -19,34 +19,34 @@ ht-degree: 1%
 ---
 
 
-# 管理專案——最佳實務檢查清單{#managing-projects-best-practices-checklist}
+# 管理項目——最佳實踐檢查清單{#managing-projects-best-practices-checklist}
 
 管理專案以實作Adobe Experience Manager(AEM)需要規劃和瞭解，以確保您瞭解所需要（在實施專案之前和期間）的問題和（相關）決策。
 
 為協助您，最佳實務包括：
 
-* 互動 [式檢查清單](/help/managing/best-practices-checklist.md) ，可讓您透過這些最佳實務來追蹤和監控您的進度。
+* [互動式檢查清單](/help/managing/best-practices-checklist.md)可讓您透過這些最佳實務來追蹤和監控您的進度。
 
    * 根據階段、里程碑和角色定義輸入和交付項。
    * 提供自動化概述（質量、運行狀況和完整性），以指明進度和項目運行狀況。
 
-* 檔案會直接根據檢 [查清單](/help/managing/best-practices-checklist.md)，詳細說明：
+* 檔案直接根據[檢查清單](/help/managing/best-practices-checklist.md)詳細說明：
 
-   * [專案心率](#projectheartbeat) 分析。
-   * [依角色的狀態](#status-by-role) 概觀。
+   * [專案](#projectheartbeat) 心率分析。
+   * [Status by ](#status-by-role) Roleoverview.
    * [階段和里程碑](#phases-and-milestones)。
-   * [關鍵人物](#persona) ，以及他們在每個（相關）階段的參與。
-   * 所需 [文檔](/help/managing/best-practices-glossary.md) 和交 [付項的辭彙表](#required-documents-and-deliverables)。
+   * [關鍵](#persona) 人員及其參與各階段（相關）的工作。
+   * [所需文檔和交付項](#required-documents-and-deliverables)的[辭彙表](/help/managing/best-practices-glossary.md)。
 
-* [進一步的參考材料](/help/managing/best-practices-further-reference.md) ，以提供有關特定領域的更多細節。
+* [進一步](/help/managing/best-practices-further-reference.md) 參考資料，以提供特定領域的詳細資訊。
 
-## 專案心率儀表板 {#project-heartbeat-dashboard}
+## 專案心率控制面板{#project-heartbeat-dashboard}
 
-「專 **案心率** 」工作表提供專案關鍵量度的圖形概覽：
+**專案心率**&#x200B;工作表提供專案重要度量的圖形概述：
 
 * **相位品質**
 
-   * 指明項目中所需 [文檔和交付項](#required-documents-and-deliverables) 的質量。
+   * 指示項目中[必需文檔和交付項](#required-documents-and-deliverables)的質量。
 
 * **Phase Health（階段健康）**
 
@@ -56,21 +56,21 @@ ht-degree: 1%
 
    * 在專案期間的任何時間點，這表示您的專案每個階段已完成多少工作。
 
-## 依角色的狀態 {#status-by-role}
+## 按角色列出的狀態{#status-by-role}
 
-按職 **責列出的狀態工作表顯示了Health** 、Quality [****&#x200B;和Phase Persona **By Phase Implective** By Phase Phise Alignments和Persona Persona ****](#projectheartbeat)**[](#phases-and-milestones)****[](#persona)**&#x200B;的詳細細目。
+**按角色列出的狀態**&#x200B;工作表顯示&#x200B;[**健康**、**質量**&#x200B;和&#x200B;**完整性**](#projectheartbeat)&#x200B;由&#x200B;**[階段](#phases-and-milestones)**&#x200B;和&#x200B;**[角色](#persona)**&#x200B;細目。
 
-## 階段和里程碑 {#phases-and-milestones}
+## 階段和里程碑{#phases-and-milestones}
 
 項目計劃分為不同的（高級別）階段。
 
-每個階段都包含其自己的里程碑。 對於每 [個角色](#persona) （或角色），將列出相關裡程碑以及生成定義的交付項所需的文檔。
+每個階段都包含其自己的里程碑。 對於每個[個人](#persona)（或角色），將列出相關裡程碑，以及生成定義的交付項所需的文檔。
 
 >[!NOTE]
 >
 >個別所需文檔和交付項之間沒有直接的1:1關係。
 
-### 準備 {#preparation}
+### 準備{#preparation}
 
 準備專案是整個專案的基礎。 您需要定義關鍵需求以及明確的目標和期望：
 
@@ -90,7 +90,7 @@ ht-degree: 1%
 
 ![projectphaces_fourphases](assets/projectphases_fourphases.png)
 
-#### Milestones {#milestones}
+#### 里程碑{#milestones}
 
 * **驗證**
 
@@ -124,7 +124,7 @@ ht-degree: 1%
 
 規劃您的專案整合了準備。 在此，您需要開始將目標和期望轉化為明確定義的路線圖，其中包括具體任務，並有明確的溝通約束，並有嚴格的審查來衡量進展。
 
-#### Milestones {#milestones-1}
+#### 里程碑{#milestones-1}
 
 * **移交**
 
@@ -158,11 +158,11 @@ ht-degree: 1%
 
       * 只要在專案開始時讓主要參與者（包括潛在作者）參與，您就會增加他們投入專案的機會。
 
-### 開發準備 {#development-preparation}
+### 開發準備{#development-preparation}
 
 規劃開發是確保專案由具備所需知識的團隊以紮實的設計為基礎的關鍵。
 
-#### Milestones {#milestones-2}
+#### 里程碑{#milestones-2}
 
 * **開發團隊人員配備和培訓**
 
@@ -182,16 +182,16 @@ ht-degree: 1%
 
    系統體系結構定義了系統的概念視圖；包括（其中包括其他資訊）:
 
-   * [所有必要環境](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) ，都適用的系統結構
+   * [適用於所](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 有必要環境的系統結構
    * 子系統
    * 協力廠商系統
    * 介面；硬體、軟體和人際互動
-   * 每個環境的伺服器；請參閱技 [術要求](/help/sites-deploying/technical-requirements.md) 和硬 [件大小指南](/help/managing/hardware-sizing-guidelines.md)
+   * 每個環境的伺服器；請參閱[技術要求](/help/sites-deploying/technical-requirements.md)和[硬體尺寸指南](/help/managing/hardware-sizing-guidelines.md)
 
    * 每個環境的流程；例如，部署和維護需求
    * 維護活動（資料儲存GC、TarPM優化等）
-   * [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) caching
-   * [叢集發佈](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) /授權共用
+   * [調度程](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 式快取
+   * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 發佈／授權共用
    * 用戶端的效能（JS minify、concat、css精靈、http要求總數等）
 
 * **應用程式架構**
@@ -217,12 +217,12 @@ ht-degree: 1%
 
    系統整合需要您規劃（然後實施）:
 
-   * 各子系統和解決方案的 [整合如何](/help/sites-administering/integration.md) ，將其整合為一個相干系統
+   * 所有子系統和[解決方案整合如何整合在一起，以作為一個相干系統運行](/help/sites-administering/integration.md)
    * 將如何整合任何協力廠商系統；搭配任何特殊考量，例如離線／線上、用戶端／瀏覽器端或第三方系統關機時的故障處理
 
 * **測試概念**
 
-   在開始開發之前，您應先針對專案制定深入而完整 [的測](/help/sites-developing/planning.md) 試需求。
+   在開始開發之前，您應先針對您的專案制定深入而全面的[testing](/help/sites-developing/planning.md)需求概念。
 
    這應包括（其中包括）:
 
@@ -242,13 +242,13 @@ ht-degree: 1%
 
    在開發之前，應設定部署、發佈、測試和報告問題所需的所有支援程式。
 
-   另請參閱 [Adobe支援入口網站](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
+   另請參閱[Adobe支援入口網站](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
-### 運營規劃和運營 {#operations-planning-and-operations}
+### 工序計畫和工序{#operations-planning-and-operations}
 
 在類似的基礎上，必須正確規劃操作以確保您擁有項目生命週期所有階段所需的環境。 您還需要適當的流程來維護它們。
 
-#### Milestones {#milestones-3}
+#### 里程碑{#milestones-3}
 
 * **權限**
 
@@ -256,13 +256,13 @@ ht-degree: 1%
 
    例如：
 
-   * 角色（即組）的清單，每個角色具有 `read`/訪 `write` 問定義
+   * 每個角色（即組）的`read`/ `write`訪問定義清單
 
-   * 定義影響發佈環境的權限的使用；例如， `replicate`
+   * 定義影響發佈環境的權限的使用；例如，`replicate`
    * 對於具有最低權限的用戶，應定義工作流
-   * 群組中的 `editor` 使用者不應擁有 `admin` 任何權限，也不應屬於群 `administrators` 組
+   * `editor`群組中的使用者不應具有`admin`權限，也不應是`administrators`群組的一部分
 
-   如需詳細資訊，請參 [閱使用者管理與安全性](/help/sites-administering/security.md)。
+   如需詳細資訊，請參閱[使用者管理與安全性](/help/sites-administering/security.md)。
 
 * **監控與維護**
 
@@ -271,7 +271,7 @@ ht-degree: 1%
    * 需要監控的項目
    * 維護任務；都是經常和特殊情況
 
-   如需詳細 [資訊，請參閱監](/help/sites-deploying/monitoring-and-maintaining.md) 控與維護。
+   如需詳細資訊，請參閱[監控與維護](/help/sites-deploying/monitoring-and-maintaining.md)。
 
 * **移轉**
 
@@ -285,7 +285,7 @@ ht-degree: 1%
 
 開發是一個重要階段，不僅需要編碼。
 
-#### Milestones {#milestones-4}
+#### 里程碑{#milestones-4}
 
 * **開發環境**
 
@@ -325,16 +325,16 @@ ht-degree: 1%
    * 部署順序
    * 協力廠商軟體整合／相依性
    * 安全性設定
-   * 在生產設定上執行 [Tough Day測試](/help/sites-developing/tough-day.md) ，以驗證基準效能
-   * 效能測試要求；請參閱 [質量保證的最佳實踐](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
+   * 在生產設定上執行[Tough Day tests](/help/sites-developing/tough-day.md)，以驗證基準效能
+   * 效能測試要求；請參閱[質量保證最佳實踐](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
 
 * **整合**
 
-   規劃、記錄和測試系統和解決方案整合的所 [有方面](/help/sites-administering/integration.md)，包括：
+   計畫、記錄和測試系統的所有方面和[解決方案整合](/help/sites-administering/integration.md)，包括：
 
    * 自動化測試策略
-   * 自動化流程， [將應用程式從開發移至測試，然後移至生產](/help/managing/enterprise-devops.md#code-movement)
-   * 自動化流程， [將內容從製作移至測試與開發](/help/managing/enterprise-devops.md#content-movement)
+   * 自動化流程至[將應用程式從開發移至測試，然後將生產](/help/managing/enterprise-devops.md#code-movement)
+   * 自動化流程[將內容從製作移至測試與開發](/help/managing/enterprise-devops.md#content-movement)
 
 * **移轉**
 
@@ -355,9 +355,9 @@ ht-degree: 1%
    * 任何可能影響升級的自訂
    * 發行說明
 
-### 效能與測試 {#performance-and-testing}
+### 效能和測試{#performance-and-testing}
 
-新應用程式一推出，就需要經過嚴格的測試，包括功能與效 [能](/help/sites-deploying/configuring-performance.md)。
+新應用程式推出後，將需要進行嚴格的測試，包括功能和[效能](/help/sites-deploying/configuring-performance.md)。
 
 >[!NOTE]
 >
@@ -365,7 +365,7 @@ ht-degree: 1%
 >
 >項目經理有責任評估結果的任何影響並決定採取適當行動。
 
-#### Milestones {#milestones-5}
+#### 里程碑{#milestones-5}
 
 * **用戶驗收測試**
 
@@ -394,7 +394,7 @@ ht-degree: 1%
 
 您新應用程式的推出需要謹慎規劃，以確保順暢的上線。 這包括確認高安全性、培訓所有潛在使用者，以及進行多次干預，以確認所有問題都已解決。
 
-#### Milestones {#milestones-6}
+#### 里程碑{#milestones-6}
 
 * **準備**
 
@@ -404,7 +404,7 @@ ht-degree: 1%
 
    確保所有相關人員都得到培訓。
 
-   請參 [閱課程目錄中的Adobe Experience Manager](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 。
+   請參閱課程目錄中的[Adobe Experience Manager](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)。
 
 * **經過培訓的管理員**
 
@@ -430,13 +430,13 @@ ht-degree: 1%
 
    為確保解決方案的安全性，請執行特定的滲透測試，以及更廣泛的安全性測試。
 
-   如需詳細 [資訊，請參閱安全性檢查清單](/help/sites-administering/security-checklist.md) 。
+   如需詳細資訊，請參閱[安全性檢查清單](/help/sites-administering/security-checklist.md)。
 
-### 上線 {#go-live}
+### 上線{#go-live}
 
 您希望「上線」盡可能順暢。 最後的步驟需要規劃以執行乾淨。
 
-#### Milestones {#milestones-7}
+#### 里程碑{#milestones-7}
 
 * **準備**
 
@@ -466,9 +466,9 @@ ht-degree: 1%
 
 檢查清單是由個人設計。 這些角色在項目生命週期中具有重要的參與性。
 
-還有一些其 [他角色](#other-persona) ，涉及到具體任務。
+還有一些[其他角色](#other-persona)參與特定任務。
 
-### 專案贊助人 {#project-sponsor}
+### 項目發起人{#project-sponsor}
 
 項目發起人是：
 
@@ -480,7 +480,7 @@ ht-degree: 1%
 
 * 根據客戶規劃藍圖提供主要里程碑。
 
-### 專案經理 {#project-manager}
+### 項目經理{#project-manager}
 
 項目經理是：
 
@@ -488,7 +488,7 @@ ht-degree: 1%
 * 負責定義預算並根據該預算為項目提供資源。
 * 參與項目的所有人員的主要溝通點。
 
-### 架構師 {#architect}
+### 架構設計人員{#architect}
 
 解決方案架構師：
 
@@ -496,7 +496,7 @@ ht-degree: 1%
 * 協助定義AEM的實作策略。 例如，是要實作叢集安裝、還是冷待機，或是需要內容傳送網路(CDN)。
 * 此外，還可根據用戶端需求定義AEM解決方案架構。 這可包括使用者角色（具有相關權限）的概念、範本與元件之間的關係，或何時使用多網站管理。
 
-### 商業分析師 {#business-analyst}
+### 業務分析師{#business-analyst}
 
 商業分析師：
 
@@ -511,7 +511,7 @@ ht-degree: 1%
    * 成功標準。
    * KPI（以業務和績效為基礎）。
 
-### 開發領導 {#development-lead}
+### 開發領導{#development-lead}
 
 開發領導：
 
@@ -524,7 +524,7 @@ ht-degree: 1%
 
 * 與架構設計人員密切合作（尤其是在制定AEM的開發策略時），以定義範本與元件之間的關係、協力廠商應用程式的整合策略，以及任何特殊功能。
 
-### 質量銷售線索 {#quality-lead}
+### 質量銷售線索{#quality-lead}
 
 質量銷售線索：
 
@@ -532,7 +532,7 @@ ht-degree: 1%
 * 定義品質量度、與所有利益相關者一致、制定測試計畫並確保執行。
 * 建立報告，並向專案相關人員提供。
 
-### 系統工程師 {#system-engineer}
+### 系統工程師{#system-engineer}
 
 系統工程師：
 
@@ -544,14 +544,14 @@ ht-degree: 1%
 
 * 提供硬體建議、監控各種實作，並在上線前和上線後提供作業支援。
 
-### 安全領導 {#security-lead}
+### 安全線索{#security-lead}
 
 安全領導：
 
 * 負責解決方案的整體安全性概念，確保其符合客戶的任何要求和政策。
 * 為任何基於硬體的安全概念提供安全概念、安全操作和建議；例如區域和防火牆。
 
-### 其他角色 {#other-persona}
+### 其他角色{#other-persona}
 
 * 利益相關者
 
@@ -577,33 +577,33 @@ ht-degree: 1%
 
    * 將使用系統來建立和維護您網站內容的人員。
 
-## 所需文檔和交付件 {#required-documents-and-deliverables}
+## 所需文檔和交付項{#required-documents-and-deliverables}
 
-檢查清單涵蓋每 **個里程碑的** 「必 **要檔案」(Required Documents** )和「交付項」(Deliverables)。
+檢查清單涵蓋每個里程碑的&#x200B;**必需文檔**&#x200B;和&#x200B;**交付項**。
 
 * 兩者之間沒有1:1的關係；例如，一組必需文檔可以生成單個交付項。
 * 同一里程碑期間，一個角色的交付內容可以是另一個角色的必需文檔。
 
-### 必要檔案 {#required-documents}
+### 所需文檔{#required-documents}
 
-在生 **成交件時** ，適當的角色需要「必要檔案」。
+在生成交付項時，適當的角色需要&#x200B;**必需文檔**。
 
-對於每個 **必需文檔** ，角色應指明：
+對於每個&#x200B;**必需文檔**，角色應指明：
 
 * **Y/N**:是否收到。
 * **1-3**:表示所接收文檔的質量。
 
-### 交付項 {#deliverables}
+### 交付項{#deliverables}
 
 對於每個里程碑，適當的角色負責提供特定文檔，從而實現其對特定里程碑的責任。
 
-對於每個 **交付項** ，角色必須指明：
+對於每個&#x200B;**Deliverable**，角色必須指明：
 
 * **Y/N**:是否已完成。
 
-交付項通常用作當 **前里程碑** 或以後里程碑的必需文檔。
+交付項通常用作當前里程碑或以後里程碑的&#x200B;**必需文檔**。
 
-## 相關最佳實務 {#related-best-practices}
+## 相關最佳做法{#related-best-practices}
 
 如需部署、管理、開發或撰寫的最佳實務，請參閱下列：
 
@@ -617,9 +617,10 @@ ht-degree: 1%
 * [制定最佳做法](/help/sites-developing/best-practices.md)
 * [編寫最佳實務](/help/sites-authoring/best-practices.md)
 
-## 主要檔案區域 {#key-documentation-areas}
+## 主要檔案區域{#key-documentation-areas}
 
-* AEM檔案此外，AEM檔案的下列章節特別感興趣（不過，此清單並非完整）:
+* AEM檔案
+此外，AEM檔案的下列章節特別感興趣（不過，此清單並非完整）:
 
    * [安全性](/help/sites-developing/security.md)
    * [建議的部署](/help/sites-deploying/recommended-deploys.md)
@@ -633,5 +634,5 @@ ht-degree: 1%
 
 * 相關檔案
 
-   * Adobe Experience Cloud - [規劃Adobe Experience Cloud](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
+   * Adobe Experience Cloud - [Planning for the Adobe Experience Cloud](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
 
