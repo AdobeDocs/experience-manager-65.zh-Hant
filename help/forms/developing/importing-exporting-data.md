@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 匯入和匯出資料 {#importing-and-exporting-data}
+# 導入和導出資料{#importing-and-exporting-data}
 
-## 關於表單資料整合服務 {#about-the-form-data-integration-service}
+## 關於表單資料整合服務{#about-the-form-data-integration-service}
 
 表單資料整合服務可將資料匯入PDF表單，並從PDF表單匯出資料。 匯入和匯出作業支援兩種PDF表單：
 
@@ -34,14 +34,14 @@ ht-degree: 0%
 
 您可以使用表單資料整合服務完成下列工作：
 
-* 將資料匯入PDF表單。 如需詳細資訊，請參 [閱匯入表單資料](importing-exporting-data.md#importing-form-data)。
-* 從PDF表單匯出資料。 如需詳細資訊，請參 [閱匯出表單資料](importing-exporting-data.md#exporting-form-data)。
+* 將資料匯入PDF表單。 如需詳細資訊，請參閱[匯入表單資料](importing-exporting-data.md#importing-form-data)。
+* 從PDF表單匯出資料。 如需詳細資訊，請參閱[匯出表單資料](importing-exporting-data.md#exporting-form-data)。
 
 >[!NOTE]
 >
->如需表單資料整合服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 匯入表單資料 {#importing-form-data}
+## 導入表單資料{#importing-form-data}
 
 您可以使用表單資料整合服務，將表單資料匯入互動式PDF表單。 互動式PDF表單是PDF檔案，其中包含一或多個欄位，用於收集使用者的資訊或顯示自訂資訊。 表單資料整合服務不支援表單計算、驗證或指令碼。
 
@@ -84,9 +84,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需表單資料整合服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary-of-steps}
+### 步驟{#summary-of-steps}摘要
 
 若要將表單資料匯入PDF表單，請執行下列步驟：
 
@@ -109,11 +109,11 @@ ht-degree: 0%
 * adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
 * jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
 
-如需這些JAR檔案位置的詳細資訊，請參 [閱「包含AEM Forms Java程式庫檔案」](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立表單資料整合服務客戶端**
 
-您必須先建立資料整合服務用戶端，才能以程式設計方式將資料匯入PDF表單用戶端API。 建立服務客戶端時，您定義調用服務所需的連接設定。 有關資訊，請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+您必須先建立資料整合服務用戶端，才能以程式設計方式將資料匯入PDF表單用戶端API。 建立服務客戶端時，您定義調用服務所需的連接設定。 有關資訊，請參見[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 **參考PDF表格**
 
@@ -145,7 +145,7 @@ ht-degree: 0%
 
 [匯出表單資料](importing-exporting-data.md#exporting-form-data)
 
-### 使用Java API匯入表單資料 {#import-form-data-using-the-java-api}
+### 使用Java API {#import-form-data-using-the-java-api}匯入表單資料
 
 使用表單資料整合API(Java)匯入表單資料：
 
@@ -155,99 +155,99 @@ ht-degree: 0%
 
 1. 建立表單資料整合服務用戶端。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormDataIntegrationClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormDataIntegrationClient`對象。
 
 1. 參考PDF表格。
 
-   * 使用其 `java.io.FileInputStream` 建構函式建立物件。 傳遞指定PDF表單位置的字串值。
-   * 使用 `com.adobe.idp.Document` 建構函式建立儲存PDF表單的物 `com.adobe.idp.Document` 件。 將包含 `java.io.FileInputStream` PDF表格的物件傳遞至建構函式。
+   * 使用其建構子建立`java.io.FileInputStream`對象。 傳遞指定PDF表單位置的字串值。
+   * 使用`com.adobe.idp.Document`建構函式建立儲存PDF表單的`com.adobe.idp.Document`物件。 將包含PDF表單的`java.io.FileInputStream`物件傳遞至建構函式。
 
 1. 參考XML資料來源。
 
-   * 使用 `java.io.FileInputStream` 其建構函式建立物件，並傳遞字串值，指定XML檔案（包含要匯入表單的資料）的位置。
-   * 使用建 `com.adobe.idp.Document` 構函式建立儲存表單資料的物 `com.adobe.idp.Document` 件。 將包含 `java.io.FileInputStream` 表單資料的物件傳遞至建構函式。
+   * 使用其建構子建立`java.io.FileInputStream`對象，並傳遞一個字串值，該字串值指定要導入表單的資料的XML檔案的位置。
+   * 使用`com.adobe.idp.Document`建構函式建立儲存表單資料的`com.adobe.idp.Document`物件。 將包含表單資料的`java.io.FileInputStream`物件傳遞至建構函式。
 
 1. 將資料匯入PDF表單。
 
-   調用物件的方法並傳遞下 `FormDataIntegrationClient` 列值，將 `importData` 資料匯入PDF表單：
+   調用`FormDataIntegrationClient`物件的`importData`方法並傳遞下列值，將資料匯入PDF表單：
 
-   * 儲存 `com.adobe.idp.Document` PDF表單的物件。
-   * 存 `com.adobe.idp.Document` 儲表單資料的對象。
+   * 儲存PDF表單的`com.adobe.idp.Document`對象。
+   * 儲存表單資料的`com.adobe.idp.Document`對象。
 
-   此方 `importData` 法會傳回 `com.adobe.idp.Document` 儲存PDF表單的物件，該PDF表單包含位於XML資料來源中的資料。
+   `importData`方法返回一個`com.adobe.idp.Document`對象，該對象儲存一個包含位於XML資料源中的資料的PDF表單。
 
 1. 將PDF表格儲存為PDF檔案。
 
-   * 建立物 `java.io.File` 件，並確定副檔名為&quot;。PDF&quot;。
-   * 叫用 `Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `Document` 由方法傳回的物 `Document``importData` 件)。
+   * 建立`java.io.File`物件，並確定副檔名為&quot;。PDF&quot;。
+   * 叫用`Document`物件的`copyToFile`方法，將`Document`物件的內容複製至檔案（請確定您使用`importData`方法傳回的`Document`物件）。
 
 **另請參閱**
 
 [步驟摘要](importing-exporting-data.md#summary-of-steps)
 
-[快速入門（SOAP模式）: 使用Java API匯入表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API匯入表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API匯入表單資料 {#import-form-data-using-the-web-service-api}
+### 使用web service API {#import-form-data-using-the-web-service-api}匯入表單資料
 
 使用表單資料整合API(web service)匯入表單資料：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立表單資料整合服務用戶端。
 
-   * 使用其 `FormDataIntegrationClient` 預設建構函式建立物件。
-   * 使用建 `FormDataIntegrationClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。 不過，請指 `?blob=mtom` 定使用MTOM。
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `FormDataIntegrationClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`FormDataIntegrationClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormDataIntegrationClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
+   * 獲取`FormDataIntegrationClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `FormDataIntegrationClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`FormDataIntegrationClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 參考PDF表格。
 
-   * 使用其 `BLOB` 建構函式建立物件。 此 `BLOB` 物件用來儲存PDF表格。
-   * 通過調用 `System.IO.FileStream` 其建構子建立對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法，以串流資料填 `System.IO.FileStream` 入位元組 `Read` 陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 此`BLOB`物件用來儲存PDF表單。
+   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 參考XML資料來源。
 
-   * 使用其 `BLOB` 建構函式建立物件。 此 `BLOB` 物件用來儲存匯入表單的資料。
-   * 通過調用 `System.IO.FileStream` 其建構子建立對象。 傳遞一個字串值，指定包含要匯入資料的XML檔案位置，以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法，以串流資料填 `System.IO.FileStream` 入位元組 `Read` 陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 此`BLOB`物件用來儲存匯入表單的資料。
+   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，指定包含要匯入資料的XML檔案位置，以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 將資料匯入PDF表單。
 
-   調用物件的方法並傳遞下 `FormDataIntegrationClient` 列值，將 `importData` 資料匯入PDF表單：
+   調用`FormDataIntegrationClient`物件的`importData`方法並傳遞下列值，將資料匯入PDF表單：
 
-   * 儲存 `BLOB` PDF表單的物件。
-   * 存 `BLOB` 儲表單資料的對象。
+   * 儲存PDF表單的`BLOB`對象。
+   * 儲存表單資料的`BLOB`對象。
 
-   此方 `importData` 法會傳回 `BLOB` 儲存PDF表單的物件，該PDF表單包含位於XML資料來源中的資料。
+   `importData`方法返回一個`BLOB`對象，該對象儲存一個包含位於XML資料源中的資料的PDF表單。
 
 1. 將PDF表格儲存為PDF檔案。
 
-   * 呼叫 `System.IO.FileStream` 其建構函式並傳遞代表PDF檔案檔案位置的字串值，以建立物件。
-   * 建立一個位元組陣列，該陣列儲存由方 `BLOB` 法返回的對象的資料內 `importData` 容。 取得物件欄位的值，以填入 `BLOB` 位元組陣 `MTOM` 列。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
-   * 調用物件的方法並傳遞位元組陣列，將位元組 `System.IO.BinaryWriter` 的內容 `Write` 寫入PDF檔案。
+   * 調用`System.IO.FileStream`對象的建構子並傳遞一個字串值，該字串值表示PDF檔案的檔案位置。
+   * 建立一個位元組陣列，用於儲存`importData`方法返回的`BLOB`對象的資料內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
 
@@ -255,15 +255,15 @@ ht-degree: 0%
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## 匯出表單資料 {#exporting-form-data}
+## 導出表單資料{#exporting-form-data}
 
 您可以使用表單資料整合服務，從互動式PDF表單匯出表單資料。 匯出的資料格式取決於表單類型。 如果表單類型是在Acrobat中建立的Acrobat表單，則匯出的資料是XFDF。 如果表單類型是在Designer中建立的XML表單，則導出的資料是XDP。
 
 >[!NOTE]
 >
->如需表單資料整合服務的詳細資訊，請參閱「AEM表 [單的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步驟摘要 {#summary_of_steps-1}
+### 步驟{#summary_of_steps-1}摘要
 
 若要從PDF表單匯出表單資料，請執行下列步驟：
 
@@ -287,7 +287,7 @@ ht-degree: 0%
 
 **建立表單資料整合服務客戶端**
 
-您必須先建立資料整合服務用戶端，才能以程式設計方式將資料匯入PDF formClient API。 建立服務客戶端時，您定義調用服務所需的連接設定。 有關資訊，請 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+您必須先建立資料整合服務用戶端，才能以程式設計方式將資料匯入PDF formClient API。 建立服務客戶端時，您定義調用服務所需的連接設定。 有關資訊，請[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 **參考PDF表格**
 
@@ -315,7 +315,7 @@ ht-degree: 0%
 
 [匯入表單資料](importing-exporting-data.md#importing-form-data)
 
-### 使用Java API匯出表單資料 {#export-form-data-using-the-java-api}
+### 使用Java API {#export-form-data-using-the-java-api}匯出表單資料
 
 使用表單資料整合API(Java)匯出表單資料：
 
@@ -325,74 +325,74 @@ ht-degree: 0%
 
 1. 建立表單資料整合服務用戶端。
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。
-   * 使用其 `FormDataIntegrationClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormDataIntegrationClient`對象。
 
 1. 參考PDF表格。
 
-   * 使用 `java.io.FileInputStream` 其建構函式建立物件，並傳遞字串值，指定PDF表單（包含要匯出的資料）的位置。
-   * 使用 `com.adobe.idp.Document` 建構函式建立儲存PDF表單的物 `com.adobe.idp.Document` 件。 將包含 `java.io.FileInputStream` PDF表格的物件傳遞至建構函式。
+   * 使用其建構函式建立`java.io.FileInputStream`物件，並傳遞字串值，指定要匯出資料的PDF表單位置。
+   * 使用`com.adobe.idp.Document`建構函式建立儲存PDF表單的`com.adobe.idp.Document`物件。 將包含PDF表單的`java.io.FileInputStream`物件傳遞至建構函式。
 
 1. 從PDF表單匯出資料。
 
-   調用物件的方 `FormDataIntegrationClient` 法匯出表 `exportData` 單資料，並傳 `com.adobe.idp.Document` 遞儲存PDF表單的物件。 此方法傳回 `com.adobe.idp.Document` 將表單資料儲存為XML架構的物件。
+   叫用`FormDataIntegrationClient`物件的`exportData`方法，並傳遞儲存PDF表單的`com.adobe.idp.Document`物件，以匯出表單資料。 此方法返回將表單資料儲存為XML架構的`com.adobe.idp.Document`對象。
 
 1. 將PDF表格儲存為PDF檔案。
 
-   * 建立物 `java.io.File` 件，並確定副檔名為XML。
-   * 叫用 `Document` 物件的方 `copyToFile` 法，將物件的內容複製至檔案(請確定您使用 `Document` 由方法傳回的物 `Document``exportData` 件)。
+   * 建立`java.io.File`物件，並確定副檔名為XML。
+   * 叫用`Document`物件的`copyToFile`方法，將`Document`物件的內容複製至檔案（請確定您使用`exportData`方法傳回的`Document`物件）。
 
 **另請參閱**
 
 [步驟摘要](importing-exporting-data.md#summary-of-steps)
 
-[快速入門（SOAP模式）: 使用Java API匯出表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API匯出表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用web service API匯出表單資料 {#export-form-data-using-the-web-service-api}
+### 使用web service API {#export-form-data-using-the-web-service-api}匯出表單資料
 
 使用表單資料整合API(web service)匯出表單資料：
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`。
 
-   * 以代 `localhost` 管AEM Forms之伺服器的IP位址取代。
+   * 將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立表單資料整合服務用戶端。
 
-   * 使用其 `FormDataIntegrationClient` 預設建構函式建立物件。
-   * 使用建 `FormDataIntegrationClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`。) 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。 不過，請指 `?blob=mtom` 定使用MTOM。
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `FormDataIntegrationClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`FormDataIntegrationClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormDataIntegrationClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
+   * 獲取`FormDataIntegrationClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `FormDataIntegrationClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`FormDataIntegrationClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 參考PDF表格。
 
-   * 使用其 `BLOB` 建構函式建立物件。 此 `BLOB` 物件用來儲存匯出資料的PDF表單。
-   * 通過調用 `System.IO.FileStream` 其建構子建立對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
-   * 建立儲存物件內容的位元組 `System.IO.FileStream` 陣列。 您可以取得物件的屬性，以決定位元組 `System.IO.FileStream` 的大 `Length` 小。
-   * 調用物件的方法並傳遞 `System.IO.FileStream` 位元組陣列、 `Read` 開始位置和串流長度，以串流資料填入位元組陣列。
-   * 為對象 `BLOB` 分配欄位時， `MTOM` 請使用位元組陣列的內容來填充該對象。
+   * 使用其建構子建立`BLOB`對象。 此`BLOB`物件用來儲存匯出資料的PDF表單。
+   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
+   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
+   * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
+   * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
 1. 從PDF表單匯出資料。
 
-   調用物件的方法並傳遞儲 `FormDataIntegrationClient` 存PDF表單的 `exportData` 物件，將 `BLOB` 資料匯入PDF表單。 此方法傳回 `BLOB` 將表單資料儲存為XML架構的物件。
+   調用`FormDataIntegrationClient`物件的`exportData`方法，並傳遞儲存PDF表單的`BLOB`物件，將資料匯入PDF表單。 此方法返回將表單資料儲存為XML架構的`BLOB`對象。
 
 1. 將PDF表格儲存為PDF檔案。
 
-   * 通過調 `System.IO.FileStream` 用其建構子並傳遞表示XML檔案位置的字串值來建立對象。
-   * 建立一個位元組陣列，該陣列儲存由方 `BLOB` 法返回的對象的資料內 `exportData` 容。 取得物件欄位的值，以填入 `BLOB` 位元組陣 `MTOM` 列。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
-   * 調用物件的方法並傳遞位元組陣列，將位元組 `System.IO.BinaryWriter` 的內容 `Write` 寫入XML檔案。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞表示XML檔案位置的字串值來建立&lt;a0/>對象。
+   * 建立一個位元組陣列，用於儲存`exportData`方法返回的`BLOB`對象的資料內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入XML檔案。
 
 **另請參閱**
 
