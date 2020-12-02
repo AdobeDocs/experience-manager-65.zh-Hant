@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 更改驗證評估順序 {#change-the-order-of-evaluation-for-authentication}
+# 更改驗證評估順序{#change-the-order-of-evaluation-for-authentication}
 
 如果您設定了多個驗證提供者，您可以變更AEM表單評估驗證的順序。 config.xml檔案中列出的驗證提供者順序會決定驗證評估順序。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
     </node>
    ```
 
-   在 `<entry key="order" value="3" />`中，編輯每個節點的值以設定驗證評估的順序。
+   在`<entry key="order" value="3" />`中，編輯每個節點的值，以設定驗證評估的順序。
 
 1. 若要匯入更新檔案，請在「使用者管理」中按一下「設定>匯入和匯出設定檔」。
 1. 按一下「瀏覽」以尋找檔案，按一下「匯入」，然後按一下「確定」。
