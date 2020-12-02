@@ -11,11 +11,14 @@ discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 1%
 
 ---
 
 
-# 對應管理中的自訂特殊字元{#custom-special-characters-in-correspondence-management}
+# Correponsent Management中的自訂特殊字元{#custom-special-characters-in-correspondence-management}
 
 ## 概覽 {#overview}
 
@@ -29,21 +32,21 @@ Correponce Management已內建210個特殊字元的預設支援，您可輕鬆�
 
 可以在字母中插入特殊字元：
 
-* 在文字編 [輯器中](/help/forms/using/document-fragments.md#createtext)
-* 在可編 [輯的內嵌模組中，](../../forms/using/create-correspondence.md#managecontent)
+* 在[文字編輯器](/help/forms/using/document-fragments.md#createtext)中
+* 在[可編輯的對應內嵌模組中](../../forms/using/create-correspondence.md#managecontent)
 
 ![特殊字元線模組](assets/specialcharactersinlinemodule.png)
 
-管理員可透過自訂方式新增更多／自訂特殊字元的支援。 本文提供如何新增對其他自訂特殊字元支援的指示。
+管理員可透過自訂來新增更多／自訂特殊字元的支援。 本文提供如何新增對其他自訂特殊字元支援的指示。
 
-## 在「對應管理」中新增或修改自訂特殊字元的支援 {#creatingfolderstructure}
+## 在Correponse Management {#creatingfolderstructure}中新增或修改對自訂特殊字元的支援
 
 使用下列步驟新增自訂特殊字元的支援：
 
-1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
-1. 在應用程式檔案夾中，建立名為 **[!UICONTROL specialcharacters]** （路徑／結構類似於specialcharacters檔案夾）的檔案夾（位於libs下的textEditorConfig檔案夾）:
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`，以管理員身分登入。
+1. 在應用程式檔案夾中，建立名為&#x200B;**[!UICONTROL specialcharacters]**&#x200B;的檔案夾，其路徑／結構類似於specialcharacters檔案夾（位於libs下的textEditorConfig檔案夾中）:
 
-   1. 在下列路徑上 **按一下特定字元** ，然後選取「覆 **蓋節點」**:
+   1. 在以下路徑中按一下右鍵&#x200B;**specialcharacters**&#x200B;資料夾，然後選擇&#x200B;**覆蓋節點**:
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
@@ -53,7 +56,7 @@ Correponce Management已內建210個特殊字元的預設支援，您可輕鬆�
 
       **覆蓋位置：** /apps/
 
-      **匹配節點類型：** 已勾選
+      **匹配節點類型：已選** 中
 
       >[!NOTE]
       >
@@ -66,25 +69,25 @@ Correponce Management已內建210個特殊字元的預設支援，您可輕鬆�
       >    * 安裝功能套件
 
 
-   1. 按一 **下「確定** 」，然後按一 **下「全部儲存」**。 指定字元資料夾是在指定路徑中建立的。
+   1. 按一下&#x200B;**確定** ，然後按一下&#x200B;**保存全部**。 指定字元資料夾是在指定路徑中建立的。
 
       建立覆蓋後，請驗證節點結構標籤。 使用覆蓋在/apps中建立的每個節點都應具有與該節點在/libs中定義的相同類別和屬性。 如果/apps位置下的節點結構中缺少任何屬性或標籤，請將其標籤與/libs中的對應節點同步。
 
 
 
-1. 確保textEditorConfig **[!UICONTROL 節點具有]** 以下屬性和值：
+1. 請確定&#x200B;**[!UICONTROL textEditorConfig]**&#x200B;節點具有以下屬性和值：
 
    | 名稱 | 類型 | 值 |
    |---|---|---|
    | cmConfigurationType | 字串 | cmTextEditorConfiguration |
    | cssPath | 字串 | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. 按一下右鍵以下路 **[!UICONTROL 徑中的指定字元]** ，然後選擇「 **建立」>「子節點」** ，然後按一下「全 **部保存**:
+1. 按一下右鍵以下路徑中的&#x200B;**[!UICONTROL specialcharacters]**&#x200B;資料夾，然後選擇&#x200B;**建立>子節點** ，然後按一下&#x200B;**保存全部** :
 
    /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
 
 1. 刷新文本編輯器\建立對應UI頁。 您新增的節點是UI中「特殊」字元清單中的最後一個節點。
-1. 按一下「 **全部儲存**」。
+1. 按一下&#x200B;**保存全部**。
 1. 視需要變更特殊字元：
 
 <table>
