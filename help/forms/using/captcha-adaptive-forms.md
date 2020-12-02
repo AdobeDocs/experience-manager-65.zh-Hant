@@ -33,40 +33,40 @@ AEM Forms支援最適化表單中的CAPTCHA。 您可以使用Google的reCAPTCHA
 
 
 
-## 依Google設定ReCAPTCHA服務 {#google-recaptcha}
+## Google {#google-recaptcha}設定ReCAPTCHA服務
 
-表單作者可以使用Google的reCAPTCHA服務，在最適化表單中實作CAPTCHA。 它提供進階的CAPTCHA功能，以保護您的網站。 如需reCAPTCHA運作方式的詳細資訊，請參 [閱Google reCAPTCHA](https://developers.google.com/recaptcha/)。
+表單作者可以使用Google的reCAPTCHA服務，在最適化表單中實作CAPTCHA。 它提供進階的CAPTCHA功能，以保護您的網站。 如需reCAPTCHA運作方式的詳細資訊，請參閱[Google reCAPTCHA](https://developers.google.com/recaptcha/)。
 
 ![Recaptcha](assets/recaptcha_new.png)
 
 若要在AEM Forms中實作reCAPTCHA服務：
 
-1. 從 [Google取得reCAPTCHA API金鑰](https://www.google.com/recaptcha/admin) 對。 它包含網站金鑰和機密。
+1. 從Google取得[reCAPTCHA API金鑰對](https://www.google.com/recaptcha/admin)。 它包含網站金鑰和機密。
 1. 建立雲端服務的設定容器。
 
-   1. 前往「工 **[!UICONTROL 具>一般>設定瀏覽器]**」。
-      * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
+   1. 前往&#x200B;**[!UICONTROL 工具>一般>組態瀏覽器]**。
+      * 如需詳細資訊，請參閱[Configuration Browser](/help/sites-administering/configurations.md)檔案。
    1. 請執行下列動作，為雲端設定啟用全域資料夾，或略過此步驟，為雲端服務設定建立並設定另一個資料夾。
 
-      1. 在「設定瀏覽器」中，選取全域 **[!UICONTROL 資料夾]** ，然後點選「 **[!UICONTROL 屬性」]**。
+      1. 在「配置瀏覽器」中，選擇&#x200B;**[!UICONTROL global]**&#x200B;資料夾，然後點選&#x200B;**[!UICONTROL 屬性]**。
 
-      1. 在「設定屬性」對話方塊中，啟用「 **[!UICONTROL 雲端設定」]**。
-      1. 點選 **[!UICONTROL 「儲存並關閉]** 」以儲存設定並退出對話方塊。
-   1. 在「設定瀏覽器」中，點選「 **[!UICONTROL 建立]**」。
-   1. 在「建立設定」對話方塊中，指定資料夾的標題並啟用「雲 **[!UICONTROL 端設定」]**。
-   1. 點選 **[!UICONTROL 「建立]** 」以建立適用於雲端服務設定的資料夾。
+      1. 在「配置屬性」對話框中，啟用&#x200B;**[!UICONTROL 雲配置]**。
+      1. 點選&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以儲存設定並退出對話方塊。
+   1. 在配置瀏覽器中，按一下&#x200B;**[!UICONTROL 建立]**。
+   1. 在「建立配置」對話框中，指定資料夾的標題並啟用&#x200B;**[!UICONTROL 雲配置]**。
+   1. 點選「**[!UICONTROL 建立]**」以建立可用於雲端服務組態的資料夾。
 
 
 1. 為reCAPTCHA設定雲端服務。
 
-   1. 在您的AEM作者例項上，前往 ![tools-1](assets/tools-1.png) > **Cloud Services**。
-   1. 點選 **[!UICONTROL reCAPTCHA]**。 將開啟「配置」頁。 選取在上一個步驟中建立的設定容器，然後點選「 **[!UICONTROL 建立]**」。
-   1. 指定reCAPTCHA服務的名稱、網站金鑰和機密金鑰，並點選「 **[!UICONTROL 建立]** 」以建立雲端服務設定。
-   1. 在「編輯元件」對話方塊中，指定在步驟1中取得的網站和機密金鑰。 點選 **「Save Settings** (儲存設定 **)」，然後點選「** OK（確定）」以完成設定。
+   1. 在您的AEM作者實例上，請至![tools-1](assets/tools-1.png) > **Cloud Services**。
+   1. 點選&#x200B;**[!UICONTROL reCAPTCHA]**。 將開啟「配置」頁。 選擇在上一步驟中建立的配置容器，然後按一下&#x200B;**[!UICONTROL 建立]**。
+   1. 指定reCAPTCHA服務的名稱、網站金鑰和機密金鑰，並點選&#x200B;**[!UICONTROL Create]**&#x200B;以建立雲端服務設定。
+   1. 在「編輯元件」對話方塊中，指定在步驟1中取得的網站和機密金鑰。 點選「**儲存設定**」，然後點選「**確定**」以完成設定。
 
-   在設定reCAPTCHA服務後，就可在最適化表單中使用。 如需詳細資訊，請參 [閱在最適化表單中使用CAPTCHA](#using-captcha)。
+   在設定reCAPTCHA服務後，就可在最適化表單中使用。 如需詳細資訊，請參閱[在最適化表單中使用CAPTCHA](#using-captcha)。
 
-## 在最適化表單中使用CAPTCHA {#using-captcha}
+## 在最適化表單{#using-captcha}中使用CAPTCHA
 
 若要在最適化表單中使用CAPTCHA:
 
@@ -76,7 +76,7 @@ AEM Forms支援最適化表單中的CAPTCHA。 您可以使用Google的reCAPTCHA
    >
    >請確定建立最適化表單時選取的組態容器包含reCAPTCHA雲端服務。 您也可以編輯最適化表單屬性，以變更與表單關聯的組態容器。
 
-1. 從元件瀏覽器，將 **Captcha** 元件拖放至最適化表單。
+1. 從元件瀏覽器，將&#x200B;**Captcha**&#x200B;元件拖放至最適化表單。
 
    >[!NOTE]
    >
@@ -86,13 +86,13 @@ AEM Forms支援最適化表單中的CAPTCHA。 您可以使用Google的reCAPTCHA
    >
    >驗證碼是時間敏感的，約一分鐘後過期。 因此，建議將Captcha元件置於最適化表單中「提交」按鈕之前。
 
-1. 選取您新增的Captcha元件，並點選 ![cmppr](assets/cmppr.png) 以編輯其屬性。
-1. 指定CAPTCHA介面工具集的標題。 預設值為 **Captcha**。 如果您 **不想顯示標題** ，請選取「隱藏標題」。
-1. 如果您依 **Google的** ReCAPTCHA服務中所述設定reCAPTCHA服務，請從 **Captcha服務下拉式清單中選取reCaptcha** ，以啟用reCAPTCHA服務 [](#google-recaptcha)。 從「設定」下拉式清單中選取設定。 此外，請為reCAPTCHA介面工具集選 **取「一般** 」或「 **精簡** 」的大小。
+1. 選取您新增的Captcha元件，並點選![cmppr](assets/cmppr.png)以編輯其屬性。
+1. 指定CAPTCHA介面工具集的標題。 預設值為&#x200B;**Captcha**。 如果您不想顯示標題，請選擇&#x200B;**隱藏標題**。
+1. 從&#x200B;**Captcha服務**&#x200B;下拉式清單中，選擇&#x200B;**reCaptcha**&#x200B;以啟用reCAPTCHA服務（若您依[Google](#google-recaptcha)的ReCAPTCHA服務中所述設定）。 從「設定」下拉式清單中選取設定。 此外，請為reCAPTCHA Widget選擇大小為&#x200B;**Normal**&#x200B;或&#x200B;**Compact**。
 
    >[!NOTE]
    >
-   >請勿從「 **[!UICONTROL Captcha]** 」服務下拉式清單中選取「預設值」，因為預設的AEM CAPTCHA服務已停用。
+   >請勿從Captcha服務下拉式清單中選取&#x200B;**[!UICONTROL Default]**，因為預設的AEM CAPTCHA服務已停用。
 
 1. 儲存屬性。
 
