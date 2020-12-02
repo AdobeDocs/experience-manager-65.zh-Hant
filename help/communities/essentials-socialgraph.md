@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
 translation-type: tm+mt
 source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 2%
 
 ---
 
 
-# Social Graph Essentials {#social-graph-essentials}
+# 社交圖表基本功能{#social-graph-essentials}
 
-社區成員可以通過兩個 [構成](essentials-activities.md) ，來開展和開展活動：
+社區成員遵循[活動](essentials-activities.md)以及遵循的能力通過以下兩個組成部分建立：
 
-組 `following` 件必須與其他資源關聯，並且此關聯已為社區站點中現有的社區成員和功能 [建立](overview.md#communitiessites)。
+`following`元件必須與另一個資源關聯，而且此關聯已為[社區站點](overview.md#communitiessites)中現有社區成員和功能建立。
 
-組 `following` 件列出當前成員後面或當前成員後面的成員。 此社交圖表包含在為社群網站建立的使用者設定檔中。
+`following`元件列出當前成員後面或當前成員後面的成員。 此社交圖表包含在為社群網站建立的使用者設定檔中。
 
-## 用戶端基本功能 {#essentials-for-client-side}
+## 客戶端{#essentials-for-client-side}的基本功能
 
 ### 關注 {#following}
 
@@ -51,7 +54,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參 <a href="socialgraph.md">閱使用社交圖表</a></td>
+   <td>請參閱<a href="socialgraph.md">使用社交圖表</a></td>
   </tr>
   <tr>
    <td><strong> optional<br /> property</strong></td>
@@ -61,10 +64,10 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
      <li>類型：布林值</li>
      <li>值:<br />
       <ul>
-       <li><i>True </i>-組 <code>following</code> 件將列出當前登錄成員的成員 <code>follows</code></li>
-       <li><i>False </i>-組 <code>following</code> 件將列出當前登 <code>follow </code>錄成員的成員</li>
+       <li><i>True  </i>-組 <code>following</code> 件將列出當前登錄成員的成員 <code>follows</code></li>
+       <li><i>False  </i>-組 <code>following</code> 件將列出當前登 <code>follow </code>錄成員的成員</li>
       </ul> </li>
-    </ul> <p>如果 <i>屬性遺失</i> ，則預設為true。 目前，無法使用作者模式中的編輯對話框來設定此屬性。 必須使用 <code>following </code>CRXDE|Lite將屬性添加到節 <a href="../../help/sites-developing/developing-with-crxde-lite.md">點的實</a>例中。</p> </td>
+    </ul> <p>如果屬性遺失，則預設為<i>true</i>。 目前，無法使用作者模式中的編輯對話框來設定此屬性。 必須使用<a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>將屬性添加到<code>following </code>節點的實例。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -73,13 +76,13 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 | **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
-| [**included **](scf.md#add-or-include-a-communities-component) | 否 |
+| [**included**](scf.md#add-or-include-a-communities-component) | 否 |
 | **模板** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
 | **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端的基本功能 {#essentials-for-server-side}
+## 伺服器端{#essentials-for-server-side}的基本工具
 
 * [社交圖形API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
