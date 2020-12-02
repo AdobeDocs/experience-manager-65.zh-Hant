@@ -12,32 +12,35 @@ discoiquuid: f550b747-2def-4317-9ef7-dc6c1e7bb404
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '384'
+ht-degree: 2%
 
 ---
 
 
 # 在AEM Forms工作區中使用表單集{#working-with-formsets-in-aem-forms-workspace}
 
-表單集是HTML5表單的集合，分組後以單一表單集的形式呈現給使用者。 當使用者開始填寫表格集時，可順暢地從一個表格轉換到另一個表格。 然後，只要按一下，就可提交表格集。 如需表單集及如何設定的詳細資訊，請參閱「AEM [表單中的表單集」](../../forms/using/formset-in-aem-forms.md)。
+表單集是HTML5表單的集合，分組後以單一表單集的形式呈現給使用者。 當使用者開始填寫表格集時，可順暢地從一個表格轉換到另一個表格。 然後，只要按一下，就可提交表格集。 如需表單集的詳細資訊以及如何設定，請參閱「AEM Forms[中的表單集」。](../../forms/using/formset-in-aem-forms.md)
 
 AEM Forms工作區支援表單集。 使用表單集，可以將與服務或流程相關的多個表單分組，以自動化業務流程並呈現給最終用戶。 在這種情況下，使用者可以將整組表格一併填寫，而不需要歸檔、提交及追蹤個別表格或程式。
 
-## 在AEM Forms工作區應用程式中將表單集附加至起點 {#attaching-a-formset-to-startpoint-in-an-aem-forms-workspace-app-br}
+## 在AEM Forms工作區應用程式{#attaching-a-formset-to-startpoint-in-an-aem-forms-workspace-app-br}中將表單集附加至起點
 
-1. 在Workbench中建立業務流程工作流。 如需詳細資訊，請參 [閱Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63)。
-1. 從起點的流程屬性中，選擇「 **在簡報與資料中使用CRX資產** 」。
+1. 在Workbench中建立業務流程工作流。 如需詳細資訊，請參閱[Workbench help](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+1. 從起點的流程屬性中，選擇「演示與資料」中的「使用CRX資產」。****
 
    ![1-3](assets/1-3.png)
 
-1. 按一 ![下](assets/browse.png) CRX資產路徑旁的瀏覽（瀏覽）。 此時將顯示「選擇表單資產」對話框。
+1. 按一下CRX資產路徑旁的![browse](assets/browse.png)（瀏覽）。 此時將顯示「選擇表單資產」對話框。
 
    ![2-1](assets/2-1.png)
 
-1. 按一下「 **表單集** 」頁籤，從清單中選擇相關的表單集，然後按一下「 **確定」**。
+1. 按一下&#x200B;**Formset**&#x200B;頁籤，從清單中選擇相關的表單集，然後按一下&#x200B;**確定**。
 
 1. 在更新其他相關流程屬性後部署應用程式。
 
-## 在AEM Forms工作區中使用表單集 {#using-formset-in-nbsp-aem-forms-workspace}
+## 在AEM Forms工作區{#using-formset-in-nbsp-aem-forms-workspace}中使用formset
 
 在表單集附加至起點後，您就可從AEM Forms工作區呼叫起點，就像呼叫任何其他起點一樣。
 
