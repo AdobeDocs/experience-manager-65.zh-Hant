@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f38ebd69-8d1c-49b6-824f-4bf0ec8a8953
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '140'
+ht-degree: 1%
 
 ---
 
 
-# 指定XCI配置選項 {#specify-xci-configuration-options}
+# 指定XCI配置選項{#specify-xci-configuration-options}
 
-Output可讓您指定自訂XCI檔案，供其用於轉譯。 (請參 [閱指定輸出的檔案位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output)。)依預設，「輸出」會覆寫XCI檔案中指定的部分選項，包括：
+Output可讓您指定自訂XCI檔案，供其用於轉譯。 （請參閱[指定Output](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output)的檔案位置。） 依預設，「輸出」會覆寫XCI檔案中指定的部分選項，包括：
 
 * `config/present/xdp/packets`
 * `config/present/pdf/creator`
