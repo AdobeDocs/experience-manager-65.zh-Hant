@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1456'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +37,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 您必須確定執行複製的用戶帳戶。 在發佈實例上安裝受信任的作者證書時，該證書與此用戶帳戶相關聯。
 
-## 取得或建立MSSL的認證 {#obtaining-or-creating-credentials-for-mssl}
+## 取得或建立MSSL的認證{#obtaining-or-creating-credentials-for-mssl}
 
 您需要作者和發佈例項的私密金鑰和公開憑證：
 
@@ -42,11 +45,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 證書必須包含在pkcs#12或JKS格式中。 此外，&quot;CER&quot;格式中包含的證書也可以添加到Granite Truststore。
 * 憑證可以自行簽署或由認可的CA簽署。
 
-### JKS格式 {#jks-format}
+### JKS格式{#jks-format}
 
-產生JKS格式的私密金鑰和憑證。 私密金鑰儲存在KeyStore檔案中，而憑證則儲存在TrustStore檔案中。 使用 [Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) 來建立兩者。
+產生JKS格式的私密金鑰和憑證。 私密金鑰儲存在KeyStore檔案中，而憑證則儲存在TrustStore檔案中。 使用[Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html)來建立兩者。
 
-使用Java建立私鑰 `keytool` 和憑據，請執行以下步驟：
+使用Java `keytool`建立私鑰和憑據，請執行以下步驟：
 
 1. 在KeyStore中產生私用與公用金鑰對。
 1. 建立或取得憑證：
@@ -81,9 +84,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
-### pkcs#12格式 {#pkcs-format}
+### pkcs#12格式{#pkcs-format}
 
-以pkcs#12格式生成私鑰和證書。 使用 [openSSL](https://www.openssl.org/) 來產生它們。 請按下列步驟生成私鑰和證書請求。 若要取得憑證，請使用您的私密金鑰（自簽證）簽署要求，或將要求傳送至CA。 然後，生成包含私鑰和證書的pkcs#12歸檔檔案。
+以pkcs#12格式生成私鑰和證書。 使用[openSSL](https://www.openssl.org/)來產生它們。 請按下列步驟生成私鑰和證書請求。 若要取得憑證，請使用您的私密金鑰（自簽證）簽署要求，或將要求傳送至CA。 然後，生成包含私鑰和證書的pkcs#12歸檔檔案。
 
 1. 開啟命令列視窗或終端機。 要建立私鑰，請使用下表中的選項值輸入以下命令：
 
@@ -133,7 +136,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    | -在 | author.cer | publish.cer |
    | -名稱 | 作者 | 發佈 |
 
-## 在作者上安裝私密金鑰和TrustStore {#install-the-private-key-and-truststore-on-author}
+## 在作者{#install-the-private-key-and-truststore-on-author}上安裝私密金鑰和TrustStore
 
 在作者例項上安裝下列項目：
 
@@ -142,11 +145,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要執行以下過程，您必須以作者實例的管理員身份登錄。
 
-### 安裝作者私密金鑰 {#install-the-author-private-key}
+### 安裝作者私鑰{#install-the-author-private-key}
 
 1. 開啟作者例項的「使用者管理」頁面。 ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. 若要開啟您使用者帳戶的屬性，請按一下或點選您的使用者名稱。
-1. 如果「Create keyStore」（建立KeyStore）連結出現在「Account Settings」（帳戶設定）區域，請按一下連結。 配置密碼，然後按一下「確定」。
+1. 如果「Create KeyStore」（建立KeyStore）連結出現在「Account Settings」（帳戶設定）區域，請按一下連結。 配置密碼，然後按一下「確定」。
 1. 在「帳戶設定」區域中，按一下「管理金鑰庫」。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
@@ -161,7 +164,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-### 安裝發佈憑證 {#install-the-publish-certificate}
+### 安裝發佈憑證{#install-the-publish-certificate}
 
 1. 開啟作者例項的「使用者管理」頁面。 ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. 若要開啟您使用者帳戶的屬性，請按一下或點選您的使用者名稱。
@@ -176,7 +179,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## 在發佈時安裝私密金鑰和TrustStore {#install-private-key-and-truststore-on-publish}
+## 在發佈{#install-private-key-and-truststore-on-publish}時安裝私密金鑰和TrustStore
 
 在發佈例項上安裝下列項目：
 
@@ -185,18 +188,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要執行以下過程，您必須以發佈實例的管理員身份登錄。
 
-### 安裝發佈私密金鑰 {#install-the-publish-private-key}
+### 安裝發佈私密金鑰{#install-the-publish-private-key}
 
 1. 開啟發佈例項的「使用者管理」頁面。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. 若要開啟您使用者帳戶的屬性，請按一下或點選您的使用者名稱。
-1. 如果「Create keyStore」（建立KeyStore）連結出現在「Account Settings」（帳戶設定）區域，請按一下連結。 配置密碼，然後按一下「確定」。
+1. 如果「Create KeyStore」（建立KeyStore）連結出現在「Account Settings」（帳戶設定）區域，請按一下連結。 配置密碼，然後按一下「確定」。
 1. 在「帳戶設定」區域中，按一下「管理金鑰庫」。
 1. 按一下「從金鑰存放區檔案新增私密金鑰」。
 1. 按一下「選取金鑰存放區檔案」，然後瀏覽並選取publish.keystore檔案或publish.pfx檔案（如果使用pkcs#12），然後按一下「開啟」。
 1. 輸入密鑰儲存的別名和密碼。 輸入私密金鑰的別名和密碼，然後按一下「送出」。
 1. 關閉KeyStore管理對話方塊。
 
-### 安裝作者憑證 {#install-the-author-certificate}
+### 安裝作者憑證{#install-the-author-certificate}
 
 1. 開啟發佈例項的「使用者管理」頁面。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. 找到用於執行複製請求的用戶帳戶，然後按一下或點選用戶名。
@@ -206,22 +209,22 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 請確定已選取「將憑證對應至使用者」選項。 按一下「選取憑證檔案」，選取author.cer，然後按一下「開啟」。
 1. 按一下「提交」，然後關閉「TrustStore管理」對話方塊。
 
-## 在發佈時設定HTTP服務 {#configure-the-http-service-on-publish}
+## 在發佈{#configure-the-http-service-on-publish}時配置HTTP服務
 
-在發佈例項上設定Apache Felix Jetty Based HTTP Service的屬性，以便在存取Granite Keystore時使用HTTPS。 服務的PID是 `org.apache.felix.http`。
+在發佈例項上設定Apache Felix Jetty Based HTTP Service的屬性，以便在存取Granite Keystore時使用HTTPS。 服務的PID為`org.apache.felix.http`。
 
 下表列出了配置是否使用Web控制台時需要的OSGi屬性。
 
 | Web Console上的屬性名稱 | OSGi屬性名稱 | 值 |
 |---|---|---|
 | 啟用HTTPS | org.apache.felix.https.enable | true |
-| 啟用HTTPS以使用Granite keyStore | org.apache.felix.https.use.granite.keystore | true |
+| 啟用HTTPS以使用Granite KeyStore | org.apache.felix.https.use.granite.keystore | true |
 | HTTPS 連接埠 | org.osgi.service.http.port.secure | 8443（或其他所需埠） |
 | 用戶端憑證 | org.apache.felix.https.clientcertificate | &quot;Client Certificate Winted&quot; |
 
-## 在作者上配置複製代理 {#configure-the-replication-agent-on-author}
+## 在作者上配置複製代理{#configure-the-replication-agent-on-author}
 
-在作者實例上配置複製代理，以在連接到發佈實例時使用HTTPS協定。 有關配置複製代理的完整資訊，請參 [閱配置複製代理](/help/sites-deploying/replication.md#configuring-your-replication-agents)。
+在作者實例上配置複製代理，以在連接到發佈實例時使用HTTPS協定。 有關配置複製代理的完整資訊，請參見[配置複製代理](/help/sites-deploying/replication.md#configuring-your-replication-agents)。
 
 若要啟用MSSL，請根據下表在「傳輸」標籤上設定屬性：
 
