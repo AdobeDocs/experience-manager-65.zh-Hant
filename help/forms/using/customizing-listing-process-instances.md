@@ -17,7 +17,7 @@ ht-degree: 1%
 ---
 
 
-# 自定義流程實例清單 {#customizing-the-listing-of-process-instances}
+# 自定義進程實例清單{#customizing-the-listing-of-process-instances}
 
 流程例項清單會顯示在AEM Forms工作區的「追蹤」標籤中。
 
@@ -51,7 +51,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>processInstanceStatus</td>
-   <td>0 =已啟動<br /> 1 =運行<br /> 2 =完成3 =完成<br /> 4 =終止<br /> 5 =終止6 =暫停7 =暫停<br /><br /><br /><br /> 8 =取消暫停</td>
+   <td>0 =起始<br /> 1 =運行<br /> 2 =完成<br /> 3 =完成<br /> 4 =終止<br /> 5 =終止<br /> 6 =暫停<br /> 7 =暫停<br /> 8 =取消暫停</td>
   </tr>
   <tr>
    <td>processName</td>
@@ -63,19 +63,19 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>流程變數的對象陣列。 每個流程變數 <strong>對象都包含</strong> name <strong>（流程變數的名稱）、</strong> value<strong> （流程變數的值）和type</strong> （流程變數的類型）。</td>
+   <td>流程變數的對象陣列。 每個流程變數對象都包含<strong>name</strong>（流程變數的名稱）、<strong>value</strong>（流程變數的值）和<strong> type</strong>（流程變數的類型）。</td>
   </tr>
  </tbody>
 </table>
 
 **範例:**
 
-要在流程 `description` 實例卡中顯示流程實例的屬性，請執行以下步驟。
+要在流程實例卡中顯示流程實例的`description`屬性，請執行以下步驟。
 
-1. 請遵循「 [AEM Forms工作區自訂的一般步驟」](/help/forms/using/generic-steps-html-workspace-customization.md)。
+1. 請依照[AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)進行。
 1. 執行下列動作：
 
-   1. 複製/libs/ws/js/runtime/templates/processinstance.html至/apps/ws/js/runtime/templates/（如果不存在）。 按一下「 **全部儲存**」。
+   1. 複製/libs/ws/js/runtime/templates/processinstance.html至/apps/ws/js/runtime/templates/（如果不存在）。 按一下&#x200B;**保存全部**。
    1. 添加進程說明div，其類= &#39;processDescription&#39; inprocessinstance.html。
 
    ```jsp
@@ -85,7 +85,7 @@ ht-degree: 1%
 1. 執行下列動作：
 
    1. 開啟/apps/ws/js/registry.js進行編輯。
-   1. 以應用程式 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`/ws/js/runtime/templates/processinstance.html搜尋 `text!/lc/`**並取&#x200B;**代。
+   1. 將`text!/lc/libs/ws/js/runtime/templates/processinstance.html`搜尋並取代為&#x200B;`text!/lc/`**apps**/ws/js/runtime/templates/processinstance.html。
 
 1. 以上變更可能需要以下列方式在樣式表/apps/ws/css/newStyle.css中新增項目，以更新CSS檔案：
 
