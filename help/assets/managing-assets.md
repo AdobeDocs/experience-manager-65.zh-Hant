@@ -16,13 +16,13 @@ ht-degree: 14%
 ---
 
 
-# About managing Dynamic Media assets {#managing-assets}
+# 關於管理動態媒體資產{#managing-assets}
 
 管理動態媒體資產——影像、視訊和互動式資產——在上傳後——涉及許多工作，包括預覽、下載或發佈。
 
-在預覽時，您也可以套用影像預設集（僅限影像）或檢視器預設集（視訊和影像）。 您不能同時套用至資產。 請參 [閱套用檢視器預設集](/help/assets/viewer-presets.md) 和套 [用影像預設集](/help/assets/image-sets.md)。
+在預覽時，您也可以套用影像預設集（僅限影像）或檢視器預設集（視訊和影像）。 您不能同時套用至資產。 請參閱[套用檢視器預設集](/help/assets/viewer-presets.md)和[套用影像預設集](/help/assets/image-sets.md)。
 
-有關管理資產的一般資訊，請參閱「管 [理資產」](/help/assets/manage-assets.md)。
+有關管理資產的一般資訊，請參閱[管理資產](/help/assets/manage-assets.md)。
 
 下列主題說明您管理動態媒體資產時需要做什麼：
 
