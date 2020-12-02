@@ -18,29 +18,29 @@ ht-degree: 0%
 ---
 
 
-# PDF公用程式服務Java API快速入門(SOAP) {#pdf-utilities-service-java-apiquick-start-soap}
+# PDF公用程式服務Java API快速入門(SOAP){#pdf-utilities-service-java-apiquick-start-soap}
 
 PDF公用程式服務提供下列快速入門。
 
-[快速入門（SOAP模式）: 使用Java API將PDF檔案轉換為XDP檔案](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將PDF檔案轉換為XDP檔案](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
 
-[快速入門（SOAP模式）: 使用Java API將XDP檔案轉換為PDF檔案](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將XDP檔案轉換為PDF檔案](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）: 使用Java API擷取PDF檔案屬性](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API擷取PDF檔案屬性](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
 
-[快速入門（SOAP模式）: 使用Java API設定PDF檔案的儲存樣式](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API設定PDF檔案的儲存樣式](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）: 淨化PDF檔案](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
+[快速入門（SOAP模式）:淨化PDF檔案](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
 AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
 
 >[!NOTE]
 >
->「使用AEM表單進行程式設計」中的「快速入門」是以Forms Server作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>「使用AEM表單進行程式設計」中的「快速入門」是以Forms Server作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入門（SOAP模式）: 使用Java API將PDF檔案轉換為XDP檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}將PDF檔案轉換為XDP檔案
 
-以下代碼示例將PDF文檔轉換為XDP文檔。 (請參 [閱將PDF檔案轉換為XDP檔案](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents)。
+以下代碼示例將PDF文檔轉換為XDP文檔。 (請參閱[將PDF檔案轉換為XDP檔案](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents)。
 
 ```java
  /*
@@ -139,9 +139,9 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）: 使用Java API將XDP檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}將XDP檔案轉換為PDF檔案
 
-以下代碼示例將XDP文檔轉換為PDF文檔。 (請參 [閱將XDP檔案轉換為PDF檔案](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents)。)
+以下代碼示例將XDP文檔轉換為PDF文檔。 （請參閱[將XDP檔案轉換為PDF檔案](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents)。）
 
 ```java
  /*
@@ -239,9 +239,9 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）: 使用Java API擷取PDF檔案屬性 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}擷取PDF檔案屬性
 
-下列程式碼範例會判斷檔案是否為PDF檔案，如果是，則可讀取的最早Acrobat版本。 (請參閱 [擷取PDF檔案屬性](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties)。)
+下列程式碼範例會判斷檔案是否為PDF檔案，如果是，則可讀取的最早Acrobat版本。 （請參閱[擷取PDF檔案屬性](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties)。）
 
 ```java
  /*
@@ -356,9 +356,9 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）: 使用Java API設定PDF檔案的儲存樣式 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}設定PDF檔案的儲存樣式
 
-下列程式碼範例會設定儲存模式，以快速檢視網頁，然後將PDF檔案傳送至加密服務，並加密檔案。 為快速進行網頁檢視而儲存的加密PDF檔案會儲存為名為* FastWebViewLoan.pdf*的PDF檔案。 (請參閱 [設定PDF檔案儲存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes)。)
+下列程式碼範例會設定儲存模式，以快速檢視Web，然後將PDF檔案傳送至加密服務，並加密檔案。 為快速進行網頁檢視而儲存的加密PDF檔案會儲存為名為* FastWebViewLoan.pdf*的PDF檔案。 （請參閱[設定PDF檔案儲存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes)）。
 
 ```java
  /*
@@ -496,9 +496,9 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）: 使用Java API將檔案轉換為PDF/A-2b檔案 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}將檔案轉換為PDF/A-2b檔案
 
-以下Java程式碼範例會將名為 *Loan.pdf* 的PDF檔案轉換為PDF/A-2b檔案，並儲存為名為 *LoanArchive.pdf的PDF檔案*。 (請參 [閱將檔案轉換為PDF/A檔案](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)。)
+以下Java代碼示例將名為&#x200B;*Loan.pdf*&#x200B;的PDF文檔轉換為PDF/A-2b文檔，該文檔另存為名為&#x200B;*LoanArchive.pdf*&#x200B;的PDF檔案。 （請參閱[將檔案轉換為PDF/A檔案](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)）。
 
 ```java
 /*
@@ -584,9 +584,9 @@ public class CreatePDFADocument {
 }
 ```
 
-## 快速入門（SOAP模式）: 淨化PDF檔案 {#quick-start-soap-mode-sanitizing-pdf-documents}
+## 快速入門（SOAP模式）:淨化PDF檔案{#quick-start-soap-mode-sanitizing-pdf-documents}
 
-下列Java程式碼範例將淨化名為 *Loan.pdf的PDF檔案*。
+以下Java代碼示例清理了名為&#x200B;*Loan.pdf*&#x200B;的PDF文檔。
 
 ```java
 /*
