@@ -18,33 +18,34 @@ ht-degree: 2%
 ---
 
 
-# 使用評分 {#using-ratings}
+# 使用評分{#using-ratings}
 
-該組 `Rating` 件是單獨使用的，或與其他Communities功能一起使用。 此元件可讓登入的社群成員透過內容分級來表達意見。
+`Rating`元件是獨立使用的，或與其他Communities功能搭配使用。 此元件可讓登入的社群成員透過內容分級來表達意見。
 
-## 新增評分至頁面 {#adding-a-rating-to-a-page}
+## 新增評分至頁面{#adding-a-rating-to-a-page}
 
-若要在作 `Rating` 者模式下將元件新增至頁面，請找出元件並將其拖曳至頁面上， `Communities / Rating` 例如與功能相關的位置，讓成員評分。
+若要在作者模式下將`Rating`元件新增至頁面，請找出元件`Communities / Rating`並將其拖曳至頁面上，例如與功能相對的位置，讓成員評分。
 
-如需必要資訊，請造 [訪Communities Components Basics](basics.md)。
+如需必要資訊，請造訪[Communities Components Basics](basics.md)。
 
-當包含 [所需的用戶端程式庫](rating-basics.md#essentials-for-client-side) ，元件的顯示方式 `Rating` 就是這樣。
+當包含[必要的用戶端程式庫](rating-basics.md#essentials-for-client-side)時，`Rating`元件的顯示方式就是這樣。
 
 ![評等](assets/rating.png)
 
-## 設定評分 {#configuring-rating}
+## 設定評等{#configuring-rating}
 
-選擇要訪問 `Rating` 的已放置元件，並選 `Configure` 擇開啟編輯對話框的表徵圖。
+選擇要訪問的已放置的`Rating`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
 ![configure-new](assets/configure-new.png)
 
-在「文 **[!UICONTROL 字與標籤]** 」索引標籤下，指定「評分」的內部識別碼。
+在&#x200B;**[!UICONTROL 文字與標籤]**&#x200B;標籤下，您會指定評分的內部識別碼。
 
 ![tallyname](assets/tallyname.png)
 
-**[!UICONTROL Tally Name]**(*必要*)唯一識別此實例的 `Rating` 簡單名稱。 必須為儲存庫的有效節點名。
+**[!UICONTROL Tally Name]**
+(*必要*)唯一識別此例項 `Rating` 的簡單名稱。必須為儲存庫的有效節點名。
 
-## 網站訪客體驗 {#site-visitor-experience}
+## 網站訪客體驗{#site-visitor-experience}
 
 ### 成員 {#members}
 
@@ -56,4 +57,4 @@ ht-degree: 2%
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人 [員的Rating Essentials](rating-basics.md) （評分基本工具）頁面。
+開發人員的[ Rating Essentials](rating-basics.md)頁面中有更多資訊。
