@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# DocConverter服務Java API快速入門(SOAP) {#docconverter-service-java-api-quickstart-soap}
+# DocConverter Service Java API快速入門(SOAP){#docconverter-service-java-api-quickstart-soap}
 
 DocConverter服務提供Java API Quick Start(SOAP)。
 
@@ -29,11 +29,11 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 >[!NOTE]
 >
->「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入門（SOAP模式）:使用Java API將檔案轉換為PDF/A檔案 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}將檔案轉換為PDF/A檔案
 
-以下Java程式碼範例會將名為 *Loan.pdf* 的PDF檔案轉換為PDF/A檔案，並儲存為名為 *LoanArchive.pdf的PDF檔案*。 (請參 [閱將檔案轉換為PDF/A檔案](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)。)
+以下Java代碼示例將名為&#x200B;*Loan.pdf*&#x200B;的PDF文檔轉換為PDF/A文檔，該文檔另存為名為&#x200B;*LoanArchive.pdf*&#x200B;的PDF檔案。 （請參閱[將檔案轉換為PDF/A檔案](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)）。
 
 ```java
  /*
@@ -134,9 +134,9 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
  }
 ```
 
-## 快速入門（SOAP模式）:使用Java API判斷PDF/A相容性 {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}判斷PDF/A相容性
 
-以下Java程式碼範例會判斷輸入的PDF檔案是否與PDF/A相容。 傳遞至DocConverter服務的輸入PDF檔案名 *為LoanArchive.pdf*。 驗證結果會寫入名為 *ValidationResults.xml的XML檔案*。 (請參 [閱程式設計決定PDF/A相容](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)。)
+以下Java程式碼範例會判斷輸入的PDF檔案是否與PDF/A相容。 傳遞至DocConverter服務的輸入PDF文檔名為&#x200B;*LoanArchive.pdf*。 驗證結果會寫入名為&#x200B;*ValidationResults.xml*&#x200B;的XML檔案。 （請參閱[程式設計決定PDF/A相容性](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)）。
 
 ```java
  /*
