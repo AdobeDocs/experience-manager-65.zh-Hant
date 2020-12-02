@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 升級至AEM 6.5 Forms{#upgrade-to-aem-forms}
 
-AEM 6.5 Forms包含數種新功能和增強功能，可簡化使用表單和通訊的建立、管理和使用者體驗。 若要瞭解AEM 6.5 Forms的所有新功能和增強功能，請參閱「 [新功能摘要檔案」](../../forms/using/whats-new.md)。
+AEM 6.5 Forms包含數種新功能和增強功能，可簡化使用表單和通訊的建立、管理和使用者體驗。 若要瞭解AEM 6.5 Forms的所有新功能和增強功能，請參閱[新功能摘要檔案](../../forms/using/whats-new.md)。
 
 您可以升級現有的LiveCycle或AEM Forms安裝，以取得AEM 6.5 Forms中提供的新功能和增強功能，同時保留現有資料、程式和資產的完整性。 升級時，也會保留中繼資料和程式狀態。 您可以選擇升級途徑，開始升級。
 
