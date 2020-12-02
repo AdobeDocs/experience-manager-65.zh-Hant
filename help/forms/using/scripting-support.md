@@ -18,7 +18,7 @@ ht-degree: 6%
 ---
 
 
-# 支援HTML5表格的指令碼 {#scripting-support-for-html-forms}
+# 支援HTML5表單{#scripting-support-for-html-forms}的指令碼
 
 HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
 
@@ -43,16 +43,16 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>target</code></td>
    <td>指定事件在其上執行的對象。</td>
-   <td>不支援透過指令碼設定值。<br /> </td>
+   <td>不支援通過指令碼設定值。<br /> </td>
   </tr>
   <tr>
    <td><code>newtext</code></td>
    <td>指定欄位在變更後，因應使用者動作的內容。</td>
-   <td><p>下列 <code>newText</code> 情況下，屬性無法正常運作：</p>
+   <td><p><code>newText</code>屬性在下列情況下無法正常運作：</p>
     <ul>
      <li>論文本的選取與替換</li>
      <li>在刪除、複製和貼上文字時。</li>
-     <li>在「數值」欄位中鍵入一些特殊字元鍵(例如$、(、)、&amp;、@等)<br /> </li>
+     <li>在「數值」欄位中鍵入一些特殊字元鍵(例如$、(、)、&amp;、@等)時，<br /> </li>
      <li>使用shift+字母數字組合。 </li>
      <li>使用日期／時間欄位時。</li>
     </ul>
@@ -67,7 +67,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
     <ul>
      <li>論文本的選取與替換</li>
      <li>在刪除、複製和貼上文字時。</li>
-     <li>在「數值」欄位中鍵入一些特殊字元鍵(例如$、(、)、&amp;、@等)<br /> </li>
+     <li>在「數值」欄位中鍵入一些特殊字元鍵(例如$、(、)、&amp;、@等)時，<br /> </li>
      <li>使用shift+字母數字組合。 </li>
      <li>使用日期／時間欄位時。</li>
     </ul> <p>不支援透過指令碼設定值。</p> </td>
@@ -97,7 +97,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>apptype</code></td>
    <td>返回主機的應用程式類型。 僅適用於客戶端應用程式。</td>
-   <td>傳回 <code>HTML 5</code>。</td>
+   <td>傳回<code>HTML 5</code>。</td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -122,11 +122,11 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>version</code></td>
    <td>傳回代表目前應用程式版本號碼的字串。</td>
-   <td>它會傳回表單的版本。</td>
+   <td>它會傳回表單版本。</td>
   </tr>
   <tr>
    <td><code>calculationsEnabled</code></td>
-   <td>指定是否執行計算指令碼。<br /> </td>
+   <td>指定計算指令碼是否將執行。<br /> </td>
    <td>無</td>
   </tr>
   <tr>
@@ -152,7 +152,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>resetdata</code></td>
    <td>將檔案中的欄位重設為預設值。</td>
-   <td>清除具有合併資料的表單中的所有資料，而不是將其還原為預設值。</td>
+   <td>清除具有合併資料的表單中的所有資料，而非將其還原為預設值。</td>
   </tr>
   <tr>
    <td><code>messageBox</code></td>
@@ -204,17 +204,17 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>formattedValue</code></td>
    <td>指定此欄位的格式化值。</td>
-   <td>不支 <code>formattedValue</code> 援透過指令碼設定。</td>
+   <td>不支援透過指令碼設定<code>formattedValue</code>。</td>
   </tr>
   <tr>
    <td><code>editValue</code></td>
    <td>指定此欄位的編輯值。</td>
-   <td>不支 <code>editValue </code>援透過指令碼設定。</td>
+   <td>不支援通過指令碼設定<code>editValue </code>。</td>
   </tr>
   <tr>
    <td><code>formatMessage</code></td>
    <td>指定此欄位的格式驗證消息字串。</td>
-   <td>不支 <code>formatMessage </code>援透過指令碼設定。</td>
+   <td>不支援通過指令碼設定<code>formatMessage </code>。</td>
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
@@ -328,7 +328,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   </tr>
   <tr>
    <td>caption</td>
-   <td>標題對象描述了與表單設計對象相關聯的描述性標籤。<br /> </td>
+   <td>標題對象描述了與表單設計對象關聯的描述性標籤。<br /> </td>
    <td>無</td>
   </tr>
   <tr>
@@ -370,7 +370,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
 | `moveInstance` | 將表單模型對象的子對象移動到表單模型中的另一個指定位置。 該對象的相應資料模型資訊也被重新定位在資料模型內。 |
 | `insertInstance` | 將子表單或子表單集的新實例插入到此節點。 |
 
-## list {#list}
+## 清單{#list}
 
 | 屬性 | 說明 |
 |---|---|
@@ -380,7 +380,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
 | `remove` | 從節點清單中刪除節點。 |
 | `insert` | 在節點清單中的特定節點之前插入節點。 |
 
-## 節點 {#node}
+## 節點{#node}
 
 | 屬性 | 說明 | 例外 |
 |---|---|---|
@@ -394,13 +394,13 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
 | getAttribute | 獲取指定的屬性值。 | 無 |
 | setAttribute | 設定指定屬性的值。 | 無 |
 
-## model {#model}
+## 型號{#model}
 
 | 屬性 | 說明 | 例外 |
 |---|---|---|
 | 不適用 | 不適用 | 不適用 |
 
-## 子表單 {#subform}
+## 子表單{#subform}
 
 <table>
  <tbody>
@@ -493,7 +493,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
 |---|---|
 | 目標 | 提交資料的URL。 遺漏此屬性意味著XFA處理應用程式使用產品特定技術（如訪問配置對象中的產品特定資訊）來獲取URI。 |
 
-## 樹 {#tree}
+## 樹{#tree}
 
 <table>
  <tbody>
@@ -562,7 +562,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
 |---|---|---|
 | isNull | 指示當前資料值是否為空值。 |  |
 
-## 邊緣 {#edge}
+## edge {#edge}
 
 <table>
  <tbody>
@@ -583,7 +583,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
  </tbody>
 </table>
 
-## 填滿 {#fill}
+## fill {#fill}
 
 <table>
  <tbody>
@@ -604,7 +604,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
  </tbody>
 </table>
 
-## linear {#linear}
+## 線性{#linear}
 
 <table>
  <tbody>
@@ -636,13 +636,13 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊緣物件會描述弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述圓弧、直線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、頂蓋等屬性。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-## 模式 {#pattern}
+## 模式{#pattern}
 
 <table>
  <tbody>
@@ -663,7 +663,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
  </tbody>
 </table>
 
-## radial {#radial}
+## 徑向{#radial}
 
 <table>
  <tbody>
@@ -684,7 +684,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
  </tbody>
 </table>
 
-## 石板 {#stipple}
+## stiple {#stipple}
 
 <table>
  <tbody>
@@ -716,11 +716,11 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   </tr>
   <tr>
    <td>ui</td>
-   <td>ui對象封裝了表單對象的用戶介面描述。<br /> </td>
+   <td>ui對象包含表單對象的用戶介面說明。<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>caption</td>
+   <td>標題</td>
    <td>標題對象描述了與表單設計對象相關聯的描述性標籤。</td>
    <td> </td>
   </tr>
@@ -742,7 +742,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
  </tbody>
 </table>
 
-## 角 {#corner}
+## 拐角{#corner}
 
 <table>
  <tbody>
@@ -854,7 +854,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
  </tbody>
 </table>
 
-## rectangle {#rectangle}
+## 矩形{#rectangle}
 
 <table>
  <tbody>
@@ -865,7 +865,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊緣物件會描述弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述圓弧、直線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、頂蓋等屬性。</td>
   </tr>
  </tbody>
@@ -948,8 +948,8 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
    <td>無</td>
   </tr>
   <tr>
-   <td>caption</td>
-   <td>標題對象描述了與表單設計對象相關聯的描述性標籤。<br /> </td>
+   <td>標題</td>
+   <td>標題對象描述了與表單設計對象關聯的描述性標籤。<br /> </td>
    <td>無</td>
   </tr>
   <tr>
@@ -994,13 +994,13 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   </tr>
   <tr>
    <td>計算</td>
-   <td>計算物件會控制欄位值的計算。<br /> </td>
+   <td>計算對象控制欄位值的計算。<br /> </td>
    <td>無</td>
   </tr>
  </tbody>
 </table>
 
-## 弧 {#arc}
+## 弧{#arc}
 
 <table>
  <tbody>
@@ -1011,13 +1011,13 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊緣物件會描述弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述圓弧、直線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、頂蓋等屬性。 </td>
   </tr>
  </tbody>
 </table>
 
-## border {#border}
+## 邊框{#border}
 
 <table>
  <tbody>
@@ -1028,7 +1028,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊緣物件會描述弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述圓弧、直線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、頂蓋等屬性。 </td>
   </tr>
  </tbody>
@@ -1115,9 +1115,9 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
 
 FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 FormCalculation提供一組功能強大的構建函式。
 
-### FormCalc支援的函式 {#formcalc-supported-functions}
+### FormCalc支援的函式{#formcalc-supported-functions}
 
-### FormCalc運算式支援 {#formcalc-expression-support}
+### FormCalc運算式支援{#formcalc-expression-support}
 
 <table>
  <tbody>
@@ -1143,7 +1143,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
      <li>邏輯（及／或）</li>
      <li>比較（大／小/等）</li>
     </ul> </td>
-   <td>A或1<br /> 1 &lt;&gt; 2<br /> A NE B<br /> A或1<br /><br /> 1 &lt;&gt; 2 A NE B</td>
+   <td>A或1↑[a0/]1↑[2]↑[a1/]A NE B↑[a2/]A或1↑[a3/]1↑[2]↑[a4/]A NE B<br /><br /><br /><br /><br /></td>
   </tr>
   <tr>
    <td>If運算式</td>
@@ -1158,12 +1158,12 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   <tr>
    <td>的</td>
    <td><br type="_moz" /> </td>
-   <td>對於i = 100，向下1 <br /> do s = s + i結束</td>
+   <td>對於i = 100，從1 <br /> do s = s + i結束</td>
   </tr>
   <tr>
    <td>每個</td>
    <td><br type="_moz" /> </td>
-   <td>對於(1, 2, 3)中的每個i <br /> , do s = s + iendfor</td>
+   <td>對於(1, 2, 3)<br />中的每個i, s = s + iendfor</td>
   </tr>
   <tr>
    <td>函式聲明</td>
@@ -1173,7 +1173,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
  </tbody>
 </table>
 
-### Acrobat API支援 {#acrobat-api-support}
+### Acrobat API支援{#acrobat-api-support}
 
 1. **算術函式**
 
@@ -1298,7 +1298,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   <tr>
    <td>app.clearTimeOut()</td>
    <td>取消先前註冊的超時間隔。 這種間隔最初由setTimeOut設定。</td>
-   <td>在HTML5表格中，API無法正常運作。<br /> </td>
+   <td>在HTML5表單中，API無法正常運作。<br /> </td>
   </tr>
   <tr>
    <td>app.eval()</td>
@@ -1307,7 +1307,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   </tr>
   <tr>
    <td>app.activeDocs</td>
-   <td>包含每個活動文檔的Doc對象的陣列。 如果沒有作用中的檔案，activeDocs將不會傳回任何內容； 也就是說，它在核心JavaScript中的行為與d = new Array(0)相同。</td>
+   <td>包含每個活動文檔的Doc對象的陣列。 如果沒有作用中的檔案，activeDocs將不會傳回任何內容；也就是說，它在核心JavaScript中的行為與d = new Array(0)相同。</td>
    <td>傳回HTMl5表單的空白陣列。</td>
   </tr>
   <tr>
@@ -1338,7 +1338,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
  </tbody>
 </table>
 
-## 支援的XFA事件 {#supported-xfa-events}
+## 支援的XFA事件{#supported-xfa-events}
 
 支援下列用戶端XFA事件：
 
@@ -1353,4 +1353,4 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
 
 >[!NOTE]
 >
->HTML5表格會在用戶端（瀏覽器）上轉譯。 建議使用用戶端驗證 **和計算****指令碼** ，而非伺服器端指令碼。
+>HTML5表格會在用戶端（瀏覽器）上轉譯。 建議使用客戶端&#x200B;**validate**&#x200B;和&#x200B;**calculate**&#x200B;指令碼，而不是伺服器端指令碼。
