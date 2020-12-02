@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 顯示使用者頭像 {#displaying-the-user-avatar}
+# 顯示用戶頭像{#displaying-the-user-avatar}
 
 登入使用者的頭像會顯示在AEM Forms工作區的右上角。 此外，組織階層中直接報表的變數會顯示在「管理員檢視」中。 您可以設定AEM Forms工作區，從您的資料庫（例如LDAP伺服器）挑選使用者影像。
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >使用者影像的支援長寬比為1:1。
 
-1. 使用下一步中提及的詳細資訊建立DSC。 如需詳細資訊，請參閱「使用AEM Forms進行程式設計」指南中的「開 [發AEM Forms的元件](https://www.adobe.com/go/learn_aemforms_programming_63) 」主題。
+1. 使用下一步中提及的詳細資訊建立DSC。 如需詳細資訊，請參閱「使用AEM Forms進行程式設計」指南中的「開發AEM Forms的元件」主題。[](https://www.adobe.com/go/learn_aemforms_programming_63)
 1. 在DSC中，定義新的SPI，其會公開getCurrentUserImageUrl和getUserImageUrl方法，以取得AEM Forms使用者的影像URL。 以下是範例Java™程式碼片段：
 
    ```java
@@ -84,5 +84,5 @@ ht-degree: 0%
    </component>
    ```
 
-1. 通過Workbench部署DSC。 重新啟動 `ProcessManagementClientSessionService` 服務。
+1. 通過Workbench部署DSC。 重新啟動`ProcessManagementClientSessionService`服務。
 1. 您可能必須重新整理瀏覽器或再次向使用者登出／登入。
