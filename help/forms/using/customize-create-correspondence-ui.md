@@ -11,6 +11,9 @@ discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '1099'
+ht-degree: 0%
 
 ---
 
@@ -27,17 +30,17 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
 「建立對應」UI中的自訂圖示
 
-### 在「建立對應UI」中變更標誌 {#changing-the-logo-in-the-create-correspondence-ui}
+### 在「建立對應UI {#changing-the-logo-in-the-create-correspondence-ui}」中變更標誌
 
 若要設定您選擇的標誌影像，請執行下列動作：
 
-1. 在CRX中建立適 [當的資料夾結構](#creatingfolderstructure)。
-1. [在您在CRX中建立的檔案夾中](#uploadlogo) ，上傳新的標誌檔案。
+1. 在CRX](#creatingfolderstructure)中建立適當的[資料夾結構。
+1. [在您在CRX中建](#uploadlogo) 立的檔案夾中上傳新標誌檔案。
 
-1. [在CRX上設定CSS](#createcss) ，以參考新的標誌。
-1. 清除瀏覽器歷史記錄並 [重新整理建立對應UI](#refreshccrui)。
+1. [設定](#createcss) CRX上的CSS以參考新標誌。
+1. 清除瀏覽器歷史記錄並刷新「建立對應UI」(Create Correponsement UI)[。](#refreshccrui)
 
-## 建立所需的資料夾結構 {#creatingfolderstructure}
+## 建立所需的資料夾結構{#creatingfolderstructure}
 
 建立檔案夾結構，如下所述，以代管自訂標誌影像和樣式表。 包含根資料夾/apps的新資料夾結構與/libs資料夾的結構類似。
 
@@ -51,12 +54,12 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
 使用下列步驟在/apps分支中建立所需的資料夾結構：
 
-1. 前往並 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理員身分登入。
-1. 在應用程式檔案夾中，建立名 `css` 為路徑／結構的檔案夾，類似於css檔案夾（位於ccrui檔案夾）。
+1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`，以管理員身分登入。
+1. 在應用程式檔案夾中，建立名為`css`的檔案夾，其路徑／結構類似於css檔案夾（位於ccrui檔案夾）。
 
    建立css資料夾的步驟：
 
-   1. 以滑鼠右鍵按一 **下下列路徑** ，然後選取「覆 **蓋節點」**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
+   1. 在以下路徑中按一下右鍵&#x200B;**css**&#x200B;資料夾，然後選擇&#x200B;**覆蓋節點**:`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
       ![覆蓋節點](assets/1_overlaynode_css.png)
 
@@ -66,7 +69,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
       **覆蓋位置：** /apps/
 
-      **匹配節點類型：** 已勾選
+      **匹配節點類型：已選** 中
 
       ![覆蓋節點路徑](assets/0_1_5ioverlaynodedialog.png)
 
@@ -81,30 +84,30 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
       >    * 安裝功能套件
 
 
-   1. 按一下 **確定**。 css資料夾是在指定的路徑中建立。
+   1. 按一下&#x200B;**「確定」**。css資料夾是在指定的路徑中建立。
 
 
 
-1. 在應用程式檔案夾中，建立名 `imgs` 為路徑／結構的檔案夾，類似於imgs檔案夾（位於ccrui檔案夾）。
+1. 在應用程式檔案夾中，建立名為`imgs`的檔案夾，其路徑／結構類似於imgs檔案夾（位於ccrui檔案夾）。
 
-   1. 以滑鼠右鍵按一 **下** ，在下列路徑上的imgs資料夾，然後選取「 **覆蓋節點」**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
+   1. 按一下右鍵以下路徑上的&#x200B;**imgs**&#x200B;資料夾，然後選擇&#x200B;**覆蓋節點**:`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 請確定「覆蓋節點」對話框具有下列值：
 
       **路徑：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
       **覆蓋位置：** /apps/
 
-      **匹配節點類型：** 已勾選
+      **匹配節點類型：已選** 中
 
-   1. 按一下 **確定**。
+   1. 按一下&#x200B;**「確定」**。
 
       >[!NOTE]
       >
       >您也可以手動在/apps檔案夾中建立檔案夾結構。
 
-1. 按一 **下「全部儲存** 」，將變更儲存在伺服器上。
+1. 按一下&#x200B;**Save All**&#x200B;將更改保存在伺服器上。
 
-## 將新標誌上傳至CRX {#uploadlogo}
+## 將新標誌上傳到CRX {#uploadlogo}
 
 將您的自訂標誌檔案上傳至CRX。 標準HTML規則會控制標誌的轉換。 支援的影像檔案格式會根據您用來存取AEM Forms的瀏覽器而定。 所有瀏覽器都支援JPEG、GIF和PNG。 如需詳細資訊，請參閱支援影像格式的瀏覽器專用檔案。
 
@@ -115,7 +118,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 使用下列步驟將自訂標誌檔案上傳至CRX:
 
 1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，請以管理員身份登錄。
-1. 在CRXDE中，按一下右鍵以下路 **徑的** imgs資料夾，然後選擇「 **建立」>「建立檔案」**:
+1. 在CRXDE中，按一下右鍵以下路徑上的&#x200B;**imgs**&#x200B;資料夾，然後選擇&#x200B;**建立>建立檔案**:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
 
@@ -125,7 +128,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
    ![CustomLogo.png為新節點](assets/3_contentexplorernewnode_customlogo.png)
 
-1. 按一下「 **全部儲存**」。
+1. 按一下&#x200B;**保存全部**。
 
    在您建立的新檔案（此處為CustomLogo.png）下方，會顯示jcr:content屬性。
 
@@ -135,13 +138,13 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
    ![jcrcontentproperties](assets/jcrcontentproperties.png)
 
-1. 連按兩下 **jcr:data屬性** 。
+1. 連按兩下&#x200B;**jcr:data**&#x200B;屬性。
 
    將出現「編輯jcr:data」對話框。
 
    現在按一下newlogo.png檔案夾，按兩下jcr:content（dim選項）並設定type nt:resource。 如果不存在，請建立名稱為jcr:content的屬性。
 
-1. 在「編輯jcr:data」對話方塊中，按一下「 **瀏覽** 」，然後選取您要當做標誌使用的影像檔案（這裡為CustomLogo.png）。
+1. 在「編輯jcr:data」對話方塊中，按一下「瀏覽&#x200B;**」，然後選取您要當做標誌使用的影像檔案（這裡為CustomLogo.png）。**
 
    支援的影像檔案格式會根據您用來存取AEM Forms的瀏覽器而定。 所有瀏覽器都支援JPEG、GIF和PNG。 如需詳細資訊，請參閱支援影像格式的瀏覽器專用檔案。
 
@@ -149,7 +152,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
    範例：CustomLogo.png將用作自訂標誌
 
-1. 按一下「 **全部儲存**」。
+1. 按一下&#x200B;**保存全部**。
 
 ## 建立CSS以整合標誌與UI {#createcss}
 
@@ -164,9 +167,9 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
    建立customcss.css檔案的步驟：
 
-   1. 以滑鼠右鍵按一下 **css資料夾** ，然後選 **取「建立>建立檔案」**。
-   1. 在「新建檔案」對話框中，將CSS的名稱指定為 `customcss.css`（不能使用不同的檔案名），然後按一下「確 **定」**。
-   1. 將下列程式碼新增至新建立的css檔案。 在程式碼中的content:url中，指定您已上傳至CRXDE中imgs檔案夾的影像名稱。
+   1. 按一下右鍵&#x200B;**css**&#x200B;資料夾，然後選擇&#x200B;**建立>建立檔案**。
+   1. 在「新建檔案」對話框中，將CSS的名稱指定為`customcss.css`（不能使用不同的檔案名），然後按一下「確定」。****
+   1. 將下列程式碼新增至新建立的css檔案。 在程式碼中的content:url中，指定您已上傳至CRXDE中的imgs檔案夾的影像名稱。
 
       ```css
       .logo, .logo:after {
@@ -174,9 +177,9 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
       }
       ```
 
-   1. 按一下「 **全部儲存**」。
+   1. 按一下&#x200B;**保存全部**。
 
-## 重新整理「建立對應UI」以檢視自訂標誌 {#refreshccrui}
+## 重新整理「建立對應UI」以查看自訂標誌{#refreshccrui}
 
 清除瀏覽器快取，然後在瀏覽器中開啟「建立對應UI」例項。 您應該會看到自訂的標誌。
 
