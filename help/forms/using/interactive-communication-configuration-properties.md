@@ -12,15 +12,18 @@ discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 translation-type: tm+mt
 source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 5%
 
 ---
 
 
-# 互動式通訊設定屬性{#interactive-communications-configuration-properties}
+# 交互通信配置屬性{#interactive-communications-configuration-properties}
 
-Interactive Communications包含在安裝 [AEM Forms附加元件套件後自動設定的屬性](../../forms/using/installing-configuring-aem-forms-osgi.md) 。 「互動式通訊」作者可以使用 **Adobe Experience Manager Web Console的「設定」頁面來編輯這些預設設定屬性** 。
+Interactive Communications包含在安裝[AEM Forms add-on](../../forms/using/installing-configuring-aem-forms-osgi.md)套件後自動設定的屬性。 「互動式通訊」作者可以使用&#x200B;**Adobe Experience Manager Web Console「設定」頁面編輯這些預設設定屬性。**
 
-使用 **下列URL開啟Adobe Experience Manager Web Console設定頁** :
+使用下列URL開啟「**Adobe Experience Manager Web Console設定**」頁面：
 
 `https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
@@ -31,9 +34,9 @@ Interactive Communications包含在安裝 [AEM Forms附加元件套件後自動�
 * [自適應表單與互動式通訊Web頻道配置](#adaptive-form-and-interactive-communication-web-channel-configuration)
 * [自適應表單與互動式通訊Web頻道主題配置](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
-## 檔案片段設定 {#document-fragments-configuration}
+## 檔案片段設定{#document-fragments-configuration}
 
-在 **Adobe Experience Manager Web Console的「設定」頁面上，點選「檔案片段設定」****** ，以檢視檔案片段的設定屬性。
+點選&#x200B;**Adobe Experience Manager Web Console Configuration**&#x200B;頁面上的「檔案片段設定」****，以檢視檔案片段的設定屬性。
 
 <table>
  <tbody> 
@@ -54,32 +57,32 @@ Interactive Communications包含在安裝 [AEM Forms附加元件套件後自動�
      <li>numberGroupSeparator =,</li> 
      <li>numberUseGroupSeparator = true</li> 
     </ul> </td> 
-   <td><p>--</p> </td> 
+   <td><p>—</p> </td> 
   </tr> 
   <tr> 
    <td>縮排</td> 
    <td>應用於清單文檔片段中文本的單個縮進單位的寬度。</td> 
-   <td>12.7mm</td> 
-   <td>數字</td> 
+   <td>12.7毫米</td> 
+   <td>數量</td> 
   </tr> 
   <tr> 
    <td>羅馬數字最小寬度</td> 
    <td>在清單文檔片段中使用羅馬數字時，應應用於項目符號或數字欄位的最小寬度。 </td> 
-   <td>12.7mm</td> 
-   <td>數字</td> 
+   <td>12.7毫米</td> 
+   <td>數量</td> 
   </tr> 
   <tr> 
    <td>最小寬度數</td> 
    <td>在清單文檔片段中使用編號清單（除羅馬數字外）時，應應用於項目符號或數字欄位的最小寬度。</td> 
-   <td>8.0mm</td> 
-   <td>數字</td> 
+   <td>8.0毫米</td> 
+   <td>數量</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 建立對應配置 {#create-correspondence-configuration}
+## 建立對應配置{#create-correspondence-configuration}
 
-在 **Adobe Experience Manager Web Console的「設定」頁面上，點選「建立對應設定」****** ，以檢視Agent UI的設定屬性。
+點選&#x200B;**Adobe Experience Manager Web Console Configuration**&#x200B;頁面上的「建立對應設定」，以檢視Agent UI的設定屬性。****
 
 <table>
  <tbody> 
@@ -103,26 +106,26 @@ Interactive Communications包含在安裝 [AEM Forms附加元件套件後自動�
   </tr> 
   <tr> 
    <td>在PDF中啟用字型內嵌</td> 
-   <td><p>選取核取方塊以啟用PDF檔案中的內嵌字型。 選取此選項後，您就可以在使用Agent UI產生或預覽PDF檔案後，嵌入新字型。 使用互動式通訊的列印頻道產生和預覽PDF檔案。</p> <p>如果用於產生PDF的機器上有字型，而用於存取PDF的用戶端機器上沒有字型，將字型內嵌在PDF檔案中就很有用。</p> <p>如需內嵌字型的詳細資訊，請參閱「自 <a href="../../forms/using/customize-text-editor.md" target="_blank">訂文字編輯器」</a>。</p> </td> 
+   <td><p>選取核取方塊以啟用PDF檔案中的內嵌字型。 選取此選項後，您就可以在使用Agent UI產生或預覽PDF檔案後，嵌入新字型。 使用互動式通訊的列印頻道產生和預覽PDF檔案。</p> <p>如果用於產生PDF的機器上有字型，而用於存取PDF的用戶端機器上沒有字型，將字型內嵌在PDF檔案中就很有用。</p> <p>如需內嵌字型的詳細資訊，請參閱<a href="../../forms/using/customize-text-editor.md" target="_blank">自訂文字編輯器</a>。</p> </td> 
    <td>未選擇</td> 
    <td>不適用</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 自適應表單與互動式通訊Web頻道配置 {#adaptive-form-and-interactive-communication-web-channel-configuration}
+## 最適化表單與互動式通訊Web頻道設定{#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-在 ******** Adobe Experience Manager Web Console的「設定」頁面上，點選「最適化表單與互動式通訊Web頻道設定」，以檢視最適化表單與互動式通訊Web頻道的設定屬性。 下表說明與Interactive Communications相關的屬性：
+點選&#x200B;**Adobe Experience Manager Web Console「設定」頁面上的**&#x200B;最適化表單與互動式通訊網路頻道設定&#x200B;**，以檢視最適化表單與互動式通訊網路頻道的設定屬性。**&#x200B;下表說明與Interactive Communications相關的屬性：
 
 | 屬性 | 說明 | 預設 | 可接受的值 |
 |---|---|---|---|
 | 顯示預留位置 | 選取核取方塊，可顯示最適化表單和互動式通訊中欄位的預留位置。 | 已選取 | 不適用 |
-| 最大快取條目數 | 設定使用快取記憶體可檢索的最大自適應表單和互動式通信數。 | 100 | 數字 |
+| 最大快取條目數 | 設定使用快取記憶體可檢索的最大自適應表單和互動式通信數。 | 100 | 數量 |
 | 使檔案名稱唯一 | 選中該複選框，可在最適化表單和互動式通信中為作為附件包含的檔案提供唯一的名稱。 | 未選擇 | 不適用 |
 
-## 自適應表單與互動式通訊Web頻道主題配置 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## 最適化表單與互動式通訊Web頻道主題設定{#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-在 ******** Adobe Experience Manager Web Console的「設定」頁面上，點選「最適化表單與互動式通訊Web頻道主題設定」，以檢視最適化表單與互動式通訊Web頻道主題的設定屬性。
+點選&#x200B;**Adobe Experience Manager Web Console Configuration**&#x200B;頁面上的&#x200B;**最適化表單與互動式通訊網路頻道主題設定**，以檢視最適化表單與互動式通訊網路頻道主題的設定屬性。
 
 <table>
  <tbody> 
