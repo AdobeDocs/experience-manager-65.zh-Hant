@@ -1,6 +1,6 @@
 ---
-title: 與活 [!DNL Assets] 動串流整合
-description: 說明其錄制功 [!DNL Experience Manager] 能，以及如何設定它以錄制特定事件。
+title: 將 [!DNL Assets] 與活動串流整合
+description: 說明 [!DNL Experience Manager] 的錄制功能，以及如何設定它來錄制特定事件。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
@@ -11,15 +11,15 @@ ht-degree: 0%
 ---
 
 
-# 與活 [!DNL Assets] 動串流整合 {#integrating-assets-with-activity-stream}
+# 將[!DNL Assets]與活動串流{#integrating-assets-with-activity-stream}整合
 
-[!DNL Adobe Experience Manager Assets] 使用者會執行許多動作，例如建立、上傳和刪除資產。 您可以記錄這些動作，以便提供使用者所執行動作的記錄。 本節說明的錄制功能 [!DNL Experience Manager] 以及如何設定， [!DNL Experience Manager] 以記錄特定事件。
+[!DNL Adobe Experience Manager Assets] 使用者會執行許多動作，例如建立、上傳和刪除資產。您可以記錄這些動作，以便提供使用者所執行動作的記錄。 本節介紹[!DNL Experience Manager]的錄制功能，以及如何設定[!DNL Experience Manager]以記錄特定事件。
 
-## 效能考量事項與預設行為 {#performance-considerations-and-default-behavior}
+## 效能注意事項和預設行為{#performance-considerations-and-default-behavior}
 
-例如，進行批量導入時，此整合可能會佔用CPU和磁碟空間。 基於這些原因， [!DNL Assets] 預設會停用與活動串流的整合。
+例如，進行批量導入時，此整合可能會佔用CPU和磁碟空間。 因此，預設會停用與活動串流的[!DNL Assets]整合。
 
-## 支援的動作事件 {#supported-action-events}
+## 支援的動作事件{#supported-action-events}
 
 可將下列事件設定為記錄：
 
@@ -39,22 +39,22 @@ ht-degree: 0%
 * 已更新子資產(SUBASSET_UPDATED)
 * 已移除子資產(SUBASSET_REMOVED)
 
-## 設定 [!DNL Assets] 事件錄制 {#configuring-aem-assets-events-recording}
+## 配置記錄{#configuring-aem-assets-events-recording}的[!DNL Assets]事件
 
-Web主 [控台](/help/sites-deploying/configuring-osgi.md) ，可讓您存取Assets事件記錄器微調。 若要設定資產事件記錄器，請依下列步驟進行：
+[Web控制台](/help/sites-deploying/configuring-osgi.md)提供對資產事件記錄器調整的訪問。 若要設定資產事件記錄器，請依下列步驟進行：
 
-1. 導覽至 **[!UICONTROL Web Console]**
+1. 導航至&#x200B;**[!UICONTROL Web控制台]**
 
-1. 按一下 **[!UICONTROL 設定]**。
+1. 按一下&#x200B;**[!UICONTROL Configuration]**。
 
-1. 連按兩 **[!UICONTROL 下Day CQ DAM Event Recorder]**。
+1. 連按兩下&#x200B;**[!UICONTROL Day CQ DAM Event Recorder]**。
 
-1. 選中 **[!UICONTROL 啟用此服務]**。
+1. 選中&#x200B;**[!UICONTROL 啟用此服務]**。
 
-1. 檢查您 **** 要在使用者活動串流中記錄哪些事件類型。
+1. 檢查您希望在用戶活動流中記錄哪些&#x200B;**[!UICONTROL 事件類型]**。
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
 
-## 閱讀錄制的事件 {#reading-recorded-events}
+## 讀取記錄的事件{#reading-recorded-events}
 
-記錄的事件會儲存為活動。 您可以使用 [ActivityManager API以程式設計方式讀取它們](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ActivityManager.html)。
+記錄的事件會儲存為活動。 您可以使用[ActivityManager API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ActivityManager.html)以程式設計方式讀取它們。
