@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 工作流程通常包含要求人員在頁面或資產上執行活動的步驟。 工作流選擇要執行活動的用戶或組，並將工作項目分配給該人員或組。
 
-## 處理您的工作項目 {#processing-your-work-items}
+## 處理您的工作項目{#processing-your-work-items}
 
 您可以執行以下操作來處理工作項目：
 
@@ -41,13 +44,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    如果您發現需要重複某個步驟或一系列步驟，則可退後一步。 這可讓您選取在工作流程中較早發生的步驟，以進行重新處理。 工作流程會返回您指定的步驟，然後繼續進行。
 
-## 參與工作流 {#participating-in-a-workflow}
+## 參與工作流{#participating-in-a-workflow}
 
-### 指派的工作流動作通知 {#notifications-of-assigned-workflow-actions}
+### 指派的工作流動作通知{#notifications-of-assigned-workflow-actions}
 
-當您被指派工作項目時(例如「核准內 **容**」)，會出現各種警報和／或通知：
+當您被指派工作項目時(例如「核准內 **容**」)，會出現各種警報和/或通知：
 
-* 「網 **站** 」主控台的「狀態」欄會指出頁面在工作流程中的時間：
+* 網站主控台的&#x200B;**Status**&#x200B;欄會指出頁面在工作流程中的時間：
 
    ![workflowstatus-1](assets/workflowstatus-1.png)
 
@@ -55,31 +58,31 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![工作流收件箱](assets/workflowinbox.png)
 
-### 完成參與者步驟 {#completing-a-participant-step}
+### 完成參與者步驟{#completing-a-participant-step}
 
 在您採取指示可以完成工作項目的動作後，可以繼續工作流。 請按下列步驟完成工作項目。
 
-1. 選擇工作流程步驟，然後按一 **下頂端導覽** 列中的「完成」按鈕。
-1. 在產生的對話方塊中，選取「下 **一步」**;即下一步要執行的步驟。 下拉式清單會顯示所有適當的目的地。 您也 **可以輸** 入注釋。
+1. 選擇工作流步驟，然後按一下頂部導航欄中的&#x200B;**Complete**&#x200B;按鈕。
+1. 在生成的對話框中，選擇&#x200B;**下一步**;即下一步要執行的步驟。 下拉式清單會顯示所有適當的目的地。 也可以輸入&#x200B;**注釋**。
 
    ![工作流程完整](assets/workflowcomplete.png)
 
    列出的步驟數取決於工作流模型的設計。
 
-1. 按一 **下「確定** 」以確認動作。
+1. 按一下&#x200B;**確定**&#x200B;確認操作。
 
-### 委派參與者步驟 {#delegating-a-participant-step}
+### 委派參與者步驟{#delegating-a-participant-step}
 
 請按下列步驟委派工作項目。
 
-1. 按一下 **頂端導覽列** 中的「委派」按鈕。
-1. 在對話框中，使用下拉清單選擇將工作項 **目委派給** 「用戶」。 您也可以新增評 **論**。
+1. 按一下頂端導覽列中的&#x200B;**委派**&#x200B;按鈕。
+1. 在對話框中，使用下拉清單選擇&#x200B;**User**&#x200B;將工作項委派給。 您也可以新增&#x200B;**Comment**。
 
    ![工作流委派](assets/workflowdelegate.png)
 
-1. 按一 **下「確定** 」以確認動作。
+1. 按一下&#x200B;**確定**&#x200B;確認操作。
 
-### 對參與者步驟執行退一步 {#performing-step-back-on-a-participant-step}
+### 對參與者執行退一步步驟{#performing-step-back-on-a-participant-step}
 
 請按下列步驟退一步。
 
