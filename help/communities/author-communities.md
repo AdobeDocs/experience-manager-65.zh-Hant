@@ -19,7 +19,7 @@ ht-degree: 27%
 ---
 
 
-# 社群元件 {#communities-components}
+# 社區元件{#communities-components}
 
 ## 簡介 {#introduction}
 
@@ -33,17 +33,17 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->如果不熟悉編寫環境，請檢視基本處理 [的說明檔案](/help/sites-authoring/basic-handling.md) ，以 [及製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉編寫環境，請檢視[basic handling](/help/sites-authoring/basic-handling.md)和[網頁製作快速指南的說明檔案。](/help/sites-authoring/qg-page-authoring.md)
 
-## 可用的社群元件 {#available-communities-components}
+## 可用社區元件{#available-communities-components}
 
 下表列出在元件瀏覽器(sidekick)中啟用時，作者可看見的社群元件。
 
-另請參閱互動式社 [群元件指南](/help/communities/components-guide.md)。
+另請參閱互動式[社區元件指南](/help/communities/components-guide.md)。
 
 >[!NOTE]
 >
->閱讀 [Communities Components Basics](/help/communities/basics.md) ，因為它包含使用Communities元件製作所需的資訊。
+>閱讀[Communities Components Basics](/help/communities/basics.md)，因為它包含使用Communities元件編寫所需的資訊。
 
 | **元件標題** | **功能** |
 |---|---|
@@ -82,11 +82,11 @@ ht-degree: 27%
 >
 >Experience Manager Communities不再提供民調問答元件並提供支援。
 
-## 相關社群檔案 {#related-communities-documentation}
+## 相關社群檔案{#related-communities-documentation}
 
-* 請造 [訪部署社群](/help/communities/deploy-communities.md) ，以瞭解建議的部署。
+* 請造訪[部署社群](/help/communities/deploy-communities.md)以瞭解建議的部署。
 
-* 請造 [訪管理社群網站](/help/communities/administer-landing.md) ，以瞭解如何建立社群網站、設定社群網站範本、協調社群內容、管理成員以及設定訊息。
+* 請造訪[管理社群網站](/help/communities/administer-landing.md)，以瞭解如何建立社群網站、設定社群網站範本、協調社群內容、管理成員以及設定訊息。
 
-* 請造 [訪開發社群](/help/communities/communities.md) ，以瞭解社交元件架構(SCF)及自訂社群元件與功能。
+* 請造訪[開發社群](/help/communities/communities.md)以瞭解社交元件架構(SCF)和自訂社群元件和功能。
 
