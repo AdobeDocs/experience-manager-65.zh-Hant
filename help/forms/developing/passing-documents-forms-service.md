@@ -12,23 +12,26 @@ topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 translation-type: tm+mt
 source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+workflow-type: tm+mt
+source-wordcount: '1652'
+ht-degree: 0%
 
 ---
 
 
-# 將檔案傳送至Forms服務 {#passing-documents-to-the-formsservice}
+# 將檔案傳遞至Forms服務{#passing-documents-to-the-formsservice}
 
-AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 互動式PDF表格是以表格設計為基礎，通常會儲存為XDP檔案，並在Designer中建立。 從AEM Forms開始，您就可以將包含表 `com.adobe.idp.Document` 單設計的物件傳遞至Forms服務。 然後，Forms服務會轉譯位於物件中的表單 `com.adobe.idp.Document` 設計。
+AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 互動式PDF表格是以表格設計為基礎，通常會儲存為XDP檔案，並在Designer中建立。 從AEM Forms開始，您就可以將包含表單設計的`com.adobe.idp.Document`物件傳遞至Forms服務。 然後，Forms服務會呈現位於`com.adobe.idp.Document`物件中的表單設計。
 
-將物件傳遞至Forms `com.adobe.idp.Document` 服務的好處在於其他服務操作會傳回例 `com.adobe.idp.Document` 項。 也就是說，您可以從其他服務 `com.adobe.idp.Document` 操作中獲取實例並進行渲染。 例如，假設XDP檔案儲存在名為的Content Services（已過時）節點中， `/Company Home/Form Designs`如下圖所示。
+將`com.adobe.idp.Document`物件傳遞至Forms服務的好處是，其他服務作業會傳回`com.adobe.idp.Document`例項。 也就是說，您可以從其他服務操作中獲取一個`com.adobe.idp.Document`實例並進行渲染。 例如，假設XDP檔案儲存在名為`/Company Home/Form Designs`的Content Services（已過時）節點中，如下圖所示。
 
-您可以以程式設計方式從Content Services（已過時）（已過時）擷取Loan.xdp，並將XDP檔案傳遞至物件中的Forms服 `com.adobe.idp.Document` 務。
+您可以以程式設計方式從Content Services（不建議使用）擷取Loan.xdp，並將XDP檔案傳遞至`com.adobe.idp.Document`物件內的Forms服務。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱「AEM Forms [的服務參考」](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 步驟摘要 {#summary-of-steps}
+## 步驟{#summary-of-steps}摘要
 
 若要將從Content Services（已過時）（已過時）取得的檔案傳遞至Forms服務，請執行下列工作：
 
@@ -44,19 +47,19 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
 **建立表單和檔案管理用戶端API物件**
 
-在以程式設計方式執行Forms服務API操作之前，請先建立Forms Client API物件。 此外，由於此工作流程會從Content Services（不建議使用）擷取XDP檔案，因此請建立Document Management API物件。
+在以程式設計方式執行Forms服務API操作之前，請先建立Forms Client API物件。 此外，由於此工作流程會從Content Services擷取XDP檔案（已停用），因此請建立Document Management API物件。
 
-**從Content services擷取表單設計（已過時）**
+**從Content Services擷取表單設計（已過時）**
 
-使用Java或web service API從Content Services（已過時）擷取XDP檔案。 XDP檔案會傳回至例 `com.adobe.idp.Document` 項(或是 `BLOB` 您使用web services的例項)。 然後，您可將執 `com.adobe.idp.Document` 行個體傳遞至Forms服務。
+使用Java或web service API從Content Services（已過時）擷取XDP檔案。 在`com.adobe.idp.Document`實例（或在使用web services時為`BLOB`實例）中返回XDP檔案。 然後，您可以將`com.adobe.idp.Document`實例傳遞至Forms服務。
 
 **轉換互動式PDF表單**
 
-若要轉換互動式表單，請將 `com.adobe.idp.Document` 從Content Services（不建議使用）傳回的例項傳遞至Forms服務。
+若要轉譯互動式表單，請將從Content Services（不建議使用）傳回的`com.adobe.idp.Document`例項傳遞至Forms服務。
 
 >[!NOTE]
 >
->您可以將包含表 `com.adobe.idp.Document` 單設計的表單傳遞至Forms服務。 命名和接受包 `renderPDFForm2` 含表 `renderHTMLForm2` 單設 `com.adobe.idp.Document` 計的物件的兩種新方法。
+>您可以將包含表單設計的`com.adobe.idp.Document`傳遞至Forms服務。 名為`renderPDFForm2`和`renderHTMLForm2`的兩種新方法接受包含表單設計的`com.adobe.idp.Document`物件。
 
 **使用表單資料流執行動作**
 
@@ -64,13 +67,13 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
 **另請參閱**
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-## 使用Java API將檔案傳送至Forms Service {#pass-documents-to-the-forms-service-using-the-java-api}
+## 使用Java API {#pass-documents-to-the-forms-service-using-the-java-api}將檔案傳送至Forms服務
 
 使用Forms服務和Content Services（不建議使用）API(Java)傳遞從Content Services（不建議使用）取得的檔案：
 
@@ -80,113 +83,117 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
 1. 建立表單和檔案管理用戶端API物件
 
-   * 建立包 `ServiceClientFactory` 含連接屬性的對象。 (請參 [閱設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
-   * 使用其 `FormsServiceClient` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
-   * 使用其 `DocumentManagementServiceClientImpl` 建構函式並傳遞物件，以建立物 `ServiceClientFactory` 件。
+   * 建立包含連接屬性的`ServiceClientFactory`對象。 （請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
+   * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentManagementServiceClientImpl`對象。
 
-1. 從Content services擷取表單設計（已過時）
+1. 從Content Services擷取表單設計（已過時）
 
-   叫用物 `DocumentManagementServiceClientImpl` 件的方 `retrieveContent` 法並傳遞下列值：
+   叫用`DocumentManagementServiceClientImpl`物件的`retrieveContent`方法並傳遞下列值：
 
-   * 一個字串值，它指定添加內容的儲存。 預設商店為 `SpacesStore`。 此值為必要參數。
-   * 一個字串值，它指定要檢索的內容的完全限定路徑(例如 `/Company Home/Form Designs/Loan.xdp`)。 此值為必要參數。
+   * 一個字串值，它指定添加內容的儲存。 預設商店為`SpacesStore`。 此值為必要參數。
+   * 一個字串值，它指定要檢索的內容的完全限定路徑（例如`/Company Home/Form Designs/Loan.xdp`）。 此值為必要參數。
    * 指定版本的字串值。 此值為可選參數，您可以傳遞空字串。 在這種情況下，將檢索最新版本。
-   該方 `retrieveContent` 法返回包 `CRCResult` 含XDP檔案的對象。 調用 `com.adobe.idp.Document` 物件的方法 `CRCResult` 以取得例 `getDocument` 項。
+
+   `retrieveContent`方法返回包含XDP檔案的`CRCResult`對象。 調用`CRCResult`物件的`getDocument`方法，以取得`com.adobe.idp.Document`例項。
 
 1. 轉換互動式PDF表單
 
-   叫用物 `FormsServiceClient` 件的方 `renderPDFForm2` 法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderPDFForm2`方法並傳遞下列值：
 
-   * 包 `com.adobe.idp.Document` 含從Content services擷取的表單設計（已過時）的物件。
-   * 包 `com.adobe.idp.Document` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞空 `com.adobe.idp.Document` 物件。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此值為可選參數，您可以指 `null` 定是否不想指定執行時選項。
-   * 包 `URLSpec` 含URI值的對象。 此值是可選參數，您可以指定 `null`。
-   * 儲存 `java.util.HashMap` 檔案附件的對象。 此值是可選參數，您可以指 `null` 定是否不要將檔案附加到表單。
-   該方 `renderPDFForm` 法返回包 `FormsResult` 含必須寫入客戶端Web瀏覽器的表單資料流的對象。
+   * `com.adobe.idp.Document`物件，包含從Content Services擷取的表單設計（已過時）。
+   * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。 此值為可選參數，如果您不想指定運行時選項，可以指定`null`。
+   * 包含URI值的`URLSpec`對象。 此值是可選參數，您可以指定`null`。
+   * 儲存檔案附件的`java.util.HashMap`對象。 此值是可選參數，如果您不想將檔案附加到表單，則可以指定`null`。
+
+   `renderPDFForm`方法返回一個`FormsResult`對象，該對象包含必須寫入客戶端Web瀏覽器的表單資料流。
 
 1. 使用表單資料流執行動作
 
-   * 通過調 `com.adobe.idp.Document` 用對象的方法 `FormsResult` 建立對 `getOutputContent` 像。
-   * 通過調用對象的方 `com.adobe.idp.Document` 法來獲取對象的內 `getContentType` 容類型。
-   * 調用 `javax.servlet.http.HttpServletResponse` 物件的方法並傳遞物件的內 `setContentType` 容類型，以設定物件的內容 `com.adobe.idp.Document` 類型。
-   * 呼叫 `javax.servlet.ServletOutputStream` 物件的方法，建立用於將表單資料串流寫入用戶端Web `javax.servlet.http.HttpServletResponse` 瀏覽器的物 `getOutputStream` 件。
-   * 調用 `java.io.InputStream` 物件的方 `com.adobe.idp.Document` 法以建立物 `getInputStream` 件。
-   * 建立位元組陣列，並透過叫用物件的方法，以表單資料 `InputStream` 流填入該 `read` 陣列。 將位元組陣列作為引數傳遞。
-   * 叫用物 `javax.servlet.ServletOutputStream` 件的方 `write` 法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞至 `write` 方法。
+   * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
+   * 通過調用`getContentType`方法獲取`com.adobe.idp.Document`對象的內容類型。
+   * 調用`setContentType`方法並傳遞`com.adobe.idp.Document`物件的內容類型，以設定`javax.servlet.http.HttpServletResponse`物件的內容類型。
+   * 呼叫`javax.servlet.http.HttpServletResponse`物件的`getOutputStream`方法，建立`javax.servlet.ServletOutputStream`物件，用來將表單資料串流寫入用戶端Web瀏覽器。
+   * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
+   * 建立位元組陣列，並呼叫`InputStream`物件的`read`方法，以表單資料流填入。 將位元組陣列作為引數傳遞。
+   * 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
 **另請參閱**
 
 [快速入門（SOAP模式）:使用Java API將檔案傳送至Forms Service](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
-[包含AEM Forms java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用web service API將檔案傳遞至Forms Service {#pass-documents-to-the-forms-service-using-the-web-service-api}
+## 使用web service API {#pass-documents-to-the-forms-service-using-the-web-service-api}將檔案傳遞至Forms Service
 
 使用Forms服務和Content Services（不建議使用）API(web service)傳遞從Content Services（不建議使用）取得的檔案：
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 由於此用戶端應用程式會叫用兩個AEM Forms服務，因此請建立兩個服務參考。 對與Forms服務關聯的服務引用使用以下WSDL定義： `http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 由於此用戶端應用程式會叫用兩個AEM Forms服務，因此請建立兩個服務參考。 對與Forms服務關聯的服務引用使用以下WSDL定義：`http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`。
 
-   對與「文檔管理」服務關聯的服務引用使用以下WSDL定義： `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`。
+   對與「文檔管理」服務關聯的服務引用使用以下WSDL定義：`http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`。
 
-   由於兩 `BLOB` 個服務引用都使用資料類型，因此在使用資料類 `BLOB` 型時完全限定該資料類型。 在對應的Web服務快速啟動中，所有實例 `BLOB` 都完全限定。
+   由於`BLOB`資料類型對於兩個服務引用都很常見，因此使用`BLOB`資料類型時可完全限定&lt;a1/>資料類型。 在相應的Web服務快速啟動中，所有`BLOB`實例都完全限定。
 
    >[!NOTE]
    >
-   >以代 `localhost`管AEM Forms之伺服器的IP位址取代。
+   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
 
 1. 建立表單和檔案管理用戶端API物件
 
-   * 使用其 `FormsServiceClient` 預設建構函式建立物件。
-   * 使用建 `FormsServiceClient.Endpoint.Address` 構函式建立物 `System.ServiceModel.EndpointAddress` 件。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/FormsService?WSDL`)。 您不需要使用屬 `lc_version` 性。 建立服務參考時，將使用此屬性。)
-   * 獲取 `System.ServiceModel.BasicHttpBinding` 欄位值以建立對 `FormsServiceClient.Endpoint.Binding` 像。 將返回值轉換為 `BasicHttpBinding`。
-   * 將物 `System.ServiceModel.BasicHttpBinding` 件欄位設 `MessageEncoding` 為 `WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 使用其預設建構子建立`FormsServiceClient`對象。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormsServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/FormsService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 獲取`FormsServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
+   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 指派AEM表單使用者名稱至欄位 `FormsServiceClient.ClientCredentials.UserName.UserName`。
-      * 為欄位分配相應的口令值 `FormsServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值指 `HttpClientCredentialType.Basic` 派給欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 將常數值指 `BasicHttpSecurityMode.TransportCredentialOnly` 派給欄位 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位`FormsServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的口令值分配給欄位`FormsServiceClient.ClientCredentials.UserName.Password`。
+      * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+   * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
+
    >[!NOTE]
    >
-   >對服務客戶端重複 `DocumentManagementServiceClient`這些步驟。
+   >對`DocumentManagementServiceClient`服務客戶端重複這些步驟。
 
-1. 從Content services擷取表單設計（已過時）
+1. 從Content Services擷取表單設計（已過時）
 
-   叫用物件的方 `DocumentManagementServiceClient` 法並傳 `retrieveContent` 遞下列值，以擷取內容：
+   叫用`DocumentManagementServiceClient`物件的`retrieveContent`方法並傳遞下列值，以擷取內容：
 
-   * 一個字串值，它指定添加內容的儲存。 預設商店為 `SpacesStore`。 此值為必要參數。
-   * 一個字串值，它指定要檢索的內容的完全限定路徑(例如 `/Company Home/Form Designs/Loan.xdp`)。 此值為必要參數。
+   * 一個字串值，它指定添加內容的儲存。 預設商店為`SpacesStore`。 此值為必要參數。
+   * 一個字串值，它指定要檢索的內容的完全限定路徑（例如`/Company Home/Form Designs/Loan.xdp`）。 此值為必要參數。
    * 指定版本的字串值。 此值為可選參數，您可以傳遞空字串。 在這種情況下，將檢索最新版本。
    * 儲存瀏覽連結值的字串輸出參數。
-   * 儲存 `BLOB` 內容的輸出參數。 您可以使用此輸出參數來擷取內容。
-   * 儲存 `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` 內容屬性的輸出參數。
-   * 輸出 `CRCResult` 參數。 您可以使用輸出參數來取得內容，而 `BLOB` 非使用此物件。
+   * 儲存內容的`BLOB`輸出參數。 您可以使用此輸出參數來擷取內容。
+   * 儲存內容屬性的`ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType`輸出參數。
+   * `CRCResult`輸出參數。 您可以使用`BLOB`輸出參數來取得內容，而不是使用此物件。
 
 1. 轉換互動式PDF表單
 
-   叫用物 `FormsServiceClient` 件的方 `renderPDFForm2` 法並傳遞下列值：
+   叫用`FormsServiceClient`物件的`renderPDFForm2`方法並傳遞下列值：
 
-   * 包 `BLOB` 含從Content services擷取的表單設計（已過時）的物件。
-   * 包 `BLOB` 含要與表單合併的資料的對象。 如果您不想合併資料，請傳遞空 `BLOB` 物件。
-   * 存 `PDFFormRenderSpec` 儲運行時選項的對象。 此值為可選參數，您可以指 `null` 定是否不想指定執行時選項。
-   * 包 `URLSpec` 含URI值的對象。 此值是可選參數，您可以指定 `null`。
-   * 儲存 `Map` 檔案附件的對象。 此值是可選參數，您可以指 `null` 定是否不要將檔案附加到表單。
+   * `BLOB`物件，包含從Content Services擷取的表單設計（已過時）。
+   * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`BLOB`物件。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。 此值為可選參數，如果您不想指定運行時選項，可以指定`null`。
+   * 包含URI值的`URLSpec`對象。 此值是可選參數，您可以指定`null`。
+   * 儲存檔案附件的`Map`對象。 此值是可選參數，如果您不想將檔案附加到表單，則可以指定`null`。
    * 用於儲存頁數的長輸出參數。
    * 用於儲存地區值的字串輸出參數。
-   * 用 `FormsResult` 來儲存互動式PDF表單的輸出參數 `.`
-   此方 `renderPDFForm2` 法會傳回包 `FormsResult` 含互動式PDF表單的物件。
+   * 用於儲存互動式PDF表單`.`的`FormsResult`輸出參數
+
+   `renderPDFForm2`方法會傳回包含互動式PDF表單的`FormsResult`物件。
 
 1. 使用表單資料流執行動作
 
-   * 透過 `BLOB` 取得物件欄位的值，建立包含表單資 `FormsResult` 料的物 `outputContent` 件。
-   * 通過調用 `System.IO.FileStream` 其建構子建立對象。 傳遞一個字串值，代表互動式PDF檔案的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，該陣列儲存從對 `BLOB` 像檢索到的對象的 `FormsResult` 內容。 取得物件資料成員的值，以填 `BLOB` 入位元組 `MTOM` 陣列。
-   * 通過調 `System.IO.BinaryWriter` 用其建構子並傳遞對象來建立 `System.IO.FileStream` 對象。
-   * 調用物件的方法並傳遞位元組陣列，將位元組 `System.IO.BinaryWriter` 的內容 `Write` 寫入PDF檔案。
+   * 透過取得`FormsResult`物件的`outputContent`欄位值，建立包含表單資料的`BLOB`物件。
+   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，代表互動式PDF檔案的檔案位置以及開啟檔案的模式。
+   * 建立一個位元組陣列，用於儲存從`FormsResult`對象檢索的`BLOB`對象的內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
 
