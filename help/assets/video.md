@@ -927,8 +927,8 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 * 若是YouTube發佈工作，請執行下列動作：
 
 1. 在AEM中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型」。]**
-1. 在「工作流程模型」頁面上，選取「發佈至YouTube」，然後點選工具列上的「編輯」。**[!UICONTROL ****]**
-1. 在「發佈至YouTube」工作流程頁面的右上角，點選「編輯」。]****[!UICONTROL 
+1. 在「工作流程模型」頁面上，選取「發佈至YouTube」，然後點選工具列上的「編輯」。
+1. 在「發佈至YouTube」工作流程頁面的右上角，點選「編輯」。
 1. 將滑鼠指標暫留在「YouTube上傳」元件上，然後點選一次以顯示內嵌工具列。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
