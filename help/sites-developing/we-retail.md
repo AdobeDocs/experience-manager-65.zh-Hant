@@ -18,7 +18,7 @@ ht-degree: 8%
 ---
 
 
-# We.Retail參考實作{#we-retail-reference-implementation}
+# We.Retail Reference Implementation{#we-retail-reference-implementation}
 
 ## 簡介 {#introduction}
 
@@ -46,24 +46,24 @@ We.Retail是AEM的標準參考實作，展示AEM的一些最強大功能。
 
 ## 快速入門 {#getting-started}
 
-We.Retail會以AEM的範例內容形式提供。 若要使用，只需 [像平常一樣啟動AEM](/help/sites-deploying/deploy.md#getting-started)，並確定範例內容未停用。
+We.Retail會以AEM的範例內容形式提供。 若要使用，只需像通常[一樣啟動AEM，並確保範例內容未停用。](/help/sites-deploying/deploy.md#getting-started)
 
 >[!CAUTION]
 >
->We.Retail不應安裝在生產實例上。 生產例項應在執行模式 `nosamplecontent` 中 [啟動](/help/sites-deploying/configure-runmodes.md)。
+>We.Retail不應安裝在生產實例上。 生產實例應在`nosamplecontent` [runmode](/help/sites-deploying/configure-runmodes.md)中啟動。
 
 >[!CAUTION]
 >
->We.Retail是以最新的AEM技術為基礎，因此不支援傳統 [的UI編寫](/help/sites-classic-ui-authoring/home.md)。
+>We.Retail是以最新的AEM技術為基礎，因此不支援[傳統UI編寫](/help/sites-classic-ui-authoring/home.md)。
 
 ### 最新版本 {#latest-version}
 
-雖然We.Retail隨AEM發行，但內容及其功能的更新可能會在發行後進行。 因此，您可從GitHub [下載最新版本](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) ，然後以套件的形式在AEM [例項上上傳](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) 並安裝 [](/help/sites-administering/package-manager.md#installing-packages) 它。
+雖然We.Retail隨AEM發行，但內容及其功能的更新可能會在發行後進行。 因此，您可從GitHub[下載最新版本，然後](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)upload[和](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)以套件形式在AEM例項上安裝[。](/help/sites-administering/package-manager.md#installing-packages)
 
-### 第一步 {#first-steps}
+### 第一步{#first-steps}
 
-1. AEM啟動後（和／或安裝We.Retail），網站 **We.Retail** 就可從網站主控 [台取得](/help/sites-authoring/basic-handling.md#global-navigation)。
-1. 例如，可開啟下列頁面，其外觀應如下列附錄 [所示](#appendix) :
+1. 在啟動AEM（和／或安裝We.Retail）後，**We.Retail**&#x200B;網站便可在[網站主控台](/help/sites-authoring/basic-handling.md#global-navigation)中使用。
+1. 例如，可以開啟以下頁面，其外觀應如下面[附錄](#appendix)中所示：
 
    `https://<server name>:<port number>/editor.html/content/we-retail/language-masters/en.html`
 
@@ -73,12 +73,12 @@ Geometrixx及其許多實體在舊版AEM中做為範例內容。 自6.3版起，
 
 We.Retail在技術上更健全，並運用最新的AEM技術，讓產品更有彈性、更具可擴充性，同時也能展現產品的最新功能。
 
-### 功能比較 {#feature-comparison}
+### 功能比較{#feature-comparison}
 
 下表概述We.Retail中與Geometrixx相較的主要功能。
 
-* **可用** ：表示在範例內容中可找到功能範例。
-* **不可用** ：表示範例內容中不提供功能範例，但並不表示功能本身不提供。
+* **可** 用意指在範例內容中找到功能範例。
+* **不** 可用表示範例內容中不提供功能範例，但並不表示功能本身不可用。
 
 | **功能** | **We.Retail** | **Geometrixx** |
 |---|---|---|
@@ -110,13 +110,13 @@ GITHUB代碼
 您可以在GitHub上找到此頁面的程式碼
 
 * [在GitHub上開啟aem-sample-we-retail專案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
+* 將專案下載為[a ZIP file](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
 
-您也可以直接將最新版 [本下載為](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) 可安裝的套件。
+最新版本也可以是直接下載的[可安裝的套件。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest)
 
-如果您遇到問題，請提出 [GitHub問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues)。
+如果您遇到問題，請提交[GitHub問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues)。
 
-您可以隨意分叉或提出 [請求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls)。
+您可以任意分叉或貢獻[pull requests](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls)。
 
 ## 預覽 {#preview}
 
