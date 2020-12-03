@@ -23,23 +23,23 @@ ht-degree: 1%
 
 內容片段延伸了標準資產；請參閱：
 
-* [使用內容片段建立和管理內容片段](/help/assets/content-fragments/content-fragments.md) , [以及使用內容片段製作頁面](/help/sites-authoring/content-fragments.md) ，以取得有關內容片段的詳細資訊。
+* [使用內容片段建](/help/assets/content-fragments/content-fragments.md) 立和管 [理內容片段和](/help/sites-authoring/content-fragments.md) 頁面編寫，以取得內容片段的詳細資訊。
 
-* [管理資產](/help/assets/manage-assets.md) 、自 [訂和擴充資產](/help/assets/extending-assets.md) ，以取得標準資產的詳細資訊。
+* [管理資](/help/assets/manage-assets.md) 產和自 [訂及擴充資](/help/assets/extending-assets.md) 產，以取得標準資產的詳細資訊。
 
 ## 架構 {#architecture}
 
-內容片 [段的基](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 本組成部分包括：
+內容片段的基本[組成部分](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)為：
 
-* 內容 *片段，*
-* 由一或多個內容 *元素*&#x200B;組成，
-* 以及哪些變數可包含一或多 *個內容*&#x200B;變數。
+* A *內容片段，*
+* 由一個或多個&#x200B;*內容元素* s組成，
+* 可以具有一個或多個&#x200B;*內容變化* s。
 
 視片段類型而定，也會使用模型或範本：
 
 >[!CAUTION]
 >
->[現在建議使用內容片段模型](/help/assets/content-fragments/content-fragments-models.md) ，以建立您的所有片段。
+>[現在建議](/help/assets/content-fragments/content-fragments-models.md) 建立內容片段模型以建立所有片段。
 >
 >We.Retail中的所有範例都使用內容片段模型。
 
@@ -61,10 +61,10 @@ ht-degree: 1%
    * 範本可定義內容片段建立時的（基本、僅限文字）結構。
    * 模板建立時被複製到片段；因此，範本的進一步變更將不會反映在現有片段中。
    * 新增變數等的函式必須相應地更新片段。
-   * [內容片段範本](/help/sites-developing/content-fragment-templates.md) ，其運作方式與AEM生態系統中其他範本機制（例如頁面範本等）的方式不同。 因此，應單獨考慮。
+   * [內容片](/help/sites-developing/content-fragment-templates.md) 段範本的運作方式與AEM生態系統中其他範本機制（例如頁面範本等）的運作方式不同。因此，應單獨考慮。
    * 根據範本管理內容的MIME類型；這表示每個元素和變數都可以有不同的MIME類型。
 
-### 與資產整合 {#integration-with-assets}
+### 與資產{#integration-with-assets}整合
 
 內容片段管理(CFM)是AEM資產的一部份，其格式為：
 
@@ -72,25 +72,28 @@ ht-degree: 1%
 * 他們使用現有的資產功能。
 * 它們與資產（管理控制台等）完全整合。
 
-#### 將結構化內容片段對應至資產 {#mapping-structured-content-fragments-to-assets}
+#### 將結構化內容片段對應至資產{#mapping-structured-content-fragments-to-assets}
 
 ![片段至資產結構](assets/fragment-to-assets-structured.png)
 
 具有結構化內容的內容片段（即基於內容片段模型）被映射到單一資產：
 
-* 所有內容都儲存在資 `jcr:content/data` 產的節點下：
+* 所有內容都儲存在資產的`jcr:content/data`節點下：
 
    * 元素資料儲存在主子節點下：
       `jcr:content/data/master`
 
-   * 變數會儲存在子節點下，子節點會攜帶變數的名稱：例如， `jcr:content/data/myvariation`
+   * 變數會儲存在子節點下，子節點會攜帶變數的名稱：
+例如，`jcr:content/data/myvariation`
 
-   * 每個元素的資料作為具有元素名稱的屬性儲存在相應的子節點中：例如，元素的內容 `text` 儲存為屬性 `text` `jcr:content/data/master`
+   * 每個元素的資料作為具有元素名稱的屬性儲存在相應的子節點中：
+例如，元素`text`的內容儲存為`jcr:content/data/master`上的屬性`text`
 
-* 中繼資料和相關內容會儲存在 `jcr:content/metadata`下方，但標題和說明除外，它們不被視為傳統中繼資料，並儲存在 
+* 中繼資料和相關內容會儲存在`jcr:content/metadata`下方
+除標題和說明外，標題和說明不被視為傳統中繼資料，並儲存在 
 `jcr:content`
 
-#### 將簡單內容片段對應至資產 {#mapping-simple-content-fragments-to-assets}
+#### 將簡單內容片段對應至資產{#mapping-simple-content-fragments-to-assets}
 
 ![chlimage_1-90](assets/chlimage_1-90.png)
 
@@ -106,35 +109,35 @@ ht-degree: 1%
    * 這些附加元素的主要內容映射到相應子資產的原始格式副本。
    * 其他元素的其他變動（如適用）會對應至個別子資產的其他轉譯。
 
-#### 資產位置 {#asset-location}
+#### 資產位置{#asset-location}
 
 與標準資產一樣，內容片段的持有方式如下：
 
 `/content/dam`
 
-#### 資產權限 {#asset-permissions}
+#### 資產權限{#asset-permissions}
 
-如需詳細資訊，請參 [閱內容片段——刪除考量事項](/help/assets/content-fragments/content-fragments-delete.md)。
+如需詳細資訊，請參閱[內容片段——刪除考量事項](/help/assets/content-fragments/content-fragments-delete.md)。
 
-#### 功能整合 {#feature-integration}
+#### 功能整合{#feature-integration}
 
 * 內容片段管理(CFM)功能建立在Assets核心上，但應盡可能獨立於它。
 * CFM針對卡片／欄/清單檢視中的項目提供其專屬的實作；這些外掛程式可插入現有的Assets內容轉譯實作。
 * 已擴充數個「資產」元件，以迎合內容片段的需求。
 
-### 在頁面中使用內容片段 {#using-content-fragments-in-pages}
+### 在頁面{#using-content-fragments-in-pages}中使用內容片段
 
 >[!CAUTION]
 >
->現在 [建議使用內容片段核心元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) 。 如需詳 [細資訊，請參閱開發核心](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 元件。
+>現在建議使用[內容片段核心元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)。 如需詳細資訊，請參閱[開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)。
 
-您可從AEM頁面參考內容片段，就像任何其他資產類型一樣。 AEM提供 [**Content Fragment** core元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) -此元 [件可讓您在頁面上包含內容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您也可以延伸此內容 **片段核心元件** 。
+您可從AEM頁面參考內容片段，就像任何其他資產類型一樣。 AEM提供&#x200B;[**內容片段**&#x200B;核心元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) - [元件，可讓您將內容片段包含在您的頁面](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)上。 您也可以延伸此&#x200B;**內容片段**&#x200B;核心元件。
 
-* 元件使用屬 `fragmentPath` 性來參考實際內容片段。 該 `fragmentPath` 財產的處理方式與其他資產類型的類似財產相同；例如，當內容片段移至其他位置時。
+* 元件使用`fragmentPath`屬性來引用實際內容片段。 `fragmentPath`屬性的處理方式與其他資產類型的相似屬性相同；例如，當內容片段移至其他位置時。
 
 * 該元件允許您選擇要顯示的變化。
 * 此外，還可以選擇一系列段落來限制輸出；例如，這可用於多欄輸出。
-* 此元件可 [讓內容介於](/help/sites-developing/components-content-fragments.md#in-between-content):
+* 該元件允許[in-between content](/help/sites-developing/components-content-fragments.md#in-between-content) :
 
    * 此元件可讓您放置其他資產（影像等） 在引用片段的段落之間。
    * 對於中介內容，您需要：
@@ -152,16 +155,18 @@ ht-degree: 1%
 >
 >當使用以頁面上的內容片段範本為基礎的內容片段時，建立片段時，沒有範本複製時的參考。
 
-#### 使用OSGi控制台進行配置 {#configuration-using-osgi-console}
+#### 使用OSGi控制台{#configuration-using-osgi-console}進行配置
 
 例如，內容片段的後端實作負責讓頁面上使用的片段執行個體可供搜尋，或管理混合媒體內容。 此實作需要知道哪些元件用於轉換片段，以及轉換的參數化方式。
 
-此參數可在 [Web Console中為OSGi bundle](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)Content Fragment Component Configuration配置配置 ****。
+此參數可在[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)中配置，用於OSGi捆綁&#x200B;**內容片段元件配置**。
 
-* **資源類型** A清單 
+* **資源**
+類型清單 
 `sling:resourceTypes` 可用來定義用於呈現內容片段的元件，以及應套用背景處理的元件。
 
-* **Reference Properties**（參考屬性）可以配置屬性清單，以指定對相應元件的片段的參考儲存位置。
+* **參考**
+屬性可以配置屬性清單，以指定對相應元件的片段的參考儲存位置。
 
 >[!NOTE]
 >
@@ -173,28 +178,28 @@ ht-degree: 1%
 
 您仍需遵循一些准則，以確保元件與內容片段背景處理相容：
 
-* 定義要呈現的元素的屬性名稱必須為或 `element` 或 `elementNames`。
+* 定義要呈現的元素的屬性名稱必須為`element`或`elementNames`。
 
-* 定義要呈現的變數的屬性名稱必須為 `variation` 或 `variationName`。
+* 定義要呈現的變數的屬性名稱必須是`variation`或`variationName`。
 
-* 如果支援多個元素的輸出(使用指 `elementNames` 定多個元素)，則實際顯示模式由屬性定義 `displayMode`:
+* 如果支援多個元素的輸出（通過使用`elementNames`指定多個元素），則實際顯示模式由屬性`displayMode`定義：
 
-   * 如果值是 `singleText` （且只設定了一個元素），則元素會呈現為文字，內含內容、版面支援等。 這是僅呈現單一元素之片段的預設值。
+   * 如果值為`singleText`（且只設定了一個元素），則元素會呈現為文字，內含內容、版面支援等。 這是僅呈現單一元素之片段的預設值。
    * 否則，會使用更簡單的方法（可稱為「表單檢視」），其中不支援中間內容，且片段內容會以「原樣」呈現。
 
-* 如果片段是為 `displayMode` ==(隱 `singleText` 含或明示)呈現，則會播放下列其他屬性：
+* 如果為`displayMode` == `singleText`（隱式或顯式）呈現片段，則會播放以下附加屬性：
 
    * `paragraphScope` 定義是否應呈現所有段落或僅呈現一系列段落(值： `all` 與 `range`)
 
-   * if `paragraphScope` == `range` then property `paragraphRange` defines the rendered of farges to be rendered
+   * 如果`paragraphScope` == `range`，則屬性`paragraphRange`定義要呈現的段落範圍
 
-### 與其他架構整合 {#integration-with-other-frameworks}
+### 與其他Frameworks {#integration-with-other-frameworks}整合
 
 內容片段可與下列項目整合：
 
 * **翻譯**
 
-   內容片段與 [AEM轉譯工作流程完全整合](/help/sites-administering/tc-manage.md)。 在建築層面，這意味著：
+   內容片段與[AEM轉譯工作流程](/help/sites-administering/tc-manage.md)完全整合。 在建築層面，這意味著：
 
    * 內容片段的個別翻譯實際上是分開的片段；例如：
 
@@ -216,9 +221,9 @@ ht-degree: 1%
    * 除了基於規則的路徑外，內容片段的不同語言版本之間沒有進一步的聯繫；雖然UI提供在語言變數之間導覽的方式，但是它們會以兩個不同的片段處理。
    >[!NOTE]
    >
-   >AEM翻譯工作流程可搭配 `/content`:
+   >AEM轉譯工作流程可搭配`/content`使用：
    >
-   >    * 由於內容片段模型位於 `/conf`其中，因此這些模型不包含在此類翻譯中。 您可以 [將UI字串國際化](/help/sites-developing/i18n-dev.md)。
+   >    * 由於內容片段模型位於`/conf`中，因此這些轉換中不包括這些模型。 您可以[國際化UI字串](/help/sites-developing/i18n-dev.md)。
       >
       >    
    * 範本會複製以建立片段，因此會隱含。
@@ -226,7 +231,7 @@ ht-degree: 1%
 
 * **中繼資料結構**
 
-   * 內容片段（重新）使用可 [以使用標準資產定義的中繼資料結構](/help/assets/metadata-schemas.md)。
+   * 內容片段(re)使用[中繼資料結構](/help/assets/metadata-schemas.md)，可以與標準資產一起定義。
    * CFM提供其專屬的特定架構：
 
       `/libs/dam/content/schemaeditors/forms/contentfragment`
@@ -235,7 +240,7 @@ ht-degree: 1%
 
    * 各個模式表單與片段編輯器整合。
 
-## 內容片段管理API —— 伺服器端 {#the-content-fragment-management-api-server-side}
+## 內容片段管理API —— 伺服器端{#the-content-fragment-management-api-server-side}
 
 您可以使用伺服器端API來存取您的內容片段；請參閱：
 
@@ -245,13 +250,13 @@ ht-degree: 1%
 >
 >強烈建議您使用伺服器端API，而非直接存取內容結構。
 
-### 主要介面 {#key-interfaces}
+### 關鍵介面{#key-interfaces}
 
 以下三個介面可用作入口點：
 
 * **片段範本** ([FragmentTemplate](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
-   用 `FragmentTemplate.createFragment()` 於建立新片段。
+   使用`FragmentTemplate.createFragment()`建立新片段。
 
    ```
    Resource templateOrModelRsc = resourceResolver.getResource("...");
@@ -271,12 +276,12 @@ ht-degree: 1%
 
       * 清單元素範本
       * 取得特定元素的結構資訊
-      * 存取元素範本(請參閱 `ElementTemplate`)
+      * 存取元素範本（請參閱`ElementTemplate`）
    * 存取片段變化的範本：
 
       * 清單變數範本
       * 獲取給定變數的結構資訊
-      * 存取變數範本(請參閱 `VariationTemplate`)
+      * 存取變數範本（請參閱`VariationTemplate`）
    * 取得初始相關內容
 
    代表重要資訊的介面：
@@ -310,9 +315,9 @@ ht-degree: 1%
 
       * 清單元素
       * 依名稱取得元素
-      * 建立新元素(請參閱 [說明](#caveats))
+      * 建立新元素（請參閱[Panuons](#caveats)）
 
-      * 存取元素資料(請參 `ContentElement`閱)
+      * 存取元素資料（請參閱`ContentElement`）
    * 為片段定義的清單變化
    * 全域建立新變化
    * 管理相關內容：
@@ -332,9 +337,9 @@ ht-degree: 1%
 
          * 清單變化
          * 依名稱取得變化
-         * 建立新的變化(請參 [閱說明](#caveats))
-         * 移除變數(請參 [閱說明](#caveats))
-         * 存取變數資料(請參 `ContentVariation`閱)
+         * 建立新變化（請參閱[Panuons](#caveats)）
+         * 移除變數（請參閱[注意事項](#caveats)）
+         * 存取變數資料（請參閱`ContentVariation`）
       * 解決變數的捷徑（如果指定的變數不適用於元素，則套用某些額外的實施特定備援邏輯）
    * **內容變化** ([ContentVariation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
@@ -342,7 +347,7 @@ ht-degree: 1%
       * 取得／設定內容
       * 簡單同步，基於上次修改的資訊
 
-   這三個介面( `ContentFragment`、 `ContentElement`、 `ContentVariation``Versionable` )都擴充了新增內容片段所需版本控制功能的介面：
+   這3個介面(`ContentFragment`、`ContentElement`、`ContentVariation`)都擴充了`Versionable`介面，其中新增了內容片段所需的版本控制功能：
 
    * 建立元素的新版本
    * 元素的清單版本
@@ -354,13 +359,13 @@ ht-degree: 1%
 
 
 
-### 適應——使用adaptTo() {#adapting-using-adaptto}
+### 適應——使用adaptTo(){#adapting-using-adaptto}
 
 可調整下列項目：
 
 * `ContentFragment` 可適用於：
 
-   * `Resource` -基礎Sling資源；請注意，直接更新基 `Resource` 礎對象需要重建對 `ContentFragment` 像。
+   * `Resource` -基礎Sling資源；請注意，直接更新基 `Resource` 礎對象需要重建 `ContentFragment` 對象。
 
    * `Asset` -代表內 `Asset` 容片段的DAM抽象化；請注意，直接更 `Asset` 新需要重建對 `ContentFragment` 像。
 
@@ -372,27 +377,27 @@ ht-degree: 1%
 
    * `Resource` -確 `Resource` 定所複製的參考模型或原始模板；
 
-      * 通過所做的更改 `Resource` 不會自動反映在中 `FragmentTemplate`。
+      * 透過`Resource`所做的變更不會自動反映在`FragmentTemplate`中。
 
 * `Resource` 可適用於：
 
    * `ContentFragment`
    * `FragmentTemplate`
 
-### 注意事項 {#caveats}
+### 警告{#caveats}
 
 應當指出：
 
 * 實作API以提供UI支援的功能。
-* 整個API的設計不會 **自動** 保留變更（除非API JavaDoc另有說明）。 因此，您必須始終提交各個請求（或實際使用的解析程式）的資源解析程式。
+* 整個API的設計目的是自動&#x200B;**not**&#x200B;保留變更（除非API JavaDoc另有說明）。 因此，您必須始終提交各個請求（或實際使用的解析程式）的資源解析程式。
 * 可能需要額外努力的任務：
 
    * 建立／移除新元素不會更新簡單片段的資料結構（以片段範本為基礎）。
-   * 從中建立新變 `ContentElement` 數不會更新資料結構(但是從自願全域建 `ContentFragment` 立)。
+   * 從`ContentElement`建立新變數不會更新資料結構（但從`ContentFragment`全域建立變數）。
 
    * 移除現有變數不會更新資料結構。
 
-## 內容片段管理API —— 用戶端 {#the-content-fragment-management-api-client-side}
+## 內容片段管理API —— 用戶端{#the-content-fragment-management-api-client-side}
 
 >[!CAUTION]
 >
@@ -404,18 +409,18 @@ ht-degree: 1%
 
 * `filter.xml`
 
-   內 `filter.xml` 容片段管理的設定，不會與Assets核心內容套件重疊。
+   內容片段管理的`filter.xml`已設定為不會與Assets核心內容套件重疊。
 
-## 編輯工作階段 {#edit-sessions}
+## 編輯會話{#edit-sessions}
 
-當用戶在其中一個編輯器頁面中開啟內容片段時，開始編輯會話。 當使用者離開編輯器時，編輯工作階段會完成，方法是選取「 **儲存** 」 **或「取消」**。
+當用戶在其中一個編輯器頁面中開啟內容片段時，開始編輯會話。 當用戶離開編輯器時，通過選擇&#x200B;**保存**&#x200B;或&#x200B;**取消**&#x200B;完成編輯會話。
 
-### 需求 {#requirements}
+### 要求{#requirements}
 
 控制編輯會話的要求包括：
 
 * 編輯可跨多個檢視（= HTML頁面）的內容片段應是原子。
-* 編輯工作也應該是單 *次的*;在編輯作業結束時，變更必須提交（儲存）或回退（取消）。
+* 編輯也應為&#x200B;*transactional*;在編輯作業結束時，變更必須提交（儲存）或回退（取消）。
 * 邊緣案件應妥善處理；這些情況包括使用者手動輸入URL或使用全域導覽離開頁面的情形。
 * 應提供定期自動儲存（每x分鐘），以防止資料遺失。
 * 如果內容片段由兩個使用者同時編輯，則不應覆寫彼此的變更。
@@ -467,15 +472,15 @@ ht-degree: 1%
 
 * 內容變更
 
-   * 每當使用者變更內容而沒有編輯工作階段時，就會建立新的編輯工作階段(請參 [閱啟動工作階段](#processes))。
+   * 每當使用者變更內容而沒有編輯工作階段時，就會建立新的編輯工作階段（請參閱[啟動工作階段](#processes)）。
 
 * 離開頁面
 
    * 如果編輯工作階段存在且變更尚未持續，則會顯示模式確認對話方塊，通知使用者可能遺失的內容，並允許使用者留在頁面上。
 
-## Examples {#examples}
+## 範例{#examples}
 
-### 範例：存取現有內容片段 {#example-accessing-an-existing-content-fragment}
+### 範例：訪問現有內容片段{#example-accessing-an-existing-content-fragment}
 
 若要達成此目的，您可以將代表API的資源調整為：
 
@@ -493,7 +498,7 @@ if (fragmentResource != null) {
 }
 ```
 
-### 範例：建立新內容片段 {#example-creating-a-new-content-fragment}
+### 範例：建立新內容片段{#example-creating-a-new-content-fragment}
 
 若要以程式設計方式建立新的內容片段，您必須使用：
 
@@ -507,30 +512,30 @@ FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
 ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
 ```
 
-### 範例：指定自動儲存間隔 {#example-specifying-the-auto-save-interval}
+### 範例：指定自動保存間隔{#example-specifying-the-auto-save-interval}
 
 可使用配置管理器(ConfMgr)定義自動保存間隔（以秒為單位）:
 
-* 節點： `<*conf-root*>/settings/dam/cfm/jcr:content`
+* 節點：`<*conf-root*>/settings/dam/cfm/jcr:content`
 * 屬性名稱: `autoSaveInterval`
 * 類型: `Long`
 
-* 預設值： `600` （10分鐘）;此定義於 `/libs/settings/dam/cfm/jcr:content`
+* 預設值：`600`（10分鐘）;此定義於`/libs/settings/dam/cfm/jcr:content`
 
 如果要設定5分鐘的自動儲存間隔，您需要在節點上定義屬性；例如：
 
-* 節點： `/conf/global/settings/dam/cfm/jcr:content`
+* 節點：`/conf/global/settings/dam/cfm/jcr:content`
 * 屬性名稱: `autoSaveInterval`
 
 * 類型: `Long`
 
-* 值： `300` （5分鐘等於300秒）
+* 值：`300`（5分鐘等於300秒）
 
-## 內容片段範本 {#content-fragment-templates}
+## 內容片段範本{#content-fragment-templates}
 
-如需完 [整資訊，請參閱內容片段範本](/help/sites-developing/content-fragment-templates.md) 。
+如需完整資訊，請參閱[內容片段範本](/help/sites-developing/content-fragment-templates.md)。
 
-## 頁面製作的元件 {#components-for-page-authoring}
+## 頁面編寫元件{#components-for-page-authoring}
 
 如需詳細資訊，請參閱
 
