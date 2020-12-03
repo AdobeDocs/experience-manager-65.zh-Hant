@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# API指南 {#api-guides}
+# API指南{#api-guides}
 
 Adobe Experience Manager(AEM)提供數個API，以開發應用程式和擴充AEM。 下列清單提供AEM支援的API檔案：
 
@@ -45,11 +45,11 @@ AEM傳送與內容管理API:
 
    * [JSON匯出器](/help/sites-developing/json-exporter.md)
    * [為元件啟用JSON匯出](/help/sites-developing/json-exporter-components.md)
-   * 如需詳細 [資訊，請參閱開發使用指南中的](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js) 「元件」一節
+   * 如需詳細資訊，請參閱開發使用指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)中的[元件區段
 
-* **資產**:資產HTTP API可讓您對資產執行建立——讀取——更新——刪除(CRUD)作業，包括二進位、中繼資料、轉譯和註解。 請參 [閱AEM Assets HTTP API](/help/assets/mac-api-assets.md)
+* **資產**:資產HTTP API可讓您對資產執行建立——讀取——更新——刪除(CRUD)作業，包括二進位、中繼資料、轉譯和註解。請參閱[AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 
-* **內容片段** (CF): [資產HTTP API和](/help/assets/assets-api-content-fragments.md) AEM Assets API中的CF [支援——內容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* **內容片段** (CF): [資產HTTP ](/help/assets/assets-api-content-fragments.md) API和 [AEM Assets API中的CF支援——內容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 
 以下外部資源僅供參考：
 
