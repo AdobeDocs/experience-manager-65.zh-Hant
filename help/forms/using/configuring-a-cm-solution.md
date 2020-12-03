@@ -41,7 +41,7 @@ ht-degree: 1%
 請依照下列步驟，定義公開執行個體啟動管理員的發佈執行個體URL:
 
 1. 前往&#x200B;*https://:&lt;authorHost>:&lt;authorPort>/lc/system/console/configMgr*。 使用OSGi Management Console使用者憑證登入。 預設認證為admin/admin。
-1. 尋找並按一下&#x200B;**[!UICONTROL **[!UICONTROL  com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name ]**設定旁的「編輯]**」圖示。
+1. 尋找並按一 **[!UICONTROL 下]** com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name設定旁的「編輯」圖示。
 1. 在&#x200B;**[!UICONTROL ActivationManager發佈URL]**&#x200B;欄位中，指定存取發佈執行個體ActivationManager的URL。 您可以提供下列URL。
 
    * **負載平衡器URL（建議）**:提供負載平衡器URL，如果您在發佈群（多個非叢集發佈例項）前面有網站伺服器充當負載平衡器。
