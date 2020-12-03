@@ -12,9 +12,9 @@ ht-degree: 10%
 ---
 
 
-# 使用MSM重複使用資產 [!DNL Assets] {#reuse-assets-using-msm-for-assets}
+# 使用MSM將資產用於[!DNL Assets] {#reuse-assets-using-msm-for-assets}
 
-中的Multi Site Manager(MSM)功能可 [!DNL Adobe Experience Manager] 讓使用者重複使用一次製作的內容，並可跨多個網站位置重複使用。 數位資產也與MSM一樣，提供功能 [!DNL Assets] 性。 使用MSM [!DNL Assets]for，您可以：
+[!DNL Adobe Experience Manager]中的多網站管理器(MSM)功能可讓使用者重複使用曾經撰寫的內容，並可跨多個網站位置重複使用。 數位資產也適用於[!DNL Assets]功能的MSM。 使用[!DNL Assets]的MSM，您可以：
 
 * 只要建立資產一次，就可複製這些資產，以便在網站的其他區域重複使用。
 * 在同步過程中保留多個拷貝，並更新一次原始主拷貝以將更改推送到子拷貝。
@@ -22,57 +22,57 @@ ht-degree: 10%
 
 ## 必備條件 {#configprereq}
 
-若要使用MSM [!DNL Assets]，請至少安裝Service Pack 1。 如需詳細資訊，請參 [閱版本注意事項](/help/release-notes/sp-release-notes.md)。
+要將MSM用於[!DNL Assets]，請至少安裝Service Pack 1。 如需詳細資訊，請參閱[發行說明](/help/release-notes/sp-release-notes.md)。
 
-## 瞭解優點和概念 {#concepts}
+## 瞭解優點和概念{#concepts}
 
-### 其運作方式及優點 {#how-it-works-and-the-benefits}
+### 其運作方式及優點{#how-it-works-and-the-benefits}
 
-若要瞭解在多個Web位置重複使用相同內容（文字和資產）的使用情形，請參閱可 [能的MSM案例](/help/sites-administering/msm.md)。 [!DNL Experience Manager] 維護原始資產及其連結副本之間的連結，稱為即時副本(LC)。 維護的連結可讓集中變更推送至多個即時副本。 這樣可加快更新速度，同時不受管理重複副本的限制。 更改的傳播是無錯誤的，且集中的。 此功能可讓更新空間受限於選取的即時副本。 使用者可以分離連結（即中斷繼承），並在下次更新主要副本並執行變更時，進行不會覆寫的本機編輯。 您可以對數個選取的中繼資料欄位或整個資產進行分離。 它允許靈活地在本地更新最初繼承自主副本的資產。
+若要瞭解在多個Web位置重複使用相同內容（文字和資產）的使用情形，請參閱[可能的MSM案例](/help/sites-administering/msm.md)。 [!DNL Experience Manager] 維護原始資產及其連結副本之間的連結，稱為即時副本(LC)。維護的連結可讓集中變更推送至多個即時副本。 這樣可加快更新速度，同時不受管理重複副本的限制。 更改的傳播是無錯誤的，且集中的。 此功能可讓更新空間受限於選取的即時副本。 使用者可以分離連結（即中斷繼承），並在下次更新主要副本並執行變更時，進行不會覆寫的本機編輯。 您可以對數個選取的中繼資料欄位或整個資產進行分離。 它允許靈活地在本地更新最初繼承自主副本的資產。
 
 MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 * 對源資產的更改也會應用（滾出）到即時拷貝，即即時拷貝與源同步。
 * 您可以暫停即時關係或移除少數有限欄位的繼承，以更新即時副本。 對來源的修改將不再套用至即時副本。
 
-### MSM術語辭彙 [!DNL Assets] 表 {#glossary}
+### [!DNL Assets]術語{#glossary}的MSM辭彙表
 
-**來源：** 原始資產或檔案夾。 從中派生即時拷貝的主拷貝。
+**來源：** 原始資產或資料夾。從中派生即時拷貝的主拷貝。
 
-**即時文案：** 與其源同步的源資產／資料夾的副本。 即時副本可以是更多即時副本的來源。 瞭解如何建立LC。
+**即時副本：** 與其來源同步的來源資產／資料夾副本。即時副本可以是更多即時副本的來源。 瞭解如何建立LC。
 
-**繼承：** 即時副本資產／資料夾與其來源之間的連結／參考，系統會使用它來記住要將更新傳送至何處。 中繼資料欄位的繼承存在於精細層級。 您可以移除選擇性中繼資料欄位的繼承，同時保留來源與其即時副本之間的即時關係。
+**繼承：** 即時副本資產／資料夾與其來源之間的連結／參考，系統會使用此連結／參考來記住要將更新傳送至何處。中繼資料欄位的繼承存在於精細層級。 您可以移除選擇性中繼資料欄位的繼承，同時保留來源與其即時副本之間的即時關係。
 
-**推出：** 將對源所做的修改推送到其活動副本下游的操作。 使用轉出動作，可在一次執行中更新一或多個即時副本。 請參閱轉出。
+**轉出：** 將對來源所做的修改推送至其即時副本下游的動作。使用轉出動作，可在一次執行中更新一或多個即時副本。 請參閱轉出。
 
-**轉出設定：** 決定要同步哪些屬性、方式和時間的規則。 這些配置在建立即時拷貝時適用；稍後可以編輯；子項可從其父項資產繼承轉出配置。 對於MSM, [!DNL Assets]僅使用標準轉出設定。 MSM無法使用其他的推廣配置 [!DNL Assets]。
+**轉出設定：** 決定要同步哪些屬性、方式與時間的規則。這些配置在建立即時拷貝時適用；稍後可以編輯；子項可從其父項資產繼承轉出配置。 對於[!DNL Assets]的MSM，請僅使用標準轉出設定。 其他的展出配置不適用於[!DNL Assets]的MSM。
 
-**同步化：** 除了推出外，還有一項動作，可將更新從來源傳送至即時副本，讓來源與即時副本之間產生平等。 系統會針對特定即時副本啟動同步，而動作會從來源提取變更。 使用此動作，僅能更新其中一個即時副本。 請參閱同步動作。
+**同步：除** 了轉出外，還有另一個動作，可透過從來源傳送更新至即時副本，在來源和即時副本之間產生奇偶性。系統會針對特定即時副本啟動同步，而動作會從來源提取變更。 使用此動作，僅能更新其中一個即時副本。 請參閱同步動作。
 
-**暫停：** 臨時移除即時副本與其來源資產／資料夾之間的即時關係。 你可以恢復關係。 請參閱暫停動作。
+**暫停：** 暫時移除即時副本與其來源資產／資料夾之間的即時關係。你可以恢復關係。 請參閱暫停動作。
 
-**繼續：** 繼續即時關係，讓即時副本再次開始從來源接收更新。 請參閱繼續動作。
+**繼續：** 繼續即時關係，讓即時副本再次開始從來源接收更新。請參閱繼續動作。
 
-**重設：** 重置操作通過覆蓋任何本地更改，使即時拷貝再次成為源的複製副本。 它也會移除繼承取消，並重設所有中繼資料欄位的繼承。 要在將來進行本地修改，您必須再次取消特定欄位的繼承。 請參見LC的本地修改。
+**重置：重** 置操作通過覆蓋任何本地更改，使即時拷貝再次成為源的複製副本。它也會移除繼承取消，並重設所有中繼資料欄位的繼承。 要在將來進行本地修改，您必須再次取消特定欄位的繼承。 請參見LC的本地修改。
 
-**分離：** 不可撤銷地移除即時副本資產／資料夾的即時關係。 分離操作後，即時副本將永遠無法從源接收更新，並且不再是即時副本。 請參閱移除關係。
+**分離：不** 可撤銷地移除即時副本資產／資料夾的即時關係。分離操作後，即時副本將永遠無法從源接收更新，並且不再是即時副本。 請參閱移除關係。
 
-## 建立資產的即時副本 {#createlc}
+## 建立資產{#createlc}的即時副本
 
 若要從一或多個來源資產或檔案夾建立即時副本，請遵循下列其中一項：
 
-* 方法1:選取來源資產，然後按一 **[!UICONTROL 下頂端]** 「 **[!UICONTROL 建立]** >即時復本」工具列。
-* 方法2:在使 [!DNL Experience Manager] 用者介面中，按一 **[!UICONTROL 下介面右上角的「建]** 立 **** >即時副本」。
+* 方法1:選取來源資產，然後從頂端的工具列按一下「建立&#x200B;**[!UICONTROL >]**&#x200B;即時副本&#x200B;**[!UICONTROL 」。]**
+* 方法2:在[!DNL Experience Manager]使用者介面中，按一下介面右上角的「建立&#x200B;**[!UICONTROL >**[!UICONTROL &#x200B;即時副本&#x200B;]**」。]**
 
 您可以一次建立資產或資料夾的即時副本。 您可以建立衍生自資產或即時副本本身之資料夾的即時副本。 使用案例不支援內容片段(CF)。 嘗試建立其即時副本時，CF會依原樣複製，沒有任何關係。 複製的CF是及時的快照，在更新原始CF時不會更新。
 
 若要使用第一種方法建立即時副本，請遵循下列步驟：
 
-1. 選擇源資產或資料夾。 在工具列中，按一下「 **[!UICONTROL 建立]** >即 **[!UICONTROL 時副本」]**。
+1. 選擇源資產或資料夾。 在工具列中，按一下「建立&#x200B;**** > **[!UICONTROL 即時副本]**」。
 
    ![從Experience Manager介面建立即時副本](assets/create_lc1.png)
 
-   *圖：從介面建立即時[!DNL Experience Manager]副本。*
+   *圖：從介面建立即時 [!DNL Experience Manager] 副本。*
 
 1. 選擇目標資料夾。 按一下&#x200B;**[!UICONTROL 下一步]**。
 1. 提供標題和名稱。 資產沒有子項。 建立資料夾的即時副本時，您可以選擇包含或排除子項。
@@ -80,11 +80,11 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 若要使用第二種方法建立即時副本，請依照下列步驟進行：
 
-1. 在介 [!DNL Experience Manager] 面中，從右上角按一下「建立 **** >即時 **[!UICONTROL 副本」]**。
+1. 在[!DNL Experience Manager]介面中，從右上角按一下「建立&#x200B;**[!UICONTROL >**[!UICONTROL &#x200B;即時副本&#x200B;]**」。]**
 
    ![從Experience Manager介面建立即時副本](assets/create_lc2.png)
 
-   *圖：從介面建立即時[!DNL Experience Manager]副本。*
+   *圖：從介面建立即時 [!DNL Experience Manager] 副本。*
 
 1. 選擇源資產或資料夾。 按一下&#x200B;**[!UICONTROL 下一步]**。
 1. 選擇目標資料夾。 按一下&#x200B;**[!UICONTROL 下一步]**。
@@ -95,25 +95,25 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 >
 >移動源或即時副本時，將保留關係。 刪除即時副本時，會移除關係。
 
-## 檢視來源和即時副本的各種屬性和狀態 {#properties}
+## 查看源和即時副本的各種屬性和狀態{#properties}
 
-您可以從使用者介面的不同區域檢視即時副本的資訊和MSM相關狀態，例如關係、同步、推出 [!DNL Experience Manager] 等。
+您可以從[!DNL Experience Manager]使用者介面的各個區域檢視即時副本的資訊和MSM相關狀態，例如關係、同步、推出等。
 
 以下兩種方法適用於資產和檔案夾：
 
 * 選取即時複製資產，並在其「屬性」頁面中尋找資訊。
-* 選擇來源資料夾，並從即時副本主控台尋找每個即時副本的 [!UICONTROL 詳細資訊]。
+* 從[!UICONTROL 即時副本控制台]中選擇源資料夾並查找每個即時副本的詳細資訊。
 
 >[!TIP]
 >
 >若要檢查幾個個別即時副本的狀態，請使用第一個方法，即「屬性」頁面。 要檢查多個即時副本的狀態，請使用第二個方法，即，請參閱「關係狀 **[!UICONTROL 態」頁]** 。
 
-### 即時副本的資訊與狀態 {#statuslcasset}
+### 即時副本{#statuslcasset}的資訊和狀態
 
 若要檢查即時副本資產或資料夾的資訊和狀態，請遵循下列步驟。
 
-1. 選取即時副本資產或資料夾。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用鍵盤快速鍵 `p`。
-1. Click **[!UICONTROL Live Copy]**. 您可以檢查源的路徑、暫停狀態、同步狀態、上次轉出日期，以及上次轉出的用戶。
+1. 選取即時副本資產或資料夾。 按一下工具欄中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
+1. 按一下「即時副本」。 ]****[!UICONTROL &#x200B;您可以檢查源的路徑、暫停狀態、同步狀態、上次轉出日期，以及上次轉出的用戶。
 
    ![即時副本資訊和狀態會顯示在「屬性」的控制台中](assets/lcfolder_info_properties.png)
 
@@ -123,16 +123,16 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 1. 您可以選擇即時副本的選項，從父項繼承轉出配置或變更配置。
 
-### 資料夾所有即時副本的資訊與狀態 {#statuslcfolder}
+### 資料夾{#statuslcfolder}的所有即時副本的資訊和狀態
 
-[!DNL Experience Manager] 提供了一個控制台，用於檢查源資料夾的所有即時副本的樣式。 此控制台顯示所有子資產的狀態。
+[!DNL Experience Manager] 提供了一個控制台，用於檢查源資料夾的所有即時副本的樣式。此控制台顯示所有子資產的狀態。
 
-1. 選擇源資料夾。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用鍵盤快速鍵 `p`。
+1. 選擇源資料夾。 按一下工具欄中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
 1. 按一下「 **[!UICONTROL 即時複製來源」]**。若要開啟主控台，請按一下「即 **[!UICONTROL 時複製概述」]**。此控制面板提供所有子資產的頂層狀態。
 
    ![在來源的即時副本控制台中檢視即時副本的狀態](assets/livecopy-statuses.png)
 
-   *圖：在來源的即時副本控制[!UICONTROL 台中檢視即時副本]的狀態。*
+   *圖：在「即時副本控制台」來源中 [!UICONTROL 檢視即時] 副本的狀態。*
 
 1. 若要檢視即時副本檔案夾中每個資產的詳細資訊，請選取資產，然後從工具列按一 **[!UICONTROL 下「關係狀態]** 」。
 
@@ -142,36 +142,36 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 >[!TIP]
 >
->您可以快速查看其他資料夾的即時副本狀態，而不需瀏覽太多。 只要變更「即時副本概述」介面中間上方快顯清單中的 **[!UICONTROL 資料夾]** 。
+>您可以快速查看其他資料夾的即時副本狀態，而不需瀏覽太多。 只要變更&#x200B;**[!UICONTROL 即時副本概述]**&#x200B;介面中間上方快顯清單中的資料夾即可。
 
-### 從「參考」邊欄快速動作來源 {#refrailsource}
+### 源{#refrailsource}的「參考」邊欄中的快速操作
 
 對於來源資產或資料夾，您可以看到下列資訊，並直接從「參考」邊欄採取下列動作：
 
 * 查看即時副本的路徑。
-* 在使用者介面中開啟或顯示特定 [!DNL Experience Manager] 的即時副本。
+* 在[!DNL Experience Manager]使用者介面中開啟或顯示特定即時副本。
 * 將更新同步至特定即時副本。
 * 暫停特定即時副本的關係或變更轉出設定。
 * 存取即時副本概述主控台。
 
-Select the source asset or folder, open the left rail, and click **[!UICONTROL References]**. 或者，選取資產或檔案夾，然後使用鍵盤快速鍵 `Alt + 4`。
+選取來源資產或資料夾，開啟左側導軌，然後按一下「參考」****。 或者，選取資產或檔案夾，然後使用鍵盤快速鍵 `Alt + 4`。
 
 ![所選源的「參考」(References)邊欄中可用的操作和資訊](assets/referencerail_source.png)
 
 *圖：所選源的「參照」(References)邊欄中可用的操作和資訊。*
 
-對於特定即時副本，按一下「編 **[!UICONTROL 輯即時副本」]** ，暫停關係或變更轉出設定。
+對於特定的即時副本，按一下「編輯即時副本」以暫停關係或變更轉出設定。****
 
 ![對於特定即時副本，選取來源資產時，可從「參考」邊欄存取暫停關係或變更轉出設定的選項](assets/referencerail_editlc_options.png)
 
 *圖：暫停關係或變更特定即時副本的轉出設定。*
 
-### 從參考邊欄快速動作即時復本 {#refraillc}
+### 從「參考」邊欄快速動作即時副本{#refraillc}
 
 對於即時副本資產或資料夾，您可以看到下列資訊，並直接從「參考」邊欄採取下列動作：
 
 * 查看其源的路徑。
-* 在使用者介面中開啟或顯示特定 [!DNL Experience Manager] 的即時副本。
+* 在[!DNL Experience Manager]使用者介面中開啟或顯示特定即時副本。
 * 推出更新。
 
 選取即時複製資產或資料夾，開啟左側導軌，然後按一下「參 **[!UICONTROL 考」]**。或者，選取資產或檔案夾，然後使用鍵盤快速鍵 `Alt + 4`。
@@ -180,17 +180,17 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 *圖：「參考」(References)邊欄中所選即時副本的可用動作。*
 
-## 將修改從來源傳播到即時拷貝 {#rolloutsync}
+## 將修改從源複製到即時拷貝{#rolloutsync}
 
-修改源後，可以使用同步操作或轉出操作將更改傳播到即時拷貝。 要瞭解兩個操作之間的差異，請參閱詞 [匯表](#glossary)。
+修改源後，可以使用同步操作或轉出操作將更改傳播到即時拷貝。 要瞭解兩個操作之間的差異，請參見[術語表](#glossary)。
 
-### 轉出動作 {#rollout}
+### 轉出動作{#rollout}
 
 您可以從來源資產啟動轉出動作，並更新全部或部分選擇的即時副本。
 
-1. 選取即時副本資產或資料夾。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用鍵盤快速鍵 `p`。
+1. 選取即時副本資產或資料夾。 按一下工具欄中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
 1. 按一下「 **[!UICONTROL 即時複製來源」]**。按一 **[!UICONTROL 下頂端]** 工具列上的轉出。
-1. 選擇要更新的即時副本。 按一下 **[!UICONTROL 轉出]**。 若要推出子資產的更新，請選取「轉出來 **[!UICONTROL 源」和所有子資產]**。
+1. 選擇要更新的即時副本。 按一下&#x200B;**[!UICONTROL Rovolt]**。 若要推出子資產的更新，請選取&#x200B;**[!UICONTROL Rovolt Source和所有子資產]**。
 
    ![將原始碼的修改部分或全部即時副本](assets/livecopy_rollout_page.png)
 
@@ -200,23 +200,23 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 >
 >在來源資產中所做的修改僅會推出至直接相關的即時副本。 如果即時副本是衍生自其他即時副本，則不會將修改轉出至衍生的即時副本。
 
-或者，選取特定即時副本後，您可以從「參照」邊欄啟動轉出動作。 如需詳細資訊，請參 [閱「從參考邊欄快速動作即時復本」](#refraillc)。 在此轉出方法中，只會更新選取的即時副本及其子系。
+或者，選取特定即時副本後，您可以從「參照」邊欄啟動轉出動作。 如需詳細資訊，請參閱「從參考邊欄快速動作即時副本」](#refraillc)。 [在此轉出方法中，只會更新選取的即時副本及其子系。
 
 ![將原始碼的修改推展到選定的即時副本](assets/livecopy_rollout_dialog.png)
 
 *圖：將來源的修改推展到所選即時副本。*
 
-### 關於同步操作 {#aboutsync}
+### 關於同步操作{#aboutsync}
 
 同步操作僅將源中的修改提取到選定的即時副本。 同步動作會尊重並維護取消繼承後所做的本機修改。 不會覆寫本機修改，也不會重新建立取消的繼承。 您可以以三種方式啟動同步動作。
 
-| 介面中的 [!DNL Experience Manager] 位置 | 使用時機和理由 | 如何使用 |
+| 在[!DNL Experience Manager]介面中 | 使用時機和理由 | 如何使用 |
 |---|---|---|
-| [!UICONTROL 參考邊欄] | 已選取來源時，可快速同步。 | 請參 [閱「參考」邊欄中的來源快速動作](#refrailsource) |
-| 屬性頁面中 [!UICONTROL 的工具] 列 | 當您已開啟即時副本屬性時，啟動同步。 | 請參 [閱同步即時副本](#synclc) |
-| [!UICONTROL 即時副本概觀控制台] (Live Copy Overview Console) | 在選取來源資料夾或「即時複製概述」控制台已開啟時，快速同步 [!UICONTROL 多個資產(不一定全部] )。 同步動作會一次針對一個資產啟動，但是是一次執行多個資產同步的更快方式。 | 檢視 [即時複製資料夾中許多資產的動作](#bulkactions) |
+| [!UICONTROL 參考] 鐵路 | 已選取來源時，可快速同步。 | 請參閱[來源](#refrailsource)參考邊欄的快速動作 |
+| [!UICONTROL 屬性]頁中的工具欄 | 當您已開啟即時副本屬性時，啟動同步。 | 請參閱[同步即時副本](#synclc) |
+| [!UICONTROL 即時副本概觀] 主控台 | 選取來源資料夾或[!UICONTROL 即時副本概述]控制台已開啟時，可快速同步多個資產（不一定全部）。 同步動作會一次針對一個資產啟動，但是是一次執行多個資產同步的更快方式。 | 請參閱「在即時副本資料夾中對許多資產執行的動作」[](#bulkactions) |
 
-### 同步即時副本 {#synclc}
+### 同步即時副本{#synclc}
 
 若要啟動同步動作，請開啟即 **[!UICONTROL 時副本的「屬性]** 」頁面，按一下「即時 **** 副本」，然後從工具列按一下所要的動作。
 
@@ -230,7 +230,7 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 >
 >如果關係被暫停，則工具欄中不提供同步操作。 雖然「參照」邊欄中提供同步動作，但即使成功轉出，修改也不會傳播。
 
-## 暫停和繼續關係 {#suspendresume}
+## 暫停和恢復關係{#suspendresume}
 
 您可以暫時暫停關係，以防止即時副本接收對來源資產或資料夾所做的修改。 您也可以恢復即時副本的關係，以開始從來源接收修改。
 
@@ -238,25 +238,25 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 或者，您也可以從即時副本概述主控台，快速暫停或繼續即時副本資料夾中多 **[!UICONTROL 個資產的關係]** 。請參 [閱對即時副本資料夾中的許多資產採取動作](#bulkactions)。
 
-## 對即時副本進行本機修改 {#localmods}
+## 對即時副本進行本機修改{#localmods}
 
 即時拷貝是原始源建立時的副本。 即時副本的中繼資料值會繼承自來源。 中繼資料欄位個別地維持與來源資產各自欄位的繼承。
 
-不過，您有彈性對即時副本進行本機修改，以變更一些選取的屬性。若要進行本機修改，請取消所要屬性的繼承。當取消一個或多個元資料欄位的繼承時，保留資產的即時關係和其它元資料欄位的繼承。任何同步或轉出都不會覆寫本機修改。To do so, open **[!UICONTROL Properties]** page of a live copy asset, click the **[!UICONTROL cancel inheritance]** option next to a metadata field.
+不過，您有彈性對即時副本進行本機修改，以變更一些選取的屬性。若要進行本機修改，請取消所要屬性的繼承。當取消一個或多個元資料欄位的繼承時，保留資產的即時關係和其它元資料欄位的繼承。任何同步或轉出都不會覆寫本機修改。若要這麼做，請開啟即時複製資產的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面，按一下中繼資料欄位旁的&#x200B;**[!UICONTROL 取消繼承]**&#x200B;選項。
 
-您可以還原所有本機修改，並將資產還原為其來源狀態。 重設動作可立即覆寫所有本機修改，並重新建立所有中繼資料欄位的繼承。 若要回復，請從即時復 **[!UICONTROL 制資產的]** 「屬性」頁面，按一下工具列中 **[!UICONTROL 的「重設]** 」。
+您可以還原所有本機修改，並將資產還原為其來源狀態。 重設動作可立即覆寫所有本機修改，並重新建立所有中繼資料欄位的繼承。 若要回復，請從即時複製資產的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面，按一下工具列的&#x200B;**[!UICONTROL 重設]**。
 
 ![重設動作會覆寫本機編輯，並部分將即時副本與其來源整合。](assets/livecopy_reset.png)
 
 *圖：重設動作會覆寫本機編輯，並部分將即時副本與其來源整合。*
 
-## 移除即時關係 {#detach}
+## 移除即時關係{#detach}
 
-您可以使用「分離」操作完全移除源和即時副本之間的關係。 即時副本分離後，即時副本會變成獨立的資產或資料夾。 在分離後，它會立即在介面中 [!DNL Experience Manager] 顯示為新資產。 要將即時副本從其源中分離，請執行以下步驟。
+您可以使用「分離」操作完全移除源和即時副本之間的關係。 即時副本分離後，即時副本會變成獨立的資產或資料夾。 在分離後，它立即在[!DNL Experience Manager]介面中顯示為新資產。 要將即時副本從其源中分離，請執行以下步驟。
 
-1. 選取即時副本資產或資料夾。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用鍵盤快速鍵 `p`。
+1. 選取即時副本資產或資料夾。 按一下工具欄中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
 
-1. Click **[!UICONTROL Live Copy]**. 按一下工 **[!UICONTROL 具欄中]** 「分離」。 從顯示 **[!UICONTROL 的對話框中]** ，按一下「分離」(Detach)。
+1. 按一下「即時副本」。 ]****[!UICONTROL &#x200B;按一下工具欄中的&#x200B;**[!UICONTROL Detach]**。 從顯示的對話框中按一下&#x200B;**[!UICONTROL Detach]**。
 
    ![分離操作會完全刪除源副本和即時副本之間的關係](assets/livecopy_detach.png)
 
@@ -264,25 +264,25 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
    >[!CAUTION]
    >
-   >按一下對話框中的「分離」( **[!UICONTROL Detach]** )時，該關係將立即刪除。 您無法按一下「屬性」頁 **[!UICONTROL 面上的]** 「取消」來還原它。
+   >從對話框中按一下&#x200B;**[!UICONTROL Detach]**&#x200B;可立即刪除關係。 不能通過按一下「屬性」頁上的&#x200B;**[!UICONTROL Cancel]**&#x200B;來撤消。
 
-Alternatively, you can quickly detach multiple assets in a live copy folder from the **[!UICONTROL Live Copy Overview]** console. 請參 [閱對即時副本資料夾中的許多資產採取動作](#bulkactions)。
+或者，您也可以從&#x200B;**[!UICONTROL 即時副本概述]**&#x200B;主控台快速分離即時副本資料夾中的多個資產。 請參 [閱對即時副本資料夾中的許多資產採取動作](#bulkactions)。
 
-## 對即時副本資料夾中的許多資產採取動作 {#bulkactions}
+## 對即時副本資料夾{#bulkactions}中的許多資產採取動作
 
-如果您在即時副本資料夾中有多個資產，則啟動每個資產的動作可能相當麻煩。 您可以從即時副本主控台，快速對許多資產 [!UICONTROL 啟動基本動作]。 上述方法仍適用於個別資產。
+如果您在即時副本資料夾中有多個資產，則啟動每個資產的動作可能相當麻煩。 您可以從[!UICONTROL 即時副本控制台]快速啟動許多資產的基本動作。 上述方法仍適用於個別資產。
 
-1. 選擇源資料夾。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用鍵盤快速鍵 `p`。
+1. 選擇源資料夾。 按一下工具欄中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
 1. 按一下「 **[!UICONTROL 即時複製來源」]**。若要開啟主控台，請按一下「即 **[!UICONTROL 時複製概述」]**。
 1. 在此控制面板中，從即時複製資料夾選取即時複製資產。從工具列按一下所需的動作。可用的操作有 **[!UICONTROL 同步]**、重置 **[!UICONTROL 、]**&#x200B;掛起 ****&#x200B;和 ****&#x200B;分離。您可以快速對任意數量的即時副本資料夾中與選定來源資料夾處於即時關係的任何資產啟動這些操作。
 
    ![從即時副本概述主控台輕鬆更新即時副本資料夾中的許多資產](assets/livecopyconsole_update_many_assets.png)
 
-   *圖：從即時副本概述主控台輕鬆更新即時副本[!UICONTROL 檔案夾中的許多資產]。*
+   *圖：從即時副本檢視主控台輕鬆更新即時副本 [!UICONTROL 檔案夾中] 的許多資產。*
 
-## 擴充MSM [!DNL Assets] {#extendapi}
+## 擴展[!DNL Assets] {#extendapi}的MSM
 
-[!DNL Experience Manager] 可讓您使用MSM Java API擴充功能。 對 [!DNL Assets]於MSM，擴展功能與MSM功能相同 [!DNL Sites]。 如需詳細資訊， [請參閱擴充MSM](/help/sites-developing/extending-msm.md) ，以及下列各項，以取得特定工作的詳細資訊：
+[!DNL Experience Manager] 可讓您使用MSM Java API擴充功能。對於[!DNL Assets]，擴展的工作方式與對[!DNL Sites]的MSM工作方式相同。 如需詳細資訊，請參閱[擴充MSM](/help/sites-developing/extending-msm.md)和下列，以取得特定工作的詳細資訊：
 
 * [API概觀](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
 * [建立新的同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
@@ -291,14 +291,14 @@ Alternatively, you can quickly detach multiple assets in a live copy folder from
 
 >[!NOTE]
 >
->* MSM的Blueprint [!DNL Sites] 稱為MSM的Live Copy來源 [!DNL Assets]。
->* MSM不支援刪除建立站點嚮導中的章節步驟 [!DNL Assets]。
->* MSM不支援在頁面屬性（觸控式UI）上設定MSM鎖 [!DNL Assets]。
+>* MSM中[!DNL Sites]的Blueprint稱為MSM中[!DNL Assets]的Live Copy來源。
+>* [!DNL Assets]的MSM不支援移除建立網站精靈中的章節步驟。
+>* [!DNL Assets]的MSM不支援在頁面屬性(Touch-enabled UI)上設定MSM鎖。
 
 
-## 資產管理任務對即時拷貝的影響 {#manageassets}
+## 資產管理任務對即時拷貝的影響{#manageassets}
 
-即時副本和來源是可在一定程度上作為數字資產進行管理的資產或資料夾。 中的某些資產管理任 [!DNL Experience Manager] 務對即時拷貝有特定影響。
+即時副本和來源是可在一定程度上作為數字資產進行管理的資產或資料夾。 [!DNL Experience Manager]中的某些資產管理任務對即時拷貝有特定影響。
 
 * 複製即時副本時，會建立與第一個即時副本來源相同的即時副本資產。
 * 當您移動來源或其即時副本時，即時關係會保留。
@@ -307,26 +307,26 @@ Alternatively, you can quickly detach multiple assets in a live copy folder from
 * 對於源資料夾，可以使用建立審閱任務的選項。
 * 在清單檢視和欄檢視中檢視資產清單時，即時副本資產或資料夾會針對其顯示「即時副本」。 這可協助您輕鬆識別資料夾中的即時副本。
 
-## 比較MSM的 [!DNL Assets] 和 [!DNL Sites] {#comparison}
+## 比較[!DNL Assets]和[!DNL Sites] {#comparison}的MSM
 
-在更多情況下，MSM for [!DNL Assets] Sites功能與MSM for Sites的行為相符。 需要注意的主要差異有：
+在更多情況下，[!DNL Assets]的MSM與MSM for Sites功能的行為相符。 需要注意的主要差異有：
 
-* MSM的Blueprint [!DNL Sites] 稱為MSM的Live Copy來源 [!DNL Assets]。
-* 在「網站」中，您可以比較藍圖及其即時副本，但無法比 [!DNL Assets] 較來源與即時副本。
-* 您無法在中編輯即時副本 [!DNL Assets]。
-* 網站通常有孩子，但 [!DNL Assets] 沒有。 建立個別資產的即時副本時，不會顯示包含或排除子項的選項。
-* MSM不支援刪除建立站點嚮導中的章節步驟 [!DNL Assets]。
-* MSM不支援在頁面屬性上設定MSM鎖（啟用觸控的UI） [!DNL Assets]。
-* 對於MSM, [!DNL Assets]僅使用 **[!UICONTROL Standard轉出設定]**。 MSM無法使用其他的推廣配置 [!DNL Assets]。
+* MSM中[!DNL Sites]的Blueprint稱為MSM中[!DNL Assets]的Live Copy來源。
+* 在「網站」中，您可以比較藍圖及其即時副本，但是在[!DNL Assets]中無法比較來源與其即時副本。
+* 您無法在[!DNL Assets]中編輯即時副本。
+* 網站通常有子系，但[!DNL Assets]則否。 建立個別資產的即時副本時，不會顯示包含或排除子項的選項。
+* [!DNL Assets]的MSM不支援移除建立網站精靈中的章節步驟。
+* [!DNL Assets]的MSM不支援在頁面屬性上設定MSM鎖（啟用觸控的UI）。
+* 對於[!DNL Assets]的MSM，僅使用&#x200B;**[!UICONTROL 標準轉出配置]**。 其他的展出配置不適用於[!DNL Assets]的MSM。
 
-## Best practices {#bestpractices}
+## 最佳做法{#bestpractices}
 
 MSM的一些最佳實務為：
 
 * 在開始實施前，規劃資產和內容流的父子關係。
 
-## MSM的限制和已知問題 [!DNL Assets] {#limitations}
+## [!DNL Assets] {#limitations}的MSM限制和已知問題
 
-以下是MSM的限制 [!DNL Assets]。
+以下是MSM對[!DNL Assets]的限制。
 
 * 使用案例不支援內容片段(CF)。 嘗試建立其即時副本時，CF會依原樣複製，沒有任何關係。 複製的CF是及時的快照，在更新原始CF時不會更新。
