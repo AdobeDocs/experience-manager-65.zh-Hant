@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1b5e0ccf-4157-45e3-8caf-1d6739d7d9d2
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '195'
+ht-degree: 1%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 下載 {#download}
 
-此指令碼可簡化產生可讀報表 `access.log` 的檔案分析，以供日後處理。
+此指令碼可簡化`access.log`檔案的分析，產生可讀報告以供日後處理。
 
 [取得檔案](assets/analyse-access.sh)
 
 ## 說明 {#description}
 
-此指令碼可簡化產生可讀報表 `access.log` 的檔案分析，以供日後處理。
+此指令碼可簡化`access.log`檔案的分析，產生可讀報告以供日後處理。
 
 它會產生整體請求編號、GET與POST、隨時間的請求分發等。
 
@@ -35,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 從檔案中擷取註解，告知您如何執行它：
 
-分析CQ外 `access.log` 推各種資訊並產生Markdown輸出 `stdout`。
+分析CQ `access.log`外推各種資訊，並在`stdout`上產生Markdown輸出。
 
 ## 使用狀況 {#usage}
 
