@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '967'
+ht-degree: 0%
 
 ---
 
 
-# 如何使用Proxy伺服器工具{#how-to-use-the-proxy-server-tool}
+# 如何使用Proxy Server Tool{#how-to-use-the-proxy-server-tool}
 
 代理伺服器充當在客戶機和伺服器之間中繼請求的中間伺服器。 代理伺服器跟蹤所有客戶機與伺服器的交互，並輸出整個TCP通信的日誌。 這樣，您就可以完全監視當前的情況，而無需訪問主伺服器。
 
@@ -32,7 +35,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 例如，您可以將代理伺服器放在通過TCP/IP網路通信的任意兩個應用程式之間；例如網頁瀏覽器和AEM。 這可讓您監控您請求CQ頁面時的實際情況。
 
-## 啟動代理伺服器工具 {#starting-the-proxy-server-tool}
+## 啟動Proxy Server Tool {#starting-the-proxy-server-tool}
 
 在命令行上啟動伺服器：
 
@@ -42,11 +45,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 `<host>`
 
-這是您要連接到的CRX實例的主機地址。 如果實例位於您的本地電腦上，則此為 `localhost`。
+這是您要連接到的CRX實例的主機地址。 如果實例位於本地電腦上，則該實例將為`localhost`。
 
 `<remoteport>`
 
-這是目標CRX實例的主機埠。 例如，新安裝的AEM安裝的預設值為， **`4502`** 而新安裝的AEM作者例項的預設值為 `4502`。
+這是目標CRX實例的主機埠。 例如，新安裝的AEM安裝的預設值為&#x200B;**`4502`**，而新安裝的AEM作者例項的預設值為`4502`。
 
 `<localport>`
 
@@ -72,9 +75,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **`-i <numIndentions>`**（新增縮進）
 
-每個作用中的連線都會縮排，以提高可讀性。 預設為16層。 此功能是隨附的 `proxy.jar version 1.16`。
+每個作用中的連線都會縮排，以提高可讀性。 預設為16層。 此功能是由`proxy.jar version 1.16`引入的。
 
-### 日誌格式 {#log-format}
+### 日誌格式{#log-format}
 
 proxy-2.1.jar產生的記錄項目都有下列格式：
 
@@ -86,7 +89,7 @@ proxy-2.1.jar產生的記錄項目都有下列格式：
 
 * C表示此項目來自用戶端（這是網頁的要求）
 * 0是連接號（連接計數器從0開始）
-* &#x200B;# 00000位元組串流中的偏移。 這是第一個條目，因此偏移為0。
+* # 00000位元組串流中的偏移。 這是第一個條目，因此偏移為0。
 * `[GET <?>]` 是請求的內容，在其中一個HTTP標題(url)範例中。
 
 當連接關閉時，將記錄以下資訊：
@@ -96,13 +99,13 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-這顯示第6個連接上以平均速度在客戶端( `C`)和伺服器( `S`)之間傳遞的位元組數。
+這顯示第6個連接上以平均速度在客戶端(`C`)和伺服器(`S`)之間傳遞的位元組數。
 
 **日誌輸出示例**
 
 例如，請考慮在要求時產生下列程式碼的頁面：
 
-### 例如 {#example}
+### 範例 {#example}
 
 例如，假設儲存庫中有一個非常簡單的html檔案，位於
 
@@ -112,7 +115,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 `/content/test.jpg`
 
-其內容 `test.html` 為：
+`test.html`的內容為：
 
 ```xml
 <html>
@@ -126,11 +129,11 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-假設AEM例項正在執行， `localhost:4502` 我們會像這樣啟動Proxy:
+假設AEM例項在`localhost:4502`上執行，我們會以下列方式啟動Proxy:
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-CQ/CRX實例現在可以通過proxy `localhost:4444` at訪問，通過此埠的所有通信都記錄到 `test.log`。
+CQ/CRX實例現在可通過`localhost:4444`的代理訪問，並且通過此埠的所有通信都記錄到`test.log`。
 
 如果我們現在檢視proxy的輸出，我們將會看到瀏覽器與AEM例項之間的互動。
 
@@ -145,7 +148,7 @@ using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 
 `http://localhost:4444/content/test.html`
 
-我們看到瀏覽器對頁 `GET` 面提出請求：
+我們看到瀏覽器對頁面發出`GET`請求：
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -162,7 +165,7 @@ C-0-#000684 -> [59-7913-4285-8857-832c087bafd5_c484727d3b3665ad%3acrx.default; y
 C-0-#000824 -> [ ]
 ```
 
-AEM例項會以檔案內容回應 `test.html`:
+AEM例項會以檔案`test.html`的內容回應：
 
 ```shell
 S-0-#000000 -> [HTTP/1.1 200 OK ]
@@ -184,7 +187,7 @@ S-0-#000311 -> [</body>]
 S-0-#000319 -> [</html>]
 ```
 
-### 代理伺服器的使用 {#uses-of-the-proxy-server}
+### 代理伺服器{#uses-of-the-proxy-server}的使用
 
 以下情況說明了可以使用代理伺服器的一些用途：
 
