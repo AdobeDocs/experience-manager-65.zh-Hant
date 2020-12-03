@@ -1,8 +1,8 @@
 ---
 title: 追蹤結果並提供意見回應
 seo-title: 追蹤結果並提供意見回應
-description: 您可自行決定如何定義測試案例及產生的測試計畫，以及如何定義和定義測試案例
-seo-description: 您可自行決定如何定義測試案例及產生的測試計畫，以及如何定義和定義測試案例
+description: 您可自行決定如何定義測試案例及產生的測試計畫，以及您在何處定義測試案例
+seo-description: 您可自行決定如何定義測試案例及產生的測試計畫，以及您在何處定義測試案例
 uuid: b4b811d4-4ca0-4477-a866-b262f9a698f4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 2fff5f64-d330-4b32-a861-1f5315363b69
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# 追蹤結果並提供意見回應{#tracking-results-and-providing-feedback}
+# 追蹤結果並提供意見{#tracking-results-and-providing-feedback}
 
 您可自行決定如何定義測試案例以及產生的測試計畫；有許多工具可供使用。
 
