@@ -12,6 +12,9 @@ discoiquuid: f01eb2aa-6891-4f5d-8a4a-43fc1534c222
 docset: aem65
 translation-type: tm+mt
 source-git-commit: da08613be784f43ad3e3c3652b7e015640a48a9d
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 0%
 
 ---
 
@@ -38,29 +41,31 @@ source-git-commit: da08613be784f43ad3e3c3652b7e015640a48a9d
 
 自動化測試案例的前景顯然十分誘人，因為它可以消除重複性任務。
 
-## 手動與自動測試 {#manual-versus-automated-tests}
+## 手動測試與自動測試{#manual-versus-automated-tests}
 
 不過，自動化測試案例是一項重大投資，因此應考慮到某些方面：
 
 * 需要時間、精力和經驗來設定和設定。
 * 如果以瀏覽器為基礎，則安裝瀏覽器更新時，問題的風險會增加；需要更多時間進行修正。
 * 只有大項目才真正可行。
-* 當產生多個版本以用於測試或在長期版本計畫中時，就很好。
+* 適用於為測試或長期發行計畫產生多個版本時。
 
-## 測試特定方面 {#testing-specific-aspects}
+## 測試特定方面{#testing-specific-aspects}
 
 在測試AEM時，會特別關注一些特定細節：
 
 **作者和發佈環境**
 
-不過，在「環 [境](/help/sites-developing/the-basics.md#environments) 」中，有必要強調AEM在測試方面的決定性因素。
+雖然[Environments](/help/sites-developing/the-basics.md#environments)中涵蓋了AEM在測試方面的決定性因素，但值得強調。
 
 您必須將AEM視為兩個應用程式：
 
-* the *Author* environment（作者環境）此實例允許作者輸入和發佈內容。
+* *作者*環境
+此例項可讓作者輸入和發佈內容。
 這有一小群(er)可預測的使用者，其特定功能和效能對使用者至關重要。
 
-* 「發 *布* 」環境此例項以發佈的形式呈現網站，供訪客存取。
+* *Publish*環境
+此例項以發佈的表格呈現網站，供訪客存取。
 這通常會有較大的使用者集，其流量並不總是可以100%預測。 在回應要求時，效能仍然至關重要。 還必須考慮快取和負載平衡。
 
 雖然軟體與之相同，但它們：
@@ -85,18 +90,22 @@ source-git-commit: da08613be784f43ad3e3c3652b7e015640a48a9d
 
 測試十分困難（快取會在不同層級和不同位置進行），而且必須使用黑匣子進行。 測試的主要方面包括：
 
-* **準確**&#x200B;性可確保網站訪客可檢視內容更新。
+* **確**
+保網站訪客可檢視內容更新。
 
-* **連續**&#x200B;性確保在一台伺服器關閉時網站仍然可用。
+* **繼**
+續確保當一台伺服器關閉時，網站仍然可用。
 
-* **Clusters** Clusters用於提供：
+* ****
+ClustersClusters用於提供：
 
-   * **故障切換**&#x200B;如果一台伺服器出現故障，則群集中的其他伺服器將接管處理。
+   * **故**
+障切換如果一台伺服器出現故障，群集中的其他伺服器將接管處理。
 
-   * **Performance**Load balancing with full failover（效能負載平衡和完全故障切換）提高了群集的效能。
-當用於客戶項目時，必須測試群集以確認配置的正確操作。
+   * **PerformanceLoad**
+平衡與完全故障切換可提高群集的效能。當用於客戶項目時，必須測試群集以確認配置的正確操作。
 
-## 測試協力廠商軟體 {#testing-third-party-software}
+## 測試協力廠商軟體{#testing-third-party-software}
 
 所有與AEM介接的協力廠商軟體，都將在詳細需求規格中加以參考。
 
