@@ -11,17 +11,18 @@ ht-degree: 0%
 ---
 
 
-# 系列、程式碼片段和程式碼片段範本的多租用功能 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# 系列、程式碼片段和程式碼片段範本的多租賃{#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 多租賃功能可讓您根據組織首碼和組織ID，在CRX中區隔內容，以保護內容不受其他組織使用者未經授權的存取。
 
-[!DNL Adobe Experience Manager Assets] 將每個組織的資料儲存在不同的路徑中。 每個組織特定路徑都由組織首碼和組織ID來識別，這些ID包含在CRX中儲存不同類型資產的傳統位置中。
+[!DNL Adobe Experience Manager Assets] 將每個組織的資料儲存在不同的路徑中。每個組織特定路徑都由組織首碼和組織ID來識別
+它包含在CRX中儲存不同類型資產的傳統位置。
 
-例如，如果您建立名為的資料夾， `Demo`資 [!DNL Experience Manager] 產通常會將資料夾儲存在 `../content/dam/Demo`。 啟用多租賃後，您現在可以將資料儲存在 `../content/dam/<organization prefix>/<organization id>Demo`
+例如，如果您建立名為`Demo`的資料夾，則[!DNL Experience Manager]資產通常會將資料夾儲存在`../content/dam/Demo`。 啟用多租賃後，您現在可以在`../content/dam/<organization prefix>/<organization id>Demo`儲存資料
 
-例如，若是指 [!DNL Adobe Marketing Cloud] 派給組 [!DNL Assets] 織的（隨選）使用者，您可以使用多租賃功能來設定路 `aodpremium``../content/dam/<mac>/<aodpremium>Demo` 徑以區隔其內容。 在此範例中， `mac` 是組織首碼 `aodpremium` 和組織ID。
+例如，如果[!DNL Assets]（隨選）的[!DNL Adobe Marketing Cloud]使用者已指派給`aodpremium`組織，您可以使用多租賃功能來設定`../content/dam/<mac>/<aodpremium>Demo`路徑以區隔其內容。 在此範例中，`mac`是組織首碼，而`aodpremium`是組織ID。
 
-根據使用者的組織和ID，此限定路徑會顯示在介面和各種精靈中，包括「移動」和「程式碼片段」建立精靈，以執行隔離。 [!DNL Assets]
+根據使用者的組織和ID，此限定路徑會顯示在[!DNL Assets]介面和各種精靈中，包括「移動」和「程式碼片段建立」精靈，以執行隔離。
 
 「多租賃」功能可讓您分隔下列資產和元件類型：
 
