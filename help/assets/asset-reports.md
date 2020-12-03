@@ -3,15 +3,15 @@ title: 關於資產使用與共用的報告
 description: ' [!DNL Adobe Experience Manager Assets] 中有關您資產的報表，可協助您瞭解數位資產的使用、活動和共用。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 6016cefa9456d8f142347ff197b61b1614d55ab9
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 8%
+source-wordcount: '1131'
+ht-degree: 7%
 
 ---
 
 
-# 資產報表{#asset-reports}
+# 資產報表 {#asset-reports}
 
 資產報表可讓您評估[!DNL Adobe Experience Manager Assets]部署的公用程式。 使用[!DNL Assets]，您可以產生各種數位資產的報表。 這些報表提供您系統使用情況、使用者與資產的互動方式，以及哪些資產被下載和共用的實用資訊。
 
@@ -152,3 +152,11 @@ ht-degree: 8%
 1. 開啟&#x200B;**[!UICONTROL DAM Report Purge Service]**&#x200B;組態。
 1. 在`scheduler.expression.name`欄位中指定清除服務的頻率（時間間隔）。 您也可以設定報表的年齡和數量臨界值。
 1. 儲存變更。
+
+## 疑難排解資訊、提示和限制{#best-practices-and-limitations}
+
+* 如果報表中的某些報表或數字無法使用或如預期般，請確定[!UICONTROL Day CQ DAM Event Recorder]服務已啟用。
+
+* 移除不再需要的報表。 使用DAM報告清除服務中的配置選項來配置清除報告的標準。
+
+* 如果未產生「磁碟使用狀況報表」，而您正在使用[!DNL Dynamic Media]，請確定所有資產都正確進行。 若要解決，請重新處理資產，然後再次產生報表。
