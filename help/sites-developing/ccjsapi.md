@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '3163'
+ht-degree: 2%
 
 ---
 
@@ -23,11 +26,11 @@ CQ_Analytics.ClientContextMgr物件是包含一組自行註冊的工作階段儲
 
 擴充CQ_Analytics.PeristedSessionStore。
 
-### Methods {#methods}
+### 方法{#methods}
 
-#### getRegisteredStore(name) {#getregisteredstore-name}
+#### getRegisteredStore(name){#getregisteredstore-name}
 
-傳回指定名稱的作業存放區。 另請參閱 [訪問會話儲存](/help/sites-developing/client-context.md#accessing-session-stores)。
+傳回指定名稱的作業存放區。 另請參閱[訪問會話儲存](/help/sites-developing/client-context.md#accessing-session-stores)。
 
 **參數**
 
@@ -35,9 +38,9 @@ CQ_Analytics.ClientContextMgr物件是包含一組自行註冊的工作階段儲
 
 **退貨**
 
-CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指 `null` 定名稱不存在儲存時返回。
+CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當給定名稱不存在儲存時返回`null`。
 
-#### register(sessionstore) {#register-sessionstore}
+#### register(sessionstore){#register-sessionstore}
 
 使用用戶端內容註冊會話儲存。 完成時觸發儲存寄存器和儲存更新事件。
 
@@ -51,11 +54,11 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 
 ## CQ_Analytics.ClientContextUtils {#cq-analytics-clientcontextutils}
 
-提供監聽作業商店啟動和註冊的方法。 另請參 [閱檢查會話儲存是否已定義和初始化](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized)。
+提供監聽作業商店啟動和註冊的方法。 另請參見[檢查會話儲存是否已定義和初始化](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized)。
 
-### Methods {#methods-1}
+### 方法{#methods-1}
 
-#### onStoreInitialized(storeName, callback, delay) {#onstoreinitialized-storename-callback-delay}
+#### onStoreInitialized(storeName, callback, delay){#onstoreinitialized-storename-callback-delay}
 
 註冊在初始化會話儲存時調用的回調函式。 對於已初始化多次的儲存，請指定回調延遲，使回調函式只被調用一次：
 
@@ -69,21 +72,21 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 * 商店已預先填入預設值（init屬性），但請求失敗（逾時）。 只有一個初始化具有預設值。
 * 商店已預先填入。
 
-當延遲設為或 `true` 毫秒數時，方法會在呼叫回呼方法之前等待。 如果在傳遞延遲之前觸發另一個初始化事件，則會等到延遲時間超過而未發生初始化事件。 這可讓您等候觸發第二個初始化事件，並在最佳情況下呼叫回呼函式。
+當延遲設為`true`或毫秒數時，方法會在呼叫回呼方法之前等待。 如果在傳遞延遲之前觸發另一個初始化事件，則會等到延遲時間超過而未發生初始化事件。 這可讓您等候觸發第二個初始化事件，並在最佳情況下呼叫回呼函式。
 
 **參數**
 
 * storeName:字串。 要添加監聽程式的會話儲存的名稱。
 * 回呼：函式。 在儲存初始化時調用的函式。
-* 延遲：布爾值或數字。 延遲呼叫回呼函式的時間量（以毫秒為單位）。 布爾值使 `true` 用預設延遲 `200 ms`。 布爾值或負 `false` 數不會導致使用延遲。
+* 延遲：布爾值或數字。 延遲呼叫回呼函式的時間量（以毫秒為單位）。 布爾值`true`使用預設延遲`200 ms`。 布爾值`false`或負數不會導致使用延遲。
 
 **退貨**
 
 無返回值。
 
-#### onStoreRegistered(storeName, callback) {#onstoreregistered-storename-callback}
+#### onStoreRegistered(storeName, callback){#onstoreregistered-storename-callback}
 
-註冊在註冊會話儲存時調用的回調函式。 註冊事件發生在將商店註冊到 [CQ_Analytics.ClientContextMgr時](#cq-analytics-clientcontextmgr)。
+註冊在註冊會話儲存時調用的回調函式。 當商店註冊至[CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr)時，就會發生註冊事件。
 
 **參數**
 
@@ -96,7 +99,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 
 ## CQ_Analytics.JSONPStore {#cq-analytics-jsonpstore}
 
-包含JSON資料的非持續作業商店。 從外部JSONP服務檢索資料。 使用 `getInstance` 或 `getRegisteredInstance` 方法建立此類的實例。
+包含JSON資料的非持續作業商店。 從外部JSONP服務檢索資料。 使用`getInstance`或`getRegisteredInstance`方法建立此類的實例。
 
 擴充CQ_Analytics.JSONStore。
 
@@ -104,11 +107,11 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 
 如需繼承的屬性，請參閱CQ_Analytics.JSONStore和CQ_Analytics.SessonStore。
 
-### Methods {#methods-2}
+### 方法{#methods-2}
 
 另請參閱CQ_Analytics.JSONStore和CQ_Analytics.SessonStore以取得繼承的方法。
 
-#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback) {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback}
+#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback){#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback}
 
 建立CQ_Analytics.JSONPStore物件。
 
@@ -124,7 +127,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 
 新的CQ_Analytics.JSONPStore物件，若storeName為null，則為null。
 
-#### getServiceURL() {#getserviceurl}
+#### getServiceURL(){#getserviceurl}
 
 擷取此物件用來擷取JSON資料的JSONP服務URL。
 
@@ -136,7 +139,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 
 代表服務URL的字串，若未設定服務URL，則為null。
 
-#### load(serviceURL, dynamicData, callback) {#load-serviceurl-dynamicdata-callback}
+#### load(serviceURL, dynamicData, callback){#load-serviceurl-dynamicdata-callback}
 
 呼叫JSONP服務。 JSONP URL是服務URL的尾碼，其中包含給定回呼函式名稱。
 
@@ -150,7 +153,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 
 無返回值。
 
-#### registerNewInstance(storeName, serviceURL, dynamicData, callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback}
+#### registerNewInstance(storeName, serviceURL, dynamicData, callback){#registernewinstance-storename-serviceurl-dynamicdata-callback}
 
 建立CQ_Analytics.JSONPStore物件，並使用用戶端內容註冊商店。
 
@@ -165,7 +168,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當指
 
 已註冊的CQ_Analytics.JSONPStore物件。
 
-#### setServiceURL(serviceURL) {#setserviceurl-serviceurl}
+#### setServiceURL(serviceURL){#setserviceurl-serviceurl}
 
 設定JSONP服務的URL以用於擷取JSON資料。
 
@@ -191,13 +194,13 @@ JSON物件的容器。 建立此類別的例項，以建立包含JSON資料的�
 
 #### STOREKEY {#storekey}
 
-識別商店的金鑰。 使用方 `getInstance` 法來擷取此值。
+識別商店的金鑰。 使用`getInstance`方法來擷取此值。
 
 #### STORENAME {#storename}
 
-商店名稱。 使用方 `getInstance` 法來擷取此值。
+商店名稱。 使用`getInstance`方法來擷取此值。
 
-### Methods {#methods-3}
+### 方法{#methods-3}
 
 另請參閱CQ_Analytics.SessionStore以取得繼承的方法。
 
@@ -213,7 +216,7 @@ JSON物件的容器。 建立此類別的例項，以建立包含JSON資料的�
 
 無返回值。
 
-#### getInstance(storeName, jsonData) {#getinstance-storename-jsondata}
+#### getInstance(storeName, jsonData){#getinstance-storename-jsondata}
 
 建立具有指定名稱的CQ_Analytics.JSONStore物件，並以指定的JSON資料初始化（呼叫initJSON方法）。
 
@@ -226,7 +229,7 @@ JSON物件的容器。 建立此類別的例項，以建立包含JSON資料的�
 
 CQ_Analytics.JSONStore物件。
 
-#### getJSON() {#getjson}
+#### getJSON(){#getjson}
 
 擷取JSON格式作業存放區的資料。
 
@@ -238,9 +241,9 @@ CQ_Analytics.JSONStore物件。
 
 以JSON格式表示儲存資料的物件。
 
-#### init() {#init}
+#### init(){#init}
 
-清除會話儲存，並使用初始化屬性對其進行初始化。 將初始化標幟設 `true` 為，然後觸發 `initialize` 和 `update` 事件。
+清除會話儲存，並使用初始化屬性對其進行初始化。 將初始化標誌設定為`true`，然後觸發`initialize`和`update`事件。
 
 **參數**
 
@@ -250,7 +253,7 @@ CQ_Analytics.JSONStore物件。
 
 沒有傳回的資料。
 
-#### initJSON(jsonData, doNotClear) {#initjson-jsondata-donotclear}
+#### initJSON(jsonData, doNotClear){#initjson-jsondata-donotclear}
 
 從JSON物件中的資料建立初始化屬性。 您可以選擇移除所有現有的初始化屬性。
 
@@ -281,7 +284,7 @@ B/B1: "valueBB1"
 
 無返回值。
 
-#### registerNewInstance(storeName, jsonData) {#registernewinstance-storename-jsondata}
+#### registerNewInstance(storeName, jsonData){#registernewinstance-storename-jsondata}
 
 建立具有指定名稱的CQ_Analytics.JSONStore物件，並以指定的JSON資料初始化（呼叫initJSON方法）。 新物件會自動在Clickstream Cloud Manager中註冊。
 
@@ -294,15 +297,15 @@ B/B1: "valueBB1"
 
 CQ_Analytics.JSONStore物件。
 
-## CQ_Analytics.可觀察 {#cq-analytics-observable}
+## CQ_Analytics.Ovearable {#cq-analytics-observable}
 
-引發事件，並允許其他物件監聽這些事件並做出反應。 擴充此類別的類別可觸發導致呼叫聆聽者的事件。
+觸發事件，並允許其他物件監聽這些事件並做出反應。 擴充此類別的類別可觸發導致呼叫聆聽者的事件。
 
-### Methods {#methods-4}
+### 方法{#methods-4}
 
-#### addListener(event, fct, scope) {#addlistener-event-fct-scope}
+#### addListener(event, fct, scope){#addlistener-event-fct-scope}
 
-註冊事件的偵聽器。 另請參 [閱建立偵聽器以對會話儲存更新做出反應](/help/sites-developing/client-context.md#creating-a-listener-to-react-to-a-session-store-update)。
+註冊事件的偵聽器。 另請參閱[建立偵聽器以對會話儲存更新做出反應](/help/sites-developing/client-context.md#creating-a-listener-to-react-to-a-session-store-update)。
 
 **參數**
 
@@ -314,7 +317,7 @@ CQ_Analytics.JSONStore物件。
 
 無返回值。
 
-#### removeListener(event, fct) {#removelistener-event-fct}
+#### removeListener(event, fct){#removelistener-event-fct}
 
 移除事件的指定事件處理常式。
 
@@ -327,17 +330,17 @@ CQ_Analytics.JSONStore物件。
 
 無返回值。
 
-## CQ_Analyics.PeristingJSONPStore {#cq-analyics-persistedjsonpstore}
+## CQ_Analytics.PeristedJSONPStore {#cq-analyics-persistedjsonpstore}
 
 從遠端JSONP服務擷取之JSON物件的持續容器。
 
 擴充CQ_Analytics.PeristedJSONStore。
 
-### Methods {#methods-5}
+### 方法{#methods-5}
 
 另請參閱CQ_Analytics.PeristingJSONStore以取得繼承的方法。
 
-#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback) {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback-1}
+#### getInstance(storeName, serviceURL, dynamicData, deferLoading, loadingCallback){#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback-1}
 
 建立CQ_Analytics.PersiantJSONPStore物件。
 
@@ -353,7 +356,7 @@ CQ_Analytics.JSONStore物件。
 
 新的CQ_Analytics.PeristedJSONPStore物件，若storeName為null，則為null。
 
-#### getServiceURL() {#getserviceurl-1}
+#### getServiceURL(){#getserviceurl-1}
 
 擷取此物件用來擷取JSON資料的JSONP服務URL。
 
@@ -365,7 +368,7 @@ CQ_Analytics.JSONStore物件。
 
 代表服務URL的字串，若未設定服務URL，則為null。
 
-#### load(serviceURL, dynamicData, callback) {#load-serviceurl-dynamicdata-callback-1}
+#### load(serviceURL, dynamicData, callback){#load-serviceurl-dynamicdata-callback-1}
 
 呼叫JSONP服務。 JSONP URL是服務URL的尾碼，其中包含給定回呼函式名稱。
 
@@ -379,7 +382,7 @@ CQ_Analytics.JSONStore物件。
 
 無返回值。
 
-#### registerNewInstance(storeName, serviceURL, dynamicData, callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
+#### registerNewInstance(storeName, serviceURL, dynamicData, callback){#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
 
 建立CQ_Analytics.PeristedJSONPStore物件，並使用用戶端內容註冊商店。
 
@@ -394,7 +397,7 @@ CQ_Analytics.JSONStore物件。
 
 已註冊的CQ_Analytics.PeristedJSONPStore物件。
 
-#### setServiceURL(serviceURL) {#setserviceurl-serviceurl-1}
+#### setServiceURL(serviceURL){#setserviceurl-serviceurl-1}
 
 設定JSONP服務的URL以用於擷取JSON資料。
 
@@ -410,23 +413,23 @@ CQ_Analytics.JSONStore物件。
 
 JSON物件的持續容器。
 
-延伸 `CQ_Analytics.PersistedSessionStore`。
+延伸`CQ_Analytics.PersistedSessionStore`。
 
 ### 屬性 {#properties-2}
 
 #### STOREKEY {#storekey-1}
 
-識別商店的金鑰。 使用方 `getInstance` 法來擷取此值。
+識別商店的金鑰。 使用`getInstance`方法來擷取此值。
 
 #### STORENAME {#storename-1}
 
-商店名稱。 使用方 `getInstance` 法來擷取此值。
+商店名稱。 使用`getInstance`方法來擷取此值。
 
-### Methods {#methods-6}
+### 方法{#methods-6}
 
 另請參閱CQ_Analytics.PeristedSessionStore以取得繼承的方法。
 
-#### getInstance(storeName, jsonData) {#getinstance-storename-jsondata-1}
+#### getInstance(storeName, jsonData){#getinstance-storename-jsondata-1}
 
 建立具有指定名稱的CQ_Analytics.PeristandJSONStore物件，並以指定的JSON資料初始化（呼叫initJSON方法）。
 
@@ -439,7 +442,7 @@ JSON物件的持續容器。
 
 CQ_Analytics.PeristingJSONStore物件。
 
-#### getJSON() {#getjson-1}
+#### getJSON(){#getjson-1}
 
 擷取JSON格式作業存放區的資料。
 
@@ -451,7 +454,7 @@ CQ_Analytics.PeristingJSONStore物件。
 
 以JSON格式表示儲存資料的物件。
 
-#### initJSON(jsonData, doNotClear) {#initjson-jsondata-donotclear-1}
+#### initJSON(jsonData, doNotClear){#initjson-jsondata-donotclear-1}
 
 從JSON物件中的資料建立初始化屬性。 您可以選擇移除所有現有的初始化屬性。
 
@@ -482,7 +485,7 @@ B/B1: "valueBB1"
 
 無返回值。
 
-#### registerNewInstance(storeName, jsonData) {#registernewinstance-storename-jsondata-1}
+#### registerNewInstance(storeName, jsonData){#registernewinstance-storename-jsondata-1}
 
 建立具有指定名稱的CQ_Analytics.PeristandJSONStore物件，並以指定的JSON資料初始化（呼叫initJSON方法）。 新對象會自動向「客戶端上下文管理器」註冊。
 
@@ -509,15 +512,15 @@ CQ_Analytics.PeristingJSONStore物件。
 
 預設值為 `key`.
 
-### Methods {#methods-7}
+### 方法{#methods-7}
 
 如需繼承的方法，請參閱CQ_Analytics.SessionStore。
 
-當繼承的方 `clear`法 `setProperty`、 `setProperties`、、用來變 `removeProperty` 更儲存資料時，變更會自動持續，除非變更的屬性被標幟為notPeristend。
+當繼承的方法`clear`、`setProperty`、`setProperties`、`removeProperty`用於變更儲存資料時，這些變更會自動持續，除非變更的屬性被標幟為notPeristend。
 
-#### getStoreKey() {#getstorekey}
+#### getStoreKey(){#getstorekey}
 
-檢索屬 `STOREKEY` 性。
+檢索`STOREKEY`屬性。
 
 **參數**
 
@@ -525,9 +528,9 @@ CQ_Analytics.PeristingJSONStore物件。
 
 **退貨**
 
-屬性的 `STOREKEY` 值。
+`STOREKEY`屬性的值。
 
-#### isPersiant(name) {#ispersisted-name}
+#### isPersistand(name){#ispersisted-name}
 
 判斷資料屬性是否持續存在。
 
@@ -537,15 +540,15 @@ CQ_Analytics.PeristingJSONStore物件。
 
 **退貨**
 
-Boolean值： `true` if屬性持續存在，值： `false` if值不是持續屬性。
+布爾值`true`（如果屬性持續存在），值`false`（如果值不是持續屬性）。
 
-#### persist() {#persist}
+#### persist(){#persist}
 
-持續存在會話儲存。 預設永續性模式使用瀏 `localStorage` 覽器 `ClientSidePersistence` 作為名稱( `window.localStorage.set("ClientSidePersistance", store);`)
+持續存在會話儲存。 預設永續模式使用瀏覽器`localStorage`作為名稱(`window.localStorage.set("ClientSidePersistance", store);`)`ClientSidePersistence`
 
 如果localStorage不可用或不可寫，則儲存會作為窗口的屬性保存。
 
-完成時 `persist` 觸發事件。
+完成時觸發`persist`事件。
 
 **參數**
 
@@ -555,19 +558,19 @@ Boolean值： `true` if屬性持續存在，值： `false` if值不是持續屬�
 
 無返回值。
 
-#### reset(deferEvent) {#reset-deferevent}
+#### reset(deferEvent){#reset-deferevent}
 
-從儲存中刪除所有資料屬性並保留儲存。 （可選）不會在完成 `udpate` 時觸發事件。
+從儲存中刪除所有資料屬性並保留儲存。 （可選）完成時不觸發`udpate`事件。
 
 **參數**
 
-* deferEvent:值true可防止引 `update` 發事件。 值會引 `false` 發更新事件。
+* deferEvent:值true可防止引發`update`事件。 值`false`會引發更新事件。
 
 **退貨**
 
 無返回值。
 
-#### setNonPersiant(name) {#setnonpersisted-name}
+#### setNonPersistand(name){#setnonpersisted-name}
 
 將資料屬性標示為未持續存在。
 
@@ -593,9 +596,9 @@ CQ_Analytics.SessionStore代表作業商店。 建立此類的實例以建立會
 
 會話儲存的名稱。 使用getName檢索此屬性的值。
 
-### Methods {#methods-8}
+### 方法{#methods-8}
 
-#### addInitProperty(name, value) {#addinitproperty-name-value}
+#### addInitProperty(name, value){#addinitproperty-name-value}
 
 將屬性和值添加到會話儲存初始化資料。
 
@@ -622,9 +625,9 @@ CQ_Analytics.SessionStore代表作業商店。 建立此類的實例以建立會
 
 無返回值。
 
-#### getData（已排除） {#getdata-excluded}
+#### getData(excluded){#getdata-excluded}
 
-傳回儲存資料。 （可選）從資料中排除名稱屬性。 如果存 `init` 儲的data屬性不存在，則調用方法。
+傳回儲存資料。 （可選）從資料中排除名稱屬性。 如果儲存的data屬性不存在，則調用`init`方法。
 
 **參數**
 
@@ -634,7 +637,7 @@ excluded:（選用）要從傳回資料中排除的屬性名稱陣列。
 
 屬性及其值的對象。
 
-#### getInitProperty(name) {#getinitproperty-name}
+#### getInitProperty(name){#getinitproperty-name}
 
 擷取資料屬性的值。
 
@@ -644,9 +647,9 @@ excluded:（選用）要從傳回資料中排除的屬性名稱陣列。
 
 **退貨**
 
-資料屬性的值。 如果 `null` 會話儲存不包含給定名稱的屬性，則返回。
+資料屬性的值。 如果會話儲存不包含給定名稱的屬性，則返回`null`。
 
-#### getName() {#getname}
+#### getName(){#getname}
 
 返回會話儲存的名稱。
 
@@ -658,9 +661,9 @@ excluded:（選用）要從傳回資料中排除的屬性名稱陣列。
 
 代表商店名稱的字串值。
 
-#### getProperty(name, raw) {#getproperty-name-raw}
+#### getProperty(name, raw){#getproperty-name-raw}
 
-傳回屬性的值。 值會傳回為原始屬性或XSS篩選的值。 如果存 `init` 儲的data屬性不存在，則調用方法。
+傳回屬性的值。 值會傳回為原始屬性或XSS篩選的值。 如果儲存的data屬性不存在，則調用`init`方法。
 
 **參數**
 
@@ -671,9 +674,9 @@ excluded:（選用）要從傳回資料中排除的屬性名稱陣列。
 
 資料屬性的值。
 
-#### getPropertyNames(excluded) {#getpropertynames-excluded}
+#### getPropertyNames(excluded){#getpropertynames-excluded}
 
-返回會話儲存所包含的屬性的名稱。 如果存 `init` 儲的data屬性不存在，則調用方法。
+返回會話儲存所包含的屬性的名稱。 如果儲存的data屬性不存在，則調用`init`方法。
 
 **參數**
 
@@ -683,7 +686,7 @@ excluded:（可選）要從結果中忽略的屬性名稱陣列。
 
 代表會話屬性名稱的字串值陣列。
 
-#### getSessionStore() {#getsessionstore}
+#### getSessionStore(){#getsessionstore}
 
 返回附加到當前對象的會話儲存。
 
@@ -695,9 +698,9 @@ excluded:（可選）要從結果中忽略的屬性名稱陣列。
 
 this
 
-#### init() {#init-1}
+#### init(){#init-1}
 
-將商店標示為已初始化，並引發 `initialize` 事件。
+將儲存標籤為已初始化，並觸發`initialize`事件。
 
 **參數**
 
@@ -707,7 +710,7 @@ this
 
 無返回值。
 
-#### isInitialized() {#isinitialized}
+#### isInitialized(){#isinitialized}
 
 指示會話儲存是否已初始化。
 
@@ -717,9 +720,9 @@ this
 
 **退貨**
 
-如果儲存 `true` 被初始化，則值為；如果儲存未 `false` 被初始化，則值為。
+如果儲存已初始化，則值為`true`；如果儲存未初始化，則為`false`。
 
-#### loadInitProperties(obj, setValues) {#loadinitproperties-obj-setvalues}
+#### loadInitProperties(obj, setValues){#loadinitproperties-obj-setvalues}
 
 將給定對象的屬性添加到會話儲存的初始化資料。 或者，對象資料也被添加到儲存資料中。
 
@@ -732,9 +735,9 @@ this
 
 無返回值。
 
-#### removeProperty(name) {#removeproperty-name}
+#### removeProperty(name){#removeproperty-name}
 
-從會話儲存中刪除屬性。 完成時 `update` 觸發事件。 如果存 `init` 儲的data屬性不存在，則調用方法。
+從會話儲存中刪除屬性。 完成時觸發`update`事件。 如果儲存的data屬性不存在，則調用`init`方法。
 
 **參數**
 
@@ -746,7 +749,7 @@ this
 
 #### 重設() {#reset}
 
-恢復資料儲存的初始值。 預設實作只會移除所有資料。 完成時 `update` 觸發事件。
+恢復資料儲存的初始值。 預設實作只會移除所有資料。 完成時觸發`update`事件。
 
 **參數**
 
@@ -756,9 +759,9 @@ this
 
 無返回值。
 
-#### setProperties(properties) {#setproperties-properties}
+#### setProperties(properties){#setproperties-properties}
 
-設定多個屬性的值。 完成時 `update` 觸發事件。 如果存 `init` 儲的data屬性不存在，則調用方法。
+設定多個屬性的值。 完成時觸發`update`事件。 如果儲存的data屬性不存在，則調用`init`方法。
 
 **參數**
 
@@ -768,9 +771,9 @@ this
 
 無返回值。
 
-#### setProperty(name, value) {#setproperty-name-value}
+#### setProperty(name, value){#setproperty-name-value}
 
-設定屬性的值。 完成時 `update` 觸發事件。 如果存 `init` 儲的data屬性不存在，則調用方法。
+設定屬性的值。 完成時觸發`update`事件。 如果儲存的data屬性不存在，則調用`init`方法。
 
 **參數**
 
