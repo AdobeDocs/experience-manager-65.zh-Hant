@@ -4,8 +4,8 @@ description: 使用Content Package Maven增效模組來部署AEM應用程式
 translation-type: tm+mt
 source-git-commit: 7bbafbd96ec92ed4278f6fa1d9899a3d59ee69ad
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '163'
+ht-degree: 5%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 0%
 >
 >如需詳細資訊，請參閱：
 >
->* AEM中 [的Adobe Content Package Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) 文章(Adobe Content Package Maven Plugin)是如何部署AEM應用程式的Cloud Service檔案。
->* AEM中 [的「AEM專案結構](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 」文章（以Cloud Service說明檔案形式），以瞭解如何建構現代的AEM專案。
->* AEM Project Archetype [](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) documentation，以瞭解如何使用原型開始新的AEM專案。
+>* AEM中的[Adobe Content Package Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools)文章，做為Cloud Service檔案，以瞭解如何部署AEM應用程式。
+>* AEM中的[AEM Project Structure](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)文章，以做為Cloud Service檔案，說明如何建構現代AEM專案。
+>* [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)說明檔案，瞭解如何使用原型開始新的AEM專案。
 
 >
 >
