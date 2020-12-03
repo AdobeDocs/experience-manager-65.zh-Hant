@@ -18,9 +18,9 @@ ht-degree: 1%
 ---
 
 
-# 設定頁面以大量編輯頁面屬性 {#configuring-your-page-for-bulk-editing-of-page-properties}
+# 配置頁面以批量編輯頁面屬性{#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[大量編輯頁面屬性](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) ，可讓您一次編輯多個頁面的屬性。
+[大量編輯頁](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) 面屬性可讓您一次編輯多頁的屬性。
 
 由於可能有不同的值，因此頁面屬性不會依預設啟用大量編輯。 必須明確允許（啟用）。 當定義頁面屬性以供批量編輯時，您需要考慮某些含義，例如：
 
@@ -43,9 +43,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Assets也提供大量編輯功能。 很相似，但有幾點不同。 如需完 [整資訊，請參閱編輯多個資產的屬性](/help/assets/metadata.md) 。 您可以使用結構編輯器，自訂「大量中繼資料」編輯器中「資產」 [的欄位](/help/assets/metadata-schemas.md)。
+>Assets也提供大量編輯功能。 很相似，但有幾點不同。 如需完整資訊，請參閱[編輯多個資產的屬性](/help/assets/metadata.md)。 您可以使用[架構編輯器](/help/assets/metadata-schemas.md)自訂資產批量中繼資料編輯器中的欄位。
 
-## 啟用欄位 {#enabling-a-field}
+## 啟用欄位{#enabling-a-field}
 
 >[!NOTE]
 >
@@ -62,24 +62,24 @@ ht-degree: 1%
 
 
 
-頁面元件上會啟用欄位(*不是* 範本上):
+頁面元件（範本上的&#x200B;*not*）上會啟用欄位：
 
 1. 使用CRXDE Lite（或相當的方法）開啟您的頁面元件。
 
-   For example: `/apps/core/wcm/components/page/v1/page`
+   例如：`/apps/core/wcm/components/page/v1/page`
 
    >[!NOTE]
    >
-   >此範例假設已在執行個體上安裝核心元件，而執行個體與We.Retail範例內容一起執行時，即為此情況。 如需詳細 [資訊，請參閱核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 檔案。
+   >此範例假設已在執行個體上安裝核心元件，而執行個體與We.Retail範例內容一起執行時，即為此情況。 如需詳細資訊，請參閱[核心元件檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)。
 
-1. 導覽至定義內的必填 `cq:dialog` 欄位。
+1. 導覽至`cq:dialog`定義內的必填欄位。
 1. 在欄位節點上定義以下屬性：
 
-   * **名稱**: `allowBulkEdit`
-   * **類型**: `Boolean`
-   * **值**: `true`
+   * **名稱**:  `allowBulkEdit`
+   * **類型**:  `Boolean`
+   * **值**:  `true`
 
-   例如，對於標準頁面基 [礎元件](/help/sites-authoring/default-components-foundation.md):
+   例如，對於標準頁[foundation元件](/help/sites-authoring/default-components-foundation.md):
 
    `/libs/foundation/components/page`
 
@@ -89,15 +89,15 @@ ht-degree: 1%
 
    >[!CAUTION]
    >
-   >您 ***不得*** 更改路徑中的任 `/libs` 何內容。
+   >您&#x200B;***必須***&#x200B;不要變更`/libs`路徑中的任何項目。
    >
-   >這是因為下次升級 `/libs` 實例時會覆寫的內容（套用修補程式或功能套件時可能會覆寫）。
+   >這是因為下次升級實例時會覆寫`/libs`的內容（套用修補程式或功能套件時，很可能會覆寫）。
    >
    >配置和其他更改的建議方法為：
    >
-   >    1. 重新建立必要項目(如中所 `/libs`示) `/apps`
-   >    1. 在 `/apps`
+   >    1. 在`/apps`下重新建立所需項目（如`/libs`中所存在）
+   >    1. 在`/apps`中進行任何更改
 
 
-1. 選取「 **全部儲存** 」以保存更新。
+1. 選擇&#x200B;**全部保存**&#x200B;以保存更新。
 
