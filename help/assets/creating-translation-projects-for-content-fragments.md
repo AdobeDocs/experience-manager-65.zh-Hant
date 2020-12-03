@@ -105,7 +105,7 @@ AEM可讓您翻譯包含各種類型媒體資產和系列的內容片段。 如�
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
 
-1. 按一下／點選&#x200B;**[!UICONTROL **[!UICONTROL  Copys ]**下的「語言副本」，以顯示語言副本。]**
+1. 按一下／點選「 **[!UICONTROL 復本]** 」下的「語 **[!UICONTROL 言復本」]** ，以顯示語言復本。
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
