@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
 
-# 建立自訂表單映射{#creating-custom-form-mappings}
+# 建立自定義表單映射{#creating-custom-form-mappings}
 
 當您在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表格。
 
@@ -28,20 +31,20 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-如需詳 [細資訊，請參閱「整合AEM與Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md) 」。
+如需詳細資訊，請參閱[將AEM與Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md)整合。
 
-## 建立自訂表單映射 {#creating-custom-form-mappings-2}
+## 建立自定義表單映射{#creating-custom-form-mappings-2}
 
 若要建立自訂表單映射，您必須遵循下列高階步驟，這些步驟在下列各節中有詳細說明：
 
 1. 建立自訂表格。
-1. 延伸種 **子表** 。
+1. 擴展&#x200B;**seed**&#x200B;表。
 1. 建立自訂對應。
 1. 根據自訂對應建立傳送。
 1. 在AEM中建立表單，然後使用已建立的傳送。
 1. 提交表單以進行測試。
 
-### 在Adobe Campaign中建立自訂表格 {#creating-the-custom-table-in-adobe-campaign}
+### 在Adobe Campaign中建立自訂表格{#creating-the-custom-table-in-adobe-campaign}
 
 首先，在Adobe Campaign中建立自訂表格。 在此範例中，我們使用下列定義來建立事件表：
 
@@ -54,15 +57,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 </element>
 ```
 
-建立事件表後，運行「更新數 **據庫結構」嚮導** ，以建立表。
+建立事件表後，運行&#x200B;**更新資料庫結構嚮導**&#x200B;以建立表。
 
-### 擴展種子表 {#extending-the-seed-table}
+### 擴展種子表{#extending-the-seed-table}
 
-在Adobe Campaign中，點選／按一 **下「新增** 」，以建立新的 **種子位址(nms)表格延伸** 。
+在Adobe Campaign中，點選／按一下&#x200B;**Add**&#x200B;以建立&#x200B;**種子位址(nms)**&#x200B;表格的新延伸。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
-現在，請使用事件表 **格中** 的欄位來擴 **展種子表** :
+現在，使用&#x200B;**event**&#x200B;表格中的欄位來擴充&#x200B;**seed**&#x200B;表格：
 
 ```xml
 <element label="Event" name="custom_cus_event">
@@ -73,31 +76,31 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </element>
 ```
 
-之後，運行「更 **新資料庫」嚮導** ，以應用更改。
+之後，運行&#x200B;**更新資料庫嚮導**&#x200B;以應用更改。
 
-### 建立自訂目標對應 {#creating-custom-target-mapping}
+### 建立自訂目標對應{#creating-custom-target-mapping}
 
-在「管 **理／促銷活**&#x200B;動管理」中， **移至「目標對應** 」並新增新的「**目標對應」。**
+在&#x200B;**管理／促銷活動管理** t中，移至&#x200B;**目標映射**&#x200B;並新增新的T **目標映射。**
 
 >[!NOTE]
 >
->請確定您對內部名稱使用有意義 **的名稱**。
+>請務必為&#x200B;**內部名稱**&#x200B;使用有意義的名稱。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
-### 建立自訂傳送範本 {#creating-a-custom-delivery-template}
+### 建立自訂傳送範本{#creating-a-custom-delivery-template}
 
-在此步驟中，您要新增使用已建立之 **Target對應的傳送範本**。
+在此步驟中，您要添加使用建立的&#x200B;**Target映射**&#x200B;的傳送模板。
 
-在「 **資源／範本**」中，導覽至「傳送範本」並複製現有的AEM傳送。 按一下「至 **」**，選取建立事件 **Target對應**。
+在&#x200B;**資源／範本**&#x200B;中，導覽至「傳送範本」並複製現有的AEM傳送。 按一下&#x200B;**至**&#x200B;時，選擇建立事件&#x200B;**目標映射**。
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
-### 在AEM中建立表格 {#building-the-form-in-aem}
+### 在AEM {#building-the-form-in-aem}中建立表格
 
-在AEM中，請確定您已在「頁面屬性」中設定 **雲端服務**。
+在AEM中，請確定您已在&#x200B;**頁面屬性**&#x200B;中設定雲端服務。
 
-然後，在「 **Adobe Campaign** 」標籤中，選取在「建立自訂傳送範本」 [中建立的傳送](#creating-a-custom-delivery-template)。
+然後，在&#x200B;**Adobe Campaign**&#x200B;標籤中，選取在[建立自訂傳送範本](#creating-a-custom-delivery-template)中建立的傳送。
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
@@ -105,7 +108,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 配置欄位後，您需要手動變更對應。
 
-在CRXDE-lite中，移至 **jcr:content** (of the page)節點，並將 **acMapping** 值變更為 **Target映射的內部名稱**。
+在CRXDE-lite中，轉至&#x200B;**jcr:content**（頁面）節點，並將&#x200B;**acMapping**&#x200B;值變更為&#x200B;**Target映射**&#x200B;的內部名稱。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -113,7 +116,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
-### 提交表格 {#submitting-the-form}
+### 提交表單{#submitting-the-form}
 
 您現在可以提交表單，並在Adobe Campaign端驗證是否儲存值。
 
@@ -123,7 +126,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **&quot;元素&#39;@eventdate&#39;中值&#39;02/02/2015&#39;的類型無效(&#39;Event([adb:event])&#39;類型的檔案)&quot;**
 
-提交表單時，此錯誤會記錄在AEM **的error.log** 中。
+提交表單時，此錯誤會記錄在AEM的&#x200B;**error.log**&#x200B;中。
 
-這是由於日期欄位的格式無效。 因應措施是 **提供yyyy-mm-dd** 作為值。
+這是由於日期欄位的格式無效。 因應措施是提供&#x200B;**yyyy-mm-dd**&#x200B;作為值。
 
