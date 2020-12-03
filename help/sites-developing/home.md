@@ -1,26 +1,26 @@
 ---
-title: AEM 6.5開發使用指南
-seo-title: AEM 6.5開發使用指南
-description: 本指南涵蓋如何建立AEM實例。
+title: AEM 6.5 Developing 使用指南
+seo-title: AEM 6.5 Developing 使用指南
+description: 本指南說明如何建立 AEM 執行個體。
 seo-description: 涵蓋如何建立您的AEM實例。
 translation-type: tm+mt
 source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 16%
+ht-degree: 34%
 
 ---
 
 
-# AEM 6.5開發使用指南
+# AEM 6.5 Developing 使用指南
 
-本指南涵蓋如何建立AEM實例。
+本指南說明如何建立 AEM 執行個體。
 
 ## 關鍵AEM文章
 
 * [AEM快速入門](https://helpx.adobe.com/experience-manager/get-started.html)
 * [AEM 6.5發行說明](/help/release-notes/home.md)
-* [最近的檔案更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用指南
@@ -31,8 +31,8 @@ ht-degree: 16%
 | [Assets 使用手冊](/help/assets/home.md) | 瞭解如何建立、管理、提供和最佳化數位資產。 |
 | [表單使用指南](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
 | [社群使用指南](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [管理指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
-| [編寫指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫內容的概念。 |
+| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
+| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫內容的概念。 |
 | [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM中編寫內容的概念。 |
 | [畫面使用指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數位標牌解決方案，以發佈動態互動式數位體驗。 |
 | [部署使用指南](/help/sites-deploying/home.md) | 本指南會向您展示AEM的基本資訊。 |
@@ -44,7 +44,7 @@ ht-degree: 16%
 ## 關鍵AEM資源
 
 * [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 * [核心元件使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
