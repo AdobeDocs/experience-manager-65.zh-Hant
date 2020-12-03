@@ -12,17 +12,20 @@ discoiquuid: ef253905-87da-4fa2-9f6c-778f1b12bd58
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
 
 # Implementing a Custom Predicate Evaluator for the Query Builder{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
-本節說明如何透過實作自訂 [謂詞求值器來擴充Query Builder](/help/sites-developing/querybuilder-api.md) 。
+本節說明如何透過實作自訂謂詞評估器來擴充[查詢產生器](/help/sites-developing/querybuilder-api.md)。
 
 ## 概覽 {#overview}
 
-「查 [詢產生器](/help/sites-developing/querybuilder-api.md) 」提供了查詢內容儲存庫的簡單方法。 CQ隨附一組謂詞評估器，可協助您處理資料。
+[查詢產生器](/help/sites-developing/querybuilder-api.md)提供了查詢內容儲存庫的簡單方法。 CQ隨附一組謂詞評估器，可協助您處理資料。
 
 但是，您可能希望通過實施自定義謂詞求值器來簡化查詢，該求值器隱藏某些複雜性並確保更好的語義。
 
@@ -37,14 +40,14 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 >[!NOTE]
 >
->您可以在「查詢產生器」區段中找 [到查詢範例](/help/sites-developing/querybuilder-api.md) 。
+>您可以在[Query Builder](/help/sites-developing/querybuilder-api.md)區段中找到查詢範例。
 
 GITHUB代碼
 
 您可以在GitHub上找到此頁面的程式碼
 
 * [在GitHub上開啟aem-search-custom-predicate-evaluator專案](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)
+* 將專案下載為[a ZIP file](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)
 
 ### Predicate Evaluator in Detail {#predicate-evaluator-in-detail}
 
@@ -54,7 +57,7 @@ GITHUB代碼
 
 >[!NOTE]
 >
->有關和包的詳 `PredicateEvaluator` 細信 `com.day.cq.search` 息，請參 [閱Java文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html)。
+>有關`PredicateEvaluator`和`com.day.cq.search`軟體包的詳細資訊，請參閱[ Java文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html)。
 
 ### Implementing a Custom Predicate Evaluator for Replication Metadata {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
@@ -66,9 +69,9 @@ GITHUB代碼
 
 * `cq:lastReplicationAction` 儲存上次複製操作（如激活、停用）
 
-#### 使用預設謂詞評估器查詢複製元資料 {#querying-replication-metadata-with-default-predicate-evaluators}
+#### 使用預設謂詞評估器查詢複製元資料{#querying-replication-metadata-with-default-predicate-evaluators}
 
-以下查詢讀取自年初以 `/content` 來已激活的分 `admin` 支中的節點清單。
+以下查詢讀取`/content`分支中自年初開始由`admin`激活的節點清單。
 
 ```xml
 path=/content
@@ -86,9 +89,9 @@ daterange.lowerOperation=>=
 
 此查詢是有效的，但很難讀取，並且不會突出顯示三個複製屬性之間的關係。 實作自訂謂詞評估器將降低查詢的複雜性並改善其語義。
 
-#### 目標 {#objectives}
+#### 目標{#objectives}
 
-其目的是 `ReplicationPredicateEvaluator` 使用下列語法支援上述查詢。
+`ReplicationPredicateEvaluator`的目標是使用下列語法支援上述查詢。
 
 ```xml
 path=/content
@@ -100,21 +103,21 @@ replic.action=Activate
 
 將複製元資料謂語與自定義謂詞求值器分組有助於建立有意義的查詢。
 
-#### 更新Maven依賴項 {#updating-maven-dependencies}
+#### 更新Maven依賴項{#updating-maven-dependencies}
 
 >[!NOTE]
 >
->How to Build AEM Projects using Apache Maven中記錄了使用maven的新AEM專 [案設定](/help/sites-developing/ht-projects-maven.md)。
+>[如何使用Apache Maven](/help/sites-developing/ht-projects-maven.md)建立AEM專案，說明如何使用maven來設定新的AEM專案。
 
-首先，您需要更新專案的Maven相依性。 該 `PredicateEvaluator` 對象是對象的一 `cq-search` 部分，因此需要將其添加到Maven pom檔案中。
+首先，您需要更新專案的Maven相依性。 `PredicateEvaluator`是`cq-search`對象的一部分，因此需要將其添加到Maven pom檔案中。
 
 >[!NOTE]
 >
->相依性的范 `cq-search` 圍會設為，因 `provided` 為 `cq-search` 將由容器提供 `OSGi` 。
+>由於`OSGi`容器將提供`cq-search`，因此`cq-search`相依性的範圍被設定為`provided`。
 
 pom.xml
 
-以下程式碼片段以統一的比較格式 [顯示差異](https://en.wikipedia.org/wiki/Diff#Unified_format)
+以下程式碼片段顯示[unified diff format](https://en.wikipedia.org/wiki/Diff#Unified_format)的差異
 
 ```
 @@ -120,6 +120,12 @@
@@ -131,22 +134,22 @@ pom.xml
              <version>3.8.1</version></dependency>
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
 
-#### 寫入ReplicationPredicateEvaluator {#writing-the-replicationpredicateevaluator}
+#### 正在寫入ReplicationPredicateEvaluator {#writing-the-replicationpredicateevaluator}
 
-項目 `cq-search` 包含抽象 `AbstractPredicateEvaluator` 類。 This can be extended with a few steps to implement your own custom predicate evaluator `(PredicateEvaluator`)。
+`cq-search`項目包含`AbstractPredicateEvaluator`抽象類。 This can be extended with a few steps to implement your own custom predicate evaluator `(PredicateEvaluator`)。
 
 >[!NOTE]
 >
->下列程式說明如何建立運算 `Xpath` 式來篩選資料。 另一個選項是實作以 `includes` 列為基礎選取資料的方法。 如需詳細 [資訊，請參閱Java](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29) 檔案。
+>下列程式說明如何建立`Xpath`運算式來篩選資料。 另一個選項是實施`includes`方法，該方法以行為基礎選擇資料。 如需詳細資訊，請參閱[Java檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)。
 
-1. 建立可延伸 `com.day.cq.search.eval.AbstractPredicateEvaluator`
-1. 使用類似下列的 `@Component` 項目來註解類別
+1. 建立擴展`com.day.cq.search.eval.AbstractPredicateEvaluator`的新Java類
+1. 使用`@Component`類似下列的
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   以下程式碼片段以統一的比較格式 [顯示差異](https://en.wikipedia.org/wiki/Diff#Unified_format)
+   以下程式碼片段顯示[unified diff format](https://en.wikipedia.org/wiki/Diff#Unified_format)的差異
 
 ```
 @@ -19,8 +19,11 @@
@@ -163,15 +166,15 @@ pom.xml
  }
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
 
 >[!NOTE]
 >
->必 `factory`須是以自訂名稱開 `com.day.cq.search.eval.PredicateEvaluator/`頭和結尾的唯一字串 `PredicateEvaluator`。
+>`factory`必須是以`com.day.cq.search.eval.PredicateEvaluator/`開頭並以自訂`PredicateEvaluator`名稱結尾的唯一字串。
 
 >[!NOTE]
 >
->名稱是謂 `PredicateEvaluator` 詞名稱，用於建立查詢。
+>`PredicateEvaluator`的名稱是謂語名稱，用於構建查詢。
 
 1. 覆寫：
 
@@ -179,11 +182,11 @@ pom.xml
    public String getXPathExpression(Predicate predicate, EvaluationContext context)
    ```
 
-   在override方法中，您會根據 `Xpath` 在引數中給 `Predicate` 定的表達式建立。
+   在override方法中，您根據`Predicate`在引數中給定來建立`Xpath`運算式。
 
-### 複製中繼資料的自訂謂詞評估器範例 {#example-of-a-custom-predicate-evalutor-for-replication-metadata}
+### 複製元資料的自定義謂詞評估器示例{#example-of-a-custom-predicate-evalutor-for-replication-metadata}
 
-此功能的完整實 `PredicateEvaluator` 作可能類似於下列類別。
+此`PredicateEvaluator`的完整實作可能類似於下列類別。
 
 src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
@@ -306,4 +309,4 @@ public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
 }
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
