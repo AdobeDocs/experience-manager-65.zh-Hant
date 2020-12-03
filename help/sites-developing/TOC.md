@@ -15,7 +15,7 @@ ht-degree: 11%
 ---
 
 
-# AEM 6.5 Developing 使用指南 {#developing}
+# AEM 6.5 Developing 使用指南  {#developing}
 
 + [開發使用指南概觀](home.md)
 + 開發人員簡介{#introduction}
@@ -41,7 +41,7 @@ ht-degree: 11%
    + [標籤庫](taglib.md)
    + 範本{#templates}
       + [範本](templates.md)
-      + [頁面範本——可編輯 ](page-templates-editable.md)
+      + [頁面範本——可編輯  ](page-templates-editable.md)
       + [頁面範本——靜態](page-templates-static.md)
       + [內容片段範本](content-fragment-templates.md)
       + [最適化範本演算](templates-adaptive-rendering.md)
@@ -206,7 +206,7 @@ ht-degree: 11%
    + [開發最佳實務](development-practices.md)
    + [內容架構](content-architecture.md)
    + [軟體架構](software-architecture.md)
-   + We.Retail參考實作{#we-retail}
+   + We.Retail Reference Implementation{#we-retail}
       + [We.Retail參考實作](we-retail.md)
       + [在We.Retail中試用內容片段](we-retail-content-fragments.md)
       + [在We.Retail中試用核心元件](we-retail-core-components.md)
