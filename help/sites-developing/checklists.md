@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
 translation-type: tm+mt
 source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 2%
 
 ---
 
@@ -34,4 +37,4 @@ source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
 
 >[!NOTE]
 >
->您也可以查看「管 [理專案——最佳實務檢查清單](/help/managing/best-practices.md) 」，以取得與整個專案相關的進一步檢查清單。
+>您也可以查看[管理項目——最佳實踐檢查清單](/help/managing/best-practices.md)，以取得與整個專案相關的進一步檢查清單。
