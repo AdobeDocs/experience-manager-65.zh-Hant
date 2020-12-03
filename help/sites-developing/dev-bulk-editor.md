@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e9a1ff95-e88e-41f0-9731-9a59159b4653
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1849'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 本節介紹如何開發批量編輯器工具以及如何擴展基於批量編輯器的產品清單元件。
 
-## 批量編輯器查詢參數 {#bulk-editor-query-parameters}
+## 批量編輯器查詢參數{#bulk-editor-query-parameters}
 
 使用批量編輯器時，有幾個查詢參數可以添加到URL中，以使用特定配置調用批量編輯器。 如果您希望批量編輯器始終與特定配置（例如，在「產品清單」元件中）一起使用，則需要修改bulkeditor.jsp（位於/libs/wcm/core/components/bulkeditor中）或建立具有特定配置的元件。 使用查詢參數進行的更改不是永久的。
 
@@ -27,13 +30,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 `https://<servername><port_number>/etc/importers/bulkeditor.html?rootPath=/content/geometrixx/en&queryParams=geometrixx&initialSearch=true&hrp=true`
 
-批量編輯器顯示時不 **帶根路徑欄位** ，因為hrp=true會隱藏該欄位。 參數hrp=false時，會顯示欄位（預設值）。
+批量編輯器顯示時不顯示&#x200B;**根路徑**&#x200B;欄位，因為hrp=true會隱藏該欄位。 參數hrp=false時，會顯示欄位（預設值）。
 
 以下是批量編輯器查詢參數的清單：
 
 >[!NOTE]
 >
->每個參數都可以有長名和短名。 例如，搜索根路徑的長名稱是 `rootPath`，短名稱是 `rp`。 如果未定義長名稱，則從請求中讀取短名稱。
+>每個參數都可以有長名和短名。 例如，搜索根路徑的長名稱為`rootPath`，短名稱為`rp`。 如果未定義長名稱，則從請求中讀取短名稱。
 
 <table>
  <tbody>
@@ -60,7 +63,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td> contentMode / cm<br /> </td>
    <td> 布林值 (Boolean)</td>
-   <td> 若為true，則內容模式會啟用<br /> </td>
+   <td> 若為true，則內容模式為enabled<br /> </td>
   </tr>
   <tr>
    <td> colsValue / cv<br /> </td>
@@ -69,23 +72,23 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td> extraCols / ec<br /> </td>
-   <td> String[]</td>
+   <td> 字串[]</td>
    <td> 額外搜尋的屬性（顯示在逗號分隔的文字欄位中）</td>
   </tr>
   <tr>
    <td> initialSearch / is<br /> </td>
    <td> 布林值 (Boolean)</td>
-   <td> 當為true時，會在頁面載入時執行查詢<br /> </td>
+   <td> 若為true，則在頁面載入時執行查詢<br /> </td>
   </tr>
   <tr>
    <td> colsSelection / cs<br /> </td>
-   <td> String[]</td>
+   <td> 字串[]</td>
    <td> 搜索屬性選擇（顯示為複選框）</td>
   </tr>
   <tr>
    <td> showGridOnly / sgo<br /> </td>
    <td> 布林值 (Boolean)</td>
-   <td> 若為true，則只顯示格線，而不顯示搜尋面板 <br /> </td>
+   <td> 當為true時，只顯示網格，而不顯示搜索面板<br /> </td>
   </tr>
   <tr>
    <td> searchPanelCollapsed / spc</td>
@@ -160,18 +163,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </tbody>
 </table>
 
-### 開發基於批量編輯器的元件：產品清單元件 {#developing-a-bulk-editor-based-component-the-product-list-component}
+### 開發基於批量編輯器的元件：產品清單元件{#developing-a-bulk-editor-based-component-the-product-list-component}
 
 本節概述如何使用批量編輯器，並說明現有的Geometrixx元件（以批量編輯器為基礎）:產品清單元件。
 
-「產品清單」元件可讓使用者顯示和編輯資料表。 例如，您可以使用「產品清單」元件來表示目錄中的產品。 這些資訊會顯示在標準HTML表格中，而任何編輯都會在「編輯」對話方塊中執行，而 **「編輯** 」對話方塊中包含BulkEditor介面工具集。 (此批量編輯器與可從/etc/importers/bulkeditor.html或「工具」功能表存取的編輯器完全相同)。 產品清單元件已針對特定、有限的大量編輯器功能進行設定。 批量編輯器的每個部分（或從批量編輯器派生的元件）都可以配置。
+「產品清單」元件可讓使用者顯示和編輯資料表。 例如，您可以使用「產品清單」元件來表示目錄中的產品。 這些資訊會顯示在標準HTML表格中，而任何編輯都會在&#x200B;**編輯**&#x200B;對話方塊中執行，其中包含BulkEditor介面工具集。 (此批量編輯器與可從/etc/importers/bulkeditor.html或「工具」功能表存取的編輯器完全相同)。 產品清單元件已針對特定、有限的大量編輯器功能進行設定。 批量編輯器的每個部分（或從批量編輯器派生的元件）都可以配置。
 
 使用批量編輯器，您可以添加、修改、刪除、篩選和導出行、保存修改和導入行集。 每一行都儲存為「產品清單」元件實例本身下的節點。 每個單元格都是每個節點的屬性。 這是一種設計選擇，可以輕鬆更改，例如，您可以將節點儲存在儲存庫中的其他位置。 查詢servlet的角色是返回要顯示的節點清單；搜索路徑被定義為「產品清單」實例。
 
 「產品清單」元件的原始碼可在/apps/geometrixx/components/productlist儲存庫中取用，並由多個部分（例如所有AEM元件）組成：
 
 * HTML轉換：演算是在JSP檔案(/apps/geometrixx/components/productlist/productlist.jsp)中完成。 JSP讀取當前產品清單元件的子節點，並將每個子節點顯示為HTML表的行。
-* 「編輯」對話框，在該對話框中定義批量編輯器配置。 設定對話方塊以符合元件的需求：欄和可能在網格或搜索上執行的操作。 有關 [所有配置屬性的資訊](#bulk-editor-configuration-properties) ，請參見批量編輯器配置屬性。
+* 「編輯」對話框，在該對話框中定義批量編輯器配置。 設定對話方塊以符合元件的需求：欄和可能在網格或搜索上執行的操作。 有關所有配置屬性的資訊，請參見[批量編輯器配置屬性](#bulk-editor-configuration-properties)。
 
 以下是對話子節點的XML表示：
 
@@ -264,7 +267,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
         </editor>
 ```
 
-### 批量編輯器配置屬性 {#bulk-editor-configuration-properties}
+### 批量編輯器配置屬性{#bulk-editor-configuration-properties}
 
 批量編輯器的每個部分都可以配置。 下表列出了批量編輯器的所有配置屬性。
 
@@ -432,7 +435,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>colsMetadata</td>
-   <td>欄中繼資料設定。 可能的屬性是（套用至欄的所有儲存格）: <br />
+   <td>欄中繼資料設定。 可能的屬性是（套用至欄的所有儲存格）:<br />
     <ul>
      <li>cellStyle:html樣式 </li>
      <li>cellCls:css類 </li>
@@ -444,7 +447,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </tbody>
 </table>
 
-### 欄中繼資料設定 {#columns-metadata-configuration}
+### 列元資料配置{#columns-metadata-configuration}
 
 您可以為每個欄設定：
 
@@ -510,7 +513,7 @@ CSS和唯讀欄
 
 **核取方塊**
 
-如果複選框配置屬性設定為true，則列的所有單元格都將顯示為複選框。 複選框將 **true** 發送到伺服器Save servlet，否 **則為** false。 在頁首功能表中，您也可以選 **取全部** ，或 **選取無**。 如果選定的標題是複選框列的標題，則會啟用這些選項。
+如果複選框配置屬性設定為true，則列的所有單元格都將顯示為複選框。 複選框將&#x200B;**true**&#x200B;發送到伺服器保存Servlet，否則發送&#x200B;**false**。 在標題菜單中，您也可以&#x200B;**選擇all**&#x200B;或&#x200B;**選擇none**。 如果選定的標題是複選框列的標題，則會啟用這些選項。
 
 在前面的示例中，選擇列只包含複選框作為checkbox=&quot;true&quot;。
 
@@ -522,7 +525,7 @@ CSS和唯讀欄
 
 ### 查詢Servlet {#query-servlet}
 
-預設情況下，可在中找到查詢Servlet `/libs/wcm/core/components/bulkeditor/json.java`。 您可以設定另一個路徑來擷取資料。
+預設情況下，可在`/libs/wcm/core/components/bulkeditor/json.java`中找到查詢Servlet。 您可以設定另一個路徑來擷取資料。
 
 查詢Servlet的工作方式如下：它會接收GQL查詢和要返回的列，計算結果，並將結果作為JSON流發送回批量編輯器。
 
@@ -554,9 +557,9 @@ CSS和唯讀欄
 
 ### 保存Servlet {#save-servlet}
 
-在批量編輯器的預設配置中，每行都是一個節點，該節點的路徑儲存在行記錄中。 批量編輯器通過jcr路徑保留行和節點之間的連結。 當使用者編輯網格時，會建立所有修改的清單。 當使用者按一 **下「儲存**」時，POST查詢會以更新的屬性值傳送至每個路徑。 這是Sling概念的基礎，如果每個儲存格都是節點的屬性，則其運作良好。 但是，如果實現Query Servlet進行繼承計算，則此模型不能作為Query Servlet返回的屬性從另一個節點繼承。
+在批量編輯器的預設配置中，每行都是一個節點，該節點的路徑儲存在行記錄中。 批量編輯器通過jcr路徑保留行和節點之間的連結。 當使用者編輯網格時，會建立所有修改的清單。 當用戶按一下&#x200B;**Save**&#x200B;時，會向每個路徑發送具有更新屬性值的POST查詢。 這是Sling概念的基礎，如果每個儲存格都是節點的屬性，則其運作良好。 但是，如果實現Query Servlet進行繼承計算，則此模型不能作為Query Servlet返回的屬性從另一個節點繼承。
 
-「保存servlet」概念是，修改不直接發佈到每個節點，而是發佈到執行保存作業的一個servlet。 這使此servlet能夠分析修改並將屬性保存在正確的節點上。
+「保存servlet」概念是，修改不直接發佈到每個節點，而是發佈到執行保存作業的一個servlet。 這使此Servlet能夠分析修改並將屬性保存在正確的節點上。
 
 每個更新的屬性都以下列格式發送到servlet:
 
