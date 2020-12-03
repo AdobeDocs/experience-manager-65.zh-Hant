@@ -12,21 +12,24 @@ discoiquuid: 6612f89d-c518-4e5a-8df1-6487cc330a9a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
 
-# 開發與頁面比較{#developing-and-page-diff}
+# 開發和頁面差異{#developing-and-page-diff}
 
-## 功能概觀 {#feature-overview}
+## 功能概觀{#feature-overview}
 
 內容建立是一個反覆的過程。 製作具效率的內容需要能夠查看從一個迭代到另一個迭代的變化。 檢視一個頁面版本，然後檢視另一個頁面版本則無效率且容易出錯。 作者想要能夠並排比較目前頁面與先前版本的差異。
 
-頁面差異可讓使用者比較目前頁面與啟動、舊版等。 有關此用戶功能的詳細資訊，請參 [閱頁面差異](/help/sites-authoring/page-diff.md)。
+頁面差異可讓使用者比較目前頁面與啟動、舊版等。 有關此用戶功能的詳細資訊，請參見[頁面差異](/help/sites-authoring/page-diff.md)。
 
-## 操作詳細資訊 {#operation-details}
+## 操作詳細資訊{#operation-details}
 
-比較頁面版本時，使用者想要比較的舊版會由AEM在背景重新建立，以利比較。 這需要能夠演算內容以 [進行並排比較](/help/sites-developing/pagediff.md#operation-details)。
+比較頁面版本時，使用者想要比較的舊版會由AEM在背景重新建立，以利比較。 這需要能夠呈現內容[以便並排比較](/help/sites-developing/pagediff.md#operation-details)。
 
 此娛樂作業由AEM在內部完成，而且對使用者透明，不需要干預。 但是，在CRX DE Lite中查看儲存庫的管理員在內容結構中可以看到這些重新建立的版本。
 
@@ -38,7 +41,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 ## 權限 {#permissions}
 
-以前，在Classic UI中，必須特別考慮開發以利AEM差異化(例如使用 `cq:text` tag lib，或自訂將 `DiffService` OSGi服務整合至元件)。 新的比較功能不再需要這個功能，因為比較是通過DOM比較在客戶端進行。
+以前，在Classic UI中，必須特別考慮開發以利AEM差異化（例如使用`cq:text`標籤庫，或自訂將`DiffService` OSGi服務整合至元件）。 新的比較功能不再需要這個功能，因為比較是通過DOM比較在客戶端進行。
 
 不過，開發人員需要考慮許多限制。
 
