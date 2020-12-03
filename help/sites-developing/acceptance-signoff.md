@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: d8da194f-f161-4ba7-b8cc-c2c282dc9c83
 translation-type: tm+mt
 source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 
-# 接受與簽署{#acceptance-and-sign-off}
+# 接受和簽署{#acceptance-and-sign-off}
 
-如前所述， [驗收測試](/help/sites-developing/planning.md) (Acception Tests)是用於驗證以下各項的特殊測試類別：
+如前所述，[接受測試](/help/sites-developing/planning.md)是用於驗證以下項目的測試的特殊類別：
 
 * 項目滿足客戶的要求。
 * 客戶接受專案。
