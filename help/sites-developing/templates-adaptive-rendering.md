@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f5cb0e98-0d6e-4f14-9b94-df1a9d8cbe5b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 範本通常以回應式格線為基礎，而根據這些範本建立的頁面則完全回應，可自動調整至用戶端裝置的檢視區。 使用頁面編輯器中的「模擬器」工具列，作者可將版面定位至特定裝置。
 
-您也可以設定範本，以支援自適應轉換。 當裝置群組已正確設定時，在模擬器模式中選取裝置時，頁面會在URL中以不同的選擇器呈現。 使用選取器，可透過URL直接呼叫特定頁面演算。
+您也可以設定範本，以支援自適應轉換。 當裝置群組已正確設定時，當在模擬器模式中選取裝置時，頁面會在URL中以不同的選擇器呈現。 使用選取器，可透過URL直接呼叫特定頁面演算。
 
 設定裝置群組時請記住：
 
@@ -34,25 +37,25 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->裝置群組 **回應式裝置** (Responsive Devices)永遠不會有選擇器，因為可辨識為支援回應式設計的裝置，會假設不需要最適化版面
+>裝置群組&#x200B;**回應式裝置**&#x200B;將不會有選擇器，因為已辨識為支援回應式設計的裝置會假設不需要最適化版面
 
 ## 設定 {#configuration}
 
-可針對現有的裝置群組或您自行建立的群組， [設定最適化演算選擇器。](/help/sites-developing/mobile.md#device-groups)
+可為現有設備組或您自己建立的[組配置自適應渲染選擇器。](/help/sites-developing/mobile.md#device-groups)
 
-在此範例中，我們將設定現有的裝置群組 **Smart Phone** ，在We.Retail的「 **Experience Page** 」範本中，有一個可調式轉換選擇器。
+在此範例中，我們將設定現有的裝置群組&#x200B;**智慧型手機**，在We.Retail的&#x200B;**體驗頁面**&#x200B;範本中提供最適化演算選擇器。
 
-1. 編輯需要最適化選擇器的裝置群組，位於 `http://localhost:4502/miscadmin#/etc/mobile/groups`
+1. 在`http://localhost:4502/miscadmin#/etc/mobile/groups`中編輯需要自適應選擇器的設備組
 
-   設定「禁用模 **擬器** 」並保存選項。
+   設定&#x200B;**禁用模擬器**&#x200B;選項並保存。
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 如果依照下列步驟將裝置群組 **** Smart Phone **（智慧型手機）新增至範本和頁面結構，則選擇器將可用於Blackberry** 和 **** iPhone 4。
+1. 選擇器將可用於&#x200B;**Blackberry**&#x200B;和&#x200B;**iPhone 4**，前提是在以下步驟中將設備組&#x200B;**智慧電話**&#x200B;添加到模板和頁結構中。
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. 使用CRX DE Lite，將裝置群組新增至範本結構上的多值字串屬性，以允許 `cq:deviceGroups` 在範本上使用。
+1. 使用CRX DE Lite，將設備組添加到模板結構上的多值字串屬性`cq:deviceGroups`中，以允許在模板上使用設備組。
 
    `/conf/<your-site>/settings/wcm/templates/<your-template>/structure/jcr:content`
 
@@ -62,19 +65,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. 使用CRX DE Lite，將裝置群組新增至網站結構上的多值字串屬性，以允許 `cq:deviceGroups` 在您的網站上使用。
+1. 使用CRX DE Lite，將裝置群組新增至網站結構上的多值字串屬性`cq:deviceGroups`，讓裝置群組可用於您的網站。
 
    `/content/<your-site>/jcr:content`
 
-   例如，如果我們要允許 **Smart Phone** device group:
+   例如，如果我們要允許&#x200B;**智慧電話**&#x200B;設備組：
 
    `/content/we-retail/jcr:content`
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-現在，當在頁面 [編輯器中使用](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) 「模擬器」(例如修改版面時 [](/help/sites-authoring/responsive-layout.md))並選擇已設定裝置群組的裝置時，會以選擇器呈現頁面，作為URL的一部分。
+現在，當在頁面編輯器中使用[emulator](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)（例如[修改版面](/help/sites-authoring/responsive-layout.md)時）並選擇已設定裝置群組的裝置時，頁面會以選擇器呈現為URL的一部分。
 
-在我們的範例中，當根據 **Experience Page** 範本編輯頁面，並在模擬器中選擇iPhone 4時，會將頁面轉譯為包含選擇器，而非 `arctic-surfing-in-lofoten.smart.html``arctic-surfing-in-lofoten.html`
+在我們的範例中，當根據&#x200B;**Experience Page**&#x200B;範本編輯頁面，並在模擬器中選擇iPhone 4時，會將頁面呈現為包含選擇器的`arctic-surfing-in-lofoten.smart.html`而非`arctic-surfing-in-lofoten.html`
 
 您也可以使用此選擇器直接呼叫頁面。
 
