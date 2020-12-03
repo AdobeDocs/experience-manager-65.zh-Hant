@@ -11,21 +11,24 @@ topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
 
-# 在We.Retail中試用互動式版面{#trying-out-responsive-layout-in-we-retail}
+# 在We.Retail{#trying-out-responsive-layout-in-we-retail}中試用互動式版面
 
-所有We.Retail頁面都使用「版面容器」元件來建置自適應設計。 版面容器提供段落系統，可讓您將元件定位在回應式格線中。 此格線可根據裝置／視窗大小和格式重新排列版面。 此元件與頁面編輯器中的 **Layout** （版面）模式搭配使用，可讓您根據裝置建立和編輯回應式版面。
+所有We.Retail頁面都使用「版面容器」元件來建置自適應設計。 版面容器提供段落系統，可讓您將元件定位在回應式格線中。 此格線可根據裝置／視窗大小和格式重新排列版面。 此元件與頁面編輯器中的&#x200B;**Layout**&#x200B;模式搭配使用，可讓您根據裝置建立和編輯回應式版面。
 
-## 試用 {#trying-it-out}
+## 試用{#trying-it-out}
 
 1. 在語言主要分支的「體驗」區段中編輯「北極衝浪」頁面。
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. 切換 **至** 「預覽」，可檢視對網站訪客呈現的頁面。 向下捲動至Norther Norway的 *Aloha spirits文章內容*。
+1. 切換至&#x200B;**預覽**&#x200B;以檢視該頁面對網站訪客的呈現效果。 向下捲動至文章&#x200B;*Aloha spirits in Norwher Norway*&#x200B;的內容。
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -45,4 +48,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 更多資訊 {#further-information}
 
-如需詳細資訊，請參閱編寫檔案 [Responsive Layout](/help/sites-authoring/responsive-layout.md) ，或管理員檔案 [Configuring Layout Container and Layout Mode](/help/sites-administering/configuring-responsive-layout.md) ，以取得完整的技術詳細資訊。
+如需詳細資訊，請參閱編寫檔案[回應式版面](/help/sites-authoring/responsive-layout.md)或管理員檔案[設定版面容器和版面模式](/help/sites-administering/configuring-responsive-layout.md)，以取得完整的技術詳細資訊。
