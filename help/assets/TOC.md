@@ -22,7 +22,7 @@ ht-degree: 36%
 + [關於DAM](assets.md)
 + [資產的最佳實務](best-practices-for-assets.md)
 + [無障礙環境支援 [!DNL Assets]](accessibility.md)
-+ 使用Experience Manager Assets {#using}
++ 使用Experience Manager資產{#using}
    + [[!DNL Assets] 首頁體驗](assets-home-page.md)
    + [搜尋數位資產](search-assets.md)
    + [使用資產中繼資料](metadata.md)
@@ -83,7 +83,7 @@ ht-degree: 36%
    + [使用Dynamic Media Classic驗證CDN快取](invalidate-cdn-cache-dm-classic.md)
    + [安裝Feature Pack 18912以進行大量資產移轉](bulk-ingest-migrate.md)
    + [使用選取工具](working-with-selectors.md)
-+ 擴充資產 {#extending}
++ 延伸資產{#extending}
    + [自訂和擴充 [!DNL Assets]](extending-assets.md)
    + [使用媒體處理常式和工作流程處理資產](media-handlers.md)
    + [擴充搜尋功能](searchx.md)
@@ -93,7 +93,7 @@ ht-degree: 36%
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [HTTP API中的內 [!DNL Assets] 容片段支援](assets-api-content-fragments.md)
    + [[!DNL Assets] 代理開發](proxy.md)
-+ 管理資產 {#administer}
++ 管理資產{#administer}
    + [支援的檔案格式](assets-formats.md)
    + [搜尋 Facet](search-facets.md)
    + [瞭解中繼資料概念](metadata-concepts.md)
@@ -141,7 +141,7 @@ ht-degree: 36%
    + [內容片段 - 刪除考量事項](content-fragments/content-fragments-delete.md)
    + [內容片段——標籤](content-fragments/content-fragments-markdown.md)
    + [建立內容片段的翻譯專案](creating-translation-projects-for-content-fragments.md)
-+ Manage Assets {#managing}
++ 管理資產{#managing}
    + [管理數位資產](manage-assets.md)
    + [管理集合](manage-collections.md)
    + [啟用重複偵測](duplicate-detection.md)
