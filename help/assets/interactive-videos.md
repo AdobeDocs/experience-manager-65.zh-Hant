@@ -23,11 +23,11 @@ ht-degree: 4%
 
 當視訊結束時，會顯示所有方案的視覺化摘要，以推動行動要求。 客戶有另一個機會來點選他們想要的項目。 可操作且具體的體驗，例如這些可提升客戶參與度和轉化率。
 
-另請參閱 [互動式影像](/help/assets/interactive-images.md)。
+另請參閱[互動式影像](/help/assets/interactive-images.md)。
 
-## 互動式視訊的實際運作 {#interactive-video-in-action}
+## 互動式視訊的實際運作{#interactive-video-in-action}
 
-To see an interactive, shoppable video in action, click [Live Demos](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html), scroll to the **[!UICONTROL Shoppable Media]** heading on the page, then click the shoppable video.
+若要檢視互動式可購物視訊的實際運作，請按一下「即時展示」[，捲動至頁面上的「可購物媒體」標題，然後按一下可購物視訊。](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)****
 
 * 在播放期間，當視訊中使用產品時，相同的產品會以縮圖影像的形式出現在右側。
 
@@ -35,29 +35,29 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 <!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
-![互動式可購物視訊的影格](assets/chlimage_1-126.png)*從互動式可購物視訊擷取視訊影格。*
+![互動式可購物視訊的影格從](assets/chlimage_1-126.png) *互動式可購物視訊擷取視訊影格。*
 
 >[!NOTE]
 >
->如果您建立互動式視訊，以在使用者按一下縮圖影像時啟動網頁，有些裝置會封鎖快顯網頁。 在這種情況下，您必須變更裝置上的快顯封鎖程式設定。 例如，在Apple iPhone 6上，點選「 **[!UICONTROL Settings]** > **Safari** > **Block快顯視窗」，然後將控制項滑入****** OffPhone。 現在，當您播放互動式視訊並按一下縮圖時，如果您要開啟快顯視窗，就會出現提示。 如果您接受，則會開啟網頁。
+>如果您建立互動式視訊，以在使用者按一下縮圖影像時啟動網頁，有些裝置會封鎖快顯網頁。 在這種情況下，您必須變更裝置上的快顯封鎖程式設定。 例如，在Apple iPhone 6上，點選「設定」**[!UICONTROL 「設定」>「** Safari **>>「封鎖快顯視窗」**，然後將控制項滑入「關閉」**[!UICONTROL 「a7/」。]****]**&#x200B;現在，當您播放互動式視訊並按一下縮圖時，如果您要開啟快顯視窗，就會出現提示。 如果您接受，則會開啟網頁。
 
-### 觀看互動式影片的製作方式 {#watch-how-interactive-videos-are-created}
+### 觀看互動式視訊的建立方式{#watch-how-interactive-videos-are-created}
 
 觀看如何建立互動式視訊的7分 [鐘30秒逐步解說](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)[](https://outv.omniture.com?v=s4NHQ2dzqd7hIqWjeG2sIdyNWsTWyupA)。
  (雖然視訊逐步說明已加上「隨選資產」品牌，但AEM Assets中的「互動式視訊」仍適用原則和步驟。) 
 
-### Adobe客戶成功網路研討會 {#adobe-customer-success-webinar}
+### Adobe客戶成功網路研討會{#adobe-customer-success-webinar}
 
 「在AEM Assets中使用互動式視訊、連結分享和YouTube分享」網路研討會教您如何使用互動式視訊和其他功能，將轉換導向的活動連結至您的視訊行銷內容。
 
 >[!NOTE]
 [在AEM Assets中使用互動式視訊、連結分享和YouTube分享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
 
-## 快速入門：互動式影片 {#quick-start-interactive-videos}
+## 快速入門：互動式影片{#quick-start-interactive-videos}
 
 下列逐步工作流程說明旨在協助您在動態媒體中快速上手使用互動式視訊。
 
-在某些「快 **速啟動** 」任務中查找「示例」標題。 它包含一個簡短的教學課程，以此開始的示範網頁為基礎， *尚未加* 入互動功能：
+在某些快速入門任務中查找&#x200B;**Example**&#x200B;標題。 它包含一個簡短的教學課程，以此開始的示範網頁為基礎，*尚未*&#x200B;加入互動功能：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
 
@@ -69,33 +69,31 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 互動式視訊步驟：
 
-1. **（可選）識別Quickview變數** -首先，確定現有Quickview實施所使用的動態變數。 當您建立互動式視訊時，可使用變數將產品縮圖對應至其對應的產品Quickview。 請參 [閱（可選）識別Quickview變數](#optional-identifying-quickview-variables)。
-   *請注意，只有在以下所有步驟都正確時，才需要此步驟*:·您想要透過觸發快速檢視，為視訊新增互動功能。
-·您的AEM實作不會使 *用* eCommerce整合架構，將產品資料從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 請參 [閱AEM Assets中的電子商務概念](/help/sites-administering/concepts.md)。
+1. **（可選）識別Quickview變數** -首先，確定現有Quickview實施所使用的動態變數。當您建立互動式視訊時，可使用變數將產品縮圖對應至其對應的產品Quickview。 請參閱[（可選）識別Quickview變數](#optional-identifying-quickview-variables)。
+   *請注意，只有在以下所有步驟都正確時，才需要此步驟*:·您想要透過觸發快速檢視，為視訊新增互動功能。·您的AEM實作&#x200B;*not*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 請參閱「AEM Assets](/help/sites-administering/concepts.md)中的[電子商務概念」。
 
-1. **（可選）建立互動式視訊檢視器預設集** -自訂各種元件的外觀和行為，這些元件是播放器的組成部份，例如視訊筆畫和互動式縮圖。
-如果您想要使用現成可用的互動式視訊檢視器預設集，或改用現成可用的互動式視訊檢視器預設集，則不需要建立您自己的互動式視 `Shoppable_Video_Light` 訊檢視 `Shoppable_Video_Dark` 器預設集。
-請參 [閱建立新檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) （此為選用）和建 [立互動檢視器預設集的特殊考量事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
+1. **（可選）建立互動式視訊檢視器預設集** -自訂各種元件的外觀和行為，這些元件是播放器的組成元件，例如視訊筆畫和互動式縮圖。如果您想要改用現成可用的互動式視訊檢視器預設集`Shoppable_Video_Light`或`Shoppable_Video_Dark`，則不需要建立您自己的互動式視訊檢視器預設集。
+請參閱[建立新檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（這是選用）和[建立互動檢視器預設集的特殊考量事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
 
-1. **上傳視訊及其相關影像資產** -上傳您要製作互動內容的視訊和相關影像。
-請參 [閱上傳視訊及其相關的縮圖資產](#uploading-a-video-and-its-associated-thumbnail-assets)。
+1. **上傳視訊及其相關影像資產** -上傳您要製作互動內容的視訊和相關影像。請參閱[上傳視訊及其相關縮圖資產](#uploading-a-video-and-its-associated-thumbnail-assets)。
 
-1. **在視訊中新增互動功能** -在視訊中新增一或多個時間區段。 然後，在這些時間區段內建立影像縮圖的關聯。 將每個影像縮圖指派給動作，例如超連結、Quickview或體驗片段。
+1. **在視訊中新增互動功能** -在視訊中新增一或多個時間區段。然後，在這些時間區段內建立影像縮圖的關聯。 將每個影像縮圖指派給動作，例如超連結、Quickview或體驗片段。
 （請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，則無法使用以URL為基礎的連結方法。）
-發佈互動式視訊資產以完成。 發佈會建立內嵌程式碼或URL，您最終會將其複製並套用至網站登陸頁面。請參閱 [新增視訊互動功能](#adding-interactivity-to-your-video)。
-請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
+發佈互動式視訊資產以完成。 發佈會建立內嵌程式碼或URL，您最終會將其複製並套用至您的網站登陸頁面。請參閱[新增視訊的互動功能](#adding-interactivity-to-your-video)。
+請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. **在AEM中將互動式視訊新增至您的網站或網站**：如果您使用AEM Sites、AEM eCommerce或兩者，您可將互動式視訊直接拖曳至AEM的網頁，即可將互動式視訊新增至AEM中的網頁。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
-使用內嵌程式碼或URL，將您的互動式視訊與網站體驗整合。 請參 [閱整合互動式視訊與您的網站](#integrating-an-interactive-video-with-your-website)。
-如果您使用協力廠商WCM(Web Content Manager)，您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參 [閱整合互動式視訊與現有的Quickview](#integrating-an-interactive-video-with-an-existing-quickview)。
+1. **將互動式視訊新增至您的網站或**
+AEMI中的網站如果您使用AEM Sites或AEM eCommerce，或兩者皆使用，您可以將互動式視訊直接拖曳至AEM的網頁上。請參閱[新增動態媒體資產至頁面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
+使用內嵌程式碼或URL，將您的互動式視訊與網站體驗整合。請參閱[將互動式視訊與您的網站整合](#integrating-an-interactive-video-with-your-website)。
+如果您使用協力廠商WCM(Web Content Manager)，您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參閱[將互動式視訊與現有的Quickview](#integrating-an-interactive-video-with-an-existing-quickview)整合。
    [新增動態媒體資產至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-## （可選）識別Quickview變數 {#optional-identifying-quickview-variables}
+## （可選）識別Quickview變數{#optional-identifying-quickview-variables}
 
 >[!NOTE]
 只有在以下情況下，才需要此任務：
 * 您想要透過觸發至Quickviews，將互動功能加入視訊中。
-* 您的AEM實作不會使 *用* eCommerce整合架構，將產品資料從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 請參 [閱AEM Assets中的電子商務概念](/help/sites-administering/concepts.md)。
+* 您的AEM實作&#x200B;*not*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 請參閱「AEM Assets](/help/sites-administering/concepts.md)中的[電子商務概念」。
 
 如果您的AEM實作使用電子商務，您可以略過此工作並繼續下一個工作。
 
@@ -118,15 +116,15 @@ Quickview的大多數實施都採用以下模式：
 
 通常您不需使用任何專用的除錯工具。 現代網頁瀏覽器採用Web檢視器，可讓您完成適當的工作。 以下是包含Web檢視程式的Web瀏覽器範例：
 
-* 若要在Google Chrome中查看所有傳出的HTTP要求，請按 **F12** (Windows)或 **Command+Options+I** (Mac)以開啟「開發人員工具」面板，然後按一下「網 **路** 」標籤。
+* 若要在Google Chrome中查看所有傳出的HTTP要求，請按&#x200B;**F12**(Windows)或&#x200B;**Command+Options+I**(Mac)以開啟「開發人員工具」面板，然後按一下「網路」標籤。****
 
-* In Firefox, you can either activate the Firebug plug-in by pressing **F12** (Windows) or **Command+Option+I** (Mac) and use its **`[Net]`** tab, or you can use the built-in Inspector tool and its Network tab.
+* 在Firefox中，您可以按&#x200B;**F12**(Windows)或&#x200B;**Command+Option+I**(Mac)啟動Firebug外掛程式，並使用其&#x200B;**`[Net]`**&#x200B;標籤，或使用內建的檢查工具及其「網路」標籤。
 
-* 在Internet Explorer中，按 **F12啟動除錯工具**。
+* 在Internet Explorer中，按&#x200B;**F12**&#x200B;啟動除錯工具。
 
 在瀏覽器中開啟網路監視時，觸發頁面上的Quickview。
 
-現在，在網路記錄檔中尋找Quickview Ajax URL，並複製已記錄的URL以供日後分析。 在大多數情況下，當您觸發Quickview時，會有許多請求被發送到伺服器。 通常，Quickview Ajax URL是清單中第一個URL。 它有複雜的查詢字串部分或路徑，其回應MIME類型為 `text/html`、 `text/xml`或 `text/javascript`。
+現在，在網路記錄檔中尋找Quickview Ajax URL，並複製已記錄的URL以供日後分析。 在大多數情況下，當您觸發Quickview時，會有許多請求被發送到伺服器。 通常，Quickview Ajax URL是清單中第一個URL。 它有複雜的查詢字串部分或路徑，其回應MIME類型為`text/html`、`text/xml`或`text/javascript`。
 
 在此程式中，請務必造訪您網站的不同區域，以及不同的產品類別和類型。 原因是Quickview URL可能有特定網站類別的常用部分，但只有在您造訪網站的不同區域時才會變更。
 
@@ -146,7 +144,7 @@ Quickview的大多數實施都採用以下模式：
       <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>URL中唯一的變數部分是查詢字串參 <code>productId=</code> 數的值，而它顯然是SKU值。 因此，我們的縮圖只需要填入值如、、 <strong><code>866558</code></strong>、 <strong><code>1196184</code></strong>、 <strong><code>1081492</code></strong>等的SKU欄位 <strong><code>1898294</code></strong>。</p> </td>
+    </ul> <p>URL中唯一的變數部分是<code>productId=</code>查詢字串參數的值，而它顯然是SKU值。 因此，我們的縮圖只需要填入<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong>等值的SKU欄位。</p> </td>
   </tr>
   <tr>
     <td><p>單一SKU，位於URL路徑中。</p> </td>
@@ -155,7 +153,7 @@ Quickview的大多數實施都採用以下模式：
       <li><p><code>https://server/product/6422350843</code></p> </li>
       <li><p><code>https://server/product/1607745002</code></p> </li>
       <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>變數部分位於路徑的最後一部分，它會變成AEM縮圖的SKU值： <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong></p> </td>
+    </ul> <p>變數部分位於路徑的最後一部分，它會變成AEM縮圖的SKU值：<strong><code>6422350843</code></strong>、<strong><code>1607745002</code></strong>、<strong><code>0086724882</code></strong>。</p> </td>
   </tr>
   <tr>
     <td><p>查詢字串中的SKU和類別ID。</p> </td>
@@ -164,11 +162,11 @@ Quickview的大多數實施都採用以下模式：
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>在此例中，URL中有兩個不同的部分。 SKU會儲存在參數 <code>prodId</code> 中，類別ID會儲存在參 <code>category=</code> 數中。</p> <p>因此，縮圖定義是成對的。 亦即SKU值和稱為的其他變數 <code>categoryId</code>。 產生的對如下：</p>
+    </ul> <p>在此例中，URL中有兩個不同的部分。 SKU會儲存在<code>prodId</code>參數中，而類別ID會儲存在<code>category=</code>參數中。</p> <p>因此，縮圖定義是成對的。 亦即SKU值和名為<code>categoryId</code>的其他變數。 產生的對如下：</p>
     <ul>
-      <li>SKU是 <code>305466</code> 且 <code>categoryId</code> 是 <code>1100004</code></li>
-      <li>SKU是 <code>310181</code> 且 <code>categoryId</code> 是 <code>1100004</code></li>
-      <li>SKU是 <code>308706</code> 且 <code>categoryId</code> 是 <code>1740148</code></li>
+      <li>SKU為<code>305466</code>，而<code>categoryId</code>為 <code>1100004</code></li>
+      <li>SKU為<code>310181</code>，而<code>categoryId</code>為 <code>1100004</code></li>
+      <li>SKU為<code>308706</code>，而<code>categoryId</code>為 <code>1740148</code></li>
     </ul> <p> </p> </td>
   </tr>
   </tbody>
@@ -212,17 +210,17 @@ Quickview的大多數實施都採用以下模式：
 
 `/datafeed/$categoryId$-$SKU$.json`
 
-根據此類分析，您可得出以下兩個變數用於縮圖： `categoryId` 和 `SKU`。
+根據此類分析，您可得出以下兩個變數用於縮圖：`categoryId`和`SKU`。
 
 您現在可以上傳視訊及其相關的縮圖資產。
 
-## （可選）建立互動式視訊檢視器預設集 {#optional-creating-an-interactive-video-viewer-preset}
+## （可選）建立互動式視訊檢視器預設集{#optional-creating-an-interactive-video-viewer-preset}
 
-如果您要使用預設、現成可用的互動式視訊檢視器預設集類型或，可以略過此工作並繼續下 `Shoppable_Video_dark` 一步 `Shoppable_Video_light`。
+如果您要使用預設、現成可用的互動式視訊檢視器預設集類型`Shoppable_Video_dark`或`Shoppable_Video_light`，您可以略過此工作並繼續下一步。
 
 在製作環境中按一下縮圖時，會出現「快速檢視」對話方塊的預覽。
 
-![chlimage_1-21](assets/chlimage_1-127.png)
+![chlimage_1-29](assets/chlimage_1-127.png)
 
 您可以選擇建立自訂的互動式視訊檢視器預設集。 您可決定視訊播放器的樣式、互動式縮圖和視訊結尾的縮圖格線檢視。
 
@@ -230,30 +228,30 @@ Quickview的大多數實施都採用以下模式：
 
 儲存檢視器預設集後，其狀態會在「檢視器預設集」頁面中自動設為**On **。此狀態表示在動態媒體元件中及您使用它預覽視訊時，都可看到它。請確定您也手動發佈新的檢視器預設集。
 
-請參 [閱建立新檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) ，以建立您自己的互動式視訊檢視器預設集。
+請參閱[建立新檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)以建立您自己的互動式視訊檢視器預設集。
 
-## 上傳視訊及其相關縮圖資產 {#uploading-a-video-and-its-associated-thumbnail-assets}
+## 上傳視訊及其相關縮圖資產{#uploading-a-video-and-its-associated-thumbnail-assets}
 
-如果您已上傳視訊和縮圖資產，請繼續「新增 [視訊的互動功能」](#adding-interactivity-to-your-video)。
+如果您已上傳視訊和縮圖資產，請繼續[為視訊新增互動功能](#adding-interactivity-to-your-video)。
 
-如果您上傳的視訊或影像不正確，或您想要刪除已上傳的視訊或影像，而您不再需要，請參閱刪 [除資產](/help/assets/manage-assets.md#deleting-assets)。
+如果您上傳的視訊或影像不正確，或您想要刪除已上傳的視訊或影像，請參閱[刪除資產](/help/assets/manage-assets.md#deleting-assets)。
 
 若要上傳視訊及其相關縮圖資產：
 
 1. 將視訊和相關的縮圖資產上傳至您想要的檔案夾或檔案夾。
 
-   請參閱 [上傳資產](/help/assets/manage-assets.md)。
-請參 [閱使用FTP工作排程上傳資產](/help/assets/manage-assets.md)。
+   請參閱[上傳資產](/help/assets/manage-assets.md)。
+請參閱[使用FTP工作排程來上傳資產](/help/assets/manage-assets.md)。
 
    現在，為您的視訊加入互動功能。
 
-## 為視訊新增互動功能 {#adding-interactivity-to-your-video}
+## 將互動功能加入影片{#adding-interactivity-to-your-video}
 
 您可使用「建立互動式視訊」頁面上的就地視覺編輯器，將時間軸區段新增至視訊。
 
 新增時間軸區段後，您會在每個區段中新增縮圖影像。 針對您新增的每個縮圖，您都會套用動作。 例如，您可以將Quickview套用至縮圖，或指派超連結給縮圖，或是體驗片段。
 
-請參閱 [體驗片段](/help/sites-authoring/experience-fragments.md)。
+請參閱[體驗片段](/help/sites-authoring/experience-fragments.md)。
 
 >[!NOTE]
 請注意，當您將檢視器內嵌在「體驗片段」時，不支援「互動式視訊」中的社交媒體分享工具。 若要解決這個問題，您可以使用或建立沒有社交媒體分享工具的檢視器預設集。 這些檢視器預設集可讓您成功將它內嵌在「體驗片段」中。
@@ -270,19 +268,19 @@ Quickview的大多數實施都採用以下模式：
 1. 在「資產」檢視中，導覽至您上傳並想要製作互動式影片。
 1. 執行下列任一項作業：
 
-   * Hover on the image, then tap **[!UICONTROL Select]** (checkmark icon). 在工具列上，點選「 **[!UICONTROL 編輯」。]**
+   * 將滑鼠指標暫留在影像上，然後點選&#x200B;**[!UICONTROL 選擇]**（勾選圖示）。 在工具列上，點選「**[!UICONTROL 編輯」。]**
 
-   * 將滑鼠指標暫留在影像上，然 **[!UICONTROL 後點選「更多動作]** 」（三個點圖示） **[!UICONTROL >「編輯」。]**
+   * 將滑鼠指標暫留在影像上，然後點選「更多動作&#x200B;]**（三點圖示）**[!UICONTROL >編輯」。]****[!UICONTROL 
 
-   * 點選影像以在「詳細資料檢視」頁面中開啟影像。 在工具列上，點選「 **[!UICONTROL 編輯」。]**
+   * 點選影像以在「詳細資料檢視」頁面中開啟影像。 在工具列上，點選「**[!UICONTROL 編輯」。]**
 
 1. 在「建立互動式視訊」頁面上，執行下列任一項作業：
 
-   * 點選「 **[!UICONTROL 播放]** 」按鈕開始播放影片。 當您要反白顯示的特定產品、服務或詳細資訊出現在檢視中時，點選工具列 **[!UICONTROL 上的「新增區段]** 」。 重複，直到您到達視訊結束為止。
+   * 點選&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕，開始播放影片。 當您要反白顯示的特定產品、服務或詳細資訊出現在檢視中時，點選工具列上的「新增區段」。 ]****[!UICONTROL &#x200B;重複，直到您到達視訊結束為止。
 
       您可以針對您新增的每個時段，指派一或多張縮圖影像給它，然後將這些縮圖連結至Quickview產品頁面供客戶購買，或連結至網頁以取得詳細資訊。
 
-   * 點選「 **[!UICONTROL 播放]** 」按鈕開始播放影片。 當您要反白顯示的特定產品、服務或詳細資訊進入檢視時，請點選「暫 **[!UICONTROL 停」。]** 點選「 **[!UICONTROL 新增區段」。]**
+   * 點選&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕，開始播放影片。 當您要反白顯示的特定產品、服務或詳細資訊出現在檢視中時，點選「**[!UICONTROL 暫停」。]** 點選「 **[!UICONTROL 新增區段」。]**
 
       在您要新增區段的時間軸上，繼續播放和暫停視訊，直到視訊結束為止。
 
@@ -308,7 +306,7 @@ Quickview的大多數實施都採用以下模式：
         </tr>
         <tr>
         <td>1-2 分鐘</td>
-        <td>20 seconds<br /> </td>
+        <td>20秒<br /> </td>
         </tr>
         <tr>
         <td>30-60秒</td>
@@ -361,14 +359,14 @@ Quickview的大多數實施都採用以下模式：
 
    * 若要刪除區段
 
-      選取時間軸上的最後一個區段，然後在工具列上點選「刪 **[!UICONTROL 除區段」。]** 如果選取了兩或多個區段，「刪除區段」功能會停用。
+      選取時間軸上的最後一個區段，然後在工具列上，點選「刪除區段」。**** 如果選取了兩或多個區段，「刪除區段」功能會停用。
 
-      您只能刪除最後一個區段。 例如，如果您想要刪除時間軸上的所有區段，您必須一律選取最後一個區段，然後點選「刪 **[!UICONTROL 除區段」。]**
+      您只能刪除最後一個區段。 例如，如果您想要刪除時間軸上的所有區段，您必須一律選取最後一個區段，然後點選「刪除區段」。]****[!UICONTROL 
 
 
 1. 選取您要關聯一或多個縮圖影像的時段。
-1. 在視訊右側，點選「內容 **[!UICONTROL 」標籤]** 。
-1. 在「內容」索引標籤下，點選「 **[!UICONTROL 選取資產]**」，然後瀏覽並選取您要用於影片的所有影像資產。 選取的資產會新增至「內容」索引標籤中的「資產選擇器」面板。
+1. 在視訊右側，點選「**[!UICONTROL Content]**」標籤。
+1. 在「內容」標籤下，點選「**[!UICONTROL 選擇資產]**」，然後瀏覽並選取您要用於視訊的所有影像資產。 選取的資產會新增至「內容」索引標籤中的「資產選擇器」面板。
 
 1. 在「內容」標籤下方的資產選擇器中，執行下列任一項作業：
 
@@ -383,7 +381,7 @@ Quickview的大多數實施都採用以下模式：
         <td><p>執行下列任一操作：</p>
           <ul>
           <li>在資產選擇器面板中，點選含有核取標籤的影像以取消選取它。 影像資產會從時間軸區段中移除。<br /> </li>
-          <li>在選取的時間軸區段中，點選影像，然後在工具列上點選「刪 <strong>除產品」</strong>。</li>
+          <li>在選取的時間軸區段中，點選影像，然後在工具列上，點選「刪除產品」<strong>。</strong></li>
           </ul> </td>
         </tr>
       </tbody>
@@ -393,26 +391,26 @@ Quickview的大多數實施都採用以下模式：
 
    點選資產選取器面板中的影像會將其新增至選取的時間軸區段。
 
-1. 在其中一個時間軸區段中選取單一縮圖影像，然後點選「動 **[!UICONTROL 作]** 」標籤。
+1. 在其中一個時間軸區段中選取單一縮圖影像，然後點選「動作&#x200B;****」標籤。
 1. 執行下列任一操作：
    <table> 
     <tbody> 
       <tr> 
       <td>將選定的縮圖影像與Quickview關聯</td> 
-      <td><p>在「動作類型」下，點選「 <strong>Quickview」</strong>。</p> <p>如果您是AEM Sites和Ecommerce客戶：</p> 
+      <td><p>在「Action Type（操作類型）」下，按一下「Quickview（快速視圖）」</strong>。<strong></strong></p> <p>如果您是AEM Sites和Ecommerce客戶：</p> 
        <ul> 
        <li>請注意，「SKU值」文字欄位已預先填入所選產品的SKU（庫存保留單位），此為您提供之每個不同產品或服務的唯一識別碼。 當影像與AEM Commerce中的產品相關聯時，會自動填入此項目。</li> 
        <li>如果預先填入的SKU不正確，請點選或按一下「產品選擇器」圖示（放大鏡）以開啟「選擇產品」頁面。 點選或按一下您要使用的產品，然後點選頁面右上角的核取標籤，以返回互動式視訊編輯器。</li> 
-       </ul> <p> 如果您不 <em>是</em> AEM Sites或Ecommerce客戶</p> 
+       </ul> <p> 如果您是<em>not</em> AEM Sites或Ecommerce客戶</p> 
        <ul> 
-       <li>請參 <a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">閱識別熱點變數</a>。 您需要定義這些變數。 </li> 
+       <li>請參閱<a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">識別熱點變數</a>。 您需要定義這些變數。 </li> 
        <li>依預設，此SKU欄位會使用影像資產的檔案名稱，但不含副檔名。 如果您根據SKU遵循檔案的標準命名慣例，則通常不需要進行任何其他編輯。 </li> 
        <li>否則，請編輯預設值並輸入正確的SKU值。 在「SKU值」文字欄位中，輸入產品的SKU（庫存保留單位），此為您提供之每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入Quickview範本的變數部分，讓系統知道將點選的影像與特定SKU的Quickview建立關聯。</li> 
-       </ul> <p>（可選）如果Quickview中有其他變數需要用來進一步識別產品，請點選「新增一般變 <strong>數」</strong>。 在文字欄位中，指定其他變數。 例如， <code>category=Womens</code> 是新增的變數。</p> <p> </p> </td> 
+       </ul> <p>（可選）如果Quickview中有其他變數需要用來進一步識別產品，請點選<strong>新增一般變數</strong>。 在文字欄位中，指定其他變數。 例如，<code>category=Womens</code>是新增的變數。</p> <p> </p> </td> 
       </tr> 
       <tr> 
       <td>將選定的縮圖影像與超連結關聯</td> 
-      <td><p>在「動作類型」下方，點選「 <strong>超連結</strong>」，然後執行下列其中一項作業：</p> 
+      <td><p>在「動作類型」下，點選「<strong>超連結</strong>」，然後執行下列其中一項作業：</p> 
        <ul> 
        <li>如果您是AEM Sites客戶，請點選「網站選擇器」圖示（資料夾）以導覽至網頁。 請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。</li> 
        <li>如果您是獨立的Dynamic Media客戶，請在HREF文字欄位中，指定連結網頁的完整URL路徑。</li> 
@@ -420,24 +418,24 @@ Quickview的大多數實施都採用以下模式：
       </tr> 
       <tr> 
       <td>將選取的縮圖影像與體驗片段建立關聯</td> 
-      <td><p>在「動作類型」下方，點選「 <strong>體驗片段</strong>」，然後執行下列動作：<p> 
+      <td><p>在「動作類型」下，點選「體驗片段」，然後執行下列動作：<strong></strong><p> 
        <ul> 
-       <li>如果您是AEM Sites客戶，請點選或按一下「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。 點選或按一下您要使用的體驗片段，然後點 <strong></strong>選頁面右上角的「選取」，返回上一頁的「動作」面板。<br /> 請參閱 <a href="/help/sites-authoring/experience-fragments.md">體驗片段</a>。</li> 
+       <li>如果您是AEM Sites客戶，請點選或按一下「搜尋」圖示（放大鏡）以開啟「體驗片段」頁面。 點選或按一下您要使用的體驗片段，然後點選頁面右上角的<strong>選擇</strong>以返回上一頁的「動作」面板。<br /> 請參閱 <a href="/help/sites-authoring/experience-fragments.md">體驗片段</a>。</li> 
       </ul> 
        <ul> 
        <li>指定「體驗片段」的寬度和高度，如影片所示。</li>
-       </ul><strong>注意</strong>:請注意，當您將檢視器內嵌在「體驗片段」時，不支援「互動式視訊」中的社交媒體分享工具。 若要解決這個問題，您可以使用或建立沒有社交媒體分享工具的檢視器預設集。 這些檢視器預設集可讓您成功將它內嵌在「體驗片段」中。</p></tr>&lt; 
+       </ul><strong>注意</strong>:請注意，當您將檢視器內嵌在「體驗片段」時，不支援「互動式視訊」中的社交媒體分享工具。若要解決這個問題，您可以使用或建立沒有社交媒體分享工具的檢視器預設集。 這些檢視器預設集可讓您成功將它內嵌在「體驗片段」中。</p></tr>&lt;&gt; 
       <tr> 
       <td>若要編輯已指派給縮圖影像的動作</td> 
-      <td>在時間軸區段中，點選文字標籤右側有連結的縮圖影像。 連結指示已為其指派操作。 點選「 <strong>動作</strong> 」標籤以進行變更。</td> 
+      <td>在時間軸區段中，點選文字標籤右側有連結的縮圖影像。 連結指示已為其指派操作。 點選「<strong>動作</strong>」標籤以進行變更。</td> 
       </tr> 
       <tr> 
       <td>若要變更縮圖影像的文字標籤</td> 
-      <td><p>依預設，文字標籤會使用縮圖影像的中繼資料 <code>Title</code> 欄位。 如果 <code>Title</code> 未顯示，則會改用縮圖影像的檔案名稱，但不使用副檔名。</p> <p>若要變更縮圖影像的文字標籤，請在「動作」標 <strong>簽 </strong>的正下方，輸入所要的文字。 請參閱下圖。</p> <p>請注意，新文字標籤僅供視訊播放器本身及顯示在時間軸區段中的縮圖文字使用。 標籤變更不會影響縮圖影像的「標題」中繼資料欄位，也不會影響其檔案名稱。</p> </td> 
+      <td><p>依預設，文字標籤會使用縮圖影像的<code>Title</code>中繼資料欄位。 如果<code>Title</code>不存在，則會改用縮圖影像的檔案名稱，但不使用副檔名。</p> <p>若要變更縮圖影像的文字標籤，請在顯示影像資產正下方的<strong>動作</strong>標籤下，輸入所要的文字。 請參閱下圖。</p> <p>請注意，新文字標籤僅供視訊播放器本身及顯示在時間軸區段中的縮圖文字使用。 標籤變更不會影響縮圖影像的「標題」中繼資料欄位，也不會影響其檔案名稱。</p> </td> 
       </tr> 
       <tr> 
       <td>要恢復您所做的更改</td> 
-      <td>在頁面的右上角附近，點選「復原 <strong>」</strong> 或 <strong>「重做」</strong>。</td> 
+      <td>在頁面的右上角附近，點選「<strong>還原</strong>」或「<strong>重做</strong>」。</td> 
       </tr> 
     </tbody> 
    </table>
@@ -457,27 +455,27 @@ Quickview的大多數實施都採用以下模式：
 
       在時間軸上，點選兩或多個要合併為一個的連續區段。 請注意，下圖中的兩個選定段上沒有藍色橢圓拖動控制滑塊。
 
-      點選 **[!UICONTROL 工具列上的]** 「合併區段」。
+      點選工具列上的「合併區段」。]****[!UICONTROL 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
    將兩個選定的五個第二段合併為一個十個第二段。
 
-   * **[!UICONTROL 分割區段]** -您可以將單一區段分割為兩個計時相同的區段。 如果已將產品縮圖指派給區段，則縮圖會合併到左側區段。
+   * **[!UICONTROL 分割區段]** -您可以將單一區段分割為兩個等時的區段。如果已將產品縮圖指派給區段，則縮圖會合併到左側區段。
 
-      在時間軸上，點選您要分成一半的區段，然後點選工具列上的 **[!UICONTROL 分割區段]** 。
+      在時間軸上，點選您要分成兩半的區段，然後點選工具列上的「分割區段」。]****[!UICONTROL 
 
-      選取兩或多個區段會停用「分割 **[!UICONTROL 區段]** 」功能。
+      選取兩個或多個區段會停用「分割區段」功能。]****[!UICONTROL 
    ![chlimage_1-133](assets/chlimage_1-135.png)
 
    將選取的10秒區段分割為兩個區段，每個區段5秒。
 
-1. 在「建立互動式視訊」頁 **[!UICONTROL 面的右上角附近]** ，會顯示目前選取與視訊一起使用的檢視器預設集名稱。 點選名稱以選取不同的檢視器預設集。
+1. 在&#x200B;**[!UICONTROL 建立互動式視訊]**&#x200B;頁面的右上角，會顯示目前選取的與視訊搭配使用的檢視器預設集名稱。 點選名稱以選取不同的檢視器預設集。
 
-   例如，檢視器預 `Shoppable_Video_light` 設集可讓您播放視訊，其中顯示區域是與視訊相鄰的白色。 顯示區域是播放期間可點選縮圖影像的顯示區域。 檢視 `Shoppable_Video_dark` 器預設集可讓您播放視訊，其中視訊旁有黑色顯示區域。
+   例如，`Shoppable_Video_light`檢視器預設集可讓您播放視訊，其中顯示區域為白色，且鄰近視訊。 顯示區域是播放期間可點選縮圖影像的顯示區域。 `Shoppable_Video_dark`檢視器預設集可讓您播放視訊，其中顯示區域與視訊相鄰。
 
    如果您建立了自己的互動式視訊檢視器預設集，您也會在您可選擇的預設集清單中看到它。
 
-   完成後，點選「儲 **[!UICONTROL 存」。]**
+   完成後，點選「**[!UICONTROL 儲存」。]**
 
    >[!NOTE]
    當您儲存互動式視訊時，會自動 `.vtt` 儲存相關的檔案。檔 `.vtt` 案會儲存至位 `_VTT` 於資產根目錄的資 **[!UICONTROL 料夾。]**&#x200B;您的互動式視訊必須有檔案和資料夾才能在網站上正確播放。因此，請勿移動、編輯或刪除資料夾 `_VTT` 或其內容。
@@ -486,27 +484,27 @@ Quickview的大多數實施都採用以下模式：
 
    如果您使用Quickviews新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用發佈的URL。 不過請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
 
-   請參閱 [發佈資產](publishing-dynamicmedia-assets.md)。
+   請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
    >[!NOTE]
    若要使用Quickviews發佈可購買的視訊，請確定您也會從您的商務區個別發佈視訊的每個相關影像資產。
 
-   新增時間軸區段並發佈互動式視訊後，您就可將它新增至現有的網站登陸頁面。 請參 [閱整合互動式視訊與您的網站。](#integrating-an-interactive-video-with-your-website)
+   新增時間軸區段並發佈互動式視訊後，您就可將它新增至現有的網站登陸頁面。 請參閱[整合互動式視訊與您的網站。](#integrating-an-interactive-video-with-your-website)
 
-## 發佈互動式視訊資產 {#publishing-interactive-video-assets}
+## 發佈互動式視訊資產{#publishing-interactive-video-assets}
 
-如需如 [何發佈互動式視訊資產](/help/assets/publishing-dynamicmedia-assets.md) ，請參閱發佈資產。
+如需如何發佈互動式視訊資產的詳細資訊，請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 將互動式視訊與您的網站整合 {#integrating-an-interactive-video-with-your-website}
+## 將互動式視訊與您的網站{#integrating-an-interactive-video-with-your-website}整合
 
 在您上傳視訊、新增時間軸區段至該視訊並發佈互動式視訊後，您現在可以將它新增至現有網站。
 
-如果您是AEM Sites客戶，可將Interactive Media元件拖曳至您的頁面，以新增互動式視訊。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+如果您是AEM Sites客戶，可將Interactive Media元件拖曳至您的頁面，以新增互動式視訊。 請參閱[新增動態媒體資產至頁面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 如果您是獨立的AEM Assets客戶，您可以依本節所述，手動將互動式視訊新增至您的網站。
 
 1. 複製已發佈的互動式視訊的內嵌程式碼或URL。
-See [Embedding the Video or Image Viewer on a Web Page](/help/assets/embed-code.md).
+請參閱[將視訊或影像檢視器內嵌至網頁](/help/assets/embed-code.md)。
 如果您使用Quickviews新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用發佈的URL。 不過請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
 
 1. 在目標的網頁程式碼中，識別靜態視訊的位置。
@@ -554,7 +552,7 @@ See [Embedding the Video or Image Viewer on a Web Page](/help/assets/embed-code.
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
 
-## 將互動式視訊與現有的Quickview整合 {#integrating-an-interactive-video-with-an-existing-quickview}
+## 將互動式視訊與現有的Quickview {#integrating-an-interactive-video-with-an-existing-quickview}整合
 
 >[!NOTE]
 此工作僅在您是獨立AEM Assets客戶時適用。
@@ -632,7 +630,7 @@ AEM傳回的內嵌代碼已經有現成的事件處理常式。 如下列反白�
 
 因此，只需取消上述反白顯示的程式碼片段的註解，並以特定網頁專用的程式碼取代虛擬處理常式主體即可。
 
-標準內嵌程式碼中有兩個預設回呼處理常式： `quickViewActivate` 和 `initComplete`。 在檢 `quickViewActivate` 視器中按一下縮圖時，處理常式就會觸發。 使用它將檢視器與Quickview啟動邏輯整合。 當檢 `initComplete` 視器載入頁面時，處理常式只會觸發一次。 此處理常式用於調整網頁DOM中的Quickview對話方塊位置。
+標準內嵌程式碼中有兩個預設回呼處理常式：`quickViewActivate`和`initComplete`。 在檢視器中按一下縮圖時，會觸發`quickViewActivate`處理常式。 使用它將檢視器與Quickview啟動邏輯整合。 當檢視器載入頁面時，`initComplete`處理常式只會觸發一次。 此處理常式用於調整網頁DOM中的Quickview對話方塊位置。
 
 建構Quickview URL的程式與識別本主題前面所涵蓋的縮圖變數的程式相反。 使用我們先前確定的Quickview URL示例，您可以瞭解每種情況下如何構建Quickview URL:
 
@@ -673,7 +671,7 @@ AEM傳回的內嵌代碼已經有現成的事件處理常式。 如下列反白�
 /datafeed/$CategoryId$-$SKU$.json
 ```
 
-使用物件中可用的欄位(透過檢 `quickViewActivate` 視器的程式碼傳遞 `categoryId``sku``inData` 至處理常式)，輕鬆在處理常式中重建此URL，如下所示：
+使用`categoryId`和`sku`物件中可用的欄位，透過檢視器程式碼傳遞至處理常式，輕鬆在`quickViewActivate`處理常式中重建此URL，如下所示：`inData`
 
 ```xml
 var sku=inData.sku;
@@ -681,7 +679,7 @@ var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 ```
 
-示範網站會使用簡單函式呼叫來觸發「快速檢視」 `loadQuickView()` 對話方塊。 此函式只使用一個引數，即Quickview資料URL。 因此，整合互動式視訊的最後一個步驟是將下列程式碼行新增至處理 `quickViewActivate` 常式：
+演示網站使用簡單的`loadQuickView()`函式調用觸發Quickview對話框。 此函式只使用一個引數，即Quickview資料URL。 因此，整合互動式視訊的最後一個步驟是將下列程式碼行新增至`quickViewActivate`處理常式：
 
 ```xml
 loadQuickView(quickViewUrl);
@@ -694,11 +692,11 @@ var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInner
 var inner_container = document.getElementById(sdkContainerId);
 ```
 
-其中 `inner_container` 是檢視器管理之 `DIV` 元素的參考。 您希望該對話框是該對話框的子項 `DIV`。
+其中，`inner_container`是檢視器所管理之`DIV`元素的參考。 您希望該對話框是該`DIV`的子項。
 
 實際定位模態對話框元素並將其附加到上述容器的步驟是特定大小寫的。 同樣地，您也可以向熟悉您所需Quickview實作的前端開發人員尋求協助。
 
-在範例網站中，「快速檢視」模式對話方塊會實作為直接附 `DIV` 加至檔案的快速檢視模式ID `BODY`。 因此，將該對話方塊移至檢視器容器的程式碼與下列程式碼一樣簡單：
+在示例網站中，「快速視圖模式」對話框實施為`DIV` ，其中快速視圖模式ID直接附加到文檔`BODY`。 因此，將該對話方塊移至檢視器容器的程式碼與下列程式碼一樣簡單：
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
@@ -755,4 +753,4 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 ## 使用「快速檢視」建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
-See [Using Quickviews to create custom pop-ups](/help/assets/custom-pop-ups.md).
+請參閱[使用快速檢視建立自訂快顯視窗](/help/assets/custom-pop-ups.md)。
