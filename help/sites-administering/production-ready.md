@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 730a690bcbf5935ca00ed69c27ce108cb2664c22
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '398'
 ht-degree: 3%
 
 ---
@@ -53,13 +53,13 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 1. **Apache Sling Simple WebDAV Access to repositories**(`org.apache.sling.jcr.webdav`)bundle將僅適用於&#x200B;**author**&#x200B;例項。
 
 1. 新建立的使用者必須在第一次登入時變更密碼。 這不適用於管理員使用者。
-1. **針對** Apache Java Script **處理常式，產生**&#x200B;除錯資訊已停用。
+1. **針對** Apache Sling Java Script Handler **停用產生**&#x200B;除錯資訊。
 
 1. **Mapped** content和Generate debug  **infoare disabled for the** Apache Sling JSP Script Handler ****.
 
 1. **Day CQ WCM Filter**&#x200B;設為&#x200B;**author**&#x200B;上的`edit`，以及&#x200B;**publish**&#x200B;例項上的`disabled`。
 
-1. **Adobe Granite HTML Library** Manager已設定下列設定：
+1. **Adobe Granite HTML Library Manager**&#x200B;已設定下列設定：
 
    1. **精簡：** `enabled`
    1. **除錯：** `disabled`
