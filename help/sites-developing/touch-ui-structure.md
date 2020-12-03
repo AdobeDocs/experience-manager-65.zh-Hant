@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 1%
 
 ---
 
 
-# AEM Touch-Enabled UI的結構{#structure-of-the-aem-touch-enabled-ui}
+# AEM Touch-Enabled UI{#structure-of-the-aem-touch-enabled-ui}的結構
 
 AEM觸控式UI包含數個基本原則，由數個關鍵元素組成：
 
-## 控制台 {#consoles}
+## 控制台{#consoles}
 
-### 基本版面和調整大小 {#basic-layout-and-resizing}
+### 基本版面配置和調整大小{#basic-layout-and-resizing}
 
 UI適用於行動與桌上型裝置，但Adobe決定使用一種適用於所有螢幕與裝置的樣式，而不是建立兩種樣式。
 
@@ -68,15 +71,15 @@ UI適用於行動與桌上型裝置，但Adobe決定使用一種適用於所有�
 * **引用**
 * **篩選**
 
-預設值為「 **僅限內容** （隱藏邊欄）」。
+預設值為&#x200B;**僅內容**（隱藏邊欄）。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
-## 頁面編寫 {#page-authoring}
+## 頁面編寫{#page-authoring}
 
 編寫頁面時，結構區域如下。
 
-### 內容影格 {#content-frame}
+### 內容影格{#content-frame}
 
 頁面內容會在內容影格中呈現。 內容影格完全獨立於編輯器——以確保不會因CSS或javascript而產生衝突。
 
@@ -84,11 +87,11 @@ UI適用於行動與桌上型裝置，但Adobe決定使用一種適用於所有�
 
 ![chlimage_1-148](assets/chlimage_1-148.png)
 
-### 編輯器框架 {#editor-frame}
+### 編輯器幀{#editor-frame}
 
 該編輯器框架實現了編輯功能。
 
-編輯器框架是所有頁面製作元素的容 *器（抽象）*。 它位於內容框架之上，並包含：
+編輯器框架是所有&#x200B;*頁面製作元素*&#x200B;的容器（抽象）。 它位於內容框架之上，並包含：
 
 * 頂端工具列
 * 側面板
@@ -97,7 +100,7 @@ UI適用於行動與桌上型裝置，但Adobe決定使用一種適用於所有�
 
 ![chlimage_1-149](assets/chlimage_1-149.png)
 
-### 側面板 {#side-panel}
+### 側面板{#side-panel}
 
 其中包含兩個預設標籤，可讓您選擇資產和元件；它們可從這裡拖曳至頁面。
 
@@ -105,33 +108,33 @@ UI適用於行動與桌上型裝置，但Adobe決定使用一種適用於所有�
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
-### 側面板——資產 {#side-panel-assets}
+### 側面板——資產{#side-panel-assets}
 
 在「資產」索引標籤中，您可以從資產範圍中選取。 您也可以篩選特定詞語，或選取群組。
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-### 側面板——資產群組 {#side-panel-asset-groups}
+### 側面板——資產群組{#side-panel-asset-groups}
 
 在「資產」標籤中，有一個下拉式清單，您可用來選取特定的資產群組。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
-### 側面板——元件 {#side-panel-components}
+### 側面板——元件{#side-panel-components}
 
 在「元件」索引標籤中，您可以從元件範圍中選取。 您也可以篩選特定詞語，或選取群組。
 
 ![chlimage_1-153](assets/chlimage_1-153.png)
 
-### 覆蓋 {#overlays}
+### 覆蓋{#overlays}
 
-這些內容會覆蓋內容影格，並由圖層使 [用](#layer) ，以瞭解如何（完全透明）與元件及其內容互動的機制。
+這些內容覆蓋內容影格，並由[圖層](#layer)使用，以瞭解如何（完全透明）與元件及其內容互動的機制。
 
 覆蓋會在編輯器影格中顯示（與所有其他頁面製作元素一起顯示），不過實際覆蓋內容影格中的適當元件。
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
-### 圖層 {#layer}
+### 層{#layer}
 
 圖層是一組獨立的功能，可以激活它以：
 
@@ -146,7 +149,7 @@ AEM隨附數個已建置用於頁面製作的圖層；例如，編輯、預覽�
 >
 >圖層是強大的概念，會影響使用者對頁面內容的檢視和互動。 在開發您自己的圖層時，您需要確保該圖層在退出時清理乾淨。
 
-### 圖層切換器 {#layer-switcher}
+### 圖層切換器{#layer-switcher}
 
 圖層切換器可讓您選擇要使用的圖層。 關閉時，它表示當前正在使用的層。
 
@@ -154,7 +157,7 @@ AEM隨附數個已建置用於頁面製作的圖層；例如，編輯、預覽�
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
-### 元件工具列 {#component-toolbar}
+### 元件工具欄{#component-toolbar}
 
 每個元件例項都會在按下時顯示其工具列（按一下一次或按兩下慢速）。 工具列包含頁面上元件例項（可編輯）可用的特定動作（例如複製、貼上、開啟編輯器）。
 
@@ -164,7 +167,7 @@ AEM隨附數個已建置用於頁面製作的圖層；例如，編輯、預覽�
 
 ## 更多資訊 {#further-information}
 
-如需啟用觸控的UI相關概念的詳細資訊，請繼續閱讀 [AEM Touch-Enabled UI的「概念」文章](/help/sites-developing/touch-ui-concepts.md)。
+如需觸控式UI相關概念的詳細資訊，請繼續閱讀[「AEM觸控式UI的概念」文章](/help/sites-developing/touch-ui-concepts.md)。
 
-如需詳細技術資訊，請參 [閱啟用觸控的頁面編輯器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) ,JS檔案集。
+如需詳細的技術資訊，請參閱啟用觸控式頁面編輯器的[JS檔案set](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)。
 
