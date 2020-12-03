@@ -11,6 +11,9 @@ topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '2323'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 * [群組](#group)
 * [orderby](#orderby)
 
-## 謂語 {#predicates}
+## 謂語{#predicates}
 
 * [布爾屬性](/help/sites-developing/querybuilder-predicate-reference.md#boolproperty)
 * [contentfragment](/help/sites-developing/querybuilder-predicate-reference.md#contentfragment)
@@ -48,19 +51,23 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 * [tagsearch](/help/sites-developing/querybuilder-predicate-reference.md#tagsearch)
 * [類型](/help/sites-developing/querybuilder-predicate-reference.md#type)
 
-### 布爾屬性 {#boolproperty}
+### boolproperty {#boolproperty}
 
-在JCR布爾屬性上匹配。 僅接受值&quot; `true`&quot;和&quot; `false`&quot;。 如果是&quot; `false`&quot;，則屬性是否具有&quot; `false`&quot;或完全不存在，則會相符。 這對於檢查僅在啟用時設定的布爾標誌非常有用。
+在JCR布爾屬性上匹配。 僅接受值&quot; `true`&quot;和&quot; `false`&quot;。 對於&quot; `false`&quot;，如果屬性的值為&quot; `false`&quot;，或完全不存在，則匹配。 這對於檢查僅在啟用時設定的布爾標誌非常有用。
 
 繼承的&quot; `operation`&quot;參數沒有意義。
 
-支援Facet擷取。 將為每個或值提 `true` 供時 `false` 段，但僅為現有屬性提供。
+支援Facet擷取。 將為每個`true`或`false`值提供儲存區，但僅為現有屬性提供儲存區。
 
 #### 屬性 {#properties}
 
-* **boolproperty**&#x200B;屬性的相對路徑，例如 `myFeatureEnabled` 或 `jcr:content/myFeatureEnabled`
+* **Boolpropertyproperty**
+屬性相對路徑，例如 
+`myFeatureEnabled` 或 `jcr:content/myFeatureEnabled`
 
-* **值**&#x200B;值，用於檢查屬 `true`性「」或「 `false`」
+* ****
+值值，用於檢查屬性， &quot; 
+`true`&quot; 或 &quot; `false`&quot;
 
 ### contentfragment {#contentfragment}
 
@@ -72,7 +79,8 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 #### 屬性 {#properties-1}
 
-* **contentfragment**&#x200B;它可與任何值搭配使用，以檢查內容片段。
+* **content**
+fragmentIt可與任何值搭配使用，以檢查內容片段。
 
 ### dateComparison {#datecomparison}
 
@@ -92,11 +100,12 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 * **操作**
 
-   &quot; `=`&quot;表示完全匹配， &quot; `!=`&quot;表示不等式比較， &quot; `>`&quot;表示屬性1大於屬性2, &quot; `>=`&quot;表示屬性1大於或等於屬性2。 預設值為&quot; `=`&quot;。
+   「 `=`」代表完全相符，「 `!=`」代表不等比，「 `>`」代表屬性1大於屬性2,「 `>=`」代表屬性1大於或等於屬性2。 預設值為&quot; `=`&quot;。
 
-### 達朗日 {#daterange}
+### daterange {#daterange}
 
-與日期／時間間隔的JCR DATE屬性相符。 這會使用ISO8601格式來處理日期和時間( `YYYY-MM-DDTHH:mm:ss.SSSZ`)，並允許部分表示，例如 `YYYY-MM-DD`。 或者，時間戳可以以1970年以來的毫秒數提供，以UTC時區（UNIX時間格式）表示。
+與日期／時間間隔的JCR DATE屬性相符。 這使用ISO8601
+格式(`YYYY-MM-DDTHH:mm:ss.SSSZ`)，並允許部分表示，例如`YYYY-MM-DD`。 或者，時間戳可以以1970年以來的毫秒數提供，以UTC時區（UNIX時間格式）表示。
 
 您可以尋找兩個時間戳記之間的任何項目（任何比指定日期更新或更舊的項目），也可以選擇包含和開啟的間隔。
 
@@ -108,29 +117,29 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 * **屬性**
 
-   屬性的相 `DATE` 對路徑，例如 `jcr:lastModified`
+   `DATE`屬性的相對路徑，例如`jcr:lastModified`
 
 * **下界**
 
-   lower date bound to check property for，例如 `2014-10-01`
+   lower date bound to check property for, for example `2014-10-01`
 
 * **lowerOperation**
 
-   &quot; `>`&quot;（較新）或&quot; `>=`&quot;（at或更新），則套用至 `lowerBound`。 預設值為「 `>`」。
+   &quot; `>`&quot;（較新）或&quot; `>=`&quot;（at或更新），適用於`lowerBound`。 預設值為&quot; `>`&quot;。
 
 * **上界**
 
-   上界檢查屬性，例如 `2014-10-01T12:15:00`
+   上界檢查屬性，例如`2014-10-01T12:15:00`
 
 * **upperOperation**
 
-   &quot; `<`&quot;（舊版）或&quot; `<=`&quot;（舊版），則適用於 `upperBound`。 預設值為「 `<`」。
+   &quot; `<`&quot;（舊版）或&quot; `<=`&quot;（舊版）適用於`upperBound`。 預設值為&quot; `<`&quot;。
 
 * **時區**
 
    未指定為ISO-8601日期字串時使用的時區ID。 預設為系統的預設時區。
 
-### 排除路徑 {#excludepaths}
+### 排除路徑{#excludepaths}
 
 從其路徑與規則運算式匹配的結果中排除節點。
 
@@ -144,7 +153,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
    規則運算式與結果路徑相符，從結果中排除相符的運算式。
 
-### fulltext {#fulltext}
+### 全文{#fulltext}
 
 在全文索引中搜尋詞語。
 
@@ -164,7 +173,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### 群組 {#group}
 
-允許建立巢狀條件。 群組可以包含巢狀群組。 查詢建立工具查詢中的所有項目都會隱式顯示在根群組中，而根群組 `p.or` 也可 `p.not` 以包含和參數。
+允許建立巢狀條件。 群組可以包含巢狀群組。 查詢建立工具查詢中的所有項目都會隱含在根群組中，根群組中也可以有`p.or`和`p.not`參數。
 
 比對兩個屬性中任一屬性與值的範例：
 
@@ -176,7 +185,7 @@ group.2_property=navTitle
 group.2_property.value=My Page
 ```
 
-這在概念上 `(1_property` 是OR `2_property)`。
+這在概念上是`(1_property`或`2_property)`。
 
 巢狀群組的範例：
 
@@ -189,19 +198,19 @@ group.2_group.path=/content/dam/geometrixx
 group.2_group.type=dam:Asset
 ```
 
-這會在頁面中或資&#x200B;**產中**，搜尋 `/content/geometrixx/en` 詞語「管理」 `/content/dam/geometrixx`。
+這會在`/content/geometrixx/en`的頁面或`/content/dam/geometrixx`的資產中搜尋「**Management**」一詞。
 
-這在概念上 `fulltext AND ( (path AND type) OR (path AND type) )`。 請注意，此類OR連接需要良好的效能索引。
+這在概念上是`fulltext AND ( (path AND type) OR (path AND type) )`。 請注意，此類OR連接需要良好的效能索引。
 
 #### 屬性 {#properties-6}
 
 * **p.or**
 
-   如果設定為「 `true`」，則組中只有一個謂詞必須匹配。 此預設為「 `false`」，表示所有項目都必須符合
+   如果設定為&quot; `true`&quot;，則組中只有一個謂詞必須匹配。 此預設為&quot; `false`&quot;，表示所有項目都必須符合
 
 * **p.not**
 
-   如果設為&quot; `true`&quot;，則會否定群組(預設為&quot; `false`&quot;)
+   如果設定為&quot; `true`&quot;，則會否定組（預設為&quot; `false`&quot;）
 
 * **&lt;predicate>**
 
@@ -209,11 +218,11 @@ group.2_group.type=dam:Asset
 
 * **N_&lt;predicate>**
 
-   添加同時的多個嵌套謂語，如 `1_property, 2_property, ...`
+   添加多個同時的嵌套謂語，如`1_property, 2_property, ...`
 
 ### hasPermission {#haspermission}
 
-將結果限制為目前作業具有指定 [JCR權限的項目。](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
+將結果限制為當前會話具有指定[JCR權限的項目。](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
 
 這是僅限篩選的謂語，無法運用搜尋索引。 它不支援Facet擷取。
 
@@ -221,7 +230,7 @@ group.2_group.type=dam:Asset
 
 * **hasPermission**
 
-   當前用戶會話必須ALL對有問題的節點具有的逗號分隔JCR權限；例如 `jcr:write`, `jcr:modifyAccessControl`
+   當前用戶會話必須ALL對有問題的節點具有的逗號分隔JCR權限；例如`jcr:write`、`jcr:modifyAccessControl`
 
 ### 語言 {#language}
 
@@ -239,21 +248,21 @@ group.2_group.type=dam:Asset
 
 ### mainasset {#mainasset}
 
-檢查節點是否是DAM主資產而非子資產。 基本上，這是不在「子資產」節點內的每個節點。 請注意，這不會檢查節點 `dam:Asset` 類型。 若要使用此謂語，只要設 `mainasset=true`定&quot;&quot;或&quot; `mainasset=false`&quot;，就沒有其他屬性。
+檢查節點是否是DAM主資產而非子資產。 基本上，這是不在「子資產」節點內的每個節點。 請注意，這不會檢查`dam:Asset`節點類型。 若要使用此謂語，只要設定&quot; `mainasset=true`&quot;或&quot; `mainasset=false`&quot;，就沒有其他屬性。
 
 這是僅限篩選的謂語，無法運用搜尋索引。
 
-支援Facet擷取。 將為主要資產和子資產提供2個桶。
+支援Facet擷取。 將為主資產和子資產提供2個桶。
 
 #### 屬性 {#properties-9}
 
 * **mainasset**
 
-   布林值，主 `true`資產為&quot;&quot;，子資產為&quot; `false`&quot;
+   布林值，主資產為&quot; `true`&quot;，子資產為&quot; `false`&quot;
 
-### memberOf {#memberof}
+### {#memberof}的成員
 
-尋找屬於特定 [sling資源集合成員的項](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)目。
+查找屬於特定[sling資源集合](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)成員的項目。
 
 這是僅限篩選的謂語，無法運用搜尋索引。 不支援Facet擷取。
 
@@ -273,11 +282,11 @@ group.2_group.type=dam:Asset
 
 * **nodename**
 
-   允許通配符的節點名模式： `*` =任何或無字元， `?` =任何字元， `[abc]` =只有方括弧的字元
+   允許通配符的節點名模式：`*` = any or no char, `?` = any char, `[abc]` = only chars, &lt;a2/> = only chars
 
 ### notexpired {#notexpired}
 
-檢查JCR DATE屬性是否大於或等於目前伺服器時間，以比對項目。 這可用來檢查「 `expiresAt`」類似日期屬性，並僅限於尚未到期( `notexpired=true`)或已到期( `notexpired=false`)的屬性。
+檢查JCR DATE屬性是否大於或等於目前伺服器時間，以比對項目。 這可用於檢查「 `expiresAt`」類似日期屬性，並僅限於尚未過期的(`notexpired=true`)或已過期的(`notexpired=false`)。
 
 不支援篩選。
 
@@ -287,21 +296,21 @@ group.2_group.type=dam:Asset
 
 * **notexpired**
 
-   布林值、 `true`「」表示未到期（日期未來或等於）、「 `false`」表示到期（過去日期）（必要）
+   布林值、「 `true`」（未到期日或等於未來日期）、「 `false`」（過去日期）（必要）
 
 * **屬性**
 
-   要檢查的屬 `DATE` 性的相對路徑（必要）
+   要檢查的`DATE`屬性的相對路徑（必需）
 
 ### orderby {#orderby}
 
-允許對結果進行排序。 如果需要按多個屬性排序，則需要使用數字前置詞多次添加此謂語， `1_orderby=first`如 `2_oderby=second`。
+允許對結果進行排序。 如果需要按多個屬性排序，則需要使用數字前置詞多次添加此謂語，如`1_orderby=first`、`2_oderby=second`。
 
 #### 屬性 {#properties-13}
 
 * **orderby**
 
-   JCR屬性名稱由前導@(例如， `@jcr:lastModified` 或 `@jcr:content/jcr:title`)指示，或查詢中的其他謂語(例如 `2_property`，要對其排序)
+   由前導@（例如`@jcr:lastModified`或`@jcr:content/jcr:title`）指示的JCR屬性名稱，或查詢中的另一個謂語，例如`2_property`，要對其排序
 
 * **排序**
 
@@ -309,7 +318,7 @@ group.2_group.type=dam:Asset
 
 * **案例**
 
-   若設為&quot; `ignore`&quot;，則排序不區分大小寫，表示&quot;a&quot;在&quot;B&quot;之前；如果空或缺，則排序區分大小寫，表示&quot;B&quot;在&quot;a&quot;之前
+   如果設為&quot; `ignore`&quot;，則排序不區分大小寫，表示&quot;a&quot;在&quot;B&quot;之前；如果空或缺，則排序區分大小寫，表示&quot;B&quot;在&quot;a&quot;之前
 
 ### 路徑 {#path}
 
@@ -321,15 +330,15 @@ group.2_group.type=dam:Asset
 
 * **路徑**
 
-   路徑模式；根據具體情況，整個子樹將匹配(如附加在 `//*` xpath中，但請注意，這不包括基本路徑)(exact=false, default)或僅匹配完全路徑(可包括通配符( `*`));如果設定了self，則搜索包含基節點的整個子樹
+   路徑模式；根據具體情況，整個子樹將匹配（如在xpath中附加`//*`，但請注意，這不包括基本路徑）(exact=false, default)或僅匹配完全路徑(可包括通配符(`*`));如果設定了self，則搜索包含基節點的整個子樹
 
 * **精確**
 
-   如 `exact` 果為true/on，則精確路徑必須相符，但可包含簡單的萬用字元( `*`)、相符名稱，但不是&quot; `/`&quot;;如果為false（預設），則會包含所有子系（選用）
+   如果`exact`為true/on，則精確路徑必須相符，但可包含簡單萬用字元(`*`)、符合名稱，但不能包含&quot; `/`&quot;;如果為false（預設），則會包含所有子系（選用）
 
 * **扁平**
 
-   僅搜索直接子項(如在xpath中附加&quot; `/*`&quot;)(僅在「 `exact`&#39;不是true時使用，可選)
+   僅搜索直接子項（如在xpath中附加&quot; `/*`&quot;）（僅在&#39; `exact`&#39;不是true時使用，可選）
 
 * **self**
 
@@ -345,7 +354,7 @@ group.2_group.type=dam:Asset
 
 * **屬性**
 
-   屬性的相對路徑，例如 `jcr:title`
+   屬性的相對路徑，例如`jcr:title`
 
 * **值**
 
@@ -353,23 +362,23 @@ group.2_group.type=dam:Asset
 
 * **N值**
 
-   使 `1_value`用 `2_value`, ...若要檢查多個值(依預 `OR` 設結合， `AND` 含if和=true)（自5.3起）
+   使用`1_value`、`2_value`、...若要檢查多個值（依預設與`OR`結合，若與=true則與`AND`結合）（自5.3起）
 
 * **與**
 
-   設為true，以組合多個值( `N_value`)與AND（自5.3起）
+   設為true時，結合多個值(`N_value`)與AND（自5.3起）
 
 * **操作**
 
-   「 `equals`」代表完全符合（預設）,「 `unequals`」代表不等式比較，「 `like`」代表使用 `jcr:like` xpath函式（選用）,「 `not`」代表不符合(例如 xpath中 `not(@prop)`的&quot; &quot;，值param將被忽略)或&quot; `exists`&quot;以檢查是否存在(值可以是true —— 屬性必須存在，預設——或false —— 與&quot; `not`&quot;相同)
+   「 `equals`」代表完全相符（預設值）,「 `unequals`」代表不等比較，「 `like`」代表使用`jcr:like` xpath函式（選用）,「 `not`」代表不相符(例如 xpath中的&quot; `not(@prop)`&quot;，值param將被忽略)或&quot; `exists`&quot; for existh check(value can be true - property must exist, default - or false - same as &quot; `not`&quot;)
 
 * **深度**
 
-   屬性／相對路徑可存在的通配符級別數(例如， `property=size depth=2` 將檢查節點／大小、node/&amp;ast;/size和node/&amp;ast;/&amp;ast;/sast;/&amp;/size)
+   屬性／相對路徑可存在的通配符級別數（例如，`property=size depth=2`將檢查節點／大小、node/&amp;ast;/size和node/&amp;ast;/&amp;ast;/size）
 
 ### rangeproperty {#rangeproperty}
 
-與JCR屬性對應的時間間隔。 這適用於線性類型(例如， `LONG`和 `DOUBLE` )的屬性 `DECIMAL`。 如需 `DATE` 資訊，請參閱已最佳化日期格式輸入的daterange謂詞。
+與JCR屬性對應的時間間隔。 這適用於具有線性類型的屬性，例如`LONG`、`DOUBLE`和`DECIMAL`。 如需`DATE`，請參閱已最佳化日期格式輸入的變更述詞。
 
 您可以定義下界和上界，或僅定義其中一個。 操作(如 也可以針對下界限和上界限分別指定「小於」或「小於或等於」)。
 
@@ -387,7 +396,7 @@ group.2_group.type=dam:Asset
 
 * **lowerOperation**
 
-   「 `>`」（預設值）或「 `>=`」，套用至 `lowerValue`
+   &quot; `>`&quot;（預設值）或&quot; `>=`&quot;，適用於`lowerValue`
 
 * **上界**
 
@@ -395,15 +404,15 @@ group.2_group.type=dam:Asset
 
 * **upperOperation**
 
-   「 `<`」（預設值）或「 `<=`」，套用至 `lowerValue`
+   &quot; `<`&quot;（預設值）或&quot; `<=`&quot;，適用於`lowerValue`
 
 * **小數點**
 
-   &quot; `true`&quot;如果選定的屬性類型為Decimal
+   &quot; `true`&quot;（如果選中的屬性類型為Decimal）
 
-### 相對變更 {#relativedaterange}
+### 相對變更範圍{#relativedaterange}
 
-使用 `JCR DATE` 相對於目前伺服器時間的時間偏移，比對日期／時間間隔的屬性。 您可以指 `lowerBound` 定並使 `upperBound``1s 2m 3h 4d 5w 6M 7y` 用毫秒值或bugzilla語法（一秒、二分鐘、三小時、四天、五週、六個月、七年）。 首碼為&quot; `-`&quot;，表示目前時間前有負偏移。 如果您只指 `lowerBound` 定或 `upperBound`，則另一個預設為0，表示目前時間。
+使用相對於目前伺服器時間的時間偏移，比對日期／時間間隔的`JCR DATE`屬性。 您可以使用毫秒值或bugzilla語法`1s 2m 3h 4d 5w 6M 7y`（一秒、二分鐘、三小時、四天、五週、六個月、七年）來指定`lowerBound`和`upperBound`。 首碼為&quot; `-`&quot;，表示目前時間前有負偏移。 如果您只指定`lowerBound`或`upperBound`，則另一個預設為0，表示目前時間。
 
 例如：
 
@@ -423,11 +432,11 @@ group.2_group.type=dam:Asset
 
 * **上界**
 
-   相對於目前伺服器時間的上限日期界限（一秒、二分鐘、三小時、四天、五週、六個月、七年），使用「-」作為負偏移 `1s 2m 3h 4d 5w 6M 7y`
+   相對於目前伺服器時間的上限日期界限(毫秒，或`1s 2m 3h 4d 5w 6M 7y`（一秒、二分鐘、三小時、四天、五週、六個月、七年）)，對於負偏移使用&quot;-&quot;
 
 * **下界**
 
-   相對於目前伺服器時間的較低日期界限（一秒、二分鐘、三小時、四天、五週、六個月、七年），使用「-」作為負偏移 `1s 2m 3h 4d 5w 6M 7y`
+   相對於目前伺服器時間的較低日期界限（毫秒、兩分鐘、三小時、四天、五週、六個月、七年），對於負偏移使用&quot;-&quot;`1s 2m 3h 4d 5w 6M 7y`
 
 ### root {#root}
 
@@ -447,11 +456,11 @@ group.2_group.type=dam:Asset
 
 * **p.guessTotal**
 
-   建議：避免計算全部結果總和，代價高昂；指出總計上限的數字（例如1000，此數字可讓使用者獲得對粗細大小的足夠回饋，並提供精確數字以取得較小結果）或「 `true`」只計算最小必要 `p.offset` + `p.limit`
+   建議：避免計算全部結果總和，代價高昂；指出總計上限的數字（例如1000，一個數字可讓使用者對粗略大小有足夠意見回應，而結果較小的數字）或&quot; `true`&quot;，只計算最低所需的`p.offset` + `p.limit`
 
 * **p.expert**
 
-   如果設為&quot; `true`&quot;，請在結果中加入全文摘錄
+   如果設定為&quot; `true`&quot;，則在結果中包含全文摘錄
 
 * **p.hits**
 
@@ -459,15 +468,15 @@ group.2_group.type=dam:Asset
 
    * **簡單**:
 
-      最小項 `path`目， `title`如 `lastmodified`、、 `excerpt` （如果已設定）
+      如`path`、`title`、`lastmodified`、`excerpt`等最小項目（如果已設定）
 
    * **完整**:
 
-      sling JSON演算節點，並 `jcr:path` 指示點擊的路徑：預設情況下，只列出節點的直接屬性，包含一個更深的樹，其中 `p.nodedepth=N`0表示整個無窮子樹；添加 `p.acls=true` 以包括當前會話對給定結果項的JCR權限(映射： `create` `add_node``modify` = `set_property`= `delete` , `remove`= )
+      sling JSON演算節點，其中`jcr:path`表示點擊的路徑：預設情況下，只列出節點的直接屬性，包含一個具有`p.nodedepth=N`的更深樹，其中0表示整個無限子樹；添加`p.acls=true`以包含當前會話對給定結果項的JCR權限(映射：`create` = `add_node`, `modify` = `set_property`, `delete` = `remove`
 
    * **選擇性**:
 
-      僅指定屬 `p.properties`性，即相對路徑的空格分隔（在URL中使用&quot;+&quot;）清單；如果相對路徑的深度大於1，則表示為子對象；特殊jcr:path屬性包含點擊的路徑
+      僅在`p.properties`中指定的屬性，此屬性是分隔的空格（在URL中使用&quot;+&quot;）相對路徑清單；如果相對路徑的深度大於1，則表示為子對象；特殊jcr:path屬性包含點擊的路徑
 
 ### savedquery {#savedquery}
 
@@ -475,7 +484,7 @@ group.2_group.type=dam:Asset
 
 請注意，這不會執行額外查詢，但會延伸目前的查詢。
 
-查詢可使用程式設計方式保存 `QueryBuilder#storeQuery()`。 格式可以是多行String屬性，也可以是包含查詢 `nt:file` 的節點，該查詢是Java屬性格式的文本檔案。
+查詢可使用`QueryBuilder#storeQuery()`以程式設計方式保存。 格式可以是多行String屬性或`nt:file`節點，該節點將查詢作為Java屬性格式的文本檔案。
 
 不支援儲存查詢的謂語的Facet擷取。
 
@@ -483,21 +492,24 @@ group.2_group.type=dam:Asset
 
 * **savedquery**
 
-   已保存查詢的路徑(字串屬性或節 `nt:file` 點)
+   已保存查詢的路徑（String屬性或`nt:file`節點）
 
-### 相似 {#similar}
+### 類似{#similar}
 
-使用JCR XPath的相似性搜索 `rep:similar()`。
+使用JCR XPath的`rep:similar()`進行相似性搜索。
 
 不支援篩選。 不支援Facet擷取。
 
 #### 屬性 {#properties-20}
 
-* **類**&#x200B;似的絕對路徑，指向要查找相似節點的節點
+* **要**
+查找相似節點的節點的相似絕對路徑
 
-* **本**&#x200B;地指向子節點或當前節 `.` 點的相對路徑(可選，預設為「 `.`」)
+* **到**
+子節點或 
+`.` 對於當前節點(可選，預設為&quot; `.`&quot;)
 
-### tag {#tag}
+### 標籤{#tag}
 
 透過指定標籤標題路徑，搜尋以一或多個標籤標籤的內容。
 
@@ -511,11 +523,11 @@ group.2_group.type=dam:Asset
 
 * **N值**
 
-   使 `1_value`用 `2_value`, ...若要檢查多個標籤(依預 `OR` 設結合， `AND` 含if和=true)（自5.6起）
+   使用`1_value`、`2_value`、...若要檢查多個標籤（依預設與`OR`結合，若與=true則與`AND`結合）（自5.6起）
 
 * **屬性**
 
-   屬性（或屬性的相對路徑）以查看(預設為&quot; `cq:tags`&quot;)
+   屬性（或屬性的相對路徑）以查看（預設值&quot; `cq:tags`&quot;）
 
 ### tagid {#tagid}
 
@@ -531,11 +543,11 @@ group.2_group.type=dam:Asset
 
 * **N值**
 
-   使 `1_value`用 `2_value`, ...若要檢查多個標語(依預 `OR` 設結合， `AND` 含if和=true)（自5.6起）
+   使用`1_value`、`2_value`、...若要檢查多個標語（依預設與`OR`結合，並搭配`AND`if和=true）（自5.6起）
 
 * **屬性**
 
-   屬性（或屬性的相對路徑）以查看(預設為&quot; `cq:tags`&quot;)
+   屬性（或屬性的相對路徑）以查看（預設值&quot; `cq:tags`&quot;）
 
 ### tagsearch {#tagsearch}
 
@@ -551,15 +563,15 @@ group.2_group.type=dam:Asset
 
 * **屬性**
 
-   屬性（或屬性的相對路徑）以查看(預設為&quot; `cq:tags`&quot;)
+   屬性（或屬性的相對路徑）以查看（預設值&quot; `cq:tags`&quot;）
 
 * **lang**
 
-   僅在特定本地化標籤標題中搜尋(例如&quot; `de`&quot;)
+   僅在特定本地化標籤標題中搜尋(例如&quot; `de`&quot;
 
 * **全部**
 
-   (bool)搜尋整個標籤全文，即所有標題、說明等。 (優先於&quot;l `ang`&quot;)
+   (bool)搜尋整個標籤全文，即所有標題、說明等。 （優先於&quot;l `ang`&quot;）
 
 ### 類型 {#type}
 
@@ -571,4 +583,4 @@ group.2_group.type=dam:Asset
 
 * **類型**
 
-   節點類型或混合名稱以進行搜索，例如 `cq:Page`
+   要搜索的節點類型或混合名稱，例如`cq:Page`
