@@ -13,9 +13,9 @@ ht-degree: 11%
 
 # Assets 指南
 
-本指南涵蓋所 [!DNL Experience Manager Assets] 有工作，例如如何建立、管理、提供和最佳化數位資產。
+本指南涵蓋所有[!DNL Experience Manager Assets]工作，例如如何建立、管理、提供和最佳化數位資產。
 
-## 主要文 [!DNL Experience Manager] 章
+## 關鍵[!DNL Experience Manager]文章
 
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
@@ -40,9 +40,9 @@ ht-degree: 11%
 | [開發使用指南](/help/sites-developing/home.md) | 瞭解如何建立您的Experience Manager部署。 |
 | [管理使用手冊](/help/managing/home.md) | 本指南說明如何成功管理Experience Manager專案。 |
 | [行動使用指南](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南說明如何與共用使用者產生的內容 [!DNL Livefyre]。 |
+| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南說明如何與[!DNL Livefyre]共用使用者產生的內容。 |
 
-## 關鍵資 [!DNL Experience Manager] 源
+## 關鍵[!DNL Experience Manager]資源
 
 * [Experience Manager教學課程影片](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
