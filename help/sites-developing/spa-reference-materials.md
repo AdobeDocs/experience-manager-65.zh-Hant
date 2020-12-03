@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# SPA參考資料 {#spa-reference-materials}
+# SPA參考資料{#spa-reference-materials}
 
 ## SPA Javascript API參考{#spa-javascript-api-references}
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 * [反應可編輯的元件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 * [角度可編輯的元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-## 開放原始碼GitHub資料庫 {#github-repositories}
+## 開放原始碼GitHub儲存庫{#github-repositories}
 
 以下是GitHub上SPA庫的開放原始碼資料庫。
 
