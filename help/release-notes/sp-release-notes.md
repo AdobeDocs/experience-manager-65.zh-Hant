@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
+source-git-commit: c92efd64662e831c8771a8f35701f4e9ed788645
 workflow-type: tm+mt
-source-wordcount: '3789'
+source-wordcount: '4201'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,16 @@ ht-degree: 0%
 * 使用者可以在「卡片」和「欄」檢視中排序數位資產。
 
 * [!DNL Assets] 並提供 [!DNL Dynamic Media] 多種協助工具增強功能。這些增強功能與鍵盤導覽、螢幕閱讀程式的使用，以及讓使用者使用類似的輔助技術(AT)有關。 請參閱[[!DNL Assets] 增強功能](#assets-6570)和[[!DNL Dynamic Media] 增強功能](#dynamic-media-6570)。
+
+* 建立資料模型HTTP用戶端組態以最佳化效能。
+
+* 在「佈局」模式下，每個元件的「重置選項」的可用性
+
+* [!DNL Experience Manager] 6.5 Service Pack 7 Forms改善了以下效能：
+
+   * 在提交自適應表單時驗證伺服器上的欄位值。
+
+   * 使用[!DNL Automated Forms Conversion service]將PDF表單轉換為最適化表單。
 
 * 內建儲存庫(Apache Jackrabbit Oak)已更新至1.22.5版。
 
@@ -299,6 +309,48 @@ ht-degree: 0%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] 在計畫的Service Pack發行日期後一週發行附 [!DNL Experience Manager] 加軟體包。
+
+**適用性表單**
+
+* 在套用[!DNL Experience Manager] Service Pack 6(NPR-35126)後，無法使用Classic UI編輯最適化表單。
+
+* 將PDF轉換為最適化表單時，無法使用標籤式版面上的表單資料模型來設定巢狀面板的值。 此外，使用程式碼編輯器動態設定靜態陣列的「選項按鈕群組」值時，也會發生問題(NPR-35062)。
+
+* 在文本欄位元件中以自適應格式輸入日文字元時，可以指定的字元數超過35個字元的上限(NPR-35039)。
+
+* 最適化表單會在提交表單後顯示的&#x200B;**[!UICONTROL 感謝]**&#x200B;頁面上顯示不想要的參數，例如`owner`和`status`(NPR-34989)。
+
+* [!UICONTROL [!UICONTROL Attachment]元件的&lt;a0/>檔案選擇]對話框顯示不支援的檔案類型以及在自適應表單提交過程中導致錯誤的選擇(NPR-34970)。
+
+* 當您在[!DNL Experience Manager Sites]頁面中插入一個在表單之前包含文字的最適化表單時，游標焦點會直接移至表單而非表單之前的文字(NPR-34947)。
+
+* [!UICONTROL 使用] Data選項預覽使用 [!DNL Experience Manager] 6.2資料XML檔案來預填最適化表單無法正常運作(NPR-35087)。
+
+* 當您更新最適化表單的資料字典時，不會轉譯表單，因為最適化表單會傳回快取值(NPR-34845)。
+
+* 由於快取失效，片段以最適化形式載入所花的時間較長(NPR-34567)。
+
+* 標籤導覽無法適合最適化表單的螢幕閱讀程式(NPR-34544)。
+
+**信件管理**
+
+* 無法將包含浮點類型之數值資料的XML標籤值儲存為草稿(NPR-35050)。
+
+* 從ES3移轉資產時，資產包含兩個不可編輯的預設條件(NPR-34972)。
+
+* 當您在字母中編輯資料字典時，[!UICONTROL Lent Content]區段會顯示旋轉矩形，而非有用資訊(NPR-34853)。
+
+**互動式通訊**
+
+* 在安裝[!DNL Forms]附加元件套件後，Interactive Communication的轉出組態名稱會複製標準的轉出組態名稱(NPR-34976)。
+
+**Document Security**
+
+* 當您儲存新的檔案安全性政策時，Experience Manager Forms會顯示`Relative validity period is required`錯誤訊息(NPR-34679)。
+
+* 當您儲存新的檔案安全性政策時，Experience Manager Forms會顯示`Invalid filed value.Numeric value is required`錯誤訊息(NPR-34678)。
+
+* Document Security無法保護PDF 2.0檔案(CQ-4305851)。
 
 如需安全性更新的詳細資訊，請參閱[Experience Manager安全性公告頁面](https://helpx.adobe.com/security/products/experience-manager.html)。
 
