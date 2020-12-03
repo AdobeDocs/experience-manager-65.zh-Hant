@@ -12,6 +12,9 @@ discoiquuid: 3cf0fd8d-7fc8-468a-bb1e-1debb68a82a5
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -31,17 +34,17 @@ AEM提供：
 
 Selenium用於瀏覽器中的函式測試，每個活動有一個用戶。 它會將測試步驟（點按）記錄為HTML表格或Java類別。
 
-如需詳細資訊，請參 [閱https://www.seleniumhq.org/](https://www.seleniumhq.org/)。
+如需詳細資訊，請參閱[https://www.seleniumhq.org/](https://www.seleniumhq.org/)。
 
 **JMeter**
 
-JMeter可用來追蹤要求，並可用於功能、效能和壓力測試。
+JMeter用於跟蹤請求，可用於功能、效能和壓力測試。
 
-如需詳細資訊，請參 [閱https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter)。
+如需詳細資訊，請參閱[https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter)。
 
 此外，還有許多專屬工具可自動化測試和管理測試計畫。
 
-### 追蹤 {#tracking}
+### 追蹤{#tracking}
 
 您可輕鬆使用下列工具。 但是，所有情況下的一個關鍵問題是，項目團隊的所有成員（合作夥伴和客戶）都可以獲得資料。
 
@@ -51,7 +54,7 @@ JMeter可用來追蹤要求，並可用於功能、效能和壓力測試。
 
 **試算表**
 
-雖然並非特別是錯誤追蹤工具，但試算表 **&#x200B;通常會因此遭誤用，因為它們易於理解，而且大部分使用者都有其功能的經驗。
+雖然並非特別是錯誤追蹤工具，但試算表通常用於此目的&#x200B;*mis*，因為它們易於理解，而且大部分使用者都具備其功能經驗。
 
 如果這些用於追蹤，則：
 
