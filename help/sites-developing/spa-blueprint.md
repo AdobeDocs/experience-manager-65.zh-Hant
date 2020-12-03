@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+source-git-commit: c1b5df634eba0628c8d2e0b38b9c220cbee8ec62
 workflow-type: tm+mt
 source-wordcount: '2112'
 ht-degree: 0%
