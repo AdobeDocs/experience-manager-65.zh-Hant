@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 工作功能{#assignments-feature}
 
-在元件瀏覽器中的「社區」組中找到的「啟用指派」和「啟用目錄」[元件是[啟用社區](/help/communities/overview.md#enablement-community)的元件。](/help/communities/catalog.md)
+在元件瀏覽器的「 [社群」群組中，可找到「啟用指派」和「啟用目錄](/help/communities/catalog.md) 」元件是啟用社群 [的元件](/help/communities/overview.md#enablement-community)。
 
 「啟用指派」元件可讓目前登入的社群成員（學員）存取其指派的[啟用資源](/help/communities/resources.md)。
 
