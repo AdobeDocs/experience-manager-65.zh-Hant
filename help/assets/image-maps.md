@@ -28,7 +28,7 @@ ht-degree: 0%
 
       ![編輯選項](assets/do-not-localize/edit_icon.png)
 
-1. 若要插入影像地圖，請從工具列按一下「啟動地圖」**[!UICONTROL ![影像地圖](assets/do-not-localize/image-map-icon.png)。]**
+1. 若要插入影像地圖，請按一 **[!UICONTROL 下工具列]**![的「啟動地圖](assets/do-not-localize/image-map-icon.png) 」影像地圖。
 1. 選取影像地圖的形狀。 選取形狀的作用點會置於影像上。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
