@@ -3,9 +3,9 @@ title: 使用連結分享資產
 description: 將資產、檔案夾和系列共用為URL。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f6da1c69ea3b3c3f07e8ac10fd8e1e9c7208158
+source-git-commit: e36d08c9ea89e840aecde79ffdd911372c0c54ee
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1056'
 ht-degree: 5%
 
 ---
@@ -57,9 +57,9 @@ ht-degree: 5%
    >
    >如果您輸入非您組織成員之使用者的電子郵件ID，則「外部使用者」([!UICONTROL External User)]會加上使用者的電子郵件ID前置詞。
 
-1. 在&#x200B;**[!UICONTROL Subject]**&#x200B;欄位中，輸入主旨行。
+1. 在&#x200B;**[!UICONTROL Subject]**&#x200B;方塊中，輸入您要共用之資產的主旨。
 
-1. 在&#x200B;**[!UICONTROL 消息]**&#x200B;欄位中，輸入可選消息。
+1. 在&#x200B;**[!UICONTROL 消息]**&#x200B;框中，輸入可選消息。
 
 1. 在&#x200B;**[!UICONTROL Expiration]**&#x200B;欄位中，指定連結停止運作的到期日和時間。 依預設，有效期是從您共用連結之日起的一週設定。
 
@@ -69,9 +69,9 @@ ht-degree: 5%
 
 1. 按一下&#x200B;**[!UICONTROL 「共用」]**。訊息會確認連結已透過電子郵件與使用者共用。
 
-1. 若要檢視共用資產，請按一下傳送給使用者之電子郵件中的連結。 共用資產會顯示在&#x200B;**[!UICONTROL Adobe Marketing Cloud]**&#x200B;頁面中。
+1. 若要檢視共用資產，請按一下傳送給使用者之電子郵件中的連結。 共用資產會顯示在[!UICONTROL Adobe Marketing Cloud]頁面中。
 
-   ![chlimage_1-260](assets/chlimage_1-545.png)
+   ![共用資產可在Adobe Marketing Cloud中使用](assets/chlimage_1-545.png)
 
 1. 若要產生資產的預覽，請按一下共用資產。 若要關閉預覽並返回至&#x200B;**[!UICONTROL Marketing Cloud]**&#x200B;頁面，請按一下工具列中的&#x200B;**[!UICONTROL Back]**。 如果您已共用資料夾，請按一下「父資料夾&#x200B;****」以返回父資料夾。
 
@@ -83,7 +83,7 @@ ht-degree: 5%
 
 1. 若要下載共用資產，請按一下工具列中的「選擇&#x200B;****」、按一下資產，然後按一下工具列中的「下載&#x200B;****」。
 
-   ![chlimage_1-262](assets/chlimage_1-547.png)
+   ![下載共用資產的工具列選項](assets/chlimage_1-547.png)
 
 1. 若要檢視您已共用為連結的資產，請前往[!DNL Assets]使用者介面，然後按一下[!DNL Experience Manager]標誌。 選擇&#x200B;**[!UICONTROL Navigation]**。 在導覽窗格中，選擇&#x200B;**[!UICONTROL 共用連結]**&#x200B;以顯示共用資產清單。
 
