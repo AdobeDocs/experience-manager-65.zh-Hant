@@ -1,11 +1,11 @@
 ---
 title: 使用PDF點陣化器產生轉譯
-description: 使用 [!DNL Adobe Experience Manager]中的Adobe PDF Rasterizer程式庫產生高品質的縮圖和轉譯。
+description: 使用Adobe PDF Rasterizer程式庫產生高品質的縮圖和轉譯。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: b68311d593730d1c441b863967b15e6481758267
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '720'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 # 使用PDF點陣化器{#using-pdf-rasterizer}
 
-當您將大型且內容密集的PDF或AI檔案上傳至[!DNL Adobe Experience Manager Assets]時，預設轉換可能無法產生正確的輸出。 相較於預設資料庫的輸出，Adobe的PDF點陣化器程式庫可產生更可靠且更精確的輸出。 Adobe建議針對下列情況使用PDF點陣化器程式庫：
+當您將大型且內容密集的PDF或AI檔案上傳至[!DNL Adobe Experience Manager Assets]時，預設程式庫可能無法產生正確的輸出。 相較於預設資料庫的輸出，Adobe的PDF點陣化器程式庫可產生更可靠且更精確的輸出。 Adobe建議針對下列情況使用PDF點陣化器程式庫：
+
+Adobe建議針對下列項目使用PDF點陣化器程式庫：
 
 * 大量、內容密集的AI檔案或PDF檔案。
 * AI檔案和PDF檔案，預設會產生縮圖。
@@ -47,14 +49,12 @@ ht-degree: 0%
 1. 為&#x200B;**[!UICONTROL PDF點陣化器處理常式]**&#x200B;步驟設定下列引數：
 
    * MIME類型：`application/pdf`或`application/postscript`
-   * 命令: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
+   * 命令: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * 新增縮圖大小：319:319, 140:100, 48:48。 視需要新增自訂縮圖設定。
 
    `PDFRasterizer`命令的命令行參數可以包括：
 
    * `-d`:標幟可讓文字、向量圖稿和影像順暢呈現。建立更高品質的影像。 不過，加入此參數會導致命令執行緩慢，並增加影像大小。
-
-   * `-p`:頁碼。預設值是所有頁面。 若要表示所有頁面，請使用`*`。
 
    * `-s`:最大影像尺寸（高度或寬度）。這會針對每個頁面轉換為DPI。 如果頁面大小不同，每個頁面可能會依不同的數量進行縮放。 預設值為實際頁面大小。
 
@@ -66,7 +66,6 @@ ht-degree: 0%
 
 
 1. 要刪除中間轉譯，請選擇&#x200B;**[!UICONTROL 刪除已生成的轉譯]**。
-
 1. 若要讓PDF點陣化器產生Web轉譯，請選取「產生Web轉譯」**[!UICONTROL 。]**
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
@@ -76,23 +75,17 @@ ht-degree: 0%
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
 1. 儲存工作流程。
-
 1. 若要啟用PDF點陣化器以處理含PDF程式庫的PDF頁面，請從[!UICONTROL Workflow]主控台開啟&#x200B;**[!UICONTROL DAM Process Subasset]**&#x200B;模型。
-
 1. 從側面板，將「PDF點陣化器處理常式」步驟拖曳至&#x200B;**[!UICONTROL 「建立啟用網頁的影像轉譯」步驟]**&#x200B;下方。
-
 1. 為&#x200B;**[!UICONTROL PDF點陣化器處理常式]**&#x200B;步驟設定下列引數：
 
    * MIME類型：`application/pdf`或`application/postscript`
-
-   * 命令: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
+   * 命令: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * 新增縮圖大小：`319:319`、`140:100`、`48:48`。 視需要新增自訂縮圖設定。
 
    `PDFRasterizer`命令的命令行參數可以包括：
 
    * `-d`:標幟可讓文字、向量圖稿和影像順暢呈現。建立更高品質的影像。 不過，加入此參數會導致命令執行緩慢，並增加影像大小。
-
-   * `-p`:頁碼。預設值是所有頁面。 `*` 表示所有頁面。
 
    * `-s`:最大影像尺寸（高度或寬度）。這會針對每個頁面轉換為DPI。 如果頁面大小不同，每個頁面可能會依不同的數量進行縮放。 預設值為實際頁面大小。
 
@@ -113,4 +106,4 @@ ht-degree: 0%
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
 1. 儲存工作流程。
-1. 將PDF或AI檔案上傳至[!DNL Experience Manager Assets]。 PDF點陣化器會產生檔案的縮圖和網頁轉譯。
+1. 將PDF檔案或AI檔案上傳至[!DNL Experience Manager Assets]。 PDF點陣化器會產生檔案的縮圖和網頁轉譯。
