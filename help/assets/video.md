@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '11828'
+source-wordcount: '11812'
 ht-degree: 6%
 
 ---
@@ -146,7 +146,7 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 * 使用完整的中繼資料支援來組織、瀏覽和搜尋視訊，以有效管理視訊資產。
 * 將最適化視訊集發佈至網路以及桌上型電腦和行動裝置，包括iPhone、iPad、Android、Blackberry和Windows手機。
 
-多種iOS平台都支援最適化視訊串流。 請參閱[Scene7檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html)。
+多種iOS平台都支援最適化視訊串流。 請參閱[動態媒體檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
 
 Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位置找到支援此視訊格式的Blackberry裝置：[Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支援的視訊格式。
 
@@ -162,7 +162,7 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位
 
 請參閱[動態視訊播放](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)範例。
 
-另請參閱Adobe Scene7檢視器參考指南中的「AEM Assets和Dynamic Media Classic的檢視器」[和「AEM資產的檢視器」](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)。[](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)
+另請參閱「AEM Assets和Dynamic Media Classic的檢視器」[和「僅AEM資產的檢視器」](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。[](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)
 
 ## 最佳實務：使用HTML5視訊檢視器{#best-practice-using-the-html-video-viewer}
 
@@ -174,7 +174,7 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位
 
 結合單一播放器，即可設計使用HTML5和CSS的播放元件、內嵌播放，並視瀏覽器功能而使用可調式和漸進式串流，讓您將豐富型媒體內容的觸及面擴展至案頭和行動使用者，並確保簡化視訊體驗。
 
-另請參閱Adobe Scene7檢視器參考指南中的[關於HTML5檢視器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)。
+另請參閱[關於HTML5檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
 ### 使用HTML5視訊檢視器{#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}在桌上型電腦和行動裝置上播放視訊
 
@@ -191,7 +191,7 @@ HLS是Apple自適應視訊串流的標準，可根據網路頻寬容量自動調
 
 漸進式視訊是透過在使用者的案頭系統或行動裝置上下載並儲存視訊來傳送。
 
-下表說明使用Scene7 Video Viewer在桌上型電腦和行動裝置上播放視訊的裝置、瀏覽器和播放方法。
+下表說明使用動態媒體視訊檢視器在桌上型電腦和行動裝置上播放視訊的裝置、瀏覽器和播放方法。
 
 <table>
  <tbody>
@@ -402,7 +402,7 @@ VBR編碼時間較長，但結果最好；媒體檔案的品質更優越。 VBR�
 
 | 視訊類型 | 寬x高 | 寬度比例 | 高度比 |
 |--- |--- |--- |--- |
-| 來源 | 1920x1080 | 1 | 3 |
+| 來源 | 1920x1080 | 1 | 1 |
 | 編碼 | 960 x 540 | 2 | 2 |
 | 編碼 | 640 x 360 | 3 | 1 |
 | 編碼 | 480 x 270 | 4 | 4 |
@@ -927,8 +927,8 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 * 若是YouTube發佈工作，請執行下列動作：
 
 1. 在AEM中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型」。]**
-1. 在「工作流程模型」頁面上，選取「發佈至YouTube」，然後點選工具列上的「編輯」。
-1. 在「發佈至YouTube」工作流程頁面的右上角，點選「編輯」。
+1. 在「工作流程模型」頁面上，選取「發佈至YouTube」，然後點選工具列上的「編輯」。**[!UICONTROL ****]**
+1. 在「發佈至YouTube」工作流程頁面的右上角，點選「編輯」。]****[!UICONTROL 
 1. 將滑鼠指標暫留在「YouTube上傳」元件上，然後點選一次以顯示內嵌工具列。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
@@ -1005,9 +1005,9 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 如果您使用動態媒體提供的現成可用的視訊檢視器，或是您根據現成可用的視訊檢視器建立自訂的檢視器預設集，則不需執行其他步驟即可檢視視訊報表。 不過，如果您已根據Scene7 HTML5檢視器SDK建立自己的視訊檢視器，請使用下列步驟來確保您的視訊檢視器將追蹤事件傳送至動態媒體視訊報表。
 
-使用Scene7檢視器參考和Scene7 HTML5檢視器SDK來建立您自己的視訊檢視器。
+使用「動態媒體檢視器參考」和Scene7 HTML5檢視器SDK來建立您自己的視訊檢視器。
 
-請參閱[Scene7檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
+請參閱[動態媒體檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 <!-- Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
