@@ -3,9 +3,9 @@ title: '[!DNL Assets] 調整大小指南'
 description: 確定有效度量以估計部署 [!DNL Adobe Experience Manager Assets]所需的基礎架構和資源的最佳做法。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 1. 確定要載入到系統中的資產的大小和數量。
 1. 取得要上傳至[!DNL Experience Manager]的資產的代表性範例。 例如，如果您打算將PSD、JPG、AI和PDF檔案載入系統，則需要每個檔案格式的多張範例影像。 此外，這些範例應代表不同檔案大小和複雜的影像。
 1. 定義要使用的轉譯。
-1. 使用[!DNL ImageMagick]或[!DNL Adobe Creative Cloud]應用程式在[!DNL Experience Manager]中建立轉譯。 除了使用者指定的轉譯外，還可建立立即可用的轉譯。 對於實作Scene7的使用者，您可以使用IC二進位檔產生要儲存在Experience Manager中的PTIFF轉譯。
+1. 使用[!DNL ImageMagick]或[!DNL Adobe Creative Cloud]應用程式在[!DNL Experience Manager]中建立轉譯。 除了使用者指定的轉譯外，還可建立立即可用的轉譯。 對於實作Dynamic Media的使用者，您可以使用IC二進位檔產生要儲存在Experience Manager中的PTIFF轉譯。
 1. 如果您打算使用子資產，請針對適當的檔案類型產生子資產。
 1. 比較輸出影像、轉譯和子資產與原始影像的大小。 它允許您在載入系統時生成預期的增長系數。 例如，如果您在處理1 GB資產後，產生組合大小為3 GB的轉譯和子資產，轉譯的增長率是3。
 1. 確定資產版本在系統中維護的最長時間。
