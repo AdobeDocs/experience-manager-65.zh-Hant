@@ -3,9 +3,9 @@ title: 大量移轉資產
 description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及啟用資產以發佈例項。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1799'
 ht-degree: 8%
 
 ---
@@ -79,7 +79,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 ### 處理轉譯{#processing-renditions}
 
-將資產載入系統後，您需要透過[!UICONTROL DAM更新資產]工作流程處理資產，以擷取中繼資料並產生轉譯。 在執行此步驟之前，您需要複製並修改[!UICONTROL DAM更新資產]工作流程，以符合您的需求。 現成可用的工作流程包含許多您不需要的步驟，例如產生Scene7 PTIFF或[!DNL InDesign Server]整合。
+將資產載入系統後，您需要透過[!UICONTROL DAM更新資產]工作流程處理資產，以擷取中繼資料並產生轉譯。 在執行此步驟之前，您需要複製並修改[!UICONTROL DAM更新資產]工作流程，以符合您的需求。 現成可用的工作流程包含許多您不需要的步驟，例如產生動態媒體PTIFF或[!DNL InDesign Server]整合。
 
 根據您的需求設定工作流程後，您有兩個執行工作流程的選項：
 
