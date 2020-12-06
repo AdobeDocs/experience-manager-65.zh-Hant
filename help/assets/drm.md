@@ -3,9 +3,9 @@ title: 資產的數位版權管理
 description: 瞭解如何在 [!DNL Experience Manager]中管理已授權資產的資產到期狀態和資訊。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 97d3edf155ddeabf3f39139c9079621c3627820b
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 5%
 
 1. 在[!DNL Assets]控制台中，按一下工具欄中的&#x200B;**[!UICONTROL Search]**&#x200B;以顯示「Omnisearch」框。
 
-1. 在「Omnisearch」（搜索）框中，按Enter鍵可顯示搜索結果頁。
+1. 在「Omnisearch」（搜索）框中，選擇`Enter`鍵以顯示搜索結果頁。
 1. 開啟左側導軌中的搜尋面板。 按一下&#x200B;**[!UICONTROL 到期狀態]**&#x200B;選項將其展開。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
@@ -98,7 +98,7 @@ ht-degree: 5%
 
    *圖： [!UICONTROL 「資] 產屬性」頁面中的「  進階」標籤，以設定資產到期日。*
 
-1. 按一下「儲存」，然後按一下「關閉」以顯示「資產」主控台。]********[!UICONTROL 
+1. 按一下「儲存」，然後按一下「關閉」以顯示「資產」主控台。********
 1. 資產的發佈狀態會指出卡片檢視中資產縮圖底部的過期狀態。 在清單檢視中，資產的狀態會顯示為&#x200B;**[!UICONTROL 已到期]**。
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
@@ -110,7 +110,7 @@ ht-degree: 5%
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
 1. 若要根據資產狀態來搜尋資產，請按一下「搜尋&#x200B;****![搜尋選項](assets/do-not-localize/search_icon.png)」以顯示Omnisearch列。
-1. 按return並按一下[!DNL Experience Manager]以顯示搜索面板。
+1. 選擇`Return`並按一下[!DNL Experience Manager]以顯示搜索面板。
 1. 在搜尋面板中，按一下「發佈狀態」並選取「已發佈」，以搜尋[!DNL Assets]中的已發佈資產。]****[!UICONTROL ****
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
@@ -131,7 +131,7 @@ ht-degree: 5%
 
 此功能會強制您接受授權合約，您才能從[!DNL Adobe Experience Manager Assets]下載授權資產。
 
-如果您選取受保護的資產，然後按一下「下載」，就會將您重新導向至授權頁面以接受授權合約。 ]****[!UICONTROL &#x200B;如果您不接受授權合約，則&#x200B;**[!UICONTROL Download]**&#x200B;選項不可用。
+如果您選取受保護的資產，然後按一下「下載」，就會將您重新導向至授權頁面以接受授權合約。 ****&#x200B;如果您不接受授權合約，則&#x200B;**[!UICONTROL Download]**&#x200B;選項不可用。
 
 如果選擇包含多個受保護的資產，請一次選取一個資產、接受授權合約，然後繼續下載資產。
 
