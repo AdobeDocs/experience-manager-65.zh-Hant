@@ -4,9 +4,9 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2178'
+source-wordcount: '2176'
 ht-degree: 11%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 11%
 
 1. 導覽至[!DNL Assets]使用者介面，然後按一下搜尋。
 
-1. 在Omnisearch方塊中輸入搜尋關鍵字，然後按`Enter`。 開啟「篩選」面板並套用搜尋篩選。
+1. 在Omnisearch方塊中輸入搜尋關鍵字，然後選取`Enter`。 開啟「篩選」面板並套用搜尋篩選。
 
 1. 從&#x200B;**[!UICONTROL 檔案和資料夾]**&#x200B;清單中，選擇&#x200B;**[!UICONTROL 檔案]**。
 
@@ -109,7 +109,7 @@ ht-degree: 11%
 您可以將資產新增至包含參考資產或檔案夾清單的系列。 智慧型系列使用搜尋查詢來填入資產。 因此，資產和檔案夾的靜態參考不適用。
 
 1. 在[!DNL A]ssets使用者介面中，選取資產，然後從工具列按一下「至系列&#x200B;**** ![新增至系列](assets/do-not-localize/add-to-collection.png)」。
-或者，您也可以將資產拖曳至介面上的「拖曳至系列」區域。 ]****[!UICONTROL &#x200B;當區域的標籤變更為&#x200B;**[!UICONTROL 拖放至新增]**&#x200B;時新增資產。
+或者，您也可以將資產拖曳至介面上的「拖曳至系列」區域。 ****&#x200B;當區域的標籤變更為&#x200B;**[!UICONTROL 拖放至新增]**&#x200B;時新增資產。
 
 1. 在&#x200B;**[!UICONTROL 新增至系列]**&#x200B;頁面中，選取您要新增資產的系列。
 
@@ -120,7 +120,7 @@ ht-degree: 11%
 智慧型系列是透過儲存搜尋來建立的，因此您可以修改[已儲存搜尋](#saved-searches)的搜尋參數來變更其內容。
 
 1. 在[!DNL Assets]使用者介面中，按一下工具列中的搜尋選項![搜尋選項](assets/do-not-localize/search_icon.png)。
-1. 在Omnisearch框中，按Return鍵。
+1. 在「Omnisearch」（搜索）框中，選擇`Return`鍵。
 1. 在[!DNL Experience Manager]介面中，開啟「篩選」面板。
 1. 從「保 **[!UICONTROL 存的搜索]** 」清單中，選擇要修改的智慧系列。「搜尋」面板會顯示為儲存的搜尋設定的篩選器。
 
@@ -160,7 +160,7 @@ ht-degree: 11%
    >* 在清單頂端，選取&#x200B;**[!UICONTROL Title]**&#x200B;附近的核取方塊，在選取系列和清除清單之間切換。
 
 
-1. 從工具列按一下「儲存並關閉」，然後關閉確認對話方塊。]****[!UICONTROL 
+1. 從工具列按一下「儲存並關閉」，然後關閉確認對話方塊。****
 1. 要將新元資料與現有元資料一起附加，請選擇&#x200B;**[!UICONTROL 附加模式]**。 如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。按一下&#x200B;**[!UICONTROL 提交]**。
 
    >[!NOTE]
@@ -171,7 +171,7 @@ ht-degree: 11%
 
 >[!TIP]
 >
->批量編輯方法適用於系列中的可用資產。 對於跨資料夾可用或符合一般准則的資產，可在搜尋](/help/assets/search-assets.md#metadataupdates)後，大量更新中繼資料。[
+>批量編輯方法適用於系列中的可用資產。 對於跨資料夾可用或符合一般准則的資產，可在搜尋[後，大量更新中繼資料。](/help/assets/search-assets.md#metadataupdates)
 
 ## 搜尋系列{#searching-collections}
 
@@ -192,7 +192,7 @@ ht-degree: 11%
 1. 選取系列，然後按一下工具列中的「設定」****。 或者，從系列縮圖使用&#x200B;**[!UICONTROL Settings]**&#x200B;快速動作。
 1. 修改「系列設定」頁面中 **[!UICONTROL 的系列設定]** 。例如，修改系列標題、說明、成員和權限，如[新增系列](#creating-a-collection)中所述。
 
-1. 要保存更改，請按一下「保存」。]****[!UICONTROL 
+1. 要保存更改，請按一下「保存」。****
 
 ## 刪除系列{#deleting-a-collection}
 
@@ -249,7 +249,7 @@ ht-degree: 11%
 要刪除保存的搜索，請執行以下步驟：
 
 1. 在[!DNL Assets]使用者介面中，按一下搜尋![搜尋選項](assets/do-not-localize/search_icon.png)。
-1. 在「Omnisearch」（搜索）欄位中，按Return鍵。
+1. 在「Omnisearch」（搜索）欄位中，選擇`Return`鍵。
 1. 在[!DNL Experience Manager]介面中，開啟「篩選」面板。
 1. 在&#x200B;**[!UICONTROL 儲存的搜尋]**&#x200B;清單中，按一下您要刪除的智慧型系列旁的&#x200B;**[!UICONTROL 刪除]**。
 
