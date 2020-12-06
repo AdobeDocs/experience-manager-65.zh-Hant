@@ -3,9 +3,9 @@ title: 瞭解中繼資料概念
 description: 瞭解中繼資料的需求和類型，以便更輕鬆地分類和組織資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2731'
 ht-degree: 6%
 
 ---
@@ -178,7 +178,7 @@ Dublin Core中繼資料提供一組標準化的慣例，用於描述資產，以
 | 說明 | 資產的詳細資訊。 |
 | 格式 | 資產的檔案格式、實體媒體或尺寸。 [!DNL Experience Manager] 用 `dc:format` 於表示資產的MIME類型。 |
 | 識別碼 | 資產的唯一參考。 |
-| 語言 | 資產的語言（例如，英文為en）。 |
+| 語言 | 資產的語言（例如，`en`英文）。 |
 | publisher | 負責使資產可供使用的人員或公司。 |
 | 關係 | 相關資產。 |
 | 權利 | 關於誰有權使用此資產的資訊。 |
