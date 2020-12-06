@@ -4,9 +4,9 @@ description: 關於 [!DNL Experience Manager] 配置、更改硬體、軟體和�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc61b8473fb919a963eb73c015efbc2f06197ee8
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2744'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 ### DAM更新資產配置{#dam-update-asset-configuration}
 
-[!UICONTROL DAM更新資產]工作流程包含為工作設定的完整步驟套件，例如產生Scene7 PTIFF和[!DNL Adobe InDesign Server]整合。 不過，大部分使用者可能不需要其中幾個步驟。 Adobe建議您建立[!UICONTROL DAM更新資產]工作流程模型的自訂復本，並移除任何不必要的步驟。 在此情況下，請更新[!UICONTROL DAM Update Asset]的啟動器，以指向新型號。
+[!UICONTROL DAM更新資產]工作流程包含為任務配置的完整步驟套件，例如動態媒體PTIFF產生和[!DNL Adobe InDesign Server]整合。 不過，大部分使用者可能不需要其中幾個步驟。 Adobe建議您建立[!UICONTROL DAM更新資產]工作流程模型的自訂復本，並移除任何不必要的步驟。 在此情況下，請更新[!UICONTROL DAM Update Asset]的啟動器，以指向新型號。
 
 深入執行[!UICONTROL DAM更新資產]工作流程可大幅增加檔案資料存放區的大小。 Adobe進行的實驗結果顯示，若在8小時內執行約5500個工作流程，資料存放區大小可增加約400 GB。
 
@@ -180,7 +180,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來監聽HTTP流量，
 
 許多網站客戶會實作影像servlet，在要求影像時調整大小並裁切影像，這會對發佈例項造成額外負載。 不過，只要可以快取這些影像，挑戰就可以減輕。
 
-另一種方法是使用Scene7技術完全放棄影像控制。 此外，您還可以部署品牌入口網站，不僅負責[!DNL Experience Manager]基礎架構的轉譯產生責任，還負責整個發佈層。
+另一種方法是使用動態媒體技術完全切換影像控制。 此外，您還可以部署品牌入口網站，不僅負責[!DNL Experience Manager]基礎架構的轉譯產生責任，還負責整個發佈層。
 
 #### ImageMagick {#imagemagick}
 
