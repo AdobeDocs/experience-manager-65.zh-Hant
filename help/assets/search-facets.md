@@ -3,10 +3,10 @@ title: 搜尋Facet以篩選搜尋結果
 description: 如何在 [!DNL Adobe Experience Manager]中建立、修改和使用搜尋刻面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2438'
-ht-degree: 16%
+source-wordcount: '2424'
+ht-degree: 15%
 
 ---
 
@@ -38,15 +38,15 @@ ht-degree: 16%
    >
    >1. 導覽至CRXDE中的`/conf/global/settings/dam/search/facets/assets/jcr:content/items`。
    >1. 刪除&#x200B;**type**&#x200B;節點。
-   >1. 從路徑 */libs/settings/dam/search/facets/assets/jcr:content/items*，將節點資產、目錄、類型、排除路徑和 **searchtype****** ，複製到步驟1提及的路徑。
+   >1. 從路徑`/libs/settings/dam/search/facets/assets/jcr:content/items`將節點`asset`、`directory`、`typeor`、`excludepaths`和`searchtype`複製到步驟1中提及的路徑。
    >1. 儲存變更。
 
 
 1. 在[!UICONTROL 編輯搜索表單]頁中，將&#x200B;**[!UICONTROL 選擇謂詞]**&#x200B;頁籤中的謂詞拖動到主窗格。 例如，拖曳&#x200B;**[!UICONTROL Property Predicate]**。
 
-   ![按並移動謂詞以自訂搜尋篩選器](assets/drag_predicate.png)
+   ![選擇並移動謂詞以自定義搜索篩選器](assets/drag_predicate.png)
 
-   *圖：按並移動謂語以自訂搜尋篩選。*
+   *圖：選擇並移動謂語以自訂搜尋篩選器。*
 
 1. 在[!UICONTROL Settings]標籤中，輸入謂語的欄位標籤、預留位置文字和說明。 為要與謂詞關聯的元資料屬性指定有效名稱。 [!UICONTROL Settings]標籤中的標題標籤標識所選謂語的類型。
 
