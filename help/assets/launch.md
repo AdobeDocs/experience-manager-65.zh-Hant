@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
 source-wordcount: '6623'
 ht-degree: 17%
@@ -162,7 +162,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 **若要使用內嵌程式碼追蹤動態媒體檢視器**:
 
 1. 讓網頁準備好嵌入動態媒體檢視器。
-1. 先登入Adobe Launch，以取得Adobe Launch程式庫的內嵌代碼（請參閱「設定Adobe Launch](#configuring-adobe-launch-for-the-integration)」）。[
+1. 先登入Adobe Launch，以取得Adobe Launch程式庫的內嵌代碼（請參閱「設定Adobe Launch[」）。](#configuring-adobe-launch-for-the-integration)
 1. 按一下&#x200B;**[!UICONTROL 屬性]** ，然後按一下&#x200B;**[!UICONTROL 環境]**&#x200B;頁籤。
 1. 選擇與網頁環境相關的環境級別。 然後，在&#x200B;**[!UICONTROL Install]**&#x200B;欄中，按一下框表徵圖。
 1. **[!UICONTROL 在「Web Install]** Instructions」（網頁安裝指示）對話方塊中，複製完整的Adobe Launch程式庫內嵌程式碼以及周圍的 `<script/>` 標籤。
@@ -182,7 +182,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 
 ### 設定動態媒體檢視器擴充功能{#configuring-the-dynamic-media-viewers-extension}
 
-「動態媒體檢視器」擴充功能的唯一設定選項是「啟用音訊和視訊的Adobe Media Analytics ]**」。**[!UICONTROL 
+「動態媒體檢視器」擴充功能的唯一設定選項是「啟用音訊和視訊的Adobe Media Analytics **[!UICONTROL 」。]**
 
 當您勾選（啟用或「開啟」）此選項，而且如果已安裝並正確設定Adobe Media Analytics for Audio and Video Extension，視訊播放量度會傳送至Adobe Analytics for Audio and Video解決方案。 停用此選項會關閉視訊追蹤。
 
@@ -227,7 +227,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
    * 使用核心Adobe Launch擴充功能的按鍵事件做為觸發器。
    * 傳送&#x200B;**[!UICONTROL ZoomScale]**&#x200B;資料元素的值至Adobe Analytics。
 
-現在，假設使用者載入含有兩個檢視器的網頁。 在&#x200B;*viewer1*&#x200B;中，它們放大至50%比例；然後，在&#x200B;*viewer2*&#x200B;中，它們會放大至25%的比例。 在&#x200B;*viewer1*&#x200B;中，它們會平移影像，最後按鍵盤上的鍵。
+現在，假設使用者載入含有兩個檢視器的網頁。 在&#x200B;*viewer1*&#x200B;中，它們放大至50%比例；然後，在&#x200B;*viewer2*&#x200B;中，它們會放大至25%的比例。 在&#x200B;*viewer1*&#x200B;中，它們會平移影像，最後在鍵盤上選取鍵。
 
 使用者的活動會導致對Adobe Analytics進行下列兩個追蹤呼叫：
 
@@ -468,7 +468,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 
    就本檔案而言，只有自訂流量(prop)變數會被使用，因為這些變數會在網頁上發生動作後幾分鐘內提供至Analytics報表。
 
-   若要啟用新的自訂流量變數，請在Adobe Analytics的工具列上，按一下「管理>報表套裝&#x200B;]**」。**[!UICONTROL 
+   若要啟用新的自訂流量變數，請在Adobe Analytics的工具列上，按一下「管理>報表套裝&#x200B;**[!UICONTROL 」。]**
 
 1. 在「報 **[!UICONTROL 表套裝管理器]** 」頁面上，選取正確的報表，然後在工具列上按一下「編輯 **[!UICONTROL 設定>流量>流量變數」]**。
 1. 在此處，挑選未使用的變數，為其指定描述性名稱(**[!UICONTROL 檢視器資產(prop 30)]**)，並在「已啟用」欄中將組合方塊變更為「已啟用」。
@@ -477,7 +477,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 
    ![image2019-6-26_23-6-59](assets/image2019-6-26_23-6-59.png)
 
-1. 在變數清單底部，按一下「儲存」。]****[!UICONTROL 
+1. 在變數清單底部，按一下「儲存」。****
 
 ### 設定報表{#setting-up-a-report}
 
@@ -514,7 +514,7 @@ Adobe Launch中的屬性是指名的設定，可讓所有設定保持一致。 �
 
 另請參閱[建立屬性](https://docs.adobe.com/content/help/en/launch/using/implement/configure/create-a-property.html)。
 
-1. 在Adobe Launch中，按一下「新增屬性」。]****[!UICONTROL 
+1. 在Adobe Launch中，按一下「新增屬性」。****
 1. 在「建 **[!UICONTROL 立屬性]** 」對話方塊的「名稱 **** 」欄位中，輸入描述性名稱，例如網站的標題。例如， `DynamicMediaViewersProp.`
 1. 在&#x200B;**[!UICONTROL 網域]**&#x200B;欄位中，輸入您網站的網域。
 1. 在&#x200B;**[!UICONTROL 進階選項]**&#x200B;下拉式清單中，啟用&#x200B;**[!UICONTROL 擴充功能開發設定（以後無法修改）]**，以備您要使用的擴充功能（在本例中為&#x200B;*動態媒體檢視器*）尚未發行時使用。
