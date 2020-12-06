@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ ht-degree: 0%
 
 若要上傳資產以搭配全景影像檢視器使用，請參閱[上傳資產](/help/assets/manage-assets.md#uploading-assets)。
 
-## 設定Dynamic Media Classic(Scene7){#configuring-dynamic-media-classic-scene}
+## 配置動態媒體經典{#configuring-dynamic-media-classic-scene}
 
-若要讓全景影像檢視器在AEM中正常運作，您必須將全景影像檢視器預設集與Dynamic Media Classic(Scene7)和Dynamic Media Classic(Scene7)特定中繼資料同步化，如此檢視器預設集就會在JCR中更新。 若要完成此作業，請依下列方式設定Dynamic Media Classic(Scene7):
+若要讓全景影像檢視器在AEM中正常運作，您必須將全景影像檢視器預設集與Dynamic Media Classic和Dynamic Media Classic特定中繼資料同步化，如此檢視器預設集就會在JCR中更新。 若要完成此作業，請依下列方式設定Dynamic Media Classic:
 
-1. [請針對每個公司帳戶登入您的Dynamic Media Classic(Scene7)](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 例項。
+1. [請登入每個公司帳戶的動](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 態媒體類別例項。
 
 1. 在頁面的右上角附近，按一下「設定」>「應用程式設定」>「發佈設定」>「影像伺服器」。****
 1. 在「影像伺服器發佈」頁面上，從頂端附近的&#x200B;**[!UICONTROL 發佈內容]**&#x200B;下拉式選單中，選取「影像伺服」。]****[!UICONTROL 
@@ -51,7 +51,7 @@ ht-degree: 0%
 1. 在相同的「影像伺服器發佈」頁面上，找到標題&#x200B;**[!UICONTROL 請求屬性。]**
 1. 在「請求屬性」標題下，找到「回覆影像大小限制」。**** 然後，在相關的「寬度」和「高度」欄位中，增加全景影像的最大允許影像大小。
 
-   Dynamic Media Classic(Scene7)的像素上限為25,000,000像素。 寬高比為2:1的影像允許的最大大小為7000 x 3500。 不過，對於一般的桌上型電腦螢幕，4096 x 2048像素就足夠了。
+   Dynamic Media Classic的限制為25,000,000像素。 寬高比為2:1的影像允許的最大大小為7000 x 3500。 不過，對於一般的桌上型電腦螢幕，4096 x 2048像素就足夠了。
 
    >[!NOTE]
    >
@@ -72,11 +72,11 @@ ht-degree: 0%
 
 如果您將影像放入WCM的Panoramic Media元件中，而元件預留位置已收合，您可能會想要疑難排解下列問題：
 
-* 如果您遇到403 Forbidden錯誤，可能是由於要求的影像大小過大所致。 檢閱[設定動態媒體經典(Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)中的&#x200B;**[!UICONTROL 回覆影像大小限制]**&#x200B;設定。
+* 如果您遇到403 Forbidden錯誤，可能是由於要求的影像大小過大所致。 查看[配置動態媒體經典](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)中的&#x200B;**[!UICONTROL 回覆影像大小限制]**&#x200B;設定。
 
 * 對於頁面上顯示的資產上的「無效鎖定」或「剖析錯誤」，請勾選「請求模糊化模式」和「請求鎖定模式」，以確保它們已停用。
 * 對於受污染的畫布錯誤，請為影像資產的先前請求設定規則集定義檔案路徑並使CTN無效。
-* 如果影像要求的大小超過支援的限制，影像品質變得非常低，請檢查「**[!UICONTROL JPEG編碼屬性>品質]**」設定是否不是空的。 **[!UICONTROL Quality]**&#x200B;欄位的典型設定為`95`。 您可以在「影像伺服器發佈」頁面上找到設定。 若要存取頁面，請參閱[設定動態媒體經典(Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)。
+* 如果影像要求的大小超過支援的限制，影像品質變得非常低，請檢查「**[!UICONTROL JPEG編碼屬性>品質]**」設定是否不是空的。 **[!UICONTROL Quality]**&#x200B;欄位的典型設定為`95`。 您可以在「影像伺服器發佈」頁面上找到設定。 若要存取頁面，請參閱[設定動態媒體經典](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)。
 
 ## 預覽全景影像{#previewing-panoramic-images}
 
