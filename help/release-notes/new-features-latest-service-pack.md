@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 55ef8af25887a59d9d13275645c1ec20f0c49380
+source-git-commit: 1c633e87d773f864c65320d3ce658f61271d086d
 workflow-type: tm+mt
 source-wordcount: '2807'
 ht-degree: 1%
@@ -347,7 +347,7 @@ Experience Manager Forms包含下列協助工具增強功能：
 
 * [WKND參考網站- 0.0.6](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-0.0.6)
 
-* [Experience Manager畫面：功能套件202008](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202008.html)
+* [Experience Manager畫面：功能套件202011](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202011.html)
 
 * [Adobe Asset Link v2.2](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)
 
