@@ -1,22 +1,18 @@
 ---
-source-git-commit: f5719bed6d55aa3775d873e85e23b4de60c8de03
+source-git-commit: 107ad4d7f875d27d392212f5fb8ca9b39aae3857
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '170'
-ht-degree: 3%
+source-wordcount: '84'
+ht-degree: 0%
 
 ---
 # Adobe Experience Manager 6.5檔案
-
-| EXL-PR | EXL | 預覽 | 啟動 | 已發佈 | 說明 |
-|--- |--- |--- |--- |--- |--- |
-| [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_pr-exl/lastBuild/) | [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_exl/lastBuild/lastBuild) | [預覽URL](https://experienceleague.corp.adobe.com/docs/experience-manager-65/authoring/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [即時URL](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=en) | [Authoring 指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 這是Adobe Experience Manager 6.5檔案的儲存庫。 本檔案涵蓋安裝、管理、編寫使用以及如何自訂AEM。
 
 歡迎您對本檔案的貢獻。 請參閱下列資源：
 
-* [compiting.md](contributing.md) ，以取得如何對說明檔案貢獻的概觀。
-* [guidelines.md](guidelines.md) ，以取得對稿件的預期內容，以及如何編寫檔案稿件的概觀。
-* [行為准則](code-of-conduct.md) .md如需您對本檔案專案所做貢獻時，我們預期的行為標準概觀。
+* [compiting.](contributing.md) md有關如何對文檔進行貢獻的概述。
+* [guidelines.](guidelines.md) md有關稿件中預期內容以及如何編寫檔案稿件的概述。
+* [行為准則。](code-of-conduct.md) md有關我們在您參與本檔案專案時預期的行為標準的概述。
 
