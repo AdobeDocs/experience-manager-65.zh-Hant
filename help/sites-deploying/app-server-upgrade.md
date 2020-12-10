@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1876d8d6-bffa-4a1c-99c0-f6001acea825
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+source-git-commit: f696b1081f14ba379cde51a3542a5b1b5f9668e2
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -23,37 +23,27 @@ ht-degree: 0%
 
 本節說明更新AEM for Application Server安裝所需遵循的程式。
 
-此程式中的所有範例都使用JBoss做為應用程式伺服器，並暗示您已部署AEM的工作版本。 此程式旨在記錄從&#x200B;**AEM 5.6版到6.3**&#x200B;執行的升級。
+此程式中的所有範例都使用Tomcat做為應用程式伺服器，暗示您已部署AEM的工作版本。 此程式旨在記錄從&#x200B;**AEM 6.4版到6.5**&#x200B;執行的升級。
 
-1. 首先，啟動JBoss。 在大多數情況下，您可以通過運行`standalone.sh`啟動指令碼，從終端機運行以下命令來執行此操作：
-
-   ```shell
-   jboss-install-folder/bin/standalone.sh
-   ```
-
-1. 如果已部署AEM 5.6，請執行下列動作，檢查組合是否運作正常：
+1. 首先，啟動TomCat。 在大多數情況下，您可以通過從終端運行以下命令來運行`./catalina.sh`啟動指令碼：
 
    ```shell
-   wget https://<serveraddress:port>/cq/system/console/bundles
+   $CATALINA_HOME/bin/catalina.sh start
    ```
 
-1. 接著，取消部署AEM 5.6:
+1. 如果已部署AEM 6.4，請存取：
 
    ```shell
-   rm jboss-install-folder/standalone/deployments/cq.war
+   https://<serveraddress:port>/cq/system/console/bundles
    ```
 
-1. 停止JBoss。
+1. 接著，取消部署AEM 6.4。這可從TomCat App Manager(`http://serveraddress:serverport/manager/html`)完成
 
-1. 現在，使用crx2oak移轉工具移轉儲存庫：
+1. 現在，請使用crx2oak移轉工具移轉儲存庫。 若要這麼做，請從[這個位置](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak)下載最新版crx2oak。
 
    ```shell
-   java -jar crx2oak.jar crx-quickstart/repository/ crx-quickstart/oak-repository
+   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
    ```
-
-   >[!NOTE]
-   >
-   >在此示例中，oak-repository是新轉換的儲存庫將駐留的臨時目錄。 在執行此步驟之前，請確定您有最新的crx2oak.jar版本。
 
 1. 請執行下列動作，刪除sling.properties檔案中的必要屬性：
 
@@ -84,59 +74,41 @@ ht-degree: 0%
 
    * **BootstrapCommandFile_timestamp.txt檔案**:`rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
-1. 將新移轉的區段儲存區複製至其適當位置：
+   * 執行以下動作以移除&#x200B;**sling.options.file**:`find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
 
-   ```shell
-   mv crx-quickstart/oak-repository/segmentstore crx-quickstart/repository/segmentstore
-   ```
-
-1. 也複製資料儲存：
-
-   ```shell
-   mv crx-quickstart/repository/repository/datastore crx-quickstart/repository/datastore
-   ```
-
-1. 接下來，您需要建立包含將與新升級實例一起使用的OSGi配置的資料夾。 更具體地說，需要在&#x200B;**crx-quickstart**&#x200B;下建立名為install的資料夾。
-
-1. 現在，請建立將與AEM 6.3搭配使用的節點儲存區和資料儲存區。通過在&#x200B;**crx-quickstart\install**&#x200B;下建立兩個名稱為以下檔案，可以執行此操作：
+1. 現在，請建立將與AEM 6.5搭配使用的節點儲存區和資料儲存區。您可以通過在`crx-quickstart\install`下建立兩個具有以下名稱的檔案來執行此操作：
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
-
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
 
    這兩個檔案將設定AEM使用TarMK節點儲存區和檔案資料儲存區。
 
 1. 編輯配置檔案以使其可供使用。 更具體地說：
 
-   * 將下列行新增至&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**:\
-      `customBlobStore=true`
+   * 將以下行添加到`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`:
 
-   * 然後，將下列行新增至&#x200B;**org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**:
+      ```customBlobStore=true```
+
+   * 然後，將以下行添加到`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`:
 
       ```
       path=./crx-quickstart/repository/datastore
-       minRecordLength=4096
+      minRecordLength=4096
       ```
 
-1. 執行下列動作以移除crx2執行模式：
+1. 您現在需要變更AEM 6.5 war檔案中的執行模式。 為此，請先建立暫存檔案夾，以容納AEM 6.5戰爭。 此示例中資料夾的名稱為`temp`。 複製war檔案後，從temp資料夾內運行以提取其內容：
 
-   ```shell
-   find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf {} \
+   ```
+   jar xvf aem-quickstart-6.5.0.war
    ```
 
-1. 您現在需要變更AEM 6.3 war檔案中的執行模式。 為此，請先建立暫存檔案夾，以容納AEM 6.3戰爭。 此示例中資料夾的名稱為&#x200B;**temp**。 複製war檔案後，從temp資料夾內運行以提取其內容：
+1. 提取內容後，移至&#x200B;**WEB-INF**&#x200B;資料夾並編輯web.xml檔案以變更執行模式。 要查找它們在XML中設定的位置，請查找`sling.run.modes`字串。 找到後，請變更下一行程式碼中的執行模式，依預設會設為編寫：
 
-   ```shell
-   jar xvf aem-quickstart-6.3.0.war
-   ```
-
-1. 提取內容後，轉至&#x200B;**WEB-INF**&#x200B;資料夾並編輯`web.xml`檔案以更改運行模式。 要查找它們在XML中設定的位置，請查找`sling.run.modes`字串。 找到後，請變更下一行程式碼中的執行模式，依預設會設為編寫：
-
-   ```shell
+   ```bash
    <param-value >author</param-value>
    ```
 
-1. 將上述作者值變更，並將執行模式設為：author,crx3,crx3tar程式碼的最後區塊應如下所示：
+1. 將上述作者值變更，並將執行模式設為：`author,crx3,crx3tar`。 最後一個程式碼區塊應如下所示：
 
    ```
    <init-param>
@@ -149,13 +121,8 @@ ht-degree: 0%
 
 1. 使用已修改的內容重新建立jar:
 
-   ```shell
-   jar cvf aem62.war
+   ```bash
+   jar cvf aem65.war
    ```
 
-1. 最後，部署新的war檔案：
-
-   ```shell
-   cp temp/aem62.war jboss-install-folder/standalone/deployments/aem61.war
-   ```
-
+1. 最後，在TomCat中部署新的戰爭檔案。
