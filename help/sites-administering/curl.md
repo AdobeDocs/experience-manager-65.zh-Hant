@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 translation-type: tm+mt
-source-git-commit: 4eb5f1c4aa6631d2570279eb1d4bf17a928e3b9f
+source-git-commit: f8abdd7ed0212d5ee0602e2573c184203f22d4a4
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '889'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 管理員通常需要自動化或簡化任何系統中的一般工作。 例如，在AEM中，管理使用者、安裝套件和管理OSGi搭售是通常必須完成的工作。
 
-由於AEM所建立之Sling架構具有REST風格，因此大部分的工作都可簡化為URL呼叫。 cURL可用來執行此類URL呼叫，而且對AEM管理員而言也是有用的工具。
+由於AEM所建立之Sling架構具有REST風格，因此大部分工作都可以透過URL呼叫完成。 cURL可用來執行此類URL呼叫，而且對AEM管理員而言也是有用的工具。
 
 ## 什麼是cURL {#what-is-curl}
 
@@ -206,7 +206,7 @@ curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http:/
 #### 刪除用戶{#delete-a-user}
 
 ```shell
-curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser
 ```
 
 #### 刪除組{#delete-a-group}
