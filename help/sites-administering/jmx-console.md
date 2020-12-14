@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+source-git-commit: 97c93a95cd7fe63b306d80fe127388a209b727c7
 workflow-type: tm+mt
-source-wordcount: '4989'
+source-wordcount: '4974'
 ht-degree: 1%
 
 ---
@@ -803,10 +803,7 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 
 引數:
 
-* p1:代表要顯示的消息的`String`值。 下圖顯示調用p1值`this is a log message`的`log`的結果。
-
-![launcheruilog](assets/launcheruilog.png)
-
+* p1:代表要顯示的消息的`String`值。
 * 傳回值：nown
 
 **startupFinished**
@@ -821,12 +818,8 @@ JMX Console可讓您監控和管理CRX伺服器上的服務。 以下各節概�
 設定伺服器啟動進程的完成值。 「快速啟動」(QuickStart)窗口上的進度條表示完成值。
 
 * 引數:
-
    * p1:浮點值，以分數表示啟動程式完成的程度。 值應介於零和一之間。 例如，0.3表示完成30%。
-
 * 傳回值：沒有。
-
-![launcherprogress](assets/launcherprogress.png)
 
 ## 第三方服務{#third-party-services}
 
