@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 9%
@@ -44,15 +44,15 @@ ht-degree: 9%
 
 首次放置在社群網站頁面時，元件的顯示方式如下：
 
-![chlimage_1-8](assets/chlimage_1-8.png)
+![領導者](assets/leaderboard.png)
 
 ### 配置Leaderboard {#configuring-leaderboard}
 
 選擇要訪問的已放置的`Leaderboard`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
-![chlimage_1-9](assets/chlimage_1-9.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-10](assets/chlimage_1-10.png)
+![配置排行榜](assets/configure-leaderboard.png)
 
 #### 「設定」頁籤{#settings-tab}
 
@@ -120,7 +120,7 @@ Leaderboard元件配置：
    * 徽章規則 = `/libs/settings/community/badging/rules//reference-badging`
    * 顯示限制 = `10`
 
-![chlimage_1-11](assets/chlimage_1-11.png)
+![參與者領導委員會](assets/participants-leaderboard.png)
 
 ### 範例：專家排行榜{#example-experts-leaderboard}
 
@@ -143,7 +143,7 @@ Leaderboard元件配置：
    * 徽章規則 = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 顯示限制 = `10`
 
-![chlimage_1-12](assets/chlimage_1-12.png)
+![專家領導委員會](assets/experts-leaderboard.png)
 
 ### 其他資訊 {#additional-information}
 
