@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 3133f712be1380ae98e18e63c9598d760d2e7595
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 6%
@@ -35,7 +35,7 @@ ht-degree: 6%
 
 * 導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 社群]** > **[!UICONTROL 社群功能]**」。
 
-![chlimage_1-379](assets/chlimage_1-379.png)
+![社區功能](assets/community-functions.png)
 
 ## 預建函式{#pre-built-functions}
 
