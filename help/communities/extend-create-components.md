@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 418e7fad2d990f1a7cb3b69ab4c290ca1b7075ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -72,7 +72,7 @@ ht-degree: 1%
 1. 選擇&#x200B;**[!UICONTROL Delete]**
 1. 選擇&#x200B;**[!UICONTROL 全部保存]**
 
-![chlimage_1-70](assets/chlimage_1-70.png)
+![create-component](assets/create-component.png)
 
 ### 建立子注釋元件{#create-the-child-comment-component}
 
@@ -83,7 +83,7 @@ ht-degree: 1%
 1. 導航至`/apps/custom/components/comments`節點
 1. 按一下右鍵節點
 
-   * 選擇**[!UICONTROL 建立] > **[!UICONTROL 元件……]**
+   * 選擇&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 元件……]**
 
       * **標籤**: *評論*
       * **標題**: *替代注釋*
@@ -102,9 +102,9 @@ ht-degree: 1%
 1. 選擇&#x200B;**[!UICONTROL Delete]**
 1. 選擇&#x200B;**[!UICONTROL 全部保存]**
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![create-child-component](assets/create-child-component.png)
 
-![chlimage_1-72](assets/chlimage_1-72.png)
+![create-component-crxde](assets/create-component-crxde.png)
 
 ### 複製和修改預設HBS指令碼{#copy-and-modify-the-default-hbs-scripts}
 
@@ -168,7 +168,7 @@ ht-degree: 1%
 * 輸入&#39;customcommentsystem.js&#39;作為`js.txt`的內容
 * 選擇&#x200B;**[!UICONTROL 全部保存]**
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![comments-clientlibs](assets/comments-clientlibs.png)
 
 ## 註冊SCF型號並查看{#register-the-scf-model-view}
 
@@ -200,9 +200,9 @@ ht-degree: 1%
 
 為了在發佈環境中體驗擴展元件，需要複製自定義元件。
 
-一種方法是
+一種方法是：
 
-* 從全域導覽
+* 從全域導覽，
 
    * 選擇&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 複製]**
    * 選擇&#x200B;**[!UICONTROL 激活樹]**
