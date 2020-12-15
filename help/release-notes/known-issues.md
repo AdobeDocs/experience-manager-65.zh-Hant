@@ -2,10 +2,10 @@
 title: 已知問題
 description: Adobe Experience Manager 6.5已知問題的發行說明
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: f72101dadaa8d5d12f2f9a636548b18386b79b0a
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 4%
+source-wordcount: '593'
+ht-degree: 3%
 
 ---
 
@@ -80,3 +80,4 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
    此屬性可讓執行時期資料夾下的用戶端程式庫存取Proxy。 (CQ-4268679)
 
 * 當AEM Forms啟動時，會出現`SAX Security Manager could not be setup`警告。
+* 當您在執行Adobe Acrobat Reader 20.10.00版的Apple iOS或iPadOS上開啟受AEM Forms Document Security保護的PDF時。
