@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 4%
@@ -51,15 +51,15 @@ ht-degree: 4%
 
 當包含[必要的用戶端程式庫](essentials-featured.md#essentials-for-client-side)時，`Featured Content`元件的顯示方式如下：
 
-![chlimage_1-13](assets/chlimage_1-13.png)
+![功能內容](assets/featuredcontent.png)
 
 ## 設定精選內容{#configuring-featured-content}
 
 選擇要訪問的已放置的`Featured Content`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
-![chlimage_1-14](assets/chlimage_1-14.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-15](assets/chlimage_1-15.png)
+![功能內容1](assets/featuredcontent1.png)
 
 ### 「設定」頁籤{#settings-tab}
 
@@ -83,13 +83,13 @@ ht-degree: 4%
 
 協調者檢視張貼的內容時，可存取內容內容協調標幟，其中包含新的`Feature`標幟。
 
-![chlimage_1-16](assets/chlimage_1-16.png)
+![網站——訪客——體驗](assets/site-visitor-experience.png)
 
 標籤為功能後，模型標幟就會變成`Unfeature`。
 
 包含`Featured Content`元件的頁面現在會包含此貼文。
 
-![chlimage_1-17](assets/chlimage_1-17.png)
+![site-visitor-experience1](assets/site-visitor-experience1.png)
 
 `Read More` 是實際貼文的連結。
 
