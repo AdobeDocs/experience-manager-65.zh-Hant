@@ -2,9 +2,9 @@
 title: 建立和同步即時副本
 description: 瞭解如何建立及同步即時副本。
 translation-type: tm+mt
-source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
+source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
 workflow-type: tm+mt
-source-wordcount: '4115'
+source-wordcount: '4114'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Blueprint設定可識別您要用作一或多個即時副本頁面來源的現�
 1. [導](/help/sites-authoring/basic-handling.md#global-navigation) 覽至「工 **** 具」選單，然後選取「工 **** 具」選單。
 1. 選擇&#x200B;**Blueprints**&#x200B;以開啟&#x200B;**Blueprint Configurations**&#x200B;控制台：
 
-   ![chlimage_1-209](assets/chlimage_1-209.png)
+   ![chlimage_1-209](assets/blueprint-configurations.png)
 
 1. 選擇 **建立**。
 1. 選擇藍圖模板，然後選擇&#x200B;**Next**&#x200B;繼續。
@@ -66,14 +66,12 @@ Blueprint設定可識別您要用作一或多個即時副本頁面來源的現�
 1. [導](/help/sites-authoring/basic-handling.md#global-navigation) 覽至「工 **** 具」選單，然後選取「工 **** 具」選單。
 1. 選擇&#x200B;**Blueprints**&#x200B;以開啟&#x200B;**Blueprint Configurations**&#x200B;控制台：
 
-   ![chlimage_1-210](assets/chlimage_1-210.png)
+   ![chlimage_1-210](assets/blueprint-configurations.png)
 
 1. 選擇所需的Blueprint配置——工具欄中將提供相應的操作：
 
    * **屬性**;您可以使用它來查看，然後編輯配置的屬性。
    * **刪除**
-
-   ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## 建立即時副本{#creating-a-live-copy}
 
@@ -154,7 +152,7 @@ Blueprint設定可識別您要用作一或多個即時副本頁面來源的現�
 1. 在&#x200B;**Sites**&#x200B;控制台中，從下拉式選擇器中選擇&#x200B;**Create**，然後選擇&#x200B;**Site**。
 1. 選擇要用作即時副本源的Blueprint配置，然後繼續&#x200B;**Next**:
 
-   ![chlimage_1-216](assets/chlimage_1-216.png)
+   ![chlimage_1-216](assets/blueprint-configuration-select.png)
 
 1. 使用&#x200B;**初始語言**&#x200B;選擇器指定藍圖網站用於即時副本的語言。
 
