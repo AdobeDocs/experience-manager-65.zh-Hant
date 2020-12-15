@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
+source-git-commit: 0e1ac02879ff09ab0e78d043450ef7114c868417
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 1%
@@ -222,7 +222,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 因此，必須&#x200B;**編輯所有次要發佈實例的配置** ，以取消選中&#x200B;**`Primary Publisher`**&#x200B;複選框。
 
-![chlimage_1-411](assets/chlimage_1-411.png)
+![primary-publisher](assets/primary-publisher.png)
 
 對於發佈群中的所有其他（次要）發佈例項：
 
@@ -266,11 +266,11 @@ MySQL連接器必須單獨獲得和安裝。
 
 #### 預設代理（發佈）{#default-agent-publish}
 
-![chlimage_1-412](assets/chlimage_1-412.png)
+![default-agent-publish](assets/default-agent-publish.png)
 
 #### 反向複製代理（發佈反向）{#reverse-replication-agent-publish-reverse}
 
-![chlimage_1-413](assets/chlimage_1-413.png)
+![反向複製代理](assets/reverse-replication-agent.png)
 
 ### 作者{#tunnel-service-on-author}上的隧道服務
 
@@ -293,7 +293,7 @@ MySQL連接器必須單獨獲得和安裝。
 * 選中&#x200B;**enable**&#x200B;框
 * 選擇&#x200B;**保存**
 
-   ![chlimage_1-414](assets/chlimage_1-414.png)
+   ![隧道服務](assets/tunnel-service.png)
 
 ### 複製加密密鑰{#replicate-the-crypto-key}
 
@@ -353,7 +353,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 
 * [刷新Granite加密包](#refresh-the-granite-crypto-bundle)
 
-   ![chlimage_1-415](assets/chlimage_1-415.png)
+   ![replicare-repository](assets/replicare-repository.png)
 
 #### 刷新Granite加密包{#refresh-the-granite-crypto-bundle}
 
@@ -364,7 +364,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 * 找到`Adobe Granite Crypto Support`組合(com.adobe.granite.crypto)
 * 選擇&#x200B;**刷新**
 
-   ![chlimage_1-416](assets/chlimage_1-416.png)
+   ![花崗石密碼](assets/granite-crypto.png)
 
 * 片刻後，應出現&#x200B;**Success**對話方塊：
    `Operation completed successfully.`
