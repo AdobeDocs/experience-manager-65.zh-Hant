@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 
 當MySQL工作台首次啟動時（除非已用於其他用途），它將不顯示任何連接：
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![mysqlconnection](assets/mysqlconnection.png)
 
 ### 新的連接設定{#new-connection-settings}
 
@@ -105,13 +105,13 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 
 #### 新建社區連接{#new-communities-connection}
 
-![chlimage_1-105](assets/chlimage_1-105.png)
+![社群連線](assets/community-connection.png)
 
 ## 資料庫設定{#database-setup}
 
 開啟Communities連接以安裝資料庫。
 
-![chlimage_1-105](assets/chlimage_1-106.png)
+![install-database](assets/install-database.png)
 
 ### 獲取SQL指令碼{#obtain-the-sql-script}
 
@@ -124,9 +124,9 @@ SQL指令碼是從AEM資料庫取得：
 1. 選擇/libs/social/config/datastore/dsrp/schema資料夾
 1. 下載 `init-schema.sql`
 
-   ![chlimage_1-107](assets/chlimage_1-107.png)
+   ![database-schema-crxde](assets/database-schema-crxde.png)
 
-下載架構的方法之一是
+下載架構的方法之一是：
 
 * 為sql檔案選擇`jcr:content`節點
 * 請注意，`jcr:data`屬性的值是檢視連結
@@ -143,10 +143,10 @@ SQL指令碼是從AEM資料庫取得：
 
 在MySQL工作台中
 
-* 從「檔案」下拉菜單
-* 選擇下載的`init_schema.sql`
+* 從「檔案」下拉菜單中，選擇&#x200B;**[!UICONTROL 開啟SQL指令碼]**&#x200B;選項
+* 選擇下載的`init_schema.sql`指令碼
 
-![chlimage_1-108](assets/chlimage_1-108.png)
+![select-sql-script](assets/select-sql-script.png)
 
 #### 步驟2:執行SQL指令碼{#step-execute-sql-script}
 
@@ -154,13 +154,13 @@ SQL指令碼是從AEM資料庫取得：
 
 在以下映像中，`init_schema.sql`檔案已準備好執行：
 
-![chlimage_1-189](assets/chlimage_1-109.png)
+![execute-sql-script](assets/execute-sql-script.png)
 
 #### 重新整理 {#refresh}
 
 執行指令碼後，必須刷新`Navigator`的`SCHEMAS`部分，才能查看新資料庫。 使用「方案」右側的刷新表徵圖：
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![refresh-schema](assets/refresh-schema.png)
 
 ## 配置JDBC連接{#configure-jdbc-connection}
 
@@ -179,7 +179,7 @@ SQL指令碼是從AEM資料庫取得：
 * 找到`Day Commons JDBC Connections Pool`
 * 選擇`+`表徵圖以建立新的連接配置。
 
-   ![chlimage_1-111](assets/chlimage_1-111.png)
+   ![configure-jdbc-connection](assets/configure-jdbc-connection.png)
 
 * 輸入下列值：
 
