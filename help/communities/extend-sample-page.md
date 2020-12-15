@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a5040371-3bc2-43bc-a103-7175c4c6252d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: d38395b8f845686492a26329bb732a41f79c85c4
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 請注意，「注釋」需要三個用戶端程式庫，才能正常顯示和運作。 這些必須包含在引用擴展注釋的地方，以及[擴展注釋的客戶端庫](/help/communities/extend-create-components.md#create-a-client-library-folder)(`apps.custom.comments`)。
 
-![chlimage_1-47](assets/chlimage_1-47.png)
+![comments-component1](assets/comments-component1.png)
 
 ### 將自訂注釋新增至頁面{#add-custom-comments-to-a-page}
 
@@ -45,17 +45,17 @@ ht-degree: 0%
 
 #### 範例頁面{#comments-clientlibs-on-sample-page}上的注釋Clientlibs
 
-![chlimage_1-48](assets/chlimage_1-48.png)
+![comments-clientlibs-crxde](assets/comments-clientlibs-crxde.png)
 
 #### 作者：範例頁面{#author-alt-comment-on-sample-page}上的替代註解
 
-![chlimage_1-49](assets/chlimage_1-49.png)
+![alt-comment](assets/alt-comment.png)
 
 #### 作者：頁面注釋節點示例{#author-sample-page-comments-node}
 
 通過查看示例頁的注釋節點屬性（位於`/content/sites/sample/en/jcr:content/content/primary/comments`），可以在CRXDE中驗證resourceType。
 
-![chlimage_1-50](assets/chlimage_1-50.png)
+![verify-comment-crxde](assets/verify-comment-crxde.png)
 
 #### 發佈範例頁面{#publish-sample-page}
 
@@ -67,8 +67,8 @@ ht-degree: 0%
 
 以下是aaron.mcdonald@mailinator.com張貼意見：
 
-![chlimage_1-51](assets/chlimage_1-51.png)
+![publish-alt-comment](assets/publish-alt-comment.png)
 
-![chlimage_1-52](assets/chlimage_1-52.png)
+![publish-alt-comment1](assets/publish-alt-comment1.png)
 
 現在看來擴展元件與預設外觀正常工作，是時候修改外觀了。
