@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 1%
@@ -217,7 +217,7 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必須安裝[SCORM
 * 找到`AEM Communities ScormEngine Service`
 * 選取編輯圖示
 
-   ![chlimage_1-337](assets/chlimage_1-337.png)
+   ![捲軸引擎](assets/scrom-engine.png)
 
 * 驗證以下參數值是否與[JDBC Connection](#configurejdbcconnectionspool)配置一致：
    * **[!UICONTROL JDBC連接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` ** ScormEngineDB是SQL指令碼中的預設資料庫名
