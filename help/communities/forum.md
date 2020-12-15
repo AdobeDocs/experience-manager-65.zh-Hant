@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 8%
@@ -49,13 +49,13 @@ ht-degree: 8%
 
 當包含[必要的用戶端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side)時，`Forum`元件的顯示方式如下：
 
-![chlimage_1-60](assets/chlimage_1-60.png)
+![論壇——元件](assets/forum-component.png)
 
 ### 配置論壇{#configuring-a-forum}
 
 選擇要訪問的已放置的`Forum`元件，並選擇`Configure`表徵圖以開啟編輯對話框。
 
-![chlimage_1-61](assets/chlimage_1-61.png)
+![configure-new](assets/configure-new.png)
 
 ![論壇——組態](assets/forum-config.png)
 
