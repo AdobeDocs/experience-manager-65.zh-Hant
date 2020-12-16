@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cbce81a028195d97dba5f9bd154685393d8be180
+source-git-commit: 94a5a8d99d052d7bcf01f237dc2b73157a2f11c2
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 6%
@@ -294,7 +294,7 @@ ht-degree: 6%
 
 新增至範本時，會開啟下列對話方塊，指定範本的預設標題和URL名稱，以及預設顯示設定：
 
-![chlimage_1-388](assets/chlimage_1-388.png)
+![排行榜對話](assets/leaderboard-dialog.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -325,7 +325,7 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 將配置添加到模板時，該配置允許對特權成員進行限制：
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![qna-dialog](assets/qna-dialog.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -353,11 +353,11 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 通過選擇「社區功能」控制台頂部的`Create Community Function`表徵圖，可以建立社區功能。 您可以建立以相同AEM Blueprint為基礎的多個函式，然後以作者編輯模式開啟，進行唯一自訂。
 
-![chlimage_1-390](assets/chlimage_1-390.png)
+![create-community-function](assets/create-community-function.png)
 
 ### 社群功能名稱 {#community-function-name}
 
-![chlimage_1-391](assets/chlimage_1-391.png)
+![function-name](assets/function-name.png)
 
 在「社群功能名稱」面板上，會設定名稱、說明，以及函式是啟用還是停用：
 
@@ -375,7 +375,7 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 ### AEM 藍圖 {#aem-blueprint}
 
-![chlimage_1-392](assets/chlimage_1-392.png)
+![aem-blueprint](assets/aem-blueprint.png)
 
 在`AEM Blueprint`面板上，可以選擇作為社區功能基礎實現的藍圖。
 
@@ -387,13 +387,13 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 ### 縮圖 {#thumbnail}
 
-![chlimage_1-393](assets/chlimage_1-393.png)
+![函式縮圖](assets/funtion-thumbnail.png)
 
 在「縮圖」面板上，影像可上傳以顯示在[社群功能主控台](#community-functions-console)中。
 
 ## 開啟社群功能 {#open-community-function}
 
-![chlimage_1-394](assets/chlimage_1-394.png)
+![open-function](assets/open-function.png)
 
 選擇`Open Community Function`表徵圖可進入作者編輯模式以編寫頁面內容並修改功能元件的配置。
 
@@ -409,6 +409,6 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 ## 編輯社群功能 {#edit-community-function}
 
-![chlimage_1-395](assets/chlimage_1-395.png)
+![edit-function](assets/edit-function.png)
 
 選擇`Edit Community Function`表徵圖，使用與[建立社區函式](#create-community-function)相同的面板來編輯函式的屬性，包括啟用或禁用該函式。
