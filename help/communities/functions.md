@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3133f712be1380ae98e18e63c9598d760d2e7595
+source-git-commit: cbce81a028195d97dba5f9bd154685393d8be180
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 6%
@@ -51,7 +51,7 @@ ht-degree: 6%
 
 #### 設定功能詳細資料 {#configuration-function-details}
 
-![chlimage_1-380](assets/chlimage_1-380.png)
+![title-url-details](assets/title-url-details.png)
 
 * **標題**
 
@@ -70,7 +70,7 @@ ht-degree: 6%
 
 頁面的功能表連結會顯示為：
 
-![chlimage_1-381](assets/chlimage_1-381.png)
+![參與頁面](assets/engage-page.png)
 
 ### 活動資料流功能 {#activity-stream-function}
 
@@ -80,7 +80,7 @@ ht-degree: 6%
 
 #### 設定功能詳細資料 {#configuration-function-details-1}
 
-![chlimage_1-382](assets/chlimage_1-382.png)
+![函式——細節](assets/function-details.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -110,7 +110,7 @@ ht-degree: 6%
 
 新增至範本時，會開啟下列對話方塊：
 
-![chlimage_1-383](assets/chlimage_1-383.png)
+![blog-component](assets/blog-component.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -136,7 +136,7 @@ ht-degree: 6%
 
 新增至範本時，會開啟下列對話方塊：
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![calendar-details](assets/calendar-details.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -201,7 +201,7 @@ ht-degree: 6%
 
 #### 設定功能詳細資料 {#configuration-function-details-2}
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![forum-component1](assets/forum-component1.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -243,7 +243,7 @@ ht-degree: 6%
 
 新增至範本時，會開啟下列對話方塊：
 
-![chlimage_1-386](assets/chlimage_1-386.png)
+![group-template-config](assets/group-template-config.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -266,7 +266,7 @@ ht-degree: 6%
 
 新增至範本時，會開啟下列對話方塊，指定範本的預設標題和URL名稱，以及預設顯示設定：
 
-![chlimage_1-387](assets/chlimage_1-387.png)
+![視函式](assets/ideation-function.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
