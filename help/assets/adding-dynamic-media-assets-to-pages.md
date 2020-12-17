@@ -1,6 +1,6 @@
 ---
 title: 新增動態媒體資產至頁面
-description: 如何在AEM中將Dynamic Media元件新增至頁面
+description: 如何在Adobe Experience Manager中將Dynamic Media元件新增至頁面
 uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '3092'
-ht-degree: 7%
+source-wordcount: '3100'
+ht-degree: 6%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 7%
 
 若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增 **Dynamic Media**、 **Interactive Media**、 **Media**&#x200B;或 **** Video 360全景媒體元件。若要這麼做，請進入「版面」模式並啟用「動態媒體」元件。然後，您可以將這些元件新增至頁面，並新增資產至元件。動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
 
-如果您使用AEM做為WCM，請直接將動態媒體資產新增至頁面。如果您使用協力廠商來處理WCM，請連結 [或](/help/assets/linking-urls-to-yourwebapplication.md)[內嵌資](/help/assets/embed-code.md) 產。如需多方互動網站，請參閱將最佳化 [的影像傳送至多方互動網站](/help/assets/responsive-site.md)。
+如果您使用Adobe Experience Manager做為WCM，則直接將動態媒體資產新增至頁面。 如果您使用協力廠商來處理WCM，請連結 [或](/help/assets/linking-urls-to-yourwebapplication.md)[內嵌資](/help/assets/embed-code.md) 產。如需多方互動網站，請參閱將最佳化 [的影像傳送至多方互動網站](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
->您必須先發佈資產，才能將資產新增至AEM中的頁面。 請參閱[發佈動態媒體資產](/help/assets/publishing-dynamicmedia-assets.md)。
+>您必須先發佈資產，才能將資產新增至Experience Manager中的頁面。 請參閱[發佈動態媒體資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
 ## 新增動態媒體元件至頁面{#adding-a-dynamic-media-component-to-a-page}
 
 將3D媒體、動態媒體、互動式媒體、全景媒體、智慧型裁切視訊或視訊360媒體元件新增至頁面，與將元件新增至任何頁面相同。 以下各節將介紹動態媒體元件。
 
-1. 在AEM中，開啟您要新增動態媒體元件的頁面。
+1. 在Experience Manager中，開啟您要新增動態媒體元件的頁面。
 1. 在頁面左側的面板（您可能需要切換側面板的顯示）中，按一下「元件&#x200B;****」圖示。
 1. 在&#x200B;**[!UICONTROL 元件]**&#x200B;標題下，在下拉式清單中，選擇&#x200B;**[!UICONTROL 動態媒體。]**
 
@@ -59,12 +59,12 @@ ht-degree: 7%
 
 如果沒有可新增至頁面的動態媒體元件，可能表示您必須先啟用要使用的元件。
 
-1. 在AEM中，開啟您要新增動態媒體元件的頁面。
-1. 在工具列的靠近頁面頂端的左側，點選「頁面資訊」圖示，然後從下拉式清單中點選「編輯範本」。]****[!UICONTROL 
+1. 在Experience Manager中，開啟您要新增動態媒體元件的頁面。
+1. 在工具列的靠近頁面頂端的左側，點選「頁面資訊」圖示，然後從下拉式清單中點選「編輯範本」。****
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
-1. 在靠近頁面頂部的工具列右側，從下拉式清單中，點選「結構」。]****[!UICONTROL 
+1. 在靠近頁面頂部的工具列右側，從下拉式清單中，點選「結構」。****
 
    ![政策](/help/assets/assets-dm/structure-mode.png)
 
@@ -109,7 +109,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->這些元件預設不可用，在使用之前必須先透過範本編輯器提供。 [在範本編輯器中提](/help/sites-authoring/templates.md#editing-templates-template-authors)供這些元件後，您就可以像新增其他AEM元件一樣，將元件新增至您的頁面。
+>這些元件預設不可用，在使用之前必須先透過範本編輯器提供。 [在範本編輯器中使](/help/sites-authoring/templates.md#editing-templates-template-authors)用這些元件後，您可以像新增其他Experience Manager元件一樣，將元件新增至頁面。
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
