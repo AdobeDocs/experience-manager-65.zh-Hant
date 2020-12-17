@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: d621a612556f0bea032444c2e07be101868b1905
+source-git-commit: 28fdb57f51a5bd97ce78b626db86f4a59de6f0be
 workflow-type: tm+mt
-source-wordcount: '3371'
+source-wordcount: '3386'
 ht-degree: 0%
 
 ---
@@ -162,10 +162,11 @@ Sling也允許JCR節點以外的項目成為資源，但這是進階功能。
 * 當需要方法(GET、POST)時，會根據HTTP規格（例如jobs.POST.esp）以大寫指定方法（請參閱下面）
 * 支援各種指令碼引擎：
 
-   * `.esp, .ecma`:ECMAScript(JavaScript)頁面（伺服器端執行）
-   * `.jsp`:Java伺服器頁（伺服器端執行）
-   * `.java`:Java Servlet編譯器（伺服器端執行）
-   * `.jst`:JavaScript範本（用戶端執行）
+   * HTL（HTML範本語言- Adobe Experience Manager針對HTML偏好且建議的伺服器端範本系統）:`.html`
+   * ECMAScript(JavaScript)頁面（伺服器端執行）:`.esp, .ecma`
+   * Java伺服器頁（伺服器端執行）:`.jsp`
+   * Java Servlet編譯器（伺服器端執行）:`.java`
+   * JavaScript範本（用戶端執行）:`.jst`
 
 AEM的指定例項支援的指令碼引擎清單列在Felix Management Console(`http://<host>:<port>/system/console/slingscripting`)上。
 
