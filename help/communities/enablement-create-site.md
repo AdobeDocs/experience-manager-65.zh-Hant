@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: e9d5a7acad04d841cbc7d62050163f3de998fab6
 workflow-type: tm+mt
 source-wordcount: '1728'
 ht-degree: 2%
@@ -70,9 +70,9 @@ ht-degree: 2%
 
 （可選）上傳橫幅影像以顯示在網站頁面上。 橫幅會釘在瀏覽器的左邊，位於社群網站標題和功能表（導覽連結）之間。 橫幅高度會裁切為120像素。 橫幅的大小不會調整為適合瀏覽器寬度和120像素高度。
 
-![chlimage_1-449](assets/chlimage_1-449.png)
+![網站品牌推廣1](assets/site-branding1.png)
 
-![chlimage_1](assets/chlimage_1.jpeg)
+![網站品牌推廣2](assets/site-branding2.png)
 
 選擇&#x200B;**Next**。
 
@@ -130,7 +130,7 @@ ht-degree: 2%
 
 接受[協調](/help/communities/sites-console.md#moderation)使用者產生的內容(UGC)的預設全域設定。
 
-![chlimage_1-452](assets/chlimage_1-452.png)
+![協調1](assets/moderation1.png)
 
 #### ANALYTICS {#analytics}
 
@@ -138,7 +138,7 @@ ht-degree: 2%
 
 螢幕擷取中顯示的選項`Communities`是[組態檔案的架構範例。](/help/communities/analytics.md#aem-analytics-framework-configuration)
 
-![chlimage_1-454](assets/chlimage_1-454.png)
+![分析](assets/analytics.png)
 
 #### TRANSLATION {#translation}
 
@@ -147,7 +147,7 @@ ht-degree: 2%
 * 檢查&#x200B;**允許機器翻譯**
 * 使用預設設定
 
-![chlimage_1-456](assets/chlimage_1-456.png)
+![轉換](assets/translation.png)
 
 #### 啟用{#enablement}
 
@@ -163,7 +163,7 @@ ht-degree: 2%
 * **Marketing Cloud組織Id**
 （選用）在啟用報表中包含視訊心率分析時，必 [要的](/help/communities/analytics.md#video-heartbeat-analytics) Adobe Analytics帳戶ID。
 
-![chlimage_1-457](assets/chlimage_1-457.png)
+![啟用](assets/enablement.png)
 
 選擇&#x200B;**Next**。
 
@@ -171,7 +171,7 @@ ht-degree: 2%
 
 選擇&#x200B;**建立。**
 
-![chlimage_1-458](assets/chlimage_1-458.png)
+![預覽](assets/preview.png)
 
 當程式完成時，新站點的資料夾將顯示在「社區」>「站點」控制台中。
 
@@ -218,11 +218,11 @@ ht-degree: 2%
 
 選取「全球」圖示以發佈社群網站。
 
-![chlimage_1-465](assets/chlimage_1-465.png)
+![publish-site](assets/publish-site.png)
 
 會顯示網站已發佈。
 
-![chlimage_1-466](assets/chlimage_1-466.png)
+![site-published](assets/site-published.png)
 
 ## 社群使用者與使用者群組{#community-users-user-groups}
 
@@ -251,7 +251,7 @@ ht-degree: 2%
 
 * 選擇&#x200B;**保存**
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![edit-group-settings](assets/edit-group-settings.png)
 
 ## 發佈{#configurations-on-publish}時的配置
 
@@ -317,13 +317,13 @@ ht-degree: 2%
 >
 >若要停用，只需在`sling:match`屬性值前加上&#39;x&#39; - `xlocalhost.4503/$` —— 和&#x200B;**全部儲存**。
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![change-default-homepage](assets/change-default-homepage.png)
 
 #### 疑難排解：保存映射{#troubleshooting-error-saving-map}時出錯
 
 如果無法保存更改，請確保節點名稱為`localhost.4503`（帶有&#39;dot&#39;分隔符），而不是帶有&#39;冒號&#39;分隔符的`localhost:4503`（因為`localhost`不是有效的命名空間前置詞）。
 
-![chlimage_1-365](assets/chlimage_1-365.png)
+![error-map](assets/error-map.png)
 
 #### 疑難排解：無法重新導向{#troubleshooting-fail-to-redirect}
 
@@ -361,11 +361,11 @@ ht-degree: 2%
 
 * 選擇&#x200B;**保存**。
 
-![chlimage_1-299](assets/chlimage_1-299.png)
+![修改站點結構](assets/modify-site-structure.png)
 
 使用「位置」表徵圖將「目錄」功能移動到「分配」後的第二個位置。
 
-![chlimage_1-300](assets/chlimage_1-300.png)
+![move-catalog-func](assets/move-catalog-func.png)
 
 選擇右上角的&#x200B;**Save**&#x200B;將更改保存到社區站點。
 
