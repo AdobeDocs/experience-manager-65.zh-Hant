@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1449'
 ht-degree: 5%
 
 ---
@@ -46,7 +46,7 @@ AEM包含超過100種動態媒體影像傳送指令，可用來調整和最佳�
 
 影像銳利化是控制網站上影像最複雜的方面，也是常有錯誤發生的地方。 請花點時間，參考下列實用資源，進一步瞭解銳利化和反銳利化遮色片在AEM中的運作方式：
 
-最佳實務白皮書[「在Adobe Scene7 Publishing System和Image Server](/help/assets/assets/s7_sharpening_images.pdf)中銳利化影像」也適用於AEM。
+最佳實務白皮書[「在Adobe Dynamic Media Classic中銳利化影像」也適用於AEM。](/help/assets/assets/sharpening_images.pdf)
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
@@ -72,7 +72,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
       「銳利化影像」的AEM說明主題。
 
-      最佳實務白皮書[在Adobe Scene7 Publishing System和影像伺服器上銳利化影像](/help/assets/assets/s7_sharpening_images.pdf)。
+      最佳實務白皮書[Sharpening images in Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf)。
 
    * AEM也可讓您控制第四個參數：單色(0,1)。 此參數確定是否使用值0將銳利化遮色片分別套用至每個顏色元件，或使用值1將遮色片套用至影像亮度／強度。
 
@@ -124,7 +124,7 @@ jpegSize是一個有用的參數，如果您想要確保影像不會超過特定
 
 在實驗時，您也會發現下列一般建議有助於最佳化工作流程：
 
-* 直接在URL上或使用Scene7 Publishing System的影像調整功能（提供調整作業的即時預覽），即時嘗試並測試不同的參數。
+* 直接在URL上即時嘗試並測試不同的參數。
 * 請記住，您可以將「動態媒體影像伺服」指令群組至影像預設集。 影像預設集基本上是具有自訂預設集名稱（例如`$thumb_low$`和`&product_high$`）的URL命令巨集。 URL路徑中的自訂預設集名稱會呼叫這些預設集。 這些功能可協助您管理網站上不同影像使用模式的命令和品質設定，並縮短URL的整體長度。
 * AEM也提供更進階的方式來調整影像品質，例如在擷取時套用銳利化影像。 若是進階使用案例，若您可以選擇進一步調整和最佳化演算結果，[Adobe專業服務](https://www.adobe.com/experience-cloud/consulting-services.html)可協助您取得自訂見解和最佳實務。
 
