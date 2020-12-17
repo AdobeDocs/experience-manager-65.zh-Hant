@@ -8,9 +8,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
 workflow-type: tm+mt
-source-wordcount: '2760'
+source-wordcount: '2759'
 ht-degree: 11%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 11%
  </tbody>
 </table>
 
-銳利化描述於[銳利化影像](/help/assets/assets/s7_sharpening_images.pdf)。
+銳利化描述於[銳利化影像](/help/assets/assets/sharpening_images.pdf)。
 
 ## 建立動態媒體映像配置檔案{#creating-image-profiles}
 
