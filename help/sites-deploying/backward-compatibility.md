@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c863e438df45fd54c29c1b99114eea07aaeb6162
+source-git-commit: 303841896717448947aa48ece7ae86519a5450d5
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 1%
+source-wordcount: '502'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +63,7 @@ Compatibility Package有兩種模式：**啟用路由**&#x200B;和&#x200B;**禁�
 
 ## 設定方法 {#how-to-set-up}
 
-AEM 6.3相容性套件將可使用此[link](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)處的「套件管理員」，以套件形式安裝。
+AEM 6.3 Compatibility Package可使用Package Manager以套件形式安裝。 您可從「軟體散發」網站下載[AEM 6.3相容性套件。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)
 
 在安裝Compatibility Package後，可以使用OSGI配置中的交換機啟用或禁用路由，如下所示：
 
