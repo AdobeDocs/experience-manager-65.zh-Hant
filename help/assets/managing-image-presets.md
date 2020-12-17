@@ -10,9 +10,9 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
+source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
 workflow-type: tm+mt
-source-wordcount: '3867'
+source-wordcount: '3866'
 ht-degree: 8%
 
 ---
@@ -407,7 +407,7 @@ Dynamic Media整合使用下列指令碼：
     </ul>
     <div>
       銳利化說明於
-     <a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/s7_sharpening_images.pdf">銳利化影像</a>。
+     <a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/sharpening_images.pdf">銳利化影像</a>。
     </div> </td>
   </tr>
   <tr>
