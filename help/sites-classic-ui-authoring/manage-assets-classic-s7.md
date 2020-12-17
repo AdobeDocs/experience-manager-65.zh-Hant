@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 81707b4d57f7f15106459b91f95b1bc6ec333bf4
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3250'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [Adobe Scene7是](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) 一套代管解決方案，可管理、增強、發佈和提供多媒體資產至網路、行動裝置、電子郵件和網際網路連線的顯示和列印。
 
-您可以在各種檢視器中檢視發佈於Scene7的AEM資產：
+您可以在各種檢視器中檢視Scene7中發佈的Experience Manager資產：
 
 * 縮放
 * 飛出
@@ -31,13 +31,13 @@ ht-degree: 0%
 * 影像範本
 * 影像
 
-您可以直接從AEM發佈數位資產至Scene7，也可以從Scene7發佈數位資產至AEM。
+您可以直接從Experience Manager發佈數位資產至Scene7，也可以從Scene7發佈數位資產至Experience Manager。
 
-本檔案說明如何將數位資產從AEM發佈至Scene7，反之亦然。 檢視器也會有詳細說明。 如需設定Scene7適用的AEM的詳細資訊，請參閱[整合Scene7與AEM](/help/sites-administering/scene7.md)。
+本檔案說明如何將數位資產從Experience Manager發佈至Scene7，反之亦然。 檢視器也會有詳細說明。 如需設定Experience Manager for Scene7的詳細資訊，請參閱[整合Scene7與Experience Manager](/help/sites-administering/scene7.md)。
 
 另請參閱[添加映像映射](/help/assets/image-maps.md)。
 
-如需搭配AEM使用視訊元件的詳細資訊，請參閱下列：
+如需搭配Experience Manager使用視訊元件的詳細資訊，請參閱下列：
 
 * [影片](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)
 
@@ -51,14 +51,14 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM以非同步方式發佈至Scene7。 按一下&#x200B;**Publish**&#x200B;後，您的資產可能需要數秒鐘才能發佈至Scene7。
+>Experience Manager以非同步方式發佈至Scene7。 按一下&#x200B;**Publish**&#x200B;後，您的資產可能需要數秒鐘才能發佈至Scene7。
 
 
 ### 從Assets主控台{#publishing-from-the-assets-console}發佈
 
 若要在資產位於Scene7目標資料夾時，從「資產」主控台發佈至Scene7:
 
-1. 在AEM傳統UI中，按一下「數位資產」**以存取數位資產管理員。**
+1. 在Experience Manager傳統UI中，按一下「數位資產」**以存取數位資產管理員。**
 
 1. 從您要發佈至Scene7的目標資料夾中選取資產（或資產）或資料夾，然後按一下滑鼠右鍵，然後選取「發佈至Scene7」**。**&#x200B;或者，您也可以從&#x200B;**工具選單**&#x200B;選擇「發佈至Scene7 **」。**
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 若要直接從數位資產發佈至Scene7:
 
-1. 在AEM中，按一下「數位資產」**以存取數位資產管理員。**
+1. 在Experience Manager中，按一下「數位資產」以存取數位資產管理員。****
 
 1. 按兩下以開啟資產。
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果資產未正確發佈至Scene7，連結會變更為&#x200B;**Publishing Failed**。 如果資產已發佈至Scene7，連結會顯示「重新發佈至Scene7」**。**&#x200B;重新發佈可讓您在AEM中變更資產，然後重新發佈。
+   >如果資產未正確發佈至Scene7，連結會變更為&#x200B;**Publishing Failed**。 如果資產已發佈至Scene7，連結會顯示「重新發佈至Scene7」**。**&#x200B;重新發佈可讓您在Experience Manager中變更資產，然後重新發佈。
 
 ### 從CQ Target資料夾{#publishing-assets-from-outside-the-cq-target-folder}外部發佈資產
 
@@ -106,7 +106,7 @@ Adobe建議您僅從Scene7目標資料夾中的資產，將資產發佈至Scene7
 
 要發佈駐留在CQ目標資料夾以外的資產：
 
-1. 在傳統UI的AEM中，按一下「**網站**」，並導覽至您要新增數位資產至尚未發佈至Scene7的網頁。 （套用一般頁面繼承規則）。
+1. 在傳統UI的Experience Manager中，按一下「**網站**」，並導覽至您要新增數位資產至尚未發佈至Scene7的網頁。 （套用一般頁面繼承規則）。
 
 1. 在sidekick中，按一下&#x200B;**Page**&#x200B;圖示，然後按一下&#x200B;**Page Properties**。
 
@@ -124,7 +124,7 @@ Adobe建議您僅從Scene7目標資料夾中的資產，將資產發佈至Scene7
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
-1. 按一下「檢查Scene7出版物狀態&#x200B;**」。**&#x200B;如果資產未發佈，AEM會將資產發佈至Scene7。 上傳資產後，資產就會位於臨機資料夾中。 依預設，臨機資料夾位於&#x200B;**name_of_the_company/CQ5_adhoc**&#x200B;中。 如果需要，您可以[配置此選項。](#configuringtheadhocfolder)
+1. 按一下「檢查Scene7出版物狀態&#x200B;**」。**&#x200B;如果資產未發佈，Experience Manager會將資產發佈至Scene7。 上傳資產後，資產就會位於臨機資料夾中。 依預設，臨機資料夾位於&#x200B;**name_of_the_company/CQ5_adhoc**&#x200B;中。 如果需要，您可以[配置此選項。](#configuringtheadhocfolder)
 
    >[!NOTE]
    >
@@ -132,7 +132,7 @@ Adobe建議您僅從Scene7目標資料夾中的資產，將資產發佈至Scene7
 
 ## Scene7元件{#scene-components}
 
-AEM提供下列Scene7元件：
+Experience Manager中提供下列Scene7元件：
 
 * 縮放
 * 彈出（縮放）
@@ -144,7 +144,7 @@ AEM提供下列Scene7元件：
 >
 >這些元件預設不可用，在使用之前必須在設計模式中選取。
 
-在「設計」模式中提供元件後，您就可以像其他AEM元件一樣，將元件新增至您的頁面。 尚未發佈至Scene7的資產會發佈至Scene7（如果位於同步化資料夾、頁面或Scene7雲端設定）。
+在「設計」模式中使用這些元件後，您可以像其他任何Experience Manager元件一樣，將元件新增至頁面。 尚未發佈至Scene7的資產會發佈至Scene7（如果位於同步化資料夾、頁面或Scene7雲端設定）。
 
 >[!NOTE]
 >
@@ -162,7 +162,7 @@ AEM提供下列Scene7元件：
 
 若要將Scene7元件／檢視器新增至傳統UI中的頁面：
 
-1. 在AEM中，開啟您要新增Scene7元件的頁面。
+1. 在Experience Manager中，開啟您要新增Scene7元件的頁面。
 
 1. 如果沒有可用的Scene7元件，請按一下側點中的尺標以進入&#x200B;**Design**&#x200B;模式，按一下「編輯&#x200B;**parsys」，然後選取所有** Scene7 **元件以使其可用。**
 
@@ -180,7 +180,7 @@ AEM提供下列Scene7元件：
 
 若要在傳統UI中將互動式檢視體驗新增至互動式網站：
 
-1. 登入AEM，並確定您已設定[ Adobe Scene7 Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)，且Scene7元件已可供使用。
+1. 登入Experience Manager，並確定您已設定[ Adobe Scene7 Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)，且Scene7元件已可供使用。
 
    >[!NOTE]
    >
@@ -227,7 +227,7 @@ AEM提供下列Scene7元件：
 
 ### 影像 {#image}
 
-Scene7 Image元件可讓您將Scene7功能新增至影像，例如Scene7修飾元、影像或檢視器預設集，以及銳利化。 Scene7影像元件類似於AEM中具有特殊Scene7功能的其他影像元件。 在此範例中，影像已套用Scene7 URL修飾元&#x200B;**&amp;op_invert=1**。
+Scene7 Image元件可讓您將Scene7功能新增至影像，例如Scene7修飾元、影像或檢視器預設集，以及銳利化。 Scene7影像元件類似於Experience Manager中具有特殊Scene7功能的其他影像元件。 在此範例中，影像已套用Scene7 URL修飾元&#x200B;**&amp;op_invert=1**。
 
 ![](do-not-localize/chlimage_1-4.png)
 
@@ -253,7 +253,7 @@ Scene7 Image元件可讓您將Scene7功能新增至影像，例如Scene7修飾�
 
 ### 影像範本 {#image-template}
 
-[Scene7 Image ](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) Template是分層的Photoshop內容，已匯入Scene7，內容和屬性會因可變性而參數化。**Image template**&#x200B;元件可讓您在AEM中匯入影像並動態變更文字。 此外，您還可以設定&#x200B;**影像範本**&#x200B;元件，使用用戶端內容的值，讓每位使用者以個人化方式體驗影像。
+[Scene7 Image ](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) Template是分層的Photoshop內容，已匯入Scene7，內容和屬性會因可變性而參數化。**影像範本**&#x200B;元件可讓您在Experience Manager中匯入影像並動態變更文字。 此外，您還可以設定&#x200B;**影像範本**&#x200B;元件，使用用戶端內容的值，讓每位使用者以個人化方式體驗影像。
 
 按一下&#x200B;**編輯**&#x200B;配置元件。 您可以設定所有Scene7元件的共用[設定，以及本節所述的其他設定。](/help/sites-administering/scene7.md#settingscommontoallscene7components)
 
@@ -327,15 +327,15 @@ Adobe DAM和WCM會顯示是否上傳主要來源視訊。 它們不會顯示下�
 
 ## Scene7內容瀏覽器{#scene-content-browser}
 
-Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存取內容瀏覽器，請在「內容搜尋器」中，選取觸控最佳化使用者介面中的&#x200B;**Scene7**，或是傳統使用者介面中的&#x200B;**S7**&#x200B;圖示。 這兩個使用者介面的功能完全相同。
+Scene7內容瀏覽器可讓您直接在Experience Manager中檢視Scene7的內容。 若要存取內容瀏覽器，請在「內容搜尋器」中，選取觸控最佳化使用者介面中的&#x200B;**Scene7**，或是傳統使用者介面中的&#x200B;**S7**&#x200B;圖示。 這兩個使用者介面的功能完全相同。
 
-如果您有多個設定，AEM依預設會顯示[預設設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)。 您可以直接在Scene7內容瀏覽器中的下拉式選單中選取不同的設定。
+如果您有多種設定，Experience Manager預設會顯示[預設設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)。 您可以直接在Scene7內容瀏覽器中的下拉式選單中選取不同的設定。
 
 >[!NOTE]
 >
 >* 位於臨機資料夾的資產不會出現在Scene7內容瀏覽器中。
 >* 當[啟用「保全預覽」](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)時，Scene7上已發佈和未發佈的資產都會出現在Scene7內容瀏覽器中。
->* 如果您在內容瀏覽器中未將&#x200B;**Scene7**&#x200B;或&#x200B;**S7**&#x200B;圖示視為選項，您需要[設定Scene7以搭配AEM](/help/sites-administering/scene7.md)運作。
+>* 如果內容瀏覽器中未將&#x200B;**Scene7**&#x200B;或&#x200B;**S7**&#x200B;圖示視為選項，您需要[設定Scene7以搭配Experience Manager](/help/sites-administering/scene7.md)運作。
 >* 對於視訊，Scene7內容瀏覽器支援：
    >   * 最適化視訊集：容器，以便在多個螢幕上順暢播放所需的所有視訊轉譯
    >   * 單一MP4視訊
@@ -368,7 +368,7 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 
 ### 使用內容瀏覽器{#searching-for-scene-assets-with-the-content-browser}搜尋Scene7資產
 
-搜尋Scene7資產與搜尋AEM資產類似，但搜尋時，您實際看到的是Scene7系統中資產的遠端檢視，而非直接將資產匯入AEM。
+搜尋Scene7資產與搜尋Experience Manager資產類似，但搜尋時，您實際看到的是Scene7系統中資產的遠端檢視，而不是直接將資產匯入Experience Manager。
 
 您可以使用傳統UI或觸控最佳化UI來檢視和搜尋資產。 視介面而定，您的搜尋方式略有不同。
 
@@ -380,9 +380,9 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 
 **資料夾/** 路徑所顯示的資料夾的名稱取決於您選擇的配置。您可以按一下資料夾圖示並選取子資料夾，然後按一下核取標籤以選取，以深入檢視下層。
 
-如果您輸入關鍵字並選擇資料夾，AEM會搜尋該資料夾和任何子資料夾。 不過，如果您在搜尋時未輸入任何關鍵字，選取檔案夾將只會顯示該檔案夾中的資產，且不會包含任何子檔案夾。
+如果您輸入關鍵字並選擇資料夾，Experience Manager會搜尋該資料夾和任何子資料夾。 不過，如果您在搜尋時未輸入任何關鍵字，選取檔案夾將只會顯示該檔案夾中的資產，且不會包含任何子檔案夾。
 
-依預設，AEM會搜尋選取的檔案夾和所有子檔案夾。
+依預設，Experience Manager會搜尋選取的檔案夾和所有子檔案夾。
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -394,7 +394,7 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**資產** 類型在Scene7瀏覽器中，您可以篩選結果以包含下列任一項：影像、範本、視訊和最適化視訊集。如果您未選取任何資產類型，AEM依預設會搜尋所有資產類型。
+**資產** 類型在Scene7瀏覽器中，您可以篩選結果以包含下列任一項：影像、範本、視訊和最適化視訊集。如果您未選取任何資產類型，Experience Manager預設會搜尋所有資產類型。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -404,10 +404,10 @@ Scene7內容瀏覽器可讓您直接在AEM中檢視Scene7的內容。 若要存�
    >
    >
 * 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅*.mp4）和編碼轉譯。
-* 在搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，AEM不會搜尋子資料夾。
+* 在搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您未新增關鍵字，Experience Manager不會搜尋子資料夾。
 
 
 
-**發佈** 狀態您可以根據發佈狀態篩選資產：未發佈或已發佈。如果您未選取任何「發佈狀態」,AEM依預設會搜尋所有發佈狀態。
+**發佈** 狀態您可以根據發佈狀態篩選資產：未發佈或已發佈。如果您未選取任何「發佈狀態」,Experience Manager依預設會搜尋所有發佈狀態。
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
