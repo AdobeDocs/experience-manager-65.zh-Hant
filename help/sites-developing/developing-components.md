@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
 workflow-type: tm+mt
-source-wordcount: '3452'
+source-wordcount: '3533'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
 
 >[!NOTE]
 >
->[內容片段元件](/help/sites-developing/customizing-content-fragments.md)也可以自訂和擴充，不過必須考慮完整結構以及與Assets的關係。
+>[內容片段元件](/help/sites-developing/customizing-content-fragments.md)也可以自訂和擴充，不過必須考慮完整結構以及與資產的關係。
 
 ### 自定義現有元件對話框{#customizing-a-existing-component-dialog}
 
@@ -287,6 +287,14 @@ newComponent (cq:Component)
 在具有ExtJS的傳統UI中，通常在內容結構中有指定Widget的監聽器。 在觸控式UI中達到相同的效果與JS接聽程式碼（或任何程式碼）在內容中不再定義不同。
 
 內容結構描述了語義結構；它不應（必須）暗示基礎介面工具集的性質。 如果內容結構中沒有JS程式碼，您就可以變更實作詳細資訊，而不需變更內容結構。 換言之，您可以變更介面工具集資料庫，而不需觸碰內容結構。
+
+#### 檢測對話框的可用性{#dialog-ready}
+
+如果您有自訂JavaScript，而且只有在對話方塊可用且準備就緒時才需要執行，則應監聽`dialog-ready`事件。
+
+每當對話方塊載入（或重新載入）並準備使用時，就會觸發此事件，這表示每當對話方塊的DOM中有變更（建立／更新）時。
+
+`dialog-ready` 可用來在JavaScript自訂程式碼中掛接，以對對話方塊內的欄位或類似工作執行自訂。
 
 ### 欄位驗證{#field-validation}
 
