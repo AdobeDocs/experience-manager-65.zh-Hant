@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f63e13486792f9975c84202b2cd3ddcf618ce0fc
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '11812'
+source-wordcount: '11277'
 ht-degree: 6%
 
 ---
@@ -927,7 +927,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 * 若是YouTube發佈工作，請執行下列動作：
 
 1. 在AEM中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型」。]**
-1. 在「工作流程模型」頁面上，選取「發佈至YouTube」，然後點選工具列上的「編輯」。
+1. 在「工作流程模型」頁面上，選取「發佈至YouTube」，然後點選工具列上的「編輯」。**[!UICONTROL ****]**
 1. 在「發佈至YouTube」工作流程頁面的右上角，點選「編輯」。]****[!UICONTROL 
 1. 將滑鼠指標暫留在「YouTube上傳」元件上，然後點選一次以顯示內嵌工具列。
 
@@ -1001,66 +1001,67 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 在列出熱門發佈影片的表格中，點選影片名稱以播放影片，並檢視影片的觀眾保留（下拉式）報表。
 
-### 根據您使用Scene7 HMTL5檢視器SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}建立的視訊檢視器來檢視視訊報表
+<!-- OBSOLETE CONTENT ### Viewing video reports based on a video viewer that you created using the Scene7 HMTL5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-如果您使用動態媒體提供的現成可用的視訊檢視器，或是您根據現成可用的視訊檢視器建立自訂的檢視器預設集，則不需執行其他步驟即可檢視視訊報表。 不過，如果您已根據Scene7 HTML5檢視器SDK建立自己的視訊檢視器，請使用下列步驟來確保您的視訊檢視器將追蹤事件傳送至動態媒體視訊報表。
+If you are using an out-of-box video viewer provided by Dynamic Media, or if you created a custom viewer preset based off of an out-of-box video viewer, then no additional steps are required to view video reports. However, if you have created your own video viewer based off the Scene7 HTML5 Viewer SDK, then use the following steps to ensure the your video viewer is sending tracking events to Dynamic Media Video Reports.
 
-使用「動態媒體檢視器參考」和Scene7 HTML5檢視器SDK來建立您自己的視訊檢視器。
+Use the Dynamic Media Viewers Reference and the Scene7 HTML5 Viewers SDK to create your own video viewers.
 
-請參閱[動態媒體檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
+See [Dynamic Media Viewers Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). -->
 
-<!-- Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
+<!-- OBSOLETE CONTENT Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
 See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-若要根據您使用Scene7 HTML5檢視器SDK建立的視訊檢視器來檢視視訊報表：
+<!-- OBSOLETE CONTENT To view Video Reports based on a video viewer that you created using the Scene7 HTML5 Viewer SDK:
 
-1. 導覽至任何已發佈的視訊資產。
-1. 在資產頁面的左上角附近，從下拉式清單中選取「檢視器」。]****[!UICONTROL 
-1. 選取任何視訊檢視器預設集並複製內嵌代碼。
-1. 在內嵌代碼中，尋找包含下列項目的行：
+1. Navigate to any published video asset.
+1. Near the upper-left corner of the asset's page, from the drop-down list, select **[!UICONTROL Viewers.]**
+1. Select any video viewer preset and copy the embed code.
+1. In the embed code, find the line with the following:
 
    `videoViewer.setParam("config2", "<value>");`
 
-   `config2`參數可在HTML5檢視器中啟用追蹤。 此預設集也是公司專屬的預設集，包含視訊報告和客戶專屬Adobe Analytics組態的組態資訊。
+   The `config2` parameter enables tracking in HTML5 Viewers. It is also a company-specific preset that contains the configuration information for Video Reporting, and for customer-specific Adobe Analytics configurations.
 
-   在**內嵌程式碼**和copy **URL **函式中都可找到config2參數的正確值。 在複製**URL **命令的URL中，要查找的參數為`&config2=<value>`。 值幾乎總是 `companypreset`會出現，但在某些情況下 `companypreset-1`, `companypreset-2`它也可以是、等等。
+   The correct value for the config2 parameter is found in both the **Embed Code **and in the copy **URL **function. In the URL from the copy **URL **command, the parameter to look for is `&config2=<value>` . The value is almost always `companypreset`, but in some instances it can also be `companypreset-1`, `companypreset-2`, and so forth.
 
-1. 在您的自訂視訊檢視器程式碼中，執行下列動作，將AppMeasurementBridge .jsp新增至檢視器頁面：
+1. In your custom video viewer code, add AppMeasurementBridge .jsp to the viewer page by doing the following:
 
-   * 首先，確定您是否需要`&preset`參數。
-如果`config2`參數為`companypreset`，則您不需要*need `&preset=parameter`。
-如果`config2`是其他任何值，請將預設參數設為與`config2`參數相同。 例如，如果`config2=companypreset-2`，請將`&param2=companypreset-2`新增至AppMeasurmentBridge.jsp URL。
+    * First, determine if you need the `&preset` parameter.
+      If the `config2` parameter is `companypreset`, you do *not *need `&preset=parameter`.
+      If `config2` is anything else, set the preset parameter the same as the `config2` parameter. For example, if `config2=companypreset-2`, add `&param2=companypreset-2` to the AppMeasurmentBridge.jsp URL.
 
-   * 然後，新增AppMeasurementBridge.jsp指令碼：
+    * Then, add the AppMeasurementBridge.jsp script:
       `<script language="javascript" type="text/javascript" src="https://s7d1.scene7.com/s7viewers/AppMeasurementBridge.jsp?company=robindallas&preset=companypreset-2"></script>`
 
-1. 執行下列動作，以建立TrackingManager元件：
+1. Create the TrackingManager component by doing the following:
 
-   * 呼叫`s7sdk.Utils.init();`後，新增下列項目以建立TrackingManager例項以追蹤事件：
+    * After calling `s7sdk.Utils.init();` create a TrackingManager instance to track events by adding the following:
       `var trackingManager = new s7sdk.TrackingManager();`
 
-   * 執行下列動作，將元件連接至TrackingManager:
-在`s7sdk.Event.SDK_READY`事件處理常式中，將您要追蹤的元件附加至TrackingManager。
-例如，如果元件為`videoPlayer`，請新增
+    * Connect components to TrackingManager by doing the following:
+      In the `s7sdk.Event.SDK_READY` event handler, attach the component you want to track to the TrackingManager.
+      For example, if the component is `videoPlayer`, add
       `trackingManager.attach(videoPlayer);`
-將元件附加至trackingManager。若要追蹤頁面上的多個檢視器，請使用多個追蹤管理器元件。
+      to attach the component to the trackingManager. To track multiple viewers on a page, use multiple tracking mangaer components.
 
-   * 新增下列項目，以建立AppMeasurementBridge物件：
+    * Create the AppMeasurementBridge object by adding the following:
 
       ```
       var appMeasurementBridge = new AppMeasurementBridge(); appMeasurementBridge.setVideoPlayer(videoPlayer);
       ```
 
-   * 新增下列功能以新增追蹤函式：
+    * Add the tracking function by adding the following:
 
       ```
       trackingManager.setCallback(appMeasurementBridge.track,
        appMeasurementBridge);
       ```
-   appMeasurementBridge物件具有內建的追蹤函式。 不過，您可以提供自己的功能來支援多個追蹤系統或其他功能。
 
-   如需詳細資訊，請參閱&#x200B;*Scene7 HTML5檢視器SDK使用指南*&#x200B;中的&#x200B;*使用TrackingManager元件*，可從[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)下載。
+   The appMeasurementBridge object has a built-in track function. However, you can provide your own to support multiple tracking systems or other functionality.
+
+   For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ## 新增字幕至視訊{#adding-captions-to-video}
 
@@ -1074,7 +1075,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
 
 Dynamic Media可將標題檔案轉換為JSON（JavaScript物件註解）格式。 此轉換表示您可將JSON文字內嵌至網頁，做為視訊的隱藏但完整記錄。 然後搜尋引擎可以搜尋並索引內容，讓影片更容易被發現，並提供客戶有關視訊內容的其他詳細資訊。
 
-如需在URL中使用JSON函式的詳細資訊，請參閱&#x200B;*Scene7 Image Serving API說明*&#x200B;中的[伺服靜態（非影像）內容](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html)。
+如需在URL中使用JSON函式的詳細資訊，請參閱&#x200B;*動態媒體影像伺服與轉譯API說明*&#x200B;中的[伺服靜態（非影像）內容](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api)。
 
 若要在視訊中新增標題或字幕：
 
@@ -1115,7 +1116,7 @@ Dynamic Media可將標題檔案轉換為JSON（JavaScript物件註解）格式�
 
       請注意標題路徑結尾的`,1`。 緊接在路徑中的。vtt副檔名後，您可以選擇分別設定為`,1`或`,0`，以啟用（開啟）或停用（關閉）視訊播放器列上的隱藏字幕按鈕。
 
-   * 如需內嵌的視訊檢視器體驗，請點選「**[!UICONTROL 內嵌代碼」。]** 在「內嵌代碼」對話方塊中，選取內嵌代碼並將其複製至剪貼簿，然後將代碼貼入簡單的文字編輯器中。以下列語法附加複製的內嵌代碼：
+   * 如需內嵌的視訊檢視器體驗，請點選「**[!UICONTROL 內嵌代碼」。]** 在「內嵌代碼」對話方塊中，選取內嵌代碼並將它複製至剪貼簿，然後將代碼貼入簡單的文字編輯器。以下列語法附加複製的內嵌代碼：
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -1129,7 +1130,7 @@ Dynamic Media可將標題檔案轉換為JSON（JavaScript物件註解）格式�
 >
 >使用的視訊播放器必須支援章節標籤的使用。 動態媒體視訊播放器確實支援章節標籤，但使用協力廠商視訊播放器可能不支援。
 
-視需要，您可以建立自訂的視訊檢視器並加上章節，而不是使用視訊檢視器預設集。 有關使用章節導覽建立您自己的HTML5檢視器的指示，請參閱「Adobe Scene7 Viewer SDK for HTML5」指南中`s7sdk.video.VideoPlayer`和`s7sdk.video.VideoScrubber`類別下的「使用修飾詞自訂行為」標題。 Adobe Scene7 Viewer SDK可從[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)下載。
+<!-- OBSOLETE CONTENT If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 您建立視訊的章節清單的方式與建立標題的方式大致相同。 即，建立WebVTT檔案。 但是，請注意，此檔案必須與您也可能使用的任何WebVTT標題檔案分開；您無法將標題和章節結合為一個WebVTT檔案。
 
