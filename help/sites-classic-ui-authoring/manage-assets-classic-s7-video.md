@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1735'
 ht-degree: 1%
 
 ---
@@ -138,7 +138,7 @@ Dynamic Media Classic視訊元件僅適用於Dynamic Media Classic視訊。 基�
 | 方法 | HTML5的第一種方式。 Flash僅用於非HTML5後援。 | 大部份的桌上型電腦都可使用Flash。 HTML5適用於行動裝置和平板電腦。 |
 | 傳送 | 漸進式 | 最適化串流 |
 | 追蹤 | 是 | 是 |
-| 擴充性 | 是 | 是（使用Dynamic Media Classic檢視器SDK） |
+| 擴充性 | 是 | 否 |
 | 行動視訊 | 是 | 是 |
 
 ### 設定{#setting-up}
@@ -154,7 +154,7 @@ Dynamic Media Classic視訊元件僅適用於Dynamic Media Classic視訊。 基�
 1. 在AEM中，前往&#x200B;**[!UICONTROL Tools]**，然後選取「Configuration Console」（設定主控台）。**** 在「設定控制台」中，導覽至導 **[!UICONTROL 覽樹狀]** 結構中 **[!UICONTROL 的「工]** 具>資產 **[!UICONTROL >]** 視訊分析」。
 1. 建立新的Dynamic Media Classic視訊設定檔。 在&#x200B;**[!UICONTROL 新……]**&#x200B;功能表，選取「建立頁面」，然後選取「動態媒體經典視訊設定檔」範本。 ]****[!UICONTROL &#x200B;為新視訊設定檔頁面指定名稱，然後按一下「建立」。]****[!UICONTROL 
 
-   ![chlimage_1-133](assets/chlimage_1-133.png)
+   ![chlimage_1-135](assets/chlimage_1-133.png)
 
 1. 編輯新視訊設定檔。 先選取雲端設定。 然後選取與雲端設定中選取的編碼預設集相同。
 
