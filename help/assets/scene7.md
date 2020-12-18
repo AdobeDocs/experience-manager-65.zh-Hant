@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '2862'
+source-wordcount: '2860'
 ht-degree: 0%
 
 ---
@@ -180,7 +180,7 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 **[!UICONTROL 銳利化]** -選擇影像銳利化的方式。銳利化在[影像預設集最佳實務](/help/assets/managing-image-presets.md#image-preset-options)和[銳利化最佳實務](/help/assets/assets/sharpening_images.pdf)中詳細說明。
 
-**[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。這些說明在[影像預設集](/help/assets/managing-image-presets.md)和[命令參考](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中。
+**[!UICONTROL URL修飾元]** -您可以提供額外的Dynamic Media Classic影像指令來變更影像效果。這些說明在[影像預設集](/help/assets/managing-image-presets.md)和[命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中。
 
 **[!UICONTROL 中斷點]** -如果您的網站是互動式的，您需要調整中斷點。中斷點必須以逗號(,)分隔。
 
