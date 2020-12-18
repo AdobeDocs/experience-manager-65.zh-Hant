@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9f22cb618d487a2b02dc17149d11b81a9e9e27be
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '5895'
+source-wordcount: '5891'
 ht-degree: 0%
 
 ---
@@ -203,13 +203,13 @@ AEM WCM和儲存庫的所有存取要求都會在此處註冊。
    * `error.log`
 此處會註冊錯誤消息（嚴重性級別不同）。
 
-   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
 此日誌僅在啟用時 [!DNL Dynamic Media] 使用。它提供用於分析內部ImageServer進程行為的統計和分析資訊。
 
    * `request.log`
 每個存取請求都會在此與回應一起註冊。
 
-   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
 此日誌僅在啟用時 [!DNL Dynamic Media] 使用。s7access日誌記錄對[!DNL Dynamic Media]通過`/is/image`和`/is/content`發出的每個請求。
 
    * `stderr.log`
@@ -620,7 +620,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
   <tr>
    <td>JConsole</td>
    <td>觀察JVM度量和線程。</td>
-   <td><p>用法：jconsole</p> <p>請參閱<a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a>和<a href="#monitoring-performance-using-jconsole">使用JConsole</a>監控效能。</p> <p><strong>注意：</strong> 使用JDK 1.6,JConsole可透過外掛程式進行擴充；例如，Top或TDA（線程轉儲分析器）。</p> </td>
+   <td><p>用法：jconsole</p> <p>請參閱<a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a>和<a href="#monitoring-performance-using-jconsole">使用JConsole</a>監控效能。</p> <p><strong>注意：</strong> 使用JDK 1.6,JConsole可以使用插件進行擴展；例如，Top或TDA（線程轉儲分析器）。</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
