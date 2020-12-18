@@ -2,9 +2,9 @@
 title: 發行說明 [!DNL Adobe Experience Manager Assets] 6.5。
 description: ' [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]的新功能和增強功能。'
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '897'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 3%
 
 [!DNL Dynamic Media] 提供增強的豐富式媒體製作與發佈， [!DNL Experience Manager Assets] 以提供如臨現場且個人化的尖端體驗。透過上傳單一高品質的主資產，並使用我們的進階雲端演算和檢視器，您可以即時提供任何轉譯組合，以支援組織的媒體策略。
 
-有關新[!DNL Dynamic Media]功能的詳細資訊，請參閱[動態媒體發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
+有關新[!DNL Dynamic Media]功能的詳細資訊，請參閱[動態媒體發行說明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
 
 ### 360視訊支援{#video-support}
 
@@ -80,7 +80,7 @@ ht-degree: 3%
 
 ### 協助工具增強功能 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] 檢視器現在支援增強的協助工具功能，例如Aria支援、螢幕閱讀程式和Alt-text。如需詳細資訊，請參閱[動態媒體檢視器發行說明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
+[!DNL Dynamic Media] 檢視器現在支援增強的協助工具功能，例如Aria支援、螢幕閱讀程式和Alt-text。如需詳細資訊，請參閱[動態媒體檢視器發行說明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 ## 搜尋體驗增強功能{#experience-enhancement-for-searching}
 
