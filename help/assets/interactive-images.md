@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '4334'
+source-wordcount: '4330'
 ht-degree: 1%
 
 ---
@@ -376,9 +376,9 @@ Quickview的大多數實施都採用以下模式：
 
 若要針對回應式環境將「裁切」套用至可購買的互動式影像，您可以將「互動式影像」組態屬性`ZoomView.iscommand`加入路徑——其中`ZoomView`是要呼叫的元件，而`iscommand`是您套用的「裁切」影像伺服命令。
 
-請參閱[ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html)組態屬性。
+請參閱[ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html)組態屬性。
 
-請參閱[crop](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html)影像伺服命令。
+請參閱[crop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html)影像伺服命令。
 
 您現在已準備好將互動式影像與網站上現有的Quickview整合。
 
