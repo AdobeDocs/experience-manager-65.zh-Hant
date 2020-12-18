@@ -10,9 +10,9 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '4346'
+source-wordcount: '4265'
 ht-degree: 14%
 
 ---
@@ -22,12 +22,12 @@ ht-degree: 14%
 
 「檢視器預設集」是一組設定，可決定使用者在電腦螢幕和行動裝置上檢視多媒體資產的方式。 如果您是管理員，則可以建立檢視器預設集。 設定適用於檢視器設定選項的陣列。 例如，您可以變更檢視器的顯示大小或縮放行為。
 
-如需建立和自訂您自己HTML5檢視器預設集的指示，請參閱&#x200B;*Adobe Scene7 HTML5檢視器SDK*。 SDK可在內嵌於SDK本身的IS發佈伺服器上使用。 每個資料庫版本都包含其專屬的SDK檔案。
+<!-- OBSOLETE CONTENT  For instructions on creating and customizing your own HTML5 viewer presets, see the *Adobe Scene7 HTML5 Viewer SDK*. The SDK is available on the IS publish server embedded in the SDK itself. Each library version has its own SDK documentation included.
 
-路徑: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
-例如，3.5 SDK:[https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
+Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
+For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html) -->
 
-另請參閱[Adobe檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
+請參閱[動態媒體檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 本節說明如何建立、編輯和管理檢視器預設集。 您可以隨時預覽資產，將檢視器預設套用至資產。 請參閱[套用檢視器預設集](#applying-a-viewer-preset-to-an-asset)。
 
@@ -39,7 +39,7 @@ ht-degree: 14%
 
 所有立即可用的檢視器都支援鍵盤協助功能。
 
-另請參閱[鍵盤存取和導覽](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
+另請參閱[鍵盤存取和導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
 
 ## 管理檢視器預設集{#managing-viewer-presets-1}
 
@@ -158,7 +158,7 @@ ht-degree: 14%
 
 如需檢視器支援網頁瀏覽器和作業系統版本的詳細資訊，請參閱檢視器版本注意事項。
 
-請參閱[檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)目錄中的「檢視器版本注意事項」。
+請參閱[檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)目錄中的「檢視器版本注意事項」。
 
 >[!NOTE]
 >
@@ -438,13 +438,13 @@ AEM會在從&#x200B;**[!UICONTROL 詳細資料檢視>檢視器檢視資產時，
 
       視覺編輯器可讓您查看特定屬性對樣式有何影響。 只要設定或調整任何屬性，即可使用編輯器左側的範例，立即查看它對檢視器有何影響。
 
-      [檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)中的「自訂&#x200B;*`<viewer name>`*&#x200B;檢視器」說明主題中說明每種檢視器預設集的CSS樣式屬性。 例如，如果您要建立類型`Mixed_Media`的檢視器預設集，請參閱[自訂混合媒體檢視器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html)，以取得每個屬性的清單和說明。
+      [檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)中的「自訂&#x200B;*`<viewer name>`*&#x200B;檢視器」說明主題中說明每種檢視器預設集的CSS樣式屬性。 例如，如果您要建立類型`Mixed_Media`的檢視器預設集，請參閱[自訂混合媒體檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html)，以取得每個屬性的清單和說明。
 
    * 如果您已在個別的CSS檔案中定義樣式設定，則可將CSS檔案上傳至AEM Assets。 點選&#x200B;**[!UICONTROL 選取類型]**&#x200B;下方的&#x200B;**[!UICONTROL 匯入CSS]**（您可能需要向上捲動視覺編輯器才能查看），以尋找已上傳的CSS檔案，並將它與檢視器預設集建立關聯。
 
       當您匯入CSS檔案時，視覺編輯器會檢查CSS是否使用正確的檢視器標籤。 例如，如果您要建立縮放檢視器，您匯入的所有CSS規則都必須使用父檢視器元素上定義的檢視器類別名稱`.s7mixedmediaviewer`來定義。
 
-      只要正確定義特定檢視器的CSS標籤，您就可匯入任意手工的CSS。 (CSS標籤在[檢視器參考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)中的「自訂&#x200B;*檢視器名稱>*&#x200B;檢視器」說明主題中有說明。 例如，如果您想要閱讀有關縮放檢視器的CSS標籤，請參閱[自訂縮放檢視器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)。) 但是，視覺編輯器可能不瞭解某些CSS值。 在這種情況下，視覺編輯器會嘗試覆寫錯誤，讓CSS仍能運作。
+      只要正確定義特定檢視器的CSS標籤，您就可匯入任意手工的CSS。 (CSS標籤在[檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)中的「自訂&#x200B;*檢視器名稱>*&#x200B;檢視器」說明主題中有說明。 例如，如果您想要閱讀有關縮放檢視器的CSS標籤，請參閱[自訂縮放檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)。) 但是，視覺編輯器可能不瞭解某些CSS值。 在這種情況下，視覺編輯器會嘗試覆寫錯誤，讓CSS仍能運作。
    >[!NOTE]
    >
    >如果您偏好直接以原始格式編輯CSS，請點選「選取類型」下拉式選單下方的「顯示/隱藏CSS **** 」 (您可能需要向上捲動視覺編輯器才能檢視)。
@@ -460,7 +460,7 @@ AEM會在從&#x200B;**[!UICONTROL 詳細資料檢視>檢視器檢視資產時，
 
    視覺編輯器中的許多元件都有相關的詳細說明。 展開元件以顯示其相關參數時，這些說明會顯示在藍色方塊中。
 
-   有些檢視器類型具有可讓您在「 **[!UICONTROL IS Command」 (IS命令) 文字欄位中指定「Image Serving]** 」 (影像伺服) 命令的元件。如需您可使用的指令清單，請參 [閱影像伺服API參考](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html)。
+   有些檢視器類型具有可讓您在「 **[!UICONTROL IS Command」 (IS命令) 文字欄位中指定「Image Serving]** 」 (影像伺服) 命令的元件。如需您可使用的指令清單，請參 [閱影像伺服API參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html)。
 
    >[!NOTE]
    >
