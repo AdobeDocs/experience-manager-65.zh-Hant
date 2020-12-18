@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 69dbfeab855f70167eead24f3d411df4c82a0050
+source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
 workflow-type: tm+mt
 source-wordcount: '4243'
 ht-degree: 0%
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 * [!DNL Assets] 並提供 [!DNL Dynamic Media] 多種協助工具增強功能。這些增強功能與鍵盤導覽、螢幕閱讀程式的使用，以及讓使用者使用類似的輔助技術(AT)有關。 請參閱[[!DNL Assets] 增強功能](#assets-6570)和[[!DNL Dynamic Media] 增強功能](#dynamic-media-6570)。
 
-* 建立資料模型HTTP用戶端組態以最佳化效能。
+* [建立資料模型HTTP用戶端](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration) 組態以最佳化效能。
 
-* 在「佈局」模式下，每個元件的「重置選項」的可用性
+* [在「配置」模式下，每個組](../../help/forms/using/resize-using-layout-mode.md#resize-components) 件的「重置選項」可用性
 
 * [!DNL Experience Manager] 6.5 Service Pack 7 Forms改善了以下效能：
 
