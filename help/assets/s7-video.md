@@ -8,9 +8,9 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1582'
 ht-degree: 1%
 
 ---
@@ -135,7 +135,7 @@ Scene7視訊元件僅適用於Scene7視訊。 基礎元件可處理從AEM（使�
 | 方法 | HTML5的第一種方式。 Flash僅用於非HTML5後援。 | 大部份的桌上型電腦都可使用Flash。 HTML5適用於行動裝置和平板電腦。 |
 | 傳送 | 漸進式 | 最適化串流 |
 | 追蹤 | 是 | 是 |
-| 擴充性 | 是 | 是（使用Scene7檢視器SDK） |
+| 擴充性 | 是 | 否 |
 | 行動視訊 | 是 | 是 |
 
 ### 設定{#setting-up}
