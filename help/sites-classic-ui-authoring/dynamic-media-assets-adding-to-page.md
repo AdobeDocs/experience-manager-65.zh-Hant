@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1718'
 ht-degree: 2%
 
 ---
@@ -95,7 +95,7 @@ ht-degree: 2%
 
 如果您正在檢視影像集、回轉集或混合媒體集，則此選項不可用。
 
-**[!UICONTROL 影像修飾元]** -您可以提供額外的影像指令來變更影像效果。這些說明在[管理影像預設集](/help/assets/managing-viewer-presets.md)和[命令參考](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中。
+**[!UICONTROL 影像修飾元]** -您可以提供額外的影像指令來變更影像效果。這些說明在[管理影像預設集](/help/assets/managing-viewer-presets.md)和[命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中。
 
 如果您正在檢視影像集、回轉集或混合媒體集，則此選項不可用。
 
@@ -141,7 +141,7 @@ ht-degree: 2%
 
 在AEM 6.2中，當您安裝[FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)時，您可以控制視訊是透過安全SSL連線(HTTPS)還是不安全的連線(HTTP)傳送。 依預設，視訊傳送通訊協定會自動從內嵌網頁的通訊協定繼承。 如果網頁是透過HTTPS載入，視訊也會透過HTTPS傳送。 反之亦然，如果網頁位於HTTP上，則視訊會透過HTTP傳送。 在大多數情況下，此預設行為是正確的，無需進行任何配置更改。 不過，您可以將`VideoPlayer.ssl=on`附加至URL路徑的結尾或內嵌程式碼片段中其他檢視器組態參數的清單，以覆寫此預設行為，以強制安全傳送視訊。
 
-如需有關安全視訊傳送和使用URL路徑中`VideoPlayer.ssl`組態屬性的詳細資訊，請參閱檢視器參考指南中的[安全視訊傳送](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。 除了視訊檢視器外，混合媒體檢視器和互動式視訊檢視器也能提供安全的視訊傳送。
+如需有關安全視訊傳送和使用URL路徑中`VideoPlayer.ssl`組態屬性的詳細資訊，請參閱檢視器參考指南中的[安全視訊傳送](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。 除了視訊檢視器外，混合媒體檢視器和互動式視訊檢視器也能提供安全的視訊傳送。
 
 ### 互動式媒體元件{#interactive-media-component}
 
