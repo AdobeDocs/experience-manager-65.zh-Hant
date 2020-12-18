@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: 283802809d665cd979e2f1a4fa969b6ddc491ed6
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '5487'
+source-wordcount: '5485'
 ht-degree: 0%
 
 ---
@@ -413,7 +413,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
 如果您要將資產從AEM Assets推送至Dynamic Media Classic，您可以自動發佈資產（預設行為），或將資產推送至未發佈狀態的Dynamic Media Classic。
 
-如果您想要在測試環境中測試資產，然後再上線，您可能不想立即在Dynamic Media Classic上發佈資產。 您可以搭配使用AEM和Dynamic Media Classic的Secure Test環境，將資產直接從Assets推送至未發佈狀態的Dynamic Media Classic。
+如果您想在測試環境中測試資產後再上線，則不想立即在Dynamic Media Classic上發佈資產。 您可以搭配使用AEM和Dynamic Media Classic的Secure Test環境，將資產直接從Assets推送至未發佈狀態的Dynamic Media Classic。
 
 Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中發佈資產時，Dynamic Media Classic資產才會上線生產。
 
@@ -571,7 +571,7 @@ Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中�
 
    例如，`psprocess="rasterize"&psresolution=120` 。
 
-   如需您可使用的其他上傳工作參數，請參閱[Adobe Dynamic Media Classic Image Production System API](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-production-api/c-overview.html)。
+   如需您可使用的其他上傳工作參數，請參閱[Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html)。
 
    >[!NOTE]
    >
