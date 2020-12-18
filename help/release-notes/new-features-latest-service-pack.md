@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1c633e87d773f864c65320d3ce658f61271d086d
+source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
@@ -52,11 +52,11 @@ ht-degree: 1%
 
 ### 建立資料模型HTTP用戶端組態以最佳化效能{#fdm-http-client-config}
 
-[!DNL Experience Manager Forms] 當與REST風格的Web服務整合作為資料源時，現在包括HTTP客戶端配置以實現效能優化。
+[!DNL Experience Manager Forms] 當與REST風格的Web服務整合作為資料源時，現在包括HTTP客戶端配置以實現效能優化。請參閱[設定資料來源](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration)。
 
 ### 在「佈局」模式{#reset-option-layout-mode}中，每個元件的「重置選項」可用性
 
-現在，您可以針對最適化表單的「版面」模式中的每個元件使用重設選項。 當您為面板定義多欄版面時，可使用此功能來重設面板中的個別元件。
+現在，您可以針對最適化表單的「版面」模式中的每個元件使用重設選項。 當您為面板定義多欄版面時，可使用此功能來重設面板中的個別元件。 請參閱[使用版面模式來調整元件](../../help/forms/using/resize-using-layout-mode.md#resize-components)的大小。
 
 ## 前[!DNL Experience Manager] 6.5版Service Packs {#key-features-previous-service-packs}中的主要功能
 
