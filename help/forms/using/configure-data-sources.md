@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 19ee2722bc73f67b77cc08dd2a634328ba5269ec
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -138,6 +138,27 @@ REST風格的Web服務可在Swagger定義檔案中使用[Swagger規格](https://
    如果選擇&#x200B;**[!UICONTROL 互相驗證]**&#x200B;作為驗證類型，請參見[基於證書的REST風格和SOAP Web服務](#mutual-authentication)。
 
 1. 點選&#x200B;**[!UICONTROL Create]**&#x200B;以建立REST風格服務的雲端設定。
+
+### 建立資料模型HTTP用戶端組態以最佳化效能{#fdm-http-client-configuration}
+
+[!DNL Experience Manager Forms] 當與REST風格的Web服務整合作為資料源時，將形成資料模型，包括用於效能優化的HTTP客戶端配置。執行以下步驟來配置表單資料模型HTTP客戶端：
+
+1. 以管理員身分登入「[!DNL Experience Manager Forms]作者例項」，並前往「[!DNL Experience Manager]網頁主控台組合」。 預設URL為[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
+
+1. 點選「**[!UICONTROL 表單資料模型Http用戶端設定」以取得REST資料來源]**。
+
+1. 在[!UICONTROL 表單資料模型REST資料源的Http客戶端配置]對話框中：
+
+   * 在&#x200B;**[!UICONTROL 總數]**&#x200B;欄位中的「連接限制」中，指定表單資料模型與REST風格Web服務之間允許的最大連接數。 預設值為20個連接。
+
+   * 在&#x200B;**[!UICONTROL Connection limit on per route basis]**&#x200B;欄位中，指定每條路由允許的最大連接數。 預設值為2個連接。
+
+   * 在&#x200B;**[!UICONTROL Keep alive]**&#x200B;欄位中，指定持續HTTP連線保持有效的持續時間。 預設值為15秒。
+
+   * 在&#x200B;**[!UICONTROL 連接超時]**&#x200B;欄位中，指定[!DNL Experience Manager Forms]伺服器等待連接建立的持續時間。 預設值為10秒。
+
+   * 在&#x200B;**[!UICONTROL 通訊端逾時]**&#x200B;欄位中，指定兩個資料封包之間未活動的最長時段。 預設值為30秒。
+
 
 ## 配置SOAP web services {#configure-soap-web-services}
 
