@@ -1,13 +1,13 @@
 ---
 title: 動態媒體中的協助功能
-description: 瞭解動態媒體和動態媒體檢視器中的協助功能
+description: 瞭解動態媒體和動態媒體檢視器中的協助工具支援
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 所有現成可用的[!DNL Dynamic Media]檢視器元件都支援客戶使用鍵盤的協助功能。
 
-請參閱動態媒體檢視器參考指南中的[鍵盤協助功能和導覽](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
+請參閱動態媒體檢視器參考指南中的[鍵盤協助功能和導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
 
 ## [!DNL Dynamic Media]檢視器{#assistive-technology-support-for-dm-viewers}中的輔助技術支援
 
