@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
+source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
 workflow-type: tm+mt
-source-wordcount: '14804'
+source-wordcount: '14953'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,15 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 * 在瀏覽模式中，NVDA不會對從「類型／大小」菜單選項中選擇的值進行旁白。 視覺焦點不在選取的元素上。 依賴螢幕閱讀程式的使用者無法使用瀏覽模式(CQ-4294993)。
 * 建立網頁時，使用者可以選取[!UICONTROL 內容頁面]範本。 在[!UICONTROL 社交媒體]標籤中，使用者選擇[!UICONTROL 偏好的XF變數]。 若要在NVDA瀏覽模式中選取體驗片段，使用者無法使用鍵盤按鍵(CQ-4292669)。
 * 將車把庫更新為更安全的v4.7.3(NPR-34484)。
+* [!DNL Experience Manager Sites]元件中有多個跨網站指令碼執行個體(NPR-33925)。
+* 建立新資料夾時的資料夾名稱欄位易受儲存的跨站點指令碼攻擊(GRANITE-30094)。
+* [!UICONTROL  Welcome]頁面和路徑完成模板上的搜索結果易受跨站點指令碼攻擊(NPR-33719、NPR-33718)。
+* 在非結構化節點上建立二進位屬性會導致在二進位屬性對話框上執行跨站點指令碼(NPR-33717)。
+* 在CRX DE介面上使用[!UICONTROL 訪問控制測試]選項時跨站點指令碼(NPR-33716)。
+* 當向客戶端發送資訊時，用戶輸入不適當地編碼各種元件(NPR-33695)。
+* Experience Manager收件箱的「日曆」視圖中的跨站點指令碼(NPR-33545)。
+* 以`childrenlist.html`結尾的URL會顯示HTML頁面，而非404回應。 此類URL容易受到跨網站指令碼的攻擊(NPR-33441)。
+
 
 ### [!DNL Assets] {#assets-6560}
 
@@ -281,6 +290,8 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 透過管理控制台新增的社群群組現有使用者會從社群群組主控台中任何修改的使用者清單中移除(NPR-34315)。
 
+* `TagFilterServlet`會洩漏潛在敏感資料(NPR-33868)。
+
 <!--
 * Tag filters are vulnerable to sensitive information disclosure (NPR-33868).
 -->
@@ -329,6 +340,8 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 在提交最適化表單時，使用者可以編輯提交中繼資料，例如`afPath`、`afSubmissionTime`和`signers`。 為瞭解決此問題，會從用戶端的表單提交資料中移除中繼資料值。 使用者可使用`FormSubmitInfo`物件從伺服器擷取這些值(NPR-33654)。
 
+* 當向客戶端發送資訊時，用戶輸入未對[!DNL Forms]元件進行適當編碼(NPR-33611)。
+
 **工作流程**
 
 * 當工作流程批准者上傳附件時，附件會重新命名為`undefined`(NPR-33699)。
@@ -351,7 +364,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 從[!DNL Microsoft Word]檔案複製貼上內容至字母中的文字檔案片段，會造成格式問題(NPR-33536)。
 
-**檔案服務**
+**文件服務**
 
 * 當您使用Output and Forms服務從XDP檔案產生PDF檔案時，會導致遺失和重疊文字(NPR-34237、CQ-4299331)。
 
@@ -455,7 +468,7 @@ Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月&
 
 * 唯讀表單欄位（例如資產[!UICONTROL 屬性]的[!UICONTROL Basic標籤]上停用的欄位）現在可使用鍵盤(NPR-33493, CQ-4273031)加以集中。
 
-* 現在，各種輸入欄位中的標籤都是永久標籤（因此可存取），而不只是預留位置標籤，在輸入文字時就會消失(NPR-33475)。
+* 各種輸入欄位中的標籤現在都是永久標籤（因此可存取），而不只是預留位置標籤，當輸入文字時就會消失(NPR-33475)。
 
 * 不同的標題級別（如頁標題和部分標題）現在被視為螢幕閱讀器用戶具有不同級別的標題(NPR-33471)。
 
@@ -1520,7 +1533,7 @@ Remove one mention of this fix.
 
 **後端整合**
 
-* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29944:CQ-4270777的修補程式
+* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29945:CQ-4270777的修補程式
 * 當[!DNL Experience Manager Forms]安裝在IBM WebSphere上時，基於SOAP建立表單資料模型失敗。 CQ-4251134的修補程式
 * 已針對Microsoft Dynamics內部部署整合啟用Active Directory Federation Services(ADFS)v3.0支援。 CQ-4270586的修補程式
 * 當資料來源的標題變更時，表單資料模型不會顯示更新的標題。 CQ-4265599的修補程式
