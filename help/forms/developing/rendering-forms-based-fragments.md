@@ -1,8 +1,8 @@
 ---
 title: 根據片段呈現表單
 seo-title: 根據片段呈現表單
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服務來轉換以使用Designer建立的片段為基礎的表單。
+seo-description: 使用Forms服務來轉換以使用Designer建立的片段為基礎的表單。
 uuid: 9c9a730d-f970-41f8-afed-4e6b6d3d393d
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
