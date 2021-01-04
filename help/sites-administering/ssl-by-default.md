@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 1. 輸入憑據後，按一下頁面右上角的&#x200B;**Next**。 然後，上傳SSL連線的相關私密金鑰和憑證。
 
-   ![chlimage_1-105](assets/chlimage_1-105.png)
+   ![chlimage_1-106](assets/chlimage_1-105.png)
 
    >[!NOTE]
    >
@@ -160,7 +160,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 ### 生成專用密鑰／證書對以用於嚮導{#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-在下面，您將找到一個示例，用於建立DER格式的自簽名證書，SSL嚮導可以使用該證書。
+在下面，您將找到一個示例，用於建立DER格式的自簽名證書，SSL嚮導可以使用該證書。 根據作業系統安裝OpenSSL、開啟OpenSSL命令提示，並將目錄變更為您要產生私密金鑰／憑證的資料夾。
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 1. 然後，使用私密金鑰產生憑證簽署要求(CSR):
 
    ```shell
-   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj '/CN=localhost'
+   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
 1. 產生SSL憑證並使用私密金鑰加以簽署。 在此範例中，將於一年後到期：
