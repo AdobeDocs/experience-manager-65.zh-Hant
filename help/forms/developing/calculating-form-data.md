@@ -1,8 +1,8 @@
 ---
 title: 計算表單資料
 seo-title: 計算表單資料
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服務計算用戶在表單中輸入的值並顯示結果。 Forms服務使用Java API和Web服務API計算值。
+seo-description: 使用Forms服務計算用戶在表單中輸入的值並顯示結果。 Forms服務使用Java API和Web服務API計算值。
 uuid: ccd85bc7-8ccc-44d9-9424-dfc1f603e688
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '1902'
 ht-degree: 0%
 
 ---
