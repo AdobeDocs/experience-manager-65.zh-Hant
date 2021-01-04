@@ -1,8 +1,8 @@
 ---
 title: 使用REST請求叫用AEM Forms
 seo-title: 使用REST請求叫用AEM Forms
-description: 'null'
-seo-description: 'null'
+description: 使用REST請求調用在Workbench中建立的流程。
+seo-description: 使用REST請求調用在Workbench中建立的流程。
 uuid: 3a19a296-f3fe-4e50-9143-b68aed37f9ef
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2506'
 ht-degree: 0%
 
 ---
@@ -323,4 +323,4 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 如果程式需要PDF檔案作為輸入值，請確定您以PDF格式提交表單，如上圖所示。 此外，若要成功叫用程式，程式必須傳回PDF檔案。 否則，Acrobat無法處理返回值，並會出現錯誤。 您不必指定輸入流程變數的名稱。 例如，*MyApplication/EncryptDocument*&#x200B;程式具有名為`inDoc`的輸入變數。 只要表單已提交為PDF，您就不需要指定inDoc。
 
-您也可以以XML格式將表單資料提交至表單流程，若要提交XML資料，請確定`Submit As`下拉式清單指定XML。 由於程式的返回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
+您也可以以XML格式將表單資料提交至表單流程，若要提交XML資料，請確定`Submit As`下拉式清單指定XML。 由於程式的傳回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
