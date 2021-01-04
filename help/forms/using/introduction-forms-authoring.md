@@ -10,7 +10,7 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a69e0354b5599ab555df650858f8f3200e21d2b8
+source-git-commit: f3b5b22c1d5573492867aef60457413ad5cf419f
 workflow-type: tm+mt
 source-wordcount: '3145'
 ht-degree: 2%
@@ -158,11 +158,11 @@ XML和JSON結構描述組織中後端系統產生或使用資料的結構。您�
    <td>添加一個欄位，其中列出了使用「檔案附件」元件上載的所有附件。</td>
   </tr>
   <tr>
-   <td>頁尾<br /> </td>
+   <td>頁首<br /> </td>
    <td>新增頁首，通常包含公司標誌、表單標題和摘要。<br /> </td>
   </tr>
   <tr>
-   <td>頁首</td>
+   <td>頁尾</td>
    <td>新增頁尾，其中通常包含版權資訊以及其他頁面的連結。 </td>
   </tr>
   <tr>
