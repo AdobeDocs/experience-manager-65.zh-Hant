@@ -1,8 +1,8 @@
 ---
 title: 以程式設計方式組合PDF檔案
 seo-title: 以程式設計方式組合PDF檔案
-description: 'null'
-seo-description: 'null'
+description: 使用Assembler服務API，使用Java API和Web Service API，將多個PDF檔案組合為單一PDF檔案。
+seo-description: 使用Assembler服務API，使用Java API和Web Service API，將多個PDF檔案組合為單一PDF檔案。
 uuid: aa3f8f39-1fbc-48d0-82ff-6caaadf125fc
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2138'
 ht-degree: 0%
 
 ---
