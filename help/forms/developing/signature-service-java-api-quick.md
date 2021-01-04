@@ -1,8 +1,8 @@
 ---
 title: 簽名服務Java API QuickStart(SOAP)
 seo-title: 簽名服務Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用「簽名」服務將簽名欄位新增至PDF檔案、擷取簽名欄位名稱、修改簽名欄位、數位簽署PDF檔案、數位簽署XFA表單、認證PDF檔案、驗證數位簽名、驗證多個數位簽名，以及移除數位簽名。
+seo-description: 使用「簽名」服務將簽名欄位新增至PDF檔案、擷取簽名欄位名稱、修改簽名欄位、數位簽署PDF檔案、數位簽署XFA表單、認證PDF檔案、驗證數位簽名、驗證多個數位簽名，以及移除數位簽名。
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
