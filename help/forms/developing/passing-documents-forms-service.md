@@ -1,8 +1,8 @@
 ---
 title: 將檔案傳送至FormsService
 seo-title: 將檔案傳送至FormsService
-description: 'null'
-seo-description: 'null'
+description: '將包含表單設計的com.adobe.idp.Document物件傳遞至Forms服務。 Forms服務會轉譯位於com.adobe.idp.Document物件中的表單設計。 '
+seo-description: 將包含表單設計的com.adobe.idp.Document物件傳遞至Forms服務。 Forms服務會轉譯位於com.adobe.idp.Document物件中的表單設計。
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
