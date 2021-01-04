@@ -1,8 +1,8 @@
 ---
 title: 使用自訂CSS檔案轉換HTML表格
 seo-title: 使用自訂CSS檔案轉換HTML表格
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服務來參考自訂CSS檔案，以回應來自網頁瀏覽器的HTTP要求來轉換HTML表格。 您可以使用Java API和Web服務API來轉換使用CSS檔案的HTML表格。
+seo-description: 使用Forms服務來參考自訂CSS檔案，以回應來自網頁瀏覽器的HTTP要求來轉換HTML表格。 您可以使用Java API和Web服務API來轉換使用CSS檔案的HTML表格。
 uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: fcbe1d860410e215cb7c438f94579e0b14d262a5
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1640'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
