@@ -1,8 +1,8 @@
 ---
 title: 準備AEM Forms以進行備份
 seo-title: 準備AEM Forms以進行備份
-description: 'null'
-seo-description: 'null'
+description: 瞭解如何使用Backup and Restore服務，使用Java API和Web Service API，進入並離開AEM Forms伺服器的備份模式。
+seo-description: 瞭解如何使用Backup and Restore服務，使用Java API和Web Service API，進入並離開AEM Forms伺服器的備份模式。
 uuid: b8ef2bed-62e2-4000-b55a-30d2fc398a5f
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2484'
+source-wordcount: '2540'
 ht-degree: 0%
 
 ---
