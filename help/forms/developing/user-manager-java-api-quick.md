@@ -1,8 +1,8 @@
 ---
 title: User Manager Java API快速入門(SOAP)
 seo-title: User Manager Java API快速入門(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用User Manager API新增使用者、刪除使用者、建立群組、管理使用者和群組、管理角色和權限、以程式設計方式同步使用者，以及以程式設計方式管理偏好設定節點。
+seo-description: 使用User Manager API新增使用者、刪除使用者、建立群組、管理使用者和群組、管理角色和權限、以程式設計方式同步使用者，以及以程式設計方式管理偏好設定節點。
 uuid: 0a2aa4ab-9329-485f-a30e-47bb471ce1b5
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
