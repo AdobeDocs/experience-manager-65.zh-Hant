@@ -1,8 +1,8 @@
 ---
 title: 升級至AEM 6.5 Communities
 seo-title: 升級至AEM 6.5 Communities
-description: 如何從舊版升級至AEM 6.4 Communities
-seo-description: 如何從舊版升級至AEM 6.4 Communities
+description: 如何從舊版升級至AEM 6.5 Communities
+seo-description: 如何從舊版升級至AEM 6.5 Communities
 uuid: 929c3892-1b3b-46a7-8e70-fa6864125911
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 1%
@@ -109,4 +109,4 @@ ht-degree: 1%
 
 **第2代**:從AEM 5.6.1到AEM 6.1，這是collaband  **** socialcomponents的 **** 混合。AEM 6.0推出新的[社交元件架構](/help/communities/scf.md)(SCF),AEM 6.2推出了[通用UGC商店](/help/communities/working-with-srp.md)，其中UGC是使用[儲存資源提供者](/help/communities/srp.md)(SRP)存取。
 
-**第3代**:從AEM 6.2開始，只有 **** socialcomponents，在SCF中建置為Handlebars(HBS)元件，需要針對UGC選擇SRP。
+**第3代**:從AEM 6.2開始，只有 **** socialcomponents，在SCF中實作為Handlebars(HBS)元件，需要針對UGC選擇SRP。
