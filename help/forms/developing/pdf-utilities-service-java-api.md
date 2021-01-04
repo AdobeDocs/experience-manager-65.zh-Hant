@@ -1,8 +1,8 @@
 ---
 title: PDF公用程式服務Java APIQuick Start(SOAP)
 seo-title: PDF公用程式服務Java APIQuick Start(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用PDF公用程式服務，將PDF檔案轉換為XDP檔案、將XDP檔案轉換為PDF檔案、擷取PDF檔案屬性、設定PDF檔案的儲存樣式，以及淨化PDF檔案。
+seo-description: 使用PDF公用程式服務，將PDF檔案轉換為XDP檔案、將XDP檔案轉換為PDF檔案、擷取PDF檔案屬性、設定PDF檔案的儲存樣式，以及淨化PDF檔案。
 uuid: 96bb2bd5-b274-43d4-a664-49cc1c526b3f
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 4ec4c674-d7d3-4988-9d77-78d274970672
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
