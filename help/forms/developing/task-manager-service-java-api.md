@@ -1,8 +1,8 @@
 ---
 title: 任務管理器服務Java API QuickStart(SOAP)
 seo-title: 任務管理器服務Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用Task Manager服務可以指派任務、鎖定任務、檢索分配給用戶的任務、從任務中檢索表單資料、修改表單資料、檢索檔案附件和檢索任務資訊。
+seo-description: 使用Task Manager服務可以指派任務、鎖定任務、檢索分配給用戶的任務、從任務中檢索表單資料、修改表單資料、檢索檔案附件和檢索任務資訊。
 uuid: fd6fceb1-865e-47a7-83fc-a63dcc2c21de
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
