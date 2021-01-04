@@ -1,8 +1,8 @@
 ---
 title: 數位簽署和認證檔案
 seo-title: 數位簽署和認證檔案
-description: 'null'
-seo-description: 'null'
+description: 使用簽名服務將數位簽名欄位新增及刪除至PDF檔案、擷取PDF檔案中的簽名欄位名稱、修改簽名欄位、數位簽署PDF檔案、認證PDF檔案、驗證PDF檔案中的數位簽名、驗證PDF檔案中的所有數位簽名，以及從簽名欄位移除數位簽名。
+seo-description: 使用簽名服務將數位簽名欄位新增及刪除至PDF檔案、擷取PDF檔案中的簽名欄位名稱、修改簽名欄位、數位簽署PDF檔案、認證PDF檔案、驗證PDF檔案中的數位簽名、驗證PDF檔案中的所有數位簽名，以及從簽名欄位移除數位簽名。
 uuid: 6331de8a-2a9c-45bf-89d2-29f1ad5cc856
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '16977'
+source-wordcount: '17099'
 ht-degree: 0%
 
 ---
@@ -638,7 +638,7 @@ PDF檔案是透過公開金鑰技術簽署。 簽章者有兩個密鑰：公鑰�
 
 **簽署PDF檔案**
 
-在簽署PDF檔案時，您可以設定簽章服務使用的執行時期選項。 您可以設定下列選項：
+簽署PDF檔案時，您可以設定簽章服務使用的執行時期選項。 您可以設定下列選項：
 
 * 外觀選項
 * 撤銷檢查
