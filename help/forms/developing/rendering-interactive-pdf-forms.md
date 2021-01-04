@@ -1,8 +1,8 @@
 ---
 title: 轉換互動式PDF表單
 seo-title: 轉換互動式PDF表單
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服務，將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 您可以使用Forms服務，使用Java API和Web服務API來轉換互動式表單。
+seo-description: 使用Forms服務，將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 您可以使用Forms服務，使用Java API和Web服務API來轉換互動式表單。
 uuid: df2a4dc8-f19e-49de-850f-85a204102631
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2514'
 ht-degree: 0%
 
 ---
