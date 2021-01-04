@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 自AEM Communities 6.1起，已採用獨特的方式來處理網站訪客（成員）從發佈環境提交的使用者產生內容(UGC)。
 
-此方法與AEM平台處理一般由作者環境管理之網站內容的方式有根本不同。
+此方法與AEM平台處理一般由作者環境管理的網站內容的方式有根本不同。
 
 AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AEM Communities則會針對從未複製的UGC使用單一、通用的儲存區。
 
@@ -110,6 +110,6 @@ AEM平台使用節點儲存區，將網站內容從作者複製到發佈，而AE
 
    基本上，網站內容會儲存在節點儲存區中。 對於資產，可將資料儲存區設定為儲存二進位資料。 對於Communities，必須配置公共儲存來選擇SRP。
 
-* [AEM 6.3中的儲存元素](../../help/sites-deploying/storage-elements-in-aem-6.md)
+* [儲存元素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
    介紹兩個節點儲存實施：Tar和MongoDB。
