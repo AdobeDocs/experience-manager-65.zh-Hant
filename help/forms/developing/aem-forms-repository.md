@@ -1,8 +1,8 @@
 ---
 title: 使用AEM Forms Repository
 seo-title: 使用AEM Forms Repository
-description: 'null'
-seo-description: 'null'
+description: 管理AEM Forms儲存庫，以使用Java API和Web Service API建立資料夾、寫入、列出、讀取、更新和搜尋資源。 此外，還要瞭解如何建立資源關係、鎖定和刪除資源。
+seo-description: 管理AEM Forms儲存庫，以使用Java API和Web Service API建立資料夾、寫入、清單、讀取、更新資源及搜尋資源。 此外，還要瞭解如何建立資源關係、鎖定和刪除資源。
 uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '9076'
+source-wordcount: '9143'
 ht-degree: 0%
 
 ---
