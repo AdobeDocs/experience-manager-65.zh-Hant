@@ -1,8 +1,8 @@
 ---
 title: 管理使用者
 seo-title: 管理使用者
-description: 'null'
-seo-description: 'null'
+description: 使用使用者管理API來建立可管理角色、權限和承擔者（可以是使用者或群組）的用戶端應用程式，並驗證使用者。
+seo-description: 使用使用者管理API來建立可管理角色、權限和承擔者（可以是使用者或群組）的用戶端應用程式，並驗證使用者。
 uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '6191'
+source-wordcount: '6243'
 ht-degree: 0%
 
 ---
@@ -870,7 +870,7 @@ ht-degree: 0%
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>用戶端應用程式會要求AEM Forms執行同步作業。</p></td>
   </tr>
   <tr>
@@ -878,7 +878,7 @@ ht-degree: 0%
    <td><p>AEM Forms會執行同步作業。</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>使用者資訊已更新。</p></td>
   </tr>
   <tr>
