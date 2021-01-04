@@ -1,8 +1,8 @@
 ---
 title: 使用原則保護檔案
 seo-title: 使用原則保護檔案
-description: 'null'
-seo-description: 'null'
+description: 使用Document Security服務，動態地將機密設定套用至Adobe PDF檔案，並保有對檔案的控制權。 Document Security服務也讓使用者能夠控制收件者使用受原則保護PDF檔案的方式。
+seo-description: 使用Document Security服務，動態地將機密設定套用至Adobe PDF檔案，並保有對檔案的控制權。 Document Security服務也讓使用者能夠控制收件者使用受原則保護PDF檔案的方式。
 uuid: 6feb69ef-7b61-4d0b-8c87-d65d98bae9b5
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '15466'
+source-wordcount: '15544'
 ht-degree: 0%
 
 ---
