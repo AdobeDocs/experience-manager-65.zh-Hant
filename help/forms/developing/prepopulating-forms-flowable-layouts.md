@@ -1,8 +1,8 @@
 ---
 title: 使用可排程的版面預先填入表單
 seo-title: 使用可排程的版面預先填入表單
-description: 'null'
-seo-description: 'null'
+description: 使用可排列的版面預先填入表單，以使用Java API和Web服務API，在轉譯表單中向使用者顯示資料。
+seo-description: 使用可排列的版面預先填入表單，以使用Java API和Web服務API，在轉譯表單中向使用者顯示資料。
 uuid: 93ccb496-e1c2-4b79-8e89-7a2abfce1537
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '3489'
+source-wordcount: '3533'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>當使用者完成購買項目並按一下「提交」按鈕後，就會建立記憶體中的XML資料來源。 購買的項目和使用者資訊會放入記憶體中的XML資料來源。 </p></td>
+   <td><p>當使用者完成購買項目並按一下「提交」按鈕後，就會建立記憶體中的XML資料來源。 購買的項目和使用者資訊會放入記憶體中的XML資料來源中。 </p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
