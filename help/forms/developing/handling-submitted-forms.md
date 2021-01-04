@@ -1,8 +1,8 @@
 ---
 title: 處理提交的表單
 seo-title: 處理提交的表單
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服務來擷取在互動式表單中輸入的已提交資料。 使用者可以以XML、PDF和URL UTF-16格式提交表單資料。
+seo-description: 使用Forms服務來擷取在互動式表單中輸入的已提交資料。 使用者可以以XML、PDF和URL UTF-16格式提交表單資料。
 uuid: 673b28f1-f023-4da8-a6a0-c5ff921c5f5d
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2921'
 ht-degree: 0%
 
 ---
