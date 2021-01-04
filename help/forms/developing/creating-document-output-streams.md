@@ -1,8 +1,8 @@
 ---
 title: 建立檔案輸出串流
 seo-title: 建立檔案輸出串流
-description: 'null'
-seo-description: 'null'
+description: 使用「輸出」服務將檔案轉換為PDF（包括PDF/A檔案）、PostScript、印表機控制語言(PCL)和Zebra - ZPL、Intermec - IPL、Datamax - DPL和TecToshiba - TPCL標籤格式。
+seo-description: 使用「輸出」服務將檔案轉換為PDF（包括PDF/A檔案）、PostScript、印表機控制語言(PCL)和Zebra - ZPL、Intermec - IPL、Datamax - DPL和TecToshiba - TPCL標籤格式。
 uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '18972'
+source-wordcount: '19030'
 ht-degree: 0%
 
 ---
@@ -1403,7 +1403,7 @@ ResourceRepositoryClient
 
 將打印流發送到打印機時，可以設定運行時選項，包括以下選項：
 
-* **副本**:指定要發送到打印機的副本數。預設值為2。
+* **副本**:指定要發送到打印機的副本數。預設值為1。
 * **訂書**:當使用訂書機時，設定XCI選項。此選項可在配置模型中由Staple元素指定，僅用於PS和PCL打印機。
 * **OutputJog**:當輸出頁面應進行慢動作（在輸出托盤中實際移動）時，會設定XCI選項。此選項僅適用於PS和PCL打印機。
 * **OutputBin**:用於使打印驅動程式選擇適當輸出站的XCI值。
