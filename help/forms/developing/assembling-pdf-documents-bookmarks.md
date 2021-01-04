@@ -1,8 +1,8 @@
 ---
 title: 使用書籤組合PDF檔案
 seo-title: 使用書籤組合PDF檔案
-description: 'null'
-seo-description: 'null'
+description: 使用Assembler服務可修改包含書籤的PDF檔案，使用Java API和Web Service API加入書籤。
+seo-description: 使用Assembler服務可修改包含書籤的PDF檔案，使用Java API和Web Service API加入書籤。
 uuid: a306d2a6-0b12-4eb3-bff4-968a33417486
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2526'
+source-wordcount: '2574'
 ht-degree: 0%
 
 ---
