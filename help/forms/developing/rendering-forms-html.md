@@ -1,8 +1,8 @@
 ---
 title: 將表單轉換為HTML
 seo-title: 將表單轉換為HTML
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服務，以HTML格式呈現表單，以回應來自網頁瀏覽器的HTTP要求。 您可以使用Java API和Web Service API，將表單轉換為HTML。
+seo-description: 使用Forms服務，以HTML格式呈現表單，以回應來自網頁瀏覽器的HTTP要求。 您可以使用Java API和Web Service API，將表單轉換為HTML。
 uuid: bd8edb6f-333b-4ceb-9877-618f5377f56f
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4174'
 ht-degree: 0%
 
 ---
