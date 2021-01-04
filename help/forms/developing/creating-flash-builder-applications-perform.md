@@ -1,8 +1,8 @@
 ---
 title: 建立使用HTTP Token執行SSO驗證的Flash Builder應用程式
 seo-title: 建立使用HTTP Token執行SSO驗證的Flash Builder應用程式
-description: 'null'
-seo-description: 'null'
+description: 使用Flash Builder建立用戶端應用程式，使用HTTP Token執行單一登入(SSO)驗證。 驗證使用者一次作業，然後使用該驗證執行多個AEM Forms作業。
+seo-description: 使用Flash Builder建立用戶端應用程式，使用HTTP Token執行單一登入(SSO)驗證。 驗證使用者一次作業，然後使用該驗證執行多個AEM Forms作業。
 uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
