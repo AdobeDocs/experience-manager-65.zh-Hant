@@ -1,8 +1,8 @@
 ---
 title: 動態建立DDX檔案
 seo-title: 動態建立DDX檔案
-description: 'null'
-seo-description: 'null'
+description: 使用Java API和Web Service API動態建立DDX檔案。 動態建立DDX檔案可讓您在執行時期取得的DDX檔案中使用值。
+seo-description: 使用Java API和Web Service API動態建立DDX檔案。 動態建立DDX檔案可讓您在執行時期取得的DDX檔案中使用值。
 uuid: b73e8069-6c9f-4517-a0ae-f3d503191d2d
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2185'
 ht-degree: 0%
 
 ---
