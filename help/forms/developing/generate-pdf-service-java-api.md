@@ -1,8 +1,8 @@
 ---
 title: 產生PDF服務Java API QuickStart(SOAP)
 seo-title: 產生PDF服務Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用「產生PDF」服務，將Microsoft Word檔案轉換為PDF檔案、將HTML內容轉換為PDF檔案、使用Java API將PDF檔案轉換為RTF檔案。
+seo-description: 使用「產生PDF」服務，將Microsoft Word檔案轉換為PDF檔案、將HTML內容轉換為PDF檔案、使用Java API將PDF檔案轉換為RTF檔案。
 uuid: f8c4a476-de5e-440a-b419-0bd1d7fde5ca
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a7c0c4cf-7476-41e7-8d4e-564e6a21458d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
