@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
+source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
 workflow-type: tm+mt
 source-wordcount: '14953'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
    ![螢幕擷取，以說明Classic UI中遺失功能表的問題](assets/33949_missing_menu.png)
 
 * [!DNL Content Fragment]不能用作`TemplatedResource`，因為它在`ContentFragmentUsePojo`中失敗(NPR-33911)。
-* 同步和非同步移動操作可能會導致併發傳輸導致錯誤。 頁面移動操作僅限同步移動。 它可防止頁面同時移動(NPR-33875)。
+* 同步和非同步移動操作可能會導致併發傳輸導致錯誤。 頁面移動操作僅限非同步移動。 它可防止頁面同時移動(NPR-33875)。
 * [!UICONTROL 管理] 發佈作業，將內容從作者複製至發佈例項失敗並產生JavaScript錯誤(NPR-33872)。
 * 當選取多個頁面或資產以建立版本時，新版本僅會針對最後選取的頁面或資產建立(NPR-33866)。
 * 將含即時副本的Blueprint頁面移至另一個檔案夾。 將資料夾移動到原始資料夾時，移動操作將失敗而無任何錯誤(NPR-33864)。
