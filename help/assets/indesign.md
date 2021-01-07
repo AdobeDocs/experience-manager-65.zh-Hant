@@ -3,9 +3,9 @@ title: 將 [!DNL Assets] 與 [!DNL InDesign Server]整合
 description: 瞭解如何將 [!DNL Adobe Experience Manager Assets] 與 [!DNL Adobe InDesign Server]整合。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: a31fa2712e541dfdc7a5b08ee9b33782f190f00b
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1578'
 ht-degree: 3%
 
 ---
@@ -165,15 +165,15 @@ ht-degree: 3%
 
 ### 配置Day CQ Link Externalizer {#configuring-day-cq-link-externalizer}
 
-如果[!DNL InDesign Server]和[!DNL Experience Manager]在不同的主機上運行，或者這兩種應用程式都未在預設埠上運行，請配置[!UICONTROL  Day CQ Link Externalizer]以設定[!DNL InDesign Server]的主機名、埠和內容路徑。
+如果[!DNL InDesign Server]和[!DNL Experience Manager]位於不同的主機上，或者其中一個或兩個應用程式都未在預設埠上工作，則配置[!UICONTROL Day CQ Link Externalizer]以設定[!DNL InDesign Server]的主機名、埠和內容路徑。
 
 1. 訪問`https://[aem_server]:[port]/system/console/configMgr`的Web控制台。
-1. 找到配置&#x200B;**[!UICONTROL Day CQ Link Externalizer]**，然後按一下&#x200B;**[!UICONTROL Edit]**&#x200B;將其開啟。
-1. 指定[!DNL Adobe InDesign Server]的主機名稱和上下文路徑，然後按一下&#x200B;**保存**。
+1. 找到配置&#x200B;**[!UICONTROL Day CQ Link Externalizer]**。 按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;以開啟。
+1. 連結外部化設定可協助建立[!DNL Experience Manager]部署和[!DNL InDesign Server]的絕對URL。 使用&#x200B;**[!UICONTROL 域]**&#x200B;欄位指定[!DNL Adobe InDesign Server]的主機名和上下文路徑。 按一下&#x200B;**「儲存」**。
 
-   ![chlimage_1-97](assets/chlimage_1-290.png)
+   ![連結外部化設定](assets/link-externalizer-config.png)
 
-### 啟用[!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server-s}的並行作業處理
+### 啟用[!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server}的並行作業處理
 
 您現在可以啟用IDS的並行作業處理。 確定[!DNL InDesign Server]可處理的並行作業的最大數目(`x`):
 
