@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '1005'
+ht-degree: 0%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 [行銷人](https://www.omniture.com/en/products/conversion/test-and-target) 員使用Adobe Target來設計和執行線上測試、建立即時受眾細分（根據行為）並自動鎖定內容和線上體驗。
 
-現今的線上消費者有不斷演變的需求，並期望從各種網站和內容來源獲得相關、甚至個人化的內容。 若要吸引線上受眾，線上行銷人員必須快速找出哪些優惠和內容對受眾有關聯且有吸引力，這一點至關重要。 有了這些知識，行銷人員需要不斷改進其網站並針對不同受眾鎖定適當內容的能力。
+現今的線上消費者有不斷演變的需求，並期望從各種網站和內容來源獲得相關、甚至個人化的內容。 若要吸引線上受眾，線上行銷人員必須快速找出哪些優惠和內容對受眾有關聯且有吸引力，這一點至關重要。 有了這些知識，行銷人員需要不斷改進其網站並針對不同受眾提供適當內容的能力。
 
 [與Adobe ](/help/sites-administering/target.md) Target整合如何將網站與Target整合。
 
@@ -72,22 +72,15 @@ AEM提供簡單的加入程式，可與Adobe Analytics和Adobe Target整合。 �
 
 如需詳細資訊，請參閱[選擇加入Adobe Analytics和Adobe Target。](/help/sites-administering/opt-in.md)
 
-## 與Scene7 {#integrating-with-scene}整合
+## 與Adobe Dynamic Media Classic {#integrating-with-scene}整合
 
-[Adobe Scene7是](https://www.adobe.com/products/scene7.html) 一套代管解決方案，可針對網頁、行動裝置、電子郵件、社交媒體、網際網路連線顯示器和印刷發佈、管理、增強和提供動態行銷資產和豐富視覺化銷售。
+Adobe Dynamic Media Classic是代管解決方案，適用於發佈、管理、增強和提供動態行銷資產和豐富視覺化銷售至網頁、行動裝置、電子郵件、社交媒體、網際網路連線顯示器和印刷品。
 
-在AEM中，您可以直接從AEM發佈數位資產至Scene7，也可以從Scene7發佈數位資產至AEM。
+在AEM中，您可以直接從AEM發佈數位資產至Dynamic Media Classic，也可以從Dynamic Media Classic發佈數位資產至AEM。
 
-此外，您也可以在各種檢視器中檢視發佈於Scene7的AEM資產：
+此外，您也可以在各種檢視器（例如「基本縮放」和「視訊」）中，檢視在Dynamic Media Classic中發佈的AEM資產。
 
-* 基本縮放
-* DHTML 彈出式縮放
-* Flash 彈出式縮放
-* 影片
-* Flash 範本
-* 影像範本
-
-如需AEM如何與Scene7整合的詳細資訊，請參閱[與Scene7檔案整合](/help/sites-administering/scene7.md)。
+如需AEM如何與Dynamic Media Classic整合的詳細資訊，請參閱[與Dynamic Media Classic整合](/help/sites-administering/scene7.md)檔案。
 
 ## 與Adobe動態標籤管理整合{#integrating-with-adobe-dynamic-tag-management}
 
