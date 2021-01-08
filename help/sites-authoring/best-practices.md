@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 translation-type: tm+mt
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '302'
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 5%
 
 ## 資產 {#assets}
 
-以下主題說明有關資產的最佳實務，包括動態媒體功能和動態媒體經典整合：
+有關資產的最佳實務，包括動態媒體功能和動態媒體經典整合，在下列主題中說明：
 
 <table>
  <tbody>
@@ -55,7 +55,7 @@ ht-degree: 5%
   <tr>
    <td>動態影像</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">動態影像最佳範例</a></td>
-   <td><p>說明如何銳利化影像，以獲得最佳效果，以及當您使用動態媒體功能或與Scene7整合時，最佳化影像品質的最佳方式。 </p> </td>
+   <td><p>說明如何銳利化影像，以獲得最佳效果，以及當您使用動態媒體功能或與Dynamic Media Classic整合時，最佳化影像品質的最佳方式。 </p> </td>
   </tr>
   <tr>
    <td>多語種資產</td>
