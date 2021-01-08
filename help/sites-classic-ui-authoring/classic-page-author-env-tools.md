@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 2%
@@ -35,7 +35,7 @@ AEM的製作環境提供多種機制來組織和編輯您的內容。 提供的�
 
 `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-![chlimage_1-189](assets/chlimage_1-109.png)
+![chlimage_1-109](assets/chlimage_1-109.png)
 
 ## 訪問幫助{#accessing-help}
 
@@ -62,7 +62,7 @@ Content Finder是編輯頁面時在儲存庫中尋找資產和／或內容的快
 * [影像](#finding-images)
 * [文件](#finding-documents)
 * [影片](#finding-movies)
-* [Scene7 媒體瀏覽器](/help/sites-administering/scene7.md#scene7contentbrowser)
+* [動態媒體瀏覽器](/help/sites-administering/scene7.md#scene7contentbrowser)
 * [](#products) [頁面](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
 
 * [段落](#referencing-paragraphs-from-other-pages)
@@ -77,7 +77,7 @@ Content Finder是編輯頁面時在儲存庫中尋找資產和／或內容的快
 
 在頁面上建立影像段落後，您可以拖曳項目並放入段落中。
 
-![chlimage_1-111](assets/chlimage_1-111.png)
+![chlimage_1-191](assets/chlimage_1-111.png)
 
 ### 查找文檔{#finding-documents}
 
@@ -85,7 +85,7 @@ Content Finder是編輯頁面時在儲存庫中尋找資產和／或內容的快
 
 在頁面上建立「下載」段落後，您可以拖曳項目並放入段落中。
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![chlimage_1-192](assets/chlimage_1-112.png)
 
 ### 尋找影片{#finding-movies}
 
@@ -99,13 +99,13 @@ Content Finder是編輯頁面時在儲存庫中尋找資產和／或內容的快
 
 此標籤列出任何產品。 在頁面上建立適當的段落（例如「產品」）後，您可以拖曳項目並拖曳至段落中。
 
-![chlimage_1-115](assets/chlimage_1-114.png)
+![chlimage_1-114](assets/chlimage_1-114.png)
 
 ### 尋找頁面{#finding-pages}
 
 此標籤顯示所有頁面。 連按兩下任何頁面以開啟頁面進行編輯。
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![chlimage_1-114](assets/chlimage_1-115.png)
 
 ### 參考其他頁面的段落{#referencing-paragraphs-from-other-pages}
 
