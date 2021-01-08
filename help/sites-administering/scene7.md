@@ -1,6 +1,6 @@
 ---
-title: 與Dynamic Media Classic整合(Scene7)
-seo-title: 與Dynamic Media Classic整合(Scene7)
+title: 與Dynamic Media Classic整合
+seo-title: 與Dynamic Media Classic整合
 description: 瞭解如何將AEM與Dynamic Media Classic整合。
 seo-description: 瞭解如何將AEM與Dynamic Media Classic整合。
 uuid: b014d643-1cc1-47f3-a79c-7f6f9e45637a
@@ -10,17 +10,17 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '5485'
+source-wordcount: '5464'
 ht-degree: 0%
 
 ---
 
 
-# 與Dynamic Media Classic整合(Scene7){#integrating-with-dynamic-media-classic-scene}
+# 與Dynamic Media Classic {#integrating-with-dynamic-media-classic-scene}整合
 
-[Adobe Dynamic Media ](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) Classics是代管解決方案，可管理、增強、發佈和提供多媒體資產至網路、行動裝置、電子郵件和網際網路連線的展示和印刷品。
+Adobe Dynamic Media Classic是代管解決方案，可用來管理、增強、發佈和提供多媒體資產至網路、行動裝置、電子郵件和網際網路連線的顯示和列印。
 
 若要使用Dynamic Media Classic，您必須設定雲端設定，讓Dynamic Media Classic和AEM Assets能夠彼此互動。 本檔案說明如何設定AEM和Dynamic Media Classic。
 
@@ -363,7 +363,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
 ### 新增可設定的逾時至動態媒體傳統上傳工作流程{#adding-configurable-timeout-to-scene-upload-workflow}
 
-當AEM例項設定為透過Dynamic Media Classic(Scene7)處理視訊編碼時，任何上傳工作都會依預設有35分鐘逾時。 若要容納可能較長執行時間的視訊編碼工作，您可以設定此設定：
+當AEM例項設定為透過Dynamic Media Classic處理視訊編碼時，依預設，任何上傳工作都會有35分鐘逾時。 若要容納可能較長執行時間的視訊編碼工作，您可以設定此設定：
 
 1. 導覽至&#x200B;**http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl**。
 
