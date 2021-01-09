@@ -2,9 +2,9 @@
 title: 使用版面模式調整最適化表單的元件大小
 description: '使用「版面」模式中可用的回應式格線來定義元件的位置 '
 translation-type: tm+mt
-source-git-commit: 77fef5a1926c733abdaf01a19d9fdfc37323566e
+source-git-commit: 923c31bf67c7ad480ef3c3a1e312b4bd841bac6d
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
@@ -35,12 +35,11 @@ ht-degree: 0%
 
    點選元件後顯示的工具列包含下列選項：
 
-   * **父代：** 選擇元件的父代。
-   * **浮點到新行：** 如果同一行中有多個元件，請將元件移到下一行。
+   * **[!UICONTROL 父級]**:選擇元件的父代。
+   * **[!UICONTROL 恢復斷點佈局]**:還原所有調整大小的變更，並將預設版面套用至元件。
+   * **[!UICONTROL 浮動至新行]**:如果同一行中有多個元件，請將元件移到下一行。
 
-   此外，您還可以使用&#x200B;**[!UICONTROL 還原斷點配置]**（![還原斷點](assets/reverttopreviouslypublishedversion.png)）選項，還原所有調整大小的變更，並將預設配置套用至包含已重新調整大小的元件的面板。 點選已重新調整大小的元件的父項以檢視選項。
-
-   您可以點選元件，然後使用&#x200B;**[!UICONTROL 還原斷點版面]**&#x200B;選項來還原所有調整大小的變更，並在元件層級套用預設版面。
+   您也可以使用面板層級的「還原斷點」配置&#x200B;**[!UICONTROL （![還原斷點](assets/reverttopreviouslypublishedversion.png)）選項來還原所有調整大小的變更。]**
 
    >[!NOTE]
    >
@@ -71,7 +70,7 @@ ht-degree: 0%
    藍點顯示在自適應網格的開始和結束處。
 
 1. 拖放藍點，以定義面板在回應式格線中的位置。
-您可以重複步驟1和2，然後選擇「選擇父級![」，將調整大小的面板移至下一行。](assets/float_to_new_line_icon.svg)
+您可以重複步驟1和2，然後選擇「選擇父級](assets/float_to_new_line_icon.svg)」，將調整大小的面板移至下一行。![
 
 ## 定義面板的多欄版面
 
