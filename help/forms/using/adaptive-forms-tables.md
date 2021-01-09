@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
+source-git-commit: 01c30e78d1f89e8c07abeb0ac19af38722010dd0
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2428'
 ht-degree: 0%
 
 ---
@@ -107,6 +107,14 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
    同樣地，帶有向下箭頭的列標題表示列中的值以降序顯示。
 
    您也可以在&#x200B;**預覽**&#x200B;模式的表格中進行變更，然後再按一下欄標題以排序欄值。
+
+## 設定表{#set-column-width}的列寬
+
+執行以下步驟以設定表的列寬：
+
+1. 在&#x200B;**[!UICONTROL Content]**&#x200B;標籤中，點選&#x200B;**[!UICONTROL Table]**&#x200B;元件並點選「設定」(![Configure](assets/configure-icon.svg))圖示。
+
+1. 在&#x200B;**[!UICONTROL 欄寬]**&#x200B;欄位中輸入值的逗號分隔清單，以指定表格中各欄的比例寬度。 例如，對於包含3列的表，在&#x200B;**[!UICONTROL 列寬]**&#x200B;欄位中指定2,4,6作為值會導致將列寬度設定為第一列的2/12、第二列的4/12和第三列的6/12。 「2/12」：第一列的寬度是指表寬度的六分之一。 同樣地，4/12將第二列寬度設定為表寬度的三分之一，6/12將第三列寬度設定為表寬度的一半。
 
 ## 配置表樣式{#configure}
 
