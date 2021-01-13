@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
+source-git-commit: c451948c43004d084bc3fce7a2c6ad99381f1ea8
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,9 @@ ht-degree: 0%
    **na1** 是指預設資料庫共用。
 
    您可以修改資料庫共用的值。 重新啟動伺服器，以便能夠為資料庫共用使用新值。
+
+   >[!NOTE]
+   請確定您的作者和發佈例項設定指向相同的分片。 如果您為組織建立多個Adobe Sign組態，請確定所有組態都使用相同的分片。
 
 1. 指定在步驟8中編寫的&#x200B;**用戶端ID**（也稱為應用程式ID）和&#x200B;**用戶端密碼**。 選擇&#x200B;**[!UICONTROL 為附件啟用Adobe Sign也]**&#x200B;選項，將附加至最適化表單的檔案附加至相應的[!DNL Adobe Sign]檔案，以便傳送以供簽署。
 
