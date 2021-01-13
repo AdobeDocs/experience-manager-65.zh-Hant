@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
+source-git-commit: c0530f7d280406e31d4813a179bc10756773d389
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 1%
@@ -208,9 +208,9 @@ MySQL連接器必須單獨獲得和安裝。
 
 ## 升級{#upgrading}
 
-從舊版AEM升級至AEM 6.5平台時，請務必閱讀「升級至AEM 6.5[」。](/help/sites-deploying/upgrade.md)
+從舊版AEM升級至AEM 6.5平台時，請務必閱讀「升級至AEM 6.5](/help/sites-deploying/upgrade.md)」。[
 
-除了升級平台外，請閱讀「升級至AEM Communities 6.5[」以瞭解社群變更。](/help/communities/upgrade.md)
+除了升級平台外，請閱讀「升級至AEM Communities 6.5](/help/communities/upgrade.md)」以瞭解社群變更。[
 
 ## 設定 {#configurations}
 
@@ -274,7 +274,7 @@ MySQL連接器必須單獨獲得和安裝。
 
 ### 作者{#tunnel-service-on-author}上的隧道服務
 
-使用作者環境建立站點[、](/help/communities/sites-console.md)修改站點屬性[或](/help/communities/sites-console.md#modifying-site-properties)管理社區成員[時，必須訪問在發佈環境中註冊的成員（用戶），而不是在作者上註冊的用戶。](/help/communities/members.md)
+使用作者環境建立站點](/help/communities/sites-console.md)、[修改站點屬性](/help/communities/sites-console.md#modifying-site-properties)或[管理社區成員](/help/communities/members.md)時，必須訪問在發佈環境中註冊的成員（用戶），而不是在作者上註冊的用戶。[
 
 隧道服務使用作者上的複製代理提供此訪問。
 
@@ -330,7 +330,7 @@ AEM Communities有兩項功能，需要所有AEM伺服器執行個體使用相�
 
 >[!CAUTION]
 >
->如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請聯絡客戶服務[。](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)
+>如果已經配置了基於加密密鑰的其他安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請聯絡客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。[
 
 #### 儲存庫複製{#repository-replication}
 
