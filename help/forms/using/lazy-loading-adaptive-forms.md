@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: a20736b7-f7b4-4da1-aa32-2408049b1209
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 428d675bd254c18651c1188de26b706b5ad3d55c
+source-git-commit: 4d95d0e38acc54e1ebbb9f9e31761205533e99f9
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,7 @@ ht-degree: 0%
 
 * 建議使用XSD架構的最適化表單，而非XFA架構的最適化表單，以設定大型表單上的延遲載入。 在基於XFA的自適應表單中由於延遲載入實現而帶來的效能增益相對而言小於基於XSD的自適應表單中的增益。
 * 請勿在使用&#x200B;**[!UICONTROL Responsive -everything的最適化表單中設定片段的延遲載入，而不需為根面板導覽]**&#x200B;版面。 由於互動式版面配置，所有片段都會以最適化格式同時載入。 這也會導致效能降低。
+* 建議不要以最適化形式在第一個片段上設定延遲載入。
 * 建議不要在載入最適化表單時，在第一個面板中設定片段的延遲載入。
 * 片段階層中支援最多2個層級的延遲載入。
 * 確保標籤為全域的欄位在最適化表單中是唯一的。
