@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 0a6f50457efda42a9d496c0c9202cb7d7b8f6eb9
 workflow-type: tm+mt
-source-wordcount: '4718'
+source-wordcount: '4974'
 ht-degree: 1%
 
 ---
@@ -527,7 +527,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
 ## 元件層次和繼承{#component-hierarchy-and-inheritance}
 
-AEM中的元件受3種不同階層的規範：
+AEM中的元件受3個不同階層的規範：
 
 * **資源類型層次**
 
@@ -608,6 +608,39 @@ AEM中的元件受3種不同階層的規範：
 * 要查找`cq:editConfig`的子節點，例如，可以搜索`cq:dropTargets`，該`cq:DropTargetConfig`類型；您可以在** CRXDE Lite**中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
+
+### 元件佔位符{#component-placeholders}
+
+元件必須始終呈現作者可見的某些HTML，即使元件沒有內容亦然。 否則，它可能會從編輯器的介面中以視覺化方式消失，使它在技術上存在，但在頁面和編輯器中不可見。 在這種情況下，作者將無法選取空元件並與之互動。
+
+因此，當頁面在頁面編輯器中呈現時（當WCM模式為`edit`或`preview`時），元件只要不呈現任何可見輸出，就應呈現預留位置。
+預留位置的典型HTML標籤如下：
+
+```HTML
+<div class="cq-placeholder" data-emptytext="Component Name"></div>
+```
+
+轉譯上述預留位置HTML的典型HTL指令碼如下：
+
+```HTML
+<div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
+     data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"></div>
+```
+
+在上例中，`isEmpty`是變數，只有在元件沒有內容且作者無法看見時，才為true。
+
+為避免重複，Adobe建議元件實作者為這些預留位置使用HTL範本，[與核心元件提供的範本類似。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+
+然後，範本在上一個連結中的使用，會與下列HTL行一起完成：
+
+```HTML
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${template.placeholder @ isEmpty=!model.text}"></sly>
+```
+
+在上例中，`model.text`是變數，只有在內容包含且可見時才為true。
+
+此範本的使用範例可在核心元件[中查看，例如標題元件。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
 
 ### 使用cq進行配置：EditConfig屬性{#configuring-with-cq-editconfig-properties}
 
