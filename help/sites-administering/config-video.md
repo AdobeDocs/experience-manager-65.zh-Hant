@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
+source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,14 @@ ht-degree: 0%
 [視訊元件](/help/sites-authoring/default-components-foundation.md#video)可讓您將預先定義的現成可用(OOTB)視訊資產置於您的頁面上。
 
 為了正確進行轉碼，管理員需要個別安裝FFmpeg。 請參閱[安裝FFmpeg並設定AEM](#install-ffmpeg)。 管理員也[設定視訊設定檔](#configure-video-profiles)以搭配HTML5元素使用。
+
+>[!CAUTION]
+>
+>此Foundation元件已過時。 Adobe建議改用[核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html)。
+
+>[!CAUTION]
+>
+>如果不進行廣泛的專案層級自訂，此元件不再需要立即可用。
 
 ## 配置視頻配置檔案{#configure-video-profiles}
 
@@ -74,7 +82,7 @@ ht-degree: 0%
    >
    >覆蓋並編輯整個描述檔節點，而不只是需要修改的屬性。 這些資源不會透過SlingResourceMergare解決。
 
-4. 如果更改了其中一個屬性，請按一下「全部保存」。****
+4. 如果更改了其中一個屬性，請按一下「全部保存」。]****[!UICONTROL 
 
 >[!NOTE]
 >
