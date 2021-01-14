@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: 27276945a0bdb20410f4c0e98868ea5ce1c09a47
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
