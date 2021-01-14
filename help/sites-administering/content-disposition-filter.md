@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 741ba6f6ef3270414c0ddabb1a1d02d5c436b7d9
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 內容處置篩選器是針對SVG檔案的XSS攻擊的安全性功能。
 
-安裝後，篩選器會封鎖對所有資產的存取。 例如，您無法線上上檢視pfd。 本節說明如何依您的需求設定篩選。
+安裝後，篩選器會封鎖對所有資產的存取。 例如，您無法線上檢視PDF。 本節說明如何依您的需求設定篩選。
 
 ## 設定內容處置篩選器{#configure-content-disposition-filter}
 
