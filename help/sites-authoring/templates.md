@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f1c932a5937e8a115e2849935b8f5ea5c2613d
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
-source-wordcount: '4833'
+source-wordcount: '4901'
 ht-degree: 9%
 
 ---
@@ -108,7 +108,7 @@ AEM現在提供兩種基本範本類型：
 * 靜態範本
 
    * AEM的數個版本都提供靜態範本。
-   * 它們由您的開發人員[提供，因此作者無法建立或編輯它們。](/help/sites-developing/page-templates-static.md)
+   * 它們由您的開發人員](/help/sites-developing/page-templates-static.md)提供，因此作者無法建立或編輯它們。[
    * 複製以建立新頁面，但此後不存在動態連線（雖然已註冊範本名稱以取得資訊）。
    * 使用[設計模式](/help/sites-authoring/default-components-designmode.md)來保存設計屬性。
    * 由於編輯靜態範本是開發人員的專屬工作，請參閱開發人員檔案[頁面範本- Static](/help/sites-developing/page-templates-static.md)以取得詳細資訊。
@@ -148,7 +148,7 @@ AEM現在提供兩種基本範本類型：
 
 >[!CAUTION]
 >
->切勿在模板中輸入任何需要[國際化](/help/sites-developing/i18n.md)的資訊。
+>切勿在模板中輸入任何需要[國際化](/help/sites-developing/i18n.md)的資訊。 為了內部化，建議使用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
 
 ### 建立模板資料夾——管理{#creating-a-template-folder-admin}
 
@@ -208,6 +208,12 @@ AEM現在提供兩種基本範本類型：
 1. 在&#x200B;**範本控制台**&#x200B;中，選擇範本。
 1. 從工 **具欄中選擇** 「查看屬性」(View Properties)或快速選項以開啟對話框。
 1. 您現在可以檢視或編輯範本屬性。
+
+>[!NOTE]
+>
+>範本是功能強大的工具，可簡化您的頁面建立工作流程。 不過，太多範本可能會讓作者感到不知所措，並讓頁面建立變得困惑。 一個很好的經驗法則是將範本數控制在100以下。
+>
+>Adobe不建議使用超過1000個範本，因為可能會影響效能。
 
 >[!NOTE]
 >
@@ -482,7 +488,7 @@ AEM現在提供兩種基本範本類型：
 
    >[!CAUTION]
    >
-   >請注意，在AEM裁切比例中，定義為&#x200B;**height/width**。 這與傳統的寬度／高度定義不同，是由於舊有的相容性原因而完成的。 如果您清楚地定義&#x200B;**Name**，則網頁編寫使用者將不會察覺到任何差異，因為這是UI中顯示的內容。
+   >請注意，在AEM裁切比例中，定義為&#x200B;**height/width**。 這與傳統的寬度／高度定義不同，而且是基於舊有相容性的原因。 如果您清楚地定義&#x200B;**Name**，則網頁編寫使用者將不會察覺到任何差異，因為這是UI中顯示的內容。
 
    >[!NOTE]
    >
@@ -557,7 +563,7 @@ AEM現在提供兩種基本範本類型：
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   為節省空間，版面容器不會成長以容納允許的元件清單。 容器會變成可捲動的清單。
+   為節省空間，版面容器不會擴充以容納允許的元件清單。 容器會變成可捲動的清單。
 
    可配置的元件以「策略」表徵圖顯示 **** ，可以點選或按一下該表徵圖以編輯該元件的策略和屬性。
 
