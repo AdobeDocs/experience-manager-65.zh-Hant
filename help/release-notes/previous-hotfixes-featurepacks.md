@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '14953'
+source-wordcount: '14944'
 ht-degree: 0%
 
 ---
@@ -197,7 +197,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 在對資產執行大量作業（例如批量中繼資料編輯）時，會發現「請求-URI過長」錯誤(NPR-33723)。
 
-* 出現JavaScript錯誤，如果上傳的JSON檔案有空格或特殊字元值(NPR-3371)，則使用者無法透過[!UICONTROL 資料夾中繼資料結構表單編輯器中的「透過JSON路徑]新增」功能，選取或刪除在[!UICONTROL 下拉式清單欄位中產生的選擇。2)。]][!UICONTROL 
+* 出現JavaScript錯誤，如果上傳的JSON檔案有空格或特殊字元值(NPR-3371)，則使用者無法透過[!UICONTROL 資料夾中繼資料結構表單編輯器中的「透過JSON路徑]新增」功能，選取或刪除在[!UICONTROL 下拉式清單欄位中產生的選擇。2)。]
 
 * 使用[!DNL desktop app]或[!DNL Adobe Asset Link]中的[!UICONTROL Open]選項更新資產時，資產的靜態轉譯不會更新，並會同步回[!DNL Adobe Experience Manager](CQ-4296279)。
 
@@ -207,7 +207,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 在[!UICONTROL 資料夾元資料結構表單]中建立下拉式清單規則時，用戶無法從[!UICONTROL 欄位選擇]列中選擇值(CQ-4297530)。
 
-* 當您在[!DNL Experience Manager] 6.5上安裝[!DNL Experience Manager] 6.5 Service Pack 5或舊版&lt;a2/> 6.5(NPR-34532)時，會刪除資產自訂工作流程模型（在`/var/workflow/models/dam`中建立）的執行時期副本。 若要擷取執行時期副本，請使用HTTP API將工作流程模型的設計時副本與執行時期副本同步：
+* 當您在[!DNL Experience Manager] 6.5上安裝[!DNL Experience Manager] 6.5 Service Pack 5或舊版 6.5(NPR-34532)時，會刪除資產自訂工作流程模型（在`/var/workflow/models/dam`中建立）的執行時期副本。 若要擷取執行時期副本，請使用HTTP API將工作流程模型的設計時副本與執行時期副本同步：
    `<designModelPath>/jcr:content.generate.json`。
 
 **動態媒體中修正的問題**
@@ -228,9 +228,9 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 * 當將影像描述檔新增至具有多個（例如11）外觀比例的資料夾時，智慧型裁切功能會失敗並出現錯誤(NPR-34082)。
 
-* 當使用者在[!UICONTROL [!DNL Adobe Experience Manager]的&lt;a6/>中，在[!UICONTROL Workflow]標籤的[!UICONTROL Workflow Archive]頁面上向下捲動時，觸發DAM更新資產工作流程(CQ-4299727)。]
+* 當使用者在[!UICONTROL [!DNL Adobe Experience Manager]的]中，在[!UICONTROL Workflow]標籤的[!UICONTROL Workflow Archive]頁面上向下捲動時，觸發DAM更新資產工作流程(CQ-4299727)。
 
-* [!UICONTROL 檢視器預設集編輯器]的「行為」標籤中的符號未本地化(CQ-4299026)。][!UICONTROL 
+* [!UICONTROL 檢視器預設集編輯器]的「行為」標籤中的符號未本地化(CQ-4299026)。
 
 * 如果檢視器處於回應模式，則主檢視會以不正確的版面顯示影像，而檢視器則無法配合。(CQ-4298293)
 
@@ -300,7 +300,7 @@ Adobe Experience Manager 6.5.6.0中引進的主要功能和增強功能包括：
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack不包含修正 [!DNL Forms]。它們是使用單獨的[!DNL Forms]附加軟體包傳遞的。 此外，還發行了包含JEE上[!DNL Experience Manager Forms]修正的累積安裝程式。 如需詳細資訊，請參閱「安裝AEM Forms附加元件](#install-aem-forms-add-on-package)」和「在JEE上安裝AEM Forms」。](#install-aem-forms-jee-installer)[[
+>[!DNL Experience Manager] Service Pack不包含修正 [!DNL Forms]。它們是使用單獨的[!DNL Forms]附加軟體包傳遞的。 此外，還發行了包含JEE上[!DNL Experience Manager Forms]修正的累積安裝程式。 如需詳細資訊，請參閱「安裝AEM Forms附加元件](#install-aem-forms-add-on-package)」和「在JEE上安裝AEM Forms」。[[](#install-aem-forms-jee-installer)
 
 安裝[!DNL Experience Manager Forms] 6.5.6.0附加軟體包後：
 
@@ -454,7 +454,7 @@ Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月&
 
 **Experience Manager Assets中的協助工具增強功能**
 
-* 現在可將鍵盤焦點放在[!UICONTROL Comments]清單上，並可點選選項至[!UICONTROL [!UICONTROL [!UICONTROL Timeline]資產面板中「建立新版本]」下的「建立&lt;a2/>版本註解」(NPR-33424)。]
+* 現在可將鍵盤焦點放在[!UICONTROL Comments]清單上，並可點選選項至[!UICONTROL [!UICONTROL [!UICONTROL Timeline]資產面板中「建立新版本]」下的「建立]版本註解」(NPR-33424)。
 
 * 現在可以觸及[!UICONTROL 資產的檢視設定]選項，並使用鍵盤按鍵變更[!UICONTROL 檢視設定]對話方塊中的設定(NPR-33420)。
 
@@ -468,7 +468,7 @@ Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月&
 
 * 唯讀表單欄位（例如資產[!UICONTROL 屬性]的[!UICONTROL Basic標籤]上停用的欄位）現在可使用鍵盤(NPR-33493, CQ-4273031)加以集中。
 
-* 各種輸入欄位中的標籤現在都是永久標籤（因此可存取），而不只是預留位置標籤，當輸入文字時就會消失(NPR-33475)。
+* 現在，各種輸入欄位中的標籤都是永久標籤（因此可存取），而不只是預留位置標籤，在輸入文字時就會消失(NPR-33475)。
 
 * 不同的標題級別（如頁標題和部分標題）現在被視為螢幕閱讀器用戶具有不同級別的標題(NPR-33471)。
 
@@ -633,7 +633,7 @@ Adobe Experience Manager 6.5.5.0是重要的更新，其中包括自2019年4月&
 * 當發佈含有Adobe Target元件的頁面時，會清除內部快取(NPR-33162)。
 * 與Adobe Target的整合在[!DNL Windows Internet Explorer] 11上無法運作(NPR-33111)。
 * 設定Adobe Target時，選取報表來源時，不會顯示[!UICONTROL Company]和[!UICONTROL Report Suite]欄位(NPR-32502)。
-* 使用Adobe I/O匯出[!DNL Experience Fragments]時，像「來源產品」等中繼資料不會匯出至Adobe Target(NPR-32159)。
+* 使用[!DNL Adobe I/O]匯出[!DNL Experience Fragments]時，像「來源產品」等中繼資料不會匯出至Adobe Target(NPR-32159)。
 * 本機Experience Manager管理員群組中的授權IMS使用者無法建立或修改IMS組態(NPR-33045)。
 * Adobe Launch設定頁面不會顯示所有記錄(NPR-33011)。
 * 內容作者群組中的使用者無法編輯Adobe Target元件的屬性，因為發生JavaScript錯誤(NPR-32996)。
@@ -704,9 +704,9 @@ Adobe Experience Manager 6.5.4.0是重要的更新，其中包含新功能、主
 
 Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包括：
 
-* Adobe Experience Manager Assets現在已透過Adobe I/O Console設定品牌入口網站。
+* Adobe Experience Manager Assets現在已透過[!DNL Adobe I/O]主控台設定品牌入口網站。
 
-* Adobe Experience Manager Forms工作流程現在提供新的「產生可列印的輸出」步驟。](../forms/using/aem-forms-workflow-step-reference.md)[
+* Adobe Experience Manager Forms工作流程現在提供新的「產生可列印的輸出」步驟。[](../forms/using/aem-forms-workflow-step-reference.md)
 
 * [多欄支援](../forms/using/resize-using-layout-mode.md) 最適化表單和互動式通訊的版面模式。
 
@@ -868,7 +868,7 @@ Adobe Experience Manager 6.5.4.0中引進的一些主要功能和增強功能包
 
 ### 品牌入口網站 {#assets-brand-portal-6540}
 
-* 在Experience Manager 6.5.4上升級至Adobe I/O(CQDOC-15655)時，品牌入口網站使用者無法將貢獻資料夾資產發佈至[!DNL Assets]。 如需Experience Manager 6.5.4的立即修正，建議您下載修補程式](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)並安裝在您的作者實例上。[
+* 品牌入口網站使用者無法在升級至Experience Manager 6.5.4上的[!DNL Adobe I/O]時，將貢獻資料夾資產發佈至[!DNL Assets](CQDOC-15655)。 如需Experience Manager 6.5.4的立即修正，建議您下載修補程式](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)並安裝在您的作者實例上。[
 
 * 中繼資料結構彈出式值在資產屬性中不可見(CQ-4283287)。
 
@@ -1347,7 +1347,7 @@ Remove one mention of this fix.
 
 [!DNL Experience Manager] 6.5.2.0表格的主要亮點是：
 
-* 在`PDFFormRenderOptions` Forms OSGi的&lt;a1/> API中，將「Auto」（自動）設定新增至`RenderAtClient`。[!DNL Experience Manager]
+* 在`PDFFormRenderOptions` Forms OSGi的[!DNL Experience Manager] API中，將「Auto」（自動）設定新增至`RenderAtClient`。
 
 #### Forms附加套件
 
@@ -1533,7 +1533,7 @@ Remove one mention of this fix.
 
 **後端整合**
 
-* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29945:CQ-4270777的修補程式
+* 擷取受保護的網站服務定義語言(WSDL)時失敗。 NPR-29944:CQ-4270777的修補程式
 * 當[!DNL Experience Manager Forms]安裝在IBM WebSphere上時，基於SOAP建立表單資料模型失敗。 CQ-4251134的修補程式
 * 已針對Microsoft Dynamics內部部署整合啟用Active Directory Federation Services(ADFS)v3.0支援。 CQ-4270586的修補程式
 * 當資料來源的標題變更時，表單資料模型不會顯示更新的標題。 CQ-4265599的修補程式
