@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2815'
 ht-degree: 1%
 
 ---
@@ -168,7 +168,7 @@ ht-degree: 1%
 
 #### 將[!DNL Experience Manager Assets]配置為[!DNL Brand Portal](6.5.4.0){#configure-assets-bp}
 
-[!DNL Experience Manager Assets]和[!DNL Brand Portal]之間的授權通道被更改。 之前，[!DNL Brand Portal]是透過舊版OAuth閘道在傳統UI中設定，該閘道使用JWT代號交換來取得IMS存取代號以進行授權。 [!DNL Experience Manager Assets] 現在已透過Adobe  [!DNL Brand Portal] I/O設定，而Adobe I/O會購買IMS Token以取得您的租用戶 [!DNL Brand Portal] 授權。
+[!DNL Experience Manager Assets]和[!DNL Brand Portal]之間的授權通道被更改。 之前，[!DNL Brand Portal]是透過舊版OAuth閘道在傳統UI中設定，該閘道使用JWT代號交換來取得IMS存取代號以進行授權。 [!DNL Experience Manager Assets] 現在已設定為 [!DNL Brand Portal] 透過 [!DNL Adobe I/O]，而透過會購買IMS Token以取得您的租用戶 [!DNL Brand Portal] 授權。
 
 使用[!DNL Brand Portal]配置[!DNL Experience Manager Assets]的步驟因您的[!DNL Experience Manager]版本而異，取決於您是首次配置還是升級現有配置。 如需詳細資訊，請參閱[使用品牌入口網站設定Experience Manager資產。](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)
 
@@ -223,7 +223,7 @@ ht-degree: 1%
 
 #### 在用戶端(6.5.6.0){#prefill-merge-data-at-client}預先填寫最適化表格
 
-當您預先填寫最適化表格時，[!DNL Experience Manager Forms]伺服器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
+當您預先填寫最適化表單時，[!DNL Experience Manager Forms]伺服器會將資料與最適化表單合併，並將填寫的表單傳送給您。 依預設，資料合併動作會在伺服器上進行。
 您現在可以將[!DNL Experience Manager Forms]伺服器配置為[在客戶端執行資料合併操作，而不是在伺服器上執行。 ](../../help/forms/using/prepopulate-adaptive-form-fields.md)它可大幅縮短預先填寫和轉換最適化表單的時間。
 
 #### 在具備雙向SSL實作(6.5.6.0){#fdm-integration-rest-apis-two-way-ssl}的伺服器上，與REST風格的API整合表單資料模型
