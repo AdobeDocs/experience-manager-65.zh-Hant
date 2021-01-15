@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 71e827dc17fd1c36230cb8d26b68d7f41c584e60
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '6605'
+source-wordcount: '6596'
 ht-degree: 16%
 
 ---
@@ -162,7 +162,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 **若要使用內嵌程式碼追蹤動態媒體檢視器**:
 
 1. 讓網頁準備好嵌入動態媒體檢視器。
-1. 先登入Adobe Launch，以取得Adobe Launch程式庫的內嵌代碼（請參閱「設定Adobe Launch[」）。](#configuring-adobe-launch-for-the-integration)
+1. 先登入Adobe Launch，以取得Adobe Launch程式庫的內嵌代碼（請參閱「設定Adobe Launch](#configuring-adobe-launch-for-the-integration)」）。[
 1. 按一下&#x200B;**[!UICONTROL 屬性]** ，然後按一下&#x200B;**[!UICONTROL 環境]**&#x200B;頁籤。
 1. 選擇與網頁環境相關的環境級別。 然後，在&#x200B;**[!UICONTROL Install]**&#x200B;欄中，按一下框表徵圖。
 1. **[!UICONTROL 在「Web Install]** Instructions」（網頁安裝指示）對話方塊中，複製完整的Adobe Launch程式庫內嵌程式碼以及周圍的 `<script/>` 標籤。
@@ -182,7 +182,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 
 ### 設定動態媒體檢視器擴充功能{#configuring-the-dynamic-media-viewers-extension}
 
-「動態媒體檢視器」擴充功能的唯一設定選項是「啟用音訊和視訊的Adobe Media Analytics **[!UICONTROL 」。]**
+「動態媒體檢視器」擴充功能的唯一設定選項是「啟用音訊和視訊的Adobe Media Analytics ]**」。**[!UICONTROL 
 
 當您勾選（啟用或「開啟」）此選項，而且如果已安裝並正確設定Adobe Media Analytics for Audio and Video Extension，視訊播放量度會傳送至Adobe Analytics for Audio and Video解決方案。 停用此選項會關閉視訊追蹤。
 
@@ -418,7 +418,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 
 此外，如果此整合解決方案與AEM Sites搭配使用，也需要進行下列設定：
 
-* Adobe I/O Console —— 已針對Adobe Launch建立整合。
+* [!DNL Adobe I/O] Console —— 為Adobe Launch建立整合。
 * AEM作者節點- IMS設定和Adobe Launch雲端設定。
 
 在設定中，請確定您有權存取已啟用Adobe Analytics和Adobe Launch的Adobe Experience Cloud公司。
@@ -467,7 +467,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 
    就本檔案而言，只有自訂流量(prop)變數會被使用，因為這些變數會在網頁上發生動作後幾分鐘內提供至Analytics報表。
 
-   若要啟用新的自訂流量變數，請在Adobe Analytics的工具列上，按一下「管理>報表套裝&#x200B;**[!UICONTROL 」。]**
+   若要啟用新的自訂流量變數，請在Adobe Analytics的工具列上，按一下「管理>報表套裝&#x200B;]**」。**[!UICONTROL 
 
 1. 在「報 **[!UICONTROL 表套裝管理器]** 」頁面上，選取正確的報表，然後在工具列上按一下「編輯 **[!UICONTROL 設定>流量>流量變數」]**。
 1. 在此處，挑選未使用的變數，為其指定描述性名稱(**[!UICONTROL 檢視器資產(prop 30)]**)，並在「已啟用」欄中將組合方塊變更為「已啟用」。
@@ -693,7 +693,7 @@ AEM設定包含下列兩個主要步驟：
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. 在新的瀏覽器標籤中，導覽至[Adobe I/O Console](https://console.adobe.io/integrations)。
+1. 在新的瀏覽器標籤中，導覽至[[!DNL Adobe I/O] Console](https://console.adobe.io/integrations)。
 
 1. 從&#x200B;**[!UICONTROL Adobe I/O Console整合]**&#x200B;頁面，靠近右上角，按一下&#x200B;**[!UICONTROL 新整合]**。
 1. 在「建 **[!UICONTROL 立新整合]** 」對話方塊中，確定已選取「 **[!UICONTROL 存取API]** 」選項按鈕，然後按一下「繼 **[!UICONTROL 續]**」。
@@ -849,4 +849,4 @@ AEM設定包含下列兩個主要步驟：
 
 在上述AEM發佈的Adobe Launch Cloud設定中，指定Adobe Launch程式庫的「開發」或「測試URL」，即可解決此限制。 如此，AEM發佈節點就會使用Adobe Launch程式庫的「開發」或「測試」版本。
 
-如需設定Adobe Launch Cloud設定的詳細資訊，請參閱[透過Adobe I/O將AEM與Adobe Launch整合。](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)
+如需設定Adobe Launch Cloud設定的詳細資訊，請參閱[將AEM與Adobe Launch Via [!DNL Adobe I/O]](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)整合。
