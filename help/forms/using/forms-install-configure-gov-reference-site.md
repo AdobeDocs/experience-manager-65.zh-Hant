@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '4742'
+source-wordcount: '4743'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 1%
 ### 從軟體分發{#from-software-distribution}
 
 1. 開啟[軟體分發](https://experience.adobe.com/downloads)。 您必須有Adobe ID才能登入「軟體散發」。
-1. 點選頁首功能表中的「Adobe Experience Manager **[!UICONTROL 」。]**
+1. 點選頁首功能表中的「Adobe Experience Manager ]**」。**[!UICONTROL 
 1. 在&#x200B;**[!UICONTROL Filters]**&#x200B;區段中：
    1. 從&#x200B;**[!UICONTROL Solution]**&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL Forms]**。
    2. 選擇包的版本和類型。 您也可以使用&#x200B;**[!UICONTROL 搜尋下載]**&#x200B;選項來篩選結果。
@@ -264,7 +264,7 @@ ht-degree: 1%
 
 #### MS Dynamics雲端組態設定{#dynamicsconfig}
 
-本節中詳細說明的步驟可協助您從MS Dynamics Cloud例項中找出用戶端ID、用戶端密碼和詳細資訊。
+本節詳述的步驟可協助您從MS Dynamics Cloud例項中找出用戶端ID、用戶端密碼和詳細資訊。
 
 1. 導覽至[https://portal.azure.com/](https://portal.azure.com/)並登入。
 1. 從左側功能表中選擇「所有服務」。
@@ -465,7 +465,7 @@ AEM Forms Analytics資料在離線時可用，如果已安裝`we-gov-forms.ui.an
 
 若要安裝並設定AEM Forms與Adobe Forms，轉換工具使用者必須具備下列功能。
 
-1. 存取Adobe IO。
+1. 存取Adobe I/O。
 
 1. 建立與Adobe Forms轉換服務整合的權限。
 
