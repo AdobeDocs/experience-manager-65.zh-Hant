@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ad8ca7aaacd80bf5ca8daec78f7836e883e2343b
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4274'
 ht-degree: 0%
 
 ---
@@ -463,7 +463,7 @@ UberJar for Experience Manager 6.5.7.0可在[Maven Central儲存庫](https://rep
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| 整合 | **[!UICONTROL AEM Cloud Services Opt-In]**&#x200B;畫面已過時。 隨著AEM 6.5中的AEM和Target整合更新，以支援Target Standard API（透過Adobe IMS和I/O使用驗證），以及Adobe Launch在檢測AEM頁面以進行分析和個人化方面的角色日漸增加，「選擇加入」精靈在功能上已變得無關緊要。 | 透過個別的AEM雲端服務，設定系統連線、Adobe IMS驗證和Adobe I/O整合。 |
+| 整合 | **[!UICONTROL AEM Cloud Services Opt-In]**&#x200B;畫面已過時。 隨著AEM 6.5中的AEM和Target整合更新，以支援Target Standard API（透過Adobe IMS和I/O使用驗證），以及Adobe Launch在檢測AEM頁面以進行分析和個人化方面的角色日漸增加，「選擇加入」精靈在功能上已變得無關緊要。 | 透過個別的AEM雲端服務，設定系統連線、Adobe IMS驗證和[!DNL Adobe I/O]整合。 |
 | 連接器 | AEM 6.5不再支援Adobe JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013。 | N/A |
 
 ## 已知問題 {#known-issues}
