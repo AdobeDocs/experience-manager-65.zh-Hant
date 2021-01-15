@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: fa8d8c9a001b56006f1c0a30eb5a342754e63573
+source-git-commit: ad8ca7aaacd80bf5ca8daec78f7836e883e2343b
 workflow-type: tm+mt
-source-wordcount: '4227'
+source-wordcount: '4277'
 ht-degree: 0%
 
 ---
@@ -312,7 +312,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack不包含修正 [!DNL Forms]。它們是使用單獨的[!DNL Forms]附加軟體包傳遞的。 此外，還發行了包含JEE上[!DNL Experience Manager Forms]修正的累積安裝程式。 如需詳細資訊，請參閱「安裝AEM Forms附加元件](#install-aem-forms-add-on-package)」和「在JEE上安裝AEM Forms」。](#install-aem-forms-jee-installer)[[
+>[!DNL Experience Manager] Service Pack不包含修正 [!DNL Forms]。它們是使用單獨的[!DNL Forms]附加軟體包傳遞的。 此外，還發行了包含JEE上[!DNL Experience Manager Forms]修正的累積安裝程式。 如需詳細資訊，請參閱「安裝AEM Forms附加元件](#install-aem-forms-add-on-package)」和「在JEE上安裝AEM Forms」。[[](#install-aem-forms-jee-installer)
 
 **適用性表單**
 
@@ -324,7 +324,7 @@ ht-degree: 0%
 
 * 最適化表單會在提交表單後顯示的&#x200B;**[!UICONTROL 感謝]**&#x200B;頁面上顯示不想要的參數，例如`owner`和`status`(NPR-34989)。
 
-* [!UICONTROL [!UICONTROL Attachment]元件的&lt;a0/>檔案選擇]對話框顯示不支援的檔案類型以及在自適應表單提交過程中導致錯誤的選擇(NPR-34970)。
+* [!UICONTROL [!UICONTROL Attachment]元件的檔案選擇]對話框顯示不支援的檔案類型以及在自適應表單提交過程中導致錯誤的選擇(NPR-34970)。
 
 * 當您在[!DNL Experience Manager Sites]頁面中插入一個在表單之前包含文字的最適化表單時，游標焦點會直接移至表單而非表單之前的文字(NPR-34947)。
 
@@ -423,6 +423,10 @@ B.使用「套件管理員」的[HTTP API](https://docs.adobe.com/content/docs/e
 1. 請確定您已安裝Adobe Experience Manager Service Pack。
 1. 針對您的作業系統，下載列在[AEM Forms發行版](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)的對應Forms附加元件套件。
 1. 如[安裝AEM Forms附加元件套件](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中所述，安裝Forms附加元件套件。
+
+>[!NOTE]
+>
+>AEM 6.5.7.0包含新版[AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用舊版AEM Forms Compatibility Package並更新至AEM 6.5.7.0，請在安裝Forms Add-On Package後安裝最新版的套件。
 
 ### 在JEE {#install-aem-forms-jee-installer}上安裝Adobe Experience Manager Forms
 
