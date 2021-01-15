@@ -3,9 +3,9 @@ title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e124025295f29d6f3999dc52467301d48bceee75
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1514'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 瞭解、套用和組織智慧型標籤{#enhanced-smart-tags}
 
-處理數位資產的組織越來越多地在資產中繼資料中使用分類控制辭彙。 基本上，它包含員工、合作夥伴和客戶常用來參照和搜尋特定類別數位資產的關鍵字清單。 使用分類控制的辭彙來標籤資產，可確保透過標籤搜尋輕鬆識別和擷取資產。
+處理數位資產的組織越來越多地在資產中繼資料中使用分類控制辭彙。 基本上，它包含員工、合作夥伴和客戶常用來參照和搜尋特定類別數位資產的關鍵字清單。 使用分類控制的辭彙來標籤資產，可確保資產可輕鬆識別和擷取。
 
 與自然語言辭彙相比，基於業務分類法標籤數位資產有助於使其與公司業務保持一致，並確保最相關的資產出現在搜尋中。
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
-智慧型內容服務是Adobe I/O上代管的雲端服務。若要在[!DNL Adobe Experience Manager]中使用它，系統管理員必須將您的[!DNL Experience Manager]部署與Adobe I/O整合。
+智慧型內容服務是位於[!DNL Adobe I/O]的雲端服務。 要在[!DNL Adobe Experience Manager]中使用它，系統管理員必須將[!DNL Experience Manager]部署與[!DNL Adobe I/O]整合。
 
 總而言之，以下是使用智慧型內容服務的主要步驟：
 
@@ -38,15 +38,15 @@ ht-degree: 1%
 
 ## 必備條件 {#prerequisites}
 
-在您使用智慧型內容服務之前，請確定以下各項以建立Adobe I/O整合：
+在使用智慧型內容服務之前，請確定以下內容以在[!DNL Adobe I/O]上建立整合：
 
 * Adobe ID 帳戶具有組織的管理員權限。
 * 您的組織已啟用智慧型內容服務。
-* 智慧型內容服務基本套件只能新增至已授權[!DNL Sites]基本套件和[!DNL Assets]附加元件的部署。
+* 智慧型內容服務基本套件只能新增至已授權[!DNL Adobe Experience Manager Sites]基本套件和[!DNL Assets]附加元件的部署。
 
 ## 入門 {#onboarding}
 
-智慧型內容服務可作為[!DNL Experience Manager]的附加元件購買。 在您購買後，系統會寄送電子郵件給您組織的管理員，並附上Adobe I/O的連結。
+智慧型內容服務可作為[!DNL Experience Manager]的附加元件購買。 購買後，系統會傳送電子郵件給您組織的管理員，並附上[!DNL Adobe I/O]的連結。
 
 管理員可以遵循該連結將Smart Content Service與[!DNL Experience Manager]整合。 要將服務與[!DNL Experience Manager Assets]整合，請參閱[配置智慧標籤](config-smart-tagging.md)。
 
@@ -73,21 +73,21 @@ ht-degree: 1%
 
 ## 瞭解[!DNL Experience Manager]搜尋結果與智慧標籤{#understandsearch}
 
-依預設，[!DNL Experience Manager]搜尋會將搜尋詞與`AND`子句結合。 使用智慧型標籤不會變更此預設行為。 使用智慧型標籤會新增額外的`OR`子句，以尋找套用智慧型標籤中的任何搜尋詞。 例如，請考慮搜索`woman running`。 預設情況下，中繼資料中只包含`woman`或`running`關鍵字的資產不會出現在搜尋結果中。 但是，使用智慧標籤標籤以`woman`或`running`標籤的資產會出現在此類搜尋查詢中。 所以搜索結果是，
+依預設，[!DNL Experience Manager]搜尋會將搜尋詞與`AND`子句結合。 使用智慧型標籤不會變更此預設行為。 使用智慧型標籤會新增額外的`OR`子句，以尋找與智慧型標籤相關的搜尋詞。 例如，請考慮搜索`woman running`。 預設情況下，中繼資料中只包含`woman`或`running`關鍵字的資產不會出現在搜尋結果中。 但是，使用智慧標籤標籤以`woman`或`running`標籤的資產會出現在此類搜尋查詢中。 所以搜索結果是，
 
-* 資產，其中包含中繼資料中的`woman`和`running`關鍵字。
+* 中繼資料中具有`woman`和`running`關鍵字的資產。
 
-* 資產智慧標籤為其中一個關鍵字。
+* 使用任一關鍵字標籤智慧資產。
 
 會先顯示符合中繼資料欄位中所有搜尋詞的搜尋結果，接著顯示符合智慧標籤中任何搜尋詞的搜尋結果。 在上述範例中，搜尋結果的顯示近似順序為：
 
-1. 與各中繼資料欄位中`woman running`的相符項目。
-1. 與智慧型標籤中`woman running`的相符項目。
-1. 在智慧型標籤中符合`woman`或`running`。
+1. 在各種中繼資料欄位中符合`woman running`。
+1. 在智慧型標籤中符合`woman running`。
+1. 在智慧標籤中符合`woman`或`running`。
 
 >[!CAUTION]
 >
->如果在[!DNL Adobe Experience Manager]之外完成Lucene索引，則基於智慧標籤的搜索將無法如預期般運作。
+>如果在[!DNL Adobe Experience Manager]中完成Lucene索引，則基於智慧標籤的搜索將無法如預期般運作。
 
 ## 自動標籤資產{#tagging-assets-automatically}
 
@@ -140,7 +140,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->在後續的標籤週期中，只有修改過的資產會再次使用新訓練過的標籤進行標籤。但是，如果標籤工作流程的最後一個標籤週期與目前標籤週期之間的間隔超過24小時，則甚至會標籤未更改的資產。 對於定期標籤工作流程，未變更的資產會在時間間隔超過6個月時加以標籤。
+>在後續的標籤週期中，只有修改過的資產會再次使用新訓練的標籤進行標籤。 不過，如果標籤工作流程的最後一個與目前標籤週期之間的間隔超過24小時，則即使未變更的資產也會被標籤。 對於定期標籤工作流程，未變更的資產會在時間間隔超過6個月時加以標籤。
 
 ## 組織或協調套用的智慧型標籤{#manage-smart-tags}
 
@@ -152,9 +152,9 @@ ht-degree: 1%
 
 1. 在Omnisearch方塊中，根據標籤搜尋資產。
 1. 檢查搜尋結果，以識別與搜尋無關的影像。
-1. 選擇該影像，然後按一下工具欄中的「管理標籤」。]****[!UICONTROL 
+1. 選擇該影像，然後按一下工具欄中的「管理標籤」。****
 1. 從&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面檢查標籤。 如果您不想根據特定標籤來搜尋影像，請選取標籤，然後從工具列按一下「刪除」。 ****&#x200B;或者，按一下標籤旁出現的`x`符號。
-1. 或者，若要指派較高的排名給標籤，請選取標籤，然後從工具列按一下「提升」。 ]****[!UICONTROL &#x200B;您促銷的標籤會移至&#x200B;**[!UICONTROL Tags]**&#x200B;區段。
+1. 或者，若要指派較高的排名給標籤，請選取標籤，然後從工具列按一下「提升」。 ****&#x200B;您促銷的標籤會移至&#x200B;**[!UICONTROL Tags]**&#x200B;區段。
 1. 按一下&#x200B;**[!UICONTROL 保存]** ，然後按一下&#x200B;**[!UICONTROL 確定]**
 1. 導覽至影像的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面。 請注意，您所促銷的標籤會被指派為更相關的標籤，並會出現在搜尋結果的前面。
 
