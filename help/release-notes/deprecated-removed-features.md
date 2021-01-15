@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版本中已停用和移除的功能。
 description: Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 translation-type: tm+mt
-source-git-commit: 1e6feac534fe990d614997c4bd3ab999a4a8d479
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1719'
 ht-degree: 7%
 
 ---
@@ -34,7 +34,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 資產 | 如果使用者對`/content/dam/collections`沒有足夠的（讀取和寫入）權限，則使用者無法建立系列。 | 遵循使用者的存取控制設定，並確保適當的權限。 |
 | Adobe Search &amp; Promote | 不再提倡與Adobe Search &amp; Promote的整合。 Adobe不打算對「搜尋與促銷」整合做進一步的增強。 請注意，Search &amp; Promote整合仍完全受支援，但不建議使用。 |  |
 | DTM標籤管理器 | 不再支援與DTM（動態標籤管理器）的整合。 | 切換使用Adobe Experience Platform Launch做為標籤管理程式。 |
-| Adobe Target | 在AEM 6.5中新增AEM使用Adobe I/O架構的Adobe Target Standard API(Rest API)連線至Adobe Target服務的功能，Target Classic API(XML)方式已過時。 | 將整合重新設定為[使用新的API](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html)。 |
+| Adobe Target | 在AEM 6.5中新增AEM使用[!DNL Adobe I/O]架構的Adobe Target Standard API(Rest API)連線至Adobe Target服務的功能後，Target Classic API(XML)方式即不再提供。 | 將整合重新設定為[使用新的API](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html)。 |
 | Adobe Target | 不建議在AEM中使用與Adobe Target的`mbox.js`整合。 | 切換為使用`at.js` 1.x。 |
 | 商務 | [CIF ](https://github.com/adobe/commerce-cif-api) REST是在2018年提供的一套微型服務，可讓AEM與商務引擎整合。在Adobe於2018年年中收購Magento後，Adobe決定改變其方式，原因有二。 Magento有自己的一組商務API（REST和GraphQL），維護兩組API並不是很好的做法。 市場趨勢表明，客戶正在向GraphQL靠攏，因為GraphQL是一種更高效的資料查詢方式。 在2019年，Adobe已推出新的商務整合架構，使用Magento的GraphQL API作為真相來源。 Adobe並不打算進一步投資CIF REST。 強烈建議客戶使用更換解決方案。 | 對於AEM-Magento整合，請切換至[AEM CIF Archetype](https://github.com/adobe/aem-cif-project-archetype)和[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components)。 請參閱「使用商務整合架構」的AEM和Magento整合[。 ](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)我們的規劃藍圖中已列出支援協力廠商（Magento除外）與新方法整合的功能。 |
 | 元件(AEM Sites) | Adobe不打算對儲存在`/libs/foundation/components`中的大部分Foundation Components進行進一步的增強。 在元件資料夾中查找`cq:deprecated`和`cq:deprecatedReason`屬性。 AEM 6.5包含Foundation Components，而從舊版升級的客戶可依現狀繼續使用這些元件。 此外，即使已停用，Foundation Components仍完全受支援。 | Adobe建議未來專案使用核心元件。 現有網站可維持原狀，或使用[AEM最新化工具套件](https://github.com/adobe/aem-modernize-tools)重新調整網站以使用核心元件。 |
