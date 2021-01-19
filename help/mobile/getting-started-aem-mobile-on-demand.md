@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 1%
@@ -36,7 +36,7 @@ AEM Preflight應用程式可視為測試環境，以在發佈前預覽應用程�
 
 >[!NOTE]
 >
->若要深入瞭解Preflight應用程式，請參閱「AEM Mobile隨選服務說明」中的「使用AEM Preflight應用程式[」。](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)
+>若要深入瞭解Preflight應用程式，請參閱「AEM Mobile隨選服務說明」中的「使用AEM Preflight應用程式](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)」。[
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -84,7 +84,7 @@ AEM開發人員在使用AEM Mobile隨選服務建立應用程式時，需負責�
 * [應用程式範本和元件](/help/mobile/app-templates-and-components1.md)
 * [具備內容同步功能的行動裝置](/help/mobile/mobile-ondemand-contentsync.md)
 * [內容屬性和匯出內容](/help/mobile/on-demand-content-properties-exporting.md)
-* [開發AEM Mobile內容服務](//help/mobile/developing-content-services.md)
+* [開發AEM Mobile內容服務](/help/mobile/developing-content-services.md)
 
 若要開始使用開發人員的角色和責任，請參閱[開發AEM Mobile隨選服務的AEM內容](/help/mobile/aem-mobile-on-demand.md)。
 
@@ -104,9 +104,9 @@ AEM作者在使用AEM Mobile隨選服務建立應用程式時，必須瞭解下�
 * [管理內容](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 * [內容服務概觀](/help/mobile/develop-content-as-a-service.md)
 
-若要開始使用作者的角色和責任，請參閱「編寫AEM Mobile On-Demand Services App[的AEM內容」。](/help/mobile/mobile-apps-ondemand.md)
+若要開始使用作者的角色和責任，請參閱「編寫AEM Mobile On-Demand Services App](/help/mobile/mobile-apps-ondemand.md)的AEM內容」。[
 
 >[!NOTE]
 >
->AEM Author也負責設定權益、建立卡片和版面，以及傳送推播通知。 此外，如需更多有關內容製作方法的資訊；管理文章和系列；在AEM Mobile中建立橫幅、卡片和版面，請參閱「AEM Mobile隨選入口網站」[。](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2)
+>AEM Author也負責設定權益、建立卡片和版面，以及傳送推播通知。 此外，如需更多有關內容製作方法的資訊；管理文章和系列；在AEM Mobile中建立橫幅、卡片和版面，請參閱「AEM Mobile隨選入口網站」](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2)。[
 
