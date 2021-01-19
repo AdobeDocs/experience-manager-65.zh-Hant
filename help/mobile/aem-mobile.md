@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: administering-on-demand-services-app
 discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 1%
@@ -53,7 +53,7 @@ AEM管理員在使用AEM Mobile隨選服務建立應用程式時，負責下列�
 
 * [設定您的使用者和使用者群組](/help/mobile/aem-mobile-configure-users.md)
 * [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)
-* [管理內容服務](//help/mobile/developing-content-services.md)
+* [管理內容服務](/help/mobile/developing-content-services.md)
 
 ## 其他資源 {#additional-resources}
 
