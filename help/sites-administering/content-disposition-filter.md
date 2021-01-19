@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 translation-type: tm+mt
-source-git-commit: 741ba6f6ef3270414c0ddabb1a1d02d5c436b7d9
+source-git-commit: bb50e530f0d015c0e7d06650157e3e3994082483
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -34,5 +34,4 @@ ht-degree: 0%
 
 * 排除的資源路徑：排除的資源清單中，必須將每個資源路徑指定為絕對和完全限定路徑。 不支援首碼比對／萬用字元。
 
-* 對所有資源路徑啟用：此標誌控制是否為所有路徑啟用此篩選器，但排除資源路徑定義的排除路徑除外。 將此設為&#39;true&#39;會忽略「內容處置路徑」。 不受僅包含配置的資源路徑的限制，這些資源路徑包含名為&#39;jcr:data&#39;或&#39;jcr:content jcr:data&#39;的屬性。
-
+* 對所有資源路徑啟用：此標誌控制是否為所有路徑啟用此篩選器，但排除資源路徑定義的排除路徑除外。 將此設為&#39;true&#39;會忽略「內容處置路徑」。 與配置無關，僅覆蓋包含名為&#39;jcr:data&#39;或&#39;jcr:content/jcr:data&#39;的屬性的資源路徑。
