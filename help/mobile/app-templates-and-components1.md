@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->若要瞭解如何使用CRXDE Lite來開發AEM應用程式，請參閱「使用CRXDE Lite[開發」。](/help/sites-developing/developing-with-crxde-lite.md)
+>若要瞭解如何使用CRXDE Lite來開發AEM應用程式，請參閱「使用CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)開發」。[
 
 範本是頁面的基礎。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 * [建立和添加模板和元件](/help/mobile/mobile-ondemand-app-templates.md)
 * [使用內容屬性匯出內容](/help/mobile/on-demand-content-properties-exporting.md)
 * [最佳作法](/help/mobile/best-practices-aem-mobile.md)
-* [開發AEM Mobile內容服務](//help/mobile/developing-content-services.md)
+* [開發AEM Mobile內容服務](/help/mobile/developing-content-services.md)
 
 ### 其他資源 {#additional-resources}
 
