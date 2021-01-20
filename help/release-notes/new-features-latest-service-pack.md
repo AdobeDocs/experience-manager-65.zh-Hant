@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2770'
 ht-degree: 1%
 
 ---
@@ -21,10 +21,6 @@ ht-degree: 1%
 本文著重說明最新版6.5 Service Pack中包含的功能、前6.5 Service Pack中包含的[主要功能，以及自上一版Service Pack](#key-releases-since-last-sp)以來的[主要AEM版本。](#key-features-previous-service-packs)
 
 ## Adobe [!DNL Experience Manager Sites] {#aem-sites}
-
-### 排序可轉出的即時副本頁面{#sort-livecopy-pages}
-
-您現在可以使用[!UICONTROL 名稱]、[!UICONTROL 上次修改日期]和[!UICONTROL 上次轉出日期]屬性，來排序可轉出的即時副本頁面。 頁面的[!UICONTROL 上次推出日期]是此發行中引入的新屬性。
 
 ### 頁面移動和MSM展開的可用性作為非同步操作{#page-moves-msm-asynchronous}
 
@@ -223,7 +219,7 @@ ht-degree: 1%
 
 #### 在用戶端(6.5.6.0){#prefill-merge-data-at-client}預先填寫最適化表格
 
-當您預先填寫最適化表單時，[!DNL Experience Manager Forms]伺服器會將資料與最適化表單合併，並將填寫的表單傳送給您。 依預設，資料合併動作會在伺服器上進行。
+當您預先填寫最適化表格時，[!DNL Experience Manager Forms]伺服器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
 您現在可以將[!DNL Experience Manager Forms]伺服器配置為[在客戶端執行資料合併操作，而不是在伺服器上執行。 ](../../help/forms/using/prepopulate-adaptive-form-fields.md)它可大幅縮短預先填寫和轉換最適化表單的時間。
 
 #### 在具備雙向SSL實作(6.5.6.0){#fdm-integration-rest-apis-two-way-ssl}的伺服器上，與REST風格的API整合表單資料模型
