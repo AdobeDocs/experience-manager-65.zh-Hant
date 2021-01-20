@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70fff9b4029ba70fe0667dafa69fc6172f4b1733
+source-git-commit: 77c3624a780bd0d2e3bb3e82004cce73e5b66b32
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3827'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 0%
 
       >[!NOTE]
       >
-      >**[!UICONTROL Adobe Sign Cloud Service]**&#x200B;下拉式清單會顯示您在此欄位中選取之組態容器中設定的雲端服務。 當您選取「啟用Adobe Sign ]**」選項時，最適化表單屬性的「電子簽名」區段中會提供**[!UICONTROL  Adobe Sign Cloud Service ]**下拉式清單。**[!UICONTROL ****
+      >**[!UICONTROL Adobe Sign Cloud Service]**&#x200B;下拉式清單會顯示您在此欄位中選取之組態容器中設定的雲端服務。 當您選取「啟用Adobe Sign ]**」選項時，最適化表單屬性的「電子簽名」區段中會提供**[!UICONTROL  Adobe Sign Cloud Service ]**下拉式清單。******[!UICONTROL 
 
 1. 在&#x200B;**[!UICONTROL 表單模型]**&#x200B;標籤中，選擇以下選項之一：
 
@@ -119,7 +119,7 @@ ht-degree: 0%
    >[!NOTE]
    >
    >    * 使用[!DNL Adobe Sign]塊不是要求以自適應形式使用[!DNL Adobe Sign]的。 如果您不使用[!DNL Adobe Sign]區塊並新增簽署者的欄位，則會在簽署檔案底部顯示預設簽名欄位。
-   >    * 僅針對自動產生記錄檔案的最適化表單使用[!DNL Adobe Sign]區塊。 如果您使用自訂XDP來產生記錄檔案或以表單範本為基礎的最適化表單，則不需要[!DNL Adobe Sign]區塊。
+   >    * 僅針對自動產生記錄檔案的最適化表單使用[!DNL Adobe Sign]區塊。 如果您使用自訂XDP來產生記錄檔案或以表單範本為基礎的最適化表單，則不支援[!DNL Adobe Sign]區塊。
 
 
 1. 選擇&#x200B;**[!UICONTROL Adobe Sign Block]**&#x200B;元件，然後點選&#x200B;**Edit** ![ aem_6_3_edit](assets/aem_6_3_edit.png)圖示。 它顯示添加欄位和欄位格式外觀的選項。
@@ -300,7 +300,8 @@ ht-degree: 0%
       > 以下是一些最佳實務：
    > * 包含簽名步驟的最適化表單面板永遠位於最適化表單的最後一個或第二個最後一個面板。 只有在最後一個面板包含「摘要」步驟時，它才能是第二個最後一個面板。
    > * 包含「簽名」或「摘要」步驟元件的面板不能包含任何其他元件。
-   > * 包含「簽名步驟」的最適化表單不能有「提交」按鈕。 提交是通過後台服務或摘要步驟處理的。
+   > * 包含「簽名步驟」的最適化表單不能有「提交」按鈕。
+   > * 包含簽名步驟的最適化表單的提交是透過背景服務或摘要步驟處理。 如果有一個已設定的簽署者也在填寫表單，則使用「摘要」步驟處理最適化表單提交的優點是，它會立即評估簽署者已簽署表單並叫用提交動作。 背景服務需要更多時間來評估所有設定的簽署者是否已簽署表單，並延遲提交最適化表單。
    > * 設計表單，讓使用者不能從包含「簽名」或「摘要」步驟的面板導覽回來。
 
 
