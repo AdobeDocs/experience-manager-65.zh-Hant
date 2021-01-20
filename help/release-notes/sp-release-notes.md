@@ -4,23 +4,23 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
 workflow-type: tm+mt
-source-wordcount: '4274'
-ht-degree: 0%
+source-wordcount: '4255'
+ht-degree: 3%
 
 ---
 
 
 # [!DNL Adobe Experience Manager] 6.5 Service Pack發行說明  {#aem-service-pack-release-notes}
 
-## 發行資訊{#release-information}
+## 發行資訊 {#release-information}
 
 | 產品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
 | 版本 | 6.5.7.0 |
 | 類型 | Service Pack版本 |
-| 日期 | 2020年11月26日 |
+| 日期 | 2020 年 11 月 26 日 |
 | 下載URL | [軟體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.7.zip) |
 
 <!-- TBD: Update the SD link when SP7 is available. -->
@@ -30,8 +30,6 @@ ht-degree: 0%
 [!DNL Adobe Experience Manager] 6.5.7.0是重要的更新，其中包括自2019年4月6.5版推出以來，新功能、主要客戶要求的增強功能，以及效能、穩定性和安全性增強功能。[!DNL Adobe Experience Manager] 6.5上安裝了Service Pack。
 
 [!DNL Adobe Experience Manager] 6.5.7.0中引入的主要功能和增強功能包括：
-
-* 使用[!UICONTROL Name]、[!UICONTROL 上次修改日期、]和[!UICONTROL 上次轉出日期]屬性，對可開始的即時副本頁面排序。
 
 * 執行頁面移動和MSM展開作為非同步操作，以降低它們對執行時期效能的影響。
 
@@ -49,7 +47,7 @@ ht-degree: 0%
 
    * 使用[!DNL Automated Forms Conversion service]將PDF表單轉換為最適化表單。
 
-* 內建儲存庫(Apache Jackrabbit Oak)已更新至1.22.5版。
+* 內建存放庫 (Apache Jackrabbit Oak) 更新至 1.22.5 版。
 
 如需[!DNL Experience Manager] 6.5.7.0中推出的完整功能與增強功能清單，請參閱[6.5 Service Pack 7](new-features-latest-service-pack.md)中的新增功能。 [!DNL Adobe Experience Manager] 
 
@@ -171,7 +169,7 @@ ht-degree: 0%
 
 * 在編輯器中開啟內容片段時，警告消息(`Invalid value specified for a metadata property`)將記錄在錯誤日誌中(NPR-35012)。
 
-* 不具管理員權限的使用者可使用[Experience Manager]案頭應用程式編輯過期的資產。 (NPR-34993)。
+* 不具管理員權限的使用者可使用[Experience Manager]案頭應用程式編輯過期的資產。 (NPR-34993).
 
 * 當在「資產」使用者介面上拖曳相同的「資產」並建立新版本時，中繼資料中的變更不會持續存在(NPR-34940)。
 
@@ -281,7 +279,7 @@ ht-degree: 0%
    ERROR The start time must precede (be less than) the end time
    ```
 
-### 整合{#integrations-6570}
+### Integrations {#integrations-6570}
 
 * 編輯現有[!DNL Adobe Launch]配置失敗(NPR-35045)。
 * 如果使用IMS配置和[!DNL Adobe Target Standard]環境，則無法將[!DNL Experience Fragments]導出到[!DNL Adobe Target](NPR-34555)。
@@ -308,7 +306,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] 在計畫的Service Pack發行日期後一週發行附 [!DNL Experience Manager] 加軟體包。
+>[!DNL Experience Manager Forms] 會在排程的[!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
 
 >[!NOTE]
 >
@@ -336,7 +334,7 @@ ht-degree: 0%
 
 * 標籤導覽無法適合最適化表單的螢幕閱讀程式(NPR-34544)。
 
-**信件管理**
+**通信管理**
 
 * 無法將包含浮點類型之數值資料的XML標籤值儲存為草稿(NPR-35050)。
 
@@ -348,7 +346,7 @@ ht-degree: 0%
 
 * 在安裝[!DNL Forms]附加元件套件後，Interactive Communication的轉出組態名稱會複製標準的轉出組態名稱(NPR-34976)。
 
-**Document Security**
+**文件安全性**
 
 * 當您儲存新的檔案安全性政策時，Experience Manager Forms會顯示`Relative validity period is required`錯誤訊息(NPR-34679)。
 
@@ -378,7 +376,7 @@ ht-degree: 0%
 
 1. 從[軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.7.zip)下載服務包。
 
-1. 開啟包管理器，然後按一下&#x200B;**[!UICONTROL Upload Package]**&#x200B;上載包。 如需詳細資訊，請參閱[Package Manager](/help/sites-administering/package-manager.md)。
+1. 開啟套件管理器，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。如需詳細資訊，請參閱[Package Manager](/help/sites-administering/package-manager.md)。
 
 1. 選擇軟體包並按一下&#x200B;**[!UICONTROL Install]**。
 
@@ -414,14 +412,14 @@ B.使用「套件管理員」的[HTTP API](https://docs.adobe.com/content/docs/e
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] 在計畫的Service Pack發行日期後一週發行附 [!DNL Experience Manager] 加軟體包。
+>[!DNL Experience Manager Forms] 會在排程的[!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
 
 >[!NOTE]
 >
 >如果您不使用AEM Forms，請略過。 Adobe Experience Manager Forms中的修正是透過個別的附加套件提供。
 
 1. 請確定您已安裝Adobe Experience Manager Service Pack。
-1. 針對您的作業系統，下載列在[AEM Forms發行版](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)的對應Forms附加元件套件。
+1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)所列出的對應 Forms 附加套件。
 1. 如[安裝AEM Forms附加元件套件](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中所述，安裝Forms附加元件套件。
 
 >[!NOTE]
@@ -463,7 +461,7 @@ UberJar for Experience Manager 6.5.7.0可在[Maven Central儲存庫](https://rep
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| 整合 | **[!UICONTROL AEM Cloud Services Opt-In]**&#x200B;畫面已過時。 隨著AEM 6.5中的AEM和Target整合更新，以支援Target Standard API（透過Adobe IMS和I/O使用驗證），以及Adobe Launch在檢測AEM頁面以進行分析和個人化方面的角色日漸增加，「選擇加入」精靈在功能上已變得無關緊要。 | 透過個別的AEM雲端服務，設定系統連線、Adobe IMS驗證和[!DNL Adobe I/O]整合。 |
+| Integrations | **[!UICONTROL AEM Cloud Services Opt-In]**&#x200B;畫面已過時。 隨著AEM 6.5中的AEM和Target整合更新，以支援Target Standard API（透過Adobe IMS和I/O使用驗證），以及Adobe Launch在檢測AEM頁面以進行分析和個人化方面的角色日漸增加，「選擇加入」精靈在功能上已變得無關緊要。 | 透過個別的AEM雲端服務，設定系統連線、Adobe IMS驗證和[!DNL Adobe I/O]整合。 |
 | 連接器 | AEM 6.5不再支援Adobe JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013。 | N/A |
 
 ## 已知問題 {#known-issues}
@@ -515,9 +513,9 @@ UberJar for Experience Manager 6.5.7.0可在[Maven Central儲存庫](https://rep
 
 下列文字檔案列出AEM 6.5.7.0中包含的OSGi組合和內容套件：
 
-* [AEM 6.5.7.0隨附的OSGi搭售清單](assets/6570_bundles.txt)
+* [AEM 6.5.7.0 中包含的 OSGi 套件組合清單](assets/6570_bundles.txt)
 
-* [AEM 6.5.7.0內容套件清單](assets/6570_packages.txt)
+* [AEM 6.5.7.0 中包含的內容套件清單](assets/6570_packages.txt)
 
 ## 受限制的網站{#restricted-sites}
 
@@ -531,5 +529,5 @@ UberJar for Experience Manager 6.5.7.0可在[Maven Central儲存庫](https://rep
 >* [[!DNL Experience Manager] 6.5發行說明](/help/release-notes/release-notes.md)
 >* [[!DNL Experience Manager] 產品頁面](https://www.adobe.com/tw/marketing/experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/docs/experience-manager-65.html)
->* 訂閱[Adobe優先產品更新](https://www.adobe.com/subscription/priority-product-update.html)
+>* 訂閱 [Adobe 優先產品更新](https://www.adobe.com/subscription/priority-product-update.html)
 
