@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1870'
 ht-degree: 1%
 
 ---
@@ -123,7 +123,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 * 使用Adobe搭售的CDN（內容放送網路）做為您授權的一部分。
 * 使用專用網域（例如`images.company.com`或`mycompany.scene7.com`），而不使用一般網域（例如`s7d1.scene7.com`、`s7d2.scene7.com`或`s7d13.scene7.com`）。
 
-若要尋找您的網域，請登入您的公司帳戶或帳戶。
+若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。
 
 點選「**[!UICONTROL 設定>應用程式設定>一般設定」。]** 查找標有「已發佈伺服器 **[!UICONTROL 名稱」的欄位。]** 如果您目前使用一般網域，在提交技術支援票證時，可以請求移轉至您自己的自訂網域，做為此移轉的一部分。
 
@@ -139,7 +139,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
    1. 主要聯絡人姓名、電子郵件、電話。
    1. 要啟用智慧映像的所有域（即`images.company.com`或`mycompany.scene7.com`）。
 
-      若要尋找您的網域，請登入您的公司帳戶或帳戶。
+      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。
 
       按一下&#x200B;**[!UICONTROL 設定>應用程式設定>常規設定。]**
 
@@ -147,7 +147,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
    1. 確認您是否透過Adobe使用CDN，而且未透過直接關係進行管理。
    1. 確認您使用的是專用網域，例如`images.company.com`或`mycompany.scene7.com`，而不是通用網域，例如`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com`。
 
-      若要尋找您的網域，請登入您的公司帳戶或帳戶。
+      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。
 
       按一下&#x200B;**[!UICONTROL 設定>應用程式設定>常規設定。]**
 
@@ -183,7 +183,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 
 1. 請確定開啟開發人員工具時已停用快取。
 
-   * 在Windows上——導覽至「開發人員工具」窗格中的設定，然後選取「停用快取（在開啟裝置工具時）」**[!UICONTROL 核取方塊。]**
+   * 在Windows上——導覽至「開發人員工具」窗格中的設定，然後選取「停用快取（在開啟裝置工具時）」]**核取方塊。**[!UICONTROL 
    * 在Mac上——在開發人員窗格的&#x200B;**[!UICONTROL Network]**&#x200B;標籤下，選擇&#x200B;**[!UICONTROL disable cache]**。
 
 1. 觀察「內容類型」已轉換為適當的格式。 下列螢幕擷取顯示在Chrome上動態轉換為WebP的PNG影像。
