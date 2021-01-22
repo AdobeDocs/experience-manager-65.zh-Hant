@@ -1,17 +1,15 @@
 ---
 title: 使用Dynamic Media Classic驗證CDN快取
 description: 使CDN（內容傳送網路）快取內容失效可讓您快速更新由Dynamic Media Classic傳送的資產，而不需等待快取過期。
-uuid: 0fd88e31-9745-4c98-a245-9f5d0766cad4
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 23%
+source-wordcount: '700'
+ht-degree: 24%
 
 ---
 
@@ -24,19 +22,13 @@ CDN會快取動態媒體資產，以便快速傳送。 不過，當您更新資�
 >
 >下列步驟僅適用於AEM 6.5、Service Pack 5(AEM 6.5.5)或更舊版本的Dynamic Media。<br>如果您在AEM 6.5、Service Pack 6(AEM 6.5.6)或更新版本中使用Dynamic Media，請依照 [Invalidating the CDN cache by Dynamic Media中的步驟進行。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 
-另請參閱Dynamic Media Classic(Scene7)[中的「快取概觀」。](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)
+另請參閱Dynamic Media Classic(Scene7)](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)中的「快取概觀」。[
 
 **若要透過Dynamic Media Classic使CDN快取失效：**
 
-1. 執行下列任一項作業：
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)，然後登入您的帳戶。
 
-   * 在您的網頁瀏覽器中，登入您的Dynamic Media Classic帳戶：
-
-      [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
-
-      您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
-
-   * 開啟Dynamic Media Classic應用程式，然後登入您的帳戶。
+   您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
 
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL 設定>應用程式設定>一般設定。]**
 1. 在「應用程式一般設定」頁面的「伺服器」群組標題下，找到&#x200B;**[!UICONTROL CDN失效範本]**&#x200B;文字方塊。
