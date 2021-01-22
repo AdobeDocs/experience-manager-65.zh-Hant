@@ -1,19 +1,15 @@
 ---
 title: 與Adobe Marketing Cloud整合
-seo-title: 與Adobe Marketing Cloud整合
-description: 瞭解如何將AEM與Adobe Marketing Cloud整合。
-seo-description: 瞭解如何將AEM與Adobe Marketing Cloud整合。
-uuid: 36d71dd3-7fb0-4237-99d3-4fbb2e162e7b
+description: 瞭解如何將Adobe Experience Manager與Adobe Marketing Cloud整合。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 0%
+source-wordcount: '998'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +22,7 @@ ht-degree: 0%
 
 * Adobe Analytics為行銷人員提供有關線上策略和行銷舉措的可操作、即時智慧。
 * Adobe Target讓行銷人員能夠持續提升其線上內容與客戶的關聯性。 產生更高的轉換率。
-* Adobe Scene7可在代管環境中自動化媒體管理、簡化網頁發佈並增強網頁體驗。
+* Adobe Dynamic Media Classic可自動化媒體管理、簡化網頁發佈並增強網頁體驗，全都在代管環境中完成。
 * Adobe動態標籤管理為行銷人員提供直覺式工具，可快速輕鬆管理不限數量的Adobe和協力廠商標籤。
 * Adobe Search&amp;Promote讓行銷人員能夠控制並最佳化其網站上的搜尋結果。
 * Adobe Campaign可讓您直接在Adobe Experience Manager中管理電子郵件傳送內容。
@@ -76,11 +72,11 @@ AEM提供簡單的加入程式，可與Adobe Analytics和Adobe Target整合。 �
 
 Adobe Dynamic Media Classic是代管解決方案，適用於發佈、管理、增強和提供動態行銷資產和豐富視覺化銷售至網頁、行動裝置、電子郵件、社交媒體、網際網路連線顯示器和印刷品。
 
-在AEM中，您可以直接從AEM發佈數位資產至Dynamic Media Classic，也可以從Dynamic Media Classic發佈數位資產至AEM。
+在Adobe Experience Manager中，您可以直接從Adobe Experience Manager發佈數位資產至Dynamic Media Classic，並且可以將數位資產從Dynamic Media Classic發佈至Adobe Experience Manager。
 
-此外，您也可以在各種檢視器（例如「基本縮放」和「視訊」）中，檢視在Dynamic Media Classic中發佈的AEM資產。
+此外，您還可以在各種檢視器（例如「基本縮放」和「視訊」）中，檢視在Dynamic Media Classic中發佈的Adobe Experience Manager資產。
 
-如需AEM如何與Dynamic Media Classic整合的詳細資訊，請參閱[與Dynamic Media Classic整合](/help/sites-administering/scene7.md)檔案。
+如需Adobe Experience Manager如何與Dynamic Media Classic整合的詳細資訊，請參閱[與Dynamic Media Classic整合](/help/sites-administering/scene7.md)檔案。
 
 ## 與Adobe動態標籤管理整合{#integrating-with-adobe-dynamic-tag-management}
 
@@ -94,7 +90,7 @@ AEM 6.3已移除Audience Manager整合。
 
 ## 與Search&amp;Promote整合{#integrating-with-search-promote}
 
-[Adobe Search&amp;](https://www.omniture.com/en/products/conversion/search-and-promote) Promote可讓行銷人員最佳化訪客在網站和行動網站上瀏覽、尋找、比較和選擇相關產品和內容的方式。企業可以根據業務目標和訪客意願輕鬆促銷優先項目，並透過KPI型觸發器或量度自動化銷售和促銷活動。
+Adobe Search&amp;Promote可讓行銷人員最佳化訪客在網站和行動網站上瀏覽、尋找、比較及選擇相關產品和內容的方式。 企業可以根據業務目標和訪客意願輕鬆促銷優先項目，並透過KPI型觸發器或量度自動化銷售和促銷活動。
 
 Adobe Search&amp;Promote是可靠且可擴充的代管網站搜尋應用程式，可擴充至數百萬個頁面或產品，適用於從零售到新聞網站等造訪頻繁的線上企業。 它提供前所未有的行銷人員控制與量度相關性。
 
@@ -106,7 +102,7 @@ Adobe Search&amp;Promote是可靠且可擴充的代管網站搜尋應用程式�
 
 如需AEM如何與Adobe Campaign整合的詳細資訊，請參閱[與Adobe Campaign整合](/help/sites-administering/campaignstandard.md)。
 
-## 與Livefyre {#integrating-with-livefyre}整合
+## 與 Livefyre 整合 {#integrating-with-livefyre}
 
 瞭解AEM和Livefyre:
 
