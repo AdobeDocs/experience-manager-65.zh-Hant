@@ -4,9 +4,9 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '9562'
+source-wordcount: '9590'
 ht-degree: 3%
 
 ---
@@ -168,9 +168,13 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 **若要使用FTP上傳資產**
 
 1. 使用您選擇的FTP用戶端，使用您從布建電子郵件收到的FTP使用者名稱和密碼登入FTP伺服器。 在FTP用戶端中，將檔案或資料夾上傳至FTP伺服器。
-1. [使用從布建電子郵件](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 收到的憑證登入動態媒體類別。在全域導覽列上，按一下&#x200B;**[!UICONTROL Upload]**。
 
-1. 在左上角的「上傳」頁面上，按一下「透過FTP **[!UICONTROL 」標籤。]**
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)，然後登入您的帳戶。
+
+   您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
+
+1. 在全域導覽列上，按一下&#x200B;**[!UICONTROL Upload]**。
+1. 在左上角的「上傳」頁面上，按一下「透過FTP ]**」標籤。**[!UICONTROL 
 1. 在頁面的左側，選擇FTP資料夾，從中上傳檔案；在頁面的右側，選擇目標資料夾。
 1. 在頁面的右下角，按一下「工作選項」，然後根據您選取的資料夾中的資產設定您想要的選項。****
 
@@ -192,7 +196,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 |---|---|---|
 | 工作名稱 |  | 預先填入文字欄位的預設名稱包括名稱的使用者輸入部分以及日期和時間戳記。 您可以使用預設名稱，或輸入您自己為此上傳工作建立的名稱。 <br>作業和其他上載和發佈作業記錄在「作業」頁面上，您可以在此處檢查作業的狀態。 |
 | 上傳後發佈 |  | 自動發佈您上傳的資產。 |
-| 在任何資料夾中覆寫相同的基本資產名稱，不論副檔名為何 |  | 如果希望上載的檔案用相同的名稱替換現有檔案，請選擇此選項。 此選項的名稱可能不同，具體取決於「應用程式設定」>「常規設定」>「上傳到應用程式」>「覆蓋影像」]**>「常規設定」>「**[!UICONTROL >「上傳到應用程式」>「覆蓋影像」中的設定。]********[!UICONTROL **** |
+| 在任何資料夾中覆寫相同的基本資產名稱，不論副檔名為何 |  | 如果希望上載的檔案用相同的名稱替換現有檔案，請選擇此選項。 此選項的名稱可能不同，具體取決於「應用程式設定」>「常規設定」>「上傳到應用程式」>「覆蓋影像」]**>「常規設定」>「**[!UICONTROL >「上傳到應用程式」>「覆蓋影像」中的設定。****]****[!UICONTROL **** |
 | 上傳時解壓縮Zip或Tar檔案 |  |  |
 | 工作選項 |  | 按一下&#x200B;**[!UICONTROL 作業選項]**&#x200B;開啟[!UICONTROL 上載作業選項]對話框，然後選擇影響整個上載作業的選項。 這些選項對於所有檔案類型都是相同的。<br>您可以從「應用程式一般設定」頁面開始，選擇上傳檔案的預設選項。要開啟此頁，請選擇&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**。 按一下&#x200B;**[!UICONTROL 預設上載選項]**&#x200B;按鈕以開啟[!UICONTROL 上載作業選項]對話框。 |
 |  | 時間 | 選擇「一次性」或「循環」。 若要設定循環作業，請選擇「重複」選項（每日、每週、每月或自訂），以指定何時要重複執行FTP上傳作業。 然後視需要指定排程選項。 |
@@ -347,7 +351,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 在預覽模式中，[支援的影像類型](/help/assets/assets-formats.md#supported-raster-image-formats)（使用互動編輯）可使用縮放選項。
 
-   若要放大顯示資產，請按一下`+`（或按一下資產上的放大鏡）。 要縮小，請按一下`-`。 當您放大時，可以透過平移來仔細檢視影像的任何區域。 重設縮放箭頭會將您帶回原始檢視。 要將視圖重置為原始大小，請按一下「重置視圖」。](assets/do-not-localize/revert.png)]**![**[!UICONTROL 
+   若要放大顯示資產，請按一下`+`（或按一下資產上的放大鏡）。 要縮小，請按一下`-`。 當您放大時，可以透過平移來仔細檢視影像的任何區域。 重設縮放箭頭會將您帶回原始檢視。 要將視圖重置為原始大小，請按一下「重置視圖」。****![](assets/do-not-localize/revert.png)
 
 **僅使用鍵盤按鍵預覽資產**
 
@@ -477,7 +481,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 在&#x200B;**[!UICONTROL 選擇目標]**&#x200B;對話框中，執行下列操作之一：
 
-   * 導覽至資產的新位置，然後按一下「下一步」繼續。]****[!UICONTROL 
+   * 導覽至資產的新位置，然後按一下「下一步」繼續。****
 
    * 按一下&#x200B;**[!UICONTROL Back]**&#x200B;返回&#x200B;**[!UICONTROL Rename]**&#x200B;螢幕。
 
@@ -556,7 +560,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 導覽至資產或您要刪除之資料夾的位置。
 
-1. 選擇資產或資料夾，然後從工具欄中按一下「刪除」**[!UICONTROL 「刪除」選項]**「刪除」。](assets/do-not-localize/deleteoutline.png)![
+1. 選擇資產或資料夾，然後從工具欄中按一下「刪除」**[!UICONTROL 「刪除」選項]**「刪除」。![](assets/do-not-localize/deleteoutline.png)
 
    確認刪除後：
 
@@ -587,7 +591,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 導覽至您要發佈的資產／資料夾的位置。
 
-1. 從資產卡中選擇&#x200B;**[!UICONTROL Publish]**&#x200B;快速動作，或選擇資產，然後從工具列中按一下「快速發佈」選項。]****[!UICONTROL 
+1. 從資產卡中選擇&#x200B;**[!UICONTROL Publish]**&#x200B;快速動作，或選擇資產，然後從工具列中按一下「快速發佈」選項。****
 1. 如果資產引用其他資產，其引用將列在嚮導中。 只會顯示自上次發佈／未發佈後未發佈或已修改的參照。 選擇要發佈的參照。
 
    >[!NOTE]
@@ -612,7 +616,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 若要稍後解除發佈資產，請選取&#x200B;**[!UICONTROL 稍後解除發佈]**，然後選取要解除發佈資產的日期。
 1. 排程資產在發佈環境中無法使用的日期。
-1. 如果資產參考其他資產，請選擇您要取消發佈的參考。 按一下「取消發佈」。]****[!UICONTROL 
+1. 如果資產參考其他資產，請選擇您要取消發佈的參考。 按一下「取消發佈」。****
 1. 在確認對話框中，按一下：
 
    * **[!UICONTROL 取消]** 以停止操作
@@ -763,7 +767,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
    >您可以在儲存多個註解之前，先加入這些註解。
 
 1. 按一下&#x200B;**[!UICONTROL 關閉]**&#x200B;退出「注釋」模式。
-1. 若要檢視通知，請使用Aaron MacDonald的認證登入[!DNL Assets]，然後按一下「通知」選項以檢視通知。]****[!UICONTROL 
+1. 若要檢視通知，請使用Aaron MacDonald的認證登入[!DNL Assets]，然後按一下「通知」選項以檢視通知。****
 
    >[!NOTE]
    >
