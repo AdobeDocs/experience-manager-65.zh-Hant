@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Adobe自己的測試產生了下列結果：
 * 使用Adobe搭售的CDN（內容傳送網路）做為動態媒體授權的一部分。
 * 使用專用網域（即`images.company.com`或`mycompany.scene7.com`），而非通用動態媒體網域（即`s7d1.scene7.com`、`s7d2.scene7.com`或`s7d13.scene7.com`）。
 
-   若要尋找您的網域，請透過[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)登入您的帳戶。 然後點選「**[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標有&#x200B;**「已發佈伺服器名稱」的欄位。**&#x200B;如果您目前使用一般的動態媒體網域，您可以請求移至您自己的自訂網域，做為此移轉的一部分。
+   若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「**[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標有&#x200B;**「已發佈伺服器名稱」的欄位。**&#x200B;如果您目前使用一般的動態媒體網域，您可以請求移至您自己的自訂網域，做為此移轉的一部分。
 
 ## 為我的動態媒體帳戶啟用HTTP/2的程式為何？{#what-is-the-process-for-enabling-http-for-my-scene-account}
 
@@ -57,13 +57,13 @@ Adobe自己的測試產生了下列結果：
    * 主要聯絡人姓名、電子郵件和電話號碼。
    * 要轉換到HTTP2的所有網域。 即`images.company.com`或`mycompany.scene7.com`。
 
-      若要尋找您的網域，請透過[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)登入您的帳戶。 然後點選「**[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標有&#x200B;**[!UICONTROL 「已發佈伺服器名稱」的欄位。]**
+      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「**[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標有&#x200B;**[!UICONTROL 「已發佈伺服器名稱」的欄位。]**
 
    * 確認您對多媒體請求使用安全的HTTPS。
    * 確認您是透過Adobe使用CDN，且未透過直接關係進行管理。
    * 確認您使用的是專用網域。 即`images.company.com`或`mycompany.scene7.com`，而非一般動態媒體網域，例如`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com`。
 
-      若要尋找您的網域，請透過[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)登入您的帳戶。 然後點選「**[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標有&#x200B;**[!UICONTROL 「已發佈伺服器名稱」的欄位。]** 如果您目前使用一般的動態媒體網域，您可以請求移至您自己的自訂網域，做為此移轉的一部分。
+      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「**[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標有&#x200B;**[!UICONTROL 「已發佈伺服器名稱」的欄位。]** 如果您目前使用一般的動態媒體網域，您可以請求移至您自己的自訂網域，做為此移轉的一部分。
 
 1. 技術支援會根據提交請求的順序，將您新增至HTTP/2客戶候補清單。
 1. 當Adobe準備好處理您的請求時，支援部門會與您聯絡，協調轉場並設定目標日期。
