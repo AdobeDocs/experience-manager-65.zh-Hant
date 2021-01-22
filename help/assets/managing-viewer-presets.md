@@ -10,9 +10,9 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '4265'
+source-wordcount: '4335'
 ht-degree: 14%
 
 ---
@@ -22,12 +22,12 @@ ht-degree: 14%
 
 「檢視器預設集」是一組設定，可決定使用者在電腦螢幕和行動裝置上檢視多媒體資產的方式。 如果您是管理員，則可以建立檢視器預設集。 設定適用於檢視器設定選項的陣列。 例如，您可以變更檢視器的顯示大小或縮放行為。
 
-<!-- OBSOLETE CONTENT  For instructions on creating and customizing your own HTML5 viewer presets, see the *Adobe Scene7 HTML5 Viewer SDK*. The SDK is available on the IS publish server embedded in the SDK itself. Each library version has its own SDK documentation included.
+如需建立和自訂您自己HTML5檢視器預設集的指示，請參閱Adobe Dynamic Media *HTML5檢視器SDK API檔案*。 SDK可在內嵌於SDK本身的IS發佈伺服器上使用。 每個資料庫版本都包含其專屬的SDK檔案。
 
-Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
-For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html) -->
+路徑: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
+例如，3.10 SDK:[https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-請參閱[動態媒體檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
+另請參閱[Adobe Dynamic Media Viewers參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 本節說明如何建立、編輯和管理檢視器預設集。 您可以隨時預覽資產，將檢視器預設套用至資產。 請參閱[套用檢視器預設集](#applying-a-viewer-preset-to-an-asset)。
 
@@ -402,7 +402,7 @@ AEM會在從&#x200B;**[!UICONTROL 詳細資料檢視>檢視器檢視資產時，
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
 1. 在limit屬性中，將數字變更為所需的數字，例如`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 點選「全部儲存」。****
+1. 點選「全部儲存」。]****[!UICONTROL 
 
 ## 建立檢視器預設集{#creating-a-new-viewer-preset}
 
@@ -422,7 +422,7 @@ AEM會在從&#x200B;**[!UICONTROL 詳細資料檢視>檢視器檢視資產時，
 
    ![6_5檢視器預設集](assets/6_5_viewerpresets.png)
 
-1. 在「檢視器預設集」頁面的工具列上，點選「建立」。****
+1. 在「檢視器預設集」頁面的工具列上，點選「建立」。]****[!UICONTROL 
 1. 在&#x200B;**[!UICONTROL 新檢視器預設集]**&#x200B;對話方塊的&#x200B;**[!UICONTROL 預設集名稱]**&#x200B;欄位中，輸入新預設集的名稱。 仔細選擇名稱——在您點選&#x200B;**[!UICONTROL Create.]**&#x200B;後，這些名稱將無法編輯
 
    當您稍後在這些步驟中儲存預設時，名稱會出現在「預設集標題」欄標題下的「檢視器預設集」頁面上。
