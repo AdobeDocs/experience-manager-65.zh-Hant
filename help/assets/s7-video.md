@@ -8,7 +8,7 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
 source-wordcount: '1582'
 ht-degree: 1%
@@ -24,6 +24,7 @@ Dynamic Media Classic視訊整合將最佳化視訊的觸及面延伸到所有�
 
 * **[!UICONTROL Scene7 Video]**&#x200B;元件會自動執行裝置和頻寬偵測，以在桌上型電腦、平板電腦和行動裝置上播放正確的格式和適當品質的視訊。
 * 資產——您可以包含可調式視訊集，而不只包含單一視訊資產。 最適化視訊集是所有必要視訊轉譯的容器，可在多種螢幕上順暢播放視訊。 「最適化視訊集」會針對以不同位元速率和格式（例如400 kbps、800 kbps和1000 kbps）編碼的相同視訊版本分組。 您使用Adaptive Video Set和S7視訊元件，在多種螢幕上（包括桌上型電腦、iOS、Android、Blackberry和Windows行動裝置）進行最適化視訊串流。
+<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
 
 ## 關於FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -150,7 +151,7 @@ Scene7視訊元件僅適用於Scene7視訊。 基礎元件可處理從AEM（使�
 
 1. 在AEM中，點選「**[!UICONTROL 工具] > [!UICONTROL 組態控制台]**」。
 1. 在&#x200B;**[!UICONTROL 配置控制台]**&#x200B;中，導航至導航樹中的&#x200B;**[!UICONTROL 工具> DAM >視頻配置檔案]**。
-1. 建立新的S7視訊設定檔。 在&#x200B;**[!UICONTROL 新……]**&#x200B;功能表，選取「建立頁面」，然後選取「Scene7視訊設定檔」範本。 ]****[!UICONTROL &#x200B;為新視訊設定檔頁面指定名稱，然後按一下「建立」。]****[!UICONTROL 
+1. 建立新的S7視訊設定檔。 在&#x200B;**[!UICONTROL 新……]**&#x200B;功能表，選取「建立頁面」，然後選取「Scene7視訊設定檔」範本。 ****&#x200B;為新視訊設定檔頁面指定名稱，然後按一下「建立」。]****[!UICONTROL 
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
