@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '763'
 ht-degree: 5%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 5%
 
 1. 登入您的[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)。
 
-   您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
+   您的認證和登入詳細資訊是由Adobe在布建時提供。 如果您沒有此資訊，請聯絡技術支援。
 
 1. 執行下列動作，上傳規則集檔案：
 
