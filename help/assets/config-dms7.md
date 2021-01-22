@@ -1,23 +1,21 @@
 ---
-title: 設定動態媒體- Scene7模式
+title: 設定 Dynamic Media - Scene7 模式
 description: 有關如何設定動態媒體- Scene7模式的資訊。
-uuid: ce43c589-d415-4611-9266-b4e8887e4cdc
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 24ad36d3ff329885efff319404e0d5321e8ce46d
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '5990'
+source-wordcount: '6029'
 ht-degree: 5%
 
 ---
 
 
-# 設定動態媒體- Scene7模式{#configuring-dynamic-media-scene-mode}
+# 設定 Dynamic Media - Scene7 模式{#configuring-dynamic-media-scene-mode}
 
 如果您針對不同環境（例如開發環境、測試環境和即時生產環境）使用Adobe Experience Manager設定，您必須針對每個環境設定Dynamic Media Cloud Services。
 
@@ -73,7 +71,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## 在雲端服務中建立動態媒體設定{#configuring-dynamic-media-cloud-services}
 
-**在您設定Dynamic Media** -收到具有Dynamic Media認證的布建電子郵件後，您必須 [登](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 入Dynamic Media Classic以變更密碼。提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
+**在設定Dynamic Media**  —— 收到具有Dynamic Media認證的布建電子郵件後，您必須開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶以變更密碼。提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud Service。
 
 ![dynamicmediaconfiguration2更新](assets/dynamicmediaconfiguration2updated.png)
 
@@ -87,7 +85,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    >[!NOTE]
    >
-   >在您收到具有動態媒體憑證的布建電子郵件後，請[登入](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud服務。
+   >在您收到具有動態媒體憑證的布建電子郵件後，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶以變更密碼。 提供電子郵件中提供的密碼是系統生成的，並僅用於臨時密碼。 請務必更新密碼，以便使用正確的認證來設定Dynamic Media Cloud服務。
 
 1. 連接成功時，請設定以下內容。 需要星號(*)的標題：
 
@@ -98,7 +96,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL 發佈資產]** -您可以從下列三個選項中選擇：
       * **[!UICONTROL 立]** 即表示上傳資產時，系統會立即收錄資產並提供URL/內嵌。發佈資產不需要使用者干預。
       * **[!UICONTROL 「啟]** 動時」意指您必須先明確發佈資產，才能提供URL/內嵌連結。
-      * **[!UICONTROL 選擇]** 性發佈此選項可讓您控制在動態媒體中發佈哪些檔案夾，以便您能使用智慧型裁切或動態轉譯等功能，或哪些檔案夾會專門在AEM中發佈以進行預覽；這些相同資產不 ** 會發佈在Dynamic Media中，以便在公用網域中傳送。<br>您可以在「 **[!UICONTROL Dynamic Media Cloud]** Configuration」（動態媒體雲配置）中的此處設定此選項，或者，您也可以選擇在資料夾的「屬性」( **[!UICONTROL Properties)中在資料夾層級設定此選項]**。<br>請參 [閱在動態媒體中使用選擇性發佈。](/help/assets/selective-publishing.md)<br>請注意，如果您稍後變更此設定，或稍後在資料夾層級變更此設定，這些變更只會影響您從該點開始上傳的新資產。資料夾中現有資產的發佈狀態會維持原狀，直到您從「快速發佈」(**[!UICONTROL Quick Publish)或「管理出版物」(Manage Publication)對話方塊手動變更資產。]******
+      * **[!UICONTROL 選擇]** 性發佈此選項可讓您控制在動態媒體中發佈哪些檔案夾，以便您能使用智慧型裁切或動態轉譯等功能，或哪些檔案夾會專門在AEM中發佈以進行預覽；這些相同資產不 ** 會發佈在Dynamic Media中，以便在公用網域中傳送。<br>您可以在「 **[!UICONTROL Dynamic Media Cloud]** Configuration」（動態媒體雲配置）中的此處設定此選項，或者，您也可以選擇在資料夾的「屬性」( **[!UICONTROL Properties)中在資料夾層級設定此選項]**。<br>請參閱[在 Dynamic Media 中使用選擇性發佈。](/help/assets/selective-publishing.md)<br>請注意，如果您稍後變更此設定，或稍後在資料夾層級變更此設定，這些變更只會影響您從該點開始上傳的新資產。資料夾中現有資產的發佈狀態會維持原狀，直到您從「快速發佈」(**[!UICONTROL Quick Publish)或「管理出版物」(Manage Publication)對話方塊手動變更資產。]******
    * **[!UICONTROL 安全預覽伺服器]** -可讓您指定安全轉譯預覽伺服器的URL路徑。也就是說，在產生轉譯後，AEM可以安全地存取和預覽遠端的「動態媒體」轉譯（不會將二進位檔傳回至AEM例項）。
 除非您有特殊安排可使用您公司的伺服器或特殊伺服器，否則Adobe Systems建議您依指定的方式保留此設定。
 
@@ -121,11 +119,12 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 1. 點選&#x200B;**[!UICONTROL 儲存。]**
 1. 若要在動態媒體內容發佈之前安全地預覽，您必須「允許列出」AEM作者例項，才能連線至動態媒體：
 
-   * 登入您的Dynamic Media Classic帳戶：[https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)。 您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
-   * 在頁面右上方的導覽列上，按一下「設定>應用程式設定>發佈設定>影像伺服器」。****
+   * 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。 您的認證和登入詳細資訊是由Adobe在布建時提供。 如果您沒有此資訊，請聯絡技術支援。
 
-   * 在「影像伺服器發佈」頁面的「發佈內容」下拉式清單中，選取「測試影像伺服」。****
-   * 對於「客戶端地址過濾器」，請按一下「添加」。****
+   * 在頁面右上方的導覽列上，按一下「設定>應用程式設定>發佈設定>影像伺服器」。]****[!UICONTROL 
+
+   * 在「影像伺服器發佈」頁面的「發佈內容」下拉式清單中，選取「測試影像伺服」。]****[!UICONTROL 
+   * 對於「客戶端地址過濾器」，請按一下「添加」。]****[!UICONTROL 
    * 選取核取方塊以啟用（開啟）此位址，然後輸入AEM Author例項的IP位址（而非Dispatcher IP）。
    * 按一下「保存」。]****[!UICONTROL 
 
@@ -147,7 +146,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 當您處於執行模式`dynamicmedia_scene7`時，請使用Dynamic Media Classic(Scene7)使用者介面來變更動態媒體設定。
 
-上述部分工作需要您登入Dynamic Media Classic(Scene7)，網址為：[https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+上述部分工作需要您開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
 設定和設定工作包括：
 
@@ -162,7 +161,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 「發佈設定」設定會決定預設如何從動態媒體傳送資產。 如果未指定任何設定，動態媒體會根據發佈設定中定義的預設設定來傳送資產。 例如，傳送不含解析度屬性的影像請求，會產生具有預設物件解析度設定的影像。
 
-若要設定發佈設定：在Dynamic Media Classic中，按一下「設定>應用程式設定>發佈設定>影像伺服器」。****
+若要設定發佈設定：在Dynamic Media Classic中，按一下「設定>應用程式設定>發佈設定>影像伺服器」。]****[!UICONTROL 
 
 「影像伺服器」畫面會建立傳送影像的預設設定。 請參閱UI畫面，以取得每個設定的說明。
 
@@ -176,7 +175,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 #### 配置應用程式常規設定{#configuring-application-general-settings}
 
-若要開啟「應用程式一般設定」頁面，請在「動態媒體經典全域導覽列」中按一下「設定>應用程式設定>一般設定」。****
+若要開啟「應用程式一般設定」頁面，請在「動態媒體經典全域導覽列」中按一下「設定>應用程式設定>一般設定」。]****[!UICONTROL 
 
 **伺服器- **在帳戶布建時，動態媒體會自動為您的公司提供指派的伺服器。 這些伺服器可用來建構網站和應用程式的URL字串。 這些URL呼叫是您帳戶專屬的。 除非AEM支援明確指示，否則請勿變更任何伺服器名稱。
 
@@ -204,7 +203,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 若要設定預設顏色屬性，以在請求影像時啟用色彩校正：
 
-1. [使用布建期間提供](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 的憑證登入動態媒體類別。導航至「設定」>「應用程式設定」。****
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後使用布建期間提供的憑證登入您的帳戶。
+1. 導航至「設定」>「應用程式設定」。]****[!UICONTROL 
 1. 展開「發 **[!UICONTROL 布設定]** 」區域並選 **[!UICONTROL 取「影像伺服器」。]**&#x200B;設定發 **[!UICONTROL 布例項的預設值]** ，將「發佈內容」設 **** 定為「影像伺服」。
 1. 捲動至您需要變更的屬性，例如&#x200B;**[!UICONTROL 色彩管理屬性]**&#x200B;區域中的屬性。
 
@@ -240,7 +240,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 **要編輯支援格式的MIME類型**
 
-1. 在AEM中，按一下AEM標誌以存取全域導覽主控台，然後按一下「工具>一般> CRXDE Lite」。****
+1. 在AEM中，按一下AEM標誌以存取全域導覽主控台，然後按一下「工具>一般> CRXDE Lite」。]****[!UICONTROL 
 1. 在左側導軌中，導覽至下列項目：
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -257,7 +257,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 1. 執行下列任一項作業：
 
    * 重複步驟3-4以編輯其他MIME類型。
-   * 在「CRXDE Lite」(CRXDE Lite)頁面的菜單欄上，按一下「全部保存」。****
+   * 在「CRXDE Lite」(CRXDE Lite)頁面的菜單欄上，按一下「全部保存」。]****[!UICONTROL 
 
 1. 在頁面的左上角，點選&#x200B;**[!UICONTROL CRXDE Lite]**&#x200B;以返回AEM。
 
@@ -311,7 +311,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
 
-1. 在「CRXDE Lite」頁面的左上角附近，按一下「全部儲存」。****
+1. 在「CRXDE Lite」頁面的左上角附近，按一下「全部儲存」。]****[!UICONTROL 
 
 #### 建立批次集預設集以自動產生影像集和回轉集{#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
@@ -333,9 +333,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 **若要設定預設命名**
 
-1. 登入您的Dynamic Media Classic(Scene7)帳戶：[https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
-   您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
+   您的認證和登入詳細資訊是由Adobe在布建時提供。 如果您沒有此資訊，請聯絡技術支援。
 
 1. 在頁面頂部附近的導覽列上，點選「**[!UICONTROL 設定>應用程式設定>批次集預設集>預設命名」。]**
 1. 選擇 **[!UICONTROL 「查看表單]** 」或「 **[!UICONTROL 查看代碼」]** ，以指定要查看的方式並輸入有關每個元素的資訊。
@@ -367,9 +367,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 **要建立批集預設集，請執行以下操作：**
 
-1. 登入您的Dynamic Media Classic(Scene7)帳戶：[https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
-   您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
+   您的認證和登入詳細資訊是由Adobe在布建時提供。 如果您沒有此資訊，請聯絡技術支援。
 
 1. 在頁面頂部附近的導覽列上，點選「**[!UICONTROL 設定>應用程式設定>批次集預設集>批次集預設集」。]**
 
@@ -392,7 +392,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    如果您定義大量集合，您可能偏好將這些集合與包含資產本身的資料夾分開。 例如，您可以建立「影像集」檔案夾，並將產生的集放在此處。
 
-1. 在「Details（詳細資訊）」面板中，按一下「Save（保存）」。****
+1. 在「Details（詳細資訊）」面板中，按一下「Save（保存）」。]****[!UICONTROL 
 1. 點選新預設集名稱旁的&#x200B;**[!UICONTROL Active]**。
 
    啟動預設可確保在您上傳資產至動態媒體時，會套用批次集預設集以產生該預設集。
@@ -423,9 +423,9 @@ spin-01-01
 
 **要為自動生成2D回轉集建立批集預設集，請執行以下操作：**
 
-1. 登入您的Dynamic Media Classic(Scene7)帳戶：[https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
-   您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
+   您的認證和登入詳細資訊是由Adobe在布建時提供。 如果您沒有此資訊，請聯絡技術支援。
 
 1. 在頁面頂部附近的導航欄上，按一下「設定」「設定」「應用程式設定」「a3/」>「批集預設集」「a5/」>「批集預設集」「a6/」「批集預設集」「a7/」。****
 
@@ -434,7 +434,7 @@ spin-01-01
 1. 在「預設集清單」面板中，按一下「新增&#x200B;****」，以啟用畫面右側「詳細資訊」面板中的定義欄位。
 1. 在「詳細資料」面板的「預設集名稱」欄位中，輸入預設集的名稱。
 1. 在「批集類型」下拉菜單中，選擇「資產集」。]****[!UICONTROL 
-1. 在「子類型」下拉清單中，選擇「多軸回轉集」。****
+1. 在「子類型」下拉清單中，選擇「多軸回轉集」。]****[!UICONTROL 
 1. 展開&#x200B;**[!UICONTROL 資產命名慣例]**，然後在「檔案命名」下拉式清單中，按一下「自訂」。]****[!UICONTROL 
 1. 使用「 **[!UICONTROL 比對]** 」(Match **[!UICONTROL )和 (可選) 「基本名稱]** 」(Base Name)屬性，定義組成群組之影像資產的命名規則運算式。
 
