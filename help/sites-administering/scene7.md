@@ -1,18 +1,14 @@
 ---
 title: 與Dynamic Media Classic整合
-seo-title: 與Dynamic Media Classic整合
-description: 瞭解如何將AEM與Dynamic Media Classic整合。
-seo-description: 瞭解如何將AEM與Dynamic Media Classic整合。
-uuid: b014d643-1cc1-47f3-a79c-7f6f9e45637a
+description: 瞭解如何整合Adobe Experience Manager與Dynamic Media Classic。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '5464'
+source-wordcount: '5452'
 ht-degree: 0%
 
 ---
@@ -164,7 +160,7 @@ AEM Dynamic Media是直接在AEM平台中統一Dynamic Media Classic功能。
 1. (可選；請參閱使用案例表格)-如果您選擇啟用「從資產自動上傳至Dynamic Media Classic」，則需要新增下列項目：
 
    1. 設定自動上傳至Dynamic Media Classic。
-   1. 在&#x200B;*****Dam更新資產&lt;a5/>工作流程(`https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`)結束時，在所有動態媒體工作流程步驟*&#x200B;之後新增&#x200B;**Dynamic Media Classic上傳**&#x200B;步驟(&lt;a6/>)
+   1. 在&#x200B;*****Dam更新資產工作流程(`https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`)結束時，在所有動態媒體工作流程步驟*&#x200B;之後新增&#x200B;**Dynamic Media Classic上傳**&#x200B;步驟()
    1. （可選）依[https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl)中的MIME類型限制動態媒體經典資產上傳。 此清單中未包含的資產MIME類型將不會上傳至Dynamic Media Classic伺服器。
    1. （可選）在Dynamic Media Classic設定中設定視訊。 您可以同時啟用動態媒體和動態媒體經典的視訊編碼。 動態轉譯會用於在AEM例項中本機預覽和播放，而Dynamic Media Classic視訊轉譯則會產生並儲存在Dynamic Media Classic伺服器上。 為Dynamic Media和Dynamic Media Classic設定視訊編碼服務時，請將[視訊處理設定檔](/help/assets/video-profiles.md)套用至Dynamic Media Classic資產資料夾。
    1. （可選）[在Dynamic Media Classic中設定安全預覽。](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)
@@ -309,7 +305,7 @@ AEM Assets和Dynamic Media Classic之間的同步化，目前有下列限制／�
 
 1. 點選AEM圖示並導覽至「**[!UICONTROL 部署>雲端服務]**」以存取Adobe Dynamic Media Classic。
 
-1. 點選「立即設定」。****
+1. 點選「立即設定」。]****[!UICONTROL 
 
    ![chlimage_1-297](assets/chlimage_1-297.png)
 
@@ -558,7 +554,7 @@ Dynamic Media Classic資產仍可透過安全的預覽取得。 只有在AEM中�
 
    例如，您可鍵入`<file_extension>=<mime_type>`作為`EPS=application/postscript`或`PSD=image/vnd.adobe.photoshop`。
 
-1. 在配置窗口的右下角，按一下「保存」。]****[!UICONTROL 
+1. 在配置窗口的右下角，按一下「保存」。****
 1. 返回AEM，在左側導軌中點選「CRXDE Lite」。
 1. 在「CRXDE Lite」頁面的左側導軌中，導覽至`/etc/cloudservices/scene7/<environment>`（以`<environment>`取代實際名稱）。
 1. 展開`<environment>`（以`<environment>`取代實際名稱）以顯示`mimeTypes`節點。
