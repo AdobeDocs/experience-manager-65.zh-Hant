@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -43,9 +43,9 @@ ht-degree: 0%
 
 若要讓全景影像檢視器在AEM中正常運作，您必須將全景影像檢視器預設集與Dynamic Media Classic和Dynamic Media Classic特定中繼資料同步化，如此檢視器預設集就會在JCR中更新。 若要完成此作業，請依下列方式設定Dynamic Media Classic:
 
-1. [請登入每個公司帳戶的動](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 態媒體類別例項。
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
-1. 在頁面的右上角附近，按一下「設定」>「應用程式設定」>「發佈設定」>「影像伺服器」。****
+1. 在頁面的右上角附近，按一下「設定」>「應用程式設定」>「發佈設定」>「影像伺服器」。]****[!UICONTROL 
 1. 在「影像伺服器發佈」頁面上，從頂端附近的&#x200B;**[!UICONTROL 發佈內容]**&#x200B;下拉式選單中，選取「影像伺服」。]****[!UICONTROL 
 
 1. 在相同的「影像伺服器發佈」頁面上，找到標題&#x200B;**[!UICONTROL 請求屬性。]**
