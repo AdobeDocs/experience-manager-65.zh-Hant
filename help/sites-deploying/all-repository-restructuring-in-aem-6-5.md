@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 translation-type: tm+mt
-source-git-commit: 6396660b642fd78ac7f311fa416efe0e0d52a9e3
+source-git-commit: 838e194f699b0832839c80f4ba9503c9d5a15945
 workflow-type: tm+mt
 source-wordcount: '2721'
 ht-degree: 2%
@@ -85,7 +85,7 @@ ht-degree: 2%
    <td><strong>重組指導</strong></td>
    <td><p>任何新的或修改的工作流模型都必須遷移到/conf/global/workflow/models。</p>
     <ol>
-     <li>將修改的「工作流程模型」部署至本機AEM 6.4開發例項，如此就會存在於「上一個」位置。</li>
+     <li>將修改的「工作流程模型」部署至本機AEM 6.5開發例項，如此就會存在於「上一個」位置。</li>
      <li>使用AEM的「工作流程模型編輯器」(Workflow Model Editor)，在「AEM &gt;工具&gt;工作流程&gt;模型」(AEM &gt; Workflow &gt; Models)編輯「工作流程模型」(Workflow Model)。</li>
      <li>移轉修改的AEM提供的工作流程模型時
       <ol>
