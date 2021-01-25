@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: 19faa273908e67a744e52d173a5352f0a52f7345
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 12%
@@ -414,7 +414,7 @@ Dependent on the predicate a selection of settings are available for configurati
 
 ### 建立／開啟自定義配置{#creating-opening-a-customized-configuration}
 
-1. 導覽至&#x200B;**Tools**、**Operations**、**Search Forms**。
+1. 導覽至「**工具**、**一般**、**搜尋表單**」。
 
 1. 選擇要定製的配置。
 1. 使用&#x200B;**Edit**&#x200B;表徵圖開啟要更新的配置。
