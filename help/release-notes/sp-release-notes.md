@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
+source-git-commit: eec0e8f466c4a228b16ee2c1249052bfc3250dec
 workflow-type: tm+mt
-source-wordcount: '4255'
+source-wordcount: '4302'
 ht-degree: 3%
 
 ---
@@ -465,6 +465,8 @@ UberJar for Experience Manager 6.5.7.0可在[Maven Central儲存庫](https://rep
 | 連接器 | AEM 6.5不再支援Adobe JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013。 | N/A |
 
 ## 已知問題 {#known-issues}
+
+* 如果由於元件註冊表計時器鎖定而在[!DNL Experience Manager]響應中遇到問題，請[安裝此軟體包](https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr/2.1.20)。 這些問題的解決方案計畫納入下一版[Experience Manager Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-on-prem-managed-services)。
 
 * 在安裝Experience Manager 6.5.7.0期間，忽略`error.log`檔案中的下列錯誤：
 
