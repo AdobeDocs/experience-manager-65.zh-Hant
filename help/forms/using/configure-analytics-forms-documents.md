@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 5aa2fe48578633cbe5e4324f9e956e1dbbdab8af
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1533'
 ht-degree: 1%
 
 ---
@@ -111,7 +111,7 @@ Analytics資料會儲存在稱為報表套裝的客戶專屬儲存庫中。 若�
 雲端服務設定是有關您Adobe Analytics帳戶的資訊。 此設定可讓Adobe Experience Manager(AEM)連線至Adobe Analytics。 為您使用的每個Analytics帳戶建立個別的設定。
 
 1. 以管理員身分登入您的AEM作者實例。
-1. 在左上角，按一下「**Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **部署** > **雲端服務**」。
+1. 在左上角，按一下「**Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **雲端服務** > **舊版雲端服務**」。
 1. 找到&#x200B;**Adobe Analytics**&#x200B;圖示。 按一下&#x200B;**顯示配置** ，然後繼續按一下&#x200B;**[+]**&#x200B;添加新配置。
 
    如果您是首次使用者，請按一下「立即設定」。****
@@ -163,7 +163,7 @@ Adobe Analytics架構是Adobe Analytics變數與AEM變數之間的一組映射�
 1. 指定下列欄位的適當值，然後按一下「儲存」。****
 
    * **SiteCatalyst架構**:選擇在「設定跟蹤框架」部分中定義的框架／配置。
-   * **欄位時間追蹤基準**:指定必須追蹤欄位瀏覽的持續時間（以秒為單位）。預設值為0。 當值大於0（零）時，會傳送兩個個別的追蹤事件至Adobe Analytics伺服器。 第一個事件會指示分析伺服器停止追蹤退出欄位。 第二個事件會在經過指定的持續時間後傳送。 第二個事件會指示分析伺服器開始追蹤已造訪欄位。 使用兩個不同的事件有助於精確測量欄位逗留時間。 當值為0（零）時，會傳送單一追蹤事件至Adobe Analytics伺服器。
+   * **欄位時間追蹤基準**:指定必須追蹤欄位瀏覽的持續時間（以秒為單位）。預設值為 0。當值大於0（零）時，會傳送兩個個別的追蹤事件至Adobe Analytics伺服器。 第一個事件會指示分析伺服器停止追蹤退出欄位。 第二個事件會在經過指定的持續時間後傳送。 第二個事件會指示分析伺服器開始追蹤已造訪欄位。 使用兩個不同的事件有助於精確測量欄位逗留時間。 當值為0（零）時，會傳送單一追蹤事件至Adobe Analytics伺服器。
 
    * **Analytics報表同步cron**:指定從Adobe Analytics擷取報表的cron運算式。預設值為0 0 2 ?* *.
 
