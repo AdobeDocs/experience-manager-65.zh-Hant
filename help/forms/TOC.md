@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 translation-type: tm+mt
-source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
+source-git-commit: 4e4625fe20045a337c7bce780c57819c334fa4d6
 workflow-type: tm+mt
-source-wordcount: '3716'
-ht-degree: 1%
+source-wordcount: '3718'
+ht-degree: 3%
 
 ---
 
@@ -65,20 +65,20 @@ ht-degree: 1%
       + [安裝和配置Automated Forms Conversion服務](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + 在JEE {#jee-installation}上安裝AEM Forms
       + [JEE上AEM表單的支援平台](using/aem-forms-jee-supported-platforms.md)
-      + [使用JBoss統包功能，在JEE上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
+      + [使用JBoss Tunkly在JEE上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
       + [安裝和設定AEM Forms Document Security伺服器](using/installing-and-configuring-the-document-security-server.md)
-      + [準備安裝AEM Forms單一伺服器](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
-      + [在JEE for JBoss上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
-      + [在JEE for WebSphere上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+      + [準備安裝AEM Forms(Single Server)](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
+      + [在JEE for JBoss上安裝和部署Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
+      + [在WebSphere的JEE上安裝和部署Adobe Experience Manager表單](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [在JEE for WebLogic上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安裝AEM Forms Workbench](using/install-workbench.md)
       + [安裝和配置設計器](using/installing-configuring-designer.md)
-      + [準備安裝AEM Forms伺服器叢集](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
-      + [在JBoss叢集的JEE上設定AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
-      + [在WebSphere叢集的JEE上設定AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
-      + [在WebLogic叢集的JEE上設定AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
+      + [準備安裝AEM Forms（伺服器叢集）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
+      + [在JBoss叢集的JEE上設定Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
+      + [在WebSphere叢集的JEE上設定Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
+      + [在WebLogic叢集的JEE上設定Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
    + 設定 AEM Forms {#configure-aem-forms}
-      + [AEM Forms伺服器的效能調整](using/performance-tuning-aem-forms.md)
+      + [AEM Forms 伺服器的效能調整](using/performance-tuning-aem-forms.md)
       + [配置自適應表單快取](using/configure-adaptive-forms-cache.md)
       + [設定AEM DS設定](using/configuring-the-processing-server-url-.md)
       + [配置同步調度程式](using/configure-synchronization-scheduler.md)
@@ -91,15 +91,15 @@ ht-degree: 1%
    + 升級OSGi {#aem-forms-osgi-upgrade}上的AEM Forms
       + [升級至OSGi上的AEM 6.5表格](using/upgrade-forms-osgi.md)
       + [安裝相容性軟體包](using/compatibility-package.md)
-      + [移轉AEM Forms資產和檔案](using/migration-utility.md)
+      + [移轉 AEM Forms 資產和文件](using/migration-utility.md)
    + 升級JEE上的AEM Forms {#aem-forms-jee-upgrade}
       + [準備升級AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
-      + [升級檢查清單和規劃](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
+      + [Adobe Experience Manager Forms on JEE升級檢查清單與規劃](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
       + [升級至JEE上的AEM 6.5表格](using/upgrade-forms-jee.md)
-      + [從AEM Forms版本升級至JEE for JBoss上的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-      + [從AEM Forms版本升級至JEE上的AEM 6.5 Forms for JBoss統包](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
-      + [從AEM Forms版本升級至JEE for WebSphere的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
-      + [從AEM Forms版本升級至JEE for WebLogic上的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
+      + [在JEE for JBoss上升級至Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
+      + [升級至JEE上的AEM Forms for JBoss Tunkly](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+      + [升級至WebSphere專用JEE上的Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+      + [在JEE for WebLogic上升級至Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
 + 管理AEM Forms {#manage-administer-aem-forms}
    + [OSGi群組和權限上的AEM Forms](using/forms-groups-privileges-tasks.md)
    + [建立新資料夾以分類表單](using/creating-new-folders-categorize-forms.md)
@@ -115,9 +115,9 @@ ht-degree: 1%
       + [表單使用者管理](using/user-management-handling-user-data.md)
       + [Forms JEE工作流程](using/forms-workflow-jee-handling-user-data.md)
       + [表單入口網站](using/forms-portal-handling-user-data.md)
-      + [信件管理](using/correspondence-management-handling-user-data.md)
+      + [通信管理](using/correspondence-management-handling-user-data.md)
       + [與Adobe Sign整合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
-      + [Document Security](/help/forms/using/document-security-handling-user-data.md)
+      + [文件安全性](/help/forms/using/document-security-handling-user-data.md)
    + 強化AEM Forms環境{#hardening-aem-forms-environment}
       + [在OSGi環境上強化和保護AEM表單](using/hardening-securing-aem-forms-environment.md)
       + [JEE上AEM Forms的一般安全性考量](using/general-security-considerations.md)
@@ -143,7 +143,7 @@ ht-degree: 1%
    + [建立可存取的調適性表單](using/creating-accessible-adaptive-forms.md)
    + [使用可重複的區段建立表單](using/creating-forms-repeatable-sections.md)
    + [在AEM網站頁面中內嵌最適化表單或互動式通訊](using/embed-adaptive-form-aem-sites.md)
-   + [在外部網頁中內嵌最適化表單](using/embed-adaptive-form-external-web-page.md)
+   + [在外部網頁中內嵌適用性表單](using/embed-adaptive-form-external-web-page.md)
    + [最適化表單元件的內嵌樣式](using/inline-style-adaptive-forms.md)
    + [多步驟表單序列簡介](using/introduction-form-sequence.md)
    + [最適化表單的版面功能](using/layout-capabilities-adaptive-forms.md)
@@ -174,7 +174,7 @@ ht-degree: 1%
    + [從使用者資料新增資訊至表單提交中繼資料](using/form-submission-metadata.md)
    + [基於XDP的自適應表單中的XFA支援](using/xfa-api-supported-in-adaptive-form.md)
    + [在設計人員中變更頁面零內容](using/changing-page-zero-content-designer.md)
-   + [授予規則編輯器對選定用戶組的訪問權限](using/rule-editor-access-user-groups.md)
+   + [將規則編輯器存取權授予給所選的使用者群組](using/rule-editor-access-user-groups.md)
    + [使用AEM轉譯工作流程，將最適化表單和記錄檔案當地語系化](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [自動測試可調式表單](using/calvin.md)
    + [最適化表單的樣式構造](using/styling-constructs-adaptive-forms.md)
@@ -276,7 +276,7 @@ ht-degree: 1%
    + [在離線模式下工作](using/work-offline-mode.md)
    + [更新一般設定](using/update-general-settings.md)
    + [疑難排解AEM Forms應用程式](using/issues-aem-forms-app.md)
-+ HTML5 Forms {#html5-forms}
++ HTML5 表單 {#html5-forms}
    + [HTML5表單簡介](using/introduction.md)
    + [HTML5表格快速入門](using/get-started.md)
    + [HTML5表單的架構](using/html5-forms-architecture.md)
@@ -350,13 +350,13 @@ ht-degree: 1%
    + [建立或設定受監視的資料夾](using/creating-configure-watched-folder.md)
    + [在「指派工作」步驟中使用自訂電子郵件範本](using/use-custom-email-template-assign-task-step.md)
    + [在電子郵件通知中使用中繼資料](using/use-metadata-in-email-notifications.md)
-+ 表單入口{#use-forms-portal}
++ 表單入口網站 {#use-forms-portal}
    + [自訂表單入口元件的範本](using/customizing-templates-forms-portal-components.md)
    + [啟用表單入口元件](using/enabling-forms-portal-components.md)
    + [建立表單入口網站頁面](using/creating-form-portal-page.md)
    + [在表單入口網站上處理提交表單的API](using/report-submitted-data-forms.md)
    + [草稿和提交元件的自訂儲存](using/adding-custom-storage-provider-forms.md)
-+ 檔案服務{#use-document-services}
++ 文件服務 {#use-document-services}
    + [AEM檔案服務概觀](using/overview-aem-document-services.md)
    + [表單服務](using/forms-service.md)
    + [輸出服務](using/output-service.md)
@@ -366,7 +366,7 @@ ht-degree: 1%
    + [使用HSM數位簽署或認證檔案](using/hsm-certify-esign-docs.md)
    + [以程式設計方式使用AEM Document Services](using/aem-document-services-programmatically.md)
    + [使用sendToPrinter API](using/using-sendtoprinter-api.md)
-+ Document Security {#use-document-security}
++ 文件安全性 {#use-document-security}
    + [檔案安全性方案](using/document-security-offerings.md)
    + [啟用AEM以搜尋檔案安全性保護的PDF檔案](using/enable-search-for-drm-protected-pdf-documents-in-aem.md)
    + [Reader使用可攜式保護程式庫擴充受原則保護的PDF檔案](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
@@ -376,9 +376,9 @@ ht-degree: 1%
    + [使用設計人員](http://www.adobe.com/go/learn_aemforms_designer_65)
    + [設計人員快速入門教學課程](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
    + [設計人員範例](http://www.adobe.com/go/learn_aemforms_designer_samples_65)
-   + [設計人員指令碼基本功能](http://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
+   + [設計人員指令碼基礎知識](http://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
    + [設計人員指令碼參考](http://www.adobe.com/go/learn_aemforms_scriptingReference_65)
-   + [Designer FormCalc參考](http://www.adobe.com/go/learn_aemforms_formCalc_65)
+   + [設計人員表單計算參考](http://www.adobe.com/go/learn_aemforms_formCalc_65)
    + [在HTML5表格中使用塗鴉簽名](using/scribble-signature.md)
 + 自訂AEM Forms {#customize-aem-forms}
    + [最適化和HTML5表單的外觀架構](using/introduction-widgets.md)
@@ -567,7 +567,7 @@ ht-degree: 1%
    + 系統資訊服務{#system-information-service}
       + [設定系統資訊服務](/help/forms/using/admin-help/set-system-information-service.md)
       + [系統資訊服務API](/help/forms/using/admin-help/system-information-service-apis.md)
-+ 流程報告{#process-reporting}
++ 程序報告 {#process-reporting}
    + [流程報告簡介](/help/forms/using/process-reporting/introduction-process-reporting.md)
    + [流程報告快速入門](/help/forms/using/process-reporting/install-start-process-reporting.md)
    + [流程報告的運作方式](/help/forms/using/process-reporting/process-reporting-architecture.md)
