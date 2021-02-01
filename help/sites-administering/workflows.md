@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 5a99daa208d1d109d2736525fdca3accdcfb4dd1
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 0%
+source-wordcount: '788'
+ht-degree: 2%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 您組織建立的業務流程可以表示為工作流。 例如，發佈網站內容的程式通常包括許可和由不同利害關係人簽署等步驟。 這些程式可以實作為AEM工作流程，並套用至內容頁面和資產。
 
-* [啟動工作流程](/help/sites-administering/workflows-starting.md)
-* [管理工作流實例](/help/sites-administering/workflows-administering.md)
-* [管理對工作流程的存取](/help/sites-administering/workflows-managing.md)
+* [開始工作流程](/help/sites-administering/workflows-starting.md)
+* [管理工作流程例項](/help/sites-administering/workflows-administering.md)
+* [管理工作流程存取權](/help/sites-administering/workflows-managing.md)
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 [AEM中](/help/sites-developing/workflows.md#model) 的工作流模型是業務流程的表示和實現：
 
-* 通常，他們會在頁面或資產上採取行動，以達成特定結果。
+* 通常，他們會在頁面或資產上行動，以達成特定結果。
 * 這些頁面和／或資產稱為工作流程裝載。
 * 工作流模型由執行特定任務的一系列步驟組成。
 * 當工作流程進行時，裝載會從步驟傳遞至步驟。
@@ -97,7 +97,7 @@ AEM提供許多有用的工作流程模型。 此外，您組織中的開發人�
 * **正在運行**:工作流實例正在運行。
 * **完成**:工作流實例已成功結束。
 
-* **暫停**:工作流實例已暫停。
+* **暫停**:將工作流標籤為暫停。不過，請參閱以下有關此狀態的已知問題的警告說明。
 * **中止**:工作流實例已終止。
 * **過時**:工作流實例的推進需要執行後台作業，但是在系統中找不到該作業。當執行工作流程時發生錯誤時，可能會發生這種情況。
 
@@ -107,7 +107,12 @@ AEM提供許多有用的工作流程模型。 此外，您組織中的開發人�
 
 根據當前狀態，當需要干預工作流實例的正常進展時，您可以對運行的工作流實例執行操作：
 
-* **暫停**:暫時停止工作流的執行。當您不希望工作流程繼續（例如維護）時，暫停在例外情況下很有用。 暫停會將工作流程狀態變更為「暫停」。
+* **暫停**:暫停會將工作流程狀態變更為「暫停」。請參閱下列注意事項：
+
+>[!CAUTION]
+>
+>將工作流程狀態標示為「暫停」有已知問題。 在此狀態下，可以對收件箱中暫停的工作流項採取操作。
+
 * **繼續**:使用相同的配置在暫停的執行點重新啟動暫停的工作流。
 * **終止**:結束工作流執行並將狀態更改為 **ABORTED**。無法重新啟動中止的工作流程實例。
 
