@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 translation-type: tm+mt
-source-git-commit: 9b65f7194dc648ba9a6dbc127bc8d5951f126269
+source-git-commit: 6ca333c64fcd7d3b91b1ae8ef98c53ed770479d4
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 0%
@@ -98,6 +98,23 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 如果其他一切都失敗，請查看記錄，以瞭解發生了什麼。
 
+### 使用Java 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}時，網站不會載入或間歇性失敗
+
+在Java 11上執行的AEM 6.5有已知問題，網站可能不會偶爾載入或失敗。
+
+如果發生此情況，請遵循下列解決方法：
+
+1. 開啟`crx-quickstart/conf/`資料夾下的`sling.properties`檔案
+1. 找到以下行：
+
+   `org.osgi.framework.bootdelegation=sun.,com.sun.`
+
+1. 以下列方式取代：
+
+   `org.osgi.framework.bootdelegation=sun.,com.sun.,jdk.internal.reflect,jdk.internal.reflect.*`
+
+1. 重新啟動實例。
+
 ## 使用應用程式伺服器{#troubleshooting-installations-with-an-application-server}進行安裝故障排除
 
 ### 請求geometrixx-outdour頁面{#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}時傳回頁面找不到
@@ -130,20 +147,3 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 如果您在JBoss上將JSP檔案安裝或更新到Experience Manager，且未編譯相應的servlet，請確保正確配置了JBoss JSP編譯器。 如需詳細資訊，請參閱
 [JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html)文章中的JSP編譯問題。
-
-### 使用Java 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}時，網站不會載入或間歇性失敗
-
-在Java 11上執行的AEM 6.5有已知問題，網站可能不會偶爾載入或失敗。
-
-如果發生此情況，請遵循下列解決方法：
-
-1. 開啟`crx-quickstart/conf/`資料夾下的`sling.properties`檔案
-1. 找到以下行：
-
-   `org.osgi.framework.bootdelegation=sun.,com.sun.`
-
-1. 以下列方式取代：
-
-   `org.osgi.framework.bootdelegation=sun.,com.sun.,jdk.internal.reflect,jdk.internal.reflect.*`
-
-1. 重新啟動實例。
