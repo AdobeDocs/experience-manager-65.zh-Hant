@@ -10,7 +10,7 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: fff2c39561f54436f8e5613ac648cb91af888c66
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 14%
@@ -55,7 +55,7 @@ ht-degree: 14%
 
 不同的網頁有不同的需求。 例如，有時您想要的網頁提供在個別瀏覽器視窗中開啟HTML5檢視器的連結。 在其他情況下，可能需要將HTML5檢視器直接內嵌在代管頁面上。 在後一種情況下，網頁可能具有靜態版面。 或者，它可能是「自適應」的，並在不同裝置上或不同瀏覽器視窗大小上顯示不同。 為滿足這些需求，Dynamic Media隨附的所有預先定義、現成可用的HTML5檢視器都支援靜態網頁和互動式設計網頁。
 
-如需如何將回應式檢視器內嵌至網頁的詳細資訊，請參閱[回應式影像庫](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html)。
+如需如何將回應式檢視器內嵌至網頁的詳細資訊，請參閱[回應式影像庫](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html)。
 
 >[!NOTE]
 >
