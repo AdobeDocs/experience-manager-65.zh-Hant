@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 管理使用指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解 AEM 的管理事項。
 translation-type: tm+mt
-source-git-commit: 98180b630c991bc65ddfa275e0f8a97be3be6f7e
+source-git-commit: fd7a32c1070a0560ca744db041cf809f28672b33
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '671'
+ht-degree: 13%
 
 ---
 
@@ -56,10 +56,10 @@ ht-degree: 0%
    + [設定電子郵件通知](notification.md)
    + [連結檢查程式](external-link-checker.md)
    + [疑難排解AEM](troubleshoot.md)
-   + [管理對工作流程的存取](workflows-managing.md)
-   + [啟動工作流程](workflows-starting.md)
+   + [管理工作流程存取權](workflows-managing.md)
+   + [開始工作流程](workflows-starting.md)
    + [管理工作流程](workflows.md)
-   + [管理工作流實例](workflows-administering.md)
+   + [管理工作流程例項](workflows-administering.md)
    + [搭配AEM使用cURL](curl.md)
    + [代理伺服器工具(proxy.jar)](proxy-jar.md)
    + [為AEM應用程式設定](config-apps.md)
@@ -82,10 +82,10 @@ ht-degree: 0%
    + [減輕AEM中的序列化問題](mitigating-serialization-issues.md)
    + [用戶同步](sync.md)
    + [封裝的Token支援](encapsulated-token.md)
-   + [單一登入](/help/sites-deploying/single-sign-on.md)
+   + [單一登入](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html)
    + [如何在AEM中審核使用者管理作業](audit-user-management-operations.md)
    + [SSL預設值](ssl-by-default.md)
-   + [SAML 2.0驗證處理常式](saml-2-0-authenticationhandler.md)
+   + [SAML 2.0 驗證處理常式](saml-2-0-authenticationhandler.md)
    + [AEM中的已關閉使用者群組](closed-user-groups.md)
    + [Granite Operations —— 使用者與群組管理](granite-user-group-admin.md)
    + [在AEM中啟用CRXDE Lite](enabling-crxde-lite.md)
@@ -99,14 +99,14 @@ ht-degree: 0%
    + [AEM 6.5中的自訂使用者群組對應](/help/sites-administering/cug-mapping.md)
 + 個性化 {#personalization}
    + [個性化](personalization.md)
-   + [設定ContextHub](/help/sites-developing/ch-configuring.md)
+   + [設定ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
    + [ClientContext](client-context.md)
    + [促銷活動](campaigns.md)
    + [使用ContextHub設定區段](segmentation.md)
    + [設定區段](campaign-segmentation.md)
    + [擴充及設定著陸頁面的Design Importer](extending-the-design-importer-for-landingpages.md)
    + [整合著陸頁面與Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
-+ 電子商務{#ecommerce}
++ 電子商務 {#ecommerce}
    + [電子商務](ecommerce.md)
    + [概念](concepts.md)
    + [管理一般電子商務](generic.md)
@@ -114,7 +114,7 @@ ht-degree: 0%
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
    + [AEM商務- GDPR就緒性](gdpr-compliance-commerce.md)
-+ 整合{#integration}
++ 整合 {#integration}
    + [與第三方服務整合](third-party-services.md)
    + [與Salesforce整合](salesforce.md)
    + [整合 Adobe Target](target.md)
@@ -137,7 +137,7 @@ ht-degree: 0%
    + [選擇使用Adobe Analytics和Adobe Target](opt-in.md)
    + [AEM入口網站和Portlet](aem-as-portal.md)
    + [與Dynamic Media Classic整合(Scene7)](scene7.md)
-   + [AEM Livefyre Recipes](aem-livefyre-recipes.md)
+   + [AEM Livefyre 指導方針](aem-livefyre-recipes.md)
    + [疑難排解整合問題](troubleshooting-integration-issues.md)
    + [與BrightEdge Content Optimizer整合](brightedge.md)
    + [Catalog Producer](catalog-producer.md)
@@ -155,14 +155,14 @@ ht-degree: 0%
    + [解決方案整合](integration.md)
    + [將體驗片段匯出至Adobe Target](experience-fragments-target.md)
    + [電子郵件範本的最佳做法](best-practices-for-email-templates.md)
-   + [與Livefyre整合](livefyre.md)
+   + [與 Livefyre 整合](livefyre.md)
 + 最佳作法 {#bestpractices}
    + [最佳作法](administer-best-practices.md)
-   + [翻譯最佳做法](tc-bp.md)
-   + [MSM最佳實務](msm-best-practices.md)
+   + [翻譯最佳做法](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
+   + [MSM最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR就緒性](gdpr-compliance-sites.md)
-   + [處理AEM Foundation的GDPR要求](handling-gdpr-requests-for-aem-platform.md)
-   + [AEM商務- GDPR就緒性](gdpr-compliance-commerce.md)
+   + [處理AEM Foundation的GDPR要求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
+   + [AEM商務- GDPR就緒性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/ecommerce/gdpr-compliance-commerce.html)
 + 內容管理{#contentmanagement}
    + [如何使用套件](package-manager.md)
    + [管理標籤](tags.md)
