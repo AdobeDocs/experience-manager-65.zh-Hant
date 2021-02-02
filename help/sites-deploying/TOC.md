@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 Deploying 指南
 breadcrumb-title: Deploying 指南
 user-guide-description: 進一步了解 Adobe Experience Manager 6.5 的安裝、部署和架構，包括我們的 Adobe Managed Services 雲端部署。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 9%
+source-wordcount: '352'
+ht-degree: 10%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 9%
    + [卸載作業](offloading.md)
    + [單一登入](single-sign-on.md)
    + [資源映射](resource-mapping.md)
-   + [透過SSL啟用HTTP](/help/sites-administering/ssl-by-default.md)
+   + [透過SSL啟用HTTP](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ssl-by-default.html)
    + [一致性和遍歷檢查](consistency-check.md)
    + [效能准則](performance-guidelines.md)
    + [效能最佳化](configuring-performance.md)
@@ -88,7 +88,7 @@ ht-degree: 9%
    + [AEM 6.5中的Forms Repository Restructing](forms-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的電子商務資料庫重組](ecommerce-repository-restructuring-in-aem-6-5.md)
    + [6.5版中AEM Communities的儲存庫重組](communities-repository-restructuring-in-aem-6-5.md)
-+ 電子商務{#ecommerce}
++ 電子商務 {#ecommerce}
    + [電子商務概觀](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
