@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77c3624a780bd0d2e3bb3e82004cce73e5b66b32
+source-git-commit: fd9ee8e4eb35bd5d303d7bbdd9660a94c54925ff
 workflow-type: tm+mt
-source-wordcount: '3827'
+source-wordcount: '3859'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,8 @@ ht-degree: 0%
 * 以匿名或登入使用者身分簽署表格
 * 動態簽署程式（與AEM [!DNL Forms]工作流程整合）
 * 透過知識庫、電話和社交個人檔案進行驗證
+
+瞭解使用Adobe Sign搭配最適化表單](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)以建立更佳簽署體驗的最佳範例。[
 
 ## 必備條件 {#prerequisites}
 
@@ -357,5 +359,5 @@ ht-degree: 0%
 ## 相關文章{#related-articles}
 
 * [將Adobe Sign與AEM Forms整合](../../forms/using/adobe-sign-integration-adaptive-forms.md)
-* [在最適化表單中使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
+* [搭配最適化表單使用Adobe Sign的最佳範例](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)
 * [搭配AEM Forms（視訊）使用Adobe Sign](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
