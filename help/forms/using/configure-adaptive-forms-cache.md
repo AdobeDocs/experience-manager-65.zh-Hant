@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ade3747ba608164a792a62097b82c55626245891
+source-git-commit: 2d54d115529126162c92e9943a188d05159535f9
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 1. 前往`https://[server]:[port]/system/console/configMgr`的AEM網頁主控台組態管理器。
 1. 按一下&#x200B;**[!UICONTROL 自適應表單和互動式通信Web通道配置]**&#x200B;以編輯其配置值。
-1. 在[!UICONTROL 編輯配置值]對話框中，在&#x200B;**[!UICONTROL Number of Adaptive Forms]**&#x200B;欄位中指定AEM [!DNL Forms]伺服器實例可以快取的最大表單或文檔數。 預設值為100。
+1. 在[!UICONTROL 編輯配置值]對話框中，在&#x200B;**[!UICONTROL Number of Adaptive Forms]**&#x200B;欄位中指定AEM [!DNL Forms]伺服器實例可以快取的最大表單或文檔數。 預設值為 100。
 
    >[!NOTE]
    >
@@ -46,7 +46,6 @@ ht-degree: 0%
 ### 先決條件{#pre-requisites}
 
 * 啟用[合併或預填充客戶端的資料選項。 ](prepopulate-adaptive-form-fields.md#prefill-at-client)它有助於合併每個預先填入表單實例的唯一資料。
-* [為每個發佈實例啟用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。它可協助針對最適化表單取得更佳的快取效能。 刷新代理的預設URL為`http://[server]:[port]]/etc/replication/agents.publish/flush.html`。
 
 ### 在調度程式{#considerations}上快取自適應表單的注意事項
 
@@ -63,7 +62,7 @@ ht-degree: 0%
 
 執行下列步驟，以啟用和配置分發程式上的快取自適應表單：
 
-1. 為您環境的每個發佈實例開啟以下URL並配置複製代理：
+1. 為您環境的每個發佈實例開啟以下URL，並[為您環境的發佈實例啟用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance):
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
 1. [將以下內容添加到dispatcher.any檔案中](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
@@ -143,17 +142,7 @@ ht-degree: 0%
 
 發佈影像和視訊後，請明確取消發佈並發佈參照這些資產的最適化表單。
 
-### 某些包含內容片段或體驗片段的最適化表單不會自動從Dispatcher Cache {#content-or-experience-fragment-not-auto-invalidated}中失效
-
-#### 問題 {#issue2}
-
-當您將內容片段或體驗片段新增至最適化表單，而這些資產會獨立編輯和發佈時，最適化表單中會包含這些資產，這些資產不會自動從分派器快取中失效。
-
-#### 解決方案{#Solution2}
-
-發佈更新的內容片段或體驗片段後，請明確取消發佈並發佈使用這些資產的最適化表單。
-
-### 僅快取自適應表單的第一個實例{#only-first-insatnce-of-adptive-forms-is-cached}
+### 僅快取自適應表單的第一個實例{#only-first-instance-of-adaptive-forms-is-cached}
 
 #### 問題 {#issue3}
 
