@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: 31f546400f4c3335953d05b1df9394445b5feb56
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2707'
 ht-degree: 3%
 
 ---
@@ -29,6 +29,10 @@ ht-degree: 3%
 ## 安裝和自訂轉出組態{#installed-and-custom-rollout-configurations}
 
 本節提供有關已安裝的轉出配置及其使用的同步操作的資訊，以及如何根據需要建立自定義配置。
+
+>[!CAUTION]
+>
+>建議更新或變更現成可用的（已安裝）轉出組態為&#x200B;**not**。 如果需要自訂即時動作，則應將它新增至自訂轉出設定。
 
 ### 轉出觸發器{#rollout-triggers}
 
