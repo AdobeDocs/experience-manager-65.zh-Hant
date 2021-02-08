@@ -1,11 +1,11 @@
 ---
-title: ' [!DNL Adobe Experience Manager Assets]簡介。'
+title: ' [!DNL Adobe Experience Manager Assets] 簡介'
 description: 瞭解什麼是數位資產管理、其使用案例，以及 [!DNL Adobe Experience Manager Asset] 產品。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 130a03c821fd2a1e9ecda70039241720052a8920
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '868'
 ht-degree: 12%
 
 ---
@@ -67,11 +67,11 @@ ht-degree: 12%
 
 * **轉譯**:轉譯是資產的二進位表示法。[!DNL Assets] 一律有主要表示法——上傳檔案的主要表示法。它們可以有不限數量的其他表示法，例如，可能是由自訂的工作流程步驟或在上傳資產時所建立。轉譯可能有不同大小、不同解析度、加上浮水印，或其他某個已變更的特性。
 
-* **版本**:版本修訂會在特定時間點建立數位資產的快照。您可以將資產還原為舊版。 請參閱Assets](manage-assets.md#asset-versioning)中的[版本控制。
+* **版本**:版本修訂會在特定時間點建立數位資產的快照。您可以將資產還原為舊版。 請參閱 [!DNL Assets]](manage-assets.md#asset-versioning)中的[版本控制。
 
 * **子資產**:子資產是組成資產的資產，例如，檔案中的圖層或PDF [!DNL Adobe Photoshop] 檔案中的頁面。在[!DNL Assets]中，您可以像管理資產一樣管理子資產。
 
-### 如何使用資產{#how-to-work-with-assets}
+### 如何使用數位資產{#how-to-work-with-assets}
 
 您可以對資產或系列執行動作。 動作可以建立或修改資產、系列和轉譯。 您對資產執行的許多基本動作——上傳、刪除、更新、儲存子資產——會觸發預先設定的工作流程。 這些功能在[!DNL Assets]中自動開啟，並在[!DNL Assets]媒體處理常式中詳細說明。
 
@@ -82,8 +82,13 @@ ht-degree: 12%
 * 產生資產的轉譯和縮圖；包括視需要自動調整大小和裁切。
 * 視需要轉碼資產。 例如，行動與網路使用的視訊會轉碼為每秒24個畫格，下載每秒30個畫格的視訊。 行動與網路使用的音訊會以128 Kbps轉碼，以192 Kbps的音訊下載。
 
-當然，您也可以手動套用工作流程。 如需預設工作流程的清單，請參閱[資產媒體處理常式](/help/assets/media-handlers.md)。
+當然，您也可以手動套用工作流程。 如需預設工作流程的清單，請參閱[資產媒體處理常式](media-handlers.md)。
 
-## [!DNL Experience Manager Assets] 和  [!DNL MediaLibrary] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] 和  [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-有關差異的資訊，請參閱[資產和MediaLibrary](/help/assets/medialibrary.md)。
+有關差異的資訊，請參閱[資產和媒體庫](medialibrary.md)。
+
+>[!MORELIKETHIS]
+>
+>* [將Experience Manager Assets作為現代DAM](https://www.youtube.com/embed/PBwQqZgC-yo)
+
