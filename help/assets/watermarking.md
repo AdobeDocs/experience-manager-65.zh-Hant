@@ -3,9 +3,9 @@ title: 將浮水印新增至您的數位資產
 description: 瞭解如何使用浮水印功能將數位水印新增至資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: ec97cc41989cacdcae64a955a32a34d12212ca85
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 1. 從側面板，將「添加水印」步驟拖動到「DAM更新資產」工作流程。****
 
-   ![拖曳「 [!UICONTROL 新增] 水標步驟」並新增至 [!UICONTROL DAM更新] Assetworkflow](assets/add_watermark_step_aem_assets.png)
-2
+   ![拖曳「 [!UICONTROL 新增] 水標步驟」並新增至 [!UICONTROL DAM更新資] 料流](assets/add_watermark_step_aem_assets.png)
+
    *圖：拖曳「 [!UICONTROL 新增] 水標步驟」並新增至 [!UICONTROL DAM更新] 資產流。*
 
    >[!NOTE]
@@ -33,7 +33,7 @@ ht-degree: 0%
 1. 開啟&#x200B;**[!UICONTROL 新增浮水印]**&#x200B;步驟以顯示其屬性。
 1. 在&#x200B;**[!UICONTROL 參數]**&#x200B;標籤中，在各種欄位中指定有效值，包括文字、字型類型、大小、顏色、位置、方向等。 要確認更改，請按一下&#x200B;**[!UICONTROL Done]**。
 
-   ![在「資產」的「新增浮水印」步驟中提供引數](assets/arguments_add_watermark_aem_assets.png)
+   ![在中的新增浮水印步驟中提供引數  [!DNL Assets]](assets/arguments_add_watermark_aem_assets.png)
 
    *圖：在中的添加水印步驟中提供參數 [!DNL Assets]。*
 
@@ -41,3 +41,8 @@ ht-degree: 0%
 1. 從[!DNL Assets]使用者介面上傳範例資產。 浮水印會在您在上述步驟中設定的位置顯示字型大小、顏色等。
 
 若要以程式設計方式或使用動態資訊加上PDF檔案水印，請考慮使用[Experience Manager Document Services](/help/forms/using/overview-aem-document-services.md)產品。
+
+## 提示和限制{#tips-limitations}
+
+* 僅支援文字浮水印。 雖然您可以在建立[!UICONTROL 新增浮水印處理]時上傳影像，但影像不會當做浮水印使用。
+* 僅支援PNG和JPEG檔案加浮水印。 其他資產格式不會浮水印。
