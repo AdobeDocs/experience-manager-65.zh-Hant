@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e1f5d549df1db28a8679296afb4b758051d8f6c
+source-git-commit: c9c407ea7c0bff3d15934552cd709bec7f24e857
 workflow-type: tm+mt
-source-wordcount: '3298'
+source-wordcount: '3318'
 ht-degree: 0%
 
 ---
@@ -165,6 +165,11 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
    <td><p>支援</p> </td>
   </tr>
   <tr>
+   <td><p>Microsoft SQL Server 2019</p> </td>
+   <td><p>儲存庫微內核</p> </td>
+   <td><p>支援</p> </td>
+  </tr>
+  <tr>
    <td>IBM DB2 11.1</td>
    <td>儲存庫微內核</td>
    <td>R:受限制的支援</td>
@@ -207,6 +212,12 @@ Adobe Experience Manager Forms需要Java Virtual Machine才能執行，此程式
    <td>Microsoft SQL Server<br /> </td>
    <td><p>Microsoft® SQL Server JDBC驅動程式6.2.1.0<br /> </p> <p>sqljdbc6.jar</p> </td>
    <td><p>隨附於JEE安裝的AEM Forms。</p> </td>
+  </tr>
+  <tr>
+  <tr>
+   <td>Microsoft SQL Server<br /> </td>
+   <td><p>Microsoft® SQL Server JDBC驅動程式8.2.2<br /> </p> <p>sqljdbc8.jar</p> </td>
+   <td><p>從Microsoft網站下載。</p> </td>
   </tr>
   <tr>
    <td>Oracle</td>
@@ -512,7 +523,7 @@ AEM Forms App現在支援Apache Cordova。 以下是支援的Cordova平台特定
 
 ## JEE上AEM Forms的支援用戶端{#supported-clients-for-aem-forms-on-jee}
 
-### 工作台{#workbench}
+### Workbench {#workbench}
 
 <table>
  <tbody>
