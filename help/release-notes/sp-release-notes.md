@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: eec0e8f466c4a228b16ee2c1249052bfc3250dec
+source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
 workflow-type: tm+mt
-source-wordcount: '4302'
+source-wordcount: '4308'
 ht-degree: 3%
 
 ---
@@ -46,6 +46,8 @@ ht-degree: 3%
    * 在提交自適應表單時驗證伺服器上的欄位值。
 
    * 使用[!DNL Automated Forms Conversion service]將PDF表單轉換為最適化表單。
+
+* [!DNL Experience Manager Forms]中支援Microsoft SQL Server 2019。
 
 * 內建存放庫 (Apache Jackrabbit Oak) 更新至 1.22.5 版。
 
