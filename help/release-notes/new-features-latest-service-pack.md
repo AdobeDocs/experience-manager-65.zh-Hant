@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
+source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2780'
 ht-degree: 1%
 
 ---
@@ -53,6 +53,10 @@ ht-degree: 1%
 ### 在「佈局」模式{#reset-option-layout-mode}中，每個元件的「重置選項」可用性
 
 現在，您可以針對最適化表單的「版面」模式中的每個元件使用重設選項。 當您為面板定義多欄版面時，可使用此功能來重設面板中的個別元件。 請參閱[使用版面模式來調整元件](../../help/forms/using/resize-using-layout-mode.md#resize-components)的大小。
+
+### 支援Microsoft SQL Server 2019
+
+[!DNL Experience Manager Forms] 現在支援Microsoft SQL Server 2019。
 
 ## 前[!DNL Experience Manager] 6.5版Service Packs {#key-features-previous-service-packs}中的主要功能
 
@@ -219,7 +223,7 @@ ht-degree: 1%
 
 #### 在用戶端(6.5.6.0){#prefill-merge-data-at-client}預先填寫最適化表格
 
-當您預先填寫最適化表格時，[!DNL Experience Manager Forms]伺服器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
+當您預先填寫最適化表單時，[!DNL Experience Manager Forms]伺服器會將資料與最適化表單合併，並將填寫的表單傳送給您。 依預設，資料合併動作會在伺服器上進行。
 您現在可以將[!DNL Experience Manager Forms]伺服器配置為[在客戶端執行資料合併操作，而不是在伺服器上執行。 ](../../help/forms/using/prepopulate-adaptive-form-fields.md)它可大幅縮短預先填寫和轉換最適化表單的時間。
 
 #### 在具備雙向SSL實作(6.5.6.0){#fdm-integration-rest-apis-two-way-ssl}的伺服器上，與REST風格的API整合表單資料模型
