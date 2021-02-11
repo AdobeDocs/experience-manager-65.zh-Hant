@@ -2,9 +2,9 @@
 title: 建立和同步即時副本
 description: 瞭解如何建立及同步即時副本。
 translation-type: tm+mt
-source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
+source-git-commit: 1725f19d0676680ae89ad7ea39fa3ae1deaeb8a3
 workflow-type: tm+mt
-source-wordcount: '4114'
+source-wordcount: '4170'
 ht-degree: 0%
 
 ---
@@ -231,7 +231,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
    ![推出藍圖](assets/rollout-blueprint.png)
 
-統計作為非同步作業進行處理，並可以在&#x200B;**全局導航** ->**工具** ->操作&#x200B;**->**&#x200B;作業&#x200B;**的「非同步作業狀態」儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)中檢查**[****
+統計作為非同步作業進行處理，並可以在&#x200B;**全局導航** ->**工具** ->操作&#x200B;**->**&#x200B;作業&#x200B;**的「非同步作業狀態」儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)中檢查[******
 
 >[!NOTE]
 >
@@ -257,7 +257,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
 1. 確認這些詳細資訊後，選擇&#x200B;**Rovolt**&#x200B;以執行操作。
 
-統計作為非同步作業進行處理，並可以在&#x200B;**全局導航** ->**工具** ->操作&#x200B;**->**&#x200B;作業&#x200B;**的「非同步作業狀態」儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)中檢查**[****
+統計作為非同步作業進行處理，並可以在&#x200B;**全局導航** ->**工具** ->操作&#x200B;**->**&#x200B;作業&#x200B;**的「非同步作業狀態」儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)中檢查[******
 
 >[!NOTE]
 >
@@ -277,7 +277,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
    ![推出藍圖](assets/rollout-blueprint.png)
 
-統計作為非同步作業進行處理，並可以在&#x200B;**全局導航** ->**工具** ->操作&#x200B;**->**&#x200B;作業&#x200B;**的「非同步作業狀態」儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)中檢查**[****
+統計作為非同步作業進行處理，並可以在&#x200B;**全局導航** ->**工具** ->操作&#x200B;**->**&#x200B;作業&#x200B;**的「非同步作業狀態」儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)中檢查[******
 
 >[!NOTE]
 >
@@ -355,6 +355,10 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 >[!NOTE]
 >
 >您也可以[將即時副本](#detaching-a-live-copy)從其藍圖中分離，以刪除所有連接。 「分離」(Detach)操作是永久的和不可逆的。
+
+>[!NOTE]
+>
+>如果元件標籤為容器，取消和暫停操作將不適用於其子元件。 如需詳細資訊，請參閱[MSM最佳實務](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)。
 
 #### 暫停頁面屬性的繼承{#suspending-inheritance-from-page-properties}
 
@@ -459,6 +463,10 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 ### 取消元件{#cancelling-inheritance-for-a-component}的繼承
 
 取消元件的即時副本繼承，使元件不再與源元件同步。 如有需要，您可以在稍後啟用繼承。
+
+>[!NOTE]
+>
+>如果元件標籤為容器，取消和暫停操作將不適用於其子元件。 如需詳細資訊，請參閱[MSM最佳實務](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)。
 
 >[!NOTE]
 >
