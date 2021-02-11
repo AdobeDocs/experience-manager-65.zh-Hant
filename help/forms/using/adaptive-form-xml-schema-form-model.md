@@ -1,34 +1,30 @@
 ---
-title: 使用XML架構建立最適化表單
-seo-title: 使用XML架構建立最適化表單
-description: 最適化表單可以使用XML架構做為表單模型，讓您運用現有的XSD範本來建立最適化表單。 您可以從XSD拖放架構元素至最適化表單。
-seo-description: 最適化表單可以使用XML架構做為表單模型，讓您運用現有的XSD範本來建立最適化表單。 您可以從XSD拖放架構元素至最適化表單。
-uuid: 84c35728-1b6c-4286-854b-51c03bfd0eac
-topic-tags: develop
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 0d6c12b3-3a70-48e9-a83b-974360a8b0b6
-docset: aem65
+title: 如何使用XML架構建立最適化表單？
+description: 瞭解如何將XML架構用作最適化表單的表單模型。 您可以套用現有的XSD範本，以建立最適化表單，並從XSD拖放架構元素至最適化表單。 使用XML架構範例深入挖掘，使用XML架構新增特殊屬性至欄位，並限制最適化表單元件的可接受值。
+feature: Adaptive Forms
+role: Business Practitioner, Developers
+level: Beginner, Imtermediate
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: ec8a4c3941b5434f10ad0727be02fcf296cd4da7
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1073'
 ht-degree: 3%
 
 ---
 
 
-# 使用XML架構建立最適化表單{#creating-adaptive-forms-using-xml-schema}
+# 使用XML架構{#creating-adaptive-forms-using-xml-schema}建立最適化表單
 
 ## 必備條件 {#prerequisites}
 
 使用XML架構製作最適化表單作為其表單模型，需要基本瞭解XML架構。 此外，建議在本文之前閱讀下列內容。
 
-* [建立最適化表單](../../forms/using/creating-adaptive-form.md)
+* [建立最適化表單](creating-adaptive-form.md)
 * [XML架構](https://www.w3.org/TR/xmlschema-2/)
 
 ## 使用XML架構作為表單模型{#using-an-xml-schema-as-form-model}
 
-AEM Forms支援使用現有的XML架構做為表單模型來建立最適化表單。 此XML架構代表組織中後端系統產生或使用資料的結構。
+[!DNL Experience Manager Forms] 支援使用現有XML架構作為表單模型建立自適應表單。此XML架構代表組織中後端系統產生或使用資料的結構。
 
 使用XML架構的主要功能包括：
 
@@ -305,7 +301,7 @@ bindRef</code>欄位顯示樹元素與模式中的元素或屬性之間的關聯
 
 **為什麼我無法將子表單的個別元素（從任何複雜類型產生的結構）拖曳至可重複的子表單（minOccours或maxOccuns值大於1）?**
 
-在可重複的子表單中，您必須使用完整的子表單。 如果您只想要選擇欄位，請使用整個結構並刪除不要的欄位。
+在可重複的子表單中，您必須使用「完整」子表單。 如果您只想要選擇欄位，請使用整個結構並刪除不要的欄位。
 
 **我在Content Finder中有很長的複雜結構。如何尋找特定元素？**
 
