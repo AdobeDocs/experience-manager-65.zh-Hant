@@ -1,34 +1,30 @@
 ---
-title: 使用JSON結構描述建立最適化表單
-seo-title: 使用JSON結構描述建立最適化表單
-description: 最適化表單可以使用JSON結構描述做為表單模型，讓您運用現有的JSON結構描述來建立最適化表單。
-seo-description: 最適化表單可以使用JSON結構描述做為表單模型，讓您運用現有的JSON結構描述來建立最適化表單。
-uuid: bdeaeae8-65a3-4c46-b27d-fe68481e31f1
-topic-tags: develop
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 375ba8fc-3152-4564-aec5-fcff2a95cf4c
-docset: aem65
+title: 如何使用JSON結構描述建立最適化表單？
+description: 瞭解如何使用JSON結構描述來建立最適化表單作為表單模型。 您可以使用現有的JSON結構描述來建立最適化表單。 使用JSON結構描述的範例進行更深入的挖掘、在JSON結構描述定義中預先設定欄位、限制最適化表單元件的可接受值，以及瞭解不支援的結構。
+feature: Adaptive Forms
+role: Business Practitioner, Developers
+level: Beginner, Imtermediate
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 37ab98c9c78af452887c32101287b6d7f18d9d91
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1448'
 ht-degree: 4%
 
 ---
 
 
-# 使用JSON結構描述建立最適化表單{#creating-adaptive-forms-using-json-schema}
+# 使用JSON結構描述{#creating-adaptive-forms-using-json-schema}建立最適化表單
 
 ## 必備條件 {#prerequisites}
 
 使用JSON結構描述製作最適化表單作為表單模型，需要基本瞭解JSON結構描述。 建議在本文之前閱讀下列內容。
 
-* [建立最適化表單](../../forms/using/creating-adaptive-form.md)
+* [建立最適化表單](creating-adaptive-form.md)
 * [JSON結構描述](https://json-schema.org/)
 
 ## 使用JSON結構描述做為表單模型{#using-a-json-schema-as-form-model}
 
-AEM Forms支援使用現有的JSON結構描述來建立最適化表單。 此JSON結構描述組織中後端系統產生或使用資料的結構。 您使用的JSON結構描述應符合[v4規格](https://json-schema.org/draft-04/schema)。
+[!DNL Adobe Experience Manager Forms] 支援使用現有的JSON結構描述作為表單模型來建立最適化表單。此JSON結構描述組織中後端系統產生或使用資料的結構。 您使用的JSON結構描述應符合[v4規格](https://json-schema.org/draft-04/schema)。
 
 使用JSON結構描述的主要功能包括：
 
@@ -82,7 +78,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
     </ul> </td>
   </tr>
   <tr>
-   <td><p>{</p> <p>「類型」:"字串",</p> <p>}</p> </td>
+   <td><p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>}</code></p> </td>
    <td><br /> <br /> 文字欄位<br /> <br /> <br /> </td>
   </tr>
   <tr>
@@ -112,16 +108,16 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 最適化表單使用JSON結構描述中的可用資訊來對應每個產生的欄位。 尤其是：
 
-* title屬性用作最適化表單元件的標籤。
-* description屬性設定為自適應表單元件的詳細說明。
-* 預設屬性用作最適化表單域的初始值。
-* maxLength屬性被設定為文本欄位元件的maxlength屬性。
-* 「數值」框元件使用minimum、maximum、exclusiveMinimum和exclusiveMaximum屬性。
-* 若要支援DatePicker元件的範圍，請提供額外的JSON結構描述屬性minDate和maxDate。
-* minItems和maxItems屬性用於限制可從面板元件中添加或刪除的項目／欄位數。
-* readOnly屬性設定自適應表單元件的只讀屬性。
-* 必要屬性會將最適化表單欄位標示為必填，而如果是面板（其中type為object），則最終提交的JSON資料會包含與該物件對應之空值的欄位。
-* pattern屬性設定為自適應形式的驗證模式（規則運算式）。
+* `title`屬性用作最適化表單元件的標籤。
+* `description`屬性被設定為自適應表單元件的詳細說明。
+* `default`屬性用作自適應表單域的初始值。
+* 將`maxLength`屬性設定為文本欄位元件的`maxlength`屬性。
+* `minimum`、`maximum`、`exclusiveMinimum`和`exclusiveMaximum`屬性用於「數值」框元件。
+* 若要支援`DatePicker component`其他JSON結構描述屬性`minDate`和`maxDate`的範圍。
+* `minItems`和`maxItems`屬性用於限制可從面板元件中添加或刪除的項目／欄位數。
+* `readOnly`屬性設定自適應表單元件的`readonly`屬性。
+* `required`屬性會將最適化表單欄位標示為必填，而在面板（其中type為object）中，最終提交的JSON資料的欄位具有與該物件對應的空值。
+* `pattern`屬性會以最適化形式設為驗證模式（規則運算式）。
 * JSON結構描述檔副檔名必須保留為。schema.json。 例如，&lt;filename>.schema.json。
 
 ## 範例JSON結構描述{#sample-json-schema}
@@ -361,7 +357,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 ## 為表單對象{#configure-scripts-or-expressions-for-form-objects}配置指令碼或表達式
 
-JavaScript是最適化表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用最適化表單指令碼模型API。 您可以預先將表單物件設定為[，以評估表單事件上的運算式](../../forms/using/adaptive-form-expressions.md)。
+JavaScript是最適化表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用最適化表單指令碼模型API。 您可以預先將表單物件設定為[，以評估表單事件上的運算式](adaptive-form-expressions.md)。
 
 使用aem:afproperties屬性來預先設定最適化表單運算式或指令碼，以用於最適化表單元件。 例如，觸發初始化事件時，下列程式碼會設定電話欄位的值，並列印值至記錄檔：
 
@@ -381,7 +377,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 }
 ```
 
-您應是[forms-power-user組](/help/forms/using/forms-groups-privileges-tasks.md)的成員，以配置表單對象的指令碼或表達式。 下表列出最適化表單元件支援的所有指令碼事件。
+您應是[forms-power-user組](forms-groups-privileges-tasks.md)的成員，以配置表單對象的指令碼或表達式。 下表列出最適化表單元件支援的所有指令碼事件。
 
 <table>
  <tbody>
@@ -586,9 +582,9 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
  </tbody>
 </table>
 
-在JSON中使用事件的一些範例是，在初始化事件時隱藏欄位，並在值提交事件時設定其他欄位的值。 有關為指令碼事件建立表達式的詳細資訊，請參見[最適化表單表達式](../../forms/using/adaptive-form-expressions.md)。
+在JSON中使用事件的一些範例是，在初始化事件時隱藏欄位，並在值提交事件時設定其他欄位的值。 有關為指令碼事件建立表達式的詳細資訊，請參見[最適化表單表達式](adaptive-form-expressions.md)。
 
-以下是前述範例的範例JSON程式碼。
+以下是前述範例的範例JSON程式碼範例。
 
 ### 隱藏初始化事件{#hiding-a-field-on-initialize-event}上的欄位
 
@@ -711,13 +707,13 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
     </ul> </td>
   </tr>
   <tr>
-   <td>maxItems</td>
+   <td><code>maxItems</code></td>
    <td>字串</td>
    <td>指定陣列中項目的最大數目。 最大項目必須等於或大於零。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>minItems</td>
+   <td><code>minItems</code></td>
    <td>字串</td>
    <td>指定陣列中項目的最小數量。 最小項目必須等於或大於零。</td>
    <td> </td>
@@ -727,7 +723,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 ## 不支援的構造{#non-supported-constructs}
 
-最適化表單不支援下列JSON結構：
+最適化表單不支援下列JSON結構描述：
 
 * 空類型
 * 聯合類型（如任何）和
