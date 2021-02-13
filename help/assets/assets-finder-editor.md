@@ -3,9 +3,9 @@ title: 「建立和配置資產編輯器」頁
 description: 瞭解如何建立自訂資產編輯器頁面並同時編輯多個資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2125'
 ht-degree: 1%
 
 ---
@@ -238,7 +238,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 要添加資產編輯器元件：
 
-1. 在您要自訂的「資產編輯器」頁面中，在sidekick中選取&#x200B;**資產編輯器**。 將顯示所有可用的資產編輯器元件。
+1. 在您要自訂的「資產編輯器」頁面中，在sidekick中選取&#x200B;**Asset Editor**。 將顯示所有可用的資產編輯器元件。
 
 >[!NOTE]
 >
@@ -268,7 +268,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. 通過按一下表單的「結束」區域中的&#x200B;**編輯**&#x200B;建立結束操作。 例如，您可能想要建立&#x200B;**Submit**&#x200B;按鈕，讓使用者提交其中繼資料變更。 或者，您可以新增&#x200B;**Reset**&#x200B;按鈕，將中繼資料重設為其原始狀態。
+1. 通過按一下表單的「結束」區域中的&#x200B;**編輯**&#x200B;建立結束操作。 例如，您可能想要建立&#x200B;**[!UICONTROL Submit]**&#x200B;選項，讓使用者提交其中繼資料變更。 或者，您可以新增&#x200B;**Reset**&#x200B;選項，將中繼資料重設為其原始狀態。
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
@@ -330,7 +330,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 #### 縮圖 {#thumbnail}
 
-Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會自動擷取縮圖）。 此外，元件還顯示檔案名和可修改的[操作。](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)
+Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會自動擷取縮圖）。 此外，元件還顯示檔案名和可修改的](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)操作。[
 
 ![screen_shot_2012-04-23at25452pm](assets/screen_shot_2012-04-23at25452pm.png)
 
@@ -381,7 +381,7 @@ Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會�
 | [!UICONTROL 引用] | 按一下此按鈕以顯示哪些頁面   資產正在使用中。 |
 | [!UICONTROL 版本設定] | 可讓您建立和還原   資產的版本。 |
 
-1. 將適當的動作拖曳至頁面上的&#x200B;**Actions**&#x200B;區域。 這樣會建立用於執行該動作的按鈕。
+1. 將適當的動作拖曳至頁面上的&#x200B;**Actions**&#x200B;區域。 它會建立一個選項，用來執行拖曳至頁面上的動作。
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
@@ -405,7 +405,7 @@ Thumbnail元件是資產顯示所選縮圖的位置（對於許多格式，會�
    若要選取資產範圍：按一下第一個資產，然後按一下`Shift + click`最後一個資產。
 
 1. 在&#x200B;**動作**&#x200B;欄位（頁面左側）中按一下「編輯中繼資料&#x200B;**」。**
-1. 「Geometrixx **Press Center Asset Editor**」（Geometrixx &lt;a0/>按中心資產編輯器&lt;a1/>）頁面會在新標籤中開啟。 資產的中繼資料顯示如下：
+1. 「Geometrixx **Press Center Asset Editor**」（Geometrixx 按中心資產編輯器）頁面會在新標籤中開啟。 資產的中繼資料顯示如下：
 
    * 標籤（不適用於所有資產，但僅適用於少數資產）會以斜體顯示。
    * 套用至所有資產的標籤會以一般字型顯示。
