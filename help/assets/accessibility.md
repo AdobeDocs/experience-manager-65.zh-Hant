@@ -3,7 +3,7 @@ title: ' [!DNL Experience Manager Assets]中的輔助功能'
 description: 瞭解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的協助功能如何協助殘障人士使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
+source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 1%
@@ -69,9 +69,9 @@ Possible topics to cover in this article are below.
 
 <!-- TBD items:
 
-* The button/menu to toggle between list view and card view exposes relevant info to the screen readers. What about column view option? This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’.
+* The option to toggle between list view and card view exposes relevant info to the screen readers. What about column view option? This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’.
 * How to open and browse through the profile popup dialog in [!DNL Experience Manager] UI using a keyboard? The navigation does not match the order of visual display of options on the UI. This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’. What about setting preferences and impersonating a user?
-* Using the [!DNL Experience Manager] tag browser and operating the buttons like delete tag? This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’.
+* Using the [!DNL Experience Manager] tag browser and operating the options like delete tag? This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’.
 * Read-only form fields can be focused with the keyboard. Can users tab to these fields to understand the contents and are they able to copy text from the fields?
 -->
 
@@ -130,7 +130,7 @@ In [!DNL Experience Manager] header section, when navigating in browse mode, scr
   * The Searching Help status message that is displayed when user enters a search string in Search for Help field under Help option
   * The error message if incorrect value is entered in Impersonate as field under User option and focus correctly moves to the text field (NPR-33804).
 
-Review CQ-4282133 before adding - Close button in a coral-dialog wasn't accessible through keyboard, due to which user cannot trigger close button through keyboard press in version preview dialog. After fix, user can close dialog through close button using keyboard.
+Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessible through keyboard, due to which user cannot trigger close option through keyboard press in version preview dialog. After fix, user can close dialog through close option using keyboard.
 
 * CQ-4273122 - Assets of video/audio type will have aria-label in format "Multimedia player: <Title>" so users relying on screen-reader will get to know that they are video/audio assets.
 -->
@@ -162,7 +162,7 @@ Review CQ-4282133 before adding - Close button in a coral-dialog wasn't accessib
 
 許多資產管理工作（例如CRUD作業、下載資產、新增中繼資料）都可以不同程度地存取。 [!DNL Assets] 可讓您使用螢幕閱讀器和鍵盤等各種輔助技術完成工作。
 
-觀看如何使用鍵盤瀏覽儲存庫並下載資產[的視頻演示。](https://youtu.be/K3dgqMRQJys)
+觀看如何使用鍵盤瀏覽儲存庫並下載資產](https://youtu.be/K3dgqMRQJys)的視頻演示。[
 
 對於通常由行銷人員和管理員等角色執行的中繼資料作業，下列功能可改善協助工具：
 
