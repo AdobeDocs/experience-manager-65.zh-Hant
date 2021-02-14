@@ -3,10 +3,10 @@ title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 09bb767ae8565624e7a6b9786a5cd4c581fe0b9a
 workflow-type: tm+mt
-source-wordcount: '1514'
-ht-degree: 1%
+source-wordcount: '1610'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
-智慧型內容服務是位於[!DNL Adobe I/O]的雲端服務。 要在[!DNL Adobe Experience Manager]中使用它，系統管理員必須將[!DNL Experience Manager]部署與[!DNL Adobe I/O]整合。
+智慧型內容服務是位於[!DNL Adobe Developer Console]的雲端服務。 要在[!DNL Adobe Experience Manager]中使用它，系統管理員必須將[!DNL Experience Manager]部署與[!DNL Adobe Developer Console]整合。
 
 總而言之，以下是使用智慧型內容服務的主要步驟：
 
@@ -36,13 +36,40 @@ ht-degree: 1%
 
 ![流程圖](assets/flowchart.gif)
 
-## 必備條件 {#prerequisites}
+## 先決條件和支援的格式{#prerequisites}
 
-在使用智慧型內容服務之前，請確定以下內容以在[!DNL Adobe I/O]上建立整合：
+在使用智慧型內容服務之前，請確定以下內容以在[!DNL Adobe Developer Console]上建立整合：
 
 * Adobe ID 帳戶具有組織的管理員權限。
 * 您的組織已啟用智慧型內容服務。
 * 智慧型內容服務基本套件只能新增至已授權[!DNL Adobe Experience Manager Sites]基本套件和[!DNL Assets]附加元件的部署。
+
+智慧型標籤僅套用至具有下列MIME類型的資產：
+
+* image/jpeg
+* image/tiff
+* image/png
+* image/bmp
+* image/gif
+* image/pjpeg
+* image/x-portable-anymap
+* image/x-portable-bitmap
+* image/x-portable-graymap
+* image/x-portable-pixmap
+* 影像/x-rgb
+* image/x-xbitmap
+* image/x-xpixmap
+* image/x-icon
+* 影像/photoshop
+* image/x-photoshop
+* 影像/psd
+* image/vnd.adobe.photoshop
+
+僅下列MIME類型支援智慧標籤資產轉譯：
+
+* image/jpeg
+* image/pjpeg
+* image/png
 
 ## 入門 {#onboarding}
 
@@ -162,3 +189,4 @@ ht-degree: 1%
 
 * 智慧型內容服務的使用限制為每年最多200萬個標籤影像。 處理和標籤的任何重複影像都會計為標籤影像。
 * 如果您從時間軸執行標籤工作流程，一次最多可套用15個資產。
+* 智慧型標籤僅適用於PNG和JPG影像格式。 因此，以這兩種格式建立轉譯的受支援資產，會以「智慧標籤」加以標籤。
