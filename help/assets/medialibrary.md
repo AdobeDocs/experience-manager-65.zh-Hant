@@ -3,7 +3,7 @@ title: 比較 [!DNL Assets] 和媒體庫產品
 description: 比較 [!DNL Experience Manager Assets] 和「Media Library（媒體庫）」功能並瞭解差異。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ca54c880cbda2a573d6c1229900fd80082c5f5aa
+source-git-commit: 82c2df0e53e8ef595ad158ef46089d6e4964ca26
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 1%
@@ -106,5 +106,6 @@ ht-degree: 1%
 
 >[!MORELIKETHIS]
 >
->*[[!DNL Experience Manager] 6.5受管理服務產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
->*[[!DNL Experience Manager] 6.5內部部署產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+>* [[!DNL Experience Manager] 6.5受管理服務產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
+>* [[!DNL Experience Manager] 6.5內部部署產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+
