@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
+source-git-commit: 7fed51b68c626b54565b9120f69229872946016f
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1883'
 ht-degree: 8%
 
 ---
@@ -53,6 +53,14 @@ ht-degree: 8%
 
    指出在產生的網站的頁面導覽中是否顯示或隱藏頁面。
 
+* **品牌化**
+
+   將品牌邊界附加至每個頁面標題，以跨頁套用一致的品牌識別。 此功能需要使用[核心元件2.14.0版或更新版本的頁面元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+
+   * **覆寫** -勾選以定義此頁面上的品牌印刷邊界。
+      * 任何子頁面都將繼承該值，除非它們也設定了&#x200B;**Override**&#x200B;值。
+   * **覆寫值** -要附加至頁面標題的品牌印刷邊界文字。
+      * 該值會附加在垂直號字元（例如「循環圖表」）後的頁面標題中 |隨時為WKND做好準備&quot;
 * **頁面標題**
 
    要在頁面上使用的標題。 通常由標題元件使用。 如果空白，則會使用&#x200B;**Title**。
@@ -85,7 +93,7 @@ ht-degree: 8%
 
    可讓您輸入此頁面的虛名URL，讓您擁有更短和／或更具表現力的URL。
 
-   例如，若虛名URL設定為`welcome`至網站`http://example.com,`路徑`/v1.0/startpage`所識別的頁面，則`http://example.com/welcome`應為`http://example.com/content/v1.0/startpage`的虛名URL
+   例如，若虛名URL設定為`welcome`至網站`http://example.com,`的路徑`/v1.0/startpage`所識別的頁面，則`http://example.com/welcome`應為`http://example.com/content/v1.0/startpage`的虛名URL
 
    >[!CAUTION]
    >
