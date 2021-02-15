@@ -3,7 +3,7 @@ title: 使用「連線資產」在 中共用 DAM 資產 [!DNL Sites]
 description: 使用遠程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署上可用的資產。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f0d91a32caa4d3b862d852028e3bc5547aeb8015
+source-git-commit: d05dc3af0a885e51758194783e773695086d7956
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 40%
@@ -32,7 +32,7 @@ ht-degree: 40%
 
    |  | [!DNL Sites] 雲端服務 | [!DNL Experience Manager] 6.5  [!DNL Sites] on AMS. | [!DNL Experience Manager] 6.5內 [!DNL Sites] 部部署 |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]雲端服務** | 支援 | 支援 | 支援 |
+   | **[!DNL Experience Manager Assets]as a[!DNL Cloud Service]** | 支援 | 支援 | 支援 |
    | **[!DNL Experience Manager]6.5  [!DNL Assets] on AMS.** | 支援 | 支援 | 支援 |
    | **[!DNL Experience Manager]6.5內 [!DNL Assets] 部部署** | 不支援 | 不支援 | 不支援 |
 
@@ -51,7 +51,7 @@ ht-degree: 40%
 |---|---|---|---|---|
 | [!DNL Sites] 管理員 | 本機 | [!DNL Experience Manager] `administrators` | `admin` | 設定[!DNL Experience Manager]並配置與遠程[!DNL Assets]部署的整合。 |
 | DAM 使用者 | 本機 | `Authors` | `ksaner` | 用於檢視及複製 `/content/DAM/connectedassets/` 中擷取的資產。 |
-| [!DNL Sites] 作者 | 本機 | `Authors` (在遠端DAM上具有讀取存取權，在本機上具有作者存取權 [!DNL Sites]) | `ksaner` | 使用者為[!DNL Sites]作者，他們使用此整合來改善其內容速度。 作者使用[!UICONTROL Content Finder]在遠端DAM中搜尋及瀏覽資產，並使用本機網頁中的必要影像。 已採用 `ksaner` DAM 使用者的認證。 |
+| [!DNL Sites] 作者 | 本機 | <ul><li>`Authors` (在遠端DAM上具有讀取存取權，在本機上具有作者存取權 [!DNL Sites]) </li> <li>`dam-users` 本地  [!DNL Sites]</li></ul> | `ksaner` | 使用者為[!DNL Sites]作者，他們使用此整合來改善其內容速度。 作者使用[!UICONTROL Content Finder]在遠端DAM中搜尋及瀏覽資產，並使用本機網頁中的必要影像。 已採用 `ksaner` DAM 使用者的認證。 |
 | [!DNL Assets] 管理員 | 遠端 | [!DNL Experience Manager] `administrators` | `admin` 遠程  [!DNL Experience Manager] | 設定跨原始資源共用 (CORS)。 |
 | DAM 使用者 | 遠端 | `Authors` | `ksaner` 遠程  [!DNL Experience Manager] | 在遠程[!DNL Experience Manager]部署上的作者角色。 使用[!UICONTROL 內容搜尋器]搜尋及瀏覽已連線資產中的資產。 |
 | DAM 經銷商 (技術使用者) | 遠端 | [!DNL Sites] `Authors` | `ksaner` 遠程  [!DNL Experience Manager] | [!DNL Experience Manager]本機伺服器（非[!DNL Sites]作者角色）會代表[!DNL Sites]作者使用此位於遠端部署的使用者來擷取遠端資產。 此角色與上述的兩個 `ksaner` 角色不一樣，而且屬於不同的使用者群組。 |
