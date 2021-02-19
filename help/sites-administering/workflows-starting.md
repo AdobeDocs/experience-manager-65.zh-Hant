@@ -1,6 +1,6 @@
 ---
-title: 啟動工作流程
-seo-title: 啟動工作流程
+title: 開始工作流程
+seo-title: 開始工作流程
 description: 瞭解如何在AEM中啟動「工作流程」。
 seo-description: 瞭解如何在AEM中啟動「工作流程」。
 uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 967018907e32e5916df72ff16dfc7bc06f8dbed8
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 ---
 
 
-# 啟動工作流{#starting-workflows}
+# 開始工作流程{#starting-workflows}
 
 在管理工作流程時，您可以使用多種方法來啟動工作流程：
 
@@ -129,7 +129,7 @@ Workflow Launcher會監視內容儲存庫中的更改，以根據更改的節點
       * 建立日期
       * 修改時間
       * 已移除
-   * **Notetype**
+   * **節點類型**
 
       工作流啟動程式應用的節點類型。
 
