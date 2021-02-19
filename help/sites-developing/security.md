@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d2267663-6c1d-413c-9862-e82e21ae6906
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: ea4de28525ec4c2094e84d98aad6a518b03f011e
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 使用請求會話{#use-request-session}
 
-Adobe建議依循Leas權限原則，使用系結至使用者要求的作業階段和適當的存取控制，來完成每個儲存庫的存取。
+Adobe建議依照最少權限原則，使用系結至使用者要求的作業階段和適當的存取控制來完成每個儲存庫存取。
 
 ## 防止跨網站指令碼(XSS){#protect-against-cross-site-scripting-xss}
 
@@ -32,7 +32,7 @@ Adobe建議依循Leas權限原則，使用系結至使用者要求的作業階�
 
 AEM會套用在輸出時篩選所有使用者提供內容的原則。 在開發和測試期間，防止XSS的優先順序最高。
 
-AEM提供的XSS保護機制以[OWASP(Open Web Application Security Project)](https://www.owasp.org/)提供的[AntiSamy Java Library](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)為基礎。 AntiSamy預設組態可在
+AEM提供的XSS保護機制以[OWASP(Open Web Application Security Project)](https://www.owasp.org/)提供的[AntiSamy Java Library](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)為基礎。 AntiSamy預設組態位於
 
 `/libs/cq/xssprotection/config.xml`
 
