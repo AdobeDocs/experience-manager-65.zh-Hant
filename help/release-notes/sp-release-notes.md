@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
+source-git-commit: 349568af561ca170ee000fbb0d1b40d3470ebe98
 workflow-type: tm+mt
-source-wordcount: '4308'
+source-wordcount: '4261'
 ht-degree: 3%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 3%
 
 * 當您在文字中新增一些樣式時，會在文字中新增`<div>`標籤，而且樣式無法再套用至文字(NPR-34531)。
 
-* 當您在彈出式選單中選取項目並更新所需檔案時，它不允許儲存對話方塊值，因為其他選單有空的必填欄位(NPR-34529)。
+* 當您在彈出式選單中選取項目並更新所需檔案時，它不允許儲存對話方塊值，因為其他選單的必填欄位空白(NPR-34529)。
 
 * 當您從自訂範本建立頁面並在Blueprint階層中移動時，先前從頁面刪除的元件會開始顯示在即時副本階層中的頁面上(NPR-34527)。
 
@@ -314,7 +314,7 @@ ht-degree: 3%
 >
 >[!DNL Experience Manager] Service Pack不包含修正 [!DNL Forms]。它們是使用單獨的[!DNL Forms]附加軟體包傳遞的。 此外，還發行了包含JEE上[!DNL Experience Manager Forms]修正的累積安裝程式。 如需詳細資訊，請參閱「安裝AEM Forms附加元件](#install-aem-forms-add-on-package)」和「在JEE上安裝AEM Forms」。[[](#install-aem-forms-jee-installer)
 
-**適用性表單**
+**調適型表單**
 
 * 在套用[!DNL Experience Manager] Service Pack 6(NPR-35126)後，無法使用Classic UI編輯最適化表單。
 
@@ -467,8 +467,6 @@ UberJar for Experience Manager 6.5.7.0可在[Maven Central儲存庫](https://rep
 | 連接器 | AEM 6.5不再支援Adobe JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013。 | N/A |
 
 ## 已知問題 {#known-issues}
-
-* 如果由於元件註冊表計時器鎖定而在[!DNL Experience Manager]響應中遇到問題，請[安裝此軟體包](https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr/2.1.20)。 這些問題的解決方案計畫納入下一版[Experience Manager Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-on-prem-managed-services)。
 
 * 在安裝Experience Manager 6.5.7.0期間，忽略`error.log`檔案中的下列錯誤：
 
