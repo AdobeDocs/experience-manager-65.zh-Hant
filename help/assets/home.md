@@ -3,10 +3,10 @@ title: Assets 指南
 description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
 user-guide-title: Assets 指南
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 11%
+source-wordcount: '321'
+ht-degree: 19%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 11%
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
 
-* [Experience Manager快速入門](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Experience Manager 6.5發行說明](/help/release-notes/home.md)
 * [近期文件更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [安全性檢查清單](/help/sites-administering/security-checklist.md)
@@ -44,11 +43,11 @@ ht-degree: 11%
 
 ## 關鍵[!DNL Experience Manager]資源
 
-* [Experience Manager教學課程影片](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [Experience Manager教學課程影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager Assets社群論壇](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
-* [《 Dispatcher使用手冊》](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
-* [HTL使用指南](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
-* [核心元件使用指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [《 Dispatcher使用手冊》](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [HTL使用指南](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant)
+* [核心元件使用指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hant)
