@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 5d5eebe4-46c9-4028-9354-c5f27944fcdc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6ae8bffa2d9d59f5656b9344d8826128f12885c
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 1%
+source-wordcount: '392'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 1. 在您的AEM例項中，導覽至「**[!UICONTROL 工具>安全性>使用者]**」，然後選取「建立使用者&#x200B;]**」。**[!UICONTROL &#x200B;此服務用戶必須具有&#x200B;*`/content/dam.`的讀／寫*&#x200B;權限
 1. 在&#x200B;**[!UICONTROL ID]**&#x200B;和&#x200B;**[!UICONTROL Password]**&#x200B;欄位中，輸入用戶名和密碼；例如，**FTP使用者**。 此名稱會以建立資產的使用者身分出現在時間軸中。 當資產從FTP上傳時，當資產上傳至FTP伺服器並推送至AEM時，即視為已建立資產。
-1. 請聯絡[Adobe Enterprise Customer Care for Experience Manager](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html)以要求存取功能套件18912以進行下載。 當您聯絡支援人員時，可能需要下列資訊：
+1. 請聯絡[Adobe Enterprise Customer Care for Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support)以要求存取功能套件18912以進行下載。 當您聯絡支援人員時，可能需要下列資訊：
 
    * 您「作者」實例的伺服器IP地址，包括埠號（預設情況下，埠號為4502）。
    * AEM服務使用者使用者使用者名稱和密碼。
