@@ -3,9 +3,9 @@ title: 資料夾共用至 [!DNL Adobe Creative Cloud] 最佳實務
 description: 設定 [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 以與Adobe Creative Cloud(CC)使用者交換資料夾。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->[!DNL Experience Manager]至[!DNL Creative Cloud]資料夾共用功能已過時。 Adobe強烈建議使用較新的功能，例如[Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)或[Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)。 進一步瞭解[Experience Manager和Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)。
+>[!DNL Experience Manager]至[!DNL Creative Cloud]資料夾共用功能已過時。 Adobe強烈建議使用較新的功能，例如[Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)或[Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)。 進一步瞭解[Experience Manager和Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)。
 
 [!DNL Adobe Experience Manager] 可設定為允許中的使 [!DNL Assets] 用者與應用程式的使用者共用資 [!DNL Adobe Creative Cloud] 料夾，以便在資產服務中以共用資料 [!DNL Adobe Creative Cloud] 夾的形式使用。此功能可用於創意團隊和[!DNL Assets]使用者之間交換檔案，尤其是當創意使用者無法存取[!DNL Assets]部署時（他們不在企業網路上）。
 
