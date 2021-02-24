@@ -1,22 +1,22 @@
 ---
 cloud: experience-cloud
-solution-title: Learn & Support
+solution-title: 學習與支援
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-65.html
 solution-icon: assets/experience-cloud-logo-24.png
 getting-started-title: 快速入門
 getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-tutorials.html
 tutorials-title: 教學課程
-tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html
+tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-tutorials.html
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-65.zh-Hant
 solution: Experience Manager
-type: Documentation
+type: 文件
 index: y
 translation-type: tm+mt
-source-git-commit: fff2c39561f54436f8e5613ac648cb91af888c66
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 67%
+source-wordcount: '153'
+ht-degree: 72%
 
 ---
 
@@ -35,9 +35,9 @@ metadata.md 檔案包含存放庫層級中繼資料，這些中繼資料會傳�
 | mini-toc-levels | 決定顯示在右側欄中的標題層數量。預設值為 2。 |
 | git-repo | 指定主回購協定的內部使用位置。 |
 
-在TOC.md檔案中
+在 TOC.md 檔案中
 
 | 中繼資料 | 功能 |
 |--- |--- |
-| user-guide-title | 在文章標題中作為連結使用. |
-| user-guide-url | 開啟「學習與支援」中心頁面。 |
+| 使用手冊名稱 | 在文章標題中作為連結使用。 |
+| 使用手冊-url | 開啟「學習與支援」中心頁面。 |
