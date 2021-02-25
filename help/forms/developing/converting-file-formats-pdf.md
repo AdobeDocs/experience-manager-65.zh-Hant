@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '7898'
+source-wordcount: '7912'
 ht-degree: 0%
 
 ---
 
 
 # 在檔案格式與PDF之間轉換{#converting-between-file-formatsand-pdf}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於產生PDF服務**
 
@@ -223,7 +225,7 @@ ht-degree: 0%
 1. 擷取檔案以轉換為PDF檔案。
 
    * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存您要轉換為PDF檔案的檔案。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，代表要轉換之檔案的檔案位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，代表要轉換之檔案的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
    * 通過為`MTOM`屬性指定位元組陣列的內容來填充`BLOB`對象。
@@ -246,7 +248,7 @@ ht-degree: 0%
 
    * 將`BLOB`物件的`MTOM`欄位指派給位元組，以擷取轉換的PDF檔案。 位元組陣列代表已轉換的PDF檔案。 確保使用`BLOB`對象作為`createPDF2`方法的輸出參數。
    * 調用`System.IO.FileStream`對象的建構子並傳遞一個字串值，該字串值表示已轉換PDF文檔的檔案位置。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
@@ -396,7 +398,7 @@ ht-degree: 0%
 
    * 將`BLOB`物件的`MTOM`欄位指派給位元組，以擷取轉換的PDF檔案。 位元組陣列代表已轉換的PDF檔案。 確保使用`BLOB`對象作為`HtmlToPDF2`方法的輸出參數。
    * 調用`System.IO.FileStream`對象的建構子並傳遞一個字串值，該字串值表示已轉換PDF文檔的檔案位置。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
@@ -550,8 +552,8 @@ ht-degree: 0%
 1. 保存已轉換的檔案。
 
    * 通過將`BLOB`對象的`MTOM`欄位分配給位元組陣列來檢索已轉換的RTF文檔。 位元組陣列表示轉換的RTF文檔。 確保使用`BLOB`對象作為`ExportPDF2`方法的輸出參數。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞代表RTF檔案位置的字串值。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞代表RTF檔案位置的字串值。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入RTF檔案。
 
 **另請參閱**
@@ -599,7 +601,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 
 如果WinID能夠擷取對話方塊內容，例如文字、子視窗、視窗類別ID等，AppMon也可以這麼做。
 
-此表列出了用於打印本地檔案格式的資訊類型。
+此表列出了打印原始檔案格式時使用的資訊類型。
 
 <table>
  <thead>
@@ -883,7 +885,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以便傳輸UI
 >
 >應用程式的名稱會指定為`GenericApp`元素的`name`屬性的值。 此值必須完全符合您為該應用程式開發的指令碼中指定的對應名稱。 同樣地，`GenericApp`元素的`displayName`屬性應完全符合對應指令碼的`expectedWindow`視窗標題。 在解析出現在`displayName`或`caption`屬性中的任何規則運算式後，就會評估此等等效性。
 
-在此示例中，Generate PDF服務提供的預設配置資料已修改，以指定應使用記事本（而非Microsoft Word）來處理檔案名副檔名為。txt的檔案。 在進行此修改之前，Microsoft Word已指定為應處理此類檔案的原生應用程式。
+在此示例中，Generate PDF服務提供的預設配置資料已修改，以指定應使用記事本（而非Microsoft Word）來處理檔案副檔名為。txt的檔案。 在進行此修改之前，Microsoft Word已指定為應處理此類檔案的原生應用程式。
 
 **將文字檔案導向記事本的修改(native2pdfconfig.xml)**
 
