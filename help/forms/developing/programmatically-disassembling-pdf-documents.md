@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1788'
 ht-degree: 0%
 
 ---
 
 
 # 以程式設計方式解譯PDF檔案{#programmatically-disassembling-pdf-documents}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以將PDF檔案傳遞至Assembler服務，以反匯編檔案。 通常，當PDF檔案最初是由許多個別檔案（例如陳述式集合）建立時，這項工作很有用。 在下圖中，DocA被分成多個結果文檔，其中頁面上的第一級書籤標識新結果文檔的開始。
 
@@ -41,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 （請參閱[程式設計匯整PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)）。
+>在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 （請參閱[程式設計匯整PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)。）
 
 >[!NOTE]
 >
@@ -89,7 +91,7 @@ ht-degree: 0%
 
 必須參考DDX檔案，才能反匯編PDF檔案。 此DDX文檔必須包含`PDFsFromBookmarks`元素。
 
-**參考PDF檔案以進行反匯編**
+**參考PDF檔案以反匯編**
 
 要反匯編PDF文檔，請參考表示要反匯編的PDF文檔的PDF檔案。 傳遞至Assembler服務時，會針對檔案中的每個第1級書籤傳回個別的PDF檔案。
 
@@ -99,7 +101,7 @@ ht-degree: 0%
 
 **反匯編PDF檔案**
 
-在您建立Assembler服務用戶端、參考DDX檔案、參考要反匯編的PDF檔案，以及設定執行時期選項後，您就可以叫用`invokeDDX`方法來反匯編PDF檔案。 如果DDX檔案包含反匯編PDF檔案的指示，Assembler服務會在收集物件中傳回已拆解的PDF檔案。
+在您建立Assembler服務用戶端、參考DDX檔案、參考要反匯編的PDF檔案，並設定執行時期選項後，您就可以叫用`invokeDDX`方法來反匯編PDF檔案。 如果DDX檔案包含反匯編PDF檔案的指示，Assembler服務會在收集物件中傳回已拆解的PDF檔案。
 
 **儲存已拆解的PDF檔案**
 
@@ -202,10 +204,10 @@ ht-degree: 0%
 1. 參考現有的DDX檔案。
 
    * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存DDX檔案。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，該值代表DDX檔案的檔案位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，該值代表DDX檔案的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
-   * 通過為`MTOM`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`MTOM`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 參考要反匯編的PDF文檔。
 
