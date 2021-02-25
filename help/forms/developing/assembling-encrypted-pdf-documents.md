@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 6d75c7b1-9c0e-47f3-bdb1-61acf16b97f9
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
 
 
 # 組合加密的PDF檔案{#assembling-encrypted-pdf-documents}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以使用Assembler服務，以密碼加密PDF檔案。 使用密碼加密PDF檔案後，使用者必須指定密碼才能在Adobe Reader或Acrobat中檢視PDF檔案。 要使用密碼加密PDF文檔，DDX文檔必須包含加密PDF文檔所需的加密元素值。
 
@@ -212,7 +214,7 @@ Encryption服務不必是AEM表單安裝的一部分，就能以密碼加密PDF�
 
    * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示加密PDF文檔的檔案位置和開啟檔案的模式。
    * 建立一個位元組陣列，用於儲存`invokeOneDocument`方法返回的`BLOB`對象的內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
