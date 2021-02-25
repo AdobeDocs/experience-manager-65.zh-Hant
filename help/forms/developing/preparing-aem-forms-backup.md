@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2554'
 ht-degree: 0%
 
 ---
 
 
 # 準備AEM Forms for Backup {#preparing-aem-forms-for-backup}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 關於備份和恢復服務{#about-the-backup-and-restore-service}
 
@@ -172,7 +174,7 @@ ht-degree: 0%
 
 1. 檢索伺服器上備份模式會話的資訊
 
-   在從BackupModeEntryResult調用enterBackupMode方法後，檢索有關備份模式會話的資訊，該方法返回以驗證其是否成功。 進入備份模式後可檢索的資訊對於與備份過程整合非常有用。 例如，標籤、備份ID和開始時間可作為備份過程檔案名的輸入。
+   在從BackupModeEntryResult調用enterBackupMode方法後，檢索有關備份模式會話的資訊，該方法將返回以驗證是否成功。 進入備份模式後可檢索的資訊對於與備份過程整合非常有用。 例如，標籤、備份ID和開始時間可作為備份過程檔案名的輸入。
 
 1. 執行GDS和資料庫的備份
 
