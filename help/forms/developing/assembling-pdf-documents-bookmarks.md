@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2574'
+source-wordcount: '2588'
 ht-degree: 0%
 
 ---
 
 
 # 使用書籤{#assembling-pdf-documents-with-bookmarks}組合PDF檔案
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以組合包含書籤的PDF檔案。 例如，假設您的PDF檔案不包含書籤，而您想要透過提供書籤來修改它。 使用Assembler服務，您可以傳遞不含書籤的PDF檔案，並傳回包含書籤的PDF檔案。
 
@@ -69,7 +71,7 @@ ht-degree: 0%
  </Bookmarks>
 ```
 
-在此書籤XML檔案中，請注意「動作」元素，該元素定義當使用者按一下書籤時所執行的動作。 在「動作」元素下方是「啟動」元素，可啟動應用程式（例如NotePad）並開啟檔案（例如PDF檔案）。 要開啟PDF檔案，必須使用指定要開啟的檔案的「檔案」元素。 例如，在本節中指定的書籤XML檔案中，開啟的檔案名稱為LoanDetails.pdf。
+在此書籤XML檔案中，請注意「動作」元素，該元素定義當使用者按一下書籤時執行的動作。 在「動作」元素下方是「啟動」元素，可啟動應用程式（例如NotePad）並開啟檔案（例如PDF檔案）。 要開啟PDF檔案，必須使用指定要開啟的檔案的「檔案」元素。 例如，在本節中指定的書籤XML檔案中，開啟的檔案名稱為LoanDetails.pdf。
 
 >[!NOTE]
 >
@@ -83,7 +85,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的系列物件，或學習如何從傳回的系列物件擷取結果。 （請參閱[程式設計匯整PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)）。
+>在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論概念，例如建立包含輸入檔案的系列物件，或學習如何從傳回的系列物件擷取結果。 （請參閱[程式設計匯整PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。）
 
 >[!NOTE]
 >
@@ -272,7 +274,7 @@ ht-degree: 0%
 1. 參考現有的DDX檔案。
 
    * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存DDX檔案。
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示DDX文檔的檔案位置和開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示DDX文檔的檔案位置和開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
    * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
