@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2138'
+source-wordcount: '2152'
 ht-degree: 0%
 
 ---
 
 
 # 以程式設計方式組合PDF檔案{#programmatically-assembling-pdf-documents}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以使用Assembler Service API將多個PDF檔案組合為單一PDF檔案。 下圖顯示三個PDF檔案合併為單一PDF檔案。
 
@@ -176,7 +178,7 @@ Assembler服務返回一個`java.util.Map`對象，該對象可從`AssemblerResu
 
    * 使用`HashMap`建構函式建立`java.util.Map`物件，用來儲存輸入的PDF檔案。
    * 對於每個輸入的PDF檔案，請使用其建構函式並傳遞輸入的PDF檔案位置來建立`java.io.FileInputStream`物件。
-   * 對於每個輸入的PDF文檔，建立`com.adobe.idp.Document`對象並傳遞包含PDF文檔的`java.io.FileInputStream`對象。
+   * 對於每個輸入的PDF文檔，請建立`com.adobe.idp.Document`對象並傳遞包含PDF文檔的`java.io.FileInputStream`對象。
    * 對於每個輸入文檔，通過調用`put`方法並傳遞以下參數，向`java.util.Map`對象添加一個條目：
 
       * 代表索引鍵名稱的字串值。 此值必須與DDX檔案中指定之PDF來源元素的值相符。
@@ -245,10 +247,10 @@ Assembler服務返回一個`java.util.Map`對象，該對象可從`AssemblerResu
 1. 參考現有的DDX檔案。
 
    * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存DDX檔案。
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示DDX文檔的檔案位置和開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示DDX文檔的檔案位置和開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
-   * 通過為`MTOM`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`MTOM`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 參考輸入PDF檔案。
 
