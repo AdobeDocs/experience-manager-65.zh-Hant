@@ -7,9 +7,9 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '6123'
+source-wordcount: '6083'
 ht-degree: 4%
 
 ---
@@ -31,14 +31,15 @@ ht-degree: 4%
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
->[!IMPORTANT]
+>[!NOTE]
 >
->未搭配Experience Manager Dynamic Media使用搭售CDN的客戶不會從下列功能獲益：
->* [智慧型影像](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/imaging-faq.html?lang=en#dynamicmedia)
->* [快取失效](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en#dynamicmedia)
->* [熱連結保護](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/hotlink-protection.html?lang=en#dynamicmedia)
->* [HTTP/2 內容傳送](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/http2faq.html?lang=en#dynamicmedia)
->* [將動態媒體檢視器與Adobe Analytics和Experience Platform Launch整合](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/launch.html?lang=en#dynamicmedia)
+>下列功能清單要求您使用Adobe Experience Manager - Dynamic Media隨附的現成可用CDN。 這些功能不支援任何其他自訂CDN。
+>
+>* [智慧型影像](/help/assets/imaging-faq.md)
+>* [快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>* [熱連結保護](/help/assets/hotlink-protection.md)
+>* [HTTP/2 內容傳送](/help/assets/http2.md)
+>* [將動態媒體檢視器與Adobe Analytics和Experience Platform Launch整合](/help/assets/launch.md)
 >* CDN層級的URL重新導向
 >* Akamai ChinaCDN（在中國以最佳方式傳送）
 
