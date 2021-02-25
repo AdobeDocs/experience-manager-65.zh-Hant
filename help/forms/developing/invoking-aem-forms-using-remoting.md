@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '4647'
+source-wordcount: '4661'
 ht-degree: 0%
 
 ---
 
 
 # 使用Remoting {#invoking-aem-forms-using-remoting}叫用AEM Forms
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 在Workbench中建立的流程可通過使用Remoting調用。 也就是說，您可以從使用Flex建立的用戶端應用程式叫用AEM Forms程式。 這項功能以資料服務為基礎。
 
@@ -96,7 +98,7 @@ ht-degree: 0%
 
 ## 使用Remoting {#handling-documents-with-remoting}處理文檔
 
-AEM Forms中使用的最重要非原始Java類型之一是`com.adobe.idp.Document`類別。 呼叫AEM Forms作業時，通常需要檔案。 它主要是PDF檔案，但可包含其他檔案類型，例如SWF、HTML、XML或DOC檔案。 （請參閱「使用Java API[將資料傳送至AEM Forms服務」）。](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
+AEM Forms中使用的最重要非原始Java類型之一是`com.adobe.idp.Document`類別。 呼叫AEM Forms作業時，通常需要檔案。 它主要是PDF檔案，但可包含其他檔案類型，例如SWF、HTML、XML或DOC檔案。 （請參閱「使用Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)將資料傳送至AEM Forms服務」）。[
 
 使用Flex建立的用戶端應用程式無法直接要求檔案。 例如，您無法啟動Adobe Reader以請求產生PDF檔案的URL。 要求檔案類型（例如PDF和Microsoft Word檔案）會傳回URL結果。 客戶有責任顯示URL的內容。 「檔案管理」服務可協助產生URL和內容類型資訊。 對XML檔案的要求會傳回完整的XML檔案。
 
