@@ -2,15 +2,17 @@
 title: 建立邀請外部使用者處理常式
 description: 建立邀請外部使用者處理常式
 translation-type: tm+mt
-source-git-commit: 92e5cc0b1934dad641357a22894e70a3660b774a
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 
 # 建立邀請外部使用者處理常式{#create-invite-external-users-handler}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以為Rights Management服務建立邀請外部使用者處理常式。 邀請外部使用者處理常式可讓Rights Management服務邀請外部使用者成為Rights Management使用者。 當使用者成為Rights Management使用者後，使用者就可以執行工作，例如開啟受原則保護的PDF檔案。 將「邀請外部使用者處理常式」部署至AEM Forms後，您可以使用管理主控台與其互動。
 
