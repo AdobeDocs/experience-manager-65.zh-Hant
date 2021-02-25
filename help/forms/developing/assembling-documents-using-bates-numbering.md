@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1927'
+source-wordcount: '1941'
 ht-degree: 0%
 
 ---
 
 
 # 使用Bates編號{#assembling-documents-using-bates-numbering}組合文檔
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以使用Bates編號來組合包含唯一頁面識別碼的PDF檔案。 *Bates編* 號是將唯一識別套用至一批相關檔案的方法。檔案（或檔案集）中的每個頁面都會指派一個Bates編號，以唯一識別頁面。 例如，包含物料清單資訊並與元件生產關聯的製造文檔可以包含標識符。 Bates數字包含循序遞增的數值，以及選用的首碼和字尾。 前置詞+數值+尾碼稱為&#x200B;*bates pattern*。
 
@@ -50,7 +52,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論這些概念，例如建立包含輸入文檔的集合對象，或從返回的集合對象中提取結果。 （請參閱[程式設計匯整PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)）。
+>在閱讀本節之前，建議您熟悉使用Assembler服務來組合PDF檔案。 本節不討論這些概念，例如建立包含輸入文檔的集合對象，或從返回的集合對象中提取結果。 （請參閱[程式設計匯整PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)。）
 
 >[!NOTE]
 >
@@ -62,7 +64,7 @@ ht-degree: 0%
 
 ## 步驟{#summary-of-steps}摘要
 
-要組合包含唯一頁面標識符（Bates編號）的PDF文檔，請執行以下任務：
+要組合包含唯一頁面識別碼（Bates編號）的PDF文檔，請執行以下任務：
 
 1. 包含專案檔案。
 1. 建立PDF匯寫程式式用戶端。
@@ -104,7 +106,7 @@ ht-degree: 0%
 
 **匯整輸入的PDF檔案**
 
-在建立Assembler服務客戶端後，請參考包含`BatesNumber`元素資訊的DDX文檔、參考輸入的PDF文檔並設定運行時選項，您可以調用`invokeDDX`操作，該操作導致Assembler服務組合包含唯一頁標識符的PDF文檔。
+在建立Assembler服務客戶端後，請參考包含`BatesNumber`元素資訊的DDX文檔、參考輸入的PDF文檔並設定運行時選項，您可以調用`invokeDDX`操作，使Assembler服務組合包含唯一頁標識符的PDF文檔。
 
 **擷取結果**
 
@@ -112,7 +114,7 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
 
 >[!NOTE]
 >
->如果調用`invokeDDX`操作，則返回一個集合對象。 在將兩個或兩個以上輸入的PDF文檔傳遞至Assembler服務時，會使用此操作。 但是，如果只將一個輸入的PDF文檔傳遞到Assembler服務，則應調用`invokeOneDocument`操作。 有關使用此操作的資訊，請參閱[組合加密的PDF文檔](/help/forms/developing/assembling-encrypted-pdf-documents.md)。
+>如果調用`invokeDDX`操作，則返回收集對象。 在將兩個或兩個以上輸入的PDF文檔傳遞至Assembler服務時，會使用此操作。 但是，如果只將一個輸入的PDF文檔傳遞到Assembler服務，則應調用`invokeOneDocument`操作。 有關使用此操作的資訊，請參閱[組合加密的PDF文檔](/help/forms/developing/assembling-encrypted-pdf-documents.md)。
 
 **另請參閱**
 
@@ -144,7 +146,7 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
 
    * 使用`HashMap`建構函式建立用來儲存輸入PDF檔案的`java.util.Map`物件。
    * 對於每個輸入的PDF檔案，請使用其建構函式並傳遞輸入的PDF檔案位置來建立`java.io.FileInputStream`物件。 在此情況下，請傳遞無擔保PDF檔案的位置。
-   * 對於每個輸入的PDF文檔，建立`com.adobe.idp.Document`對象並傳遞包含PDF文檔的`java.io.FileInputStream`對象。
+   * 對於每個輸入的PDF文檔，請建立`com.adobe.idp.Document`對象並傳遞包含PDF文檔的`java.io.FileInputStream`對象。
    * 通過調用`put`方法並傳遞以下參數，將條目添加到`java.util.Map`對象：
 
       * 代表索引鍵名稱的字串值。 此值必須與DDX檔案中指定之PDF來源元素的值相符。 例如，本節中引入的DDX檔案中指定的PDF來源檔案名稱為Loan.pdf。
@@ -217,10 +219,10 @@ Assembler服務返回包含作業結果的集合對象。 您可以擷取產生�
 1. 參考輸入PDF檔案。
 
    * 對於每個輸入的PDF檔案，請使用其建構函式建立`BLOB`物件。 `BLOB`物件用來儲存輸入的PDF檔案。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，代表輸入PDF檔案的檔案位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，代表輸入PDF檔案的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
-   * 通過為`MTOM`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`MTOM`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
    * 建立`MyMapOf_xsd_string_To_xsd_anyType`對象。 此收集物件用來儲存輸入的PDF檔案。
    * 對於每個輸入的PDF檔案，請建立`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。 例如，如果使用兩個輸入的PDF檔案，請建立兩個`MyMapOf_xsd_string_To_xsd_anyType_Item`物件。
    * 為`MyMapOf_xsd_string_To_xsd_anyType_Item`對象的`key`欄位分配代表鍵名的字串值。 此值必須與DDX檔案中指定之PDF來源元素的值相符。 （請對每個輸入的PDF檔案執行此工作。）
