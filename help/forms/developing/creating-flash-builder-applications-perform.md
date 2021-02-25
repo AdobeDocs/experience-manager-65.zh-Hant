@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
 
 
 # 建立使用HTTP Token {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}執行SSO驗證的Flash Builder應用程式
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以使用Flash Builder建立用戶端應用程式，使用HTTP Token執行單一登入(SSO)驗證。 例如，假設您使用Flash Builder建立網路應用程式。 接下來假設應用程式包含不同的檢視，其中每個檢視都會叫用不同的AEM Forms作業。 您可以建立登入頁面，讓使用者驗證一次，而不是對每個Forms作業的使用者進行驗證。 一旦驗證，用戶就能夠調用多個操作而無需再次驗證。 例如，如果使用者已登入Workspace（或其他Forms應用程式），使用者就不需要再次驗證。
 
