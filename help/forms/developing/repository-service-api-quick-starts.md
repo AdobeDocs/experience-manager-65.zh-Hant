@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
 
 
 # 儲存庫服務API快速啟動{#repository-service-api-quick-starts}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 AEM Forms Repository服務提供下列快速入門。
 
