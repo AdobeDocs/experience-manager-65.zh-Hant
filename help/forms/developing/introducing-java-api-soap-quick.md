@@ -9,15 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, development-tools
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
 
 
 # Java API快速入門簡介{#introducing-java-api-quickstart}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 Adobe AEM Forms API快速入門可協助您加速開發與AEM Forms服務互動的程式。 *快速*&#x200B;啟動是完整的程式，您可將它複製並貼入您自己的專案中，並當做起點使用。您可以執行快速入門來查看其運作方式，並依您自己的需求加以修改。
 
