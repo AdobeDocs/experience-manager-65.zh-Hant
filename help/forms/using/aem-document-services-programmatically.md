@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: b4795930c87fa30d7c7ab60a50bc6f40da4f97d2
 workflow-type: tm+mt
-source-wordcount: '6355'
+source-wordcount: '6418'
 ht-degree: 1%
 
 ---
@@ -19,11 +19,15 @@ ht-degree: 1%
 
 # 以程式設計方式使用AEM Document Services {#using-aem-document-services-programmatically}
 
-使用AEM Document Services建立Maven Projects所需的用戶端類別，可在[AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar中取得。 如需有關多個專案的詳細資訊，請參閱[如何使用Maven](/help/sites-developing/ht-projects-maven.md)建立AEM專案。
+本檔案的範例和範例可協助您瞭解並使用OSGi環境中AEM Forms上的AEM Document Services。 如需JEE環境上AEM Forms的範例和範例，請參閱[在JEE上使用AEM Forms進行程式設計](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=en#programming-aem-forms-jee)
 
->[!NOTE]
->
->在使用DocAssurance服務API之前，[配置DocAssurance服務](/help/forms/using/install-configure-document-services.md)。
+## 必備條件 {#prerequisite}
+
+* 在使用DocAssurance服務API之前，[配置DocAssurance服務](/help/forms/using/install-configure-document-services.md)。
+
+* 下載並設定AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)搭配您的AEM Maven專案。 [使用AEM Document Services建立Maven Projects所需的用戶端類別，請參閱[AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+
+* 瞭解如何使用Maven](/help/sites-developing/ht-projects-maven.md)建立AEM專案[
 
 ## DocAssurance Service {#docassurance-service}
 
@@ -1366,7 +1370,7 @@ secureDocument可讓您個別或以特定順序以任何組合來加密、簽署
 
 **將使用權套用至PDF檔案**
 
-您可以使用Reader Extensions Java Client API和web service，將使用權套用至PDF檔案。 使用權限與Acrobat預設為Acrobat但Adobe Reader未提供的功能相關，例如在表格中新增註解或填寫表格欄位並儲存表格的功能。 具有套用使用權限的PDF檔案稱為具有權限的檔案。 在Adobe Reader中開啟具權限檔案的使用者，可以執行針對該特定檔案啟用的作業。
+您可以使用Reader Extensions Java Client API和web service，將使用權套用至PDF檔案。 使用權限與Acrobat預設為Acrobat但Adobe Reader未提供的功能相關，例如在表格中新增註解或填寫表格欄位並儲存表格的功能。 具有套用使用權限的PDF檔案稱為具有權限的檔案。 在Adobe Reader中開啟啟用權限的檔案的使用者可以執行針對該特定檔案啟用的作業。
 
 您必須先確定將憑證新增至AEM Keystore，才能使用憑證來擴充PDF檔案。
 
@@ -3624,7 +3628,7 @@ public class GetPDFEncryption {
     }
 ```
 
-## 輸出服務{#output-service}
+## 輸出服務 {#output-service}
 
 輸出服務提供API，以。pdf、.pcl、.zpl和。ps格式呈現XDP檔案。 服務支援下列API:
 
@@ -4283,7 +4287,7 @@ String outputFolder="C:/Output";
   }
 ```
 
-## Forms服務{#forms-service}
+## 表單服務 {#forms-service}
 
 Forms服務提供API，可匯入資料至互動式PDF表單，以及從其匯出資料。 互動式PDF表單是PDF檔案，包含一或多個欄位，用來顯示和收集使用者的資訊。 服務支援下列API:
 
