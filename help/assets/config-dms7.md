@@ -7,9 +7,9 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
 workflow-type: tm+mt
-source-wordcount: '6083'
+source-wordcount: '6072'
 ht-degree: 4%
 
 ---
@@ -39,7 +39,6 @@ ht-degree: 4%
 >* [快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 >* [熱連結保護](/help/assets/hotlink-protection.md)
 >* [HTTP/2 內容傳送](/help/assets/http2.md)
->* [將動態媒體檢視器與Adobe Analytics和Experience Platform Launch整合](/help/assets/launch.md)
 >* CDN層級的URL重新導向
 >* Akamai ChinaCDN（在中國以最佳方式傳送）
 
