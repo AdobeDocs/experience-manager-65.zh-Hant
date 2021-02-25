@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
 
 
 # 建立轉換表單的Web應用程式{#creating-web-applications-thatrenders-forms}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 建立轉換表單的Web應用程式{#creating-web-applications-that-renders-forms}
 
@@ -146,7 +148,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adob
 1. 擷取從HTML表單提交的選項按鈕值，並指定使用美國或加拿大資料。 如果提交美國文，請建立`com.adobe.idp.Document`，以儲存位於&#x200B;*採購單US.xml*&#x200B;中的資料。 同樣地，如果是加拿大人，請建立一個`com.adobe.idp.Document`，儲存位於&#x200B;*Purchase Order Canada.xml*&#x200B;檔案中的資料。
 1. 建立包含連接屬性的`ServiceClientFactory`對象。 （請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
 1. 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
-1. 使用`URLSpec`的建構函式建立儲存URI值的&lt;a0/>物件。
+1. 使用`URLSpec`的建構函式建立儲存URI值的物件。
 1. 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
 1. 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計和片段位於內容根URI中。 否則，Forms服務會引發例外。 若要參考AEM Forms資料庫，請指定`repository://`。
 1. 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
