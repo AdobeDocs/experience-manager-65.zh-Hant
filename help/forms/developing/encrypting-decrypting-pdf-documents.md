@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '8244'
+source-wordcount: '8258'
 ht-degree: 0%
 
 ---
 
 
 # 加密和解密PDF檔案{#encrypting-and-decrypting-pdf-documents}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於加密服務**
 
@@ -137,7 +139,7 @@ ht-degree: 0%
 
 1. 設定加密運行時選項。
 
-   * 通過調用`PasswordEncryptionOptionSpec`對象的建構子建立&lt;a0/>對象。
+   * 通過調用`PasswordEncryptionOptionSpec`對象的建構子建立對象。
    * 調用`PasswordEncryptionOptionSpec`物件的`setEncryptOption`方法並傳遞指定要加密之檔案資源的`PasswordEncryptionOption`列舉值，以指定要加密的PDF檔案資源。 例如，若要加密整個PDF檔案，包括其中繼資料及其附件，請指定`PasswordEncryptionOption.ALL`。
    * 使用`ArrayList`建構函式建立儲存加密權限的`java.util.List`物件。
    * 通過調用`java.util.List`對象「s `add`」方法並傳遞與要設定的權限相對應的枚舉值來指定權限。 例如，若要設定允許使用者複製PDF檔案中資料的權限，請指定`PasswordEncryptionPermission.PASSWORD_EDIT_COPY`。 （請針對每個要設定的權限重複此步驟）。
@@ -221,9 +223,9 @@ ht-degree: 0%
 
 1. 將加密的PDF檔案儲存為PDF檔案。
 
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示受保護PDF文檔的檔案位置。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示受保護PDF文檔的檔案位置。
    * 建立一個位元組陣列，用於儲存`encryptPDFUsingPassword`方法返回的`BLOB`對象的資料內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
@@ -287,7 +289,7 @@ ht-degree: 0%
 
 **取得PDF檔案以加密**
 
-您必須取得未加密的PDF檔案才能加密。 如果您嘗試保護已加密的PDF檔案，則會擲出例外。
+您必須取得未加密的PDF檔案才能加密。 如果您嘗試保護已加密的PDF檔案，則會擲回例外。
 
 **參考憑證**
 
@@ -341,21 +343,21 @@ ht-degree: 0%
 
 1. 參考憑證。
 
-   * 使用`java.util.List`的建構函式建立可儲存權限資訊的&lt;a0/>物件。
+   * 使用`java.util.List`的建構函式建立可儲存權限資訊的物件。
    * 調用`java.util.List`物件的`add`方法並傳遞`CertificateEncryptionPermissions`列舉值，以指定與加密檔案相關的權限，此列舉值代表授予開啟安全PDF檔案之使用者的權限。 例如，若要指定所有權限，請傳遞`CertificateEncryptionPermissions.PKI_ALL_PERM`。
    * 使用其建構子建立`Recipient`對象。
    * 建立`java.io.FileInputStream`對象，該對象表示通過使用其建構子並傳遞指定證書位置的字串值來加密PDF文檔的證書。
    * 使用其建構子並傳遞代表證書的`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
    * 叫用`Recipient`物件的`setX509Cert`方法，並傳遞包含憑證的`com.adobe.idp.Document`物件。 （此外，`Recipient`物件可以有Truststore憑證別名或LDAP URL做為憑證來源）。
-   * 使用`CertificateEncryptionIdentity`的建構函式建立可儲存權限和憑證資訊的&lt;a0/>物件。
+   * 使用`CertificateEncryptionIdentity`的建構函式建立可儲存權限和憑證資訊的物件。
    * 叫用`CertificateEncryptionIdentity`物件的`setPerms`方法，並傳遞儲存權限資訊的`java.util.List`物件。
    * 叫用`CertificateEncryptionIdentity`物件的`setRecipient`方法，並傳遞儲存憑證資訊的`Recipient`物件。
-   * 使用`java.util.List`的建構函式建立儲存憑證資訊的&lt;a0/>物件。
+   * 使用`java.util.List`的建構函式建立儲存憑證資訊的物件。
    * 叫用`java.util.List`物件的add方法並傳遞`CertificateEncryptionIdentity`物件。 （此`java.util.List`對象作為參數傳遞給`encryptPDFUsingCertificates`方法。）
 
 1. 設定加密運行時選項。
 
-   * 通過調用`CertificateEncryptionOptionSpec`對象的建構子建立&lt;a0/>對象。
+   * 通過調用`CertificateEncryptionOptionSpec`對象的建構子建立對象。
    * 調用`CertificateEncryptionOptionSpec`物件的`setOption`方法並傳遞指定要加密之檔案資源的`CertificateEncryptionOption`列舉值，以指定要加密的PDF檔案資源。 例如，若要加密整個PDF檔案，包括其中繼資料及其附件，請指定`CertificateEncryptionOption.ALL`。
    * 調用`CertificateEncryptionOptionSpec`物件的`setCompat`方法並傳遞指定Acrobat相容性等級的`CertificateEncryptionCompatibility`列舉值，以指定Acrobat相容性選項。 例如，您可以指定`CertificateEncryptionCompatibility.ACRO_7`。
 
@@ -415,18 +417,18 @@ ht-degree: 0%
    * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示要加密的PDF文檔的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
-   * 通過為`MTOM`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`MTOM`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 參考憑證。
 
    * 使用其建構子建立`Recipient`對象。 此對象將儲存證書資訊。
    * 使用其建構子建立`BLOB`對象。 此`BLOB`物件會儲存加密PDF檔案的憑證。
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示證書的檔案位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示證書的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
    * 將位元組陣列的內容分配給`BLOB`對象的`MTOM`資料成員，以填充`BLOB`對象。
    * 將儲存憑證的`BLOB`物件指派給`Recipient`物件的`x509Cert`資料成員。
-   * 使用`CertificateEncryptionIdentity`的建構函式建立儲存憑證資訊的&lt;a0/>物件。
+   * 使用`CertificateEncryptionIdentity`的建構函式建立儲存憑證資訊的物件。
    * 將儲存憑證的`Recipient`物件指派給`CertificateEncryptionIdentity`物件的收件者資料成員。
    * 建立`Object`陣列，並將`CertificateEncryptionIdentity`對象分配給`Object`陣列的第一個元素。 此`Object`陣列作為參數傳遞給`encryptPDFUsingCertificates`方法。
 
@@ -448,9 +450,9 @@ ht-degree: 0%
 
 1. 將加密的PDF檔案儲存為PDF檔案。
 
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示受保護PDF文檔的檔案位置。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示受保護PDF文檔的檔案位置。
    * 建立一個位元組陣列，用於儲存`encryptPDFUsingCertificates`方法返回的`BLOB`對象的資料內容。 獲取`BLOB`對象`binaryData`資料成員的值，以填充位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
@@ -609,9 +611,9 @@ ht-degree: 0%
 
 1. 儲存PDF檔案。
 
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示不安全PDF文檔的檔案位置。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示不安全PDF文檔的檔案位置。
    * 建立一個位元組陣列，用於儲存`removePDFPasswordSecurity`方法返回的`BLOB`對象的內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
@@ -758,9 +760,9 @@ ht-degree: 0%
 
 1. 儲存PDF檔案。
 
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示不安全PDF文檔的檔案位置。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示不安全PDF文檔的檔案位置。
    * 建立一個位元組陣列，用於儲存`removePDFPasswordSecurity`方法返回的`BLOB`對象的內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
