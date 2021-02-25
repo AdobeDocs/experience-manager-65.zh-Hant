@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
 
 
 # 依值{#rendering-forms-by-value}轉換表單
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 通常，在設計器中建立的表單設計會參照Forms服務來傳遞。 表單設計可以很大，因此，參照傳遞表單設計會更有效率，以避免需要依值來調整表單設計位元組。 Forms服務也可以快取表格設計，如此在快取時，就不需要持續讀取表格設計。
 
@@ -57,7 +59,7 @@ Forms服務也可以解決連結內容在表單設計中的位置。 例如，�
 
 **包含專案檔案**
 
-將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+將必要的檔案加入您的開發專案中。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 **建立Forms用戶端API物件**
 
