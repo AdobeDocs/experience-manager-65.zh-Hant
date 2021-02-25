@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '6243'
+source-wordcount: '6257'
 ht-degree: 0%
 
 ---
 
 
 # 管理用戶{#managing-users}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於用戶管理**
 
@@ -42,7 +44,7 @@ ht-degree: 0%
 
 **瞭解驗證程式**
 
-使用者管理提供內建的驗證功能，也讓您能夠將它與您自己的驗證提供者連接。 當使用者管理收到驗證要求（例如，使用者嘗試登入）時，會將使用者資訊傳遞給驗證提供者以進行驗證。 使用者管理會在驗證使用者後，從驗證提供者接收結果。
+使用者管理提供內建的驗證功能，也讓您能夠將它與您自己的驗證提供者連接。 當「使用者管理」收到驗證要求（例如，使用者嘗試登入）時，會將使用者資訊傳遞給驗證提供者以進行驗證。 使用者管理會在驗證使用者後，從驗證提供者接收結果。
 
 下圖顯示嘗試登入的一般使用者、使用者管理與驗證提供者之間的互動。
 
@@ -509,7 +511,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+在您的開發專案中加入必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 **建立DirectoryManagerService客戶端**
 
@@ -618,7 +620,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+在您的開發專案中加入必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 **建立AuthorizationManagerService客戶端**
 
@@ -744,7 +746,7 @@ ht-degree: 0%
  </thead>
  <tbody>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>用戶訪問網站並指定用戶名和口令。 這項資訊會提交至代管AEM Forms的J2EE應用程式伺服器。</p></td>
   </tr>
   <tr>
@@ -773,7 +775,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+在您的開發專案中加入必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 **建立AuthenticationManagerService客戶端**
 
@@ -870,7 +872,7 @@ ht-degree: 0%
  </thead>
  <tbody>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>用戶端應用程式會要求AEM Forms執行同步作業。</p></td>
   </tr>
   <tr>
@@ -878,7 +880,7 @@ ht-degree: 0%
    <td><p>AEM Forms會執行同步作業。</p></td>
   </tr>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>使用者資訊已更新。</p></td>
   </tr>
   <tr>
@@ -900,7 +902,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+在您的開發專案中加入必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 **建立UserManagerUtilServiceClientclient**
 
