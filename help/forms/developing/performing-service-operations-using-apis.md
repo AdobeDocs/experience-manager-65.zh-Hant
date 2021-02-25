@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fa1426f-f453-45c5-89b9-67038f56c70e
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
 
 # 使用API {#performing-service-operations-using-apis}執行服務操作
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 在您開始使用AEM Forms API來開發用戶端應用程式之前，建議您先閱讀「叫用AEM Forms」，其中說明呼叫服務的不同方式。 （請參閱[服務容器](/help/forms/developing/service-container.md#service-container)。）
 
