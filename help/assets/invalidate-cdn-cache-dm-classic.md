@@ -6,17 +6,21 @@ products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
+source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 24%
+source-wordcount: '710'
+ht-degree: 17%
 
 ---
 
 
 # 透過Dynamic Media Classic {#invalidating-your-cdn-cached-content}使CDN快取失效
 
-CDN會快取動態媒體資產，以便快速傳送。 不過，當您更新資產時，可能會希望這些變更立即生效。 停用CDN（內容傳送網路）快取內容可讓您快速更新由動態媒體傳送的資產，而不需等待快取過期。
+動態媒體資產由CDN（內容傳送網路）快取，以快速傳送。 不過，當您更新資產時，您會希望這些變更立即生效。 停用CDN快取內容可讓您快速更新由Dynamic Media傳送的資產，而不需等待快取過期。
+
+>[!NOTE]
+>
+>客戶必須使用與Adobe Experience Manager Dynamic Media搭售的CDN，才能從CDN快取失效中獲益。
 
 >[!IMPORTANT]
 >
@@ -42,17 +46,17 @@ CDN會快取動態媒體資產，以便快速傳送。 不過，當您更新資�
    如果範本僅包含`<ID>`，則動態媒體會填入`https://<server>/is/image`，其中`<server>`是「一般設定」中定義的發佈伺服器名稱，而&lt;ID>是選取無效的資產。
 
 1. 在頁面的右下角，按一下&#x200B;**[!UICONTROL 關閉。]**
-1. 在Dynamic Media Classic使用者介面中，選取一或多個資產，然後按一下「檔案>使CDN失效」。**** 您會看到一個清單，列出您所建立的範本和選取的資產所產生的一或多個URL。它使用「應用程式一般設定」下「已發佈伺服器名稱」下所列的伺服器URL。
+1. 在Dynamic Media Classic使用者介面中，選取一或多個資產，然後按一下「檔案>使CDN失效」。**** 您會看到從您建立的範本和所選資產產生的一或多個URL清單。它使用「應用程式一般設定」下「已發佈伺服器名稱」下所列的伺服器URL。
 
-   例如，在上一步驟中設定「CDN失效範本」時，假設您選取了名為`Backpack_B`的單一影像資產影像。 當您按一下「檔案>使CDN失效」時，會在「CDN失效」使用者介面中產生下列產生的URL:****
+   例如，在上一步驟中設定「CDN失效範本」時，假設您選取了名為`Backpack_B`的單一影像資產影像。 當您點選「**[!UICONTROL 檔案>廢止CDN]**」時，會在「CDN失效」使用者介面中產生下列產生的URL:
 
    `https://server.com/is/image/Company/Backpack_B?$product$`
 
-1. 在URL清單框中，按一下&#x200B;**[!UICONTROL 繼續]**&#x200B;以清除每個特定URL的快取。 請注意，您可以編輯URL，或是透過輸入或貼入URL清單方塊來新增URL;您不需要事先設定CDN失效範本。
+1. 在「URL」清單方塊中，點選「**[!UICONTROL 繼續]**」以清除每個特定URL的快取。 您可以編輯URL，也可以輸入URL或貼到URL清單方塊中，以新增URL;您不需要事先設定CDN失效範本。
 
    按一下&#x200B;**[!UICONTROL 繼續]**&#x200B;後，將顯示一個指示器，用於估計清除快取所需的時間。
 
-   如果您選取多個資產，然後按一下「 **[!UICONTROL 檔案>使CDN失效]**」，則儲存的範本URL會參照每個 **[!UICONTROL 資產。]**&#x200B;因此，您可以定義 **[!UICONTROL CDN無效範本]** ，以參考網站上參考的每個URL影像預設集 (例如產品詳細資訊、搜尋結果等)。然後，當您從快取中選取一或影像以進行失效時，URL會自動填入介面。
+   如果您選取多個資產，然後點選「**[!UICONTROL 檔案>使CDN]**&#x200B;失效」，則儲存的&#x200B;**[!UICONTROL 範本URL會參照每個資產。]** 因此，您可以定義 **** CDN失效範本，引用您網站上參考的每個URL影像預設集（例如產品詳細資料和搜尋結果）。然後，當您從快取中選取一或影像以進行失效時，URL會自動填入介面。
 
    >[!NOTE]
    >
