@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2199'
 ht-degree: 0%
 
 ---
 
 
 # 動態建立DDX文檔{#dynamically-creating-ddx-documents}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 您可以動態建立DDX文檔，該文檔可用於執行Assembler操作。 動態建立DDX檔案可讓您在執行時期取得的DDX檔案中使用值。 若要動態建立DDX檔案，請使用屬於您所使用之程式設計語言的類別。 例如，如果您使用Java開發客戶端應用程式，請使用屬於`org.w3c.dom.*`包的類。 同樣地，如果您使用Microsoft .NET，請使用屬於`System.Xml`命名空間的類。
 
@@ -82,7 +84,7 @@ ht-degree: 0%
 
 使用`org.w3c.dom`類建立的DDX文檔必須轉換為`com.adobe.idp.Document`對象。 要在使用Java API時執行此任務，請使用Java XML轉換類。 如果您使用web services，請將DDX檔案轉換為`BLOB`物件。
 
-**參考PDF檔案以進行反匯編**
+**參考PDF檔案以反匯編**
 
 要反匯編PDF文檔，請參考表示要反匯編的PDF文檔的PDF檔案。 傳遞至Assembler服務時，會針對檔案中的每個第1級書籤傳回個別的PDF檔案。
 
@@ -131,11 +133,11 @@ ht-degree: 0%
    * 呼叫`org.w3c.dom.Document`物件的`createElement`方法，以建立DDX檔案的根元素。 此方法會建立一個`Element`物件，代表根元素。 將表示元素名稱的字串值傳遞至`createElement`方法。 將返回值轉換為`Element`。 接著，呼叫其`setAttribute`方法，以設定子元素的值。 最後，呼叫標題元素的`appendChild`方法，將元素附加至標題元素，並將子項元素物件傳遞為引數。 下列程式碼行會顯示此應用程式邏輯：
       ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
-   * 呼叫`Document`物件的`createElement`方法，以建立`PDFsFromBookmarks`元素。 將表示元素名稱的字串值傳遞至`createElement`方法。 將返回值轉換為`Element`。 通過調用`setAttribute`方法來設定`PDFsFromBookmarks`元素的值。 呼叫DDX元素的`appendChild`方法，將`PDFsFromBookmarks`元素附加至`DDX`元素。 將`PDFsFromBookmarks`元素物件傳遞為引數。 下列程式碼行會顯示此應用程式邏輯：
+   * 呼叫`Document`物件的`createElement`方法，以建立`PDFsFromBookmarks`元素。 將表示元素名稱的字串值傳遞至`createElement`方法。 將返回值轉換為`Element`。 通過調用`setAttribute`方法，為`PDFsFromBookmarks`元素設定值。 呼叫DDX元素的`appendChild`方法，將`PDFsFromBookmarks`元素附加至`DDX`元素。 將`PDFsFromBookmarks`元素物件傳遞為引數。 下列程式碼行會顯示此應用程式邏輯：
 
       ` Element PDFsFromBookmarks = (Element)document.createElement("PDFsFromBookmarks");  PDFsFromBookmarks.setAttribute("prefix","stmt");  root.appendChild(PDFsFromBookmarks);`
 
-   * 呼叫`Document`物件的`createElement`方法，以建立`PDF`元素。 傳遞代表元素名稱的字串值。 將返回值轉換為`Element`。 通過調用`setAttribute`方法來設定`PDF`元素的值。 呼叫`PDFsFromBookmarks`元素的`appendChild`方法，將`PDF`元素附加至`PDFsFromBookmarks`元素。 將`PDF`元素物件傳遞為引數。 下列程式碼行顯示此應用程式邏輯：
+   * 呼叫`Document`物件的`createElement`方法，以建立`PDF`元素。 傳遞代表元素名稱的字串值。 將返回值轉換為`Element`。 通過調用`setAttribute`方法，為`PDF`元素設定值。 呼叫`PDFsFromBookmarks`元素的`appendChild`方法，將`PDF`元素附加至`PDFsFromBookmarks`元素。 將`PDF`元素物件傳遞為引數。 下列程式碼行顯示此應用程式邏輯：
 
       ` Element PDF = (Element)document.createElement("PDF");  PDF.setAttribute("source","AssemblerResultPDF.pdf");  PDFsFromBookmarks.appendChild(PDF);`
 
@@ -149,7 +151,7 @@ ht-degree: 0%
    * 調用`javax.xml.transform.Transformer`物件的`transform`方法，以填入Java `ByteArrayOutputStream`物件。 傳遞`javax.xml.transform.dom.DOMSource`和`javax.xml.transform.stream.StreamResult`物件。
    * 建立位元組陣列，並將`ByteArrayOutputStream`對象的大小分配給位元組陣列。
    * 調用`ByteArrayOutputStream`物件的`toByteArray`方法，以填入位元組陣列。
-   * 使用`com.adobe.idp.Document`物件的建構函式並傳遞位元組陣列，以建立&lt;a0/>物件。
+   * 使用`com.adobe.idp.Document`物件的建構函式並傳遞位元組陣列，以建立物件。
 
 1. 參考要反匯編的PDF文檔。
 
@@ -245,7 +247,7 @@ ht-degree: 0%
 1. 參考要反匯編的PDF文檔。
 
    * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存輸入的PDF檔案。 此`BLOB`對象作為參數傳遞給`invokeOneDocument`。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，代表輸入PDF檔案的檔案位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，代表輸入PDF檔案的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
    * 通過為`MTOM`屬性指定位元組陣列的內容來填充`BLOB`對象。
