@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1714'
 ht-degree: 0%
 
 ---
 
 
 # 將檔案傳遞至Forms服務{#passing-documents-to-the-formsservice}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 互動式PDF表格是以表格設計為基礎，通常會儲存為XDP檔案，並在Designer中建立。 從AEM Forms開始，您就可以將包含表單設計的`com.adobe.idp.Document`物件傳遞至Forms服務。 然後，Forms服務會呈現位於`com.adobe.idp.Document`物件中的表單設計。
 
@@ -137,7 +139,7 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
    對與「文檔管理」服務關聯的服務引用使用以下WSDL定義：`http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`。
 
-   由於`BLOB`資料類型對於兩個服務引用都很常見，因此使用`BLOB`資料類型時可完全限定&lt;a1/>資料類型。 在相應的Web服務快速啟動中，所有`BLOB`實例都完全限定。
+   由於`BLOB`資料類型對於兩個服務引用都很常見，因此使用`BLOB`資料類型時可完全限定資料類型。 在相應的Web服務快速啟動中，所有`BLOB`實例都完全限定。
 
    >[!NOTE]
    >
@@ -190,9 +192,9 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 1. 使用表單資料流執行動作
 
    * 透過取得`FormsResult`物件的`outputContent`欄位值，建立包含表單資料的`BLOB`物件。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，代表互動式PDF檔案的檔案位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，代表互動式PDF檔案的檔案位置以及開啟檔案的模式。
    * 建立一個位元組陣列，用於儲存從`FormsResult`對象檢索的`BLOB`對象的內容。 獲取`BLOB`對象`MTOM`資料成員的值，以填充位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
