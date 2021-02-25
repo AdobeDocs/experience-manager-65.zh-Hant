@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -22,4 +22,6 @@ ht-degree: 0%
 
 [Adobe ](https://helpx.adobe.com/support.html) Support可在CDN（內容傳送網路）層級設定反向連結篩選，如此，動態媒體內容僅會提供給您網域許可網站清單上的網站。
 
-您必須使用Adobe的搭售CDN，才能提供Hotlink保護。 若要啟用熱連結保護，管理員必須建立支援票證以請求對動態媒體帳戶進行配置更改。 激活熱鏈路保護無需額外費用。
+>[!NOTE]
+>
+>熱連結保護需要您使用Adobe的搭售CDN。 若要啟用熱連結保護，管理員必須建立支援票證以請求對動態媒體帳戶進行配置更改。 啟動熱鏈路保護不需要額外費用。
