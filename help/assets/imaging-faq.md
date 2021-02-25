@@ -1,6 +1,6 @@
 ---
 title: 智慧型影像處理
-description: 智慧型影像處理運用每位使用者獨特的檢視特性，自動提供最適合其體驗的影像，進而提升效能和參與度。
+description: 智慧型影像功能可套用每位使用者獨特的檢視特性，自動提供最適合其體驗的影像，進而提升效能與參與度。
 uuid: c11e52ba-8d64-4dc5-b30a-fc10c2b704e5
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
+source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '1868'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,13 @@ ht-degree: 1%
 
 ## 什麼是「智慧型影像」?{#what-is-smart-imaging}
 
-智慧型影像技術運用Adobe Sensei AI功能，並運用現有的「影像預設集」，根據用戶端瀏覽器功能自動最佳化影像格式、大小和品質，以增強影像傳送效能。
+智慧型影像技術運用Adobe Sensei AI功能，並與現有的「影像預設集」搭配使用，根據用戶端瀏覽器功能自動最佳化影像格式、大小和品質，以增強影像傳送效能。
 
-Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的額外效能提升。 此服務在伺服器、網路和互連點之間找到最佳的Internet路由，該路由的延遲和／或資料包丟失率比Internet上的預設路由低。
+>[!NOTE]
+>
+>客戶必須使用Adobe Experience Manager Dynamic Media隨附的CDN（內容傳送網路），才能從Smart Imaging中獲益。
+
+Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的額外效能提升。 此服務可在伺服器、網路和互連點之間找到最佳的Internet路由。 它查找的路由具有最低的延遲和最低的資料包丟失率，而不是使用Internet上的預設路由。
 
 以下影像資產範例說明新增的智慧型影像最佳化：
 
@@ -34,11 +38,11 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 | [影像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
 |  |  |  |  | 平均= 51% |
 
-與上述類似，Adobe也透過來自即時客戶網站的7009個URL執行測試，並且由於智慧型影像功能，JPEG的檔案大小最佳化率平均提高了38%，而WebP格式的PNG的檔案大小最佳化率提高了31%。
+類似於上述，Adobe也透過即時客戶網站的7009個URL執行測試。 由於智慧型影像功能，他們平均可進一步將JPEG檔案大小最佳化38%，並將WebP格式的PNG檔案大小最佳化31%。
 
 ## 最新Smart Imaging的主要優點是什麼？{#what-are-the-key-benefits-of-smart-imaging}
 
-由於影像是頁面載入時間的絕大部分，因此效能的改善可能會對商業KPI產生深遠影響，例如較高的轉換率、網站逗留時間以及較低的網站反彈率。
+由於影像是頁面載入時間的絕大部分，因此效能的提升會對業務產生深遠的影響，例如更高的轉換率、網站逗留時間以及較低的網站反彈率。
 
 最新版Smart Imaging的增強功能：
 
@@ -46,12 +50,12 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 * 使用Adobe Sensei技術，根據影像要求中指定的品質(qlt)進行轉換。
 * 智慧型影像可以使用「bfc」 URL參數關閉。
 * TTL（存留時間）獨立。 以前，Smart Imaging的最低TTL為12小時。
-* 以前，原始和衍生影像都會進行快取，而使快取失效的步驟是2個。 在最新的智慧型影像中，只會快取衍生產品，允許單步快取失效程式。
-* 使用規則集中自訂標題的客戶（例如[新增自訂標題值至影像回應|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建議的「允許原點計時」、「X-Robot」）將受益於最新的智慧型影像，因為這些標題不會遭到封鎖，這與舊版智慧型影像不同。
+* 以前，原始和衍生影像都會進行快取，而使快取失效的步驟是2個步驟。 在最新的智慧型影像中，只有衍生產品會被快取，允許單步驟快取失效程式。
+* 在規則集中使用自訂標題的客戶。 例如，[新增自訂標頭值至影像回應|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建議的「允許原點計時」、「X-Robot」。 它們可以從最新的Smart Imaging中獲益，因為與舊版Smart Imaging不同，這些標頭不會被阻止。
 
 ## 智慧型影像處理是否有相關的授權成本？{#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-否. Smart Imaging隨附於您現有的Dynamic Media Classic或Adobe Experience Manager - Dynamic Media（On Prem、AMS和AEM as a Cloud Service）授權中。
+否. Smart Imaging隨附於您現有的Dynamic Media Classic或Adobe Experience Manager - Dynamic Media（On-prem、AMS和AEM雲端服務）授權中。
 
 >[!NOTE]
 >
@@ -60,7 +64,7 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 
 ## 智慧型影像處理如何運作？{#how-does-smart-imaging-work}
 
-當消費者要求影像時，我們會檢查使用者的特性，並根據使用中的瀏覽器轉換為適當的影像格式。 這些格式轉換的方式不會降低視覺精確度。 智慧型影像功能可根據瀏覽器功能，以下列方式自動將影像轉換為不同格式。
+當消費者要求影像時，智慧型影像功能會檢查使用者特性，並根據使用中的瀏覽器轉換為適當的影像格式。 這些格式轉換的方式不會降低視覺精確度。 智慧型影像功能可根據瀏覽器功能，以下列方式自動將影像轉換為不同格式。
 
 * 針對下列瀏覽器自動轉換為WebP:
    * Chrome
@@ -94,19 +98,19 @@ Smart Imaging也受益於與Adobe同級最佳的優質CDN服務完全整合的�
 
 Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
-## 智慧型影像處理如何與我們現有已使用的影像預設集搭配運作？{#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
+## 智慧型影像處理如何與我現有已使用的影像預設集搭配運作？{#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
-Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您的所有影像設定，但如果要求的檔案格式為JPEG或PNG，品質(qlt)和格式(fmt)除外。 對於格式轉換，我們會依照您的影像預設集設定所定義，維持完整的視覺完整性，但檔案大小會較小。 如果原始影像大小小於智慧型影像產生的大小，則會提供原始影像。
+Smart Imaging可與您現有的「影像預設集」搭配使用，並在所要求的檔案格式為JPEG或PNG時，會觀察所有影像設定，但品質(qlt)和格式(fmt)除外。 對於格式轉換，智慧型影像功能可維持影像預設集設定所定義的完整視覺完整性，但檔案大小較小。 如果原始影像大小小於智慧型影像產生的大小，則會提供原始影像。
 
 <!-- In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
 ## 我是否必須變更任何URL、影像預設集，或在我的網站上部署智慧型影像的新程式碼？{#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-如果您在現有的自訂網域上設定Smart Imaging,Smart Imaging將可與您現有的影像URL和影像預設集順暢地運作。 此外，智慧型影像功能不需要您在網站上新增任何程式碼來偵測使用者的瀏覽器。 所有這些都會自動處理。
+如果您在現有的自訂網域上設定Smart Imaging,Smart Imaging將可與您現有的影像URL和影像預設集順暢地運作。 此外，智慧型影像功能不需要您在網站上新增任何程式碼來偵測使用者的瀏覽器。 這些都會自動處理。
 
-如果您需要設定新的自訂網域以使用智慧型影像，則需要更新URL以反映此自訂網域。
+如果您必須設定新的自訂網域以使用智慧型影像，則必須更新URL以反映此自訂網域。
 
-此外，請參閱[我是否符合使用智慧型影像的資格？](#am-i-eligible-to-use-smart-imaging) 瞭解智慧型影像的預先要求。
+要瞭解Smart Imaging的先決條件，請參閱[我是否有資格使用Smart Imaging?](#am-i-eligible-to-use-smart-imaging)。
 
 <!-- No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add any code on your website to detect a user's browser. All of this is handled automatically. -->
 
@@ -131,7 +135,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 
 ## 為我的帳戶啟用Smart Imaging的過程是什麼？{#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
-您必須提出使用智慧型影像的要求；不會自動啟用。
+您會提出使用智慧型影像的要求；不會自動啟用。
 
 1. [使用Admin Console建立支援案例。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. 在您的支援案例中提供下列資訊：
@@ -152,10 +156,10 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
       按一下&#x200B;**[!UICONTROL 設定>應用程式設定>常規設定。]**
 
       查找標有&#x200B;**[!UICONTROL 「已發佈伺服器名稱」的欄位。]** 如果您目前使用一般的Dynamic Media Classic網域，則可請求移至您自己的自訂網域，做為轉換的一部分。
-   1. 指出您是否也需要此功能，才能透過HTTP/2運作。
+   1. 指出它是否必須透過HTTP/2運作。
 
-1. 技術支援將根據提交請求的順序將您添加到Smart Imaging客戶等待清單。
-1. 當Adobe準備好處理您的要求時，支援人員將會聯絡您以協調並設定目標日期。
+1. Adobe客戶服務會根據提交請求的順序，將您加入智慧型影像客戶等待清單。
+1. 當Adobe準備好處理您的要求時，支援會聯絡您以協調並設定目標日期。
 1. **可選**:您可以選擇在Staging中測試智慧型影像，然後Adobe將新功能推展至生產環境。
 1. 完成後，支援會通知您。
 1. 為充份提升智慧型影像處理的效能，Adobe建議將「存留時間(TTL)」設定為24小時或更長。 TTL會定義CDN快取資產的時間長度。 要更改此設定，請：
@@ -165,18 +169,18 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 
 ## 我何時可以期待我的帳戶啟用Smart Imaging?{#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
-請求的處理順序依技術支援部門接收的順序，依等待清單而定。
+客戶服務會根據等待清單，依照收到請求的順序處理請求。
 
 >[!NOTE]
-啟用智慧型影像可能需要較長的前置時間，因為Adobe會清除快取。 因此，在任何指定時間，都只能處理少數客戶轉場。
+啟用「智慧型影像」需要Adobe清除快取，因此可能需要較長的前置時間。 因此，在任何指定時間，都只能處理少數客戶轉場。
 
 ## 切換到使用Smart Imaging時有哪些風險？{#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
-客戶網頁沒有風險。 不過，您應該注意到，轉換至Smart Imaging會清除CDN的快取，因為它涉及在AEM上移至Dynamic Media Classic或Dynamic Media的新組態。
+客戶網頁沒有風險。 不過，轉換至Smart Imaging會清除CDN中的快取，因為它涉及在Experience Manager上移至Dynamic Media Classic或Dynamic Media的新組態。
 
-在初始轉換期間，非快取的影像會直接點擊Adobe的原始伺服器，直到重新建立快取為止。 因此，Adobe計劃一次處理數個客戶轉場，以便在從我們的來源提取要求時仍能維持可接受的效能。 對於大部分客戶，快取會在約1至2天內在CDN中重新完整建立。
+在初始轉換期間，非快取的影像會直接點擊Adobe的原始伺服器，直到重新建立快取為止。 因此，Adobe計劃一次處理數個客戶轉場，如此當從來源提取要求時，就能維持可接受的效能。 對於大部分客戶，快取會在約1 - 2天內在CDN中重新完整建立。
 
-## 如何驗證智慧型影像是否如預期般運作？ {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
+## 如何驗證智慧映像是否如預期般工作？{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. 在您的帳戶設定智慧型影像後，請在瀏覽器上載入Dynamic Media Classic或Adobe Experience Manager - Dynamic Media影像URL。
 1. 在瀏覽器中按一下「**[!UICONTROL 檢視>開發人員>開發人員工具]**」，以開啟Chrome開發人員窗格。 或者，選擇您選擇的任何瀏覽器開發人員工具。
@@ -190,7 +194,7 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 1. 在不同的瀏覽器和使用者條件上重複此測試。
 
 >[!NOTE]
-並非所有影像都會轉換。 Smart Imaging決定是否需要轉換來改善效能。 在某些情況下，若沒有預期的效能提升，或格式不是JPEG或PNG，則不會轉換影像。
+並非所有影像都會轉換。 Smart Imaging決定轉換是否可以改善效能。 有時，若沒有預期的效能提升，或格式不是JPEG或PNG，則不會轉換影像。
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
 
@@ -202,10 +206,10 @@ Smart Imaging可與您現有的「影像預設集」搭配使用，並觀察您�
 
 目前，您可以選擇啟用或禁用智慧映像。 沒有其他調整功能可用。
 
-## 如果「智慧映像」管理質量設定，我們是否可以設定最低和最高值？ 例如，是否可設定「不低於60」和「不高於80品質」? (#minimum-maximum)
+## 如果「智慧映像」管理質量設定，我是否可以設定最小和最大值？ 例如，是否可設定「不低於60」和「不高於80品質」? (#minimum-maximum)
 
 當前的Smart Imaging中沒有這種資源調配功能。
 
-## 在某些情況下，JPEG影像會傳回至Chrome，而非WebP影像。 為什麼會這樣？ (#jpeg-webp)
+## 有時，JPEG影像會傳回至Chrome，而非WebP影像。 為什麼？ (#jpeg-webp)
 
 智慧型影像功能可判斷轉換是否有益。 只有當轉換導致檔案大小較小且品質相當時，才會傳回新影像。
