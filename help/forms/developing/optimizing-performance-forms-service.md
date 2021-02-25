@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f883483-b81e-42c6-a4a1-eb499dd112e7
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1459'
 ht-degree: 0%
 
 ---
 
 
 # 優化Forms服務的效能{#optimizing-the-performance-of-theforms-service}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 優化Forms服務的效能{#optimizing-the-performance-of-the-forms-service}
 
@@ -65,7 +67,7 @@ ht-degree: 0%
 
 **將表單資料串流寫入用戶端網頁瀏覽器**
 
-在Forms服務轉譯表單後，它會傳回必須寫入用戶端網頁瀏覽器的表單資料流。 當寫入用戶端網頁瀏覽器時，使用者會看到表單。
+在Forms服務轉譯表單後，它會傳回您必須寫入用戶端網頁瀏覽器的表單資料流。 當寫入用戶端網頁瀏覽器時，使用者會看到表單。
 
 **另請參閱**
 
@@ -114,7 +116,7 @@ ht-degree: 0%
 
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
-   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料串流至用戶端網頁瀏覽器。
+   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料流至用戶端網頁瀏覽器。
    * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
    * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
    * 建立位元組陣列，並以`InputStream`物件的`read`方法來填入表單資料流，並將位元組陣列傳入為引數。
@@ -167,7 +169,7 @@ ht-degree: 0%
 1. 將表單資料串流寫入用戶端網頁瀏覽器
 
    * 獲取`com.adobe.idp.services.holders.FormsResultHolder`對象`value`資料成員的值，建立`FormResult`對象。
-   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料串流至用戶端網頁瀏覽器。
+   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料流至用戶端網頁瀏覽器。
    * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
    * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
    * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
