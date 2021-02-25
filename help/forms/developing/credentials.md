@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: bc06d9bd-af6c-47b1-b46f-aab990ef5816
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 
 # 使用憑據{#working-with-credentials}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於憑證服務**
 
@@ -59,7 +61,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+將必要的檔案加入您的開發專案中。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 必須將以下JAR檔案添加到項目的類路徑中：
 
@@ -151,7 +153,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 必須將以下JAR檔案添加到項目的類路徑中：
+將必要的檔案加入您的開發專案中。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 必須將以下JAR檔案添加到項目的類路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
