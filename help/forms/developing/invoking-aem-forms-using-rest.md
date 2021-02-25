@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2506'
+source-wordcount: '2520'
 ht-degree: 0%
 
 ---
 
 
 # 使用REST請求叫用AEM Forms {#invoking-aem-forms-using-rest-requests}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 可以配置在Workbench中建立的流程，以便通過「代表性狀態轉移(REST)」請求調用這些流程。 REST請求是從HTML頁面傳送。 也就是說，您可以使用REST請求直接從網頁叫用表單程式。 例如，您可以開啟網頁的新例項。 接著，您可以叫用表單程式，並載入轉譯的PDF檔案，其中包含以HTTP POST請求傳送的資料。
 
@@ -64,7 +66,7 @@ HTML用戶端有兩種類型。 第一個HTML用戶端是以JavaScript編寫的A
 
    清單和地圖也會用作在Workbench中建立的AEM Forms流程的輸入值。 因此，在使用REST請求時，您可以使用這些資料類型。 不支援Java陣列，因為它們不會用作AEM Forms程式的輸入值。
 
-   如果輸入參數是清單，REST客戶端可以通過多次指定該參數來發送該參數（對於清單中的每個項，一次）。 例如，如果A是文檔清單，則輸入必須是由多個名為A的部件組成的多部件消息。在這種情況下，每個名為A的部件都會成為輸入清單中的項目。 如果B是字串清單，則輸入可以是`application/x-www-form-urlencoded`訊息，包含多個名為B的欄位。在這種情況下，每個名為B的表單欄位都會變成輸入清單中的項目。
+   如果輸入參數是清單，REST客戶端可以通過多次指定該參數來發送該參數（對於清單中的每個項，一次）。 例如，如果A是文檔清單，則輸入必須是由多個名為A的部件組成的多部件消息。在這種情況下，每個名為A的部件都將成為輸入清單中的項目。 如果B是字串清單，則輸入可以是`application/x-www-form-urlencoded`訊息，包含多個名為B的欄位。在這種情況下，每個名為B的表單欄位都會變成輸入清單中的項目。
 
    如果輸入參數是映射，並且它是僅服務的輸入參數，則輸入消息的每個部分／欄位將成為映射中的鍵／值記錄。 每個部件／欄位的名稱會成為記錄的索引鍵。 每個部件／欄位的內容都會變成記錄的值。
 
@@ -323,4 +325,4 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 如果程式需要PDF檔案作為輸入值，請確定您以PDF格式提交表單，如上圖所示。 此外，若要成功叫用程式，程式必須傳回PDF檔案。 否則，Acrobat無法處理返回值，並會出現錯誤。 您不必指定輸入流程變數的名稱。 例如，*MyApplication/EncryptDocument*&#x200B;程式具有名為`inDoc`的輸入變數。 只要表單已提交為PDF，您就不需要指定inDoc。
 
-您也可以以XML格式將表單資料提交至表單流程，若要提交XML資料，請確定`Submit As`下拉式清單指定XML。 由於程式的傳回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
+您也可以以XML格式將表單資料提交至表單流程，若要提交XML資料，請確定`Submit As`下拉式清單指定XML。 由於程式的返回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
