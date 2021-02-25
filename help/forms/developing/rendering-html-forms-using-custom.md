@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,9 @@ ht-degree: 0%
 
 # 使用自訂CSS檔案{#rendering-html-forms-using-custom-css-files}轉換HTML表格
 
-Forms服務會根據來自網頁瀏覽器的HTTP要求轉譯HTML表格。 轉換HTML表格時，Forms服務可以參考自訂CSS檔案。 您可以建立自訂的CSS檔案，以符合您的業務需求，並在使用Forms服務來轉換HTML表格時參考該CSS檔案。
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+
+Forms服務會根據來自網頁瀏覽器的HTTP要求轉譯HTML表格。 轉換HTML表格時，Forms服務可以參考自訂CSS檔案。 您可以建立自訂的CSS檔案，以符合您的業務需求，並在使用Forms服務轉換HTML表格時參考該CSS檔案。
 
 Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果自訂CSS檔案不符合CSS標準，Forms服務不會報告可能遇到的錯誤。 在此情況下，Forms服務會忽略樣式，並繼續使用CSS檔案中的其餘樣式。
 
