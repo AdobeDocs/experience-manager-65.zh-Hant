@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '9143'
+source-wordcount: '9157'
 ht-degree: 0%
 
 ---
 
 
 # 使用AEM Forms Repository {#working-with-aem-forms-repository}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於儲存庫服務**
 
@@ -590,7 +592,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 更新資源時，將根據指定的資源屬性建立新版本。 在更新資源時，可以指定兩個重要參數：目標URI和包含所有更新元資料的資源實例。 請務必注意，如果您未變更指定屬性（例如，名稱），則在您傳入的例項中仍需要該屬性。 解析內容時建立的關係會新增至特定版本，除非指定，否則不會前移。
 
-例如，如果您更新XDP檔案，且其中包含對其他資源的參考，則也會記錄這些額外的參考。 假設form.xdp 1.0版有兩個外部參照：標誌和樣式表，您隨後會更新form.xdp，以便現在有三個參照：標誌、樣式表和架構檔案。 在更新期間，儲存庫將將第三個關係（到架構檔案）添加到其暫掛關係表。 當架構檔案存在於儲存庫中時，將自動形成關係。 不過，如果form.xdp 2.0版不再使用標誌，form.xdp 2.0版將不會與標誌有任何關係。
+例如，如果您更新XDP檔案，且其中包含其他資源的參考，則也會記錄這些額外的參考。 假設form.xdp 1.0版有兩個外部參照：標誌和樣式表，您隨後會更新form.xdp，以便現在有三個參照：標誌、樣式表和架構檔案。 在更新期間，儲存庫將將第三個關係（到架構檔案）添加到其暫掛關係表。 當架構檔案存在於儲存庫中時，將自動形成關係。 不過，如果form.xdp 2.0版不再使用標誌，form.xdp 2.0版將不會與標誌有任何關係。
 
 所有更新操作都是原子操作和事務操作。 例如，如果兩個用戶讀取了相同的資源，並決定將1.0版更新為2.0版，則其中一個將成功，而另一個將失敗，則儲存庫的完整性將得到維護，並且兩個用戶都將收到確認成功或失敗的消息。 如果事務未提交，則在資料庫出現故障時將回退，並根據應用程式伺服器超時或回退。
 
@@ -937,7 +939,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
    * `boolean`值，指示指定的資源是否是關係中的源資源。 在此示例中，指定值`true`，因為此情況。
    * 關係類型，它是`Relation`類中的靜態常數之一。 在此示例中，通過使用先前使用的相同值來指定從屬關係：`Relation.TYPE_DEPENDANT_OF`。
 
-   `getRelated`方法返回`Resource`對象的`java.util.List`，通過&lt;a2/>對象可循環檢索每個相關資源，並將`List`中包含的對象按順序傳送到`Resource`。 在此示例中，`testResource2`應該位於返回的資源清單中。
+   `getRelated`方法返回`Resource`對象的`java.util.List`，通過對象可循環檢索每個相關資源，並將`List`中包含的對象按順序傳送到`Resource`。 在此示例中，`testResource2`應該位於返回的資源清單中。
 
 **另請參閱**
 
