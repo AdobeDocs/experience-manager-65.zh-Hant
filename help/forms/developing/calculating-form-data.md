@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1902'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
 
 
 # 計算表單資料{#calculating-form-data}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若要計算表單資料，您必須執行兩項工作。 首先，您建立可計算表單資料的表單設計指令碼。 表單設計支援三種類型的指令碼。 一種指令碼類型在客戶端上運行，另一種指令碼類型在伺服器上運行，第三種指令碼類型在伺服器和客戶端上運行。 本主題中討論的指令碼類型在伺服器上運行。 HTML、PDF和表單指南（已過時）轉換支援伺服器端計算。
 
@@ -161,7 +163,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 1. 將表單資料流寫回用戶端網頁瀏覽器
 
-   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料串流至用戶端網頁瀏覽器。
+   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料流至用戶端網頁瀏覽器。
    * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
    * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
    * 建立位元組陣列，並以`InputStream`物件的`read`方法來填入表單資料流，並將位元組陣列傳入為引數。
@@ -216,7 +218,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 1. 將表單資料流寫回用戶端網頁瀏覽器
 
-   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料串流至用戶端網頁瀏覽器。
+   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料流至用戶端網頁瀏覽器。
    * 呼叫`FormsResult`物件的`getOutputContent`方法，建立包含表單資料的`BLOB`物件。
    * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
    * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
