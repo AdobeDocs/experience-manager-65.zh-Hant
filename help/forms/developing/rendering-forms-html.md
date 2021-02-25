@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '4174'
+source-wordcount: '4188'
 ht-degree: 0%
 
 ---
 
 
 # 將表單轉換為HTML {#rendering-forms-as-html}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 Forms服務會回應來自網頁瀏覽器的HTTP要求，將表單轉譯為HTML。 將表單轉譯為HTML的好處是，用戶端網頁瀏覽器所在的電腦不需要Adobe Reader、Acrobat或Flash Player(表單指南（已停用）)。
 
@@ -69,7 +71,7 @@ Forms服務會回應來自網頁瀏覽器的HTTP要求，將表單轉譯為HTML�
 
 **.fsc-ds-ssv**:此樣式表適用於「有效符號」欄位的情況。
 
-**.fsc-ds-ssc**:此樣式表適用於「有效符號」欄位，但資料已變更。
+**.fsc-ds-ssc**:此樣式表適用於「有效符號」欄位，但資料已變更的情況。
 
 **.fsc-ds-ssi**:此樣式表適用於無效符號欄位的情況。
 
@@ -87,7 +89,7 @@ Forms服務可在呈現表單時執行指令碼。 因此，您可以將資料�
 
 建議您不要為指令碼變數和表單欄位指定相同的名稱，例如項目。 某些Web瀏覽器（例如Internet Explorer）可能無法初始化與表單欄位同名的變數，而造成指令碼錯誤。 建議您為表單欄位和指令碼變數指定不同的名稱。
 
-在呈現同時包含頁面導覽功能和表單指令碼的HTML表單時（例如，假設指令碼在每次轉譯表單時都會從資料庫擷取欄位資料），請確定表單指令碼位於form:calculate事件中，而非form:readyevent中。
+在呈現同時包含頁面導覽功能和表單指令碼的HTML表單時（例如，假設指令碼在每次呈現表單時都會從資料庫擷取欄位資料），請確定表單指令碼位於form:calculate事件中，而非form:readyevent中。
 
 位於form:ready事件中的表單指令碼在表單的初始呈現期間僅執行一次，且不會針對後續的頁面擷取執行。 相反地，會針對每個轉譯表單的頁面導覽執行表單：calculate事件。
 
