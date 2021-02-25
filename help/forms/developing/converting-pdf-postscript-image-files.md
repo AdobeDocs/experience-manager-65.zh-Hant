@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f8707752-2c83-461a-b83d-708754b0f3f6
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2832'
+source-wordcount: '2846'
 ht-degree: 0%
 
 ---
 
 
 # 將PDF轉換為Postscript和影像檔{#converting-pdf-to-postscript-andimage-files}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於轉換PDF服務**
 
@@ -70,7 +72,7 @@ ht-degree: 0%
 
 將PDF檔案轉換為PostScript檔案時，您可以定義執行時期選項，以指定所建立的PostScript類型。 例如，您可以定義第3級PostScript檔案。
 
-通常，產生的PostScript檔案會反映輸入PDF檔案的大小。 如果您選取`ShrinkToFit`選項（會縮小PostScript檔案的輸出以符合頁面），您將看不到輸入的PDF檔案與產生的PostScript檔案之間的差異。 `ShrinkToFit`選項只有在您選擇在比輸入的PDF檔案小的頁面大小上列印時才生效。 要選擇較小的頁面大小，請定義`PageSize`選項。 此外，建議您將`RotateAndCenter`選項設為`true`以取得正確的PostScript輸出。
+通常，產生的PostScript檔案會反映輸入PDF檔案的大小。 如果您選取`ShrinkToFit`選項（會縮小PostScript檔案的輸出以符合頁面），您將看不到輸入的PDF檔案與產生的PostScript檔案之間的差異。 `ShrinkToFit`選項只有在您選擇在比輸入PDF檔案小的頁面大小上列印時才生效。 要選擇較小的頁面大小，請定義`PageSize`選項。 此外，建議您將`RotateAndCenter`選項設為`true`以取得正確的PostScript輸出。
 
 同樣地，如果您選取`ExpandToFit`選項（會展開PostScript檔案的輸出以符合頁面大小），則只有在您選擇列印的頁面大小大於輸入的PDF檔案時，才會生效。 要選擇較大的頁面大小，請定義`PageSize`選項。 此外，建議您將`RotateAndCenter`選項設為`true`以取得正確的PostScript輸出。
 
@@ -118,7 +120,7 @@ ht-degree: 0%
 
 1. 設定轉換執行時期選項。
 
-   * 通過調用`ToPSOptionsSpec`對象的建構子建立&lt;a0/>對象。
+   * 通過調用`ToPSOptionsSpec`對象的建構子建立對象。
    * 通過調用屬於`ToPSOptionsSpec`對象的相應方法來設定運行時選項。 例如，若要定義所建立的PostScript層級，請叫用`ToPSOptionsSpec`物件的`setPsLevel`方法，並傳遞指定PostScript層級的`PSLevel`列舉值。 如需您可設定之所有執行時期值的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`ToPSOptionsSpec`類別參考。
 
 1. 將PDF檔案轉換為PostScript檔案。
@@ -180,7 +182,7 @@ ht-degree: 0%
 
 1. 設定轉換執行時期選項。
 
-   * 通過調用`ToPSOptionsSpec`對象的建構子建立&lt;a0/>對象。
+   * 通過調用`ToPSOptionsSpec`對象的建構子建立對象。
    * 為`ToPSOptionsSpec`物件的資料成員指派值，以設定執行時期選項。 例如，若要定義所建立的PostScript層級，請為`ToPSOptionsSpec`物件的`psLevel`資料成員指派`PSLevel`列舉值。
 
 1. 將PDF檔案轉換為PostScript檔案。
@@ -194,9 +196,9 @@ ht-degree: 0%
 
 1. 儲存PostScript檔案。
 
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞代表PS檔案檔案位置的字串值。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞代表PS檔案檔案位置的字串值。
    * 建立一個位元組陣列，用於儲存`encryptPDFUsingPassword`方法返回的`BLOB`對象的資料內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PostScript檔案。
 
 **另請參閱**
@@ -334,7 +336,7 @@ ht-degree: 0%
 1. 擷取要轉換的PDF檔案。
 
    * 使用其建構子建立`BLOB`對象。 此`BLOB`物件用來儲存PDF表單。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，指定PDF表單的位置和開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，指定PDF表單的位置和開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 取得`System.IO.FileStream`物件的`Length`屬性，以決定位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
    * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
