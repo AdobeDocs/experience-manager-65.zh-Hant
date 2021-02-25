@@ -9,15 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
 
 # 備份和恢復服務API快速啟動{#backup-and-restore-service-apiquick-starts}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 Java API Quick Start(SOAP)可用於備份和還原服務API。
 
