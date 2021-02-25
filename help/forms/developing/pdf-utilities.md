@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2592'
+source-wordcount: '2606'
 ht-degree: 1%
 
 ---
 
 
 # 使用PDF實用程式{#working-with-pdf-utilities}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 **關於PDF公用程式服務**
 
@@ -330,7 +332,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 **建立PDFUlitiveService用戶端**
 
-您必須先建立PDFutilities用戶端，才能以程式設計方式執行PDF公用程式作業。 使用Java API，您可建立`PDFUtilityServiceClient`物件來完成此作業。 使用web service API，這是使用`PDFUtilityServiceService`物件來完成的。
+您必須先建立PDF Utility用戶端，才能以程式設計方式執行PDF公用程式作業。 使用Java API，您可建立`PDFUtilityServiceClient`物件來完成此作業。 使用web service API，這是使用`PDFUtilityServiceService`物件來完成的。
 
 **設定保存模式**
 
