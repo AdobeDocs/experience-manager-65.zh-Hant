@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2810'
 ht-degree: 0%
 
 ---
 
 
 # 導入和導出資料{#importing-and-exporting-data}
+
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 ## 關於表單資料整合服務{#about-the-form-data-integration-service}
 
@@ -99,7 +101,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+將必要的檔案加入您的開發專案中。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 必須將以下JAR檔案添加到項目的類路徑中：
 
@@ -220,7 +222,7 @@ ht-degree: 0%
 1. 參考PDF表格。
 
    * 使用其建構子建立`BLOB`對象。 此`BLOB`物件用來儲存PDF表單。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
    * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
@@ -228,7 +230,7 @@ ht-degree: 0%
 1. 參考XML資料來源。
 
    * 使用其建構子建立`BLOB`對象。 此`BLOB`物件用來儲存匯入表單的資料。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，指定包含要匯入資料的XML檔案位置，以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，指定包含要匯入資料的XML檔案位置，以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
    * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
@@ -246,7 +248,7 @@ ht-degree: 0%
 
    * 調用`System.IO.FileStream`對象的建構子並傳遞一個字串值，該字串值表示PDF檔案的檔案位置。
    * 建立一個位元組陣列，用於儲存`importData`方法返回的`BLOB`對象的資料內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
@@ -275,7 +277,7 @@ ht-degree: 0%
 
 **包含專案檔案**
 
-將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
+將必要的檔案加入您的開發專案中。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
 必須將以下JAR檔案添加到項目的類路徑中：
 
@@ -378,7 +380,7 @@ ht-degree: 0%
 1. 參考PDF表格。
 
    * 使用其建構子建立`BLOB`對象。 此`BLOB`物件用來儲存匯出資料的PDF表單。
-   * 通過調用`System.IO.FileStream`對象的建構子建立&lt;a0/>對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子建立對象。 傳遞一個字串值，指定PDF表單的位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
    * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
@@ -389,9 +391,9 @@ ht-degree: 0%
 
 1. 將PDF表格儲存為PDF檔案。
 
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞表示XML檔案位置的字串值來建立&lt;a0/>對象。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞表示XML檔案位置的字串值來建立對象。
    * 建立一個位元組陣列，用於儲存`exportData`方法返回的`BLOB`對象的資料內容。 取得`BLOB`物件的`MTOM`欄位值，以填入位元組陣列。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入XML檔案。
 
 **另請參閱**
