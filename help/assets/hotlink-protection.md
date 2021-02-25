@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -24,4 +24,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->熱連結保護需要您使用Adobe的搭售CDN。 若要啟用熱連結保護，管理員必須建立支援票證以請求對動態媒體帳戶進行配置更改。 啟動熱鏈路保護不需要額外費用。
+>這項功能需要您使用Adobe Experience Manager Dynamic Media隨附的現成可用CDN。 此功能不支援任何其他自訂CDN。 若要啟用作用連結保護，管理員必須建立Adobe客戶服務支援票證，才能要求對您的動態媒體帳戶進行設定變更。 啟動熱鏈路保護不需要額外費用。
