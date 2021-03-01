@@ -14,15 +14,15 @@ ht-degree: 8%
 ---
 
 
-# Adobe Experience Manager 6.5社群指南{#communities}
+# Adobe Experience Manager6.5社區指南{#communities}
 
 + [Communities 指南](home.md)
-+ AEM Communities {#introduction}簡介
++ AEM Communities簡介{#introduction}
    + [社群網站](administer-landing.md)
    + [AEM Communities概觀](overview.md)
    + [AEM Communities發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
-   + [AEM Communities快速入門](getting-started.md)
-   + [AEM Communities的啟用快速入門](getting-started-enablement.md)
+   + [開始使用AEM Communities](getting-started.md)
+   + [AEM Communities啟用快速入門](getting-started-enablement.md)
    + [初始設定](setup.md)
    + [製作新社群網站](create-site.md)
    + [體驗發佈網站](published-site.md)
@@ -33,11 +33,11 @@ ht-degree: 8%
    + [體驗發佈的啟用網站](enablement-published-site.md)
 + 部署{#deploy}
    + [部署社群](deploy-communities.md)
-   + [升級至AEM 6.5 Communities](upgrade.md)
+   + [升級至AEM6.5 Communities](upgrade.md)
    + [推薦的社區拓撲](topologies.md)
    + [配置Dispatcher for Communities](dispatcher.md)
 + 管理{#administer}
-   + [AEM Communities中的使用者與UGC管理服務](user-ugc-management-service.md)
+   + [用戶與AEM CommunitiesUGC管理服務](user-ugc-management-service.md)
    + [社群網站](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
    + [Communities Console](consoles.md)
    + [社群功能的Analytics設定](analytics.md)
@@ -67,7 +67,7 @@ ht-degree: 8%
    + [適用於社群的FFmpeg](ffmpeg.md)
    + [內容協調](in-context.md)
    + [進階計分和徽章](advanced.md)
-   + [ASRP - Adobe儲存資源供應商](asrp.md)
+   + [ASRP -Adobe儲存資源提供方](asrp.md)
    + [MSRP - MongoDB儲存資源提供程式](msrp.md)
    + [如何設定MongoDB以進行示範](demo-mongo.md)
    + [DSRP —— 關係資料庫儲存資源提供程式](dsrp.md)
