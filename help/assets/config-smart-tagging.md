@@ -3,17 +3,17 @@ title: 使用智慧型內容服務設定資產標籤
 description: 瞭解如何使用智慧型內容服務在 [!DNL Adobe Experience Manager]中設定智慧型標籤和增強的智慧型標籤。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
 workflow-type: tm+mt
-source-wordcount: '2179'
-ht-degree: 26%
+source-wordcount: '2172'
+ht-degree: 25%
 
 ---
 
 
 # 準備[!DNL Assets]進行智慧標籤{#configure-asset-tagging-using-the-smart-content-service}
 
-在您開始使用智慧型內容服務標籤資產之前，請先將[!DNL Experience ManageR Assets]與Adobe Developer Console整合，以運用[!DNL Adobe Sensei]的智慧型服務。 一旦設定好後，請使用幾張影像和標籤來訓練服務。
+在您開始使用智慧型內容服務標籤資產之前，請先將[!DNL Experience Manager Assets]與Adobe開發人員主控台整合，以運用[!DNL Adobe Sensei]的智慧型服務。 一旦設定好後，請使用幾張影像和標籤來訓練服務。
 
 在您使用智慧型內容服務之前，請確定下列事項：
 
@@ -23,35 +23,35 @@ ht-degree: 26%
    <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
   -->
 
-* 安裝最新的[Experience Manager Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+* 安裝最新的[Experience Manager服務包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 ## 使用 Adobe 開發人員控制台進行整合 {#integrate-adobe-io}
 
-當您與Adobe Developer Console整合時，[!DNL Experience Manager]伺服器會先使用Adobe Developer Console閘道驗證您的服務認證，再將您的要求轉送至智慧型內容服務。 若要整合，您需要擁有組織管理員權限的Adobe ID帳戶，以及為組織購買並啟用的智慧型內容服務授權。
+當您與Adobe開發人員主控台整合時，[!DNL Experience Manager]伺服器會先使用Adobe開發人員主控台閘道驗證您的服務認證，然後再將您的要求轉送至智慧型內容服務。 若要整合，您需要擁有組織管理員權限的Adobe ID帳戶，以及為您的組織購買並啟用的智慧型內容服務授權。
 
 若要設定智慧型內容服務，請依照下列頂層步驟：
 
-1. [在中建立智](#obtain-public-certificate) 能內容服 [!DNL Experience Manager] 務配置以生成公共密鑰。[取得公開憑證](#obtain-public-certificate)以進行 OAuth 整合。
+1. 要生成公鑰，請[在[!DNL Experience Manager]中建立智慧內容服務](#obtain-public-certificate)配置。 [取得公開憑證](#obtain-public-certificate)以進行 OAuth 整合。
 
 1. [在 Adobe 開發人員控制台中建立整合](#create-adobe-i-o-integration)，並上傳產生的公開金鑰。
 
-1. [使用Adobe Developer ](#configure-smart-content-service) Console的API金鑰和其他認證來設定您的部署。
+1. [使用Adobe開](#configure-smart-content-service) 發人員主控台的API金鑰和其他認證來設定您的部署。
 
 1. [測試設定](#validate-the-configuration)。
 
 1. （可選）[啟用資產上傳的自動標籤](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
 
-### 建立Smart Content Service配置以獲取公共證書{#obtain-public-certificate}
+### 通過建立Smart Content Service配置{#obtain-public-certificate}獲取公共證書
 
 公開憑證可讓您在 Adobe 開發人員控制台上驗證設定檔。
 
-1. 在[!DNL Experience Manager]使用者介面中，存取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 雲端服務]** > **[!UICONTROL 舊版雲端服務]**。
+1. 在[!DNL Experience Manager]用戶介面中，訪問&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL 舊Cloud Services]**。
 
-1. 在「雲端服務」頁面中，按一下「資產智慧標籤」下的「立即設定」。]****[!UICONTROL ****
+1. 在「Cloud Services」頁中，按一下「資產智慧標籤」下的「立即配置」。********
 
 1. 在&#x200B;**[!UICONTROL 建立配置]**&#x200B;對話框中，指定智慧標籤配置的標題和名稱。 按一下&#x200B;**[!UICONTROL 建立]**。
 
-1. 在&#x200B;**[!UICONTROL AEM Smart Content Service]**&#x200B;對話方塊中，使用下列值：
+1. 在&#x200B;**[!UICONTROL 智AEM慧型內容服務]**&#x200B;對話方塊中，使用下列值：
 
    **[!UICONTROL 服務 URL]**: `https://mc.adobe.io/marketingcloud/smartcontent`
 
@@ -59,7 +59,7 @@ ht-degree: 26%
 
    現在將其他欄位留空（稍後將提供）。 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
-   ![Experience Manager Smart Content Service對話框，用於提供內容服務URL](assets/aem_scs.png)
+   ![Experience Manager智慧型內容服務對話方塊，以提供內容服務URL](assets/aem_scs.png)
 
 
    *圖：「智慧型內容服務」對話方塊，提供內容服務URL*
@@ -73,11 +73,11 @@ ht-degree: 26%
    ![為智慧標籤服務建立的設定的表示](assets/smart-tags-download-public-cert.png)
 
 
-   *圖：智慧型標籤服務的設定*
+   *圖：智慧標籤服務的設定。*
 
 #### 在證書過期時重新配置{#certrenew}
 
-證書過期後，將不再受信任。 您無法更新已過期的憑證。若要新增憑證，請依照下列步驟操作。
+證書過期後，將不再受信任。 您無法更新已過期的憑證。若要新增憑證，請依照下列步驟進行。
 
 1. 以管理員身分登入您的 [!DNL Experience Manager] 部署。按一 **[!UICONTROL 下「工具]** >安 **[!UICONTROL 全性]** >使 **[!UICONTROL 用者]**」。
 
@@ -85,20 +85,20 @@ ht-degree: 26%
 
 1. 刪除憑證已過期的現有 **[!UICONTROL similaritysearch]** 金鑰存放區。按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。
 
-   ![刪除Keystore中現有的相似性搜尋項目，以新增安全憑證](assets/smarttags_delete_similaritysearch_keystore.png)
+   ![刪除Keystore中現有的相似性搜索條目以添加安全證書](assets/smarttags_delete_similaritysearch_keystore.png)
 
 
-   *圖：刪除金鑰存放區中現有的 `similaritysearch` 項目，以新增安全性憑證。*
+   *圖：刪除Keystore中 `similaritysearch` 的現有條目以添加安全證書。*
 
 1. 導覽至「 **[!UICONTROL 工具]** > **[!UICONTROL 雲端服務]** >舊 **[!UICONTROL 版雲端服務」]**。按一 **[!UICONTROL 下「資產智慧標籤]** >顯 **[!UICONTROL 示設定]** >可 **[!UICONTROL 用設定」]**。按一下所需的設定。
 
 1. 若要下載公用憑證，請按一下「下載OAuth整合的公用憑證&#x200B;]**」。**[!UICONTROL 
 
-1. 存取[https://console.adobe.io](https://console.adobe.io)，並導覽至&#x200B;**[!UICONTROL Integrations]**&#x200B;頁面上現有的智慧型內容服務。 上傳新憑證。 如需詳細資訊，請參閱[建立Adobe Developer Console整合](#create-adobe-i-o-integration)中的指示。
+1. 存取[https://console.adobe.io](https://console.adobe.io)，並導覽至&#x200B;**[!UICONTROL Integrations]**&#x200B;頁面上現有的智慧型內容服務。 上傳新憑證。 如需詳細資訊，請參閱[建立Adobe開發人員主控台整合](#create-adobe-i-o-integration)中的指示。
 
-### 建立Adobe Developer Console整合{#create-adobe-i-o-integration}
+### 建立Adobe開發人員主控台整合{#create-adobe-i-o-integration}
 
-若要使用智慧型內容服務API，請在Adobe Developer Console中建立整合，以取得[!UICONTROL API金鑰]（產生於Adobe Developer Console整合的[!UICONTROL 用戶端ID]欄位）、[!UICONTROL 技術帳戶ID]、[!UICONTROL  ORGANIZATION&lt;A10/>&lt;A10/>&lt;A12/>中雲端組態的資產智慧標籤服務設定&lt;A11/>的ID]和[!UICONTROL 用戶端密碼]。[!DNL Experience Manager]][!UICONTROL 
+若要使用智慧型內容服務API，請在Adobe開發人員主控台中建立整合，以取得[!UICONTROL API金鑰](產生於Adobe開發人員主控台整合的[!UICONTROL 用戶端ID]欄位)、[!UICONTROL 技術帳戶ID]、[!UICONTROL 組織[!UICONTROL [!DNL Experience Manager]中雲端組態的資產智慧標籤服務設定]的ID]和[!UICONTROL 用戶端密碼]。
 
 1. 在瀏覽器中存取 [https://console.adobe.io](https://console.adobe.io/)。選取適當的帳戶，並確認相關聯的組織角色是系統管理員。
 
@@ -108,7 +108,7 @@ ht-degree: 26%
 
 1. 選取&#x200B;**[!UICONTROL 「上傳您的公開金鑰」]**。提供從 [!DNL Experience Manager] 下載的憑證檔案。畫面上會顯示[!UICONTROL 已成功上傳公開金鑰]訊息。按一下&#x200B;**[!UICONTROL 下一步]**。
 
-   [!UICONTROL 建立新的服務帳戶(JWT) 憑證]頁面會顯示剛設定的服務帳戶的公開金鑰。
+   [!UICONTROL 建立新服務帳戶(JWT)認證頁] 顯示服務帳戶的公鑰。
 
 1. 按一下&#x200B;**[!UICONTROL 下一步]**。
 
@@ -119,19 +119,19 @@ ht-degree: 26%
    ![在「概覽」索引標籤中，您可以檢閱為整合提供的資訊。](assets/integration_details.png)
 
 
-   *圖：Adobe Developer Console中的整合詳細資訊*
+   *圖：Adobe開發人員主控台整合的詳細資訊*
 
 ### 配置Smart Content Service {#configure-smart-content-service}
 
-若要設定整合，請使用Adobe Developer Console整合的[!UICONTROL TECHNICAL ACCOUNT ID]、[!UICONTROL ORGANIZATION ID]、[!UICONTROL CLIENT SECRET]和[!UICONTROL CLIENT ID]欄位。 建立智慧型標籤雲端設定可讓您驗證來自[!DNL Experience Manager]部署的API要求。
+若要設定整合，請使用「Adobe開發人員主控台」整合中的[!UICONTROL TECHNICAL ACCOUNT ID]、[!UICONTROL ORGANIZATION ID]、[!UICONTROL CLIENT SECRET]和[!UICONTROL CLIENT ID]欄位。 建立智慧型標籤雲端設定可讓您驗證來自[!DNL Experience Manager]部署的API要求。
 
-1. 在[!DNL Experience Manager]中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 雲端服務]** > **[!UICONTROL 舊版雲端服務]**&#x200B;以開啟[!UICONTROL 雲端服務]主控台。
+1. 在[!DNL Experience Manager]中，導航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 舊Cloud Services]**&#x200B;以開啟[!UICONTROL Cloud Services]控制台。
 
 1. 在&#x200B;**[!UICONTROL Assets Smart Tags]**&#x200B;下，開啟上述建立的組態。 在服務設定頁上，按一下&#x200B;**[!UICONTROL 編輯]**。
 
 1. 在「 **[!UICONTROL AEM Smart Content Service]** 」對話方塊中 **[!UICONTROL ，使用「服務URL」和「授權伺服器」欄位的預先填入值]****** 。
 
-1. 對於[!UICONTROL Api金鑰]、[!UICONTROL 技術帳戶ID]、[!UICONTROL 組織ID]和[!UICONTROL 用戶端密碼]欄位，請複製並使用[Adobe Developer Console整合](#create-adobe-i-o-integration)中產生的下列值。
+1. 對於[!UICONTROL Api金鑰]、[!UICONTROL 技術帳戶ID]、[!UICONTROL 組織ID]和[!UICONTROL 客戶機密碼]欄位，複製並使用[Adobe開發人員控制台整合](#create-adobe-i-o-integration)中生成的下列值。
 
    | [!UICONTROL 資產智慧標記服務設定] | [!DNL Adobe Developer Console] 整合欄位 |
    |--- |--- |
@@ -187,7 +187,7 @@ ht-degree: 26%
    ![設定DAM更新資產工作流程以新增智慧型標籤步驟，並選取忽略智慧型標籤標幟](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *圖：設定DAM更新資產工作流程以新增智慧型標籤步驟，並選取忽略智慧型標籤標幟*
+   *圖：設定DAM更新資產工作流程以新增智慧型標籤步驟，並選取忽略智慧型標籤標幟。*
 
 1. 按一下&#x200B;**[!UICONTROL 「確定」]**&#x200B;關閉程序步驟，然後儲存工作流程。
 
@@ -205,17 +205,17 @@ ht-degree: 26%
 
 ### 訓練准則{#guidelines-for-training}
 
-為獲得最佳效果，您的訓練集中的影像應符合下列准則：
+為獲得最佳效果，您訓練集中的影像符合下列准則：
 
 **** 數量和大小：每個標籤至少30個影像。長邊至少500像素。
 
-**一致性**:標籤的影像應類似視覺效果。
+**一致性**:用於特定標籤的影像在視覺上類似。
 
 例如，將所有這些影像標籤為`my-party`（用於訓練）並不好，因為它們在視覺上並不相似。
 
 ![示例性影像，以示訓練指南](/help/assets/assets/do-not-localize/coherence.png)
 
-**涵蓋範圍**:培訓中的影像應該有足夠的多樣性。其理念是提供幾個相當多樣化的範例，讓Experience Manager學會專注在正確的事物上。 如果您要在視覺上不相同的影像上套用相同的標籤，請至少包含5種不同類型的範例。
+**涵蓋範圍**:在訓練中使用足夠多的影像變化。我們的想法是提供一些比較多樣的例子，讓Experience Manager學會專注於正確的事情。 如果您要在視覺上不相同的影像上套用相同的標籤，請至少包含5種不同類型的範例。
 
 例如，對於標籤&#x200B;*model-down-pose*，為服務加入更多類似下方反白顯示影像的訓練影像，以便在標籤期間更精確地識別類似影像。
 
@@ -265,7 +265,7 @@ ht-degree: 26%
 1. 在[!DNL Experience Manager]介面中，移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 報表]**。
 1. 在&#x200B;**[!UICONTROL 資產報表]**&#x200B;頁面中，按一下&#x200B;**[!UICONTROL 建立]**。
 1. 選擇&#x200B;**[!UICONTROL 智慧型標籤訓練]**&#x200B;報表，然後從工具列按一下&#x200B;**[!UICONTROL Next]**。
-1. 指定報表的標題和說明。在「 **[!UICONTROL 排程報表]**」下，保 **[!UICONTROL 留「現在]** 」選項。如果您想要排程報表以供稍後使用，請選 **[!UICONTROL 取]** 「稍後」並指定日期和時間。然後，從工具列按一下「建立」。]****[!UICONTROL 
+1. 指定報表的標題和說明。在「 **[!UICONTROL 排程報表]**」下，保 **[!UICONTROL 留「現在]** 」選項。如果您想要排程報表以供稍後使用，請選 **[!UICONTROL 取]** 「稍後」並指定日期和時間。然後，從工具列按一下「建立」。****
 1. 在「資 **[!UICONTROL 產報表]** 」頁面中，選取您產生的報表。若要檢視報表，請按一下工具列上的&#x200B;**[!UICONTROL 檢視]**。
 1. 檢閱報表的詳細資訊。
 
