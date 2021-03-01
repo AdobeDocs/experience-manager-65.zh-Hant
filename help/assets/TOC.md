@@ -10,12 +10,12 @@ translation-type: tm+mt
 source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 36%
+ht-degree: 40%
 
 ---
 
 
-# Assets 指南 {#assets}
+# Assets 指南  {#assets}
 
 + [[!DNL Assets] 使用者指南](home.md)
 + [[!DNL Experience Manager] 6.5資產發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
@@ -28,7 +28,7 @@ ht-degree: 36%
    + [使用資產中繼資料](metadata.md)
    + [多語言資產](multilingual-assets.md)
    + [資產 [!DNL Adobe Stock] 中的使用資產](aem-assets-adobe-stock.md)
-   + [預覽3D資產](previewing-3d-assets.md)
+   + [預覽 3D 資產](previewing-3d-assets.md)
    + [查看資料夾資產和集合](bulk-approval.md)
    + [增強型智慧標記](enhanced-smart-tags.md)
    + [時間軸中的活動串流](activity-stream.md)
@@ -40,11 +40,11 @@ ht-degree: 36%
    + [Experience League 的 Dynamic Media 電子報](dynamic-media-newsletter.md)
    + [建立 Dynamic Media](administering-dynamic-media.md)
    + [使用 Dynamic Media](dynamic-media.md)
-   + [設定動態媒體- Scene7模式](config-dms7.md)
-   + [配置動態媒體——混合模式](config-dynamic.md)
-   + [疑難排解動態媒體- Scene7模式](troubleshoot-dms7.md)
-   + [動態媒體中的協助功能](accessibility-dm.md)
-   + [從動態媒體——混合模式移轉至動態媒體- S7模式](migrate-from-hybrid-to-dms7.md)
+   + [設定 Dynamic Media - Scene7 模式](config-dms7.md)
+   + [配置Dynamic Media-混合模式](config-dynamic.md)
+   + [疑難排解Dynamic Media-Scene7模式](troubleshoot-dms7.md)
+   + [Dynamic Media 無障礙內容](accessibility-dm.md)
+   + [從Dynamic Media-混合模式移轉至Dynamic Media- S7模式](migrate-from-hybrid-to-dms7.md)
    + [管理 Dynamic Media 資產](managing-assets.md)
    + [影像品質最佳化的最佳作法](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [管理 Dynamic Media 檢視器預設集](managing-viewer-presets.md)
@@ -55,7 +55,7 @@ ht-degree: 36%
    + [Dynamic Media 影像設定檔](image-profiles.md)
    + [智慧型影像](imaging-faq.md)
    + [影片](s7-video.md)
-   + [新增動態媒體功能至您的頁面](scene7.md)
+   + [將Dynamic Media功能新增至您的頁面](scene7.md)
    + [HTTP2 傳送內容](http2.md)
    + [傳送 Dynamic Media 資產](delivering-dynamic-media-assets.md)
    + [在 Dynamic Media 中啟用超連結保護](hotlink-protection.md)
@@ -64,7 +64,7 @@ ht-degree: 36%
    + [全景影像](panoramic-images.md)
    + [混合媒體集](mixed-media-sets.md)
    + [迴轉集](spin-sets.md)
-   + [動態媒體中的視訊](video.md)
+   + [Dynamic Media影片](video.md)
    + [輪播橫幅](carousel-banners.md)
    + [互動影像](interactive-images.md)
    + [互動影片](interactive-videos.md)
@@ -78,9 +78,9 @@ ht-degree: 36%
    + [將 URL 連結至您的 Web 應用程式](linking-urls-to-yourwebapplication.md)
    + [使用規則集轉換 URL](using-rulesets-to-transform-urls.md)
    + [發佈 Dynamic Media 資產](publishing-dynamicmedia-assets.md)
-   + [在動態媒體中使用選擇性發佈](selective-publishing.md)
-   + [透過動態媒體使CDN快取失效](invalidate-cdn-cache-dynamic-media.md)
-   + [使用Dynamic Media Classic驗證CDN快取](invalidate-cdn-cache-dm-classic.md)
+   + [在 Dynamic Media 中使用選擇性發佈](selective-publishing.md)
+   + [通過Dynamic Media使CDN快取失效](invalidate-cdn-cache-dynamic-media.md)
+   + [利用Dynamic MediaClassic對CDN快取進行失效](invalidate-cdn-cache-dm-classic.md)
    + [安裝Feature Pack 18912以進行大量資產移轉](bulk-ingest-migrate.md)
    + [使用選取工具](working-with-selectors.md)
 + 延伸資產{#extending}
@@ -99,7 +99,7 @@ ht-degree: 36%
    + [瞭解中繼資料概念](metadata-concepts.md)
    + [設定中繼資料功能](metadata-config.md)
    + [中繼資料結構](metadata-schemas.md)
-   + [XMP回寫至轉譯](xmp-writeback.md)
+   + [XMP回寫轉譯](xmp-writeback.md)
    + [資產連結共用](link-sharing.md)
    + [資產報表](asset-reports.md)
    + [配置Smart Content Service以標籤](config-smart-tagging.md)
@@ -115,7 +115,7 @@ ht-degree: 36%
    + [設定上傳限制](configuring-asset-upload-restrictions.md)
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] 整合](aem-cc-integration-best-practices.md)
    + [與 [!DNL InDesign Server]](indesign.md)
-   + [資產中的數位版權管理](drm.md)
+   + [Digital Rights Management資產](drm.md)
    + [使用示範套件獲取資產見解](use-demo-package-for-asset-insights.md)
    + [資產檔案格式最佳實務](assets-file-format-best-practices.md)
    + [監控資產的最佳實務](assets-monitoring-best-practices.md)
