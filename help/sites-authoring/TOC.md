@@ -18,7 +18,7 @@ ht-degree: 46%
 # AEM 6.5 Authoring 使用指南  {#authoring}
 
 + [編寫使用指南概觀](home.md)
-+ AEM Authoring的基本工作、工具和概念{#essentials}
++ 編寫{#essentials}的基AEM本工作、工具和概念
    + [作者的第一步](first-steps.md)
    + [頁面編寫](page-authoring.md)
    + [編寫頁面的快速指南](qg-page-authoring.md)
@@ -42,7 +42,7 @@ ht-degree: 46%
    + [匯出為 CSV](csv-export.md)
    + [元件](default-components.md)
    + [製作行動裝置的頁面](mobile.md)
-   + [編寫時疑難排解AEM](troubleshooting.md)
+   + [編寫時AEM的疑難排解](troubleshooting.md)
    + [編輯頁面時的鍵盤快速鍵](page-authoring-keyboard-shortcuts.md)
    + [最佳作法](best-practices.md)
 + 網站和頁面功能{#siteandpage}
@@ -90,9 +90,9 @@ ht-degree: 46%
    + [管理對象](managing-audiences.md)
    + [建立和管理選件](offerlib.md)
    + [了解區段](segmentation-overview.md)
-+ AEM和Adobe Campaign {#aem-adobe-campaign}
-   + [使用Adobe Campaign](adobe-campaign.md)
-   + [使用Adobe Campaign Classic和Adobe Campaign Standard](campaign.md)
++ AEM和Adobe Campaign{#aem-adobe-campaign}
+   + [與Adobe Campaign合作](adobe-campaign.md)
+   + [與Adobe Campaign Classic和Adobe Campaign Standard合作](campaign.md)
    + [鎖定您的Adobe Campaign](target-adobe-campaign.md)
-   + [在AEM中建立Adobe Campaign表格](adobe-campaign-forms.md)
+   + [創作Adobe CampaignFormsAEM](adobe-campaign-forms.md)
    + [Adobe Campaign元件](adobe-campaign-components.md)
