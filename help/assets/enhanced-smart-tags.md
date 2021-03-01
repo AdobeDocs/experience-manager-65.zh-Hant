@@ -3,10 +3,10 @@ title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 09bb767ae8565624e7a6b9786a5cd4c581fe0b9a
+source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
 workflow-type: tm+mt
-source-wordcount: '1610'
-ht-degree: 2%
+source-wordcount: '1597'
+ht-degree: 1%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 2%
 
 例如，汽車製造商可以用型號名稱來標籤汽車影像，以便在搜尋各種型號的影像以設計促銷活動時，只顯示相關影像。
 
-要使智慧內容服務應用正確的標籤，您必須對其進行培訓以識別分類。 若要訓練服務，請先組織一組最能說明這些資產的資產和標籤。 在資產上套用這些標籤，並執行培訓工作流程以協助服務學習。
+要讓Smart Content Service套用正確的標籤，請對其進行培訓以識別您的分類。 若要訓練服務，請先組織一組最能說明這些資產的資產和標籤。 若要協助服務學習，請在資產上套用這些標籤，然後執行培訓工作流程。
 
 一旦標籤經過訓練並準備就緒後，服務現在可以透過標籤工作流程，將這些標籤套用在資產上。
 
-在背景中，智慧型內容服務使用Adobe Sensei AI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
+在背景中，智慧型內容服務使用Adobe SenseiAI架構，針對您的標籤結構和商業分類訓練其影像識別演算法。 然後，此內容智慧會用來將相關標籤套用至不同的資產集。
 
 智慧型內容服務是位於[!DNL Adobe Developer Console]的雲端服務。 要在[!DNL Adobe Experience Manager]中使用它，系統管理員必須將[!DNL Experience Manager]部署與[!DNL Adobe Developer Console]整合。
 
@@ -40,11 +40,11 @@ ht-degree: 2%
 
 在使用智慧型內容服務之前，請確定以下內容以在[!DNL Adobe Developer Console]上建立整合：
 
-* Adobe ID 帳戶具有組織的管理員權限。
-* 您的組織已啟用智慧型內容服務。
-* 智慧型內容服務基本套件只能新增至已授權[!DNL Adobe Experience Manager Sites]基本套件和[!DNL Assets]附加元件的部署。
+* 具有組織管理員權限的Adobe ID帳戶。
+* 為您的組織啟用智慧型內容服務。
+* 要將Smart Content Services基本包添加到部署中，請許可[!DNL Adobe Experience Manager Sites]基本包和[!DNL Assets]附加模組。
 
-智慧型標籤僅套用至具有下列MIME類型的資產：
+此服務將智慧標籤套用至下列MIME類型的資產：
 
 * image/jpeg
 * image/tiff
@@ -65,7 +65,7 @@ ht-degree: 2%
 * 影像/psd
 * image/vnd.adobe.photoshop
 
-僅下列MIME類型支援智慧標籤資產轉譯：
+此服務將「智慧標籤」套用至下列MIME類型的資產轉譯：
 
 * image/jpeg
 * image/pjpeg
@@ -93,7 +93,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->1. 培訓是不可撤銷的過程。 Adobe建議您在標籤上訓練智慧型內容服務之前，先檢視組織中資產的標籤。
+>1. 培訓是不可撤銷的過程。 Adobe建議您先檢閱組織中資產的標籤，然後再對標籤上的智慧型內容服務進行訓練。
 >1. 在培訓標籤之前，請參閱[智慧型內容服務培訓方針](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
 >1. 當您第一次訓練智慧型內容服務時，Adobe建議您至少在兩個不同的標籤上進行訓練。
 
@@ -152,7 +152,7 @@ ht-degree: 2%
 
    ![tagging_dialog](assets/tagging_dialog.png)
 
-   導覽至資產資料夾並檢閱標籤，以確認Smart Content Service是否正確標籤您的資產。
+   若要確認Smart Content Service是否正確標籤您的資產，請導覽至資產資料夾並檢閱標籤。
 
 #### 從時間軸{#tagging-assets-from-the-timeline}標籤資產
 
@@ -163,7 +163,7 @@ ht-degree: 2%
    ![start_workflow](assets/start_workflow.png)
 
 1. 選擇&#x200B;**[!UICONTROL DAM智慧型標籤資產]**&#x200B;工作流程，並指定工作流程的標題。
-1. 按一下&#x200B;**[!UICONTROL 開始]**。 工作流程會將您的標籤套用在資產上。 導覽至資產資料夾並檢閱標籤，以確認Smart Content Service是否正確標籤您的資產。
+1. 按一下&#x200B;**[!UICONTROL 開始]**。 工作流程會套用資產上的標籤。 若要確認Smart Content Service是否正確標籤您的資產，請導覽至資產資料夾並檢閱標籤。
 
 >[!NOTE]
 >
@@ -171,16 +171,16 @@ ht-degree: 2%
 
 ## 組織或協調套用的智慧型標籤{#manage-smart-tags}
 
-您可以組織智慧型標籤，移除可能指派給品牌影像的任何不正確標籤，以便只顯示最相關的標籤。
+您可以組織智慧型標籤，移除指派給品牌影像的任何不正確標籤，以便只顯示最相關的標籤。
 
 協調智慧型標籤也有助於調整以標籤為基礎的影像搜尋，確保影像出現在搜尋結果中，以找出最相關的標籤。 基本上，它有助於消除不相關影像在搜尋結果中顯示的機率。
 
-您也可以指派較高的排名給標籤，以提高其與影像的相關性。 促銷影像的標籤會增加當根據特定標籤執行搜尋時，在搜尋結果中出現影像的機率。
+您也可以指派較高的排名給標籤，以提高其與影像的關聯性。 促銷影像的標籤會增加在搜尋特定標籤時在搜尋結果中顯示的影像機率。
 
-1. 在Omnisearch方塊中，根據標籤搜尋資產。
-1. 檢查搜尋結果，以識別與搜尋無關的影像。
+1. 在搜尋方塊中，使用標籤作為關鍵字來搜尋資產。
+1. 若要識別與您的搜尋無關的影像，請檢閱搜尋結果。
 1. 選擇該影像，然後按一下工具欄中的「管理標籤」。****
-1. 從&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面檢查標籤。 如果您不想根據特定標籤來搜尋影像，請選取標籤，然後從工具列按一下「刪除」。 ****&#x200B;或者，按一下標籤旁出現的`x`符號。
+1. 在&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面中，檢閱標籤。 如果您不想根據特定標籤來搜尋影像，請選取標籤，然後從工具列按一下「刪除」。 ****&#x200B;或者，按一下標籤旁出現的`x`符號。
 1. 或者，若要指派較高的排名給標籤，請選取標籤，然後從工具列按一下「提升」。 ****&#x200B;您促銷的標籤會移至&#x200B;**[!UICONTROL Tags]**&#x200B;區段。
 1. 按一下&#x200B;**[!UICONTROL 保存]** ，然後按一下&#x200B;**[!UICONTROL 確定]**
 1. 導覽至影像的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面。 請注意，您所促銷的標籤會被指派為更相關的標籤，並會出現在搜尋結果的前面。
