@@ -17,12 +17,12 @@ ht-degree: 10%
 # AEM 6.5 Mobile 使用指南  {#mobile}
 
 + [行動使用指南總覽](home.md)
-+ AEM Mobile {#introduction}簡介
-   + [AEM Mobile快速入門](getting-started-aem-mobile.md)
++ AEM Mobile簡介{#introduction}
+   + [開始使用AEM Mobile](getting-started-aem-mobile.md)
    + [AEM Mobile隨選](getting-started-aem-mobile-on-demand.md)
    + [行動應用程式](mobile-apps.md)
-   + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
-   + [AEM Mobile - GDPR就緒性](aem-mobile-gdpr-compliance.md)
+   + [AEMAdobe PhoneGap](getting-started-aem-mobile-phonegap.md)
+   + [AEM Mobile- GDPR就緒性](aem-mobile-gdpr-compliance.md)
    + [開發行動應用程式](develop-mobile-apps.md)
 + 製作隨選服務應用程式{#authoring}
    + [Mobile On-Demand](mobile-apps-ondemand.md)
@@ -50,14 +50,14 @@ ht-degree: 10%
    + [內容傳送](develop-content-as-a-service.md)
 + 管理隨選服務應用程式{#administering}
    + [AEM Mobile隨選](aem-mobile.md)
-   + [AEM Mobile SetUp](aem-mobile-setup.md)
+   + [AEM Mobile設定](aem-mobile-setup.md)
    + [設定您的使用者和使用者群組](aem-mobile-configure-users.md)
    + [使用預檢預覽](aem-mobile-manage-ondemand-services.md)
    + [行動應用程式](administer-mobile-apps.md)
    + [模型概觀](model-management.md)
    + [空格和圖元](spaces-and-entities.md)
    + [管理系列](mobile-on-demand-managing-collections.md)
-+ 編寫Adobe PhoneGap Enterprise {#author-phonegap}
++ 編寫Adobe PhoneGap企業版{#author-phonegap}
    + [PhoneGap](phonegap.md)
    + [編輯應用程式中繼資料](phonegap-editmetadata.md)
    + [應用程式定義](phonegap-app-definitions.md)
@@ -66,31 +66,31 @@ ht-degree: 10%
    + [製作行動應用程式](phonegap-authoring-apps.md)
    + [管理應用程式圖格](phonegap-app-details-tile.md)
    + [AEM Mobile內容個人化](phonegap-aem-mobile-content-personalization.md)
-+ 開發Adobe PhoneGap Enterprise {#developphonegap}
++ 發展Adobe PhoneGap企業{#developphonegap}
    + [PhoneGap](developing-in-phonegap.md)
    + [建立行動應用程式](building-app-mobile-phonegap.md)
    + [推播通知](phonegap-push-notifications.md)
-   + [在AEM中開發行動應用程式](developing-mobile-applications.md)
+   + [開發行動應用程式AEM](developing-mobile-applications.md)
    + [具備內容同步功能的行動裝置](phonegap-contentsync.md)
    + [應用程式的剖析](phonegap-apps-arch.md)
    + [使用PhoneGap CLI開發應用程式](phonegap-apps-pg-cli.md)
    + [立即可用的應用程式處理常式](contentsync-app-handlers.md)
    + [使用Apps Console建立和編輯應用程式](phonegap-apps-console.md)
-   + [您的混合應用程式是否已準備好適用於AEM Mobile?](phonegap-adding-content-to-imported-app.md)
+   + [您的混合應用程式準備好迎接AEM Mobile了嗎？](phonegap-adding-content-to-imported-app.md)
    + [存取裝置功能](phonegap-access-device-features.md)
-   + [將Adobe Analytics新增至您的行動應用程式](phonegap-add-analytics-to-apps.md)
+   + [將Adobe Analytics加入您的行動應用程式](phonegap-add-analytics-to-apps.md)
    + [行動應用程式的頁面範本](phonegap-apps-arch-page-templates.md)
-   + [設定Adobe Target Cloud服務](aem-mobile-configuring-cloud-service.md)
+   + [配置Adobe TargetCloud Service](aem-mobile-configuring-cloud-service.md)
    + [單頁應用程式](phonegap-single-page-applications.md)
    + [儲存庫中的模型](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/administering/administer-mobile-apps.html)
-   + [啟動AEM PhoneGap](starting-aem-phonegap-app.md)
+   + [啟動AEMPhoneGap](starting-aem-phonegap-app.md)
    + [測試行動應用程式](develop-mobile-apps-testing.md)
    + [建構應用程式](phonegap-structure-an-app.md)
-   + [使用Adobe Mobile Analytics追蹤應用程式效能](phonegap-intro-to-app-analytics.md)
-+ 管理Adobe PhoneGap Enterprise {#administering-phonegap}
+   + [使用Adobe行動分析追蹤應用程式效能](phonegap-intro-to-app-analytics.md)
++ 管理Adobe PhoneGap企業{#administering-phonegap}
    + [行動快速入門](phonegap-mobile-quickstart.md)
-   + [使用AEM管理Adobe PhoneGap Enterprise的內容](administer-phonegap.md)
-   + [設定您的Adobe PhoneGap Build Cloud服務](configure-phonegap-build-cloud.md)
+   + [管理適用於Adobe PhoneGap企業的內AEM容](administer-phonegap.md)
+   + [配置您的Adobe PhoneGap BuildCloud Service](configure-phonegap-build-cloud.md)
    + [將您的反向連結篩選設定為允許空白](setting-referrer-filter-empty.md)
-   + [設定您的Adobe Mobile Services Cloud服務](configure-adobe-mobile-cloud-service.md)
+   + [設定您的AdobeMobile ServicesCloud Service](configure-adobe-mobile-cloud-service.md)
    + [設定您的使用者和使用者群組](configure-users-groups.md)
