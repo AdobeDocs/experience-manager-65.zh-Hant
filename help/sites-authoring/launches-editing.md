@@ -12,10 +12,10 @@ discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 6f1f4fbaf9ee4b5ab073a27a58cb040c76230ebd
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 19%
+source-wordcount: '551'
+ht-degree: 18%
 
 ---
 
@@ -28,6 +28,13 @@ ht-degree: 19%
 
 1. 存取[從參考啟動（網站主控台）](/help/sites-authoring/launches.md#launches-in-references-sites-console)以顯示可用動作。
 1. 選擇&#x200B;**移至頁面**&#x200B;以開啟頁面進行編輯。
+
+>[!NOTE]
+>
+>您不允許在啟動中移動頁面。 嘗試此動作將觸發警告訊息：
+>
+>* 警告：此頁面是啟動的來源。 不允許移動頁面。
+
 
 ### 編輯受即時副本約束的啟動頁面{#editing-launch-pages-subject-to-a-live-copy}
 
