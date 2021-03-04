@@ -11,9 +11,9 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d62249ee2e2d40f2a437c1cb7f2a80f3f8e67efe
+source-git-commit: 06cb3a7cdd9b6de00aff67c66327abadce3e0920
 workflow-type: tm+mt
-source-wordcount: '3207'
+source-wordcount: '3205'
 ht-degree: 0%
 
 ---
@@ -512,13 +512,12 @@ Adobe Experience Manager的所有元素（實例、Dispatcher）都可以安裝�
 
 ### AEM Forms設計人員{#requirements-for-aem-forms-designer}的需求
 
-* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft Windows 10
+* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
 * 支援PAE、NX和SSE2的1 GHz或速度更快的處理器。
 * 64位元作業系統需1 GB的記憶體（32位元或2 GB的記憶體）
 * 64位元作業系統需要16 GB的磁碟空間（32位元或20 GB的磁碟空間）
 * 圖形記憶體- 128 MB的GPU（建議使用256 MB）
 * 2.35 GB的可用硬碟空間
-* DVD-ROM光碟機
 * 1024 X 768像素或更高的螢幕解析度
 * 視訊硬體加速（選用）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
