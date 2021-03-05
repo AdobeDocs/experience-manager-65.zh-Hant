@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a2fa9a56de8882731e8193696f572a74c98c6b89
+source-git-commit: 41e30a668c8c02f2c43e509ed708c4b9fa39a269
 workflow-type: tm+mt
 source-wordcount: '1691'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ## 何時使用SSR {#when-to-use-ssr}
 
-並非所有項目都需要SSR。 Althgouh完AEM全支援JS SSR,Adobe不建議對每個項SPA目系統地實施它。
+並非所有項目都需要SSR。 雖然AEM完全支援聯署材料的SSRSPA，但Adobe不建議對每個項目系統地實施。
 
 在決定實施SSR時，首先必須估計項目的額外複雜性、努力和成本增加的實際表現，包括長期維護。 只有當增加值明顯超過估計成本時，才應選擇SSR結構。
 
