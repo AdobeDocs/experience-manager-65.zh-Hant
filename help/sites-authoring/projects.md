@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1399'
 ht-degree: 10%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 10%
 
 # 專案{#projects}
 
-專案可讓您將資源群組至一個實體。 共用的共用環境讓您輕鬆管理專案。 您可與專案關聯的資源類型在AEM中稱為「拼貼」。 拼貼可以包括項目和團隊資訊、資產、工作流和其他類型的資訊，如[項目拼貼中詳細說明。](#project-tiles)
+專案可讓您將資源群組至一個實體。 共用的共用環境讓您輕鬆管理專案。 可與項目關聯的資源類型稱為「AEM拼貼」。 拼貼可以包括項目和團隊資訊、資產、工作流和其他類型的資訊，如[項目拼貼中詳細說明。](#project-tiles)
 
 >[!CAUTION]
 >
@@ -43,7 +43,7 @@ ht-degree: 10%
 
 ## 項目控制台{#projects-console}
 
-專案主控台是您在AEM中存取和管理專案的地方。
+專案主控台是您在其中存取和管理專案的AEM地方。
 
 ![screen-shot_2019-03-05at125110](assets/screen-shot_2019-03-05at125110.png)
 
@@ -76,7 +76,7 @@ ht-degree: 10%
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
-您直接在方塊中上傳資產。 此外，如果您有動態媒體附加元件，也可以建立影像集、回轉集或混合媒體集。
+您直接在方塊中上傳資產。 此外，如果您有Dynamic Media附加元件，還可以建立影像集、回轉集或混合媒體集。
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -180,11 +180,11 @@ Tasks可讓您監控任何專案相關工作的狀態，包括工作流程。 �
 
 ## 項目模板{#project-templates}
 
-AEM隨附3種不同的範本：
+出廠AEM時提供3種不同的模板：
 
 * 簡單專案——任何不符合其他類別的專案的參考範例（全部皆可）。 它包含三個基本角色（擁有者、編輯和觀察員）和四個工作流程（專案核准、請求啟動、請求著陸頁面和請求電子郵件）。
 * 媒體專案——媒體相關活動的參考範例專案。 它包含數個媒體相關專案角色（攝影師、編輯、文案撰稿人、設計人員、擁有者和觀察者）。 此外，它還包含兩個與媒體內容相關的工作流程- 「請求文案」（用於請求和檢閱文字）和「產品像片拍攝」（用於管理與產品相關的像片）
-* [產品像片拍攝專案](/help/sites-authoring/managing-product-information.md) -管理電子商務相關產品攝影的參考範例。其中包括攝影師、編輯、像片製作人員、擁有者、創意總監、社交媒體行銷人員、行銷經理、審閱者和觀察者等角色。
+* [產品像片拍攝專案](/help/sites-authoring/managing-product-information.md) -管理電子商務相關產品攝影的參考範例。其中包括攝影師、編輯、像片製作人員、擁有者、創意總監、社交媒體行銷人員、行銷經理、審閱者和觀察者的角色。
 * [翻譯項目](/help/sites-administering/translation.md) -用於管理翻譯相關活動的參考示例。它包含三個基本角色（擁有者、編輯和觀察者）。 它包含兩個可在「工作流」使用者介面中存取的工作流程。
 
 根據您選取的範本，您有不同的選項可供使用，尤其是使用者角色和工作流程。
@@ -234,7 +234,7 @@ AEM隨附3種不同的範本：
    <td>
     <ul>
      <li>DAM使用者群組（以建立專案）</li>
-     <li>專案管理員群組（以便能夠移動資產）</li>
+     <li>專案管理員群組（以建立專案並移動資產）</li>
     </ul> </td>
   </tr>
  </tbody>
