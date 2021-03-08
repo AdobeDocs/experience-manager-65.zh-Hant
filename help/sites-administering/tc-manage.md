@@ -1,8 +1,8 @@
 ---
 title: 管理翻譯項目
 seo-title: 管理翻譯項目
-description: 瞭解如何在AEM中管理翻譯專案。
-seo-description: 瞭解如何在AEM中管理翻譯專案。
+description: 瞭解如何在中管理翻譯項AEM目。
+seo-description: 瞭解如何在中管理翻譯項AEM目。
 uuid: f6f79b5b-dc08-4dde-b464-719345d233a6
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
 workflow-type: tm+mt
-source-wordcount: '3427'
+source-wordcount: '3453'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在準備翻譯內容後，您需要通過建立缺少的語言副本來完成語言結構，並建立翻譯項目。
 
-翻譯專案可讓您管理AEM內容的翻譯。 翻譯專案是AEM [project](/help/sites-authoring/projects.md)的類型，包含要翻譯成其他語言的資源。 這些資源是從語言主版建立的[語言副本](/help/sites-administering/tc-prep.md)的頁面和資產。
+翻譯專案可讓您管理內容的AEM翻譯。 翻譯項目是&lt;AEMa0/>project](/help/sites-authoring/projects.md)的類型，它包含要翻譯成其他語言的資源。 [這些資源是從語言主版建立的[語言副本](/help/sites-administering/tc-prep.md)的頁面和資產。
 
 將資源添加到翻譯項目時，將為其建立翻譯作業。 作業提供命令和狀態資訊，用於管理在資源上執行的人工翻譯和機器翻譯工作流。
 
@@ -44,18 +44,18 @@ ht-degree: 0%
 
 ## 執行初始翻譯並更新現有翻譯{#performing-initial-translations-and-updating-existing-translations}
 
-AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或更新已翻譯的語言副本。 當您為頁面建立翻譯專案並指出您要翻譯的語言副本時，AEM會偵測來源頁面是否已存在於目標語言副本中：
+AEM檢測是否正在為初始翻譯內容建立翻譯項目，或更新已翻譯的語言副本。 為頁面建立翻譯項目並指明要翻譯的語言副本時，AEM將檢測源頁面是否已存在於目標語言副本中：
 
-* **語言副本不包含頁面：** AEM將此情況視為初始翻譯。頁面會立即複製到語言副本，並包含在專案中。 當翻譯的頁面匯入AEM時，AEM會直接將它複製至語言副本。
-* **語言副本已包含頁面：** AEM將此情況視為更新的翻譯。會建立啟動，並將頁面副本新增至啟動，並包含在專案中。 啟動可讓您在將更新的翻譯提交至語言副本之前，先檢閱其翻譯：
+* **語言副本不包含頁面：** AEM將此情況視為初始翻譯。頁面會立即複製到語言副本，並包含在專案中。 將翻譯的頁面匯入時AEM,AEM直接複製到語言副本。
+* **語言副本已包含頁面：將** AEM此情況視為更新的翻譯。會建立啟動，並將頁面副本新增至啟動，並包含在專案中。 啟動可讓您在將更新的翻譯提交至語言副本之前，先檢閱其翻譯：
 
    * 將翻譯的頁面匯入AEM時，會覆寫啟動中的頁面。
    * 只有在升級啟動時，翻譯的頁面才會覆寫語言副本。
 
 例如， /content/geometrixx/fr語言根目錄是為/content/geometrixx/tw master語言的法文翻譯而建立的。 法文版中沒有其他頁面。
 
-* 會針對/content/geometrixx/tw/products頁面和所有子頁面建立翻譯專案，以法文語言文案為目標。 由於語言副本不包含/content/geometrixx/fr/products頁面，AEM會立即將/content/geometrixx/tw/products頁面和所有子頁面複製為法文語言副本。 翻譯項目中也包含這些副本。
-* 會針對/content/geometrixx/tw頁面和所有子頁面建立翻譯專案，以法文語言文案為目標。 由於語言副本包含與/content/geometrixx/tw頁面（語言根目錄）對應的頁面，AEM會複製/content/geometrixx/tw頁面和所有子頁面，並將它們新增至啟動中。 翻譯項目中也包含這些副本。
+* 會針對/content/geometrixx/tw/products頁面和所有子頁面建立翻譯專案，以法文語言文案為目標。 由於語言副本不包含/content/geometrixx/fr/products頁面，AEM因此會立即將/content/geometrixx/tw/products頁面和所有子頁面複製至法文語言副本。 翻譯項目中也包含這些副本。
+* 會針對/content/geometrixx/tw頁面和所有子頁面建立翻譯專案，以法文語言文案為目標。 由於語言副本包含與/content/geometrixx/en頁面（語言根目錄）對應的頁面，AEM因此會複製/content/geometrixx/en頁面和所有子頁面，並將它們新增至啟動中。 翻譯項目中也包含這些副本。
 
 ## 使用「參考」面板{#creating-translation-projects-using-the-references-panel}建立翻譯項目
 
@@ -65,9 +65,13 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 * 系統會為選取的每個語言副本建立專案。
 * 系統會建立選定頁面及相關資產的副本，並新增至每個專案。 這些副本稍後將發送給翻譯提供者進行翻譯。
 
-您可以指定也選取所選頁面的子頁面。 在這種情況下，子頁面的副本也會新增至每個專案，以便翻譯。 當任何子頁面都與不同的翻譯整合架構設定相關聯時，AEM會建立其他專案。
+您可以指定也選取所選頁面的子頁面。 在這種情況下，子頁面的副本也會新增至每個專案，以便翻譯。 當任何子頁面與不同的翻譯整合框架配置相關聯時，AEM將建立其他項目。
 
 您也可以[手動建立翻譯項目](#creating-a-translation-project-using-the-projects-console)。
+
+>[!NOTE]
+>
+>若要建立專案，您的帳戶必須是`project-administrators`群組的成員。
 
 **初譯與更新譯**
 
@@ -75,7 +79,7 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 ![chlimage_1-239](assets/chlimage_1-239.png)
 
-轉譯後，您可以在使用翻譯覆蓋語言副本之前，先查看翻譯[。 ](#reviewing-and-promoting-updated-content)當選定頁面不存在語言副本時，將顯示「建立和翻譯」頁籤，以提供對項目相關命令的訪問。
+轉譯後，您可以在使用翻譯覆蓋語言副本之前，先查看翻譯](#reviewing-and-promoting-updated-content)。 [當選定頁面不存在語言副本時，將顯示「建立和翻譯」頁籤，以提供對項目相關命令的訪問。
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
@@ -83,7 +87,7 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 1. 使用Sites控制台選擇要添加到翻譯項目的頁。
 
-   例如，若要翻譯Geometrixx Demo Site的英文頁面，請選取「Geometrixx Demo Site >英文」。
+   例如，若要翻譯Geometrixx示範網站的英文頁面，請選取「Geometrixx示範網站>英文」。
 
 1. 在工具欄上，按一下或點選「參照」(References)。
 
@@ -105,7 +109,7 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 1. 使用Sites控制台選擇要添加到翻譯項目的頁。
 
-   例如，若要翻譯Geometrixx Demo Site的英文頁面，請選取「Geometrixx Demo Site >英文」。
+   例如，若要翻譯Geometrixx示範網站的英文頁面，請選取「Geometrixx示範網站>英文」。
 
 1. 在工具欄上，按一下或點選「參照」(References)。
 
@@ -132,7 +136,7 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 1. 使用Sites控制台選擇要添加到翻譯項目的頁。
 
-   例如，若要翻譯Geometrixx Demo Site的英文頁面，請選取「Geometrixx Demo Site >英文」。
+   例如，若要翻譯Geometrixx示範網站的英文頁面，請選取「Geometrixx示範網站>英文」。
 
 1. 在工具欄上，按一下或點選「參照」(References)。
 
@@ -170,7 +174,7 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 1. 選擇要添加的分支的最上方項目，然後按一下或點選複選標籤表徵圖。 您可以多選。
 
-   ![chlimage_1-248](assets/chlimage_1-248.png)
+   ![chlimage_1-247](assets/chlimage_1-248.png)
 
 1. 或者，您也可以選取搜尋圖示，輕鬆尋找要新增至翻譯工作的頁面或資產。
 
@@ -254,10 +258,10 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 | 承諾翻譯 | 項目所有者已接受此範圍。 此狀態表示翻譯供應商應開始翻譯作業中的檔案。 |
 | 正在進行翻譯 | 對於作業，作業中一個或多個檔案的翻譯尚未完成。 對於任務中的項目，正在翻譯該項目。 |
 | 已翻譯 | 對於作業，作業中所有檔案的翻譯完成。 對於任務中的項目，將翻譯該項目。 |
-| 可供審核 | 工作中的項目會轉譯，而且檔案已匯入AEM。 |
+| 可供審核 | 作業中的項目會翻譯，而且檔案已匯入AEM。 |
 | 完成 | 項目所有者已表示翻譯合同已完成。 |
 | 取消 | 指示翻譯供應商應停止處理翻譯作業。 |
-| 錯誤更新 | 在AEM和轉譯服務之間傳輸檔案時發生錯誤。 |
+| 錯誤更新 | 在與翻譯服務之間傳輸文AEM件時出錯。 |
 | 未知狀態 | 發生未知錯誤。 |
 
 要查看作業中每個檔案的狀態，請按一下或點選表徵圖底部的省略號。
@@ -395,9 +399,9 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 ## 建立語言副本的結構{#creating-the-structure-of-a-language-copy}
 
-填入您的語言副本，以便包含您要翻譯的主版語言的內容。 在填入語言副本之前，您必須先建立語言副本的語言根目錄[。](/help/sites-administering/tc-prep.md#creating-a-language-root)
+填入您的語言副本，以便包含您要翻譯的主版語言的內容。 在填入語言副本之前，您必須先建立語言副本的語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root)。[
 
-1. 使用Sites控制台來選擇您用作源的主語言的語言根目錄。 例如，若要翻譯Geometrixx展示網站的英文頁面，請選取「內容> Geometrixx展示網站>英文」。
+1. 使用Sites控制台來選擇您用作源的主語言的語言根目錄。 例如，若要翻譯Geometrixx示範網站的英文頁面，請選取「內容>Geometrixx示範網站>英文」。
 1. 在工具欄上，按一下或點選「參照」(References)。
 
    ![chlimage_1-273](assets/chlimage_1-273.png)
@@ -419,6 +423,10 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 如果希望使用「項目」控制台，可以手動建立翻譯項目。
 
+>[!NOTE]
+>
+>若要建立專案，您的帳戶必須是`project-administrators`群組的成員。
+
 手動建立翻譯項目時，除了[基本屬性](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)外，還必須提供以下與翻譯相關的屬性的值：
 
 * **名稱：** 專案名稱。
@@ -434,7 +442,7 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 ## 導出翻譯作業{#exporting-a-translation-job}
 
-您可以下載翻譯工作的內容，例如透過連接器傳送給未與AEM整合的翻譯提供者，或檢閱內容。
+您可以下載翻譯作業的內容，例如發送到未通過連接器與之整合的翻譯提供AEM商，或者查看內容。
 
 1. 從「翻譯作業」表徵圖的下拉菜單中，按一下或點選「導出」。
 1. 在「匯出」對話方塊中，按一下或點選「下載匯出的檔案」，並視需要使用網頁瀏覽器對話方塊來儲存檔案。
@@ -442,7 +450,7 @@ AEM會偵測是否正在建立翻譯專案以進行內容的初始翻譯，或�
 
 ## 導入翻譯作業{#importing-a-translation-job}
 
-您可以將翻譯內容匯入AEM，例如，當您的翻譯提供者將翻譯內容傳送給您時，因為這些內容未透過連接器與AEM整合。
+您可以將翻譯內容匯AEM入，例如，當翻譯提供者將翻譯內容傳送給您時，因為翻譯內容未透過連AEM接器與您整合。
 
 1. 從「翻譯作業」表徵圖的下拉菜單中，按一下或點選「導入」。
 1. 使用網頁瀏覽器的對話框選擇要導入的檔案。
