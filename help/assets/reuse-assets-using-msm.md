@@ -4,10 +4,10 @@ description: 跨衍生自父資產並連結至父資產的多個頁面／資料�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7eb569c86c45daa8b175f924b211693a5d5dde58
+source-git-commit: 5c9907bf475796c5bbb61d6fcaf43730f9e79777
 workflow-type: tm+mt
-source-wordcount: '3373'
-ht-degree: 10%
+source-wordcount: '3366'
+ht-degree: 9%
 
 ---
 
@@ -70,7 +70,7 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 1. 選擇源資產或資料夾。 在工具列中，按一下「建立&#x200B;**** > **[!UICONTROL 即時副本]**」。
 
-   ![從Experience Manager介面建立即時副本](assets/create_lc1.png)
+   ![從介面建立即時副 [!DNL Experience Manager] 本](assets/create_lc1.png)
 
    *圖：從介面建立即時 [!DNL Experience Manager] 副本。*
 
@@ -82,7 +82,7 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 1. 在[!DNL Experience Manager]介面中，從右上角按一下「建立&#x200B;**[!UICONTROL >**[!UICONTROL &#x200B;即時副本&#x200B;]**」。]**
 
-   ![從Experience Manager介面建立即時副本](assets/create_lc2.png)
+   ![從介面建立即時副 [!DNL Experience Manager] 本](assets/create_lc2.png)
 
    *圖：從介面建立即時 [!DNL Experience Manager] 副本。*
 
@@ -106,7 +106,7 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 
 >[!TIP]
 >
->要檢查幾個單獨的即時拷貝的狀態，請使用第一種方法檢查[!UICONTROL Properties]頁。 要檢查多個即時拷貝的狀態，請使用第二種方法檢查&#x200B;**[!UICONTROL 關係狀態]**&#x200B;頁。
+>要檢查幾個單獨的即時拷貝的狀態，請使用第一種方法檢查&#x200B;**[!UICONTROL Properties]**&#x200B;頁。 要檢查多個即時拷貝的狀態，請使用第二種方法檢查&#x200B;**[!UICONTROL 關係狀態]**&#x200B;頁。
 
 ### 即時副本{#statuslcasset}的資訊和狀態
 
@@ -189,8 +189,9 @@ MSM在來源資產與其即時副本之間維持即時關係，以便：
 您可以從來源資產啟動轉出動作，並更新全部或部分選擇的即時副本。
 
 1. 選取即時副本資產或資料夾。 按一下工具欄中的&#x200B;**[!UICONTROL 屬性]**。 或者，使用鍵盤快速鍵`p`。
-1. 按一下「 **[!UICONTROL 即時複製來源」]**。按一 **[!UICONTROL 下頂端]** 工具列上的轉出。
-1. 選擇要更新的即時副本。 按一下&#x200B;**[!UICONTROL Rovolt]**。 若要推出子資產的更新，請選取&#x200B;**[!UICONTROL Rovolt Source和所有子資產]**。
+1. 按一下「 **[!UICONTROL 即時複製來源」]**。從工具列按一下&#x200B;**[!UICONTROL Rolovate]**。
+1. 選擇要更新的即時副本。 按一下&#x200B;**[!UICONTROL Rovolt]**。
+1. 若要推出子資產的更新，請選取&#x200B;**[!UICONTROL Rovolt Source和所有子資產]**。
 
    ![將原始碼的修改部分或全部即時副本](assets/livecopy_rollout_page.png)
 
