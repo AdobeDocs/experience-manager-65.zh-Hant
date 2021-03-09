@@ -3,9 +3,9 @@ title: 在 [!DNL Adobe Experience Manager]中管理數位資產的中繼資料�
 description: '瞭解中繼資料的類型，以及如何根據資產的中繼資料自動組織和處理資產。 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4ca77c7de6113127b123645a1955aaa70a91c1f3
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2388'
 ht-degree: 10%
 
 ---
@@ -78,11 +78,11 @@ ht-degree: 10%
 1. 選取您要編輯其常用屬性的資產。
 1. 在工具列中，按一下「屬性&#x200B;****」以開啟所選資產的屬性頁面。
 1. 修改各種標籤下所選資產的中繼資料屬性。
-1. 若要檢視特定資產的中繼資料編輯器，請取消選取清單中的其餘資產。 中繼資料編輯器欄位會填入特定資產的中繼資料。
+1. 若要檢視特定資產的中繼資料編輯器，請取消在清單中選取剩餘資產。 中繼資料編輯器欄位會填入特定資產的中繼資料。
 
    >[!NOTE]
    >
-   >* 在屬性頁面中，您可以取消選取資產，從資產清單中移除資產。 資產清單預設會選取所有資產。 您從清單中移除的資產的中繼資料不會更新。
+   >* 在屬性頁面中，您可以取消選取範圍，從資產清單中移除資產。 資產清單預設會選取所有資產。 您從清單中移除的資產的中繼資料不會更新。
    >* 在資產清單頂端，選取&#x200B;**[!UICONTROL Title]**&#x200B;附近的核取方塊，在選取資產和清除清單之間切換。
 
 
@@ -114,7 +114,7 @@ ht-degree: 10%
    | [!UICONTROL 批次大小] | 要匯入中繼資料的批次中資產數。 預設值為 50。最大值為100。 |
    | [!UICONTROL 欄位分隔符號] | 預設值為`,`（逗號）。 您可以指定任何其他字元。 |
    | [!UICONTROL 多值分隔符號] | 中繼資料值的分隔符號。 預設值為 `|`. |
-   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，[!UICONTROL DAM中繼資料回寫]工作流程（將中繼資料寫入二進位資料）的預設啟動程式設XMP定生效。 啟用啟動工作流程會拖慢系統運作速度。 |
+   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，[!UICONTROL DAM中繼資料回寫]工作流程（將中繼資料寫入二進位資料）的預設啟動程式設定XMP有效。 啟用啟動工作流程會拖慢系統運作速度。 |
    | [!UICONTROL 資產路徑欄名稱] | 定義含資產之CSV檔案的欄名。 |
 
 1. 從工具列按一下「匯入」。 ****&#x200B;匯入中繼資料後，通知會顯示在[!UICONTROL Notification]收件匣中。
