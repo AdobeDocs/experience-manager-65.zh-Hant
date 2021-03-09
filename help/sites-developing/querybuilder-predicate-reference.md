@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
-source-git-commit: 7a96ff5cdd187291efe108d1171782bcbecfaeb0
+source-git-commit: 054b49fb8aacb9e267ed23552d788f72123ed3b3
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 2%
@@ -100,7 +100,7 @@ fragmentIt可與任何值搭配使用，以檢查內容片段。
 
 * **操作**
 
-   「`equals`」代表完全相符，「`!=`」代表不等比，「`greater`」代表屬性1大於屬性2,「`>=`」代表屬性1大於或等於屬性2。 預設值為 &quot;`equals`&quot;.
+   「 `equals`」代表完全相符，「 `!=`」代表不等比，「 `greater`」代表屬性1大於屬性2,「 `>=`」代表屬性1大於或等於屬性2。 預設值為 &quot; `equals`&quot;.
 
 ### daterange {#daterange}
 
@@ -370,7 +370,7 @@ group.2_group.type=dam:Asset
 
 * **操作**
 
-   「`equals`」代表完全相符（預設值）,「`unequals`」代表不等比較，「`like`」代表使用`jcr:like` xpath函式（選用）,「`not`」代表不相符(例如 xpath中的&quot;`not(@prop)`&quot;，值param將被忽略)或&quot;`exists`&quot;用於存在檢查（值可以是true —— 屬性必須存在，預設——或false —— 與&quot;`not`&quot;相同）
+   &quot;`equals`&quot;代表完全相符（預設）,&quot; `unequals`&quot;代表不等比較，&quot; `like`&quot;代表使用`jcr:like` xpath函式（選用）,&quot; `not`&quot;代表不相符(例如 xpath中的&quot;`not(@prop)`&quot;，值param將被忽略)或&quot; `exists`&quot;用於存在檢查（值可以是true —— 屬性必須存在，預設——或false —— 與&quot; `not`&quot;相同）
 
 * **深度**
 
