@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 141a1783f275c0b3587ebc374bde19a21e107409
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 描述檔是套用至上傳至資料夾之資產的選項的方式。 例如，您可以指定要套用至您上傳之視訊資產的中繼資料描述檔和視訊編碼描述檔。 或者，要套用至影像資產的影像設定檔，以便正確裁切。
 
-這些規則可包括新增中繼資料、智慧裁切影像或建立視訊編碼設定檔。 在AEM中，您可以建立三種描述檔類型，這些描述檔在下列連結中有詳細說明：
+這些規則可包括新增中繼資料、智慧裁切影像或建立視訊編碼設定檔。 在中AEM，您可以建立三種配置檔案類型，這些配置檔案在以下連結中有詳細說明：
 
 * [中繼資料設定檔](/help/assets/metadata-config.md#metadata-profiles)
 * [影像描述檔](/help/assets/image-profiles.md)
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 建立中繼資料、影像或視訊描述檔後，您會將其指派給一或多個檔案夾，以用作新上傳資產的目的地。
 
-在AEM Assets中使用描述檔的重要概念是，這些描述檔會指派給檔案夾。 描述檔中包含中繼資料描述檔的設定，以及視訊描述檔或影像描述檔。 這些設定將處理資料夾的內容及其任何子資料夾。 因此，如何命名檔案和檔案夾、如何排列子檔案夾，以及如何處理這些檔案夾中的檔案，都會對描述檔處理這些資產的方式產生重大影響。
+關於在AEM Assets使用配置檔案的一個重要概念是，它們被分配給資料夾。 描述檔中包含中繼資料描述檔的設定，以及視訊描述檔或影像描述檔。 這些設定將處理資料夾的內容及其任何子資料夾。 因此，如何命名檔案和檔案夾、如何排列子檔案夾，以及如何處理這些檔案夾中的檔案，都會對描述檔處理這些資產的方式產生重大影響。
 透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料實務，您可以充份運用您的數位資產收集，並確保正確的檔案由正確的描述檔處理。
 
 >[!NOTE]
@@ -44,28 +44,28 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->僅適用於AEM 6.4.6.0或更新版本的&#x200B;*動態媒體- Scene7模式*。
+>僅適用於&#x200B;*Dynamic Media-Scene7模式*&#x200B;的6.AEM4.6.0或更高版本。
 
-您可以在已有現有處理設定檔的資料夾中重新處理資產，而您稍後會加以變更。
+您可以在已有現有處理設定檔的資料夾中重新處理資產，您稍後會加以變更。
 
 例如，假設您建立了影像描述檔，並將其指派給資料夾。 上傳至資料夾的任何影像資產都會自動將影像描述檔套用至資產。 不過，稍後您決定將新的智慧型裁切比例新增至描述檔。 現在，您只需執行&#x200B;*Scene7:重新處理資產*&#x200B;工作流程。
 
 您可以對第一次處理失敗的資產執行重新處理工作流程。 因此，即使您尚未編輯處理設定檔或套用處理設定檔，您仍可隨時對資產資料夾執行重新處理工作流程。
 
-您可以選擇調整重新處理工作流的批大小，從預設的50個資產調整到1000個資產。 當您執行&#x200B;_Scene7時：在資料夾上重新處理資產_&#x200B;工作流程，資產會分批分組，然後傳送至Dynamic Media伺服器進行處理。 在處理後，整個批次集中每個資產的中繼資料會在AEM上更新。 如果批次大小很大，您可能會遇到處理延遲。 或者，如果批次大小太小，則可能導致往返Dynamic Media伺服器的次數過多。
+您可以選擇調整重新處理工作流的批大小，從預設的50個資產調整到1000個資產。 運行&#x200B;_Scene7時：在資料夾上重新處理資產_&#x200B;工作流程，資產會分批分組，然後傳送至Dynamic Media伺服器進行處理。 處理後，整個批集中每個資產的中繼資料會在上更新AEM。 如果批次大小很大，您可能會遇到處理延遲。 或者，如果批量太小，則可能導致往返Dynamic Media伺服器的次數過多。
 
 請參閱[調整重新處理工作流的批大小](#adjusting-load)。
 
 >[!NOTE]
 >
->如果您要從Dynamic Media Classic將資產大量移轉至AEM，則必須在Dynamic Media伺服器上啟用Migration複製代理。 移轉完成後，請務必停用代理。
+>如果要將資產從Dynamic MediaClassic批量遷移到，AEM則必須在Dynamic Media伺服器上啟用遷移複製代理。 移轉完成後，請務必停用代理。
 >
->移轉發佈代理必須在Dynamic Media伺服器上停用，讓重新處理工作流程如預期般運作。
+>必須在Dynamic Media伺服器上禁用遷移發佈代理，以便重新處理工作流如預期般工作。
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
 **若要重新處理資料夾中的資產**:
-1. 在AEM中，從「資產」頁面導覽至資產資料夾，該資產資料夾已指派處理設定檔，且您要套用&#x200B;**Scene7:重新處理資產**&#x200B;工作流程，
+1. 在AEM「資產」頁面中，瀏覽至資產資料夾，該資產資料夾已指派處理設定檔，且您要套用&#x200B;**Scene7:重新處理資產**&#x200B;工作流程，
 
    已指派處理描述檔的檔案夾，會在「卡片檢視」的檔案夾名稱正下方顯示描述檔名稱。
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
    ![重新處理資產工作流程1](/help/assets/assets/reprocess-assets1.png)
 
-1. 按一下「啟動工作流」。****
+1. 按一下「啟動工作流」。]****[!UICONTROL 
 1. 從&#x200B;**[!UICONTROL 開始工作流程]**&#x200B;下拉式清單中，選擇&#x200B;**[!UICONTROL Scene7:重新處理資產。]**
 1. （可選）在&#x200B;**輸入工作流的標題**&#x200B;文本欄位中，輸入工作流的名稱。 如有必要，可以使用名稱來引用工作流實例。
 
@@ -88,36 +88,36 @@ ht-degree: 0%
 
 1. 按一下&#x200B;**[!UICONTROL 開始]**，然後按一下&#x200B;**[!UICONTROL 確認。]**
 
-   若要監視工作流程或檢查其進度，請從AEM主控台頁面，按一下「工具>工作流程」。**** 在「工作流實例」頁上，選擇工作流。在菜單欄上，按一下&#x200B;**[!UICONTROL 開啟歷史記錄。]** 您也可以終止、暫停或重新命名同一「工作流實例」頁中選定的工作流。
+   要監視工作流或檢查其進度，請從主控AEM制台頁面中按一下&#x200B;**[!UICONTROL 工具>工作流。]** 在「工作流實例」頁上，選擇工作流。在菜單欄上，按一下&#x200B;**[!UICONTROL 開啟歷史記錄。]** 您也可以終止、暫停或重新命名同一「工作流實例」頁中選定的工作流。
 
 ### 調整重新處理工作流的批大小{#adjusting-load}
 
-（可選）重新處理工作流程中的預設批次大小是每個工作50個資產。 此最佳批次大小由執行重新處理之資產的平均資產大小和MIME類型所控制。 值越高，表示您在單一重新處理工作中會擁有許多檔案。 因此，處理橫幅會在AEM資產上停留較長時間。 但是，如果平均檔案大小為1 MB或以下- Adobe建議您將值增加到幾百，但不要超過1000。 如果平均檔案大小是數百兆位元組，Adobe建議您將批次大小降低至10。
+（可選）重新處理工作流程中的預設批次大小是每個工作50個資產。 此最佳批次大小由執行重新處理之資產的平均資產大小和MIME類型所控制。 值越高，表示您在單一重新處理工作中會擁有許多檔案。 因此，處理橫幅在資AEM產上停留較長時間。 但是，如果平均檔案大小為1 MB或以下，則建議您將值增加到幾百，但不要超過1000。 如果檔案的平均大小為數百MB,Adobe建議您將批處理大小降低至10。
 
 **（可選）調整重新處理工作流的批大小**
 
-1. 在Experience Manager中，按一下「**[!UICONTROL Adobe Experience Manager]**」以存取全域導覽主控台，然後按一下「工具&#x200B;**[!UICONTROL a3/>（槌子）圖示>**[!UICONTROL &#x200B;工作流程>模型」。]**]**
-1. 在「工作流程模型」頁面的「卡片檢視」或「清單檢視」中，選取&#x200B;**[!UICONTROL Scene7:重新處理資產]**。
+1. 在Experience Manager中，按一下&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;訪問全局導航控制台，然後按一下&#x200B;**[!UICONTROL 工具]**（槌子）表徵圖> **[!UICONTROL 工作流>模型。]**
+1. 在「工作流模型」頁的「卡片視圖」或「清單視圖」中，選擇&#x200B;**[!UICONTROL Scene7:重新處理資產]**。
 
-   ![「工作流程模型」頁面與Scene7:重新處理卡片檢視中選取的資產工作流程](/help/assets/assets-dm/reprocess-assets7.png)
+   ![「工作流模型」頁，帶有Scene7:重新處理卡片檢視中選取的資產工作流程](/help/assets/assets-dm/reprocess-assets7.png)
 
 1. 在工具列上，按一下「**[!UICONTROL 編輯」。]** 新的瀏覽器標籤會開啟Scene7:「重新處理資產」工作流模型頁。
 1. 在Scene7:重新處理「資產」工作流程頁面，靠近右上角，按一下「編輯」**[!UICONTROL 以「解除鎖定」工作流程。]**
-1. 在工作流程中，選取Scene7批次上傳元件以開啟工具列，然後按一下工具列上的「設定」。****
+1. 在工作流中，選擇「Scene7批上傳」元件以開啟工具欄，然後按一下工具欄上的「配置」。****
 
    ![Scene7批次上傳元件](/help/assets/assets-dm/reprocess-assets8.png)
 
-1. 在&#x200B;**[!UICONTROL 批次上傳至Scene7 —— 步驟屬性]**&#x200B;對話方塊中，設定下列項目：
+1. 在&#x200B;**[!UICONTROL 批次上傳到Scene7-步驟屬性]**&#x200B;對話框中，設定以下內容：
    * 在&#x200B;**[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;文字欄位中，視需要輸入新的職務和說明。
    * 如果您的處理常式會進入下一個步驟，請選取「**[!UICONTROL 處理常式進階]**」。
    * 在&#x200B;**[!UICONTROL Timeout]**&#x200B;欄位中，輸入外部進程超時（秒）。
    * 在&#x200B;**[!UICONTROL Period]**&#x200B;欄位中，輸入輪詢間隔（秒）以測試外部進程的完成。
-   * 在&#x200B;**[!UICONTROL 批次欄位]**&#x200B;中，輸入Dynamic Media伺服器批次處理上傳作業中要處理的資產數目上限(50-1000)。
-   * 如果要在到達超時時提前，請選擇&#x200B;**[!UICONTROL 超時時提前]**。 如果要在到達逾時時時繼續進入收件箱，請取消選擇。
+   * 在&#x200B;**[!UICONTROL 批處理欄位]**&#x200B;中，輸入在Dynamic Media伺服器批處理上載作業中要處理的最大資產數(50-1000)。
+   * 如果要在到達超時時提前，請選擇&#x200B;**[!UICONTROL 超時時提前]**。 如果要在超時時繼續進入收件箱，請取消選擇。
 
    ![屬性對話框](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. 在&#x200B;**[!UICONTROL 批次上傳至Scene7 —— 步驟屬性]**&#x200B;對話方塊的右上角，按一下&#x200B;**[!UICONTROL 完成]**。
+1. 在&#x200B;**[!UICONTROL 批次上載到Scene7-步驟屬性]**&#x200B;對話框的右上角，按一下&#x200B;**[!UICONTROL 完成]**。
 
 1. 在Scene7的右上角：重新處理「資產」工作流模型頁，按一下&#x200B;**[!UICONTROL Sync]**。 當您看到&#x200B;**[!UICONTROL Synced]**&#x200B;時，工作流程執行階段模型已成功同步，並可重新處理資料夾中的資產。
 
