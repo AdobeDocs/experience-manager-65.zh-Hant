@@ -4,7 +4,7 @@ description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
+source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
 workflow-type: tm+mt
 source-wordcount: '9590'
 ht-degree: 3%
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->* 共用至Marketing Cloud時，不支援共用類型`sling:OrderedFolder`的[!DNL Assets]資料夾。 如果要共用資料夾，在建立資料夾時不要選擇[!UICONTROL Ordered]。
+>* 共用至Marketing Cloud時，不支援共用`sling:OrderedFolder`類型的[!DNL Assets]資料夾。 如果要共用資料夾，在建立資料夾時不要選擇[!UICONTROL Ordered]。
 >* [!DNL Experience Manager] 不允許使 `subassets` 用word作為資料夾的名稱。它是為節點保留的關鍵字，其中包含複合資產的子資產。
 
 
@@ -50,7 +50,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->在動態媒體- Scene7模式中，您只能上傳檔案大小為2 GB或以下的資產。
+>在Dynamic Media-Scene7模式中，您只能上傳檔案大小為2 GB或以下的資產。
 
 您可以選擇將資產上傳至資料夾，不論資料夾是否已指派處理設定檔。
 
@@ -112,7 +112,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >
 >當您在[!UICONTROL 名稱衝突]對話方塊中選取&#x200B;**[!UICONTROL 取代]**&#x200B;時，會重新產生新資產的資產ID。 此ID與先前資產的ID不同。
 >
->如果「資產前瞻分析」已啟用，可以使用Adobe Analytics追蹤曝光／點按次數，則重新產生的資產ID會使Analytics上為資產擷取的資料無效。
+>如果啟用「資產前瞻分析」來追蹤Adobe Analytics的曝光／點按次數，則重新產生的資產ID會使Analytics上為資產擷取的資料無效。
 
 如果您上傳的資產存在於[!DNL Assets]中，則&#x200B;**[!UICONTROL 偵測到的重複項目]**&#x200B;對話方塊會警告您嘗試上傳重複的資產。 僅當現有資產的二進位值的`SHA 1`校驗和值與上傳資產的校驗和值匹配時，才會顯示該對話框。 在這種情況下，資產名稱並不重要。
 
@@ -145,7 +145,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 串列上載{#serialuploads}
 
-大量上傳大量資產會耗用大量的I/O資源，這可能會對[!DNL Assets]部署的效能造成負面影響。 尤其是，如果您的網際網路連線緩慢，由於磁碟I/O尖峰，上傳的時間會大幅增加。此外，您的網頁瀏覽器可能會對並行資產上傳的POST要求數量加以限制。 [!DNL Assets]因此，上載操作會失敗或提前終止。 換言之，[!DNL Experience Manager Assets]可能會在接收大量檔案時遺漏某些檔案，或完全無法擷取任何檔案。
+大量上傳大量資產會耗用大量的I/O資源，這可能會對[!DNL Assets]部署的效能造成負面影響。 尤其是，如果您的網際網路連線緩慢，由於磁碟I/O尖峰，上傳的時間會大幅增加。此外，您的網頁瀏覽器可能會對並行資產上傳的POST請求數[!DNL Assets]加以限制。 因此，上載操作會失敗或提前終止。 換言之，[!DNL Experience Manager Assets]可能會在接收大量檔案時遺漏某些檔案，或完全無法擷取任何檔案。
 
 為了克服這種情況，[!DNL Assets]在批量上載操作期間一次提取一個資產（串列上載），而不是同時提取所有資產。
 
@@ -153,23 +153,23 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 使用FTP {#uploading-assets-using-ftp}上傳資產
 
-動態媒體可讓您透過FTP伺服器批次上傳資產。 如果您要上傳大型資產(>1 GB)或上傳整個資料夾和子資料夾，則應使用FTP。 您甚至可以設定FTP上傳，以定期執行。
+Dynamic Media允許透過FTP伺服器批次上傳資產。 如果您要上傳大型資產(>1 GB)或上傳整個資料夾和子資料夾，則應使用FTP。 您甚至可以設定FTP上傳，以定期執行。
 
 >[!NOTE]
 >
->在動態媒體- Scene7模式中，您只能上傳檔案大小為2 GB或以下的資產。
+>在Dynamic Media-Scene7模式中，您只能上傳檔案大小為2 GB或以下的資產。
 
 >[!NOTE]
 >
->若要在動態媒體- Scene7模式中透過FTP上傳資產，請在[!DNL Experience Manager]作者例項上安裝Feature Pack 18912。 請聯絡[Adobe客戶服務](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html)以取得FP-18912的存取權，並完成FTP帳戶的設定。 如需詳細資訊，請參閱[安裝功能套件18912，以取得大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
+>若要在Dynamic Media-Scene7模式下透過FTP上傳資產，請在[!DNL Experience Manager]作者例項上安裝Feature Pack 18912。 聯絡[Adobe客戶服務](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html)以取得FP-18912的存取權並完成FTP帳戶的設定。 如需詳細資訊，請參閱[安裝功能套件18912，以取得大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
 >
->如果您使用FTP來上傳資產，則會忽略[!DNL Experience Manager]中指定的上傳設定。 而是使用Dynamic Media Classic中定義的檔案處理規則。
+>如果您使用FTP來上傳資產，則會忽略[!DNL Experience Manager]中指定的上傳設定。 而是使用在Dynamic Media經典中定義的檔案處理規則。
 
 **若要使用FTP上傳資產**
 
 1. 使用您選擇的FTP用戶端，使用您從布建電子郵件收到的FTP使用者名稱和密碼登入FTP伺服器。 在FTP用戶端中，將檔案或資料夾上傳至FTP伺服器。
 
-1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)，然後登入您的帳戶。
+1. 開啟[Dynamic Media經典案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)，然後登入您的帳戶。
 
    您的認證和登入是在布建時由Adobe提供。 如果您沒有此資訊，請聯絡技術支援。
 
@@ -182,12 +182,12 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    >[!NOTE]
    >
-   >當您透過FTP上傳資產時，您在Dynamic Media Classic(S7)中設定的上傳工作選項會取代[!DNL Experience Manager]中設定的資產處理參數。
+   >當您透過FTP上傳資產時，您在Dynamic Media傳統(S7)中設定的上傳工作選項會取代[!DNL Experience Manager]中設定的資產處理參數。
 
 1. 在「上載作業選項」對話框的右下角，按一下「保存」。****
 1. 在「上傳」頁面的右下角，按一下「提交上傳」。****
 
-   要查看上載進度，請在全局導航欄上按一下&#x200B;**[!UICONTROL Jobs]**。 「作業」頁面顯示上載進度。 您可以繼續在[!DNL Experience Manager]中工作，並隨時返回Dynamic Media Classic中的「作業」頁面，以檢視進行中的作業。
+   要查看上載進度，請在全局導航欄上按一下&#x200B;**[!UICONTROL Jobs]**。 「作業」頁面顯示上載進度。 您可以繼續在[!DNL Experience Manager]中工作，並隨時返回Dynamic MediaClassic的「作業」頁面，以查看進行中的作業。
 要取消正在進行的上載作業，請按一下「持續時間」(Duration)時間旁的「取消」(Cancel)。****
 
 #### 上傳作業選項{#upload-job-options}
@@ -204,12 +204,12 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 |  | 裁切選項 | 若要從影像的兩側手動裁切，請選取「裁切」功能表，然後選擇「手動」。 然後輸入要從影像的任一側或每一側裁切的像素數。 影像被裁切的程度取決於影像檔案中的ppi（像素／英吋）設定。 例如，如果影像顯示150 ppi，而您在「頂端」、「右側」、「底部」和「左側」文字方塊中輸入75，則會從每側裁切半英吋。<br> 若要自動裁切影像中的空白像素，請開啟「裁切」功能表，選擇「手動」，然後在「頂端」、「右側」、「底部」和「左側」欄位中輸入像素測量值，以便從兩側裁切。您也可以在「裁切」功能表中選擇「修剪」，然後選擇下列選項：<br> **根據** <ul><li>**顏色** -選擇顏色選項。然後選取「角」選單，並選擇影像的角，其顏色最能代表您要裁切的空白顏色。</li><li>**透明度** -選擇「透明度」選項。<br> **容差** -拖曳滑桿以指定0到1的容差。若要根據顏色進行修剪，請指定0以裁切像素，前提是像素完全符合您在影像角落選取的顏色。接近1的數字允許更多顏色差異。<br>若要根據透明度進行修剪，請指定0以僅在像素為透明時裁切像素。接近1的數字可以增加透明度。</li></ul><br>請注意，這些裁切選項不具破壞性。 |
 |  | 色彩描述檔選項 | 當您建立用於傳送的最佳化檔案時，請選擇顏色轉換：<ul><li>預設色彩保留：當影像包含色域資訊時，保持原始影像顏色；沒有顏色轉換。 現今幾乎所有的影像都已內嵌適當的色彩描述檔。 不過，如果CMYK來源影像不包含內嵌的色彩描述檔，這些色彩會轉換為sRGB（標準紅綠藍）色域。 sRGB是建議在網頁上顯示影像的色域。</li><li>保留原始色域：保留原始顏色，點上不進行任何顏色轉換。 對於沒有內嵌色彩描述檔的影像，任何色彩轉換都會使用「發佈」設定中設定的預設色彩描述檔來完成。 顏色配置檔案可能與使用此選項建立的檔案中的顏色不對齊。 因此，建議您使用「預設色彩保留」選項。</li><li>自訂自>至<br>開啟功能表，讓您選擇「轉換自」和「轉換至顏色空間」。 此進階選項會覆寫內嵌在來源檔案中的任何色彩資訊。 當您要送出的所有影像都包含不正確或遺失的色彩描述檔資料時，請選取此選項。</li></ul> |
 |  | 影像編輯選項 | 您可以保留影像中的剪裁遮色片，並選擇色彩描述檔。<br> 請參 [閱上傳時的設定影像編輯選項](#setting-image-editing-options-at-upload)。 |
-|  | Postscript選項 | 您可以點陣化PostScript®檔案、裁切檔案、維護透明背景、選擇解析度，以及選擇色域。<br> 請參 [閱設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options)。 |
-|  | Photoshop選項 | 您可以從Adobe® Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定影像錨定至範本的方式。<br> 請注意，中不支援模板 [!DNL Experience Manager]。<br> 請參 [閱「設定Photoshop上傳選項](#setting-photoshop-upload-options)」。 |
+|  | Postscript選項 | 您可以點陣化PostScript®檔案、裁切檔案、維持透明背景、選擇解析度，以及選擇色域。<br> 請參 [閱設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options)。 |
+|  | Photoshop選項 | 您可以從Adobe®Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定影像錨定至範本的方式。<br> 請注意，中不支援模板 [!DNL Experience Manager]。<br> 請參 [閱設定Photoshop上傳選項](#setting-photoshop-upload-options)。 |
 |  | PDF選項 | 您可以點陣化檔案、擷取搜尋字詞和連結、自動產生eCatalog、設定解析度，以及選擇色域。<br> 請注意，中不支援eCatalogs [!DNL Experience Manager]。<br> 請參閱 [設定PDF上傳選項](#setting-pdf-upload-options)。 |
-|  | Illustrator選項 | 您可以點陣化Adobe Illustrator®檔案、維護透明背景、選擇解析度，以及選擇色域。<br> 請參 [閱設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options)。 |
+|  | Illustrator選項 | 您可以點陣化Adobe Illustrator®檔案、維持透明背景、選擇解析度，以及選擇色域。<br> 請參 [閱設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options)。 |
 |  | 視訊選項 | 您可以選擇「視訊預設集」來轉碼視訊檔案。<br> 請參 [閱設定eVideo上傳選項](#setting-evideo-upload-options)。 |
-|  | 批次集預設集 | 若要從上傳的檔案建立影像集或回轉集，請按一下您要使用之預設集的作用中欄。 您可以選取多個預設集。 您可以在Dynamic Media Classic的「應用程式設定／批次設定預設集」頁面中建立預設集。<br> 請參 [閱設定批次集預設集以自動產生影像集和回轉集，以](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 進一步瞭解如何建立批次集預設集。<br> 請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload)。 |
+|  | 批次集預設集 | 若要從上傳的檔案建立影像集或回轉集，請按一下您要使用之預設集的作用中欄。 您可以選取多個預設集。 您可以在Dynamic Media經典的「應用程式設定／批集預設集」頁中建立預設集。<br> 請參 [閱設定批次集預設集以自動產生影像集和回轉集，以](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 進一步瞭解如何建立批次集預設集。<br> 請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload)。 |
 
 #### 在上傳{#setting-image-editing-options-at-upload}時設定影像編輯選項
 
@@ -239,7 +239,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 #### 設定PostScript和Illustrator上傳選項{#setting-postscript-and-illustrator-upload-options}
 
-當您上傳PostScript(EPS)或Illustrator(AI)影像檔時，可以以各種方式設定檔案格式。 您可以點陣化檔案、維持透明背景、選擇解析度，以及選擇色域。 在[!UICONTROL PostScript選項]和[!UICONTROL Illustrator選項]下的[!UICONTROL 上傳作業選項]對話方塊中，可使用格式化PostScript和Illustrator檔案的選項。
+當您上傳PostScript(EPS)或Illustrator(AI)影像檔時，可以以多種方式格式化檔案。 您可以點陣化檔案、維持透明背景、選擇解析度，以及選擇色域。 在[!UICONTROL PostScript選項]和[!UICONTROL Illustrator選項]下的[!UICONTROL 上傳作業選項]對話框中，可找到格式化PostScript和Illustrator檔案的選項。
 
 | 選項 | 子選項 | 說明 |
 |---|---|---|
@@ -252,13 +252,13 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 |  | 強制為CMYK | 轉換為CMYK色域。 |
 |  | 強制為灰階 | 轉換為灰階色域。 |
 
-#### 設定Photoshop上傳選項{#setting-photoshop-upload-options}
+#### 設定Photoshop上載選項{#setting-photoshop-upload-options}
 
 Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時，您可以從檔案自動建立影像範本(在「上傳」畫面上選取「建立範本」([!UICONTROL  Create Template])選項)。
 
-如果您使用PSD檔案建立範本，Dynamic Media會從含圖層的PSD檔案建立多張影像；它會為每個圖層建立一個影像。
+如果您使用檔案建立範本，Dynamic Media會從PSD檔案建立多張含圖層的影像；它會為每個圖層建立一個影像。
 
-使用上述的「裁切選項」(Crop Options)]和「顏色設定檔選項」(Color Profile Options)]搭配Photoshop上傳選項。[!UICONTROL [!UICONTROL 
+使用上述的「裁切選項」和「顏色設定檔選項」]以及「Photoshop」上傳選項。[!UICONTROL 
 
 >[!NOTE]
 >
@@ -271,9 +271,9 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 | 擷取文字 |  | 擷取文字，讓使用者可在檢視器中搜尋文字。 |
 | 將圖層延伸至背景大小 |  | 將撕開的影像圖層大小延伸至背景圖層的大小。 |
 | 圖層命名 |  | PSD檔案中的圖層會上傳為個別影像。 |
-|  | 圖層名稱 | 在PSD檔案中，將影像命名為圖層名稱之後。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 但是，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（背景、圖層1、圖層2等），則影像會以其PSD檔案中的圖層編號命名，而非預設圖層名稱。 |
-|  | Photoshop和圖層編號 | 在PSD檔案中將影像命名為圖層編號之後，忽略原始圖層名稱。 影像會以Photoshop檔案名稱和附加的圖層編號命名。 例如，檔案Spring Ad.psd的第二層名為Spring Ad_2，即使它在Photoshop中具有非預設名稱亦然。 |
-|  | Photoshop和圖層名稱 | 在PSD檔案後面加上圖層名稱或圖層編號的影像名稱。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則會使用圖層編號。 例如，在名為SpringAd的PSD檔案中，名為Price Tag的圖層名為Spring Ad_Price Tag。 預設名為Layer 2的層稱為Spring Ad_2。 |
+|  | 圖層名稱 | 在PSD檔案中，將影像命名為圖層名稱之後。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 但是，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（背景、第1層、第2層等），則影像會以PSD檔案中的圖層編號命名，而非預設圖層名稱。 |
+|  | Photoshop和圖層編號 | 在PSD檔案中將影像命名為圖層編號之後，忽略原始圖層名稱。 影像會以Photoshop檔名和附加的圖層編號命名。 例如，檔案Spring Ad.psd的第二層名為Spring Ad_2，即使它在Photoshop有非預設名稱。 |
+|  | Photoshop和圖層名稱 | 在PSD檔案後面加上圖層名稱或圖層編號的影像名稱。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則使用圖層編號。 例如，在名為SpringAd的PSD檔案中，名為Price Tag的圖層名為Spring Ad_Price Tag。 預設名為Layer 2的層稱為Spring Ad_2。 |
 | 錨點 |  | 指定如何將影像錨定在範本中，範本是由PSD檔案產生的圖層構圖所產生。 依預設，錨點是中心。 中心錨點可讓取代影像最好填滿相同的空間，不論取代影像的長寬比為何。 當參考範本並使用參數替代時，以不同方式取代此影像的影像會有效佔據相同的空間。 如果您的應用程式需要取代影像來填滿範本中已分配的空間，請變更為不同的設定。 |
 
 #### 設定PDF上傳選項{#setting-pdf-upload-options}
@@ -315,15 +315,15 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 如果您想從上傳的影像自動建立影像集或回轉集，請按一下您要使用的預設集的作用中欄。 您可以選取多個預設集。
 
-請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解建立批次集預設集。
+請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解如何建立批次集預設集。
 
 ### 串流上傳{#streamed-uploads}
 
-如果您將許多資產上傳至Adobe Experience Manager，則伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。串流上傳可避免在將磁碟複製到儲存庫之前，先將資產儲存在伺服器上的臨時資料夾中，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 在[!DNL Assets]中預設會啟用串流上傳。
+如果您將許多資產上傳至Adobe Experience Manager，伺服器的I/O要求會大幅增加，這會降低上傳效率，甚至會造成某些上傳工作逾時。 [!DNL Experience Manager Assets] 支援串流上傳資產。串流上傳可避免在將磁碟複製到儲存庫之前，先將資產儲存在伺服器上的臨時資料夾中，從而減少上傳操作期間的磁碟I/O。 而是直接將資料傳輸到儲存庫。 這樣，上傳大型資產的時間和逾時的可能性就會減少。 在[!DNL Assets]中預設會啟用串流上傳。
 
 >[!NOTE]
 >
->在JEE伺服器上執行的Adobe Experience Manager使用3.1以下的servlet-api版本時，會停用串流上傳。
+>對於在JEE伺服器上執行且Servlet-api版本低於3.1的Adobe Experience Manager，會停用串流上傳。
 
 ### 解壓縮包含資產{#extractzip}的ZIP封存
 
@@ -340,7 +340,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 * 如果目的地存在同名的資料夾，ZIP檔案中的資產會解壓縮在現有資料夾中。
 * 如果您取消擷取，則不會刪除已擷取的資產。
 * 您不能同時選擇兩個ZIP檔案並解壓縮它們。 一次只能解壓縮一個ZIP檔案。
-* 上傳ZIP封存時，如果上傳對話方塊顯示500伺服器錯誤，請在安裝最新的Service Pack後重試。
+* 上傳ZIP封存時，如果上傳對話方塊顯示500伺服器錯誤，請在安裝[最新的Service Pack](/help/release-notes/sp-release-notes.md)後重試。
 
 ## 預覽資產{#previewing-assets}
 
@@ -373,7 +373,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 >[!MORELIKETHIS]
 >
->* [預覽動態媒體資產](/help/assets/previewing-assets.md)。
+>* [預覽Dynamic Media資產](/help/assets/previewing-assets.md)。
 >* [檢視子資產](managing-linked-subassets.md#viewing-subassets)。
 
 
@@ -511,7 +511,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 1. 您可以新增或移除資產的轉譯，但原始的轉譯除外。 導覽至您要新增或移除轉譯的資產位置。
 
 1. 按一下資產以開啟其頁面。
-1. 在Experience Manager介面中，從清單中選取&#x200B;**[!UICONTROL 轉譯]**。
+1. 在Experience Manager介面中，從清單中選擇&#x200B;**[!UICONTROL 轉譯]**。
 1. 在&#x200B;**[!UICONTROL 轉譯]**&#x200B;面板中，檢視為資產產生的轉譯清單。
 
    ![「資產詳細資料」頁面上的轉譯面板](assets/renditions_panel.png)
@@ -587,7 +587,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 >[!NOTE]
 >
->如需動態媒體的詳細資訊，請參閱[發佈動態媒體資產。](/help/assets/publishing-dynamicmedia-assets.md)
+>如需Dynamic Media的詳細資訊，請參閱[發佈Dynamic Media資產。](/help/assets/publishing-dynamicmedia-assets.md)
 
 1. 導覽至您要發佈的資產／資料夾的位置。
 
@@ -652,7 +652,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
 搜尋資產是數位資產管理系統的核心使用，不論是供創意人員進一步使用、由商業使用者和行銷人員強穩管理資產，或由DAM管理員管理。
 
-如需簡單、進階和自訂的搜尋，以發現和使用最適合的資產，請參閱Experience Manager](search-assets.md)中的[搜尋資產。
+如需簡單、進階和自訂搜尋，以發現和使用最適當的資產，請參閱Experience Manager](search-assets.md)中的[搜尋資產。
 
 ## 快速動作{#quick-actions}
 
@@ -828,7 +828,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 
    >[!NOTE]
    >
-   >冗長的註解可能無法在PDF檔案中正確呈現。 為獲得最佳演算效果，Adobe建議您將註解限制在50字以內。
+   >冗長的註解可能無法在PDF檔案中正確呈現。 為獲得最佳演算效果，Adobe建議您將註解限制在50個字詞。
 
 1. 按一下&#x200B;**[!UICONTROL Print]**。 根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **** ，則生成的輸出類似於此處所示的PDF檔案。
 
@@ -852,7 +852,7 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 1. 要配置CQ-DAM-Handler-Gibson Font Manager服務，請執行下列操作之一：
 
    * 在「系統字型」目錄選項中，指定系統上字型目錄的完整路徑。 例如，如果您是Mac使用者，可以在「系統字型」目錄選項中將路徑指定為&#x200B;*/Library/Fonts*。 [!DNL Experience Manager] 從此目錄讀取字型。
-   * 在`crx-quickstart`資料夾內建立名為`fonts`的目錄。 CQ-DAM-Handler-Gibson Font Manager Service會自動在`crx-quickstart/fonts`位置擷取字型。 您可以從Adobe Server Fonts目錄選項中覆寫此預設路徑。
+   * 在`crx-quickstart`資料夾內建立名為`fonts`的目錄。 CQ-DAM-Handler-Gibson Font Manager Service會自動在`crx-quickstart/fonts`位置擷取字型。 您可以從「Adobe伺服器字型」目錄選項中覆蓋此預設路徑。
 
    * 在您的系統中為字型建立新的檔案夾，並將所要的字型儲存在檔案夾中。 然後，在「客戶字型」目錄選項中指定該資料夾的完整路徑。
 
