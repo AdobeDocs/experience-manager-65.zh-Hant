@@ -3,7 +3,7 @@ title: ' [!DNL Assets]的最佳做法'
 description: 通過識別並遵守取決於部署和配置的最佳實踐，提高系統負載下的穩定性和效能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Assets] {#best-practices-for-assets}的最佳做法
 
-[!DNL Adobe Experience Manager Assets] 是提供高品質數位行銷體驗的關鍵部分，透過提高內容速度，有助於達成業務目標。如果您在[!DNL Experience Manager Assets]內處理大量資產，或定期／定期上傳許多資產，包括視訊和動態媒體，最佳化數位資產管理體驗對於系統效率至關重要。
+[!DNL Adobe Experience Manager Assets] 是提供高品質數位行銷體驗的關鍵部分，透過提高內容速度，有助於達成業務目標。如果您在[!DNL Experience Manager Assets]內處理大量資產，或定期／定期地上傳許多資產，包括視訊和Dynamic Media，最佳化數位資產管理體驗對於系統效率至關重要。
 
 根據您為組織定位[!DNL Assets]的方式，以及用於資產擷取、轉譯產生和中繼資料擷取的功能，識別並遵循不同區域的最佳實務可大幅提升負載下的系統穩定性和效能。
 
