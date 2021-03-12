@@ -1,18 +1,18 @@
 ---
 title: AEM Sites發行說明
-description: Adobe Experience Manager 6.5 Sites的發行說明。
+description: Adobe Experience Manager6.5網站的發行說明。
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 23656e023a9a0bfc335655f9cfb0530aa917b3ef
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 0%
+source-wordcount: '872'
+ht-degree: 1%
 
 ---
 
 
 # AEM Sites發行說明{#aem-sites-release-notes}
 
-如需AEM Sites 6.5增強功能的詳細資訊，請參閱下列內容：
+如需AEM Sites6.5增強功能的詳細資訊，請參閱下列內容：
 
 ## 元件與範本開發{#component-amp-template-development}
 
@@ -49,14 +49,14 @@ ht-degree: 0%
 * Clientlib管理器：將Google Closure Compiler預設為JavaScript用戶端的精簡化（舊預設為Yahoo UIY），並將Google Closure Compiler更新為v20190121版
 * 範本編輯器與原則
 
-   * 針對使用JS SDK的單頁應用程式建立和編輯範本（也稱為SPA編輯器）
+   * 針對使用JS SDK的單頁應用程式建立和編輯範本(也稱為「編SPA輯器」)
 
 * 參考網站We.Retail 4.0，請參閱[Github，以取得發行說明](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)。
 * Toolkit to upgrade existing sites to lyperace least editor capabilities, see [Github repository](https://github.com/adobe/aem-modernize-tools)
 
 >[!CAUTION]
 >
->AEM包含jQuery程式庫的1.12.4版，可提供與現有自訂程式碼的最大相容性。 Adobe已針對已知的安全性問題進行修改。
+>包AEM含jQuery程式庫1.12.4版，可提供與現有自訂程式碼最大相容性。 Adobe已對已知安全性問題進行修改。
 
 ## 站點管理{#site-administration}
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 ## 頁面編輯器{#page-editor}
 
-* 使用運用JS SDK（也稱為SPA編輯器）的React和Angular用戶端元件，讓您在內容中編輯和組合單頁應用程式體驗
+* 使用運用JS SDK（也稱為編輯器）的React和Angular用戶端元件，讓內容相關編輯和組合單頁應用程式體驗
 * 只有當頁面已設定支架頁面時，才會顯示支架模式。
 
 ## 內容片段與編輯器{#content-fragments-amp-editor}
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 * 對於使用PushOnModify的推出設定，請更妥善處理頁面移動作業，以避免狀態不一致
 * 現在，依預設，在livecopy結構中建立新頁面時，將會建立獨立頁面
-* 在使用JS SDK的單頁應用程式中使用MSM功能（也稱為SPA編輯器）
+* 在使用JS SDK（也稱為編輯器）的單頁應用程式中使用MSMSPA功能
 
 ## 啟動 {#launches}
 
@@ -106,24 +106,30 @@ ht-degree: 0%
 
 * ContextHub資料層和用戶端規則引擎JavaScript已依預設更新為使用jQuery 3。
 
-## AEM和Adobe Target {#aem-amp-adobe-target}
+## AEM和Adobe Target{#aem-amp-adobe-target}
 
 >[!CAUTION]
 >
->AEM在AEM 6.5發行時不支援at.js 2.x。 請使用最新版本的at.js 1.x
+>目前：
+>
+>* 如果您在「活動」主控台中使用Adobe Target作為定位引擎，則僅支援&lt;a0/AEM>。`at.js 1.x`
+   >
+   >
+* 如果您使用Experience Fragment匯出至Target並在Target主控台中執行活動，則`at.js. 1.x`和`at.js 2.x`都受支援。
 
-* Adobe Target整合現在可以使用Target Standard API。 舊版AEM使用Target Classic HTTP API，現已過時。
-* 隨附Adobe Target `mbox.js` 63版。 Adobe強烈建議將實作切換至`at.js` v1.x。
-* `at.js` 現在已包含1.5.0版。Adobe建議您使用[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html)將`at.js` v1.x布建至網站。
 
-## AEM和Adobe Analytics {#aem-amp-adobe-analytics}
+* Adobe Target整合現在可以使用Target Standard API。 舊版使AEM用Target Classic HTTP API，現已過時。
+* 包含Adobe Target`mbox.js`版本63。 Adobe強烈建議將實施切換到`at.js` v1.x。
+* `at.js` 現在已包含1.5.0版。Adobe建議您使用[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html)將`at.js` v1.x布建到站點。
 
-* `s_code.js` 包含H.27.5。Adobe建議您將實作切換至`AppMeasurement.js`
+## AEM和Adobe Analytics{#aem-amp-adobe-analytics}
+
+* `s_code.js` 包含H.27.5。Adobe建議您將實施切換至`AppMeasurement.js`
 * `AppMeasurement.js` 包含v1.8.0。Adobe建議使用[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html)將AppMeasurement.js布建至網站。
 
-## AEM與商務{#aem-commerce}
+## AEM和商務{#aem-commerce}
 
-自AEM 6.4以來，Commerce Integration Framework的改良功能已加快發行週期。[在這裡瞭解詳細內容](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html)。
+自6.4以來，Commerce Integration Framework的改良功能已在更快速的發AEM行週期中加強。[在這裡瞭解詳細內容](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html)。
 
 ## 社群附加元件{#communities-add-on}
 
@@ -135,4 +141,4 @@ ht-degree: 0%
 * 序列頻道中的計量播放
 * 使用來源檔案（例如Excel工作表）自動建立專案結構
 
-如需AEM Screens變更的詳細資訊——請參閱[AEM Screens使用指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)中的「Release Notes」（發行說明）。
+有關AEM Screens更改的詳細資訊——請參閱[AEM Screens使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html)中的發行說明。
