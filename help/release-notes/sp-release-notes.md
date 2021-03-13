@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d96730eed6447815c40307a8d60b6ffc9ff45c2e
+source-git-commit: 89b037fbde6003ccf86336c4467df415e233986b
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 2%
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 * 使用[連接的資產功能](/help/assets/use-assets-across-connected-assets-instances.md)時，您現在可以檢視使用資產的所有[!DNL Sites]頁面的清單。 資產的[!UICONTROL 屬性]頁面提供這些資產參考。 這可讓管理員、行銷人員和圖書管理員全面瞭解資產使用情況，進而提高追蹤、管理和品牌一致性。
 
-* 刪除網頁中參考的資產時，[!DNL Experience Manager]會顯示警告。 您可以強制刪除引用的資產，或檢查並修改顯示在資產[!DNL Properties]頁面中的引用。 按一下參照可開啟本地和遠程[!DNL Sites]頁。
+* 刪除網頁中參考的資產時，[!DNL Experience Manager] [會顯示警告](/help/assets/use-assets-across-connected-assets-instances.md#asset-usage-references)。 您可以強制刪除引用的資產，或檢查並修改顯示在資產[!DNL Properties]頁面中的引用。 按一下參照可開啟本地和遠程[!DNL Sites]頁。
 
 * 使用[!UICONTROL Name]、[!UICONTROL 上次修改日期、]和[!UICONTROL 上次轉出日期]屬性，對可開始的即時副本頁面排序。
 
