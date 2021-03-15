@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8的發行說明
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 89b037fbde6003ccf86336c4467df415e233986b
+source-git-commit: 60764db23115e7f548a82a67955331da2b858973
 workflow-type: tm+mt
-source-wordcount: '2822'
+source-wordcount: '2812'
 ht-degree: 2%
 
 ---
@@ -208,7 +208,7 @@ ht-degree: 2%
 
 答：當伺服器聯機時，將軟體包放入`../crx-quickstart/install`資料夾。 軟體包會自動安裝。
 
-B.使用「套件管理員」的[HTTP API](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html)。 使用`cmd=install&recursive=true`以安裝嵌套的軟體包。
+B.使用「套件管理員」的[HTTP API](/help/sites-administering/package-manager.md#package-share)。 使用`cmd=install&recursive=true`以安裝嵌套的軟體包。
 
 >[!NOTE]
 >
