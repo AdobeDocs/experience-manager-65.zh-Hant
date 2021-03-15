@@ -3,9 +3,9 @@ title: 在 [!DNL Adobe Experience Manager]中管理數位資產的中繼資料�
 description: '瞭解中繼資料的類型，以及如何根據資產的中繼資料自動組織和處理資產。 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: 31dcf48691fa849f757579e2e57dc3a9c2bbbbee
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2340'
 ht-degree: 10%
 
 ---
@@ -78,21 +78,15 @@ ht-degree: 10%
 1. 選取您要編輯其常用屬性的資產。
 1. 在工具列中，按一下「屬性&#x200B;****」以開啟所選資產的屬性頁面。
 1. 修改各種標籤下所選資產的中繼資料屬性。
-1. 若要檢視特定資產的中繼資料編輯器，請取消在清單中選取剩餘資產。 中繼資料編輯器欄位會填入特定資產的中繼資料。
-
-   >[!NOTE]
-   >
-   >* 在屬性頁面中，您可以取消選取範圍，從資產清單中移除資產。 資產清單預設會選取所有資產。 您從清單中移除的資產的中繼資料不會更新。
-   >* 在資產清單頂端，選取&#x200B;**[!UICONTROL Title]**&#x200B;附近的核取方塊，在選取資產和清除清單之間切換。
-
-
-1. 若要為資產選擇不同的中繼資料結構，請從工具列按一下「設定」**[!UICONTROL ，然後選取所要的結構。]**
-1. 儲存變更。
+1. 若要檢視特定資產的中繼資料，請取消在清單中選取剩餘資產。 如果您取消在[!UICONTROL 屬性]頁面上選取一些資產，則不會更新這些資產的中繼資料。
+1. 要為資產選擇不同的元資料模式，請按一下工具欄中的&#x200B;**[!UICONTROL Settings]** ，然後選擇模式。 按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。
 1. 若要在包含多個值的欄位中，將新中繼資料與現有中繼資料一起附加，請選取「附 **[!UICONTROL 加模式」]**。如果您未選取此選項，新的中繼資料會取代欄位中現有的中繼資料。按一下&#x200B;**[!UICONTROL 提交]**。
 
-   >[!CAUTION]
-   >
-   >對於單值欄位，即使您選擇「附加模式」，新元資料也不會附加到欄位中的現 **[!UICONTROL 有值]**。
+![中繼資料結構大量套用至多個資產](assets/metadata-schema-bulk-edit.gif)
+
+>[!CAUTION]
+>
+>對於單值欄位，即使您選擇「附加模式」，新元資料也不會附加到欄位中的現 **[!UICONTROL 有值]**。
 
 ## 匯入中繼資料{#import-metadata}
 
