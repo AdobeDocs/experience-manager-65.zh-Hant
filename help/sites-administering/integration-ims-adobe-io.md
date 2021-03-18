@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07f354ccfb8741f0de4fc85ba1575ead3b8ea6e4
+source-git-commit: 498896dccf80065195cc945b01cb8d037b8f6dab
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -231,7 +231,7 @@ ht-degree: 0%
 1. 在&#x200B;**Adobe Target設定**&#x200B;頁籤中輸入詳細資訊：
 
    * **驗證**:IMS
-   * **租用戶ID**:AdobeIMS租用戶ID。另請參閱下方的[租用戶ID和用戶端代碼](#tenant-client)一節。
+   * **租用戶ID**:AdobeIMS租用戶ID。另請參閱[租用戶ID和用戶端代碼](#tenant-client)一節。
 
       >[!NOTE]
       >
@@ -242,7 +242,7 @@ ht-degree: 0%
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >然後您會使用`yourtenantid`。
-   * **用戶端代碼**:請參閱下 [方的「租用戶ID](#tenant-client) 和用戶端代碼」。
+   * **用戶端代碼**:請參閱「 [租用戶ID和用戶端](#tenant-client) 代碼」區段。
    * **IMS設定**:選擇IMS設定的名稱
    * **API類型**:REST
    * **A4TAnalytics Cloud配置**:選取用於目標活動目標和度量的Analytics雲端設定。如果您在定位內容時使用Adobe Analytics作為報告來源，則需要此功能。 如果您看不到雲端設定，請參閱[設定A4TAnalytics Cloud設定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)中的附註。
