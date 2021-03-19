@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
+feature: 內容中樞
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3163'
+source-wordcount: '3165'
 ht-degree: 2%
 
 ---
@@ -67,7 +68,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當給
 
 例如，作業商店是以JSON物件為基礎，並透過JSON請求擷取。 可能出現下列初始化情形：
 
-* 請求完成，資料被檢索並載入到儲存中。 在這種情況下，初始化只進行一次。
+* 請求完成、擷取資料並載入儲存。 在這種情況下，初始化只進行一次。
 * 請求失敗（逾時）。 在這種情況下，不會進行初始化，並且儲存中沒有資料。
 * 商店已預先填入預設值（init屬性），但請求失敗（逾時）。 只有一個初始化具有預設值。
 * 商店已預先填入。
@@ -145,7 +146,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的作業存放區。 當給
 
 **參數**
 
-* serviceURL:（選用）字串。 JSONP服務。 值null會使用已配置的服務URL。 非空值設定要用於此對象的JSONP服務。 （請參閱setServiceURL。）
+* serviceURL:（選用）字串。 JSONP服務。 值null會使用已配置的服務URL。 非空值將JSONP服務設定為用於此對象。 （請參閱setServiceURL。）
 * dynamicData:（可選）物件。 在呼叫回呼函式前附加至商店初始化資料的JSON資料。
 * 回呼：（選用）字串。 調用處理JSONP服務返回的JSONP對象的函式的名稱。 回呼函式必須定義單一參數，此參數為CQ_Analytics.JSONPStore物件。
 
@@ -374,7 +375,7 @@ CQ_Analytics.JSONStore物件。
 
 **參數**
 
-* serviceURL:（選用）字串。 JSONP服務。 值null會使用已配置的服務URL。 非空值設定要用於此對象的JSONP服務。 （請參閱setServiceURL。）
+* serviceURL:（選用）字串。 JSONP服務。 值null會使用已配置的服務URL。 非空值將JSONP服務設定為用於此對象。 （請參閱setServiceURL。）
 * dynamicData:（可選）物件。 在呼叫回呼函式前附加至商店初始化資料的JSON資料。
 * 回呼：（選用）字串。 調用處理JSONP服務返回的JSONP對象的函式的名稱。 回呼函式必須定義單一參數，此參數為CQ_Analytics.JSONPStore物件。
 
@@ -602,7 +603,7 @@ CQ_Analytics.SessionStore代表作業商店。 建立此類的實例以建立會
 
 將屬性和值添加到會話儲存初始化資料。
 
-使用loadInitProperties將會話儲存資料填入初始化值。
+使用loadInitProperties以初始化值填充會話儲存資料。
 
 **參數**
 
