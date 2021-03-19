@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 917fceffb58883df83e96f60da4769046a18f3c0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '797'
 ht-degree: 1%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 1%
 
 # 內容協調{#in-context-moderation}
 
-對於AEM Communities，管理員和受信任的社群成員可直接在發佈社群內容的頁面上執行協調。
+對於AEM Communities，管理員和受信任的社群成員可直接在發佈社群內容的發佈頁面上執行協調。
 
 當使用[協調控制台](moderation.md)時，針對內容顯示的資訊包括發佈頁面的連結，以允許存取在協調內容時可用的其他協調動作。
 
@@ -40,7 +41,7 @@ ht-degree: 1%
 
 ## 範例 {#example}
 
-使用[Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html)網站（當[開始使用AEM Communities](getting-started.md)時建立），可快速在論壇中設定執行緒，以便在發佈環境中體驗各種協調活動，如下所示。
+使用[[開始使用AEM Communities](getting-started.md)時建立的Geometrixx參與](http://localhost:4503/content/sites/engage/en.html)網站，可快速設定論壇中的執行緒，以便在發佈環境中體驗各種協調活動，如下所示。
 
 Aaron McDonald(aaron.mcdonald@mailinator.com)在建立網站時，將他加入社群參與協調者群組，成為值得信賴的社群成員。
 
@@ -99,7 +100,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用[Members console](members.
 
 在作者中，以管理員身分登入，並使用[Members console](members.md)，然後登出，將Boyd Larsen(boyd.larsen@dodgit.com)新增為社群參與成員群組的新成員。
 
-在發佈時，請以Boyd Larsen身份登入，然後選取`Forum`，然後選取`Read more`作為蜂鳥貼文，以存取執行緒。
+在發佈時，請以Boyd Larsen身份登入，然後選擇`Forum`，然後選擇`Read more`作為蜂鳥貼文，以存取線程。
 
 注意:
 
@@ -126,7 +127,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用[Members console](members.
 
 選擇「管理」功能表項目，從發佈環境存取[協調控制台](moderation.md)。
 
-請注意，對於管理員，所有可協調的內容都可見，而不只是Geometrixx Engage社群網站的內容。
+請注意，對於管理員，所有可協調的內容都可見，而不只是「Geometrixx參與」社群網站的內容。
 
 搜尋篩選器是可切換開啟或關閉的側面板。
 
@@ -149,9 +150,9 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可使用[Members console](members.
 
 選擇「管理」功能表項目，從發佈環境存取[協調控制台](moderation.md)。
 
-請注意，對於社群協調者，只會顯示來自Geometrixx Engage社群網站的可協調內容。
+請注意，對於社群協調者，只會顯示「Geometrixx參與」社群網站中可協調的內容。
 
-請注意，社群協調者有與管理員相同的選項（影像已切換為關閉的搜尋側欄），但無法存取其他AEM控制台。
+請注意，社群協調者有與管理員相同的選項(影像已關閉搜尋邊欄，但無法存取其他控AEM制台。
 
 登出.
 
