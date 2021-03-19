@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 2d54d115529126162c92e9943a188d05159535f9
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -24,13 +25,13 @@ ht-degree: 0%
 
 ## 在作者處配置自適應表單快取和發佈例項{#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
-1. 前往`https://[server]:[port]/system/console/configMgr`的AEM網頁主控台組態管理器。
+1. 轉至AEM`https://[server]:[port]/system/console/configMgr`的Web控制台配置管理器。
 1. 按一下&#x200B;**[!UICONTROL 自適應表單和互動式通信Web通道配置]**&#x200B;以編輯其配置值。
-1. 在[!UICONTROL 編輯配置值]對話框中，在&#x200B;**[!UICONTROL Number of Adaptive Forms]**&#x200B;欄位中指定AEM [!DNL Forms]伺服器實例可以快取的最大表單或文檔數。 預設值為 100。
+1. 在[!UICONTROL 編輯配置值]對話框中，在&#x200B;**[!UICONTROL 最適化Forms]**&#x200B;欄位中指定[!DNL Forms]伺服器實例可快取的表單或文檔的最大數量。 預設值為 100。
 
    >[!NOTE]
    >
-   >要禁用快取，請將「最適化表單數」欄位中的值設定為&#x200B;**0**。 當禁用或更改快取配置時，將重置快取，並從快取中刪除所有表單和文檔。
+   >要禁用快取，請將「Number of AdaptiveForms」（自適應性資料）欄位中的值設定為&#x200B;**0**。 當禁用或更改快取配置時，將重置快取，並從快取中刪除所有表單和文檔。
 
    ![最適化表單HTML快取的設定對話方塊](assets/cache-configuration-edit.png)
 
@@ -49,7 +50,7 @@ ht-degree: 0%
 
 ### 在調度程式{#considerations}上快取自適應表單的注意事項
 
-* 使用最適化表單快取時，請使用AEM [!DNL Dispatcher]快取最適化表單的用戶端程式庫（CSS和JavaScript）。
+* 使用最適化表單快取時，請使AEM用[!DNL Dispatcher]快取最適化表單的用戶端程式庫（CSS和JavaScript）。
 * 在開發自訂元件時，在用於開發的伺服器上，請停用最適化表單快取。
 * 不會快取無副檔名的URL。 例如，會快取模式為pattern`/content/forms/[folder-structure]/[form-name].html`的URL，並忽略模式為`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`的URL快取。 因此，請搭配使用URL和擴充功能，以充份運用快取功能。
 * 本地化最適化表單的考量事項：
@@ -128,7 +129,7 @@ ht-degree: 0%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有類型的調適性表單。 如果您需要在傳送快取頁面之前檢查頁面的使用者存取權限，請參閱[快取保護內容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+您的環AEM境已配置為快取自適應表單。 它會快取所有類型的調適性表單。 如果您需要在傳送快取頁面之前檢查頁面的使用者存取權限，請參閱[快取保護內容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
 
 ## 疑難排解 {#troubleshooting}
 
