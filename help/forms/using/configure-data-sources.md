@@ -8,10 +8,11 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
+feature: 表單資料模型
 translation-type: tm+mt
-source-git-commit: 19ee2722bc73f67b77cc08dd2a634328ba5269ec
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -21,21 +22,21 @@ ht-degree: 0%
 
 ![](do-not-localize/data-integeration.png)
 
-AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 下列類型是現成可用的支援。 不過，只需少量自訂，您也可以整合其他資料來源。
+AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列類型是現成可用的支援。 不過，只需少量自訂，您也可以整合其他資料來源。
 
-* 關係資料庫- MySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
-* AEM使用者設定檔
+* 關係資料庫- MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS。
+* AEM用戶配置檔案
 * REST風格的Web服務
 * 基於SOAP的web services
 * OData服務
 
-資料整合支援OAuth2.0、基本驗證和API金鑰驗證類型立即可用，並可實作自訂驗證以存取網站服務。 雖然RESTful、SOAP架構和OData服務已在AEM Cloud Services中設定，但AEM Web主控台中已設定關係式資料庫的JDBC和AEM使用者設定檔的連接器。
+資料整合支援OAuth2.0、基本驗證和API金鑰驗證類型立即可用，並可實作自訂驗證以存取網站服務。 雖然RESTful、SOAP架構和OData服務已在AEM Cloud Services中設定，但Web主控台中會設定關係資料庫的JDBC和AEM使用者設定檔的連AEM接器。
 
 ## 配置關係資料庫{#configure-relational-database}
 
-您可以使用AEM Web Console Configuration來設定關係式資料庫。 執行下列動作：
+您可以使用Web控制台配置AEM配置關係資料庫。 請執行下列動作：
 
-1. 前往https://server:host/system/console/configMgr的AEM網頁主控台。
+1. 請前往AEMhttps://server:host/system/console/configMgr的Web主控台。
 1. 尋找&#x200B;**[!UICONTROL Apache Sling Connection Pooled DataSource]**&#x200B;組態。 點選以在編輯模式中開啟設定。
 1. 在配置對話框中，指定要配置的資料庫的詳細資訊，例如：
 
@@ -67,12 +68,12 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 
 1. 點選「**[!UICONTROL 儲存]**」以儲存設定。
 
-## 設定AEM使用者設定檔{#configure-aem-user-profile}
+## 配置AEM用戶配置檔案{#configure-aem-user-profile}
 
-您可以在AEM Web Console中使用「使用者描述檔連接器」設定來設定AEM使用者描述檔。 執行下列動作：
+您可以使用AEMWeb Console中的「使用者描述檔連接器」設定來AEM設定使用者描述檔。 請執行下列動作：
 
-1. 前往https://&#39;[server]的AEM網頁主控台：[port]&#39;system/console/configMgr。
-1. 尋找&#x200B;**[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]**，然後點選以編輯模式開啟設定。
+1. 轉至AEMhttps://&#39;[server]的Web控制台：[port]&#39;system/console/configMgr。
+1. 尋找&#x200B;**[!UICONTROL AEM Forms資料整合——使用者描述檔連接器組態]**，然後點選以在編輯模式中開啟組態。
 1. 在「用戶配置檔案連接器配置」對話框中，可以添加、刪除或更新用戶配置檔案屬性。 指定的屬性將可用於表單資料模型中。 使用以下格式指定用戶配置檔案屬性：
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
@@ -84,7 +85,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 
    >[!NOTE]
    >
-   >上例中的&#x200B;*****&#x200B;表示CRXDE結構中AEM用戶配置檔案中`profile/empLocation/`節點下的所有節點。 這表示表單資料模型可以訪問`profile/empLocation/`節點下任何節點中存在的`city`類型`string`屬性。 但是，包含指定屬性的節點必須遵循一致的結構。
+   >上例中的&#x200B;*****&#x200B;表示CRXDE結構中用戶配置檔案中`profile/empLocation/`節點下AEM的所有節點。 這表示表單資料模型可以訪問`profile/empLocation/`節點下任何節點中存在的`city`類型`string`屬性。 但是，包含指定屬性的節點必須遵循一致的結構。
 
 1. 點選「**[!UICONTROL 儲存]**」以儲存設定。
 
@@ -93,7 +94,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 >[!NOTE]
 為RESTful、SOAP和OData服務配置雲端服務時，需要配置雲端服務資料夾。
 
-AEM中的所有雲端服務設定都整合在AEM存放庫的`/conf`資料夾中。 依預設，`conf`資料夾包含`global`資料夾，您可在其中建立雲端服務組態。 不過，您必須針對雲端組態手動啟用它。 您也可以在`conf`中建立其他資料夾，以建立並組織雲端服務組態。
+中的所有雲服務配AEM置都整合在儲存庫的`/conf`資料夾中AEM。 依預設，`conf`資料夾包含`global`資料夾，您可在其中建立雲端服務組態。 不過，您必須針對雲端組態手動啟用它。 您也可以在`conf`中建立其他資料夾，以建立並組織雲端服務組態。
 
 要為雲端服務配置配置資料夾：
 
@@ -117,7 +118,7 @@ REST風格的Web服務可在Swagger定義檔案中使用[Swagger規格](https://
 
 執行以下操作以配置REST風格的服務：
 
-1. 前往&#x200B;**[!UICONTROL 工具>雲端服務>資料來源]**。 點選以選取您要建立雲端設定的檔案夾。
+1. 前往&#x200B;**[!UICONTROL 工具>Cloud Services>資料來源]**。 點選以選取您要建立雲端設定的檔案夾。
 
    如需建立和設定雲端服務組態資料夾的相關資訊，請參閱[設定雲端服務組態資料夾](../../forms/using/configure-data-sources.md#cloud-folder)。
 
@@ -164,7 +165,7 @@ REST風格的Web服務可在Swagger定義檔案中使用[Swagger規格](https://
 
 使用[網站服務描述語言(WSDL)規範](https://www.w3.org/TR/wsdl)來說明以SOAP為基礎的網站服務。 若要在AEM雲端服務中設定以SOAP為基礎的Web服務，請確定您擁有Web服務的WSDL URL，並執行下列動作：
 
-1. 前往&#x200B;**[!UICONTROL 工具>雲端服務>資料來源]**。 點選以選取您要建立雲端設定的檔案夾。
+1. 前往&#x200B;**[!UICONTROL 工具>Cloud Services>資料來源]**。 點選以選取您要建立雲端設定的檔案夾。
 
    如需建立和設定雲端服務組態資料夾的相關資訊，請參閱[設定雲端服務組態資料夾](../../forms/using/configure-data-sources.md#cloud-folder)。
 
@@ -189,7 +190,7 @@ OData服務由其服務根URL標識。 若要在AEM雲端服務中設定OData服
 >[!NOTE]
 有關配置Microsoft Dynamics 365的逐步指南（線上或內部），請參閱[Microsoft Dynamics OData Configuration](/help/forms/using/ms-dynamics-odata-configuration.md)。
 
-1. 前往&#x200B;**[!UICONTROL 工具>雲端服務>資料來源]**。 點選以選取您要建立雲端設定的檔案夾。
+1. 前往&#x200B;**[!UICONTROL 工具>Cloud Services>資料來源]**。 點選以選取您要建立雲端設定的檔案夾。
 
    如需建立和設定雲端服務組態資料夾的相關資訊，請參閱[設定雲端服務組態資料夾](../../forms/using/configure-data-sources.md#cloud-folder)。
 
@@ -206,7 +207,7 @@ OData服務由其服務根URL標識。 若要在AEM雲端服務中設定OData服
 
 ## 針對RESTful和SOAP web services {#mutual-authentication}的憑證式相互驗證
 
-當您為表單資料模型啟用相互驗證時，執行表單資料模型的資料來源和AEM Server都會先驗證彼此的身分，然後再共用任何資料。 您可以對基於REST和SOAP的連接（資料源）使用相互驗證。 若要在AEM Forms環境上為表單資料模型設定相互驗證：
+當您啟用表單資料模型的相互驗證時，執行表單資料模型的資料來源和伺服器會先驗證彼此的身分，然後才會共用任何資料。 您可以對基於REST和SOAP的連接（資料源）使用相互驗證。 要在您的AEM Forms環境中為表單資料模型配置相互身份驗證：
 
 1. 將私密金鑰（憑證）上傳至[!DNL AEM Forms]伺服器。 要上傳私密金鑰：
    1. 以管理員身份登錄到您的[!DNL AEM Forms]伺服器。
