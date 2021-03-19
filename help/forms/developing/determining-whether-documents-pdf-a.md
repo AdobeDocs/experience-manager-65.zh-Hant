@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: c429d6e1-7847-43c8-bf75-cb0078dbb9d5
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2110'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ Assembler服務返回指定輸入的PDF文檔在包含`PDFAConformance`元素的
 
 >[!NOTE]
 >
->如需Assembler服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Assembler服務的詳細資訊，請參見[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
@@ -73,10 +74,10 @@ Assembler服務返回指定輸入的PDF文檔在包含`PDFAConformance`元素的
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
-如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案替換為AEM Forms部署在的J2EE應用程式伺服器專用的JAR檔案。 有關所有AEM FormsJAR檔案的位置資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立PDF匯寫程式式用戶端**
 
@@ -92,7 +93,7 @@ Assembler服務返回指定輸入的PDF文檔在包含`PDFAConformance`元素的
 
 **設定執行時期選項**
 
-您可以設定運行時選項，以控制Assembler服務在執行作業時的行為。 例如，您可以設定一個選項，指示Assembler服務在遇到錯誤時繼續處理作業。 如需您可設定之執行時期選項的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`AssemblerOptionSpec`類別參考。
+您可以設定運行時選項，以控制Assembler服務在執行作業時的行為。 例如，您可以設定一個選項，指示Assembler服務在遇到錯誤時繼續處理作業。 有關可設定的運行時選項的資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`AssemblerOptionSpec`類參考。
 
 **擷取PDF檔案的相關資訊**
 
@@ -114,7 +115,7 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
 
 [使用web service API判斷檔案是否符合PDF/A規範](/help/forms/developing/determining-whether-documents-pdf-a.md#determine-whether-a-document-is-pdf-a-compliant-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -175,7 +176,7 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
 
 [快速入門（SOAP模式）:使用Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api) （SOAP模式）判斷檔案是否與PDF/A相容
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -189,17 +190,17 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立PDF匯寫程式式用戶端。
 
    * 使用其預設建構子建立`AssemblerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`AssemblerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -218,7 +219,7 @@ Assembler服務返回的XML文檔指定輸入的PDF文檔是否與PDF/A相容。
    * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示輸入PDF文檔的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
-   * 通過為`MTOM`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`MTOM`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
    * 建立`MyMapOf_xsd_string_To_xsd_anyType`對象。 此收集物件用來儲存PDF檔案。
    * 建立`MyMapOf_xsd_string_To_xsd_anyType_Item`對象。
    * 為`MyMapOf_xsd_string_To_xsd_anyType_Item`對象的`key`欄位分配代表鍵名的字串值。 此值必須與DDX檔案中指定之PDF來源元素的值相符。
