@@ -9,11 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 0%
+source-wordcount: '793'
+ht-degree: 1%
 
 ---
 
@@ -60,7 +61,7 @@ ht-degree: 0%
    * 定義的資料目錄路徑將稱為&lt;mongo-dbpath>。
 
 
-* MongoDB可能與AEM在相同的主機上執行，或遠端執行。
+* MongoDB可能與在同一台主機上運AEM行或遠程運行。
 
 ### 啟動MongoDB {#start-mongodb}
 
@@ -72,7 +73,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果MongoDB在&#x200B;*AEM後啟動*,**restart**&#x200B;所有&#x200B;**AEM**&#x200B;例項，則它們會正確連接至MongoDB。
+>如果MongoDB在&#x200B;*之後啟動* AEM,**restart**&#x200B;所有&#x200B;**AEM**&#x200B;實例，則它們會正確連接到MongoDB。
 
 ### 示範製作選項：設定MongoDB複製副本集{#demo-production-option-setup-mongodb-replica-set}
 
@@ -108,7 +109,7 @@ ht-degree: 0%
    * 不需要任何服務。
    * 已安裝的Solr資料夾將稱為&lt;solr-install>。
 
-### 為AEM Communities {#configure-solr-for-aem-communities}設定Solr
+### 為AEM Communities配置Solr {#configure-solr-for-aem-communities}
 
 若要設定MSRP的Solr系列以進行示範，需要做兩項決定（如需詳細資訊，請選取主要檔案的連結）:
 
@@ -141,9 +142,9 @@ ht-degree: 0%
 
 ## 將MongoDB標識為公用儲存{#identify-mongodb-as-common-store}
 
-視需要啟動作者並發佈AEM例項。
+視需要啟動作AEM者並發佈例項。
 
-如果AEM在MongoDB啟動之前執行，則AEM例項將需要重新啟動。
+如AEM果在啟動MongoDB之前運行，則AEM需要重新啟動實例。
 
 請依照主要檔案頁面上的指示進行：[MSRP - MongoDB Common Store](msrp.md)
 
@@ -184,9 +185,9 @@ ht-degree: 0%
 
 1. 請確定MSRP已設定為預設提供者：
 
-   * 在所有作者和發佈AEM例項上，請重新造訪[儲存組態控制台](srp-config.md)或檢查AEM存放庫：
+   * 在所有作者和發AEM布實例上，請重新訪問[儲存配置控制台](srp-config.md)或檢查存AEM儲庫：
 
    * 在JCR中，如果[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)不包含[srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)節點，表示儲存提供商是JSRP。
    * 如果srpc節點存在並包含節點[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，則defaultconfiguration的屬性應將MSRP定義為預設提供程式。
 
-1. 請確定AEM在選取MSRP後重新啟動。
+1. 請確定在AEM選取MSRP後重新啟動。
