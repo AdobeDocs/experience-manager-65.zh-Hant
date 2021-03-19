@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 1. [在您在CRX中建](#uploadlogo) 立的檔案夾中上傳新標誌檔案。
 
 1. [設定](#createcss) CRX上的CSS以參考新標誌。
-1. 清除瀏覽器歷史記錄並刷新「建立對應UI」(Create Correponsement UI)[。](#refreshccrui)
+1. 清除瀏覽器歷史記錄並刷新「建立對應UI」(Create Correponsement UI)](#refreshccrui)。[
 
 ## 建立所需的資料夾結構{#creatingfolderstructure}
 
@@ -50,7 +51,7 @@ Commense Management可讓您重新品牌化其解決方案範本，以提升品�
 
 * 確保檔案在系統更新時安全無虞。 若是升級、功能套件或Hot Fix，則會更新/libs分支，如果您在/libs分支中代管變更，則會覆寫這些變更。
 * 幫助您不干擾當前系統／分支，如果您使用預設位置來儲存自定義檔案，則可能會出錯地取消分支。
-* 當AEM搜尋資源時，可協助您的資源獲得更高的優先順序。 AEM已設定為先搜尋/apps分支，再搜尋/libs分支以尋找資源。 此機制表示系統會使用您的覆蓋（以及此處定義的自訂）。
+* 協助您的資源在搜尋資源時AEM獲得更高的優先順序。 配置AEM為首先搜索/apps分支，然後搜索/libs分支以查找資源。 此機制表示系統會使用您的覆蓋（以及此處定義的自訂）。
 
 使用下列步驟在/apps分支中建立所需的資料夾結構：
 
