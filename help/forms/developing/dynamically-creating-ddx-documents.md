@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2200'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 # 動態建立DDX文檔{#dynamically-creating-ddx-documents}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 您可以動態建立DDX文檔，該文檔可用於執行Assembler操作。 動態建立DDX檔案可讓您在執行時期取得的DDX檔案中使用值。 若要動態建立DDX檔案，請使用屬於您所使用之程式設計語言的類別。 例如，如果您使用Java開發客戶端應用程式，請使用屬於`org.w3c.dom.*`包的類。 同樣地，如果您使用Microsoft .NET，請使用屬於`System.Xml`命名空間的類。
 
@@ -42,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需Assembler服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Assembler服務的詳細資訊，請參見[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
@@ -69,8 +70,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
 **建立PDF匯寫程式式用戶端**
 
@@ -106,7 +107,7 @@ ht-degree: 0%
 
 [使用web service API動態建立DDX檔案](/help/forms/developing/dynamically-creating-ddx-documents.md#dynamically-create-a-ddx-document-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -133,7 +134,7 @@ ht-degree: 0%
    * 呼叫`org.w3c.dom.Document`物件的`createElement`方法，以建立DDX檔案的根元素。 此方法會建立一個`Element`物件，代表根元素。 將表示元素名稱的字串值傳遞至`createElement`方法。 將返回值轉換為`Element`。 接著，呼叫其`setAttribute`方法，以設定子元素的值。 最後，呼叫標題元素的`appendChild`方法，將元素附加至標題元素，並將子項元素物件傳遞為引數。 下列程式碼行會顯示此應用程式邏輯：
       ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
-   * 呼叫`Document`物件的`createElement`方法，以建立`PDFsFromBookmarks`元素。 將表示元素名稱的字串值傳遞至`createElement`方法。 將返回值轉換為`Element`。 通過調用`setAttribute`方法，為`PDFsFromBookmarks`元素設定值。 呼叫DDX元素的`appendChild`方法，將`PDFsFromBookmarks`元素附加至`DDX`元素。 將`PDFsFromBookmarks`元素物件傳遞為引數。 下列程式碼行會顯示此應用程式邏輯：
+   * 呼叫`Document`物件的`createElement`方法，以建立`PDFsFromBookmarks`元素。 將表示元素名稱的字串值傳遞至`createElement`方法。 將返回值轉換為`Element`。 通過調用`setAttribute`方法來設定`PDFsFromBookmarks`元素的值。 呼叫DDX元素的`appendChild`方法，將`PDFsFromBookmarks`元素附加至`DDX`元素。 將`PDFsFromBookmarks`元素物件傳遞為引數。 下列程式碼行會顯示此應用程式邏輯：
 
       ` Element PDFsFromBookmarks = (Element)document.createElement("PDFsFromBookmarks");  PDFsFromBookmarks.setAttribute("prefix","stmt");  root.appendChild(PDFsFromBookmarks);`
 
@@ -190,7 +191,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API動態建立DDX檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -204,17 +205,17 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立PDF匯寫程式式用戶端。
 
    * 使用其預設建構子建立`AssemblerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
    * 獲取`AssemblerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -279,4 +280,4 @@ ht-degree: 0%
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
