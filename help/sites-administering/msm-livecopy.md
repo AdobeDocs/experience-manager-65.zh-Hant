@@ -1,10 +1,11 @@
 ---
 title: 建立和同步即時副本
 description: 瞭解如何建立及同步即時副本。
+feature: 多站點管理員
 translation-type: tm+mt
-source-git-commit: 1725f19d0676680ae89ad7ea39fa3ae1deaeb8a3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4170'
+source-wordcount: '4173'
 ht-degree: 0%
 
 ---
@@ -86,7 +87,7 @@ Blueprint設定可識別您要用作一或多個即時副本頁面來源的現�
 
 * [blueprint configuration](#creating-a-blueprint-configuration)所參考的頁面。
 * 和與配置無連接的頁面。
-* AEM也支援在其他即時副本的頁面內建立即時副本。
+* AEM也支援在其他即時副本的頁面中建立即時副本。
 
 唯一的區別是，源／藍圖頁上的&#x200B;**Rovolt**&#x200B;命令的可用性取決於藍圖配置是否引用了源：
 
@@ -235,7 +236,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
 >[!NOTE]
 >
->非同步轉出處理需要AEM 6.5.3.0或更新版本。 在舊版中，頁面會立即同步處理。
+>非同步轉出處AEM理需要6.5.3.0或更高版本。 在舊版中，頁面會立即同步處理。
 
 #### 從參考邊欄{#roll-out-a-blueprint-from-the-reference-rail}推出藍圖
 
@@ -261,7 +262,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
 >[!NOTE]
 >
->非同步轉出處理需要AEM 6.5.3.0或更新版本。 在舊版中，頁面會立即同步處理，除非已勾選&#x200B;**背景轉出**&#x200B;選項。
+>非同步轉出處AEM理需要6.5.3.0或更高版本。 在舊版中，頁面會立即同步處理，除非已勾選&#x200B;**背景轉出**&#x200B;選項。
 
 #### 從即時副本概述{#roll-out-a-blueprint-from-the-live-copy-overview}推出Blueprint
 
@@ -281,7 +282,7 @@ Blueprint頁面（在Blueprint設定中參考）提供您使用目前(Blueprint)
 
 >[!NOTE]
 >
->非同步轉出處理需要AEM 6.5.3.0或更新版本。 在舊版中，頁面會立即同步處理。
+>非同步轉出處AEM理需要6.5.3.0或更高版本。 在舊版中，頁面會立即同步處理。
 
 ### 同步即時副本{#synchronizing-a-live-copy}
 
