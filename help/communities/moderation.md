@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2110'
+source-wordcount: '2111'
 ht-degree: 3%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 3%
 
 # 協調控制台{#moderation-console}
 
-在AEM Communities中，管理員和社群協調者（指派為協調者的受信任社群成員）可從作者和發佈環境中大量協調社群內容[。](/help/communities/moderate-ugc.md)
+在AEM Communities，管理員和社群協調者（受信任的社群成員指派為協調者）可從作者和發佈環境中大量協調社群內容。[](/help/communities/moderate-ugc.md)
 
 管理員和社群協調者也可以在發佈環境中執行[內文協調](/help/communities/in-context.md)。
 
@@ -42,7 +43,7 @@ ht-degree: 3%
 
 ## 發佈環境訪問{#publish-environment-access}
 
-從已發佈的社群網站存取「協調」主控台是透過「管理」連結，當社群協調者登入時，此連結會顯示。
+從已發佈的社群網站存取「協調控制台」是透過「管理」連結，當社群協調者登入時，此連結會顯示。
 
 ![publishweretail](assets/publishweretail.png)
 
@@ -118,7 +119,7 @@ ht-degree: 3%
 
 每個類別中的篩選器是&#x200B;**OR**&#39;d，不同類別中的篩選器是&#x200B;**AND**&#39;d。
 
-例如，如果您同時勾選&#x200B;**Question**&#x200B;和&#x200B;**Answer**，您會看到內容是&#x200B;**Question** *或*&#x200B;和&#x200B;**Answer**。
+例如，如果您同時勾選&#x200B;**Question**&#x200B;和&#x200B;**Answer**，您會看到內容是&#x200B;**Question** *或***Answer**。
 
 但是，如果您勾選&#x200B;**Question**&#x200B;和&#x200B;**Pending**，則只會看到&#x200B;**Question**&#x200B;的內容，而且是&#x200B;**Pending**。
 
@@ -128,7 +129,7 @@ ht-degree: 3%
 
 ![searchicon](assets/searchicon.png)
 
-當篩選邊欄開啟時，「搜尋」圖示會切換側面板關閉。 不過，若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅限內容」選項。
+當篩選邊欄開啟時，「搜尋」圖示會切換側面板關閉。 不過，若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅內容」選項。
 
 #### 內容路徑 {#content-path}
 
