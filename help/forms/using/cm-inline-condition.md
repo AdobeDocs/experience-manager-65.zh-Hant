@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: interactive-communications, correspondence-management
 discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 ## 內嵌條件{#inline-conditions}
 
-AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴與表單資料模型（在互動式通訊中）或資料字典（以字母表示）相關的內容或資料的文字。 內嵌條件會根據條件評估為true或false來顯示特定內容。
+AEM Forms允許您在文字模組中使用內嵌條件，以自動轉換取決於表單資料模型（在互動式通訊中）或資料字典（在字母中）的相關內容或資料的文字。 內嵌條件會根據條件評估為true或false來顯示特定內容。
 
 條件對表單資料模型／資料字典或最終用戶提供的資料值執行計算。 使用內嵌條件，您可以節省時間並減少人為錯誤，同時建立高度情境化和個人化的互動式通訊／信件。
 
@@ -97,7 +98,7 @@ AEM Forms可讓您在文字模組中使用內嵌條件，以自動呈現依賴�
 
 ### 範例：在互動式通訊中使用重複，以格式化、建構及顯示信用卡交易清單{#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
-以下範例提供使用重複來建構並轉換互動式通訊中信用卡交易的步驟。
+以下範例提供使用重複來建構和轉換互動式通訊中信用卡交易的步驟。
 
 1. 在基於表單資料模型的文本文檔片段中，插入相關的表單資料模型對象（以及標籤所需的嵌入文本，如本例所示）:
 
