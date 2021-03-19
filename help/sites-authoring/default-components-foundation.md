@@ -1,7 +1,7 @@
 ---
 title: 基礎元件
 seo-title: 基礎元件
-description: 'null'
+description: 基礎元件
 seo-description: 'null'
 uuid: 3caf9123-ae58-4590-af2f-57ef076daf7f
 contentOwner: User
@@ -13,10 +13,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '7364'
-ht-degree: 8%
+source-wordcount: '7365'
+ht-degree: 9%
 
 ---
 
@@ -25,21 +25,21 @@ ht-degree: 8%
 
 >[!CAUTION]
 >
->AEM 6.5現在已淘汰大部分的Foundation元件。如需詳細資訊，請參閱[發行說明](/help/release-notes/deprecated-removed-features.md)。
+>大部分的Foundation元件現在已在AEM6.5中停用。如需詳細資訊，請參閱[發行說明](/help/release-notes/deprecated-removed-features.md)。
 >
->Adobe建議在AEM專案中運用更現代且更具擴充性的[核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)。 這些是[We.Retail範例內容](/help/sites-developing/we-retail.md)的一部分，也可以是[個別安裝，由您的管理員用於開發。](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html)
+>Adobe建議在專案中運用更現代化且可擴充的[核心元件&lt;a1/AEM>。 ](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)這些是[We.Retail範例內容](/help/sites-developing/we-retail.md)的一部分，也可以是[個別安裝，由您的管理員用於開發。](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html)
 >
->您可以使用[AEM Modestance Tools Suite](https://opensource.adobe.com/aem-modernize-tools/)重新調整您以Foundation Components為基礎的網站，以使用核心元件。
+>您可以使用[最新化工具套件](https://opensource.adobe.com/aem-modernize-tools/)AEM來重新調整您以Foundation Components為基礎的網站，以使用核心元件。
 
-基礎元件是專為針對標準網頁製作內容而設計。 它們會構成AEM標準安裝的現成可用元件子集。
+基礎元件是專為針對標準網頁製作內容而設計。 它們構成了標準安裝的現成可用元件的子集AEM。
 
 有些可立即透過元件瀏覽器使用，而有些則可使用[設計模式](/help/sites-authoring/default-components-designmode.md)（如果頁面是以靜態範本為基礎）或[編輯範本](/help/sites-authoring/templates.md)（如果頁面是以可編輯的範本為基礎）。
 
-支援使用基礎元件，但大部分已經過時，並由核心元件取代，因為核心元件提供更多擴充性和彈性。
+支援使用基礎元件，但大部分都已過時，並由核心元件取代，因為核心元件提供更多擴充性和彈性。
 
 >[!NOTE]
 >
->本節僅討論標準AEM安裝中現成可用的元件。
+>本節僅討論標準安裝中現成可用的元件AEM。
 >
 >視您的例項而定，您可能已針對您的需求明確開發自訂元件。 這些元件甚至可能與此處討論的某些元件名稱相同。
 
@@ -76,7 +76,7 @@ ht-degree: 8%
 
 >[!CAUTION]
 >
->此Foundation元件已過時。 Adobe建議改用[影像核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)。
+>此Foundation元件已過時。 Adobe建議改用[映像核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html)。
 
 「最適化影像」基礎元件會產生影像，調整大小以符合開啟網頁的視窗。 若要使用元件，請從檔案系統或DAM提供影像資源。 當網頁開啟時，網頁瀏覽器會下載已調整大小的影像副本，以適合目前的視窗。
 
@@ -98,7 +98,7 @@ ht-degree: 8%
 
 >[!CAUTION]
 >
->AEM不支援最適化轉譯的GIF動畫檔案。
+>最適化轉譯不支援動AEM畫GIF檔案。
 
 #### 影像大小與品質{#images-sizes-and-quality}
 
@@ -226,7 +226,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->您可以為Adobe Experience Manager建立自訂轉盤元件，以顯示位於AEM DAM中的數位資產。 如需詳細資訊，請參閱[建立Adobe Experience Manager的自訂轉盤元件](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)。
+>您可以為Adobe Experience Manager建立自訂轉盤元件，以顯示位於AEMDAM中的數位資產。 如需詳細資訊，請參閱[建立Adobe Experience Manager的自訂轉盤元件](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)。
 
 ### 圖表 {#chart}
 
@@ -234,7 +234,7 @@ ht-degree: 8%
 >
 >此Foundation元件已過時。 Adobe建議改用[核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
 
-圖表元件可讓您新增長條圖、折線圖或圓形圖。 AEM會從您提供的資料建立圖表。 您可以直接在「資料」索引標籤中輸入，或複製並貼上試算表，以提供資料。
+圖表元件可讓您新增長條圖、折線圖或圓形圖。 從AEM您提供的資料建立圖表。 您可以直接在「資料」索引標籤中輸入，或複製並貼上試算表，以提供資料。
 
 * **資料**
 
@@ -261,7 +261,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->您可以建立自訂AEM圖表控制項，以顯示位於AEM JCR中的資料。 如需詳細資訊，請參閱[在圖表中顯示Adobe Experience Manager資料。](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html)
+>您可以建立自訂AEM圖表控制項，以顯示位於AEMJCR中的資料。 如需詳細資訊，請參閱[在圖表中顯示Adobe Experience Manager資料。](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html)
 
 ### 內容片段 {#content-fragment}
 
@@ -295,7 +295,7 @@ ht-degree: 8%
    * **可**
 在產生的網頁上下載FileFile。從內容搜尋器拖曳資產，或按一下區域以上傳可供下載的檔案。
 
-下列範例顯示Geometrixx中的Download元件：
+下列範例顯示Geometrixx中的下載元件：
 
 ![dc_download_use](assets/dc_download_use.png)
 
@@ -305,7 +305,7 @@ ht-degree: 8%
 >
 >此Foundation元件已過時。 Adobe建議改用[核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
 
-外部應用程式整合元件(**External**)可讓您使用iframe將外部應用程式內嵌至AEM頁面。
+外部應用程式整合元件(**External**)可讓您使用iframe將外部應用程式內嵌AEM至頁面。
 
 * **外部**
 
@@ -322,7 +322,7 @@ ht-degree: 8%
    * **寬度和高度
 **定義iframe的大小
 
-外部應用程式已整合在AEM頁面的段落系統中；例如，當使用`https://en.wikipedia.org/wiki/Main_Page`的Target應用程式時：
+將外部應用程式整合在頁面的段落AEM系統中；例如，當使用`https://en.wikipedia.org/wiki/Main_Page`的Target應用程式時：
 
 ![chlimage_1-90](assets/chlimage_1-90.png)
 
@@ -350,7 +350,7 @@ Flash元件可讓您載入Flash影片。 您可將Flash資產從內容搜尋器�
 
    * **大小**
 
-      影片顯示區域的尺寸（像素）。
+      Dimension（以像素為單位），以顯示影片區域。
 
 * **替代影像**
 
@@ -372,7 +372,7 @@ Flash元件可讓您載入Flash影片。 您可將Flash資產從內容搜尋器�
 
    * **最低版本**
 
-      執行影片所需的Adobe Flash Player最低版本。 預設值為9.0.0。
+      執行影片所需的最低AdobeFlash Player版本。 預設值為9.0.0。
 
    * **屬性**
 
@@ -382,7 +382,7 @@ Flash元件可讓您載入Flash影片。 您可將Flash資產從內容搜尋器�
 
 >[!CAUTION]
 >
->此Foundation元件已過時。 Adobe建議改用[影像核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)。
+>此Foundation元件已過時。 Adobe建議改用[映像核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)。
 
 影像元件根據指定的參數顯示影像和附帶的文本。
 
@@ -412,7 +412,7 @@ Flash元件可讓您載入Flash影片。 您可將Flash資產從內容搜尋器�
 >
 >Internet Explorer使用者需要上傳影像，然後按一下「確定」，然後重新開啟影像，在預覽中查看已上傳的檔案，並能夠執行修改（亦即裁切）。****
 >
->如需AEM使用之HTML5功能的詳細資訊，請參閱[認證平台](/help/release-notes/release-notes.md#certifiedplatforms)一節。
+>如需使用之HTML5功能的詳細資訊，請參閱[認證平台](/help/release-notes/release-notes.md#certifiedplatforms)一節AEM。
 
 載入影像時，您可以設定下列項目：
 
@@ -616,7 +616,7 @@ List元件允許您配置顯示清單的搜索標準：
 >
 >此Foundation元件已過時。 Adobe建議改用[內容片段核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)。
 
-**Reference**&#x200B;元件可讓您參考AEM網站（目前例項內）其他頁面的文字。 然後，參考段落的內容會像出現在目前頁面一樣顯示。 當來源段落變更時（可能需要重新整理頁面），內容將會更新。
+**Reference**&#x200B;元件可讓您參考網站（目前例項內）另一AEM頁的文字。 然後，參考段落的內容會像出現在目前頁面一樣顯示。 當來源段落變更時（可能需要重新整理頁面），內容將會更新。
 
 * **段落引用**
 
@@ -769,7 +769,7 @@ List元件允許您配置顯示清單的搜索標準：
 
 >[!CAUTION]
 >
->此Foundation元件已過時。 Adobe建議改用[Text Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
+>此Foundation元件已過時。 Adobe建議改用[文字核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
 
 >[!NOTE]
 >
@@ -818,7 +818,7 @@ List元件允許您配置顯示清單的搜索標準：
 
 >[!CAUTION]
 >
->此Foundation元件已過時。 Adobe建議改用[Text Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
+>此Foundation元件已過時。 Adobe建議改用[文字核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
 
 >[!NOTE]
 >
@@ -841,13 +841,13 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由[Rich 
 
 #### 就地編輯{#inplace-editing}
 
-除了以對話方塊為基礎的Rich Text編輯模式，AEM也提供[Inplace Editing](/help/sites-authoring/editing-content.md)，可直接編輯顯示在頁面版面中的文字。
+除了以對話方塊為基礎的Rich Text編輯模式，AEM還提供了[Inplace Editing](/help/sites-authoring/editing-content.md)，可直接編輯顯示在頁面版面中的文字。
 
 ### 文字和影像 {#text-image}
 
 >[!CAUTION]
 >
->此Foundation元件已過時。 Adobe建議改用[Image](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)和[文字核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
+>此Foundation元件已過時。 Adobe建議改用[Image](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)和[Text Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
 
 「文字與影像」元件會新增文字區塊和影像。 您也可以個別新增和編輯文字和影像。 如需詳細資訊，請參閱[Text](#text)和[Image](#image)元件。
 
@@ -895,7 +895,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由[Rich 
 
 >[!CAUTION]
 >
->此Foundation元件已過時。 Adobe建議改用[Title Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)。
+>此Foundation元件已過時。 Adobe建議改用[標題核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)。
 
 標題元件可以：
 
@@ -952,12 +952,12 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由[Rich 
 >
 >* `.mp4`
 >* `Ogg`
->* `FLV` （Flash視訊）
+>* `FLV` (Flash視訊)
 
 
 ## 欄 {#columns}
 
-欄是控制AEM中內容版面配置的機制。 在用於建立兩列和／或三列的標準安裝元件中提供了。
+欄是控制中內容版面配置的機制AEM。 在用於建立兩列和／或三列的標準安裝元件中提供了。
 
 以下示例顯示正在使用的2列元件。 可以對新元件使用佔位符：
 
@@ -987,13 +987,13 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由[Rich 
 >
 >已不再提倡來自元件的Foundation元件。 Adobe建議改用[核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
 
-表單元件可用來建立表單，讓訪客提交輸入。 表單和表單元件可用於收集包括用戶反饋（例如，客戶滿意度調查表）和用戶資訊（例如，用戶註冊）的資訊。
+表單元件可用來建立表單，讓訪客提交輸入。 Forms和表單元件可用來收集包括使用者意見（例如，客戶滿意度問卷）和使用者資訊（例如，使用者註冊）的資訊。
 
 >[!NOTE]
 >
->如需AEM Forms的相關資訊，請參閱[AEM Forms說明](/help/forms/home.md)。
+>有關AEM Forms的資訊，請參見[AEM Forms幫助](/help/forms/home.md)。
 
-表單是由數種不同的元件建立：
+Forms是由幾個不同的組成部分組成的：
 
 * **表單**
 
@@ -1013,7 +1013,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由[Rich 
 
 >[!NOTE]
 >
->有關進一步開發和自訂表單的資訊，請參閱[開發表單頁面](/help/sites-developing/developing-forms.md)。 這包括添加操作、約束、預載入欄位以及使用指令碼調用服務以採取操作等。
+>有關進一步開發和自訂表格的資訊，請參閱[開發Forms頁面](/help/sites-developing/developing-forms.md)。 這包括添加操作、約束、預載入欄位以及使用指令碼調用服務以採取操作等。
 
 ### （多個）表單元件的常見設定{#settings-common-to-many-form-components}
 
@@ -1136,7 +1136,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由[Rich 
    * **動作類型**
 
       表單需要動作。 動作會定義使用者提交的資料所觸發以執行的作業（類似HTML中的action=）。 有些需要相應的&#x200B;**Action Configuration**。
-標準AEM安裝包含一系列動作類型：
+標準安裝中包含一系列操作類AEM型：
 
       * **帳戶請求**
       * **建立內容**
@@ -1175,7 +1175,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，其功能由[Rich 
 
    * **用戶端驗證**
 
-      指出此表單是否需要用戶端驗證（伺服器驗證&#x200B;*always*）。 這可以與&#x200B;**Forms Captcha**&#x200B;元件一起實現。
+      指出此表單是否需要用戶端驗證（伺服器驗證&#x200B;*always*）。 這可以與&#x200B;**FormsCaptcha**&#x200B;元件一起實現。
 
    * **驗證資源類型**
 
@@ -1439,7 +1439,7 @@ Captcha元件要求使用者輸入螢幕上顯示的英數字串。 字串會隨
 
 >[!NOTE]
 >
->您也可以自訂表格，以根據表格中其他欄位的值顯示或隱藏特定表格元件。 只有在特定條件下才需要表格欄位時，變更表格欄位的可見性很實用。
+>您也可以自訂表單，根據表單中其他欄位的值，顯示或隱藏特定的表單元件。 只有在特定條件下才需要表格欄位時，變更表格欄位的可見性很實用。
 >
 >請參閱[顯示和隱藏表單元件](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)。
 
