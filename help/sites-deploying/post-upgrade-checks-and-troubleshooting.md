@@ -10,10 +10,11 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: 5a67aa9f-e5eb-4d7e-89da-2ee1a45eb8ce
 docset: aem65
+feature: 升級
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1830'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 ## 升級後檢查{#post-upgrade-checks}
 
-在[就地升級](/help/sites-deploying/in-place-upgrade.md)之後，應執行下列活動以完成升級。 假設AEM已從6.5 jar開始，且已部署升級的程式碼庫。
+在[就地升級](/help/sites-deploying/in-place-upgrade.md)之後，應執行下列活動以完成升級。 假設已AEM從6.5 jar開始，且已部署升級的代碼庫。
 
 * [驗證日誌是否成功升級](#main-pars-header-290365562)
 
@@ -31,12 +32,12 @@ ht-degree: 0%
 
 * [驗證Oak版本](#main-pars-header-1293049773)
 
-* [檢查PreUpgradeBackup資料夾](#main-pars-header-988995987)
+* [InspectPreUpgradeBackup資料夾](#main-pars-header-988995987)
 
 * [頁面的初始驗證](#main-pars-header-20827371)
-* [套用AEM Service Pack](#main-pars-header-215142387)
+* [應用AEMService Pack](#main-pars-header-215142387)
 
-* [移轉AEM功能](#main-pars-header-1434457709)
+* [移轉功AEM能](#main-pars-header-1434457709)
 
 * [驗證計畫維護配置](#main-pars-header-1552730183)
 
@@ -71,7 +72,7 @@ ht-degree: 0%
 
 **error.log**
 
-在使用目標版本jar啟動AEM期間和之後，應仔細檢查error.log。 應審查任何警告或錯誤。 一般而言，最好在記錄檔開頭尋找問題。 日誌中稍後發生的錯誤，實際上可能是檔案中較早調出的根本原因的副作用。 如果發生重複錯誤和警告，請參閱下面的[分析升級問題。](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade)
+在啟動使用目標版本jar期間和之後，應仔細檢AEM查error.log。 應審查任何警告或錯誤。 一般而言，最好在記錄檔開頭尋找問題。 日誌中稍後發生的錯誤，實際上可能是檔案中較早調出的根本原因的副作用。 如果發生重複錯誤和警告，請參閱下面的[分析升級問題。](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade)
 
 ### 驗證OSGi Bundles {#verify-osgi-bundles}
 
@@ -81,25 +82,25 @@ ht-degree: 0%
 
 升級後，您應該會看到Oak版本已更新為&#x200B;**1.10.2**。 若要確認Oak版本，請導覽至OSGi主控台，並查看與Oak bundles相關的版本：Oak Core、Oak Commons、Oak Segment Tar。
 
-### 檢查PreUpgradeBackup資料夾{#inspect-preupgradebackup-folder}
+### InspectPreUpgradeBackup資料夾{#inspect-preupgradebackup-folder}
 
-在升級期間，AEM會嘗試備份自訂項目，並將它們儲存在`/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`下方。 要在CRXDE Lite中查看此資料夾，您可能需要[臨時啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)。
+在升級期AEM間，將嘗試備份自定義，並將其儲存在`/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`下。 要以CRXDE Lite查看此資料夾，您可能需要[臨時啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)。
 
 具有時間戳的資料夾應具有名為`mergeStatus`的屬性，其值應為`COMPLETED`。 **to-process**&#x200B;資料夾應為空，**被覆寫的**&#x200B;節點指示在升級期間覆蓋的節點。 **perting**&#x200B;節點下方的內容表示升級期間無法安全合併的內容。 如果您的實作依賴任何子節點（而且您的升級程式碼套件尚未安裝），則需要手動合併這些節點。
 
-在本練習後，如果在「舞台(Stage)」或「生產(Production)」環境中，則禁用CRXDE Lite。
+如果在「舞台(Stage)」或「生產(Production)」環境中，請停用本練習後的CRXDE Lite。
 
 ### 頁面{#initial-validation-of-pages}的初始驗證
 
-對AEM中的數個頁面執行初始驗證。 如果升級Author環境，則開啟「開始」頁和「歡迎」頁(`/aem/start.html`、`/libs/cq/core/content/welcome.html`)。 在「作者」和「發佈」環境中，都會開啟數個應用程式頁面，並進行煙霧測試，以便正確顯示。 如果發生任何問題，請咨詢`error.log`以進行故障診斷。
+對中的幾個頁面執行初始驗證AEM。 如果升級Author環境，則開啟「開始」頁和「歡迎」頁(`/aem/start.html`、`/libs/cq/core/content/welcome.html`)。 在「作者」和「發佈」環境中，都會開啟數個應用程式頁面，並進行煙霧測試，以便正確顯示。 如果發生任何問題，請咨詢`error.log`以進行故障診斷。
 
-### 套用AEM Service Pack {#apply-aem-service-packs}
+### 應AEM用Service Pack {#apply-aem-service-packs}
 
-套用任何相關的AEM 6.5 Service Pack（如果已發行）。
+如果相關AEM的6.5 Service Pack已發行，請套用它們。
 
-### 移轉AEM功能{#migrate-aem-features}
+### 移AEM轉功能{#migrate-aem-features}
 
-AEM中的數項功能需要升級後執行其他步驟。 在[升級程式碼與自訂](/help/sites-deploying/upgrading-code-and-customizations.md)頁面上，可找到這些功能與在AEM 6.5中移轉的步驟的完整清單。
+升級後，AEM需要執行其他步驟。 在[升級代碼和定制](/help/sites-deploying/upgrading-code-and-customizations.md)頁上，可以找到這些功能和在AEM6.5中遷移它們的步驟的完整清單。
 
 ### 驗證計畫維護配置{#verify-scheduled-maintenance-configurations}
 
@@ -129,7 +130,7 @@ AEM中的數項功能需要升級後執行其他步驟。 在[升級程式碼與
 
 ## 分析升級的問題{#analyzing-issues-with-upgrade}
 
-本節包含AEM 6.3升級程式中可能遇到的問題案例。
+本節包含升級至6.3的程式中可能會遇到的AEM問題案例。
 
 這些案例應有助於追蹤升級相關問題的根本原因，並有助於識別專案或產品特定問題。
 
@@ -141,25 +142,25 @@ AEM中的數項功能需要升級後執行其他步驟。 在[升級程式碼與
 
 ### 升級未運行{#the-upgrade-did-not-run}
 
-在開始準備步驟之前，請務必使用java -jar aem-quickstart.jar命令先執行&#x200B;**source**&#x200B;實例。 為確保快速啟動。properties檔案正確生成，必須執行此操作。 如果缺少，升級將無法運作。 或者，您也可以查看源實例安裝資料夾中的`crx-quickstart/conf`下方，檢查檔案是否存在。 此外，當啟動AEM以開始升級時，必須使用java -jar aem-quickstart.jar命令來執行它。 從開始指令碼開始時，不會在升級模式中啟動AEM。
+在開始準備步驟之前，請務必使用java -jar aem-quickstart.jar命令先執行&#x200B;**source**&#x200B;實例。 為確保快速啟動。properties檔案正確生成，必須執行此操作。 如果缺少，升級將無法運作。 或者，您也可以查看源實例安裝資料夾中的`crx-quickstart/conf`下方，檢查檔案是否存在。 此外，當開AEM始啟動升級時，必須使用java -jar aem-quickstart.jar命令執行它。 從啟動指令碼啟動不會在升級模AEM式下啟動。
 
 ### 包和包無法更新{#packages-and-bundles-fail-to-update-}
 
 如果在升級期間無法安裝套件，則其所包含的套件也不會更新。 此類問題通常是由資料存放區配置錯誤所造成。 它們也會以&#x200B;**ERROR**&#x200B;和&#x200B;**WARN**&#x200B;消息的形式出現在error.log中。 由於在大多數情況下預設登錄可能無法運行，因此您可以直接使用CRXDE來檢查和查找配置問題。
 
-### 某些AEM Bundles不會切換至活動狀態{#some-aem-bundles-are-not-switching-to-the-active-state}
+### 某些AEM束沒有切換到活動狀態{#some-aem-bundles-are-not-switching-to-the-active-state}
 
 如果捆綁包未啟動，則應檢查是否有任何未滿足的從屬關係。
 
 如果出現此問題，但是它基於失敗的軟體包安裝，導致軟體包無法升級，它們將被視為與新版本不相容。 有關如何診斷此故障的詳細資訊，請參見上述&#x200B;**軟體包和捆綁失敗更新**。
 
-此外，建議您比較最新AEM 6.5執行個體的套件清單與升級的執行個體，以偵測未升級的套件。 這將提供`error.log`中更詳細的搜尋範圍。
+還建議將新鮮的6.5實例的包清單與升級的AEM包清單進行比較，以檢測未升級的包。 這將提供`error.log`中更詳細的搜尋範圍。
 
 ### 自訂組合未切換至活動狀態{#custom-bundles-not-switching-to-the-active-state}
 
 如果您的自訂搭售未切換至作用中狀態，則很可能有程式碼未匯入變更API。 這通常會導致不滿足要求的從屬關係。
 
-已移除的API應在先前的某個版本中標示為已過時。 您可能會在此取代通知中找到有關直接轉換程式碼的指示。 Adobe的目標是盡可能建立語義版本，讓版本能夠指示變更的中斷。
+已移除的API應在先前的某個版本中標示為已過時。 您可能會在此取代通知中找到有關直接轉換程式碼的指示。 Adobe的目標是盡可能進行語義版本修訂，以便版本可以指示斷開更改。
 
 此外，最好檢查是否絕對需要導致問題的更改，如果不需要，請進行恢復。 此外，在嚴格的語義版本修訂後，檢查軟體包導出的版本增加是否超出必要。
 
@@ -167,7 +168,7 @@ AEM中的數項功能需要升級後執行其他步驟。 在[升級程式碼與
 
 如果某些UI功能在升級後無法正常運作，您應先檢查介面的自訂覆蓋。 某些結構可能已變更，而覆蓋可能需要更新或已過時。
 
-接著，檢查是否有任何Javascript錯誤，這些錯誤可追蹤至自訂新增的擴充功能，這些擴充功能會連結至用戶端程式庫。 自訂CSS也會套用相同的功能，這可能會對AEM版面造成問題。
+接著，檢查是否有任何Javascript錯誤，這些錯誤可追蹤至自訂新增的擴充功能，這些擴充功能會連結至用戶端程式庫。 自訂CSS也會套用相同的功能，可能會造成版面配置的AEM問題。
 
 最後，檢查Javascript可能無法處理的設定錯誤。 通常情況下，副檔名會不當停用。
 
@@ -201,6 +202,6 @@ grep -v UnrelatedErrorString
 
 在少數情況下，也可以找到WARN訊息，因為可能存在導致此狀態的有效案例，而應用程式不一定能判斷這是否為實際錯誤。 請確定您也參考這些訊息。
 
-### 聯絡Adobe支援{#contacting-adobe-support}
+### 聯繫Adobe支援{#contacting-adobe-support}
 
 如果您已閱讀本頁的建議，但仍有問題，請聯絡Adobe支援。 為了盡可能向負責您案例的支援工程師提供更多資訊，請確保包含升級的upgrade.log檔案。
