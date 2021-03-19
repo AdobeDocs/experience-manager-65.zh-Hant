@@ -1,16 +1,18 @@
 ---
 title: 影像品質最佳化的最佳作法
-description: 瞭解在動態媒體中最佳化影像品質的最佳範例
+description: 瞭解在Dynamic Media最佳化影像品質的最佳範例
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
+feature: 資產管理
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1454'
 ht-degree: 5%
 
 ---
@@ -20,12 +22,12 @@ ht-degree: 5%
 
 最佳化影像品質可能相當耗時，因為許多因素都有助於產生可接受的結果。 結果部分是主觀的，因為個體對影像質量的看法不同。 結構化實驗是關鍵。
 
-AEM包含超過100種動態媒體影像傳送指令，可用來調整和最佳化影像和呈現結果。 以下准則可協助您使用一些基本指令和最佳實務，簡化程式並快速達成良好效果。
+包AEM含超過100個Dynamic Media影像傳送指令，以調整和最佳化影像和轉譯結果。 以下准則可協助您使用一些基本指令和最佳實務，簡化程式並快速達成良好效果。
 
 ## 影像格式(`&fmt=`){#best-practices-for-image-format-fmt}的最佳實務
 
 * JPG或PNG是提供高品質影像的最佳選擇，而且大小和重量都可管理。
-* 如果URL中未提供格式命令，則動態媒體影像傳送預設為JPG以傳送。
+* 如果URL中未提供格式命令，Dynamic Media影像傳送預設為JPG以傳送。
 * JPG壓縮比為10:1，通常會產生較小的影像檔案大小。 PNG的壓縮比約為2:1，但在某些情況下除外，例如當影像包含白色背景時。 不過，PNG檔案大小通常比JPG檔案大。
 * JPG使用有損壓縮，這表示在壓縮期間會捨棄圖片元素（像素）。 PNG則使用無損壓縮。
 * JPG通常會壓縮像片影像，其精確度比具有銳利邊緣和對比的合成影像高。
@@ -44,24 +46,24 @@ AEM包含超過100種動態媒體影像傳送指令，可用來調整和最佳�
 
 ## 影像銳利化的最佳範例{#best-practices-for-image-sharpening}
 
-影像銳利化是控制網站上影像最複雜的方面，也是常有錯誤發生的地方。 請花點時間，參考下列實用資源，進一步瞭解銳利化和反銳利化遮色片在AEM中的運作方式：
+影像銳利化是控制網站上影像最複雜的方面，也是常有錯誤發生的地方。 請花點時間參考下列實用資源，進一步瞭解銳利化和反銳AEM化遮色片的運作方式：
 
-最佳實務白皮書[「在Adobe Dynamic Media Classic中銳利化影像」也適用於AEM。](/help/assets/assets/sharpening_images.pdf)
+最佳實務白皮書[「銳利化AdobeDynamic Media經典影像」(Sharpening images in Section Design Classic)也適AEM用於。](/help/assets/assets/sharpening_images.pdf)
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
 
-有了AEM，您就可以在擷取、傳送或兩者上銳利化影像。 但是，在大多數情況下，您只應使用一種或另一種方法來銳利化影像，但不應同時使用兩種方法。 在URL上的傳送時銳利化影像，通常能提供最佳效果。
+您可AEM以在擷取、傳送或兩者上銳利化影像。 但是，在大多數情況下，您只應使用一種或另一種方法來銳利化影像，但不應同時使用兩種方法。 在URL上的傳送時銳利化影像，通常能提供最佳效果。
 
 您可使用兩種影像銳利化方法：
 
-* 簡單銳利化(`&op_sharpen`)-與Photoshop中使用的銳利化濾鏡類似，簡單銳利化會將基本銳利化套用至動態調整大小後的影像最終檢視。 但是，此方法不可由用戶配置。 最佳實務是除非有需要，否則不要使用&amp;op_sharpen。
+* 簡單銳利化(`&op_sharpen`)-與Photoshop使用的銳利化濾鏡類似，簡單銳利化會在動態調整大小後將基本銳利化套用至影像的最終檢視。 但是，此方法不可由用戶配置。 最佳實務是除非有需要，否則不要使用&amp;op_sharpen。
 * 銳利化遮色片(`&op_USM`)-銳利化遮色片是業界標準的銳利化濾鏡。 最佳實務是依照下列准則，使用銳利化遮色片銳利化影像。 遮色片銳利化可讓您控制下列三個參數：
 
    * `&op_sharpen=`金額，半徑，閾值
 
       * **[!UICONTROL 金]** 額（0-5，效果強度）。
-      * **[!UICONTROL 半徑]** （0-250,「銳利化線」在銳化物件周圍繪製的寬度，以像素為單位測量）。
+      * **[!UICONTROL 半徑]** （0-250,「銳利化線條」在銳利化物件周圍繪製的寬度，以像素為單位測量）。
 
          請記住，參數半徑和量會相互作用。 減小半徑可以通過增加量來補償。 半徑允許更精細的控制，因為低值只會銳化邊緣像素，而高值會銳化更寬的像素帶。
 
@@ -70,9 +72,9 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
          此參數可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素，濾鏡會銳化這些像素。**[!UICONTROL threshold]**&#x200B;參數有助於避免色彩相似的區域過度銳利化，例如膚色。 例如，閾值為12會忽略膚色亮度的微小變化，以避免加上「雜訊」，同時仍會加上邊緣對比度至高對比區域，例如睫毛與皮膚相遇的區域。
       如需如何設定這三個參數的詳細資訊，包括搭配篩選器使用的最佳實務，請參閱下列資源：
 
-      「銳利化影像」的AEM說明主題。
+      銳AEM化影像的說明主題。
 
-      最佳實務白皮書[Sharpening images in Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf)。
+      最佳實務白皮書[在AdobeDynamic Media經典影像銳利化。](/help/assets/assets/sharpening_images.pdf)
 
    * AEM也可讓您控制第四個參數：單色(0,1)。 此參數確定是否使用值0將銳利化遮色片分別套用至每個顏色元件，或使用值1將遮色片套用至影像亮度／強度。
 
@@ -118,13 +120,13 @@ jpegSize是一個有用的參數，如果您想要確保影像不會超過特定
 
 這種設定組合在大多數情況下都能產生出色的效果。
 
-如果影像需要進一步最佳化，請從半徑設定為0.2或0.3開始，逐漸微調銳利化（遮色片銳利化）參數。然後，逐漸將數量從1.75增加到最多4（相當於Photoshop的400%）。 檢查是否達到所需結果。
+如果影像需要進一步最佳化，請從半徑設定為0.2或0.3開始，逐漸微調銳利化（遮色片銳利化）參數。然後，逐步將這一數量從1.75增加到最多4(相當於Photoshop的400%)。 檢查是否達到所需結果。
 
 如果銳利化結果仍不令人滿意，請以小數點增量增加半徑。 對於每個小數增量，以1.75重新啟動該量，並逐漸將其增加到4。 重複此程式，直到達到所需結果。 雖然上述價值觀是創意工作室已證實的方法，但請記住，您可以從其他價值觀開始，並遵循其他策略。 結果是否滿意是主觀的，因此結構化實驗是關鍵。
 
 在實驗時，您也會發現下列一般建議有助於最佳化工作流程：
 
 * 直接在URL上即時嘗試並測試不同的參數。
-* 請記住，您可以將「動態媒體影像伺服」指令群組至影像預設集。 影像預設集基本上是具有自訂預設集名稱（例如`$thumb_low$`和`&product_high$`）的URL命令巨集。 URL路徑中的自訂預設集名稱會呼叫這些預設集。 這些功能可協助您管理網站上不同影像使用模式的命令和品質設定，並縮短URL的整體長度。
-* AEM也提供更進階的方式來調整影像品質，例如在擷取時套用銳利化影像。 若是進階使用案例，若您可以選擇進一步調整和最佳化演算結果，[Adobe專業服務](https://www.adobe.com/experience-cloud/consulting-services.html)可協助您取得自訂見解和最佳實務。
+* 請記住，您可以將「Dynamic Media影像伺服」指令群組至影像預設集。 影像預設集基本上是具有自訂預設集名稱（例如`$thumb_low$`和`&product_high$`）的URL命令巨集。 URL路徑中的自訂預設集名稱會呼叫這些預設集。 這些功能可協助您管理網站上不同影像使用模式的命令和品質設定，並縮短URL的整體長度。
+* 也提AEM供更進階的方式來調整影像品質，例如在擷取時套用銳利化影像。 若是進階使用案例，若您可以選擇此選項來進一步調整和最佳化演算結果，[Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html)可協助您自訂見解和最佳實務。
 
