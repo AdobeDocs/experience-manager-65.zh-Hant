@@ -1,18 +1,19 @@
 ---
 title: DSRP —— 關係資料庫儲存資源提供程式
 seo-title: DSRP —— 關係資料庫儲存資源提供程式
-description: 設定AEM Communities，以使用關聯式資料庫做為其公用儲存
-seo-description: 設定AEM Communities，以使用關聯式資料庫做為其公用儲存
+description: 設定AEM Communities以使用關係資料庫作為其公共儲存
+seo-description: 設定AEM Communities以使用關係資料庫作為其公共儲存
 uuid: f364e7da-ee54-4ab2-a630-7ec9239005ac
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '649'
 ht-degree: 2%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 2%
 
 ## 關於DSRP {#about-dsrp}
 
-當AEM Communities設定為使用關係式資料庫做為其公用儲存時，使用者產生的內容(UGC)可從所有作者和發佈執行個體存取，而不需同步或複製。
+將AEM Communities配置為使用關係資料庫作為其公共儲存時，用戶生成的內容(UGC)可從所有作者和發佈實例中訪問，而無需同步或複製。
 
 另請參見[SRP選項的特性](working-with-srp.md#characteristics-of-srp-options)和[建議拓撲](topologies.md)。
 
