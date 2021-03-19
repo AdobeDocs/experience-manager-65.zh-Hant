@@ -1,8 +1,8 @@
 ---
-title: 轉換互動式PDF表單
-seo-title: 轉換互動式PDF表單
-description: 使用Forms服務，將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 您可以使用Forms服務，使用Java API和Web服務API來轉換互動式表單。
-seo-description: 使用Forms服務，將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 您可以使用Forms服務，使用Java API和Web服務API來轉換互動式表單。
+title: 轉換互動式PDF forms
+seo-title: 轉換互動式PDF forms
+description: 使用Forms服務，向用戶端裝置（通常是網頁瀏覽器）轉譯互動式PDF forms，以收集使用者的資訊。 您可以使用Forms服務，使用Java API和Web服務API來轉換互動式表單。
+seo-description: 使用Forms服務，向用戶端裝置（通常是網頁瀏覽器）轉譯互動式PDF forms，以收集使用者的資訊。 您可以使用Forms服務，使用Java API和Web服務API來轉換互動式表單。
 uuid: df2a4dc8-f19e-49de-850f-85a204102631
 contentOwner: admin
 content-type: reference
@@ -10,28 +10,29 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2529'
 ht-degree: 0%
 
 ---
 
 
-# 轉換互動式PDF表單{#rendering-interactive-pdf-forms}
+# 呈現互動式PDF forms{#rendering-interactive-pdf-forms}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 在轉譯互動式表單後，使用者可以在表單欄位中輸入資料，然後按一下表單上的提交按鈕，將資訊傳回至Forms服務。 Adobe Reader或Acrobat必須安裝在用戶端網頁瀏覽器的電腦上，才能顯示互動式PDF表格。
+Forms服務會將互動式PDF forms轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 在轉譯互動式表單後，使用者可以在表單欄位中輸入資料，然後按一下表單上的提交按鈕，將資訊傳回Forms服務。 Adobe Reader或Acrobat必須安裝在代管用戶端網頁瀏覽器的電腦上，才能顯示互動式PDF表格。
 
 >[!NOTE]
 >
->在使用Forms服務演算表單之前，請先建立表單設計。 通常，表單設計是在Designer中建立，並儲存為XDP檔案。 有關建立表單設計的資訊，請參閱[表單設計器](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>在您使用Forms服務演算表格之前，請先建立表格設計。 通常，表單設計是在Designer中建立，並儲存為XDP檔案。 有關建立表單設計的資訊，請參閱[Forms設計師](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 **貸款申請範例**
 
-引入範例貸款應用程式，以示範Forms服務如何使用互動式表單來收集使用者的資訊。 此應用程式可讓使用者填寫表單，填入保證貸款安全所需的資料，然後將資料提交至表單服務。 下圖顯示貸款申請的邏輯流程。
+引入一個貸款申請範例，以示範Forms服務如何使用互動式表單來收集使用者的資訊。 此應用程式可讓使用者填寫表單，填入保證貸款安全所需的資料，然後將資料提交至Forms服務。 下圖顯示貸款申請的邏輯流程。
 
 ![ri_ri_finsrv_loanapp_v1](assets/ri_ri_finsrv_loanapp_v1.png)
 
@@ -51,7 +52,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務客戶端API將貸款表格呈現給客戶端Web瀏覽器。 （請參閱<a href="#render-an-interactive-pdf-form-using-the-java-api">使用Java API</a>轉換互動式PDF表單。）</p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務客戶端API向客戶端Web瀏覽器呈現貸款表單。 （請參閱<a href="#render-an-interactive-pdf-form-using-the-java-api">使用Java API</a>轉換互動式PDF表單。）</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -59,11 +60,11 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p><code>HandleData</code> Java Servlet使用Forms服務客戶端API處理表單提交和檢索表單資料。 然後，該資料被儲存在企業資料庫中。 （請參閱<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">處理提交的表單</a>）。</p></td>
+   <td><p><code>HandleData</code> Java Servlet使用Forms服務客戶端API來處理表單提交和檢索表單資料。 然後，該資料被儲存在企業資料庫中。 (請參閱<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">處理已提交的Forms</a>)。</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>確認表單會轉譯回網頁瀏覽器。 使用者的名字和姓氏等資料會在轉譯前與表單合併。 （請參閱<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">使用可排程版面預填表單</a>）。</p></td>
+   <td><p>確認表單會轉譯回網頁瀏覽器。 使用者的名字和姓氏等資料會在轉譯前與表單合併。 (請參閱<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">使用可流式版面預填Forms</a>)。</p></td>
   </tr>
  </tbody>
 </table>
@@ -80,11 +81,11 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-`HandleData` Java Servlet會預先填入此表單中使用者的名字和姓氏以及金額。 在預先填入表單後，會將它傳送至用戶端網頁瀏覽器。 （請參閱[使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）
+`HandleData` Java Servlet會預先填入此表單中使用者的名字和姓氏以及金額。 在預先填入表單後，會將它傳送至用戶端網頁瀏覽器。 (請參閱[使用可流式版面預填Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
 
 **Java Servlet**
 
-範例貸款應用程式是Forms服務應用程式的範例，存在於Java Servlet中。 Java Servlet是在J2EE應用程式伺服器（例如WebSphere）上執行的Java程式，包含Forms服務用戶端API程式碼。
+範例貸款應用程式是以Java Servlet形式存在的Forms服務應用程式的範例。 Java Servlet是在J2EE應用程式伺服器（例如WebSphere）上執行的Java程式，包含Forms服務用戶端API程式碼。
 
 以下代碼顯示名為GetLoanForm的Java Servlet的語法：
 
@@ -104,7 +105,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 **步驟摘要**
 
@@ -123,11 +124,11 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms Client API物件，才能以程式設計方式執行Forms服務用戶端API作業。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms web service API，請建立`FormsService`物件。
+在以寫程式方式執行Forms服務客戶端API操作之前，必須建立Forms客戶端API對象。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms網站服務API，請建立`FormsService`物件。
 
 **指定URI值**
 
-您可以指定Forms服務呈現表單所需的URI值。 使用內容根URI值`repository:///`可以參照儲存為Forms應用程式一部分的表單設計。 例如，請考慮以下名為&#x200B;*Loan.xdp*&#x200B;的表單設計，它位於名為&#x200B;*FormsApplication*&#x200B;的Forms應用程式中：
+您可以指定Forms服務在轉換表單時所需的URI值。 使用內容根URI值`repository:///`可參考儲存為Forms應用程式一部分的表單設計。 例如，請考慮以下名為&#x200B;*Loan.xdp*&#x200B;的表單設計，它位於名為&#x200B;*FormsApplication*&#x200B;的Forms應用程式中：
 
 ![ri_ri_formrepository](assets/ri_ri_formrepository.png)
 
@@ -137,7 +138,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 >
 >有關使用Workbench建立Forms應用程式的資訊，請參閱[Workbench幫助](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
-位於Forms應用程式中的資源路徑為：
+位於Forms應用程式中的資源路徑是：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -152,17 +153,17 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 * 在設計人員中設計表單時的「提交」按鈕
 * 使用Forms服務客戶端API
 
-如果目標URL是在表單設計中定義的，請勿使用Forms服務用戶端API覆寫它。 也就是說，使用Forms API設定目標URL會將表單設計中指定的URL重設為使用API指定的URL。 如果您想要將PDF表單提交至表單設計中指定的目標URL，請以程式設計方式將目標URL設為空字串。
+如果目標URL是在表單設計中定義的，請勿使用Forms服務用戶端API覆寫它。 也就是說，使用FormsAPI設定目標URL，會將表單設計中指定的URL重設為使用API指定的URL。 如果您想要將PDF表單提交至表單設計中指定的目標URL，請以程式設計方式將目標URL設為空字串。
 
 如果您的表單包含提交按鈕和計算按鈕（具有在伺服器上執行的對應指令碼），則可以程式設計方式定義表單傳送至何處以執行指令碼的URL。 使用表單設計上的提交按鈕，指定表單資料張貼的URL。 （請參閱[計算表單資料](/help/forms/developing/calculating-form-data.md)）。
 
 >[!NOTE]
 >
->您也可以將`com.adobe.idp.Document`例項傳遞至Forms服務，而不是指定URL值以參考XDP檔案。 `com.adobe.idp.Document`實例包含表單設計。 （請參閱[將檔案傳遞至Forms Service](/help/forms/developing/passing-documents-forms-service.md)。）
+>您也可以將`com.adobe.idp.Document`例項傳遞至Forms服務，而不是指定URL值以參考XDP檔案。 `com.adobe.idp.Document`實例包含表單設計。 (請參閱[將檔案傳遞至Forms服務](/help/forms/developing/passing-documents-forms-service.md)。)
 
 **將檔案附加至表單**
 
-您可以將檔案附加至表單。 當您轉譯包含檔案附件的PDF表格時，使用者可以使用檔案附件窗格在Acrobat中擷取檔案附件。 您可以將不同的檔案類型附加至表單，例如文字檔案，或附加至二進位檔案，例如JPG檔案。
+您可以將檔案附加至表單。 當您轉換包含檔案附件的PDF表格時，使用者可以使用檔案附件窗格在Acrobat擷取檔案附件。 您可以將不同的檔案類型附加至表單，例如文字檔案，或附加至二進位檔案，例如JPG檔案。
 
 >[!NOTE]
 >
@@ -182,7 +183,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
 ## 使用Java API {#render-an-interactive-pdf-form-using-the-java-api}轉換互動式PDF表單
 
-使用Forms API(Java)演算互動式PDF表格：
+使用FormsAPI(Java)來轉換互動式PDF表格：
 
 1. 包含專案檔案
 
@@ -197,7 +198,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
    * 使用`URLSpec`的建構函式建立儲存URI值的物件。
    * 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
-   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定`repository:///`。
+   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 如果沒有，Forms服務會提出例外。 要引用儲存庫，請指定`repository:///`。
    * 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
 
 1. 將檔案附加至表單
@@ -216,7 +217,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
    叫用`FormsServiceClient`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
    * 儲存運行時選項的`PDFFormRenderSpec`對象。 此為可選參數，如果您不想指定執行時選項，可以指定`null`。
    * `URLSpec`物件，包含Forms服務所需的URI值。
@@ -236,7 +237,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
 ## 使用web service API {#render-an-interactive-pdf-form-using-the-web-service-api}轉譯互動式PDF表單
 
-使用Forms API(web service)來轉換互動式PDF表格：
+使用FormsAPI(web service)來轉換互動式PDF表格：
 
 1. 包含專案檔案
 
@@ -251,7 +252,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
    * 使用`URLSpec`的建構函式建立儲存URI值的物件。
    * 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
-   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定`repository:///`。
+   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 如果沒有，Forms服務會提出例外。 要引用儲存庫，請指定`repository:///`。
    * 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
 
 1. 將檔案附加至表單
@@ -270,7 +271,7 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
    叫用`FormsService`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。
    * 儲存運行時選項的`PDFFormRenderSpec`對象。 此為可選參數，如果您不想指定執行時選項，可以指定`null`。
    * `URLSpec`物件，包含Forms服務所需的URI值。
@@ -294,4 +295,4 @@ Forms服務會將互動式PDF表格轉譯至用戶端裝置（通常是網頁瀏
 
 **將表單資料串流寫入用戶端網頁瀏覽器**
 
-當Forms服務轉譯表單時，它會傳回必須寫入用戶端網頁瀏覽器的表單資料流。 當寫入用戶端網頁瀏覽器時，使用者會看到表單。
+當Forms服務轉換表單時，它會傳回您必須寫入用戶端網頁瀏覽器的表單資料流。 當寫入用戶端網頁瀏覽器時，使用者會看到表單。
