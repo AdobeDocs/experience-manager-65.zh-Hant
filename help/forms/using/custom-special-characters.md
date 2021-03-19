@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -37,7 +38,7 @@ Correponce Management已內建210個特殊字元的預設支援，您可輕鬆�
 
 ![特殊字元線模組](assets/specialcharactersinlinemodule.png)
 
-管理員可透過自訂來新增更多／自訂特殊字元的支援。 本文提供如何新增對其他自訂特殊字元支援的指示。
+管理員可透過自訂方式新增更多／自訂特殊字元的支援。 本文提供如何新增對其他自訂特殊字元支援的指示。
 
 ## 在Correponse Management {#creatingfolderstructure}中新增或修改對自訂特殊字元的支援
 
