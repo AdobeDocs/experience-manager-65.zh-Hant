@@ -1,18 +1,19 @@
 ---
 title: 建立表單入口網站頁面
 seo-title: 建立表單入口網站頁面
-description: Forms Portal為網頁開發人員提供元件，讓他們在使用Adobe Experience Manager(AEM)製作的網站上建立和自訂表單入口網站。
-seo-description: Forms Portal為網頁開發人員提供元件，讓他們在使用Adobe Experience Manager(AEM)製作的網站上建立和自訂表單入口網站。
+description: Forms入口網站為網頁開發人員提供元件，以在使用Adobe Experience Manager()製作的網站上建立和自訂表單入口AEM網站。
+seo-description: Forms入口網站為網頁開發人員提供元件，以在使用Adobe Experience Manager()製作的網站上建立和自訂表單入口AEM網站。
 uuid: a5017de5-616c-4ce4-81aa-f28c741f8e8f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
+feature: 表單入口網站
 translation-type: tm+mt
-source-git-commit: 13cc8ba8fda8fa0e5fac6bb92d1d4fc4849492eb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1670'
 ht-degree: 1%
 
 ---
@@ -20,21 +21,21 @@ ht-degree: 1%
 
 # 建立表單入口網頁{#creating-a-forms-portal-page}
 
-Forms Portal元件為網頁開發人員提供元件，讓他們在使用Adobe Experience Manager(AEM)製作的網站上建立和自訂表單入口網站。 如需表單入口網站的快速概觀，請參閱[在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)。
+Forms入口網站元件為網頁開發人員提供元件，以在使用Adobe Experience Manager(AEM)製作的網站上建立和自訂表單入口網站。 如需表單入口網站的快速概觀，請參閱[在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)。
 
 ## 必備條件 {#prerequisites}
 
-Forms Portal元件預設無法使用。 請確保按照[啟用表單入口元件](/help/forms/using/enabling-forms-portal-components.md)中所述啟用以下表單入口元件類別。
+Forms入口網站元件預設無法使用。 請確保按照[啟用表單入口元件](/help/forms/using/enabling-forms-portal-components.md)中所述啟用以下表單入口元件類別。
 
 **檔案** 服務包括搜尋與線上搜尋、連結、草稿和提交元件。
 
 **Document Services** PredicatesIncludes Date Predicate、Full Text Predicate、Properties Predicate和Tags Predicate元件。這些元件用於在Search &amp; Lister元件中配置搜索。
 
-在AEM網站頁面上啟用這些類別後，這些元件類別就可供元件瀏覽器使用。
+在網站頁面上啟用這些AEM類別後，這些元件類別就可供元件瀏覽器使用。
 
-![元件瀏覽器中的AEM Forms Portal元件](assets/component-categories.png)
+![AEM Forms元件瀏覽器中的門戶元件](assets/component-categories.png)
 
-Forms Portal元件類別
+Forms門戶元件類別
 
 ## Search &amp; Lister元件{#search-amp-lister-component}
 
@@ -71,12 +72,12 @@ Search &amp; Lister元件位於「檔案服務」元件類別下，可用來列�
   <tr>
    <td><span class="uicontrol"><strong>資產資料夾</strong></code></td>
    <td>新增項目</td>
-   <td>設定使用AEM Forms UI上傳資產的檔案夾。 依預設，會列出所有已上傳的資產。 如需AEM Forms UI的詳細資訊，請參閱<a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表單的簡介</a>。</td>
+   <td>設定使用AEM FormsUI上傳資產的資料夾。 依預設，會列出所有已上傳的資產。 如需有關AEM FormsUI的詳細資訊，請參閱<a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表單簡介</a>。</td>
   </tr>
   <tr>
    <td><p><span class="uicontrol"><strong>顯示</strong></code></p> </td>
    <td>標題文字</td>
-   <td>Search &amp; Lister元件的標題。 預設標題為<strong>Forms Portal。</strong></td>
+   <td>Search &amp; Lister元件的標題。 預設標題為<strong>Forms入口網站。</strong></td>
   </tr>
   <tr>
    <td> </td>
@@ -101,7 +102,7 @@ Search &amp; Lister元件位於「檔案服務」元件類別下，可用來列�
   <tr>
    <td> </td>
    <td>結果文字</td>
-   <td><p>配置結果文本（例如，601 <strong>結果</strong>的1-12）。 預設值為<strong>Results</strong>。</p> <p>例如，如果您在此欄位中指定<strong>Forms </strong>，而且總共有601個表單，則結果文字會變更為601個<strong>Forms的1-12。</strong></p> </td>
+   <td><p>配置結果文本（例如，601 <strong>結果</strong>的1-12）。 預設值為<strong>Results</strong>。</p> <p>例如，如果您在此欄位中指定<strong>Forms</strong>，且總共有601個表單，則結果文字會變更為1-12個，共601個<strong>Forms。</strong></p> </td>
   </tr>
   <tr>
    <td> </td>
@@ -111,12 +112,12 @@ Search &amp; Lister元件位於「檔案服務」元件類別下，可用來列�
   <tr>
    <td> </td>
    <td>Of 文字</td>
-   <td><p>將</strong>的<strong>單字取代為指定的文字（</strong>51的第1頁<strong>）。 預設值為<strong>of</strong>。</strong></strong></p> <p>例如，如果您在此欄位中指定</strong>out <strong>out &lt;a1/&gt;，則文字會變更為</strong>out <strong>的第1頁。</strong></strong></p> </td>
+   <td><p>將</strong>的<strong>單字取代為指定的文字（</strong>51的第1頁<strong>）。 預設值為<strong>of</strong>。</strong></strong></p> <p>例如，如果您在此欄位中指定</strong>out <strong>out ，則文字會變更為</strong>out <strong>的第1頁。</strong></strong></p> </td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>表單連結</strong></code></td>
    <td>呈現類型</td>
-   <td>根據指定的渲染類型控制表單清單。 可用的選項有PDF和HTML。 例如，如果您只選擇HTML作為演算類型，則會篩選掉PDF表格。</td>
+   <td>根據指定的渲染類型控制表單清單。 可用的選項有PDF和HTML。 例如，如果您只選擇HTML作為渲染類型，則會過濾掉PDF forms。</td>
   </tr>
   <tr>
    <td> </td>
@@ -129,7 +130,7 @@ Search &amp; Lister元件位於「檔案服務」元件類別下，可用來列�
    <td><p>配置提交表單資料的servlet。</p> <p><strong>注意：</strong> <em>表單的提交URL可在數處指定，其優先順序如下：</em></p>
     <ol>
      <li><em>內嵌在表單中的提交URL（在「提交」按鈕中）具有最高優先順序。</em></li>
-     <li><em>AEM Forms UI中提及的提交URL具有第二高的優先順序。</em></li>
+     <li><em>AEM FormsUI中提及的提交URL具有第二高的優先順序。</em></li>
      <li><em>表單入口網站中提及的提交URL的優先順序最低。</em></li>
     </ol> </td>
   </tr>
@@ -158,9 +159,9 @@ Search &amp; Lister元件位於「檔案服務」元件類別下，可用來列�
 
 ### 搜索窗格{#search-pane}
 
-「搜尋」窗格可讓您在AEM Sidekick中，從「檔案服務謂語」類別新增「日期謂語」、「完整文字謂語」、「屬性謂語」和「標籤謂語」元件。 這些元件會實作搜尋功能，讓使用者在列出的表單上執行搜尋。
+「搜尋」窗格可讓您在Sidekick中新增「Document Services Predicates」類別的「Date Predicate」、「Full Text Predicate」、「Properties Predicate」和「Tags Predicate」元AEM件。 這些元件會實作搜尋功能，讓使用者在列出的表單上執行搜尋。
 
-**提示：** *您可以根據預設准則控制表單入口網站上顯示的表單清單，並隱藏使用者的搜尋功能。要控制表單清單，請使用Predicate元件來應用搜索篩選器。 您也可以指定預設篩選值，並停用「編輯元件」對話方塊的「顯示」索引標籤中的搜尋。*
+**提示：** *您可以根據預設准則控制表單入口網站上顯示的表單清單，並隱藏使用者的搜尋功能。要控制表單清單，請使用Predicate元件來應用搜索篩選器。 您也可以指定預設篩選值，並停用「編輯元件」對話方塊的「顯示」標籤中的搜尋。*
 
 ![Search Panel with Date、Full Text、Properties和Tags Predicate](assets/search-with-predicates.png)
 
@@ -213,7 +214,7 @@ Properties Predicate元件實現基於表單屬性（如標題、作者和說明
 
 #### 標記述詞 {#tags-predicate}
 
-Tags Predicate元件實現基於在Forms Manager中定義的標籤搜索表單。
+Tags Predicate元件實現基於在Forms管理器中定義的標籤搜索表單。
 
 要配置Tags Predicate元件：
 
@@ -234,7 +235,7 @@ Tags Predicate元件實現基於在Forms Manager中定義的標籤搜索表單�
 
 ## 移動設備友好性{#mobile-device-friendliness}
 
-Forms Portal Search &amp; Lister元件適合行動裝置使用，並可據以調整。 所有三種預設檢視：格點、卡片、面板會根據開啟網站的裝置重新開啟，而網頁也會隨之調整。 簡單的事實是，Search &amp; Lister僅是元件，不管控頁面層級樣式。
+FormsPortal Search &amp; Lister元件適合行動裝置，並可據以調整。 所有三種預設檢視：格點、卡片、面板會根據開啟網站的裝置重新開啟，而網頁也會隨之調整。 簡單的事實是，Search &amp; Lister僅是元件，不管控頁面層級樣式。
 
 下圖顯示在行動裝置上開啟的Search &amp; Lister元件：
 
@@ -244,9 +245,9 @@ Search &amp; Lister元件
 
 ## 自訂表單入口網頁{#customizing-a-forms-portal-page-br}
 
-您可以自訂表單入口網頁，為頁面提供不同的外觀。 您也可以新增中繼資料來改善搜尋體驗、變更頁面的版面配置，以及新增自訂CSS樣式。 如需詳細資訊，請參閱[自訂Forms Portal元件的範本](../../forms/using/customizing-templates-forms-portal-components.md)。
+您可以自訂表單入口網頁，為頁面提供不同的外觀。 您也可以新增中繼資料來改善搜尋體驗、變更頁面的版面配置，以及新增自訂CSS樣式。 如需詳細資訊，請參閱[自訂Forms入口網站元件的範本](../../forms/using/customizing-templates-forms-portal-components.md)。
 
-AEM Forms UI可讓您將自訂中繼資料新增至表單。 自訂中繼資料對於提供清單及搜尋表單體驗給使用者十分有用。 如需自訂中繼資料的詳細資訊，請參閱[自訂表單入口元件範本](../../forms/using/customizing-templates-forms-portal-components.md)。
+AEM FormsUI可讓您將自訂中繼資料新增至表單。 自訂中繼資料對於提供清單及搜尋表單體驗給使用者十分有用。 如需自訂中繼資料的詳細資訊，請參閱[自訂Forms入口元件的範本](../../forms/using/customizing-templates-forms-portal-components.md)。
 
 現成可用的表單入口網站提供演算動作。 您可以自訂表單入口網站，以新增更多動作。 有關詳細資訊，請參閱[在表單清單項上添加自定義操作。](../../forms/using/add-custom-action-form-lister.md)
 
