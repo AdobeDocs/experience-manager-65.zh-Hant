@@ -1,72 +1,73 @@
 ---
-title: 匯入資產並匯出至AEM Forms
-seo-title: 匯入資產並匯出至AEM Forms
-description: 您可以從AEM例項匯入和匯出最適化表單和範本。 這有助於轉換表單或跨系統移動表單。
-seo-description: 您可以從AEM例項匯入和匯出最適化表單和範本。 這有助於轉換表單或跨系統移動表單。
+title: 匯入及匯出資產至AEM Forms
+seo-title: 匯入及匯出資產至AEM Forms
+description: 您可以從例項匯入和匯出最適化表單和范AEM本。 這有助於轉換表單或跨系統移動表單。
+seo-description: 您可以從例項匯入和匯出最適化表單和范AEM本。 這有助於轉換表單或跨系統移動表單。
 uuid: 937daedd-56f3-4e02-b695-b194b494d9bf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2549'
 ht-degree: 0%
 
 ---
 
 
-# 將資產匯入和匯出至AEM Forms{#importing-and-exporting-assets-to-aem-forms}
+# 匯入和匯出資產至AEM Forms{#importing-and-exporting-assets-to-aem-forms}
 
-您可以在不同的AEM Forms例項之間移動表單和相關資產、主題、資料字典、檔案片段和字母。 當遷移系統或將表單從舞台伺服器移動到生產伺服器時需要這樣的移動。 對於支援透過AEM Forms UI上傳和匯入的資產，建議使用Forms UI進行匯出或匯入。 不建議使用AEM Package Manager來匯出或匯入此類資產。
+您可以在不同的AEM Forms例項之間移動表單和相關資產、主題、資料字典、檔案片段和字母。 當遷移系統或將表單從舞台伺服器移動到生產伺服器時需要這樣的移動。 對於支援透過AEM FormsUI上傳和匯入的資產，建議使用FormsUI進行匯出或匯入。 不建AEM議使用Package Manager匯出或匯入此類資產。
 
 >[!NOTE]
 >
->* 在AEM 6.4 Forms中，crx-repository的結構和路徑已變更。 如果您從舊版匯入資產至AEM 6.4 Forms，而表單對舊版結構有某些相依性，您必須手動匯出相依性。 有關儲存庫結構和路徑更改的詳細資訊，請參閱[ AEM](/help/sites-deploying/repository-restructuring.md)中的儲存庫重組。
+>* 在AEMForms6.4中，crx-repository的結構和路徑已經改變。 如果您從舊版將資產匯入至AEM6.4Forms，而表單對舊版結構有一些相依性，則必須手動匯出相依性。 有關儲存庫結構和路徑更改的詳細資訊，請參閱](/help/sites-deploying/repository-restructuring.md)中的[AEM儲存庫重組。
 
 >
 
 
 
-## 下載或上傳表單與檔案資產{#download-or-upload-forms-amp-documents-assets}
+## 下載或上傳Forms&amp;檔案資產{#download-or-upload-forms-amp-documents-assets}
 
-AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或二進位檔案，以匯出資產。 然後，您可以將下載的AEM CRX-package或二進位檔案匯入另一個AEM例項。
+AEM Forms用戶介面允許您將資產下載AEM為AEMCRX-package或二進位檔案，從例項匯出資產。 然後，您可以將下載的AEMCRX-package或二進位檔案匯入另一個例AEM項。
 
-除「最適化表單」範本和「最適化表單」內容原則外，所有資產都支援透過AEM Forms使用者介面匯出和匯入。 因此，從AEM Forms UI匯出最適化表單時，相關的最適化表單範本和內容原則不會像其他相關資產一樣自動匯出。
+除「最適化表單」範本和「最適化表單」內容原則外，所有資產都支援透過AEM Forms使用者介面進行匯出和匯入。 因此，在從AEM FormsUI匯出最適化表單時，相關的最適化表單範本和內容原則不會像其他相關資產一樣自動匯出。
 
-對於這些資產類型，您必須使用AEM Package Manager在來源AEM伺服器上建立CRX套件，並在目標伺服器上安裝套件。 有關建立和安裝軟體包的資訊，請參見[使用軟體包](/help/sites-administering/package-manager.md)。
+對於這些資產類型，必須使AEM用Package Manager在源伺服器上建立CRX包，並AEM在目標伺服器上安裝該包。 有關建立和安裝軟體包的資訊，請參見[使用軟體包](/help/sites-administering/package-manager.md)。
 
-### 下載表單與檔案資產{#download-forms-amp-documents-assets}
+### 下載Forms與檔案資產{#download-forms-amp-documents-assets}
 
-若要下載表單與檔案資產：
+若要下載Forms與檔案資產：
 
 1. 登入AEM Forms例項。
-1. 點選Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>表單>表單與檔案。
+1. 點選Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>Forms>Forms與檔案。
 1. 選取表單資產，然後點選&#x200B;**下載**&#x200B;圖示。
 1. 在「下載資產」中，選擇下列選項之一，然後點選&#x200B;**下載**。
 
-   * **下載為CRX套件：使** 用選項從AEM Forms例項下載並移動所有選取的資產和相關依存關係至另一個。它會將所有資產和資料夾下載為crx套件。 任何表單資產，包括以AEM（最適化表單、互動式通訊和最適化表單片段）製作的表單、表單集、表單範本、PDF檔案和資源（XSD、XFS、影像），都可從AEM Forms UI下載為套件。
+   * **下載為CRX套件：** 使用選項，從AEM Forms例項下載並移動所有選取的資產和相關依存關係。它會將所有資產和資料夾下載為crx套件。 任何表單資產，包括以AEM（最適化表單、互動式通訊和最適化表單片段）、表單集、表單範本、PDF檔案和資源（XSD、XFS、影像）製作的表單，都可從AEM FormsUI下載為套件。
 將資產下載為套件的好處是，它也會下載被選取要下載的資產使用的資產。 例如，如果您有使用表單範本、XSD和影像的最適化表單。 當您選取此最適化表單並將其下載為套件時，下載的套件也包含表單範本、XSD和影像。 也會下載與資產相關聯的所有中繼資料屬性（包括自訂屬性）。
 
-   * **將資產下載為二進位檔：** 使用僅下載表單範本(XDP)、PDF表單(PDF)、檔案(PDF)和資源（影像、結構描述、樣式表）的選項。您可以使用外部應用程式編輯這些資產。 它會以。zip檔案的形式下載具有二進位檔的表單資產，例如XSD、XDP、影像、PDF和XDP。
+   * **以二進位檔案形式下載資產：** 使用僅下載表單範本(XDP)、PDF forms(PDF)、檔案(PDF)和資源（影像、結構描述、樣式表）的選項。您可以使用外部應用程式編輯這些資產。 它會以。zip檔案的形式下載具有二進位檔的表單資產，例如XSD、XDP、影像、PDF和XDP。
 您無法下載具有**下載資產作為二進位檔案**&#x200B;選項的最適化表單、互動式通訊、最適化表單片段、主題和表單集。 若要下載這些資產，您應使用&#x200B;**Download as CRX Package**&#x200B;選項。
 
    選取的資產會下載為封存（.zip檔案）。
 
    >[!NOTE]
    >
-   >AEM套件和二進位檔案都會下載為封存檔（.zip檔案）。 資產的範本不會與資產一起下載。 您需要個別匯出資產範本。
+   >軟體包AEM和二進位檔案都作為存檔檔案（.zip檔案）下載。 資產的範本不會與資產一起下載。 您需要個別匯出資產範本。
 
-### 上傳表單與檔案資產{#upload-forms-amp-documents-assets}
+### 上傳Forms和文檔資產{#upload-forms-amp-documents-assets}
 
-若要上傳表單與檔案資產：
+要上傳「Forms和文檔」資產：
 
 >[!VIDEO](https://vimeo.com/)
 
 1. 登入AEM Forms例項。
-1. 點選Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示> Forms> Forms &amp; Documents。
+1. 點選Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>Forms>Forms與檔案。
 1. 點選「**建立** >**檔案上傳**」。 此時會出現上傳表格或封裝對話方塊。
 1. 在對話方塊中，瀏覽並選取要匯入的套件或封存檔。 您也可以選取PDF檔案、XSD、影像、樣式表和XDP表單。 點選&#x200B;**Open**。 您選擇的資料夾或檔案名不得包含任何特殊字元。
 
@@ -80,16 +81,16 @@ AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或�
 
 ## 下載或上傳主題{#downloading-or-uploading-a-theme}
 
-有了AEM Forms，您可以建立、下載或上傳主題。 主題的建立方式與其他資產（例如表單、檔案和字母）類似。 您可以建立主題、下載主題，然後將主題上傳至個別的例項，以重複使用主題。 如需主題的詳細資訊，請參閱「AEM Forms中的[主題」。](../../forms/using/themes.md)
+有了AEM Forms，您可以建立、下載或上傳主題。 主題的建立方式與其他資產（例如表單、檔案和字母）類似。 您可以建立主題、下載主題，然後將主題上傳至個別的例項，以重複使用主題。 有關主題的詳細資訊，請參閱AEM Forms的[主題](../../forms/using/themes.md)。
 
 ### 下載主題{#downloading-a-theme}
 
-您可以匯出AEM Forms中的主題，以便用於其他專案或例項。 AEM可讓您以zip檔案的形式下載主題，您可以上傳至例項。
+您可匯出AEM Forms的主題，以便用於其他專案或例項。 可讓AEM您將主題下載為zip檔案，以便上傳至例項。
 
 若要下載主題：
 
 1. 登入AEM Forms例項。
-1. 點選Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>表單>主題。
+1. 點選「Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>Forms>主題」。
 1. 選擇主題並點選&#x200B;**Download**。 主題會下載為封存（.zip檔案）。
 
 ### 上傳主題{#uploading-a-theme}
@@ -98,13 +99,13 @@ AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或�
 
 若要上傳主題：
 
-1. 在Experience Manager中，導覽至「**表單>主題**」。
+1. 在Experience Manager中，導航到&#x200B;**Forms>主題**。
 1. 在「主題」頁中，按一下「建立」>「檔案上載」**。**
 1. 在「File Upload（檔案上載）」提示中，瀏覽並選擇電腦上的主題包，然後按一下&#x200B;**Upload**。
 已上傳的主題可在主題頁面中使用。
 
 1. 登入AEM Forms例項。
-1. 點選Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>表單>主題。
+1. 點選「Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>Forms>主題」。
 1. 按一下「建立&#x200B;**>**&#x200B;檔案上傳&#x200B;**」。**&#x200B;在「File Upload（檔案上載）」提示中，瀏覽並選擇電腦上的主題包，然後按一下&#x200B;**Upload**。 主題已上傳。
 
 ## 在Correponse Management {#import-and-export-assets-in-correspondence-management}中導入和導出資產
@@ -128,9 +129,9 @@ AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或�
 
 ### 將所有Correponsement Management資產匯出為套件{#export-all-the-correspondence-management-assets-as-a-package}
 
-使用這個選項，從AEM表單例項將所有Correponsement Management資產和相關相依性下載為套件。
+使用此選項，從表單實例將所有Correponsement Management資產和相關依賴項作為包AEM下載。
 
-例如，如果「對應管理」有使用影像和文字的字母，則下載的套件也會包含影像和與字母相關的文字。 也會下載與資產相關聯的所有中繼資料屬性（包括自訂屬性）。 下載套件(.cmp)後，您就可以[將套件匯入至不同的AEM Forms例項](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
+例如，如果「對應管理」有使用影像和文字的字母，則下載的套件也會包含影像和與字母相關的文字。 也會下載與資產相關聯的所有中繼資料屬性（包括自訂屬性）。 下載包(.cmp)後，可以[將包導入到不同的AEM Forms實例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
 
 要將所有Correponsement Management資產和相關依賴項作為包下載，請完成以下步驟：
 
@@ -151,11 +152,11 @@ AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或�
 
    >[!NOTE]
    >
-   >啟動後，「匯出所有資產」程式便無法取消。 此外，匯出所有作業都在進行中時，請勿建立、刪除、修改或發佈任何資產，或啟動「發佈所有資產」程式。a
+   >啟動後，「匯出所有資產」程式便無法取消。 此外，匯出所有作業都在進行中時，請勿建立、刪除、修改或發佈任何資產或啟動「發佈所有資產」程式。a
 
 1. 點選&#x200B;**下載匯出的套件**&#x200B;連結以下載套件檔案。
 
-   若要將套件中的資產新增至另一個Correponsement Management例項，請[將套件匯入AEM Forms例項](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
+   要將包中的資產添加到另一個Correponsement Management實例，[將包導入到AEM Forms實例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
 
 ### 將檔案片段、字母和／或資料字典匯入對應管理{#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
 
@@ -163,7 +164,7 @@ AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或�
 
 >[!NOTE]
 >
->在匯入舊的Correponse Management資產進行移轉時，請使用管理員帳戶登入。 如需移轉舊對應管理資產的詳細資訊，請參閱「將對應管理資產移轉至AEM 6.1表單](/help/forms/using/migration-utility.md)」。[
+>匯入舊的Correponse Management資產進行移轉時，請使用管理員帳戶登入。 有關遷移舊通信管理資產的詳細資訊，請參閱[將通信管理資產遷移AEM到6.1表單](/help/forms/using/migration-utility.md)。
 
 1. 在資料字典、字母或檔案片段頁面上，點選「建立>檔案上傳&#x200B;**」並選取。cmp檔案。**
 1. 「對應管理」會顯示「匯入資產」對話方塊，其中包含已匯入的資產清單。 點選「**匯入**」。
@@ -179,14 +180,14 @@ AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或�
 
 ## 導出工作流應用程式{#export-a-workflow-application}
 
-您可以使用AEM套件管理員來匯出工作流程應用程式。 該過程如下所列：
+您可以使用套AEM件管理員來匯出工作流程應用程式。 該過程如下所列：
 
-1. 開啟AEM Forms套件管理員。 包管理器的URL是https://&lt;server>:&lt;port>/crx/packmgr。
+1. 開啟AEM Forms包管理器。 包管理器的URL是https://&lt;server>:&lt;port>/crx/packmgr。
 1. 按一下「建立包」。 ****&#x200B;將顯示&#x200B;**[!UICONTROL 新建包]**&#x200B;對話框。
 1. 指定套件的名稱、版本和群組。 按一下&#x200B;**[!UICONTROL 「確定」]**。
 1. 按一下「編輯」(**[!UICONTROL Edit)]**&#x200B;並開啟「過濾器」(**[!UICONTROL Filters)]**&#x200B;頁籤。 按一下「**[!UICONTROL 添加過濾器]**」。 指定工作流程應用程式的路徑。 例如，/etc/fd/dashboard/startpoints/homemortgage。 按一下&#x200B;**[!UICONTROL 添加規則]**。
 
-1. 開啟&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。 在「ACL處理」欄位中選擇「**[!UICONTROL 合併]**」或「覆蓋&#x200B;**[!UICONTROL 」。]**&#x200B;按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 開啟&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。 在「ACL處理」欄位中選擇「**[!UICONTROL 合併]**」或「覆蓋&#x200B;**[!UICONTROL 」。]**&#x200B;按一下「**[!UICONTROL 儲存]**」。
 1. 按一下&#x200B;**[!UICONTROL Build]**&#x200B;建立軟體包。
 
    建立套件後，您可下載套件並匯入至其他伺服器。 工作流程應用程式會出現在上傳套件的伺服器上。
@@ -197,13 +198,13 @@ AEM Forms使用者介面可讓您從AEM例項將資產下載為AEM CRX套件或�
 
 ## 資料夾和組織資產{#folders-and-organizing-assets}
 
-AEM Forms使用者介面使用資料夾來排列資產。 這些檔案夾可用來排列在AEM Forms使用者介面中建立的資產。 您可以重新命名、建立子檔案夾，以及將資產和檔案儲存在這些檔案夾中。 將檔案和資產組織在資料夾中，可讓您將檔案分組，以方便管理。 您可以選取資料夾，然後選擇下載或刪除它。
+AEM Forms用戶介面使用資料夾來排列資產。 這些資料夾可用來排列在AEM Forms使用者介面中建立的資產。 您可以重新命名、建立子檔案夾，以及將資產和檔案儲存在這些檔案夾中。 將檔案和資產組織在資料夾中，可讓您將檔案分組，以方便管理。 您可以選取資料夾，然後選擇下載或刪除它。
 
 要建立資料夾，請完成以下步驟：
 
 ### 建立資料夾{#create-a-folder}
 
-1. 登入`https://<server>:<port>/aem/forms.html`的AEM Forms使用者介面。
+1. 登錄至`https://<server>:<port>/aem/forms.html`的AEM Forms用戶介面。
 1. 導覽至您要建立資料夾的位置。
 1. 點選「建立>資料夾」。
 1. 輸入以下詳細資訊：
@@ -233,14 +234,14 @@ AEM Forms使用者介面使用資料夾來排列資產。 這些檔案夾可用�
 1. 點選「 複製」。UI會顯示「貼上」圖示。 您也可以選擇在貼上前在資料夾內進行／導覽。 不同的檔案夾可以包含具有相同名稱的資產。 有關資料夾的詳細資訊，請參閱[資料夾和組織資產](#folders-and-organizing-assets)。
 1. 點選「貼上」。 將出現「貼上」對話框。 系統會自動為資產／字母的新副本生成名稱和標題，但您可以編輯資產／字母的標題和名稱。
 
-   如果您要在同一位置複製和貼上資產／字母，則會將尾碼&quot;-CopyXX&quot;新增至資產／字母的現有名稱。 如果複製的資產／信件沒有標題，自動產生的標題欄位會保留空白。
+   如果您要在同一位置複製和貼上資產／字母，則會將尾碼&quot;-CopyXX&quot;新增至資產／字母的現有名稱。 如果複製的資產／信件沒有標題，則自動產生的標題欄位會保留空白。
 
 1. 如有需要，請編輯您要儲存資產／信件副本的標題和名稱。
 1. 點選「貼上」。 會建立複製資產的新副本。
 
 ## 搜尋 {#search-forms}
 
-AEM Forms UI可讓您搜尋內容。 使用頂端列，您可以點選「搜尋&#x200B;**[A]**」來搜尋您的內容，以尋找資源，例如資產和檔案。
+AEM FormsUI可讓您搜尋內容。 使用頂端列，您可以點選「搜尋&#x200B;**[A]**」來搜尋您的內容，以尋找資源，例如資產和檔案。
 
 當您搜尋資產時，AEM Forms會顯示側面板。 您也可以點選![assets-browser-content-only](assets/assets-browser-content-only.png) > Filter **[B]**&#x200B;以叫用側面板。 使用側面板中的各種濾鏡，您可以縮小搜尋範圍。 側面板還允許您保存搜索。
 
