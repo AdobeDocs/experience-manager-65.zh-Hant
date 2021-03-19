@@ -7,11 +7,12 @@ uuid: 6d182bbc-b47a-4c97-af70-c960b52fdfac
 contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 1a816672b3e97346f5a7a984fcb4dc0df1a5b0da
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 2%
+source-wordcount: '968'
+ht-degree: 3%
 
 ---
 
@@ -20,11 +21,11 @@ ht-degree: 2%
 
 ![](do-not-localize/10-test-your-adaptive-form.png)
 
-本教程是[建立第一個自適應表單](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的一個步驟。 建議依序依序依序排列，以瞭解、執行和展示完整的教學課程使用案例。
+本教程是[建立第一個自適應表單](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的一個步驟。 建議依序依序依序排列，以瞭解、執行和展示完整的教學課程使用案例。
 
 最適化表單準備就緒後，請務必先測試您的最適化，然後再將它推出給使用者。 您可以手動測試（功能測試）每個欄位，或自動測試最適化表單。 當您有多個可調式表單時，手動測試所有可調式表單的每個欄位將是一項艱巨的任務。
 
-AEM [!DNL Forms]提供測試架構Calvin，以自動測試您的最適化表單。 使用架構，您可直接在網頁瀏覽器中編寫並執行UI測試。 此架構提供JavaScript API以建立測試。 自動化測試可讓您測試自適應表單的預先填寫體驗、從驗證、延遲載入和UI互動提交自適應表單、運算式規則的體驗。 本教學課程會逐步引導您在最適化表單上建立和執行自動化測試的步驟。 在本教學課程結束時，您將能夠：
+AEM[!DNL Forms]提供測試架構，Calvin，以自動測試您的調適性表單。 使用架構，您可直接在網頁瀏覽器中編寫並執行UI測試。 此架構提供JavaScript API以建立測試。 自動化測試可讓您測試自適應表單的預先填寫體驗、從驗證、延遲載入和UI互動提交自適應表單、運算式規則的體驗。 本教學課程會逐步引導您在最適化表單上建立和執行自動化測試的步驟。 在本教學課程結束時，您將能夠：
 
 * [建立最適化表單的測試套裝](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-suite)
 * [建立最適化表單的測試](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-case-to-prefill-values-in-an-adaptive-form)
@@ -34,7 +35,7 @@ AEM [!DNL Forms]提供測試架構Calvin，以自動測試您的最適化表單�
 
 測試套裝包含一組測試案例。 您可以有多個測試套裝。 建議每個表單使用個別的測試套裝。 若要建立測試套裝：
 
-1. 以管理員身分登入AEM [!DNL Forms]作者例項。 開啟[!UICONTROL CRXDE Lite]。 您可以點選「AEM標誌> **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**」或在瀏覽器中開啟[https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp) URL，以開啟CRXDE Lite。
+1. 以管理員身AEM份登入[!DNL Forms]作者實例。 開啟[!UICONTROL CRXDE Lite]。 您可以點選AEM「標誌」>「工具」>「**** > **[!UICONTROL 「一般」>「CRXDE Lite」**[!UICONTROL &#x200B;或在瀏覽器中開啟「https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp) URL」以開啟CRXDE Lite。]**]**[
 
 1. 導覽至[!UICONTROL CRXDE Lite]中的/etc/clientlibs。 按一下右鍵/etc/clientlibs子資料夾，然後按一下&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 建立節點]**。 在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中，鍵入&#x200B;**WeRetailFormTestCases**。 選擇類型為&#x200B;**cq:ClientLibraryFolder**，然後按一下&#x200B;**[!UICONTROL 確定]**。 它建立一個節點。 您可以使用任何名稱來取代`WeRetailFormTestCases`。
 1. 將以下屬性添加到`WeRetailFormTestCases`節點並按一下「保存所有」(Save ALL)]**。**[!UICONTROL 
@@ -83,7 +84,7 @@ AEM [!DNL Forms]提供測試架構Calvin，以自動測試您的最適化表單�
     init.js
    ```
 
-1. 在`WeRetailFormTestCases`節點中建立一個檔案init.js。 將下列程式碼新增至檔案，然後點選「全部儲存」。]****[!UICONTROL 
+1. 在`WeRetailFormTestCases`節點中建立一個檔案init.js。 將下列程式碼新增至檔案，然後點選「全部儲存」。****
 
    ```javascript
    (function(window, hobs) {
@@ -101,7 +102,7 @@ AEM [!DNL Forms]提供測試架構Calvin，以自動測試您的最適化表單�
 
    上述程式碼會建立名為&#x200B;**We retail - Tests**&#x200B;的測試套裝。
 
-1. 開啟「AEM測試UI」（AEM > **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 測試]**）。 測試套件- **我們零售——測試** —— 列在UI中。
+1. 開啟AEM測試UI(AEM> **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 測試]**)。 測試套件- **我們零售——測試** —— 列在UI中。
 
    ![we-retail-test-suite](assets/we-retail-test-suite.png)
 
@@ -111,7 +112,7 @@ AEM [!DNL Forms]提供測試架構Calvin，以自動測試您的最適化表單�
 
 動作是最適化表單上的特定活動，例如按一下按鈕。 若要建立測試案例和動作，以驗證每個自適應表單欄位的使用者輸入：
 
-1. 在[!UICONTROL CRXDE lite]中，導覽至`/content/forms/af/create-first-adaptive-form`資料夾。 按一下右鍵&#x200B;**[!UICONTROL create-first-adaptive-form]**&#x200B;資料夾節點，然後按一下&#x200B;**[!UICONTROL Create]****[!UICONTROL Create File]**。 在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中，鍵入`prefill.xml`並按一下&#x200B;**[!UICONTROL OK]**。 將下列程式碼新增至檔案：
+1. 在[!UICONTROL CRXDE lite]中，導覽至`/content/forms/af/create-first-adaptive-form`資料夾。 按一下右鍵&#x200B;**[!UICONTROL create-first-adaptive-form]**&#x200B;資料夾節點，然後按一下&#x200B;**[!UICONTROL Create]****[!UICONTROL Create File]**。 在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中，鍵入`prefill.xml`並按一下&#x200B;**[!UICONTROL OK]**。 將下列程式碼新增至檔案中：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?><afData>
@@ -216,7 +217,7 @@ AEM [!DNL Forms]提供測試架構Calvin，以自動測試您的最適化表單�
 * 複選標籤圖示表示通過的測試：![save_icon](assets/save_icon.svg)
 * 「X」圖示表示測試失敗：![close-icon](assets/close-icon.svg)
 
-1. 導覽至「AEM圖示> **[!UICONTROL 工具]**> **[!UICONTROL 作業]**> **[!UICONTROL 測試]**」
+1. 導航至AEM表徵圖> **[!UICONTROL 工具]**> **[!UICONTROL 操作]**> **[!UICONTROL 測試]**
 1. 若要執行測試套裝的所有測試：
 
    1. 在[!UICONTROL Tests]面板中，點選&#x200B;**[!UICONTROL We retail - Tests(1)]**。 此套裝會展開以顯示測試清單。
@@ -229,7 +230,7 @@ AEM [!DNL Forms]提供測試架構Calvin，以自動測試您的最適化表單�
    1. 在「測試」面板中，點選&#x200B;**[!UICONTROL We retail - Tests(1)]**。 此套裝會展開以顯示測試清單。
    1. 點選&#x200B;**[!UICONTROL 預填Test]**&#x200B;並點選&#x200B;**[!UICONTROL Run tests]**&#x200B;按鈕。 當測試執行時，螢幕右側的空白區域會以最適化形式取代。
 
-1. 點選測試名稱「預填」測試，以檢視測試案例的結果。 它會開啟[!UICONTROL Result]面板。 在[!UICONTROL Result]面板中點選測試案例的名稱，以檢視測試的所有詳細資訊。
+1. 點選測試名稱「預填」測試，以檢閱測試案例的結果。 它會開啟[!UICONTROL Result]面板。 在[!UICONTROL Result]面板中點選測試案例的名稱，以檢視測試的所有詳細資訊。
 
    ![審查結果](assets/review-results.png)
 
