@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->自2011年8月5日起，Adobe將Content Services ES客戶移轉至Adobe Digital Enterprise Platform Experience Services。 使用內容服務的客戶的產品藍圖是改用新的ADEP Experience Services - Core，其中包含以現代化、模組化的CRX架構為基礎的原生內容存放庫，此內容存放庫是在Adobe收購Day Software時取得的。
+>自2011年8月5日起，Adobe將Content Services ES客戶移轉至Adobe Digital Enterprise Platform體驗服務。 使用Content Services的客戶的產品藍圖是改用新的ADEP Experience Services - Core，其中包含以現代化、模組化CRX架構為基礎的原生內容儲存庫，此內容儲存庫是在Adobe收購Day Software時取得的。
 
 [快速入門（SOAP模式）:使用Java API建立Content Services空格](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
@@ -41,11 +42,11 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API設定Content Services權限](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
 
-AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
 >[!NOTE]
 
-「使用AEM表單進行程式設計」中的快速入門是以部署在JBoss和Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代特定於Windows的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+使用表單進行寫程式時，AEM快速啟動是基於部署在JBoss和Windows作業系統上的Forms伺服器。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代特定於Windows的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門（SOAP模式）:使用Java API（已過時）{#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}建立Content Services空間
 
