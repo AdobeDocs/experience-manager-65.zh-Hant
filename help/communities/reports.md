@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 0051791da06d15a48b82cf93164a89b4ea42ce98
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 7%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 7%
 
 ## 概覽 {#overview}
 
-對於AEM Communities，有多種報表可透過數種方式從作者環境存取。
+對於AEM Communities，有多種報表可從作者環境以數種方式存取。
 
 一般而言，各種報表包括：
 
@@ -39,7 +40,7 @@ ht-degree: 7%
 
    提供社群成員對任何社群網站之各類貼文的圖表。
 
-啟用[Adobe Analytics](/help/communities/sites-console.md#analytics)時，報表將包含一段時間內每個啟用資源的檢視次數、播放次數、留言和評分。
+當[啟用](/help/communities/sites-console.md#analytics)Adobe Analytics時，報表將包含一段時間內每個啟用資源的檢視次數、播放次數、留言和評分。
 
 表格報表可匯出為。csv格式，以供後續處理。
 
@@ -180,7 +181,7 @@ ht-degree: 7%
 
 ### 未列出社區站點{#no-community-sites-listed}
 
-如果未列出社群網站，請確定已為網站啟用Adobe Analytics。 如果選擇分配報告，請確保分配功能位於社區站點的結構中。
+如果未列出社群網站，請確定網站已啟用Adobe Analytics。 如果選擇分配報告，請確保分配功能位於社區站點的結構中。
 
 ### 報表不會顯示在AEM Author例項{#reports-do-not-show-in-aem-author-instance}中
 
