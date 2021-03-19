@@ -10,10 +10,12 @@ topic-tags: brand-portal
 content-type: reference
 discoiquuid: 90e3fd0e-9bc3-4aff-8c7b-7408f5b940e8
 docset: aem65
+feature: 品牌入口網站
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '341'
 ht-degree: 36%
 
 ---
@@ -21,9 +23,9 @@ ht-degree: 36%
 
 # 將集合發佈至 Brand Portal {#publish-collections-to-brand-portal}
 
-身為Adobe Experience Manager(AEM)Assets管理員，您可以發佈系列至您組織的AEM Assets品牌入口網站例項。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請參閱[使用 Brand Portal 設定 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
+身為Adobe Experience Manager(AEM)資產管理員，您可以發佈系列至貴組織的AEM Assets品牌入口網站例項。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請參閱[使用 Brand Portal 設定 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
 
-如果您在AEM Assets中對原始系列進行後續修改，這些變更將不會反映在品牌入口網站中，直到您再次發佈系列為止。 此特性可確保在品牌入口網站中無法使用進行中的變更。 Brand Portal 僅提供管理員發佈的已核准變更。
+如果您在後續修改了AEM Assets的原始系列，在您再次發佈系列之前，這些變更不會反映在品牌入口網站中。 此特性可確保在品牌入口網站中無法使用進行中的變更。 Brand Portal 僅提供管理員發佈的已核准變更。
 
 >[!NOTE]
 >
@@ -50,7 +52,7 @@ ht-degree: 36%
 
 您可以解除發佈您從AEM Assets發佈至品牌入口網站的系列。 在您解除發佈原始系列後，品牌入口網站使用者將無法再使用其副本。
 
-1. 從AEM Assets例項的「系列」主控台，選取您要解除發佈的系列。
+1. 從您的AEM Assets例項的「系列」主控台中，選取您要解除發佈的系列。
 
    ![select_collection-1](assets/select_collection-1.png)
 
