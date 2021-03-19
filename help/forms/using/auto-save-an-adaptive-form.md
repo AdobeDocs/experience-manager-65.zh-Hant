@@ -7,10 +7,11 @@ uuid: 0fe9a389-269b-438a-9489-d9d1d09558a1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -56,9 +57,9 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >若要自動儲存選項以供匿名使用者使用，請確定您已設定Forms Common Configuration Service，讓所有使用者都能預覽、驗證和簽署表格。
+   >若要自動儲存選項以供匿名使用者使用，請確定您已設定「Forms通用組態服務」，讓所有使用者都能預覽、驗證和簽署表格。
    >
-   >若要設定服務，請前往位於`https://server:port/system/console/configMgr`的AEM Web Console設定，並編輯&#x200B;**[!UICONTROL Forms Common Configuration Service]**，以選擇&#x200B;**[!UICONTROL Allow]**&#x200B;欄位中的&#x200B;**[!UICONTROL All Users]**&#x200B;選項，並儲存設定。
+   >要配置服務，請轉至位於`https://server:port/system/console/configMgr`的AEMWeb控制台配置並編輯&#x200B;**[!UICONTROL Forms公共配置服務]**，以在&#x200B;**[!UICONTROL 允許]**&#x200B;欄位中選擇&#x200B;**[!UICONTROL 所有用戶]**&#x200B;選項，並保存配置。
 
 ## 實作自訂策略以啟用最適化表單的自動儲存{#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 
