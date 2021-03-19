@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 12b2b73b6363c90d784527b260d664e48c746496
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -147,7 +148,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 對於以JSON結構描述為基礎的最適化表單，以下說明預先填寫JSON和已提交JSON的結構。 如需詳細資訊，請參閱[使用JSON結構描述建立最適化表單](../../forms/using/adaptive-form-json-schema-form-model.md)。
 
-* **預填JSON結構**:預先填入JSON必須與關聯的JSON結構描述相容。或者，如果您也想要預先填寫未系結的欄位，可將它包裝在/afData/afBoundData物件中。
+* **預填JSON結構**:預先填入JSON必須與關聯的JSON結構描述相容。（可選）如果您也想要預先填寫未系結的欄位，則可將它包裝在/afData/afBoundData物件中。
 * **已提交的JSON結構**:如果未使用預先填寫JSON，則提交的JSON會包含afData包裝函式標籤中已系結和未系結欄位的資料。如果使用預先填入JSON，則提交的JSON與預先填入JSON的結構相同。 如果預先填寫JSON以afData根物件開頭，則輸出JSON的格式會相同。 如果預先填入JSON沒有afData/afBoundData包裝函式，而是直接從結構根物件（例如使用者）啟動，則提交的JSON也會從使用者物件開始。
 
 ```json
@@ -228,13 +229,13 @@ Prefill-Submit-Data-ContentPackage.zip
 
 ## 使用Configuration Manager {#configuring-prefill-service-using-configuration-manager}配置預填充服務
 
-若要啟用預填服務，請在「AEM Web Console設定」中指定「預設預填服務設定」。 使用下列步驟來設定Prefill服務：
+若要啟用預填服務，請在「Web控制台設定」中指定「預AEM填服務設定」。 使用下列步驟來設定Prefill服務：
 
 >[!NOTE]
 >
 >「預先填寫服務設定」適用於最適化表單、HTML5表單和HTML5表單集。
 
-1. 使用URL開啟&#x200B;**[!UICONTROL Adobe Experience Manager Web Console Configuration]**:\
+1. 使用URL開啟&#x200B;**[!UICONTROL Adobe Experience ManagerWeb控制台配置]** :\
    https://&lt;server>:&lt;port>/system/console/configMgr
 1. 搜索並開啟&#x200B;**[!UICONTROL 預設預填充服務配置]**。
 
@@ -247,7 +248,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
    >[!NOTE]
    >
-   >依預設，所有類型的最適化表單（XSD、XDP、JSON、FDM和不以表單模型為基礎）都允許透過crx檔案進行預填。 只有JSON和XML檔案才允許預先填寫。
+   >依預設，所有類型的Adaptive Forms（XSD、XDP、JSON、FDM和不以表單模型為基礎）都允許透過crx檔案進行預填。 只有JSON和XML檔案才允許預先填寫。
 
 1. 現在已為您的表單設定預填服務。
 
@@ -329,22 +330,22 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 例如，您想要針對具有特定標題類型之頁面進行特定設計的位置。 為此，您可以編寫自己的`header.jsp`，您可將其包含在頁面元件中並設定`data`屬性。
 
-另一個好的例子是，您想要透過Facebook、Twitter或LinkedIn等社交帳戶預先填入登入資料的使用案例。 在這種情況下，您可以在`header.jsp`中包含一個簡單的JSP，它從用戶帳戶中提取資料並設定資料參數。
+另一個好的例子是，您想要透過Facebook、Twitter或LinkedIn等社交帳戶預先填入登入資料的使用案例。 在這種情況下，您可以在`header.jsp`中包含一個簡單的JSP，它從用戶帳戶中讀取資料並設定資料參數。
 
 prefill-page component.zip
 
 [在頁](assets/prefill-page-component.zip)
 面元件中取得FileSample prefill.jsp
 
-## AEM Forms自訂預填服務{#aem-forms-custom-prefill-service}
+## AEM Forms自訂預填充服務{#aem-forms-custom-prefill-service}
 
 您可針對情境使用自訂的預填服務，在此期間，您會持續讀取預先定義來源的資料。 預填充服務從定義的資料源讀取資料，並用預填充資料檔案的內容預填充自適應表單的欄位。 它也協助您將預先填入的資料與最適化表單永久關聯。
 
 ### 建立並運行預填充服務{#create-and-run-a-prefill-service}
 
-預填充服務是OSGi服務，並通過OSGi捆綁包進行打包。 您可以建立OSGi搭售、上傳並安裝至AEM Forms搭售。 開始建立搭售之前：
+預填充服務是OSGi服務，並通過OSGi捆綁包進行打包。 您可建立OSGi搭售、上傳並安裝至AEM Forms搭售。 開始建立搭售之前：
 
-* [下載AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+* [下載AEM Forms用戶端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 * 下載簡短字母組合套件
 
 * 將資料（預填資料）檔案放入crx-repository。 您可以將檔案放在crx-repository的\contents資料夾中的任意位置。
@@ -353,7 +354,7 @@ prefill-page component.zip
 
 #### 建立預填充服務{#create-a-prefill-service}
 
-範本套件（範例預填服務套件）包含AEM Forms預填服務的範例實作。 在程式碼編輯器中開啟簡短字母組合套件。 例如，在Eclipse中開啟簡短的專案以進行編輯。 在程式碼編輯器中開啟簡短字母組合套件後，請執行下列步驟以建立服務。
+該樣本板包（樣本預填充服務包）包含AEM Forms預填充服務的樣本實現。 在程式碼編輯器中開啟簡短字母組合套件。 例如，在Eclipse中開啟簡短的專案以進行編輯。 在程式碼編輯器中開啟簡短字母組合套件後，請執行下列步驟以建立服務。
 
 1. 開啟src\main\java\com\adobe\test\Prefill.java檔案以進行編輯。
 1. 在程式碼中，設定值：
@@ -367,20 +368,20 @@ prefill-page component.zip
 
 #### 啟動並使用預填充服務{#start-and-use-the-prefill-service}
 
-若要啟動預填服務，請將JAR檔案上傳至AEM Forms Web Console，然後啟動服務。 現在，服務開始出現在最適化表單編輯器中。 要將預填充服務與自適應表單關聯：
+要啟動預填充服務，請將JAR檔案上載到AEM FormsWeb控制台，然後激活該服務。 現在，服務開始出現在最適化表單編輯器中。 要將預填充服務與自適應表單關聯：
 
-1. 在表單編輯器中開啟最適化表單，並開啟表單容器的「屬性」面板。
-1. 在「屬性」主控台中，導覽至「AEM Forms容器>基本>預填服務」。
+1. 在Forms編輯器中開啟最適化表單，並開啟表單容器的「屬性」面板。
+1. 在「屬性」主控台中，導覽至「AEM Forms」容器>「基本>預填服務」。
 1. 選擇預設預填充服務，然後按一下&#x200B;**[!UICONTROL 保存]**。 服務與表單相關聯。
 
 ## 在客戶端{#prefill-at-client}預填充資料
 
 當您預先填寫最適化表格時，AEM Forms伺服器會將資料與最適化表格合併，並將填寫的表格傳送給您。 依預設，資料合併動作會在伺服器上進行。
 
-您可以設定AEM Forms伺服器，以在用戶端而非伺服器上執行資料合併動作。 它可大幅縮短預先填寫和轉換最適化表單的時間。 依預設，功能會停用。 可以從「配置管理器」或命令行啟用它。
+您可以配置AEM Forms伺服器，以在客戶端而不是伺服器上執行資料合併操作。 它可大幅縮短預先填寫和轉換最適化表單的時間。 依預設，功能會停用。 可以從「配置管理器」或命令行啟用它。
 
 * 要從配置管理器啟用或禁用：
-   1. 開啟AEM Configuration Manager。
+   1. 開啟AEM配置管理器。
    1. 定位並開啟自適應表單和互動式通信Web通道配置
    1. 啟用Configuration.af.clientside.datamerge.enabled.name選項
 * 要從命令行啟用或禁用：
