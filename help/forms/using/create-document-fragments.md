@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8ae97a21-83af-4615-9be3-61e2f8065081
 docset: aem65
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1684'
 ht-degree: 2%
 
 ---
@@ -63,7 +64,7 @@ ht-degree: 2%
 
 執行下列步驟，以建立以Agent UI為資料來源之欄位的變數、建立靜態文字，以及在檔案片段中使用表單資料模型元素：
 
-1. 選擇「**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**」。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**。
 
 1. 選擇&#x200B;**建立** > **文本**。
 1. 指定下列資訊：
@@ -128,7 +129,7 @@ Customer Details文檔片段包含以下欄位：
 
 執行下列步驟，以建立以Agent UI為資料來源之欄位的變數、建立靜態文字，以及在檔案片段中使用表單資料模型元素：
 
-1. 選擇「**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**」。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**。
 1. 選擇&#x200B;**建立** > **文本**。
 1. 指定下列資訊：
 
@@ -192,7 +193,7 @@ Customer Details文檔片段包含以下欄位：
 
 執行下列步驟，以建立以Agent UI為資料來源之欄位的變數、建立靜態文字，以及在檔案片段中使用表單資料模型元素：
 
-1. 選擇「**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**」。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**。
 1. 選擇&#x200B;**建立** > **文本**。
 1. 指定下列資訊：
 
@@ -260,7 +261,7 @@ Customer Details文檔片段包含以下欄位：
 
 執行以下步驟以建立靜態文本並在文檔片段中使用表單資料模型元素：
 
-1. 選擇「**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**」。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**。
 1. 選擇&#x200B;**建立** > **文本**。
 1. 指定下列資訊：
 
