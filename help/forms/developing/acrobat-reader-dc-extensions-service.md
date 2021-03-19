@@ -1,17 +1,18 @@
 ---
 title: Acrobat Reader DC擴充功能服務Java API快速入門(SOAP)
 seo-title: Acrobat Reader DC擴充功能服務Java API快速入門(SOAP)
-description: 使用Acrobat Reader DC Extensions服務，將使用權套用至PDF檔案、從PDF檔案移除使用權，並擷取有關憑證的資訊，此憑證用來將使用權套用至具權限的PDF檔案，名為LoanUsageRights.pdf。
-seo-description: 使用Acrobat Reader DC Extensions服務，將使用權套用至PDF檔案、從PDF檔案移除使用權，並擷取有關憑證的資訊，此憑證用來將使用權套用至具權限的PDF檔案，名為LoanUsageRights.pdf。
+description: 使用Acrobat Reader DC擴充功能服務，將使用權套用至PDF檔案、從PDF檔案移除使用權，並擷取有關憑證的資訊，此憑證用來將使用權套用至具權限的PDF檔案，名為LoanUsageRights.pdf。
+seo-description: 使用Acrobat Reader DC擴充功能服務，將使用權套用至PDF檔案、從PDF檔案移除使用權，並擷取有關憑證的資訊，此憑證用來將使用權套用至具權限的PDF檔案，名為LoanUsageRights.pdf。
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
 content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # Acrobat Reader DC擴充功能服務Java API快速入門(SOAP){#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DC Extensions服務提供下列快速入門。
+Acrobat Reader DC擴展服務提供以下快速入門服務。
 
 [快速入門（SOAP模式）：使用Java API套用使用權限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
@@ -27,11 +28,11 @@ Acrobat Reader DC Extensions服務提供下列快速入門。
 
 [快速入門（SOAP模式）:使用Java API檢索憑據資訊](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是以Forms伺服器作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>「快速入門」(Quick Starts)位於「與AEM Forms進行寫程式」(Programming with)中，它基於Forms伺服器作業系統。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門（SOAP模式）：使用Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}套用使用權限
 
