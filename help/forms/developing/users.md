@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '6257'
+source-wordcount: '6258'
 ht-degree: 0%
 
 ---
@@ -20,11 +21,11 @@ ht-degree: 0%
 
 # 管理用戶{#managing-users}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 **關於用戶管理**
 
-您可以使用使用者管理API來建立用戶端應用程式，以管理角色、權限和承擔者（可以是使用者或群組），並驗證使用者。 使用者管理API包含下列AEM Forms API:
+您可以使用使用者管理API來建立用戶端應用程式，以管理角色、權限和承擔者（可以是使用者或群組），並驗證使用者。 使用者管理API包含下列AEM FormsAPI:
 
 * 目錄管理器服務API
 * Authentication Manager服務API
@@ -85,7 +86,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果伺服器時區與用戶端時區不同，當在WebSphere應用程式伺服器叢集上使用。NET用戶端在原生SOAP堆疊上使用AEM Forms的WSDL產生PDF服務時，可能會發生下列使用者管理驗證錯誤：
+>如果伺服器時區與客戶機時區不同，在WebSphere應用程式伺服器群集上使用。NET客戶端在本地SOAP堆棧上使用AEM Forms生成PDF服務的WSDL時，可能會發生以下用戶管理驗證錯誤：
 
 `[com.adobe.idp.um.webservices.WSSecurityHandler] errorCode:12803 errorCodeHEX:0x3203 message:WSSecurityHandler: UM authenticate returns exception : An error was discovered processing the <wsse:Security> header. (WSSecurityEngine: Invalid timestamp The security semantics of message have expired).`
 
@@ -109,7 +110,7 @@ ht-degree: 0%
 
 ## 添加用戶{#adding-users}
 
-您可以使用Directory Manager Service API（Java和web service），以程式設計方式將使用者新增至AEM Forms。 在添加用戶後，在執行需要用戶的服務操作時可以使用該用戶。 例如，您可以指派任務給新用戶。
+您可以使用目錄管理器服務API（Java和web服務），以程式設計方式將用戶添加到AEM Forms。 在添加用戶後，在執行需要用戶的服務操作時可以使用該用戶。 例如，您可以指派任務給新用戶。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -140,9 +141,9 @@ ht-degree: 0%
 * **姓氏**:用戶的族名(例如 `Blue)`。
 * **地區**:用戶的地區資訊。
 
-**將使用者新增至AEM Forms**
+**將用戶添加到AEM Forms**
 
-在您定義使用者資訊後，您可以將使用者新增至AEM Forms。 若要新增使用者，請叫用`DirectoryManagerServiceClient`物件的`createLocalUser`方法。
+定義使用者資訊後，您可將使用者新增至AEM Forms。 若要新增使用者，請叫用`DirectoryManagerServiceClient`物件的`createLocalUser`方法。
 
 **確認已添加用戶**
 
@@ -154,7 +155,7 @@ ht-degree: 0%
 
 [使用web service API新增使用者](users.md#add-users-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -207,7 +208,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API新增使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -221,17 +222,17 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立DirectoryManagerService客戶端。
 
    * 使用其預設建構子建立`DirectoryManagerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DirectoryManagerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 請確定您指定`?blob=mtom`。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DirectoryManagerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 請確定您指定`?blob=mtom`。
    * 獲取`DirectoryManagerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DirectoryManagerServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -267,11 +268,11 @@ ht-degree: 0%
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 刪除用戶{#deleting-users}
 
-您可以使用Directory Manager Service API（Java和web service），以程式設計方式從AEM Forms刪除使用者。 刪除用戶後，無法再使用該用戶執行需要用戶的服務操作。 例如，您無法將任務指派給已刪除的用戶。
+您可以使用目錄管理器服務API（Java和web service），以程式設計方式從AEM Forms刪除用戶。 刪除用戶後，無法再使用該用戶執行需要用戶的服務操作。 例如，您無法將任務指派給已刪除的用戶。
 
 ### 步驟{#summary_of_steps-1}摘要
 
@@ -280,7 +281,7 @@ ht-degree: 0%
 1. 包含專案檔案。
 1. 建立DirectoryManagerService客戶端。
 1. 指定要刪除的使用者。
-1. 從AEM Forms刪除使用者。
+1. 從AEM Forms刪除用戶。
 
 **包含專案檔案**
 
@@ -294,7 +295,7 @@ ht-degree: 0%
 
 您可以使用使用者的識別碼值來指定要刪除的使用者。
 
-**從AEM Forms刪除使用者**
+**從AEM Forms刪除用戶**
 
 若要刪除使用者，請叫用`DirectoryManagerServiceClient`物件的`deleteLocalUser`方法。
 
@@ -304,7 +305,7 @@ ht-degree: 0%
 
 [使用web service API刪除使用者](users.md#delete-users-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -328,7 +329,7 @@ ht-degree: 0%
    * 調用`PrincipalSearchFilter`物件的`setUserId`方法，以設定使用者識別碼值。 傳遞代表使用者識別碼值的字串值。
    * 叫用`DirectoryManagerServiceClient`物件的`findPrincipals`方法並傳遞`PrincipalSearchFilter`物件。 此方法傳回`java.util.List`例項，其中每個元素都是`User`物件。 重複`java.util.List`實例以找到要刪除的用戶。
 
-1. 從AEM Forms刪除使用者。
+1. 從AEM Forms刪除用戶。
 
    叫用`DirectoryManagerServiceClient`物件的`deleteLocalUser`方法，並傳遞`User`物件的`oid`欄位值。 叫用`User`物件的`getOid`方法。 使用從`java.util.List`實例檢索的`User`對象。
 
@@ -340,7 +341,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API刪除用戶](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -355,12 +356,12 @@ ht-degree: 0%
 1. 建立DirectoryManagerService客戶端。
 
    * 使用其預設建構子建立`DirectoryManagerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DirectoryManagerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 確定您指定`blob=mtom.`
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DirectoryManagerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 確定您指定`blob=mtom.`
    * 獲取`DirectoryManagerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DirectoryManagerServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -371,7 +372,7 @@ ht-degree: 0%
    * 為`PrincipalSearchFilter`物件的`userId`欄位指派字串值，以設定使用者識別碼值。
    * 叫用`DirectoryManagerServiceClient`物件的`findPrincipals`方法並傳遞`PrincipalSearchFilter`物件。 此方法傳回`MyArrayOfUser`系列物件，其中每個元素都是`User`物件。 重複`MyArrayOfUser`系列以找出使用者。 從`MyArrayOfUser`集合物件擷取的`User`物件會用來刪除使用者。
 
-1. 從AEM Forms刪除使用者。
+1. 從AEM Forms刪除用戶。
 
    將`User`物件的`oid`欄位值傳遞至`DirectoryManagerServiceClient`物件的`deleteLocalUser`方法，以刪除使用者。
 
@@ -381,11 +382,11 @@ ht-degree: 0%
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 建立組{#creating-groups}
 
-您可以使用Directory Manager Service API（Java和web service）以程式設計方式建立AEM Forms群組。 建立群組後，您可以使用該群組來執行需要群組的服務作業。 例如，您可以指派使用者至新群組。 （請參閱[管理使用者和群組](users.md#managing-users-and-groups)）。
+您可以使用目錄管理器服務API（Java和web服務）以程式設計方式建立AEM Forms組。 建立群組後，您可以使用該群組來執行需要群組的服務作業。 例如，您可以指派使用者至新群組。 （請參閱[管理使用者和群組](users.md#managing-users-and-groups)）。
 
 ### 步驟{#summary_of_steps-2}摘要
 
@@ -405,10 +406,10 @@ ht-degree: 0%
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要項)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
-如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立DirectoryManagerService客戶端**
 
@@ -434,7 +435,7 @@ ht-degree: 0%
 
 [使用Java API建立群組](users.md#create-groups-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -482,7 +483,7 @@ ht-degree: 0%
 
 [步驟摘要](users.md#summary-of-steps)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -527,7 +528,7 @@ ht-degree: 0%
 
 [使用web service API管理使用者和群組](users.md#managing-users-and-groups-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -539,7 +540,7 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。 如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。 有關這些檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 建立DirectoryManagerService客戶端。
 
@@ -561,7 +562,7 @@ ht-degree: 0%
 
 [步驟摘要](users.md#summary-of-steps)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -571,7 +572,7 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   * 建立一個使用目錄管理器WSDL的Microsoft .NET客戶端元件。 （請參閱[使用Base64編碼叫用AEM Forms。）](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+   * 建立一個使用目錄管理器WSDL的Microsoft .NET客戶端元件。 (請參閱[使用Base64編碼叫用AEM Forms。)](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
    * 參考Microsoft .NET客戶端元件。 （請參閱[建立使用Base64編碼的。NET客戶端元件。）](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
 1. 建立DirectoryManagerService客戶端。
@@ -584,7 +585,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果未在搜尋篩選器中（透過`PrincipalSearchFilter.resultsMax`欄位）指定最大結果數，則最多會傳回1000個結果。 這與使用Java API（預設上限為10個結果）時的行為不同。 此外，搜尋方法（例如`findGroupMembers`）不會產生任何結果，除非搜尋篩選器中指定最大結果數（例如透過`GroupMembershipSearchFilter.resultsMax`欄位）。 這套用至所有繼承自`GenericSearchFilter`類別的搜尋篩選器。 如需詳細資訊，請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   >如果未在搜尋篩選器中（透過`PrincipalSearchFilter.resultsMax`欄位）指定最大結果數，則最多會傳回1000個結果。 這與使用Java API（預設上限為10個結果）時的行為不同。 此外，搜尋方法（例如`findGroupMembers`）不會產生任何結果，除非搜尋篩選器中指定最大結果數（例如透過`GroupMembershipSearchFilter.resultsMax`欄位）。 這套用至所有繼承自`GenericSearchFilter`類別的搜尋篩選器。 如需詳細資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
    由於此例中的返回值是包含`Principal`對象的`object[]`，因此對結果進行迭代，並將`Principal`對象轉換為`User`或`Group`對象。
 
@@ -604,9 +605,9 @@ ht-degree: 0%
 
 本主題說明如何使用授權管理器服務API(Java)以程式設計方式指派、移除及決定角色和權限。
 
-在AEM Forms中，*role*&#x200B;是一組存取一或多個系統層級資源的權限。 這些權限是透過「使用者管理」建立，並由服務元件強制執行。 例如，管理員可以將「策略集作者」的角色指派給一組用戶。 然後，Rights Management會允許具有該角色的群組使用者透過管理控制台建立原則集。
+在AEM Forms,*角色*&#x200B;是一組訪問一個或多個系統級資源的權限。 這些權限是透過「使用者管理」建立，並由服務元件強制執行。 例如，管理員可以將「策略集作者」的角色指派給一組用戶。 然後，Rights Management將允許具有該角色的組的用戶通過管理控制台建立策略集。
 
-角色有兩種類型：*預設角色*&#x200B;和&#x200B;*自訂角色*。 預設角色（*系統角色）*&#x200B;已駐留在AEM Forms中。 假定管理員不能刪除或修改預設角色，因此不可變。 因此，管理員建立的自定義角色可以變更，管理員隨後可以修改或刪除這些角色。
+角色有兩種類型：*預設角色*&#x200B;和&#x200B;*自訂角色*。 預設角色（*系統角色）*&#x200B;已駐留在AEM Forms。 假定管理員不能刪除或修改預設角色，因此不可變。 因此，管理員建立的自定義角色可以變更，管理員隨後可以修改或刪除這些角色。
 
 角色可讓管理權限更輕鬆。 將角色分配給承擔者時，會自動將一組權限分配給承擔者，並且承擔者的所有特定訪問相關決策都基於該總指派的權限集。
 
@@ -636,7 +637,7 @@ ht-degree: 0%
 
 [使用web service API管理角色和權限](users.md#managing-roles-and-permissions-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -673,7 +674,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API管理角色和權限](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -687,17 +688,17 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立AuthorizationManagerService客戶端。
 
    * 使用其預設建構子建立`AuthorizationManagerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AuthorizationManagerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AuthorizationManagerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
    * 獲取`AuthorizationManagerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`AuthorizationManagerServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -727,7 +728,7 @@ ht-degree: 0%
 
 用戶驗證可能需要與儲存安全資料的企業資料庫或其他企業儲存庫交互。
 
-例如，假設使用者在網頁中輸入使用者名稱和密碼，並將值提交至代管表單的J2EE應用程式伺服器。 Forms自訂應用程式可以使用Authentication Manager服務來驗證使用者。
+例如，假設使用者在網頁中輸入使用者名稱和密碼，並將值提交至代管Forms的J2EE應用程式伺服器。 Forms自訂應用程式可使用驗證管理員服務來驗證使用者。
 
 如果驗證成功，應用程式將訪問受保護的企業資料庫。 否則，會傳送訊息給使用者，指出使用者並非授權使用者。
 
@@ -746,7 +747,7 @@ ht-degree: 0%
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>用戶訪問網站並指定用戶名和口令。 這項資訊會提交至代管AEM Forms的J2EE應用程式伺服器。</p></td>
   </tr>
   <tr>
@@ -754,7 +755,7 @@ ht-degree: 0%
    <td><p>用戶憑證通過Authentication Manager服務進行驗證。 如果用戶憑據有效，工作流將繼續執行步驟3。 否則，會傳送訊息給使用者，指出使用者並非授權使用者。</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>從安全企業資料庫檢索用戶資訊和表單設計。 </p></td>
   </tr>
   <tr>
@@ -771,7 +772,7 @@ ht-degree: 0%
 1. 包含專案檔案。
 1. 建立AuthenticationManagerService客戶端。
 1. 叫用驗證操作。
-1. 如有必要，請擷取內容，讓用戶端應用程式可將它轉送至其他AEM Forms服務進行驗證。
+1. 如有必要，請擷取內容，讓用戶端應用程式可將它轉送至另一個AEM Forms服務進行驗證。
 
 **包含專案檔案**
 
@@ -787,11 +788,11 @@ ht-degree: 0%
 
 **擷取驗證內容**
 
-一旦您驗證了使用者，就可以在已驗證的使用者中建立內容。 然後，您可以使用內容叫用其他AEM Forms服務。 例如，您可以使用內容建立`EncryptionServiceClient`，並使用密碼加密PDF檔案。 請確定已驗證的使用者具有呼叫AEM Forms服務所需的角色`Services User`。
+一旦您驗證了使用者，就可以在已驗證的使用者中建立內容。 然後，您可以使用內容叫用其他AEM Forms服務。 例如，您可以使用內容建立`EncryptionServiceClient`，並使用密碼加密PDF檔案。 確保已驗證的用戶具有調用AEM Forms服務所需的`Services User`角色。
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -832,8 +833,8 @@ ht-degree: 0%
 
 1. 包含專案檔案。
 
-   * 建立使用驗證管理器WSDL的Microsoft .NET客戶端元件。 （請參閱[使用Base64編碼叫用AEM Forms。）](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
-   * 參考Microsoft .NET客戶端元件。 （請參閱「使用Base64編碼叫用AEM Forms」 [中的「參考。NET用戶端元件」。）](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+   * 建立使用驗證管理器WSDL的Microsoft .NET客戶端元件。 (請參閱[使用Base64編碼叫用AEM Forms。)](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+   * 參考Microsoft .NET客戶端元件。 (請參閱[使用Base64編碼叫用AEM Forms中的「引用。NET客戶端元件」。)](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 1. 建立AuthenticationManagerService客戶端。
 
@@ -851,13 +852,13 @@ ht-degree: 0%
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 以程式設計方式同步使用者{#programmatically-synchronizing-users}
 
-您可以使用「使用者管理API」，以程式設計方式同步使用者。 當您同步使用者時，您會使用位於使用者儲存庫中的使用者資料來更新AEM Forms。 例如，假設您向用戶儲存庫添加新用戶。 在您執行同步作業後，新使用者會變成AEM表單使用者。 此外，您的使用者儲存庫中不再有的使用者也會從AEM Forms中移除。
+您可以使用「使用者管理API」，以程式設計方式同步使用者。 同步用戶時，您正在使用用戶儲存庫中的用戶資料更新AEM Forms。 例如，假設您向用戶儲存庫添加新用戶。 執行同步操作後，新用戶將成為表AEM單用戶。 此外，您的使用者儲存庫中不再有的使用者也會從AEM Forms移除。
 
-下圖顯示與使用者儲存庫同步的AEM Forms。
+下圖顯示與用戶儲存庫同步的AEM Forms。
 
 ![ps_ps_umauth_sync](assets/ps_ps_umauth_sync.png)
 
@@ -873,14 +874,14 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td><p>3</p></td>
-   <td><p>用戶端應用程式會要求AEM Forms執行同步作業。</p></td>
+   <td><p>客戶端應用程式請求AEM Forms執行同步操作。</p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>AEM Forms會執行同步作業。</p></td>
+   <td><p>AEM Forms執行同步操作。</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>使用者資訊已更新。</p></td>
   </tr>
   <tr>
@@ -922,7 +923,7 @@ ht-degree: 0%
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -958,6 +959,6 @@ ht-degree: 0%
 
 [以程式設計方式同步使用者](users.md#programmatically-synchronizing-users)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
