@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1995'
 ht-degree: 1%
 
 ---
@@ -24,20 +25,20 @@ ht-degree: 1%
 
 中繼資料可讓資產分類和組織更輕鬆，並協助尋找特定資產的使用者。
 
-依預設，AEM Forms會為每個資產類型提供一組已定義的中繼資料。 除了預設中繼資料，您還可以將自訂中繼資料新增至每個資產類型。 AEM Forms也提供您適當的方式，讓您有效率地建立、管理和交換表單的所有中繼資料。
+AEM Forms依預設會為每個資產類型提供一組定義的中繼資料。 除了預設中繼資料，您還可以將自訂中繼資料新增至每個資產類型。 AEM Forms也為您提供適當的方式，讓您有效率地建立、管理和交換表單的所有中繼資料。
 
-如果您是開發人員或網站擁有者，您可以自訂Forms Portal（AEM Forms的使用者介面），以反映您在組織中使用的中繼資料。 如需表單入口網站的詳細資訊，請參閱[在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)。
+如果您是開發人員或網站擁有者，您可以自訂Forms入口網站，這是AEM Forms的使用者介面，可反映您在組織中使用的中繼資料。 如需Forms入口網站的詳細資訊，請參閱[在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)。
 
-## AEM Forms {#metadata-in-aem-forms}中的中繼資料
+## AEM Forms元資料{#metadata-in-aem-forms}
 
-在AEM Forms中，與資產相關聯的中繼資料屬性清單會視其類型而定。 此外，如果您新增任何自訂中繼資料屬性，則會將其新增至新增自訂中繼資料之類型的所有資產。
+在AEM Forms，與資產相關的中繼資料屬性清單視其類型而定。 此外，如果您新增任何自訂中繼資料屬性，則會將其新增至新增自訂中繼資料之類型的所有資產。
 
 ### 資產類型{#asset-types}
 
 AEM Forms支援下列資產類型：
 
 * 表單範本（XFA表單）
-* PDF表格
+* PDF forms
 * 檔案（平面PDF）
 * 最適化表單
 * 資源
@@ -124,9 +125,9 @@ AEM Forms支援下列資產類型：
    <td><p>表單範本</p> <p>PDF表格</p> </td> 
    <td><p>若要設定使用者指定的URL，以便將表單資料送出至servlet。</p> <p>可使用下列任何方法來設定提交URL，依優先順序列出：</p> 
     <ul> 
-     <li>在AEM Forms Designer中建立XFA表單時，使用「HTTP提交」按鈕，直接在「表單範本」中指定提交URL。</li> 
-     <li>在AEM Forms UI中，選取表單並指定在編輯中繼資料屬性時的送出URL。</li> 
-     <li>在Forms Portal中，編輯Search &amp; Lister元件，並在「Form Link」（表單連結）標籤下指定送出URL。</li> 
+     <li>在AEM Forms設計人員中建立XFA表單時，使用HTTP提交按鈕，直接在表單範本中指定提交URL。</li> 
+     <li>在AEM FormsUI中，選取表單並指定編輯中繼資料屬性的送出URL。</li> 
+     <li>在Forms入口網站中，編輯Search &amp; Lister元件，並在「表單連結」標籤下指定提交URL。</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -250,7 +251,7 @@ AEM Forms支援下列資產類型：
 
 提供了一種工具（元資料模式編輯器）來定義元資料佈局的模式；即，在表單的&#x200B;**[!UICONTROL Properties]**&#x200B;頁面中顯示的佈局。 中繼資料結構編輯器可讓您新增或修改資產的自訂結構。
 
-AEM Forms會在此工具中公開支援表單類型的中繼資料結構描述。 這樣，您可以訪問這些架構，並使用元資料架構編輯器中提供的功能添加自定義屬性。
+AEM Forms公開此工具中支援表單類型的中繼資料結構。 這樣，您可以訪問這些架構，並使用元資料架構編輯器中提供的功能添加自定義屬性。
 
 ### 導覽中繼資料結構編輯器{#navigate-the-metadata-schema-editor}
 
@@ -268,7 +269,7 @@ AEM Forms會在此工具中公開支援表單類型的中繼資料結構描述�
 
 1. 選取`extendedmetadata`旁的核取方塊，然後按一下工具列中顯示的編輯![ aem6forms_edit](assets/aem6forms_edit.png)圖示。
 
-1. AEM Forms會開啟選取資產類型的中繼資料架構編輯器／表單產生器（在此例中為最適化表單）。
+1. AEM Forms開啟所選資產類型的中繼資料架構編輯器／表單產生器（在本例中為最適化表單）。
 
    ![最適化表單類型的中繼資料架構編輯器](assets/metadata-schema-editor-for-adaptive-form-type.png)
 
@@ -312,4 +313,4 @@ AEM Forms會在此工具中公開支援表單類型的中繼資料結構描述�
 
    您已成功新增自訂中繼資料屬性。
 
-AEM Forms中的所有最適化表單現在都包含此額外的中繼資料屬性。 您可以從屬性頁面編輯它。
+AEM Forms的所有調適性表單現在都包含此額外的中繼資料屬性。 您可以從屬性頁面編輯它。
