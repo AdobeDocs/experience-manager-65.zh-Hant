@@ -1,7 +1,7 @@
 ---
 title: 內容傳送
 seo-title: 內容傳送
-description: 'null'
+description: 內容傳送
 seo-description: 'null'
 uuid: 1e7bea34-ca50-41ed-8295-fa182c27fa69
 contentOwner: User
@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需SPA要單頁應用程式架構用戶端轉換的專案使用編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
 
-Mobile Apps應可視需要使用AEM中的任何和所有內容，以提供目標應用程式體驗。
+行動應用程式應能視需要使用任何和所AEM有內容，以提供目標應用程式體驗。
 
 這包括使用資產、網站內容、CaaS內容（透視）和自訂內容，這些內容可能有其自訂結構。
 
@@ -41,7 +41,7 @@ Mobile Apps應可視需要使用AEM中的任何和所有內容，以提供目標
 
 ## 資產 {#assets}
 
-資產集合是AEM結構，包含其他集合的參考。
+資產集合是包AEM含其他集合參照的結構。
 
 資產收集可透過內容服務公開。 在請求中呼叫資產收集會傳回資產清單的物件——包括其URL。 資產可透過URL存取。 URL是在物件中提供。 例如：
 
@@ -58,7 +58,7 @@ Content Services的一個關鍵價值是能夠傳回已針對裝置最佳化的�
 
 資產工作流程如下：
 
-1. AEM現成可用的資產參考
+1. 現成可用AEM的資產參考
 1. 建立給定其模型的資產參考圖元
 1. 編輯實體
 
@@ -71,11 +71,11 @@ Content Services的一個關鍵價值是能夠傳回已針對裝置最佳化的�
 
 ### 管理資產{#managing-assets}
 
-Content Services提供對AEM管理資產的存取權，這些資產可能無法透過其他AEM內容參考。
+Content Services可讓您存取未AEM透過其他內容參考的受管理AEM資產。
 
 #### 現有受管理資產{#existing-managed-assets}
 
-現有的AEM Sites和Assets使用者正使用AEM Assets來管理其所有通道的所有數位資料。 他們正在開發原生行動應用程式，並需要使用由AEM Assets管理的數個資產。 例如標誌、背景影像、按鈕圖示等。
+現有的AEM Sites和資產使用者正使用AEM Assets來管理所有通道的所有數位資料。 他們正在開發原生行動應用程式，需要使用由AEM Assets管理的數個資產。 例如標誌、背景影像、按鈕圖示等。
 
 目前，這些資產分散在資產儲存庫中。 應用程式需要參考的檔案位於：
 
@@ -87,7 +87,7 @@ Content Services提供對AEM管理資產的存取權，這些資產可能無法�
 
 #### 存取CS資產實體{#accessing-cs-asset-entities}
 
-現在，讓我們暫且擱置透過API提供頁面的步驟（AEM UI說明將會涵蓋此頁面），並假設頁面已完成。 資產實體已建立並新增至「appImages」空間。 為了組織目的，在空間下建立了其他資料夾。 因此，資產實體會儲存在AEM JCR中，如下：
+現在，讓我們暫且擱置透過API提供頁面的步驟（UI說明將會涵蓋此頁面），並假設已完成AEM此動作。 資產實體已建立並新增至「appImages」空間。 為了組織目的，在空間下建立了其他資料夾。 因此，資產實體會儲存在AEMJCR中，如下：
 
 * /content/entities/appImages/logo/logo_light
 * /content/entities/appImages/logo/logo_dark
@@ -113,26 +113,26 @@ JSON會針對每個影像提供URL，由Content Services產生至影像。
 
 需要維護內容版面的客戶需要HTML內容。 這對於使用Web容器（例如Cordova webview）來顯示內容的原生應用程式非常有用。
 
-AEM Content Services將可透過API提供HTML內容至行動應用程式。 想要將AEM內容公開為HTML的客戶將會建立指向AEM內容來源的HTML頁面實體。
+Content ServicesAEM將可透過API提供HTML內容至行動應用程式。 想要以HTML形AEM式公開內容的客戶將會建立指向內容來源的HTML頁AEM面實體。
 
 會考慮下列選項：
 
 * **Zip檔案：** 為了在裝置上正確顯示，頁面的所有參考資料（css、JavaScript、資產等）都有最佳的機會。-將包含在具有響應的單個壓縮檔案中。 HTML頁面中的參照將會調整為使用這些檔案的相對路徑。
-* **串流：** 從AEM取得必要檔案的資訊清單。然後使用該資訊清單來要求所有檔案（HTML、CSS、JS等） 與後續的要求。
+* **串流：** 從取得所需檔案的資訊清單AEM。然後使用該資訊清單來要求所有檔案（HTML、CSS、JS等） 與後續的要求。
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
 ## 與頻道無關的內容{#channel-independent-content}
 
-不受頻道影響的內容是公開AEM內容建構（例如頁面）的方式，而不需擔心版面配置、元件或其他頻道特定資訊。
+不受頻道影響的內容是公開內容建構AEM（例如頁面）的方式，而不需擔心版面配置、元件或其他頻道特定資訊。
 
-這些內容實體是使用內容模型產生，以將AEM結構翻譯為JSON格式。 產生的JSON資料包含與內容資料相關的資訊，這些資訊會與AEM儲存庫分離。 這包括傳回資產的中繼資料和AEM參考連結，以及內容結構之間的關係——包括實體階層。
+這些內容實體是使用內容模型產生，以將AEM結構轉譯為JSON格式。 產生的JSON資料包含內容資料的相關資訊，這些資訊會與儲存庫AEM分離。 這包括傳回中繼資AEM料和資產的參考連結，以及內容結構之間的關係，包括實體階層。
 
 ### 管理與頻道無關的內容{#managing-channel-independent-content}
 
 內容可透過數種方式進入應用程式。
 
-1. 透過AEM Over-the-Air取得內容ZIP
+1. GET內AEM容透過Over-the-Air
 
    * 內容同步處理常式可直接更新zip套件，或呼叫現有內容轉譯器
 
@@ -140,9 +140,9 @@ AEM Content Services將可透過API提供HTML內容至行動應用程式。 想�
       * AEMM處理常式
       * 自訂處理常式
 
-1. 透過內容轉譯器直接取得內容
+1. 透過內容轉換器直接GET內容
 
    * Out-of-the-box預設Sling Renderers
-   * AEM Mobile/Content Services內容轉譯器
+   * AEM Mobile/內容服務內容轉譯者
    * 自訂轉譯
 
