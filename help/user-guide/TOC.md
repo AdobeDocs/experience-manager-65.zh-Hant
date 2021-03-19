@@ -3,26 +3,29 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5使用指南
-user-guide-description: 概述瞭解、安裝、管理和使用AEM 6.5的所有必要資源
+user-guide-description: 概述了瞭解、安裝、管理和使用6.5的所AEM有必要資源
+feature-set: Experience Manager
+feature: 發行資訊
+role: 領導者、架構師、開發人員、資料架構師、資料工程師、管理員、業務從業人員
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 1%
+source-wordcount: '72'
+ht-degree: 4%
 
 ---
 
 
-# AEM 6.5使用指南{#user-guide}
+# AEM 6.5使用手冊{#user-guide}
 
-+ [AEM 6.5使用指南中樞](home.md)
++ [AEM 6.5使用手冊中樞](home.md)
 + 使用手冊和資源{#user-guides}
-   + [AEM Capabilities使用指南](capabilities.md)
-   + [AEM實作使用指南](implementation.md)
-   + [AEM資源](resources.md)
+   + [功AEM能使用手冊](capabilities.md)
+   + [實AEM施使用指南](implementation.md)
+   + [資AEM源](resources.md)
 + 疑難排解與說明{#troubleshooting}
-   + [新AEM使用者的資源](new.md)
-   + [瞭解AEM功能](learn.md)
+   + [新使用者的AEM資源](new.md)
+   + [瞭解功AEM能](learn.md)
    + [最佳做法、操作說明和培訓](best-practice.md)
-   + [AEM社群](community.md)
+   + [社AEM群](community.md)
    + [疑難排解](troubleshooting.md)
