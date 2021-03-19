@@ -1,19 +1,20 @@
 ---
 title: MSRP - MongoDB儲存資源提供程式
 seo-title: MSRP - MongoDB儲存資源提供程式
-description: 設定AEM Communities，以使用關聯式資料庫做為其公用儲存
-seo-description: 設定AEM Communities，以使用關聯式資料庫做為其公用儲存
+description: 設定AEM Communities以使用關係資料庫作為其公共儲存
+seo-description: 設定AEM Communities以使用關係資料庫作為其公共儲存
 uuid: 9fc06d4f-a60f-4ce3-8586-bcc836aa7de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 1%
 
 ## 關於MSRP {#about-msrp}
 
-當AEM Communities設定為使用MSRP做為其公用儲存時，使用者產生的內容(UGC)可從所有作者和發佈例項存取，而不需同步或複製。
+將AEM Communities配置為使用MSRP作為其公共儲存時，用戶生成的內容(UGC)可從所有作者和發佈實例訪問，而無需同步或複製。
 
 另請參見[SRP選項的特性](working-with-srp.md#characteristics-of-srp-options)和[建議拓撲](topologies.md)。
 
@@ -33,7 +34,7 @@ ht-degree: 1%
    * 2.6版或更新版本
    * 無需配置蒙古檔案或共用
    * 強烈建議使用[複製副本集](#mongoreplicaset)
-   * 可能與AEM在相同的主機上執行，或遠端執行
+   * 可在與同一台主機上運行AEM或遠程運行
 
 * [Apache Solr](https://lucene.apache.org/solr/):
 
@@ -103,7 +104,7 @@ CollectionSolr系列名稱。
 
 >[!NOTE]
 >
->預設為名稱`communities`的mongoDB資料庫不應設定為用於[節點儲存或資料（二進位）儲存](../../help/sites-deploying/data-store-config.md)的資料庫的名稱。 另請參閱AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md)中的[儲存元素。
+>預設為名稱`communities`的mongoDB資料庫不應設定為用於[節點儲存或資料（二進位）儲存](../../help/sites-deploying/data-store-config.md)的資料庫的名稱。 另請參見6.5](../../help/sites-deploying/storage-elements-in-aem-6.md)中AEM的[儲存元素。
 
 ### MongoDB複製副本集{#mongodb-replica-set}
 
@@ -224,7 +225,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 請檢查儲存選項的設定，以確定MSRP已設定為預設提供者。 預設情況下，儲存資源提供方是JSRP。
 
-在所有作者和發佈AEM例項上，請重新造訪[儲存組態控制台](srp-config.md)或檢查AEM存放庫：
+在所有作者和發AEM布實例上，請重新訪問[儲存配置控制台](srp-config.md)或檢查存AEM儲庫：
 
 * 在JCR中，如果[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -233,13 +234,13 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ### 升級{#ugc-disappears-after-upgrade}後UGC消失
 
-如果從現有的AEM Communities 6.0網站升級，則在升級至AEM Communities 6.3後，必須轉換任何預先存在的UGC，以符合[ SRP](srp.md) API所需的結構。
+如果從現有的AEM Communities6.0站點升級，則必須轉換任何預先存在的UGC，以符合升級至AEM Communities6.3後的[SRP](srp.md) API所需的結構。
 
 GitHub上提供開放原始碼工具，可用於：
 
-* [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
+* [AEM CommunitiesUGC移轉工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-您可自訂移轉工具，從舊版AEM Social社群匯出UGC，以匯入至AEM Communities 6.1或更新版本。
+可自訂移轉工具，從舊版社交社群匯出UGCAEM，以匯入AEM Communities6.1或更新版本。
 
 ### 錯誤——未定義的欄位provider_id {#error-undefined-field-provider-id}
 
@@ -265,11 +266,11 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 如果嘗試與MongoDB伺服器建立安全連接時由於缺少類定義而失敗，則需要更新MongoDB驅動程式包`mongo-java-driver`（可從公共主儲存庫獲得）。
 
 1. 從[https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar)（2.13.2版或更新版本）下載驅動程式。
-1. 將套件複製至AEM例項的「crx-quickstart/install」檔案夾。
-1. 重新啟動AEM例項。
+1. 將包複製到實例的「crx-quickstart/install」資料夾AEM中。
+1. 重新啟動AEM實例。
 
 ## 資源 {#resources}
 
-* [AEM與MongoDB](../../help/sites-deploying/aem-with-mongodb.md)
+* [使AEM用MongoDB](../../help/sites-deploying/aem-with-mongodb.md)
 * [MongoDB檔案](https://docs.mongodb.org/)
 
