@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 3%
 
 ---
@@ -38,7 +39,7 @@ ht-degree: 3%
 >
 >某些XFA元素沒有名稱。 要更改此類元件的樣式，請修改該特定類型的所有元件。
 
-對於未在AEM Forms Designer中命名的頁面，HTML5表單中的頁面會依其數目的遞增順序命名。 例如，對於具有兩頁的HTML5表單，頁面名稱為Page1, Page2。
+對於未在AEM Forms設計器中命名的頁面，HTML5表單中的頁面會以其編號的遞增順序命名。 例如，對於具有兩頁的HTML5表單，頁面名稱為Page1, Page2。
 
 ## 欄位元素{#field-element}
 
@@ -49,7 +50,7 @@ ht-degree: 3%
 介面工具集元素包含與使用者互動的使用者介面元素。 它有三個CSS類別：
 
 * **介面工具集**:每個Widget都有這個類別。
-* **名稱**:AEM隨附的所有Widget都包含Widget名稱類別。對於自訂介面工具集，介面工具集開發人員會提供介面工具集名稱類別。
+* **名稱**:隨附的所有介面工具集AEM都包含介面工具集名稱類別。對於自訂介面工具集，介面工具集開發人員會提供介面工具集名稱類別。
 * **類型**:每個Widget都有使用者介面元素。此類定義用戶介面元素的類型。
 
 ```xml
@@ -125,7 +126,7 @@ ht-degree: 3%
 
 ## 不同欄位{#css-classes-for-different-fields}的CSS類別
 
-AEM Forms Designer支援不同類型的欄位，例如NumericField、DecimalField和Date Field。 HTML中的這些欄位都包含上述的CSS類別。 它們還包含一些額外類，具體取決於欄位的類型。
+AEM Forms設計人員支援NumericField、DecimalField和Date Field等格式的不同類型的欄位。 HTML中的這些欄位都包含上述的CSS類別。 它們還包含一些額外類，具體取決於欄位的類型。
 
 每個欄位都有一個代表UI元素的關聯介面工具集。 每個欄位的類和與每個欄位關聯的Widget列在下面。
 
@@ -227,7 +228,7 @@ AEM Forms Designer支援不同類型的欄位，例如NumericField、DecimalFiel
 
 ## 不同繪圖元素的CSS類{#css-classes-for-different-draw-elements}
 
-您可以使用AEM Forms Designer插入靜態繪圖元素，例如文字和影像。 對於每個繪圖元素，會有個別的CSS類別與該元素相關聯。 繪圖元素的CSS類別清單列於下方。 每個繪圖元素都有一個與之關聯的繪圖類。
+您可以使用AEM Forms設計工具插入靜態繪圖元素，例如文字和影像。 對於每個繪圖元素，會有個別的CSS類別與該元素相關聯。 繪圖元素的CSS類別清單列於下方。 每個繪圖元素都有一個與之關聯的繪圖類。
 
 | **繪圖類型** | **CSS 類別** |
 |---|---|
