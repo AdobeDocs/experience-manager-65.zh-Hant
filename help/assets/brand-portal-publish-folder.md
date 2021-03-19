@@ -10,10 +10,12 @@ topic-tags: brand-portal
 content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
+feature: 品牌入口網站
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '585'
 ht-degree: 38%
 
 ---
@@ -21,15 +23,15 @@ ht-degree: 38%
 
 # 將資料夾發佈至 Brand Portal{#publish-folders-to-brand-portal}
 
-身為Adobe Experience Manager(AEM)Assets管理員，您可以發佈資產和檔案夾至組織的AEM Assets Brand Portal例項（或排程發佈工作流程至較晚的日期／時間）。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請參閱[使用 Brand Portal 設定 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
+身為Adobe Experience Manager(AEM)資產管理員，您可以發佈資產和檔案夾至貴組織的AEM Assets品牌入口網站例項（或排程發佈工作流程至稍後的日期／時間）。 不過，您必須先將AEM Assets與品牌入口網站整合。 如需詳細資訊，請參閱[使用 Brand Portal 設定 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
 
 發佈資產或資料夾後，品牌入口網站的使用者即可使用它。
 
-如果您在AEM Assets中對原始資產或檔案夾進行後續修改，在您重新發佈資產或檔案夾之前，這些變更不會反映在品牌入口網站中。 這項功能可確保對進行中工作所作的變更不會出現在 Brand Portal 中。Brand Portal 僅提供管理員發佈的已核准變更。
+如果您對AEM Assets的原始資產或檔案夾進行後續修改，則在您重新發佈資產或檔案夾之前，這些變更不會反映在品牌入口網站中。 這項功能可確保對進行中工作所作的變更不會出現在 Brand Portal 中。Brand Portal 僅提供管理員發佈的已核准變更。
 
 ## 將資料夾發佈至 Brand Portal {#publish-folders-to-brand-portal-1}
 
-1. 從AEM Assets介面，將滑鼠指標暫留在所要的資料夾上，並從快速動作中選取「**發佈**」選項。
+1. 從AEM Assets介面，將滑鼠指標暫留在所要的資料夾上，並從快速動作中選取「Publish **」選項。**
 
    或者，選取所要的檔案夾，然後依照進一步的步驟進行。
 
@@ -70,7 +72,7 @@ ht-degree: 38%
 
 您可以選擇從品牌入口網站快速解除發佈資料夾，或排程檔案夾在稍後的日期和時間。 若要從 Brand Portal 取消發佈資產資料夾：
 
-1. 從AEM Author例項中的AEM Assets介面，選取您要解除發佈的檔案夾。
+1. 從「AEM作者」例項中的「AEM Assets」介面，選取您要解除發佈的檔案夾。
 
    ![publish2bp-1](assets/publish2bp.png)
 
