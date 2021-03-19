@@ -2,10 +2,11 @@
 title: 系列、程式碼片段和程式碼片段範本的多租用功能
 description: 瞭解多租賃功能如何讓您根據客戶組織來隔離CRX存放庫中的內容，以防止未經授權的存取。
 contentOwner: AG
+role: 架構師、管理員、領導者
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 例如，如果您建立名為`Demo`的資料夾，則[!DNL Experience Manager]資產通常會將資料夾儲存在`../content/dam/Demo`。 啟用多租賃後，您現在可以在`../content/dam/<organization prefix>/<organization id>Demo`儲存資料
 
-例如，如果[!DNL Assets]（隨選）的[!DNL Adobe Marketing Cloud]使用者已指派給`aodpremium`組織，您可以使用多租賃功能來設定`../content/dam/<mac>/<aodpremium>Demo`路徑以區隔其內容。 在此範例中，`mac`是組織首碼，而`aodpremium`是組織ID。
+例如，如果[!DNL Assets]（隨選）的[!DNL Adobe Marketing Cloud]使用者已指派給`aodpremium`組織，您可以使用多租賃功能來設定`../content/dam/<mac>/<aodpremium>Demo`路徑以區隔其內容。 在此範例中，`mac`是組織首碼，`aodpremium`是組織ID。
 
 根據使用者的組織和ID，此限定路徑會顯示在[!DNL Assets]介面和各種精靈中，包括「移動」和「程式碼片段建立」精靈，以執行隔離。
 
