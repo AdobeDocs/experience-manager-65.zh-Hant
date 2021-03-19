@@ -6,10 +6,11 @@ seo-description: '使用檔案安全性，安全地散布您以支援格式儲�
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
 discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
+role: 管理員
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -29,36 +30,36 @@ Adobe Experience Manager Forms檔案安全性可確保只有授權使用者才�
 
 ## 部署拓撲{#deployment-topology}
 
-檔案安全性功能僅適用於JEE上的AEM Forms。 您需要JEE上的單一AEM Forms實例。 您也可以視需要建立AEM Forms伺服器的叢集或群組。 以下拓撲是指示性拓撲，用於運行文檔安全功能。 有關拓撲的詳細資訊，請參見[ Architecture and deployment topologies for AEM Forms](aem-forms-architecture-deployment.md)。
+檔案安全性功能僅適用於JEE的AEM Forms。 您需要JEE上的單一AEM Forms實例。 如有必要，您也可以建立一個群集或群集的AEM Forms伺服器。 以下拓撲是指示性拓撲，用於運行文檔安全功能。 有關拓撲的詳細資訊，請參見[AEM Forms](aem-forms-architecture-deployment.md)的體系結構和部署拓撲。
 
 <!--fix above link-->
 
 ![](do-not-localize/document-security-server_topology.png)
 
-下圖顯示AEM Forms Document Security的典型架構：
+下圖顯示了AEM FormsDocument Security的典型架構：
 
 ![](do-not-localize/document-security-typical-environment.png)
 
-## 在JEE {#installing-aem-forms-on-jee}上安裝AEM Forms
+## 在JEE上安裝AEM Forms{#installing-aem-forms-on-jee}
 
-請執行下列步驟，在JEE上安裝及設定AEM Forms:
+在JEE上安裝和配置AEM Forms，請執行以下步驟：
 
-1. 從[Adobe授權網站(LWS)](https://licensing.adobe.com/)下載AEM 6.5 Forms on JEE安裝程式。 您需要有效的維護與支援合約才能下載安裝程式。
-1. 請閱讀「JEE支援的平台上的[AEM表格」檔案](/help/forms/using/aem-forms-jee-supported-platforms.md)，並確定已準備好在JEE上安裝AEM表格的軟體、硬體、作業系統、應用程式伺服器、資料庫、JDK和其他基礎架構。
-1. （僅限非完整安裝）請閱讀「準備安裝AEM Forms單一伺服器[或](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)準備安裝AEM Forms伺服器叢集[並讓您的環境在JEE上安裝和設定AEM Forms」。](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64)
+1. 從&lt;AEMa0/>Adobe授權網站(LWS)](https://licensing.adobe.com/)下載JEE版6.5Forms安裝程式。 [您需要有效的維護與支援合約才能下載安裝程式。
+1. 閱讀[AEM Forms的JEE支援的平台文檔](/help/forms/using/aem-forms-jee-supported-platforms.md)，並確保軟體、硬體、作業系統、應用程式伺服器、資料庫、JDK和其他基礎架構已準備好在JEE上安裝AEM Forms。
+1. （僅限非交鑰匙安裝）閱讀[準備安裝AEM Forms單伺服器](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)或[準備安裝AEM Forms伺服器群集](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64)並準備讓您的環境在JEE上安裝和配置AEM Forms。
 1. 根據您的環境和應用程式伺服器，選擇以下文檔之一併按照說明完成安裝
 
-   * [使用JBoss統包功能在JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)
+   * [在JEE上使用JBoss統包安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)
    * [在JEE for JBoss上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installJBoss_64)
-   * [在JEE for WebLogic上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_64)
+   * [在WebLogic的JEE上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_64)
    * [在JEE for WebSphere上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebSphere_64)
-   * [在JBoss叢集的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64)
-   * [在WebLogic叢集的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64)
-   * [在WebSphere叢集的JEE上設定AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
+   * [在JBoss群集上配置JEE上的AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_64)
+   * [在WebLogic群集上配置JEE上的AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_64)
+   * [在WebSphere群集上配置JEE上的AEM Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
 
    >[!NOTE]
    >
-   >在JEE組態管理員上AEM Forms的「模組選取」畫面上，選取「Document Security」選項。 「Document Security」(Document Security)選項不需要選取任何其他模組。
+   >在JEE配置管理器上AEM Forms的「模組選擇」螢幕上，選擇「Document Security」（文檔安全）選項。 「Document Security」(Document Security)選項不需要選取任何其他模組。
 
 ## 後續步驟{#next-steps}
 
