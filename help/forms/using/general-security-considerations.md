@@ -1,6 +1,6 @@
 ---
-title: JEE上AEM Forms的一般安全性考量
-seo-title: JEE上AEM Forms的一般安全性考量
+title: AEM Forms關於JEE的一般安全考量
+seo-title: AEM Forms關於JEE的一般安全考量
 description: 瞭解如何準備在JEE環境中強化您的AEM Forms。
 seo-description: 瞭解如何準備在JEE環境中強化您的AEM Forms。
 uuid: 4d098731-fc8f-41d7-98b5-5c2e31211614
@@ -9,22 +9,23 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1083'
 ht-degree: 1%
 
 ---
 
 
-# JEE上AEM表單的一般安全性考量事項{#general-security-considerations-for-aem-forms-on-jee}
+# AEM FormsJEE{#general-security-considerations-for-aem-forms-on-jee}的一般安全考量
 
-本文提供入門資訊，協助您準備強化AEM Forms環境。 其中包含JEE上AEM Forms、作業系統、應用程式伺服器和資料庫安全性的先決條件資訊。 在您繼續鎖定環境之前，請先查看此資訊。
+本文提供入門資訊，協助您做好強化AEM Forms環境的準備。 它包括有關AEM FormsJEE、作業系統、應用伺服器和資料庫安全的先決條件資訊。 在您繼續鎖定環境之前，請先查看此資訊。
 
 ## 特定於供應商的安全資訊{#vendor-specific-security-information}
 
-本節包含與作業系統、應用程式伺服器和資料庫相關的安全性資訊，這些資訊會併入您的AEM Forms on JEE解決方案。
+本節包含有關作業系統、應用程式伺服器和資料庫的安全性相關資訊，這些資訊已整合在您的AEM Forms的JEE解決方案中。
 
 使用本節中的連結可查找特定於供應商的作業系統、資料庫和應用程式伺服器的安全資訊。
 
@@ -37,7 +38,7 @@ ht-degree: 1%
 * 移除不必要的服務和應用程式
 * 備份檔案
 
-如需AEM Forms on JEE支援之作業系統的安全性資訊，請參閱表格中的資源：
+有關JEE上AEM Forms支援的作業系統的安全資訊，請參見表中的資源：
 
 <table>
  <thead>
@@ -64,7 +65,7 @@ ht-degree: 1%
    <td><p><a href="https://docs.oracle.com/cd/E53394_01/html/E54807/index.html" target="_blank">安全性與強化准則</a></p> </td>
   </tr>
   <tr>
-   <td>Oracle Linux® 7更新3</td>
+   <td>OracleLinux® 7更新3</td>
    <td><a href="https://docs.oracle.com/cd/E52668_01/E54670/E54670.pdf" target="_blank">第7版安全性指南</a><br /> </td>
   </tr>
   <tr>
@@ -86,7 +87,7 @@ ht-degree: 1%
 * 依IP位址或網域限制用戶端
 * 使用Java™ Security Manager以程式設計方式限制權限
 
-如需AEM Forms on JEE支援之應用程式伺服器的安全性資訊，請參閱本表格中的資源。
+有關JEE上的AEM Forms支援的應用程式伺服器的安全資訊，請參見此表中的資源。
 
 <table>
  <thead>
@@ -97,7 +98,7 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>Oracle WebLogic®</p> </td>
+   <td><p>OracleWebLogic®</p> </td>
    <td><p>在<a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>搜尋瞭解WebLogic安全性。</p> </td>
   </tr>
   <tr>
@@ -120,7 +121,7 @@ ht-degree: 1%
 * 在防火牆後隱藏資料庫
 * 在將敏感資料寫入資料庫之前加密敏感資料（請參閱資料庫製造商的檔案）
 
-如需AEM Forms on JEE支援之資料庫的安全性資訊，請參閱本表格中的資源。
+有關JEE上的AEM Forms支援的資料庫的安全資訊，請參見此表中的資源。
 
 <table>
  <thead>
@@ -144,12 +145,12 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p>Oracle® 12c</p> </td>
-   <td><p>請參閱<a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle 12g文檔</a>中的「安全性」一章</p> </td>
+   <td><p>請參閱<a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle12g文檔</a>中的「安全性」一章</p> </td>
   </tr>
  </tbody>
 </table>
 
-下表說明在AEM Forms on JEE設定程式期間需要開啟的預設埠。 如果您是透過https連線，請依此調整您的連接埠資訊和IP位址。 如需有關設定埠的詳細資訊，請參閱應用程式伺服器的&#x200B;*在JEE上安裝和部署AEM Forms檔案。*
+此表介紹了在JEE配置過程中在AEM Forms期間需要開啟的預設埠。 如果您是透過https連線，請依此調整您的連接埠資訊和IP位址。 有關配置埠的詳細資訊，請參見&#x200B;*在JEE上安裝和部署AEM Forms文檔，以瞭解您的應用伺服器。*
 
 <table>
  <thead>
@@ -208,7 +209,7 @@ ht-degree: 1%
 
 ### 配置JBoss以使用非預設的HTTP埠{#configuring-jboss-to-use-a-non-default-http-port}
 
-JBoss Application Server使用8080作為預設HTTP埠。 JBoss還具有預配置的埠8180 、 8280和8380 ，這些埠在jboss-service.xml檔案中加以注釋。 如果您的電腦上有已使用此連接埠的應用程式，請依照下列步驟變更AEM Forms on JEE使用的連接埠：
+JBoss Application Server使用8080作為預設HTTP埠。 JBoss還具有預配置的埠8180 、 8280和8380 ，這些埠在jboss-service.xml檔案中加以注釋。 如果您的電腦上有已使用此埠的應用程式，請按照以下步驟更改JEE上AEM Forms使用的埠：
 
 1. 開啟下列檔案以進行編輯：
 
@@ -223,30 +224,30 @@ JBoss Application Server使用8080作為預設HTTP埠。 JBoss還具有預配置
 1. 儲存並關閉檔案。
 1. 重新啟動JBoss應用程式伺服器。
 
-## AEM Forms on JEE安全性考量{#aem-forms-on-jee-security-considerations}
+## AEM Forms關於JEE安全考慮事項{#aem-forms-on-jee-security-considerations}
 
-本節說明您應瞭解的AEM Forms有關JEE特定安全性問題。
+本節介紹一些您應瞭解的AEM FormsJEE特定安全問題。
 
 ### 未在資料庫{#email-credentials-not-encrypted-in-database}中加密電子郵件憑據
 
-應用程式儲存的電子郵件憑證在儲存在JEE資料庫的AEM Forms之前，不會加密。 當您將服務端點配置為使用電子郵件時，作為該端點配置一部分使用的任何密碼資訊在儲存在資料庫中時都不會加密。
+應用程式儲存的電子郵件憑證在儲存在AEM Forms的JEE資料庫之前，不會加密。 當您將服務端點配置為使用電子郵件時，作為該端點配置一部分使用的任何密碼資訊在儲存在資料庫中時都不會加密。
 
-### 資料庫{#sensitive-content-for-rights-management-in-the-database}中權限管理的敏感內容
+### 資料庫{#sensitive-content-for-rights-management-in-the-database}中Rights Management的敏感內容
 
-AEM Forms on JEE使用JEE資料庫上的AEM Forms來儲存機密檔案金鑰資訊和其他用於原則檔案的加密資料。 保護資料庫不受入侵，有助於保護這些敏感資訊。
+AEM FormsJEE公司使用AEM FormsJEE資料庫來儲存敏感文檔密鑰資訊和用於策略文檔的其他加密材料。 保護資料庫不受入侵，有助於保護這些敏感資訊。
 
 ### 以明文形式{#password-in-clear-text-format-in-adobe-ds-xml}輸入密碼
 
-用於在JEE上執行AEM Forms的應用程式伺服器需要有其專屬的組態，才能透過應用程式伺服器上設定的資料來源存取您的資料庫。 確保應用程式伺服器在資料源配置檔案中不會以明文形式公開資料庫密碼。
+用於在JEE上運行AEM Forms的應用程式伺服器需要其自己的配置，以便通過應用程式伺服器上配置的資料源訪問資料庫。 確保應用程式伺服器在資料源配置檔案中不會以明文形式公開資料庫密碼。
 
 lc_[database].xml檔案不應包含明文格式的口令。 請洽詢您的應用程式伺服器廠商，瞭解如何為您的應用程式伺服器加密這些密碼。
 
 >[!NOTE]
 >
->JEE JBoss統包安裝程式上的AEM Forms會加密資料庫密碼。
+>AEM Forms的JEE JBoss統包安裝程式對資料庫密碼進行加密。
 
-預設情況下，IBM WebSphere Application Server和Oracle WebLogic Server可加密資料源密碼。 不過，請使用應用程式伺服器檔案進行確認，以確保發生此情況。
+IBM WebSphere Application Server和OracleWebLogic Server預設情況下可能會加密資料源密碼。 不過，請使用應用程式伺服器檔案進行確認，以確保發生此情況。
 
 ### 保護儲存在信任儲存{#protecting-the-private-key-stored-in-trust-store}中的私鑰
 
-匯入信任商店的私密金鑰或憑證會儲存在JEE資料庫的AEM Forms中。 採取適當的預防措施來保護資料庫，並將訪問權限限制到指定的管理員。
+匯入信任商店的私密金鑰或憑證會儲存在JEE資料庫的AEM Forms。 採取適當的預防措施來保護資料庫，並將訪問權限限制到指定的管理員。
