@@ -1,8 +1,8 @@
 ---
-title: AEM標籤架構
-seo-title: AEM標籤架構
-description: 標籤內容並運用AEM標籤基礎架構
-seo-description: 標籤內容並運用AEM標籤基礎架構
+title: 標籤AEM框架
+seo-title: 標籤AEM框架
+description: 標籤內容並利用標籤AEM基礎架構
+seo-description: 標籤內容並利用標籤AEM基礎架構
 uuid: f80a2cb1-359f-41dd-a70b-626d92cc3d4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,11 @@ topic-tags: platform
 content-type: reference
 discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
+feature: 標記
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 # AEM標籤框架{#aem-tagging-framework}
 
-若要標籤內容並運用AEM標籤基礎架構：
+要標籤內容並利用標籤基礎AEM架構：
 
 * 標籤必須作為[分類根節點](#taxonomy-root-node)下的` [cq:Tag](#tags-cq-tag-node-type)`類型節點存在
 
@@ -67,7 +68,7 @@ TagID由[namespace](#tag-namespace)和本機TagID組成。 [容器](#container-t
 
 分類根節點是儲存庫中所有標籤的基本路徑。 分類根節點必須&#x200B;*not*&#x200B;是類型`  cq   :Tag`的節點。
 
-在AEM中，基本路徑為`/content/  cq   :tags`，根節點的類型為`  cq   :Folder`。
+在AEM中，基本路徑為`/content/  cq   :tags` ，根節點類型為`  cq   :Folder`。
 
 ### 標籤命名空間{#tag-namespace}
 
@@ -112,7 +113,7 @@ TagID由[namespace](#tag-namespace)和本機TagID組成。 [容器](#container-t
    <td>水果／蘋果／佈雷本</td>
    <td>水果，蘋果</td>
    <td>braeburn</td>
-   <td>/content/cq:tags/dam/frout/apple/braeburn</td>
+   <td>/content/cq:tags/dam/fruit/apple/braeburn</td>
   </tr>
   <tr>
    <td>顏色／紅色</td>
@@ -166,7 +167,7 @@ TagID由[namespace](#tag-namespace)和本機TagID組成。 [容器](#container-t
 
 典型做法包括：
 
-* 允許對所有名稱空間（在`/content/cq:tags`下添加／修改）的`tag-administrators`組／角色寫訪問。 此群組隨附AEM現成可用功能。
+* 允許對所有名稱空間（在`/content/cq:tags`下添加／修改）的`tag-administrators`組／角色寫訪問。 這個群AEM組是現成可用的。
 
 * 允許用戶／作者讀取對所有應該對其可讀取的名稱空間（大部分）的訪問權。
 * 允許用戶／作者對用戶／作者可自由定義標籤的命名空間進行寫入訪問（`/content/cq:tags/some_namespace`下的add_node）
@@ -194,7 +195,7 @@ TagID由[namespace](#tag-namespace)和本機TagID組成。 [容器](#container-t
 
 節點類型定義作為CND檔案存在於儲存庫中。 CND符號定義為JCR文檔[此處](https://jackrabbit.apache.org/node-type-notation.html)的一部分。
 
-AEM中包含的「節點類型」基本定義如下：
+包含在中的節點類型的基本定AEM義如下：
 
 ```xml
 [cq:Tag] > mix:title, nt:base
@@ -217,7 +218,7 @@ AEM中包含的「節點類型」基本定義如下：
 
 >[!NOTE]
 >
->若要運用AEM標籤功能，自訂開發的應用程式不應定義`cq:tags`以外的標籤屬性。
+>為了運AEM用標籤功能，自訂開發的應用程式不應定義`cq:tags`以外的標籤屬性。
 
 ## 移動和合併標籤{#moving-and-merging-tags}
 
@@ -266,7 +267,7 @@ AEM中包含的「節點類型」基本定義如下：
 
 ## 標籤遷移{#tags-migration}
 
-Experience Manager 6.4版以上的標籤會儲存在`/content/cq:tags`下，而之前儲存在`/etc/tags`下。 但是，在Adobe Experience Manager已從舊版升級的情況下，標籤仍會出現在舊位置`/etc/tags`下。 在升級的系統中，標籤需要在`/content/cq:tags`下遷移。
+Experience Manager6.4版以後的標籤儲存在`/content/cq:tags`下，而之前在`/etc/tags`下儲存。 但是，在從舊版升級Adobe Experience Manager的情況下，標籤仍位於舊位置`/etc/tags`下。 在升級的系統中，標籤需要在`/content/cq:tags`下遷移。
 
 >[!NOTE]
 >
@@ -278,7 +279,7 @@ Experience Manager 6.4版以上的標籤會儲存在`/content/cq:tags`下，而�
 >
 >建議使用標籤管理器API作為資源。
 
-### 如果升級的AEM例項支援TagManager API {#upgraded-instance-support-tagmanager-api}
+### 如果升AEM級實例支援TagManager API {#upgraded-instance-support-tagmanager-api}
 
 1. 在元件開始時，TagManager API會偵測它是否為升級的AEM例項。 在升級的系統中，標籤儲存在`/etc/tags`下。
 
@@ -340,13 +341,13 @@ println "---------------------------------Success-------------------------------
 
 該指令碼將讀取所有在`cq:movedTo/cq:backLinks`屬性值中具有`/etc/tags`的標籤。 然後，它會重複擷取的結果集，並將`cq:movedTo`和`cq:backlinks`屬性值解析為`/content/cq:tags`路徑（在該值中偵測到`/etc/tags`的情況下）。
 
-### 如果升級的AEM例項在Classic UI {#upgraded-instance-runs-classic-ui}上執行
+### 如果升AEM級實例在Classic UI {#upgraded-instance-runs-classic-ui}上運行
 
 >[!NOTE]
 >
 >傳統UI不符合零停機時間要求，也不支援新的標籤庫路徑。 如果您想要使用`/etc/tags`以外的傳統UI，則需先建立`cq-tagging`元件重新啟動。
 
-若是TagManager API支援並在Classic UI中執行的升級AEM例項：
+若是TagManager API支AEM援並在Classic UI中執行的升級例項：
 
 1. 使用tagId或新標籤位置`/content/cq:tags`取代對舊標籤基本路徑`/etc/tags`的參考後，您就可將標籤移轉至CRX中新位置`/content/cq:tags`，然後再重新啟動元件。
 
