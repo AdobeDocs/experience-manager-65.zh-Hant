@@ -1,58 +1,59 @@
 ---
-title: 在AEM網站頁面中內嵌最適化表單或互動式通訊
-seo-title: 在AEM網站頁面中內嵌最適化表單或互動式通訊
-description: 您可以在AEM網站頁面中內嵌最適化表單。 使用者可以填寫和提交表單，而不需離開網站頁面。
-seo-description: 您可以在AEM網站頁面中內嵌最適化表單。 使用者可以填寫和提交表單，而不需離開網站頁面。
+title: 在網站頁面中內嵌最適化表單或互動式AEM通訊
+seo-title: 在網站頁面中內嵌最適化表單或互動式AEM通訊
+description: 您可以在網站頁面中內嵌AEM最適化表單。 使用者可以填寫和提交表單，而不需離開網站頁面。
+seo-description: 您可以在網站頁面中內嵌AEM最適化表單。 使用者可以填寫和提交表單，而不需離開網站頁面。
 uuid: 59b49e2f-6d95-42e5-b31e-fc40936c42d2
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author, interactive-communications
 discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 
-# 在AEM網站頁面{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}中內嵌最適化表單或互動式通訊
+# 在網站頁面{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}中內嵌AEM最適化表單或互動式通訊
 
 ## 概覽 {#overview}
 
-AEM Forms可讓表單開發人員將最適化表單和互動式通訊順暢地內嵌在AEM網站頁面或AEM以外代管的網頁中。 嵌入式自適應表單與互動式通訊功能完整，使用者可填寫並提交表單，而不需離開頁面。 它可協助使用者在網頁上保留其他元素的內容，並同時與表單或互動式通訊互動。
+AEM Forms允許表單開發人員將調適性表單和互動式通訊順暢地內嵌在AEM Sites網頁或外部代管的網頁AEM中。 嵌入式自適應表單與互動式通訊功能完整，使用者可填寫並提交表單，而不需離開頁面。 它可協助使用者在網頁上保留其他元素的內容，並同時與表單或互動式通訊互動。
 
 有關在外部網頁中嵌入自適應表單的資訊，請參見[在外部網頁中嵌入自適應表單](/help/forms/using/embed-adaptive-form-external-web-page.md)。
 
-在「AEM網站」頁面中，您可以使用下列方式新增最適化表單或互動式通訊：
+在AEM Sites網頁中，您可以使用下列方式新增最適化表單或互動式通訊：
 
-* **[AEM Forms Container元](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)**
-件AEM Forms提供可新增至網站頁面的元件。AEM Forms Container元件可讓您內嵌最適化表單和互動式通訊。
+* **[AEM Forms容](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)**
+器元件AEMForms提供可新增至網站頁面的元件。「AEM Forms集裝箱」元件可讓您嵌入最適化表單和互動式通訊。
 
 * **[資產瀏](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)**
 覽器您建立的所有表單和互動式通訊內容都可在「資產」下取用。您可以將表單拖放為頁面上的資產。
 
 ## 必備條件 {#prerequisites}
 
-若要在使用可編輯範本的AEM網站頁面中內嵌最適化表單或互動式通訊，請確定AEM表單元件已設定為相關範本中允許的元件。 如需詳細資訊，請參閱[建立頁面範本](/help/sites-authoring/templates.md)中的&#x200B;**原則與屬性（版面容器）**&#x200B;一節。
+若要在使用可編輯範本的網站頁面AEM中內嵌最適化表單或互動式通訊，請確定AEMForm元件已設定為相關範本中允許的元件。 如需詳細資訊，請參閱[建立頁面範本](/help/sites-authoring/templates.md)中的&#x200B;**原則與屬性（版面容器）**&#x200B;一節。
 
 若是使用靜態範本的「網站」頁面，您必須在網站頁面的段落系統中加以設定。 如需詳細資訊，請參閱[在設計模式中設定元件](/help/sites-authoring/default-components-designmode.md)。
 
 ## 嵌入自適應表單或交互通信{#af-component}
 
-若要使用AEM Forms Container元件嵌入最適化表單或互動式通訊：
+要使用AEM Forms容器元件嵌入自適應表單或互動式通信，請執行以下操作：
 
-1. 以編輯模式開啟AEM網站頁面，您要在其中內嵌最適化表單或互動式通訊。
-1. 從「元件瀏覽器」面板，將AEM Forms Container元件拖放至頁面上。
+1. 以編輯AEM模式開啟網站頁面，您要在其中內嵌最適化表單或互動式通訊。
+1. 從「元件瀏覽器」面板，拖放頁面上的「AEM Forms容器」元件。
 
-   或者，您也可以在「資產」瀏覽器中搜尋最適化表單或互動式通訊，並將它拖放至「網站」頁面。 它會將表單內嵌在AEM Forms容器中。
+   或者，您也可以在「資產」瀏覽器中搜尋最適化表單或互動式通訊，並將它拖放至「網站」頁面。 它將表格嵌入AEM Forms集裝箱。
 
    >[!NOTE]
    >
-   >不支援頁面上的多個AEM Forms Container元件。
+   >不支援頁面上的多個AEM Forms容器元件。
 
-1. 點選網站頁面中的內嵌AEM Forms Container元件，然後點選動作列上的![settings_icon](assets/settings_icon.png)。 **[!UICONTROL 編輯AEM Forms Container]**&#x200B;對話方塊隨即開啟。
+1. 點選網站頁面中內嵌的AEM Forms容器元件，然後點選動作列上的![settings_icon](assets/settings_icon.png)。 **[!UICONTROL 編輯AEM Forms容器]**&#x200B;對話方塊隨即開啟。
 1. 在「編輯AEM Forms容器」對話方塊中，指定下列項目。
 
    * **資產類型：** 選取要內嵌的資產類型。選項包括可調式表單和互動式通訊
@@ -71,15 +72,15 @@ AEM Forms可讓表單開發人員將最適化表單和互動式通訊順暢地�
 
 ## 發佈內嵌的最適化表單和互動式通訊{#publishing-embedded-adaptive-form-and-interactive-communication}
 
-讓我們考慮以下案例，以便在AEM網站頁面中發佈內嵌資產（最適化表單或互動式通訊）:
+讓我們考慮以下情況，以便在網站頁面中發佈內嵌資產(最適化表單或互動式通AEM訊):
 
-* 如果您是第一次發佈AEM網站頁面，且其中包含內嵌的最適化表單或互動式通訊，請發佈網站頁面和內嵌資產。
+* 如果您是第一次發AEM布網站頁面，且頁面包含內嵌的最適化表單或互動式通訊，請發佈網站頁面和內嵌資產。
 * 如果您只修改發佈網站頁面中內嵌的最適化表單或互動式通訊，請發佈原始資產，而變更會反映在發佈的網站頁面中。 發佈的網站頁面包含資產的參考，不需要重新發佈頁面。
 * 如果您修改了網站頁面和內嵌的最適化表單或互動式通訊，請重新發佈網站頁面和內嵌資產。
 
 ## 修改嵌入式自適應表單和互動式通信{#modifying-embedded-adaptive-form-and-interactive-communication}
 
-AEM網站頁面會在AEM Forms Container中維護最適化表單和互動式通訊的參考。 因此，所有配置和屬性（如主題、樣式和提交動作）都保留在嵌入式自適應形式和互動式通信中，這些配置和屬性在原始自適應形式和互動式通信中配置。
+網站頁AEM面會在「AEM Forms容器」中保留對最適化表單和互動式通訊的參考。 因此，所有配置和屬性（如主題、樣式和提交動作）都保留在嵌入式自適應形式和互動式通信中，這些配置和屬性在原始自適應形式和互動式通信中配置。
 
 要修改嵌入式自適應表單和互動式通信的任何配置或屬性，請執行下列操作之一。
 
@@ -92,11 +93,11 @@ AEM網站頁面會在AEM Forms Container中維護最適化表單和互動式通�
 
 ## 注意事項和最佳做法{#considerations-and-best-practices}
 
-在AEM網站頁面中內嵌最適化表單時，請牢記以下幾點：
+在網站頁面中內嵌最適化表單時，請牢記以AEM下幾點：
 
 * 原始表單中的頁首和頁尾不包含在嵌入表單中。
-* 支援使用者提交內嵌表單的草稿，並可在表單入口網站的「草稿」和「已提交表單」標籤中看到。
+* 在表單入口網站的「草稿」和「已提交」Forms標籤中，支援並顯示內嵌表單的使用者草稿和提交。
 * 原始表單上設定的提交動作會保留在內嵌表單中。
 * 在原始表單上設定的體驗定位和A/B測試無法在內嵌表單中運作。 不過，您可以使用網站頁面上的體驗定位功能，根據使用者設定檔顯示不同的表單。
-* 如果您已針對原始表單設定Adobe Analytics，內嵌表單的分析資料會擷取到Adobe Analytics中。 不過，表單分析報表中不提供此選項。
+* 如果您已為原始表單設定Adobe Analytics，內嵌表單的分析資料會在Adobe Analytics擷取。 不過，表單分析報表中不提供此選項。
 
