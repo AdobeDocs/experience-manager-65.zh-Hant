@@ -1,7 +1,7 @@
 ---
 title: 工作流程步驟參考
 seo-title: 工作流程步驟參考
-description: 'null'
+description: 工作流程步驟參考
 seo-description: 'null'
 uuid: 88bf6997-73a1-4639-82aa-5dff08d3ef86
 contentOwner: User
@@ -11,15 +11,15 @@ content-type: reference
 discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3288'
 ht-degree: 2%
 
 ---
 
 
-# 工作流步驟參考{#workflow-step-reference}
+# 工作流程步驟參考 {#workflow-step-reference}
 
 工作流模型由各種類型的一系列步驟組成。 根據類型，這些步驟可以配置並擴展參數和指令碼，以提供所需的功能和控制。
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 ### 步驟屬性——用戶／組頁籤{#step-properties-user-group-tab}
 
-屬性對話框的&#x200B;**用戶／組**&#x200B;頁籤上的許多工作流步驟元件可以使用以下屬性：
+屬性對話框的&#x200B;**User/Group**&#x200B;頁籤上的許多工作流步驟元件可以使用以下屬性：
 
 * **透過電子郵件通知使用者**
 
@@ -190,7 +190,7 @@ function check(){
 
 ## OR 拆分 {#or-split}
 
-**OR Split**&#x200B;會在工作流中建立拆分，之後只有一個分支處於活動狀態。 此步驟可讓您將條件式處理路徑引入工作流程中。 您可以視需要將工作流程步驟新增至每個分支。
+**OR Split**&#x200B;會在工作流中建立拆分，之後只有一個分支處於活動狀態。 此步驟可讓您將條件式處理路徑引入工作流程。 您可以視需要將工作流程步驟新增至每個分支。
 
 >[!NOTE]
 >
@@ -258,7 +258,7 @@ function check(){
 
 >[!NOTE]
 >
->必須設定某些屬性，才能啟用電子郵件通知。 您也可以自訂電子郵件範本，或新增新語言的電子郵件範本。 請參閱[設定電子郵件通知](/help/sites-administering/notification.md#configuringemailnotification)以在AEM中設定電子郵件通知。
+>必須設定某些屬性，才能啟用電子郵件通知。 您也可以自訂電子郵件範本，或新增新語言的電子郵件範本。 請參閱[設定電子郵件通知](/help/sites-administering/notification.md#configuringemailnotification)以設定中的電子郵件通知AEM。
 
 ### 對話方塊參與者步驟 {#dialog-participant-step}
 
@@ -282,7 +282,7 @@ function check(){
 
 要建立對話框，需要建立對話框：
 
-* 確定結果資料將儲存在裝載[中的位置。](#dialog-participant-step-storing-data-in-the-payload)
+* 確定結果資料將儲存在裝載](#dialog-participant-step-storing-data-in-the-payload)中的位置。[
 * [定義對話框；這包括定義用於收集（和儲存）資料的欄位](#dialog-participant-step-dialog-definition)。
 
 #### 對話方塊參與者步驟——將資料儲存在裝載{#dialog-participant-step-storing-data-in-the-payload}
@@ -410,7 +410,7 @@ function check(){
 
    指令碼必須包含名為getParticipant的函式，其會傳回使用者ID為`String`值。 將自訂指令碼儲存在`/apps/myapp/workflow/scripts`資料夾或子資料夾中。
 
-   標準AEM例項中包含範例指令碼：
+   標準例項中包含範例指令AEM碼：
 
    `/libs/workflow/scripts/initiator-participant-chooser.ecma`
 
@@ -447,7 +447,7 @@ function check(){
    >
    >但是，在返回參與者清單時，組ID只能用於&#x200B;**參與者步驟**。 對於&#x200B;**動態參與者步驟**，會傳回空白清單，這無法用於委派。
 
-   若要將您的實作提供給&#x200B;**動態參與者步驟**&#x200B;元件，請將您的Java類別新增至匯出服務的OSGi套件，並將套件部署至AEM伺服器。
+   若要將實作提供給&#x200B;**動態參與者步驟**&#x200B;元件，請將Java類別新增至匯出服務的OSGi套件，並將套件部署至伺AEM服器。
 
    >[!NOTE]
    >
@@ -510,7 +510,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 >[!CAUTION]
 >
->本節介紹Foundation Components for Page Authoring的[ Forms部分。](/help/sites-authoring/default-components-foundation.md#form)
+>本節介紹Foundation Components for Page Authoring的[Forms部分。](/help/sites-authoring/default-components-foundation.md#form)
 
 #### 表單參與者步驟——配置{#form-participant-step-configuration}
 
@@ -584,7 +584,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 * [常見](#step-properties-common-tab)
 * **程序**
 
-   * **流程**:要執行的進程實施。使用下拉式選單來選取ECMAScript或OSGi服務。 如需下列相關資訊：
+   * **流程**:要執行的進程實施。使用下拉式選單來選取ECMAScript或OSGi服務。 關於後述資訊：:
 
       * 標準的ECMAScript和OSGi服務，請參見[內置流程步驟](/help/sites-developing/workflows-process-ref.md)。
       * 為流程步驟建立ECMAScript，請參見[使用ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)實現流程步驟。
