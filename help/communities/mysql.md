@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -30,10 +31,10 @@ MySQL是關係型資料庫，主要用於SCORM追蹤和報告資料，以利啟�
 
 * 安裝[MySQL Server](https://dev.mysql.com/downloads/mysql/) Community Server 5.6版：
    * SCORM不支援5.7版。
-   * 可能與作者AEM例項相同。
-* 在所有AEM實例上，安裝MySQL的正式[JDBC驅動程式。](deploy-communities.md#jdbc-driver-for-mysql)
+   * 可能與作者實例是相同的AEM伺服器。
+* 在所AEM有實例上，安裝MySQL的正式[JDBC驅動程式。](deploy-communities.md#jdbc-driver-for-mysql)
 * 安裝[MySQL工作台](https://dev.mysql.com/downloads/tools/workbench/)。
-* 在所有AEM例項上，安裝[SCORM套件](enablement.md#scorm)。
+* 在所AEM有實例上，安裝[SCORM軟體包](enablement.md#scorm)。
 
 ## 安裝MySQL {#installing-mysql}
 
@@ -75,7 +76,7 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 ### 新的連接設定{#new-connection-settings}
 
 1. 選擇`MySQL Connections`右側的&#39;+&#39;圖示。
-1. 在對話方塊`Setup New Connection`中，輸入適合您平台的值以進行展示，作者AEM例項和MySQL位於同一伺服器上：
+1. 在對話框`Setup New Connection`中，輸入適合您平台的值以進行演示，作者實例和MySQL位AEM於同一伺服器上：
    * 連接名稱：`Enablement`
    * 連接方法：`Standard (TCP/IP)`
    * 主機名：`127.0.0.1`
@@ -104,7 +105,7 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 
 ### 獲取SQL指令碼{#obtain-sql-scripts}
 
-SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必須安裝[SCORM軟體包](deploy-communities.md#scorm):
+SQL指令碼是使用作者實例上的CRXDE Lite獲取的。 必須安裝[SCORM軟體包](deploy-communities.md#scorm):
 
 1. 瀏覽至CRXDE Lite:
    * 例如，[http://localhost:4502/crx/de](http://localhost:4502/crx/de)
@@ -177,11 +178,11 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必須安裝[SCORM
 
 **Day Commons JDBC連接池**&#x200B;的OSGi配置配置MySQL JDBC驅動程式。
 
-所有發佈和作者AEM例項都應指向相同的MySQL伺服器。
+所有發佈和作AEM者實例都應指向相同的MySQL伺服器。
 
-當MySQL在與AEM不同的伺服器上執行時，必須在JDBC連接器中指定伺服器主機名稱，以取代&#39;localhost&#39;（這會填入[ScormEngine](#configurescormengineservice)組態）。
+當MySQL在與不同的伺服器上運行時AEM，必須在JDBC連接器中指定伺服器主機名來代替「localhost」（該連接器填充[ScormEngine](#configurescormengineservice)配置）。
 
-* 在每個作者上並發佈AEM例項
+* 在每個作者和發佈例AEM項上
 * 以管理員權限登入
 * 訪問[Web控制台](../../help/sites-deploying/configuring-osgi.md)
    * 例如，[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
@@ -192,7 +193,7 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必須安裝[SCORM
 
 * 輸入下列值：
    * **[!UICONTROL JDBC驅動程式類]**:  `com.mysql.jdbc.Driver`
-   * **DBC連接URIJ**: `jdbc:mysql://localhost:3306/aem63reporting` 如果MySQL伺服器與&#39;this&#39; AEM伺服器不同，請指定伺服器取代localhost。
+   * **DBC連接URIJ**: `jdbc:mysql://localhost:3306/aem63reporting` 如果MySQL伺服器與&#39;this&#39;伺服器不同，請指定伺服器代替localhostAEM。
    * **[!UICONTROL 使用者名稱]**:為MySQL伺服器（如果不是&#39;root&#39;）輸入已配置的Username(root)或。
    * **[!UICONTROL 密碼]**:如果未為MySQL設定口令，請清除此欄位，否則，請輸入MySQL用戶名的配置口令。
    * **[!UICONTROL 資料來源名稱]**:為 [MySQL連接輸入的名稱](#new-connection-settings)，例如「啟用」。
@@ -200,17 +201,17 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必須安裝[SCORM
 
 ## 配置Scorm {#configure-scorm}
 
-### AEM Communities ScormEngine Service {#aem-communities-scormengine-service}
+### AEM CommunitiesScormEngine服務{#aem-communities-scormengine-service}
 
-**AEM Communities ScormEngine Service**&#x200B;的OSGi設定會針對啟用社群使用MySQL伺服器來設定SCORM。
+**AEM CommunitiesScormEngine服務**&#x200B;的OSGi配置將SCORM配置為啟用社區使用MySQL伺服器。
 
 當安裝[SCORM軟體包](deploy-communities.md#scorm-package)時，此配置即存在。
 
 所有發佈和作者實例都指向同一個MySQL伺服器。
 
-當MySQL在與AEM不同的伺服器上執行時，必須在ScormEngine服務中指定伺服器主機名稱，而ScormEngine服務通常會從[JDBC Connection](#configure-jdbc-connections)組態填入。
+當MySQL在與不同的伺服器上運行時AEM，必須在ScormEngine服務中指定伺服器主機名，而ScormEngine服務通常從[JDBC連接](#configure-jdbc-connections)配置中填充。
 
-* 在每個作者上並發佈AEM例項
+* 在每個作者和發佈例AEM項上
 * 以管理員權限登入
 * 訪問[Web控制台](../../help/sites-deploying/configuring-osgi.md)
    * 例如，[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
@@ -226,14 +227,14 @@ SQL指令碼是使用作者實例上的CRXDE Lite獲得的。 必須安裝[SCORM
 * 關於下列參數：
    * **[!UICONTROL Scorm使用者密碼]**:不要編輯
 
-      僅供內部使用：AEM Communities使用的特殊服務使用者可與Scorm引擎通訊。
+      僅供內部使用：它是供AEM Communities使用的特殊服務用戶與Scorm引擎通信。
 * 選擇&#x200B;**[!UICONTROL 保存]**
 
-### Adobe Granite CSRF Filter {#adobe-granite-csrf-filter}
+### Adobe花崗岩CSRF濾鏡{#adobe-granite-csrf-filter}
 
 為確保啟用課程在所有瀏覽器中都能正常運作，必須將Mozilla新增為未經CSRF篩選器勾選的使用者代理。
 
-* 以管理員權限登入AEM發佈例項。
+* 以管理員權AEM限登入發佈例項。
 * 訪問[Web控制台](../../help/sites-deploying/configuring-osgi.md)
    * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 * 找到`Adobe Granite CSRF Filter`。
