@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1986'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 0%
 
 ## 使用模板{#working-with-templates}
 
-您可以從「工具」選單導覽至&#x200B;**Adobe Experience Manager >工具>範本**，以存取範本編輯器。 在這裡，範本會組織在可編輯範本的資料夾中。 AEM提供全域資料夾以組織範本。 但是，預設未啟用。 您可以要求管理員啟用全域資料夾或建立範本的新資料夾。 有關如何建立資料夾的詳細資訊，請參閱[模板資料夾](/help/sites-developing/page-templates-editable.md)。
+您可以從「工具」菜單訪問模板編輯器，方法是導航至&#x200B;**Adobe Experience Manager>工具>模板**。 在這裡，範本會組織在可編輯範本的資料夾中。 提AEM供全域資料夾以組織範本。 但是，預設未啟用。 您可以要求管理員啟用全域資料夾或建立範本的新資料夾。 有關如何建立資料夾的詳細資訊，請參閱[模板資料夾](/help/sites-developing/page-templates-editable.md)。
 
 點選以開啟資料夾後，您會發現「建立」按鈕，允許為最適化表單建立新範本。
 
@@ -48,7 +49,7 @@ ht-degree: 0%
 
 ### 範本編輯器UI {#template-editor-ui}
 
-當您開啟範本進行編輯時，可以看到下列AEM Editor元件：
+當您開啟範本進行編輯時，可看到下列編輯器AEM元件：
 
 * **頁面工**
 具列包含下列選項：
@@ -148,7 +149,7 @@ ht-degree: 0%
 
 每個元件都具有增強資料擷取和控制的屬性。 例如，您可以啟用元件的&#x200B;**必需欄位**&#x200B;屬性。 您的作者可以指定客戶在略過填寫必要欄位時看到的訊息。 在&#x200B;**必填欄位訊息**&#x200B;屬性中指定訊息。
 
-在示例模板中，「一般資訊」頁籤中添加了「名稱」、「電話號碼」和「出生日期」欄位。 在「專業資訊」頁籤中，添加「當前聘用」、「就業類型」、「教育資格」欄位。
+在示例模板中，「一般資訊」頁籤中添加了「名稱」、「電話號碼」和「出生日期」欄位。 在「專業資訊」(Professional Information)頁籤中，添加「當前聘用」(Currently)、「雇傭類型」(Educational celification)欄位。
 
 新增欄位後，您可以新增「提交」和「重設」等按鈕。
 
@@ -156,14 +157,14 @@ ht-degree: 0%
 
 當您建立範本時，範本會新增為草稿。 啟用範本，以用於建立最適化表單。 要啟用模板，請執行以下操作：
 
-1. 導覽至「**Adobe Experience Manager >工具>範本**」，並開啟您建立範本的檔案夾。
+1. 導覽至「**Adobe Experience Manager>工具>範本**」，並開啟您建立範本的檔案夾。
 
 1. 您已建立的範本會標示為「草稿」。
 1. 選取範本，然後點選工具列中的「啟用&#x200B;**」。**&#x200B;當您建立最適化表單時，會要求您選擇範本時，您會看到列出的範本。
 
 ## 導入或導出模板{#importing-or-exporting-a-template}
 
-表單可與其範本搭配運作。 當您下載使用自訂範本建立的最適化表單時，不會下載範本。 當您在不同的AEM Forms例項上匯入表單時，會匯入不含其範本的表單。 如果表單已匯入但其範本不可用，則不會轉譯表單。 您可以從`https://<server>:<port>/crx/packmgr`的`/conf`節點封裝自訂範本，並將其移植至您要上傳表單的AEM Forms例項。
+表單可與其範本搭配運作。 當您下載使用自訂範本建立的最適化表單時，不會下載範本。 當您在不同的AEM Forms實例上導入表單時，將導入表單，但不帶有其模板。 如果表單已匯入但其範本不可用，則不會轉譯表單。 您可以從`https://<server>:<port>/crx/packmgr`的`/conf`節點封裝自訂範本，並將其移植到您要上傳表單的AEM Forms例項中。
 
 ## 使用模板{#creating-an-adaptive-form-using-the-template}建立自適應表單
 
@@ -171,22 +172,22 @@ ht-degree: 0%
 
 ## 變更方塊外範本的顯示選項{#change-display-option-of-out-of-the-box-templates}
 
-您可以建立自訂範本以自訂最適化表單，以定義基本結構和初始內容。 AEM Forms也提供一套現成可用的最適化表單範本。 您可以選擇顯示或隱藏範本。
+您可以建立自訂範本以自訂最適化表單，以定義基本結構和初始內容。 AEM Forms也提供一套現成可用的範本，以建立最適化表單。 您可以選擇顯示或隱藏範本。
 
 執行下列步驟以顯示和隱藏範本：
 
-1. 登入AEM Forms作者例項，並導覽至「工具&#x200B;**>**&#x200B;作業&#x200B;**>** Web Console **」。**
+1. 登入AEM Forms作者例項，並導覽至「工具&#x200B;**** > **作業** > **Web控制台**」。
 
    >[!NOTE]
    >
-   >AEM網頁主控台的URL為https://&#39;[server]:[port]&#39;/system/console/configMgr
+   >Web控AEM制台的URL是https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. 找到並開啟&#x200B;**FormsManager配置**&#x200B;設定：
 
    * 若要顯示或隱藏自適應表單範本，請勾選或取消勾選&#x200B;**「包含現成可用的AF和AD範本」選項。**
-   * 若要顯示或隱藏已新增至AEM 6.0 Forms或AEM 6.1 Forms版本但現已停用的可調式表單範本，請勾選或取消勾選「包含AEM 6.0 AF Templates **」選項。**&#x200B;如果選中此選項，則要生效，它要求啟用&#x200B;**「包括出廠設定」AF和AD模板**&#x200B;配置。
+   * 若要顯示或隱藏已新增於AEM6.0Forms或AEM6.1Forms版本中但現已過時的可調式表單範本，請勾選或取消勾選「包含AEM6.0 AF範本&#x200B;**」選項。**&#x200B;如果選中此選項，則要生效，它要求啟用&#x200B;**「包括出廠設定」AF和AD模板**&#x200B;配置。
 
-1. 按一下&#x200B;**「儲存」**。現成範本的顯示選項會變更。
+1. 按一下「**儲存**」。現成範本的顯示選項會變更。
 
 ## 建議 {#recommendations}
 
