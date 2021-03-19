@@ -2,10 +2,11 @@
 title: 翻譯資產的最佳實務
 description: 有效管理資產的最佳做法，可同步各種翻譯版本並簡化翻譯工作流程。
 contentOwner: AG
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -23,14 +24,14 @@ ht-degree: 0%
 
 資產二進位檔比中繼資料和標籤佔用的儲存空間要大得多。 因此，如果轉換中繼資料和標籤只符合您的目的，請省略轉換二進位檔。 您可以保留儲存庫中二進位檔案的原始副本，以便與翻譯為不同地區設定的元資料和標籤關聯。 維護一個二進位檔案副本（而不是多個翻譯版本），將對儲存庫大小的影響降至最低。
 
-File Data Store和Amazon S3 Data Store提供最適合這些情況的儲存基礎架構。 這些儲存儲存庫儲存資產二進位檔案（包括轉譯）的單一副本，這些二進位檔案可由元資料和標籤在多個地區設定中共用。 因此，建立資產語言副本和翻譯元資料和標籤不會影響儲存庫大小。
+檔案資料儲存和AmazonS3資料儲存提供了最適合這些情況的儲存基礎架構。 這些儲存儲存庫儲存資產二進位檔案（包括轉譯）的單一副本，這些二進位檔案可由元資料和標籤在多個地區設定中共用。 因此，建立資產語言副本和翻譯元資料和標籤不會影響儲存庫大小。
 
 您還可以對一些工作流和翻譯整合框架進行一些配置更改，以進一步簡化流程。
 
 1. 執行下列任一項作業：
 
    * [設定檔案資料儲存區](/help/sites-deploying/data-store-config.md)
-   * [設定Amazon S3 Data Store](/help/sites-deploying/data-store-config.md)
+   * [設定AmazonS3資料儲存](/help/sites-deploying/data-store-config.md)
 
 <!--
 1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
