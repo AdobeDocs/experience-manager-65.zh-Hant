@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1814'
 ht-degree: 0%
 
 ---
@@ -23,27 +24,27 @@ ht-degree: 0%
 
 本教學課程是[建立您第一個互動式通訊](/help/forms/using/create-your-first-interactive-communication.md)系列中的步驟。 建議依序依序依序排列，以瞭解、執行和展示完整的教學課程使用案例。
 
-若要建立互動式通訊，您必須在AEM伺服器上提供適用於列印和網路頻道的範本。
+若要建立互動式通訊，您必須在伺服器上提供列印和網AEM路頻道的範本。
 
-「列印」頻道的範本是在Adobe Forms Designer中建立，並上傳至AEM伺服器。 然後，這些範本便可在建立互動式通訊時使用。
+列印渠道的範本是在AdobeForms設計人員中建立，並上傳至伺AEM服器。 然後，這些範本便可在建立互動式通訊時使用。
 
-網頁頻道的範本是在AEM中建立。 範本作者和管理員可以建立、編輯和啟用Web範本。 在建立並啟用後，這些範本就可在建立互動式通訊時使用。
+網頁渠道的範本是在中建立AEM的。 範本作者和管理員可以建立、編輯和啟用Web範本。 在建立並啟用後，這些範本就可在建立互動式通訊時使用。
 
 本教學課程會逐步帶您建立列印和網路頻道的範本，以便在建立互動式通訊時使用。 在本教學課程結束時，您將能夠：
 
-* 使用Adobe Forms Designer建立適用於列印通道的XDP範本
-* 將XDP範本上傳至AEM Forms Server
+* 使用AdobeForms設計師為印刷渠道建立XDP模板
+* 將XDP範本上傳至AEM Forms伺服器
 * 建立並啟用網頁頻道的範本
 
 ## 建立列印頻道的範本{#create-template-for-print-channel}
 
 使用下列工作建立和管理互動式通訊列印頻道的範本：
 
-* [使用Forms Designer建立XDP範本](../../forms/using/create-templates-print-web.md#create-xdp-template-using-forms-designer)
+* [使用Forms設計師建立XDP模板](../../forms/using/create-templates-print-web.md#create-xdp-template-using-forms-designer)
 * [上傳XDP範本至AEM Forms伺服器](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)
 * [建立版面片段的XDP範本](../../forms/using/create-templates-print-web.md#create-xdp-template-for-layout-fragments)
 
-### 使用Forms Designer {#create-xdp-template-using-forms-designer}建立XDP模板
+### 使用Forms設計器{#create-xdp-template-using-forms-designer}建立XDP模板
 
 根據[使用案例](/help/forms/using/create-your-first-interactive-communication.md)和[解剖](/help/forms/using/planning-interactive-communications.md)，在XDP範本中建立下列子表單：
 
@@ -57,11 +58,11 @@ ht-degree: 0%
 
 ![create_print_template](assets/create_print_template.gif)
 
-將XDP檔案上傳至Forms伺服器後，這些子表格會在列印範本中顯示為目標區域。 建立互動式通訊時，所有實體（例如檔案片段、圖表、版面片段和影像）都會新增至目標區域。
+將XDP檔案上傳至Forms伺服器後，這些子表單會在列印範本中顯示為目標區域。 建立互動式通訊時，所有實體（例如檔案片段、圖表、版面片段和影像）都會新增至目標區域。
 
 執行以下步驟，為打印渠道建立XDP模板：
 
-1. 開啟表單設計器，選擇「**檔案** > **新建** > **使用空白表單，**&#x200B;按一下&#x200B;**Next**，然後按一下&#x200B;**完成**&#x200B;開啟表單以建立模板。
+1. 開啟Forms設計器，選擇「**檔案** > **新建** > **使用空格表單」，按一下「**&#x200B;下一步」，然後按一下「完成」以開啟建立模板的表單。********
 
    確保從&#x200B;**窗口**&#x200B;菜單中選擇了&#x200B;**對象庫**&#x200B;和&#x200B;**對象**&#x200B;選項。
 
@@ -97,11 +98,11 @@ ht-degree: 0%
    * PayNow
    * ValueAddedServices
 
-   為節省時間，您也可以複製並貼上現有的子表單以建立新的子表單。
+   為節省時間，您也可以複製並貼上現有的子表單，以建立新的子表單。
 
    要將&#x200B;**Charts**&#x200B;子表單移到Charges子表單的右側，請從左窗格選擇&#x200B;**Charts**&#x200B;子表單，選擇&#x200B;**Layout**&#x200B;標籤，並指定&#x200B;**AnchorX**&#x200B;欄位的值。 該值必須大於&#x200B;**Charges**&#x200B;子表單的&#x200B;**Width**&#x200B;欄位的值。 選擇&#x200B;**Charges**&#x200B;子表單，並選擇&#x200B;**Layout**&#x200B;頁籤以查看&#x200B;**Width**&#x200B;欄位的值。
 
-1. 將&#x200B;**Text**&#x200B;對象庫&#x200B;**中的&lt;a0/>對象拖放到窗體中，並在框中輸入**&#x200B;撥號XXXX以預訂&#x200B;**文本。**
+1. 將&#x200B;**Text**&#x200B;對象庫&#x200B;**中的**&#x200B;對象拖放到窗體中，並在框中輸入&#x200B;**撥號XXXX以預訂**&#x200B;文本。
 1. 按一下右鍵左窗格中的文本對象，選擇&#x200B;**更名對象** ，然後將文本對象的名稱輸入為&#x200B;**訂閱**。
 
    ![XDP範本](assets/print_xdp_template_subform_new.png)
@@ -113,20 +114,20 @@ ht-degree: 0%
 
    1. 點選&#x200B;**Save**。
 
-### 將XDP範本上傳至AEM Forms伺服器{#upload-xdp-template-to-the-aem-forms-server}
+### 將XDP模板上傳到AEM Forms伺服器{#upload-xdp-template-to-the-aem-forms-server}
 
-使用Forms Designer建立XDP範本後，您必須將它上傳至AEM Forms伺服器，以便在建立互動通訊時使用範本。
+使用Forms設計器建立XDP模板後，必須將其上載到AEM Forms伺服器，以便在建立交互通信時使用該模板。
 
-1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms和文檔]**。
 1. 點選「**建立** > **檔案上傳**」。
 
    導覽並選取&#x200B;**create_first_ic_print_template**&#x200B;範本(XDP)，然後點選&#x200B;**Open**&#x200B;將XDP範本匯入AEM Forms伺服器。
 
 ### 建立版面片段{#create-xdp-template-for-layout-fragments}的XDP範本
 
-若要為互動式通訊的列印頻道建立版面片段，請使用Forms Designer建立XDP，並將它上傳至AEM Forms伺服器。
+若要為互動式通訊的列印頻道建立版面片段，請使用Forms設計人員建立XDP，並上傳至AEM Forms伺服器。
 
-1. 開啟表單設計器，選擇「**檔案** > **新建** > **使用空白表單，**&#x200B;按一下&#x200B;**Next**，然後按一下&#x200B;**完成**&#x200B;開啟表單以建立模板。
+1. 開啟Forms設計器，選擇「**檔案** > **新建** > **使用空格表單」，按一下「**&#x200B;下一步」，然後按一下「完成」以開啟建立模板的表單。********
 
    確保從&#x200B;**窗口**&#x200B;菜單中選擇了&#x200B;**對象庫**&#x200B;和&#x200B;**對象**&#x200B;選項。
 
@@ -162,7 +163,7 @@ ht-degree: 0%
    1. 從&#x200B;**另存類型**&#x200B;下拉式清單中選擇&#x200B;**.xdp**。
 
    1. 點選&#x200B;**Save**。
-   使用Forms Designer為版面片段建立XDP範本後，您必須[upload](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)將它上傳至AEM Forms伺服器，以便在建立版面片段時使用範本。
+   使用Forms設計器為佈局片段建立XDP模板後，必須[upload](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)將其上載到AEM Forms伺服器，以便在建立佈局片段時使用該模板。
 
 ## 建立網路頻道{#create-template-for-web-channel}的範本
 
@@ -240,7 +241,7 @@ ht-degree: 0%
    | 名稱 | 標題 | 欄數 |
    |---|---|---|
    | customerdetails | 客戶詳細資訊 | 1 |
-   | 開單匯總 | 清單摘要 | 1 |
+   | 開單匯總 | 清單摘要 | 3 |
    | 摘要費用 | 費用匯總 | 2 |
    | itimisedcalls | 明細呼叫 | 1 |
    | paynow | 立即付款 | 2 |
