@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # Document Security Service Java API快速入門(SOAP){#document-security-service-javaapi-quick-start-soap}
 
-Rights Management服務提供Java API快速入門(SOAP):
+Java API快速入門(SOAP)適用於Rights Management服務：
 
 [快速入門（SOAP模式）:使用Java API建立原則](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
 
@@ -45,11 +46,11 @@ Rights Management服務提供Java API快速入門(SOAP):
 
 [快速入門（SOAP模式）:使用Java API從Word檔案移除原則](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是以Forms伺服器作業系統為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>「快速入門」(Quick Start)位於「與AEM Forms一起寫程式」(Programming with Meting)中，它基於Forms伺服器作業系統。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-creating-a-policy-using-the-java-api}建立原則
 
@@ -2055,7 +2056,7 @@ public class DeleteAbstractPolicySoap {
 }
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}保護現有使用者的陳述式工作流程中的PDF
+## 快速入門（SOAP模式）:Protect使用Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}為現有使用者建立陳述式工作流程的PDF
 
 以下Java代碼示例演示了為現有用戶保護「語句工作流中的文檔」的方法。
 
@@ -2163,7 +2164,7 @@ public class protectStatementWorkFlowExistingUserSoap {
 }
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}保護新使用者的陳述式工作流程中的PDF
+## 快速入門（SOAP模式）:Protect：使用Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}為新使用者建立陳述式工作流程的PDF
 
 以下Java代碼示例演示如何在語句工作流中保護文檔。 這是兩個步驟的程式：
 
