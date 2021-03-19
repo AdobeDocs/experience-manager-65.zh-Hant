@@ -1,29 +1,29 @@
 ---
-title: 處理AEM Foundation的GDPR要求
-seo-title: 處理AEM Foundation的GDPR要求
-description: 'null'
+title: 為基金會處理GDPR請AEM求
+seo-title: 為基金會處理GDPR請AEM求
+description: 為基金會處理GDPR請AEM求
 seo-description: 'null'
 uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
 contentOwner: sarchiz
 discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 translation-type: tm+mt
-source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '443'
 ht-degree: 6%
 
 ---
 
 
-# 處理AEM Foundation的GDPR要求{#handling-gdpr-requests-for-the-aem-foundation}
+# 處理Foundation的GDPRAEM請求{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
 >GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規；例如GDPR、CCPA等。
 
-## AEM Foundation GDPR支援{#aem-foundation-gdpr-support}
+## 基AEM礎GDPR支援{#aem-foundation-gdpr-support}
 
-在AEM Foundation層級，儲存的個人資料是使用者設定檔。 因此，本文中的資訊主要說明如何存取和刪除使用者個人檔案，以分別解決GDPR存取和刪除要求。
+在「基AEM礎」層級，儲存的個人資料是「使用者設定檔」。 因此，本文中的資訊主要說明如何存取和刪除使用者個人檔案，以分別解決GDPR存取和刪除要求。
 
 ## 訪問用戶配置檔案{#accessing-a-user-profile}
 
@@ -43,7 +43,7 @@ ht-degree: 6%
 
 ### HTTP API {#http-api}
 
-如前所述，Adobe提供API來存取使用者資料，以利自動化。 您可使用幾種API:
+如前所述，Adobe提供存取使用者資料的API，以利自動化。 您可使用幾種API:
 
 **UserProperties API**
 
@@ -101,10 +101,10 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. 刪除配置檔案節點及其所有子節點。 描述檔節點有兩種格式，取決於AEM版本：
+1. 刪除配置檔案節點及其所有子節點。 描述檔節點有兩種格式，視版本而AEM定：
 
    1. `[!UICONTROL /profile]`下的預設專用配置檔案
-   1. `[!UICONTROL /profiles]`，以取得使用AEM 6.5建立的新設定檔。
+   1. `[!UICONTROL /profiles]`，以取得使用6.5建立的AEM新設定檔。
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
