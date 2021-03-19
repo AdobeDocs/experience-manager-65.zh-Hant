@@ -1,7 +1,7 @@
 ---
-title: 擴充工作流程功能
-seo-title: 擴充工作流程功能
-description: 'null'
+title: 延伸工作流程功能
+seo-title: 延伸工作流程功能
+description: 延伸工作流程功能
 seo-description: 'null'
 uuid: 9f4ea2a8-8b21-4e7c-ac73-dd37d9ada111
 contentOwner: User
@@ -10,15 +10,15 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3587'
-ht-degree: 1%
+source-wordcount: '3589'
+ht-degree: 2%
 
 ---
 
 
-# 擴充工作流程功能{#extending-workflow-functionality}
+# 延伸工作流程功能{#extending-workflow-functionality}
 
 本主題說明如何為工作流程開發自訂步驟元件，以及如何以程式設計方式與工作流程互動。
 
@@ -99,7 +99,7 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 
 ## 建立自定義工作流步驟元件{#creating-custom-workflow-step-components}
 
-工作流步驟元件可以以與任何其它元件[相同的方式建立。](/help/sites-developing/components.md)
+工作流步驟元件可以以與任何其它元件](/help/sites-developing/components.md)相同的方式建立。[
 
 要從其中一個（現有）基本步驟元件繼承，請向`cq:Component`節點添加以下屬性：
 
@@ -207,7 +207,7 @@ WorkItem有其自己的MetaDataMap，只能在該工作項目（如步驟）運�
 
 1. 若要移除模型開發人員變更屬性值的能力，請覆寫元件super類型的對話方塊。
 
-### 向參與者添加表單和對話框步驟{#adding-forms-and-dialogs-to-participant-steps}
+### 向參與者添加Forms和對話框步驟{#adding-forms-and-dialogs-to-participant-steps}
 
 自訂參與者步驟元件，以提供[表單參與者步驟](/help/sites-developing/workflows-step-ref.md#form-participant-step)和[對話參與者步驟](/help/sites-developing/workflows-step-ref.md#dialog-participant-step)元件中的功能：
 
@@ -533,7 +533,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 要使用指令碼：
 
-1. 建立指令碼（例如，使用CRXDE Lite）並將其保存在`/apps/myapp/workflow/scripts`下的儲存庫中
+1. 建立指令碼(例如，CRXDE Lite)並將其保存在`/apps/myapp/workflow/scripts`下的儲存庫中
 1. 要在&#x200B;**進程步驟**&#x200B;編輯對話框中指定標識指令碼的標題，請將以下屬性添加到指令碼的`jcr:content`節點：
 
    | 名稱 | 類型 | 值 |
@@ -650,7 +650,7 @@ function getParticipant() {
 }
 ```
 
-1. 建立指令碼（例如，使用CRXDE Lite）並將其保存在`/apps/myapp/workflow/scripts`下的儲存庫中
+1. 建立指令碼(例如，CRXDE Lite)並將其保存在`/apps/myapp/workflow/scripts`下的儲存庫中
 1. 要在&#x200B;**進程步驟**&#x200B;編輯對話框中指定標識指令碼的標題，請將以下屬性添加到指令碼的`jcr:content`節點：
 
    | 名稱 | 類型 | 值 |
@@ -858,7 +858,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 1. 您現在可以開啟工作流程模型進行編輯。 在步驟瀏覽器中，您可以篩選以查看&#x200B;**我的自訂步驟**:
 
-   ![wf-36](assets/wf-36.png)
+   ![wf-34](assets/wf-36.png)
 
    將&#x200B;**我的自訂步驟**&#x200B;拖曳至模型時，會顯示卡片：
 
@@ -1039,7 +1039,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >
 >傳統的UI模型編輯器對話框仍可與標準的觸控式UI編輯器搭配使用。
 >
->如果您想要將傳統UI步驟對話方塊升級為標準UI對話方塊，AEM會提供[對話方塊轉換](/help/sites-developing/dialog-conversion.md)工具。 轉換後，某些情況下仍可對對話方塊進行一些手動改進。
+>如果您AEM想要將傳統的UI步驟對話方塊升級為標準的UI對話方塊，則有[對話方塊轉換](/help/sites-developing/dialog-conversion.md)工具。 轉換後，某些情況下仍可對對話方塊進行一些手動改進。
 >
 >* 如果升級的對話框為空，您可以查看`/libs`中與如何提供解決方案示例功能相似的對話框。 例如：
    >
