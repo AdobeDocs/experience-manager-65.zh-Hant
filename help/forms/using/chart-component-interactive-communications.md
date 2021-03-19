@@ -2,17 +2,18 @@
 title: 在互動式通訊中使用圖表
 seo-title: Interactive Communications中的圖表元件
 description: 在互動式通訊中使用圖表，您可以將大量資訊濃縮成易於分析的視覺化格式
-seo-description: AEM Forms提供圖表元件，您可用來在互動通訊中建立圖表。 本文檔說明圖表元件的基本和代理配置。
+seo-description: AEM Forms提供圖表元件，您可用來在互動式通訊中建立圖表。 本文檔說明圖表元件的基本和代理配置。
 uuid: 978aa431-9a5b-4964-b37c-7bfa8c3f49b9
 content-type: reference
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2646'
+source-wordcount: '2648'
 ht-degree: 2%
 
 ---
@@ -34,7 +35,7 @@ ht-degree: 2%
    * 列印頻道：目標區域或影像欄位
    * 網路頻道：面板或目標區域
 
-1. 點選「Interactive Communication」（互動式通信）編輯器中的圖表元件，然後從「元件」工具欄中選擇「配置」(**** configure_icon![)。](assets/configure_icon.png)
+1. 點選「Interactive Communication」（互動式通信）編輯器中的圖表元件，然後從「元件」工具欄中選擇「配置」(]**![configure_icon](assets/configure_icon.png))。**[!UICONTROL 
 
    圖表屬性顯示在左窗格中。
 
@@ -47,7 +48,7 @@ ht-degree: 2%
    Web通道中線型圖的基本屬性
 
 1. 根據通道類型配置[圖表屬性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties)。
-1. （僅限列印頻道）在&#x200B;**[!UICONTROL 代理設定]**&#x200B;中，指定代理是否必須使用此圖表。 如果未選擇此圖表&#x200B;**[!UICONTROL 選項，則座席可以在座席UI的]**&#x200B;內容&#x200B;**[!UICONTROL 頁籤中點選圖表的眼睛表徵圖以顯示或隱藏圖表。]**
+1. （僅限列印頻道）在&#x200B;**[!UICONTROL 代理設定]**&#x200B;中，指定代理是否必須使用此圖表。 如果未選擇此圖表&#x200B;]**選項，則座席可以在座席UI的**[!UICONTROL &#x200B;內容&#x200B;]**頁籤中點選圖表的眼睛表徵圖以顯示或隱藏圖表。**[!UICONTROL 
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
