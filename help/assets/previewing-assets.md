@@ -1,6 +1,6 @@
 ---
 title: 預覽資產
-description: 瞭解如何在動態媒體中預覽資產
+description: 瞭解如何在Dynamic Media預覽資產
 uuid: 09e97245-373b-4d50-8ba3-5d1034a29988
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
+feature: 資產管理
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -78,7 +80,7 @@ ht-degree: 2%
       </ul> <p><strong>若要在特定檢視器中預覽資產</strong></p>
       <ul>
       <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一下清單中的<strong>檢視器</strong>，然後選取您要套用至資產的檢視器。</li>
-      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控式螢幕上，請點選兩下影像以依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>多媒體</td>
@@ -99,7 +101,7 @@ ht-degree: 2%
       <td><p><strong>若要在特定檢視器中預覽資產</strong></p>
       <ul>
       <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一下清單中的<strong>檢視器</strong>，然後選取您要套用至資產的檢視器。</li>
-      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控式螢幕上，請點選兩下影像以依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>回轉集</td>
@@ -108,7 +110,7 @@ ht-degree: 2%
       <td><p><strong>若要在特定檢視器中預覽資產</strong></p>
       <ul>
       <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一下清單中的<strong>檢視器</strong>，然後選取您要套用至資產的檢視器。</li>
-      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控式螢幕上，請點選兩下影像以依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>混合媒體集</td>
@@ -117,7 +119,7 @@ ht-degree: 2%
       <td><p><strong>若要在特定檢視器中預覽資產</strong></p>
       <ul>
       <li>在頁面的左上角附近，按一下圖示以顯示下拉式清單。 按一下清單中的<strong>檢視器</strong>，然後選取您要套用至資產的檢視器。</li>
-      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控式螢幕上，請點選兩下影像以依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
       <tr>
       <td>轉盤集</td>
@@ -138,7 +140,7 @@ ht-degree: 2%
       </ul> <p><strong>若要在特定檢視器中預覽資產</strong></p>
       <ul>
       <li>在頁面的左上角附近點選圖示，以便顯示下拉式清單。 選擇<strong>檢視器</strong>，然後選擇您要套用至資產的檢視器。</li>
-      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控式螢幕上，請點選兩下影像以依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>圖示分別增加或減少所選影像的縮放比例。 按一下「<strong>重設</strong>」，將影像傳回原始縮放。<br /> 如果您是在觸控螢幕上，請點選兩下影像，依步驟放大。達到最大縮放時，再點兩下影像以重設縮放狀態。 拖曳影像以進行平移。</p> </td>
       </tr>
     </tbody>
     </table>
