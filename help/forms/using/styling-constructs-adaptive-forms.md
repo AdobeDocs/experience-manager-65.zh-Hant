@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2324'
 ht-degree: 3%
 
 ---
@@ -331,7 +332,7 @@ Widget也會依其類型而包含類別。 通常，Widget包含`guideFieldWidge
 
 ## 條款和條件 {#terms-and-conditions}
 
-「條款與條件」(TnC `` ``)介面工具集可讓您指定條款與條件。 您可以使用下表所述的變數來自訂介面工具集。
+「條款與條件」(TnC `` ``)介面工具集可讓您指定詞語與條件。 您可以使用下表所述的變數來自訂介面工具集。
 
 <table>
  <tbody>
@@ -520,15 +521,15 @@ Widget也會依其類型而包含類別。 通常，Widget包含`guideFieldWidge
   </tr>
   <tr>
    <td><p><code>table-header-bg-color</code></p> </td>
-   <td><p>標題列的背景顏色。 預設值為<code>#333</code>。<br /> </p> </td>
+   <td><p>標題列的背景顏色。 預設值為 <code>#333</code>.<br /> </p> </td>
   </tr>
   <tr>
    <td><p><code>table-odd-row-bg-color</code></p> </td>
-   <td><p>奇數內文行的背景顏色。 預設值為<code>rgb(255, 255, 255)</code>。</p> </td>
+   <td><p>奇數內文行的背景顏色。 預設值為 <code>rgb(255, 255, 255)</code>.</p> </td>
   </tr>
   <tr>
    <td><p><code>table-even-row-bg-color</code></p> </td>
-   <td><p>偶數內文行的背景顏色。 預設值為<code>#eee</code>。</p> </td>
+   <td><p>偶數內文行的背景顏色。 預設值為 <code>#eee</code>.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -561,7 +562,7 @@ Widget也會依其類型而包含類別。 通常，Widget包含`guideFieldWidge
   </tr>
   <tr>
    <td><p><code>filePreviewIconColor</code></p> </td>
-   <td><p>介面工具集中「預覽」圖示（引導表徵圖）的顏色</p> </td>
+   <td><p>介面工具集中「預覽」圖示(Bootstrap圖示)的色彩</p> </td>
   </tr>
   <tr>
    <td><p><code>fileItemCommentHeight</code></p> </td>
@@ -708,7 +709,7 @@ Widget也會依其類型而包含類別。 通常，Widget包含`guideFieldWidge
  </tbody>
 </table>
 
-guideNavIcon類別提供標籤導覽器（左側和上側）和精靈導覽器的預設圖示。
+guideNavIcon類別提供標籤導覽器（包括左側和上方）和精靈導覽器的預設圖示。
 
 <table>
  <tbody>
