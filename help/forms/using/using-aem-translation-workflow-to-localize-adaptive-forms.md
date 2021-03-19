@@ -1,33 +1,34 @@
 ---
-title: 使用AEM轉譯工作流程，將最適化表單和記錄檔案當地語系化
-seo-title: 使用AEM轉譯工作流程，將最適化表單和記錄檔案當地語系化
-description: 瞭解如何使用AEM轉譯工作流程，將最適化表單和記錄檔案當地語系化。
-seo-description: 瞭解如何使用AEM轉譯工作流程，將最適化表單和記錄檔案當地語系化。
+title: 使用翻AEM譯工作流程本地化最適化表單和記錄檔案
+seo-title: 使用翻AEM譯工作流程本地化最適化表單和記錄檔案
+description: 瞭解如何使用AEM翻譯工作流程，將最適化表單和記錄檔案當地語系化。
+seo-description: 瞭解如何使用AEM翻譯工作流程，將最適化表單和記錄檔案當地語系化。
 uuid: 6c87a283-0203-4cf7-989a-3770ddbbbd6e
 content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 0%
+source-wordcount: '781'
+ht-degree: 1%
 
 ---
 
 
-# 使用AEM轉譯工作流程，將最適化表單和記錄檔案{#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}當地語系化
+# 使用AEM翻譯工作流程本地化自適應表單和記錄文檔{#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
 
-本地化的表單可協助您為各地的廣大受眾提供服務。 Adobe Experience Manager翻譯工作流程可協助您將調適性表單及其記錄檔案當地語系化。 可以使用&#x200B;**機器翻譯**&#x200B;或&#x200B;**人類翻譯員**&#x200B;來本地化自適應表單。
+本地化的表單可協助您為各地的廣大受眾提供服務。 Adobe Experience Manager翻譯工作流程可協助您本地化最適化表單及其記錄檔案。 可以使用&#x200B;**機器翻譯**&#x200B;或&#x200B;**人類翻譯員**&#x200B;來本地化自適應表單。
 
-本文說明將AEM翻譯工作流程與最適化表單和記錄檔案搭配使用的程式。
+本文說明了將翻譯工作AEM流與最適化表單和記錄文檔一起使用的過程。
 
 ## 使用機器翻譯來定位自適應表單和記錄文檔{#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
 機器翻譯服務會立即以最適化的形式和記錄檔案來翻譯您的內容。 AEM Forms已預先設定為使用Microsoft Translator試用版進行機器翻譯。 執行以下步驟，為自適應表單和記錄文檔啟用機器翻譯：
 
-1. 在AEM Forms UI中，選取表單，然後點選「**新增字典**」選項。
+1. 在AEM FormsUI上，選擇表單，然後點選「新增字典」選項。****
 1. 在&#x200B;**將字典添加到翻譯項目**&#x200B;螢幕中，選擇&#x200B;**建立新翻譯項目**&#x200B;或&#x200B;**添加到現有翻譯項目**&#x200B;選項。
 1. 在&#x200B;**專案標題**&#x200B;欄位中，指定標題。 例如， `Government Reference Site - German locale.`
 1. 在&#x200B;**目標語言**&#x200B;欄位中，指定地區（例如`German(de)`），然後按一下&#x200B;**Done**。 您可以指定多個地區設定。 表單會轉譯為&#x200B;**Target Languages**&#x200B;欄位中指定的所有地區設定。
@@ -56,13 +57,13 @@ ht-degree: 0%
 
 ## 使用人工翻譯(Human Translation)定位最適化表單及其記錄文檔{#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
 
-在人文翻譯中，內容將發送給翻譯提供商，並由專業翻譯員翻譯。 完成時，會傳回翻譯的內容並匯入AEM。 當您的翻譯提供者與AEM整合時，內容會在AEM和翻譯提供者之間自動傳送。
+在人文翻譯中，內容將發送給翻譯提供商，並由專業翻譯員翻譯。 完成時，會傳回翻譯的內容並匯入至AEM。 當翻譯提供者與之整合時AEM，內容會自動在翻譯提供AEM者與之間傳送。
 
 對於翻譯，將與專業翻譯人員共用包含XLIFF格式檔案的字典。 字典包含每個地區設定的個別XLIFF檔案。 每個XLIFF檔案都包含將顯示給最終用戶的文本，以及對應本地化文本的佔位符。
 
 使用Human Translators，執行以下步驟將表單及其記錄文檔本地化：
 
-1. [將AEM與您的翻譯服務提供者](/help/sites-administering/tc-tic.md) 連接， [並建立翻譯整合架構設定](/help/sites-administering/tc-tic.md)。
+1. [與您的AEM翻譯服務提供商](/help/sites-administering/tc-tic.md) 聯繫並 [建立翻譯整合框架配置](/help/sites-administering/tc-tic.md)。
 
 1. [將您語言的首頁與翻](/help/sites-administering/tc-tic.md) 譯服務和框架配置相關聯。
 
