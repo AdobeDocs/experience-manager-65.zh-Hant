@@ -2,10 +2,11 @@
 title: 登入及登出資產以進行編輯
 description: 瞭解如何取出要編輯的資產，並在變更完成後將其存回。
 contentOwner: AG
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -55,7 +56,7 @@ ht-degree: 0%
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. 在工具欄中，按一下「釋放鎖定」。 ]****[!UICONTROL &#x200B;資產已登入，可供其他使用者編輯。
+1. 在工具欄中，按一下「釋放鎖定」。 ****&#x200B;資產已登入，可供其他使用者編輯。
 
 ## 最佳做法和限制{#tips-limitations}
 
