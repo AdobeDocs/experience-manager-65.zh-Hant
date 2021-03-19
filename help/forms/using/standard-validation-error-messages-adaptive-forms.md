@@ -8,10 +8,11 @@ contentOwner: anujkapo
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -139,7 +140,7 @@ if (data) {
 
 1. 在編寫模式中開啟最適化表單，選取任何表單物件，然後點選「規則編輯器」以開啟規則編輯器。![](assets/rule_editor_icon.png)
 1. 點選&#x200B;**[!UICONTROL Create]**。
-1. 在規則的&#x200B;**[!UICONTROL When]**&#x200B;區段中建立條件。 例如，當欄位[的名稱變更時。 ]從&#x200B;**[!UICONTROL 選擇狀態]**&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL 變更]**&#x200B;以達成此條件。
+1. 在規則的&#x200B;**[!UICONTROL When]**&#x200B;區段中建立條件。 例如，當欄位]的名稱變更時。 [從&#x200B;**[!UICONTROL 選擇狀態]**&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL 變更]**&#x200B;以達成此條件。
 1. 在&#x200B;**[!UICONTROL Then]**&#x200B;區段中，從&#x200B;**[!UICONTROL 選擇操作]**&#x200B;下拉清單中選擇&#x200B;**[!UICONTROL 調用服務]**。
 1. 從&#x200B;**[!UICONTROL Input]**&#x200B;部分選擇Post服務及其相應的資料綁定。 例如，如果您想要驗證最適化形式的&#x200B;**Name**、**ID**&#x200B;和&#x200B;**Status**&#x200B;欄位，請選取貼文服務(pet)，然後在&#x200B;**[!UICONTROL Input]**&#x200B;區段中選取pet.name、pet.id和pet.status。
 
