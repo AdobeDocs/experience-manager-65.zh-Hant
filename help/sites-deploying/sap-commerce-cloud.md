@@ -1,8 +1,8 @@
 ---
-title: SAP Commerce Cloud
-seo-title: SAP Commerce Cloud
-description: 瞭解如何使用SAP Commerce Cloud部署電子商務。
-seo-description: 瞭解如何使用SAP Commerce Cloud部署電子商務。
+title: SAPCommerce Cloud
+seo-title: SAPCommerce Cloud
+description: 瞭解如何使用SAPCommerce Cloud部署電子商務。
+seo-description: 瞭解如何使用SAPCommerce Cloud部署電子商務。
 uuid: a16ae42b-9c33-4da8-a130-52b72a779ec7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,23 @@ topic-tags: e-commerce
 content-type: reference
 discoiquuid: 44dfa10f-497e-473f-95d4-8dccae7ebf8e
 pagetitle: Deploying eCommerce with SAP Commerce Cloud
+feature: 商務整合框架
 translation-type: tm+mt
-source-git-commit: 328e13eb2ce034b0b1ec7e5e0fb184de9435d1bc
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 0%
+source-wordcount: '736'
+ht-degree: 2%
 
 ---
 
 
-# SAP Commerce Cloud{#sap-commerce-cloud}
+# SAPCommerce Cloud{#sap-commerce-cloud}
 
 >[!NOTE]
 >
 >此頁面包含Hybris網站的連結。 若是某些頁面，您需要帳戶才能登入。
 
-## 使用SAP Commerce Cloud部署電子商務{#deploying-ecommerce-with-sap-commerce-cloud}
+## 使用SAPCommerce Cloud部署電子商務{#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -35,7 +36,7 @@ ht-degree: 0%
 
 部署[必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris)將提供電子商務架構的完整功能，以及隨同Hybris實作（包括展示目錄）提供的電子商務功能的參考實作
 
-Geometrixx Outdoors網站的英文（美國）分支(`/content/geometrixx-outdoors/en_US`)提供此項功能：
+這可從Geometrixx Outdoors網站的英文（美國）分支(`/content/geometrixx-outdoors/en_US`)下取得：
 
 * [產品資訊](#productinformationwithcolorvariants) （適當時包含顏色變體）
 
@@ -52,7 +53,7 @@ eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5�
 >
 >* 支援18.11及更新版本。
 >* 您需要Java 7才能運行[hybris 5伺服器。](https://www.hybris.com/en/architecture-technology)
->* AEM擴充功能不支援hybris附加元件[Telco Accelerator](https://www.hybris.com/en/products/telecommunication)。
+>* 擴充功能不支援hybris附加元件[Telco Accelerator](https://www.hybris.com/en/products/telecommunication)AEM。
 
 >
 
@@ -63,15 +64,15 @@ eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5�
 若要安裝電子商務功能，您需要：
 
 * 您的hybris伺服器
-* AEM eCommerce架構：
+* AEM電子商務框架：
 
-   * 這是標準AEM安裝的一部分
+   * 這是標準安裝的一AEM部分
 
-* AEM Geometrixx-all套件：
+* AEMGeometrixx包：
 
    * `cq-geometrixx-all-pkg`
 
-* AEM Hybris內容套件：
+* AEMhybris內容套件：
 
    * `cq-hybris-content-6.3.2`
    * 混合特定API實作
@@ -80,10 +81,10 @@ eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5�
 
 ### 使用hybris {#installation-of-ecommerce-with-hybris}安裝電子商務
 
-若要安裝完整的組態（使用展示目錄，Geometrixx Outdoors），基本步驟為：
+要安裝完全成熟的配置(使用演示目錄，Geometrixx Outdoors)，基本步驟為：
 
-1. [安裝AEM](/help/sites-deploying/deploy.md)。
-1. 安裝Geometrixx-all套件
+1. [安裝AEM。](/help/sites-deploying/deploy.md)
+1. 安裝Geometrixx-全部軟體包
 
    1. ` [cq-geometrixx-all-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-all-pkg)`
 
@@ -95,9 +96,9 @@ eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5�
 1. [下載並建立您的Hybris伺服器](#download-and-build-your-hybris-server)。
 1. 在電子商務引擎中建構您的目錄：
 
-   1. [設定Geometrixx Outdoor Store](#setup-the-geometrixx-outdoors-store)。
+   1. [設定Geometrixx室外商店](#setup-the-geometrixx-outdoors-store)。
 
-1. [在](/help/sites-authoring/qg-page-authoring.md) AEM中編寫您需要的任何補充頁面。
+1. [制](/help/sites-authoring/qg-page-authoring.md) 作您需要的補充頁AEM面。
 
 >[!CAUTION]
 >
@@ -191,7 +192,7 @@ eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5�
 
 ### 設定Geometrixx Outdoors商店{#setup-the-geometrixx-outdoors-store}
 
-此程式將上傳並設定展示商店- Geometrixx Online。
+此程式將上傳並配置演示商店——線上Geometrixx。
 
 1. 啟動您的Hybris實例。 在命令行中，執行以下操作：
 
