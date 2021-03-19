@@ -5,10 +5,13 @@ audience: end-user
 user-guide-title: Adobe Experience Manager6.5發行說明
 breadcrumb-title: 發行說明
 user-guide-description: 在版本注意事項中瞭解AEM6.5的最新功能。
+feature-set: Experience Manager
+feature: 發行資訊
+role: 領導者、架構師、開發人員、資料架構師、資料工程師、管理員、業務從業人員
 translation-type: tm+mt
-source-git-commit: 4f3be1e50b5520e55ffebfe13ea19aca77d5350d
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '87'
 ht-degree: 18%
 
 ---
