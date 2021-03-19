@@ -1,18 +1,19 @@
 ---
 title: 修訂清除
 seo-title: 修訂清除
-description: 瞭解如何使用AEM 6.3中的「修訂清除」功能。
-seo-description: 瞭解如何使用AEM 6.3中的「修訂清除」功能。
+description: 瞭解如何使用6.3中的「修訂清除AEM」功能。
+seo-description: 瞭解如何使用6.3中的「修訂清除AEM」功能。
 uuid: 321f5038-44b0-4f1e-a1aa-2d29074eed70
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5916'
+source-wordcount: '5917'
 ht-degree: 0%
 
 ---
@@ -22,13 +23,13 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-每個對儲存庫的更新都會建立新的內容修訂。 因此，隨著每次更新，儲存庫的大小都會增大。 為了避免儲存庫增長失控，需要清理舊版本以釋放磁碟資源。 此維護功能稱為「修訂清除」。 自AEM 6.0以來，它已提供離線常式。
+每個對儲存庫的更新都會建立新的內容修訂。 因此，隨著每次更新，儲存庫的大小都會增大。 為了避免儲存庫增長失控，需要清理舊版本以釋放磁碟資源。 此維護功能稱為「修訂清除」。 自6.0以來，它已可當成離線常AEM式使用。
 
-AEM 6.3推出名為「線上修訂清除」的線上版本。 相較於必須關閉AEM例項的「離線修訂清除」,AEM例項線上時可執行「線上修訂清除」。 「線上修訂清除」預設為開啟，這是執行修訂清除的建議方式。
+隨AEM著6.3的推出，此功能的線上版本稱為「線上修訂清除」。 與必須關閉實例的「離線修訂清AEM除」相比，在實例聯機時可以運行「線上修AEM訂清除」。 「線上修訂清除」預設為開啟，這是執行修訂清除的建議方式。
 
 **注意**: [如需簡](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/revision-cleanup-technical-video-use.html) 介及如何使用線上修訂清除，請參閱視訊。
 
-修訂版清除程式包含三個階段：**估計**、**compaction**&#x200B;和&#x200B;**clean up**。 估計會根據可能收集的廢棄項目數量決定是否執行下一階段（壓縮）。 在壓縮階段期間，會重寫tar檔案，而不會保留任何未使用的內容。 清除階段隨後會移除舊區段，包括舊區段可能包含的任何垃圾。 離線模式通常可回收更多空間，因為線上模式需要考慮AEM的工作集，而AEM的工作集會保留其他區段不會被收集。
+修訂版清除程式包含三個階段：**估計**、**compaction**&#x200B;和&#x200B;**clean up**。 估計會根據可能收集的廢棄項目數量決定是否執行下一階段（壓縮）。 在壓縮階段期間，會重寫tar檔案，而不會保留任何未使用的內容。 清除階段隨後會移除舊區段，包括舊區段可能包含的任何垃圾。 離線模式通常可以回收更多空間，因為線上模式需要考慮工作AEM集，而工作集會保留其他區段不會被收集。
 
 如需修訂清除的詳細資訊，請參閱下列連結：
 
@@ -40,13 +41,13 @@ AEM 6.3推出名為「線上修訂清除」的線上版本。 相較於必須關
 
 ### 何時使用「線上修訂清除」而非「離線修訂清除」?{#when-to-use-online-revision-cleanup-as-opposed-to-offline-revision-cleanup}
 
-**建議使用「線上修訂清除」來執行修訂清除。** 離線修訂清除僅能例外地使用——例如，在移轉至新儲存格式之前，或Adobe客戶服務要求您這麼做。
+**建議使用「線上修訂清除」來執行修訂清除。** 離線修訂版清除只能在例外情況下使用——例如，在遷移到新儲存格式之前，或是Adobe客戶服務部門要求您這樣做。
 
 ## 如何運行聯機修訂清除{#how-to-run-online-revision-cleanup}
 
 「線上修訂清除」依預設設定，可自動在AEM Author和Publish執行個體上每天執行一次。 您只需在使用者活動最少的時段內定義維護視窗即可。 您可以按如下方式配置「聯機修訂清除」任務：
 
-1. 在主AEM視窗中，前往&#x200B;**工具——作業——儀表板——維護**，或將您的瀏覽器指向：`https://serveraddress:serverport/libs/granite/operations/content/maintenance.html`
+1. 在主窗AEM口中，轉至&#x200B;**工具——操作——儀表板——維護**&#x200B;或將瀏覽器指向：`https://serveraddress:serverport/libs/granite/operations/content/maintenance.html`
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
@@ -80,16 +81,16 @@ AEM 6.3推出名為「線上修訂清除」的線上版本。 相較於必須關
 
 ## 完全和尾部壓縮模式{#full-and-tail-compaction-modes}
 
-**AEM 6.5為「** 線 **上修訂** 清除」程 **** 序的精簡階段提供兩種新模式：
+**AEM6.5介紹** 「線上修訂清 ****  **** 除」流程的壓縮階段的兩種新模式：
 
-* **完全壓縮**&#x200B;模式將重寫整個儲存庫中的所有段和tar檔案。 因此，後續的清理階段可以刪除整個儲存庫中最大的垃圾量。 由於完全壓縮會影響整個儲存庫，因此需要大量的系統資源和時間才能完成。 完全壓縮對應於AEM 6.3中的壓縮階段。
+* **完全壓縮**&#x200B;模式將重寫整個儲存庫中的所有段和tar檔案。 因此，後續的清理階段可以刪除整個儲存庫中最大的垃圾量。 由於完全壓縮會影響整個儲存庫，因此需要大量的系統資源和時間才能完成。 完全壓實對應於6.3AEM中的壓實相。
 * **tail compaction**&#x200B;模式只重寫儲存庫中最新的段和tar檔案。 最近的區段和tar檔案是自上次執行完整或尾部壓縮後新增的區段和tar檔案。 因此，後續的清理階段只能刪除儲存庫最近部分包含的垃圾。 由於尾部壓縮只影響儲存庫的一部分，因此完成的系統資源和時間比完全壓縮要少得多。
 
 這些壓實模式構成了效率和資源消耗之間的權衡：尾部壓實效果不明顯，對系統正常運行影響較小。 相比之下，全壓實效果更好，但對系統正常運行影響較大。
 
-AEM 6.5也在壓縮期間引入更有效率的內容去重複化機制，進一步減少存放庫的磁碟空間。
+AEM 6.5還引入了在壓縮過程中更高效的內容重複資料消除機制，這進一步減少了儲存庫的磁碟佔用空間。
 
-以下兩張圖表顯示內部實驗室測試的結果，這些測試說明與AEM 6.3相比，AEM 6.5平均執行時間和磁碟平均佔用空間減少：
+以下兩張圖表顯示了內部實驗室測試的結果，這些測試表明，與6.3相比，磁碟的平均執行時間和平均佔用空間AEM在6.5中AEM減少：
 
 ![onrc-duration-6_4vs63](assets/onrc-duration-6_4vs63.png) ![segmentstore-6_4vs63](assets/segmentstore-6_4vs63.png)
 
@@ -110,7 +111,7 @@ AEM 6.5也在壓縮期間引入更有效率的內容去重複化機制，進一�
 使用新的壓縮模式時，請記住以下事項：
 
 * 您可以監控輸入／輸出(I/O)活動，例如：I/O操作、等待IO的CPU、提交隊列大小。 這有助於確定系統是否已綁定到I/O，並需要調整大小。
-* `RevisionCleanupTaskHealthCheck`表示聯機修訂清除的整體健康狀態。 它的運作方式與AEM 6.3相同，不會區分完整和尾部壓縮。
+* `RevisionCleanupTaskHealthCheck`表示聯機修訂清除的整體健康狀態。 其運作方式與6.3相AEM同，不區分全壓縮和尾壓縮。
 * 日誌消息會傳送有關壓縮模式的相關資訊。 例如，當「聯機修訂清除」啟動時，相應的日誌消息將指示壓縮模式。 此外，在某些轉角情況下，系統將在計畫運行尾部壓縮時恢復為完全壓縮，而日誌消息將指示此更改。 下面的日誌樣本表示壓縮模式，以及從尾部到完全壓縮的變化：
 
 ```
@@ -126,7 +127,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ## 線上修訂清除常見問題{#online-revision-cleanup-frequently-asked-questions}
 
-### AEM 6.5升級考量事項{#aem-upgrade-considerations}
+### AEM 6.5升級注意事項{#aem-upgrade-considerations}
 
 <table>
  <tbody>
@@ -135,8 +136,8 @@ TarMK GC: no base state available, running full compaction instead
    <td>答案</td>
   </tr>
   <tr>
-   <td>升級至AEM 6.5時，應該注意什麼？</td>
-   <td><p>TarMK的永續性格式將隨AEM 6.5而變更。這些更改不需要主動遷移步驟。 現有儲存庫將進行滾動遷移，該遷移對用戶是透明的。 第一次AEM 6.5（或相關工具）存取儲存庫時，就會開始移轉程式。</p> <p><strong>一旦開始移轉至AEM 6.5永續性格式，儲存庫就無法還原回先前的AEM 6.3永續性格式。</strong></p> </td>
+   <td>升級至6.5時，應該注意AEM什麼？</td>
+   <td><p>TarMK的永續性格式將隨AEM6.5變更。這些更改不需要主動遷移步驟。 現有儲存庫將進行滾動遷移，該遷移對用戶是透明的。 遷移過程是在第一次AEM訪問儲存庫時啟動的。</p> <p><strong>一旦開始向AEM6.5持久性格式的遷移，儲存庫就無法恢復回以前的AEM6.3持久性格式。</strong></p> </td>
   </tr>
  </tbody>
 </table>
@@ -152,7 +153,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>為什麼需要遷移儲存庫？</strong></td>
-   <td><p>在AEM 6.3中，需要變更儲存格式，尤其是為了改善「線上修訂清除」的效能和效能。 這些變更不向後相容，而且必須移轉使用舊Oak Segment（AEM 6.2和舊版）建立的儲存機制。</p> <p>更改儲存格式的其他好處：</p>
+   <td><p>在AEM6.3中，需要更改儲存格式，特別是為了改進線上修訂清理的效能和功效。 這些變更不向後相容，且必須移轉使用舊Oak Segment(AEM6.2和舊版)建立的儲存庫。</p> <p>更改儲存格式的其他好處：</p>
     <ul>
      <li>更佳的延展性（最佳化的區段大小）。</li>
      <li>更快的<a href="/help/sites-administering/data-store-garbage-collection.md" target="_blank">Data Store廢棄項目收集</a>。<br /> </li>
@@ -162,7 +163,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>是否仍支援舊版Tar格式？</strong></td>
-   <td>AEM 6.3僅支援新的Oak Segment Tar。</td>
+   <td>6.3僅支援新的Oak區段AEM Tar。</td>
    <td> </td>
   </tr>
   <tr>
@@ -249,7 +250,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>運行聯機修訂清除之前是否有任何先決條件？</strong></td>
-   <td><p>「線上修訂清除」僅適用於AEM 6.3和更新版本。 此外，如果您使用舊版AEM，則需要移轉至新的<a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak Segment Tar</a>。</p> </td>
+   <td><p>線上修訂清除功能僅適用於AEM6.3和更新版本。 此外，如果您使用舊版軟體，AEM則需要移轉至新的<a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak區段Tar</a>。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -270,7 +271,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>運行聯機修訂清除時，對磁碟空間和堆記憶體的最低要求是什麼？</strong></td>
-   <td><p>在聯機修訂清除期間，會持續監視磁碟空間。 如果可用磁碟空間降至臨界值以下，則將取消該過程。 關鍵值是儲存庫當前磁碟佔用空間的25% ，且不可配置。</p> <p><strong>建議將磁碟的大小至少比最初估計的儲存庫大小大兩三倍。</strong></p> <p>清除過程中會持續監視空閒堆空間。 如果空閒堆空間降到臨界值以下，則取消該進程。 臨界值是透過org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD來設定。 預設值為15%。</p> <p>Recommendations for minimum compaction heap sizing are not separed for the AEM memory sizing recommendations. 一般規則是：<strong>如果AEM例項的大小足夠足以處理使用案例和預期的負載，則清除程式將獲得足夠的記憶體。</strong></p> </td>
+   <td><p>在聯機修訂清除期間，會持續監視磁碟空間。 如果可用磁碟空間降至臨界值以下，則將取消該過程。 關鍵值是儲存庫當前磁碟佔用空間的25% ，且不可配置。</p> <p><strong>建議將磁碟的大小至少比最初估計的儲存庫大小大兩三倍。</strong></p> <p>清除過程中會持續監視空閒堆空間。 如果空閒堆空間降到臨界值以下，則取消該進程。 臨界值是透過org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD來設定。 預設值為15%。</p> <p>Recommendations對於最小壓縮堆大小調整不會與記憶體大小AEM調整建議分開。 一般規則是：<strong>如果實例的大AEM小足以處理使用案例和其上預期的負載，則清理過程將獲得足夠的記憶體。</strong></p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -309,11 +310,11 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果效能影響過高，是否可以安全地中止自動壓縮？</strong></td>
-   <td>是. 自從AEM 6.3起，您就可透過「作業控制面板」中的「維護工作視窗」或透過JMX安全地停止它。</td>
+   <td>是. 自AEM6.3起，您就可透過Operations Dashboard中的Maintenance Task Window或JMX安全停止它。</td>
    <td> </td>
   </tr>
   <tr>
-   <td><strong>如果AEM例項在排程的清除工作期間關閉，進程是否安全中止，或是在壓縮完成之前關閉是否被封鎖？</strong></td>
+   <td><strong>如果實AEM例在計畫的清除任務期間關閉，進程是否安全中止，或者關閉是否被阻止直到壓縮完成？</strong></td>
    <td>修訂清除將被中斷，儲存庫將安全關閉。</td>
    <td> </td>
   </tr>
@@ -387,7 +388,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>我們可以在哪裡找到上一個聯機修訂清除執行的統計資訊？</strong></td>
-   <td><p>狀態、進度和統計資訊通過JMX(<code>SegmentRevisionGarbageCollection</code> MBean)公開。 有關<code>SegmentRevisionGarbageCollection</code> MBean的詳細資訊，請閱讀<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">後面的段落</a>。</p> <p>可透過<code>EstimatedRevisionGCCompletion</code> <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code>獲取MBean的引用。</p> <p>請注意，統計資料僅自上次系統啟動後可用。 您可運用外部監控工具，讓資料不受AEM正常運作時間的限制。 請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">AEM檔案，以附加健康狀況檢查至Nagios，做為外部監控工具</a>的範例。</p> </td>
+   <td><p>狀態、進度和統計資訊通過JMX(<code>SegmentRevisionGarbageCollection</code> MBean)公開。 有關<code>SegmentRevisionGarbageCollection</code> MBean的詳細資訊，請閱讀<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">後面的段落</a>。</p> <p>可透過<code>EstimatedRevisionGCCompletion</code> <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code>獲取MBean的引用。</p> <p>請注意，統計資料僅自上次系統啟動後可用。 可運用外部監控工具，讓資料持續運作不AEM中斷。 請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">將健AEM康檢查附加至Nagios的說明檔案，以作為外部監控工具</a>的範例。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -396,11 +397,11 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>聯機修訂清除已啟動／已停止
       <ul>
-       <li>線上修訂清除由三個階段組成：估計、壓縮和清理。 如果儲存庫中沒有足夠的廢棄項目，估計可能會強制壓縮和清除。 在最新版AEM中，訊息"<code>TarMK GC #{}: estimation started</code>"會標示估計的開始，"<code>TarMK GC #{}: compaction started, strategy={}</code>"會標示壓縮的開始，"T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>"會標示清理的開始。</li>
+       <li>線上修訂清除由三個階段組成：估計、壓縮和清理。 如果儲存庫中沒有足夠的廢棄項目，估計可能會強制壓縮和清除。 在最新版本AEM中，消息"<code>TarMK GC #{}: estimation started</code>"標籤估計的開始，"<code>TarMK GC #{}: compaction started, strategy={}</code>"標籤壓縮的開始，"T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>"標籤清理的開始。</li>
       </ul> </li>
      <li>修訂版清除獲取的磁碟空間
       <ul>
-       <li>只有在清理階段完成時，才會回收空間。 清除階段的完成由日誌消息「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」標籤。 後清理大小為{}（{}位元組），空間回收{}（{}位元組）。 壓縮圖權重／深度為{}/{}（{}位元組/{}）。"</li>
+       <li>只有在清理階段完成時，才會回收空間。 清除階段的完成由日誌消息「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」標籤。 後清理大小為{}（{}位元組），空間回收{}（{}位元組）。 壓縮圖重量／深度為{}/{}（{}位元組/{}）。"</li>
       </ul> </li>
      <li>修訂版清除期間發生問題
       <ul>
@@ -419,7 +420,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><p>聯機修訂清除後，不需要儲存庫完整性檢查。 </p> <p>但是，您可以執行下列操作來檢查清理後的儲存庫狀態：</p>
     <ul>
      <li>儲存庫<a href="/help/sites-deploying/consistency-check.md" target="_blank">遍歷檢查</a></li>
-     <li>清理程式完成後，請使用oak-run工具來檢查不一致。 有關如何執行此操作的詳細資訊，請查看<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache文檔。</a> 您不需要關閉AEM即可執行工具。</li>
+     <li>清理程式完成後，請使用oak-run工具來檢查不一致。 有關如何執行此操作的詳細資訊，請查看<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache文檔。</a> 您不需要關閉即可AEM執行工具。</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -430,12 +431,12 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>修訂清除健康檢查中公開哪些資訊？ 它們如何及何時對色彩編碼狀態層級有貢獻？ </strong></td>
-   <td><p>The Revision Clean-up Health Check is apt of the <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank"> Operations Dashboard</a>.<br /> </p> <p>如果「聯機修訂清除」維護任務的上次執行成功，則狀態為<strong>GREEN</strong>。</p> <p>如果「聯機修訂清除」維護任務被取消一次，則它將為<strong>YELLOW</strong>。<br /> </p> <p>如果「聯機修訂清除」維護任務已連續取消三次，則該任務將為<strong>RED</strong>。 <strong>在這種情況下，需要手動</strong> 交互，否則「線上修訂清理」可能再次失敗。如需詳細資訊，請閱讀下方的<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">疑難排解</a>一節。<br /> </p> <p>另請注意，系統重新啟動後，Health Check狀態將會重設。 因此，新重新啟動的實例在Revision Cleanup Health Check上將顯示綠色狀態。 您可運用外部監控工具，讓資料不受AEM正常運作時間的限制。 請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">AEM檔案，以附加健康狀況檢查至Nagios，做為外部監控工具</a>的範例。</p> </td>
+   <td><p>The Revision Clean-up Health Check is apt of the <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank"> Operations Dashboard</a>.<br /> </p> <p>如果「聯機修訂清除」維護任務的上次執行成功，則狀態為<strong>GREEN</strong>。</p> <p>如果「聯機修訂清除」維護任務被取消一次，則它將為<strong>YELLOW</strong>。<br /> </p> <p>如果「聯機修訂清除」維護任務已連續取消三次，則該任務將為<strong>RED</strong>。 <strong>在這種情況下，需要手動</strong> 交互，否則「線上修訂清理」可能再次失敗。如需詳細資訊，請閱讀下方的<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">疑難排解</a>一節。<br /> </p> <p>另請注意，系統重新啟動後，Health Check狀態將會重設。 因此，新重新啟動的實例在Revision Cleanup Health Check上將顯示綠色狀態。 可運用外部監控工具，讓資料持續運作不AEM中斷。 請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">將健AEM康檢查附加至Nagios的說明檔案，以作為外部監控工具</a>的範例。</p> </td>
    <td> </td>
   </tr>
   <tr>
    <td><p><strong>如何監視備用實例上的自動清理？</strong></p> </td>
-   <td><p>使用<code>SegmentRevisionGarbageCollection</code> MBean，可透過JMX公開狀態、進度和統計資料。 另請參閱以下<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak documentation</a>。 </p> <p>您可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code>獲取MBean的引用。</p> <p>請注意，統計資料僅在上次系統啟動後才可用。 您可運用外部監控工具，讓資料不受AEM正常運作時間的限制。 此外，請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">AEM檔案，以附加健康檢查至Nagios，做為外部監控工具</a>的範例。</p> <p>日誌檔案還可用於檢查自動清理的狀態、進度和統計資訊。</p> </td>
+   <td><p>使用<code>SegmentRevisionGarbageCollection</code> MBean，可透過JMX公開狀態、進度和統計資料。 另請參閱以下<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak documentation</a>。 </p> <p>您可以使用<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code>獲取MBean的引用。</p> <p>請注意，統計資料僅在上次系統啟動後才可用。 可運用外部監控工具，讓資料持續運作不AEM中斷。 另請參閱<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">將健康檢查附AEM加到Nagios的說明檔案，作為外部監控工具</a>的範例。</p> <p>日誌檔案還可用於檢查自動清理的狀態、進度和統計資訊。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -457,7 +458,7 @@ TarMK GC: no base state available, running full compaction instead
  <tbody>
   <tr>
    <td><strong>如果不運行「線上修訂清理」，最糟糕的情況是什麼？</strong></td>
-   <td>AEM例項將會耗用磁碟空間，這會導致生產中斷。</td>
+   <td>實AEM例將耗盡磁碟空間，這將導致生產中斷。</td>
    <td> </td>
   </tr>
   <tr>
@@ -521,12 +522,12 @@ TarMK GC: no base state available, running full compaction instead
 
 >[!CAUTION]
 >
->您必鬚根據AEM安裝中使用的Oak版本，使用不同版本的Oak-run工具。 請在使用此工具之前，先檢查下列版本需求清單：
+>Oak-run工具的不同版本需視您與安裝搭配使用的Oak版本而AEM定。 請在使用此工具之前，先檢查下列版本需求清單：
 >
 >* 對於Oak版本&#x200B;**1.0.0到1.0.11**&#x200B;或&#x200B;**1.1.0到1.1.6**，請使用Oak-run版本** 1.0.11**
    >
    >
-* 對於比上述&#x200B;**更新的Oak版本**，請使用符合您AEM安裝Oak核心的Oak-run版本。
+* 對於比上述&#x200B;**更新的Oak版本**，請使用符合您安裝Oak核心的Oak-run版AEM本。
 
 >
 
@@ -544,9 +545,9 @@ Adobe提供名為&#x200B;**Oak-run**&#x200B;的工具，用於執行修訂清除
 >
 >您也可以在維護作業開始前清除舊查核點（以下程式中的步驟2和3）。 建議僅適用於擁有100個以上查核點的例項。
 
-1. 請務必確認您有AEM例項的最近備份。
+1. 請務必確認您最近有執行個體的備AEM份。
 
-   關閉AEM。
+   閉嘴AEM。
 
 1. （選用）使用工具尋找舊查核點：
 
@@ -574,7 +575,7 @@ Oak-run工具提供多項功能，旨在提高修訂版清除程式的效能，�
 
 * **-mmap。** 您可以將此設定為true或false。如果設定為true，則使用記憶體映射訪問。 如果設為false，則會使用檔案存取。 如果未指定，則64位系統將使用記憶體映射訪問，32位系統將使用檔案訪問。 在Windows上，一律會強制執行一般檔案存取，並忽略此選項。 **此參數已取代-Dtar.memoryMapped參數。**
 
-* **-Dupdate.limit**。定義臨時事務刷新到磁碟的閾值。 預設值為10000。
+* **-Dupdate.limit**。定義臨時事務刷新到磁碟的閾值。 預設值為 10000。
 
 * **-Dcompress-interval**。壓縮當前映射之前要保留的壓縮映射條目數。 預設值為100000。 如果有足夠的堆記憶體可用，則應將此值增加到更高的數目，以加快吞吐量。 **此參數已在Oak 1.6版中移除，且無效。**
 
