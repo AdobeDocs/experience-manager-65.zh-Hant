@@ -6,10 +6,12 @@ uuid: cb3a455d-2e33-44c8-8f71-3a7ecd939cd8
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
+feature: Adobe Sign
+role: 管理員
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
@@ -21,16 +23,16 @@ ht-degree: 0%
 
 當簽署者或多位簽署者簽署並送出最適化表格時，會產生[!DNL Adobe Sign]合約，其中包含簽署者的相關資訊。
 
-如需[!DNL AEM Forms]與[!DNL Adobe Sign]整合的詳細資訊，請參閱[在最適化格式](/help/forms/using/working-with-adobe-sign.md)中使用Adobe Sign。
+有關[!DNL AEM Forms]與[!DNL Adobe Sign]整合的詳細資訊，請參閱[以最適化形式使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md)。
 
 ## 用戶資料和資料儲存{#data}
 
-[!DNL Adobe Sign] 啟用的自適應表單包括關於簽署者的資訊，並且可以包括由自適應表單收集的其他用戶資料。[!DNL Adobe Sign]服務會將使用者資料與合約中的簽名一起儲存。 合約儲存在[!DNL AEM Forms]雲端服務中設定的[!DNL Adobe Sign]伺服器上。 此外，如果最適化表單設定為使用表單入口網站提交動作，則合約資料會與表單資料一起儲存在表單入口網站資料儲存中。
+[!DNL Adobe Sign] 啟用的自適應表單包括關於簽署者的資訊，並且可以包括由自適應表單收集的其他用戶資料。[!DNL Adobe Sign]服務會將使用者資料與合約中的簽名一起儲存。 合約儲存在[!DNL AEM Forms]雲端服務中設定的[!DNL Adobe Sign]伺服器上。 此外，如果最適化表單設定為使用Forms入口網站提交動作，則合約資料會與表單資料一起儲存在表單入口網站資料儲存中。
 
 ## 存取和刪除使用者資料{#access-and-delete-user-data}
 
 用戶資料在協定中收集，但不保存在任何服務表中。 [!DNL Adobe Sign] 可讓管理員在管理服務中控制的資料時做出自己的選擇。[!DNL Adobe Sign]服務的隱私權管理員可以根據要求者的電子郵件地址列出或移除合約。
 
-[!DNL Adobe Sign] 提供Web應用程式，可讓參與者搜尋合約，並視需要刪除合約。如需詳細資訊，請參閱[Adobe Sign —— 功能：刪除用戶資訊](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)。
+[!DNL Adobe Sign] 提供Web應用程式，可讓參與者搜尋合約，並視需要刪除合約。如需詳細資訊，請參閱[Adobe Sign-功能：刪除用戶資訊](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)。
 
-為使用表單入口網站提交動作而設定的最適化表單的合約資料也會儲存在表單入口網站資料儲存中。 若要從表單入口網站資料存放區存取和刪除資料，請參閱[表單入口網站 |處理使用者資料](/help/forms/using/forms-portal-handling-user-data.md)。
+配置為使用Forms門戶提交操作的最適化表單的協定資料也保存在表單門戶資料儲存中。 若要從表單入口資料存放區存取和刪除資料，請參閱[Forms入口 |處理使用者資料](/help/forms/using/forms-portal-handling-user-data.md)。
