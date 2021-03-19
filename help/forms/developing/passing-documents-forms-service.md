@@ -10,35 +10,36 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
 
 
-# 將檔案傳遞至Forms服務{#passing-documents-to-the-formsservice}
+# 將文檔傳遞至Forms服務{#passing-documents-to-the-formsservice}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 互動式PDF表格是以表格設計為基礎，通常會儲存為XDP檔案，並在Designer中建立。 從AEM Forms開始，您就可以將包含表單設計的`com.adobe.idp.Document`物件傳遞至Forms服務。 然後，Forms服務會呈現位於`com.adobe.idp.Document`物件中的表單設計。
+AEM Forms服務會將互動式PDF forms轉譯至用戶端裝置（通常是網頁瀏覽器），以收集使用者的資訊。 互動式PDF表格是以表格設計為基礎，通常會儲存為XDP檔案，並在Designer中建立。 從AEM Forms開始，您可以將包含表單設計的`com.adobe.idp.Document`物件傳遞至Forms服務。 然後，Forms服務將呈現位於`com.adobe.idp.Document`對象中的表單設計。
 
-將`com.adobe.idp.Document`物件傳遞至Forms服務的好處是，其他服務作業會傳回`com.adobe.idp.Document`例項。 也就是說，您可以從其他服務操作中獲取一個`com.adobe.idp.Document`實例並進行渲染。 例如，假設XDP檔案儲存在名為`/Company Home/Form Designs`的Content Services（已過時）節點中，如下圖所示。
+將`com.adobe.idp.Document`對象傳遞到Forms服務的一個好處是，其他服務操作返回`com.adobe.idp.Document`實例。 也就是說，您可以從其他服務操作中獲取一個`com.adobe.idp.Document`實例並進行渲染。 例如，假設XDP檔案儲存在名為`/Company Home/Form Designs`的Content Services（已過時）節點中，如下圖所示。
 
 您可以以程式設計方式從Content Services（不建議使用）擷取Loan.xdp，並將XDP檔案傳遞至`com.adobe.idp.Document`物件內的Forms服務。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 步驟{#summary-of-steps}摘要
 
-若要將從Content Services（已過時）（已過時）取得的檔案傳遞至Forms服務，請執行下列工作：
+若要將從Content Services取得的檔案（已過時）（已過時）傳遞至Forms服務，請執行下列工作：
 
 1. 包含專案檔案。
-1. 建立表單和檔案管理用戶端API物件。
+1. 建立Forms和檔案管理用戶端API物件。
 1. 從Content Services擷取表單設計（已過時）。
 1. 轉換互動式PDF表單。
 1. 對表單資料流執行動作。
@@ -47,17 +48,17 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
 在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請加入proxy檔案。
 
-**建立表單和檔案管理用戶端API物件**
+**建立Forms和檔案管理用戶端API物件**
 
-在以程式設計方式執行Forms服務API操作之前，請先建立Forms Client API物件。 此外，由於此工作流程會從Content Services擷取XDP檔案（已停用），因此請建立Document Management API物件。
+在以程式設計方式執行Forms服務API操作之前，請先建立Forms客戶端API對象。 此外，由於此工作流程會從Content Services擷取XDP檔案（已停用），因此請建立Document Management API物件。
 
 **從Content Services擷取表單設計（已過時）**
 
-使用Java或web service API從Content Services（已過時）擷取XDP檔案。 在`com.adobe.idp.Document`實例（或在使用web services時為`BLOB`實例）中返回XDP檔案。 然後，您可以將`com.adobe.idp.Document`實例傳遞至Forms服務。
+使用Java或web service API從Content Services（已過時）擷取XDP檔案。 在`com.adobe.idp.Document`實例（或在使用web services時為`BLOB`實例）中返回XDP檔案。 然後，您可以將`com.adobe.idp.Document`實例傳遞到Forms服務。
 
 **轉換互動式PDF表單**
 
-若要轉譯互動式表單，請將從Content Services（不建議使用）傳回的`com.adobe.idp.Document`例項傳遞至Forms服務。
+若要轉換互動式表單，請將從Content Services（不建議使用）傳回的`com.adobe.idp.Document`例項傳遞至Forms服務。
 
 >[!NOTE]
 >
@@ -69,21 +70,21 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 ## 使用Java API {#pass-documents-to-the-forms-service-using-the-java-api}將檔案傳送至Forms服務
 
-使用Forms服務和Content Services（不建議使用）API(Java)傳遞從Content Services（不建議使用）取得的檔案：
+使用Forms服務和內容服務（已過時）API(Java)傳遞從Content Services取得的檔案（已過時）:
 
 1. 包含專案檔案
 
    在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar和adobe-contentservices-client.jar。
 
-1. 建立表單和檔案管理用戶端API物件
+1. 建立Forms和檔案管理用戶端API物件
 
    * 建立包含連接屬性的`ServiceClientFactory`對象。 （請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
    * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
@@ -123,19 +124,19 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API將檔案傳送至Forms Service](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將檔案傳送至Forms服務](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用web service API {#pass-documents-to-the-forms-service-using-the-web-service-api}將檔案傳遞至Forms Service
+## 使用web service API {#pass-documents-to-the-forms-service-using-the-web-service-api}將檔案傳遞至Forms服務
 
-使用Forms服務和Content Services（不建議使用）API(web service)傳遞從Content Services（不建議使用）取得的檔案：
+使用Forms服務和內容服務（已過時）API(web service)傳遞從內容服務（已過時）獲得的文檔：
 
 1. 包含專案檔案
 
-   建立使用MTOM的Microsoft .NET專案。 由於此用戶端應用程式會叫用兩個AEM Forms服務，因此請建立兩個服務參考。 對與Forms服務關聯的服務引用使用以下WSDL定義：`http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 由於此客戶端應用程式調用兩個AEM Forms服務，因此建立兩個服務引用。 對與Forms服務關聯的服務引用使用以下WSDL定義：`http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`。
 
    對與「文檔管理」服務關聯的服務引用使用以下WSDL定義：`http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`。
 
@@ -143,17 +144,17 @@ AEM Forms服務會將互動式PDF表單轉譯至用戶端裝置（通常是網�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
-1. 建立表單和檔案管理用戶端API物件
+1. 建立Forms和檔案管理用戶端API物件
 
    * 使用其預設建構子建立`FormsServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormsServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/FormsService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormsServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/FormsService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`FormsServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`FormsServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`FormsServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`FormsServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
