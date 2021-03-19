@@ -7,11 +7,12 @@ page-status-flag: de-activated
 uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2057'
-ht-degree: 7%
+source-wordcount: '2059'
+ht-degree: 8%
 
 ---
 
@@ -22,11 +23,11 @@ ht-degree: 7%
 
 ![](do-not-localize/08-style_your_adaptiveformmain.png)
 
-本教程是[建立第一個自適應表單](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的一個步驟。 建議依序依序依序排列，以瞭解、執行和展示完整的教學課程使用案例。
+本教程是[建立第一個自適應表單](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的一個步驟。 建議依序依序依序排列，以瞭解、執行和展示完整的教學課程使用案例。
 
 ## 關於教學課程{#about-the-tutorial}
 
-您可以使用主題為最適化表單提供獨特的外觀和樣式。 您可以套用隨附於最適化表單編輯器的方塊外主題，或建立您自己的自訂主題。 AEM [!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可針對在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同的外觀。 使用主題編輯器時，不需具備任何CSS或LESS的先前知識，但需要它。
+您可以使用主題為最適化表單提供獨特的外觀和樣式。 您可以套用隨附於最適化表單編輯器的方塊外主題，或建立您自己的自訂主題。 AEM[!DNL Forms]提供[主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以建立自訂主題。 單一主題可針對在行動裝置、平板電腦或桌上型電腦上開啟的相同最適化表單提供不同的外觀。 使用主題編輯器時，不需具備任何CSS或LESS的先前知識，但需要它。
 
 在教學課程結束時，您將學習：
 
@@ -101,13 +102,13 @@ ht-degree: 7%
 
 ### 建立主題{#create-a-theme}
 
-1. 登入AEM作者例項，並導覽至&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Themes]**。 預設URL為[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
-1. 點選「**[!UICONTROL 建立]**」並選取「**[!UICONTROL 主題]**」。 此時會出現[!UICONTROL 建立主題]頁面，其中包含建立主題所需的欄位。 **[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**&#x200B;欄位為必填欄位：
+1. 登入作AEM者例項並導覽至&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL 主題]**。 預設URL為[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
+1. 點選「**[!UICONTROL 建立]**」並選取「**[!UICONTROL 主題]**」。 此時會出現[!UICONTROL 建立主題]頁面，其中包含建立主題所需的欄位。 **[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**&#x200B;欄位是必填欄位：
 
    * **標題：** 指定主題的標題。例如，**全域主題。** 標題可協助您從主題清單中識別主題。
    * **名稱：** 指定主題的名稱。例如，**Global-Theme。** 在儲存庫中建立具有指定名稱的節點。當您開始輸入標題時，系統會自動產生名稱欄位的值。 您可以變更建議的值。 名稱欄位只能包含英數字元、連字型大小和底線。 所有無效輸入都會以連字型大小取代。
 
-1. 點選&#x200B;**[!UICONTROL Create]**。 將建立一個主題，並出現一個用於開啟表單進行編輯的對話框。 點選「**[!UICONTROL 開啟]**」，在新標籤中開啟新建立的主題。 主題在主題編輯器中開啟。 對於樣式，主題編輯器使用隨附於AEM [!DNL Forms]的現成可用最適化表單。
+1. 點選&#x200B;**[!UICONTROL Create]**。 將建立一個主題，並出現一個用於開啟表單進行編輯的對話框。 點選「**[!UICONTROL 開啟]**」，在新標籤中開啟新建立的主題。 主題在主題編輯器中開啟。 對於樣式，主題編輯器使用隨附於AEM[!DNL Forms]的現成可調式表單。
 
    有關使用主題編輯器UI的資訊，請參閱[關於主題編輯器](/help/forms/using/themes.md#aboutthethemeeditor)。
 
@@ -135,7 +136,7 @@ ht-degree: 7%
    | 字型色彩 | FFFFFF |
    | 字型大小 | 54px |
 
-1. 點選[!UICONTROL 標題]介面工具集，點選&#x200B;**[!UICONTROL 標題]**。 標題介面工具集樣式的選項會顯示在左側。 展開&#x200B;**[!UICONTROL Dimensions &amp; Position]** accordion，將&#x200B;**[!UICONTROL Height]**&#x200B;設為`120px`，然後點選![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+1. 點選[!UICONTROL 標題]介面工具集，點選&#x200B;**[!UICONTROL 標題]**。 標題介面工具集樣式的選項會顯示在左側。 展開&#x200B;**[!UICONTROL Dimension與位置]** accordion，將&#x200B;**[!UICONTROL 高度]**&#x200B;設為`120px`，然後點選![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 1. 展開標題Widget的&#x200B;**[!UICONTROL Background]** accordion，將&#x200B;**[!UICONTROL Background Color]**&#x200B;設為`F6921E.`
 
    將滑鼠指標暫留在「影像與漸層」上，點選「影像」。 ************&#x200B;設定下列屬性，然後點選![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
@@ -146,7 +147,7 @@ ht-degree: 7%
    | 位置 | 右下 |
    | 並排顯示 | 不重複 |
 
-1. 在主題編輯器中，點選頁首中的標誌，然後點選「頁首標誌」。 ****&#x200B;展開「維度與位置」accordion，設定下列屬性，然後點選![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+1. 在主題編輯器中，點選頁首中的標誌，然後點選「頁首標誌」。 ****&#x200B;展開「Dimension與位置」accordion，設定下列屬性，然後點選![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
    <table> 
     <tbody> 
@@ -217,12 +218,12 @@ ht-degree: 7%
       <td>18px</td> 
      </tr> 
      <tr> 
-      <td>尺寸和位置</td> 
+      <td>Dimension和位置</td> 
       <td>寬度</td> 
       <td>60%</td> 
      </tr> 
      <tr> 
-      <td>尺寸和位置</td> 
+      <td>Dimension和位置</td> 
       <td>邊距</td> 
       <td> 
        <ul> 
@@ -301,7 +302,7 @@ ht-degree: 7%
 
    ![樣式——選項](assets/style-option.png)
 
-1. 點選「**[!UICONTROL Attach]**」按鈕，然後點選「![ aem_6_3_edit](assets/aem_6_3_edit.png)」圖示。 在&#x200B;**[!UICONTROL Dimensions and Position]** accordion中設定以下屬性：
+1. 點選「**[!UICONTROL Attach]**」按鈕，然後點選「![ aem_6_3_edit](assets/aem_6_3_edit.png)」圖示。 在&#x200B;**[!UICONTROL Dimension和Position]** accordion中設定以下屬性：
 
    | 屬性 | 值 |
    |---|---|
@@ -408,12 +409,12 @@ ht-degree: 7%
       <td><b>值</b></td> 
      </tr> 
      <tr> 
-      <td>尺寸和位置</td> 
+      <td>Dimension和位置</td> 
       <td>浮點</td> 
       <td>右</td> 
      </tr> 
      <tr> 
-      <td>尺寸和位置</td> 
+      <td>Dimension和位置</td> 
       <td>邊距</td> 
       <td> 
        <ul> 
@@ -446,14 +447,14 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->![typekit-to-adobe-](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] fontsis現在稱為Adobe Fonts，並隨附於Creative Cloud和其他訂閱。[了解更多](https://fonts.adobe.com/).
+>![typekit-to-adobe-](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] fontsis現在稱為Adobe Fonts，隨附於Creative Cloud和其他訂閱。[了解更多](https://fonts.adobe.com/).
 
-1. 建立[Adobe Fonts](https://typekit.com/)帳戶、建立套件、將Myriad Pro字型加入套件、發佈套件並取得套件ID。 必須在最適化表單中使用[!DNL Adobe Fonts]（Web字型）。
-1. 在AEM [!DNL Forms]伺服器中，導覽至![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** hammer](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**。 ![現在，開啟配置資料夾。 如果配置已可用，請按一下&#x200B;**[!UICONTROL 建立]**&#x200B;按鈕以建立新實例。
+1. 建立[Adobe Fonts](https://typekit.com/)帳戶、建立套件、將字型Myriad專業版新增至套件、發佈套件，並取得套件ID。 必須在最適化表單中使用[!DNL Adobe Fonts]（Web字型）。
+1. 在AEM[!DNL Forms]伺服器中，導覽至![adobeexperiencemanager](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager]**>**[!UICONTROL 工具]**![hammer](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**。 現在，開啟配置資料夾。 如果配置已可用，請按一下&#x200B;**[!UICONTROL 建立]**&#x200B;按鈕以建立新實例。
 
-   在「建立配置」對話框中，為配置指定&#x200B;**Title** ，然後按一下「建立」。 ]****[!UICONTROL &#x200B;系統會將您重新導向至設定頁面。 在出現的[!UICONTROL 編輯元件]對話框中，提供&#x200B;**套件ID**&#x200B;並按一下&#x200B;**[!UICONTROL 確定]**。
+   在「建立配置」對話框中，為配置指定&#x200B;**Title** ，然後按一下「建立」。 ****&#x200B;系統會將您重新導向至設定頁面。 在出現的[!UICONTROL 編輯元件]對話框中，提供&#x200B;**套件ID**&#x200B;並按一下&#x200B;**[!UICONTROL 確定]**。
 
-1. 設定您的主題以使用[!DNL Adobe Fonts]組態。 在作者實例上，在主題編輯器中開啟&#x200B;**[!UICONTROL 全局主題]**。 在主題編輯器中，導覽至「主題選項&#x200B;**** ![主題選項](assets/theme-options.png) > **[!UICONTROL 設定]**」。 在&#x200B;**[!UICONTROL Adobe Fonts Configuration]**&#x200B;欄位中，選取套件，然後按一下&#x200B;**[!UICONTROL Save]**。
+1. 設定您的主題以使用[!DNL Adobe Fonts]組態。 在作者實例上，在主題編輯器中開啟&#x200B;**[!UICONTROL 全局主題]**。 在主題編輯器中，導覽至「主題選項&#x200B;**** ![主題選項](assets/theme-options.png) > **[!UICONTROL 設定]**」。 在&#x200B;**[!UICONTROL Adobe Fonts配置]**&#x200B;欄位中，選擇該工具包，然後按一下&#x200B;**[!UICONTROL 保存]**。
 
-   新增至&#x200B;**[!UICONTROL Adobe Fonts]**&#x200B;的字型可供所有元件的&#x200B;**[!UICONTROL Text]** accordion中選取。
+   添加到&#x200B;**[!UICONTROL Adobe Fonts]**&#x200B;的字型可用於所有元件的&#x200B;**[!UICONTROL 文本]** accordion中的選擇。
 
