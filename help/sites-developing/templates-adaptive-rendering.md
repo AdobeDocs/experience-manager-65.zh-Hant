@@ -1,7 +1,7 @@
 ---
 title: 最適化範本演算
 seo-title: 最適化範本演算
-description: 'null'
+description: 最適化範本演算
 seo-description: 'null'
 uuid: 97226ae1-e42a-40ae-a5e0-886cd77559d8
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: f5cb0e98-0d6e-4f14-9b94-df1a9d8cbe5b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 範本通常以回應式格線為基礎，而根據這些範本建立的頁面則完全回應，可自動調整至用戶端裝置的檢視區。 使用頁面編輯器中的「模擬器」工具列，作者可將版面定位至特定裝置。
 
-您也可以設定範本，以支援自適應轉換。 當裝置群組已正確設定時，當在模擬器模式中選取裝置時，頁面會在URL中以不同的選擇器呈現。 使用選取器，可透過URL直接呼叫特定頁面演算。
+您也可以設定範本，以支援自適應轉換。 當裝置群組已正確設定時，在模擬器模式中選取裝置時，頁面會在URL中以不同的選擇器呈現。 使用選取器，可透過URL直接呼叫特定頁面演算。
 
 設定裝置群組時請記住：
 
