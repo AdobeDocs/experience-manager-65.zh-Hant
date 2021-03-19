@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: 49b18b780c87501dcb2d9a00930da8eb5e51cff2
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1565'
 ht-degree: 1%
 
 ---
@@ -20,20 +21,20 @@ ht-degree: 1%
 
 # 配置翻譯整合框架{#configuring-the-translation-integration-framework}
 
-翻譯整合框架與第三方翻譯服務整合，以協調AEM內容的翻譯。
+翻譯整合框架與第三方翻譯服務整合，以協調內容AEM翻譯。
 
 * 連接到您的翻譯服務提供商。
 * 建立翻譯整合框架配置。
 * 將雲端組態與您的頁面建立關聯。
 
-如需AEM中內容轉譯功能的概觀，請參閱[多語言網站的轉譯內容](/help/sites-administering/translation.md)。
+有關中的內容翻譯功能的概AEM述，請參閱[多語言站點的翻譯內容](/help/sites-administering/translation.md)。
 
 ## 連接到翻譯服務提供商{#connecting-to-a-translation-service-provider}
 
-建立將AEM連結至您的翻譯服務供應商的雲端設定。 AEM包含依預設連線至Microsoft Translator的功能。
+建立連接到翻譯服務提AEM供商的雲配置。 包AEM括預設連接到Microsoft Translator的功能。
 以下翻譯供應商為翻譯項目提供了新API的實施。 連結，以進一步瞭解整合：
 
-* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) （Adobe Exchange主要合作夥伴）
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (AdobeExchange Premier合作夥伴)
 * [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
@@ -44,15 +45,15 @@ ht-degree: 1%
 * [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
 * [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
 * [阿爾特朗](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
-* Microsoft（Microsoft Translator已預先安裝在AEM中）
+* Microsoft(Microsoft Translator已預安裝在AEM)
 
 >[!NOTE]
 >
 >要查找人文和機器翻譯提供者的最新清單，請查看以下頁：
 >
 >
->* [AEM Human Translation](https://www.adobe.com/go/aem-human-translation-connectors)
->* [AEM機器翻譯](https://www.adobe.com/go/aem-machine-translation-connectors)
+>* [人AEM文翻譯](https://www.adobe.com/go/aem-human-translation-connectors)
+>* [機AEM器翻譯](https://www.adobe.com/go/aem-machine-translation-connectors)
 
 >
 
@@ -78,7 +79,7 @@ ht-degree: 1%
 
 配置翻譯整合框架後，可以[將其與使用該框架的頁面](/help/sites-administering/tc-prep.md)關聯。
 
-**注意：如** 需AEM內容轉譯功能的概觀，請參閱「多語 [言網站的轉譯內容」](/help/sites-administering/translation.md)。
+**注意：如** 需中內容轉譯功能的概觀，請參閱多語AEM言 [網站的轉譯內容](/help/sites-administering/translation.md)。
 
 此架構的單一設定可控制如何翻譯頁面內容、社群內容和資產。
 ![chlimage_1-386](assets/translation-config-65.jpg)
@@ -186,7 +187,7 @@ ht-degree: 1%
  </tbody>
 </table>
 
-1. 在側欄中，按一下或點選「工具>作業>雲端>雲端服務」。
+1. 在側欄中，按一下或點選「工具>作業>雲端>Cloud Services」。
 1. 在「翻譯整合」區域中，是否建立了任何配置將決定顯示哪個連結：
 
    * 如果尚未建立任何配置，請按一下或點選「立即配置」。
@@ -199,12 +200,12 @@ ht-degree: 1%
 
 若要設定將來源頁面翻譯成其他語言，請將頁面與下列雲端設定建立關聯：
 
-* 將AEM連接至您的翻譯提供者的雲端設定。
+* 連接到翻譯提供AEM商的雲配置。
 * 配置翻譯詳細資訊的翻譯整合框架。
 
 請注意，翻譯整合架構雲端組態可識別用於連線至服務提供者的雲端組態。 將源頁面與Framework雲端配置關聯時，該頁面必須與Framework雲端配置使用的服務提供商雲端配置關聯。
 
-將頁面與雲端設定關聯時，頁面的子系會繼承關聯。 例如，如果您將/content/geometrixx/tw/products頁面與Translation Integration Framework建立關聯，則會根據框架翻譯「產品」頁面及其下面的所有頁面。
+將頁面與雲端設定關聯時，頁面的子系會繼承關聯。 例如，如果您將/content/geometrixx/tw/products頁面與Translation Integration Framework建立關聯，則會根據架構翻譯「產品」頁面及其下面的所有頁面。
 
 如有需要，您可以覆寫子系頁面上的關聯。 例如，網站的內容主要是服裝。 不過，其中一個頁面分支會說明該公司。 網站的根頁面與「翻譯整合框架」關聯，該框架指定使用Clothing類別進行機器翻譯。 描述公司的分支使用使用使用「常規」類別執行機器翻譯的框架。
 
@@ -215,7 +216,7 @@ ht-degree: 1%
 將頁面與翻譯提供者建立關聯，您使用該提供者翻譯頁面和後代頁面。
 
 1. 在Sites主控台中，選取要設定的頁面，然後按一下或點選「檢視屬性」。
-1. 按一下或點選「編輯」，然後按一下或點選「雲端服務」標籤。
+1. 按一下或點選「編輯」，然後按一下或點選「Cloud Services」標籤。
 1. 按一下或點選「新增設定>轉譯整合」。
 1. 選擇要使用的翻譯提供器，然後按一下或點選「完成」。
 
@@ -224,7 +225,7 @@ ht-degree: 1%
 將頁面與Translation Integration Framework關聯，該框架定義了如何執行頁面和後代頁面的翻譯。
 
 1. 在Sites主控台中，選取要設定的頁面，然後按一下或點選「檢視屬性」。
-1. 按一下或點選「編輯」，然後按一下或點選「雲端服務」標籤。
+1. 按一下或點選「編輯」，然後按一下或點選「Cloud Services」標籤。
 1. 按一下或點選「新增設定>轉譯整合」。
 1. 選擇要使用的翻譯整合框架，然後按一下或點選「完成」。
 
