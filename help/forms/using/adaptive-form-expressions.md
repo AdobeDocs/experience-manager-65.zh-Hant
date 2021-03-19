@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2767'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -88,7 +89,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 **退貨類型**:點按運算式不會傳回任何值。如果任何運算式傳回值，則會忽略該值。
 
-**範例**:若要在按鈕的點 **按動** 作上填入文字方塊文字方塊1 **，請使用值** AEM Forms，按鈕的點按運算式為  `textbox1.value="AEM Forms"`
+**範例**:若要在按鈕的點 **按動** 作上填入文字方塊文字方塊1，請使用值 **AEM Forms**，按鈕的點按運算式為  `textbox1.value="AEM Forms"`
 
 ### 初始化指令碼 {#initialization-script}
 
@@ -164,7 +165,7 @@ Value Commit指令碼在以下情況下觸發：
 
 >[!NOTE]
 >
->當欄位的值以寫程式方式更改時，可以禁用「值提交指令碼」的執行。 若要這麼做，請前往https://&#39;[server]:[port]&#39;/system/console/configMgr，並將&#x200B;**相容性最適化表單版本**&#x200B;變更為&#x200B;**AEM Forms 6.1**。 此後，僅當用戶更改UI中欄位的值時，才執行「值提交指令碼」。
+>當欄位的值以寫程式方式更改時，可以禁用「值提交指令碼」的執行。 為此，請轉至https://&#39;[server]:[port]&#39;/system/console/configMgr，並將&#x200B;**相容性適應Forms版**&#x200B;更改為&#x200B;**AEM Forms6.1**。 此後，僅當用戶更改UI中欄位的值時，才執行「值提交指令碼」。
 
 ### 可見性運算式 {#visibility-expression}
 
@@ -253,7 +254,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 >[!NOTE]
 >
->在AEM中，將程式碼寫入clientLib並加入您的頁面（頁面的header.jsp或footer.jsp）是一個很好的作法
+>在AEM此中，最好將程式碼寫入clientLib，並加入您的頁面（頁面的header.jsp或footer.jsp）中
 
 要在初始化表單後使用GuideBridge（調度`bridgeInitializeComplete`事件），請使用`window.guideBridge`獲取GuideBridge實例。 您可以使用`guideBride.isConnected` API檢查GuideBridge初始化狀態。
 
@@ -277,13 +278,13 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 
 執行以下步驟，為特定欄位類型建立自定義模式，並將其重複用於相同類型的其他欄位：
 
-1. 導覽至您編寫執行個體上的CRXDE Lite。
+1. 導覽至您的編寫例項上的CRXDE Lite。
 1. 建立資料夾以維護自訂圖樣。 在/apps目錄下，建立sling:folder類型的節點。 例如，建立名稱為`customPatterns`的節點。 在此節點下，建立另一個類型為`nt:unstructed`的節點，並將其命名為`textboxpatterns`。 此節點包含您要新增的各種自訂模式。
 1. 開啟已建立節點的「屬性」頁籤。 例如，開啟`textboxpatterns`的「屬性」標籤。 將`guideComponentType`屬性新增至此節點，並將其值設定為&#x200B;*fd/af/components/formatter/guideTextBox*。
 
 1. 此屬性的值會根據要定義陣列的欄位而有所不同。 對於數值欄位，`guideComponentType`屬性的值為&#x200B;*fd/af/components/formatter/guideNumericBox*。 「日期選擇器」欄位的值為&#x200B;*fd/af/components/formatter/guideDatepicker*。
 &quot;
-1. 可以通過為`textboxpatterns`節點分配屬性來添加自定義模式。 新增名稱為（例如`pattern1`）的屬性，並將其值設定至您要新增的模式。 例如，新增屬性`pattern1`，其值為Fax=text{99-999-999999}。 此模式適用於您在「最適化表單」中使用的所有文字方塊。
+1. 可以通過為`textboxpatterns`節點分配屬性來添加自定義模式。 新增名稱為（例如`pattern1`）的屬性，並將其值設定至您要新增的模式。 例如，新增屬性`pattern1`，其值為Fax=text{99-999-999999}。 此模式適用於您在最適化Forms中使用的所有文字方塊。
 
    ![在CrxDe中建立欄位的自訂圖樣](assets/creating-custom-patterns.png)
 
