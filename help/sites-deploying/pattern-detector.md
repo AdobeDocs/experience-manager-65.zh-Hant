@@ -10,10 +10,11 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
+feature: 升級
 translation-type: tm+mt
-source-git-commit: ba7ac70858b7b2fd610d63355a22a69c3a7586e3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -23,16 +24,16 @@ ht-degree: 1%
 
 ## 概覽 {#overview}
 
-此功能可讓您偵測使用中的模式，以檢查現有AEM例項是否可升級：
+此功能可讓您偵測使用AEM的模式，以檢查現有例項是否可升級：
 
 1. 違反特定規則，並在受升級影響或覆寫的區域執行
-1. 使用AEM 6.x功能或API，在AEM 6.5上無法向後相容，而且升級後可能會中斷。
+1. 使用AEM6.x功能或API，在6.5上無法向後相容，AEM且升級後可能會中斷。
 
-這可作為對升級至AEM 6.5所涉及的開發工作的評估。
+這可作為對升級至6.5所涉發展工作的AEM評估。
 
 ## 設定方法 {#how-to-set-up}
 
-模式偵測器會以[一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)的形式個別發行，適用於以AEM 6.5升級為目標的任何來源AEM版本，從6.1到6.5。 它可以使用[軟體包管理器](/help/sites-administering/package-manager.md)安裝。
+模式偵測器會以[一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)的形式個別發佈，適用於6.1到6.5的任AEM何來源版本，以AEM6.5為目標。 它可以使用[軟體包管理器](/help/sites-administering/package-manager.md)安裝。
 
 ## 使用方式 {#how-to-use}
 
@@ -45,13 +46,13 @@ ht-degree: 1%
 
 >
 >
-同時，建議在與生產環境盡可能接近的測試環境&#x200B;**上運行&lt;a0/>，這些環境在用戶應用程式、內容和配置方面都是如此。**
+同時，建議在與生產環境盡可能接近的測試環境&#x200B;**上運行**，這些環境在用戶應用程式、內容和配置方面都是如此。
 
 您可以使用數種方法來檢查圖樣檢測器輸出：
 
 * **透過Felix Inventory主控台：**
 
-1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*&#x200B;以前往「AEM Web Console」
+1. 瀏覽至AEM *https://serveraddress:serverport/system/console/configMgr*&#x200B;以前往Web主控台
 1. 選擇&#x200B;**狀態——模式檢測器**，如下圖所示：
 
    ![screapth-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
