@@ -1,37 +1,38 @@
 ---
-title: OSGi上的表單導向工作流程 |處理使用者資料
-seo-title: OSGi上的表單導向工作流程 |處理使用者資料
-description: OSGi上的表單導向工作流程 |處理使用者資料
+title: Forms式OSGi工作流程 |處理使用者資料
+seo-title: Forms式OSGi工作流程 |處理使用者資料
+description: Forms式OSGi工作流程 |處理使用者資料
 uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
+role: 管理員
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# OSGi上的表單導向工作流程 |處理用戶資料{#forms-centric-workflows-on-osgi-handling-user-data}
+# Forms式OSGi工作流程 |處理用戶資料{#forms-centric-workflows-on-osgi-handling-user-data}
 
-以表單為中心的AEM工作流程可讓您自動化以表單為中心的實際業務流程。 工作流由一系列步驟組成，這些步驟按關聯工作流模型中指定的順序執行。 每個步驟都會執行特定動作，例如指派工作給使用者或傳送電子郵件訊息。 工作流程可與儲存庫、使用者帳戶和服務中的資產互動。 因此，工作流程可協調涉及Experience Manager任何方面的複雜活動。
+以Forms為AEM中心的工作流程可讓您自動化以Forms為中心的實際商業流程。 工作流由一系列步驟組成，這些步驟按關聯工作流模型中指定的順序執行。 每個步驟都會執行特定動作，例如指派工作給使用者或傳送電子郵件訊息。 工作流程可與儲存庫、使用者帳戶和服務中的資產互動。 因此，工作流程可協調涉及任何Experience Manager方面的複雜活動。
 
 您可透過下列任何方法來觸發或啟動以表單為中心的工作流程：
 
-* 從AEM收件匣提交應用程式
-* 從AEM [!DNL Forms]應用程式送出應用程式
+* 從收件箱提交應AEM用程式
+* 從[!DNL Forms]應用AEM程式提交應用程式
 * 提交最適化表單
 * 使用監視的資料夾
 * 提交互動式通訊或信函
 
-如需以Forms為中心的AEM工作流程和功能的詳細資訊，請參閱OSGi](/help/forms/using/aem-forms-workflow.md)上的[以Forms為中心的工作流程。
+有關以Forms為中心的工作AEM流程和功能的詳細資訊，請參見OSGi](/help/forms/using/aem-forms-workflow.md)上的[以Forms為中心的工作流程。
 
 ## 用戶資料和資料儲存{#user-data-and-data-stores}
 
-觸發工作流程時，會自動產生工作流程例項的裝載。 每個工作流程例項都會指派一個唯一例項ID和一個關聯的裝載ID。 裝載包含與工作流實例相關聯的用戶和表單資料的儲存庫位置。 此外，工作流程例項的草稿和歷史資料也會儲存在AEM儲存庫中。
+觸發工作流程時，會自動產生工作流程例項的裝載。 每個工作流程例項都會指派一個唯一例項ID和一個關聯的裝載ID。 裝載包含與工作流實例相關聯的用戶和表單資料的儲存庫位置。 此外，工作流實例的草稿和歷史資料也儲存在儲存庫AEM中。
 
 工作流實例的裝載、草稿和歷史記錄所在的預設儲存庫位置如下：
 
@@ -43,8 +44,8 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td> </td>
-   <td><b>AEM 6.4 [!DNL表單]</b></td>
-   <td><b>AEM 6.3 [!DNL表單]</b></td>
+   <td><b>AEM 6.4 [!DNLForms]</b></td>
+   <td><b>AEM 6.3 [!DNLForms]</b></td>
   </tr>
   <tr>
    <td><strong>Workflow <br />實例</strong></td>
@@ -76,13 +77,13 @@ ht-degree: 0%
 但是，在以下情況下，在標識與啟動器關聯的工作流時，您不能標識或結果可能不明確：
 
 * **透過受監視資料夾觸發的工作流程**:如果工作流是由受監視的資料夾觸發，則無法使用其啟動器來標識工作流實例。在這種情況下，用戶資訊被編碼在儲存的資料中。
-* **從發佈AEM例項開始的工作流程**:從AEM發佈例項提交最適化表單、互動式通訊或信件時，所有工作流程例項都是使用服務使用者來建立。在這些情況下，已登入使用者的使用者名稱不會擷取到工作流程例項資料中。
+* **從發佈例項開始的工AEM作流程**:從發佈實例提交最適化表單、互動式通訊或信件時，所有工作流程例項都是使用服務使用者AEM來建立。在這些情況下，已登入使用者的使用者名稱不會擷取到工作流程例項資料中。
 
 ### 訪問用戶資料{#access}
 
 要標識和訪問為工作流實例儲存的用戶資料，請執行以下步驟：
 
-1. 在AEM作者例項中，前往`https://'[server]:[port]'/crx/de`並導覽至&#x200B;**[!UICONTROL 工具>查詢]**。
+1. 在作AEM者例項中，前往`https://'[server]:[port]'/crx/de`並導覽至&#x200B;**[!UICONTROL 工具>查詢]**。
 
    從&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL SQL2]**。
 
@@ -122,11 +123,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >AEM [!DNL Forms]應用程式也會將資料儲存在離線模式。 工作流程例項的資料可能會儲存在個別裝置上，當應用程式與伺服器同步時，就會送出至[!DNL Forms]伺服器。
+   >AEM[!DNL Forms]應用程式也會將資料儲存在離線模式。 工作流程例項的資料可能會儲存在個別裝置上，當應用程式與伺服器同步時，就會送出至[!DNL Forms]伺服器。
 
 ### 刪除用戶資料{#delete-user-data}
 
-您必須是AEM管理員，才能執行下列步驟，從工作流程例項刪除使用者資料：
+您必須是管理員AEM，才能執行下列步驟，從工作流程例項刪除使用者資料：
 
 1. 按照[訪問用戶資料](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access)中的說明，並注意以下事項：
 
@@ -153,11 +154,11 @@ ht-degree: 0%
    >刪除工作流實例節點將刪除所有工作流參與者的工作流實例。
 
 1. 對為用戶標識的所有工作流實例重複步驟2 - 6。
-1. 從工作流程參與者的AEM [!DNL Forms]應用程式外框識別並刪除離線草稿和提交資料，以避免提交至伺服器。
+1. 從工作流程參與者的AEM[!DNL Forms]應用程式外框識別並刪除離線草稿和提交資料，以避免提交至伺服器。
 
 您也可以使用API來存取和移除節點和屬性。 如需詳細資訊，請參閱下列檔案。
 
-* [如何以程式設計方式存取AEM JCR](/help/sites-developing/access-jcr.md)
+* [如何以程式設計方式存取AEMJCR](/help/sites-developing/access-jcr.md)
 * [刪除節點和屬性](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
 * [API參考](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
 
