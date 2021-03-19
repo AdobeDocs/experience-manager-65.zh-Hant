@@ -1,18 +1,19 @@
 ---
 title: HTML5表單的轉換表單範本
 seo-title: HTML5表單的轉換表單範本
-description: HTML5表單描述檔會與描述檔轉譯相關聯。 描述檔轉譯是JSP頁面，負責呼叫Forms OSGi服務來產生表單的HTML表示法。
-seo-description: HTML5表單描述檔會與描述檔轉譯相關聯。 描述檔轉譯是JSP頁面，負責呼叫Forms OSGi服務來產生表單的HTML表示法。
+description: HTML5表單描述檔會與描述檔轉譯相關聯。 描述檔轉譯是負責呼叫FormsOSGi服務來產生表單HTML表示的JSP頁面。
+seo-description: HTML5表單描述檔會與描述檔轉譯相關聯。 描述檔轉譯是負責呼叫FormsOSGi服務來產生表單HTML表示的JSP頁面。
 uuid: 34daed78-0611-4355-9698-0d7f758e6b61
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 0%
+source-wordcount: '570'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 ## 渲染端點{#render-endpoint}
 
-HTML5表單的概念是&#x200B;**描述檔**，這些描述檔公開為REST端點，以啟用表單範本的行動轉譯。 這些配置檔案具有關聯的&#x200B;**配置檔案渲染器**。 它們是JSP頁面，負責呼叫Forms OSGi服務來產生表單的HTML表示法。 「描述檔」節點的JCR路徑會決定演算端點的URL。 指向「預設」描述檔的表單的預設演算端點看起來如下：
+HTML5表單的概念是&#x200B;**描述檔**，這些描述檔公開為REST端點，以啟用表單範本的行動轉譯。 這些配置檔案具有關聯的&#x200B;**配置檔案渲染器**。 它們是JSP頁面，負責呼叫FormsOSGi服務，以產生表單的HTML表示。 「描述檔」節點的JCR路徑會決定演算端點的URL。 指向「預設」描述檔的表單的預設演算端點看起來如下：
 
 https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*包含xdp*>的資料夾路徑&amp;template=*xdp*&#x200B;名稱
 
@@ -31,7 +32,7 @@ https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRo
 
 `http://localhost:4502/content/xfaforms/profiles/hrforms.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-如果您的範本位於名為FormSubmission的應用程式中的AEM儲存庫中，URI為：
+如果模板駐留在名為FormSubmission的AEM應用程式的儲存庫中，則URI為：
 
 ```http
 http://localhost:4502/content/xfaforms/profiles/default.html?
@@ -83,4 +84,4 @@ HTML5表格支援三種傳遞演算參數的方法。 您可以透過URL、鍵�
 
 ### 提交參數{#submit-parameters}
 
-HTML5表單提交資料；在AEM伺服器上執行伺服器端指令碼和web-services。 如需在AEM伺服器上執行伺服器端指令碼和web-services的參數詳細資訊，請參閱[HTML5 forms Service Proxy](/help/forms/using/service-proxy.md)。
+HTML5表單提交資料；在伺服器上執行伺服器端指令碼和webAEM服務。 有關用於在伺服器上執行伺服器端指令碼和web-services的參數的詳細信AEM息，請參見[HTML5 forms Service Proxy](/help/forms/using/service-proxy.md)。
