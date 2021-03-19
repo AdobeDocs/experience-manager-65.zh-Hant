@@ -1,18 +1,19 @@
 ---
 title: 配置OSGi
 seo-title: 配置OSGi
-description: OSGi是Adobe Experience Manager(AEM)技術堆疊中的基本元素。 它用於控制AEM的組合束及其配置。 本文詳細說明如何管理此類套件的組態設定。
-seo-description: OSGi是Adobe Experience Manager(AEM)技術堆疊中的基本元素。 它用於控制AEM的組合束及其配置。 本文詳細說明如何管理此類套件的組態設定。
+description: OSGi是Adobe Experience Manager()技術層的一個基AEM本要素。 它用於控制複合束及其AEM配置。 本文詳細說明如何管理此類套件的組態設定。
+seo-description: OSGi是Adobe Experience Manager()技術層的一個基AEM本要素。 它用於控制複合束及其AEM配置。 本文詳細說明如何管理此類套件的組態設定。
 uuid: b39059a5-dd61-486a-869a-0d7a732c3a47
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
+feature: 設定
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2014'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 # 配置OSGi{#configuring-osgi}
 
-[OSG](https://www.osgi.org/) 是Adobe Experience Manager(AEM)技術堆疊中的基本元素。它用於控制AEM的組合束及其配置。
+[](https://www.osgi.org/) OSG是Adobe Experience Manager(M)技術層面的一個基AEM本要素。它用於控制複合束及其AEM配置。
 
 OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複使用和協作的元件來建立。 這些元件可以組成到應用程式並部署*&quot;。
 
@@ -28,13 +29,13 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 您可以透過以下任一方式管理此類組合的組態設定：
 
-* 使用[Adobe CQ Web Console](#osgi-configuration-with-the-web-console)
+* 使用[Adobe CQWeb控制台](#osgi-configuration-with-the-web-console)
 * 使用[配置檔案](#osgi-configuration-with-configuration-files)
 * 在儲存庫](#osgi-configuration-in-the-repository)中配置[content-nodes(`sling:OsgiConfig`)
 
 兩種方法都可使用，但主要與[運行模式](/help/sites-deploying/configure-runmodes.md)有關：
 
-* [Adobe CQ Web Console](#osgi-configuration-with-the-web-console)
+* [Adobe CQ網路主控台](#osgi-configuration-with-the-web-console)
 
    * Web控制台是OSGi配置的標準介面。 它提供編輯各種屬性的UI，可從預先定義的清單中選擇可能的值。
 
@@ -66,7 +67,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 ## 使用Web控制台{#osgi-configuration-with-the-web-console}進行OSGi配置
 
-AEM中的[Web console](/help/sites-deploying/web-console.md)提供標準化介面來設定叢集。 **Configuration**&#x200B;標籤用於配置OSGi捆綁包，因此是配置AEM系統參數的基礎機制。
+中的[Web控制台](/help/sites-deploying/web-console.md)提供了用於AEM配置捆綁的標準化介面。 **Configuration**&#x200B;頁籤用於配置OSGi捆綁，因此是配置系統參數的基AEM礎機制。
 
 所做的任何更改都會立即應用於相關的OSGi配置，無需重新啟動。
 
@@ -78,7 +79,7 @@ AEM中的[Web console](/help/sites-deploying/web-console.md)提供標準化介�
 >
 >在Web主控台上，任何提及預設設定的說明都與Sling預設值相關。
 >
->Adobe Experience Manager有自己的預設值，因此預設值設定可能與主控台上記載的預設值不同。
+>Adobe Experience Manager有自己的預設值，因此預設集可能與主控台記載的不同。
 
 要使用Web控制台更新配置，請執行以下操作：
 
@@ -106,7 +107,7 @@ AEM中的[Web console](/help/sites-deploying/web-console.md)提供標準化介�
    >
    >更新將保存在儲存庫中為[配置檔案](#osgi-configuration-with-configuration-files)。 若要在之後找到這些識別碼（例如，要包含在內容套件中以便用於另一個實例），您應記下永久性識別碼(`PID`)。
 
-1. 按一下&#x200B;**「儲存」**。
+1. 按一下「**儲存**」。
 
    您的更改會立即應用於正在運行的系統的相關OSGi配置，無需重新啟動。
 
@@ -185,7 +186,7 @@ Web Console不顯示已保存更改的儲存庫中的位置，但可以輕鬆找
 
    參考Web控制台中的&#x200B;**Configurations**&#x200B;欄位。 名稱在包名稱后面的括弧中顯示（或在頁面底部的&#x200B;**配置資訊**&#x200B;中）。
 
-   例如，建立節點`com.day.cq.wcm.core.impl.VersionManagerImpl.`以設定&#x200B;**AEM WCM Version Manager**。
+   例如，建立節點`com.day.cq.wcm.core.impl.VersionManagerImpl.`以配置&#x200B;**AEM WCM Version Manager**。
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
@@ -216,7 +217,7 @@ Web Console不顯示已保存更改的儲存庫中的位置，但可以輕鬆找
 
 要將新配置實際添加到儲存庫，請執行以下操作：
 
-1. 使用CRXDE Lite導覽至：
+1. 使用CRXDE Lite導航至：
 
    ` /apps/<yourProject>`
 
@@ -230,7 +231,7 @@ Web Console不顯示已保存更改的儲存庫中的位置，但可以輕鬆找
    * 類型: `sling:OsgiConfig`
    * 名稱：持久性身份(PID);
 
-      例如，AEM WCM Version Manager使用`com.day.cq.wcm.core.impl.VersionManagerImpl`
+      例如，AEMWCM版本管理器使用`com.day.cq.wcm.core.impl.VersionManagerImpl`
    >[!NOTE]
    >
    >在進行工廠配置時，將`-<identifier>`附加到名稱。
@@ -247,7 +248,7 @@ Web Console不顯示已保存更改的儲存庫中的位置，但可以輕鬆找
    * 類型：視情況而定。
    * 值：視需要。
 
-   您只需要為要設定的參數建立屬性，其他人仍會採用AEM設定的預設值。
+   您只需要為要設定的參數建立屬性，其他參數仍會採用預設值，如AEM所設定。
 
 1. 儲存所有變更。
 
