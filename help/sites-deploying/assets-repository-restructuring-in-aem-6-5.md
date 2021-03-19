@@ -1,25 +1,26 @@
 ---
-title: AEM 6.5中的Assets Repository Restructing
-seo-title: AEM 6.5中的Assets Repository Restructing
-description: 瞭解如何進行必要的變更，以移轉至AEM 6.5 for Assets中的新儲存庫結構。
-seo-description: 瞭解如何進行必要的變更，以移轉至AEM 6.5 for Assets中的新儲存庫結構。
+title: 6.5中的資產AEM儲存庫重組
+seo-title: 6.5中的資產AEM儲存庫重組
+description: 瞭解如何進行必要的更改，以便遷移到6.5中的AEM Assets新儲存庫結構。
+seo-description: 瞭解如何進行必要的更改，以便遷移到6.5中的AEM Assets新儲存庫結構。
 uuid: 0e3d8163-6274-4d1b-91c7-32ca927fb83c
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
+feature: 升級
 translation-type: tm+mt
-source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1061'
 ht-degree: 2%
 
 ---
 
 
-# AEM 6.5 {#assets-repository-restructuring-in-aem}中的資產資料庫重組
+# 6.5 &lt;AEMa0/>中的資產資料庫重組{#assets-repository-restructuring-in-aem}
 
-如上層[「AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的儲存庫重組」頁面所述，升級至AEM 6.5的客戶應使用此頁面來評估與影響AEM Assets Solution的儲存庫變更相關的工作成果。 有些變更需要在AEM 6.5升級程式中努力工作，而其他變更則可延後至日後升級。
+如[父6.5](/help/sites-deploying/repository-restructuring.md)頁中的「資料庫重組」頁中所述，升級至AEM6.5的客戶應使用此頁評估與影響AEM Assets解決方案的資料庫更改相關的工作成果。 有些變更需要在6.5升級程AEM序中努力工作，而有些則會延遲至日後升級。
 
 **使用6.5升級**
 
@@ -32,7 +33,7 @@ ht-degree: 2%
 * [下載資產電子郵件通知範本](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#download-asset-e-mail-notification-template)
 * [DRM授權範例](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#example-drm-licenses)
 * [連結共用電子郵件通知範本](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#link-share-e-mail-notification-template)
-* [InDesign工作流程指令碼](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#indesign-workflow-scripts)
+* [InDesign工作流指令碼](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#indesign-workflow-scripts)
 * [視訊轉碼設定](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#video-transcoding-configurations)
 * [其他](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md#misc2)
 
@@ -85,7 +86,7 @@ ht-degree: 2%
       </ol> </li>
      <li>刪除資料夾：<strong><code>/etc/dam/notification/email/default</code></strong>。<br />
       <ol>
-       <li>如果<strong> <code>/etc/notification/email/default</code></strong>下的電子郵件範本未進行更新，則可移除資料夾，因為AEM 4安裝中<strong><code>/libs/settings/notification/email/default</code></strong>下有原始電子郵件範本。</li>
+       <li>如果<strong> <code>/etc/notification/email/default</code></strong>下未對電子郵件模板進行更新，則可以刪除該資料夾，因為在安裝4時，<strong><code>/libs/settings/notification/email/default</code></strong>下存在原始電子郵件模板AEM。</li>
       </ol> </li>
     </ol> </td>
   </tr>
@@ -114,7 +115,7 @@ ht-degree: 2%
     <ol>
      <li>將設計從「上一個位置」複製到<code>/apps</code>下的「新位置」。</li>
      <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">具有<code>allowProxy = true</code>的「用戶端程式庫」。</a></li>
-     <li>透過<strong>AEM &gt; DAM管理員&gt;資產共用頁面&gt;頁面屬性&gt;進階標籤&gt;設計欄位</strong>更新<code>cq:designPath</code>屬性中「上一個位置」的參考。</li>
+     <li>透過<strong> &gt; DAM管理員&gt;資產共用頁面&gt;頁面屬性&gt;進階標籤&gt;設計欄位</strong>，更新<code>cq:designPath</code>屬性中「上一個位置」的參考。</li>
      <li>更新參照上一個位置的任何頁面，以使用新的「用戶端程式庫」類別。 這需要更新頁面實施程式碼。</li>
      <li>更新Dispatcher規則，允許通過<code>/etc.clientlibs/</code>代理Servlet提供客戶端庫。</li>
     </ol> <p>對於未在SCM中管理且透過設計對話方塊修改執行時期的任何設計，請勿將可授權的設計移出<code>/etc</code>。</p> </td>
@@ -148,7 +149,7 @@ ht-degree: 2%
       </ol> </li>
      <li>刪除資料夾：<code>/etc/dam/workflow/notification/email/downloadasset </code>移動電子郵件範本後。<br />
       <ol>
-       <li>如果未對<strong> <code>/etc</code></strong>下的電子郵件範本進行更新，則可移除資料夾，因為AEM 6.4安裝中的原始電子郵件範本位於<strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong>下。</li>
+       <li>如果<strong> <code>/etc</code></strong>下未對電子郵件模板進行更新，則可以刪除該資料夾，因為在安裝6.4時，<strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong>下存在原始電子郵件模板AEM。</li>
       </ol> </li>
     </ol> </td>
   </tr>
@@ -189,7 +190,7 @@ ht-degree: 2%
       </ol> </li>
      <li>刪除資料夾：<strong><code>/etc/dam/adhocassetshare</code></strong>。<br />
       <ol>
-       <li>如果<strong> <code>/etc</code></strong>下的電子郵件範本未進行更新，則可移除資料夾，因為AEM 6.4安裝中<strong><code>/libs/settings/dam/adhocassetshare</code></strong>下有原始電子郵件範本。</li>
+       <li>如果<strong> <code>/etc</code></strong>下未對電子郵件模板進行更新，則可以刪除該資料夾，因為在安裝6.4時，<strong><code>/libs/settings/dam/adhocassetshare</code></strong>下存在原始電子郵件模板AEM。</li>
       </ol> </li>
     </ol> </td>
   </tr>
@@ -200,7 +201,7 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### InDesign Workflow Scripts {#indesign-workflow-scripts}
+### InDesign工作流指令碼{#indesign-workflow-scripts}
 
 <table>
  <tbody>
@@ -218,7 +219,7 @@ ht-degree: 2%
     <ol>
      <li>將所有自定義或修改的指令碼從<strong><code>/etc/dam/indesign/scripts</code></strong>複製到<strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
       <ol>
-       <li>只有將AEM提供的未修改指令碼複製為新的或修改的指令碼，才能透過AEM 6.5中的<strong><code>/libs/settings</code></strong>取得</li>
+       <li>只有將新的或修改的指令碼複製為由提供的未AEM修改的指令碼，才能通過AEM6.5中的<strong><code>/libs/settings</code></strong>使用</li>
       </ol> </li>
      <li>找到所有使用媒體抽取流程WF步驟的工作流模型，並
       <ol>
@@ -248,7 +249,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>專案層級自訂必須視需要剪下並貼在等效的<code>/apps</code>或<code>/conf</code>路徑下。</p> <p>若要與AEM 6.4儲存庫結構對齊：</p>
+   <td><p>專案層級自訂必須視需要剪下並貼在等效的<code>/apps</code>或<code>/conf</code>路徑下。</p> <p>要與6.AEM4儲存庫結構一致：</p>
     <ol>
      <li>將任何修改的視頻配置從<code>/etc/dam/video</code>複製到 <code>/apps/settings/dam/video</code></li>
      <li>移除 <code>/etc/dam/video</code></li>
