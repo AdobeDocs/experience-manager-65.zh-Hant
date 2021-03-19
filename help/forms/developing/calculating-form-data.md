@@ -1,8 +1,8 @@
 ---
 title: 計算表單資料
 seo-title: 計算表單資料
-description: 使用Forms服務計算用戶在表單中輸入的值並顯示結果。 Forms服務使用Java API和Web服務API計算值。
-seo-description: 使用Forms服務計算用戶在表單中輸入的值並顯示結果。 Forms服務使用Java API和Web服務API計算值。
+description: 使用Forms服務計算用戶在表單中輸入的值並顯示結果。 Forms服務會使用Java API和Web服務API計算值。
+seo-description: 使用Forms服務計算用戶在表單中輸入的值並顯示結果。 Forms服務會使用Java API和Web服務API計算值。
 uuid: ccd85bc7-8ccc-44d9-9424-dfc1f603e688
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1916'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,9 +22,9 @@ ht-degree: 0%
 
 # 計算表單資料{#calculating-form-data}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若要計算表單資料，您必須執行兩項工作。 首先，您建立可計算表單資料的表單設計指令碼。 表單設計支援三種類型的指令碼。 一種指令碼類型在客戶端上運行，另一種指令碼類型在伺服器上運行，第三種指令碼類型在伺服器和客戶端上運行。 本主題中討論的指令碼類型在伺服器上運行。 HTML、PDF和表單指南（已過時）轉換支援伺服器端計算。
+Forms服務可以計算用戶在表單中輸入的值並顯示結果。 若要計算表單資料，您必須執行兩項工作。 首先，您建立可計算表單資料的表單設計指令碼。 表單設計支援三種類型的指令碼。 一種指令碼類型在客戶端上運行，另一種指令碼類型在伺服器上運行，第三種指令碼類型在伺服器和客戶端上運行。 本主題中討論的指令碼類型在伺服器上運行。 HTML、PDF和表單指南（已過時）轉換支援伺服器端計算。
 
 在表單設計流程中，您可以運用計算和指令碼來提供更豐富的使用者體驗。 計算和指令碼可新增至大部分的表格欄位和物件。 您必須建立表單設計指令碼，以對使用者輸入互動式表單的資料執行計算作業。
 
@@ -32,7 +33,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 * 使用者存取名為StartLoan.html的HTML頁面，該頁面可當成網頁應用程式的開始頁面。 此頁調用名為`GetLoanForm`的Java Servlet。
 * `GetLoanForm` servlet將呈現貸款表單。 此表單包含指令碼、互動式欄位、計算按鈕和送出按鈕。
 * 使用者在表單欄位中輸入值，然後按一下「計算」按鈕。 表單會傳送至執行指令碼的`CalculateData` Java Servlet。 表單會傳回給使用者，其計算結果會顯示在表單中。
-* 用戶繼續輸入和計算值，直到顯示滿意的結果。 當使用者滿意時，會按一下「提交」按鈕以處理表單。 表單會傳送至另一個名為`ProcessForm`的Java Servlet，負責擷取已提交的資料。 （請參閱[處理提交的表單](/help/forms/developing/rendering-forms.md#handling-submitted-forms)）。
+* 用戶繼續輸入和計算值，直到顯示滿意的結果。 當使用者滿意時，會按一下「提交」按鈕以處理表單。 表單會傳送至另一個名為`ProcessForm`的Java Servlet，負責擷取已提交的資料。 (請參閱[處理已提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms))。
 
 
 下圖顯示應用程式的邏輯流程。
@@ -55,7 +56,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務客戶端API將貸款表格呈現給客戶端Web瀏覽器。 呈現包含配置為在伺服器上運行的指令碼的表單和呈現不包含指令碼的表單之間的區別在於，您必須指定用於執行指令碼的目標位置。 如果未指定目標位置，則不會執行配置為在伺服器上運行的指令碼。 例如，請考慮本節中介紹的應用程式。 <code>CalculateData</code> Java Servlet是執行指令碼的目標位置。</p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服務客戶端API向客戶端Web瀏覽器呈現貸款表單。 呈現包含配置為在伺服器上運行的指令碼的表單和呈現不包含指令碼的表單之間的區別在於，您必須指定用於執行指令碼的目標位置。 如果未指定目標位置，則不會執行配置為在伺服器上運行的指令碼。 例如，請考慮本節中介紹的應用程式。 <code>CalculateData</code> Java Servlet是執行指令碼的目標位置。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -72,7 +73,7 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
  </tbody>
 </table>
 
-通常，提交為PDF內容的表單包含在用戶端上執行的指令碼。 不過，伺服器端的計算也可以執行。 「提交」按鈕不能用於計算指令碼。 在這種情況下，不會執行計算，因為Forms服務認為交互已完成。
+通常，提交為PDF內容的表單包含在用戶端上執行的指令碼。 不過，伺服器端的計算也可以執行。 「提交」按鈕不能用於計算指令碼。 在這種情況下，不執行計算，因為Forms服務認為交互是完成的。
 
 為了說明表單設計指令碼的使用，本節將檢查一個簡單的互動式表單，其中包含已設定為可在伺服器上執行的指令碼。 下圖顯示的表單設計包含一個指令碼，該指令碼將用戶輸入到前兩個欄位中的值添加到第三個欄位中，並在第三個欄位中顯示結果。
 
@@ -86,15 +87,15 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
      NumericField3 = NumericField2 + NumericField1
 ```
 
-在此表單設計中，「計算」按鈕是命令按鈕，而指令檔位於此按鈕的`Click`事件中。 當使用者在前兩個欄位（NumericField1和NumericField2）中輸入值，然後按一下「計算」按鈕時，表格會傳送至Forms服務，並執行指令碼。 Forms服務會將表單轉譯回用戶端裝置，計算結果會顯示在NumericField3欄位中。
+在此表單設計中，「計算」按鈕是命令按鈕，而指令檔位於此按鈕的`Click`事件中。 當使用者在前兩個欄位（NumericField1和NumericField2）中輸入值，然後按一下「計算」按鈕時，表格會傳送至Forms服務，並在該服務中執行指令碼。 Forms服務會將表單轉譯回用戶端裝置，計算結果會顯示在NumericField3欄位中。
 
 >[!NOTE]
 >
->有關建立表單設計指令碼的資訊，請參閱[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>有關建立表單設計指令碼的資訊，請參閱[Forms設計器](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 步驟{#summary-of-steps}摘要
 
@@ -111,13 +112,13 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms web service API，請建立`FormsServiceService`物件。
+在以寫程式方式執行Forms服務客戶端API操作之前，必須建立Forms服務客戶端。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms網站服務API，請建立`FormsServiceService`物件。
 
 **檢索包含計算指令碼的表單**
 
-您可使用Forms服務用戶端API來建立應用程式邏輯，以處理包含設定為在伺服器上執行之指令碼的表單。 此程式類似於處理提交的表單。 （請參閱[處理提交的表單](/help/forms/developing/handling-submitted-forms.md)）。
+您使用Forms服務客戶端API來建立應用程式邏輯，該邏輯處理的表單包含配置為在伺服器上運行的指令碼。 此程式類似於處理提交的表單。 (請參閱[處理已提交的Forms](/help/forms/developing/handling-submitted-forms.md))。
 
-驗證與提交表單關聯的處理狀態為`1` `(Calculate)`，這表示Forms服務正在對表單資料執行計算操作，且結果必須寫回給用戶。 在這種情況下，將自動執行配置為在伺服器上運行的指令碼。
+驗證與提交的表單相關聯的處理狀態為`1` `(Calculate)`，這表示Forms服務正在對表單資料執行計算操作，且結果必須寫回用戶。 在這種情況下，將自動執行配置為在伺服器上運行的指令碼。
 
 **將表單資料流寫回用戶端網頁瀏覽器**
 
@@ -125,17 +126,17 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-[使用Java ](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)
+[包含AEM FormsJava庫](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[檔案使用Java ](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)
 [APIC計算表單資料使用web service ](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)
-[APISeting connection propertiesForms Service API快速啟動轉譯互動式PDF](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 [](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 [](/help/forms/developing/rendering-interactive-pdf-forms.md)
-[表單建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
+[APISetting connection propertiesForms Service API快速啟動轉譯互動式PDF表單建立使Forms轉譯的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## 使用Java API {#calculate-form-data-using-the-java-api}計算表單資料
 
-使用Forms API(Java)計算表單資料：
+使用FormsAPI(Java)計算表單資料：
 
 1. 包含專案檔案
 
@@ -172,12 +173,12 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
 **另請參閱**
 
 
-[包含AEM Forms Java程式庫檔案設](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-[定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[包括AEM FormsJava庫文](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[件設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用web service API {#calculate-form-data-using-the-web-service-api}計算表單資料
 
-使用Forms API(web service)計算表單資料：
+使用FormsAPI(web service)計算表單資料：
 
 1. 包含專案檔案
 
@@ -223,5 +224,5 @@ Forms服務可計算使用者在表單中輸入的值，並顯示結果。 若�
    * 建立位元組陣列，並呼叫`BLOB`物件的`getBinaryData`方法以填入它。 此任務將`FormsResult`對象的內容分配給位元組陣列。
    * 叫用`javax.servlet.http.HttpServletResponse`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
-**另請**
-[參閱使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+**另請參**
+[閱使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
