@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
+feature: 表單入口網站
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -30,9 +31,9 @@ HTML和CSS的使用知識
 
 AEM Forms使用者介面可讓您將中繼資料新增至任何表格。 自訂中繼資料可增強使用者體驗，同時列出和搜尋組織的表單。
 
-表單入口網站可讓您在表單清單中使用自訂中繼資料。 建立資產的自訂範本時，您可以修改其版面配置，並搭配CSS樣式集使用自訂中繼資料。
+Forms入口網站可讓您在表單清單中使用自訂中繼資料。 建立資產的自訂範本時，您可以修改其版面配置，並搭配CSS樣式集使用自訂中繼資料。
 
-執行下列步驟，為各種Forms Portal元件建立自訂範本。
+請執行下列步驟，為各種Forms入口網站元件建立自訂範本。
 
 ## 建立自訂範本{#creating-a-nbsp-custom-template}
 
@@ -61,7 +62,7 @@ AEM Forms使用者介面可讓您將中繼資料新增至任何表格。 自訂�
 
 ## 工作示例{#working-example}
 
-以下是自訂範本的範例實作，Forms Portal會在此範本中取得Search &amp; Lister元件的自訂Geometrixx Gov Card Layout。
+以下是自訂範本的範例實作，Forms入口網站會取得Search &amp; Lister元件的自訂Geometrixx政府資訊卡版面。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -83,9 +84,9 @@ AEM Forms使用者介面可讓您將中繼資料新增至任何表格。 自訂�
 
 ## 自訂範本的技術規格{#technical-specifications-for-custom-templates}
 
-任何Forms Portal元件的自訂範本都包含可重複和非可重複的項目。 可重複項是列出的基本實體。 可重複項目的範例包括Search &amp; Lister、Drafts &amp; Submissions和Link元件。
+任何Forms門戶元件的自定義模板都包括可重複和非可重複的條目。 可重複項是列出的基本實體。 可重複項目的範例包括Search &amp; Lister、Drafts &amp; Submissions和Link元件。
 
-Forms Portal提供位置持有人顯示自訂/OOTB中繼資料的語法。 預留位置會在顯示表單、草稿或提交結果後填入。
+Forms入口網站提供位置持有者顯示自訂/OOTB中繼資料的語法。 預留位置會在顯示表單、草稿或提交結果後填入。
 
 要包括可重複條目，請將屬性&#x200B;**data-repeatable**&#x200B;的值配置為&#x200B;**true**。
 
@@ -93,11 +94,11 @@ Forms Portal提供位置持有人顯示自訂/OOTB中繼資料的語法。 預�
 
 每個預留位置都有專屬的OOTB中繼資料集。 若要在表單上的特定位置顯示自訂中繼資料，請在該位置新增&#x200B;**${metadata_prop}屬性**。
 
-*在此範例中，中繼資料屬性用於多個例項。例如，它用於&#x200B;**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**和&lt;a11/>a12/>路徑&#x200B;**按規定方式。***
+*在此範例中，中繼資料屬性用於多個例項。例如，它用於&#x200B;**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**和&#x200B;**a12/>路徑**按規定方式。*
 
 ## 立即可用的中繼資料{#out-of-the-box-metadata}
 
-各種Forms Portal元件提供可供列出的專屬OOTB中繼資料集。
+各種Forms門戶元件提供了可用於列出的專屬OOTB元資料集。
 
 ### Search &amp; Lister元件{#search-amp-lister-component}
 
@@ -136,7 +137,7 @@ Forms Portal提供位置持有人顯示自訂/OOTB中繼資料的語法。 預�
 ### 草稿與提交元件{#drafts-amp-submissions-component}
 
 * **路徑**:草稿／提交元資料節點的路徑。將它與。HTML副檔名搭配使用，做為URL以開啟草稿或提交。
-* **contextPath**:AEM例項的內容路徑
+* **contextPath**:實例的上下文AEM路徑
 * **firstLetter**:最適化表單標題的首字母（大寫），已儲存為草稿或已提交。
 * **formName**:最適化表單的標題，已儲存為草稿或已提交。
 * **draftID**:列出的草稿的ID（僅用於「草稿」部分的模板）。
@@ -144,7 +145,7 @@ Forms Portal提供位置持有人顯示自訂/OOTB中繼資料的語法。 預�
 * **狀態**:已提交表單的狀態。（僅在「提交」區段的範本中使用）。
 * **說明**:與草稿或提交相關的最適化表單說明。
 * **diffTime**:當前時間與草稿上次保存操作之間的差異。或者，目前時間與上次提交動作之間的差異。
-* **iconClass**:用於顯示草稿／提交的第一個字母的CSS類。Forms Portal包含下列類別，提供各種彩色背景。
+* **iconClass**:用於顯示草稿／提交的第一個字母的CSS類。Forms入口網站包含下列課程，提供各種彩色背景。
 * **擁有者**:建立草稿／提交的用戶。
 * **今天**:以DD:MM:YYYY格式建立草稿或提交的日期。
 * **TimeNow**:以HH:MM:SS 24小時格式建立草稿或提交的時間
@@ -172,7 +173,7 @@ Forms Portal提供位置持有人顯示自訂/OOTB中繼資料的語法。 預�
 ## 秘訣、訣竅和已知問題{#tips-tricks-and-known-issues}
 
 1. 請勿在任何自訂範本中使用單引號(&#39;)。
-1. 對於自訂中繼資料，請將此屬性僅儲存在&#x200B;**jcr:content/metadata**&#x200B;節點上。 如果您將其儲存在任何其他位置，Forms Portal將無法顯示中繼資料。
+1. 對於自訂中繼資料，請將此屬性僅儲存在&#x200B;**jcr:content/metadata**&#x200B;節點上。 如果您將它儲存在任何其他位置，Forms入口網站將無法顯示中繼資料。
 1. 請確定任何自訂中繼資料或現有中繼資料的名稱不包含冒號(:)。 如果是，您無法在使用者介面上顯示。
 1. **data-** repeatable對於 **** Linkcomponent沒有任何意義。Adobe建議您避免在連結元件的範本中使用此屬性。
 
