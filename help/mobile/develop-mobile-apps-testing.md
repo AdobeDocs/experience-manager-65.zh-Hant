@@ -1,7 +1,7 @@
 ---
 title: 測試行動應用程式
 seo-title: 測試行動應用程式
-description: 'null'
+description: 測試行動應用程式
 seo-description: 'null'
 uuid: 3b402d34-5cab-4280-b8b9-88ad9f8fc5e4
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需SPA要單頁應用程式架構用戶端轉換的專案使用編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
 
 鑑於市面上的各種裝置和即將推出的裝置，測試您的應用程式變得極為重要。 在這個領域，功能和可用性可能會在應用程式商店中獲得低評價，但是單一缺陷可能會導致您的應用程式解除安裝。 測試計畫和品質保證必須謹慎注意。 以下連結涵蓋許多一般需要解決的主題，如：確定環境、定義測試案例、測試類型、假設、客戶參與等。 此外，也討論了有助於測試的工具。 內部工具（例如[Hobbes](/help/sites-developing/hobbes.md)）可協助進行網路UI測試。 [Tough ](/help/sites-developing/tough-day.md) Day可以模擬負載來壓縮實例。如果您的測試環境已具備使用第三方工具（例如Selenium）的經驗，也可使用這些工具。
 
