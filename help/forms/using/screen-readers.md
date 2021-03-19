@@ -8,18 +8,19 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 0%
+source-wordcount: '347'
+ht-degree: 1%
 
 ---
 
 
 # HTML5表單的螢幕閱讀程式{#screen-readers-for-html-forms}
 
-HTML5表單元件會將XFA表單範本轉換為HTML5格式。 所有支援HTML5的標準瀏覽器都可轉換這些表格。 為支援跨PDF和HTML5表單的類似資料擷取體驗，PDF表單的版面會保留在HTML5表單中。
+HTML5表單元件會將XFA表單範本轉換為HTML5格式。 所有支援HTML5的標準瀏覽器都可轉換這些表格。 為支援跨PDF和HTML5表單的類似資料擷取體驗，HTML5表單會保留PDF forms的版面配置。
 
 HTML5表格使用標準的HTML結構，可讓HTML的一般協助工具搭配這些表格使用。 如果表單是根據可存取表單的最佳實務設計，則可搭配任何支援的螢幕閱讀程式使用。 此外，這類表單可用於鍵盤導覽。
 
