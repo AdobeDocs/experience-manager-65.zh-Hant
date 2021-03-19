@@ -2,10 +2,11 @@
 title: 設定資產前瞻分析以取得分析。
 description: 在 [!DNL Adobe Experience Manager Assets]中設定資產前瞻分析。
 contentOwner: AG
+role: 架構師、管理員
 translation-type: tm+mt
-source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '230'
 ht-degree: 7%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 7%
 1. 按一下「 **[!UICONTROL 前瞻分析設定]** 」資訊卡。
 1. 在精靈中，選取資料中心並提供您的認證，包括您的組織名稱、使用者名稱和共用密碼。
 
-   ![在Experience Manager中設定Adobe Analytics的資產見解](assets/insights_config2.png)
+   ![配置Adobe Analytics的Experience Manager資產見解](assets/insights_config2.png)
 
    *圖：在中 [!DNL Adobe Analytics] 設定資產見解 [!DNL Experience Manager]。*
 
