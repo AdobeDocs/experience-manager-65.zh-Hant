@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
+role: 管理員
 translation-type: tm+mt
-source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
@@ -52,7 +53,7 @@ ht-degree: 1%
 
 * **Adobe Analytics**
 
-   與Adobe Analytics整合後，新增了完整的報告功能，並支援Analytics的視訊心率新增功能。
+   與Adobe Analytics的整合新增了完整的報告功能，並支援Analytics的視訊心率新增功能。
 
 * **Dispatcher**
 
@@ -107,7 +108,7 @@ ht-degree: 1%
 
 1. （*可選*）**[設定Analytics服務](analytics.md)**
 
-   使用工具、部署、雲端服務主控台：*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   使用工具、部署、Cloud Services控制台：*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[設定FFmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
@@ -130,4 +131,4 @@ ht-degree: 1%
 
 ## Dispatcher {#dispatcher}
 
-當部署包含[AEM的Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)時，為了讓啟用功能正常運作，`clientheader`和`filter`區段需要修改。 請參閱[配置Dispatcher for Communities](dispatcher.md#enablement)。
+當部署包含[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)時，為了使啟用功能正常運作，`clientheader`和`filter`區段需要修改。 請參閱[配置Dispatcher for Communities](dispatcher.md#enablement)。
