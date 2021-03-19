@@ -2,10 +2,11 @@
 title: 使用超連結新增影像地圖
 description: 瞭解如何新增包含超連結的影像地圖至影像。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ ht-degree: 0%
 
       ![編輯選項](assets/do-not-localize/edit_icon.png)
 
-1. 若要插入影像地圖，請按一 **[!UICONTROL 下工具列]**![的「啟動地圖](assets/do-not-localize/image-map-icon.png) 」影像地圖。
+1. 若要插入影像地圖，請從工具列按一下「啟動地圖」**[!UICONTROL ![影像地圖](assets/do-not-localize/image-map-icon.png)。]**
 1. 選取影像地圖的形狀。 選取形狀的作用點會置於影像上。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
@@ -45,4 +46,4 @@ ht-degree: 0%
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   如果啟用「動態媒體」選項，請導覽至「資產」編輯器，然後按一下「地圖」以檢視所有套用的影像地圖。]****[!UICONTROL 
+   如果已啟用「Dynamic Media」選項，請導覽至「資產」編輯器，然後按一下「地圖」以檢視所有套用的影像地圖。****
