@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '209'
 ht-degree: 4%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 4%
 
 儲存配置是標識為社區內容選擇的儲存的方法，也稱為用戶生成內容(UGC)。
 
-此設定會通知AEM Communities程式碼，說明在存取UGC時，將使用哪個儲存資源提供者(SRP)實作，且必須反映部署AEM時建立的拓撲。
+此設定通知AEM Communities代碼，在訪問UGC時將使用哪個儲存資源提供程式(SRP)的實施，並且必須反映部署時建立AEM的拓撲。
 
 有關儲存選項和部署拓撲的討論，請訪問：
 
@@ -50,7 +51,7 @@ ht-degree: 4%
 
 ### 關於JCR儲存{#about-jcr-storage}
 
-請注意，如果未進行任何選取，預設值為AEM儲存庫JCR。
+請注意，如果未進行任何選擇，則預設值為AEM儲存庫JCR。
 
 JCR是&#x200B;*not*&#x200B;作者和發佈環境共用的公用商店。 社群內容只會從建立社群內容的作者或發佈環境中看到。
 
