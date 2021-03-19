@@ -11,20 +11,21 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1679'
 ht-degree: 2%
 
 ---
 
 
-# 社群群組主控台{#community-groups-console}
+# 社群群組主控台 {#community-groups-console}
 
 當社區站點的[模板結構](/help/communities/sites-console.md#step1)包含[組函式](/help/communities/functions.md#groups-function)時，「組」控制台提供建立社區組的訪問權限。
 
-* AEM Communities支援在其他群組內巢狀化群組。 當新組](/help/communities/tools-groups.md)的[結構包含組函式時，可進行組嵌套。
+* AEM Communities支援在其他組內建立組。 當新組](/help/communities/tools-groups.md)的[結構包含組函式時，可進行組嵌套。
 * 僅對於作者環境，有一個與站點建立嚮導類似的組建立嚮導。
 * 在發佈環境中，成員是否可以建立組，在向社區站點結構或社區組結構添加組函式時可對其進行配置。
 
@@ -113,7 +114,7 @@ ht-degree: 2%
 
 ![社群群體主題](assets/communitygrouptheme.png)
 
-此架構使用[Twitter Bootstrap](https://twitterbootstrap.org/)為網站提供回應式、有彈性的設計。 可以選擇許多預載的引導主題之一來設定所選社區組模板的樣式，或者可以上載引導主題。
+此架構使用[TwitterBootstrap](https://twitterbootstrap.org/)為網站提供回應式、有彈性的設計。 可以選取許多預先載入的Bootstrap主題之一來設定所選社群群組範本的樣式，或上傳Bootstrap主題。
 
 選取後，主題將會以不透明的藍色核取標籤覆蓋。
 
@@ -208,7 +209,7 @@ ht-degree: 2%
 
 ![開放網站](assets/open-site.png)
 
-群組的頁面內容可使用與任何其他AEM頁面相同的工具進行編寫。 若要開啟群組以進行製作，請選取將滑鼠指標暫留在群組卡片上時顯示的「開啟網站」圖示。
+群組的頁面內容可使用與任何其他頁面相同的工具AEM編寫。 若要開啟群組以進行製作，請選取將滑鼠指標暫留在群組卡片上時顯示的「開啟網站」圖示。
 
 ## 修改組屬性{#modify-group-properties}
 
