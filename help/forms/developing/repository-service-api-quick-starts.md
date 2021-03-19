@@ -1,18 +1,19 @@
 ---
 title: 儲存庫服務API快速啟動
 seo-title: 儲存庫服務API快速啟動
-description: 使用AEM Forms Repository服務可以建立資料夾、寫入資源、列出資源、讀取資源、更新資源、搜尋資源、建立資源之間的關係、鎖定資源、管理存取控制清單以及刪除資源。
-seo-description: 使用AEM Forms Repository服務可以建立資料夾、寫入資源、列出資源、讀取資源、更新資源、搜尋資源、建立資源之間的關係、鎖定資源、管理存取控制清單以及刪除資源。
+description: 使用AEM Forms儲存庫服務可以建立資料夾、寫入資源、列出資源、讀取資源、更新資源、搜索資源、建立資源之間的關係、鎖定資源、管理訪問控制清單和刪除資源。
+seo-description: 使用AEM Forms儲存庫服務可以建立資料夾、寫入資源、列出資源、讀取資源、更新資源、搜索資源、建立資源之間的關係、鎖定資源、管理訪問控制清單和刪除資源。
 uuid: 9c307e6e-d9a4-4021-8493-9f28a745dedb
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
@@ -20,9 +21,9 @@ ht-degree: 0%
 
 # 儲存庫服務API快速啟動{#repository-service-api-quick-starts}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-AEM Forms Repository服務提供下列快速入門。
+以下是AEM Forms儲存庫服務的快速啟動。
 
 [快速入門（SOAP模式）:使用Java API建立資料夾](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
 
@@ -44,13 +45,13 @@ AEM Forms Repository服務提供下列快速入門。
 
 [快速入門（SOAP模式）:使用Java API刪除資源](repository-service-api-quick-starts.md#quick-start-soap-mode-deleting-a-resource-using-the-java-api)
 
-AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP
 
 **應用程式／表單應用程式**
 
-大部分的AEM Forms資料庫服務快速啟動會與名為`Applications/FormsApplication,`的應用程式互動，如下圖所示。
+大多數AEM Forms儲存庫服務快速啟動與名為`Applications/FormsApplication,`的應用程式交互，如下圖所示。
 
-資料夾FormsFolder是AEM Forms存放庫中的位置。 例如，您可以以程式設計方式將此資料夾新增至`Applications/FormsApplication`。 (請參閱[快速入門（SOAP模式）:使用Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)建立資料夾。)
+資料夾FormsFolder是AEM Forms儲存庫中的一個位置。 例如，您可以以程式設計方式將此資料夾新增至`Applications/FormsApplication`。 (請參閱[快速入門（SOAP模式）:使用Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)建立資料夾。)
 
 位於AEM Forms儲存庫中的資源路徑為：
 
@@ -58,7 +59,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 >[!NOTE]
 >
->您可以使用網頁瀏覽器來瀏覽AEM Forms Repository。 要瀏覽儲存庫，請在Web瀏覽器中輸入以下URL `https://[server name]:[server port]/repository`。 您可使用網頁瀏覽器來驗證快速入門結果。 例如，如果您新增內容至AEM Forms Repository，您就可以在網頁瀏覽器中看到內容。
+>您可以使用Web瀏覽器瀏覽AEM Forms儲存庫。 要瀏覽儲存庫，請在Web瀏覽器中輸入以下URL `https://[server name]:[server port]/repository`。 您可使用網頁瀏覽器來驗證快速入門結果。 例如，如果將內容添加到「AEM Forms儲存庫」中，則可以在Web瀏覽器中查看該內容。
 
 >[!NOTE]
 >
@@ -736,7 +737,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api}建立資源之間的關係
 
-下列Java程式碼範例會在AEM Forms儲存庫中建立兩個資源之間的關係。 （請參閱[建立資源關係](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships)。）
+以下Java代碼示例在AEM Forms儲存庫中建立兩個資源之間的關係。 （請參閱[建立資源關係](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships)。）
 
 ```java
  /*
