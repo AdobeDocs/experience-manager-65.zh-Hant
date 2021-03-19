@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b76d7d93-23a5-4c08-81f5-a56267b1556a
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -30,4 +31,4 @@ ht-degree: 0%
 
 只有檔案安全性Java SDK才支援建立抽象原則。 但是，您可以管理從Document Security網頁的抽象原則建立的原則。 使用此方法建立的原則在行為上與從Document Security網頁建立的原則相同。
 
-如需詳細資訊，請參閱[使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63)。
+如需詳細資訊，請參AEM閱[使用表單進行程式設計。](https://www.adobe.com/go/learn_aemforms_programming_63)
