@@ -1,18 +1,19 @@
 ---
 title: 執行模式
 seo-title: 執行模式
-description: 瞭解如何使用執行模式來針對特定用途調整AEM例項。
-seo-description: 瞭解如何使用執行模式來針對特定用途調整AEM例項。
+description: 瞭解如何使用執行模AEM式來調整您的例項，以達到特定目的。
+seo-description: 瞭解如何使用執行模AEM式來調整您的例項，以達到特定目的。
 uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
+feature: 設定
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '766'
 ht-degree: 1%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 1%
 
 # 執行模式{#run-modes}
 
-執行模式可讓您針對特定用途調整AEM實例；例如，作者或發佈、測試、開發、內部網路或其他人。
+運行模式允許您根據特定目AEM的調整實例；例如，作者或發佈、測試、開發、內部網路或其他人。
 
 您可以：
 
@@ -144,7 +145,7 @@ nosamplecontent執行模式是專為生產安裝而設計。
 
 ### 使用-r選項{#using-the-r-option}
 
-啟動快速啟動時，可使用`-r`選項激活自定義運行模式。 例如，使用下列命令啟動執行模式設為dev的AEM例項。&quot;
+啟動快速啟動時，可使用`-r`選項激活自定義運行模式。 例如，使用以下命令啟動運行模AEM式設定為dev的實例。&quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -183,6 +184,6 @@ jar檔案必須使用命名約定：
 
 `WEB-INF/web.xml`
 
-這是在AEM `war`檔案中，在部署前應先更新。
+這位於AEM`war`檔案中，在部署前應先更新。
 
-如需詳細資訊，請參閱[與應用程式伺服器一起安裝AEM。](/help/sites-deploying/application-server-install.md)
+如需詳細資訊，請參AEM閱[與應用程式伺服器一起安裝。](/help/sites-deploying/application-server-install.md)
