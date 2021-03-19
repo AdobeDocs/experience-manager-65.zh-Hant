@@ -1,17 +1,18 @@
 ---
 title: 啟用表單入口元件
 seo-title: 啟用表單入口元件
-description: 現成可用的表單入口元件已停用。 啟用「檔案服務」和「檔案服務謂語」群組，以啟用Forms Portal元件。
-seo-description: 現成可用的表單入口元件已停用。 啟用「檔案服務」和「檔案服務謂語」群組，以啟用Forms Portal元件。
+description: 現成可用的Forms門戶元件被禁用。 啟用「檔案服務」和「檔案服務謂語」群組，以啟用「Forms入口網站」元件。
+seo-description: 現成可用的Forms門戶元件被禁用。 啟用「檔案服務」和「檔案服務謂語」群組，以啟用「Forms入口網站」元件。
 uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
+feature: 表單入口網站
 translation-type: tm+mt
-source-git-commit: a209b2dda04985a3f2d7c6838f11f0b5dc62d520
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # 啟用表單入口元件{#enabling-forms-portal-components}
 
-現成可用的表單入口元件無法使用。 若要讓元件出現在AEM sidekick的可用元件清單中，請執行下列步驟：
+現成可用的表單入口元件無法使用。 若要讓元件出現在sidekick的可用元件清單AEM中，請執行下列步驟：
 
 1. 登入您網站的作者例項，並開啟AEM Sites頁面。
 
