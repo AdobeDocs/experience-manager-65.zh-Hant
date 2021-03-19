@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '3861'
 ht-degree: 1%
 
 ---
@@ -38,9 +39,9 @@ ht-degree: 1%
 1. 作者可以下載基於資料字典模式的樣本資料XML檔案。 作者可以修改樣本資料XML檔案，該檔案可以作為測試資料與資料字典相關聯。 在字母預覽期間使用的相同項目。
 1. 當[預覽字母](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)時，作者選擇預覽含有資料的字母（自訂預覽）。 此信件會開啟，並預先填入作者提供的資料。 這會在建立對應介面中開啟。 正在預覽此信件的代理商可以修改此信件中的內容、資料和附件，並提交最終信件。 有關建立字母的詳細資訊，請參閱[建立對應](../../forms/using/create-letter.md)。
 
-## 先決條件{#prerequisite}
+## 必備條件 {#prerequisite}
 
-安裝[相容性軟體包](compatibility-package.md)以查看&#x200B;**表單**&#x200B;頁上的&#x200B;**資料字典**&#x200B;選項。
+安裝[相容性軟體包](compatibility-package.md)以查看&#x200B;**Forms**&#x200B;頁上的&#x200B;**資料字典**&#x200B;選項。
 
 ## 建立資料字典{#createdatadictionary}
 
@@ -342,7 +343,7 @@ ht-degree: 1%
 
 ### 計算資料字典元素{#computedddelements}
 
-資料字典也可以包括計算元素。 計算資料字典元素始終與表達式相關聯。 此運算式會評估為在執行時期取得資料字典元素的值。 計算的DDE值是其它DDE值或文字的函式。 預設情況下，支援JSP表達式語言(EL)表達式。 EL運算式使用${ }字元，而有效的運算式可包含文字、運算子、變數（資料字典元素參考）和函式呼叫。 在引用表達式中的資料字典元素時，使用DDE的引用名稱。 參考名稱對於資料字典內的每個資料字典元素都是唯一的。
+資料字典也可以包括計算元素。 計算資料字典元素始終與表達式相關聯。 此運算式會評估為在執行時期取得資料字典元素的值。 計算的DDE值是其它DDE值或文本的函式。 預設情況下，支援JSP表達式語言(EL)表達式。 EL運算式使用${ }字元，而有效的運算式可包含文字、運算子、變數（資料字典元素參考）和函式呼叫。 在引用表達式中的資料字典元素時，使用DDE的引用名稱。 參考名稱對於資料字典內的每個資料字典元素都是唯一的。
 
 計算的DDE PersonFullName可與EL串連運算式關聯，例如${PersonFirstName} ${PersonLastName}。
 
