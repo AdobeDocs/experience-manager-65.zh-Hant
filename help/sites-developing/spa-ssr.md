@@ -1,7 +1,7 @@
 ---
 title: 和SPA伺服器端演算
 seo-title: 和SPA伺服器端演算
-description: 'null'
+description: '"SPA和伺服器端演算"'
 seo-description: 'null'
 uuid: 27e26e3f-65d4-4069-b570-58b8b9e2a1ae
 contentOwner: bohnert
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 41e30a668c8c02f2c43e509ed708c4b9fa39a269
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1694'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 概覽 {#overview}
 
-單頁應用程式(SPA)可為使用者提供多樣化的動態體驗，以熟悉的方式反應和運作，通常就像原生應用程式。 [這是透過依賴用戶端在前面載入內容，然後進行繁重的使用者互動處理，從而將用戶端與伺服器之間所需的通訊量降至最低，使應用程式更具反應性而實現的。](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) 
+單頁應用程式(SPA)可為使用者提供豐富的動態體驗，以熟悉的方式反應和運作，通常就像原生應用程式。 [這是透過依賴用戶端在前面載入內容，然後進行繁重的使用者互動處理，從而將用戶端與伺服器之間所需的通訊量降至最低，使應用程式更具反應性而實現的。](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) 
 
 不過，這可能會延長初始載入時間，尤其是當載入SPA量龐大且內容豐富時。 為了最佳化載入時間，有些內容可在伺服器端轉譯。 使用伺服器端轉譯(SSR)可加速頁面的初始載入，並進一步將轉譯傳遞給用戶端。
 
