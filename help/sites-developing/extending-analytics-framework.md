@@ -1,7 +1,7 @@
 ---
-title: 自訂Adobe Analytics Framework
-seo-title: 自訂Adobe Analytics Framework
-description: 'null'
+title: 定制Adobe Analytics框架
+seo-title: 定制Adobe Analytics框架
+description: 定制Adobe Analytics框架
 seo-description: 'null'
 uuid: 444a29c2-3b4e-4d21-adc0-5f317ece2b77
 contentOwner: User
@@ -10,23 +10,23 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 translation-type: tm+mt
-source-git-commit: 0dc96f07e45ccbfea4edc87431677ada5b1bfa8c
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
 
 
-# 自訂Adobe Analytics Framework{#customizing-the-adobe-analytics-framework}
+# 自定義Adobe Analytics框架{#customizing-the-adobe-analytics-framework}
 
-Adobe Analytics架構會決定使用Adobe Analytics追蹤的資訊。 若要自訂預設架構，請使用javascript來新增自訂追蹤、整合Adobe Analytics外掛程式，以及變更用於追蹤的架構內的一般設定。
+Adobe Analytics框架決定了Adobe Analytics所跟蹤的資訊。 若要自訂預設架構，請使用javascript來新增自訂追蹤、整合Adobe Analytics外掛程式，以及變更用於追蹤的架構內的一般設定。
 
 ## 關於為架構{#about-the-generated-javascript-for-frameworks}產生的javascript
 
 當頁面與Adobe Analytics架構相關聯，且頁面包含對Analytics模組](/help/sites-administering/adobeanalytics.md)的[參考時，會自動為頁面產生analytics.sitecatalyst.js檔案。
 
-頁面中的javascript會建立`s_gi`物件（s_code.js Adobe Analytics程式庫所定義），並指派值給其屬性。 對象實例的名稱為`s`。 本節中顯示的程式碼範例會參照此`s`變數。
+頁面中的javascript會建立`s_gi`物件(s_code.jsAdobe Analytics程式庫所定義)，並指派值給其屬性。 對象實例的名稱為`s`。 本節中顯示的程式碼範例會參照此`s`變數。
 
 下列范常式式碼與analytics.sitecatalyst.js檔案中的程式碼類似：
 
@@ -62,9 +62,9 @@ s.doPlugins=s_doPlugins;
 
 當您使用自訂Javascript程式碼自訂架構時，您會變更此檔案的內容。
 
-## 設定Adobe Analytics屬性{#configuring-adobe-analytics-properties}
+## 配置Adobe Analytics屬性{#configuring-adobe-analytics-properties}
 
-Adobe Analytics中有許多預先定義的變數，可在架構上設定。 預設會將&#x200B;**charset**、**cookieLifetime**、**currencyCode**&#x200B;和&#x200B;**trackInlineStats**&#x200B;變數包含在「一般分析設定&#x200B;**」清單中。**
+Adobe Analytics內有許多預先定義的變數可在架構上設定。 預設會將&#x200B;**charset**、**cookieLifetime**、**currencyCode**&#x200B;和&#x200B;**trackInlineStats**&#x200B;變數包含在「一般分析設定&#x200B;**」清單中。**
 
 ![aa-22](assets/aa-22.png)
 
@@ -94,7 +94,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 請按下列步驟將變數新增至清單：
 
-1. 在Adobe Analytics架構頁面上，展開「一般分析設定」區域。****
+1. 在您的Adobe Analytics框架頁面上，展開「一般分析設定」區域。****
 1. 在變數清單下方，按一下「新增項目」，將新變數新增至清單。
 1. 在左側儲存格中，輸入變數的名稱，例如`prop10`。
 
@@ -112,11 +112,11 @@ s.trackingServerSecure = "xxxxxxx.net";
 >
 >此清單中的某些變數為&#x200B;**mandatory**，以讓Adobe Analytics呼叫正常運作(例如&#x200B;**currencyCode**, **charSet**)
 >
->因此，即使從架構本身移除，在進行Adobe Analytics呼叫時，仍會附加預設值。
+>因此，即使從框架本身移除它們，在進行Adobe Analytics調用時，它們仍將附加一個預設值。
 
-### 新增自訂javascript至Adobe Analytics Framework {#adding-custom-javascript-to-an-adobe-analytics-framework}
+### 新增自訂javascript至Adobe Analytics架構{#adding-custom-javascript-to-an-adobe-analytics-framework}
 
-**「一般分析設定」**&#x200B;區域中的免費javascript方塊可讓您將自訂代碼新增至Adobe Analytics架構。
+**一般分析設定**&#x200B;區域中的free-from javascript方塊可讓您將自訂代碼新增至Adobe Analytics架構。
 
 ![aa-21](assets/aa-21.png)
 
@@ -124,7 +124,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 `s.prop10= 'CONSTANT';`
 
-[analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md)檔案（包含Adobe Analytics `s-code.js`檔案的內容）中的程式碼包含下列程式碼：
+[analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md)檔案(包含Adobe Analytics`s-code.js`檔案的內容)中的程式碼包含下列程式碼：
 
 `if (s.usePlugins) s.doPlugins(s)`
 
@@ -142,7 +142,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
    >[!CAUTION]
    >
-   >如果您想要在Adobe Analytics呼叫中傳送變數，而Adobe Analytics呼叫中的變數已以某種方式自訂，但無法透過基本拖放介面OR透過Adobe Analytics檢視中的內嵌javascript來完成，則需使用此程式碼。
+   >如果您想要在Adobe Analytics呼叫中傳送變數，而這些變數是以某種方式自訂，無法透過基本拖放介面OR透過Adobe Analytics檢視的內嵌javascript來完成，則此程式碼是必要的。
    >
    >如果自訂變數不在s_doPlugins函式外，則在Adobe Analytics呼叫中會以*undefined *傳送這些變數
 
@@ -150,11 +150,11 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 下列範例使用共用分隔符號&quot;|&quot;，以階層順序串連在頁面上擷取的資料。
 
-Adobe Analytics架構具有下列設定：
+Adobe Analytics框架具有以下配置：
 
-* `prop2` Adobe Analytics變數會對應至`pagedata.sitesection`網站屬性。
+* `prop2`Adobe Analytics變數會對應至`pagedata.sitesection`網站屬性。
 
-* `prop3` Adobe Analytics變數會對應至`pagedata.subsection`網站屬性。
+* `prop3`Adobe Analytics變數會對應至`pagedata.subsection`網站屬性。
 
 * 下列程式碼會新增至free-from javascript方塊：
 
@@ -166,15 +166,15 @@ Adobe Analytics架構具有下列設定：
     s.doPlugins=s_doPlugins;
    ```
 
-* 當瀏覽使用架構的網頁（或在編輯模式中重新載入或預覽頁面）時，會執行對Adobe Analytics的呼叫。
+* 當瀏覽使用框架的網頁時（或在編輯模式中重新載入或預覽頁面），將執行對Adobe Analytics的呼叫。
 
-例如，Adobe Analytics會產生下列值：
+例如，下列值會在Adobe Analytics產生：
 
 ![aa-20](assets/aa-20.png)
 
-### 新增所有Adobe Analytics架構的全域自訂代碼{#adding-global-custom-code-for-all-adobe-analytics-frameworks}
+### 為所有Adobe Analytics框架添加全局自定義代碼{#adding-global-custom-code-for-all-adobe-analytics-frameworks}
 
-提供整合至所有Adobe Analytics架構的自訂Javascript程式碼。 當頁面的Adobe Analytics架構不含自訂[自由格式javascript](/help/sites-administering/adobeanalytics.md)時，/libs/cq/analytics/components/sitecatalyst/config.js.jsp指令碼產生的javascript會附加至[analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md)檔案。 依預設，指令碼沒有作用，因為它已加上註解。 代碼還將`s.usePlugins`設定為`false` :
+提供整合在所有Adobe Analytics架構中的自訂Javascript程式碼。 當頁面的Adobe Analytics架構不含自訂[自由格式javascript](/help/sites-administering/adobeanalytics.md)時，/libs/cq/analytics/components/sitecatalyst/config.js.jsp指令碼產生的javascript會附加至[analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md)檔案。 依預設，指令碼沒有作用，因為它已加上註解。 代碼還將`s.usePlugins`設定為`false` :
 
 ```
 /* Plugin Config */
@@ -187,7 +187,7 @@ s.doPlugins=s_doPlugins;
 */
 ```
 
-analytics.sitecatalyst.js檔案中的程式碼（包含Adobe Analytics s_code.js檔案的內容）包含下列程式碼：
+analytics.sitecatalyst.js檔案(包含Adobe Analyticss_code.js檔案的內容)中的程式碼包含下列程式碼：
 
 if(s.usePlugins)s.doPlugins(s)
 
@@ -195,7 +195,7 @@ if(s.usePlugins)s.doPlugins(s)
 
 >[!NOTE]
 >
->請勿編輯/libs/cq/analytics/components/sitecatalyst/config.js.jsp檔案。 某些AEM升級或維護工作可以重新安裝原始檔案，移除您所做的變更。
+>請勿編輯/libs/cq/analytics/components/sitecatalyst/config.js.jsp檔案。 某些AEM升級或維護任務可以重新安裝原始檔案，刪除您的更改。
 
 1. 在CRXDE Lite中，建立/apps/cq/analytics/components檔案夾結構：
 
@@ -240,11 +240,11 @@ if(s.usePlugins)s.doPlugins(s)
 >
 >如果頁面架構的自由格式javascript中有任何文字（甚至僅限空白字元），則會忽略config.js.jsp。
 
-### 在AEM {#using-adobe-analytics-plugins-in-aem}中使用Adobe Analytics外掛程式
+### 在AEM{#using-adobe-analytics-plugins-in-aem}中使用Adobe Analytics插件
 
-取得Adobe Analytics外掛程式的javascript程式碼，並將它們整合在AEM的Adobe Analytics架構中。 將程式碼新增至`sitecatalyst.plugins`類別的用戶端程式庫資料夾，以便自訂javascript程式碼可使用。
+取得Adobe Analytics外掛程式的javascript程式碼，並將它們整合至您的Adobe Analytics架構AEM。 將程式碼新增至`sitecatalyst.plugins`類別的用戶端程式庫資料夾，以便自訂javascript程式碼可使用。
 
-例如，如果您整合`getQueryParams`外掛程式，則可從自訂javascript的`s_doPlugins`函式呼叫外掛程式。 當觸發Adobe Analytics呼叫時，下列范常式式碼會從反向連結的URL將&#x200B;**&quot;pid&quot;**&#x200B;中的查詢字串傳送為&#x200B;**eVar1**。
+例如，如果您整合`getQueryParams`外掛程式，則可從自訂javascript的`s_doPlugins`函式呼叫外掛程式。 當觸發Adobe Analytics呼叫時，下列范常式式碼會從反向連結的URL傳送&#x200B;**&quot;pid&quot;**&#x200B;中的查詢字串，作為&#x200B;**eVar1**。
 
 ```
 s.usePlugins=true;
@@ -255,7 +255,7 @@ function s_doPlugins(s) {
 s.doPlugins=s_doPlugins;
 ```
 
-AEM會安裝下列Adobe Analytics外掛程式，以便依預設提供：
+安AEM裝下列Adobe Analytics插件，以便預設使用它們：
 
 * getQueryParam()
 * getPreviousValue()
@@ -265,7 +265,7 @@ AEM會安裝下列Adobe Analytics外掛程式，以便依預設提供：
 
 >[!NOTE]
 >
->為外掛程式建立新的用戶端程式庫資料夾。 請勿將外掛程式新增至`/libs/cq/analytics/clientlibs/sitecatalyst/plugins`資料夾。 此做法可確保在AEM重新安裝或升級工作期間不會覆寫您對`sitecatalyst.plugins`類別的貢獻。
+>為外掛程式建立新的用戶端程式庫資料夾。 請勿將外掛程式新增至`/libs/cq/analytics/clientlibs/sitecatalyst/plugins`資料夾。 此做法可確保在重新安裝或升級任務期間不會覆寫您對`sitecatalyst.plugins`類AEM別的貢獻。
 
 請按下列步驟為外掛程式建立用戶端程式庫資料夾。 您只需執行此程式一次。 若要將外掛程式新增至用戶端程式庫資料夾，請使用後續的程式。
 
@@ -290,7 +290,7 @@ AEM會安裝下列Adobe Analytics外掛程式，以便依預設提供：
 
 1. 按一下「全部儲存」。
 
-請依照下列程式來取得外掛程式程式碼、將程式碼儲存在AEM儲存庫中，並將程式碼新增至您的用戶端程式庫檔案夾。
+請按下列步驟獲取插件代碼、將代碼儲存在儲存庫AEM中，並將代碼添加到客戶端庫資料夾中。
 
 1. 使用您的Adobe Analytics帳戶登入[sc.omniture.com](https://sc.omniture.com)。
 1. 在登陸頁面上，請至「說明>說明首頁」。
