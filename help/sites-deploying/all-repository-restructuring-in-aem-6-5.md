@@ -1,26 +1,27 @@
 ---
-title: AEM 6.5中的通用資料庫重組
-seo-title: AEM 6.5中的通用資料庫重組
-description: 瞭解如何進行必要的變更，以移轉至AEM 6.5中所有AEM區域都常用的新儲存庫結構。
-seo-description: 瞭解如何進行必要的變更，以移轉至AEM 6.5中所有AEM區域都常用的新儲存庫結構。
+title: 6.5中的常AEM見儲存庫重組
+seo-title: 6.5中的常AEM見儲存庫重組
+description: 瞭解如何進行必要的更改，以遷移到6.5中AEM的新儲存庫結構，這些結構對於所有領域都很常見AEM。
+seo-description: 瞭解如何進行必要的更改，以遷移到6.5中AEM的新儲存庫結構，這些結構對於所有領域都很常見AEM。
 uuid: a4bb64e5-387b-4084-9258-54e68db12f3b
 contentOwner: chaikels
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
+feature: 升級
 translation-type: tm+mt
-source-git-commit: 838e194f699b0832839c80f4ba9503c9d5a15945
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2721'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# AEM 6.5 {#common-repository-restructuring-in-aem}中的通用資料庫重組
+# 6.5 &lt;AEMa0/>中的通用儲存庫重組{#common-repository-restructuring-in-aem}
 
-如上層[「AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的儲存庫重組」頁面所述，升級至AEM 6.5的客戶應使用此頁面來評估與儲存庫變更相關的工作成果，這些變更可能會影響所有解決方案。 有些變更需要在AEM 6.5升級程式中努力工作，而其他變更則可延後至日後升級。
+如[父6.5](/help/sites-deploying/repository-restructuring.md)頁中的「資料庫重組」頁中所述，升級到AEM6.5的客戶應使用此頁評估與資料庫更改相關的工作，這些更改可能影響所有解決方案。 有些變更需要在6.5升級程AEM序中努力工作，而有些則會延遲至日後升級。
 
 **使用6.5升級**
 
@@ -33,15 +34,15 @@ ht-degree: 2%
 **未來升級前**
 
 * [ContextHub 組態](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#contexthub-configurations)
-* [Classic Cloud Services設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-cloud-services-designs)
+* [經典Cloud Services設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-cloud-services-designs)
 * [傳統儀表板設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-dashboards-designs)
 * [傳統報表設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#classic-reports-designs)
 * [預設設計](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#default-designs)
-* [Adobe DTM JavaScript端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-javascript-endpoint)
-* [Adobe DTM Web-Hook端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-web-hook-endpoint)
+* [AdobeDTM JavaScript端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-javascript-endpoint)
+* [AdobeDTM Web-Hook端點](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#adobe-dtm-web-hook-endpoint)
 * [收件箱任務](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#inbox-tasks)
 * [多站點管理器Blueprint配置](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
-* [AEM Projects Dashboard Gadget設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#aem-projects-dashboard-gadget-configurations)
+* [專AEM案儀表板Gadget設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#aem-projects-dashboard-gadget-configurations)
 * [複製通知電子郵件模板](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#replication-notification-e-mail-template)
 * [標記](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags)
 * [翻譯雲端服務](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-cloud-services)
@@ -49,14 +50,14 @@ ht-degree: 2%
 * [翻譯規則](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)
 * [翻譯介面工具集用戶端程式庫](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-widget-client-library)
 * [樹狀結構啟動Web主控台](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tree-activation-web-console)
-* [廠商轉譯連接器雲端服務](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#vendor-translation-connector-cloud-services)
+* [廠商轉換連接器Cloud Services](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#vendor-translation-connector-cloud-services)
 * [工作流程通知電子郵件範本](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
 ## 使用6.5升級{#with-upgrade}
 
 ### ContextHub 組態 {#contexthub-6.5}
 
-從AEM 6.4開始，就沒有預設的ContextHub設定。 因此，在站點的根級別上，應設定`cq:contextHubPathproperty`以指示應使用哪種配置。
+從AEM6.4開始，沒有預設的ContextHub設定。 因此，在站點的根級別上，應設定`cq:contextHubPathproperty`以指示應使用哪種配置。
 
 1. 導覽至網站的根目錄。
 1. 開啟根頁面的頁面屬性，並選取「個人化」索引標籤。
@@ -85,9 +86,9 @@ ht-degree: 2%
    <td><strong>重組指導</strong></td>
    <td><p>任何新的或修改的工作流模型都必須遷移到/conf/global/workflow/models。</p>
     <ol>
-     <li>將修改的「工作流程模型」部署至本機AEM 6.5開發例項，如此就會存在於「上一個」位置。</li>
-     <li>使用AEM的「工作流程模型編輯器」(Workflow Model Editor)，在「AEM &gt;工具&gt;工作流程&gt;模型」(AEM &gt; Workflow &gt; Models)編輯「工作流程模型」(Workflow Model)。</li>
-     <li>移轉修改的AEM提供的工作流程模型時
+     <li>將修改的工作流模型部署到本AEM地6.5開發實例中，使其存在於「上一個」位置。</li>
+     <li>使用「工作流模型編輯器」(AEMWorkflow Model Editor)，在AEM&gt;「工具」(Tools)&gt;「工作流」(Workflow)&gt;「模型」(Models)中編輯「工作流模型」(Workflow Model)。</li>
+     <li>遷移修改的AEM提供的工作流模型時
       <ol>
        <li>在「工作流模型編輯器」開啟時，修改瀏覽器的地址URL，並將路徑段/libs/settings/workflow/models替換為/etc/workflow/models。
         <ul>
@@ -96,7 +97,7 @@ ht-degree: 2%
       </ol> </li>
      <li>在工作流模型編輯器中啟用「編輯」模式，該模式將工作流模型定義複製到/conf/global/workflow/models。</li>
      <li>點選「同步」按鈕，將變更同步至/var/workflow/models下的「執行階段工作流程模型」。</li>
-     <li>匯出「工作流程模型」(/conf/global/workflow/models/&lt;workflow-model&gt;)和「執行時期工作流程模型」(/var/workflow/models/&lt;workflow-model&gt;)，並整合至AEM專案。
+     <li>同時匯出「工作流程模型」(/conf/global/workflow/models/&lt;workflow-model&gt;)和「執行時期工作流程模型」(/var/workflow/models/&lt;workflow-model&gt;)，並整合至專AEM案。
       <ol>
        <li>例如，匯出：
         <ul>
@@ -113,7 +114,7 @@ ht-degree: 2%
      <li><code>/conf/global/settings/workflow/models</code></li>
      <li><code>/libs/settings/workflow/models</code></li>
      <li><code>/etc/workflow/models</code></li>
-    </ol> <p>因此，如果要保留AEM提供的「工作流程模型」，則「上一個」位置中保留的任何自訂都必須移至/conf/global/settings/workflow/models，否則將被/libs/settings/workflow/models中AEM提供的「工作流程模型」定義所取代。</p> </td>
+    </ol> <p>因此，如果要保留「上一個」AEM位置中保存的任何提供的工作流模型定制，則必須將其移至/conf/global/settings/workflow/models，否則將被/libs/settings/workflow/models中AEM提供的工作流模型定義所取代。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -139,7 +140,7 @@ ht-degree: 2%
    <td>中的任何顯式路徑引用
     「上一個位置」的<code>
      custom
-    </code>程式碼也應考量「新位置」。 建議將此程式碼重構為使用AEM Workflow API。</td>
+    </code>程式碼也應考量「新位置」。 建議將此程式碼重構為使用工AEM作流程API。</td>
   </tr>
  </tbody>
 </table>
@@ -170,7 +171,7 @@ ht-degree: 2%
      <li><code>/conf/global/settings/workflow/launcher</code></li>
      <li><code>/libs/settings/workflow/launcher</code></li>
      <li><code>/etc/workflow/launcher</code></li>
-    </ol> <p>因此，「上一個」位置中保留的AEM提供的「工作流程啟動器」的任何自訂項目都必須移至「新位置」(<code>/conf/global/settings/workflow/launcher</code>)，否則將由<code>/libs/settings/workflow/launcher</code>中AEM提供的「工作流程啟動器」定義取代。</p> </td>
+    </ol> <p>因此，「上一個」位置AEM中保留的提供工作流啟動程式的任何自定義都必須移動到「新位置」(<code>/conf/global/settings/workflow/launcher</code>)，否則將被<code>/libs/settings/workflow/launcher</code>中AEM提供的工作流啟動程式定義取代。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -200,10 +201,10 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>AEM 6.4 SP1在發行時，會讓它延遲至6.5
+   <td><p>AEM 6.4 SP1在發行時，可讓此重組延遲至6.5
      <code>
       upgrade
-     </code>。</p> <p>如果在AEM 6.4 SP1發行之前升級至AEM 6.4，此重組應視為升級專案的一部分來執行。 如果不這樣做，編輯和保存引用「上一個位置」中指令碼的「工作流指令碼」將完全從「工作流步驟」中刪除「工作流指令碼」引用，並且只有「新位置」中的「工作流指令碼」將在指令碼選擇下拉式清單中可用。</p> </td>
+     </code>。</p> <p>如果在6.4 AEM AEM SP1發行之前升級到6.4，則應在升級項目中執行此重組。 如果不這樣做，編輯和保存引用「上一個位置」中指令碼的「工作流指令碼」將完全從「工作流步驟」中刪除「工作流指令碼」引用，並且只有「新位置」中的「工作流指令碼」將在指令碼選擇下拉式清單中可用。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -224,14 +225,14 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>任何新的或修改的ContextHub設定都必須移轉至新位置，且必須更新參照的AEM Sites頁面以反映新位置。</p>
+   <td><p>任何新的或修改的ContextHub配置都必須遷移到新位置，並且必須更新引用的AEM Sites頁面以反映新位置。</p>
     <ol>
      <li>將任何新的或修改的ContextHub配置從上一個位置複製到新位置。</li>
-     <li>將適用的AEM設定與AEM內容階層建立關聯。
+     <li>將適用的組AEM態與內容階AEM層建立關聯。
       <ol>
-       <li><strong>透過「AEM網站&gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定」的AEM網站頁面階層</strong>。</li>
+       <li><strong>AEM Sites的頁面階層：AEM Sites&gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>。</li>
       </ol> </li>
-     <li>將任何移轉的舊版ContextHub組態與前述的AEM內容階層分離。</li>
+     <li>將任何遷移的舊版ContextHub配置與上述內容層AEM次分離。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -241,7 +242,7 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### Classic Cloud Services Designs {#classic-cloud-services-designs}
+### 經典Cloud Services設計{#classic-cloud-services-designs}
 
 <table>
  <tbody>
@@ -267,7 +268,7 @@ ht-degree: 2%
         designPath
        </code></span>屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
+     <li>更新AEMDispatcher規則，允許通過/etc.clientlibs/.. 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
@@ -306,7 +307,7 @@ ht-degree: 2%
        designPath
       </code>屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
+     <li>更新AEMDispatcher規則，允許通過/etc.clientlibs/.. 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
@@ -345,7 +346,7 @@ ht-degree: 2%
        designPath
       </code>屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
+     <li>更新AEMDispatcher規則，允許通過/etc.clientlibs/.. 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
@@ -384,7 +385,7 @@ ht-degree: 2%
        designPath
       </code>屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
+     <li>更新AEMDispatcher規則，允許通過/etc.clientlibs/.. 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
@@ -397,7 +398,7 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### Adobe DTM JavaScript端點{#adobe-dtm-javascript-endpoint}
+### AdobeDTM JavaScript端點{#adobe-dtm-javascript-endpoint}
 
 <table>
  <tbody>
@@ -420,7 +421,7 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### Adobe DTM Web-Hook端點{#adobe-dtm-web-hook-endpoint}
+### AdobeDTM Web-Hook端點{#adobe-dtm-web-hook-endpoint}
 
 <table>
  <tbody>
@@ -497,7 +498,7 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### AEM Projects Dashboard Gadget設定{#aem-projects-dashboard-gadget-configurations}
+### AEM Projects Dashboard Gadget配置{#aem-projects-dashboard-gadget-configurations}
 
 <table>
  <tbody>
@@ -511,18 +512,18 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>任何新的或已修改的AEM Projects Dashboard Gadget設定都必須移轉至新位置(<code>/apps</code>)。</p>
+   <td><p>任何新的或已修AEM改的「Projects Dashboard Gadget配置」都必須遷移到新位置(<code>/apps</code>)。</p>
     <ol>
-     <li>將任何新的或已修改的AEM Projects Dashboard Gadget設定從上一個位置複製到新位置(<code>/apps</code>)。
+     <li>將任何新的或已修AEM改的「項目儀表板Gadget配置」從上一個位置複製到新位置(<code>/apps</code>)。
       <ol>
-       <li>請勿複製未修改的AEM Projects Dashboard Gadget設定，因為這些設定現在存在於新位置(<code>/libs</code>)中。</li>
+       <li>請勿複製未修AEM改的「Projects Dashboard Gadget配置」，因為這些配置現在存在於新位置(<code>/libs</code>)中。</li>
       </ol> </li>
-     <li>更新任何參照「上一個位置」的AEM Projects範本，以指向適當的新位置。</li>
+     <li>更新參AEM考「上一個位置」的任何「項目」範本，以指向適當的新位置。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>如果已套用AEM 6.4相容性套件，在移除相容性套件時，就必須執行儲存庫對齊活動。</td>
+   <td>如果應AEM用了6.4相容包，則在刪除相容包時必須執行儲存庫對齊活動。</td>
   </tr>
  </tbody>
 </table>
@@ -578,12 +579,12 @@ ht-degree: 2%
     <ol>
      <li>將所有標籤從上一個位置複製到新位置。</li>
      <li>從上一個位置移除所有標籤。</li>
-     <li>透過AEM Web Console，在<em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em>重新啟動Day Commeture 5 Tagging OSGi bundle，讓AEM識別「新位置」包含內容且應使用。</li>
+     <li>透過AEMWeb主控台，在<em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em>重新啟動Day Commeture 5 Tagging OSGi搭售，以識別AEM新位置包含內容且應使用。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>重新啟動Day Commute標籤OSGi捆綁包將僅在「上一個位置」為空時將「新位置」註冊為標籤根目錄。</p> <p>針對所有運用AEM TagManager API進行標籤解析的功能，移轉至「新位置」後，「上一個位置」的參考仍將繼續運作。</p> <p>任何明確引用路徑<code>/etc/tags</code>的自訂代碼都必須更新為<span class="code">/content/
+   <td><p>重新啟動Day Commute標籤OSGi捆綁包將僅在「上一個位置」為空時將「新位置」註冊為標籤根目錄。</p> <p>針對所有運用TagManager API進行標籤解析的功能，移轉至新位置後，「上一個位置」的參考將AEM會繼續運作。</p> <p>任何明確引用路徑<code>/etc/tags</code>的自訂代碼都必須更新為<span class="code">/content/
       <code>
        cq
       </code>
@@ -608,33 +609,33 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>任何新的Translation Cloud服務都必須遷移到新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p>
+   <td><p>任何新的翻譯Cloud Services都必須遷移到新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p>
     <ol>
      <li>將上一個位置的現有配置遷移到新位置。
       <ul>
-       <li>透過AEM製作UI，在<strong>「工具&gt;雲端服務&gt;轉譯雲端服務」</strong>手動重新建立新的Translation Cloud服務設定。<br /> 或 </li>
-       <li>將任何新的Translation Cloud服務配置從「上一個位置」複製到「新位置」（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</li>
+       <li>通過編寫UI(位於<strong>工具&gt;Cloud ServicesAEM&gt;翻譯Cloud Services</strong>)手動重新建立新的翻譯Cloud Services配置。<br /> 或 </li>
+       <li>將任何新的翻譯Cloud Services配置從「上一個位置」複製到「新位置」（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</li>
       </ul> </li>
-     <li>將適用的AEM設定與AEM內容階層建立關聯。
+     <li>將適用的組AEM態與內容階AEM層建立關聯。
       <ol>
-       <li>透過<strong>AEM網站&gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>的AEM網站頁面階層。</li>
-       <li>透過<strong>AEM體驗片段&gt;體驗片段&gt;屬性&gt;雲端服務標籤&gt;雲端設定</strong>的AEM體驗片段階層。</li>
-       <li>透過<strong>AEM體驗片段&gt;資料夾&gt;屬性&gt;雲端服務標籤&gt;雲端設定</strong>的AEM體驗片段資料夾階層。<br /> </li>
-       <li>透過<strong>AEM Assets &gt;資料夾&gt;資料夾屬性&gt;雲端服務標籤&gt; Configuration</strong>的AEM Assets資料夾階層。</li>
-       <li>透過<strong>AEM專案&gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定</strong>的AEM專案。</li>
+       <li>AEM Sites的頁面階層(透過<strong>AEM Sites&gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>)。</li>
+       <li>體AEM驗片段階層(透過<strong>AEM體驗片段&gt;體驗片段&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>)。</li>
+       <li>體驗AEM片段資料夾階層(透過<strong>AEM體驗片段&gt;資料夾&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>)。<br /> </li>
+       <li>AEM Assets資料夾層次結構(通過<strong>AEM Assets&gt;資料夾&gt;資料夾屬性&gt;Cloud Services頁籤&gt;配置</strong>)。</li>
+       <li>透AEM過<strong>AEM專案&gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定</strong>進行專案。</li>
       </ol> </li>
-     <li>將任何移轉的舊版Translation Cloud服務與前述的AEM內容階層分離。</li>
+     <li>將任何遷移的舊版翻譯Cloud Services與上述內容層次AEM分離。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>翻譯雲服務解析按以下順序進行：</p>
+   <td><p>翻譯Cloud Services解析按以下順序進行：</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/conf/global/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/apps/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/libs/settings/cloudconfigs/translations/translationcfg</code></li>
-    </ol> <p>移轉的Translation Cloud服務必須與AEM 6.4相容。</p> </td>
+    </ol> <p>遷移的翻譯Cloud Services必須與AEM6.4相容。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -727,7 +728,7 @@ ht-degree: 2%
        designPath
       </code>屬性。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEM Dispatcher規則，允許透過/etc.clientlibs/... 代理servlet。</li>
+     <li>更新AEMDispatcher規則，允許通過/etc.clientlibs/.. 代理servlet。</li>
     </ol> <p>對於任何未在SCM中管理的設計，以及透過設計對話方塊修改執行時期的設計。</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
@@ -748,7 +749,7 @@ ht-degree: 2%
 | **重組指導** | 不需執行任何動作。 |
 | **附註** | 樹激活Web控制台現在可通過&#x200B;**工具>部署>複製>激活樹**&#x200B;獲得。 |
 
-### 廠商轉譯連接器雲端服務{#vendor-translation-connector-cloud-services}
+### 廠商轉換連接器Cloud Services{#vendor-translation-connector-cloud-services}
 
 <table>
  <tbody>
@@ -764,27 +765,27 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>任何新的廠商翻譯連接器雲端服務都必須移轉至新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p>
+   <td><p>任何新的供應商翻譯連接器Cloud Services都必須遷移到新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p>
     <ol>
      <li>將「上一個位置」中的現有配置遷移到「新位置」。
       <ul>
-       <li>透過<strong>AEM製作UI（位於「工具&gt;雲端服務&gt;轉譯雲端服務」），手動建立新廠商轉譯連接器雲端服務設定。</strong><br /> 或 </li>
-       <li>將任何新的供應商翻譯連接器雲服務配置從先前位置複製到新位置（<code>/apps</code>、<code>/conf/global </code>或<code>/conf/&lt;tenant&gt;</code>）。</li>
+       <li>通過<strong>編寫UI(在「工具」&gt;「Cloud Services」&gt;「翻譯Cloud Services」</strong>)手動建立新廠商翻譯連接器Cloud Services配置。<br /> 或 </li>
+       <li>將任何新的供應商轉換連接器Cloud Services配置從先前位置複製到新位置（<code>/apps</code>、<code>/conf/global </code>或<code>/conf/&lt;tenant&gt;</code>）。</li>
       </ul> </li>
-     <li>將適用的AEM設定與AEM內容階層建立關聯。
+     <li>將適用的組AEM態與內容階AEM層建立關聯。
       <ol>
-       <li>透過<strong>AEM網站&gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>的AEM網站頁面階層。</li>
-       <li>透過<strong>AEM體驗片段&gt;體驗片段&gt;屬性&gt;雲端服務標籤&gt;雲端設定</strong>的AEM體驗片段階層。</li>
-       <li>透過<strong>AEM體驗片段&gt;資料夾&gt;屬性&gt;雲端服務標籤&gt;雲端設定</strong>的AEM體驗片段資料夾階層。</li>
-       <li>透過<strong>AEM Assets &gt;資料夾&gt;資料夾屬性&gt;雲端服務標籤&gt; Configuration</strong>的AEM Assets資料夾階層。</li>
-       <li>透過<strong>AEM專案&gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定</strong>的AEM專案。</li>
+       <li>AEM Sites的頁面階層(透過<strong>AEM Sites&gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>)。</li>
+       <li>體AEM驗片段階層(透過<strong>AEM體驗片段&gt;體驗片段&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>)。</li>
+       <li>體驗AEM片段資料夾階層(透過<strong>AEM體驗片段&gt;資料夾&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>)。</li>
+       <li>AEM Assets資料夾層次結構(通過<strong>AEM Assets&gt;資料夾&gt;資料夾屬性&gt;Cloud Services頁籤&gt;配置</strong>)。</li>
+       <li>透AEM過<strong>AEM專案&gt;專案&gt;專案屬性&gt;進階標籤&gt;雲端設定</strong>進行專案。</li>
       </ol> </li>
-     <li>將任何移轉的舊版Translation Cloud服務與前述的AEM內容階層分離。</li>
+     <li>將任何遷移的舊版翻譯Cloud Services與上述內容層次AEM分離。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>翻譯雲服務解析按以下順序進行：</p>
+   <td><p>翻譯Cloud Services解析按以下順序進行：</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/&lt;vendor&gt;</code></li>
      <li><code>/conf/global/settings/cloudconfigs/translations/&lt;vendor&gt;</code></li>
