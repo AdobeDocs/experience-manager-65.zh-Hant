@@ -1,6 +1,6 @@
 ---
-title: 'AEM Forms中的預留位置文字 '
-seo-title: 'AEM Forms中的預留位置文字 '
+title: 'AEM Forms的預留位置文字 '
+seo-title: 'AEM Forms的預留位置文字 '
 description: 預留位置文字旨在在控制項沒有值時，協助使用者輸入資料。 它可以是範例值或預期格式的簡短說明。
 seo-description: 預留位置文字旨在在控制項沒有值時，協助使用者輸入資料。 它可以是範例值或預期格式的簡短說明。
 uuid: 69f80722-93db-4932-9016-4b530e183d4e
@@ -8,16 +8,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: f9ff2cc5-3f0a-4b2f-a206-2fe0985646ea
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 0%
+source-wordcount: '253'
+ht-degree: 1%
 
 ---
 
 
-# AEM Forms {#placeholder-text-in-aem-forms}中的預留位置文字
+# AEM Forms{#placeholder-text-in-aem-forms}中的預留位置文字
 
 預留位置文字代表單字或短片語。 它旨在幫助用戶在控制項沒有值時輸入資料。 預留位置文字可以是範例值或預期格式的簡短說明。 預留位置文字會在使用者輸入值之前顯示，當使用者輸入或選取值時會移除。
 
