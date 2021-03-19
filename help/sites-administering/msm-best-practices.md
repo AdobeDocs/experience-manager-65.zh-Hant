@@ -1,18 +1,19 @@
 ---
 title: MSM最佳實務
 seo-title: MSM最佳實務
-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助您快速上手使用AEM Multi Site Manager。
-seo-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助您快速上手使用AEM Multi Site Manager。
+description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助您與多網站經理AEM聯絡。
+seo-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助您與多網站經理AEM聯絡。
 uuid: cbb598bb-ec8f-4985-97af-7c87f5891c66
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features, best-practices
 content-type: reference
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
+feature: 多站點管理員
 translation-type: tm+mt
-source-git-commit: cacf15a4e9c407d86aef47d7a6dda19e8eda7fb7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1642'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ MSM是可設定的架構，可自動化內容部署。 實作通常涉及網站�
 * 盡早建立&#x200B;**governance**&#x200B;模型，並據此培訓使用者，以確保成功。 從治理角度來看，最佳做法是&#x200B;**最小化本地內容生成者擁有的將內容分配／連接到其他本地用戶及其各自即時拷貝的權限。**&#x200B;這是因為無管理、鏈式繼承可以顯著增加MSM結構的複雜性，並損害其效能和可靠性。
 
 * 一旦您的結構、內容流、自動化和治理等計畫存在，**原型並徹底測試您的系統**，然後開始即時實作。
-* 請記住，**Adobe Consulting和領先的系統整合商**&#x200B;擁有與MSM一起進行內容自動化規劃和建置的豐富經驗，因此他們可協助您開始使用MSM專案，並在整個實作過程中都能協助您。
+* 請記住，**Adobe咨詢和領先的系統整合商**&#x200B;具有與MSM一起進行內容自動化規劃和實施的豐富經驗，因此，他們可以幫助您開始使用MSM項目，並在整個實施過程中提供幫助。
 
 >[!NOTE]
 >
@@ -85,7 +86,7 @@ MSM是可設定的架構，可自動化內容部署。 實作通常涉及網站�
 
 ## 建立網站 {#create-site}
 
-請注意，AEM有兩種主要的建立即時副本的方法：
+請注意，AEM建立即時副本的主要方法有兩種：
 
 * 當[建立即時副本時](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
@@ -120,7 +121,7 @@ MSM可協助建立多語言網站，方式有兩種：
 
          請洽詢您的翻譯服務供應商以取得更多資訊。
 
-      * 建立和翻譯語言主版的另一種方式是搭配AEM的現成可用的翻譯整合架構使用語言副本。
+      * 建立和翻譯語言主語的另一種方法是結合現成AEM的翻譯整合框架使用語言副本。
 
 * 從語言大師版推出內容時。
 
