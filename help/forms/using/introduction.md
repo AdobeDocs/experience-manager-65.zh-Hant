@@ -1,17 +1,18 @@
 ---
 title: HTML5表單簡介
 seo-title: HTML5表單簡介
-description: HTML5表格是Adobe Experience Manager 6.0(AEM 6.0)軟體中的新功能，可提供HTML5格式的XFA表格範本轉換。
-seo-description: HTML5表格是Adobe Experience Manager 6.0(AEM 6.0)軟體中的新功能，可提供HTML5格式的XFA表格範本轉換。
+description: HTML5表單是Adobe Experience Manager6.0(AEM6.0)軟體的新功能，可提供HTML5格式的XFA表單範本轉換。
+seo-description: HTML5表單是Adobe Experience Manager6.0(AEM6.0)軟體的新功能，可提供HTML5格式的XFA表單範本轉換。
 uuid: 63a2f000-c4c5-40e8-ab3f-c7c44c79ec09
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # HTML5表單簡介{#introduction-to-html-forms}
 
-HTML5表格是Adobe Experience Manager 6.0(AEM 6.0)軟體中的新功能，可提供HTML5格式的XFA表格範本轉換。 這項功能可讓您在不支援XFA PDF的行動裝置和案頭瀏覽器上轉換表單。 HTML5表格不僅支援XFA表格範本的現有功能，還新增了行動裝置的新功能，例如塗鴉簽名。
+HTML5表單是Adobe Experience Manager6.0(AEM6.0)軟體的新功能，可提供HTML5格式的XFA表單範本轉換。 這項功能可讓您在不支援XFA PDF的行動裝置和案頭瀏覽器上轉換表單。 HTML5表格不僅支援XFA表格範本的現有功能，還新增了行動裝置的新功能，例如塗鴉簽名。
 
 HTML5表格會根據標準HTML5結構產生檔案。 您可以在所有支援HTML5的現代瀏覽器中檢視HTML5表格。 它不需要為瀏覽器安裝任何額外的瀏覽器外掛程式。 有關支援的瀏覽器的詳細資訊，請參閱[支援的客戶端平台](https://adobe.com/go/learn_aemforms_supportedplatforms_63)。
 
@@ -43,8 +44,8 @@ HTML5表格會根據標準HTML5結構產生檔案。 您可以在所有支援HTM
 
 ## 管理HTML5表單{#manage-html-forms}
 
-AEM也提供統一檢視，以列出並管理使用AEM Forms UI的所有表單範本。 您可以啟用、停用、發佈和預覽表單。 如需詳細資訊，請參閱[管理表單的簡介](../../forms/using/introduction-managing-forms.md)。
+AEM也提供使用AEM FormsUI列出和管理所有表單範本的統一檢視。 您可以啟用、停用、發佈和預覽表單。 如需詳細資訊，請參閱[管理表單的簡介](../../forms/using/introduction-managing-forms.md)。
 
-### 表單自訂{#forms-customization}
+### Forms定制{#forms-customization}
 
 HTML5表格會使用標準HTML5結構轉換表單範本。 這可讓您輕鬆使用網頁技術（主要是CSS和JavaScript），自訂和擴充HTML5格式的表單。 您可以輕鬆自訂現有Widget的外觀、建立您自己的自訂Widget，或在表單中使用自訂樣式。 如需建立自訂Widget和自訂現有Widget的詳細資訊，請參閱[使用HTML5表單插入自訂Widget](../../forms/using/custom-widgets.md)。
