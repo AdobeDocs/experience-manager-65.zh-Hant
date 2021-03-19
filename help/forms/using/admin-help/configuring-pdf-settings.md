@@ -1,6 +1,6 @@
 ---
-title: 設定Adobe PDF設定
-seo-title: 設定Adobe PDF設定
+title: 配置Adobe PDF設定
+seo-title: 配置Adobe PDF設定
 description: 瞭解如何設定Adobe PDF設定。
 seo-description: 瞭解如何設定Adobe PDF設定。
 uuid: 980c9d6a-f75e-4e7d-b050-d2d07a10ef33
@@ -9,18 +9,19 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ab018b6d-0233-4439-bb75-58c5421d769a
+feature: PDF 產生器
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '7276'
+source-wordcount: '7278'
 ht-degree: 0%
 
 ---
 
 
-# 設定Adobe PDF設定{#configuring-adobe-pdf-settings}
+# 配置Adobe PDF設定{#configuring-adobe-pdf-settings}
 
-「Adobe PDF設定」頁面會顯示您可為來源指定的轉換設定。 您可以使用任何預先定義的PDF設定，或自行建立。 PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能。 Adobe PDF設定先前稱為Distiller®參數或工作選項。
+「Adobe PDF設定」頁面顯示您可為來源指定的轉換設定。 您可以使用任何預先定義的PDF設定，或自行建立。 PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能。 Adobe PDF設定先前稱為Distiller®參數或工作選項。
 
 在「Adobe PDF設定」頁面上，您可以執行下列工作：
 
@@ -31,7 +32,7 @@ ht-degree: 0%
 * 刪除自訂的PDF設定。 （請參閱[刪除PDF設定](configuring-pdf-settings.md#delete-pdf-settings)。）
 * 上傳及下載程式碼和結尾檔案。 （請參閱[上傳和下載prolog和etilog檔案](configuring-pdf-settings.md#uploading-and-downloading-prologue-and-epilogue-files)。）
 
-Adobe PDF設定僅適用於PDFMaker轉換。 這些轉換包括：
+Adobe PDF設定僅適用於PDFMaker型轉換。 這些轉換包括：
 
 * Microsoft Word檔案(DOC、DOCX、RTF、TXT)
 * Microsoft Excel檔案(XLS、XLSX)
@@ -41,7 +42,7 @@ Adobe PDF設定僅適用於PDFMaker轉換。 這些轉換包括：
 
 >[!NOTE]
 >
->當使用OpenOffice轉換上述格式時，不會套用Adobe PDF設定。
+>使用OpenOffice轉換上述格式時，不會套用Adobe PDF設定。
 
 ## 關於預先定義的PDF設定{#about-the-predefined-pdf-settings}
 
@@ -54,11 +55,11 @@ PDF產生器提供數個預先定義的PDF設定供您使用。 您無法修改�
 * 列印到更高的影像解析度
 * 使用其他設定來保留原始檔案的最大資訊量。
 
-這些PDF檔案可在Adobe Acrobat 5和Adobe Acrobat Reader® 5或更新版本中開啟。
+這些PDF檔案可在Adobe Acrobat5和Adobe AcrobatReader® 5或更新版本中開啟。
 
-**過大的頁面：** 建立適合可靠檢視和列印大於200 x 200英吋之工程繪圖的PDF檔案。您可在Adobe Acrobat Professional和Acrobat Standard 7或更新版本，以及Adobe Reader 7或更新版本中開啟建立的PDF檔案。
+**過大的頁面：** 建立適合可靠檢視和列印大於200 x 200英吋之工程繪圖的PDF檔案。建立的PDF檔案可在Adobe Acrobat專業版和Acrobat Standard（7版或更新版本）以及Adobe Reader（7版或更新版本）中開啟。
 
-**PDF/A-1B 2005 CMYK / PDF/A-1B 2005 RGB:** Checks incompliance for ISO standard for electronic documents for ellogent resent(archival), and create PDF/A files only iflies iflies iflies.這些檔案主要用於封存。 相容檔案只能包含文字、點陣影像和向量物件；它們不能包含加密和指令碼。 此外，所有字型都必須內嵌，才能開啟檔案並視其建立而檢視。 PDF/A-1b使用PDF 1.4，並視您選擇的標準將所有顏色轉換為CMYK或RGB。 使用此設定檔建立的PDF檔案可在Acrobat 5和Acrobat Reader 5及更新版本中開啟。 如需PDF/A的詳細資訊，請參閱Adobe和業界標準。
+**PDF/A-1B 2005 CMYK / PDF/A-1B 2005 RGB:** Checks incompliance for ISO standard for electronic documents for ellogent resent(archival), and create PDF/A files only iflies iflies iflies.這些檔案主要用於封存。 相容檔案只能包含文字、點陣影像和向量物件；它們不能包含加密和指令碼。 此外，所有字型都必須內嵌，才能開啟檔案並視其建立而檢視。 PDF/A-1b使用PDF 1.4，並視您選擇的標準將所有顏色轉換為CMYK或RGB。 使用此設定檔建立的PDF檔案可在Acrobat 5和Acrobat Reader5及更新版本中開啟。 如需PDF/A的詳細資訊，請參閱Adobe和業界標準。
 
 **PDF/X-1a 2001：檢查傳入的** 工作是否符合PDF/X-1a，並僅在符合時建立PDF檔案。PDF/X-1a是圖形內容交換的ISO標準。 PDF/X-1a要求嵌入所有字型、指定適當的PDF方塊，以及以CMYK或專色顯示顏色。 符合PDF/X-1a要求的PDF檔案會針對特定輸出條件，例如根據規格的Web Offset Publications進行Web Offset列印。 如需PDF/X的詳細資訊，請參閱Adobe和業界標準。
 
@@ -73,23 +74,23 @@ PDF產生器提供數個預先定義的PDF設定供您使用。 您無法修改�
 * 不會根據文字或檔案結構慣例(DSC)注釋的方向自動旋轉頁面
 * 使用其他設定來保留原始檔案的最大資訊量。
 
-如果列印工作的字型無法內嵌，則會失敗。 這些PDF檔案可在Acrobat 5和Acrobat Reader 5及更新版本中開啟。
+如果列印工作的字型無法內嵌，則會失敗。 這些PDF檔案可在Acrobat 5和Acrobat Reader5及更新版本中開啟。
 
 >[!NOTE]
 >
->在您建立PDF檔案以傳送至商業印表機或印前服務供應商之前，請先決定輸出解析度和其他設定，或以建議的設定要求。joboptions檔案。 您可能需要自訂特定提供者的Adobe PDF設定，然後提供您自己的。joboptions檔案。
+>在您建立PDF檔案以傳送至商業印表機或印前服務供應商之前，請先決定輸出解析度和其他設定，或以建議的設定要求。joboptions檔案。 您可能需要為特定提供者自訂Adobe PDF設定，然後提供您自己的。joboptions檔案。
 
-**最小檔案大小：** 建立PDF檔案，以便在網路或內部網路上顯示，或透過電子郵件系統發佈，以便在螢幕上檢視。這組選項使用壓縮、縮減取樣和相對低的影像解析度。 它會將所有顏色轉換為sRGB，除非有需要，否則不會嵌入字型。 它還優化了位元組服務的檔案。 這些PDF檔案可在Acrobat 5和Acrobat Reader 5.0及更新版本中開啟。
+**最小檔案大小：** 建立PDF檔案，以便在網路或內部網路上顯示，或透過電子郵件系統發佈，以便在螢幕上檢視。這組選項使用壓縮、縮減取樣和相對低的影像解析度。 它會將所有顏色轉換為sRGB，除非有需要，否則不會嵌入字型。 它還優化了位元組服務的檔案。 這些PDF檔案可在Acrobat 5和Acrobat Reader5.0及更新版本中開啟。
 
-**標準：** 建立PDF檔案以列印至桌上型印表機或數位複印機、以光碟發佈或以發佈校樣傳送至用戶端。這組選項使用壓縮和縮減取樣來縮減檔案大小。 此外，它還內嵌檔案中使用的所有字型子集、將所有顏色轉換為sRGB，並列印為中等解析度，以建立相當精確的原始檔案轉譯。 請注意，Microsoft Windows字型子集預設未內嵌。 這些PDF檔案可在Acrobat 5和Acrobat Reader 5.0及更新版本中開啟。
+**標準：** 建立PDF檔案以列印至桌上型印表機或數位複印機、以光碟發佈或以發佈校樣傳送至用戶端。這組選項使用壓縮和縮減取樣來縮減檔案大小。 此外，它還內嵌檔案中使用的所有字型子集、將所有顏色轉換為sRGB，並列印為中等解析度，以建立相當精確的原始檔案轉譯。 請注意，Microsoft Windows字型子集預設未內嵌。 這些PDF檔案可在Acrobat 5和Acrobat Reader5.0及更新版本中開啟。
 
 ## 新增或編輯PDF設定{#add-or-edit-pdf-settings}
 
 PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能。 定義新的PDF設定或編輯先前建立的PDF設定。 您無法修改預先定義的設定，但可以通過編輯設定並將其保存在新名稱下，基於現有設定建立設定。
 
-1. 在管理控制台中，按一下「服務> PDF產生器> Adobe PDF設定」。
+1. 在管理控制台中，按一下「服務> PDF產生器>Adobe PDF設定」。
 1. 按一下「新建」或按一下現有設定的名稱。
-1. 在「新增／編輯Adobe PDF設定」頁面中，填妥下列各節的必要資訊：
+1. 在「新建／編輯Adobe PDF設定」頁中，填寫以下各節中的所需資訊：
 
    [一般選項](configuring-pdf-settings.md#general-options)
 
@@ -113,7 +114,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 您可以從本機電腦或網路位置上傳PDF產生器伺服器上的PDF設定。
 
-1. 在管理控制台中，按一下「服務> PDF產生器> Adobe PDF設定」，然後按一下「上傳」。
+1. 在管理控制台中，按一下「服務> PDF產生器>Adobe PDF設定」，然後按一下「上傳」。
 1. 在「上傳Adobe PDF設定」頁面上，按一下「瀏覽」，找出PDF設定檔案，然後按一下「開啟」。
 1. 按一下「OK（確定）」 ，然後再次按一下「OK（確定）」。
 
@@ -121,17 +122,17 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 如果不再需要PDF設定，您可以永久刪除這些設定。
 
-1. 在管理控制台中，按一下「服務> PDF產生器> Adobe PDF設定」。
+1. 在管理控制台中，按一下「服務> PDF產生器>Adobe PDF設定」。
 1. 選中要刪除的設定旁邊的複選框。 您可以選取多個設定。
 1. 按一下「刪除」，然後在「刪除確認」頁面上，再按一下「刪除」。
 
 ## 一般選項{#general-options}
 
-使用一般選項來指定Acrobat的版本，以用於檔案相容性和其他檔案和裝置選項。 有關訪問「常規」選項的說明，請參閱[添加或編輯PDF設定](configuring-pdf-settings.md#add-or-edit-pdf-settings)。
+使用一般選項指定用於檔案相容性的Acrobat版本，以及其他檔案和設備選項。 有關訪問「常規」選項的說明，請參閱[添加或編輯PDF設定](configuring-pdf-settings.md#add-or-edit-pdf-settings)。
 
 ### 檔案選項{#file-options}
 
-**相容性：** PDF檔案的相容性層級。對於將廣泛散發的檔案，請考慮選擇Acrobat 4(PDF 1.3)或Acrobat 5(PDF 1.4)，以確保所有使用者都能檢視和列印檔案。 如果您使用Acrobat 5或更新版本的相容性來建立檔案，則檔案可能與舊版Acrobat不相容。 以下子節說明使用不同等級Acrobat相容性建立的PDF檔案之間的一些差異。
+**相容性：** PDF檔案的相容性層級。對於將廣泛散發的檔案，請考慮選擇Acrobat 4(PDF 1.3)或Acrobat 5(PDF 1.4)，以確保所有使用者都能檢視及列印檔案。 如果您使用Acrobat 5相容性或更新版本來建立檔案，則檔案可能與舊版Acrobat不相容。 下列子節說明使用不同層級的Acrobat相容性建立的PDF檔案之間的一些差異。
 
 <table>
  <tbody>
@@ -139,25 +140,25 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
    <th><p>Acrobat 4(PDF 1.3)</p> </th>
    <th><p>Acrobat 5(PDF 1.4)</p> </th>
    <th><p>Acrobat 6(PDF 1.5)</p> </th>
-   <th><p>Acrobat 7(PDF 1.6)和Acrobat 8(PDF 1.7)</p> </th>
+   <th><p>Acrobat 7(PDF 1.6)與Acrobat 8(PDF 1.7)</p> </th>
   </tr>
   <tr>
-   <td><p>可以使用Acrobat 3.0和Acrobat Reader 3.0及更新版本開啟。</p> </td>
-   <td><p>可以使用Acrobat 3.0和Acrobat Reader 3.0及更新版本開啟。 較新版本的特定功能可能遺失或無法檢視。</p> </td>
-   <td><p>大部分都可以使用Acrobat 4和Acrobat Reader 4.0及更新版本開啟。 較新版本的特定功能可能遺失或無法檢視。</p> </td>
-   <td><p>大部分都可以使用Acrobat 4和Acrobat Reader 4.0及更新版本開啟。 較新版本的特定功能可能遺失或無法檢視。</p> </td>
+   <td><p>可在Acrobat3.0和Acrobat Reader3.0及更新版本中開啟。</p> </td>
+   <td><p>可在Acrobat3.0和Acrobat Reader3.0及更新版本中開啟。 特定於較新版本的功能可能遺失或無法檢視。</p> </td>
+   <td><p>大部分都可在Acrobat 4和Acrobat Reader4.0及更新版本中開啟。 特定於較新版本的功能可能遺失或無法檢視。</p> </td>
+   <td><p>大部分都可在Acrobat 4和Acrobat Reader4.0及更新版本中開啟。 特定於較新版本的功能可能遺失或無法檢視。</p> </td>
   </tr>
   <tr>
    <td><p>無法包含使用即時透明度效果的圖稿。 轉換為PDF 1.3之前，任何透明度都必須平面化。</p> </td>
-   <td><p>支援在圖稿中使用即時透明度。 （Acrobat Distiller功能會平面化透明度。）</p> </td>
-   <td><p>支援在圖稿中使用即時透明度。 （Acrobat Distiller功能會平面化透明度。）</p> </td>
-   <td><p>支援在圖稿中使用即時透明度。 （Acrobat Distiller功能會平面化透明度。）</p> </td>
+   <td><p>支援在圖稿中使用即時透明度。 (Acrobat·Distiller的特點是透明度扁平化。)</p> </td>
+   <td><p>支援在圖稿中使用即時透明度。 (Acrobat·Distiller的特點是透明度扁平化。)</p> </td>
+   <td><p>支援在圖稿中使用即時透明度。 (Acrobat·Distiller的特點是透明度扁平化。)</p> </td>
   </tr>
   <tr>
    <td><p>不支援圖層。</p> </td>
    <td><p>不支援圖層。</p> </td>
-   <td><p>從支援分層PDF檔案產生的應用程式（例如Adobe Illustrator® CS或Adobe InDesign® CS和更新版本）建立PDF檔案時，可保留圖層。</p> </td>
-   <td><p>從支援分層PDF檔案產生的應用程式（例如Illustrator CS或InDesign CS和更新版本）建立PDF檔案時，可保留圖層。</p> </td>
+   <td><p>從支援分層PDF檔案產生的應用程式(例如Adobe Illustrator® CS或Adobe InDesign® CS及更新版本)建立PDF檔案時，可保留圖層。</p> </td>
+   <td><p>從支援分層PDF檔案產生的應用程式(例如IllustratorCS或InDesignCS及更新版本)建立PDF檔案時，可保留圖層。</p> </td>
   </tr>
   <tr>
    <td><p>支援具有8種色彩的DeviceN色域。</p> </td>
@@ -166,7 +167,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
    <td><p>支援最多31種色彩的DeviceN色域。</p> </td>
   </tr>
   <tr>
-   <td><p>可內嵌多位元組字型。 （Distiller在嵌入時轉換字型。）</p> </td>
+   <td><p>可內嵌多位元組字型。 (Distiller會在內嵌時轉換字型)。</p> </td>
    <td><p>可內嵌多位元組字型。</p> </td>
    <td><p>可內嵌多位元組字型。</p> </td>
    <td><p>可內嵌多位元組字型。</p> </td>
@@ -182,9 +183,9 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 **物件層級壓縮：** 將小物件（每個物件本身不可壓縮）整合為串流，然後有效率地壓縮。
 
-**關閉：** 不壓縮PDF檔案中的任何結構資訊。如果您希望使用者使用Acrobat 5和更新版本檢視、導覽書籤和其他結構資訊，並與之互動，請選取此選項。
+**關閉：** 不壓縮PDF檔案中的任何結構資訊。如果您希望使用者使用Acrobat 5和更新版本來檢視、導覽書籤和其他結構資訊，並與之互動，請選取此選項。
 
-**僅限標籤：** 壓縮PDF檔案中的結構資訊。使用此選項可產生PDF檔案，並可使用Acrobat 5開啟和列印。 使用者無法在Acrobat 5或Acrobat Reader 5.0中檢視任何協助工具、結構或標籤PDF資訊，但可在Acrobat 6和Adobe Reader 6.0中檢視這些資訊。
+**僅限標籤：** 壓縮PDF檔案中的結構資訊。使用此選項可產生PDF檔案，並可使用Acrobat 5開啟和列印。 使用者無法在Acrobat 5或Acrobat Reader5.0中檢視任何協助工具、結構或標籤的PDF資訊，但可在Acrobat 6和Adobe Reader6.0中檢視這些資訊。
 
 **自動旋轉頁面：** 根據文字或DSC注釋的方向設定頁面的自動旋轉。例如，某些頁面（例如包含表格的頁面）可能需要使用者將表格橫放以閱讀。 選取「個別」，以根據該頁面上文字的方向旋轉每個頁面。 選取「依檔案匯整」，以根據大部分文字的方向旋轉檔案中的所有頁面。
 
@@ -206,7 +207,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 ### 預設頁面大小{#default-page-size}
 
-「預設頁面大小」選項會指定在原始檔案中未指定頁面大小時要使用的頁面大小。 通常，Adobe PostScript檔案會包含此資訊，但封裝的PostScript(EPS)檔案除外，這些檔案會提供邊界方框大小，但不提供頁面大小。 允許的最大頁面大小為15,000,000英吋（31,800,000公分）。 這些選項可設定預設頁面大小：
+「預設頁面大小」選項會指定在原始檔案中未指定頁面大小時要使用的頁面大小。 通常，Adobe PostScript檔案包含此資訊，但封裝的PostScript(EPS)檔案除外，這些檔案提供邊界框大小，但不提供頁面大小。 允許的最大頁面大小為15,000,000英吋（31,800,000公分）。 這些選項可設定預設頁面大小：
 
 **寬度：** 頁面寬度
 
@@ -236,7 +237,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 >
 >重新取樣單色影像可能會產生非預期的檢視結果，例如無影像顯示。 如果發生此問題，請關閉重新取樣並重新轉換檔案。 這個問題最有可能發生在亞採樣中，而最不可能發生在雙立方體縮減採樣中。
 
-此表格顯示印表機的類型及其解析度（以dpi測量）、預設螢幕尺規(以每英吋行數(lpi)測量)，以及以每英吋像素數(ppi)測量的影像重新取樣解析度。 例如，要打印到600 dpi雷射打印機，請輸入170以獲得解析度，以在重新取樣影像。
+此表格顯示印表機的類型及其解析度（以dpi測量）、預設螢幕尺規(以每英吋行數(lpi)測量)，以及以每英吋像素數(ppi)測量的影像重新取樣解析度。 例如，要打印到600 dpi雷射打印機，請輸入170以獲得解析度，以便在上重新取樣影像。
 
 <table>
  <tbody>
@@ -303,7 +304,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 ### 指定要嵌入的字型{#specify-which-fonts-to-embed}
 
-1. 在管理控制台中，按一下「服務> PDF產生器> Adobe PDF設定」。
+1. 在管理控制台中，按一下「服務> PDF產生器>Adobe PDF設定」。
 1. 按一下「新增」或按一下設定名稱。
 1. 按一下「字型」並取消選取「內嵌所有字型」。
 1. 從「字型來源」清單中，選取字型來源，然後按一下「開始」，以重新整理左側方塊中的字型清單。
@@ -317,15 +318,15 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 >[!NOTE]
 >
->從Windows系統字型快取中挑選字型，而更新快取時需要重新啟動系統。 指定Customer字型目錄後，請確定您重新啟動安裝AEM表單的系統。
+>從Windows系統字型快取中挑選字型，而更新快取時需要重新啟動系統。 指定Customer字型目錄後，請確定您重新啟動安裝了表單AEM的系統。
 
 ## 顏色選項{#color-options}
 
 「顏色」選項可設定PDF產生器的所有色彩管理資訊。 如需存取「顏色」選項的指示，請參閱[新增或編輯PDF設定](configuring-pdf-settings.md#add-or-edit-pdf-settings)。
 
-### Adobe顏色設定{#adobe-color-settings}
+### Adobe Color設定{#adobe-color-settings}
 
-**設定檔：** 此清單包含色彩設定清單，這些設定也用於主要圖形應用程式，例如Adobe Photoshop和Adobe Illustrator。您選取的顏色設定會決定此頁面上的其他Adobe顏色設定。 例如，如果您選取「無」以外的設定，除「裝置相依資料」之外的所有選項都會預先定義並暗顯。 只有在「設定檔案」中選擇「無」時，才能編輯「顏色管理策略」和「工作空間」設定。
+**設定檔：** 此清單包含色彩設定清單，這些設定也用於主要圖形應用程式，例如Adobe Photoshop和Adobe Illustrator。您選擇的顏色設定決定了此頁上的其他Adobe顏色設定。 例如，如果您選取「無」以外的設定，除「裝置相依資料」之外的所有選項都會預先定義並暗顯。 只有在「設定檔案」中選擇「無」時，才能編輯「顏色管理策略」和「工作空間」設定。
 
 ### 色彩管理政策{#color-management-policies}
 
@@ -333,11 +334,11 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 **保持顏色不變：保** 持與裝置相關的顏色不變，並保留與裝置無關的顏色作為PDF中最接近的等效顏色。此選項對於已校準所有裝置的列印商店非常有用，會使用該資訊來指定檔案中的色彩，並僅輸出至這些裝置。
 
-**標籤色彩管理的一切：在擷取檔案和校準影像中的色彩時嵌入國際色彩協會(International Color Consortium)的描述檔，如此，如果您選取Acrobat 4(PDF 1.3)或更新版本的相容性，所產生的PDF檔案中的色彩就不受裝置影響。** 不過，檔案（RGB、灰階和CMYK）中與裝置相關的色域會轉換為與裝置無關的色域（CalRGB、CalGray和LAB）。
+**標籤色彩管理的一切：在擷取檔案和校準影像中的色彩時嵌入國際色彩協會(International Color Consortium)描述檔，如此，如果您選取Acrobat 4(PDF 1.3)或更新版本的相容性，所產生的PDF檔案中的色彩就不受裝置影響。** 不過，檔案（RGB、灰階和CMYK）中與裝置相關的色域會轉換為與裝置無關的色域（CalRGB、CalGray和LAB）。
 
-**僅標籤影像以進行色彩管理：如果您選取** Acrobat 4(PDF 1.3)相容性，在擷取檔案時，只將ICC描述檔內嵌在影像中，而非文字或圖形中。此選項可防止黑色文字發生任何顏色偏移。 不過，影像中與裝置相關的色域（RGB、灰階和CMYK）會轉換為與裝置無關的色域（CalRGB、CalGray和LAB）。 文字和圖形不會轉換。
+**僅標籤影像以進行色彩管理：如果您選取Acrobat 4(PDF 1.3)相容性，在擷取檔案時，只將** ICC描述檔內嵌在影像中，而非文字或圖形中。此選項可防止黑色文字發生任何顏色偏移。 不過，影像中與裝置相關的色域（RGB、灰階和CMYK）會轉換為與裝置無關的色域（CalRGB、CalGray和LAB）。 文字和圖形不會轉換。
 
-**將所有顏色轉換為sRGB或將所有顏色轉換為CMYK:** 校正檔案中的顏色，使顏色與裝置無關，類似於「標籤色彩管理的一切」。如果您選取Acrobat 4(PDF 1.3)或更新版本的相容性並轉換為sRGB,CMYK和RGB影像會轉換為sRGB。
+**將所有顏色轉換為sRGB或將所有顏色轉換為CMYK:** 校正檔案中的顏色，使顏色與裝置無關，類似於「標籤色彩管理的一切」。如果您選取了Acrobat 4(PDF 1.3)或更新版本的相容性並轉換為sRGB,CMYK和RGB影像會轉換為sRGB。
 
 無論您選取的相容性選項為何，灰階影像都保持不變。 這通常會減小PDF檔案的大小並提高PDF檔案的顯示速度，因為描述RGB影像所需的資訊比描述CMYK影像所需的資訊少。 由於RGB是螢幕上使用的原生色域，因此在顯示期間不需要進行色彩轉換，這有助於快速線上檢視。 如果PDF檔案是供線上使用或與低解析度印表機搭配使用，建議使用此選項。
 
@@ -371,11 +372,11 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 >
 >對所有三個工作空間選擇「無」與選擇「保持顏色不變」具有相同的效果。
 
-**保留已校正的CMYK色域的CMYK值：選取時，與裝置無關的** CMYK值會視為與裝置相關的(DeviceCMYK)值，而與裝置無關的色域會被捨棄，而PDF/X-1a檔案會使用「將所有顏色轉換為CMYK」值。如果取消選取，如果色彩管理原則設定為「將所有色彩轉換為CMYK」，則裝置無關的色域會轉換為CMYK。
+**為已校正的CMYK色域保留CMYK值：選取時，與裝置無關的** CMYK值會視為與裝置相關的(DeviceCMYK)值，而與裝置無關的色域會被捨棄，而PDF/X-1a檔案會使用「將所有顏色轉換為CMYK」值。如果取消選取，如果色彩管理原則設定為「將所有色彩轉換為CMYK」，則裝置無關的色域會轉換為CMYK。
 
 ### 設備相關資料{#device-dependent-data}
 
-如果您使用使用高階檔案和圖形應用程式（例如Adobe Illustrator和Adobe InDesign）建立的檔案，這些選項就適用。 如需詳細資訊，請參閱應用程式隨附的檔案。
+如果您使用使用高階檔案和圖形應用程式(例如Adobe Illustrator和Adobe InDesign)建立的檔案，這些選項就適用。 如需詳細資訊，請參閱應用程式隨附的檔案。
 
 傳遞函式用於藝術效果並調整特定輸出裝置的規格。 例如，用於在特定的製版機上輸出的檔案可以包含補償該打印機固有的點增益的傳遞函式。
 
@@ -391,15 +392,15 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 **保留半色調資訊：** 在檔案中保留任何半色調資訊。半色調資訊由控制油墨半色調裝置在紙張上特定位置沈積量的點組成。 變更點大小和密度會產生灰色或連續顏色變化的錯覺。 對於CMYK影像，會使用4個半色調網屏，每個網屏用於打印過程中使用的油墨。
 
-在傳統印刷製作中，半色調是通過在一幅膠片和影像之間放置一個半色調網屏，然後曝光該膠片來製作的。 電子等值（例如在Adobe Photoshop中）可讓使用者在製作影片或紙張輸出之前，先指定半色調網屏屬性。 半色調資訊用於特定輸出設備。
+在傳統印刷製作中，半色調是通過在一幅膠片和影像之間放置一個半色調網屏，然後曝光該膠片來製作的。 電子等值(例如在Adobe Photoshop)可讓使用者在產生影片或紙張輸出之前指定半色調網屏屬性。 半色調資訊用於特定輸出設備。
 
 ## 進階選項 {#advanced-options}
 
 「進階」選項指定要保留在PDF檔案中的檔案結構慣例(DSC)注釋，以及如何設定影響PostScript轉換的其他選項。 在PostScript檔案中，DSC注釋包含檔案的相關資訊（例如原始應用程式、建立日期和頁面方向）。 它們也提供檔案中頁面說明的結構（例如prolog區段的開始和結束陳述式）。 當您的檔案要列印或印刷時，DSC注釋很有用。 如需有關存取「進階」選項的指示，請參閱[新增或編輯PDF設定](configuring-pdf-settings.md#add-or-edit-pdf-settings)。
 
-使用進階選項時，瞭解PostScript語言及其如何轉譯為PDF將會很有幫助。 （請參閱[Adobe PostScript 3](https://www.adobe.com/products/postscript/main.html)）。
+使用進階選項時，瞭解PostScript語言及其如何轉譯為PDF將會很有幫助。 (見[Adobe PostScript3](https://www.adobe.com/products/postscript/main.html)。)
 
-**允許PostScript檔案覆寫Adobe PDF設定：使** 用儲存在PostScript檔案中的設定，而非目前的Adobe PDF設定檔。在處理PostScript檔案之前，您可以先將參數置入檔案中，以控制下列方面：
+**允許PostScript檔案覆寫Adobe PDF設定：** 使用儲存在PostScript檔案中的設定，而非目前的Adobe PDF設定檔案。在處理PostScript檔案之前，您可以先將參數置入檔案中，以控制下列方面：
 
 * 文字和圖形的壓縮
 * 縮減取樣和編碼取樣的影像
@@ -407,7 +408,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 **允許PostScript XObjects:** PostScript XObjects會儲存出現在相同檔案許多頁面上的資訊，例如背景影像或頁首和頁尾資訊。使用PostScript XObjects可以加快列印速度，但需要更多印表機記憶體。 若要避免建立PostScript XObject，如果您建立的PDF檔案與Acrobat 5(PDF 1.4)或更新版本相容，請取消選取此選項。
 
-**將漸層轉換為平滑的陰影：將** Acrobat 4和更新版本的混合轉換為平滑的陰影，讓PDF檔案變小，並可能改善最終輸出的品質。PDF產生器可轉換來自Adobe Illustrator、Adobe InDesign、Adobe FreeHand MX、CorelDraw、Quark Xpress和Microsoft PowerPoint的漸層。
+**將漸層轉換為平滑的陰影：將** 混合轉換為Acrobat 4及更新版本的平滑陰影，讓PDF檔案變小，並可能改善最終輸出的品質。PDF產生器可轉換來自Adobe Illustrator、Adobe InDesign、Adobe FreeHandMX、CorelDraw、Quark Xpress和Microsoft PowerPoint的漸層。
 
 **將平滑線轉換為曲線：** 減少在CAD繪圖中建立曲線時使用的控制點數量，讓PDF變小並加快螢幕上的轉換速度。
 
@@ -417,7 +418,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 **疊印預設值為非零疊印：防** 止具有零CMYK值的疊印物件去除其下方的CMYK物件。在PDF檔案中插入OPM 1圖形狀態參數，即可完成此效果，不論Setoverprint運算子存在何處。
 
-**將Adobe PDF設定儲存在PDF檔案中：** 內嵌用於建立PDF檔案的設定檔案。您可以在Acrobat的「檔案附件」對話方塊中開啟並檢視設定檔案（副檔名為。jobotions）。 Adobe PDF設定檔會變成PDF檔案內嵌的EmbeddedFiles樹狀結構中的項目。
+**將Adobe PDF設定儲存在PDF檔** 案中：內嵌用來建立PDF檔案的設定檔案。您可以在Acrobat的「檔案附件」對話框中開啟並查看設定檔案（副檔名為。joboptions）。 Adobe PDF設定檔案將成為PDF檔案內嵌的EmbeddedFiles樹中的一個項目。
 
 **如果可能，將原始JPEG影像儲存為PDF:** 處理任何壓縮的JPEG影像（已使用DCT編碼壓縮的影像），而不需重新壓縮。如果選取此選項，PDF產生器會解壓縮JPEG影像，以確保它們不會損毀。 但是，它不會重新壓縮有效的影像，因此會處理原始影像。 選取此選項後，效能會改善，因為只會進行解壓縮（而非重新壓縮），並且影像資料和中繼資料會保留。
 
@@ -433,7 +434,7 @@ PDF設定可精確決定檔案的轉換方式及其產生的PDF結構與功能�
 
 **保留OPI注釋：保** 留支援Open Prepress Interface(OPI)1.3和2.0版的伺服器上的高解析度影像替換僅用於放置(FPO)影像或注釋所需的資訊。
 
-**保留DSC中的文檔資訊：** 保留諸如標題、建立日期和時間等資訊。當您在Acrobat中開啟PDF檔案時，這項資訊會顯示在「檔案屬性說明」面板中。
+**保留DSC中的文檔資訊：** 保留諸如標題、建立日期和時間等資訊。當您在Acrobat開啟PDF檔案時，這項資訊會顯示在「檔案屬性說明」面板中。
 
 **調整EPS檔案的頁面大小和圖稿居中：將** EPS影像置中，並調整頁面大小以貼近影像。此選項僅適用於由單個EPS檔案組成的作業。
 
@@ -451,13 +452,13 @@ PDF/A相容檔案主要用於封存。 因為長期保存是目標，所以檔�
 
 如需有關存取「標準」報告與規範選項的指示，請參閱[新增或編輯PDF設定](configuring-pdf-settings.md#add-or-edit-pdf-settings)。
 
-**符合標準：** 選取標準以產生報告，指出檔案是否符合要求，以及（如果不符合）遇到哪些問題。當「一般設定」頁面上的「相容性」設為Acrobat 4.0時，會啟用下列選項。 當「相容性」設定為Acrobat 5.0時，只有Acrobat 5.0選項可供選擇。 當「相容性」設為替代選項時，下列選項會呈暗灰色：
+**符合標準：** 選取標準以產生報告，指出檔案是否符合要求，以及（如果不符合）遇到哪些問題。當「一般設定」頁面上的「相容性」設為Acrobat 4.0時，會啟用下列選項。 當「相容性」設定為「Acrobat 5.0」時，只有「Acrobat 5.0」選項可供選擇。 當「相容性」設為替代選項時，下列選項會呈暗灰色：
 
-* PDF/X-1a（Acrobat 4.0相容）
-* PDF/X-3（Acrobat 4.0相容）
-* PDF/X-1a（Acrobat 5.0相容）
-* PDF/X-3（Acrobat 5.0相容）
-* PDF/A-1b（Acrobat 5.0相容）
+* PDF/X-1a(與Acrobat 4.0相容)
+* PDF/X-3(與Acrobat 4.0相容)
+* PDF/X-1a(與Acrobat 5.0相容)
+* PDF/X-3(與Acrobat 5.0相容)
+* PDF/A-1b(與Acrobat 5.0相容)
 
 ### PDF/X標準的選項{#options-for-pdf-x-standards}
 
@@ -493,7 +494,7 @@ PDF/A相容檔案主要用於封存。 因為長期保存是目標，所以檔�
 
 ### PDF/A標準{#options-for-pdf-a-standard}的選項
 
-當「相容性」（在「一般」區域）設為Acrobat 4(PDF 1.3)或Acrobat 5(PDF 1.4)時，就會啟用這些選項。
+當「相容性」（在「一般」區域）設為「Acrobat 4」(PDF 1.3)或「Acrobat 5」(PDF 1.4)時，就會啟用這些選項。
 
 **不相容時：指** 定如果PostScript檔案不符合PDF/A要求，是否要建立PDF檔案。
 
@@ -519,13 +520,13 @@ PDF/A相容檔案主要用於封存。 因為長期保存是目標，所以檔�
 
 **頁面配置：** 判斷檔案是以單頁、對頁、連續頁面或連續對頁模式檢視。
 
-**放大比例：** 設定開啟時用來顯示檔案的縮放等級。預設值會在Acrobat或Adobe Reader偏好設定中使用使用者設定的放大率值。
+**放大比例：** 設定開啟時用來顯示檔案的縮放等級。預設值使用Acrobat或Adobe Reader首選項中用戶配置的放大值。
 
 **開啟至頁碼：** 設定檔案在開啟的頁面，通常是第1頁。
 
 >[!NOTE]
 >
->設定放大率和頁面版面選項的預設值，會使用Acrobat或Adobe Reader中「頁面顯示」偏好設定中的個別使用者設定。
+>設定放大率和頁面版面選項的預設值，會使用Acrobat或Adobe Reader「頁面顯示」偏好設定中的個別使用者設定。
 
 ### 窗口選項{#window-options}
 
@@ -551,7 +552,7 @@ PDF/A相容檔案主要用於封存。 因為長期保存是目標，所以檔�
 
 >[!NOTE]
 >
->如果您隱藏選單列和工具列，除非使用者知道在Acrobat中開啟檔案時的鍵盤快速鍵，否則無法套用指令和選取工具。
+>如果您隱藏功能表列和工具列，除非使用者知道在Acrobat開啟檔案時的鍵盤快速鍵，否則無法套用命令和選取工具。
 
 ## 上傳和下載prolog和etilog檔案{#uploading-and-downloading-prologue-and-epilogue-files}
 
@@ -561,19 +562,19 @@ Prolog檔案可用來新增自訂PostScript程式碼，這些程式碼會在每�
 
 ### 下載prolog或exilog檔案{#download-a-prologue-or-epilogue-file}
 
-1. 在管理控制台中，按一下「服務> PDF產生器> Adobe PDF設定」。
+1. 在管理控制台中，按一下「服務> PDF產生器>Adobe PDF設定」。
 1. 按一下「新增」或按一下設定名稱。
 1. 按一下「進階」，然後在「使用Prolog.ps和Epliog.ps」選項旁，按一下「下載」。
 1. 在「下載Prolog和Etilog Files」頁面上，按一下「Prolog.ps」或「Etilog.ps」，然後按一下「儲存」。
 
 ### 上傳prolog或外文檔{#upload-a-prologue-or-epilogue-file}
 
-1. 在管理控制台中，按一下「服務> PDF產生器> Adobe PDF設定」。
+1. 在管理控制台中，按一下「服務> PDF產生器>Adobe PDF設定」。
 1. 按一下「新增」或按一下設定名稱。
 1. 按一下「進階」，然後在「使用Prolog.ps和Epliog.ps」選項旁，按一下「上傳」。
 1. 在「上傳程式碼和結尾檔案」頁面上，按一下「瀏覽」以選取程式碼或結尾檔案。
 1. 找到檔案，然後按一下「開啟」。
-1. 若要使用檔案，請確定已在「新增／編輯Adobe PDF設定」頁面的「進階」區域中選取「使用Prolog.ps和Epliog.ps」。
+1. 若要使用檔案，請確定已在「新增／編輯Adobe PDF設定」頁面的「進階」區域中選取「使用Prolog.ps和Epilog.ps」。
 1. 按一下「儲存」
 
 >[!NOTE]
