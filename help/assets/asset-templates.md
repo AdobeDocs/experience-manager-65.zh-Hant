@@ -2,10 +2,11 @@
 title: 資產範本
 description: 瞭解 [!DNL Adobe Experience Manager Assets] 中的資產範本，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
@@ -13,13 +14,13 @@ ht-degree: 0%
 
 # 資產範本{#asset-templates}
 
-資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
+資產範本是一類特殊的資產，可協助您快速將視覺化豐富的內容重新運用於數位和印刷媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定訊息區段可包含專屬內容，例如品牌標誌和禁止編輯的版權資訊。 可編輯的區段可在欄位中包含視覺和文字內容，可編輯這些內容以自訂訊息。
 
 在確保全球標牌安全的同時，靈活地進行有限的編輯，使資產模板成為快速調整內容和分發內容的理想構件，以便用於各種功能的內容製品。 重新調整內容用途有助於降低管理印刷和數位通道的成本，並跨這些通道提供全方位且一致的體驗。
 
 身為行銷人員，您可以在[!DNL Experience Manager Assets]中儲存和管理範本，並使用單一基本範本輕鬆建立多種個人化的列印體驗。 您可以建立各種類型的行銷文宣，包括簡介手冊、傳單、明信片、名片等，以便向客戶清楚傳達行銷訊息。 您也可以從現有或新的列印輸出組合多頁列印輸出。 最重要的是，您可以輕鬆同時提供數位和印刷體驗，為使用者提供一致、整合的體驗。
 
-雖然資產範本大多為[!DNL Adobe InDesign]檔案，但熟練掌握[!DNL Adobe InDesign]並不妨礙建立亮眼的工件。 您不需要將[!DNL Adobe InDesign]範本的欄位與建立目錄時所需的產品欄位對應。 您可以直接在Web介面上，在WYSIWYG模式下編輯範本。 不過，若要處理您的編輯變更，您必須先設定[!DNL Adobe InDesign]以與[!DNL Experience Manager Assets]整合。[!DNL Adobe InDesign Server]
+雖然資產範本大多為[!DNL Adobe InDesign]檔案，但熟練掌握[!DNL Adobe InDesign]並不妨礙建立亮眼的工件。 您不需要將[!DNL Adobe InDesign]範本的欄位與建立目錄時所需的產品欄位對應。 您可以直接在Web介面上，在WYSIWYG模式下編輯範本。 不過，若要處理您的編輯變更，您必須先設定[!DNL Experience Manager Assets]以與[!DNL Adobe InDesign Server]整合。[!DNL Adobe InDesign]
 
 能夠從Web介面編輯[!DNL Adobe InDesign]範本，有助於促進創意人員與行銷人員之間更緊密的協作。 內容速度的提高縮短了行銷資料的上市時間。
 
@@ -37,7 +38,7 @@ ht-degree: 0%
 
 ## 建立宣傳品{#creating-a-collateral}
 
-假設您想要建立數位可列印的宣傳品，例如簡介手冊、傳單和廣告，以便在即將到來的宣傳活動中展示，並與全球的經銷商分享。 根據範本建立宣傳品有助於跨通道提供統一的客戶體驗。 設計人員可使用創意解決方案（例如[!DNL InDesign]）建立促銷活動範本（單頁或多頁），並為您上傳範本至[!DNL Experience Manager Assets]。 在建立宣傳品之前，請事先將一個或多個INDD模板上載到[!DNL Experience Manager]並在&lt;a0/>中提供。
+假設您想要建立數位可列印的宣傳品，例如簡介手冊、傳單和廣告，以便在即將到來的宣傳活動中展示，並與全球的經銷商分享。 根據範本建立宣傳品有助於跨通道提供統一的客戶體驗。 設計人員可使用創意解決方案（例如[!DNL InDesign]）建立促銷活動範本（單頁或多頁），並為您上傳範本至[!DNL Experience Manager Assets]。 在建立宣傳品之前，請事先將一個或多個INDD模板上載到[!DNL Experience Manager]並在中提供。
 
 1. 在[!DNL Experience Manager]介面中，按一下[!UICONTROL Assets]。
 
@@ -49,7 +50,7 @@ ht-degree: 0%
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 預先將一或多個INDD範本上傳至[!DNL Experience Manager]，並在&lt;a0/>中提供。 選擇手冊的範本，然後按一下「下一步」**[!UICONTROL 。]**
+1. 預先將一或多個INDD範本上傳至[!DNL Experience Manager]，並在中提供。 選擇手冊的範本，然後按一下「下一步」**[!UICONTROL 。]**
 1. 指定手冊的名稱和選用說明。
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
@@ -88,11 +89,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >請確定您的[!DNL Experience Manager]部署已與[!DNL InDesign Server]整合，以啟用[!DNL Experience Manager Assets]從[!DNL InDesign]範本擷取資料，並讓它可供編輯。 如需詳細資訊，請參閱[將Experience Manager Assets與InDesign Server](/help/assets/indesign.md)整合。
+   >請確定您的[!DNL Experience Manager]部署已與[!DNL InDesign Server]整合，以啟用[!DNL Experience Manager Assets]從[!DNL InDesign]範本擷取資料，並讓它可供編輯。 如需詳細資訊，請參閱[將Experience Manager資產與InDesign Server](/help/assets/indesign.md)整合。
 
 1. 若要修改可編輯欄位中的文字，請按一下可編輯欄位清單中的文字欄位，然後編輯欄位中的文字。
 
-   ![chlimage_1-111](assets/chlimage_1-316.png)
+   ![chlimage_1-191](assets/chlimage_1-316.png)
 
    您可以編輯文字屬性，例如字型樣式、顏色和大小，使用提供的選項。
 
@@ -127,9 +128,9 @@ ht-degree: 0%
    >* 將[!DNL Experience Manager]裝載到本地檔案系統，然後使用[!DNL Experience Manager]中的現有資產映射缺少的表徵圖。
 
    >
-   >如需有關使用[!DNL InDesign]檔案的詳細資訊，請參閱[在Experience Manager中使用InDesign檔案的最佳實務。](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)
+   >有關使用[!DNL InDesign]文檔的詳細資訊，請參閱[Experience Manager中使用InDesign文檔的最佳做法。](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)
 
-1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下「繼續&#x200B;**[!UICONTROL a1/>」。]**
+1. 若要為手冊產生PDF轉譯，請在對話方塊中選取「Acrobat」選項，然後按一下「繼續&#x200B;****」。
 1. 宣傳品是在您開始使用的資料夾中建立的。 要查看轉譯，請開啟宣傳品並從GlobalNav清單中選擇&#x200B;**[!UICONTROL 轉譯]**。
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
@@ -161,7 +162,7 @@ ht-degree: 0%
    您可以套用各種篩選條件來搜尋所需的範本。 例如，您可以根據檔案類型或標籤來搜尋範本。
 
 1. 從工具列按一下「下一步」。****
-1. 在&#x200B;**[!UICONTROL 預覽與重新排序]**&#x200B;畫面中，視需要重新排列範本，並預覽要合併的範本選擇。 然後，從工具列按一下「下一步」。]****[!UICONTROL 
+1. 在&#x200B;**[!UICONTROL 預覽與重新排序]**&#x200B;畫面中，視需要重新排列範本，並預覽要合併的範本選擇。 然後，從工具列按一下「下一步」。****
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
