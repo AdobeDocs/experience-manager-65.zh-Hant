@@ -1,17 +1,18 @@
 ---
 title: 翻譯增強功能
 seo-title: 翻譯增強功能
-description: AEM中的轉譯增強功能。
-seo-description: AEM中的轉譯增強功能。
+description: 中的翻譯增強AEM功能。
+seo-description: 中的翻譯增強AEM功能。
 uuid: 0563603f-327b-48f1-ac14-6777c06734b9
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # 翻譯增強功能{#translation-enhancements}
 
-本頁提供AEM轉譯管理功能的增量增強與調整。
+本頁介紹翻譯管理功能的增量AEM增強和改進。
 
 ## 翻譯項目自動化{#translation-project-automation}
 
@@ -75,7 +76,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >AEM會將選取的字串傳回翻譯管理系統。
+   >將AEM選定的字串發回翻譯管理系統。
 
 ## 多級語言副本{#language-copies-on-multiple-levels}
 
@@ -96,7 +97,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->語言根目錄可以有任何頁面名稱，而不只是語言的ISO程式碼。 AEM一律會先檢查路徑和名稱，但如果頁面名稱未識別語言，AEM會檢查頁面的cq:language屬性以取得語言識別。
+>語言根目錄可以有任何頁面名稱，而不只是語言的ISO程式碼。 AEM一律會先檢查路徑和名稱，但如果頁面名稱未識別語言，AEM則會檢查頁面的cq:language屬性以識別語言。
 
 ## 翻譯狀態報告{#translation-status-reporting}
 
