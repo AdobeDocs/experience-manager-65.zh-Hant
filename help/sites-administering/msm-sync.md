@@ -10,10 +10,11 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
+feature: 多站點管理員
 translation-type: tm+mt
-source-git-commit: 31f546400f4c3335953d05b1df9394445b5feb56
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2710'
 ht-degree: 3%
 
 ---
@@ -52,7 +53,7 @@ ht-degree: 3%
 
 ### 安裝的轉出配置{#installed-rollout-configurations}
 
-下表列出隨AEM安裝的轉出設定。 該表包括每個轉出配置的觸發器和同步操作。 如果安裝的轉出配置操作不符合您的要求，您可以[建立新的轉出配置](#creating-a-rollout-configuration)。
+下表列出與一起安裝的轉出配置AEM。 該表包括每個轉出配置的觸發器和同步操作。 如果安裝的轉出配置操作不符合您的要求，您可以[建立新的轉出配置](#creating-a-rollout-configuration)。
 
 <table>
  <tbody>
@@ -127,7 +128,7 @@ ht-degree: 3%
 
 ### 安裝的同步操作{#installed-synchronization-actions}
 
-下表列出與AEM一起安裝的同步動作。 如果安裝的操作不符合您的要求，則可以[建立新的同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)。
+下表列出了隨安裝的同步操作AEM。 如果安裝的操作不符合您的要求，則可以[建立新的同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)。
 
 <table>
  <tbody>
@@ -156,7 +157,7 @@ ht-degree: 3%
    <td><p>編輯即時副本的屬性。 editMap屬性可決定要編輯的屬性及其值。 editMap屬性的值必須使用下列格式：</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br />...,<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p><code>current_value</code>和<code>new_value</code>項目是規則運算式。<br /> </p> <p>例如，請考慮以下editMap值：</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage,<br /> cq:template#/contentpage#/mobilecontentpage</p> <p>此值編輯即時副本節點的屬性，如下所示：</p>
     <ul>
      <li>設為<code>contentpage</code>或<code>homepage</code>的<code>sling:resourceType</code>屬性設為 <code>mobilecontentpage.</code></li>
-     <li>設為<code>contentpage</code>的<code>cq:template</code>屬性會設為 <code>mobilecontentpage.</code></li>
+     <li>設為<code>contentpage</code>的<code>cq:template</code>屬性設為 <code>mobilecontentpage.</code></li>
     </ul> </td>
    <td><p> </p> <p>editMap:（字串）識別屬性、目前值和新值。 有關資訊，請參閱說明。<br /> </p> </td>
   </tr>
@@ -245,7 +246,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>catalogRovoltHooks</td>
-   <td>執行特定目錄產生轉出勾點。 呼叫CatalogGenerator的executePageRovoltHooks和executeProductRovoltHooks方法。<br /> 請參閱AEM Javadocs中的com.adobe.cq.commerce.pim.api.CatalogGenerator。</td>
+   <td>執行特定目錄產生轉出勾點。 呼叫CatalogGenerator的executePageRovoltHooks和executeProductRovoltHooks方法。<br /> 請參閱Javadocs中的com.adobe.cq.commerce.pim.api.CatalogGeneratorAEM。</td>
    <td> </td>
   </tr>
   <tr>
@@ -267,9 +268,9 @@ ht-degree: 3%
 
 ### 從同步{#excluding-properties-and-node-types-from-synchronization}中排除屬性和節點類型
 
-您可以配置支援相應同步操作的多個OSGi服務，以便它們不影響特定節點類型和屬性。 例如，許多與AEM內部功能相關的屬性和子節點不應包含在即時副本中。 僅複製與頁面使用者相關的內容。
+您可以配置支援相應同步操作的多個OSGi服務，以便它們不影響特定節點類型和屬性。 例如，與內部功能相關的許多屬性和子節點AEM不應包含在即時副本中。 僅複製與頁面使用者相關的內容。
 
-使用AEM時，有幾種方法可管理此類服務的組態設定；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+使用時，有AEM幾種管理此類服務配置設定的方法；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 下表列出了可以指定要排除的節點的同步操作。 該表提供了使用Web控制台配置的服務名和使用儲存庫節點配置的PID。
 
@@ -334,7 +335,7 @@ ht-degree: 3%
 
 您可以配置幾個支援與更新引用相關的相應同步操作的OSGi服務。
 
-使用AEM時，有幾種方法可管理此類服務的組態設定；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+使用時，有AEM幾種管理此類服務配置設定的方法；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 下表列出了可以為其指定引用更新的同步操作。 該表提供了使用Web控制台配置的服務名和使用儲存庫節點配置的PID。
 
@@ -363,7 +364,7 @@ MSM可讓您指定一般使用的轉出組態集，並在需要時，您可以�
 
 * **[即時副本頁面屬性](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page):** 當即時副本頁面設定為使用一或多個轉出設定時，MSM會使用這些轉出設定。
 * **[Blueprint頁面屬性](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)** ：當即時副本以藍圖為基礎，而即時副本頁面未設定轉出設定時，會使用與Blueprint來源頁面相關聯的轉出設定。
-* **即時副本父頁面屬性：** 當即時副本頁面和藍圖來源頁面均未設定轉出設定時，會使用套用至即時副本頁面父頁面的轉出設定。
+* **即時副本父頁面屬性：** 當即時副本頁面和藍圖來源頁面均未以轉出設定進行設定時，會使用套用至即時副本頁面父頁面的轉出設定。
 * **[系統預設](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration):** 當無法判斷即時副本父頁面的轉出設定時，會使用系統預設的轉出設定。
 
 例如，Blueprint使用We.Retail參考網站做為來源內容。 從Blueprint建立網站。 下列清單中的每個項目說明使用轉出組態的不同情形：
