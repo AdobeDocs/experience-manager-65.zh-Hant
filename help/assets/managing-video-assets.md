@@ -2,11 +2,12 @@
 title: 管理影片資產
 description: 在 [!DNL Adobe Experience Manager]中上傳、預覽、註解和發佈視訊資產。
 contentOwner: AG
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,12 +32,12 @@ ht-degree: 7%
 
 ## 上傳大於2 GB {#configuration-to-upload-assets-that-are-larger-than-gb}的資產的設定
 
-根據預設，[!DNL Assets]不允許您上傳任何大於2 GB的資產，因為檔案大小限制。 但是，您可以轉到CRXDE Lite並在`/apps`目錄下建立節點，以覆蓋此限制。 節點必須具有相同的節點名稱、目錄結構和可比的節點順序屬性。
+根據預設，[!DNL Assets]不允許您上傳任何大於2 GB的資產，因為檔案大小限制。 但是，您可以通過進入CRXDE Lite並在`/apps`目錄下建立節點來覆蓋此限制。 節點必須具有相同的節點名稱、目錄結構和可比的節點順序屬性。
 
 除了[!DNL Assets]組態外，請變更下列組態以上傳大型資產：
 
-* 增加代號過期時間。 請參閱Web Console中`https://[aem_server]:[port]/system/console/configMgr`的[!UICONTROL Adobe Granite CSRF Servlet]。 如需詳細資訊，請參閱[CSRF保護](/help/sites-developing/csrf-protection.md)。
-* 在Dispatcher配置中增加`receiveTimeout`。 如需詳細資訊，請參閱[Experience Manager Dispatcher configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
+* 增加代號過期時間。 請參閱`https://[aem_server]:[port]/system/console/configMgr`的「Web控制台」中的「Adobe花崗岩CSRF Servlet]」。 [!UICONTROL 如需詳細資訊，請參閱[CSRF保護](/help/sites-developing/csrf-protection.md)。
+* 在Dispatcher配置中增加`receiveTimeout`。 有關詳細資訊，請參見[Experience ManagerDispatcher configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
 
 >[!NOTE]
 >
@@ -45,8 +46,8 @@ ht-degree: 7%
 要配置較高的檔案大小限制，請在`/apps`目錄中執行以下步驟。
 
 1. 在[!DNL Experience Manager]中，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
-1. 在CRXDE Lite中，導覽至`/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`。 要查看目錄窗口，請按一下`>>`。
-1. 在工具列中，按一下「覆蓋節點」。 ]****[!UICONTROL &#x200B;或者，從上 **[!UICONTROL 下文選單選取]** 「覆蓋節點」。
+1. 在CRXDE Lite中，導航到`/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`。 要查看目錄窗口，請按一下`>>`。
+1. 在工具列中，按一下「覆蓋節點」。 ****&#x200B;或者，從上 **[!UICONTROL 下文選單選取]** 「覆蓋節點」。
 1. 在&#x200B;**[!UICONTROL 覆蓋節點]**&#x200B;對話方塊中，按一下&#x200B;**[!UICONTROL 確定]**。
 
    ![覆蓋節點](assets/overlay-node-path.png)
@@ -56,18 +57,18 @@ ht-degree: 7%
 
 1. 在工具列中，按一下「全部儲存」。****
 1. 在[!DNL Experience Manager]中，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
-1. 在[!DNL Adobe Experience Manager] [!UICONTROL Web控制台包]頁面的表的「名稱」列下，找到並按一下&#x200B;**[!UICONTROL Adobe Granite工作流外部進程作業處理程式]**。
-1. 在[!UICONTROL Adobe Granite Workflow External Process Job Handler]頁面上，將&#x200B;**[!UICONTROL Default Timeout]**&#x200B;和&#x200B;**[!UICONTROL Max Timeout]**&#x200B;欄位的秒數設為`18000`（5小時）。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 在[!DNL Adobe Experience Manager] [!UICONTROL Web控制台包]頁面的表的「名稱」列下，找到並按一下&#x200B;**[!UICONTROL Adobe花崗岩工作流外部進程作業處理程式]**。
+1. 在[!UICONTROL Adobe花崗岩工作流外部進程作業處理程式]頁面上，將&#x200B;**[!UICONTROL 預設超時]**&#x200B;和&#x200B;**[!UICONTROL 最大超時]**&#x200B;欄位的秒數設定為`18000`（5小時）。 按一下「**[!UICONTROL 儲存]**」。
 1. 在[!DNL Experience Manager]中，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
-1. 在「工作流模型」頁面上，選擇&#x200B;**[!UICONTROL 動態媒體編碼視訊]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
-1. 在工作流程頁面上，按兩下&#x200B;**[!UICONTROL 動態媒體視訊服務程式]**&#x200B;元件。
+1. 在「工作流模型」頁面上，選擇&#x200B;**[!UICONTROL Dynamic Media編碼視頻]** ，然後按一下&#x200B;**[!UICONTROL 編輯]**。
+1. 在工作流頁面上，按兩下&#x200B;**[!UICONTROL Dynamic Media視頻服務進程]**&#x200B;元件。
 1. 在「步 [!UICONTROL 驟屬性] 」對話框的「常用」頁籤下，展開「 **[!UICONTROL 高級設定」]******。
-1. 在&#x200B;**[!UICONTROL Timeout]**&#x200B;欄位中，指定`18000`值，然後按一下&#x200B;**[!UICONTROL OK]**&#x200B;返回&#x200B;**[!UICONTROL Dynamic Media Encode Video]**&#x200B;工作流程頁面。
-1. 在頁面頂端的[!UICONTROL 動態媒體編碼視訊]頁面標題下，按一下&#x200B;**[!UICONTROL 儲存]**。
+1. 在&#x200B;**[!UICONTROL Timeout]**&#x200B;欄位中，指定`18000`值，然後按一下&#x200B;**[!UICONTROL OK]**&#x200B;返回&#x200B;**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程頁面。
+1. 在頁面頂部的[!UICONTROL Dynamic Media編碼視頻]頁面標題下，按一下&#x200B;**[!UICONTROL 保存]**。
 
 ## 發佈視訊資產{#publish-video-assets}
 
-發佈後，您可以將視訊資產加入網頁中做為URL，或直接內嵌資產。 如需詳細資訊，請參閱[發佈動態媒體資產](/help/assets/publishing-dynamicmedia-assets.md)。
+發佈後，您可以將視訊資產加入網頁中做為URL，或直接內嵌資產。 如需詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
 ## 註解視訊資產{#annotate-video-assets}
 
@@ -87,7 +88,7 @@ ht-degree: 7%
 
 >[!MORELIKETHIS]
 >
->* [在Experience Manager Assets中管理數位資產](/help/assets/manage-assets.md)
->* [在Experience Manager Assets中管理系列](/help/assets/manage-collections.md)
->* [動態媒體視訊檔案](/help/assets/video.md)。
+>* [在Experience Manager資產中管理數位資產](/help/assets/manage-assets.md)
+>* [在Experience Manager資產中管理系列](/help/assets/manage-collections.md)
+>* [Dynamic Media視訊檔案](/help/assets/video.md)。
 
