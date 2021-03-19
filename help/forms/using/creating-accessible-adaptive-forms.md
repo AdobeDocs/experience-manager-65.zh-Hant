@@ -1,17 +1,18 @@
 ---
 title: 建立可存取的調適性表單
 seo-title: 建立可存取的調適性表單
-description: AEM Forms提供您工具並建立可存取的調適性表單，並協助符合協助工具標準。
-seo-description: AEM Forms提供您工具並建立可存取的調適性表單，並協助符合協助工具標準。
+description: AEM Forms提供您工具，並建立可存取的調適性表單，並協助符合協助工具標準。
+seo-description: AEM Forms提供您工具，並建立可存取的調適性表單，並協助符合協助工具標準。
 uuid: 6472bc2d-47ca-4883-88b7-5de0b758fd00
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1794'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-可存取的表單是每個人都可以使用的表單，包括有特殊需求的使用者。 Adaptive Forms包含許多功能，可增強不同功能使用者的可用性。 將協助功能建置至最適化表單，不僅可讓內容的受眾最廣，而且在必須符合協助功能標準的地區提供檔案時，也需要這麼做。 AEM Forms可協助表單開發人員符合協助工具標準。
+可存取的表單是每個人都能使用的表單，包括有特殊需求的使用者。 最適化Forms包含許多功能，可增強不同功能使用者的可用性。 將協助功能建置至最適化表單，不僅可讓內容的受眾最廣，而且在必須符合協助功能標準的地區提供檔案時，也需要這麼做。 AEM Forms協助表單開發人員符合無障礙環境支援標準。
 
 在製作可調式表單時，作者應考慮以下幾點，以建立可存取的可調式表單：
 
@@ -31,7 +32,7 @@ ht-degree: 0%
 * 提供足夠的顏色對比度
 * 確保表單控制項可以鍵盤存取
 
-## 先決條件
+## 必備條件
 
 您需要協助工具，例如&#x200B;**可存取名稱與描述偵測器(ANDI)**，以及&#x200B;**最適化表單主題，以修正協助工具相關問題**，以建立可存取的最適化表單。
 
@@ -51,8 +52,8 @@ ANDI可與所有主要網際網路瀏覽器搭配使用。 有關配置和使用
 Ultramarine-Accessible主題是參考主題。 它可協助示範如何以最適化表單修正色彩對比和其他協助工具相關問題。 Adobe建議您根據組織核准的樣式，為生產環境建立自訂主題。 執行下列步驟，將主題上傳至您的AEM例項：
 
 1. 下載主題套件。
-1. 導覽至AEM例項上的&#x200B;**[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigation](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]**。
-1. 點選「**[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**」。 選擇並上傳x Ultramarine-Accessible-Theme.zip檔案。 它會將主題上傳至您的AEM實例。
+1. 導覽至您的例項上的&#x200B;**[!UICONTROL Experience Manager]** > **[!UICONTROL 導覽]** ![導覽](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms&lt;a7/AEM>。]**
+1. 點選「**[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**」。 選擇並上傳x Ultramarine-Accessible-Theme.zip檔案。 它會將主題上傳至您的AEM例項。
 
 ## 讓可存取的最適化表單
 
@@ -112,11 +113,11 @@ Ultramarine-Accessible主題是參考主題。 它可協助示範如何以最適
 
 ![表單元件中的協助工具選項](assets/accessibility-options.png)
 
-**自訂** TextForm作者在協助工具選項「自訂」文字欄位中提供內容。輔助技術（例如螢幕閱讀器）使用此自訂文字。 在大多數情況下，使用「標題」設定是最佳選項。 僅當無法使用「標題」或簡短說明時，才可考慮建立自訂螢幕閱讀器文字。
+**自訂** TextForm作者在協助工具選項「自訂」文字欄位中提供內容。輔助技術（例如螢幕閱讀器）使用此自訂文字。 在大多數情況下，使用「標題」設定是最佳選項。 僅當無法使用「標題」或簡短說明時，才考慮建立自訂畫面Reader文字。
 
 **簡短** 說明對於大部分的元件，當使用者將指標暫留在元件上時，簡短說明會在執行時期顯示。您可以在說明內容選項下方的簡短說明欄位中設定此選項。
 
-**標** 題使用此選項可讓AEM Forms將與表單欄位關聯的視覺標籤當做螢幕閱讀器文字。
+**標** 題使用此選項可讓AEM Forms使用與表單欄位相關聯的視覺標籤做為螢幕閱讀器文字。
 
 **名** 稱您可以在「綁定」標籤的「名稱」欄位中指定值。名稱不能包含任何空格。
 
@@ -144,7 +145,7 @@ Ultramarine-Accessible主題是參考主題。 它可協助示範如何以最適
 
 視覺障礙的使用者依賴文字與背景之間的高對比度來閱讀數位內容。 如果沒有足夠的對比度，某個表格可能會變得很難，甚至不可能，讓某些使用者難以閱讀。
 
-建議您使用預設字型和背景顏色——在白色背景上使用黑色的內容。 如果您變更預設顏色，請選擇淺色背景顏色的深色前景顏色，或選擇淺色背景顏色的深色前景顏色，反之亦然。
+建議您使用預設字型和背景顏色——白色背景上的黑色內容。 如果您變更預設顏色，請選擇淺色背景顏色的深色前景顏色，或選擇淺色背景顏色的深色前景顏色，反之亦然。
 
 如需變更最適化表單的色彩對比和主題的詳細資訊，請參閱[建立最適化表單的自訂主題](/help/forms/using/creating-custom-adaptive-form-themes.md)。
 
