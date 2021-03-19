@@ -10,10 +10,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '648'
 ht-degree: 5%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 5%
 
 # 啟用HTML5表單的記錄{#enable-logging-for-html-forms}
 
-您可以配置記錄器實用程式以開始建立HTML5表單的日誌。 The logger utility has various levels, you can set a level as your requirements. HTML5表格包含伺服器和用戶端元件。 您可以為這兩個元件配置日誌。
+您可以配置記錄器實用程式以開始建立HTML5表單的日誌。 The logger utility has various levels, you can set a level as your requirements. HTML5表格包含伺服器和用戶端元件。 您可以為這兩個元件設定記錄檔。
 
 ## 配置伺服器端日誌{#configuring-server-side-logging}
 
@@ -41,7 +42,7 @@ ht-degree: 5%
    >
    >若要在HTML5表單記錄目錄中產生記錄檔，請在檔案名稱之前新增。./logs/。
 
-1. 將&#x200B;**Logger**&#x200B;變更為&#x200B;**HTMLFormsPerfLogger**。 按一下&#x200B;**「儲存」**。
+1. 將&#x200B;**Logger**&#x200B;變更為&#x200B;**HTMLFormsPerfLogger**。 按一下「**儲存**」。
 
 ## 配置客戶端日誌{#configuring-client-logging}
 
@@ -102,7 +103,7 @@ ht-degree: 5%
    <td>錯誤<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>1</td>
+   <td>3</td>
    <td>警告<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -172,7 +173,7 @@ ht-degree: 5%
 >
 >每個日誌類別a(xfa)、b(xfaView)和c(xfaPerf)的預設日誌級別為2(ERROR)。 因此，對於日誌配置：2-b6，不同類別的記錄層級為：
 >a(xfa):2（預設層級錯誤）
->b(xfaView):6（用戶指定的TRACE）
+>b(xfaView):6(用戶指定的TRACE)
 >a(xfaPerf):2（預設層級錯誤）
 
 ### 使用Configuration Manager {#enabling-logging-using-configuration-manager}啟用日誌
@@ -180,7 +181,7 @@ ht-degree: 5%
 如果您使用Configuration Manager來啟用記錄，則會為每個演算請求產生記錄，直到再次停用記錄。
 
 1. 在`https://'[server]:[port]'/system/console/configMgr`登入CQ Configuration Manager，並使用管理員認證登入。
-1. 搜索並按一下&#x200B;**移動表單配置**。
+1. 搜索並按一下&#x200B;**移動Forms配置**。
 1. 在「調試選項」文本框中，按照上一節所述輸入日誌配置，例如&#x200B;**2-a4-b5-c6**
 
    ![表單設定](assets/forms_configuration.png)
