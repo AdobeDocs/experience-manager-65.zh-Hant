@@ -1,30 +1,31 @@
 ---
-title: 準備AEM Forms以進行備份
-seo-title: 準備AEM Forms以進行備份
-description: 瞭解如何使用Backup and Restore服務，使用Java API和Web Service API，進入並離開AEM Forms伺服器的備份模式。
-seo-description: 瞭解如何使用Backup and Restore服務，使用Java API和Web Service API，進入並離開AEM Forms伺服器的備份模式。
+title: 準備AEM Forms備份
+seo-title: 準備AEM Forms備份
+description: 瞭解如何使用備份和還原服務，使用Java API和Web服務API進入並離開AEM Forms伺服器的備份模式。
+seo-description: 瞭解如何使用備份和還原服務，使用Java API和Web服務API進入並離開AEM Forms伺服器的備份模式。
 uuid: b8ef2bed-62e2-4000-b55a-30d2fc398a5f
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2555'
 ht-degree: 0%
 
 ---
 
 
-# 準備AEM Forms for Backup {#preparing-aem-forms-for-backup}
+# 準備AEM Forms備份{#preparing-aem-forms-for-backup}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 ## 關於備份和恢復服務{#about-the-backup-and-restore-service}
 
-「備份和還原」服務可讓您將AEM Forms置於&#x200B;*備份模式*&#x200B;中，以便執行熱備份。 Backup and Restore服務實際上不會執行AEM Forms的備份或還原系統。 相反地，它使伺服器處於一致可靠的備份狀態，同時允許伺服器繼續運行。 您負責備份全局文檔儲存(GDS)和連接到表單伺服器的資料庫的操作。 GDS是一個目錄，用於儲存在長期進程中使用的檔案。
+備份和還原服務可讓您將AEM Forms置於&#x200B;*備份模式*&#x200B;中，以便執行熱備份。 備份和還原服務實際上不執行AEM Forms備份或還原系統。 相反地，它使伺服器處於一致可靠的備份狀態，同時允許伺服器繼續運行。 您負責備份全局文檔儲存(GDS)和連接到表單伺服器的資料庫的操作。 GDS是一個目錄，用於儲存在長期進程中使用的檔案。
 
 備份模式是伺服器進入的狀態，因此在執行備份過程時，GDS中的檔案不會被清除。 而是在GDS目錄下建立子目錄，以保存保存備份模式結束後要清除的檔案記錄。 檔案可在系統重新啟動後繼續運行，並且可以跨越數天甚至數年。 這些檔案是表單伺服器整體狀態的重要部分，可能包含PDF檔案、原則或表單範本。 如果這些檔案中有任何檔案丟失或損壞，表單伺服器上的進程可能變得不穩定，資料可能丟失。
 
@@ -36,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->與AEM Forms實作的任何其他方面一樣，您的備份和復原策略應在開發或測試環境中開發並測試，然後才會用於生產環境，以確保整個解決方案能如預期般運作，而不會造成資料遺失。
+>與您AEM Forms實施的任何其他方面一樣，您的備份和恢復策略應在開發或測試環境中開發並測試，然後才用於生產環境，以確保整個解決方案正常運作，而不會丟失資料。
 
 您可以使用「備份和還原」服務執行以下任務：
 
@@ -45,11 +46,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需執行AEM Forms備份時要考慮的詳細資訊，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)。
+>有關為AEM Forms執行備份時要考慮的事項的詳細資訊，請參見[管理幫助](https://www.adobe.com/go/learn_aemforms_admin_63)。
 
 >[!NOTE]
 >
->如需備份與還原服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關備份和還原服務的詳細資訊，請參見[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 在表單伺服器{#entering-backup-mode-on-the-forms-server}上進入備份模式
 
@@ -59,11 +60,11 @@ ht-degree: 0%
 * 備份過程完成的時間。
 * 用於指示是否處於連續備份模式的標誌，僅當執行滾動備份時，此標籤才有用。
 
-在寫入應用程式以進入備份模式之前，建議您瞭解將表單伺服器置於備份模式後將使用的備份過程。 如需執行AEM Forms備份時要考慮的詳細資訊，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)。
+在寫入應用程式以進入備份模式之前，建議您瞭解將表單伺服器置於備份模式後將使用的備份過程。 有關為AEM Forms執行備份時要考慮的事項的詳細資訊，請參見[管理幫助](https://www.adobe.com/go/learn_aemforms_admin_63)。
 
 >[!NOTE]
 >
->如需備份與還原服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關備份和還原服務的詳細資訊，請參見[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -80,7 +81,7 @@ ht-degree: 0%
 
 在您的開發專案中加入必要的檔案。 這些檔案必須包含在您的專案中，才能正確編譯程式碼並使用備份與還原服務API。
 
-如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立BackupService客戶端API對象**
 
@@ -113,8 +114,8 @@ ht-degree: 0%
    * adobe-backup-restore-client-sdk.jar
    * adobe-livecycle-client.jar
    * adobe-usermanager-client.jar
-   * adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
-   * jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
+   * adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+   * jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
 
 1. 建立BackupService客戶端API對象
 
@@ -143,7 +144,7 @@ ht-degree: 0%
 
 1. 執行GDS和資料庫的備份
 
-   備份Global Document Storage(GDS)和您的表單伺服器所連接的資料庫。 執行備份的動作不屬於AEM Forms SDK的一部分，甚至可能包含貴組織中特定備份程式的手動步驟。
+   備份Global Document Storage(GDS)和您的表單伺服器所連接的資料庫。 執行備份的動作不屬於AEM FormsSDK的一部分，甚至可能包含貴組織內特定備份程式的手動步驟。
 
 ### 使用Web服務API {#enter-backup-mode-using-the-web-service-api}進入備份模式
 
@@ -178,17 +179,17 @@ ht-degree: 0%
 
 1. 執行GDS和資料庫的備份
 
-   備份Global Document Storage(GDS)和您的表單伺服器所連接的資料庫。 執行備份的動作不屬於AEM Forms SDK的一部分，甚至可能包含貴組織中特定備份程式的手動步驟。
+   備份Global Document Storage(GDS)和您的表單伺服器所連接的資料庫。 執行備份的動作不屬於AEM FormsSDK的一部分，甚至可能包含貴組織內特定備份程式的手動步驟。
 
 ## 在表單伺服器{#leaving-backup-mode-on-the-forms-server}上退出備份模式
 
 您將保留備份模式，以便表單伺服器繼續從表單伺服器上的GDS（全局文檔儲存）清除檔案。
 
-在您編寫應用程式以進入離開模式之前，建議您瞭解AEM Forms使用的備份程式。 如需執行AEM Forms備份時要考慮的詳細資訊，請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)。
+在編寫應用程式進入離開模式之前，建議您瞭解與AEM Forms一起使用的備份過程。 有關為AEM Forms執行備份時要考慮的事項的詳細資訊，請參見[管理幫助](https://www.adobe.com/go/learn_aemforms_admin_63)。
 
 >[!NOTE]
 >
->如需備份與還原服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關備份和還原服務的詳細資訊，請參見[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-1}摘要
 
@@ -203,7 +204,7 @@ ht-degree: 0%
 
 在您的開發專案中包含所有必要的檔案。 這些檔案對於正確編譯程式碼和使用備份與還原服務API非常重要。
 
-如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立BackupService客戶端API對象**
 
@@ -228,8 +229,8 @@ ht-degree: 0%
    * adobe-backup-restore-client-sdk.jar
    * adobe-livecycle-client.jar
    * adobe-usermanager-client.jar
-   * adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
-   * jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
+   * adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+   * jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
 
 1. 建立BackupService客戶端API對象
 
