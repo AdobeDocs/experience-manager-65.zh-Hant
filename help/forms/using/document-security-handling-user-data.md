@@ -6,10 +6,11 @@ uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
+role: 管理員
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -17,13 +18,13 @@ ht-degree: 0%
 
 # Document Security |處理用戶資料{#document-security-handling-user-data}
 
-AEM Forms檔案安全性可讓您建立、儲存並套用預先定義的保全設定至檔案。 它可確保只有授權的使用者才能使用檔案。 您可以使用原則來保護檔案。 原則是包含安全性設定和授權使用者清單的資訊集合。 您可以套用原則至一或多份檔案，並授權在AEM Forms JEE使用者管理中新增的使用者。
+AEM Forms檔案安全性可讓您建立、儲存並套用預先定義的安全性設定至檔案。 它可確保只有授權的使用者才能使用檔案。 您可以使用原則來保護檔案。 原則是包含安全性設定和授權使用者清單的資訊集合。 您可以套用原則至一或多份檔案，並授權在AEM FormsJEE使用者管理中新增的使用者。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
 ## 用戶資料和資料儲存{#user-data-and-data-stores}
 
-Document Security會將與受保護檔案相關的原則和資料儲存在資料庫中，包括使用者資料，例如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在用戶管理中儲存的策略中授權用戶的資料。 如需有關儲存在使用者管理中的資料，請參閱[表單使用者管理：處理用戶資料](/help/forms/using/user-management-handling-user-data.md)。
+Document Security會將與受保護檔案相關的原則和資料儲存在資料庫中，包括使用者資料，例如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在用戶管理中儲存的策略中授權用戶的資料。 有關儲存在用戶管理中的資料的資訊，請參閱[Forms用戶管理：處理用戶資料](/help/forms/using/user-management-handling-user-data.md)。
 
 下表映射了文檔安全性在資料庫表中組織資料的方式。
 
@@ -70,7 +71,7 @@ Document Security會將與受保護檔案相關的原則和資料儲存在資料
    <td>儲存有關歸檔策略的資訊。 歸檔策略包含其作為Blob對象儲存的策略XML。</td>
   </tr>
   <tr>
-   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code> （Oracle和MS SQL資料庫）</p> </td>
+   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code> (Oracle和MS SQL資料庫)</p> </td>
    <td>儲存策略集和用戶之間的映射。</td>
   </tr>
   <tr>
@@ -161,7 +162,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   >您必須為主ID刪除`Principal`標籤中的完整blob，否則策略XML可能會損壞或不可用。
+   >您必須為主ID刪除`Principal`標籤中的完整blob，否則策略XML可能會損壞或無法使用。
 
    ```xml
    <ns2:Principal PrincipalNameType="USER">
@@ -194,7 +195,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    **使用管理控制台**
 
-   1. 以管理員身份登錄Forms JEE管理控制台，網址為https://[*server*]:[*port*]/adminui。
+   1. 以管理員身份登錄FormsJEE管理控制台，網址為https://[*server*]:[*port*]/adminui。
    1. 導覽至&#x200B;**[!UICONTROL 服務> Document Security >原則集]**。
    1. 開啟策略集並從策略中刪除用戶。
 
