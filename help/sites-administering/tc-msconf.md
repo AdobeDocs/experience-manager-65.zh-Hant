@@ -1,18 +1,19 @@
 ---
 title: 連接到Microsoft Translator
 seo-title: 連接到Microsoft Translator
-description: 瞭解如何將AEM連接至Microsoft Translator。
-seo-description: 瞭解如何將AEM連接至Microsoft Translator。
+description: 瞭解如何連AEM接Microsoft Translator。
+seo-description: 瞭解如何連AEM接Microsoft Translator。
 uuid: 5e3916ec-36a0-4d31-94ff-c340a462411a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: a7958411-b509-428e-bbe2-42efe8fd1add
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: 8b6801a4efd45fa49e009e1d6876d21c4cded957
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '618'
 ht-degree: 1%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 1%
 
 # 連接到Microsoft Translator{#connecting-to-microsoft-translator}
 
-建立Microsoft Translator雲端服務的設定，以使用您的Microsoft Translation帳戶來轉譯AEM頁面內容、社群內容或資產。
+為Microsoft Translator雲端服務建立組態，以使用您的Microsoft Translation帳戶AEM來轉換頁面內容、社群內容或資產。
 
 | 屬性 | 說明 |
 |---|---|
@@ -33,35 +34,35 @@ ht-degree: 1%
 
 以下過程使用最佳化觸控式UI來建立Microsoft Translator組態。
 
-1. 在導軌上，按一下或點選「工具>雲端服務」。
+1. 在邊欄上，按一下或點選「工具>Cloud Services」。
 1. 在「Microsoft Translator」區域中，按一下或點選「Show Configurations」（顯示配置）。
 1. 按一下「Available Configurations（可用配置）」旁邊的+連結。
 
    ![chlimage_1-382](assets/chlimage_1-382.png)
 
-1. 輸入您設定的標題。 標題可識別雲端服務主控台以及頁面屬性下拉式清單中的設定。 預設名稱是以標題為基礎。 （可選）鍵入用於儲存配置的儲存庫節點的名稱。 您應使用「父配置」屬性的預設值，該屬性是儲存庫節點的路徑。
+1. 輸入您設定的標題。 此標題可識別Cloud Services控制台和頁面屬性下拉式清單中的設定。 預設名稱是以標題為基礎。 （可選）鍵入用於儲存配置的儲存庫節點的名稱。 您應使用「父配置」屬性的預設值，該屬性是儲存庫節點的路徑。
 1. 按一下建立。
 1. 在出現的對話方塊中，輸入屬性值，然後按一下「確定」。
 
-## Microsoft Translator雲端服務配置示例{#sample-microsoft-translator-cloud-service-configurations}
+## Microsoft TranslatorCloud Service配置示例{#sample-microsoft-translator-cloud-service-configurations}
 
-以下Microsoft Translator雲端服務組態會隨Geometrixx範例一起安裝。 某些配置示例使用試用版Microsoft Translation帳戶，該帳戶每月最多允許2 000 000個免費翻譯字元。
+下列Microsoft Translator雲服務配置隨Geometrixx示例一起安裝。 某些配置示例使用試用版Microsoft Translation帳戶，該帳戶每月最多允許2 000 000個免費翻譯字元。
 
 ### Microsoft Translator 試用版授權 {#microsoft-translator-trial-license}
 
-Microsoft Translator試用版授權組態是與Geometrixxx Outdoors範例套件一起安裝的範例組態。 此配置使用Microsoft Translator帳戶，該帳戶有免費訂閱，允許每月2 000 000個翻譯字元。
+Microsoft Translator試用版許可證配置是隨Geometrixx Outdoors示例軟體包一起安裝的示例配置。 此配置使用Microsoft Translator帳戶，該帳戶有免費訂閱，允許每月2 000 000個翻譯字元。
 
-### Microsoft Translator試用授權- Geometrixx-outdoors {#microsoft-translator-trial-license-geometrixx-outdoors}
+### Microsoft Translator試用版授權-Geometrixx-戶外{#microsoft-translator-trial-license-geometrixx-outdoors}
 
-Microsoft Translator試用版授權- Geometrixx-outdoors組態是與Geometrixx Outdoors一起安裝的範例組態。 此配置使用與Microsoft Translator試用版許可證配置相同的免費Microsoft Translator帳戶。 該帳戶有免費訂閱，每月允許2 000 000個翻譯字元。
+Microsoft Translator試用版授權——戶外配置是與Geometrixx Outdoors一起安裝的示例配置。 此配置使用與Microsoft Translator試用版許可證配置相同的免費Microsoft Translator帳戶。 該帳戶有免費訂閱，每月允許2 000 000個翻譯字元。
 
-此Microsoft Translator配置已最佳化，可搭配Geometrixx Outdoors範例網站的內容類型使用。
+此Microsoft Translator配置已優化，可用於Geometrixx Outdoors示例站點的內容類型。
 
 ### 升級Microsoft Translator試用版許可證配置{#upgrading-the-microsoft-translator-trial-license-configuration}
 
 「Microsoft翻譯」配置頁提供了指向Microsoft網站的方便連結，以便獲得適合生產系統的帳戶訂閱。
 
-1. 在導軌上，按一下或點選「工具>作業>雲端>雲端服務」。
+1. 在邊欄上，按一下或點選「工具>作業>雲端>Cloud Services」。
 1. 在「Microsoft Translator」區域，按一下或點選「Show Configurations」（顯示配置），然後按一下或點選「Microsoft Translator試用許可證」(Microsoft Translator Translation Configuration)。
 
    ![chlimage_1-383](assets/chlimage_1-383.png)
@@ -74,7 +75,7 @@ Microsoft Translator試用版授權- Geometrixx-outdoors組態是與Geometrixx O
 
 「Microsoft翻譯配置」頁提供了指向Microsoft網站的方便連結，用於自定義Microsoft Translator引擎。 ([https://hub.microsofttranslator.com](https://hub.microsofttranslator.com/))
 
-1. 在導軌上，按一下或點選「工具>作業>雲端>雲端服務」。
+1. 在邊欄上，按一下或點選「工具>作業>雲端>Cloud Services」。
 1. 在「Microsoft Translator」區域，按一下或點選「Show Configurations」（顯示配置），然後按一下或點選要自定義的配置。
 1. 在配置頁上，按一下「自定義轉換器」。 使用開啟的Microsoft網頁自訂您的服務。
 
