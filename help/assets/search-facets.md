@@ -2,10 +2,11 @@
 title: 搜尋Facet以篩選搜尋結果
 description: 如何在 [!DNL Adobe Experience Manager]中建立、修改和使用搜尋刻面。
 contentOwner: AG
+role: 管理員、開發人員
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '2424'
+source-wordcount: '2426'
 ht-degree: 15%
 
 ---
@@ -27,8 +28,8 @@ ht-degree: 15%
 
 對於全文搜索，請將[!UICONTROL Fulltext]謂語添加到表單中。 使用Property predicate搜尋符合您指定之單一屬性的資產。 使用「選項」述詞可搜尋符合特定屬性之一或多個值的資產。 新增「日期範圍」述詞，以搜尋在指定日期範圍內建立的資產。
 
-1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋表單]**。
-1. 從「搜尋表單」頁面中，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;編輯圖示](assets/do-not-localize/aemassets_edit.png)。![
+1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
+1. 從「搜尋Forms」頁面，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;編輯圖示](assets/do-not-localize/aemassets_edit.png)。![
 
    ![尋找並選取「資產」或「管理搜尋邊欄」](assets/assets_admin_searchrail.png)
 
@@ -42,7 +43,7 @@ ht-degree: 15%
    >1. 儲存變更。
 
 
-1. 在[!UICONTROL 編輯搜索表單]頁中，將&#x200B;**[!UICONTROL 選擇謂詞]**&#x200B;頁籤中的謂詞拖動到主窗格。 例如，拖曳&#x200B;**[!UICONTROL Property Predicate]**。
+1. 在[!UICONTROL 編輯搜索Forms]頁中，將&#x200B;**[!UICONTROL 選擇謂詞]**&#x200B;頁籤中的謂詞拖動到主窗格。 例如，拖曳&#x200B;**[!UICONTROL Property Predicate]**。
 
    ![選擇並移動謂詞以自定義搜索篩選器](assets/drag_predicate.png)
 
@@ -106,8 +107,8 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 >
 >Options謂語是包含屬性謂語的自訂包裝函式，用來展示描述的行為。 目前，沒有REST端點可用來支援本機功能。
 
-1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋表單]**。
-1. 從&#x200B;**[!UICONTROL 搜尋表單]**&#x200B;頁面，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
+1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
+1. 從&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**。
 1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
 1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如「檔案類 **[!UICONTROL 型」]**。指定在屬性欄位中根據其執行搜索的屬性，例如 `jcr:content/metadata/dc:format.`
 1. 執行下列任一項作業：
@@ -128,8 +129,8 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 「多值屬性」述詞可讓您搜尋資產以尋找多個值。 假設您[!DNL Assets]中有多個產品的影像，且每個影像的中繼資料包含與產品相關聯的SKU編號。 您可以使用此謂語，根據多個SKU編號搜尋產品影像。
 
-1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋表單]**。
-1. 在「搜尋表單」頁面上，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;編輯圖示](assets/do-not-localize/aemassets_edit.png)。![
+1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
+1. 在「搜尋Forms」頁面上，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，按一下「編輯」****![編輯圖示](assets/do-not-localize/aemassets_edit.png)。
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
 1. 在&#x200B;**[!UICONTROL Settings]**&#x200B;標籤中，輸入謂語的標籤和佔位符文本。 指定屬性名稱，如`jcr:content/metadata/dc:value`，根據該名稱在屬性欄位中執行搜索。 也可以使用選擇對話框選擇節點。
 1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。依預設，逗號會指定為分隔字元。您可以指定不同的分隔字元。
@@ -141,8 +142,8 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 「標籤謂語」可讓您執行資產的標籤搜尋。 依預設，[!DNL Assets]會根據您指定的標籤搜尋資產，以尋找一或多個符合的標籤。 換句話說，搜索查詢使用指定的標籤執行OR操作。 不過，您可以使用「符合所有標籤」選項來搜尋包含您所指定之所有標籤的資產。
 
-1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋表單]**。
-1. 從「搜尋表單」頁面中，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;編輯圖示](assets/do-not-localize/aemassets_edit.png)。![
+1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**。
+1. 從「搜尋Forms」頁面，選擇&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**，然後按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;編輯圖示](assets/do-not-localize/aemassets_edit.png)。![
 1. 在「編輯搜索表單」頁中，將&#x200B;**[!UICONTROL Tags Predicate]**&#x200B;從「選擇謂詞」頁籤拖動到主窗格。
 1. 在「設定」標籤中，輸入謂語的預留位置文字。 指定屬性名稱，依據該名稱在屬性欄位中執行搜尋，例如&#x200B;*jcr:content/metadata/cq:tags*。 或者，也可以從選擇對話框中選擇CRXDE中的節點。
 1. 配置此謂語的Root標籤路徑屬性，以在「標籤」清單中填充各種標籤。
@@ -177,17 +178,17 @@ CRXDE中所示的檔案類型的Value屬性用於搜索查詢
 
 ## 恢復預設搜索刻面{#restoring-default-search-facets}
 
-依預設，在&#x200B;**[!UICONTROL 搜尋表單]**&#x200B;頁面中，鎖定圖示![鎖定關閉圖示](assets/do-not-localize/lock_closed_icon.svg)會顯示在&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**&#x200B;之前。 「搜尋表單」頁面上的選項鎖定圖示表示預設設定保持不變且未自訂。 如果向表單添加搜索Facet，表示預設表單已修改，則表徵圖![鎖定關閉表徵圖](assets/do-not-localize/lock_closed_icon.svg)將消失。
+依預設，在&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面的&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**&#x200B;前會出現鎖定圖示![鎖定關閉圖示](assets/do-not-localize/lock_closed_icon.svg)。 「搜尋Forms」頁面上的選項鎖定圖示表示預設設定保持不變，且未自訂。 如果向表單添加搜索Facet，表示預設表單已修改，則表徵圖![鎖定關閉表徵圖](assets/do-not-localize/lock_closed_icon.svg)將消失。
 
-![「搜尋表單」頁面上的選項鎖定圖示表示預設設定保持不變且未自訂。](assets/locked_admin_rail.png)
+![「搜尋Forms」頁面上的選項鎖定圖示表示預設設定保持不變，且未自訂。](assets/locked_admin_rail.png)
 
 若要還原預設搜尋Facet，請執行下列步驟：
 
-1. 在&#x200B;**[!UICONTROL 搜尋表單]**&#x200B;頁面中，選取&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**。
+1. 在&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面中，選取&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**。
 1. 按一下工具欄中的&#x200B;**[!UICONTROL Delete]** ![deleteoutline](assets/do-not-localize/deleteoutline.png)。
 1. 在確認對話框中，按一下&#x200B;**[!UICONTROL 刪除]**&#x200B;以刪除自定義更改。
 
-   刪除搜尋Facet的自訂變更後，在&#x200B;**[!UICONTROL 搜尋表單]**&#x200B;頁面的&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**&#x200B;之前，會重新顯示鎖定圖示![關閉圖示](assets/do-not-localize/lock_closed_icon.svg)。
+   刪除搜尋Facet的自訂變更後，在&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面的&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**&#x200B;前會重新顯示鎖定圖示![已關閉圖示](assets/do-not-localize/lock_closed_icon.svg)。
 
 ## 用戶權限{#user-permissions}
 
