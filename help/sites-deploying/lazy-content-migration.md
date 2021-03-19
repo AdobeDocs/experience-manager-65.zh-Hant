@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: upgrading
 discoiquuid: d72b8844-d782-4b5b-8999-338217dbefb9
 docset: aem65
+feature: 升級
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '705'
 ht-degree: 6%
 
 ---
@@ -55,7 +56,7 @@ ht-degree: 6%
 | `CQ63MetadataSchemaConfigUpdate` | &lt; 6=&quot;&quot;> | 立即 | 調整資料夾上的metadataSchema屬性，方法是將相對路徑取代為&#x200B;**/conf**，取代&#x200B;**/apps** |
 | `CQ63MobileAppsNavUpgrade` | &lt; 6=&quot;&quot;> | 立即 | 調整導覽結構 |
 | `CQ63MonitoringDashboardsConfigUpdate` | &lt; 6=&quot;&quot;> | 立即 | 從&#x200B;**/libs**&#x200B;和&#x200B;**/apps**&#x200B;移動監控控制面板的自訂配置 |
-| `CQ63ProcessingProfileConfigUpdate` | &lt; 6=&quot;&quot;> | 立即 | 轉換Assets中的processingProfile屬性（直到6.1），以符合6.3和更新版本的結構。 此外，還可調整描述檔至&#x200B;**/conf**&#x200B;的相對路徑，以取代&#x200B;**/apps**。 |
+| `CQ63ProcessingProfileConfigUpdate` | &lt; 6=&quot;&quot;> | 立即 | 轉換Assets中的processingProfile屬性（直到6.1），以符合6.3和更新的結構。 此外，還可調整描述檔至&#x200B;**/conf**&#x200B;的相對路徑，以取代&#x200B;**/apps**。 |
 | `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6=&quot;&quot;> | 立即 | 升級任務，在升級時刪除過時的CRXDE Lite和Web控制台菜單項。 |
 | `CQ64CommunitiesConfigsCleanupTask` | &lt; 6=&quot;&quot;> | 延遲 | 移動SRP雲端設定、社群關注字詞設定、清除&#x200B;**/etc/social**&#x200B;和&#x200B;**/etc/enablement**（執行延遲移轉時，需要調整任何參照和資料——應用程式部分不應再依據此結構）。 |
 | `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6=&quot;&quot;> | 延遲 | 清除&#x200B;**/etc/cloudsettings**（包含ContextHub配置）。 設定會在第一次存取時自動移轉。 如果啟動「延遲內容移轉」並升級&#x200B;**/etc/cloudsettings**&#x200B;中的此內容，必須在升級前透過套件保留並重新安裝，以便隱式轉換開始，並在完成後解除安裝套件。 |
