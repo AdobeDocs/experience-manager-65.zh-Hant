@@ -2,10 +2,11 @@
 title: 共用資產的私人資料夾
 description: 瞭解如何在 [!DNL Adobe Experience Manager Assets] 中建立專用資料夾，並與其他用戶共用該資料夾，並為其分配各種權限。
 contentOwner: AG
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ ht-degree: 0%
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. 要與其他用戶共用資料夾以及為其分配權限，請選擇該資料夾，然後從工具欄中按一下「屬性」。]****[!UICONTROL 
+1. 要與其他用戶共用資料夾以及為其分配權限，請選擇該資料夾，然後從工具欄中按一下「屬性」。****
 
    ![資訊選項](assets/do-not-localize/info-circle-icon.png)
 
@@ -53,7 +54,7 @@ ht-degree: 0%
    >
    >專用資料夾至少有一個`Owner`角色的成員。 因此，管理員無法從專用資料夾中刪除所有所有者成員。 但是，要從專用資料夾中刪除現有所有者（和管理員本身），管理員必須將其他用戶添加為所有者。
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。根據您指派的角色，當使用者登入[!DNL Assets]時，會為使用者指派一組權限給您的私人資料夾。
+1. 按一下「**[!UICONTROL 儲存]**」。根據您指派的角色，當使用者登入[!DNL Assets]時，會為使用者指派一組權限給您的私人資料夾。
 1. 按一下&#x200B;**[!UICONTROL 確定]**&#x200B;以關閉確認消息。
 1. 與您共用資料夾的使用者會收到共用通知。 使用用戶的憑據登錄[!DNL Assets]以查看通知。
 
@@ -77,7 +78,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->如果從CRXDE Lite刪除專用資料夾，則儲存庫中將保留冗餘用戶組。
+>如果從CRXDE Lite中刪除專用資料夾，則儲存庫中將保留冗餘用戶組。
 
 >[!NOTE]
 >
