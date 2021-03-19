@@ -1,6 +1,6 @@
 ---
 title: 混合媒體集
-description: 瞭解如何在動態媒體中處理混合媒體集
+description: 瞭解如何在Dynamic Media使用混合媒體集
 uuid: cecad772-ed05-46f6-ba44-107195866b0d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
+feature: 混合媒體集，資產管理
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1473'
 ht-degree: 22%
 
 ---
@@ -61,7 +63,7 @@ ht-degree: 22%
 
 1. [將URL連結至您的Web應](/help/assets/linking-urls-to-yourwebapplication.md) 用程 [式或內嵌視訊或影像檢視器](/help/assets/embed-code.md)。
 
-   AEM Assets會建立「混合媒體集」的URL呼叫，並在您發佈混合媒體集後啟動這些呼叫。 您可以在預覽資產時複製這些URL。 或者，您也可以將它們內嵌在您的網站上。
+   AEM Assets會建立混合媒體集的URL呼叫，並在您發佈混合媒體集後啟動這些呼叫。 您可以在預覽資產時複製這些URL。 或者，您也可以將它們內嵌在您的網站上。
 
    選擇混合媒體集，然後在左側導軌下拉菜單中選擇&#x200B;**[!UICONTROL 查看器。]**
 
@@ -71,7 +73,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->如果您在建立集時遇到問題，請參閱[疑難排解動態媒體- Scene7模式](/help/assets/troubleshoot-dms7.md)。
+>如果建立集時遇到問題，請參閱[疑難排解Dynamic Media-Scene7模式](/help/assets/troubleshoot-dms7.md)。
 
 ## 上傳資產 {#uploading-assets}
 
@@ -97,9 +99,9 @@ ht-degree: 22%
 
    >[!NOTE]
    >
-   >建立混合媒體集時，您可以變更混合媒體集縮圖，或允許AEM根據混合媒體集中的資產自動選取縮圖。 若要選取縮圖，請按一下「變更縮圖&#x200B;**[!UICONTROL 」，然後選取任何影像（您也可以導覽至其他檔案夾以尋找影像）。]**&#x200B;如果您已選取縮圖，然後決定要讓AEM從混合媒體集產生縮圖，請選取「切換至自動縮圖」。]****[!UICONTROL 
+   >建立混合媒體集時，您可以變更混合媒體集縮圖，或AEM允許根據混合媒體集中的資產自動選取縮圖。 若要選取縮圖，請按一下「變更縮圖&#x200B;**[!UICONTROL 」，然後選取任何影像（您也可以導覽至其他檔案夾以尋找影像）。]**&#x200B;如果您已選擇縮圖，然後決定要從混AEM合媒體集生成縮圖，請選擇&#x200B;**[!UICONTROL 切換到自動縮圖。]**
 
-1. 點選「資產選擇器」以選取您要納入混合媒體集的資產。 選擇它們，然後按一下「選擇」。****
+1. 點選「資產選擇器」以選取您要納入混合媒體集的資產。 選擇它們，然後按一下「選擇」。]****[!UICONTROL 
 
    使用「資產選擇器」，您可以輸入關鍵字並點選「回報」來搜尋 **[!UICONTROL 資產。]**&#x200B;您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後從工具列點選 **[!UICONTROL 「篩選]** 」圖示。通過選擇&#x200B;**[!UICONTROL 視圖]**&#x200B;表徵圖並選擇&#x200B;**[!UICONTROL 清單視圖]**、**[!UICONTROL 列視圖]**&#x200B;或&#x200B;**[!UICONTROL 卡視圖來更改視圖。]**
 
@@ -115,11 +117,11 @@ ht-degree: 22%
 
    >[!NOTE]
    >
-   >如果您想要新增資產，請點選「新增資產」。****
+   >如果您想要新增資產，請點選「新增資產」。]****[!UICONTROL 
 
-1. 若要刪除資產，請選取對應的核取方塊，然後點選「刪除資產」。****
+1. 若要刪除資產，請選取對應的核取方塊，然後點選「刪除資產」。]****[!UICONTROL 
 1. 若要套用預設，請點選右上角的&#x200B;**[!UICONTROL Preset]**，然後選取要套用至資產的預設。
-1. 按一下&#x200B;**[!UICONTROL 「儲存」。]** 您新建立的「混合媒體集」會顯示在您所建立的資料夾中。
+1. 按一下「**[!UICONTROL 儲存」。]** 您新建立的「混合媒體集」會顯示在您所建立的資料夾中。
 
 ## 編輯混合媒體集{#editing-mixed-media-sets}
 
@@ -145,7 +147,7 @@ ht-degree: 22%
    * 若要重新排序資產——在左側面板中，點選&#x200B;**[!UICONTROL Assets]**（圖片圖示），將資產拖曳至新位置。
    * 若要新增資產——在工具列上，點選&#x200B;**[!UICONTROL 新增資產。]** 導覽至資產。對於您要新增的每個資產，將滑鼠指標暫留在資產的影像（而非資產名稱）上，然後點選核取標籤圖示。 在右上角，點選&#x200B;**[!UICONTROL 選擇。]**
 
-   * 若要刪除資產——在左側面板中，點選&#x200B;**[!UICONTROL Assets]**（圖片圖示），然後選取資產。 在工具列上點選「刪除資產」。****
+   * 若要刪除資產——在左側面板中，點選&#x200B;**[!UICONTROL Assets]**（圖片圖示），然後選取資產。 在工具列上點選「刪除資產」。]****[!UICONTROL 
 
    * 若要依資產名稱的遞增或遞減順序排序，請在左側面板中點選&#x200B;**[!UICONTROL Assets]**（圖片圖示）。 在&#x200B;**[!UICONTROL Assets]**&#x200B;標題的右側，點選上或下脫字元號圖示。
 
