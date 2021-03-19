@@ -1,18 +1,19 @@
 ---
 title: 建立和管理策略
 seo-title: 建立和管理策略
-description: 原則是一組機密設定，以及可存取套用原則之檔案的使用者。 您可以使用AEM表單建立和管理各種類型的原則。
-seo-description: 原則是一組機密設定，以及可存取套用原則之檔案的使用者。 您可以使用AEM表單建立和管理各種類型的原則。
+description: 原則是一組機密設定，以及可存取套用原則之檔案的使用者。 您可以使用表單建立和管理各種類型的AEM原則。
+seo-description: 原則是一組機密設定，以及可存取套用原則之檔案的使用者。 您可以使用表單建立和管理各種類型的AEM原則。
 uuid: 72be06f3-3e90-495e-8425-72380d95704a
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fa054d30-c7dc-4b64-acf1-cbcbe8827df5
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4755'
+source-wordcount: '4757'
 ht-degree: 0%
 
 ---
@@ -36,15 +37,15 @@ ht-degree: 0%
 
 管理員和原則集協調者會根據貴組織針對不同類型的檔案和使用者所識別的機密要求，建立共用原則。 共用原則包含在原則集中，可供特定原則集的所有授權使用者（檔案發行者、原則集協調者和檔案收件者）使用。 管理員和原則集協調者可以啟用和停用共用原則。 共用策略顯示在「策略」頁的「策略集」頁籤上的策略集中。
 
-首次安裝Document Security時，它包含一個名為&#x200B;*Restrict to All Principals*&#x200B;的共用原則。 當此原則套用至檔案時，任何可登入檔案保全的使用者都可存取檔案。 此策略位於名為&#x200B;*全局策略集*&#x200B;的策略集中。 預設情況下，不啟用此策略。 如果符合您組織的需求，您可以啟用它。
+首次安裝Document Security時，它包含一個名為&#x200B;*Restrict to All Principals*&#x200B;的共用原則。 當此原則套用至檔案時，任何可登入檔案保全的使用者都可存取檔案。 此策略位於名為&#x200B;*全局策略集*&#x200B;的策略集中。 預設情況下，不啟用此策略。 如果符合組織的需求，您可以啟用它。
 
 **Microsoft Outlook自動產生的原則**
 
-使用Acrobat，您可以在Microsoft Outlook中將原則套用至以電子郵件附件形式傳送的檔案。 在Outlook中，您可以使用現有的原則，或使用Acrobat以預設機密設定產生並套用至電子郵件訊息所附加檔案的自動產生原則，來保護檔案。 （請參閱&#x200B;*[Acrobat說明](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*）。
+使用Acrobat，您可以在Microsoft Outlook中將原則套用至以電子郵件附件形式傳送的檔案。 在Outlook中，您可以使用現有原則或使用Acrobat以預設機密設定產生並套用至電子郵件訊息所附檔案的自動產生原則，來保護檔案。 (請參閱&#x200B;*[Acrobat幫助](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*)。
 
 >[!NOTE]
 >
->若要在Outlook中提供原則，您必須在Acrobat中將原則設定為我的最愛。 Outlook中不會顯示所有其他策略，包括您所在的發佈者策略。
+>為了在Outlook中提供策略，您必須將策略設定為Acrobat的最愛。 Outlook中不會顯示所有其他策略，包括您所在的發佈者策略。
 
 ## 誰可以建立和管理策略和策略集{#who-can-create-and-manage-policies-and-policy-sets}
 
@@ -73,15 +74,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Acrobat為附加至Microsoft Outlook電子郵件訊息的檔案收件者自動產生的原則不會出現在原則清單中。 您只能開啟關聯文檔的「文檔詳細資訊」頁面來查看這些策略。
+>Acrobat為附加到Microsoft Outlook電子郵件的文檔收件人自動生成的策略不會出現在策略清單中。 您只能開啟關聯文檔的「文檔詳細資訊」頁面來查看這些策略。
 
 當您編輯原則時，會套用下列限制：
 
 * 只有管理員啟用此功能時，受邀的使用者才能編輯原則。 如果無法編輯策略，則「編輯」選項將不可用。
-* 只有策略集協調者具有正確的權限時，才能編輯策略集內的策略。 超級用戶或策略集管理員在Document Security管理員介面中設定這些權限。
+* 只有策略集協調者具有正確的權限時，才能編輯策略集中的策略。 超級用戶或策略集管理員在Document Security管理員介面中設定這些權限。
 * 如果策略配置了自建立策略後管理員刪除的水印，則如果編輯並保存該策略，此水印將不再應用於文檔。 刪除的水印僅對現有策略有效，只要不編輯該策略。 如果編輯策略，則必須選擇另一個水印來替換刪除的水印。
 * 您無法編輯目前套用的原則，以授與對檔案的匿名存取權。 如果您編輯原則，使用者仍必須登入才能存取檔案。 若要對本檔案套用匿名存取，請先移除用戶端應用程式中的原則，然後套用允許匿名存取的其他原則。
-* Acrobat為附加至Microsoft Outlook電子郵件的檔案收件者自動產生的原則不會出現在原則清單中。 要訪問此策略，請在「文檔」頁上找到該文檔，開啟「文檔詳細資訊」頁，然後按一下文檔詳細資訊清單中的策略名稱。
+* Acrobat為附加到Microsoft Outlook電子郵件的文檔收件人自動生成的策略不會顯示在策略清單中。 要訪問此策略，請在「文檔」頁上找到該文檔，開啟「文檔詳細資訊」頁，然後按一下文檔詳細資訊清單中的策略名稱。
 
 **建立或編輯原則**
 
@@ -178,15 +179,15 @@ ht-degree: 0%
 
 **任意：使** 用者可修改PDF。
 
-**協作：** 使用者可使用Adobe Acrobat的「協作」選項與他人協作。即使未在原則中明確指定「複製」權限，此權限仍允許使用者複製表單資料。
+**協作：使** 用Adobe Acrobat的「協作」選項，可讓使用者與他人協作。即使未在原則中明確指定「複製」權限，此權限仍允許使用者複製表單資料。
 
 **變更頁面：** 使用者可以新增和移除頁面，以及編輯PDF中的內容。
 
-**填寫與簽署：** 使用者可以填寫PDF上的表格欄位並加以簽署。
+**Fill &amp; Sign:** 使用者可填寫PDF上的表格欄位並簽署。
 
 **複製：** 允許使用者複製使用此原則所保護之檔案的文字。
 
-**螢幕閱讀程式：** 如果您選取「顯示PDF的自訂權限」核取方塊，就會顯示此權限。選取此選項時，Adobe Acrobat會允許在PDF中新增臨時標籤，以透過螢幕閱讀程式改善其可讀性。
+**螢幕Reader:** 如果您選取「顯示PDF的自訂權限」核取方塊，就會顯示此權限。選取此選項時，Adobe Acrobat有權在PDF中新增暫存標籤，以透過螢幕閱讀程式改善其可讀性。
 
 「選項」(Options)頁籤上提供了這些文檔權限。 您可以將這些權限套用至PDF、PTC Pro/E和Microsoft Office檔案：
 
@@ -210,7 +211,7 @@ ht-degree: 0%
 
 **文檔在此日期之後將無效：** 從將策略應用到文檔的日期到指定的結束日期，該文檔即有效。
 
-**有效自、至：** 文檔在您指定的日期期間有效。您可以按一下日曆圖示，以使用日曆來選擇日期（如適用）。
+**有效自、至：** 文檔在您指定的日期期間有效。您可以按一下日曆圖示，使用日曆來選擇日期（如適用）。
 
 **檔案始終有效：文** 件有效期不會過期。
 
@@ -228,7 +229,7 @@ ht-degree: 0%
 
 **自動離線租用期間：收** 件者離線使用受原則保護檔案（沒有作用中網際網路或網路連線）的最大天數。當租賃期到期時，收件者必須再次同步檔案，才能繼續使用。
 
-### 外部授權提供者{#external-authorization-providers}
+### 外部授權服務提供者 {#external-authorization-providers}
 
 如果您已經配置了任何，請選擇外部驗證提供程式。 列出可用的提供者。
 
@@ -248,7 +249,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本支援延伸驗證。
+>Apple Mac OS X上支援Extended驗證(含Adobe Acrobat版本11.0.6及更新版本)。
 
 ### 進階設定 {#advanced-settings}
 
@@ -264,17 +265,17 @@ ht-degree: 0%
 >
 >對於提供匿名用戶訪問的策略，匿名用戶的用戶名和標識符不會顯示為水印，即使您選擇了此類水印。
 
-**僅使用PDF的認證Acrobat外掛程式：** 當選取原則時，此選項會指定在開啟使用原則保護的檔案時，Acrobat 8.0和更新版本必須以認證模式執行。當Acrobat以認證模式執行時，不會載入任何協力廠商外掛程式。
+**PDF僅使用認證的Acrobat外掛程式：在選取原則時，此選項會指定在開啟使用原則保護的檔案時，Acrobat 8.0及更新版本必須以認證模式執行。** 當Acrobat以認證模式執行時，將不會載入任何協力廠商外掛程式。
 
-如果您擔心檔案收件者撰寫外掛程式，可能會規避Acrobat 8.0及更新版本中任何檔案保護，請選取此選項。 如果您的檔案收件者需要使用Acrobat中的協力廠商外掛程式來與檔案互動，請勿選取此選項。
+如果您擔心檔案收件者撰寫外掛程式，可規避Acrobat 8.0及更新版本中任何檔案保護，請選取此選項。 如果您的檔案收件者需要使用Acrobat的協力廠商外掛程式來與檔案互動，請勿選取此選項。
 
-此選項僅啟用Acrobat 8.0或更新版本的認證模式；管理員必須停用Acrobat 7.0的存取權。
+此選項僅啟用Acrobat 8.0或更高版本中的認證模式；管理員必須禁用Acrobat 7.0的訪問權。
 
 （請參閱[配置Document Security Server](/help/forms/using/admin-help/configuring-client-server-options.md#configure-the-document-security-server)。）
 
-這個選項不適用於Adobe Reader。
+此選項不適用於Adobe Reader。
 
-**存取拒絕錯誤訊息：** 任何嘗試在未經允許的情況下開啟受原則保護檔案的人，都會看到的訊息。此訊息會出現在Acrobat中。 無法顯示此訊息的用戶端會顯示預設訊息，指出存取遭拒。
+**存取拒絕錯誤訊息：** 任何嘗試在未經允許的情況下開啟受原則保護檔案的人，都會看到的訊息。此消息在Acrobat出現。 無法顯示此訊息的用戶端會顯示預設訊息，指出存取遭拒。
 
 ### 不可更改的高級設定{#unchangeable-advanced-settings}
 
@@ -283,12 +284,12 @@ ht-degree: 0%
 **加密演算法和金鑰長度：** 用於保護檔案。您可以從下列選項中選擇：
 
 * AES 128位元
-* AES 256位元。 只有Acrobat 9.0和更新版本支援此選項。 若要針對PDF檔案使用AES 256加密，請取得並安裝Java加密擴充功能(JCE)「無限制強度管轄區」原則檔案。 這些檔案會取代[JAVE_HOME]/lib/security資料夾中的local_policy.jar和US_export_policy.jar檔案。 例如，如果您使用Sun JDK 1.6，請將下載的檔案複製到[ dep root]/Java/jdk1.6.0_26/lib/security資料夾。 您可以從[Java SE下載](https://java.sun.com/javase/downloads/index.jsp)下載這些檔案。
+* AES 256位元。 只有Acrobat 9.0及更新版本支援此選項。 若要針對PDF檔案使用AES 256加密，請取得並安裝Java加密擴充功能(JCE)「無限制強度管轄區」原則檔案。 這些檔案會取代[JAVE_HOME]/lib/security資料夾中的local_policy.jar和US_export_policy.jar檔案。 例如，如果您使用Sun JDK 1.6，請將下載的檔案複製到[ dep root]/Java/jdk1.6.0_26/lib/security資料夾。 您可以從[Java SE下載](https://java.sun.com/javase/downloads/index.jsp)下載這些檔案。
 * 無加密。 Acrobat 9.0和更新版本目前支援此選項。 如果您選取此選項，「檔案限制」選項會停用。 如果您想要使用檔案安全性進行檔案稽核或版本控制，但不想加密檔案，這個選項可能會很有用。
 
 **檔案限制：** 選擇要加密的PDF檔案元件。其他客戶端應用程式會加密整個文檔，但不會加密連結或嵌入的檔案。 您可以從下列選項中選擇：
 
-* 整份檔案，包括其附件和中繼資料。 *有關* 檔案及其內容的中繼資料資訊，您可透過檔案屬性對話方塊或Acrobat進階功能表來檢視這些資訊。在Acrobat中，您可以將不同類型的檔案（例如文字、音訊和視訊檔案）附加至PDF檔案。
+* 整份檔案，包括其附件和中繼資料。 *有* 關文檔及其內容的元資料資訊，您可以通過文檔「屬性」對話框或「Acrobat高級」菜單查看這些資訊。在Acrobat，您可以將不同類型的檔案（例如文字、音訊和視訊檔案）附加至PDF檔案。
 * 文檔及其附件，但不包括元資料。
 * 僅文檔附件。 您可以加密PDF檔案的附件，而不需加密檔案內容。
 
@@ -326,7 +327,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Acrobat為附加至Microsoft Outlook電子郵件訊息的檔案收件者自動產生的原則不會出現在原則清單中。 您只能開啟關聯文檔的「文檔詳細資訊」頁面來查看這些策略。
+>Acrobat為附加到Microsoft Outlook電子郵件的文檔收件人自動生成的策略不會出現在策略清單中。 您只能開啟關聯文檔的「文檔詳細資訊」頁面來查看這些策略。
 
 1. 在文檔安全頁上，按一下策略，然後按一下我的策略頁籤。
 1. 填寫搜尋資訊以搜尋個人政策。
@@ -396,7 +397,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必須使用客戶端應用程式從文檔中刪除策略。 （請參閱Acrobat說明或適當的Acrobat Reader DC擴充功能說明）。
+>您必須使用客戶端應用程式從文檔中刪除策略。 (請參閱「Acrobat說明」或適當的Acrobat Reader DC擴充功能說明。)
 
 ## 排序策略清單{#sort-the-policy-list}
 
