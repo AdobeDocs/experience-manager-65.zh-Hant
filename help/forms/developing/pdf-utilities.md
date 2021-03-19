@@ -1,18 +1,19 @@
 ---
 title: 使用PDF公用程式
 seo-title: 使用PDF公用程式
-description: 使用PDF公用程式服務，在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及控制XMP中繼資料。
-seo-description: 使用PDF公用程式服務，在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及控制XMP中繼資料。
+description: 使用PDF公用程式服務，在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及控制中XMP繼資料。
+seo-description: 使用PDF公用程式服務，在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及控制中XMP繼資料。
 uuid: a2ea2359-c547-4f1b-b6ca-f276f816e36a
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2607'
 ht-degree: 1%
 
 ---
@@ -20,11 +21,11 @@ ht-degree: 1%
 
 # 使用PDF實用程式{#working-with-pdf-utilities}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 **關於PDF公用程式服務**
 
-PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及控制XMP中繼資料。 例如，在將PDF檔案轉換為其他格式之前，請先檢查其屬性，以判斷要叫用哪個服務操作來轉換。
+PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及控制中繼XMP資料。 例如，在將PDF檔案轉換為其他格式之前，請先檢查其屬性，以判斷要叫用哪個服務操作來轉換。
 
 您可以使用PDF公用程式服務完成下列工作：
 
@@ -35,7 +36,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 >[!NOTE]
 >
->如需PDF公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關PDF實用程式服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 將PDF檔案轉換為XDP檔案{#converting-pdf-documents-into-xdp-documents}
 
@@ -43,7 +44,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 >[!NOTE]
 >
->如需PDF公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關PDF實用程式服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -71,7 +72,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [使用web service API將PDF檔案轉換為XDP檔案](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -95,7 +96,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [將PDF檔案轉換為XDP檔案](pdf-utilities.md#converting-pdf-documents-into-xdp-documents)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -130,7 +131,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 >[!NOTE]
 >
->如需PDF公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關PDF實用程式服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-1}摘要
 
@@ -158,7 +159,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [使用web service API將XDP檔案轉換為PDF檔案](pdf-utilities.md#converting-xdp-documents-into-pdf-documents-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -182,7 +183,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [將XDP檔案轉換為PDF檔案](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -213,7 +214,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 ## 擷取PDF檔案屬性{#retrieving-pdf-document-properties}
 
-您可以使用PDF公用程式Java和web service API，以程式設計方式擷取PDF檔案屬性，例如檔案是可填寫的表單，或是讀取檔案所需的最低Acrobat版本。
+您可以使用PDF公用程式Java和web service API，以程式設計方式擷取PDF檔案屬性，例如檔案是可填寫的表單，還是讀取檔案所需的最低Acrobat版本。
 
 >[!NOTE]
 >
@@ -245,7 +246,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [使用web service API擷取PDF檔案屬性](pdf-utilities.md#retrieve-pdf-document-properties-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -274,7 +275,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [擷取PDF檔案屬性](pdf-utilities.md#retrieving-pdf-document-properties)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -314,7 +315,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 >[!NOTE]
 >
->如需PDF公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關PDF實用程式服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-3}摘要
 
@@ -346,9 +347,9 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 建立服務客戶端後，可以調用屬性檢索操作。
 
-**將PDF檔案傳遞至其他AEM Forms作業**
+**將PDF檔案傳遞至另一個AEM Forms作業**
 
-一旦PDF公用程式服務設定指定的「儲存」模式後，請將PDF檔案傳遞至其他AEM Forms作業。 從該操作返回後，PDF文檔將以指定模式保存。 例如，如果您使用PDF公用程式服務來設定`FAST_WEB_VIEW`模式，然後將PDF檔案傳遞至加密服務的`encryptUsingPassword`操作，傳回的PDF檔案會以密碼加密，並儲存在`FAST_WEB_VIEW`模式中。
+一旦PDF公用程式服務設定指定的儲存模式後，將PDF檔案傳遞至另一個AEM Forms作業。 從該操作返回後，PDF文檔將以指定模式保存。 例如，如果您使用PDF公用程式服務來設定`FAST_WEB_VIEW`模式，然後將PDF檔案傳遞至加密服務的`encryptUsingPassword`操作，傳回的PDF檔案會以密碼加密，並儲存在`FAST_WEB_VIEW`模式中。
 
 >[!NOTE]
 >
@@ -360,7 +361,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [使用web service API設定PDF檔案儲存選項](pdf-utilities.md#set-pdf-document-save-options-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -393,7 +394,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
    該方法返回使用指定保存樣式格式化的`com.adobe.idp.Document`對象。
 
-1. 將PDF檔案傳遞至其他AEM Forms作業
+1. 將PDF檔案傳遞至另一個AEM Forms作業
 
    * 將傳回的`com.adobe.idp.Document`物件傳遞至另一個AEM Forms作業。
 
@@ -401,7 +402,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [設定PDF檔案儲存模式](pdf-utilities.md#setting-pdf-document-save-modes)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -433,7 +434,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
    該方法返回使用指定保存樣式格式化的`BLOB`對象。 然後，您可以將該物件儲存為PDF檔案。
 
-1. 將PDF檔案傳遞至其他Forms作業
+1. 將PDF檔案傳遞至另一個Forms作業
 
    * 將傳回的`BLOB`物件傳遞至另一個AEM Forms作業。
 
@@ -451,7 +452,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 >[!NOTE]
 >
->如需PDF公用程式服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關PDF實用程式服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-4}摘要
 
@@ -479,7 +480,7 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [使用web service API將PDF檔案轉換為XDP檔案](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -503,6 +504,6 @@ PDF公用程式服務可在PDF和XDP檔案格式之間轉換、設定和擷取PD
 
 [淨化PDF檔案](/help/forms/developing/pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
