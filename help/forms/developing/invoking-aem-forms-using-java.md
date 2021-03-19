@@ -1,28 +1,29 @@
 ---
 title: 使用JavaAPI叫用AEM Forms
 seo-title: 使用JavaAPI叫用AEM Forms
-description: 使用AEM Forms Java API for RMI傳輸通訊協定以進行遠端呼叫、VM傳輸以進行本機呼叫、SOAP進行遠端呼叫、不同驗證（例如使用者名稱和密碼），以及同步與非同步呼叫請求。
-seo-description: 使用AEM Forms Java API for RMI傳輸通訊協定以進行遠端呼叫、VM傳輸以進行本機呼叫、SOAP進行遠端呼叫、不同驗證（例如使用者名稱和密碼），以及同步與非同步呼叫請求。
+description: 使用AEM FormsJava API for RMI傳輸協定進行遠程調用、VM傳輸進行本地調用、SOAP進行遠程調用、不同身份驗證（如用戶名和密碼）以及同步和非同步調用請求。
+seo-description: 使用AEM FormsJava API for RMI傳輸協定進行遠程調用、VM傳輸進行本地調用、SOAP進行遠程調用、不同身份驗證（如用戶名和密碼）以及同步和非同步調用請求。
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5494'
+source-wordcount: '5495'
 ht-degree: 0%
 
 ---
 
 
-# 使用Java API {#invoking-aem-forms-using-the-javaapi}叫用AEM Forms
+# 使用Java API {#invoking-aem-forms-using-the-javaapi}調用AEM Forms
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-AEM Forms可使用AEM Forms Java API來呼叫。 使用AEM Forms Java API時，您可以使用「呼叫API」或Java用戶端程式庫。 Java客戶端庫可用於Rights Management服務等服務。 這些強式型別API可讓您開發叫用AEM Forms的Java應用程式。
+AEM Forms可透過使用AEM FormsJava API來呼叫。 使用AEM FormsJava API時，您可以使用Invocation API或Java客戶端庫。 Java客戶端庫可用於服務，如Rights Management服務。 這些強式型別API可讓您開發叫用AEM Forms的Java應用程式。
 
 調用API是位於`com.adobe.idp.dsc`包中的類。 使用這些類，您可以直接向服務發送調用請求並處理返回的調用響應。 使用「呼叫API」來叫用使用Workbench建立的短期或長期流程。
 
@@ -40,13 +41,13 @@ Java API支援下列功能：
 
 Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM Forms服務：
 
-[使用Java servlet來叫用AEM Forms程式](https://www.adobe.com/devnet/livecycle/articles/java_servlets.html)
+[使用Java servlet調用AEM Forms進程](https://www.adobe.com/devnet/livecycle/articles/java_servlets.html)
 
-[從Java叫用AEM Forms Distiller API](https://www.adobe.com/devnet/livecycle/articles/distiller_java_03.html)
+[從Java叫用AEM FormsDistillerAPI](https://www.adobe.com/devnet/livecycle/articles/distiller_java_03.html)
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](#including-aem-forms-java-library-files)
 
 [調用以人為中心的長壽命進程](invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
@@ -62,22 +63,22 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 [建立Java Web應用程式，以叫用以人為中心的長壽命程式](/help/forms/developing/invoking-human-centric-long-lived.md)
 
-## 包含AEM Forms Java程式庫檔案{#including-aem-forms-java-library-files}
+## 包含AEM FormsJava庫檔案{#including-aem-forms-java-library-files}
 
 若要使用Java API以程式設計方式叫用AEM Forms服務，請在Java專案的類路徑中加入必要的程式庫檔案（JAR檔案）。 您在客戶端應用程式的類路徑中包含的JAR檔案取決於以下幾個因素：
 
-* 要叫用的AEM Forms服務。 客戶端應用程式可以調用一個或多個服務。
+* AEM Forms的呼叫服務。 客戶端應用程式可以調用一個或多個服務。
 * 您要叫用AEM Forms服務的模式。 您可以使用EJB或SOAP模式。 （請參閱[設定連接屬性](invoking-aem-forms-using-java.md#setting-connection-properties)。）
 
 >[!NOTE]
 >
->（僅限統包功能）使用命令`standalone.bat -b <Server IP> -c lc_turnkey.xml`啟動AEM Forms伺服器，以指定EJB的伺服器IP
+>（僅交鑰匙）使用命令`standalone.bat -b <Server IP> -c lc_turnkey.xml`啟動AEM Forms伺服器，以指定EJB的伺服器IP
 
 * 部署AEM Forms的J2EE應用程式伺服器。
 
 ### 服務特定的JAR檔案{#service-specific-jar-files}
 
-下表列出呼叫AEM Forms服務所需的JAR檔案。
+下表列出調用AEM Forms服務所需的JAR檔案。
 
 <table>
  <thead>
@@ -130,7 +131,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
   </tr>
   <tr>
    <td><p>adobe-distiller-client.jar</p></td>
-   <td><p>調用Distiller服務時需要。</p></td>
+   <td><p>必須叫用Distiller服務。</p></td>
    <td><p>&lt;&gt;install directory</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
@@ -150,7 +151,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
   </tr>
   <tr>
    <td><p>adobe-forms-client.jar</p></td>
-   <td><p>呼叫Forms服務所需。</p></td>
+   <td><p>必須叫用Forms服務。</p></td>
    <td><p>&lt;&gt;install directory</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
@@ -180,12 +181,12 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
   </tr>
   <tr>
    <td><p>adobe-pdfutility-client.jar</p></td>
-   <td><p>需要叫用PDF公用程式或XMP公用程式服務。</p></td>
+   <td><p>需要叫用PDF公用程式或公用程XMP式服務。</p></td>
    <td><p>&lt;&gt;install directory</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-reader-extensions-client.jar</p></td>
-   <td><p>需要叫用Acrobat Reader DC擴充功能服務。</p></td>
+   <td><p>需要調用Acrobat Reader DC擴展服務。</p></td>
    <td><p>&lt;&gt;install directory</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
@@ -205,7 +206,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
      <li><p>relaxngDatatype.jar</p></li>
      <li><p>xsdlib.jar</p></li>
     </ul></td>
-   <td><p>需要叫用Rights Management服務。</p><p>如果AEM Forms已部署在JBoss上，請包含所有這些檔案。 </p></td>
+   <td><p>調用Rights Management服務時必需。</p><p>如果AEM Forms部署在JBoss上，請包括所有這些檔案。 </p></td>
    <td><p>&lt;&gt;install directory</i>&gt;/sdk/client-libs/common<i></i></p><p>JBoss專用的lib目錄</p></td>
   </tr>
   <tr>
@@ -228,7 +229,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 ### 連接模式和J2EE應用程式JAR檔案{#connection-mode-and-j2ee-application-jar-files}
 
-下表列出依賴連線模式的JAR檔案，以及部署AEM Forms的J2EE應用程式伺服器。
+下表列出了取決於連接模式的JAR檔案以及部署了AEM Forms的J2EE應用程式伺服器。
 
 <table>
  <thead>
@@ -262,17 +263,17 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
      <li>xercesImpl.jar<br /> </li>
      <li>commons-httpclient-3.1.jar</li>
     </ul> <p> </p> </td>
-   <td><p>如果使用SOAP模式呼叫AEM Forms，請包含這些JAR檔案。</p> </td>
+   <td><p>如果使用SOAP模式調用AEM Forms，請包括這些JAR檔案。</p> </td>
    <td><p>&lt;&gt;install directory</em>&gt;/sdk/client-libs/協力廠商<em></em></p> </td>
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
-   <td><p>如果AEM Forms已部署在JBoss Application Server上，請包含此JAR檔案。</p> <p>如果jboss-client.jar和引用的jar未共同定位，則classloader將找不到所需的類。</p> </td>
+   <td><p>如果AEM Forms部署在JBoss Application Server上，請包含此JAR檔案。</p> <p>如果jboss-client.jar和引用的jar未共同定位，則classloader將找不到所需的類。</p> </td>
    <td><p>JBoss客戶端lib目錄</p> <p>如果您將用戶端應用程式部署在相同的J2EE應用程式伺服器上，就不需要包含此檔案。</p> </td>
   </tr>
   <tr>
    <td><p>wlclient.jar</p> </td>
-   <td><p>如果AEM Forms已部署在BEA WebLogic Server®上，請加入此JAR檔案。</p> </td>
+   <td><p>如果AEM Forms部署在BEA WebLogic Server®上，則包含此JAR檔案。</p> </td>
    <td><p>WebLogic專用的lib目錄</p> <p>如果您將用戶端應用程式部署在相同的J2EE應用程式伺服器上，就不需要包含此檔案。</p> </td>
   </tr>
   <tr>
@@ -283,7 +284,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
     </ul> </td>
    <td>
     <ul>
-     <li><p>如果AEM Forms已部署在WebSphere Application Server上，請包含這些JAR檔案。</p> </li>
+     <li><p>如果AEM Forms部署在WebSphere Application Server上，請包括這些JAR檔案。</p> </li>
      <li><p>(com.ibm.ws.webservices.thinclient_6.1.0.jar是Web服務呼叫的必要條件)。</p> </li>
     </ul> </td>
    <td><p>WebSphere專用的lib目錄(<em>[WAS_HOME]</em>/runtimes)</p> <p>如果您將用戶端應用程式部署在相同的J2EE應用程式伺服器上，就不必包含這些檔案。</p> </td>
@@ -293,7 +294,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 ### 調用方案{#invoking-scenarios}
 
-下表指定叫用藍本，並列出成功叫用AEM Forms所需的JAR檔案。
+下表指定調用方案並列出成功調用AEM Forms所需的JAR檔案。
 
 <table>
  <thead>
@@ -306,7 +307,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
  &lt;/thead align="left"&gt;
  <tbody>
   <tr>
-   <td><p>表單服務</p> </td>
+   <td><p>Forms服務</p> </td>
    <td><p>EJB</p> </td>
    <td><p>JBoss</p> </td>
    <td>
@@ -323,7 +324,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
     </ul> </td>
   </tr>
   <tr>
-   <td><p>表單服務</p> <p>Acrobat Reader DC擴充功能服務</p> <p>簽名服務</p> </td>
+   <td><p>Forms服務</p> <p>Acrobat Reader DC擴展服務</p> <p>簽名服務</p> </td>
    <td><p>EJB</p> </td>
    <td><p>JBoss</p> </td>
    <td>
@@ -342,7 +343,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
     </ul> </td>
   </tr>
   <tr>
-   <td><p>表單服務</p> </td>
+   <td><p>Forms服務</p> </td>
    <td><p>SOAP</p> </td>
    <td><p>WebLogic</p> </td>
    <td>
@@ -371,7 +372,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
     </ul> </td>
   </tr>
   <tr>
-   <td><p>表單服務</p> <p>Acrobat Reader DC擴充功能服務</p> <p>簽名服務</p> </td>
+   <td><p>Forms服務</p> <p>Acrobat Reader DC擴展服務</p> <p>簽名服務</p> </td>
    <td><p>SOAP</p> </td>
    <td><p>WebLogic</p> </td>
    <td>
@@ -406,9 +407,9 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 ### 升級JAR檔案{#upgrading-jar-files}
 
-如果您要從LiveCycle升級至AEM Forms，建議您將AEM Forms JAR檔案加入Java專案的類別路徑中。 例如，如果您使用Rights Management服務等服務，如果您的類別路徑中未包含AEM Forms JAR檔案，就會遇到相容性問題。
+如果您要從LiveCycle升級至AEM Forms，建議您將AEM FormsJAR檔案加入Java專案的類別路徑中。 例如，如果您使用Rights Management服務等服務，如果類路徑中未包含AEM FormsJAR檔案，則會遇到相容性問題。
 
-假設您要升級至AEM Forms。 若要使用叫用Rights Management服務的Java應用程式，請包含下列JAR檔案的AEM Forms版本：
+假設您要升級至AEM Forms。 要使用調用Rights Management服務的Java應用程式，請包括以下JAR檔案的AEM Forms版本：
 
 * adobe-rightsmanagement-client.jar
 * adobe-livecycle-client.jar
@@ -426,13 +427,13 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 ## 設定連接屬性{#setting-connection-properties}
 
-使用Java API時，您可設定連線屬性來叫用AEM Forms。 在設定連接屬性時，指定是遠程還是本地調用服務，並指定連接模式和驗證值。 啟用服務安全性時，需要驗證值。 但是，如果服務安全性被禁用，則不需要指定驗證值。
+使用Java API時，可將連接屬性設定為調用AEM Forms。 在設定連接屬性時，指定是遠程還是本地調用服務，並指定連接模式和驗證值。 啟用服務安全性時，需要驗證值。 但是，如果服務安全性被禁用，則不需要指定驗證值。
 
-連接模式可以是SOAP或EJB模式。 EJB模式使用RMI/IIOP協定，而EJB模式的效能優於SOAP模式的效能。 SOAP模式可用來消除J2EE應用程式伺服器相依性，或是當防火牆位於AEM Forms和用戶端應用程式之間時。 SOAP模式使用https通訊協定做為基礎傳輸，並可跨防火牆邊界通訊。 如果J2EE應用程式伺服器相依性或防火牆都不是問題，建議您使用EJB模式。
+連接模式可以是SOAP或EJB模式。 EJB模式使用RMI/IIOP協定，而EJB模式的效能優於SOAP模式的效能。 SOAP模式用於消除對J2EE應用程式伺服器的依賴，或當防火牆位於AEM Forms和用戶端應用程式之間時。 SOAP模式使用https通訊協定做為基礎傳輸，並可跨防火牆邊界通訊。 如果J2EE應用程式伺服器相依性或防火牆都不是問題，建議您使用EJB模式。
 
-若要成功叫用AEM Forms服務，請設定下列連線屬性：
+要成功調用AEM Forms服務，請設定以下連接屬性：
 
-* **DSC_DEFAULT_EJB_ENDPOINT：如果您使用** EJB連接模式，此值表示部署AEM Forms的J2EE應用程式伺服器的URL。若要遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的用戶端應用程式位於相同的J2EE應用程式伺服器上，則可以指定`localhost`。 視部署J2EE應用程式伺服器AEM Forms的位置而定，指定下列其中一個值：
+* **DSC_DEFAULT_EJB_ENDPOINT:** 如果您使用EJB連接模式，此值表示部署了AEM Forms的J2EE應用程式伺服器的URL。若要遠端叫用AEM Forms，請指定部署AEM Forms的J2EE應用程式伺服器名稱。 如果您的用戶端應用程式位於相同的J2EE應用程式伺服器上，則可以指定`localhost`。 根據部署在哪個J2EE應用程式伺服器AEM Forms，請指定下列值之一：
 
    * JBoss:`https://<ServerName>:8080 (default port)`
    * WebSphere:`iiop://<ServerName>:2809 (default port)`
@@ -454,7 +455,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
    >
    >您可以使用`ServiceClientFactoryProperties`類別的靜態成員，而不是使用字串來設定`DSC_SERVER_TYPE`連接屬性。 可使用下列值：`ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、`ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或`ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
 
-* **DSC_CREDENTIAL_USERNAME：指** 定AEM表單使用者名稱。若要讓使用者成功叫用AEM Forms服務，他們需要「服務使用者」角色。 用戶也可以具有包含「服務調用」權限的其他角色。 否則，當他們嘗試調用服務時會拋出異常。 如果服務安全性被禁用，則無需指定此連接屬性。
+* **DSC_CREDENTIAL_USERNAME：指** 定表AEM單用戶名。若要使用者成功叫用AEM Forms服務，他們需要「服務使用者」角色。 用戶也可以具有包含「服務調用」權限的其他角色。 否則，當他們嘗試調用服務時會拋出異常。 如果服務安全性被禁用，則無需指定此連接屬性。
 * **DSC_CREDENTIAL_PASSWORD：指** 定相應的口令值。如果服務安全性被禁用，則無需指定此連接屬性。
 * **DSC_REQUEST_TIMEOUT:SOAP** 請求的預設請求超時限制為1200000毫秒（20分鐘）。有時，完成操作的請求可能需要更長的時間。 例如，擷取大量記錄的SOAP請求可能需要較長的逾時限制。 您可以使用`ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT`來增加SOAP請求的請求呼叫逾時限制。
 
@@ -466,7 +467,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 1. 要設定`DSC_DEFAULT_EJB_ENDPOINT`連接屬性，請調用`java.util.Properties`對象的`setProperty`方法並傳遞以下值：
 
    * `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT`枚舉值
-   * 一個字串值，指定代管AEM Forms的J2EE應用程式伺服器URL
+   * 指定托管AEM Forms之J2EE應用程式伺服器URL的字串值
 
    >[!NOTE]
    >
@@ -484,11 +485,11 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 1. 要設定`DSC_SERVER_TYPE`連接屬性，請調用`java.util.Properties`對象的`setProperty`方法並傳遞以下值：
 
    * `ServiceClientFactoryProperties.DSC_SERVER_TYPE`枚舉值
-   * 一個字串值，指定主控AEM Forms的J2EE應用程式伺服器（例如，如果AEM Forms部署在JBoss上，請指定`JBoss`）。
+   * 一個字串值，它指定托管AEM Forms的J2EE應用程式伺服器(例如，如果AEM Forms部署在JBoss上，請指定`JBoss`)。
 
       1. 要設定`DSC_CREDENTIAL_USERNAME`連接屬性，請調用`java.util.Properties`對象的`setProperty`方法並傳遞以下值：
    * `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME`枚舉值
-   * 一個字串值，指定呼叫AEM Forms所需的使用者名稱
+   * 一個字串值，它指定調用AEM Forms所需的用戶名
 
       1. 要設定`DSC_CREDENTIAL_PASSWORD`連接屬性，請調用`java.util.Properties`對象的`setProperty`方法並傳遞以下值：
    * `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD`枚舉值
@@ -512,7 +513,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 **為WebLogic設定EJB連接模式**
 
-下列Java程式碼範例會設定連線屬性，以叫用部署在WebLogic上的AEM Forms，並使用EJB連線模式。
+以下Java代碼示例設定連接屬性，以調用部署在WebLogic上並使用EJB連接模式的AEM Forms。
 
 ```java
  Properties ConnectionProps = new Properties();
@@ -525,7 +526,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 **設定WebSphere的EJB連接模式**
 
-下列Java程式碼範例會設定連線屬性，以叫用部署在WebSphere上的AEM Forms，並使用EJB連線模式。
+以下Java代碼示例設定連接屬性，以調用部署在WebSphere上的AEM Forms並使用EJB連接模式。
 
 ```java
  Properties ConnectionProps = new Properties();
@@ -555,7 +556,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 **禁用服務安全性時設定連接屬性**
 
-以下Java代碼示例設定調用部署在JBoss Application Server上的AEM Forms以及禁用服務安全性時所需的連接屬性。
+以下Java代碼示例設定調用部署在JBoss Application Server上的AEM Forms和禁用服務安全時所需的連接屬性。
 
 ```java
  Properties ConnectionProps = new Properties();
@@ -566,7 +567,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 
 >[!NOTE]
 >
->與「使用AEM Forms進行程式設計」相關聯的所有Java快速入門都會顯示EJB和SOAP連線設定。
+>所有與「使用AEM Forms進行寫程式」關聯的Java快速入門都顯示EJB和SOAP連接設定。
 
 **使用自訂請求逾時限制設定SOAP連線模式**
 
@@ -580,7 +581,7 @@ Adobe開發人員網站包含下列文章，討論如何使用Java API叫用AEM 
 ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, "1800000"); // Request timeout limit 30 Minutes
 ```
 
-**使用內容物件來叫用AEM Forms**
+**使用Context對象調用AEM Forms**
 
 您可以使用`com.adobe.idp.Context`物件來與已驗證的使用者呼叫AEM Forms服務（`com.adobe.idp.Context`物件代表已驗證的使用者）。 使用`com.adobe.idp.Context`物件時，您不需要設定`DSC_CREDENTIAL_USERNAME`或`DSC_CREDENTIAL_PASSWORD`屬性。 使用`AuthenticationManagerServiceClient`物件的`authenticate`方法，在驗證使用者時，可取得`com.adobe.idp.Context`物件。
 
@@ -591,7 +592,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
  myCtx.initPrincipal(authResult);
 ```
 
-您可以叫用`ServiceClientFactory`物件的`setContext`方法並傳遞`com.adobe.idp.Context`物件，而不是設定`DSC_CREDENTIAL_USERNAME`或`DSC_CREDENTIAL_PASSWORD`屬性。 當使用AEM Forms使用者叫用服務時，請確定他們的角色名為`Services User`，此角色是呼叫AEM Forms服務所必需的。
+您可以叫用`ServiceClientFactory`物件的`setContext`方法並傳遞`com.adobe.idp.Context`物件，而不是設定`DSC_CREDENTIAL_USERNAME`或`DSC_CREDENTIAL_PASSWORD`屬性。 使用表AEM單用戶調用服務時，請確保其具有調用AEM Forms服務所需的`Services User`角色。
 
 以下代碼示例說明如何在用於建立`EncryptionServiceClient`對象的連接設定中使用`com.adobe.idp.Context`對象。
 
@@ -631,32 +632,32 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 本節將討論以下調用的情形：
 
-* 在其自己的Java虛擬機器(JVM)中執行的用戶端應用程式會叫用單機版AEM Forms例項。
-* 在其JVM中執行的用戶端應用程式會叫用叢集的AEM Forms例項。
+* 在其自己的Java虛擬機(JVM)中運行的客戶端應用程式調用獨立的AEM Forms實例。
+* 在其自身的JVM中運行的客戶端應用程式調用群集的AEM Forms實例。
 
-### 叫用獨立AEM Forms例項{#client-application-invoking-a-stand-alone-aem-forms-instance}的用戶端應用程式
+### 調用獨立AEM Forms實例{#client-application-invoking-a-stand-alone-aem-forms-instance}的客戶端應用程式
 
-下圖顯示在自己JVM中執行並叫用獨立AEM Forms例項的用戶端應用程式。
+下圖顯示了在自己的JVM中運行並調用獨立的AEM Forms實例的客戶端應用程式。
 
-在此案例中，用戶端應用程式會在其專屬的JVM中執行，並叫用AEM Forms服務。
+在此案例中，用戶端應用程式在其JVM中執行，並叫用AEM Forms服務。
 
 >[!NOTE]
 >
 >此方案是所有快速啟動都基於的調用方案。
 
-### 用戶端應用程式叫用叢集的AEM Forms例項{#client-application-invoking-clustered-aem-forms-instances}
+### 調用群集化AEM Forms實例的客戶端應用程式{#client-application-invoking-clustered-aem-forms-instances}
 
-下圖顯示在自己的JVM中執行並叫用位於叢集中的AEM Forms例項的用戶端應用程式。
+下圖顯示了在自己的JVM中運行並調用群集中的AEM Forms實例的客戶端應用程式。
 
-此情形類似於呼叫獨立AEM Forms例項的用戶端應用程式。 但是，提供者URL不同。 如果客戶端應用程式要連接到特定的J2EE應用程式伺服器，應用程式必須更改URL以引用特定的J2EE應用程式伺服器。
+此情形類似於調用獨立AEM Forms實例的客戶端應用程式。 但是，提供者URL不同。 如果客戶端應用程式要連接到特定的J2EE應用程式伺服器，應用程式必須更改URL以引用特定的J2EE應用程式伺服器。
 
-不建議參考特定的J2EE應用程式伺服器，因為當應用程式伺服器停止時，用戶端應用程式與AEM Forms之間的連線會終止。 建議提供者URL參考儲存格層級的JNDI管理器，而非特定的J2EE應用程式伺服器。
+不建議參考特定的J2EE應用程式伺服器，因為當應用程式伺服器停止時，用戶端應用程式與AEM Forms之間的連線會中斷。 建議提供者URL參考儲存格層級的JNDI管理器，而非特定的J2EE應用程式伺服器。
 
 使用SOAP連接模式的客戶端應用程式可以使用群集的HTTP負載平衡器埠。 使用EJB連接模式的客戶端應用程式可以連接到特定J2EE應用程式伺服器的EJB埠。 此操作可處理群集節點之間的負載平衡。
 
 **WebSphere**
 
-下列範例顯示用來連線至部署在WebSphere上的AEM Forms的jndi.properties檔案的內容。
+以下示例顯示用於連接到部署在WebSphere上的AEM Forms的jndi.properties檔案的內容。
 
 ```ini
  java.naming.factory.initial=com.ibm.websphere.naming.
@@ -666,7 +667,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **WebLogic**
 
-下列範例顯示用來連線至部署在WebLogic上的AEM Forms的jndi.properties檔案的內容。
+以下示例顯示用於連接到部署在WebLogic上的AEM Forms的jndi.properties檔案的內容。
 
 ```ini
  java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
@@ -689,7 +690,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [使用Java API將資料傳送至AEM Forms服務](invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
 
@@ -697,7 +698,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 ## 使用Java API {#passing-data-to-aem-forms-services-using-the-java-api}將資料傳送至AEM Forms服務
 
-AEM Forms服務作業通常會使用或產生PDF檔案。 當您叫用服務時，有時需要將PDF檔案（或其他檔案類型，例如XML資料）傳遞至服務。 同樣地，有時也需要處理從服務傳回的PDF檔案。 可讓您傳遞資料至AEM Forms服務與資料的Java類別為`com.adobe.idp.Document`。
+AEM Forms服務營運通常會使用或產生PDF檔案。 當您叫用服務時，有時需要將PDF檔案（或其他檔案類型，例如XML資料）傳遞至服務。 同樣地，有時也需要處理從服務傳回的PDF檔案。 使您能夠將資料傳入和傳出AEM Forms服務的Java類為`com.adobe.idp.Document`。
 
 AEM Forms服務不接受PDF檔案做為其他資料類型，例如`java.io.InputStream`物件或位元組陣列。 `com.adobe.idp.Document`物件也可用來將其他類型的資料（例如XML資料）傳遞至服務。
 
@@ -711,7 +712,7 @@ AEM Forms服務不接受PDF檔案做為其他資料類型，例如`java.io.Input
 
 如果宣傳檔案駐留在同一檔案系統上，建立`com.adobe.idp.Document`對象會更快。 如果宣傳檔案駐留在遠程檔案系統上，則必須執行複製操作，這會影響效能。
 
-應用程式可同時包含`com.adobe.idp.Document`和`org.w3c.dom.Document`資料類型。 不過，請確定您完全符合`org.w3c.dom.Document`資料類型。 有關將`org.w3c.dom.Document`對象轉換為`com.adobe.idp.Document`對象的資訊，請參閱[快速啟動（EJB模式）:使用Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)預先填入可排程的版面。
+應用程式可同時包含`com.adobe.idp.Document`和`org.w3c.dom.Document`資料類型。 不過，請確定您完全符合`org.w3c.dom.Document`資料類型。 有關將`org.w3c.dom.Document`對象轉換為`com.adobe.idp.Document`對象的資訊，請參閱[快速啟動（EJB模式）:使用Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)預先填入可排程的版面配置給Forms。
 
 >[!NOTE]
 >
@@ -909,7 +910,7 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
   </tr>
   <tr>
    <td><p><code>application/vnd.adobe.xdp+xml</code></p></td>
-   <td><p>XML資料封裝(XDP)，用於匯出的XML表單架構(XFA)表單</p></td>
+   <td><p>XML資料封裝(XDP)，用於匯出XMLForms架構(XFA)表單</p></td>
   </tr>
   <tr>
    <td><p><code>text/xml</code></p></td>
@@ -917,11 +918,11 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
   </tr>
   <tr>
    <td><p><code>application/vnd.fdf</code></p></td>
-   <td><p>表單資料格式(FDF)，用於匯出的Acrobat表單</p></td>
+   <td><p>Forms資料格式(FDF)，用於匯出Acrobat表格</p></td>
   </tr>
   <tr>
    <td><p><code>application/vnd.adobe.xfdf</code></p></td>
-   <td><p>XML表單資料格式(XFDF)，用於匯出的Acrobat表單</p></td>
+   <td><p>XMLForms資料格式(XFDF)，用於匯出Acrobat表單</p></td>
   </tr>
   <tr>
    <td><p><code>application/rdf+xml</code></p></td>
@@ -962,21 +963,21 @@ c:/temp/input.pdf檔案必須位於用戶端電腦上（而非伺服器電腦上
 
 [使用Java API叫用AEM Forms](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [使用Java客戶端庫調用服務](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
 ## 使用Java客戶端庫{#invoking-a-service-using-a-java-client-library}調用服務
 
-AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程式庫）來呼叫。 *Java客戶端庫*&#x200B;是一組具體類，它提供對服務容器中部署的服務的訪問。 使用調用API實例化表示要調用的服務的Java對象，而不是建立`InvocationRequest`對象。 調用API用於調用在Workbench中建立的進程，如長壽命進程。 （請參閱[叫用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。）
+AEM Forms服務作業可使用服務的強式型別API來呼叫，此API稱為Java用戶端程式庫。 *Java客戶端庫*&#x200B;是一組具體類，它提供對服務容器中部署的服務的訪問。 使用調用API實例化表示要調用的服務的Java對象，而不是建立`InvocationRequest`對象。 調用API用於調用在Workbench中建立的進程，如長壽命進程。 （請參閱[叫用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。）
 
 要執行服務操作，請調用屬於Java對象的方法。 Java客戶端庫包含通常以服務操作一對一映射的方法。 使用Java客戶端庫時，請設定所需的連接屬性。 （請參閱[設定連接屬性](invoking-aem-forms-using-java.md#setting-connection-properties)。）
 
-在設定連接屬性後，建立`ServiceClientFactory`對象，該對象用於實例化Java對象以便調用服務。 每個具有Java客戶端庫的服務都有相應的客戶端對象。 例如，要調用儲存庫服務，請使用其建構子建立`ResourceRepositoryClient`對象並傳遞`ServiceClientFactory`對象。 `ServiceClientFactory`物件負責維護呼叫AEM Forms服務所需的連線設定。
+在設定連接屬性後，建立`ServiceClientFactory`對象，該對象用於實例化Java對象以便調用服務。 每個具有Java客戶端庫的服務都有相應的客戶端對象。 例如，要調用儲存庫服務，請使用其建構子建立`ResourceRepositoryClient`對象並傳遞`ServiceClientFactory`對象。 `ServiceClientFactory`對象負責維護調用AEM Forms服務所需的連接設定。
 
 雖然獲取`ServiceClientFactory`通常很快，但首次使用工廠時會涉及一些開銷。 此對象經過優化以便重複使用，因此，在建立多個Java客戶端對象時，請盡可能使用相同的`ServiceClientFactory`對象。 也就是說，請勿為您所建立的每個用戶端程式庫物件建立個別的`ServiceClientFactory`物件。
 
-「使用者管理員」設定可控制`com.adobe.idp.Context`物件內影響`ServiceClientFactory`物件的SAML斷言的存留期。 此設定會控制整個AEM Forms中的所有驗證內容期限，包括使用Java API執行的所有呼叫。 預設情況下，`ServiceCleintFactory`對象可使用的時段為2小時。
+「使用者管理員」設定可控制`com.adobe.idp.Context`物件內影響`ServiceClientFactory`物件的SAML斷言的存留期。 此設定控制整個AEM Forms的所有驗證上下文期限，包括使用Java API執行的所有調用。 預設情況下，`ServiceCleintFactory`對象可使用的時段為2小時。
 
 >[!NOTE]
 >
@@ -984,7 +985,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 通過使用Java客戶端庫並執行以下步驟，可以調用儲存庫服務：
 
-1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-repository-client.jar。 如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-repository-client.jar。 有關這些檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 1. 設定調用服務所需的連接屬性。
 1. 調用`ServiceClientFactory`對象的靜態`createInstance`方法並傳遞包含連接屬性的`java.util.Properties`對象，以建立`ServiceClientFactory`對象。
 1. 使用其建構子並傳遞`ServiceClientFactory`對象，建立`ResourceRepositoryClient`對象。 使用`ResourceRepositoryClient`對象調用儲存庫服務操作。
@@ -1014,7 +1015,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 [使用Java API叫用AEM Forms](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 ## 使用調用API {#invoking-a-short-lived-process-using-the-invocation-api}調用短時間進程
 
@@ -1024,11 +1025,11 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 >
 >有關調用長壽命進程的資訊，請參見[調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。
 
-這裡討論的是使用Invocation API來叫用下列名為`MyApplication/EncryptDocument`的AEM Forms短期程式。
+這裡討論的是使用調用API調用以下名為`MyApplication/EncryptDocument`的AEM Forms短期進程。
 
 >[!NOTE]
 >
->此程式不以現有的AEM Forms程式為基礎。 要跟隨代碼示例，請使用Workbench建立名為`MyApplication/EncryptDocument`的流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此程式不基於現有的AEM Forms程式。 要跟隨代碼示例，請使用Workbench建立名為`MyApplication/EncryptDocument`的流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
 
 調用此進程時，它執行以下操作：
 
@@ -1039,7 +1040,7 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 使用Java調用API調用`MyApplication/EncryptDocument`短期進程：
 
-1. 在您Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-livecycle-client.jar。 （請參閱[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)）。
+1. 在您Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-livecycle-client.jar。 (請參閱[包含AEM FormsJava庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。)
 1. 建立包含連接屬性的`ServiceClientFactory`對象。 （請參閱[設定連接屬性](invoking-aem-forms-using-java.md#setting-connection-properties)。）
 1. 使用其建構子並傳遞`ServiceClientFactory`對象，建立`ServiceClient`對象。 `ServiceClient`物件可讓您叫用服務作業。 它可處理如定位、調度和路由調用請求等任務。
 1. 使用其建構子建立`java.util.HashMap`對象。
@@ -1082,4 +1083,4 @@ AEM Forms服務作業可使用服務的強式型別API（稱為Java用戶端程�
 
 [調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
-[包含AEM Forms Java程式庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
