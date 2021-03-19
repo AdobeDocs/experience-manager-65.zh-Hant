@@ -1,6 +1,6 @@
 ---
-title: 使用可排程的版面預先填入表單
-seo-title: 使用可排程的版面預先填入表單
+title: 使用可排程的版面預先填入Forms
+seo-title: 使用可排程的版面預先填入Forms
 description: 使用可排列的版面預先填入表單，以使用Java API和Web服務API，在轉譯表單中向使用者顯示資料。
 seo-description: 使用可排列的版面預先填入表單，以使用Java API和Web服務API，在轉譯表單中向使用者顯示資料。
 uuid: 93ccb496-e1c2-4b79-8e89-7a2abfce1537
@@ -9,18 +9,19 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3533'
+source-wordcount: '3534'
 ht-degree: 0%
 
 ---
 
 
-# 使用可排程版面預先填入表單{#prepopulating-forms-with-flowable-layouts1}
+# 使用可排列的版面預先填入Forms{#prepopulating-forms-with-flowable-layouts1}
 
-## 使用可排程版面預先填入表單{#prepopulating-forms-with-flowable-layouts2}
+## 使用可排列的版面預先填入Forms{#prepopulating-forms-with-flowable-layouts2}
 
 預先填入表單會在轉譯的表單中向使用者顯示資料。 例如，假設使用者使用使用者名稱和密碼登入網站。 如果驗證成功，客戶端應用程式將查詢資料庫以獲取用戶資訊。 資料會合併到表單中，然後再將表單轉譯給使用者。 因此，用戶能夠在表單中查看個性化資料。
 
@@ -32,14 +33,14 @@ ht-degree: 0%
 
 下列兩個XML資料來源可預先填入表單：
 
-* XDP資料來源，是符合XFA語法的XML（或XFDF資料，以預先填入使用Acrobat建立的表格）。
+* XDP資料來源，是符合XFA語法的XML(或XFDF資料，以預先填入使用Acrobat建立的表格)。
 * 任意XML資料來源，包含與表單欄位名稱相符的名稱／值配對（本節中的範例使用任意XML資料來源）。
 
 您要預先填入的每個表單欄位都必須有XML元素。 XML元素名稱必須與欄位名稱相符。 如果XML元素與表單欄位不對應，或XML元素名稱與欄位名稱不符，則會忽略它。 只要指定了所有XML元素，就不需要與XML元素的顯示順序匹配。
 
-當您預先填入已包含資料的表單時，必須指定已顯示在XML資料來源中的資料。 假設一個包含10個欄位的表單有4個欄位中的資料。 接下來，假設您要預先填入其餘6個欄位。 在這種情況下，您必須在XML資料來源中指定10個XML元素，以便預先填入表單。 如果您只指定6個元素，原始的4個欄位會是空的。
+當您預先填入已包含資料的表單時，必須指定XML資料來源中已顯示的資料。 假設一個包含10個欄位的表單有4個欄位中的資料。 接下來，假設您要預先填入其餘6個欄位。 在這種情況下，您必須在XML資料來源中指定10個XML元素，以便預先填入表單。 如果您只指定6個元素，原始的4個欄位會是空的。
 
-例如，您可以預先填入表單，例如範例確認表單。 （請參閱[轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)中的「確認表單」）。
+例如，您可以預先填入表單，例如範例確認表單。 (請參閱[演算互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)中的「確認表單」。)
 
 若要預先填入範例確認表單，您必須建立一個XML資料來源，其中包含三個XML元素，這些元素會符合表單中的三個欄位。 此表單包含下列三個欄位：`FirstName`、`LastName`和`Amount`。 第一步是建立XML資料來源，其中包含與表單設計欄位相符的XML元素。 下一步是為XML元素指派資料值，如下列XML程式碼所示。
 
@@ -57,7 +58,7 @@ ht-degree: 0%
 
 ### 預先填入可排列版面的表格{#prepopulating_forms_with_flowable_layouts-1}
 
-具有可排列版面的表單對於向使用者顯示未確定數量的資料非常有用。 由於表單的版面會自動調整為合併的資料量，因此您不需要預先決定表單的固定版面或頁數，就像使用固定版面的表單一樣。
+具有可排列版面的Forms對於向使用者顯示未確定的資料量非常有用。 由於表單的版面會自動調整為合併的資料量，因此您不需要預先決定表單的固定版面或頁數，就像使用固定版面的表單一樣。
 
 表單通常會填入在執行時期取得的資料。 因此，您可以建立記憶體中的XML資料來源，並將資料直接放入記憶體中的XML資料來源，以預先填入表格。
 
@@ -81,7 +82,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>當使用者完成購買項目並按一下「提交」按鈕後，就會建立記憶體中的XML資料來源。 購買的項目和使用者資訊會放入記憶體中的XML資料來源中。 </p></td>
+   <td><p>當使用者完成購買項目並按一下「提交」按鈕後，就會建立記憶體中的XML資料來源。 購買的項目和使用者資訊會放入記憶體中的XML資料來源。 </p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -104,7 +105,7 @@ ht-degree: 0%
 
 ### 表單設計注意事項{#form-design-considerations}
 
-具有可排列版面的表單，是以在設計人員中建立的表單設計為基礎。 表單設計指定一組版面配置、呈現和資料擷取規則，包括根據使用者輸入計算值。 當資料輸入表單時，就會套用規則。 新增至表單的欄位是表單設計中的子表單。 例如，在上圖中顯示的採購訂單表單中，每行都是子表單。 有關建立包含子表單的表單設計的資訊，請參閱[建立具有可流式佈局的採購訂單表單。](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9)
+Forms的可排列版面是以在Designer中建立的表單設計為基礎。 表單設計指定一組版面配置、呈現和資料擷取規則，包括根據使用者輸入計算值。 當資料輸入表單時，就會套用規則。 新增至表單的欄位是表單設計中的子表單。 例如，在上圖中顯示的採購訂單表單中，每行都是子表單。 有關建立包含子表單的表單設計的資訊，請參閱[建立具有可流式佈局的採購訂單表單。](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9)
 
 ### 瞭解資料子群組{#understanding-data-subgroups}
 
@@ -187,11 +188,11 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 >[!NOTE]
 >
->如果您嘗試預先填入包含重複XML元素的資料來源的表單，並將`RenderAtClient`選項設為`No`，則只會將第一個資料記錄合併到表單中。 為確保所有資料記錄都合併到表單中，請將`RenderAtClient`設定為`Yes`。 有關`RenderAtClient`選項的資訊，請參見Client](/help/forms/developing/rendering-forms-client.md)上的[ Rendering Forms。
+>如果您嘗試預先填入包含重複XML元素的資料來源的表單，並將`RenderAtClient`選項設為`No`，則只會將第一個資料記錄合併到表單中。 為確保所有資料記錄都合併到表單中，請將`RenderAtClient`設定為`Yes`。 有關`RenderAtClient`選項的資訊，請參見Client](/help/forms/developing/rendering-forms-client.md)上的[ RenderingForms。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -220,7 +221,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 >[!NOTE]
 >
->如果您使用Forms服務的WSDL來預先填入表單，則必須將`org.w3c.dom.Document`物件轉換為`BLOB`物件。
+>如果您使用Forms服務的WSDL來預先填入表單，您必須將`org.w3c.dom.Document`物件轉換為`BLOB`物件。
 
 **演算預先填入的表單**
 
@@ -228,23 +229,23 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[轉換互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
+[建立轉譯Forms的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### 使用Java API {#prepopulating-forms-using-the-java-api}預填表單
 
-若要使用Forms API(Java)以可排程的版面預先填入表單，請執行下列步驟：
+若要使用FormsAPI(Java)預先填入具有可排程版面的表單，請執行下列步驟：
 
 1. 包含專案檔案
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 有關這些檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 建立記憶體中的XML資料來源
 
@@ -286,7 +287,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
    * 調用`javax.xml.transform.Transformer`物件的`transform`方法並傳遞`javax.xml.transform.dom.DOMSource`和`javax.xml.transform.stream.StreamResult`物件，以填入Java `ByteArrayOutputStream`物件。
    * 建立位元組陣列，並將`ByteArrayOutputStream`對象的大小分配給位元組陣列。
    * 調用`ByteArrayOutputStream`物件的`toByteArray`方法，以填入位元組陣列。
-   * 使用`com.adobe.idp.Document`物件的建構函式並傳遞位元組陣列，以建立&lt;a0/>物件。
+   * 使用`com.adobe.idp.Document`物件的建構函式並傳遞位元組陣列，以建立物件。
 
 1. 演算預先填入的表單
 
@@ -300,7 +301,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
    `renderPDFForm`方法返回一個`FormsResult`對象，該對象包含必須寫入客戶端Web瀏覽器的表單資料流。
 
-   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料串流至用戶端網頁瀏覽器。
+   * 建立`javax.servlet.ServletOutputStream`物件，用來傳送表單資料流至用戶端網頁瀏覽器。
    * 通過調用`FormsResult`對象「s `getOutputContent`」方法建立`com.adobe.idp.Document`對象。
    * 調用`com.adobe.idp.Document`物件的`getInputStream`方法，以建立`java.io.InputStream`物件。
    * 呼叫`InputStream`物件的`read`方法，並將位元組陣列傳入為引數，以填入表單資料流的位元組陣列。
@@ -309,15 +310,15 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API將可排程的版面預先填入表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API將可排程的版面預填入Forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用web service API {#prepopulating-forms-using-the-web-service-api}預填表單
 
-若要使用Forms API(web service)以可排程的版面預先填入表單，請執行下列步驟：
+若要使用FormsAPI(web service)以可排程的版面預先填入表單，請執行下列步驟：
 
 1. 包含專案檔案
 
@@ -371,7 +372,7 @@ XML資料來源可用來預先填入固定版面和可排列版面的表單。 �
 
    * 指定表單設計名稱的字串值，包括檔案副檔名。
    * `BLOB`物件，包含要與表單合併的資料。 請確定您使用在步驟1和步驟2中建立的`BLOB`對象。
-   * 儲存運行時選項的`PDFFormRenderSpecc`對象。 如需詳細資訊，請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   * 儲存運行時選項的`PDFFormRenderSpecc`對象。 如需詳細資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
    * `URLSpec`物件，包含Forms服務所需的URI值。
    * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
    * 由方法填充的空`com.adobe.idp.services.holders.BLOBHolder`對象。 這可用來儲存轉譯的PDF表單。
