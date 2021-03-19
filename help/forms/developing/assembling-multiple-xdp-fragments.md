@@ -11,10 +11,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: c4706632-02e5-4510-ad9c-4f732d5fbdad
 docset: aem65
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -74,13 +75,13 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
  }
 ```
 
-`XDP source`標籤指定代表完整XDP文檔的XDP檔案，該檔案可用作添加XDP片段的容器，或作為按順序附加的多個文檔之一。 在這種情況下，XDP文檔僅用作容器（*組合多個XDP片段*&#x200B;中的第一圖）。 也就是說，其他XDP檔案會放在XDP容器中。
+`XDP source`標籤指定代表完整XDP文檔的XDP檔案，該檔案可用作添加XDP片段的容器，或作為按順序附加的多個文檔之一。 在這種情況下，XDP文檔僅用作容器（*組合多個XDP片段*&#x200B;中的第一個圖示）。 也就是說，其他XDP檔案會放在XDP容器中。
 
 對於每個子表單，您可以新增`XDPContent`元素（此元素為選用元素）。 在上述範例中，請注意有三個子表單：`subPatientContact`、`subPatientPhysical`和`subPatientHealth`。 `subPatientPhysical`子表單和`subPatientHealth`子表單都位於相同的XDP檔案tuc018_patient.xdp中。 片段元素指定子表單的名稱，如設計器中所定義。
 
 >[!NOTE]
 >
->如需Assembler服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Assembler服務的詳細資訊，請參見[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
@@ -107,8 +108,8 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
 **建立PDF匯寫程式式用戶端**
 
@@ -138,7 +139,7 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
 
 **檢索已裝配的XDP文檔**
 
-在集合對象中返回已組合的XDP文檔。 重複收集物件，並將XDP檔案儲存為XDP檔案。 您也可以將XDP檔案傳遞至其他AEM Forms服務，例如「輸出」。
+在集合對象中返回已組合的XDP文檔。 重複收集物件，並將XDP檔案儲存為XDP檔案。 您也可以將XDP檔案傳遞至其他AEM Forms服務，例如輸出。
 
 **另請參閱**
 
@@ -146,7 +147,7 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
 
 [使用web service API組合多個XDP片段](assembling-multiple-xdp-fragments.md#assemble-multiple-xdp-fragments-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -208,8 +209,8 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
 
 [組合多個XDP片](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
 [段快速啟動（SOAP模式）:使用Java ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
-[API組合多個XDP片段（包括AEM Forms Java程式庫檔案）設](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-[定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[API組合多個XDP片段(包括AEM FormsJava庫檔案)](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用web service API {#assemble-multiple-xdp-fragments-using-the-web-service-api}組合多個XDP片段
 
@@ -225,17 +226,17 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立PDF匯寫程式式用戶端。
 
    * 使用其預設建構子建立`AssemblerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務，例如`https://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務，如`https://localhost:8080/soap/services/AssemblerService?blob=mtom`。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
    * 獲取`AssemblerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派至`AssemblerServiceClient.ClientCredentials.UserName.UserName`欄位。
+      * 將表AEM單用戶名分配給`AssemblerServiceClient.ClientCredentials.UserName.UserName`欄位。
       * 為`AssemblerServiceClient.ClientCredentials.UserName.Password`欄位分配相應的口令值。
       * 將`HttpClientCredentialType.Basic`常數值指派給`BasicHttpBindingSecurity.Transport.ClientCredentialType`欄位。
       * 將`BasicHttpSecurityMode.TransportCredentialOnly`常數值指派給`BasicHttpBindingSecurity.Security.Mode`欄位。
@@ -243,15 +244,15 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
 1. 參考現有的DDX檔案。
 
    * 使用其建構子建立`BLOB`對象。 `BLOB`物件用來儲存DDX檔案。
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示DDX文檔的檔案位置和開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示DDX文檔的檔案位置和開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
-   * 通過為`MTOM`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`MTOM`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 參考XDP檔案。
 
    * 對於每個輸入的XDP檔案，使用其建構子建立`BLOB`對象。 `BLOB`對象用於儲存輸入檔案。
-   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立&lt;a0/>對象，該字串值表示輸入檔案的檔案位置以及開啟檔案的模式。
+   * 通過調用`System.IO.FileStream`對象的建構子並傳遞一個字串值來建立對象，該字串值表示輸入檔案的檔案位置以及開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
    * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
@@ -287,4 +288,4 @@ DDX文檔包含XDP `result`標籤，該標籤指定結果的名稱。 在這種�
 **另請參閱**
 
 [組合多個XDP片](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
-[段使用MTOM叫用AEM表單](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[段使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
