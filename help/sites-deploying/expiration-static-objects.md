@@ -1,18 +1,19 @@
 ---
 title: 靜態對象的過期
 seo-title: 靜態對象的過期
-description: 瞭解如何設定AEM，讓靜態物件不會過期（在合理的時段內）。
-seo-description: 瞭解如何設定AEM，讓靜態物件不會過期（在合理的時段內）。
+description: 瞭解如何設AEM定靜態物件不會過期（在合理的時段內）。
+seo-description: 瞭解如何設AEM定靜態物件不會過期（在合理的時段內）。
 uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
+feature: 設定
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ ht-degree: 0%
 >
 >此配置與Dispatcher完全不同（且不適用於）。
 >
->Dispatcher的用途是在AEM之前快取資料。
+>Dispatcher的用途是在前面快取資料AEM。
 
 所有非動態且不會隨著時間而變更的檔案都可以且應該快取。 Apache HTTPD伺服器的配置可能類似於下列配置之一——取決於環境：
 
@@ -53,7 +54,7 @@ ht-degree: 0%
    </Location>
    ```
 
-   這可讓中介快取（例如瀏覽器快取）儲存CSS、Javascript、PNG和GIF檔案最多一個月，直到過期為止。 這表示不需要從AEM或webserver要求這些檔案，但可以保留在瀏覽器快取中。
+   這可讓中介快取（例如瀏覽器快取）儲存CSS、Javascript、PNG和GIF檔案最多一個月，直到過期為止。 這表示不需要向或webserver請求，但AEM可以保留在瀏覽器快取中。
 
    網站的其他區段不應快取至作者例項，因為這些區段隨時可能會變更。
 
