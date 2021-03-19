@@ -8,22 +8,23 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 445e24af-cd1a-414d-bd01-9feb6631bbef
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 4%
+source-wordcount: '325'
+ht-degree: 5%
 
 ---
 
 
 # 將HTML5表單儲存為草稿{#saving-an-html-form-as-a-draft}
 
-您可以將HTML5表格儲存為草稿，然後在稍後階段繼續填寫表格。 Forms Portal可讓任何使用者儲存和還原HTML5表格。 要啟用「另存為草稿」功能，請將以下配置添加到配置檔案節點：
+您可以將HTML5表格儲存為草稿，然後在稍後階段繼續填寫表格。 Forms入口網站可讓任何使用者儲存和還原HTML5表單。 要啟用「另存為草稿」功能，請將以下配置添加到配置檔案節點：
 
 ## 「自訂描述檔」可允許「另存為草稿」功能{#custom-profile-to-allow-save-as-draft-feature}
 
-AEM Forms現成可用，提供&#x200B;**另存為草稿**&#x200B;描述檔。 您可以使用「另存為草稿」描述檔來轉換表單，以啟用HTML5表單的草稿功能。 您可以在[Forms Manager](/help/forms/using/introduction-managing-forms.md)中指定表單的HTML演算描述檔。
+現成可用的AEM Forms提供&#x200B;**另存為草稿**&#x200B;描述檔。 您可以使用「另存為草稿」描述檔來轉換表單，以啟用HTML5表單的草稿功能。 您可以在[Forms管理員](/help/forms/using/introduction-managing-forms.md)中指定表單的HTML演算描述檔。
 
 要為現有的[自定義配置檔案](/help/forms/using/custom-profile.md)啟用「另存為草稿」功能，請將以下屬性添加到自定義配置檔案節點：
 
@@ -68,9 +69,9 @@ AEM Forms現成可用，提供&#x200B;**另存為草稿**&#x200B;描述檔。 �
    <td>fp.enablePortalSubmit</td>
    <td>字串</td>
    <td>true</td>
-   <td>在提交後，啟用草稿和表格以列在<br /> Forms Portal Drafts &amp; Submissions元件中</td>
+   <td>使草稿和表格在提交後列在<br />Forms門戶Portal Drafts &amp; Submissions元件中</td>
   </tr>
  </tbody>
 </table>
 
-依預設，AEM Forms會在「發佈」例項的/content/forms/fp節點中，儲存與表單草稿和提交相關聯的使用者資料。 您可以新增自訂儲存提供者，以取得詳細資訊，請參閱[草稿和提交的自訂儲存元件](/help/forms/using/adding-custom-storage-provider-forms.md)。
+依預設，AEM Forms會將與表單草稿和提交相關的使用者資料儲存在「發佈」例項的/content/forms/fp節點中。 您可以新增自訂儲存提供者，以取得詳細資訊，請參閱[草稿和提交的自訂儲存元件](/help/forms/using/adding-custom-storage-provider-forms.md)。
