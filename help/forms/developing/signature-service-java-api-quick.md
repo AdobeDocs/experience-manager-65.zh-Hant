@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -40,11 +41,11 @@ Java API快速入門(SOAP)適用於簽名服務：
 
 [快速入門（SOAP模式）:使用Java API移除數位簽名](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器為基礎。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>「與AEM Forms一起寫程式」中的「快速入門」基於部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}將簽名欄位新增至PDF檔案
 
@@ -547,7 +548,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}數位簽署以XFA為基礎的表單
 
-下列Java程式碼範例會簽署由Forms服務轉譯的互動式表單。 Forms服務傳回的`com.adobe.idp.Document`例項會傳遞至Signature服務。 簽署的互動式表單會儲存為名為&#x200B;*LoanXFASpid.pdf*&#x200B;的PDF檔案。
+下列Java程式碼範例會簽署由Forms服務轉譯的互動式表單。 由Forms服務傳回的`com.adobe.idp.Document`例項會傳遞至簽名服務。 簽署的互動式表單會儲存為名為&#x200B;*LoanXFASpid.pdf*&#x200B;的PDF檔案。
 
 ```java
  /*
