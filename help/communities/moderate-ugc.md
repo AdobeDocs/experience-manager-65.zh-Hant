@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -197,7 +198,7 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 
 ### 預先協調{#premoderation}
 
-當UGC預先協調時，貼文在協調動作核准後，才會顯示在發佈的網站上。 在建立[社群網站](/help/communities/sites-console.md)期間，勾選「內容為預先協調」方塊將啟用整個網站的預先協調。 [](sites-console.md#moderation)將元件放在頁面上後，就可以設定支援協調的元件，以使用其編輯對話方塊中的設定進行預先協調：
+當UGC預先協調時，貼文在協調動作核准後，才會顯示在發佈的網站上。 在建立[社群網站](/help/communities/sites-console.md)期間，勾選「內容為預先協調」方塊將啟用整個網站的預先協調。 [](sites-console.md#moderation)將元件放在頁面上後，就可設定支援協調的元件，以使用其編輯對話方塊中的設定進行預先協調：
 
 * [在「使](comments.md) 用者 [](reviews.md)
 協調 **[!UICONTROL >預先協]** 調」中建 **[!UICONTROL 議和檢閱]**。
@@ -211,7 +212,7 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`。
 
-不過，若要自訂或擴充預設垃圾訊息字詞，請透過[overlay](/help/communities/overlay-comments.md)，在/apps目錄中依預設垃圾訊息字詞的結構建立一組字詞。
+不過，若要自訂或擴充預設垃圾訊息字詞，請透過[overlay](/help/communities/overlay-comments.md)，在/apps目錄中依預設垃圾訊息字詞結構建立一組字詞。
 
 使用者產生的包含垃圾訊息的貼文（跨所有內容類型，例如部落格、論壇和留言）在貼文上方標有「此貼文已分類為垃圾訊息」文字。
 
@@ -223,7 +224,7 @@ UGC的協調有助於識別正面貢獻以及限制負面貢獻（例如垃圾�
 
 1. 轉至`/system/console/configMgr`以開啟[Web主控台](https://localhost:4502/system/console/configMgr)。
 
-1. 找到&#x200B;**AEM Communities Auto Moderation**&#x200B;組態，並加以編輯。
+1. 找到&#x200B;**AEM Communities自動協調**&#x200B;配置並加以編輯。
 1. 添加&#x200B;**[!UICONTROL SpamProcess]**&#x200B;條目。
 
 ![垃圾郵件處理](assets/spamprocess.png)
