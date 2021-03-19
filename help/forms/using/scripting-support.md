@@ -1,18 +1,19 @@
 ---
 title: 支援HTML5表格的指令碼
 seo-title: 支援HTML5表格的指令碼
-description: HTML5 Forms支援的JavaScript、FormCalc屬性和其他方法。
-seo-description: HTML5 Forms支援的JavaScript、FormCalc屬性和其他方法。
+description: HTML5Forms支援的JavaScript、FormCalc屬性和其他方法。
+seo-description: HTML5Forms支援的JavaScript、FormCalc屬性和其他方法。
 uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3909'
+source-wordcount: '3911'
 ht-degree: 6%
 
 ---
@@ -107,7 +108,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>numPages</code></td>
    <td>返回文檔中的頁數。</td>
-   <td>HTML5表格的分頁原則與PDF表格分頁原則不相同。 因此，numPages API可在這兩種情況下傳回不同的值。</td>
+   <td>HTML5表格的編頁原則與PDF forms編頁原則不相同。 因此，numPages API可在這兩種情況下傳回不同的值。</td>
   </tr>
   <tr>
    <td><code>platform</code></td>
@@ -117,7 +118,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法列於下列：
   <tr>
    <td><code>title</code></td>
    <td>指定文檔的標題。 它僅適用於客戶端應用程式。</td>
-   <td>它會傳回HTML檔案的表單標題，而非PDF表單的表單中繼資料標題。</td>
+   <td>它會傳回HTML檔案的表單標題，而不是像PDF forms一樣傳回表單中繼資料標題。</td>
   </tr>
   <tr>
    <td><code>version</code></td>
@@ -1173,7 +1174,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
  </tbody>
 </table>
 
-### Acrobat API支援{#acrobat-api-support}
+### AcrobatAPI支援{#acrobat-api-support}
 
 1. **算術函式**
 
@@ -1202,7 +1203,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
    1. Pow()
    1. Sqrt()
    1. Deg2Rad()
-   1. Rad2Deg()
+   1. Rad2°()
    1. Pi()
 
 1. **財務職能**
@@ -1313,7 +1314,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   <tr>
    <td>app.calculate</td>
    <td>如果為true（預設值），則可執行計算。 若為false，則不允許計算。</td>
-   <td>HTMl5 Forms一律為true。</td>
+   <td>對於HTMl5Forms，一律正確。</td>
   </tr>
   <tr>
    <td>app.constants</td>
@@ -1332,7 +1333,7 @@ FormCalc是XFA專用的語言，用於建立e-form中心邏輯和計算根。 Fo
   </tr>
   <tr>
    <td>app.language</td>
-   <td>執行中Acrobat檢視器的語言。</td>
+   <td>執行中的Acrobat檢視器的語言。</td>
    <td>對於HTMl5表單，一律為"ENU"。</td>
   </tr>
  </tbody>
