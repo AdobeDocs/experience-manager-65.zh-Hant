@@ -1,6 +1,6 @@
 ---
-title: 使用REST請求叫用AEM Forms
-seo-title: 使用REST請求叫用AEM Forms
+title: 使用REST請求調用AEM Forms
+seo-title: 使用REST請求調用AEM Forms
 description: 使用REST請求調用在Workbench中建立的流程。
 seo-description: 使用REST請求調用在Workbench中建立的流程。
 uuid: 3a19a296-f3fe-4e50-9143-b68aed37f9ef
@@ -9,30 +9,31 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2521'
 ht-degree: 0%
 
 ---
 
 
-# 使用REST請求叫用AEM Forms {#invoking-aem-forms-using-rest-requests}
+# 使用REST請求調用AEM Forms{#invoking-aem-forms-using-rest-requests}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-可以配置在Workbench中建立的流程，以便通過「代表性狀態轉移(REST)」請求調用這些流程。 REST請求是從HTML頁面傳送。 也就是說，您可以使用REST請求直接從網頁叫用表單程式。 例如，您可以開啟網頁的新例項。 接著，您可以叫用表單程式，並載入轉譯的PDF檔案，其中包含以HTTP POST請求傳送的資料。
+可以配置在Workbench中建立的流程，以便通過「代表性狀態轉移(REST)」請求調用這些流程。 REST請求是從HTML頁面傳送。 也就是說，您可以使用REST請求直接從網頁叫用Forms進程。 例如，您可以開啟網頁的新例項。 接著，您可以叫用Forms程式，並載入轉譯的PDF檔案，其中包含以HTTPPOST請求傳送的資料。
 
-HTML用戶端有兩種類型。 第一個HTML用戶端是以JavaScript編寫的AJAX用戶端。 第二個用戶端是包含送出按鈕的HTML表單。 基於HTML的客戶端應用程式並非唯一可能的REST客戶端。 任何支援HTTP請求的客戶端應用程式都可以使用REST調用來調用服務。 例如，您可以使用PDF表單的REST呼叫來叫用服務。 （請參閱[從Acrobat叫用MyApplication/EncryptDocument程式。）](#rest-invocation-examples)
+HTML用戶端有兩種類型。 第一個HTML用戶端是AJAX以JavaScript編寫的用戶端。 第二個用戶端是包含送出按鈕的HTML表單。 基於HTML的客戶端應用程式並非唯一可能的REST客戶端。 任何支援HTTP請求的客戶端應用程式都可以使用REST調用來調用服務。 例如，您可以使用PDF表單的REST呼叫來叫用服務。 (請參閱[從Acrobat叫用MyApplication/EncryptDocument進程。)](#rest-invocation-examples)
 
 使用REST請求時，建議您不要直接叫用Forms服務。 請改為叫用在Workbench中建立的流程。 建立用於調用REST的流程時，請使用程式化起點。 在這種情況下，會自動添加REST端點。 有關在Workbench中建立流程的資訊，請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
-當您使用REST叫用服務時，系統會提示您輸入AEM表單的使用者名稱和密碼。 不過，如果您不想指定使用者名稱和密碼，則可停用服務安全性。
+當您使用REST叫用服務時，系統會提示您輸入表AEM單使用者名稱和密碼。 不過，如果您不想指定使用者名稱和密碼，則可停用服務安全性。
 
-要使用REST調用Forms服務（當激活進程時，進程將變為服務），請配置REST端點。 （請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)中的「管理端點」。）
+要使用REST調用Forms服務（當該進程被激活時，該進程將成為服務），請配置REST端點。 （請參閱[管理說明](https://www.adobe.com/go/learn_aemforms_admin_63)中的「管理端點」。）
 
-在配置REST端點後，您可以使用HTTP GET方法或POST方法來叫用Forms服務。
+配置REST端點後，可以使用HTTPGET方法或POST方法調用Forms服務。
 
 ```java
  action="https://hiro-xp:8080/rest/services/[ServiceName]/[OperationName]:[ServiceVersion]" method="post" enctype="multipart/form-data"
@@ -42,7 +43,7 @@ HTML用戶端有兩種類型。 第一個HTML用戶端是以JavaScript編寫的A
 
 ## 支援的資料類型{#supported-data-types}
 
-使用REST請求叫用AEM Forms服務時，支援下列資料類型：
+使用REST請求調用AEM Forms服務時支援以下資料類型：
 
 * Java基本資料類型，例如字串和整數
 * `com.adobe.idp.Document` 資料類型
@@ -51,7 +52,7 @@ HTML用戶端有兩種類型。 第一個HTML用戶端是以JavaScript編寫的A
 
    這些資料類型通常被接受為在Workbench中建立之程式的輸入值。
 
-   如果使用HTTP POST方法調用Froms服務，則會在HTTP請求主體內傳遞參數。 如果AEM Forms服務的簽名有字串輸入參數，請求主體可以包含輸入參數的文字值。 如果服務的簽名定義多個字串參數，請求可遵循HTTP的`application/x-www-form-urlencoded`符號，並使用參數名稱做為表單的欄位名稱。
+   如果使用HTTPPOST方法調用Froms服務，則會在HTTP請求主體內傳遞參數。 如果AEM Forms服務的簽名具有字串輸入參數，請求主體可包含輸入參數的文字值。 如果服務的簽名定義多個字串參數，請求可遵循HTTP的`application/x-www-form-urlencoded`符號，並使用參數名稱做為表單的欄位名稱。
 
    如果Forms服務返回字串參數，則結果是輸出參數的文本表示。 如果服務返回多個字串參數，則結果是XML文檔以下列格式對輸出參數進行編碼：
    ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
@@ -60,11 +61,11 @@ HTML用戶端有兩種類型。 第一個HTML用戶端是以JavaScript編寫的A
    >
    >`output-paramater1`值代表輸出參數名稱。
 
-   如果Forms服務需要`com.adobe.idp.Document`參數，則只能使用HTTP POST方法調用該服務。 如果服務需要一個`com.adobe.idp.Document`參數，HTTP請求主體將成為輸入的Document對象的內容。
+   如果Forms服務需要`com.adobe.idp.Document`參數，則只能使用HTTPPOST方法調用該服務。 如果服務需要一個`com.adobe.idp.Document`參數，HTTP請求主體將成為輸入的Document對象的內容。
 
-   如果AEM Forms服務需要多個輸入參數，HTTP請求主體必須是RFC 1867所定義的多部分MIME訊息。 （RFC 1867是Web瀏覽器將檔案上傳到網站的標準。） 每個輸入參數都必須作為多部分消息的單獨部分發送，並以`multipart/form-data`格式編碼。 每個部件的名稱必須與參數的名稱匹配。
+   如果AEM Forms服務需要多個輸入參數，則HTTP請求主體必須是由RFC 1867定義的多部分MIME消息。 （RFC 1867是Web瀏覽器將檔案上傳到網站的標準。） 每個輸入參數都必須作為多部分消息的單獨部分發送，並以`multipart/form-data`格式編碼。 每個部件的名稱必須與參數的名稱匹配。
 
-   清單和地圖也會用作在Workbench中建立的AEM Forms流程的輸入值。 因此，在使用REST請求時，您可以使用這些資料類型。 不支援Java陣列，因為它們不會用作AEM Forms程式的輸入值。
+   清單和地圖也會用作在Workbench中建立的AEM Forms程式的輸入值。 因此，在使用REST請求時，您可以使用這些資料類型。 不支援Java陣列，因為它們不用作AEM Forms進程的輸入值。
 
    如果輸入參數是清單，REST客戶端可以通過多次指定該參數來發送該參數（對於清單中的每個項，一次）。 例如，如果A是文檔清單，則輸入必須是由多個名為A的部件組成的多部件消息。在這種情況下，每個名為A的部件都將成為輸入清單中的項目。 如果B是字串清單，則輸入可以是`application/x-www-form-urlencoded`訊息，包含多個名為B的欄位。在這種情況下，每個名為B的表單欄位都會變成輸入清單中的項目。
 
@@ -91,9 +92,9 @@ HTML用戶端有兩種類型。 第一個HTML用戶端是以JavaScript編寫的A
 
 ## 非同步調用{#asynchronous-invocations}
 
-有些AEM Forms服務（例如以人為中心的長期流程）需要很長的時間才能完成。 這些服務可以以非阻塞方式非同步調用。 （請參閱[叫用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。）
+一些AEM Forms服務，如以人為中心的長期流程，需要很長的時間才能完成。 這些服務可以以非阻塞方式非同步調用。 （請參閱[叫用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。）
 
-AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`取代`services`，如下列範例所示。
+在呼叫URL中以`async_invoke`取代`services`，以非同步方式呼叫AEM Forms服務，如下列範例所示。
 
 ```java
  http://localhost:8080/rest/async_invoke/SomeService. SomeOperation?integer_input_variable=123&string_input_variable=abc
@@ -147,13 +148,13 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 ## 安全性和身份驗證{#security-and-authentication}
 
-若要為REST呼叫提供安全傳輸，AEM Forms管理員可在代管AEM Forms的J2EE應用程式伺服器上啟用HTTPS通訊協定。 此組態是J2EE應用程式伺服器專用的；它不是表單伺服器組態的一部分。
+為了為REST調用提供安全傳輸，表AEM單管理員可以在托管AEM Forms的J2EE應用程式伺服器上啟用HTTPS協定。 此組態是J2EE應用程式伺服器專用的；它不是表單伺服器組態的一部分。
 
 >[!NOTE]
 >
 >身為想要透過REST端點公開您程式的Workbench開發人員，請記住XSS弱點問題。 XSS弱點可用來竊取或操縱Cookie、修改內容的呈現方式，以及危害機密資訊。 如果存在XSS弱點，建議您使用額外的輸入與輸出資料驗證規則來擴充程式邏輯。
 
-## 支援REST呼叫{#aem-forms-services-that-support-rest-invocation}的AEM Forms服務
+## AEM Forms支援REST調用{#aem-forms-services-that-support-rest-invocation}的服務
 
 雖然建議您叫用使用Workbench建立的程式，而非直接使用服務，但是有些AEM Forms服務確實支援REST呼叫。 建議您直接叫用程式而不是直接叫用服務的原因，是因為叫用程式更有效。 請考慮以下情況。 假設您要從REST客戶端建立策略。 也就是說，您希望REST客戶端定義策略名稱、離線租用期間等值。
 
@@ -163,7 +164,7 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 這樣，您就不必建立包含操作所需的複雜資料類型的REST調用請求。 該流程定義了複雜的資料類型，您從REST客戶端所做的就是調用該流程並傳遞基本資料類型。 有關使用REST調用進程的資訊，請參見[使用REST調用MyApplication/EncryptDocument進程。](#rest-invocation-examples)
 
-下列清單會指定支援直接REST呼叫的AEM Forms服務。
+以下清單指定了支援直接調用REST的AEM Forms服務。
 
 * Distiller服務
 * Rights Management服務
@@ -175,19 +176,19 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 提供了以下REST調用示例：
 
-* 將布林值傳入AEM Forms程式
-* 將日期值傳入AEM Forms程式
-* 將檔案傳送至AEM Forms程式
+* 將布爾值傳遞至AEM Forms進程
+* 將日期值傳遞至AEM Forms流程
+* 將檔案傳遞至AEM Forms程式
 * 將檔案和文字值傳遞至AEM Forms程式
-* 將列舉值傳遞至AEM Forms程式
+* 將枚舉值傳遞到AEM Forms進程
 * 使用REST調用MyApplication/EncryptDocument進程
-* 從Acrobat叫用MyApplication/EncryptDocument程式
+* 從Acrobat調用MyApplication/EncryptDocument進程
 
    每個範例都示範將不同的資料類型傳遞至AEM Forms程式
 
 **將布爾值傳遞至流程**
 
-下列HTML範例會將兩個`Boolean`值傳遞給名為`RestTest2`的AEM Forms程式。 調用方法的名稱為`invoke` ，版本為1.0。請注意，已使用HTML Post方法。
+以下HTML示例將兩個`Boolean`值傳遞給名為`RestTest2`的AEM Forms進程。 調用方法的名稱為`invoke` ，版本為1.0。請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -207,7 +208,7 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 **將日期值傳遞至流程**
 
-下列HTML範例會將日期值傳遞至名為`SOAPEchoService`的AEM Forms程式。 調用方法的名稱為`echoCalendar`。 請注意，已使用HTML `Post`方法。
+以下HTML示例將日期值傳遞給名為`SOAPEchoService`的AEM Forms進程。 調用方法的名稱為`echoCalendar`。 請注意，已使用HTML `Post`方法。
 
 ```html
  <html>
@@ -226,7 +227,7 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 **將檔案傳遞至流程**
 
-以下HTML範例會叫用名為`MyApplication/EncryptDocument`的AEM Forms程式，此程式需要PDF檔案。 如需此程式的詳細資訊，請參閱[使用MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)叫用AEM表單。
+以下HTML範例會叫用名為`MyApplication/EncryptDocument`的AEM Forms程式，此程式需要PDF檔案。 如需此程式的詳細資訊，請參閱[使用MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)叫用AEM Forms。
 
 ```html
  <html>
@@ -246,7 +247,7 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 **將檔案和文字值傳遞至程式**
 
-以下HTML範例會叫用名為`RestTest3`的AEM Forms程式，此程式需要一個檔案和兩個文字值。 請注意，已使用HTML Post方法。
+以下HTML示例調用名為`RestTest3`的AEM Forms進程，該進程需要一個文檔和兩個文本值。 請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -268,7 +269,7 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 **將枚舉值傳遞到進程**
 
-以下HTML範例會叫用名為`SOAPEchoService`的AEM Forms程式，該程式需要列舉值。 請注意，已使用HTML Post方法。
+以下HTML示例調用名為`SOAPEchoService`的AEM Forms進程，該進程需要枚舉值。 請注意，已使用HTML Post方法。
 
 ```html
  <html>
@@ -287,11 +288,11 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 **使用REST調用MyApplication/EncryptDocument進程**
 
-您可以使用REST來叫用名為&#x200B;*MyApplication/EncryptDocument*&#x200B;的AEM Forms短期程式。
+您可以使用REST調用名為&#x200B;*MyApplication/EncryptDocument*&#x200B;的AEM Forms短期進程。
 
 >[!NOTE]
 >
->此程式不以現有的AEM Forms程式為基礎。 要跟隨代碼示例，請使用工作台建立名為`MyApplication/EncryptDocument`的流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此程式不基於現有的AEM Forms程式。 要跟隨代碼示例，請使用工作台建立名為`MyApplication/EncryptDocument`的流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
 
 調用此進程時，它執行以下操作：
 
@@ -315,9 +316,9 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
     </body>
    ```
 
-**從Acrobat叫用MyApplication/EncryptDocument程式** {#invoke-process-acrobat}
+**從Acrobat調用MyApplication/EncryptDocument進程** {#invoke-process-acrobat}
 
-您可以使用REST要求從Acrobat叫用表單程式。 例如，您可以叫用&#x200B;*MyApplication/EncryptDocument*&#x200B;程式。 若要從Acrobat叫用表單程式，請在Designer中的XDP檔案上放置送出按鈕。 （請參閱[設計人員說明](https://www.adobe.com/go/learn_aemforms_designer_63)。）
+您可以使用REST請求從Acrobat調用Forms進程。 例如，您可以叫用&#x200B;*MyApplication/EncryptDocument*&#x200B;程式。 要從Acrobat調用Forms進程，請在Designer中的XDP檔案上放置一個提交按鈕。 （請參閱[設計人員說明](https://www.adobe.com/go/learn_aemforms_designer_63)。）
 
 指定URL以叫用按鈕的「送出至URL *」欄位中的程式，如下圖所示。*
 
@@ -325,4 +326,4 @@ AEM Forms服務可以非同步呼叫，方法是在呼叫URL中以`async_invoke`
 
 如果程式需要PDF檔案作為輸入值，請確定您以PDF格式提交表單，如上圖所示。 此外，若要成功叫用程式，程式必須傳回PDF檔案。 否則，Acrobat無法處理返回值，並會出現錯誤。 您不必指定輸入流程變數的名稱。 例如，*MyApplication/EncryptDocument*&#x200B;程式具有名為`inDoc`的輸入變數。 只要表單已提交為PDF，您就不需要指定inDoc。
 
-您也可以以XML格式將表單資料提交至表單流程，若要提交XML資料，請確定`Submit As`下拉式清單指定XML。 由於程式的返回值必須是PDF檔案，因此PDF檔案會顯示在Acrobat中。
+您也可以將表單資料以XML格式提交至Forms流程，若要提交XML資料，請確定`Submit As`下拉式清單指定XML。 由於流程的返回值必須是PDF文檔，因此PDF文檔將顯示在Acrobat。
