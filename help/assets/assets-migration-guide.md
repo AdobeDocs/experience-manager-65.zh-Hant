@@ -2,10 +2,11 @@
 title: 大量移轉資產
 description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及啟用資產以發佈例項。
 contentOwner: AG
+role: 架構師、管理員
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1801'
 ht-degree: 8%
 
 ---
@@ -21,10 +22,10 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->下列資產移轉工具不屬於[!DNL Experience Manager],Adobe不支援：
+>下列資產移轉工具不屬於[!DNL Experience Manager]，不受Adobe支援：
 >
 >* ACS AEM Tools Tag Maker
->* ACS AEM工具CSV資產匯入工具
+>* ACS工AEM具CSV資產匯入工具
 >* ACS Commons Bulk Workflow Manager
 >* ACS Commons Fast Action Manager
 >* 合成工作流程
@@ -62,7 +63,7 @@ ht-degree: 8%
 
 #### 透過HTTP {#pushing-through-http}傳送
 
-Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是一個小型Java應用程式，可從一個目錄將所有資產載入[!DNL Experience Manager]部署的另一個目錄。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫中，而不是Glutton。
+Adobe的Managed Services團隊使用名為Glutton的工具，將資料載入客戶環境。 Glutton是一個小型Java應用程式，可從一個目錄將所有資產載入[!DNL Experience Manager]部署的另一個目錄。 您也可以使用諸如Perl指令碼之類的工具將資產發佈到儲存庫中，而不是Glutton。
 
 使用推送https的方法有兩個主要的缺點：
 
@@ -73,13 +74,13 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 #### 從本地檔案系統{#pulling-from-the-local-filesystem}中讀取
 
-[ACS AEM Tools CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html)會從CSV檔案中提取資產，以匯入資產。 Experience Manager Asset Manager API可用來將資產匯入系統並套用已設定的中繼資料屬性。 理想情況下，資產會透過網路檔案載入或透過外部磁碟機載入伺服器。
+[ACS AEM Tools CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html)從CSV檔案中提取資產，以匯入資產。 Experience Manager資產管理器API可用來將資產匯入系統並套用已設定的中繼資料屬性。 理想情況下，資產會透過網路檔案載入或透過外部磁碟機載入伺服器。
 
 由於資產不需要透過網路傳輸，因此整體效能會大幅提升，而且通常認為此方法是將資產載入儲存庫的最有效方式。 此外，由於此工具支援中繼資料擷取，因此您可以在單一步驟中匯入所有資產和中繼資料，而不是建立第二個步驟，以透過個別工具套用中繼資料。
 
 ### 處理轉譯{#processing-renditions}
 
-將資產載入系統後，您需要透過[!UICONTROL DAM更新資產]工作流程處理資產，以擷取中繼資料並產生轉譯。 在執行此步驟之前，您需要複製並修改[!UICONTROL DAM更新資產]工作流程，以符合您的需求。 現成可用的工作流程包含許多您不需要的步驟，例如產生動態媒體PTIFF或[!DNL InDesign Server]整合。
+將資產載入系統後，您需要透過[!UICONTROL DAM更新資產]工作流程處理資產，以擷取中繼資料並產生轉譯。 在執行此步驟之前，您需要複製並修改[!UICONTROL DAM更新資產]工作流程，以符合您的需求。 現成可用的工作流程包含許多您不需要的步驟，例如Dynamic MediaPTIFF產生或[!DNL InDesign Server]整合。
 
 根據您的需求設定工作流程後，您有兩個執行工作流程的選項：
 
@@ -88,7 +89,7 @@ Adobe的「受管理服務」團隊使用名為Glutton的工具，將資料載�
 
 ### 啟動資產{#activating-assets}
 
-對於具有發佈層的部署，您需要將資產啟動至發佈群。 雖然Adobe建議執行多個單一發佈例項，但將所有資產複製至單一發佈例項，然後複製該例項最有效率。 在啟動大量資產時，在觸發樹狀結構啟動後，您可能需要進行干預。 原因如下：當觸發啟動時，項目會新增至Sling工作／事件佇列。 當此佇列的大小開始超過約40,000個項目後，處理速度大幅降低。 當此隊列的大小超過100,000個項目後，系統穩定性就會開始受到影響。
+對於具有發佈層的部署，您需要將資產啟動至發佈群。 雖然Adobe建議執行多個單一發佈例項，但將所有資產複製至單一發佈例項，然後複製該例項最有效。 在啟動大量資產時，在觸發樹狀結構啟動後，您可能需要進行干預。 原因如下：當觸發啟動時，項目會新增至Sling工作／事件佇列。 當此佇列的大小開始超過約40,000個項目後，處理速度大幅降低。 當此隊列的大小超過100,000個項目後，系統穩定性就會開始受到影響。
 
 要解決此問題，可以使用[Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)管理資產複製。 這樣不需使用Sling佇列，降低開銷，同時可調節工作負載，以防止伺服器過載。 使用FAM管理複製的範例顯示在功能的檔案頁面上。
 
