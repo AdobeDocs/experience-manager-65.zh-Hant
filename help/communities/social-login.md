@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 6d0ff6ae47688ba7f0e071bad40808fb3466246f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2803'
+source-wordcount: '2804'
 ht-degree: 1%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 1%
 
 # 使用Facebook和Twitter {#social-login-with-facebook-and-twitter}進行社交登入
 
-社交登入是一種功能，可讓網站訪客選擇使用其Facebook或Twitter帳戶登入。 因此，請在其AEM會員個人檔案中加入允許的Facebook或Twitter資料。
+社交登入是一種功能，可讓網站訪客選擇使用其Facebook或Twitter帳戶登入。 因此，在其會員個人檔案中加入允許的FacebookAEM或Twitter資料。
 
 ![socialloginweretail](assets/socialloginweretail.png)
 
@@ -32,7 +33,7 @@ ht-degree: 1%
 
 所需步驟包括：
 
-1. [對所有AEM發](#adobe-granite-oauth-authentication-handler) 布例項啟用OAuth驗證。
+1. [對所有發](#adobe-granite-oauth-authentication-handler) 布例項啟AEM用OAuth驗證。
 
    未啟用OAuth時，嘗試登入失敗。
 
@@ -54,11 +55,11 @@ ht-degree: 1%
 
 1. **Scope** （權限）會指定應用程式可請求的資料。
 
-   * 依預設，Facebook和Twitter [Adobe Granite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項會在其範圍內包含基本應用程式權限。
+   * 依預設，Facebook和Twitter [AdobeGranite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項會在其範圍內包含基本應用程式權限。
 
 1. **Fields** (params)指定使用URL參數請求的實際資料。
 
-   * 這些欄位在[AEM Communities Facebook OAuth Provider](#aem-communities-facebook-oauth-provider)和[AEM Communities Twitter OAuth Provider](#aem-communities-twitter-oauth-provider)中指定。
+   * 這些欄位在[AEM CommunitiesFacebook OAuth提供者](#aem-communities-facebook-oauth-provider)和[AEM CommunitiesTwitter OAuth提供者](#aem-communities-twitter-oauth-provider)中指定。
    * 預設欄位適用於大多數使用案例，但可加以修改。
 
 ## Facebook登入{#facebook-login}
@@ -66,11 +67,11 @@ ht-degree: 1%
 ### Facebook API版本{#facebook-api-version}
 
 社交登入和we-retail Facebook範例是在Facebook Graph API 1.0版時開發的。
-自AEM 6.4 GA和AEM 6.3 SP1社交登入已更新，可與較新的Facebook Graph API 2.5版本搭配使用。
+自6.AEM4 GA和6.3 SP1的社交登入已更新，可搭配較新的Facebook Graph API 2.5版本使用。
 
 >[!NOTE]
 >
->對於舊版AEM，如果您在記錄&#x200B;**中遇到例外情況，請針對該AEM版本升級至最新的CFP。**
+>對於舊AEM版，如果您在記錄&#x200B;**中遇到例外情況無法從此**&#x200B;擷取Token，請升級至該版本的最新CFPAEM。
 
 如需Facebook圖形API版本資訊，請參閱[Facebook API changelog](https://developers.facebook.com/docs/apps/changelog)。
 
@@ -96,12 +97,12 @@ ht-degree: 1%
 
 建立應用程式後，請找出&#x200B;**[!UICONTROL App ID]**&#x200B;和&#x200B;**[!UICONTROL App Secret]**&#x200B;設定。 此資訊是設定[Facebook雲端服務](#createafacebookcloudservice)時的必要資訊。
 
-### 建立Facebook Connect Cloud服務{#create-a-facebook-connect-cloud-service}
+### 建立Facebook ConnectCloud Service{#create-a-facebook-connect-cloud-service}
 
-[Adobe Granite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項會透過建立雲端服務組態來實例化，以識別新增使用者的Facebook應用程式和成員群組。
+[AdobeGranite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項會透過建立雲端服務設定實例化，以識別新增使用者的Facebook應用程式和成員群組。
 
-1. 在AEM作者例項上，以管理員權限登入。
-1. 在全域導覽中，選取「工具&#x200B;**** > **[!UICONTROL 雲端服務]** > **[!UICONTROL Facebook Social登入設定]**」。
+1. 在作AEM者例項上，以管理員權限登入。
+1. 在全域導覽中，選取「工具&#x200B;**** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Facebook Social登入設定]**」。
 1. 選擇配置&#x200B;**[!UICONTROL 上下文路徑]**。
 
    **[!UICONTROL 上]** 下文路徑應與您在建立／編輯社群網站時選取的雲端設定路徑相同。
@@ -118,9 +119,9 @@ ht-degree: 1%
    ![fbsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
 
    * **[!UICONTROL Title]** (*必要*)輸入識別Facebook應用程式的顯示標題。建議您為Facebook應用程式使用與&#x200B;*顯示名稱*&#x200B;輸入的相同名稱。
-   * **[!UICONTROL 應用程式ID/API金鑰]** (必&#x200B;*要*)輸入 ***Facebook應*** 用程式的應用程式ID。這會識別從對話方塊建立的[Adobe Granite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)例項。
+   * **[!UICONTROL 應用程式ID/API金鑰]** (必&#x200B;*要*)輸入 ***Facebook應*** 用程式的應用程式ID。這會識別從對話方塊建立的[AdobeGranite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)例項。
    * **[!UICONTROL App Secret]** (必&#x200B;*要*)輸入 ***Facebook應*** 用程式的App Secret。
-   * **[!UICONTROL 建立]** 使用者如果勾選，以Facebook帳戶登入將會建立AEM使用者項目，並將其新增為所選使用者群組的成員。已勾選預設值（強烈建議）。
+   * **[!UICONTROL 建]** 立使用者若勾選，使用Facebook帳戶登入將會建立AEM使用者項目，並將其新增為所選使用者群組的成員。已勾選預設值（強烈建議）。
    * **[!UICONTROL 遮色片使用者ID]**:保持未選定狀態。
    * **[!UICONTROL 範圍電子郵件]**:應從Facebook擷取使用者的電子郵件ID。
    * **[!UICONTROL 添加到用]** 戶組選擇添加用戶組，以為將添加 [用](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) 戶的社區站點選擇一個或多個成員組。
@@ -134,11 +135,11 @@ ht-degree: 1%
 
 
 
-結果會是[Adobe Granite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)執行個體，除非新增其他範圍（權限），否則不需要進一步修改。 預設範圍是Facebook登入的標準權限。 如果需要其他範圍，則需要直接編輯OSGI配置。 如果有修改是透過系統／主控台直接完成，請避免從觸控式使用者介面編輯您的雲端服務設定，以避免覆寫。
+結果是[AdobeGranite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)執行個體，除非新增其他範圍（權限），否則不需要進一步修改。 預設範圍是Facebook登入的標準權限。 如果需要其他範圍，則需要直接編輯OSGI配置。 如果有修改是透過系統／主控台直接完成，請避免從觸控式使用者介面編輯您的雲端服務設定，以避免覆寫。
 
-### AEM Communities Facebook OAuth提供者{#aem-communities-facebook-oauth-provider}
+### AEM CommunitiesFacebook OAuth提供者{#aem-communities-facebook-oauth-provider}
 
-AEM Communities提供者會延伸[Adobe Granite OAuth應用程式和提供者](#adobe-granite-oauth-application-and-provider)例項。
+AEM Communities提供者會擴充[AdobeGranite OAuth應用程式和提供者](#adobe-granite-oauth-application-and-provider)例項。
 
 此提供者需要編輯才能：
 
@@ -147,11 +148,11 @@ AEM Communities提供者會延伸[Adobe Granite OAuth應用程式和提供者](#
 
    * 並非預設允許的所有欄位都包含在內。
 
-如果需要編輯，請在每個AEM發佈例項上：
+如果需要編輯，請在每個發佈例AEM項上：
 
 1. 以管理員權限登入。
 1. 導航至[Web控制台](../../help/sites-deploying/configuring-osgi.md)。 例如，http://localhost:4503/system/console/configMgr。
-1. 尋找AEM Communities Facebook OAuth提供者。
+1. 找到AEM CommunitiesFacebook OAuth提供者。
 1. 選取要開啟以進行編輯的鉛筆圖示。
 
    ![fboauthprov_png](assets/fboauthprov_png.png)
@@ -160,7 +161,7 @@ AEM Communities提供者會延伸[Adobe Granite OAuth應用程式和提供者](#
 
       (*Required*)預設值為&#x200B;*soco -facebook*。 不要編輯。
 
-   * **[!UICONTROL 雲端服務設定]**
+   * **[!UICONTROL Cloud Service設定]**
 
       預設值為 `/etc/  cloudservices /  facebookconnect`. 不要編輯。
 
@@ -214,7 +215,7 @@ Facebook和Twitter的後續步驟相同：
 
 ### 建立Twitter應用程式{#create-a-twitter-app}
 
-必須有已設定的Twitter應用程式，才能啟用Twitter社交登入。
+必須有已設定的Twitter應用程式才能啟用Twitter社交登入。
 
 請依照最新指示，在[https://apps.twitter.com](https://apps.twitter.com/)建立新的Twitter應用程式。
 
@@ -243,17 +244,17 @@ Facebook和Twitter的後續步驟相同：
 
 * **[!UICONTROL 其他權限]**:（可選）選 `Request email addresses from users`擇。
 
-   * 如果未選取，AEM中的使用者設定檔將不包含其電子郵件地址。
+   * 如果未選取此選項，中的使用者設定AEM檔將不包含其電子郵件地址。
    * Twitter的指示說明需要採取的其他步驟。
 
 僅對&#x200B;*[GET帳戶/verify credentials](https://dev.twitter.com/rest/reference/get/account/verify_credentials)*&#x200B;提出REST登入要求。
 
-### 建立Twitter Connect Cloud服務{#create-a-twitter-connect-cloud-service}
+### 建立Twitter連線Cloud Service{#create-a-twitter-connect-cloud-service}
 
-[Adobe Granite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項會透過建立雲端服務組態來實例化，以識別新增使用者的Twitter應用程式和成員群組。
+[AdobeGranite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項會透過建立雲端服務設定來執行個體化，以識別新增使用者的Twitter應用程式和成員群組。
 
 1. 在作者例項上，以管理員權限登入。
-1. 在全域導覽中，選取「工具&#x200B;**** > **[!UICONTROL 雲端服務]** > **[!UICONTROL Twitter Social登入設定]**」。
+1. 在全域導覽中，選擇&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Twitter Social登入設定]**。
 1. 選擇&#x200B;**[!UICONTROL 上下文路徑]**&#x200B;配置。
 
    上下文路徑應與您在建立／編輯社群網站時選取的雲端設定路徑相同。
@@ -275,7 +276,7 @@ Facebook和Twitter的後續步驟相同：
 
    * **[!UICONTROL 消費者金鑰]**
 
-      （*必要*）輸入Twitter應用程式的&#x200B;**消費者(API)金鑰**。 這會識別從對話方塊建立的[Adobe Granite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)例項。
+      （*必要*）輸入Twitter應用程式的&#x200B;**消費者(API)金鑰**。 這會識別從對話方塊建立的[AdobeGranite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider)例項。
 
    * **[!UICONTROL 消費者機密]**
 
@@ -283,7 +284,7 @@ Facebook和Twitter的後續步驟相同：
 
    * **[!UICONTROL 建立使用者]**
 
-      如果勾選，使用Twitter帳戶登入將建立AEM使用者項目，並將其新增為所選使用者群組的成員。 已勾選預設值（強烈建議）。
+      如果勾選，使用Twitter帳戶登入將會建立AEM使用者項目，並將其新增為所選使用者群組的成員。 已勾選預設值（強烈建議）。
 
    * **[!UICONTROL 隱藏使用者 ID]**
 
@@ -298,20 +299,20 @@ Facebook和Twitter的後續步驟相同：
 
 1. 選擇&#x200B;**[!UICONTROL SAVE]**&#x200B;和&#x200B;**[!UICONTROL Publish]**。
 
-結果是不需要進一步修改的[Adobe Granite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)例項。 預設範圍是Twitter登入的標準權限。
+結果是不需要進一步修改的[AdobeGranite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)例項。 預設範圍是Twitter登入的標準權限。
 
-### AEM Communities Twitter OAuth提供者{#aem-communities-twitter-oauth-provider}
+### AEM CommunitiesTwitter OAuth提供者{#aem-communities-twitter-oauth-provider}
 
-AEM Communities設定會延伸[Adobe Granite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項。 此提供者需要編輯才能允許使用者更新。
+AEM Communities配置擴展了[AdobeGranite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)實例。 此提供者需要編輯才能允許使用者更新。
 
-如果需要編輯，請在每個AEM發佈例項上：
+如果需要編輯，請在每個發佈例AEM項上：
 
 1. 以管理員權限登入。
 1. 導航至[Web控制台](../../help/sites-deploying/configuring-osgi.md)。
 
    例如，http://localhost:4503/system/console/configMgr。
 
-1. 尋找AEM Communities Twitter的OAuth提供者。
+1. 尋找AEM CommunitiesTwitter OAuth提供者。
 1. 選取要開啟以進行編輯的鉛筆圖示。
 
    ![twitteroauth_png](assets/twitteroauth_png.png)
@@ -320,13 +321,13 @@ AEM Communities設定會延伸[Adobe Granite OAuth應用程式和Provider](#adob
 
    （*必要*）預設值為&#x200B;*soco -twitter*。 不要編輯。
 
-   * **[!UICONTROL 雲端服務設定]**
+   * **[!UICONTROL Cloud Service設定]**
 
       預設值為&#x200B;*conf。* 不要編輯。
 
    * **[!UICONTROL OAuth提供者服務設定]**
 
-      預設值為`/apps/social/twitterprovider/config/`。 不要編輯。
+      預設值為 `/apps/social/twitterprovider/config/`. 不要編輯。
 
    * **[!UICONTROL 使用者路徑]**
 
@@ -348,7 +349,7 @@ Facebook和Twitter的後續步驟相同：
 
 ## 啟用社交登入{#enable-social-login}
 
-### AEM Communities Sites Console {#aem-communities-sites-console}
+### AEM Communities站台控制台{#aem-communities-sites-console}
 
 一旦配置了雲服務，在社區站點建立[或[管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties)期間，可使用[用戶管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT)設定子面板為社區站點啟用相關的社交登錄設定。](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation)
 
@@ -364,23 +365,23 @@ Facebook和Twitter的後續步驟相同：
 
 ## 測試社交登入{#test-social-login}
 
-* 請確定所有發佈例項上皆已啟用[Adobe Granite OAuth驗證處理常式](#adobe-granite-oauth-authentication-handler)。
+* 請確定所有發佈例項上已啟用[AdobeGranite OAuth驗證處理常式](#adobe-granite-oauth-authentication-handler)。
 * 確保已發佈雲端服務。
 * 確定社群網站已發佈。
 * 在瀏覽器中啟動發佈的網站。
 例如，http://localhost:4503/content/sites/engage/en.html
 * 選擇&#x200B;**[!UICONTROL 登入]**。
-* 選擇「使用Facebook登入」或「使用Twitter登入」。]**]****[!UICONTROL **[!UICONTROL 
+* 選擇「使用Facebook登入」或「使用Twitter登入」。********
 * 如果尚未登入Facebook或Twitter，請使用適當的認證登入。
 * 視Facebook或Twitter應用程式顯示的對話方塊而定，可能需要授與權限。
 * 請注意，頁面頂端的工具列已更新，以反映成功登入。
 * 選擇&#x200B;**[!UICONTROL 配置檔案]**:「設定檔」頁面會顯示使用者的頭像、名字和姓氏。 它也會根據允許的欄位／參數，顯示來自Facebook或Twitter設定檔的資訊。
 
-## AEM Platform OAuth組態{#aem-platform-oauth-configurations}
+## AEM平台OAuth配置{#aem-platform-oauth-configurations}
 
-### Adobe Granite OAuth驗證處理常式{#adobe-granite-oauth-authentication-handler}
+### AdobeGranite OAuth驗證處理常式{#adobe-granite-oauth-authentication-handler}
 
-預設未啟用`Adobe Granite OAuth Authentication Handler`，且必須在所有AEM發佈例項上啟用&#x200B;***。***
+`Adobe Granite OAuth Authentication Handler`預設未啟用，且&#x200B;***必須在所有發佈例AEM項上啟用。***
 
 若要在發佈時啟用驗證處理常式，只要開啟OSGi組態並儲存它：
 
@@ -395,11 +396,11 @@ Facebook和Twitter的後續步驟相同：
 
 >[!CAUTION]
 >
->請小心不要將驗證處理常式與&#x200B;*Adobe Granite OAuth應用程式與Provider*&#x200B;的Facebook或Twitter例項混淆。
+>請注意，請勿將驗證處理常式與&#x200B;*AdobeGranite OAuth應用程式與Provider*&#x200B;的Facebook或Twitter例項混淆。
 
 ![graniteauth1](assets/graniteoauth1.png)
 
-### Adobe Granite OAuth應用程式與提供者{#adobe-granite-oauth-application-and-provider}
+### AdobeGranite OAuth應用程式和提供者{#adobe-granite-oauth-application-and-provider}
 
 建立Facebook或Twitter的雲端服務時，會建立`Adobe Granite OAuth Authentication Handler`例項。
 
@@ -410,7 +411,7 @@ Facebook和Twitter的後續步驟相同：
 
    例如，http://localhost:4503/system/console/configMgr。
 
-1. 找到Adobe Granite OAuth應用程式和供應商。
+1. 找到AdobeGranite OAuth應用程式和提供者。
 
    * 找到&#x200B;**[!UICONTROL Client ID]**&#x200B;符合&#x200B;**[!UICONTROL App ID]**&#x200B;的例項。
 
@@ -440,7 +441,7 @@ Facebook和Twitter的後續步驟相同：
 
    * **[!UICONTROL 群組]**
 
-      (*Recommended*)新增已建立使用者的一或多個成員群組。 對於AEM Communities，建議列出社群網站的成員群組。
+      (*Recommended*)新增已建立使用者的一或多個成員群組。 對於AEM Communities，建議列出社區站點的成員組。
 
    * **[!UICONTROL 回呼 URL]**
 
@@ -491,7 +492,7 @@ Facebook和Twitter的後續步驟相同：
    * 選擇&#x200B;**[!UICONTROL 全部保存]**。
 
 
-* 對於&#x200B;**名稱** `oauthid-123`，請將&#x200B;*123*&#x200B;取代為Facebook ***應用程式ID***&#x200B;或Twitter ***消費者(API)金鑰***，此金鑰是&#x200B;**客戶ID**，在[Adobe Granite OAuth應用程式和提供者](social-login.md#adobe-granite-oauth-application-and-provider)組態中。
+* 對於&#x200B;**名稱** `oauthid-123`，請將&#x200B;*123*&#x200B;取代為Facebook ***應用程式ID***&#x200B;或Twitter ***消費者(API)金鑰***，此金鑰是&#x200B;**客戶ID**&#x200B;在[AdobeGranite OAuth應用程式和提供者](social-login.md#adobe-granite-oauth-application-and-provider)組態中。
 
    ![graniteauth-crxde](assets/graniteoauth-crxde.png)
 
