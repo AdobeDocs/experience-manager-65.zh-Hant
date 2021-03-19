@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '15558'
+source-wordcount: '15559'
 ht-degree: 0%
 
 ---
@@ -20,11 +21,11 @@ ht-degree: 0%
 
 # 使用策略{#protecting-documents-with-policies}保護文檔
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 **關於Document Security Service**
 
-Document Security服務可讓使用者動態地將機密設定套用至Adobe PDF檔案，而且不論檔案的散布範圍有多廣，都能保有檔案的控制權。
+Document Security服務可讓使用者動態地將機密設定套用至Adobe PDF檔案，並維持對檔案的控制，不論檔案散布的範圍有多廣。
 
 Document Security服務可讓使用者控制收件者使用受原則保護PDF檔案的方式，防止資訊擴散到使用者的觸及範圍以外。 使用者可以指定誰可以開啟檔案、限制其使用方式，以及在檔案發佈後監控檔案。 使用者也可以動態控制對受原則保護檔案的存取，甚至可以動態撤銷對檔案的存取。
 
@@ -46,7 +47,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 * 刪除原則。 有關資訊，請參見[刪除策略](protecting-documents-policies.md#deleting-policies)。
 * 套用原則至PDF檔案。 如需詳細資訊，請參閱[套用原則至PDF檔案](protecting-documents-policies.md#applying-policies-to-pdf-documents)。
 * 從PDF檔案移除原則。 如需詳細資訊，請參閱[從PDF檔案移除原則](protecting-documents-policies.md#removing-policies-from-pdf-documents)。
-* 檢查受原則保護的檔案。 如需詳細資訊，請參閱[檢查受原則保護的PDF檔案](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)。
+* Inspect受原則保護的檔案。 如需詳細資訊，請參閱[檢查受原則保護的PDF檔案](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)。
 * 撤銷PDF檔案的存取權。 如需詳細資訊，請參閱[廢止檔案存取權](protecting-documents-policies.md#revoking-access-to-documents)。
 * 恢復對已撤銷文檔的訪問。 如需詳細資訊，請參閱[恢復對已撤銷檔案的存取](protecting-documents-policies.md#reinstating-access-to-revoked-documents)。
 * 建立浮水印。 如需詳細資訊，請參閱[建立浮水印](protecting-documents-policies.md#creating-watermarks)。
@@ -54,7 +55,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 建立策略{#creating-policies}
 
@@ -63,7 +64,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 策略允許您執行以下任務：
 
 * 指定可開啟檔案的個人。 收件者可以屬於您的組織，也可以是您組織外部的。
-* 指定收件者如何使用檔案。 您可以限制存取不同的Acrobat和Adobe Reader功能。 這些功能包括列印和複製文字、新增簽名，以及在檔案中新增註解的功能。
+* 指定收件者如何使用檔案。 您可以限制對不同Acrobat和Adobe Reader功能的存取。 這些功能包括列印和複製文字、新增簽名，以及在檔案中新增註解的功能。
 * 隨時變更存取權與安全性設定，即使在您散發受原則保護的檔案後亦然。
 * 在您散發檔案後，請監控檔案的使用情況。 您可以看到檔案的使用方式以及使用者。 例如，您可以瞭解某人何時開啟檔案。
 
@@ -135,7 +136,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -154,19 +155,19 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 必須將以下JAR檔案添加到項目的類路徑中：
 
 * adobe-rightsmanagement-client.jar
-* namespace.jar（如果AEM Forms部署在JBoss上）
-* jaxb-api.jar（如果AEM Forms部署在JBoss上）
-* jaxb-impl.jar（如果AEM Forms部署在JBoss上）
-* jaxb-libs.jar（如果AEM Forms部署在JBoss上）
-* jaxb-xjc.jar（如果AEM Forms部署在JBoss上）
-* relanchingDatatype.jar（如果AEM Forms部署在JBoss上）
-* xsdlib.jar（如果AEM Forms部署在JBoss上）
+* namespace.jar(如果AEM Forms部署在JBoss上)
+* jaxb-api.jar(如果AEM Forms部署在JBoss上)
+* jaxb-impl.jar(如果AEM Forms部署在JBoss上)
+* jaxb-libs.jar(如果AEM Forms部署在JBoss上)
+* jaxb-xjc.jar(如果AEM Forms部署在JBoss上)
+* relanchingDatatype.jar(如果AEM Forms部署在JBoss上)
+* xsdlib.jar(如果AEM Forms部署在JBoss上)
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-utilities.jar
-* jbossall-client.jar（如果AEM Forms未部署在JBoss上，請使用不同的JAR檔案）
+* jbossall-client.jar(如果AEM Forms未部署在JBoss上，請使用不同的JAR檔案)
 
-如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立Document Security Client API物件**
 
@@ -197,7 +198,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需您可設定之其他屬性的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`Policy`介面說明。
+>有關您可以設定的其他屬性的資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`Policy`介面說明。
 
 **建立策略條目**
 
@@ -205,7 +206,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 * 建立並註冊原則項目，讓群組只能線上上檢視檔案，並禁止收件者複製檔案。
 * 將策略條目附加到策略。
-* 使用Acrobat以原則保護檔案。
+* 使用Acrobat，確保檔案與政策一致。
 
 這些動作會導致收件者只能線上檢視檔案，而無法複製檔案。 在檔案移除安全性之前，檔案仍保有安全性。
 
@@ -253,7 +254,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
       * 代表要註冊的策略的`Policy`對象。
    * 一個字串值，它表示策略所屬的策略集。
 
-   如果您在連線設定中使用AEM Forms管理員帳戶來建立`DocumentSecurityClient`物件，則在您叫用`registerPolicy`方法時指定原則集名稱。 如果為策略集傳遞`null`值，則策略是在管理員&#x200B;*My Policys*&#x200B;策略集中建立的。
+   如果在連接設AEM置中使用表單管理員帳戶建立`DocumentSecurityClient`對象，則在調用`registerPolicy`方法時指定策略集名稱。 如果為策略集傳遞`null`值，則策略是在管理員&#x200B;*My Policys*&#x200B;策略集中建立的。
 
    如果您在連接設定中使用Document Security用戶，則可以調用僅接受策略的多載`registerPolicy`方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為&#x200B;*My Policys*&#x200B;的策略集中。 如果不想將新策略添加到此策略集，則在調用`registerPolicy`方法時指定策略集名稱。
 
@@ -275,17 +276,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -296,7 +297,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
    * 使用其建構子建立`PolicySpec`對象。
    * 為`PolicySpec`物件的`name`資料成員指派字串值，以設定原則的名稱。
    * 為`PolicySpec`物件的`description`資料成員指派字串值，以設定原則的說明。
-   * 通過為`PolicySpec`對象的`policySetName`資料成員分配字串值來設定策略所屬的策略集。 必須指定現有策略集名稱。 （可以為此參數值指定`null`，這將導致策略被添加到&#x200B;*我的策略*。）
+   * 通過為`PolicySpec`對象的`policySetName`資料成員分配字串值來設定策略所屬的策略集。 必須指定現有策略集名稱。 （可以為此參數值指定`null`，以導致策略被添加到&#x200B;*我的策略*。）
    * 為`PolicySpec`物件的`offlineLeasePeriod`資料成員指派整數值，以設定原則的離線租用期間。
    * 使用代表PDRL XML資料的字串值，設定`PolicySpec`物件的`policyXml`資料成員。 要執行此任務，請使用。NET `StreamReader`對象的建構子建立一個對象。 將表示策略的PDRL XML檔案的位置傳遞給`StreamReader`建構子。 接著，呼叫`StreamReader`物件的`ReadLine`方法，並將傳回值指派給字串變數。 重複`StreamReader`物件，直到`ReadLine`方法傳回null。 將字串變數指派給`PolicySpec`物件的`policyXml`資料成員。
 
@@ -311,7 +312,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
    * 代表要註冊的策略的`PolicySpec`對象。
    * 一個字串值，它表示策略所屬的策略集。 您可以指定`null`值，以將策略添加到&#x200B;*MyPolices*&#x200B;策略集。
 
-   如果您在連線設定中使用AEM Forms管理員帳戶來建立`DocumentSecurityClient`物件，請在叫用`registerPolicy`方法時指定原則集名稱。
+   如果在連接設AEM置中使用表單管理員帳戶建立`DocumentSecurityClient`對象，請在調用`registerPolicy`方法時指定策略集名稱。
 
    如果您在連接設定中使用Document SecurityDocument Security用戶，則可以調用僅接受策略的多載`registerPolicy`方法。 也就是說，您不需要指定原則集名稱。 但是，策略將添加到名為&#x200B;*My Policys*&#x200B;的策略集中。 如果不想將新策略添加到此策略集，則在調用`registerPolicy`方法時指定策略集名稱。
 
@@ -334,7 +335,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-1}摘要
 
@@ -366,7 +367,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需您可設定之其他屬性的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`Policy`介面說明。
+>有關您可以設定的其他屬性的資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`Policy`介面說明。
 
 **更新原則**
 
@@ -415,17 +416,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`RightsManagementServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -459,7 +460,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-2}摘要
 
@@ -479,7 +480,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **刪除原則**
 
-要刪除策略，請指定要刪除的策略和策略所屬的策略集。 使用其設定來叫用AEM Forms的使用者必須擁有刪除原則的權限；否則會發生異常。 同樣地，如果您嘗試刪除不存在的策略，則會出現例外。
+要刪除策略，請指定要刪除的策略和策略所屬的策略集。 設定被用於調用AEM Forms的用戶必須具有刪除策略的權限；否則會發生異常。 同樣地，如果您嘗試刪除不存在的策略，則會出現例外。
 
 ### 使用Java API {#delete-policies-using-the-java-api}刪除策略
 
@@ -518,17 +519,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`RightsManagementServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -552,13 +553,13 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 您可以套用原則至PDF檔案，以保護檔案的安全。 將原則套用至PDF檔案，即可限制對檔案的存取。 如果文檔已使用策略保護，則不能將策略應用於文檔。
 
-當檔案開啟時，您也可以限制對Acrobat和Adobe Reader功能的存取，包括列印和複製文字、進行變更，以及在檔案中新增簽名和註解的功能。 此外，當您不再希望使用者存取受原則保護的PDF檔案時，也可以撤銷該檔案。
+當檔案開啟時，您也可以限制對Acrobat和Adobe Reader功能的存取，包括列印和複製文字、進行變更，以及在檔案中新增簽名和註解的能力。 此外，當您不再希望使用者存取受原則保護的PDF檔案時，也可以撤銷該檔案。
 
 在分發受原則保護的檔案後，您可以監控檔案的使用情況。 也就是說，您可以看到檔案的使用方式以及使用者。 例如，您可以瞭解某人何時開啟檔案。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-3}摘要
 
@@ -592,7 +593,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -647,7 +648,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -661,17 +662,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`RightsManagementServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -722,7 +723,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-4}摘要
 
@@ -748,7 +749,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **從PDF檔案移除原則**
 
-只要在連線設定中指定管理員，您就可以從受原則保護的PDF檔案中移除原則。 否則，用於保護文檔的策略必須包含`SWITCH_POLICY`權限，才能從PDF文檔中刪除策略。 此外，在AEM Forms連線設定中指定的使用者也必須擁有該權限。 否則，會拋出異常。
+只要在連線設定中指定管理員，您就可以從受原則保護的PDF檔案中移除原則。 否則，用於保護文檔的策略必須包含`SWITCH_POLICY`權限，才能從PDF文檔中刪除策略。 此外，在AEM Forms連接設定中指定的用戶也必須具有該權限。 否則，會拋出異常。
 
 **儲存不安全的PDF檔案**
 
@@ -756,7 +757,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -806,17 +807,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -851,7 +852,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 廢止檔案存取權{#revoking-access-to-documents}
 
@@ -861,7 +862,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-5}摘要
 
@@ -896,7 +897,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -949,17 +950,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件
 
    * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -995,7 +996,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 恢復對已撤銷文檔的訪問{#reinstating-access-to-revoked-documents}
 
@@ -1003,7 +1004,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-6}摘要
 
@@ -1032,7 +1033,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1081,17 +1082,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -1121,17 +1122,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 檢查受原則保護的PDF檔案{#inspecting-policy-protected-pdf-documents}
 
 您可以使用Document Security Service API（Java和web service）來檢查受原則保護的PDF檔案。 檢查受原則保護的PDF檔案會傳回受原則保護的PDF檔案的相關資訊。 例如，您可以確定用於保護文檔的策略以及保護文檔的日期。
 
-如果您的LiveCycle版本為8.x或舊版，則無法執行此工作。 AEM Forms中新增了檢查受原則保護檔案的支援。 如果您嘗試使用LiveCycle 8.x（或更早版本）檢查受原則保護的檔案，則會擲回例外。
+如果您的LiveCycle版本為8.x或更早版本，則無法執行此任務。 AEM Forms增加了對檢查受原則保護檔案的支援。 如果您嘗試使用LiveCycle8.x（或更舊版本）檢查受原則保護的檔案，則會擲回例外。
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-7}摘要
 
@@ -1154,7 +1155,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 若要檢查受原則保護的檔案，請擷取它。 如果您嘗試檢查未使用策略保護或已撤銷的文檔，則會拋出例外。
 
-**檢查檔案**
+**Inspect檔案**
 
 擷取受原則保護的檔案後，即可加以檢查。
 
@@ -1168,17 +1169,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Java API {#inspect-policy-protected-pdf-documents-using-the-java-api}檢查受原則保護的PDF檔案
+### Inspect使用Java API {#inspect-policy-protected-pdf-documents-using-the-java-api}保護原則的PDF檔案
 
-使用Document Security Service API(Java)檢查受原則保護的PDF檔案：
+Inspect使用Document Security Service API(Java)提供受原則保護的PDF檔案：
 
 1. 包含專案檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-rightsmanagement-client.jar。 如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-rightsmanagement-client.jar。 有關這些檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 建立Document Security Client API物件。
 
@@ -1190,10 +1191,10 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
    * 使用其建構函式建立`java.io.FileInputStream`物件，以代表受原則保護的PDF檔案。 傳遞指定PDF檔案位置的字串值。
    * 使用其建構子並傳遞`java.io.FileInputStream`對象，建立`com.adobe.idp.Document`對象。
 
-1. 檢查檔案。
+1. Inspect。
 
    * 調用`RightsManagementClient`物件的`getDocumentManager`方法，以建立`DocumentManager`物件。
-   * 調用`LicenseManager`物件的`inspectDocument`方法，以檢查受原則保護的檔案。 傳遞包含受原則保護PDF檔案的`com.adobe.idp.Document`物件。 此方法傳回包含受原則保護檔案相關資訊的`RMInspectResult`物件。
+   * Inspect透過叫用`LicenseManager`物件的`inspectDocument`方法，來保護原則檔案。 傳遞包含受原則保護PDF檔案的`com.adobe.idp.Document`物件。 此方法傳回包含受原則保護檔案相關資訊的`RMInspectResult`物件。
 
 1. 取得受原則保護檔案的相關資訊。
 
@@ -1205,9 +1206,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 * &quot;快速啟動（SOAP模式）:使用Java API檢查受原則保護的PDF檔案」
 
-### 使用web service API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}檢查受原則保護的PDF檔案
+### Inspect使用web service API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}的受原則保護PDF檔案
 
-使用Document Security Service API(web service)檢查受原則保護的PDF檔案：
+Inspect使用Document Security Service API(web service)提供受原則保護的PDF檔案：
 
 1. 包含專案檔案。
 
@@ -1215,17 +1216,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`RightsManagementServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -1239,9 +1240,9 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
    * 呼叫`System.IO.FileStream`物件的`Read`方法，以串流資料填入位元組陣列。 傳遞要讀取的位元組陣列、起始位置和串流長度。
    * 通過為`MTOM`對象的欄位分配位元組陣列的內容來填充`BLOB`對象。
 
-1. 檢查檔案。
+1. Inspect。
 
-   調用`RightsManagementServiceClient`物件的`inspectDocument`方法，以檢查受原則保護的檔案。 傳遞包含受原則保護PDF檔案的`BLOB`物件。 此方法傳回包含受原則保護檔案相關資訊的`RMInspectResult`物件。
+   Inspect透過叫用`RightsManagementServiceClient`物件的`inspectDocument`方法，來保護原則檔案。 傳遞包含受原則保護PDF檔案的`BLOB`物件。 此方法傳回包含受原則保護檔案相關資訊的`RMInspectResult`物件。
 
 1. 取得受原則保護檔案的相關資訊。
 
@@ -1258,7 +1259,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 建立水印{#creating-watermarks}
 
@@ -1270,7 +1271,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-8}摘要
 
@@ -1387,7 +1388,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1435,17 +1436,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`RightsManagementServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -1477,7 +1478,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 修改水印{#modifying-watermarks}
 
@@ -1491,7 +1492,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-9}摘要
 
@@ -1533,7 +1534,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1582,17 +1583,17 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -1622,7 +1623,7 @@ Document Security服務也可保護其他檔案類型，例如Microsoft Word檔�
 
 ## 搜索事件{#searching-for-events}
 
-Rights Management服務會在特定動作發生時追蹤這些動作，例如將原則套用至檔案、開啟受原則保護的檔案，以及廢止檔案存取權。 必須為Rights Management服務啟用事件審核，否則不會追蹤事件。
+Rights Management服務會在特定動作發生時追蹤這些動作，例如將原則套用至檔案、開啟受原則保護的檔案，以及廢止檔案存取權。 必須為Rights Management服務啟用事件審計，否則不跟蹤事件。
 
 事件分為下列類別：
 
@@ -1631,11 +1632,11 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 * 策略事件是與策略相關的操作，如建立新策略。
 * 服務事件是與Rights Management服務相關的操作，如與用戶目錄同步。
 
-您可以使用Rights Management Java API或web service API來搜尋指定的事件。 通過搜索事件，您可以執行任務，如建立某些事件的日誌檔案。
+您可以使用Rights ManagementJava API或web service API來搜尋指定特定事件。 通過搜索事件，您可以執行任務，如建立某些事件的日誌檔案。
 
 >[!NOTE]
 >
->如需Rights Management服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Rights Management服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-10}摘要
 
@@ -1652,7 +1653,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **建立Rights Management用戶端API物件**
 
-在以寫程式方式執行Rights Management服務操作之前，必須建立Rights Management服務客戶端對象。 如果您使用Java API，請建立`DocumentSecurityClient`物件。 如果您使用Rights Management web服務API，請建立`DocumentSecurityServiceService`物件。
+在以寫程式方式執行Rights Management服務操作之前，必須建立Rights Management服務客戶端對象。 如果您使用Java API，請建立`DocumentSecurityClient`物件。 如果您使用Rights ManagementWeb服務API，請建立`DocumentSecurityServiceService`物件。
 
 **指定要搜尋的事件**
 
@@ -1660,17 +1661,17 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **搜尋事件**
 
-指定要搜尋的事件後，您可以使用Rights Management Java API或Rights Management web service API來搜尋事件。
+指定要搜尋的事件後，您可以使用Rights ManagementJava API或Rights Managementweb服務API來搜尋事件。
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用Java API {#search-for-events-using-the-java-api}搜尋事件
 
-使用Rights Management API(Java)搜尋事件：
+使用Rights ManagementAPI(Java)搜尋事件：
 
 1. 包含專案檔案
 
@@ -1702,7 +1703,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 ### 使用web service API {#search-for-events-using-the-web-service-api}搜尋事件
 
-使用Rights Management API(web service)搜尋事件：
+使用Rights ManagementAPI(web service)搜尋事件：
 
 1. 包含專案檔案
 
@@ -1710,17 +1711,17 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Rights Management用戶端API物件
 
    * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -1949,7 +1950,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 將原則套用至Word檔案{#applying-policies-to-word-documents}
 
@@ -1959,7 +1960,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-11}摘要
 
@@ -1993,7 +1994,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -2055,17 +2056,17 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件。
 
    * 使用其預設建構子建立`DocumentSecurityServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DocumentSecurityServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`DocumentSecurityServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DocumentSecurityServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -2115,7 +2116,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 >[!NOTE]
 >
->如需Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Document Security服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-12}摘要
 
@@ -2141,7 +2142,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **從Word檔案移除原則**
 
-只要在連線設定中指定管理員，您就可以從受原則保護的Word檔案移除原則。 否則，用於保護文檔的策略必須包含`SWITCH_POLICY`權限，才能從Word文檔中刪除策略。 此外，在AEM Forms連線設定中指定的使用者也必須擁有該權限。 否則，會拋出異常。
+只要在連線設定中指定管理員，您就可以從受原則保護的Word檔案移除原則。 否則，用於保護文檔的策略必須包含`SWITCH_POLICY`權限，才能從Word文檔中刪除策略。 此外，在AEM Forms連接設定中指定的用戶也必須具有該權限。 否則，會拋出異常。
 
 **儲存不安全的Word檔案**
 
@@ -2149,7 +2150,7 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -2199,17 +2200,17 @@ Rights Management服務會在特定動作發生時追蹤這些動作，例如將
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Document Security Client API物件
 
    * 使用其預設建構子建立`RightsManagementServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`RightsManagementServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。)
    * 獲取`RightsManagementServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`RightsManagementServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
    * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
