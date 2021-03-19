@@ -3,10 +3,11 @@ title: 管理您的數位資產
 description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋、刪除、註解和版本數位資產。
 contentOwner: AG
 mini-toc-levels: 1
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '9590'
+source-wordcount: '9592'
 ht-degree: 3%
 
 ---
@@ -315,7 +316,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 如果您想從上傳的影像自動建立影像集或回轉集，請按一下您要使用的預設集的作用中欄。 您可以選取多個預設集。
 
-請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解如何建立批次集預設集。
+請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解建立批次集預設集。
 
 ### 串流上傳{#streamed-uploads}
 
@@ -329,7 +330,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 您可以像上傳任何其他支援的資產一樣，上傳ZIP封存。 相同的檔案名稱規則適用於ZIP檔案。 [!DNL Experience Manager] 可讓您將ZIP封存解壓縮至DAM位置。如果封存檔未包含副檔名為ZIP，請啟用使用內容的檔案類型偵測。
 
-一次選擇一個ZIP存檔，按一下&#x200B;**[!UICONTROL 解壓存檔]** ，然後選擇目標資料夾。 選擇一個選項來處理衝突（如果有）。 如果ZIP檔案中的資產已存在於目標檔案夾中，您可以選取下列其中一個選項：略過擷取、取代現有檔案、透過重新命名保留兩個資產，或建立新版本。
+一次選擇一個ZIP存檔，按一下&#x200B;**[!UICONTROL Extract Archive]** ，然後選擇目標資料夾。 選擇一個選項來處理衝突（如果有）。 如果ZIP檔案中的資產已存在於目標檔案夾中，您可以選取下列其中一個選項：略過擷取、取代現有檔案、透過重新命名保留兩個資產，或建立新版本。
 
 提取完成後，[!DNL Experience Manager]會在通知區中通知您。 當[!DNL Experience Manager]解壓縮ZIP時，您可以回到工作中，而不中斷解壓縮。
 
