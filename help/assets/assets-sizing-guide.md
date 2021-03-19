@@ -2,10 +2,11 @@
 title: '[!DNL Assets] 調整大小指南'
 description: 確定有效度量以估計部署 [!DNL Adobe Experience Manager Assets]所需的基礎架構和資源的最佳做法。
 contentOwner: AG
+role: 架構師、管理員
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1617'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 ### DataStore {#datastore}
 
-在調整[!DNL Assets]實施所需磁碟空間大小時，常出現一個錯誤，即根據要接收到系統的原始影像的大小進行計算。 根據預設，[!DNL Experience Manager]除了原始影像外，還會建立三個轉譯，以用於轉譯[!DNL Experience Manager]使用者介面元素。 在先前的實作中，觀察到這些轉譯假設的資產大小是所擷取資產的兩倍。
+在調整[!DNL Assets]實施所需磁碟空間大小時，常出現一個錯誤，那就是根據要接收到系統的原始映像的大小進行計算。 根據預設，[!DNL Experience Manager]除了原始影像外，還會建立三個轉譯，以用於轉譯[!DNL Experience Manager]使用者介面元素。 在先前的實作中，觀察到這些轉譯假設的資產大小是所擷取資產的兩倍。
 
 除了現成可用的轉譯外，大部分使用者都會定義自訂轉譯。 除了轉譯外，[!DNL Assets]還可讓您從常用檔案類型擷取子資產，例如[!DNL Adobe InDesign]和[!DNL Adobe Illustrator]。
 
@@ -55,7 +56,7 @@ ht-degree: 0%
 
 ### 共用資料儲存{#shared-datastores}
 
-對於大型資料儲存，您可以通過網路連接驅動器上的共用檔案資料儲存或通過Amazon S3資料儲存來實施共用資料儲存。 在這種情況下，個別執行個體不需要維護二進位檔的副本。 此外，共用資料儲存有助於無二進位複製，並有助於減少將資產複製到發佈環境的頻寬。
+對於大型資料儲存，您可以通過網路連接驅動器上的共用檔案資料儲存或通過AmazonS3資料儲存來實施共用資料儲存。 在這種情況下，個別執行個體不需要維護二進位檔的副本。 此外，共用資料儲存有助於無二進位複製，並有助於減少將資產複製到發佈環境的頻寬。
 
 #### 使用案例{#use-cases}
 
@@ -75,7 +76,7 @@ ht-degree: 0%
 
 共用資料儲存區也會增加作業的複雜性，例如廢棄項目收集。 通常，按一下即可啟動獨立資料儲存的廢棄項目收集。 但是，共用資料儲存除了在單個節點上運行實際收集外，還需要對使用資料儲存的每個成員執行標籤掃描操作。
 
-對於AWS操作，實施單個中心位置（通過Amazon S3），而不是構建EBS卷的RAID陣列，可以顯著抵消系統的複雜性和操作風險。
+對於AWS操作，實施單個中心位置(通過AmazonS3)，而不是構建EBS卷的RAID陣列，可以顯著抵消系統的複雜性和操作風險。
 
 #### 效能問題{#performance-concerns}
 
@@ -102,7 +103,7 @@ S3實現中的延遲由背景寫入線程引入。 備份過程必須考慮此�
 
 ## 網路{#network}
 
-[!DNL Assets] 有許多使用案例使網路效能比我們的許多項目更加重 [!DNL Experience Manager] 要。客戶可以擁有快速的伺服器，但如果網路連線不夠大，無法支援從系統上傳和下載資產的使用者負載，則仍會顯得緩慢。 在[[!DNL Experience Manager]的「資產」方面，對於用戶體驗、例項調整、工作流評估和網路拓撲](/help/assets/assets-network-considerations.md)，有一種很好的方法來確定用戶與&lt;a0/>的網路連接的瓶頸。
+[!DNL Assets] 有許多使用案例使網路效能比我們的許多項目更加重 [!DNL Experience Manager] 要。客戶可以擁有快速的伺服器，但如果網路連線不夠大，無法支援從系統上傳和下載資產的使用者負載，則仍會顯得緩慢。 在[[!DNL Experience Manager]的「資產」方面，對於用戶體驗、例項調整、工作流評估和網路拓撲](/help/assets/assets-network-considerations.md)，有一種很好的方法來確定用戶與的網路連接的瓶頸。
 
 ## 限制 {#limitations}
 
@@ -116,7 +117,7 @@ S3實現中的延遲由背景寫入線程引入。 備份過程必須考慮此�
 
 由於檔案系統限制，資料儲存中可存在的檔案數限制為21億。 儲存庫在達到資料儲存限制之前，很可能會由於節點數過多而遇到問題。
 
-如果轉譯產生不正確，請使用Camera Raw程式庫。 但是，在這種情況下，影像的最長邊不應大於65000像素。 此外，影像不應超過512 MP（512 x 1024 x 1024像素）。 資產規模無關緊要。
+如果轉譯產生不正確，請使用Camera Raw的程式庫。 但是，在這種情況下，影像的最長邊不應大於65000像素。 此外，影像不應超過512 MP（512 x 1024 x 1024像素）。 資產規模無關緊要。
 
 對於[!DNL Experience Manager]而言，由於額外因素（例如像素大小影響處理），很難精確估計支援的TIFF檔案的現成可用堆大小。 [!DNL Experience Manager]可處理大小為255 MB的現成檔案，但無法處理大小為18 MB的檔案，因為後者包含的像素數比前者高得多。
 
