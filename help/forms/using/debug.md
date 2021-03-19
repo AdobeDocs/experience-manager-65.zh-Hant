@@ -9,11 +9,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 0%
+source-wordcount: '832'
+ht-degree: 1%
 
 ---
 
@@ -71,11 +72,11 @@ ht-degree: 0%
 
    (com.adobe.livecyclescala-lang.bundle)
 
-   * Adobe XFA Forms Renderer
+   * AdobeXFAForms渲染器
 
    (com.adobe.livecycle.adobe-lc-forms-core)
 
-   * Adobe XFA Forms LC連接器
+   * AdobeXFAFormsLC連接器
 
    (com.adobe.livecycle.adobe-lc-forms-lc-connector)
 
@@ -117,7 +118,7 @@ ht-degree: 0%
 
 ## 問題：無法提交表單{#problem-unable-to-submit-the-form}
 
-1. 請確定您擁有存取AEM伺服器的權限，而且您已連線至伺服器。
+1. 確保您有權訪問服AEM務器，並且已連接到伺服器。
 1. 檢查參數submitUrl是否正確。
 1. 使用調試選項&#x200B;**1-a5-b5-c5**&#x200B;啟用HTML5表單](/help/forms/using/enable-logs.md)的[日誌中提到的客戶端日誌。 然後演算表格，然後按一下「送出」。 開啟瀏覽器除錯主控台，並檢查是否有錯誤。
 1. 按[Logs for the HTML5 forms](/help/forms/using/enable-logs.md)中所述找到伺服器日誌。 檢查提交期間伺服器日誌中是否有任何錯誤。
