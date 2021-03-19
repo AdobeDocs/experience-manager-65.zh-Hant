@@ -1,6 +1,6 @@
 ---
-title: 建立轉譯表單的Web應用程式
-seo-title: 建立轉譯表單的Web應用程式
+title: 建立轉譯Forms的Web應用程式
+seo-title: 建立轉譯Forms的Web應用程式
 description: 建立使用Java servlet來叫用Forms服務和轉換表單的Web應用程式。 Java servlet用作返回表單的Forms服務與客戶端Web瀏覽器之間的連結。
 seo-description: 建立使用Java servlet來叫用Forms服務和轉換表單的Web應用程式。 Java servlet用作返回表單的Forms服務與客戶端Web瀏覽器之間的連結。
 uuid: 00de10c5-79bd-4d8a-ae18-32f1fd2623bf
@@ -10,26 +10,27 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
 
 
-# 建立轉換表單的Web應用程式{#creating-web-applications-thatrenders-forms}
+# 建立轉換Forms{#creating-web-applications-thatrenders-forms}的Web應用程式
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-## 建立轉換表單的Web應用程式{#creating-web-applications-that-renders-forms}
+## 建立轉換Forms{#creating-web-applications-that-renders-forms}的Web應用程式
 
-您可以建立使用Java servlet來叫用Forms服務和演算表單的Web應用程式。 使用Java™ servlet的好處是，您可以將進程的返回值寫入客戶端Web瀏覽器。 也就是說，Java servlet可用作傳回表單的Forms服務與用戶端網頁瀏覽器之間的連結。
+您可以建立使用Java servlet來叫用Forms服務和轉換表單的Web應用程式。 使用Java™ servlet的好處是，您可以將進程的返回值寫入客戶端Web瀏覽器。 也就是說，Java servlet可用作傳回表單的Forms服務與用戶端網頁瀏覽器之間的連結。
 
 >[!NOTE]
 >
->本節介紹如何建立基於Web的應用程式，該應用程式使用調用Forms服務並基於片段呈現表單的Java servlet。 （請參閱[根據片段呈現表單](/help/forms/developing/rendering-forms-based-fragments.md)）。
+>本節介紹如何建立基於Web的應用程式，該應用程式使用調用Forms服務並基於片段呈現表單的Java servlet。 (請參閱[根據片段呈現Forms。)](/help/forms/developing/rendering-forms-based-fragments.md)
 
 使用Java servlet，您可以將表單寫入客戶端Web瀏覽器，以便客戶可以查看表單並在表單中輸入資料。 在將資料填入表單後，Web使用者會按一下表單上的提交按鈕，將資訊傳回Java servlet，在Java servlet中可擷取和處理資料。 例如，資料可以傳送至另一個程式。
 
@@ -47,21 +48,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需建立以片段為基礎的表單設計的詳細資訊，請參閱[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>如需建立以片段為基礎的表單設計的詳細資訊，請參閱[Forms設計人員](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 **範例檔案**
 
 本節使用可位於以下位置的示例檔案：
 
-&lt;>Forms Designer安裝目錄&#x200B;*>/Samples/Forms/Purchase Order/Form片段*
+&lt;>Forms設計人員安裝目錄&#x200B;*>/範例/Forms/採購單／表單片段*
 
-其中， &lt;*install directory*>是安裝路徑。 就客戶端應用程式而言，Purchase Order Dynamic.xdp檔案已從此安裝位置複製並部署到名為&#x200B;*Applications/FormsApplication*&#x200B;的Forms應用程式。 Purchase Order Dynamic.xdp檔案會放在名為FormsFolder的檔案夾中。 同樣地，這些片段會放在名為「片段」的檔案夾中，如下圖所示。
+其中， &lt;*install directory*>是安裝路徑。 就客戶端應用程式而言，Purchase Order Dynamic.xdp檔案從此安裝位置複製並部署到名為&#x200B;*Applications/FormsApplication*&#x200B;的Forms應用程式。 Purchase Order Dynamic.xdp檔案會放在名為FormsFolder的檔案夾中。 同樣地，這些片段會放在名為「片段」的檔案夾中，如下圖所示。
 
 ![cw_cw_fraguments儲存庫](assets/cw_cw_fragmentsrepository.png)
 
 要訪問Purchase Order Dynamic.xdp表單設計，請指定`Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp`作為表單名稱（傳遞至`renderPDFForm`方法的第一個參數），並指定`repository:///`作為內容根URI值。
 
-Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adobe`（屬於代管AEM Forms之J2EE應用程式伺服器的檔案系統）。 檔案名稱為採購單&#x200B;*Canada.xml*&#x200B;和採購單&#x200B;*US.xml*。
+Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adobe`(屬於代管AEM Forms的J2EE應用程式伺服器的檔案系統)。 檔案名稱為採購單&#x200B;*Canada.xml*&#x200B;和採購單&#x200B;*US.xml*。
 
 >[!NOTE]
 >
@@ -80,11 +81,11 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adob
 
 >[!NOTE]
 >
->其中一些步驟取決於部署AEM Forms的J2EE應用程式。 例如，您用來部署WAR檔案的方法取決於您使用的J2EE應用程式伺服器。 本節假設AEM Forms已部署在JBoss®上。
+>其中有些步驟取決於部署AEM Forms的J2EE應用程式。 例如，您用來部署WAR檔案的方法取決於您使用的J2EE應用程式伺服器。 本節假設AEM Forms部署在JBoss®上。
 
 ### 建立Web項目{#creating-a-web-project}
 
-要建立包含可調用Forms服務的Java Servlet的Web應用程式，第一步是建立新Web項目。 本檔案所基於的Java IDE是Eclipse 3.3。使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 最後，將名為&#x200B;*index.html*&#x200B;的HTML頁面和Java servlet新增至您的專案。
+建立包含Java servlet且可以叫用Forms服務的Web應用程式的第一步，就是建立新的Web專案。 本檔案所基於的Java IDE是Eclipse 3.3。使用Eclipse IDE，建立Web項目並將所需的JAR檔案添加到項目中。 最後，將名為&#x200B;*index.html*&#x200B;的HTML頁面和Java servlet新增至您的專案。
 
 以下清單指定必須添加到Web項目的JAR檔案：
 
@@ -93,7 +94,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adob
 * adobe-usermanager-client.jar
 * adobe-utilities.jar
 
-有關這些JAR檔案的位置，請參見[ Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案的位置，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **若要建立Web專案：**
 
@@ -144,19 +145,19 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adob
 
 若要使用Forms服務API根據片段來呈現表單，請執行下列工作：
 
-1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 如需這些檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+1. 在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。 有關這些檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 1. 擷取從HTML表單提交的選項按鈕值，並指定使用美國或加拿大資料。 如果提交美國文，請建立`com.adobe.idp.Document`，以儲存位於&#x200B;*採購單US.xml*&#x200B;中的資料。 同樣地，如果是加拿大人，請建立一個`com.adobe.idp.Document`，儲存位於&#x200B;*Purchase Order Canada.xml*&#x200B;檔案中的資料。
 1. 建立包含連接屬性的`ServiceClientFactory`對象。 （請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
 1. 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
 1. 使用`URLSpec`的建構函式建立儲存URI值的物件。
 1. 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
-1. 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計和片段位於內容根URI中。 否則，Forms服務會引發例外。 若要參考AEM Forms資料庫，請指定`repository://`。
+1. 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計和片段位於內容根URI中。 如果沒有，Forms服務會提出例外。 要引用AEM Forms儲存庫，請指定`repository://`。
 1. 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
 1. 叫用`FormsServiceClient`物件的`renderPDFForm`方法並傳遞下列值：
 
    * 指定表單設計名稱的字串值，包括檔案副檔名。
    * `com.adobe.idp.Document`物件，包含要與表單合併的資料（在步驟2中建立）。
-   * 儲存運行時選項的`PDFFormRenderSpec`對象。 如需詳細資訊，請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   * 儲存運行時選項的`PDFFormRenderSpec`對象。 如需詳細資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
    * `URLSpec`物件，包含Forms服務根據片段來呈現表單所需的URI值。
    * 儲存檔案附件的`java.util.HashMap`對象。 此為可選參數，如果您不想將檔案附加到表單，可以指定`null`。
 
@@ -170,7 +171,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adob
 1. 通過調用`InputStream`對象的`read`方法並將位元組陣列作為引數傳遞，建立以表單資料流填充的位元組陣列。
 1. 叫用`javax.servlet.ServletOutputStream`物件的`write`方法，將表單資料串流傳送至用戶端網頁瀏覽器。 將位元組陣列傳遞到`write`方法。
 
-以下代碼示例代表調用Forms服務並基於片段呈現表單的Java servlet。
+以下代碼示例表示調用Forms服務並基於片段呈現表單的Java servlet。
 
 ```java
  /*
@@ -309,7 +310,7 @@ Web應用程式使用的XML資料檔案已從「資料」檔案夾移至`C:\Adob
 
 ### 建立網頁{#creating-the-web-page}
 
-index.html網頁提供Java servlet的入口點，並叫用Forms服務。 此網頁是基本的HTML表單，包含兩個選項按鈕和一個提交按鈕。 選項按鈕的名稱是單選按鈕。 當使用者按一下提交按鈕時，表單資料會張貼至`RenderFormFragment` Java servlet。
+index.html網頁提供Java servlet的入口點，並調用Forms服務。 此網頁是基本的HTML表單，包含兩個選項按鈕和一個提交按鈕。 選項按鈕的名稱是單選按鈕。 當使用者按一下提交按鈕時，表單資料會張貼至`RenderFormFragment` Java servlet。
 
 Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
@@ -375,7 +376,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 ### 打包Web應用程式{#packaging-the-web-application}
 
-要部署調用Forms服務的Java servlet，請將Web應用程式打包到WAR檔案。 請確定WAR檔案中也包含元件商業邏輯所依賴的外部JAR檔案，例如adobe-livecycle-client.jar和adobe-forms-client.jar。
+要部署調用Forms服務的Java Servlet，請將Web應用程式打包到WAR檔案。 請確定WAR檔案中也包含元件商業邏輯所依賴的外部JAR檔案，例如adobe-livecycle-client.jar和adobe-forms-client.jar。
 
 **要將Web應用程式打包到WAR檔案：**
 
@@ -385,7 +386,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 ### 將WAR檔案部署到J2EE應用程式伺服器{#deploying-the-war-file-to-the-j2ee-application-server}
 
-您可將WAR檔案部署至部署AEM Forms的J2EE應用程式伺服器。 部署WAR檔案後，您可以使用Web瀏覽器訪問HTML網頁。
+您可將WAR檔案部署至部署了AEM Forms的J2EE應用程式伺服器。 部署WAR檔案後，您可以使用Web瀏覽器訪問HTML網頁。
 
 **要將WAR檔案部署到J2EE應用程式伺服器，請執行以下操作：**
 
@@ -393,7 +394,7 @@ Java servlet會使用下列Java程式碼，從HTML頁面擷取張貼的資料：
 
 ### 測試您的Web應用程式{#testing-your-web-application}
 
-部署Web應用程式後，您可以使用Web瀏覽器來測試它。 假設您使用的是代管AEM Forms的相同電腦，您可以指定下列URL:
+部署Web應用程式後，您可以使用Web瀏覽器來測試它。 假設您使用的是裝載AEM Forms的同一部電腦，您可以指定下列URL:
 
 * http://localhost:8080/FragmentsWebApplication/index.html
 
