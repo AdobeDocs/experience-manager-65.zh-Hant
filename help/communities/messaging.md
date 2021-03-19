@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '827'
 ht-degree: 1%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 1%
 
 ## 概覽 {#overview}
 
-AEM Communities的訊息功能可讓登入網站訪客（成員）彼此傳送訊息，當登入網站時，這些訊息可供存取。
+AEM Communities的傳訊功能可讓登入網站訪客（成員）傳送訊息給其他人，當登入網站時，這些訊息可供存取。
 
 在[社區站點建立](/help/communities/sites-console.md)期間選中框，可為社區站點啟用消息傳遞。
 
@@ -33,7 +34,7 @@ AEM Communities的訊息功能可讓登入網站訪客（成員）彼此傳送�
 
 ## 消息傳遞操作服務{#messaging-operations-service}
 
-配置[AEM Communities Messaging Operations Service](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl)可識別處理與郵件相關請求的端點、服務應用於儲存郵件的資料夾，以及如果郵件可能包含檔案附件，則允許哪些檔案類型。
+配置[AEM Communities消息業務服務](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl)標識了處理消息相關請求的端點、服務應用於儲存消息的資料夾，以及如果消息可能包括檔案附件，則允許哪些檔案類型。
 
 對於使用`Communities Sites console`建立的社區站點，服務實例已存在，收件箱設定為`/mail/inbox`。
 
@@ -121,7 +122,7 @@ AEM Communities的訊息功能可讓登入網站訪客（成員）彼此傳送�
 
 * **服務選擇器**
 
-   (*Required*)呼叫服務的絕對路徑（端點）（虛擬資源）。 所選路徑的根必須包含在OSGi配置&#x200B;**[的「執行路徑」配置設定中，例如`Apache Sling Servlet/Script Resolver and Error Handler`、](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)和`/bin/`。 `/apps/``/services/`要為站點的消息功能選擇此配置，此端點將作為`Message List and Compose Message components`的&#x200B;**`Service selector`**&#x200B;值提供（請參見[消息功能](/help/communities/configure-messaging.md)）。
+   (*Required*)呼叫服務的絕對路徑（端點）（虛擬資源）。 所選路徑的根必須包含在OSGi配置[ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)的「執行路徑」配置設定中，例如`/bin/`、`/apps/`和`/services/`。 **&#x200B;要為站點的消息功能選擇此配置，此端點將作為`Message List and Compose Message components`的&#x200B;**`Service selector`**&#x200B;值提供（請參見[消息功能](/help/communities/configure-messaging.md)）。
 
    預設值為&#x200B;*/bin/messaging*。
 
