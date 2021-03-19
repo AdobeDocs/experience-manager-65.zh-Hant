@@ -1,7 +1,7 @@
 ---
 title: 在We.Retail中試用可編輯的範本
 seo-title: 在We.Retail中試用可編輯的範本
-description: 'null'
+description: 在We.Retail中試用可編輯的範本
 seo-description: 'null'
 uuid: 0d4b97cb-efcc-4312-a783-eae3ecd6f889
 contentOwner: User
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '490'
 ht-degree: 10%
 
 ---
