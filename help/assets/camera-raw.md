@@ -2,16 +2,17 @@
 title: '[!DNL Adobe Camera Raw] 支援。'
 description: 瞭解如何在 [!DNL Adobe Experience Manager Assets]中啟用 [!DNL Adobe Camera Raw] 支援。
 contentOwner: AG
+role: 管理員
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '376'
 ht-degree: 1%
 
 ---
 
 
-# 使用Camera Raw {#camera-raw-support}處理影像
+# 使用Camera Raw{#camera-raw-support}處理影像
 
 您可以啟用[!DNL Adobe Camera Raw]支援來處理原始檔案格式，例如CR2、NEF和RAF，並以JPEG格式呈現影像。 [!DNL Adobe Experience Manager Assets]使用「軟體分發」中提供的[Camera Raw軟體包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)支援該功能。
 
@@ -21,7 +22,7 @@ ht-degree: 1%
 
 要在[!DNL Experience Manager Assets]中啟用[!DNL Camera Raw]支援，請執行以下步驟：
 
-1. 從「軟體分發」下載[Camera Raw軟體包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
+1. 從軟體分發下載[Camera Raw軟體包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
 1. 存取 `https://[aem_server]:[port]/workflow`. 開啟&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程。
 1. 開啟「處理縮圖」步驟&#x200B;**[!UICONTROL 。]**
 1. 在&#x200B;**[!UICONTROL 縮圖]**&#x200B;標籤中提供以下配置：
@@ -35,8 +36,8 @@ ht-degree: 1%
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. 從側面板，在「縮圖建立」步驟&#x200B;**[!UICONTROL 下方新增**[!UICONTROL  Camera Raw/DNG Handler ]**步驟。]**
-1. 在&#x200B;**[!UICONTROL Camera Raw/DNG Handler]**&#x200B;步驟中，在&#x200B;**[!UICONTROL Arguments]**&#x200B;標籤中新增下列設定：
+1. 從側面板，在「縮圖建立」步驟&#x200B;**[!UICONTROL 下方新增**[!UICONTROL  Camera Raw/DNG處理常式&#x200B;]**步驟。]**
+1. 在&#x200B;**[!UICONTROL Camera Raw/DNG處理常式]**&#x200B;步驟中，在&#x200B;**[!UICONTROL 參數]**&#x200B;標籤中新增下列設定：
 
    * **[!UICONTROL Mime類型]**: `image/dng` 和  `image/x-raw-(.*)`
    * **[!UICONTROL 命令]**:
@@ -48,13 +49,13 @@ ht-degree: 1%
 
    ![chlimage_1-130](assets/chlimage_1-336.png)
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 按一下「**[!UICONTROL 儲存]**」。
 
 >[!NOTE]
 >
->請確定上述組態與&#x200B;**[!UICONTROL Sample DAM Update Asset With Camera RAW and DNG Handling Step]**&#x200B;組態相同。
+>請確定上述組態與「Camera Raw和DNG處理步驟&#x200B;]**組態的範例DAM更新資產」相同。**[!UICONTROL 
 
-您現在可以將Camera Raw檔案匯入「資產」。 安裝Camera RAW套件並設定所需的工作流程後，側窗格清單中會顯示「影像調整」選項。****
+您現在可以將Camera Raw檔案匯入「資產」。 安裝Camera Raw軟體包並配置所需的工作流後，側窗格清單中將顯示&#x200B;**[!UICONTROL Image Adjust]**&#x200B;選項。
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
