@@ -1,35 +1,36 @@
 ---
-title: Forms JEE工作流程 |處理使用者資料
-seo-title: Forms JEE工作流程 |處理使用者資料
-description: Forms JEE工作流程 |處理使用者資料
+title: FormsJEE工作流程 |處理使用者資料
+seo-title: FormsJEE工作流程 |處理使用者資料
+description: FormsJEE工作流程 |處理使用者資料
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
+role: 管理員
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1372'
 ht-degree: 0%
 
 ---
 
 
-# Forms JEE工作流程 |處理用戶資料{#forms-jee-workflows-handling-user-data}
+# FormsJEE工作流程 |處理用戶資料{#forms-jee-workflows-handling-user-data}
 
-AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 工作流進程由一系列按指定順序執行的步驟組成。 每個步驟都會執行特定動作，例如指派工作給使用者或傳送電子郵件訊息。 程式可與資產、使用者帳戶和服務互動，並可使用下列任一方法來觸發：
+AEM FormsJEE工作流程提供設計、建立和管理商業程式的工具。 工作流進程由一系列按指定順序執行的步驟組成。 每個步驟都會執行特定動作，例如指派工作給使用者或傳送電子郵件訊息。 程式可與資產、使用者帳戶和服務互動，並可使用下列任一方法來觸發：
 
-* 從AEM Forms Workspace啟動程式
+* 從AEM Forms工作區啟動流程
 * 使用SOAP或REST風格的服務
 * 提交最適化表單
 * 使用監視資料夾
 * 使用電子郵件
 
-如需建立AEM Forms JEE工作流程程式的詳細資訊，請參閱[Workbench Help](http://www.adobe.com/go/learn_aemforms_workbench_65)。
+有關建立AEM FormsJEE工作流進程的詳細資訊，請參閱[ Workbench Help](http://www.adobe.com/go/learn_aemforms_workbench_65)。
 
 ## 用戶資料和資料儲存{#user-data-and-data-stores}
 
-當某個進程被觸發並進行時，它會捕獲有關進程參與者的資料、參與者在與進程相關聯的表單中輸入的資料以及添加到表單中的附件。 資料會儲存在AEM Forms JEE伺服器資料庫中，若已設定，某些資料（例如附件）會儲存在「全域檔案儲存(GDS)」目錄中。 GDS目錄可以配置在共用檔案系統或資料庫上。
+當某個進程被觸發並進行時，它會捕獲有關進程參與者的資料、參與者在與進程相關聯的表單中輸入的資料以及添加到表單中的附件。 資料儲存在AEM FormsJEE伺服器資料庫中，如果配置了，某些資料（如附件）將儲存在全局文檔儲存(GDS)目錄中。 GDS目錄可以配置在共用檔案系統或資料庫上。
 
 ## 存取和刪除使用者資料{#access-and-delete-user-data}
 
@@ -38,14 +39,14 @@ AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 
 但是，在以下情況下，您無法標識啟動器的進程實例ID:
 
 * **透過受監視資料夾觸發的程式**:如果進程由受監視資料夾觸發，則無法使用其啟動器來標識進程實例。在這種情況下，用戶資訊被編碼在儲存的資料中。
-* **從發佈AEM例項開始的程式**:所有從AEM發佈例項觸發的程式例項都不會擷取有關啟動器的資訊。但是，用戶資料可以以與進程相關聯的形式捕獲，該形式儲存在工作流變數中。
+* **從發佈實例啟動的AEM流程**:從發佈實例觸發的所AEM有進程實例不會捕獲有關啟動器的資訊。但是，用戶資料可以以與進程相關聯的形式捕獲，該形式儲存在工作流變數中。
 * **透過電子郵件啟動的程式**:傳送者的電子郵件ID會擷取為資料庫表格中不透明blob欄的 `tb_job_instance` 屬性，無法直接查詢。
 
 ### 在工作流啟動器或參與者已知{#initiator-participant}時識別流程實例ID
 
 執行以下步驟以標識工作流啟動器或參與者的流程實例ID:
 
-1. 在AEM Forms伺服器資料庫中執行下列命令，從`edcprincipalentity`資料庫表格擷取工作流程啟動者或參與者的主要ID。
+1. 在AEM Forms伺服器資料庫中執行以下命令，從`edcprincipalentity`資料庫表中檢索工作流啟動器或參與者的主ID。
 
    ```sql
    select id from edcprincipalentity where canonicalname='user_ID'
@@ -138,7 +139,7 @@ AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 
 
    `ProcessManager.purgeProcessInstance(<long_lived_invocation_id>)`
 
-   `purgeProcessInstance`方法會從AEM Forms伺服器資料庫和GDS（若已設定）中完全刪除指定呼叫ID的所有資料。
+   `purgeProcessInstance`方法會從AEM Forms伺服器資料庫和GDS（如果配置）中完全刪除指定調用ID的所有資料。
 
 ### 處理孤立任務{#orphan}
 
@@ -146,7 +147,7 @@ AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 
 
 在您擁有任務ID後，請執行以下操作以從GDS和資料庫中清除具有孤立任務的相關檔案和資料。
 
-1. 在AEM Forms伺服器資料庫上執行下列命令，以擷取已識別之工作ID的ID。
+1. 在AEM Forms伺服器資料庫上執行以下命令，以檢索所標識任務ID的ID。
 
    ```sql
    select id from tb_form_data where task_id=<task_id>
@@ -187,7 +188,7 @@ AEM Forms JEE工作流程提供設計、建立和管理商業程式的工具。 
 
 
 
-1. 執行下列命令，從AEM Forms伺服器資料庫刪除工作ID的資料：
+1. 執行以下命令以刪除AEM Forms伺服器資料庫中任務ID的資料：
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>
