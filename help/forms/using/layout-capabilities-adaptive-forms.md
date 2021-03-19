@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -45,7 +46,7 @@ Adobe Experience Manager(AEM)可讓您建立簡單易用的調適性表單，為
 
 >[!NOTE]
 >
->若要變更最適化表單的版面配置，請使用AEM中的「編寫模式」。
+>若要變更最適化表單的版面配置，請使用中的「編寫模式」AEM。
 
 ![CRX儲存庫中的版面位置](assets/layouts_location_in_crx.png)
 
