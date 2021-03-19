@@ -2,10 +2,11 @@
 title: '[!DNL Assets] HTTP API。'
 description: 使用 [!DNL Adobe Experience Manager Assets]中的HTTP API建立、讀取、更新、刪除、管理數位資產。
 contentOwner: AG
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1728'
 ht-degree: 0%
 
 ---
@@ -28,13 +29,13 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 >[!CAUTION]
 >
->[HTTP API會更新命名空](#update-asset-metadata) 間中的中繼資料 `jcr` 屬性。不過，Experience Manager使用者介面會更新`dc`命名空間中的中繼資料屬性。
+>[HTTP API會更新命名空](#update-asset-metadata) 間中的中繼資料 `jcr` 屬性。不過，Experience Manager用戶介面會更新`dc`命名空間中的元資料屬性。
 
 ## 內容片段 {#content-fragments}
 
 [內容片段](/help/assets/content-fragments/content-fragments.md)是特殊類型的資產。 它可用來存取結構化資料，例如文字、數字、日期等。 由於`standard`資產（例如影像或檔案）有數項差異，因此處理內容片段時會套用一些其他規則。
 
-如需詳細資訊，請參閱Experience Manager Assets HTTP API[中的「內容片段支援」。](/help/assets/assets-api-content-fragments.md)
+如需詳細資訊，請參閱Experience Manager資產HTTP API](/help/assets/assets-api-content-fragments.md)中的「內容片段支援」。[
 
 ## 資料模型{#data-model}
 
@@ -71,7 +72,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 * 多個轉譯，例如原始轉譯（原始上傳的資產）、縮圖和各種其他轉譯。 其他轉譯可能是不同大小的影像、不同的視訊編碼，或從PDF或[!DNL Adobe InDesign]檔案擷取的頁面。
 * 選用的注釋。
 
-如需內容片段中元素的詳細資訊，請參閱Experience Manager Assets HTTP API[中的「內容片段支援」。](/help/assets/assets-api-content-fragments.md#content-fragments)
+如需內容片段中元素的詳細資訊，請參閱Experience Manager資產HTTP API](/help/assets/assets-api-content-fragments.md#content-fragments)中的內容片段支援。[
 
 在[!DNL Experience Manager]中，資料夾具有以下元件：
 
@@ -100,7 +101,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 **必備條件**
 
 * 存取 `https://[aem_server]:[port]/system/console/configMgr`.
-* 導覽至&#x200B;**[!UICONTROL Adobe Granite CSRF Filter]**。
+* 導覽至&#x200B;**[!UICONTROL Adobe花崗岩CSRF濾鏡]**。
 * 請確定屬性&#x200B;**[!UICONTROL 篩選方法]**&#x200B;包含：`POST`、`PUT`、`DELETE`。
 
 ## 檢索列出{#retrieve-a-folder-listing}的資料夾
@@ -139,7 +140,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 ## 建立資產{#create-an-asset}
 
-將提供的檔案置於提供的路徑，以在DAM儲存庫中建立資產。 如果提供`*`而非節點名稱，則servlet將使用參數名稱或檔案名作為節點名稱。
+將提供的檔案置於提供的路徑，以在DAM儲存庫中建立資產。 如果提供`*`而非節點名稱，則servlet將使用參數名或檔案名作為節點名。
 
 **參數**:參數是 `name` 用於資產名 `file` 稱和檔案參考。
 
@@ -183,7 +184,7 @@ API回應是某些MIME類型的JSON檔案，也是所有MIME類型的回應代�
 
 ### 在`dc`和`jcr`命名空間{#sync-metadata-between-namespaces}之間同步中繼資料更新
 
-API方法會更新`jcr`命名空間中的中繼資料屬性。 使用使用者介面進行的更新會變更`dc`命名空間中的中繼資料屬性。 若要同步`dc`和`jcr`命名空間之間的中繼資料值，您可以建立工作流程並設定Experience Manager在資產編輯時執行工作流程。 使用ECMA指令碼來同步所需的中繼資料屬性。 以下示例指令碼將同步`dc:title`和`jcr:title`之間的標題字串。
+API方法會更新`jcr`命名空間中的中繼資料屬性。 使用使用者介面進行的更新會變更`dc`命名空間中的中繼資料屬性。 若要同步`dc`和`jcr`命名空間之間的中繼資料值，您可以建立工作流程，並設定Experience Manager，在資產編輯時執行工作流程。 使用ECMA指令碼來同步所需的中繼資料屬性。 以下示例指令碼將同步`dc:title`和`jcr:title`之間的標題字串。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
@@ -310,6 +311,6 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 ## 提示和限制{#tips-best-practices-limitations}
 
-* [HTTP API會更新命名空](#update-asset-metadata) 間中的中繼資料 `jcr` 屬性。不過，Experience Manager使用者介面會更新`dc`命名空間中的中繼資料屬性。
+* [HTTP API會更新命名空](#update-asset-metadata) 間中的中繼資料 `jcr` 屬性。不過，Experience Manager用戶介面會更新`dc`命名空間中的元資料屬性。
 
 * 資產API不會傳回完整的中繼資料。 在API中，名稱空間會以硬式編碼，且只會傳回這些名稱。 如果您需要完整的中繼資料，請查看資產路徑`/jcr_content/metadata.json`。
