@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '346'
 ht-degree: 1%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 1%
 
 # Communities Console {#communities-consoles}
 
-AEM Communities控制台可從全域導覽面板的作者環境取得，可讓您存取管理工作，例如：
+AEM Communities控制台（可從全球導覽面板在作者環境中使用）可讓您存取管理工作，例如：
 
 * [建立社群網站](sites-console.md)
 * 在站點中添加嵌套的[組](groups.md)
@@ -65,7 +66,7 @@ AEM Communities控制台可從全域導覽面板的作者環境取得，可讓�
 
 * [報表](reports.md)
 
-   在「報表」控制台中，當社群網站啟用[的Adobe Analytics](sites-console.md#analytics)時，可產生有關工作、頁面檢視和張貼內容(UGC)的報表。 控制台僅在作者環境中可用。
+   在「報表」控制台中，當社群網站啟用了[的Adobe Analytics](sites-console.md#analytics)時，可產生有關指派、頁面檢視和張貼內容(UGC)的報表。 控制台僅在作者環境中可用。
 
 * [資源](resources.md)
 
