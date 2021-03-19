@@ -1,17 +1,18 @@
 ---
-title: 資產的數位版權管理
+title: Digital Rights Management資產
 description: 瞭解如何在 [!DNL Experience Manager]中管理已授權資產的資產到期狀態和資訊。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1401'
 ht-degree: 5%
 
 ---
 
 
-# 資產的數位版權管理{#digital-rights-management-in-assets}
+# Digital Rights Management資產{#digital-rights-management-in-assets}
 
 數位資產通常與指定使用條款和期限的授權相關聯。 由於[!DNL Adobe Experience Manager Assets]已與[!DNL Experience Manager]平台完全整合，因此您可以有效管理資產到期資訊和資產狀態。 您也可以將授權資訊與資產建立關聯。
 
@@ -63,10 +64,10 @@ ht-degree: 5%
 
 此外，如果故障或錯誤導致調度程式無法檢測當前週期中的過期資產，則調度程式會在下一個週期重新檢查這些資產並檢測其過期狀態。
 
-若要啟用[!DNL Assets]主控台來顯示參照的複合資產以及過期的子資產，請在[!DNL Experience Manager] Configuration Manager中設定&#x200B;**[!UICONTROL Adobe CQ DAM Expiry Notification]**&#x200B;工作流程。
+若要讓[!DNL Assets]主控台顯示參照的複合資產以及過期的子資產，請在[!DNL Experience Manager]配置管理員中設定&#x200B;**[!UICONTROL Adobe CQDAM到期通知]**&#x200B;工作流程。
 
 1. 開啟[!DNL Experience Manager]配置管理器。
-1. 選擇&#x200B;**[!UICONTROL Adobe CQ DAM Expiry Notification]**。 預設情況下，選擇&#x200B;**[!UICONTROL 基於時間的調度程式]**，該調度程式將作業安排在特定時間檢查資產是否已過期子資產。 作業完成後，已過期子資產和參考資產的資產會在搜尋結果中顯示為過期。
+1. 選擇&#x200B;**[!UICONTROL Adobe CQDAM過期通知]**。 預設情況下，選擇&#x200B;**[!UICONTROL 基於時間的調度程式]**，該調度程式將作業安排在特定時間檢查資產是否已過期子資產。 作業完成後，已過期子資產和參考資產的資產會在搜尋結果中顯示為過期。
 
 1. 要定期運行作業，請清除「基於時 **[!UICONTROL 間的調度程式規則]** 」欄位，並在「定期調度程式」欄位中以秒為單 **[!UICONTROL 位修改時間]** 。例如，範例運算式`0 0 0 &ast; &ast; ?`會在00小時觸發工作。
 1. 選擇&#x200B;**[!UICONTROL 傳送電子郵件]**&#x200B;以在資產過期時接收電子郵件。
@@ -77,7 +78,7 @@ ht-degree: 5%
 
 1. 在&#x200B;**[!UICONTROL 以秒為單位的先前通知]**&#x200B;欄位中，指定當您要收到有關過期的通知時，資產到期前的秒數。 資產建立者會在資產到期前收到訊息，通知您資產將在指定時間後到期。 資產過期後，您會收到另一則確認到期的通知。 此外，過期的資產會停用。
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 按一下「**[!UICONTROL 儲存]**」。
 
 ## 資產狀態{#asset-states}
 
@@ -111,7 +112,7 @@ ht-degree: 5%
 
 1. 若要根據資產狀態來搜尋資產，請按一下「搜尋&#x200B;****![搜尋選項](assets/do-not-localize/search_icon.png)」以顯示Omnisearch列。
 1. 選擇`Return`並按一下[!DNL Experience Manager]以顯示搜索面板。
-1. 在搜尋面板中，按一下「發佈狀態」並選取「已發佈」，以搜尋[!DNL Assets]中的已發佈資產。]****[!UICONTROL ****
+1. 在搜尋面板中，按一下「發佈狀態」並選取「已發佈」，以搜尋[!DNL Assets]中的已發佈資產。********
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -127,7 +128,7 @@ ht-degree: 5%
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## [!DNL Assets] {#digital-rights-management-in-assets-1}中的數位版權管理
+## Digital Rights Management在[!DNL Assets] {#digital-rights-management-in-assets-1}中
 
 此功能會強制您接受授權合約，您才能從[!DNL Adobe Experience Manager Assets]下載授權資產。
 
@@ -144,7 +145,7 @@ ht-degree: 5%
 >
 >`/etc/dam/drm/licenses`用於儲存[!DNL Experience Manager]舊版授權的位置已過時。
 >
->如果您建立或修改授權頁面，或從先前的[!DNL Experience Manager]版本移植，Adobe建議您將它們儲存在`/apps/settings/dam/drm/licenses`或`/conf/&ast;/settings/dam/drm/licenses`下。
+>如果您建立或修改授權頁面，或從先前的[!DNL Experience Manager]版本移植這些頁面，Adobe建議您將它們儲存在`/apps/settings/dam/drm/licenses`或`/conf/&ast;/settings/dam/drm/licenses`下。
 
 ### 下載受DRM保護的資產{#downloading-drm-assets}
 
