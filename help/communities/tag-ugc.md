@@ -9,11 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 3%
+source-wordcount: '249'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +31,7 @@ ht-degree: 3%
 
 ## 社群功能{#communities-features}
 
-可設定為允許標籤的AEM Communities功能包括：
+可配置為允許標籤的AEM Communities功能包括：
 
 * [部落格](blog-feature.md)
 * [日曆](calendar.md)
