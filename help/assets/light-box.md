@@ -1,11 +1,12 @@
 ---
 title: 燈箱作為您的個人影像收藏館
-description: 在Adobe Experience Manager Assets中瞭解Lightbox作為您的個人影像收藏館]。
+description: 瞭解Lightbox如何在Adobe Experience Manager資產中做為您的個人影像收藏館]。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: db12d7183ddc365bf9bb52a6b7d08e8142259522
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
