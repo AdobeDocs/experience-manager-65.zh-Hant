@@ -2,10 +2,11 @@
 title: 安裝和配置ImageMagick
 description: 瞭解ImageMagick軟體、如何安裝、設定命令列處理步驟，以及使用它編輯、合成和產生影像縮圖。
 contentOwner: AG
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 ImageMagick是建立、編輯、合成或轉換點陣圖影像的軟體外掛程式。 它可以讀取和寫入多種格式（超過200種）的影像，包括PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF和SVG。 使用ImageMagick來調整影像大小、反向、鏡像、旋轉、扭曲、切變和變形。 您也可以使用ImageMagick調整影像顏色、套用各種特效，或繪製文字、線條、多邊形、橢圓和曲線。
 
-使用命令行中的[!DNL Adobe Experience Manager]媒體處理常式，透過ImageMagick處理影像。 要使用ImageMagick使用各種檔案格式，請參閱[Assets檔案格式最佳實踐](/help/assets/assets-file-format-best-practices.md)。 若要瞭解所有支援的檔案格式，請參閱[Assets supported formats](/help/assets/assets-formats.md)。
+使用命令行中的[!DNL Adobe Experience Manager]媒體處理常式，透過ImageMagick處理影像。 若要使用ImageMagick使用各種檔案格式，請參閱[Assets檔案格式最佳實務](/help/assets/assets-file-format-best-practices.md)。 若要瞭解所有支援的檔案格式，請參閱[Assets supported formats](/help/assets/assets-formats.md)。
 
 要使用ImageMagick處理大型檔案，請考慮記憶體要求高於通常要求、IM策略需要的潛在更改以及對效能的整體影響。 記憶體需求取決於各種因素，例如解析度、位元深度、色彩描述檔和檔案格式。 如果要使用ImageMagick處理非常大的檔案，請正確對[!DNL Experience Manager]伺服器進行基準測試。 最後提供了一些有用的資源。
 
@@ -37,7 +38,7 @@ ImageMagick是建立、編輯、合成或轉換點陣圖影像的軟體外掛程
 
 您可以為特定使用案例設定命令行處理步驟。 每次在[!DNL Experience Manager]伺服器上將JPEG影像檔案新增至`/content/dam`時，請執行下列步驟以產生翻轉的影像和縮圖（140x100、48x48、319x319和1280x1280）:
 
-1. 在[!DNL Experience Manager]伺服器上，前往「工作流程」主控台(`https://[aem_server]:[port]/workflow`)，並開啟「DAM更新資產」工作流程模型。]****[!UICONTROL 
+1. 在[!DNL Experience Manager]伺服器上，前往「工作流程」主控台(`https://[aem_server]:[port]/workflow`)，並開啟「DAM更新資產」工作流程模型。****
 1. 從&#x200B;**[!UICONTROL DAM Update Asset]**&#x200B;工作流模型中，開啟&#x200B;**[!UICONTROL EPS縮圖（由ImageMagick提供）]**&#x200B;步驟。
 1. 在&#x200B;**[!UICONTROL 參數頁籤]**&#x200B;中，將`image/jpeg`添加到&#x200B;**[!UICONTROL Mime類型]**&#x200B;清單中。
 
@@ -64,7 +65,7 @@ ImageMagick是建立、編輯、合成或轉換點陣圖影像的軟體外掛程
    >
    >`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ./${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
-1. 開啟「處理縮圖&#x200B;]**」步驟，並在「略過Mime類型**[!UICONTROL 」下新增MIME類型`image/jpeg`。]****[!UICONTROL 
+1. 開啟「處理縮圖&#x200B;]**」步驟，並在「略過Mime類型**[!UICONTROL 」下新增MIME類型`image/jpeg`。****
 
    ![skip_mime_types](assets/skip_mime_types.png)
 
@@ -82,7 +83,7 @@ ImageMagick是建立、編輯、合成或轉換點陣圖影像的軟體外掛程
 
 此外，各種影像處理外掛程式都依賴ImageMagick程式庫，包括但不限於PHP的影像快取、Ruby的快取和回形針，以及Nodejs的影像快取。
 
-如果您使用ImageMagick或受影響的程式庫，Adobe建議您至少執行下列其中一項工作（但最好同時執行兩項），以緩解已知的弱點：
+如果您使用ImageMagick或受影響的程式庫，Adobe建議您至少執行下列任務（但最好同時執行兩者），以緩解已知的弱點：
 
 1. 在將所有影像檔案傳送至ImageMagick進行處理之前，請先確認所有影像檔案的開頭皆為預期的[&quot;magic bytes&quot;](https://en.wikipedia.org/wiki/List_of_file_signatures)，並對應您支援的影像檔案類型。
 1. 使用策略檔案禁用易受攻擊的ImageMagick編碼器。 ImageMagick的全局策略位於`/etc/ImageMagick`。
