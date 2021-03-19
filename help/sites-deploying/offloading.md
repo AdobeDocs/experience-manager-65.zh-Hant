@@ -1,18 +1,19 @@
 ---
 title: 卸載作業
 seo-title: 卸載作業
-description: 瞭解如何在拓撲中設定和使用AEM例項，以執行特定類型的處理。
-seo-description: 瞭解如何在拓撲中設定和使用AEM例項，以執行特定類型的處理。
+description: 瞭解如何在拓撲中配AEM置和使用實例，以執行特定類型的處理。
+seo-description: 瞭解如何在拓撲中配AEM置和使用實例，以執行特定類型的處理。
 uuid: e971d403-dfd2-471f-b23d-a67e35f1ed88
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2404'
 ht-degree: 1%
 
 ---
@@ -22,9 +23,9 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-卸載會在拓撲中的Experience Manager實例之間分配處理任務。 借由卸載，您可以使用特定的Experience Manager實例來執行特定類型的處理。 專業化的處理可讓您最大化可用伺服器資源的使用。
+卸載在拓撲中的Experience Manager實例之間分配處理任務。 透過卸載，您可以使用特定的Experience Manager例項來執行特定類型的處理。 專業化的處理可讓您最大化可用伺服器資源的使用。
 
-Offloading是以[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)和Sling JobManager功能為基礎。 要使用卸載，請將Experience Manager群集添加到拓撲中，並標識群集處理的作業主題。 叢集由一或多個Experience Manager實例組成，因此單一實例被視為叢集。
+Offloading是以[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)和Sling JobManager功能為基礎。 要使用卸載，可將Experience Manager群集添加到拓撲中，並標識群集處理的作業主題。 群集由一個或多個Experience Manager實例組成，因此單個實例被視為群集。
 
 有關向拓撲添加實例的資訊，請參見[管理拓撲](/help/sites-deploying/offloading.md#administering-topologies)。
 
@@ -35,14 +36,14 @@ Sling JobManager和JobConsumer可建立在拓撲中處理的工作：
 * JobManager:為特定主題建立作業的服務。
 * JobConsumer:執行一個或多個主題的作業的服務。 可針對相同主題註冊多個JobConsumer服務。
 
-當JobManager建立作業時，卸載框架在拓撲中選擇Experience Manager群集以執行該作業：
+當JobManager建立作業時，卸載框架在拓撲中選擇一個Experience Manager群集以執行該作業：
 
 * 群集必須包含一個或多個運行為作業主題註冊的JobConsumer實例。
 * 必須至少為群集中的一個實例啟用主題。
 
 有關優化任務分配的資訊，請參閱[配置主題衝減](/help/sites-deploying/offloading.md#configuring-topic-consumption)。
 
-![chlimage_1-189](assets/chlimage_1-109.png)
+![chlimage_1-109](assets/chlimage_1-109.png)
 
 當Offloading架構選擇叢集以執行工作，而叢集由多個例項組成時，Sling Distribution會決定叢集中哪個例項執行工作。
 
@@ -69,7 +70,7 @@ Sling JobManager和JobConsumer可建立在拓撲中處理的工作：
 
 ### 查看拓撲{#viewing-the-topology}
 
-使用拓撲瀏覽器來探索Experience Manager實例參與的拓撲狀態。 拓撲瀏覽器顯示拓撲的群集和實例。
+使用拓撲瀏覽器來查看Experience Manager實例所參與的拓撲的狀態。 拓撲瀏覽器顯示拓撲的群集和實例。
 
 對於每個群集，您會看到一個群整合員清單，其中指明每個成員加入群集的順序以及哪個成員是「領導者」。 「目前」屬性會指出您目前管理的例項。
 
@@ -86,7 +87,7 @@ Sling JobManager和JobConsumer可建立在拓撲中處理的工作：
 
    將出現參與拓撲的群集。
 
-   ![chlimage_1-111](assets/chlimage_1-111.png)
+   ![chlimage_1-191](assets/chlimage_1-111.png)
 
 1. 按一下群集可查看集群中實例及其ID、當前狀態和領導狀態的清單。
 1. 按一下例項ID以檢視更詳細的屬性。
@@ -108,7 +109,7 @@ Sling JobManager和JobConsumer可建立在拓撲中處理的工作：
 
 Apache Sling Resource-Based Discovery Service會在每個執行個體上執行，以控制Experience Manager執行個體與拓撲互動的方式。
 
-Discovery Service會定期向拓撲連接器服務發送POST請求（心跳），以建立和維護與拓撲的連接。 拓撲連接器服務維護允許加入拓撲的IP地址或主機名清單：
+Discovery服務會定期向拓撲連接器服務發送POST請求（心跳），以建立和維護與拓撲的連接。 拓撲連接器服務維護允許加入拓撲的IP地址或主機名清單：
 
 * 要將實例連接到拓撲，請指定根成員的拓撲連接器服務的URL。
 * 要啟用實例加入拓撲，請將實例添加到根成員的拓撲連接器服務的允許清單中。
@@ -138,7 +139,7 @@ Discovery Service會定期向拓撲連接器服務發送POST請求（心跳）�
   <tr>
    <td>最小事件延遲（秒）</td>
    <td>minEventDelay</td>
-   <td><p>當拓撲發生變化時，將狀態從TOPOLOGY_CHANGING延遲到TOPOLOGY_CHANGED的時間。 當狀態為TOPOLOGY_CHANGING時，每次更改都會將延遲增加此時間量。</p> <p>這種延遲可防止監聽器被事件淹沒。 </p> <p>若要不使用延遲，請指定0或負數。</p> </td>
+   <td><p>當拓撲發生變化時，將狀態從TOPOLOGY_CHANGING延遲到TOPOLOGY_CHANGED的時間。 當狀態為TOPOLOGY_CHANGING時，每發生一次更改都會增加此時間量的延遲。</p> <p>這種延遲可防止監聽器被事件淹沒。 </p> <p>若要不使用延遲，請指定0或負數。</p> </td>
    <td>3</td>
   </tr>
   <tr>
@@ -193,7 +194,7 @@ Discovery Service會定期向拓撲連接器服務發送POST請求（心跳）�
 1. 要禁用實例的主題消耗，請在主題名稱下按一下實例旁的禁用。
 1. 要配置實例的所有主題使用，請按一下任何主題下的實例標識符。
 
-   ![chlimage_1-115](assets/chlimage_1-114.png)
+   ![chlimage_1-114](assets/chlimage_1-114.png)
 
 1. 按一下主題旁邊的以下按鈕之一以配置實例的衝減行為，然後按一下保存：
 
@@ -205,7 +206,7 @@ Discovery Service會定期向拓撲連接器服務發送POST請求（心跳）�
 
 ### 已安裝的作業使用者{#installed-job-consumers}
 
-Experience Manager已安裝數個JobConsumer實作。 這些JobConsumers註冊的主題會顯示在卸載瀏覽器中。 出現的其他主題是自訂JobConsumers已註冊的主題。 下表說明預設的JobConsumers。
+JobConsumer實施會隨Experience Manager安裝。 這些JobConsumers註冊的主題會顯示在卸載瀏覽器中。 出現的其他主題是自訂JobConsumers已註冊的主題。 下表說明預設的JobConsumers。
 
 | 工作主題 | 服務PID | 說明 |
 |---|---|---|
@@ -218,7 +219,7 @@ Experience Manager已安裝數個JobConsumer實作。 這些JobConsumers註冊�
 
 ### 禁用和啟用實例{#disabling-and-enabling-topics-for-an-instance}的主題
 
-Apache Sling Job Consumer Manager服務提供主題allow list和區塊清單屬性。 設定這些屬性，以啟用或停用Experience Manager例項上特定主題的處理。
+Apache Sling Job Consumer Manager服務提供主題allow list和區塊清單屬性。 配置這些屬性，以啟用或禁用對Experience Manager實例的特定主題的處理。
 
 **注：如** 果實例屬於拓撲，您也可以在拓撲中的任何電腦上使用卸載瀏覽器來啟用或禁用主題。
 
@@ -286,7 +287,7 @@ Apache Sling Job Consumer Manager服務提供主題allow list和區塊清單屬�
    | 傳輸>傳輸URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
    | 傳輸>傳輸用戶 | 目標實例上的複製用戶 |
    | 傳輸>傳輸密碼 | 目標實例上的複製用戶密碼 |
-   | 「延伸> HTTP方法」 | 貼文 |
+   | 「延伸> HTTP方法」 | POST |
    | 「觸發器」>「忽略預設值」 | True |
 
 ### 建立反向代理{#creating-the-reverse-agent}
@@ -300,7 +301,7 @@ Apache Sling Job Consumer Manager服務提供主題allow list和區塊清單屬�
    | 傳輸>傳輸URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
    | 傳輸>傳輸用戶 | 目標實例上的複製用戶 |
    | 傳輸>傳輸密碼 | 目標實例上的複製用戶密碼 |
-   | 「延伸> HTTP方法」 | 取得 |
+   | 「延伸> HTTP方法」 | GET |
 
 ### 建立外框代理{#creating-the-outbox-agent}
 
