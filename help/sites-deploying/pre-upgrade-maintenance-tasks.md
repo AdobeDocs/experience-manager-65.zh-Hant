@@ -1,8 +1,8 @@
 ---
 title: 升級前維護任務
 seo-title: 升級前維護任務
-description: 瞭解AEM中的升級前工作。
-seo-description: 瞭解AEM中的升級前工作。
+description: 瞭解中的升級前任務AEM。
+seo-description: 瞭解中的升級前任務AEM。
 uuid: 5da1cfc7-8a10-47b1-aafb-2cd112e3f818
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: upgrading
 discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
+feature: 升級
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2159'
 ht-degree: 0%
 
 ---
@@ -44,9 +45,9 @@ ht-degree: 0%
 
 執行升級時，除了內容和代碼升級活動外，還需要執行儲存庫遷移。 遷移將以新的段Tar格式建立儲存庫的副本。 因此，您需要足夠的磁碟空間來保留第二個可能更大的儲存庫版本。
 
-## 完全備份AEM {#fully-back-up-aem}
+## 完全備AEM份{#fully-back-up-aem}
 
-AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應用程式安裝、資料儲存和Mongo實例（如果適用）。 有關備份和還原AEM實例的詳細資訊，請參閱[備份和還原](/help/sites-administering/backup-and-restore.md)。
+應AEM在開始升級之前完全備份。 請務必備份您的儲存庫、應用程式安裝、資料儲存和Mongo實例（如果適用）。 有關備份和恢復實例的詳AEM細資訊，請參見[備份和恢復](/help/sites-administering/backup-and-restore.md)。
 
 ## 備份對/etc {#backup-changes-etc}的更改
 
@@ -54,37 +55,37 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
 
 ## 生成快速啟動。properties檔案{#generate-quickstart-properties}
 
-從jar檔案啟動AEM時，`crx-quickstart/conf`下會產生`quickstart.properties`檔案。 如果AEM過去只是以start指令碼啟動，此檔案將不存在，而且升級將會失敗。 請務必檢查此檔案是否存在，並從jar檔案重新啟動AEM（若未存在）。
+從jarAEM檔案啟動時，將在`crx-quickstart/conf`下生成`quickstart.properties`檔案。 如AEM果以前只使用啟動指令碼啟動，則此檔案將不存在，並且升級將失敗。 請確保檢查此檔案是否存在，並從jarAEM檔案（如果不存在）重新啟動。
 
 ## 配置工作流和審核日誌清除{#configure-wf-audit-purging}
 
-`WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任務需要單獨的OSGi配置，沒有這些配置將無法工作。 如果在升級前任務執行期間失敗，則最可能的原因是缺少配置。 因此，如果您不想運行這些任務，請務必為這些任務添加OSGi配置，或將它們從升級前優化任務清單中完全刪除。 有關配置工作流清除任務的文檔，請訪問[管理工作流實例](/help/sites-administering/workflows-administering.md) ，並可在[ AEM 6](/help/sites-administering/operations-audit-log.md)中的審核日誌維護中找到審核日誌維護任務配置。
+`WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任務需要單獨的OSGi配置，沒有這些配置將無法工作。 如果在升級前任務執行期間失敗，則最可能的原因是缺少配置。 因此，如果您不想運行這些任務，請務必為這些任務添加OSGi配置，或將它們從升級前優化任務清單中完全刪除。 有關配置工作流清除任務的文檔，請訪問[管理工作流實例](/help/sites-administering/workflows-administering.md) ，並可在[6](/help/sites-administering/operations-audit-log.md)的審核日誌維護中找到審核日誌維護任務配置AEM。
 
-如需CQ 5.6上的工作流程和稽核記錄清除，以及AEM 6.0上的稽核記錄清除，請參閱[清除工作流程和稽核節點](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)。
+有關CQ 5.6上的工作流和審核日誌清除以及6.0上的審核日誌清除AEM，請參閱[清除工作流和審核節點](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)。
 
 ## 安裝、配置和運行升級前任務{#install-configure-run-pre-upgrade-tasks}
 
-由於AEM所允許的自訂層級，環境通常無法遵循統一的升級方式。 因此，建立標準化的升級程式是個困難的程式。
+由於定制級別允許AEM，環境通常不遵循統一的升級方式。 因此，建立標準化的升級程式是個困難的程式。
 
-在舊版中，AEM升級也很難停止或無法安全恢復。 這會導致需要重新啟動完整升級程式或執行有缺陷的升級而未觸發任何警告的情況。
+在舊版中，停止或無法AEM安全恢復的升級也很困難。 這會導致需要重新啟動完整升級程式或執行有缺陷的升級而未觸發任何警告的情況。
 
-為瞭解決這些問題，Adobe在升級程式中增加了數種增強功能，讓其更具彈性，而且更方便使用。 以前必須手動執行的升級前維護任務正在優化和自動化。 此外，已新增升級後報表，讓程式可以完全審查，以期更容易發現任何問題。
+為瞭解決這些問題，Adobe在升級程式中增加了幾項增強功能，使其更具彈性，而且使用起來更方便。 以前必須手動執行的升級前維護任務正在優化和自動化。 此外，已新增升級後報表，讓程式可以完全審查，以期更容易發現任何問題。
 
-升級前維護任務目前分散在手動執行部分或全部的各種介面上。 AEM 6.3中引進的升級前維護最佳化功能，可讓您以統一的方式觸發這些工作，並可視需要檢查結果。
+升級前維護任務目前分散在手動執行部分或全部的各種介面上。 6.3中引入的升級前維護優化AEM功能，可讓您以統一的方式觸發這些工作，並可視需要檢查結果。
 
-升級前最佳化步驟中包含的所有工作都與AEM 6.0以後的所有版本相容。
+升級前最佳化步驟中包含的所有工作都與6.0以AEM後的所有版本相容。
 
 ### 如何設定{#how-to-set-it-up}
 
-在AEM 6.3和更新版本中，快速啟動jar中包含升級前維護最佳化工作。 如果您是從舊版AEM 6升級，則可透過個別的套件取得，您可從「套件管理員」下載。
+在AEM6.3和更高版本中，升級前維護優化任務包含在快速啟動jar中。 如果您從舊版6升級，AEM則可透過個別的套件使用，您可從「套件管理員」下載。
 
 您可以在以下位置找到包：
 
-* [從AEM 6.0升級](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq600/product/pre-upgrade-tasks-content-cq60)
+* [從AEM6.0升級](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq600/product/pre-upgrade-tasks-content-cq60)
 
-* [從AEM 6.1升級](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/product/pre-upgrade-tasks-content-cq61)
+* [從AEM6.1升級](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/product/pre-upgrade-tasks-content-cq61)
 
-* [從AEM 6.2升級](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/product/pre-upgrade-tasks-content-cq62)
+* [從AEM6.2升級](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/product/pre-upgrade-tasks-content-cq62)
 
 ### 如何使用{#how-to-use-it}
 
@@ -125,7 +126,7 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
   <tr>
    <td><code>WorkflowPurgeTask</code></td>
    <td>crx2/crx3</td>
-   <td>必須先設定Adobe Granite Workflow Purge Configuration OSGi，才能執行。</td>
+   <td>必須在運行前配置AdobeGranite Workflow Purge Configuration OSGi。</td>
   </tr>
   <tr>
    <td><code>GenerateBundlesListFileTask</code></td>
@@ -135,7 +136,7 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
   <tr>
    <td><code>RevisionCleanupTask</code></td>
    <td>crx3</td>
-   <td>對於AEM 6.0到6.2上的TarMK例項，請改為手動執行「離線修訂清除」。</td>
+   <td>對於6.0到6.2AEM上的TarMK實例，請改為手動運行離線修訂清除。</td>
   </tr>
   <tr>
    <td><code>com.day.cq.audit.impl.AuditLogMaintenanceTask</code></td>
@@ -222,12 +223,12 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
    <td>動作</td>
-   <td><p>執行所有升級前的健康狀況檢查，並將其狀態儲存在位於sling home路徑中名為<code>preUpgradeHCStatus.properties</code>的檔案中。 如果<code>shutDownOnSuccess</code>參數設為<code>true</code>，則AEM例項將會關閉，但前提是所有升級前的健康狀況檢查都有「正常」狀態。</p> <p>屬性檔案將用作任何以後升級的先決條件<br /> ，如果升級前運行狀況檢查<br />執行失敗，則升級過程將停止。 如果您要忽略升級前的<br />運行狀況檢查的結果並且仍要啟動升級，則可以刪除該檔案。</p> </td>
+   <td><p>執行所有升級前的健康狀況檢查，並將其狀態儲存在位於sling home路徑中名為<code>preUpgradeHCStatus.properties</code>的檔案中。 如果<code>shutDownOnSuccess</code>參數設為<code>true</code>，則會關AEM閉實例，但僅當所有升級前運行狀況檢查都具有OK狀態時。</p> <p>屬性檔案將用作任何以後升級的先決條件<br /> ，如果升級前運行狀況檢查<br />執行失敗，則升級過程將停止。 如果您要忽略升級前的<br />運行狀況檢查的結果並且仍要啟動升級，則可以刪除該檔案。</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
    <td>動作</td>
-   <td>列出當<br />升級至指定的AEM版本時，將不再符合的所有匯入封裝。 目標AEM版本必須<br />指定為參數。</td>
+   <td>列出當<br />升級到指定版本時，將不再滿足的所有導入包AEM。 目標AEM版本必須<br />作為參數。</td>
   </tr>
  </tbody>
 </table>
@@ -248,11 +249,11 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
 
 >[!NOTE]
 >
->只有當您從AEM 5版本升級時，才需要此步驟。 您可完全略過它，以取得舊版AEM 6的升級。
+>只有從5版升級時，才需要此AEM步驟。 您可完全略過它，以取得舊版AEM6的升級。
 
 在Apache Oak中，自訂`LoginModules`在儲存庫層級的驗證配置方式已發生根本性改變。
 
-在使用CRX2組態的AEM版本中，`repository.xml`檔案會放入AEM 6之後，則會透過Web Console在Apache Felix JAAS Configuration Factory服務中完成。
+在使AEM用CRX2組態的版本中，`repository.xml`檔案中會放置CRX2組態，而從AEM6歲起，則會透過Web Console在Apache Felix JAAS組態工廠服務中進行。
 
 因此，升級後，必須停用並重新建立Apache Oak的任何現有組態。
 
@@ -279,15 +280,15 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
 >
 >如需詳細資訊，請參閱[使用外部登入模組進行驗證](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)。
 >
->如需AEM 6中`LoginModule`組態的範例，請參閱[使用AEM 6](/help/sites-administering/ldap-config.md)設定LDAP。
+>有關6中`LoginModule`配置的示例AEM，請參見[使用AEM6](/help/sites-administering/ldap-config.md)配置LDAP。
 
 ## 從/install目錄{#remove-updates-install-directory}中刪除更新
 
 >[!NOTE]
 >
->只會在關閉AEM例項後，從crx-quickstart/install目錄移除套件。 這是開始就地升級程式之前的最後步驟之一。
+>在關閉實例後，僅從crx-quickstart/install目錄中刪除包AEM。 這是開始就地升級程式之前的最後步驟之一。
 
-刪除通過本地檔案系統上的`crx-quickstart/install`目錄部署的所有服務包、功能包或修補程式。 如此可避免在更新完成後，在新AEM版本之上意外安裝舊的修補程式和服務套件。
+刪除通過本地檔案系統上的`crx-quickstart/install`目錄部署的所有服務包、功能包或修補程式。 如此可避免在更新完成後，在新版本之上無意中安裝舊的修補程式和AEMService Pack。
 
 ## 停止任何冷備用實例{#stop-tarmk-coldstandby-instance}
 
@@ -315,13 +316,13 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
 
 ## 如果需要，請升級資料庫模式{#upgrade-the-database-schema-if-needed}
 
-通常，用於永續性的基礎Apache Oak stack AEM會視需要負責升級資料庫架構。
+通常，用於持久性的基AEM礎Apache Oak堆棧將在需要時負責升級資料庫架構。
 
-但是，當模式無法自動升級時，可能會發生這種情況。 這些環境大多是高安全性環境，資料庫在權限非常有限的用戶下運行。 如果發生此情況，AEM將繼續使用舊的架構。
+但是，當模式無法自動升級時，可能會發生這種情況。 這些環境大多是高安全性環境，資料庫在權限非常有限的用戶下運行。 如果發生此情況，AEM將繼續使用舊模式。
 
 為防止這種情況發生，您需要按照以下過程升級模式：
 
-1. 關閉需要升級的AEM例項。
+1. 關閉需AEM要升級的實例。
 1. 升級資料庫模式。 請查閱您的資料庫類型檔案，以瞭解您要達到此目的，需要使用哪些工具。
 
    如需Oak如何處理架構升級的詳細資訊，請參閱Apache網站](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)上的[本頁。
@@ -334,14 +335,14 @@ AEM應在開始升級之前完全備份。 請務必備份您的儲存庫、應�
 >
 >只有在下列情況下，才需要執行此升級前維護任務：
 >
->* 您是從AEM 6.3以前的AEM版本升級
+>* 您是從6.3AEM以AEM前的版本升級
 >* 在升級期間，您會遇到下列任何錯誤。
 
 >
 
 
 
-有些例外的情況是，服務使用者可能會以舊版AEM錯誤地標籤為一般使用者。
+有些例外情況是，服務使用者可能會在舊版中被不當AEM標籤為一般使用者。
 
 如果發生此情況，升級將失敗，並出現如下訊息：
 
