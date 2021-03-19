@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1484'
 ht-degree: 2%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 2%
 
 # SRP {#solr-configuration-for-srp}的Solr配置
 
-## AEM Platform {#solr-for-aem-platform}的Solr
+## Solr for AEM Platform {#solr-for-aem-platform}
 
 [Apache Solr](https://lucene.apache.org/solr/)安裝可通過使用不同集合在[節點儲存](../../help/sites-deploying/data-store-config.md)(Oak)和[公共儲存](working-with-srp.md)(SRP)之間共用。
 
@@ -110,9 +111,9 @@ sh./scripts/cloud-scripts/zkcli.sh \
 
 ### 標準與進階MLS{#comparison-of-standard-and-advanced-mls}的比較
 
-AEM Communities的多語言搜尋(MLS)是專為Solr平台所建立，可改善所有支援語言（包括英文）的搜尋。
+針對AEM Communities的多語言搜尋(MLS)是專為Solr平台所建立，可改善所有支援語言的搜尋，包括英文。
 
-AEM社群的MLS可以是標準MLS或進階MLS。 標準MLS僅包含Solr組態設定，並排除任何外掛程式或資源檔案。 進階MLS是更完整的解決方案，包含Solr組態設定、外掛程式和相關資源
+適用於社AEM群的MLS可以是標準MLS或進階MLS。 標準MLS僅包含Solr組態設定，並排除任何外掛程式或資源檔案。 進階MLS是更完整的解決方案，包含Solr組態設定、外掛程式和相關資源
 
 標準MLS包含下列語言的內容搜尋增強功能：
 
@@ -142,9 +143,9 @@ Advanced MLS支援下列33種語言。
 | 芬蘭文 | 拉脫維亞文 | 泰語 |
 | 法文 | 立陶宛文 | 土耳其文 |
 
-#### AEM 6.1 Solr搜尋、標準MLS和進階MLS {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}的比較
+#### 6.AEM1 Solr搜尋、標準MLS和進階MLS {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}的比較
 
-**注意**:AEM 6.1指AEM 6.1 Communities FP3及更早版本。
+**注意**:AEM 6.1指AEM6.1 Communities FP3和舊版。
 
 ![compare-solr-mls](assets/compare-solr-mls.png)
 
@@ -159,7 +160,7 @@ Solr 4.10適用的標準MLS檔案(schema.xml、solrconfig.xml)。
 
 Solr 5.x的標準MLS檔案(schema.xml、solrconfig.xml)。
 
-標準MLS檔案會儲存在AEM儲存庫中。
+標準MLS檔案會儲存在儲存AEM庫中。
 
 **注意**:Solr檔案儲存在msrp/資料夾中，但也用於DSRP（不需要變更）。
 
@@ -220,11 +221,11 @@ Solr 5.x的標準MLS檔案(schema.xml、solrconfig.xml)。
 
 若要支援進階MLS的SRP集合（MSRP或DSRP），除了自訂架構和Solr組態外，還需要新的Solr外掛程式。 所有必要項目都封裝在可下載的zip檔案中。 此外，安裝指令碼也隨附在獨立模式下部署Solr時使用。
 
-若要取得進階MLS套件，請參閱說明檔案部署區段中的[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)。
+若要取得進階MLS套件，請參閱說明檔案AEM之部署區段中的[進階MLS](deploy-communities.md#aem-advanced-mls)。
 
 若要開始安裝SolrCloud或獨立模式：
 
-* 下載AEM-SOLR-MLS zip封存至代管Solr的伺服器。
+* 下載AEM-SOLR-MLS郵遞區號封存至代管Solr的伺服器。
 * 拆開存檔的包裝。
 
 #### SolrCloud模式——進階MLS {#solrcloud-mode-advanced-mls}
