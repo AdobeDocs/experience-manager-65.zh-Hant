@@ -1,8 +1,8 @@
 ---
 title: 使用已提交的XML資料建立PDF檔案
 seo-title: 使用已提交的XML資料建立PDF檔案
-description: 使用Forms服務來擷取使用者在互動式表單中輸入的表單資料。 將表單資料傳遞至其他AEM Forms服務作業，並使用資料建立PDF檔案。
-seo-description: 使用Forms服務來擷取使用者在互動式表單中輸入的表單資料。 將表單資料傳遞至其他AEM Forms服務作業，並使用資料建立PDF檔案。
+description: 使用Forms服務來擷取使用者在互動式表單中輸入的表單資料。 將表單資料傳遞至另一個AEM Forms服務作業，並使用資料建立PDF檔案。
+seo-description: 使用Forms服務來擷取使用者在互動式表單中輸入的表單資料。 將表單資料傳遞至另一個AEM Forms服務作業，並使用資料建立PDF檔案。
 uuid: 2676c614-8988-451b-ac7c-bd07731a3f5f
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -21,19 +22,19 @@ ht-degree: 0%
 
 # 使用已提交的XML資料建立PDF檔案{#creating-pdf-documents-with-submittedxml-data}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 ## 使用已提交的XML資料建立PDF檔案{#creating-pdf-documents-with-submitted-xml-data}
 
-讓使用者可填寫互動式表單的網路應用程式，需要將資料送回伺服器。 使用Forms服務，您可以擷取使用者在互動式表單中輸入的表單資料。 然後，您可以將表單資料傳遞至其他AEM Forms服務作業，並使用資料建立PDF檔案。
+讓使用者可填寫互動式表單的網路應用程式，需要將資料送回伺服器。 使用Forms服務，您可以擷取使用者在互動式表單中輸入的表單資料。 然後，您可以將表單資料傳遞至另一個AEM Forms服務作業，並使用資料建立PDF檔案。
 
 >[!NOTE]
 >
->在您閱讀本內容之前，建議您對處理已提交表單有深入的瞭解。 「處理提交的表單」中涵蓋表單設計與提交XML資料之間的關係等概念。
+>在您閱讀本內容之前，建議您對處理已提交表單有深入的瞭解。 表單設計與已提交XML資料之間的關係等概念，在處理已提交的Forms中有說明。
 
-請考慮下列包含三個AEM Forms服務的工作流程：
+請考慮下列涉及三項AEM Forms服務的工作流程：
 
-* 使用者從網路應用程式提交XML資料至Forms服務。
+* 使用者從網路應用程式將XML資料提交至Forms服務。
 * Forms服務用於處理提交的表單並提取表單欄位。 可處理表單資料。 例如，可將資料提交至企業資料庫。
 * 表單資料會傳送至輸出服務，以建立非互動式PDF檔案。
 * 非互動式PDF檔案會儲存在Content Services中（不建議使用）。
@@ -51,7 +52,7 @@ ht-degree: 0%
 若要使用已提交的XML資料建立非互動式PDF檔案並儲存在Content Services中的PDF檔案（不建議使用），請執行下列工作：
 
 1. 包含專案檔案。
-1. 建立表單、輸出和檔案管理物件。
+1. 建立Forms、輸出和檔案管理物件。
 1. 使用Forms服務擷取表單資料。
 1. 使用「輸出」服務建立非互動式PDF檔案。
 1. 使用「檔案管理」服務，將PDF表格儲存在Content Services（已過時）中。
@@ -60,17 +61,17 @@ ht-degree: 0%
 
 將必要的檔案加入您的開發專案中。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
-**建立表單、輸出和文檔管理對象**
+**建立Forms、輸出和文檔管理對象**
 
-在以程式設計方式執行Forms服務API操作之前，請先建立Forms Client API物件。 同樣地，由於此工作流會調用「輸出」和「文檔管理」服務，因此請同時建立「輸出客戶端API」對象和「文檔管理客戶端API」對象。
+在以程式設計方式執行Forms服務API操作之前，請先建立Forms客戶端API對象。 同樣地，由於此工作流會調用「輸出」和「文檔管理」服務，因此請同時建立「輸出客戶端API」對象和「文檔管理客戶端API」對象。
 
-**使用Forms服務擷取表單資料**
+**使用Forms服務檢索表單資料**
 
 擷取已提交至Forms服務的表單資料。 您可以處理提交的資料，以符合您的業務需求。 例如，您可以將表單資料儲存在企業資料庫中。 不過，若要建立非互動式PDF檔案，表單資料會傳遞至「輸出」服務。
 
 **使用「輸出」服務建立非互動式PDF檔案。**
 
-使用「輸出」服務建立以表單設計和XML表單資料為基礎的非互動式PDF檔案。 在工作流程中，會從Forms服務擷取表單資料。
+使用「輸出」服務建立以表單設計和XML表單資料為基礎的非互動式PDF檔案。 在工作流中，從Forms服務檢索表單資料。
 
 **使用檔案管理服務將PDF表格儲存在Content Services（已過時）**
 
@@ -78,28 +79,28 @@ ht-degree: 0%
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 ### 使用Java API {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}建立包含已提交XML資料的PDF檔案
 
-使用表單、輸出和檔案管理API(Java)，建立包含已提交XML資料的PDF檔案：
+使用Forms、輸出和檔案管理API(Java)，使用提交的XML資料建立PDF檔案：
 
 1. 包含專案檔案
 
    在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar、adobe-output-client.jar和adobe-contentservices-client.jar。
 
-1. 建立表單、輸出和文檔管理對象
+1. 建立Forms、輸出和文檔管理對象
 
    * 建立包含連接屬性的`ServiceClientFactory`對象。
    * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
    * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`OutputClient`對象。
    * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`DocumentManagementServiceClientImpl`對象。
 
-1. 使用Forms服務擷取表單資料
+1. 使用Forms服務檢索表單資料
 
    * 叫用`FormsServiceClient`物件的`processFormSubmission`方法並傳遞下列值：
 
@@ -124,7 +125,7 @@ ht-degree: 0%
    呼叫`OutputClient`物件的`generatePDFOutput`方法並傳遞下列值，以建立PDF檔案：
 
    * `TransformationFormat`列舉值。 若要產生PDF檔案，請指定`TransformationFormat.PDF`。
-   * 指定表單設計名稱的字串值。 確保表單設計與從Forms服務擷取的表單資料相容。
+   * 指定表單設計名稱的字串值。 確保表單設計與從Forms服務檢索的表單資料相容。
    * 指定表單設計所在內容根目錄的字串值。
    * 包含PDF執行時期選項的`PDFOutputOptionsSpec`物件。
    * `RenderOptionsSpec`物件，包含轉譯執行時期選項。
@@ -150,6 +151,6 @@ ht-degree: 0%
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
