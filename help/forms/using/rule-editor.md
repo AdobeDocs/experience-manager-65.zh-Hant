@@ -8,10 +8,11 @@ topic-tags: develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 3690d2d76ce13064bd3946f4f6fea1a2759cdf37
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '6818'
+source-wordcount: '6820'
 ht-degree: 0%
 
 ---
@@ -114,7 +115,7 @@ Adobe Experience Manager Forms的規則編輯器功能可讓商業使用者和�
 AND
 對C對象採取行動3;
 
-_
+]
 
 當您建立多值元件（例如選項按鈕或清單）時，系統會自動擷取選項並讓規則建立者使用。 您不需要再次輸入選項值。
 
