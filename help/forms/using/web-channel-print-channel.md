@@ -8,10 +8,11 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 96d2b1cc-3252-4cc7-8b06-a897cbef8599
 docset: aem65
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -23,17 +24,17 @@ ht-degree: 0%
 
 互動式通訊的作者可重複使用檔案片段和影像等資產，以建立互動式通訊的列印和網頁版本。
 
-[建立互動式通信的先決條件之一是，伺服器上提供用於打印和／或Web通道的模板。 ](../../forms/using/create-interactive-communication.md)當範本作者在AEM中建立網頁頻道範本時，列印頻道範本XDP會在Adobe Forms Designer中建立，並上傳至伺服器。
+[建立互動式通信的先決條件之一是，伺服器上提供用於打印和／或Web通道的模板。 ](../../forms/using/create-interactive-communication.md)當範本作者自行建立Web頻道範本時AEM，列印頻道範本XDP會在AdobeForms設計人員中建立，並上傳至伺服器。
 
 ## 打印通道{#printchannel}
 
-互動式通訊的列印頻道使用XFA表單範本XDP。 XDP是在Adobe Forms Designer中設計。 如需建立列印頻道範本的詳細資訊，請參閱[版面設計](../../forms/using/layout-design-details.md)。 若要在您的互動式通訊中使用列印渠道範本，您必須將範本上傳至AEM Forms伺服器。
+互動式通訊的列印頻道使用XFA表單範本XDP。 XDP是由AdobeForms設計師所設計。 如需建立列印頻道範本的詳細資訊，請參閱[版面設計](../../forms/using/layout-design-details.md)。 若要在互動式通訊中使用列印渠道範本，您必須將範本上傳至AEM Forms伺服器。
 
 ### 上傳互動式通訊列印頻道範本{#upload-interactive-communication-print-channel-template}
 
 若要上傳範本，您必須是表單使用者群組的成員。 使用下列步驟將列印渠道範本(XDP)上傳至AEM Forms:
 
-1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms和文檔]**。
 
 1. 點選「**[!UICONTROL 建立]** > **[!UICONTROL 檔案上傳]**」。
 
