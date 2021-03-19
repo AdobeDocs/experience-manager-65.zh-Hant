@@ -1,14 +1,15 @@
 ---
 title: 使用離線重新索引以減少升級期間的停機時間
-description: 瞭解如何使用離線重新建立索引方法來減少執行AEM升級時的系統停機時間。
+description: 瞭解如何使用離線重新索引方法來減少執行升級時的系統AEM停機時間。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
+feature: 升級
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1344'
 ht-degree: 0%
 
 ---
@@ -18,13 +19,13 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-升級Adobe Experience Manager的主要挑戰之一，是執行就地升級時與作者環境相關的停機時間。 內容作者在升級期間將無法存取環境。 因此，最好將執行升級所需的時間降到最低。 對於大型儲存庫，尤其是AEM Assets專案，這些專案通常擁有大型資料儲存空間和每小時高階的資產上傳，重新建立Oak索引的索引需要相當大比例的升級時間。
+升級Adobe Experience Manager的主要挑戰之一是執行就地升級時與作者環境相關的停機時間。 內容作者在升級期間將無法存取環境。 因此，最好將執行升級所需的時間降到最低。 對於大型儲存庫，尤其是AEM Assets專案，其資料儲存空間通常較大，而且每小時的資產上傳量也較高，重新建立Oak索引索引的索引需要相當大比例的升級時間。
 
-本節介紹如何在&#x200B;**執行升級前使用Oak-run工具重新索引儲存庫**，從而減少實際升級期間的停機時間。 所呈現的步驟可套用至AEM 6.4及更新版本的[Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html)索引。
+本節介紹如何在&#x200B;**執行升級前使用Oak-run工具重新索引儲存庫**，從而減少實際升級期間的停機時間。 所呈現的步驟可套用至6.4版及更新版本的[LuceneAEM](https://jackrabbit.apache.org/oak/docs/query/lucene.html)索引。
 
 ## 概覽 {#overview}
 
-新版AEM會隨著功能集的擴充，對Oak索引定義進行變更。 升級AEM例項時，對Oak索引所做的變更會強制重新建立索引。 重新建立索引對於資產部署而言十分昂貴，因為資產中的文字（例如，pdf檔案中的文字）會擷取並建立索引。 使用MongoMK儲存庫，資料將通過網路保存，從而進一步增加重新編製索引所需的時間。
+新版本的OakAEM索引定義會隨著功能集的擴充而改變。 升級實例時，對Oak索引的更改會強制重新編AEM制索引。 重新建立索引對於資產部署而言十分昂貴，因為資產中的文字（例如，pdf檔案中的文字）會擷取並建立索引。 使用MongoMK儲存庫，資料將通過網路保存，從而進一步增加重新編製索引所需的時間。
 
 大多數客戶在升級過程中遇到的問題是縮短停機時間。 解決方案是在升級期間對&#x200B;**skip**&#x200B;重新索引活動。 這可透過建立新的indecs **prior**&#x200B;來執行升級，然後在升級期間直接匯入。
 
@@ -43,7 +44,7 @@ ht-degree: 0%
 
 ### 文字提取 {#text-extraction}
 
-若要在AEM中啟用完整索引，會擷取來自二進位檔案（例如PDF）的文字並新增至索引。 這通常是索引程式中的昂貴步驟。 文本抽取是一個優化步驟，特別是在資產儲存庫儲存大量二進位檔案時，重新索引這些儲存庫。
+若要在中啟用完整索AEM引，會擷取來自二進位檔（例如PDF）的文字並新增至索引。 這通常是索引程式中的昂貴步驟。 文本抽取是一個優化步驟，特別是在資產儲存庫儲存大量二進位檔案時，重新索引這些儲存庫。
 
 ![離線——重新索引——升級——文字擷取](assets/offline-reindexing-upgrade-text-extraction.png)
 
@@ -103,11 +104,11 @@ java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika -
 
 若要離線建立索引，請遵循下列步驟：
 
-**1.產生目標AEM版本**&#x200B;的Oak Lucene索引定義
+**1.產生目標版本AEM**&#x200B;的Oak Lucene索引定義
 
-轉儲現有索引定義。 已進行變更的索引定義是使用目標AEM版本和oak-run的Adobe Granite儲存庫套裝產生。
+轉儲現有索引定義。 使用目標版本和oak-run的AdobeGranite資料庫套裝產AEM生進行變更的索引定義。
 
-要從&#x200B;**source** AEM實例轉儲索引定義，請運行以下命令：
+要從&#x200B;**source**&#x200B;實例轉儲索引定義，請運AEM行以下命令：
 
 >[!NOTE]
 >
@@ -117,9 +118,9 @@ java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika -
 java -jar oak-run.jar index --fds-path <datastore path> <nodestore path> --index-definitions
 ```
 
-其中`datastore path`和`nodestore path`來自&#x200B;**source** AEM實例。
+其中`datastore path`和`nodestore path`來自&#x200B;**source**&#x200B;實例AEM。
 
-然後，使用目標版本的Granite儲存庫套裝，從&#x200B;**target** AEM版本產生索引定義。
+然後，使用目標版本的Granite儲存庫包，從&#x200B;**target** AEM版本生成索引定義。
 
 ```
 java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabbit.oak.index.IndexDefinitionUpdater --in indexing-definitions_source.json --out merge-index-definitions_target.json --initializer com.adobe.granite.repository.impl.GraniteContent
@@ -133,7 +134,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 **2.在儲存庫中建立檢查點**
 
-在生產&#x200B;**source** AEM例項中建立具有長存留期的查核點。 應在克隆儲存庫之前完成此操作。
+在生產&#x200B;**source**&#x200B;實例中建立具有長存AEM留期的檢查點。 應在克隆儲存庫之前完成此操作。
 
 透過位於`http://serveraddress:serverport/system/console/jmx`的JMX主控台，前往`CheckpointMBean`並建立具有足夠長存留期（例如200天）的查核點。 為此，以`17280000000`作為存留期間的引數調用`CheckpointMBean#createCheckpoint`（以毫秒為單位）。
 
@@ -147,7 +148,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 **對生成的索引定義執行離線索引**
 
-Lucene可使用oak-run離線完成重新索引。 此過程在`indexing-result/indexes`下的磁碟中建立索引資料。 它會&#x200B;**not**&#x200B;寫入資料庫，因此不需要停止執行中的AEM例項。 已建立的文字儲存區會饋送至此程式：
+Lucene可使用oak-run離線完成重新索引。 此過程在`indexing-result/indexes`下的磁碟中建立索引資料。 它將&#x200B;**not**&#x200B;寫入儲存庫，因此不需要停止運行的實AEM例。 已建立的文字儲存區會饋送至此程式：
 
 ```
 java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --reindex --doc-traversal-mode --checkpoint <checkpoint> --fds-path <datastore path> --index-definitions-file merge-index-definitions_target.json --pre-extracted-text-dir text-extraction/store
@@ -166,7 +167,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 ### 導入索引{#importing-indexes}
 
-在AEM 6.4和更新版本中，AEM具備內建功能，可在啟動順序時從磁碟匯入索引。 在啟動過程中，會監視資料夾`<repository>/indexing-result/indexes`是否存在索引資料。 在[升級程式](in-place-upgrade.md#performing-the-upgrade)期間，您可以將預先建立的索引複製到上述位置，然後從新版&#x200B;**target** AEM jar開始。 AEM會將它匯入儲存庫，並從系統移除對應的查核點。 因此完全避免了重新索引。
+在6AEM.4和更新版本中，AEM內置了在啟動序列時從磁碟導入索引的功能。 在啟動過程中，會監視資料夾`<repository>/indexing-result/indexes`是否存在索引資料。 在[升級過程](in-place-upgrade.md#performing-the-upgrade)期間，您可以將預先建立的索引複製到上述位置，然後從新版本的&#x200B;**target** AEMjar開始。 將其AEM導入儲存庫並從系統中刪除相應的檢查點。 因此完全避免了重新索引。
 
 ## 其他提示和疑難排解{#troubleshooting}
 
