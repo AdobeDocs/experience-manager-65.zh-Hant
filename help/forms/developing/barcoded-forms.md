@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1945'
+source-wordcount: '1946'
 ht-degree: 0%
 
 ---
@@ -20,15 +21,15 @@ ht-degree: 0%
 
 # 使用條形碼表單{#working-with-barcoded-forms}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 ## 關於條形碼表單服務{#about-the-barcoded-forms-service}
 
 條形碼表單服務可自動從填寫及列印表單擷取資料，並將擷取的資訊整合至組織的核心IT系統。
 
-使用條碼表單服務，您可以將一維和二維條碼新增至互動式PDF表單。 然後，您可以將條形碼表格發佈至網站，或以電子郵件或光碟散發。 當使用者使用Adobe Reader、Acrobat Professional或Acrobat Standard填寫條碼表格時，會自動更新條碼，以編碼使用者提供的表格資料。 使用者可以電子方式提交表格，或列印成紙本，再以郵件、傳真或手形方式提交。 您稍後可以擷取使用者提供的資料作為自動化工作流程的一部分，在核准程式和商業系統之間傳送資料。
+使用條碼表單服務，您可以將一維和二維條碼新增至互動式PDF forms。 然後，您可以將條形碼表格發佈至網站，或以電子郵件或光碟散發。 當使用者使用Adobe Reader、Acrobat專業版或Acrobat Standard填寫條碼表格時，會自動更新條碼，以編碼使用者提供的表格資料。 使用者可以電子方式提交表格，或列印成紙本，再以郵件、傳真或手形方式提交。 您稍後可以擷取使用者提供的資料作為自動化工作流程的一部分，在核准程式和商業系統之間傳送資料。
 
-如需有關條碼表單服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+有關條形碼表單服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 解碼條形碼表單資料{#decoding-barcoded-form-data}
 
@@ -36,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關條碼表單服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關條形碼表單服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -58,15 +59,15 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-barcodedforms-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
-* xercesImpl.jar（位於&lt;install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要項)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
+* xercesImpl.jar(位於&lt;install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
 
-如果AEM Forms部署在非JBOSS的受支援J2EE應用程式伺服器上，則您將需要以JAR檔案取代adobe-utilities.jar和jbossall-client.jar，這些檔案是部署AEM Forms的J2EE應用程式伺服器專用的。 如需所有AEM Forms JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在非JBOSS的受支援J2EE應用程式伺服器上，則您將需要以部署AEM Forms的J2EE應用程式伺服器專屬的JAR檔案來取代adobe-utilities.jar和jbossall-client.jar。 有關所有AEM FormsJAR檔案的位置資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立條碼表單用戶端API物件**
 
-在以寫程式方式執行條形碼表單服務操作之前，必須建立Barcoded Forms服務客戶端。 如果您使用Java API，請建立`BarcodedFormsServiceClient`物件。 如果您使用條形編碼表單Web服務API，請建立`BarcodedFormsServiceService`物件。
+在以寫程式方式執行條形編碼表單服務操作之前，必須建立一個條形編碼Forms服務客戶端。 如果您使用Java API，請建立`BarcodedFormsServiceClient`物件。 如果您使用條形編碼表單Web服務API，請建立`BarcodedFormsServiceService`物件。
 
 **取得包含條形碼資料的PDF表格**
 
@@ -74,7 +75,7 @@ ht-degree: 0%
 
 **從PDF表單解碼資料**
 
-取得包含條碼的PDF表單（或影像）後，您就可以解碼資料。 Barcoded Forms服務支援下列條碼類型：
+取得包含條碼的PDF表單（或影像）後，您就可以解碼資料。 BarcodedForms服務支援下列條碼類型：
 
 * PDF417條碼。
 * 資料矩陣條碼。
@@ -105,7 +106,7 @@ ht-degree: 0%
 
 [使用web service API解碼條形碼表單資料](barcoded-forms.md#decode-barcoded-form-data-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -168,7 +169,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API解碼條形碼表單資料](/help/forms/developing/barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -178,8 +179,8 @@ ht-degree: 0%
 
 1. 包含專案檔案
 
-   * 建立一個使用條形碼表單服務WSDL的Microsoft .NET客戶端元件。 如需詳細資訊，請參閱[使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。
-   * 參考Microsoft .NET客戶端元件。 如需詳細資訊，請參閱[使用Base64編碼叫用AEM Forms中的「參考。NET用戶端元件」。](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+   * 建立一個使用條形碼表單服務WSDL的Microsoft .NET客戶端元件。 如需詳細資訊，請參閱[使用Base64編碼叫用AEM Forms。](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+   * 參考Microsoft .NET客戶端元件。 如需詳細資訊，請參閱[使用Base64編碼叫用AEM Forms的](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)中的「參考。NET客戶端元件」。
 
 1. 建立條碼表單用戶端API物件
 
