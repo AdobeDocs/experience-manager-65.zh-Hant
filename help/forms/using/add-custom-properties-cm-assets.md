@@ -9,10 +9,11 @@ topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4462'
 ht-degree: 4%
 
 ---
@@ -183,7 +184,7 @@ ht-degree: 4%
 
 ### 方案：所有資產類型{#scenario-common-tab-for-all-asset-types}的常用標籤
 
-此案例顯示如何將自訂標籤「收件者」新增至所有資產類型（文字、清單、條件和版面片段）和字母。 您可以在「收件者」索引標籤中，規劃將所有與收件者相關的自訂屬性置入。
+此案例顯示如何將自訂標籤「收件者」新增至所有資產類型（文字、清單、條件和版面片段）和字母。 您可以在「收件者」索引標籤中，規劃將所有與收件者相關的自訂屬性放入。
 
 ![為所有資產類型新增自訂標籤](assets/recipientstab.png)
 
@@ -260,7 +261,7 @@ ht-degree: 4%
 
    1. 按一下&#x200B;**全部保存：**
 
-1. 在上一步中（在公用頁籤下）建立的項目節點中，使用以下步驟（要添加更多列，請重複此步驟）在自定義頁籤（公用頁籤）中添加一個用於建立列的節點（此處為Column1）:
+1. 在上一步中（在公用頁籤下）建立的項目節點中，使用以下步驟（要添加更多列，請重複此步驟），在自定義頁籤（公用頁籤）中添加一個用於建立列的節點（此處為Column1）:
 
    1. 按一下右鍵項目節點，然後選擇「建立&#x200B;**** > **建立節點**」。
    1. 確保「建立節點」對話框具有以下值，然後按一下&#x200B;**確定**:
@@ -542,7 +543,7 @@ ht-degree: 4%
    | 清單 | /libs/fd/cm/gui/content/createasset/createlist/jcr:content/body/items/form/items/listwizard/items/editproperties/items/properties/tabs/items/tabs/tab1/items |
    | 條件 | /libs/fd/cm/gui/content/createasset/createcondition/jcr:content/body/items/form/items/conditionwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
    | 片段 | /libs/fd/cm/gui/content/createasset/createfragment/jcr:content/body/items/form/items/fragmentwizard/items/properties/properties/items/tabs2/items/tab1/items1/items |
-   | 字母 | /libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/letterproperties/items |
+   | 字母 | /libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items |
 
 1. 按一下&#x200B;**「確定」**。資料夾結構會建立在應用程式資料夾中。
 
@@ -768,7 +769,7 @@ ht-degree: 4%
 若要允許建立自訂屬性的索引，請完成下列步驟：
 
 1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`，以管理員身分登入。
-1. 轉至`/oak:index/cmLucene`並在&#x200B;**下添加名為&lt;a1/>aggregates**&#x200B;的節點。
+1. 轉至`/oak:index/cmLucene`並在&#x200B;**下添加名為aggregates**&#x200B;的節點。
 
    1. 按一下右鍵cmLucene資料夾，然後選擇&#x200B;**建立** > **建立節點**。
    1. 確保「建立節點」對話框具有以下值，然後按一下&#x200B;**確定**:
@@ -882,13 +883,13 @@ ht-degree: 4%
    </tbody>
    </table>
 
-1. 自訂會在清單檢視中顯示所有控制台的搜尋結果，包括表單和檔案、資產和網站。
+1. 自訂會在「清單」檢視中顯示所有控制台的搜尋結果，包括Forms和檔案、資產和網站。
 
 ## 變更資產頁面{#change-default-view-of-the-assets-page}的預設檢視
 
 >[!NOTE]
 >
->這些步驟會變更所有控制台的預設檢視，例如表單和檔案、資產和網站。
+>這些步驟會變更所有控制台(例如Forms和檔案、資產和網站)的預設檢視。
 
 1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`，以管理員身分登入。
 1. 在應用程式檔案夾中，建立名為list的檔案夾，其路徑／結構類似於位於：
