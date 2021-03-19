@@ -2,11 +2,12 @@
 title: 將 [!DNL Assets] 與活動串流整合
 description: 說明 [!DNL Experience Manager] 的錄制功能，以及如何設定它來錄制特定事件。
 contentOwner: AG
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 0%
+source-wordcount: '268'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +54,7 @@ ht-degree: 0%
 
 1. 檢查您希望在用戶活動流中記錄哪些&#x200B;**[!UICONTROL 事件類型]**。
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 按一下「**[!UICONTROL 儲存]**」。
 
 ## 讀取記錄的事件{#reading-recorded-events}
 
