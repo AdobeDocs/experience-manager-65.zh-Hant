@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f883483-b81e-42c6-a4a1-eb499dd112e7
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -21,19 +22,19 @@ ht-degree: 0%
 
 # 優化Forms服務的效能{#optimizing-the-performance-of-theforms-service}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 ## 優化Forms服務的效能{#optimizing-the-performance-of-the-forms-service}
 
-在轉譯表單時，您可以設定執行時期選項，以最佳化Forms服務的效能。 另一個可以執行的任務是將XDP檔案儲存在儲存庫中，以提高Forms服務的效能。 不過，本節不說明如何執行此任務。 （請參閱[使用Java客戶端庫叫用服務](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)。）
+在轉換表單時，您可以設定執行時期選項，以最佳化Forms服務的效能。 另一個可以執行的任務是將XDP檔案儲存在儲存庫中，以提高Forms服務的效能。 不過，本節不說明如何執行此任務。 （請參閱[使用Java客戶端庫叫用服務](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)。）
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
-若要最佳化在轉譯表單時的Forms服務效能，請執行下列工作：
+要優化Forms服務在生成表單時的效能，請執行以下任務：
 
 1. 包含專案檔案。
 1. 建立Forms用戶端API物件。
@@ -47,19 +48,19 @@ ht-degree: 0%
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms web service API，請建立`FormsService`物件。
+在以寫程式方式執行Forms服務客戶端API操作之前，必須建立Forms服務客戶端。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms網站服務API，請建立`FormsService`物件。
 
 **設定效能運行時選項**
 
 您可以設定以下效能運行時選項來改進Forms服務的效能：
 
-* **表單快取**:您可以快取在伺服器快取中呈現為PDF的表格。每個表單在首次產生後都會快取。 在後續的演算中，如果快取的表單比表單設計的時間戳記還新，則會從快取中擷取表單。 通過快取表單，可以提高Forms服務的效能，因為它不必從儲存庫檢索表單設計。
+* **表單快取**:您可以快取在伺服器快取中呈現為PDF的表格。每個表單在首次產生後都會快取。 在後續的演算中，如果快取的表單比表單設計的時間戳記還新，則會從快取中擷取表單。 通過快取表單，您可以改進Forms服務的效能，因為它不必從儲存庫檢索表單設計。
 * 表單參考線（已過時）的轉換時間可能比其他轉換類型要長。 建議您快取表單參考線（已過時），以改善效能。
-* **獨立選項**:如果您不需要Forms服務來執行伺服器端計算，可將「單機版」選項設為 `true`，如此會產生沒有狀態資訊的表單。如果您想要將互動式表單轉譯給使用者，然後使用者將資訊輸入表單並將表單提交回表單服務，則需要狀態資訊。 然後，Forms服務會執行計算操作，並將表單呈現回用戶，並將結果顯示在表單中。 如果沒有狀態資訊的表單會提交回Forms服務，則只有XML資料可供使用，且不會執行伺服器端計算。
+* **獨立選項**:如果您不要求Forms服務執行伺服器端計算，您可將「單機版」選項設為 `true`，如此會產生沒有狀態資訊的表單。如果您想要將互動式表單轉譯給使用者，然後使用者將資訊輸入表單並將表單提交回Forms服務，則需要州資訊。 然後，Forms服務執行計算操作並將表單呈現給用戶，結果以表單顯示。 如果沒有狀態資訊的表單已提交回Forms服務，則只有XML資料可供使用，且不會執行伺服器端計算。
 * **線性化的PDF**:組織線性化的PDF檔案，以便在網路環境中提供有效率的漸進式存取。PDF檔案在所有方面都是有效的PDF，並與所有現有檢視器和其他PDF應用程式相容。 也就是說，在PDF仍在下載時，可以檢視其線性化。
 * 在用戶端上轉譯PDF表格時，這個選項無法改善效能。
-* **GuideRSL選項**:啟用使用執行時期共用程式庫產生表單指南（已過時）的功能。這表示第一個要求會下載較小的SWF檔案，以及儲存在瀏覽器快取中的較大共用程式庫。 如需詳細資訊，請參閱Flex說明檔案中的RSL。
-* 您也可以在用戶端上轉譯表單，以改善Forms服務的效能。 （請參閱用戶端上的[轉換表單。）](/help/forms/developing/rendering-forms-client.md)
+* **GuideRSL選項**:啟用使用執行時期共用程式庫產生表單指南（已過時）的功能。這表示第一個要求會下載較小的SWF檔案，以及儲存在瀏覽器快取中的較大共用程式庫。 如需詳細資訊，請參閱Flex檔案中的RSL。
+* 您也可以在用戶端上轉換表格，以改善Forms服務的效能。 (請參閱[在客戶端上呈現Forms。)](/help/forms/developing/rendering-forms-client.md)
 
 **轉譯表單**
 
@@ -71,21 +72,21 @@ ht-degree: 0%
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[轉換互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)
+[將Forms轉換為HTML](/help/forms/developing/rendering-forms-html.md)
 
-[建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
+[建立轉譯Forms的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### 使用Java API {#optimize-the-performance-using-the-java-api}最佳化效能
 
-使用Forms API(Java)演算具最佳效能的表單：
+使用FormsAPI(Java)演算具最佳效能的表單：
 
 1. 包含專案檔案
 
@@ -126,13 +127,13 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API最佳化效能](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用web service API {#optimize-the-performance-using-the-web-service-api}最佳化效能
 
-使用Forms API(web service)演算具最佳效能的表單：
+使用FormsAPI(web service)演算具最佳效能的表單：
 
 1. 包含專案檔案
 
