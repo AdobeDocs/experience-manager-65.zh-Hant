@@ -1,25 +1,26 @@
 ---
-title: AEM 6.5中的Sites Repository Restructing
-seo-title: AEM 6.5中的Sites Repository Restructing
-description: 瞭解如何進行必要的變更，以移轉至AEM 6.5 for Sites中的新儲存庫結構。
-seo-description: 瞭解如何進行必要的變更，以移轉至AEM 6.5 for Sites中的新儲存庫結構。
+title: 6.5版中的站點AEM儲存庫重組
+seo-title: 6.5版中的站點AEM儲存庫重組
+description: 瞭解如何進行必要的更改，以便遷移到6.5中的AEMSites新儲存庫結構。
+seo-description: 瞭解如何進行必要的更改，以便遷移到6.5中的AEMSites新儲存庫結構。
 uuid: 6dc5f8bd-1680-40af-9b8f-26c1f4bc3304
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
+feature: 升級
 translation-type: tm+mt
-source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1601'
 ht-degree: 1%
 
 ---
 
 
-# AEM 6.5 {#sites-repository-restructuring-in-aem}中的Sites Repository Restructing
+# 6.5 &lt;AEMa0/>中的站點儲存庫重組{#sites-repository-restructuring-in-aem}
 
-如上層[「AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的儲存庫重組」頁面所述，升級至AEM 6.5的客戶應使用此頁面來評估與影響AEM Sites Solution的儲存庫變更相關的工作量。 有些變更需要在AEM 6.5升級程式中努力工作，而其他變更則可延後至日後升級。
+如[父6.5](/help/sites-deploying/repository-restructuring.md)頁中的「資料庫重組」頁中所述，升級至AEM6.5的客戶應使用此頁評估與影響AEM Sites解決方案的資料庫更改相關的工作成果。 有些變更需要在6.5升級程AEM序中努力工作，而有些則會延遲至日後升級。
 
 **使用6.5升級**
 
@@ -27,7 +28,7 @@ ht-degree: 1%
 
 **未來升級前**
 
-* [Adobe Analytics用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-analytics-client-libraries)
+* [Adobe Analytics客戶庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-analytics-client-libraries)
 * [傳統的Microsoft Word網頁設計](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#classic-microsoft-word-to-web-page-designs)
 * [行動裝置模擬器組態](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#mobile-device-emulator-configurations)
 * [多站點管理器Blueprint配置](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
@@ -36,7 +37,7 @@ ht-degree: 1%
 * [頁面支架](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-scaffolding)
 * [互動式格線](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#responsive-grid-less)
 * [靜態範本設計](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#static-template-designs)
-* [Adobe Search and Promote整合用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries)
+* [Adobe搜索和升級整合客戶端庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries)
 * [Adobe Target整合用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-target-integration-client-libraries)
 * [WCM Foundation用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#wcm-foundation-client-libraries)
 
@@ -56,29 +57,29 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>如果任何新的或修改的ContextHub區段是要在來源控制項中編輯，而非在AEM中編輯，則必須將它們移轉至新位置：</p>
+   <td><p>如果任何新的或修改的ContextHub區段是要在來源控制中編輯，而非在中編輯，AEM則必須將其移轉至新位置：</p>
     <ol>
      <li>將任何新的或修改的ContextHub區段從上一個位置複製到適當的新位置（/<code>apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）</li>
      <li>將先前位置的ContextHub區段參考更新為新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)中已移轉的ContextHub區段。</li>
     </ol> <p>下列QueryBuilder查詢會在先前位置中找到ContextHub區段的所有參考。<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> 這可透過 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder除錯程式UI執行</a>。請注意，這是遍歷查詢，因此不要針對生產運行它，並確保根據需要調整遍歷限制。</p> </td>
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> 這可透過 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEMQueryBuilder除錯程式UI執行</a>。請注意，這是遍歷查詢，因此不要針對生產運行它，並確保根據需要調整遍歷限制。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>ContextHub區段持續存在至先前位置，在<strong>AEM &gt;個人化&gt;觀眾</strong>中顯示為唯讀。</p> <p>如果要在AEM中編輯ContextHub區段，則必須將它們移轉至新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。 在AEM中建立的任何新ContentHub區段都會持續存在新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p> <p>AEM網站頁面屬性僅允許選取「上一個位置」(<code>/etc</code>)或單一新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>），因此ContextHub區段必須相應移轉。</p> <p>AEM參考網站中任何未使用的ContextHub區段都可以移除，而不會移轉至新位置：</p>
+   <td><p>ContextHub區段持續存在至先前位置，在<strong> AEM &gt;個人化&gt;觀眾</strong>中顯示為唯讀。</p> <p>如果要在中編輯ContextHub區AEM段，則必須將其遷移到新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。 在中建立的任何新ContentHub區AEM段都會保留至新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p> <p>AEM Sites頁面屬性僅允許選擇上一個位置(<code>/etc</code>)或單個新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>），因此必須相應地遷移ContextHub區段。</p> <p>參考網站中任何未使AEM用的ContextHub區段都可移除，而不移轉至新位置：</p>
     <ul>
      <li>/etc/segmentation/geometrixx/</li>
      <li>/etc/segmentation/geometrixx-outdoors</li>
-    </ul> <p>注意：如果使用ClientContext，建議轉換為ContextHub。</p> </td>
+    </ul> <p>注意：如果ClientContext正在使用中，建議轉換為ContextHub。</p> </td>
   </tr>
  </tbody>
 </table>
 
 ## 未來升級前{#prior-to-upgrade}
 
-### Adobe Analytics用戶端程式庫{#adobe-analytics-client-libraries}
+### Adobe Analytics客戶端庫{#adobe-analytics-client-libraries}
 
 <table>
  <tbody>
@@ -94,8 +95,8 @@ ht-degree: 1%
    <td><strong>重組指導</strong></td>
    <td><p>對這些客戶端庫的任何自定義使用都應按類別引用客戶端庫，而不是按路徑引用：</p>
     <ol>
-     <li>依「上一個位置」的路徑對「用戶端程式庫」的任何參照都應更新為使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的「用戶端程式庫」參照framework</a>。</li>
-     <li>如果無法使用AEM的用戶端程式庫參考架構，則可透過AEM的用戶端程式庫Proxy Servlet參考用戶端程式庫的絕對路徑。
+     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
+     <li>如AEM果不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用。
       <ul>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/appmeasurement.js</code></li>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/plugins.js</code></li>
@@ -139,7 +140,7 @@ ht-degree: 1%
      <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">具有<code>allowProxy = true</code>的「用戶端程式庫」。</a></li>
      <li>在cq:designPath屬性中更新對「上一個位置」的參照。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEM Dispatcher規則，允許透過<code>/etc.clientlibs/</code>代理Servlet來提供用戶端程式庫。</li>
+     <li>更新AEMDispatcher規則，允許通過<code>/etc.clientlibs/</code>代理Servlet提供客戶端庫。</li>
     </ol> <p>對於未在SCM中管理且透過設計對話方塊修改執行時期的任何設計：</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
@@ -169,7 +170,7 @@ ht-degree: 1%
    <td>任何新的行動裝置模擬器組態都必須移轉至新位置。
     <ol>
      <li>將任何新的「行動裝置模擬器配置」從「上一個位置」複製到新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)。</li>
-     <li>對於任何依賴這些行動裝置模擬器設定的AEM網站頁面，請更新頁面的<span class="code">
+     <li>對於任何依賴這些行動裝置模擬器設定的AEM Sites頁面，請更新頁面的<span class="code">
        <code>
         jcr
        </code>
@@ -224,7 +225,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>所有AEM提供的「多網站管理員Blueprint設定」都存在於<code>/libs</code>的「新位置」中。</p> <p>內容不參考多站點管理器藍色配置，因此沒有要調整的內容引用。</p> </td>
+   <td><p>所有AEM提供的多站點管理器Blueprint配置都存在於<code>/libs</code>的「新位置」中。</p> <p>內容不參考多站點管理器藍色配置，因此沒有要調整的內容引用。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -246,12 +247,12 @@ ht-degree: 1%
    <td><p>任何新的或修改的多站點管理器轉出配置都必須遷移到新位置。</p>
     <ol>
      <li>將任何新的或修改的多站點管理器轉出配置從上一個位置複製到新位置(<code>/apps</code>)。</li>
-     <li>將「AEM頁面」上的任何參考更新為「上一個位置」中的「多網站管理員轉出設定」，以指向「新位置」（<code>/libs</code>或<code>/apps</code>）中的對應位置。</li>
+     <li>將頁面上的AEM任何參考更新為「上一個位置」中的「多網站管理員轉出配置」，以指向「新位置」中的對應位置（<code>/libs</code>或<code>/apps</code>）。</li>
     </ol> <p>從上一個位置移除移轉的多網站管理員轉出組態。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>無法從「上一個位置」移除移轉的「多網站管理員轉出設定」，會導致重複轉出選項顯示給AEM作者。</td>
+   <td>無法從「上一個位置」移除移轉的多網站管理員轉出設定，會導致重複轉出選項顯示給作AEM者。</td>
   </tr>
  </tbody>
 </table>
@@ -361,9 +362,9 @@ ht-degree: 1%
     <ol>
      <li>將設計從「上一個位置」複製到「新位置」(<code>/apps</code>)。</li>
      <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">具有<code>allowProxy = true</code>的「用戶端程式庫」。</a></li>
-     <li>透過<strong>AEM &gt;網站&gt;自訂網站頁面&gt;頁面屬性&gt;進階標籤&gt;設計欄位</strong>，更新<code>cq:designPath</code>屬性中「上一個位置」的參考。</li>
+     <li>透過<strong> &gt;網站&gt;自訂網站頁面&gt;頁面屬性&gt;進階標籤&gt;設計欄位</strong>，更新<code>cq:designPath</code>屬性中AEM「上一個位置」的參考。</li>
      <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEM Dispatcher規則，允許透過<code>/etc.clientlibs/</code>代理servlet來提供用戶端程式庫。</li>
+     <li>更新AEMDispatcher規則，允許通過<code>/etc.clientlibs/</code>代理Servlet提供客戶端庫。</li>
     </ol> <p>對於未在SCM中管理且透過設計對話方塊修改執行時期的任何設計：</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
@@ -371,12 +372,12 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>建議的方法是使用可編輯範本來建立AEM網站和頁面，這些範本使用結構內容和原則來取代設計。</td>
+   <td>建議的方法是使用可編輯範本來建立AEM Sites和頁面，這些範本使用結構內容和原則來取代設計。</td>
   </tr>
  </tbody>
 </table>
 
-### Adobe Search and Promote整合用戶端程式庫{#adobe-search-and-promote-integration-client-libraries}
+### Adobe搜索和升級整合客戶端庫{#adobe-search-and-promote-integration-client-libraries}
 
 <table>
  <tbody>
@@ -392,8 +393,8 @@ ht-degree: 1%
    <td><strong>重組指導</strong></td>
    <td><p>對這些客戶機庫的任何自定義使用都應按類別引用客戶機庫，而不是按路徑引用。</p>
     <ol>
-     <li>依「上一個位置」的路徑對「用戶端程式庫」的任何參照都應更新為使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的「用戶端程式庫」參照framework</a>。</li>
-     <li>如果無法使用AEM的用戶端程式庫參考架構，則可透過AEM的用戶端程式庫Proxy servlet參考用戶端程式庫的絕對路徑：</li>
+     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
+     <li>如果AEM不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用：</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/searchpromote/clientlibs/searchpromotei.js</code></li>
@@ -409,7 +410,7 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### Adobe Target整合用戶端程式庫{#adobe-target-integration-client-libraries}
+### Adobe Target整合客戶端庫{#adobe-target-integration-client-libraries}
 
 <table>
  <tbody>
@@ -425,8 +426,8 @@ ht-degree: 1%
    <td><strong>重組指導</strong></td>
    <td><p>對這些客戶機庫的任何自定義使用都應按類別引用客戶機庫，而不是按路徑引用。</p>
     <ol>
-     <li>依「上一個位置」的路徑對「用戶端程式庫」的任何參照都應更新為使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的「用戶端程式庫」參照framework</a>。</li>
-     <li>如果無法使用AEM的用戶端程式庫參考架構，則可透過AEM的用戶端程式庫Proxy servlet參考用戶端程式庫的絕對路徑：</li>
+     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
+     <li>如果AEM不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用：</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/testandtarget/clientlibs/testandtarget/testandtarget.js</code></li>
@@ -470,8 +471,8 @@ ht-degree: 1%
    <td><strong>重組指導</strong></td>
    <td><p>對這些客戶機庫的任何自定義使用都應按類別引用客戶機庫，而不是按路徑引用。</p>
     <ol>
-     <li>依「上一個位置」的路徑對「用戶端程式庫」的任何參照都應更新為使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的「用戶端程式庫」參照framework</a>。</li>
-     <li>如果無法使用AEM的用戶端程式庫參考架構，則可透過AEM的用戶端程式庫Proxy Servlet參考用戶端程式庫的絕對路徑。</li>
+     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
+     <li>如AEM果不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用。</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/wcm/foundation/clientlibs/accessibility.css</code></li>
