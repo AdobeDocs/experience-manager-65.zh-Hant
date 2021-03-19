@@ -1,50 +1,51 @@
 ---
-title: 在OSGi環境上強化和保護AEM表單
-seo-title: 在OSGi環境上強化和保護AEM表單
-description: 瞭解在OSGi伺服器上保護AEM Forms的建議和最佳實務。
-seo-description: 瞭解在OSGi伺服器上保護AEM Forms的建議和最佳實務。
+title: 在OSGi環境AEM中強化和保護表單
+seo-title: 在OSGi環境AEM中強化和保護表單
+description: 瞭解在OSGi伺服器上保護AEM Forms安全的建議和最佳做法。
+seo-description: 瞭解在OSGi伺服器上保護AEM Forms安全的建議和最佳做法。
 uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1464'
 ht-degree: 0%
 
 ---
 
 
-# 在OSGi環境{#hardening-and-securing-aem-forms-on-osgi-environment}上強化和保護AEM表單
+# 在OSGi環境AEM{#hardening-and-securing-aem-forms-on-osgi-environment}上強化和保護表單
 
-瞭解在OSGi伺服器上保護AEM Forms的建議和最佳實務。
+瞭解在OSGi伺服器上保護AEM Forms安全的建議和最佳做法。
 
-保護伺服器環境對組織至關重要。 本文說明如何保護執行AEM Forms的伺服器的安全建議和最佳實務。 這不是針對您作業系統的完整主機強化檔案。 相反地，本文說明您應實作的各種安全強化設定，以增強已部署應用程式的安全性。 不過，為了確保應用程式伺服器保持安全，除了本文中提供的建議外，您還應實作安全性監控、偵測和回應程式。 本檔案也包含保護PII（個人識別資訊）的最佳實務和准則。
+保護伺服器環境對組織至關重要。 本文介紹了保護運行AEM Forms的伺服器安全的建議和最佳做法。 這不是針對您作業系統的完整主機強化檔案。 相反地，本文說明您應實作的各種安全強化設定，以增強已部署應用程式的安全性。 不過，為了確保應用程式伺服器保持安全，除了本文中提供的建議外，您還應實作安全性監控、偵測和回應程式。 本檔案也包含保護PII（個人識別資訊）的最佳實務和准則。
 
-本文的適用對象為負責規劃AEM Forms應用程式或基礎架構開發與部署的顧問、安全性專家、系統架構設計人員和IT專業人員。 這些角色包括以下常見角色：
+本文的適用對象為負責規劃AEM Forms應用程式或基礎架構開發與部署的顧問、安全專家、系統架構設計人員和IT專業人員。 這些角色包括以下常見角色：
 
 * IT和營運部門的工程師必須在自己或客戶組織中部署安全的Web應用程式和伺服器。
 * 負責規劃組織中客戶的建築工作的建築師和規劃師。
-* IT安全專家，他們專注於提供組織內跨平台的安全性。
-* 需要客戶和合作夥伴詳細資源的Adobe顧問和合作夥伴。
+* IT安全專家，他們專注於在組織內跨平台提供安全性。
+* 需要客戶和合作夥伴詳細資源的Adobe和合作夥伴的顧問。
 
-下列影像顯示一般AEM Forms部署中使用的元件和通訊協定，包括適當的防火牆拓撲：
+以下映像顯示典型AEM Forms部署中使用的元件和協定，包括相應的防火牆拓撲：
 
 ![典型體系結構](assets/typical-architecture.png)
 
-AEM Forms具備高度可自訂性，可在許多不同的環境中運作。 有些建議可能不適用於您的組織。
+AEM Forms具備高度的可自訂性，可在多種不同的環境中運作。 有些建議可能不適用於您的組織。
 
 ## 安全傳輸層{#secure-transport-layer}
 
-傳輸層安全漏洞是對面向網際網路或面向內聯網的應用程式伺服器的首要威脅之一。 本節介紹加強網路上主機抵御這些漏洞的過程。 它解決了網路分段、傳輸控制協定/Internet協定(TCP/IP)棧強化以及使用防火牆保護主機的問題。
+傳輸層安全漏洞是對任何面向網際網路或面向內部網的應用程式伺服器的首批威脅之一。 本節介紹加強網路上主機抵御這些漏洞的過程。 它解決了網路分段、傳輸控制協定/Internet協定(TCP/IP)棧強化以及使用防火牆保護主機的問題。
 
 ### 限制開放端點{#limit-open-endpoints}
 
-組織可以有外部防火牆，以限制使用者與AEM Forms發佈群之間的存取。 組織也可以有內部防火牆，以限制發佈群與組織元素內的其他元素（例如，作者例項、處理例項、資料庫）之間的存取。 允許防火牆為使用者和組織元素啟用有限數量的AEM Forms URL存取：
+組織可以有外部防火牆，以限制使用者與AEM Forms發佈群組之間的存取。 組織也可以有內部防火牆，以限制發佈群與組織元素內的其他元素（例如，作者例項、處理例項、資料庫）之間的存取。 允許防火牆為最終用戶和組織元素內部訪問有限數量的AEM FormsURL:
 
 #### 配置外部防火牆{#configure-external-firewall}
 
-您可以設定外部防火牆，以允許特定AEM Forms URL存取網際網路。 您必須存取這些URL，才能填寫或送出最適化表單、HTML5、信件管理信件，或登入AEM Forms伺服器：
+您可以設定外部防火牆，以允許特定AEM FormsURL存取網際網路。 要填寫或提交最適化表單、HTML5、信件管理信件或登入AEM Forms伺服器，必須存取這些URL:
 
 <table> 
  <tbody>
@@ -86,7 +87,7 @@ AEM Forms具備高度可自訂性，可在許多不同的環境中運作。 有�
     </ul> </td> 
   </tr>
   <tr>
-   <td> AEM Forms應用程式</td> 
+   <td> AEM Forms 應用程式</td> 
    <td>
     <ul> 
      <li>/j_security_check*</li> 
@@ -98,7 +99,7 @@ AEM Forms具備高度可自訂性，可在許多不同的環境中運作。 有�
 
 #### 配置內部防火牆{#configure-internal-firewall}
 
-您可以設定內部防火牆，以允許某些AEM Forms元件（例如，作者例項、處理例項、資料庫）與發佈群組及其他拓撲圖中提及的內部元件通訊：
+您可以配置內部防火牆，以允許某些AEM Forms元件（例如，作者實例、處理實例、資料庫）與發佈群和拓撲圖中提及的其他內部元件通信：
 
 <table> 
  <tbody>
@@ -115,7 +116,7 @@ AEM Forms具備高度可自訂性，可在許多不同的環境中運作。 有�
    <td>/content/forms/fp/*</td> 
   </tr>
   <tr>
-   <td>Forms Workflow add-on server（AEM Forms on JEE伺服器）</td> 
+   <td>Forms Workflow附加伺服器(JEE伺服器上的AEM Forms)</td> 
    <td>/soap/sdk</td> 
   </tr>
  </tbody>
@@ -131,11 +132,11 @@ AEM Forms具備高度可自訂性，可在許多不同的環境中運作。 有�
 
 ## 安全地處理表單資料{#securely-handle-forms-data}
 
-AEM Forms會將資料儲存至預先定義的位置和暫存資料夾。 您應保護資料的安全，以防止未經授權的使用。
+AEM Forms將資料儲存至預先定義的位置和暫存資料夾。 您應保護資料的安全，以防止未經授權的使用。
 
 ### 設定臨時資料夾{#setup-periodic-cleanup-of-temporary-folder}的定期清理
 
-當您為檔案附件、驗證或預覽元件配置表單時，相應的資料將儲存在位於/tmp/fd/的發佈節點上。 系統會定期清除資料。 您可以將預設資料清除作業修改為更具攻擊性。 若要修改排程為清除資料的工作，請開啟AEM Web Console、開啟AEM Forms Temporary Storage Cleaning Task，並修改Cron運算式。
+當您為檔案附件、驗證或預覽元件配置表單時，相應的資料將儲存在位於/tmp/fd/的發佈節點上。 系統會定期清除資料。 您可以將預設資料清除作業修改為更具攻擊性。 要修改計劃清除資料的作業，請開啟Web控AEM制台，開啟AEM Forms臨時儲存清除任務，並修改Cron表達式。
 
 在上述案例中，資料僅會儲存給已驗證的使用者。 此外，資料還受到訪問控制清單(ACL)的保護。 因此，修改資料清除是保護資訊安全的另外一個步驟。
 
@@ -145,7 +146,7 @@ AEM Forms會將資料儲存至預先定義的位置和暫存資料夾。 您應�
 
 您可以配置儲存服務以通過線路向處理群集發送，而無需在發佈節點上本地保存任何內容。 處理群集位於私有防火牆後的安全區域，資料保持安全。
 
-使用AEM DS設定服務的處理伺服器認證，將資料從發佈節點張貼至處理伺服器。 建議使用受限非管理用戶的憑據，並具有對處理伺服器儲存庫的讀寫訪問權。 有關詳細資訊，請參閱[為草稿和提交配置儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
+使用DS設定服務的處理服AEM務器憑據，將資料從發佈節點發佈到處理伺服器。 建議使用受限非管理用戶的憑據，並具有對處理伺服器儲存庫的讀寫訪問權。 有關詳細資訊，請參閱[為草稿和提交配置儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
 
 ### 由表單資料模型(FDM){#secure-data-handled-by-form-data-model-fdm}處理的安全資料
 
@@ -168,7 +169,7 @@ AEM Forms會將資料儲存至預先定義的位置和暫存資料夾。 您應�
 
 **在作者實例上：**
 
-* 每個角色都有一組不同的預先定義群組，具有特定權限。 指派使用者至群組。
+* 有一組預先定義的群組，每個角色都具有特定權限。 指派使用者至群組。
 
    * 表單使用者群組的使用者：
 
@@ -186,16 +187,16 @@ AEM Forms會將資料儲存至預先定義的位置和暫存資料夾。 您應�
 **在處理作者時：**
 
 * 對於遠程保存和提交使用案例，請建立對crx-repository的content/form/fp路徑具有讀取、建立和修改權限的用戶。
-* 將使用者新增至工作流程使用者群組，讓使用者能夠使用AEM收件匣應用程式。
+* 將使用者新增至工作流程使用者群組，讓使用者可使用收件AEM匣應用程式。
 
-## AEM Forms環境{#secure-intranet-elements-of-an-aem-forms-environment}的安全內部網路元素
+## AEM Forms環境的安全內部網元素{#secure-intranet-elements-of-an-aem-forms-environment}
 
-一般而言，「處理叢集」和「表單工作流程」附加元件(AEM Forms on JEE)會在防火牆後執行。 因此，這些都被認為是安全的。 您仍然可以執行幾個步驟來強化這些環境：
+通常，處理群集和Forms Workflow附加模組(JEE上的AEM Forms)在防火牆後運行。 因此，這些都被認為是安全的。 您仍然可以執行幾個步驟來強化這些環境：
 
 ### 安全處理群集{#secure-processing-cluster}
 
 處理群集在作者模式下運行，但不用於開發活動。 請勿允許一般使用者納入處理叢集的內容作者和表單使用者群組。
 
-### 使用AEM最佳實務來保護AEM Forms環境{#use-aem-best-practices-to-secure-an-aem-forms-environment}
+### 使用AEM最佳做法保護AEM Forms環境{#use-aem-best-practices-to-secure-an-aem-forms-environment}
 
-本檔案提供AEM Forms環境的特定指示。 您應該負責確保在部署時，您的基礎AEM安裝是安全的。 如需詳細指示，請參閱[AEM安全性檢查清單](/help/sites-administering/security-checklist.md)檔案。
+本檔案提供了AEM Forms環境的具體說明。 您應確保在部署時基礎安AEM裝是安全的。 如需詳細指示，請參閱[AEM安全檢查清單](/help/sites-administering/security-checklist.md)檔案。
