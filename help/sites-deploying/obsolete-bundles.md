@@ -1,18 +1,19 @@
 ---
 title: 升級後卸載的過時捆綁包清單
 seo-title: 升級後卸載的過時捆綁包清單
-description: 詳細列出升級至AEM 6.3時自動解除安裝的搭售。
-seo-description: 詳細列出升級至AEM 6.3時自動解除安裝的搭售。
+description: 詳細列出升級至6.3時自動解除安裝的AEM搭售。
+seo-description: 詳細列出升級至6.3時自動解除安裝的AEM搭售。
 uuid: b015e857-31c1-4982-b71c-f3201b49ec8e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: 797a6f3b-d2a8-4835-81ab-a1602677417f
+feature: 升級
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -22,9 +23,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您的程式碼依賴這些搭售，請務必聯絡Adobe支援，並要求針對受影響地區提供相容性套件。
+>如果您的程式碼依賴這些組合，請務必聯絡Adobe支援，並要求受影響地區的相容套件。
 
-升級至AEM 6.3時，會自動解除安裝下列搭售，視執行升級的AEM版本而定：
+升級至AEM6.3時，會根據執行升級的版本自動解除安AEM裝下列套件：
 
 **AEM 6.1:**
 
