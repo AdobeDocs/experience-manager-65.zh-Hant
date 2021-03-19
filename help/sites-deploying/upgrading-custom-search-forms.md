@@ -1,6 +1,6 @@
 ---
-title: 升級自訂搜尋表單
-seo-title: 升級自訂搜尋表單
+title: 升級自訂搜尋Forms
+seo-title: 升級自訂搜尋Forms
 description: 本文詳細說明在升級後需要進行的調整，以便自訂搜尋表單運作。
 seo-description: 本文詳細說明在升級後需要進行的調整，以便自訂搜尋表單運作。
 uuid: 35b8fbb9-5951-4e1c-bf04-4471a55b9cb0
@@ -9,18 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
+feature: 升級
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1710'
 ht-degree: 3%
 
 ---
 
 
-# 升級自訂搜尋表單{#upgrading-custom-search-forms}
+# 升級自訂搜尋Forms{#upgrading-custom-search-forms}
 
-在AEM 6.2中，自訂搜尋表單儲存在儲存庫中的位置已變更。 在升級後，它們會從6.1的位置移至：
+在AEM6.2中，自定義搜索Forms儲存在儲存庫中的位置已更改。 在升級後，它們會從6.1的位置移至：
 
 * /apps/cq/gui/content/facets
 
@@ -30,24 +31,24 @@ ht-degree: 3%
 
 因此，在升級後需要手動調整，才能讓表單繼續運作。
 
-這套用至新的搜尋表單，以及已自訂的預設表單。
+這適用於新的搜尋Forms以及已自訂的預設Forms。
 
 如需詳細資訊，請參閱[搜尋Facets](/help/assets/search-facets.md)上的檔案。
 
 ## 更改resourceType屬性{#changing-the-resourcetype-property}
 
-除非另有說明，在升級後需要進行的大部分調整都需要變更所設定自訂搜尋表單的`sling:resourceType`屬性。 這樣，屬性才能指向渲染指令碼的正確位置。
+除非另有說明，在升級後需要進行的大部分調整都需要變更所設定自訂搜尋Forms的`sling:resourceType`屬性。 這樣，屬性才能指向渲染指令碼的正確位置。
 
 您可以執行下列動作來變更屬性：
 
-1. 轉至`https://server:port/crx/de/index.jsp`以開啟CRXDE Lite
-1. 瀏覽至需要調整的節點位置，如下面[自訂搜尋表單清單](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms)中所指定。
+1. 前往`https://server:port/crx/de/index.jsp`開啟CRXDE Lite
+1. 瀏覽至需要調整的節點位置，如下面的[自訂搜尋Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms)清單中所指定。
 1. 按一下該節點。 在右側屬性窗格中，按一下並修改&#x200B;**sling:resourceType**&#x200B;屬性。
 1. 最後，按&#x200B;**全部保存按鈕保存更改。**
 
-## 自訂搜尋表單清單{#list-of-custom-search-forms}
+## 自訂搜尋清單Forms{#list-of-custom-search-forms}
 
-在下方，您將會找到所有自訂搜尋表單以及升級後需要的修改清單。 它們指`/conf/global/settings/cq/search/facets/sites/items`中的名稱。
+在下方，您會找到所有自訂搜尋Forms以及升級後所需修改的清單。 它們指`/conf/global/settings/cq/search/facets/sites/items`中的名稱。
 
 ### Fulltext Predicate with node name &quot;fulltext&quot; {#fulltext-predicate-with-node-name-fulltext}
 
@@ -68,7 +69,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-在AEM 6.1中，標準fulltext謂詞是搜尋表單的一部分。 在6.2中，全文欄位已由OmniSearch取代。 此謂語以程式設計方式跳過，可加以移除。
+在AEM6.1中，標準fulltext謂語是搜尋表單的一部分。 在6.2中，全文欄位已由OmniSearch取代。 此謂語以程式設計方式跳過，可加以移除。
 
 **操作：** 完全刪除節點。
 
@@ -185,7 +186,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>6.2中的資源類型</td>
-   <td><p>cq/gui/components<strong>/coral/</strong>common/admin/customsearch/searchpredicates/daterangepredicates</p> </td>
+   <td><p>cq/gui/components<strong>/coral/</strong>common/admin/customsearch/searchpredicates/daterangede</p> </td>
   </tr>
  </tbody>
 </table>
