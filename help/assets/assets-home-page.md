@@ -2,11 +2,13 @@
 title: '[!DNL Assets] 首頁體驗'
 description: '個人化首頁，提供多樣化的歡迎畫面體驗，包括資產最近活動的快照。 [!DNL Experience Manager Assets] '
 contentOwner: AG
+feature: 開發人員工具，資產管理
+role: 管理員，商業從業人員
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -85,4 +87,4 @@ ht-degree: 1%
 >
 >Adobe建議執行大量作業的管理員和使用者避免使用「資產首頁」功能來防止使用者活動增加。 此外，管理員可以通過從[!UICONTROL 配置管理器]配置[!UICONTROL Day CQ DAM Event Recorder]來排除特定用戶的記錄活動。
 >
->如果您使用此功能，Adobe建議您根據伺服器負載來排程清除頻率。
+>如果您使用此功能，Adobe建議您根據伺服器負載計劃清除頻率。
