@@ -7,10 +7,11 @@ uuid: c3fa2aa4-a6b4-458e-8534-138e075290b1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -88,7 +89,7 @@ ht-degree: 0%
       >`Panel1.instanceManager.instances[1].textbox.value`
       >
       >
-      >如需詳細資訊，請參閱：類別：[AEM Forms Java API reference](https://adobe.com/go/learn_aemforms_documentation_63)中的InstanceManager#instances。
+      >如需詳細資訊，請參閱：類別：[AEM FormsJava API參考](https://adobe.com/go/learn_aemforms_documentation_63)中的InstanceManager#instances。
 
       >[!NOTE]
       >
@@ -119,7 +120,7 @@ ht-degree: 0%
 
 ## 使用表單範本中的重複子表單(XDP/XSD){#using-repeating-subforms-from-form-template-xdp-xsd}
 
-可重複的子表單類似於Adaptive Forms中可重複的面板。 在AEM Forms Designer中，執行下列步驟以建立重複的子表單：
+可重複的子表單類似於Adaptive Forms中可重複的面板。 在AEM Forms設計器中，執行以下步驟建立重複子表單：
 
 1. 在「階層」浮動視窗中，選取您要重複的子表單的父子表單。
 1. 在「物件」浮動視窗中，按一下「子表單」標籤，然後在「內容」清單中選取「溢流」。
