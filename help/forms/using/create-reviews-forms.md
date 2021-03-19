@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: d8c1c507-a6c4-44f5-be01-ee902bc28410
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 0%
 
 ## 設定審核{#setting-up-a-review}
 
-1. 導覽至「表單」索引標籤並選取表單。
+1. 導覽至「Forms」標籤並選取表單。
 1. 如果資產沒有進行中的審核，動作列會顯示「開始審核![ aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)」圖示。 按一下「開始檢閱![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)」圖示。
 1. 輸入以下資訊：
 
@@ -56,7 +57,7 @@ ht-degree: 0%
 >
 >只能修改進行中的審核。 無法修改已完成的審核。
 
-1. 導覽至「表單」索引標籤並選取表單。
+1. 導覽至「Forms」標籤並選取表單。
 
 1. 如果資產正在進行審核，而您是審核的發起者，則「動作列」會顯示「管理審核![ aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)」圖示。 只有審閱啟動器才能管理（更新／結束）審閱。
 
