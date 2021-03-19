@@ -1,18 +1,19 @@
 ---
 title: 社群網站
 seo-title: 社群網站
-description: AEM Communities檔案概觀
-seo-description: AEM Communities檔案概觀
+description: AEM Communities檔案概述
+seo-description: AEM Communities檔案概述
 uuid: 9842ce6c-1af8-4b27-b199-07410e797ab2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 2bd74d5e90aff1146de5c5a0dffd99fc7dd9031c
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '479'
 ht-degree: 4%
 
 ---
@@ -20,15 +21,15 @@ ht-degree: 4%
 
 # 社區站點{#communities-sites}
 
-本節適用於管理AEM Communities並假設熟悉AEM Communities功能的人員。
+本節內容適用於管理AEM Communities並熟悉AEM Communities功能的人員。
 
 ## 概覽 {#overview}
 
 如需概觀和快速入門教學課程，請造訪：
 
 * [AEM Communities概觀](overview.md)
-* [AEM Communities快速入門](getting-started.md)
-* [AEM Communities的啟用快速入門](getting-started-enablement.md)
+* [開始使用AEM Communities](getting-started.md)
+* [AEM Communities啟用快速入門](getting-started-enablement.md)
 
 ## 管理和配置主題{#administration-and-configuration-topics}
 
@@ -57,13 +58,13 @@ ht-degree: 4%
 
 ### 使用者產生的內容 {#user-generated-content}
 
-AEM Communities的主要功能是，由網站訪客（成員）登入產生使用者產生的內容(UGC)。 若要進一步瞭解如何使用UGC，請造訪：
+AEM Communities的一項主要功能是，網站訪客（成員）登入產生使用者產生的內容(UGC)。 若要進一步瞭解如何使用UGC，請造訪：
 
 * [常見UGC商店](working-with-srp.md):UGC共用儲存的SRP選擇
 * [協調UGC](moderate-ugc.md):受信任的成員可以大量協調UGC或在上下文中協調UGC
 * [標籤UGC](tag-ugc.md):功能可設定為允許成員標籤內容
 * [翻譯UGC](translate-ugc.md):功能可設定為翻譯所有UGC，或允許成員翻譯選取的貼文
-* [Analytics設定](analytics.md):讓Adobe Analytics能夠報告與成員活動相關的各種度量
+* [Analytics設定](analytics.md):使Adobe Analytics能夠報告與成員活動有關的各種度量
 
 ### 社群成員 {#community-members}
 
@@ -81,18 +82,18 @@ AEM Communities的主要功能是，由網站訪客（成員）登入產生使�
 ### 啟用功能{#enablement-features}
 
 * [設定啟用](enablement.md):正確設定啟用功能的必要資訊。
-* [Analytics設定](analytics.md):啟用Adobe Analytics for Communities功能的必要資訊。
+* [Analytics設定](analytics.md):為「社區」功能啟用「Adobe Analytics」的必要資訊。
 * [標籤啟用資源](tag-resources.md):建立啟用目錄的必要資訊。
 
 ### 部署 {#deployment}
 
-部署區段包含AEM Communities專屬的資訊。
+部署部分包含AEM Communities的特定資訊。
 
 使用社群內容的性質會影響部署結構：
 
 * [推薦的社區拓撲](topologies.md)
 
-請務必在AEM平台上安裝最新的Communities版本：
+請務必在平台上安裝最新的CommunitiesAEM版本：
 
 * [最新社群功能套件](deploy-communities.md#latestfeaturepack)
 
