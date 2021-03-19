@@ -1,18 +1,19 @@
 ---
 title: Web 主控台
 seo-title: Web 主控台
-description: 瞭解如何使用AEM網頁主控台。
-seo-description: 瞭解如何使用AEM網頁主控台。
+description: 瞭解如何使用網AEM頁主控台。
+seo-description: 瞭解如何使用網AEM頁主控台。
 uuid: 7856b2b3-4216-421d-a315-cd9a55936362
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '729'
 ht-degree: 2%
 
 ---
@@ -20,19 +21,19 @@ ht-degree: 2%
 
 # Web 主控台{#web-console}
 
-AEM中的Web主控台以[Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)為基礎。 Apache Felix是建置OSGi R4服務平台的社群努力，此平台包含OSGi架構和標準服務。
+中的Web控AEM制台基於[Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)。 Apache Felix是建置OSGi R4服務平台的社群努力，此平台包含OSGi架構和標準服務。
 
 >[!NOTE]
 >
 >在Web主控台上，任何提及預設設定的說明都與Sling預設值相關。
 >
->AEM有其專屬的預設值，因此預設集可能與主控台上記載的不同。
+>AEM有自己的預設值，因此預設設定可能與控制台上記錄的預設值不同。
 
 Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
-* [配置](#configuration):用於設定OSGi組合，因此是設定AEM系統參數的基礎機制
+* [配置](#configuration):用於配置OSGi捆綁包，因此是配置系統參數的基AEM礎機制
 * [組合](#bundles):用於安裝捆綁
-* [元件](#components):用於控制AEM所需元件的狀態
+* [元件](#components):用於控制
 
 所做的任何更改都會立即應用於運行的系統。 不需要重新啟動。
 
@@ -42,7 +43,7 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 ## 設定 {#configuration}
 
-**Configuration**&#x200B;標籤用於配置OSGi捆綁包，因此是配置AEM系統參數的基礎機制。
+**Configuration**&#x200B;頁籤用於配置OSGi捆綁，因此是配置系統參數的基AEM礎機制。
 
 >[!NOTE]
 >
@@ -67,7 +68,7 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 * **配**
 置允許您更新現有配置。這些識別碼具有永久性識別碼(PID)，可以是：
 
-   * AEM的標準與整體；如果刪除，則需要這些值，這些值將返回預設設定。
+   * 標準及整AEM體；如果刪除，則需要這些值，這些值將返回預設設定。
    * 從工廠配置建立的實例；這些實例由用戶建立，刪除操作會刪除實例。
 
 * **工廠**
@@ -77,7 +78,7 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 從清單中選擇任何條目將顯示與該配置相關的參數：
 
-![chlimage_1-29](assets/chlimage_1-21a.png)
+![chlimage_1-21](assets/chlimage_1-21a.png)
 
 然後，您可以視需要更新參數，以及：
 
@@ -105,7 +106,7 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 ## 捆綁{#bundles}
 
-**Bundles**&#x200B;標籤是安裝AEM所需OSGi bundles的機制。 該頁籤可通過以下任一方法訪問：
+**Bundles**&#x200B;標籤是安裝所需OSGi bundles的機制AEM。 該頁籤可通過以下任一方法訪問：
 
 * 下拉式功能表：
 
@@ -177,7 +178,7 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 >[!NOTE]
 >
->啟用或停用時，元件只會套用到AEM/CRX重新啟動。
+>啟用或禁用元件時，只有在重新啟動AEM/CRX之前才應用。
 >
 >啟動狀態在元件描述符中定義，該描述符在開發期間生成，並在包建立時儲存在包中。
 
