@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
+role: 管理員
 translation-type: tm+mt
-source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 # 翻譯用戶生成的內容{#translating-user-generated-content}
 
-AEM Communities的轉譯功能將[轉換頁面內容](../../help/sites-administering/translation.md)的概念延伸到使用[社交元件架構(SCF)元件](scf.md)張貼至社群網站的使用者產生的內容(UGC)。
+用於AEM Communities的翻譯功能將[翻譯頁面內容](../../help/sites-administering/translation.md)的概念擴展到使用[社交元件框架(SCF)元件](scf.md)發佈到社區站點的用戶生成的內容(UGC)。
 
 UGC的轉譯可讓網站訪客和成員透過移除語言障礙，體驗全球社群。
 
@@ -34,7 +35,7 @@ UGC的轉譯可讓網站訪客和成員透過移除語言障礙，體驗全球�
 
 ## 概覽 {#overview}
 
-本文檔部分專門討論翻譯服務如何與UGC一起使用，同時假定瞭解如何將AEM連接到[翻譯服務提供商](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider)，並通過配置[翻譯整合框架](../../help/sites-administering/tc-tic.md)將該服務整合到網站。
+本文檔部分專門討論翻譯服務如何與UGC一起使用，同時假定瞭解如何連接到AEM[翻譯服務提供商](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider)，並通過配置[翻譯整合框架](../../help/sites-administering/tc-tic.md)將該服務整合到網站。
 
 當翻譯服務提供者與站點相關聯時，站點的每個語言副本會維護其通過SCF元件（如注釋）發佈的UGC線程。
 
@@ -42,7 +43,7 @@ UGC的轉譯可讓網站訪客和成員透過移除語言障礙，體驗全球�
 
 ## 預設翻譯服務{#the-default-translation-service}
 
-AEM Communities包含[試用授權](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license)，適用於[預設轉譯服務](../../help/sites-administering/tc-msconf.md)，適用於多種語言。
+AEM Communities包含[試用版授權](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license)，適用於對多種語言啟用的[預設翻譯服務](../../help/sites-administering/tc-msconf.md)。
 
 當[建立社區站點](sites-console.md)時，當從[TRANSLATION](sites-console.md#translation)子面板檢查`Allow Machine Translation`時，將啟用預設翻譯服務。
 
@@ -79,7 +80,7 @@ AEM Communities包含[試用授權](../../help/sites-administering/tc-msconf.md#
 * 選擇&#x200B;**[!UICONTROL 工具]**
 * 選擇&#x200B;**[!UICONTROL 操作]**
 * 選擇&#x200B;**[!UICONTROL Cloud]**
-* 選擇&#x200B;**[!UICONTROL 雲端服務]**
+* 選擇&#x200B;**[!UICONTROL Cloud Services]**
 * 向下滾動到&#x200B;**[!UICONTROL 翻譯整合]**
 
    ![翻譯整合](assets/translation-integration.png)
