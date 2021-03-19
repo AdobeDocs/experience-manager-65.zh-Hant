@@ -8,10 +8,11 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
+feature: 表單資料模型
 translation-type: tm+mt
-source-git-commit: ba42f1e85216f6be4ae0dd90891e1b2d1d559bd8
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4148'
+source-wordcount: '4151'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必須同時是&#x200B;**fdm-author**&#x200B;和&#x200B;**forms-user**&#x200B;群組的成員，才能建立和使用表單資料模型。 請連絡您的AEM管理員，以成為群組的成員。
+>您必須同時是&#x200B;**fdm-author**&#x200B;和&#x200B;**forms-user**&#x200B;群組的成員，才能建立和使用表單資料模型。 請連絡您AEM的管理員，以成為群組的成員。
 
 ## 添加資料模型對象和服務{#add-data-model-objects-and-services}
 
@@ -43,7 +44,7 @@ ht-degree: 0%
 
 要添加資料模型對象和服務：
 
-1. 登入AEM作者例項，導覽至「**[!UICONTROL 表單>資料整合]**」，並開啟您要新增資料模型物件的表單資料模型。
+1. 登入作AEM者例項，導覽至「**[!UICONTROL Forms>資料整合]**」，並開啟您要新增資料模型物件的表單資料模型。
 1. 在「資料來源」窗格中，展開資料來源以檢視可用的資料模型物件和服務。
 1. 選擇要添加到表單資料模型的資料模型對象和服務，並點選&#x200B;**[!UICONTROL 添加選定項]**。
 
@@ -85,7 +86,7 @@ ht-degree: 0%
 
 要建立沒有資料源的資料模型對象，請執行以下操作：
 
-1. 登入AEM作者例項，導覽至「**[!UICONTROL 表單>資料整合]**」，並開啟您要在其中建立資料模型物件或實體的表單資料模型。
+1. 登入作AEM者例項，導覽至「**[!UICONTROL Forms>資料整合]**」，並開啟您要建立資料模型物件或實體的表單資料模型。
 1. 點選&#x200B;**[!UICONTROL 建立實體]**。
 1. 在「建立資料模型」對話框中，指定資料模型對象的名稱，然後點選&#x200B;**[!UICONTROL 添加]**。 資料模型對象被添加到表單資料模型中。 請注意，新添加的資料模型對象不綁定到資料源，並且沒有任何屬性，如下圖所示。
 
@@ -175,7 +176,7 @@ ht-degree: 0%
 
 #### 使用者檔案屬性 {#user-profile-attribute}
 
-從&#x200B;**[!UICONTROL 綁定到]**&#x200B;下拉菜單中選擇&#x200B;**[!UICONTROL 用戶配置檔案屬性]**，然後在&#x200B;**[!UICONTROL 綁定值]**&#x200B;欄位中輸入屬性名稱。 系統會根據屬性名稱，從資料來源擷取登入AEM例項的使用者詳細資訊。
+從&#x200B;**[!UICONTROL 綁定到]**&#x200B;下拉菜單中選擇&#x200B;**[!UICONTROL 用戶配置檔案屬性]**，並在&#x200B;**[!UICONTROL 綁定值]**&#x200B;欄位中輸入屬性名稱。 根據屬性名稱，從資料源AEM檢索登錄到實例的用戶的詳細資訊。
 
 在&#x200B;**[!UICONTROL 綁定值]**&#x200B;欄位中指定的屬性名必須包括完整的綁定路徑，直到用戶的屬性名。 開啟下列URL以存取CRXDE的使用者詳細資訊：
 
@@ -280,7 +281,7 @@ ht-degree: 0%
 >
 >添加的關聯會以指定的標題和連接關聯資料模型對象的一行出現在資料模型對象框中。
 >
->您可以通過選中相應的複選框來編輯關聯，然後按一下「編輯關聯」(Edit Association)**[!UICONTROL 。]**
+>您可以通過選中相應的複選框來編輯關聯，然後按一下「編輯關聯」(Edit Association)]**。**[!UICONTROL 
 
 ![添加關聯](assets/added-association.png)
 
@@ -391,7 +392,7 @@ ht-degree: 0%
 
 執行下列動作以產生和編輯範例資料：
 
-1. 開啟表單資料模型，然後點選「編輯範例資料」**[!UICONTROL 。]**&#x200B;它會在「編輯樣本資料」窗口中生成並顯示樣本資料。
+1. 開啟表單資料模型，然後點選&#x200B;**[!UICONTROL 編輯範例資料]**。 它會在「編輯樣本資料」窗口中生成並顯示樣本資料。
 
    ![產生範例資料](assets/form_data_model_generate_sample_data_new.png)
 
