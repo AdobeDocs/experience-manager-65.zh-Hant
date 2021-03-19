@@ -1,8 +1,8 @@
 ---
-title: 使用自訂CSS檔案轉換HTML表格
-seo-title: 使用自訂CSS檔案轉換HTML表格
-description: 使用Forms服務來參考自訂CSS檔案，以回應來自網頁瀏覽器的HTTP要求來轉換HTML表格。 您可以使用Java API和Web服務API來轉換使用CSS檔案的HTML表格。
-seo-description: 使用Forms服務來參考自訂CSS檔案，以回應來自網頁瀏覽器的HTTP要求來轉換HTML表格。 您可以使用Java API和Web服務API來轉換使用CSS檔案的HTML表格。
+title: 使用自訂CSS檔案轉換HTMLForms
+seo-title: 使用自訂CSS檔案轉換HTMLForms
+description: 使用Forms服務來參考自訂CSS檔案，以回應來自網頁瀏覽器的HTTP要求，來轉換HTML表格。 您可以使用Java API和Web服務API來轉換使用CSS檔案的HTML表格。
+seo-description: 使用Forms服務來參考自訂CSS檔案，以回應來自網頁瀏覽器的HTTP要求，來轉換HTML表格。 您可以使用Java API和Web服務API來轉換使用CSS檔案的HTML表格。
 uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
 contentOwner: admin
 content-type: reference
@@ -10,22 +10,23 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
 
 
-# 使用自訂CSS檔案{#rendering-html-forms-using-custom-css-files}轉換HTML表格
+# 使用自訂CSS檔案{#rendering-html-forms-using-custom-css-files}轉換HTMLForms
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-Forms服務會根據來自網頁瀏覽器的HTTP要求轉譯HTML表格。 轉換HTML表格時，Forms服務可以參考自訂CSS檔案。 您可以建立自訂的CSS檔案，以符合您的業務需求，並在使用Forms服務轉換HTML表格時參考該CSS檔案。
+Forms服務會回應來自網頁瀏覽器的HTTP要求，轉譯HTML表格。 轉換HTML表格時，Forms服務可以參考自訂CSS檔案。 您可以建立自訂的CSS檔案，以符合您的商業需求，並在使用Forms服務來轉換HTML表格時參考該CSS檔案。
 
-Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果自訂CSS檔案不符合CSS標準，Forms服務不會報告可能遇到的錯誤。 在此情況下，Forms服務會忽略樣式，並繼續使用CSS檔案中的其餘樣式。
+Forms服務會無訊息地解析自訂CSS檔案。 也就是說，如果自訂CSS檔案不符合CSS標準，Forms服務不會報告可能遇到的錯誤。 在這種情況下，Forms服務會忽略樣式，並繼續使用CSS檔案中的其餘樣式。
 
 下列清單指定自訂CSS檔案支援的樣式：
 
@@ -39,18 +40,18 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 >[!NOTE]
 >
->在轉換使用自訂CSS檔案的HTML表格之前，請務必對轉換HTML表格有紮實的瞭解。 （請參閱[將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)）。
+>在轉換使用自訂CSS檔案的HTML表格之前，請務必對轉換HTML表格有紮實的瞭解。 (請參閱[將Forms轉換為HTML](/help/forms/developing/rendering-forms-html.md)。)
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 步驟{#summary-of-steps}摘要
 
 若要轉換使用CSS檔案的HTML表格，請執行下列工作：
 
 1. 包含專案檔案。
-1. 建立Forms Java API物件。
+1. 建立FormsJava API物件。
 1. 參考CSS檔案。
 1. 演算HTML表格。
 1. 將表單資料流寫入用戶端網頁瀏覽器。
@@ -59,9 +60,9 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請確定您包含proxy檔案。
 
-**建立Forms Java API物件**
+**建立FormsJava API物件**
 
-您必須先建立Forms用戶端物件，才能以程式設計方式執行Forms服務支援的作業。
+在以寫程式方式執行Forms服務支援的操作之前，必須建立Forms客戶端對象。
 
 **參考CSS檔案**
 
@@ -81,27 +82,27 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 [使用Java API演算使用CSS檔案的HTML表格](#render-an-html-form-that-uses-a-css-file-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[轉換互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)
+[將Forms轉換為HTML](/help/forms/developing/rendering-forms-html.md)
 
-[建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
+[建立轉譯Forms的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## 使用Java API {#render-an-html-form-that-uses-a-css-file-using-the-java-api}演算使用CSS檔案的HTML表格
 
-使用Forms API(Java)演算使用自訂CSS檔案的HTML表格：
+使用FormsAPI(Java)演算使用自訂CSS檔案的HTML表格：
 
 1. 包含專案檔案
 
    在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。
 
-1. 建立Forms Java API物件
+1. 建立FormsJava API物件
 
    * 建立包含連接屬性的`ServiceClientFactory`對象。
    * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
@@ -115,7 +116,7 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
    叫用`FormsServiceClient`物件的`(Deprecated) (Deprecated) renderHTMLForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `TransformTo`列舉值，指定HTML偏好設定類型。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定`TransformTo.MSDHTML`。
    * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
    * 儲存HTML運行時選項的`HTMLRenderSpec`對象。
@@ -137,24 +138,24 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 **另請參閱**
 
-[使用自訂CSS檔案轉換HTML表格](#rendering-html-forms-using-custom-css-files)
+[使用自訂CSS檔案轉換HTMLForms](#rendering-html-forms-using-custom-css-files)
 
 [快速入門（SOAP模式）:使用Java API轉換使用CSS檔案的HTML表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用web service API {#render-an-html-form-that-uses-a-css-file-using-the-web-service-api}轉換使用CSS檔案的HTML表格
 
-使用Forms API(web service)演算使用自訂CSS檔案的HTML表格：
+使用FormsAPI(web service)演算使用自訂CSS檔案的HTML表格：
 
 1. 包含專案檔案
 
    * 建立使用Forms服務WSDL的Java代理類。
    * 在類路徑中包含Java代理類。
 
-1. 建立Forms Java API物件
+1. 建立FormsJava API物件
 
    建立`FormsService`對象並設定驗證值。
 
@@ -167,9 +168,9 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
    叫用`FormsService`物件的`(Deprecated) renderHTMLForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `TransformTo`列舉值，指定HTML偏好設定類型。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定`TransformTo.MSDHTML`。
-   * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。 （請參閱[使用可排程版面預填表單](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）。
+   * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。 (請參閱[使用可流式版面預填Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md))。
    * 儲存HTML運行時選項的`HTMLRenderSpec`對象。
    * 指定`HTTP_USER_AGENT`標題值的字串值，例如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。 如果您不想設定此值，可以傳遞空字串。
    * `URLSpec`物件，儲存轉換HTML表單所需的URI值。
@@ -195,6 +196,6 @@ Forms服務會以無訊息方式解析自訂CSS檔案。 也就是說，如果�
 
 **另請參閱**
 
-[使用自訂CSS檔案轉換HTML表格](#rendering-html-forms-using-custom-css-files)
+[使用自訂CSS檔案轉換HTMLForms](#rendering-html-forms-using-custom-css-files)
 
 [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
