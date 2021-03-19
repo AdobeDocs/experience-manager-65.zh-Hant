@@ -1,8 +1,8 @@
 ---
 title: Oak查詢和索引
 seo-title: Oak查詢和索引
-description: 瞭解如何在AEM中設定索引。
-seo-description: 瞭解如何在AEM中設定索引。
+description: 瞭解如何在中配置索引AEM。
+seo-description: 瞭解如何在中配置索引AEM。
 uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
+feature: 設定
 translation-type: tm+mt
-source-git-commit: b01f6d3726fd6aa06ffedaf10dfde9526479a2a3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2880'
+source-wordcount: '2881'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本文的主題是在AEM 6中設定索引。 有關優化查詢和索引效能的最佳實踐，請參見[查詢和索引的最佳實踐](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
+>本文的內容是在AEM6中配置索引。 有關優化查詢和索引效能的最佳實踐，請參見[查詢和索引的最佳實踐](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
 ## 簡介 {#introduction}
 
@@ -109,7 +110,7 @@ Ordered索引是屬性索引的擴展。 不過，它已過時。 此類型的�
 
 ### Lucene全文索引{#the-lucene-full-text-index}
 
-AEM 6中提供以Apache Lucene為基礎的全文索引器。
+6.提供了基於Apache Lucene的全文索引器AEM。
 
 如果配置了全文索引，則所有具有全文條件的查詢都使用全文索引，無論是否有其他條件已編製索引，也無論是否存在路徑限制。
 
@@ -286,17 +287,17 @@ select * from [nt:base] where [alias] = '/admin'
 
 Solr索引的目的主要是全文搜索，但也可以用於按路徑、屬性限制和主要類型限制進行索引搜索。 這表示Oak中的Solr索引可用於任何類型的JCR查詢。
 
-AEM中的整合會在儲存庫層級進行，因此Solr是可能的索引之一，可用於AEM隨附的新儲存庫實作Oak。
+中的集AEM成在儲存庫級別進行，因此Solr是可用於Oak（隨附的新儲存庫實施）的可能索引之一AEM。
 
-它可設定為使用AEM例項的內嵌伺服器，或當做遠端伺服器。
+它可配置為與實例一起使用的嵌入式伺服器AEM，或作為遠程伺服器。
 
-### 使用內嵌的Solr伺服器{#configuring-aem-with-an-embedded-solr-server}來設定AEM
+### 使用AEM嵌入式Solr伺服器{#configuring-aem-with-an-embedded-solr-server}進行配置
 
 >[!CAUTION]
 >
 >請勿在生產環境中使用內嵌的Solr伺服器。 它只應用於開發環境。
 
-AEM可與內嵌的Solr伺服器搭配使用，可透過Web Console進行設定。 在此情況下，Solr伺服器會在與其內嵌至的AEM例項相同的JVM中執行。
+可AEM以與可通過Web控制台配置的嵌入式Solr伺服器一起使用。 在這種情況下，Solr伺服器將在與其嵌入的實例相同的AEMJVM中運行。
 
 通過以下方式，可以配置嵌入式Solr伺服器：
 
@@ -308,7 +309,7 @@ AEM可與內嵌的Solr伺服器搭配使用，可透過Web Console進行設定�
 
    >[!NOTE]
    >
-   >Solr首頁目錄(solr.home.path)組態會在AEM安裝資料夾中尋找名稱相同的資料夾。
+   >Solr主目錄(solr.home.path)配置將在安裝資料夾中查找同名的AEM資料夾。
 
 1. 開啟CRXDE並以管理員身分登入。
 1. 在&#x200B;**oak:index**&#x200B;下新增&#x200B;**sollndex**&#x200B;類型&#x200B;**oak:QueryIndexDefinition**&#x200B;的節點，其屬性如下：
@@ -319,9 +320,9 @@ AEM可與內嵌的Solr伺服器搭配使用，可透過Web Console進行設定�
 
 1. 儲存變更。
 
-### 使用單一遠端Solr伺服器{#configuring-aem-with-a-single-remote-solr-server}來設定AEM
+### 使用AEM單個遠程Solr伺服器{#configuring-aem-with-a-single-remote-solr-server}進行配置
 
-AEM也可設定為與遠端Solr伺服器例項搭配使用：
+還可AEM以配置為與遠程Solr伺服器實例一起使用：
 
 1. 下載並摘取最新版Solr。 有關如何執行此操作的詳細資訊，請參閱[Apache Solr安裝文檔](https://cwiki.apache.org/confluence/display/solr/Installing+Solr)。
 1. 現在，建立兩個索爾碎片。 通過為Solr已備份的資料夾中的每個分片建立資料夾，可以執行此操作：
@@ -366,7 +367,7 @@ AEM也可設定為與遠端Solr伺服器例項搭配使用：
    ```
 
 1. 啟動兩個分片後，通過連接到`http://localhost:8983/solr/#/`的Solr介面來測試所有分片都已啟動並運行
-1. 啟動AEM並前往位於`http://localhost:4502/system/console/configMgr`的「Web Console」（網頁主控台）
+1. 啟AEM動並轉至`http://localhost:4502/system/console/configMgr`的Web控制台
 1. 在&#x200B;**Oak Solr遠程伺服器配置**&#x200B;下設定以下配置：
 
    * Solr HTTP URL:`http://localhost:8983/solr/`
@@ -384,7 +385,7 @@ AEM也可設定為與遠端Solr伺服器例項搭配使用：
 
 #### Solr {#recommended-configuration-for-solr}的建議配置
 
-下面是基本配置的示例，可用於本文中描述的所有三種Solr部署。 它包含AEM中已存在且不應與其他應用程式搭配使用的專屬屬性索引。
+下面是基本配置的示例，可用於本文中描述的所有三種Solr部署。 它包含已存在且不應用於其AEM他應用程式的專用屬性索引。
 
 為了正確使用它，您需要將存檔的內容直接放在Solr Home Directory中。 如果是多節點部署，則應直接位於每個節點的根資料夾下。
 
@@ -392,14 +393,14 @@ AEM也可設定為與遠端Solr伺服器例項搭配使用：
 
 [取得檔案](assets/recommended-conf.zip)
 
-### AEM Indexing Tools {#aem-indexing-tools}
+### 索AEM引工具{#aem-indexing-tools}
 
-AEM 6.1也整合了AEM 6.0中提供的兩種索引工具，做為Adobe Consulting Services Commons工具集的一部分：
+AEM6.1還整合了6.0中提供的AEM兩種索引工具，作為Adobe咨詢服務公域工具集的一部分：
 
 1. **Explain Query**，這項工具旨在幫助管理員瞭解如何執行查詢；
 1. **Oak Index Manager**，用於維護現有索引的Web用戶介面。
 
-您現在可以從「AEM歡迎畫面」前往「**工具——作業——儀表板——診斷**」，以取得他們。
+您現在可以從「歡迎」畫面前往&#x200B;**工具——作業——儀表板——診斷**，以取AEM得。
 
 有關如何使用它們的詳細資訊，請參閱[操作儀表板文檔](/help/sites-administering/operations-dashboard.md)。
 
@@ -431,11 +432,11 @@ ACS Commons軟體包還公開了可用於建立屬性索引的OSGi配置。
 * org.apache.jackrabbit.oak.query
 * com.day.cq.search
 
-**com.day.cq.search**&#x200B;類別僅適用於您使用AEM提供的QueryBuilder公用程式。
+**com.day.cq.search**&#x200B;類別僅適用於您使用提供的QueryBuilder公用程AEM式時。
 
 >[!NOTE]
 >
->請務必在執行您要疑難排解的查詢期間，將記錄檔設為DEBUG，否則日誌中會隨著時間產生大量事件。 因此，在收集到所需記錄檔後，會切換回上述類別的INFO層級記錄檔。
+>請務必在執行您要疑難排解的查詢期間，將記錄檔設為DEBUG，否則日誌中會隨著時間產生大量事件。 因此，在收集到所需記錄檔後，請切換回上述類別的INFO層級記錄檔。
 
 您可以按照以下過程啟用記錄：
 
