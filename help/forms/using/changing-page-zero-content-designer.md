@@ -8,11 +8,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 56b6a573-8aba-43e7-acb7-c2da45869d95
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 3cbcd23254e16231a199276aa2f9e70d6ff39b34
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 1%
+source-wordcount: '266'
+ht-degree: 2%
 
 ---
 
