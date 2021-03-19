@@ -1,17 +1,19 @@
 ---
 title: 套用 Dynamic Media 影像預設集
-description: 瞭解如何在動態媒體中套用影像預設集
+description: 瞭解如何在Dynamic Media套用影像預設集
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
+feature: 影像預設集
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 12%
+source-wordcount: '329'
+ht-degree: 13%
 
 ---
 
@@ -32,11 +34,11 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->在動態媒體- Scene7模式中，影像預設集僅支援影像資產。
+>在Dynamic Media-Scene7模式中，影像預設集僅支援影像資產。
 
-**套用動態媒體影像預設集**
+**套用Dynamic Media影像預設集**
 
-1. 開啟資產，然後在左側導軌中點選下拉式功能表，然後點選「轉譯」。****
+1. 開啟資產，然後在左側導軌中點選下拉式功能表，然後點選「轉譯」。]****[!UICONTROL 
 
    >[!NOTE]
    >
