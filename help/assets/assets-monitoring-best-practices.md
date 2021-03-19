@@ -2,10 +2,11 @@
 title: 監控 [!DNL Assets] 部署的最佳做法
 description: 監控部署後 [!DNL Adobe Experience Manager] 部署的環境和效能的最佳實踐。
 contentOwner: AG
+role: 管理員、架構師
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1670'
 ht-degree: 1%
 
 ---
@@ -36,7 +37,7 @@ ht-degree: 1%
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/):Iftop顯示有關乙太網／網路使用的詳細資訊。Iftop會根據使用乙太網的實體的通信通道統計資訊以及它們使用的頻寬量。 Iftop可以使用`yum install iftop`或`apt-get install iftop`安裝在大多數的Linux系統上。
 
-* Java Flight Recorder(JFR):Oracle提供的一種商業工具，可在非生產環境中自由使用。 如需詳細資訊，請參閱[如何使用Java Flight Recorder來診斷CQ執行階段問題](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
+* Java Flight Recorder(JFR):來自Oracle的商業工具，可在非生產環境中自由使用。 如需詳細資訊，請參閱[如何使用Java Flight Recorder來診斷CQ執行階段問題](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
 * [!DNL Experience Manager] `error.log` 檔案：您可以調查該 [!DNL Experience Manager] `error.log` 檔案，以瞭解系統中記錄的錯誤的詳細資訊。使用命令`tail -F quickstart/logs/error.log`來識別要調查的錯誤。
 * [工作流程主控台](/help/sites-administering/workflows.md):運用工作流程主控台來監控落後或停滯的工作流程。
 
@@ -44,7 +45,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->這些工具是標準工具，Adobe不直接支援。 他們不需要額外的授權。
+>這些工具是標準工具，不直接受Adobe支援。 他們不需要額外的授權。
 
 ![chlimage_1-33](assets/chlimage_1-143.png)
 
@@ -71,7 +72,7 @@ ht-degree: 1%
 * JMX MBeans
 * 外部網站
 
-您需要NewRelic(TM)和AppDynamics(TM)等外部工具來監控每個項目。 使用這些工具，您可以定義系統專用的警報，例如系統使用率高、工作流程備份、運行狀況檢查失敗或未驗證的網站存取。 Adobe不建議使用任何特定工具，而不建議使用其他工具。 尋找適合您的工具，並運用它來監控討論的項目。
+您需要NewRelic(TM)和AppDynamics(TM)等外部工具來監控每個項目。 使用這些工具，您可以定義系統專用的警報，例如系統使用率高、工作流程備份、運行狀況檢查失敗或未驗證的網站存取。 Adobe不建議使用任何特定工具而非其他工具。 尋找適合您的工具，並運用它來監控討論的項目。
 
 #### 內部應用程式監視{#internal-application-monitoring}
 
@@ -198,5 +199,5 @@ ht-degree: 1%
 * 使用工作流程主控台來驗證您的工作流程是否如預期般執行。 如果可能，將多個工作流程簡化為單一工作流程。
 * 重新造訪即時監控，並尋找其他瓶頸或特定資源的高消費者。
 * 調查從客戶端網路出口點和到[!DNL Experience Manager]部署網路（包括調度程式）的入口點。 這些往往是瓶頸領域。 如需詳細資訊，請參閱[資產網路考量](/help/assets/assets-network-considerations.md)。
-* 調整[!DNL Experience Manager]伺服器的大小。 您的[!DNL Experience Manager]部署可能規模不足。 Adobe客戶服務可以幫助您識別您的伺服器是否大小不足。
+* 調整[!DNL Experience Manager]伺服器的大小。 您的[!DNL Experience Manager]部署可能規模不足。 Adobe客戶服務可協助您識別伺服器的大小是否不足。
 * 檢查`access.log`和`error.log`檔案中是否有發生錯誤的項目。 尋找可能表示自訂代碼異常的模式。 將它們新增至您所監視的事件清單。
