@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 # 識別要翻譯的內容{#identifying-content-to-translate}
 
-翻譯規則可識別翻譯專案中包含或排除的頁面、元件和資產的翻譯內容。 當要翻譯頁面或資產時，AEM會擷取此內容，以便將它傳送至翻譯服務。
+翻譯規則可識別翻譯專案中包含或排除的頁面、元件和資產的翻譯內容。 當翻譯頁面或資產時，AEM請擷取此內容，以便將其傳送至翻譯服務。
 
 頁面和資產在JCR儲存庫中以節點表示。 提取的內容是節點的一個或多個屬性值。 翻譯規則可識別包含要提取內容的屬性。
 
@@ -34,22 +35,22 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->升級至6.4後，建議將檔案從/etc移動。 如需詳細資訊，請參閱AEM 6.5](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)中的[通用資料庫重組。
+>升級至6.4後，建議將檔案從/etc移動。 有關詳細資訊，請參見6.5&lt;a1/AEM>中的[通用儲存庫重組。](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)
 
 規則包含下列資訊：
 
 * 應用規則的節點的路徑。 該規則也適用於節點的後代。
 * 包含要翻譯內容的節點屬性的名稱。 屬性可以特定於特定資源類型或所有資源類型。
 
-例如，您可以建立規則，將作者新增的內容轉譯至您頁面上的所有AEM基礎文字元件。 該規則可標識`/content`節點和`foundation/components/text`元件的`text`屬性。
+例如，您可以建立規則，將作者新增的內容轉譯至頁面上AEM的所有基礎文字元件。 該規則可標識`/content`節點和`foundation/components/text`元件的`text`屬性。
 
 已添加[控制台](#translation-rules-ui)用於配置轉換規則。 UI中的定義將為您填入檔案。
 
-如需AEM中內容轉譯功能的概觀，請參閱[多語言網站的轉譯內容](/help/sites-administering/translation.md)。
+有關中的內容翻譯功能的概AEM述，請參閱[多語言站點的翻譯內容](/help/sites-administering/translation.md)。
 
 >[!NOTE]
 >
->AEM支援資源類型與參考屬性之間的一對一對應，以轉換頁面上的參考內容。
+>支AEM持資源類型和引用屬性之間的一對一映射，以轉換頁面上的引用內容。
 
 ## 頁面、元件和資產的規則語法{#rule-syntax-for-pages-components-and-assets}
 
@@ -119,7 +120,7 @@ ht-degree: 0%
 
 ## 覆蓋規則{#overriding-rules}
 
-translation_rules.xml檔案由`nodelist`元素組成，其中包含多個子`node`元素。 AEM會從上到下讀取節點清單。 當多個規則指向相同節點時，會使用檔案中較低的規則。 例如，下列規則會導致翻譯`text`屬性中的所有內容，但頁面的`/content/mysite/en`分支除外：
+translation_rules.xml檔案由`nodelist`元素組成，其中包含多個子`node`元素。 AEM從上到下讀取節點清單。 當多個規則指向相同節點時，會使用檔案中較低的規則。 例如，下列規則會導致翻譯`text`屬性中的所有內容，但頁面的`/content/mysite/en`分支除外：
 
 ```xml
 <nodelist>
@@ -216,9 +217,9 @@ xml的結果如下所示：
 
 ## 手動編輯規則檔案{#editing-the-rules-file-manually}
 
-隨AEM安裝的translation_rules.xml檔案包含一組預設的轉譯規則。 您可以編輯檔案以支援翻譯項目的要求。 例如，您可以新增規則，以便翻譯自訂元件的內容。
+隨安裝的translation_rules.xml檔案包AEM含一組預設的翻譯規則。 您可以編輯檔案以支援翻譯項目的要求。 例如，您可以新增規則，以便翻譯自訂元件的內容。
 
-如果編輯translation_rules.xml檔案，請將備份副本保存在內容包中。 安裝AEM Service Pack或重新安裝某些AEM套件可以將目前的translation_rules.xml檔案取代為原始檔案。 要在這種情況下恢復規則，可以安裝包含備份副本的軟體包。
+如果編輯translation_rules.xml檔案，請將備份副本保存在內容包中。 安裝AEMService Pack或重新安AEM裝某些軟體包可以用原始檔案替換當前的translation_rules.xml檔案。 要在這種情況下恢復規則，可以安裝包含備份副本的軟體包。
 
 >[!NOTE]
 >
