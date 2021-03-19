@@ -1,7 +1,7 @@
 ---
 title: 疑難排解慢速查詢
 seo-title: 疑難排解慢速查詢
-description: 'null'
+description: 疑難排解慢速查詢
 seo-description: 'null'
 uuid: ad09546a-c049-44b2-99a3-cb74ee68f040
 contentOwner: User
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
-source-git-commit: 6d8680bcfb03197ac33bc7efb0e40796e38fef20
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2269'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 慢速查詢分類{#slow-query-classifications}
 
-AEM中有3種主要的慢速查詢分類，依嚴重性列出：
+中有3種慢速查詢的主要分類AEM，按嚴重性列出：
 
 1. **無索引查詢**
 
@@ -44,7 +44,7 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 
 添加查詢限制和調整索引允許以優化格式儲存索引資料，從而提供快速的結果檢索，並且減少或消除了對潛在結果集的線性檢查的需要。
 
-在AEM 6.3中，預設情況下，當到達100,000的遍歷時，查詢會失敗並引發例外。 AEM 6.3之前的AEM版本中預設不存在此限制，但可透過Apache Jackrabbit查詢引擎設定OSGi設定和QueryEngineSettings JMX Bean（屬性LimitReads）來設定。
+在AEM6.3中，預設情況下，當到達100,000的遍歷時，查詢會失敗並引發異常。 此限制在6.3之前的AEM版本中缺AEM省存在，但可通過Apache Jackrabbit查詢引擎設定OSGi配置和QueryEngineSettings JMX Bean（屬性LimitReads）設定。
 
 ### 檢測無索引查詢{#detecting-index-less-queries}
 
@@ -61,7 +61,7 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
    * `*INFO* org.apache.jackrabbit.oak.query.QueryImpl Traversal query (query without index) ... ; consider creating and index`
    * 僅當沒有可用索引且查詢可能遍歷許多節點時，才會記錄此消息。 如果索引可用，則不記錄消息，但遍歷的量很小，因此速度很快。
 
-* 請造訪AEM [Query Performance](/help/sites-administering/operations-dashboard.md#query-performance)作業主控台和[ Explain](/help/sites-administering/operations-dashboard.md#explain-query)慢速查詢，尋找遍歷或無索引查詢解釋。
+* 請造訪AEM[Query Performance](/help/sites-administering/operations-dashboard.md#query-performance)操作控制台和[ Explain](/help/sites-administering/operations-dashboard.md#explain-query)慢速查詢，查找遍歷或無索引查詢解釋。
 
 ### 檢測受限查詢{#detecting-poorly-restricted-queries}
 
@@ -69,10 +69,10 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 
 解釋所有查詢，並確保它們解析為已調整為與查詢的屬性限制匹配的索引。
 
-* 理想的查詢計畫涵蓋範圍對於所有屬性限制為`indexRules`，對於查詢中最緊密的屬性限制則至少為&lt;a0/>。
+* 理想的查詢計畫涵蓋範圍對於所有屬性限制為`indexRules`，對於查詢中最緊密的屬性限制則至少為。
 * 對結果排序的查詢應解析為具有按設定`orderable=true.`的屬性排序的索引規則的Lucene屬性索引
 
-#### 例如，預設`cqPageLucene`沒有`jcr:content/cq:tags` {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}的索引規則
+#### 例如，預設的`cqPageLucene`沒有`jcr:content/cq:tags` {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}的索引規則
 
 新增cq:tags索引規則之前
 
@@ -134,7 +134,7 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
 
    * `*WARN* org.apache.jackrabbit.oak.spi.query.Cursors$TraversingCursor Traversed ### nodes ... consider creating an index or changing the query`
 
-* 請造訪AEM [Query Performance](/help/sites-administering/operations-dashboard.md#query-performance)作業主控台和[ Explain](/help/sites-administering/operations-dashboard.md#explain-query)慢速查詢，以尋找不會將查詢屬性限制解析為索引屬性規則的查詢計畫。
+* 請造訪AEM[Query Performance](/help/sites-administering/operations-dashboard.md#query-performance)操作控制台和[ Explain](/help/sites-administering/operations-dashboard.md#explain-query)慢速查詢，查找不解析查詢屬性限制的查詢計畫以建立索引屬性規則。
 
 ### 檢測大結果集查詢{#detecting-large-result-set-queries}
 
@@ -156,18 +156,18 @@ AEM中有3種主要的慢速查詢分類，依嚴重性列出：
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
    * 優化查詢以減少堆記憶體消耗
 
-對於AEM 6.0 - 6.2版本，您可以在AEM啟動指令碼中調整透過JVM參數的節點周遊臨界值，以防止大型查詢超出環境負載。 建議的值為：
+對於AEM6.0 - 6.2版本，您可以通過啟動指令碼中的JVM參數調整節點遍歷的閾值AEM，以防止大型查詢超出環境。 建議的值為：
 
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-在AEM 6.3中，上述2個參數預設已預先設定，並可透過OSGi QueryEngineSettings加以修改。
+在AEM6.3中，上述2個參數預設已預先設定，並可透過OSGi QueryEngineSettings加以修改。
 
 以下網址提供更多資訊：[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 
 ## 查詢效能優化{#query-performance-tuning}
 
-AEM中查詢效能優化的格言是：
+查詢效能優化的格AEM言是：
 
 **「限制越多越好。」**
 
@@ -175,13 +175,13 @@ AEM中查詢效能優化的格言是：
 
 ### 調整查詢語句{#adjusting-the-query-statement}
 
-AEM支援下列查詢語言：
+支AEM援下列查詢語言：
 
 * 查詢產生器
 * JCR-SQL2
 * XPath
 
-下列範例使用Query Builder，因為它是AEM開發人員最常用的查詢語言，但JCR-SQL2和XPath也適用相同的原則。
+下列範例使用Query Builder，因為它是開發人員最常用的查詢語言AEM，但JCR-SQL2和XPath也適用相同的原則。
 
 1. 新增nodetype限制，讓查詢解析至現有的Lucene屬性索引。
 
@@ -200,9 +200,9 @@ AEM支援下列查詢語言：
    property.value=article-page
    ```
 
-   缺乏nodetype限制的查詢會強制AEM採用`nt:base` nodetype，而AEM中的每個節點都是&lt;a0/>的子類型，有效地產生nodetype限制。
+   查詢缺少nodetype限制AEM力來假定`nt:base` nodetype，而 nodetype是每個節點的子類AEM型，有效地導致無nodetype限制。
 
-   設定`type=cq:Page`會將此查詢限制為僅限`cq:Page`節點，並將查詢解析為AEM的cqPageLucene，並將結果限制為AEM中的節點子集（僅限`cq:Page`節點）。
+   設定`type=cq:Page`將此查詢限制為僅限`cq:Page`節點，並將查詢解析為AEMcqPageLucene，將結果限制為中的節點子集（僅限`cq:Page`節點）AEM。
 
 1. 調整查詢的nodetype限制，使查詢解析為現有的Lucene屬性索引。
 
@@ -225,8 +225,8 @@ AEM支援下列查詢語言：
    `nt:hierarchyNode` 是的父節點類 `cq:Page`型，且假設 `jcr:content/contentType=article-page` 僅透過自訂應 `cq:Page` 用程式套用至節點，此查詢只會傳回 `cq:Page` 其中的節點 `jcr:content/contentType=article-page`。不過，這是次優的限制，因為：
 
    * 其他節點繼承自`nt:hierarchyNode`(例如 `dam:Asset`)不必要地新增至一組潛在結果。
-   * `nt:hierarchyNode`沒有AEM提供的索引，但是`cq:Page`有提供的索引。
-   設定`type=cq:Page`會將此查詢限制為僅限`cq:Page`節點，並將查詢解析為AEM的cqPageLucene，並將結果限制為AEM中的節點子集（僅cq:Page節點）。
+   * &lt;AEMa0/>沒有提供的索引，但`cq:Page`有提供的索引。`nt:hierarchyNode`
+   設定`type=cq:Page`將此查詢限制為僅限`cq:Page`節點，並將查詢解析為AEMcqPageLucene，將結果限制為中的節點子集（僅cq:Page節點）AEM。
 
 1. 或者，調整屬性限制，使查詢解析為現有的屬性索引。
 
@@ -244,7 +244,7 @@ AEM支援下列查詢語言：
    property.value=my-site/components/structure/article-page
    ```
 
-   將屬性限制從`jcr:content/contentType`（自訂值）變更為眾所周知的屬性`sling:resourceType`，可讓查詢解析為屬性索引`slingResourceType`，該屬性索引`sling:resourceType`會依&lt;a3/>索引所有內容。
+   將屬性限制從`jcr:content/contentType`（自訂值）變更為眾所周知的屬性`sling:resourceType`，可讓查詢解析為屬性索引`slingResourceType`，該屬性索引`sling:resourceType`會依索引所有內容。
 
    當查詢不由nodetype識別，而結果集中以單一屬性限制時，最好使用屬性索引（與Lucene屬性索引相反）。
 
@@ -365,7 +365,7 @@ AEM支援下列查詢語言：
 
    1. 找到涵蓋cq:Page（使用索引管理器）的現有Lucene屬性索引。 在本例中，`/oak:index/cqPageLucene`。
    1. 識別最佳化索引定義（步驟4）和現有索引(/oak:index/cqPageLucene)之間的組態增量，並將最佳化索引中遺失的組態新增至現有的索引定義。
-   1. 根據AEM的「重新索引最佳實務」，重新整理或重新索引的順序是正確的，這取決於現有內容是否會受到此索引設定變更的影響。
+   1. 根據AEM重新索引最佳實務，根據現有內容是否會受此索引組態變更影響，重新整理或重新索引是正確的。
 
 ## 建立新索引{#create-a-new-index}
 
@@ -405,15 +405,15 @@ AEM支援下列查詢語言：
 
 1. 部署生成的Lucene屬性索引定義。
 
-   將Oak Index Definition Generator針對新索引提供的XML定義新增至管理Oak索引定義的AEM專案（請記住，請將Oak索引定義視為程式碼，因為程式碼會視其而定）。
+   將Oak Index Definition Generator針對新索引提供的XML定義新增至負責管理AEMOak索引定義的專案（請記住，將Oak索引定義視為程式碼，因為程式碼會視其而定）。
 
-   在AEM軟體開發常規生命週期後，部署並測試新索引，並驗證查詢解析為索引且查詢是效能。
+   按照通常的軟體開發生命週期部署和測AEM試新索引，並驗證查詢解析到索引並且查詢是效能。
 
-   在初次部署此索引時，AEM會將必要資料填入索引。
+   在初始部署此索引時，AEM將用必要資料填充索引。
 
 ## 無索引查詢和遍歷查詢何時可以？{#when-index-less-and-traversal-queries-are-ok}
 
-由於AEM有彈性的內容架構，因此很難預測並確保內容結構的遍歷性不會隨著時間而演化為無法接受的大小。
+由於有AEM彈性的內容架構，因此很難預測並確保內容結構的遍歷不會隨著時間而演化為無法接受的大。
 
 因此，確保索引滿足查詢，除非路徑限制和nodetype限制的組合保證&#x200B;**小於20個節點被遍歷。**
 
@@ -424,24 +424,24 @@ AEM支援下列查詢語言：
 * **Query Builder除錯程式**
 
    * WebUI，用於執行查詢產生器查詢並產生支援的XPath（用於Explain Query或Oak Index Definition Generator）。
-   * 位於AEM上，網址為[/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
+   * 位AEM於[/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
 
-* **CRXDE Lite —— 查詢工具**
+* **CRXDE Lite-查詢工具**
 
    * 用於執行XPath和JCR-SQL2查詢的WebUI。
-   * 位於AEM的[/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) >工具>查詢……
+   * 位於AEM[/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) >工具>查詢……
 
 * **[說明查詢](/help/sites-administering/operations-dashboard.md#explain-query)**
 
-   * AEM Operations控制面板，提供任何指定XPATH或JCR-SQL2查詢的詳細說明（查詢計畫、查詢時間和結果數）。
+   * 「操AEM作」控制面板，提供任何給定XPATH或JCR-SQL2查詢的詳細說明（查詢計畫、查詢時間和結果數）。
 
 * **[慢速／熱門查詢](/help/sites-administering/operations-dashboard.md#query-performance)**
 
-   * AEM Operations控制面板會列出在AEM上執行的最近緩慢和常用查詢。
+   * 列AEM出最近執行之慢速和常用查詢的「作業」控AEM制面板。
 
 * **[索引管理員](/help/sites-administering/operations-dashboard.md#the-index-manager)**
 
-   * 顯示AEM例項索引的AEM Operations WebUI;有助於瞭解哪些索引已存在，可以定位或擴展。
+   * An AEM Operations WebUI displaying the indexes on the AEM instance;有助於瞭解哪些索引已存在，可以定位或擴展。
 
 * **[記錄](/help/sites-administering/operations-dashboard.md#log-messages)**
 
@@ -456,12 +456,12 @@ AEM支援下列查詢語言：
 * **Apache Jackrabbit查詢引擎設定OSGi Config**
 
    * OSGi配置，用於配置遍歷查詢的故障行為。
-   * 位於AEM的[/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService](http://localhost:4502/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService)
+   * 位於AEM[/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService](http://localhost:4502/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService)
 
 * **NodeCounter JMX Mbean**
 
-   * JMX MBean用於估計AEM中內容樹中的節點數。
-   * 位於AEM上的[/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter)
+   * JMX MBean用於估計中的內容樹中的節點數AEM。
+   * 位AEM於[/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter)
 
 ### 支援的社區{#community-supported}
 
@@ -469,7 +469,7 @@ AEM支援下列查詢語言：
 
    * 從XPath或JCR-SQL2查詢語句生成最佳Lucence屬性索引。
 
-* **[AEM Chrome增效模組](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
+* **[AEMChrome增效模組](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
 
    * Google Chrome網頁瀏覽器擴充功能，可在瀏覽器的開發工具主控台中公開每個請求記錄檔資料，包括已執行的查詢及其查詢計畫。
-   * 需要在AEM上安裝並啟用[Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi)。
+   * 需要在上安裝並啟用[Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi)AEM。
