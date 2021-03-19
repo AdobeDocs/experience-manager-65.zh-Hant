@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2810'
+source-wordcount: '2811'
 ht-degree: 0%
 
 ---
@@ -20,14 +21,14 @@ ht-degree: 0%
 
 # 導入和導出資料{#importing-and-exporting-data}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 ## 關於表單資料整合服務{#about-the-form-data-integration-service}
 
-表單資料整合服務可將資料匯入PDF表單，並從PDF表單匯出資料。 匯入和匯出作業支援兩種PDF表單：
+表單資料整合服務可將資料匯入PDF表單，並從PDF表單匯出資料。 導入和導出操作支援兩種PDF forms:
 
-* Acrobat表單（在Acrobat中建立）是包含表單欄位的PDF檔案。
-* Adobe XML表單（在設計人員中建立）是符合XML Adobe XML表單架構(XFA)的PDF檔案。
+* Acrobat表單(在Acrobat建立)是包含表單欄位的PDF檔案。
+* AdobeXML表單（在設計人員中建立）是符合XMLAdobeXMLForms架構(XFA)的PDF檔案。
 
 表單資料可依PDF表單類型以下列其中一種格式存在：
 
@@ -36,22 +37,22 @@ ht-degree: 0%
 
 您可以使用表單資料整合服務完成下列工作：
 
-* 將資料匯入PDF表單。 如需詳細資訊，請參閱[匯入表單資料](importing-exporting-data.md#importing-form-data)。
-* 從PDF表單匯出資料。 如需詳細資訊，請參閱[匯出表單資料](importing-exporting-data.md#exporting-form-data)。
+* 將資料匯入PDF forms。 如需詳細資訊，請參閱[匯入表單資料](importing-exporting-data.md#importing-form-data)。
+* 從PDF forms匯出資料。 如需詳細資訊，請參閱[匯出表單資料](importing-exporting-data.md#exporting-form-data)。
 
 >[!NOTE]
 >
->如需表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 導入表單資料{#importing-form-data}
 
-您可以使用表單資料整合服務，將表單資料匯入互動式PDF表單。 互動式PDF表單是PDF檔案，其中包含一或多個欄位，用於收集使用者的資訊或顯示自訂資訊。 表單資料整合服務不支援表單計算、驗證或指令碼。
+您可以使用表單資料整合服務，將表單資料匯入互動式PDF forms。 互動式PDF表單是PDF檔案，其中包含一或多個欄位，用於收集使用者的資訊或顯示自訂資訊。 表單資料整合服務不支援表單計算、驗證或指令碼。
 
 若要將資料匯入在Designer中建立的表單，您必須參考有效的XDP XML資料來源。 請考慮以下抵押貸款申請表示例。
 
 ![ie_ie_loanformdata](assets/ie_ie_loanformdata.png)
 
-若要將資料值匯入此表單，您必須有與表單對應的有效XDP XML資料來源。 您不能使用任意XML資料來源，使用「表單資料整合」服務將資料匯入表單。 任意XML資料來源與XDP XML資料來源的區別在於，XDP資料來源符合XML表單架構(XFA)。 以下XML代表與範例抵押申請表格對應的XDP XML資料來源。
+若要將資料值匯入此表單，您必須有與表單對應的有效XDP XML資料來源。 您不能使用任意XML資料來源，使用「表單資料整合」服務將資料匯入表單。 任意XML資料來源與XDP XML資料來源的區別在於，XDP資料來源符合XMLForms架構(XFA)。 以下XML代表與範例抵押申請表格對應的XDP XML資料來源。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8" ?>
@@ -86,7 +87,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -108,10 +109,10 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-formdataintegration-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要項)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
-如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立表單資料整合服務客戶端**
 
@@ -119,7 +120,7 @@ ht-degree: 0%
 
 **參考PDF表格**
 
-若要將資料匯入PDF表單，您必須參考在Designer中建立的XML表單或在Acrobat中建立的Acrobat表單。
+若要將資料匯入PDF表單，您必須參考在設計人員中建立的XML表單，或是在Acrobat建立的Acrobat表單。
 
 **參考XML資料來源**
 
@@ -131,7 +132,7 @@ ht-degree: 0%
 
 **將PDF表格儲存為PDF檔案**
 
-將資料匯入表單後，您可將表單儲存為PDF檔案。 當使用者儲存為PDF檔案後，就可以在Adobe Reader或Acrobat中開啟表格，並檢視已匯入資料的表格。
+將資料匯入表單後，您可將表單儲存為PDF檔案。 儲存為PDF檔案後，使用者就可以在Adobe Reader或Acrobat開啟表單，並查看已匯入資料的表單。
 
 **另請參閱**
 
@@ -139,7 +140,7 @@ ht-degree: 0%
 
 [使用web service API匯入表單資料](importing-exporting-data.md#import-form-data-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -190,7 +191,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API匯入表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -204,17 +205,17 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立表單資料整合服務用戶端。
 
    * 使用其預設建構子建立`FormDataIntegrationClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormDataIntegrationClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormDataIntegrationClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
    * 獲取`FormDataIntegrationClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`FormDataIntegrationClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -259,11 +260,11 @@ ht-degree: 0%
 
 ## 導出表單資料{#exporting-form-data}
 
-您可以使用表單資料整合服務，從互動式PDF表單匯出表單資料。 匯出的資料格式取決於表單類型。 如果表單類型是在Acrobat中建立的Acrobat表單，則匯出的資料是XFDF。 如果表單類型是在Designer中建立的XML表單，則導出的資料是XDP。
+您可以使用表單資料整合服務，從互動式PDF表單匯出表單資料。 匯出的資料格式取決於表單類型。 如果表單類型是在Acrobat建立的Acrobat表單，則導出的資料是XFDF。 如果表單類型是在Designer中建立的XML表單，則導出的資料是XDP。
 
 >[!NOTE]
 >
->如需表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關表單資料整合服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-1}摘要
 
@@ -284,8 +285,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-formdataintegration-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要項)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
 **建立表單資料整合服務客戶端**
 
@@ -293,7 +294,7 @@ ht-degree: 0%
 
 **參考PDF表格**
 
-若要從PDF表單匯出資料，您必須參考在Designer或Acrobat中建立且包含表單資料的PDF表單。 如果您嘗試從空的PDF表單匯出資料，將會看到空的XML架構。
+若要從PDF表單匯出資料，您必須參考在設計人員或Acrobat中建立且包含表單資料的PDF表單。 如果您嘗試從空的PDF表單匯出資料，將會看到空的XML架構。
 
 **從PDF表單匯出資料**
 
@@ -309,7 +310,7 @@ ht-degree: 0%
 
 [使用web service API匯出表單資料](importing-exporting-data.md#export-form-data-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -350,7 +351,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）:使用Java API匯出表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -362,17 +363,17 @@ ht-degree: 0%
 
    建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義：`http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`。
 
-   * 將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   * 將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立表單資料整合服務用戶端。
 
    * 使用其預設建構子建立`FormDataIntegrationClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormDataIntegrationClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`FormDataIntegrationClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
    * 獲取`FormDataIntegrationClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`FormDataIntegrationClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`FormDataIntegrationClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -402,4 +403,4 @@ ht-degree: 0%
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
