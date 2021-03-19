@@ -1,18 +1,19 @@
 ---
 title: 效能准則
 seo-title: 效能准則
-description: 本文提供如何最佳化AEM部署效能的一般准則。
-seo-description: 本文提供如何最佳化AEM部署效能的一般准則。
+description: 本文提供如何最佳化部署效能的一般指AEM南。
+seo-description: 本文提供如何最佳化部署效能的一般指AEM南。
 uuid: 38cf8044-9ff9-48df-a843-43f74b0c0133
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
+feature: 設定
 translation-type: tm+mt
-source-git-commit: a678716e2c0520891e4228bc49b075f070ea45b7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2993'
+source-wordcount: '2994'
 ht-degree: 4%
 
 ---
@@ -20,14 +21,14 @@ ht-degree: 4%
 
 # 效能指南{#performance-guidelines}
 
-本頁提供如何最佳化AEM部署效能的一般准則。 如果您是AEM的新手，請先瀏覽下列頁面，再開始閱讀效能准則：
+本頁提供如何最佳化部署效能的一般指AEM南。 如果您是新AEM手，請先閱讀下列頁面，再開始閱讀效能准則：
 
-* [AEM Basic Concepts](/help/sites-deploying/deploy.md#basic-concepts)
-* [AEM中的儲存空間概觀](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
+* [基AEM本概念](/help/sites-deploying/deploy.md#basic-concepts)
+* [儲存概AEM述](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
 * [建議的部署](/help/sites-deploying/recommended-deploys.md)
 * [技術需求](/help/sites-deploying/technical-requirements.md)
 
-以下是AEM的可用部署選項（捲動以檢視所有選項）:
+以下是可用的部署選項AEM（滾動以查看所有選項）:
 
 <table>
  <tbody>
@@ -242,7 +243,7 @@ ht-degree: 4%
    <td><p> </p> </td>
   </tr>
   <tr>
-   <td><p>案頭應用程式</p> </td>
+   <td><p>桌面應用程式</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
@@ -260,45 +261,45 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->效能指引主要適用於AEM Sites。
+>表現指引主要適用於AEM Sites。
 
 ## 使用效能指南的時機{#when-to-use-the-performance-guidelines}
 
 您應在下列情況下使用效能准則：
 
-* **首次部署**:當第一次規劃部署AEM Sites或資產時，請務必瞭解在設定微型內核、節點儲存區和資料儲存區時可用的選項（與預設設定相比）。例如，將TarMK的資料存放區預設設定變更為檔案資料存放區。
-* **升級至新版本**:在升級到新版本時，請務必瞭解與運行環境相比的效能差異。例如，從AEM 6.1升級至6.2，或從AEM 6.0 CRX2升級至6.2 OAK。
-* **響應時間很慢**:當選定的Nodestore體系結構不滿足您的要求時，務必瞭解與其他拓撲選項相比的效能差異。例如，部署TarMK而非MongoMK，或使用檔案資料儲存而非Amazon S3或Microsoft Azure資料儲存。
+* **首次部署**:在計畫首次部署AEM Sites或資產時，請務必瞭解配置微內核、節點儲存和資料儲存時可用的選項（與預設設定相比）。例如，將TarMK的資料存放區預設設定變更為檔案資料存放區。
+* **升級至新版本**:在升級到新版本時，請務必瞭解與運行環境相比的效能差異。例如，從AEM6.1升級至6.2，或AEM從6.0 CRX2升級至6.2 OAK。
+* **響應時間很慢**:當選定的Nodestore體系結構不滿足您的要求時，務必瞭解與其他拓撲選項相比的效能差異。例如，部署TarMK而非MongoMK，或使用檔案資料儲存，而非AmazonS3或Microsoft Azure資料儲存。
 * **新增更多作者**:當建議的TarMK拓撲不滿足效能要求並且Author節點已達到最大可用容量時，請務必瞭解與使用MongoMK和三個或三個以上Author節點相比的效能差異。例如，部署MongoMK而非TarMK。
-* **新增更多內容**:當建議的Data Store架構不符合您的需求時，請務必瞭解與其他Data Store選項相比的效能差異。範例：使用Amazon S3或Microsoft Azure Data Store，而非檔案資料存放區。
+* **新增更多內容**:當建議的Data Store架構不符合您的需求時，請務必瞭解與其他Data Store選項相比的效能差異。範例：使用AmazonS3或Microsoft Azure資料存放區，而非檔案資料存放區。
 
 ## 簡介 {#introduction}
 
-本章提供AEM架構及其最重要元件的一般概觀。 它也提供開發指南，並說明TarMK和MongoMK基準測試中使用的測試藍本。
+本章概括介紹了體系結構及其AEM最重要的元件。 它也提供開發指南，並說明TarMK和MongoMK基準測試中使用的測試藍本。
 
-### AEM Platform {#the-aem-platform}
+### 平AEM台{#the-aem-platform}
 
-AEM平台包含下列元件：
+該平AEM台由以下元件組成：
 
 ![chlimage_1](assets/chlimage_1a.png)
 
-如需AEM平台的詳細資訊，請參閱[什麼是AEM](/help/sites-deploying/deploy.md#what-is-aem)。
+有關平台的詳AEM細資訊，請參AEM閱[What is ](/help/sites-deploying/deploy.md#what-is-aem)。
 
-### AEM架構{#the-aem-architecture}
+### 架AEM構{#the-aem-architecture}
 
-AEM部署有三個重要的建置區塊。 **作者例項**，內容作者、編輯者和審核者用來建立和審閱內容。 內容獲得批准後，會發佈到名為&#x200B;**Publish Instance**&#x200B;的第二個實例類型，用戶可從該類型訪問內容。 第三個構建塊是&#x200B;**Dispatcher**，它是一個模組，可處理快取和URL過濾，並安裝在webserver上。 如需AEM架構的詳細資訊，請參閱[典型部署藍本](/help/sites-deploying/deploy.md#typical-deployment-scenarios)。
+部署有三個重要的構AEM成塊。 **作者例項**，內容作者、編輯者和審核者用來建立和審閱內容。 內容獲得批准後，會發佈到名為&#x200B;**Publish Instance**&#x200B;的第二個實例類型，用戶可從該類型訪問內容。 第三個構建塊是&#x200B;**Dispatcher**，它是一個模組，可處理快取和URL過濾，並安裝在webserver上。 有關體系結AEM構的其他資訊，請參見[典型部署方案](/help/sites-deploying/deploy.md#typical-deployment-scenarios)。
 
 ![chlimage_1-1](assets/chlimage_1-1a.png)
 
 ### 微內核{#micro-kernels}
 
-Micro Kernels在AEM中擔任永續性管理員。 AEM使用三種類型的微內核：TarMK、MongoDB和關係資料庫（受限制支援）。 選擇符合您需求的項目取決於您實例的用途以及您考慮的部署類型。 有關微內核的其他資訊，請參見[建議部署](/help/sites-deploying/recommended-deploys.md)頁。
+Micro Kernels充當永續性管理器，在中AEM。 使用三種類型的微內核AEM:TarMK、MongoDB和關係資料庫（受限制支援）。 選擇符合您需求的項目取決於您實例的用途以及您考慮的部署類型。 有關微內核的其他資訊，請參見[建議部署](/help/sites-deploying/recommended-deploys.md)頁。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
 ### Nodestore {#nodestore}
 
-在AEM中，二進位資料可獨立於內容節點儲存。 儲存二進位資料的位置稱為&#x200B;**資料儲存**，而內容節點和屬性的位置稱為&#x200B;**節點儲存**。
+在中AEM，二進位資料可以獨立於內容節點儲存。 儲存二進位資料的位置稱為&#x200B;**資料儲存**，而內容節點和屬性的位置稱為&#x200B;**節點儲存**。
 
 >[!NOTE]
 >
@@ -306,7 +307,7 @@ Micro Kernels在AEM中擔任永續性管理員。 AEM使用三種類型的微內
 
 >[!CAUTION]
 >
->關係資料庫微內核受到限制支援。 請先聯絡[Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)，再使用此類型的微內核。
+>關係資料庫微內核受到限制支援。 在使用此類型的微內核之前，請與[Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)聯繫。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
@@ -318,30 +319,30 @@ Micro Kernels在AEM中擔任永續性管理員。 AEM使用三種類型的微內
 
 >[!NOTE]
 >
->Adobe建議選擇使用Adobe Managed Services在Azure或Amazon Web Services(AWS)上部署AEM的選項，讓客戶從具備在這些雲端運算環境中部署和操作AEM的經驗和技能的團隊中獲益。 請參閱我們有關Adobe Managed Services](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)的[其他檔案。
+>Adobe建議選擇使用Adobe Managed Services在AEMAzure或Amazon網站服務(AWS)上部署的選項，客戶將從具備在這些雲計算環境中部署和操作經驗和技能的團隊中獲益AEM。 請參閱我們有關Adobe Managed Services](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)的[其他檔案。
 >
->如需有關如何在Adobe Managed Services以外的Azure或AWS上部署AEM的建議，我們強烈建議直接與雲端供應商或我們其中一個合作夥伴合作，支援在您選擇的雲端環境中部署AEM。 選定的雲端供應商或合作夥伴負責其將支援的架構的規模規格、設計和實施，以滿足您的特定效能、負載、可擴充性和安全性要求。
+>如需有關如何在Adobe Managed Services以外部署AEMAzure或AWS的建議，我們強烈建議直接與雲端供應商或我們其中一家合作夥伴合作，以支援在您選擇的雲端AEM環境中部署。 選定的雲端供應商或合作夥伴負責其將支援的架構的規模規格、設計和實施，以滿足您的特定效能、負載、可擴充性和安全性要求。
 >
 >如需詳細資訊，請參閱[技術需求](/help/sites-deploying/technical-requirements.md#supported-platforms)頁面。
 
 ### 搜尋 {#search-features}
 
-此區段中列出的是與AEM搭配使用的自訂索引提供者。 若要進一步瞭解索引，請參閱[Oak Queries and Indexing](/help/sites-deploying/queries-and-indexing.md)。
+本節列出與一起使用的自訂索引提供AEM者。 若要進一步瞭解索引，請參閱[Oak Queries and Indexing](/help/sites-deploying/queries-and-indexing.md)。
 
 >[!NOTE]
 >
->對於大部分的部署，Adobe建議使用Lucene Index。 您只應將Solr用於特殊和複雜部署的可擴充性。
+>對於大多數部署，Adobe建議使用Lucene索引。 您只應將Solr用於特殊和複雜部署的可擴充性。
 
 ![chlimage_1-4](assets/chlimage_1-4a.png)
 
 ### 開發准則{#development-guidelines}
 
-您應針對AEM進行開發，其目標是&#x200B;**效能與延展性**。 以下是您可以遵循的一些最佳實務：
+您應針對AEM **效能和可擴充性**&#x200B;進行開發。 以下是您可以遵循的一些最佳實務：
 
 **DO**
 
 * 將簡報、邏輯和內容分離
-* 使用現有的AEM API(例如：Sling)和工具(例如：複製)
+* 使用現AEM有API(例如：Sling)和工具(例如：複製)
 * 根據實際內容進行開發
 * 開發最佳的可快取性
 * 將節省的數量減至最少(例如：使用暫時工作流程)
@@ -363,7 +364,7 @@ Micro Kernels在AEM中擔任永續性管理員。 AEM使用三種類型的微內
    * 服務追蹤器
    * 直接訪問OSGi服務註冊表
 
-如需有關在AEM上開發的詳細資訊，請閱讀[Developing - The Basics](/help/sites-developing/the-basics.md)。 如需其他最佳實務，請參閱[開發最佳實務](/help/sites-developing/best-practices.md)。
+有關開發的詳細資AEM訊，請參閱[開發- The Basics](/help/sites-developing/the-basics.md)。 如需其他最佳實務，請參閱[開發最佳實務](/help/sites-developing/best-practices.md)。
 
 ### 基準藍本{#benchmark-scenarios}
 
@@ -382,7 +383,7 @@ AEM Assets:
 
 **混合產品藍本**
 
-AEM Sites + Assets:
+AEM Sites+資產：
 
 * 網站使用者互動：閱讀文章頁面／閱讀頁面／建立段落／編輯段落／建立內容頁面／啟用內容頁面／作者搜尋
 * 資產使用者互動：瀏覽資產／搜尋資產／下載資產／讀取資產中繼資料／更新資產中繼資料／上傳資產／執行上傳資產工作流程
@@ -399,7 +400,7 @@ AEM Sites + Assets:
 
 本章提供TarMK的一般效能指南，指定最低架構要求和設定組態。 也提供基準測試以供進一步釐清。
 
-Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體）中客戶使用的預設永續性技術。
+Adobe建議TarMK為所有部署藍本（包括AEM作者和發佈例項）中客戶使用的預設永續性技術。
 
 有關TarMK的詳細資訊，請參閱[部署方案](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)和[Tar Storage](/help/sites-deploying/storage-elements-in-aem-6.md#tar-storage)。
 
@@ -407,7 +408,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
 
 >[!NOTE]
 >
->以下說明的最低架構准則適用於生產環境和高流量網站。 這些是&#x200B;**not**&#x200B;執行AEM所需的[最小規格](/help/sites-deploying/technical-requirements.md#prerequisites)。
+>以下說明的最低架構准則適用於生產環境和高流量網站。 這些是&#x200B;**not**[運行所需的最小規格](/help/sites-deploying/technical-requirements.md#prerequisites)AEM。
 
 若要在使用TarMK時建立良好的效能，您應從下列架構開始：
 
@@ -415,17 +416,17 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
 * 兩個發佈例項
 * 兩個調度程式
 
-以下是AEM網站和AEM資產的架構方針。
+以下是網站和AEM Assets的AEM架構方針。
 
 >[!NOTE]
 >
 >如果檔案資料儲存是共用的，則應將無二進位複製轉為&#x200B;**ON**。
 
-**AEM網站的Tar架構指引**
+**AEM Sites的Tar架構指南**
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-**AEM Assets的Tar架構指引**
+**AEM Assets的Tar架構指南**
 
 ![chlimage_1-6](assets/chlimage_1-6a.png)
 
@@ -457,7 +458,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
    <td>JVM參數</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> </td>
    <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> </td>
-   <td>將這些JVM參數新增至AEM啟動指令碼，以防止擴充查詢超載系統。</td>
+   <td>將這些JVM參數新增至AEM啟動指令碼中，以防止擴充查詢超載系統。</td>
   </tr>
   <tr>
    <td>Lucene索引配置</td>
@@ -481,7 +482,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
    <td>DAM MetaData回寫</td>
    <td><code>Transient Workflow</code></td>
    <td>已勾選</td>
-   <td>此工作流程會管理XMP回寫至原始二進位檔，並在JCR中設定上次修改的日期。</td>
+   <td>此工作流XMP程會管理回寫至原始二進位檔，並在JCR中設定上次修改的日期。</td>
   </tr>
  </tbody>
 </table>
@@ -499,7 +500,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
 | CPU/核心 | 英特爾(R)至強(R)CPU E5-2407 @2.40GHz,8核 |
 | RAM | 32GB |
 | 磁碟 | 磁性 |
-| Java | Oracle JRE第8版 |
+| Java | OracleJRE第8版 |
 | JVM堆 | 16GB |
 | 產品 | AEM 6.2 |
 | Nodestore | TarMK |
@@ -567,7 +568,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
    <td>JVM參數</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> <p><code>Doak.mongo.maxQueryTimeMS</code></p> </td>
    <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> <p>60000</p> </td>
-   <td>將這些JVM參數新增至AEM啟動指令碼，以防止擴充查詢超載系統。</td>
+   <td>將這些JVM參數新增至AEM啟動指令碼中，以防止擴充查詢超載系統。</td>
   </tr>
   <tr>
    <td>Lucene索引配置</td>
@@ -609,7 +610,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
 | CPU/核心 | 英特爾(R)至強(R)CPU E5-2407 @2.40GHz,8核 | 英特爾(R)至強(R)CPU E5-2407 @2.40GHz,8核 |
 | RAM | 32GB | 32GB |
 | 磁碟 | 磁性->1k IOPS | 磁性->1k IOPS |
-| Java | Oracle JRE第8版 | N/A |
+| Java | OracleJRE第8版 | N/A |
 | JVM堆 | 16GB | 不適用 |
 | 產品 | AEM 6.2 | MongoDB 3.2 WiredTiger |
 | Nodestore | MongoMK | 不適用 |
@@ -626,7 +627,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
 
 ## TarMK與MongoMK {#tarmk-vs-mongomk}
 
-在兩種選擇中，需要考慮的基本規則是TarMK是為效能而設計，而MongoMK是為可擴充性而設計。 Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體）中客戶使用的預設永續性技術。
+在兩種選擇中，需要考慮的基本規則是TarMK是為效能而設計，而MongoMK是為可擴充性而設計。 Adobe建議TarMK為所有部署藍本（包括AEM作者和發佈例項）中客戶使用的預設永續性技術。
 
 選擇MongoMK持久性後端而非TarMK的主要原因是水準縮放實例。 這表示有兩個或兩個以上的活動作者實例始終運行，並使用MongoDB作為持久性儲存系統。 需要執行多個作者執行個體，通常是因為單一伺服器的CPU和記憶體容量支援所有並行編寫活動，已不再可持續。
 
@@ -698,7 +699,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
   </tr>
   <tr>
    <td>Java</td>
-   <td>Oracle JRE第8版</td>
+   <td>OracleJRE第8版</td>
    <td>不適用</td>
    <td> </td>
   </tr>
@@ -743,7 +744,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
 
 >[!NOTE]
 >
->若要啟用與使用一個TarMK系統相同數目的MongoDB作者，您需要具有兩個AEM節點的叢集。 四節點MongoDB群集可處理1.8倍於1個TarMK實例的作者數。 一個8節點MongoDB群集可處理的作者數是一個TarMK實例的2.3倍。
+>要使MongoDB的作者數與使用一個TarMK系統的作者數相同，您需要使用兩個節點的群AEM集。 四節點MongoDB群集可處理1.8倍於1個TarMK實例的作者數。 一個8節點MongoDB群集可處理的作者數是一個TarMK實例的2.3倍。
 
 <table>
  <tbody>
@@ -785,8 +786,8 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
   </tr>
   <tr>
    <td>Java</td>
-   <td>Oracle JRE第8版</td>
-   <td><br /> Oracle JRE第8版</td>
+   <td>OracleJRE第8版</td>
+   <td><br /> OracleJRE第8版</td>
    <td>不適用</td>
   </tr>
   <tr>
@@ -826,7 +827,7 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
 
 ![chlimage_1-13](assets/chlimage_1-13a.png)
 
-### AEM網站和資產的架構調整能力准則{#architecture-scalability-guidelines-for-aem-sites-and-assets}
+### AEM Sites和資產的體系結構可擴充性指南{#architecture-scalability-guidelines-for-aem-sites-and-assets}
 
 ![chlimage_1-14](assets/chlimage_1-14a.png)
 
@@ -845,9 +846,9 @@ Adobe建議TarMK為所有部署案例（包括AEM Author和Publish執行個體�
    * 如果檔案資料儲存是共用的，則開啟無二進位複製
 
 * **應** 將節點儲存在本地磁碟上，而不是網路連接儲存(NAS)
-* 使用&#x200B;**Amazon S3**&#x200B;時：
+* 使用&#x200B;**AmazonS3**&#x200B;時：
 
-   * Amazon S3資料儲存在作者和發佈層之間共用
+   * AmazonS3資料存放區在作者和發佈層之間共用
    * 必須開啟無二進位複製
    * Datastore Garbage Collection要求在所有Author和Publish節點上先執行一次，然後在Author上執行第二次
 
