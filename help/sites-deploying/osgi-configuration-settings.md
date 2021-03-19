@@ -10,10 +10,11 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 474fc122f557f32d34fddd9d35a113431f6ce491
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,13 +22,13 @@ ht-degree: 0%
 
 # OSGi配置設定{#osgi-configuration-settings}
 
-[](https://www.osgi.org/) OSG是AEM技術層面的一個基本元素。它用於控制AEM的組合束及其配置。
+[](https://www.osgi.org/) OSG是OSG技術中的一個基本元AEM素。它用於控制複合束及其AEM配置。
 
 OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複使用和協作的元件來建立。 這些元件可以組成到應用程式並部署*&quot;。
 
-這樣可以輕鬆管理捆綁包，因為它們可以單獨停止、安裝和啟動。 互依關係會自動處理。 每個OSGi元件（請參見[OSGi規範](https://www.osgi.org/Specifications/HomePage)）都包含在各種束之一中。 使用AEM時，有幾種方法可管理此類組合的組態設定；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+這樣可以輕鬆管理捆綁包，因為它們可以單獨停止、安裝和啟動。 互依關係會自動處理。 每個OSGi元件（請參見[OSGi規範](https://www.osgi.org/Specifications/HomePage)）都包含在各種束之一中。 使用時，有AEM幾種方法可管理此類捆綁的配置設定；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
-下列OSGi組態設定（依照套件列出）與專案實作相關。 並非所有列出的設定都需要調整，有些設定會提及以協助您瞭解AEM的運作方式。
+下列OSGi組態設定（依照套件列出）與專案實作相關。 並非所有列出的設定都需要調整，有些設定會提及以協助您瞭解運作AEM方式。
 
 >[!CAUTION]
 >
@@ -39,19 +40,19 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 >[!NOTE]
 >
->OSGi Configuration Diff工具是[AEM Tools](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)的一部分，可用來列出預設的OSGi組態。
+>OSGi配置比較工具是[AEM Tools](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)的一部分，可用於列出預設的OSGi配置。
 
 >[!NOTE]
 >
->AEM中的特定功能區域可能需要進一步的搭售。 在這些情況下，可在與適當功能相關的頁面上找到配置詳細資訊。
+>在中的特定功能領域可能需要進一步的組合AEM。 在這些情況下，可在與適當功能相關的頁面上找到配置詳細資訊。
 
-**AEM Replication Event** ListenerConfigure:
+**AEM複製事件監** 聽器配置：
 
 * **運行模式** ，其中複製事件將分發到偵聽程式。 例如，如果定義為作者，則此系統將「啟動」複製。
 
 * 如果項目代碼在發佈環境中處理複製事件（反向複製），則需要添加運行模式&#x200B;**publish**。 例如，當調度程式用於從發佈環境刷新時，或當發生到其他發佈實例的標準複製時。
 
-**AEM Repository change** listenerConfigure:
+**AEM資料庫更改** 偵聽器配置：
 
 * **路徑**&#x200B;是要監聽儲存庫事件以便分發的位置。
 
@@ -82,7 +83,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 * **Logger** Nameand  **Log** Formatto configure the location and format of request and access logging(default: `request.log`)。在分析與Web鏈相關的效能或調試功能時，此日誌檔案是必不可少的。
 這與[Apache Sling Request Logger](#apacheslingrequestlogger)配對。
 
-如需詳細資訊，請參閱[AEM Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
+如需詳細資訊，請參閱AEM[Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
 
 **Apache Sling Eventing Thread** PoolConfigure:
 
@@ -90,18 +91,18 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 * **隊列大小**，即當池用完時線程隊列的最大大小。建議的值為`-1`，因為這會將佇列設為無限制；如果設定了限制，則超出限制時可能會發生損失。
 
-* 變更這些設定有助於在發生大量事件的情況下提供效能；例如，大量使用AEM DAM或Workflow。
+* 變更這些設定有助於在發生大量事件的情況下提供效能；例如，大量使AEM用DAM或工作流程。
 * 應使用測試建立藍本的特定值。
 * 這些設定會影響執行個體的效能，因此請勿在沒有理由和適當考量的情況下變更執行個體。
 
-**Apache Sling GET** Servlet設定轉換的某些方面：
+**Apache SlingGET** Servlet設定轉譯的某些方面：
 
 * **自動** 索引，啟用／停用瀏覽的目錄轉換。
 * **啟用** （或停用）預設轉譯，例如 **HMTL**、 **純文字**、 **** JSON或 **** XML。您不應停用JSON。
 
 >[!NOTE]
 >
->如果您在[Production Ready Mode](/help/sites-administering/production-ready.md)中執行AEM，此設定會自動設定給生產例項。
+>如果您在[生產就緒模式AEM](/help/sites-administering/production-ready.md)中運行，則會自動為生產實例配置此設定。
 
 **Apache Sling Java Script** Handler設定。java檔案編譯為指令碼(servlet)的設定。
 
@@ -123,7 +124,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 * **重試間隔**、最 **大重試次數**、最大並行作業數 **、**&#x200B;確認等待時間 ****，以及其他。
 
-* 更改這些設定可以改進具有大量作業的場景的效能；例如，大量使用AEM DAM和工作流程。
+* 更改這些設定可以改進具有大量作業的場景的效能；例如，大量使用AEMDAM和工作流程。
 * 應使用測試建立藍本的特定值。
 * 請勿無故變更這些設定，但必須經過適當考慮才變更。
 
@@ -138,7 +139,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 >[!NOTE]
 >
->如果您在[Production Ready Mode](/help/sites-administering/production-ready.md)中執行AEM，此設定會自動設定給生產例項。
+>如果您在[生產就緒模式AEM](/help/sites-administering/production-ready.md)中運行，則會自動為生產實例配置此設定。
 
 **Apache Sling Logging** ConfigurationConfigure:
 
@@ -148,7 +149,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 * **消息** 模式定義日誌消息的格式。
 
-如需詳細資訊，請參閱[AEM Logging](/help/sites-deploying/configure-logging.md#global-logging)和[Sling Logging](https://sling.apache.org/site/logging.html)。
+如需詳細資訊，請參閱AEM[Logging](/help/sites-deploying/configure-logging.md#global-logging)和[Sling Logging](https://sling.apache.org/site/logging.html)。
 
 **Apache Sling Logging Logger Configuration(Factory Configuration)** Configure:
 
@@ -157,10 +158,10 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 * **** Logger要定義類別；例如，僅記錄com.day.cq的記錄。
 
 * 通過使用&#x200B;**工廠配置**，可以添加任意數量的附加配置以滿足所需的各種日誌級別和類別。
-* 這類配置在開發過程中很有幫助；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
+* 這類配置在開發過程中很有幫助；例如，在特定日誌檔案中記錄特定服務的TRACE消息。
 * 這種配置在生產環境中非常有用；例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
 
-如需詳細資訊，請參閱[AEM Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
+如需詳細資訊，請參閱AEM[Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
 
 **Apache Sling Logging Writer Configuration(Factory Configuration)** Configure:
 
@@ -169,10 +170,10 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 * The writer can be used by a **Apache Sling Logging Logger Configuration** configuration.
 
-* 這類配置在開發過程中很有幫助；例如，要在特定日誌檔案中記錄特定服務的TRACE消息。
+* 這類配置在開發過程中很有幫助；例如，在特定日誌檔案中記錄特定服務的TRACE消息。
 * 這種配置在生產環境中非常有用；例如，將有關特定服務的消息記錄到單個日誌檔案中，以便更方便地進行監視。
 
-如需詳細資訊，請參閱[AEM Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
+如需詳細資訊，請參閱AEM[Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
 
 **Apache Sling Main** ServletConfigure:
 
@@ -205,7 +206,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 這與[Apache Sling Customized Request Data Logger](#apacheslingcustomizablerequestdatalogger)配對。
 
-如需詳細資訊，請參閱[AEM Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
+如需詳細資訊，請參閱AEM[Logging](/help/sites-deploying/configure-logging.md)和[Sling Logging](https://sling.apache.org/site/logging.html)。
 
 **Apache Sling Resource Resolver** Factory設定Sling資源解析度的中央層面：
 
@@ -225,7 +226,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 >
 >特別是，必須在儲存庫中配置這些選項。
 >
->否則，AEM可能會在下次啟動時覆寫使用Felix主控台對&#x200B;**URL Mappings**&#x200B;所做的變更。
+>否則，使用Felix控制台對&#x200B;**URL Mappings**&#x200B;所做的變更可能會在下次啟AEM動時被覆寫。
 
 **Apache Sling Servlet/Script Resolver和Error** HandlerThe Sling Servlet和Script Resolver有多項工作：
 
@@ -249,13 +250,13 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 * 定義要搜索項目特定字型的&#x200B;**字型路徑**。
 例如，`/apps/myapp/fonts`。
 
-**Apache HTTP Components Proxy** Configuration使用Apache HTTP用戶端（在建立HTTP時使用）的所有程式碼的Proxy組態；例如，在複製時。
+**Apache HTTP Components Proxy** Configuration使用Apache HTTP用戶端（用於建立HTTP時）的所有程式碼的Proxy組態；例如，在複製時。
 
 建立新配置時，請勿更改工廠配置，而是使用此處提供的配置管理器為此元件建立新工廠配置：**https://localhost:4502/system/console/configMgr/**。 代理配置在&#x200B;**org.apache.http.proxyconfigurator中可用。**
 
 >[!NOTE]
 >
->在AEM 6.0及舊版中，Proxy是在Day Commons HTTP Client中設定。 自AEM 6.1和更新版本起，Proxy設定已移至「Apache HTTP Components Proxy Configuration」，而非「Day Commons HTTP Client」設定。
+>在AEM6.0及舊版中，Proxy是在Day Commons HTTP Client中設定。 自AEM6.1和更新版本起，代理設定已移至「Apache HTTP Components Proxy Configuration」，而非「Day Commons HTTP Client」設定。
 
 **Day CQ** Antispam配置使用的反垃圾郵件服務(Akismet)。您必須註冊：
 
@@ -263,7 +264,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 * **API金鑰**
 * **註冊的URL**
 
-**Adobe Granite HTML Library** Manager設定此設定以控制用戶端程式庫（css或js）的處理；例如，包括如何看待基礎結構。
+**AdobeGranite HTML Library** Manager設定此設定以控制用戶端程式庫（css或js）的處理；例如，包括如何看待基礎結構。
 
 * 對於生產實例：
 
@@ -285,7 +286,7 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 >[!NOTE]
 >
->如果您在[Production Ready Mode](/help/sites-administering/production-ready.md)中執行AEM，此設定會自動設定給生產例項。
+>如果您在[生產就緒模式AEM](/help/sites-administering/production-ready.md)中運行，則會自動為生產實例配置此設定。
 
 **Day CQ HTTP Header Authentication** Handler HTTP請求的基本驗證方法的系統寬設定。
 
@@ -315,12 +316,12 @@ OSGi &quot;*提供標準化的基元，可讓應用程式由小型、可重複�
 
 * **定位** 路徑，以定義「」請求將重新導 `/`向至何處。
 
-AEM中有兩個可用的UI:
+以下提供兩個UIAEM:
 
 * 觸控式使用者介面是標準使用者介面
 * 淘汰的傳統UI仍可完全運作
 
-使用「AEM根對應」，您可以設定您要擁有的UI做為例項的預設值：
+使用AEM根對應，您可以設定您要擁有的UI做為例項的預設值：
 
 * 若要讓觸控式UI做為預設UI,**目標路徑**&#x200B;應指向：
 
@@ -338,7 +339,7 @@ AEM中有兩個可用的UI:
 >
 >標準安裝時，觸控最佳化UI為預設UI。
 
-**Adobe Granite SSO驗證處** 理常式設定單一登入(SSO)詳細資訊；在企業作者設定中通常需要這些功能，通常與LDAP搭配使用。
+**AdobeGranite SSO驗證處** 理常式設定單一登入(SSO)詳細資訊；在企業作者設定中通常需要這些功能，通常與LDAP搭配使用。
 
 可使用各種配置屬性：
 
@@ -382,7 +383,7 @@ AEM中有兩個可用的UI:
 
 >[!NOTE]
 >
->如果您在[Production Ready Mode](/help/sites-administering/production-ready.md)中執行AEM，此設定會自動設定給生產例項。
+>如果您在[生產就緒模式AEM](/help/sites-administering/production-ready.md)中運行，則會自動為生產實例配置此設定。
 
 **CQ WCM Link Checker Configurator(日CQ WCM連結檢查器配** 置器)配置：
 
@@ -408,7 +409,7 @@ AEM中有兩個可用的UI:
 
 * **傳送資料的URL** 會設定用於追蹤頁面統計資料的URL（如果追蹤器要求經過發送器，此點至關重要）;例如，預設值為 `https://localhost:4502/libs/wcm/stats/tracker`。
 
-* **啟用追** 蹤指令碼以啟用( `true`)或停用( `false`)頁面上包含追蹤指令碼。預設值為`false`。
+* **啟用追** 蹤指令碼以啟用( `true`)或停用( `false`)頁面上包含追蹤指令碼。預設值為 `false`.
 
 >[!NOTE]
 >
@@ -457,42 +458,42 @@ AEM中有兩個可用的UI:
 
 控制CQ重寫器的HTML剖析器。
 
-* **要處理的附加標籤** -您可以添加或刪除要由解析器處理的HTML標籤。依預設，會處理下列標籤：A,IMG,AREA,FORM,BASE,LINK,SCRIPT,BODY,HEAD。
-* **保留駝峰大小寫** -依預設，HTML剖析器會將駝峰大小寫的屬性（例如eBay）轉換為小寫（例如ebay）。您可以關閉此選項以保留駝峰大小寫屬性。 當使用Angular 2等前向框架時，這很有用。
+* **要處理的附加標籤** -您可以添加或刪除要由解析器處理的HTML標籤。依預設，會處理下列標籤：A,IMG，區域，表單，基礎，連結，指令碼，正文，HEAD。
+* **保留駝峰大小寫** -依預設，HTML剖析器會將駝峰大小寫的屬性（例如eBay）轉換為小寫（例如ebay）。您可以關閉此選項以保留駝峰大小寫屬性。 這在使用前端架構(例如Angular2)時很有用。
 
 **日公域JDBC連接池** 配置對用作內容源的外部資料庫的訪問。
 
 這是工廠配置，因此可以配置多個實例。
 
-**Adobe CQ Media DPS Sessions** Service管理DPS Sessions以搭配出版物使用。
+**Adobe CQ媒體DPS工作階** 段服務管理DPS工作階段以搭配出版物使用。
 
 您尤其可以定義`dps.session.service.url.name`:default set to [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions)
 
-**CDN重** 新寫入器必須確保AEM與CDN之間的通訊，以安全的方式將資產／二進位檔傳送給使用者。這包括兩項任務：
+**CDN重** 新寫入器AEM必須確保與CDN之間的通訊，以安全的方式將資產／二進位檔傳送給使用者。這包括兩項任務：
 
-* 第一次（或在快取中過期後）透過CDN存取AEM中的資源。
-* 安全地存取在CDN中快取的資源，因為一旦在CDN中快取資源，請求就不會前往AEM，而所有可存取該資源的使用者都應從CDN提供服務。
+* 首次(或在快取中AEM過期後)透過CDN存取資源。
+* 安全地存取在CDN中快取的資源，因為一旦在CDN中快取資源，請求就不會移至，而AEM且所有可存取該資源的使用者都應從CDN中提供服務。
 
-AEM提供重寫器，可將內部資產URL重寫至外部CDN URL。 它會重寫要傳遞至CDN的連結，包括JWS簽章和過期時間，以便安全地存取資產。 此功能將用於作者實例。
+提AEM供重寫器，可將內部資產URL重寫至外部CDN URL。 它會重寫要傳遞至CDN的連結，包括JWS簽章和過期時間，以便安全地存取資產。 此功能將用於作者實例。
 
 總體流程如下：
 
-1. 使用者向AEM驗證，並請求含有資產的頁面。
+1. 使用者驗證AEM並要求具有資產的頁面。
 1. 請求的頁面包含類似`/content/dam/geometrixx-media/articles/paladin_trailer.jpg/jcr:content/renditions/cq5dam.thumbnail.319.319.png`的資產
 1. 重新寫入器會轉換包含JWS簽名之CDN URL的連結：
    `CDN_domain/content/dam/geometrixx-media/articles/paladin_trailer.jpg/_jcr_content/renditions/cq5dam.thumbnail.319.319.png?cdn_sign=JWS_SIGNATURE`
 
 1. 然後，使用者的瀏覽器會將資產要求轉送至CDN伺服器
-1. CDN應設定為將請求與`cdn_sign`參數一起轉送至AEM。
+1. CDN應設定為將請求AEM與`cdn_sign`參數一起轉送。
 1. 驗證處理常式會驗證`cdn_sign`參數，並將資產傳回CDN，然後再傳送給使用者
 
-使用者瀏覽器、CDN和AEM之間的流量可視化如下。
+使用者瀏覽器、CDN和之間的流量可AEM以視覺化如下。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
 >[!NOTE]
 >
->此功能目前僅針對AEM作者例項啟用。
+>此功能目前僅針對作者例項啟AEM用。
 
 **** CDNConfigServiceImpl提供CDN配置
 
