@@ -1,7 +1,7 @@
 ---
 title: 配置屬性的加密支援
 seo-title: 配置屬性的加密支援
-description: 'null'
+description: 配置屬性的加密支援
 seo-description: 'null'
 uuid: 26dc5e46-9332-4d9b-8874-895b90391e8c
 contentOwner: User
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '283'
 ht-degree: 0%
 
 ---
@@ -34,12 +34,12 @@ ht-degree: 0%
 
 這些步驟說明如何加密郵件服務的SMTP密碼。 您可以針對要加密的OSGI屬性完成這些步驟。
 
-1. 前往位於&#x200B;*https://&lt;serveraddress>的AEM Web Console:&lt;serverport>/system/console/configMgr*
+1. 前往位AEM於&#x200B;*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;的Web控制台
 1. 在左上角，轉至&#x200B;**Main - Crypto Support**
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
-1. 此時將顯示&#x200B;**Adobe Experience Manager Web Console加密支援**&#x200B;頁。
+1. 將顯示&#x200B;**Adobe Experience ManagerWeb控制台加密支援**&#x200B;頁。
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
@@ -56,4 +56,4 @@ ht-degree: 0%
 
 ## 解密支援{#decryption-support}
 
-AEM現在提供Configuration Plugin以解密設定屬性。 此AEM外掛程式會自動解密並擷取清除文字屬性。
+現在AEM提供Configuration Plugin以解密配置屬性。 此外AEM掛程式會自動解密並擷取清除文字屬性。
