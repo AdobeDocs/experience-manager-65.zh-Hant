@@ -1,6 +1,6 @@
 ---
-title: 監控和維護您的AEM實例
-seo-title: 監控和維護您的AEM實例
+title: 監控和維護您的實AEM例
+seo-title: 監控和維護您的實AEM例
 description: 瞭解如何監控AEM。
 seo-description: 瞭解如何監控AEM。
 uuid: 14466552-5c92-4730-a427-85675a2b121c
@@ -10,18 +10,19 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
+feature: 設定
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5891'
+source-wordcount: '5892'
 ht-degree: 0%
 
 ---
 
 
-# 監視和維護您的AEM實例{#monitoring-and-maintaining-your-aem-instance}
+# 監視和維護AEM實例{#monitoring-and-maintaining-your-aem-instance}
 
-在您的AEM例項部署後，將需要某些工作來監控和維護其運作、效能和完整性。
+在部署實AEM例後，將需要某些任務來監視和維護其操作、效能和完整性。
 
 這裡的一個關鍵因素是，要識別潛在問題，您需要瞭解系統在正常條件下的外觀和行為。 最好的做法是監控系統，並在一段時間內收集資訊。
 
@@ -33,7 +34,7 @@ ht-degree: 0%
 | 正在監視檔案系統。 | 如果可用磁碟空間不足，CRX儲存庫將「凍結」。 當空間可用時，它將恢復。 | 「 `*ERROR* LowDiskSpaceBlocker`」消息可在可用空間變低時顯示在日誌檔案中。 |
 | [正在](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 監視日誌檔案。 |  |  |
 | 系統監控（持續）在後台運行。 | 包括CPU、記憶體、磁碟和網路使用。 例如，使用iostat / vmstat / perfmon。 | 記錄的資料是可視化的，可用於追蹤效能問題。 您也可存取原始資料。 |
-| [AEM效能受到監控](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)。 | 包含[請求計數器](/help/sites-deploying/monitoring-and-maintaining.md#request-counters)以監控流量等級。 | 如果出現嚴重或長期的業績損失，應進行詳細調查。 |
+| [正在AEM監控效能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)。 | 包含[請求計數器](/help/sites-deploying/monitoring-and-maintaining.md#request-counters)以監控流量等級。 | 如果出現嚴重或長期的業績損失，應進行詳細調查。 |
 | 您正在監視[複製代理](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents)。 |  |  |
 | 定期清除工作流程例項。 | 儲存庫大小和工作流效能。 | 請參閱[定期清除工作流實例](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。 |
 
@@ -71,12 +72,12 @@ ht-degree: 0%
 
 為此，您需要[備份整個儲存庫](#backing-up-your-repository)，然後：
 
-1. 停止AEM。
+1. 停AEM下。
 1. 從檔案系統備份整個`<cq-installation-dir>`。
 
 >[!CAUTION]
 >
->如果您正在操作第三方應用程式伺服器，則其他資料夾可能位於不同的位置，也可能需要備份。 如需安裝應用程式伺服器的相關資訊，請參閱[如何與應用程式伺服器一起安裝AEM。 ](/help/sites-deploying/application-server-install.md)[](/content/docs/en/aem/6-3/deploy/installing.md#將adobe experience Manager與應用程式伺服器一起安裝)
+>如果您正在操作第三方應用程式伺服器，則其他資料夾可能位於不同的位置，也可能需要備份。 如需安裝應用程式伺服器的相關資訊，請參AEM閱[如何與應用程式伺服器一起安裝。 ](/help/sites-deploying/application-server-install.md)[](/content/docs/en/aem/6-3/deploy/installing.md#將adobe experience Manager與應用程式伺服器一起安裝)
 
 >[!CAUTION]
 >
@@ -96,7 +97,7 @@ CRX文檔的[備份和還原](/help/sites-administering/backup-and-restore.md)�
 
 **清除版本**&#x200B;工具用於清除儲存庫中節點版本或節點層次結構。 其主要用途是通過刪除節點的舊版本來幫助您減小儲存庫的大小。
 
-本節討論與AEM版本控制功能相關的維護作業。 **清除版本**&#x200B;工具用於清除儲存庫中節點版本或節點層次結構。 其主要用途是通過刪除節點的舊版本來幫助您減小儲存庫的大小。
+本節介紹與的版本控制功能相關的維護操作AEM。 **清除版本**&#x200B;工具用於清除儲存庫中節點版本或節點層次結構。 其主要用途是通過刪除節點的舊版本來幫助您減小儲存庫的大小。
 
 ### 概覽 {#overview}
 
@@ -166,11 +167,11 @@ CRX文檔的[備份和還原](/help/sites-administering/backup-and-restore.md)�
 
 ## 使用審計記錄和日誌檔案{#working-with-audit-records-and-log-files}
 
-您可以在不同位置找到與Adobe Experience Manager(AEM)相關的稽核記錄和記錄檔。 以下提供您可在何處找到的概觀。
+與Adobe Experience Manager()有關的審計記錄和日誌檔案AEM可在各個位置找到。 以下提供您可在何處找到的概觀。
 
 ### 使用日誌{#working-with-logs}
 
-AEM WCM會記錄詳細的記錄檔。 開啟包裝並啟動Quickstart後，您可以找到以下日誌：
+AEMWCM記錄詳細記錄。 開啟包裝並啟動Quickstart後，您可以找到以下日誌：
 
 * `<cq-installation-dir>/crx-quickstart/logs/`
 
@@ -178,7 +179,7 @@ AEM WCM會記錄詳細的記錄檔。 開啟包裝並啟動Quickstart後，您�
 
 #### 日誌檔案旋轉{#log-file-rotation}
 
-日誌檔案旋轉是指通過定期建立新檔案來限制檔案增長的過程。 在AEM中，名為`error.log`的記錄檔會根據指定規則每天旋轉一次：
+日誌檔案旋轉是指通過定期建立新檔案來限制檔案增長的過程。 在AEM中，名為`error.log`的日誌檔案將根據給定規則每天旋轉一次：
 
 * `error.log`檔案會根據模式{original_filename} `.yyyy-MM-dd`重新命名。 例如，在2010年7月11日，目前的記錄檔會重新命名為`error.log-2010-07-10`，然後建立新的`error.og`。
 
@@ -186,16 +187,16 @@ AEM WCM會記錄詳細的記錄檔。 開啟包裝並啟動Quickstart後，您�
 
 >[!NOTE]
 >
->如果您升級AEM安裝，請注意，AEM不再使用的任何現有記錄檔都將保留在磁碟中。 您可以不冒險地移除它們。 所有新日誌條目都將寫入新日誌檔案中。
+>如果升級安AEM裝，請注意，任何不再使用的現有日誌檔案都AEM將保留在磁碟上。 您可以不冒險地移除它們。 所有新日誌條目都將寫入新日誌檔案中。
 
 ### 查找日誌檔案{#finding-the-log-files}
 
-安裝AEM的檔案伺服器上會保留各種記錄檔：
+安裝的檔案伺服器上保存了各種日誌檔案AEM:
 
 * `<cq-installation-dir>/crx-quickstart/logs`
 
    * `access.log`
-AEM WCM和儲存庫的所有存取要求都會在此處註冊。
+所有對AEMWCM和儲存庫的訪問請求都在此處註冊。
 
    * `audit.log`
 協調動作會在此處註冊。
@@ -252,15 +253,15 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
 | 0 | 致命錯誤 | 動作失敗，安裝程式無法繼續。 |
 |---|---|---|
-| 1 | 錯誤 | 動作失敗。 安裝會繼續，但AEM WCM的部分安裝不正確，因此無法運作。 |
-| 2 | 警告 | 行動成功，但遇到問題。 AEM WCM可能無法正常運作。 |
+| 1 | 錯誤 | 動作失敗。 安裝會繼續，但WCM的AEM一部分安裝不正確，無法正常運作。 |
+| 2 | 警告 | 行動成功，但遇到問題。 AEMWCM可能正常工作或無法正常工作。 |
 | 3 | 資訊 | 動作成功。 |
 
 ### 建立自訂記錄檔{#create-a-custom-log-file}
 
 >[!NOTE]
 >
->使用Adobe Experience Manager時，有幾種方法可管理此類服務的組態設定；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+>在與Adobe Experience Manager合作時，管理此類服務的配置設定有幾種方法；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 在某些情況下，您可能希望建立具有不同日誌級別的自定義日誌檔案。 您可以通過以下方式在儲存庫中執行此操作：
 
@@ -439,9 +440,9 @@ Felix Console也提供`../system/console/slinglog`;例如`https://localhost:4502
 
 ### 查找審計記錄{#finding-the-audit-records}
 
-會保存審計記錄，以記錄誰在何時執行了什麼。 AEM WCM和OSGi事件都會產生不同的稽核記錄。
+會保存審計記錄，以記錄誰在何時執行了什麼。 WCM和OSGi事件都會產生AEM不同的稽核記錄。
 
-#### AEM WCM審核記錄在「編寫頁面{#aem-wcm-audit-records-shown-when-page-authoring}」時顯示
+#### WCM審AEM核記錄在「編寫頁面{#aem-wcm-audit-records-shown-when-page-authoring}」時顯示
 
 1. 開啟頁面。
 1. 從側鏈中，您可以選擇帶有鎖定表徵圖的頁籤，然後按兩下&#x200B;**審計日誌……**
@@ -451,7 +452,7 @@ Felix Console也提供`../system/console/slinglog`;例如`https://localhost:4502
 
 1. 要關閉窗口時，按一下&#x200B;**確定**。
 
-#### 資料庫{#aem-wcm-auditing-records-within-the-repository}中的AEM WCM審核記錄
+#### WCMAEM儲存庫{#aem-wcm-auditing-records-within-the-repository}中的審計記錄
 
 在`/var/audit`資料夾中，根據資源保存審計記錄。 您可以深入探究，直到您看到個別記錄及其所包含的資訊為止。
 
@@ -459,7 +460,7 @@ Felix Console也提供`../system/console/slinglog`;例如`https://localhost:4502
 
 #### OSGi Audit records from the Web Console {#osgi-audit-records-from-the-web-console}
 
-OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態」標籤->**「記錄檔」標籤中查看：******
+OSGi事件還生成審核記錄，這些記錄可從Web控制台的&#x200B;**配置狀態**&#x200B;頁籤-> **日誌檔案**&#x200B;頁籤AEM中查看：
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -475,7 +476,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
 
 要監視複製代理，請執行以下操作：
 
-1. 存取AEM中的&#x200B;**Tools**&#x200B;標籤。
+1. 訪問&#x200B;**中的「工具」**&#x200B;頁籤AEM。
 1. 按一下&#x200B;**Replication**。
 1. 連按兩下適當環境（左窗格或右窗格）的代理連結；例如，作者&#x200B;**上的代理。**
 
@@ -531,7 +532,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
 |  | （相對而言）在伺服器上本機瀏覽的速度較快。 | 增加網路頻寬。 | 降低網頁的「重量」（例如，影像較少、最佳化HTML）。 |
 | Web伺服器 | 網頁伺服器上的CPU使用量很高。 | 叢集您的Web伺服器。 | 減少每頁點擊（瀏覽）。 |
 |  |  | 使用硬體負載平衡器。 |  |
-| 應用程式 | 伺服器CPU使用量很高。 | 叢集您的AEM例項。 | 搜尋並消除CPU和記憶體記憶體記憶體記憶體記憶體記憶體記憶體（使用程式碼檢閱、計時輸出等）。 |
+| 應用程式 | 伺服器CPU使用量很高。 | 將實例集AEM群。 | 搜尋並消除CPU和記憶體記憶體記憶體記憶體記憶體記憶體記憶體（使用程式碼檢閱、計時輸出等）。 |
 |  | 高記憶體消耗。 |  | 改善所有層級的快取。 |
 |  | 回應時間較短。 |  | 最佳化範本和元件（例如結構、邏輯）。 |
 | 存放庫 |  |  |  |
@@ -549,7 +550,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
 
 * 當您遇到效能問題時：
 
-   * 嘗試在您知道具有良好一般效能的不同用戶端上，使用一個（或更好）標準網頁瀏覽器複製它，以及／或在伺服器本身（如果可能）複製它
+   * 嘗試在您知道具有良好一般效能的不同用戶端上，使用一種（或更好）標準網頁瀏覽器複製它，以及（如果可能）在伺服器本身複製它
    * 檢查是否在適當的時間空間內有任何變更（與系統相關），以及這些變更中是否有可能影響效能
    * 提出以下問題：
 
@@ -590,7 +591,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
   <tr>
    <td>堆轉儲</td>
    <td>記憶體不足導致效能降低。</td>
-   <td><p>新增：<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br />選項至AEM的java呼叫。</p> <p>請參見<a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">《Java SE 6 with HotSpot VM的故障排除指南》。</a></p> </td>
+   <td><p>將：<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br />選項添加到對的java調用AEM。</p> <p>請參見<a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">《Java SE 6 with HotSpot VM的故障排除指南》。</a></p> </td>
   </tr>
   <tr>
    <td>系統呼叫</td>
@@ -620,12 +621,12 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
   <tr>
    <td>JConsole</td>
    <td>觀察JVM度量和線程。</td>
-   <td><p>用法：jconsole</p> <p>請參閱<a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a>和<a href="#monitoring-performance-using-jconsole">使用JConsole</a>監控效能。</p> <p><strong>注意：</strong> 使用JDK 1.6,JConsole可以使用插件進行擴展；例如，Top或TDA（線程轉儲分析器）。</p> </td>
+   <td><p>用法：jconsole</p> <p>請參閱<a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a>和<a href="#monitoring-performance-using-jconsole">使用JConsole</a>監控效能。</p> <p><strong>注意：</strong> 使用JDK 1.6,JConsole可透過外掛程式進行擴充；例如，Top或TDA（線程轉儲分析器）。</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
    <td>觀察JVM度量、線程、記憶體和分析。</td>
-   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>請參閱「使用(J)VisualVM</a>監控效能」。<a href="https://visualvm.dev.java.net/"><a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html"><a href="#monitoring-performance-using-j-visualvm"></a></a></a></p> <p><strong>注意：</strong> 使用JDK 1.6,VisualVM可透過增效模組進行擴充。</p> </td>
+   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>請參閱「使用(J)VisualVM</a>監控效能」。<a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html"></a><a href="https://visualvm.dev.java.net/"></a><a href="#monitoring-performance-using-j-visualvm"></a></p> <p><strong>注意：</strong> 使用JDK 1.6,VisualVM可透過增效模組進行擴充。</p> </td>
   </tr>
   <tr>
    <td>桁架／網架，lsof</td>
@@ -652,7 +653,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
 
 ### 解讀request.log {#interpreting-the-request-log}
 
-此檔案會註冊對AEM提出每個要求的基本資訊。 從中可以得出有價值的結論。
+此檔案會註冊每個要求的基本資訊AEM。 從中可以得出有價值的結論。
 
 `request.log`提供內建方式，讓您瞭解要求需要多長時間。 為了開發，`tail -f`和`request.log`會非常有用，並會關注回應速度緩慢。 若要分析較大的`request.log`，建議使用[`rlog.jar`，以便排序和篩選回應時間](#using-rlog-jar-to-find-requests-with-long-duration-times)。
 
@@ -667,7 +668,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
 09:43:41 [66] <- 200 text/html 797ms
 ```
 
-透過在特定時段內（例如在不同的24小時時段內）匯總所有GET項目，您可以對網站的平均流量做出陳述。
+透過匯總特定時段內的所有GET項目（例如，在不同的24小時時段內），您可以對網站的平均流量做出陳述。
 
 #### 使用request.log {#monitoring-response-times-with-the-request-log}監控回應時間
 
@@ -691,7 +692,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
 * 箭頭，指出這是請求（指向右箭頭）或回應（向左箭頭）。
 * 對於請求，行包含：
 
-   * 方法（通常為GET、HEAD或POST）
+   * 方法(通常為GET、HEAD或POST)
    * 要求的頁面
    * 協定
 
@@ -740,7 +741,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web Console的「設定狀態�
 
 ### 使用rlog.jar查找持續時間較長的請求{#using-rlog-jar-to-find-requests-with-long-duration-times}
 
-AEM包含各種協助工具，位於：
+AEM包括各種幫助工具：
 `<cq-installation-dir>/crx-quickstart/opt/helpers`
 
 其中之一`rlog.jar`可用來快速排序`request.log`，讓請求依持續時間（從最長到最短）顯示。
@@ -849,7 +850,7 @@ Percentage of the requests served within a certain time (ms)
 100% 8106 (longest request)
 ```
 
-上述數字取自可存取geometrixx公司頁面的標準MAcBook Pro筆記型電腦（2010年中），如預設AEM安裝所示。 頁面非常簡單，但未針對效能最佳化。
+上述數字取自可存取geometrixx公司頁面的標準MAcBook Pro筆記型電腦（2010年中），如預設安裝所AEM示。 頁面非常簡單，但未針對效能最佳化。
 
 `apachebench` 也會以平均方式顯示每個請求的時間，以涵蓋所有併發請求；請參 `Time per request: 54.595 [ms]` 閱（平均值，涵蓋所有並行請求）。您可以變更並行參數`-c`（一次執行多個請求的數目）的值，以查看任何效果。
 
@@ -885,9 +886,9 @@ Percentage of the requests served within a certain time (ms)
 
 工具命令`jconsole`可用於JDK。
 
-1. 啟動您的AEM實例。
+1. 開始AEM執行。
 1. 執行 `jconsole.`
-1. 選取您的AEM例項和&#x200B;**Connect**。
+1. 選擇AEM實例和&#x200B;**Connect**。
 
 1. 在`Local`應用程式中，按兩下`com.day.crx.quickstart.Main`;概述將顯示為預設值：
 
@@ -899,7 +900,7 @@ Percentage of the requests served within a certain time (ms)
 
 自從JDK 1.6起，工具命令`jvisualvm`便可用。 安裝JDK 1.6後，您可以：
 
-1. 啟動您的AEM實例。
+1. 開始AEM執行。
 
    >[!NOTE]
    >
@@ -931,7 +932,7 @@ Percentage of the requests served within a certain time (ms)
 * [您目前在此系統上維護多少頁？](#how-many-pages-do-you-currently-maintain-on-this-system)
 * [如果您使用MSM，每個月的平均推廣次數是多少？](#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month)
 * [每月的即時副本平均數是多少？](#what-is-the-average-number-of-live-copies-per-month)
-* [如果您使用AEM Assets，您目前在Assets中會維護多少資產？](#ifyouusecqdamhowmanyassetsdoyoucurrentlymaintainincqdam)
+* [如果您使用AEM Assets，您目前在「資產」中會維護多少資產？](#ifyouusecqdamhowmanyassetsdoyoucurrentlymaintainincqdam)
 * [資產的平均規模是多少？](#what-is-the-average-size-of-the-assets)
 * [目前使用多少個範本？](#how-many-templates-are-currently-used)
 * [目前使用多少個元件？](#how-many-components-are-currently-used)
@@ -999,7 +1000,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 再次使用安裝後經過的月數來計算平均值。
 
-#### 如果您使用AEM Assets，您目前在Assets中會維護多少資產？{#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
+#### 如果您使用AEM Assets，您目前在「資產」中會維護多少資產？{#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
 
 要查看您當前維護的DAM資產數量，請使用儲存庫查詢；via CRXDE - Tools - Query:
 
@@ -1097,7 +1098,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 在這些情況下，請檢查：
 
-* 用於[啟動AEM](/help/sites-deploying/deploy.md#getting-started)的JVM設定
+* 用於[start AEM](/help/sites-deploying/deploy.md#getting-started)的JVM設定
 * 知識庫：
 
    * [分析記憶體問題](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
