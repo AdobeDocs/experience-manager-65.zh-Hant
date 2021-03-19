@@ -1,6 +1,6 @@
 ---
 title: 360/VR視訊
-description: 瞭解如何在動態媒體中處理360和虛擬實境(VR)視訊。
+description: 瞭解如何在Dynamic Media處理360和虛擬實境(VR)視訊。
 uuid: c21bf2c0-7acc-401f-857e-0186de86e7a1
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
+feature: 360 VR 影片
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 0d5ee29141c897284f3f298d921f4f8528216f8f
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
@@ -21,7 +23,7 @@ ht-degree: 0%
 
 360度影片可同時錄制每個方向的檢視。 它們是使用全方位的相機或一組相機拍攝的。 在平面顯示器上播放時，用戶可以控制視角；在行動裝置上播放時，通常會運用其內建的陀螺控制項。
 
-動態媒體- Scene7模式包含傳送360個視訊資產的原生支援。 依預設，檢視或播放不需要其他設定。 您可使用標準的視訊副檔名（例如。mp4、.mkv和。mov）來傳送360視訊。 最常見的轉碼器是H.264。
+Dynamic Media-Scene7模式包含傳送360個視訊資產的原生支援。 依預設，檢視或播放不需要其他設定。 您可使用標準的視訊副檔名（例如。mp4、.mkv和。mov）來傳送360視訊。 最常見的轉碼器是H.264。
 
 本節說明如何與360/VR視訊檢視器搭配使用，以產生等長形視訊，提供身歷其境的房間、財產、位置、風景、醫療程式等觀賞體驗。
 
@@ -36,15 +38,15 @@ ht-degree: 0%
 ![360視訊范](assets/6_5_360videoiss_simplified.png)
 *例來自空間站360的視訊影格*
 
-## 360/VR視訊與Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
+## 360/VR視訊和Adobe Premiere Pro{#vr-video-and-adobe-premiere-pro}
 
-您可以使用Adobe Premier Pro來檢視和編輯360/VR素材。 例如，您可以將標誌和文字正確置入場景中，並套用專為等矩形媒體而設計的效果和轉場效果。
+您可以使用AdobePremier Pro來檢視和編輯360/VR視訊素材。 例如，您可以將標誌和文字正確置入場景中，並套用專為等矩形媒體而設計的效果和轉場效果。
 
 請參閱[編輯360/VR視訊](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html)。
 
 ## 上傳資產以搭配360視訊檢視器{#uploading-assets-for-use-with-the-video-viewer}使用
 
-上傳至AEM的360個視訊資產會在「資產」頁面上標示為&#x200B;**Multimedia**，與一般視訊資產類似。
+上傳至的360個視訊資產AEM在「資產」頁面上標示為&#x200B;**Multimedia**，與一般視訊資產類似。
 
 ![6_5_360video-selectpreview在卡片檢](assets/6_5_360video-selecttopreview.png)
 *視中可看到已上傳的360視訊資產。資產標示為「多媒體」。*
@@ -56,12 +58,12 @@ ht-degree: 0%
 
    轉譯360視訊內容比標準非360視訊內容對來源視訊解析度和編碼轉譯解析度的要求更高。
 
-   您可以使用動態媒體隨附的現成可用最適化視訊設定檔。 但是，請注意，相較於使用非360視訊檢視器所轉譯的相同設定來編碼的非360視訊，它會造成明顯低於360視訊品質。 因此，如果需要高品質的360視訊，請執行下列動作：
+   您可以使用隨附於Dynamic Media的現成可用最適化視訊設定檔。 但是，請注意，相較於使用非360視訊檢視器所轉譯的相同設定來編碼的非360視訊，它會造成明顯低於360視訊品質。 因此，如果需要高品質的360視訊，請執行下列動作：
 
    * 理想情況下，您的原始360視訊內容應具備下列其中一種解析度：
 
       * 1080p - 1920 x 1080，稱為全高清或全高清解析度，或
-      * 2160p - 3840 x 2160，稱為4K、UHD或Ultra HD解析度。 這種超大的顯示解析度，最常出現在優質的電視機和電腦螢幕上。 2160p的解析度通常稱為「4K」，因為寬度接近4000像素。 換言之，它提供1080p像素的4倍。
+      * 2160p - 3840 x 2160，稱為4K、UHD或UltraHD解析度。 這種超大的顯示解析度，最常出現在優質的電視機和電腦螢幕上。 2160p的解析度通常稱為「4K」，因為寬度接近4000像素。 換言之，它提供1080p像素的4倍。
    * [建立具有更高品質轉譯的自](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) 訂最適化視訊分析。例如，您可能想要建立包含下列三種設定的最適化視訊描述檔：
 
       * width=auto;height=720;位元速率=2500 kbps
@@ -77,7 +79,7 @@ ht-degree: 0%
 
 若要將已上傳的資產視為您要搭配360視訊檢視器使用的360視訊，資產的外觀比例必須為2。
 
-依預設，如果視訊的長寬比（寬／高）為2.0,AEM會將視訊偵測為「360」。如果您是管理員，則可以在CRXDE Lite中設定選用的`s7video360AR`屬性，覆寫預設外觀比例設定2:
+依預設，AEM如果視訊的長寬比（寬／高）為2.0，則會偵測為&quot;360&quot;。如果您是管理員，則可以通過在以下CRXDE Lite中設定可選`s7video360AR`屬性來覆蓋預設的外觀比例設定2:
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
@@ -99,8 +101,8 @@ ht-degree: 0%
 當您對360視訊感到滿意時，就可以發佈它。
 
 請參閱[將視訊或影像檢視器內嵌在網頁上。](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)
-請參 [閱連結URL至您的Web應用程式](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)。請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
-請參閱[新增動態媒體資產至頁面。](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
+請參 [閱連結URL至您的Web應用程式](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)。請注意，如果您的互動式內容具有相對URL的連結，尤其是連結至AEM Sites頁面，則無法使用以URL為基礎的連結方法。
+請參閱[將Dynamic Media資產新增至頁面。](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
 
 **若要預覽360個視訊**
 
@@ -110,7 +112,7 @@ ht-degree: 0%
 
    點選360視訊資產以預覽視訊。
 
-1. 在預覽頁面上，在頁面左上角附近點選下拉式清單，然後選取「檢視器」。****
+1. 在預覽頁面上，在頁面左上角附近點選下拉式清單，然後選取「檢視器」。]****[!UICONTROL 
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
@@ -131,9 +133,9 @@ ht-degree: 0%
 
 ## 發佈360視訊{#publishing-video}
 
-您必須發佈360視訊才能使用。 發佈360視訊會啟動URL和內嵌代碼。 此外，它還將360視訊發佈至與CDN整合的Dynamic Media雲端，以進行可擴充且具效能的傳送。
+您必須發佈360視訊才能使用。 發佈360視訊會啟動URL和內嵌代碼。 它還將360視訊發佈至Dynamic Media雲端，並與CDN整合，以提供可擴充和效能。
 
-如需如何發佈360視訊的詳細資訊，請參閱[發佈動態媒體資產](/help/assets/publishing-dynamicmedia-assets.md)。
+如需如何發佈360視訊的詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
 另請參閱[將視訊或影像檢視器內嵌在網頁上](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)。
-另請參閱[將URL連結到您的Web應用程式](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)。 請注意，如果您的互動式內容具有相對URL的連結，尤其是AEM Sites頁面的連結，就無法使用以URL為基礎的連結方法。
-另請參閱[新增動態媒體資產至頁面。](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
+另請參閱[將URL連結到您的Web應用程式](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)。 請注意，如果您的互動式內容具有相對URL的連結，尤其是連結至AEM Sites頁面，則無法使用以URL為基礎的連結方法。
+另請參閱[將Dynamic Media資產添加到頁面。](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
