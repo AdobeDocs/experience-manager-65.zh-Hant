@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2387'
 ht-degree: 0%
 
 ---
@@ -63,10 +64,10 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+* jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
 
-如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立DocConvert客戶端**
 
@@ -74,7 +75,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 **參考PDF檔案以轉換為PDF/A檔案**
 
-擷取PDF檔案以轉換為PDF/A檔案。 如果您嘗試將PDF檔案（例如Acrobat表格）轉換為PDF/A檔案，將會造成例外。
+擷取PDF檔案以轉換為PDF/A檔案。 如果您嘗試將PDF檔案(例如Acrobat表格)轉換為PDF/A檔案，將會造成例外。
 
 **設定追蹤資訊**
 
@@ -94,7 +95,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [使用web service API將檔案轉換為PDF/A檔案](pdf-a-documents.md#convert-documents-to-pdf-a-documents-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -121,7 +122,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 1. 設定追蹤資訊
 
    * 使用其建構子建立`PDFAConversionOptionSpec`對象。
-   * 調用`PDFAConversionOptionSpec`物件的`setLogLevel`方法並傳遞指定追蹤層級的字串值，以設定資訊追蹤層級。 例如，傳遞值`FINE`。 如需不同值的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`setLogLevel`方法。
+   * 調用`PDFAConversionOptionSpec`物件的`setLogLevel`方法並傳遞指定追蹤層級的字串值，以設定資訊追蹤層級。 例如，傳遞值`FINE`。 有關不同值的資訊，請參見[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`setLogLevel`方法。
 
 1. 轉換檔案
 
@@ -144,7 +145,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [快速入門（SOAP模式）:使用Java API將檔案轉換為PDF/A檔案](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -168,7 +169,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
    * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示PDF文檔的檔案位置和開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
-   * 通過為`binaryData`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`binaryData`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 設定追蹤資訊
 
@@ -189,7 +190,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
    * 透過取得`PDFAConversionResult`物件`PDFADocument`資料成員的值，建立儲存PDF/A檔案的`BLOB`物件。
    * 建立一個位元組陣列，用於儲存使用`PDFAConversionResult`對象返回的`BLOB`對象的內容。 獲取`BLOB`對象`binaryData`資料成員的值，以填充位元組陣列。
    * 調用`System.IO.FileStream`對象的建構子並傳遞一個字串值，該字串值表示PDF/A文檔的檔案位置。
-   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立&lt;a0/>對象。
+   * 調用`System.IO.BinaryWriter`對象的建構子並傳遞`System.IO.FileStream`對象，以建立對象。
    * 調用`System.IO.BinaryWriter`物件的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
 
 **另請參閱**
@@ -227,10 +228,10 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar（如果AEM Forms部署在JBoss Application Server上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss Application Server上，則為必需）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+* jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
 
-如需這些JAR檔案位置的詳細資訊，請參閱[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案位置的資訊，請參見[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立DocConvert客戶端**
 
@@ -254,7 +255,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [使用web service API判斷PDF/A符合性](pdf-a-documents.md#determine-pdf-a-compliancy-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -280,7 +281,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
    * 使用其建構子建立`PDFAValidationOptionSpec`對象。
    * 調用`PDFAValidationOptionSpec`物件的`setCompliance`方法並傳遞`PDFAValidationOptionSpec.Compliance.PDFA_1B`，以設定相容性層級。
-   * 調用`PDFAValidationOptionSpec`物件的`setLogLevel`方法並傳遞指定追蹤層級的字串值，以設定資訊追蹤層級。 例如，傳遞值`FINE`。 如需不同值的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`setLogLevel`方法。
+   * 調用`PDFAValidationOptionSpec`物件的`setLogLevel`方法並傳遞指定追蹤層級的字串值，以設定資訊追蹤層級。 例如，傳遞值`FINE`。 有關不同值的資訊，請參見[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`setLogLevel`方法。
 
 1. 擷取PDF檔案的相關資訊
 
@@ -297,7 +298,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
 
 [快速入門（SOAP模式）:使用Java API判斷PDF/A相容性](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -321,7 +322,7 @@ PDF/A-1規格包含兩個符合等級，即A和B。兩者之間的主要區別�
    * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示PDF文檔的檔案位置和開啟檔案的模式。
    * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 您可以取得`System.IO.FileStream`物件的`Length`屬性，以判斷位元組陣列的大小。
    * 調用`System.IO.FileStream`物件的`Read`方法，並傳遞要讀取的位元組陣列、開始位置和串流長度，以串流資料填入位元組陣列。
-   * 通過為`binaryData`對象的&lt;a1/>屬性指定位元組陣列的內容來填充`BLOB`對象。
+   * 通過為`binaryData`對象的屬性指定位元組陣列的內容來填充`BLOB`對象。
 
 1. 設定執行時期選項
 
