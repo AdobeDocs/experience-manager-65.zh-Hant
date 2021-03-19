@@ -3,10 +3,11 @@ title: 效能調整 [!DNL Assets]。
 description: 關於 [!DNL Experience Manager] 配置、更改硬體、軟體和網路元件以消除瓶頸並優化 [!DNL Experience Manager Assets]效能的建議和指導。
 contentOwner: AG
 mini-toc-levels: 1
+role: 架構師、管理員
 translation-type: tm+mt
-source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2743'
 ht-degree: 0%
 
 ---
