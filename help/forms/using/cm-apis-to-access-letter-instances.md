@@ -8,11 +8,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 9c27f976-972a-4250-b56d-b84a7d72f8c8
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 0%
+source-wordcount: '594'
+ht-degree: 1%
 
 ---
 
