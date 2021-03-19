@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 8c8b1998-eab4-4230-b24f-5e96883ba599
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -20,13 +21,13 @@ ht-degree: 0%
 
 # 配置同步調度程式{#configuring-the-synchronization-scheduler}
 
-依預設，同步排程器會在每3分鐘後執行，以透過LiveCycle Workbench 11同步儲存庫中修改和更新的所有資產。 同步程式完成後，包含表單和資源的應用程式就會顯示在AEM Forms使用者介面中。
+預設情況下，同步調度程式每3分鐘運行一次，以通過LiveCycle工作台11同步儲存庫中修改和更新的所有資產。 同步過程完成後，包含表單和資源的應用程式將在AEM Forms用戶介面中顯示。
 
 ## 更改同步調度程式{#change-interval-of-the-synchronization-scheduler}的間隔
 
 執行以下步驟以更改同步調度程式的間隔：
 
-1. 登入AEM Configuration Manager。 配置管理器的URL為`https://'[server]:[port]'/lc/system/console/configMgr`
+1. 登入Configuration AEM Manager。 配置管理器的URL為`https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. 找到並開啟&#x200B;**FormsManagerConfiguration**&#x200B;捆綁包。
 
@@ -40,9 +41,9 @@ ht-degree: 0%
 
 1. 登入AEM Forms。 預設URL為`https://'[server]:[port]'/lc/aem/forms/`。
 
-   ![AEM Forms使用者介面](assets/aem_forms_ui.png)
+   ![AEM Forms用戶介面](assets/aem_forms_ui.png)
 
-   **圖：** *AEM Forms使用者介面*
+   **圖：** *AEM Forms用戶介面*
 
 1. 按一下工具列中的![aem6forms_sync](assets/aem6forms_sync.png)圖示。 如果您在最後設定的路徑上沒有任何資產，則對話方塊如下所示。 按一下&#x200B;**啟動**&#x200B;啟動同步。
 
@@ -52,7 +53,7 @@ ht-degree: 0%
 
 ## 同步錯誤疑難排解{#troubleshooting-synchronization-error}
 
-您可以在工作流程設計工具(LiveCycle Workbench)中建立新的應用程式。
+您可以在工作流程設計人員(LiveCycle工作台)中建立新的應用程式。
 
 如果新建立的應用程式和/content/dam/formsanddocuments的資料夾名稱相同，則根層級已存在錯誤&quot;*與此應用程式同名的資產。*」。
 
