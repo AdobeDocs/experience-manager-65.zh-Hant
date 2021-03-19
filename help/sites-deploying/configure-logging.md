@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
+feature: 設定
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -30,11 +31,11 @@ AEM提供您設定：
 
 >[!NOTE]
 >
->登入AEM是以Sling原則為基礎。 如需詳細資訊，請參閱[Sling Logging](https://sling.apache.org/site/logging.html)。
+>登入是AEM以Sling原則為基礎。 如需詳細資訊，請參閱[Sling Logging](https://sling.apache.org/site/logging.html)。
 
 ## 全局記錄{#global-logging}
 
-[Apache Sling Logging ](/help/sites-deploying/osgi-configuration-settings.md) Configurationis used to configure the root logger.這會定義登入AEM的全域設定：
+[Apache Sling Logging ](/help/sites-deploying/osgi-configuration-settings.md) Configurationis used to configure the root logger.這定義了登入的全域設定AEM:
 
 * 記錄級別
 * 中央日誌檔案的位置
@@ -48,7 +49,7 @@ AEM提供您設定：
 
 ## 個別服務的記錄員和寫入者{#loggers-and-writers-for-individual-services}
 
-除了全域記錄設定外，AEM還可讓您設定個別服務的特定設定：
+除了全域記錄設定外，還AEM允許您為個別服務配置特定設定：
 
 * 特定記錄級別
 * 單個日誌檔案的位置
@@ -59,7 +60,7 @@ AEM提供您設定：
 
 這可讓您將單一服務的記錄訊息傳送至個別檔案。 這在開發或測試時特別有用；例如，當您需要特定服務的日誌級別提高時。
 
-AEM使用下列功能將記錄訊息寫入檔案：
+使AEM用下列方法將日誌消息寫入檔案：
 
 1. **OSGi服務**（記錄器）寫入日誌消息。
 1. **Logging Logger**&#x200B;會擷取此訊息，並根據您的規格設定其格式。
@@ -85,7 +86,7 @@ AEM使用下列功能將記錄訊息寫入檔案：
 
 ### 標準記錄程式和寫入程式{#standard-loggers-and-writers}
 
-標準AEM安裝中包含某些記錄程式和撰寫程式。
+標準安裝中包含某些記錄程式和寫AEM入程式。
 
 第一個是特殊情況，因為它同時控制`request.log`和`access.log`檔案：
 
