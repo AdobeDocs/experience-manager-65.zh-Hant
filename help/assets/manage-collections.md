@@ -3,10 +3,11 @@ title: 管理數位資產集合
 description: 瞭解要管理資產集合的任務，例如建立、檢視、刪除、編輯和下載系列。
 contentOwner: AG
 mini-toc-levels: 1
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2182'
 ht-degree: 11%
 
 ---
