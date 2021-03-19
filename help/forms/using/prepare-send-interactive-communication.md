@@ -1,16 +1,17 @@
 ---
 title: 使用代理UI準備和傳送互動式通訊
 seo-title: 使用代理UI準備和傳送互動式通訊
-description: 代理UI允許代理準備併發送互動式通信到後置進程。 工程師會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
+description: 代理UI允許代理準備併發送互動式通信到後置進程。 代理程式會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 seo-description: 使用代理UI準備和傳送互動式通訊
 uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: 04e1b722cc9be1c4f51b629caffabe1a3f06d28e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 # 使用代理UI {#prepare-and-send-interactive-communication-using-the-agent-ui}準備和發送互動式通信
 
-代理UI允許代理準備併發送互動式通信到後置進程。 工程師會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
+代理UI允許代理準備併發送互動式通信到後置進程。 代理程式會視需要進行修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 
 ## 概覽 {#overview}
 
@@ -32,7 +33,7 @@ ht-degree: 0%
 
 ## 使用代理UI {#prepare-interactive-communication-using-the-agent-ui}準備互動式通信
 
-1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms和文檔]**。
 1. 選擇適當的「Interactive Communication（互動式通信）」 ，然後按一下「Open Agent UI（開啟代理UI）」。****
 
    >[!NOTE]
@@ -100,7 +101,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >只有在建立互動式通訊時（在列印頻道的「檔案容器」屬性中）啟用資料庫存取時，才能使用「資料庫存取」圖示。
+   >只有在建立互動式通訊時（在列印頻道的「檔案容器」屬性中）啟用資料庫存取時，才可使用「資料庫存取」圖示。
 
 1. 如果在建立「交互通信」時未鎖定附件順序，則可以通過選擇附件並點選向下和向上箭頭來重新排序附件。
 1. 使用「網頁預覽和列印預覽」，查看這兩個輸出是否符合您的需求。
@@ -135,7 +136,7 @@ ht-degree: 0%
 
 ### 在文字{#specialcharacters}中插入特殊字元
 
-Agent UI已內建支援210個特殊字元。 管理員可以透過自訂[新增對更多／自訂特殊字元的支援。](/help/forms/using/custom-special-characters.md)
+Agent UI已內建支援210個特殊字元。 管理員可以透過自訂](/help/forms/using/custom-special-characters.md)新增對更多／自訂特殊字元的支援。[
 
 #### 附件遞送{#attachmentdelivery}
 
@@ -189,13 +190,13 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 1. 開啟`http://<hostname>:<port>/ system/console/bundles`並點選&#x200B;**[!UICONTROL 安裝／更新]**&#x200B;以上傳OSGi套件。 驗證已上載包的狀態是否顯示為&#x200B;**活動**。 如果軟體包的狀態未顯示為&#x200B;**活動**，請重新啟動伺服器。
 1. 前往 `https://'[server]:[port]'/system/console/configMgr`.
 1. 點選&#x200B;**[!UICONTROL 建立對應設定]**。
-1. 選擇「使用CCRDocumentInstanceService **[!UICONTROL 啟用儲存」，然後點選「儲存」。]******
+1. 選擇「使用CCRDocumentInstanceService ]**啟用儲存」，然後點選「儲存」。**[!UICONTROL ****
 
 ### 將互動式通訊儲存為草稿{#save-as-draft-agent-ui}
 
 執行以下步驟將互動式通信另存為草稿：
 
-1. 在Forms Manager中選擇「互動式通訊」，然後點選&#x200B;**[!UICONTROL Open Agent UI]**。
+1. 在「Forms管理器」中選擇「互動式通信」，然後按一下「開啟代理UI」。****
 
 1. 在代理UI中進行適當的更改，然後點選「另存為草稿」。****
 
@@ -328,8 +329,8 @@ public class CCRDraftService implements CCRDocumentInstanceService {
   <td><p><strong>資料庫服務示例</strong></p></td> 
    </tr>
   <tr>
-   <td><p>您可以建立互動式通訊的草稿，或直接提交。 儲存作業的API會檢查「互動式通訊」是否以草稿形式提交，並包含草稿名稱。 然後，API會以「儲存為輸入法」呼叫mySQLDataBaseServiceCRUD服務。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
-   <td><p>mySQLDataBaseServiceCRUD服務會驗證「另存為輸入方法」，並產生自動產生的草稿ID並將其傳回AEM。 產生草稿ID的邏輯會因資料庫而異。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   <td><p>您可以建立互動式通訊的草稿，或直接送出。 儲存作業的API會檢查「互動式通訊」是否以草稿形式提交，並包含草稿名稱。 然後，API會以「儲存為輸入法」呼叫mySQLDataBaseServiceCRUD服務。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
+   <td><p>mySQLDataBaseServiceCRUD服務驗證「另存為」輸入方法，並生成自動生成的草稿ID並將其返回AEM。 產生草稿ID的邏輯會因資料庫而異。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
    </tr>
   <tr>
    <td><p>更新操作的API會擷取互動式通訊草稿的狀態，並檢查互動式通訊是否包含草稿名稱。 API會呼叫mySQLDataBaseServiceCRUD服務，以在資料庫中更新該狀態。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
