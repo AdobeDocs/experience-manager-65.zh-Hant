@@ -1,18 +1,18 @@
 ---
 title: PhoneGap
 seo-title: PhoneGap
-description: null
-seo-description: 請依照本頁開始在AEM中編寫Adobe PhoneGap Enterprise。
+description: PhoneGap
+seo-description: 請依照本頁開始製作Adobe PhoneGap企業版AEM。
 uuid: 256a9f66-4c66-434c-be79-01be3c02d688
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: d9ab4d38-1c17-477d-9341-02bda80f3c23
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 4%
+source-wordcount: '216'
+ht-degree: 5%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需SPA要單頁應用程式架構用戶端轉換的專案使用編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
 
-Adobe Experience Manager(AEM)Mobile只是構成完整AEM平台的一大支柱。
+Adobe Experience ManagerAEM()移動只是構成完整平台的一個支AEM柱。
 
-要開始新的AEM Mobile應用程式體驗，您必須先整合角色，才能準備好進行內容編輯。 以下角色提供建立新AEM Mobile應用程式的起點：
+要開始新的AEM Mobile應用程式體驗，必須先整合角色，才能準備好進行內容編輯。 以下角色為建立新的AEM Mobile應用程式提供了起點：
 
 * **管理員**
 * **開發人員**
@@ -51,6 +51,6 @@ Adobe Experience Manager(AEM)Mobile只是構成完整AEM平台的一大支柱。
 
 要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 
-* [使用AEM為Adobe PhoneGap Enterprise進行開發](/help/mobile/developing-in-phonegap.md)
-* [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)
+* [Adobe PhoneGap企業的發AEM展](/help/mobile/developing-in-phonegap.md)
+* [管理適用於Adobe PhoneGap企業的內AEM容](/help/mobile/administer-phonegap.md)
 
