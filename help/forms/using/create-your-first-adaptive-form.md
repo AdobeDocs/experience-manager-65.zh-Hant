@@ -7,10 +7,11 @@ uuid: ee351a3f-ea6a-4b4c-8045-4948ad51b7c1
 topic-tags: introduction
 discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 43c04a8b2f1e2e7f2067cec055d8737dfc7b3e84
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -37,15 +38,15 @@ ht-degree: 0%
 
 網站為不同的客戶提供多種產品。 客戶瀏覽入口網站，選擇並訂購產品。 每位客戶都會建立帳戶並提供運費和帳單地址。 現有客戶薩拉·羅斯正在尋找將她的送貨地址添加到網站上。 該網站提供線上表單，以新增和更新運送地址。
 
-網站會在Adobe Experience Manager(AEM)上執行，並使用AEM [!DNL Forms]擷取和處理資料。 地址添加和更新表單是自適應表單。 該網站將客戶詳細資料儲存在資料庫中。 他們使用地址添加和更新表單來檢索和顯示可用地址。 他們還使用自適應表單來接受更新和新地址。
+該網站在Adobe Experience Manager(AEM)上執行，AEM並使用[!DNL Forms]擷取和處理資料。 地址添加和更新表單是自適應表單。 該網站將客戶詳細資料儲存在資料庫中。 他們使用地址添加和更新表單來檢索和顯示可用地址。 他們還使用自適應表單來接受更新和新地址。
 
-### 先決條件{#prerequisite}
+### 必備條件 {#prerequisite}
 
-* 設定AEM作者例項。
-* 在作者例項上安裝[AEM Forms add-on](../../forms/using/installing-configuring-aem-forms-osgi.md)。
+* 設定作AEM者例項。
+* 在作者實例上安裝[AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md)。
 * 從資料庫提供程式獲取JDBC資料庫驅動程式（JAR檔案）。 教程中的示例基於[!DNL MySQL]資料庫，並使用[!DNL Oracle's] [ MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
-* 設定包含客戶資料的資料庫，其中欄位如下。 建立最適化表單並非必要資料庫。 本教學課程使用資料庫來顯示AEM [!DNL Forms]的表單資料模型和永續性功能。
+* 設定包含客戶資料的資料庫，其中欄位如下。 建立最適化表單並非必要資料庫。 本教學課程使用資料庫來顯示表單資料模型和AEM[!DNL Forms]的永續性功能。
 
 ![自適應格式資料](assets/adaptiveformdata.png)
 
@@ -53,7 +54,7 @@ ht-degree: 0%
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-最適化表單是新一代、吸引人、回應速度快、動態性強、自適應性強的表單。 使用可調式表單，您可以提供個人化、針對性的體驗。 AEM [!DNL Forms]提供拖放WYSIWYG編輯器，以建立最適化表單。 有關最適化表單的詳細資訊，請參閱[製作最適化表單的簡介](../../forms/using/introduction-forms-authoring.md)。
+最適化表單是新一代、吸引人、回應速度快、動態性強、自適應性強的表單。 使用可調式表單，您可以提供個人化、針對性的體驗。 AEM[!DNL Forms]提供拖放式WYSIWYG編輯器，以建立最適化表單。 有關最適化表單的詳細資訊，請參閱[製作最適化表單的簡介](../../forms/using/introduction-forms-authoring.md)。
 
 目標：
 
@@ -68,7 +69,7 @@ ht-degree: 0%
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-表單資料模型允許將自適應表單連接至不同的資料來源。 例如，AEM使用者設定檔、REST風格的web services、SOAP架構的web services、OData服務和關係式資料庫。 表單資料模型是連接資料來源中可用之商業實體和服務的統一資料表示模式。 您可以使用具有自適應表單的表單資料模型來擷取、更新、刪除並新增資料至連接的資料來源。
+表單資料模型允許將自適應表單連接至不同的資料來源。 例如，AEM用戶配置檔案、REST風格的Web服務、基於SOAP的Web服務、OData服務和關係資料庫。 表單資料模型是連接資料來源中可用之商業實體和服務的統一資料表示模式。 您可以使用具有自適應表單的表單資料模型來擷取、更新、刪除並新增資料至連接的資料來源。
 
 目標：
 
@@ -111,7 +112,7 @@ ht-degree: 0%
 
 ![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
 
-最適化表單是客戶互動不可或缺的一部分。 請務必透過您在表單中所做的每項變更，來測試您的調適性表單。 測試表單的每個欄位都很麻煩。 AEM [!DNL Forms]提供SDK(Calvin SDK)，以自動測試最適化表單。 Calvin可讓您在網頁瀏覽器中自動測試您的調適性表單。
+最適化表單是客戶互動不可或缺的一部分。 請務必透過您在表單中所做的每項變更，來測試您的調適性表單。 測試表單的每個欄位都很麻煩。 AEM[!DNL Forms]提供SDK(Calvin SDK)，以自動測試最適化表單。 Calvin可讓您在網頁瀏覽器中自動測試您的調適性表單。
 
 目標：
 
@@ -125,12 +126,12 @@ ht-degree: 0%
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-您可以將最適化表單發佈為獨立表單（單頁應用程式）、包含在AEM [Sites page](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[Forms Portal](../../forms/using/introduction-publishing-forms.md)在AEM [!DNL Site]上列出。
+您可以將最適化表單發佈為獨立表單（單頁應用程式）、包含在AEM[網站頁面](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[Forms入口網站](../../forms/using/introduction-publishing-forms.md)在AEM[!DNL Site]上列出。
 
 目標：
 
-* 將最適化表單發佈為AEM頁面
-* 在AEM [!DNL Sites]頁面中內嵌最適化表單
-* 將最適化表單內嵌於外部網頁（AEM外部代管的非AEM網頁）
+* 將最適化表單發佈為頁AEM面
+* 在[!DNL Sites]頁AEM面中內嵌最適化表單
+* 將最適化表單嵌入外部網頁(非AEM外部網頁AEM)
 
 [![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
