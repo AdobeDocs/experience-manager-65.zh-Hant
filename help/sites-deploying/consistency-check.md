@@ -8,10 +8,11 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
+feature: 設定
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## 執行一致性檢查{#perform-a-consistency-check}
 
-要執行一致性檢查，請導覽至JMX Mbean** com.adobe.granite（資料庫）**的管理頁面。 從AEM主畫面，前往：
+要執行一致性檢查，請導覽至JMX Mbean** com.adobe.granite（資料庫）**的管理頁面。 從主AEM螢幕，轉到：
 
 **「工具> Web Console >主要（在功能表列上）> JMX > com.adobe.granite（儲存庫）」**
 
