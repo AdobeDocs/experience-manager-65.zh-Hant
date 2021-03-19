@@ -1,8 +1,8 @@
 ---
 title: 在HTML5表單中建立自訂外觀
 seo-title: 在HTML5表單中建立自訂外觀
-description: 您可以將自訂Widget插入Mobile Forms。 您可以擴充現有的jQuery Widget，或開發您自己的自訂Widget。
-seo-description: 您可以將自訂Widget插入Mobile Forms。 您可以擴充現有的jQuery Widget，或開發您自己的自訂Widget。
+description: 您可以將自訂Widget插入MobileForms。 您可以擴充現有的jQuery Widget，或開發您自己的自訂Widget。
+seo-description: 您可以將自訂Widget插入MobileForms。 您可以擴充現有的jQuery Widget，或開發您自己的自訂Widget。
 uuid: a9013c3d-20c7-45c9-be24-8e9d4525eff8
 contentOwner: robhagat
 content-type: reference
@@ -10,10 +10,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 # 在HTML5表單中建立自訂外觀{#create-custom-appearances-in-html-forms}
 
-您可以將自訂Widget插入Mobile Forms。 您可以擴充現有的jQuery Widget，或使用外觀架構開發您自己的自訂Widget。 XFA引擎使用各種Widget，如需詳細資訊，請參閱[最適化和HTML5表單的外觀架構](/help/forms/using/introduction-widgets.md)。
+您可以將自訂Widget插入MobileForms。 您可以擴充現有的jQuery Widget，或使用外觀架構開發您自己的自訂Widget。 XFA引擎使用各種Widget，如需詳細資訊，請參閱[最適化和HTML5表單的外觀架構](/help/forms/using/introduction-widgets.md)。
 
 ![預設和自訂介面工具集的範例](assets/custom-widgets.jpg)
 
