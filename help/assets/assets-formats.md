@@ -2,10 +2,11 @@
 title: 支援的檔案格式和MIME類型
 description: ' [!DNL Assets] and [!DNL Dynamic Media] 支援的檔案格式和MIME類型，以及每種格式支援的功能。'
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 376bb4496c1e875f8d129dd79d67e3347be726ac
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1582'
 ht-degree: 10%
 
 ---
@@ -74,9 +75,9 @@ ht-degree: 10%
 
 支援下列3D格式清單。
 
-另請參閱[在動態媒體中使用3D資產。](/help/assets/assets-3d.md)
+另請參閱[在Dynamic Media使用3D資產。](/help/assets/assets-3d.md)
 
-| 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 縮圖預覽 | 3D預覽 | 動態媒體傳送 |
+| 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 縮圖預覽 | 3D預覽 | Dynamic Media交付 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ý | ý | ý |  | ý | ý | - | - |
 | gLB | ý | ý | ý | ý | ý | - | ý | ý |
@@ -85,11 +86,11 @@ ht-degree: 10%
 | STL | ý | ý | ý | ý | ý | - | ý | ý |
 | USDz | ý | ý | ý | ý | ý | - | - | ý |
 
-## 動態媒體{#unsupported-image-formats-dynamic-media}中不支援的點陣影像格式
+## Dynamic Media{#unsupported-image-formats-dynamic-media}中不支援的點陣影像格式
 
-下列清單說明動態媒體中支援&#x200B;*not*&#x200B;的點陣影像檔案格式子類型。
+下列清單說明在Dynamic Media支援的&#x200B;*not*&#x200B;點陣影像檔案格式的子類型。
 
-另請參閱[偵測動態媒體不支援的檔案格式。](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)
+另請參見[檢測Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)不支援的檔案格式。
 
 * IDAT區塊大小大於100 MB的PNG檔案。
 * PSB檔案。
@@ -118,7 +119,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## 支援的PDF點陣化器程式庫{#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer程式庫可針對大型且內容密集的[!DNL Adobe Illustrator]和PDF檔案產生高品質的縮圖和預覽。 Adobe建議針對下列項目使用PDF點陣化器程式庫：
+Adobe PDF點陣化器程式庫可針對大型且內容密集的[!DNL Adobe Illustrator]和PDF檔案產生高品質的縮圖和預覽。 Adobe建議使用PDF點陣化器程式庫以進行下列工作：
 
 * 需要大量資源處理的內容密集型AI/PDF檔案。
 * AI/PDF檔案，預設不會產生縮圖。
@@ -128,7 +129,7 @@ Adobe PDF Rasterizer程式庫可針對大型且內容密集的[!DNL Adobe Illust
 
 ## 支援的影像轉碼程式庫{#supported-image-transcoding-library}
 
-Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼、轉碼、重新取樣和調整大小）的影像處理解決方案。
+Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉碼、重新取樣和調整大小）的影像處理解決方案。
 
 影像轉碼程式庫支援JPG/JPEG、PNG（8位元和16位元）、GIF、BMP、TIFF/壓縮TIFF（除了32位元TIFF檔案和PTIFF檔案外）、ICO和ICN MIME類型。
 
@@ -163,7 +164,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 | QXP | ý | ý | - | - | - | - | - | - |
 | EPUB | ý | ý | - | ý | ý | - | - | - |
 
-## 動態媒體{#supported-document-formats-dynamic-media}中支援的檔案格式
+## Dynamic Media{#supported-document-formats-dynamic-media}支援的檔案格式
 
 | 格式 | Upload<br>（輸入格式） | 建立<br>影像<br>預設<br>（輸出格式） | 預覽<br> dynamic<br>轉譯 | 傳送<br> dynamic<br>轉譯 | 下載<br> dynamic<br>轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -173,11 +174,11 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 除了上述功能外，請考慮下列事項：
 
-* 若要使用Dynamic Media為PDF檔案產生動態轉譯，請參閱[Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media來產生PDF檔案的動態轉譯，請參閱[Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 若要使用動態媒體來預覽並產生AI檔案的動態轉譯，請參閱[Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用Dynamic Media來預覽並產生AI檔案的動態轉譯，請參閱[Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 若要使用動態媒體為INDD檔案產生動態轉譯，請參閱[InDesign(INDD)檔案格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
+* 要使用Dynamic Media生成INDD檔案的動態轉譯，請參閱[InDesign(INDD)檔案格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
 
 ## 支援的多媒體格式{#supported-multimedia-formats}
 
@@ -202,13 +203,13 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 | WMV | ý | ý | - | * | * |
 | SWF | ý | ý | - | - | - |
 
-## 動態媒體中支援的輸入視訊格式，以轉碼{#supported-input-video-formats-for-dynamic-media-transcoding}
+## 在Dynamic Media支援轉碼{#supported-input-video-formats-for-dynamic-media-transcoding}的輸入視訊格式
 
 | 視訊副檔名 | 容器 | 建議的視訊轉碼器 | 不支援的視訊轉碼器 |
 |---|---|---|---|
 | MP4 | MPEG-4 | H264/AVC（所有描述檔） | - |
 | MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHDAvid AVR | Apple Intemiderate、Apple Animation |
-| FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（向量動畫檔案） |
+| FLV、F4V | AdobeFlash | H264/AVC、Flix VP6、H263、Sorenson | SWF（向量動畫檔案） |
 | WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft螢幕(MSS2)、Microsoft Photo Story(WVP2) |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
 | M4V | Apple iTunes | H264/AVC | - |
@@ -227,7 +228,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 下表涵蓋支援的封存格式以及常見DAM工作流程的適用性。
 
-| 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 動態媒體傳送 |
+| 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | Dynamic Media交付 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | TGZ | ý | ý | ý | ý | ý | - |
 | JAR | ý | ý | ý | ý | ý | - |
@@ -239,7 +240,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 以下說明DAM通常功能對於一些特定檔案格式的適用性。
 
-| 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 動態媒體傳送 |
+| 格式 | 儲存 | 版本設定 | 工作流程 | 發佈 | 存取控制 | Dynamic Media交付 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | SVG | ý | ý | ý | ý | ý | - |
 | CSS | ý | ý | ý | ý | ý | ý |
@@ -255,7 +256,7 @@ Adobe Imaging Rodcing程式庫是執行核心影像處理功能（例如編碼�
 
 預設情況下，[!DNL Experience Manager]使用檔案副檔名檢測檔案類型。 [!DNL Experience Manager] 可以從檔案內容中檢測到。對於後者，在[!DNL Experience Manager] Web控制台的[!UICONTROL Day CQ DAM Mime Type Service]中選擇[!UICONTROL 從內容]檢測MIME選項。
 
-CRXDE Lite中提供支援的MIME類型清單，位於`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
+支援的MIME類型清單可在`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`的CRXDE Lite中使用。
 
 | 副檔名 | MIME類型/ Internet媒體類型 | 預設jobParam值 | 允許的jobParam值 |
 |---|---|---|---|
@@ -299,7 +300,7 @@ CRXDE Lite中提供支援的MIME類型清單，位於`/conf/global/settings/clou
 | PPT | application/vnd.ms-powerpoint |  |  |
 | PS | application/postscript | `psprocess=Rasterize&psresolution=150`<br>`&pscolorspace=Auto&psalpha=false`<br>`&psextractsearchwords=false`<br>`&aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li>[illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html</li></ul> |
 | PSD | image/vnd.adobe.photoshop | `process=None&layerNaming=Layername`<br>`&anchor=Center&createTemplate=false`<br>`&extractText=false&extendLayers=false` | <ul><li>[photoshopOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options.html)</li><li>[photoshopLayerOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-layer-options.html)</li></ul> |
-| TTF | application/rtf |  |  |
+| RTF | application/rtf |  |  |
 | SVG | image/svg+xml |  |  |
 | SWF | application/x-shockwave-flash |  |  |
 | TAR | application/x-tar |  |  |
@@ -317,6 +318,6 @@ CRXDE Lite中提供支援的MIME類型清單，位於`/conf/global/settings/clou
 
 >[!MORELIKETHIS]
 >
->* [啟用MIME類型型資產和Dynamic Media Classic上傳工作參數支援](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+>* [啟用MIME類型型資產和Dynamic Media經典上傳工作參數支援](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
 >* [配置基於MIME類型的上載作業參數支援](config-dynamic.md)。
 
