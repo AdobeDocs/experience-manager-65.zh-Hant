@@ -9,10 +9,11 @@ topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: fa3d5923784a8d89e2b440412d2b88790de3e39e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2665'
 ht-degree: 2%
 
 ---
@@ -66,7 +67,7 @@ ht-degree: 2%
 
 **最適** 化表單您要為其產生記錄檔案的最適化表單。
 
-**在AEM Designer中建立的基本範本（建議）** XFA範本（XDP檔案）。基本模板用於指定記錄模板文檔的樣式和品牌資訊。
+**在Designer中建立的基本範本（建議）** XFA範本（XDP檔案）AEM。基本模板用於指定記錄模板文檔的樣式和品牌資訊。
 
 請參閱記錄文檔的[基本模板](#base-template-of-a-document-of-record)
 
@@ -221,7 +222,7 @@ ht-degree: 2%
 
 * 在基本模板中，您應將根子表單命名為`AF_METATEMPLATE` ，將首頁命名為`AF_MASTERPAGE`。
 
-* 在`AF_METATEMPLATE`根子表單下方的主版頁面名稱為`AF_MASTERPAGE`，優先擷取頁首、頁尾和樣式資訊。
+* 在`AF_METATEMPLATE`根子表單下方的名稱為`AF_MASTERPAGE`的主版頁面會優先擷取頁首、頁尾和樣式資訊。
 
 * 如果`AF_MASTERPAGE`不存在，則使用基本模板中存在的第一個首頁。
 
@@ -231,12 +232,12 @@ ht-degree: 2%
 
 * 這些欄位的屬性將應用於記錄文檔中的欄位。 這些欄位應遵循`AF_<name of field in all caps>_XFO`命名慣例。 例如，核取方塊的欄位名稱應為`AF_CHECKBOX_XFO`。
 
-若要建立基本範本，請在AEM Designer中執行下列動作。
+要建立基本模板，請在設計器中執行以AEM下操作。
 
 1. 按一下「**檔案>新建**」。
 1. 選擇&#x200B;**基於模板**&#x200B;選項。
 
-1. 選擇&#x200B;**Forms - Document of Record**&#x200B;類別。
+1. 選擇&#x200B;**Forms-記錄文檔**&#x200B;類別。
 1. 選擇&#x200B;**DoR基本模板**。
 1. 按一下&#x200B;**Next**&#x200B;並提供所需資訊。
 
@@ -261,7 +262,7 @@ ht-degree: 2%
 
 執行以下步驟，為最適化表單配置記錄文檔：
 
-1. 在AEM作者例項中，按一下「**表單>表單和檔案」。**
+1. 在作AEM者例項中，按一下「Forms」>「Forms與檔案」。****
 1. 選擇表單，然後按一下&#x200B;**查看屬性**。
 1. 在「Properties（屬性）」窗口中，按一下「Form Model（表單模型）」 **。**&#x200B;建立表單時，也可以選取表單模型。
 
@@ -273,11 +274,11 @@ ht-degree: 2%
 
    **無** 如果不想為表單配置記錄文檔，請選擇此選項。
 
-   **將表單模板與記錄模板關** 聯如果您有要用作記錄文檔的模板的XDP檔案，請選擇此選項。選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
+   **將表單模板與記錄模板關** 聯如果您有要用作記錄文檔的模板的XDP檔案，請選擇此選項。選擇此選項後，將顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
 
    選定的XDP檔案與最適化表單相關聯。
 
-   **生成記錄文** 檔選擇此選項可將XDP檔案用作定義記錄文檔的樣式和外觀的基本模板。選取此選項時，會顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
+   **生成記錄文** 檔選擇此選項可將XDP檔案用作定義記錄文檔的樣式和外觀的基本模板。選擇此選項後，將顯示AEM Forms儲存庫中所有可用的XDP檔案。 選擇適當的檔案。
 
    >[!NOTE]
    >
@@ -293,7 +294,7 @@ ht-degree: 2%
 
 ## 自訂記錄檔案{#customize-the-branding-information-in-document-of-record}中的品牌資訊
 
-在生成記錄文檔時，可以在「記錄文檔」頁籤上更改記錄文檔的品牌資訊。 「記錄檔案」索引標籤包含標誌、外觀、版面、頁首和頁尾、免責聲明，以及您是否要包含未選取的核取方塊和選項按鈕選項等選項。
+在生成記錄文檔時，可以在「記錄文檔」頁籤上更改記錄文檔的品牌資訊。 「記錄檔案」索引標籤包含標誌、外觀、版面、頁首和頁尾、免責聲明，以及是否要包含未選取的核取方塊和選項按鈕選項等選項。
 
 若要本地化您在「記錄檔案」索引標籤中輸入的品牌資訊，您必須確保瀏覽器的地區設定正確。 要自定義記錄文檔的品牌資訊，請完成以下步驟：
 
@@ -303,7 +304,7 @@ ht-degree: 2%
 
    ![brandingtemplate](assets/brandingtemplate.png)
 
-   如果您選擇選取自訂範本，請在AEM Forms伺服器上瀏覽選取的XDP。 如果您想要使用AEM Forms伺服器上尚未包含的範本，您必須先將XDP上傳至AEM Forms伺服器。
+   如果您選擇選擇自訂範本，請瀏覽您的AEM Forms伺服器上選取的XDP。 如果您想使用尚未在AEM Forms伺服器上的範本，您必須先將XDP上傳至AEM Forms伺服器。
 
 1. 根據您是選擇預設模板還是自定義模板，「記錄文檔」頁籤中將顯示以下部分或全部屬性。 請適當指定下列項目：
 
@@ -379,5 +380,5 @@ ht-degree: 2%
 * 記錄範本檔案不支援豐富式文字。 因此，靜態自適應格式或最終用戶填寫的資訊中的任何富文本都顯示為記錄文檔中的純文字檔案。
 * 最適化表單中的檔案片段不會出現在記錄檔案中。 不過，支援最適化表單片段。
 * 不支援在為基於XML Schema的自適應表單生成的記錄文檔中的內容綁定。
-* 當用戶請求呈現記錄文檔時，會根據地區設定的要求建立記錄文檔的本地化版本。 記錄文檔的定位與適應性表單的定位同時發生。 有關記錄文檔和適應性表單本地化的詳細資訊，請參閱[使用AEM翻譯工作流程本地化最適化表單和記錄文檔](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
+* 當用戶請求呈現記錄文檔時，會根據地區設定的要求建立記錄文檔的本地化版本。 記錄文檔的定位與適應性表單的定位同時發生。 有關記錄文檔和適應性表單本地化的更多資訊，請參見[使用AEM翻譯工作流將適應性表單和記錄文檔本地化](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
 
