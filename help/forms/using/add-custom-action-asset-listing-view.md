@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1383'
 ht-degree: 2%
 
 ---
@@ -266,7 +267,7 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
       |---|---|---|
       | sling:resourceType | 字串 | fd/cm/ma/gui/components/admin/clientlibs/admin |
 
-1. 在以下位置使用命令的操作處理代碼建立名為POST.jsp的檔案：
+1. 在以下位置使用用於命令操作處理的代碼建立名為POST.jsp的檔案：
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
@@ -274,14 +275,14 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-      將檔案命名為POST.jsp。 （檔案名稱僅需要為POST.jsp。）
+      將檔案命名為POST.jsp。 (檔案名稱僅需要為POST.jsp。)
 
    1. 連按兩下&#x200B;**POST.jsp**&#x200B;檔案，以在CRX中開啟它。
-   1. 將以下代碼添加到POST.jsp檔案中，然後按一下&#x200B;**保存所有**:
+   1. 將以下代碼添加到POST.jsp檔案中，然後按一下&#x200B;**全部保存** :
 
-      此程式碼是字母轉換服務專屬的程式碼。 對於任何其他資產，請將該資產的Java程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en)。
+      此程式碼是字母轉換服務專屬的程式碼。 對於任何其他資產，請將該資產的Java程式庫新增至此程式碼。 有關AEM FormsAPI的詳細資訊，請參閱[AEM FormsAPI](https://adobe.com/go/learn_aemforms_javadocs_63_en)。
 
-      如需AEM程式庫的詳細資訊，請參閱「AEM [元件](/help/sites-developing/components.md)」。
+      有關庫的AEM詳細信AEM息，請參見[Components](/help/sites-developing/components.md)。
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */
@@ -354,7 +355,7 @@ Correponse Management解決方案可讓您將自訂動作新增至「管理資�
 
 1. 前往`https://'[server]:[port]'/[ContextPath]/projects.html`並登入。
 
-1. 選擇&#x200B;**表單>字母**。 Commense Management會列出系統中可用的信件。
+1. 選擇&#x200B;**Forms>字母**。 Commense Management會列出系統中可用的信件。
 1. 按一下&#x200B;**選擇** ，然後按一下字母選擇它。
 1. 選擇「**更多** > **&lt;下載平面PDF>**」（使用本文說明建立的自訂功能）。 將顯示「以PDF格式下載信函」對話框。
 
