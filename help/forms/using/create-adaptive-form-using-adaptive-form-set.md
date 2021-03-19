@@ -1,17 +1,18 @@
 ---
 title: 使用一組自適應表單建立自適應表單
 seo-title: 使用一組自適應表單建立自適應表單
-description: '使用AEM Forms，將最適化表單整合在一起，以製作單一大型最適化表單，並瞭解其功能。 '
-seo-description: '使用AEM Forms，將最適化表單整合在一起，以製作單一大型最適化表單，並瞭解其功能。 '
+description: '有了AEM Forms，您就可以結合最適化表單，製作單一大型最適化表單，並瞭解其功能。 '
+seo-description: '有了AEM Forms，您就可以結合最適化表單，製作單一大型最適化表單，並瞭解其功能。 '
 uuid: e52e4f90-8821-49ec-89ff-fbf07db69bd2
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
