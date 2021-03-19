@@ -9,11 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 081f7c17-4e5d-4c7e-a5c3-5541a29b9d55
 docset: aem65
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 0%
+source-wordcount: '732'
+ht-degree: 1%
 
 ---
 
@@ -26,23 +27,23 @@ HTML5 Forms Service Proxy是一種設定，可註冊提交服務的Proxy。 若�
 
 服務代理消除了以下問題：
 
-* HTML5表單工作流程需要為HTML5表單使用者開啟提交服務「/content/xfaforms/submission/default」。 它讓AEM伺服器面向更廣的非預期觀眾。
+* HTML5表單工作流程需要為HTML5表單使用者開啟提交服務「/content/xfaforms/submission/default」。 它可讓AEM伺服器觸及到更廣的非預期對象。
 * 服務URL內嵌在表單的執行階段模型中。 無法變更服務URL路徑。
 * 提交過程分為兩步。 若要提交表單資料，提交至少需要兩次伺服器歷程。 因此，會增加伺服器的負載。
 * HTML5表格會在POST要求中傳送資料，而非PDF要求。 對於同時包含PDF和HTML5表單的工作流程，需要兩種不同的提交處理方法。
 
 ### 拓撲{#topologies-br}
 
-HTML5表格可使用下列拓撲來連線至AEM伺服器。
+HTML5表單可使用下列拓撲來連接至AEM伺服器。
 
-* AEM Server或HTML5表單透過POST傳送資料至伺服器的拓撲。
+* 一種拓撲，AEM伺服器或HTML5表單通過POST向伺服器發送資料。
 * 代理伺服器向伺服器發送POST資料的拓撲。
 
 ![HTML5表單服務代理拓撲](assets/topology.png)
 
 HTML5表單服務代理拓撲
 
-HTML5表格會連線至AEM伺服器，以執行伺服器端的指令碼、web-services和提交。 HTML5表單的XFA執行時期會使用「/bin/xfaforms/submitaction」端點上的Ajax呼叫，以及各種參數，以連線至AEM伺服器。 HTML5表格會連接AEM伺服器，以執行下列作業：
+HTML5表格會連線至伺AEM服器，以執行伺服器端的指令碼、web-services和提交。 HTML5表單的XFA執行時期使用「/bin/xfaforms/submitation」端點上的Ajax呼叫，並搭配各種參數以連線至伺AEM服器。 HTML5表單會連AEM接伺服器，以執行下列作業：
 
 #### 執行伺服器端指令碼和Web服務{#execute-server-sided-scripts-and-web-services}
 
@@ -132,7 +133,7 @@ HTML5表格會連線至AEM伺服器，以執行伺服器端的指令碼、web-se
 
 如果提交URL存在於請求參數中，則提交服務代理會選擇拓撲。
 
-* 如果AEM伺服器張貼資料，代理服務會當成傳遞。 它將請求發送到/bin/xfaforms/submitaction端點，並將響應發送到XFA運行時。
+* 如AEM果伺服器發佈資料，代理服務會當成傳遞。 它將請求發送到/bin/xfaforms/submitaction端點，並將響應發送到XFA運行時。
 * 如果Proxy發佈資料，則proxy服務會將submitUrl以外的所有參數傳遞至&#x200B;*/bin/xfaforms/submitaction*&#x200B;端點，並接收回應串流中的xml位元組。 然後，代理服務會將資料xml位元組發佈至submitUrl以進行處理。
 
-* 在傳送資料（POST要求）至伺服器之前，HTML5表格會確認伺服器的連線性與可用性。 為了驗證連線性和可用性，HTML表格會傳送空標頭要求至伺服器。 如果伺服器可用，HTML5表單會傳送資料（POST要求）至伺服器。 如果伺服器不可用，將顯示一條錯誤消息&#x200B;*Could』t connect to the server,*。 進階偵測可避免使用者重新填寫表格的麻煩。 代理servlet處理頭請求且不拋出異常。
+* 在傳送資料(POST要求)至伺服器之前，HTML5表單會先驗證伺服器的連線性與可用性。 為了驗證連線性和可用性，HTML表格會傳送空標頭要求至伺服器。 如果伺服器可用，HTML5表單會傳送資料(POST要求)至伺服器。 如果伺服器不可用，將顯示一條錯誤消息&#x200B;*Could』t connect to the server,*。 進階偵測可避免使用者重新填寫表格的麻煩。 代理servlet處理頭請求且不拋出異常。
