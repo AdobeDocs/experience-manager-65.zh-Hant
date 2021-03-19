@@ -9,10 +9,11 @@ content-type: reference
 discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 54dd71655aeae00bcaa27847f91af07f15faf478
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '7840'
+source-wordcount: '7843'
 ht-degree: 1%
 
 ---
@@ -563,7 +564,7 @@ dam/dm/presets/analytics/jcr:content/userdata`
 
       與`https://localhost:4502/crx/de/index.jsp#/conf/global/settings/dam/dm/presets/analytics/jcr%3Acontent/userdata`中一樣
 
-      如果您無權訪問「作者」節點上的CRXDE Lite，則可以通過「發佈」伺服器檢查預設集。
+      如果您沒有「作者」節點上的CRXDE Lite權限，則可以通過「發佈」伺服器檢查預設。
 
    * **透過影像伺服器檢查視訊分析預設集**
 
