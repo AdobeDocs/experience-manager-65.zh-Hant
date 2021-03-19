@@ -8,11 +8,12 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 0%
+source-wordcount: '1174'
+ht-degree: 1%
 
 ---
 
@@ -79,13 +80,13 @@ ht-degree: 0%
 | 對焦時，在內容瀏覽器的「表單物件」樹狀結構中收合所有收合符號 | Ctrl+A可選取所有收合符號，後面接著向左箭頭可收合 | Command+A可選取所有收合符號，後面接著向左箭頭可收合 |
 | 在「表單對象」樹中展開選定的accordion | 向右鍵 | 向右鍵 |
 | 在「表單對象」樹中折疊選定的accordion | 向左鍵 | 向左鍵 |
-| 在「表單對象」樹中選擇下一個項 | 向下鍵 | 向下鍵 |
-| 在「表單對象」樹中選擇上一個項 | 向上鍵 | 向上鍵 |
+| 在「Forms對象」樹中選擇下一個項目 | 向下鍵 | 向下鍵 |
+| 在「Forms對象」樹中選擇上一個項目 | 向上鍵 | 向上鍵 |
 
 [1取] 代Windows的Ctrl +向右鍵，以及Mac OS的Command +向右鍵。\
 [2取] 代Windows的Ctrl +向左箭頭，以及Mac OS的Command +向左箭頭。
 
-## 通信管理{#correspondence-management}
+## 通信管理 {#correspondence-management}
 
 本節列出了各種鍵盤和輔助功能快速鍵，可在「通信管理」文本編輯器中使用。 您可以在下列情況下使用這些捷徑：
 
