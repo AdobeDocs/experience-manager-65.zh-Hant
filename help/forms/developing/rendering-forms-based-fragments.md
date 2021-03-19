@@ -1,8 +1,8 @@
 ---
-title: 根據片段呈現表單
-seo-title: 根據片段呈現表單
-description: 使用Forms服務來轉換以使用Designer建立的片段為基礎的表單。
-seo-description: 使用Forms服務來轉換以使用Designer建立的片段為基礎的表單。
+title: 基於片段呈現Forms
+seo-title: 基於片段呈現Forms
+description: 使用Forms服務來轉換基於使用設計工具建立的片段的表單。
+seo-description: 使用Forms服務來轉換基於使用設計工具建立的片段的表單。
 uuid: 9c9a730d-f970-41f8-afed-4e6b6d3d393d
 contentOwner: admin
 content-type: reference
@@ -10,24 +10,25 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2229'
+source-wordcount: '2230'
 ht-degree: 0%
 
 ---
 
 
-# 根據片段{#rendering-forms-based-on-fragments}轉換表單
+# 基於片段{#rendering-forms-based-on-fragments}呈現Forms
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-## 根據片段{#rendering-forms-based-on-fragments-inner}轉換表單
+## 基於片段{#rendering-forms-based-on-fragments-inner}呈現Forms
 
 Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragment*&#x200B;是表單中可重複使用的部分，並儲存為可插入多個表單設計的個別XDP檔案。 例如，片段可以包含地址塊或合法文字。
 
-使用片段可簡化並加速建立和維護大量表單。 建立新表單時，插入對所需片段的引用，該片段將出現在表單中。 片段參考包含指向物理XDP檔案的子表單。 如需建立以片段為基礎的表單設計的詳細資訊，請參閱[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
+使用片段可簡化並加速建立和維護大量表單。 建立新表單時，插入對所需片段的引用，該片段將出現在表單中。 片段參考包含指向物理XDP檔案的子表單。 如需建立以片段為基礎的表單設計的詳細資訊，請參閱[Forms設計人員](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 片段可以包括多個子表單，這些子表單被包裝在選擇子表單集中。 選擇子表單集基於來自資料連接的資料流來控制子表單的顯示。 您使用條件陳述式來判斷傳送的表單中會出現該集合中的哪些子表單。 例如，集合中的每個子表單可以包括特定地理位置的資訊，而顯示的子表單可以基於用戶的位置來確定。
 
@@ -43,17 +44,17 @@ Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragm
 
 ### 使用片段{#assembling-a-form-design-assembled-using-fragments}組合表單設計
 
-您可以組合表單設計，以便根據多個片段傳遞至Forms服務。 要組合多個片段，請使用Assembler服務。 如要查看使用Assemble服務建立由其他Forms服務（Output服務）使用的表單設計的示例，請參閱[使用片段建立PDF文檔](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments)。 您可以使用Forms服務來執行相同的工作流程，而不是使用Output服務。
+您可以組合表單設計，以根據多個片段傳遞至Forms服務。 要組合多個片段，請使用Assembler服務。 如要查看使用Assemble服務建立由其他Forms服務（Output服務）使用的表單設計的示例，請參閱[使用片段建立PDF文檔](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments)。 您可以使用Forms服務來執行相同的工作流程，而不是使用輸出服務。
 
 使用Assembler服務時，將傳遞使用片段組合的表單設計。 建立的表單設計不會參照其他片段。 相反地，本主題討論將參照其他片段的表單設計傳遞至Forms服務。 但是，表單設計並非由Assembler裝配。 它是在Designer中建立的。
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
->有關建立基於Web的應用程式以根據片段呈現表單的資訊，請參閱[建立用於呈現表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)。
+>如需建立以Web為基礎的應用程式，並根據片段轉譯表單的詳細資訊，請參閱[建立轉譯Forms的Web應用程式。](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -71,23 +72,23 @@ Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragm
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。
+在以寫程式方式執行Forms服務客戶端API操作之前，必須建立Forms服務客戶端。
 
 **指定URI值**
 
-若要根據片段成功轉換表單，您必須確保Forms服務能夠找到表單設計參考的表單和片段（XDP檔案）。 例如，假設表單名為PO.xdp，且此表單使用兩個名為FooterUS.xdp和FooterCanada.xdp的片段。 在這種情況下，Forms服務必須能夠找到所有三個XDP檔案。
+要成功地基於片段來呈現表單，您必須確保Forms服務能夠找到表單設計參考的表單和片段（XDP檔案）。 例如，假設表單名為PO.xdp，且此表單使用兩個名為FooterUS.xdp和FooterCanada.xdp的片段。 在這種情況下，Forms服務必須能夠找到所有三個XDP檔案。
 
-您可以將表單放在某個位置，將片段放在另一個位置，以組織表單及其片段，或將所有XDP檔案放在同一位置。 為了本節的目的，請假設所有XDP檔案都位於AEM Forms存放庫中。 如需將XDP檔案置入AEM Forms儲存庫的詳細資訊，請參閱[寫入資源](/help/forms/developing/aem-forms-repository.md#writing-resources)。
+您可以將表單放在某個位置，將片段放在另一個位置，以組織表單及其片段，或將所有XDP檔案放在同一位置。 就本節而言，假設所有XDP檔案都位於AEM Forms儲存庫中。 有關將XDP檔案放在AEM Forms儲存庫中的資訊，請參見[寫入資源](/help/forms/developing/aem-forms-repository.md#writing-resources)。
 
 在根據片段呈現表格時，您只能參考表格本身，而不參考片段。 例如，您必須參考PO.xdp，而非FooterUS.xdp或FooterCanada.xdp。 請確定您將片段放置在Forms服務可以找到的位置。
 
 **轉譯表單**
 
-基於片段的表單可以與非碎片表單相同的方式呈現。 也就是說，您可以將表單轉譯為PDF、HTML或表單參考線（已過時）。 本節中的範例會根據片段將表單轉譯為互動式PDF表單。 （請參閱[轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)）。
+基於片段的表單可以與非碎片表單相同的方式呈現。 也就是說，您可以將表單轉譯為PDF、HTML或表單參考線（已過時）。 本節中的範例會根據片段將表單轉譯為互動式PDF表單。 (請參閱[演算互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)。)
 
 **將表單資料串流寫入用戶端網頁瀏覽器**
 
-當Forms服務轉譯表單時，它會傳回必須寫入用戶端網頁瀏覽器的表單資料流。 當寫入用戶端網頁瀏覽器時，使用者會看到表單。
+當Forms服務轉換表單時，它會傳回您必須寫入用戶端網頁瀏覽器的表單資料流。 當寫入用戶端網頁瀏覽器時，使用者會看到表單。
 
 **另請參閱**
 
@@ -95,19 +96,19 @@ Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragm
 
 [使用web service API，根據片段來轉換表單](#render-forms-based-on-fragments-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[轉換互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
+[建立轉譯Forms的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### 使用Java API {#render-forms-based-on-fragments-using-the-java-api}根據片段來轉換表單
 
-使用Forms API(Java)，根據片段來轉換表單：
+使用FormsAPI(Java)，根據片段來轉換表單：
 
 1. 包含專案檔案
 
@@ -122,14 +123,14 @@ Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragm
 
    * 使用`URLSpec`的建構函式建立儲存URI值的物件。
    * 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
-   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計和片段位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定`repository://`。
+   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計和片段位於內容根URI中。 如果沒有，Forms服務會提出例外。 要引用儲存庫，請指定`repository://`。
    * 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
 
 1. 轉譯表單
 
    叫用`FormsServiceClient`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
    * 儲存運行時選項的`PDFFormRenderSpec`對象。
    * `URLSpec`物件，包含Forms服務根據片段來呈現表單所需的URI值。
@@ -149,17 +150,17 @@ Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragm
 
 **另請參閱**
 
-[根據片段呈現表單](#rendering-forms-based-on-fragments)
+[基於片段呈現Forms](#rendering-forms-based-on-fragments)
 
 [快速入門（SOAP模式）:使用Java API根據片段轉譯表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用web service API {#render-forms-based-on-fragments-using-the-web-service-api}根據片段來呈現表單
 
-使用Forms API(web service)，根據片段來轉換表單：
+使用FormsAPI(web service)，根據片段來轉換表單：
 
 1. 包含專案檔案
 
@@ -174,14 +175,14 @@ Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragm
 
    * 使用其建構子建立儲存URI值的`URLSpec`對象。
    * 叫用`URLSpec`物件的`setApplicationWebRoot`方法，並傳遞代表應用程式Web根目錄的字串值。
-   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 否則，Forms服務會引發例外。 要引用儲存庫，請指定`repository://`。
+   * 叫用`URLSpec`物件的`setContentRootURI`方法，並傳遞指定內容根URI值的字串值。 請確定表單設計位於內容根URI中。 如果沒有，Forms服務會提出例外。 要引用儲存庫，請指定`repository://`。
    * 叫用`URLSpec`物件的`setTargetURL`方法，並傳遞字串值，指定表單資料張貼到的目標URL值。 如果您在表單設計中定義目標URL，則可以傳遞空字串。 您也可以指定表單傳送至的URL，以便執行計算。
 
 1. 轉譯表單
 
    叫用`FormsService`物件的`renderPDFForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。
    * 儲存運行時選項的`PDFFormRenderSpec`對象。 請注意，如果輸入檔案是PDF檔案，則無法設定標籤的PDF選項。 如果輸入檔案是XDP檔案，則可以設定標籤的PDF選項。
    * `URLSpec`物件，包含Forms服務所需的URI值。
@@ -205,6 +206,6 @@ Forms服務可以根據您使用Designer建立的片段來轉換表單。 *fragm
 
 **另請參閱**
 
-[根據片段呈現表單](#rendering-forms-based-on-fragments)
+[基於片段呈現Forms](#rendering-forms-based-on-fragments)
 
 [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
