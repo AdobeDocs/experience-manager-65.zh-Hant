@@ -1,7 +1,7 @@
 ---
 title: 體驗片段
 seo-title: 體驗片段
-description: 'null'
+description: 體驗片段
 seo-description: 'null'
 uuid: 9a1d12ef-5690-4a2e-8635-a710775efa39
 contentOwner: User
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5c88d9cfdd6238961aa46d36ebc1206a5d0507e0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1397'
-ht-degree: 8%
+source-wordcount: '1398'
+ht-degree: 9%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 8%
 您可以使用體驗片段：
 
 * 如果作者想要重複使用頁面的部分（體驗的片段），則必須複製並貼上該片段。 建立和維護這些複製／貼上體驗不但耗時，而且容易發生使用者錯誤。 體驗片段可免除複製／貼上的需求。
-* 支援無頭CMS使用案例。 作者只想使用AEM來製作內容，但不想將內容傳送給客戶。 協力廠商系統／觸點會使用該體驗，然後傳送給使用者。
+* 支援無頭CMS使用案例。 作者只想AEM用於製作，但不想用於交付給客戶。 協力廠商系統／觸點會使用該體驗，然後傳送給使用者。
 
 >[!NOTE]
 >
@@ -54,9 +54,9 @@ ht-degree: 8%
 
    * 可重複使用相同或類似內容的體驗
 
-* 當您將AEM當做協力廠商的內容傳送平台時。
+* 當您用作AEM協力廠商的內容傳送平台時。
 
-   * 任何想要使用AEM做為內容傳送平台的解決方案
+   * 任何想要用作內容AEM傳送平台的解決方案
    * 將內容內嵌至協力廠商觸點
 
 * 如果您有「體驗」，但有不同的變化或轉譯。
@@ -224,7 +224,7 @@ WKND專案會根據`Contributors`建構一些體驗片段。 使用的結構也�
    * **說明**
    * **變數標記**
 
-   ![xf-06](assets/xf-06.png)
+   ![xf-08](assets/xf-06.png)
 
 1. 使用&#x200B;**Done**（勾選圖示）確認，新變數將會顯示在面板中：
 
@@ -240,7 +240,7 @@ WKND專案會根據`Contributors`建構一些體驗片段。 使用的結構也�
 
 1. 將元件從「元件」瀏覽器拖曳至頁面段落系統，以建立「體驗片段」元件的例項：
 
-   ![xf-06](assets/xf-08.png)
+   ![xf-08](assets/xf-08.png)
 
 1. 將實際的體驗片段新增至元件例項；其中：
 
@@ -347,6 +347,6 @@ WKND專案會根據`Contributors`建構一些體驗片段。 使用的結構也�
 
 ## 匯出體驗片段{#exporting-experience-fragments}
 
-依預設，體驗片段會以HTML格式傳送。 AEM和協力廠商管道都可使用此功能。
+依預設，體驗片段會以HTML格式傳送。 這可同時供第三方通AEM道使用。
 
-若要匯出至Adobe Target，也可以使用JSON。 如需完整資訊，請參閱[與體驗片段整合的目標](/help/sites-administering/experience-fragments-target.md)。
+若要匯出至Adobe Target，也可使用JSON。 如需完整資訊，請參閱[與體驗片段整合的目標](/help/sites-administering/experience-fragments-target.md)。
