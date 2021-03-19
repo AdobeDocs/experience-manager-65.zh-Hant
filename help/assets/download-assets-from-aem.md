@@ -2,10 +2,11 @@
 title: 下載資產
 description: 瞭解如何從 [!DNL Adobe Experience Manager] 下載資產並啟用或停用下載功能。
 contentOwner: AG
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '858'
 ht-degree: 3%
 
 ---
@@ -27,9 +28,9 @@ ht-degree: 3%
 1. 在[!UICONTROL Navigation]頁面上，按一下&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL Files。]**
 1. 導覽至包含您要下載之資產的檔案夾。
 1. 選取資料夾或選取資料夾內的一或多個資產。
-1. 在工具列上，按一下「下載」。****
+1. 在工具列上，按一下「下載」。]****[!UICONTROL 
 
-   ![從Experience Manager Assets下載資產時的可用選項](/help/assets/assets/asset-download1.png)
+   ![從Experience Manager資產下載資產時的可用選項](/help/assets/assets/asset-download1.png)
 
    *圖：下載對話方塊中提供的選項。*
 
@@ -41,10 +42,10 @@ ht-degree: 3%
    | **[!UICONTROL 電子郵件]** | 系統會傳送電子郵件通知給使用者。 標準電子郵件範本可在下列位置取得：<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> 您在部署期間自訂的範本可在下列位置使用： <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>您可以在下列位置儲存租用戶特定的自訂範本：<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
    | **[!UICONTROL 資產]** | 選取這個選項，以原始格式下載資產，而不需任何轉譯。<br>如果原始資產有子資產，則可使用子資產選項。 |
    | **[!UICONTROL 轉譯]** | 轉譯是資產的二進位表示法。資產具有主要表示法——已上傳檔案的主要表示法。 它們可以有任意數量的表示。 <br> 使用這個選項，您可以選取您要下載的轉譯。可用的轉譯取決於您選取的資產。 如果資產有任何轉譯，此選項即可使用。 |
-   | **[!UICONTROL 智慧裁切]** | 選取這個選項，可從AEM下載所選資產的所有智慧型裁切轉譯。 系統會建立包含「智慧型裁切」轉譯的zip檔案，並下載至您的本機電腦。 |
+   | **[!UICONTROL 智慧裁切]** | 選取這個選項，可從中下載所選資產的所有智慧型裁切轉譯AEM。 系統會建立包含「智慧型裁切」轉譯的zip檔案，並下載至您的本機電腦。 |
    | **[!UICONTROL 動態轉譯]** | 選取此選項，即時產生一連串的替代轉譯。 當您選取此選項時，也可以從[影像預設集](image-presets.md)清單中選取您要動態建立的轉譯。 <br>此外，您還可以選取大小和單位、格式、色域、解析度，以及任何可選的影像修飾元，例如反轉影像。只有在啟用[!DNL Dynamic Media]時，此選項才可用。 |
 
-1. 在對話方塊中，按一下「下載」。**[!UICONTROL 。]**
+1. 在對話方塊中，按一下「下載」。]**。**[!UICONTROL 
 
 當您選擇要下載的檔案夾時，會下載該檔案夾下的完整資產階層。 若要將您下載的每個資產（包括父資料夾下巢狀的子資料夾中的資產）納入個別資料夾，請選取&#x200B;**[!UICONTROL 為每個資產建立個別資料夾]**。
 
@@ -52,7 +53,7 @@ ht-degree: 3%
 
 [!DNL Experience Manager]中的預設servlet允許通過身份驗證的用戶發出任意大的併發下載請求，以建立對他們可見的資產的ZIP檔案，這些資產可能會使伺服器和網路過載。 為了降低此功能造成的潛在DoS風險，`AssetDownloadServlet` OSGi元件預設會停用於發佈例項。
 
-若要允許從DAM下載資產，例如，當使用資產共用共用共用或其他類似入口網站的實施時，請透過OSGi組態手動啟用servlet。 Adobe建議盡可能將允許的下載大小設定得盡可能低，而不會影響日常下載需求。 高價值可能會影響效能。
+若要允許從DAM下載資產，例如，當使用資產共用共用共用或其他類似入口網站的實施時，請透過OSGi組態手動啟用servlet。 Adobe建議盡可能低地設定允許的下載大小，而不會影響日常下載需求。 高價值可能會影響效能。
 
 1. 建立具有命名慣例的檔案夾，以發佈執行模式(`config.publish`)為目標：`/apps/<your-app-name>/config.publish`。 要定義運行模式的配置屬性，請參閱[運行模式](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode)。
 1. 在配置資料夾中，建立名為`com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`的類型`nt:file`的檔案。
@@ -76,5 +77,5 @@ ht-degree: 3%
 >* [使用品牌入口網站下載資產](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [下載受DRM保護的資產](drm.md)。
 >* [在Win或Mac案頭上使用Experience Manager案頭應用程式下載資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)。
->* [從支援的Adobe Creative Cloud應用程式中，使用Adobe Assets Link下載資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html)。
+>* [從支援的Adobe Creative Cloud應用程式內使用Adobe資產連結下載資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html)。
 
