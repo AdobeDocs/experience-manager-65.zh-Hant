@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
+role: 管理員
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -19,19 +20,19 @@ ht-degree: 0%
 
 # 建立新資料夾，將表單{#create-new-folders-to-categorize-forms}分類
 
-您可以使用資料夾更妥善地組織資產。 由於AEM Forms支援多種類型的資產——表單範本、PDF、檔案、資源和可調式表單，以及各種中繼資料，因此您可以使用檔案夾根據所需的准則來分類表單。
+您可以使用資料夾更妥善地組織資產。 由於AEM Forms支援多種類型的資產——表單範本、PDF、檔案、資源和可調式表單，以及各種中繼資料——您可以使用資料夾，根據所需的准則來分類表單。
 
 AEM Forms可讓您變更資料夾的標題。 標題與儲存庫中儲存資料夾的節點的名稱不同。 標題會保留為資料夾的中繼資料。 如果您變更資料夾的標題，資料夾內任何資產的路徑都不受影響。
 
 ## 建立資料夾{#create-a-folder}
 
-您可以透過下列其中一種方式，在AEM Forms中建立檔案夾：
+您可以通過以下方式之一在AEM Forms建立資料夾：
 
-* 上傳包含所需檔案夾結構中資產的ZIP檔案（請參閱「在AEM Forms中取得XDP和PDF檔案」[）](/help/forms/using/get-xdp-pdf-documents-aem.md)
+* 上傳包含所需資料夾結構中資產的ZIP檔案(請參閱[取得AEM Forms的XDP和PDF檔案](/help/forms/using/get-xdp-pdf-documents-aem.md))
 
 * 建立新的空資料夾
 
-1. 登入`https://<server>:<port>/aem/forms.html`的AEM Forms使用者介面。
+1. 登錄至`https://<server>:<port>/aem/forms.html`的AEM Forms用戶介面。
 1. 導覽至您要建立資料夾的位置。
 1. 按一下工具列中的![aem6forms_add](assets/aem6forms_add.png)圖示，然後選取「建立資料夾&#x200B;]**」。**[!UICONTROL 
 
