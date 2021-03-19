@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
+feature: 資產管理
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '11740'
+source-wordcount: '11745'
 ht-degree: 6%
 
 ---
@@ -402,7 +404,7 @@ VBR編碼時間較長，但結果最好；媒體檔案的品質更優越。 VBR�
 
 | 視訊類型 | 寬x高 | 寬度比例 | 高度比 |
 |--- |--- |--- |--- |
-| 來源 | 1920x1080 | 1 | 1 |
+| 來源 | 1920x1080 | 1 | 3 |
 | 編碼 | 960 x 540 | 2 | 2 |
 | 編碼 | 640 x 360 | 3 | 1 |
 | 編碼 | 480 x 270 | 4 | 4 |
