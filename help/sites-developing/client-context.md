@@ -10,10 +10,11 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: c881ad66-bcc3-4f99-b77f-0944c23e2d29
 docset: aem65
+feature: 內容中樞
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3023'
+source-wordcount: '3025'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ Client Context主要包含下列方面：
 * 顯示使用者資料並提供工具以模擬使用者體驗的UI。
 * 用於與會話儲存交互的[javascript API](/help/sites-developing/ccjsapi.md)。
 
-若要建立獨立作業存放區並將其新增至「用戶端內容」，或建立系結至「內容存放區」元件的作業存放區。 AEM會安裝數個您可立即使用的Context Store元件。 您可以將這些元件當做元件的基礎。
+若要建立獨立作業存放區並將其新增至「用戶端內容」，或建立系結至「內容存放區」元件的作業存放區。 安AEM裝幾個您可立即使用的Context Store元件。 您可以將這些元件當做元件的基礎。
 
 如需有關開啟「用戶端內容」、設定其顯示的資訊以及模擬使用者體驗的詳細資訊，請參閱「用戶端內容」[。](/help/sites-administering/client-context.md)
 
@@ -188,7 +189,7 @@ if (!CQ_Analytics.myJSONStore) {
 
 #### 擴展提供的上下文儲存元件{#extending-the-provided-context-store-components}
 
-AEM提供一般商店和一般商店屬性上下文商店元件，您可加以擴充。 儲存資料的結構決定了擴展的元件：
+提AEM供一般商店和一般商店屬性上下文商店可擴充的元件。 儲存資料的結構決定了擴展的元件：
 
 * 屬性——值對：擴展`GenericStoreProperties`元件。 此元件會自動呈現屬性值對的儲存區。 提供數個互動點：
 
@@ -246,7 +247,7 @@ AEM提供一般商店和一般商店屬性上下文商店元件，您可加以�
 
 #### 顯示屬性資料{#displaying-property-data}
 
-個人化標籤庫提供`personalization:storePropertyTag`標籤，顯示作業商店中屬性的值。 若要使用標籤，請在JSP檔案中加入下列程式碼行：
+個人化標籤庫提供`personalization:storePropertyTag`標籤，顯示會話商店中屬性的值。 若要使用標籤，請在JSP檔案中加入下列程式碼行：
 
 ```xml
 <%@taglib prefix="personalization" uri="https://www.day.com/taglibs/cq/personalization/1.0" %>
@@ -309,7 +310,7 @@ personalization.ui用戶端資料庫檔案夾(/etc/clientlibs/foundation/persona
 
 #### 標識一般儲存會話儲存{#identifying-the-genericstore-session-store}
 
-個人化標籤庫提供`personalization:storePropertyTag`標籤，顯示作業商店中屬性的值。 若要使用標籤，請在JSP檔案中加入下列程式碼行：
+個人化標籤庫提供`personalization:storePropertyTag`標籤，顯示會話商店中屬性的值。 若要使用標籤，請在JSP檔案中加入下列程式碼行：
 
 ```xml
 <%@taglib prefix="personalization" uri="https://www.day.com/taglibs/cq/personalization/1.0" %>
@@ -421,7 +422,7 @@ function getName(){
 
 若要防止`PersistedSessionStore`的屬性持續存在（亦即從`sessionpersistence` Cookie中排除它），請將屬性新增至持續作業商店的非持續屬性清單。
 
-請參閱` [CQ_Analytics.PersistedSessionStore.setNonPersisted(propertyName)](/help/sites-developing/ccjsapi.md#setnonpersisted-name)`
+請參閱 ` [CQ_Analytics.PersistedSessionStore.setNonPersisted(propertyName)](/help/sites-developing/ccjsapi.md#setnonpersisted-name)`
 
 ```
 CQ_Analytics.ClientContextUtils.onStoreRegistered("surferinfo", function(store) {
@@ -597,7 +598,7 @@ init.js.jsp檔案會在頁面載入用戶端內容時執行。 目前，用戶�
 
 將Location Store元件新增至Client Context，以便在頁面載入時初始化它。
 
-1. 在作者例項([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))上開啟Geometrixx Outdoors首頁。
+1. 開啟作者例項([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))上的Geometrixx Outdoors首頁。
 1. 按一下Ctrl-Alt-c(windows)或control-option-c(Mac)以開啟「用戶端內容」。
 1. 按一下「用戶端內容」頂端的編輯圖示，以開啟「用戶端內容設計器」。
 
@@ -607,7 +608,7 @@ init.js.jsp檔案會在頁面載入用戶端內容時執行。 目前，用戶�
 
 ### 請參閱客戶端上下文中的位置資訊{#see-the-location-information-in-client-context}
 
-以編輯模式開啟Geometrixx Outdoors首頁，然後開啟Client Context以檢視Location Store元件的資料。
+以編輯模式開啟Geometrixx Outdoors首頁，然後開啟用戶端內容，以查看位置商店元件中的資料。
 
 1. 開啟Geometrixx Outdoors網站的英文頁面。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))
 1. 要開啟「客戶端上下文」，請按Ctrl-Alt-c(windows)或control-option-c(Mac)。
