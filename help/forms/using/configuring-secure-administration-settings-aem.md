@@ -1,37 +1,38 @@
 ---
-title: 在JEE上設定AEM Forms的安全管理設定
-seo-title: 在JEE上設定AEM Forms的安全管理設定
-description: 瞭解如何管理使用者帳戶和服務，這些帳戶和服務雖然在私人開發環境中是必要的，但在JEE上的AEM Forms生產環境中卻是不必要的。
-seo-description: 瞭解如何管理使用者帳戶和服務，這些帳戶和服務雖然在私人開發環境中是必要的，但在JEE上的AEM Forms生產環境中卻是不必要的。
+title: 在JEE上為AEM Forms配置安全管理設定
+seo-title: 在JEE上為AEM Forms配置安全管理設定
+description: 瞭解如何管理用戶帳戶和服務，雖然這些帳戶和服務在私人開發環境中是必要的，但在AEM Forms的JEE生產環境中卻不是必要的。
+seo-description: 瞭解如何管理用戶帳戶和服務，雖然這些帳戶和服務在私人開發環境中是必要的，但在AEM Forms的JEE生產環境中卻不是必要的。
 uuid: 04e45d06-f57d-406c-8228-15f483199430
 content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
 
 
-# 在JEE {#configuring-secure-administration-settings-for-aem-forms-on-jee}上設定AEM Forms的安全管理設定
+# 在JEE {#configuring-secure-administration-settings-for-aem-forms-on-jee}上配置AEM Forms的安全管理設定
 
-瞭解如何管理使用者帳戶和服務，這些帳戶和服務雖然在私人開發環境中是必要的，但在JEE上的AEM Forms生產環境中卻是不必要的。
+瞭解如何管理用戶帳戶和服務，雖然這些帳戶和服務在私人開發環境中是必要的，但在AEM Forms的JEE生產環境中卻不是必要的。
 
 一般而言，開發人員不會使用生產環境來建立和測試其應用程式。 因此，您必須管理在私人開發環境中不需要的使用者帳戶和服務。
 
-本文說明透過AEM Forms on JEE提供的管理選項來降低整體攻擊面的方法。
+本文介紹了通過JEE上AEM Forms提供的管理選項來減少整體攻擊面的方法。
 
 ## 禁用對服務的非基本遠程訪問{#disabling-non-essential-remote-access-to-services}
 
-在安裝和設定JEE上的AEM Forms後，許多服務都可供透過SOAP和Enterprise JavaBeans™(EJB)進行遠端呼叫。在本例中，遠端一詞是指可以網路存取應用程式伺服器的SOAP、EJB或Action Message Format(AMF)埠的呼叫者。
+在安裝並配置JEE上的AEM Forms後，許多服務都可用於通過SOAP和Enterprise JavaBeans™(EJB)進行遠程調用。在本例中，遠程術語是指對應用程式伺服器的SOAP、EJB或Action Message Format(AMF)埠具有網路訪問權的任何調用方。
 
-雖然JEE服務上的AEM Forms需要為授權呼叫者傳遞有效憑證，但您應僅允許遠端存取您需要遠端存取的服務。 要實現有限的可訪問性，您應將遠程可訪問服務集減少到功能正常的系統所能使用的最低程度，然後啟用遠程調用所需的其他服務。
+雖然AEM Forms的JEE服務需要為授權呼叫者傳遞有效的認證，但您應只允許遠程訪問需要遠程訪問的服務。 要實現有限的可訪問性，您應將遠程可訪問服務集減少到功能正常的系統所能使用的最低程度，然後啟用遠程調用所需的其他服務。
 
-JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是Workbench使用的必要條件，但也包含由Workspace Web應用程式呼叫的服務。
+AEM Forms的JEE服務始終至少需要SOAP訪問。 這些服務通常是Workbench使用的必要條件，但也包含由Workspace Web應用程式呼叫的服務。
 
 使用Administration Console的「應用程式與服務」網頁完成此程式：
 
@@ -109,7 +110,7 @@ JEE服務上的AEM Forms永遠至少需要SOAP存取權。 這些服務通常是
 
 ## 更改預設全局超時{#changing-the-default-global-time-out}
 
-使用者可以透過Workbench、AEM Forms Web應用程式或叫用AEM Forms伺服器服務的自訂應用程式，驗證AEM Forms。 全域逾時設定可用來指定這些使用者在被迫重新驗證之前，可與AEM Forms（使用SAML架構的斷言）互動的時間長度。 預設設定為2小時。 在生產環境中，需要將時間縮減為可接受的最小分鐘數。
+使用者可以透過Workbench、AEM Forms網路應用程式或叫用AEM Forms伺服器服務的自訂應用程式，向AEM Forms進行驗證。 一個全域逾時設定可用來指定此類使用者在被迫重新驗證之前，可與AEM Forms（使用SAML架構斷言）互動的時間。 預設設定為2小時。 在生產環境中，需要將時間縮減為可接受的最小分鐘數。
 
 ### 將重新驗證時間限制降至最低{#minimize-reauthentication-time-limit}
 
