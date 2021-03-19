@@ -1,7 +1,7 @@
 ---
 title: 在We.Retail中試用核心元件
 seo-title: 在We.Retail中試用核心元件
-description: 'null'
+description: 在We.Retail中試用核心元件
 seo-description: 'null'
 uuid: 8d1cea0b-99d9-49b2-b275-41f14864b1ff
 contentOwner: User
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 試用{#trying-it-out}
 
-1. 使用We.Retail範例內容啟動AEM，並開啟[元件主控台](/help/sites-authoring/default-components-console.md)。
+1. 從AEMWe.Retail範例內容開始，並開啟[元件主控台](/help/sites-authoring/default-components-console.md)。
 
    **全域導覽->工具->元件**
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. 請注意，所有核心元件皆命名為&#x200B;**v1**，這反映出這是此核心元件的第一個版本。 日後將推出一般版本，其版本將與AEM相容，並可輕鬆升級，讓您運用最新的功能。
+1. 請注意，所有核心元件皆命名為&#x200B;**v1**，這反映出這是此核心元件的第一個版本。 日後將推出一般版本，其版本相容於AEM版本，並可輕鬆升級，讓您運用最新功能。
 1. 按一下「**文字(v1)**」。
 
    查看元件的&#x200B;**資源類型**&#x200B;是`/apps/core/wcm/components/text/v1/text`。 核心元件位於`/apps/core/wcm/components`下，並且每個元件的版本化。
