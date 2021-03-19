@@ -1,27 +1,28 @@
 ---
-title: 瞭解AEM Forms流程
-seo-title: 瞭解AEM Forms流程
-description: 瞭解AEM Forms流程
+title: 瞭解AEM Forms進程
+seo-title: 瞭解AEM Forms進程
+description: 瞭解AEM Forms進程
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 
-# 瞭解AEM Forms Processes {#understanding-aem-forms-processes}
+# 瞭解AEM Forms進程{#understanding-aem-forms-processes}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-常見的使用案例是，一組AEM Forms服務可在單一檔案上運作。 您可以使用Workbench建立流程，將請求傳送至服務容器。 流程代表您正在自動化的業務流程。 有關建立流程的資訊，請參閱[使用工作台](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+一個常見的使用案例是，一組AEM Forms服務可在單一檔案上運作。 您可以使用Workbench建立流程，將請求傳送至服務容器。 流程代表您正在自動化的業務流程。 有關建立流程的資訊，請參閱[使用工作台](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
 一旦程式被激活，它就會變成服務，並可像其他服務一樣被調用。 標準服務（如加密服務）和源自進程的服務之間的一個區別是，後者有一個操作可執行多個操作。 相反，標準服務有許多操作。 每個操作通常執行一個操作，例如將策略應用於文檔或加密文檔。
 
@@ -33,11 +34,11 @@ ht-degree: 0%
 * 流程可以跨越組織界限。
 * 流程需要外部輸入才能完成。 例如，假設某個情況表單被傳送至不在辦公室的經理。 在這種情況下，在管理員返回並填寫表單之前，該過程不會完成。
 
-   這些類型的進程稱為長期進程。 非同步地執行長壽命進程，允許系統在資源許可的情況下進行交互，並允許跟蹤和監視操作。 當呼叫長期進程時，AEM Forms會建立呼叫識別碼值，作為追蹤長期進程狀態的記錄的一部分。 記錄會儲存在AEM Forms資料庫中。 您可以在不再需要長期流程記錄時清除這些記錄。
+   這些類型的進程稱為長期進程。 非同步地執行長壽命進程，允許系統在資源許可的情況下進行交互，並允許跟蹤和監視操作。 當調用長壽命進程時，AEM Forms將建立調用標識符值作為跟蹤長壽命進程狀態的記錄的一部分。 記錄儲存在AEM Forms資料庫中。 您可以在不再需要長期流程記錄時清除這些記錄。
 
 >[!NOTE]
 >
->當呼叫短期處理時，AEM Forms不會建立記錄。
+>AEM Forms不會在調用短期進程時建立記錄。
 
 使用調用標識符值，可以跟蹤長壽命進程的狀態。 例如，您可以使用進程調用標識符值來執行進程管理器操作，如終止正在運行的進程實例。
 
@@ -47,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此程式不以現有的AEM Forms程式為基礎。 要跟隨討論如何調用此流程的代碼示例，請使用Workbench建立一個名為`MyApplication/EncryptDocument`的流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此程式不基於現有的AEM Forms程式。 要跟隨討論如何調用此流程的代碼示例，請使用Workbench建立一個名為`MyApplication/EncryptDocument`的流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
 
 調用此短時間進程時，它執行以下操作：
 
@@ -61,15 +62,15 @@ ht-degree: 0%
    >
    >通常，短期流程包含三個以上的動作。 您可以使用Workbench建立流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
 
-   *使用AEM格式*&#x200B;進行程式設計，說明以下方式可以程式設計方式叫用這個短暫的程式：
+   *使用格AEM*&#x200B;式進行程式設計，說明以下方式可以程式設計方式叫用此短暫程式：
 
-   * [使用AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) （使用Flex應用程式）傳遞不安全的檔案，以叫用短暫的程式
+   * [使用AEM FormsRemoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (使用Flex應用程式)傳遞不安全的檔案，以叫用短暫的程式
    * [使用調用API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java調用API）調用短壽命進程
-   * [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （web service範例）
+   * [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Web服務示例）
    * [使用MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （web service範例）叫用AEM Forms
-   * [使用SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （web service範例）叫用AEM Forms
-   * [透過HTTP使用BLOB資料叫用AEM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)  Forms（web service範例）
-   * [使用DIME叫用AEM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) （web service範例）
+   * [使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （Web服務示例）
+   * [使用HTTP上的BLOB資料調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) （Web服務示例）
+   * [使用DIME](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) （web service範例）叫用AEM Forms
    * [使用REST調用MyApplication/EncryptDocument進程](/help/forms/developing/invoking-aem-forms-using-rest.md)
 
 **長期流程示例**
@@ -80,4 +81,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此程式可依照[建立您的第一個AEM Forms應用程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)中指定的教學課程來建立。
+>此過程可遵循[建立第一個AEM Forms應用程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)中指定的教程來建立。
