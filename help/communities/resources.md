@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2980'
 ht-degree: 4%
 
 ---
@@ -20,11 +21,11 @@ ht-degree: 4%
 
 # 啟用資源控制台{#enablement-resources-console}
 
-對於AEM Communities,「資源」主控台是[啟用管理員](users.md)建立、管理和指派資源給啟用社群網站成員的位置。
+對於AEM Communities，資源控制台是[啟用管理員](users.md)建立、管理和指派資源給啟用社群網站成員的位置。
 
 ## 要求{#requirements}
 
-在新增社群網站的啟用資源之前，AEM例項必須正確設定，包括：
+在新增社群網站的啟用資源之前，AEM必須正確設定例項，包括：
 
 * SCORM
 * FFmpeg
@@ -37,7 +38,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->隨著[AEM 6.3](deploy-communities.md#latestfeaturepack)的發行，以及相當的社群功能套件[AEM 6.2 FP3](deploy-communities.md#latestfeaturepack)和[AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest功能套件)的推出，啟用功能不再需要[MySQL資料庫a7/>。](mysql.md)
+>隨著[AEM 6.3](deploy-communities.md#latestfeaturepack)的發行，以及相當的社群功能套件[AEM 6.2 FP3](deploy-communities.md#latestfeaturepack)和[ AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest功能套件)，啟用功能不再需要[MySQL資料庫](mysql.md)。
 
 ## 術語 {#terminology}
 
@@ -63,7 +64,7 @@ ht-degree: 4%
 
 在建立社區站點時，為URL指定給站點的名稱用於建立為各種角色配置的[站點特定用戶組](users.md)。 所有這些自動建立的群組都會加上前置詞`Community <site-name>`。
 
-其中一個使用者群組是`Community <site-name> Members`群組，可將發佈環境中的註冊使用者識別為社群成員。 如需範例，請參閱教學課程[AEM Communities快速入門](getting-started-enablement.md)。
+其中一個使用者群組是`Community <site-name> Members`群組，可將發佈環境中的註冊使用者識別為社群成員。 如需範例，請參閱教學課程[AEM Communities快速入門。](getting-started-enablement.md)
 
 對於[參與社群](overview.md#egagementcommunity)，允許網站訪客自行註冊或使用社交登入是合理的，在此時，這些訪客會自動新增至成員群組。
 
@@ -154,15 +155,15 @@ ht-degree: 4%
 
 * **[!UICONTROL 小型資產]**
 
-   (*Optional*)從AEM Assets中選取。 代表發佈環境（例如目錄）中資源的縮圖影像。
+   （*可選*）選自AEM Assets。 代表發佈環境（例如目錄）中資源的縮圖影像。
 
 * **[!UICONTROL 大型資產]**
 
-   (*Optional*)從AEM Assets中選取。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
+   （*可選*）選自AEM Assets。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
 
 * **[!UICONTROL 內容片段資產]**
 
-   (*Optional*)從AEM Assets中選取。 內容片段，可在發佈環境中參考，但預設未使用。
+   （*可選*）選自AEM Assets。 內容片段，可在發佈環境中參考，但預設未使用。
 
 * 選擇&#x200B;**[!UICONTROL Next]**
 
@@ -200,7 +201,7 @@ ht-degree: 4%
 
 * **[!UICONTROL 新增 Adobe 連線 URL]**
 
-   輸入Adobe Connect作業的連結。
+   輸入指向Adobe Connect會話的連結。
 
    在開啟的對話框中，輸入：
 
@@ -210,7 +211,7 @@ ht-degree: 4%
 
    * **[!UICONTROL URL]**
 
-      Adobe Connect作業的URL。
+      Adobe Connect會議的網址。
 
 * **[!UICONTROL 定義外部資源]**
 
@@ -347,15 +348,15 @@ ht-degree: 4%
 
 * **[!UICONTROL 小型資產]**
 
-   (*Optional*)從AEM Assets中選取。 代表發佈環境（例如目錄）中資源的縮圖影像。
+   （*可選*）選自AEM Assets。 代表發佈環境（例如目錄）中資源的縮圖影像。
 
 * **[!UICONTROL 大型資產]**
 
-   (*Optional*)從AEM Assets中選取。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
+   （*可選*）選自AEM Assets。 用於表示發佈環境中資源（如資源的首頁）的大型影像。
 
 * **[!UICONTROL 內容片段資產]**
 
-   (*Optional*)從AEM Assets中選取。 內容片段，可在發佈環境中參考，但預設未使用。
+   （*可選*）選自AEM Assets。 內容片段，可在發佈環境中參考，但預設未使用。
 
 * 選擇&#x200B;**[!UICONTROL Next]**。
 
@@ -466,9 +467,9 @@ ht-degree: 4%
 
 ![learningpath-info](assets/learningpath-info1.png)
 
-此報告專門針對目前的啟用資源或學習路徑。 提供的報表深度取決於Adobe Analytics[是否取得社群網站的授權並啟用。 ](analytics.md)[時間軸](#timeline)、[檢視器參與](#viewer-engagement)和[「依裝置參與](#engagement-by-device)」報表是根據[輪詢間隔](analytics.md#report-importer)從Adobe Analytics匯入。
+此報告專門針對目前的啟用資源或學習路徑。 提供的報告深度取決於[Adobe Analytics](analytics.md)是否為社區站點授權和啟用。 根據[輪詢間隔](analytics.md#report-importer)，從Adobe Analytics導入[時間軸](#timeline)、[查看器參與](#viewer-engagement)和[按設備參與](#engagement-by-device)報告。
 
-對於所有啟用資源，不論是否啟用Adobe Analytics，都有[受託人狀態](#assignee-status)和[評分](#ratings)的報表，以及[報表摘要](#report-summary)表格。
+對於所有啟用資源，無論是否啟用Adobe Analytics，都有關於[受託人狀態](#assignee-status)和[評分](#ratings)的報告以及[報告摘要](#report-summary)表。
 
 ![resource-report](assets/resource-report1.png)
 
@@ -496,7 +497,7 @@ ht-degree: 4%
 
 水準軸是日曆時間。
 
-[需要Adobe Analytics](sites-console.md#analytics)。
+[Adobe Analytics需要](sites-console.md#analytics)。
 
 #### 檢視者參與 {#viewer-engagement}
 
@@ -506,13 +507,13 @@ ht-degree: 4%
 
 水準軸是此資源的持續時間。
 
-[需要Marketing Cloud組織ID](sites-console.md#enablement)。
+[Marketing Cloud組織ID為必填項](sites-console.md#enablement)。
 
 #### 依裝置的參與數 {#engagement-by-device}
 
 「依裝置分析參與」報錶針對視訊資源，說明從桌上型電腦和行動裝置播放的檢視百分比。
 
-[需要Marketing Cloud組織ID](sites-console.md#enablement)。
+[Marketing Cloud組織ID為必填項](sites-console.md#enablement)。
 
 #### 被指定者的狀態 {#assignee-status}
 
