@@ -1,17 +1,18 @@
 ---
 title: 製作表格欄位的內容相關說明
 seo-title: 製作表格欄位的內容相關說明
-description: AEM Forms可讓您將內容相關說明新增至最適化表單欄位和面板，例如文字或多媒體，包括影片。
-seo-description: AEM Forms可讓您將內容相關說明新增至最適化表單欄位和面板，例如文字或多媒體，包括影片。
+description: AEM Forms可讓您將內容相關說明新增至可調整的表格欄位和面板，例如文字或多媒體，包括影片。
+seo-description: AEM Forms可讓您將內容相關說明新增至可調整的表格欄位和面板，例如文字或多媒體，包括影片。
 uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 有些情況下，一般使用者在填寫表格時無法確定如何在特定表格欄位中填寫詳細資料。 為瞭解決這些問題，最適化表單支援在表單欄位中新增文字或豐富式內容說明。 它有助於改善表單填寫體驗，並避免使用者的歧義。
 
-本文討論表單作者在製作最適化表單時如何新增內容相關說明。
+本文討論表單作者如何在編寫Adaptive Forms時新增內容相關說明。
 
 ## 新增內容相關說明{#add-in-context-help}
 
