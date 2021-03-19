@@ -10,11 +10,12 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 3%
+source-wordcount: '543'
+ht-degree: 4%
 
 ---
 
@@ -77,7 +78,7 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->如果使用AEM 6.1 Communities FP4或更舊版本，請勿將群組函式新增至群組範本。
+>如果使AEM用6.1 Communities FP4或更舊版本，請勿將群組功能新增至群組範本。
 >
 >從Communities [FP1](/help/communities/communities.md#latestfeaturepack)開始，即可使用巢狀群組功能。
 >
