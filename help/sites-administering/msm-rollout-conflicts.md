@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
+feature: 多站點管理員
 translation-type: tm+mt
-source-git-commit: 47b69098a45f774501ebb62ee1a14a8d209ad101
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ ht-degree: 0%
 * 將重新命名哪些頁面（以及如何重新命名）,
 * 這會如何影響任何發佈的內容。
 
-   AEM（現成可用）的預設行為是發佈的內容不會受到影響。 因此，如果在即時副本分支中手動建立的頁面已發佈，該內容仍會在衝突處理和轉出後發佈。
+   預設行為(現AEM成可用)是發佈的內容不會受到影響。 因此，如果在即時副本分支中手動建立的頁面已發佈，該內容仍會在衝突處理和轉出後發佈。
 
 除了標準功能外，還可新增自訂的衝突處理常式，以實作不同的規則。 這些動作也可以允許以個別程式進行發佈動作。
 
@@ -78,7 +79,7 @@ ht-degree: 0%
 
 轉出管理員可讓您啟用或停用衝突管理。
 
-這是使用[**Day CQ WCM Pollout Manager**&#x200B;的&lt;a0/>OSGi配置](/help/sites-deploying/configuring-osgi.md)完成的：
+這是使用[**Day CQ WCM Pollout Manager**&#x200B;的OSGi配置](/help/sites-deploying/configuring-osgi.md)完成的：
 
 * **使用手動建立的頁面處理衝突**:
 
@@ -86,11 +87,11 @@ ht-degree: 0%
 
    如果轉出管理員應處理來自即時副本中建立且名稱存在於藍圖的頁面的衝突，則設為true。
 
-當衝突管理已停用時，AEM具有[預先定義的行為](#behavior-when-conflict-handling-deactivated)。
+已停AEM用衝突管理時具有[預先定義的行為](#behavior-when-conflict-handling-deactivated)。
 
 ## 衝突處理程式{#conflict-handlers}
 
-AEM使用衝突處理常式來解決將內容從Blueprint轉出至即時副本時存在的任何頁面衝突。 重新命名頁面是解決此類衝突的一種（通常）方法。 可以操作多個衝突處理程式以允許選擇不同的行為。
+使AEM用衝突處理常式來解決從Blueprint將內容發佈至即時副本時存在的任何頁面衝突。 重新命名頁面是解決此類衝突的一種（通常）方法。 可以操作多個衝突處理程式以允許選擇不同的行為。
 
 AEM提供：
 
@@ -166,15 +167,15 @@ AEM提供：
 
       定義與其他衝突處理程式(`service.ranking`)相關的順序。
 
-      預設值為0。
+      預設值為 0。
 
 ### 衝突處理停用{#behavior-when-conflict-handling-deactivated}時的行為
 
-如果您手動[停用衝突處理](#rollout-manager-and-conflict-handling),AEM不會對任何衝突頁面採取任何動作（非衝突頁面會如預期般推出）。
+如果您手動[停用衝突處理](#rollout-manager-and-conflict-handling)，則AEM對任何衝突頁面不採取任何動作（非衝突頁面會如預期般推出）。
 
 >[!CAUTION]
 >
->AEM不會指出衝突正被忽略，因為必須明確設定此行為，因此會假設這是必要行為。
+>不AEM會顯示衝突正在被忽略，因為必須明確配置此行為，因此假定這是必需行為。
 
 在這種情況下，有效優先於即時副本。 Blueprint頁面`/b`不會被複製，而即時副本頁面`/b`則不受影響。
 
