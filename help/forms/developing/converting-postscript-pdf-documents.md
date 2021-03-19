@@ -1,18 +1,19 @@
 ---
 title: 將Postscript轉換為PDF檔案
 seo-title: 將Postscript轉換為PDF檔案
-description: 使用Distiller服務，將PostScript®、Encapsuled PostScript(EPS)和PRN檔案轉換為精簡、可靠且更安全的網路PDF檔案。 Distiller服務使用Java API和Web Service API將大量打印文檔轉換為電子文檔，如發票和對帳單。
-seo-description: 使用Distiller服務，將PostScript®、Encapsuled PostScript(EPS)和PRN檔案轉換為精簡、可靠且更安全的網路PDF檔案。 Distiller服務使用Java API和Web Service API將大量打印文檔轉換為電子文檔，如發票和對帳單。
+description: 使用Distiller服務，透過網路將PostScript®、封裝的PostScript(EPS)和PRN檔案轉換為精簡、可靠且更安全的PDF檔案。 Distiller服務使用Java API和Web服務API，將大量印刷檔案轉換為電子檔案，例如發票和對帳單。
+seo-description: 使用Distiller服務，透過網路將PostScript®、封裝的PostScript(EPS)和PRN檔案轉換為精簡、可靠且更安全的PDF檔案。 Distiller服務使用Java API和Web服務API，將大量印刷檔案轉換為電子檔案，例如發票和對帳單。
 uuid: 2143f406-1fdd-4551-a738-1a8388f8d478
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 06ad343a-f74d-41f5-b3c8-b85bb723ceeb
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1380'
 ht-degree: 0%
 
 ---
@@ -20,27 +21,27 @@ ht-degree: 0%
 
 # 將Postscript轉換為PDF檔案{#converting-postscript-to-pdf-documents}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 ## 關於Distiller服務{#about-the-distiller-service}
 
-Distiller®服務可將PostScript®、Encapsulated PostScript(EPS)和PRN檔案透過網路轉換為精簡、可靠且更安全的PDF檔案。 Distiller服務常用於將大量打印文檔轉換為電子文檔，如發票和對帳單。 將檔案轉換為PDF也讓企業可以傳送書面版本和電子版檔案給客戶。
+Distiller®服務可將PostScript®、封裝的PostScript(EPS)和PRN檔案透過網路轉換為精簡、可靠且更安全的PDF檔案。 Distiller服務經常用於將大量印刷檔案轉換為電子檔案，如發票和報表。 將檔案轉換為PDF也讓企業可以傳送書面版本和電子版檔案給客戶。
 
 >[!NOTE]
 >
->有關Distiller服務的詳細資訊，請參閱[Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Distiller服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 將PostScript轉換為PDF檔案{#converting-postscript-to-pdf-documents-inner}
 
-本主題說明如何使用Distiller Service API（Java和web service）以程式設計方式將PostScript(PS)、封裝的PostScript(EPS)和PRN檔案轉換為PDF檔案。
+本主題說明如何使用Distiller服務API（Java和web service）以程式設計方式將PostScript(PS)、封裝的PostScript(EPS)和PRN檔案轉換為PDF檔案。
 
 >[!NOTE]
 >
->有關Distiller服務的詳細資訊，請參閱[Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Distiller服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
->若要將PostScript檔案轉換為PDF檔案，下列其中一項需要安裝在代管AEM Forms的伺服器上：Acrobat 9或Microsoft Visual C++ 2005可重新散發的套件。
+>若要將PostScript檔案轉換為PDF檔案，下列其中一項必須安裝在代管AEM Forms的伺服器上：Acrobat 9或Microsoft Visual C++ 2005可重新散發的套件。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -78,7 +79,7 @@ Distiller®服務可將PostScript®、Encapsulated PostScript(EPS)和PRN檔案�
 
 [使用web service API將PostScript檔案轉換為PDF](converting-postscript-pdf-documents.md#converting-a-postscript-file-to-pdf-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -86,7 +87,7 @@ Distiller®服務可將PostScript®、Encapsulated PostScript(EPS)和PRN檔案�
 
 ### 使用Java API {#convert-a-postscript-file-to-pdf-using-the-java-api}將PostScript檔案轉換為PDF
 
-使用Distiller Service API(Java)將PostScript檔案轉換為PDF檔案：
+使用Distiller服務API(Java)將PostScript檔案轉換為PDF檔案：
 
 1. 包含專案檔案。
 
@@ -134,13 +135,13 @@ Distiller®服務可將PostScript®、Encapsulated PostScript(EPS)和PRN檔案�
 
 [快速入門（SOAP模式）:使用Java API將PostScript檔案轉換為PDF檔案](/help/forms/developing/distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用web service API {#converting-a-postscript-file-to-pdf-using-the-web-service-api}將PostScript檔案轉換為PDF
 
-使用Distiller Service API(web service)將PostScript檔案轉換為PDF檔案：
+使用Distiller服務API(web service)將PostScript檔案轉換為PDF檔案：
 
 1. 包含專案檔案。
 
@@ -148,17 +149,17 @@ Distiller®服務可將PostScript®、Encapsulated PostScript(EPS)和PRN檔案�
 
    >[!NOTE]
    >
-   >將`localhost`取代為代管AEM Forms之伺服器的IP位址。
+   >將`localhost`取代為代管AEM Forms的伺服器的IP位址。
 
 1. 建立Distiller服務客戶端。
 
    * 使用其預設建構子建立`DistillerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DistillerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/DistillerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`DistillerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/DistillerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。 不過，請指定`?blob=mtom`以使用MTOM。
    * 獲取`DistillerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`DistillerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`DistillerServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`DistillerServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -177,7 +178,7 @@ Distiller®服務可將PostScript®、Encapsulated PostScript(EPS)和PRN檔案�
 
    * 代表要轉換的PS檔案的`BLOB`對象
    * 包含要轉換的檔案路徑名的字串
-   * 包含要使用的Adobe PDF設定的字串物件（例如`Standard`）
+   * 包含要使用的Adobe PDF設定的字串對象（例如`Standard`）
    * 包含要使用的安全設定的字串對象（例如`No Securit`y）
    * 可選`BLOB`物件，包含在產生PDF檔案時要套用的設定
    * 可選`BLOB`物件，包含要套用至PDF檔案的中繼資料資訊
@@ -203,4 +204,4 @@ Distiller®服務可將PostScript®、Encapsulated PostScript(EPS)和PRN檔案�
 
 [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM表格](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
