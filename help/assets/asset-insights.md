@@ -1,11 +1,12 @@
 ---
 title: 資產 Insights
-description: 瞭解「資產前瞻分析」功能如何讓您追蹤第三方網站、行銷宣傳和Adobe創意解決方案所使用影像的使用者評分和使用統計資料。
+description: 瞭解「資產前瞻分析」功能如何讓您追蹤第三方網站、行銷活動和Adobe創意解決方案中使用的影像的使用者評分和使用統計資料。
 contentOwner: AG
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '731'
 ht-degree: 7%
 
 ---
@@ -13,7 +14,7 @@ ht-degree: 7%
 
 # 資產 Insights {#asset-insights}
 
-「資產前瞻分析」功能可讓您追蹤使用者評分和使用統計資料，這些資料用於協力廠商網站、行銷活動和Adobe的創意解決方案。 它有助於獲得有關其效能與人氣的見解。
+「資產前瞻分析」功能可讓您追蹤使用者評分和使用統計資料，這些資料用於協力廠商網站、行銷宣傳和Adobe的創意解決方案。 它有助於獲得有關其效能與人氣的見解。
 
 [!DNL Assets] 前瞻分析會擷取使用者活動詳細資訊，例如影像被評等、點按和曝光（影像在網站上載入的次數）的次數。它會根據這些統計資料來指派分數給影像。 您可以使用分數和績效統計資料來選取要納入目錄、行銷活動等的熱門影像。 您甚至可以根據這些統計資料來制定封存和授權續約政策。
 
@@ -41,7 +42,7 @@ ht-degree: 7%
 
    * **資產**:資產屬於系列或複合資產的次數
    * **網頁與行動裝置**:資產加入網站和應用程式的次數
-   * **Social**:資產在解決方案（例如Adobe Social和Adobe Campaign）中使用的次數
+   * **Social**:資產用於解決方案(例如Adobe Social和Adobe Campaign)的次數
    * **電子郵件**:資產用於電子郵件促銷活動的次數
 
    ![usage_statistics](assets/usage_statistics.png)
@@ -72,10 +73,10 @@ ht-degree: 7%
 
 ## 排程背景工作{#scheduling-background-job}
 
-「資產前瞻分析」會定期從Adobe Analytics報表套裝擷取資產的使用資料。 根據預設，資產前瞻分析會每24小時在2 AM執行一次背景工作，以擷取資料。 不過，您可以從Web主控台設定&#x200B;**[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]**&#x200B;服務，以修改頻率和時間。
+「資產前瞻分析」會定期從Adobe Analytics報表套裝擷取資產的使用資料。 根據預設，資產前瞻分析會每24小時在2 AM執行一次背景工作，以擷取資料。 不過，您可以通過從Web控制台配置&#x200B;**[!UICONTROL Adobe CQDAM資產效能報告同步作業]**&#x200B;服務來修改頻率和時間。
 
 1. 按一下[!DNL Experience Manager]徽標，然後轉到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
-1. 開啟&#x200B;**[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]**&#x200B;服務設定。
+1. 開啟&#x200B;**[!UICONTROL Adobe CQDAM資產效能報告同步作業]**&#x200B;服務配置。
 
    ![chlimage_1-99](assets/chlimage_1-304.png)
 
