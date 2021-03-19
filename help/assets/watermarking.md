@@ -2,10 +2,11 @@
 title: 將浮水印新增至您的數位資產
 description: 瞭解如何使用浮水印功能將數位水印新增至資產。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: ec97cc41989cacdcae64a955a32a34d12212ca85
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ ht-degree: 0%
 1. 使用浮水印步驟儲存&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程。
 1. 從[!DNL Assets]使用者介面上傳範例資產。 浮水印會在您在上述步驟中設定的位置顯示字型大小、顏色等。
 
-若要以程式設計方式或使用動態資訊加上PDF檔案水印，請考慮使用[Experience Manager Document Services](/help/forms/using/overview-aem-document-services.md)產品。
+若要以程式設計方式或使用動態資訊加上PDF檔案的水印，請考慮使用[Experience Manager檔案服務](/help/forms/using/overview-aem-document-services.md)方案。
 
 ## 提示和限制{#tips-limitations}
 
