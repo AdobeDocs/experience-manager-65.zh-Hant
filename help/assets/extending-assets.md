@@ -2,10 +2,11 @@
 title: 自訂和擴充 [!DNL Assets]
 description: 瞭解如何自訂和擴充資產共用與資產編輯器，為使用者提供特別自訂的介面和功能集。
 contentOwner: AG
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 # 自訂並擴充[!DNL Assets] {#customizing-and-extending-assets}
 
-資產編輯器是Adobe Enterprise Manager網站的使用者用來尋找、檢視和控制儲存庫中數位資產的主要存取點。
+資產編輯器是AdobeEnterprise Manager網站的用戶在您的儲存庫中查找、查看和操作數字資產時使用的主要訪問點。
 
 身為[!DNL Experience Manager]開發人員，您可以透過多種方式自訂和擴充資產編輯器，為使用者提供特別自訂的介面和功能集。
 
