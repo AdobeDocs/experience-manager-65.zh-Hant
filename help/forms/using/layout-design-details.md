@@ -9,10 +9,11 @@ topic-tags: correspondence-management, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 683809ac-089b-49bf-a72c-67d32439081f
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2192'
 ht-degree: 0%
 
 ---
@@ -27,11 +28,11 @@ XFA表單範本或XDP是下列範本：
 
 * 布局片段
 
-XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立有效的通訊／互動式通訊的詳細資訊，例如在何處使用表單欄位或目標區域，以及何時使用版面片段。
+XDP是由AdobeForms設計師所設計。 本文提供如何設計XDP以建立有效的通訊／互動式通訊的詳細資訊，例如在何處使用表單欄位或目標區域，以及何時使用版面片段。
 
 ## 建立字母或互動式通訊的列印頻道{#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}版面
 
-版面定義互動式通訊的字母／列印頻道的圖形版面。 版面可包含「位址」和「參考編號」等典型表單欄位。 它還包含表示目標區域的空子表單。 在表單設計人員中建立版面，當應用程式專員將它上傳至AEM伺服器時。 在此處，您可以在建立互動式通訊的對應範本或列印頻道時，選取版面。
+版面定義互動式通訊的字母／列印頻道的圖形版面。 版面可包含「位址」和「參考編號」等典型表單欄位。 它還包含表示目標區域的空子表單。 在表單設計人員中建立版面，當應用程式專員將它上傳至伺服器AEM時。 在此處，您可以在建立互動式通訊的對應範本或列印頻道時，選取版面。
 
 ![設計人員：建立版面](assets/claimsubrogationlayout.png)
 
@@ -48,11 +49,11 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
    1. 其他區段會在特定位置包含元素，因此會設計為定位版面。
    1. 如果區段包含特定位置的元素，且這些元素包含大量資料，則將區段劃分為子表單。 然後排列子表單，以達到所需的行為。
    1. 對於「主要居住區」區段，新增預留位置目標區域。 此預留位置將綁定到在字母／互動式通信設計時將主要住宅分割。
-   1. 將版面(以及使用版面的片段（如果有）上傳到AEM Forms伺服器。
+   1. 將版面(及使用版面的片段（如果有）)上傳至AEM Forms伺服器。
 
 ### 在XDP模板{#usesubformxdp}中使用子表單
 
-分析建立互動式通訊所需的版面後，您就可以使用Forms Designer在XDP範本中建立子表單。 XDP範本中使用的空白子表單元件，會在互動式通訊的列印頻道中顯示目標區域。
+在您分析建立互動式通訊所需的版面後，就可以使用Forms設計人員在XDP範本中建立子表單。 XDP範本中使用的空白子表單元件，會在互動式通訊的列印頻道中顯示目標區域。
 
 >[!NOTE]
 >
@@ -60,7 +61,7 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
 執行以下步驟以在XDP模板中使用子表單：
 
-1. 開啟表單設計器，選擇「**檔案** > **新建** > **使用空白表單**，按一下&#x200B;**Next**，然後按一下&#x200B;**完成**&#x200B;開啟表單以建立模板。
+1. 開啟Forms設計器，選擇「**檔案** > **新建** > **使用空格**，按一下&#x200B;**下一步**，然後按一下&#x200B;**完成**&#x200B;開啟模板建立表單。
 
    確保從&#x200B;**窗口**&#x200B;菜單中選擇了&#x200B;**對象庫**&#x200B;和&#x200B;**對象**&#x200B;選項。
 
@@ -115,13 +116,13 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
 ### 建立版面片段{#xdplayoutfragments}的XDP範本
 
-使用Forms Designer中的表格元件來建立版面片段，然後在製作互動式通訊的列印頻道時使用這些片段來建立表格。 使用版面片段來建立表格，可確保當使用列印頻道自動產生網頁頻道時，表格內容會保留結構。
+使用Forms設計器中的「表」元件建立佈局片段，然後在編寫互動式通信的打印通道時使用它們建立表。 使用版面片段來建立表格，可確保當使用列印頻道自動產生網頁頻道時，表格內容會保留結構。
 
 >[!NOTE]
 >
 >在表格儲存格中輸入文字，或[僅在編寫互動式通訊時建立與表單資料模型物件](create-interactive-communication.md#step2)的系結。
 
-使用Forms Designer在XDP模板中使用表元件，請執行以下步驟：
+使用Forms設計器，執行以下步驟以使用XDP模板中的表元件：
 
 1. 將&#x200B;**Table**&#x200B;元件從&#x200B;**對象庫**&#x200B;拖放到窗體中。
 1. 在&#x200B;**插入表**&#x200B;對話框中：
@@ -147,13 +148,13 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
    1. 點選&#x200B;**Save**。
 
-### 將XDP範本上傳至AEM Forms伺服器{#uploadxdptemplate}
+### 將XDP模板上傳到AEM Forms伺服器{#uploadxdptemplate}
 
-使用Forms Designer建立XDP範本後，您必須將它上傳至AEM Forms伺服器，以便在建立互動通訊時使用範本。
+使用Forms設計器建立XDP模板後，必須將其上載到AEM Forms伺服器，以便在建立交互通信時使用該模板。
 
-1. 選擇&#x200B;**Forms** > **Forms &amp; Documents**。
+1. 選擇&#x200B;**Forms** > **Forms和文檔**。
 1. 點選「**建立** > **檔案上傳**」。
-1. 導覽至本機檔案系統上XDP範本的位置，然後點選&#x200B;**Open**，將XDP範本匯入AEM Forms伺服器。
+1. 導覽至本機檔案系統上XDP範本的位置，然後點選&#x200B;**Open**&#x200B;將XDP範本匯入AEM Forms伺服器。
 
 ## 使用架構{#using-schema}
 
@@ -231,7 +232,7 @@ XDP是在Adobe Forms Designer中設計。 本文提供如何設計XDP以建立�
 
 ## 指定伺服器渲染格式{#specify-the-server-nbsp-render-format}
 
-將版面的伺服器轉譯格式使用至動態XML表單；否則，任何基於此版面的字母／互動式通訊都無法正確呈現。 預設情況下，Forms Designer中的伺服器渲染格式設定為動態XML表單。 要確保使用正確的格式：
+將版面的伺服器轉譯格式使用至動態XML表單；否則，任何基於此版面的字母／互動式通訊都無法正確呈現。 預設情況下，Forms設計器中的伺服器渲染格式設定為「動態XML表單」。 要確保使用正確的格式：
 
 * 在「設計器」中，按一下「檔案」「**「檔案」「**」>「表單屬性」「**>**&#x200B;預設值」，並確保「PDF渲染／格式」設定設定為「動態XML表單」。****
 
