@@ -9,11 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
+feature: 內容中樞
 translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5029'
-ht-degree: 1%
+source-wordcount: '5031'
+ht-degree: 2%
 
 ---
 
@@ -228,7 +229,7 @@ ContextHub.Utils.Persistence物件。 有關預設值和初始化的資訊，請
 
 **參數**
 
-* **includeInternals:** 結果中包 `true` 含內部使用的鍵的值。這些鍵以下划線(&quot;_&quot;)字元開頭。 預設值為`false`。
+* **includeInternals:** 結果中包 `true` 含內部使用的鍵的值。這些鍵以下划線(&quot;_&quot;)字元開頭。 預設值為 `false`.
 
 **退貨**
 
@@ -252,7 +253,7 @@ ContextHub.Utils.Persistence物件。 有關預設值和初始化的資訊，請
 
 **參數**
 
-* `includeInternals:` 值包括 `true` 結果中內部使用的鍵／值對。此資料的鍵以下划線(&quot;_&quot;)字元開頭。 預設值為`false`。
+* `includeInternals:` 值包括 `true` 結果中內部使用的鍵／值對。此資料的鍵以下划線(&quot;_&quot;)字元開頭。 預設值為 `false`.
 
 **退貨**
 
@@ -296,7 +297,7 @@ ContextHub.Utils.Persistence物件。 有關預設值和初始化的資訊，請
 
 從商店移除金鑰／值配對。
 
-刪除鍵後，函式會觸發`data`事件。 事件資料包括商店名稱、已移除的金鑰名稱、已移除的值、金鑰的新值(null)，以及動作類型「remove」。
+刪除鍵後，函式會觸發`data`事件。 事件資料包括商店名稱、已移除的金鑰名稱、已移除的值、金鑰的新值(null)，以及「remove」的動作類型。
 
 或者，您可以防止觸發`data`事件。
 
@@ -305,7 +306,7 @@ ContextHub.Utils.Persistence物件。 有關預設值和初始化的資訊，請
 * **key:** （字串）要移除的索引鍵名稱。
 * **選項：** （對象）選項的對象。以下對象屬性有效：
 
-   * silent:值`true`可防止觸發`data`事件。 預設值為`false`。
+   * silent:值`true`可防止觸發`data`事件。 預設值為 `false`.
 
 **退貨**
 
@@ -378,7 +379,7 @@ ContextHub.Utils.Persistence物件。 有關預設值和初始化的資訊，請
 * **key:** （字串）索引鍵的名稱。
 * **選項：** （對象）選項的對象。以下對象屬性有效：
 
-   * silent:值`true`可防止觸發`data`事件。 預設值為`false`。
+   * silent:值`true`可防止觸發`data`事件。 預設值為 `false`.
 
 * **value:** （物件）與索引鍵關聯的值。
 
@@ -518,7 +519,7 @@ ContextHub.Store.PeristedJSONPStore延伸了[ContextHub.Store.JSONPStore](/help/
 
 ## ContextHub.Store.PeristedStore {#contexthub-store-persistedstore}
 
-ContextHub.Store.PerisatedStore擴充了[ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core)，因此它繼承了該類別的所有函式。 此儲存中的資料會根據ContextHub持久性的配置進行保存。
+ContextHub.Store.PeristedStore擴充了[ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core)，因此繼承了該類別的所有函式。 此儲存中的資料會根據ContextHub持久性的配置進行保存。
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
@@ -537,8 +538,8 @@ ContextHub.Store.SessionStore擴充了[ContextHub.Store.Core](/help/sites-develo
 **參數**
 
 * **moduleType:** (String)UI模組轉譯器的識別碼。如果已使用指定值註冊了渲染器，則在註冊此渲染器之前會先取消註冊現有渲染器。
-* **renderer:** （字串）轉換UI模組的類名。
-* **dontRender:** （布林值）設為 `true` 防止在註冊轉譯器後轉譯ContextHub UI。預設值為`false`。
+* **renderer:** （字串）轉譯UI模組的類別名稱。
+* **dontRender:** （布林值）設為 `true` 防止在註冊轉譯器後轉譯ContextHub UI。預設值為 `false`.
 
 **範例**
 
@@ -668,9 +669,9 @@ ContextHub.Utils.Cookie.vanish([/^cq-authoring/, 'cq-scrollpos']);
 * **value：包** 含Cookie值的字串。
 * **選項：** （可選）包含下列任何設定Cookie屬性的屬性的物件：
 
-   * 過期：指定Cookie過期時間的`date`或`number`值。 日期值指定到期的絕對時間。 數字（以天為單位）會將到期時間設定為目前時間加上數字。 預設值為`undefined`。
-   * 安全：指定Cookie之`Secure`屬性的`boolean`值。 預設值為`false`。
-   * 路徑：`String`值，用作Cookie的`Path`屬性。 預設值為`undefined`。
+   * 過期：指定Cookie過期時間的`date`或`number`值。 日期值指定到期的絕對時間。 數字（以天為單位）會將到期時間設定為目前時間加上數字。 預設值為 `undefined`.
+   * 安全：指定Cookie之`Secure`屬性的`boolean`值。 預設值為 `false`.
+   * 路徑：`String`值，用作Cookie的`Path`屬性。 預設值為 `undefined`.
 
 **退貨**
 
@@ -732,7 +733,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 * **handler:** （函式）要綁定到事件的函式。
 * **selector:** （字串）系結的唯一識別碼。如果要使用`off`函式來移除系結，則需要選擇器來識別系結。
 
-* **triggerForPastEvents:** (Boolean)指出是否應針對過去發生的事件執行處理常式。值`true`會呼叫過去事件的處理常式。 值`false`會呼叫處理器，以處理未來事件。 預設值為`true`。
+* **triggerForPastEvents:** (Boolean)指出是否應針對過去發生的事件執行處理常式。值`true`會呼叫過去事件的處理常式。 值`false`會呼叫處理器，以處理未來事件。 預設值為 `true`.
 
 **退貨**
 
@@ -774,7 +775,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 * **handler:** （函式）要綁定到事件的函式。
 * **selector:** （字串）系結的唯一識別碼。如果要使用`off`函式來移除系結，則需要選擇器來識別系結。
 
-* **triggerForPastEvents:** (Boolean)指出是否應針對過去發生的事件執行處理常式。值`true`會呼叫過去事件的處理常式。 值`false`會呼叫處理器，以處理未來事件。 預設值為`true`。
+* **triggerForPastEvents:** (Boolean)指出是否應針對過去發生的事件執行處理常式。值`true`會呼叫過去事件的處理常式。 值`false`會呼叫處理器，以處理未來事件。 預設值為 `true`.
 
 **退貨**
 
