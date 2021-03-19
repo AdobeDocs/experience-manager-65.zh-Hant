@@ -2,10 +2,11 @@
 title: 中繼資料功能的設定和管理。
 description: 配置和管理與元資料添加和管理相關的 [!DNL Experience Manager Assets] 功能。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1954'
 ht-degree: 5%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 5%
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
 -->
 
-[!DNL Adobe Experience Manager Assets] 保留每個資產的中繼資料。它可讓資產的分類和組織更輕鬆，並協助尋找特定資產的人。 透過使用資產保留和管理中繼資料的能力，您可以根據資產的中繼資料自動組織及處理資產。 [!DNL Adobe Experience Manager Assets] 可讓管理員設定和自訂中繼資料功能，以修改預設的Adobe產品。
+[!DNL Adobe Experience Manager Assets] 保留每個資產的中繼資料。它可讓資產的分類和組織更輕鬆，並協助尋找特定資產的人。 透過使用資產保留和管理中繼資料的能力，您可以根據資產的中繼資料自動組織及處理資產。 [!DNL Adobe Experience Manager Assets] 可讓管理員設定和自訂中繼資料功能，以修改預設Adobe方案。
 
 ## 編輯中繼資料結構{#metadata-schema}
 
@@ -32,7 +33,7 @@ ht-degree: 5%
 1. 訪問節點類型管理頁`https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`。
 1. 要訪問命名空間管理頁，請按一下頁面頂部的&#x200B;**[!UICONTROL 名稱空間]**。
 1. 若要新增命名空間，請按一下頁面底部的&#x200B;**[!UICONTROL New]**。
-1. 在XML命名空間慣例中指定自訂命名空間。 以URI的形式指定ID，並為ID指定相關首碼。 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 在XML命名空間慣例中指定自訂命名空間。 以URI的形式指定ID，並為ID指定相關首碼。 按一下「**[!UICONTROL 儲存]**」。
 
 ## 設定大量中繼資料更新的限制{#bulk-metadata-update-limit}
 
@@ -40,7 +41,7 @@ ht-degree: 5%
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-若要變更限制，請存取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**，並變更&#x200B;**[!UICONTROL Apache Sling請求參數處理]** OSGi組態中的&#x200B;**[!UICONTROL 最大POST參數]**&#x200B;值。
+若要變更限制，請存取&#x200B;**[!UICONTROL 工具]**>**[!UICONTROL 操作]**>**[!UICONTROL Web主控台]**，並變更&#x200B;**[!UICONTROL Apache Sling請求參數處理]** OSGi組態中的&#x200B;**[!UICONTROL 最大POST參數]**&#x200B;值。
 
 ## 中繼資料設定檔 {#metadata-profiles}
 
@@ -135,11 +136,11 @@ To apply a metadata profile globally, follow these steps:
 
 ### 從{#add-a-folder-metadata-schema-form}中添加資料夾元資料架構
 
-使用資料夾元資料結構表單編輯器可建立和編輯資料夾的元資料結構。
+使用資料夾元資料結構Forms編輯器建立和編輯資料夾的元資料結構。
 
 1. 在[!DNL Experience Manager]介面中，移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 資料夾中繼資料結構]**。
-1. 在[!UICONTROL 資料夾元資料結構表單]頁上，按一下&#x200B;**[!UICONTROL 建立]**。
-1. 指定表單的名稱，然後按一下「建立&#x200B;**[!UICONTROL 」。]**&#x200B;新模式表單列在[!UICONTROL 模式表單]頁中。
+1. 在[!UICONTROL 資料夾元資料結構Forms]頁上，按一下&#x200B;**[!UICONTROL 建立]**。
+1. 指定表單的名稱，然後按一下「建立&#x200B;**[!UICONTROL 」。]**&#x200B;新模式表單列在[!UICONTROL 模式Forms]頁中。
 
 ### 編輯資料夾元資料結構表單{#edit-folder-metadata-schema-forms}
 
@@ -150,7 +151,7 @@ To apply a metadata profile globally, follow these steps:
 
 您可以將這些表單項目映射／配置到CRX儲存庫中元資料節點中的欄位。 您可以將新標籤或表單項目新增至中繼資料結構表單。
 
-1. 在「方案表單」頁中，選擇您建立的表單，然後從工具欄中選擇&#x200B;**[!UICONTROL 編輯]**&#x200B;選項。
+1. 在「方案Forms」頁中，選擇您建立的表單，然後從工具欄中選擇&#x200B;**[!UICONTROL 編輯]**&#x200B;選項。
 1. 在「資料夾元資料結構編輯器」頁中，按一下`+`將頁籤添加到窗體中。 若要重新命名標籤，請按一下預設名稱，並在&#x200B;**[!UICONTROL Settings]**&#x200B;下指定新名稱。
 
    ![custom_tab](assets/custom_tab.png)
@@ -198,7 +199,7 @@ To apply a metadata profile globally, follow these steps:
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資料夾的元資料節點中作為屬性 `dc:title`。
 
-* `./jcr:created`:在資料夾的節點顯示JCR屬性。如果您在CRXDE中設定這些屬性，Adobe建議您將它們標示為「停用編輯」，因為這些屬性受到保護。 否則，在保存資產屬性時，將發生錯誤「 `Asset(s) failed to modify`」。
+* `./jcr:created`:在資料夾的節點顯示JCR屬性。如果您在CRXDE中設定這些屬性，Adobe建議您將它們標示為「停用編輯」，因為它們受到保護。 否則，在保存資產屬性時，將發生錯誤「 `Asset(s) failed to modify`」。
 
 要確保元資料架構表單中元件正確顯示，請勿在屬性路徑中包含空格。
 
@@ -214,20 +215,20 @@ To apply a metadata profile globally, follow these steps:
 
 ### 刪除資料夾元資料架構表單{#delete-folder-metadata-schema-forms}
 
-可以從「資料夾元資料結構表單」頁刪除資料夾元資料結構表單。 要刪除表單，請選擇表單，然後從工具欄中按一下刪除選項。
+可以從「資料夾元資料結構」「Forms」頁刪除資料夾元資料結構表單。 要刪除表單，請選擇表單，然後從工具欄中按一下刪除選項。
 
 ![delete_form](assets/delete_form.png)
 
 ### 指派資料夾中繼資料結構{#assign-a-folder-metadata-schema}
 
-您可以從「資料夾元資料結構表單」頁或建立資料夾時，將資料夾元資料結構分配給資料夾。
+您可以從「資料夾元資料結構」「Forms」頁或在建立資料夾時將資料夾元資料結構分配給資料夾。
 
 如果為資料夾配置元資料模式，則模式表單的路徑將儲存在`./jcr:content`下資料夾節點的`folderMetadataSchema`屬性中。
 
 #### 從「資料夾元資料結構」頁{#assign-to-a-schema-from-the-folder-metadata-schema-page}分配到結構
 
 1. 在[!DNL Experience Manager]介面中，移至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 資料夾中繼資料結構]**。
-1. 從「資料夾元資料結構表單」頁中，選擇要應用於資料夾的結構結構表單。
+1. 從「資料夾元資料結構」「Forms」頁中，選擇要應用於資料夾的結構形式。
 1. 在工具欄中，按一下&#x200B;**[!UICONTROL 應用到資料夾]**。
 
 1. 選擇要應用模式的資料夾，然後按一下&#x200B;**[!UICONTROL Apply]**。 如果資料夾上已套用中繼資料結構，會出現警告訊息通知您即將覆寫現有的中繼資料結構。 按一下&#x200B;**[!UICONTROL 覆寫]**。
@@ -270,7 +271,7 @@ To apply a metadata profile globally, follow these steps:
 >
 >* [中繼資料概念與理解](metadata-concepts.md)。
 >* [編輯多個系列的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)。
->* [在Experience Manager Assets中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
+>* [中繼資料在Experience Manager資產中匯入和匯出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
 >* [處理中繼資料、影像和視訊的設定檔](processing-profiles.md)。
 >* [最佳實務：組織您的數位資產，以使用處理設定檔](/help/assets/organize-assets.md)。
 >* [XMP回寫](/help/assets/xmp-writeback.md)。
