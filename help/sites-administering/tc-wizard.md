@@ -1,8 +1,8 @@
 ---
 title: 語言複製精靈
 seo-title: 語言複製精靈
-description: 瞭解如何在AEM中使用「語言複製精靈」。
-seo-description: 瞭解如何在AEM中使用「語言複製精靈」。
+description: 瞭解如何使用中的語言複製精AEM靈。
+seo-description: 瞭解如何使用中的語言複製精AEM靈。
 uuid: a6168f5d-cce7-48bd-a898-171319621460
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,11 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
