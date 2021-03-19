@@ -1,6 +1,6 @@
 ---
-title: 社群訂閱
-seo-title: 社群訂閱
+title: Communities 訂閱
+seo-title: Communities 訂閱
 description: 社群成員透過電子郵件與其他成員互動
 seo-description: 社群成員透過電子郵件與其他成員互動
 uuid: a4b98769-c219-4e18-8e80-9a806ab979ff
@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 0%
+source-wordcount: '362'
+ht-degree: 2%
 
 ---
 
 
-# 社群訂閱{#communities-subscriptions}
+# Communities 訂閱 {#communities-subscriptions}
 
 ## 概覽 {#overview}
 
