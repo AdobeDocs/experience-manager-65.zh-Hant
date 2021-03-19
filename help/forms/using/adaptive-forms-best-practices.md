@@ -1,16 +1,17 @@
 ---
 title: 使用最適化表單的最佳範例
 seo-title: 使用最適化表單的最佳範例
-description: 說明設定AEM Forms專案、開發最適化表單以及最佳化AEM Forms系統效能的最佳實務。
-seo-description: 說明設定AEM Forms專案、開發最適化表單以及最佳化AEM Forms系統效能的最佳實務。
+description: 說明建立AEM Forms專案、開發最適化表單以及最佳化AEM Forms系統效能的最佳實務。
+seo-description: 說明建立AEM Forms專案、開發最適化表單以及最佳化AEM Forms系統效能的最佳實務。
 uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4296'
+source-wordcount: '4298'
 ht-degree: 0%
 
 ---
@@ -20,33 +21,33 @@ ht-degree: 0%
 
 ## 概覽 {#overview}
 
-Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單、愉悅的數位體驗。 但是，它需要共同努力來建置、建立、執行和維護有效率且具生產力的AEM Forms生態系統。
+Adobe Experience Manager(AEM)表格可協助您將複雜的交易轉換為簡單、愉悅的數位體驗。 但是，它需要共同努力來實施、建立、執行和維護一個高效和富有成效的AEM Forms生態系統。
 
-本檔案提供管理員、作者和開發人員在使用AEM Forms時可從中獲益的准則和建議，尤其是最適化表單元件。 它討論從設定表單開發專案到設定、自訂、製作和最佳化AEM Forms的最佳實務。 這些最佳實務可共同協助AEM Forms生態系統的整體效能。
+本檔案提供管理員、作者和開發人員在使用AEM Forms時可從中獲益的准則和建議，尤其是最適化表單元件。 它討論從設定表單開發專案到設定、自訂、製作和最佳化AEM Forms的最佳實務。 這些最佳做法共同有助於AEM Forms生態系統的整體業績。
 
-此外，以下是一般AEM最佳實務的建議讀取：
+此外，以下是一般最佳實務的建議讀AEM數：
 
 * [最佳實務：部署和維護AEM](/help/sites-deploying/best-practices.md)
 * [最佳實務：製作內容](/help/sites-authoring/best-practices.md)
 * [最佳實務：管理AEM](/help/sites-administering/administer-best-practices.md)
 * [最佳實務：開發解決方案](/help/sites-developing/best-practices.md)
 
-## 設定和設定AEM Forms {#set-up-and-configure-aem-forms}
+## 設定和配置AEM Forms{#set-up-and-configure-aem-forms}
 
 ### 設定表單開發專案{#setting-up-forms-development-project}
 
-簡化和標準化的專案結構可大幅降低開發和維護工作。 Apache Maven是建立AEM專案時建議使用的開放原始碼工具。
+簡化和標準化的專案結構可大幅降低開發和維護工作。 Apache Maven是建立專案時建議使用的開放原始碼AEM工具。
 
-* 使用Apache Maven `aem-project-archetype`來建立和管理AEM專案的結構。 它會為您的AEM專案建立建議的結構和範本。 此外，它還提供建置自動化和變更控制系統，以協助管理專案。
+* 使用Apache Maven `aem-project-archetype`來建立和管理專案的結AEM構。 它會為您的專案建立建議的結構AEM和範本。 此外，它還提供建置自動化和變更控制系統，以協助管理專案。
 
    * 使用maven `archetype:generate`命令生成初始結構。
    * 使用maven `eclipse:eclipse`命令產生eclipse專案檔案，並將專案匯入eclipse。
 
-如需詳細資訊，請參閱[如何使用Apache Maven](/help/sites-developing/ht-projects-maven.md)建立AEM專案。
+如需詳細資訊，請參閱[如何使用Apache MavenAEM](/help/sites-developing/ht-projects-maven.md)建立專案。
 
-* FileVault工具或VLT可協助您將CRX或AEM例項的內容對應至您的檔案系統。 它提供變更控制管理作業，例如登入和登出AEM專案內容。 請參閱[如何使用VLT工具](/help/sites-developing/ht-vlttool.md)。
+* FileVault工具或VLT可幫助您將CRX或實例的內AEM容映射到檔案系統。 它提供了變更控制管理操作，如項目內容的登入和登AEM出。 請參閱[如何使用VLT工具](/help/sites-developing/ht-vlttool.md)。
 
-* 如果您使用Eclipse整合的開發環境，您可以使用AEM Developer工具，將Eclipse IDE與AEM例項完美整合，以建立AEM應用程式。 如需詳細資訊，請參閱[AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md)。
+* 如果您使用Eclipse整合的開發環境，則可以使用開發人員工具，將Eclipse IDE與例項AEM順暢整合，以建立AEM應用程AEM式。 如需詳細資訊，請參閱[AEM Eclipse的開發人員工具](/help/sites-developing/aem-eclipse.md)。
 
 * 請勿在/libs資料夾中儲存任何內容或進行任何修改。 在/app資料夾中建立覆蓋，以延伸或覆寫預設功能。
 
@@ -60,15 +61,15 @@ Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單
 
 ### 規劃編寫環境{#planning-for-authoring-environment}
 
-在您設定AEM專案後，請定義編寫和自訂最適化表單範本和元件的策略。
+設定專案後，AEM請定義製作和自訂最適化表單範本和元件的策略。
 
-* 最適化表單範本是專用的AEM頁面，可定義最適化表單的結構和頁首——頁尾資訊。 範本具有預先設定的版面配置、樣式和最適化表單的基本結構。 AEM Forms提供現成可用的範本和元件，讓您用來製作最適化表單。 不過，您可以根據需求建立自訂範本和元件。 建議您收集在最適化表單中需要的其他範本和元件需求。 如需詳細資訊，請參閱[自訂最適化表單和元件](/help/forms/using/adaptive-forms-best-practices.md#customize-components)。
-* AEM Forms可讓您根據下清單單模型建立最適化表單。 表單模型充當表單與AEM系統之間資料交換的介面，並為最適化表單內外的資料流提供XML架構。 另外，表單模型以模式和XFA約束的形式對自適應表單施加規則和約束。
+* 最適化表單範本是一AEM個專用頁面，定義最適化表單的結構和頁首——頁尾資訊。 範本具有預先設定的版面配置、樣式和最適化表單的基本結構。 AEM Forms提供現成可用的範本和元件，供您用來製作最適化表單。 不過，您可以根據需求建立自訂範本和元件。 建議您收集在最適化表單中需要的其他範本和元件需求。 如需詳細資訊，請參閱[自訂最適化表單和元件](/help/forms/using/adaptive-forms-best-practices.md#customize-components)。
+* AEM Forms可讓您根據下清單單模型建立最適化表單。 表單模型用作表單與系統之間資料交換的介面AEM，並為自適應表單內外的資料流提供基於XML的結構。 另外，表單模型以模式和XFA約束的形式對自適應表單施加規則和約束。
 
    * **無**:使用此選項建立的最適化表單不會使用任何表單模型。從這種表單中生成的資料XML具有平坦的結構，具有欄位和相應的值。
    * **XML或JSON結構描述**:XML和JSON結構描述資料由組織中的後端系統產生或使用的結構。您可以將架構與最適化表單建立關聯，並使用其元素將動態內容新增至最適化表單。 架構的元素可在內容瀏覽器的「資料模型物件」索引標籤中使用，以製作最適化表單。 您可以拖放架構元素來建立表單。
    * **XFA表單範本**:如果您投資於以XFA為基礎的HTML5表單，這是理想的表單模型。它提供將XFA型表單轉換為最適化表單的直接方式。 任何現有的XFA規則都會保留在相關的最適化表單中。 產生的最適化表單支援XFA結構，例如驗證、事件、屬性和模式。
-   * **表單資料模型**:如果您想要整合後端系統（例如資料庫、網站服務和AEM使用者設定檔），以預先填寫最適化表單，並將提交的表單資料寫回後端系統，則此為偏好的表單模型。表單資料模型編輯器可讓您定義並設定表單資料模型中的實體和服務，以便用來建立最適化表單。 如需詳細資訊，請參閱[AEM Forms Data Integration](/help/forms/using/data-integration.md)。
+   * **表單資料模型**:如果您想要整合後端系統（例如資料庫、web services和使用者設定檔），以預先填寫最適化表單，並將提交的表單資料寫回後端系統，則此為偏好的表單模型。表單資料模型編輯器可讓您定義並設定表單資料模型中的實體和服務，以便用來建立最適化表單。 如需詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
 
 請務必謹慎選擇不僅符合您需求的資料模型，而且延伸您對XFA和XSD資產的現有投資（如果有的話）。 建議使用XSD模型來建立表單範本，因為產生的XML會依照架構定義的XPATH包含資料。 使用XSD模型作為表單資料模型的預設選擇，也有助於將表單設計與處理和使用資料的後端系統解耦，而且由於表單欄位的一對一對應，因此可改善表單的效能。 此外，欄位的BindRef也可以使其資料值在XML中的XPATH。
 
@@ -78,7 +79,7 @@ Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單
 
 ### 自定義最適化表單和元件{#customize-components}
 
-* AEM Forms提供現成可用的最適化表單範本，供您用來建立最適化表單。 您也可以建立自己的範本。 AEM提供靜態和可編輯的範本。
+* AEM Forms提供現成可用的可調式表單範本，讓您用來建立可調式表單。 您也可以建立自己的範本。 提供靜AEM態和可編輯的範本。
 
    * 靜態範本由開發人員定義和設定。
    * 可編輯的範本由作者使用範本編輯器建立。 範本編輯器可讓您定義範本中的基本結構和初始內容。 結構層中的任何修改都會反映在使用該模板的所有表單中。 初始內容可包括預先配置的主題、預填充服務、提交動作等。 不過，這些設定可使用表單編輯器來修改表單。 如需詳細資訊，請參閱[最適化表單範本](/help/forms/using/template-editor.md)。
@@ -90,7 +91,7 @@ Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單
 * 最適化表單提供面板版面配置，例如互動式、標籤式、收合式和精靈，以控制表單元件在面板中的排版方式。 您可以建立自訂面板版面，並讓表單作者使用。 如需詳細資訊，請參閱[建立最適化表單的自訂版面元件](/help/forms/using/custom-layout-components-forms.md)。
 * 您也可以自訂特定的最適化表單元件，例如欄位和面板版面。
 
-   * 使用AEM的[Overlay](/help/sites-developing/overlays.md)功能來修改元件的復本。 不建議修改預設元件。
+   * 使用的[Overlay](/help/sites-developing/overlays.md)功能可修AEM改元件的副本。 不建議修改預設元件。
    * 若要自訂/libs中現成可用的最適化表單元件的版面，除了[預設版面](/help/forms/using/layout-capabilities-adaptive-forms.md)外，[還可建立自訂版面元件](/help/forms/using/custom-layout-components-forms.md)。
    * 建立自訂介面工具集或外觀，以引入自訂互動活動。 不建議修改預設元件。 如需詳細資訊，請參閱[外觀架構](/help/forms/using/introduction-widgets.md)。
 
@@ -102,9 +103,9 @@ Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單
 
 * 使用側欄中的「物件」瀏覽器，快速存取表單階層中深層的欄位。 您可以使用搜索框在表單或對象樹中搜索對象，以便從一個對象導航到另一個對象。
 * 要在邊欄的元件瀏覽器中查看和編輯元件的屬性，請選擇該元件並按一下![cmppr-1](assets/cmppr-1.png)。 您也可以按兩下元件，在屬性瀏覽器中檢視其屬性。
-* 使用鍵盤快速鍵，在表單上快速動作。 請參閱[AEM Forms Keyboard Shortcuts](/help/forms/using/keyboard-shortcuts.md)。
+* 使用鍵盤快速鍵，在表單上快速動作。 請參閱[AEM Forms鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)。
 
-* 建議只在最適化表單頁面中使用最適化表單元件。 這些元件對其父級層次具有依賴性。 因此，請勿在AEM頁面中使用它們。
+* 建議只在最適化表單頁面中使用最適化表單元件。 這些元件對其父級層次具有依賴性。 因此，請勿在頁面中使AEM用。
 
 此外，請參閱[製作最適化表單簡介](/help/forms/using/introduction-forms-authoring.md)中的元件說明和最佳實務。
 
@@ -122,7 +123,7 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 * 依相對唯一階層來參考元件，以避免任何衝突。 例如，`parentName.fieldName`。
 
 * 在處理複雜或常用的規則時，請考慮將商業邏輯編寫為個別用戶端程式庫中的函式，以便您指定並跨調適性表單重複使用。 用戶端程式庫應是獨立的程式庫，除jQuery和Undershore.js外，不應有任何外部相依性。 您也可以使用用戶端程式庫，對已提交的表單資料強制[伺服器端重新驗證](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form)。
-* 最適化表單提供一組API，您可用來與最適化表單通訊，並對其執行動作。 部分關鍵API如下。 如需詳細資訊，請參閱[適用於Adaptive Forms](https://adobe.com/go/learn_aemforms_documentation_63)的JavaScript程式庫API參考。
+* 最適化表單提供一組API，您可用來與最適化表單通訊，並對其執行動作。 部分關鍵API如下。 如需詳細資訊，請參閱適用於Forms的[JavaScript程式庫API參考](https://adobe.com/go/learn_aemforms_documentation_63)。
 
    * `guideBridge.reset()`:重設表單。
    * `guideBridge.submit()`:提交表格。
@@ -177,13 +178,13 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 
 您可以預先填入從後端擷取的資料，以協助使用者快速填入表格並避免輸入錯誤。
 
-* AEM Forms提供預先填寫服務，可從預先定義的資料XML檔案讀取資料，並以預先填寫的XML檔案中的內容預先填寫最適化表單的欄位。
+* AEM Forms提供預填服務，以讀取預先定義之資料XML檔案中的資料，並以預填XML檔案中的內容預填最適化表單的欄位。
 * 預填充資料XML必須與與自適應表單相關聯的表單模型的模式相容。
 * 在預填充XML中包括`afBoundedData`和`afUnBoundedData`區段，以在自適應表單中預填充綁定和未綁定欄位。
 
-* 針對以表單資料模型為基礎的最適化表單，AEM Forms提供現成可用的表單資料模型預填服務。 預填充服務在自適應表單中查詢資料模型對象的資料源，並在呈現表單時預填充欄位值。
+* 對於基於表單資料模型的自適應表單，AEM Forms提供現成可用的表單資料模型預填充服務。 預填充服務在自適應表單中查詢資料模型對象的資料源，並在呈現表單時預填充欄位值。
 * 您也可以使用檔案、crx、服務或http通訊協定，預先填寫最適化表單。
-* AEM Forms支援自訂的預填服務，您可將這些服務外掛為OSGi服務，以預填最適化表單。
+* AEM Forms支援自訂的預填服務，您可將其外掛為OSGi服務，以預填最適化表單。
 
 如需詳細資訊，請參閱[預填最適化表單欄位](/help/forms/using/prepopulate-adaptive-form-fields.md)。
 
@@ -195,9 +196,9 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 * 如果預設提交操作不符合您的使用案例，您可以編寫自定義提交操作。 如需詳細資訊，請參閱[針對最適化表單撰寫自訂提交動作](/help/forms/using/custom-submit-action-form.md)。
 * 包含伺服器端驗證，以防止提交無效的資料。
 
-您可以在最適化表單中運用Adobe Sign的多重簽署體驗。 在最適化表單中設定Adobe Sign時，請考慮下列事項。 如需詳細資訊，請參閱[在最適化格式](/help/forms/using/working-with-adobe-sign.md)中使用Adobe Sign。
+您可以運用Adobe Sign的多重簽名體驗，以最適化表單呈現。 在最適化表單中配置Adobe Sign時，請考慮以下事項。 如需詳細資訊，請參閱[以最適化形式使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md)。
 
-* 啟用Adobe Sign的最適化表單必須在所有簽署者簽署表單後才能送出。 表單會以「待簽署」狀態顯示，直到所有簽署者簽署表單為止。
+* Adobe Sign啟用的調適性表格必須在所有簽署者簽署表格後才會送出。 Forms會以「待簽署」狀態顯示，直到所有簽署者簽署表單為止。
 * 您可以設定表單內簽署體驗，或在提交時將簽署者重新導向至簽署頁面。
 * 視需要設定循序或平行的簽署體驗。
 
@@ -218,7 +219,7 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 
 ### 調試和測試最適化表單{#debugging-and-testing-adaptive-forms}
 
-[AEM Chrome Plug-inis是Google Chrome的瀏](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) 覽器擴充功能，提供調試最適化表單的工具。表單作者和開發人員可使用這些工具：
+[Chrome Plug-](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) inis是Google Chrome的瀏覽器擴充功能，提供調試最適化表單的工具。表單作者和開發人員可使用這些工具：
 
 * 找出表單轉換的瓶頸並最佳化效能
 * 在表單中除錯關鍵字和bindRef錯誤
@@ -226,9 +227,9 @@ AEM Forms提供[規則編輯器](/help/forms/using/rule-editor.md)，可讓您�
 * 表單中的除錯規則和指令碼
 * 探索並瞭解guideBridge API
 
-如需詳細資訊，請參閱[AEM Chrome外掛程式——最適化表單](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)。
+如需詳細資訊，請參閱AEM[ Chrome外掛程式——最適化表單](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)。
 
-Calvin SDK是Adaptive Forms開發人員用來測試Adaptive Forms的公用API。 Calvin SDK建立在[Hobbes.js測試架構](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)之上。 您可使用架構來測試下列項目：
+Calvin SDK是一個公用API，可供Adaptive Forms開發人員用來測試AdaptiveForms。 Calvin SDK建立在[Hobbes.js測試架構](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)之上。 您可使用架構來測試下列項目：
 
 * 最適化表單的轉譯體驗
 * 最適化表單的預填體驗
@@ -239,7 +240,7 @@ Calvin SDK是Adaptive Forms開發人員用來測試Adaptive Forms的公用API。
 
 如需詳細資訊，請參閱[自動測試最適化表單](/help/forms/using/calvin.md)。
 
-### 驗證AEM伺服器{#validating-adaptive-forms-on-aem-server}上的最適化表單
+### 驗證伺服器AEM{#validating-adaptive-forms-on-aem-server}上的自適應表單
 
 需要進行伺服器端驗證，以防止任何嘗試略過用戶端驗證，以及資料提交和違反業務規則的可能危害。 伺服器端驗證是透過載入所需的用戶端程式庫來在伺服器上執行。
 
@@ -248,7 +249,7 @@ Calvin SDK是Adaptive Forms開發人員用來測試Adaptive Forms的公用API。
 
 ### 本地化最適化表單{#localizing-adaptive-forms}
 
-AEM提供翻譯工作流程，讓您用來本地化最適化表單。 如需詳細資訊，請參閱[使用AEM轉譯工作流程來本地化最適化表單](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
+提AEM供翻譯工作流程，讓您用來本地化最適化表單。 有關資訊，請參見[使AEM用翻譯工作流程本地化最適化表單](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
 
 在本地化自適應表單時的一些最佳做法如下：
 
@@ -258,52 +259,52 @@ AEM提供翻譯工作流程，讓您用來本地化最適化表單。 如需詳�
 
    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* AEM Forms目前支援以英文(en)、西班牙文(es)、法文(fr)、義大利文(it)、德文(de)、日文(ja)、葡萄牙文——巴西(pt-BR)、中文(zh-CN)、中文——台灣(zh-TW)和韓文(ko-KR)語言環境將調適性表單內容本地化。 不過，您可以在執行時期新增對最適化表單新地區設定的支援。 如需詳細資訊，請參閱[支援最適化表單本地化的新地區設定](/help/forms/using/supporting-new-language-localization.md)。
+* AEM Forms目前支援以英文(en)、西班牙文(es)、法文(fr)、義大利文(it)、德文(de)、日文(ja)、葡萄牙文——巴西(pt-BR)、中文(zh-CN)、中文——台灣(zh-TW)和韓文(ko-KR)地區語言，將調適性表單內容本地化。 不過，您可以在執行時期新增對最適化表單新地區設定的支援。 如需詳細資訊，請參閱[支援最適化表單本地化的新地區設定](/help/forms/using/supporting-new-language-localization.md)。
 
 ## 準備製作表單專案{#prepare-forms-project-for-production}
 
 ### 添加表單處理伺服器{#adding-forms-processing-server}
 
-您可以設定位於安全區防火牆後方的額外AEM Forms伺服器例項。 您可將此例項用於：
+您可以配置位於安全區防火牆後方的AEM Forms伺服器的附加實例。 您可將此例項用於：
 
 * **批次處理**:以大量負載的批次重複或排程的作業。例如，列印陳述式、產生對應，以及使用檔案服務（例如PDF產生器、輸出和匯編器）。
 * **儲存PII資料**:將PII資料儲存至處理伺服器。如果您已使用自訂儲存提供者來儲存PII資料，則不需要此選項。
 
 ### 將項目移至其他環境{#moving-project-to-another-environment}
 
-您通常需要將AEM專案從一個環境移至另一個環境。 移動時要記住的一些關鍵事項如下：
+您通常需要將專案從一AEM個環境移至另一個環境。 移動時要記住的一些關鍵事項如下：
 
 * 備份您現有的用戶端程式庫、自訂程式碼和設定。
 * 在新環境中按照指定順序手動部署產品包和修補程式。
-* 以手動方式部署專案專用的程式碼套件和套件組合，並將它們當成個別的套件或套件組合，放在新的AEM伺服器上。
-* (*AEM Forms on JEE only*)在Forms Workflow伺服器上手動部署LCA和DSC。
+* 手動部署專案專用的程式碼套件和組合，並將之作為個別的套件或組合部署在新伺服器AEM上。
+* (*JEE上的AEM Forms僅*)在Forms Workflow伺服器上手動部署LCA和DSC。
 * 使用[Export-Import](/help/forms/using/import-export-forms-templates.md)功能將資產移至新環境。 您也可以配置複製代理並發佈資產。
 * 升級時，請以新的API和功能取代所有已過時的API和功能。
 
-### 設定AEM {#configuring-aem}
+### 配AEM置{#configuring-aem}
 
-以下是設定AEM以改善整體效能的一些最佳實務：
+配置以改進整AEM體效能的一些最佳實務如下：
 
 * 從Felix Console為JavaScript和CSS啟用HTML用戶端程式庫壓縮。 請參閱[Clientlibs，其說明由example](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)說明。
-* 快取`/etc.clientlibs/fd`處的所有用戶端程式庫，以及AEM Dispatcher上任何其他自訂用戶端程式庫，以提高已發佈表單的回應速度與安全性。 有關詳細資訊，請參見[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
+* 快取`/etc.clientlibs/fd`處的所有用戶端程式庫，以及Dispatcher上任何其他自訂用戶端程式庫，以AEM提高已發佈表單的回應速度與安全性。 有關詳細資訊，請參見[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
 
 * 不快取`/content/forms/af/`和`/content/dam/formsanddocuments/*`路徑。 有關配置自適應表單快取的詳細資訊，請參見[快取自適應表單](/help/forms/using/configure-adaptive-forms-cache.md)。
 
-* 透過網頁伺服器壓縮模組啟用HTML。 如需詳細資訊，請參閱[AEM Forms伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)。
+* 透過網頁伺服器壓縮模組啟用HTML。 有關詳細資訊，請參見[AEM Forms伺服器的效能調整。](/help/forms/using/performance-tuning-aem-forms.md)
 * 增加大型表單的每個請求組態的呼叫。 請參閱[優化大型和複雜表單的效能](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms)。
 * 建立[由錯誤處理程式](https://helpx.adobe.com/experience-manager/6-2/sites-developing/customizing-errorhandler-pages.html)顯示的自定義錯誤頁。
-* 保全AEM Forms伺服器。
+* 安全的AEM Forms伺服器。
 
-   * 使用`nosamplecontent`執行模式，確保生產伺服器上沒有部署示例內容和示例用戶。 請參閱[在生產就緒模式中執行AEM](/help/sites-administering/production-ready.md)。
+   * 使用`nosamplecontent`執行模式，確保生產伺服器上沒有部署示例內容和示例用戶。 請參閱[在生AEM產就緒模式中運行](/help/sites-administering/production-ready.md)。
 
-* 將堆大小保持在至少8 GB。 如需其他設定，請參閱[AEM Forms伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)。
+* 將堆大小保持在至少8 GB。 有關其他設定，請參見[AEM Forms伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)。
 * 使用服務用戶會話而不是管理會話來執行服務級別任務。 如需詳細資訊，請參閱[服務驗證](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)。
 
 >[!VIDEO](https://vimeo.com/)
 
 ### 為草稿和提交的表單資料配置外部儲存{#external-storage}
 
-在生產環境中，建議不要將提交的表單資料儲存在AEM儲存庫中。 Forms Portal Store、Store Content和Store PDF提交動作的預設實作會將表單資料儲存在AEM儲存庫中。 這些提交動作僅用於演示目的。 此外，「儲存和繼續」和「自動儲存」功能預設會使用入口儲存空間。 因此，請考慮以下建議：
+在生產環境中，建議不要將提交的表單資料儲存在儲存庫AEM中。 Forms門戶商店、儲存內容和儲存PDF提交動作的預設實作，會將表單資料儲存在儲存AEM庫中。 這些提交動作僅用於演示目的。 此外，「儲存和繼續」和「自動儲存」功能預設會使用入口儲存空間。 因此，請考慮以下建議：
 
 * **儲存草稿資料**:如果您使用最適化表單的「草稿」功能，則應實作自訂的「服務提供介面」(SPI)，將草稿資料儲存在更安全的儲存中，例如資料庫。如需詳細資訊，請參閱[將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)。
 
@@ -311,7 +312,7 @@ AEM提供翻譯工作流程，讓您用來本地化最適化表單。 如需詳�
 
    您也可以撰寫自訂的提交動作，將表單資料和附件儲存在安全儲存空間中。 如需詳細資訊，請參閱[撰寫最適化表單的自訂提交動作](/help/forms/using/custom-submit-action-form.md)。
 
-* **草稿ID的長度**:將最適化表單另存為草稿時，會產生草稿ID以唯一識別草稿。草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設為26個以上字元。
+* **草稿ID的長度**:將最適化表單另存為草稿時，會產生草稿ID以唯一識別草稿。草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設為26個或更多字元。
 
 ### 處理個人識別資訊{#handling-personally-identifiable-information}
 
