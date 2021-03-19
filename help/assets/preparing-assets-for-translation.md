@@ -2,10 +2,11 @@
 title: 準備翻譯資產
 description: 建立語言根資料夾，以準備要翻譯的資產，以支援多語言資產。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 1d3e908eafa1cdcbc6ef557da509f12cdd9418cc
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
