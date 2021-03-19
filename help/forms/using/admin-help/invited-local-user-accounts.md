@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -97,7 +98,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->透過AEM Forms使用者管理介面刪除的受邀使用者，在使用下列程式再次刪除之前，無法重新加入。
+>透過表單使用者管理介面刪除的AEM受邀使用者，在使用下列程式再次刪除之前，無法重新加入。
 
 1. 在管理主控台中，按一下「服務> Document Security >已邀請的使用者和本機使用者」，然後按一下「已邀請的使用者」標籤。
 1. 選取一或多個使用者旁的核取方塊，按一下「刪除」，然後按一下「確定」。
