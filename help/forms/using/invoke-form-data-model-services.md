@@ -7,10 +7,11 @@ uuid: 40561086-e69d-4e6a-9543-1eb2f54cd836
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 ## 概覽 {#overview}
 
-AEM Forms可讓表單作者從最適化表單欄位中叫用表單資料模型中設定的服務，進一步簡化並增強表單填寫體驗。 若要叫用資料模型服務，您可以在視覺編輯器中建立規則，或在[規則編輯器](/help/forms/using/rule-editor.md)的程式碼編輯器中使用`guidelib.dataIntegrationUtils.executeOperation` API指定JavaScript。
+AEM Forms公司使表單作者能夠從自適應表單欄位中調用表單資料模型中配置的服務，從而進一步簡化並增強表單填寫體驗。 若要叫用資料模型服務，您可以在視覺編輯器中建立規則，或在[規則編輯器](/help/forms/using/rule-editor.md)的程式碼編輯器中使用`guidelib.dataIntegrationUtils.executeOperation` API指定JavaScript。
 
 本檔案著重於使用`guidelib.dataIntegrationUtils.executeOperation` API來編寫JavaScript以叫用服務。
 
@@ -125,7 +126,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, c
 
 以下示例指令碼使用`guidelib.dataIntegrationUtils.executeOperation` API調用`employeeOrder`表單資料模型中配置的`GETOrder`服務操作。
 
-`GETOrder`操作將`Order ID`表單欄位中的值作為`orderId`參數的輸入，並返回`success`回調函式中的訂單量值。  如果`success`回呼函式未傳回訂單量，則`failure`回呼函式會顯示`Error occured`訊息。
+`GETOrder`操作將`Order ID`表單欄位中的值作為`orderId`參數的輸入，並返回`success`回調函式中的訂單量值。  如果`success`回呼函式未傳回訂購量，`failure`回呼函式會顯示`Error occured`訊息。
 
 >[!NOTE]
 >
