@@ -1,17 +1,18 @@
 ---
 title: 最適化表格
 seo-title: 最適化表格
-description: AEM Forms中的Table元件可讓您在可回應行動版面的最適化表單中建立表格，也允許使用XDP表格元件。
-seo-description: AEM Forms中的Table元件可讓您在可回應行動版面的最適化表單中建立表格，也允許使用XDP表格元件。
+description: AEM Forms的表格元件可讓您以可回應行動版面的最適化表單建立表格，也允許使用XDP表格元件。
+seo-description: AEM Forms的表格元件可讓您以可回應行動版面的最適化表單建立表格，也允許使用XDP表格元件。
 uuid: 03436c81-42f0-430f-9e52-14a4ab0e877d
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 01c30e78d1f89e8c07abeb0ac19af38722010dd0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2428'
+source-wordcount: '2430'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 使用表格是呈現複雜資料的有效、簡化且有組織的方式。 它幫助用戶輕鬆地識別資訊並以行和列的有序排列提供輸入。 金融服務和政府機構的大多數表格都需要大型資料表，才能填入數字並執行計算。
 
-AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在最適化表格中建立表格。 它提供的一些關鍵功能包括：
+AEM Forms在元件瀏覽器的邊欄中提供表格元件，可讓您在最適化表單中建立表格。 它提供的一些關鍵功能包括：
 
 * 行動裝置上的互動式版面
 * 可配置的行和列
@@ -37,7 +38,7 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 
 若要建立表格，請從最適化表單的sidekick中，從元件瀏覽器拖放表格元件。 依預設，表格包含兩欄和三列，包括標題列。
 
-![AEM側欄中的表格元件](assets/sidebar-tables.png)
+![邊欄中的表AEM元件](assets/sidebar-tables.png)
 
 ### 關於標題和內文儲存格{#about-header-and-body-cells}
 
@@ -129,7 +130,7 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 
 >[!NOTE]
 >
->您可以變更LESS變數的值，以變更標題列和內文列的色彩主題。 如需詳細資訊，請參閱「AEM Forms中的[主題」](/help/forms/using/themes.md) [](/help/forms/using/creating-custom-adaptive-form-themes.md)。
+>您可以變更LESS變數的值，以變更標題列和內文列的色彩主題。 如需詳細資訊，請參閱AEM Forms的[主題](/help/forms/using/themes.md) [](/help/forms/using/creating-custom-adaptive-form-themes.md)。
 
 ## 動態地添加或刪除行{#add-or-delete-a-row-dynamically}
 
@@ -171,7 +172,7 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 
 ## 行動版面{#mobile-layouts}
 
-自適應表單的表格提供無與倫比的體驗行動裝置，因為它的版面流暢且回應速度快。 AEM Forms為表格提供兩種行動版面——左側的標題和可收合的欄。
+自適應表單的表格提供無與倫比的體驗行動裝置，因為它的版面流暢且回應速度快。 AEM Forms提供兩種類型的表格行動版面——左側的標題和可收合的欄。
 
 您可以從表格的「編輯」元件對話方塊的「樣式」索引標籤，為表格設定行動版面。
 
@@ -207,7 +208,7 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 
 ## 合併表{#merge-data-in-a-table}中的資料
 
-使用可調式表單中的表格，您可以在執行時期使用XML檔案的資料填入表格。 資料XML檔案可以駐留在執行AEM Forms伺服器的機器的本機檔案系統或CRX儲存庫中。
+使用可調式表單中的表格，您可以在執行時期使用XML檔案的資料填入表格。 資料XML檔案可以駐留在運行AEM Forms伺服器的電腦的本地檔案系統中，也可以駐留在CRX儲存庫中。
 
 讓我們舉下列銀行交易摘要表為例，其中我們要填入XML檔案中的資料。
 
@@ -289,7 +290,7 @@ AEM Forms在元件瀏覽器的邊欄中提供「表格」元件，可讓您在�
 
 ## 使用XDP元件和XSD複雜類型{#use-xdp-components-and-xsd-complex-types}
 
-如果您根據XFA表單範本建立最適化表單，XFA元素可在AEM Content Finder的「資料模型」索引標籤中使用。 您可以以最適化形式拖放這些XFA元素，包括表格。
+如果您根據XFA表單範本建立最適化表單，則XFA元素可在「內容搜尋器」的「資料模型」索引標籤AEM中使用。 您可以以最適化形式拖放這些XFA元素，包括表格。
 
 XFA表元素會映射至Table元件，並在最適化表單中立即使用。 XDP表的所有屬性和功能在移動到自適應表單時都會保留，而且您可以像使用本地自適應表單表一樣對其執行任何操作。 例如，如果XDP表中的行被標籤為可重複，則在自適應表單中刪除時也會重複該行。
 
