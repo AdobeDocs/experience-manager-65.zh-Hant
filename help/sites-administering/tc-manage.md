@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '3453'
+source-wordcount: '3455'
 ht-degree: 0%
 
 ---
