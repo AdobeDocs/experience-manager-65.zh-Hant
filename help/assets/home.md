@@ -1,12 +1,14 @@
 ---
 title: Assets 指南
-description: 本指南涵蓋所有Experience Manager Assets任務，例如如何建立、管理、傳遞和最佳化數位資產。
+description: 本指南涵蓋所有Experience Manager資產工作，例如如何建立、管理、提供和最佳化數位資產。
 user-guide-title: Assets 指南
+feature: 資產管理
+role: 業務從業人員、架構師、管理員
 translation-type: tm+mt
-source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 19%
+source-wordcount: '327'
+ht-degree: 18%
 
 ---
 
@@ -20,7 +22,7 @@ ht-degree: 19%
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
 
-* [Experience Manager 6.5發行說明](/help/release-notes/home.md)
+* [Experience Manager6.5發行說明](/help/release-notes/home.md)
 * [近期文件更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [安全性檢查清單](/help/sites-administering/security-checklist.md)
 
@@ -29,24 +31,24 @@ ht-degree: 19%
 | 使用手冊 | 說明 |
 |--- |---|
 | [發行說明](/help/release-notes/home.md) | 提供最新版本的重要資訊，包括新增的、支援的平台、已過時和已移除的功能，以及已知問題 |
-| [表單使用指南](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
+| [Forms使用手冊](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
 | [社群使用指南](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
 | [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理Experience Manager。 |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在Experience Manager中編寫內容的概念。 |
-| [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中，在Experience Manager中編寫內容的概念。 |
+| [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中以Experience Manager方式製作內容的概念。 |
 | [畫面使用指南](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數位標牌解決方案，以發佈動態互動式數位體驗。 |
-| [部署使用指南](/help/sites-deploying/home.md) | 本指南將向您展示Experience Manager的基本概念。 |
+| [部署使用指南](/help/sites-deploying/home.md) | 本指南向您展示Experience Manager的基本知識。 |
 | [開發使用指南](/help/sites-developing/home.md) | 瞭解如何建立您的Experience Manager部署。 |
-| [管理使用手冊](/help/managing/home.md) | 本指南說明如何成功管理Experience Manager專案。 |
+| [管理使用手冊](/help/managing/home.md) | 本指南說明如何成功管理Experience Manager項目。 |
 | [行動使用指南](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南說明如何與[!DNL Livefyre]共用使用者產生的內容。 |
+| [Experience ManagerLivefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南說明如何與[!DNL Livefyre]共用使用者產生的內容。 |
 
 ## 關鍵[!DNL Experience Manager]資源
 
-* [Experience Manager教學課程影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
+* [Experience Manager視訊Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/?mv=other#recommended/solutions/experience-manager)
-* [Experience Manager Assets社群論壇](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
+* [Experience Manager資產社群論壇](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [《 Dispatcher使用手冊》](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
 * [HTL使用指南](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant)
 * [核心元件使用指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
