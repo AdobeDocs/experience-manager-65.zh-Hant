@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 多語言網站通常提供多種語言的內容。 網站以一種語言編寫，然後翻譯成其他語言。 通常，多語言網站由頁面分支組成，其中每個分支包含不同語言的網站頁面。
 
-範例Geometrixx Demo Site包含數種語言分支，並使用下列結構：
+範例Geometrixx示範網站包含數種語言分支，並使用下列結構：
 
 ```xml
 /content
@@ -46,7 +47,7 @@ ht-degree: 0%
 1. 編寫您的語言大師的內容。
 1. 為您的網站建立每個語言副本的語言根目錄。 例如，Geometrixx範例網站的法文語言副本為/content/geometrixx/fr。
 
-在準備翻譯內容後，您可以自動在語言副本和相關的翻譯項目中建立缺少的頁面。 （請參閱[建立翻譯項目](/help/sites-administering/tc-manage.md)。） 如需AEM中內容轉譯程式的概觀，請參閱[多語言網站的轉譯內容](/help/sites-administering/translation.md)。
+在準備翻譯內容後，您可以自動在語言副本和相關的翻譯項目中建立缺少的頁面。 （請參閱[建立翻譯項目](/help/sites-administering/tc-manage.md)。） 有關中的內容翻譯過程的概AEM述，請參閱[多語言網站的翻譯內容](/help/sites-administering/translation.md)。
 
 ## 建立語言根{#creating-a-language-root}
 
@@ -65,11 +66,11 @@ ht-degree: 0%
 1. 導覽至網站。
 1. 按一下或點選您要建立語言副本的網站。
 
-   例如，若要建立Geometrixx Outdoors網站的語言副本，您可按一下或點選Geometrixx Outdoors網站。
+   例如，要建立Geometrixx Outdoors站點的語言副本，可按一下或點選Geometrixx Outdoors站點。
 
 1. 按一下或點選「建立」，然後按一下或點選「建立頁面」。
 
-   ![chlimage_1-29](assets/chlimage_1-21a.png)
+   ![chlimage_1-21](assets/chlimage_1-21a.png)
 
 1. 選取頁面範本，然後按一下或點選「下一步」。
 1. 在「名稱」欄位中，以`<language-code>`或`<language-code>_<country-code>`格式輸入國家代碼，例如`en`、`en_US`、`en_us`、`en_GB`、`en_gb`。 輸入頁面的標題。
