@@ -2,10 +2,11 @@
 title: 使用Apache Tika偵測資產的MIME類型
 description: 啟用Apache Tika可協助 [!DNL Experience Manager Assets] 在上傳作業期間偵測內容串流中的MIME類型資產，而非副檔名。
 contentOwner: AG
+role: 管理員、架構師
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ ht-degree: 0%
 
 1. 從服務清單中，找到&#x200B;**[!UICONTROL Day CQ DAM Mime Type Service]** ，然後按一下&#x200B;**[!UICONTROL Edit]**。
 
-1. 選取「從內容偵測MIME」選項，以啟用剖析已上傳資產，在忽略副檔名時判斷其MIME類型。 ]****[!UICONTROL &#x200B;依預設，會取消選取此選項。
+1. 選取「從內容偵測MIME」選項，以啟用剖析已上傳資產，在忽略副檔名時判斷其MIME類型。 ****&#x200B;依預設，會取消選取此選項。
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
