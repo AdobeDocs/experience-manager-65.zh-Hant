@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
+feature: PDF 產生器
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -60,7 +61,7 @@ PDF產生器可針對特定類型的檔案啟用多執行緒檔案轉換。 多�
 
 1. 新增使用者帳戶。 （請參閱[新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)）。
 1. 接下來，您將對/etc/sudoers檔案進行更改。 此檔案的預設權限為440。 將此檔案的權限更改為可寫。
-1. 在/etc/sudoers檔案中新增其他使用者（執行表單伺服器的管理員除外）的項目。 例如，如果您以名為lcadm的使用者和名為myhost的伺服器身分執行AEM表單，而您想要模擬user1和user2，請將下列項目新增至/etc/sudoers:
+1. 在/etc/sudoers檔案中新增其他使用者（執行表單伺服器的管理員除外）的項目。 例如，如果您以名為lcadm的AEM用戶和名為myhost的伺服器的身份運行表單，並且要模擬user1和user2，請將以下條目添加到/etc/sudoers:
 
    ```shell
     lcadm myhost=(user1) NOPASSWD: ALL
@@ -82,7 +83,7 @@ PDF產生器可針對特定類型的檔案啟用多執行緒檔案轉換。 多�
    這可讓您新增Linux使用者。
 
 1. 將etc/sudoers檔案的權限變更回440。
-1. 允許通過[添加用戶帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)添加的所有用戶連接到表單伺服器。 例如，要允許名為user1的本地用戶具有與Forms伺服器進行連接的權限，請使用以下命令
+1. 允許通過[添加用戶帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)添加的所有用戶連接到表單伺服器。 例如，要允許名為user1的本地用戶訪問Forms伺服器的連接權限，請使用以下命令
 
    `xhost +local:user1@`
 
