@@ -2,10 +2,11 @@
 title: 擴充資產編輯器
 description: 瞭解如何使用自訂元件擴充資產編輯器的功能。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '691'
 ht-degree: 13%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 13%
 
 ## 建立資產編輯器範本{#creating-an-asset-editor-template}
 
-Geometrixx中包含下列範例頁面：
+下列範例頁面包含在Geometrixx中：
 
 * Geometrixx範例頁面：`/content/geometrixx/en/press/asseteditor.html`
 * 範例範本：`/apps/geometrixx/templates/asseteditor`
