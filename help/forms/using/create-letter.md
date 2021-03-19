@@ -7,10 +7,11 @@ uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4008'
 ht-degree: 2%
 
 ---
@@ -35,7 +36,7 @@ ht-degree: 2%
 
 在此工作流程中：
 
-1. 表單設計人員可使用Adobe Forms Designer建立版面和分割版面，並將它們上傳至CRX儲存庫。 版麵包含一般表單欄位、版面功能（例如頁首和頁尾），以及用於放置內容的空白「目標區域」。 之後，應用程式專家會對應這些目標區域所需的內容。 有關[設計版面的詳細資訊](/help/forms/using/layout-design-details.md)。
+1. 表單設計人員使用AdobeForms設計人員建立版面和分割版面，並將它們上傳至CRX儲存庫。 版麵包含一般表單欄位、版面功能（例如頁首和頁尾），以及用於放置內容的空白「目標區域」。 之後，應用程式專家會對應這些目標區域所需的內容。 有關[設計版面的詳細資訊](/help/forms/using/layout-design-details.md)。
 1. 法律、財務或行銷部門的相關領域專家負責建立和上傳內容，例如文字條款免責聲明、條款與條件，以及標誌等影像，這些內容會在各種信件範本中重複使用。
 1. 應用程式專家會建立通訊範本。 應用程式專員
 
@@ -69,7 +70,7 @@ ht-degree: 2%
 
 #### 版面片段{#layout-fragment}
 
-版面片段是可用於一或多個字母的版面。 配置片段可用來建立可重複的圖樣，尤其是動態表格。 版面可包含「位址」和「參考編號」等典型表單欄位。 它還包含表示目標區域的空子表單。 版面(XDP)是在Designer中建立，然後[上傳至Forms and Documents](/help/forms/using/get-xdp-pdf-documents-aem.md)。
+版面片段是可用於一或多個字母的版面。 配置片段可用來建立可重複的圖樣，尤其是動態表格。 版面可包含「位址」和「參考編號」等典型表單欄位。 它還包含表示目標區域的空子表單。 版面(XDP)是在Designer中建立，然後[上傳至Forms和Documents](/help/forms/using/get-xdp-pdf-documents-aem.md)。
 
 ### 字母建立{#letter-creation}
 
@@ -91,11 +92,11 @@ ht-degree: 2%
 
 最後的對應可以發送到後端處理，以進行後處理。 通信可以是：
 
-1. 已處理電子郵件、傳真或批次列印，或放在檔案夾中以列印或以電子郵件寄送。
+1. 已處理電子郵件、傳真或批次列印，或放在資料夾中以列印或以電子郵件寄送。
 1. 已提交供審查和批准。
 1. 透過套用數位簽章、認證、加密或版權管理來保護。
 1. 轉換為可搜尋的PDF檔案，其中包含用於封存和稽核的所有必要中繼資料。
-1. 包含在PDF資料夾中，其中包含更多檔案，例如行銷材料。 然後，PDF資料夾就可以作為最終信件傳送。
+1. 包含在PDFPortfolio中，其中包含更多檔案，例如行銷材料。 然後，PDFPortfolio就可以傳送為最終對應。
 
 ### 通信管理解決方案體系結構{#correspondence-management-solution-architecture}
 
@@ -228,7 +229,7 @@ ht-degree: 2%
 
 您需要先有下列項目才能建立對應：
 
-* [相容性包](compatibility-package.md)。安裝相容性軟體包以查看&#x200B;**Forms**&#x200B;頁上的&#x200B;**Letters**&#x200B;選項。
+* [相容性包](compatibility-package.md)。安裝相容性軟體包以查看&#x200B;**Forms**&#x200B;頁上的&#x200B;**字母**&#x200B;選項。
 * 字母XDP([layout](/help/forms/using/document-fragments.md))。
 * 其他XDP（[版面片段](document-fragments.md#document-fragments)）構成字母的一部分。 XDP\Layouts是在[Designer](https://help.adobe.com/en-US/AEMForms/6.1/DesignerHelp/)中建立的。
 * 相關[資料字典](/help/forms/using/data-dictionary.md)（選用）。
@@ -239,7 +240,7 @@ ht-degree: 2%
 
 ### 選擇佈局並輸入字母屬性{#select-a-layout-and-enter-the-letter-properties}
 
-1. 選擇&#x200B;**Forms** > **Letters**。
+1. 選擇&#x200B;**Forms** > **字母**。
 
 1. 選擇&#x200B;**建立>字母**。 「對應管理」會顯示可用的版面(XDP)。 這些版面都來自Designer。 版面配置也包含「對應管理」現成可用的信函範本。 有關「通信管理」模板的詳細資訊，請參閱[參考信函模板](/help/forms/using/reference-cm-layout-templates.md)。 若要新增您自己的版面，請在Designer中建立XDP（版面）檔案，然後[將它們上傳至AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md)。
 
@@ -256,7 +257,7 @@ ht-degree: 2%
    * **說明（可選）:** 說明參考的字母。
    * **資料字典（選用）**:資料字典可以與對應關聯。您稍後在此對應中插入的資產，應該與您在此處為對應選擇的資料字典相同，或者沒有資料字典。
    * **標籤（可選）:** 選擇要套用至對應的標籤。您也可以輸入新的／自訂標籤名稱，然後按Enter鍵建立它。
-   * **後置處理（可選）:** 選擇要應用於信函模板的後置處理。您使用AEM建立的貼文程式（例如電子郵件和列印）已立即可用。
+   * **後置處理（可選）:** 選擇要應用於信函模板的後置處理。有現成的貼文流程，以及您使用建立的流程AEM，例如電子郵件和列印。
 
    ![對應屬性](assets/createcorrespondenceproperties.png)
 
@@ -288,7 +289,7 @@ ht-degree: 2%
    1. **可編輯**:選取此選項後，可在「建立對應」使用者介面中編輯內容。只有在需要商業使用者（例如理賠調整員）修改內容時，才將內容標示為可編輯。
    1. **強制**:選取此選項時，「建立對應」使用者介面中會要求內容。
    1. **選取**:選取此選項時，內容會依「建立對應」使用者介面的預設值來選取。
-   1. **縮排**:增加或減少字母中的模組／內容縮排。縮排是以0開始的級別指定的。 每級縮進36分。 有關自定義表單的詳細資訊，請參閱[表單工作流](submit-letter-topostprocess.md#formsworkflow)中的&#x200B;**[!UICONTROL Corresponce Management Configurations]**。
+   1. **縮排**:增加或減少字母中的模組／內容縮排。縮排是以0開始的級別指定的。 每級縮進36分。 有關自定義表單的詳細資訊，請參閱[Forms工作流](submit-letter-topostprocess.md#formsworkflow)中的&#x200B;**[!UICONTROL Corresponce Management Configurations]**。
    1. **分頁前**:如果您將「分頁前」設為on，則THIS模組的內容一律會顯示在新頁面上。
    1. **分頁符後**:如果將特定模組的「分頁後」設定為on，則NEXT模組的內容將始終顯示在新頁面上。
 
@@ -321,7 +322,7 @@ ht-degree: 2%
    * **多行**:您可以指定欄位或變數的資料輸入是否為多行。如果您選取此選項，欄位或變數的輸入方塊會在「資料編輯檢視」中顯示為多行輸入方塊。 欄位或變數也會在「建立對應」使用者介面的「資料」和「內容」檢視中顯示為多行。 多行輸入欄位與在TextModule中輸入注釋的欄位類似。 多行選項僅適用於連結類型為「使用者」或未受保護的「資料字典元素」的欄位和變數。
    * **可選**:您可以指定欄位或變數的值是否為選用。選用欄位選項適用於連結類型為「使用者」或未受保護的「資料字典元素」的欄位和變數。
 
-   * **欄位／變數驗證**:若要增強欄位或變數值的驗證，您可以指派驗證器至欄位或變數。此選項僅適用於連結類型為「使用者」或未受保護的「資料字典元素」的欄位和變數。
+   * **欄位／變數驗證**:若要增強對欄位或變數值的驗證，您可以指派驗證器至欄位或變數。此選項僅適用於連結類型為「使用者」或未受保護的「資料字典元素」的欄位和變數。
    * **** 動作和 **工具提示**:標題是顯示在CCR用戶介面中欄位前面的欄位的標籤。此選項適用於連結類型為「使用者」或未受保護的「資料字典元素」的欄位和變數。
 
    以下是可用於欄位的驗證類型：
@@ -344,7 +345,7 @@ ht-degree: 2%
 1. 選擇&#x200B;**添加資產**。
 1. 在「選擇資產」畫面中，點選資產以附加字母，然後點選&#x200B;**Done**。 您必須先將資產上傳至「資產」。 建議您僅附加PDF和Microsoft Office檔案，但您也可以附加影像。 如需有關在DAM中上傳資產的詳細資訊，請參閱[上傳資產](/help/assets/manage-assets.md)。
 1. 要鎖定清單中資產的順序，使索賠調整者不能更改順序，請點選&#x200B;**鎖定順序**。 如果您未選擇此選項，「索賠調整者」可以更改清單項的順序。
-1. 若要變更資產順序，請拖放資產，並保有資產的重新排序圖示(![dragndrop](assets/dragndrop.png))。
+1. 若要變更資產順序，請拖放資產，並保留資產的重新排序圖示(![dragndrop](assets/dragndrop.png))。
 1. 點選&#x200B;**在附件前面的「編輯」**，如果您不希望作者能夠刪除附件，則將附件指定為「必備」。 如果要在CCR介面中預選附件，請將其指定為「已選」。
 1. 選擇&#x200B;**庫訪問**&#x200B;以授予對庫的訪問權。 如果啟用了「庫訪問」,「索賠調整者」可以在建立信件和插入附件時訪問內容庫。
 1. 選擇&#x200B;**附件配置**&#x200B;並指定附件的最大數量。
