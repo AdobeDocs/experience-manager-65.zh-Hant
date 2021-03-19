@@ -8,11 +8,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
+feature: 表單入口網站
 translation-type: tm+mt
-source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 0%
+source-wordcount: '357'
+ht-degree: 1%
 
 ---
 
@@ -21,9 +22,9 @@ ht-degree: 0%
 
 ## 概覽 {#overview}
 
-AEM Forms可讓您將表單儲存為草稿。 草稿功能可讓您維護進行中的表單，您可以從任何裝置完成並稍後送出。
+AEM Forms允許您將表單另存為草稿。 草稿功能可讓您維護進行中的表單，您可以從任何裝置完成並稍後送出。
 
-依預設，AEM Forms會在「發佈」例項的`/content/forms/fp`節點中，儲存與表單草稿和提交相關聯的使用者資料。 此外，AEM Forms入口元件也提供資料服務，您可使用這些服務來自訂將使用者資料儲存在草稿和提交檔案的實作。 例如，您可以將使用者資料儲存在資料儲存區。
+預設情況下，AEM Forms將與表單草稿和提交相關聯的用戶資料儲存在發佈實例的`/content/forms/fp`節點中。 此外，AEM Forms門戶元件提供資料服務，您可使用這些服務定制為草稿和提交儲存用戶資料的實施。 例如，您可以將使用者資料儲存在資料儲存區。
 
 ## 必備條件  {#prerequisites}
 
@@ -99,7 +100,7 @@ public interface DraftDataService {
 
 >[!NOTE]
 >
->草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設為26個以上字元。
+>草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設為26個或更多字元。
 
 ## 提交資料服務{#submission-data-service}
 
@@ -188,7 +189,7 @@ public interface SubmitDataService {
 }
 ```
 
-表單入口網站使用通用唯一識別碼(UUID)概念，為每個草稿和提交的表單產生唯一ID。 您也可以產生您自己的唯一ID。 您可以實作介面FPKeyGeneratorService、覆寫其方法，並開發自訂邏輯，為每個草稿和提交的表單產生自訂唯一ID。 此外，將自訂ID產生實作的服務排名設定為高於0。 它可確保使用自訂實作，而非預設實作。
+Forms入口網站使用通用唯一識別碼(UUID)概念，為每個草稿和提交的表單產生唯一ID。 您也可以產生您自己的唯一ID。 您可以實作介面FPKeyGeneratorService、覆寫其方法，並開發自訂邏輯，為每個草稿和提交的表單產生自訂唯一ID。 此外，將自訂ID產生實作的服務排名設定為高於0。 它可確保使用自訂實作，而非預設實作。
 
 ```java
 public interface FPKeyGeneratorService {
