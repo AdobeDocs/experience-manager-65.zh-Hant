@@ -1,26 +1,27 @@
 ---
-title: 建立標籤至AEM應用程式
-seo-title: 建立標籤至AEM應用程式
-description: 以程式設計方式在自訂AEM應用程式中處理標籤或擴充標籤
-seo-description: 以程式設計方式在自訂AEM應用程式中處理標籤或擴充標籤
+title: 在應用程式中建立標AEM記
+seo-title: 在應用程式中建立標AEM記
+description: 以程式設計方式在自訂應用程式中處理標籤或擴充標AEM記
+seo-description: 以程式設計方式在自訂應用程式中處理標籤或擴充標AEM記
 uuid: 0549552e-0d51-4162-b418-babf4ceee046
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
+feature: 標記
 translation-type: tm+mt
-source-git-commit: 1493b301ecf4c25f785495e11ead352de600ddb7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
 
 
-# 建立標籤至AEM應用程式{#building-tagging-into-an-aem-application}
+# 將標籤構建AEM到應用程式{#building-tagging-into-an-aem-application}
 
-為了以程式設計方式處理自訂AEM應用程式中的標籤或擴充標籤，本頁說明
+為了以程式設計方式處理自訂應用程式中的標籤或擴充AEM標籤，本頁說明
 
 * [標籤API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/package-summary.html)
 
@@ -35,7 +36,7 @@ ht-degree: 0%
 
 ## 標籤API {#overview-of-the-tagging-api}概述
 
-在AEM中實施[標籤架構](/help/sites-developing/framework.md)可讓您使用JCR API管理標籤和標籤內容。 TagManager可確保在`cq:tags`字串陣列屬性中輸入的值標籤不會重複，它會移除指向非現有標籤的TagID，並更新已移動或合併標籤的TagID。 TagManager使用JCR觀察偵聽器來恢復任何不正確的更改。 主類位於[com.day.cq.tating](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/package-summary.html)軟體包中：
+在中實施[標籤框架](/help/sites-developing/framework.md)AEM允許使用JCR API管理標籤和標籤內容。 TagManager可確保在`cq:tags`字串陣列屬性中輸入的值標籤不會重複，它會移除指向非現有標籤的TagID，並更新已移動或合併標籤的TagID。 TagManager使用JCR觀察偵聽器來恢復任何不正確的更改。 主類位於[com.day.cq.tating](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/package-summary.html)軟體包中：
 
 * JcrTagManagerFactory —— 返回基於JCR的`TagManager`實施。 這是標籤API的參考實作。
 * `TagManager` -允許依路徑和名稱來解析和建立標籤。
@@ -198,5 +199,5 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 >[!NOTE]
 >
->新語言必須是AEM認可的語言之一，即它必須是`/libs/wcm/core/resources/languages`下方的節點。
+>新語言必須是其中一AEM種公認的語言，即它必須作為`/libs/wcm/core/resources/languages`下的節點提供。
 
