@@ -1,30 +1,31 @@
 ---
-title: 使用AEM Forms Repository
-seo-title: 使用AEM Forms Repository
-description: 管理AEM Forms儲存庫，以使用Java API和Web Service API建立資料夾、寫入、列出、讀取、更新和搜尋資源。 此外，還要瞭解如何建立資源關係、鎖定和刪除資源。
-seo-description: 管理AEM Forms儲存庫，以使用Java API和Web Service API建立資料夾、寫入、清單、讀取、更新資源及搜尋資源。 此外，還要瞭解如何建立資源關係、鎖定和刪除資源。
+title: 使用AEM Forms儲存庫
+seo-title: 使用AEM Forms儲存庫
+description: 管理AEM Forms儲存庫，以使用Java API和Web服務API建立資料夾、寫入、列出、讀取、更新和搜索資源。 此外，還要瞭解如何建立資源關係、鎖定和刪除資源。
+seo-description: 管理AEM Forms儲存庫，以使用Java API和Web服務API建立資料夾、寫入、列出、讀取、更新資源和搜索資源。 此外，還要瞭解如何建立資源關係、鎖定和刪除資源。
 uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '9157'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# 使用AEM Forms Repository {#working-with-aem-forms-repository}
+# 使用AEM Forms儲存庫{#working-with-aem-forms-repository}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 **關於儲存庫服務**
 
-Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員建立&#x200B;*AEM Forms*&#x200B;應用程式時，他們可以將資產部署在儲存庫中，而非檔案系統。 這些資產可以包含任何類型的文宣，包括XML表單、PDF表單（包括Acrobat表單）、表單片段、影像、描述檔、原則、SWF檔案、DDX檔案、XML架構、WSDL檔案和測試資料。
+儲存庫服務向AEM Forms提供資源儲存和管理服務。 當開發人員建立&#x200B;*AEM Forms*&#x200B;應用程式時，他們可以將資產部署在儲存庫中，而非檔案系統中。 這些資產可以包含任何類型的宣傳品，包括XML表單、PDF forms(包括Acrobat表單)、表單片段、影像、描述檔、原則、SWF檔案、DDX檔案、XML架構、WSDL檔案和測試資料。
 
 例如，請考慮以下名為&#x200B;*Applications/FormsApplication*&#x200B;的Forms應用程式：
 
@@ -48,7 +49,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->您可以使用網頁瀏覽器來瀏覽AEM Forms Repository。 要瀏覽儲存庫，請在Web瀏覽器中輸入以下URL `https://[server name]:[server port]/repository`。 您可以使用網頁瀏覽器來驗證與「使用AEM Forms Repository」（使用AEM Forms資料庫）區段關聯的快速啟動結果。 例如，如果您新增內容至AEM Forms Repository，您就可以在網頁瀏覽器中看到內容。 (請參閱[快速入門（SOAP模式）:使用Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)編寫資源。)
+>您可以使用Web瀏覽器瀏覽AEM Forms儲存庫。 要瀏覽儲存庫，請在Web瀏覽器中輸入以下URL `https://[server name]:[server port]/repository`。 您可以使用Web瀏覽器驗證與「使用AEM Forms儲存庫」部分關聯的快速啟動結果。 例如，如果將內容添加到「AEM Forms儲存庫」中，則可以在Web瀏覽器中查看該內容。 (請參閱[快速入門（SOAP模式）:使用Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)編寫資源。)
 
 儲存庫API提供了一些操作，可用來儲存和檢索儲存庫中的資訊。 例如，當處理應用程式時需要資源時，可以獲取資源清單或檢索儲存在儲存庫中的特定資源。
 
@@ -78,7 +79,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 建立資料夾{#creating-folders}
 
@@ -88,7 +89,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
@@ -121,7 +122,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API建立資料夾](aem-forms-repository.md#create-folders-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -168,7 +169,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API建立資料夾](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -220,7 +221,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-1}摘要
 
@@ -261,7 +262,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API編寫資源](aem-forms-repository.md#write-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -302,7 +303,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
    * 調用`ResourceContent`物件的`setDataDocument`方法並傳入`com.adobe.idp.Document`物件
    * 調用`ResourceContent`物件的`setSize`方法，並傳入`Document`物件的大小（位元組）
 
-   調用`Resource`物件的`setContent`方法並傳入`ResourceContent`物件，將內容新增至資源。 如需詳細資訊，請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   調用`Resource`物件的`setContent`方法並傳入`ResourceContent`物件，將內容新增至資源。 如需詳細資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 1. 將資源寫入目標資料夾
 
@@ -314,7 +315,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -373,7 +374,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-2}摘要
 
@@ -406,7 +407,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API列出資源](aem-forms-repository.md#list-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -440,7 +441,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API列出資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-listing-resources-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -490,7 +491,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-3}摘要
 
@@ -523,7 +524,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API讀取資源](aem-forms-repository.md#reading-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -555,7 +556,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API讀取資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-reading-a-resource-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -600,7 +601,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-4}摘要
 
@@ -633,7 +634,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API更新資源](aem-forms-repository.md#update-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -671,7 +672,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API更新資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-updating-a-resource-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -729,7 +730,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-5}摘要
 
@@ -780,7 +781,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用Java API搜尋資源](aem-forms-repository.md#search-for-resources-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -851,7 +852,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API搜尋資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -869,7 +870,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-6}摘要
 
@@ -902,7 +903,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API建立關係資源](aem-forms-repository.md#create-relationship-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -947,7 +948,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API建立資源之間的關係](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1008,7 +1009,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-7}摘要
 
@@ -1051,7 +1052,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API鎖定資源](aem-forms-repository.md#lock-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1091,7 +1092,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 1. 解除鎖定資源
 
-   調用`ResourceRepositoryClient`物件的`unlockResource`方法，並將資源的URI作為參數傳遞。 如需詳細資訊，請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   調用`ResourceRepositoryClient`物件的`unlockResource`方法，並將資源的URI作為參數傳遞。 如需詳細資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 **另請參閱**
 
@@ -1099,7 +1100,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API鎖定資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-locking-a-resource-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1160,7 +1161,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 >[!NOTE]
 >
->有關Repository服務的詳細資訊，請參閱[ Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關儲存庫服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary_of_steps-8}摘要
 
@@ -1193,7 +1194,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [使用web service API刪除資源](aem-forms-repository.md#delete-resources-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -1225,7 +1226,7 @@ Repository服務為AEM Forms提供資源儲存和管理服務。 當開發人員
 
 [快速入門（SOAP模式）:使用Java API搜尋資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
