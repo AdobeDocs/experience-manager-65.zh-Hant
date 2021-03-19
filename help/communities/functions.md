@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 94a5a8d99d052d7bcf01f237dc2b73157a2f11c2
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2459'
 ht-degree: 6%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 6%
 
 社群體驗預期的功能類型已廣為人知。 社群功能可做為社群功能。 基本上，這些頁面是預先連線的一或多個頁面，以實作社群功能，其需要的不只是在作者模式下將元件新增至頁面。 它們是用於定義[社區站點模板](/help/communities/sites.md)的結構的構成塊，從中建立[社區站點。](/help/communities/sites-console.md)
 
-在建立社群網站後，就可使用標準[AEM製作模式](/help/sites-authoring/editing-content.md)將內容新增至產生的頁面。 各種社群功能如社群功能主控台所示。
+在建立社群網站後，可使用標準的[製作模式](/help/sites-authoring/editing-content.md)將內容新AEM增至產生的頁面。 各種社群功能如社群功能主控台所示。
 
 >[!NOTE]
 >
@@ -39,7 +40,7 @@ ht-degree: 6%
 
 ## 預建函式{#pre-built-functions}
 
-以下是AEM Communities所提供功能的簡短說明。 每個函式都包含一或多個AEM頁面，其中包含連線在功能中的Communities元件，此功能可輕鬆整合在[社群網站範本](/help/communities/sites.md)中。
+以下是與AEM Communities一起履行的職能的簡要說明。 每個函式包括一個或多個頁AEM面，其中包含將Communities元件連接在一個功能中，該功能可輕鬆地整合到[社區站點模板](/help/communities/sites.md)中。
 
 社群網站範本提供社群網站的結構，包括登入、使用者設定檔、通知、訊息、網站選單、搜尋、主題和品牌功能。
 
@@ -59,7 +60,7 @@ ht-degree: 6%
 
 * **URL**
 
-   （*必要*）用於生成URI的名稱。 名稱必須符合AEM和JCR所強加的[命名慣例](/help/sites-developing/naming-conventions.md)。
+   （*必要*）用於生成URI的名稱。 名稱必須符合[和JCR強加的命名約定&lt;a1/AEM>。](/help/sites-developing/naming-conventions.md)
 
 例如，使用從[開始使用](/help/communities/getting-started.md)教學課程建立的網站，如果
 
@@ -315,7 +316,7 @@ ht-degree: 6%
 
 ### 頁面功能 {#page-function}
 
-頁面功能會將空白頁面新增至社群網站，並將其連線至社群網站的功能：登入、選單、通知、訊息、主題和品牌。 使用[標準AEM製作模式](/help/sites-authoring/editing-content.md)將內容新增至頁面。
+頁面功能會將空白頁面新增至社群網站，並將其連線至社群網站的功能：登入、選單、通知、訊息、主題和品牌。 使用[標準製作模式](/help/sites-authoring/editing-content.md)將內AEM容新增至頁面。
 
 新增至範本時，只有[標題和URL設定](#title-and-url-settings)的組態。
 
@@ -335,7 +336,7 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 * **允許有特殊權限的成員**
 
-   如果選中此選項，則QnA論壇僅允許特權成員通過允許選擇[特權成員組](/help/communities/users.md#privileged-members-group)來發佈問題。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
+   如果選中，QnA論壇僅允許特權成員通過允許選擇[特權成員組](/help/communities/users.md#privileged-members-group)發佈問題。 如果未選取，則允許所有社群成員張貼。 已取消選取預設值。
 
 * **允許檔案上傳**
 
@@ -351,7 +352,7 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 ## 建立社群功能 {#create-community-function}
 
-通過選擇「社區功能」控制台頂部的`Create Community Function`表徵圖，可以建立社區功能。 您可以建立以相同AEM Blueprint為基礎的多個函式，然後以作者編輯模式開啟，進行唯一自訂。
+通過選擇「社區功能」控制台頂部的`Create Community Function`表徵圖，可以建立社區功能。 可以建立基於相同Blueprint的多AEM個函式，然後通過在作者編輯模式中開啟來唯一定制這些函式。
 
 ![create-community-function](assets/create-community-function.png)
 
@@ -399,7 +400,7 @@ QnA函式是一個具有[QnA元件](/help/communities/working-with-qna.md)的頁
 
 ### 配置元件{#configuring-components}
 
-社群函式會實作為AEM Blueprint的即時副本，其詳細資訊會記錄在[ Multi Site Manager](/help/sites-administering/msm.md)中。
+社群功能實作為Blueprint的即時副本AEM，其詳細資訊記錄在[多網站管理員](/help/sites-administering/msm.md)中。
 
 您不僅可以製作頁面內容，還可以設定元件。
 
