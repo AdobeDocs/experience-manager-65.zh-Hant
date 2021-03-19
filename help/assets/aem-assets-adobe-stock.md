@@ -2,11 +2,13 @@
 title: 管理 [!DNL Adobe Stock] 資產
 description: 從 [!DNL Adobe Experience Manager]內搜尋、擷取、授權及管理 [!DNL Adobe Stock] 資產。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
+feature: 搜尋，Adobe Stock
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 11%
+source-wordcount: '1086'
+ht-degree: 10%
 
 ---
 
@@ -31,12 +33,12 @@ ht-degree: 11%
 
 ### 建立IMS設定{#create-an-ims-configuration}
 
-1. 在[!DNL Experience Manager]使用者介面中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL Adobe IMS設定]**。 按一 **[!UICONTROL 下「建立]** 」，然後選 **[!UICONTROL 取「雲端解決方案]** > **[!UICONTROL Adobe Stock]**」。
+1. 在[!DNL Experience Manager]使用者介面中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL AdobeIMS組態]**。 按一 **[!UICONTROL 下「建立]** 」，然後選 **[!UICONTROL 取「雲端解決方案]** > **[!UICONTROL Adobe Stock]**」。
 1. 重複使用現有證書或選擇「建立新證書」。****
 1. 按一下&#x200B;**[!UICONTROL 建立憑證]**。建立後，請下載公開金鑰。 按一下&#x200B;**[!UICONTROL 下一步]**。
-1. 將下載的公開金鑰新增至您的[!DNL Adobe Developer Console]服務帳戶。 按一下&#x200B;**[!UICONTROL 下一步]**。將[!UICONTROL Adobe IMS Technical Account Configuration]畫面保持開啟，以盡快提供值。
-1. 存取[Adobe Developer Console](https://console.adobe.io)。 請確定您的帳戶擁有需要整合之組織的管理員權限。
-1. 按一下「**[!UICONTROL 建立新項目]**」，然後按一下「**[!UICONTROL 添加API]**」。 從您可用的API清單中選取&#x200B;**[!UICONTROL Adobe Stock]**。 選擇[!UICONTROL OAUTH 2.0 Web]。 設定並複製顯示的各種值。
+1. 將下載的公開金鑰新增至您的[!DNL Adobe Developer Console]服務帳戶。 按一下&#x200B;**[!UICONTROL 下一步]**。將[!UICONTROL AdobeIMS技術帳戶配置]畫面保持開啟，以便很快提供值。
+1. 存取[Adobe開發人員主控台](https://console.adobe.io)。 請確定您的帳戶擁有需要整合之組織的管理員權限。
+1. 按一下「**[!UICONTROL 建立新項目]**」，然後按一下「**[!UICONTROL 添加API]**」。 從您可用的API清單中選擇&#x200B;**[!UICONTROL Adobe Stock]**。 選擇[!UICONTROL OAUTH 2.0 Web]。 設定並複製顯示的各種值。
 1. 在[!DNL Experience Manager]中，提供標題為&#x200B;**[!UICONTROL Title]**、**[!UICONTROL Authorization Server]**、**[!UICONTROL API金鑰]**、**[!UICONTROL Client Secret]**&#x200B;和&#x200B;**[!UICONTROL Payload]**&#x200B;的欄位中的值。 有關這些值的詳細資訊，請參見[JWT身份驗證快速入門](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)。
 
 <!-- TBD: Update the URL to update the terminology when AIO team updates their documentation URL. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
@@ -44,7 +46,7 @@ ht-degree: 11%
 
 ### 在[!DNL Experience Manager] {#create-adobe-stock-configuration-in-aem}中建立[!DNL Adobe Stock]配置
 
-1. 在[!DNL Experience Manager]中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 雲端服務]** > **[!UICONTROL Adobe Stock]**。
+1. 在[!DNL Experience Manager]中，導航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**。
 1. 按一下「建立」以建立組態，並將它與您現有的IMS組態建立關聯。 ****&#x200B;選擇`PROD`作為環境參數。
 1. 在&#x200B;**[!UICONTROL 授權資產路徑]**&#x200B;欄位中，保留原狀位置。 請勿變更您要儲存[!DNL Adobe Stock]資產的位置。
 1. 新增所有必要屬性以完成建立。 按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。
@@ -52,7 +54,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->如果有多個[!DNL Adobe Stock]配置，請在[!UICONTROL 用戶首選項]面板中選擇所需的配置。 若要從[!DNL Experience Manager]首頁存取面板，請按一下使用者圖示，然後按一下「使用者偏好設定」**[!UICONTROL >>「Stock設定」]**。****
+>如果有多個[!DNL Adobe Stock]配置，請在[!UICONTROL 用戶首選項]面板中選擇所需的配置。 若要從[!DNL Experience Manager]首頁存取面板，請按一下使用者圖示，然後按一下「使用者偏好設定」**[!UICONTROL >>「Stock設定」]**。]****[!UICONTROL 
 
 ## 使用及管理[!DNL Experience Manager] {#usemanage}中的[!DNL Adobe Stock]資產
 
@@ -70,7 +72,7 @@ ht-degree: 11%
 
 您的[!DNL Experience Manager]使用者可以同時搜尋[!DNL Experience Manager]和[!DNL Adobe Stock]中的資產。 當搜索位置不限於[!DNL Adobe Stock]時，將顯示來自[!DNL Experience Manager]和[!DNL Adobe Stock]的搜索結果。
 
-* 若要搜尋[!DNL Adobe Stock]資產，請按一下「Navigation **[!UICONTROL >**[!UICONTROL  Assets ]**>**[!UICONTROL &#x200B;搜尋Adobe Stock ]**」。]**
+* 若要搜尋[!DNL Adobe Stock]資產，請按一下「Navigation **** > **[!UICONTROL 資產]** > **[!UICONTROL 搜尋Adobe Stock]**」。
 
 * 若要搜尋[!DNL Adobe Stock]和[!DNL Experience Manager Assets]的資產，請按一下搜尋![search](assets/do-not-localize/search_icon.png)。
 
@@ -114,7 +116,7 @@ ht-degree: 11%
 
 ## 已知限制{#known-limitations}
 
-* **未顯示編輯影像警告**:授權影像時，使用者無法檢查影像是否為「僅供編輯使用」。為防止可能的誤用，管理員可以關閉從管理控制台存取編輯資產的權限。
+* **未顯示編輯影像警告**:授權影像時，使用者無法檢查影像是否為「僅供編輯使用」。為防止可能的誤用，管理員可以關閉Admin Console對編輯資產的存取。
 
 * **顯示的許可證類型錯誤**:資產的授權類型可能顯示 [!DNL Experience Manager] 不正確。使用者可登入[!DNL Adobe Stock]網站以檢視授權類型。
 
