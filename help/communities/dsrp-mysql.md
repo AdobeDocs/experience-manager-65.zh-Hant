@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -32,7 +33,7 @@ MySQL是關係型資料庫，可用來儲存使用者產生的內容(UGC)。
 
    * [MySQL ](https://dev.mysql.com/downloads/mysql/) ServerCommunity Server 5.6版或更新版本
 
-      * 可能與AEM在相同的主機上執行，或遠端執行
+      * 可在與同一台主機上運行AEM或遠程運行
    * [MySQL工作台](https://dev.mysql.com/downloads/tools/workbench/)
 
 
@@ -87,7 +88,7 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 1. 選擇`MySQL Connections`右側的`+`表徵圖。
 1. 在對話框`Setup New Connection`中，輸入適合您平台的值
 
-   為了展示目的，將作者AEM例項和MySQL放在相同的伺服器上：
+   為了進行演示，在同一伺服器AEM上使用作者實例和MySQL :
 
    * 連接名稱：`Communities`
    * 連接方法：`Standard (TCP/IP)`
@@ -115,7 +116,7 @@ MySQL Workbench應按照目標OS的說明下載並安裝。
 
 ### 獲取SQL指令碼{#obtain-the-sql-script}
 
-SQL指令碼是從AEM資料庫取得：
+SQL指令碼是從儲存庫中AEM獲取的：
 
 1. 瀏覽至CRXDE Lite
 
@@ -166,11 +167,11 @@ SQL指令碼是從AEM資料庫取得：
 
 **Day Commons JDBC連接池**&#x200B;的OSGi配置配置MySQL JDBC驅動程式。
 
-所有發佈和作者AEM例項都應指向相同的MySQL伺服器。
+所有發佈和作AEM者實例都應指向相同的MySQL伺服器。
 
-當MySQL在與AEM不同的伺服器上執行時，必須在JDBC連接器中指定伺服器主機名稱，以取代&#39;localhost&#39;。
+當MySQL在與不同的伺服器上運AEM行時，必須在JDBC連接器中指定伺服器主機名來取代&#39;localhost&#39;。
 
-* 在每個作者上並發佈AEM例項。
+* 在每個作者和發佈例AEM項上。
 * 以管理員權限登入。
 * 訪問[Web控制台](../../help/sites-deploying/configuring-osgi.md)。
 
@@ -186,7 +187,7 @@ SQL指令碼是從AEM資料庫取得：
    * **[!UICONTROL JDBC驅動程式類]**:  `com.mysql.jdbc.Driver`
    * **[!UICONTROL JDBC連接URI]**:  `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      如果MySQL伺服器與&#39;this&#39; AEM伺服器&#x200B;*communities*&#x200B;是預設資料庫（架構）名稱不同，請指定伺服器來取代localhost。
+      如果MySQL伺服器與&#39;this&#39; AEM server *communities*&#x200B;是預設資料庫（架構）名稱不同，請指定伺服器來取代localhost。
 
    * **[!UICONTROL 使用者名稱]**:  `root`
 
