@@ -1,7 +1,7 @@
 ---
 title: 以程式設計方式與工作流程互動
 seo-title: 以程式設計方式與工作流程互動
-description: 'null'
+description: 以程式設計方式與工作流程互動
 seo-description: 'null'
 uuid: a0f19fc6-b9bd-4b98-9c0e-fbf4f7383026
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
-source-git-commit: edf7ef93372e44cb71d8eac8712db53f4e45b6cf
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '2009'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ## 在ECMA指令碼{#obtaining-workflow-objects-in-ecma-scripts}中獲取工作流對象
 
-如[查找指令碼](/help/sites-developing/the-basics.md#locating-the-script)中所述，AEM（透過Apache Sling）提供執行伺服器端ECMA指令碼的ECMA指令碼引擎。 [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html)類別可立即作為`sling`變數供指令碼使用。
+如[定位指令碼](/help/sites-developing/the-basics.md#locating-the-script)中所述，AEM（透過Apache Sling）提供執行伺服器端ECMA指令碼的ECMA指令碼引擎。 [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html)類別可立即作為`sling`變數供指令碼使用。
 
 `ScriptHelper`類提供對`SlingHttpServletRequest`的訪問，您可用於最終獲取`WorkflowSession`對象；例如：
 
@@ -74,9 +74,9 @@ REST API支援下列動作：
 
 >[!NOTE]
 >
->使用Firefox擴充功能Firebug進行網頁開發，可在控制台運作時追蹤HTTP流量。 例如，您可以檢查參數和以`POST`請求傳送至AEM伺服器的值。
+>使用Firefox擴充功能Firebug進行網頁開發，可在控制台運作時追蹤HTTP流量。 例如，您可以檢查使用`POST`請求傳送AEM至伺服器的參數和值。
 
-在本頁中，假設AEM在連接埠`4502`的localhost上執行，且安裝內容為&quot; `/`&quot;(root)。 如果安裝時不適用，則需相應調整HTTP請求所適用的URI。
+在本頁中，假定在AEM埠`4502`的localhost上運行，並且安裝上下文是&quot; `/`&quot;（根）。 如果安裝時不適用，則需相應調整HTTP請求所適用的URI。
 
 `GET`請求支援的轉換是JSON轉換。 `GET`的URL應具有`.json`副檔名，例如：
 
@@ -245,7 +245,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>與PUT的行為相同。 需要，因為AEM Widget不支援<code>PUT</code>作業。</td>
+   <td>行為與PUT相同。 需要，AEM因為Widget不支援<code>PUT</code>作業。</td>
   </tr>
   <tr>
    <td><code>DELETE</code></td>
@@ -379,7 +379,7 @@ REST API支援下列動作：
 
 ### 如何取得所有執行中工作流程的清單及其ID {#how-to-get-a-list-of-all-running-workflows-with-their-ids}
 
-若要取得所有執行中工作流程的清單，請執行下列動作：
+若要取得所有執行中工作流程的清單，請執行下列GET:
 
 `http://localhost:4502/etc/workflow/instances.RUNNING.json`
 
@@ -427,7 +427,7 @@ curl -u admin:admin -d "action=UPDATE&workflowTitle=myWorkflowTitle" http://loca
 
 ### 如何列出所有工作流模型{#how-to-list-all-workflow-models}
 
-若要取得所有可用工作流程模型的清單，請執行下列動作：
+若要取得所有可用工作流程模型的清單，請執行下列GET:
 
 `http://localhost:4502/etc/workflow/models.json`
 
@@ -568,7 +568,7 @@ curl -u admin:admin -X DELETE http://localhost:4502/etc/workflow/models/{id}
 
 此參數可設為`true`，以指出應將系統工作流程排除在相關結果之外。
 
-您[可以更新OSGi組態](/help/sites-deploying/configuring-osgi.md) **Adobe Granite Workflow PayloadMapCache**，此組態指定要視為系統工作流程的工作流程`Models`。 預設（執行時期）工作流程模型為：
+您[可以更新OSGi配置](/help/sites-deploying/configuring-osgi.md) **Adobe花崗岩工作流PayloadMapCache**，該配置指定將工作流`Models`視為系統工作流。 預設（執行時期）工作流程模型為：
 
 * `/var/workflow/models/scheduled_activation/jcr:content/model`
 * `/var/workflow/models/scheduled_deactivation/jcr:content/model`
