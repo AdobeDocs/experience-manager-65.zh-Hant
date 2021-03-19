@@ -6,10 +6,11 @@ seo-description: 瞭解如何建立、排版和預覽最適化表單。 此外�
 page-status-flag: de-activated
 uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
 discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 78768e6eab65f452421d8809384500c6eab6b97f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1397'
 ht-degree: 3%
 
 ---
@@ -39,12 +40,12 @@ ht-degree: 3%
 
 ## 步驟1:建立最適化表單{#step-create-the-adaptive-form}
 
-1. 登入AEM作者例項，並導覽至「**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**」。 預設URL為[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)。
+1. 登入作AEM者例項並導覽至&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**。 預設URL為[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)。
 1. 點選「**[!UICONTROL 建立]**」並選取「最適化表單」。 ****&#x200B;此時會出現選擇範本的選項。 點選&#x200B;**[!UICONTROL Blank]**&#x200B;範本以選取範本，然後點選&#x200B;**[!UICONTROL Next]**。
 
-1. 將顯示&#x200B;**[!UICONTROL 添加屬性]**&#x200B;的選項。 **[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**&#x200B;欄位為必填欄位：
+1. 將顯示&#x200B;**[!UICONTROL 添加屬性]**&#x200B;的選項。 **[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**&#x200B;欄位是必填欄位：
 
-   * **標題：在** 標題欄 `Add new or update shipping address` 位中 **** 指定。標題欄位會指定表單的顯示名稱。 標題可協助您識別AEM [!DNL Forms]使用者介面中的表單。
+   * **標題：在** 標題欄 `Add new or update shipping address` 位中 **** 指定。標題欄位會指定表單的顯示名稱。 標題可協助您識別[!DNL Forms]使AEM用者介面中的表單。
    * **名稱：在** 「名 `shipping-address-add-update-form` 稱」欄 **** 位中指定。「名稱」欄位指定表單的名稱。 在儲存庫中建立具有指定名稱的節點。 當您開始輸入標題時，系統會自動產生名稱欄位的值。 您可以變更建議的值。 名稱欄位只能包含英數字元、連字型大小和底線。 所有無效輸入都會以連字型大小取代。
 
 1. 點選&#x200B;**[!UICONTROL Create]**。 會建立最適化表單，並出現對話方塊以開啟表單以供編輯。 點選「**[!UICONTROL 開啟]**」，在新標籤中開啟新建立的表格。 表格隨即開啟以供編輯。 它還顯示邊欄，以根據需求自訂新建立的表格。
@@ -55,7 +56,7 @@ ht-degree: 3%
 
 ## 步驟2:新增頁首和頁尾{#step-add-header-and-footer}
 
-AEM [!DNL Forms]提供許多元件，以顯示最適化表單的資訊。 頁首和頁尾元件有助於為表單提供一致的外觀和感覺。 標題通常包含公司的標誌、表單標題和摘要。 頁尾通常包含版權資訊和其他頁面的連結。
+AEM[!DNL Forms]提供許多元件以顯示自適應表單的資訊。 頁首和頁尾元件有助於為表單提供一致的外觀和感覺。 標題通常包含公司的標誌、表單標題和摘要。 頁尾通常包含版權資訊和其他頁面的連結。
 
 1. 點選![toggle-side-panel](assets/toggle-side-panel.png) > ![treeexpanall](assets/treeexpandall.png)。 元件瀏覽器隨即開啟。 將&#x200B;**[!UICONTROL Header]**&#x200B;元件從元件瀏覽器拖曳至最適化表單。
 1. 點選&#x200B;**[!UICONTROL Logo]**。 工具列隨即出現。 點選工具列上的![aem_6_3_edit](assets/aem_6_3_edit.png)，輸入&#x200B;**We.Retail**，然後點選![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
@@ -72,7 +73,7 @@ AEM [!DNL Forms]提供許多元件，以顯示最適化表單的資訊。 頁首
 
 ## 步驟3:新增元件以擷取和顯示資訊{#step-add-components-to-capture-and-display-information}
 
-元件是自適應形式的構建塊。 AEM [!DNL Forms]提供許多元件，以自適應形式擷取和顯示資訊。 您可以將元件從![treeexpanall](assets/treeexpandall.png)拖動到表單中。 要瞭解可用的元件和相應的功能，請參閱[製作最適化表單的簡介](/help/forms/using/introduction-forms-authoring.md)。
+元件是自適應形式的構建塊。 AEM[!DNL Forms]提供許多元件，以自適應形式擷取和顯示資訊。 您可以將元件從![treeexpanall](assets/treeexpandall.png)拖動到表單中。 要瞭解可用的元件和相應的功能，請參閱[製作最適化表單的簡介](/help/forms/using/introduction-forms-authoring.md)。
 
 1. 將&#x200B;**[!UICONTROL 數值框元件]**&#x200B;拖動到自適應表單。 將它置於頁尾元件之前。 開啟元件的屬性，將元件的&#x200B;**[!UICONTROL Title]**&#x200B;變更為&#x200B;**`Customer ID`**，將&#x200B;**[!UICONTROL 元素名稱]**&#x200B;變更為&#x200B;**`customer_ID`**，啟用&#x200B;**[!UICONTROL 必要欄位]**&#x200B;選項，啟用&#x200B;**[!UICONTROL 使用HTML5數字輸入類型]**&#x200B;選項，然後點選![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 1. 將三個文本框元件拖動到最適化表單。 將這些項目置於頁尾元件之前。 為這些文本框設定以下屬性。:
@@ -177,7 +178,7 @@ AEM [!DNL Forms]提供許多元件，以顯示最適化表單的資訊。 頁首
    | 電子郵件範本 | `${customer_Name}`大家好，以下地址將添加為您帳戶的發運地址：<br>`${customer_Name}`、`${customer_Shipping_Address}`、`${customer_State}`、`${customer_ZIPCode}`<br>致敬、We.Retail |
    | 包含附件 | 已啟用 |
 
-   您的表格已備妥。 現在，您可以預覽表單並測試功能。 如果您使用了教學課程中提及的名稱，並在執行AEM [!DNL Forms]伺服器的機器上存取表格，則表格可在[http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)取得。
+   您的表格已備妥。 現在，您可以預覽表單並測試功能。 如果您使用了提及教程的名稱，並訪問運行AEM[!DNL Forms]伺服器的電腦上的表單，則表單可在[http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)中找到。
 
 ## 步驟5:預覽並提交最適化表單{#step-preview-and-submit-the-adaptive-form}
 
@@ -189,4 +190,4 @@ AEM [!DNL Forms]提供許多元件，以顯示最適化表單的資訊。 頁首
 1. 使用![ruler](assets/ruler.png)檢視表格在各種裝置上的外觀。
 1. 填寫表單欄位，然後點選&#x200B;**[!UICONTROL Submit]**。 表單已送出，您會重新導向至預設的&#x200B;**感謝您**&#x200B;頁面。 您也可以指定自訂的感謝頁面。 如需詳細資訊，請參閱「設定重新導向頁面」。[](/help/forms/using/configuring-redirect-page.md)
 
-添加地址的最適化表單已就緒。 如果您已使用教學課程中提及的名稱並存取執行AEM Forms伺服器的機器上的表格，則表格可在[http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)取得。
+添加地址的最適化表單已就緒。 如果您使用了教學課程中提及的名稱，並在運行AEM Forms伺服器的機器上訪問表單，則表單可從[http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)獲得。
