@@ -9,10 +9,11 @@ content-type: reference
 topic-tags: adaptive_forms, develop
 discoiquuid: 1cb54c8a-9322-4b5a-b5a7-0eef342cee54
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1285'
 ht-degree: 1%
 
 ---
@@ -306,7 +307,7 @@ Calvin可讓您在網頁瀏覽器中自動測試您的調適性表單。 Calvin�
 
    ![4次檢視結果](assets/4_reviewresults.png)
 
-測試AEM最適化表單的步驟與測試AEM UI的步驟類似。 如需測試最適化表單的詳細資訊，請參閱[測試您的UI](https://helpx.adobe.com//experience-manager/6-3/help/sites-developing/hobbes.html)中的下列主題：
+測試最適化表AEM單的步驟與測試UI的步AEM驟類似。 如需測試最適化表單的詳細資訊，請參閱[測試您的UI](https://helpx.adobe.com//experience-manager/6-3/help/sites-developing/hobbes.html)中的下列主題：
 
 * 檢視測試套裝
 * 執行多個測試
