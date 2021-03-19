@@ -10,10 +10,11 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '740'
 ht-degree: 1%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 1%
 
 # 版本清除{#version-purging}
 
-在標準安裝中，當您在更新內容後啟動頁面時，AEM會建立新版本的頁面或節點。
+在標準安裝中AEM，當您在更新內容後啟動頁面時，會建立新版本的頁面或節點。
 
 >[!NOTE]
 >
@@ -31,7 +32,7 @@ ht-degree: 1%
 
 這些版本不會清除，因此儲存庫大小會隨著時間而增長，因此需要進行管理。
 
-AEM隨附各種機制，可協助您管理您的儲存庫：
+AEM附帶了各種機制，幫助您管理儲存庫：
 
 * [版本管理器](#version-manager)
 這可設定為在建立新版本時清除舊版本。
@@ -79,7 +80,7 @@ AEM隨附各種機制，可協助您管理您的儲存庫：
 
 >[!NOTE]
 >
->建議不要在儲存庫中保留大量版本。 因此，在配置版本清除操作時請注意不要從清除中排除太多版本，否則儲存庫大小將無法正確優化。 如果您因業務需求而保留大量版本，請聯絡Adobe支援以尋找最佳化儲存庫大小的其他方法。
+>建議不要在儲存庫中保留大量版本。 因此，在配置版本清除操作時請注意不要從清除中排除太多版本，否則儲存庫大小將無法正確優化。 如果您由於業務需求而保留大量版本，請聯繫Adobe支援以找到優化儲存庫大小的其他方法。
 
 ### 組合保留選項{#combining-retention-options}
 
