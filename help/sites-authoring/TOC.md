@@ -6,16 +6,19 @@ audience: end-user
 user-guide-title: AEM 6.5 Authoring 使用指南
 breadcrumb-title: Authoring 指南
 user-guide-description: 了解在 AEM 中建立內容和編寫的重要概念。
+feature-set: Experience Manager Sites
+feature: 製作
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: a74be2627dd63c246eaf4576827f1b2ea16d3146
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '301'
 ht-degree: 46%
 
 ---
 
 
-# AEM 6.5 Authoring 使用指南  {#authoring}
+# AEM 6.5 Authoring 使用指南 {#authoring}
 
 + [編寫使用指南概觀](home.md)
 + 編寫{#essentials}的基AEM本工作、工具和概念
