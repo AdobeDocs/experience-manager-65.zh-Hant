@@ -9,11 +9,12 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 17a6397b-0089-4fd1-b44a-686fdf60d7a9
+feature: PDF 產生器
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 0%
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
@@ -25,5 +26,5 @@ PDF產生器支援從Microsoft Excel、Microsoft PowerPoint和Microsoft Word檔�
 1. 在管理控制台中，按一下「服務> PDF產生器>檔案類型設定」。
 1. 按一下「新建」或選擇現有檔案類型設定。
 1. 按一下「Microsoft Excel、Microsoft PowerPoint或Microsoft Word」，然後選取「建立PDF/A-1a相容檔案」並儲存您所做的變更。
-1. 在原生應用程式（例如Microsoft Word）中，按一下「Adobe PDF >變更轉換設定」，然後選取「PDF/A-1b」。
+1. 在原生應用程式（例如Microsoft Word）中，按一下「Adobe PDF>變更轉換設定」，然後選取PDF/A-1b。
 
