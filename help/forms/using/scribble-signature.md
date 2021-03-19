@@ -10,10 +10,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
 discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
+feature: 設計人員
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
@@ -21,18 +22,18 @@ ht-degree: 0%
 
 # 在HTML5表單中使用塗鴉簽名{#using-scribble-signature-in-html-forms}
 
-HTML5表格在觸控裝置上的運用越來越多，而支援簽名是其中一項常見需求。 划線（用觸控筆或手指寫字）正成為在行動裝置上簽署表格的公認方式。 HTML5表單和表單設計工具現在可讓您選擇在表單上使用塗鴉簽名欄位。 在瀏覽器中轉譯表單時，您可以使用觸控筆、滑鼠或觸控來登入這些欄位。
+HTML5表格在觸控裝置上的運用越來越多，而支援簽名是其中一項常見需求。 划線（用觸控筆或手指寫字）正成為在行動裝置上簽署表格的公認方式。 HTML5表格和Forms設計人員現在可讓您選擇在表格上加入塗鴉簽名欄位。 當在瀏覽器中轉譯表單時，您可以使用觸控筆、滑鼠或觸控來登入這些欄位。
 
 ## 如何使用「塗鴉簽名」欄位{#how-to-design-a-form-using-scribble-signature-field}設計表格
 
-1. 在Forms Designer中開啟表格。
+1. 在Forms設計師中開啟表格。
 1. 將「簽名塗鴉」欄位拖放至頁面上。
 
    ![designer_scribble](assets/designer_scribble.png)
 
    >[!NOTE]
    >
-   >在顯示欄位時，會反映在Forms Designer中選擇的欄位的維。 但是，渲染的簽名框的尺寸是根據欄位的長寬比來計算的，而不是根據在Forms Designer中指定的尺寸計算的。
+   >在顯示欄位時，會反映在「Forms設計器」中選擇的Dimension欄位。 但是，渲染的簽名框的尺寸是根據欄位的長寬比計算的，而不是根據Forms設計器中指定的尺寸計算的。
 
 1. 設定「簽名塗鴉」欄位。
 
@@ -77,7 +78,7 @@ HTML5表格在觸控裝置上的運用越來越多，而支援簽名是其中一
 
 在iPad上，預設不會顯示地理位置圖示，當您按一下「**確定**」時，地理位置資訊會自動內嵌。
 
-對於iPad，可在欄位的init參數中將`geoLocManadatoryOnIpad`參數的值修改為`0`，以變更此設定。
+對於iPad，此設定可在欄位的init參數中，將`geoLocManadatoryOnIpad`參數的值修改為`0`來變更。
 
 * 當地理位置資訊是強制性的時候，向用戶呈現縮小的繪製區域。 當使用者按一下其餘區域上的&#x200B;**OK**&#x200B;圖示時，會新增地理位置文字。
 * 在其他情況下，使用者會呈現完整可拉式區域。 如果使用者選擇內嵌地理位置資訊，則會調整此區域的大小以容納地理位置文字。
