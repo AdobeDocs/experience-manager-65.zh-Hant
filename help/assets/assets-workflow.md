@@ -2,10 +2,12 @@
 title: 使用工作流程處理資產
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
+feature: 工作流程、轉譯
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '966'
 ht-degree: 3%
 
 ---
@@ -97,7 +99,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 最佳做法和限制{#best-practices-limitations-tips}
 
-* 設計工作流程時，請考慮您對所有類型轉譯的需求。 如果您未預見未來需要轉譯，請從工作流程中移除其建立步驟。 之後無法大量刪除轉譯。 長期使用[!DNL Experience Manager]後，不需要的轉譯可能佔用大量儲存空間。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂[!DNL Experience Manager]以刪除特定轉譯，或刪除資產並再次上傳這些資產。
+* 在設計工作流程時，請考慮您對所有類型轉譯的需求。 如果您未預見未來需要轉譯，請從工作流程中移除其建立步驟。 之後無法大量刪除轉譯。 長期使用[!DNL Experience Manager]後，不需要的轉譯可能佔用大量儲存空間。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂[!DNL Experience Manager]以刪除特定轉譯，或刪除資產並再次上傳這些資產。
 * 依預設，[!UICONTROL DAM更新資產]工作流程包含一些建立縮圖和網頁轉譯的步驟。 如果從工作流中刪除了任何預設轉譯，則[!DNL Assets]的用戶介面無法正確顯示。
 
 >[!MORELIKETHIS]
