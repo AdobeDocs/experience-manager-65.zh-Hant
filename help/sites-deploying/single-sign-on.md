@@ -1,18 +1,19 @@
 ---
 title: 單一登入
 seo-title: 單一登入
-description: 瞭解如何為AEM例項設定單一登入(SSO)。
-seo-description: 瞭解如何為AEM例項設定單一登入(SSO)。
+description: 瞭解如何為例項設定單一登入(SSO)AEM。
+seo-description: 瞭解如何為例項設定單一登入(SSO)AEM。
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring, Security
 content-type: reference
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 # 單一登入{#single-sign-on}
 
-單一登入(SSO)可讓使用者在提供驗證憑證（例如使用者名稱和密碼）一次後，存取多個系統。 另一個系統（稱為受信任驗證器）執行驗證，並為Experience Manager提供用戶憑證。 Experience Manager會檢查並強制使用者的存取權限（亦即決定允許使用者存取哪些資源）。
+單一登入(SSO)可讓使用者在提供驗證憑證（例如使用者名稱和密碼）一次後，存取多個系統。 單獨的系統（稱為受信驗證器）執行該驗證並提供與用戶證書的Experience Manager。 Experience Manager會檢查並強制使用者的存取權限（亦即決定允許使用者存取哪些資源）。
 
 SSO驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)會處理受信任驗證程式提供的驗證結果。 SSO驗證處理程式會依此順序在下列位置中，將ssid（SSO標識符）搜索為特殊屬性的值：
 
@@ -39,9 +40,9 @@ SSO驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHa
 
 ## 配置SSO {#configuring-sso}
 
-若要為AEM例項設定SSO，您必須設定[SSO驗證處理常式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
+要配置實例的AEMSSO，您需要配置[SSO驗證處理程式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. 使用AEM時，有幾種方法可管理此類服務的組態設定；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+1. 使用時，有AEM幾種管理此類服務配置設定的方法；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
    例如，對於NTLM集：
 
@@ -68,11 +69,11 @@ SSO驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHa
 
 >[!CAUTION]
 >
->請確定使用者無法在設定SSO時直接存取AEM。
+>請確定在設定SSO時，使AEM用者無法直接存取。
 >
->透過要求使用者透過執行您SSO系統代理程式的網頁伺服器，可確保使用者無法直接傳送標題、Cookie或參數，讓使用者受到AEM的信任，因為如果從外部傳送，代理程式會篩選此類資訊。
+>透過要求使用者執行您的SSO系統代理程式的Web伺服器，可確保使用者無法直接傳送標題、Cookie或參數，讓使用者受到信任AEM，因為代理程式會在從外部傳送時篩選這些資訊。
 >
->任何可直接存取您AEM例項而不需透過網頁伺服器的使用者，都可以透過傳送標題、Cookie或參數（如果已知名稱），以任何使用者的身分行事。
+>任何可直接存取您AEM的例項而不需透過Web伺服器的使用者，都可透過傳送標題、Cookie或參數（如果已知名稱），以當成任何使用者。
 >
 >此外，請確定標題、Cookie和請求參數名稱中，您只需設定SSO設定所需的名稱。
 
@@ -169,7 +170,7 @@ Transfer-Encoding: chunked
 
 ## 移除AEM登出連結{#removing-aem-sign-out-links}
 
-使用SSO時，登入和登出會在外部處理，因此AEM本身的登出連結不再適用，應該移除。
+使用SSO時，登入和登出會在外部處理，因此AEM.自己的登出連結不再適用，應該移除。
 
 歡迎畫面上的登出連結可依照下列步驟移除。
 
