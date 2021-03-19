@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -85,4 +86,4 @@ Apache可以使用HTTP或AJP協定與JBoss通信。
    </Location>
    ```
 
-1. 若要存取AEM伺服器，請使用https://[Apache_server]:80。
+1. 若要存AEM取伺服器，請使用https://[Apache_server]:80。
