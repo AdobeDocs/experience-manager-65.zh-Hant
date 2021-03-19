@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -36,15 +37,15 @@ Java API Quick Start(SOAP)適用於User Manager API。
 
 [快速入門（SOAP模式）:使用Java API以程式設計方式管理偏好設定節點](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
-AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應設為SOAP。
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計時，若您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑，此為「檔案」的基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>如果您使用其他作業系統（例如Unix）,AEM則使用表格進行程式設計時的快速入門是以檔案為基礎，並以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-adding-users-using-the-java-api}新增使用者
 
-下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 （請參閱[新增使用者](/help/forms/developing/users.md#adding-users)）。
+以下代碼示例將名為Wendy Blue的用戶添加到AEM Forms。 （請參閱[新增使用者](/help/forms/developing/users.md#adding-users)）。
 
 ```java
  /*
@@ -162,7 +163,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-deleting-users-using-the-java-api}刪除用戶
 
-下列程式碼範例會從AEM Forms中刪除名為Wendy Blue的使用者。 （請參閱[刪除用戶](/help/forms/developing/users.md#deleting-users)。）
+下列程式碼範例會從AEM Forms刪除名為Wendy Blue的使用者。 （請參閱[刪除用戶](/help/forms/developing/users.md#deleting-users)。）
 
 ```java
  /*
@@ -634,7 +635,7 @@ AEM Forms作業可以使用AEM Forms強式型別API來執行，連線模式應�
 
 ## 快速入門（SOAP模式）:使用Java API {#quick_start_soap_mode_adding_users_using_the_java_api-1}新增使用者
 
-下列程式碼範例將名為Wendy Blue的使用者新增至AEM Forms。 （請參閱[新增使用者](/help/forms/developing/users.md#adding-users)）。
+以下代碼示例將名為Wendy Blue的用戶添加到AEM Forms。 （請參閱[新增使用者](/help/forms/developing/users.md#adding-users)）。
 
 ```java
  /*
