@@ -5,11 +5,12 @@ contentOwner: khsingh
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 0%
+source-wordcount: '2239'
+ht-degree: 1%
 
 ---
 
@@ -68,7 +69,7 @@ ht-degree: 0%
 
 ### 將批處理API與Watched資料夾{#using-the-batch-api-watched-folders}搭配使用
 
-為了讓您輕鬆體驗API,AEM Forms提供「Watched Folder」服務，設定為立即可用的「批次API」。 您可以透過AEM Forms UI存取服務，以產生多種互動式通訊。 您也可以根據需求建立自訂服務。 您可以使用下列方法，將Batch API與Watched資料夾搭配使用：
+為方便使用API,AEM Forms提供設定為立即使用批次API的Watched資料夾服務。 您可透過AEM FormsUI存取服務，以產生多種互動式通訊。 您也可以根據需求建立自訂服務。 您可以使用下列方法，將Batch API與Watched資料夾搭配使用：
 
 * 指定JSON檔案格式的輸入資料（記錄），以產生互動式通訊
 * 使用儲存於外部資料來源並透過表單資料模型存取的輸入資料（記錄）來產生互動式通訊
@@ -80,8 +81,8 @@ ht-degree: 0%
 若要從儲存在JSON檔案中的記錄建立互動式通訊：
 
 1. 建立[Watched資料夾](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)，並設定它使用批次API:
-   1. 登入AEM Forms作者例項。
-   1. 導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 表單]** > **[!UICONTROL 設定監視資料夾]**」。 點選「**[!UICONTROL 新增]**」。
+   1. 登入AEM Forms作者實例。
+   1. 導覽至「**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 設定監視資料夾]**」。 點選「**[!UICONTROL 新增]**」。
    1. 指定資料夾的&#x200B;**[!UICONTROL 名稱]**&#x200B;和物理&#x200B;**[!UICONTROL 路徑]**。 例如，`c:\batchprocessing`。
    1. 在&#x200B;**[!UICONTROL 使用]**&#x200B;處理檔案欄位中選擇&#x200B;**[!UICONTROL 服務]**&#x200B;選項。
    1. 在&#x200B;**[!UICONTROL 服務名稱]**&#x200B;欄位中，選取&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服務。
@@ -104,7 +105,7 @@ ht-degree: 0%
    1. 等待「監視資料夾」處理檔案。 當處理開始時，包含檔案的輸入檔案和子檔案夾會移至預備檔案夾。
    1. 開啟輸出資料夾以查看輸出：
       * 當您在「Watched Folder Configuration」（監看資料夾設定）中指定「PRINT」（列印）選項時，會產生互動式通訊的PDF輸出。
-      * 當您在「Watched Folder Configuration」（監看資料夾設定）中指定WEB選項時，會產生每個記錄的JSON檔案。 您可以使用JSON檔案來預先填寫網頁範本[。](#web-template)
+      * 當您在「Watched Folder Configuration」（監看資料夾設定）中指定WEB選項時，會產生每個記錄的JSON檔案。 您可以使用JSON檔案來預先填寫網頁範本](#web-template)。[
       * 當您同時指定「列印」和「網頁」選項時，會產生PDF檔案和每個記錄的JSON檔案。
 
 #### 使用儲存在外部資料來源並透過表單資料模型存取的輸入資料，產生互動式通訊{#use-fdm-as-data-source}
@@ -142,8 +143,8 @@ ht-degree: 0%
    1. 儲存並關閉檔案。
 
 1. 建立[Watched資料夾](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)，並設定它以使用Batch API服務：
-   1. 登入AEM Forms作者例項。
-   1. 導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 表單]** > **[!UICONTROL 設定監視資料夾]**」。 點選「**[!UICONTROL 新增]**」。
+   1. 登入AEM Forms作者實例。
+   1. 導覽至「**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 設定監視資料夾]**」。 點選「**[!UICONTROL 新增]**」。
    1. 指定資料夾的&#x200B;**[!UICONTROL 名稱]**&#x200B;和物理&#x200B;**[!UICONTROL 路徑]**。 例如，`c:\batchprocessing`。
    1. 在&#x200B;**[!UICONTROL 使用]**&#x200B;處理檔案欄位中選擇&#x200B;**[!UICONTROL 服務]**&#x200B;選項。
    1. 在&#x200B;**[!UICONTROL 服務名稱]**&#x200B;欄位中，選取&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服務。
@@ -166,18 +167,18 @@ ht-degree: 0%
    1. 等待「監視資料夾」處理檔案。 當處理開始時，包含檔案的輸入檔案和子檔案夾會移至預備檔案夾。
    1. 開啟輸出資料夾以查看輸出：
       * 當您在「Watched Folder Configuration」（監看資料夾設定）中指定「PRINT」（列印）選項時，會產生互動式通訊的PDF輸出。
-      * 當您在「Watched Folder Configuration」（監看資料夾設定）中指定WEB選項時，會產生每個記錄的JSON檔案。 您可以使用JSON檔案來預先填寫網頁範本[。](#web-template)
+      * 當您在「Watched Folder Configuration」（監看資料夾設定）中指定WEB選項時，會產生每個記錄的JSON檔案。 您可以使用JSON檔案來預先填寫網頁範本](#web-template)。[
       * 當您同時指定「列印」和「網頁」選項時，會產生PDF檔案和每個記錄的JSON檔案。
 
 ## 使用REST請求叫用批次API
 
-您可以通過「代表性狀態傳輸(REST)」請求調用「批次API」[。 ](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)它可讓您提供REST端點給其他使用者以存取API，並設定您自己的處理、儲存和自訂互動式通訊方法。 您可以開發自己的自訂Java servlet，以在AEM例項上部署API。
+您可以通過「代表性狀態傳輸(REST)」請求調用「批次API」[。 ](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)它可讓您提供REST端點給其他使用者以存取API，並設定您自己的處理、儲存和自訂互動式通訊方法。 您可以開發自己的自訂Java servlet，以在例項上部署AEMAPI。
 
 在部署Java servlet之前，請確定您有互動式通訊，並有對應的資料檔案可供使用。 執行以下步驟以建立和部署Java servlet:
 
-1. 登入您的AEM例項並建立互動式通訊。 要使用下面提供的示例代碼中提到的互動式通信，請[按一下這裡](assets/SimpleMediumIC.zip)。
-1. [使用Apache ](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) Mavenon您的AEM例項建立和部署AEM專案。
-1. 將[AEM Forms Client SDK 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)版或更新版本新增至AEM專案的POM檔案相依性清單中。 例如，
+1. 登入您的例AEM項並建立互動式通訊。 要使用下面提供的示例代碼中提到的互動式通信，請按一下這裡[。](assets/SimpleMediumIC.zip)
+1. [使用Apache AEM Mavenon實例建立和部AEM署專案。](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) 
+1. 將[AEM Forms客戶端SDK 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)版或更新版本添加到項目的POM檔案的依賴項列AEM表中。 例如，
 
    ```xml
        <dependency>
@@ -187,7 +188,7 @@ ht-degree: 0%
        </dependency>
    ```
 
-1. 開啟Java專案，建立。java檔案，例如CCMBatchServlet.java。 將下列程式碼新增至檔案：
+1. 開啟Java專案，建立。java檔案，例如CCMBatchServlet.java。 將下列程式碼新增至檔案中：
 
    ```java
            package com.adobe.fd.ccm.multichannel.batch.integration;
@@ -324,11 +325,11 @@ ht-degree: 0%
 
 1. 在上述程式碼中，將範本路徑(setTemplatePath)取代為範本的路徑，並設定setBatchType API的值：
    * 當您指定互動式通訊的PRINT選項時，就會產生PDF輸出。
-   * 當您指定WEB選項時，會產生每個記錄的JSON檔案。 您可以使用JSON檔案來預先填寫網頁範本[。](#web-template)
+   * 當您指定WEB選項時，會產生每個記錄的JSON檔案。 您可以使用JSON檔案來預先填寫網頁範本](#web-template)。[
    * 當您同時指定「列印」和「網頁」選項時，會產生PDF檔案和每個記錄的JSON檔案。
 
 1. [使用maven將更新的程式碼部署至您的AEM例項](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)。
-1. 叫用批次API以產生互動式通訊。 批次API會根據記錄數傳回PDF和。json檔案串流。 您可以使用JSON檔案來預先填寫網頁範本[。 ](#web-template)如果您使用上述程式碼，API會部署在`http://localhost:4502/bin/batchServlet`。 程式碼會列印並傳回PDF和JSON檔案的串流。
+1. 叫用批次API以產生互動式通訊。 批次API會根據記錄數傳回PDF和。json檔案串流。 您可以使用JSON檔案來預先填寫網頁範本](#web-template)。 [如果您使用上述程式碼，API會部署在`http://localhost:4502/bin/batchServlet`。 程式碼會列印並傳回PDF和JSON檔案的串流。
 
 ### 預先填寫網頁範本{#web-template}
 
