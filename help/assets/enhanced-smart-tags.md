@@ -2,10 +2,12 @@
 title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
+feature: 智慧型標籤，搜尋
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1602'
 ht-degree: 1%
 
 ---
