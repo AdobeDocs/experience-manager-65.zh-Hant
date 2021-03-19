@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
+feature: 升級
 translation-type: tm+mt
-source-git-commit: 24290b65a126822eb918fbecc978372394b5b655
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
@@ -26,20 +27,20 @@ CRX2Oak是一種工具，旨在在不同資料庫之間移轉資料。
 
 它可用來將舊版CQ中以Apache Jackrabbit 2為基礎的資料移轉至Oak，也可用來在Oak資料庫之間複製資料。
 
-您可從公用Adobe存放庫下載最新版crx2oak，網址為：
+您可從公用Adobe存放庫下載最新版的crx2oak，網址為：
 [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
 
 最新版本的變更和修正清單可在[CRX2Oak發行說明](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/crx2oak.html)中找到。
 
 >[!NOTE]
 >
->如需Apache Oak和AEM永續性主要概念的詳細資訊，請參閱[AEM Platform簡介](/help/sites-deploying/platform.md)。
+>有關Apache Oak和永久性主要概念的AEM詳細資訊，請參閱[平台AEM簡介](/help/sites-deploying/platform.md)。
 
 ## 遷移使用案例{#migration-use-cases}
 
 此工具可用於：
 
-* 從舊版CQ 5移轉至AEM 6
+* 從舊版CQ 5移轉至AEM6
 * 在多個Oak資料庫之間複製資料
 * 在不同Oak MicroKernel實作之間轉換資料。
 
@@ -51,17 +52,17 @@ CRX2Oak是一種工具，旨在在不同資料庫之間移轉資料。
 
 ## 功能 {#features}
 
-CRX2Oak在AEM升級期間會呼叫，使用者可指定預先定義的移轉設定檔，以自動重新配置永續性模式。 這稱為快速啟動模式。
+在升級期間會呼叫CRX2Oak,AEM讓使用者可以指定預先定義的移轉設定檔，以自動重新配置永續性模式。 這稱為快速啟動模式。
 
-此外，您也可以個別執行，以備需要更多自訂時使用。 不過，請注意，在此模式中，僅會對儲存庫進行變更，而且需要手動執行任何額外的AEM重新配置。 這稱為獨立模式。
+此外，您也可以個別執行，以備需要更多自訂時使用。 但是，請注意，在此模式下，僅對儲存庫進行更改，需要手動執AEM行任何其他重新配置。 這稱為獨立模式。
 
 另一個要注意的是，在獨立模式下使用預設設定時，將只遷移節點儲存，新儲存庫將重新使用舊的二進位儲存。
 
 ### 自動快速啟動模式{#automated-quickstart-mode}
 
-自從AEM 6.3起，CRX2Oak就能處理使用者定義的移轉設定檔，這些設定檔可以設定所有可用的移轉選項。 這可讓您擁有更高的彈性，並可自動設定AEM，如果您以獨立模式使用工具，則無法使用這些功能。
+自AEM6.3以來，CRX2Oak可處理使用者定義的移轉設定檔，這些設定檔可使用所有可用的移轉選項來設定。 這可讓您在獨立模式下使用工具時，擁有更高的彈性AEM，並可自動設定無法使用的功能。
 
-若要將CRX2Oak切換為快速啟動模式，您需要透過此作業系統環境變數，在AEM安裝目錄中定義crx-quickstart資料夾的路徑：
+要將CRX2Oak切換為快速啟動模式，您需要通過以下作業系統環境變數定義安裝目錄中crx-quickstartAEM資料夾的路徑：
 
 **對於基於UNIX的系統和macOS:**
 
@@ -99,13 +100,13 @@ CRX2Oak也依預設支援記憶體映射作業。 記憶體映射可大大提高
 
 #### 合併{#path-merging}的路徑
 
-如果需要在兩個儲存庫之間複製資料，而您在兩個實例上都有不同的內容路徑，則可以在`--merge-path`參數中定義該資料。 一旦完成，CRX2Oak將只將新節點複製到目標儲存庫，並保留舊節點。
+如果需要在兩個儲存庫之間複製資料，並且您在兩個實例上都有不同的內容路徑，則可以在`--merge-path`參數中定義該資料。 一旦完成，CRX2Oak將只將新節點複製到目標儲存庫，並保留舊節點。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
 #### 版本支援{#version-support}
 
-依預設，AEM會建立每個節點或頁面的修改版本，並將它儲存在儲存庫中。 然後，這些版本可用來將頁面還原為舊版。
+預設情AEM況下，將建立修改的每個節點或頁的版本，並將其儲存在儲存庫中。 然後，這些版本可用來將頁面還原為舊版。
 
 不過，即使刪除原始頁面，這些版本也不會清除。 在處理長期運行的儲存庫時，遷移可能需要處理由孤立版本造成的大量冗餘資料。
 
@@ -123,7 +124,7 @@ CRX2Oak的開放原始碼版本以oak-upgrade的形式提供。 它支援除以�
 
 * CRX2支援
 * 移轉設定檔支援
-* 支援自動化AEM重新配置
+* 支援自動重AEM新配置
 
 如需詳細資訊，請參閱[Apache Documentation](https://jackrabbit.apache.org/oak/docs/migration.html)。
 
@@ -198,11 +199,11 @@ CRX2Oak的開放原始碼版本以oak-upgrade的形式提供。 它支援除以�
   </tr>
   <tr>
    <td>快速啟動模式</td>
-   <td>運行CRX2Oak時，可將<strong>—log-level TRACE</strong>或<strong>—log-level DEBUG </strong>選項添加到命令行中。 在此模式下，日誌會自動重定向到<strong>upgrade.log檔案</strong>。</td>
+   <td>運行CRX2Oak時，可將<strong>—log-levelTRACE</strong>或<strong>—log-level DEBUG </strong>選項添加到命令行中。 在此模式下，日誌會自動重定向到<strong>upgrade.log檔案</strong>。</td>
   </tr>
   <tr>
    <td>獨立模式</td>
-   <td><p>將<strong> -trace</strong>選項添加到CRX2Oak命令行中，以在標準輸出中顯示TRACE事件(您需要使用重定向字元重定向日誌：'&gt;'或'tee'命令，以供稍後檢查)。</p> </td>
+   <td><p>將<strong> -trace</strong>選項添加到CRX2Oak命令行中，以顯示標準輸出上的TRACE事件(您需要使用重定向字元重新定向日誌：'&gt;'或'tee'命令，以供稍後檢查)。</p> </td>
   </tr>
  </tbody>
 </table>
