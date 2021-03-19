@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '10273'
+source-wordcount: '10275'
 ht-degree: 0%
 
 ---
@@ -43,7 +44,7 @@ ht-degree: 0%
 
 **允許匿名使用者存** 取：選取此選項可啟用建立共用和個人化政策的能力，讓匿名使用者開啟受原則保護的檔案。（沒有帳戶的使用者可以存取檔案，但無法登入檔案保全或使用其他受原則保護的檔案。）
 
-**停用對7版用戶端的存** 取：指定使用者是否可使用Acrobat或Reader 7.0連線至伺服器。當選取此選項時，使用者必須使用Acrobat或Reader 8.0及更新版本，才能完成PDF檔案的檔案保全作業。 如果政策要求在開啟受原則保護的檔案時，Acrobat或Reader 8.0及更新版本必須以認證模式執行，您應停用Acrobat或Reader 7的存取權。 （請參閱指定使用者和群組的檔案權限。）
+**禁用對7版客戶端的訪問：指** 定用戶可以使用Acrobat還是Reader7.0連接到伺服器。當選取此選項時，使用者必須使用Acrobat或8.0Reader及更新版本，才能完成PDF檔案的檔案保全作業。 如果政策要求在開啟受原則保護的檔案時，Acrobat或Reader8.0及更新版本必須以認證模式執行，您應停用對Acrobat或Reader7的存取。 （請參閱指定使用者和群組的檔案權限。）
 
 **允許每份檔案的離線** 存取選取此選項可指定每份檔案的離線存取。如果啟用此設定，則使用者將只能離線存取使用者至少已線上開啟過一次的檔案。
 
@@ -55,20 +56,20 @@ ht-degree: 0%
 
 **允許擴展** 驗證選擇以啟用擴展驗證，然後輸入擴展驗證登錄URL。
 
-選擇此選項可讓客戶端應用程式使用擴展身份驗證。 擴充驗證可提供自訂驗證程式，以及AEM Forms伺服器上設定的不同驗證選項。 例如，使用者現在可以從Acrobat和Reader用戶端體驗以SAML為基礎的驗證，而非AEM表單的使用者名稱／密碼。 依預設，「著陸URL」包含&#x200B;*localhost*&#x200B;作為伺服器名稱。 以完全限定的主機名替換伺服器名稱。 如果尚未啟用擴充驗證，著陸URL中的主機名稱會自動從基本URL填入。 請參閱[添加擴展身份驗證提供程式](configuring-client-server-options.md#add-the-extended-authentication-provider)。
+選擇此選項可讓客戶端應用程式使用擴展身份驗證。 擴充驗證可提供自訂驗證程式，以及在表單伺服器上設定的不AEM同驗證選項。 例如，使用者現在可以體驗Acrobat和Reader用戶端的SAMLAEM驗證，而非表單使用者名稱／密碼。 依預設，「著陸URL」包含&#x200B;*localhost*&#x200B;作為伺服器名稱。 以完全限定的主機名替換伺服器名稱。 如果尚未啟用擴充驗證，著陸URL中的主機名稱會自動從基本URL填入。 請參閱[添加擴展身份驗證提供程式](configuring-client-server-options.md#add-the-extended-authentication-provider)。
 
-***注意&#x200B;**:Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本支援延伸驗證。*
+***注意&#x200B;**:Apple Mac OS X上支援Extended驗證(含Adobe Acrobat版本11.0.6及更新版本)。*
 
-**延伸驗證的偏好HTML控制寬** 度指定在Acrobat中開啟以輸入使用者認證的延伸驗證對話方塊的寬度。
+**延伸驗證的偏好HTML控制寬** 度指定在Acrobat開啟以輸入使用者認證的延伸驗證對話方塊的寬度。
 
-**延伸驗證的偏好HTML控制高度** 指定在Acrobat中開啟以輸入使用者認證的延伸驗證對話方塊的高度。
+**延伸驗證的偏好HTML控制高度** 指定延伸驗證對話方塊的高度，此對話方塊會在Acrobat開啟以輸入使用者憑證。
 
 ***注意&#x200B;**:此對話框的寬度和高度限制如下：*
 寬度：最少= 400，最多= 900
 
 高度：最低= 450;最大值= 800
 
-**啟用客戶端憑據快取：** 選擇此選項可允許用戶快取其憑據（用戶名和密碼）。當使用者的認證被快取時，他們不必在每次開啟檔案時或按一下Adobe Acrobat「管理保全政策」頁面上的「重新整理」按鈕時輸入認證。 您可以指定使用者必須再次提供其認證的天數。 將天數設為0可無限期快取憑證。
+**啟用客戶端憑據快取：** 選擇此選項可允許用戶快取其憑據（用戶名和密碼）。當用戶的憑據被快取時，他們不必在每次開啟文檔或按一下Adobe Acrobat「管理安全策略」頁面上的「刷新」按鈕時輸入憑據。 您可以指定使用者必須再次提供其認證的天數。 將天數設為0可無限期快取憑證。
 
 ## 設定Document Security使用者和管理員{#configuring-document-security-users-and-administrators}
 
@@ -84,7 +85,7 @@ ht-degree: 0%
 
 可見的用戶和組清單對策略集協調器可見，用於限制最終用戶在選擇要添加到策略的用戶或組時可以瀏覽的域。 如果未執行此任務，則策略集協調器將找不到要添加到策略的任何用戶或組。 任何給定的策略集都可以有一個以上的策略集協調器。
 
-1. 在您安裝並設定AEM表單環境並具備檔案安全性後，請在「使用者管理」中設定所有適當的網域。<!-- Fix broken link (See Setting up and managing domains) -->
+1. 在安裝並設定具有檔案安全AEM性的表單環境後，請在「使用者管理」中設定所有適當的網域。<!-- Fix broken link (See Setting up and managing domains) -->
 
    ***注意&#x200B;**:必須先建立域，才能建立任何策略。*
 
@@ -96,11 +97,11 @@ ht-degree: 0%
 
 ## 添加擴展身份驗證提供程式{#add-the-extended-authentication-provider}
 
-AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
+表AEM單提供了一個樣例配置，您可以根據環境進行自定義。 執行以下步驟：
 
 >[!NOTE]
 >
->Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本支援延伸驗證。
+>Apple Mac OS X上支援Extended驗證(含Adobe Acrobat版本11.0.6及更新版本)。
 
 1. 獲取WAR檔案部署示例。 請參閱適用於您應用程式伺服器的安裝指南。
 1. 請確定表單伺服器具有完全限定的名稱，而非IP位址做為基本URL，且是HTTPS URL。 請參閱[伺服器組態設定](configuring-client-server-options.md#server-configuration-settings)。
@@ -109,11 +110,11 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 ### 新增SSO重新導向URL以進行延伸驗證{#add-sso-redirect-urls-for-extended-authentication}
 
-啟用延伸驗證後，使用者在Acrobat XI或Reader XI中開啟受原則保護的檔案時，會收到驗證對話方塊。 此對話方塊會載入您在Document Security伺服器設定上指定為延伸驗證著陸URL的HTML頁面。 請參閱[伺服器組態設定](configuring-client-server-options.md#server-configuration-settings)。
+啟用擴充驗證後，使用者在AcrobatXI或ReaderXI中開啟受原則保護的檔案時，會收到驗證對話方塊。 此對話方塊會載入您在Document Security伺服器設定上指定為延伸驗證著陸URL的HTML頁面。 請參閱[伺服器組態設定](configuring-client-server-options.md#server-configuration-settings)。
 
 >[!NOTE]
 >
->Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本支援延伸驗證。
+>Apple Mac OS X上支援Extended驗證(含Adobe Acrobat版本11.0.6及更新版本)。
 
 1. 在管理控制台中，按一下「設定>使用者管理>設定>匯入和匯出設定檔」。
 1. 按一下「導出」(Export)，將配置檔案保存到磁碟。
@@ -132,7 +133,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 檔案安全性可讓您離線使用受原則保護的檔案，毋需使用網際網路或網路連線。 此功能要求原則允許離線存取，如[指定使用者和群組的檔案權限](/help/forms/using/admin-help/creating-policies.md#specify-the-document-permissions-for-users-and-groups)所述。 在離線使用具有此策略的文檔之前，收件人必須在聯機時開啟文檔並啟用離線訪問，方法是在出現提示時按一下「是」。 也可以請求接收者驗證其身份。 然後，收件者可以在原則中指定的離線租用期間離線使用檔案。
 
-離線租用期結束時，收件者必須透過線上開啟檔案或使用Acrobat或Acrobat Reader DC擴充功能表命令進行同步，以再次與檔案安全性同步。 （請參閱&#x200B;*Acrobat說明*&#x200B;或適當的&#x200B;*Acrobat Reader DC擴充功能說明*）。
+離線租用期間結束時，收件者必須線上開啟檔案，或使用Acrobat或Acrobat Reader DC擴充功能表命令進行同步，以再次與檔案安全性同步。 (請參閱&#x200B;*Acrobat幫助*&#x200B;或相應的&#x200B;*Acrobat Reader DC擴展幫助*。)
 
 由於允許離線存取的檔案需要離線儲存檔案的電腦上的快取金鑰材料，因此，如果未經授權的使用者可取得該金鑰材料，檔案可能會受到危害。 為彌補這種可能性，您可設定排程和手動的按鍵變換選項，以防止未經授權的人使用按鍵存取檔案。
 
@@ -197,7 +198,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 * 受原則保護的檔案事件，例如授權或未經授權的使用者嘗試開啟檔案
 * 策略事件，如建立、更改、刪除、啟用和禁用策略
 * 使用者事件，例如外部使用者邀請和註冊、啟用和停用的使用者帳戶、使用者密碼的變更，以及描述檔更新
-* AEM表單事件，例如版本不符、目錄伺服器和授權提供者無法使用，以及伺服器組態變更
+* 表AEM單事件，例如版本不符、不可用的目錄伺服器和授權提供者，以及伺服器組態變更
 
 ### 啟用或禁用事件審計{#enable-or-disable-event-auditing}
 
@@ -222,7 +223,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 ### 啟用或停用隱私權通知{#enable-or-disable-privacy-notification}
 
-您可以啟用和停用隱私權通知訊息。 當您啟用隱私權通知時，當收件者嘗試開啟受原則保護的檔案時，會顯示訊息。 此通知會通知使用者檔案使用情況正在檢查中。 您也可以指定URL，讓使用者在隱私權政策頁面可供使用時，用來檢視您的隱私權政策頁面。
+您可以啟用和停用隱私權通知訊息。 當您啟用隱私權通知時，當收件者嘗試開啟受原則保護的檔案時，會顯示訊息。 此通知會通知使用者檔案使用情況正在檢查中。 您也可以指定URL，讓使用者在隱私權政策頁面可供使用時，可使用該URL來檢視您的隱私權政策頁面。
 
 1. 在管理控制台中，按一下「服務> Document Security>設定>稽核和隱私權設定」。
 1. 若要設定隱私權通知，請在「啟用隱私權通知」下方，選取「是」或「否」。
@@ -240,7 +241,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 ### 匯入自訂稽核事件類型{#import-a-custom-audit-event-type}
 
-如果您使用支援其他事件（例如特定檔案類型的事件）審核的檔案安全性應用程式，Adobe合作夥伴可以提供您自訂的審核事件，讓您將這些事件匯入檔案安全性。 只有當Adobe合作夥伴已提供自訂事件類型時，才能使用此功能。
+如果您使用支援其他事件（例如特定檔案類型的事件）審核的檔案安全性應用程式，Adobe合作夥伴可以提供您自訂的審核事件，讓您將這些事件匯入檔案安全性。 只有當Adobe合作夥伴提供自訂事件類型時，才能使用此功能。
 
 1. 在管理控制台中，按一下「服務> Document Security >設定>事件管理」。
 1. 按一下「瀏覽」前往要匯入的XML檔案，然後按一下「匯入」。
@@ -298,7 +299,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 **表單填寫：** 收件者會將資訊輸入可填寫的PDF檔案。
 
-**已移除原則：** 發行者會從檔案中移除原則，以取消安全性保護。
+**已移除原則：** 發佈者會從檔案中移除原則，以取消安全性保護。
 
 **變更檔案撤銷URL:** 來自API層級的呼叫會變更指定的撤銷URL，以存取取代已撤銷檔案的新檔案。
 
@@ -310,9 +311,9 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 **在文檔上切換策** 略：用戶或管理員切換附加到文檔的策略。
 
-**發佈檔案為：** 在伺服器上註冊的新檔案，其documentName和授權與現有檔案相同，且檔案不具有父子關係。您可以使用AEM表單SDK觸發此事件。
+**發佈檔案為：** 在伺服器上註冊的新檔案，其documentName和授權與現有檔案相同，且檔案不具有父子關係。此事件可使用表單SDKAEM觸發。
 
-**重複文** 件：在伺服器上註冊檔案，其documentName和授權與現有檔案相同，且檔案具有父子關係。您可以使用AEM表單SDK觸發此事件。
+**重複文** 件：在伺服器上註冊檔案，其documentName和授權與現有檔案相同，且檔案具有父子關係。此事件可使用表單SDKAEM觸發。
 
 **政策事件**
 
@@ -366,7 +367,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 **同步** 的ClientClient應用程式必須將資訊與伺服器同步，才允許離線存取。
 
-**版本不符：** 與伺服器不相容的AEM表單SDK版本嘗試連線至伺服器。
+**版本不符：** 與伺服器不AEM相容的表單SDK版本嘗試連線至伺服器。
 
 **目錄同步資訊：** 此資訊不可從「事件」頁獲得。當前目錄同步資訊（包括上次同步的當前同步狀態和時間）顯示在「域管理」頁上。 若要存取管理控制台中的「網域管理」頁面，請按一下「設定>使用者管理>網域管理」。
 
@@ -417,11 +418,11 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 **選擇「認證文字」:** 顯示的文字會引導使用者選取認證類型。
 
-**證書不可用錯誤文本：** 在選定證書不可用時，最多顯示512個字元的消息。
+**證書不可用錯誤文** 本：在選定的證書不可用時，最多顯示512個字元的消息。
 
 **自訂用戶端憑證顯示**
 
-**僅顯示受信任憑證發行者：選取此選項時，用戶端應用程式僅會向使用者提供AEM表單設定為受信任之憑證發行者的憑證（請參閱管理憑證和憑證）。** 如果未選取此選項，使用者會收到使用者系統上所有憑證的清單。
+**僅顯示受信任的憑證發行者：** 選取此選項時，用戶端應用程式僅向使用者提供已設定為信任的憑證發行者的憑證AEM（請參閱管理憑證和憑證）。如果未選取此選項，使用者會收到使用者系統上所有憑證的清單。
 
 ## 配置動態水印{#configure-dynamic-watermarks}
 
@@ -433,7 +434,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 當收件者檢視或列印檔案時，原則指定的浮水印會出現在受原則保護的檔案中。 與永久浮水印不同，動態浮水印不會儲存在檔案中，這提供了在內部網路環境中部署檔案時的彈性，以確保檢視應用程式顯示特定使用者的身分。 此外，如果檔案有多位使用者，使用動態水印表示您可以使用一個檔案而非多個版本，每個版本都有不同的水印。 顯示的水印反映當前用戶的身份。
 
-請注意，動態浮水印與使用者可直接在Acrobat中新增至檔案的浮水印不同。 結果是，受原則保護的檔案中可以有兩個浮水印。
+請注意，動態水印與使用者可直接新增至Acrobat檔案的浮水印不同。 結果是，受原則保護的檔案中可以有兩個浮水印。
 
 ### 建立水印{#considerations-when-creating-watermarks}時的注意事項
 
@@ -453,24 +454,24 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 * 您可以變更要用作浮水印元素的PDF檔案大小上限。 不過，當套用浮水印的檔案離線同步化時，大型的PDF檔案會降低效能。 請參閱[更改水印配置參數](configuring-client-server-options.md#change-the-watermark-configuration-parameters)。
 * 只有選取的PDF第一頁會當做浮水印使用。 請確定您要顯示為浮水印的資訊可在第一頁本身使用。
 * 即使您可以指定PDF檔案的縮放比例，如果您打算將PDF當做頁首、頁尾或邊界中的浮水印使用，請考慮其頁面大小和版面配置。
-* 指定字型名稱時，請正確輸入名稱。 AEM表格會取代您指定的字型（如果該字型不存在於開啟檔案的用戶端機器中）。
+* 指定字型名稱時，請正確輸入名稱。 表AEM單會取代您在開啟檔案的用戶端機器中未顯示的字型。
 * 如果您選取文字作為浮水印內容，則將縮放選項指定為「最適頁面大小」(Fit To Page)對寬度不相同的頁面不起作用。
 * 當您指定浮水印元素的位置時，請確定最多一個元素具有相同的位置。 如果兩個水印元素具有相同的位置（例如中心），它們會重疊在檔案上，並依順序加入到水印中。
-* 指定字型大小和文字時，請確定文字長度在頁面中完全可見。 文字內容會指向新行，因此您原本要出現在邊界中的浮水印內容可能會重疊在頁面上的內容區域。 不過，如果檔案在Acrobat 9中開啟，單行以外的文字會被截斷。
+* 指定字型大小和文字時，請確定文字長度在頁面中完全可見。 文字內容會指向新行，因此您原本要出現在邊界中的浮水印內容可能會重疊在頁面上的內容區域。 不過，如果檔案在Acrobat 9開啟，單行以外的文字會被截斷。
 
 ### 動態水印的限制{#limitations-of-dynamic-watermarks}
 
 有些用戶端應用程式可能不支援動態浮水印。 請參閱適當的Acrobat Reader DC擴充功能說明。 此外，請記住下列支援動態浮水印的Acrobat版本：
 
 * 您無法使用受密碼保護的PDF檔案做為浮水印元素。
-* Acrobat和Adobe Reader 10之前的版本不支援下列浮水印功能：
+* Acrobat和Adobe Reader早於10的版本不支援下列浮水印功能：
 
    * PDF浮水印
    * 浮水印中的多個元素（文字/PDF）
    * 進階選項，例如頁面範圍或顯示選項
-   * 文字格式選項，例如指定的字型、字型名稱和顏色。 不過，舊版Acrobat和Reader會以預設字型和顏色顯示文字內容。
+   * 文字格式選項，例如指定的字型、字型名稱和顏色。 不過，舊版Acrobat和Reader會以預設字型和色彩顯示文字內容。
 
-* Acrobat 9.0及舊版：Acrobat 9.0及舊版不支援動態浮水印的原則名稱。 如果Acrobat 9.0開啟受原則保護的檔案，其中包含原則名稱和其他動態資料的動態水印，則會顯示水印，而不包含原則名稱。 如果動態水印只包含原則名稱，Acrobat會顯示錯誤訊息
+* Acrobat 9.0及舊版：Acrobat 9.0及舊版不支援動態浮水印的原則名稱。 如果Acrobat 9.0開啟受原則保護的檔案，其中包含原則名稱和其他動態資料的動態水印，則會顯示水印而不包含原則名稱。 如果動態水印只包含原則名稱，Acrobat會顯示錯誤訊息
 
 ### 新增動態水印範本{#add-a-dynamic-watermark-template}
 
@@ -554,7 +555,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 註冊電子郵件包含「註冊」頁面的連結，以及如何註冊的資訊。 在邀請的使用者註冊後，檔案安全性會發出啟動電子郵件，並附上啟動頁面的連結。 啟用後，帳戶會一直有效，直到您停用或刪除為止。
 
-如果啟用內置註冊，則只需指定一次SMTP伺服器、註冊電子郵件詳細資訊、訪問權能和重設密碼電子郵件資訊。 在啟用內建註冊之前，請確定您已在「使用者管理」中建立本機網域，已將「Document security Invite User」角色指派給貴組織中適當的使用者和群組。 （請參閱[添加本地域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)和[建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。） 如果您不使用內建註冊，則必須使用AEM表單SDK建立您自己的使用者註冊系統。 請參閱「使用AEM表單進行程式設計」中的「開發AEM表單的SPI」說明。 [](https://www.adobe.com/go/learn-aemforms-programming-63)如果您不使用內建註冊選項，建議您在啟動電子郵件和用戶端登入畫面中設定訊息，以通知使用者如何聯絡管理員以取得新密碼或取得其他資訊。
+如果啟用內置註冊，則只需指定一次SMTP伺服器、註冊電子郵件詳細資訊、訪問權能和重設密碼電子郵件資訊。 在啟用內建註冊之前，請確定您已在「使用者管理」中建立本機網域，已將「Document security Invite User」角色指派給貴組織中適當的使用者和群組。 （請參閱[添加本地域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)和[建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。） 如果您不使用內建註冊，則必須使用表單SDK建立您自己的使用者註冊AEM系統。 請參閱[使用表AEM單進行寫程式中的「開發表AEM單的SPI」幫助。 ](https://www.adobe.com/go/learn-aemforms-programming-63)如果您不使用內建註冊選項，建議您在啟動電子郵件和用戶端登入畫面中設定訊息，以通知使用者如何聯絡管理員以取得新密碼或取得其他資訊。
 
 **啟用和設定邀請的使用者註冊**
 
@@ -771,7 +772,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 您可以設定檔案安全性，以拒絕符合特定條件之應用程式的服務。 准則可以指定單一屬性，例如平台名稱，也可以指定多組屬性。 此功能可協助您控制檔案安全性必須處理的要求。 以下是此功能的一些應用程式：
 
-* **收入保護：** 您可能想要拒絕任何不支援您收入慣例的用戶端應用程式的存取權。
+* **收入保護：** 您可能想要拒絕任何不支援您收入慣例的用戶端應用程式存取權。
 * **應用程式相容** 性：某些應用程式可能與您檔案保全伺服器的原則或行為不相容。
 
 當用戶端應用程式嘗試建立具有檔案安全性的連結時，就會提供應用程式、版本和平台資訊。 Document Security會將此資訊與從Document Security設定檔取得的「拒絕」設定進行比較。
@@ -780,9 +781,9 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 拒絕服務功能要求用戶端應用程式使用檔案安全性C++用戶端SDK 8.2版或更新版本。 下列Adobe產品在要求檔案保全服務時提供產品資訊：
 
-* Adobe Acrobat 9.0 Professional/Acrobat 9.0 Standard及更新版本
-* Adobe Reader 9.0和更新版本
-* 適用於Microsoft Office 8.2和更新版本的Acrobat Reader DC擴充功能
+* Adobe Acrobat9.0專業版/Acrobat 9.0標準版及更新版本
+* Adobe Reader9.0及更新版本
+* Acrobat Reader DCMicrosoft Office 8.2及更新版本的擴充功能
 
 用戶端應用程式會使用檔案安全性C++用戶端SDK的用戶端API，向檔案安全性要求服務。 用戶端API要求包括平台和SDK版本資訊（預先編譯至用戶端API），以及從用戶端應用程式取得的產品資訊。
 
@@ -796,25 +797,25 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
 
 如果任何資訊不適用，客戶端應用程式會將相應欄位留空。
 
-數個Adobe應用程式在要求檔案保全服務時會包含產品資訊，包括Acrobat、Adobe Reader和Microsoft Office專用的Acrobat Reader DC擴充功能。
+數種Adobe應用程式在要求檔案保全服務時，都會包含產品資訊，包括Acrobat、Adobe Reader和Acrobat Reader DC的Microsoft Office擴充功能。
 
 **Acrobat和Adobe Reader**
 
-當Acrobat或Adobe Reader向檔案安全性要求服務時，會提供下列產品資訊：
+當Acrobat或Adobe Reader向檔案安全部門請求服務時，它會提供下列產品資訊：
 
 * **整合商：** Adobe Systems, Inc.
 * **整合器版本：** 1.0
 * **應用程式系列：** Acrobat
-* **應用程式名稱：** Acrobat
+* **應用程式名：** Acrobat
 * **應用程式版** 本：9.0.0
 
-**適用於Microsoft Office的Acrobat Reader DC擴充功能**
+**Acrobat Reader DCMicrosoft Office擴充功能**
 
-適用於Microsoft Office的Acrobat Reader DC擴充功能是與Microsoft Word、Microsoft Excel和Microsoft PowerPoint等Microsoft Office產品搭配使用的增效模組。 當它請求服務時，它提供以下資訊：
+Acrobat Reader DCExtensions for Microsoft Office是與Microsoft Office產品Microsoft Word、Microsoft Excel和Microsoft PowerPoint搭配使用的增效模組。 當它請求服務時，它提供以下資訊：
 
 * **整合商：** Adobe Systems Incorporated
 * **整合器版本：** 8.2
-* **應用程式系列：** Microsoft Office專用的Acrobat Reader DC擴充功能
+* **應用程式系列：** Acrobat Reader DCMicrosoft Office擴充功能
 * **應用程式名** 稱：Microsoft Word、Microsoft Excel或Microsoft PowerPoint
 * **應用程式版本：** 2003或2007
 
@@ -921,7 +922,7 @@ AEM表格提供您可針對環境自訂的範例設定。 執行以下步驟：
  </node>
 ```
 
-在此範例中，來自Microsoft PowerPoint 2007或Microsoft PowerPoint 2010安裝Microsoft Office專用Acrobat Reader DC擴充功能的所有要求均遭拒絕。
+在此範例中，來自Microsoft PowerPoint 2007或Microsoft PowerPoint 2010安裝Microsoft Office的Acrobat Reader DC擴充功能的所有要求都會被拒絕。
 
 ```xml
  <node name="ClientVersionRules">
