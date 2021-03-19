@@ -1,6 +1,6 @@
 ---
-title: 使用XFA表單範本同步化最適化表單
-seo-title: 使用XFA表單範本同步化最適化表單
+title: 使用XFA表單範本同步化最適化Forms
+seo-title: 使用XFA表單範本同步化最適化Forms
 description: 同步最適化表單與XFA/XDP檔案。
 seo-description: 同步最適化表單與XFA/XDP檔案。
 uuid: 92818132-1ae0-4576-84f2-ece485a34457
@@ -8,16 +8,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: dac4539b-804d-4420-9170-68000ebb2638
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
 
 
-# 使用XFA表單模板同步自適應表單{#synchronizing-adaptive-forms-with-xfa-form-templates}
+# 使用XFA表單模板同步自適應Forms{#synchronizing-adaptive-forms-with-xfa-form-templates}
 
 ## 簡介 {#introduction}
 
@@ -25,7 +26,7 @@ ht-degree: 0%
 
 您可以以最適化表單重複使用XDP檔案的欄位。 這些欄位稱為「已裝訂」欄位。 系統會從XDP檔案複製已裝訂欄位的屬性（例如指令碼、標籤和顯示格式）。 您也可以選擇覆寫部分屬性的值。
 
-AEM Forms提供一種方式，可協助您讓最適化表單的欄位與XDP檔案中後續對應欄位所做的任何變更保持同步。 本文將說明如何啟用此同步。
+AEM Forms提供一種方法，幫助您使自適應表單的欄位與隨後對XDP檔案中相應欄位進行的任何更改保持同步。 本文將說明如何啟用此同步。
 
 ![您可以將欄位從XFA表單拖曳至最適化表單](assets/drag-drop-xfa.gif.gif)
 
@@ -37,7 +38,7 @@ AEM Forms提供一種方式，可協助您讓最適化表單的欄位與XDP檔�
 
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 
-* XFA（XML表單架構）
+* XFA(XMLForms架構)
 
 若要使用文章中的範例所提供的資產，請下載範例套件，如下一節[Sample package](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-sample-package-p)所述。
 
@@ -45,7 +46,7 @@ AEM Forms提供一種方式，可協助您讓最適化表單的欄位與XDP檔�
 
 文章使用範例來示範如何將最適化表單與更新的XFA表單範本同步。 範例中使用的資產可在套件中使用，可從本文的[Downloads](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p)區段下載。
 
-上傳套件後，您可以在AEM Forms UI中檢視這些資產。
+上傳套件後，您可以在AEM FormsUI中檢視這些資產。
 
 使用軟體包管理器安裝軟體包：`https://<server>:<port>/crx/packmgr/index.jsp`
 
@@ -68,19 +69,19 @@ AEM Forms提供一種方式，可協助您讓最適化表單的欄位與XDP檔�
 
 ## 檢測XDP檔案{#detecting-changes-in-xdp-file}中的更改
 
-每當XDP檔案或片段有任何變更時，AEM Forms UI會標示所有以XDP檔案或片段為基礎的最適化表單。
+每當XDP檔案或片段有任何變更時，AEM FormsUI會標示所有以XDP檔案或片段為基礎的最適化表單。
 
-更新XDP檔案後，您必須在AEM Forms UI中重新上傳檔案，才能標幟變更。
+更新XDP檔案後，您必須在AEM FormsUI中重新上傳檔案，才能標幟變更。
 
 例如，讓我們使用下列步驟更新`sample-form.xdp`檔案：
 
 1. 導覽至`https://<server>:<port>/projects.html.`如果出現提示，請輸入您的認證。
-1. 按一下左側的「表單」標籤。
+1. 按一下左側的Forms頁籤。
 1. 在您的本機電腦上下載`sample-form.xdp`檔案。 XDP檔案下載為`.zip`檔案，可使用任何檔案解壓縮實用程式來解壓縮該檔案。
 
 1. 開啟`sample-form.xdp`檔案，將欄位TextField1的標題從&#x200B;**Text Field**&#x200B;更改為&#x200B;**My Text Field**。
 
-1. 將`sample-form.xdp`檔案上傳回AEM Forms UI。
+1. 將`sample-form.xdp`檔案上傳回AEM FormsUI。
 
 如果XDP檔案更新，當您根據XDP檔案編輯最適化表單時，會在編輯器中看到圖示。 此表徵圖表示最適化表單與XDP檔案不同步。 在下列影像中，請參閱側邊欄旁的圖示。
 
@@ -121,7 +122,7 @@ AEM Forms提供一種方式，可協助您讓最適化表單的欄位與XDP檔�
 下列步驟說明本文章範例中資產的使用流程：
 
 1. 更新`sample-form.xdp`檔案並刪除NumericField1。
-1. 在AEM Forms UI中上傳`sample-form.xdp`檔案
+1. 在AEM FormsUI中上傳`sample-form.xdp`檔案
 1. 開啟`sample-xfa-af`最適化表單以進行編寫。 將顯示以下錯誤消息：已更新最適化表單的架構／表單範本。 `Click Here` 以新版本重新建立基礎。
 
 1. 按一下訊息中的連結（標示為「 `Click Here`」）。 會顯示錯誤訊息，指出XDP檔案中不再存在欄位。
