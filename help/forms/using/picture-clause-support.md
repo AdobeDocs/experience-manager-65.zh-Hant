@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 1%
 
 ---
@@ -27,7 +28,7 @@ HTML5表單支援XFA Picture子句，用於日期、文字和數值符號的顯�
 
 >[!NOTE]
 >
->目前，Mobile Forms不支援Edit Picture子句。 此外，DateTime和Time Picture子句符號也不受支援。
+>目前，MobilesForms不支援編輯圖片子句。 此外，DateTime和Time Picture子句符號也不受支援。
 
 ## 支援的日期欄位符號{#supported-date-field-symbols}
 
@@ -95,19 +96,19 @@ HTML5表單支援XFA Picture子句，用於日期、文字和數值符號的顯�
 
 ## 數值圖片子句{#numeric-picture-clause}
 
-HTML5表格支援數值圖片符號。 不過，PDF表單和HTML表單的支援有所不同。
+HTML5表格支援數值圖片符號。 但是，PDF forms和HTMLForms在支援方面有所不同。
 
-在&#x200B;**PDF Forms**&#x200B;中，不論Picture子句中的符號數目是多少，都會格式化數字
+在&#x200B;**PDF forms**&#x200B;中，不考慮Picture子句中符號數的數字格式化
 
-在&#x200B;**HTML Forms**&#x200B;中，只有在數字小於Picture子句中符號數時，才格式化數字。
+在&#x200B;**HTMLForms**&#x200B;中，僅當數字的數字小於Picture子句中的符號數時，才格式化數字。
 
 **範例**:請考慮Picture子句：num{zzz,zzz,zz9}。
 
-數字&#x200B;**10000**&#x200B;在HTML和PDF表單中都格式化為&#x200B;**10,000**。
+數字&#x200B;**10000**&#x200B;在HTML和PDF forms中都格式化為&#x200B;**10,000**。
 
-編號1000000的PDF格式為1,000,000。 但是，在HTML Forms中，數字仍未格式化為100000。
+編號1000000的PDF forms格式為1,000,000。 但是，在HTMLForms中，數字仍未格式化為100000。
 
-**HTML Forms**&#x200B;中Numeric Picture子句的支援表達式為：
+**HTMLForms**&#x200B;中Numeric Picture子句的支援表達式為：
 
 * num.integer{}
 * num.decimal{}
