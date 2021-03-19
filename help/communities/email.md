@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '823'
 ht-degree: 3%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 3%
 AEM Communities使用電子郵件：
 
 * [社群通知](notifications.md)
-* [社群訂閱](subscriptions.md)
+* [Communities 訂閱](subscriptions.md)
 
 預設情況下，電子郵件功能無法正常工作，因為它需要指定SMTP伺服器和SMTP用戶。
 
@@ -75,7 +76,7 @@ AEM Communities使用電子郵件：
 
    如果選中此選項，則啟用SMTP伺服器交互的日誌記錄。
 
-## AEM Communities電子郵件設定{#aem-communities-email-configuration}
+## AEM Communities電子郵件配置{#aem-communities-email-configuration}
 
 配置[預設郵件服務](#default-mail-service-configuration)後，發行中包含的`AEM Communities Email Reply Configuration` OSGi配置的兩個現有實例將變為可用。
 
@@ -109,7 +110,7 @@ AEM Communities使用電子郵件：
 * 選擇編輯表徵圖。
 * 驗證&#x200B;**名稱**&#x200B;是`email`。
 
-* 驗證「從回覆電子郵件建立貼文」是否為&#x200B;**。**`unchecked`
+* 驗證「從回覆電子郵件建立貼文」是否為`unchecked`。****
 
 ![configure-email-reply](assets/configure-email-reply.png)
 
