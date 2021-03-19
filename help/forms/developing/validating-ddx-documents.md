@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1544'
 ht-degree: 0%
 
 ---
@@ -21,13 +22,13 @@ ht-degree: 0%
 
 # 驗證DDX文檔{#validating-ddx-documents}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-可以通過寫程式方式驗證Assembler服務使用的DDX文檔。 也就是說，使用Assembler服務API，可以確定DDX文檔是否有效。 例如，如果您從舊版AEM Forms升級，而您想要確保DDX檔案有效，則可使用Assembler服務API來驗證它。
+可以通過寫程式方式驗證Assembler服務使用的DDX文檔。 也就是說，使用Assembler服務API，可以確定DDX文檔是否有效。 例如，如果您從先前的AEM Forms版本升級，而您想要確保DDX文檔有效，則可以使用Assembler服務API來驗證它。
 
 >[!NOTE]
 >
->如需Assembler服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Assembler服務的詳細資訊，請參見[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
@@ -53,10 +54,10 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar（若AEM Forms部署在JBoss上，則為必要項）
-* jbossall-client.jar（如果AEM Forms部署在JBoss上，則為必要）
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
-如果AEM Forms部署在JBoss以外的支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為JAR檔案，而AEM Forms部署在該J2EE應用程式伺服器上。
+如果AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案替換為AEM Forms部署在的J2EE應用程式伺服器專用的JAR檔案。
 
 **建立PDF匯寫程式式用戶端**
 
@@ -86,7 +87,7 @@ Assembler服務返回可寫入XML日誌檔案的驗證結果。 匯編器服務�
 
 [使用web service API驗證DDX檔案](#validate-a-ddx-document-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -142,7 +143,7 @@ Assembler服務返回可寫入XML日誌檔案的驗證結果。 匯編器服務�
 
 [快速入門（SOAP模式）:使用Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) （SOAP模式）驗證DDX檔案
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -161,12 +162,12 @@ Assembler服務返回可寫入XML日誌檔案的驗證結果。 匯編器服務�
 1. 建立PDF匯寫程式式用戶端。
 
    * 使用其預設建構子建立`AssemblerServiceClient`對象。
-   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞至AEM Forms服務（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
+   * 使用`System.ServiceModel.EndpointAddress`建構函式建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞給AEM Forms服務（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，將使用此屬性。
    * 獲取`AssemblerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將返回值轉換為`BasicHttpBinding`。
    * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
    * 執行下列工作以啟用基本HTTP驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將表AEM單用戶名分配給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
       * 將相應的口令值分配給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
       * 將常數值`HttpClientCredentialType.Basic`分配給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
       * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`分配給欄位`BasicHttpBindingSecurity.Security.Mode`。
@@ -183,7 +184,7 @@ Assembler服務返回可寫入XML日誌檔案的驗證結果。 匯編器服務�
 
    * 使用其建構子建立一個`AssemblerOptionSpec`對象，該對象儲存運行時選項。
    * 設定執行時選項，指示Assembler服務將值true指派給`AssemblerOptionSpec`物件的`validateOnly`資料成員，以驗證DDX檔案。
-   * 通過為`AssemblerOptionSpec`對象的`logLevel`資料成員分配字串值，設定Assembler服務寫入日誌檔案的資訊量。 方法驗證DDX文檔時，需要將更多資訊寫入日誌檔案，以幫助驗證過程。 因此，您可以指定值`FINE`或`FINER`。 如需您可設定之執行時期選項的詳細資訊，請參閱[AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`AssemblerOptionSpec`類別參考。
+   * 通過為`AssemblerOptionSpec`對象的`logLevel`資料成員分配字串值，設定Assembler服務寫入日誌檔案的資訊量。 方法驗證DDX文檔時，需要將更多資訊寫入日誌檔案，以幫助驗證過程。 因此，您可以指定值`FINE`或`FINER`。 有關可設定的運行時選項的資訊，請參閱[AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`AssemblerOptionSpec`類參考。
 
 1. 執行驗證。
 
