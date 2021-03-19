@@ -1,6 +1,6 @@
 ---
-title: 使用CustomToolbars轉換HTML表格
-seo-title: 使用CustomToolbars轉換HTML表格
+title: 使用CustomToolbars轉換HTMLForms
+seo-title: 使用CustomToolbars轉換HTMLForms
 description: 使用Forms服務可自訂使用HTML表單轉譯的工具列。 您可以使用Java API和Web服務API，以自訂工具列來轉換HTML表格。
 seo-description: 使用Forms服務可自訂使用HTML表單轉譯的工具列。 您可以使用Java API和Web服務API，以自訂工具列來轉換HTML表格。
 uuid: b9c9464e-ff19-4051-a39b-4ec71c512d10
@@ -10,28 +10,29 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 7eb0e8a8-d76a-43f7-a012-c21157b14cd4
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2385'
 ht-degree: 0%
 
 ---
 
 
-# 使用CustomToolbars {#rendering-html-forms-with-customtoolbars}轉換HTML表格
+# 使用CustomToolbars {#rendering-html-forms-with-customtoolbars}轉換HTMLForms
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
-## 使用自訂工具列呈現HTML表格{#rendering-html-forms-with-custom-toolbars}
+## 使用自訂工具列呈現HTMLForms{#rendering-html-forms-with-custom-toolbars}
 
-Forms服務可讓您自訂使用HTML表格轉譯的工具列。 您可自訂工具列，以覆寫預設的CSS樣式來改變其外觀，並借由覆寫Java指令碼來新增動態行為。 使用名為fscmenu.xml的XML檔案自定義工具欄。 預設情況下，Forms服務從內部指定的URI位置檢索此檔案。
+Forms服務可讓您自訂使用HTML表單轉譯的工具列。 您可自訂工具列，以覆寫預設的CSS樣式來改變其外觀，並借由覆寫Java指令碼來新增動態行為。 使用名為fscmenu.xml的XML檔案自定義工具欄。 預設情況下，Forms服務從內部指定的URI位置檢索此檔案。
 
 >[!NOTE]
 >
 >此URI位置位於adobe-forms-core.jar檔案中，此檔案位於adobe-forms-dsc.jar檔案中。 adobe-forms-dsc.jar檔案位於C:\Adobe\Adobe_Experience_Manager_forms\ folder (C:\ is the installation directory)。 您可以使用檔案擷取工具（例如Win RAR）來開啟adobe。
 
-您可以從此位置複製fscmenu.xml、修改它以符合您的需求，然後將它放置在自訂URI位置。 接著，使用Forms Service API，從指定位置使用fscmenu.xml檔案來設定導致Forms服務的執行時期選項。 這些動作會導致Forms服務轉換具有自訂工具列的HTML表格。
+您可以從此位置複製fscmenu.xml、修改它以符合您的需求，然後將它放置在自訂URI位置。 接著，使用Forms服務API，從指定位置使用fscmenu.xml檔案來設定導致Forms服務的執行時期選項。 這些動作會導致Forms服務轉換具有自訂工具列的HTML表單。
 
 除了fscmenu.xml檔案外，您還需要取得下列檔案：
 
@@ -46,9 +47,9 @@ fscJS是與每個節點相關聯的Java指令碼。 必須為`div#fscmenu`節點
 
 fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工具列外觀。 ** fscVCSS是垂直工具列的樣式表，顯示在轉譯的HTML表格左側。** fscIECSS是用於在Internet Explorer中轉譯的HTML表單的樣式表。
 
-請確定fscmenu.xml檔案中已參考上述所有檔案。 也就是說，在fscmenu.xml檔案中，指定指向這些檔案的URI位置，讓Forms服務找到這些檔案。 預設情況下，這些檔案可在以內部關鍵字`FSWebRoot`或`ApplicationWebRoot`開始的URI位置使用。
+請確定fscmenu.xml檔案中已參考上述所有檔案。 也就是說，在fscmenu.xml檔案中，指定URI位置以指向這些檔案，讓Forms服務找到它們。 預設情況下，這些檔案可在以內部關鍵字`FSWebRoot`或`ApplicationWebRoot`開始的URI位置使用。
 
-若要自訂工具列，請使用外部關鍵字`FSToolBarURI`來取代關鍵字。 此關鍵字代表在執行時期傳遞至Forms服務的URI（本節稍後會顯示此方法）。
+若要自訂工具列，請使用外部關鍵字`FSToolBarURI`來取代關鍵字。 此關鍵字表示在運行時傳遞給Forms服務的URI（本節稍後將顯示此方法）。
 
 您也可以指定這些JS和CSS檔案的絕對位置，例如https://www.mycompany.com/scripts/misc/fscmenu.js。 在這種情況下，您不需要使用`FSToolBarURI`關鍵字。
 
@@ -56,7 +57,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 >
 >不建議您混用這些檔案的參考方式。 也就是說，應使用`FSToolBarURI`關鍵字或絕對位置來參考所有URI。
 
-您可以開啟adobe-forms-&lt;appserver>.ear檔案，以取得JS和CSS檔案。 在此檔案中，開啟adobe-forms-res.war。 這些檔案都位於WAR檔案中。 adobe-forms-&lt;appserver>.ear檔案位於AEM forms安裝資料夾(C:\ is the installation directory)中。 您可以使用檔案擷取工具（例如WinRAR）開啟adobe-forms-&lt;appserver>.ear。
+您可以開啟adobe-forms-&lt;appserver>.ear檔案，以取得JS和CSS檔案。 在此檔案中，開啟adobe-forms-res.war。 這些檔案都位於WAR檔案中。 adobe-forms-&lt;appserver>.ear檔案位於forms安裝資AEM料夾(C:\ is the installation directory)中。 您可以使用檔案擷取工具（例如WinRAR）開啟adobe-forms-&lt;appserver>.ear。
 
 以下XML語法顯示了fscmenu.xml檔案示例。
 
@@ -151,20 +152,20 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 >
 >與此部分關聯的「快速入門」使用此XML檔案顯示法文自定義工具欄，如上圖所示。
 
-此外，也可以叫用`HTMLRenderSpec`物件的`setLocale`方法，並傳遞指定地區值的字串值，以指定有效的地區值。 例如，傳遞`fr_FR`以指定法文。 Forms服務與本地化工具列搭售。
+此外，也可以叫用`HTMLRenderSpec`物件的`setLocale`方法，並傳遞指定地區值的字串值，以指定有效的地區值。 例如，傳遞`fr_FR`以指定法文。 Forms服務與本地化工具列捆綁在一起。
 
 >[!NOTE]
 >
->在您演算使用自訂工具列的HTML表格之前，您必須瞭解HTML表格的轉換方式。 （請參閱[將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)）。
+>在您演算使用自訂工具列的HTML表格之前，您必須瞭解HTML表格的轉換方式。 (請參閱[將Forms轉換為HTML](/help/forms/developing/rendering-forms-html.md)。)
 
-如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ### 步驟{#summary-of-steps}摘要
 
 若要轉換包含自訂工具列的HTML表格，請執行下列工作：
 
 1. 包含專案檔案。
-1. 建立Forms Java API物件。
+1. 建立FormsJava API物件。
 1. 參考自訂fscmenu XML檔案。
 1. 演算HTML表格。
 1. 將表單資料流寫入用戶端網頁瀏覽器。
@@ -173,9 +174,9 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用web services，請加入proxy檔案。
 
-**建立Forms Java API物件**
+**建立FormsJava API物件**
 
-您必須先建立Forms用戶端物件，才能以程式設計方式執行Forms服務支援的作業。
+在以寫程式方式執行Forms服務支援的操作之前，必須建立Forms客戶端對象。
 
 **參考自訂fscmenu XML檔案**
 
@@ -197,27 +198,27 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 [使用web service API，使用自訂工具列轉譯HTML表格](#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[轉換互動式PDF表單](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[轉換互動式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[將表單轉換為HTML](/help/forms/developing/rendering-forms-html.md)
+[將Forms轉換為HTML](/help/forms/developing/rendering-forms-html.md)
 
-[建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
+[建立轉譯Forms的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### 使用Java API {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}轉換具有自訂工具列的HTML表格
 
-使用Forms Service API(Java)演算包含自訂工具列的HTML表單：
+使用Forms服務API(Java)演算包含自訂工具列的HTML表單：
 
 1. 包含專案檔案
 
    在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-forms-client.jar。
 
-1. 建立Forms Java API物件
+1. 建立FormsJava API物件
 
    * 建立包含連接屬性的`ServiceClientFactory`對象。
    * 使用其建構子並傳遞`ServiceClientFactory`對象，建立`FormsServiceClient`對象。
@@ -237,7 +238,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
    叫用`FormsServiceClient`物件的`renderHTMLForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `TransformTo`列舉值，指定HTML偏好設定類型。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定`TransformTo.MSDHTML`。
    * `com.adobe.idp.Document`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞空白的`com.adobe.idp.Document`物件。
    * 儲存HTML運行時選項的`HTMLRenderSpec`對象。
@@ -261,20 +262,20 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
 [快速入門（SOAP模式）:使用Java API使用自訂工具列來轉換HTML表格](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用web service API {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}轉換具有自訂工具列的HTML表單
 
-使用Forms Service API(web service)演算包含自訂工具列的HTML表格：
+使用Forms服務API(web service)演算包含自訂工具列的HTML表格：
 
 1. 包含專案檔案
 
    * 建立使用Forms服務WSDL的Java代理類。
    * 在類路徑中包含Java代理類。
 
-1. 建立Forms Java API物件
+1. 建立FormsJava API物件
 
    建立`FormsService`對象並設定驗證值。
 
@@ -293,7 +294,7 @@ fscCSS是與特定節點關聯的樣式表。 CSS檔案中的樣式會指定工�
 
    叫用`FormsService`物件的`renderHTMLForm`方法並傳遞下列值：
 
-   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式一部分的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
+   * 指定表單設計名稱的字串值，包括檔案副檔名。 如果您參考屬於Forms應用程式的表單設計，請確定您指定完整路徑，例如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * `TransformTo`列舉值，指定HTML偏好設定類型。 例如，若要轉譯與Internet Explorer 5.0或更新版本的動態HTML相容的HTML表格，請指定`TransformTo.MSDHTML`。
    * `BLOB`物件，包含要與表單合併的資料。 如果您不想合併資料，請傳遞`null`。
    * 儲存HTML運行時選項的`HTMLRenderSpec`對象。
