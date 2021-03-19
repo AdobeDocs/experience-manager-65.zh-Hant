@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # 在最適化表單中使用SOM表達式{#using-som-expressions-in-adaptive-forms}
 
-最適化表單會建模為AEM頁面，在AEM儲存庫中會以JCR內容結構表示。 內容結構的關鍵元素為guideContainer節點。 在guideContainer下方，有rootPanel，其中可能包含巢狀面板和欄位。
+自適應表單被建模AEM為頁面，在儲存庫中被表示為JCR內AEM容結構。 內容結構的關鍵元素為guideContainer節點。 在guideContainer下方，有rootPanel，其中可能包含巢狀面板和欄位。
 
 可以使用指令碼對象模型(SOM)來引用特定文檔對象模型(DOM)中的值、屬性和方法。 DOM將記憶體對象和屬性組織在樹層次中。 SOM表達式引用欄位／繪製元素和面板。
 
@@ -35,7 +36,7 @@ DOM樹
 
 具有兩個單選按鈕的DOM樹
 
-當您在最適化表單中變更選項按鈕的位置時，SOM運算式會變更。 在編寫模式中，您可以使用「檢視SOM運算式」選項，檢視AEM Forms中欄位或元素的SOM運算式。 當您以滑鼠右鍵按一下欄位或元素時，該選項就會出現在面板上。
+當您在最適化表單中變更選項按鈕的位置時，SOM運算式會變更。 在創作模式中，可以使用「查看SOM表達式」選項查看AEM Forms內某欄位或元素的SOM表達式。 當您以滑鼠右鍵按一下欄位或元素時，該選項就會出現在面板上。
 
 ![在自適應形式中提取SOM表達式](assets/som-expressions.png)
 
