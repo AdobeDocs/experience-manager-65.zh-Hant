@@ -2,10 +2,12 @@
 title: 在 [!DNL Adobe Experience Manager]中管理數位資產的中繼資料。
 description: '瞭解中繼資料的類型，以及如何根據資產的中繼資料自動組織和處理資產。 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] '
 contentOwner: AG
+feature: 標籤、中繼資料
+role: 建築師、領導者
 translation-type: tm+mt
-source-git-commit: 31dcf48691fa849f757579e2e57dc3a9c2bbbbee
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2344'
 ht-degree: 10%
 
 ---
@@ -108,7 +110,7 @@ ht-degree: 10%
    | [!UICONTROL 批次大小] | 要匯入中繼資料的批次中資產數。 預設值為 50。最大值為100。 |
    | [!UICONTROL 欄位分隔符號] | 預設值為`,`（逗號）。 您可以指定任何其他字元。 |
    | [!UICONTROL 多值分隔符號] | 中繼資料值的分隔符號。 預設值為 `|`. |
-   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，[!UICONTROL DAM中繼資料回寫]工作流程（將中繼資料寫入二進位資料）的預設啟動程式設定XMP有效。 啟用啟動工作流程會拖慢系統運作速度。 |
+   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，[!UICONTROL DAM中繼資料回寫]工作流程（將中繼資料寫入二進位資料）的預設啟動程式設XMP定生效。 啟用啟動工作流程會拖慢系統運作速度。 |
    | [!UICONTROL 資產路徑欄名稱] | 定義含資產之CSV檔案的欄名。 |
 
 1. 從工具列按一下「匯入」。 ****&#x200B;匯入中繼資料後，通知會顯示在[!UICONTROL Notification]收件匣中。
