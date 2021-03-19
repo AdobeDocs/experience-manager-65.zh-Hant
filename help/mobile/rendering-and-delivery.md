@@ -1,7 +1,7 @@
 ---
 title: 演算和傳送
 seo-title: 演算和傳送
-description: 'null'
+description: 演算和傳送
 seo-description: 'null'
 uuid: 1253b6a5-6bf3-42b1-be3a-efa23b6ddb51
 contentOwner: User
@@ -9,10 +9,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 translation-type: tm+mt
-source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 6%
+source-wordcount: '577'
+ht-degree: 7%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需SPA要單頁應用程式架構用戶端轉換的專案使用編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
 
-AEM內容可輕鬆透過[Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)轉譯[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering)和其他格式。
+您AEM可透過[Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)輕鬆轉譯內容，以轉譯[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering)和其他格式。
 
 這些現成可用的呈現方式通常會沿儲存庫移動，並按原樣返回內容。
 
-AEM透過Sling也支援開發和部署自訂sling轉譯器，以完全控制轉譯的架構和內容。
+透過AEMSling，也支援開發和部署自訂sling轉譯器，以完全控制轉譯的架構和內容。
 
 Content Services預設轉譯器可填補現成可用的Sling Defaults和自訂開發之間的空隙，允許自訂和控制轉譯內容的許多方面，毋需開發。
 
@@ -37,7 +37,7 @@ Content Services預設轉譯器可填補現成可用的Sling Defaults和自訂�
 
 ## 請求JSON {#requesting-json}
 
-使用&#x200B;**&lt;RESOURCE.caas[。&lt;export-config>.][&lt;export-config>.] jsonto要求JSON。**
+使用&#x200B;**&lt;RESOURCE.caas[。&lt;export-config>.][&lt;export-config>.** jsonto要求JSON。]
 
 <table>
  <tbody>
