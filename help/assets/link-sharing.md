@@ -2,10 +2,11 @@
 title: 使用連結分享資產
 description: 將資產、檔案夾和系列共用為URL。
 contentOwner: AG
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: e36d08c9ea89e840aecde79ffdd911372c0c54ee
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1058'
 ht-degree: 5%
 
 ---
@@ -71,9 +72,9 @@ ht-degree: 5%
 
 1. 若要檢視共用資產，請按一下傳送給使用者之電子郵件中的連結。 共用資產會顯示在[!UICONTROL Adobe Marketing Cloud]頁面中。
 
-   ![共用資產可在Adobe Marketing Cloud中使用](assets/chlimage_1-545.png)
+   ![共用資產可在Adobe Marketing Cloud使用](assets/chlimage_1-545.png)
 
-1. 若要產生資產的預覽，請按一下共用資產。 若要關閉預覽並返回至&#x200B;**[!UICONTROL Marketing Cloud]**&#x200B;頁面，請按一下工具列中的&#x200B;**[!UICONTROL Back]**。 如果您已共用資料夾，請按一下「父資料夾&#x200B;****」以返回父資料夾。
+1. 若要產生資產的預覽，請按一下共用資產。 要關閉預覽並返回至&#x200B;**[!UICONTROL Marketing Cloud]**&#x200B;頁面，請按一下工具欄中的&#x200B;**[!UICONTROL 上一步]**。 如果您已共用資料夾，請按一下「父資料夾&#x200B;****」以返回父資料夾。
 
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
@@ -102,7 +103,7 @@ ht-degree: 5%
 
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
+1. 按一下「**[!UICONTROL 儲存]**」。
 
 ## 配置最大資料大小{#maxdatasize}
 
