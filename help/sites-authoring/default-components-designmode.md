@@ -1,7 +1,7 @@
 ---
 title: 在設計模式中設定元件
 seo-title: 在設計模式中設定元件
-description: 'null'
+description: 在設計模式中設定元件
 seo-description: 'null'
 uuid: b9c9792d-4398-446d-8767-44d4e7ce9a2e
 contentOwner: Chris Bohnert
@@ -10,9 +10,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '911'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 在設計模式下配置元件{#configuring-components-in-design-mode}
 
-當AEM例項安裝在現成可用時，元件瀏覽器會立即提供選取的元件。
+當實AEM例安裝在現成可用時，元件瀏覽器中會立即提供選取的元件。
 
 除了這些外，還有各種其他元件可供使用。 您可以使用「設計」模式來[啟用／停用此類元件](#enable-disable-components)。 啟用並位於頁面上時，您可以使用「設計」模式來編輯屬性參數，以設定元件設計的各個方面。[](#configuring-the-design-of-a-component)
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 >
 >設計模式僅適用於儲存為(`/etc`)下的內容的設計配置。
 >
->從AEM 6.4開始，建議將設計儲存為`/apps`下的設定資料，以支援持續部署藍本。 儲存在`/apps`下的設計在執行時期無法編輯，非管理員使用者將無法使用設計模式來建立此類範本。
+>從AEM6.4開始，建議將設計儲存為`/apps`下的設定資料，以支援持續部署藍本。 儲存在`/apps`下的設計在執行時期無法編輯，非管理員使用者將無法使用設計模式來建立此類範本。
 
 這包括添加或刪除頁面段落系統中允許的元件。 段落系統(`parsys`)是包含所有其他段落元件的複合元件。 段落系統可讓作者將不同類型的元件新增至包含所有其他段落元件的頁面。 每個段落類型都表示為元件。
 
@@ -104,7 +104,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >最適化表單元件設計為可在Adaptive Form Container中運作，以利用表單生態系統。 因此，這些元件必須僅用於最適化表單編輯器中，而不能在「網站」頁面編輯器中運作。
+   >最適化表單元件設計為可在Adaptive Form Container中運作，以利用Forms生態系統。 因此，這些元件必須僅用於最適化表單編輯器中，而不能在「網站」頁面編輯器中運作。
 
    **設定**
 
