@@ -10,11 +10,12 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3292'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +29,7 @@ Communities Sites控制台可讓您存取：
 * 網站管理
 * [建立和編輯巢狀群組](/help/communities/groups.md) （子社群）
 
-請參閱[AEM Communities快速入門(Getting Started with AEM Communities](/help/communities/getting-started.md))，體驗在作者環境中建立社群網站的速度，以及如何從作者和發佈環境建立社群群組。
+請參閱[AEM Communities快速入門(Getting Started with Moginal](/help/communities/getting-started.md))，瞭解在作者環境中建立社群網站的速度，以及如何從作者和發佈環境建立社群群組。
 
 >[!NOTE]
 >
@@ -130,7 +131,7 @@ Communities Sites控制台可讓您存取：
 
 ![sitetheme](assets/sitetheme.png)
 
-此架構使用[Twitter Bootstrap](https://twitterbootstrap.org/)為網站提供回應式、有彈性的設計。 可以選擇多個預載入的引導主題之一來設定所選社區站點模板的樣式，或者可以上載引導主題。
+此架構使用[TwitterBootstrap](https://twitterbootstrap.org/)為網站提供回應式、有彈性的設計。 可以選擇多個預先載入的Bootstrap主題之一以對所選社區站點模板進行樣式化，或者可以上載Bootstrap主題。
 
 選取後，主題將會以不透明的藍色核取標籤覆蓋。
 
@@ -199,7 +200,7 @@ Communities Sites控制台可讓您存取：
 
    如果勾選，社群網站會*開啟*任何網站訪客都可存取網站。
 若未勾選，則只有登入會員可存取網站。
-取消勾選*私有*社區站點。 已勾選預設值。
+取消勾選*private *community站點。 已勾選預設值。
 
 * **允許傳訊**
 
@@ -279,7 +280,7 @@ Communities Sites控制台可讓您存取：
 
 * **啟動 Analytics**
 
-   只有在Adobe Analytics已針對社群功能設定[](/help/communities/analytics.md)時才可用。
+   只有在Adobe Analytics已為Communities功能配置[](/help/communities/analytics.md)時才可用。
 預設為未勾選。 勾選後，會出現其他選擇功能表：
 
 ![site-analytics-enable](assets/site-analytics-enable.png)
@@ -295,7 +296,7 @@ Communities Sites控制台可讓您存取：
 
 * **允許機器翻譯**
 
-   勾選後（預設為未勾選），網站內的UGC就會啟用機器轉譯。 這不會影響任何其他內容，例如頁面內容，即使網站設定為多語言網站亦然。 如需為AEM Communities設定授權轉譯服務的詳細資訊，請參閱[轉譯使用者產生的內容](/help/communities/translate-ugc.md)。 如需完整概觀，請參閱[多語言網站翻譯內容](/help/sites-administering/translation.md)。
+   勾選後（預設為未勾選），網站內的UGC就會啟用機器轉譯。 這不會影響任何其他內容，例如頁面內容，即使網站設定為多語言網站亦然。 有關為AEM Communities配置許可翻譯服務的資訊，請參見[翻譯用戶生成的內容](/help/communities/translate-ugc.md)。 如需完整概觀，請參閱[多語言網站翻譯內容](/help/sites-administering/translation.md)。
 
 ![允許機器翻譯](assets/allow-machine-translation.png)
 
@@ -325,7 +326,7 @@ Communities Sites控制台可讓您存取：
 
    * **只翻譯選取項目**
 
-      如果選取此選項，則每個貼文旁會出現一個翻譯選項，允許將個別貼文翻譯為頁面的基本語言。
+      如果選取此選項，每個貼文旁會出現一個翻譯選項，允許將個別貼文翻譯為頁面的基本語言。
 預設值為*selected*。
 
 * **選取保留選項**
@@ -355,7 +356,7 @@ Communities Sites控制台可讓您存取：
 
 ![網站啟用](assets/site-enablement.png)
 
-當選擇的社區站點模板包括[分配函式](/help/communities/functions.md#assignments-function)時，`ENABLEMENT`設定適用，當啟用功能獲得許可並且[配置](/help/communities/enablement.md)時，&lt;a0/>設定可用。 包含分配函式的參考站點模板為`Reference Structured Learning Site Template.`
+當選擇的社區站點模板包括[分配函式](/help/communities/functions.md#assignments-function)時，`ENABLEMENT`設定適用，當啟用功能獲得許可並且[配置](/help/communities/enablement.md)時，設定可用。 包含分配函式的參考站點模板為`Reference Structured Learning Site Template.`
 
 * **啟用管理員**
 （必要）只有群組的 `Community Enablementmanagers` 成員可供選取以管理此啟用社群。啟用經理負責指派成員至資源。 另請參閱[管理用戶和用戶組](/help/communities/users.md)。
@@ -393,13 +394,13 @@ Communities Sites控制台可讓您存取：
 
 ## 編寫網站內容{#authoring-site-content}
 
-網站的內容可能與任何其他AEM網站使用相同的工具編寫。 若要開啟網站以進行製作，請選取在滑鼠暫留網站時顯示的`Open Site`圖示。 該站點將在新頁籤中開啟，以便Communities Sites控制台仍可訪問。
+網站的內容可能與任何其他網站使用相同的工具AEM製作。 若要開啟網站以進行製作，請選取在滑鼠暫留網站時顯示的`Open Site`圖示。 該站點將在新頁籤中開啟，以便Communities Sites控制台仍可訪問。
 
 ![網站內容](assets/site-content.png)
 
 >[!NOTE]
 >
->如果不熟悉AEM，請檢視[基本處理](/help/sites-authoring/basic-handling.md)和[製作頁面快速指南的說明檔案](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟AEM悉，請檢視[基本處理](/help/sites-authoring/basic-handling.md)和[頁面編寫快速指南的說明檔案。](/help/sites-authoring/qg-page-authoring.md)
 
 ## 修改站點屬性{#modifying-site-properties}
 
@@ -573,7 +574,7 @@ ENABLEMENT面板可讓您存取社群網站建立期間提供的設定。
 
 ### 測試驗證重定向{#test-authentication-redirection}
 
-在相同的AEM發佈例項上，設定了社群網站的登入頁面對應：
+在為社AEM群網站設定登入頁面對應的相同發佈例項上：
 
 * 瀏覽至社群網站首頁。
 
