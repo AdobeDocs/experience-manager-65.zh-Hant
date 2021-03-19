@@ -1,8 +1,8 @@
 ---
-title: 處理提交的表單
-seo-title: 處理提交的表單
-description: 使用Forms服務來擷取在互動式表單中輸入的已提交資料。 使用者可以以XML、PDF和URL UTF-16格式提交表單資料。
-seo-description: 使用Forms服務來擷取在互動式表單中輸入的已提交資料。 使用者可以以XML、PDF和URL UTF-16格式提交表單資料。
+title: 處理已提交Forms
+seo-title: 處理已提交Forms
+description: 使用Forms服務來檢索在互動式表單中輸入的提交資料。 使用者可以以XML、PDF和URL UTF-16格式提交表單資料。
+seo-description: 使用Forms服務來檢索在互動式表單中輸入的提交資料。 使用者可以以XML、PDF和URL UTF-16格式提交表單資料。
 uuid: 673b28f1-f023-4da8-a6a0-c5ff921c5f5d
 contentOwner: admin
 content-type: reference
@@ -10,22 +10,23 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2936'
 ht-degree: 0%
 
 ---
 
 
-# 處理提交的表單{#handling-submitted-forms}
+# 處理已提交的Forms{#handling-submitted-forms}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 讓使用者能夠填寫互動式表單的網路應用程式，需要將資料送回伺服器。 使用Forms服務，您可以擷取使用者在互動式表單中輸入的資料。 擷取資料後，您可以處理資料以符合您的業務需求。 例如，您可以將資料儲存在資料庫中、將資料傳送至其他應用程式、將資料傳送至其他服務、將資料合併為表單設計、在網頁瀏覽器中顯示資料等。
 
-表單資料會以XML或PDF資料的形式提交至Forms服務，此選項是在Designer中設定的選項。 以XML形式提交的表單可讓您擷取個別欄位資料值。 也就是說，您可以擷取使用者在表單中輸入之每個表單欄位的值。 提交為PDF資料的表單是二進位資料，而非XML資料。 您可將表單儲存為PDF檔案，或將表單傳送至其他服務。 如果您想要從提交為XML的表單擷取資料，然後使用表單資料來建立PDF檔案，請叫用其他AEM Forms作業。 （請參閱[使用已提交的XML資料建立PDF檔案](/help/forms/developing/creating-pdf-documents-submitted-xml.md)）
+表單資料會以XML或PDF資料的形式提交至Forms服務，此選項是在設計人員中設定的。 以XML形式提交的表單可讓您擷取個別欄位資料值。 也就是說，您可以擷取使用者在表單中輸入之每個表單欄位的值。 提交為PDF資料的表單是二進位資料，而非XML資料。 您可將表單儲存為PDF檔案，或將表單傳送至其他服務。 如果您想從提交為XML的表單擷取資料，然後使用表單資料建立PDF檔案，請叫用另一個AEM Forms作業。 （請參閱[使用已提交的XML資料建立PDF檔案](/help/forms/developing/creating-pdf-documents-submitted-xml.md)）
 
 下圖顯示從Web瀏覽器中顯示的互動式表單提交到名為`HandleData`的Java Servlet的資料。
 
@@ -62,7 +63,7 @@ ht-degree: 0%
 
 ![hs_hs_loanformdata](assets/hs_hs_loanformdata.png)
 
-下圖顯示使用Forms服務用戶端API擷取的對應XML資料。
+下圖顯示使用Forms服務客戶端API檢索的對應XML資料。
 
 ![hs_hs_loandata](assets/hs_hs_loandata.png)
 
@@ -71,11 +72,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->表單設計必須在設計工具中正確設定，才能將資料提交為XML資料。 要正確配置表單設計以提交XML資料，請確保將表單設計上的「提交」按鈕設定為提交XML資料。 如需設定「送出」按鈕以送出XML資料的詳細資訊，請參閱[AEM Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)。
+>表單設計必須在設計工具中正確設定，才能將資料提交為XML資料。 要正確配置表單設計以提交XML資料，請確保將表單設計上的「提交」按鈕設定為提交XML資料。 有關設定「提交」按鈕以提交XML資料的資訊，請參閱[AEM Forms設計師](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 ## 處理提交的PDF資料{#handling-submitted-pdf-data}
 
-考慮調用Forms服務的Web應用程式。 在Forms服務將互動式PDF表單轉譯至用戶端網頁瀏覽器後，使用者會填入表單並將其提交回PDF資料。 當Forms服務收到PDF資料時，可將PDF資料傳送至其他服務，或儲存為PDF檔案。 下圖顯示應用程式的邏輯流程。
+考慮調用Forms服務的Web應用程式。 在Forms服務將互動式PDF表單轉譯至用戶端網頁瀏覽器後，使用者會填入表單並將其提交回PDF資料。 當Forms服務收到PDF資料時，可將PDF資料傳送至其他服務或儲存為PDF檔案。 下圖顯示應用程式的邏輯流程。
 
 ![hs_hs_savingforms](assets/hs_hs_savingforms.png)
 
@@ -91,15 +92,15 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>網頁包含一個連結，用於訪問調用Forms服務的Java Servlet。</p></td>
+   <td><p>網頁包含訪問調用Forms服務的Java Servlet的連結。</p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
    <td><p>Forms服務會將互動式PDF表單轉譯至用戶端網頁瀏覽器。</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
-   <td><p>使用者填入互動式表單，然後按一下提交按鈕。 表單會以PDF資料的形式提交回Forms服務。 此選項在設計器中設定。</p></td>
+   <td><p>1</p></td>
+   <td><p>使用者填入互動式表單，然後按一下提交按鈕。 表單會以PDF資料形式提交回Forms服務。 此選項在設計器中設定。</p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
@@ -114,7 +115,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需Forms服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有關Forms服務的詳細資訊，請參閱[AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 ## 步驟{#summary-of-steps}摘要
 
@@ -132,7 +133,7 @@ ht-degree: 0%
 
 **建立Forms用戶端API物件**
 
-您必須先建立Forms服務用戶端，才能以程式設計方式執行Forms服務用戶端API操作。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms web service API，請建立`FormsService`物件。
+在以寫程式方式執行Forms服務客戶端API操作之前，必須建立Forms服務客戶端。 如果您使用Java API，請建立`FormsServiceClient`物件。 如果您使用Forms網站服務API，請建立`FormsService`物件。
 
 **擷取表單資料**
 
@@ -152,15 +153,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您會注意到，「處理提交的表單」區段有三個對應的快速開始。 使用Java API快速入門處理以PDF格式提交的PDF表單，示範如何處理已提交的PDF資料。 此快速入門中指定的內容類型為`application/pdf`。 使用Java API快速入門處理以XML格式提交的PDF表單，說明如何處理從PDF表單提交的已提交XML資料。 此快速入門中指定的內容類型為`text/xml`。 同樣地，使用Java API快速入門處理以XML形式提交的HTML表單，將示範如何處理從HTML表單提交的已提交XML資料。 此快速入門中指定的內容類型為application/x-www-form-urlencoded。
+>您會注意到，「處理已提交的Forms」區段有3個對應的快速開始。 使用Java API快速入門將提交為PDF的處理PDF forms說明如何處理提交的PDF資料。 此快速入門中指定的內容類型為`application/pdf`。 使用Java API快速入門處理以XML形式提交的PDF forms說明如何處理從PDF表單提交的已提交XML資料。 此快速入門中指定的內容類型為`text/xml`。 同樣地，使用Java API快速入門處理以XML形式提交的HTML表單，將示範如何處理從HTML表單提交的已提交XML資料。 此快速入門中指定的內容類型為application/x-www-form-urlencoded。
 
-您可擷取張貼至Forms服務的表單資料，並判斷其處理狀態。 也就是說，當資料提交至Forms服務時，並不一定表示Forms服務已完成處理資料，而且資料已準備好處理。 例如，資料可以提交至Forms服務，以便執行計算。 計算完成時，表單會轉譯回用戶並顯示計算結果。 在處理已提交的資料之前，建議您判斷Forms服務是否已完成處理資料。
+您可以擷取張貼至Forms服務的表單資料，並判斷其處理狀態。 也就是說，當資料提交到Forms服務時，並不一定意味著Forms服務完成了對資料的處理，資料準備好了。 例如，資料可以提交到Forms服務，以便執行計算。 計算完成時，表單會轉譯回用戶並顯示計算結果。 在您處理提交的資料之前，建議您判斷Forms服務是否已完成處理資料。
 
 Forms服務返回以下值，以指示它是否已完成資料處理：
 
 * **0（提交）：已** 提交的資料已準備好處理。
 * **1（計算）:** Forms服務對資料執行計算操作，結果必須向用戶呈現。
-* **2（驗證）: Forms服** 務已驗證表單資料，且結果必須轉譯回使用者。
+* **2（驗證）:Forms** 服務已驗證表單資料，結果必須轉譯回使用者。
 * **3（下一步）:** 目前頁面已變更，結果必須寫入用戶端應用程式。
 * **4(舊版**):目前頁面已變更，結果必須寫入用戶端應用程式。
 
@@ -170,7 +171,7 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
 
 **確定表單提交是否包含檔案附件**
 
-提交到Forms服務的表單可以包含檔案附件。 例如，使用Acrobat的內建附件窗格，使用者可以選取要連同表單一起送出的檔案附件。 此外，使用者也可以使用HTML工具列來選取檔案附件，該工具列會以HTML檔案呈現。
+Forms提交到Forms服務可以包含檔案附件。 例如，使用Acrobat的內建附件窗格，使用者可以選擇要連同表單一起提交的檔案附件。 此外，使用者也可以使用HTML工具列來選取檔案附件，該工具列會以HTML檔案呈現。
 
 確定表單是否包含檔案附件後，您可以處理資料。 例如，可以將檔案附件保存到本地檔案系統。
 
@@ -184,19 +185,19 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms服務API快速入門](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[將檔案傳送至Forms服務](/help/forms/developing/passing-documents-forms-service.md)
+[將檔案傳遞至Forms](/help/forms/developing/passing-documents-forms-service.md)
 
-[建立轉譯表單的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
+[建立轉譯Forms的Web應用程式](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## 使用Java API {#handle-submitted-forms-using-the-java-api}處理提交的表單
 
-使用Forms API(Java)處理提交的表單：
+使用FormsAPI(Java)處理提交的表單：
 
 1. 包含專案檔案
 
@@ -257,19 +258,19 @@ Forms服務返回以下值，以指示它是否已完成資料處理：
 
 **另請參閱**
 
-[快速入門（SOAP模式）:使用Java API處理以XML格式提交的PDF表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API處理以XML形式提交的PDF forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
 [快速入門（SOAP模式）:使用Java API處理以XML形式提交的HTML表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API處理以PDF格式提交的PDF表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[快速入門（SOAP模式）:使用Java API處理以PDF格式提交的PDF forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用web service API {#handle-submitted-pdf-data-using-the-web-service-api}處理提交的PDF資料
 
-使用Forms API(web service)處理提交的表單：
+使用FormsAPI(web service)處理提交的表單：
 
 1. 包含專案檔案
 
