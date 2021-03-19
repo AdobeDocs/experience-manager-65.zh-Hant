@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
+feature: 行動表單
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -85,7 +86,7 @@ FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBrid
 
    ![入口](assets/portal.jpg)
 
-   左側是&#x200B;**HTML頁面**&#x200B;的一部分。 包含欄位的右側是&#x200B;**xfa表格**。
+   左側是&#x200B;**HTML頁面**&#x200B;的一部分。 包含欄位的右側是&#x200B;**xfa表單**。
 
 1. **從頁面存取表格欄位**
 
