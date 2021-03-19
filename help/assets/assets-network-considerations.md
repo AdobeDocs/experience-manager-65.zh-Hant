@@ -2,10 +2,11 @@
 title: 網路考量與需求
 description: 在設計 [!DNL Adobe Experience Manager Assets] 部署時討論網路注意事項。
 contentOwner: AG
+role: 架構師、管理員
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ ht-degree: 0%
 
 要設計[!DNL Experience Manager]環境的拓撲，需要詳細瞭解系統配置以及網路在用戶環境中的連接方式。
 
-範例案例包括一個包含5個伺服器的發佈群、一個S3二進位儲存區，以及設定動態媒體。
+範例案例包括一個包含5個伺服器的發佈群、一個S3二進位儲存區，以及設定了Dynamic Media。
 
 調度程式與兩個實體（外部世界和[!DNL Experience Manager]部署）共用100Mbps的連接。 若要同時上傳和下載作業，您應將此數字除以2。 連接的外部儲存器使用單獨的連接。
 
@@ -90,7 +91,7 @@ ht-degree: 0%
 
 以下是一些需要考慮的項目：
 
-* XMP中繼資料讀／回寫
+* 元XMP資料讀／寫回復
 * 自動啟動和複製
 * 浮水印
 * 子資產擷取／頁面擷取
