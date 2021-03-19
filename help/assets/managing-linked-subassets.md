@@ -2,10 +2,11 @@
 title: 使用參考和多頁管理複合資產
 description: 瞭解如何從 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]建立數位資產的參考。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -48,15 +49,15 @@ ht-degree: 0%
 
 若要從[!DNL InDesign]檔案中參考數位資產，請將資產拖曳至[!DNL InDesign]檔案，或將[!DNL InDesign]檔案匯出為ZIP封存。
 
-[!DNL Experience Manager Assets]中已存在引用的資產。 您可以透過[設定InDesign Server](indesign.md)擷取子資產。 [!DNL InDesign]檔案中的內嵌資產會擷取為子資產。
+[!DNL Experience Manager Assets]中已存在引用的資產。 您可以通過[配置InDesign Server](indesign.md)提取子資產。 [!DNL InDesign]檔案中的內嵌資產會擷取為子資產。
 
 >[!NOTE]
 >
->如果代理[!DNL InDesign Server],[!DNL InDesign]檔案的預覽會內嵌在其XMP中繼資料中。 在這種情況下，不明確需要擷取縮圖。 但是，如果[!DNL InDesign Server]未代理，則必須明確提取[!DNL InDesign]檔案的縮圖。
+>如果[!DNL InDesign Server]已代理，[!DNL InDesign]檔案的預覽會內嵌在其中繼資料XMP中。 在這種情況下，不明確需要擷取縮圖。 但是，如果[!DNL InDesign Server]未代理，則必須明確提取[!DNL InDesign]檔案的縮圖。
 
 ### 拖曳資產{#create-references-by-dragging-aem-assets}以建立參考
 
-此程式類似於在Adobe Illustrator](#refai)中新增數位資產做為參考。[
+此程式類似於在Adobe Illustrator](#refai)中添加數字資產作為引用。[
 
 ### 匯出ZIP檔案{#create-references-to-aem-assets-by-exporting-a-zip-file}以建立資產參考
 
@@ -99,7 +100,7 @@ ht-degree: 0%
 * 現有多頁資產：遵循下列任一步驟手動執行[!UICONTROL DAM更新資產]工作流程：
 
    * 選取資產，然後按一下「時間軸]」以開啟左側面板。 [!UICONTROL 或者，使用鍵盤快速鍵`alt + 3`。 按一下「開始工作流程」，選擇「[!UICONTROL DAM更新資產」，按一下「[!UICONTROL 開始]」，然後按一下「[!UICONTROL 繼續」。]]
-   * 選擇資產，然後從工具列按一下「建立 > [!UICONTROL 工作流程]」。 在彈出式對話方塊中，選擇[!UICONTROL DAM Update Asset]工作流程，按一下[!UICONTROL Start]，然後按一下[!UICONTROL Contered]。
+   * 選擇資產，然後從工具列按一下「建立 > [!UICONTROL 工作流程]」。 從彈出式對話方塊中，選擇[!UICONTROL DAM Update Asset]工作流程，按一下[!UICONTROL Start]，然後按一下[!UICONTROL Contered]。
 
 特別是對於Microsoft Word文檔，請執行&#x200B;**[!UICONTROL DAM Parse Word Documents]**&#x200B;工作流。 它從Microsoft Word文檔的內容生成`cq:Page`元件。 從文檔中提取的影像是從`cq:Page`元件中引用的。 即使子資產產生已停用，這些影像也會擷取。
 
@@ -136,7 +137,7 @@ ht-degree: 0%
 >[!MORELIKETHIS]
 >
 >* [使用Adobe Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
->* [在Adobe Experience Manager中設定案頭動作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
->* [在Adobe Photoshop中建立連結的智慧型物件](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
->* [在Adobe InDesign中置入圖形](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+>* [在Adobe Experience Manager配置案頭操作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [在Adobe Photoshop建立連結的智慧型物件](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
+>* [在Adobe InDesign置入圖形](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 
