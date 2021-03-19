@@ -10,11 +10,12 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: acc758b83486e8c623e31bb4a68f3c29dd4848ba
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2509'
-ht-degree: 1%
+source-wordcount: '2510'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +24,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-在AEM Communities中，從發佈環境（視設定的權限而定）,*網站訪客*&#x200B;可成為&#x200B;*成員*、建立&#x200B;*使用者群組*，並編輯其&#x200B;*成員描述檔*。
+在AEM Communities，從發佈環境（視設定的權限而定）,*網站訪客*&#x200B;可成為&#x200B;*成員*、建立&#x200B;*使用者群組*，並編輯其&#x200B;*成員描述檔*。
 
 *使* 用者資料是用來指代使用者、使 *用者*&#x200B;分析 *及使* 用者群組 **。
 
@@ -65,7 +66,7 @@ ht-degree: 1%
 
 在作者上，當社群網站從[Communities Sites主控台](/help/communities/sites-console.md)發佈時，其效果是[replicate](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents)相關頁面，而Sling則分發動態建立的社群使用者群組，包括其會籍。
 
-### 在發佈{#user-is-created-or-edits-profile-on-publish}時建立用戶或編輯配置檔案
+### 在發佈{#user-is-created-or-edits-profile-on-publish}時建立或編輯用戶配置檔案
 
 根據設計，在發佈環境（例如自行註冊、社交登入、LDAP驗證）中建立的使用者和設定檔不會出現在作者環境中。
 
@@ -101,10 +102,10 @@ ht-degree: 1%
 
 1. 請確定已安裝最新的代碼：
 
-   * [AEM平台更新](https://helpx.adobe.com/experience-manager/kb/aem62-available-hotfixes.html)
+   * [AEM平台更新](https://helpx.adobe.com/tw/experience-manager/kb/aem62-available-hotfixes.html)
    * [AEM Communities更新](/help/communities/deploy-communities.md#latestfeaturepack)
 
-在AEM Communities上啟用使用者同步時，必須進行下列設定。 請確定這些設定正確，以防止sling內容散發失敗。
+在AEM Communities啟用用戶同步時，必須進行以下配置。 請確定這些設定正確，以防止sling內容散發失敗。
 
 ### Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
 
@@ -118,7 +119,7 @@ ht-degree: 1%
 
 若要設定Apache Sling Sync Agents設定：
 
-1. 以管理員權限登入您的AEM作者實例。
+1. 以管理員權限登入您的作AEM者例項。
 1. 訪問[Web控制台](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)。 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
 1. 找到&#x200B;**Apache Sling Distribution Agent - Sync Agents Factory**。
 
@@ -133,7 +134,7 @@ ht-degree: 1%
       這些端點會定義您要從何處取得內容，以及要將內容推播到何處。 作者從指定的導出器端點提取內容，並將內容推送到發佈者（其從中提取內容的發佈者除外）。
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### Adobe Granite Distribution —— 加密密碼傳輸機密提供者{#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### Adobe花崗岩分佈——加密密碼傳輸機密提供者{#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 它可讓作者識別已授權的使用者，即具有從作者同步使用者資料以進行發佈的權限。
 
@@ -143,11 +144,11 @@ ht-degree: 1%
 
 若要使用授權使用者連線作者與發佈者：
 
-1. 以管理員權限登入您的AEM作者實例。
+1. 以管理員權限登入您的作AEM者例項。
 1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)。
 
    例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
-1. 找到&#x200B;**Adobe Granite Distribution - Encrypted Password Transport Secret Provider。**
+1. 找到&#x200B;**Adobe花崗岩分佈——加密密碼傳輸機密提供程式。**
 1. 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
    驗證屬性&#x200B;**socialpubsync** - **publishUser.**
@@ -180,19 +181,19 @@ ht-degree: 1%
 
    ![隊列代理——事實](assets/queue-agents-fact.png)
 
-### Adobe Granite Distribution - Diff Observer Factory {#adobe-granite-distribution-diff-observer-factory}
+### Adobe花崗岩分佈——比較觀察器工廠{#adobe-granite-distribution-diff-observer-factory}
 
 此設定會同步發佈者的群組成員資格。
 如果變更某個發佈者中的群組成員資格並未更新其他發佈者的成員資格，請確定**ref:members**&#x200B;已新增至&#x200B;**已搜尋的屬性名稱**。
 
 要確保成員同步：
 
-1. 以管理員權限登入您的AEM作者實例。
+1. 以管理員權限登入您的作AEM者例項。
 1. 訪問[Web控制台](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)。
 
    例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
-1. 找到&#x200B;**Adobe Granite Distribution - Diff Observer Factory**。
+1. 找到&#x200B;**Adobe花崗岩分佈——比較觀察器工廠**。
 1. 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
    驗證&#x200B;**代理名：socialpubsync -reverse**。
@@ -210,7 +211,7 @@ ht-degree: 1%
 
 要更改輪詢間隔：
 
-1. 以管理員權限登入您的AEM作者實例。
+1. 以管理員權限登入您的作AEM者例項。
 1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)，例如[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 1. 找到&#x200B;**Apache Sling Distribution Trigger - Scheduled Triggers Factory**
 
@@ -222,9 +223,9 @@ ht-degree: 1%
 
    ![scheduled-trigger](assets/scheduled-trigger.png)
 
-### AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
+### AEM Communities用戶同步偵聽器{#aem-communities-user-sync-listener}
 
-若是Sling散發中訂閱與後續版本有差異的問題，請檢查下列屬性是否已設定在&#x200B;**AEM Communities User Sync Listener**&#x200B;組態中：
+若是Sling散發中訂閱與後續有差異的問題，請檢查下列屬性是否已設定在&#x200B;**AEM Communities使用者同步接聽程式**&#x200B;組態中：
 
 * NodeTypes
 * 可忽略屬性
@@ -237,7 +238,7 @@ ht-degree: 1%
 
 1. 以管理員權限登入。
 1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)。 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
-1. 找到&#x200B;**AEM Communities User Sync Listener**。
+1. 找到&#x200B;**AEM Communities用戶同步偵聽器**。
 1. 選取要開啟以進行編輯的現有設定（鉛筆圖示）
 
    驗證名稱：**socialpubsync -scheduled-trigger**
@@ -278,7 +279,7 @@ ht-degree: 1%
 
 ### 唯一Sling ID {#unique-sling-id}
 
-AEM作者例項使用Sling ID來識別資料來自何處，以及它需要（或不需要）將套件傳回給哪些發佈者。
+AEMauthor instance使用Sling ID來識別資料來自何處，以及它需要（或不需要）將套件傳回給哪些發佈者。
 
 請確定發佈農場中的所有發佈者都有唯一的Sling ID。 如果Sling ID與發佈群中多個發佈例項的相同，則使用者同步將失敗。 由於作者不知道要從何處擷取套件，以及要在何處安裝套件。
 
@@ -314,7 +315,7 @@ AEM作者例項使用Sling ID來識別資料來自何處，以及它需要（或
 
 如果`rep :cache`節點在發佈商之間同步，則用戶同步可以停止。
 
-若要確保每個AEM發佈例項的更新會在各發佈者之間正確同步：
+為確保每個發佈例項的更新在發佈者之間正確同AEM步：
 
 1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
@@ -333,7 +334,7 @@ AEM作者例項使用Sling ID來識別資料來自何處，以及它需要（或
 
    ![保險儲存包生成器工廠](assets/vault-package-builder-factory.png)
 
-## 疑難排解AEM Communities {#troubleshoot-sling-distribution-in-aem-communities}中的Sling散發
+## 疑難排解AEM Communities的Sling散發{#troubleshoot-sling-distribution-in-aem-communities}
 
 如果Sling散發失敗，請嘗試下列除錯步驟：
 
@@ -348,13 +349,13 @@ AEM作者例項使用Sling ID來識別資料來自何處，以及它需要（或
 
    如果軟體包未正確安裝，則檢查在第一個發佈實例中建立的[授權用戶](/help/sites-administering/sync.md#createauthuser)是否具有正確的ACL。
 
-   若要驗證此項，請改變作者例項上的[已建立的授權使用者](/help/sites-administering/sync.md#createauthuser)，而不是變更[Adobe Granite Distribution - Encrypted Password Transport Secret Provider](/help/sites-administering/sync.md#adobegraniteencpasswrd)組態，以使用管理員使用者憑證。 現在，請嘗試再次安裝軟體包。 如果用戶同步與管理員憑據配合工作正常，則表示建立的發佈用戶沒有適當的ACL。
+   若要驗證此項，請改變作者例項上的[已建立的授權使用者](/help/sites-administering/sync.md#createauthuser)，而不是變更「Adobe花崗岩分佈——加密密碼傳輸機密提供者」](/help/sites-administering/sync.md#adobegraniteencpasswrd)組態，以使用管理員使用者憑證。 [現在，請嘗試再次安裝軟體包。 如果用戶同步與管理員憑據配合工作正常，則表示建立的發佈用戶沒有適當的ACL。
 
 1. **檢查比較觀察器工廠配置**
 
-   如果發佈群中只有特定節點未同步——例如，群組成員未同步——請確定[Adobe Granite Distribution - Diff Observer Factory](/help/sites-administering/sync.md#diffobserver)組態已啟用，且&#x200B;**rep:成員**&#x200B;在&#x200B;**查找的屬性名稱**&#x200B;中設定。
+   如果發佈群中只有特定節點未同步——例如，群組成員未同步——請確保[Adobe花崗岩分佈——比較觀察器工廠](/help/sites-administering/sync.md#diffobserver)配置已啟用，並且&#x200B;**rep:成員**&#x200B;在&#x200B;**查找的屬性名稱**&#x200B;中設定。
 
-1. **檢查AEM Communities使用者同步監聽器設定。** 如果已建立的使用者已同步，但訂閱和後續作業無法運作，請確定AEM Communities使用者同步接聽程式設定有：
+1. **檢查AEM Communities用戶同步偵聽器配置。** 如果已建立的用戶是同步的，但預訂和跟隨的用戶沒有工作，則確保「AEM Communities用戶同步監聽器」配置具有：
 
    * 節點類型——設定為&#x200B;**rep:User, nt :unstructured**, **nt :resource**, **rep:ACL**, **sling:Folder**&#x200B;和&#x200B;**sling:OrderedFolder**。
    * 可忽略節點——設定為&#x200B;**.token**、**system**&#x200B;和&#x200B;**rep :cache**。
@@ -381,7 +382,7 @@ AEM作者例項使用Sling ID來識別資料來自何處，以及它需要（或
 若要除錯：
 
 1. 禁用用戶同步：
-1. 在AEM作者例項上，以管理員權限登入。
+1. 在作AEM者例項上，以管理員權限登入。
 
    1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)。 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
    1. 找到設定&#x200B;**Apache Sling Distribution Agent - Sync Agents Factory**。
@@ -394,6 +395,6 @@ AEM作者例項使用Sling ID來識別資料來自何處，以及它需要（或
 1. 前往發行者，並在發佈者上建立使用者。 因此，會建立事件。
 1. 檢查在建立用戶時建立的日誌[順序。](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities)
 1. 檢查&#x200B;**vlt**&#x200B;套件是否建立於&#x200B;**/var/sling/distribution/packages/socialpubsync-vlt/data**&#x200B;上。
-1. 現在，在AEM作者例項上啟用使用者同步。
+1. 現在，在作者例項上啟AEM用使用者同步。
 1. 在發行者上，變更&#x200B;**Apache Sling Distribution Agent - Sync Agents Factory**中的匯出器或匯入器端點。
 我們可以下載並擷取封裝資料，以檢查哪些屬性已推送至其他發佈者，以及哪些資料遺失。
