@@ -10,11 +10,12 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
+feature: 語言副本
 translation-type: tm+mt
-source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 0%
+source-wordcount: '337'
+ht-degree: 1%
 
 ---
 
