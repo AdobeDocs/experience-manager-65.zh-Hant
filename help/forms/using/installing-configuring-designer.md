@@ -10,11 +10,12 @@ topic-tags: designer
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
+role: 管理員
 translation-type: tm+mt
-source-git-commit: 080885a4fddbbce52968d3c324d6499ff1036de2
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 0%
+source-wordcount: '214'
+ht-degree: 1%
 
 ---
 
@@ -23,13 +24,13 @@ ht-degree: 0%
 
 ## 先決條件{#pre-requisites}
 
-AEM Forms Designer安裝程式需要32位元版本的[Visual C++可重新散發的執行時期套件2012](https://support.microsoft.com/en-in/help/2977003/the-latest-supported-visual-c-downloads)和[Visual C++可重新散發的執行時期套件2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package)。 在開始安裝之前，請確定已安裝前述的可重新分發的執行階段套件。
+AEM Forms設計人員安裝程式需要32位元版本的[Visual C++可重新散發的執行時期套件2012](https://support.microsoft.com/en-in/help/2977003/the-latest-supported-visual-c-downloads)和[Visual C++可重新散發的執行時期套件2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package)。 在開始安裝之前，請確定已安裝前述的可重新分發的執行階段套件。
 
 ## 安裝設計器{#install-designer}
 
 Designer提供獨立安裝程式，也隨附於WorkBench。 如果您使用Designer的獨立安裝程式，請執行下列步驟：
 
-1. 請連絡Adobe支援以下載Designer安裝程式。
+1. 請聯絡Adobe支援以下載Designer安裝程式。
 
    >[!NOTE]
    >
