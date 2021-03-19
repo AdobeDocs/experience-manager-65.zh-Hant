@@ -1,37 +1,37 @@
 ---
-title: AEM Mobile - GDPR就緒性
-seo-title: AEM Mobile - GDPR就緒性
-description: 'null'
+title: AEM Mobile- GDPR就緒性
+seo-title: AEM Mobile- GDPR就緒性
+description: 「AEM Mobile- GDPR就緒性」
 seo-description: 'null'
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 translation-type: tm+mt
-source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '697'
 ht-degree: 1%
 
 ---
 
 
-# AEM Mobile - GDPR就緒性{#aem-mobile-gdpr-readiness}
+# AEM Mobile- GDPR就緒性{#aem-mobile-gdpr-readiness}
 
 >[!IMPORTANT]
 >
 >GDPR在以下幾節中是以範例形式使用，但涵蓋的詳細資訊適用於所有資料保護和隱私權法規；例如GDPR、CCPA等。
 
-## AEM Mobile GDPR支援{#aem-mobile-gdpr-support}
+## AEM MobileGDPR支援{#aem-mobile-gdpr-support}
 
-AEM Mobile已準備好協助客戶履行其GDPR合規性義務。 AEM Mobile中不會儲存任何個人資料。 如果您已布建，則可以使用您的Adobe ID登入Adobe Experience Mobile。
+AEM Mobile已準備好協助客戶履行其GDPR合規性義務。 AEM Mobile不儲存個人資料。 如果您已布建，則可以使用您的Adobe ID登入Adobe Experience Mobile。
 
 [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html)
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobe的數位出版產品（先於AEM Mobile）支援Adobe的GDPR整備計畫。 請參閱[https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html)。 以下將詳細說明Digital Publishing Suite產品中支援GDPR相關功能的細節，包括如何與Adobe合作以啟始GDPR要求。
+Adobe的數位出版產品(先於AEM Mobile)支援Adobe的GDPR整備計畫。 請參閱[https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html)。 以下將詳細說明Digital Publishing Suite產品中支援GDPR相關功能的細節，包括如何與Adobe合作以啟始GDPR要求。
 
-為確保您不會將AEM Mobile與舊版Digital Publishing Suite產品混淆，您可以在這裡登入Digital Publishing Suite產品：
+為確保您不會將AEM Mobile與舊版Digital Publishing Suite產品混淆，您可以在以下網址登入Digital Publishing Suite產品：
 
 [https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
 
@@ -53,13 +53,13 @@ Adobe的數位出版產品（先於AEM Mobile）支援Adobe的GDPR整備計畫�
 
 ### 常見問答集(FAQ){#frequently-asked-questions-faq}
 
-**Adobe會在起始DELETE請求時刪除我的App Store購買項目嗎？**
+**在開始Adobe請求時，DELETE會刪除我的App Store購買項目嗎？**
 
-Adobe將刪除其擁有的App Store購買項目（訂閱等）的資訊 不過，在App商店中，購買仍會記錄在案。 如果應用程式（使用者）登入App Store，這些回執會再次被取出並傳送至Adobe，然後會視為新購買項目，而且應用程式會還原這些回執，以再次存取。
+Adobe會刪除其擁有的App Store購買項目（訂閱等）資訊 不過，在App商店中，購買仍會記錄在案。 如果應用程式（使用者）登入App Store，這些回執將會再次被挑取並傳送至Adobe，之後，這些回執會被視為新購買項目，而且應用程式將會還原，以重新取得存取權。
 
-**Adobe會在啟動DELETE請求時刪除客戶提供的權益嗎？**
+**Adobe是否會在啟動DELETE請求時刪除客戶提供的權利？**
 
-Adobe將刪除其擁有的客戶額外直接權益津貼資訊。 如果應用程式（一般使用者）登入客戶使用的OAuth機制，它會傳送資訊給Adobe，而服務會再次取得額外權益。
+Adobe將刪除其擁有的客戶額外直接權益津貼的資訊。 如果應用程式（一般使用者）登入客戶所使用的OAuth機制，它會傳送資訊給Adobe，而服務會再次取得額外權益。
 
 **一般使用者預期會如何？**
 
