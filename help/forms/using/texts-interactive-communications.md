@@ -8,10 +8,11 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2495'
 ht-degree: 0%
 
 ---
@@ -32,11 +33,11 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 ## 建立文字{#createtext}
 
-1. 選擇「**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**」。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**。
 1. 選擇&#x200B;**[!UICONTROL 建立]** > **[!UICONTROL 文本]**。
 1. 指定下列資訊：
 
-   * **[!UICONTROL 標題]**:（可選）輸入文本文檔片段的標題。標題不需要唯一，而且可以有特殊字元和非英文字元。 文字會以標題（如果有的話）來參照，例如縮圖和屬性。
+   * **[!UICONTROL 標題]**:（可選）輸入文本文檔片段的標題。標題不必是唯一的，而且可以有特殊字元和非英文字元。 文字會以標題（如果有的話）來參照，例如縮圖和屬性。
    * **[!UICONTROL 名稱]**:資料夾內文字的唯一名稱。任何狀態下，檔案夾中都不能有相同名稱的兩個檔案片段（文字、條件或清單）。 在「名稱」欄位中，您只能輸入英文字元、數字和連字型大小。 「名稱」欄位會根據「標題」欄位自動填入。 在「標題」欄位中輸入的特殊字元、空格、數字和非英文字元將在「名稱」欄位中替換為連字元。 雖然「標題」欄位中的值會自動複製到「名稱」，但您可以編輯值。
 
    * **[!UICONTROL 說明]**:鍵入文本的說明。
@@ -75,7 +76,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 您可以使用下列步驟編輯現有的文本文檔片段。 您也可以選擇在互動式通訊編輯器中編輯文字檔案片段。
 
-1. 選擇「**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**」。
+1. 選擇&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL 文檔片段]**。
 1. 導覽至文字檔案片段並加以選取。
 1. 點選&#x200B;**[!UICONTROL 編輯]**。
 1. 進行必要的變更。 有關文本中選項的詳細資訊，請參閱[建立文本](#createtext)。
@@ -83,7 +84,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 ## 使用表單資料模型屬性{#formdatamodel}個人化文字檔案片段
 
-您可以插入表單資料模型屬性，以個人化文字檔案片段。 通過在文本中插入表單資料模型屬性，可以在預覽交互通信時從關聯資料源中提取和填充特定於收件人的資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms Data Integration](/help/forms/using/data-integration.md)。
+您可以插入表單資料模型屬性，以個人化文字檔案片段。 通過在文本中插入表單資料模型屬性，可以在預覽交互通信時從關聯資料源中提取和填充特定於收件人的資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
 
 如果在建立文本時指定了表單資料模型，則表單資料模型中的屬性將顯示在文本編輯器的左窗格中。 指定的表單資料模型對於文字檔案片段以及包含其的互動式通訊應相同。
 
@@ -144,7 +145,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 ## 在文字{#rules}中建立規則
 
-在文字中使用規則編輯器，您可以建立規則，以根據&#x200B;**預設條件**&#x200B;顯示或隱藏文字字串或內容片段。 這些條件可基於：
+在文字中使用規則編輯器，您可以建立規則，以根據&#x200B;**預設條件**&#x200B;顯示或隱藏文字或內容片段字串。 這些條件可基於：
 
 * 字串
 * 數字
@@ -254,7 +255,7 @@ Interactive Communication中的文字檔案片段支援下列類型的動態資�
 
 ![specialcharacters-2](assets/specialcharacters-2.png)
 
-文字編輯器內建支援210個特殊字元。 管理員可以透過自訂[新增對更多／自訂特殊字元的支援。](/help/forms/using/custom-special-characters.md)
+文字編輯器內建支援210個特殊字元。 管理員可以透過自訂](/help/forms/using/custom-special-characters.md)新增對更多／自訂特殊字元的支援。[
 
 ## 搜索和替代文字{#searching}
 
