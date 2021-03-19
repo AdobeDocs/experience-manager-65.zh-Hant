@@ -7,10 +7,11 @@ uuid: f1d0fb70-e255-4dd9-8e6d-fd65eaf2e81a
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: ef564750-f107-41cb-887e-fc6d22b7d32e
+feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -64,7 +65,7 @@ ht-degree: 0%
 
    您可以變更最適化表單的中繼資料屬性，例如標題和說明。 如需中繼資料屬性的詳細資訊以及如何變更這些屬性，請參閱[管理表單中繼資料](/help/forms/using/manage-form-metadata.md)
 
-1. **針對XFA/XSD架構的最適化表單變更XFA/XSD:**
+1. **針對基於XFA/XSD的自適應Forms更改XFA/XSD:**
 
    您可以變更最適化表單中使用的XFA/XSD。 要瞭解如何更改這些自適應表單，請參閱[管理表單元資料](/help/forms/using/manage-form-metadata.md)
 
