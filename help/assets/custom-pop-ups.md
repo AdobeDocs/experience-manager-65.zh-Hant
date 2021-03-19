@@ -9,10 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
+feature: 檢視器
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1105'
 ht-degree: 2%
 
 ---
@@ -22,7 +24,7 @@ ht-degree: 2%
 
 在電子商務體驗中使用預設的Quickview，以便顯示包含產品資訊的快顯視窗來推動購買。 不過，您可以觸發自訂內容以顯示在快顯視窗中。 根據您使用的檢視器，此功能可讓使用者按一下熱點、縮圖影像或影像地圖，以檢視資訊或相關內容。
 
-動態媒體中的下列檢視器支援快速檢視：
+Dynamic Media的下列檢視器支援快速檢視：
 
 * 互動式影像（可點選的熱點）
 * 互動式視訊（視訊播放時可點選的縮圖影像）
@@ -144,7 +146,7 @@ ht-degree: 2%
    * 互動式視訊檢視器：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
    * 互動式視訊檢視器中的互動式資料支援：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
 
-1. 執行下列動作：
+1. 請執行下列動作：
 
    * 取消對embed代碼的setHandlers部分的注釋。
    * 映射Quickview中包含的任何其他變數。
@@ -181,7 +183,7 @@ ht-degree: 2%
 
 1. 將快顯視窗`DIV`置於HTML頁面的正文中。
 
-   其中一個元素會以ID設定，當使用者叫用Quickview時，ID會以sku值更新。 此範例也包含一個簡單按鈕，可在快顯視窗顯示後再次隱藏快顯視窗。
+   其中一個元素會以ID設定，當使用者叫用Quickview時，ID會以sku值更新。 此範例也包含一個簡單按鈕，可在快顯視窗顯示後再次隱藏。
 
    ```xml
    <div id="quickview_div" >
