@@ -2,10 +2,11 @@
 title: '[!DNL Assets] 代理開發'
 description: Proxy是 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy、支援的作業、proxy元件，以及如何開發自訂Proxy工作器。
 contentOwner: AG
+role: 管理員、架構師
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -15,9 +16,9 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager Assets] 使用代理來分發特定任務的處理。
 
-Proxy是特定（有時也是個別的）Experience Manager實例，它使用Proxy工作者作為負責處理工作和建立結果的處理者。 代理工作器可用於各種任務。 若是[!DNL Assets]代理，則可用來載入資產，以便在「資產」中轉譯。 例如，[IDS代理工作者](indesign.md)使用[!DNL Adobe InDesign]伺服器來處理要用於資產的檔案。
+Proxy是特定（有時也是獨立的）Experience Manager實例，它使用Proxy工作者作為負責處理工作和建立結果的處理者。 代理工作器可用於各種任務。 若是[!DNL Assets]代理，則可用來載入資產，以便在「資產」中轉譯。 例如，[IDS代理工作者](indesign.md)使用[!DNL Adobe InDesign]伺服器來處理要用於資產的檔案。
 
-當proxy是個別的[!DNL Experience Manager]例項時，這有助於減輕Experience Manager編寫例項的負載。 依預設，[!DNL Assets]會在相同JVM（透過Proxy外部化）中執行資產處理工作，以減輕Experience Manager製作例項的負載。
+當proxy是個別的[!DNL Experience Manager]例項時，這有助於減少Experience Manager編寫例項的負載。 依預設，[!DNL Assets]會在相同JVM（透過Proxy外部化）中執行資產處理工作，以減輕Experience Manager製作例項的負載。
 
 ## 代理（HTTP訪問）{#proxy-http-access}
 
@@ -113,7 +114,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[InDesign Server Proxy Worker設定](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[雲端服務設定](../sites-developing/extending-cloud-config.md)。
+>如需詳細資訊，請參閱[InDesign Server代理工作器配置](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[Cloud Services配置](../sites-developing/extending-cloud-config.md)。
 
 以下是API使用的範例：
 
@@ -132,7 +133,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### 開發自定義的代理工作器{#developing-a-customized-proxy-worker}
 
-[IDS代理工作者](indesign.md)是[!DNL Assets]代理工作者的範例，此代理工作者已提供現成可用的功能，以外包InDesign資產的處理。
+[IDS代理工作器](indesign.md)是[!DNL Assets]代理工作器的示例，該代理工作器已經提供現成可用來外包InDesign資產的處理。
 
 您也可以開發和配置自己的[!DNL Assets]代理工作者，以建立專門的工作者來派遣和外包您的[!DNL Assets]處理任務。
 
@@ -156,7 +157,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 >[!NOTE]
 >
->在以下步驟中，InDesign等效項指示為參照示例。
+>在以下步驟中，InDesign等效項作為參考示例。
 
 1. 使用[Sling job](https://sling.apache.org/site/eventing-and-jobs.html)，因此您必須為使用案例定義工作主題。
 
@@ -184,4 +185,4 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 >
 >結果同步：
 >
->使用相同proxy的n個例項時，處理結果會保留在proxy中。 用戶端的工作（Experience Manager作者）是使用與建立工作時提供給用戶端的相同唯一工作ID來請求結果。 Proxy只會完成工作，並讓結果隨時可供要求。
+>使用相同proxy的n個例項時，處理結果會保留在proxy中。 用戶端(Experience Manager作者)的工作是使用與建立工作時給予用戶端的相同唯一作業ID來請求結果。 Proxy只會完成工作，並讓結果隨時可供要求。
