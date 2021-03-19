@@ -1,6 +1,6 @@
 ---
-title: 如何使用TarMK Cold Standby運行AEM
-seo-title: 如何使用TarMK Cold Standby運行AEM
+title: 如何使用AEMTarMK冷備用
+seo-title: 如何使用AEMTarMK冷備用
 description: 瞭解如何建立、設定和維護TarMK Cold Standby設定。
 seo-description: 瞭解如何建立、設定和維護TarMK Cold Standby設定。
 uuid: 004fdf3e-517c-452b-8db1-a47d6b31d8ba
@@ -10,20 +10,21 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
+feature: 設定
 translation-type: tm+mt
-source-git-commit: a99c5794cee88d11ca3fb9eeed443c4d0178c7b3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2732'
 ht-degree: 0%
 
 ---
 
 
-# 如何使用TarMK Cold Standby運行AEM{#how-to-run-aem-with-tarmk-cold-standby}
+# 如何使AEM用TarMK Cold Standby{#how-to-run-aem-with-tarmk-cold-standby}運行
 
 ## 簡介 {#introduction}
 
-Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用AEM實例連接到主實例。 同步進程只表示它只從主實例到備用實例完成。
+Tar微內核的冷備用容量允許一個或多個備用實例AEM連接到主實例。 同步進程只表示它只從主實例到備用實例完成。
 
 備用實例的目的是保證主儲存庫的即時資料拷貝，並確保在主儲存庫因任何原因不可用時快速切換而不丟失資料。
 
@@ -31,13 +32,13 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 
 >[!NOTE]
 >
->「冷備用」功能旨在保護&#x200B;**author**&#x200B;實例上需要高可用性的情形。 對於使用Tar Micro Kernel的&#x200B;**publish**&#x200B;例項需要高可用性的情況，Adobe建議使用發佈群。
+>「冷備用」功能旨在保護&#x200B;**author**&#x200B;實例上需要高可用性的情形。 如果&#x200B;**publish**&#x200B;實例需要使用Tar Micro內核的高可用性，Adobe建議使用發佈群。
 >
 >有關更多可用部署的資訊，請參閱[建議部署](/help/sites-deploying/recommended-deploys.md)頁。
 
 ## 其運作方式{#how-it-works}
 
-在主要AEM例項上，會開啟TCP連接埠，並監聽傳入的訊息。 目前，從系統將向主系統發送兩種消息：
+在主實AEM例上，開啟一個TCP埠並監聽傳入消息。 目前，從系統將向主系統發送兩種消息：
 
 * 請求當前頭段ID的消息
 * 以指定ID要求區段資料的訊息
@@ -74,11 +75,11 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 >
 >建議在作為Coldy備用設定一部分的Dispatcher和伺服器之間添加負載平衡器。 應將負載平衡器配置為僅將用戶流量引導到&#x200B;**primary**&#x200B;實例，以確保一致性，並防止內容通過非Cold Standby機制被複製到備用實例。
 
-## 建立AEM TarMK Cold Standby設定{#creating-an-aem-tarmk-cold-standby-setup}
+## 建立AEMTarMK冷備用設定{#creating-an-aem-tarmk-cold-standby-setup}
 
 >[!CAUTION]
 >
->與舊版相比，AEM 6.3中「區段」節點儲存區和「備用儲存區」服務的PID已變更，如下所示：
+>與舊版相比，「段」節點儲存和「備用儲存」服務的PID在AEM6.3中發生了更改，如下所示：
 >
 >* 來自org.apache.jackrabbit.oak。**plugins**.segment.standby.standby.StandbyStoreService to org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
 >* 來自org.apache.jackrabbit.oak。**plugins**.segment.SegmentNodeStoreService to org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
@@ -103,11 +104,11 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
    1. 在`aem-primary/crx-quickstart/install/install.primary`下為首選節點儲存和資料儲存建立所需的配置
    1. 在相同位置建立名為`org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`的檔案，並相應地進行配置。 有關配置選項的詳細資訊，請參見[Configuration](/help/sites-deploying/tarmk-cold-standby.md#configuration)。
 
-   1. 如果您正將AEM TarMK例項與外部資料存放區搭配使用，請在`aem-primary/crx-quickstart/install`下建立名為`crx3`的資料夾，名為`crx3`
+   1. 如果您正將AEMTarMK實例與外部資料儲存一起使用，請在`aem-primary/crx-quickstart/install`下建立名為`crx3`的`crx3`資料夾
 
    1. 將資料儲存配置檔案放在`crx3`資料夾中。
 
-   例如，如果您使用外部檔案資料存放區執行AEM TarMK例項，則需要下列設定檔案：
+   例如，如果您正在運行具有外部文AEM件資料儲存的TarMK實例，則需要以下配置檔案：
 
    * `aem-primary/crx-quickstart/install/install.primary/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
    * `aem-primary/crx-quickstart/install/install.primary/org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
@@ -283,7 +284,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 * **安全(`secure`)：啟** 用SSL加密。為了使用此設定，必須在所有例項上啟用此設定。
 * **備用讀超時(`standby.readtimeout`)：從備** 用實例發出的請求超時（以毫秒為單位）。建議的逾時設定為43200000。 通常建議您將逾時值設為至少12小時。
 
-* **備用自動清`standby.autoclean`除():** 如果儲存的大小在同步週期中增加，請調用清除方法。
+* **備用自動清理(`standby.autoclean`):** 如果儲存的大小在同步週期上增加，請調用清理方法。
 
 >[!NOTE]
 >
@@ -311,7 +312,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
    ```
 
 1. 向負載平衡器添加新主要。
-1. 建立並啟動新的備用實例。 如需詳細資訊，請參閱上述「建立AEM TarMK Cold Standby Setup[」中的程式。](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)
+1. 建立並啟動新的備用實例。 如需詳細資訊，請參閱上述「建立AEMTarMK Cold Standby Setup](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)」中的程式。[
 
 ## 將修補程式應用於冷備用設定{#applying-hotfixes-to-a-cold-standby-setup}
 
@@ -325,7 +326,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 1. 在安裝後測試實例以瞭解問題。
 1. 通過刪除其安裝資料夾來刪除冷備用實例。
 1. 通過將主實例的整個安裝資料夾的檔案系統副本複製到冷備用實例的位置來停止它並克隆它。
-1. 重新配置新建立的克隆以充當冷備用實例。 如需詳細資訊，請參閱「建立AEM TarMK冷待機設定」。[](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)
+1. 重新配置新建立的克隆以充當冷備用實例。 如需詳細資訊，請參閱「建立AEMTarMK冷備用設定」。](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)[
 1. 啟動主實例和冷備用實例。
 
 ## 監控 {#monitoring}
@@ -371,7 +372,7 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 
 ## Cold Standby Repository維護{#cold-standby-repository-maintenance}
 
-### 修訂清除{#revision-clean}
+### 修訂清除 {#revision-clean}
 
 >[!NOTE]
 >
@@ -381,11 +382,11 @@ Tar Micro Kernel的Cold Standby（冷備用）容量允許一個或多個備用A
 >
 >請勿在備用系統上運行離線修訂清除。 不需要它，也不會降低區段儲存區大小。
 
-Adobe建議定期執行維護作業，以防止儲存庫隨著時間過長而增長。 要手動執行冷備用儲存庫維護，請執行以下步驟：
+Adobe建議定期運行維護，以防止隨著時間的推移儲存庫出現過度增長。 要手動執行冷備用儲存庫維護，請執行以下步驟：
 
 1. 前往JMX主控台並使用&#x200B;**org.apache.jackrabbit.oak來停止備用例項上的備用程式：狀態（「備用」）** Bean。 有關如何執行此操作的詳細資訊，請參見上述關於[監視](/help/sites-deploying/tarmk-cold-standby.md#monitoring)的章節。
 
-1. 停止主要AEM例項。
+1. 停止主實AEM例。
 1. 在主實例上運行oak壓縮工具。 有關詳細資訊，請參閱[維護儲存庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)。
 1. 啟動主實例。
 1. 使用與第一步中所述的相同JMX Bean，在備用實例上啟動備用進程。
