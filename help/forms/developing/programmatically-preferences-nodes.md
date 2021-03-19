@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9d4dba7f-49d8-4112-bc8a-04dafc99a936
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 # 以程式設計方式管理偏好設定節點{#programmatically-managing-the-preferencesnodes}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文中的範例和範例僅適用於AEM Forms的JEE環境。**
 
 本主題說明如何使用Preferences Manager Service API(Java)以程式設計方式管理Preferences Nodes。
 
