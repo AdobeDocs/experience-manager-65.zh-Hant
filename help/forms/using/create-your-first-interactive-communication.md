@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
+feature: 互動式通訊
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -44,13 +45,13 @@ ht-degree: 0%
 電信營運商透過電子郵件傳送每月帳單給客戶。 這項法案是互動式通訊。 電子郵件包括：
 
 * 受密碼保護的PDF，在本教學課程中稱為列印頻道。 它包括客戶詳細資訊、帳單詳細資訊、費用摘要、支付帳單的便利模式以及使用詳細資訊。
-* 指向Web版帳單的連結，在本教學課程中稱為Web頻道。 除了PDF版中涵蓋的詳細資訊外，帳單的網頁版本還提供使用細節的圖形表示，以及以Adobe Target為基礎的個人化優惠。 網頁版本也包含線上付款表單。 線上支付不需離開IC就有幫助。
+* 指向Web版帳單的連結，在本教學課程中稱為Web頻道。 除了PDF版中涵蓋的詳細資訊外，Web版本還提供使用細節的圖形表示，以及以Adobe Target為基礎的個人化優惠。 網頁版本也包含線上付款表單。 線上支付不需離開IC就有幫助。
 * 增值服務的連結，例如線上儲存空間、音樂訂閱和隨選視訊訂閱。
 
 ## 必備條件 {#prerequisites}
 
-* 設定AEM作者例項。
-* 在作者例項上安裝[AEM Forms add-on](/help/forms/using/installing-configuring-aem-forms-osgi.md)
+* 設定作AEM者例項。
+* 在作者實例上安裝[AEM Forms附加元件](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 * 設定MYSQL資料庫
 * 從資料庫提供程式獲取JDBC資料庫驅動程式（JAR檔案）。 教程中的示例基於MySQL資料庫，並使用Oracle的[MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
@@ -76,7 +77,7 @@ ht-degree: 0%
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-表單資料模型可讓您將互動式通訊連接至不同的資料來源。 例如，AEM使用者設定檔、REST風格的web services、SOAP架構的web services、OData服務和關係式資料庫。 表單資料模型是在連接資料源中可用的業務實體和服務的統一資料表示模式。 您可搭配互動式通訊使用表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms Data Integration](/help/forms/using/data-integration.md)。
+表單資料模型可讓您將互動式通訊連接至不同的資料來源。 例如，AEM用戶配置檔案、REST風格的Web服務、基於SOAP的Web服務、OData服務和關係資料庫。 表單資料模型是在連接資料源中可用的業務實體和服務的統一資料表示模式。 您可搭配互動式通訊使用表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
 
 **目標：**
 
@@ -109,16 +110,16 @@ ht-degree: 0%
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-若要建立互動式通訊，您必須在AEM伺服器上提供適用於列印和網路頻道的範本。
+若要建立互動式通訊，您必須在伺服器上提供列印和網AEM路頻道的範本。
 
-「列印」頻道的範本是在Adobe Forms Designer中建立，並上傳至AEM伺服器。 然後，這些範本便可在建立互動式通訊時使用。
+列印渠道的範本是在AdobeForms設計人員中建立，並上傳至伺AEM服器。 然後，這些範本便可在建立互動式通訊時使用。
 
-網頁頻道的範本是在AEM中建立。 範本作者和管理員可以建立、編輯和啟用Web範本。 在建立並啟用後，這些範本就可在建立互動式通訊時使用。
+網頁渠道的範本是在中建立AEM的。 範本作者和管理員可以建立、編輯和啟用Web範本。 在建立並啟用後，這些範本就可在建立互動式通訊時使用。
 
 **目標：**
 
-* 使用Adobe Forms Designer建立適用於列印通道的XDP範本
-* 將XDP範本上傳至AEM Forms Server
+* 使用AdobeForms設計師為印刷渠道建立XDP模板
+* 將XDP範本上傳至AEM Forms伺服器
 * 建立並啟用網頁頻道的範本
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-templates-print-web.md)
