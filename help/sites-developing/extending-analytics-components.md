@@ -1,7 +1,7 @@
 ---
 title: 新增Adobe Analytics追蹤至元件
 seo-title: 新增Adobe Analytics追蹤至元件
-description: 'null'
+description: 新增Adobe Analytics追蹤至元件
 seo-description: 'null'
 uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
@@ -10,21 +10,21 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
 
 
-# 新增Adobe Analytics追蹤至元件{#adding-adobe-analytics-tracking-to-components}
+# 將Adobe Analytics跟蹤添加到元件{#adding-adobe-analytics-tracking-to-components}
 
-## 在頁面元件{#including-the-adobe-analytics-module-in-a-page-component}中加入Adobe Analytics模組
+## 在頁面元件{#including-the-adobe-analytics-module-in-a-page-component}中包括Adobe Analytics模組
 
-頁面範本元件(例如`head.jsp, body.jsp`)需要JSP包含，才能載入ContextHub和Adobe Analytics整合（此為雲端服務的一部分）。 全部都包含載入JavaScript檔案。
+頁面範本元件(例如`head.jsp, body.jsp`)需要JSP包含，以載入ContextHub和Adobe Analytics整合(此整合為Cloud Services的一部分)。 全部都包含載入JavaScript檔案。
 
-ContextHub項目應緊接在`<head>`標籤下方，而Cloud Services應包含在`<head>`和`</body>`區段之前；例如：
+ContextHub項目應緊接在`<head>`標籤下方，而Cloud Services項目應包含在`<head>`和`</body>`區段之前；例如：
 
 ```xml
 <head>
@@ -41,9 +41,9 @@ ContextHub項目應緊接在`<head>`標籤下方，而Cloud Services應包含在
 
 您在`<head>`元素後插入的`contexthub`指令碼會將ContextHub功能新增至頁面。
 
-您在`<head>`和`<body>`區段中新增的`cloudservices`指令碼會套用至新增至頁面的雲端服務組態。 （如果頁面使用多個雲端服務設定，則您只需要加入一次ContextHub jsp和Cloud Services jsp。）
+您在`<head>`和`<body>`區段中新增的`cloudservices`指令碼會套用至新增至頁面的雲端服務組態。 (如果頁面使用多個Cloud Services配置，則只需要包含一次ContextHub jsp和Cloud Servicesjsp。)
 
-將Adobe Analytics架構新增至頁面時，`cloudservices`指令碼會產生Adobe Analytics相關的javascript和用戶端資料庫的參考，類似下列範例：
+將Adobe Analytics框架添加到頁面時，`cloudservices`指令碼將生成與Adobe Analytics相關的javascript和對客戶端庫的引用，類似以下示例：
 
 ```xml
 <div class="sitecatalyst cloudservice">
@@ -111,7 +111,7 @@ $CQ(function(){
 </div>
 ```
 
-所有AEM範例網站（例如Geometrixx Outdoors）都包含此程式碼。
+所有AEM範例網站(例如Geometrixx Outdoors)都包含此程式碼。
 
 ### sitecatalystAfterCollect事件{#the-sitecatalystaftercollect-event}
 
@@ -125,15 +125,15 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 >[!NOTE]
 >
->`/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js`程式庫包含Adobe Analytics `s_code.js`檔案中的程式碼。
+>`/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js`程式庫包含來自Adobe Analytics`s_code.js`檔案的程式碼。
 
 ## 實作自訂元件的Adobe Analytics追蹤{#implementing-adobe-analytics-tracking-for-custom-components}
 
 讓您的AEM元件與Adobe Analytics架構互動。 然後，設定您的架構，讓Adobe Analytics追蹤元件資料。
 
-當您編輯架構時，與Adobe Analytics架構互動的元件會出現在SideKick中。 將元件拖曳至架構後，會顯示元件屬性，然後您可以使用Adobe Analytics屬性來對應這些屬性。 （請參閱[設定基本追蹤的架構](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework)）。
+當您編輯框架時，與Adobe Analytics框架互動的元件會出現在SideKick中。 將元件拖動到框架後，將顯示元件屬性，然後可以用Adobe Analytics屬性映射它們。 （請參閱[設定基本追蹤的架構](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework)）。
 
-當元件有名為`analytics`的子節點時，元件可與Adobe Analytics架構互動。 `analytics`節點具有以下屬性：
+當元件具有名為`analytics`的子節點時，元件可與Adobe Analytics框架交互。 `analytics`節點具有以下屬性：
 
 * `cq:trackevents`:識別元件公開的CQ事件。（請參閱自訂事件。）
 * `cq:trackvars`:命名與Adobe Analytics屬性映射的CQ變數。
@@ -149,22 +149,22 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 ### 範例：追蹤Topnav點按次數{#example-tracking-topnav-clicks}
 
-延伸基礎topnav元件，讓Adobe Analytics追蹤頁面頂端導覽連結的點按次數。 點按導覽連結時，Adobe Analytics會記錄已點按的連結及其點按的頁面。
+擴充基礎topnav元件，讓Adobe Analytics追蹤頁面頂端導覽連結的點按次數。 點按導覽連結時，Adobe Analytics會記錄點按的連結及其點按的頁面。
 
 以下過程要求您已執行下列任務：
 
 * 已建立CQ應用程式。
-* 已建立Adobe Analytics設定和Adobe Analytics Framework。
+* 建立了Adobe Analytics配置和Adobe Analytics框架。
 
 #### 複製topnav元件{#copy-the-topnav-component}
 
-將topnav元件複製至您的CQ應用程式。 該過程要求在CRXDE Lite中設定應用程式。
+將topnav元件複製至您的CQ應用程式。 此過程要求在CRXDE Lite中設定應用程式。
 
 1. 按一下右鍵`/libs/foundation/components/topnav`節點，然後按一下「複製」。
 1. 按一下右鍵應用程式資料夾下的「元件」資料夾，然後按一下「貼上」。
 1. 按一下「全部儲存」。
 
-#### 將Topnav與Adobe Analytics Framework {#integrating-topnav-with-the-adobe-analytics-framework}整合
+#### 將Topnav與Adobe Analytics框架{#integrating-topnav-with-the-adobe-analytics-framework}整合
 
 設定topnav元件並編輯JSP檔案以定義追蹤事件和資料。
 
@@ -290,13 +290,13 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 >[!NOTE]
 >
->您通常希望從ContextHub追蹤資料。 如需使用javascript取得此資訊的詳細資訊，請參閱ContextHub[中的「存取值」。](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)
+>您通常希望從ContextHub追蹤資料。 如需使用javascript取得此資訊的詳細資訊，請參閱ContextHub](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)中的「存取值」。[
 
 #### 將追蹤元件新增至Sidekick {#adding-the-tracking-component-to-sidekick}
 
-將啟用Adobe Analytics追蹤的元件新增至Sidekick，以便您將它們新增至架構。
+將可使用Adobe Analytics追蹤的元件新增至Sidekick，以便將它們新增至架構。
 
-1. 從Adobe Analytics設定開啟您的Adobe Analytics架構。 ([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
+1. 從您的Adobe Analytics配置開啟您的Adobe Analytics框架。 ([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
 1. 在Sidekick上，按一下「設計」按鈕。
 
    ![](assets/chlimage_1a.png)
@@ -310,26 +310,26 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 #### 將topnav元件添加到Framework {#adding-the-topnav-component-to-your-framework}
 
-將topnav元件拖曳至Adobe Analytics架構，並將元件變數和事件對應至Adobe Analytics變數和事件。 （請參閱[設定基本追蹤的架構](/help/sites-administering/adobeanalytics-connect.md)）。
+將topnav元件拖曳至您的Adobe Analytics架構，並將元件變數和事件對應至Adobe Analytics變數和事件。 （請參閱[設定基本追蹤的架構](/help/sites-administering/adobeanalytics-connect.md)）。
 
 ![chlimage_1-1](assets/chlimage_1-1a.png)
 
-topnav元件現在已與Adobe Analytics架構整合。 將元件新增至頁面時，按一下頂端導覽列中的項目會將追蹤資料傳送至Adobe Analytics。
+Topnav元件現在與Adobe Analytics框架相整合。 將元件新增至頁面時，按一下頂端導覽列中的項目會將追蹤資料傳送至Adobe Analytics。
 
-### 傳送s.products資料至Adobe Analytics {#sending-s-products-data-to-adobe-analytics}
+### 傳送s.products資料至Adobe Analytics{#sending-s-products-data-to-adobe-analytics}
 
-元件可產生傳送至Adobe Analytics的s.products變數的資料。 設計您的元件，以提供s.products變數：
+元件可產生傳送至Adobe Analytics的s.products變數資料。 設計您的元件，以提供s.products變數：
 
 * 記錄名為`product`的特定結構值。
-* 公開`product`值的資料成員，以便與Adobe Analytics架構中的Adobe Analytics變數對應。
+* 公開`product`值的資料成員，以便與Adobe Analytics框架中的Adobe Analytics變數映射。
 
-Adobe Analytics s.products變數使用下列語法：
+Adobe Analyticss.products變數使用下列語法：
 
 ```
 s.products="category;product;quantity;price;eventY={value}|eventZ={value};evarA={value}|evarB={value}"
 ```
 
-Adobe Analytics整合模組使用AEM元件產生的`product`值來建構`s.products`變數。 AEM元件產生的javascript中的`product`值是具有下列結構的值陣列：
+Adobe Analytics整合模組使用元件生成的`product`值構建`s.products`AEM變數。 元件生成的javascript中的`product`AEM值是具有以下結構的值陣列：
 
 ```
 "product": [{
@@ -352,7 +352,7 @@ Adobe Analytics整合模組使用AEM元件產生的`product`值來建構`s.produ
 
 >[!NOTE]
 >
->當沒有事件與產品值相關聯時，Adobe Analytics預設會使用`prodView`事件。
+>當沒有事件與產品值關聯時，Adobe Analytics預設會使用`prodView`事件。
 
 元件的`analytics`節點必須使用`cq:trackvars`屬性公開變數名：
 
