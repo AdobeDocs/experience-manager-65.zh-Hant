@@ -1,12 +1,12 @@
 ---
-title: 用於數位資產管理的媒體庫產品。
+title: 使用媒體庫進行基本數位資產管理
 description: '[!DNL Experience Manager Assets] 和媒體庫，以進行資產管理。'
 contentOwner: AG
 role: 建築師、領導者
 translation-type: tm+mt
-source-git-commit: 10e5ca2fb6e108a7201e6114b61b3d0266ff80d2
+source-git-commit: 31dc984d9cd93f7024229fd6773878eebfdadc57
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ Experience Manager資產提供企業級DAM功能。 資產功能是透過[!DNL E
 * 使用[!DNL Adobe Experience Manager Screens]建立數位螢幕體驗。
 * [!DNL Assets] HTTP REST API，以進行無頭操作。
 
-
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
 * Basic metadata properties
@@ -65,7 +64,7 @@ Experience Manager資產提供企業級DAM功能。 資產功能是透過[!DNL E
 * Comments and annotation
 -->
 
-您可以使用媒體庫完成下列特定任務：
+要使用介質庫功能，可以使用預設的[!DNL Experience Manager]用戶介面。 介質庫是[!DNL Experience Manager Sites]安裝的一部分，不需要單獨的介面或附加模組。 使用現有介面，媒體庫用戶有權完成下列任務：
 
 * 建立資料夾以組織資產。
 * 上傳資產。
