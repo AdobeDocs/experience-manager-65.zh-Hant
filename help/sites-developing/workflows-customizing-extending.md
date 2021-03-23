@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
-source-wordcount: '3589'
+source-wordcount: '3587'
 ht-degree: 2%
 
 ---
@@ -817,7 +817,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    以下是我們自訂範例步驟的結果：
 
-   ![wf-34](assets/wf-34.png)
+   ![wf-36](assets/wf-34.png)
 
    >[!CAUTION]
    >
@@ -1039,7 +1039,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >
 >傳統的UI模型編輯器對話框仍可與標準的觸控式UI編輯器搭配使用。
 >
->如果您AEM想要將傳統的UI步驟對話方塊升級為標準的UI對話方塊，則有[對話方塊轉換](/help/sites-developing/dialog-conversion.md)工具。 轉換後，某些情況下仍可對對話方塊進行一些手動改進。
+>如果您AEM想要將傳統的UI步驟對話方塊升級為標準的UI對話方塊，則具有[現代化工具](/help/sites-developing/modernization-tools.md)。 轉換後，某些情況下仍可對對話方塊進行一些手動改進。
 >
 >* 如果升級的對話框為空，您可以查看`/libs`中與如何提供解決方案示例功能相似的對話框。 例如：
    >
