@@ -1,6 +1,6 @@
 ---
-title: AEM元件——基本概念
-seo-title: AEM元件——基本概念
+title: 元AEM件——基本功能
+seo-title: 元AEM件——基本功能
 description: 當您開始開發新元件時，您需要瞭解其架構和組態的基本知識
 seo-description: 當您開始開發新元件時，您需要瞭解其架構和組態的基本知識
 uuid: 0225b34d-5ac4-40c3-b226-0c9b24bdf782
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '4974'
 ht-degree: 1%
@@ -19,11 +19,11 @@ ht-degree: 1%
 ---
 
 
-# AEM Components - The Basics{#aem-components-the-basics}
+# AEM元件- The Basics{#aem-components-the-basics}
 
 當您開始開發新元件時，您需要瞭解其結構和組態的基本知識。
 
-此程式包括閱讀理論並檢視標準AEM例項中廣泛的元件實作。 雖然AEM已改用新的標準、現代化、可觸控的UI，但仍持續支援傳統的UI，這讓後一種方式略顯複雜。
+此程式包括閱讀理論並查看標準實例中廣泛的元件實AEM施。 後一種方法略有複雜，因為雖然已AEM改用新的標準、現代化、可觸控的UI，但仍支援傳統的UI。
 
 ## 概覽 {#overview}
 
@@ -37,7 +37,7 @@ ht-degree: 1%
    * 清晰的規格有助於在開發、測試和移交的所有階段。 詳細資訊可能會隨時間而改變，但規範可以更新（儘管更改也應記錄在案）。
 * 您需要從頭開始建立元件，還是可以從現有元件繼承基本功能？
    * 我們不需要重新發明車輪。
-   * AEM提供數種機制，可讓您繼承和延伸其他元件定義的詳細資料，包括覆寫、覆蓋和[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md)。
+   * 有數種機制可AEM讓您繼承和延伸其他元件定義的詳細資料，包括覆寫、覆蓋和[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md)。
 * 您的元件是否需要邏輯來選取／控制內容？
    * 邏輯應與使用者介面層分開。 HTL的設計目的是協助確保這一點。
 * 您的元件是否需要CSS格式？
@@ -51,10 +51,10 @@ ht-degree: 1%
 
 * **觸控式UI**
    [標準使用者](/help/sites-developing/touch-ui-concepts.md) 介面是以Adobe Marketing Cloud的統一使用者體驗為基礎，使用 [Coral ](/help/sites-developing/touch-ui-concepts.md#coral-ui) UI和 [Granite UI的基礎技術](/help/sites-developing/touch-ui-concepts.md#granite-ui)。
-* **以**
-AEM 6.4已淘汰的ExtJS技術為基礎的傳統UIUser介面。
+* **基於**
+ExtJS技術的Classic UIUser介面，AEM6.4已過時。
 
-如需詳細資訊，請參閱[客戶適用的UI介面建議](/help/sites-deploying/ui-recommendations.md)。
+如需詳細資訊，請參閱[客戶適用的UI介面Recommendations](/help/sites-deploying/ui-recommendations.md)。
 
 可實作元件以支援觸控式UI、傳統UI或兩者。 在檢視標準例項時，您也會看到原本專為傳統UI、觸控式UI或兩者設計的現成可用元件。
 
@@ -62,7 +62,7 @@ AEM 6.4已淘汰的ExtJS技術為基礎的傳統UIUser介面。
 
 >[!NOTE]
 >
->Adobe建議運用觸控式UI，以運用最新技術。 [AEM Meduration ](modernization-tools.md) Toolscan讓移轉變得更輕鬆。
+>Adobe建議運用觸控式UI，以受益於最新技術。 [現代化AEM工](modernization-tools.md) 具掃描讓移轉更輕鬆。
 
 ### 內容邏輯與轉換標籤{#content-logic-and-rendering-markup}
 
@@ -72,11 +72,11 @@ AEM 6.4已淘汰的ExtJS技術為基礎的傳統UIUser介面。
 
 ### HTL與JSP {#htl-vs-jsp}
 
-HTL是AEM 6.0中引進的HTML範本語言。
+HTL是6.0中引進的HTML范AEM本語言。
 
-在開發您自己的元件時，有關使用[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)或JSP(Java Server Pages)的討論應該是直接的，因為HTL現在是AEM的建議指令碼語言。
+在開發您自己的元件時，有關使用[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)或JSP(Java Server Pages)的討論應該是直接的，因為HTL現在是建議的指令碼語言AEM。
 
-HTL和JSP都可用來開發傳統和觸控式使用者介面的元件。 雖然有人傾向於假設HTL僅適用於傳統UI的觸控式UI和JSP，但這是誤解，而且更多是因為時間的緣故。 觸控式UI和HTL大約在相同時段內併入AEM。 由於HTL現在是建議的語言，所以會用於新元件，而新元件通常用於觸控式UI。
+HTL和JSP都可用來開發傳統和觸控式使用者介面的元件。 雖然有人傾向於假設HTL僅適用於傳統UI的觸控式UI和JSP，但這是誤解，而且更多是因為時間的緣故。 可觸控的UI和HTL大約在相AEM同時段內整合。 由於HTL現在是建議的語言，所以會用於新元件，而新元件通常用於觸控式UI。
 
 >[!NOTE]
 >
@@ -86,8 +86,8 @@ HTL和JSP都可用來開發傳統和觸控式使用者介面的元件。 雖然�
 
 若要針對適當的UI建立您自己的元件，請參閱（閱讀本頁後）:
 
-* [AEM元件（適用於觸控式UI）](/help/sites-developing/developing-components.md)
-* [Classic UI的AEM元件](/help/sites-developing/developing-components-classic.md)
+* [啟AEM用觸控的UI元件](/help/sites-developing/developing-components.md)
+* [Classic AEM UI的元件](/help/sites-developing/developing-components-classic.md)
 
 快速入門的方法是複製現有元件，然後進行所需的變更。 要瞭解如何建立自己的元件並將其添加到段落系統中，請參閱：
 
@@ -95,11 +95,11 @@ HTL和JSP都可用來開發傳統和觸控式使用者介面的元件。 雖然�
 
 ### 將元件移至發佈例項{#moving-components-to-the-publish-instance}
 
-轉換內容的元件必須部署在與內容相同的AEM例項上。 因此，在作者實例上用於編寫和呈現頁面的所有元件都必須部署在發佈實例上。 部署後，這些元件可用來呈現已啟動的頁面。
+呈現內容的元件必須部署在與內容AEM相同的例項上。 因此，在作者實例上用於編寫和呈現頁面的所有元件都必須部署在發佈實例上。 部署後，這些元件可用來呈現已啟動的頁面。
 
 使用下列工具將元件移至發佈例項：
 
-* [使用Package ](/help/sites-administering/package-manager.md) Manager將元件新增至套件，並將它們移至其他AEM例項。
+* [使用Package ](/help/sites-administering/package-manager.md) Manager將元件新增至封裝，並將其移至其他AEM執行個體。
 * [使用「激活樹」複製工](/help/sites-authoring/publishing-pages.md#manage-publication) 具來複製元件。
 
 >[!NOTE]
@@ -110,20 +110,20 @@ HTL和JSP都可用來開發傳統和觸控式使用者介面的元件。 雖然�
 
 * 頁面:
 
-   * AEM具有&#x200B;*page*&#x200B;元件(`cq:Page`)。
+   * 具AEM有&#x200B;*page*&#x200B;元件(`cq:Page`)。
    * 這是一種對內容管理非常重要的特定資源類型。
       * 頁面對應於保存網站內容的網頁。
 
 * 段落制度：
 
-   * 段落系統是網站管理段落清單時的關鍵部分。 它用於保存和構建保存實際內容的各個元件。
+   * 段落系統是網站管理段落清單的重要部分。 它用於保存和構建保存實際內容的各個元件。
    * 您可以在段落系統中建立、移動、複製和刪除段落。
    * 您也可以選取可在特定段落系統中使用的元件。
    * 標準實例中有各種可用的段落系統（例如`parsys`、` [responsivegrid](/help/sites-authoring/responsive-layout.md)`）。
 
 ## 結構 {#structure}
 
-AEM元件的結構強大而有彈性，主要考量是：
+元件結構AEM強大、靈活，主要考慮：
 
 * 資源類型
 * 元件定義
@@ -148,17 +148,17 @@ AEM元件的結構強大而有彈性，主要考量是：
 
 元件的定義可以按如下方式劃分：
 
-* AEM元件是以[Sling](https://sling.apache.org/documentation.html)為基礎。
-* AEM元件位於（通常）下方：
+* 元AEM件是以[Sling](https://sling.apache.org/documentation.html)為基礎。
+* 元AEM件位於（通常）:
 
-   * HTL:`/libs/wcm/foundation/components`
+   * HTL: `/libs/wcm/foundation/components`
    * JSP:`/libs/foundation/components`
 
 * 專案／網站特定元件（通常）位於：
 
    * `/apps/<myApp>/components`
 
-* AEM標準元件定義為`cq:Component`，並具有關鍵元素：
+* AEM標準元件定義為`cq:Component`，並具有以下關鍵元素：
 
    * jcr屬性：
 
@@ -184,7 +184,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
       * `icon.png` -此元件的表徵圖。
       * `thumbnail.png` -如果此元件列在段落系統中，則顯示的影像。
-   * Touch UI
+   * 觸控式 UI
 
       * 如需詳細資訊，請參閱Touch UI](/help/sites-developing/components-basics.md#component-icon-in-touch-ui)中的[元件圖示一節。
 
@@ -346,7 +346,7 @@ AEM元件的結構強大而有彈性，主要考量是：
   <tr>
    <td><code>cq:templatePath</code></td>
    <td><code>String</code></td>
-   <td>從「元件」瀏覽器或Sidekick新增元件時，節點用作內容範本的路徑。 這必須是絕對路徑，而不是相對於元件節點。<br /> 除非您想要在其他地方重複使用已可使用的內容，否則這並非必要， <code>cq:template</code> 而且已足夠（請參閱下文）。</td>
+   <td>從「元件」瀏覽器或Sidekick新增元件時，節點用作內容範本的路徑。 這必須是絕對路徑，而不是相對於元件節點。<br /> 除非您想要在其他地方重複使用已可用的內容，否則這並非必要， <code>cq:template</code> 而且已足夠（請參閱下文）。</td>
   </tr>
   <tr>
    <td><code>jcr:created</code></td>
@@ -393,7 +393,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
 如果我們查看&#x200B;**Text**&#x200B;元件（任一版本），我們可看到下列元素：
 
-* HTL(`/libs/wcm/foundation/components/text`)
+* HTL ( `/libs/wcm/foundation/components/text`)
 
    ![chlimage_1-241](assets/chlimage_1-241.png)
 
@@ -431,7 +431,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 >[!NOTE]
 >
 >* 為了相容性，啟用觸控的UI可使用傳統UI對話方塊的定義，但尚未為啟用觸控的UI定義對話方塊。
->* [對話轉換工具](/help/sites-developing/dialog-conversion.md)也可協助您擴充／轉換僅為傳統UI定義對話方塊的元件。
+>* [現代化工AEM具](/help/sites-developing/modernization-tools.md)也可協助您擴充／轉換僅為傳統UI定義對話方塊的元件。
 
 >
 
@@ -527,7 +527,7 @@ AEM元件的結構強大而有彈性，主要考量是：
 
 ## 元件層次和繼承{#component-hierarchy-and-inheritance}
 
-AEM中的元件受3個不同階層的規範：
+內部的元AEM件受3種不同階層的規範：
 
 * **資源類型層次**
 
@@ -601,11 +601,11 @@ AEM中的元件受3個不同階層的規範：
 
 儲存庫中有許多現有配置。 您可以輕鬆搜尋特定屬性或子節點：
 
-* 要查找`cq:editConfig`節點的屬性，例如：`cq:actions`，您可在&#x200B;**CRXDE Lite**&#x200B;中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
+* 要查找`cq:editConfig`節點的屬性，例如：`cq:actions`，您可以在&#x200B;**CRXDE Lite**&#x200B;中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
 
    `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 要查找`cq:editConfig`的子節點，例如，可以搜索`cq:dropTargets`，該`cq:DropTargetConfig`類型；您可以在** CRXDE Lite**中使用查詢工具，並使用下列XPath查詢字串進行搜尋：
+* 要查找`cq:editConfig`的子節點，例如，可以搜索`cq:dropTargets`，該`cq:DropTargetConfig`類型；您可以在**CRXDE Lite**中使用查詢工具，並使用以下XPath查詢字串進行搜索：
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
 
@@ -1014,7 +1014,7 @@ AEM中的元件受3個不同階層的規範：
   </tr>
   <tr>
    <td><code>afterchildinsert</code></td>
-   <td>在將元件插入其他元件（僅限容器）後，就會觸發處理常式。</td>
+   <td>在將元件插入另一個元件（僅限容器）後，就會觸發處理常式。</td>
    <td> </td>
   </tr>
  </tbody>
