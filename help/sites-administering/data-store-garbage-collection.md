@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 大部分情況下，WCM應用程式會收集資訊，但刪除資訊的頻率卻差不多。 雖然會新增新影像，甚至取代舊版，但版本控制系統仍會保留舊版影像，並支援視需要回復。 因此，我們認為添加到系統中的大部分內容都被有效永久儲存。 那麼，我們可能要清理的儲存庫中「垃圾」的典型來源是什麼？
 
-AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
+將AEM儲存庫用作儲存，用於許多內部和內部活動：
 
 * 建立和下載的套件
 * 為發佈複製建立的臨時檔案
@@ -61,16 +61,16 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 
 ## 運行Data Store Garbage Collection {#running-data-store-garbage-collection}
 
-根據執行AEM的資料存放區設定，執行資料存放區廢棄項目收集有三種方式：
+根據執行的資料存放區設定，有三種執行資料存放區廢棄項目收集的AEM方式：
 
-1. 通過[Revision Cleanup](/help/sites-deploying/revision-cleanup.md) —— 通常用於節點儲存清理的廢棄項目收集機制。
+1. 通過[修訂清除](/help/sites-deploying/revision-cleanup.md) —— 通常用於節點儲存清理的廢棄項目收集機制。
 
 1. 透過[Data Store Garbage Collection](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard) —— 可在「作業控制面板」上使用的針對外部資料存放區的廢棄項目收集機制。
 1. 通過[JMX控制台](/help/sites-administering/jmx-console.md)。
 
 如果TarMK同時用作節點儲存和資料儲存，則「修訂清除」可用於對節點儲存和資料儲存進行垃圾回收。 但是，如果已設定外部資料存放區（例如檔案系統資料存放區），則資料存放區廢棄項目收集必須與「修訂清除」分開明確觸發。 資料存放區廢棄項目收集可透過「作業控制面板」或JMX主控台觸發。
 
-下表顯示AEM 6中所有支援的資料存放區部署所需使用的資料存放區廢棄項目收集類型：
+下表顯示資料存放區廢棄項目收集類型，此類型需用於6中所有支援的資料存放區部署AEM:
 
 <table>
  <tbody>
@@ -125,7 +125,7 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 
 >[!NOTE]
 >
->只有在您已設定外部檔案資料存放區時，才會顯示「資料存放區廢棄項目收集」工作。 如需如何設定檔案資料儲存區的詳細資訊，請參閱「設定AEM 6[的節點儲存區與資料儲存區」。](/help/sites-deploying/data-store-config.md#file-data-store)
+>只有在您已設定外部檔案資料存放區時，才會顯示「資料存放區廢棄項目收集」工作。 有關如何設定檔案資料儲存的資訊，請參見[在AEM6](/help/sites-deploying/data-store-config.md#file-data-store)中配置節點儲存和資料儲存。
 
 ### 透過JMX主控台{#running-data-store-garbage-collection-via-the-jmx-console}執行Data Store Garbage Collection
 
@@ -154,7 +154,7 @@ AEM會將儲存庫當做許多內部和內部管理活動的儲存空間：
 
 >[!NOTE]
 >
->只有在您配置了外部檔案資料儲存時，才會啟動資料儲存廢棄項目收集任務。 如果尚未配置外部檔案資料儲存，則任務將在調用後返回消息`Cannot perform operation: no service of type BlobGCMBean found`。 如需如何設定檔案資料儲存區的詳細資訊，請參閱「設定AEM 6[的節點儲存區與資料儲存區」。](/help/sites-deploying/data-store-config.md#file-data-store)
+>只有在您已設定外部檔案資料儲存時，資料儲存廢棄項目收集工作才會啟動。 如果尚未配置外部檔案資料儲存，則任務將在調用後返回消息`Cannot perform operation: no service of type BlobGCMBean found`。 有關如何設定檔案資料儲存的資訊，請參見[在AEM6](/help/sites-deploying/data-store-config.md#file-data-store)中配置節點儲存和資料儲存。
 
 ## 自動化資料存放區廢棄項目收集{#automating-data-store-garbage-collection}
 
