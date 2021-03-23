@@ -1,8 +1,8 @@
 ---
-title: 開發AEM元件
-seo-title: 開發AEM元件
-description: AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
-seo-description: AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
+title: 開發元AEM件
+seo-title: 開發元AEM件
+description: 元AEM件可用來封存、格式化和轉譯網頁上提供的內容。
+seo-description: 元AEM件可用來封存、格式化和轉譯網頁上提供的內容。
 uuid: 1f39daa6-7277-45a2-adcc-74b58c93b8e4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '3533'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 # 開發AEM元件{#developing-aem-components}
 
-AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
+元AEM件可用來封存、格式化和轉譯網頁上提供的內容。
 
 * 當[編寫頁面](/help/sites-authoring/default-components.md)時，元件可讓作者編輯和設定內容。
 
@@ -36,7 +36,7 @@ AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
 
 >[!NOTE]
 >
->本頁是檔案[AEM元件- The Basics](/help/sites-developing/components-basics.md)的延續。
+>本頁是文檔[「元件AEM- The Basics](/help/sites-developing/components-basics.md)的繼續。
 
 >[!CAUTION]
 >
@@ -44,11 +44,11 @@ AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
 
 ## 程式碼範例 {#code-samples}
 
-本頁提供開發AEM新元件所需的參考檔案（或參考檔案的連結）。 如需實用範例，請參閱[開發AEM元件——程式碼範例](/help/sites-developing/developing-components-samples.md)。
+本頁提供開發新元件所需的參考檔案（或參考檔案的連結）AEM。 如需一些實用範例，請參AEM閱[開發元件——程式碼範例](/help/sites-developing/developing-components-samples.md)。
 
 ## 結構 {#structure}
 
-元件的基本結構已在[AEM元件- The Basics](/help/sites-developing/components-basics.md#structure)頁面中介紹。 該檔案同時涵蓋觸控式和傳統UI。 即使您不需要在新元件中使用傳統設定，在繼承現有元件時也可以注意這些設定。
+元件的基本結構在[「元件——基本AEM知識」頁](/help/sites-developing/components-basics.md#structure)中介紹。 該檔案同時涵蓋觸控式和傳統UI。 即使您不需要在新元件中使用傳統設定，在繼承現有元件時也可以注意這些設定。
 
 ## 擴展現有元件和對話框{#extending-existing-components-and-dialogs}
 
@@ -66,7 +66,7 @@ AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
 
 >[!NOTE]
 >
->[內容片段元件](/help/sites-developing/customizing-content-fragments.md)也可以自訂和擴充，不過必須考慮完整結構以及與資產的關係。
+>[內容片段元件](/help/sites-developing/customizing-content-fragments.md)也可以自訂和擴充，不過必須考慮完整結構以及與Assets的關係。
 
 ### 自定義現有元件對話框{#customizing-a-existing-component-dialog}
 
@@ -82,11 +82,11 @@ AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
 
 ### 使用HTML範本語言{#using-the-html-template-language}
 
-隨AEM 6.0推出的[HTML範本語言(HTL)](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)取代JSP(JavaServer Pages)，成為HTML的偏好和建議的伺服器端範本系統。 對於需要建立強穩企業網站的網頁開發人員，HTL有助於提高安全性和開發效率。
+隨6.0推出的[HTML範本語言(HTL)](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)取代JSP(JavaServer Pages)，成為HTML偏好且建議的伺服器端範本系統。 對於需要建立強穩企業網站的網頁開發人員，HTL有助於提高安全性和開發效率。
 
 >[!NOTE]
 >
->雖然HTL和JSP都可用來開發元件，但我們將在本頁上使用HTL來說明開發，因為它是AEM的建議指令碼語言。
+>雖然HTL和JSP都可用來開發元件，但本頁將使用HTL來說明開發，因為它是建議的指令碼語言AEM。
 
 ## 開發內容邏輯{#developing-the-content-logic}
 
@@ -106,7 +106,7 @@ AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
 
 現代網站嚴重依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。
 
-為協助處理此問題，AEM提供&#x200B;**用戶端程式庫資料夾**，讓您將用戶端程式碼儲存在儲存庫中，將它組織成類別，並定義將每類程式碼提供給用戶端的時機和方式。 然後用戶端程式庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。
+為幫助解決此問題，AEM提供了&#x200B;**客戶端庫資料夾**，允許您將客戶端代碼儲存在儲存庫中，將其組織到類別中，並定義將每類代碼提供給客戶端的時間和方式。 然後用戶端程式庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。
 
 如需詳細資訊，請參閱[使用用戶端HTML程式庫](/help/sites-developing/clientlibs.md)。
 
@@ -132,24 +132,24 @@ AEM元件可用來封存、格式化和轉譯網頁上提供的內容。
 
 ### Coral UI和Granite UI {#coral-ui-and-granite-ui}
 
-[Coral ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) UI和 [Granite ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) UI定義了AEM的現代外觀和感覺。
+[Coral ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) UI和 [Granite ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) UI定義了現代的外觀和感AEM覺。
 
 [Granite UI提供在製作環境中建立對話方塊](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) 所需的大量基本元件(Widget)。如有需要，您可以延伸此選項，並[建立您自己的Widget](#creatinganewwidget)。
 
-有關使用Coral和Granite資源類型開發元件的詳細資訊，請參閱：[使用Coral/Granite資源類型](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)建立Experience Manager元件。
+有關使用Coral和Granite資源類型開發元件的詳細資訊，請參閱：[使用珊瑚／花崗岩資源類型建立Experience Manager元件](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)。
 
 如需完整詳細資訊，請參閱：
 
 * Coral UI
 
    * 在所有雲端解決方案中提供一致的UI
-   * [AEM Touch-Enabled UI - Coral UI的概念](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Coral UI指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
+   * [觸控式AEMUI的概念- Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+   * [Coral UI 指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 
 * Granite UI
 
    * 提供包裝在Sling元件中的Coral UI標籤，以建立UI主控台和對話方塊
-   * [AEM Touch-Enabled UI - Granite UI的概念](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+   * [Touch-Enabled UIAEM的概念- Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
    * [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
 >[!NOTE]
@@ -193,7 +193,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->如果元件沒有為觸控式UI定義對話方塊，則傳統UI對話方塊會當做相容層內的備援。 若要自訂此種對話方塊，您必須自訂傳統UI對話方塊。 請參閱Classic UI](/help/sites-developing/developing-components-classic.md)的[AEM元件。
+>如果元件沒有為觸控式UI定義對話方塊，則傳統UI對話方塊會當做相容層內的備援。 若要自訂此種對話方塊，您必須自訂傳統UI對話方塊。 請參閱Classic UIAEM的[元件](/help/sites-developing/developing-components-classic.md)。
 
 ### 自定義對話框欄位{#customizing-dialog-fields}
 
@@ -201,7 +201,7 @@ newComponent (cq:Component)
 >
 >請參閱：
 >
->* [自訂對話欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)上的AEM Gems工作階段。
+>* &lt;a0/AEM>自定義對話框欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)上的Gems會話。[
 >* [程式碼範例——如何自訂對話欄位](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)中涵蓋的相關范常式式碼。
 
 >
@@ -350,7 +350,7 @@ newComponent (cq:Component)
 
 如果您的新元件參考其他頁面的內容，則您可以考慮是否要影響&#x200B;[**參考**](/help/sites-authoring/basic-handling.md#references)&#x200B;導軌的&#x200B;**借閱內容**&#x200B;和&#x200B;**借閱內容**&#x200B;區段。
 
-現成可用的AEM只會檢查Reference元件。 若要新增元件，您必須設定OSGi Bundle **WCM Authoring Content Reference Configuration**。
+出廠設定僅檢AEM查Reference元件。 若要新增元件，您必須設定OSGi Bundle **WCM Authoring Content Reference Configuration**。
 
 在定義中建立新條目，指定元件以及要檢查的屬性。 例如：
 
@@ -358,7 +358,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->使用AEM時，有數種方法可管理此類服務的組態設定。 如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+>使用時，有AEM幾種方法可管理此類服務的配置設定。 如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 ## 啟用元件並將其添加到段落系統{#enabling-and-adding-your-component-to-the-paragraph-system}
 
@@ -371,7 +371,7 @@ newComponent (cq:Component)
 
 ## 配置段落系統，以便拖動資產可建立元件實例{#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance}
 
-AEM提供在您的頁面上設定段落系統的可能性，當使用者將（適當）資產拖曳至該頁面的例項上時，就會自動建立新元件的[例項（而不必總是拖曳空白元件至頁面）。](/help/sites-authoring/editing-content.md#insertingacomponenttouchoptimizedui)
+提供AEM在頁面上設定段落系統的可能性，以便當使用者將（適當）資產拖曳至該頁面的例項上時，自動建立新元件的[例項（而不必總是拖曳空元件至頁面）。](/help/sites-authoring/editing-content.md#insertingacomponenttouchoptimizedui)
 
 此行為，以及必要的資產對元件關係可以設定：
 
@@ -440,18 +440,18 @@ GITHUB代碼
 >
 >現在，當使用[核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)和可編輯範本時，可輕鬆在UI中設定元件例項的自動建立。 有關定義哪些元件自動與給定介質類型關聯的詳細資訊，請參閱[建立頁面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)。
 
-## 使用AEM Brackets Extension {#using-the-aem-brackets-extension}
+## 使用AEM括弧延伸{#using-the-aem-brackets-extension}
 
-[AEM Brackets Extension](/help/sites-developing/aem-brackets.md)提供了編輯AEM元件和用戶端程式庫的順暢工作流程。 它以[Brackets](https://brackets.io/)程式碼編輯器為基礎。
+[Brackets ExtensionAEM](/help/sites-developing/aem-brackets.md)提供了編輯元件和用戶端程式庫的順暢AEM工作流程。 它以[Brackets](https://brackets.io/)程式碼編輯器為基礎。
 
 擴充功能：
 
-* 簡化同步（不需Maven或File Vault），以協助提高開發人員的效率，並協助具備有限AEM知識的前端開發人員參與專案。
+* 簡化同步（不需要Maven或File Vault），以協助提高開發人員的效率，並協助知識有限的前AEM端開發人員參與專案。
 * 提供部分[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)支援，此範本語言旨在簡化元件開發並提高安全性。
 
 >[!NOTE]
 >
->Brackets是建立元件的建議機制。 它取代了專為傳統UI所設計的CRXDE Lite —— 建立元件功能。
+>Brackets是建立元件的建議機制。 它會取代專為傳統UI所設計的CRXDE Lite-建立元件功能。
 
 ## 從傳統元件{#migrating-from-a-classic-component}遷移
 
@@ -470,11 +470,11 @@ GITHUB代碼
 * 對話方塊
 
    * 您將需要建立新對話方塊，以便在觸控式UI中使用。 不過，為了相容性，當未為觸控式UI定義對話方塊時，觸控式UI可以使用傳統UI對話方塊的定義。
-   * [對話轉換工具](/help/sites-developing/dialog-conversion.md)可協助您擴充現有元件。
+   * [現代化工AEM具](/help/sites-developing/modernization-tools.md)可協助您擴充現有元件。
    * [將ExtJS對應至Granite UI元](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) 件可方便地概述ExtJS xtypes和節點類型及其等效的Granite UI資源類型。
-   * 自訂欄位，如需詳細資訊，請參閱[自訂對話方塊欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)上的AEM Gems工作階段。
+   * 自定義欄位，有關詳細資訊，請參AEM閱[自定義對話框欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)上的Gems會話。
    * 從vtypes移轉至[Granite UI驗證](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
-   * 使用JS監聽器，如需詳細資訊，請參閱[處理欄位事件](#handling-field-events)和[自訂對話欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)上的AEM Gems工作階段。
+   * 使用JS監聽器，有關詳細資訊，請參閱[處理欄位事件](#handling-field-events)和[自AEM訂對話框欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)上的Gems會話。
 
 ### 移轉cq：監聽程式碼{#migrating-cq-listener-code}
 
