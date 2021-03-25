@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 543f59a82e869e7d004d994014e0bd586b013b02
+source-git-commit: 6f4cbacb89a891ea8193ca2f495aba353bea6b1a
 workflow-type: tm+mt
-source-wordcount: '6133'
+source-wordcount: '6154'
 ht-degree: 5%
 
 ---
@@ -518,7 +518,7 @@ Adobe建議對PDF、PostScript®和PSD檔案使用下列「已調整」的工作
 
 <!-- CQDOC-17657 for PSD entry in table above -->
 
-<!-- To update any of these parameters, follow the steps in [Enabling MIME type-based Assets/Dynamic Media Classic upload job parameter support](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support). -->
+要更新這些參數，請遵循[啟用基於MIME類型的資產/Dynamic Media經典上傳作業參數支援](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)中的步驟。
 
 #### 更新Granite瞬態工作流隊列{#updating-the-granite-transient-workflow-queue}
 
