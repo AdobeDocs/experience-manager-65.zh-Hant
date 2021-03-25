@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: ef975961ddcd6910b5fba2dea7e9302921f45055
+source-git-commit: d700510efb340598a7931647164e22d574884569
 workflow-type: tm+mt
-source-wordcount: '5511'
+source-wordcount: '5517'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 AdobeDynamic Media經典是一套代管解決方案，用於管理、增強、發佈和提供多媒體資產至網路、行動裝置、電子郵件和網際網路連線的顯示器與印刷品。
 
-若要使用Dynamic Media經典，您必須設定雲端組態，讓Dynamic Media經典與Adobe Experience Manager資產能夠彼此互動。 本檔案說明如何設定Experience Manager和Dynamic Media經典。
+若要使用Dynamic Media經典，您必須設定雲端組態，讓Dynamic Media經典與Adobe Experience Manager資產可以互動。 本檔案說明如何設定Experience Manager和Dynamic Media經典。
 
 有關使用頁面上所有的Dynamic Media經典元件和使用視頻的資訊，請參見[使用Dynamic Media經典](../assets/scene7.md)。
 
@@ -351,7 +351,7 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以測
 
 啟用Adobe CQDynamic Media經典Dam偵聽器，預設禁用該偵聽器。
 
-若要啟用它：
+要啟用Adobe CQDynamic Media經典Dam偵聽器：
 
 1. 點選[!UICONTROL 工具]圖示，然後導覽至&#x200B;**[!UICONTROL 作業> Web Console]**。 Web控制台隨即開啟。
 1. 導航至&#x200B;**[!UICONTROL Adobe CQDynamic Media傳統Dam監聽器]**&#x200B;並選擇&#x200B;**[!UICONTROL 啟用]**&#x200B;複選框。
