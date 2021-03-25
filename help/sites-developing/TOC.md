@@ -10,10 +10,10 @@ feature-set: Experience Manager Sites
 feature: 開發
 role: 開發人員
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 242858109bc381d005c239786a8837b3e64fbb27
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 15%
+source-wordcount: '920'
+ht-degree: 14%
 
 ---
 
@@ -120,6 +120,9 @@ ht-degree: 15%
       + [模SPA型路由](spa-routing.md)
       + [與SPAAdobe Experience Platform Launch整合](spa-launch.md)
       + [和SPA伺服器端演算](spa-ssr.md)
+      + [RemotePage元件](spa-remote-page.md)
+      + [在中編SPA輯外AEM部](spa-edit-external.md)
+      + [複合元SPA件](spa-composite-component.md)
       + [參SPA考資料](spa-reference-materials.md)
    + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
    + [內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
