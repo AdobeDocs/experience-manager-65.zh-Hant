@@ -1,24 +1,24 @@
 ---
 title: 設定搜尋表單
-description: 瞭解如何設定搜尋表單。
+description: 瞭解如何設定搜尋Forms。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 19faa273908e67a744e52d173a5352f0a52f7345
+source-git-commit: b7be1ff0e842794511ffeb4fed60eed60796b4ff
 workflow-type: tm+mt
-source-wordcount: '2060'
-ht-degree: 12%
+source-wordcount: '2042'
+ht-degree: 11%
 
 ---
 
 
 # 設定搜尋表單{#configuring-search-forms}
 
-使用&#x200B;**Search Forms**&#x200B;自訂在各種AEM控制台和／或作者環境面板中可用的搜尋面板中使用的搜尋謂語選擇。 自訂這些面板可讓搜尋功能根據您的特定需求而變得多功能。
+使用&#x200B;**搜尋Forms**&#x200B;來自訂在作者環境的各種控制台和／或面板中可用的搜尋面板中所使用AEM的搜尋謂語選擇。 自訂這些面板可讓搜尋功能根據您的特定需求而變得多功能。
 
-[predicate](#predicates-and-their-settings)s的範圍是可用的出廠設定。 您可以新增多個謂語，包括（其中包括）全文搜尋的Fulltext謂語、搜尋符合您所指定單一屬性的資產的Property謂語，或搜尋符合您為特定屬性指定之一或多個值的資產的Options謂語。
+[predicate](#predicates-and-their-settings)s的範圍是可用的出廠設定。 您可以新增多個謂語，包括（其中包括）「屬性謂語」以搜尋符合您指定之單一屬性的資產，或「選項謂語」以搜尋符合您為特定屬性指定之一或多個值的資產。
 
 您可以[設定在各種控制台和資產瀏覽器（編輯頁面時）中使用的搜尋表單](#configuring-your-search-forms)。 可通過以下方式訪問用於配置這些表單的[對話框：](#configuring-your-search-forms)
 
@@ -60,9 +60,9 @@ ht-degree: 12%
 
    此設定會定義在資產瀏覽器中搜尋產品時（在編輯頁面時）可用的選項。
 
-* **頁面編輯器(Dynamic Media Classic [先前稱為Scene7] 搜尋)**:
+* **頁面編輯器(Dynamic Media經典網 [站，前身] 為Scene7)**:
 
-   此設定會定義在資產瀏覽器中搜尋Scene7資源時（在編輯頁面時）可用的選項。
+   此設定定義在資產瀏覽器（編輯頁面時）中搜尋Scene7資源時可用的選項。
 
 * **網站管理搜尋邊欄**:
 
@@ -176,17 +176,6 @@ ht-degree: 12%
      <li>欄位標籤</li>
      <li>屬性名稱*</li>
      <li>選項路徑</li>
-     <li>說明</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>全文 </td>
-   <td>Search predicate for full-text searches.</td>
-   <td>
-    <ul>
-     <li>欄位標籤</li>
-     <li>預留位置</li>
-     <li>屬性名稱</li>
      <li>說明</li>
     </ul> </td>
   </tr>
@@ -410,11 +399,11 @@ Dependent on the predicate a selection of settings are available for configurati
 
 * &amp;ast;在&#x200B;**Settings**&#x200B;標籤中的欄位標籤上，表示欄位為必填，若留空，則會顯示錯誤訊息
 
-## 配置搜索表單{#configuring-your-search-forms}
+## 配置搜索Forms{#configuring-your-search-forms}
 
 ### 建立／開啟自定義配置{#creating-opening-a-customized-configuration}
 
-1. 導覽至「**工具**、**一般**、**搜尋表單**」。
+1. 導覽至「**工具**、**一般**、**搜尋Forms**」。
 
 1. 選擇要定製的配置。
 1. 使用&#x200B;**Edit**&#x200B;表徵圖開啟要更新的配置。
@@ -449,7 +438,7 @@ Dependent on the predicate a selection of settings are available for configurati
       選擇謂詞欄位（在右側），然後開啟&#x200B;**Settings**&#x200B;頁籤。
    例如，**日期範圍謂詞**&#x200B;的設定：
 
-   ![chlimage_1-376](assets/chlimage_1-376.png)
+   ![chlimage_1-375](assets/chlimage_1-376.png)
 
 1. 視需要進行變更，並使用&#x200B;**Done**&#x200B;確認。
 
@@ -522,7 +511,7 @@ Dependent on the predicate a selection of settings are available for configurati
    >1. 在`/apps.`中進行任何更改
 
 
-1. 開啟&#x200B;**搜尋表單**&#x200B;主控台，並選取您要更新的組態。 例如，**網站管理搜尋邊欄**。
+1. 開啟&#x200B;**搜尋Forms**&#x200B;主控台，並選取您要更新的組態。 例如，**網站管理搜尋邊欄**。
 
    然後按一下／點選&#x200B;**編輯搜尋表單**&#x200B;圖示。
 
@@ -567,7 +556,7 @@ Dependent on the predicate a selection of settings are available for configurati
   </tr>
   <tr>
    <td>預覽</td>
-   <td>對<code>/var/dam/content</code>節點執行讀取、寫入、刪除權限。<br /> 讀取、寫入節點 <code>/apps</code> 權限。</td>
+   <td>對<code>/var/dam/content</code>節點執行讀取、寫入、刪除權限。<br /> 讀取、寫入節點的 <code>/apps</code> 權限。</td>
   </tr>
  </tbody>
 </table>
