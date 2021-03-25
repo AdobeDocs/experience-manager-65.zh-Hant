@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: 搜尋，中繼資料
 role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: fd283b840830bef613689f81cf753e226fb834d7
 workflow-type: tm+mt
-source-wordcount: '5720'
+source-wordcount: '5577'
 ht-degree: 5%
 
 ---
@@ -20,15 +20,15 @@ ht-degree: 5%
 
 [!DNL Experience Manager Assets] 支援下列使用案例，而本文則說明這些使用案例的使用、概念、設定、限制和疑難排解。
 
-| 搜尋資產 | 配置和管理 | 使用搜尋結果 |
+| 搜尋資產 | 配置和管理搜索功能 | 使用搜尋結果 |
 |---|---|---|
 | [基本搜尋](#searchbasics) | [搜尋索引](#searchindex) | [排序結果](#sort) |
 | [瞭解搜尋UI](#searchui) | [視覺化或相似性搜尋](#configvisualsearch) | [檢查資產的屬性和中繼資料](#checkinfo) |
 | [搜尋建議](#searchsuggestions) | [必備中繼資料](#mandatorymetadata) | [下載](#download) |
 | [瞭解搜尋結果和行為](#searchbehavior) | [修改搜尋刻面](#searchfacets) | [大量中繼資料更新](#metadataupdates) |
 | [搜尋排名與提升](#searchrank) | [文字擷取](#extracttextupload) | [智慧型系列](#collections) |
-| [進階搜尋：篩選和搜尋範圍](#scope) | [自訂謂語](#custompredicates) | [瞭解並疑難排解意外結果](#unexpectedresults) |
-| [從其他解決方案和應用程式搜尋](#beyondomnisearch):<ul><li>[Adobe資產連結](#aal)</li><li>[品牌入口網站](#brandportal)</li><li>[Experience Manager案頭應用程式](#desktopapp)</li><li>[Adobe Stock影像](#adobestock)</li><li>[Dynamic Media資產](#dynamicmedia)</li></ul> |  |  |
+| [進階搜尋：篩選和搜尋範圍](#scope) | [自訂謂語](#custompredicates) | [瞭解並疑難排解意外結果](#unexpected-results) |
+| [從其他解決方案和應用程式搜尋](#search-assets-other-surfaces):<ul><li>[Adobe資產連結](#aal)</li><li>[品牌入口網站](#brand-portal)</li><li>[Experience Manager案頭應用程式](#desktop-app)</li><li>[Adobe Stock影像](#adobe-stock)</li><li>[Dynamic Media資產](#dynamic-media)</li></ul> |  |  |
 | [資產選擇器](#assetpicker) |  |  |
 | [限](#limitations) 制和提 [示](#tips) |  |  |
 | [圖示範例](#samples) |  |  |
@@ -69,11 +69,11 @@ ht-degree: 5%
 
 當結果為許多資產時，[!DNL Experience Manager]會在卡片檢視中顯示前100個，在清單檢視中顯示200個。 當使用者捲動時，會載入更多資產。 這是為了改善效能。 觀看顯示[資產數目](https://www.youtube.com/watch?v=LcrGPDLDf4o)的影片展示。
 
-有時候，您會在搜尋結果中看到一些非預期的資產。 如需詳細資訊，請參閱[未預期的結果](#troubleshoot-unexpected-search-results-and-issues)。
+有時候，您會在搜尋結果中看到一些非預期的資產。 如需詳細資訊，請參閱[未預期的結果](#unexpected-results)。
 
 [!DNL Experience Manager] 可搜尋許多檔案格式，而且可自訂搜尋篩選器以符合您的業務需求。請連絡您的管理員，瞭解您的DAM儲存庫有哪些搜尋選項，以及您的帳戶有哪些限制。
 
-### 使用和不使用增強的智慧型標籤{#withsmarttags}產生結果
+### 使用和不使用增強的智慧型標籤的結果{#withsmarttags}
 
 依預設，[!DNL Experience Manager]搜尋會將搜尋詞與AND子句結合。 例如，請考慮搜尋正在執行的關鍵字女性。 預設情況下，只有中繼資料中同時包含女性和執行關鍵字的資產才會出現在搜尋結果中。 當特殊字元（句號、底線或破折號）與關鍵字搭配使用時，會保留相同的行為。 下列搜尋查詢會傳回相同的結果：
 
@@ -82,11 +82,11 @@ ht-degree: 5%
 * `woman-running`
 
 不過，查詢`woman -running`會傳回元資料中不含`running`的資產。
-使用智慧型標籤會新增額外的`OR`子句，以尋找任何搜尋詞作為套用的智慧型標籤。 使用智慧標籤以`woman`或`running`標籤的資產也會出現在此類搜尋查詢中。 所以搜索結果是，
+使用智慧型標籤會新增額外的`OR`子句，以尋找任何搜尋詞作為套用的智慧型標籤。 使用「智慧標籤」以`woman`或`running`標籤的資產也會出現在此類搜尋查詢中。 所以搜索結果是，
 
 * 中繼資料中具有`woman`和`running`關鍵字的資產（預設行為）。
 
-* 使用其中一個關鍵字標籤智慧資產（智慧標籤行為）。
+* 使用任一關鍵字（智慧標籤行為）標籤智慧資產。
 
 ### 鍵入{#searchsuggestions}時搜尋建議
 
@@ -144,7 +144,7 @@ ht-degree: 5%
 
 *圖：使用卡片檢視中的選項尋找類似的影像。*
 
-### Adobe Stock影像{#adobestock}
+### Adobe Stock影像{#adobe-stock}
 
 在[!DNL Experience Manager]使用者介面中，使用者可搜尋[Adobe Stock資產](/help/assets/aem-assets-adobe-stock.md)並授權所需資產。 在Omnisearch列中新增`Location: Adobe Stock`。 您也可以使用「篩選」面板來尋找所有授權或未授權的資產，或使用Adobe Stock檔案號碼搜尋特定資產。
 
@@ -152,35 +152,38 @@ ht-degree: 5%
 
 您可以從&#x200B;**[!UICONTROL 「篩選器」]**&#x200B;面板中選取&#x200B;**[!UICONTROL 「動態媒體」]**>**[!UICONTROL 「集合」]**，以篩選動態媒體影像。這樣可以篩選並顯示影像集、旋轉木馬、混合媒體集和迴轉集等資產。
 
-### 在中繼資料欄位{#gqlsearch}中使用特定值進行搜尋
+### 在元資料欄位{#gql-search}中使用特定值進行GQL搜索
 
-您可以根據特定中繼資料欄位的精確值來搜尋資產，例如標題、說明和作者。 GQL全文搜索功能僅提取那些元資料值與搜索查詢完全匹配的資產。 屬性的名稱（例如作者、標題等）和值會區分大小寫。
+您可以根據中繼資料欄位的確切值來搜尋資產，例如標題、說明和製作程式。 GQL全文搜索功能僅提取那些元資料值與搜索查詢完全匹配的資產。 屬性的名稱（建立者、標題等）和值區分大小寫。
 
 | 中繼資料欄位 | Facet值與使用 |
-| ----------------------------------------- | --------------------------------------- |
-| 標題 | `title:John` |
-| 產生器 | `creator:John` |
-| 位置 | `location:NA` |
-| 說明 | `description:"Sample Image"` |
-| 製作工具 | `creatortool:"Adobe Photoshop CC 2020"` |
-| 版權擁有者 | `copyrightowner:"Adobe Systems"` |
-| 參與者 | `contributor:John` |
-| 使用條款 | `usageterms:"CopyRights Reserved"` |
-| 建立日期 | `created`:YYYY-MM-DDTHH |
-| 到期日 | `expires`:YYYY-MM-DDTHH |
-| 準時 | `ontime`:YYYY-MM-DDTHH |
-| 關閉時間 | `offtime`:YYYY-MM-DDTHH |
-| 時間範圍（過期的dateontime,offtime） | `facet field`:下限……上界 |
+|---|---|
+| 標題 | 標題：John |
+| 產生器 | 建立者：John |
+| 位置 | 位置： NA |
+| 說明 | 說明：「範例影像」 |
+| 製作工具 | 創作工具：「Adobe Photoshop CC2015」 |
+| 版權擁有者 | 版權人：「Adobe Systems」 |
+| 參與者 | 投稿人：John |
+| 使用條款 | 使用條款：「保留CopyRights」 |
+| 建立日期 | 已建立：YYYY-MM-DDTHH |
+| 到期日 | 過期：YYYY-MM-DDTHH |
+| 準時 | ontime:YYYY-MM-DDTHH |
+| 關閉時間 | offtime:YYYY-MM-DDTHH |
+| 時間範圍（過期的dateontime,offtime） | facet欄位：下限……上界 |
 | 路徑 | /content/dam/&lt;資料夾名稱> |
-| PDF 標題 | `pdftitle`:&quot;Adobe檔案&quot; |
-| 主旨 | `subject:"Training"` |
-| 標記 | `tags:"Location And Travel"` |
-| 類型 | `type:"image\png"` |
-| 影像寬度 | `width`：下界……上界 |
-| 影像高度 | `height`：下界……上界 |
-| 人員 | `person:John` |
+| PDF 標題 | pdftitle:&quot;Adobe檔案&quot; |
+| 主旨 | 主旨：「訓練」 |
+| 標記 | 標籤：「位置與旅行」 |
+| 類型 | 類型：&quot;image\png&quot; |
+| 影像寬度 | width:lowberbound..上界 |
+| 影像高度 | 高度：下限。上界 |
+| 人員 | 人：John |
 
 屬性`path`、`limit`、`size`和`orderby`無法與任何其他屬性搭配使用。`OR`
+
+<!-- TBD: Where are the limit, size, orderby properties defined?
+-->
 
 使用者產生屬性的關鍵字是屬性編輯器中的小寫欄位標籤，並移除空格。
 
@@ -194,31 +197,31 @@ ht-degree: 5%
 * 若要顯示包含特定字串的屬性值的資產(例如：標題=巴塞爾會議室):`title:*Meeting*`
 * 若要顯示包含特定字串且具有特定屬性值的資產(例如：在具有title=John Doe的資產中搜尋字串Adobe):`*Adobe* title:"John Doe"`
 
-## 從其他[!DNL Experience Manager]產品或介面{#beyondomnisearch}搜索資產
+## 從其他[!DNL Experience Manager]產品或介面{#search-assets-other-surfaces}搜索資產
 
 [!DNL Adobe Experience Manager] 將DAM儲存庫連接至各種其他解 [!DNL Experience Manager] 決方案，讓您更快速地存取數位資產並簡化創意工作流程。任何資產搜尋都從瀏覽或搜尋開始。 在不同的曲面和解決方案上，搜索行為基本保持不變。 有些搜尋方法會隨著目標對象、使用案例和使用者介面而變更，而且各個[!DNL Experience Manager]解決方案的使用者介面也會有所不同。 以下連結說明個別解決方案的特定方法。 本文將說明普遍適用的提示和行為。
 
 ### 從「Adobe資產連結」面板{#aal}搜尋資產
 
-使用Adobe資產連結，創意專業人員現在可以存取儲存在[!DNL Experience Manager Assets]中的內容，毋需離開支援的Adobe Creative Cloud應用程式。 創作人員可使用[!DNL Adobe Creative Cloud apps]中的應用程式內面板順暢地瀏覽、搜尋、結帳和登入資產：[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺搜尋顯示結果採用Adobe Sensei的機器學習演算法，並協助使用者尋找美學上類似的影像。 請參閱使用Adobe資產連結搜尋及瀏覽資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)。[
+使用Adobe資產連結，創意專業人員現在可以存取儲存在[!DNL Experience Manager Assets]中的內容，毋需離開支援的Adobe Creative Cloud應用程式。 創作人員可使用[!DNL Adobe Creative Cloud]應用程式中的應用程式內面板順暢地瀏覽、搜尋、結帳和登入資產：[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]。 資產連結也可讓使用者搜尋視覺上類似的結果。 視覺搜尋顯示結果採用Adobe Sensei的機器學習演算法，並協助使用者尋找美學上類似的影像。 請參閱使用Adobe資產連結搜尋及瀏覽資產](https://helpx.adobe.com/tw/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)。[
 
-### 在[!DNL Experience Manager]案頭應用程式{#desktopapp}中搜尋資產
+### 在[!DNL Experience Manager]案頭應用程式{#desktop-app}中搜尋資產
 
 創意專業人員可使用案頭應用程式，讓[!DNL Experience Manager Assets]輕鬆搜尋並在其本機案頭（Win或Mac）上使用。 創意人員可以輕鬆地在Mac Finder或Windows檔案總管中顯示所需資產、在案頭應用程式中開啟並在本機變更——這些變更會儲存回[!DNL Experience Manager]，並在儲存庫中建立新版本。 應用程式支援使用一或多個關鍵字、`*`和`?`萬用字元以及`AND`運算子進行基本搜尋。 請參閱案頭應用程式中的[瀏覽、搜尋和預覽資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
 
-### 在[!DNL Brand Portal] {#brandportal}中搜尋資產
+### 在[!DNL Brand Portal] {#brand-portal}中搜尋資產
 
 業務線使用者和行銷人員使用品牌入口網站，以有效且安全的方式與延伸的內部團隊、合作夥伴和經銷商共用經過核准的數位資產。 請參閱品牌入口網站上的[搜尋資產](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html)。
 
-### 搜尋[!DNL Adobe Stock]影像{#adobestock-1}
+### 搜尋[!DNL Adobe Stock]影像{#adobe-stock1}
 
-在[!DNL Experience Manager]使用者介面中，使用者可搜尋Adobe Stock資產並授權所需資產。 在Omnisearch欄位中新增`Location: Adobe Stock`。 您也可以使用&#x200B;**[!UICONTROL Filters]**&#x200B;面板來尋找所有授權或未授權的資產，或使用Adobe Stock檔案號碼搜尋特定資產。 請參閱[在Experience Manager](/help/assets/aem-assets-adobe-stock.md#usemanage)中管理Adobe Stock映像。
+在[!DNL Experience Manager]使用者介面中，使用者可搜尋Adobe Stock資產並授權所需資產。 在Omnisearch欄位中新增`Location: Adobe Stock`。 您也可以使用&#x200B;**[!UICONTROL Filters]**&#x200B;面板來尋找所有授權或未授權的資產，或使用Adobe Stock檔案號碼搜尋特定資產。 請參閱 [!DNL Experience Manager]](/help/assets/aem-assets-adobe-stock.md#usemanage)中的[manage [!DNL Adobe Stock] images。
 
-### 搜尋Dynamic Media資產{#dynamicmedia}
+### 搜尋[!DNL Dynamic Media]資產{#dynamic-media}
 
 您可以從&#x200B;**[!UICONTROL 「篩選器」]**&#x200B;面板中選取&#x200B;**[!UICONTROL 「動態媒體」]**>**[!UICONTROL 「集合」]**，以篩選動態媒體影像。這樣可以篩選並顯示影像集、旋轉木馬、混合媒體集和迴轉集等資產。在製作網頁時，作者可在內容尋找工具中搜尋集合。集合的篩選器可從快顯功能表中取得。
 
-### 在製作網頁{#contentfinder}時，在Content Finder中搜尋資產
+### 在製作網頁{#content-finder}時，在Content Finder中搜尋資產
 
 作者可以使用Content Finder搜尋DAM儲存庫中的相關資產，並使用他們建立的網頁中的資產。 作者也可以使用「已連接的資產」功能來搜尋遠端[!DNL Experience Manager]部署上可用的資產。 然後，作者可以在本機[!DNL Experience Manager]部署的網頁中使用這些資產。 請參閱[使用遠端資產](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets)。
 
@@ -226,13 +229,13 @@ ht-degree: 5%
 
 [!DNL Experience Manager] 搜尋功能支援搜尋系列和搜尋系列中的資產。請參閱[搜尋系列](/help/assets/manage-collections.md)。
 
-## 資產選擇器{#assetpicker}
+## 資產選擇器{#asset-picker}
 
 >[!NOTE]
 >
 >在[!DNL Adobe Experience Manager]的舊版中，資產選擇器稱為[資產選擇器](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)。
 
-資產選擇器可讓您以特殊方式瀏覽、搜尋及篩選DAM資產。 您可以使用`https://[aem-server]:[port]/aem/assetpicker.html`在[!DNL Experience Manager]例項中啟動資產選擇器。 此URL會在瀏覽模式中開啟資產選擇器。 使用支援的請求參數做為尾碼，例如`mode`（單選或多選），或`viewmode`搭配`assettype`（影像、視訊、文字）和`mimetype`。 這些參數會為特定搜尋例項設定資產選取器的上下文，並在整個選取範圍中保持不變。 您也可以使用此功能擷取您選取之資產的中繼資料。
+資產選擇器可讓您以特殊方式搜尋、篩選及瀏覽DAM資產。 資產選擇器位於`https://[aem_server]:[port]/aem/assetpicker.html`。 您可以使用資產選擇器擷取所選資產的中繼資料。 您可以使用支援的請求參數來啟動它，例如資產類型（影像、視訊、文字）和選擇模式（單選或多選）。 這些參數會為特定搜尋例項設定資產選取器的上下文，並在整個選取範圍中保持不變。
 
 資產選擇器使用HTML5 `Window.postMessage`訊息，將所選資產的資料傳送給收件者。 它僅在瀏覽模式下運作，且僅適用於Omnisearch結果頁面。
 
@@ -240,13 +243,13 @@ ht-degree: 5%
 
 | 名稱 | 值 | 範例 | 目的 |
 |---|---|---|---|
-| 資源尾碼(B) | URL中作為資源尾碼的資料夾路徑：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 若要啟動已選取特定資料夾的資產選擇器，例如選取資料夾`/content/dam/we-retail/en/activities`時，URL應為：[https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在啟動資產選擇器時需要選取特定資料夾，請將其作為資源尾碼傳遞。 |
-| `mode` | 單一，多重 | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 在多個模式中，您可以使用資產選擇器同時選取多個資產。 |
+| 資源尾碼(B) | 資料夾路徑作為URL中的資源尾碼：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 若要啟動已選取特定資料夾的資產選擇器，例如選取資料夾`/content/dam/we-retail/en/activities`時，URL應為：`https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` | 如果在啟動資產選擇器時需要選取特定資料夾，請將其作為資源尾碼傳遞。 |
+| `mode` | 單一，多重 | <ul><li>`https://localhost:4502/aem/assetpicker.html?mode=single`</li><li>`https://localhost:4502/aem/assetpicker.html?mode=multiple`</li></ul> | 在多個模式中，您可以使用資產選擇器同時選取多個資產。 |
 | `dialog` | true, false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用這些參數將資產選擇器開啟為「花崗岩」對話方塊。 只有當您透過Granite路徑欄位啟動資產選擇器，並將其設定為pickerSrc URL時，此選項才適用。 |
-| `root` | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities) | 使用此選項可指定資產選擇器的根資料夾。 在這種情況下，資產選擇器可讓您只選取根資料夾下的子資產（直接／間接）。 |
-| `viewmode` | 搜尋 |  | 若要在搜尋模式中啟動資產選擇器，請使用資產類型和mimetype參數。 |
-| `assettype` | 影像、檔案、多媒體、封存。 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives)</li></ul> | 使用選項可根據提供的值篩選資產類型。 |
-| `mimetype` | 資產的MIME類型(`/jcr:content/metadata/dc:format`)（也支援萬用字元）。 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它以MIME類型篩選資產。 |
+| `root` | &lt;folder_path> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | 使用此選項可指定資產選擇器的根資料夾。 在這種情況下，資產選擇器可讓您只選取根資料夾下的子資產（直接／間接）。 |
+| `viewmode` | 搜尋 |  | 若要在搜尋模式中啟動資產選擇器，請使用`assettype`和`mimetype`參數。 |
+| `assettype` | 影像、檔案、多媒體、封存。 | <ul><li>`https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=images`</li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=documents` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=multimedia` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=archives` </li></ul> | 使用選項可根據提供的值篩選資產類型。 |
+| `mimetype` | 資產的MIME類型(`/jcr:content/metadata/dc:format`)（也支援萬用字元）。 | <ul><li>`https://localhost:4502/aem/assetpicker.html?mimetype=image/png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&mimetype=*png`</li></ul> | 使用它以MIME類型篩選資產。 |
 
 若要存取資產選擇器介面，請前往`https://[aem_server]:[port]/aem/assetpicker`。 導覽至所要的檔案夾，並選取一或多個資產。 或者，從Omnisearch方塊中搜尋所要的資產、視需要套用篩選，然後選取它。
 
@@ -262,6 +265,7 @@ ht-degree: 5%
 * [!DNL Experience Manager] 在您從搜尋結果中選取資產屬性，然後取消搜尋後，可能會繼續顯示搜尋詞。  <!-- (CQ-4273540) -->
 * 搜索資料夾或檔案和資料夾時，不能對任何參數對搜索結果進行排序。
 * 如果您選擇`Return`而未在Omnisearch列中鍵入， [!DNL Experience Manager]將返回僅檔案而非資料夾的清單。 如果您不使用關鍵字而專門搜索資料夾，[!DNL Experience Manager]不會返回任何結果。
+* 您可以對資料夾執行全文搜尋。 指定搜尋詞，讓搜尋生效。
 
 視覺搜尋或相似性搜尋有下列限制：
 
@@ -335,7 +339,7 @@ ht-degree: 5%
 
 ### 視覺或相似性搜尋{#configvisualsearch}
 
-視覺搜尋使用智慧型標籤，並需要[!DNL Experience Manager] 6.5.2.0或更新版本。 在設定智慧型標籤功能後，請遵循下列步驟：
+視覺搜尋使用智慧型標籤。 在設定智慧型標籤功能後，請遵循下列步驟。
 
 1. 在[!DNL Experience Manager] CRXDE的`/oak:index/lucene`節點中，添加以下屬性和值並保存更改。
 
@@ -355,7 +359,7 @@ ht-degree: 5%
    儲存變更。
 
 1. 訪問`/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags`並添加`similarityTags`類型`Boolean`的`true`屬性。
-1. 將智慧標籤套用至[!DNL Experience Manager]儲存庫中的資產。
+1. 將智慧標籤套用至[!DNL Experience Manager]儲存庫中的資產。 請參閱[如何設定智慧型標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html?lang=en#configuring)。
 1. 在CRXDE的`/oak-index/damAssetLucene`節點中，將`reindex`屬性設定為`true`。 儲存變更。
 1. （可選）如果您有自訂的搜尋表單，請將`/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch`節點複製至`/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存變更。
 
@@ -413,9 +417,9 @@ ht-degree: 5%
 
 ### 對搜索結果{#sort}排序
 
-對搜尋結果排序，以更快發現所需資產。 只有在從&#x200B;**[!UICONTROL Filters]**&#x200B;面板中選擇&#x200B;**[[!UICONTROL Files]](#searchui)**&#x200B;時，才能對搜索結果進行排序。 [!DNL Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
+對搜尋結果排序，以更快發現所需資產。 只有當您從&#x200B;**[!UICONTROL Filters]**&#x200B;面板中選擇&#x200B;**[[!UICONTROL Files]](#searchui)**&#x200B;時，才能在清單視圖中對搜索結果進行排序。 [!DNL Assets]使用伺服器端排序功能，快速排序資料夾或搜尋查詢結果中的所有資產 (無論多少)。伺服器端排序比用戶端排序提供更快速且更精確的結果。
 
-您可以像排序任何資料夾中的資產一樣，對搜尋結果進行排序。 排序適用於這些列— 「名稱」、「標題」、「狀態」、「Dimension」、「大小」、「評級」、「使用」、「（建立日期）」、「（修改日期）」、「（發佈日期）」、「工作流」和「簽出」。
+在清單檢視中，您可以像排序任何資料夾中的資產一樣，對搜尋結果進行排序。 排序適用於這些列— 「名稱」、「標題」、「狀態」、「Dimension」、「大小」、「評級」、「使用」、「（建立日期）」、「（修改日期）」、「（發佈日期）」、「工作流」和「簽出」。
 
 有關排序功能的限制，請參見[limitations](#limitations)。
 
@@ -450,7 +454,7 @@ ht-degree: 5%
 
 您可以根據搜尋准則建立智慧型系列。從「濾鏡 **[!UICONTROL 器]** 」面板中，選 **[!UICONTROL 擇「檔案]** 」並單 **[!UICONTROL 擊「保存智慧集」]**。請參閱 [管理系列](/help/assets/manage-collections.md)。
 
-## 未預期的搜尋結果和問題{#unexpectedresults}
+## 未預期的搜尋結果和問題{#unexpected-results}
 
 | 錯誤、問題、症狀 | 可能的原因 | 可能修正或瞭解問題 |
 |---|---|---|
