@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5舊版Service Pack發行說明'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 131e564e4ed50c4f08412ba39c62f15b9c362b8c
+source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
 workflow-type: tm+mt
-source-wordcount: '17898'
+source-wordcount: '17912'
 ht-degree: 5%
 
 ---
@@ -36,6 +36,8 @@ ht-degree: 5%
    * 使用[!DNL Automated Forms Conversion service]將PDF表單轉換為最適化表單。
 
 * [!DNL Experience Manager Forms]支援[!DNL Microsoft SQL Server] 2019。
+
+* 支援[!DNL Microsoft] SQL Server 2016 Always On Availability組，以實現OSGi部署的高可用性。
 
 * 內建存放庫 (Apache Jackrabbit Oak) 更新至 1.22.5 版。
 
@@ -75,7 +77,7 @@ ht-degree: 5%
 
 * 當您在文字中新增一些樣式時，會在文字中新增`<div>`標籤，而且樣式無法再套用至文字(NPR-34531)。
 
-* 當您在彈出式選單中選取項目並更新所需檔案時，它不允許儲存對話方塊值，因為其他選單有空的必填欄位(NPR-34529)。
+* 當您在彈出式選單中選取項目並更新所需檔案時，它不允許儲存對話方塊值，因為其他選單的必填欄位空白(NPR-34529)。
 
 * 當您從自訂範本建立頁面並在Blueprint階層中移動時，先前從頁面刪除的元件會開始顯示在即時副本階層中的頁面上(NPR-34527)。
 
