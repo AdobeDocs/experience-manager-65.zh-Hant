@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 8的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52fc643c30babab68bcf122eb3d91da5ce37a24
+source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
 workflow-type: tm+mt
-source-wordcount: '3015'
+source-wordcount: '3041'
 ht-degree: 1%
 
 ---
@@ -232,6 +232,10 @@ ht-degree: 1%
 * 在提交自適應表單時驗證伺服器上的欄位值。
 
 * 使用[!DNL Automated Forms Conversion service]將PDF表單轉換為最適化表單。
+
+#### 支援Microsoft SQL Server 2016 Always On Availability組以實現高可用性(6.5.7.0){#always-on-availability-groups}
+
+[!DNL Experience Manager Forms] 現在支 [!DNL Microsoft] 持SQL Server 2016 Always On Availability組，以實現OSGi部署的高可用性。
 
 #### 建立資料模型HTTP用戶端組態以最佳化效能(6.5.7.0){#fdm-http-client-config}
 
