@@ -9,12 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
-feature: 升級
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 8d6818d0f2d90482f930f8e98682670ed6d0dd28
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2724'
+ht-degree: 2%
 
 ---
 
@@ -72,7 +71,7 @@ ht-degree: 0%
 
 ### 工作流程模型 {#workflow-models}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -121,7 +120,7 @@ ht-degree: 0%
 
 ### 工作流程例項 {#workflow-instances}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -147,7 +146,7 @@ ht-degree: 0%
 
 ### 工作流程啟動器 {#workflow-launchers}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -178,7 +177,7 @@ ht-degree: 0%
 
 ### 工作流指令碼{#workflow-scripts}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -213,7 +212,7 @@ ht-degree: 0%
 
 ### ContextHub 組態 {#contexthub-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -244,7 +243,7 @@ ht-degree: 0%
 
 ### 經典Cloud Services設計{#classic-cloud-services-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -283,7 +282,7 @@ ht-degree: 0%
 
 ### 傳統儀表板設計{#classic-dashboards-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -322,7 +321,7 @@ ht-degree: 0%
 
 ### 傳統報表設計{#classic-reports-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -361,7 +360,7 @@ ht-degree: 0%
 
 ### 預設設計{#default-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -400,7 +399,7 @@ ht-degree: 0%
 
 ### AdobeDTM JavaScript端點{#adobe-dtm-javascript-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -423,7 +422,7 @@ ht-degree: 0%
 
 ### AdobeDTM Web-Hook端點{#adobe-dtm-web-hook-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -446,7 +445,7 @@ ht-degree: 0%
 
 ### 收件箱任務{#inbox-tasks}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -473,7 +472,7 @@ ht-degree: 0%
 
 ### 多站點管理器Blueprint配置{#multi-site-manager-blueprint-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong><em></em>上一個位置</strong></td>
@@ -500,7 +499,7 @@ ht-degree: 0%
 
 ### AEM Projects Dashboard Gadget配置{#aem-projects-dashboard-gadget-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -530,7 +529,7 @@ ht-degree: 0%
 
 ### 複製通知電子郵件模板{#replication-notification-e-mail-template}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -563,7 +562,7 @@ ht-degree: 0%
 
 ### 標記 {#tags}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -597,7 +596,7 @@ ht-degree: 0%
 
 ### 翻譯雲端服務 {#translation-cloud-services}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -642,7 +641,7 @@ ht-degree: 0%
 
 ### 翻譯語言{#translation-languages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -673,7 +672,7 @@ ht-degree: 0%
 
 ### 翻譯規則{#translation-rules}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -704,7 +703,7 @@ ht-degree: 0%
 
 ### 翻譯介面工具集客戶端庫{#translation-widget-client-library}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -749,9 +748,11 @@ ht-degree: 0%
 | **重組指導** | 不需執行任何動作。 |
 | **附註** | 樹激活Web控制台現在可通過&#x200B;**工具>部署>複製>激活樹**&#x200B;獲得。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 廠商轉換連接器Cloud Services{#vendor-translation-connector-cloud-services}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -798,7 +799,7 @@ ht-degree: 0%
 
 ### 工作流通知電子郵件模板{#workflow-notification-email-templates}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
@@ -830,7 +831,7 @@ ht-degree: 0%
 
 ### 工作流包{#workflow-packages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一個位置</strong></td>
