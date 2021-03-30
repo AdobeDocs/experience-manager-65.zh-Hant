@@ -1,12 +1,12 @@
 ---
-title: 登入及登出資產以進行編輯
+title: 簽入和簽出 [!DNL Assets]中的檔案
 description: 瞭解如何取出要編輯的資產，並在變更完成後將其存回。
 contentOwner: AG
 role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: eb87d77e1366786e8574f84590dfe9a3303efda0
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,7 @@ ht-degree: 0%
 ## 查看資產{#checking-out-assets}
 
 1. 從[!DNL Assets]使用者介面中，選取您要結帳的資產。 您也可以選取多個資產以結帳。
-1. 在工具欄中，按一下&#x200B;**[!UICONTROL Checkout]**。
-**[!UICONTROL Checkout]**&#x200B;選項切換為&#x200B;**[!UICONTROL Checkin]**。
+1. 在工具欄中，按一下&#x200B;**[!UICONTROL Checkout]**。 **[!UICONTROL Checkout]**&#x200B;選項切換為&#x200B;**[!UICONTROL Checkin]**。
 若要確認其他使用者是否可以編輯您簽出的資產，請以其他使用者的身分登入。 鎖定符號會顯示在已簽出的資產的縮圖上。
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
@@ -33,7 +32,7 @@ ht-degree: 0%
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   您可以按一下「檢視屬性」，編輯已鎖定資產的中繼資料。****
+   若要編輯鎖定資產的中繼資料，請按一下「檢視屬性」。****
 
 1. 按一下「編輯」，以在編輯模式中開啟資產。****
 
@@ -64,6 +63,6 @@ ht-degree: 0%
 
 >[!MORELIKETHIS]
 >
->* [瞭解Experience Manager案頭應用程式的登入與登出](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
->* [教學課程影片，以瞭解在Assets中存回和取出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
+>* [瞭解登入和登出Indesktop應 [!DNL Experience Manager] 用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
+>* [教學影片，以瞭解登入和登出 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 
