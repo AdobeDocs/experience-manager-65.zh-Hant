@@ -3,11 +3,12 @@ title: 管理影片資產
 description: 在 [!DNL Adobe Experience Manager]中上傳、預覽、註解和發佈視訊資產。
 contentOwner: AG
 role: 業務從業人員
+feature: 資產管理
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '811'
+ht-degree: 8%
 
 ---
 
