@@ -10,10 +10,12 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
+feature: 內容片段
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1749'
 ht-degree: 15%
 
 ---
@@ -42,7 +44,7 @@ ht-degree: 15%
 
 >[!CAUTION]
 >
->發佈和／或參考片段後，當作者開啟片段以進行重新編輯時，AEM會顯示警告。 這會警告對片段所做的變更也會影響參照的頁面。
+>發佈和／或參考片段後，當作AEM者開啟片段以進行重新編輯時，會顯示警告。 這會警告對片段所做的變更也會影響參照的頁面。
 
 ## 編寫您的內容{#authoring-your-content}
 
