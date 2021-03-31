@@ -10,11 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
 docset: aem65
+feature: 內容片段
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 12%
+source-wordcount: '460'
+ht-degree: 13%
 
 ---
 
@@ -45,7 +47,7 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->另請參閱[如何在AEM](/help/sites-administering/audit-user-management-operations.md)中審核使用者管理作業。
+>另請參閱[](/help/sites-administering/audit-user-management-operations.md)中的AEMHow to Audit User Management Operations。
 
 ## 僅{#permissions-required-for-editor-functionality-only}編輯器功能所需的權限
 
