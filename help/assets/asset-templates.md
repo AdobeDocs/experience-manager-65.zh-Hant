@@ -3,10 +3,11 @@ title: 資產範本
 description: 瞭解 [!DNL Adobe Experience Manager Assets] 中的資產範本，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
 role: 業務從業人員
+feature: 資產管理，開發人員工具
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
@@ -93,7 +94,7 @@ ht-degree: 0%
 
 1. 若要修改可編輯欄位中的文字，請按一下可編輯欄位清單中的文字欄位，然後編輯欄位中的文字。
 
-   ![chlimage_1-191](assets/chlimage_1-316.png)
+   ![chlimage_1-111](assets/chlimage_1-316.png)
 
    您可以編輯文字屬性，例如字型樣式、顏色和大小，使用提供的選項。
 
@@ -103,7 +104,7 @@ ht-degree: 0%
 
 1. 從可編輯欄位清單中選取影像欄位，然後從資產選擇器拖曳所要的影像至可編輯欄位。
 
-   ![chlimage_1-115](assets/chlimage_1-319.png)
+   ![chlimage_1-114](assets/chlimage_1-319.png)
 
    您也可以使用關鍵字、標籤，並根據其發佈狀態來搜尋影像。 您可以瀏覽[!DNL Experience Manager Assets]資料庫，並瀏覽至所需影像的位置。
 
