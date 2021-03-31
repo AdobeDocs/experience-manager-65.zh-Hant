@@ -11,9 +11,9 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 7a3f54d90769708344e6751756b2a12ac6c962d7
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -98,3 +98,111 @@ AEM Forms支援CAPTCHA的調適性表單。 您可以使用Google的reCAPTCHA服
 1. 儲存屬性。
 
 reCAPTCHA服務在最適化表單上啟用。 您可以預覽表單，並檢視CAPTCHA運作。
+
+### 根據規則{#show-hide-captcha}顯示或隱藏CAPTCHA元件
+
+您可以選擇根據在自適應表單中對元件應用的規則來顯示或隱藏CAPTCHA元件。 點選元件，選取![edit rules](assets/edit-rules-icon.svg)，然後點選&#x200B;**[!UICONTROL Create]**&#x200B;以建立規則。 有關建立規則的詳細資訊，請參閱[規則編輯器](rule-editor.md)。
+
+例如，只有當表單中的「貨幣值」欄位的值超過25000時，CAPTCHA元件才必須顯示在最適化表單中。
+
+點選表單中的&#x200B;**[!UICONTROL 貨幣值]**&#x200B;欄位並建立下列規則：
+
+![顯示或隱藏規則](assets/rules-show-hide-captcha.png)
+
+### 進行驗證碼驗證 {#validate-captcha}
+
+當您提交表單或根據使用者動作與條件來驗證CAPTCHA時，您都可以在最適化表單中驗證CAPTCHA。
+
+#### 在表單提交{#validation-form-submission}時驗證CAPTCHA
+
+要在提交最適化表單時自動驗證CAPTCHA，請執行以下操作：
+
+1. 點選CAPTCHA元件並選取![cmppr](assets/configure-icon.svg)以檢視元件屬性。
+1. 在&#x200B;**[!UICONTROL 驗證CAPTCHA]**&#x200B;區段中，選擇&#x200B;**[!UICONTROL 在表單提交時驗證CAPTCHA]**。
+1. 點選![Done](assets/save_icon.svg)以儲存元件屬性。
+
+#### 驗證使用者動作與條件{#validate-captcha-user-action}的CAPTCHA
+
+要根據條件和用戶操作驗證CAPTCHA，請執行以下操作：
+
+1. 點選CAPTCHA元件並選取![cmppr](assets/configure-icon.svg)以檢視元件屬性。
+1. 在&#x200B;**[!UICONTROL 驗證CAPTCHA]**&#x200B;區段中，選擇&#x200B;**[!UICONTROL 驗證使用者動作]**&#x200B;的CAPTCHA。
+1. 點選![Done](assets/save_icon.svg)以儲存元件屬性。
+
+[!DNL Experience Manager Forms] 提供 `ValidateCAPTCHA` API以使用預先定義的條件來驗證CAPTCHA。您可以使用自訂的「提交動作」或在最適化表單中定義元件規則來叫用API。
+
+以下是`ValidateCAPTCHA` API的範例，以使用預先定義的條件來驗證CAPTCHA:
+
+```javascript
+if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
+    	GuideCaptchaValidatorProvider apiProvider = sling.getService(GuideCaptchaValidatorProvider.class);
+        String formPath = slingRequest.getResource().getPath();
+        String captchaData = slingRequest.getParameter(GuideConstants.GUIDE_CAPTCHA_DATA);
+        if (!apiProvider.validateCAPTCHA(formPath, captchaData).isCaptchaValid()){
+            response.setStatus(400);
+            return;
+        }
+    }
+```
+
+範例表示，`ValidateCAPTCHA` API僅在使用者填寫表單時指定數值方塊中的位數大於5時，才會驗證表單中的CAPTCHA。
+
+**選項1:使用 [!DNL Experience Manager Forms] ValidateCAPTCHA API來驗證使用自訂提交動作的CAPTCHA**
+
+請執行下列步驟，以使用`ValidateCAPTCHA` API來驗證使用自訂提交動作的CAPTCHA:
+
+1. 將包含`ValidateCAPTCHA` API的指令碼新增至自訂「提交動作」。 有關自定義提交操作的詳細資訊，請參閱[為最適化Forms建立自定義提交操作](custom-submit-action-form.md)。
+1. 從最適化表單的&#x200B;**[!UICONTROL Submission]**&#x200B;屬性的&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉式清單中，選取自訂提交動作的名稱。
+1. 點選&#x200B;**[!UICONTROL Submit]**。 CAPTCHA會根據自訂「提交動作」的`ValidateCAPTCHA` API中定義的條件進行驗證。
+
+**選項2:在提 [!DNL Experience Manager Forms] 交表單之前，請使用ValidateCAPTCHA API來驗證使用者動作的CAPTCHA**
+
+您也可以在最適化表單的元件上套用規則，以叫用`ValidateCAPTCHA` API。
+
+例如，您在「最適化表單」中新增&#x200B;**[!UICONTROL 驗證CAPTCHA]**&#x200B;按鈕，並建立規則以在按一下按鈕時叫用服務。
+
+下圖說明如何在按一下&#x200B;**[!UICONTROL 驗證CAPTCHA]**&#x200B;按鈕時叫用服務：
+
+![進行驗證碼驗證](assets/captcha-validation1.gif)
+
+您可以使用規則編輯器調用包含`ValidateCAPTCHA` API的自定義servlet，並根據驗證結果啟用或禁用最適化表單的提交按鈕。
+
+同樣地，您也可以使用規則編輯器來包含自訂方法，以驗證最適化表單中的CAPTCHA。
+
+### 新增自訂CAPTCHA服務{#add-custom-captcha-service}
+
+[!DNL Experience Manager Forms] 提供reCAPTCHA做為CAPTCHA服務。不過，您可以新增自訂服務以顯示在&#x200B;**[!UICONTROL CAPTCHA服務]**&#x200B;下拉式清單中。
+
+以下是介面的範例實作，可將額外的CAPTCHA服務新增至最適化表單：
+
+```javascript
+package com.adobe.aemds.guide.service;
+
+import org.osgi.annotation.versioning.ConsumerType;
+
+/**
+ * An interface to provide captcha validation at server side in Adaptive Form
+ * This interface can be used to provide custom implementation for different captcha services.
+ */
+@ConsumerType
+public interface GuideCaptchaValidator {
+    /**
+     * This method should define the actual validation logic of the captcha
+     * @param captchaPropertyNodePath path to the node with CAPTCHA configurations inside form container
+     * @param userResponseToken  The user response token provided by the CAPTCHA from client-side
+     *
+     * @return  {@link GuideCaptchaValidationResult} validation result of the captcha
+     */
+     GuideCaptchaValidationResult validateCaptcha(String captchaPropertyNodePath, String userResponseToken);
+
+    /**
+     * Returns the name of the captcha validator. This should be unique among the different implementations
+     * @return  name of the captcha validator
+     */
+     String getCaptchaValidatorName();
+}
+```
+
+`captchaPropertyNodePath` 參照Sling存放庫中CAPTCHA元件的資源路徑。使用此屬性可包含CAPTCHA元件的特定詳細資訊。 例如，`captchaPropertyNodePath`包含在CAPTCHA元件上設定的reCAPTCHA雲端設定資訊。 雲端設定資訊提供&#x200B;**[!UICONTROL 網站金鑰]**&#x200B;和&#x200B;**[!UICONTROL 機密金鑰]**&#x200B;設定，以實作reCAPTCHA服務。
+
+`userResponseToken` 是指在表 `g_recaptcha_response` 單中解決CAPTCHA後產生的。
