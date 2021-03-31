@@ -3,10 +3,11 @@ title: 網路考量與需求
 description: 在設計 [!DNL Adobe Experience Manager Assets] 部署時討論網路注意事項。
 contentOwner: AG
 role: 架構師、管理員
+feature: 開發人員工具
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
