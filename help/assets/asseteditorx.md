@@ -3,10 +3,11 @@ title: 擴充資產編輯器
 description: 瞭解如何使用自訂元件擴充資產編輯器的功能。
 contentOwner: AG
 role: 業務從業人員、管理員
+feature: 開發人員工具
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '693'
 ht-degree: 13%
 
 ---
