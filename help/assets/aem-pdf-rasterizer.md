@@ -3,10 +3,11 @@ title: 使用PDF點陣化器產生轉譯
 description: 使用Adobe PDF點陣化器程式庫產生高品質的縮圖和轉譯。
 contentOwner: AG
 role: 開發人員、管理員
+feature: 開發人員工具，轉譯
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
