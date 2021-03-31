@@ -4,10 +4,11 @@ description: 跨衍生自父資產並連結至父資產的多個頁面／資料�
 contentOwner: AG
 mini-toc-levels: 1
 role: 業務從業人員、管理員、架構師
+feature: 資產管理，多網站管理員
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '3370'
+source-wordcount: '3375'
 ht-degree: 9%
 
 ---
