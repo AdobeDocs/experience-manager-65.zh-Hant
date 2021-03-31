@@ -3,10 +3,11 @@ title: '[!DNL Assets] 調整大小指南'
 description: 確定有效度量以估計部署 [!DNL Adobe Experience Manager Assets]所需的基礎架構和資源的最佳做法。
 contentOwner: AG
 role: 架構師、管理員
+feature: 資產管理
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
