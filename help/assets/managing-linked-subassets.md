@@ -4,9 +4,9 @@ description: 瞭解如何從 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], an
 contentOwner: AG
 role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: e6a0cab17d203183cc4169563179060338596cc3
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1381'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 參考會根據參考資產的路徑、檔案ID和例項ID來解析。
 
-## 將數位資產新增為[!DNL Adobe Illustrator] {#refai}中的參考
+## [!DNL Adobe Illustrator]:新增數位資產做為參考  {#refai}
 
 您可以從[!DNL Adobe Illustrator]檔案中參考現有的數位資產。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    *圖：資產詳細資料中的資產參考。*
 
-## 將數位資產新增為[!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}中的參考
+## [!DNL Adobe InDesign]:新增數位資產做為參考  {#add-aem-assets-as-references-in-adobe-indesign}
 
 若要從[!DNL InDesign]檔案中參考數位資產，請將資產拖曳至[!DNL InDesign]檔案，或將[!DNL InDesign]檔案匯出為ZIP封存。
 
@@ -55,6 +55,8 @@ ht-degree: 0%
 >
 >如果[!DNL InDesign Server]已代理，[!DNL InDesign]檔案的預覽會內嵌在其中繼資料XMP中。 在這種情況下，不明確需要擷取縮圖。 但是，如果[!DNL InDesign Server]未代理，則必須明確提取[!DNL InDesign]檔案的縮圖。
 
+上載INDD檔案時，通過查詢儲存庫中具有`xmpMM:InstanceID`和`xmpMM:DocumentID`屬性的資產來獲取引用。
+
 ### 拖曳資產{#create-references-by-dragging-aem-assets}以建立參考
 
 此程式類似於在Adobe Illustrator](#refai)中添加數字資產作為引用。[
@@ -62,12 +64,12 @@ ht-degree: 0%
 ### 匯出ZIP檔案{#create-references-to-aem-assets-by-exporting-a-zip-file}以建立資產參考
 
 1. 執行[建立工作流模型](/help/sites-developing/workflows-models.md)中的步驟以建立新工作流。
-1. 使用[!DNL Adobe InDesign]的「封裝」功能匯出檔案。 [!DNL Adobe InDesign] 可將檔案和連結的資產匯出為套件。在此情況下，匯出的檔案夾包含一個「連結」檔案夾，其中包含[!DNL InDesign]檔案中的子資產。
+1. 使用[!DNL Adobe InDesign]的[封裝功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)來匯出檔案。 [!DNL Adobe InDesign] 可將檔案和連結的資產匯出為套件。在這種情況下，導出的資料夾包含`Links`資料夾，該資料夾包含[!DNL InDesign]檔案中的子資產。 `Links`資料夾與INDD檔案位於相同的資料夾中。
 1. 建立ZIP檔案並將其上傳到[!DNL Experience Manager]儲存庫。
 1. 啟動`Unarchiver`工作流。
 1. 當工作流程完成時，「連結」檔案夾中的參照會自動參照為子資產。 若要檢視反向連結資產的清單，請導覽至[!DNL InDesign]資產的資產詳細資訊頁面，然後關閉[Rail](/help/sites-authoring/basic-handling.md#rail-selector)。
 
-## 將數位資產新增為[!DNL Adobe Photoshop] {#refps}中的參考
+## [!DNL Adobe Photoshop]:新增數位資產做為參考  {#refps}
 
 1. 使用[!DNL Experience Manager]案頭應用程式存取[!DNL Experience Manager Assets]。 下載並顯示本機檔案系統上的資產。 使用[!DNL Adobe Photoshop]中的[!UICONTROL Place Linked]功能。 請參閱[將資產置於案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
 
