@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、提供和最佳化數位資產。
-feature-set: Experience Manager Assets
+feature-set: Experience Manager Assets, Experience Manager, Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9619609d0d48e9304032dd8e3220868d5e804920
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 40%
