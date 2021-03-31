@@ -3,10 +3,11 @@ title: 可偵測重複資產
 description: 瞭解如何啟用偵測Experience Manager中的重複資產。
 contentOwner: AG
 role: 業務從業人員、管理員
+feature: 資產管理，資產報表
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
