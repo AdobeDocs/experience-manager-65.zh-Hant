@@ -3,10 +3,11 @@ title: 處理支援檔案格式的最佳範例
 description: 使用 [!DNL Experience Manager Assets]處理各種支援檔案類型的最佳實務。
 contentOwner: AG
 role: 管理員
+feature: 資產管理，開發人員工具
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
