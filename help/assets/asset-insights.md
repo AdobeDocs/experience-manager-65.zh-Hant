@@ -2,11 +2,12 @@
 title: 資產 Insights
 description: 瞭解「資產前瞻分析」功能如何讓您追蹤第三方網站、行銷活動和Adobe創意解決方案中使用的影像的使用者評分和使用統計資料。
 contentOwner: AG
-role: 業務從業人員
+role: 業務從業人員、管理員
+feature: 資產分析，資產報表
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '736'
 ht-degree: 7%
 
 ---
