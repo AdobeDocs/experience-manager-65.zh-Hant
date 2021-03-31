@@ -3,10 +3,11 @@ title: 大量移轉資產
 description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及啟用資產以發佈例項。
 contentOwner: AG
 role: 架構師、管理員
+feature: 移轉，轉譯，資產管理
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1805'
 ht-degree: 8%
 
 ---
