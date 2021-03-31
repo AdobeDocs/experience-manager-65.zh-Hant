@@ -3,11 +3,12 @@ title: 自訂和擴充 [!DNL Assets]
 description: 瞭解如何自訂和擴充資產共用與資產編輯器，為使用者提供特別自訂的介面和功能集。
 contentOwner: AG
 role: 開發人員
+feature: 開發人員工具
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 0%
+source-wordcount: '256'
+ht-degree: 1%
 
 ---
 
