@@ -4,10 +4,11 @@ description: 瞭解要管理資產集合的任務，例如建立、檢視、刪�
 contentOwner: AG
 mini-toc-levels: 1
 role: 業務從業人員
+feature: 收集，資產管理
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2185'
 ht-degree: 11%
 
 ---
