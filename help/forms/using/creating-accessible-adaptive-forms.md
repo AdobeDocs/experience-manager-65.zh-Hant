@@ -10,9 +10,9 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: 適用性表單
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 7a3f54d90769708344e6751756b2a12ac6c962d7
 workflow-type: tm+mt
-source-wordcount: '1794'
+source-wordcount: '2078'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,24 @@ AEM Forms提供下列鍵盤快速鍵。
 | 移至上一個面板 | Alt+向左鍵 |
 | 重設表單中填入的資料 | Alt+R |
 | 提交表格 | Alt+S |
+
+此外，在AdaptiveForms,**[!UICONTROL 日期選擇器]**&#x200B;元件有各種鍵盤快捷鍵。 要啟用快捷鍵，請點選&#x200B;**[!UICONTROL 日期選擇器]**&#x200B;元件並點選![配置](assets/configure-icon.svg)以開啟屬性。 在&#x200B;**[!UICONTROL Patterns]**&#x200B;區段中，使用&#x200B;**[!UICONTROL Type]**&#x200B;和&#x200B;**[!UICONTROL Pattern]**&#x200B;下拉式清單選擇顯示模式。 保存屬性以啟用&#x200B;**[!UICONTROL 日期選擇器]**&#x200B;元件的快捷鍵。
+
+在Adaptive Forms的「日期選擇器」元件中可使用以下鍵盤快捷鍵：
+
+| 動作 | 鍵盤快速鍵 |
+|---|---|
+| <ul><li>當標籤焦點反白標示日曆圖示時，顯示「日期選擇器」元件選項</li><li>當標籤焦點反白標示選項時，執行點按事件</li> | 空格或Enter |
+| 隱藏日期選擇器元件選項 | Esc |
+| <ul><li>在「日期選擇器」元件中可用的選項中向前移動游標。</li><li>在日期輸入欄位作用中時，將標籤焦點設定在日曆圖示上</li> | 索引標籤 |
+| 在「日期選擇器」元件中可用的選項中向後移動游標 | Shift+Tab |
+| <ul><li>當標籤焦點反白標示日期輸入欄位時，顯示「日期選擇器」元件選項</li><li>在日期選擇器元件中可用的日曆中向下移動游標</li> | 向下鍵 |
+| 在日期選擇器元件中可用的日曆中將游標向上移動 | 向上鍵 |
+| 在日期選擇器元件中可用的日曆中向後移動游標 | 向左鍵 |
+| 在日期選擇器元件中可用的日曆中將游標向前移動 | 向右鍵 |
+| 對日曆中左右導覽箭頭之間可用的標題執行動作 | Shift +向上鍵 |
+| 對日曆中可用的右鍵導航箭頭表徵圖![右鍵](assets/right-navigation-icon.svg)執行操作 | Shift +向左鍵 |
+| 對日曆中可用的左導覽箭頭圖示![左箭頭](assets/left-navigation-icon.svg)執行操作 | Shift +向右鍵 |
 
 ## 使用協助工具尋找其他協助工具問題
 
