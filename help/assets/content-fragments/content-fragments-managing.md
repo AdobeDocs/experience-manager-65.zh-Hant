@@ -10,10 +10,12 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
+feature: 內容片段
+role: 業務從業人員、管理員
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1491'
 ht-degree: 11%
 
 ---
@@ -120,7 +122,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->其中許多是[ Assets](/help/assets/manage-assets.md)和／或[AEM案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)的標準動作。
+>其中許多是[ Assets](/help/assets/manage-assets.md)和／或[案頭應用程式AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)的標準動作。
 
 ## 開啟片段編輯器{#opening-the-fragment-editor}
 
@@ -193,9 +195,9 @@ ht-degree: 11%
 
    將退出編輯器，而不保存最新的更改。
 
-編輯您的內容片段時，AEM會自動建立版本，以確保在您&#x200B;**Cancel**&#x200B;變更時，先前的內容可以復原：
+編輯內容片段時，會自AEM動建立版本，以確保在您&#x200B;**Cancel**&#x200B;變更時，舊版內容可以復原：
 
-1. 當開啟內容片段以進行編輯時，AEM會檢查是否有Cookie型Token，指出是否存在&#x200B;*編輯工作階段*:
+1. 當開啟內容片段進行編輯時AEM，會檢查是否存在Cookie型Token，指出&#x200B;*編輯工作階段*&#x200B;是否存在：
 
    1. 如果找到代號，則片段會視為現有編輯工作階段的一部分。
    2. 如果代號是&#x200B;*not*，且使用者開始編輯內容，則會建立版本，並傳送此新編輯工作階段的代號給用戶端，並儲存在Cookie中。
@@ -275,7 +277,7 @@ ht-degree: 11%
 
 ## 比較片段版本{#comparing-fragment-versions}
 
-在您選擇特定版本後，**Timeline](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)的[「比較目前**」動作可從&lt;a2/>Timeline&lt;a3/>使用。
+在您選擇特定版本後，**Timeline](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)的[「比較目前**」動作可從Timeline使用。
 
 此選項將開啟：
 
@@ -326,7 +328,7 @@ ht-degree: 11%
 
 >[!CAUTION]
 >
->發佈和／或參考片段後，當作者開啟片段以進行重新編輯時，AEM會顯示警告。 這會警告對片段所做的變更也會影響參照的頁面。
+>發佈和／或參考片段後，當作AEM者開啟片段以進行重新編輯時，會顯示警告。 這會警告對片段所做的變更也會影響參照的頁面。
 
 ## 刪除片段{#deleting-a-fragment}
 
