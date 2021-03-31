@@ -3,10 +3,11 @@ title: 使用Apache Tika偵測資產的MIME類型
 description: 啟用Apache Tika可協助 [!DNL Experience Manager Assets] 在上傳作業期間偵測內容串流中的MIME類型資產，而非副檔名。
 contentOwner: AG
 role: 管理員、架構師
+feature: 中繼資料，開發人員工具，資產管理
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
