@@ -3,10 +3,11 @@ title: 設定資產前瞻分析以取得分析。
 description: 在 [!DNL Adobe Experience Manager Assets]中設定資產前瞻分析。
 contentOwner: AG
 role: 架構師、管理員
+feature: 資產分析，資產報表
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '234'
 ht-degree: 7%
 
 ---
