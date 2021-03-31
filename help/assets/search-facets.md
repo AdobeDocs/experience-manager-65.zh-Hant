@@ -3,10 +3,11 @@ title: 搜尋Facet以篩選搜尋結果
 description: 如何在 [!DNL Adobe Experience Manager]中建立、修改和使用搜尋刻面。
 contentOwner: AG
 role: 管理員、開發人員
+feature: 搜尋
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2427'
 ht-degree: 15%
 
 ---
