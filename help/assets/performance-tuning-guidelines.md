@@ -4,10 +4,11 @@ description: 關於 [!DNL Experience Manager] 配置、更改硬體、軟體和�
 contentOwner: AG
 mini-toc-levels: 1
 role: 架構師、管理員
+feature: 資產管理
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
