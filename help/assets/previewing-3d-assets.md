@@ -4,10 +4,11 @@ description: 瞭解如何預覽3D資產
 contentOwner: Rick Brough
 docset: aem65
 feature: 3D資產
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '568'
 ht-degree: 11%
 
 ---
