@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 sub-product: 表單
 solution: Experience Manager, Experience Manager Forms
@@ -10,7 +10,7 @@ user-guide-description: 建立、管理、發佈和更新數位表單。
 feature-set: Experience Manager Forms
 role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '3720'
 ht-degree: 3%
