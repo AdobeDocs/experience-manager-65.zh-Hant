@@ -3,14 +3,14 @@ title: '[!DNL Assets] 代理開發'
 description: Proxy是 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy、支援的作業、proxy元件，以及如何開發自訂Proxy工作器。
 contentOwner: AG
 role: 管理員、架構師
+exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Assets] 代理開發  {#assets-proxy-development}
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Proxy是特定（有時也是獨立的）Experience Manager實例，它使用Proxy工作者作為負責處理工作和建立結果的處理者。 代理工作器可用於各種任務。 若是[!DNL Assets]代理，則可用來載入資產，以便在「資產」中轉譯。 例如，[IDS代理工作者](indesign.md)使用[!DNL Adobe InDesign]伺服器來處理要用於資產的檔案。
 
-當proxy是個別的[!DNL Experience Manager]例項時，這有助於減少Experience Manager編寫例項的負載。 依預設，[!DNL Assets]會在相同JVM（透過Proxy外部化）中執行資產處理工作，以減輕Experience Manager製作例項的負載。
+當proxy是個別的[!DNL Experience Manager]例項時，這有助於減少[!DNL Experience Manager]編寫例項的負載。 依預設，[!DNL Assets]會在相同JVM（透過Proxy外部化）中執行資產處理工作，以減少[!DNL Experience Manager]製作例項的負載。
 
 ## 代理（HTTP訪問）{#proxy-http-access}
 
@@ -104,7 +104,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
  proxyJobService.removeJob(jobId);
 ```
 
-### 雲端服務設定 {#cloud-service-configurations}
+### Cloud Service配置{#cloud-service-configurations}
 
 >[!NOTE]
 >
