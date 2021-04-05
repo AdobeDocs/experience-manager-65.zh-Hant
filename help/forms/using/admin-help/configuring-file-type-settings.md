@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF 產生器
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 3bb12f6323398971ec315f49611a39977bd548a2
 workflow-type: tm+mt
-source-wordcount: '6148'
+source-wordcount: '6171'
 ht-degree: 0%
 
 ---
@@ -515,6 +515,8 @@ NOTE to WRITER: Unfinished sentence above.
 **[!UICONTROL 啟用進階標籤]**:新增進階標籤以增強協助功能。
 
 **[!UICONTROL 將所有樣式轉換為書籤]**:將Word檔案中的所有樣式轉換為PDF檔案中的書籤。
+
+**[!UICONTROL 將指定的樣式轉換為書籤]**:將您在「樣式」中定義的具有等 **[!UICONTROL 級欄位的]** 樣式轉換為PDF檔案中的書籤。
 
 **[!UICONTROL 含色階的樣式]**:指定Word檔案中哪些樣式會轉換為PDF檔案中的書籤。也指定書籤的層級。 若要使用此功能，請取消選取「將所有樣式轉換為書籤」選項，並以下列格式指定樣式名稱：****
 
