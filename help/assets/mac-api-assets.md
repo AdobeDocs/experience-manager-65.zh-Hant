@@ -4,14 +4,14 @@ description: 使用 [!DNL Adobe Experience Manager Assets]中的HTTP API建立�
 contentOwner: AG
 role: 開發人員
 feature: API、Assets HTTP API、Developer Tools
+exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1730'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Assets] HTTP API  {#assets-http-api}
 
@@ -314,4 +314,4 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 * [HTTP API會更新命名空](#update-asset-metadata) 間中的中繼資料 `jcr` 屬性。不過，Experience Manager用戶介面會更新`dc`命名空間中的元資料屬性。
 
-* 資產API不會傳回完整的中繼資料。 在API中，名稱空間會以硬式編碼，且只會傳回這些名稱。 如果您需要完整的中繼資料，請查看資產路徑`/jcr_content/metadata.json`。
+* 資產HTTP API不會傳回完整的中繼資料。 命名空間會以硬式編碼，且只會傳回這些名稱空間。 如需完整的中繼資料，請參閱資產路徑`/jcr_content/metadata.json`。
