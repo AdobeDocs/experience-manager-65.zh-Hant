@@ -7,15 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
-role: 業務從業人員、管理員
+role: Business Practitioner, Administrator
+exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
+feature: 影片
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
-
 
 # 影片 {#video}
 
@@ -190,4 +191,3 @@ Scene7視訊元件僅適用於Scene7視訊。 基礎元件可處理儲存自（�
 1. 必須啟動視訊描述檔。
 1. 在頁面上配置&#x200B;**[!UICONTROL 基礎視訊]**&#x200B;元件的設計。
 1. 在完成設計變更後啟動設計。
-
