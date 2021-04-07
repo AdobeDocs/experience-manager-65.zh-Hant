@@ -1,22 +1,23 @@
 ---
 title: OWASP Top 10
 seo-title: OWASP Top 10
-description: 瞭解AEM如何應對前10大OWASP安全性風險。
-seo-description: 瞭解AEM如何應對前10大OWASP安全性風險。
+description: 瞭解如AEM何應對前10大OWASP安全風險。
+seo-description: 瞭解如AEM何應對前10大OWASP安全風險。
 uuid: a5a7e130-e15b-47ae-ba21-448f9ac76074
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
+exl-id: 8b2a2f1d-8286-4ba5-8fe2-627509c72a45
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: cd7331f5f57ec90ea72d41d467891dc832347a3c
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
-
 
 # OWASP Top 10{#owasp-top}
 
@@ -38,7 +39,7 @@ XSS是測試和開發期間的最優先順序，而發現的任何問題（通�
 
 ## 3.中斷的驗證和會話管理{#broken-authentication-and-session-management}
 
-AEM使用音效和證實可行的驗證技術，依賴[Apache Jackrabbit](https://jackrabbit.apache.org/)和[Apache Sling](https://sling.apache.org/)。 AEM不會使用瀏覽器/HTTP工作階段。
+使AEM用音效和證實可行的驗證技術，依賴[Apache Jackrabbit](https://jackrabbit.apache.org/)和[Apache Sling](https://sling.apache.org/)。 瀏覽器/HTTP會話不用於AEM。
 
 ## 4.不安全的直接對象引用{#insecure-direct-object-references}
 
@@ -46,13 +47,13 @@ AEM使用音效和證實可行的驗證技術，依賴[Apache Jackrabbit](https:
 
 ## 5.跨網站偽造要求(CSRF){#cross-site-request-forgery-csrf}
 
-跨網站偽造要求(CSRF)可借由自動將加密Token注入所有表單和AJAX要求，並在每個POST的伺服器上驗證此Token，來減輕。
+跨網站偽造要求(CSRF)可借由自動將加密Token注入所有表單和要求，並在伺服器上針對每個POSTAJAX驗證此Token，來減輕。
 
-此外，AEM隨附反向連結標題篩選器，此篩選器可設定為&#x200B;*only*，允許來自特定主機的POST要求（定義於清單中）。
+此外，AEM附帶反向連結標題篩選器，可設定為&#x200B;*only*，允許特定主機（定義於清單中）的POST要求。
 
 ## 6.安全性配置錯誤{#security-misconfiguration}
 
-無法保證所有軟體都正確設定。 但是，我們努力提供盡可能多的指導，使配置盡可能簡單。 此外，AEM隨附[整合的Security Healthchecks](/help/sites-administering/operations-dashboard.md)，可協助您一目瞭然地監控安全性設定。
+無法保證所有軟體都正確設定。 但是，我們努力提供盡可能多的指導，使配置盡可能簡單。 此外，AEM隨附[整合式Security Healthchecks](/help/sites-administering/operations-dashboard.md)，可協助您一目瞭然地監控安全性設定。
 
 請參閱[安全檢查清單](/help/sites-administering/security-checklist.md)以取得詳細資訊，其中提供逐步強化指示。
 
@@ -73,4 +74,3 @@ AEM使用音效和證實可行的驗證技術，依賴[Apache Jackrabbit](https:
 ## 10.未驗證的重定向和轉發{#unvalidated-redirects-and-forwards}
 
 借由將使用者提供目的地的所有重新導向限制在內部位置，減輕重新導向的影響。
-
