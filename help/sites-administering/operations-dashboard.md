@@ -10,20 +10,21 @@ topic-tags: operations
 content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
+exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
+feature: 運作
 translation-type: tm+mt
-source-git-commit: 19a6a4f80e2af37b8de49080a977d02bf0e43507
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '6198'
+source-wordcount: '6199'
 ht-degree: 1%
 
 ---
-
 
 # 操作儀表板{#operations-dashboard}
 
 ## 簡介 {#introduction}
 
-AEM 6中的Operations Dashboard可協助系統營運商監控AEM系統狀況。 它還提供有關AEM相關方面的自動產生的診斷資訊，並可設定和執行獨立的維護自動化，以大幅減少專案作業和支援案例。 The Operations Dashboard can be extended with custom health checks and maintenance tasks. 此外，您也可透過JMX從外部監控工具存取「作業控制面板」資料。
+6中的Operations Dashboard可AEM協助系統營運商一覽AEM系統狀況。 它還提供有關相關方面的自動生成的診斷資訊AEM，並允許配置和運行獨立的維護自動化，以顯著減少項目操作和支援案例。 The Operations Dashboard can be extended with custom health checks and maintenance tasks. 此外，您也可透過JMX從外部監控工具存取「作業控制面板」資料。
 
 **操作儀表板：**
 
@@ -32,7 +33,7 @@ AEM 6中的Operations Dashboard可協助系統營運商監控AEM系統狀況。 
 * 縮短尋找、分析和修正問題的時間
 * 提供獨立的維護自動化功能，協助大幅降低專案作業成本
 
-您可從「AEM歡迎」畫面前往&#x200B;**Tools** - **Operations**&#x200B;存取它。
+可從「歡迎」螢幕轉至&#x200B;**Tools** - **Operations**&#x200B;來訪問該AEM選項。
 
 >[!NOTE]
 >
@@ -60,7 +61,7 @@ The Health Reports interface can be accessed by the **Tools** - **Operations** -
 
 ### 運行狀況檢查類型{#health-check-types}
 
-AEM 6中有兩種類型的健康檢查：
+6中有兩種健康檢查類AEM型：
 
 1. Individual Health Checks
 1. Composite Health Checks
@@ -184,7 +185,7 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
    >
    >例如，如果您建立個別的安全性健康狀況檢查，您只需要將&quot;**security**&quot;標籤指派給它，它就會安裝，它就會自動出現在Operations Dashboard中的Security Checks composite檢查下。
 
-### AEM {#health-checks-provided-with-aem}提供的Health Checks
+### Health Checks Provided with AEM {#health-checks-provided-with-aem}
 
 <table>
  <tbody>
@@ -194,7 +195,7 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
   </tr>
   <tr>
    <td>查詢效能</td>
-   <td><p>此健康狀況檢查已在AEM 6.4</strong>中簡化為<strong>，現在會檢查最近重構的<code>Oak QueryStats</code> MBean，更確切地說是<code>SlowQueries </code>屬性。 如果統計資訊包含任何慢速查詢，則健康檢查返回警告。 否則，它將返回OK狀態。<br /> </strong></p> <p>此健康檢查的MBean是<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DqueriesStatus%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck</a>。</p> </td>
+   <td><p>此健康狀況檢查已在AEM6.4</strong>中簡化為<strong>，現在會檢查最近重構的<code>Oak QueryStats</code> MBean，更具體地說是<code>SlowQueries </code>屬性。 如果統計資訊包含任何慢速查詢，則健康檢查返回警告。 否則，它將返回OK狀態。<br /> </strong></p> <p>此健康檢查的MBean是<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DqueriesStatus%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck</a>。</p> </td>
   </tr>
   <tr>
    <td>觀測佇列長度</td>
@@ -202,7 +203,7 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
     <ul>
      <li>如果<code>queueSize</code>值超過<code>maxQueueSize</code>值（即事件將被丟棄時），則返回嚴重狀態</li>
      <li>如果<code>queueSize</code>值位於<code>maxQueueSize * WARN_THRESHOLD</code>上方，則傳回警告（預設值為0.75） </li>
-    </ul> <p>每個佇列的最大長度來自個別設定（Oak和AEM），且無法透過此健康狀況檢查進行設定。 此健康檢查的MBean是<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a>。</p> </td>
+    </ul> <p>每個佇列的最大長度來自不同的組態(Oak和AEM)，且無法透過此健康狀況檢查進行設定。 此健康檢查的MBean是<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a>。</p> </td>
   </tr>
   <tr>
    <td>查詢周遊限制</td>
@@ -233,7 +234,7 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
        <li>如果45分鐘前狀態不到，則返回「正常」狀態 </li>
       </ul> </li>
      <li>如果未滿足這些條件，則返回「確定」狀態</li>
-    </ul> <p>「嚴重」和「警告」狀態閾值都可配置。 此健康檢查的Mbean是<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a>。</p> <p><strong>注意： </strong>AEM 6.4提供此健康狀況檢查，並已備份至AEM 6.3.0.1。</p> </td>
+    </ul> <p>「嚴重」和「警告」狀態閾值都可配置。 此健康檢查的Mbean是<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a>。</p> <p><strong>注意： </strong>此健康狀況檢查AEM適用於6.4，並已備份AEM至6.3.0.1。</p> </td>
   </tr>
   <tr>
    <td>大型 Lucene 索引</td>
@@ -241,7 +242,7 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
     <ul>
      <li>a警告狀態（如果有索引包含超過10億份檔案）</li>
      <li>a如果索引包含超過15億份檔案，則處於關鍵狀態</li>
-    </ul> <p>The thresholds are configurable and the MBean for the health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=largeIndexHealthCheck,type=HealthCheck.</a></p> <p><strong>注意： </strong>此檢查適用於AEM 6.4，並已備份至AEM 6.3.2.0。</p> </td>
+    </ul> <p>The thresholds are configurable and the MBean for the health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=largeIndexHealthCheck,type=HealthCheck.</a></p> <p><strong>注意： </strong>此檢查適用於AEM6.4，並已備份AEM至6.3.2.0。</p> </td>
   </tr>
   <tr>
    <td>系統維護</td>
@@ -250,8 +251,8 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
      <li>每個維護任務都伴有關聯的運行狀況檢查</li>
      <li>如果未將任務添加到維護窗口，其運行狀況檢查將返回「關鍵」</li>
      <li>您需要配置「審核日誌」和「工作流清除」維護任務，或者從維護窗口中刪除這些任務。 如果未配置，這些任務將在第一次嘗試運行時失敗，因此系統維護檢查將返回嚴重狀態。</li>
-     <li><strong>在AEM 6.4中</strong>，也會檢查 <a href="/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks">Lucene Binaries </a> Maintenancetask</li>
-     <li>在AEM 6.2和更低版本中，系統維護檢查會在啟動後立即傳回警告狀態，因為工作從未執行。 從6.3開始，如果尚未到達第一個維護窗口，則返回「OK（正常）」。</li>
+     <li><strong>With AEM 6.4</strong>, as a check for the  <a href="/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks">Lucene Binaries </a> Maintenancetask</li>
+     <li>在AEM6.2和更低版本中，系統維護檢查會在啟動後直接返回警告狀態，因為任務從未運行。 從6.3開始，如果尚未到達第一個維護窗口，則返回「OK（正常）」。</li>
     </ul> <p>此健康檢查的MBean是<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsystemchecks%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck</a>。</p> </td>
   </tr>
   <tr>
@@ -327,7 +328,7 @@ A Composite Health Check&#39;s role is to aggregate a number of individual Healt
 
 ## 使用Nagios {#monitoring-with-nagios}進行監控
 
-Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 下列範例說明如何新增檢查，以顯示執行AEM之伺服器上已使用的記憶體。
+Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 以下示例說明如何添加一個檢查，該檢查顯示正在運行的伺服器上已用的內AEM存。
 
 1. 在監控伺服器上安裝和安裝Nagios。
 1. 接著，安裝Nagios Remote Plugin Executor(NRPE)。
@@ -336,7 +337,7 @@ Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 下列範例
    >
    >有關如何在系統上安裝Nagios和NRPE的更多資訊，請參閱[Nagios Documentation](https://library.nagios.com/library/products/nagioscore/manuals/)。
 
-1. 新增AEM伺服器的主機定義。 這可以透過Nagios XI Web介面，使用Configuration Manager:
+1. 為伺服器添加主AEM機定義。 這可以透過Nagios XI Web介面，使用Configuration Manager:
 
    1. 開啟瀏覽器並指向Nagios伺服器。
    1. 按頂部菜單中的&#x200B;**Configure**&#x200B;按鈕。
@@ -360,7 +361,7 @@ Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 下列範例
    }
    ```
 
-1. 在AEM伺服器上安裝Nagios和NRPE。
+1. 在伺服器上安裝NagiosAEM和NRPE。
 1. 在兩部伺服器上安裝[check_http_json](https://github.com/phrawzty/check_http_json)外掛程式。
 1. 在兩部伺服器上定義一般JSON檢查命令：
 
@@ -374,7 +375,7 @@ Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 下列範例
    }
    ```
 
-1. 在AEM伺服器上新增已用記憶體的服務：
+1. 在伺服器上添加已用記憶體AEM服務：
 
    ```xml
    define service {
@@ -404,7 +405,7 @@ Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 下列範例
 * 能夠訪問堆和線程轉儲
 * 請求和查詢效能分析器
 
-您可從「AEM歡迎」畫面前往&#x200B;**工具——作業——診斷**，即可進入「診斷工具」畫面。 您也可以直接存取下列URL，以存取畫面：`https://serveraddress:port/libs/granite/operations/content/diagnosis.html`
+從「歡迎使用」螢幕轉到&#x200B;**工具——操作——診斷**，即可進入「診斷工具」AEM螢幕。 您也可以直接存取下列URL，以存取畫面：`https://serveraddress:port/libs/granite/operations/content/diagnosis.html`
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
@@ -439,7 +440,7 @@ Health Check Dashboard可透過Granite JMX Mbeans與Nagios整合。 下列範例
 
 >[!NOTE]
 >
->**在AEM 6.4中**，維護工作會以INFO層級的豐富資訊格式從方塊中登出。這樣可以更好地查看維護任務的狀態。
+>**在AEM6.4中**，維護工作會以INFO層級的豐富資訊格式從方塊中登出。這樣可以更好地查看維護任務的狀態。
 >
 >如果您使用第三方工具（如Splunk）監視維護任務活動並對其做出反應，則可使用以下日誌語句：
 
@@ -484,7 +485,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 對於任何給定查詢，Oak會嘗試根據在&#x200B;**oak:index**&#x200B;節點下的資料庫中定義的Oak索引找出執行的最佳方式。 根據查詢，Oak可以選擇不同的索引。 瞭解Oak如何執行查詢是最佳化查詢的第一步。
 
-Explain Query是一種工具，可說明Oak如何執行查詢。 您可從「AEM歡迎畫面」前往「**工具——作業——診斷**」，然後按一下「查詢效能&#x200B;**」，並切換至「說明查詢** a5/>」標籤，以存取它。****
+Explain Query是一種工具，可說明Oak如何執行查詢。 您可從「歡迎使用」畫面前往「**工具——作業——診斷」，然後按一下「查詢效能****」，並切換至「說明查詢****」標籤，以存取它。**
 
 **功能**
 
@@ -521,7 +522,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 ### 下載狀態ZIP {#download-status-zip}
 
-這將觸發下載包含系統狀態和配置有用資訊的zip。 封存包含例項設定、組合清單、OSGI、Sling度量和統計資料，這可能會產生大型檔案。 您可以使用&#x200B;**下載狀態ZIP**&#x200B;視窗來降低大型狀態檔案的影響。 您可從以下網址存取視窗：**AEM >工具>作業>診斷>下載狀態ZIP。**
+這將觸發下載包含系統狀態和配置有用資訊的zip。 封存包含例項設定、組合清單、OSGI、Sling度量和統計資料，這可能會產生大型檔案。 您可以使用&#x200B;**下載狀態ZIP**&#x200B;視窗來降低大型狀態檔案的影響。 您可從以下位置存取視窗：**AEM >工具>作業>診斷>下載狀態ZIP。**
 
 在此窗口中，您可以選擇要導出的內容（日誌檔案和線程轉儲）以及下載中包含的日誌相對於當前日期的天數。
 
@@ -539,7 +540,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 「自動維護任務」頁是一個位置，可以在該位置查看和跟蹤計畫定期執行的建議維護任務。 這些任務與Health Check系統整合。 也可以從介面手動執行這些任務。
 
-若要前往「作業控制面板」中的「維護」頁面，您必須從「AEM歡迎」畫面前往&#x200B;**工具——作業——控制面板——維護**，或直接遵循此連結：
+要進入「操作儀表板」中的「維護」頁面，您需要從「歡迎」螢幕轉到&#x200B;**工具——操作——儀表板——維護** AEM，或直接遵循以下連結：
 
 `https://serveraddress:port/libs/granite/operations/content/maintenance.html`
 
@@ -560,7 +561,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 >[!NOTE]
 >
->自從AEM 6.1起，現有的維護視窗也可設定為每月執行。
+>自AEM6.1起，現有的維護視窗也可設定為每月執行。
 
 ### 修訂清理 {#revision-clean-up}
 
@@ -573,9 +574,9 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 雖然維護任務是為了減少與Lucene相關的修訂垃圾，但在運行任務時，總體效率有所提高：
 
 * 每週執行資料儲存廢棄項目收集工作會更快完成
-* 它也可以略微改善整體AEM效能
+* 它也會略微改善整體效AEM能
 
-您可以從以下位置訪問Lucene二進位檔案清除任務：**AEM >工具>作業>維護>每日維護視窗> Lucene Binaries Cleanup**。
+您可以從以下位置訪問Lucene二進位檔案清除任務：**AEM >工具>操作>維護>每日維護窗口> Lucene二進位檔案清理**。
 
 ### 資料存放庫廢棄項目收集 {#data-store-garbage-collection}
 
@@ -609,7 +610,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
    ![version_purge_taskconfiguration](assets/version_purge_taskconfiguration.png)
 
-**有了AEM 6.4**，您可以按如下方式停止「版本清除」維護任務：
+**使用AEM6.4**，您可以按如下方式停止「版本清除」維護任務：
 
 * 自動——如果計畫維護窗口在任務完成之前關閉，則任務將自動停止。 下次維護視窗開啟時，它會繼續。
 * 手動——要手動停止任務，請在「版本清除」維護卡上按一下&#x200B;**Stop**&#x200B;表徵圖。 在下次執行時，任務將安全恢復。
@@ -693,11 +694,11 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 ## 系統綜覽 {#system-overview}
 
-**系統概述儀表板**&#x200B;會顯示AEM例項的組態、硬體和運作狀況的高階概述。 這表示系統健康狀態是透明的，所有資訊都會匯總在單一儀表板中。
+**系統概述儀表板**&#x200B;顯示實例的配置、硬體和運行狀況的高級概AEM述。 這表示系統健康狀態是透明的，所有資訊都會匯總在單一儀表板中。
 
 >[!NOTE]
 >
->您也可以[觀看此影片](https://video.tv.adobe.com/v/21340?captions=chi_hant)，以瞭解系統概述控制面板的簡介。
+>您也可以[觀看此影片](https://video.tv.adobe.com/v/21340)，以瞭解系統概述控制面板的簡介。
 
 ### 如何訪問{#how-to-access}
 
@@ -773,7 +774,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
    <td>例項</td>
    <td>
     <ul>
-     <li>AEM版本</li>
+     <li>版本AEM</li>
      <li>運行模式清單</li>
      <li>啟動實例的日期</li>
     </ul> </td>
@@ -905,4 +906,3 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
   </tr>
  </tbody>
 </table>
-
