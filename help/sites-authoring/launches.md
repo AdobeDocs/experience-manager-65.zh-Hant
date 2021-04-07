@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
+exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '854'
 ht-degree: 6%
 
 ---
-
 
 # 啟動{#launches}
 
@@ -35,7 +35,7 @@ ht-degree: 6%
 啟動也可以是：
 
 * 為多個根分支建立。 雖然您可以建立整個網站的啟動（並在此進行變更），但是這可能不切實際，因為整個網站需要複製。 當涉及數百頁甚至數千頁時，複製動作以及升級工作所需的比較都會影響系統需求和效能。
-* 巢狀內嵌（啟動中的啟動），可讓您從現有的啟動建立啟動，讓作者可以利用已做的變更，而不需針對每次啟動進行多次相同的變更。
+* 巢狀內嵌（啟動中的啟動），可讓您從現有的啟動建立啟動，讓作者可以利用已做的變更，而不必針對每次啟動進行多次相同的變更。
 
 本節說明如何從「網站」主控台或「啟動」主控台](#the-launches-console)中建立、編輯和升級（如有必要，請[delete](/help/sites-authoring/launches-creating.md#deleting-a-launch)）啟動頁面：[
 
@@ -102,6 +102,13 @@ ht-degree: 6%
 >建立和編輯啟動需要對`/content/launches`的訪問權限——與預設組`content-authors`一樣。
 >
 >如果您遇到任何問題，請聯絡您的系統管理員。
+
+>[!CAUTION]
+>
+>不支援在啟動頁面上重新排序元件。
+>
+>當促銷頁面時，會反映任何內容變更，但元件位置不會變更。
+
 
 ### 啟動控制台{#the-launches-console}
 
