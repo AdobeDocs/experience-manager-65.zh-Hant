@@ -1,28 +1,29 @@
 ---
-title: AEM中的服務使用者
-seo-title: AEM中的服務使用者
-description: 瞭解AEM中的「服務使用者」。
-seo-description: 瞭解AEM中的「服務使用者」。
+title: 服務使用AEM者
+seo-title: 服務使用AEM者
+description: 在中瞭解服務用戶AEM。
+seo-description: 在中瞭解服務用戶AEM。
 uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
+exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
 
-
-# AEM{#service-users-in-aem}中的服務使用者
+# &lt;a0/AEM>中的服務用戶{#service-users-in-aem}
 
 ## 概覽 {#overview}
 
-在AEM中取得管理工作階段或資源解析程式的主要方式是使用Sling提供的`SlingRepository.loginAdministrative()`和`ResourceResolverFactory.getAdministrativeResourceResolver()`方法。
+取得管理工作階段或資源解析程式的主要AEM方式是使用Sling提供的`SlingRepository.loginAdministrative()`和`ResourceResolverFactory.getAdministrativeResourceResolver()`方法。
 
 但是，這兩種方法都沒有圍繞[最少權限原則設計，而且讓開發人員過於容易，無法為其內容早期規劃適當的結構和相應的訪問控制級別(ACL)。 ](https://en.wikipedia.org/wiki/Principle_of_least_privilege)如果此類服務中存在漏洞，則通常會導致向`admin`用戶提供權限升級，即使代碼本身不需要管理權限也能正常工作。
 
@@ -93,7 +94,7 @@ ht-degree: 0%
 * `service-id` 映射到資源解析器和／或JCR儲存庫用戶ID以進行驗證
 * `service-name` 是提供服務的包的符號名稱
 
-## 其他建議{#other-recommendations}
+## 其他Recommendations{#other-recommendations}
 
 ### 以service-user {#replacing-the-admin-session-with-a-service-user}取代admin-session
 
@@ -114,7 +115,7 @@ ht-degree: 0%
 
 ## 建立新服務用戶{#creating-a-new-service-user}
 
-在您確認AEM服務使用者清單中的使用者不適用於您的使用案例，且相應的RTC問題已獲得核准後，您就可以將新使用者新增至預設內容。
+在您確認服務用戶清單中沒有用戶適用於您的使用案例AEM，且相應的RTC問題已獲得批准後，您可以繼續將新用戶添加到預設內容中。
 
 建議的方法是建立服務用戶，以使用位於&#x200B;*https://&lt;server>:&lt;port>/crx/explorer/index.jsp*&#x200B;的儲存庫瀏覽器
 
@@ -242,6 +243,6 @@ JSP無法使用`loginService()`，因為沒有相關服務。 不過，JSP中的
 
 為瞭解決這些問題，建議使用[處理事件、複製預處理器和作業](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs)中提及的相同方法。
 
-## Sling POST Processors and Deleted Pages {#sling-post-processors-and-deleted-pages}
+## SlingPOST處理器和已刪除頁面{#sling-post-processors-and-deleted-pages}
 
-在sling POST處理器實作中使用數個管理工作階段。 通常，管理會話用於訪問正在處理的POST中待刪除的節點。 因此，它們不再透過請求作業階段提供。 可以訪問一個節點待刪除，以揭露其他情況下不可訪問的元資料。
+在吊索POST處理器實施中使用了幾個管理會話。 通常，管理會話用於訪問正在處理的POST中待刪除的節點。 因此，它們不再透過請求作業階段提供。 可以訪問一個節點待刪除，以揭露其他情況下不可訪問的元資料。
