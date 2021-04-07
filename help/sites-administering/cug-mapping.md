@@ -1,8 +1,8 @@
 ---
-title: AEM 6.5中的自訂使用者群組對應
-seo-title: AEM 6.5中的自訂使用者群組對應
-description: 瞭解自訂使用者群組對應在AEM中的運作方式。
-seo-description: 瞭解自訂使用者群組對應在AEM中的運作方式。
+title: 6.5中的自訂使AEM用者群組對應
+seo-title: 6.5中的自訂使AEM用者群組對應
+description: 瞭解自訂使用者群組對應的運作方式AEM。
+seo-description: 瞭解自訂使用者群組對應的運作方式AEM。
 uuid: 7520351a-ab71-4661-b214-a0ef012c0c93
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,23 +10,24 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
+exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: c2937a1989c6cfe33cc3f56f89c307cb5fb8d272
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 0%
+source-wordcount: '505'
+ht-degree: 1%
 
 ---
 
-
-# AEM 6.5 {#custom-user-group-mapping-in-aem}中的自訂使用者群組對應
+# 6.5 &lt;a0/AEM>中的自訂使用者群組對應{#custom-user-group-mapping-in-aem}
 
 ## 與CUG{#comparison-of-jcr-content-related-to-cug}相關的JCR內容比較
 
 <table>
  <tbody>
   <tr>
-   <td><strong>舊版AEM</strong></td>
+   <td><strong>舊版AEM本</strong></td>
    <td><strong>AEM 6.5</strong></td>
    <td><strong>評論</strong></td>
   </tr>
@@ -55,9 +56,9 @@ ht-degree: 0%
 
 ## OSGi服務{#comparison-of-osgi-services}的比較
 
-**舊版AEM**
+**舊版AEM本**
 
-標籤：Adobe Granite Closed User Group(CUG)支援
+標籤：Adobe花崗岩封閉使用者群組(CUG)支援
 
 名稱：com.day.cq.auth.impl.CugSupportImpl
 
@@ -76,7 +77,7 @@ ht-degree: 0%
    配置策略=必需
 
 * 名稱：com.adobe.granite.auth.requirement.impl.RequirementService
-* 標籤：Adobe Granite驗證需求與登入路徑處理常式
+* 標籤：AdobeGranite驗證要求和登入路徑處理常式
 
    名稱：com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
 
@@ -156,4 +157,3 @@ ht-degree: 0%
  </tbody>
 </table>
 -->
-
