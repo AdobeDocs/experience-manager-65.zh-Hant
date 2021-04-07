@@ -5,15 +5,16 @@ uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
-role: 業務從業人員、管理員
+role: Business Practitioner, Administrator
+exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
+feature: 設定
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
-
 
 # 設定Dynamic Media{#setting-up-dynamic-media}
 
@@ -43,3 +44,4 @@ ht-degree: 0%
 >**如果您要升級：**
 >
 >* 啟動並執AEM行後，您上傳的任何資產都會自動啟用Dynamic Media（除非系統管理員已明確停用它）。 如果您是Dynamic Media的升級實AEM例和新客戶，您可能需要重新處理資產，以啟用Dynamic Media。
+
