@@ -1,8 +1,8 @@
 ---
 title: 安全性檢查清單
 seo-title: 安全性檢查清單
-description: 瞭解設定和部署AEM時的各種安全性考量。
-seo-description: 瞭解設定和部署AEM時的各種安全性考量。
+description: 瞭解設定和部署時的各種安全性考量AEM。
+seo-description: 瞭解設定和部署時的各種安全性考量AEM。
 uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,19 @@ topic-tags: Security
 content-type: reference
 discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
+exl-id: 314a6409-398c-470b-8799-0c4e6f745141
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: 474fc122f557f32d34fddd9d35a113431f6ce491
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '2841'
+source-wordcount: '2842'
 ht-degree: 0%
 
 ---
 
-
 # 安全檢查清單{#security-checklist}
 
-本節說明您應採取的各種步驟，以確保AEM安裝在部署時安全無虞。 清單應從上到下套用。
+本節說明您應採取的各種步驟，以確保在部署時AEM的安裝安全。 清單應從上到下套用。
 
 >[!NOTE]
 >
@@ -33,9 +34,9 @@ ht-degree: 0%
 
 ## 主要安全措施{#main-security-measures}
 
-### 在生產就緒模式下運行AEM {#run-aem-in-production-ready-mode}
+### 在生AEM產就緒模式下運行{#run-aem-in-production-ready-mode}
 
-如需詳細資訊，請參閱[在生產就緒模式中執行AEM](/help/sites-administering/production-ready.md)。
+如需詳細資訊，請參閱[在生產就AEM緒模式中執行](/help/sites-administering/production-ready.md)。
 
 ### 啟用HTTPS以確保傳輸層安全{#enable-https-for-transport-layer-security}
 
@@ -47,17 +48,17 @@ ht-degree: 0%
 
 ### 安裝安全性修補程式{#install-security-hotfixes}
 
-請確定您已安裝Adobe](https://helpx.adobe.com/experience-manager/kb/aem63-available-hotfixes.html)提供的最新[安全性修補程式。
+請確定您已安裝了Adobe](https://helpx.adobe.com/tw/experience-manager/kb/aem63-available-hotfixes.html)提供的最新[安全性修補程式。
 
-### 變更AEM和OSGi主控台管理帳戶的預設密碼{#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### 更改和OSGi控制台管AEM理帳戶的預設密碼{#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
-Adobe強烈建議您在安裝後，變更特權&#x200B;[**AEM** `admin`帳戶](#changing-the-aem-admin-password)的密碼（在所有例項上）。
+Adobe強烈建議在安裝後更改特權&#x200B;[**AEM** `admin`帳戶](#changing-the-aem-admin-password)（在所有實例上）的口令。
 
 這些帳戶包括：
 
-* AEM `admin`帳戶
+* &lt;AEMa0/>帳戶`admin`
 
-   在您變更AEM管理員帳戶的密碼後，在存取CRX時，就需要使用新密碼。
+   在您變更管理員帳戶的密AEM碼後，在存取CRX時，就需要使用新密碼。
 
 * OSGi Web控制台的`admin`口令
 
@@ -65,9 +66,9 @@ Adobe強烈建議您在安裝後，變更特權&#x200B;[**AEM** `admin`帳戶](#
 
 這兩個帳戶使用不同的憑證，並且對每個帳戶使用不同的強式密碼，對於安全部署至關重要。
 
-#### 變更AEM管理員密碼{#changing-the-aem-admin-password}
+#### 更改AEM管理員密碼{#changing-the-aem-admin-password}
 
-AEM管理員帳戶的密碼可透過[Granite Operations - Users](/help/sites-administering/granite-user-group-admin.md)主控台進行變更。
+管理員帳AEM戶的密碼可以透過[Granite Operations - Users](/help/sites-administering/granite-user-group-admin.md)主控台進行變更。
 
 您可以在這裡編輯`admin`帳戶並變更密碼](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)。[
 
@@ -77,7 +78,7 @@ AEM管理員帳戶的密碼可透過[Granite Operations - Users](/help/sites-adm
 
 #### 更改OSGi Web控制台密碼{#importance-of-changing-the-osgi-web-console-password}的重要性
 
-除了AEM `admin`帳戶外，若無法變更OSGi網頁主控台密碼的預設密碼，可能會導致：
+除了AEM`admin`帳戶，如果無法更改OSGi Web控制台密碼的預設密碼，則可能導致：
 
 * 在啟動和關閉期間使用預設密碼的伺服器曝光（大型伺服器可能需要幾分鐘的時間）;
 * 當儲存庫關閉／重新啟動綁定——且OSGI正在運行時，伺服器的暴露。
@@ -97,7 +98,7 @@ AEM管理員帳戶的密碼可透過[Granite Operations - Users](/help/sites-adm
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-1. 按一下&#x200B;**「儲存」**。
+1. 按一下「**儲存**」。
 
 ### 實作自訂錯誤處理常式{#implement-custom-error-handler}
 
@@ -109,7 +110,7 @@ Adobe建議定義自訂錯誤處理常式頁面，尤其是404和500個HTTP回�
 
 ### 完整的Dispatcher Security Checklist {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher是您基礎架構的重要一環。 Adobe強烈建議您填妥[dispatcher安全性檢查清單](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)。
+DispatcherAEM是您基礎架構中的關鍵部分。 Adobe強烈建議您完成[dispatcher安全檢查清單](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/security-checklist.html)。
 
 >[!CAUTION]
 >
@@ -119,7 +120,7 @@ AEM Dispatcher是您基礎架構的重要一環。 Adobe強烈建議您填妥[di
 
 ### 配置複製和傳輸用戶{#configure-replication-and-transport-users}
 
-AEM的標準安裝指定`admin`為預設[複製代理](/help/sites-deploying/replication.md)內傳輸憑證的使用者。 此外，管理員用戶還用於在作者系統上查找複製源。
+標準安裝AEM將`admin`指定為預設[複製代理](/help/sites-deploying/replication.md)內傳輸憑據的用戶。 此外，管理員用戶還用於在作者系統上查找複製源。
 
 出於安全考慮，應對兩者做出更改，以反映手邊的特定使用案例，同時考慮到以下兩個方面：
 
@@ -131,13 +132,13 @@ AEM的標準安裝指定`admin`為預設[複製代理](/help/sites-deploying/rep
 
 ### 檢查Operations Dashboard Security Health Checks {#check-the-operations-dashboard-security-health-checks}
 
-AEM 6推出全新的「作業儀表板」，旨在協助系統營運商疑難排解問題，並監控執行個體的健全性。
+AEM6推出全新的Operations Dashboard，旨在協助系統營運商疑難排解問題並監控執行個體的健全狀況。
 
 控制面板也隨附一組安全性健康狀況檢查。 建議您先檢查所有安全性健康狀況檢查的狀態，再與生產實例一起上線。 如需詳細資訊，請參閱[ Operations Dashboard檔案](/help/sites-administering/operations-dashboard.md)。
 
 ### 檢查範例內容是否存在{#check-if-example-content-is-present}
 
-所有範例內容和使用者（例如Geometrixx專案及其元件）應先在生產系統上完全解除安裝並刪除，然後再公開存取。
+所有範例內容和使用者(例如，Geometrixx專案及其元件)應先在生產系統上完全解除安裝並刪除，再公開存取。
 
 >[!NOTE]
 >
@@ -147,9 +148,9 @@ AEM 6推出全新的「作業儀表板」，旨在協助系統營運商疑難排
 
 這些開發OSGi套件應先在作者和發佈生產系統上解除安裝，然後再加以存取。
 
-* Adobe CRXDE支援(com.adobe.granite.crxde-support)
-* Adobe Granite CRX Explorer(com.adobe.granite.crx-explorer)
-* Adobe Granite CRXDE Lite(com.adobe.granite.crxde-lite)
+* AdobeCRXDE支援(com.adobe.granite.crxde-support)
+* AdobeGranite CRX Explorer(com.adobe.granite.crx-explorer)
+* Adobe花崗岩CRXDE Lite(com.adobe.granite.crxde-lite)
 
 ### 檢查Sling開發套件是否存在{#check-if-the-sling-development-bundle-is-present}
 
@@ -157,11 +158,11 @@ AEM 6推出全新的「作業儀表板」，旨在協助系統營運商疑難排
 
 此OSGi套件應先解除安裝在作者和發佈生產系統上，再加以存取。
 
-### 防止跨網站偽造要求{#protect-against-cross-site-request-forgery}
+### Protect反對跨網站偽造要求{#protect-against-cross-site-request-forgery}
 
 #### CSRF保護框架{#the-csrf-protection-framework}
 
-AEM 6.1提供一種機制，可協助保護免受跨網站偽造要求攻擊，稱為&#x200B;**CSRF Protection Framework**。 有關如何使用它的詳細資訊，請參閱[文檔](/help/sites-developing/csrf-protection.md)。
+AEM 6.1船舶提供一種機制，可協助保護您免受跨網站偽造要求攻擊，稱為&#x200B;**CSRF Protection Framework**。 有關如何使用它的詳細資訊，請參閱[文檔](/help/sites-developing/csrf-protection.md)。
 
 #### The Sling Referrer Filter {#the-sling-referrer-filter}
 
@@ -216,7 +217,7 @@ AEM 6.1提供一種機制，可協助保護免受跨網站偽造要求攻擊，�
 
 對於下列每項服務，需要更改指定的設定：
 
-* [Adobe Granite HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
+* [AdobeGranite HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
 
    * 啟用&#x200B;**Minify**（以移除CRLF和空白字元）。
    * 啟用&#x200B;**Gzip**（允許使用一個請求對檔案進行壓縮和訪問）。
@@ -242,7 +243,7 @@ AEM 6.1提供一種機制，可協助保護免受跨網站偽造要求攻擊，�
 
 有關詳細資訊，請參閱[OSGi配置設定](/help/sites-deploying/osgi-configuration-settings.md)。
 
-使用AEM時，有幾種方法可管理此類服務的組態設定；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+使用時，有AEM幾種管理此類服務配置設定的方法；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 ## 進一步閱讀{#further-readings}
 
@@ -265,14 +266,14 @@ AEM 6.1提供一種機制，可協助保護免受跨網站偽造要求攻擊，�
 
    所有有效變化（例如返回`200`響應並配置為快取）都將由調度程式進行快取，最終導致完整檔案系統，並且沒有服務用於進一步請求。
 
-防止此類攻擊的設定點很多，我們只討論與AEM直接相關的設定點。
+防止此類攻擊的配置點有很多，這裡我們只討論與之直接相關的AEM。
 
 **設定Sling以防止DoS**
 
 Sling為&#x200B;*content-centric*。 這表示處理會以JCR資源（儲存庫節點）的形式，將每個(HTTP)請求映射至內容時，將重點放在內容上：
 
 * 第一個目標是保存內容的資源（JCR節點）。
-* 其次，轉換器（或指令碼）是與請求的某些部分（例如選擇器和／或擴充功能）組合從資源屬性中找到的。
+* 其次，轉換器（或指令碼）與請求的某些部分（例如選擇器和／或擴充功能）結合，從資源屬性中找到。
 
 >[!NOTE]
 >
@@ -301,12 +302,12 @@ Sling為&#x200B;*content-centric*。 這表示處理會以JCR資源（儲存庫�
 
       **JSON最大結果** ( `json.maximumresults`)
 
-      在[Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)的組態中。 超過此限制時，演算將會收合。 AEM中Sling的預設值為`200`。
+      在[Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)的組態中。 超過此限制時，演算將會收合。 Sling within的預設值AEM為`200`。
 
-   * 作為預防措施，可禁用其他預設渲染器（HTML、純文字檔案、XML）。 再次透過設定[Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)。
+   * 作為預防措施，可禁用其他預設渲染器（HTML、純文字檔案、XML）。 再次，請設定[Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)。
    >[!CAUTION]
    >
-   >請勿停用JSON轉譯器，這是AEM正常作業的必要項目。
+   >請勿停用JSON轉譯器，這是正常作業的必要項AEM目。
 
 1. 使用防火牆來篩選對您實例的存取。
 
@@ -316,9 +317,9 @@ Sling為&#x200B;*content-centric*。 這表示處理會以JCR資源（儲存庫�
 
 >[!NOTE]
 >
->此緩解措施僅應在未使用Forms的AEM環境上執行。
+>此緩解措施僅應在未使AEM用Forms的環境中執行。
 
-由於AEM不提供`FormChooserServlet`的現成索引，因此在查詢中使用表單選擇器將觸發代價昂貴的儲存庫周遊，通常會使AEM例項停止。 表單選擇器可通過&#x200B;**&amp;ast;.form的存在來檢測。查詢中的&amp;ast;**&#x200B;字串。
+由AEM於`FormChooserServlet`不提供現成可用的索引，因此在查詢中使用表單選擇器將觸發代價高昂的儲存庫遍歷，通常會使實例AEM停止。 表單選擇器可通過&#x200B;**&amp;ast;.form的存在來檢測。查詢中的&amp;ast;**&#x200B;字串。
 
 為減輕此問題，請遵循下列步驟：
 
@@ -327,13 +328,13 @@ Sling為&#x200B;*content-centric*。 這表示處理會以JCR資源（儲存庫�
 1. 搜索&#x200B;**Day CQ WCM表單選擇器Servlet**
 1. 按一下條目後，請在以下窗口中禁用&#x200B;**高級搜索要求**。
 
-1. 按一下&#x200B;**「儲存」**。
+1. 按一下「**儲存**」。
 
 **減輕資產下載Servlet造成的DoS影響**
 
-AEM中的預設資產下載Servlet可讓已驗證的使用者發出任意大型的並行下載請求，以建立可見資產的ZIP檔案，讓伺服器和／或網路過載。
+中的預設資產下載ServletAEM允許通過身份驗證的用戶發出任意大型的併發下載請求，以建立可見資產的ZIP檔案，該檔案可能會使伺服器和／或網路過載。
 
-為了降低此功能造成的潛在DoS風險，`AssetDownloadServlet` OSGi元件在最新AEM版本的發佈例項上預設會停用。
+為了降低此功能造成的潛在DoS風險，`AssetDownloadServlet` OSGi元件預設會停用於最新版本的發AEM布例項。
 
 如果您的設定要求啟用資產下載伺服器，請參閱[本文章](/help/assets/download-assets-from-aem.md)以取得詳細資訊。
 
@@ -361,15 +362,15 @@ WebDAV應在作者和發佈環境中都停用。 這可以通過停止適當的O
 
    >[!NOTE]
    >
-   >不需要重新啟動AEM。
+   >不需要AEM重新啟動。
 
 ### 確認您未在使用者首頁路徑{#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}中透露個人識別資訊
 
 請務必確保不會在儲存庫用戶主路徑中洩露任何個人身份識別資訊，以保護您的用戶。
 
-自從AEM 6.1起，使用`AuthorizableNodeName`介面的新實作來變更使用者（也稱為可授權）ID節點名稱的儲存方式。 新介面將不再公開節點名稱中的使用者ID，而是產生隨機名稱。
+自AEM6.1以來，使用`AuthorizableNodeName`介面的新實作來變更使用者（也稱為可授權）ID節點名稱的儲存方式。 新介面將不再公開節點名稱中的使用者ID，而是產生隨機名稱。
 
-您不需要執行任何設定來啟用它，因為這是在AEM中產生可授權ID的預設方式。
+不需要執行任何設定才能啟用，因為這是在中產生可授權ID的預設方式AEM。
 
 雖然不建議使用，但您可以停用它，以備需要舊實作時，以便與現有應用程式回溯相容。 若要這麼做，您必須：
 
@@ -393,21 +394,21 @@ WebDAV應在作者和發佈環境中都停用。 這可以通過停止適當的O
 
 ### 確保在需要時正確複製加密密鑰{#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
-某些AEM功能和驗證方案需要您在所有AEM例項中複製您的加密金鑰。
+某些AEM功能和驗證方案要求您在所有實例中複製加密AEM密鑰。
 
 在執行此操作之前，請注意，密鑰複製在不同版本之間的操作方式不同，因為6.3和更舊版本之間密鑰的儲存方式不同。
 
 請參閱下方以取得詳細資訊。
 
-#### 複製AEM 6.3 {#replicating-keys-for-aem}的金鑰
+#### 複製6.AEM3 {#replicating-keys-for-aem}的密鑰
 
-而在舊版中，複製金鑰會儲存在儲存庫中，從AEM 6.3開始，就會儲存在檔案系統中。
+而在舊版中，複製密鑰儲存在儲存庫中，從6.AEM3開始，它們儲存在檔案系統中。
 
 因此，為了跨實例複製密鑰，您需要將它們從源實例複製到檔案系統上的目標實例的位置。
 
 更具體地說，您需要：
 
-1. 存取AEM例項（通常為作者例項），其中包含要複製的關鍵材料；
+1. 存取包AEM含要複製之關鍵材料的例項，通常為作者例項；
 1. 在本機檔案系統中找到com.adobe.granite.crypto.file套件。 例如，在此路徑下：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
@@ -429,25 +430,25 @@ WebDAV應在作者和發佈環境中都停用。 這可以通過停止適當的O
 
 >[!NOTE]
 >
->您可以在首次安裝AEM時，新增下列參數，回復至儲存金鑰的6.3之前版本方法：
+>首次安裝時，您可以新增下列參數，回復至6.3之前的儲存金鑰方法AEM:
 >
 >`-Dcom.adobe.granite.crypto.file.disable=true`
 
-#### 複製AEM 6.2和舊版{#replicating-keys-for-aem-and-older-versions}的金鑰
+#### 複製6.AEM2和舊版{#replicating-keys-for-aem-and-older-versions}的密鑰
 
-在AEM 6.2和舊版中，金鑰會儲存在`/etc/key`節點下的儲存庫中。
+在AEM6.2和更舊版本中，密鑰儲存在`/etc/key`節點下的儲存庫中。
 
-建議在實例間安全地複製密鑰的方法是僅複製此節點。 您可以透過CRXDE Lite選擇性複製節點：
+建議在實例間安全地複製密鑰的方法是僅複製此節點。 您可以通過CRXDE Lite有選擇地複製節點：
 
-1. 轉至&#x200B;*https://&lt;serveraddress>:4502/crx/de/index.jsp*&#x200B;以開啟CRXDE Lite
+1. 前往&#x200B;*https://&lt;serveraddress>:4502/crx/de/index.jsp*&#x200B;開啟CRXDE Lite
 1. 選擇`/etc/key`節點。
 1. 轉到&#x200B;**Replication**&#x200B;頁籤。
 1. 按&#x200B;**複製**&#x200B;按鈕。
 
 ### 執行滲透測試{#perform-a-penetration-test}
 
-Adobe強烈建議您在開始生產之前，先對AEM基礎架構執行滲透率測試。
+Adobe強烈建議您在開始生產之前，先AEM對基礎架構執行滲透測試。
 
 ### 開發最佳實踐{#development-best-practices}
 
-新開發必須遵循[安全性最佳實務](/help/sites-developing/security.md)，以確保AEM環境安全無虞。
+新的開發必須遵循[安全性最佳實務](/help/sites-developing/security.md)，以確保您的環境AEM安全無虞。
