@@ -8,15 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
-role: 業務從業人員、管理員
+role: Business Practitioner, Administrator
+exl-id: 274af114-845a-46bd-b091-802cf589687a
+feature: 資產管理，轉譯
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 1%
 
 ---
-
 
 # 交付Dynamic Media資產{#delivering-dynamic-media-assets}
 
