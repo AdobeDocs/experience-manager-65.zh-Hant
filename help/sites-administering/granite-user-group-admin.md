@@ -9,20 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
+exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '937'
 ht-degree: 4%
 
 ---
-
 
 # Granite Operations - User and Group Administration{#granite-operations-user-and-group-administration}
 
 當Granite整合JCR API規格的CRX Repository實作時，它擁有自己的使用者和群組管理。
 
-這些帳戶是[AEM帳戶](/help/sites-administering/security.md)的基礎，如果／當從[AEM使用者主控台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)存取帳戶時，會反映使用Granite管理所做的任何帳戶變更(例如`http://localhost:4502/useradmin`)。 從「AEM使用者控制台」中，您也可以管理權限和其他AEM特定資訊。
+這些帳戶是[帳戶](/help/sites-administering/security.md)的基礎AEM，如果／從[ AEM Users console](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)存取帳戶時，將反映使用Granite管理所做的任何帳戶變更(例如`http://localhost:4502/useradmin`)。 您也可AEM以從「使用者控制台」管理權限和其AEM他特定資訊。
 
 Granite使用者和群組管理主控台都可從觸控最佳化UI的&#x200B;**[Tools](/help/sites-administering/tools-consoles.md)**&#x200B;主控台取得：
 
@@ -234,4 +235,3 @@ Granite使用者和群組管理主控台都可從觸控最佳化UI的&#x200B;**[
    ![](do-not-localize/chlimage_1-6.png)
 
 1. 系統會要求您確認刪除，然後會傳送訊息確認實際刪除已發生。
-
