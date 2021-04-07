@@ -1,8 +1,8 @@
 ---
 title: 用戶同步
 seo-title: 用戶同步
-description: 瞭解AEM中的使用者同步。
-seo-description: 瞭解AEM中的使用者同步。
+description: 在中瞭解用戶同步AEM。
+seo-description: 在中瞭解用戶同步AEM。
 uuid: 0a519daf-21b7-4adc-b419-eeb8c404c54f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,15 @@ topic-tags: Security
 content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
+exl-id: 89f55598-e749-42b8-8f2a-496f45face66
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: 8ed7409740cdd3e45fad006dc6e470a06acc60fe
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2437'
 ht-degree: 2%
 
 ---
-
 
 # 用戶同步{#user-synchronization}
 
@@ -31,7 +32,7 @@ ht-degree: 2%
 
 在一個發佈實例上進行的註冊和修改必須與其他發佈實例同步，以便它們能夠訪問相同的用戶資料。
 
-自AEM 6.1起，當啟用使用者同步時，使用者資料會自動在群組中的發佈執行個體間同步，而不會在作者上建立。
+從AEM6.1開始，啟用用戶同步後，群中的發佈實例中的用戶資料會自動同步，而不會在作者上建立。
 
 ## Sling Distribution {#sling-distribution}
 
@@ -77,7 +78,7 @@ ht-degree: 2%
 
 1. 請確定已安裝最新的代碼：
 
-* [AEM平台更新](https://helpx.adobe.com/experience-manager/kb/aem62-available-hotfixes.html)
+* [AEM平台更新](https://helpx.adobe.com/tw/experience-manager/kb/aem62-available-hotfixes.html)
 * [AEM Communities更新](/help/communities/deploy-communities.md#latestfeaturepack)
 
 ### 1.Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
@@ -158,7 +159,7 @@ ht-degree: 2%
 * [存取權限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)
 * 疑難排解部分[在響應處理過程中修改操作異常](#modify-operation-exception-during-response-processing)。
 
-### 3.Adobe Granite Distribution —— 加密密碼傳輸機密提供者{#adobegraniteencpasswrd}
+### 3.Adobe花崗岩分佈——加密密碼傳輸機密提供者{#adobegraniteencpasswrd}
 
 **設定權限**
 
@@ -204,7 +205,7 @@ ht-degree: 2%
 
 ![](assets/chlimage_1-23.png)
 
-### 5.Adobe Social Sync —— 比較觀察器工廠{#diffobserver}
+### 5.Adobe Social同步——比較觀察器工廠{#diffobserver}
 
 **啟用群組同步**
 
@@ -286,7 +287,7 @@ ht-degree: 2%
 
 * 選擇`Save`
 
-### 8.AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
+### 8.AEM Communities用戶同步偵聽器{#aem-communities-user-sync-listener}
 
 **（可選）同步其他JCR節點**
 
