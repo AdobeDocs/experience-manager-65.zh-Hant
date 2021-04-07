@@ -1,8 +1,8 @@
 ---
 title: 使用者管理與安全性
 seo-title: 使用者管理與安全性
-description: 瞭解AEM中的「使用者管理與安全性」。
-seo-description: 瞭解AEM中的「使用者管理與安全性」。
+description: 瞭解中的「用戶管理和安全性」AEM。
+seo-description: 瞭解中的「用戶管理和安全性」AEM。
 uuid: 4512c0bf-71bf-4f64-99f6-f4fa5a61d572
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,26 +10,27 @@ topic-tags: Security
 content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
+exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '5487'
+source-wordcount: '5488'
 ht-degree: 1%
 
 ---
 
-
 # 使用者管理與安全性{#user-administration-and-security}
 
-本章說明如何設定和維護使用者授權，並說明驗證和授權在AEM中運作的原理。
+本章介紹如何配置和維護用戶授權，並介紹身份驗證和授權如何運作的理論AEM。
 
-## AEM {#users-and-groups-in-aem}中的使用者和群組
+## {#users-and-groups-in-aem}中AEM的使用者和群組
 
 本節將更詳細地介紹各種實體和相關概念，以幫助您配置易於維護的用戶管理概念。
 
 ### 使用者 {#users}
 
-使用者將使用其帳戶登入AEM。 每個使用者帳戶都是唯一的，並包含基本帳戶詳細資訊以及指派的權限。
+使用者將使用其AEM帳戶登入。 每個使用者帳戶都是唯一的，並包含基本帳戶詳細資訊以及指派的權限。
 
 使用者通常是群組的成員，可簡化這些權限和／或權限的分配。
 
@@ -48,7 +49,7 @@ ht-degree: 1%
 
 ### 內建使用者和群組{#built-in-users-and-groups}
 
-AEM WCM會安裝許多使用者和群組。 在安裝後首次存取Security Console時，就會看到這些。
+AEMWCM會安裝許多使用者和群組。 在安裝後首次存取Security Console時，就會看到這些。
 
 下表列出每個項目，並列出：
 
@@ -68,7 +69,7 @@ AEM WCM會安裝許多使用者和群組。 在安裝後首次存取Security Con
   <tr>
    <td><p>管理員</p> <p>預設密碼：管理員</p> </td>
    <td>使用者</td>
-   <td><p>具有完全訪問權限的系統管理帳戶。</p> <p>此帳戶用於AEM WCM和CRX之間的連線。</p> <p>如果意外刪除了此帳戶，系統將在資料庫重新啟動時（在預設設定中）重新建立該帳戶。</p> <p>管理員帳戶是AEM平台的需求。 因此，此帳戶無法刪除。</p> </td>
+   <td><p>具有完全訪問權限的系統管理帳戶。</p> <p>此帳戶用於WCM和AEMCRX之間的連接。</p> <p>如果意外刪除了此帳戶，系統將在資料庫重新啟動時（在預設設定中）重新建立該帳戶。</p> <p>管理員帳戶是平台的一項AEM要求。 因此，此帳戶無法刪除。</p> </td>
    <td><p>Adobe強烈建議將此使用者帳戶的密碼從預設值變更。</p> <p>優選地，在安裝時，儘管可以在安裝後完成。</p> <p>注意：此帳戶不要與CQ Servlet引擎的管理員帳戶混淆。</p> </td>
   </tr>
   <tr>
@@ -104,13 +105,13 @@ AEM WCM會安裝許多使用者和群組。 在安裝後首次存取Security Con
   <tr>
    <td>dam-users</td>
    <td>群組</td>
-   <td>一般AEM Assets使用者的現成可用參考群組。 此群組成員具有適當的權限，可啟用資產和系列的上傳／共用。</td>
+   <td>典型AEM Assets用戶的現成可用參考組。 此群組成員具有適當的權限，可啟用資產和系列的上傳／共用。</td>
    <td> </td>
   </tr>
   <tr>
    <td>every</td>
    <td>群組</td>
-   <td><p>AEM中的每個使用者都是群組的成員，即使您在所有工具中可能看不到群組或成員關係。</p> <p>此群組可視為預設權限，因為它可用來套用每個人的權限，甚至是將來建立的使用者。</p> </td>
+   <td><p>每個使用AEM者都是群組的成員，即使您在所有工具中可能看不到群組或成員關係。</p> <p>此群組可視為預設權限，因為它可用來套用每個人的權限，甚至是將來建立的使用者。</p> </td>
    <td><p>請勿修改或刪除此群組。</p> <p>修改此帳戶會產生額外的安全性影響。</p> </td>
   </tr>
   <tr>
@@ -139,17 +140,17 @@ AEM WCM會安裝許多使用者和群組。 在安裝後首次存取Security Con
  </tbody>
 </table>
 
-## AEM {#permissions-in-aem}中的權限
+## &lt;a0/AEM>中的權限{#permissions-in-aem}
 
-AEM使用ACL來判斷使用者或群組可以執行哪些動作，以及可在何處執行這些動作。
+使AEM用ACL來確定用戶或組可以採取哪些操作以及可以在何處執行這些操作。
 
 ### 權限和ACL {#permissions-and-acls}
 
 權限定義允許誰對資源執行哪些操作。 權限是[訪問控制](#access-control-lists-and-how-they-are-evaluated)評估的結果。
 
-您可以選取或清除個別AEM [動作](security.md#actions)的核取方塊，以變更授與／拒絕給定使用者的權限。 複選標籤表示允許執行動作。 無複選標籤表示動作被拒絕。
+您可以選擇或清除個別[操作](security.md#actions)的複選框，以更改授予／拒絕給定用戶的權AEM限。 複選標籤表示允許執行動作。 無複選標籤表示動作被拒絕。
 
-複選標籤位於格線中的位置也會指出使用者在AEM內的哪些位置（即哪些路徑）擁有哪些權限。
+複選標籤位於網格中的位置還指示用戶在哪些位置(即AEM哪些路徑)擁有哪些權限。
 
 ### 動作 {#actions}
 
@@ -205,11 +206,11 @@ AEM使用ACL來判斷使用者或群組可以執行哪些動作，以及可在�
 
 >[!NOTE]
 >
->AEM會自動產生[Collections](/help/assets/manage-collections.md)中角色指派（擁有者、編輯者、檢視器）的使用者群組。 不過，手動新增此類群組的ACL可能會在AEM中造成安全性弱點。 Adobe建議您避免手動添加ACL。
+>自AEM動為[Collections](/help/assets/manage-collections.md)中的角色分配（擁有者、編輯者、檢視器）產生使用者群組。 不過，手動為此類組添加ACL會在中引入安全漏洞AEM。 Adobe建議您避免手動添加ACL。
 
 ### 訪問控制清單及其評估方式{#access-control-lists-and-how-they-are-evaluated}
 
-AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權限。
+WCMAEM使用訪問控制清單(ACL)來組織要應用到各頁的權限。
 
 「存取控制清單」是由個別權限所組成，用來決定實際套用這些權限的順序。 該清單根據所考慮的頁面的層次形成。 然後，會自底向上掃描此清單，直到找到套用至頁面的第一個適當權限為止。
 
@@ -222,7 +223,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 >`/home/users/geometrixx-outdoors`:允許每個人讀取`*/profile*`和
 >`*/social/relationships/following/*`。
 >
->您的自定義應用程式可以設定對其他關係（如`*/social/relationships/friend/*`或`*/social/relationships/pending-following/*`）的訪問權。
+>您的自訂應用程式可設定其他關係的存取權，例如`*/social/relationships/friend/*`或`*/social/relationships/pending-following/*`。
 >
 >當您建立特定於社區的ACL時，加入這些社區的成員可能會獲得額外的權限。 例如，當使用者在`/content/geometrixx-outdoors/en/community/hiking`或`/content/geometrixx-outdoors/en/community/winter-sports`加入社群時，可能會發生這種情況。
 
@@ -238,8 +239,8 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
 | **動作** | **說明** |
 |---|---|
-| 允許（複選標籤） | AEM WCM可讓使用者在此頁面或任何子頁面上執行動作。 |
-| 拒絕（無複選標籤） | AEM WCM不允許使用者在此頁面或任何子頁面上執行動作。 |
+| 允許（複選標籤） | AEMWCM可讓使用者在此頁面或任何子頁面上執行動作。 |
+| 拒絕（無複選標籤） | AEMWCM不允許使用者在此頁面或任何子頁面上執行動作。 |
 
 權限也會套用至任何子頁面。
 
@@ -292,13 +293,13 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
    如果權限的套用順序與預期順序不同，則使用deny可能會造成非預期的效果。 如果用戶是多個組的成員，來自一個組的拒絕語句可以取消來自另一個組的允許語句，反之亦然。 發生此情況時，很難保留概述，並且很容易導致無法預見的結果，而「允許」分配不會造成此類衝突。
 
-   Adobe建議您使用「允許」而非「拒絕」，請參閱[最佳實務](#best-practices)。
+   Adobe建議您使用「允許」而非「拒絕」，請參閱[最佳實踐](#best-practices)。
 
-在修改任一權限之前，請務必瞭解其運作方式及相互關聯。 請參閱CRX檔案，以說明AEM WCM [如何評估存取權](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)，以及設定存取控制清單的範例。
+在修改任一權限之前，請務必瞭解其運作方式及相互關聯。 請參見CRX文檔以說明AEMWCM [如何評估訪問權限](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)以及有關設定訪問控制清單的示例。
 
 ### 權限 {#permissions}
 
-權限可讓使用者和群組存取AEM頁面上的AEM功能。
+權限可讓使用者和群組存取頁AEM面上的AEM功能。
 
 通過展開／折疊節點，可以按路徑瀏覽權限，並且可以跟蹤到根節點的權限繼承。
 
@@ -308,7 +309,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
 ### 查看詳細權限資訊{#viewing-detailed-permission-information}
 
-除了格線檢視外，AEM還提供特定路徑上所選使用者／群組權限的詳細檢視。 詳細資訊視圖提供了其他資訊。
+除了格線檢視外，還AEM提供特定路徑上所選使用者／群組權限的詳細檢視。 詳細資訊視圖提供了其他資訊。
 
 除了檢視資訊外，您也可以將目前的使用者或群組納入或排除在群組之外。 請參閱[新增權限時新增使用者或群組](#adding-users-or-groups-while-adding-permissions)。 此處所做的變更會立即反映在詳細檢視的上半部。
 
@@ -352,7 +353,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 >
 >為了模擬為非管理員使用者所使用，模擬者（在上述情況下為user-B）必須擁有`/home/users`路徑中的READ權限。
 >
->如需如何達成此目的的詳細資訊，請參閱「AEM中的[權限」。](/help/sites-administering/security.md#permissions-in-aem)
+>有關如何實現此目的的詳細資訊，請參見AEM](/help/sites-administering/security.md#permissions-in-aem)中的[權限。
 
 >[!CAUTION]
 >
@@ -388,13 +389,13 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
 您可使用安全性主控台存取所有使用者、群組和相關權限。 本節中介紹的所有過程都在此窗口中執行。
 
-若要存取AEM WCM安全性，請執行下列其中一項作業：
+若要存AEM取WCM安全性，請執行下列其中一項作業：
 
-* 從「歡迎」畫面或AEM中的各種位置，按一下安全性圖示：
+* 在「歡迎」螢幕或中的各個位置AEM中，按一下安全表徵圖：
 
 ![](do-not-localize/wcmtoolbar.png)
 
-* 直接導覽至`https://<server>:<port>/useradmin`。 請確定您以管理員身分登入AEM。
+* 直接導覽至`https://<server>:<port>/useradmin`。 請確定您以管理員AEM的身分登入。
 
 將顯示以下窗口：
 
@@ -456,7 +457,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
 1. 根據您要建立使用者或群組，輸入所需的詳細資訊。
 
-   * 如果選擇&#x200B;**建立用戶，則**&#x200B;輸入登錄ID、名字和姓氏、電子郵件地址和密碼。 依預設，AEM會根據姓氏的第一個字母建立路徑，但您可以選取其他路徑。
+   * 如果選擇&#x200B;**建立用戶，則**&#x200B;輸入登錄ID、名字和姓氏、電子郵件地址和密碼。 預設情AEM況下，根據姓氏的第一個字母建立路徑，但可以選擇其他路徑。
 
    ![createuserdial](assets/createuserdialog.png)
 
@@ -471,7 +472,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 要刪除用戶或組：
 
 1. 在&#x200B;**Security**&#x200B;主控台中，選取您要刪除的使用者或群組。 如果要刪除多個項目，請按住Shift鍵並按一下或按住Control鍵並按一下以選擇這些項目。
-1. 按一下「編輯」，然後選取「刪除」。 **** AEM WCM會詢問您要刪除使用者或群組。
+1. 按一下「編輯」，然後選取「刪除」。 **** AEMWCM會詢問您是否要刪除使用者或群組。
 1. 按一下&#x200B;**OK**&#x200B;確認或取消取消操作。
 
 ### 修改用戶和組屬性{#modifying-user-and-group-properties}
@@ -496,7 +497,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 >
 >您無法使用安全控制台來變更管理員密碼。 若要變更管理員帳戶的密碼，請使用Granite Operations提供的[Users console](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)。
 >
->如果您在JEE上使用AEM Forms，請勿使用下列指示變更密碼，而是使用JEE管理控制台(/adminui)上的AEM Forms變更密碼。
+>如果您在JEE上使用AEM Forms，請勿使用下列指示變更密碼，而是使用JEE管理控制台(/adminui)上的AEM Forms來變更密碼。
 
 1. 在&#x200B;**Security**&#x200B;控制台中，按兩下要更改密碼的用戶名。
 1. 按一下&#x200B;**屬性**&#x200B;頁籤（如果尚未激活）。
@@ -509,7 +510,7 @@ AEM WCM使用「存取控制清單」(ACL)來組織套用至各種頁面的權�
 
 ### 將用戶或組添加到組{#adding-users-or-groups-to-a-group}
 
-AEM提供三種將使用者或群組新增至現有群組的不同方式：
+提AEM供三種將使用者或群組新增至現有群組的不同方式：
 
 * 在群組中時，您可以新增成員（使用者或群組）。
 * 在成員中時，可以向組添加成員。
@@ -556,7 +557,7 @@ AEM提供三種將使用者或群組新增至現有群組的不同方式：
 
 ### 從組{#removing-users-or-groups-from-groups}中刪除用戶或組
 
-AEM提供三種從群組移除使用者或群組的不同方式：
+提AEM供三種從群組中移除使用者或群組的不同方式：
 
 * 在群組設定檔中時，您可以移除成員（使用者或群組）。
 * 在成員配置檔案中時，可以從組中刪除成員。
@@ -596,7 +597,7 @@ AEM提供三種從群組移除使用者或群組的不同方式：
 
 1. 導覽至您要移除權限的路徑，然後按一下&#x200B;**Details**。 詳細資訊視窗的下半部分提供有關誰擁有該頁面權限的資訊。
 
-   ![chlimage_1-114](assets/chlimage_1-114.png)
+   ![chlimage_1-115](assets/chlimage_1-114.png)
 
 1. 在&#x200B;**Member**&#x200B;列中，為要具有該路徑權限的成員選擇複選框。 清除要移除權限的成員的複選框。 在您所做變更的儲存格中，會出現紅色三角形。
 1. 按一下&#x200B;**確定**&#x200B;保存更改。
@@ -650,7 +651,7 @@ AEM提供三種從群組移除使用者或群組的不同方式：
 1. 從清單中選擇用戶或組，按兩下以開啟，然後按一下&#x200B;**權限**。
 1. 在網格中，導航到希望用戶具有複製權限或[搜索節點的路徑。](#searching-for-nodes)
 
-1. 在所選路徑的&#x200B;**Replicate**&#x200B;列中，選擇一個複選框以添加該用戶或組的複製權限，或清除該複選框以刪除複製權限。 AEM會在您所做變更尚未儲存的任何地方顯示紅色三角形。
+1. 在所選路徑的&#x200B;**Replicate**&#x200B;列中，選擇一個複選框以添加該用戶或組的複製權限，或清除該複選框以刪除複製權限。 在您AEM所做的變更尚未儲存的任何地方，都會顯示紅色三角形。
 
    ![cquserreplicate權限](assets/cquserreplicatepermissions.png)
 
@@ -703,7 +704,7 @@ AEM提供三種從群組移除使用者或群組的不同方式：
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
-1. 按一下&#x200B;**「儲存」**。
+1. 按一下「**儲存**」。
 
 ### 設定用戶和組首選項{#setting-user-and-group-preferences}
 
@@ -714,7 +715,7 @@ AEM提供三種從群組移除使用者或群組的不同方式：
 
    ![cqsecuritypreferences](assets/cqsecuritypreferences.png)
 
-1. 根據需要對組或用戶首選項進行更改，並在完成時按一下「保存」。****
+1. 根據需要對組或用戶首選項進行更改，並在完成後按一下「保存」。****
 
 ### 將用戶或管理員設定為具有管理其他用戶{#setting-users-or-administrators-to-have-the-privilege-to-manage-other-users}的權限
 
