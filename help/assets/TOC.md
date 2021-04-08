@@ -5,18 +5,18 @@ solution: Experience Manager, Experience Manager Assets
 audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
-user-guide-description: 建立、管理、提供和最佳化數位資產。
+user-guide-description: 建立、管理、處理和分發數位資產。
 feature-set: Experience Manager Assets, Experience Manager, Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
+source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 40%
+ht-degree: 38%
 
 ---
 
 
-# Assets 指南  {#assets}
+# Assets 指南 {#assets}
 
 + [[!DNL Assets] 使用者指南](home.md)
 + [[!DNL Experience Manager] 6.5資產發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
