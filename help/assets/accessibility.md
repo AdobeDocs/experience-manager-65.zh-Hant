@@ -1,17 +1,17 @@
 ---
-title: ' [!DNL Experience Manager Assets]中的輔助功能'
+title: ' [!DNL Experience Manager Assets]的可訪問功能和介面'
 description: 瞭解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的協助功能如何協助殘障人士使用。
 contentOwner: AG
 feature: 資產管理
-role: 業務從業人員、架構師、領導者
+role: Business Practitioner, Architect, Leader
+exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1924'
 ht-degree: 1%
 
 ---
-
 
 <!--
 Possible topics to cover in this article are below.
