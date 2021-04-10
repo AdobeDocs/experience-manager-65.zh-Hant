@@ -2,16 +2,16 @@
 title: 使用「連線資產」在 中共用 DAM 資產 [!DNL Sites]
 description: 使用遠程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署上可用的資產。
 contentOwner: AG
-role: 業務從業人員、管理員、領導者
+role: Business Practitioner, Administrator, Leader
 feature: 已連線資產、使用者和群組
+exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 48e5b55a1d79fef6172f684cb65a4137113fb7fb
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2739'
 ht-degree: 29%
 
 ---
-
 
 # 使用「連線資產」在 中共用 DAM 資產 [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
@@ -42,7 +42,7 @@ ht-degree: 29%
 
 作者在Content Finder中搜尋影像和下列類型的檔案，並在「頁面編輯器」中使用搜尋的資產。 文檔將添加到`Download`元件中，影像將添加到`Image`元件中。 作者也會將遠端資產新增至任何可擴充預設`Download`或`Image`元件的自訂[!DNL Experience Manager]元件。 支援的格式包括：
 
-* **影像格式**:Image元件支援 [的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 格式。[!DNL Dynamic Media] 不支援影像。
+* **影像格式**:Image元件支援 [的](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 格式。[!DNL Dynamic Media] 不支援影像。
 * **檔案格式**:請參閱支 [援的檔案格式](assets-formats.md#supported-document-formats)。
 
 ### 相關使用者和群組 {#users-and-groups-involved}
@@ -110,17 +110,12 @@ ht-degree: 29%
 
 1. 在[!DNL Assets]部署的CORS組態中，將[!DNL Sites]部署新增為允許的原點。 如需詳細資訊，請參閱[瞭解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)。
 
-<!-- TBD: See if these steps are not required.
-    1. Log in using the administrator credentials. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-
-    1. To create a CORS configuration for [!DNL Sites] deployment, click add option ![Assets add icon](assets/do-not-localize/assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
-
-    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Save the configuration.
--->
+1. 設定[相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md)。
 
 您可以檢查配置的[!DNL Sites]部署和[!DNL Assets]部署之間的連接。
 
-![已配置已連接資產的連接測試  [!DNL Sites]](assets/connected-assets-multiple-config.png)
+![已連接資產的連接測 [!DNL Sites]](assets/connected-assets-multiple-config.png)
+*試圖：已配置已連接資產的連接測試 [!DNL Sites]。*
 
 ## 使用遠端資產 {#use-remote-assets}
 
@@ -222,11 +217,13 @@ ht-degree: 29%
 若要疑難排解常見錯誤，請依照下列步驟進行：
 
 * 如果您無法從[!UICONTROL Content Finder]搜尋遠端資產，請確定已有必要的角色和權限。
-* 從遠端Dam擷取的資產可能因一個或多個原因無法發佈在網頁上。 它不存在於遠程伺服器上，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠端DAM移除。 請確定已有適當的權限，並符合先決條件。 重新嘗試將資產新增至頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
-* 如果您無法從本機[!DNL Sites]部署存取遠端DAM部署，請確定允許跨網站Cookie。 如果跨網站Cookie遭到封鎖，[!DNL Experience Manager]的兩個部署可能無法驗證。 例如，Incognito模式下的[!DNL Google Chrome]可能會阻止第三方Cookie。 若要允許[!DNL Chrome]瀏覽器中的Cookie，請按一下位址列中的「eye」圖示，導覽至「網站無法運作>已封鎖」，選取「遠端DAM URL」，並允許登入Token Cookie。 或者，請參閱[如何啟用協力廠商Cookie的說明。](https://support.google.com/chrome/answer/95647)
 
-   ![Chrome在Incognito模式中發生Cookie錯誤](assets/chrome-cookies-incognito-dialog.png)
+* 從遠端DAM擷取的資產可能因一個或多個原因無法發佈在網頁上。 它不存在於遠程伺服器上，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠端DAM移除。 請確定已有適當的權限，並符合先決條件。 重新嘗試將資產新增至頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
+
+* 如果您無法從本機[!DNL Sites]部署存取遠端DAM部署，請確定允許跨網站Cookie，並設定[相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md)。 如果跨網站Cookie遭到封鎖，[!DNL Experience Manager]的部署可能無法驗證。 例如，Incognito模式下的[!DNL Google Chrome]可能會阻止第三方Cookie。 若要允許[!DNL Chrome]瀏覽器中的Cookie，請按一下位址列中的「eye」圖示，導覽至&#x200B;**網站無法運作** > **Blocked**，選取「遠端DAM URL」，並允許登入Token Cookie。 或者，請參閱[如何啟用第三方Cookie](https://support.google.com/chrome/answer/95647)。
+
+   ![Chrome瀏覽器在Incognito模式中發生Cookie錯誤](assets/chrome-cookies-incognito-dialog.png)
 
 * 如果未檢索遠程引用並導致錯誤消息，請檢查[!DNL Sites]部署是否可用，並檢查網路連接問題。 稍後重試以檢查。 [!DNL Assets] 部署嘗試兩次建立與部署的 [!DNL Sites] 連線，然後報告失敗。
 
-   ![重試資產遠端參考失敗](assets/reference-report-failure.png)
+   ![無法檢索資產遠程引用](assets/reference-report-failure.png)
