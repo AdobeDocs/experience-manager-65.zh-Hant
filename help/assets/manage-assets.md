@@ -3,16 +3,16 @@ title: 管理您的數位資產
 description: 瞭解資產管理工作，例如上傳、下載、編輯、搜尋、刪除、註解和版本數位資產。
 contentOwner: AG
 mini-toc-levels: 1
-role: 業務從業人員
+role: Business Practitioner
 feature: 資產管理，搜尋
+exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: d88962cb4018b0b60f61006510f416478d119cb5
 workflow-type: tm+mt
-source-wordcount: '9595'
+source-wordcount: '9652'
 ht-degree: 3%
 
 ---
-
 
 # 管理您的數位資產{#manage-digital-assets}
 
@@ -313,11 +313,11 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 |  | 行動 | 建立MP4檔案，以便在iPhone或Android行動裝置上傳送。選取一或多個寬高比，以符合您所需的解析度大小和目標資料速率。 |
 |  | 平板電腦 | 建立MP4檔案，以便在iPad或Android平板裝置上發佈。選取一或多個外觀比例，以符合您所需的解析度大小和目標資料速率。 |
 
-#### 在上傳{#setting-batch-set-presets-at-upload}時設定批次集預設集
+#### 在上載{#setting-batch-set-presets-at-upload}時設定批次集預設集
 
 如果您想從上傳的影像自動建立影像集或回轉集，請按一下您要使用的預設集的作用中欄。 您可以選取多個預設集。
 
-請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解建立批次集預設集。
+請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解如何建立批次集預設集。
 
 ### 串流上傳{#streamed-uploads}
 
@@ -585,48 +585,33 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 請參閱[從Experience Manager](/help/assets/download-assets-from-aem.md)下載資產。
 
-## 發佈資產{#publishing-assets}
+## 發佈或取消發佈資產{#publish-assets}
 
->[!NOTE]
->
->如需Dynamic Media的詳細資訊，請參閱[發佈Dynamic Media資產。](/help/assets/publishing-dynamicmedia-assets.md)
+在[!DNL Experience Manager]作者上傳、處理或編輯您的資產後，您會將資產發佈至發佈伺服器。 發佈可讓資產公開使用。 取消發佈動作會從發佈伺服器移除資產，但不會從編寫伺服器移除。
 
-1. 導覽至您要發佈的資產／資料夾的位置。
+如需[!DNL Dynamic Media]的特定資訊，請參閱[publishing [!DNL Dynamic Media] assets](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. 從資產卡中選擇&#x200B;**[!UICONTROL Publish]**&#x200B;快速動作，或選擇資產，然後從工具列按一下「快速發佈」選項。****
-1. 如果資產引用其他資產，其引用將列在嚮導中。 只會顯示自上次發佈／未發佈後未發佈或已修改的參照。 選擇要發佈的參照。
+1. 導覽至您要發佈或要從發佈環境移除的資產或資產檔案夾的位置（解除發佈）。
 
-   >[!NOTE]
-   >
-   >您已發佈之資料夾的空白檔案夾不會發佈。
+1. 選擇要取消發佈的資產或資料夾，然後從工具欄中按一下「管理出版物」 **[!UICONTROL 「管理出版物」]** 「管理出版物選項」 ![ 「選項」。 ](assets/do-not-localize/globe-publication.png)或者，若要快速發佈，請從工具列選擇「快速發佈」選項。 ****&#x200B;如果您要發佈的檔案夾包含空白檔案夾，則不會發佈空白檔案夾。
 
-1. 按一下&#x200B;**[!UICONTROL Publish]**&#x200B;以確認資產的啟動。
-
->[!CAUTION]
->
->如果您發佈正在處理的資產，則只會發佈原始內容。 缺少轉譯。 等待處理完成，然後在處理完成後發佈或重新發佈資產。
-
-## 取消發佈資產{#unpublishing-assets}
-
-1. 導覽至您要從發佈環境（解除發佈）移除的資產／資產檔案夾的位置。
-
-1. 選擇要取消發佈的資產／資料夾，然後從工具欄中按一下「管理出版物」(Manage Publication)]**![「管理出版物選項」(Manage Publication option)](assets/do-not-localize/globe-publication.png)選項。**[!UICONTROL 
-
-1. 從清單中選擇&#x200B;**[!UICONTROL 取消發佈]**&#x200B;操作。
+1. 根據需要選擇&#x200B;**[!UICONTROL Publish]**&#x200B;或&#x200B;**[!UICONTROL Unpublish]**&#x200B;選項。
 
    ![取消發佈動作](assets/unpublish_action.png)
+   *圖：發佈和取消發佈選項以及排程選項。*
 
-1. 若要稍後解除發佈資產，請選取&#x200B;**[!UICONTROL 稍後解除發佈]**，然後選取要解除發佈資產的日期。
-1. 排程資產在發佈環境中無法使用的日期。
-1. 如果資產參考其他資產，請選擇您要取消發佈的參考。 按一下「取消發佈」。****
-1. 在確認對話框中，按一下：
+1. 選擇&#x200B;**[!UICONTROL Now]**&#x200B;立即對資產執行操作，或選擇&#x200B;**[!UICONTROL 稍後]**&#x200B;計畫操作。 如果您選擇&#x200B;**[!UICONTROL Later]**&#x200B;選項，請選擇日期和時間。 按一下&#x200B;**[!UICONTROL 下一步]**。
 
-   * **[!UICONTROL 取消]** 以停止操作
-   * **[!UICONTROL 取]** 消發佈，確認資產在指定日期未發佈（在發佈環境中不再可用）。
+1. 發佈時，如果資產參考其他資產，其參考會列在精靈中。 只會顯示自上次發佈以來未發佈或修改的參照。 選擇要發佈的參照。
 
-   >[!NOTE]
-   >
-   >解除發佈複雜資產時，僅解除發佈資產。 請避免取消發佈參照，因為其他已發佈資產可能會參照這些參照。
+1. 解除發佈時，如果資產參照其他資產，請選擇您要解除發佈的參照。 按一下「取消發佈」。 ****&#x200B;在確認對話方塊中，按一下「取消」以停止動作，或按一下「取消發佈」以確認資產將在指定日期取消發佈。********
+
+瞭解與發佈或取消發佈資產或檔案夾相關的下列限制和秘訣：
+
+* [!UICONTROL 管理出版物]的選項僅適用於具有複製權限的用戶帳戶。
+* 解除發佈複雜資產時，僅解除發佈資產。 請避免取消發佈參照，因為其他已發佈資產可能會參照這些參照。
+* 未發佈空的資料夾。
+* 如果您發佈正在處理的資產，則只會發佈原始內容。 缺少轉譯。 等待處理完成，然後在處理完成後發佈或重新發佈資產。
 
 ## 已關閉的使用者群組 {#closed-user-group}
 
