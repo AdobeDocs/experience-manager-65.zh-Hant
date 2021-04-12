@@ -7,9 +7,9 @@ role: Business Practitioner
 feature: 資產管理，搜尋
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 translation-type: tm+mt
-source-git-commit: d88962cb4018b0b60f61006510f416478d119cb5
+source-git-commit: 46b11d0b59d748f2035e7ed46dc8caeef79d48c0
 workflow-type: tm+mt
-source-wordcount: '9652'
+source-wordcount: '9798'
 ht-degree: 3%
 
 ---
@@ -313,11 +313,11 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 |  | 行動 | 建立MP4檔案，以便在iPhone或Android行動裝置上傳送。選取一或多個寬高比，以符合您所需的解析度大小和目標資料速率。 |
 |  | 平板電腦 | 建立MP4檔案，以便在iPad或Android平板裝置上發佈。選取一或多個外觀比例，以符合您所需的解析度大小和目標資料速率。 |
 
-#### 在上載{#setting-batch-set-presets-at-upload}時設定批次集預設集
+#### 在上傳{#setting-batch-set-presets-at-upload}時設定批次集預設集
 
 如果您想從上傳的影像自動建立影像集或回轉集，請按一下您要使用的預設集的作用中欄。 您可以選取多個預設集。
 
-請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解如何建立批次集預設集。
+請參閱[將批次集預設集設定為自動產生影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以進一步瞭解建立批次集預設集。
 
 ### 串流上傳{#streamed-uploads}
 
@@ -925,4 +925,24 @@ CUG是限制存取您資產的額外方式。 您也可以設定資料夾的登�
 * 系列可以包含不同位置的資產，因為它們只包含這些資產的參考。 每個系列都會維護資產的參考完整性。
 * 您可以與擁有不同權限層級的多位使用者共用系列，包括編輯、檢視等。
 
-如需系列管理的詳細資訊，請參閱[管理系列](/help/assets/manage-collections.md)。
+若要瞭解系列管理的詳細資訊，請參閱[管理系列](/help/assets/manage-collections.md)。
+
+## 在案頭應用程式或Adobe資產連結中檢視資產時，隱藏過期的資產{#hide-expired-assets-via-acp-api}
+
+[!DNL Experience Manager] 案頭應用程式可讓您從Windows或Mac案頭存取DAM儲存庫。Adobe資產連結可讓您從支援的[!DNL Creative Cloud]案頭應用程式存取資產。
+
+從[!DNL Experience Manager]使用者介面瀏覽資產時，不會顯示過期的資產。 若要防止在從案頭應用程式和資產連結瀏覽資產時檢視、搜尋及擷取過期資產，管理員可執行下列設定。 此設定適用於所有使用者，不論管理員權限為何。
+
+執行以下CURL命令。 確保對訪問資產的用戶在`/conf/global/settings/dam/acpapi/`上進行讀訪問。 屬於`dam-user`群組的使用者依預設擁有權限。
+
+```curl
+curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/global/settings/dam/acpapi/configuration/_jcr_content' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'jcr:title=acpapiconfig' \
+--data-urlencode 'hideExpiredAssets=true' \
+--data-urlencode 'hideExpiredAssets@TypeHint=Boolean' \
+--data-urlencode 'jcr:primaryType=nt:unstructured' \
+--data-urlencode '../../jcr:primaryType=sling:Folder'
+```
+
+如需詳細資訊，請參閱如何使用案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)和[如何使用Adobe資產連結](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)瀏覽DAM資產。[
