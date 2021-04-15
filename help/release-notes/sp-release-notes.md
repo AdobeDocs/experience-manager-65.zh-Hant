@@ -3,14 +3,14 @@ title: '[!DNL Experience Manager] 6.5 Service Pack發行說明'
 description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8的發行說明'
 docset: aem65
 mini-toc-levels: 1
+exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: fb1423b7ae110b8a3cf8e0e389394e9266157a9f
+source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
 workflow-type: tm+mt
-source-wordcount: '3360'
-ht-degree: 3%
+source-wordcount: '3418'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] 6.5 Service Pack發行說明  {#aem-service-pack-release-notes}
 
@@ -59,7 +59,7 @@ ht-degree: 3%
 * 當您在連續的清單項目上使用不同的外掛程式時，會新增額外的<br>標籤至清單項目(NPR-35464)。
 * 在兩段之間放置清單時，不能將表添加到清單(NPR-35356)。
 * 當您開始從AEM6.3升級至AEM6.5AEM的執行個體時，升級執行個體的啟動時間會較長(NPR-35323)。
-* 複製包含括AEM括弧()的資產時。 在名稱中，複製失敗(GRANITE-27004、NPR-35315)。
+* 複製包含AEM括弧()的資產時。 在名稱中，複製失敗(GRANITE-27004、NPR-35315)。
 * 將標題添加到富格文本編輯器時，段落按鈕被禁用(NPR-35256)。
 * 將項目添加到現有清單時，它將刪除後續的可折疊或切換清單(NPR-35206)。
 * 當選取「轉出頁面」選項時，會出現一個對話方塊，其中包含所有可用的即時副本，並自動轉出。 頁面的即時副本可發佈至所有地區，而不需使用者動作(NPR-35138)。
@@ -154,9 +154,11 @@ ht-degree: 3%
 
 * 在將頁面結構新增至社群群組時，階層連結中的[!UICONTROL 群組]標題會變更為第一個[!UICONTROL 頁面]的標題(NPR-35803)。
 * 與協調者不同，標準社群成員無法存取和編輯任何草稿貼文(NPR-35339)。
-* 使用DSRPReindexServlet中斷存取控制和拒絕服務，將社群網站拖曳至索引完成(NPR-35591)。
+* `DSRPReindexServlet`的訪問控制和拒絕服務中斷，這會導致社區站點癱瘓，直到索引完成(NPR-35591)。
 * 從[!UICONTROL 管理員]欄位移除[!UICONTROL 所有使用者]並不會實際從後端移除他們(NPR-35592、NPR-35611)。
 * 當輸入的文本是部分匹配時，[!UICONTROL 合成消息]元件不會返回任何結果(NPR-35666)。
+
+* 嘗試通過選擇&#x200B;**添加標籤**&#x200B;將標籤添加到新部落格時，會注意到一些效能影響。 若要改善效能，請安裝[cqTagLucene-0.0.1.zip修補程式](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)，以解決標籤建議問題。 您可以從[!DNL Software Distribution]下載修補程式。
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
@@ -166,7 +168,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] 會在排程的[!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
+>[!DNL Experience Manager Forms] 會在排程的 [!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
 
 **調適型表單**
 
