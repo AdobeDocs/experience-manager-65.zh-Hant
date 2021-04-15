@@ -5,9 +5,9 @@ docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
+source-git-commit: 9b23e9d5bbdbdde864ce71f434d6536439067f82
 workflow-type: tm+mt
-source-wordcount: '3418'
+source-wordcount: '3413'
 ht-degree: 2%
 
 ---
@@ -158,7 +158,7 @@ ht-degree: 2%
 * 從[!UICONTROL 管理員]欄位移除[!UICONTROL 所有使用者]並不會實際從後端移除他們(NPR-35592、NPR-35611)。
 * 當輸入的文本是部分匹配時，[!UICONTROL 合成消息]元件不會返回任何結果(NPR-35666)。
 
-* 嘗試通過選擇&#x200B;**添加標籤**&#x200B;將標籤添加到新部落格時，會注意到一些效能影響。 若要改善效能，請安裝[cqTagLucene-0.0.1.zip修補程式](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)，以解決標籤建議問題。 您可以從[!DNL Software Distribution]下載修補程式。
+* 當嘗試將標籤新增至新部落格時，您可能會注意到某些效能影響和效能變慢，方法是選取「新增標籤」**[!UICONTROL 。]**&#x200B;若要改善效能，請安裝[cqTagLucene-0.0.1.zip修補程式](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)，此修補程式可從[!DNL Software Distribution]取得。
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
