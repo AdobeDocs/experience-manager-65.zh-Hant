@@ -2,8 +2,8 @@
 title: 相關資產
 description: 瞭解如何建立共用一些共同屬性的數位資產之間的關聯。 也可建立數位資產之間的來源衍生關係。
 contentOwner: AG
-role: 業務從業人員
-feature: 協作，資產管理
+role: Business Practitioner
+feature: Collaboration,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

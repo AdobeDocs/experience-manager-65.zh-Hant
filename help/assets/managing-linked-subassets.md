@@ -2,8 +2,8 @@
 title: 使用參考和多頁管理複合資產
 description: 瞭解如何從 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]建立數位資產的參考。 使用頁面檢視器功能可檢視多頁檔案的個別子頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
-role: 業務從業人員、管理員
-feature: 資產管理
+role: Business Practitioner, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
 workflow-type: tm+mt

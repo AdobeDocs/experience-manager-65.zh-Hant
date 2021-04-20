@@ -3,8 +3,8 @@ title: 在 [!DNL Adobe Experience Manager]中搜尋數位資產和影像
 description: 瞭解如何使用「篩選器」面板在 [!DNL Adobe Experience Manager] 中尋找所需資產，以及如何使用顯示在搜尋中的資產。
 contentOwner: AG
 mini-toc-levels: 1
-feature: 搜尋，中繼資料
-role: 業務從業人員
+feature: Search, Metadata
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: fd283b840830bef613689f81cf753e226fb834d7
 workflow-type: tm+mt

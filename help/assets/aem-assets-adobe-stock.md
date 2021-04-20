@@ -2,7 +2,7 @@
 title: 管理 [!DNL Adobe Stock] 資產
 description: 從 [!DNL Adobe Experience Manager]內搜尋、擷取、授權及管理 [!DNL Adobe Stock] 資產。 將授權資產當做任何其他數位資產使用。
 contentOwner: AG
-feature: 搜尋，Adobe Stock
+feature: Search, Adobe Stock
 role: Business Practitioner, Administrator
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 translation-type: tm+mt

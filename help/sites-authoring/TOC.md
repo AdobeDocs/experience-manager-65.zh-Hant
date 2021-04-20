@@ -7,8 +7,8 @@ user-guide-title: AEM 6.5 Authoring 使用指南
 breadcrumb-title: Authoring 指南
 user-guide-description: 了解在 AEM 中建立內容和編寫的重要概念。
 feature-set: Experience Manager Sites
-feature: 製作
-role: 業務從業人員
+feature: Authoring
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt

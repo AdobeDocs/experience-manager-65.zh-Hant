@@ -2,8 +2,8 @@
 title: 使用連結分享資產
 description: 將資產、檔案夾和系列共用為URL。
 contentOwner: AG
-role: 業務從業人員
-feature: 連結共用，資產管理
+role: Business Practitioner
+feature: Link Sharing,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: '[!DNL Assets] 首頁體驗'
 description: '個人化首頁，提供多樣化的歡迎畫面體驗，包括資產最近活動的快照。 [!DNL Experience Manager Assets] '
 contentOwner: AG
-feature: 開發人員工具，資產管理
-role: 管理員，商業從業人員
+feature: Developer Tools, Asset Management
+role: Administrator, Business Practitioner
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

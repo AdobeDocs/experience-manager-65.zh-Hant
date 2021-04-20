@@ -4,7 +4,7 @@ seo-title: 安裝工作台
 description: 安裝工作台。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-role: 管理員
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 建立邀請外部使用者處理常式
 description: 建立邀請外部使用者處理常式
-role: 開發人員
+role: Developer
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

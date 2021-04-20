@@ -2,8 +2,8 @@
 title: 使用資產見解的示範套件
 description: 使用示範套件，讓Adobe資產前瞻分析能夠從網頁擷取資料並產生前瞻分析。
 contentOwner: AG
-role: 業務從業人員、管理員
-feature: 資產分析，資產報表
+role: Business Practitioner, Administrator
+feature: Asset Insights,Asset Reports
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

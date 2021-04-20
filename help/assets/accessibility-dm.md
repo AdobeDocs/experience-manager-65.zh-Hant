@@ -4,8 +4,8 @@ description: 瞭解Dynamic Media和Dynamic Media檢視器的協助工具支援
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-feature: 協助工具
-role: 業務從業人員、管理員
+feature: Accessibility
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

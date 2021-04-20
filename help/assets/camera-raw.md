@@ -2,8 +2,8 @@
 title: '[!DNL Adobe Camera Raw] 支援。'
 description: 瞭解如何在 [!DNL Adobe Experience Manager Assets]中啟用 [!DNL Adobe Camera Raw] 支援。
 contentOwner: AG
-role: 管理員
-feature: 開發人員工具
+role: Administrator
+feature: Developer Tools
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

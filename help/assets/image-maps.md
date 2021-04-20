@@ -2,8 +2,8 @@
 title: 使用超連結新增影像地圖
 description: 瞭解如何新增包含超連結的影像地圖至影像。
 contentOwner: AG
-role: 業務從業人員、管理員
-feature: 資產管理
+role: Business Practitioner, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

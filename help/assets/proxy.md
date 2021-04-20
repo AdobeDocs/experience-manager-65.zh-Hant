@@ -2,7 +2,7 @@
 title: '[!DNL Assets] 代理開發'
 description: Proxy是 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy、支援的作業、proxy元件，以及如何開發自訂Proxy工作器。
 contentOwner: AG
-role: 管理員、架構師
+role: Administrator, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
 source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537

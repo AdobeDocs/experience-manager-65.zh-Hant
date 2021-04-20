@@ -2,7 +2,7 @@
 title: 流暢AEM的體驗功能清單
 description: 流暢的體驗功能清單
 index: n
-feature: 製作
+feature: Authoring
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

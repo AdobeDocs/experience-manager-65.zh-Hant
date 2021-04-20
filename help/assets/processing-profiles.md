@@ -8,8 +8,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
-role: 業務從業人員、管理員
-feature: 工作流程，資產管理，轉譯
+role: Business Practitioner, Administrator
+feature: Workflow,Asset Management,Renditions
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

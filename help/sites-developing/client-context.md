@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: c881ad66-bcc3-4f99-b77f-0944c23e2d29
 docset: aem65
-feature: 內容中樞
+feature: Context Hub
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

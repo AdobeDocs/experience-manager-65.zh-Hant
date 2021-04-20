@@ -10,8 +10,8 @@ topic-tags: brand-portal
 content-type: reference
 discoiquuid: 90e3fd0e-9bc3-4aff-8c7b-7408f5b940e8
 docset: aem65
-feature: 品牌入口網站
-role: 業務從業人員
+feature: Brand Portal
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

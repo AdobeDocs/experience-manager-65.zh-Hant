@@ -2,8 +2,8 @@
 title: 時間軸檢視中數位資產的活動串流
 description: 本文說明如何在時間軸上顯示資產的活動記錄檔。
 contentOwner: AG
-feature: 資產管理
-role: 業務從業人員、管理員
+feature: Asset Management
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

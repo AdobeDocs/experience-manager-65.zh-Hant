@@ -2,8 +2,8 @@
 title: 網路考量與需求
 description: 在設計 [!DNL Adobe Experience Manager Assets] 部署時討論網路注意事項。
 contentOwner: AG
-role: 架構師、管理員
-feature: 開發人員工具
+role: Architect, Administrator
+feature: Developer Tools
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

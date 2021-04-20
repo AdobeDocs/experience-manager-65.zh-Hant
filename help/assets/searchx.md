@@ -2,8 +2,8 @@
 title: 擴充搜尋功能。
 description: 將 [!DNL Adobe Experience Manager Assets] 的搜尋功能擴展至預設值以外。
 contentOwner: AG
-role: 開發人員
-feature: 搜尋
+role: Developer
+feature: Search
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

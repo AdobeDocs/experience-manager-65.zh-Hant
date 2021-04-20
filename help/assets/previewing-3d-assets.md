@@ -3,8 +3,8 @@ title: 預覽 3D 資產
 description: 瞭解如何預覽3D資產
 contentOwner: Rick Brough
 docset: aem65
-feature: 3D資產
-role: 業務從業人員
+feature: 3D Assets
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

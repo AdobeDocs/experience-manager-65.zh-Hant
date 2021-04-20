@@ -1,7 +1,7 @@
 ---
 title: 使用「版面」模式調整互動式通訊的元件大小
 description: '使用「版面」模式中可用的回應式格線來定義元件的位置 '
-feature: 互動式通訊
+feature: Interactive Communication
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

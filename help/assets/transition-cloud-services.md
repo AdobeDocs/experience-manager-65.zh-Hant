@@ -2,8 +2,8 @@
 title: 將翻譯雲端服務套用至資料夾
 description: 將翻譯雲端服務套用至資料夾
 contentOwner: AG
-role: 管理員
-feature: 轉換
+role: Administrator
+feature: Translation
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

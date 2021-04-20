@@ -3,8 +3,8 @@ title: 使用MSM重複使用資產
 description: 跨衍生自父資產並連結至父資產的多個頁面／資料夾使用資產。 資產會與主要副本保持同步，只要按幾下滑鼠，就會從父資產接收更新。
 contentOwner: AG
 mini-toc-levels: 1
-role: 業務從業人員、管理員、架構師
-feature: 資產管理，多網站管理員
+role: Business Practitioner, Administrator, Architect
+feature: Asset Management,Multi Site Manager
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

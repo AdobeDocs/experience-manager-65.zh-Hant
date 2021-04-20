@@ -2,8 +2,8 @@
 title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
-feature: 智慧型標籤，搜尋
-role: 業務從業人員
+feature: Smart Tags, Search
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

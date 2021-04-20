@@ -2,8 +2,8 @@
 title: '中繼資料結構，以定義 [!DNL Adobe Experience Manager Assets]中中繼資料屬性頁面的配置。 '
 description: 中繼資料結構定義屬性頁面的版面配置，以及為資產顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
-role: 業務從業人員、管理員
-feature: 中繼資料
+role: Business Practitioner, Administrator
+feature: Metadata
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

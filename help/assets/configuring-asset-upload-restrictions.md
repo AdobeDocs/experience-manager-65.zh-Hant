@@ -2,8 +2,8 @@
 title: 設定資產上傳限制
 description: '限制使用者可上傳的資產（檔案）類型 '
 contentOwner: AG
-role: 開發人員、管理員、架構設計人員
-feature: 資產管理，上傳
+role: Developer, Administrator, Architect
+feature: Asset Management,Upload
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

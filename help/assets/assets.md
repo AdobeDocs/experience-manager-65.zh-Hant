@@ -2,8 +2,8 @@
 title: ' [!DNL Adobe Experience Manager Assets] 簡介'
 description: 瞭解什麼是數位資產管理、其使用案例，以及 [!DNL Adobe Experience Manager Asset] 產品。
 contentOwner: AG
-feature: 資產管理
-role: 領導者、架構師、商業從業人員
+feature: Asset Management
+role: Leader, Architect, Business Practitioner
 translation-type: tm+mt
 source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt

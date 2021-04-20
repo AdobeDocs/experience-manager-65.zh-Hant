@@ -2,8 +2,8 @@
 title: 共用資產的私人資料夾
 description: 瞭解如何在 [!DNL Adobe Experience Manager Assets] 中建立專用資料夾，並與其他用戶共用該資料夾，並為其分配各種權限。
 contentOwner: AG
-role: 業務從業人員
-feature: 協作
+role: Business Practitioner
+feature: Collaboration
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

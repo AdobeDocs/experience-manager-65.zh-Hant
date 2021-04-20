@@ -2,8 +2,8 @@
 title: 建立翻譯專案
 description: 瞭解如何在 [!DNL Adobe Experience Manager]中建立翻譯項目。
 contentOwner: AG
-role: 架構師、管理員
-feature: 轉換
+role: Architect, Administrator
+feature: Translation
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

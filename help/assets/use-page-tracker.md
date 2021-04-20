@@ -2,8 +2,8 @@
 title: 使用頁面追蹤器並在網頁中內嵌程式碼
 description: 瞭解如何將頁面追蹤器和內嵌JavaScript程式碼加入您的網站程式碼，讓Adobe Analytics能夠擷取資產的使用資料。
 contentOwner: AG
-role: 架構師、管理員
-feature: 資產報表
+role: Architect, Administrator
+feature: Asset Reports
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

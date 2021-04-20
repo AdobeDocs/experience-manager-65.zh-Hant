@@ -2,8 +2,8 @@
 title: 「建立和配置資產編輯器」頁
 description: 瞭解如何建立自訂資產編輯器頁面並同時編輯多個資產。
 contentOwner: AG
-role: 業務從業人員、管理員
-feature: 開發人員工具，資產管理
+role: Business Practitioner, Administrator
+feature: Developer Tools,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

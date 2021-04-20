@@ -2,8 +2,8 @@
 title: 使用智慧型內容服務設定資產標籤
 description: 瞭解如何使用智慧型內容服務在 [!DNL Adobe Experience Manager]中設定智慧型標籤和增強的智慧型標籤。
 contentOwner: AG
-role: 管理員
-feature: 標籤，智慧標籤
+role: Administrator
+feature: Tagging,Smart Tags
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

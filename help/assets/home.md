@@ -2,8 +2,8 @@
 title: Assets 指南
 description: 本指南涵蓋所有Experience Manager資產工作，例如如何建立、管理、提供和最佳化數位資產。
 user-guide-title: Assets 指南
-feature: 資產管理
-role: 業務從業人員、架構師、管理員
+feature: Asset Management
+role: Business Practitioner, Architect, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

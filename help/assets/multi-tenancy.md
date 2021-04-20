@@ -2,8 +2,8 @@
 title: 系列、程式碼片段和程式碼片段範本的多租用功能
 description: 瞭解多租賃功能如何讓您根據客戶組織來隔離CRX存放庫中的內容，以防止未經授權的存取。
 contentOwner: AG
-role: 架構師、管理員、領導者
-feature: 集合
+role: Architect, Administrator, Leader
+feature: Collections
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

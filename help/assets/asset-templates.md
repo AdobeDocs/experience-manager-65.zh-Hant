@@ -2,8 +2,8 @@
 title: 資產範本
 description: 瞭解 [!DNL Adobe Experience Manager Assets] 中的資產範本，以及如何使用資產範本建立行銷文宣。
 contentOwner: AG
-role: 業務從業人員
-feature: 資產管理，開發人員工具
+role: Business Practitioner
+feature: Asset Management,Developer Tools
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: ' [!DNL Assets]的最佳做法'
 description: 通過識別並遵守取決於部署和配置的最佳實踐，提高系統負載下的穩定性和效能。
 contentOwner: AG
-feature: 資產管理
-role: 架構師、管理員
+feature: Asset Management
+role: Architect, Administrator
 translation-type: tm+mt
 source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt

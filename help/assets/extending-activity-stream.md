@@ -2,8 +2,8 @@
 title: 將 [!DNL Assets] 與活動串流整合
 description: 說明 [!DNL Experience Manager] 的錄制功能，以及如何設定它來錄制特定事件。
 contentOwner: AG
-role: 開發人員
-feature: 資產管理
+role: Developer
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

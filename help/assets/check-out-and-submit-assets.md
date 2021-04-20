@@ -2,8 +2,8 @@
 title: 簽入和簽出 [!DNL Assets]中的檔案
 description: 瞭解如何取出要編輯的資產，並在變更完成後將其存回。
 contentOwner: AG
-role: 業務從業人員
-feature: 資產管理
+role: Business Practitioner
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
 workflow-type: tm+mt

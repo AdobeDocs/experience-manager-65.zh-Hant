@@ -2,8 +2,8 @@
 title: 將浮水印新增至您的數位資產
 description: 瞭解如何使用浮水印功能將數位水印新增至資產。
 contentOwner: AG
-role: 業務從業人員、管理員
-feature: 資產管理
+role: Business Practitioner, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

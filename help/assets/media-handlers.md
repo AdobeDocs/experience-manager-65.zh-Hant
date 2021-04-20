@@ -2,8 +2,8 @@
 title: 使用媒體處理常式和工作流程處理資產
 description: 瞭解媒體處理常式以及如何使用工作流程對您的數位資產執行工作。
 contentOwner: AG
-role: 業務從業人員
-feature: 工作流程，轉譯
+role: Business Practitioner
+feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 translation-type: tm+mt
 source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537

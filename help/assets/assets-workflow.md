@@ -2,8 +2,8 @@
 title: 使用工作流程處理資產
 description: 資產處理，以轉換格式、建立轉譯、管理資產、驗證資產，以及執行工作流程。
 contentOwner: AG
-feature: 工作流程、轉譯
-role: 業務從業人員、管理員
+feature: Workflow, Renditions
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
