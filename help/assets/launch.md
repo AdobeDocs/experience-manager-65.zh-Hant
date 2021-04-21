@@ -6,16 +6,16 @@ topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
-feature: Viewers
+feature: 檢視器
 role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
+exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 4b1b9fb014594a67e8db271cc02bc54b29e24896
 workflow-type: tm+mt
-source-wordcount: '6636'
+source-wordcount: '6602'
 ht-degree: 8%
 
 ---
-
 
 # 整合Dynamic Media檢視器與Adobe Analytics及Experience Platform Launch{#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
@@ -43,11 +43,13 @@ ht-degree: 8%
 
 與Experience Platform Launch整合的主要使用案例是同時使用AEM Assets和AEM Sites的客戶。 在這些情況下，您可以在作者節點和Experience Platform Launch之間設AEM置標準整合，然後將Sites實例與Experience Platform Launch屬性關聯。 之後，任何新增至「網站」頁面的Dynamic MediaWCM元件都會追蹤檢視者的資料和事件。
 
-請參閱[關於追蹤AEM Sites的Dynamic Media檢視器](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites)。
+請參閱[追蹤AEM Sites的Dynamic Media檢視器](#tracking-dynamic-media-viewers-in-aem-sites)。
 
 整合支援的次要使用案例是僅使用AEM Assets或Dynamic Media經典的客戶。 在這種情況下，您會取得檢視器的內嵌程式碼，並將它新增至網站頁面。 然後，從Experience Platform Launch取得Experience Platform Launch程式庫生產URL，並手動將其新增至網頁程式碼。
 
-請參閱[關於使用內嵌代碼追蹤Dynamic Media檢視器。](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode)
+請參閱[使用內嵌程式碼追蹤Dynamic Media檢視器。](#tracking-dynamic-media-viewers-using-embed-code)
+
+<!-- Path on internal wiki [About tracking Dynamic Media viewers using embed code](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode). -->
 
 ## 資料和事件追蹤在整合{#how-data-and-event-tracking-works-in-the-integration}中的運作方式
 
