@@ -11,9 +11,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
-feature: Configuration,Hybrid mode
+feature: 配置，混合模式
 translation-type: tm+mt
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
 source-wordcount: '7843'
 ht-degree: 1%
@@ -565,7 +565,7 @@ dam/dm/presets/analytics/jcr:content/userdata`
 
       與`https://localhost:4502/crx/de/index.jsp#/conf/global/settings/dam/dm/presets/analytics/jcr%3Acontent/userdata`中一樣
 
-      如果您無權訪問「作者」節點上的CRXDE Lite，則可以通過「發佈」伺服器檢查預設集。
+      如果您沒有「作者」節點上的CRXDE Lite權限，則可以通過「發佈」伺服器檢查預設。
 
    * **透過影像伺服器檢查視訊分析預設集**
 
