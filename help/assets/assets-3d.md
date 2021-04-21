@@ -7,16 +7,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
-feature: 3D Assets,Asset Management
+feature: 3D資產，資產管理
 role: Business Practitioner, Administrator
+exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
 workflow-type: tm+mt
-source-wordcount: '2319'
-ht-degree: 1%
+source-wordcount: '2291'
+ht-degree: 2%
 
 ---
-
 
 # 在Dynamic Media使用3D資產{#working-with-three-d-assets-dm}
 
@@ -24,7 +24,7 @@ Dynamic Media可讓您上傳、管理、檢視和傳遞3D資產，成為身歷�
 
 * 按一下3D資產的發佈（使用工具列上的&#x200B;**[!UICONTROL Quick Publish]**）以產生URL。
 * 使用由Adobe Dimension提供支援的高品質互動式維度檢視器預設集，以最佳化支援檢視3D資產。
-* 3D Media WCM元件可讓您輕鬆將3D資產新增至AEM Sites頁面。
+* 3D Media WCM元件可讓您輕鬆將3D資產新增至Adobe Experience Manager Sites頁面。
 
 在Dynamic Media使用3D資產不需額外設定。
 
@@ -53,7 +53,7 @@ Dynamic Media支援下列3D格式。
 >
 >3D資產在Dynamic Media-混合模式中不受支援。
 
-在您使用Dynamic Media的3D資產之前，請確定您的管理員已AEM在Dynamic Media-Scene7模式中啟用並設定Dynamic MediaCloud Services。
+在您使用Dynamic Media的3D資產之前，請確定您的Experience Manager管理員已在Dynamic Media-Scene7模式中啟用並設定了Dynamic MediaCloud Services。
 
 請參閱配置Dynamic Media-Scene7模式和[疑難排解Dynamic Media-Scene7模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。](/help/assets/troubleshoot-dms7.md)
 
@@ -91,7 +91,7 @@ Dynamic Media支援下列3D格式。
 
 互動式3D檢視器除其他功能外，還包含一系列互動式相機控制項，讓您環繞、縮放和平移3D資產。
 
-請注意，在「資產詳細資料」頁面檢視中開啟3D資產所花的時間取決於數個因素。 這些因素包括：
+在「資產詳細資料」頁面檢視中開啟3D資產所花的時間，取決於數個因素。 這些因素包括：
 
 * 伺服器的頻寬。
 * 伺服器延遲
@@ -109,32 +109,26 @@ Dynamic Media支援下列3D格式。
 
 另請參閱[使用軟體介面預覽資產](/help/assets/previewing-assets.md)。
 
-**若要從資產詳細資訊頁面檢視並與3D資產互動**
+**若要從資產詳細資訊頁面檢視3D資產並與之互動：**
 
-1. 請確定您已將3D資產上傳至AEM。
+1. 請確定您已將3D資產上傳至Experience Manager。
 
    請參閱[上傳您的3D資產以用於Dynamic Media。](/help/assets/manage-assets.md#uploading-assets)
 
-1. 從AEM **[!UICONTROL Navigation]**&#x200B;頁面上，點選&#x200B;**[!UICONTROL Assets > Files。]**
+1. 從Experience Manager，在&#x200B;**[!UICONTROL Navigation]**&#x200B;頁面上，點選&#x200B;**[!UICONTROL Assets > Files。]**
 1. 在頁面右上角的&#x200B;**[!UICONTROL View]**&#x200B;下拉式清單中，點選&#x200B;**[!UICONTROL 卡片檢視。]**
 1. 導覽至您要檢視的3D資產。
-1. 點選3D資產的資訊卡，以在資產詳細資訊頁面中開啟它。
+1. 點選3D資產的卡片。
 1. 在3D資產的詳細資料檢視頁面上，執行下列任一項作業：
 
-   * **旋轉相機** -環繞3D場景和物件環繞視圖。
-      * _滑鼠_:左鍵按一下+拖曳。
-      * _觸控螢幕_:單指按+拖曳。
-   * **平移您的相機** -向左、向右、向上或向下平移您的檢視。
-      * _滑鼠_:按一下滑鼠右鍵並拖曳。
-      * _觸控螢幕_:雙指按住+拖曳。
-   * **縮放您的相機** -縮放您的相機以移入和移出3D場景的區域。
-      * _滑鼠_:滾輪。
-      * _觸控螢幕_:雙指夾捏。
-   * **重新輸入相機** -將相機重新輸入到3D場景中某個物件的某個點。
-      * _滑鼠_:按兩下。
-      * _觸控螢幕_:點兩下。
-   * **Reset**  —— 靠近頁面的右下角，點選「Reset」（重設）圖示，將檢視目標點還原至3D資產的中央。Reset也會使攝影機更靠近或更遠，以便以合理的檢視大小顯示整個資產。
-   * **全螢幕模式** -若要進入全螢幕模式，請在頁面的右下角點選全螢幕圖示。
+   | 檢視 | 說明 | 滑鼠動作 | 觸控螢幕動作 |
+   | --- | --- | --- | --- |
+   | **轉動您的相機** | 使檢視畫面在 3D 場景和物件周圍環繞 | 左鍵按一下+拖曳。 | 單指按+拖曳。 |
+   | **平移您的相機** | 向左、向右、向上或向下平移您的視圖。 | 按一下滑鼠右鍵並拖曳。 | 雙指按住+拖曳。 |
+   | **縮放您的相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 雙指夾捏。 |
+   | **重新輸入您的相機** | 將相機重新輸入到3D場景中某個物件的點。 | 按兩下。 | 點兩下。 |
+   | **重設** | 在頁面的右下角附近，點選「重設」圖示，將檢視目標點還原至3D資產的中央。 Reset也會使攝影機更靠近或更遠，以便以合理的檢視大小顯示整個資產。 |  |  |
+   | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，點選全螢幕圖示。 |  |  |
 
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL Close]**&#x200B;以返回「資產」頁面。
 
@@ -148,7 +142,7 @@ Dynamic Media支援下列3D格式。
 
 另請參閱[使用軟體介面預覽資產。](/help/assets/previewing-assets.md)
 
-**若要在3D媒體元件內檢視3D資產並與之互動**
+**若要在3D媒體元件內檢視3D資產並與之互動：**
 
 1. 當網頁處於&#x200B;**[!UICONTROL 編輯]**&#x200B;模式時，請執行下列任一操作：
 
@@ -160,20 +154,14 @@ Dynamic Media支援下列3D格式。
 
 1. 在&#x200B;**[!UICONTROL 預覽]**&#x200B;模式中，執行下列任一操作：
 
-   * **旋轉相機** -環繞3D場景和物件環繞視圖。
-      * _滑鼠_:左鍵按一下+拖曳。
-      * _觸控螢幕_:單指按+拖曳。
-   * **平移您的相機** -向左、向右、向上或向下平移您的檢視。
-      * _滑鼠_:按一下滑鼠右鍵並拖曳。
-      * _觸控螢幕_:雙指按住+拖曳。
-   * **縮放您的相機** -縮放您的相機以移入和移出3D場景的區域。
-      * _滑鼠_:滾輪。
-      * _觸控螢幕_:雙指夾捏。
-   * **重新輸入相機** -將相機重新輸入到3D場景中某個物件的某個點。
-      * _滑鼠_:按兩下。
-      * _觸控螢幕_:點兩下。
-   * **Reset**  —— 靠近頁面的右下角，點選「Reset」（重設）圖示，將檢視目標點還原至3D資產的中央。Reset也會使攝影機更靠近或更遠，以便以合理的檢視大小顯示整個資產。
-   * **全螢幕模式** -若要進入全螢幕模式，請在頁面的右下角點選全螢幕圖示。
+   | 檢視 | 說明 | 滑鼠動作 | 觸控螢幕動作 |
+   | --- | --- | --- | --- |
+   | **轉動您的相機** | 使檢視畫面在 3D 場景和物件周圍環繞 | 左鍵按一下+拖曳。 | 單指按+拖曳。 |
+   | **平移您的相機** | 向左、向右、向上或向下平移您的視圖。 | 按一下滑鼠右鍵並拖曳。 | 雙指按住+拖曳。 |
+   | **縮放您的相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 雙指夾捏。 |
+   | **重新輸入您的相機** | 將相機重新輸入到3D場景中某個物件的點。 | 按兩下。 | 點兩下。 |
+   | **重設** | 在頁面的右下角附近，點選「重設」圖示，將檢視目標點還原至3D資產的中央。 Reset也會使攝影機更靠近或更遠，以便以合理的檢視大小顯示整個資產。 |  |  |
+   | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，點選全螢幕圖示。 |  |  |
 
 ## 關於使用3D介質元件{#working-with-three-d-media-component}
 
@@ -184,13 +172,12 @@ Dynamic Media包含Dynamic Media3D媒體元件，您可在AEM Sites使用此元�
    * [可選——配置3D介質元件](#configuring-the-three-d-component)
 * [將3D資產指派給3D媒體元件](#assigning-a-three-d-asset-to-the-component)
 
-
 ## 將3D媒體元件新增至頁面範本{#adding-three-d-media-component-to-page-template}
 
 1. 導覽至&#x200B;**[!UICONTROL 工具>一般>範本。]**
 1. 導覽至您要在中啟用3D元件的頁面範本，然後選取範本。
 1. 點選&#x200B;**[!UICONTROL 編輯]**&#x200B;以開啟範本。
-1. 在頁面右上角的下拉式功能表中，選取&#x200B;**[!UICONTROL 結構]**&#x200B;模式（如果尚未啟用）。
+1. 在頁面右上方的下拉式功能表中，選取&#x200B;**[!UICONTROL 結構]**&#x200B;模式（如果尚未啟用）。
 
    ![3d-media-component-structure](/help/assets/assets-dm/3d-media-component-structure.png)
 
@@ -203,12 +190,12 @@ Dynamic Media包含Dynamic Media3D媒體元件，您可在AEM Sites使用此元�
 
 ## 將3D介質元件添加到網頁{#adding-the-three-d-media-component-to-a-web-page}
 
-如果您使用Adobe Experience Manager做為網頁內容管理系統，可以透過3D媒體元件將3D資產新增至網頁。
+如果您使用Experience Manager作為網頁內容管理系統，您可以透過3D媒體元件將3D資產新增至網頁。
 
 另請參閱[將Dynamic Media資產添加到頁面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 1. 開啟AEM Sites並選取您要新增Dynamic Media3D媒體元件的網頁。
-1. 點選「**[!UICONTROL 編輯]**（鉛筆）」圖示，將頁面開啟至頁面編輯器。 請確定頁面右上方附近已選取「編輯」模式。****
+1. 點選「**[!UICONTROL 編輯]**（鉛筆）」圖示，將頁面開啟至頁面編輯器。 請確定在頁面右上角附近選取了&#x200B;**[!UICONTROL 編輯]**&#x200B;模式。
 
    ![3d-media-component-add](/help/assets/assets-dm/3d-media-component-edit.png)
 
@@ -256,19 +243,19 @@ Dynamic Media包含Dynamic Media3D媒體元件，您可在AEM Sites使用此元�
 
 ## 發佈靜態Dynamic Media3D資產{#publishing-three-d-assets}
 
-Dynamic Media接受Dynamic Media支援的各種3D檔案格式作為&#x200B;*靜態內容*。 靜態內容表示您可以上傳和發佈3D資產，但是不支援與3D資產相關的&#x200B;*dynamic*&#x200B;影像或影像重新整理。 原因是Dynamic Media影像伺服器無法辨識3D格式。 因此，在Dynamic Media發佈3D資產後，您就可以複製立即URL。 3D資產的URL會遵循通常的Dynamic MediaURL結構。 不過，您無法編輯資產URL中的任何參數，這與Dynamic Media的傳統影像資產不同。
+Dynamic Media接受Dynamic Media支援的各種3D檔案格式，作為&#x200B;*static content*。 靜態內容表示您可以上傳和發佈3D資產，但是不支援與3D資產相關的&#x200B;*dynamic*&#x200B;影像或影像重新整理。 原因是Dynamic Media影像伺服器無法辨識3D格式。 因此，在Dynamic Media發佈3D資產後，您就可以複製立即URL。 3D資產的URL會遵循通常的Dynamic MediaURL結構。 不過，您無法編輯資產URL中的任何參數，這與Dynamic Media的傳統影像資產不同。
 
 另請參閱[獲取靜態資產的URL。](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset)
 
 在&#x200B;**[!UICONTROL 資訊卡檢視]**&#x200B;中，資產名稱正下方及其日期和時間左側會顯示一個小型全球圖示，以指出資產已發佈。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **** 欄會指出已發佈或未發佈的資產。
 
-如果您使AEM用作WCM，請使用此發佈方法直接在網頁上新增Dynamic Media3D資產。
+如果您使用Experience Manager做為WCM，請使用此發佈方法直接在網頁上新增Dynamic Media3D資產。
 
 另請參閱[發佈Dynamic Media資產。](publishing-dynamicmedia-assets.md)
 
 另請參閱[發佈頁面。](/help/sites-authoring/publishing-pages.md)
 
-**若要發佈靜態Dynamic Media3D資產**
+**若要發佈靜態Dynamic Media3D資產：**
 
 1. 開啟3D資產（GLB、OBJ或STL檔案格式），以在資產詳細資訊頁面中檢視。
 1. 在工具列上，點選「快速發佈」。]****[!UICONTROL 
@@ -280,7 +267,7 @@ Dynamic Media接受Dynamic Media支援的各種3D檔案格式作為&#x200B;*靜�
 
    ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
 
-1. 點選「**[!UICONTROL original」。]** 當3D資產發佈（或「啟動」）時，如果符合下列所有3D資產條件， **** URLbutton會出現在頁面左下角的附近：
+1. 點選&#x200B;**[!UICONTROL original]**。 當3D資產發佈（或「啟動」）時，如果符合下列所有3D資產條件，**[!UICONTROL URL]**&#x200B;按鈕會出現在頁面的左下角附近：
    * 3D資產是支援的格式（GLB、OBJ、STL和USDZ）。
    * 3D資產已收錄至Dynamic Media影像製作系統(IPS)。
    * 3D資產會發佈。
@@ -291,7 +278,7 @@ Dynamic Media接受Dynamic Media支援的各種3D檔案格式作為&#x200B;*靜�
 
 ### 使用Dimensional檢視器{#alternate-publish-methods}發佈Dynamic Media3D資產的替代方法
 
-如果您&#x200B;*not*&#x200B;使用作為WCM，請使用下列兩種方法來發佈Dynamic Media3DAEM資產。
+如果您&#x200B;*not*&#x200B;使用Experience Manager做為WCM，請使用下列兩種方法發佈Dynamic Media3D資產。
 
 * **[!UICONTROL URL]** -使用 **** URL如果您使用協力廠商的網頁內容管理系統，而且您想要使用維度檢視器將Dynamic Media3D資產連結至您的網頁。
 
