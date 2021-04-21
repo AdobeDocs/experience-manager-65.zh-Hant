@@ -1,17 +1,17 @@
 ---
-title: 如何使用JSON結構描述建立最適化表單？
+title: 如何使用JSON結構描述建立最適化Forms?
 description: 瞭解如何使用JSON結構描述來建立最適化表單作為表單模型。 您可以使用現有的JSON結構描述來建立最適化表單。 使用JSON結構描述的範例進行更深入的挖掘、在JSON結構描述定義中預先設定欄位、限制最適化表單元件的可接受值，以及瞭解不支援的結構。
-feature: Adaptive Forms
-role: Business Practitioner, Developers
-level: Beginner, Imtermediate
+feature: 適用性表單
+role: Business Practitioner, Developer
+level: Beginner, Intermediate
+exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 translation-type: tm+mt
-source-git-commit: 37ab98c9c78af452887c32101287b6d7f18d9d91
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1450'
 ht-degree: 4%
 
 ---
-
 
 # 使用JSON結構描述{#creating-adaptive-forms-using-json-schema}建立最適化表單
 
@@ -65,7 +65,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
    <td><p>具有enum和enumNames約束的字串屬性。</p> <p>語法、</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td>
    <td><p>下拉式元件：</p>
     <ul>
-     <li>enumNames中列出的值將顯示在下拉框中。</li>
+     <li>enumNames中列出的值會顯示在下拉方塊中。</li>
      <li>枚舉中列出的值用於計算。</li>
     </ul> </td>
   </tr>
@@ -359,7 +359,7 @@ JSON結構描述由簡單和複雜的元素類型組成。 這些元素具有向
 
 JavaScript是最適化表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用最適化表單指令碼模型API。 您可以預先將表單物件設定為[，以評估表單事件上的運算式](adaptive-form-expressions.md)。
 
-使用aem:afproperties屬性來預先設定最適化表單運算式或指令碼，以用於最適化表單元件。 例如，觸發初始化事件時，下列程式碼會設定電話欄位的值，並列印值至記錄檔：
+使用aem:afproperties屬性來預先設定最適化表單運算式或指令碼，以用於最適化表單元件。 例如，觸發初始化事件時，下列程式碼會設定電話欄位的值，並列印一個值至記錄：
 
 ```json
 "telephone": {
