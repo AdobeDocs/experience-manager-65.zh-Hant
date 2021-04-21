@@ -1,17 +1,17 @@
 ---
-title: 如何使用XML架構建立最適化表單？
+title: 如何使用XML架構建立自適應Forms?
 description: 瞭解如何將XML架構用作最適化表單的表單模型。 您可以套用現有的XSD範本，以建立最適化表單，並從XSD拖放架構元素至最適化表單。 使用XML架構範例深入挖掘，使用XML架構新增特殊屬性至欄位，並限制最適化表單元件的可接受值。
-feature: Adaptive Forms
-role: Business Practitioner, Developers
-level: Beginner, Imtermediate
+feature: 適用性表單
+role: Business Practitioner, Developer
+level: Beginner, Intermediate
+exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
 translation-type: tm+mt
-source-git-commit: ec8a4c3941b5434f10ad0727be02fcf296cd4da7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1075'
 ht-degree: 3%
 
 ---
-
 
 # 使用XML架構{#creating-adaptive-forms-using-xml-schema}建立最適化表單
 
@@ -297,7 +297,7 @@ bindRef</code>欄位顯示樹元素與模式中的元素或屬性之間的關聯
 
 >[!NOTE]
 >
->屬性的`bindRef`值中有一個`@`符號，以區別它們與元素。 例如，`/config/projectDetails/@duration`。
+>屬性的`bindRef`值中有一個`@`符號，以區分它們與元素。 例如，`/config/projectDetails/@duration`。
 
 **為什麼我無法將子表單的個別元素（從任何複雜類型產生的結構）拖曳至可重複的子表單（minOccours或maxOccuns值大於1）?**
 
