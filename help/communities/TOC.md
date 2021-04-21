@@ -5,13 +5,12 @@ audience: end-user
 user-guide-title: AEM 6.5 Communities 使用指南
 breadcrumb-title: Communities 指南
 user-guide-description: 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
-feature-set: Experience Manager
-feature: Communities
+feature: 社群
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 8%
 
 ---
@@ -53,7 +52,7 @@ ht-degree: 8%
    + [社群評分和標章](implementing-scoring.md)
    + [管理使用者和使用者群組](users.md)
    + [社群群組主控台](groups.md)
-   + [使用Facebook和Twitter進行社交登入](social-login.md)
+   + [社交登入Facebook和Twitter](social-login.md)
    + [SRP —— 社群內容儲存](working-with-srp.md)
    + [Communities Sites Console](sites-console.md)
    + [成員和組管理控制台](members.md)
