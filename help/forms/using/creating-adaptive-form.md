@@ -1,17 +1,17 @@
 ---
 title: 如何建立最適化表單
 description: '瞭解如何使用 [!DNL Experience Manager Forms]建立最適化表單。 最適化表單是互動式HTML5表單，可簡化資訊收集和處理。 深入瞭解如何根據表單資料模型、XFA表單範本和XML或JSON結構描述建立最適化表單。 '
-feature: Adaptive Forms
-role: Business Practitioner, Developers
+feature: 適用性表單
+role: Business Practitioner, Developer
 level: Beginner
+exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
 translation-type: tm+mt
-source-git-commit: 52fedc234b3edf581393bb42325902d2da3ab46e
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1858'
 ht-degree: 0%
 
 ---
-
 
 # 建立最適化表單{#creating-an-adaptive-form}
 
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 1. 在`https://'[server]:[port]'/<custom-context-if-any>.`存取[!DNL Experience Manager Forms]作者實例
 
-1. 在Experience Manager登入頁面上輸入您的認證。
+1. 在Experience Manager登錄頁上輸入您的憑據。
 
-   登入後，在左上角點選&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**。
+   登入後，在左上角點選&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**。
 
    >[!NOTE]
    >
@@ -146,7 +146,7 @@ XML和JSON結構描述資料由組織中的後端系統產生或使用的結構�
 
 >[!NOTE]
 >
->當您開啟使用進階範本建立的最適化表單進行編輯時，會出現錯誤訊息。 進階範本有「簽名步驟」元件，預設會啟用Adobe Sign。 建立並選取[Adobe Sign雲端設定](adobe-sign-integration-adaptive-forms.md)和[設定簽署者](working-with-adobe-sign.md#addsignerstoanadaptiveform)以解決錯誤。
+>當您開啟使用進階範本建立的最適化表單進行編輯時，會出現錯誤訊息。 進階範本有「簽名步驟」元件，預設會啟用Adobe Sign。 建立並選取[Adobe Sign雲端組態](adobe-sign-integration-adaptive-forms.md)和[組態簽署者](working-with-adobe-sign.md#addsignerstoanadaptiveform)以解決錯誤。
 
 ## 編輯最適化表單{#edit-form-model}的表單模型屬性
 
@@ -200,6 +200,6 @@ XML和JSON結構描述資料由組織中的後端系統產生或使用的結構�
 
    >[!NOTE]
    >
-   >若要自動儲存選項以供匿名使用者使用，請確定您已設定Forms Common Configuration Service，讓所有使用者都能預覽、驗證和簽署表格。
+   >若要自動儲存選項以供匿名使用者使用，請確定您已設定「Forms通用組態服務」，讓所有使用者都能預覽、驗證和簽署表格。
    >
-   >若要設定服務，請前往位於`https://'[server]:[port]'system/console/configMgr`的Adobe Experience Manager Web Console設定，並編輯&#x200B;**[!UICONTROL Forms Common Configuration Service]**，以選擇&#x200B;**[!UICONTROL Allow]**&#x200B;欄位中的&#x200B;**[!UICONTROL All Users]**&#x200B;選項，並儲存設定。
+   >要配置服務，請轉至`https://'[server]:[port]'system/console/configMgr`的Adobe Experience ManagerWeb控制台配置並編輯&#x200B;**[!UICONTROL Forms公共配置服務]**&#x200B;以在&#x200B;**[!UICONTROL 允許]**&#x200B;欄位中選擇&#x200B;**[!UICONTROL 所有用戶]**&#x200B;選項，並保存配置。
