@@ -9,9 +9,9 @@ user-guide-description: 了解 AEM 的管理事項。
 feature: 管理
 role: Administrator
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 06cbf5ccc957b0cb5bd24c820f5209821ae92cd9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 13%
 
 ---
@@ -165,6 +165,7 @@ ht-degree: 13%
    + [AEM Sites- GDPR就緒性](gdpr-compliance-sites.md)
    + [為基金會處理GDPR請AEM求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [商AEM務- GDPR就緒性](gdpr-compliance-commerce.md)
++ 內容管理{#contentmanagement}
    + [如何使用套件](package-manager.md)
    + [管理標籤](tags.md)
    + [頁面匯出器](page-exporter.md)
