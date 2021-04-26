@@ -2,16 +2,16 @@
 title: Assets 指南
 description: 本指南涵蓋所有Experience Manager資產工作，例如如何建立、管理、提供和最佳化數位資產。
 user-guide-title: Assets 指南
-feature: Asset Management
+feature: 資產管理
 role: Business Practitioner, Architect, Administrator
+exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '333'
 ht-degree: 18%
 
 ---
-
 
 # Assets 指南
 
@@ -40,6 +40,7 @@ ht-degree: 18%
 | [部署使用指南](/help/sites-deploying/home.md) | 本指南向您展示Experience Manager的基本知識。 |
 | [開發使用指南](/help/sites-developing/home.md) | 瞭解如何建立您的Experience Manager部署。 |
 | [管理使用手冊](/help/managing/home.md) | 本指南說明如何成功管理Experience Manager項目。 |
+| [商務使用指南](/help/commerce/home.md) | 瞭解Commerce Integration Framework onAEM。 |
 | [行動使用指南](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 | [Experience ManagerLivefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南說明如何與[!DNL Livefyre]共用使用者產生的內容。 |
 
