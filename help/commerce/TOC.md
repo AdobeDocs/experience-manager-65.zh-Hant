@@ -4,7 +4,7 @@ user-guide-title: 商AEM務
 breadcrumb-title: Commerce 指南
 user-guide-description: 瞭解如何使用和管理Experience Manager商務。
 translation-type: tm+mt
-source-git-commit: 59c9f513c80bfd453493ec1b26adf18c6a3ca4eb
+source-git-commit: 96bb4904818e7f3f64613c810eeb48f223e287c7
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 13%
@@ -33,7 +33,7 @@ ht-degree: 13%
       + [自訂CIF元件](cif/customizing/customize-cif-components.md)
       + [使用CIF型錄挑選器](cif/customizing/use-cif-pickers.md)
 + [移轉](cif/migration.md)
-+ [發行說明] {#release-notes}
++ 發行說明 {#release-notes}
    + [2021年](cif/release-notes/release-notes-2021.md)
    + [2020](cif/release-notes/release-notes-2020.md)
    + [2019年](cif/release-notes/release-notes-2019.md)
