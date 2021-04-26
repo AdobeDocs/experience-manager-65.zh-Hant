@@ -10,14 +10,14 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Administrator
+exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '3310'
+source-wordcount: '3309'
 ht-degree: 1%
 
 ---
-
 
 # JEE上的AEM Forms支援的平台{#supported-platforms-for-aem-forms-on-jee}
 
@@ -214,7 +214,6 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td><p>Microsoft® SQL Server JDBC驅動程式6.2.1.0<br /> </p> <p>sqljdbc6.jar</p> </td>
    <td><p>隨附於AEM Forms的JEE安裝。</p> </td>
   </tr>
-  <tr>
   <tr>
    <td>Microsoft SQL Server<br /> </td>
    <td><p>Microsoft® SQL Server JDBC驅動程式8.2.2<br /> </p> <p>sqljdbc8.jar</p> </td>
