@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
-feature: Carousel Banners
+feature: 輪播橫幅
 role: Business Practitioner, Administrator
+exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '4807'
+source-wordcount: '4804'
 ht-degree: 3%
 
 ---
-
 
 # 輪播橫幅{#carousel-banners}
 
@@ -57,7 +57,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   >如果您是AEM Sites或電子商務客戶，您可以使用內建功能導覽至產品頁面，並查閱產品目錄中的現有sku。 您不需要手動輸入熱點或影像地圖變數。 請參閱[設定電子商務的相關資訊。](/help/sites-administering/generic.md)
+   >如果您是AEM Sites或電子商務客戶，您可以使用內建功能導覽至產品頁面，並查閱產品目錄中的現有sku。 您不需要手動輸入熱點或影像地圖變數。 請參閱[設定電子商務的相關資訊。](/help/commerce/cif-classic/administering/generic.md)
    >
    >
    >如果您是AEM Assets和Dynamic Media的客戶，您將手動輸入熱點和影像地圖的資料，然後將發佈的URL或內嵌程式碼整合到您的協力廠商內容管理系統。
@@ -104,7 +104,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如果您是AEM Sites和／或電AEM子商務客戶，請略過此步驟。 您不需要手動識別熱點或影像地圖變數；您可以使用與Ecommerce的整合進行產品整合。 請參閱[設定電子商務的相關資訊。 ](/help/sites-administering/generic.md)此外，您也可以使用互動式元件並將它新增至網頁。
+>如果您是AEM Sites和／或電AEM子商務客戶，請略過此步驟。 您不需要手動識別熱點或影像地圖變數；您可以使用與Ecommerce的整合進行產品整合。 請參閱[設定電子商務的相關資訊。 ](/help/commerce/cif-classic/administering/generic.md)此外，您也可以使用互動式元件並將它新增至網頁。
 >
 >如果您是AEM Assets或媒體客戶，請發佈URL或內嵌代碼，然後與您的協力廠商內容管理系統整合，並手動識別熱點和影像地圖。
 
