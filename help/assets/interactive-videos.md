@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
-feature: Interactive Videos
+feature: 互動影片
 role: Business Practitioner, Administrator
+exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '6061'
+source-wordcount: '6058'
 ht-degree: 4%
 
 ---
-
 
 # 互動影片{#interactive-videos}
 
@@ -50,7 +50,7 @@ ht-degree: 4%
 
 ### Adobe客戶成功網路研討會{#adobe-customer-success-webinar}
 
-「在AEM Assets使用互動式視訊、連結分享和YouTube分享」網路研討會教您如何使用互動式視訊和其他功能，將轉換導向的活動連結至視訊行銷內容。
+「在AEM Assets使用互動式視訊、連結分享和YouTube分享」網路研討會教您如何使用互動式視訊和其他功能，將轉換導向的活動連結至您的視訊行銷內容。
 
 >[!NOTE]
 [在AEM Assets使用互動式視訊、連結分享和YouTube分享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
@@ -72,7 +72,7 @@ ht-degree: 4%
 互動式視訊步驟：
 
 1. **（可選）識別Quickview變數** -首先，確定現有Quickview實施所使用的動態變數。當您建立互動式視訊時，可使用變數將產品縮圖對應至其對應的產品Quickview。 請參閱[（可選）識別Quickview變數](#optional-identifying-quickview-variables)。
-   *請注意，只有在以下所有步驟都正確時，才需要此步驟*:·您想要透過觸發快速檢視，為視訊新增互動功能。·您的實AEM作&#x200B;*not*&#x200B;會使用電子商務整合架構，將產品資料從IBM Websphere Commerce、Elastic Path、hybris或Intershop等電子商務解決方案AEM拉入。 請參閱AEM Assets的[電子商務概念。](/help/sites-administering/concepts.md)
+   *請注意，只有在以下所有步驟都正確時，才需要此步驟*:·您想要透過觸發快速檢視，為視訊新增互動功能。·您的實AEM作&#x200B;*not*&#x200B;會使用電子商務整合架構，將產品資料從IBM Websphere Commerce、Elastic Path、hybris或Intershop等電子商務解決方案AEM拉入。 請參閱AEM Assets的[電子商務概念。](/help/commerce/cif-classic/administering/concepts.md)
 
 1. **（可選）建立互動式視訊檢視器預設集** -自訂各種元件的外觀和行為，這些元件是播放器的組成元件，例如視訊筆畫和互動式縮圖。如果您想要改用現成可用的互動式視訊檢視器預設集`Shoppable_Video_Light`或`Shoppable_Video_Dark`，則不需要建立您自己的互動式視訊檢視器預設集。
 請參閱[建立新檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（這是選用）和[建立互動檢視器預設集的特殊考量事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
@@ -95,7 +95,7 @@ AEMI中的網站(如果您使用AEM Sites或AEMeCommerce，或兩者皆使用)�
 >[!NOTE]
 只有在以下情況下，才需要此任務：
 * 您想要透過觸發至Quickviews，將互動功能加入視訊中。
-* 您的實AEM作&#x200B;*not*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例AEM如IBM Websphere Commerce、Elastic Path、hybris或Intershop)拉入。 請參閱AEM Assets的[電子商務概念。](/help/sites-administering/concepts.md)
+* 您的實AEM作&#x200B;*not*&#x200B;會使用電子商務整合架構，將產品資料從任何電子商務解決方案(例AEM如IBM Websphere Commerce、Elastic Path、hybris或Intershop)拉入。 請參閱AEM Assets的[電子商務概念。](/help/commerce/cif-classic/administering/concepts.md)
 
 如果您的實AEM作使用電子商務，您可以略過此工作，繼續下一個工作。
 
