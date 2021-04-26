@@ -1,8 +1,8 @@
 ---
 title: 基本處理
 seo-title: 基本處理
-description: 熟悉AEM及其基本用途
-seo-description: 熟悉AEM及其基本用途
+description: 熟悉導AEM覽及其基本用途
+seo-description: 熟悉導AEM覽及其基本用途
 uuid: c78ef9da-e0bd-47be-a410-9cf2ae71749a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,24 +10,24 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
+exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 translation-type: tm+mt
-source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 5%
 
 ---
 
-
 # 基本處理{#basic-handling}
 
 >[!NOTE]
 >
->* 本頁面旨在提供使用AEM作者環境時基本處理的概述。 它以&#x200B;**Sites**&#x200B;控制台為基礎。
+>* 本頁旨在概述使用作者環境時的基本處AEM理方式。 它以&#x200B;**Sites**&#x200B;控制台為基礎。
    >
    >
 * 有些功能並非在所有控制台中都可用，有些控制台中可能還提供其他功能。 有關各個控制台及其相關功能的具體資訊將在其他頁面上詳細介紹。
->* AEM提供鍵盤快速鍵。 尤其當[使用控制台](/help/sites-authoring/keyboard-shortcuts.md)和[編輯頁面](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)時。
+>* 鍵盤快速鍵可供您使用AEM。 尤其當[使用控制台](/help/sites-authoring/keyboard-shortcuts.md)和[編輯頁面](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)時。
 
 >
 
@@ -37,9 +37,9 @@ ht-degree: 5%
 
 ### 啟用觸控的UI {#a-touch-enabled-ui}
 
-AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控功能，透過點選、觸控和滑動等手勢與軟體互動。 這與傳統案頭介面使用滑鼠動作（例如按一下、按兩下、按滑鼠右鍵和滑鼠滑鼠滑鼠滑鼠滑鼠滑鼠）的運作方式不同。
+已啟AEM用觸控的使用者介面。 觸控式介面可讓您使用觸控功能，透過點選、觸控和滑動等手勢與軟體互動。 這與傳統案頭介面使用滑鼠動作（例如按一下、按兩下、按滑鼠右鍵和滑鼠滑鼠滑鼠滑鼠滑鼠滑鼠）的運作方式不同。
 
-由於AEM UI已啟用觸控功能，因此您可以在觸控裝置（例如行動裝置或平板電腦）上使用觸控手勢，以及在傳統桌上型裝置上使用滑鼠動作。
+由於AEMUI是觸控式的，因此您可以在觸控裝置（例如行動裝置或平板電腦）上使用觸控手勢，並在傳統桌上型裝置上使用滑鼠動作。
 
 ### 第一步{#first-steps}
 
@@ -49,13 +49,13 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 >[!NOTE]
 >
->為了充份瞭解AEM的基本使用，本檔案以&#x200B;**Sites**&#x200B;主控台為基礎。
+>為了充分瞭解其基本用途，本AEM文檔基於&#x200B;**Sites**&#x200B;控制台。
 >
 >按一下或點選&#x200B;**Sites**&#x200B;以開始使用。
 
 ### 產品導覽 {#product-navigation}
 
-每當使用者第一次存取主控台時，就會啟動產品導覽教學課程。 點選或點選只需一分鐘，即可取得AEM基本處理的完整概觀。
+每當使用者第一次存取主控台時，就會啟動產品導覽教學課程。 請花幾分鐘的時間點選或點選，以取得對基本處理的完整概AEM述。
 
 ![bh-02](assets/bh-02.png)
 
@@ -84,7 +84,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 ### 導覽面板{#navigation-panel}
 
-「導覽」面板可讓您存取AEM主控台：
+「導覽」面板可讓您存取控AEM制台：
 
 ![bh-01](assets/bh-01.png)
 
@@ -100,7 +100,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
   </tr>
   <tr>
    <td>資產<br /> </td>
-   <td>這些控制台可讓您匯入和<a href="/help/assets/home.md">管理數位資產</a>，例如影像、視訊、檔案和音訊檔案。 然後，在相同AEM例項上執行的任何網站都可以使用這些資產。 </td>
+   <td>這些控制台可讓您匯入和<a href="/help/assets/home.md">管理數位資產</a>，例如影像、視訊、檔案和音訊檔案。 然後，在相同執行個體上執行的任何網站都可以使用這些AEM資產。 </td>
   </tr>
   <tr>
    <td>社群</td>
@@ -108,7 +108,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
   </tr>
   <tr>
    <td>商務</td>
-   <td>這可讓您管理與<a href="/help/sites-administering/ecommerce.md">Commerce</a>網站相關的產品、產品型錄和訂單。</td>
+   <td>這可讓您管理與<a href="/help/commerce/cif-classic/administering/ecommerce.md">Commerce</a>網站相關的產品、產品型錄和訂單。</td>
   </tr>
   <tr>
    <td>體驗片段</td>
@@ -132,7 +132,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
   </tr>
   <tr>
    <td>網站</td>
-   <td>Sites主控台可讓您<a href="/help/sites-authoring/page-authoring.md">建立、檢視和管理在AEM例項上執行的網站</a>。 透過這些主控台，您可以建立、編輯、複製、移動和刪除網站頁面、啟動工作流程和發佈頁面。<br /> </td>
+   <td>Sites控制台可讓您建立、檢視和管理執行個體上執行的網站</a>AEM。 <a href="/help/sites-authoring/page-authoring.md">透過這些主控台，您可以建立、編輯、複製、移動和刪除網站頁面、啟動工作流程和發佈頁面。<br /> </a></td>
   </tr>
  </tbody>
 </table>
@@ -151,7 +151,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 * [全域導覽](#navigatingconsolesandtools)
 
-   選擇&#x200B;**Adobe Experience Manager**&#x200B;連結，在控制台之間導覽。
+   選擇&#x200B;**Adobe Experience Manager**&#x200B;連結，在控制台之間導航。
 
    ![screen_shot_2018-03-23at103615](assets/screen_shot_2018-03-23at103615.png)
 
@@ -177,7 +177,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
    >[!NOTE]
    >
-   >現成可用的AEM會預先載入指派給管理員使用者群組的管理工作。 有關詳細資訊，請參閱[收件箱——現成可用的管理任務](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks)。
+   >現成可用的工具會預AEM先載入指派給管理員使用者群組的管理工作。 有關詳細資訊，請參閱[收件箱——現成可用的管理任務](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks)。
 
 * [使用者屬性](/help/sites-authoring/user-properties.md)
 
@@ -215,7 +215,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 * [檢視](/help/sites-authoring/basic-handling.md#viewingandselectingyourresourcescardlistcolumn)
 
-   檢視圖示位於AEM工具列的最右側。 如同它指示當前視圖一樣，它也會更改。 例如，在預設視圖中， **列視圖**&#x200B;顯示：
+   檢視圖示位於工具列的最右AEM側。 如同它指示當前視圖一樣，它也會更改。 例如，在預設視圖中， **列視圖**&#x200B;顯示：
 
    ![bh-07](assets/bh-07.png)
 
@@ -243,7 +243,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 * **導覽**
 
-   第一次導覽系統時，[系列投影片會介紹AEM navigation](/help/sites-authoring/basic-handling.md#product-navigation)。
+   第一次導覽系統時，[一系列投影片介AEM紹導覽](/help/sites-authoring/basic-handling.md#product-navigation)。
 
 * **頁面編輯器**
 
@@ -315,7 +315,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
 >[!NOTE]
 >
->依預設，AEM Assets不會將UI中資產的原始轉譯顯示為任何檢視的縮圖。 如果您是管理員，您可以使用覆蓋來設定AEM Assets，將原始轉譯顯示為縮圖。
+>依預設，AEM Assets不會將UI中資產的原始轉譯顯示為任何檢視的縮圖。 如果您是管理員，可以使用覆蓋來設定AEM Assets，將原始轉譯顯示為縮圖。
 
 ### 選擇資源{#selecting-resources}
 
@@ -416,7 +416,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
    * 點選或點選資源名稱和Chevron時，會反白顯示。
 
-   ![bh-15](assets/bh-17.png)
+   ![bh-17](assets/bh-17.png)
 
    * 已點按／點按資源的子系會顯示在已點按／點按資源右側的欄中。
    * 如果您點選或按一下沒有子項的資源名稱，其詳細資訊將顯示在最終欄中。
@@ -494,7 +494,7 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 
    ![bh-21](assets/bh-21.png)
 
-   依預設會顯示&#x200B;**Name**&#x200B;欄，此欄是頁面URL的一部分。 在某些情況下，作者可能需要存取使用不同語言的頁面，而如果作者不知道頁面的語言，則查看頁面名稱（通常不變）會有很大幫助。
+   依預設會顯示&#x200B;**Name**&#x200B;欄，此欄是頁面URL的一部分。 在某些情況下，作者可能需要存取使用不同語言的頁面，如果作者不知道頁面的語言，查看頁面名稱（通常不變）將會大有幫助。
 
 * 使用清單中每個項目最右側的虛線垂直列來變更項目順序。
 
@@ -593,4 +593,3 @@ AEM的使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸�
 如此會開啟類似[search](/help/sites-authoring/search.md)的面板，其中已設定適當的位置篩選條件，讓您進一步篩選您想要檢視的內容。
 
 ![bh-29](assets/bh-29.png)
-
