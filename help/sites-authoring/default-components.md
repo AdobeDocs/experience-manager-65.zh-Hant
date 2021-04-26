@@ -9,24 +9,24 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
+exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 2%
 
 ---
 
-
 # 元件{#components}
 
 Adobe Experience Manager(AEM)隨附多種現成可用的元件，為網站作者提供完整的功能。 當[編輯頁面](/help/sites-authoring/editing-content.md)時，這些變數可用，並依主要功能區域（稱為元件群組）分組，以協助篩選。
 
-當[編輯頁面](/help/sites-authoring/editing-content.md)時，這些元件可用。 為協助篩選，元件依主要功能區（即元件群組）分組。
+當[編輯頁面](/help/sites-authoring/editing-content.md)時，這些元件可用。 為幫助過濾，元件按主功能區（即元件組）分組。
 
 >[!NOTE]
 >
->本節僅討論標準AEM安裝中現成可用的元件。
+>本節僅討論標準安裝中現成可用的元件AEM。
 >
 >視您的例項而定，您可能已針對您的需求明確開發自訂元件。 這些元件甚至可能與此處討論的某些元件名稱相同。
 
@@ -52,7 +52,7 @@ Adobe Experience Manager(AEM)隨附多種現成可用的元件，為網站作者
 
 ## 所有元件概述{#overview-of-all-components}
 
-[Components Console](/help/sites-authoring/default-components-console.md)提供AEM安裝所提供之元件群組和元件的概觀。 您可以檢視個別元件及其使用狀況的重要資訊。
+[元件控制台](/help/sites-authoring/default-components-console.md)概述了由安裝提供的元件組和組AEM件。 您可以檢視個別元件及其使用狀況的重要資訊。
 
 ## 元件——主要區域{#components-major-areas}
 
@@ -62,7 +62,7 @@ Adobe Experience Manager(AEM)隨附多種現成可用的元件，為網站作者
 
 * [社群](/help/communities/author-communities.md) -元件為網站提供互動功能，例如論壇和註解。當建立[社區站點](/help/communities/overview.md)時，會包括其中的許多元件。
 
-* [電子商務](/help/sites-administering/ecommerce.md) - AEM中的電子商務功能也包含一系列元件。實際使用可視所使用的商務引擎而定。
+* [電子商務](/help/commerce/cif-classic/administering/ecommerce.md) -其中的電子商務功能AEM也包含一系列元件。實際使用可視所使用的商務引擎而定。
 
 ### 配置元件{#configuring-components}
 
@@ -70,4 +70,3 @@ Adobe Experience Manager(AEM)隨附多種現成可用的元件，為網站作者
 
 * 如果您的頁面是根據建議的現代化可編輯範本，您可以[編輯範本](/help/sites-authoring/templates.md)啟用／停用這些範本，並編輯特定元件的參數。
 * 如果您的頁面是以靜態範本為基礎，則可使用[設計模式](/help/sites-authoring/default-components-designmode.md#enable-disable-components)來啟用／停用這些範本，並編輯特定元件的參數。
-
