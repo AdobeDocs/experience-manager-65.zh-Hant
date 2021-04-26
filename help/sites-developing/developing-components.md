@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
+exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
 translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '3533'
 ht-degree: 1%
 
 ---
-
 
 # 開發AEM元件{#developing-aem-components}
 
@@ -26,8 +26,8 @@ ht-degree: 1%
 
 * 當[編寫頁面](/help/sites-authoring/default-components.md)時，元件可讓作者編輯和設定內容。
 
-   * 當構建[Commerce](/help/sites-administering/ecommerce.md)站點時，元件可以收集和呈現目錄中的資訊。
-如需詳細資訊，請參閱[開發電子商務](/help/sites-developing/ecommerce.md)。
+   * 當構建[Commerce](/help/commerce/cif-classic/administering/ecommerce.md)站點時，元件可以收集和呈現目錄中的資訊。
+如需詳細資訊，請參閱[開發電子商務](/help/commerce/cif-classic/developing/ecommerce.md)。
 
    * 當建立[Communities](/help/communities/author-communities.md)網站時，元件可提供資訊給訪客並收集訪客的資訊。
 如需詳細資訊，請參閱[開發社群](/help/communities/communities.md)。
@@ -362,7 +362,7 @@ newComponent (cq:Component)
 
 ## 啟用元件並將其添加到段落系統{#enabling-and-adding-your-component-to-the-paragraph-system}
 
-在開發元件後，它需要啟用以便在適當的段落系統中使用，以便用於所需的頁面。
+在開發元件後，需要啟用它以便在適當的段落系統中使用，以便用於所需的頁面。
 
 這可以通過以下任一方法完成：
 
