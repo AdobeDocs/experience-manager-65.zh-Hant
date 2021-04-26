@@ -9,10 +9,10 @@ user-guide-description: 了解 AEM 的管理事項。
 feature: 管理
 role: Administrator
 translation-type: tm+mt
-source-git-commit: 06cbf5ccc957b0cb5bd24c820f5209821ae92cd9
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 13%
+source-wordcount: '637'
+ht-degree: 14%
 
 ---
 
@@ -109,13 +109,6 @@ ht-degree: 13%
    + [設定區段](campaign-segmentation.md)
    + [擴充及設定著陸頁面的Design Importer](extending-the-design-importer-for-landingpages.md)
    + [整合著陸頁面與Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
-+ 電子商務 {#ecommerce}
-   + [電子商務](ecommerce.md)
-   + [概念](concepts.md)
-   + [管理一般電子商務](generic.md)
-   + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
-   + [SAPCommerce Cloud](sap-commerce-cloud.md)
-   + [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
 + 整合 {#integration}
    + [與第三方服務整合](third-party-services.md)
    + [與Salesforce整合](salesforce.md)
