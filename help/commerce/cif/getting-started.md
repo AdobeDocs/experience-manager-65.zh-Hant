@@ -5,9 +5,9 @@ topics: Commerce
 feature: 商務整合框架
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 8ead3d1b24177effa4d40141408c5676eaabcc30
+source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '681'
 ht-degree: 2%
 
 ---
@@ -28,17 +28,17 @@ ht-degree: 2%
 
 2. 與您的AEM商務解決方案連絡
 
-### 安裝AEMContent and Commerce add-on for AEM 6.5
+### 安裝AEM6.5 &lt;a0/AEM>的Content and Commerce附加元件{#install-add-on}
 
 從[軟AEM體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)入口網站下載並安AEM裝適用於6.5的Commerce Add-On。
 
 啟動並安裝所需AEM的6.5 Service Pack。 我們建議安裝最後一個可用的Service Pack。
 
-    >[!NOTE]
-    >
-    >由CSE為受管理服務客戶AEM完成。
+>[!NOTE]
+>
+>這將由CSE為受管理服務客戶AEM所做。
 
-### 連AEM線至您的商務系統
+### 連AEM接至您的商務系統{#connect}
 
 可連AEM接到任何具有可訪問GraphQL端點的商務系AEM統。 這些端點通常可以公開使用，也可以通過專用VPN或本地連接來連接，具體取決於單個項目設定。
 
