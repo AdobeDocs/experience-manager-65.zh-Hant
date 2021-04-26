@@ -9,33 +9,33 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
+exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 translation-type: tm+mt
-source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '3783'
 ht-degree: 1%
 
 ---
 
-
 # 檢查清單——進一步參考{#the-checklist-further-reference}
 
 本頁提供了詳細資訊，以詳細說明和／或補充[管理項目——最佳做法核對表](/help/managing/best-practices.md)中涵蓋的文檔和原則。
 
-## AEM —— 您將使用什麼？{#aem-what-will-you-be-using}
+## AEM-您將使用什麼？{#aem-what-will-you-be-using}
 
 >[!CAUTION]
 >
 >本小節中的清單並非完整，而是作為介紹。
 
-### AEM {#features-within-aem}中的功能
+### &lt;a0/AEM>中的功能{#features-within-aem}
 
-實作AEM時（尤其是首次），您將需要檢閱AEM](https://www.adobe.com/tw/marketing/experience-manager.html)的[功能和工作流程，以確定您需要／需要哪些區域。
+實作AEM時（尤其是首次），您需要檢閱[的功能和工作流程，以確定您需要／需要哪些區域。](https://www.adobe.com/tw/marketing/experience-manager.html)
 
-考慮您將要使用的AEM功能，以及對您設計的影響；例如：
+請考慮您AEM將使用的功能，以及對您設計的影響；例如：
 
-* [商務](/help/sites-administering/ecommerce.md)
-* [畫面](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [商務](/help/commerce/cif-classic/administering/ecommerce.md)
+* [畫面](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [資產](/help/assets/assets.md)
 * [標記](/help/sites-administering/tags.md)
 * [多網站管理與翻譯](/help/sites-administering/msm-and-translation.md)
@@ -43,11 +43,11 @@ ht-degree: 1%
 * [社群](/help/communities/deploy-communities.md)
 * [Livefyre](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/livefyre-for-adobe-experience-manager/)
 
-此外，請查看AEM各種版本的[發行說明](/help/release-notes/release-notes.md)，以查看新增任何新功能的時間。
+此外，請查看[版本注意事項](/help/release-notes/release-notes.md)中各種版本AEM，以瞭解何時新增了新功能。
 
-### 整合{#integrations}
+### Integrations {#integrations}
 
-AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可增加您的可用功能。
+可與AEM其他Adobe產品及／或協力廠商服務整合。 這些功能可增加您的可用功能。
 
 如需完整資訊，請參閱[解決方案整合](/help/sites-administering/integration.md)。
 
@@ -69,7 +69,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 >[!NOTE]
 >
->這些要點是通用的，[最佳實務檢查清單](/help/managing/best-practices.md)說明與AEM相關的細節。
+>這些要點是通用的，[最佳做法檢查清單](/help/managing/best-practices.md)涉及與相關的細節AEM。
 
 * **角色**
 
@@ -111,7 +111,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
    明確各級項目應涵蓋的內容：
 
    * 個別發行（如果使用了反覆發行程式，而且不論是交付給客戶還是內部測試團隊）。
-   * AEM專案。
+   * 專AEM案。
    * 整個項目；包括任何協力廠商軟體、其對測試的影響、組織問題等。
    * 對於某些方面，在項目範圍內陳述&#x200B;*not*&#x200B;的內容也很有用。 這有助於避免混淆和錯誤假設，儘管它應限於基本問題。
 
@@ -194,7 +194,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 因此，您應在&#x200B;*決定您的設計之前定義目標量度*。 這可讓您根據這些因素來最佳化您的設計。 一旦您的專案開發完成，就很難對基本設計原則做任何變更。
 
-當您建立網站的結構時，請遵循AEM網站的建議結構。 請確定您瞭解下列問題和／或原則：
+當您建立網站的結構時，請遵循建議的網站結AEM構。 請確定您瞭解下列問題和／或原則：
 
 * 如何建構網站內容。
 * 範本和元件的運作方式。
@@ -217,7 +217,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 這將幫助您評估和選擇您的基礎架構，具體取決於您的情況和網站的戰略重要性：
 
 * 伺服器數
-* AEM例項數（作者和發佈）
+* 例項AEM數（作者和發佈）
 
 ### 效能{#performance}
 
@@ -264,7 +264,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 那麼，您如何決定可實現的（平均）回應時間？ 這通常是經驗問題：
 
 * 您網站上的過去經驗
-* 體驗AEM
+* 體驗- AEM
 * 識別具有高於平均回應時間的複雜頁面（如果可能，應個別最佳化）
 
 但是，（在受控情況下）可適用下列准則：
@@ -279,13 +279,13 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 * 在發佈時測量（無編寫環境和／或CFC開銷）
 * 在伺服器上測量（無網路開銷）
-* 未快取（無AEM輸出快取，無Dispatcher快取）
+* 未快取(無AEM輸出快取，無Dispatcher快取)
 * 僅適用於具有許多相依性的複雜項目(HTML、JS、PDF、...)
 * 系統上沒有其他負載
 
 您可使用數種機制來監控回應時間：
 
-* **使用AEM request.log監控回應時間**
+* **使用request.log監控回AEM應時間**
 
    效能分析的好起點是請求記錄。 除了其他資訊外，您還可使用此資訊來查看個別要求的回應時間。 如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
@@ -309,7 +309,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 為搜尋請求設定目標，同樣是體驗問題，具體取決於：
 
-* AEM的體驗
+* 體AEM驗
 * 評估與其他目標相比使用搜索的頻率
 * 您的永續性管理員
 * 搜索索引
@@ -317,13 +317,13 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 從您的專案開始，就應規劃並整合這些項目。 可監控的機制包括：
 
-* **使用AEM request.log監控搜尋回應時間**
+* **使用request.log監控搜尋回AEM應時間**
 
    同樣，request.log可以用來監控搜索請求的響應時間；如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
 * **用於測量搜索響應時間的寫程式機構**
 
-   若要自訂您收集的搜尋請求相關資訊及其效能，建議將資訊收集納入您的專案原始碼中；如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
+   若要自訂您收集的搜尋請求相關資訊及其效能，建議將資訊收集納入您的專案原始碼；如需詳細資訊，請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)。
 
 ### 併發{#concurrency}
 
@@ -360,7 +360,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
    | 用戶端 | 使用者電腦的計算能力。 | 頁面版面的複雜性。 |
    | 網路 | 網路頻寬。 | 頁面大小（程式碼、影像等）。 |
    | Dispatchercache | Web伺服器的伺服器記憶體（主記憶體和硬碟）。 | Web伺服器（主記憶體和硬碟）。 快取頁面的數目和大小。 |
-   | 輸出快取 | AEM伺服器的伺服器記憶體（主記憶體和硬碟）。 | 輸出快取中的頁數和大小、每頁的依賴項數。 調度器快取會降低此卷。 |
+   | 輸出快取 | 伺服器的服AEM務器記憶體（主記憶體和硬碟）。 | 輸出快取中的頁數和大小、每頁的依賴項數。 調度器快取會降低此卷。 |
    | Web伺服器 | Web伺服器的計算能力。 | 請求數。 快取會降低此卷。 |
    | 範本 | Web伺服器的計算能力。 | 範本的複雜性。 |
    | 存放庫 | 儲存庫的效能。 | 從儲存庫載入的頁數。 |
@@ -377,7 +377,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 安全至關重要，而且是一個日益嚴峻的挑戰。 ***必須從項目的最早階段開始考慮和計畫***。
 
-[安全性檢查清單](/help/sites-administering/security-checklist.md)詳細說明您應採取的步驟，以確保AEM安裝在部署時安全無虞。 其他安全方面則涵蓋在[安全性（開發時）](/help/sites-developing/security.md)和[用戶管理和安全性](/help/sites-administering/security.md)下。
+[安全檢查清單](/help/sites-administering/security-checklist.md)詳細說明了在部署時應採取的步驟，以確AEM保安裝安全。 其他安全方面則涵蓋在[安全性（開發時）](/help/sites-developing/security.md)和[用戶管理和安全性](/help/sites-administering/security.md)下。
 
 ## 並行和迭代任務{#parallel-and-iterative-tasks}
 
@@ -385,7 +385,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 >
 >以下：
 >
->* 提供與&#x200B;*first*&#x200B;實作AEM專案相關的概觀。
+>* 提供與項目&#x200B;*first*&#x200B;實施相關的概AEM述。
 >* 以抽象概述為目的；請參閱[專案檢查清單](/help/managing/best-practices.md)以取得特定階段／里程碑／工作。
 >* 任何時間尺度都是理論上的。
 
@@ -393,7 +393,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 
 
-對於標準AEM專案的新實作，您需要考慮下列工作：
+對於標準項目的新實AEM施，您需要考慮以下任務：
 
 * 從銷售流程移交。
 * 客戶應用程式的實作(**Development**)。
@@ -427,7 +427,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
       * 第一次衝刺會產生第一次部署至您的測試環境。
       * 每次衝刺都有可跑的結果。
       * 每次衝刺都會獲得客戶簽名（結構化測試的最低要求，並提供意見回應）。
-   * 針對專案期間可能更新的可用AEM版本進行規劃。
+   * 規劃專案期間是否會更新AEM可用版本。
    * 在Sprint期間規劃測試和最佳化。
    * 規劃穩定化和最佳化階段。
    * 建立要計畫用於進一步發行的項目記錄。
@@ -479,7 +479,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 >[!CAUTION]
 >
->這些數字只能用於初步估計。 經驗豐富的AEM開發人員必須進行詳細分析。
+>這些數字只能用於初步估計。 經驗豐富的開AEM發人員必須進行詳細分析。
 
 | 相位 | 努力 |
 |---|---|
@@ -495,7 +495,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 ## 參考體系結構{#reference-architecture}
 
-給出了AEM體系結構的參考體系結構，為AEM體系結構提供了模板解決方案。 該參考體系結構解決了企業系統常遇到的問題，包括擴展、可靠性和安全性。
+給出了該體系結構的參考體系結構，為該體系結構提供了一AEM個模板解決方案。 該參考體系結構解決了企業系統常遇到的問題，包括擴展、可靠性和安全性。
 
 應定義下列網站度量：
 
@@ -527,7 +527,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
   </tr>
   <tr>
    <td>AEM</td>
-   <td><p>AEM本身提供多種機制，可協助您監控、測試、調查和除錯應用程式；包括：</p>
+   <td><p>本AEM身提供多種機制，可協助您監控、測試、調查和除錯應用程式；包括：</p>
     <ul>
      <li><a href="/help/sites-developing/developer-mode.md">開發人員模式</a></li>
      <li><a href="/help/sites-developing/hobbes.md">測試控制台</a></li>
@@ -558,11 +558,11 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
   </tr>
   <tr>
    <td>Eclipse</td>
-   <td><p>Eclipse是Open Source IDE，由各種專案組成。 這些解決方案的重點是建立由可擴充的架構、工具和執行階段所組成的開放式開發平台，以便在整個生命週期中建立、部署和管理軟體。</p> <p>如需詳細資訊，請參閱<a href="/help/sites-developing/howto-projects-eclipse.md">如何使用Eclipse開發AEM專案。</a></p> </td>
+   <td><p>Eclipse是Open Source IDE，由各種專案組成。 這些解決方案的重點是建立由可擴充的架構、工具和執行階段所組成的開放式開發平台，以便在整個生命週期中建立、部署和管理軟體。</p> <p>如需詳細資訊，請參閱<a href="/help/sites-developing/howto-projects-eclipse.md">如AEM何使用Eclipse開發專案。</a></p> </td>
   </tr>
   <tr>
    <td>IntelliJ</td>
-   <td><p>專業（因此需要承擔許可成本）的IDE，提供全方位的功能。 </p> <p>如需詳細資訊，請參閱<a href="/help/sites-developing/ht-intellij.md">如何使用IntelliJ IDEA開發AEM專案。</a></p> </td>
+   <td><p>專業（因此需要承擔許可成本）的IDE，提供全方位的功能。 </p> <p>如需詳細資訊，請參閱<a href="/help/sites-developing/ht-intellij.md">如AEM何使用IntelliJ IDEA</a>開發專案。</p> </td>
   </tr>
   <tr>
    <td>馬文</td>
@@ -581,7 +581,7 @@ AEM可與其他Adobe產品及／或協力廠商服務整合。 這些功能可�
 
 ### 最佳作法 {#best-practices}
 
-Adobe針對所有階段和受眾提供進一步的最佳實務：
+Adobe為所有階段和受眾提供進一步的最佳做法：
 
 * [部署](/help/sites-deploying/best-practices.md)
 * [製作](/help/sites-authoring/best-practices.md)
