@@ -1,28 +1,28 @@
 ---
 title: AEM 6.5功能使用指南
 seo-title: AEM 6.5功能使用指南
-description: AEM 6.5的基本功能概觀
-seo-description: AEM 6.5的基本功能概觀
+description: 6.5的基本功AEM能概述
+seo-description: 6.5的基本功AEM能概述
+exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 32%
+source-wordcount: '157'
+ht-degree: 31%
 
 ---
 
-
 # AEM 6.5功能使用手冊{#aem-65-capabilities-user-guides}
 
-## AEM Foundation {#aem-foundation}
+## 基AEM礎{#aem-foundation}
 
-[進一步瞭解Adobe Experience Manager 6.5的安裝、部署和架構](/help/sites-deploying/home.md)，包括我們的Adobe Managed Services雲端部署。
+[進一步瞭解Adobe Experience Manager6.5的安裝、部署和架構](/help/sites-deploying/home.md)，包括我們的Adobe Managed Services雲端部署。
 
-[瞭解如何管理AEM專案](/help/managing/home.md)。
+[瞭解如何管理專AEM案](/help/managing/home.md)。
 
 ## AEM Sites {#aem-sites}
 
-[瞭解在AEM中建立內容和製作的主要概念](/help/sites-authoring/home.md)。
+[瞭解在中建立內容和撰寫的主要概念AEM](/help/sites-authoring/home.md)。
 
 [瞭解管理AEM](/help/sites-administering/home.md)。
 
@@ -36,7 +36,11 @@ ht-degree: 32%
 
 ## AEM Screens {#aem-screens}
 
-[瞭解數位標牌解決方案，以發佈動態互動式體驗。](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+[瞭解數位標牌解決方案，以發佈動態互動式體驗。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+
+## AEM商務{#aem-commerce}
+
+[瞭解商AEM務。](/help/commerce/home.md)
 
 ## AEM Communities {#aem-communities}
 
@@ -44,7 +48,7 @@ ht-degree: 32%
 
 ## AEM Livefyre {#aem-livefyre}
 
-[與AEM Livefyre共用使用者產生的內容。](https://docs.adobe.com/content/help/en/livefyre/using/home.html)
+[與Livefyre共用使用者產生的AEM內容。](https://docs.adobe.com/content/help/en/livefyre/using/home.html)
 
 ## AEM Mobile {#aem-mobile}
 
