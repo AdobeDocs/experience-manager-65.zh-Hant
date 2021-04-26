@@ -9,9 +9,9 @@ user-guide-description: 進一步了解 Adobe Experience Manager 6.5 的安裝�
 feature: 部署
 role: Architect
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '328'
 ht-degree: 10%
 
 ---
@@ -90,11 +90,6 @@ ht-degree: 10%
    + [Forms6.AEM5版資料庫重組](forms-repository-restructuring-in-aem-6-5.md)
    + [6.5版中的電子商AEM務儲存庫重組](ecommerce-repository-restructuring-in-aem-6-5.md)
    + [6.5中的AEM Communities資源庫重組](communities-repository-restructuring-in-aem-6-5.md)
-+ 電子商務 {#ecommerce}
-   + [電子商務概觀](ecommerce.md)
-   + [SAPCommerce Cloud](sap-commerce-cloud.md)
-   + [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
-   + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 + 最佳作法 {#practices}
    + [部署最佳實務](best-practices.md)
    + [效能樹](performance-tree.md)
