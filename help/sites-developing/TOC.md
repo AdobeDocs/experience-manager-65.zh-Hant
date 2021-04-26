@@ -9,9 +9,9 @@ user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: 開發
 role: Developer
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '910'
 ht-degree: 14%
 
 ---
@@ -70,10 +70,6 @@ ht-degree: 14%
    + [整合服務與JMX主控台](jmx-integration.md)
    + [開發批量編輯器](dev-bulk-editor.md)
    + [開發報表](dev-reports.md)
-   + 電子商務{#ecommerce}
-      + [電子商務](ecommerce.md)
-      + [開發（一般）](generic.md)
-      + [使用SAPCommerce Cloud進行開發](sap-commerce-cloud.md)
 + 元件{#components}
    + [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
    + [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
