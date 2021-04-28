@@ -11,9 +11,9 @@ feature: 商務整合框架
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '2549'
+source-wordcount: '2541'
 ht-degree: 1%
 
 ---
@@ -196,7 +196,7 @@ Sling Models是以Java實作，可在產生的專案的&#x200B;**core**&#x200B;�
 
    ![核心位置IDE](../assets/customize-cif-components/core-location-ide.png)
 
-   `MyProductTeaser.java` 是可擴充CIF ProductTeaser介面的Java [](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) 介面。
+   `MyProductTeaser.java` 是擴展CIF ProductTeaser介面的Java [](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) 介面。
 
    已新增名為`isShowBadge()`的新方法，如果產品被視為「新」，則會顯示徽章。
 
@@ -326,7 +326,7 @@ Sling Models是以Java實作，可在產生的專案的&#x200B;**core**&#x200B;�
    }
    ```
 
-   在上述方法中，`productRetriever`用於讀取產品，而`getAsInteger()`方法用於獲取`eco_friendly`屬性的值。 根據我們先前運行的GraphQL查詢，我們知道當`eco_friendly`屬性設定為&quot;**Yes**&quot;時的預期值實際上是&#x200B;**1**&#x200B;的整數。
+   在上述方法中，`productRetriever`用於讀取產品，`getAsInteger()`方法用於獲取`eco_friendly`屬性的值。 根據我們先前運行的GraphQL查詢，我們知道當`eco_friendly`屬性設定為&quot;**Yes**&quot;時的預期值實際上是&#x200B;**1**&#x200B;的整數。
 
    現在Sling Model已經更新，Component標籤需要更新，才能根據Sling Model實際顯示&#x200B;**Eco Friendly**&#x200B;的指標。
 
@@ -494,8 +494,8 @@ Sling Models是以Java實作，可在產生的專案的&#x200B;**core**&#x200B;�
 
 ## 其他資源 {#additional-resources}
 
-- [原AEM型](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+- [原AEM型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 - [AEMCIF核心元件](https://github.com/adobe/aem-core-cif-components)
 - [自訂AEMCIF核心元件](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
-- [自訂核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html)
-- [開始使用AEM Sites](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+- [自訂核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
+- [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
