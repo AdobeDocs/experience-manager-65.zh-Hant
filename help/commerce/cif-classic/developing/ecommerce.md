@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 5%
+source-wordcount: '151'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +47,3 @@ ht-degree: 5%
 
 如需詳細資訊，請參閱[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)。
 
->[!NOTE]
->
->如需詳細說明建立電子商務供應商的所有步驟的完整文章，請參閱[建立自訂的Adobe Experience Manager6.2電子商務供應商](https://helpx.adobe.com/tw/experience-manager/using/ecommerce62.html)。
