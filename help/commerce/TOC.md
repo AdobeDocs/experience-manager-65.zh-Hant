@@ -1,13 +1,13 @@
 ---
-sub-product: 商AEM務
-user-guide-title: 商AEM務
+sub-product: 內AEM容與商務
+user-guide-title: 內AEM容與商務
 breadcrumb-title: Commerce 指南
-user-guide-description: 瞭解如何使用和管理Experience Manager商務。
+user-guide-description: 瞭解如何使用和管AEM理內容與商務。
 translation-type: tm+mt
-source-git-commit: 96bb4904818e7f3f64613c810eeb48f223e287c7
+source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 13%
+source-wordcount: '104'
+ht-degree: 12%
 
 ---
 
