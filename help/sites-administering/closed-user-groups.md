@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
-feature: Security
+feature: 安全性
 translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
-source-wordcount: '6891'
+source-wordcount: '6886'
 ht-degree: 0%
 
 ---
@@ -369,7 +369,7 @@ session.save();
 
 #### 修改現有登錄路徑{#modify-an-existing-login-path}
 
-變更現有登入路徑的步驟如下。 如果`RequirementHandler`已針對包含目標節點的樹狀結構設定，則修改將只會註冊給Apache Sling Authenticator。 先前的登入路徑值將從註冊中移除。 此修改不會影響與目標節點關聯的驗證要求。
+變更現有登入路徑的步驟詳述如下。 如果`RequirementHandler`已針對包含目標節點的樹狀結構設定，則修改將只會註冊給Apache Sling Authenticator。 先前的登入路徑值將從註冊中移除。 此修改不會影響與目標節點關聯的驗證要求。
 
 ```java
 Node targetNode = [...]
@@ -773,7 +773,7 @@ Apache Jackrabbit FileVault的導入機制已調整為處理`PrincipalSetPolicy`
 
 這兩個元素都在`cq:Page`下建立。 在當前設計中，MSM僅處理`cq:PageContent`(`jcr:content`)節點下的節點和屬性。
 
-因此，CUG群組無法從Blueprint回滾至即時副本。 設定即時副本時，請據此規劃。
+因此，CUG組無法從「Blueprints」（藍圖即時副本）中展開。 設定即時副本時，請針對此進行規劃。
 
 ## 新CUG實施{#changes-with-the-new-cug-implementation}的變更
 
