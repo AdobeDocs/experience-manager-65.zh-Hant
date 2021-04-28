@@ -2,10 +2,10 @@
 title: 內AEM容與商務
 description: 內AEM容與商務自助資源與檔案連結
 translation-type: tm+mt
-source-git-commit: 7b03772e3c7f185cb107c6576e2423275c1a6ccc
+source-git-commit: 809789d268deb4d77bbb5101265a1a0d7268b748
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 29%
+source-wordcount: '337'
+ht-degree: 27%
 
 ---
 
@@ -13,6 +13,11 @@ ht-degree: 29%
 # 內AEM容與商務{#commerce-guide}
 
 本頁列出有關商務的自助資AEM源。
+
+>[!NOTE]
+>
+>如需AEM以Cloud ServiceAEM形式提供的內容與商務，請參閱[AEM內容與商務](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)。
+
 
 ## 關鍵商務文章{#key-articles}
 
