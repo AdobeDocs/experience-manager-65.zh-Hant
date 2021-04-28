@@ -5,9 +5,9 @@ topics: Commerce
 feature: 商務整合框架
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '682'
 ht-degree: 2%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 2%
 
 2. 與您的AEM商務解決方案連絡
 
-### 安裝AEM6.5 &lt;a0/AEM>的Content and Commerce附加元件{#install-add-on}
+### 安裝AEMContent and Commerce Add-On for AEM 6.5 {#install-add-on}
 
 從[軟AEM體散發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)入口網站下載並安AEM裝適用於6.5的Commerce Add-On。
 
-啟動並安裝所需AEM的6.5 Service Pack。 我們建議安裝最後一個可用的Service Pack。
+啟動並安裝所需AEM的6.5 Service Pack。 建議安裝最後一個可用的Service Pack。
 
 >[!NOTE]
 >
@@ -50,11 +50,11 @@ ht-degree: 2%
 
 內AEM容與商務附加元件和CIF核心元件AEM都使用伺服器端和用戶端連線。 用戶端CIF核心元件和CIF附加元件製作工具預設會連線至`/api/graphql`。 如有需要，可透過CIFCloud Service設定來調整此設定（請參閱下文）。
 
-CIF附加元件在`/api/graphql`處提供GraphQL代理Servlet，該GraphQL代理Servlet可選擇用於[本地開發](develop.md)。 對於生產部署，強烈建議透過Dispatcher或其他網路層（如CDN），設AEM定商務GraphQL端點的反向proxy。
+CIF附加元件提供`/api/graphql`處的GraphQL代理Servlet，該GraphQL代理Servlet可選地用於[本地開發](develop.md)。 對於生產部署，強烈建議透過Dispatcher或其他網路層（如CDN），設AEM定商務GraphQL端點的反向proxy。
 
 ## 配置儲存和目錄{#catalog}
 
-附加元件和[CIF核心元件](https://github.com/adobe/aem-core-cif-components)可用於連接到不同商AEM務商店（或商店檢視等）的多個網站結構。 預設情況下，CIF附加模組的部署具有與Adobe商務的預設儲存和目錄(Magento)連接的預設配置。
+附加元件和[CIF核心元件](https://github.com/adobe/aem-core-cif-components)可用於連接至不同商AEM務商店（或商店檢視等）的多個網站結構。 預設情況下，CIF附加元件的部署帶有一個預設配置，該配置連接到Adobe商務的預設儲存和目錄(Magento)。
 
 此配置可通過CIFCloud Service配置根據以下步驟調整：
 
@@ -80,7 +80,7 @@ CIF附加元件在`/api/graphql`處提供GraphQL代理Servlet，該GraphQL代理
    > 對Adobe商務(Magento)2.4.2引入的UID的支援。只有在您的商務後端支援2.4.2版或更新版本的GraphQL架構時，才能啟用此功能。
 - 目錄根類別標識符——儲存目錄根的標識符（UID或ID）
 
-上述配置供參考。 專案應提供其專屬的組態。
+上述配置供參考。 專案應提供自己的設定。
 
 如需使用多個網站結構AEM並結合不同商務目錄的更複雜設定，請參閱[商務多商店設定](configuring/multi-store-setup.md)教學課程。
 
