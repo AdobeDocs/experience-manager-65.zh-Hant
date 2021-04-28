@@ -2,9 +2,9 @@
 title: 購物車和Dispatcher設定
 description: 購物車和Dispatcher設定
 translation-type: tm+mt
-source-git-commit: 1848a9789b4008f1be43b36ee3edfac35d8fdc7c
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '140'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/29656/?quality=12)
 
-您可以從下列資源中找到有關此主題的詳細資訊：
+您可以從下列資源中找到有關此主題的更多資訊：
 
 - [購物車](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/minicart/v1/minicart)
 - [具AEM有Magento代理的調度程式](https://github.com/adobe/aem-core-cif-components/tree/master/dispatcher)
