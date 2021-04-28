@@ -9,15 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features, best-practices
 content-type: reference
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
-feature: Multi Site Manager
+feature: 多站點管理員
+exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 0%
+source-wordcount: '1667'
+ht-degree: 1%
 
 ---
-
 
 # MSM最佳實務{#msm-best-practices}
 
@@ -68,6 +68,10 @@ MSM是可設定的架構，可自動化內容部署。 實作通常涉及網站�
 如果未參考藍圖設定，則只能從即時副本本身啟動推播，實際上是從來源提取內容。
 
 使用即時副本建立新網站時，建立藍圖組態有利於確保完整MSM功能集的可用性。
+
+>[注意!]
+>
+> 請注意，「權限」標籤中的CUG無法從「藍圖中即時拷貝」展開。 設定即時副本時，請針對此進行規劃。
 
 ## 元件和容器同步{#components-and-container-synchronization}
 
@@ -207,4 +211,3 @@ MSM首次展示配置具有高度可定製性。 您應該注意到，自動化�
 * [即時副本概述主控台](/help/sites-administering/msm-livecopy-overview.md)
 * [配置即時拷貝同步](/help/sites-administering/msm-sync.md)
 * [MSM推出衝突](/help/sites-administering/msm-rollout-conflicts.md)
-
