@@ -10,14 +10,14 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
+exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 0%
 
 ---
-
 
 # 建立已關閉的用戶組{#creating-a-closed-user-group}
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 要建立已關閉的用戶組，請執行以下操作：
 
-1. 從AEM在家螢幕移至「**工具- Security**」。
+1. 從自畫面移至&#x200B;**工具- Security&lt;a1/AEM>。**
 
    >[!NOTE]
    >
@@ -85,7 +85,7 @@ ht-degree: 0%
 
    >[注意!]
    >
-   > 請注意，「權限」標籤中的CUG無法從「藍圖」回滾到「即時副本」。 設定即時副本時，請針對此進行規劃。
+   > 請注意，「權限」標籤中的CUG無法從「藍圖中即時拷貝」展開。 設定即時副本時，請針對此進行規劃。
    >
    > 如需詳細資訊，請參閱[本頁](closed-user-groups.md#aem-livecopy)。
 
@@ -101,7 +101,7 @@ ht-degree: 0%
 1. 如果需要，請指派&#x200B;**Realm**（頁組的名稱）。 留空將使用頁面標題。
 1. 按一下&#x200B;**確定**&#x200B;保存規範。
 
-如需發佈環境中設定檔的相關資訊，以及提供登入與登出表單，請參閱[身分管理](/help/sites-administering/identity-management.md)。
+如需有關發佈環境中的設定檔以及提供登入和登出表單的資訊，請參閱[Identity Management](/help/sites-administering/identity-management.md)。
 
 ## 連結到領域{#linking-to-the-realm}
 
@@ -144,4 +144,3 @@ ht-degree: 0%
    ```
 
 1. 將[/allowAuthorized](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#caching-when-authentication-is-used)設為`0`。
-
