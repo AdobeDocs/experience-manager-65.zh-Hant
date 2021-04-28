@@ -2,10 +2,10 @@
 title: 2021AEM年內容與商務發行說明
 description: 2021AEM年內容與商務發行說明
 translation-type: tm+mt
-source-git-commit: c859aa89e481e852302e9cda0adf2acc04d68a55
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 10%
+source-wordcount: '1324'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 10%
 
 * 文尼亞參考店面已更新為頁尾使用體驗片段。 商業使用者可使用製作工具來編輯頁AEM尾。
 
-### 功能改善 {#what-is-improved-november}
+### {#what-is-improved-november}的改善功能
 
 * 結帳元件已改善，讓購物者能夠進入目的地國家，以允許美國以外地區的帳單／送貨地址。
 
@@ -48,7 +48,7 @@ ht-degree: 10%
 
 * CIF核心元件通過發送商務資料來擴展Adobe客戶資料層。 Adobe用戶端資料層是一種標準化方法，用來收集資料並將資料傳送至數位分析和報告伺服器。 有關詳細資訊，請參閱[Adobe客戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki)。
 
-* 延伸「產品詳細資訊」和「產品清單」頁面，以自動填入從Magento管理員UI中設定的SEO中繼資料（例如標題、中繼描述、中繼關鍵字）
+* 產品詳細資訊和產品清單頁面已擴充，可自動填入從Magento管理UI中設定的SEO中繼資料（例如標題、中繼說明、中繼關鍵字）
 
 * 商務摘要元件錯誤已修正。
 
@@ -98,7 +98,7 @@ ht-degree: 10%
 
 * 新增可覆寫及設定產品摘要元件預設CTA按鈕標籤的彈性。
 
-* Address Book元件已改進，可讓已註冊的購物者在結帳時選擇儲存在無名單中的送貨地址和帳單地址。
+* 地址簿元件已改進，允許註冊購物者在結帳時選擇儲存在地址簿中的送貨地址和帳單地址。
 
 * 多個錯誤修正。
 
@@ -120,7 +120,7 @@ ht-degree: 10%
 
 * CIF雲端設定UI支援發佈／取消發佈動作。
 
-### 功能改善 {#what-is-improved-july}
+### {#what-is-improved-july}的改善功能
 
 * 登入元件已移至使用者下拉式清單，以方便存取。
 
@@ -138,7 +138,7 @@ ht-degree: 10%
 
 ### 新功能 {#what-is-new-june}
 
-這是Adobe Experience Manager支援的第一版CIF核心元件。
+這是Adobe Experience Manager支援的第一個CIF核心元件版本。
 
 * 在「產品清單」頁面和「搜尋結果」頁面新增產品排序，讓購物者可以根據相關性、價格和產品名稱進行排序。
 
@@ -146,7 +146,7 @@ ht-degree: 10%
 
 * 已添加服務用戶映射作為安全要求的一部分，以確保通過服務用戶而不是直接操作ACL訪問/conf。 CIF核心元件現在必須使用服務用戶訪問配置。
 
-### 功能改善 {#what-is-improved-june}
+### {#what-is-improved-june}的改善功能
 
 * 「產品清單」頁面和「搜尋結果」頁面會顯示項目總數。 購物者套用篩選時，會更新項目數。
 
@@ -174,9 +174,9 @@ ht-degree: 10%
 
 * 建立雲端設定時，會自動建立產品系結。
 
-### 功能改善
+### 改進功能
 
-* Cloud Configuration extended to display &quot;Create Folder&quot; action.
+* 雲端設定已擴充，以顯示「建立資料夾」動作。
 
 * 已套用多個錯誤修正。
 
@@ -192,7 +192,7 @@ ht-degree: 10%
 
 * CIF連接器的配置設定統一且簡化。 如需詳細資訊，請結帳[快速入門](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)或[新AEMCIF專案設定](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
 
-### 功能改善 {#what-is-improved-april}
+### {#what-is-improved-april}的改善功能
 
 * 購物車和結帳流程已擴充，以支援已註冊的購物者。
 
@@ -218,9 +218,9 @@ ht-degree: 10%
 
 * 新增「類別選擇器」的搜尋支援。
 
-* Catogory List元件中的分頁功能，可支援大型目錄集。
+* 類別清單元件中的分頁，以支援大型目錄集。
 
-### 功能改善 {#what-is-improved-february}
+### {#what-is-improved-february}的改善功能
 
 * 購物車已增強，可顯示折扣。
 
@@ -248,7 +248,7 @@ ht-degree: 10%
 
 * 提供通用相關產品元件。
 
-### 功能改善 {#what-is-improved-january}
+### {#what-is-improved-january}的改善功能
 
 * 支援在產品摘要上顯示CTA按鈕。
 
@@ -256,6 +256,6 @@ ht-degree: 10%
 
 * 在「產品清單」元件中隱藏／顯示標題／橫幅的選項。
 
-* 套用至「產品轉盤」元件的拖放功能。
+* 套用至產品轉盤元件的拖放功能。
 
 * 已套用多個錯誤修正。
