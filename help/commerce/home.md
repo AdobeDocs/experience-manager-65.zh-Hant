@@ -1,16 +1,16 @@
 ---
-title: 商AEM務
-description: 商AEM務自助資源與檔案連結
+title: 內AEM容與商務
+description: 內AEM容與商務自助資源與檔案連結
 translation-type: tm+mt
-source-git-commit: b8a46b96db1b81897186f1c8078c06bea64789c4
+source-git-commit: 7b03772e3c7f185cb107c6576e2423275c1a6ccc
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 30%
+source-wordcount: '315'
+ht-degree: 29%
 
 ---
 
 
-# AEM商務{#commerce-guide}
+# 內AEM容與商務{#commerce-guide}
 
 本頁列出有關商務的自助資AEM源。
 
