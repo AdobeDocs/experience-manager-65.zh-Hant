@@ -7,9 +7,9 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 translation-type: tm+mt
-source-git-commit: 8ead3d1b24177effa4d40141408c5676eaabcc30
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->下列指示可協助您使用CIFAEM為AEMCommerce設定本機開發環境，其焦點為AEM6.5)。 如果您使AEM用Cloud Service，請參閱[AEM Commerce as aCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/home.html)檔案。
+>下列指示可協助您使用CIFAEM為AEMCommerce設定本機開發環境，其焦點為AEM6.5)。 如果您使AEM用Cloud Service，請參閱[AEM Commerce as aCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)檔案。
 
 6.AEM5(亦稱AEMCommerce Add-On)。 CIF附加元件也可供當地開發，並提供一AEM套。 它可從[軟體散發入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載為功能套件。
 
@@ -58,7 +58,7 @@ CIF附加元件可從[軟體散發入口網站](https://experience.adobe.com/#/d
 
 對於本地CIF項目開發，使用AEMCIF附加元件和以下步驟：
 
-1. 取得AEM6.5版本並安裝AEM6.5 Service Pack。 需AEM要6.5 Service Pack 7，但建議安裝最後一個可用的Service Pack。
+1. 取得AEM6.5版本並安裝AEM6.5 Service Pack。 AEM 6.5 Service Pack 7是必要項，但建議安裝最後一個可用的Service Pack。
 
 1. 解壓縮AEM.jar以建立`crx-quickstart`資料夾，請運行：
 
@@ -149,7 +149,7 @@ CIF核心元件可以通過包括提供的`all`包或使用CIF內容包和相關
 >
 >Venia Reference Store專案包含兩個建置設定檔，AEM做為Cloud Service和AEM6.5。請查看[專案readme.md](https://github.com/adobe/aem-cif-guides-venia/blob/main/README.md)以瞭解其使用方式。 對於AEM6.5，請使用`classic`描述檔。
 
-### 連AEM線至商務系統
+### 連AEM線至Commerce System
 
 要將項目連接到商務系統，AEM必須使用商務系統的GraphQL端點進行配置。
 
