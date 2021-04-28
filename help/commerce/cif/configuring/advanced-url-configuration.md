@@ -9,22 +9,22 @@ feature: 商務整合框架
 kt: 4933
 thumbnail: 34350.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
 # 進階URL設定{#url}
 
-[CIF核AEM心元件提](https://github.com/adobe/aem-core-cif-components) 供進階組態，以自訂產品和類別頁面的URL。許多實作將自訂這些URL以用於搜尋引擎最佳化(SEO)。  以下視訊詳細資訊如何設定`UrlProvider`服務和[Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)的功能，以自訂產品和類別頁面的URL。
+[CIF核AEM心元件提](https://github.com/adobe/aem-core-cif-components) 供進階組態，以自訂產品和類別頁面的URL。許多實作將自訂這些URL以用於搜尋引擎最佳化(SEO)。 以下視訊詳細資訊如何設定`UrlProvider`服務和[Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)的功能，以自訂產品和類別頁面的URL。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
 ## 設定 {#configuration}
 
-要根據SEO要求配置`UrlProvider`服務，並且需要項目必須為「CIF URL提供者配置」配置提供OSGI配置，並按照下面所述配置服務。
+要根據SEO要求配置`UrlProvider`服務，並需要項目必須為「CIF URL提供者配置」配置提供OSGI配置，並按照下面所述配置服務。
 
 >[!NOTE]
 >
@@ -74,5 +74,5 @@ URL重寫也可以通過使AEM用帶有`mod_rewrite`模組的Dispatcher HTTP伺�
 ## 其他資源
 
 * [Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
-* [資AEM源映射](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [資AEM源映射](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
 * [Sling Mappings](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
