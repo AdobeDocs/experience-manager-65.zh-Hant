@@ -9,9 +9,9 @@ feature: 商務整合框架
 kt: 3455
 thumbnail: 28969.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/28969/?quality=12)
 
-您可以從下列資源中找到有關此主題的詳細資訊：
+您可以從以下資源中查找有關此主題的詳細資訊：
 
 - [AEMCIF核心元件——多目錄頁面配置](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-catalog-page-template-configuration)
