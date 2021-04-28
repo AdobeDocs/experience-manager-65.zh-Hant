@@ -9,9 +9,9 @@ feature: 商務整合框架
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2566'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 1%
 
 ## 客戶端庫和ui.frontend模組{#introduction-to-client-libraries}
 
-負責呈現店面主題／樣式的CSS和JavaScript，由[Client libraryAEM](/help/sites-developing/clientlibs.md)或clientlibs來管理。 用戶端程式庫提供一種機制，可在專案程式碼中組織CSS和Javascript，然後傳送至頁面。
+負責轉譯店面主題／樣式的CSS和JavaScript，由[用戶端資料庫](/help/sites-developing/clientlibs.md)或AEMclientlibs管理。 用戶端程式庫提供一種機制，可在專案程式碼中組織CSS和Javascript，然後傳送至頁面。
 
 您可新增並覆寫由AEM這些用戶端程式庫管理的CSS，將品牌特定樣式套用至CIF核心元件。 瞭解用戶端程式庫的結構化及包含在頁面上，是十分重要的。
 
@@ -164,7 +164,7 @@ ht-degree: 1%
 
    ![在ui.apps中編譯網站CSS](../assets/style-cif-component/comiled-css-ui-apps.png)
 
-   這會將複製的`site.css`檔案複製到`ui.apps`專案中。 它現在是名為`clientlib-site`且類別為`venia.site`的clientlibrary的一部分。 一旦檔案屬於`ui.apps`模組的一部分，就可將其部署到該模AEM塊。
+   這會將`site.css`檔案複製至`ui.apps`專案。 它現在是名為`clientlib-site`且類別為`venia.site`的客戶端庫的一部分。 一旦檔案屬於`ui.apps`模組的一部分，就可將其部署到該模AEM塊。
 
    >[!NOTE]
    >
@@ -174,7 +174,7 @@ ht-degree: 1%
 
    ![其他用戶端程式庫](../assets/style-cif-component/other-clientlibs.png)
 
-   這些客戶端庫不由`ui.frontend`模組管理。 這些用戶端程式庫包含Adobe提供的CSS和JavaScript相依性。 這些clientlibraries的定義位於每個資料夾下方的`.content.xml`檔案中。
+   這些客戶端庫不由`ui.frontend`模組管理。 這些用戶端程式庫包含Adobe提供的CSS和JavaScript相依性。 這些客戶端庫的定義位於每個資料夾下的`.content.xml`檔案中。
 
    **clientlib-base**  —— 此為空的客戶端庫，僅嵌入核心元件中所需的 [AEM依賴項](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)。類別為`venia.base`。
 
@@ -225,7 +225,7 @@ ht-degree: 1%
 
    ![以已發佈狀態檢視](../assets/style-cif-component/view-as-published.png)
 
-   如此會開啟未載入任何作AEM者javascript的頁面，因為它會顯示在發佈的網站上。 請注意，URL已附加查詢參數`?wcmmode=disabled`。 在開發CSS和Javascript時，最好使用此參數來簡化頁面，而不需任何作者的AEM協助。
+   如此會開啟未載入任何作AEM者javascript的頁面，因為它會顯示在發佈的網站上。 請注意，URL已附加查詢參數`?wcmmode=disabled`。 在開發CSS和Javascript時，最好使用此參數來簡化頁面，毋需任何作者的AEM協助。
 
 1. 檢視頁面來源，您應該能夠識別包含的數個用戶端程式庫：
 
@@ -280,7 +280,7 @@ ht-degree: 1%
    * `venia.dependencies` -提供任何依賴的供 `venia.site` 應商庫。
    * `venia.site` -這是模組生 `clientlib-site` 成的 `ui.frontend` 類別。
 
-   請注意，其他範本使用相同的原則：**內容頁面**、**著陸頁面**&#x200B;等……透過重新使用相同的原則，我們可以確保所有頁面上都包含相同的用戶端程式庫。
+   請注意，其他範本使用相同的原則：**內容頁面**、**著陸頁面**&#x200B;等。 透過重新使用相同的原則，我們可以確保所有頁面上都包含相同的用戶端程式庫。
 
    使用「範本」和「頁面」原則管理包含用戶端程式庫的好處是，您可以依範本變更原則。 例如，您可能在同一個實例中管理兩個不同的AEM品牌。 每個品牌都有其獨特的樣式或&#x200B;*theme*，但基本資料庫和程式碼會相同。 另一個範例是，如果您有較大的用戶端程式庫，而您只想要顯示在特定頁面上，則可針對該範本建立唯一的頁面原則。
 
@@ -328,7 +328,7 @@ webpack-dev-server proxy影像和本機例項中的部分CSS/JavaScriptAEM，但
 
    >[!CAUTION]
    >
-   > 如果出現與Sass相關的錯誤，請停止伺服器並運行命令`npm rebuild node-sass` ，然後重複上述步驟。 如果項目`aem-cif-guides-venia/pom.xml`中指定了不同版本的`npm`和`node`，則可能會發生這種情況。
+   > 如果出現與Sass相關的錯誤，請停止伺服器並運行命令`npm rebuild node-sass` ，然後重複上述步驟。 如果您在專案`aem-cif-guides-venia/pom.xml`中指定了不同的`npm`和`node`版本，就會發生這種情況。
 
 1. 使用與登入的例項相同的瀏覽器，在新標籤中導覽至[http://localhost:8080/](http://localhost:8080/)AEM。 您應透過webpack-dev-server查看Venia首頁：
 
