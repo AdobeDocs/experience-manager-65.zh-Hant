@@ -9,9 +9,9 @@ feature: 商務整合框架
 kt: 3046
 thumbnail: 28952.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '381'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Live Copy和AEM Language Copy的多網站管理功能與Commerce Integration Fra
 4. 將子配置分配給站AEM點
 
    * 前往AEM Sites主控台
-   * 導覽至網站結構的地區或語言根目錄，例如/content/venia/us _或_ /content/venia/us/en for Venia sample page
+   * 導覽至網站結構的地區或語言根目錄，例如/content/venia/us _或_ /content/venia/us/en，以取得Venia範例頁面
    * 選擇頁面並開啟頁面屬性
    * 選擇「高級」頁籤
    * 在`Configuration`部分中，選擇您在步驟中建立的配置
@@ -60,5 +60,5 @@ Live Copy和AEM Language Copy的多網站管理功能與Commerce Integration Fra
 
 * [Magento網站、商店和檢視](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
 * [AEM CIF核心元件——多商店／站點配置](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-store--site-configuration)
-* [使用多網站管理員](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
+* [使用多網站管理員](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [重複使用內容：多網站管理員和即時副本](/help/sites-administering/msm.md)
