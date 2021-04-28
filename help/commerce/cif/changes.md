@@ -3,7 +3,7 @@ title: 商務整合框架(CIF)附加元件的顯著變更
 description: 與舊版CIF相比，Commerce Integration Framework(CIF)附加元件有顯著的變更。
 exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32,c136763f-56aa-450e-8796-bc84bf6c205d
 translation-type: tm+mt
-source-git-commit: a8dba82029168660b84b085ab46d0406b19961ef
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 安裝與更新
 
-CIF附AEM加套件會安裝並更新套件管AEM理器。
+CIF附AEM加套件會安裝並更新為套AEM件管理員。
 
 **舊版CIF**
 
@@ -34,7 +34,7 @@ CIF附AEM加套件會安裝並更新套件管AEM理器。
 
 ## CIF Venia項目的部署
 
-[GitHub指南中提供的項AEM目- CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia)，並通過包管理器完成部AEM署
+[GitHub指南中提供的項AEM目- CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia)，並通過包管理器完AEM成部署。
 
 **舊版CIF**
 
@@ -58,4 +58,4 @@ CIF附AEM加套件會安裝並更新套件管AEM理器。
 
 >[!NOTE]
 >
->有關如何搭配受管服務或內部部署使AEM用CIF的其AEM他文檔，請參閱[商務整合架構](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)
+>有關如何搭配受管服務或內部部署使AEM用CIF的其AEM他檔案，請參閱[商務整合架構](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)
