@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '1886'
 ht-degree: 0%
@@ -55,7 +55,7 @@ ht-degree: 0%
 * `cq:commerceProvider`屬性也用於參考適當的商務工廠定義。
 
    * 例如，`cq:commerceProvider`屬性的值geometrixx將與&#x200B;**Day CQ Commerce Factory for Douttoors**(`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`)的OSGi配置相關聯——其中，參數`commerceProvider`也具有`geometrixx`值。
-   * 您可在這裡設定其他屬性（若適當且可用）。
+   * 您可在此處設定其他屬性（若適用且可用）。
 
 在標準安AEM裝中，需要特定實作，例如：
 
