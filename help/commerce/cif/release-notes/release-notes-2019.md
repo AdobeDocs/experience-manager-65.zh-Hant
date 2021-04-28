@@ -2,10 +2,10 @@
 title: 2021AEM年內容與商務發行說明
 description: 2021AEM年內容與商務發行說明
 translation-type: tm+mt
-source-git-commit: c2fb9af056fa4be13cfd7e60e8a44485e8712c0b
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '973'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 8%
 
 * Braintree支付支AEM援在Venia商店前面。
 
-### 功能改善 {#what-is-improved-november}
+### {#what-is-improved-november}的改善功能
 
 * 類別／產品挑選器已增強，可在多商店設定中依照指定的Magento商店檢視。
 
@@ -53,7 +53,7 @@ ht-degree: 8%
 
 * 以客戶端元件為主的反應式客戶端元件，以進行帳戶管理。 本版本支援下列功能：登入、忘記密碼及建立帳戶。
 
-### 功能改善 {#what-is-improved-october}
+### {#what-is-improved-october}的改善功能
 
 * 產品詳細資訊和產品清單元件已增強，可顯示虛擬資料，讓作者在將這些元件置於範本／頁面時，預覽版面配置。
 
@@ -77,7 +77,7 @@ ht-degree: 8%
 
 * 結帳元件包括地址表單、付款選擇和送貨方法選擇。
 
-### 功能改善 {#what-is-improved-september}
+### {#what-is-improved-september}的改善功能
 
 * 產品摘要和產品轉盤元件支援產品變體。
 
@@ -105,7 +105,7 @@ ht-degree: 8%
 
 * 「按鈕」，可讓作者放AEM置在頁面上，並連結至AEM頁面、產品詳細資訊頁面、產品清單頁面或外部連結。
 
-### 功能改善 {#what-is-improved-august}
+### {#what-is-improved-august}的改善功能
 
 * Magento商店設定從OSGi移AEM至產品主控台，讓整合設定更方便使用者。
 
@@ -131,7 +131,7 @@ ht-degree: 8%
 
 * 伺服器端功能類別清單，以顯示頁面上的類別AEM清單。
 
-### 功能改善 {#what-is-improved-july}
+### {#what-is-improved-july}的改善功能
 
 * 產品主控台中會顯示與產品屬性相關的Magento2.3.2和錯誤修正支援。
 
