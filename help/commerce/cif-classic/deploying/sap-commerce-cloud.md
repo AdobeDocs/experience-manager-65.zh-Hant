@@ -7,7 +7,7 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 2%
@@ -203,7 +203,7 @@ eCommerce Integration Framework的hybris擴充功能已更新為支援Hybris 5�
    * 用戶名：管理員
    * 密碼：nimda
 
-1. 從側欄導覽中，說明&#x200B;**System**&#x200B;和&#x200B;**Tools**。 然後選擇&#x200B;**Import**&#x200B;以開啟&#x200B;**嚮導：CSV Import**&#x200B;視窗。
+1. 從側欄導航中，展開&#x200B;**System**&#x200B;和&#x200B;**Tools**。 然後選擇&#x200B;**Import**&#x200B;以開啟&#x200B;**嚮導：CSV Import**&#x200B;視窗。
 1. 在&#x200B;**Configuration**&#x200B;標籤中，**Upload**&#x200B;以下&#x200B;**Import file**:
 
    [取得檔案](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
