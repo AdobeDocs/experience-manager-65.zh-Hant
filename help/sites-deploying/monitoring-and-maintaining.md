@@ -77,7 +77,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->如果您正在操作第三方應用程式伺服器，則其他資料夾可能位於不同的位置，也可能需要備份。 如需安裝應用程式伺服器的相關資訊，請參AEM閱[如何與應用程式伺服器一起安裝。 ](/help/sites-deploying/application-server-install.md)[](/content/docs/en/aem/6-3/deploy/installing.md#將adobe experience Manager與應用程式伺服器一起安裝)
+>如果您正在操作第三方應用程式伺服器，則其他資料夾可能位於不同的位置，也可能需要備份。 如需安裝應用程式伺服器的相關資訊，請參AEM閱[如何與應用程式伺服器一起安裝。 ](/help/sites-deploying/application-server-install.md)
 
 >[!CAUTION]
 >
