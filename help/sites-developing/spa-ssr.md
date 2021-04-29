@@ -10,14 +10,14 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
+exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
-
 
 # 和SPA伺服器端演算{#spa-and-server-side-rendering}
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 概覽 {#overview}
 
-單頁應用程式(SPA)可為使用者提供豐富的動態體驗，以熟悉的方式反應和運作，通常就像原生應用程式。 [這是透過依賴用戶端在前面載入內容，然後進行繁重的使用者互動處理，從而將用戶端與伺服器之間所需的通訊量降至最低，使應用程式更具反應性而實現的。](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) 
+單頁應用程式(SPA)可為使用者提供多樣化的動態體驗，以熟悉的方式反應和運作，通常就像原生應用程式。 [這是透過依賴用戶端在前面載入內容，然後進行繁重的使用者互動處理，從而將用戶端與伺服器之間所需的通訊量降至最低，使應用程式更具反應性而實現的。](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) 
 
 不過，這可能會延長初始載入時間，尤其是當載入SPA量龐大且內容豐富時。 為了最佳化載入時間，有些內容可在伺服器端轉譯。 使用伺服器端轉譯(SSR)可加速頁面的初始載入，並進一步將轉譯傳遞給用戶端。
 
@@ -64,7 +64,9 @@ SSR通常在以下任一問題有明確的「是」時提供一些值：
 
 >[!NOTE]
 >
->Adobe建議針對每個環境(作AEM者、發佈、舞台等)建立個別的Adobe I/O Runtime例項。
+>Adobe建議每個環境（舞台、prod、測試等）使用單獨的Adobe I/O Runtime工作區。 這允許典型的系統開發生命週期(SDLC)模式，將不同版本的單個應用程式部署到不同的環境中。 如需詳細資訊，請參閱[專案Firefly應用程式的CI/CD檔案](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md)。
+>
+>每個例項（作者、發佈）不需要個別的工作區，除非每個例項類型的執行時期實作有所差異。
 
 ## 遠程渲染器配置{#remote-renderer-configuration}
 
