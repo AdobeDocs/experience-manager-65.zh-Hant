@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
+exl-id: 65f5d5e1-ac11-4a3c-8a51-ce06a741c264
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: baf2c6339a554743b6cc69486fb77b121048ba4b
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
-
 
 # 使用隱藏條件{#using-hide-conditions}
 
@@ -58,7 +58,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 ## 範例 {#example}
 
-您可在AEM中找到隱藏條件的範例，尤其是[核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)。 例如，請考慮[清單核心元件](https://helpx.adobe.com/experience-manager/core-components/using/list.html)。
+隱藏條件的範例可AEM以在整個中找到，尤其是[核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)。 例如，請考慮[清單核心元件](https://helpx.adobe.com/experience-manager/core-components/using/list.html)。
 
 [使用範本編輯器](/help/sites-authoring/templates.md)，範本作者可在設計對話方塊中定義頁面作者可使用的清單元件選項。例如是否允許清單為靜態清單、子頁清單、標籤頁清單等。 可以啟用或停用。
 
@@ -72,16 +72,15 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. 策略節點在`/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`t下建立，屬性`disableChildren`設定為`true`。
-1. hide條件定義為對話屬性節點`/conf/we-retail/settings/wcm/policies/weretail/components/content/list`上`granite:hid`e屬性的值
+1. 策略節點在`/conf/we-retail/settings/wcm/policies/weretail/components/content/list`下建立，屬性`disableChildren`設定為`true`。
+1. hide條件定義為對話屬性節點`/conf/we-retail/settings/wcm/policies/weretail/components/content/list`上`granite:hide`屬性的值
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
 
-1. 從設計配置提取`disableChildren`的值，表達式`${cdDesign.disableChildren}`的求值為`false`，這表示該選項不會作為元件的一部分呈現。
+1. 從設計配置提取`disableChildren`的值，表達式`${cqDesign.disableChildren}`的求值為`false`，這表示該選項不會作為元件的一部分呈現。
 
    您可以在GitHub中將hide運算式視為`granite:hide`屬性[的值，此處為](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)。
 
 1. 當使用清單元件時，頁面作者不再呈現選項&#x200B;**子頁面**。
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
-
