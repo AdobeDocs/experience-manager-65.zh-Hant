@@ -1,8 +1,8 @@
 ---
 title: 報告
 seo-title: 報告
-description: 瞭解如何在AEM中使用報表。
-seo-description: 瞭解如何在AEM中使用報表。
+description: 瞭解如何在中使用報告AEM。
+seo-description: 瞭解如何在中使用報告AEM。
 uuid: eee4befd-5fa9-4ebc-8eea-56e1534a6b9b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,18 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 7e2b30a3-75ff-4735-8038-5c5391ac36f3
 docset: aem65
+exl-id: 2a0bf59d-8829-4142-9cb4-dcef90f53ae9
 translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+source-git-commit: 429f3ee859477fb38938fd6b9706c8006623eb03
 workflow-type: tm+mt
-source-wordcount: '2793'
+source-wordcount: '2815'
 ht-degree: 4%
 
 ---
 
-
 # 報告 {#reporting}
 
-為協助您監控和分析執行個體的狀態，AEM提供一組預設報表，可針對您的個別需求進行設定：
+為協助您監控和分析執行個體的狀態，AEM請提供一組預設報表，可針對個別需求進行設定：
 
 * [元件報表](#component-report)
 * [磁碟使用情況](#disk-usage)
@@ -32,13 +32,17 @@ ht-degree: 4%
 * [工作流程例項報表](#workflow-instance-report)
 * [工作流程報表](#workflow-report)
 
+>[!NOTE]
+>
+>這些報表僅適用於傳統UI。 有關現代UI中的系統監視和報告，請參閱[操作儀表板。](/help/sites-administering/operations-dashboard.md)
+
 所有報告都可從&#x200B;**工具**&#x200B;控制台訪問。 在左窗格中選擇&#x200B;**報表**，然後按兩下右窗格中的必要報表，以開啟報表供檢視和／或設定。
 
 您也可以從&#x200B;**Tools**&#x200B;控制台建立新的報表例項。 在左窗格中選擇&#x200B;**報表**，然後選擇&#x200B;**新建……**。 定義&#x200B;**Title**&#x200B;和&#x200B;**Name**，選擇所需的報表類型，然後按一下&#x200B;**Create**。 您的新報表例項會出現在清單中。 按兩下此按鈕以開啟，然後從sidekick拖曳元件以建立第一欄並啟動報表定義。
 
 >[!NOTE]
 >
->除了現成可用的標準AEM報表外，您還可以[開發您自己（完全新的）報表](/help/sites-developing/dev-reports.md)。
+>除了現成可用AEM的標準報表外，您還可以[開發您自己的（全新）報表](/help/sites-developing/dev-reports.md)。
 
 ## 報表自訂的基本概念{#the-basics-of-report-customization}
 
@@ -67,7 +71,7 @@ ht-degree: 4%
 
 欄可以新增至標準或自訂的任何報表、重新放置在報表上或從報表中移除。
 
-sidekick的&#x200B;**Components**&#x200B;標籤（可在報表頁面上使用）會列出所有可選為欄的資料類別。
+sidekick的&#x200B;**元件**&#x200B;標籤（可在報表頁面上使用）會列出所有可選為欄的資料類別。
 
 要更改資料選擇：
 
@@ -267,7 +271,7 @@ sidekick的&#x200B;**Components**&#x200B;標籤（可在報表頁面上使用）
 
 ### 載入資料 {#load-data}
 
-**從**[&#x200B;編輯&#x200B;](#edit-report)**中選擇了**&#x200B;手動刷新資料&#x200B;**時，&lt;a0/>載入資料**&#x200B;按鈕才顯示。
+**從**[&#x200B;編輯&#x200B;](#edit-report)**中選擇了**&#x200B;手動刷新資料&#x200B;**時，載入資料**&#x200B;按鈕才顯示。
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -542,7 +546,7 @@ sidekick的&#x200B;**Components**&#x200B;標籤（可在報表頁面上使用）
 * 報表資料基本上是使用目前使用者的權限來收集。
 * 歷史資料會使用完成報表的使用者權限來收集。
 
-在標準AEM安裝中，報表的下列權限是預設的：
+在標準安AEM裝中，報表預設了下列權限：
 
 * **使用者報表**
 
