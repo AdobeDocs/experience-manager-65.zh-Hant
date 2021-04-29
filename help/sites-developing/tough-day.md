@@ -10,24 +10,24 @@ topic-tags: testing
 content-type: reference
 discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
 docset: aem65
+exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 3727b561a2ee9778d75f18530caf16c6c3ef846a
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 1%
 
 ---
 
-
 # 艱難的一天{#tough-day}
 
 ## 艱難的一天2 {#what-is-tough-day}
 
-「Tough Day 2」是一套應用程式，可讓您壓力測試AEM執行個體的限制。 它可在預設測試套裝的包裝盒內執行，或是設定成符合您的測試需求。 您可以觀看[此錄制](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html)以呈現應用程式。
+「Tough Day 2」是一套應用程式，可讓您壓力測試執行個體的限AEM制。 它可在預設測試套裝的包裝盒內執行，或是設定成符合您的測試需求。 您可以觀看[此錄制](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html)以呈現應用程式。
 
 ## 如何執行艱難日2 {#how-to-run-tough-day}
 
-從[Adobe Repository](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/)下載Tough Day 2的最新版本。 下載應用程式後，您就可以透過提供`host`參數，立即執行。 在下列範例中，AEM例項會在本機執行，因此會使用`localhost`值：
+從[Adobe資料庫](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/)下載Tough Day 2的最新版本。 下載應用程式後，您就可以透過提供`host`參數，立即執行。 在下列範例中，AEM例項會在本機執行，因此會使用`localhost`值：
 
 ```xml
 java -jar toughday2.jar --host=localhost
