@@ -1,21 +1,21 @@
 ---
-title: '中繼資料結構，以定義 [!DNL Adobe Experience Manager Assets]中中繼資料屬性頁面的配置。 '
+title: '中繼資料結構定義中繼資料屬性頁面的配置 '
 description: 中繼資料結構定義屬性頁面的版面配置，以及為資產顯示的中繼資料屬性。 瞭解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: Metadata
+role: Business Practitioner,Administrator
+feature: 中繼資料
+exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+source-git-commit: ae0c8bda918e2e8a7a6a32e0228d1a2410b283d9
 workflow-type: tm+mt
-source-wordcount: '3605'
+source-wordcount: '3571'
 ht-degree: 7%
 
 ---
 
-
 # 中繼資料結構{#metadata-schemas}
 
-企業組織會提供中繼資料模型，以增強資產發現、使用、互操作性等。 正確的中繼資料應用程式對於維護中繼資料導向的工作流程和程式而言是神聖不可侵犯的。 為符合整個組織的中繼資料策略和標準，您可以使用中繼資料結構，協助DAM使用者對齊。 [!DNL Adobe Experience Manager] 可讓您以簡單而有彈性的方式建立、維護和套用中繼資料結構。
+企業組織會提供中繼資料模型，以增強資產發現、使用、互操作性等。 正確的中繼資料應用程式是神聖不可侵犯的，可維持中繼資料導向的工作流程和程式。 為符合整個組織的中繼資料策略和標準，您可以使用中繼資料結構，協助DAM使用者對齊。 [!DNL Adobe Experience Manager] 可讓您以簡單而有彈性的方式建立、維護和套用中繼資料結構。
 
 在[!DNL Adobe Experience Manager Assets]中，結構包含要填充的特定資訊的特定欄位。 它也包含版面資訊，以方便使用者的方式顯示中繼資料欄位。 中繼資料屬性包括標題、說明、MIME類型、標籤等。 您可以使用[!UICONTROL 中繼資料結構Forms]編輯器修改現有結構或新增自訂中繼資料結構。
 
@@ -27,9 +27,9 @@ ht-degree: 7%
 
    ![資產屬性的「基本」標籤，其中無法變更資產類型](assets/asset-properties-basic-tab.png)
 
-*圖：資產屬性上的「基 [!UICONTROL 本」標籤]。*
+   *圖：資產屬性上的「基 [!UICONTROL 本」標籤]。*
 
-若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳細資訊，請參閱[編輯中繼資料結構Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms)。 如果您修改MIME類型的中繼資料結構，資產和所有子類型的屬性頁面配置都會被修改。 例如，在`default/image`下修改jpeg架構只會修改MIME類型`image/jpeg`的資產的中繼資料配置（資產屬性）。 不過，如果您編輯預設結構，您的變更會修改所有類型資產的中繼資料配置。
+   若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳細資訊，請參閱[編輯中繼資料結構Forms](#edit-metadata-schema-forms)。 如果您修改MIME類型的中繼資料結構，資產和所有子類型的屬性頁面配置都會被修改。 例如，在`default/image`下修改jpeg架構只會修改MIME類型`image/jpeg`的資產的中繼資料配置（資產屬性）。 不過，如果您編輯預設結構，您的變更會修改所有類型資產的中繼資料配置。
 
 ## 中繼資料結構表單{#default-metadata-schema-forms}
 
@@ -113,7 +113,7 @@ ht-degree: 7%
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資產的中繼資料節點，做為屬性 `dc:title`。
 
-* `./jcr:created`:儲存資產的建立日期和時間。它是受保護的屬性。 如果您設定這些屬性，Adobe建議您將它們標示為「停用編輯」。
+* `./jcr:created`:儲存資產的建立日期和時間。它是受保護的屬性。 如果您設定這些屬性，Adobe建議您將它們標示為「停用編輯」。 否則，當您儲存資產的屬性時，會出現「資產無法修改」錯誤。
 
 為確保元資料架構表單中的元件正確顯示，屬性路徑不應包含任何空格。
 
@@ -301,7 +301,7 @@ ht-degree: 7%
 [!DNL Assets] 映射以下MIME類型和模式表單：
 
 | 架構表單 | MIME類型 |
-| --------------------------- | --------------------------------------------------- |
+|---|---|
 | image/jpeg | image/pjpeg |
 | image/tiff | image/x-tiff |
 | application/pdf | application/postscript |
@@ -326,9 +326,7 @@ ht-degree: 7%
 
 只有上傳至套用此架構的資料夾的資產，才符合變型中繼資料架構中定義的已修改中繼資料。 [!DNL Assets] 在應用原始模式的其他資料夾中，繼續與原始模式中定義的元資料保持一致。
 
-資產的中繼資料繼承是根據套用至階層中第一層資料夾的架構。 換言之，如果資料夾不包含子檔案夾，資料夾內的資產會繼承套用至資料夾之結構的中繼資料。
-
-您可以在子資料夾中應用不同的方案。 子資料夾內的資產繼承直接子資料夾的元資料結構。 如果子資料夾級別未應用方案或相同方案，則其資產會從父資料夾繼承方案。
+資產的中繼資料繼承是根據套用至階層中頂層檔案夾的架構。 子檔案夾會套用或繼承相同的架構。 如果在子資料夾級別應用了不同的方案，繼承將停止。
 
 1. 在[!DNL Experience Manager]介面中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料結構]**。 此時會顯示&#x200B;**[!UICONTROL 「中繼資料結構描述表單」]**&#x200B;頁面。
 1. 選取表單前的核取方塊，例如預設中繼資料表單，然後按一下&#x200B;**[!UICONTROL Copy]**&#x200B;並儲存為自訂表單。 指定表單的自訂名稱，例如`my_default`。 或者，您也可以建立自訂表格。
