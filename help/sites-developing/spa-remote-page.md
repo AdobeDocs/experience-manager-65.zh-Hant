@@ -1,10 +1,11 @@
 ---
 title: RemotePage元件
 description: RemotePage元件是用於編輯遠程React的自定義頁面組SPA件AEM。
+exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
 translation-type: tm+mt
-source-git-commit: 431bed450ed5b0239d9191dcf061f01e64b8981a
+source-git-commit: a92358d187aa78e05dd9b5a7bd4ae14bf0972f62
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,14 @@ RemotePage元件從應用程式生成的`asset-manifest.json`中提取所有必�
 * 讓CORS可進行開發
 * 在頁面屬性中設定遠端URL
 * 在中SPA演算AEM
+* Web應用程式必須使用Bundler資產資訊清單，如下列其中一項，並在網域根目錄中公開asset-manifest.json檔案，其中會列出要載入的所有CSS和JS檔案：
+   * https://github.com/shellscape/webpack-manifest-plugin
+   * https://github.com/webdeveric/webpack-assets-manifest
+   * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
+
+   ![入口點](assets/asset-manifest-entrypoints.png)
+
+* 應用程式必須能夠在主體元素下方的`<div id="root"></div>`中初始化。 如果應用程式需要不同的標籤來執行個體化，則必須在具有`sling:resourceSuperType="spa-project-core/components/remotepage`的proxy元件的HTL指令碼中相應調整。
 
 ## 限制 {#limitations}
 
