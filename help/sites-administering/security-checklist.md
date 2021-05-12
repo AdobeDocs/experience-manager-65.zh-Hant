@@ -11,11 +11,10 @@ content-type: reference
 discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
-feature: Security
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: 安全性
+source-git-commit: 1c6ee9b547fd0870feb510e35ffdcb8e3f857f18
 workflow-type: tm+mt
-source-wordcount: '2842'
+source-wordcount: '2873'
 ht-degree: 0%
 
 ---
@@ -26,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[還有關Open Web Application Security Project(OWASP)](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)發佈的最危險安全威脅的詳細資訊。
+>有關[Open Web Application Security Project(OWASP)](https://owasp.org/www-project-top-ten/)發佈的最危險安全威脅的詳細資訊，也請參見。
 
 >[!NOTE]
 >
@@ -154,7 +153,7 @@ AEM6推出全新的Operations Dashboard，旨在協助系統營運商疑難排�
 
 ### 檢查Sling開發套件是否存在{#check-if-the-sling-development-bundle-is-present}
 
-[AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md)部署Apache Sling Tooling Support Install(org.apache.sling.tooling.support.install)。
+[AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md)會部署Apache Sling Tooling Support Install(org.apache.sling.tooling.support.install)。
 
 此OSGi套件應先解除安裝在作者和發佈生產系統上，再加以存取。
 
@@ -162,7 +161,7 @@ AEM6推出全新的Operations Dashboard，旨在協助系統營運商疑難排�
 
 #### CSRF保護框架{#the-csrf-protection-framework}
 
-AEM 6.1船舶提供一種機制，可協助保護您免受跨網站偽造要求攻擊，稱為&#x200B;**CSRF Protection Framework**。 有關如何使用它的詳細資訊，請參閱[文檔](/help/sites-developing/csrf-protection.md)。
+AEM 6.1船舶提供一種機制，可協助保護您免受跨網站偽造要求攻擊，稱為&#x200B;**CSRF保護架構**。 有關如何使用它的詳細資訊，請參閱[文檔](/help/sites-developing/csrf-protection.md)。
 
 #### The Sling Referrer Filter {#the-sling-referrer-filter}
 
@@ -264,7 +263,7 @@ AEM 6.1船舶提供一種機制，可協助保護您免受跨網站偽造要求�
    * `.../en.SelectorDosAttack.html`
    * `.../en.html/SuffixDosAttack`
 
-   所有有效變化（例如返回`200`響應並配置為快取）都將由調度程式進行快取，最終導致完整檔案系統，並且沒有服務用於進一步請求。
+   所有有效變化（例如返回`200`響應並配置為快取）將由調度程式進行快取，最終導致完整檔案系統，並且沒有服務用於進一步請求。
 
 防止此類攻擊的配置點有很多，這裡我們只討論與之直接相關的AEM。
 
@@ -332,11 +331,9 @@ Sling為&#x200B;*content-centric*。 這表示處理會以JCR資源（儲存庫�
 
 **減輕資產下載Servlet造成的DoS影響**
 
-中的預設資產下載ServletAEM允許通過身份驗證的用戶發出任意大型的併發下載請求，以建立可見資產的ZIP檔案，該檔案可能會使伺服器和／或網路過載。
+預設資產下載servlet可讓已驗證的使用者發出任意大型的並行下載請求，以建立資產的ZIP檔案。 建立大型ZIP存檔可能會使伺服器和網路過載。 為了降低此行為造成的潛在拒絕服務(DoS)風險，`AssetDownloadServlet` OSGi元件預設會在[!DNL Experience Manager]發佈例項上停用。 預設會在[!DNL Experience Manager]作者例項上啟用。
 
-為了降低此功能造成的潛在DoS風險，`AssetDownloadServlet` OSGi元件預設會停用於最新版本的發AEM布例項。
-
-如果您的設定要求啟用資產下載伺服器，請參閱[本文章](/help/assets/download-assets-from-aem.md)以取得詳細資訊。
+如果您不需要下載功能，請停用作者和發佈部署上的servlet。 如果您的設定需要啟用資產下載功能，請參閱[本文](/help/assets/download-assets-from-aem.md)以取得詳細資訊。 此外，您也可以定義部署可支援的最大下載限制。
 
 ### 禁用WebDAV {#disable-webdav}
 
@@ -451,4 +448,4 @@ Adobe強烈建議您在開始生產之前，先AEM對基礎架構執行滲透測
 
 ### 開發最佳實踐{#development-best-practices}
 
-新的開發必須遵循[安全性最佳實務](/help/sites-developing/security.md)，以確保您的環境AEM安全無虞。
+新的開發必須遵循[安全最佳做法](/help/sites-developing/security.md)，以確保您的環AEM境安全。
