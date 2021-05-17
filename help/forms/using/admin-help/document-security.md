@@ -12,9 +12,9 @@ discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: 文件安全性
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: 76201cc58f2d3f7d65f867801fcb95f5390baada
+source-git-commit: ffba6ecf6c3d75a71c3e6f970fd9a20ce467492d
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2562'
 ht-degree: 0%
 
 ---
@@ -225,7 +225,7 @@ Document Security管理員可在「使用者管理」中使用下列權限來建
 
 >[!NOTE]
 >
->從資料庫中最多可檢索1000個策略集名。
+>使用`getAllPolicysetnames()` API，可從資料庫中檢索最多1000個策略集名稱。
 
 策略集由具有此權限的管理員和策略集協調員在Document Security管理網頁中建立和刪除。
 
