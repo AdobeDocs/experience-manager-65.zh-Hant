@@ -10,15 +10,14 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
-feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 文件安全性
+exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
+source-git-commit: 76201cc58f2d3f7d65f867801fcb95f5390baada
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2560'
 ht-degree: 0%
 
 ---
-
 
 # 關於檔案安全性{#about-document-security}
 
@@ -223,6 +222,10 @@ Document Security管理員可在「使用者管理」中使用下列權限來建
 * 查看策略集中任何策略或文檔的策略和文檔事件
 * 撤銷檔案的存取權
 * 切換檔案的原則。
+
+>[!NOTE]
+>
+>從資料庫中最多可檢索1000個策略集名。
 
 策略集由具有此權限的管理員和策略集協調員在Document Security管理網頁中建立和刪除。
 
