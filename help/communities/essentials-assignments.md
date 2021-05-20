@@ -1,8 +1,8 @@
 ---
-title: Assignments Essentials
-seo-title: Assignments Essentials
-description: 啟用社群的工作功能總覽
-seo-description: 啟用社群的工作功能總覽
+title: 工作總攬
+seo-title: 工作總攬
+description: 啟用社群的工作總攬功能概觀
+seo-description: 啟用社群的工作總攬功能概觀
 uuid: e49fce26-1091-4f37-93e8-c4ec85371811
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,22 +10,21 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 11%
 
 ---
 
+# 工作總攬{#assignments-essentials}
 
-# Assignments Essentials {#assignments-essentials}
+請閱讀以了解使用[啟用社群](/help/communities/overview.md#enablement-community)網站指派功能的基本資訊。
 
-閱讀以瞭解使用[啟用社群](/help/communities/overview.md#enablement-community)網站的指派功能的基本資訊。
+指派功能是將啟用資源和學習路徑指派給啟用社群的成員。
 
-指派功能是將啟用資源和學習路徑指派給啟用社群成員的能力。
-
-## 客戶端{#essentials-for-client-side}的基本功能
+## 客戶端{#essentials-for-client-side}的要點
 
 <table>
  <tbody>
@@ -34,31 +33,31 @@ ht-degree: 11%
    <td>social/enablement/components/hbs/myassigned</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>included</strong></a></td>
+   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.myassigned<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/enablement/components/hbs/myassigned/myassigned.hbs</td>
   </tr>
   <tr>
-   <td> <strong>css</strong></td>
+   <td> <strong>cs</strong></td>
    <td> /libs/social/enablement/components/hbs/myassigned/clientlibs/myassigned.css</td>
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱<a href="/help/communities/assignments.md">工作功能</a></td>
+   <td>請參閱<a href="/help/communities/assignments.md">工作總攬功能</a></td>
   </tr>
  </tbody>
 </table>
 
-### 完成與成功狀態{#completion-and-success-status}
+### 完成和成功狀態{#completion-and-success-status}
 
-「工作總攬」的報表和狀態橫幅會使用「完成」和「成功」狀態。
+「完成」和「成功」狀態用於「工作總攬」上的報表和狀態橫幅。
 
 完成狀態:
 
@@ -73,7 +72,7 @@ ht-degree: 11%
 * 通過
 * 失敗
 
-「完成」和「成功狀態」的唯一可能組合為：
+完成和成功狀態的唯一可能組合是：
 
 | **完成** | **成功** |
 |---|---|
@@ -82,17 +81,16 @@ ht-degree: 11%
 | 完成 | 通過 |
 | 完成 | 失敗 |
 
-## 伺服器端{#essentials-for-server-side}的基本工具
+## 伺服器端{#essentials-for-server-side}的要點
 
 ### 指定任務功能 {#assignments-function}
 
-一種包括[Assignments函式](/help/communities/functions.md#assignments-function)的社區站點結構，包括配置的` [assignments](/help/communities/assignments.md)`元件。
+包含[分配函式](/help/communities/functions.md#assignments-function)的社區站點結構包括配置的` [assignments](/help/communities/assignments.md)`元件。
 
 ### 參考API {#reference-apis}
 
 * [啟用API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/reporting/model/api/package-summary.html)
 
-* [報告API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
+* [報表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [報告分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
-
+* [報表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
