@@ -1,31 +1,30 @@
 ---
-title: 在維護模式中執行AEM表單
-seo-title: 在維護模式中執行AEM表單
-description: 在執行例如修補DSC、升級AEM表單或套用服務套件等工作時，維護模式很有用。 進一步瞭解在維護模式中執行AEM表格。
-seo-description: 在執行例如修補DSC、升級AEM表單或套用服務套件等工作時，維護模式很有用。 進一步瞭解在維護模式中執行AEM表格。
+title: 以維護模式執行AEM表單
+seo-title: 以維護模式執行AEM表單
+description: 維護模式在執行修補DSC、升級AEM表單或套用Service Pack等工作時很有用。 進一步了解如何以維護模式執行AEM表單。
+seo-description: 維護模式在執行修補DSC、升級AEM表單或套用Service Pack等工作時很有用。 進一步了解如何以維護模式執行AEM表單。
 uuid: 9aa3be20-f17e-4384-b4ce-daaee2898c96
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 6f5ce18b-26b4-4c31-b48a-43ccbb3912f6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
+# 在維護模式{#running-aem-forms-in-maintenance-mode}中運行AEM表單
 
-# 在維護模式{#running-aem-forms-in-maintenance-mode}中執行AEM表單
+維護模式在執行修補DSC、升級AEM表單或套用Service Pack等工作時很有用。
 
-在執行例如修補DSC、升級AEM表單或套用服務套件等工作時，維護模式很有用。
+避免在伺服器處於維護模式時調用任何進程。 如果在伺服器處於維護模式時調用進程，則會發生以下情況：
 
-避免在伺服器處於維護模式時調用任何進程。 如果在伺服器處於維護模式時調用進程，則會發生這種情況：
-
-* 如果該過程是長期的，則它將添加到作業資料庫中，但未啟動。 當您退出維護模式時，AEM表單會處理佇列中長期存在的工作，即使伺服器在維護模式中重新啟動亦然。
-* 如果流程短暫，則會立即處理。
+* 如果該進程已長期存在，則它將添加到作業資料庫中，但未啟動。 當您退出維護模式時，即使伺服器在維護模式中重新啟動，AEM表單仍會處理其佇列中長期存在的作業。
+* 如果處理過程短暫，則會立即處理。
 
 **將AEM表單置於維護模式**
 
@@ -33,11 +32,11 @@ ht-degree: 0%
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=[administrator username]&password=[password]`
 
-   瀏覽器視窗中會顯示「現在暫停」訊息。
+   瀏覽器視窗中會顯示「現已暫停」訊息。
 
    >[!NOTE]
    >
-   >如果在伺服器處於維護模式時關閉伺服器，則在重新啟動伺服器時它仍處於維護模式。 完成維護任務後，必須關閉維護模式。
+   >如果在伺服器處於維護模式時關閉伺服器，則重新啟動時伺服器仍處於維護模式。 完成維護任務後，必須關閉維護模式。
 
 **檢查AEM表單是否在維護模式中執行**
 
@@ -45,7 +44,7 @@ ht-degree: 0%
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=[administrator username]&password=[password]`
 
-   狀態會顯示在瀏覽器視窗中。 狀態為&quot;true&quot;表示伺服器正在維護模式下運行，而&quot;false&quot;表示伺服器未處於維護模式。
+   狀態會顯示在瀏覽器視窗中。 狀態為「true」表示伺服器正在維護模式下運行，而「false」表示伺服器未處於維護模式。
 
 **關閉維護模式**
 
@@ -53,5 +52,4 @@ ht-degree: 0%
 
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=[administrator username]&password=[password]`
 
-   瀏覽器視窗中會顯示「現在正在執行」訊息。
-
+   瀏覽器視窗中會顯示「現在執行中」訊息。
