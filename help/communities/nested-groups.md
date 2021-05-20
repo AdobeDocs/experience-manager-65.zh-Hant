@@ -10,161 +10,159 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 3%
 
 ---
 
+# 編寫嵌套組{#authoring-nested-groups}
 
-# 編寫巢狀群組{#authoring-nested-groups}
+## 在作者上建立群組{#creating-groups-on-author}
 
-## 在作者上建立組{#creating-groups-on-author}
+在AEM製作例項中，從全域導覽：
 
-在AEM Author例項上，從全域導覽：
-
-* 選擇&#x200B;**[!UICONTROL 社區]** > **[!UICONTROL 站點]**。
-* 選擇&#x200B;**[!UICONTROL engage資料夾]**&#x200B;將其開啟。
-* 選擇&#x200B;**[!UICONTROL Getting Started Tutorial]**&#x200B;英文網站的資訊卡。
+* 選擇&#x200B;**[!UICONTROL Communities]** > **[!UICONTROL Sites]**。
+* 選擇&#x200B;**[!UICONTROL 參與資料夾]**&#x200B;以開啟它。
+* 選擇&#x200B;**[!UICONTROL 快速入門教程]**&#x200B;英文網站的卡。
 
    * 選取卡片影像。
-   * 請&#x200B;*not*&#x200B;選取圖示。
+   * 選擇&#x200B;*not*&#x200B;表徵圖。
 
-結果是到達[組控制台](/help/communities/groups.md) :
+結果是到達[群組控制台](/help/communities/groups.md):
 
-![create-group](assets/create-group.png)
+![建立群組](assets/create-group.png)
 
-群組函式將顯示為建立群組例項的資料夾。 選擇「群組」檔案夾以開啟它。 在發佈時建立的群組可見。
+群組函式會顯示為資料夾，其中會建立群組的例項。 選擇「組」資料夾以開啟它。 在發佈時建立的群組可見。
 
-![create-new-group](assets/create-new-group.png)
+![建立 — 新建組](assets/create-new-group.png)
 
-## 建立主要藝術群組{#create-main-arts-group}
+## 建立主要藝術組{#create-main-arts-group}
 
-可以建立此組，因為參與的站點結構包括組功能。 站點`Reference Template`中函式的配置預設為允許選擇任何已啟用的組模板。 因此，為此新組選擇的模板是`Reference Group`。
+可以建立此組，因為參與的站點結構包括組功能。 站點的`Reference Template`中函式的配置預設為允許選擇任何已啟用的組模板。 因此，為此新組選擇的模板為`Reference Group`。
 
-這些控制台與Communities Sites控制台類似。
+這些主控台類似於Communities Sites主控台。
 
 * 選擇&#x200B;**[!UICONTROL 建立組]**。
 
 * **社群群組範本**:
 
    * **[!UICONTROL 社群群組標題]**:藝術。
-   * **[!UICONTROL 社群群組說明]**:不同藝術團體的父項團體。
+   * **[!UICONTROL 社群群組說明]**:不同藝術團體的父團體。
    * **[!UICONTROL 社群群組根]**: *保留為預設值*。
-   * **[!UICONTROL 其他可用社群群組語言]**:使用下拉式功能表來選取可用的社群群組語言。功能表會顯示建立父社群網站的所有語言。 使用者可在這些語言中選擇，以在此單一步驟中建立多個地區設定的群組。 在相應社群網站的「群組」主控台中，以多種指定語言建立相同的群組。
+   * **[!UICONTROL 其他可用的社群群組語言]**:使用下拉式功能表來選取可用的社群群組語言。功能表會顯示建立父社群網站的所有語言。 使用者可在這些語言中選取，以在這個單一步驟中建立多個地區設定中的群組。 系統會在個別社群網站的群組控制台中，以多種指定語言建立相同的群組。
    * **[!UICONTROL 社群群組名稱]**:藝術。
-   * **[!UICONTROL 範本]**:下拉式選擇  `Reference Group.`
+   * **[!UICONTROL 範本]**:下拉式清單選取  `Reference Group.`
    * 選擇&#x200B;**[!UICONTROL Next]**。
 
 ![巢狀社群群組](assets/parent-to-nestedgroup.png)
 
-使用下列設定，繼續檢視其他面板：
+繼續使用下列設定瀏覽其他面板：
 
 * **[!UICONTROL 設計]**
 
-   * 變更設計或允許預設父網站的設計。
+   * 更改設計或允許預設父站點的設計。
    * 選擇&#x200B;**[!UICONTROL Next]**。
 
 * **[!UICONTROL 設定]**
 
    * **[!UICONTROL 審核]**
 
-      * 留空（繼承父站點）。
+      * 保留為空（繼承自父站點）。
    * **[!UICONTROL 成員資格]**
 
       * 使用預設值`Optional Membership.`
 
       * **[!UICONTROL 縮圖]**
          * `optional.*`
-      * **[!UICONTROL 選擇「下一步]**」。
+      * **[!UICONTROL 選取「下一步」]**。
 
 
 
 * 選擇 **[!UICONTROL 建立]**。
 
-### Arts Group {#nesting-groups-within-arts-group}中的巢狀群組
+### 藝術組{#nesting-groups-within-arts-group}中的嵌套組
 
 `groups`資料夾現在包含兩個群組（重新整理頁面）。
 
-![巢狀化群組](assets/create-community-group.png)
+![嵌套組](assets/create-community-group.png)
 
 #### 發佈群組 {#publish-group}
 
-在建立巢狀內嵌於`arts`群組中的群組之前，請將滑鼠指標暫留在`arts`卡片上，並選取發佈圖示以進行發佈。
+在`arts`群組內建立巢狀群組之前，請將滑鼠指標暫留在`arts`卡片上，並選取發佈圖示加以發佈。
 
-![publish-site](assets/publish-site.png)
+![發佈網站](assets/publish-site.png)
 
-等候確認群組已發佈。
+等待群組已發佈的確認。
 
-![群組發佈](assets/group-published.png)
+![群組已發佈](assets/group-published.png)
 
-`arts`群組也應包含`groups`資料夾，但是其中一個資料夾是空的，可在其中建立新群組。 導覽至藝術群組資料夾並建立3個巢狀群組，每個群組具有不同的成員資格設定：
+`arts`組還應包含`groups`資料夾，但該資料夾為空，可在其中建立新組。 導覽至藝術群組資料夾，並建立3個巢狀群組，每個群組具有不同的成員資格設定：
 
-1. **[!UICONTROL 視覺化]**
+1. **[!UICONTROL 視覺]**
 
    * 標題: `Visual Arts`
    * 名稱: `visual`
    * 範本: `Reference Group`
-   * 會籍：選擇`Optional Membership`（公共組），開啟給所有成員。
+   * 會籍：選擇`Optional Membership`，一個公共組，開啟給所有成員。
 
 1. **[!UICONTROL 聽覺]**
 
    * 標題: `Auditory Arts`
    * 名稱: `auditory`
    * 範本: `Reference Group`
-   * 會籍：選擇`Required Membership`，一個開啟的組，供成員加入。
+   * 會籍：選擇`Required Membership`，一個開放組，可供成員加入。
 
 1. **[!UICONTROL 歷史]**
 
    * 標題: `Art History`
    * 名稱: `history`
    * 範本: `Reference Group`
-   * 會籍：選擇`Restricted Membership`，即僅對受邀成員可見的機密組。 例如，邀請[demo user](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`。
+   * 會籍：選擇`Restricted Membership`，一個只對受邀成員可見的秘密組。 例如，邀請[示範使用者](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`。
 
-重新整理頁面，查看所有三個巢狀群組（子社群）。
+重新整理頁面以查看所有三個巢狀群組（子社群）。
 
-要從「社群站點」控制台導航到嵌套組，請執行以下操作：
+要從Communities Sites控制台導航到嵌套組，請執行以下操作：
 
-* 選擇&#x200B;**[!UICONTROL engage資料夾]**
-* 選擇&#x200B;**[!UICONTROL 快速入門教學課程卡]**
-* 選擇&#x200B;**[!UICONTROL Groups]**&#x200B;資料夾
+* 選擇&#x200B;**[!UICONTROL 參與資料夾]**
+* 選擇&#x200B;**[!UICONTROL 快速入門教程卡]**
+* 選擇&#x200B;**[!UICONTROL 組]**&#x200B;資料夾
 * 選擇&#x200B;**[!UICONTROL arts card]**
-* 選擇&#x200B;**[!UICONTROL Groups]**&#x200B;資料夾
+* 選擇&#x200B;**[!UICONTROL 組]**&#x200B;資料夾
 
 ![create-new-group2](assets/create-new-group2.png)
 
 ## 發佈群組{#publishing-groups}
 
-![publish-site](assets/publish-site.png)
+![發佈網站](assets/publish-site.png)
 
-發佈主社群網站後：
+發佈主要社群網站後：
 
 * 個別發佈每個群組：
 
-   * 等候確認群組已發佈。
+   * 等待群組已發佈的確認。
 
-* 發佈內嵌的任何群組前，請先發佈父群組：
+* 發佈內嵌的任何群組之前先發佈父群組：
 
-   * 所有群組都必須以自上而下的方式發佈。
+   * 所有群組都必須以由上而下的方式發佈。
 
-![群組發佈](assets/group-published.png)
+![群組已發佈](assets/group-published.png)
 
 ## 發佈體驗{#experience-on-publish}
 
-登入時可能會體驗不同的群組，例如與[demo使用者](/help/communities/tutorials.md#demo-users)一起使用：
+登入時，可能會體驗不同的群組，例如使用[demo users](/help/communities/tutorials.md#demo-users)執行下列作業：
 
-* 圖稿／歷史記錄組成員：emily.andrews@mailinator.com/密碼
-   * 受限制的（機密）群組（藝術／歷史）可見：
-   * 可以看到可選（公開）群組。
-   * 可以加入受限制（開啟）的群組。
+* 藝術/歷史組成員：emily.andrews@mailinator.com
+   * 受限（秘密）組（藝術/歷史）可見：
+   * 可以看到選用（公開）群組。
+   * 可以加入受限制（開啟）的組。
 
-* 群組管理員：aaron.mcdonald@mailinator.com/密碼
+* 群組管理員：aaron.mcdonald@mailinator.com
 
-   * 可以看到可選（公開）群組。
-   * 可以加入受限制（開啟）的群組。
-   * 看不到受限制（機密）群組。
+   * 可以看到選用（公開）群組。
+   * 可以加入受限制（開啟）的組。
+   * 看不到受限（秘密）組。
 
-訪問作者上的「社區[成員和組」控制台](/help/communities/members.md) ，以將其他用戶添加到與社區組相對應的各種成員組。
-
+在作者上存取Communities [Members and Groups控制台](/help/communities/members.md)，以將其他使用者新增至與社群群組相對應的各種成員群組。
