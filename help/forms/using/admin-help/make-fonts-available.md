@@ -1,37 +1,35 @@
 ---
-title: 讓字型可供使用
-seo-title: 讓字型可供使用
-description: 請確定表單中使用的字型可用於代管AEM表單的J2EE應用程式伺服器。
-seo-description: 請確定表單中使用的字型可用於代管AEM表單的J2EE應用程式伺服器。
+title: 使字型可用
+seo-title: 使字型可用
+description: 確認托管AEM表單的J2EE應用程式伺服器上可使用表單內使用的字型。
+seo-description: 確認托管AEM表單的J2EE應用程式伺服器上可使用表單內使用的字型。
 uuid: 6588b4b6-f866-4253-91c8-3aa174340e8c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f58a6c4-3190-49d4-800c-4a55dca7c296
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e9eae896-b1e4-4caa-b466-ac8c9e7416a4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
+# 使字型可用{#make-fonts-available}
 
-# 使字型{#make-fonts-available}可用
+確認托管AEM表單的J2EE應用程式伺服器上可使用表單內使用的字型。 例如，請考量下列案例。 表單設計器將字型添加到Designer使用的字型目錄中，並在單獨的電腦上建立使用該字型的表單。 為了使輸出服務使用字型，請將其放在客戶字型目錄中。 如果客戶字型目錄不存在，請在托管AEM表單的J2EE應用程式伺服器上建立目錄。
 
-請確定表單中使用的字型可用於代管AEM表單的J2EE應用程式伺服器。 例如，請考慮以下情形。 表單設計人員會將字型新增至Designer使用的字型目錄，並在個別電腦上建立使用該字型的表單。 為了讓「輸出」服務使用字型，請將它放置在「客戶」字型目錄中。 如果Customer字型目錄不存在，請在代管AEM表單的J2EE應用程式伺服器上建立目錄。
-
-如需其他字型設定的詳細資訊，請參閱「設定一般AEM表單設定」[。](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)
+有關其他字型設定的資訊，請參閱[配置一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。
 
 **指定客戶字型目錄的位置**
 
-1. 在管理控制台中，按一下「設定>核心繫統設定>組態」。
-1. 在「系統字型目錄的位置」方塊中，輸入客戶字型目錄的路徑。 可以添加多個目錄，並以分號&#x200B;**分隔；**
+1. 在管理控制台中，按一下「設定」>「核心繫統設定」>「配置」。
+1. 在「系統字型目錄的位置」框中，鍵入客戶字型目錄的路徑。 可以添加多個目錄，用分號&#x200B;**;**&#x200B;分隔
 1. 按一下「確定」。
 1. 重新啟動安裝AEM表單的系統。
 
 >[!NOTE]
 >
->從Windows系統字型快取中挑選字型，而更新快取時需要重新啟動系統。 指定Customer字型目錄後，請確定您重新啟動安裝AEM表單的系統。
-
+>從Windows系統字型快取中選擇字型，更新快取時需要系統重新啟動。 指定客戶字型目錄後，請務必重新啟動安裝AEM表單的系統。
