@@ -1,22 +1,21 @@
 ---
 title: AEM 6.5實作使用指南
 seo-title: AEM 6.5實作使用指南
-description: 如何實作AEM 6.5的概觀
-seo-description: 如何實作AEM 6.5的概觀
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+description: 如何實作AEM 6.5的概述
+seo-description: 如何實作AEM 6.5的概述
+exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 36%
 
 ---
 
+# AEM 6.5實作使用手冊{#aem-65-implementation-user-guides}
 
-# AEM 6.5實作使用者指南{#aem-65-implementation-user-guides}
+## 在AEM上開發{#developing-on-aem}
 
-## 在AEM {#developing-on-aem}上開發
-
-您是AEM開發人員嗎？ [開始在AEM上開發。](/help/sites-developing/home.md)
+您是AEM開發人員嗎？ [開始使用AEM開發。](/help/sites-developing/home.md)
 
 ## AEM的核心元件{#core-components-for-aem}
 
@@ -24,12 +23,12 @@ ht-degree: 36%
 
 ## AEM {#htl-for-aem}的HTL（HTML範本語言）
 
-[使用HTML範本語言來開發AEM。](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
+[使用HTML範本語言為AEM開發。](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 
-## AEM的Cloud Manager {#cloud-manager-for-aem}
+## AEM適用的Cloud Manager {#cloud-manager-for-aem}
 
-[瞭解如何搭配AEM使用Cloud Manager。](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+[了解如何搭配AEM使用Cloud Manager。](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 
-## Dispatcher Configuration {#dispatcher-configuration}
+## Dispatcher設定{#dispatcher-configuration}
 
-[使用AEM設定您的分派程式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
+[使用AEM設定您的Dispatcher](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
