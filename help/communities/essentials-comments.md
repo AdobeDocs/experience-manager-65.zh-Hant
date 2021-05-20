@@ -1,30 +1,29 @@
 ---
-title: Comments Essentials
-seo-title: Comments Essentials
-description: Comments元件概觀
-seo-description: Comments元件概觀
+title: 注釋要點
+seo-title: 注釋要點
+description: 註解元件概觀
+seo-description: 註解元件概觀
 uuid: 58b7bb58-f598-4bcb-93ae-b7795cab51cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: 8b4034f7-2f97-45ad-96d4-51cfbeae5991
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 3%
 
 ---
 
+# 注釋要點{#comments-essentials}
 
-# Comments Essentials {#comments-essentials}
+本頁提供了使用注釋系統（注釋元件）的要點，以及管理成員發佈注釋或回覆時生成的用戶生成內容(UGC)的選項。
 
-本頁提供了使用注釋系統（注釋元件）的基本要點，以及管理成員張貼注釋或回覆時產生的用戶生成內容(UGC)的選項。
+評論部件建立評論系統，使得每個單獨的帖子由評論部件（單數）表示。 頁面上包含的註解系統。 注釋系統將在調用時建立各個注釋。
 
-該注釋元件建立注釋系統，使得每個單獨的帖子由注釋元件（單數）表示。 它是包含在頁面上的注釋系統。 注釋系統會在呼叫時建立個別注釋。
-
-## 客戶端{#essentials-for-client-side}的基本功能
+## 客戶端{#essentials-for-client-side}的要點
 
 <table>
  <tbody>
@@ -33,15 +32,15 @@ ht-degree: 3%
    <td> social/commons/components/hbs/comments</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>included</strong></a></td>
-   <td>是——在<i>design </i>模式中可編輯屬性</td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
+   <td>是 — 可在<i>design </i>模式中編輯屬性</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.porting</td>
+   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.voting</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/commons/components/hbs/comments/comments.hbs<br /> </td>
   </tr>
   <tr>
@@ -57,11 +56,11 @@ ht-degree: 3%
 
 [用戶端自訂](client-customize.md)
 
-### 每頁{#one-instance-per-page}一個例項
+### 每頁{#one-instance-per-page}一個實例
 
-分頁和使用URL進行快取和連結需要URL在每個留言系統中都是唯一的。 因此，每頁僅允許一個注釋系統實例。
+分頁和使用URL來快取和連結時，每個註解系統的URL必須是唯一的。 因此，每頁僅允許一個注釋系統例項。
 
-其他功能已包括註解系統。 說明如下：
+其他功能已包括注釋系統。 說明如下：
 
 * [部落格](blog-developer-basics.md)
 * [日曆](calendar-basics-for-developers.md)
@@ -70,15 +69,15 @@ ht-degree: 3%
 * [QnA](qna-essentials.md)
 * [評論](reviews-basics.md)
 
-### 標籤原因清單{#flag-reason-list}
+### 標誌原因清單{#flag-reason-list}
 
-您可自訂標籤原因清單，方法是將flagreasonlist.hbs新增至應用程式以覆寫
+您可將flagreasonlist.hbs新增至應用程式以覆寫中的內容，以自訂標幟原因清單
 
 * `/libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs`
 
-這適用於擴充注釋系統的任何元件。
+這適用於擴充註解系統的任何元件。
 
-## 伺服器端{#essentials-for-server-side}的基本工具
+## 伺服器端{#essentials-for-server-side}的要點
 
 * [注釋API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
@@ -91,14 +90,13 @@ ht-degree: 3%
 UGC應使用其中一種標準的協調方法來協調。
 請參閱[協調使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，使用[通用商店](working-with-srp.md)做為UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP），都可程式化存取UGC。
+自AEM 6.1社群起，UGC使用[公用商店](working-with-srp.md)包括程式化存取UGC，而不論選擇的儲存選項（例如ASRP、MSRP或JSRP）。
 
-**UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
+**UGC在存放庫中的位置和格式可能會變更，恕不另行警告**。
 
 請參閱：
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP實用程式方法和示例。
-* [使用SRP](accessing-ugc-with-srp.md) -編碼准則存取UGC。
-* [SocialUtils重構](socialutils.md) -將不建議使用的公用程式方法對應至目前的SRP公用程式方法。
-
+* [儲存資源提供程式概述](srp.md)  — 簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 編碼准則。
+* [SocialUtils重構](socialutils.md)  — 將棄用的公用程式方法對應至目前的SRP公用程式方法。
