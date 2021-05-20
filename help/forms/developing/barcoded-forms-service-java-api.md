@@ -1,7 +1,7 @@
 ---
-title: BarcodedForms服務Java APIQuick Start(SOAP)
-seo-title: BarcodedForms服務Java APIQuick Start(SOAP)
-description: BarcodedForms服務Java APIQuick Start(SOAP)
+title: 條碼式Forms服務Java APIQ快速入門(SOAP)
+seo-title: 條碼式Forms服務Java APIQ快速入門(SOAP)
+description: 條碼式Forms服務Java APIQ快速入門(SOAP)
 uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
 contentOwner: admin
 content-type: reference
@@ -9,30 +9,29 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 245b9cc4-5837-4a22-b5f4-a1d4c5d66918
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
+# 條碼式Forms服務Java API快速入門(SOAP){#barcoded-forms-service-java-apiquick-start-soap}
 
-# BarcodedForms服務Java API快速入門(SOAP){#barcoded-forms-service-java-apiquick-start-soap}
+Java API快速入門(SOAP)適用於條碼式Forms服務：
 
-Java API快速入門(SOAP)適用於BarcodedForms服務：
+[快速入門（SOAP模式）:使用Java API解碼條碼式表單資料](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API解碼條形碼表單資料](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
-
-AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
+AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應設為SOAP。
 
 >[!NOTE]
 >
->「與AEM Forms進行寫程式」中的「快速入門」基於部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器。 但是，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM Forms進行程式設計中的快速入門是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（如UNIX），請用適用作業系統支援的路徑取代Windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}解碼條形碼表單資料
+## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}解碼條碼式表單資料
 
-下列Java程式碼會解碼位於PDF表單中的表單資料，並儲存為Loan.pdf。 解碼的資料會儲存為名為extractedData.xml的XML檔案。 此代碼示例將`org.w3c.dom.Document`對象轉換為`com.adobe.idp.Document`對象。 （請參閱[解碼條形碼表單資料](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)）。
+以下Java代碼會解碼儲存為Loan.pdf的PDF表單中的表單資料。 解碼的資料被保存為名為extractedData.xml的XML檔案。 此代碼示例將`org.w3c.dom.Document`對象轉換為`com.adobe.idp.Document`對象。 （請參閱[解碼條碼表單資料](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)。）
 
 ```java
  /*
@@ -221,5 +220,4 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
 
 >[!NOTE]
 >
->在同一應用程式邏輯中同時使用`org.w3c.dom.Document`物件和`com.adobe.idp.Document`物件時，最好能完整限定這兩個物件。
-
+>在相同的應用程式邏輯中同時使用`org.w3c.dom.Document`對象和`com.adobe.idp.Document`對象時，完全限定這兩個對象是一種好做法。
