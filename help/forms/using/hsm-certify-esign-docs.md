@@ -1,56 +1,55 @@
 ---
-title: 使用HSM數位簽署或認證檔案
-seo-title: 使用HSM來認證電子簽名檔案
-description: 使用HSM或etoken裝置來認證電子簽署檔案
-seo-description: 使用HSM或etoken裝置來認證電子簽署檔案
+title: 使用HSM對文檔進行數字簽名或認證
+seo-title: 使用HSM來驗證電子簽名文檔
+description: 使用HSM或電子令牌設備來驗證電子簽名文檔
+seo-description: 使用HSM或電子令牌設備來驗證電子簽名文檔
 uuid: bbe057c1-6150-41f9-9c82-4979d31d305d
 contentOwner: vishgupt
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 536bcba4-b754-4799-b0d2-88960cc4c44a
-translation-type: tm+mt
-source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+exl-id: 4d423881-18e0-430a-849d-e1762366a849
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 0%
 
 ---
 
+# 使用HSM對文檔{#use-hsm-to-digitally-sign-or-certify-documents}進行數字簽名或認證
 
-# 使用HSM數位簽署或認證檔案{#use-hsm-to-digitally-sign-or-certify-documents}
+硬體安全模組(HSM)和電子令牌是專用、加固和防篡改的計算設備，旨在安全地管理、處理和儲存數字密鑰。 這些設備直接連接到電腦或網路伺服器。
 
-硬體安全性模組(HSM)和Token是專用、強化和防竄改的運算裝置，旨在安全地管理、處理和儲存數位金鑰。 這些設備直接連接到電腦或網路伺服器。
-
-Adobe Experience Manager Forms可以使用儲存在HSM或etoken上的認證來電子簽名，或將伺服器端數位簽名套用至檔案。 若要搭配AEM Forms使用HSM或etoken裝置：
+Adobe Experience Manager Forms可使用儲存在HSM或etoken上的憑證來eSign，或將伺服器端的數位簽名套用至檔案。 要將HSM或令牌設備與AEM Forms一起使用：
 
 1. 啟用DocAssurance服務。
 1. 設定Reader擴充功能的憑證。
-1. 在AEM Web Console中建立HSM或etoken裝置的別名。
-1. 使用DocAssurance Service API，使用儲存在裝置上的數位金鑰來簽署或認證檔案。
+1. 在AEM Web Console中為HSM或Etoken裝置建立別名。
+1. 使用DocAssurance Service API使用儲存在設備上的數字密鑰來簽署或認證文檔。
 
-## 在您使用AEM Forms {#configurehsmetoken}設定HSM或etoken裝置之前
+## 使用AEM Forms配置HSM或Etoken設備之前 {#configurehsmetoken}
 
-* 安裝[AEM Forms add-on](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)套件。
-* 在與AEM伺服器相同的電腦上安裝及設定HSM或etoken用戶端軟體。 用戶端軟體必須與HSM和etoken裝置通訊。
-* （僅限Microsoft Windows）將JAVA_HOME_32環境變數設定為指向安裝32位版本Java 8開發工具包(JDK 8)的目錄。 目錄的預設路徑是C:\Program Files(x86)\Java\jdk&lt;version>
-* （僅限OSGi上的AEM Forms）在信任存放區中安裝根憑證。 需要驗證已簽署的PDF
+* 安裝[AEM Forms附加元件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)套件。
+* 在與AEM伺服器相同的電腦上安裝和配置HSM或etoken客戶端軟體。 需要客戶端軟體與HSM和令牌設備通信。
+* （僅限Microsoft Windows）設定JAVA_HOME_32環境變數，以指向安裝32位版本Java 8開發套件(JDK 8)的目錄。 目錄的預設路徑為C:\Program Files(x86)\Java\jdk&lt;version>
+* (僅限OSGi上的AEM Forms)將根憑證安裝在信任存放區。 需要驗證已簽名的PDF
 
 >[!NOTE]
 >
 >在Microsoft Windows上，僅支援32位LunaSA或EToken客戶端。
 
-## 啟用DocAssurance服務{#configuredocassurance}
+## 啟用DocAssurance服務 {#configuredocassurance}
 
-預設情況下，DocAssurance服務未啟用。 執行以下步驟以啟用服務：
+預設情況下，DocAssurance服務未啟用。 執行下列步驟以啟用服務：
 
-1. 停止AEM Forms環境的「作者」例項。
+1. 停止AEM Forms環境的Author例項。
 
-1. 開啟[AEM_root]\crx-quickstart\conf\sling.properties檔案以進行編輯。
+1. 開啟[AEM_root]\crx-quickstart\conf\sling.properties檔案進行編輯。
 
    >[!NOTE]
    >
-   >如果您已使用[AEM_root]\crx-quickstart\bin\start.bat檔案來啟動AEM例項，請開啟[AEM_root]\crx-quickstart\sling.properties檔案以進行編輯。
+   >如果您已使用[AEM_root]\crx-quickstart\bin\start.bat檔案來啟動AEM執行個體，請開啟[AEM_root]\crx-quickstart\sling.properties檔案進行編輯。
 
 1. 將下列屬性新增或取代至sling.properties檔案：
 
@@ -61,64 +60,64 @@ Adobe Experience Manager Forms可以使用儲存在HSM或etoken上的認證來�
    ```
 
 1. 儲存並關閉sling.properties檔案。
-1. 重新啟動AEM例項。
+1. 重新啟動AEM執行個體。
 
-## 為Reader擴充功能設定憑證{#set-up-certificates-for-reader-extensions}
+## 設定Reader擴展{#set-up-certificates-for-reader-extensions}的證書
 
-執行以下步驟來設定證書：
+執行下列步驟來設定憑證：
 
 1. 以管理員身分登入AEM Author例項。
 
-1. 按一下全域導覽列上的「Adobe Experience Manager」(Adobe Experience Manager)。 ****&#x200B;前往「**工具** > **安全性** > **使用者**」。
-1. 按一下使用者帳戶的&#x200B;**name**&#x200B;欄位。 將開啟&#x200B;**編輯用戶設定**&#x200B;頁。
-1. 在AEM Author例項中，憑證位於KeyStore中。 如果您尚未以前建立KeyStore，請按一下「建立KeyStore」**，並為KeyStore設定新密碼。**&#x200B;如果伺服器已包含KeyStore，請略過此步驟。
+1. 按一下全域導覽列上的&#x200B;**Adobe Experience Manager**。 前往&#x200B;**工具** > **安全性** > **使用者**。
+1. 按一下使用者帳戶的&#x200B;**name**&#x200B;欄位。 將開啟「**編輯用戶設定**」頁。
+1. 在AEM製作例項上，憑證位於KeyStore中。 如果您之前尚未建立KeyStore，請按一下&#x200B;**建立KeyStore**&#x200B;並為KeyStore設定新密碼。 如果伺服器已包含KeyStore，請跳過此步驟。
 
 1. 在&#x200B;**編輯用戶設定**&#x200B;頁上，按一下&#x200B;**管理KeyStore**。
 
-1. 在「KeyStore管理」對話框中，展開「從Key Store檔案&#x200B;**添加私密密鑰」選項並提供別名。**&#x200B;別名用於執行Reader Extensions操作。
-1. 若要上傳憑證檔案，請按一下「選擇金鑰存放區檔案&#x200B;**」，然後上傳**&#x200B;檔案。`.pfx`
-1. 將與證書相關聯的&#x200B;**密鑰儲存密碼**、**私鑰密碼**&#x200B;和&#x200B;**私鑰別名**&#x200B;添加到相應欄位。 按一下&#x200B;**提交**。
+1. 在「密鑰儲存管理」對話框中，展開「從密鑰儲存檔案&#x200B;**添加私鑰」選項並提供別名。**&#x200B;別名用於執行Reader擴展操作。
+1. 若要上傳憑證檔案，請按一下「選取金鑰存放區檔案&#x200B;**」並上傳`.pfx`檔案。**
+1. 將與證書關聯的&#x200B;**密鑰儲存密碼**、**私鑰密碼**&#x200B;和&#x200B;**私鑰別名**&#x200B;添加到相應欄位。 按一下&#x200B;**Submit**。
 
    >[!NOTE]
    >
-   >要確定證書的P **專用密鑰別名**，可使用Java keytool命令：`keytool -list -v -keystore [keystore-file] -storetype pkcs12`
+   >要確定證書的P **私鑰別名**，可以使用Java keytool命令：`keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
    >[!NOTE]
    >
-   >在&#x200B;**密鑰儲存密碼**&#x200B;和&#x200B;**私鑰密碼**&#x200B;欄位中，指定證書檔案隨附的密碼。
+   >在&#x200B;**密鑰儲存密碼**&#x200B;和&#x200B;**私鑰密碼**&#x200B;欄位中，指定證書檔案提供的密碼。
 
 >[!NOTE]
 >
->對於OSGi上的AEM Forms，若要驗證已簽署的PDF（信任商店中安裝的根憑證）。
+>若要在OSGi上使用AEM Forms，請驗證已簽署的PDF（信任存放區中安裝的根憑證）。
 
 >[!NOTE]
 >
->移至生產環境時，請以生產認證取代您的評估認證。 在更新過期或評估憑證之前，請確定您已刪除舊的Reader Extensions憑證。
+>轉至生產環境時，請以生產憑證取代評估憑證。 在更新過期或評估憑據之前，請確保刪除舊的Reader擴展憑據。
 
-## 為設備{#configuredeviceinaemconsole}建立別名
+## 為設備建立別名 {#configuredeviceinaemconsole}
 
-別名包含HSM或etoken所需的所有參數。 請執行下列指示，為電子簽名或數位簽章使用的每個HSM或etoken憑證建立別名：
+別名包含HSM或etoken所需的所有參數。 執行下列指示，為eSign或數字簽名使用的每個HSM或etoken憑據建立別名：
 
-1. 開啟AEM主控台。 AEM主控台的預設URL為https://&lt;host>:&lt;port>/system/console/configMgr
+1. 開啟AEM Console。 AEM主控台的預設URL為https://&lt;host>:&lt;port>/system/console/configMgr
 1. 開啟&#x200B;**HSM憑據配置服務**&#x200B;並指定以下欄位的值：
 
-   * **憑據別名**:指定用於標識別名的字串。此值用作某些數位簽章作業的屬性，例如「簽章欄位」作業。
-   * **DLL路徑**:指定伺服器上HSM或etoken用戶端程式庫的完全限定路徑。例如，C:\Program Files\LunaSA\cryptoki.dll。 在群集環境中，此路徑對於群集中的所有伺服器必須相同。
-   * **HSM針腳**:指定存取裝置金鑰所需的密碼。
-   * **HSM插槽Id**:指定整數類型的插槽標識符。插槽ID是逐個客戶機設定的。 如果將第二台電腦註冊到不同的分區（例如，在同一HSMPART設備上的HSMPART2），則插槽1與客戶機的HSMPART2分區相關聯。
+   * **憑據別名**:指定用於標識別名的字串。此值用作某些數字簽名操作的屬性，如簽名簽名欄位操作。
+   * **DLL路徑**:指定伺服器上HSM或Etoken客戶端庫的完全限定路徑。例如， C:\Program Files\LunaSA\cryptoki.dll。 在群集環境中，此路徑對於群集中的所有伺服器必須相同。
+   * **HSM針**:指定訪問設備密鑰所需的密碼。
+   * **HSM插槽Id**:指定整數類型的槽標識符。插槽ID是逐個用戶端設定。 如果將第二台電腦註冊到不同的分區（例如，同一HSM設備上的HSMPART2），則插槽1與客戶機的HSMPART2分區相關聯。
 
    >[!NOTE]
    >
-   >在設定Etoken時，請為HSM槽ID欄位指定數值。 要使「簽名」操作正常運作，需要數值。
+   >配置Etoken時，請為「HSM插槽ID」欄位指定數值。 需要一個數值才能使簽名操作正常工作。
 
-   * **證書SHA1**:為您使用的憑證指定公開金鑰(.cer)檔案的SHA1值（指紋）。請確定SHA1值中沒有使用空格。 如果您使用實體憑證，則不需要。
-   * **HSM設備類型**:選擇HSM（Luna或其他）或eToken裝置的製造商。
+   * **憑證SHA1**:為您使用的憑據指定公鑰(.cer)檔案的SHA1值（指紋）。請確定SHA1值中沒有使用空格。 如果您使用實體憑證，則不是必要憑證。
+   * **HSM設備類型**:選擇HSM（Luna或其他）或eToken設備的製造商。
 
-   按一下&#x200B;**「儲存」**。硬體安全性模組已針對AEM Forms設定。 現在，您可以搭配AEM Forms使用硬體安全性模組來簽署或認證檔案。
+   按一下「**儲存**」。硬體安全模組已針對AEM Forms進行配置。 現在，您可以使用硬體安全模組搭配AEM Forms來簽署或認證檔案。
 
-## 使用DocAssurance Service API，使用儲存在裝置上的數位金鑰簽署或認證檔案  {#programatically}
+## 使用DocAssurance Service API簽名或認證具有儲存在設備上的數字密鑰的文檔  {#programatically}
 
-下列范常式式碼使用HSM或etoken來簽署或認證檔案。
+以下示例代碼使用HSM或etoken來簽名或證明文檔。
 
 ```java
 /*************************************************************************
@@ -399,10 +398,10 @@ public class Sign{
 }
 ```
 
-如果您已從AEM 6.0 Form或AEM 6.1 Forms升級，而且您在舊版中使用DocAssurance服務，則：
+如果您已從AEM 6.0表單或AEM 6.1 Forms升級，且您在舊版中使用了DocAssurance服務，則：
 
-* 若要在沒有HSM或etoken裝置的情況下使用DocAssurance服務，請繼續使用現有的程式碼。
-* 若要將DocAssurance服務與HSM或etoken裝置搭配使用，請以下列的API取代您現有的CredentialContext物件程式碼。
+* 要在不使用HSM或令牌設備的情況下使用DocAssurance服務，請繼續使用現有代碼。
+* 要將DocAssurance服務與HSM或令牌設備一起使用，請用下面列出的API替換現有的CredentialContext對象代碼。
 
 ```java
 /**
@@ -415,4 +414,4 @@ public class Sign{
  public CredentialContext(String credentialAlias, ResourceResolver resourceResolver, boolean isHSMCredential);
 ```
 
-如需有關API和DocAssurance服務范常式式碼的詳細資訊，請參閱[以程式設計方式使用AEM檔案服務](/help/forms/using/aem-document-services-programmatically.md)。
+有關API和DocAssurance服務的示例代碼的詳細資訊，請參閱[以寫程式方式使用AEM文檔服務](/help/forms/using/aem-document-services-programmatically.md)。
