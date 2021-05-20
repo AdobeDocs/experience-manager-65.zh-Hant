@@ -1,12 +1,11 @@
 ---
 title: 概念
-description: 電子商務的一般概AEM念。
+description: 使用AEM的電子商務的一般概念。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '4525'
@@ -16,72 +15,64 @@ ht-degree: 1%
 
 # 概念{#concepts}
 
-整合框架提供了以下機制和元件：
+整合框架提供以下機制和組成部分：
 
 * 連線至電子商務引擎
-* 將資料拖AEM入
-* 顯示資料並收集購物者的回應
-* 返回事務處理詳細資訊
+* 將資料提取至AEM
+* 顯示該資料並收集購物者的回應
+* 返回事務詳細資訊
 * 從兩個系統搜索資料
 
 這表示：
 
-* 購物者可註冊併購物，毋需等待。
-* 購物者可立即檢視價格變動。
-* 您可視需要新增產品。
+* 購物者無需等待即可註冊和購物。
+* 購物者會立即看到價格變化。
+* 您可以視需要新增產品。
 
 >[!NOTE]
 >
->電子商務架構可與下列項目搭配使用：
+>電子商務框架可與以下項目一起使用：
 >
 >* [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 >* [SAPCommerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
->* [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
-
->
+* [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
 
 
 
 >[!CAUTION]
->
->[電子商務整合架構](https://www.adobe.com/solutions/web-experience-management/commerce.html)是附AEM加元件。
->
->您的銷售代表將可以根據適當的引擎提供完整的詳細資料。
+[eCommerce整合架構](https://www.adobe.com/solutions/web-experience-management/commerce.html)為AEM附加元件。
+您的銷售代表將能夠根據相應引擎提供完整詳細資訊。
 
 >[!CAUTION]
->
->該框架為您自己的項目提供了基本要求。
->
->為了配合您的規格調整架構，一律需要進行一定量的開發工作。
+此架構提供您專案的基礎需求。
+要使框架適應您的規範，始終需要進行一定數量的開發工作。
 
 >[!CAUTION]
->
->標準安AEM裝包含通用AEM(JCR)電子商務實作。
->
->這目前僅供展示之用，或根據您的需求做為自訂實作的基礎。
+標準AEM安裝包含一般AEM(JCR)電子商務實作。
+這目前的用途為示範，或根據您的需求，做為自訂實作的基礎。
 
-為了優化運營，電AEM子商務引擎都專注於自己的專業領域。 資訊在兩者之間即時傳輸；例如：
+為了優化操作，AEM和電子商務引擎都專注於自己的專業領域。 資訊在兩者之間即時傳輸；例如：
 
-* AEMcan:
+* AEM可以：
 
    * 請求：
 
       * 來自電子商務引擎的產品資訊。
    * 提供：
 
-      * 使用者檢視產品資訊、購物車和結帳。
-      * 將購物車和結帳資訊匯入電子商務引擎。
+      * 產品資訊、購物車和結帳的使用者檢視。
+      * 購物車和結帳資訊至電子商務引擎。
       * 搜尋引擎最佳化(SEO)。
       * 社群功能。
-      * 非結構化行銷互動。
+      * 無結構的行銷互動。
 
 
 * 電子商務引擎可以：
 
    * 提供：
 
-      * 來自資料庫的產品資訊。
-      * 產品變型管理。
+      * 資料庫中的產品資訊。
+      * 產品變體管理。
       * 訂單管理。
       * ERP（企業資源規劃）。
       * 在產品資訊中搜尋。
@@ -93,10 +84,9 @@ ht-degree: 1%
 
 
 >[!NOTE]
->
->具體細節將取決於電子商務引擎和項目實施。
+確切詳細資訊取決於電子商務引擎和專案實作。
 
-提供許多現成的組AEM件以使用整合層。 目前，這些項目包括：
+提供許多現成可用的AEM元件以使用整合層。 目前包括：
 
 * 產品資訊
 * 購物車
@@ -107,7 +97,7 @@ ht-degree: 1%
 
 ## 架構 {#architecture}
 
-整合架構提供API、一系列元件來說明功能，以及數種擴充功能，以提供連線方法的範例：
+整合架構提供API、說明功能的一系列元件，以及提供連線方法範例的數個擴充功能：
 
 ![chlimage_1-4](/help/sites-administering/assets/chlimage_1-4.png)
 
@@ -115,49 +105,43 @@ ht-degree: 1%
 
 ![chlimage_1-5](/help/sites-administering/assets/chlimage_1-5.png)
 
-### 實施{#implementations}
+### 實作 {#implementations}
 
-電AEM子商務是透過電子商務引擎實作：
+AEM eCommerce是使用eCommerce引擎實作：
 
-* 電子商務整合架構可讓您輕鬆將電子商務引擎與整合AEM。 建立電子商務引擎的目的是控制產品資料、購物車、結帳和訂單履行，AEM同時控制資料顯示和行銷活動。
+* 電子商務整合架構已建置，可讓您輕鬆將電子商務引擎與AEM整合。 建立電子商務引擎的用途控制產品資料、購物車、結帳和訂單履行，而AEM則控制資料顯示和行銷促銷活動。
 
 
 >[!NOTE]
->
->標準安AEM裝包含通用AEM(JCR)電子商務實作。
->
->這目前僅供展示之用，或根據您的需求做為自訂實作的基礎。
->
->在AEM基於JCR的AEM通用開發中實現的電子商務是：
->
->* 一個獨立AEM的原生電子商務範例，以說明API的使用。 這可用來控制產品資料、購物車和結帳，並結合現有的資料顯示和行銷活動。 在這種情況下，產品資料庫儲存在儲存庫的本AEM地(Adobe實施[JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html))。
->
->  
-標準安AEM裝包含[一般電子商務實作](/help/commerce/cif-classic/administering/generic.md)的基本資訊。
+標準AEM安裝包含一般AEM(JCR)電子商務實作。
+這目前的用途為示範，或根據您的需求，做為自訂實作的基礎。
+在AEM中使用以JCR為基礎的一般開發實作的AEM eCommerce為：
+* 說明API使用方式的獨立AEM原生電子商務範例。 這可用來控制產品資料、購物車和結帳，並結合現有的資料顯示和行銷活動。 在這種情況下，產品資料庫儲存在AEM的原生存放庫(Adobe的[JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)實作)。
 
-### 商務提供者{#commerce-providers}
+標準AEM安裝包含[通用電子商務實作](/help/commerce/cif-classic/administering/generic.md)的基本知識。
 
-將資料從商務引擎匯入電AEM子商務網站時，會使用商務提供者來提供資料給進口商。 一個商務供應商可支援多個進口商。
+### 商務提供程式{#commerce-providers}
 
-商務提供者是自AEM訂的程式碼，可：
+將資料從商務引擎匯入AEM eCommerce網站時，會使用商務提供者來為匯入工具提供資料。 一個商務提供者可支援多個匯入工具。
+
+商務提供者是自訂為下列任一項的AEM程式碼：
 
 * 後端商務引擎介面
-* 在JCR儲存庫上實施商務系統
+* 在JCR存放庫上實作商務系統
 
-目前有兩個商務提供者AEM:
+AEM目前提供兩個商務提供者範例：
 
-* one for geometrixx hybris
+* geometrixx.hybris
 * geometrixx-generic(JCR)的另一個
 
-雖然專案通常需要開發其專屬的自訂商務提供者，以針對其PIM和產品資料架構。
+雖然通常，項目需要開發自己的、定製的、特定於其PIM和產品資料架構的商務提供商。
 
 >[!NOTE]
->
->Geometrixx匯入器使用CSV檔案；其實施上方的注釋中，有接受的架構說明（允許自訂屬性）。
+geometrixx匯入工具使用CSV檔案；實作上方的註解中會說明接受的結構（允許自訂屬性）。
 
-[ProductServicesManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html)維護（透過[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)）[ProductImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html)和[CatalogBlueprintImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html)介面的實施清單。 這些列在匯入工具精靈的&#x200B;**匯入工具／商務提供者**&#x200B;下拉式欄位中（使用`commerceProvider`屬性作為名稱）。
+[ProductServicesManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html)維護（通過[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)）[ProductImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html)和[CatalogBlueprintImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html)介面的實施清單。 這些欄位會列在匯入工具精靈的&#x200B;**匯入工具/商務提供者**&#x200B;下拉式欄位中（以`commerceProvider`屬性作為名稱）。
 
-當從下拉式清單提供特定的匯入工具／商務提供者時，必須在下列任一欄位中定義它需要的任何補充資料（視匯入工具類型而定）:
+從下拉式清單中取得特定匯入工具/商務提供者時，必須在下列任一項中定義其所需的任何補充資料（視匯入工具類型而定）:
 
 * `/apps/commerce/gui/content/catalogs/importblueprintswizard/importers`
 * `/apps/commerce/gui/content/products/importproductswizard/importers`
@@ -170,40 +154,40 @@ ht-degree: 1%
 
 ## 角色 {#roles}
 
-整合系統適合以下角色來維護資料：
+整合系統可滿足下列角色，以維護資料：
 
-* 產品資訊管理(PIM)用戶維護：
+* 產品資訊管理(PIM)維護以下內容的用戶：
 
    * 產品資訊。
    * 分類、分類、核准。
    * 與數位資產管理互動。
-   * 定價——通常這是來自ERP系統，並未在商務系統中明確維護。
+   * 定價 — 這通常來自ERP系統，在商務系統中沒有明確維護。
 
-* 作者／行銷經理，負責：
+* 作者/行銷經理，負責維護：
 
-   * 所有通道的行銷內容。
+   * 所有管道的行銷內容。
    * 促銷活動.
    * 憑單.
    * 促銷活動.
 
-* 衝浪者／購物者：
+* 瀏覽者/購物者：
 
    * 檢視您的產品資訊。
    * 將項目放入購物車。
-   * 檢查他們的訂單。
+   * 查出他們的訂單。
    * 預期訂單履行。
 
-雖然實際位置可能取決於您的實作；例如，一般或具有電子商務引擎：
+實際位置取決於您的實作；例如，使用一般或電子商務引擎：
 
 ![chlimage_1-6](/help/sites-administering/assets/chlimage_1-6.png)
 
 ## 產品 {#products}
 
-### 產品 資料與行銷資料{#product-data-versus-marketing-data}
+### 產品資料與行銷資料比較{#product-data-versus-marketing-data}
 
 #### 結構與行銷類別{#structural-versus-marketing-categories}
 
-如果可區分下列兩個類別，則可讓您以有意義的結構（`cq:Page`節點的樹狀結構）來清楚顯示URL，因此非常接近經典的內AEM容管理):
+如果可區分以下兩個類別，則可讓您以有意義的結構（`cq:Page`節點的樹狀結構）來清楚顯示URL，因此非常接近傳統的AEM內容管理):
 
 * *結構*類別
 
@@ -211,24 +195,24 @@ ht-degree: 1%
 
    `/products/mens/shoes/sneakers`
 
-* *行* 銷類別
+* ** 行銷類別
 
-   *產品可屬於*&#x200B;的所有其他類別；例如：
+   a *產品可以屬於*&#x200B;的所有其他類別；例如：
 
    `/special-offers/christmas/shoes`)
 
 ### 產品資料 {#product-data}
 
-若要描述並管理您的產品，您會想要掌握有關產品的各種資訊。
+要描述和管理您的產品，您將希望掌握有關它們的一系列資訊。
 
-產品資料可以：
+產品資料可以是：
 
-* 直接維AEM護（一般）。
-* 維護，並於AEM提供。
+* 直接在AEM中維護（一般）。
+* 在eCommerce引擎中維護，並可在AEM中使用。
 
-   視資料類型而定，視需要將其設定為[synchronized](#catalog-maintenance-data-synchronization) ，或直接訪問；例如，每次頁面請求時，都會從電子商務引擎擷取高波動性和關鍵性資料，例如產品價格，以確保這些資料永遠是最新的。
+   視需要而定，其為[synchronized](#catalog-maintenance-data-synchronization)，或直接存取；例如，在每個頁面請求上，都會從電子商務引擎擷取高度波動和關鍵資料，例如產品價格，以確保這些資料始終是最新的。
 
-在這兩種情況下，當產品資料已輸入／匯AEM入至其中時，可從&#x200B;**Products**&#x200B;主控台檢視。 在此，產品的資訊卡和清單檢視會顯示下列資訊：
+無論是哪種情況，當產品資料輸入/匯入AEM時，都可從&#x200B;**Products**&#x200B;主控台看到。 在此，產品的卡片和清單檢視會顯示下列資訊：
 
 * 影像
 * SKU代碼
@@ -238,13 +222,13 @@ ht-degree: 1%
 
 ### 產品的系列品種 {#product-variants}
 
-有關變型的適當產品資訊，也可保存。 例如，對於可用顏色不同的服裝項目，會保留為變體：
+對於適當的產品，也可以保留有關變型的資訊。 例如，對於可用不同顏色的服裝項目，會保留為變體：
 
-![commerceproductvariants](/help/sites-administering/assets/ecommerceproductvariants.png)
+![ecommerproductvariants](/help/sites-administering/assets/ecommerceproductvariants.png)
 
 ### 產品屬性{#product-attributes}
 
-每項產品的個別屬性可能取決於所使用的電子商務引擎及您的AEM實作。 在檢視產品頁面和／或編輯產品資訊時，這些功能（視情況而定）可供使用，其中可包括：
+每個產品所保留的個別屬性可能取決於所使用的電子商務引擎和您的AEM實施。 檢視產品頁面和/或編輯產品資訊時，這些功能（視情況而定）可供使用，並可包括：
 
 * **影像**
 
@@ -256,11 +240,11 @@ ht-degree: 1%
 
 * **說明**
 
-   產品的文本說明。
+   產品的文字說明。
 
 * **標記**
 
-   用於分組相關產品的標籤。
+   用於將相關產品分組的標籤。
 
 * **預設資產類別**
 
@@ -290,90 +274,90 @@ ht-degree: 1%
 
 ### 產品資產{#product-assets}
 
-可針對個別產品保留資產選擇。 通常包括影像和視訊。
+可針對個別產品保留精選的資產。 通常包括影像和影片。
 
-## 目錄{#catalogs}
+## 目錄 {#catalogs}
 
-目錄將產品資料分組在一起，以方便管理，並讓購物者呈現。 目錄通常根據語言、地理區域、品牌、季節、嗜好、體育等屬性來建構。
+目錄會將產品資料分組在一起，以方便管理並讓購物者呈現。 目錄通常是根據語言、地理區域、品牌、季數、嗜好、體育等屬性來建構。
 
 ### 目錄結構{#catalog-structure}
 
-#### 多語言型錄{#catalogs-in-multiple-languages}
+#### 多語言目錄{#catalogs-in-multiple-languages}
 
-支AEM援多種語言的產品內容。 當請求資料時，整合架構會從目前的樹狀結構中擷取語言（例如，`/content/geometrixx-outdoors/en_US`下的頁面為`en_US`）。
+AEM支援多種語言的產品內容。 要求資料時，整合架構會從目前的樹狀結構中擷取語言（例如，`/content/geometrixx-outdoors/en_US`底下頁面的`en_US`）。
 
-對於多語言商店，您可以單獨導入每個語言樹的目錄（或通過[MSM](/help/sites-administering/msm.md)複製目錄）。
+對於多語言商店，您可以分別匯入每個語言樹的目錄（或透過[MSM](/help/sites-administering/msm.md)複製目錄）。
 
 #### 多品牌目錄{#catalogs-for-multiple-brands}
 
-和語言一樣，大型跨國公司也需要迎合多種品牌需求。
+與語言一樣，大型跨國公司可能需要滿足多個品牌的需求。
 
-#### 依標籤列出的目錄{#catalogs-by-tags}
+#### 按標籤的目錄{#catalogs-by-tags}
 
-標籤也可用來將產品群組在目錄中。 這些可用於更動態的型錄，例如季節性選件。
+標籤也可用來將產品群組在目錄中。 這些可用於更動態的目錄，例如季節性優惠方案。
 
 ### 目錄設定（初始導入）{#catalog-setup-initial-import}
 
-視您的實作而定，您可以將基本型錄所需的產品資料匯入AEM:
+視您的實作而定，您可以將基礎目錄所需的產品資料從以下來源匯入AEM:
 
-* a CSV檔案（適用於一般實作）
-* eCommerce引擎
+* CSV檔案（用於一般實施）
+* 電子商務引擎
 
 ### 目錄維護（資料同步）{#catalog-maintenance-data-synchronization}
 
 產品資料的進一步變更將不可避免：
 
-* 對於一般實施，可以使用[product editor](/help/commerce/cif-classic/administering/generic.md#editing-product-information)管理這些實施
-* 使用[電子商務引擎時，必須同步更改](#data-synchronization-with-an-ecommerce-engine-ongoing)
+* 對於一般實作，這些可透過[product editor](/help/commerce/cif-classic/administering/generic.md#editing-product-information)來管理
+* 使用[eCommerce引擎時，必須同步更改](#data-synchronization-with-an-ecommerce-engine-ongoing)
 
-#### 使用電子商務引擎進行資料同步（正在進行中）{#data-synchronization-with-an-ecommerce-engine-ongoing}
+#### 與電子商務引擎進行資料同步（持續）{#data-synchronization-with-an-ecommerce-engine-ongoing}
 
-初次匯入後，您的產品資料變更是不可避免的。
+初次匯入後，產品資料的變更是不可避免的。
 
-當使用電子商務引擎時，產品資料會保留在此處，而且需要在中提供AEM。 進行更新時，需要同步此產品資料。
+使用電子商務引擎時，產品資料會保留在該處，且需要可在AEM中使用。 更新時，需要同步此產品資料。
 
-這可視資料類型而定：
+這取決於資料類型：
 
-* 將[週期同步與變更的資料饋送一起使用。](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#product-synchronization-and-publishing)
+* 將[週期同步與變更](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#product-synchronization-and-publishing)的資料饋送一起使用。
 
    除此之外，您還可以為快速更新選擇特定更新。
 
-* 從商務引擎中針對每個頁面請求擷取高度波動的資料（例如價格資訊），以確保其永遠是最新的。
+* 從商務引擎中針對每個頁面請求擷取高度波動的資料（例如價格資訊），以確保其隨時為最新。
 
-### 目錄——效能和縮放{#catalogs-performance-and-scaling}
+### 目錄 — 效能和縮放{#catalogs-performance-and-scaling}
 
-從電子商務引擎(PIM)匯入大量產品（通常超過100,000個）的大型型錄，會因為節點數目龐大而影響系統。 如果產品有相關資產（例如產品影像），它也會拖慢製作執行個體的速度。 這是因為這些資產的後處理需要耗用CPU和記憶體。
+從電子商務引擎(PIM)導入具有大量產品（通常超過100,000個）的大型目錄會由於節點數過多而影響系統。 如果產品具有相關資產（例如產品影像），也可能會拖慢製作執行個體的速度。 這是因為這些資產的後置處理耗用CPU和記憶體。
 
-您可以選擇多種策略來解決這些問題：
+您可以選擇各種策略來解決這些問題：
 
-* [分組](#bucketing) -以迎合大量節點的需求
-* [將資產後處理卸載到專用實例](#offload-asset-post-processing-to-a-dedicated-instance)
+* [分段](#bucketing)  — 適應大量節點
+* [將資產後處理卸載至專用執行個體](#offload-asset-post-processing-to-a-dedicated-instance)
 * [僅匯入產品資料](#only-import-product-data)
-* [導入調節和批處理保存](#import-throttling-and-batch-saves)
+* [導入節流和批保存](#import-throttling-and-batch-saves)
 * [效能測試](#performance-testing)
-* [效能——其他](#performance-miscellaneous)
+* [效能 — 其他](#performance-miscellaneous)
 
-#### 分段{#bucketing}
+#### 分段 {#bucketing}
 
-如果JCR節點有許多直接子節點（如1000個以上），則需要儲存段（虛擬資料夾）以確保效能不受影響。 匯入時會根據演算法產生這些項目。
+如果JCR節點有許多直接子節點（例如1000個以上），則需要儲存貯體（虛設資料夾），以確保效能不受影響。 這些會在匯入時根據演算法產生。
 
-這些儲存區採用虛擬資料夾的形式，這些資料夾會引入您的目錄結構，但可加以設定，使它們在公用URL中不明顯。
+這些貯體會採用虛設資料夾的形式，這些資料夾會導入目錄結構中，但可進行設定，使其在公用URL中不明顯。
 
 #### 將資產後處理卸載到專用實例{#offload-asset-post-processing-to-a-dedicated-instance}
 
-此案例包括設定兩個作者例項：
+此情境包含設定兩個製作例項：
 
-1. 主作者實例
+1. 主作者例項
 
-   從PIM匯入產品資料，資產路徑的後置處理會停用。
+   從PIM匯入產品資料，資產路徑的後置處理將停用。
 
-1. 專用DAM作者實例
+1. 專用DAM製作例項
 
-   從PIM匯入和後處理產品資產，然後將這些資產複製回主作者實例以供使用。
+   從PIM匯入和後續處理產品資產，然後將這些資產複製回主製作例項以供使用。
 
 ![架構圖](/help/sites-administering/assets/chlimage_1-8.png)
 
-#### 僅匯入產品資料{#only-import-product-data}
+#### 僅導入產品資料{#only-import-product-data}
 
 若產品不含要匯入的資產（影像），您可以匯入產品資料，而不受資產後期處理的影響。
 
@@ -381,56 +365,56 @@ ht-degree: 1%
 
 #### 效能測試{#performance-testing}
 
-必須考慮電子商務實作的AEM效能測試：
+AEM eCommerce實作必須考慮效能測試：
 
-* 作者環境：
+* 製作環境：
 
-   背景（例如匯入）活動可與一般使用者活動（例如頁面編輯）同時發生，即使前端效能（一般而言）具有較高的優先順序，線上作者看到的不良效能也會導致無法阻止上線決策的困擾。
+   背景（例如，匯入）活動可與一般使用者活動（例如頁面編輯）同時發生，即使前端效能（一般而言）被賦予較高的優先順序，線上作者看到的效能不佳，可能會導致無法封鎖上線決策的困擾。
 
-* 出版物環境：
+* 發佈環境：
 
-   複製是確保內容快速可靠地發佈的關鍵過程。 這可能會受作者對要發佈的內容進行分組的方式影響。
+   復寫是確保內容快速、可靠地發佈的關鍵過程。 作者對要發佈的內容進行分組的方式可能會影響此狀況。
 
 * 前端：
 
-   前端和快取失效的混合可能導致效能意外。 測試有助於避免這些問題。
+   前端和快取無效的混合可能會導致效能意外。 測試有助於避免這些問題。
 
-請注意，此效能測試需要您對目標的瞭解和分析：
+請注意，此效能測試需要您對目標的了解和分析：
 
 * 內容卷
 
    * 資產
-   * 本地化的I18ned產品和SKU
+   * 本地化的I18內置產品和SKU
 
 * 使用者活動：
 
-   * Bulk Edition
-   * 大量出版物
-   * 密集搜尋請求
+   * 大量版
+   * 大量發佈
+   * 密集搜索請求
 
 * 背景程式
 
-   * 導入
+   * 匯入
    * 同步更新（例如定價）
 
-* 維護要求（備份、Tar PM優化、資料儲存廢棄項目收集等）
+* 維護要求（備份、Tar PM優化、資料儲存垃圾收集等）
 
-#### 效能——其他{#performance-miscellaneous}
+#### 效能 — 其他{#performance-miscellaneous}
 
-對於所有實施，可以牢記以下幾點：
+對於所有實施，請謹記下列幾點：
 
-* 由於產品、庫存單位和類別可能很多，請盡量使用最少的節點來建立內容模型。
+* 由於產品、庫存單位和類別可能很多，因此請嘗試使用最少的節點來建立內容模型。
 
-   您擁有的節點越多，您的內容就越有彈性（例如parsys）。 但是，一切都是權衡取捨，在控制（例如）30K產品時，您是否需要個別的彈性（依預設）?
+   您擁有的節點越多，內容就越有彈性（例如parsys）。 但是，一切都是取捨，在操控（例如）30K產品時（預設情況下），您是否需要個人的靈活性？
 
-* 盡可能避免重複（請參閱本地化），或者，當您這麼做時，請考慮您的複製將導致多少節點。
-* 請盡量嘗試標籤您的內容，以準備查詢最佳化。
+* 請盡量避免重複（請參閱本地化），或在您重複時，想想您的重複會導致多少節點。
+* 請盡量標籤您的內容，以便準備查詢最佳化。
 
    例如：
 
    `/content/products/france/fr/shoe/reebok/pump/46 SKU`
 
-   每個內容層級應有一個標籤（例如國家、語言、類別、品牌、產品）。 搜索
+   每個內容層級（例如國家、語言、類別、品牌、產品）應有一個標籤。 搜尋
 
    `//element(*,my:Sku)[@country=’france’ and @language=’fr’`
 
@@ -442,16 +426,16 @@ ht-degree: 1%
 
    `/jcr:root/content/france/fr/shoe/reebok/pump/element(*,my:Sku)`
 
-* 在您的技術堆疊中，規劃非常工廠化的內容存取模型和服務。 這是一般的最佳實務，但更重要的是，在最佳化階段，她會新增應用程式快取，以供經常讀取的資料使用（而且您不想填入套件快取）。
+* 在您的技術堆棧中，規劃非常分工的內容訪問模型和服務。 這是一般的最佳實務，但更重要的是，在最佳化階段，您可以為經常讀取的資料（且您不想用來填入套件快取）新增應用程式快取。
 
-   例如，屬性管理通常是快取的最佳候選項，因為它與透過產品匯入更新的資料有關。
-* 考慮使用[proxy頁面](#proxy-pages)。
+   例如，屬性管理通常是快取的理想候選項，因為它與透過產品匯入更新的資料有關。
+* 請考慮使用[代理頁面](#proxy-pages)。
 
 ### 目錄部分頁{#catalog-section-pages}
 
-目錄部分提供您，例如：
+目錄區段可提供您下列項目：
 
-* 類別簡介（影像和／或文字）;這也可用於橫幅和廣告廣告，以推廣特殊優惠
+* 類別簡介（影像和/或文字）;這也可用於橫幅和茶匙，以宣傳特別優惠方案
 * 連結至該類別中的個別產品
 * 連結至其他類別
 
@@ -459,161 +443,155 @@ ht-degree: 1%
 
 ### 產品頁面 {#product-pages}
 
-產品頁面提供個別產品的完整資訊。 還反映了動態更新；例如，在電子商務引擎上註冊的價格變更。
+產品頁面提供有關個別產品的完整資訊。 也會反映的動態更新；例如，在電子商務引擎上註冊的價格變更。
 
-產品頁AEM面是使用&#x200B;**Product**&#x200B;元件的頁面；例如，在&#x200B;**商務產品**&#x200B;範本中：
+產品頁面是使用&#x200B;**Product**&#x200B;元件的AEM頁面；例如，在&#x200B;**商務產品**&#x200B;範本中：
 
 ![ecommerce_nairobirunnersgreen](/help/sites-administering/assets/ecommerce_nairobirunnersgreen.png)
 
 產品元件提供：
 
 * 一般產品資訊；包括文字和影像。
-* 定價；這通常會在每次顯示／重新整理頁面時從電子商務引擎擷取。
-* 產品變型資訊；例如，顏色和大小。
+* 定價；這通常會在每次顯示/重新整理頁面時，從電子商務引擎中擷取。
+* 產品變型資訊；例如顏色和大小。
 
-此資訊可讓購物者在將商品新增至購物籃時選擇下列項目：
+此資訊可讓購物者在購物籃中新增項目時選取下列項目：
 
 * 顏色和大小變體
 * 數量
 
-#### 產品著陸頁面{#product-landing-pages}
+#### 產品登錄頁面{#product-landing-pages}
 
-這些頁AEM面主要提供靜態資訊；例如，簡介和概述，其中包含基礎產品頁面的連結。
+這些是主要提供靜態資訊的AEM頁面；例如簡介和概述，其中包含基礎產品頁面的連結。
 
 ### 產品元件 {#product-component}
 
-**Product**&#x200B;元件可新增至任何具有傳送所需中繼資料之父頁面的頁面（即至`cartPage`和`cartObject`的路徑）。 在演示站點中，Geometrixx Outdoors，由`UserInfo.jsp`提供。
+可將&#x200B;**Product**&#x200B;元件新增至任何具有提供所需中繼資料的上層頁面（即`cartPage`和`cartObject`的路徑）的頁面。 在演示站點中，Geometrixx Outdoors由`UserInfo.jsp`提供。
 
-**Product**&#x200B;元件也可以根據您的個別需求加以自訂。
+也可以根據您的個別需求自訂&#x200B;**Product**&#x200B;元件。
 
 ### 代理頁{#proxy-pages}
 
 代理頁用於簡化儲存庫的結構並優化大型目錄的儲存。
 
-建立目錄時，每個產品會使用十個節點，因為它會為每個產品提供個別的元件，您可在其中進行更新和自訂AEM。 如果您的目錄包含數百或甚至數千種產品，就會有大量節點成為問題。 若要避免任何問題，您可以使用Proxy頁面建立目錄。
+建立目錄會使用每個產品的10個節點，因為它為每個產品提供可在AEM內更新和自訂的個別元件。 如果您的目錄包含數百或甚至數千種產品，則會造成這麼大數量的節點問題。 若要避免任何問題，您可以使用Proxy頁面建立目錄。
 
-代理頁使用雙節點結構（`cq:Page`和`jcr:content`），但不包含任何實際的產品內容。 在請求時，透過參考產品資料和範本頁面來產生內容。
+代理頁使用不包含任何實際產品內容的雙節點結構（`cq:Page`和`jcr:content`）。 內容會在請求時參考產品資料和範本頁面而產生。
 
-然而，這是一種取捨。 您將無法在中自訂產品資訊AEM，因此會使用標準範本（為您的網站定義）。
+然而，這是一種取捨。 您將無法在AEM中自訂產品資訊，因此將會使用標準範本（為您的網站定義）。
 
 >[!NOTE]
->
->如果匯入沒有代理頁面的大型目錄，將不會遇到任何問題。
->
->您可以隨時從一種方法轉換為另一種方法。 您也可以轉換目錄的子區段。
+如果您匯入沒有代理頁面的大型目錄，則不會遇到任何問題。
+您可以隨時從一種方法轉換為另一種方法。 您也可以轉換目錄的子區段。
 
-## 促銷和憑單{#promotions-and-vouchers}
+## 促銷活動和憑單{#promotions-and-vouchers}
 
 ### 憑單 {#vouchers}
 
-憑單是一種經過嘗試和測試的提供折扣的方法，可吸引購物者購買和／或獎勵客戶的忠誠度。
+憑單是一種經過嘗試和測試的方法，可提供折扣，以吸引購物者進行購買和/或獎勵客戶的忠誠度。
 
 * 憑單供應：
 
-   * 優惠券代碼（由購物者輸入到購物車中）。
-   * 優惠券標籤（在購物者將其輸入購物車後顯示）。
-   * 促銷路徑（用來定義憑證套用的動作）。
+   * 憑單代碼（由購物者輸入購物車）。
+   * 憑單標籤（在購物者將其輸入購物車後顯示）。
+   * 促銷路徑（定義憑證套用的動作）。
 
 * 外部商務引擎也可以提供憑單。
 
-在AEM:
+在AEM中：
 
-* 優惠券是使用網站主控台建立／編輯的頁面型元件。
-* **Voucher**&#x200B;元件提供：
+* 憑單是使用網站控制台建立/編輯的頁面型元件。
+* **憑證**&#x200B;元件提供：
 
-   * 憑證管理的轉譯器；這會顯示購物車中目前的任何憑單。
-   * 用於管理（添加／刪除）憑單的編輯對話框（表單）。
-   * 在購物車中新增／移除憑單所需的動作。
+   * 憑證管理的轉譯者；這顯示當前購物車中的任何憑單。
+   * 用於管理（添加/刪除）憑證的編輯對話框（表單）。
+   * 向購物車添加/從購物車中刪除憑單所需的操作。
 
-* 憑單沒有自己的開／關日期／時間，但使用其父促銷活動。
+* 憑單沒有自己的開啟和關閉日期/時間，而是使用其父促銷活動的憑證。
 
 >[!NOTE]
->
->使AEM用&#x200B;**優惠券**&#x200B;一詞，這與&#x200B;**優惠券**&#x200B;一詞同義。
+AEM使用&#x200B;**憑單**&#x200B;一詞，這與&#x200B;**抵用券**&#x200B;一詞同義。
 
 ### 促銷活動 {#promotions}
 
-促銷活動和憑證可讓您瞭解以下情形：
+促銷活動與憑單可讓您了解以下情形：
 
-* 公司為員工提供自訂價格，這是一份手工製作的使用者清單。
-* 長期客戶可享有所有訂單的折扣。
-* 在明確定義的時段內提供的售價。
-* 當客戶先前的訂單超過特定金額時，客戶會收到優惠券。
-* 購買&#x200B;*product-X*&#x200B;的客戶在&#x200B;*product-Y*（配對產品）上享有折扣。
+* 公司為員工提供定制價格，這是一份手工編製的用戶清單。
+* 長期客戶可獲得所有訂單的折扣。
+* 在明確的時間段內提供的售價。
+* 當客戶的上一訂單超過特定金額時，客戶會收到憑單。
+* 購買&#x200B;*product-X*&#x200B;的客戶在&#x200B;*product-Y*（配對產品）上可獲得折扣。
 
-促銷通常不是由產品資訊經理維護，而是由行銷經理維護：
+促銷活動通常不是由產品資訊經理維護，而是由行銷經理維護：
 
-* 促銷是使用網站主控台建立／編輯的頁面型元件。 &quot;
-* 促銷提供：
+* 促銷活動是使用網站主控台建立/編輯的頁面型元件。 &quot;
+* 促銷活動提供：
 
    * 優先順序
-   * 促銷處理常式路徑
+   * 升級處理程式路徑
 
-* 您可以將促銷活動連結至促銷活動，以定義其開／關日期／時間。
-* 您可以將促銷活動與體驗連結，以定義其細分。
-* 與體驗無關的促銷活動不會自行引發，但仍可以透過優惠券引發。
+* 您可以將促銷活動連結至促銷活動，以定義其開啟/關閉日期/時間。
+* 您可以將促銷活動連結至體驗，以定義其區段。
+* 未與體驗連結的促銷活動不會自行引發，但仍可由憑單引發。
 * 升級元件包含：
 
-   * 促銷管理的轉譯者和對話方塊
-   * 子元件，用於渲染和編輯特定於升級處理程式的配置參數
+   * 促銷管理的推薦者和對話
+   * 用於呈現和編輯升級處理程式專用的配置參數的子元件
 
-在AEM促銷活動中，也會整合至[促銷活動管理](/help/sites-authoring/personalization.md):
+在AEM中，促銷活動也整合至[促銷活動管理](/help/sites-authoring/personalization.md):
 
-* a [campaign](/help/sites-authoring/personalization.md)指定開／關時間
-* [促銷](/help/sites-authoring/personalization.md) ** 活動中的體驗會用來根據對應的受眾群體，將資產（預告頁面、促銷等）分組
+* a [campaign](/help/sites-authoring/personalization.md)指定開/關時間
+* [行銷活動中的](/help/sites-authoring/personalization.md) ** 體驗是用來根據對應的受眾區段，將資產（預告頁面、促銷活動等）分組
 
-促銷活動可以在體驗中或直接在促銷活動中進行：
+促銷活動可在體驗中進行，或直接在促銷活動中進行：
 
-* 如果促銷活動是在體驗中持有，則可自動套用至觀眾區段。
+* 如果促銷活動是在體驗中持有，則會自動套用至對象區段。
 
-   例如，在geometrixx-outdoors範例網站中，促銷：
+   例如，在geometrixx-outdoors範例網站中，促銷活動：
 
    `/content/campaigns/geometrixx-outdoors/big-spender/ordervalueover100/free-shipping`
 
-   在體驗中，因此每當區段(`ordervalueover100`)解析時，會自動觸發。
+   在體驗中，因此會在區段(`ordervalueover100`)解析時自動觸發。
 
-* 如果促銷活動未顯示在體驗中（僅在促銷活動中），則無法自動套用至對象。 不過，如果購物者在購物車中輸入優惠券，而該優惠券參照促銷活動，則仍可以引發此優惠券。
+* 如果促銷活動未出現在體驗中（僅顯示在促銷活動中），則無法自動套用至對象。 但是，如果購物者在購物車中輸入憑單，且該憑單參考促銷，則仍可引發此憑證。
 
-   例如，促銷：
+   例如，促銷活動：
 
    `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
-   不在體驗之外，因此絕不會自動觸發(即：根據區段)。 但是，這是由憑證引用的，這些憑證可在文章促銷活動中的數個體驗中找到。 將這些憑單代碼輸入購物車將導致促銷觸發。
+   不在體驗之外，因此不會自動觸發(即：根據區段)。 但是，它被可在文章促銷活動內數個體驗中找到的憑單引用。 將這些憑單代碼輸入購物車會引發促銷活動。
 
 >[!NOTE]
->
->[hybris促](https://www.hybris.com/modules/promotion) 銷 [](https://www.hybris.com/en/modules/voucher) 活動和hybris擔保會覆蓋影響購物車的一切，並與定價有關。促銷特定行銷內容（例如橫幅等）不屬於Hybris促銷。
+[hybris促](https://www.hybris.com/modules/promotion) 銷活動 [和hybris ](https://www.hybris.com/en/modules/voucher) voucherscover影響購物車且與定價相關的一切。促銷活動專用的行銷內容（例如橫幅等）不屬於Hybris促銷活動。
 
 ## 個性化 {#personalization}
 
 ### 客戶註冊和帳戶{#customer-registration-and-accounts}
 
-當購物者註冊時，帳戶詳細資訊需要與電子商務AEM引擎同步。 敏感資料是獨立保存的，但個人檔案是共用的：
+當購物者註冊時，帳戶詳細資訊需要在AEM和電子商務引擎之間同步。 敏感資料會獨立保留，但設定檔會共用：
 
 ![chlimage_1-10](/help/sites-administering/assets/chlimage_1-10.png)
 
-確切的機制可以取決於情境：
+確切機制取決於情況：
 
-1. 用戶帳戶存在於兩個系統中：
+1. 這兩個系統中都存在用戶帳戶：
 
-   1. 不需執行任何動作。
+   1. 無需任何動作。
 
-1. 使用者帳戶僅存在於AEM:
+1. 使用者帳戶僅存在於AEM中：
 
-   1. 使用者將會在電子商務引擎中建立，其帳戶ID和隨機密碼會儲存在AEM中。
-   1. 隨機密碼是必要的，因AEM為第一次呼叫時會嘗試登入電子商務引擎（例如，當請求產品頁面且電子商務引擎參考價格時）。 由於這會在登入後AEM發生，因此密碼無法使用。
+   1. 系統會在電子商務引擎中建立使用者，其帳戶ID與隨機密碼會儲存在AEM中。
+   1. 隨機密碼是必要的，因為AEM會嘗試在第一次呼叫時登入電子商務引擎（例如，當請求產品頁面且參考了價格的電子商務引擎時）。 由於這會在AEM登入後發生，因此密碼無法使用。
 
 1. 使用者帳戶僅存在於電子商務引擎中：
 
-   1. 帳戶將使用相AEM同的帳戶ID和密碼建立。
+   1. 帳戶將在AEM中建立，並使用相同的帳戶ID和密碼。
 
-使用電子商務引擎時，AEM僅會儲存帳戶ID和密碼（選擇性地是使用者群組）。 所有其他資訊都儲存在電子商務引擎中。
+使用電子商務引擎時，AEM只會儲存帳戶ID和密碼（選擇性地是使用者群組）。 所有其他資訊都儲存在電子商務引擎中。
 
 >[!NOTE]
->
->使用電子商務引擎時，您需要確保為登入例項的使用者建立的帳AEM戶會複製（例如透過工作流程）至與該引AEM擎通訊的其他例項。
->
->否則，這AEM些其他例項也會嘗試為引擎中的相同使用者建立帳戶。 這些動作會因引擎發出`DuplicateUidException`而失敗。
+使用電子商務引擎時，您需要確保為登入AEM例項的使用者建立的帳戶會複製（例如透過工作流程）至與該引擎通訊的任何其他AEM例項。
+否則，這些其他AEM例項也會嘗試為引擎中的相同使用者建立帳戶。 這些動作會因來自引擎的`DuplicateUidException`而失敗。
 
 ### 客戶註冊{#customer-sign-up}
 
@@ -622,65 +600,63 @@ ht-degree: 1%
 ![chlimage_1-11](/help/sites-administering/assets/chlimage_1-11.png)
 
 >[!NOTE]
->
->也支援匿名購物車和結帳。
+也支援匿名購物車和結帳。
 
 ### 客戶登入{#customer-sign-in}
 
-註冊後，購物者可以使用其帳戶登入，以便追蹤其動作並履行訂單。
+註冊後，購物者可以使用其帳戶登入，以便追蹤其動作並完成其訂單。
 
 ![chlimage_1-12](/help/sites-administering/assets/chlimage_1-12.png)
 
 ### 單一登入{#single-sign-on}
 
-提供單一登入(SSO)，讓作者在電子商務系統中都已知AEM，而不需要登入兩次。
+提供單一登入(SSO)，讓作者在AEM和電子商務系統中皆已知，不需重複登入。
 
 ### myAccount {#myaccount}
 
-來自電子商務引擎的交易資料會與購物者的個人資訊結合。 將AEM部分資料當做描述檔資料。 表單的動作會將資AEM訊寫回電子商務引擎。
+來自電子商務引擎的交易資料與關於購物者的個人資訊結合。 AEM將部分資料用作設定檔資料。 AEM中的表單動作會將資訊寫回電子商務引擎。
 
-有一個頁面可讓您輕鬆管理帳戶資訊。 您可以按一下geometrixx頁面頂端的&#x200B;**My Account**&#x200B;來存取它，或導覽至`/content/geometrixx-outdoors/en/user/account.html`。
+有一個頁面可讓您輕鬆管理您的帳戶資訊。 您可以按一下geometrixx頁面頂端的&#x200B;**My Account**，或導覽至`/content/geometrixx-outdoors/en/user/account.html`來存取它。
 
 ![chlimage_1-13](/help/sites-administering/assets/chlimage_1-13.png)
 
 ### 通訊錄 {#address-book}
 
-您的網站需要儲存一系列的地址；包括傳送、帳單和替代地址。 您可以根據預設地址格式使用表單來實施此功能，也可以使用由提供的通訊簿元件AEM。
+您的網站需要儲存一系列地址；包括傳送、帳單和替代地址。 您可以根據預設地址格式使用表單來實作，也可以使用AEM提供的通訊簿元件。
 
 此通訊簿元件允許您：
 
 * 編輯帳簿中的地址
-* 從帳簿中選擇地址作為發運地址
-* 從帳簿中選擇帳務地址
+* 從帳簿中為發運地址選擇地址
+* 從帳簿中選擇地址以進行開單地址
 
-您可以選擇預設的地址。
+您可以選擇預設地址。
 
-通過按一下&#x200B;**地址簿**&#x200B;或導航到`/content/geometrixx-outdoors/en/user/account/address-book.html`，可從&#x200B;**我的帳戶**&#x200B;頁訪問地址簿元件。
+可通過按一下&#x200B;**通訊簿**&#x200B;或導航到`/content/geometrixx-outdoors/en/user/account/address-book.html`，從&#x200B;**我的帳戶**&#x200B;頁訪問通訊簿元件。
 
 ![chlimage_1-14](/help/sites-administering/assets/chlimage_1-14.png)
 
-您可以按一下&#x200B;**添加新地址……**，在您的通訊錄中新增地址。 它會開啟一個表格，您可以填寫，然後按一下「新增位址&#x200B;**」。**
+可以按一下「**添加新地址……」**&#x200B;在通訊簿中添加新地址。 它會開啟一個表單，您可以填寫該表單，然後按一下「**新增地址**」。
 
 >[!NOTE]
->
->您可以在通訊簿中輸入幾個地址。
+您可以在通訊簿中輸入多個地址。
 
-當您結帳購物車時，會使用通訊錄：
+結帳購物車時會使用通訊簿：
 
 ![chlimage_1-15](/help/sites-administering/assets/chlimage_1-15.png)
 
-地址保存在`user_home/profile/addresses`以下。
-例如，若是Alison Parker，則位於/home/users/geometrixx/aparker@geometrixx.info/profile/addresses下
+地址會保存在`user_home/profile/addresses`以下。
+例如，若為Alison Parker，則位於/home/users/geometrixx/aparker@geometrixx.info/profile/addresses下
 
-您可以選擇想要的預設地址，這些資訊會保存在購物者的個人檔案中，而不是包含在地址中。 profile屬性`address.default`與選定值地址的路徑一起設定。
+您可以選擇想要哪個位址作為預設，此資訊會保存在購物者的設定檔中，而非包含該位址。 設定檔屬性`address.default`是使用選定值地址的路徑設定的。
 
-### 客戶特定價格{#customer-specific-pricing}
+### 客戶特定定價{#customer-specific-pricing}
 
-電子商務引擎使用上下文（實質上是購物者資訊）來判斷其持有的價格，然後將正確的資訊提供回AEM去。
+電子商務引擎使用上下文（主要是購物者資訊）來確定其所持的價格，然後將正確的資訊提供回AEM。
 
 ## 購物車與訂購{#shopping-cart-and-orders}
 
-當購物者瀏覽產品頁面並選取項目，將其放入購物車中時。 當他們繼續結帳時，可以下訂單。
+當購物者瀏覽產品頁面並選取項目以將其放入購物車中時。 當他們繼續結帳時，可以下訂單。
 
 ### 匿名購物者{#anonymous-shoppers}
 
@@ -691,8 +667,7 @@ ht-degree: 1%
 * 執行結帳以下單
 
 >[!NOTE]
->
->在結帳前，可能需要執行個體位址資訊的設定或客戶註冊。
+結帳前可能需要執行個體地址資訊的設定或客戶註冊，視情況而定。
 
 ### 註冊購物者{#registered-shoppers}
 
@@ -704,50 +679,47 @@ ht-degree: 1%
 * 執行結帳以下單
 * 檢視及追蹤先前的訂單
 
-### 購物車內容概觀{#shopping-cart-content-overview}
+### 購物車內容概述{#shopping-cart-content-overview}
 
 購物車提供：
 
-* 所選項目概覽
+* 所選項的概觀
 * 連結至所選項目的產品頁面
 * 能夠：
 
-   * 更新個別項目的數量
+   * 更新個別項目的數量/數量
    * 移除個別項目
 
 ![ecommerce_shoppingcart](/help/sites-administering/assets/ecommerce_shoppingcart.png)
 
-購物車會根據所使用的引擎進行儲存：
+購物車會根據所使用的引擎而儲存：
 
-* 通AEM用程式將購物車儲存在Cookie中。
-* 某些電子商務引擎可將購物車儲存在作業中。
+* AEM通用將購物車儲存在cookie中。
+* 某些電子商務引擎可在工作階段中儲存購物車。
 
-無論是哪種情況，項目都會在購物車中（並且可以還原），而且登入／登出（但僅限在相同的機器／瀏覽器上）。 例如：
+無論是哪種情況，項目都會在登入/登出期間（但僅在相同的電腦/瀏覽器上）保留在購物車中（且可以還原）。 例如：
 
-* 瀏覽為`anonymous`並將產品新增至購物車
-* 登入為`Allison Parker` —— 她的購物車為空
+* 以`anonymous`的形式瀏覽並將產品新增至購物車
+* 登入為`Allison Parker` — 購物車空白
 * 將產品新增至購物車
-* 登出——購物車將顯示`anonymous`的產品
+* 登出 — 購物車會顯示`anonymous`的產品
 
-* 以`Allison Parker`重新登入——她的產品已復原
-
->[!NOTE]
->
->匿名購物車只能在同一台機器／瀏覽器上還原。
+* 以`Allison Parker`重新登入 — 其產品已還原
 
 >[!NOTE]
->
->不建議使用`admin`帳戶來測試還原購物車內容，因為這可能與電子商務引擎的`admin`帳戶（例如hybris）衝突。
+匿名購物車只能在同一台電腦/瀏覽器上還原。
 
 >[!NOTE]
->
->可以將hybris配置為在定義的時間段後刪除暫掛購物車。
+不建議使用`admin`帳戶測試還原購物車內容，因為這可能與電子商務引擎的`admin`帳戶（例如hybris）衝突。
 
-在結帳之前，價格變更會在發生時反映（在兩個系統中）。
+>[!NOTE]
+可以將hybris配置為在定義的時間段後刪除掛起的購物車。
+
+結帳前，價格變更會在發生時反映（在兩個系統中）。
 
 ### 訂單資訊{#order-information}
 
-根據您有關訂單的實作資訊會保存在電子商務引擎中，或AEM由您轉譯此資AEM訊。
+根據您在電子商務引擎或AEM中保存的訂單相關實作資訊，此資訊由AEM呈現。
 
 會儲存各種資訊，其中包括：
 
@@ -757,11 +729,11 @@ ht-degree: 1%
 
 * **已下單**
 
-   下單的日期。
+   下訂單的日期。
 
 * **狀態**
 
-   訂單狀態；例如，「已發運」。
+   訂單狀態；例如，已發運。
 
 * **貨幣**
 
@@ -769,7 +741,7 @@ ht-degree: 1%
 
 * **內容項目**
 
-   排序項目清單。
+   已排序的項目清單。
 
 * **小計**
 
@@ -777,7 +749,7 @@ ht-degree: 1%
 
 * **稅金**
 
-   訂單上任何應繳稅款的金額。
+   訂單上應繳的稅金。
 
 * **送貨**
 
@@ -785,11 +757,11 @@ ht-degree: 1%
 
 * **總計**
 
-   訂單的總價值；訂購的物品，稅金和垃圾。
+   訂單的總值；訂購的物品、稅金和分批。
 
 * **帳單地址**
 
-   發票應傳送的地址。
+   應發送發票的地址。
 
 * **付款 Token**
 
@@ -797,30 +769,29 @@ ht-degree: 1%
 
 * **付款狀態**
 
-   付款狀態。
+   付款的狀態。
 
 * **送貨地址**
 
-   貨物應運抵的地址。
+   貨物應運到的地址。
 
 * **送貨方法**
 
-   運輸方式；例如陸地，海洋或空氣。
+   運輸方法；例如陸地、海洋或空氣。
 
 * **追蹤編號**
 
-   發運公司使用的任何追蹤編號。
+   航運公司使用的任何跟蹤編號。
 
 * **追蹤連結**
 
    用於在發運時追蹤訂單的連結。
 
 >[!NOTE]
->
->建立順序精靈中使用的欄位取決於是否有針對位置定義的觸控最佳化支架。 在通用範例中，您可在以下網址找到：
->`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
+建立順序精靈中使用的欄位取決於為該位置定義的觸控最佳化架構。 在一般範例中，這可從以下網址找到：
+`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 
-當訂單存放在訂單控AEM制台中時，每筆訂單會顯示下列項目：
+在AEM內保留訂單時，Order Console會針對每筆訂單顯示下列內容：
 
 * 購物車中的項目數
 * 訂單的總值
@@ -829,45 +800,45 @@ ht-degree: 1%
 
 ![chlimage_1-16](/help/sites-administering/assets/chlimage_1-16.png)
 
-### 訂單追蹤{#order-tracking}
+### 順序追蹤{#order-tracking}
 
-下單後，購物者通常會返回：
+下訂單後，購物者通常會返回：
 
 * 檢查訂單狀態
-* 從訂單中移除產品
+* 從訂單中刪除產品
 * 將產品新增至訂單
 
-在收到訂單傳送後，購物者可能也會想要檢視一段時間內的訂單記錄。
+在收到訂單傳送後，購物者可能也想要檢視一段時間內的訂單記錄。
 
-訂單履行和追蹤通常由電子商務引擎管理。 您可使用「訂單歷AEM史記錄」元件來顯示資訊，其中顯示所有相關詳細資訊，包括所套用的憑單和促銷。 例如：
+訂單履行和追蹤通常由電子商務引擎管理。 AEM可使用訂單歷史記錄元件顯示資訊，該元件顯示所有相關詳細資訊，包括所應用的憑單和促銷。 例如：
 
 ![chlimage_1-17](/help/sites-administering/assets/chlimage_1-17.png)
 
 ## 結帳 {#checkout}
 
-結帳是使用標準表單AEM實作。 這可讓行銷經理自訂行銷內容的體驗。
+結帳是使用標準AEM表單實作。 這可讓行銷經理使用行銷內容自訂體驗。
 
-然後，電子商務會透過表單的輸入來管理結帳AEM程式。
+然後，電子商務會使用AEM表單的輸入來管理結帳程式。
 
-### 付款安全性{#payment-security}
+### 支付安全性{#payment-security}
 
-付款詳細資訊（包括信用卡資訊）通常由電子商務引擎管理。 將AEM此類交易資訊轉發到引擎（從那裡轉發到付款處理服務）。
+支付詳細資訊（包括信用卡資訊）通常由電子商務引擎管理。 AEM將此類交易資訊轉發到引擎（從引擎轉發到支付處理服務）。
 
-支付卡行業(PCI)符合性可達成。
+支付卡行業(PCI)合規性可實現。
 
-### 確認訂單{#confirmation-of-order}
+### 訂購{#confirmation-of-order}的確認
 
-訂單在螢幕上確認，可使用[訂單追蹤](#order-tracking)來追蹤。
+順序已在螢幕上確認，並可使用[順序追蹤](#order-tracking)來追蹤。
 
 ## 搜尋 {#search-features}
 
 ![chlimage_1-18](/help/sites-administering/assets/chlimage_1-18.png)
 
-由於AEM產品使用標準頁面，因此您可以使用標準搜尋元件來建立搜尋頁面。
+由於AEM使用產品的標準頁面，因此您可以使用標準搜尋元件來建立搜尋頁面。
 
-如果您需要更徹底的實施，您可以：
+若需要更徹底的實作，您可以：
 
-* 使用您所需的功能擴充預設搜尋元件。
-* 在您的`CommerceService`中實作搜尋方法，然後在您的搜尋頁面上使用eCommerce搜尋元件。
+* 使用您需要的功能擴充預設搜尋元件。
+* 在`CommerceService`中實作搜尋方法，然後在搜尋頁面上使用電子商務搜尋元件。
 
-使用電子商務引擎時，電子商務搜尋API可在電子商務引擎解決方案中完整實作，因此您可以使用現成可用的電子商務搜尋元件。 多面搜索允許您搜索JCR和／或引擎：
+使用電子商務引擎時，電子商務搜尋API可在電子商務引擎解決方案中完全實作，因此您可以使用現成可用的電子商務搜尋元件。 多面搜索允許您搜索JCR和/或引擎：
