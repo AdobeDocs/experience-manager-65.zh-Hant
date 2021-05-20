@@ -1,32 +1,31 @@
 ---
-title: 教學課程——建立您的第一個互動式通訊
+title: 教學課程 — 建立您的第一個互動式通訊
 seo-title: 建立您的第一個互動式通訊
-description: 瞭解如何建立您的第一個互動式通訊。
-seo-description: 瞭解如何建立您的第一個互動式通訊。
+description: 了解如何建立您的第一個互動式通訊。
+seo-description: 了解如何建立您的第一個互動式通訊。
 uuid: ed5003c6-ba3a-4fcb-8645-c7b607b22fb5
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
-feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 互動式通訊
+exl-id: b20bb719-5686-466e-8dde-279b8471bfe3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1057'
 ht-degree: 0%
 
 ---
 
+# 教學課程：建立您的第一個互動式通信{#tutorial-create-your-first-interactive-communication}
 
-# 教學課程：建立您的第一個互動式通訊{#tutorial-create-your-first-interactive-communication}
-
-瞭解如何建立您的第一個互動式通訊。
+了解如何建立您的第一個互動式通訊。
 
 ![01-create-first-adaptive-form-hero-image](assets/01-create-first-adaptive-form-hero-image.png)
 
-互動式通訊可集中管理安全、個人化和互動式通訊的建立、組裝和傳遞，例如商業通訊、檔案、陳述、行銷郵件、帳單和歡迎套件。 互動式通訊可透過兩個通道提供：印刷與網頁。 列印頻道用來建立PDF和紙本通訊，而網路頻道則用來提供線上體驗。
+「互動式通訊」可集中處理和管理安全、個人化與互動式通信的建立、集合與傳送，例如商業信函、檔案、對帳單、行銷郵件、帳單和歡迎套件。 互動式通訊可透過兩個通道提供：打印和Web。 「列印」管道可用來建立PDF和紙張通訊，而「網頁」管道則可用來提供線上體驗。
 
-本教學課程提供端對端架構，以建立互動式通訊。 本教學課程分為使用案例和多本指南。 每個指南都可協助您建立用作建立區塊的功能，以建立互動式通訊。
+本教學課程提供端對端架構，以建立互動式通訊。 本教學課程可整合為一個使用案例和多個指南。 每本指南都可協助您建立功能，這些功能可作為建立互動式通訊的基礎。
 
 下圖說明建立互動式通訊所需的建置區塊。
 
@@ -36,34 +35,34 @@ ht-degree: 0%
 
 * 建立建置區塊（表單資料模型、檔案片段和範本）
 * 建立互動式通訊
-* 測試和發佈互動式通訊
+* 測試並發佈互動式通訊
 
 ## 使用案例{#use-case}
 
-這個旅程從瞭解使用案例開始：
+歷程從學習使用案例開始：
 
-電信營運商透過電子郵件傳送每月帳單給客戶。 這項法案是互動式通訊。 電子郵件包括：
+電信營運商會透過電子郵件傳送每月帳單給客戶。 賬單是互動式通訊。 電子郵件包括：
 
-* 受密碼保護的PDF，在本教學課程中稱為列印頻道。 它包括客戶詳細資訊、帳單詳細資訊、費用摘要、支付帳單的便利模式以及使用詳細資訊。
-* 指向Web版帳單的連結，在本教學課程中稱為Web頻道。 除了PDF版中涵蓋的詳細資訊外，Web版本還提供使用細節的圖形表示，以及以Adobe Target為基礎的個人化優惠。 網頁版本也包含線上付款表單。 線上支付不需離開IC就有幫助。
-* 增值服務的連結，例如線上儲存空間、音樂訂閱和隨選視訊訂閱。
+* 受密碼保護的PDF，在本教學課程中稱為「列印管道」。 它包括客戶詳細資訊、帳單詳細資訊、費用摘要、支付賬單的方便模式和使用詳細資訊。
+* 指向Web版本的帳單的連結，在本教學課程中稱為Web渠道。 除了PDF版本中涵蓋的詳細資訊外，帳單的網頁版本還以圖形方式呈現使用詳情，並提供以Adobe Target為基礎的個人化優惠方案。 該Web版本還包含線上支付表。 在不離開IC的情況下進行線上支付是有幫助的。
+* 增值服務的連結，例如線上儲存、音樂訂閱和隨選視訊訂閱。
 
 ## 必備條件 {#prerequisites}
 
-* 設定作AEM者例項。
-* 在作者實例上安裝[AEM Forms附加元件](/help/forms/using/installing-configuring-aem-forms-osgi.md)
+* 設定AEM製作例項。
+* 在製作執行個體上安裝[AEM Forms附加元件](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 * 設定MYSQL資料庫
-* 從資料庫提供程式獲取JDBC資料庫驅動程式（JAR檔案）。 教程中的示例基於MySQL資料庫，並使用Oracle的[MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
+* 從資料庫提供程式獲取JDBC資料庫驅動程式（JAR檔案）。 本教程中的示例基於MySQL資料庫，並使用Oracle的[MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
 ## 步驟1:規劃互動式通信{#step-plan-the-interactive-communication}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-規劃互動式通訊的第一步是完成互動式通訊的內容。 完成內容後，您必須分析內容，以識別建立互動式通訊所需的各種資產類型。
+規劃互動式通訊的第一步是完成互動式通訊的內容。 內容完成後，您必須分析內容，以識別建立互動式通訊所需的各種資產類型。
 
 **目標：**
 
-要使用以下資料輸入模式為互動式通信建立結構：
+使用以下資料輸入模式建立互動式通信的解剖結構：
 
 * 靜態文字
 * 表單資料模型
@@ -71,32 +70,32 @@ ht-degree: 0%
 * 條件式資料
 * 影像
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/planning-interactive-communications.md)
+[ ](/help/forms/using/planning-interactive-communications.md)
 
 ## 步驟2:建立表單資料模型{#step-create-form-data-model}
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-表單資料模型可讓您將互動式通訊連接至不同的資料來源。 例如，AEM用戶配置檔案、REST風格的Web服務、基於SOAP的Web服務、OData服務和關係資料庫。 表單資料模型是在連接資料源中可用的業務實體和服務的統一資料表示模式。 您可搭配互動式通訊使用表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
+表單資料模型可讓您將互動式通訊連接至不同的資料來源。 例如，AEM用戶配置檔案、RESTful Web服務、基於SOAP的Web服務、OData服務和關係資料庫。 表單資料模型是業務實體和服務在連接資料源中提供的統一資料表示模式。 您可以使用具有互動式通訊的表單資料模型，從連線的資料來源擷取資料。 如需表單資料模型的詳細資訊，請參閱[AEM Forms資料整合](/help/forms/using/data-integration.md)。
 
 **目標：**
 
 * 將資料庫實例（MySQL資料庫）配置為資料源
 * 使用MySQL資料庫作為資料源建立表單資料模型
-* 新增資料模型物件以建立資料模型
+* 添加資料模型對象以形成資料模型
 * 為表單資料模型配置讀寫服務
-* 在資料模型對象之間建立關聯
+* 建立資料模型對象之間的關聯
 * 檢視自動產生的範例資料
 * 編輯範例資料
-* 測試表單資料模型及已設定的服務與測試資料
+* 測試表單資料模型和已配置的服務（含測試資料）
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-form-data-model0.md)
+[ ](/help/forms/using/create-form-data-model0.md)
 
-## 步驟3:建立檔案片段{#step-create-document-fragments}
+## 步驟3:建立文檔片段{#step-create-document-fragments}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-文檔片段是用於構成互動式通信的通信的可重用元件。 文檔片段的類型有：文字、清單和條件。
+文檔片段是用於構成互動式通信的通信的可重複使用的元件。 檔案片段的類型為：文字、清單和條件。
 
 **目標：**
 
@@ -104,54 +103,54 @@ ht-degree: 0%
 * 建立變數
 * 建立和套用規則
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-document-fragments.md)
+[ ](/help/forms/using/create-document-fragments.md)
 
 ## 步驟4:建立模板{#step-create-templates}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-若要建立互動式通訊，您必須在伺服器上提供列印和網AEM路頻道的範本。
+若要建立互動式通訊，您必須在AEM伺服器上提供用於列印和網頁頻道的範本。
 
-列印渠道的範本是在AdobeForms設計人員中建立，並上傳至伺AEM服器。 然後，這些範本便可在建立互動式通訊時使用。
+列印管道的範本是在AdobeForms Designer中建立，並上傳至AEM伺服器。 然後，這些模板便可在建立互動式通信時使用。
 
-網頁渠道的範本是在中建立AEM的。 範本作者和管理員可以建立、編輯和啟用Web範本。 在建立並啟用後，這些範本就可在建立互動式通訊時使用。
+網頁管道的範本是在AEM中建立。 範本作者和管理員可以建立、編輯和啟用網頁範本。 建立並啟用後，這些範本便可在建立互動式通訊時使用。
 
 **目標：**
 
-* 使用AdobeForms設計師為印刷渠道建立XDP模板
+* 使用AdobeForms Designer為列印管道建立XDP範本
 * 將XDP範本上傳至AEM Forms伺服器
-* 建立並啟用網頁頻道的範本
+* 建立和啟用Web通道的模板
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-templates-print-web.md)
+[ ](/help/forms/using/create-templates-print-web.md)
 
 ## 步驟5:建立互動式通信{#step-create-an-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
 
-一旦您建立所有的建置區塊（例如表單資料模型、檔案片段和網頁版本的範本）後，就可以開始建立互動式通訊。
+在您為Web版本建立所有構建模組（如表單資料模型、文檔片段和模板）後，就可以開始建立互動式通信。
 
-互動式通訊可透過兩個通道提供：印刷與網頁。 您也可以以主版的方式建立互動式的列印通訊管道。 列印為網頁頻道的主選項，可確保網頁頻道的內容、繼承和資料系結是從列印頻道衍生而來。
+互動式通訊可透過兩個通道提供：打印和Web。 您也可以建立以「打印」通道作為主資訊的互動式通信。 Web頻道的打印為主選項可確保從打印頻道導出Web頻道的內容、繼承和資料綁定。
 
 **目標：**
 
-* 建立適用於列印頻道的互動式通訊
-* 建立適用於網路頻道的互動式通訊
-* 以印刷為主的方式建立印刷與網路互動式通訊
-* 在Web版互動式通訊中建立動態表格
-* 在Web版互動式通訊中建立圖表
-* 在網路版互動通訊中建立超連結
+* 為打印通道建立互動式通信
+* 為Web通道建立互動式通信
+* 以Print as Master建立打印和Web交互通信
+* 在Web版互動式通信中建立動態表
+* 在Web版互動式通信中建立圖表
+* 在互動式通訊的網頁版本中建立超連結
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-interactive-communication0.md)
+[ ](/help/forms/using/create-interactive-communication0.md)
 
-## 步驟6:測試您的互動式通訊{#step-test-your-interactive-communication}
+## 步驟6:測試您的互動式通信{#step-test-your-interactive-communication}
 
 ![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
 
-建立互動式通訊後，請務必測試您在其中所做的每項變更。 測試互動式通訊的每個領域都很麻煩。 AEM Forms提供SDK(Calvin SDK)，以自動測試網頁瀏覽器中的互動式通訊。
+建立互動式通訊後，務必測試您在其中所做的每項變更。 測試互動式通訊的每個欄位都很繁瑣。 AEM Forms提供SDK(Calvin SDK)，以自動測試網路瀏覽器中的互動式通訊。
 
 **目標：**
 
-* 建立測試套件
+* 建立測試套裝
 * 建立測試案例
 * 執行測試案例
 
@@ -159,11 +158,10 @@ ht-degree: 0%
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-當您使用列印和網路通道建立和測試互動式通訊後，就可以發佈這些資產。 本教學課程中說明的使用案例著重於將這些資產與電子郵件用戶端整合。 電子郵件用戶端是將互動式通訊傳送至多個電子郵件地址的橋梁。
+使用列印和網頁通道建立和測試互動式通訊後，您就可以發佈這些資產。 本教學課程中說明的使用案例著重於將這些資產與電子郵件用戶端整合。 電子郵件用戶端可作為傳送互動式通訊至多個電子郵件地址的橋梁。
 
 **目標：**
 
-* 將互動式通訊與電子郵件用戶端整合，以便將通訊傳送給客戶
-* 將PDF檔案加入附件（在列印頻道中建立的互動式通訊）
-* 加入互動式通訊網路版本的連結
-
+* 將互動式通訊與電子郵件用戶端整合，以便能夠傳送通訊給客戶
+* 將PDF文檔作為附件包含（在「打印」通道中建立的互動式通信）
+* 包括到Interactive Communication Web版本的連結
