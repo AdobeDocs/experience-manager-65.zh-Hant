@@ -1,12 +1,11 @@
 ---
-title: 發展商AEM務
-description: 瞭解如何使用專案原型產生AEM具商務功能AEM的專案。 瞭解如何建立專案並將其部署至本機開發環境。
+title: 開發AEM Commerce
+description: 了解如何使用AEM專案原型產生啟用商務的AEM專案。 了解如何建立專案並部署至本機開發環境。
 topics: Commerce, Development
-feature: 商務整合框架
+feature: 商務整合架構
 doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
-translation-type: tm+mt
 source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '874'
@@ -15,30 +14,30 @@ ht-degree: 4%
 ---
 
 
-# 開AEM發商務{#develop}
+# 開發AEM Commerce {#develop}
 
-根據商AEM務整合框架(CIF)開發商務專案，其AEM規則與最佳實務與其他專案相AEM同。 請先閱讀以下內容：
+根據AEM的AEM Integration Framework(CIF)開發AEM Commerce專案，會遵循與其他專案相同的規則和最佳實務。 請先查看以下內容：
 
 - [AEM 6.5 Developing 使用指南](/help/sites-developing/home.md)
 - [AEM核心概念](/help/sites-developing/the-basics.md)
-- [開AEM發——准則和最佳做法](/help/sites-developing/dev-guidelines-bestpractices.md)
-- [如何使用Apache AEM Maven建立專案](/help/sites-developing/ht-projects-maven.md)
+- [AEM開發 — 准則和最佳實務](/help/sites-developing/dev-guidelines-bestpractices.md)
+- [如何使用Apache Maven建立AEM專案](/help/sites-developing/ht-projects-maven.md)
 
-## Local Development for AEM Commerce {#local}
+## AEM Commerce的當地開發 {#local}
 
-建議在當地開發環境下與CIF項目合作。
+若要與CIF專案搭配使用，建議使用當地開發環境。
 
 >[!NOTE]
 >
->下列指示可協助您使用CIFAEM為AEMCommerce設定本機開發環境，其焦點為AEM6.5)。 如果您使AEM用Cloud Service，請參閱[AEM Commerce as aCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)檔案。
+>下列指示可協助您使用CIF，針對AEM 6.5重點設定AEM Commerce的本機AEM開發環境)。 如果您使用AEM作為Cloud Service，請參閱[AEM Commerce作為Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)檔案。
 
-6.AEM5(亦稱AEMCommerce Add-On)。 CIF附加元件也可供當地開發，並提供一AEM套。 它可從[軟體散發入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載為功能套件。
+適用於AEM 6.5的AEM Commerce附加元件亦稱。 CIF附加元件也適用於本機開發，並以AEM套件形式提供。 可從[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載為Feature Pack。
 
 ### 所需軟體
 
-本機應安裝下列程式碼：
+應在本機安裝下列項目：
 
-- 本地AEM6.5
+- 本機AEM 6.5
 - [AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)  7或更新版本
 - [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 - [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
@@ -46,21 +45,21 @@ ht-degree: 4%
 - [npm 6+](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 
-### 訪問CIF附加模組
+### 存取CIF附加元件
 
-CIF附加元件可從[軟體散發入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載，搜尋「AEM商務附加元件」。
+CIF附加元件可從[Software Distribution portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載，搜尋「AEM Commerce附加元件」。
 
 >[!TIP]
 >
->請務必使用最新的CIF附加元件版本。
+>請務必一律使用最新的CIF附加元件版本。
 
 ### 本機設定
 
-對於本地CIF項目開發，使用AEMCIF附加元件和以下步驟：
+針對使用AEM和CIF附加元件的本機CIF專案開發，請執行下列步驟：
 
-1. 取得AEM6.5版本並安裝AEM6.5 Service Pack。 AEM 6.5 Service Pack 7是必要項，但建議安裝最後一個可用的Service Pack。
+1. 取得AEM 6.5版本並安裝AEM 6.5 Service Pack。 AEM 6.5 Service Pack 7為必要項目，但建議您安裝最後一個可用的Service Pack。
 
-1. 解壓縮AEM.jar以建立`crx-quickstart`資料夾，請運行：
+1. 解壓縮AEM .jar以建立`crx-quickstart`資料夾，執行：
 
    ```bash
    java -jar <jar name> -unpack
@@ -68,29 +67,29 @@ CIF附加元件可從[軟體散發入口網站](https://experience.adobe.com/#/d
 
 1. 建立`crx-quickstart/install`資料夾
 
-1. 將從軟體分發門戶下載的CIF附加軟體包複製到`crx-quickstart/install`資料夾中。
+1. 將從軟體發佈入口網站下載的所有CIF附加元件套件複製至`crx-quickstart/install`資料夾。
 
 >[!TIP]
 >
->或者，CIF附加軟體包也可以通過軟體包管理器安裝。
+>或者，您也可以透過套件管理器安裝CIF附加套件。
 
-1. 開始快速AEM入門
+1. 啟動AEM快速入門
 
-通過OSGI控制台驗證設定： `http://localhost:4502/system/console/osgi-installer`。 清單中應包含CIF附加元件相關的組合、內容封裝和OSGI組態。 請確定已啟動所有搭售。
+透過OSGI主控台驗證設定： `http://localhost:4502/system/console/osgi-installer`。 清單中應包含CIF附加元件相關套件組合、內容套件和OSGI設定。 請確定所有套件組合均已啟動。
 
-## 項目設定{#project}
+## 專案設定 {#project}
 
-使用CIF啟動您的商AEM務專案有兩種方式。
+使用CIF啟動AEM Commerce專案有兩種方式。
 
 ### 使用AEM專案原型
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)是引導預配置項目以開始使用CIF的主要工具。 CIF核心元件和所有必需的配置都可以包含在一個生成的項目中，並附加一個選項。
+[AEM專案原型](https://github.com/adobe/aem-project-archetype)是引導預先設定專案以開始使用CIF的主要工具。 CIF核心元件和所有必要設定皆可納入產生的專案中，並提供額外選項。
 
 >[!TIP]
 >
->使用[AEM Project Archetype 25或更新版本](https://github.com/adobe/aem-project-archetype/releases)產生專案。
+>使用[AEM專案原型25或更新版本](https://github.com/adobe/aem-project-archetype/releases)來產生專案。
 
-請參AEM閱項目原型[使用說明](https://github.com/adobe/aem-project-archetype#usage)，瞭解如何生成項AEM目。 要將CIF包括在項目中，請使用`includeCommerce`選項。
+請參閱AEM專案原型[使用指示](https://github.com/adobe/aem-project-archetype#usage)，了解如何產生AEM專案。 若要將CIF納入專案，請使用`includeCommerce`選項。
 
 例如：
 
@@ -107,7 +106,7 @@ mvn -B archetype:generate \
  -D includeCommerce=y
 ```
 
-CIF核心元件可以通過包括提供的`all`包或使用CIF內容包和相關OSGI包的個人，在任何項目中使用。 要手動將CIF核心元件添加到項目，請使用以下相關性：
+CIF核心元件可用於任何專案，方法是納入所提供的`all`套件，或個別使用CIF內容套件和相關的OSGI套件。 若要手動將CIF核心元件新增至專案，請使用下列相依性：
 
 ```java
 <dependency>
@@ -139,29 +138,29 @@ CIF核心元件可以通過包括提供的`all`包或使用CIF內容包和相關
 </dependency>
 ```
 
-### 使用AEMVenia Reference Store
+### 使用AEM Venia Reference Store
 
-啟動CIF項目的第二個選擇是克隆並使用[AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)。 Venia Reference StoreAEM是範例參考店面應用程式，示範CIF核心元件的使用AEM方式。 它是一組最佳實務範例，是開發您自己功能的潛在起點。
+啟動CIF專案的第二個選項是複製並使用[AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)。 AEM Venia Reference Store是範例參考店面應用程式，示範AEM的CIF核心元件使用方式。 這是一組最佳實務範例，也是開發您自己功能的潛在起點。
 
-要開始使用Venia Reference Store，只需克隆[Git儲存庫](https://github.com/adobe/aem-cif-guides-venia)，然後根據您的需要開始自定義項目。
+若要開始使用Venia Reference Store，只需複製[ Git存放庫](https://github.com/adobe/aem-cif-guides-venia)，然後開始根據您的需求自訂專案。
 
 >[!NOTE]
 >
->Venia Reference Store專案包含兩個建置設定檔，AEM做為Cloud Service和AEM6.5。請查看[專案readme.md](https://github.com/adobe/aem-cif-guides-venia/blob/main/README.md)以瞭解其使用方式。 對於AEM6.5，請使用`classic`描述檔。
+>Venia Reference Store專案包含AEM作為Cloud Service和AEM 6.5的兩個建置設定檔。請查看[專案readme.md](https://github.com/adobe/aem-cif-guides-venia/blob/main/README.md)以了解其使用方式。 若為AEM 6.5，請使用`classic`設定檔。
 
-### 連AEM線至Commerce System
+### 將AEM連線至Commerce System
 
-要將項目連接到商務系統，AEM必須使用商務系統的GraphQL端點進行配置。
+要將項目連接到商務系統AEM，必須使用商務系統的GraphQL端點進行配置。
 
-兩者中，由[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)或[AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)產生的專案都已包含必須調整的[預設設定](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)。
+兩者皆為[AEM專案原型](https://github.com/adobe/aem-project-archetype)或[AEM Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)產生的專案，已包含必須調整的[預設設定](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)。
 
 將`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`中的`url`值替換為項目所使用的商務系統的GraphQL端點。
 
-Commerce Add-OnAEM和CIF Core Components透過伺服器直接透過瀏覽器連AEM接至commerce GraphQL端點。 用戶端CIF核心元件和CIF附加元件製作工具預設會連線至`/api/graphql`。 如果需要，可通過CIFCloud Service配置來調整此配置（見下文）。
+AEM Commerce Add-On和CIF Core Components可透過AEM伺服器直接透過瀏覽器連線至commerce GraphQL端點。 用戶端CIF核心元件和CIF附加元件製作工具預設會連線至`/api/graphql`。 如有需要，可透過CIFCloud Service設定加以調整（請參閱下方）。
 
-CIF附加模組在`/api/graphql`處提供GraphQL代理Servlet。 如果您不打算使用本機Dispatcher,AEM建議您也配置GraphQL代理Servlet。
+CIF附加元件提供位於`/api/graphql`的GraphQL代理Servlet。 如果您不打算使用本機AEM Dispatcher，建議您也設定GraphQL代理Servlet。
 
-導覽至http://localhost:4502/system/console/configMgr並建立`Adobe CIF GraphQL Proxy Configuration`服務的OSGI設定。 使用與上述GraphQL客戶端相同的商務系統的GraphQL端點。
+導覽至http://localhost:4502/system/console/configMgr並建立`Adobe CIF GraphQL Proxy Configuration`服務的OSGI設定。 使用與上述GraphQL客戶端所用的商務系統的相同GraphQL端點。
 
 ## 其他資源
 
