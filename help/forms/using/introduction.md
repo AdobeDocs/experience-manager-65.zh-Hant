@@ -1,51 +1,50 @@
 ---
 title: HTML5表單簡介
 seo-title: HTML5表單簡介
-description: HTML5表單是Adobe Experience Manager6.0(AEM6.0)軟體的新功能，可提供HTML5格式的XFA表單範本轉換。
-seo-description: HTML5表單是Adobe Experience Manager6.0(AEM6.0)軟體的新功能，可提供HTML5格式的XFA表單範本轉換。
+description: HTML5表單是Adobe Experience Manager 6.0(AEM 6.0)軟體中的新功能，可以HTML5格式轉譯XFA表單範本。
+seo-description: HTML5表單是Adobe Experience Manager 6.0(AEM 6.0)軟體中的新功能，可以HTML5格式轉譯XFA表單範本。
 uuid: 63a2f000-c4c5-40e8-ab3f-c7c44c79ec09
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 行動表單
+exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
 
 ---
 
-
 # HTML5表單簡介{#introduction-to-html-forms}
 
-HTML5表單是Adobe Experience Manager6.0(AEM6.0)軟體的新功能，可提供HTML5格式的XFA表單範本轉換。 這項功能可讓您在不支援XFA PDF的行動裝置和案頭瀏覽器上轉換表單。 HTML5表格不僅支援XFA表格範本的現有功能，還新增了行動裝置的新功能，例如塗鴉簽名。
+HTML5表單是Adobe Experience Manager 6.0(AEM 6.0)軟體中的新功能，可以HTML5格式轉譯XFA表單範本。 此功能可讓您在不支援XFA型PDF的行動裝置和案頭瀏覽器上轉譯表單。 HTML5表單不僅支援XFA表單範本的現有功能，也為行動裝置新增了新功能，例如手寫簽名。
 
-HTML5表格會根據標準HTML5結構產生檔案。 您可以在所有支援HTML5的現代瀏覽器中檢視HTML5表格。 它不需要為瀏覽器安裝任何額外的瀏覽器外掛程式。 有關支援的瀏覽器的詳細資訊，請參閱[支援的客戶端平台](https://adobe.com/go/learn_aemforms_supportedplatforms_63)。
+HTML5表單會根據標準HTML5建構來產生檔案。 您可以在所有支援HTML5的現代瀏覽器中檢視HTML5表單。 不需要為瀏覽器安裝任何其他瀏覽器外掛程式。 有關受支援瀏覽器的詳細資訊，請參閱[受支援的客戶端平台](https://adobe.com/go/learn_aemforms_supportedplatforms_63)。
 
 ![](do-not-localize/mobile_form_on_an_ipad_date_14.png)
 
-## HTML5表單的主要功能{#key-capabilities-of-html-forms-br}
+## HTML5表單{#key-capabilities-of-html-forms-br}的關鍵功能
 
-* 在所有相容的瀏覽器上都支援轉譯HTML5中的現有XFA表格。
-* 運用標準的XFA表單設計功能，針對行動裝置建立表單。
-* 使用HTML5格式的動態XFA功能。
-* 使用高精確度的SVG文字版面(SVG 1.1)來比對PDF文字版面。
-* 提供對JavaScript和FormCalc的支援。
-* 根據資料導向事件或使用者輸入，將片段動態組合成互動式表單。
-* 支援自訂CSS，以符合您的企業標準的表單外觀。
+* 在所有相容的瀏覽器上，都支援以HTML5呈現現有的XFA表單。
+* 運用標準XFA表單設計功能，將表單鎖定在行動裝置上。
+* 以HTML5格式使用動態XFA功能。
+* 使用高度精確的SVG文本佈局(SVG 1.1)來匹配PDF文本佈局。
+* 提供JavaScript和FormCalc的支援。
+* 根據資料導向事件或使用者輸入，以動態方式將片段組合為互動式表單。
+* 支援自訂CSS，以根據您的企業標準比對表單的外觀。
 * 啟用自訂Widget，以提供豐富的資料擷取體驗。
 * 支援與網頁應用程式整合。
 
-### 多管道發佈{#multichannel-publishing}
+### 多頻道發佈{#multichannel-publishing}
 
-表單開發人員可使用XFA範本，以PDF和HTML5格式轉換表單。 在您擁有大量XFA表單的情況下，這項功能會有所助益，因為這些表單需要進行最少的變更，才能適應HTML5表單的設計實務。 您可將現有的XFA表單轉譯為HTML5，以針對尚未支援XFA PDF的各種裝置。
+表單開發人員可使用XFA範本，以PDF和HTML5格式轉譯表單。 若您有大量XFA表單，且為了適應HTML5表單設計實務，需進行最少的變更，此功能就十分實用。 您可以將現有的XFA表單轉譯為HTML5，以鎖定目前不支援XFA型PDF的各種裝置。
 
 ## 管理HTML5表單{#manage-html-forms}
 
-AEM也提供使用AEM FormsUI列出和管理所有表單範本的統一檢視。 您可以啟用、停用、發佈和預覽表單。 如需詳細資訊，請參閱[管理表單的簡介](../../forms/using/introduction-managing-forms.md)。
+AEM也提供使用AEM Forms UI統一清單和管理所有表單範本的檢視。 您可以啟用、停用、發佈和預覽表單。 如需詳細資訊，請參閱[管理表單簡介](../../forms/using/introduction-managing-forms.md)。
 
-### Forms定制{#forms-customization}
+### Forms自訂{#forms-customization}
 
-HTML5表格會使用標準HTML5結構轉換表單範本。 這可讓您輕鬆使用網頁技術（主要是CSS和JavaScript），自訂和擴充HTML5格式的表單。 您可以輕鬆自訂現有Widget的外觀、建立您自己的自訂Widget，或在表單中使用自訂樣式。 如需建立自訂Widget和自訂現有Widget的詳細資訊，請參閱[使用HTML5表單插入自訂Widget](../../forms/using/custom-widgets.md)。
+HTML5表單會使用標準HTML5建構來轉譯表單範本。 這可讓您透過網頁技術（主要是CSS和JavaScript），輕鬆自訂和擴充HTML5格式的表單。 您可以輕鬆自訂現有小工具的外觀、建立您自己的自訂小工具，或在表單中使用自訂樣式。 有關建立自定義小部件和自定義現有小部件的詳細資訊，請參閱[使用HTML5表單插入自定義小部件](../../forms/using/custom-widgets.md)。
