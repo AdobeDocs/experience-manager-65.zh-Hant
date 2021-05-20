@@ -1,8 +1,8 @@
 ---
-title: 成員和組管理控制台
-seo-title: 成員和組管理控制台
-description: 如何訪問成員和組管理控制台
-seo-description: 如何訪問成員和組管理控制台
+title: 成員和群組管理主控台
+seo-title: 成員和群組管理主控台
+description: 如何存取成員和群組管理主控台
+seo-description: 如何存取成員和群組管理主控台
 uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,41 +10,40 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '963'
 ht-degree: 4%
 
 ---
-
 
 # 成員和組管理控制台{#members-groups-management-consoles}
 
 ## 概覽 {#overview}
 
-AEM Communities功能通常要求網站訪客在參與發佈環境的社群之前先註冊並登入。 其用戶註冊只需要存在於發佈環境中，通常稱為&#x200B;*members*，以便將其與在作者環境中註冊的&#x200B;*用戶*&#x200B;區分開來。
+AEM Communities功能通常會要求網站訪客在參與發佈環境的社群之前，必須先註冊及登入。 其使用者註冊僅需存在於發佈環境中，通常稱為&#x200B;*members*，以便與在製作環境中註冊的&#x200B;*users*&#x200B;區分。
 
-### 發佈{#members-users-on-publish}時的成員（使用者）
+### 發佈{#members-users-on-publish}時的成員（用戶）
 
-使用「社區成員」和「組」控制台，可以從&#x200B;*author*&#x200B;環境建立和管理在&#x200B;*publish*&#x200B;環境中註冊的成員和成員組。 只有在[tunnel服務](deploy-communities.md#tunnel-service-on-author)啟用時，才可以這樣做。
+使用「社區成員和組」控制台，可以從&#x200B;*author*&#x200B;環境建立和管理在&#x200B;*publish*&#x200B;環境中註冊的成員和成員組。 只有啟用[tunnel服務](deploy-communities.md#tunnel-service-on-author)時，才能執行此操作。
 
-### 作者{#users-on-author}的使用者
+### 作者{#users-on-author}上的使用者
 
-要管理在&#x200B;*author*&#x200B;環境中註冊的用戶和組，必須使用平台的安全控制台：
+若要管理在&#x200B;*author*&#x200B;環境中註冊的使用者和群組，必須使用平台的安全性主控台：
 
-* 在全局導航中，選擇&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用戶]**。
-* 在全局導航中，選擇&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 組]**。
+* 從全局導航中，選擇&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用戶]**。
+* 從全局導航中，選擇&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 組]**。
 
 >[!NOTE]
 >
->在部署並啟用範例內容後，許多範例使用者都存在於作者和發佈環境中。 當使用[nosamplecontent runmode](../../help/sites-administering/production-ready.md)執行時，這些使用者將不存在。
+>在部署並啟用範例內容後，許多範例使用者同時存在於製作和發佈環境中。 使用[nosamplecontent執行模式](../../help/sites-administering/production-ready.md)執行時，這些使用者將不存在。
 
 ## 成員控制台{#members-console}
 
-在作者環境中，要訪問「成員」控制台以管理在發佈環境中註冊的成員：
+在製作環境中，若要進入「成員」主控台，以管理在發佈環境中註冊的成員：
 
-* 在全局導航中，選擇&#x200B;**[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Members]**
+* 從全局導航中，選擇&#x200B;**[!UICONTROL 導航]** > **[!UICONTROL 社區]** > **[!UICONTROL 成員]**
 
 >[!CAUTION]
 >
@@ -54,22 +53,22 @@ AEM Communities功能通常要求網站訪客在參與發佈環境的社群之�
 
 ### 搜尋 {#search-features}
 
-選取`Members`標題左側的側面板圖示，以切換開啟搜尋側面板。
+選取`Members`標題左側的側面板圖示，以開啟搜尋側面板。
 
 ![](assets/leftpanel-icon.png)
 
 
 ![member-console2](assets/member-console2.png)
 
-選擇`Members`標題左側的搜尋圖示，以切換已關閉的搜尋側面板。
+選取`Members`標題左側的搜尋圖示，以切換關閉搜尋端面板。
 
-### 成員統計資訊{#member-statistics}
+### 成員統計資料{#member-statistics}
 
-當用戶是一個或多個社區站點的成員且啟用了Adobe Analytics[的](sites-console.md#analytics)時，更新顯示`Views`、`Posts`、`Follows`和`Likes`的列。
+當使用者為一或多個已啟用Adobe Analytics [的社群網站的成員時，會更新顯示`Views`、`Posts`、`Follows`和`Likes`的欄。](sites-console.md#analytics)
 
 ### 匯出 CSV {#export-csv}
 
-選擇`Export CSV`連結會將所有成員下載為逗號分隔值的清單，以便匯入試算表。
+選擇`Export CSV`連結會將所有成員下載為逗號分隔值清單，以便導入電子錶格。
 
 欄標題為
 
@@ -77,25 +76,25 @@ AEM Communities功能通常要求網站訪客在參與發佈環境的社群之�
 
 ## 建立新成員 {#create-new-member}
 
-選擇`Create Member`以在發佈環境中建立用戶。
+選取`Create Member`以在發佈環境中建立使用者。
 
 ![create-member1](assets/create-member1.png)
 
-### 常規——成員詳細資訊{#general-member-details}
+### 一般 — 成員詳細資訊{#general-member-details}
 
-大部分欄位都是成員日後可填寫其描述檔的選填欄位。
+大多數欄位是成員以後可以在其配置檔案中填寫的可選欄位。
 
 * **[!UICONTROL ID]**
 
-（*必要*）可授權的ID是成員的登入ID。
-依預設，ID會設為所需電子郵件地址的值。
-*建立後，ID便無法修改*。
+（*必要*）可授權ID是成員的登入ID。
+依預設，ID會設為必要電子郵件地址的值。
+*ID一經建立即無法修改*。
 
 * **[!UICONTROL 電子郵件地址]**
 
-（*必填*）成員的電子郵件地址。
-成員在更新其個人檔案時可能會變更其電子郵件地址。I
-如果ID預設為電子郵件地址，當變更電子郵件地址時，ID將*not*&#x200B;變更。
+（*必要*）成員的電子郵件地址。
+成員在更新其配置檔案時可更改其電子郵件地址。
+如果ID預設為電子郵件地址，當電子郵件地址變更時，ID將*not*&#x200B;變更。
 
 * **[!UICONTROL 密碼]**
 
@@ -103,11 +102,11 @@ AEM Communities功能通常要求網站訪客在參與發佈環境的社群之�
 
 * **[!UICONTROL 重新鍵入密碼]**
 
-   (*Required*)重新輸入密碼進行驗證。
+   （*必要*）重新輸入密碼以進行驗證。
 
 * **[!UICONTROL 新增成員至網站]**
 
-   （*可選*）從現有社區站點中選擇成員，以便將成員添加到社區站點的成員組。
+   （*可選*）從現有社區站點中選擇以將成員添加到社區站點的成員組。
 
 * **[!UICONTROL 將成員新增至群組]**
 
@@ -115,102 +114,102 @@ AEM Communities功能通常要求網站訪客在參與發佈環境的社群之�
 
 * 選擇&#x200B;**[!UICONTROL 保存]**
 
-### GENERAL —— 帳戶設定{#general-account-settings}
+### 一般 — 帳戶設定{#general-account-settings}
 
-在「Account settings（帳戶設定）」下，社區管理員可以：
+在「帳戶設定」下，社區管理員可以：
 
 * **[!UICONTROL 狀態]**
    * 已禁止
-會員無法登入，因此無法檢視頁面或參與需要登入的活動。 他們仍可以匿名造訪開放社群網站。
+成員無法登入，無法檢視頁面或參與需要登入的活動。 他們仍可以匿名訪問開放的社區站點。
 
    * 未禁止
-會員可以完全存取社群網站。
+成員可以完全訪問社區站點。
 
    預設值為`Not Banned`。
 
 * **[!UICONTROL 貢獻限制]**
 
-   如果勾選，會員張貼內容的能力將受到限制。
+   如果勾選此選項，成員張貼內容的能力就會受限。
 預設值取決於貢獻限制的設定。
 請參閱[成員貢獻限制](limits.md)。
 
 * **[!UICONTROL 變更密碼]**
 
-   修改現有成員時存在的連結。 提供社區管理員重設成員密碼的能力。
+   修改現有成員時出現的連結。 提供社區管理員重置成員密碼的功能。
 
-### 一般——照片{#general-photo}
+### 一般 — 照片{#general-photo}
 
-若要為成員提供頭像，請先選擇&#x200B;**[!UICONTROL 「上傳影像]**」，然後選擇。jpg、.png、.tif或。gif類型的影像。 影像的偏好大小為240 x 240像素，72 dpi。
+要為成員提供頭像，請從選擇&#x200B;**[!UICONTROL 上載影像]**&#x200B;開始，並選擇類型為.jpg、.png、.tif或.gif的影像。 影像的優選大小為240 x 240像素，72 dpi。
 
-### 常規——將成員添加到站點{#general-add-member-to-sites}
+### 常規 — 向站點添加成員{#general-add-member-to-sites}
 
 該成員可以添加到一個或多個社區站點的成員組。 首先，在文字方塊中輸入文字。
 
-### 常規——將成員添加到組{#general-add-member-to-groups}
+### 常規 — 向組添加成員{#general-add-member-to-groups}
 
-成員可以添加到一個或多個成員組。 首先，在文字方塊中輸入文字。
+該成員可以添加到一個或多個成員組。 首先，在文字方塊中輸入文字。
 
-### 標章標籤{#badges-tab}
+### 徽章頁簽{#badges-tab}
 
-`BADGES`面板提供手動指派徽章和廢止徽章的功能。 標章可用於指派的角色以及通常應得的標章。
+`BADGES`面板提供手動指派徽章及撤銷徽章的功能。 徽章可用於指派的角色，以及通常獲得的徽章。
 
-另請參閱[計分和標章](implementing-scoring.md)。
+另請參閱[計分和徽章](implementing-scoring.md)。
 
 ![create-member2](assets/create-member2.png)
 
-* **[!UICONTROL 新增標章]**
-   * 開始鍵入以從[可用標章](badges.md)中選擇。 選取徽章後，請選擇每個網站或所有網站，此徽章應與成員的頭像一起顯示在這些網站上。
-   * 可以選擇多個標章和網站。
-* **[!UICONTROL 移除標章]**
+* **[!UICONTROL 新增徽章]**
+   * 開始鍵入以從[可用徽章](badges.md)中選擇。 選擇徽章後，選擇應在其上與成員的頭像一起顯示徽章的每個站點或所有站點。
+   * 可選擇多個徽章和網站。
+* **[!UICONTROL 移除徽章]**
    * 選取徽章旁的垃圾桶圖示以移除它。
 
 ## 組控制台{#groups-console}
 
-「群組」控制台可從作者環境使用，允許建立和管理在發佈環境中註冊的成員組。 它對於：
+「群組」主控台可從製作環境取得，可建立及管理在發佈環境中註冊的成員群組。 它對以下方面特別有用：
 * [特權成員組](users.md#privilegedmembersgroups)
-* 基於組分配[啟用資源](resources.md)
+* 基於組的[啟用資源分配](resources.md)
 
-要訪問組控制台：
-* 在全局導航中，選擇&#x200B;**[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]**。
+若要存取「群組」主控台：
+* 從全局導航中，選擇&#x200B;**[!UICONTROL 導航]** > **[!UICONTROL 社區]** > **[!UICONTROL 組]**。
 
 >[!CAUTION]
 >
->如果未啟用[tunnel service](deploy-communities.md#tunnel-service-on-author)，則無法使用組控制台。
+>如果未啟用[tunnel服務](deploy-communities.md#tunnel-service-on-author)，則無法使用組控制台。
 
 ### 建立新群組 {#create-new-group}
 
-選擇`Add Group`以在發佈環境中建立組。
+選取`Add Group`以在發佈環境中建立群組。
 
 ![group-console1](assets/group-console1.png)
 
-建立新發佈端成員組的必填欄位包括：
+建立新發佈端成員組的必填欄位為：
 
 * **[!UICONTROL ID]**
 
    （*必要*）群組唯一ID。
 
-   *建立後，ID就無法修改。*
+   *ID一經建立即無法修改。*
 
 * **[!UICONTROL 名稱]**
 
-   （*可選*）群組的顯示名稱。
+   （*選用*）群組的顯示名稱。
 
    預設值為ID。
 
 * **[!UICONTROL 說明]**
 
-   （*可選*）群組用途和權限的說明。
+   （*選用*）群組用途和權限的說明。
 
 * **[!UICONTROL 將成員新增至群組]**
 
-   （*可選*）選擇要作為組初始成員包括的發佈端成員。
+   （*選用*）選取要納入為群組初始成員的發佈端成員。
 
 * 選擇&#x200B;**[!UICONTROL 保存]**
 
 ## 授權管理員{#authorized-administrators}
 
-在Communities成員控制台中使用成員時，必須以具有適當權限的用戶身份登錄，[tunnel服務](deploy-communities.md#tunnel-service-on-author)使用的複製代理才能正確配置。
+在Communities成員控制台中使用成員時，必須以具有適當權限的用戶身份登錄，並且要正確配置[隧道服務](deploy-communities.md#tunnel-service-on-author)所使用的複製代理。
 
-如果未以`admin`的身分登入，則登入的使用者必須是`administrators`使用者群組的成員。
+如果未以`admin`身份登錄，則登錄的用戶必須是`administrators`用戶組的成員。
 
-另請參見[Replication Agents on Author](deploy-communities.md#replication-agents-on-author)。
+另請參閱[製作上的復寫代理](deploy-communities.md#replication-agents-on-author)。
