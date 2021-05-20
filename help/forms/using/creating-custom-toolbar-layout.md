@@ -1,89 +1,88 @@
 ---
 title: 建立自訂工具列版面
 seo-title: 建立自訂工具列版面
-description: 您可以指定表單的工具列版面。 工具欄佈局定義了窗體中工具欄的命令和佈局。
-seo-description: 您可以指定表單的工具列版面。 工具欄佈局定義了窗體中工具欄的命令和佈局。
+description: 您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
+seo-description: 您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
 uuid: 389a715a-4c91-4a63-895d-bb2d0f1054eb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 0%
 
 ---
 
+# 建立自定義工具欄佈局{#creating-custom-toolbar-layout}
 
-# 建立自訂工具列版面{#creating-custom-toolbar-layout}
+## 工具列配置 {#layout}
 
-## 工具列版面{#layout}
+建立最適化表單時，您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
 
-當您建立最適化表單時，可以指定表單的工具列版面。 工具欄佈局定義了窗體中工具欄的命令和佈局。
-
-工具列版面配置使用時，主要依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。 為協助處理此問題，AEM提供「用戶端程式庫檔案夾」，可讓您將用戶端程式碼儲存在儲存庫中、將它組織成類別，並定義將每類程式碼提供給用戶端的時間和方式。 然後用戶端程式庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請參閱[「用戶端程式庫在AEM中的運作方式」。](/help/sites-developing/clientlibs.md)
+工具列配置使用時，主要依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。 為協助處理此問題，AEM提供用戶端程式庫資料夾，可讓您將用戶端程式碼儲存在存放庫中、將其組織為類別，以及定義將各類別的程式碼提供給用戶端的時間和方式。 然後，用戶端資料庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請參閱[用戶端程式庫在AEM中的運作方式。](/help/sites-developing/clientlibs.md)
 
 ![工具列的範例版面](assets/default_toolbar_layout.png)
 
 工具列的範例版面
 
-最適化表單提供一組現成可用的版面：
+適用性表單提供一組現成的配置：
 
-![現成可用的工具列版面  ](assets/toolbar1.png)
+![可用的工具列配置  ](assets/toolbar1.png)
 
-現成可用的工具列版面
+可用的工具列配置
 
 此外，您還可以建立自訂工具列版面。
 
-下列程式詳細說明建立自訂工具列的步驟，其中在工具列中顯示三個動作，在工具列的下拉式清單中顯示其他動作。
+以下過程詳細說明了建立自定義工具欄的步驟，該工具欄在工具欄中顯示三個操作，在工具欄的下拉清單中顯示其他操作。
 
-附加的內容套件包含下述的完整程式碼。 安裝內容套件後，請開啟`/content/forms/af/CustomLayoutDemo.html`以檢視自訂工具列版面配置示範。
+附加的內容套件包含下列說明的整個程式碼。 安裝內容套件後，請開啟`/content/forms/af/CustomLayoutDemo.html`以檢視自訂工具列版面示範。
 
 CustomToolbarLayoutDemo.zip
 
-[取得](assets/customtoolbarlayoutdemo.zip)
-FileDemo自訂工具列版面
+[獲取檔](assets/customtoolbarlayoutdemo.zip)
+案演示自定義工具欄佈局
 
-## 要建立自定義工具欄佈局{#layout-1}
+## 建立自定義工具欄佈局{#layout-1}
 
-1. 建立檔案夾以維護自訂工具列版面。 例如：
+1. 建立資料夾以維護自訂工具列配置。 例如：
 
    `/apps/customlayout/toolbar`。
 
-   若要建立自訂版面，您可以使用（並自訂）下列檔案夾中的其中一個現成可用的工具列版面：
+   若要建立自訂版面，您可以使用（和自訂）下列資料夾中可用的其中一個現成工具列版面：
 
    `/libs/fd/af/layouts/toolbar`
 
-   例如，將`/libs/fd/af/layouts/toolbar`資料夾中的`mobileFixedToolbarLayout`節點複製到`/apps/customlayout/toolbar`資料夾。
+   例如，將`mobileFixedToolbarLayout`節點從`/libs/fd/af/layouts/toolbar`資料夾複製到`/apps/customlayout/toolbar`資料夾。
 
-   此外，將toolbarCommon.jsp複製到`/apps/customlayout/toolbar`資料夾。
+   同時，將toolbarCommon.jsp複製到`/apps/customlayout/toolbar`資料夾。
 
    >[!NOTE]
    >
-   >您為維護自訂版面而建立的檔案夾，很多都是使用`apps`檔案夾建立。
+   >您為維護自定義佈局而建立的資料夾很多都是使用`apps`資料夾建立的。
 
 1. 將複製的節點`mobileFixedToolbarLayout`更名為`customToolbarLayout.`
 
-   此外，請提供節點的相關說明。 例如，將節點的jcr:description更改為&#x200B;**工具欄的自定義佈局**。
+   此外，請提供節點的相關說明。 例如，將節點的jcr:description更改為工具欄&#x200B;**自定義佈局**。
 
-   節點的`guideComponentType`屬性決定佈局類型。 在這種情況下，版面類型是工具列，因此它會顯示在工具列版面選擇下拉式清單中。
+   節點的`guideComponentType`屬性決定佈局類型。 在這種情況下，版面類型是工具欄，因此它會顯示在工具欄版面選擇下拉清單中。
 
    ![具有相關說明的節點](assets/toolbar3.png)
 
    具有相關說明的節點
 
-   您的新自訂工具列配置會顯示在&#x200B;**最適化表單工具列**&#x200B;對話方塊設定中。
+   新的自定義工具欄佈局顯示在&#x200B;**適用性表單工具欄**&#x200B;對話框配置中。
 
-   ![可用工具列版面清單](assets/toolbar4.png)
+   ![可用工具欄佈局清單](assets/toolbar4.png)
 
-   可用工具列版面清單
+   可用工具欄佈局清單
 
    >[!NOTE]
    >
-   >「版面」下拉式清單中會顯示在上一步驟中更新的說明。
+   >在上一步驟中更新的說明會顯示在「配置」下拉式清單中。
 
 1. 選取此自訂工具列版面，然後按一下「確定」。
 
@@ -109,7 +108,7 @@ FileDemo自訂工具列版面
 
    >[!NOTE]
    >
-   >新增版面的指南工具列類別。 工具列的出廠設定樣式是相對於指導工具欄類定義的。
+   >為版面添加指導工具欄類。 工具列的現成樣式是針對引導工具列類別而定義的。
 
    範例 `toolBarCommon.jsp`:
 
@@ -168,7 +167,7 @@ FileDemo自訂工具列版面
    </c:forEach>
    ```
 
-   clientlib節點內部的CSS:
+   clientlib節點內部存在的CSS:
 
    ```css
    .mobilecustomToolbar .dropdown {
@@ -230,9 +229,8 @@ FileDemo自訂工具列版面
 
 >[!NOTE]
 >
->「版面」下拉式清單中會顯示在上一步驟中更新的說明。
+>在上一步驟中更新的說明會顯示在「配置」下拉式清單中。
 
-![自訂版面工具列的案頭檢視](assets/toolbar_1.png)
+![自定義佈局工具欄的案頭視圖](assets/toolbar_1.png)
 
-自訂版面工具列的案頭檢視
-
+自定義佈局工具欄的案頭視圖
