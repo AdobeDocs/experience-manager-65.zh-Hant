@@ -9,39 +9,38 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 12c0eae5-fd76-4480-a012-25d3312f3570
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 2%
 
 ---
 
-
 # 社區元件指南{#community-components-guide}
 
-社群元件指南是[社交元件架構(SCF)](scf.md)的互動式開發工具。 它提供可用的AEM Communities元件清單，或由多個元件建立的更複雜功能。
+社群元件指南是[社交元件架構(SCF)](scf.md)的互動式開發工具。 提供可用AEM Communities元件的清單，或由多個元件建立的更複雜功能。
 
-本指南除了每個元件的基本資訊外，還允許對SCF元件／功能的工作方式以及如何配置或定制它們進行實驗。
+除了每個元件的基本資訊外，該指南還允許試驗SCF元件/功能如何工作以及如何配置或定制它們。
 
-有關與每個元件相關的開發基本知識的資訊，請參見[功能和元件基本知識](essentials.md)。
+有關與每個元件相關的開發要點的資訊，請參閱[功能和元件要點](essentials.md)。
 
 ## 快速入門 {#getting-started}
 
-本指南適用於作者(localhost:4502)和發佈(localhost:4503)例項的開發安裝。
+本指南旨在用於製作(localhost:4502)和發佈(localhost:4503)執行個體的開發安裝。
 
 瀏覽至
 
 * [https://&lt;server>:&lt;port>/content/community-components/en.html](http://localhost:4502/content/community-components/en.html)
 
-與Communities元件的互動會依下列各項而異：
+與Communities元件的互動會依下列各項而有所不同：
 
-* 伺服器（作者或發佈）。
-* 網站訪客是否登入。
-* 如果登入，則指派給成員的權限。
-* 是否使用預設SRP [JSRP](jsrp.md)。
+* 伺服器（製作或發佈）。
+* 網站訪客是否已登入。
+* 如果已登錄，則分配給成員的權限。
+* 無論預設SRP([JSRP](jsrp.md))是否正在使用。
 
-在作者上，要進入編輯模式，請將`editor.html`或`cf#`插入為伺服器名後的第一個路徑段：
+在作者上，若要進入編輯模式，請插入`editor.html`或`cf#`作為伺服器名稱后的第一個路徑段：
 
 * 標準 UI:
 
@@ -53,21 +52,21 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在「編輯」模式下的作者中，頁面上的連結不作用中。
+>在「編輯」模式中，頁面上的連結處於非作用中狀態。
 >
->若要導覽至元件頁面，請先選取「預覽模式」以啟用連結。
+>若要導覽至元件頁面，請先選取「預覽」模式以啟用連結。
 >
 >在瀏覽器中顯示元件頁面時，返回「編輯」模式以開啟元件的編輯對話框。
 >
->有關一般編寫資訊，請檢視[編寫頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
+>如需一般製作資訊，請檢視[製作頁面快速指南](../../help/sites-authoring/qg-page-authoring.md)。
 >
->如果不熟悉AEM，請檢視[basic handling](../../help/sites-authoring/basic-handling.md)的說明檔案。
+>若不熟悉AEM，請檢視[basic handling](../../help/sites-authoring/basic-handling.md)上的檔案。
 
 ### 首頁 {#home-page}
 
-本指南提供可在頁面左側預覽和建立原型的SCF元件清單。
+本指南提供了SCF元件清單，這些元件可用於沿著頁面左側進行預覽和建立原型。
 
-在「編輯」模式中，在作者實例上檢視的「元件指南」:
+以「編輯」模式在製作執行個體上檢視的元件指南：
 
 ![community-component1](assets/community-component1.png)
 
@@ -77,27 +76,27 @@ ht-degree: 2%
 
 ![community-component-pages](assets/community-component2.png)
 
-此時將顯示指南的主體：
+指南的主體顯示：
 
 1. 標題：所選元件的名稱
 1. [用戶端程式庫](#client-side-libraries):一或多個必要類別的清單
-1. [可包含](scf.md#add-or-include-a-communities-component):如果元件可以動態包含，則可在作者編輯模式中切換狀態：
+1. [包含](scf.md#add-or-include-a-communities-component):如果元件可以動態包含，則可在製作編輯模式中切換狀態：
 
-   * 如果新增，顯示的文字為：&quot;此元件通過其par節點包含。&quot;
-   * 如果包含，則顯示的文字為：&quot;此元件是動態包含的。&quot;
-   * 如果不包含，則不顯示任何文字
+   * 如果新增，則顯示的文字為：&quot;此元件通過其par節點包含。&quot;
+   * 若包含，則顯示的文字為：&quot;此元件是動態包含的。&quot;
+   * 如果不包含，則不會顯示任何文本
 
-1. 元件或功能範例：元件或特徵的活動實例。 如果元件，則可隨著對標籤區段中提供的範本、CSS和資料所做的變更而變更。
+1. 元件或功能範例：元件或特徵的活動實例。 如果元件，則可能會隨著對標籤區段中提供的範本、CSS和資料所做的變更而變更。
 
 >[!NOTE]
 >
->從左側進行選取後，當瀏覽器視窗太窄時，元件會出現在下方，而非旁邊的元件清單。
+>從左側選取元件後，當瀏覽器視窗太窄時，元件會顯示在下方（而非旁邊），而非元件清單。
 
 ### 作者互動{#author-interactions}
 
-在作者實例上使用指南時，可以通過開啟元件對話框來體驗配置元件。 開發人員的資訊會在說明檔案的[Component and Feature Essentials](essentials.md)一節中提供，而對話方塊設定則會在作者的[ Communities Components](author-communities.md)一節中說明。
+在製作例項上使用指南時，您可以開啟元件對話方塊來體驗設定元件。 開發人員的資訊會顯示在檔案的[元件和功能要點](essentials.md)區段中，而對話方塊設定則會在作者的[Communities元件](author-communities.md)區段中說明。
 
-在「社群元件」指南中，某些元件對話方塊設定會以[Includedable](scf.md#add-or-include-a-communities-component)切換狀態覆蓋。 要在使用現有資源或動態包含的資源之間切換，請在編輯模式下選擇元件和可包含文本，然後按兩下以開啟編輯對話框：
+對於「社群元件」指南，某些元件對話框設定會以[Includable](scf.md#add-or-include-a-communities-component)切換狀態覆蓋。 若要在使用現有資源或動態包含的資源之間切換，請在編輯模式中選取元件和可包含文字，然後按兩下以開啟編輯對話方塊：
 
 ![community-component3](assets/community-component3.png)
 
@@ -107,53 +106,53 @@ ht-degree: 2%
 
 * **包含 sling:include 的子元件**
 
-   如果取消選中，「元件指南」將使用儲存庫中的現有資源（作為par節點子節點的jcr節點）。
+   如果取消勾選此選項，「元件指南」將使用存放庫中的現有資源（jcr節點，是par節點的子節點）。
 
-   * 顯示的文字為：&quot;此元件通過其par節點包含。&quot;
+   * 顯示的文字如下：&quot;此元件通過其par節點包含。&quot;
 
-   如果勾選，「元件指南」會使用sling來動態包含子節點resourceType（非現有資源）的元件。
+   若勾選此選項，「元件指南」將使用sling來動態包含子節點resourceType（非現有資源）的元件。
 
-   * 顯示的文字為：&quot;此元件是動態包含的。&quot;
+   * 顯示的文字如下：&quot;此元件是動態包含的。&quot;
 
    預設為未勾選。
 
 ### 發佈互動{#publish-interactions}
 
-在發佈例項上使用指南時，您可以以網站訪客（未登入）和登入時擁有各種權限的成員身分，來體驗元件和功能。
+在發佈執行個體上使用指南時，您能以網站訪客（未登入）和登入時具有各種權限的成員身分，體驗元件和功能。
 
 >[!NOTE]
 >
->請注意，如果SRP保留預設為[JSRP](jsrp.md)，則在發佈例項上輸入的UGC只會在發佈時顯示，而且&#x200B;*not*&#x200B;會從作者例項的[協調](moderate-ugc.md)主控台顯示。
+>請注意，如果SRP預設為[JSRP](jsrp.md)，則在發佈例項上輸入的UGC只會在發佈時顯示，且&#x200B;*不會*&#x200B;會從製作例項上的[協調](moderate-ugc.md)主控台顯示。
 
 ## 用戶端資源庫 {#client-side-libraries}
 
-每個元件所列的用戶端程式庫(clientlibs)是當元件放在頁面上時要參考的&#x200B;*required*。 clientlibs提供管理和最佳化下載Javascript和CSS的方式，以在瀏覽器中呈現元件。
+每個元件所列的用戶端程式庫(clientlibs)是當元件放在頁面上時要參考的&#x200B;*必要*。 clientlibs提供管理和最佳化下載Javascript和CSS的方法，這些CSS用於在瀏覽器中呈現元件。
 
-有關詳細資訊，請訪問[Clientlibs for Communities Components](clientlibs.md)。
+如需詳細資訊，請造訪[Communities元件的Clientlibs](clientlibs.md)。
 
 ## 模擬 {#impersonation}
 
-在作者實例（通常以管理員或開發人員的身份登錄）上，為了體驗以其他用戶身份登錄的元件，請使用&#x200B;**[!UICONTROL Impersonate]**&#x200B;按鈕左側的文本框來輸入用戶名或從下拉清單中進行選擇，然後按一下按鈕。 按一下「恢復」(Revert)以簽出並終止模擬。
+在作者例項中，其中一個經常以管理員或開發人員的身分登入，為了體驗以其他使用者身分登入的元件，請使用&#x200B;**[!UICONTROL Impersonate]**&#x200B;按鈕左側的文字方塊，輸入使用者名稱或從下拉式清單中選取，然後按一下按鈕。 按一下還原以簽出並結束模擬。
 
-發佈例項不需要模擬。 只需使用「登入／登出」連結來模擬各種使用者，例如[demo使用者](tutorials.md#demo-users)。
+發佈例項不需要模擬。 只需使用「登入/登出」連結來模擬各種使用者，例如[示範使用者](tutorials.md#demo-users)。
 
-## 自訂{#customization}
+## 自訂 {#customization}
 
-啟用後，每個SCF元件都可以通過臨時修改元件的模板、CSS和資料來建立可能的定製原型。
+啟用後，每個SCF元件都可通過臨時修改元件的模板、CSS和資料來建立可能自定義的原型。
 
 ### 啟用自定義{#enabling-customization}
 
 >[!NOTE]
 >
->**此工具為唯讀**。對範本、CSS或資料所做的編輯不會儲存到儲存庫。
+>**此工具為唯讀**。對範本、CSS或資料所做的任何編輯都不會儲存至存放庫。
 
-若要快速嘗試自訂，必須將`scg:showIde`屬性新增至元件頁面的內容JCR節點，並設為true。
+若要快速實驗自訂項目，必須將`scg:showIde`屬性新增至元件頁面的內容JCR節點，並設為true。
 
-以注釋元件為例，在作者或發佈實例上，以管理員權限登錄：
+以註解元件為例，在製作或發佈執行個體上以管理員權限登入：
 
 1. 瀏覽至[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 
-   例如，[http://localhost:4503/crx/de](http://localhost:4503/crx/de)
+   例如， [http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
 1. 選擇元件的`jcr:content`節點
 
@@ -165,37 +164,37 @@ ht-degree: 2%
    * **類型** `String`
    * **值** `true`
 
-1. 選擇&#x200B;**[!UICONTROL 全部保存]**
+1. 選擇&#x200B;**[!UICONTROL 保存全部]**
 1. 重新載入指南中的「注釋」頁面
 
    [http://localhost:4503/content/community-components/en/comments.html](http://localhost:4503/content/community-components/en/comments.html)
 
-1. 請注意，範本、CSS和資料現在有3個標籤。
+1. 請注意，範本、CSS和資料現在有3個索引標籤。
 
-![community-component5](assets/community-component5.png)
+![社群 — 元件5](assets/community-component5.png)
 
-![community-component6](assets/community-component6.png)
+![社群元件6](assets/community-component6.png)
 
-### 範本標籤{#templates-tab}
+### 模板頁簽{#templates-tab}
 
-選擇模板頁籤可查看與元件關聯的模板。
+選取範本索引標籤，查看與元件相關聯的範本。
 
-模板編輯器允許編譯本地編輯並將其應用於頁面頂部的示例元件實例，而不影響儲存庫中的元件。
+範本編輯器可讓本機編輯內容編譯並套用至頁面頂端的範例元件例項，而不會影響存放庫中的元件。
 
-在本機編輯時執行編譯，會在欄距中放置點並將文字標示為紅色，以反白標示任何錯誤。
+在本機編輯上執行編譯，會在欄位中放置點並標示為紅色，借此反白顯示任何錯誤。
 
 ### CSS標籤{#css-tab}
 
-選取「CSS」標籤，以查看與元件相關聯的CSS。
+選取CSS索引標籤，以查看與元件相關聯的CSS。
 
-如果元件是多個元件的組合，則某些CSS可能會列在其他元件之一下。
+如果元件是多個元件的複合，則某些CSS可能會列在其他元件之一下。
 
-CSS編輯器允許修改CSS並將其應用於頁面頂部的示例元件實例。
+CSS編輯器可讓CSS修改並套用至頁面頂端的範例元件例項。
 
-您可以按一下欄距中規則旁的規則，選取規則來反白標示使用該規則的DOM部分。
+您可以按一下欄位中規則旁的，選取規則，以反白標示使用該規則的DOM部分。
 
-### 資料標籤{#data-tab}
+### 資料頁簽{#data-tab}
 
-選取「資料」標籤，以顯示。social.json端點資料。 此資料是可編輯的，並套用至範例元件例項。
+選取「資料」標籤，以顯示.social.json端點資料。 此資料可編輯，並套用至範例元件例項。
 
-語法錯誤可能會標籤在欄距中，並在編輯器中反白顯示。
+語法錯誤可標示在欄位中，也可在編輯器中強調顯示。
