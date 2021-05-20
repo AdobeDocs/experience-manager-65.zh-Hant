@@ -1,118 +1,117 @@
 ---
-title: 在群集環境中備份和恢復的策略
-seo-title: 在群集環境中備份和恢復的策略
-description: 如果您的AEM表單實作將其他自訂資料儲存在不同的資料庫，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。
-seo-description: 如果您的AEM表單實作將其他自訂資料儲存在不同的資料庫，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。
+title: 在群集環境中進行備份和恢復的策略
+seo-title: 在群集環境中進行備份和恢復的策略
+description: 如果您的AEM表單實作會將其他自訂資料儲存在不同的資料庫中，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。
+seo-description: 如果您的AEM表單實作會將其他自訂資料儲存在不同的資料庫中，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。
 uuid: c29b989c-30ed-4a8e-bab8-9b7746291a33
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c332985b-4556-4056-961a-fce2356da88d
-translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+exl-id: 98c96349-f253-475f-b646-352269814a38
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 0%
 
 ---
 
-
-# {#strategy-for-backup-and-restore-in-a-clustered-environment}群集環境中的備份和恢復策略
+# 群集環境{#strategy-for-backup-and-restore-in-a-clustered-environment}中的備份和恢復策略
 
 >[!NOTE]
 >
->如果您的AEM表單實作將其他自訂資料儲存在不同的資料庫，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。 此外，應用程式必須經過設計，才能處理額外資料庫不同步的情況。 強烈建議在事務的上下文中執行任何資料庫操作，以幫助維持一致狀態。
+>如果您的AEM表單實作會將其他自訂資料儲存在不同的資料庫中，您必須實作策略來備份此資料，以確保其與AEM表單資料保持同步。 此外，必須設計應用程式，使其足夠強大，以處理其他資料庫不同步的情況。 強烈建議在事務的上下文中執行所執行的任何資料庫操作，以幫助保持一致的狀態。
 
-您必須備份AEM表單系統的下列部分，才能從任何錯誤中復原：
+您需要備份AEM表單系統的以下部分，才能從任何錯誤中恢復：
 
 * AEM表單使用的資料庫
-* 長期保存資料和其他持久性文檔的GDS
+* 具有長期資料和其他持久文檔的GDS
 * AEM資料庫(crx-repository)
 
 >[!NOTE]
 >
->您需要備份AEM表單設定所使用的任何其他資料，例如客戶字型、連線器資料等。
+>您需要備份AEM表單設定程式正在使用的任何其他資料，例如客戶字型、連接器資料等。
 
 ## 備份群集環境{#back-up-a-clustered-environment}
 
-本主題討論以下策略，以備份任何AEM表單叢集環境：
+本主題探討備份任何AEM表單叢集環境的下列策略：
 
-* 離線備份與停機
-* 無停機的離線備份（關閉的輔助節點備份）
-* 線上備份，無停機但響應延遲
-* 備份引導屬性檔案
+* 離線備份，並且停機
+* 無停機的離線備份（關閉的次節點備份）
+* 線上備份，無停機，但響應延遲
+* 備份Bootstrap屬性檔案
 
-### 停機時間{#offline-backup-with-downtime}的離線備份
+### 停機{#offline-backup-with-downtime}的離線備份
 
 1. 關閉整個群集和相關服務。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
-1. 在任何節點上，備份資料庫、GDS和連接器。 （請參見[要備份和恢復的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
-1. 執行下列步驟，離線備份AEM儲存庫：
+1. 在任何節點上，備份資料庫、GDS和連接器。 （請參閱[要備份和恢復的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
+1. 執行下列步驟離線備份AEM存放庫：
 
-   1. 對於每個群集節點，備份包含群集節點ID的檔案。
-   1. 備份任何輔助群集節點（包括子目錄）的所有檔案。
-   1. 分別備份每個群集節點的儲存庫／系統ID。
+   1. 對於每個群集節點，備份包含群集節點id的檔案。
+   1. 備份任何輔助群集節點的所有檔案，包括子目錄。
+   1. 分別備份每個群集節點的儲存庫/系統ID。
 
-   有關詳細步驟，請參見[備份和還原](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)。
+   有關詳細步驟，請參見[Backup and Restore](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)。
 
 1. 備份任何其他資料，例如客戶字型。
 1. 再次啟動群集。
 
-### 離線備份，無停機{#offline-backup-with-no-downtime}
+### 無停機的離線備份{#offline-backup-with-no-downtime}
 
 1. 進入滾動備份模式。 （請參閱[進入備份模式](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)）
 
    請注意，在恢復後，我們需要離開滾動備份模式。
 
-1. 關閉與AEM相關的叢集的任何次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
-1. 在任何節點上，備份資料庫、GDS和連接器。 （請參見[要備份和恢復的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
-1. 執行下列步驟，離線備份AEM儲存庫：
+1. 關閉與AEM相關的群集的任何輔助節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
+1. 在任何節點上，備份資料庫、GDS和連接器。 （請參閱[要備份和恢復的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
+1. 執行下列步驟離線備份AEM存放庫：
 
-   1. 對於每個群集節點，備份包含群集節點ID的檔案。
-   1. 備份任何輔助群集節點（包括子目錄）的所有檔案。
+   1. 對於每個群集節點，備份包含群集節點id的檔案。
+   1. 備份任何輔助群集節點的所有檔案，包括子目錄。
    1. 分別備份每個群集節點的repository/system.id。
 
-   有關詳細步驟，請參見[備份和還原](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)。
+   有關詳細步驟，請參見[Backup and Restore](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)。
 
 1. 備份任何其他資料，例如客戶字型。
 1. 再次啟動群集。
 
-### 線上備份，無停機但響應延遲{#online-backup-with-no-downtime-but-delay-in-response}
+### 無停機但響應延遲的線上備份{#online-backup-with-no-downtime-but-delay-in-response}
 
 1. 進入滾動備份模式。 （請參閱[進入備份模式](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)）
 
-   請注意，在恢復後，需要離開滾動備份模式。
+   請注意，恢復後，您需要離開滾動備份模式。
 
-1. 關閉與AEM相關的叢集的任何次要節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
-1. 在任何節點上，備份資料庫、GDS和連接器。 （請參見[要備份和恢復的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
-1. 執行下列步驟以線上備份AEM資料庫：
+1. 關閉與AEM相關的群集的任何輔助節點。 （請參閱[啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)）
+1. 在任何節點上，備份資料庫、GDS和連接器。 （請參閱[要備份和恢復的檔案](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)）
+1. 執行下列步驟以線上備份AEM存放庫：
 
    1. 對於每個群集節點，備份包含cluster_node.id的檔案。
    1. 分別備份每個群集節點的repository/system.id。
-   1. 在任何輔助節點上，對儲存庫執行聯機備份以獲得詳細步驟，請參閱聯機備份。
+   1. 在任何輔助節點上，對儲存庫進行聯機備份，以了解詳細步驟，請參閱聯機備份。
 
 1. 備份任何其他資料，例如客戶字型。
 1. 再次啟動群集。
 
-### 備份引導屬性檔案{#back-up-the-bootstrap-properties-file}
+### 備份Bootstrap屬性檔案{#back-up-the-bootstrap-properties-file}
 
-當我們建立AEM叢集時，會在應用程式伺服器中為所有次要節點建立屬性檔案。 建議備份引導屬性檔案。 您可以在應用程式伺服器上的下列位置找到檔案：
+建立AEM群集時，會在應用程式伺服器中為所有次節點建立屬性檔案。 建議備份Bootstrap屬性檔案。 您可以在應用程式伺服器上的以下位置找到檔案：
 
-* JBoss:在BIN目錄中
+* JBoss:（在BIN目錄中）
 * WebLogic:在域目錄中
 * WebSphere:在配置檔案目錄中
 
-您需要備份AEM次節點的災難恢複方案檔案，並在應用程式伺服器上的指定位置（如果已恢復）將其替換。
+您需要備份該檔案以備AEM次節點的災難恢復情況，如果恢復，則在應用程式伺服器上的指定位置替換該檔案。
 
-## 在群集環境{#recovery-in-a-clustered-environment}中恢復
+## 在群集環境{#recovery-in-a-clustered-environment}中進行恢復
 
-如果整個群集或單個節點出現故障，您需要使用備份進行恢復。
+如果整個群集或單個節點出現任何故障，則需要使用備份來還原它。
 
 對於單節點恢復，只需關閉單節點並運行單節點恢復過程。
 
-如果整個群集因資料庫崩潰等故障而失敗，您需要執行以下步驟。 還原取決於使用的備份方法。
+如果整個群集因資料庫崩潰等故障而失敗，則需要執行以下步驟。 恢復取決於使用的備份方法。
 
-### 恢復單個節點{#restoring-a-single-node}
+### 還原單個節點{#restoring-a-single-node}
 
 1. 停止損壞的節點。
 
@@ -121,73 +120,72 @@ ht-degree: 0%
    >如果損壞的節點是AEM主節點，請關閉整個群集節點。
 
 1. 從系統映像重新建立物理系統。
-1. 將修補程式或更新套用至自影像建立以來套用的AEM表單。 在備份過程中記錄了此資訊。 AEM表單必須恢復到與備份系統時相同的修補程式層級。
-1. （*可選*）如果所有其他節點都正常運作，AEM儲存庫也可能已損毀。 在這種情況下，您會在AEM存放庫的error.log檔案中看到儲存庫不同步訊息。
+1. 將修補程式或更新套用至建立影像後所套用的AEM表單。 備份過程中記錄了此資訊。 AEM表單必須恢復到備份系統時的相同修補程式級別。
+1. （*選用*）如果所有其他節點運作正常，AEM存放庫也可能已損毀。 在此情況下，您會在AEM存放庫的error.log檔案中看到存放庫未同步訊息。
 
-   要恢復儲存庫，請執行以下步驟。
+   要還原儲存庫，請執行以下步驟。
 
    >[!NOTE]
    >
-   >如果壓縮的crx-repository備份已聯機，請在任何位置將其解壓縮，然後執行離線還原過程。
+   >如果壓縮的crx儲存庫備份已聯機，請在任何位置將其解壓縮，然後按照離線還原過程進行。
 
-   1. 刪除節點的clusterNode目錄中的儲存庫、共用目錄、版本目錄和工作區目錄。
-   1. 將群集節點（包括子目錄）的備份還原到該節點。
+   1. 在節點的clusterNode目錄中刪除儲存庫、共用目錄、版本目錄和工作區目錄。
+   1. 將群集節點的備份（包括子目錄）還原到節點。
    1. 刪除節點上的檔案clusterNode/revision.log。
-   1. 刪除節點上的。lock（如果存在）。
-   1. 刪除節點上的repository/system.id目錄（如果存在）。
+   1. 刪除節點上的.lock（如果存在）。
+   1. 刪除節點上的repository/system.id（如果存在）。
    1. 刪除節點上的檔案&amp;ast;&amp;ast;/listener.properties（如果存在）。
-   1. 恢復單個群集節點的repository/cluster_node.id。
+   1. 為單個群集節點還原repository/cluster_node.id。
 
 >[!NOTE]
 >
->請考慮以下幾點：
+>請考量下列幾點：
 
-* 如果失敗的節點是AEM主節點，請將所有內容從次資料庫資料夾（crx-repository\crx.0000，其中0000可以是任何數字）複製到crx-repository\資料庫資料夾，然後刪除次資料庫資料夾。
-* 在重新啟動任何群集節點之前，請確保從主節點刪除儲存庫/clustered.txt。
-* 確保主節點是先啟動的，一旦完全啟動，則啟動其他節點。
+* 如果失敗的節點是AEM主節點，請將輔助儲存庫資料夾（crx-repository\crx.0000，其中0000可以是任何數字）中的所有內容複製到crx-repository\儲存庫資料夾，並刪除輔助儲存庫資料夾。
+* 重新啟動任何群集節點之前，請確保從主節點刪除儲存庫/clustered.txt。
+* 請確定主節點是先啟動的，一旦完全啟動，就啟動其他節點。
 
-### 恢復整個群集{#restoring-the-entire-cluster}
+### 還原整個群集{#restoring-the-entire-cluster}
 
 1. 停止所有群集節點。
 1. 從系統映像中重新建立物理系統。
-1. 將修補程式或更新套用至自影像建立以來套用的AEM表單AEM表單。 此資訊記錄在備份過程的步驟1中。 AEM表單必須恢復到與備份系統時相同的修補程式層級。
-1. 恢復資料庫、GDS和連接器。
-1. 請執行下列動作，以離線復原AEM存放庫：
+1. 將修補程式或更新套用至建立影像後所套用的AEM formsAEM表單。 此資訊記錄在備份過程的步驟1中。 AEM表單必須恢復到備份系統時的相同修補程式級別。
+1. 還原資料庫、GDS和連接器。
+1. 執行下列操作以離線恢復AEM儲存庫：
 
    >[!NOTE]
    >
-   >如果壓縮的crx-repository備份已聯機，請在任何位置將其解壓縮，然後執行離線還原過程。
+   >如果壓縮的crx儲存庫備份已聯機，請在任何位置將其解壓縮，然後按照離線還原過程進行。
 
    1. 在所有群集節點上，刪除clusterNode目錄中的儲存庫、共用目錄、版本目錄和工作區目錄。
    1. 刪除共用目錄中的所有檔案和目錄。
    1. 將群集節點（包括子目錄）的備份還原到一個群集節點。
-   1. 將恢復的群集節點的所有檔案複製到所有其他群集節點。 完成後，每個群集節點都包含相同的資料。
+   1. 將還原的群集節點的所有檔案複製到所有其他群集節點。 完成後，每個群集節點都包含相同的資料。
    1. 刪除所有群集節點上的檔案clusterNode/revision.log。
-   1. 刪除所有群集節點上的。lock（如果存在）。
+   1. 刪除所有群集節點上的.lock（如果存在）。
    1. 刪除repository/system.id所有群集節點（如果存在）。
    1. 刪除所有群集節點上的檔案&amp;ast;&amp;ast;/listener.properties（如果存在）。
-   1. 恢復單個群集節點的repository/cluster_node.id。
+   1. 為單個群集節點還原repository/cluster_node.id。
 
 >[!NOTE]
 >
->請考慮以下幾點：
+>請考量下列幾點：
 
-* 如果失敗的節點是AEM主節點，請將所有內容從次要資料庫檔案夾（看起來類似crx-repository\crx.0000，其中0000可以是任何位元）複製到crx-repository\資料庫檔案夾。
-* 在重新啟動任何群集節點之前，請確保從主節點刪除儲存庫/clustered.txt。
-* 確保主節點是先啟動的，一旦完全啟動，則啟動其他節點。
+* 如果失敗的節點是AEM主節點，請將從次要存放庫資料夾（看起來類似crx-repository\crx.0000，其中000可以是任何位數）中的所有內容複製到crx-repository\存放庫資料夾。
+* 重新啟動任何群集節點之前，請確保從主節點刪除儲存庫/clustered.txt。
+* 請確定主節點是先啟動的，一旦完全啟動，就啟動其他節點。
 
 ## 備份和恢復通信管理解決方案發佈節點{#back-up-and-restore-correspondence-management-solution-publish-node}
 
-發佈者節點在群集環境中沒有任何主次關係。 您可以遵循[Backup and Restore](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)對任何Publisher節點執行備份。
+發佈者節點在群集環境中沒有任何主次關係。 您可以按照[Backup and Restore](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)執行任何Publisher節點的備份。
 
 ### 恢復單個發佈者節點{#recover-a-single-publisher-node}
 
-1. 關閉需要恢復的節點，在節點再次啟動之前不執行任何發佈活動。
-1. 使用[恢復備份](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring備份)恢復發佈節點。
+1. 關閉需要恢復的節點，在該節點再次啟動之前，不執行任何發佈活動。
+1. 使用[還原Backup](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring備份)還原發佈節點。
 
 ### 恢復群集{#recover-a-cluster}
 
 1. 關閉群集。
-1. 使用[恢復備份](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring備份)恢復發佈節點。
-1. 啟動主節點，然後啟動作者群集的輔助節點。
-
+1. 使用[還原Backup](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring備份)還原發佈節點。
+1. 啟動主節點，然後啟動製作叢集的次節點。
