@@ -1,28 +1,27 @@
 ---
-title: JavaScript檔案的精簡化
-seo-title: JavaScript檔案的精簡化
-description: 在AEM Forms工作區自訂後產生精簡程式碼的指示，以最佳化適用於網頁的JS檔案。
-seo-description: 在AEM Forms工作區自訂後產生精簡程式碼的指示，以最佳化適用於網頁的JS檔案。
+title: JavaScript檔案的縮制
+seo-title: JavaScript檔案的縮制
+description: 在AEM Forms工作區自訂後產生縮製程式碼的指示，以最佳化網頁的JS檔案。
+seo-description: 在AEM Forms工作區自訂後產生縮製程式碼的指示，以最佳化網頁的JS檔案。
 uuid: ad91e380-a988-4740-9534-e09657e0322a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: d88c6831-8ae9-426d-acb5-2a7e066ad158
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
+# JavaScript檔案{#minification-of-the-javascript-files}的縮制
 
-# JavaScript檔案的精簡化{#minification-of-the-javascript-files}
+縮制會從原始碼中移除多餘的字元，例如空白字元、新行和註解。 這可以縮小程式碼的大小，進而改善效能。 縮制不會影響功能，但會降低程式碼的可讀性。
 
-精簡功能會從原始程式碼中移除多餘的字元，例如空格、新行和註解。 如此可減少程式碼的大小，以改善效能。 雖然精簡化不會影響功能，但會降低程式碼的可讀性。
-
-要生成用於語義更改的精簡代碼，請遵循以下步驟。
+要生成語義更改的縮制代碼，請執行以下步驟。
 
 1. 從檔案系統上的src-package複製`client-html/src/main/webapp/js`。
 
@@ -30,9 +29,9 @@ ht-degree: 0%
    >
    >如需套件的詳細資訊，請參閱[自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md)。
 
-1. 更新位於client-html/src/main/webapp/js下方的`main.js`中路徑，以取得已新增／更新的模型／檢視。
+1. 更新位於client-html/src/main/webapp/js下方的`main.js`中路徑，以了解已新增/更新的模型/檢視。
 
-   例如，新增新的Sharequeue模型（例如mySharequeue），請變更：
+   例如，添加新的Sharequeue模型（如mySharequeue），請更改：
 
    ```javascript
    sharequeuemodel : pathprefix + 'runtime/models/sharequeue',
@@ -44,9 +43,9 @@ ht-degree: 0%
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. 更新`registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,`，以備`main.js`中更改／添加別名。
+1. 更新`registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,`，以備`main.js`中出現別名的更改/添加。
 
-   例如，新增新的Sharequeue模型（例如mySharequeue），請變更：
+   例如，添加新的Sharequeue模型（如mySharequeue），請更改：
 
    ```xml
    <sharequeue
@@ -64,18 +63,18 @@ ht-degree: 0%
                service="service"/>
    ```
 
-1. 在client-html/src/main/webapp/js/minifier上，執行命令：
+1. 在client-html/src/main/webapp/js/minifier上，運行命令：
 
    ```shell
    mvn clean install
    ```
 
-   它會在client-html/src/main/webapp/js下，以minified main.js和registry.js產生檔案夾minified-files。
+   它會在client-html/src/main/webapp/js下產生一個資料夾縮制檔案，其中包含縮制的main.js和registry.js。
 
 >[!NOTE]
 >
->精簡功能僅適用於64位元JVM。
+>縮制只能在64位元JVM上運作。
 
 >[!NOTE]
 >
->如果您進行微型化，升級將受到影響。
+>如果您縮制，升級會受到影響。
