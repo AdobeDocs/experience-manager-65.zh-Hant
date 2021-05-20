@@ -1,55 +1,54 @@
 ---
-title: 事務處理報表可開單API
-seo-title: 事務處理報表可開單API
-description: 列出所有作為事務處理的API
-seo-description: 列出所有作為事務處理的API
+title: 交易報表計費API
+seo-title: 交易報表計費API
+description: 以交易方式入賬的所有API清單
+seo-description: 以交易方式入賬的所有API清單
 uuid: d2f38ae4-75df-426f-af34-52ae6fb324f3
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 13016df927448d93af86899f746199e1815fdfe7
+exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1963'
 ht-degree: 6%
 
 ---
 
+# 交易報表計費API{#transaction-reports-billable-apis}
 
-# 事務處理報表可開單API{#transaction-reports-billable-apis}
-
-AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些API會以交易方式入賬，而有些則可免費使用。 本檔案提供在交易報表中以交易方式入賬的所有API的清單。 以下是使用計費API的一些常見方案：
+AEM Forms提供數個API，可提交表單、處理檔案及轉譯檔案。 有些API會記為交易，有些則可免費使用。 本文檔提供在事務處理報告中作為事務處理入帳的所有API的清單。 以下是使用計費API的一些常見案例：
 
 * 提交最適化表單、HTML5表單和表單集
-* 呈現互動式通訊的平面或網頁版本
+* 呈現互動式通信的打印或網路版本
 * 將文檔從一種格式轉換為另一種格式
-* 平面化動態PDF檔案
+* 拼合動態PDF文檔
 * 生成記錄文檔
-* 將互動式PDF檔案與其他PDF檔案合併
-* 使用AEM工作流程的指派工作步驟和檔案服務步驟
-* 在自適應表單中使用自適應表單
+* 將互動式PDF檔案與另一PDF檔案合併
+* 使用AEM工作流程的指派任務步驟和檔案服務步驟
+* 在最適化表單中使用最適化表單
 
-帳單API不會計入頁數、檔案或表單的長度，或轉譯檔案的最終格式。 事務報表將事務分為兩類：已轉譯的檔案和已提交的表單。
+計費API不會計入頁數、檔案或表單的長度，或轉譯檔案的最終格式。 事務處理報表將事務處理分為兩個類別：已呈現的檔案和Forms已提交。
 
-* **已提交的表** 單：從使用AEM Forms建立的任何類型表單提交資料，且資料會提交至任何資料儲存存放庫或資料庫時，即視為表單提交。例如，提交最適化表單、HTML5表單、PDF表單和表單集都會視為提交的表單。 表單集中的每個表單都被視為提交。 例如，如果表單集有5個表單，提交表單集時，事務報告服務會將其計為5個提交。
+* **Forms已提交：** 從以AEM Forms建立的任何類型表單提交資料，且資料已提交至任何資料儲存存放庫或資料庫時，即視為表單提交。例如，提交最適化表單時，HTML5表單、PDF forms和表單集會計為提交的表單。 表單集中的每個表單都視為提交。 例如，如果表單集有5個表單，則提交表單集時，交易報告服務會將其計為5個提交。
 
-* **已呈現的文** 件：結合範本和資料、以數位方式簽署或認證檔案、使用檔案服務的可付款檔案服務API，或將檔案從一種格式轉換為另一種格式，以產生檔案為已呈現檔案。
+* **已呈現的文檔：** 通過組合模板和資料、數字簽名或認證文檔、使用可計費文檔服務API進行文檔服務，或將文檔從一種格式轉換為另一種格式來生成文檔，都被視為已呈現的文檔。
 
 >[!NOTE]
 >
->交易報表UI會顯示三個類別：已提交的表單、已轉譯的檔案和已處理的檔案。 所呈現的文檔和所處理的文檔均作為所呈現的文檔入賬。
+>交易報表UI會顯示三個類別：Forms已提交、已呈現的檔案和已處理的檔案。 所呈現的文檔和所處理的文檔均作為所呈現的文檔入帳。
 
 ## 計費文檔服務API {#billable-document-services-apis}
 
-### 產生PDF服務{#generate-pdf-service}
+### 生成PDF服務{#generate-pdf-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
@@ -101,22 +100,22 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">最佳化PDF</a></td>
-   <td>最佳化PDF，借由移除不必要的中繼資料來減少檔案大小，而不會影響品質。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">optimizePDF</a></td>
+   <td>最佳化PDF，移除不必要的中繼資料而不影響品質，借此縮小檔案大小。</td>
    <td>已處理的文件<br /> </td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-### Distiller Service {#distiller-service}
+### Distiller服務{#distiller-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
@@ -134,18 +133,18 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
  </tbody>
 </table>
 
-### 記錄服務（DoR服務）{#document-of-record-service-dor-service}
+### 記錄服務（DoR服務）{#document-of-record-service-dor-service}文檔
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/addon/dor/DoRService.html#render-com.adobe.aemds.guide.addon.dor.DoROptions-" target="_blank">渲染</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/addon/dor/DoRService.html#render-com.adobe.aemds.guide.addon.dor.DoROptions-" target="_blank">轉譯</a></td>
    <td>調用指定的渲染方法以使用提供的參數生成記錄文檔。</td>
    <td>已處理的文件</td>
    <td> </td>
@@ -153,68 +152,68 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
  </tbody>
 </table>
 
-### 輸出服務{#output-service}
+### 輸出服務 {#output-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
-   <td>合併資料和範本以建立PDF檔案。</td>
+   <td>合併資料和模板以建立PDF文檔。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
-   <td>合併資料和範本以建立PDF檔案。</td>
+   <td>合併資料和模板以建立PDF文檔。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
-   <td>合併資料和範本以建立一組PDF檔案。</td>
+   <td>合併資料和模板以建立一組PDF文檔。</td>
    <td>已處理的文件</td>
-   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理一批記錄時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--"></a> getGenerateManyFiles旗標，將多個轉譯合併為單一PDF檔案。不論旗標狀態為何，服務都會將每個記錄計為個別的PDF轉譯。 </td>
+   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理一批記錄時，交易報告服務會將每筆記錄計為個別的PDF轉譯。 <br> 您可以使用getGenerateManyFiles標 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--"></a> 幟，將多個轉譯合併為單一PDF檔案。無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
-   <td>將XDP和PDF檔案轉換為PostScript(PS)、印表機命令語言(PCL)和ZPL檔案格式。 </td>
+   <td>將XDP和PDF文檔轉換為PostScript(PS)、打印機命令語言(PCL)和ZPL檔案格式。 </td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
-   <td>將XDP和PDF檔案轉換為PostScript(PS)、印表機命令語言(PCL)和ZPL檔案格式。 </td>
+   <td>將XDP和PDF文檔轉換為PostScript(PS)、打印機命令語言(PCL)和ZPL檔案格式。 </td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
-   <td>將一組XDP和PDF檔案轉換為一組PostScript(PS)、印表機命令語言(PCL)和ZPL檔案格式。 </td>
+   <td>將一組XDP和PDF文檔轉換為一組PostScript(PS)、打印機命令語言(PCL)和ZPL檔案格式。 </td>
    <td>已處理的文件</td>
-   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理一批記錄時，交易報告服務會將每個記錄計為個別的PDF轉譯。 <br> 您可以使用 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--"></a> getGenerateManyFiles旗標，將多個轉譯合併為單一PDF檔案。不論旗標狀態為何，服務都會將每個記錄計為個別的PDF轉譯。 </td>
+   <td> generatePDFOutputBatch API將表單範本與記錄結合，並產生PDF。 當您處理一批記錄時，交易報告服務會將每筆記錄計為個別的PDF轉譯。 <br> 您可以使用getGenerateManyFiles標 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--"></a> 幟，將多個轉譯合併為單一PDF檔案。無論標幟的狀態為何，服務都會將每筆記錄計為個別的PDF轉譯。 </td>
   </tr>
  </tbody>
 </table>
 
-### Forms服務{#forms-service}
+### 表單服務 {#forms-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">renderPDFForm</a></td>
-   <td>從XDP範本轉譯PDF表單。 XP範本是在Forms Designer中建立的。</td>
+   <td>從XDP範本轉譯PDF表單。 XP範本是在Forms Designer中建立。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -234,12 +233,12 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toImage</a></td>
-   <td>將PDF檔案轉換為影像檔案清單。 支援的影像格式包括JPEG、JPEG2K、PNG和TIFF。</td>
+   <td>將PDF文檔轉換為影像文檔清單。 支援的影像格式為JPEG、JPEG2K、PNG和TIFF。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -252,54 +251,54 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
  </tbody>
 </table>
 
-### Barcoded Forms Service {#barcoded-forms-service}
+### 條碼式Forms服務{#barcoded-forms-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode-com.adobe.aemfd.docmanager.Document-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-com.adobe.fd.bcf.api.CharSet-" target="_blank">解碼</a></td>
-   <td>解碼Document物件中的所有條碼，並傳回包含從條碼擷取之資料的org.w3c.dom.Document物件。</td>
+   <td>解碼Document對象中的所有條形碼，並返回一個org.w3c.dom.Document對象，該對象包含從條碼中檢索的資料。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-### 匯編器服務{#assembler-service}
+### 組合器服務 {#assembler-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">調用</a></td>
-   <td>執行指定的DDX文檔並返回包含所生成文檔的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>對象。 </td>
+   <td>執行指定的DDX文檔並返回包含結果文檔的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>對象。 </td>
    <td>已處理的文件</td>
    <td>下列業務不會作為交易入賬：
     <ul>
-     <li>建立套件或作品集</li>
+     <li>建立套件或產品組合</li>
      <li>拼接多個XDP </li>
     </ul> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">調用</a></td>
-   <td>執行指定的DDX文檔並返回包含所生成文檔的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>對象。 </td>
+   <td>執行指定的DDX文檔並返回包含結果文檔的<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>對象。 </td>
    <td>已處理的文件</td>
-   <td>Assembler服務支援PDF產生器、表單和輸出服務支援的所有輸入檔案格式，支援所有這些格式做為輸出檔案格式。 </td>
+   <td>PDF生成器、Forms和輸出服務支援的所有輸入檔案格式，組合器服務支援所有這些格式作為輸出檔案格式。 </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#toPDFA-com.adobe.aemfd.docmanager.Document-com.adobe.fd.assembler.client.PDFAConversionOptionSpec-">toPDFA</a></td>
-   <td>使用指定的選項，將指定的檔案轉換為PDF/A。</td>
+   <td>使用指定的選項將指定的文檔轉換為PDF/A。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -308,26 +307,26 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
 
 >[!NOTE]
 >
->* 匯編器服務的調用API可以根據輸入在內部調用另一服務的計費API。 因此，調用API可以作為無、單個或多個事務處理來處理。 計算的交易數量取決於輸入和呼叫的內部API。
->* 使用匯編器服務生成的單個PDF文檔可以作為無、單個或多個事務處理來處理。 計算的交易數量取決於提供的DDX代碼。
+>* 組合器服務的調用API可以根據輸入從內部調用另一服務的計費API。 因此，叫用API可以計為無、單或多個交易。 計算的交易數取決於輸入和叫用的內部API。
+>* 使用組合器服務生成的單個PDF文檔可以算作無、單個或多個事務。 計算的交易數取決於提供的DDX代碼。
 
 >
 
 
 
-### PDF Utility Service {#pdf-utility-service}
+### PDF實用程式服務{#pdf-utility-service}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/pdfutility/services/PDFUtilityService.html#convertPDFtoXDP-com.adobe.aemfd.docmanager.Document-" target="_blank">convertPDFtoXDP</a></td>
-   <td>將PDF檔案轉換為XDP檔案。 為了讓PDF檔案成功轉換為XDP檔案，PDF檔案必須在AcroForm字典中包含XFA串流。</td>
+   <td>將PDF檔案轉換為XDP檔案。 為了將PDF檔案成功轉換為XDP檔案，PDF檔案必須在AcroForm字典中包含XFA資料流。</td>
    <td>已處理的文件</td>
    <td> </td>
   </tr>
@@ -336,43 +335,43 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
 
 ## 計費資料捕獲API {#billable-data-capture-apis}
 
-最適化表單、HTML5表單和表單集的所有提交事件都視為交易。 依預設，提交PDF表單不會算作交易。 使用提供的[交易記錄器API](record-transaction-custom-implementation.md)將PDF表單提交記錄為交易。
+適用性表單、HTML5 Forms和表單集的所有提交事件都會計為交易。 依預設，提交PDF表單不會計為交易。 使用提供的[事務記錄器API](record-transaction-custom-implementation.md)將PDF forms提交記錄為事務。
 
-### 適用性表單 {#adaptive-forms}
+### 調適型表單 {#adaptive-forms}
 
 <table>
  <tbody>
   <tr>
    <td><p>使用案例</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td>提交最適化表單</td>
-   <td>提交最適化表單以設定提交動作。 </td>
+   <td>提交最適化表單以配置提交操作。 </td>
    <td>已提交的表單</td>
    <td>
     <ul>
-     <li>成功的提交包含單筆或兩筆交易。 計算的事務處理數取決於用於提交的提交操作類型。 例如，透過電子郵件提交動作帳戶傳送PDF，可計算兩筆交易。 使用記錄檔案(DOR)服務產生的一筆表單提交交易和另一筆PDF交易。 </li>
-     <li>在最適化表單（最適化表單集）中使用最適化表單只會計入單一交易。 您可以在最適化表單中擁有任意數量的最適化表單。</li>
+     <li>成功的提交會計入單筆或兩筆交易。 計算的交易數取決於用於提交的提交操作的類型。 例如，透過電子郵件提交動作傳送PDF會計入兩筆交易。 使用記錄檔(DOR)服務產生的一個表單提交交易和另一個PDF交易。 </li>
+     <li>在最適化表單（最適化表單集）中使用最適化表單只會計入單一交易。 在最適化表單中可以有任意數量的最適化表單。</li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-### HTML5 Forms {#html-forms}
+### HTML5 表單 {#html-forms}
 
 <table>
  <tbody>
   <tr>
    <td><p>使用案例</p> </td>
    <td>說明 </td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td>送出HTML5表格</td>
+   <td>提交HTML5表單</td>
    <td>提交HTML5表單以提交表單中設定的URL。</td>
    <td>已提交的表單</td>
    <td> </td>
@@ -387,25 +386,25 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
    <td>提交表單集</td>
-   <td>將表單集提交到表單集中配置的提交URL。</td>
+   <td>將表單集提交到在表單集中配置的提交URL。</td>
    <td>已提交的表單</td>
    <td>
     <ul>
-     <li>在最適化表單（最適化表單集）中使用最適化表單只會計入單一交易。 您可以在最適化表單中擁有任意數量的最適化表單。</li>
-     <li>HTML5 Forms表單中的每個表單都會將帳戶設定為個別交易。 </li>
+     <li>在最適化表單（最適化表單集）中使用最適化表單只會計入單一交易。 在最適化表單中可以有任意數量的最適化表單。</li>
+     <li>HTML5 Forms表單中的每個表單都會將帳戶設為個別交易。 </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-## OSGi API {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}上的計費互動式通訊和表單導向AEM工作流程
+## OSGi API上的計費互動式通訊和表單導向AEM工作流程{#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
 
-在OSGi上指派表單導向AEM工作流程的工作和檔案服務步驟，以及互動式通訊的所有轉譯，並視為交易處理。 在作者例項上預覽互動式通訊，並使用Agent UI在發佈例項上預覽，不會算作交易。 如果工作流步驟將事務處理入帳，而工作流無法完成，則不會撤消事務處理計數。
+在OSGi上指派以表單為中心的AEM工作流程的任務和檔案服務步驟，以及互動式通訊的所有轉譯，並以交易記帳。 在製作執行個體上預覽互動式通訊和使用代理程式UI在發佈執行個體上預覽沒有計為交易。 如果工作流步驟將事務處理入帳，且工作流無法完成，則事務處理計數不會被撤消。
 
 ### 互動式通訊 - Web Channel {#interactive-communication-web-channel}
 
@@ -414,11 +413,11 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td>呈現網路頻道</td>
+   <td>轉譯Web通道</td>
    <td>開啟互動式通訊的網頁版本。</td>
    <td>已呈交的文件</td>
    <td>
@@ -428,19 +427,19 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
  </tbody>
 </table>
 
-### 互動式通訊——列印頻道{#interactive-communication-print-channel}
+### 互動式通信 — 打印通道{#interactive-communication-print-channel}
 
 <table>
  <tbody>
   <tr>
    <td><p>API</p> </td>
    <td>說明</td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">render</a> （轉換為PDF）</td>
-   <td>產生互動式通訊的PDF版本。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">轉譯</a> （轉換為PDF）</td>
+   <td>生成互動式通信的PDF版本。</td>
    <td>已呈交的文件</td>
    <td>
     <div>
@@ -455,7 +454,7 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
  <tbody>
   <tr>
    <td><p>使用案例</p> </td>
-   <td>事務處理報告類別</td>
+   <td>交易記錄報表類別</td>
    <td>其他資訊</td>
   </tr>
   <tr>
@@ -466,25 +465,24 @@ AEM Forms提供數個API來提交表單、處理檔案和演算檔案。 有些A
     </div> </td>
   </tr>
   <tr>
-   <td>提交工作流程應用程式起點 </td>
+   <td>提交工作流應用程式起始點 </td>
    <td>已提交的表單</td>
    <td> </td>
   </tr>
   <tr>
-   <td>將互動式通訊（列印頻道）從代理UI送出至工作流程</td>
+   <td>從代理UI提交互動式通訊（列印通道）至工作流程</td>
    <td>已呈交的文件</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-## 將可計費API記錄為自訂代碼{#recording-billable-apis-as-transactions-for-custom-code}的交易
+## 將計費API記錄為自訂代碼{#recording-billable-apis-as-transactions-for-custom-code}的交易
 
-諸如提交PDF表單、使用代理UI預覽互動式通訊、使用非標準表單提交和自訂實作等動作，不會算作交易。 AEM Forms提供API來記錄這類動作，例如交易。 您可以從自訂實作呼叫API，以記錄交易[。](/help/forms/using/record-transaction-custom-implementation.md)
+提交PDF表單、使用代理程式UI預覽互動式通訊、使用非標準表單提交和自訂實作等動作不會計為交易。 AEM Forms提供API來記錄這類動作，例如交易。 您可以從自訂實作呼叫API以[記錄交易](/help/forms/using/record-transaction-custom-implementation.md)。
 
 ## 相關文章{#related-articles}
 
-* [事務處理報表概覽](../../forms/using/transaction-reports-overview.md)
-* [查看和瞭解事務處理報表](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [記錄自訂實作的交易](/help/forms/using/record-transaction-custom-implementation.md)
-
+* [交易報表概述](../../forms/using/transaction-reports-overview.md)
+* [查看和了解交易報表](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [記錄自訂實施的交易](/help/forms/using/record-transaction-custom-implementation.md)
