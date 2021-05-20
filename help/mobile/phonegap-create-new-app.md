@@ -1,55 +1,54 @@
 ---
 title: 使用建立精靈建立新的AEM Mobile應用程式
 seo-title: 使用建立精靈建立新的AEM Mobile應用程式
-description: AEM Mobile應用程式是以定義頁面結構和屬性的藍圖為基礎。 請依照本頁來瞭解如何根據應用程式範本建立新應用程式。
-seo-description: AEM Mobile應用程式是以定義頁面結構和屬性的藍圖為基礎。 請依照本頁來瞭解如何根據應用程式範本建立新應用程式。
+description: AEM Mobile應用程式以定義頁面結構和屬性的blueprint為基礎。 請依照本頁面了解如何根據應用程式範本建立新應用程式。
+seo-description: AEM Mobile應用程式以定義頁面結構和屬性的blueprint為基礎。 請依照本頁面了解如何根據應用程式範本建立新應用程式。
 uuid: c2bd63a5-3dff-4a72-b1fb-0c776e0afa33
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
-translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 0%
 
 ---
 
-
-# 使用建立精靈建立新的AEM Mobile應用程式{#creating-a-new-aem-mobile-app-using-create-wizard}
+# 使用建立精靈{#creating-a-new-aem-mobile-app-using-create-wizard}建立新的AEM Mobile應用程式
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
 
-AEM Mobile應用程式是以定義頁面結構和屬性的藍圖為基礎。 您可以設定下列應用程式屬性：
+AEM Mobile應用程式以定義頁面結構和屬性的blueprint為基礎。 您可以配置以下應用程式屬性：
 
-* **標題：應** 用程式標題。
-* **目標路徑：** 儲存應用程式的儲存庫中的位置。保留預設值，以根據應用程式名稱建立路徑。
+* **標題：** 應用程式標題。
+* **目標路徑：** 儲存應用程式的存放庫位置。保留預設值，以根據應用程式名稱建立路徑。
 
-* **名稱：** 預設值是Title屬性的值，並移除空格字元。AEM中使用名稱來引用應用程式，例如代表應用程式的儲存庫節點。
+* **名稱：** 預設值為已移除空格字元之Title屬性的值。名稱在AEM內用來參照應用程式，例如代表應用程式的存放庫節點。
 * **說明：** 應用程式的說明。
-* **伺服器URL:** 提供應用程式Over-the-Air(OTA)內容更新的URL。預設值是用來建立應用程式（取自外部化器服務）之例項的發佈伺服器URL。 請注意，此為發佈伺服器例項，而非需要驗證的作者。
+* **伺服器URL:** 為應用程式提供無線(OTA)內容更新的URL。預設值是用於建立應用程式（從外部化程式服務取用）的執行個體的發佈伺服器URL。 請注意，這必須是發佈伺服器例項，而非需要驗證的作者。
 
-您也可以提供影像檔案做為應用程式縮圖，選取要使用的PhoneGap Build設定，然後選取要使用的行動應用程式分析設定。 此影像僅用作縮圖，以在Experience Manager的行動應用程式主控台中呈現您的行動應用程式。
+您也可以提供影像檔案作為應用程式縮圖、選取要使用的PhoneGap Build設定，然後選取要使用的行動應用程式分析設定。 此影像只會作為縮圖，在Experience Manager的行動應用程式主控台內呈現您的行動應用程式。
 
-建立雲端服務並將Adobe Mobile Services SDK外掛程式整合至應用程式時，會有其他（和選用）標籤。
+建置雲端服務及將AdobeMobile Services SDK外掛程式整合至您的應用程式中，已有其他（及選用）標籤。
 
-* 構建：按一下「管理設定」，並在此處設定build.phonegap.com組建服務。 然後，您就可以從下拉式清單中選取新建立的PhoneGap組建雲端服務。
-* 分析：按一下「管理組態」並設定您的[Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html)雲端服務。 然後，您就可以從下拉式清單中，選取新建立的Mobile Service，以整合到您的行動應用程式中。
+* 建置：按一下「管理設定」，然後在這裡設定您的build.phonegap.com組建服務。 然後，您將可從下拉式清單中選取新建立的PhoneGap組建雲端服務。
+* Analytics:按一下「管理設定」並設定您的[AdobeMobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html)雲端服務。 然後，您將可從下拉式清單中選取新建立的Mobile Service，以整合至您的行動應用程式。
 
 ## 使用應用程式範本{#using-app-templates}
 
-應用程式範本提供簡單的方式，來運用開發人員建立的現有設計，以便在AEM中建立新應用程式。
+應用程式範本可讓您輕鬆運用開發人員建立的現有設計，以在AEM內建立新應用程式。
 
-什麼是應用程式範本？ 將它設想成代表應用程式基準或基礎的頁面範本和元件集合。
-根據其他應用程式的範本建立新應用程式時，您會得到一個應用程式，其起點代表建立應用程式的應用程式。
+什麼是應用程式範本？ 將其想像為頁面範本和元件的集合，這些範本和元件代表應用程式的基準或基礎。
+根據其他應用程式的範本建立新應用程式時，您會看到某個應用程式的起始點代表，該應用程式即為建立該應用程式的來源。
 
-您必須有現有的行動應用程式範本（或已安裝應用程式範本的應用程式），才能使用此功能。
+您必須有現有的行動應用程式範本（或已安裝應用程式範本的應用程式）才能使用此功能。
 
-最新的AEM Apps範例套件包含Geometrixx應用程式的更新版本及應用程式範本。 或者，您也可以安裝[StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)，該&lt;a0/>還提供了模板。
+最新的AEM應用程式範例套件包含含應用程式範本的更新版Geometrixx應用程式。 或者，您也可以安裝[StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)，該模板還提供模板。
 
 根據應用程式範本建立新應用程式的步驟：
 
@@ -62,15 +61,15 @@ AEM Mobile應用程式是以定義頁面結構和屬性的藍圖為基礎。 您
 
 ![chlimage_1-159](assets/chlimage_1-159.png)
 
-視需要填寫新應用程式的詳細資訊，包括選擇性地變更其縮圖影像。 這些值稍後可從&#x200B;**管理應用程式**&#x200B;圖格進行編輯。
+視需要填寫新應用程式的詳細資訊，包括選擇性變更其縮圖影像。 稍後可從&#x200B;**管理應用程式**&#x200B;方塊編輯這些值。
 
 ![chlimage_1-160](assets/chlimage_1-160.png)
 
 ## 後續步驟{#the-next-steps}
 
-請參閱下列資源以進一步瞭解其他編寫角色：
+請參閱下列資源，以進一步了解其他製作角色：
 
-* [管理應用程式圖格](/help/mobile/phonegap-app-details-tile.md)
+* [管理應用程式圖磚](/help/mobile/phonegap-app-details-tile.md)
 * [編輯應用程式中繼資料](/help/mobile/phonegap-editmetadata.md)
 * [應用程式定義](/help/mobile/phonegap-app-definitions.md)
 * [匯入現有的混合應用程式](/help/mobile/phonegap-adding-content-to-imported-app.md)
@@ -78,7 +77,7 @@ AEM Mobile應用程式是以定義頁面結構和屬性的藍圖為基礎。 您
 
 ## 其他資源 {#additional-resources}
 
-要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
+若要了解管理員和開發人員的角色和責任，請參閱下列資源：
 
-* [使用AEM為Adobe PhoneGap Enterprise進行開發](/help/mobile/developing-in-phonegap.md)
+* [使用AEM為Adobe PhoneGap企業開發](/help/mobile/developing-in-phonegap.md)
 * [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)
