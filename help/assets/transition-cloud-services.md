@@ -1,27 +1,26 @@
 ---
-title: 將翻譯雲端服務套用至資料夾
-description: 將翻譯雲端服務套用至資料夾
+title: 將翻譯雲服務應用於資料夾
+description: 將翻譯雲服務應用於資料夾
 contentOwner: AG
 role: Administrator
-feature: Translation
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: 轉換
+exl-id: f17a33d7-eb2f-406b-8d6c-a3bf564c8702
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '386'
 ht-degree: 44%
 
 ---
 
-
 # 將翻譯雲服務應用於資料夾{#applying-translation-cloud-services-to-folders}
 
-[!DNL Adobe Experience Manager] 可讓您從您選擇的翻譯供應商取得雲端翻譯服務，以確保您的資產會根據您的需求進行翻譯。
+[!DNL Adobe Experience Manager] 可讓您從所選翻譯提供者取得雲端式翻譯服務，確保資產能根據您的需求進行翻譯。
 
 您可以直接將翻譯雲端服務套用至資產資料夾，以便在翻譯工作流程中使用。
 
 ## 應用翻譯服務{#applying-the-translation-services}
 
-將翻譯雲端服務直接套用至您的資產資料夾，不需要在您建立或更新翻譯工作流程時設定翻譯服務。
+直接將翻譯雲端服務套用至您的資產資料夾，無需在您建立或更新翻譯工作流程時設定翻譯服務。
 
 1. 從[!DNL Assets]用戶介面中，選擇要應用翻譯服務的資料夾。
 1. 在工具欄中，按一下&#x200B;**[!UICONTROL 屬性]**&#x200B;以顯示&#x200B;**[!UICONTROL 資料夾屬性]**&#x200B;頁。
@@ -33,27 +32,27 @@ ht-degree: 44%
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
-1. 選擇翻譯提供器的連接器。
+1. 選擇翻譯提供程式的連接器。
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. 在工具欄中，按一下&#x200B;**[!UICONTROL 保存]**，然後按一下&#x200B;**[!UICONTROL 確定]**&#x200B;關閉對話框。翻譯服務將應用於資料夾。
+1. 在工具欄中，按一下&#x200B;**[!UICONTROL Save]**，然後按一下&#x200B;**[!UICONTROL OK]**&#x200B;以關閉對話框。翻譯服務將應用於資料夾。
 
 ## 應用自定義翻譯連接器{#applying-custom-translation-connector}
 
 如果要為要用於翻譯工作流的翻譯服務應用自定義連接器。若要套用自訂連接器，請先從「封裝管理員」安裝連接器。然後，從雲端服務主控台設定連接器。在您設定連接器後，「套用轉譯服務」中所述的「雲端服務」標籤中的連接器清 [單中會顯示此連接器](transition-cloud-services.md#applying-the-translation-services)。在您應用自定義連接器並運行翻譯工作流後，翻譯項目的「 **[!UICONTROL Translation Summary]** 」 (翻譯摘要) 表徵圖會在heads **[!UICONTROL Provider]** and **[!UICONTROL Method下顯示連接器詳細資訊]**。
 
-1. 從「包管理器」安裝連接器。
-1. 按一下[!DNL Experience Manager]徽標，然後導航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL Cloud Services]**。
+1. 從「封裝管理器」安裝連接器。
+1. 按一下[!DNL Experience Manager]標誌，並導覽至&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**。
 1. 在「雲端服務」頁面的「 **[!UICONTROL 協力廠商服務]** 」下，找 **[!UICONTROL 出您安裝的連接器]** 。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. 按一下&#x200B;**[!UICONTROL Configure now]**&#x200B;連結以開啟&#x200B;**[!UICONTROL Create Configuration]**&#x200B;對話框。
+1. 按一下&#x200B;**[!UICONTROL 立即配置]**&#x200B;連結以開啟&#x200B;**[!UICONTROL 建立配置]**&#x200B;對話框。
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. 指定連接器的標題和名稱，然後按一下&#x200B;**[!UICONTROL 建立]**。 自訂連接器位於「套用轉譯服務」步驟5中所述「 **[!UICONTROL 雲端服務]** 」標籤的連 [接器清單中](#applying-the-translation-services)。
+1. 指定連接器的標題和名稱，然後按一下&#x200B;**[!UICONTROL Create]**。 自訂連接器位於「套用轉譯服務」步驟5中所述「 **[!UICONTROL 雲端服務]** 」標籤的連 [接器清單中](#applying-the-translation-services)。
 1. 在套用自訂連接器後，執行「 [建立翻譯專案](translation-projects.md) 」中所述的任何翻譯工作流程。驗證「項目」控制台中翻譯項 **[!UICONTROL 目的「翻譯摘要]** 」表徵圖中連接器的詳 **[!UICONTROL 細資訊]** 。
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
