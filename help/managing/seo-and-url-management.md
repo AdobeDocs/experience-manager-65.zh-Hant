@@ -1,8 +1,8 @@
 ---
-title: SEO和URL管理最佳實務
-seo-title: SEO和URL管理最佳實務
-description: 瞭解SEO最佳實務和建議，以便在AEM實作上達成這些目標。
-seo-description: 瞭解SEO最佳實務和建議，以便在AEM實作上達成這些目標。
+title: SEO和URL管理最佳作法
+seo-title: SEO和URL管理最佳作法
+description: 了解在AEM實作中達成這些目標的SEO最佳作法和建議。
+seo-description: 了解在AEM實作中達成這些目標的SEO最佳作法和建議。
 uuid: 943e76c4-bd88-4b52-bb43-db375eb89d23
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -10,18 +10,17 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 7c8f2cec-870b-41a8-8d98-70e29b495587
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c623724df8d849f4cc01f5dc134c775dc24dafc7
+exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3119'
 ht-degree: 98%
 
 ---
 
+# SEO和URL管理最佳作法{#seo-and-url-management-best-practices}
 
-# SEO和URL管理最佳實務{#seo-and-url-management-best-practices}
-
-搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案都需要解決SEO問題。
+搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案都需要解決SEO疑慮。
 
 本文件首先會說明在 AEM 實作中達成上述目標的幾項 [SEO 最佳作法](#seo-best-practices)與建議。接著，本文件會於第一節中再深入探討幾項更[複雜的實作步驟](#aem-configurations)。
 
@@ -401,4 +400,3 @@ Disallow: /
 * [https://www.internetmarketingninjas.com/blog/search-engine-optimization/301-redirects/](https://www.internetmarketingninjas.com/blog/search-engine-optimization/301-redirects/)
 * [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/dispatcher/redirectTester](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/dispatcher/redirectTester)
 * [https://adobe-consulting-services.github.io/](https://adobe-consulting-services.github.io/)
-
