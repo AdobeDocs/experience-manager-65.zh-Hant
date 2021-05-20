@@ -1,37 +1,36 @@
 ---
-title: 新的演算和提交服務
-seo-title: 新的演算和提交服務
-description: 在Workbench中定義演算和提交服務，以根據XDP表單的存取裝置，將XDP表單轉換為HTML或PDF。
-seo-description: 在Workbench中定義演算和提交服務，以根據XDP表單的存取裝置，將XDP表單轉換為HTML或PDF。
+title: 新的呈現和提交服務
+seo-title: 新的呈現和提交服務
+description: 在Workbench中定義轉譯和提交服務，以根據從存取的裝置將XDP表單轉譯為HTML或PDF。
+seo-description: 在Workbench中定義轉譯和提交服務，以根據從存取的裝置將XDP表單轉譯為HTML或PDF。
 uuid: 7f8348a1-753c-4dab-87d5-4a4a301198dd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 46de0101-9607-4429-84c3-7c1f34d2da27
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 0%
 
 ---
 
-
-# 新演算和提交服務{#new-render-and-submit-service}
+# 新的呈現和提交服務{#new-render-and-submit-service}
 
 ## 簡介 {#introduction}
 
-在Workbench中，當您定義`AssignTask`作業時，請指定特定表單（XDP或PDF表單）。 此外，也可透過動作設定檔指定一組Render和Submit服務。
+在Workbench中，當您定義`AssignTask`操作時，請指定特定表單（XDP或PDF表單）。 另外，通過操作配置檔案指定一組呈現和提交服務。
 
 XDP可轉譯為PDF表單或HTML表單。 新功能包括：
 
-* 將XDP表單演算並送出為HTML
-* 在桌上型電腦上以PDF格式演算XDP表單，在行動裝置上以HTML格式（例如iPad）提交XDP表單
+* 將XDP表單轉譯為HTML並提交
+* 在桌上型電腦上以PDF格式呈現並提交XDP表單，在行動裝置上以HTML格式呈現（例如iPad）
 
 ### 新的HTML Forms服務{#new-html-forms-service}
 
-全新的HTML Forms服務運用Forms中的新功能，支援將XDP表單轉換為HTML。 新的HTML Forms服務公開下列方法：
+新的HTML Forms服務運用Forms的新功能，支援將XDP表單轉譯為HTML。 新的HTML Forms服務公開下列方法：
 
 ```java
 /*
@@ -56,15 +55,15 @@ public String generateFormURL(TaskContext taskContext, String profileName);
 public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profileName, Map<String,Object> runtimeMap);
 ```
 
-有關Mobile Form Profiles的更多資訊，請參閱[建立自訂描述檔](/help/forms/using/custom-profile.md)。
+如需行動表單設定檔的詳細資訊，請參閱[建立自訂設定檔](/help/forms/using/custom-profile.md)。
 
-## 新的HTML表單演算與提交程式{#new-html-form-render-amp-submit-processes}
+## 新的HTML表單呈現和提交流程{#new-html-form-render-amp-submit-processes}
 
-對於每個「AssignTask」操作，都可以指定表單的Render和Submit進程。 這些進程由TaskManager `renderForm`和`submitForm`API調用，以允許自定義處理。 新HTML表單的這些進程語義：
+對於每個「AssignTask」操作，指定使用表單呈現和提交流程。 TaskManager `renderForm`和`submitForm`API調用這些進程以允許自定義處理。 新HTML表單的這些進程的語義：
 
-### 演算新的HTML表單{#render-a-new-html-form}
+### 呈現新的HTML表單{#render-a-new-html-form}
 
-與每個演算程式一樣，轉換HTML的新程式有下列I/O參數-
+呈現HTML的新程式與每個呈現程式一樣，具有以下I/O參數 — 
 
 輸入 - `taskContext`
 
@@ -72,15 +71,15 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 輸出 - `outFormDoc`
 
-此方法模擬NewHTMLFormsService的`renderHTMLForm` API的確切行為。 它會呼叫`generateFormURL` API，以取得表單的HTML轉譯URL。 然後，它會以下列索引鍵或值填入runtimeMap:
+此方法模擬NewHTMLFormsService的`renderHTMLForm` API的確切行為。 它會呼叫`generateFormURL` API，以取得表單的HTML轉譯URL。 接著會以下列索引鍵或值填入runtimeMap:
 
-new html form = true
+新html表單= true
 
 newHTMLFormURL =呼叫`generateFormURL` API後傳回的URL。
 
 ### 提交新的HTML表單{#submit-a-new-html-form}
 
-提交新HTML表格的程式可與下列I/O參數搭配使用-
+提交新HTML表單的程式可搭配下列I/O參數使用 — 
 
 輸入 - `taskContext`
 
@@ -90,77 +89,77 @@ newHTMLFormURL =呼叫`generateFormURL` API後傳回的URL。
 
 該進程將`outputDocument`設定為從`taskContext`檢索的`inputDocument`。
 
-## 預設演算或提交程式，以及動作描述檔{#default-render-or-submit-processes-and-action-profiles}
+## 預設呈現或提交進程，以及操作配置檔案{#default-render-or-submit-processes-and-action-profiles}
 
-預設的「轉譯與送出」服務可讓支援在桌上型電腦上轉譯PDF，並在行動裝置(iPad)上轉譯HTML。
+預設的「轉譯」和「提交」服務可支援在桌上型電腦上轉譯PDF，並在行動裝置(iPad)上轉譯HTML。
 
-### 預設渲染表單{#default-render-form}
+### 預設呈現表單{#default-render-form}
 
-此程式可順暢地在多個平台上轉換XDP表單。 此程式會從`taskContext`擷取使用者代理，並使用資料來呼叫程式來轉換HTML或PDF。
+此程式可順暢地在多個平台上轉譯XDP表單。 進程從`taskContext`中檢索用戶代理，並使用資料調用進程以呈現HTML或PDF。
 
 ![default-render-form](assets/default-render-form.png)
 
 ### 預設提交表單{#default-submit-form}
 
-此程式可順暢地在多個平台上提交XDP表格。 它會從`taskContext`擷取使用者代理，並使用資料來呼叫程式以送出HTML或PDF。
+此過程可在多個平台上無縫提交XDP表單。 它會從`taskContext`擷取使用者代理，並使用資料呼叫程式以提交HTML或PDF。
 
 ![default-submit-form](assets/default-submit-form.png)
 
-## 將行動表單的轉換從PDF切換為HTML {#switch-the-rendering-of-mobile-forms-from-pdf-to-html}
+## 將行動表單的轉譯從PDF切換為HTML {#switch-the-rendering-of-mobile-forms-from-pdf-to-html}
 
-瀏覽器逐漸撤回對NPAPI增效模組的支援，包括Adobe Acrobat和Adobe Acrobat Reader的增效模組。 您可以使用下列步驟，將行動表單的轉換從PDF變更為HTML:
+瀏覽器正逐步停止支援NPAPI型外掛程式，包括Adobe Acrobat和Adobe AcrobatReader的外掛程式。 您可以使用下列步驟，將行動表單的轉譯從PDF變更為HTML:
 
 1. 以有效使用者身分登入Workbench。
 1. 選擇&#x200B;**檔案** > **獲取應用程式**。
 
    將顯示「獲取應用程式」對話框。
 
-1. 選擇要更改移動表單渲染的應用程式，然後按一下&#x200B;**確定**。
-1. 開啟要更改渲染的過程。
-1. 開啟定位的起點／工作，導覽至「簡報與資料」區段，然後按一下「管理動作描述檔」**。**
+1. 選擇要更改其移動表單呈現的應用程式，然後按一下&#x200B;**確定**。
+1. 開啟要更改其呈現的過程。
+1. 開啟目標起始點/任務，導覽至「Presentation &amp; Data」區段，然後按一下「**管理動作設定檔**」。
 
-   此時將顯示「管理操作配置檔案」對話框。
-1. 將預設演算描述檔組態從PDF變更為HTML，然後按一下「確定」。****
-1. 簽入流程。
+   將顯示管理操作配置檔案對話框。
+1. 將預設的渲染配置檔案配置從PDF更改為HTML，然後按一下&#x200B;**OK**。
+1. 簽入過程。
 1. 重複這些步驟以更改其他進程的渲染。
-1. 部署與您已變更的程式相關的應用程式。
+1. 部署與您更改的流程相關的應用程式。
 
 ### 預設操作配置檔案{#default-action-profile}
 
-預設的「動作描述檔」會將XDP表單轉換為PDF。 現在，此行為已變更為使用「預設演算表單」和「預設提交表單」程式。
+預設的「動作描述檔」將XDP表單轉譯為PDF。 此行為現在已變更為使用「預設呈現表單」和「預設提交表單」流程。
 
-有關動作設定檔的常見問題如下：
+有關動作設定檔的一些常見問題如下：
 
-![gen_question_b_20](assets/gen_question_b_20.png) **什麼Render / Submit進程將立即可用？**
+![gen_question_b_20](assets/gen_question_b_20.png) **什麼呈現/提交程式將可立即使用？**
 
-* 演算指南（不建議使用參考線）
-* 演算表單指南
-* 轉換PDF表單
-* 演算HTML表單
-* 演算新HTML表格（新）
-* 預設演算表單（新）
+* 轉譯指南（不建議使用參考線）
+* 轉譯表單指南
+* 轉譯PDF表單
+* 呈現HTML表單
+* 呈現新的HTML表單（新）
+* 預設呈現表單（新）
 
-此外，還有相當的「提交」程式。
+此外，還有同等的提交流程。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **What Action Profiles will be available of the box?**
+![gen_question_b_20](assets/gen_question_b_20.png) **哪些動作設定檔將可立即使用？**
 
-對於XDP表單：
+針對XDP Forms:
 
-* 預設（使用新的「預設演算／提交」程式來演算／提交）
+* 預設（使用新的「預設呈現/提交」流程呈現/提交）
 
-![gen_question_b_20](assets/gen_question_b_20.png) **流程設計人員需要執行哪些工作，才能讓表單以HTML格式在裝置上呈現，以PDF格式在案頭上呈現？**
+![gen_question_b_20](assets/gen_question_b_20.png) **流程設計人員需要執行哪些操作，才能在裝置上以HTML和案頭上以PDF格式呈現表單？**
 
-沒什麼。 預設的「動作描述檔」會自動選取，並自動處理演算模式。
+沒有。 系統會自動選取預設的「動作描述檔」，並自動處理轉譯模式。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **要在案頭上以HTML格式呈現表單，需要執行哪些動作？**
+![gen_question_b_20](assets/gen_question_b_20.png) **需要執行哪些操作才能在案頭的HTML中呈現表單？**
 
-用戶必須為預設配置檔案選擇HTML單選按鈕。
+使用者必須為預設設定檔選取HTML選項按鈕。
 
-![gen_question_b_20變更預](assets/gen_question_b_20.png) **設動作設定檔行為時，是否會有任何升級影響？**
+![gen_question_b_20](assets/gen_question_b_20.png) **是否對更改預設操作配置檔案行為有任何升級影響？**
 
-是的，因為先前與預設動作描述檔相關聯的演算和提交服務不同，所以這些服務會視為現有表格的自訂。 按一下「還原預設值&#x200B;**」時，會改為設定預設演算和送出服務。**
+是，由於先前與預設動作設定檔相關聯的呈現和提交服務不同，因此這些會視為現有表單的自訂。 按一下「**還原預設值**」時，會改為設定預設的呈現和提交服務。
 
-如果您已修改現有的Render或Submit PDF Form服務或已建立自訂服務（例如custom1），現在想要對HTML轉譯使用相同的功能。 您需要複製新的演算或提交服務（如custom2），並套用類似的自訂設定。 現在，請修改XDP的動作設定檔，以開始使用custom2服務，而非custom1來呈現或送出。
+如果您已修改現有的Render或Submit PDF Form服務或已建立自訂服務（例如custom1），且現在想要對HTML轉譯使用相同的功能。 您需要複製新的呈現或提交服務（如custom2），並將類似的自訂套用至這些服務。 現在，修改XDP的動作設定檔，以開始使用custom2服務，而非自訂1，以便呈現或提交。
 
-流程設計人員需要做什麼，才能讓表單在裝置上以HTML格式呈現，在案頭上以PDF格式呈現？
-流程設計人員需要做什麼，才能讓表單在裝置上以HTML格式呈現，在案頭上以PDF格式呈現？
+流程設計人員需要執行什麼操作才能使表單以HTML格式呈現在裝置上，以PDF格式呈現在案頭上？
+流程設計人員需要執行什麼操作才能使表單以HTML格式呈現在裝置上，以PDF格式呈現在案頭上？
