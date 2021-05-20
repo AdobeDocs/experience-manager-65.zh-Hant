@@ -9,34 +9,33 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
-
 # 動態填入下拉式清單{#dynamically-populating-drop-down-lists}
 
 ## 必備條件 {#prerequisites}
 
-* [建立OSGI組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
+* [建立OSGI套件組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
 * [開發AEM元件](/help/sites-developing/components.md)
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 * [製作最適化表單](../../forms/using/introduction-forms-authoring.md)
 
 ## 動態填入下拉式清單的程式{#procedure-to-dynamically-populate-drop-down-lists}
 
-請考慮您要根據您在&#x200B;**Country**&#x200B;下拉式清單中選取的值填入&#x200B;**State**&#x200B;下拉式清單的藍本。 如果您在&#x200B;**Country**&#x200B;下拉式清單中選取「澳洲」，則&#x200B;**State**&#x200B;下拉式清單會顯示「澳洲」內的狀態。 以下過程說明如何完成此任務。
+假設您要根據您在&#x200B;**Country**&#x200B;下拉式清單中選取的值，填入&#x200B;**State**&#x200B;下拉式清單的案例。 如果您在&#x200B;**Country**&#x200B;下拉式清單中選取Australia，則&#x200B;**State**&#x200B;下拉式清單會顯示Australia內的州。 以下過程說明如何完成此任務。
 
 1. 使用下列模組建立專案：
 
-   * 包含填入下拉式清單的邏輯的套件，在本例中為servlet。
-   * 內容，內嵌。jar檔案並具有下拉式資源。 Servlet指向此資源。
+   * 包含要填入下拉式清單邏輯的套件組合（在此例中為servlet）。
+   * 內容內嵌.jar檔案，且包含下拉式資源。 Servlet指向此資源。
 
-1. 根據請求參數Country編寫servlet，該參數將返回包含國家／地區內狀態名稱的陣列。
+1. 根據請求參數「國家/地區」編寫servlet，其會傳回包含國家/地區內狀態名稱的陣列。
 
    ```java
    @Component(metatype = false)
@@ -147,16 +146,16 @@ ht-degree: 0%
    }
    ```
 
-1. 在應用程式中特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 請確定節點的`sling:resourceType`參數與servlet指向的參數(/apps/populatedropdown)相同。
+1. 在應用程式中特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 請確定節點的`sling:resourceType`參數與servlet指向的參數相同(/apps/populatedropdown)。
 
    ![建立下拉式節點](assets/dropdown-node.png)
 
-1. 封裝內容節點並將。jar檔案內嵌在特定位置（例如/apps/myfolder/demo/install/）。 在伺服器上部署相同的檔案。
-1. 建立最適化表單，並新增兩個下拉式清單：國家／地區和州。 「國家／地區」清單可包含國家／地區名稱。 「狀態」清單可動態填入您在第一個清單中選取之國家／地區的狀態名稱。
+1. 封裝內容節點並將.jar檔案內嵌在特定位置（例如/apps/myfolder/demo/install/）。 在伺服器上部署相同的檔案。
+1. 建立最適化表單，並新增兩個下拉式清單：國家/地區和州。 國家/地區清單可以包含國家/地區的名稱。 「州」清單可動態填入您在第一個清單中選取之國家/地區的州名稱。
 
-   新增要顯示在「國家／地區」清單中的國家／地區名稱。 在「國家／地區」清單中，新增指令碼，以根據「國家／地區」清單中的國家／地區名稱填入指令碼。
+   新增國家/地區名稱以在「國家/地區」清單中顯示。 在「國家/地區」清單中，新增指令碼，以根據「國家/地區」清單中的國家/地區名稱填入指令碼。
 
-   ![新增國](assets/country-dropdown.png) ![家／地區名稱新增指令碼以填](assets/state-dropdown.png) ![入州名國家／地區和州下拉式清單以收集](assets/2dropdowns.png)
+   ![新增國](assets/country-dropdown.png) ![家/地區名稱新增指令碼以填入州](assets/state-dropdown.png) ![名稱國家/地區和州下拉式清單以收集](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(
@@ -174,6 +173,6 @@ ht-degree: 0%
    .responseText);
    ```
 
-內容套件包含範例最適化表單(demo/AFdemo)，並實作上述程式碼。
+內容套件包含已實作上述程式碼的範例最適化表單（示範/AFdemo）。
 
 [取得檔案](assets/dropdown-demo-content-1.0.1-snapshot.zip)
