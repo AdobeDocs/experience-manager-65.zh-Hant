@@ -1,33 +1,32 @@
 ---
 title: 命名慣例
 seo-title: 命名慣例
-description: Java包名稱中的連字元
-seo-description: Java包名稱中的連字元
+description: Java包名稱中的連字型大小
+seo-description: Java包名稱中的連字型大小
 uuid: 48086e6c-c35b-4ffc-b216-d01feca7bf9a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 5271feb9-70c6-4c82-8ac7-34a63d80e3aa
-translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+exl-id: 863900c3-5fe8-41a3-a151-466d0c62eeea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# 命名慣例{#naming-conventions}
 
-# 命名約定{#naming-conventions}
+## Java包名稱{#hyphens-in-java-package-name}中的連字型大小
 
-## Java包名{#hyphens-in-java-package-name}中的連字元
+為Java類建立位置時，請注意，包名稱必須與儲存庫資料夾位置的名稱匹配，並且路徑中的任何連字型大小都會正確轉義。
 
-建立Java類的位置時，請注意，包名必須與儲存庫資料夾位置的名稱匹配，路徑中的任何連字元都正確逸出。
+雖然在AEM開發中建議在存放庫項目名稱中使用連字型大小，但在Java套件名稱中使用連字型大小是非法的。
 
-雖然在AEM開發中建議在儲存庫項目名稱中使用連字型大小，但連字型大小在Java套件名稱中是非法的。
+基礎的CRX平台必須能夠區分實際的底線`_ `和連字型大小`-`。 因此，在JCR中，連字型大小必須替換為其unicode值(u002d)，並以下划線`_`逸出。
 
-基礎CRX平台必須能夠區分實際下划線`_ `和連字元`-`。 因此，在JCR中，連字型大小必須以其unicode值(u002d)取代，並以底線`_`逸出。
+例如，如果儲存庫路徑為&#x200B;**/apps/my-example/component/info/Info.java**，則包名稱應為`java package apps.my_002dexample.component.info;`
 
-例如，如果儲存庫路徑為&#x200B;**/apps/my-example/component/info/Info.java**，則包名應為`java package apps.my_002dexample.component.info;`
-
-請注意，下划線同樣必須逸出，這樣`_`才會變為`_005f`。
+請注意，底線也必須同樣逸出，使`_`變成`_005f`。
