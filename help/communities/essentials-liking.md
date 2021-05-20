@@ -1,6 +1,6 @@
 ---
-title: 按贊基本功能
-seo-title: 按贊基本功能
+title: 按贊要點
+seo-title: 按贊要點
 description: 按贊元件概觀
 seo-description: 按贊元件概觀
 uuid: 89f16859-c901-4090-8e16-363b95c508de
@@ -10,41 +10,40 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: ef314385-cd5c-411c-91df-83691a81c1bc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
+# 按贊要點{#liking-essentials}
 
-# 按贊基本功能{#liking-essentials}
+按贊元件（[tally](tally.md)子類）是一個有用的工具，它允許成員通過僅選擇心臟表徵圖來表達對特定內容的正面意見。
 
-按贊元件（[tally](tally.md)子類別）是一種有用的工具，可讓成員只要選擇心臟圖示，就能對特定內容表達正面意見。
+允許將贊元件的多個例項放在相同頁面上；每個實例都必須配置唯一的`tally name`屬性。
 
-允許在同一頁放置多個按贊元件例項；每個實例都必須配置有唯一的`tally name`屬性。
+不支援匿名張貼贊。 網站訪客必須註冊並登入才能參與按贊。 已登入的訪客（成員）可隨時切換為開啟或關閉。
 
-不支援匿名張貼類似內容。 網站訪客必須註冊並登入才能參與按贊。 登入的訪客（會員）隨時可以按贊或關閉。
-
-## 客戶端{#essentials-for-client-side}的基本功能
+## 客戶端{#essentials-for-client-side}的要點
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>social/tally/components/hbs/贊</td>
+   <td>social/tally/components/hbs/like</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>included</strong></a></td>
-   <td>是——在<i>design </i>模式中可編輯屬性</td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
+   <td>是 — 可在<i>design </i>模式中編輯屬性</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
    <td> cq.social.hbs.liking</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td><p> /libs/social/tally/components/hbs/liking/liking.hbs<br /> /libs/social/tally/components/hbs/liking/activity-icon.hbs<br /> /libs/social/tally/components/hbs/liking/activity-title.hbs</p> </td>
   </tr>
   <tr>
@@ -60,27 +59,26 @@ ht-degree: 0%
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端{#essentials-for-server-side}的基本工具
+## 伺服器端{#essentials-for-server-side}的要點
 
-* [計數API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [Tally API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
 * [計數端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
-### 存取已張貼的投票(UGC){#accessing-posted-voting-ugc}
+### 訪問已發佈的投票(UGC){#accessing-posted-voting-ugc}
 
 UGC應使用其中一種標準的協調方法來協調。
 請參閱[協調使用者產生的內容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，使用[通用商店](working-with-srp.md)做為UGC，不論選擇的儲存選項（例如ASRP、MSRP或JSRP），都可程式化存取UGC。
+自AEM 6.1社群起，UGC使用[公用商店](working-with-srp.md)包括程式化存取UGC，而不論選擇的儲存選項（例如ASRP、MSRP或JSRP）。
 
-**UGC在儲存庫中的位置和格式可能會變更，但不會發出警告**。
+**UGC在存放庫中的位置和格式可能會變更，恕不另行警告**。
 
 請參閱：
 
-* [儲存資源提供方概述](srp.md) -簡介和儲存庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP實用程式方法和示例。
-* [使用SRP](accessing-ugc-with-srp.md) -編碼准則存取UGC。
-* [SocialUtils重構](socialutils.md) -將淘汰的公用程式方法對應至目前的SRP公用程式方法。
-
+* [儲存資源提供程式概述](srp.md)  — 簡介和儲存庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 編碼准則。
+* [SocialUtils重構](socialutils.md)  — 將棄用的公用程式方法對應至目前的SRP公用程式方法。
