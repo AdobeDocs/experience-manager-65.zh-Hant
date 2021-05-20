@@ -1,48 +1,47 @@
 ---
 title: 單頁應用程式
 seo-title: 單頁應用程式
-description: 請依照本頁來瞭解單頁應用程式，也就是說，您可以建立執行與案頭或行動應用程式相同的應用程式。
-seo-description: 請依照本頁來瞭解單頁應用程式，也就是說，您可以建立執行與案頭或行動應用程式相同的應用程式。
+description: 請依照本頁了解單頁應用程式，即您可以建立執行與案頭或行動應用程式相同的應用程式。
+seo-description: 請依照本頁了解單頁應用程式，即您可以建立執行與案頭或行動應用程式相同的應用程式。
 uuid: d1865e79-6e7c-4149-95c0-556e61478b01
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: a5b5e40e-2457-45fe-9632-baf5008fe8bf
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: daf7bf39-a105-46eb-ab7b-1c59484949e2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1015'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # 單頁應用程式{#single-page-applications}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
 
-[單頁應用程式](https://en.wikipedia.org/wiki/Single-page_application) (SPA)已達到臨界規模，被廣泛認為是運用Web技術建立順暢體驗的最有效模式。透過遵循SPA模式，您可以建立與案頭或行動應用程式相同的應用程式，但由於應用程式以開放Web標準為基礎，因此可觸及到多種裝置平台和外形規格。
+[單頁應用程式](https://en.wikipedia.org/wiki/Single-page_application) (SPA)已達到臨界量，被廣泛視為使用Web技術建立順暢體驗的最有效模式。通過遵循SPA模式，您可以建立一個應用程式，該應用程式的效能與案頭或移動應用程式相同，但由於其在開放Web標準中的基礎，它可以到達多個設備平台和外形因素。
 
-一般而言，SPA的效能會比傳統的頁面型網站更好，因為SPA通常只會載入一次&#x200B;**完整的HTML頁面（包括CSS、JS和支援字型內容），然後只載入每次應用程式狀態變更時所需的內容。**&#x200B;此狀態變更的必要項目可能會視所選技術而有所不同，但通常會包含單一HTML片段以取代現有的「檢視」，以及執行JS程式碼區塊以連線新檢視並執行任何可能必要的用戶端範本轉換。 支援範本快取機制，或使用Adobe PhoneGap離線存取範本內容，可進一步改善此狀態變更的速度。
+一般而言，SPA的效能會比傳統的頁面型網站來得高，因為這些網站通常只會載入一次完整的HTML頁面&#x200B;**（包括CSS、JS和支援的字型內容），然後只會載入每次應用程式發生狀態變更時的必要項目。**&#x200B;此狀態變更的必要條件可能會根據所選技術集而有所不同，但通常包含單一HTML片段來取代現有的「檢視」，以及執行JS程式碼區塊以匯整新檢視並執行任何可能必要的用戶端範本轉譯。 支援範本快取機制，或如果使用Adobe PhoneGap，甚至離線存取範本內容，可進一步改善此狀態變更的速度。
 
-AEM 6.1支援透過AEM Apps建立和管理SPA。 本文將介紹SPA的概念，以及它們如何運用[AngularJS](https://angularjs.org/)將您的品牌帶入App Store和Google Play。
+AEM 6.1支援透過AEM應用程式建置和管理SPA。 本文將介紹SPA背後的概念，以及運用[AngularJS](https://angularjs.org/)將您的品牌帶入App Store和Google Play的方式。
 
 ## AEM應用程式中的SPA {#spa-in-aem-apps}
 
-AEM Apps中的單頁應用程式架構可讓AngularJS應用程式發揮高效能，同時讓作者（或其他非技術人員）透過觸控最佳化拖放編輯器環境來建立和管理應用程式的內容，而傳統上，編輯器環境是專為管理網站而保留的。 已使用AEM建立網站？ 您會發現，使用AEM Apps可輕鬆重複使用您的內容、元件、工作流程、資產和權限。
+AEM應用程式中的單頁應用程式架構可支援AngularJS應用程式的高效能，同時讓作者（或其他非技術人員）能透過觸控最佳化的拖放編輯器環境來建立和管理應用程式的內容，此環境傳統上是專為管理網站而保留。 已使用AEM建立網站？ 您會發現，使用AEM應用程式可輕鬆重複使用您的內容、元件、工作流程、資產和權限。
 
 ## AngularJS應用程式模組{#angularjs-application-module}
 
-AEM Apps會為您處理大部分的AngularJS設定，包括將應用程式的頂層模組組合在一起。 預設情況下，此模組名為&#39;AEMAngularApp&#39;，負責生成該模組的指令碼可在/libs/mobileapps/components/angular/ng-page/angular-app-module.js.jsp中找到（並覆蓋）。
+AEM應用程式可為您處理大部分的AngularJS設定，包括將應用程式的頂層模組整合在一起。 預設情況下，此模組名為&#39;AEMAngularApp&#39;，負責生成該模組的指令碼可在/libs/mobileapps/components/angular/ng-page/angular-app-module.js.jsp找到（並覆蓋）。
 
-應用程式初始化的一部分包括指定應用程式所依賴的AngularJS模組。 應用程式使用的模組清單是由位於/libs/mobileapps/components/angular/ng-page/angular-module-list.js.jsp的指令碼所指定，並可由您自己應用程式的頁面元件覆蓋，以納入您應用程式需要的任何其他AngularJS模組。 例如，請比較上述指令碼與Geometrixx實作(位於/apps/geometrixx-outdoors-app/components/angular/ng-geometrixx-page/angular-module-list.js.jsp)。
+應用程式初始化的一部分包括指定應用程式所仰賴的AngularJS模組。 應用程式使用的模組清單是由/libs/mobileapps/components/angular/ng-page/angular-module-list.js.jsp上的指令碼指定，並可由您自己的應用程式的頁面元件覆蓋，以提取應用程式需要的任何其他AngularJS模組。 例如，將上述指令碼與Geometrixx實作(位於/apps/geometrixx-outdoors-app/components/angular/ng-geometrixx-page/angular-module-list.js.jsp)作比較。
 
-為支援應用程式中不同狀態之間的導覽，angular-app-module指令碼會重複您頂層應用程式頁面的所有子頁面，以產生一組「路由」，並設定Angular的$routeProvider服務上的每條路徑。 如需實際運作的範例，請參閱Geometrixx Outdoors應用程式範例產生的角度應用程式模組指令碼：（連結需要本機例項）[http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js](http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js)
+為了支援在應用程式中的不同狀態之間進行導覽，angular應用程式模組指令碼會反覆顯示頂層應用程式頁面的所有子系頁面，以產生一組「路由」，並設定Angular的$routeProvider服務上的每個路徑。 如需實務外觀的範例，請參閱angular應用程式範例產生的Geometrixx Outdoors應用程式模組指令碼：（連結需要本機例項）[http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js](http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js)
 
-深入到生成的AEMAngularApp，您將發現一系列指定如下的路由：
+深入到生成的AEMAngularApp，您會發現一系列指定路由，如下所示：
 
 ```xml
 $routeProvider
@@ -52,15 +51,15 @@ $routeProvider
 })
 ```
 
-上述範例特別說明將參數傳入路徑的範例。 在此範例中，我們指出當要求符合指定模式的路徑(/content/phonegap/geometrixx-outdoors/en/home/products/:id)時，應由home/products.template.html範本處理，並使用&#39;contentphoneggeometrixxoutsenhomeproducts&#39;控制器。
+上述範例特別說明將參數傳遞為路徑一部分的範例。 在此範例中，我們指出當請求符合指定模式(/content/phonegap/geometrixx-outdoors/en/home/products/:id)的路徑時，應由home/products.template.html範本處理，並使用「contentphonegapegeometrixxoutdoorssenhomeproducts」控制器。
 
-templateUrl屬性指定了在請求此路由時要載入的模板。 此範本將包含AEM元件（已包含在頁面上）的HTML，以及連接應用程式用戶端所需的任何AngularJS指令。 如需Geometrixx元件中AngularJS指令的範例，請檢視swipe-carousel的template.jsp(/apps/geometrixx-outdoors-app/components/swipe-carousel/template.jsp)的第45行。
+當請求此路由時要載入的模板由templateUrl屬性指定。 此範本將包含頁面上已包含之AEM元件的HTML，以及連接應用程式用戶端所需的任何AngularJS指示。 以Geometrixx元件中的AngularJS指令為例，請查看swipe-carousel的template.jsp(/apps/geometrixx-outdoors-app/components/swipe-carousel/template.jsp)的第45行。
 
 ## 頁面控制器{#page-controllers}
 
-在Angular自己的單字中，「控制器是用於增大角度範圍的JavaScript建構子。」 ([source](https://docs.angularjs.org/guide/controller))AEM App中的每個頁面都會自動連線至控制器，而控制器可讓任何指定`angular`的`frameworkType`控制器加以擴充。 以ng-text元件為例(/libs/mobileapps/components/angular/ng-text)，包括cq:template節點，可確保每次將此元件新增至包含此重要屬性的頁面時，都能使用此節點。
+在Angular自己的單詞中，「控制器是JavaScript建構函式，用於擴大Angular範圍。」 ([source](https://docs.angularjs.org/guide/controller))AEM應用程式中的每個頁面都會自動連線至控制器，該控制器可供任何指定`angular`的`frameworkType`控制器擴充。 以ng-text元件為例(/libs/mobileapps/components/angular/ng-text)，包括cq:template節點，可確保每次將此元件新增至頁面時，其中都包含這個重要屬性。
 
-如需更複雜的控制器範例，請開啟ng-template-page controller.jsp指令碼（位於/apps/geometrixx-outdoors-app/components/angular/ng-template-page）。 特別感興趣的是執行時產生的Javascript程式碼，其呈現如下：
+如需更複雜的控制器範例，請開啟ng-template-page controller.jsp指令碼(位於/apps/geometrixx-outdoors-app/components/angular/ng-template-page)。 特別感興趣的是執行時產生的javascript程式碼，其轉譯如下：
 
 ```xml
 // Controller for page 'products'
@@ -83,10 +82,10 @@ templateUrl屬性指定了在請求此路由時要載入的模板。 此範本�
 ])
 ```
 
-在上述範例中，您會注意到我們正從`$routeParams`服務中擷取參數，然後將其按摩至儲存JSON資料的目錄結構。 以此方式處理sku `id`，我們可提供單一產品範本，以呈現數千種不同產品的產品資料。 這是一個可擴充性大得多的模型，它要求在（可能）龐大的產品資料庫中，每個項目都有一條單獨的路由。
+在上述範例中，您會注意到，我們正在從`$routeParams`服務中取用參數，然後將其按摩至儲存JSON資料的目錄結構中。 透過此方式處理`id`，我們可以提供單一產品範本，為可能數千種不同的產品呈現產品資料。 這是一個可擴充性更強的模型，它要求（可能）大規模產品資料庫中的每個項目都有單獨的路由。
 
-這裡還有兩個元件：ng-product會利用其從上述`$http`呼叫中擷取的資料來擴大範圍。 此頁上也有ng-image，這反過來也會增加範圍，並增加它從回應中擷取的值。 根據Angular公司的`$http`服務，每個元件將耐心等待，直到請求完成並完成其建立的承諾。
+此處還有兩個元件：ng-product會透過其從上述`$http`呼叫中擷取的資料來擴大範圍。 此頁面上也有ng-image，這反過來也會以它從回應中擷取的值來擴大範圍。 根據Angular的`$http`服務，每個元件將耐心等待，直到請求完成並完成其建立的承諾。
 
 ## 後續步驟{#the-next-steps}
 
-瞭解「單頁應用程式」後，請參閱「使用PhoneGap CLI開發應用程式」[。](/help/mobile/phonegap-apps-pg-cli.md)
+了解單頁應用程式後，請參閱[使用PhoneGap CLI開發應用程式](/help/mobile/phonegap-apps-pg-cli.md)。
