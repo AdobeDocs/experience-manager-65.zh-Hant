@@ -1,25 +1,24 @@
 ---
-title: 最適化表單關鍵字
-seo-title: 最適化表單關鍵字
-description: 您不能在最適化表單中將這些保留字詞當做識別碼。
-seo-description: 您不能在最適化表單中將這些保留字詞當做識別碼。
+title: 適用性表單關鍵字
+seo-title: 適用性表單關鍵字
+description: 您無法在最適化表單中將這些保留字當作識別碼。
+seo-description: 您無法在最適化表單中將這些保留字當作識別碼。
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 適用性表單
+exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 4%
 
 ---
 
+# 適用性表單關鍵字{#adaptive-forms-keywords}
 
-# 最適化表單關鍵字{#adaptive-forms-keywords}
-
-最適化表單關鍵字是預先定義、保留的識別碼，對最適化表單有特殊意義。 您無法在最適化表單中使用這些關鍵字作為識別碼。 下表列出所有為最適化表單保留識別碼的關鍵字。
+適用性表單關鍵字是預先定義、保留的識別碼，對適用性表單有特殊意義。 您無法在適用性表單中將這些關鍵字當作識別碼。 下表列出所有為適用性表單保留識別碼的關鍵字。
 
 <table>
  <tbody>
@@ -56,7 +55,7 @@ ht-degree: 4%
   <tr>
    <td><p>calcExp</p> </td>
    <td><p>queueExpressions</p> </td>
-   <td><p>實例</p> </td>
+   <td><p>例項</p> </td>
   </tr>
   <tr>
    <td><p>標題</p> </td>
@@ -115,7 +114,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><p>validateExpMessage</p> </td>
-   <td><p>選項Exp</p> </td>
+   <td><p>optionsExp</p> </td>
    <td><p>somExpression</p> </td>
   </tr>
   <tr>
@@ -136,7 +135,7 @@ ht-degree: 4%
   <tr>
    <td><p>高度</p> </td>
    <td><p>showComment</p> </td>
-   <td><p>visel</p> </td>
+   <td><p>可見</p> </td>
   </tr>
   <tr>
    <td><p>cssClassName</p> </td>
@@ -189,17 +188,17 @@ ht-degree: 4%
    <td><p>setFocus</p> </td>
   </tr>
   <tr>
-   <td><p>completionExp</p> </td>
+   <td><p>completeExp</p> </td>
    <td><p>sectionTitle</p> </td>
    <td><p>activeInstance</p> </td>
   </tr>
   <tr>
-   <td><p>completionExpReq</p> </td>
-   <td><p>completionScript</p> </td>
+   <td><p>completeExpReq</p> </td>
+   <td><p>completeScript</p> </td>
    <td><p>activePart</p> </td>
   </tr>
   <tr>
-   <td><p>工具欄</p> </td>
+   <td><p>工具列</p> </td>
    <td><p>completionBeforeMessage</p> </td>
    <td><p>isLastPart</p> </td>
   </tr>
@@ -210,7 +209,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><p>instanceIndex</p> </td>
-   <td><p>completionSuccessScript</p> </td>
+   <td><p>completeSuccessScript</p> </td>
    <td><p>currentActivePart</p> </td>
   </tr>
   <tr>
@@ -224,7 +223,7 @@ ht-degree: 4%
    <td><p>sectionFields</p> </td>
   </tr>
   <tr>
-   <td><p>reactedFromService</p> </td>
+   <td><p>rechatedFromService</p> </td>
    <td><p>repeatablePanelId</p> </td>
    <td><p>getSelectedIndex</p> </td>
   </tr>
@@ -241,4 +240,4 @@ ht-degree: 4%
  </tbody>
 </table>
 
-除了上述關鍵字外，請避免使用與[adaptive forms JavaScript APIs](https://adobe.com/go/learn_aemforms_javascript_api_63)類似的名稱。
+除了上述關鍵字，請避免使用與[適用性表單JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)類似的名稱。
