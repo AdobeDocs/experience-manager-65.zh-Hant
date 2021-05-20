@@ -1,54 +1,53 @@
 ---
-title: Ideation Essentials
-seo-title: Ideation Essentials
-description: 創意功能概觀
-seo-description: 創意功能概觀
+title: 構想要點
+seo-title: 構想要點
+description: 構思功能概觀
+seo-description: 構思功能概觀
 uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7ad3592b-f8b5-45c0-97bc-15f781d7b811
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 3%
 
 ---
 
+# 構想要點{#ideation-essentials}
 
-# Idefation Essentials {#ideation-essentials}
+本頁面提供使用構思功能的基本資訊，這類功能類似於論壇，但能儲存為草稿，且提供更協作的風格。
 
-本頁提供使用構想功能的基本資訊，這類功能類似論壇，但可儲存為草稿，並提供更合作的感覺。
-
-## 客戶端{#essentials-for-client-side}的基本功能
+## 客戶端{#essentials-for-client-side}的要點
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>社交／構想／元件/hbs/構想</td>
+   <td>社交/構思/元件/hbs/構思</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>included</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
-   <td>cq.social.hbs.porting<br /> cq.social.hbs.liking<br /> cq.social.hbs.ideation</td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
+   <td>cq.social.hbs.voting<br /> cq.social.hbs.like<br /> cq.social.hbs.ideation</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/ideation/components/hbs/ideation/ideation.hbs<br /> /libs/social/ideation/components/hbs/ideation/ideationlists.hbs<br /> /libs/social/ideation/components/hbs/ideation/composer.hbs</td>
   </tr>
   <tr>
-   <td> <strong>css</strong></td>
+   <td> <strong>cs</strong></td>
    <td> /libs/social/ideation/components/hbs/ideation/clientlibs/ideation.css</td>
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱<a href="ideation-feature.md">Ideation Feature</a></td>
+   <td>請參閱<a href="ideation-feature.md">構想功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -57,4 +56,4 @@ ht-degree: 3%
 
 ### 創意力功能 {#ideation-function}
 
-一種包括[Ideation函式](functions.md#ideation-function)的社區站點結構，包括配置的`ideation`元件。
+包括[標識函式](functions.md#ideation-function)的社區站點結構包括配置的`ideation`元件。
