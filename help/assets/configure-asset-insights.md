@@ -3,19 +3,18 @@ title: 設定資產前瞻分析以取得分析。
 description: 在 [!DNL Adobe Experience Manager Assets]中設定資產前瞻分析。
 contentOwner: AG
 role: Architect, Administrator
-feature: Asset Insights,Asset Reports
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: 資產分析，資產報表
+exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
+source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 7%
+source-wordcount: '253'
+ht-degree: 6%
 
 ---
 
-
 # 設定資產分析{#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] 從中擷取協力廠商網站使用之數位資產的使用資料 [!DNL Adobe Analytics]。若要讓「資產前瞻分析」擷取此資料並產生前瞻分析，請先設定功能以與Adobe Analytics整合。
+[!DNL Adobe Experience Manager Assets] 從中擷取協力廠商網站使用之數位資產的使用資料 [!DNL Adobe Analytics]。若要讓「資產前瞻分析」擷取此資料並產生前瞻分析，請先設定功能以與[!DNL Adobe Analytics]整合。 若要使用此功能，請個別購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]的客戶會收到與[!DNL Experience Manager]搭售的[!DNL Analytics]授權。 請參閱[Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >
