@@ -1,22 +1,21 @@
 ---
 title: 系統資訊服務API
 seo-title: 系統資訊服務API
-description: 本檔案提供有關係統資訊服務所提供之API的詳細資訊。
-seo-description: 本檔案提供有關係統資訊服務所提供之API的詳細資訊。
+description: 本檔案提供有關係統資訊服務所提供API的詳細資訊。
+seo-description: 本檔案提供有關係統資訊服務所提供API的詳細資訊。
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
 
 ---
-
 
 # 系統資訊服務API {#system-information-service-apis}
 
@@ -33,8 +32,8 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td><p>SystemInfo.properties</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties`</p></td>
-   <td><p>此API是<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API的包裝函式。 它檢索當前工作環境的配置。 </p></td>
+   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties'</p></td>
+   <td><p>此API是<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API的包裝函式。 它會擷取目前工作環境的設定。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>
@@ -43,17 +42,17 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>SystemInfo.logs</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.logs</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.logs</p></td>
    <td><p>下載包含應用程式伺服器記錄檔的zip檔案。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.config</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.config</p></td>
-   <td><p>擷取config.xml檔案的所有內容。 </p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.config</p></td>
+   <td><p>檢索config.xml檔案的所有內容。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.services</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.services</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.services</p></td>
    <td><p>擷取AEM表單服務的狀態和設定參數。</p></td>
   </tr>
   <tr>
@@ -64,14 +63,14 @@ ht-degree: 0%
   <tr>
    <td><p>SystemInfo.coreSettings</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.coreSettings</p></td>
-   <td><p>擷取下列屬性的值：</p>
+   <td><p>檢索以下屬性的值：</p>
     <ul>
      <li><p>AdobeTempDir</p></li>
      <li><p>AdobeServerFontDir</p></li>
      <li><p>CustomerFontDir</p></li>
      <li><p>GlobalDocumentStorageRootDir</p></li>
      <li><p>DefaultDocumentMaxInlineSize</p></li>
-     <li><p>DefaultDocumentDissopalTimeout</p></li>
+     <li><p>DefaultDocumentDispositionTimeout</p></li>
      <li><p>EnableDocumentDBStorage</p></li>
      <li><p>GlobalDocumentStorageUseNetworkShare</p></li>
      <li><p>EnableFIPS</p></li>
@@ -82,13 +81,13 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>SystemInfo.database</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.database</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.database</p></td>
    <td><p>檢索有關資料庫的詳細資訊。</p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.licenseInfo</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.licenseInfo</p></td>
-   <td><p>擷取已安裝AEM表單元件的版本與授權資訊。 </p></td>
+   <td><p>擷取已安裝AEM表單元件的版本和授權資訊。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfNo.serverConfig</p></td>
@@ -97,18 +96,17 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td>
    <td><p>檢索活動線程的計數和堆棧跟蹤。 它接受下列參數：</p>
     <ul>
-     <li><p>iterations= [n]:指定迭代計數。 用數字替換n。 </p></li>
-     <li><p>延遲= [n]:指定在開始下一個小版本之前要等待的毫秒數。 </p></li>
+     <li><p>迭代= [n]:指定迭代的計數。 用數字取代n。 </p></li>
+     <li><p>Delay= [n]:指定在開始下一個迭代之前要等待的毫秒數。 </p></li>
     </ul><p></p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.info</p></td>
-   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.info</p></td>
-   <td><p>此API是所有系統資訊服務API的包裝函式。 在內部，它會執行所有系統資訊API，並下載郵遞區號格式的資訊。 </p><p><i><strong>注意</strong>:SystemInfo.info不提供活動線程的計數和堆棧跟蹤。 </i></p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.info</p></td>
+   <td><p>此API是所有系統資訊服務API的包裝函式。 在內部，它會執行所有系統資訊API，並以zip格式下載資訊。 </p><p><i><strong>注意</strong>:SystemInfo.info不提供活動線程的計數和堆棧跟蹤。 </i></p></td>
   </tr>
  </tbody>
 </table>
-
