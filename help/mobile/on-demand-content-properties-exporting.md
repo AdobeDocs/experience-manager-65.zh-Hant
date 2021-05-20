@@ -1,32 +1,31 @@
 ---
-title: 使用內容屬性匯出內容
-seo-title: 使用內容屬性匯出內容
-description: 下頁顯示「應用程式屬性」和「節點」。
-seo-description: 下頁顯示「應用程式屬性」和「節點」。
+title: 使用內容屬性來匯出內容
+seo-title: 使用內容屬性來匯出內容
+description: 以下頁面顯示應用程式屬性和節點。
+seo-description: 以下頁面顯示應用程式屬性和節點。
 uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: db1c33c9-8539-436d-b4d0-3d5e6fd688ed
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 4%
 
 ---
 
-
-# 使用內容屬性匯出內容{#using-content-properties-to-export-content}
+# 使用內容屬性來匯出內容{#using-content-properties-to-export-content}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
 
-應用程式在AEM中會呈現為&#x200B;*cq:Pages*。
+應用程式在AEM中會以&#x200B;*cq:Pages*&#x200B;呈現。
 
-除了下面顯示的代表整合支援屬性的其他屬性外，這些屬性與任何&#x200B;*cq:Page*&#x200B;中的相同共同屬性。
+除了下列其他表示整合支援屬性的屬性外，這些屬性共用在任何&#x200B;*cq:Page*&#x200B;中找到的相同共同屬性。
 
 ## 應用程式屬性 {#app-properties}
 
@@ -42,17 +41,17 @@ ht-degree: 4%
   <tr>
    <td>dps-cloudConfig</td>
    <td>字串：路徑</td>
-   <td><p>已設定Mobile On-Demand Cloud服務的路徑。 用於AEM Mobile到Mobile的隨選動作（API呼叫）</p> <p>當作者選擇Mobile On-Demand Cloud服務將應用程式關聯至時，此關聯會透過「管理連線」方塊設定。</p> </td>
+   <td><p>已設定的Mobile On-DemandCloud Service的路徑。 用於AEM Mobile到Mobile On-Demand動作（API叫用）</p> <p>當作者選擇行動隨選Cloud Service將應用程式與之建立關聯時，此關聯會透過「管理連線」方塊設定。</p> </td>
   </tr>
   <tr>
    <td>dps-exportTemplate</td>
    <td>字串：路徑</td>
-   <td><p>應用程式匯出設定的路徑。 導出配置是一個資料夾，包含2個子ContentSync導出配置模板；</p> <p><i>dps-article</i>:ContentSync匯出設定，以匯出文章內容</p> <p><i>dps-HTMLResources</i>:ContentSync匯出設定可匯出應用程式／文章共用資源</p> </td>
+   <td><p>應用程式匯出設定的路徑。 導出配置是一個包含2個子ContentSync導出配置模板的資料夾；</p> <p><i>dps-article</i>:匯出文章內容的ContentSync匯出設定</p> <p><i>dps-HTMLResources</i>:ContentSync匯出設定，以匯出應用程式/文章共用資源</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
    <td>字串</td>
-   <td><p>此應用程式連結／系結至之行動隨選專案的ID/URI。</p> <p>當作者從相關Mobile On-Demand Cloud服務的可用專案清單中選擇專案時，此關聯會透過「管理連線」方塊設定。</p> </td>
+   <td><p>此應用連結/綁定到的Mobile On-Demand項目的ID/URI。</p> <p>當作者從相關行動隨選Cloud Service的可用專案清單中選擇專案時，此關聯會透過「管理連線」方塊設定。</p> </td>
   </tr>
   <tr>
    <td>dps-projectTitle</td>
@@ -71,23 +70,23 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploadedBy</td>
-   <td>字串：userid</td>
-   <td>從AEM上次上傳共用資源請求至AEM Mobile的使用者ID。</td>
+   <td>String:userid</td>
+   <td>上次從AEM上傳共用資源請求至AEM Mobile的使用者ID。</td>
   </tr>
   <tr>
    <td>pge-dashboard-config</td>
    <td>字串：路徑</td>
-   <td>控制面板設定的路徑。 路徑可視需要重新導向至自訂儀表板設定。</td>
+   <td>控制面板配置的路徑。 路徑可視需要重新導向至自訂控制面板設定。</td>
   </tr>
   <tr>
    <td>sling:resourceType</td>
    <td>字串：路徑</td>
-   <td><p>cq:Component的路徑，此為或延伸<i>mobileapps/core/components/instance。</i></p> <p>如此可在「應用程式目錄」中呈現和呈現。</p> </td>
+   <td><p>cq：元件的路徑，此元件為或延伸<i>mobileapps/core/components/instance。</i></p> <p>這可提供應用程式目錄中的呈現和呈現。</p> </td>
   </tr>
  </tbody>
 </table>
 
-您可以使用&#x200B;***內容屬性***&#x200B;來建立內容。 請參閱下列建立和匯出文章和共用資源的資源：
+您可以使用&#x200B;***內容屬性***&#x200B;來建立內容。 請參閱下列資源，以建立和匯出文章及共用資源：
 
 * [內容屬性](/help/mobile/content-properties.md)
 * [建立文章匯出設定](/help/mobile/creating-article-export-configuration.md)
