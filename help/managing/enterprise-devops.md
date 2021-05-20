@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing
 content-type: reference
 discoiquuid: 934eda2a-bd3b-4018-86dc-dbb01d246386
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e67f848a-a8cd-4585-a734-e6b1de8a8d74
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 93%
 
 ---
-
 
 # 企業 DevOps{#enterprise-devops}
 
@@ -63,7 +62,7 @@ Adobe Experience Manager(AEM)部署通常由多個環境組成，用於不同層
 
 ### 品質保證 {#quality-assurance}
 
-此環境由品質保證團隊用來全面[test](/help/sites-developing/test-plan.md)測試您的新系統；設計與功能。 此環境應同時具備製作環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
+品質保證團隊會使用此環境來全面[測試](/help/sites-developing/test-plan.md)您的新系統；設計和功能。 此環境應同時具備製作環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
 
 ### 分段 {#staging}
 
@@ -119,7 +118,7 @@ Adobe Experience Manager(AEM)部署通常由多個環境組成，用於不同層
 
 通常會透過在不同內容存放庫間匯出和匯入封裝，來轉移程式碼 (例如自訂的 Web 應用程式功能和設計範本)。這代表可以將此複寫設定為自動程序。
 
-AEM專案通常會觸發程式碼部署：
+AEM專案常會觸發程式碼部署：
 
 * 自動：用於轉移至開發和 QA 環境。
 * 手動：部署至預備和生產環境的方式比較需要控制，通常以手動進行；不過，也可視需要採取自動化部署。
@@ -141,6 +140,6 @@ AEM專案通常會觸發程式碼部署：
 內容可經由下列途徑轉移：
 
 * 在不同環境間：透過匯出和匯入套件。
-* 在不同的例項之間——直接複製([AEM replication](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS連線）。
+* 在不同例項之間 — 透過直接復寫([AEM復寫](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS、連線）。
 
 ![chlimage_1-1](assets/chlimage_1-1.png)
