@@ -1,31 +1,30 @@
 ---
-title: 預覽表格
-seo-title: 預覽表格
-description: 您可以在發佈或啟動表單之前先預覽表單，以確保表單符合預期。 預覽選項可能會因支援的表單類型而異。
-seo-description: 您可以在發佈或啟動表單之前先預覽表單，以確保表單符合預期。 預覽選項可能會因支援的表單類型而異。
+title: 預覽表單
+seo-title: 預覽表單
+description: 您可以在發佈或啟動表單之前進行預覽，確保表單符合預期。 預覽選項可能因支援的表單類型而異。
+seo-description: 您可以在發佈或啟動表單之前進行預覽，確保表單符合預期。 預覽選項可能因支援的表單類型而異。
 uuid: 9ec359ea-f518-441c-9c3d-e3c1ea07a532
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 適用性表單
+exl-id: aed5703e-4fe6-4839-9657-c660ac48521e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%
 
 ---
 
-
 # 預覽表單{#previewing-a-form}
 
 ## 概覽 {#overview}
 
-在AEM Forms，您可以預覽儲存庫中顯示的表單和文檔。 預覽功能有助於確切瞭解表單在發佈給使用者時的外觀和行為。
+在AEM Forms中，您可以預覽存放庫中顯示的表單和檔案。 預覽有助於確切了解表單發佈給使用者時的外觀和行為。
 
-在預覽表格時，這些表格會以互動式介面呈現，使用者可以用資料填入表格。 在預覽檔案時，它們會以非互動模式呈現，而使用者只能檢視檔案。 對於表單，另有「自訂預覽」選項可供使用。 使用此選項，您可以使用XML檔案中的資料來預覽表格。 資料會填滿正在預覽的表單的部分或全部欄位。
+預覽表單時，表單會以互動式介面呈現，使用者可以用資料填入表單。 預覽文檔時，它們以非交互模式呈現，用戶只能查看文檔。 若是表單，則另有自訂預覽選項可供使用。 使用此選項，可以使用XML檔案中的資料預覽表單。 資料會填滿正在預覽之表單的部分或全部欄位。
 
-下表列出了可用於不同類型支援表單的預覽選項：
+下表列出不同支援表單類型可用的預覽選項：
 
 <table>
  <tbody>
@@ -38,12 +37,12 @@ ht-degree: 3%
    <td>PDF預覽</td>
   </tr>
   <tr>
-   <td>PDF表格</td>
-   <td>使用資料預覽PDF<br /> </td>
+   <td>PDF表單</td>
+   <td>使用資料預覽和預覽PDF<br /> </td>
   </tr>
   <tr>
-   <td>自適應形式</td>
-   <td>HTML預覽與HTML預覽與資料</td>
+   <td>適用性表單</td>
+   <td>HTML預覽和HTML預覽（使用資料）</td>
   </tr>
   <tr>
    <td>表單範本</td>
@@ -54,24 +53,23 @@ ht-degree: 3%
 
 ## 預覽表單{#previewing-a-form-1}
 
-1. 選取您要預覽的資產，然後按一下動作工具列中的「預覽![ aem6forms_preview](assets/aem6forms_preview.png)」。
+1. 選取您要預覽的資產，然後按一下動作工具列中的「預覽![aem6forms_preview](assets/aem6forms_preview.png)」 。
 
    >[!NOTE]
    >
-   >若要選取資產，請從預設的卡片檢視切換至清單檢視。 按一下![aem6forms_viewlist](assets/aem6forms_viewlist.png)或![aem6forms_viewcard](assets/aem6forms_viewcard.png)以切換檢視。
+   >若要選取資產，請從預設的卡片檢視切換至清單檢視。 按一下![aem6formsviewlist](assets/aem6forms_viewlist.png)或![aem6formsviewcard](assets/aem6forms_viewcard.png)以切換檢視。
 
-1. 按一下「預覽」會列出適用於所選資產類型的可能預覽選項。 按一下所要的選項，在新標籤中呈現選取的資產。
+1. 按一下「預覽」會列出適用於所選資產類型的可能預覽選項。 按一下所需的選項，在新索引標籤中呈現選取的資產。
 
-   您的選項包括：
+   您的選項為：
 
    * 預覽為HTML
    * 以資料預覽
-   * 預覽為PDF（可用於表單範本）
+   * 預覽為PDF（適用於表單範本）
 
 ## 以資料預覽 {#preview-with-data}
 
-當您選取「預覽資料」(**Preview with Data)時，您就可以看到表格與輸入的實際資料的外觀。**「使用資料預覽」選項可讓您上傳包含範例使用者資料的XML。 範例使用者資料可用來以您選擇的格式填入預覽表格。
+選擇「**預覽資料**」時，您可以看到表單中輸入的真實資料外觀。 使用資料預覽選項可讓您上傳包含範例使用者資料的XML。 範例使用者資料可用來以您選擇的格式填入預覽表單。
 
-1. 選取資產，按一下「預覽![aem6forms_preview](assets/aem6forms_preview.png)」，然後選取「預覽與資料&#x200B;**」。**
-1. 在「預覽表單」對話方塊中，將FormData提供為XML檔案。 按一下「預覽」，以XML中合併的資料來轉換表格。
-
+1. 選取資產，按一下「預覽![aem6forms_preview](assets/aem6forms_preview.png)」，然後選取「預覽資料&#x200B;**」。**
+1. 在「預覽表單」對話框中，將FormData作為XML檔案提供。 按一下「預覽」，使用XML中的合併資料呈現表單。
