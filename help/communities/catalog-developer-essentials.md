@@ -1,34 +1,33 @@
 ---
-title: Catalog Essentials
-seo-title: Catalog Essentials
-description: 目錄概觀
-seo-description: 目錄概觀
+title: 目錄要點
+seo-title: 目錄要點
+description: 目錄概述
+seo-description: 目錄概述
 uuid: 788512bb-fa38-48fb-a769-1eaae6bb95a1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
-translation-type: tm+mt
-source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
+exl-id: 4ca76b50-d56d-4f4d-be92-bf8929c5d754
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 2%
 
 ---
 
+# 目錄要點{#catalog-essentials}
 
-# Catalog Essentials {#catalog-essentials}
+本頁面提供使用啟用社群網站目錄功能的基本資訊。
 
-本頁提供使用啟用社群網站目錄功能的基本資訊。
-
-目錄功能包含在社群網站中時，可讓社群成員瀏覽並選擇目錄中所列的啟用資源。
+目錄功能包含在社群網站中時，可讓社群成員瀏覽並選取目錄中列出的啟用資源。
 
 [ `enablement catalog`元件](catalog.md)允許社區成員訪問[啟用資源](resources.md)的目錄。 使用AEM標籤是管理目錄中啟用資源外觀的重要部分。
 
 請參閱[標籤啟用資源](tag-resources.md)。
 
-## 客戶端{#essentials-for-client-side}的基本功能
+## 客戶端{#essentials-for-client-side}的要點
 
 <table>
  <tbody>
@@ -37,19 +36,19 @@ ht-degree: 2%
    <td>social/enablement/components/hbs/catalog</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>included</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.catalog<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/enablement/components/hbs/catalog/catalog.hbs<br /> </td>
   </tr>
   <tr>
-   <td> <strong>css</strong></td>
+   <td> <strong>cs</strong></td>
    <td> /libs/social/enablement/components/hbs/catalog/clientlibs/catalog.css</td>
   </tr>
   <tr>
@@ -59,15 +58,15 @@ ht-degree: 2%
  </tbody>
 </table>
 
-## 伺服器端{#essentials-for-server-side}的基本工具
+## 伺服器端{#essentials-for-server-side}的要點
 
 ### 目錄功能 {#catalog-function}
 
-一種包括[目錄函式](functions.md#catalog-function)的社區站點結構，包括配置的`enablement catalog`元件。
+包含[目錄函式](functions.md#catalog-function)的社區站點結構包括配置的`enablement catalog`元件。
 
-### 預先篩選{#pre-filters}
+### 預過濾器{#pre-filters}
 
-將目錄功能新增至社群網站時，可以透過指定預先篩選來限制目錄中出現的啟用資源和學習路徑。 這是通過在站點的目錄資源實例上設定屬性來完成的。
+將目錄功能新增至社群網站後，您可以指定預先篩選，以限制目錄中出現的啟用資源和學習路徑。 若要這麼做，請在網站目錄資源的例項上設定屬性。
 
 使用[啟用教學課程](getting-started-enablement.md)的範例：
 
@@ -87,7 +86,7 @@ ht-degree: 2%
 
       * 名稱: `filters`
       * 類型: `nt:unstructured`
-      * 選擇&#x200B;**[!UICONTROL 全部保存]**
+      * 選擇&#x200B;**[!UICONTROL 保存全部]**
 
 * 將`se_resource-tags`屬性添加到`filters`節點
 
@@ -100,23 +99,22 @@ ht-degree: 2%
          * 選擇&#x200B;**[!UICONTROL 多]**
          * 選擇&#x200B;**[!UICONTROL 添加]**
 
-            * 在彈出式對話方塊中，選取`+`以新增其他預先篩選的TagID
+            * 在彈出式對話方塊中，選取`+`以新增其他預先篩選TagID
 
 * 重新發佈社群網站
 
 ![configure-catalog](assets/configure-catalog.png)
 
-#### 預先篩選TagID {#pre-filter-tagids}
+#### 預先篩選TagIDs {#pre-filter-tagids}
 
-預先篩選[TagIDs](../../help/sites-developing/framework.md#tagid)必須完全符合套用至啟用資源的標籤。 這些值在站點的`resources`資料夾中顯示為屬性`se_resource-tags`的值。
+預先篩選[TagIDs](../../help/sites-developing/framework.md#tagid)必須完全符合套用至啟用資源的標籤。 這些值在網站的`resources`資料夾中顯示為屬性`se_resource-tags`的值。
 
-![configure-filters](assets/configure-catalog1.png)
+![設定篩選器](assets/configure-catalog1.png)
 
 ### 參考API {#reference-apis}
 
 * [啟用API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/api/package-summary.html)
 
-* [報告API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
+* [報表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
 
-* [報告分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
-
+* [報表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
