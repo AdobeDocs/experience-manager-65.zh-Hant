@@ -10,36 +10,35 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 502c0916-6c54-440c-be8c-eae56001fa26
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+exl-id: 18376805-c2ed-439a-abc7-e9657afe8baf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
+# 覆蓋社區元件{#overlay-communities-components}
 
-# 覆蓋社群元件{#overlay-communities-components}
-
-[覆蓋](/help/communities/client-customize.md#overlays)預設元件的意圖是針對元件的所有相關參照，全域變更元件的外觀或行為。 在/libs檔案夾中搜尋前，會依循sling的性質來解析至/apps檔案夾。 因此，元件的路徑與預設元件的路徑相同，只不過它位於/apps檔案夾而非/libs檔案夾中。
+[覆蓋](/help/communities/client-customize.md#overlays)預設元件的意圖是全局更改元件的外觀或行為，以便對元件進行所有相對引用。 在/libs資料夾中搜尋之前，會仰賴Sling的性質來解析至/apps資料夾。 因此，元件的路徑與預設元件的路徑相同，只是它位於/apps資料夾中，而不是/libs資料夾中。
 
 ## 範例 {#example}
 
-**覆蓋註解元件**
+**覆蓋圖註解元件**
 
-假設您想要修改註解功能，以符合您網站的設計，方法是變更註解標題，以便不再顯示任何註解的頭像。 隱藏頭像的解決方案是使用CSS，或如此處所述，在apps資料夾中覆蓋header.jsp，讓包含頭像的HTML永遠不會傳送給用戶端。
+假設您要修改留言功能，以便變更留言標題，使其符合您網站的設計，以便不再顯示任何留言的頭像。 隱藏頭像的解決方案是使用CSS，或如此處所述，在應用程式資料夾中覆蓋header.jsp，這樣包含頭像的HTML就不會傳送給用戶端。
 
-若要覆蓋注釋，您必須：
+若要覆蓋留言，您必須：
 
 1. [「注釋」頁](/help/communities/overlay-create-comments-page.md)
 1. [建立節點](/help/communities/overlay-create-nodes.md)
-1. [改變外觀](/help/communities/overlay-alter-appearance.md)
+1. [更改外觀](/help/communities/overlay-alter-appearance.md)
 
 **覆蓋通知電子郵件**
 
-假設您想要自訂電子郵件通知的訊息，您可以透過[覆蓋](/help/communities/client-customize.md#overlays)**/libs/settings/community/templates/email/html**&#x200B;範本來自訂。
+假設您要自訂電子郵件通知的訊息，您可以透過[覆蓋](/help/communities/client-customize.md#overlays)位於&#x200B;**/libs/settings/community/templates/email/html**&#x200B;的範本來執行此操作。
 
-例如，若要修改提及電子郵件通知（針對建立ugc的特定社群元件），請在您啟用&#x200B;**@mentions**&#x200B;支援的元件範本中，新增&#x200B;**if**&#x200B;條件，用於動詞&#x200B;**提及**。
+例如，若要修改提及電子郵件通知（針對建立ugc的特定社群元件），請在您啟用&#x200B;**@mentions**&#x200B;支援的元件範本中，新增&#x200B;**if**&#x200B;條件，以支援動詞&#x200B;**提及**。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -47,4 +46,4 @@ ht-degree: 0%
 {{/equals}}\
 ```
 
-若要修改部落格注釋中@提及的電子郵件通知範本，請將範本置於：`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+若要修改部落格註解中@mention的電子郵件通知範本，請放置於：`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
