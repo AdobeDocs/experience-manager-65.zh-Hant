@@ -5,26 +5,25 @@ uuid: a02f9ec1-30d9-4cbb-8746-8391ac614f0a
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
-translation-type: tm+mt
-source-git-commit: 66f46a34832254af74c72da16ec8ebe3eb8cd46d
+exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
-
 # 視訊轉譯{#video-renditions}
 
 Adobe Experience Manager(AEM)Assets會針對各種格式的視訊資產產生視訊轉譯，包括OGG、FLV等。
 
-AEM Assets支援媒體資產的靜態和動態轉譯（DM編碼轉譯）。
+AEM Assets支援媒體資產的靜態和動態轉譯（DM編碼的轉譯）。
 
-靜態轉譯是使用FFMPEG（安裝在系統路徑上且可用）以原生方式產生，並儲存在內容儲存庫中。
+靜態轉譯是使用FFMPEG（安裝在系統路徑上且可用）以原生方式產生，並儲存在內容存放庫中。
 
-DM編碼的轉譯會儲存在Proxy伺服器中，並在執行時期提供。
+DM編碼的轉譯會儲存在代理伺服器中，並在執行階段提供。
 
-AEM資產在用戶端上提供這些轉譯的播放支援。
+AEM資產在用戶端上為這些轉譯提供播放支援。
 
 若要檢視特定視訊資產的轉譯，請開啟其資產頁面，然後點選「全域導覽」圖示。 然後，從清單中選擇&#x200B;**[!UICONTROL 轉譯]**。
 
@@ -34,14 +33,14 @@ AEM資產在用戶端上提供這些轉譯的播放支援。
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
-要為DM編碼轉譯配置代理伺服器，請[配置動態媒體雲服務。](config-dynamic.md)
+若要為DM編碼的轉譯設定代理伺服器，請[設定Dynamic Media雲端服務。](config-dynamic.md)
 
-若要使用所需參數產生視訊轉譯，請[建立對應的視訊描述檔](video-profiles.md)。
+若要使用所需參數產生視訊轉譯，請[建立對應的視訊設定檔](video-profiles.md)。
 
-在您設定代理伺服器並建立視訊設定檔後，您可以將此視訊預設集加入處理設定檔，並將處理設定檔套用至資料夾。
+設定代理伺服器並建立視訊設定檔後，您可以將此視訊預設集包含在處理設定檔中，並將處理設定檔套用至資料夾。
 
 >[!NOTE]
 >
->在Microsoft Internet Explorer 11上，音訊播放無法用於OGG和WAV檔案。 副檔名為OGG或WAV的資產，資產詳細資訊頁面會顯示`Invalid Source`錯誤。
+>Microsoft Internet Explorer 11上的OGG和WAV檔案無法播放音訊。 在副檔名為OGG或WAV的資產的資產詳細資訊頁面上，會顯示錯誤`Invalid Source`。
 >
->在MS Edge和iPad上，OGG檔案不會播放，並產生不支援的格式錯誤。
+>在MS Edge和iPad上，OGG檔案不會播放，且會產生不支援的格式錯誤。
