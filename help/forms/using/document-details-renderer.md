@@ -1,99 +1,98 @@
 ---
 title: 轉譯器的檔案詳細資訊
 seo-title: 轉譯器的檔案詳細資訊
-description: 有關如何在AEM Forms工作區中轉換工作的概念性資訊，以轉換各種支援的表單和檔案類型。
-seo-description: 有關如何在AEM Forms工作區中轉換工作的概念性資訊，以轉換各種支援的表單和檔案類型。
+description: 關於如何在AEM Forms工作區中轉譯以轉譯各種支援的表單和檔案類型的概念資訊。
+seo-description: 關於如何在AEM Forms工作區中轉譯以轉譯各種支援的表單和檔案類型的概念資訊。
 uuid: ae3f0585-9105-4ca7-a490-ffdefd3ac8cd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+exl-id: 946f0f6d-86af-41c1-98ef-98c8f5566e95
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
 
 ---
 
-
-# 轉譯器的檔案詳細資訊{#document-details-for-renderer}
+# 渲染器{#document-details-for-renderer}的文檔詳細資訊
 
 ## 簡介 {#introduction}
 
-在AEM Forms工作區中，可順暢地支援多種表單類型。 其中包括：
+在AEM Forms工作區中，可順暢地支援多種表單類型。 這些包括：
 
-* PDF表單（XDP / Acroform /平面PDF）
-* 新的HTML表格
+* PDF forms（XDP / Acroform /一般PDF）
+* 新HTML表單
 * 影像
-* 協力廠商應用程式（例如，通信管理）
+* 第三方應用程式（例如通信管理）
 
-本文從語義自訂／元件復用的角度來說明這些轉譯器的工作，以便滿足客戶需求而不會中斷任何轉譯。 雖然AEM Forms工作區允許任何使用者介面／語義變更，但建議不要變更不同表單類型的轉換邏輯，否則結果可能無法預測。 本檔案旨在提供指導／知識，以支援轉換相同表單、在不同入口網站中使用相同的工作區元件，而非修改轉換邏輯本身。
+本檔案從語義自訂/元件重複使用的角度，說明這些轉譯者的工作方式，以便在不破壞任何轉譯的情況下滿足客戶需求。 雖然AEM Forms工作區允許任何使用者介面/語意變更，但建議不要變更不同表單類型的轉譯邏輯，否則結果可能無法預測。 本檔案旨在提供指引/知識，以支援轉譯相同的表單、在不同入口中使用相同的工作區元件，而非修改轉譯邏輯本身。
 
-## PDF表單{#pdf-forms}
+## PDF forms{#pdf-forms}
 
-PDF表格由`PdfTaskForm View`轉換。
+PDF forms由`PdfTaskForm View`呈現。
 
-當XDP表單轉譯為PDF時，FormsAugmenter服務會新增`FormBridge` JavaScript™。 此JavaScript™（位於PDF表單內）可協助您執行表單提交、表單儲存或離線表單等動作。
+將XDP表單轉譯為PDF時，FormsAugmenter服務會新增`FormBridge` JavaScript™。 此JavaScript™（在PDF表單內）有助於執行表單提交、表單儲存或離線表單等動作。
 
-在AEM Forms工作區中，PDFTaskForm檢視會透過位於`/lc/libs/ws/libs/ws/pdf.html`的中介HTML與`FormBridge`javascript通訊。 流程是：
+在AEM Forms工作區中，PDFTaskForm檢視會透過`/lc/libs/ws/libs/ws/pdf.html`處的中介HTML與`FormBridge`javascript通訊。 流量為：
 
-**PDFTaskForm檢視- pdf.html**
+**PDFTaskForm檢視 — pdf.html**
 
-使用`window.postMessage` / `window.attachEvent('message')`進行通信
+使用`window.postMessage` / `window.attachEvent('message')`進行通訊
 
-此方法是父幀和iframe之間通信的標準方式。 在新增之前，會先移除先前開啟之PDF表單中的現有事件接聽程式。 此清除還考慮在任務詳細資訊視圖中在表單頁籤和歷史記錄頁籤之間切換。
+此方法是上層框架與iframe之間通訊的標準方式。 新增事件監聽器之前，會先移除先前開啟之PDF forms中的現有事件監聽器。 此清除還考慮在任務詳細資訊視圖中的表單頁簽和歷史記錄頁簽之間進行切換。
 
-**pdf.html —— 轉譯 `FormBridge`的PDF中的javascript**
+**pdf.html — 轉 `FormBridge`譯的PDF內的javascript**
 
-使用`pdfObject.postMessage` / `pdfObject.messageHandler`進行通信
+使用`pdfObject.postMessage` / `pdfObject.messageHandler`進行通訊
 
-此方法是從HTML與PDFJavaScript通訊的標準方式。 PdfTaskForm檢視也會處理平面PDF，並清晰呈現。
+此方法是從HTML與PDFJavaScript通訊的標準方式。 PdfTaskForm檢視也能處理平面PDF，並直接呈現。
 
 >[!NOTE]
 >
->不建議修改PdfTaskForm檢視的pdf.html /內容。
+>不建議修改PdfTaskForm視圖的pdf.html /內容。
 
-## 新的HTML表單{#new-html-forms}
+## 新HTML Forms {#new-html-forms}
 
-新的HTML表格由NewHTMLTaskForm檢視轉譯。
+新的HTML表單會由NewHTMLTaskForm檢視呈現。
 
-當使用部署在CRX上的行動表單套件將XDP表單轉譯為HTML時，它也會新增額外的`FormBridge`JavaScript至表單，以顯示儲存和送出表單資料的不同方法。
+使用部署在CRX上的行動表單套件將XDP表單轉譯為HTML時，它也會將額外的`FormBridge`JavaScript新增至表單，這會顯示儲存和提交表單資料的不同方法。
 
-此JavaScript與上述PDF表單中提及的JavaScript不同，但其用途類似。
+此JavaScript與上述PDF forms中所述的不同，但有類似的用途。
 
 >[!NOTE]
 >
 >不建議修改NewHTMLTaskForm檢視的內容。
 
-## Flex表單與指南{#flex-forms-and-guides}
+## Flex Forms與指南{#flex-forms-and-guides}
 
-Flex表格由SwfTaskForm轉譯，參考線則由HtmlTaskForm檢視轉譯。
+Flex Forms由SwfTaskForm呈現，而參考線由HtmlTaskForm檢視分別呈現。
 
-在AEM Forms工作區中，這些檢視會使用位於`/lc/libs/ws/libs/ws/WSNextAdapter.swf`的中介SWF，與組成flex表單／指南的實際SWF通訊
+在AEM Forms工作區中，這些檢視會與實際SWF通訊，實際SWF會使用`/lc/libs/ws/libs/ws/WSNextAdapter.swf`處的中介SWF組成Flex表單/指南
 
-通信使用`swfObject.postMessage` / `window.flexMessageHandler`進行。
+通訊會使用`swfObject.postMessage` / `window.flexMessageHandler`進行。
 
-此協定由`WsNextAdapter.swf`定義。 在新增視窗物件之前，會先從先前開啟的SWF表格移除現有的`flexMessageHandlers`。 邏輯還考慮在任務詳細資訊視圖中的表單頁籤和歷史記錄頁籤之間切換。 `WsNextAdapter.swf` 用於執行各種表單動作，例如儲存或送出。
+此協定由`WsNextAdapter.swf`定義。 在添加新表單之前，會刪除先前開啟的SWF表單中窗口對象上的現有`flexMessageHandlers`。 此邏輯也會考慮在任務詳細資訊檢視中的表單標籤和歷史記錄標籤之間進行切換。 `WsNextAdapter.swf` 用於執行儲存或提交等各種表單動作。
 
 >[!NOTE]
 >
 >不建議修改`WSNextAdapter.swf`或SwfTaskForm / HtmlTaskForm視圖的內容。
 
-## 協力廠商應用程式（例如，通訊管理）{#third-party-applications-for-example-correspondence-management}
+## 第三方應用程式（例如通信管理）{#third-party-applications-for-example-correspondence-management}
 
-協力廠商應用程式會使用ExtAppTaskForm檢視來轉譯。
+使用ExtAppTaskForm視圖呈現第三方應用程式。
 
 **協力廠商應用程式與AEM Forms工作區通訊**
 
-AEM Forms工作區監聽`window.global.postMessage([Message],[Payload])`
+AEM Forms workspace監聽`window.global.postMessage([Message],[Payload])`
 
-[] Messagecan是指定為  `SubmitMessage`|  `CancelMessage`|  `ErrorMessage`| `actionEnabledMessage`在 `runtimeMap`。協力廠商應用程式必須使用此介面，才能視需要通知AEM Forms工作區。 使用此介面是必備的，因為AEM Forms工作區必須知道何時提交工作，以便清除工作視窗。
+[] Messagecan是指定為  `SubmitMessage`|  `CancelMessage`|  `ErrorMessage`| `actionEnabledMessage`中 `runtimeMap`。協力廠商應用程式必須使用此介面，才能視需要通知AEM Forms工作區。 必須使用此介面，因為AEM Forms工作區必須知道提交任務時，以便清除任務窗口。
 
 **AEM Forms工作區與協力廠商應用程式通訊**
 
-如果AEM Forms工作區的直接動作按鈕可見，則會呼叫`window.[External-App-Name].getMessage([Action])`，其中`[Action]`是從`routeActionMap`讀取。 協力廠商應用程式必須監聽此介面，然後透過`postMessage ()` API通知AEM Forms工作區。
+如果AEM Forms工作區的直接動作按鈕可見，則會呼叫`window.[External-App-Name].getMessage([Action])`，其中從`routeActionMap`讀取`[Action]`。 協力廠商應用程式必須監聽此介面，然後透過`postMessage ()` API通知AEM Forms工作區。
 
-例如，Flex應用程式可定義`ExternalInterface.addCallback('getMessage', listener)`以支援此通訊。 如果第三方應用程式希望通過其自己的按鈕處理表單提交，則應指定`hideDirectActions = true() in the runtimeMap`，並可跳過此偵聽程式。 因此，此構造是可選的。
+例如，Flex應用程式可定義`ExternalInterface.addCallback('getMessage', listener)`以支援此通訊。 如果第三方應用程式希望通過其自己的按鈕處理表單提交，則應指定`hideDirectActions = true() in the runtimeMap`，並可跳過此監聽程式。 因此，此結構為選用。
 
-您可在[Integrating Comperence Management in AEM Forms workspace](/help/forms/using/integrating-correspondence-management-html-workspace.md)閱讀有關協力廠商應用程式整合的更多資訊。
+您可以前往[整合AEM Forms工作區中的通信管理](/help/forms/using/integrating-correspondence-management-html-workspace.md)，深入了解與通信管理相關的第三方應用程式整合。
