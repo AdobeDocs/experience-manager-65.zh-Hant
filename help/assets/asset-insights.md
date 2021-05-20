@@ -1,19 +1,18 @@
 ---
-title: 資產 Insights
+title: 資產見解
 description: 瞭解「資產前瞻分析」功能如何讓您追蹤第三方網站、行銷活動和Adobe創意解決方案中使用的影像的使用者評分和使用統計資料。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Asset Insights,Asset Reports
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: 資產分析，資產報表
+exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
+source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 7%
+source-wordcount: '756'
+ht-degree: 6%
 
 ---
 
-
-# 資產 Insights {#asset-insights}
+# 資產分析{#asset-insights}
 
 「資產前瞻分析」功能可讓您追蹤使用者評分和使用統計資料，這些資料用於協力廠商網站、行銷宣傳和Adobe的創意解決方案。 它有助於獲得有關其效能與人氣的見解。
 
@@ -21,7 +20,7 @@ ht-degree: 7%
 
 對於[!DNL Assets]前瞻分析，若要從網站擷取影像的使用統計資料，您必須在網站程式碼中包含影像的內嵌程式碼。
 
-若要讓「資產前瞻分析」顯示資產的使用統計資料，請先設定功能，從Adobe Analytics擷取報告資料。 如需詳細資訊，請參閱[設定資產前瞻分析](/help/assets/configure-asset-insights.md)。
+若要讓「資產前瞻分析」顯示資產的使用統計資料，請先設定功能，從Adobe Analytics擷取報告資料。 如需詳細資訊，請參閱[設定資產前瞻分析](/help/assets/configure-asset-insights.md)。 若要使用此功能，請個別購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]的客戶會收到與[!DNL Experience Manager]搭售的[!DNL Analytics]授權。 請參閱[Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >
@@ -50,7 +49,7 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >由於「資產前瞻分析」功能通常會定期從Adobe Analytics擷取「解決方案」資料，因此「解決方案」區段可能不會顯示最新資料。 顯示資料的時段取決於「資產分析」執行以擷取Analytics資料的擷取作業排程。
+   >由於「資產前瞻分析」功能通常會定期從Adobe Analytics擷取「解決方案」資料，因此「解決方案」區段可能不會顯示最新資料。 顯示資料的時段取決於資產前瞻分析執行以擷取Analytics資料的擷取作業排程。
 
 1. 要以圖形方式查看某個時段內資產的效能統計資訊，請在「效能統計資訊」部分中 **[!UICONTROL 選擇該時段]** 。詳細資訊 (包括點按次數和印象) 會顯示為圖形的趨勢線。
 
@@ -74,7 +73,7 @@ ht-degree: 7%
 
 ## 排程背景工作{#scheduling-background-job}
 
-「資產前瞻分析」會定期從Adobe Analytics報表套裝擷取資產的使用資料。 根據預設，資產前瞻分析會每24小時在2 AM執行一次背景工作，以擷取資料。 不過，您可以通過從Web控制台配置&#x200B;**[!UICONTROL Adobe CQDAM資產效能報告同步作業]**&#x200B;服務來修改頻率和時間。
+「資產分析」會定期從Adobe Analytics報表套裝擷取資產的使用資料。 依預設，資產前瞻分析會在每24小時於2 AM執行背景工作，以擷取資料。 不過，您可以通過從Web控制台配置&#x200B;**[!UICONTROL Adobe CQDAM資產效能報告同步作業]**&#x200B;服務來修改頻率和時間。
 
 1. 按一下[!DNL Experience Manager]徽標，然後轉到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
 1. 開啟&#x200B;**[!UICONTROL Adobe CQDAM資產效能報告同步作業]**&#x200B;服務配置。
