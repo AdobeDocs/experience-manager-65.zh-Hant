@@ -1,70 +1,69 @@
 ---
 title: 用戶端自訂
 seo-title: 用戶端自訂
-description: 自訂AEM Communities中的行為或外觀用戶端
-seo-description: 自訂AEM Communities中的行為或外觀用戶端
+description: 在AEM Communities中自訂行為或外觀用戶端
+seo-description: 在AEM Communities中自訂行為或外觀用戶端
 uuid: 57978c39-9a8a-4098-9001-c8bbe7ee786f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
 
 ---
 
-
 # 用戶端自訂{#client-side-customization}
 
-| **[‹功能基本工具](essentials.md)** | **[伺服器端自訂‹](server-customize.md)** |
+| **[⇐功能要點](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlepers ‡](handlebars-helpers.md)** |
+|  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
 
-若要自訂用戶端上AEM Communities元件的外觀和／或行為，有數種方法。
+若要自訂用戶端上AEM Communities元件的外觀和/或行為，有數種方法。
 
-兩種主要方式是覆蓋或延伸元件。
+覆蓋或延伸元件是兩種主要方法。
 
-[覆蓋](#overlays) 元件會變更預設元件，並影響元件的每個參照。
+[](#overlays) 覆蓋元件會變更預設元件，並影響元件的每個參照。
 
-[擴](#extensions) 展元件（其名稱唯一）會限制變更範圍。術語「extend」與「override」可互換使用。
+[](#extensions) 延伸元件（名稱唯一）會限制變更的範圍。「extend」一詞與「override」可交互使用。
 
-## 覆蓋{#overlays}
+## 覆蓋 {#overlays}
 
-覆蓋元件是對預設元件進行修改並影響所有使用預設元件的實例的方法。
+覆蓋元件是對預設元件進行修改並影響使用預設值的所有實例的方法。
 
-覆蓋是通過修改/**apps**&#x200B;目錄中的預設元件副本而完成的，而不是修改/**libs**&#x200B;目錄中的原始元件來完成的。 元件是使用相同的相對路徑建構的，但「libs」會取代為「apps」。
+覆蓋通過修改/**apps**&#x200B;目錄中的預設元件的副本來完成，而不是修改/**libs**&#x200B;目錄中的原始元件。 元件是以相同的相對路徑建構，除了「libs」會取代為「apps」。
 
-首先搜尋/apps目錄來解決請求，如果找不到，則會使用位於/libs目錄中的預設版本。
+首先搜尋/apps目錄以解決請求，若找不到，則使用/libs目錄中的預設版本。
 
-不得修改/libs目錄中的預設元件，因為以後的修補程式和升級可以在維護公共介面的同時，以任何必要的方式自由更改/libs目錄。
+不得修改/libs目錄中的預設元件，因為將來的修補程式和升級可以在維護公共介面時，以任何必要的方式更改/libs目錄。
 
-這與[extending](#extensions)的預設元件不同，該預設元件是希望對特定用途進行修改，建立到該元件的唯一路徑，並依賴在/libs目錄中引用原始預設元件作為超級資源類型。
+這與[extending](#extensions)預設元件不同，預設元件的用途是為特定用途進行修改，為元件建立唯一路徑，並依賴在/libs目錄中引用原始預設元件作為超級資源類型。
 
-如需覆蓋注釋元件的快速範例，請試用[覆蓋注釋元件教學課程](overlay-comments.md)。
+如需覆蓋注釋元件的快速範例，請嘗試[覆蓋注釋元件教學課程](overlay-comments.md)。
 
-## 副檔名{#extensions}
+## 擴充功能 {#extensions}
 
-擴充（覆寫）元件是一種修改特定用途的方法，不會影響使用預設值的所有例項。 擴充元件在/apps資料夾中具有唯一名稱，且會參照/libs資料夾中的預設元件，因此不會修改元件的預設設計和行為。
+擴充（覆寫）元件是修改特定用途而不影響使用預設值的所有執行個體的方法。 擴展元件在/apps資料夾中具有唯一名稱，並引用/libs資料夾中的預設元件，因此不會修改元件的預設設計和行為。
 
-這與[overlaying](#overlays)預設元件不同，其中Sling的性質會先解析apps/資料夾的相對參照，再在libs/資料夾中搜尋，如此元件的設計或行為就會全域修改。
+這與[overlaying](#overlays)預設元件不同，在預設元件中，Sling的性質會先解析應用程式/資料夾的相對參照，再在libs/資料夾中進行搜尋，因此元件的設計或行為會遭到全域修改。
 
-有關擴展注釋元件的快速示例，請試用[擴展注釋元件教程](extend-comments.md)。
+有關擴展注釋元件的快速示例，請嘗試[擴展注釋元件教程](extend-comments.md)。
 
-## Javascript系結{#javascript-binding}
+## Javascript綁定{#javascript-binding}
 
 元件的HBS指令碼必須系結至實作此功能的JavaScript物件、模型和檢視。
 
-`data-scf-component`屬性的值可以是預設值，例如&#x200B;**`social/tally/components/hbs/rating`**，或是用於自訂功能的擴充（自訂）元件，例如&#x200B;**weretail/components/hbs/rating**。
+`data-scf-component`屬性的值可以是預設值，如&#x200B;**`social/tally/components/hbs/rating`**，或用於自定義功能的擴展（自定義）元件，如&#x200B;**weretail/components/hbs/rating**。
 
-要綁定元件，必須將整個元件指令碼包含在&lt;div>元素中，並包含以下屬性：
+若要系結元件，必須將整個元件指令碼圍在&lt;div>元素內，並包含下列屬性：
 
 * `data-component-id`=&quot;{{id}}&quot;
 
-   從內容解析至id屬性
+   從內容解析為id屬性
 
 * `data-scf-component`=&quot;*&lt;resourcetype>*
 
@@ -80,46 +79,46 @@ ht-degree: 0%
 
 ## 自訂屬性 {#custom-properties}
 
-延伸或覆蓋元件時，可將屬性新增至已修改的對話方塊。
+在擴展或覆蓋元件時，可以將屬性添加到修改的對話框。
 
-通過引用車把模板中的屬性鍵，可以訪問元件／資源上設定的所有屬性：
+可通過參考handlebars模板中的屬性鍵來訪問元件/資源上設定的所有屬性：
 
 `{{properties.<property_name>}}`
 
 ## 設定CSS {#skinning-css}外觀
 
-自訂元件以符合網站的整體主題，可透過「外觀設定」來達成——在一定程度上變更顏色、字型、影像、按鈕、連結、間距甚至定位。
+定制元件以匹配網站的整體主題可以通過「外觀」（在一定程度上更改顏色、字型、影像、按鈕、連結、間距甚至定位）來實現。
 
-您可以選擇性覆寫架構樣式，或撰寫全新的樣式表，來設定外觀。 SCF元件定義了命名空間、模組化和語義CSS類，這些類會影響組成元件的各種元素。
+可通過選擇性地覆蓋框架樣式或通過撰寫全新樣式表來實現外觀設定。 SCF元件定義命名節點、模組化和語義CSS類，這些類影響構成元件的各種元素。
 
-設定元件外觀：
+要外觀元件，請執行以下操作：
 
-1. 識別您要變更的元素（例如，編譯器區域、工具列按鈕、訊息字型等）。
-1. 識別影響這些元素的CSS類別／規則。
+1. 識別您要變更的元素（範例 — 撰寫器區域、工具列按鈕、訊息字型等）。
+1. 識別影響這些元素的CSS類別/規則。
 1. 建立樣式表檔案(.css)。
-1. 將樣式表包含在您網站的用戶端程式庫資料夾([clientlibs](#clientlibs-for-scf))中，並確保它包含在範本和具有[ui:includeClientLib](../../help/sites-developing/clientlibs.md)的頁面中。
+1. 將樣式表包含在您網站的用戶端程式庫資料夾([clientlibs](#clientlibs-for-scf))中，並確認該樣式表包含在您具有[ui:includeClientLib](../../help/sites-developing/clientlibs.md)的範本和頁面中。
 
-1. 重新定義您在樣式表中識別(#2)的CSS類別和規則，並新增樣式。
+1. 重新定義您在樣式表中識別的CSS類別和規則(#2)，並新增樣式。
 
-自訂樣式現在會覆寫預設的架構樣式，而元件會以新的外觀呈現。
+自訂樣式現在會覆寫預設的架構樣式，而元件將會以新外觀呈現。
 
 >[!CAUTION]
 >
->前置`scf-js`的任何CSS類別名稱在javascript程式碼中都有特定用途。 這些類會影響元件的狀態（例如，從隱藏切換為可見），且不應覆蓋或移除。
+>任何以`scf-js`為首碼的CSS類別名稱在javascript程式碼中都有特定用途。 這些類會影響元件的狀態（例如，從隱藏切換為可見），不應覆蓋或移除。
 >
->雖然`scf-js`類不影響樣式，但類名可以在樣式表中使用，但須注意的是，由於它們控制了元素的狀態，可能會有副作用。
+>雖然`scf-js`類不影響樣式，但類名可以在樣式表中使用，但應注意，由於它們控制元素的狀態，可能會產生副作用。
 
 ## 擴充Javascript {#extending-javascript}
 
-若要擴充元件Javascript實作，您必須：
+若要擴充元件Javascript實施，您必須：
 
-1. 為應用程式建立元件，並將jcr:resourceSuperType設為延伸元件的jcr:resourceType值，例如social/forum/components/hbs/forum。
-1. 檢查預設SCF元件的Javascript以確定哪些方法需要使用SCF.registerComponent()進行註冊。
+1. 為應用程式建立元件，並將jcr:resourceSuperType設為延伸元件的jcr:resourceType的值，例如social/forum/components/hbs/forum。
+1. 檢查預設SCF元件的Javascript，以確定需要使用SCF.registerComponent()註冊的方法。
 1. 複製延伸元件的Javascript或從頭開始。
 1. 擴充方法。
-1. 使用SCF.registerComponent()註冊所有具有預設值或自定義對象和視圖的方法。
+1. 使用SCF.registerComponent()註冊所有方法，其中包括預設值或自定義對象和視圖。
 
-### forum.js:論壇的擴展示例- HBS {#forum-js-sample-extension-of-forum-hbs}
+### forum.js:論壇的範例擴充功能 — HBS {#forum-js-sample-extension-of-forum-hbs}
 
 ```xml
 (function($CQ, _, Backbone, SCF) {
@@ -146,24 +145,24 @@ ht-degree: 0%
 
 ## 指令碼標籤{#script-tags}
 
-指令碼標籤是用戶端架構的固有部分。 它們可協助將伺服器端產生的標籤與用戶端的模型和檢視系結在一起。
+指令碼標籤是用戶端架構的固有部分。 它們是膠水，有助於將伺服器端產生的標籤與用戶端的模型和檢視系結。
 
-在覆蓋或覆蓋元件時，不應刪除SCF指令碼中的指令碼標籤。 自動為在HTML中注入JSON而建立的SCF指令碼標籤會以屬性`data-scf-json=true`來識別。
+覆蓋或覆蓋元件時，不應移除SCF指令碼中的指令碼標籤。 為在HTML中插入JSON而自動建立的SCF指令碼標籤以屬性`data-scf-json=true`標識。
 
-## SCF {#clientlibs-for-scf}的Clientlibs
+## SCF {#clientlibs-for-scf}的客戶端
 
-使用[用戶端程式庫](../../help/sites-developing/clientlibs.md)(clientlibs)，可組織並最佳化用於在用戶端上呈現內容的Javascript和CSS。
+使用[用戶端資料庫](../../help/sites-developing/clientlibs.md)(clientlibs)，可提供組織和最佳化用於在用戶端上呈現內容的Javascript和CSS的方法。
 
-SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別名稱中出現&#39;author&#39;時不同：
+SCF的clientlib會遵循兩種變體非常特定的命名模式，而這兩種模式只會因類別名稱中是否存在「author」而有所不同：
 
-| Clientlib變體 | 類別的模式屬性 |
+| Clientlib變體 | 類別屬性的模式 |
 |--- |--- |
-| 完整的clientlib | cq.social.hbs.&lt;component name=&quot;&quot;> |
+| 完整clientlib | cq.social.hbs.&lt;component name=&quot;&quot;> |
 | author clientlib | cq.social.author.hbs.&lt;component name=&quot;&quot;> |
 
 ### 完成Clientlibs {#complete-clientlibs}
 
-完整（非作者）的clientlibs包含相依性，並方便與ui:includeClientLib一起加入。
+完整（非作者）clientlib包含相依性，且方便搭配ui:includeClientLib加入。
 
 這些版本位於：
 
@@ -174,17 +173,17 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別�
 * 客戶端資料夾節點：`/etc/clientlibs/social/hbs/forum`
 * 類別屬性：`cq.social.hbs.forum`
 
-[社區元件指南](components-guide.md)列出了每個SCF元件所需的完整客戶端。
+[社區元件指南](components-guide.md)列出每個SCF元件所需的完整客戶端。
 
-[Clientlibs for Communities ](clientlibs.md) Components說明如何將clientlibs新增至頁面。
+[Communities元件的](clientlibs.md) Clientlibs說明如何將clientlibs新增至頁面。
 
 ### 作者Clientlibs {#author-clientlibs}
 
-作者版本clientlib會清除至實作元件所需的最小Javascript。
+製作版本clientlib會去除至實作元件所需的最小Javascript。
 
-這些clientlib永遠不應直接包含在內，但可嵌入為網站手工製作的其他clientlib。
+這些clientlib絕不應直接包含在內，而是可內嵌至其他clientlib，這些clientlib是為網站手工編製。
 
-這些版本位於SCF libs資料夾中：
+在SCF libs資料夾中找到以下版本：
 
 * `/libs/social/&lt;feature&gt;/components/hbs/&lt;component name&gt;/clientlibs`
 
@@ -193,19 +192,18 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，只有在類別�
 * 客戶端資料夾節點：`/libs/social/forum/hbs/forum/clientlibs`
 * 類別屬性：`cq.social.author.hbs.forum`
 
-注意：雖然作者clientlibs從不嵌入其他程式庫，但是他們確實會列出其相依性。 嵌入到其他庫時，不會自動提取從屬關係，也必須嵌入。
+注意：雖然作者clientlibs絕不內嵌其他程式庫，但會列出其相依性。 內嵌在其他程式庫時，不會自動提取相依性，也必須內嵌。
 
-通過在[社區元件指南](components-guide.md)中為每個SCF元件列出的clientlibs中插入&quot;author&quot;，可以標識所需的作者clientlibs。
+在[社群元件指南](components-guide.md)中針對每個SCF元件列出的clientlib中插入「author」，即可識別所需的作者clientlib。
 
-### 使用注意事項{#usage-considerations}
+### 使用考量事項{#usage-considerations}
 
 每個網站在管理用戶端程式庫的方式上都不同。 各種因素包括：
 
-* 整體速度：可能是希望網站能夠回應，但是第一個頁面載入速度稍微慢一點，是可以接受的。 如果許多頁面使用相同的Javascript，則可將各種Javascript內嵌至一個clientlib，並從第一頁參考以載入。 此次下載中的Javascript會維持快取狀態，將後續頁面的資料下載量減至最少。
-* 第一頁的簡短時間：可能是希望第一頁能快速載入。 在這種情況下，Javascript位於多個小檔案中，只有在需要時才會參考。
-* 第一頁載入與後續下載之間的平衡。
+* 整體速度：可能是希望網站能有回應，但第一個頁面載入速度有點慢是可接受的。 如果許多頁面使用相同的Javascript，則各種Javascript可內嵌至一個clientlib，並從第一個頁面參照以載入。 此單次下載中的Javascript會維持快取狀態，將後續頁面要下載的資料量減到最少。
+* 第一頁的簡短時間：可能是想要快速載入第一個頁面。 在此情況下，Javascript位於多個小檔案中，只在需要時才要參考。
+* 第一個頁面載入與後續下載之間的平衡。
 
-| **[‹功能基本工具](essentials.md)** | **[伺服器端自訂‹](server-customize.md)** |
+| **[⇐功能要點](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlepers ‡](handlebars-helpers.md)** |
-
+|  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
