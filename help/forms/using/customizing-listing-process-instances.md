@@ -1,27 +1,26 @@
 ---
-title: 自定義流程實例清單
-seo-title: 自定義流程實例清單
-description: How-to customize the properties displayed in process instance in AEM Forms workspace.
-seo-description: How-to customize the properties displayed in process instance in AEM Forms workspace.
+title: 自定義進程實例清單
+seo-title: 自定義進程實例清單
+description: 在AEM Forms工作區中自訂處理例項中顯示屬性的方式。
+seo-description: 在AEM Forms工作區中自訂處理例項中顯示屬性的方式。
 uuid: 3b55d9b9-7f73-46dd-9eb6-42be218440a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: b27ffe92-8491-43a0-bf42-613eb39a606e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '302'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-
 # 自定義進程實例清單{#customizing-the-listing-of-process-instances}
 
-流程例項清單會顯示在AEM Forms工作區的「追蹤」標籤中。
+程式例項清單會顯示在AEM Forms工作區的「追蹤」標籤中。
 
-在流程例項清單中，對於每個流程例項，AEM Forms工作區會顯示該例項的某些屬性。 以下屬性適用於每個進程實例。 這些屬性作為屬性儲存在進程實例元件模型中，可用於其視圖和模板中。
+在程式例項清單中，AEM Forms工作區會針對每個程式例項顯示該例項的某些屬性。 每個進程實例均可使用以下屬性。 這些屬性在進程實例元件模型中儲存為屬性，並可在其視圖和模板中使用。
 
 <table>
  <tbody>
@@ -34,7 +33,7 @@ ht-degree: 1%
    <td>流程實例的說明。</td>
   </tr>
   <tr>
-   <td>啟動器</td>
+   <td>發起人</td>
    <td>進程實例的啟動器名稱。</td>
   </tr>
   <tr>
@@ -43,7 +42,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>processCompleteTime</td>
-   <td>流程完成時的時間戳記。</td>
+   <td>進程完成時的時間戳。</td>
   </tr>
   <tr>
    <td>processInstanceId</td>
@@ -55,39 +54,39 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>processName</td>
-   <td>進程的名稱。</td>
+   <td>程式名稱。</td>
   </tr>
   <tr>
    <td>processStartTime</td>
-   <td>進程啟動時的時間戳記。</td>
+   <td>進程啟動時的時間戳。</td>
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>流程變數的對象陣列。 每個流程變數對象都包含<strong>name</strong>（流程變數的名稱）、<strong>value</strong>（流程變數的值）和<strong> type</strong>（流程變數的類型）。</td>
+   <td>進程變數的對象陣列。 每個進程變數對象都包含<strong>name</strong>（進程變數的名稱）、<strong>value</strong>（進程變數的值）和<strong> type</strong>（進程變數的類型）。</td>
   </tr>
  </tbody>
 </table>
 
 **範例:**
 
-要在流程實例卡中顯示流程實例的`description`屬性，請執行以下步驟。
+要在進程實例卡中顯示進程實例的`description`屬性，請執行以下步驟。
 
-1. 請依照[AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)進行。
-1. 執行下列動作：
+1. 請依照[AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)操作。
+1. 請執行下列動作：
 
-   1. 複製/libs/ws/js/runtime/templates/processinstance.html至/apps/ws/js/runtime/templates/（如果不存在）。 按一下&#x200B;**保存全部**。
-   1. 添加進程說明div，其類= &#39;processDescription&#39; inprocessinstance.html。
+   1. 將/libs/ws/js/runtime/templates/processinstance.html複製到/apps/ws/js/runtime/templates/（如果不存在）。 按一下「**全部保存**」。
+   1. 在inprocessinstance.html中新增含有class = &#39;processDescription&#39;的程式說明div。
 
    ```jsp
    <div class="processDescription" title="<%= description%>"><%= description%></div>
    ```
 
-1. 執行下列動作：
+1. 請執行下列動作：
 
    1. 開啟/apps/ws/js/registry.js進行編輯。
-   1. 將`text!/lc/libs/ws/js/runtime/templates/processinstance.html`搜尋並取代為&#x200B;`text!/lc/`**apps**/ws/js/runtime/templates/processinstance.html。
+   1. 搜尋並將`text!/lc/libs/ws/js/runtime/templates/processinstance.html`取代為&#x200B;`text!/lc/`**apps**/ws/js/runtime/templates/processinstance.html。
 
-1. 以上變更可能需要以下列方式在樣式表/apps/ws/css/newStyle.css中新增項目，以更新CSS檔案：
+1. 以上變更可能需要更新CSS檔案，方法是在樣式表/apps/ws/css/newStyle.css中新增項目，方法如下：
 
    ```css
    .processinstance .processDescription {
