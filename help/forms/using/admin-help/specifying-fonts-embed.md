@@ -1,33 +1,31 @@
 ---
 title: 指定要嵌入的字型
 seo-title: 指定要嵌入的字型
-description: 瞭解如何指定要內嵌的字型。
-seo-description: 瞭解如何指定要內嵌的字型。
+description: 了解如何指定要內嵌的字型。
+seo-description: 了解如何指定要內嵌的字型。
 uuid: 97de6f98-ed3b-4a93-854a-193a967b4672
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4c83694c-b00f-40be-9ac4-f5785cd60741
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: b2cbf5f3-ee13-47bf-bf7f-f6a1884cee66
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
 
 ---
 
+# 指定要嵌入{#specifying-fonts-to-embed}的字型
 
-# 指定要嵌入的字型{#specifying-fonts-to-embed}
-
-您可以指定哪些字型永遠嵌入或永遠不嵌入Forms服務生成的表單。 內嵌字型會增加表單的檔案大小。 內嵌使用者很少在其系統上使用的不尋常字型。 請勿嵌入通常已安裝的常用字型。
+您可以指定一律嵌入或絕不嵌入Forms服務所產生表單的字型。 嵌入字型會增加表單的檔案大小。 嵌入用戶在其系統上很少使用的異常字型。 請勿嵌入他們通常安裝的通用字型。
 
 >[!NOTE]
 >
->如果您已為Forms指定自訂XCI檔案，XCI檔案中的內嵌字型選項會覆寫這些設定。 （請參閱[設定Forms的位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。）
+>如果您已指定Forms的自訂XCI檔案，XCI檔案中的內嵌字型選項會覆寫這些設定。 (請參閱[設定Forms的位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。)
 
 1. 在管理控制台中，按一下「**[!UICONTROL 服務> Forms]**」。
-1. 在&#x200B;**[!UICONTROL 字型內嵌設定]**&#x200B;的&#x200B;**[!UICONTROL 一律內嵌字型]**&#x200B;方塊中，輸入要與表單內嵌的字型名稱，以逗號分隔。 您指定的字型只會內嵌在產生的表單中（如果在表單中使用）。 如果傳遞至服務的XCI檔案中已開啟內嵌字型選項，則會忽略此設定，因為在這種情況下，PDF中使用的所有字型都會一律內嵌。
-1. 在&#x200B;**[!UICONTROL 永不嵌入字型]**&#x200B;方塊中，輸入不要嵌入表單的字型名稱，以逗號分隔。 您指定的字型不會嵌入在PDF中，即使這些字型用在產生的PDF中亦然。 如果傳遞至服務的XCI檔案中的內嵌字型選項已關閉，則會忽略此設定，因為在此情況下，PDF中使用的字型均未內嵌。
-1. 按一下&#x200B;**[!UICONTROL 「儲存」]**。
-
+1. 在「**[!UICONTROL 字型嵌入設定]**」的「**[!UICONTROL 始終嵌入字型]**」框中，鍵入要與表單嵌入的字型的名稱，並以逗號分隔。 指定的字型只有在窗體中使用時才會嵌入生成的窗體。 如果已在傳遞至服務的XCI檔案中開啟內嵌字型選項，則會忽略此設定，因為在這種情況下，PDF中使用的所有字型一律會內嵌。
+1. 在&#x200B;**[!UICONTROL 永不嵌入字型]**&#x200B;框中，鍵入不用表單嵌入的字型的名稱，並以逗號分隔。 您指定的字型不會嵌入到PDF中，即使這些字型用於生成的PDF中也是如此。 如果傳遞至服務的XCI檔案中的內嵌字型選項已關閉，則會忽略此設定，因為在這種情況下，PDF中使用的字型都不會嵌入。
+1. 按一下「**[!UICONTROL 儲存]**」。
