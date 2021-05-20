@@ -1,92 +1,90 @@
 ---
 title: SocialUtils重構
 seo-title: SocialUtils重構
-description: 在AEM 6.1中不建議使用套件com.adobe.cq.sosical.ugcbase.SocialUtils
-seo-description: 在AEM 6.1中不建議使用套件com.adobe.cq.sosical.ugcbase.SocialUtils
+description: AEM 6.1已棄用套件com.adobe.cq.social.ugcbase.SocialUtils
+seo-description: AEM 6.1已棄用套件com.adobe.cq.social.ugcbase.SocialUtils
 uuid: 54a0d98e-5ead-4c12-850f-8252ea9b3263
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
-translation-type: tm+mt
-source-git-commit: 1429a099288f038510cb0a194fb55632297ef371
+exl-id: 0f731ec6-a12e-4098-a1ec-ee4cd4dc1432
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
 
 ---
 
-
 # SocialUtils重構{#socialutils-refactoring}
 
-## SocialUtils套件已過時{#socialutils-package-deprecated}
+## 已棄用的SocialUtils套件{#socialutils-package-deprecated}
 
-AEM 6.1中不建議使用套件`com.adobe.cq.social.ugcbase.SocialUtils`。
+套件`com.adobe.cq.social.ugcbase.SocialUtils`已在AEM 6.1中淘汰。
 
-下表列出了用來取代`SocialUtils`方法的方法。
+下表列出要用來取代`SocialUtils`方法的方法。
 
-## SocialResourceUtilities軟體包{#socialresourceutilities-package}
+## SocialResourceUtilities套件{#socialresourceutilities-package}
 
-| com.adobe.cq.sosical.srp.utilities.api.SocialResourceUtilities中的方法 |
+| com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities中的方法 |
 |---|
-| Boolean checkPermission（ResourceResolver解析器、字串路徑、字串操作） |  |
-| SocialResourceProvider getSocialResourceProvider（資源資源） |  |
+| 布林值checkPermission（ResourceResolver，字串路徑，字串動作） |  |
+| SocialResourceProvider getSocialResourceProvider（資源） |  |
 | SocialResourceConfiguration getStorageConfig（資源資源） |  |
-| 資源getUGCResource（資源userResource） |  |
-| 資源getUGCResource(Resource userResource、ResourceResolverFactory rrf) | 新 |
-| 資源getUGCResource(Resource userResource、ResourceResolverFactory rrf、String resourceTypeHint) | 新 |
+| 資源getUGCResource(Resource userResource) |  |
+| 資源getUGCResource(Resource userResource, ResourceResolverFactory rrf) | 新 |
+| 資源getUGCResource（Resource userResource, ResourceResolverFactory rrf，字串resourceTypeHint） | 新 |
 | 資源getUGCResource(Resource userResource, String resourceTypeHint) |  |
-| 布林值hasModeraPermissions（資源資源） |  |
+| 布林值hasModeratePermissions（資源） |  |
 | 字串資源ToACLPath（資源資源） |  |
-| 字串資源ToUGCStoragePath（資源資源） | 替換字串resourceToUGCPath（資源資源） |
+| 字串資源ToUGCStoragePath（資源資源） | 取代字串resourceToUGCPath（資源資源） |
 | 字串UGCToResourcePath（資源資源） |  |
-| 字串UGCToResourcePath（字串ugcPath） | 更改簽名 |
-| 字串UGCToResourcePath（字串ugcPath，資源解析器） | 新 |
+| 字串UGCToResourcePath（字串ugcPath） | 簽名更改 |
+| 字串UGCToResourcePath（字串ugcPath, ResourceResolver） | 新 |
 
 | `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities中的方法 |
 |---|
-| SocialResourceProvider getSocialResourceProvider（資源資源） | 取代SocialResourceProvider getConfiguredProvider（資源資源） |
+| SocialResourceProvider getSocialResourceProvider（資源） | 取代SocialResourceProvider getConfiguredProvider(Resource) |
 
-## SCFUtilities軟體包{#scfutilities-package}
+## SCFUtilities包{#scfutilities-package}
 
 | `com.adobe.cq.social.`utilities.scf.api.SCFUtilites中的方法 |
 |---|
 | 字串getAvatar(UserProperties userProperties) |
 | 字串getAvatar(UserProperties userProperties, int size) |
 | 字串getAvatar(UserProperties userProperties, String absoluteDefaultAvatar) |
-| 字串getAvatar（UserProperties userProperties、String absoluteDefaultAvatar、SocialUtils.AVATAR_SIZE大小） |
-| Page getContainingPage（資源資源） |
-| 字串getSocialProfileURL（字串使用者名稱、資源解析程式、頁面頁面） |
-| UserProperties getUserProperties(ResourceResolver、String userId) |
+| 字串getAvatar（UserProperties userProperties，字串absoluteDefaultAvatar, SocialUtils.AVATAR_SIZE大小） |
+| Page getContainingPage（資源） |
+| 字串getSocialProfileURL（字串使用者名稱、 ResourceResolver、Page頁面） |
+| UserProperties getUserProperties(ResourceResolver, String userId) |
 
 ## 僅供內部使用{#for-internal-use-only}
 
-| 布林canAddNode（作業階段，字串路徑） |
+| 布林值canAddNode（工作階段，字串路徑） |
 |---|
-| 字串createUniqueNameHint（字串訊息） |
-| 字串createUniqueNameHint（字串訊息， int numRandomChars） |
+| 字串createUniqueNameHint（字串消息） |
+| 字串createUniqueNameHint（字串消息， int numRandomChars） |
 | 字串generateRandomString(int length) |
 | SocialResourceConfiguration getDefaultStorageConfig() |
-| Page getPage（字串路徑，資源解析程式） |
-| 字串getPagePath（資源資源） |
+| Page getPage（字串路徑， ResourceResolver） |
+| 字串getPagePath（資源） |
 | 字串getPagePath（字串路徑） |
-| 字串getResourceTypeForIncludedResource（資源元件，字串defaultResourceType，字串designPropertyName） |
-| 字串getResourceTypeFromDesign（資源， String styleProperty, String defaultValue） |
-| 布爾型isResourceOwner（資源資源） |
-| 字串映射UGCPath（資源資源） |
-| String mapUGCPath(String ugcPath, ResourceResolver)解析器 |
-| 布爾型mayPost（資源解析器、資源資源） |
-| 字串prepareUserGeneratedContent(ResourceResolver, String path) |
+| 字串getResourceTypeForIncludedResource（Resource元件，字串defaultResourceType，字串designPropertyName） |
+| 字串getResourceTypeFromDesign(Resource, String styleProperty, String defaultValue) |
+| 布林值isResourceOwner（資源） |
+| 字串mapUGCPath（資源） |
+| 字串mapUGCPath(String ugcPath, ResourceResolver) |
+| 布林值mayPost（ResourceResolver，資源） |
+| 字串prepareUserGeneratedContent（ResourceResolver，字串路徑） |
 
-## 方法不再可用{#methods-no-longer-available}
+## 不再提供{#methods-no-longer-available}方法
 
-| Node createNode（ResourceResolver解析器、字串路徑、字串nodeType） |
+| Node createNode（ResourceResolver，字串路徑，字串nodeType） |
 |---|
-| 資源getResourceAtPath（資源解析器，字串路徑） |
-| 資源getResourceAtPath（資源解析器、字串路徑、字串resourceType） |
-| 配置getStorageCloudServiceConfig（資源資源） |
+| 資源getResourceAtPath（ResourceResolver，字串路徑） |
+| 資源getResourceAtPath（ResourceResolver，字串路徑，字串resourceType） |
+| 配置getStorageCloudServiceConfig（資源） |
 | TranslationManager getTranslationManager() |
 | TranslationSaveQueue getTranslationSaveQueue() |
-| 布爾型mayAccessUGC(ResourceResolver) |
-
+| 布林值mayAccessUGC(ResourceResolver) |
