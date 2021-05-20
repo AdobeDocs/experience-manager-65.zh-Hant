@@ -1,53 +1,52 @@
 ---
-title: Barcoded Forms服務
+title: 條碼式Forms服務
 seo-title: 使用AEM Forms Barcoded Forms服務
-description: '使用AEM Forms Barcoded Forms服務，從條碼的電子影像擷取資料。 '
-seo-description: '使用AEM Forms Barcoded Forms服務，從條碼的電子影像擷取資料。 '
+description: '使用AEM Forms Barcoded Forms服務從條碼的電子影像中擷取資料。 '
+seo-description: '使用AEM Forms Barcoded Forms服務從條碼的電子影像中擷取資料。 '
 uuid: b044a788-0e4a-4718-b71a-bd846933d51b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+exl-id: edaf12be-473f-4175-b4e0-549b41159a55
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 0%
 
 ---
 
-
-# Barcoded Forms Service{#barcoded-forms-service}
+# 條碼式Forms服務{#barcoded-forms-service}
 
 ## 概覽 {#overview}
 
-Barcoded Forms服務從條形碼的電子影像中提取資料。 該服務接受包含一個或多個條形碼的TIFF和PDF檔案作為輸入，並提取條形碼資料。 條碼資料可以使用多種方式進行格式化，包括XML、分隔字串或使用JavaScript建立的任何自訂格式。
+條碼式Forms服務從條碼的電子影像中擷取資料。 該服務接受包含一個或多個條形碼的TIFF和PDF檔案作為輸入，並提取條形碼資料。 條碼資料可以以多種方式格式化，包括XML、分隔字串或使用JavaScript建立的任何自訂格式。
 
-Barcoded Forms服務支援以下作為掃描TIFF或PDF檔案提供的二維(2D)**符號：**
+條碼編碼Forms服務支援下列作為掃描TIFF或PDF檔案提供的&#x200B;**二維(2D)**&#x200B;符號：
 
 * PDF417
 * 資料矩陣
-* QR Code
+* QR碼
 
-此服務也支援下列作為掃描TIFF或PDF檔案提供的一維&#x200B;**符號：**
+此服務也支援以下作為掃描的TIFF或PDF文檔提供的&#x200B;**一維**&#x200B;符號：
 
 * 科達巴爾
 * Code128
-* 代碼3（共9個）
+* 代碼3（共9）
 * EAN13
 * EAN8
 
-您可以使用Barcoded Forms服務完成下列工作：
+您可以使用條碼式Forms服務來完成下列工作：
 
-* 從條碼影像（TIFF或PDF）擷取條碼資料。 資料會儲存為分隔文字。
-* 將分隔文字資料轉換為XML（XDP或XFDF）。 XML資料比分隔文字更容易剖析。 此外，XDP或XFDF格式的資料可用作AEM Forms中其他服務的輸入。
+* 從條碼影像（TIFF或PDF）中擷取條碼資料。 資料會以分隔文字的形式儲存。
+* 將分隔文字資料轉換為XML（XDP或XFDF）。 XML資料比分隔文字更容易剖析。 此外，XDP或XFDF格式的資料可作為AEM Forms中其他服務的輸入。
 
-對於影像中的每個條形碼，Barcoded Forms服務會定位條形碼、對其進行解碼並提取資料。 服務在XML文檔的內容元素中返回條形碼資料（在需要時使用實體編碼）。 例如，下清單格的掃描TIFF影像包含兩個條碼：
+對於影像中的每個條形碼，條形碼Forms服務將定位條形碼，對其進行解碼，並提取資料。 該服務在XML文檔的內容元素中返回條形碼資料（在需要時使用實體編碼）。 例如，以下掃描的表單TIFF影像包含兩個條形碼：
 
-![示例](assets/example.png)
+![範例](assets/example.png)
 
-Barcoded Forms服務在解碼條形碼後返回以下XML文檔：
+條碼式Forms服務在解碼條碼後傳回下列XML檔案：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>  
@@ -92,60 +91,60 @@ Barcoded Forms服務在解碼條形碼後返回以下XML文檔：
 </xb:scanned_image>
 ```
 
-## 服務{#considerations}的注意事項
+## 服務的考量事項 {#considerations}
 
-### 使用條形碼表單{#workflows-that-use-barcoded-forms}的工作流程
+### 使用條碼式表單{#workflows-that-use-barcoded-forms}的工作流程
 
-表單作者使用設計工具建立互動式條碼表單。 （請參閱[設計人員說明](https://www.adobe.com/go/learn_aemforms_designer_63)。） 當使用者使用Adobe Reader或Acrobat填寫條碼表格時，會自動更新條碼以編碼表格資料。
+表單作者可使用Designer建立互動式條碼表單。 （請參閱[Designer幫助](https://www.adobe.com/go/learn_aemforms_designer_63)。） 當使用者使用Adobe Reader或Acrobat填入條碼式表單時，條碼會自動更新，以編碼表單資料。
 
-Barcoded Forms服務對於將紙本上的資料轉換為電子格式非常有用。 例如，當填入並列印條形碼表格時，可掃描列印的復本並用作Barcoded Forms服務的輸入。
+Barcoded Forms服務用於將紙上存在的資料轉換為電子格式。 例如，當填寫和打印條碼式表單時，可以掃描打印的副本並用作條碼式Forms服務的輸入。
 
-監視的資料夾端點通常用來啟動使用Barcoded Forms服務的應用程式。 例如，檔案掃描器可將條碼表單的TIFF或PDF影像儲存在受監視的檔案夾中。 受監視的資料夾端點將影像傳送至服務以進行解碼。
+觀看的資料夾端點通常用於啟動使用條碼式Forms服務的應用程式。 例如，文檔掃描器可以將條碼式表單的TIFF或PDF影像保存在觀看的資料夾中。 觀看的資料夾端點會將影像傳遞至服務進行解碼。
 
 ### 建議的編碼和解碼格式{#recommended-encoding-and-decoding-formats}
 
-建議條形碼表單作者在以條形碼編碼資料時，使用簡單、分隔的格式（例如Tab分隔）。 此外，請避免使用歸位字元作為欄位分隔字元。 設計人員提供一系列分隔編碼，可自動產生JavaScript指令碼以編碼條碼。 解碼資料具有第一行上的欄位名稱和第二行上的值，每個欄位之間有制表符。
+在條碼中編碼資料時，建議條碼格式作者使用簡單的分隔格式（例如以Tab分隔）。 此外，請避免使用歸位作為欄位分隔字元。 Designer提供一系列分隔編碼，可自動產生JavaScript指令碼來編碼條碼。 解碼資料在第一行上具有欄位名稱，在第二行上具有其值，每個欄位之間具有標籤。
 
-解碼條形碼時，請指定用於分隔欄位的字元。 為解碼指定的字元必須與用於編碼條形碼的字元相同。 例如，在使用建議的Tab分隔格式時，「擷取至XML」運算必須使用Tab的預設值作為欄位分隔字元。
+解碼條形碼時，請指定用於分隔欄位的字元。 為解碼指定的字元必須與用於編碼條形碼的字元相同。 例如，使用建議的Tab分隔格式時，「提取到XML」操作必須使用Tab的預設值作為欄位分隔符。
 
 ### 用戶指定的字元集{#user-specified-character-sets}
 
-當表單作者使用設計工具將條形碼對象添加到表單時，他們可以指定字元編碼。 識別的編碼為UTF-8、ISO-8859-1、ISO-8859-2、ISO-8859-7、Shift-JIS、KSC-5601、Big-Five、GB-2312、UTF-16。 依預設，所有資料都會以UTF-8編碼為條碼。
+當表單作者使用Designer將條碼物件新增至其表單時，可指定字元編碼。 認可的編碼為UTF-8、ISO-8859-1、ISO-8859-2、ISO-8859-7、Shift-JIS、KSC-5601、Big-Five、GB-2312、UTF-16。 依預設，所有資料都以條碼編碼為UTF-8。
 
-解碼條形碼時，可以指定要使用的字元集編碼。 為確保所有資料都正確解碼，請指定與表單作者在設計表單時指定的相同字元集。
+解碼條形碼時，可以指定要使用的字元集編碼。 為保證所有資料都正確解碼，請指定與表單作者在設計表單時指定的字元集相同。
 
 ### API限制{#api-limitations}
 
-當您使用BCF API時，請考慮下列限制：
+使用BCF API時，請考量下列限制：
 
 * 不支援動態表單。
-* 互動式表單無法正確解碼，除非已平面化。
-* 1-D條碼只能包含英數字元值（如果支援）。 不解碼包含特殊符號的1-D條形碼。
+* 除非將互動式表單平面化，否則這些表單無法正確解碼。
+* 1-D條形碼只能包含英數字元值（如果支援）。 不解碼包含特殊符號的1-D條形碼。
 
 ### 其他限制{#other-limitations}
 
-此外，在使用Barcoded Forms服務時，請考慮下列限制：
+此外，使用條碼式Forms服務時，請考量下列限制：
 
-* 本服務完全支援使用Adobe Reader或Acrobat儲存的AcroForms和包含2D條碼的靜態表單。 不過，對於1D條形碼，請平面化表單或以掃描的PDF或TIFF檔案形式提供。
-* 動態XFA表格未完全支援。 若要以動態格式正確解碼1D和2D條碼，請將表格平面化或以掃描的PDF或TIFF檔案形式提供。
+* 此服務完全支援包含使用Adobe Reader或Acrobat儲存之2D條碼的AcroForms和靜態表單。 但是，對於1D條形碼，可以平面化表單，或以掃描的PDF或TIFF文檔的形式提供它。
+* 動態XFA表單未完全支援。 要以動態形式正確解碼1D和2D條形碼，請平面化表單，或以掃描的PDF或TIFF文檔提供它。
 
-此外，如果遵守上述限制，服務可解碼使用支援條碼的任何條碼。 有關如何建立互動式條形碼表單的詳細資訊，請參閱[設計人員幫助](https://www.adobe.com/go/learn_aemforms_designer_63)。
+此外，如果發現上述限制，則服務可以解碼使用支援的條碼符號的任何條形碼。 有關如何建立互動式條碼表單的詳細資訊，請參閱[Designer Help](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 ## 配置服務的屬性   {#configureproperties}
 
-您可以使用AEM Console中的&#x200B;**AEMFD Barcoded Forms Service**&#x200B;來設定此服務的屬性。 AEM主控台的預設URL為`https://[host]:'port'/system/console/configMgr`。
+您可以在AEM Console中使用&#x200B;**AEMFD條碼式Forms服務**&#x200B;來設定此服務的屬性。 AEM控制台的預設URL為`https://[host]:'port'/system/console/configMgr`。
 
-## 使用服務{#using}
+## 使用服務 {#using}
 
-Barcoded Forms Service提供下列兩個API:
+條碼式Forms服務提供下列兩個API:
 
-* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:解碼輸入PDF檔案或tiff影像中所有可用的條碼。它返回另一個XML文檔，該文檔包含從輸入文檔或影像中所有可用的條形碼檢索到的資料。
+* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:對輸入PDF文檔或Tiff影像中可用的所有條形碼進行解碼。它返回另一個XML文檔，該文檔包含從輸入文檔或影像中可用的所有條形碼中檢索到的資料。
 
-* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:將使用解碼API解碼的資料轉換為XML資料。此XML資料可與XFA表單合併。 它會傳回XML檔案清單，每個條碼各一份。
+* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:將使用解碼API解碼的資料轉換為XML資料。此XML資料可與XFA表單合併。 它返回XML文檔的清單，每個條碼各一個。
 
-### 將BCF服務與JSP或Servlets {#using-bcf-service-with-a-jsp-or-servlets}一起使用
+### 搭配JSP或Servlet {#using-bcf-service-with-a-jsp-or-servlets}使用BCF服務
 
-下列范常式式碼會解碼檔案中的條碼，並將輸出的XML儲存至磁碟。
+以下示例代碼將文檔中的條形碼解碼，並將輸出XML保存到磁碟。
 
 ```jsp
 <%@ page import="java.util.List,
@@ -232,13 +231,13 @@ Barcoded Forms Service提供下列兩個API:
 %>
 ```
 
-### 搭配AEM Workflows {#using-the-bcf-service-with-aem-workflows}使用BCF服務
+### 搭配AEM工作流程使用BCF服務{#using-the-bcf-service-with-aem-workflows}
 
-從工作流中運行Barcoded Forms服務類似於從JSP/Servlet運行服務。 唯一的區別是從JSP/Servlet運行服務，文檔對象會自動從ResourceResolverHelper對象中檢索ResourceResolver對象的實例。 從工作流程呼叫程式碼時，此自動機制無法運作。
+從工作流程執行條碼式Forms服務類似於從JSP/Servlet執行服務。 唯一的差異是從JSP/Servlet運行服務，文檔對象會自動從ResourceResolverHelper對象中檢索ResourceResolver對象的實例。 從工作流程呼叫程式碼時，此自動機制無法運作。
 
-對於工作流，將ResourceResolver對象的實例顯式傳遞到Document類建構子。 然後，Document對象使用提供的ResourceResolver對象從儲存庫讀取內容。
+對於工作流，將ResourceResolver對象的實例顯式傳遞到Document類建構子。 然後，Document物件會使用提供的ResourceResolver物件來從存放庫讀取內容。
 
-下面的示例工作流進程對文檔中的條形碼進行解碼並將結果保存到磁碟。 程式碼會寫入ECMAScript，檔案會以工作流程裝載的形式傳遞：
+以下示例工作流進程會解碼文檔中的條形碼並將結果保存到磁碟。 程式碼會寫入ECMAScript中，而檔案會以工作流程裝載的形式傳遞：
 
 ```javascript
 /*
@@ -305,4 +304,3 @@ function saveW3CDocument(inputDoc, filePath) {
    os.close();
 }
 ```
-
