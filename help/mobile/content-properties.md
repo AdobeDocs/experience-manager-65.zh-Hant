@@ -1,32 +1,31 @@
 ---
 title: 內容屬性和節點
 seo-title: 內容屬性和節點
-description: 請依照本頁瞭解內容屬性和節點。
-seo-description: 請依照本頁瞭解內容屬性和節點。
+description: 請詳閱本頁面，了解內容屬性和節點。
+seo-description: 請詳閱本頁面，了解內容屬性和節點。
 uuid: 2dad52c8-5b6c-4b90-8498-62217a9a27fc
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
-translation-type: tm+mt
-source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
+exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 20%
 
 ---
 
-
 # 內容屬性和節點{#content-properties-and-nodes}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
 
-文章、橫幅和系列會在AEM中呈現為cq:Pages。
+文章、橫幅和集合在AEM中會以cq:Pages來呈現。
 
-除了下列顯示的其他數個屬性外，這些屬性還共用與任何cq:Page中相同的常用屬性，這些屬性代表Adobe Experience Manager(AEM)Mobile On-Demand Services中繼資料和整合支援屬性。
+除了下方顯示的數個其他屬性外，這些屬性也共用任何cq:Page中找到的相同共同屬性，這些屬性代表Adobe Experience Manager(AEM)Mobile On-Demand Services中繼資料和整合支援屬性。
 
 下表說明內容屬性和節點。
 
@@ -34,14 +33,14 @@ ht-degree: 20%
 
 | **屬性名稱** | **類型** | **預設值或預期值** | **說明** |
 |---|---|---|---|
-| dps-id | 字串 |  | 指派給AEM Mobile且AEM儲存的AEM在上傳至AEM Mobile或從AEM Mobile匯入後 |
+| dps-id | 字串 |  | 由AEM Mobile指派，並由AEM儲存後上傳至AEM Mobile或從AEM Mobile匯入 |
 | dps-resourceType | 字串 | dps:Article | dps:Banner | dps:Collection | 實體類型屬性 |
-| dps-version | 字串 |  | AEM Mobile實體的版本（也包含在完整的aemm-id中） |
-| dps-lastSynced | 日期 |  | 上次同步／從AEM Mobile匯入至AEM的日期 |
+| dps-version | 字串 |  | AEM Mobile實體版本（也包含在完整aem-id中） |
+| dps-lastSynced | 日期 |  | 上次同步/從AEM Mobile匯入AEM的日期 |
 | dps-lastUploaded | 日期 |  | 上次從AEM上傳至AEM Mobile的日期 |
-| dps-lastUploadedBy | 字串：userid |  | ID使用者，此使用者已執行從AEM到AEM Mobile的上傳請求 |
+| dps-lastUpploadedBy | String:userid |  | 從AEM執行上次上傳請求至AEM Mobile的id使用者 |
 
-## 核心中繼資料屬性{#core-metadata-properties}
+## 核心元資料屬性{#core-metadata-properties}
 
 | 屬性名稱 | 類型 | 預設值或預期值 |
 |--- |--- |--- |
@@ -53,7 +52,7 @@ ht-degree: 20%
 | dps-category | 字串 |  |
 | dps-keywords | String[] |  |
 | dps-internalKeywords | 字串[] |  |
-| dps-importance | 字串[] | 重要性來自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
+| dps-imperience | 字串[] | 重要性來自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
 
 ### 文章 {#articles}
 
@@ -62,7 +61,7 @@ ht-degree: 20%
 | dps-author | 字串 |  |
 | dps-authorURL | 字串 |  |
 | dps-hideFromBrowsePage | 布林值 (Boolean) |  |
-| dps-access | 字串 | ProtectedAccess from {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
+| dps-access | 字串 | ProtectedAccess來自{&quot;protected&quot;、&quot;metered&quot;、&quot;free&quot;} |
 | **Social** |  |  |
 | dps-socialShareURL | 字串 |  |
 | dps-articleText | 字串 |  |
@@ -72,19 +71,19 @@ ht-degree: 20%
 
 | **屬性名稱** | **類型** | **預設值或預期值** |
 |---|---|---|
-| dps-tapAction |  | 來自{webLink}的TapAction |
-| dps-tapActinUrl |  |  |
+| dps-tapAction |  | 從{webLink}點選Action |
+| dps-tapActionUrl |  |  |
 
 ### 集合 {#collections}
 
 | 屬性名稱 | 類型 | 預設值或預期值 |
 |--- |--- |--- |
 | dps-productId | 字串 |  |
-| dps-readingPosition | 字串 | 來自{&quot;reset&quot;,&quot;retain&quot;} |
+| dps-readingPosition | 字串 | 從{&quot;reset&quot;,&quot;retain&quot;} |
 | dps-horizontalSwipe | 布林值 (Boolean) |  |
-| dps-allow下載 | 布林值 (Boolean) |  |
-| dps-openDefault | 字串 | 來自{&quot;browsePage&quot;,&quot;contentView&quot;} |
-| dps-layout | 字串 |  |
+| dps-allowDownload | 布林值 (Boolean) |  |
+| dps-openDefault | 字串 | 從{&quot;browsePage&quot;,&quot;contentView&quot;} |
+| dps配置 | 字串 |  |
 
 ## 內容節點{#content-nodes}
 
@@ -92,24 +91,24 @@ ht-degree: 20%
 
 | 節點名稱 | 類型 | 預設值或預期值 | 說明 |
 |--- |--- |--- |--- |
-| 影像 | jcr:primaryType=nt:antructured <br> sling:resourceType=foundation/components/image |  |  |
+| 影像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### 實體 {#entities}
 
 #### 文章 {#articles-1}
 
-| 節點名稱 | 類型 | 預期值的預設值 | 說明 |
+| 節點名稱 | 類型 | 預設值 | 說明 |
 |--- |--- |--- |--- |
-| social-share-image |  | jcr:primaryType=nt:antructured <br> sling:resourceType=foundation/components/image |  |
+| social-share-image |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### 橫幅 {#banners-1}
 
-| 節點名稱 | 類型 | 預期值的預設值 | 說明 |
+| 節點名稱 | 類型 | 預設值 | 說明 |
 |---|---|---|---|
 | 不適用 |  |  |  |
 
 #### 集合 {#collections-1}
 
-| 節點名稱 | 類型 | 預期值的預設值 | 說明 |
+| 節點名稱 | 類型 | 預設值 | 說明 |
 |--- |--- |--- |--- |
-| 背景影像 | jcr:primaryType=nt:antructured <br> sling:resourceType=foundation/components/image |  |  |
+| 背景 — 影像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
