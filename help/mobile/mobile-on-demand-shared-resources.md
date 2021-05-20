@@ -1,63 +1,62 @@
 ---
 title: 上傳共用資源
 seo-title: 上傳共用資源
-description: 內容管理動作是協助建立和管理應用程式內容的建立區塊。 請依照本頁瞭解如何上傳共用資源。
-seo-description: 內容管理動作是協助建立和管理應用程式內容的建立區塊。 請依照本頁瞭解如何上傳共用資源。
+description: 「內容管理」動作是協助建立及管理應用程式內內容的基礎要素。 請詳閱本頁面，了解如何上傳共用資源。
+seo-description: 「內容管理」動作是協助建立及管理應用程式內內容的基礎要素。 請詳閱本頁面，了解如何上傳共用資源。
 uuid: f3595299-1279-4b94-9a49-9d1893250549
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 958461b0-4cbb-452b-88ea-9b98ada14750
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4b3acc7c-f1f7-4837-ae3a-9435d6ce1349
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
 
 ---
 
-
 # 上傳共用資源{#uploading-shared-resources}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉換的專案使用SPA編輯器（例如React）。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
 
-內容管理動作是協助建立和管理應用程式內容的建立區塊。 對應用程式內的內容執行下列動作。
+「內容管理」動作是協助建立及管理應用程式內內容的基礎要素。 會對應用程式內的內容執行下列動作。
 
 >[!NOTE]
 >
->若要進一步瞭解AEM Mobile應用程式的設計考量，請參閱「線上說明」中的「AEM Mobile應用程式的設計考量」[。](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>若要深入了解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)。
 
 >[!CAUTION]
 >
->您必須先建立行動隨選連線的關聯。
+>您必須先關聯Mobile On-Demand連線。
 
 ## 上傳共用資源{#uploading-shared-resources-1}
 
-通常，文章等內容必須在所有作者甚至應用程式中擁有相同的外觀和感覺。 因此，讓所有人都能使用指令碼、css和字型是必要的。 此操作會將這些共用資源傳送至Mobile On-Demand，然後視需要使用。
+通常，所有作者甚至應用程式的內容（例如文章）都必須有相同的外觀和感覺。 因此，讓所有人都能使用指令碼、css和字型至關重要。 此操作會將此類共用資源發送到Mobile On-Demand，然後，Mobile On-Demand會根據需要使用。
 
-在您設定應用程式並將其關聯至雲端設定後，就可以上傳共用資源。 如需將應用程式關聯至雲端設定的詳細步驟，請按一下[這裡](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)。
+設定應用程式並將其與雲端設定建立關聯後，即可上傳您的共用資源。 如需將應用程式與雲端設定關聯的詳細步驟，請按一下[此處](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)。
 
 >[!NOTE]
 >
->共用資源使用ContentSync收集所有不同的資源。 如需詳細資訊，請參閱[ Mobile with ContentSync](/help/mobile/mobile-ondemand-contentsync.md)。
+>共用資源使用ContentSync來收集所有不同的資源。 如需詳細資訊，請參閱[使用ContentSync的行動裝置](/help/mobile/mobile-ondemand-contentsync.md) 。
 
-請依照下列步驟，上傳文章的共用資源：
+請依照下列步驟上傳文章的共用資源：
 
 1. 從&#x200B;**管理文章**&#x200B;方塊中選取文章。
-1. 按一下「上傳共用資源」，上傳共用的HTML資源。****
+1. 按一下「**上傳共用資源**」以上傳您的共用HTML資源。
 
-   ![chlimage_1-133](assets/chlimage_1-133.png)
+   ![chlimage_1-135](assets/chlimage_1-133.png)
 
 ### 下一步{#the-next-step}
 
-在您瞭解建立和發佈內容後，請參閱
+在您學習建立和發佈內容後，請參閱
 
-* [針對AEM Mobile隨選服務開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
-* [管理內容以使用AEM Mobile隨選服務](/help/mobile/aem-mobile.md)
+* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
-或者，您仍需瞭解製作主題，請參閱
+或仍需了解製作主題，請參閱
 
-[製作適用於AEM Mobile隨選服務應用程式的AEM內容](/help/mobile/mobile-apps-ondemand.md)
+[為AEM Mobile On-demand Services應用程式編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)
