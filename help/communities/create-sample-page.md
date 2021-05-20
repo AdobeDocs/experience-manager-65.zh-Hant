@@ -9,34 +9,33 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
-translation-type: tm+mt
-source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
+exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 2%
 
 ---
 
-
 # 建立範例頁面{#create-a-sample-page}
 
-自AEM 6.1 Communities起，建立範例頁面最簡單的方式就是建立簡單的社群網站，只包含頁面功能。
+與AEM 6.1 Communities相同，建立範例頁面最簡單的方式是建立簡單的社群網站，只包含Page函式。
 
-這將包括parsys元件，以便您能夠[啟用用於編寫的元件](basics.md#accessing-communities-components)。
+這將包含parsys元件，以便您可以[啟用元件以編寫](basics.md#accessing-communities-components)。
 
-另一個探索範例元件的選項是使用[社群元件指南](components-guide.md)中的功能。
+使用樣本元件探索的另一個選項是使用[Community Components Guide](components-guide.md)中提供的功能。
 
 ## 建立社區站點{#create-a-community-site}
 
-這與建立新網站非常類似，如[AEM Communities](getting-started.md)快速入門中所述。
+這非常類似於建立新網站，如[AEM Communities快速入門](getting-started.md)所述。
 
-主要區別在於，本教學課程將建立僅包含[Page函式](functions.md#page-function)的新社群網站範本，以建立不含其他功能的簡單社群網站（所有社群網站的連線功能除外）。
+主要差異在於，本教學課程將建立僅包含[Page函式](functions.md#page-function)的新社群網站範本，以建立簡單的社群網站，不含其他功能（除了所有社群網站的基本連線功能外）。
 
-### 建立新網站範本{#create-new-site-template}
+### 建立新站點模板{#create-new-site-template}
 
-若要開始，請建立簡單的[社群網站範本](sites.md)。
+若要開始使用，請建立簡單的[社群網站範本](sites.md)。
 
-從作者實例的全局導航中，選擇「工具」「**[!UICONTROL >「工具」「]** > **[!UICONTROL 社區」「]** > **[!UICONTROL 站點模板」。]**
+從製作例項上的全域導覽中，選取&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 社群]** > **[!UICONTROL 網站範本]**。
 
 ![create-site-template](assets/create-site-template1.png)
 
@@ -47,17 +46,17 @@ ht-degree: 2%
    * `Description`:由單一頁面函陣列成的範本。
    * 選取 `Enabled`
 
-![site-template-editor](assets/site-template-editor.png)
+![網站範本編輯器](assets/site-template-editor.png)
 
 * 結構
 
    * 將`Page`函式拖曳至範本產生器
-   * 對於配置函式詳細資訊，請輸入
+   * 有關配置函式詳細資訊，請輸入
 
       * `Title`:單頁
       * `URL`: 頁面
 
-![站點——模板——編輯器——結構](assets/site-template-editor1.png)
+![site-template-editor-structure](assets/site-template-editor1.png)
 
 * 為配置選擇&#x200B;**`Save`**
 * 為站點模板選擇&#x200B;**`Save`**
@@ -66,7 +65,7 @@ ht-degree: 2%
 
 現在，根據簡單網站範本建立新的社群網站。
 
-建立網站範本後，從全域導覽中選取「**[!UICONTROL 社群>網站]**」。
+建立網站範本後，從全域導覽中選取&#x200B;**[!UICONTROL Communities > Sites]**。
 
 ![create-community-site](assets/create-community-site1.png)
 
@@ -75,10 +74,10 @@ ht-degree: 2%
 * 步驟 `1 - Site Template`
 
    * `Title`:簡單社群網站
-   * `Description`:由單一頁面組成的社群網站，可供實驗。
+   * `Description`:一個社群網站，包含單一實驗頁面。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
-   * `Name`:樣本
+   * `Name`:範例
 
       * url = http://localhost:4502/content/sites/sample
 
@@ -101,13 +100,13 @@ ht-degree: 2%
 
    ![create-community-site](assets/create-community-site.png)
 
-## 發佈網站{#publish-the-site}
+## 發佈站點{#publish-the-site}
 
-![publish-site](assets/publish-site.png)
+![發佈網站](assets/publish-site.png)
 
-從[社群網站主控台](sites-console.md)中，選取發佈圖示以發佈網站，預設為http://localhost:4503。
+從[社群網站控制台](sites-console.md)中，選取要發佈網站的發佈圖示，依預設會發佈至http://localhost:4503。
 
-## 以編輯模式{#open-the-site-on-author-in-edit-mode}開啟作者網站
+## 在編輯模式{#open-the-site-on-author-in-edit-mode}中開啟作者網站
 
 ![開放網站](assets/open-site.png)
 
@@ -117,8 +116,8 @@ URL將為[http://localhost:4502/editor.html/content/sites/sample/en.html](http:/
 
 ![author-site](assets/author-site.png)
 
-在簡單的首頁上，您可以透過社群功能和範本查看預先串連的內容，並播放新增和設定社群元件的功能。
+在簡單的首頁上，您可以查看透過社群功能和範本預先連線的內容，並播放新增和設定社群元件的過程。
 
-## 在發佈時檢視網站{#view-site-on-publish}
+## 在發佈時查看站點{#view-site-on-publish}
 
-發佈頁面後，請開啟[publish instance](http://localhost:4503/content/sites/sample/en.html)上的頁面，以匿名網站訪客、登入成員或管理員的身分來實驗這些功能。 除非管理員登入，否則作者環境中可見的「管理」連結不會出現在發佈環境中。
+發佈頁面後，請開啟[publish instance](http://localhost:4503/content/sites/sample/en.html)上的頁面，以匿名網站訪客、登入成員或管理員的身分來試驗這些功能。 除非管理員登入，否則製作環境中可見的管理連結不會出現在發佈環境中。
