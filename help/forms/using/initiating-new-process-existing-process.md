@@ -1,38 +1,36 @@
 ---
-title: 使用AEM Forms工作區中現有的流程資料開始新的流程
-seo-title: 使用AEM Forms工作區中現有的流程資料開始新的流程
-description: 瞭解如何在AEM Forms工作區中使用現有的流程資料來啟動新流程。
-seo-description: 瞭解如何在AEM Forms工作區中使用現有的流程資料來啟動新流程。
+title: 使用AEM Forms工作區中的現有流程資料啟動新流程
+seo-title: 使用AEM Forms工作區中的現有流程資料啟動新流程
+description: 了解如何使用AEM Forms工作區中的現有流程資料啟動新流程。
+seo-description: 了解如何使用AEM Forms工作區中的現有流程資料啟動新流程。
 uuid: 4cb96d7f-483b-4db4-bea1-57948931423d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: cbc5af90-5d51-4fdb-ac72-eea91137975d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+exl-id: 6fa97c06-9238-4444-b67f-983ef3b6fdc8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
+# 使用AEM Forms工作區中的現有流程資料啟動新流程{#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
 
-# 使用AEM Forms工作區中的現有流程資料開始新流程{#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
+您可以使用現有流程資料的資料啟動新流程。 我們需要從現有流程資料啟動新流程，因為我們必須經常使用相同的表單，而且內容很少更改，如付費時間表單。 此功能可節省使用者的時間和精力，尤其是當程式需要填寫的時間很長時。
 
-您可以使用現有流程資料的資料啟動新流程。 當我們必須經常使用相同的表單，而且內容幾乎沒有變更時（例如付費時間表單）時，就需要從現有的流程資料啟動新流程。 此功能可節省使用者的時間和心力，尤其是當程式需要填寫的表格很長時。
+從現有流程資料啟動新流程的步驟如下：-
 
-以下是從現有流程資料啟動新流程的步驟：-
+1. 執行下列其中一項動作：
 
-1. 執行下列任一動作：
-
-   * 在「追蹤」中，按一下您要使用其資料的處理例項。 在右窗格的「進程歷史記錄」視圖中，按一下與起始點對應的任務行。
-   * 在追蹤中，選取搜尋範本以顯示處理例項清單。 選擇要使用其資料的實例。
-   * 在&#x200B;**[!UICONTROL To-Do]**&#x200B;標籤中，選擇任務。 按一下&#x200B;**[!UICONTROL History]**&#x200B;頁籤，然後選擇啟動進程實例的任務。
+   * 在追蹤中，按一下您要使用其資料的處理例項。 從右窗格的「進程歷史記錄」視圖中，按一下與起始點對應的任務行。
+   * 在追蹤中，選取搜尋範本以顯示處理例項清單。 選取您要使用其資料的例項。
+   * 在&#x200B;**[!UICONTROL To-Do]**&#x200B;頁簽中，選擇任務。 按一下&#x200B;**[!UICONTROL History]**&#x200B;頁簽，然後選擇啟動進程實例的任務。
 
    ![選擇任](assets/start3_new.png) ![務選擇任務](assets/start1_new.png)
 
-1. 在「任務」操作工具欄中，按一下「開始」。 ****&#x200B;新進程實例的最適化表單將顯示預填充資料。
+1. 在「任務」操作工具欄中，按一下「**[!UICONTROL 開始]**」。 新流程實例的適用性表單將顯示預填資料。
 
-1. 視需要更新資料，然後按一下表單上的&#x200B;**[!UICONTROL Complete]**&#x200B;或適當按鈕。
-
+1. 視需要更新資料，然後按一下&#x200B;**[!UICONTROL Complete]**&#x200B;或表單上的適當按鈕。
