@@ -1,41 +1,40 @@
 ---
 title: 在ToDo清單中顯示其他資料
 seo-title: 在ToDo清單中顯示其他資料
-description: How-to自訂LiveCycle AEM Forms工作區「待辦事項」清單的顯示，以顯示除預設值外的更多資訊。
-seo-description: How-to自訂LiveCycle AEM Forms工作區「待辦事項」清單的顯示，以顯示除預設值外的更多資訊。
+description: 自訂LiveCycleAEM Forms工作區待辦事項清單的顯示方式，以顯示預設值以外的詳細資訊。
+seo-description: 自訂LiveCycleAEM Forms工作區待辦事項清單的顯示方式，以顯示預設值以外的詳細資訊。
 uuid: 9467c655-dce2-43ce-8e8f-54542fe81279
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
+# 在ToDo清單{#displaying-additional-data-in-todo-list}中顯示其他資料
 
-# 在ToDo清單中顯示其他資料{#displaying-additional-data-in-todo-list}
+依預設，AEM Forms工作區待辦事項清單會顯示任務顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示的樣式。
 
-依預設，AEM Forms工作區待辦項目清單會顯示工作顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示的樣式。
+![查看顯示預設設定的HTML工作區待辦事項標籤](assets/html-todo-list.png)
 
-![查看顯示預設配置的「HTML工作區待辦事項」頁籤](assets/html-todo-list.png)
+本文詳細說明了為「待辦事項」清單中的每個任務添加顯示資訊的步驟。
 
-本文詳細說明在「待辦事項」清單中新增要顯示每個工作資訊的步驟。
+## 可新增的內容{#what-can-be-added}
 
-## 可添加的{#what-can-be-added}
-
-您可以添加伺服器發送的`task.json`中的可用資訊。 這些資訊可以新增為純文字，或您可使用樣式來設定資訊的格式。
+可以添加伺服器發送的`task.json`中可用的資訊。 資訊可以以純文字檔案形式添加，也可以使用樣式來格式化資訊。
 
 如需JSON物件說明的詳細資訊，請參閱[this](/help/forms/using/html-workspace-json-object-description.md)文章。
 
-## 顯示有關任務{#displaying-information-on-a-task}的資訊
+## 顯示任務{#displaying-information-on-a-task}的資訊
 
-1. 請依照[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)進行。
-1. 要顯示任務的其他資訊，必須在`translation.json`的任務塊中添加相應的鍵值對。
+1. 請依照[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)操作。
+1. 要顯示任務的其他資訊，必須在`translation.json`的任務塊中添加相應的鍵值值對。
 
    例如，英文的`/apps/ws/locales/en-US/translation.json`變更：
 
@@ -111,9 +110,9 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >為所有支援的語言新增對應的金鑰值配對。
+   >為所有支援的語言新增對應的索引鍵值配對。
 
-1. 例如，在任務塊中添加資訊：
+1. 例如，在任務塊內添加資訊：
 
    ```json
    "stepname" : {
@@ -124,7 +123,7 @@ ht-degree: 0%
 
 ## 定義新屬性{#defining-css-for-the-new-property}的CSS
 
-1. 您可以將樣式應用於添加到任務中的資訊（屬性）。 若要這麼做，您必須新增新增至`/apps/ws/css/newStyle.css`之新屬性的樣式資訊。
+1. 您可以將樣式套用至新增至任務的資訊（屬性）。 為此，需要為添加到`/apps/ws/css/newStyle.css`的新屬性添加樣式資訊。
 
    例如，新增：
 
@@ -136,9 +135,9 @@ ht-degree: 0%
    }
    ```
 
-## 在HTML模板{#adding-entry-in-the-html-template}中添加條目
+## 在HTML範本{#adding-entry-in-the-html-template}中新增項目
 
-最後，您需要在dev套件中包含您要新增至工作的每個屬性的項目。 若要建立AEM Forms工作區代碼，請參閱「建立AEM Forms工作區代碼」。
+最後，您需要在開發套件中加入要新增至任務之每個屬性的項目。 若要建立，請參閱建立AEM Forms工作區程式碼。
 
 1. 複製 `task.html`:
 
@@ -147,7 +146,7 @@ ht-degree: 0%
 
 1. 將新資訊添加到`/apps/ws/js/runtime/templates/task.html`。
 
-   例如，在`div class="taskProperties"`下添加：
+   例如，在`div class="taskProperties"`下新增：
 
    ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
