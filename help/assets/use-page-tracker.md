@@ -1,25 +1,24 @@
 ---
-title: 使用頁面追蹤器並在網頁中內嵌程式碼
-description: 瞭解如何將頁面追蹤器和內嵌JavaScript程式碼加入您的網站程式碼，讓Adobe Analytics能夠擷取資產的使用資料。
+title: 使用頁面追蹤器和網頁中的內嵌程式碼
+description: 了解如何將頁面追蹤器和內嵌JavaScript程式碼加入您的網站程式碼中，讓Adobe Analytics能擷取資產的使用資料。
 contentOwner: AG
 role: Architect, Administrator
-feature: Asset Reports
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: 資產報表
+exl-id: 14d02015-df00-4566-a098-de76eaf42605
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
 
+# 在網頁{#using-page-tracker-and-embed-code-in-web-pages}中使用頁面追蹤器和內嵌程式碼
 
-# 在網頁{#using-page-tracker-and-embed-code-in-web-pages}中使用頁面追蹤器和內嵌代碼
+頁面追蹤器是一段JavaScript程式碼，您會加入協力廠商網站的程式碼中，以讓Adobe Analytics擷取這些網站上[!DNL Adobe Experience Manager Assets]周圍的使用資料。
 
-「頁面追蹤器」是JavaScript程式碼的一部分，您會加入協力廠商網站的程式碼中，讓Adobe Analytics能夠擷取這些網站上[!DNL Adobe Experience Manager Assets]的使用資料。
+若要擷取資產專屬的事件（例如點按等），您也可在第三方網站的程式碼中加入內嵌程式碼。
 
-若要擷取資產專屬的事件（例如點按等），您也可在協力廠商網站的程式碼中加入內嵌程式碼。
-
-下列范常式式碼顯示同時包含「頁面追蹤器」程式碼和「內嵌」程式碼的網頁外觀：
+下列范常式式碼顯示同時包含頁面追蹤器程式碼和內嵌程式碼的網頁外觀：
 
 ```html
 <!DOCTYPE html>
@@ -61,9 +60,9 @@ ht-degree: 0%
 </html>
 ```
 
-## 新增頁面追蹤器代碼{#adding-page-tracker-code}
+## 新增頁面追蹤器程式碼{#adding-page-tracker-code}
 
-您可將頁面追蹤器程式碼新增至網站程式碼的標題區段中。 下列程式碼片段會顯示範例網頁中包含的「頁面追蹤器」程式碼：
+您可以在網站程式碼的標題區段中新增頁面追蹤器程式碼。 下列程式碼片段顯示範例網頁中包含的頁面追蹤器程式碼：
 
 ```xml
  <head>
@@ -81,9 +80,9 @@ ht-degree: 0%
  </head>
 ```
 
-## 新增內嵌代碼{#add-embed-code}
+## 新增內嵌程式碼{#add-embed-code}
 
-您可將內嵌代碼新增至網站代碼的正文中。 下列程式碼片段會顯示範例網頁中包含的內嵌程式碼：
+您可將內嵌程式碼新增至網站程式碼的內文中。 下列程式碼片段顯示範例網頁中包含的內嵌程式碼：
 
 ```xml
 <body>
