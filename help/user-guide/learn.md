@@ -1,26 +1,25 @@
 ---
-title: 瞭解AEM 6.5功能
-seo-title: 瞭解AEM 6.5功能
+title: 了解AEM 6.5功能
+seo-title: 了解AEM 6.5功能
 description: 說明AEM 6.5的基本功能
 seo-description: 說明AEM 6.5的基本功能
-translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
-
-# 瞭解AEM 6.5功能{#learn-about-aem-64-capabilities}
+# 了解AEM 6.5功能{#learn-about-aem-64-capabilities}
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites是Adeobe Experience Manager中的內容管理系統，可讓您在網站、行動網站和現場螢幕上建立、管理和提供數位體驗，讓這些體驗在觸及面上具有全球性，但具備個人相關性和吸引力。 [進一](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 步了 [解或深入探討我們的新視訊功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites是AdeobeExperience Manager內的內容管理系統，可讓您在各個網站、行動網站和站上螢幕上建立、管理和傳遞數位體驗，使其成為全球性的觸及對象，但具備個人相關性和吸引力。 [深](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 入了 [解我們的新影片功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
-AEM Assets可讓您的組織從多租用戶雲端平台輕鬆建立、管理、提供和最佳化數位資產。 [深入探討我們有關AEM Assets的新視訊功能教學課程。](https://helpx.adobe.com/experience-manager/kt/assets/index/aem-6-4-assets.html)
+AEM Assets可讓您的組織從多租用戶雲端平台輕鬆建立、管理、傳送和最佳化數位資產。 [深入了解我們關於AEM Assets的全新影片功能教學課程。](https://helpx.adobe.com/experience-manager/kt/assets/index/aem-6-4-assets.html)
 
 * [使用AEM Assets](/help/assets/manage-assets.md)
 * [使用 Dynamic Media](/help/assets/dynamic-media.md)
@@ -28,27 +27,27 @@ AEM Assets可讓您的組織從多租用戶雲端平台輕鬆建立、管理、�
 
 ## AEM Forms {#aem-forms}
 
-AEM提供簡單易用的解決方案，讓您建立、管理、發佈和更新複雜的數位表單，同時整合後端程式、商業規則和資料。
+AEM提供易於使用的解決方案，可建立、管理、發佈和更新複雜的數位表單，同時與後端流程、業務規則和資料整合。
 
-AEM Forms將表單製作、管理和發佈功能，以及通訊管理功能、檔案安全性和整合式分析結合在一起，以建立引人入勝的端對端體驗。 [深入探討我們針對AEM Forms提供的新視訊功能教學課程。](https://helpx.adobe.com/experience-manager/kt/forms/index/aem-6-5-forms.html)
+AEM Forms將表單製作、管理和發佈與通信管理功能、檔案安全性及整合式分析結合，打造吸引人的端對端體驗。 [深入了解我們針對AEM Forms提供的全新影片功能教學課程。](https://helpx.adobe.com/experience-manager/kt/forms/index/aem-6-5-forms.html)
 
 * [開始使用AEM Forms](/help/forms/using/introduction-aem-forms.md)
-* [AEM Forms的新增功能](/help/forms/using/whats-new.md)
+* [新增功能AEM Forms](/help/forms/using/whats-new.md)
 * [AEM Forms中的架構和拓撲](/help/forms/using/aem-forms-architecture-deployment.md)
-* [效能調整AEM表格](/help/forms/using/performance-tuning-aem-forms.md)
+* [效能調整AEM Forms](/help/forms/using/performance-tuning-aem-forms.md)
 
 ## AEM Screens {#aem-screens}
 
-畫面是Adobe Experience Manager的功能，可讓您發佈動態互動式數位體驗和互動，其中涉及不同螢幕類型，並搭配完整的數位行銷平台。  [了解更多.](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+Screens是Adobe Experience Manager的功能，可讓您發佈動態的互動式數位體驗和互動，其中包含不同類型的螢幕，並搭配完整的數位行銷平台。  [了解更多.](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## AEM Communities {#aem-communities}
 
-社群是Adobe Experience Manager的功能，可協助您建立對客戶、員工和品牌有價值的線上社群體驗，包括論壇、使用者群組、學習資源和其他社交功能。 [了解更多.](http://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
+Communities是Adobe Experience Manager的一項功能，可協助您建立線上社群體驗，包括論壇、使用者群組、學習資源和其他對客戶、員工和您的品牌有價值的社交功能。 [了解更多.](http://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre是全新的Adobe Experience Manager功能，可讓您點選網路上共用的一切，在您自己的網站上建立持續不斷的新鮮高品質內容。 [進一](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 步了 [解或直接進入指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre是全新的Adobe Experience Manager功能，可讓您利用網路上共用的所有內容，在您自己的網站上持續建立全新高品質的內容流。 [深](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 入了 [解或直接進入指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
 ## AEM Foundation {#aem-foundation}
 
-進一步瞭解[Adobe Experience Manager 6.5基礎](/help/sites-deploying/home.md)和我們的受管理服務部署模型，或深入瞭解我們推出的[本版次功能介紹新視訊。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+深入了解[Adobe Experience Manager 6.5 foundation](/help/sites-deploying/home.md)和我們的托管服務部署模型，或深入了解此版本中功能的一些[新簡介影片。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
