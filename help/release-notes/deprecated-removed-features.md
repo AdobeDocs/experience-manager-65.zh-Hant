@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版中已棄用和已移除的功能。
 description: Adobe Experience Manager 6.5中已棄用和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1736'
 ht-degree: 11%
 
 ---
@@ -28,7 +28,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| Creative Cloud整合 | AEM 6.2推出「AEM至Creative Cloud資料夾共用」功能，讓創意使用者能存取AEM中的資產，以便在CC應用程式中開啟資產，並上傳新檔案或將變更儲存至AEM。 Creative Cloud 應用程式推出的新功能 Adobe Asset Link 提供了更優異的使用者體驗，以及更強大的存取功能，可直接從 Photoshop、InDesign 和 Illustrator 中存取 AEM 的資產。Adobe不打算進一步增強AEM以Creative Cloud資料夾共用整合。 雖然AEM中包含此功能，強烈建議客戶使用取代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 如需詳細資訊，請參閱AEM與Creative Cloud整合最佳實務。 |
+| Creative Cloud整合 | AEM 6.2推出「AEM至Creative Cloud資料夾共用」功能，讓創意使用者能存取AEM中的資產，以便在CC應用程式中開啟資產，並上傳新檔案或將變更儲存至AEM。 Creative Cloud 應用程式推出的新功能 Adobe Asset Link 提供了更優異的使用者體驗，以及更強大的存取功能，可直接從 Photoshop、InDesign 和 Illustrator 中存取 AEM 的資產。Adobe不打算進一步增強AEM以Creative Cloud資料夾共用整合。 雖然AEM中包含此功能，強烈建議客戶使用取代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 |
 | 資產 | `AssetDownloadServlet` 依預設，發佈例項會停用。如需詳細資訊，請參閱[AEM安全性檢查清單](/help/sites-administering/security-checklist.md)。 | [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)中描述的配置。 |
 | 資產 | 如果用戶對`/content/dam/collections`沒有足夠的（讀和寫）權限，則用戶無法建立集合。 | 遵守使用者的存取控制設定，並確保適當的權限。 |
 | Adobe Search&amp;Promote | 已棄用與Adobe Search&amp;Promote的整合。 Adobe不打算進一步增強「搜尋與促銷」整合。 請注意，Search &amp; Promote整合在遭取代時仍完全受支援。 |  |
@@ -56,6 +56,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 |
 |--- |--- |--- |
+| 與[!DNL Experience Cloud]整合 | 您可以透過[!DNL Adobe I/O]使用設定，將資產與[!DNL Experience Cloud]同步。 [!DNL Adobe Experience Cloud] 先前稱為 [!DNL Adobe Marketing Cloud]。 | 若您有任何疑問，請[聯絡Adobe客戶服務](https://www.adobe.com/tw/account/sign-in.supportportal.html)。 |
 | AnalyticsActivity Map | AEM中包含的Activity Map版本。 | 由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。使用Adobe Analytics](https://docs.adobe.com/content/help/zh-Hant/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。 |
 | Integrations | ExactTarget整合已從預設分發(Quickstart)中移除，現在已無法使用。 | 沒有替換。 |
 | 整合 | Salesforce Force API整合已從預設分發(Quickstart)中刪除，現在是要從[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)安裝的額外包。 | 功能仍可用。 |
