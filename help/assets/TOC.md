@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '582'
 ht-degree: 40%
 
 ---
@@ -124,7 +124,6 @@ ht-degree: 40%
    + [集合、片段和程式碼片段範本的多租用戶](multi-tenancy.md)
    + [為您的資產加上浮水印](watermarking.md)
    + [資產範本](asset-templates.md)
-   + [與 [!DNL Creative Cloud]共用資料夾的最佳作法](aem-cc-folder-sharing-best-practices.md)
 + 品牌入口網站 {#brandportal}
    + [使用 [!DNL Brand Portal]配置 [!DNL Assets] ](configure-aem-assets-with-brand-portal.md)
    + [將資產發佈至 [!DNL Brand Portal]](brand-portal-publish-assets.md)
