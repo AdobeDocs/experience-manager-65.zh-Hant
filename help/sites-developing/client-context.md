@@ -1,6 +1,6 @@
 ---
-title: 用戶端內容詳細說明
-seo-title: 用戶端內容詳細說明
+title: 詳細的客戶端上下文
+seo-title: 詳細的客戶端上下文
 description: 「用戶端內容」代表動態組合的使用者資料集合
 seo-description: 「用戶端內容」代表動態組合的使用者資料集合
 uuid: 95b08fbd-4f50-44a1-80fb-46335fe04a40
@@ -10,46 +10,45 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: c881ad66-bcc3-4f99-b77f-0944c23e2d29
 docset: aem65
-feature: Context Hub
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 內容中心
+exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3025'
 ht-degree: 0%
 
 ---
 
-
-# Client Context in Detail{#client-context-in-detail}
+# 詳細資訊中的客戶端上下文{#client-context-in-detail}
 
 >[!NOTE]
 >
->ContextHub已取代用戶端內容。 如需詳細資訊，請參閱[相關檔案](/help/sites-developing/contexthub.md)。
+>客戶端上下文已被ContextHub取代。 如需詳細資訊，請參閱[相關檔案](/help/sites-developing/contexthub.md)。
 
-「用戶端內容」代表動態組合的使用者資料集合。 您可以使用資料來判斷在特定情況（內容定位）下要在網頁上顯示的內容。 此資料也可用於網站分析，以及頁面上的任何javascript。
+「用戶端內容」代表動態組合的使用者資料集合。 您可以使用資料來判斷在指定情況下要顯示在網頁上的內容（內容定位）。 網站分析和頁面上的任何Javascript也能使用這些資料。
 
-Client Context主要包含下列方面：
+客戶端上下文主要包括以下方面：
 
-* 包含使用者資料的作業存放區。
-* 顯示使用者資料並提供工具以模擬使用者體驗的UI。
-* 用於與會話儲存交互的[javascript API](/help/sites-developing/ccjsapi.md)。
+* 包含使用者資料的工作階段存放區。
+* 顯示使用者資料的UI，並提供模擬使用者體驗的工具。
+* 與工作階段存放區互動的[javascript API](/help/sites-developing/ccjsapi.md)。
 
-若要建立獨立作業存放區並將其新增至「用戶端內容」，或建立系結至「內容存放區」元件的作業存放區。 安AEM裝幾個您可立即使用的Context Store元件。 您可以將這些元件當做元件的基礎。
+要建立獨立會話儲存並將其添加到客戶端上下文，或建立與上下文儲存元件綁定的會話儲存。 AEM會安裝數個您可立即使用的內容存放區元件。 您可以將這些元件作為元件的基礎。
 
-如需有關開啟「用戶端內容」、設定其顯示的資訊以及模擬使用者體驗的詳細資訊，請參閱「用戶端內容」[。](/help/sites-administering/client-context.md)
+有關開啟客戶端上下文、配置其顯示的資訊以及模擬用戶體驗的資訊，請參閱[客戶端上下文](/help/sites-administering/client-context.md)。
 
 ## 會話儲存{#session-stores}
 
-「用戶端內容」包含包含使用者資料的各種作業儲存區。 儲存來自下列來源的資料：
+「用戶端內容」包含包含使用者資料的各種工作階段存放區。 儲存來自以下來源的資料：
 
-* 用戶端網頁瀏覽器。
-* 伺服器（請參閱[JSONP Store](/help/sites-administering/client-context.md#main-pars-variable-8)以儲存來自第三方來源的資訊）
+* 客戶端Web瀏覽器。
+* 伺服器（請參閱[JSONP儲存](/help/sites-administering/client-context.md#main-pars-variable-8)以儲存來自第三方源的資訊）
 
-Client Context架構提供[javascript API](/help/sites-developing/ccjsapi.md)，您可用來與作業存放區互動，以讀取和寫入使用者資料，以及監聽和回應儲存事件。 您也可以針對您用於內容定位或其他目的的使用者資料建立工作階段儲存。
+用戶端內容架構提供[javascript API](/help/sites-developing/ccjsapi.md)，您可用來與工作階段存放區互動，以讀取和寫入使用者資料，以及監聽和回應存放事件。 您也可以為您用於內容定位或其他目的的使用者資料建立工作階段存放區。
 
-會話儲存資料仍保留在客戶端上。 客戶端上下文不會將資料寫回伺服器。 若要傳送資料至伺服器，請使用表單或開發自訂javascript。
+會話儲存資料仍保留在客戶端上。 客戶端上下文不會將資料寫回伺服器。 若要將資料傳送至伺服器，請使用表單或開發自訂javascript。
 
-每個作業存放區都是屬性值配對的集合。 會話儲存表示（任何類型）的資料集合，其概念含義可由設計人員和／或開發人員決定。 下列範例javascript程式碼定義一個物件，代表作業階段儲存可能包含的描述檔資料：
+每個工作階段存放區都是屬性值組的集合。 工作階段存放區代表資料（任何類型）的集合，其概念意義可由設計人員和/或開發人員決定。 以下範例javascript程式碼定義一個物件，代表工作階段存放區可能包含的設定檔資料：
 
 ```
 {
@@ -63,98 +62,98 @@ Client Context架構提供[javascript API](/help/sites-developing/ccjsapi.md)，
 }
 ```
 
-作業存放區可跨瀏覽器作業持續存留，或僅適用於建立作業的瀏覽器作業。
+工作階段存放區可持續存在於各瀏覽器工作階段之間，或僅能存留於建立工作階段的瀏覽器工作階段。
 
 >[!NOTE]
 >
->商店永續性使用瀏覽器儲存或Cookie(`SessionPersistence` Cookie)。 瀏覽器儲存空間更常見。
+>儲存持續性使用瀏覽器儲存或Cookie(`SessionPersistence` Cookie)。 瀏覽器儲存更常見。
 >
->當瀏覽器關閉並重新開啟時，作業存放區可載入來自持續存放區的值。 然後需要清除瀏覽器快取，才能移除舊值。
+>當瀏覽器關閉並重新開啟時，工作階段存放區可以載入來自持續存放區的值。 然後需要清除瀏覽器快取以移除舊值。
 
-### 上下文商店元件{#context-store-components}
+### 內容儲存元件{#context-store-components}
 
-上下文儲存元件是可新增至「用戶端內容」的CQ元件。 通常，上下文儲存元件顯示來自與其關聯的會話儲存的資料。 但是，上下文儲存元件顯示的資訊不限於會話儲存資料。
+內容存放區元件是CQ元件，可新增至用戶端內容。 通常，上下文儲存元件會顯示來自與其關聯之工作階段存放區的資料。 不過，上下文儲存元件顯示的資訊不限於工作階段儲存資料。
 
-上下文商店元件可包含下列項目：
+內容存放區元件可包含下列項目：
 
 * 定義客戶端上下文中外觀的JSP指令碼。
 * 用於在Sidekick中列出元件的屬性。
-* 編輯用於配置元件實例的對話框。
-* 初始化作業存放區的Javascript。
+* 編輯配置元件實例的對話框。
+* 初始化會話儲存的Javascript。
 
-有關可添加到上下文儲存庫的已安裝的上下文儲存庫元件的說明，請參閱[可用客戶端上下文元件](/help/sites-administering/client-context.md#available-client-context-components)。
+有關可添加到上下文儲存的已安裝上下文儲存元件的說明，請參閱[可用客戶端上下文元件](/help/sites-administering/client-context.md#available-client-context-components)。
 
 >[!NOTE]
 >
->「頁面資料」不再以預設元件的形式出現在用戶端內容中。 如有需要，您可以編輯用戶端內容、新增&#x200B;**一般商店屬性**&#x200B;元件，然後設定此元件，將&#x200B;**商店**&#x200B;定義為`pagedata`。
+>頁面資料不再是在用戶端內容中作為預設元件。 如有需要，您可以編輯用戶端內容、新增&#x200B;**一般存放區屬性**&#x200B;元件，然後設定此元件，將&#x200B;**存放區**&#x200B;定義為`pagedata`。
 
 ### 目標內容傳送{#targeted-content-delivery}
 
-描述檔資訊也用於傳送[目標內容](/help/sites-authoring/content-targeting-touch.md)。
+設定檔資訊也用於傳送[目標內容](/help/sites-authoring/content-targeting-touch.md)。
 
 ![clientcontext_](assets/clientcontext_targetedcontentdelivery.png) ![targetedcontentdeliveryclientcontext_targetedcontentdeliverydetail](assets/clientcontext_targetedcontentdeliverydetail.png)
 
-## 將客戶端上下文添加到頁面{#adding-client-context-to-a-page}
+## 將客戶端上下文添加到頁{#adding-client-context-to-a-page}
 
-將「用戶端內容」元件加入網頁的正文區段，以啟用「用戶端內容」。 「客戶端上下文」元件節點的路徑為`/libs/cq/personalization/components/clientcontext`。 要包含該元件，請將以下代碼添加到頁面元件的JSP檔案中，該檔案位於頁面的`body`元素的正下方：
+將「用戶端內容」元件加入網頁內文區段，以啟用「用戶端內容」。 客戶端上下文元件節點的路徑為`/libs/cq/personalization/components/clientcontext`。 要包括元件，請將以下代碼添加到頁元件的JSP檔案中，該檔案位於頁的`body`元素正下方：
 
 ```java
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
 ```
 
-clientcontext元件會使頁面載入實作「用戶端內容」的用戶端程式庫。
+clientcontext元件會導致頁面載入實作用戶端內容的用戶端程式庫。
 
 * 用戶端內容javascript API。
-* 支援工作階段儲存、事件管理等的Client Context架構。
+* 支援工作階段存放區、事件管理等的用戶端內容架構。
 * 定義的區段。
-* 為每個已添加到客戶端上下文的上下文儲存元件生成的init.js指令碼。
-* （僅限作者例項）用戶端內容UI。
+* 為每個已新增至用戶端內容的上下文儲存元件產生的init.js指令碼。
+* （僅限製作例項）用戶端內容UI。
 
-用戶端內容UI僅適用於作者例項。
+用戶端內容UI僅適用於製作執行個體。
 
 ## 擴展客戶端上下文{#extending-client-context}
 
-若要擴充用戶端內容，請建立作業存放區並選擇性地顯示儲存資料：
+若要擴充用戶端內容，請建立工作階段存放區並選擇性地顯示存放區資料：
 
-* 為您針對內容定位和網頁分析所需的使用者資料建立工作階段商店。
-* 建立內容儲存區元件，讓管理員可設定關聯的工作階段儲存區，並在「用戶端內容」中顯示儲存資料，以便進行測試。
+* 為內容鎖定目標和網頁分析所需的使用者資料建立工作階段存放區。
+* 建立上下文儲存元件，使管理員能夠配置相關的會話儲存，並顯示在客戶端上下文中儲存資料以用於測試。
 
 >[!NOTE]
 >
->如果您有（或建立）可提供資料的`JSONP`服務，您只需使用`JSONP`內容儲存元件並將它對應至JSONP服務。 這將處理會話儲存。
+>如果您有（或建立）可提供資料的`JSONP`服務，您只需使用`JSONP`內容存放區元件，並將其對應至JSONP服務即可。 這將處理工作階段存放區。
 
 ### 建立會話儲存{#creating-a-session-store}
 
-為需要添加到客戶端上下文並從中檢索的資料建立會話儲存。 通常，您使用以下過程建立會話儲存：
+為需要添加到客戶端上下文並從中檢索的資料建立會話儲存。 一般而言，您可使用下列程式來建立工作階段存放區：
 
-1. 建立具有`categories`屬性值`personalization.stores.kernel`的客戶端庫資料夾。 Client Context會自動載入此類別的用戶端程式庫。
+1. 建立屬性值為`personalization.stores.kernel`的客戶端庫資料夾。 `categories`客戶端上下文會自動載入此類別的客戶端庫。
 
 1. 配置客戶端庫資料夾，使其與`personalization.core.kernel`客戶端庫資料夾相依。 `personalization.core.kernel`用戶端程式庫提供用戶端內容javascript API。
 
-1. 新增建立和初始化作業存放區的javascript。
+1. 添加建立和初始化會話儲存的javascript。
 
-將javascript包含在personalization.stores.kernel客戶程式庫中，會在載入Client Context架構時建立商店。
+在personalization.stores.kernel用戶端程式庫中包含javascript，會在載入用戶端內容架構時建立儲存。
 
 >[!NOTE]
 >
->如果您要建立作為內容儲存元件一部分的作業儲存區，則可以選擇將javascript置於元件的init.js.jsp檔案中。 在這種情況下，只有將元件添加到「客戶端上下文」中時，才會建立會話儲存。
+>如果您要在內容存放區元件中建立工作階段存放區，您也可以將javascript放置在元件的init.js.jsp檔案中。 在此情況下，只有將元件新增至用戶端內容時，才會建立工作階段存放區。
 
 #### 會話儲存的類型{#types-of-session-stores}
 
-作業存放區會在瀏覽器作業期間建立並可用，或保存在瀏覽器儲存區或Cookie中。 Client Context javascript API定義了數個表示兩種資料儲存類型的類別：
+工作階段存放區是在瀏覽器工作階段期間建立且可用，或保存在瀏覽器儲存或Cookie中。 用戶端內容javascript API定義了代表這兩種資料存放區類型的數個類別：
 
-* ` [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)`:這些物件僅位於頁面DOM中。資料會建立並保存在頁面的存留期間。
-* ` [CQ_Analytics.PerstistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)`:這些物件位於頁面DOM中，並會持續存在瀏覽器儲存或Cookie中。資料可跨頁和跨使用者作業使用。
+* ` [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)`:這些物件僅位於頁面DOM中。資料會在頁面的存留期間建立並保存。
+* ` [CQ_Analytics.PerstistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)`:這些物件位於頁面DOM中，且會保存在瀏覽器儲存區或Cookie中。資料可在各頁面和使用者工作階段之間使用。
 
-API也提供這些類別的擴充功能，這些類別專門用來儲存JSON資料或JSONP資料：
+API也提供這些類別的擴充功能，這些類別專門用於儲存JSON資料或JSONP資料：
 
 * 僅會話對象：[CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonstore)和[CQ_Analytics.JSONPStore](/help/sites-developing/ccjsapi.md#cq-analytics-jsonpstore)。
 
-* 持久對象：[CQ_Analytics.PeristedJSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedjsonstore)和[CQ_Analytics.PeristedJSONPStore](/help/sites-developing/ccjsapi.md#cq-analyics-persistedjsonpstore)。
+* 保存的對象：[CQ_Analytics.PeristedJSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedjsonstore)和[CQ_Analytics.PeristedJSONPStore](/help/sites-developing/ccjsapi.md#cq-analyics-persistedjsonpstore)。
 
 #### 建立會話儲存對象{#creating-the-session-store-object}
 
-用戶端程式庫資料夾的javascript會建立並初始化工作階段商店。 然後，必須使用上下文商店管理員註冊作業商店。 下面的示例建立並註冊[CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)對象。
+用戶端程式庫資料夾的javascript會建立並初始化工作階段存放區。 然後，必須使用上下文儲存管理器註冊會話儲存。 下列範例會建立並註冊[CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)物件。
 
 ```
 //Create the session store
@@ -180,62 +179,62 @@ if (!CQ_Analytics.myJSONStore) {
 
 ### 建立上下文儲存元件{#creating-a-context-store-component}
 
-建立內容儲存元件，以在「用戶端內容」中呈現工作階段儲存資料。 建立後，您可將內容存放區元件拖曳至「用戶端內容」，以從作業存放區轉譯資料。 上下文商店元件包含下列項目：
+建立上下文儲存元件以在客戶端上下文中呈現會話儲存資料。 建立後，您可以將內容存放區元件拖曳至「用戶端內容」，從工作階段存放區轉譯資料。 內容存放區元件包含下列項目：
 
 * 用於呈現資料的JSP指令碼。
-* 編輯對話框。
+* 編輯對話方塊。
 * 用於初始化會話儲存的JSP指令碼。
-* （可選）用於建立會話儲存的客戶端庫資料夾。 如果元件使用現有會話儲存，則不需要包括客戶端庫資料夾。
+* （可選）建立工作階段存放區的用戶端程式庫資料夾。 如果元件使用現有的工作階段存放區，則不需要包含用戶端程式庫資料夾。
 
 #### 擴展提供的上下文儲存元件{#extending-the-provided-context-store-components}
 
-提AEM供一般商店和一般商店屬性上下文商店可擴充的元件。 儲存資料的結構決定了擴展的元件：
+AEM提供您可擴充的一般儲存和一般儲存屬性內容儲存元件。 儲存資料的結構會決定您擴充的元件：
 
-* 屬性——值對：擴展`GenericStoreProperties`元件。 此元件會自動呈現屬性值對的儲存區。 提供數個互動點：
+* 屬性值配對：擴展`GenericStoreProperties`元件。 此元件會自動轉譯屬性值配對的儲存。 提供了多個交互點：
 
-   * `prolog.jsp` 和 `epilog.jsp`:元件互動功能，可讓您在元件轉換之前或之後新增伺服器端邏輯。
+   * `prolog.jsp` 和 `epilog.jsp`:元件互動可讓您在元件呈現之前或之後新增伺服器端邏輯。
 
-* 複雜資料：擴展`GenericStore`元件。 然後，您的作業商店將需要「轉譯器」方法，每次需要轉譯元件時都會呼叫此方法。 轉換程式函式是使用兩個參數來呼叫：
+* 複雜資料：擴展`GenericStore`元件。 接著，您的工作階段存放區將需要「轉譯器」方法，每次需要轉譯元件時都會呼叫此方法。 會使用兩個參數呼叫轉譯器函式：
 
    * `@param {String} store`
-要演算的商店
+要呈現的商店
 
    * `@param {String} divId`
-必須呈現商店的div的ID。
+必須轉譯商店的div的ID。
 
 >[!NOTE]
 >
->所有客戶端上下文元件都是通用儲存或通用儲存屬性元件的擴展。 在`/libs/cq/personalization/components/contextstores`資料夾中安裝了幾個範例。
+>所有客戶端上下文元件都是通用儲存或通用儲存屬性元件的擴展。 `/libs/cq/personalization/components/contextstores`資料夾中安裝了幾個示例。
 
 #### 在Sidekick {#configuring-the-appearance-in-sidekick}中配置外觀
 
-編輯「用戶端內容」時，內容儲存元件會顯示在Sidekick中。 與所有元件一樣，客戶端上下文元件的`componentGroup`和`jcr:title`屬性確定元件的組和名稱。
+編輯用戶端內容時，內容存放區元件會顯示在Sidekick中。 與所有元件一樣，客戶端上下文元件的`componentGroup`和`jcr:title`屬性決定元件的組和名稱。
 
-預設情況下，`componentGroup`屬性值`Client Context`的所有元件都顯示在Sidekick中。 如果您對`componentGroup`屬性使用不同的值，則必須使用「設計」模式手動將元件添加到Sidekick。
+預設情況下，所有具有`componentGroup`屬性值`Client Context`的元件都會出現在Sidekick中。 如果您對`componentGroup`屬性使用不同的值，則必須使用「設計」模式手動將元件新增至Sidekick。
 
 #### 上下文儲存元件實例{#context-store-component-instances}
 
-將上下文儲存元件添加到「客戶端上下文」時，將在`/etc/clientcontext/default/content/jcr:content/stores`下建立代表元件實例的節點。 此節點包含使用元件的編輯對話框配置的屬性值。
+將上下文儲存元件添加到客戶端上下文時，將在`/etc/clientcontext/default/content/jcr:content/stores`下建立代表元件實例的節點。 此節點包含使用元件的編輯對話框配置的屬性值。
 
-初始化「客戶端上下文」時，會處理這些節點。
+初始化客戶端上下文時，將處理這些節點。
 
 #### 初始化關聯的會話儲存{#initializing-the-associated-session-store}
 
-將init.js.jsp檔案新增至元件，以產生Javascript程式碼，以初始化上下文儲存區元件所使用的工作階段儲存區。 例如，使用初始化指令碼檢索元件的配置屬性，並使用這些屬性填充會話儲存。
+將init.js.jsp檔案新增至元件，以產生Javascript程式碼，初始化內容存放區元件所使用的工作階段存放區。 例如，使用初始化指令碼來檢索元件的配置屬性，並使用它們來填充會話儲存。
 
-當在作者和發佈例項的頁面載入時初始化「用戶端內容」時，產生的Javascript會新增至頁面。 此JSP在載入和呈現上下文儲存元件實例之前執行。
+在製作和發佈例項的頁面載入上初始化「用戶端內容」時，產生的Javascript會新增至頁面。 此JSP在載入和呈現上下文儲存元件實例之前執行。
 
-代碼必須將檔案的MIME類型設定為`text/javascript`，否則不會執行。
+該代碼必須將檔案的mime類型設定為`text/javascript`，否則不執行。
 
 >[!CAUTION]
 >
->init.js.jsp指令碼會在作者和發佈例項上執行，但前提是上下文儲存元件已新增至用戶端內容。
+>init.js.jsp指令碼會在製作和發佈例項上執行，但僅限於將內容存放區元件新增至用戶端內容時。
 
-以下過程建立init.js.jsp指令碼檔案並添加設定正確MIME類型的代碼。 執行儲存初始化的代碼將遵循。
+以下過程將建立init.js.jsp指令碼檔案並添加設定正確mime類型的代碼。 執行儲存初始化的程式碼會隨之執行。
 
-1. 按一下右鍵上下文儲存元件節點，然後按一下「建立」(Create)>「建立檔案」(Create File)。
-1. 在「Name（名稱）」欄位中，鍵入`init.js.jsp` ，然後按一下「OK（確定）」。
-1. 在頁面頂端，新增下列程式碼，然後按一下「全部儲存」。
+1. 按一下右鍵上下文儲存元件節點，然後按一下「建立」>「建立檔案」。
+1. 在「名稱」欄位中，鍵入`init.js.jsp`，然後按一下「確定」。
+1. 在頁面頂端新增下列程式碼，然後按一下「儲存全部」 。
 
    ```java
    <%@page contentType="text/javascript" %>
@@ -243,23 +242,23 @@ if (!CQ_Analytics.myJSONStore) {
 
 ### 呈現一般儲存屬性元件{#rendering-session-store-data-for-genericstoreproperties-components}的會話儲存資料
 
-使用一致的格式，在「用戶端內容」中顯示工作階段儲存資料。
+使用一致格式在「用戶端內容」中顯示工作階段儲存資料。
 
 #### 顯示屬性資料{#displaying-property-data}
 
-個人化標籤庫提供`personalization:storePropertyTag`標籤，顯示會話商店中屬性的值。 若要使用標籤，請在JSP檔案中加入下列程式碼行：
+個人化taglib提供`personalization:storePropertyTag`標籤，用於顯示工作階段存放區中屬性的值。 要使用標籤，請在JSP檔案中包括以下代碼行：
 
 ```xml
 <%@taglib prefix="personalization" uri="https://www.day.com/taglibs/cq/personalization/1.0" %>
 ```
 
-標籤具有下列格式：
+標籤的格式如下：
 
 ```xml
 <personalization:storePropertyTag propertyName="property_name" store="session_store_name"/>
 ```
 
-`propertyName`屬性是要顯示之商店屬性的名稱。 `store`屬性是註冊商店的名稱。 下列範例標籤顯示`profile`商店的`authorizableId`屬性值：
+`propertyName`屬性是要顯示的儲存屬性的名稱。 `store`屬性是註冊儲存的名稱。 以下示例標籤顯示`profile`商店的`authorizableId`屬性的值：
 
 ```xml
 <personalization:storePropertyTag propertyName="authorizableId" store="profile"/>
@@ -267,7 +266,7 @@ if (!CQ_Analytics.myJSONStore) {
 
 #### HTML結構{#html-structure}
 
-personalization.ui用戶端資料庫檔案夾(/etc/clientlibs/foundation/personalization/ui/themes/default)提供「用戶端內容」用來設定HTML程式碼格式的CSS樣式。 下列程式碼說明用於顯示儲存資料的建議結構：
+personalization.ui用戶端資料庫資料夾(/etc/clientlibs/foundation/personalization/ui/themes/default)提供用戶端內容用來設定HTML程式碼格式的CSS樣式。 下列程式碼說明用於顯示儲存資料的建議結構：
 
 ```xml
 <div class="cq-cc-store">
@@ -294,52 +293,52 @@ personalization.ui用戶端資料庫檔案夾(/etc/clientlibs/foundation/persona
 </div>
 ```
 
-`/libs/cq/personalization/components/contextstores/profiledata`上下文儲存元件使用此結構來顯示配置檔案會話儲存中的資料。 `cq-cc-thumbnail`類別會放置縮圖影像。 `cq-cc-store-property-level*x*`類別會格式化英數字元資料：
+`/libs/cq/personalization/components/contextstores/profiledata`上下文儲存元件使用此結構來顯示配置檔案會話儲存的資料。 `cq-cc-thumbnail`類別會放置縮圖影像。 `cq-cc-store-property-level*x*`類格式化字母數字資料：
 
-* level0、level1和level2是垂直分佈的，並使用白字型。
-* level3及任何其他層級均以水準分佈，並使用較深色背景的白色字型。
+* level0、level1和level2垂直分佈，使用白字型。
+* 級別3和任何其他級別水準分佈，並使用背景較深的白字型。
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
-### 為一般儲存元件呈現會話儲存資料{#rendering-session-store-data-for-genericstore-components}
+### 呈現一般儲存元件{#rendering-session-store-data-for-genericstore-components}的會話儲存資料
 
-若要使用一般商店元件來轉換商店資料，您必須：
+若要使用一般存放區元件呈現存放區資料，您需要：
 
-* 將personalization:storeRendererTag標籤新增至元件JSP指令碼，以識別作業商店的名稱。
-* 在會話儲存類上實現渲染器方法。
+* 將personalization:storeRendererTag標籤新增至元件JSP指令碼，以識別工作階段存放區的名稱。
+* 在工作階段存放區類別上實作轉譯器方法。
 
 #### 標識一般儲存會話儲存{#identifying-the-genericstore-session-store}
 
-個人化標籤庫提供`personalization:storePropertyTag`標籤，顯示會話商店中屬性的值。 若要使用標籤，請在JSP檔案中加入下列程式碼行：
+個人化taglib提供`personalization:storePropertyTag`標籤，用於顯示工作階段存放區中屬性的值。 要使用標籤，請在JSP檔案中包括以下代碼行：
 
 ```xml
 <%@taglib prefix="personalization" uri="https://www.day.com/taglibs/cq/personalization/1.0" %>
 ```
 
-標籤具有下列格式：
+標籤的格式如下：
 
 ```java
 <personalization:storeRendererTag store="store_name"/>
 ```
 
-#### 實施會話儲存渲染器方法{#implementing-the-session-store-renderer-method}
+#### 實現會話儲存呈現器方法{#implementing-the-session-store-renderer-method}
 
-然後，您的作業商店將需要「轉譯器」方法，每次需要轉譯元件時都會呼叫此方法。 轉換程式函式是使用兩個參數來呼叫：
+接著，您的工作階段存放區將需要「轉譯器」方法，每次需要轉譯元件時都會呼叫此方法。 會使用兩個參數呼叫轉譯器函式：
 
 * @param {String}商店
-要演算的商店
+要呈現的商店
 * @param {String} divId
-必須呈現商店的div的ID。
+必須轉譯商店的div的ID。
 
-## 與會話儲存庫交互{#interacting-with-session-stores}
+## 與會話儲存區{#interacting-with-session-stores}交互
 
-使用javascript與作業存放區互動。
+使用javascript與工作階段存放區互動。
 
 ### 訪問會話儲存{#accessing-session-stores}
 
-獲取會話儲存對象以讀取或寫入資料到儲存。 [CQ_Analytics.](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) ClientContextMgr根據商店名稱提供對商店的存取。取得後，請使用[CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)或[CQ_Analytics.PeristedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)的方法與儲存資料互動。
+獲取會話儲存對象以讀取或寫入儲存資料。 [CQ_Analytics.](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) ClientContextMgr根據商店名稱提供對商店的存取。取得後，請使用[CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)或[CQ_Analytics.PeristedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)的方法與儲存資料互動。
 
-下面的示例獲取`profile`儲存，然後從儲存中檢索`formattedName`屬性。
+以下示例獲取`profile`儲存，然後從儲存中檢索`formattedName`屬性。
 
 ```
 function getName(){
@@ -354,11 +353,11 @@ function getName(){
 
 ### 建立偵聽器以響應會話儲存更新{#creating-a-listener-to-react-to-a-session-store-update}
 
-工作階段會儲存觸發事件，因此可以新增監聽器並根據這些事件觸發事件。
+工作階段會儲存引發事件，因此可以根據這些事件來新增接聽程式和觸發事件。
 
-會話儲存器是基於`Observable`模式構建的。 它們延伸[ `CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable)，提供` [addListener](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope)`方法。
+會話儲存區是以`Observable`模式建置。 它們會擴充[ `CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable)以提供` [addListener](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope)`方法。
 
-以下示例向`profile`會話儲存的`update`事件添加偵聽器。
+下面的示例將偵聽器添加到`profile`會話儲存的`update`事件中。
 
 ```
 var profileStore = ClientContextMgr.getRegisteredStore("profile");
@@ -374,23 +373,23 @@ if( profileStore ) {
 }
 ```
 
-### 檢查是否已定義並初始化會話儲存{#checking-that-a-session-store-is-defined-and-initialized}
+### 檢查會話儲存是否已定義並初始化{#checking-that-a-session-store-is-defined-and-initialized}
 
-會話儲存在載入並用資料初始化之前不可用。 下列因素可能會影響作業存放區可用性的時間：
+工作階段存放區必須先載入並透過資料初始化，才能使用。 下列因素可能會影響工作階段存放區可用性的時間：
 
 * 頁面載入
 * JavaScript載入
 * JavaScript執行時間
 * XHR請求的回應時間
-* 會話儲存的動態更改
+* 工作階段存放區的動態變更
 
-使用[CQ_Analytics.ClientContextUtils](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils)物件的[onStoreRegistered](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback)和[onStoreInitialized](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay)方法，僅在會話儲存可用時，才可存取這些儲存。 這些方法可讓您註冊回應作業註冊和初始化事件的事件接聽程式。
+使用[CQ_Analytics.ClientContextUtils](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils)物件的[onStoreRegistered](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback)和[onStoreInitialized](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay)方法，僅在工作階段存放區可用時才存取工作階段存放區。 這些方法可讓您註冊對工作階段註冊和初始化事件做出反應的事件偵聽器。
 
 >[!CAUTION]
 >
->如果您依賴其他商店，則需要迎合從未註冊商店的情況。
+>如果您依賴其他商店，則需要針對從未註冊商店的情況進行服務。
 
-以下示例使用`profile`會話儲存的`onStoreRegistered`事件。 在註冊儲存時，會向會話儲存的`update`事件添加偵聽器。 當商店更新時，頁面上的`<div class="welcome">`元素內容會以`profile`商店的名稱更新。
+下列範例使用`profile`工作階段存放區的`onStoreRegistered`事件。 註冊儲存時，會將監聽程式添加到會話儲存的`update`事件。 更新商店時，頁面上的`<div class="welcome">`元素內容會以`profile`商店的名稱更新。
 
 ```
 //listen for the store registration
@@ -418,9 +417,9 @@ function getName(){
 }
 ```
 
-### 從會話持久性Cookie {#excluding-a-property-from-the-sessionpersistence-cookie}中排除屬性
+### 將屬性排除在工作階段持續性Cookie {#excluding-a-property-from-the-sessionpersistence-cookie}中
 
-若要防止`PersistedSessionStore`的屬性持續存在（亦即從`sessionpersistence` Cookie中排除它），請將屬性新增至持續作業商店的非持續屬性清單。
+若要防止`PersistedSessionStore`的屬性持續存在（亦即將其從`sessionpersistence` Cookie中排除），請將屬性新增至持續工作階段存放區的非持續屬性清單。
 
 請參閱 ` [CQ_Analytics.PersistedSessionStore.setNonPersisted(propertyName)](/help/sites-developing/ccjsapi.md#setnonpersisted-name)`
 
@@ -433,18 +432,18 @@ CQ_Analytics.ClientContextUtils.onStoreRegistered("surferinfo", function(store) 
 });
 ```
 
-## 配置設備滑塊{#configuring-the-device-slider}
+## 配置設備滑桿{#configuring-the-device-slider}
 
 ### 條件 {#conditions}
 
-目前頁面必須有對應的行動頁面；這只有在頁面有LiveCopy設定為行動轉出設定（`rolloutconfig.path.toLowerCase`包含`mobile`）時才會決定。
+目前頁面必須有對應的行動頁面；唯有頁面的LiveCopy已設定行動轉出設定（`rolloutconfig.path.toLowerCase`包含`mobile`），才能判斷此值。
 
 #### 設定 {#configuration}
 
-從案頭頁面切換至其行動裝置頁面時：
+從案頭頁面切換至行動裝置對應頁面時：
 
-* 已載入行動頁面的DOM。
-* 主`div`（必要）包含內容，會擷取並插入目前的案頭頁面。
+* 行動頁面的DOM已載入。
+* 會擷取包含內容的主要`div`（必要），並插入至目前的案頭頁面。
 
 * 需要載入的CSS和內文類別需要手動設定。
 
@@ -480,37 +479,37 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 };
 ```
 
-## 範例：建立自訂內容存放區元件{#example-creating-a-custom-context-store-component}
+## 範例：建立自定義上下文儲存元件{#example-creating-a-custom-context-store-component}
 
-在此示例中，您建立上下文儲存元件，該元件從外部服務中檢索資料並將其儲存在會話儲存中：
+在此範例中，您會建立內容存放區元件，從外部服務擷取資料，並將其儲存在工作階段存放區中：
 
-* 延伸一般儲存屬性元件。
-* 使用CQ_Analytics.JSONPStore javascript物件初始化商店。
-* 呼叫JSONP服務以擷取資料並將其新增至商店。
+* 擴展genericstoreproperties元件。
+* 使用CQ_Analytics.JSONPStore Javascript物件初始化儲存。
+* 呼叫JSONP服務以擷取資料並將其新增至儲存。
 * 在用戶端內容中轉譯資料。
 
 ### 添加geoloc元件{#add-the-geoloc-component}
 
 建立CQ應用程式並新增geoloc元件。
 
-1. 在您的網頁瀏覽器中開啟CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
-1. 按一下右鍵`/apps`資料夾，然後按一下「建立」>「建立資料夾」。 指定`myapp`的名稱，然後按一下「確定」。
-1. 同樣地，在`myapp`下方，建立名為`contextstores`的資料夾。&quot;
-1. 按一下右鍵`/apps/myapp/contextstores`資料夾，然後按一下「建立」>「建立元件」。 指定下列屬性值，然後按一下「下一步」:
+1. 在網頁瀏覽器中開啟CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
+1. 按一下右鍵`/apps`資料夾，然後按一下「建立」>「建立資料夾」。 指定名稱`myapp`，然後按一下「確定」。
+1. 同樣地，在`myapp`下，建立名為`contextstores`的資料夾。 &quot;
+1. 按一下右鍵`/apps/myapp/contextstores`資料夾，然後按一下「建立」>「建立元件」。 指定下列屬性值，然後按一下「下一步」：
 
    * 標籤：geoloc
    * 標題：位置商店
-   * 超級類型：cq/personalization/components/contextstores/genericstoreproperties
-   * 群組：用戶端內容
+   * 超類型：cq/personalization/components/contextstores/genericstoreproperties
+   * 組：用戶端內容
 
-1. 在「建立元件」對話方塊中，按一下每頁的「下一步」，直到啟用「確定」按鈕，然後按一下「確定」。
-1. 按一下「全部儲存」。
+1. 在「建立元件」對話框中，按一下每頁上的「下一步」，直到啟用「確定」按鈕，然後按一下「確定」。
+1. 按一下「全部儲存」 。
 
 ### 建立geoloc編輯對話框{#create-the-geoloc-edit-dialog}
 
-上下文儲存區元件需要編輯對話方塊。 geoloc edit對話框將包含一條靜態消息，指出沒有要配置的屬性。
+上下文儲存元件需要編輯對話方塊。 geoloc編輯對話方塊將包含靜態訊息，指出沒有要設定的屬性。
 
-1. 按一下右鍵`/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog`節點，然後按一下「複製」。
+1. 按一下右鍵`/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog`節點，然後按一下複製。
 1. 按一下右鍵`/apps/myapp/contextstores/geoloc`節點，然後按一下「貼上」。
 1. 刪除/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items節點下的所有子節點：
 
@@ -518,31 +517,31 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
    * 屬性
    * 縮圖
 
-1. 按一下右鍵`/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items`節點，然後按一下「建立」>「建立節點」。 指定下列屬性值，然後按一下「確定」:
+1. 按一下右鍵`/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items`節點，然後按一下「建立」>「建立節點」。 指定下列屬性值，然後按一下「確定」：
 
    * 名稱：靜態
    * 類型：cq:Widget
 
-1. 將以下屬性添加到節點：
+1. 將下列屬性新增至節點：
 
    | 名稱 | 類型 | 值 |
    |---|---|---|
    | cls | 字串 | x-form-fieldset-description |
-   | 文字 | 字串 | geoloc元件不需要配置。 |
+   | 文字 | 字串 | geoloc元件不需要設定。 |
    | xtype | 字串 | 靜態 |
 
-1. 按一下「全部儲存」。
+1. 按一下「全部儲存」 。
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
 ### 建立初始化指令碼{#create-the-initialization-script}
 
-將init.js.jsp檔案新增至geoloc元件，並使用它來建立作業存放區、擷取位置資料，並將它新增至存放區。
+將init.js.jsp檔案新增至geoloc元件，並使用它建立工作階段存放區、擷取位置資料，並將其新增至存放區。
 
-init.js.jsp檔案會在頁面載入用戶端內容時執行。 目前，用戶端內容javascript API已載入，可供您的指令碼使用。
+init.js.jsp檔案會在頁面載入用戶端內容時執行。 此時，用戶端內容javascript API已載入，可供您的指令碼使用。
 
-1. 按一下右鍵/apps/myapp/contextstores/geoloc節點，然後按一下「建立」>「建立檔案」。 指定init.js.jsp的名稱，然後按一下「確定」。
-1. 將下列程式碼新增至頁面頂端，然後按一下「全部儲存」。
+1. 以滑鼠右鍵按一下/apps/myapp/contextstores/geoloc節點，然後按一下「建立>建立檔案」。 指定init.js.jsp的名稱，然後按一下確定。
+1. 將下列程式碼新增至頁面頂端，然後按一下「儲存全部」 。
 
    ```java
    <%@page contentType="text/javascript;charset=utf-8" %><%
@@ -561,12 +560,12 @@ init.js.jsp檔案會在頁面載入用戶端內容時執行。 目前，用戶�
 
 ### 呈現geoloc會話儲存資料{#render-the-geoloc-session-store-data}
 
-將代碼添加到geoloc元件的JSP檔案中，以在Client Context中呈現儲存資料。
+將代碼添加到geoloc元件的JSP檔案中，以在客戶端上下文中呈現儲存資料。
 
 ![chlimage_1-6](assets/chlimage_1-6.png)
 
 1. 在CRXDE Lite中，開啟`/apps/myapp/contextstores/geoloc/geoloc.jsp`檔案。
-1. 在存根程式碼下方新增下列HTML程式碼：
+1. 在存根代碼下添加以下HTML代碼：
 
    ```xml
    <%@taglib prefix="personalization" uri="https://www.day.com/taglibs/cq/personalization/1.0" %>
@@ -592,30 +591,30 @@ init.js.jsp檔案會在頁面載入用戶端內容時執行。 目前，用戶�
    </div>
    ```
 
-1. 按一下「全部儲存」。
+1. 按一下「全部儲存」 。
 
 ### 將元件添加到客戶端上下文{#add-the-component-to-client-context}
 
-將Location Store元件新增至Client Context，以便在頁面載入時初始化它。
+將Location Store元件新增至用戶端內容，以便在頁面載入時初始化元件。
 
-1. 開啟作者例項([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))上的Geometrixx Outdoors首頁。
-1. 按一下Ctrl-Alt-c(windows)或control-option-c(Mac)以開啟「用戶端內容」。
-1. 按一下「用戶端內容」頂端的編輯圖示，以開啟「用戶端內容設計器」。
+1. 開啟製作例項上的Geometrixx Outdoors首頁([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))。
+1. 按一下Ctrl-Alt-c(windows)或control-option-c(Mac)以開啟「客戶端上下文」。
+1. 按一下「客戶端上下文」頂部的編輯表徵圖以開啟「客戶端上下文設計器」。
 
    ![](do-not-localize/chlimage_1.png)
 
-1. 將Location Store元件拖曳至Client Context。
+1. 將「位置儲存」元件拖曳至「用戶端內容」。
 
 ### 請參閱客戶端上下文中的位置資訊{#see-the-location-information-in-client-context}
 
-以編輯模式開啟Geometrixx Outdoors首頁，然後開啟用戶端內容，以查看位置商店元件中的資料。
+以編輯模式開啟Geometrixx Outdoors首頁，然後開啟用戶端內容以查看位置儲存元件中的資料。
 
 1. 開啟Geometrixx Outdoors網站的英文頁面。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))
 1. 要開啟「客戶端上下文」，請按Ctrl-Alt-c(windows)或control-option-c(Mac)。
 
 ## 建立自定義客戶端上下文{#creating-a-customized-client-context}
 
-要建立第二個客戶機上下文，您需要複製分支：
+若要建立第二個用戶端內容，您需要複製分支：
 
 `/etc/clientcontext/default`
 
@@ -625,9 +624,9 @@ init.js.jsp檔案會在頁面載入用戶端內容時執行。 目前，用戶�
 
 * 資料夾：
    `/contextstores`
-允許您為上下文儲存庫定義不同的配置。
+可讓您為內容存放區定義不同的設定。
 
 若要使用自訂的用戶端內容，請編輯屬性
 `path`
-在客戶端上下文元件的設計樣式中，如頁面模板中所示。 例如，作為以下的標準位置：
+（如頁面範本中所包含）。 例如，作為的標準位置：
 `/libs/cq/personalization/components/clientcontext/design_dialog/items/path`
