@@ -1,36 +1,35 @@
 ---
 title: 程式碼範例
 seo-title: 程式碼範例
-description: Adobe諮詢服務團隊已產生一連串的AEM程式碼範例
-seo-description: Adobe諮詢服務團隊已產生一連串的AEM程式碼範例
+description: Adobe諮詢服務團隊產生了一系列AEM程式碼範例
+seo-description: Adobe諮詢服務團隊產生了一系列AEM程式碼範例
 uuid: 16f23fa6-5a3c-4697-87de-86db37b3ec1b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 07bf0224-6744-42d4-861f-d656ccfad171
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d77e9e39-6117-4d09-b34b-a97ab347397e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 2%
 
 ---
 
-
 # 程式碼範例{#code-samples}
 
-Adobe諮詢服務團隊已產生一連串的AEM程式碼範例。 這些範例是加上良好註解的程式碼片段，可協助AEM開發人員瞭解AEM的主要建置區塊。 您可從以下網址取得範例：[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/)。
+Adobe諮詢服務團隊已產生一系列AEM程式碼範例。 這些範例是備注的程式碼片段，可協助AEM開發人員了解AEM的重要建置組塊。 這些示例可從以下位置獲得：[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/)。
 
-為AEM新手的開發人員設計的多部份教學課程，涵蓋專案設定、核心元件、可編輯範本、用戶端程式庫和元件開發等基本主題：[AEM Sites快速入門- WKND Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+多部分教學課程，專為剛接觸AEM的開發人員而設計，內容涵蓋基本主題，例如專案設定、核心元件、可編輯範本、用戶端程式庫和元件開發：[AEM Sites快速入門 — WKND教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
-Adobe AEM社群團隊會建立「開發人員如何使用」文章。 您可在[這裡找到文章](https://helpx.adobe.com/experience-manager/topics/how-to.html)。
+AdobeAEM社群團隊會建立開發人員如何撰寫文章。 您可以在此處](https://helpx.adobe.com/experience-manager/topics/how-to.html)找到文章[。
 
-您可從[這裡](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)取得建立新AEM專案的Maven範本，以開發您自己的功能。
+[此處](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)提供建立新AEM專案作為開發您自己功能之起點的Maven範本。
 
-您可在[這裡](/help/sites-developing/developing-components.md)取得標準、可觸控的UI程式碼範例。
+標準且觸控式的UI程式碼範例可在[此處](/help/sites-developing/developing-components.md)取得。
 
-另外還提供其他程式碼範例：
+提供其他程式碼範例：
 
 * [https://github.com/Netcentric/accesscontroltool](https://github.com/Netcentric/accesscontroltool)
 * [https://blogs.adobe.com/aemtutorials/](https://blogs.adobe.com/aemtutorials/)
@@ -42,4 +41,3 @@ Adobe AEM社群團隊會建立「開發人員如何使用」文章。 您可在[
 >[!NOTE]
 >
 >這些程式碼範例僅供教育用途，不應部署在AEM的生產例項上。
-
