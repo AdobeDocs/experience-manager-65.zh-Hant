@@ -10,23 +10,22 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 34%
 
 ---
 
-
 # 工具主控台{#tools-consoles}
 
-**「工具」**&#x200B;主控台可供存取多種特殊工具，協助您管理網站、數位資產和內容存放庫的其他方面。**Tools**&#x200B;控制台目前有兩種類型，取決於您使用的UI:
+**「工具」**&#x200B;主控台可供存取多種特殊工具，協助您管理網站、數位資產和內容存放庫的其他方面。根據您使用的UI，目前&#x200B;**工具**&#x200B;控制台有兩種類型：
 
-* [工具——觸控最佳化UI](#tools-touch-optimized-ui)
-* [工具- Classic UI](#tools-classic-ui)
+* [工具 — 觸控最佳化UI](#tools-touch-optimized-ui)
+* [工具 — 傳統UI](#tools-classic-ui)
 
-## 工具——觸控最佳化UI {#tools-touch-optimized-ui}
+## 工具 — 觸控最佳化UI {#tools-touch-optimized-ui}
 
 >[!NOTE]
 >
@@ -34,7 +33,7 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->由於UI中的卡片提供每個選項用途的詳細資訊，因此此表格只提供有關樹狀結構中功能位置的快速參考。
+>由於UI中的卡片提供了每個選項用途的詳細資訊，因此此表格僅提供關於樹狀結構中功能位置的快速參考。
 
 <table>
  <tbody>
@@ -48,7 +47,7 @@ ht-degree: 34%
   </tr>
   <tr>
    <td> </td>
-   <td>CRXDE LITE</td>
+   <td>CRXDE Lite</td>
   </tr>
   <tr>
    <td> </td>
@@ -365,25 +364,25 @@ ht-degree: 34%
  </tbody>
 </table>
 
-## 工具- Classic UI {#tools-classic-ui}
+## 工具 — 傳統UI {#tools-classic-ui}
 
 <table>
  <tbody>
   <tr>
    <th>頁面或資料夾</th>
-   <th>目的</th>
+   <th>用途</th>
   </tr>
   <tr>
    <td>MSM控制中心</td>
-   <td>集中管理多個網站。</td>
+   <td>用於管理多個站點的集中點。</td>
   </tr>
   <tr>
    <td>客戶端上下文配置<br /> </td>
-   <td>「用戶端內容」代表動態組合的使用者資料集合。 預設和行銷雲端組態保留在這裡。<br /> </td>
+   <td>「用戶端內容」代表動態組合的使用者資料集合。 預設和Marketing Cloud設定保留在此處。<br /> </td>
   </tr>
   <tr>
-   <td>雲服務配置<br /> </td>
-   <td>保留與Adobe Marketing Cloud整合相關的設定。</td>
+   <td>Cloud Services配置<br /> </td>
+   <td>保留與整合Adobe Marketing Cloud相關的設定。</td>
   </tr>
   <tr>
    <td>雲端設定<br /> </td>
@@ -391,7 +390,7 @@ ht-degree: 34%
   </tr>
   <tr>
    <td>商務</td>
-   <td>提供對進口商和各種產品資料的存取。</td>
+   <td>提供對匯入工具和各種產品資料的存取。</td>
   </tr>
   <tr>
    <td>DAM </td>
@@ -399,7 +398,7 @@ ht-degree: 34%
   </tr>
   <tr>
    <td>控制面板</td>
-   <td>可讓您建立報告控制面板；這些功能提供可自訂的方式來定義顯示統一資料的頁面。</td>
+   <td>可讓您建立報表控制面板；這些功能提供可自訂的方式，來定義顯示統一資料的頁面。</td>
   </tr>
   <tr>
    <td>自訂檔案</td>
@@ -411,10 +410,10 @@ ht-degree: 34%
   </tr>
   <tr>
    <td>表單提交</td>
-   <td>保存收到的表單提交清單。</td>
+   <td>保留收到的表單提交清單。</td>
   </tr>
   <tr>
-   <td>進口商 </td>
+   <td>匯入工具 </td>
    <td>可存取各種選項。</td>
   </tr>
   <tr>
@@ -423,48 +422,47 @@ ht-degree: 34%
   </tr>
   <tr>
    <td>行動</td>
-   <td>協助您建立專為行動裝置設計的網站。</td>
+   <td>協助您建立為行動裝置設計的網站。</td>
   </tr>
   <tr>
    <td>套件</td>
-   <td>「封裝管理員」的替代連結，顯示已為AEM WCM載入的封裝。 類似於CRX的包管理器中顯示的資訊。</td>
+   <td>套件管理器的替代連結，可顯示已為AEM WCM載入的套件。 類似於CRX的套件管理器中顯示的資訊。</td>
   </tr>
   <tr>
-   <td>複製——複製代理</td>
-   <td>用於在發佈頁面時從作者複製資料至發佈，或使用反向複製將使用者注釋從發佈環境傳回給作者。</td>
+   <td>複製 — 複製代理</td>
+   <td>用於在發佈頁面時將資料從作者複製到發佈，或透過反向復寫將使用者評論從發佈環境傳回給作者。</td>
   </tr>
   <tr>
    <td>報表</td>
-   <td>AEM提供一系列自訂報表，可讓您建立自訂報表和／或自行開發。</td>
+   <td>AEM提供一系列自訂報表，可讓您建立自訂報表及/或開發您自己的報表。</td>
   </tr>
   <tr>
    <td>預設頁面支架</td>
-   <td>使用腳手架，您可以建立表單（腳手架），其中欄位可反映您頁面的結構，然後使用此表單輕鬆建立以此結構為基礎的頁面。</td>
+   <td>透過支架，您可以建立表單（支架），其欄位可反映您想要的頁面結構，然後使用此表單根據此結構輕鬆建立頁面。</td>
   </tr>
   <tr>
-   <td>安全性——自助服務配置 </td>
-   <td>可讓您設定使用者在建立帳戶或重設密碼時自動收到的電子郵件，並確認已重設的密碼。</td>
+   <td>安全性 — 自助服務配置 </td>
+   <td>可讓您設定使用者在建立帳戶或重設密碼時，自動收到的電子郵件，以及確認已重設的密碼。</td>
   </tr>
   <tr>
    <td>Segmentation</td>
-   <td>網站訪客在進入網站時有不同的興趣和目標。 瞭解這些目標並達成預期是線上行銷的重要成功因素。 區段可透過分析和表徵訪客的詳細資料，協助達成此目標。<br /> </td>
+   <td>網站訪客來到網站時，其興趣和目標不同。 了解這些目標並滿足期望是線上行銷的重要成功因素。 分段透過分析訪客的詳細資料並加以特徵化，有助於達成此目標。<br /> </td>
   </tr>
   <tr>
    <td>租戶</td>
    <td>沒有與此條目相關的活動功能。</td>
   </tr>
   <tr>
-   <td>信任庫</td>
+   <td>信任儲存</td>
    <td>沒有與此條目相關的活動功能。</td>
   </tr>
   <tr>
-   <td>版本修訂——清除版本</td>
-   <td>允許您根據需要清除頁面版本。</td>
+   <td>版本設定 — 清除版本</td>
+   <td>可讓您視需要清除頁面版本。</td>
   </tr>
   <tr>
    <td>工作流程</td>
-   <td>工作流程可控制支援任何編輯程式之頁面或數位資產上的一系列動作。</td>
+   <td>工作流程可控制支援任何編輯程式的頁面或數位資產上的一系列動作。</td>
   </tr>
  </tbody>
 </table>
-
