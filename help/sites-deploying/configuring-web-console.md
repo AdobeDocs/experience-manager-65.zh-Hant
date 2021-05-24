@@ -1,59 +1,58 @@
 ---
 title: Web 主控台
 seo-title: Web 主控台
-description: 瞭解如何在AEM中使用網頁主控台。
-seo-description: 瞭解如何在AEM中使用網頁主控台。
+description: 了解如何在AEM中使用Web主控台。
+seo-description: 了解如何在AEM中使用Web主控台。
 uuid: 047274ff-4d7d-4c7d-95be-06f363beae2e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: bdfeaf85-e832-40c1-8769-7d027cdb021e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 2%
 
 ---
 
-
 # Web 主控台{#web-console}
 
-AEM中的Web主控台以[Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)為基礎。 Apache Felix是建置OSGi R4服務平台的社群努力，此平台包含OSGi架構和標準服務。
+AEM中的Web主控台以[Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)為基礎。 Apache Felix是社群的努力成果，目的是實作OSGi R4服務平台，其中包含OSGi架構和標準服務。
 
 >[!NOTE]
 >
 >在Web主控台上，任何提及預設設定的說明都與Sling預設值相關。
 >
->AEM有其專屬的預設值，因此預設集可能與主控台上記載的不同。
+>AEM有其專屬的預設值，因此預設值設定可能與主控台上記錄的不同。
 
-Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
+Web主控台提供一系列標籤，用於維護OSGi套件組合，包括：
 
-* [配置](#configuration):用於設定OSGi組合，因此是設定AEM系統參數的基礎機制
-* [組合](#bundles):用於安裝捆綁
+* [配置](#configuration):用於配置OSGi套件組合，因此是配置AEM系統參數的基礎機制
+* [套件組合](#bundles):用於安裝套件
 * [元件](#components):用於控制AEM所需元件的狀態
 
 所做的任何更改都會立即應用於運行的系統。 不需要重新啟動。
 
-可從`../system/console`訪問控制台；例如：
+可從`../system/console`存取主控台；例如：
 
 `http://localhost:4502/system/console/components`
 
 ## 設定 {#configuration}
 
-**Configuration**&#x200B;標籤用於配置OSGi捆綁包，因此是配置AEM系統參數的基礎機制。
+**Configuration**&#x200B;頁簽用於配置OSGi包，因此是配置AEM系統參數的基礎機制。
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱「使用Web控制台進行OSGi設定」。[](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)
+>如需詳細資訊，請參閱[使用Web控制台進行OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 。
 
-**Configuration**&#x200B;頁籤可通過以下任一方式訪問：
+**Configuration**&#x200B;頁簽可通過以下任一項訪問：
 
 * 下拉式功能表：
 
    **OSGi >**
 
-* 網址；例如：
+* URL;例如：
 
    `http://localhost:4502/system/console/configMgr`
 
@@ -61,70 +60,70 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 ![screen_shot_2012-02-15at52308pm-1](assets/screen_shot_2012-02-15at52308pm-1.png)
 
-此螢幕上的下拉清單提供兩種配置類型：
+此畫面上的下拉式清單提供兩種設定：
 
 * **設定**
 
-   允許您更新現有配置。 這些識別碼具有永久性識別碼(PID)，可以是：
+   可讓您更新現有的設定。 這些ID具有永久性身分(PID)，可以是：
 
-   * AEM的標準與整體；如果刪除，則需要這些值，這些值將返回預設設定。
-   * 從工廠配置建立的實例；這些實例由用戶建立，刪除操作會刪除實例。
+   * 標準及整體AEM;如果刪除，則這些值會恢復為預設設定。
+   * 從工廠配置建立的實例；這些執行個體由使用者建立，deletion會移除執行個體。
 
 * **工廠配置**
 
-   允許您建立所需功能對象的實例。
+   可讓您建立所需功能物件的例項。
 
-   這將被分配為「永久身份」，然後列在「配置」下拉清單中。
+   系統會分配「永久性身分」，然後列在「設定」下拉式清單中。
 
-從清單中選擇任何條目將顯示與該配置相關的參數：
+從清單中選取任何項目時，都會顯示與該設定相關的參數：
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
-然後，您可以視需要更新參數，以及：
+接著，您就可以視需要更新參數，並：
 
 * **儲存**
 
    儲存所做的變更。
 
-   對於工廠配置，這將建立具有持久身份的新實例。 然後，新實例將列在「配置」下。
+   對於工廠配置，這將建立具有持久標識的新實例。 新執行個體便會列在「設定」下。
 
 * **重設**
 
-   將螢幕上顯示的參數重置為上次保存的參數。
+   將畫面上顯示的參數重設為上次儲存的參數。
 
 * **刪除**
 
-   刪除當前配置。 如果為標準，則參數會返回到預設設定。 如果從「工廠配置」建立，則刪除特定實例。
+   刪除當前配置。 如果為標準，則參數會傳回至預設設定。 如果從工廠配置中建立，則刪除特定實例。
 
-* **解除系結**
+* **取消綁定**
 
-   從包中解除綁定當前配置。
+   從捆綁包中取消綁定當前配置。
 
 * **取消**
 
-   取消任何目前的變更。
+   取消任何當前更改。
 
-## 捆綁{#bundles}
+## 套件組合 {#bundles}
 
-**Bundles**&#x200B;標籤是安裝AEM所需OSGi bundles的機制。 該頁籤可通過以下任一方法訪問：
+**Bundles**&#x200B;標籤是安裝AEM所需OSGi套件組合的機制。 索引標籤可透過下列任一方法存取：
 
 * 下拉式功能表：
 
    **OSGi >**
 
-* 網址；例如：
+* URL;例如：
 
    `http://localhost:4502/system/console/bundles`
 
-將顯示捆綁的清單：
+將會顯示套件組合清單：
 
 ![screen_shot_2012-02-15at44740pm-1](assets/screen_shot_2012-02-15at44740pm-1.png)
 
-使用此頁籤，您可以：
+使用此標籤，您可以：
 
 * **安裝或更新**
 
-   您可以&#x200B;**瀏覽**&#x200B;來尋找包含您的套件的檔案，並指定它是否應立即&#x200B;**開始**，以及在哪個位置&#x200B;**開始層級**。
+   您可以&#x200B;**瀏覽**&#x200B;來查找包含捆綁包的檔案，並指定它是否應立即&#x200B;**啟動**，以及在哪個&#x200B;**啟動級別**。
 
 * **重新載入**
 
@@ -132,9 +131,9 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 * **刷新包**
 
-   這將檢查所有包的引用並根據需要刷新。
+   這會檢查所有套件的參考，並視需要重新整理。
 
-   例如，在更新後，舊版和新版可能仍會因先前的參考而執行。 此選項將檢查並移動對新版本的所有引用，使舊版本停止。
+   例如，更新後，由於先前的參考，舊版和新版本可能仍在執行中。 此選項會檢查並移動所有參照至新版本，讓舊版本停止。
 
 * **啟動**
 
@@ -142,15 +141,15 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 * **停止**
 
-   停止打包。
+   停止捆綁。
 
 * **解除安裝**
 
-   從系統中卸載包。
+   從系統中卸載該包。
 
 * **查看狀態**
 
-   該清單指定了包的當前狀態；按一下特定包的名稱並顯示詳細資訊。
+   該清單指定了綁定的當前狀態；按一下特定套件名稱並顯示詳細資訊。
 
 >[!NOTE]
 >
@@ -158,27 +157,26 @@ Web控制台提供一系列標籤，以維護OSGi捆綁包，包括：
 
 ## 元件 {#components}
 
-**元件**&#x200B;頁籤允許您啟用和／或禁用各種元件。 您可以透過下列其中一種方式存取：
+**元件**&#x200B;頁簽允許您啟用和/或禁用各種元件。 可透過下列任一方存取：
 
 * 下拉式功能表：
 
    **主要 >**
 
-* 網址；例如：
+* URL;例如：
 
    `http://localhost:4502/system/console/components`
 
-將會顯示元件清單。 您可使用各種圖示來啟用、停用或（視情況）開啟特定元件的設定詳細資訊。
+將顯示元件清單。 您可使用各種圖示來啟用、停用或（如適用）開啟特定元件的設定詳細資訊。
 
 ![screen_shot_2012-02-15at52144pm-1](assets/screen_shot_2012-02-15at52144pm-1.png)
 
-按一下特定元件的名稱，將會顯示其狀態的詳細資訊。 您也可以在這裡啟用、停用或重新載入元件。
+按一下特定元件的名稱，將會顯示其狀態的詳細資訊。 您也可以在此啟用、停用或重新載入元件。
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
 >[!NOTE]
 >
->啟用或停用時，元件只會套用到AEM/CRX重新啟動。
+>啟用或停用元件時，只有在AEM/CRX重新啟動前才會套用。
 >
->啟動狀態在元件描述符中定義，該描述符在開發期間生成，並在包建立時儲存在包中。
-
+>啟動狀態在元件描述符內定義，該描述符在開發期間生成，並在建立包時儲存在包中。
