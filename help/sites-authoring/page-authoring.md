@@ -10,52 +10,50 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
 
 ---
 
-
 # 編寫頁面{#authoring-pages}
 
-以下提供兩種使用AEM製作內容的概觀：
+以下提供兩種使用AEM製作的概觀：
 
-* [作者的第一步](/help/sites-authoring/first-steps.md) -新作者的簡介
+* [作者的第一步](/help/sites-authoring/first-steps.md)  — 新作者的簡介
 
-* [編寫頁面快速指南](/help/sites-authoring/qg-page-authoring.md) -主要動作的快速指南（高階）
+* [製作頁面快速指南](/help/sites-authoring/qg-page-authoring.md)  — 主要動作的快速指南（高階）
 
 >[!NOTE]
 >
->本節介紹編寫內容頁面時涉及的任務。 有許多與頁面製作密切相關的其他功能，請參閱[製作指南](/help/sites-authoring/home.md)的其他章節。
+>本節說明編寫內容頁面時所涉及的工作。 有許多與頁面編寫密切相關的其他功能，在[Authoring Guide](/help/sites-authoring/home.md)的其他章節中皆有說明。
 
-## 製作頁面的快速概觀{#quick-overview-of-features-used-for-authoring-pages}功能
+## 快速概述用於編寫頁面{#quick-overview-of-features-used-for-authoring-pages}的功能
 
-為協助您製作頁面時，作者環境提供下列功能：
+為協助您編寫頁面時，製作環境會提供下列功能：
 
-* **拖放元**
-件（例如文字、影像）和數位資產（例如影像）只要將它們拖放至所需位置，就可放在頁面上。
+* **只要**
+將元件（例如文字、影像）和數位資產（例如影像）拖放到所需位置，就能將其放在頁面上。
 
-* **編**
-輯：一旦位於頁面上，就可開啟元件特定對話方塊，以輸入內容和／或設定該元件的特性（例如影像大小）。
+* ****
+編輯一旦置於頁面上，就可以開啟元件專用對話方塊，以輸入內容和/或設定該元件的特性（例如影像大小）。
 
-* **就地編輯**
-文字和影像元件可直接在網頁上編輯，毋需開啟對話方塊或明確的儲存動作。
+* **就地編輯文**
+本和影像元件可以直接在網頁上編輯，而無需開啟對話框或顯式保存操作。
 
-* **[元件](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**
-瀏覽器在可編輯頁面的左側，可開啟滑動瀏覽器；您可從此處將元件拖曳至頁面，然後進行編輯。
+* **[元](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**
+件瀏覽器在可編輯頁面的左側，可開啟滑動瀏覽器；可從此處將元件拖曳至頁面上，然後進行編輯。
 
-* **[資產](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
-瀏覽器在可編輯頁面的左側，可開啟滑動式瀏覽器；資產可從此處拖曳至頁面；例如定位資產或建立其他頁面的連結。
+* **[資](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
+產瀏覽器在可編輯頁面的左側，可以開啟滑動式瀏覽器；從這裡將資產拖曳至頁面上；例如，定位資產或建立其他頁面的連結。
 
-* **元件工**
-具列單鍵或慢動雙鍵／點選都會顯示適當的工具列（就地編輯工具列而言為單鍵，就地編輯工具列而言為慢動雙鍵）。
+* **元件**
+工具欄單按或按兩下/點選速度都將顯示相應的工具欄（單按就地編輯工具欄，按兩下即可顯示完整工具欄）。
 
-* **[回應式](/help/sites-authoring/responsive-layout.md)**
-版面配置這提供段落系統，可讓您將元件定位在回應式格線中。
+* **[回應](/help/sites-authoring/responsive-layout.md)**
+式配置這提供了段落系統，可讓您在回應式格線內定位元件。
 
-* **在您鍵入時**
-進行搜尋在特定藍本（例如，編輯對話方塊中的路徑選擇）中，透過AEM介面搜尋內容時，當您輸入查詢時，會呈現動態符合。
-
+* **在您鍵入**
+時搜索在某些情況下（例如，在編輯對話框中選擇路徑），通過AEM介面搜索內容時，鍵入查詢時會顯示動態匹配。
