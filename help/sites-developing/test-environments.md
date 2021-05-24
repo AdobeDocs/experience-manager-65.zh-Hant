@@ -1,43 +1,42 @@
 ---
 title: 需要哪些測試環境？
 seo-title: 需要哪些測試環境？
-description: 測試時應考慮使用多種環境
-seo-description: 測試時應考慮使用多種環境
+description: 應將數個環境視為測試的一部分
+seo-description: 應將數個環境視為測試的一部分
 uuid: bb725e50-edae-4c20-8107-d1c8df2e60e2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: db528b9b-3407-462d-8254-20b3cc2c3ccf
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 05f7a513-5ee7-4870-a691-4a0602e0cbb2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
 
 ---
 
-
 # 需要哪些測試環境？{#which-test-environments-will-be-needed}
 
-要定義測試的配置，您應考慮以下事項：
+若要定義測試的設定，您應考量下列事項：
 
-**開發** -針對部隊和某些整合測試。
+**開發**  — 適用於單位和某些整合測試。
 
-**測試** -適用於大多數測試。
+**測試**  — 用於大多數測試。
 
-**即時** -用於最終效能和壓力測試。也適用於客戶的驗收測試。
+**即時**  — 用於最終效能和壓力測試。也是客戶的接受測試。
 
-您也需要決定您需要哪些執行個體（通常每個執行個體中至少有一個執行個體，用於所有測試層級）:
+您也需要決定需要哪個執行個體（通常所有測試層級至少各一個執行個體）:
 
-**作者** -此例項可讓作者輸入和發佈內容。
+**作者**  — 此例項可讓作者輸入及發佈內容。
 
-**Publish**  —— 此例項以其發佈的表單呈現網站，供訪客存取。
+**發佈**  — 此例項會以已發佈的形式呈現網站，供訪客存取。
 
 應與Dispatcher一起測試。
 
-最後，必須考慮實際硬體——應盡可能在與最終即時環境配置最接近的系統上進行任何效能測試。 因此，建議將「專案啟動」分割為：
+最後，必須考慮實際硬體 — 在盡可能接近最終即時環境的配置中，對系統進行任何效能測試。 因此，也建議將專案啟動分割為：
 
-**軟啟動** -降低可用性；這為生產環境的實際條件下的效能測試、調整和優化提供了時間。
+**軟啟動**  — 降低可用性；可讓您在生產環境的實際條件下，有時間進行效能測試、調整和最佳化。
 
-**硬啟動** -完全可用。
+**硬啟動**  — 完整可用性。
