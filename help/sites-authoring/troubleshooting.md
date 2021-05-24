@@ -1,6 +1,6 @@
 ---
-title: 編寫時疑難排解AEM
-seo-title: 編寫時疑難排解AEM
+title: 製作時疑難排解AEM
+seo-title: 製作時疑難排解AEM
 description: 使用AEM時可能會遇到的一些問題
 seo-description: 使用AEM時可能會遇到的一些問題
 uuid: 99af51ea-8628-4811-83f2-ab3f88f0279e
@@ -9,54 +9,53 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 7%
 
 ---
 
+# 製作時疑難排解AEM{#troubleshooting-aem-when-authoring}
 
-# 疑難排解編寫AEM{#troubleshooting-aem-when-authoring}
-
-下節涵蓋您使用AEM時可能遇到的一些問題，以及如何疑難排解的建議。
-
->[!NOTE]
->
->當遇到問題時，也有必要檢查實例（發行和服務包）的[已知問題](/help/release-notes/known-issues.md)清單。
+以下章節說明使用AEM時可能會遇到的一些問題，以及如何疑難排解的建議。
 
 >[!NOTE]
 >
->具有管理員權限且想要疑難排解AEM問題的使用者，可使用[疑難排解AEM（適用於管理員）](/help/sites-administering/troubleshoot.md)中所述的疑難排解方法。 如果您沒有足夠的權限，請洽詢您的系統管理員有關疑難排解AEM的資訊。
+>遇到問題時，也值得檢查您執行個體（發行版和服務套件）的[已知問題](/help/release-notes/known-issues.md)清單。
 
-## 已發佈網站{#old-page-version-still-on-published-site}上仍有舊版頁面
+>[!NOTE]
+>
+>擁有管理員權限且想要疑難排解AEM問題的使用者，可使用[疑難排解AEM（管理員適用）](/help/sites-administering/troubleshoot.md)中所述的疑難排解方法。 如果您沒有足夠的權限，請向系統管理員洽詢疑難排解AEM。
+
+## 已發佈網站上仍舊有的頁面版本{#old-page-version-still-on-published-site}
 
 * **問題**:
 
-   * 您已對頁面進行變更，並將頁面複製至發佈網站，但是頁面的&#x200B;*old*&#x200B;版本仍會顯示在發佈網站上。
+   * 您已對頁面進行變更，並將頁面複製到發佈網站，但頁面的&#x200B;*old*&#x200B;版本仍顯示在發佈網站上。
 
 * **原因**:
 
-   * 這可能有幾種原因，最常是快取（本地瀏覽器或Dispatcher），但有時可能是複製隊列的問題。
+   * 這可能有數個原因，通常是快取（您的本機瀏覽器或Dispatcher），但有時可能是復寫佇列的問題。
 
 * **解決方案**:
 
-   * 這裡有各種可能：
-   * 確認頁面已正確複製。 檢查頁狀態以及複製隊列的狀態（如果需要）。
+   * 這裡有各種可能性：
+   * 確認頁面已正確復寫。 檢查頁面狀態，並在必要時檢查復寫佇列的狀態。
    * 清除本機瀏覽器中的快取，並再次存取您的頁面。
    * 將`?`新增至頁面URL的結尾。 例如：
 
       * `http://localhost:4502/sites.html/content?`
-      * 這會直接從AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
-   * 如果複製隊列存在問題，請與系統管理員聯繫。
+      * 這會直接向AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
+   * 如果複製隊列出現問題，請與系統管理員聯繫。
 
 
 ## 工具欄{#component-actions-not-visible-on-toolbar}上不顯示元件操作
 
 * **問題**:
 
-   * 在作者環境中編輯內容頁面時，不會顯示完整的適用元件動作。
+   * 在製作環境上編輯內容頁面時，不會顯示完整的適用元件動作。
 
 * **原因**:
 
@@ -65,4 +64,3 @@ ht-degree: 7%
 * **解決方案**:
 
    * 重新整理頁面。
-
