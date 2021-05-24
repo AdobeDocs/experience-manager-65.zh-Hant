@@ -1,42 +1,41 @@
 ---
-title: 請求分析指令碼
-seo-title: 請求分析指令碼
-description: 請求分析指令碼可輕鬆分析access.log檔案，產生可讀報告以供日後處理
-seo-description: 請求分析指令碼可輕鬆分析access.log檔案，產生可讀報告以供日後處理
+title: Request Analysis Script
+seo-title: Request Analysis Script
+description: 製作請求分析指令碼以便於分析access.log檔案，生成可讀報表以供後續處理
+seo-description: 製作請求分析指令碼以便於分析access.log檔案，生成可讀報表以供後續處理
 uuid: 24eff3c6-5748-46f3-a30c-4a3a6427ce1d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: 1b5e0ccf-4157-45e3-8caf-1d6739d7d9d2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e14a9cda-890f-46b7-9433-1b52eb91eae3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '195'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # 請求分析指令碼{#request-analysis-script}
 
 ## 下載 {#download}
 
-此指令碼可簡化`access.log`檔案的分析，產生可讀報告以供日後處理。
+製作此指令碼是為了便於分析`access.log`檔案，這些檔案產生可讀報表以供後續處理。
 
 [取得檔案](assets/analyse-access.sh)
 
 ## 說明 {#description}
 
-此指令碼可簡化`access.log`檔案的分析，產生可讀報告以供日後處理。
+製作此指令碼是為了便於分析`access.log`檔案，這些檔案產生可讀報表以供後續處理。
 
-它會產生整體請求編號、GET與POST、隨時間的請求分發等。
+它會產生總體請求數、GET與POST、隨時間等變化的請求分配。
 
-輸出採用Markdown語法，因此使用pandoc等工具將它轉換為PDF，或在瀏覽器中使用Markdown檢視器等增效模組來顯示它會更輕鬆。
+輸出採用Markdown語法，因此透過pandoc等工具，或透過Markdown檢視器等外掛程式在瀏覽器中顯示，將其轉換為PDF會較為容易。
 
 它可以分析命令行上提供的自定義路徑。
 
-從檔案中擷取註解，告知您如何執行它：
+從檔案內的註解中擷取，該註解會告訴您如何執行：
 
 分析CQ `access.log`外推各種資訊，並在`stdout`上產生Markdown輸出。
 
