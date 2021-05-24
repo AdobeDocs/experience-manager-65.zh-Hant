@@ -1,19 +1,18 @@
 ---
 title: 智慧型影像
 description: 智慧型影像處理會套用每個使用者的獨特檢視特性，自動提供針對其體驗最佳化的適當影像，進而提供更佳的效能和參與度。
-uuid: c11e52ba-8d64-4dc5-b30a-fc10c2b704e5
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
-feature: 資產管理
+feature: 資產管理，轉譯
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 8d27457ad88cb84e670e78bab4c40da36fcfc629
+source-git-commit: fde3cb4a2461ca80f410f360fd5d56f359cec149
 workflow-type: tm+mt
-source-wordcount: '1912'
-ht-degree: 2%
+source-wordcount: '2626'
+ht-degree: 1%
 
 ---
 
@@ -41,6 +40,53 @@ ht-degree: 2%
 |  |  |  |  | 平均= 51% |
 
 與上述內容類似，Adobe也透過來自即時客戶網站的7009個URL執行測試。 他們能夠平均將JPEG的檔案大小進一步優化38%。 對於使用WebP格式的PNG，檔案大小最佳化平均可提高31%。 這種優化是可能的，因為智慧成像技術具有強大的功能。
+
+在行動網路上，挑戰因兩個因素而加劇：
+
+* 各種不同外形規格的設備和高解析度顯示器。
+* 網路頻寬受限。
+
+就影像而言，目標是盡可能有效地提供最佳品質的影像。
+
+### 關於裝置像素比例最佳化 {#dpr}
+
+裝置像素比率(DPR)（也稱為CSS像素比率）是裝置的物理像素與邏輯像素之間的關係。 特別是隨著視網膜螢幕的出現，現代移動設備的像素解析度正以快速的速度增長。
+
+啟用「裝置像素比率」最佳化可讓影像以螢幕的原生解析度呈現，使其看起來清晰。
+
+開啟智慧影像處理DPR配置會根據請求所服務的顯示器的像素密度自動調整請求的影像。 目前，顯示器的像素密度來自Akamai CDN標頭值。
+
+| 影像URL中的允許值 | 說明 |
+|---|---|
+| `dpr=off` | 在個別影像URL層級關閉DPR最佳化。 |
+| `dpr=on,dprValue` | 使用自訂值（由任何用戶端邏輯或其他方法偵測）覆寫智慧型影像偵測到的DPR值。 `dprValue`的允許值是大於0的任何數字。 1.5、2或3的指定值通常為。 |
+
+>[!NOTE]
+>
+>* 即使公司層級DPR設定關閉，您仍可以使用`dpr=on,dprValue`。
+>* 由於DPR優化，當結果影像大於MaxPix Dynamic Media設定時，通過保持影像的長寬比始終可以識別MaxPix寬度。
+
+
+| 請求的影像大小 | DPR值 | 傳遞的影像大小 |
+|---|---|---|
+| 816x500 | 1 | 816x500 |
+| 816x500 | 2 | 1632x1000 |
+
+另請參閱[使用影像時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智慧型裁切時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)。
+
+### 關於網路頻寬優化{#network-bandwidth-optimization}
+
+開啟網路頻寬會自動根據實際網路頻寬調整提供的影像質量。 對於較差的網路頻寬，DPR優化將自動關閉，即使已經開啟。
+
+如有需要，您的公司可以將`network=off`附加至影像的URL，以選擇退出個別影像層級的網路頻寬最佳化。
+
+| 影像URL中的允許值 | 說明 |
+|---|---|
+| `network=off` | 在個別影像URL層級關閉網路最佳化。 |
+
+>[!NOTE]
+>
+>DPR和網路頻寬值以所偵測到的套裝CDN用戶端值為基礎。 這些值有時不準確。 例如，DPR=2的iPhone5和DPR=3的iPhone12，都會顯示DPR=2。 不過，對於高解析度裝置，傳送DPR=2比傳送DPR=1好。 即將推出：Adobe正在使用用戶端程式碼，以精確判斷使用者的DPR。
 
 ## 最新智慧映像有哪些主要優勢？{#what-are-the-key-benefits-of-smart-imaging}
 
@@ -134,13 +180,23 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。
 
-點選「 **[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標籤為&#x200B;**[!UICONTROL 已發佈伺服器名稱]**&#x200B;的欄位。 如果您目前使用一般網域，在提交技術支援票證時，可請求移至您自己的自訂網域，作為此轉變的一部分。
+點選&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**&#x200B;尋找標示為&#x200B;**[!UICONTROL Published Server Name]**&#x200B;的欄位。 如果您目前使用一般網域，在提交技術支援票證時，可請求移至您自己的自訂網域，作為此轉變的一部分。
 
 使用Dynamic Media授權，您的第一個自訂網域不需額外付費。
 
 ## 為我的帳戶啟用智慧影像處理的程式為何？{#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
 您啟動使用智慧影像處理的請求；不會自動啟用。
+
+依預設，Dynamic Media公司帳戶的智慧型影像處理DPR和網路最佳化會停用（關閉）。 如果要啟用（開啟）上述一項或兩項現成可用的增強功能，請建立支援案例，如下所述。
+
+智慧影像處理DPR和網路最佳化的發行排程如下：
+
+| 區域 | 目標日期 |
+|---|---|
+| 北美 | 2021年5月24日 |
+| 歐洲、中東、非洲 | 2021年6月25日 |
+| 亞太 | 2021年7月19日 |
 
 1. [使用Admin Console建立支援案例。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. 在您的支援案例中提供下列資訊：
@@ -150,7 +206,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。
 
-      按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」]**。
+      按一下「**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**」。
 
       查找標籤為&#x200B;**[!UICONTROL 已發佈伺服器名稱的欄位。]**
    1. 確認您是透過Adobe使用CDN，而非以直接關係進行管理。
@@ -158,7 +214,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。
 
-      按一 **[!UICONTROL 下「設定>應用程式設定>一般設定」]**。
+      按一下「**[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**」。
 
       查找標籤為&#x200B;**[!UICONTROL 已發佈伺服器名稱]**&#x200B;的欄位。 如果您目前使用一般Dynamic Media Classic網域，可以請求移轉至您自己的自訂網域，作為此轉變的一部分。
    1. 指出您是否還需要智慧型影像處理才能透過HTTP/2運作。
@@ -189,7 +245,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 ## 如何驗證智慧型影像是否如預期般運作？{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. 使用智慧型影像設定帳戶後，請在瀏覽器上載入Dynamic Media Classic或Adobe Experience Manager - Dynamic Media影像URL。
-1. 在瀏覽器中，按一下「**[!UICONTROL 檢視>開發人員>開發人員工具]**」，開啟Chrome開發人員窗格。 或者，選擇您選擇的任何瀏覽器開發人員工具。
+1. 在瀏覽器中，按一下「**[!UICONTROL 檢視]** > **[!UICONTROL 開發人員]** > **[!UICONTROL 開發人員工具]**」，開啟Chrome開發人員窗格。 或者，選擇您選擇的任何瀏覽器開發人員工具。
 
 1. 開啟開發人員工具時，請確定已停用快取。
 
@@ -209,6 +265,10 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 是. 您可以將修飾詞`bfc=off`新增至URL，以關閉智慧型影像。
 
+## 我可以要求在公司層級關閉DPR和網路最佳化嗎？{#dpr-companylevel-turnoff}
+
+是. 若要停用貴公司的DPR和網路最佳化，請建立支援案例，如本主題前面所述。
+
 ## 可以使用什麼「調整」？ 是否有任何可定義的設定或行為？ (#tuning-settings)
 
 目前，您可以選擇啟用或禁用智慧映像。 沒有其他調整可用。
@@ -217,6 +277,14 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 當前智慧映像中沒有此類配置功能。
 
-## 有時，JPEG影像會傳回至Chrome，而非WebP影像。 為什麼？ (#jpeg-webp)
+## 有時，JPEG影像會傳回至Chrome，而非WebP影像。 為什麼會發生這種變化？ (#jpeg-webp)
 
 智慧型影像處理會判斷轉換是否有益。 只有在轉換導致檔案大小較小且品質相當時，才會傳回新影像。
+
+## 智慧型影像處理DPR最佳化如何與Adobe Experience Manager Sites元件和Dynamic Media檢視器搭配運作？
+
+* Experience Manager網站核心元件預設會設定以進行DPR最佳化。 為避免因伺服器端智慧型影像處理DPR最佳化而造成影像過大，一律會將`dpr=off`新增至Experience Manager網站核心元件Dynamic Media影像。
+* 根據預設，為了將Dynamic Media Foundation元件設定為DPR最佳化，為了避免因伺服器端智慧型影像處理DPR最佳化而造成影像過大，一律會將`dpr=off`新增至Dynamic Media Foundation元件影像。 即使客戶在DM Foundation元件中取消選取DPR最佳化，伺服器端智慧型影像處理DPR也不會生效。 總之，在DM基礎元件中，DPR優化僅基於DM基礎元件級別設定而生效。
+* 任何檢視器端DPR最佳化都會與伺服器端智慧型影像處理DPR最佳化搭配運作，而不會導致影像大小過大。 換言之，無論DPR是由檢視器處理的，例如只有啟用縮放的檢視器中的主檢視，伺服器端智慧型影像處理DPR值都不會觸發。 同樣地，只要檢視器元素（例如色票和縮圖）沒有DPR處理，就會觸發伺服器端智慧型影像處理DPR值。
+
+另請參閱[使用影像時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智慧型裁切時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)。
