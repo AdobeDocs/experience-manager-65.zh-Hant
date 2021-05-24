@@ -1,55 +1,53 @@
 ---
 title: 編寫頁面
 seo-title: 編寫頁面
-description: 使用AEM製作內容有兩個概觀。 (1)作者的第一步——新作者的簡介，以及(2)編寫頁面的快速指南——主要動作的快速指南（高階）。
-seo-description: 使用AEM製作內容有兩個概觀。 (1)作者的第一步——新作者的簡介，以及(2)編寫頁面的快速指南——主要動作的快速指南（高階）。
+description: 使用AEM製作時有兩個概述。 (1)作者的第一步 — 新作者的簡介，以及(2)製作頁面快速指南 — 主要動作的快速指南（高階）。
+seo-description: 使用AEM製作時有兩個概述。 (1)作者的第一步 — 新作者的簡介，以及(2)製作頁面快速指南 — 主要動作的快速指南（高階）。
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: a3606d72-1bd8-4886-9285-6457dae66486
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%
 
 ---
 
-
 # 編寫頁面{#authoring-pages}
 
-以下提供使用AEM編寫內容的概觀：
+以下提供使用AEM製作的概觀：
 
-* [作者的第一步](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md) -新作者的簡介
+* [作者的第一步](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)  — 新作者的簡介
 
 >[!NOTE]
 >
->本節介紹編寫內容頁面時涉及的任務。<!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
+>本節說明編寫內容頁面時所涉及的工作。<!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
 
-## 製作頁面的快速概觀{#quick-overview-of-features-used-for-authoring-pages}功能
+## 快速概述用於編寫頁面{#quick-overview-of-features-used-for-authoring-pages}的功能
 
-為協助您製作頁面時，作者環境提供下列功能：
+為協助您編寫頁面時，製作環境會提供下列功能：
 
-* **拖放元**
-件（例如文字、影像）和數位資產（例如影像）只要將它們拖放至所需位置，就可放在頁面上。
+* **只要**
+將元件（例如文字、影像）和數位資產（例如影像）拖放到所需位置，就能將其放在頁面上。
 
-* **編**
-輯：一旦位於頁面上，就可開啟元件特定對話方塊，以輸入內容和／或設定該元件的特性（例如影像大小）。
+* ****
+編輯一旦置於頁面上，就可以開啟元件專用對話方塊，以輸入內容和/或設定該元件的特性（例如影像大小）。
 
-* **就地編輯**
-文字和影像元件可直接在網頁上編輯，毋需開啟對話方塊或明確的儲存動作。
+* **就地編輯文**
+本和影像元件可以直接在網頁上編輯，而無需開啟對話框或顯式保存操作。
 
-* **[SidekickA浮](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
-動的「偵測器」視窗，顯示在可編輯的頁面上。您可從這裡將新元件拖曳至頁面，並執行頁面特定動作。
+* **[](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
+Sidekick顯示在可編輯頁面上的浮動「檢查器」視窗。從這裡，可將新元件拖曳至頁面上，並執行頁面特定動作。
 
-* **[內容](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
-搜尋器在每個可授權頁面的左側，內容搜尋器可讓您快速存取各種資產，包括數位資產（例如其他影像、Flash元素和檔案）、其他頁面和段落。這些項目可拖曳至頁面；例如定位資產或建立其他頁面的連結。
+* **[內](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
+容尋找器在每個可授權頁面的左側，內容尋找器可讓您快速存取一系列資產，包括數位資產(例如其他影像、Flash元素和檔案)、其他頁面和段落。這些項目可拖曳至頁面；例如，定位資產或建立其他頁面的連結。
 
-* **上下文**
-功能表在螢幕上大部份的元素（例如頁面上的段落）上按一下滑鼠右鍵，可開啟包含適當動作選項的內容功能表。
+* **上**
+下文菜單按一下右鍵大多數螢幕元素（例如頁面上的段落）會顯示帶有相應操作選項的上下文菜單。
 
-* **在您鍵入時**
-進行搜尋在特定藍本（例如，編輯對話方塊中的路徑選擇）中，透過AEM介面搜尋內容時，當您輸入查詢時，會呈現動態符合。
-
+* **在您鍵入**
+時搜索在某些情況下（例如，在編輯對話框中選擇路徑），通過AEM介面搜索內容時，鍵入查詢時會顯示動態匹配。
