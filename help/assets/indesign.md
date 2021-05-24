@@ -5,9 +5,9 @@ contentOwner: AG
 role: Administrator
 feature: 發佈
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3c1a30f36222c319c354afa408555982bfe2804e
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1565'
 ht-degree: 4%
 
 ---
@@ -113,7 +113,9 @@ ht-degree: 4%
 
 * **擴充指令碼**:您可以在此處指定不同的指令碼組合。如果希望在[!DNL InDesign Server]上執行自己的指令碼，請在`/apps/settings/dam/indesign/scripts`保存指令碼。
 
-如需[!DNL Adobe InDesign]指令碼的相關資訊，請參閱[InDesign開發人員檔案](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
+<!-- TBD: Hiding this link since ADC is not available anymore. 
+For information about [!DNL Adobe InDesign] scripts, see [InDesign developer documentation](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+-->
 
 >[!CAUTION]
 >
