@@ -1,36 +1,34 @@
 ---
 title: 促銷活動
 seo-title: 促銷活動
-description: 瞭解使用AEM促銷活動的基本資訊。
-seo-description: 瞭解使用AEM促銷活動的基本資訊。
+description: 了解使用AEM Campaigns的基本知識。
+seo-description: 了解使用AEM Campaigns的基本知識。
 uuid: f4be814f-8b0f-4089-88bb-0141227bce02
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 4a3a2ad7-40b0-4f19-a012-167453f58bc2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: c7a6ab46-111f-42f0-bf09-7a300486672a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 2%
 
 ---
 
-
 # 促銷活動{#campaigns}
 
-促銷活動管理為數位行銷人員提供提供個人化內容並為訪客建立專屬體驗的機會。
+行銷活動管理為數位行銷人員提供提供個人化內容並為訪客建立專屬體驗的機會。
 
-如果您管理促銷活動（包括著陸頁面），您可能需要執行下列動作：
+如果您管理促銷活動（包括登錄頁面），則可能需要執行下列操作：
 
-* **定義區段** -您需要為目標內容定義區段和策略。
-* **為著陸頁面準備HTML**  —— 著陸頁面可讓作者快速輕鬆地將設計和內容直接匯入AEM頁面。您必須準備HTML，才能正確匯入資產。 在建立僅在限定時間內有效且需要快速建立的行銷著陸頁面時，著陸頁面很實用。
-* **與SiteCatalyst整合** -您可以將著陸頁面與SiteCatalyst整合。
+* **定義區段**  — 您需要為目標內容定義區段和策略。
+* **為登錄頁面準備HTML**  — 登錄頁面可讓作者快速輕鬆地將設計和內容匯入AEM頁面。您必須準備HTML，才能正確匯入資產。 建立行銷登錄頁面時，登錄頁面非常實用，這些頁面在有限的時間內僅有效且需要快速建立。
+* **與SiteCatalyst整合**  — 您可以整合登錄頁面與SiteCatalyst。
 
 請參閱下列頁面：
 
 * [設定區段](/help/sites-administering/campaign-segmentation.md)
-* [擴充及設定著陸頁面的Design Importer](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
-* [整合著陸頁面與Adobe Analytics](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
-
+* [擴充和設定登錄頁面的設計匯入工具](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
+* [整合登錄頁面與Adobe Analytics](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
