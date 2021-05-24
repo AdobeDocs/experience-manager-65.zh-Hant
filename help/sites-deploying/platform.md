@@ -1,8 +1,8 @@
 ---
-title: AEM平台簡介
-seo-title: AEM平台簡介
-description: 本文提供AEM平台及其最重要元件的一般概觀。
-seo-description: 本文提供AEM平台及其最重要元件的一般概觀。
+title: AEM Platform簡介
+seo-title: AEM Platform簡介
+description: 本文提供AEM平台及其最重要元件的一般概述。
+seo-description: 本文提供AEM平台及其最重要元件的一般概述。
 uuid: 214d4c49-1f5c-432c-a2c0-c1fbdceee716
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,33 +10,32 @@ topic-tags: platform
 content-type: reference
 discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 0%
 
 ---
 
-
-# AEM平台簡介{#introduction-to-the-aem-platform}
+# AEM Platform{#introduction-to-the-aem-platform}簡介
 
 AEM 6中的AEM平台以Apache Jackrabbit Oak為基礎。
 
-Apache Jackrabbit Oak致力於建置可擴充且具效能的階層式內容儲存庫，以做為現代世界級網站和其他繁重內容應用程式的基礎。
+Apache Jackrabbit Oak致力實作可擴充且效能優異的階層式內容存放庫，以作為現代世界級網站及其他苛刻內容應用程式的基礎。
 
-它是Jackrabbit 2的後繼版本，AEM 6會將其用作其內容存放庫CRX的預設後端。
+它是Jackrabbit 2的後繼版本，由AEM 6用作其內容存放庫CRX的預設後端。
 
 ## 設計原則和目標{#design-principles-and-goals}
 
 Oak實作[JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html)(JCR 2.0)規格。 其主要設計目標是：
 
 * 更好地支援大型儲存庫
-* 多個分佈式群集節點以實現高可用性
-* 更佳的效能
+* 多分佈式群集節點以實現高可用性
+* 效能更好
 * 支援許多子節點和訪問控制級別
 
-## 體系結構概念{#architecture-concept}
+## 架構概念{#architecture-concept}
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -46,95 +45,94 @@ Oak實作[JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html)(JCR 2.0
 
 * 實作樹模型
 * 使儲存可插拔
-* 提供叢集機制
+* 提供群集機制
 
 ### Oak Core {#oak-core}
 
-Oak Core在儲存層中添加了幾個層：
+Oak Core在儲存層中新增數層：
 
-* 存取層級控制
-* 搜尋與索引
+* 訪問級別控制
+* 搜尋和索引
 * 觀察
 
 ### Oak JCR {#oak-jcr}
 
-Oak JCR的主要目的是將JCR語義轉換為樹操作。 它還負責：
+Oak JCR的主要目標是將JCR語義轉換為樹操作。 它還負責：
 
 * 實作JCR API
 * 包含實現JCR約束的提交掛接
 
-此外，非Java實作現在也已可能，並成為Oak JCR概念的一部分。
+此外，現在也可實作非Java，且為Oak JCR概念的一部分。
 
 ## 儲存概述{#storage-overview}
 
-Oak儲存層提供實際儲存內容的抽象層。
+Oak儲存層提供抽象層，用於實際儲存內容。
 
-目前，AEM6提供兩種儲存空間實作：**Tar Storage**&#x200B;和&#x200B;**MongoDB Storage**。
+目前，AEM6提供兩種儲存實作：**Tar Storage**&#x200B;和&#x200B;**MongoDB Storage**。
 
-### Tar Storage {#tar-storage}
+### Tar儲存{#tar-storage}
 
 Tar儲存使用tar檔案。 它會將內容儲存為較大區段內的各種記錄類型。 日記帳用於跟蹤儲存庫的最新狀態。
 
-它圍繞以下幾個關鍵設計原則：
+它圍繞以下幾個關鍵設計原則而構建：
 
 * **不可變區段**
 
-內容會儲存在最大大小可達256KiB的區段中。 它們是不可變的，因此可以輕鬆快取經常訪問的段並減少可能損壞儲存庫的系統錯誤。
+內容儲存在大小最多可達256KiB的區段中。 它們不可變，因此可輕鬆快取經常存取的區段，並減少可能損壞儲存庫的系統錯誤。
 
-每個段由唯一標識符(UUID)標識，並包含內容樹的連續子集。 此外，區段可參照其他內容。 每個區段會保留其他參考區段的UUID清單。
+每個區段都由唯一識別碼(UUID)識別，並包含內容樹狀結構的連續子集。 此外，區段可參考其他內容。 每個區段會保留其他參考區段的UUID清單。
 
-* **本地**
+* **位置**
 
-節點及其直接子項等相關記錄通常會儲存在相同的區段中。 這使得搜索儲存庫的速度非常快，並且避免了每個會話訪問多個相關節點的典型客戶機的大多數快取丟失。
+節點及其直接子項等相關記錄通常儲存在相同的區段中。 這使得搜索儲存庫的速度非常快，並避免了每個會話訪問多個相關節點的典型客戶端的大多數快取丟失。
 
 * **緊湊性**
 
-記錄的格式設定已針對大小進行優化，以降低IO成本，並盡可能使快取中的內容適合。
+記錄的格式化被優化為大小，以降低IO成本，並盡可能適合快取中的內容。
 
-### Mongo Storage {#mongo-storage}
+### Mongo儲存{#mongo-storage}
 
-MongoDB儲存利用MongoDB進行共用和群集。 儲存庫樹保存在一個MongoDB資料庫中，其中每個節點都是獨立的文檔。
+MongoDB儲存利用MongoDB進行共用和群集。 儲存庫樹將保留在一個MongoDB資料庫中，其中每個節點都是單獨的文檔。
 
-它有幾個特點：
+它有幾項特點：
 
 * 修訂
 
-對於內容的每次更新（提交），都會建立新修訂。 修訂版本基本上是由三個元素組成的字串：
+對於內容的每次更新（提交），都會建立新修訂。 修訂基本上是字串，包含三個元素：
 
-1. 從生成電腦的系統時間衍生的時間戳
-1. 用來區分使用相同時間戳記建立的修訂的計數器
+1. 從其生成的電腦的系統時間派生的時間戳
+1. 用於區分以相同時間戳記建立的修訂的計數器
 1. 建立修訂的群集節點ID
 
 * 分支
 
-支援分支，可讓用戶端儲存多個變更，並透過單一合併呼叫加以顯示。
+支援分支，可讓用戶端存放多項變更，並透過單一合併呼叫使其可見。
 
-* 舊版檔案
+* 先前的文檔
 
-MongoDB儲存通過每次修改將資料添加到文檔中。 但是，只有明確觸發清除時，才會刪除資料。 當符合特定臨界值時，舊資料會移動。 舊版檔案僅包含不可變的資料，這表示它們僅包含已提交和合併的修訂。
+MongoDB儲存將資料添加到每次修改的文檔。 不過，它只會在明確觸發清除時刪除資料。 達到特定臨界值時，會移動舊資料。 先前的文檔僅包含不可修改的資料，這表示它們僅包含已提交和合併的修訂。
 
 * 群集節點元資料
 
-有關活動和非活動群集節點的資料保存在資料庫中，以便於群集操作。
+有關活動和非活動群集節點的資料被保留在資料庫中，以便於群集操作。
 
-具有MongoDB儲存空間的典型AEM叢集設定：
+具有MongoDB儲存的典型AEM叢集設定：
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
 ## Jackrabbit 2有什麼不同？{#what-is-different-from-jackrabbit}
 
-由於Oak的設計是向後相容於JCR 1.0標準，所以使用者層級幾乎不會有任何變更。 不過，在設定Oak架構的AEM安裝時，您需要考慮一些明顯的差異：
+由於Oak的設計要回溯相容於JCR 1.0標準，因此使用者層級幾乎不會有任何變更。 不過，在設定Oak型AEM安裝時，您需要考慮一些顯著差異：
 
-* Oak不會自動建立索引。 因此，需要建立自定義索引。
-* 與Jackrabbit 2不同，Jackrabbit 2中的作業一律會反映存放庫的最新狀態，而Oak a作業則會反映從取得作業時儲存庫的穩定檢視。 這是由於Oak所依據的MVCC模型。
-* Oak中不支援同名同級(SNS)。
+* Oak不會自動建立索引。 因此，必要時需要建立自訂索引。
+* 不同於Jackrabbit 2，工作階段一律會反映存放庫的最新狀態，而Oak工作階段會反映從取得工作階段起存放庫的穩定檢視。 這是由於Oak所根據的MVCC模型所致。
+* Oak不支援同名同層級(SNS)。
 
 ## 其他平台相關檔案{#other-platform-related-documentation}
 
-如需AEM平台的詳細資訊，請另行查看下列文章：
+如需AEM平台的詳細資訊，另請參閱下列文章：
 
-* [在AEM 6中設定節點儲存區和資料儲存區](/help/sites-deploying/data-store-config.md)
+* [在AEM 6中設定節點儲存和資料儲存](/help/sites-deploying/data-store-config.md)
 * [Oak查詢和索引](/help/sites-deploying/queries-and-indexing.md)
 * [AEM 6中的儲存元素](/help/sites-deploying/storage-elements-in-aem-6.md)
 * [AEM與MongoDB](/help/sites-deploying/aem-with-mongodb.md)
-
