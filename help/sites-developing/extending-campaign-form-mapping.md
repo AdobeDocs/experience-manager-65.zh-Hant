@@ -1,52 +1,51 @@
 ---
-title: 建立自訂表單映射
-seo-title: 建立自訂表單映射
-description: 當您在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表格
-seo-description: 當您在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表格
+title: 建立自訂表單對應
+seo-title: 建立自訂表單對應
+description: 在Adobe Campaign中建立自訂表格時，您可能想在AEM中建立對應至該自訂表格的表單
+seo-description: 在Adobe Campaign中建立自訂表格時，您可能想在AEM中建立對應至該自訂表格的表單
 uuid: f3bde513-6edb-4eb6-9048-40045ee08c4a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: bce6c586-9962-4217-82cb-c837e479abc0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 0%
 
 ---
 
-
 # 建立自定義表單映射{#creating-custom-form-mappings}
 
-當您在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表格。
+在Adobe Campaign中建立自訂表格時，您可能想在AEM中建立對應至該自訂表格的表單。
 
-本檔案說明如何建立自訂表單對應。 當您完成本檔案中的步驟時，您將會提供您的使用者一個活動頁面，讓使用者可在其中註冊即將舉行的活動。 然後您透過Adobe Campaign跟進這些使用者。
+本檔案說明如何建立自訂表單對應。 完成本檔案中的步驟後，您會為使用者提供一個事件頁面，讓他們註冊即將發生的事件。 接著，請透過Adobe Campaign追蹤這些使用者。
 
 ## 必備條件 {#prerequisites}
 
-您需要安裝下列程式碼：
+您需要安裝下列程式：
 
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-如需詳細資訊，請參閱[將AEM與Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md)整合。
+如需詳細資訊，請參閱[將AEM與Adobe Campaign Classic整合](/help/sites-administering/campaignonpremise.md) 。
 
 ## 建立自定義表單映射{#creating-custom-form-mappings-2}
 
-若要建立自訂表單映射，您必須遵循下列高階步驟，這些步驟在下列各節中有詳細說明：
+若要建立自訂表單對應，您必須遵循下列高階步驟，以下各節將詳細說明這些步驟：
 
 1. 建立自訂表格。
 1. 擴展&#x200B;**seed**&#x200B;表。
 1. 建立自訂對應。
 1. 根據自訂對應建立傳送。
-1. 在AEM中建立表單，然後使用已建立的傳送。
-1. 提交表單以進行測試。
+1. 在AEM中建置表單，使用已建立的傳送。
+1. 提交表單以測試。
 
 ### 在Adobe Campaign中建立自訂表格{#creating-the-custom-table-in-adobe-campaign}
 
-首先，在Adobe Campaign中建立自訂表格。 在此範例中，我們使用下列定義來建立事件表：
+首先，在Adobe Campaign中建立自訂表格。 在此範例中，我們使用下列定義來建立事件表格：
 
 ```xml
 <element autopk="true" label="Event" labelSingular="Event" name="event">
@@ -61,7 +60,7 @@ ht-degree: 0%
 
 ### 擴展種子表{#extending-the-seed-table}
 
-在Adobe Campaign中，點選／按一下&#x200B;**Add**&#x200B;以建立&#x200B;**種子位址(nms)**&#x200B;表格的新延伸。
+在Adobe Campaign中，點選/按一下&#x200B;**Add**&#x200B;以建立&#x200B;**種子地址(nms)**&#x200B;表的新副檔名。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -80,7 +79,7 @@ ht-degree: 0%
 
 ### 建立自訂目標對應{#creating-custom-target-mapping}
 
-在&#x200B;**管理／促銷活動管理** t中，移至&#x200B;**目標映射**&#x200B;並新增新的T **目標映射。**
+在&#x200B;**管理/促銷活動管理** t中，前往&#x200B;**目標對應**&#x200B;並新增新的T **目標對應。**
 
 >[!NOTE]
 >
@@ -90,15 +89,15 @@ ht-degree: 0%
 
 ### 建立自訂傳送範本{#creating-a-custom-delivery-template}
 
-在此步驟中，您要添加使用建立的&#x200B;**Target映射**&#x200B;的傳送模板。
+在此步驟中，您新增的傳送範本使用已建立的&#x200B;**Target對應**。
 
-在&#x200B;**資源／範本**&#x200B;中，導覽至「傳送範本」並複製現有的AEM傳送。 按一下&#x200B;**至**&#x200B;時，選擇建立事件&#x200B;**目標映射**。
+在&#x200B;**資源/範本**&#x200B;中，導覽至「傳送範本」並複製現有的AEM傳送。 按一下&#x200B;**To**&#x200B;時，選取建立事件&#x200B;**Target對應**。
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
-### 在AEM {#building-the-form-in-aem}中建立表格
+### 在AEM {#building-the-form-in-aem}中建立表單
 
-在AEM中，請確定您已在&#x200B;**頁面屬性**&#x200B;中設定雲端服務。
+在AEM中，請確定您已在&#x200B;**頁面屬性**&#x200B;中設定Cloud Service。
 
 然後，在&#x200B;**Adobe Campaign**&#x200B;標籤中，選取在[建立自訂傳送範本](#creating-a-custom-delivery-template)中建立的傳送。
 
@@ -106,19 +105,19 @@ ht-degree: 0%
 
 設定欄位時，請務必為表單欄位指定唯一的元素名稱。
 
-配置欄位後，您需要手動變更對應。
+設定欄位後，您需要手動變更對應。
 
-在CRXDE-lite中，轉至&#x200B;**jcr:content**（頁面）節點，並將&#x200B;**acMapping**&#x200B;值變更為&#x200B;**Target映射**&#x200B;的內部名稱。
+在CRXDE-lite中，轉至&#x200B;**jcr:content**（頁面的）節點，並將&#x200B;**acMapping**&#x200B;值更改為&#x200B;**Target對應**&#x200B;的內部名稱。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
-在表單的配置中，請務必勾選核取方塊以在非現有時建立
+在表單的設定中，請務必勾選核取方塊，以在非現有時建立
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
 ### 提交表單{#submitting-the-form}
 
-您現在可以提交表單，並在Adobe Campaign端驗證是否儲存值。
+您現在可以提交表單，並在Adobe Campaign端驗證值是否已儲存。
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
@@ -128,5 +127,4 @@ ht-degree: 0%
 
 提交表單時，此錯誤會記錄在AEM的&#x200B;**error.log**&#x200B;中。
 
-這是由於日期欄位的格式無效。 因應措施是提供&#x200B;**yyyy-mm-dd**&#x200B;作為值。
-
+這是因為日期欄位的格式無效。 因應措施是提供&#x200B;**yyyy-mm-dd**&#x200B;作為值。
