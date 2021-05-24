@@ -1,30 +1,28 @@
 ---
 title: 支架
 seo-title: 支架
-description: 使用腳手架，您可以建立包含欄位的支架，這些欄位可反映您所要的頁面結構，然後使用此表單，輕鬆根據此結構建立頁面
-seo-description: 使用腳手架，您可以建立包含欄位的支架，這些欄位可反映您所要的頁面結構，然後使用此表單，輕鬆根據此結構建立頁面
+description: 透過支架，您可以建立支架，其中的欄位可反映您想要的頁面結構，然後使用此表單根據此結構輕鬆建立頁面
+seo-description: 透過支架，您可以建立支架，其中的欄位可反映您想要的頁面結構，然後使用此表單根據此結構輕鬆建立頁面
 uuid: f2542fe2-598f-4631-ae64-a6ee14cd7748
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 1%
 
 ---
 
-
 # 支架{#scaffolding}
 
-有時，您可能需要建立大量共用相同結構但內容不同的頁面。 透過標準AEM介面，您將需要建立每個頁面、將適當的元件拖曳至頁面上，然後個別填入每個頁面。
+有時候，您可能需要建立一組大型頁面，這些頁面共用相同的結構但內容不同。 透過標準AEM介面，您需要建立每個頁面、將適當的元件拖曳至頁面上，並個別填入每個頁面。
 
-使用腳手架，您可以建立表單（腳手架），其中欄位可反映您頁面的結構，然後使用此表單輕鬆建立以此結構為基礎的頁面。
+透過支架，您可以建立表單（支架），其欄位可反映您想要的頁面結構，然後使用此表單根據此結構輕鬆建立頁面。
 
 >[!NOTE]
 >
->雖然支架[模式](/help/sites-authoring/author-environment-tools.md#page-modes)已推出，但是在傳統的UI中，支架的維護和建立以及從支架建立新頁面都會完成。 如需詳細資訊，請參閱傳統UI製作檔案中的[Stawbler](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。
-
+>雖然支架[模式](/help/sites-authoring/author-environment-tools.md#page-modes)可用，但是維護和建立支架以及從支架建立新頁面是在傳統UI中完成的。 如需詳細資訊，請參閱傳統UI編寫檔案中的[支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。
