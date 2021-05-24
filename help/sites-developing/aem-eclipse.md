@@ -1,7 +1,7 @@
 ---
-title: EclipseAEM的開發人員工具
-seo-title: EclipseAEM的開發人員工具
-description: EclipseAEM的開發人員工具
+title: AEM Developer Tools for Eclipse
+seo-title: AEM Developer Tools for Eclipse
+description: AEM Developer Tools for Eclipse
 seo-description: 'null'
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
 contentOwner: User
@@ -9,85 +9,84 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 00473769-c447-4966-a71e-117c669e0151
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 1%
 
 ---
 
-
-# EclipseAEM的開發人員工具{#aem-developer-tools-for-eclipse}
+# AEM Developer Tools for Eclipse{#aem-developer-tools-for-eclipse}
 
 ![](do-not-localize/chlimage_1-9.png)
 
 ## 概覽 {#overview}
 
-The AEM Developer Tools for Eclipse是Eclipse外掛程式，以Apache License 2下發行的[Eclipse plugin for Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html)為基礎。
+AEM Developer Tools for Eclipse是以Apache License 2.0底下發行的適用於Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html)的[ Eclipse外掛程式為基礎的Eclipse外掛程式。
 
-它提供數種功能，讓開AEM發更輕鬆：
+它提供數種可讓AEM開發更輕鬆的功能：
 
-* 透過Eclipse Server Connector與AEM例項緊密整合。
-* 內容與OSGI組合的同步化。
+* 透過Eclipse Server Connector與AEM執行個體緊密整合。
+* 內容和OSGI套件組合的同步。
 * 使用程式碼熱交換功能進行除錯支援。
-* 透過特定專案建AEM立精靈，輕鬆引導專案。
+* 透過特定專案建立精靈簡單引導AEM專案。
 * 輕鬆編輯JCR屬性。
 
-## 要求{#requirements}
+## 需求 {#requirements}
 
-在使用「開AEM發人員工具」之前，您必須：
+使用AEM開發人員工具之前，您需要：
 
-* 下載並安裝[適用於Java EE開發人員的Eclipse IDE](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar)。 開發AEM人員工具目前支援EclipseKepler或更新版本
+* 下載並安裝[Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar)。 AEM開發人員工具目前支援Eclipse Kepler或更新版本
 
-* 可與5.AEM6.1版或更新版本一起使用
-* 按照[Eclipse常見問答集](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)中所述，編輯您的`eclipse.ini`設定檔，以設定您的Eclipse安裝以確保您至少擁有1GB的堆積記憶體。
+* 可與AEM 5.6.1版或更新版本搭配使用
+* 按照[Eclipse FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)中所述編輯您的`eclipse.ini`配置檔案，以確保您至少擁有1 GB的堆記憶體。
 
 >[!NOTE]
 >
->在macOS上，您必須在&#x200B;**Eclipse.app**&#x200B;上按一下滑鼠右鍵，然後選取&#x200B;**顯示封裝內容**，才能找到您的&#x200B;`eclipse.ini`**。**
+>在macOS上，需要按一下右鍵&#x200B;**Eclipse.app**，然後選擇&#x200B;**顯示包內容**&#x200B;以查找&#x200B;`eclipse.ini`**。**
 
-## 如何安AEM裝Eclipse的Developer Tools {#how-to-install-the-aem-developer-tools-for-eclipse}
+## 如何安裝AEM Developer Tools for Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
 
-完成上述[要求](#requirements)後，您可以按如下方式安裝插件：
+完成上述[要求](#requirements)後，您就可以依照下列方式安裝外掛程式：
 
 1. 瀏覽&#x200B;[**AEM**&#x200B;開發人員工具網站](https://eclipse.adobe.com/aem/dev-tools/)。
 
 1. 複製&#x200B;**安裝連結**。
 
-   請注意，您也可以下載封存檔，而不是使用安裝連結。 這允許離線安裝，但您會漏掉自動更新通知。
+   請注意，您也可以下載封存檔，而不是使用安裝連結。 這允許離線安裝，但您會以這種方式遺漏自動更新通知。
 
 1. 在Eclipse中，開啟&#x200B;**Help**&#x200B;功能表。
-1. 按一下「安裝新軟體」 ****。
+1. 按一下「**安裝新軟體**」。
 1. 按一下&#x200B;**添加……**。
-1. 在&#x200B;**Name**&#x200B;中，鍵入Developer AEM Tools。
+1. 在&#x200B;**Name**&#x200B;中，鍵入AEM Developer Tools。
 1. 在&#x200B;**Location**&#x200B;中複製安裝URL。
 1. 按一下&#x200B;**確定**。
-1. 同時檢查&#x200B;**AEM**&#x200B;和&#x200B;**Sling**&#x200B;外掛程式。
+1. 檢查&#x200B;**AEM**&#x200B;和&#x200B;**Sling**&#x200B;外掛程式。
 1. 按一下&#x200B;**下一步**。
 1. 按一下&#x200B;**下一步**。
-1. 接受這些線上合約，然後按一下「完成」**。**
-1. 按一下&#x200B;**是**&#x200B;以重新啟動Eclipse。
+1. 接受這些協定，然後按一下&#x200B;**Finish**。
+1. 按一下&#x200B;**Yes**&#x200B;以重新啟動Eclipse。
 
 ## 如何導入現有項目{#how-to-import-existing-projects}
 
 >[!NOTE]
 >
->請參閱[如何從](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)下載Eclipse中的搭售AEM套件時使用。
+>請參閱[從AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)下載套件組合時如何在Eclipse中使用套件組合。
 
-## 透視AEM{#the-aem-perspective}
+## AEM透視{#the-aem-perspective}
 
-EclipseAEM的開發工具提供透視功能，讓您完全掌控專案AEM和執行個體。
+Eclipse適用的AEM開發工具隨附透視，可讓您完全控制AEM專案和例項。
 
 ![chlimage_1-2](assets/chlimage_1-2a.jpeg)
 
 ## 多模組項目示例{#sample-multi-module-project}
 
-Developer AEM Tools for Eclipse隨附範例、多模組專案，可協助您快速上手使用Eclipse中的專案設定，並提供多項功能的最佳實務指AEM南。 [進一步瞭解Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
+AEM Developer Tools for Eclipse隨附範例多模組專案，可協助您快速上手設定Eclipse中的專案，並提供數種AEM功能的最佳實務指南。 [深入了解專案原型](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
 
 請依照下列步驟建立範例專案：
 
-1. 在&#x200B;**File** > **New** > **Project**&#x200B;菜單中，瀏覽至&#x200B;**AEM**&#x200B;部分並選擇&#x200B;**AEM Sample Multi-Module Project**。
+1. 在&#x200B;**File** > **New** > **Project**&#x200B;菜單中，瀏覽到&#x200B;**AEM**&#x200B;部分並選擇&#x200B;**AEM Sample Multi-Module Project**。
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -95,21 +94,21 @@ Developer AEM Tools for Eclipse隨附範例、多模組專案，可協助您快�
 
    >[!NOTE]
    >
-   >這個步驟可能需要一段時間，因為m2eclipse需要掃描原型型錄。
+   >此步驟可能需要一些時間，因為m2eclipse需要掃描原型目錄。
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-1. 選擇&#x200B;**com.adobe.granite.archetypes:樣本——項目——原型：（最高數）**，然後按一下&#x200B;**Next**。
+1. 選擇&#x200B;**com.adobe.granite.archetypes :sample-project-archetype :（最高數）**，然後按一下&#x200B;**下一步**。
 
    ![chlimage_1-71](assets/chlimage_1-71a.png)
 
-1. 填入範例專案的&#x200B;**名稱**、**群組ID**&#x200B;和&#x200B;**工件ID**。 您也可以選擇設定一些進階屬性。
+1. 填入範例專案的&#x200B;**名稱**、**群組id**&#x200B;和&#x200B;**工件id**。 您也可以選擇設定一些進階屬性。
 
    ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-1. 然後，您應設定EclipseAEM將連線至的伺服器。
+1. 接著，您應設定Eclipse要連線的AEM伺服器。
 
-   若要使用除錯程式功能，您必須在除錯模式AEM中啟動——這可透過將下列項目新增至命令列來達成：
+   若要使用除錯程式功能，您必須以除錯模式啟動AEM — 這可以透過將下列項目新增至命令列來達成：
 
    ```
        -nofork -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=10123
@@ -117,28 +116,28 @@ Developer AEM Tools for Eclipse隨附範例、多模組專案，可協助您快�
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-1. 按一下&#x200B;**完成**。 將建立項目結構。
+1. 按一下&#x200B;**完成**。 項目結構隨即建立。
 
    >[!NOTE]
    >
-   >在全新安裝中(更具體而言：從未下載過依賴項時)，您可能會建立出錯誤的項目。 在這種情況下，請遵循[解決無效項目定義](#resolving-invalid-project-definition)中描述的過程。
+   >在全新安裝上(具體說明：從未下載maven相依性時)，您可能會獲得建立的專案並發生錯誤。 在這種情況下，請按照[解決無效項目定義](#resolving-invalid-project-definition)中描述的過程操作。
 
 ## 疑難排解 {#troubleshooting}
 
 ### 解決無效的項目定義{#resolving-invalid-project-definition}
 
-要解決無效的從屬關係和項目定義，請按如下步驟進行：
+要解析無效的依賴項，項目定義將按以下步驟進行：
 
 1. 選取所有已建立的專案。
 1. 按一下右鍵。 在菜單&#x200B;**Maven**&#x200B;中，選擇&#x200B;**更新項目**。
-1. 檢查&#x200B;**強制更新快照／版本**。
+1. 檢查&#x200B;**強制更新快照/版本**。
 1. 按一下&#x200B;**「確定」**。Eclipse會嘗試下載所需的相依性。
 
 ### 在JSP檔案{#enabling-tag-library-autocompletion-in-jsp-files}中啟用標籤庫自動完成
 
-標籤庫自動完成功能不會立即生效，因為專案中已新增適當的相依性。 使用Uber Jar時有一個已知問題AEM，它不包括所需的tld和TagExtraInfo檔案。
+在專案中新增了適當的相依性時，標籤程式庫自動完成功能會立即運作。 使用AEM Uber Jar時有一個已知問題，其中不包含所需的tld和TagExtraInfo檔案。
 
-若要解決這個問題，請確定org.apache.sling.scripting.jsp.taglib工件位於AEMUber Jar之前的類路徑中。 對於Maven項目，請在pom.xml中將下列相依性置於Uber Jar之前。
+若要解決此問題，請確定org.apache.sling.scripting.jsp.taglib工件位於AEM Uber Jar之前的類路徑中。 若為Maven專案，請將下列相依性放入pom.xml中，放在Uber Jar之前。
 
 ```xml
 <dependency>
@@ -148,19 +147,18 @@ Developer AEM Tools for Eclipse隨附範例、多模組專案，可協助您快�
 </dependency>
 ```
 
-請務必新增適合您部署的版AEM本。
+請務必為部署的AEM新增正確版本。
 
 ## 更多資訊{#more-information}
 
-Eclipse網站的Apache Sling IDE官方工具提供您有用的資訊：
+適用於Eclipse網站的官方Apache Sling IDE工具可提供您實用的資訊：
 
-* 本檔案將引導您瞭解開發工具支援的整體概念、伺服器整合和部署功能，以及&#x200B;[**Apache Sling IDE Tools for Eclipse** User Guide](https://sling.apache.org/documentation/development/ide-tooling.html)AEM。
-* [疑難排解部分](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)。
+* 本檔案提供Eclipse **使用手冊](https://sling.apache.org/documentation/development/ide-tooling.html)的Apache Sling IDE工具，引導您了解AEM開發工具支援的整體概念、伺服器整合和部署功能。[**
+* [疑難排解區段](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)。
 * [已知問題清單](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)。
 
-以下正式的[Eclipse](https://eclipse.org/)文檔可幫助設定環境：
+下列官方的[Eclipse](https://eclipse.org/)檔案可協助您設定環境：
 
 * [Eclipse快速入門](https://eclipse.org/users/)
 * [Eclipse Luna幫助系統](https://help.eclipse.org/luna/index.jsp)
 * [Maven整合(m2eclipse)](https://www.eclipse.org/m2e/)
-
