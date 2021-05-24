@@ -1,6 +1,6 @@
 ---
-title: 面向客戶的用戶介面Recommendations
-seo-title: 面向客戶的用戶介面Recommendations
+title: 適用於客戶的使用者介面Recommendations
+seo-title: 適用於客戶的使用者介面Recommendations
 description: 與傳統和觸控最佳化使用者介面相關的建議清單。
 seo-description: 與傳統和觸控最佳化使用者介面相關的建議清單。
 uuid: 9ec2c9de-a79e-4f2c-a90f-b38ba9553e07
@@ -10,75 +10,74 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '815'
 ht-degree: 0%
 
 ---
 
+# 適用於客戶的使用者介面Recommendations{#user-interface-recommendations-for-customers}
 
-# 客戶專用的用戶介面Recommendations{#user-interface-recommendations-for-customers}
-
-Adobe Experience Manager提供兩個UI —— 統一的Experience CloudUI（也稱為觸控式UI）和傳統UI。
+Adobe Experience Manager隨附兩個UI：統一的Experience CloudUI（也稱為觸控式UI）和傳統UI。
 
 本檔案旨在引導客戶根據其情況選擇要使用的UI。
 
 利息條款：
 
 * **UI（或標準UI）**
-5.6.0版中引進的現代化使用者介面，在後續版本中提供技術預覽和擴充。它以Adobe Experience Cloud的統一使用者體驗為基礎，之前稱為觸控式UI或觸控式UI。
+5.6.0版中導入的現代化使用者介面，作為技術預覽，並在後續版本中延伸。這是以Adobe Experience Cloud的統一使用者體驗為基礎，先前稱為觸控式UI或觸控式UI。
 
-* **2008**
-年CQ5.1版中引入的基於ExtJS技術的經典UIUser介面。
+* **基**
+於ExtJS技術的傳統UIUser介面，2008年CQ 5.1推出。
 
-* **網站管**
-理員管理網站階層（移動、啟用、管理的參考）並建立新頁面。
+* **網站**
+管理功能，用於管理網站階層（移動、啟動、管理的參考）和建立新頁面。
 
 * **頁**
-面編寫功能，以新增／編輯頁面內容。
+面編寫功能，以新增/編輯頁面內容。
 
-* **DAM/Assets**
-AdminCapabilities，以管理數位資產（包括影像、視訊、檔案、下載）。
+* **DAM/Assets管**
+理功能可管理數位資產（包括影像、影片、檔案、下載）。
 
-* **ContextHubCapabilities，可匯整訪客的相關資訊，並用於各種用途。**
-提供使用者介面來模擬造訪網站的人員。 從AEM6.2開始，ContextHub取代了先前的技術：用戶端內容。
+* ****
+ContextHubCapabilities ，匯總訪客的相關資訊並用於各種用途。提供用於模擬訪問站點的人員的用戶介面。 自AEM 6.2起，ContextHub已取代先前的技術「用戶端內容」。
 
 ## 一般 {#general}
 
-過去幾年來，Adobe以統一的使用者介面更新了所有Adobe Experience Cloud解決方案。 Experience Cloud解決方案的使用者在使用和操作應用程式時，都能享有一致的使用體驗。 在每個版本中，Adobe都根據客戶對各種解決方案的意見回應，來改善其使用者介面。
+過去幾年來，Adobe已使用統一的使用者介面更新所有Adobe Experience Cloud解決方案。 Experience Cloud解決方案的使用者在如何使用和操作應用程式方面，都能享有一致的常見模式體驗。 在每個版本中，Adobe都根據客戶在各種解決方案中提供的意見回饋，完善了其使用者介面。
 
-Adobe Experience Manager的原始使用者介面（先前稱為CQ5），於2008年推出，並由執行5.0-5.6.1版的客戶使用，現已在AEM6.5中提供。這可確保客戶可更新至6.5版，並受益於具備新功能的更新平台，同時仍能使用相同的使用者介面。
+AEM 6.5中提供原始的Adobe Experience Manager使用者介面（先前稱為CQ5）（於2008年推出，供執行5.0至5.6.1版的客戶使用）。這可保證客戶可更新至6.5版，並受益於具有新功能的更新平台，同時持續使用相同的使用者介面。
 
-Adobe建議客戶計畫在2018/19年改用新的UI。 這可在6.5版的更新期間完成，或在更新後的個別專案中完成，其中包括對自訂和元件對話方塊進行必要的調整。
+Adobe建議客戶在2018/19年度計畫改用新的UI。 這可在6.5版的更新期間完成，或在更新後的個別專案中完成，包括對自訂項目和元件對話方塊進行必要的調整。
 
-Classic UI已在6.4中取AEM代，而Adobe不打算對Classic UI進一步增強。 請注意，Classic UI在遭淘汰時仍完全受支援。
+AEM 6.4已淘汰傳統UI，且Adobe不打算對傳統UI進一步增強。 請注意，舊版UI仍完全受支援。
 
-### 規則與Recommendations{#rules-and-recommendations}
+### 規則與Recommendations {#rules-and-recommendations}
 
-以下是產品管理部門針對Adobe Experience Manager6.5的建議清單：
+以下為Adobe Experience Manager 6.5產品管理的建議清單：
 
 <table>
  <tbody>
   <tr>
-   <th>我的專案……</th>
+   <th>我的項目……</th>
    <th>建議</th>
   </tr>
   <tr>
-   <td>才剛開始使用Adobe Experience Manager。</td>
-   <td>使用預設的UI。</td>
+   <td>才開始使用Adobe Experience Manager。</td>
+   <td>使用預設UI。</td>
   </tr>
   <tr>
-   <td><p>已經AEM有一段時間了。</p> <p>已使用產品現成可用的UI，並開發網站的自訂元件。<br /> </p> </td>
+   <td><p>已使用AEM一段時間。</p> <p>已使用產品UI的現成可用功能，並為網站開發自訂元件。<br /> </p> </td>
    <td>
     <ol>
      <li>更新至6.5</li>
-     <li>使用預設的UI進行網站管理、資產、 etc<br /> </li>
-     <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 請參閱<a href="#selecting-your-ui">選擇您的UI</a>。</li>
+     <li>使用網站管理、資產、的預設UI。 etc<br /> </li>
+     <li>設定「編輯頁面」動作，以開啟傳統UI頁面編輯器。 請參閱<a href="#selecting-your-ui">選取您的UI</a>。</li>
     </ol> <p>然後，在第二階段：</p>
     <ol>
-     <li>更新元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用<a href="/help/sites-developing/modernization-tools.md">現代化工AEM具</a>更新元件。</li>
+     <li>更新元件對話方塊，使用Coral 3對話方塊格式。 Adobe建議使用<a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a>來更新元件。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -86,52 +85,51 @@ Classic UI已在6.4中取AEM代，而Adobe不打算對Classic UI進一步增強�
    <td>
     <ol>
      <li>更新至6.5</li>
-     <li>使用預設的UI進行網站管理、資產、 等等。</li>
-     <li>設定「編輯頁面」動作以開啟傳統UI頁面編輯器。 請參閱<a href="#selecting-your-ui">選擇您的UI</a>。</li>
+     <li>使用網站管理、資產、的預設UI。 等。</li>
+     <li>設定「編輯頁面」動作，以開啟傳統UI頁面編輯器。 請參閱<a href="#selecting-your-ui">選取您的UI</a>。</li>
     </ol> <p>然後，在第二階段：</p>
     <ol>
-     <li>更新元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用<a href="/help/sites-developing/modernization-tools.md">現代化工AEM具</a>更新元件。</li>
-     <li>設定ContextHub(ClientContext的取代)並更新頁面範本以使用ContextHub。 請注意，ContextHub具有允許載入自定義ClientContext儲存的相容模式。</li>
+     <li>更新元件對話方塊，使用Coral 3對話方塊格式。 Adobe建議使用<a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a>來更新元件。</li>
+     <li>設定ContextHub(取代ClientContext)並更新頁面範本以使用ContextHub。 請注意，ContextHub具有可載入自訂ClientContext存放區的相容模式。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td><p>已使用CQ/AEM多年。</p> <p>已擴充產品UI（例如網站管理員），並建立包含廣泛編輯對話方塊的元件。</p> </td>
-   <td><p>更新至6.5，並將傳統UI設定為所有使用者的頁面編寫預設值。 請參閱<a href="#selecting-your-ui">選擇您的UI</a>。</p> <p>然後開始專案，以套用自訂並最佳化Coral 3格式的元件對話方塊。 請參閱<a href="#resources-to-help">說明資源</a>。<br /> </p> </td>
+   <td><p>已使用CQ/AEM多年。</p> <p>已擴充產品UI（例如網站管理員）並建置元件，提供廣泛的編輯對話方塊。</p> </td>
+   <td><p>更新至6.5，並將傳統UI設為所有使用者的頁面編寫預設UI。 請參閱<a href="#selecting-your-ui">選取您的UI</a>。</p> <p>接著，啟動專案以套用自訂，並以Coral 3格式最佳化元件對話方塊。 請參閱<a href="#resources-to-help">幫助資源</a>。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
 
-### 常見問答{#faq}
+### 常見問題集 {#faq}
 
-如需詳細資訊，請參閱知識庫文章[Touch UI編寫常見問答集](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html);包括有關傳統UI淘汰排程的任何資訊。
+如需詳細資訊，請參閱知識庫文章[觸控式UI編寫常見問題集](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html);包括傳統UI淘汰排程的任何相關資訊。
 
-### 選擇您的UI {#selecting-your-ui}
+### 選擇UI {#selecting-your-ui}
 
-如需視需要設定系統的詳細資訊，請參閱[選擇您的UI](/help/sites-authoring/select-ui.md)。
+如需視需要設定系統的相關資訊，請參閱[選取您的UI](/help/sites-authoring/select-ui.md)。
 
-### 啟用觸控的UI狀態{#touch-enabled-ui-status}
+### 觸控式UI狀態{#touch-enabled-ui-status}
 
-如需6.5中觸控式使用者介面增強功能的詳細資訊，請參閱版本注意事項中的AEM[新功能](/help/release-notes/release-notes.md#what-s-new)。
+如需AEM 6.5中觸控式UI所增強功能的詳細資訊，請參閱發行說明中的[新增功能](/help/release-notes/release-notes.md#what-s-new)。
 
-完整概觀請參閱[Touch UI功能狀態](/help/release-notes/touch-ui-features-status.md)頁面
+完整概述請參閱[觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md)頁面
 
-### 幫助{#resources-to-help}的資源
+### 幫助資源{#resources-to-help}
 
 有關基本處理的背景資訊：
 
 * [編寫頁面](/help/sites-authoring/page-authoring.md)。
 
-如需詳細的開發資訊：
+有關詳細開發資訊：
 
-* [可觸控的UI架構](/help/sites-developing/touch-ui-concepts.md)。
-* 使用[現代化工AEM具](/help/sites-developing/modernization-tools.md)將元件編輯對話框從傳統UI轉換為觸控式UI。
+* [觸控式UI架構](/help/sites-developing/touch-ui-concepts.md)。
+* 使用[AEM現代化工具](/help/sites-developing/modernization-tools.md)將元件「編輯」對話方塊從傳統UI轉換為觸控式UI。
 
 * [觸控式UI的結構](/help/sites-developing/touch-ui-structure.md)。
 
-* [在觸控式UI中自訂控制台](/help/sites-developing/customizing-consoles-touch.md) （包含范常式式碼）。
+* [在觸控式UI中自訂主控台](/help/sites-developing/customizing-consoles-touch.md) （包含范常式式碼）。
 
-* [在觸控式UI中自訂頁面製作](/help/sites-developing/customizing-page-authoring-touch.md) （包含范常式式碼）。
+* [在觸控式UI中自訂頁面編寫](/help/sites-developing/customizing-page-authoring-touch.md) （包含范常式式碼）。
 
-* [AEMGem Session on touch-enabled customization](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
+* [AEM Gem工作階段關於觸控式自訂](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html)。
 * [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)。
-
