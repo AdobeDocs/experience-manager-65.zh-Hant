@@ -10,29 +10,28 @@ content-type: reference
 topic-tags: spa
 discoiquuid: 6c320633-ce0b-4eb1-bb54-05e1a514d139
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-
 # SPA與Adobe Experience Platform Launch整合{#spa-and-adobe-experience-platform-launch-integration}
 
-Adobe Experience Platform Launch是在單頁應用程式(SPA)中實作Analytics、Target和Audience Manager的推薦方式。
+Adobe Experience Platform Launch是在單頁應用程式(SPA)中實作Analytics、Target和Audience Manager的建議方式。
 
 >[!NOTE]
 >
->SPA編輯器是建議的解決方案，適用於需要以SPA架構為基礎的用戶端轉換（例如React或Angular）的專案。
+>若專案需要SPA架構的用戶端轉譯(例如React或Angular),SPA Editor是建議的解決方案。
 
-## 教學課程{#tutorial}
+## 教學課程 {#tutorial}
 
-若要瞭解如何將SPA與Adobe Experience Platform Launch整合，請參閱[本知識庫文章和教學課程](https://helpx.adobe.com/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html)，其中將引導您完成啟動設定，並實作以Angular或React內建的Experience Cloud。
+若要了解如何將SPA與Adobe Experience Platform Launch整合，請參閱[本知識庫文章和教學課程](https://helpx.adobe.com/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html)，引導您完成Launch設定，並實作內建Angular或React的Experience Cloud。
 
 >[!NOTE]
 >
->建立參考知識庫是為了讓Adobe Experience Platform Launch與不使用AEM SPA Editor的SPA整合。 這些方法也應允許Adobe Experience Platform Launch整合與使用SPA編輯器建立的SPA共存。
+>已建立參考的KB，以啟用Adobe Experience Platform Launch與SPA的整合，而不使用AEM SPA編輯器。 這些方法也應允許Adobe Experience Platform Launch整合與建置為使用SPA編輯器的SPA共存。
 >
->Javascript SPA程式庫與Redux搭配使用的問題尚未完全探討。 SPA編輯器的未來版本將支援Redux。
+>Redux與Javascript SPA程式庫搭配使用的相關探討尚未完全探討。 Redux的支援預計於未來的SPA Editor版本中提供。
