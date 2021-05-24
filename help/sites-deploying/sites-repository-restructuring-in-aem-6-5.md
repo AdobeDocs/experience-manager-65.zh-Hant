@@ -1,26 +1,25 @@
 ---
-title: 6.5版中的站點AEM儲存庫重組
-seo-title: 6.5版中的站點AEM儲存庫重組
-description: 瞭解如何進行必要的更改，以便遷移到6.5中的AEMSites新儲存庫結構。
-seo-description: 瞭解如何進行必要的更改，以便遷移到6.5中的AEMSites新儲存庫結構。
+title: AEM 6.5中的Sites存放庫重新調整
+seo-title: AEM 6.5中的Sites存放庫重新調整
+description: 了解如何進行必要的變更，以移轉至AEM 6.5 for Sites中的新存放庫結構。
+seo-description: 了解如何進行必要的變更，以移轉至AEM 6.5 for Sites中的新存放庫結構。
 uuid: 6dc5f8bd-1680-40af-9b8f-26c1f4bc3304
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 升級
+exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 1%
 
 ---
 
+# AEM 6.5 {#sites-repository-restructuring-in-aem}中的Sites存放庫重新調整
 
-# 6.5 &lt;AEMa0/>中的站點儲存庫重組{#sites-repository-restructuring-in-aem}
-
-如[父6.5](/help/sites-deploying/repository-restructuring.md)頁中的「資料庫重組」頁中所述，升級至AEM6.5的客戶應使用此頁評估與影響AEM Sites解決方案的資料庫更改相關的工作成果。 有些變更需要在6.5升級程AEM序中努力工作，而有些則會延遲至日後升級。
+如上層[AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的存放庫重組頁面所述，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Sites解決方案的存放庫變更相關的工作量。 有些變更需要AEM 6.5升級程式中的工作量，而有些變更可能會延遲至日後升級。
 
 **使用6.5升級**
 
@@ -28,16 +27,16 @@ ht-degree: 1%
 
 **未來升級前**
 
-* [Adobe Analytics客戶庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-analytics-client-libraries)
-* [傳統的Microsoft Word網頁設計](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#classic-microsoft-word-to-web-page-designs)
-* [行動裝置模擬器組態](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#mobile-device-emulator-configurations)
+* [Adobe Analytics用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-analytics-client-libraries)
+* [傳統Microsoft Word到網頁設計](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#classic-microsoft-word-to-web-page-designs)
+* [行動裝置模擬器設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#mobile-device-emulator-configurations)
 * [多站點管理器Blueprint配置](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
-* [多站點管理器推廣配置](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-rollout-configurations)
+* [多網站管理員轉出設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-rollout-configurations)
 * [頁面事件通知電子郵件範本](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)
 * [頁面支架](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-scaffolding)
-* [互動式格線](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#responsive-grid-less)
+* [響應網格較少](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#responsive-grid-less)
 * [靜態範本設計](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#static-template-designs)
-* [Adobe搜索和升級整合客戶端庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries)
+* [Adobe搜尋和促銷整合用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries)
 * [Adobe Target整合用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-target-integration-client-libraries)
 * [WCM Foundation用戶端程式庫](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#wcm-foundation-client-libraries)
 
@@ -48,7 +47,7 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><code>/etc/segmentation/contexthub</code></td>
   </tr>
   <tr>
@@ -57,18 +56,18 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>如果任何新的或修改的ContextHub區段是要在來源控制中編輯，而非在中編輯，AEM則必須將其移轉至新位置：</p>
+   <td><p>如果要在原始碼控制項中編輯任何新的或修改的ContextHub區段，而不是在AEM中編輯，則必須將其遷移到新位置：</p>
     <ol>
      <li>將任何新的或修改的ContextHub區段從上一個位置複製到適當的新位置（/<code>apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）</li>
-     <li>將先前位置的ContextHub區段參考更新為新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)中已移轉的ContextHub區段。</li>
-    </ol> <p>下列QueryBuilder查詢會在先前位置中找到ContextHub區段的所有參考。<br /> <br /> <code class="code">path=/content
+     <li>將先前位置中的ContextHub區段參考更新為新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)中移轉的ContextHub區段。</li>
+    </ol> <p>以下QueryBuilder查詢會在先前位置找到ContextHub區段的所有參考。<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> 這可透過 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEMQueryBuilder除錯程式UI執行</a>。請注意，這是遍歷查詢，因此不要針對生產運行它，並確保根據需要調整遍歷限制。</p> </td>
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> 這可透過 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder Debugger UI</a>執行。請注意，這是遍歷查詢，因此請勿針對生產環境運行它，並確保根據需要調整遍歷限制。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>ContextHub區段持續存在至先前位置，在<strong> AEM &gt;個人化&gt;觀眾</strong>中顯示為唯讀。</p> <p>如果要在中編輯ContextHub區AEM段，則必須將其遷移到新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。 在中建立的任何新ContentHub區AEM段都會保留至新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p> <p>AEM Sites頁面屬性僅允許選擇上一個位置(<code>/etc</code>)或單個新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>），因此必須相應地遷移ContextHub區段。</p> <p>參考網站中任何未使AEM用的ContextHub區段都可移除，而不移轉至新位置：</p>
+   <td><p>保存至先前位置的ContextHub區段在<strong>AEM &gt;個人化&gt;對象</strong>中顯示為唯讀。</p> <p>若要在AEM中編輯ContextHub區段，必須將其移轉至新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。 在AEM中建立的任何新ContentHub區段都會保留至新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p> <p>AEM Sites頁面屬性僅允許選取上一個位置(<code>/etc</code>)或單一新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>），因此必須據以移轉ContextHub區段。</p> <p>任何未使用之AEM參考網站的ContextHub區段都可移除，且不會移轉至新位置：</p>
     <ul>
      <li>/etc/segmentation/geometrixx/</li>
      <li>/etc/segmentation/geometrixx-outdoors</li>
@@ -79,12 +78,12 @@ ht-degree: 1%
 
 ## 未來升級前{#prior-to-upgrade}
 
-### Adobe Analytics客戶端庫{#adobe-analytics-client-libraries}
+### Adobe Analytics用戶端程式庫{#adobe-analytics-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><p><code>/etc/clientlibs/foundation/sitecatalyst</code></p> </td>
   </tr>
   <tr>
@@ -93,10 +92,10 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>對這些客戶端庫的任何自定義使用都應按類別引用客戶端庫，而不是按路徑引用：</p>
+   <td><p>這些客戶端庫的任何自定義使用都應按類別引用客戶端庫，而不是按路徑引用：</p>
     <ol>
-     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
-     <li>如AEM果不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用。
+     <li>應更新先前位置上依路徑對用戶端程式庫的任何參照，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">參考架構</a>的AEM用戶端程式庫。</li>
+     <li>如果無法使用AEM用戶端程式庫參考架構，則可透過AEM用戶端程式庫代理servlet參考用戶端程式庫的絕對路徑。
       <ul>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/appmeasurement.js</code></li>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/plugins.js</code></li>
@@ -108,7 +107,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>不支援編輯這些用戶端程式庫。</p> <p>要獲取客戶端庫類別，請通過CRXDELite訪問每個<code>cq:ClientLIbraryFolder</code>節點並檢查類別屬性。</p>
+   <td><p>從不支援編輯這些客戶端庫。</p> <p>若要取得用戶端程式庫類別，請透過CRXDELite造訪每個<code>cq:ClientLIbraryFolder</code>節點，並檢查categories屬性。</p>
     <ul>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/plugins</code></li>
@@ -120,12 +119,12 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 傳統的Microsoft Word網頁設計{#classic-microsoft-word-to-web-page-designs}
+### 經典Microsoft Word到網頁設計{#classic-microsoft-word-to-web-page-designs}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><code>/etc/designs/wordDesign</code></td>
   </tr>
   <tr>
@@ -134,14 +133,14 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>適用於任何以SCM管理且不在執行時期透過設計對話方塊寫入的設計。</p>
+   <td><p>對於在SCM中管理、而不是在運行時通過設計對話框寫入的任何設計。</p>
     <ol>
-     <li>將設計從「上一個位置」複製到「新位置」(<code>/apps</code>)。</li>
-     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">具有<code>allowProxy = true</code>的「用戶端程式庫」。</a></li>
-     <li>在cq:designPath屬性中更新對「上一個位置」的參照。</li>
-     <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEMDispatcher規則，允許通過<code>/etc.clientlibs/</code>代理Servlet提供客戶端庫。</li>
-    </ol> <p>對於未在SCM中管理且透過設計對話方塊修改執行時期的任何設計：</p>
+     <li>將設計從上一位置複製到新位置(<code>/apps</code>)。</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用<code>allowProxy = true</code>的用戶端程式庫</a>。</li>
+     <li>更新cq:designPath屬性中上一個位置的引用。</li>
+     <li>更新任何參考上一個位置的頁面，以使用新的用戶端程式庫類別（這需要更新頁面實作程式碼）。</li>
+     <li>更新AEM Dispatcher規則，以允許透過<code>/etc.clientlibs/</code>代理Servlet提供用戶端程式庫。</li>
+    </ol> <p>對於未在SCM中管理的任何設計，以及通過設計對話框修改運行時：</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
     </ul> </td>
@@ -153,12 +152,12 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 行動裝置模擬器組態{#mobile-device-emulator-configurations}
+### 行動裝置模擬器配置{#mobile-device-emulator-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><p><code>/etc/mobile</code></p> </td>
   </tr>
   <tr>
@@ -167,31 +166,31 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td>任何新的行動裝置模擬器組態都必須移轉至新位置。
+   <td>任何新的行動裝置模擬器設定都必須移轉至新位置。
     <ol>
-     <li>將任何新的「行動裝置模擬器配置」從「上一個位置」複製到新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)。</li>
-     <li>對於任何依賴這些行動裝置模擬器設定的AEM Sites頁面，請更新頁面的<span class="code">
+     <li>將任何新的移動設備模擬器配置從上一位置複製到新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)。</li>
+     <li>對於依賴這些行動裝置模擬器設定的任何AEM Sites頁面，請更新頁面的<span class="code">
        <code>
         jcr
        </code>
        <code>
         :content
-       </code></span>節點：<br /> <span class="code">[cq:Page]/jcr:content@cq:
+       </code></span>節點：<br /> <span class="code">[cq：頁面]/jcr:content@cq
        <code>
         deviceGroups
-       </code> =字串[ mobile/groups/responsive ]</span></li>
+       </code> =字串[行動/群組/回應]</span></li>
      <li>對於依賴於這些移動設備模擬器配置的任何可編輯模板，請更新可編輯模板，指向<span class="code">
        <code>
         cq
        </code>:
        <code>
         deviceGroups
-       </code></span>至新位置。</li>
+       </code></span>到新位置。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>行動裝置模擬器組態解析度依下列順序產生：</p>
+   <td><p>行動裝置模擬器組態解析度依下列順序進行：</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/mobile</code></li>
      <li><code>/conf/global/settings/mobile</code></li>
@@ -208,24 +207,24 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><code>/etc/blueprints</code></td>
   </tr>
   <tr>
    <td><strong>新位置</strong></td>
-   <td><p><code>/apps/msm</code> （客戶藍圖配置）</p> <p><code>/libs/msm</code> （適用於螢幕、商務的Blueprint設定立即可用）</p> </td>
+   <td><p><code>/apps/msm</code> （客戶Blueprint設定）</p> <p><code>/libs/msm</code> （適用於Screens、Commerce的Blueprint設定現成可用）</p> </td>
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>任何新的或修改的多站點管理器Blueprint配置都必須遷移到新位置(<code>/apps</code>)。</p>
+   <td><p>必須將任何新的或修改的多站點管理器Blueprint配置遷移到新位置(<code>/apps</code>)。</p>
     <ol>
-     <li>將任何新的或修改的多站點管理器Blueprint配置從上一個位置複製到新位置(<code>/apps</code>)。</li>
-     <li>從上一個位置移除所有遷移的多站點管理器Blueprint配置。</li>
+     <li>將任何新的或修改的多站點管理器Blueprint配置從上一位置複製到新位置(<code>/apps</code>)。</li>
+     <li>從上一個位置刪除所有遷移的多站點管理器Blueprint配置。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>所有AEM提供的多站點管理器Blueprint配置都存在於<code>/libs</code>的「新位置」中。</p> <p>內容不參考多站點管理器藍色配置，因此沒有要調整的內容引用。</p> </td>
+   <td><p><code>/libs</code>中的「新位置」中存在所有AEM提供的多站點管理器Blueprint配置。</p> <p>內容不會參考多網站管理員藍色設定，因此沒有內容參考需要調整。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -235,7 +234,7 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><p><code>/etc/msm/rolloutConfigs</code></p> </td>
   </tr>
   <tr>
@@ -244,15 +243,15 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>任何新的或修改的多站點管理器轉出配置都必須遷移到新位置。</p>
+   <td><p>任何新的或修改的多網站管理員轉出設定都必須移轉至新位置。</p>
     <ol>
-     <li>將任何新的或修改的多站點管理器轉出配置從上一個位置複製到新位置(<code>/apps</code>)。</li>
-     <li>將頁面上的AEM任何參考更新為「上一個位置」中的「多網站管理員轉出配置」，以指向「新位置」中的對應位置（<code>/libs</code>或<code>/apps</code>）。</li>
-    </ol> <p>從上一個位置移除移轉的多網站管理員轉出組態。</p> </td>
+     <li>將任何新的或修改的多站點管理器轉出配置從上一位置複製到新位置(<code>/apps</code>)。</li>
+     <li>將AEM頁面上的任何參考更新為上一個位置的多網站管理員轉出設定，以指向新位置（<code>/libs</code>或<code>/apps</code>）中的對應位置。</li>
+    </ol> <p>從上一個位置移除移轉的多網站管理員轉出設定。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>無法從「上一個位置」移除移轉的多網站管理員轉出設定，會導致重複轉出選項顯示給作AEM者。</td>
+   <td>無法從「上一個位置」移除移轉的多網站管理員轉出設定，導致向AEM作者顯示重複轉出選項。</td>
   </tr>
  </tbody>
 </table>
@@ -262,7 +261,7 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><p><code>/etc/notification/email/default/com.day.cq.wcm.core.page</code></p> </td>
   </tr>
   <tr>
@@ -271,7 +270,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>唯一支援的新頁面事件通知電子郵件範本是支援新地區設定。</p> <p>頁面事件電子郵件範本解析依下列順序發生：</p>
+   <td><p>唯一支援的新「頁面事件通知電子郵件模板」是支援新語言環境。</p> <p>頁面事件電子郵件範本解析按以下順序發生：</p>
     <ol>
      <li><code>/etc/notification/email/default/com.day.cq.wcm.core.page</code></li>
      <li><code>/apps/settings/notification-templates/com.day.cq.wcm.core.page</code></li>
@@ -280,10 +279,10 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>任何新的或修改的頁面事件通知電子郵件模板都必須遷移到<code>/apps</code>下的新位置：</p>
+   <td><p>任何新的或修改的頁面事件通知電子郵件範本都必須移轉至<code>/apps</code>下的新位置：</p>
     <ol>
-     <li>將任何新的或修改的頁面事件通知電子郵件模板從上一個位置複製到新位置(<code>/apps</code>)。</li>
-     <li>從上一個位置移除任何已移轉的頁面事件通知電子郵件範本。</li>
+     <li>將任何新的或修改的頁面事件通知電子郵件模板從上一位置複製到新位置(<code>/apps</code>)。</li>
+     <li>從上一個位置刪除任何遷移的頁面事件通知電子郵件模板。</li>
     </ol> </td>
   </tr>
  </tbody>
@@ -294,7 +293,7 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><code>/etc/scaffolding</code></td>
   </tr>
   <tr>
@@ -302,14 +301,14 @@ ht-degree: 1%
    <td><p><span class="code">/libs/settings/
       <code>
        wcm
-      </code>/template-types/shabler/shablers</span></p> <p><span class="code">/apps/settings/
+      </code>/範本類型/支架/支架</span></p> <p><span class="code">/apps/settings/
       <code>
        wcm
-      </code>/template-types/shabler/shablers</span></p> </td>
+      </code>/範本類型/支架/支架</span></p> </td>
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td>在「上一個位置」下建立的腳手架使用舊版「腳手架」架構，無法移轉至「新位置」。 要與新位置保持一致，任何舊式腳手架都必須使用支援的腳手架架構重新開發。</td>
+   <td>在「上一位置」下建立的架構使用舊版架構，且無法移轉至新位置。 若要與新位置一致，必須使用支援的架構架構重新開發任何舊版架構。</td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
@@ -318,12 +317,12 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 自適應網格LESS {#responsive-grid-less}
+### 響應網格LESS {#responsive-grid-less}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><code>/etc/clientlibs/wcm/foundation/grid/grid_base.less</code></td>
   </tr>
   <tr>
@@ -332,14 +331,14 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>對自定義LESS檔案中「上一個位置」(Previous Location)的任何引用都必須更新為從「新位置」(New Location)導入。</p>
+   <td><p>必須更新自定義LESS檔案中對「上一個位置」的任何引用，以從「新位置」導入。</p>
     <ul>
-     <li>更新在「上一個位置」中引用grid_base.less的任何引用自定義LESS檔案以引用新位置。</li>
+     <li>更新在「上一位置」中引用grid_base.less的任何引用自定義LESS檔案以引用新位置。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>參照非現有的<code>grid_base.less</code>檔案會導致頁面和範本編輯器的「版面模式」無法運作，並中斷頁面版面配置。</td>
+   <td>參考非現有的<code>grid_base.less</code>檔案會導致頁面和範本編輯器的「配置模式」無法運作，且頁面配置作業中斷。</td>
   </tr>
  </tbody>
 </table>
@@ -349,7 +348,7 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><code>/etc/designs/&lt;custom-site&gt;</code></td>
   </tr>
   <tr>
@@ -358,31 +357,31 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>適用於任何以SCM管理且不在執行時期透過設計對話方塊寫入的設計。</p>
+   <td><p>對於在SCM中管理、而不是在運行時通過設計對話框寫入的任何設計。</p>
     <ol>
-     <li>將設計從「上一個位置」複製到「新位置」(<code>/apps</code>)。</li>
-     <li>將「設計」中的任何CSS、JavaScript和靜態資源轉換為<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">具有<code>allowProxy = true</code>的「用戶端程式庫」。</a></li>
-     <li>透過<strong> &gt;網站&gt;自訂網站頁面&gt;頁面屬性&gt;進階標籤&gt;設計欄位</strong>，更新<code>cq:designPath</code>屬性中AEM「上一個位置」的參考。</li>
-     <li>更新參照「上一位置」的任何頁面，以使用新的「用戶端程式庫」類別（這需要更新「頁面」實作代碼）。</li>
-     <li>更新AEMDispatcher規則，允許通過<code>/etc.clientlibs/</code>代理Servlet提供客戶端庫。</li>
-    </ol> <p>對於未在SCM中管理且透過設計對話方塊修改執行時期的任何設計：</p>
+     <li>將設計從上一位置複製到新位置(<code>/apps</code>)。</li>
+     <li>將設計中的任何CSS、JavaScript和靜態資源轉換為<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">使用<code>allowProxy = true</code>的用戶端程式庫</a>。</li>
+     <li>透過<strong>AEM &gt;網站&gt;自訂網站頁面&gt;頁面屬性&gt;進階標籤&gt;設計欄位</strong>更新<code>cq:designPath</code>屬性中的上一個位置參考。</li>
+     <li>更新任何參考上一個位置的頁面，以使用新的用戶端程式庫類別（這需要更新頁面實作程式碼）。</li>
+     <li>更新AEM Dispatcher規則，以允許透過<code>/etc.clientlibs/</code>代理Servlet提供用戶端程式庫。</li>
+    </ol> <p>對於未在SCM中管理的任何設計，以及通過設計對話框修改運行時：</p>
     <ul>
      <li>請勿將可作者的設計移出<code>/etc</code>。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>建議的方法是使用可編輯範本來建立AEM Sites和頁面，這些範本使用結構內容和原則來取代設計。</td>
+   <td>建議的方法是使用可編輯的範本來建立AEM Sites和頁面，這些範本使用結構內容和原則來取代設計。</td>
   </tr>
  </tbody>
 </table>
 
-### Adobe搜索和升級整合客戶端庫{#adobe-search-and-promote-integration-client-libraries}
+### Adobe搜尋和促銷整合用戶端程式庫{#adobe-search-and-promote-integration-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><p><code>/etc/clientlibs/foundation/searchpromote</code></p> </td>
   </tr>
   <tr>
@@ -391,10 +390,10 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>對這些客戶機庫的任何自定義使用都應按類別引用客戶機庫，而不是按路徑引用。</p>
+   <td><p>這些客戶端庫的任何自定義使用都應按類別引用客戶端庫，而不是按路徑引用。</p>
     <ol>
-     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
-     <li>如果AEM不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用：</li>
+     <li>應更新先前位置上依路徑對用戶端程式庫的任何參照，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">參考架構</a>的AEM用戶端程式庫。</li>
+     <li>如果無法使用AEM用戶端程式庫參考架構，則可透過AEM用戶端程式庫代理servlet參考用戶端程式庫的絕對路徑：</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/searchpromote/clientlibs/searchpromotei.js</code></li>
@@ -402,7 +401,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>不支援編輯這些用戶端程式庫。</p> <p>要獲取「客戶端庫」類別，請通過CRXDELite訪問每個cq:ClientLibraryFolder節點並檢查類別屬性：</p>
+   <td><p>從不支援編輯這些客戶端庫。</p> <p>若要取得「用戶端程式庫」類別，請透過CRXDELite造訪每個cq:ClientLibraryFolder節點，並檢查類別屬性：</p>
     <ul>
      <li><code>/libs/cq/searchpromote/clientlibs/searchpromote</code></li>
     </ul> </td>
@@ -410,12 +409,12 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### Adobe Target整合客戶端庫{#adobe-target-integration-client-libraries}
+### Adobe Target整合用戶端程式庫{#adobe-target-integration-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><p><code>/etc/clientlibs/foundation/target</code></p> </td>
   </tr>
   <tr>
@@ -424,10 +423,10 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>對這些客戶機庫的任何自定義使用都應按類別引用客戶機庫，而不是按路徑引用。</p>
+   <td><p>這些客戶端庫的任何自定義使用都應按類別引用客戶端庫，而不是按路徑引用。</p>
     <ol>
-     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
-     <li>如果AEM不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用：</li>
+     <li>應更新先前位置上依路徑對用戶端程式庫的任何參照，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">參考架構</a>的AEM用戶端程式庫。</li>
+     <li>如果無法使用AEM用戶端程式庫參考架構，則可透過AEM用戶端程式庫代理servlet參考用戶端程式庫的絕對路徑：</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/testandtarget/clientlibs/testandtarget/testandtarget.js</code></li>
@@ -441,7 +440,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>不支援編輯這些用戶端程式庫。</p> <p>要獲取「客戶端庫」類別，請通過CRXDELite訪問每個cq:ClientLibraryFolder節點並檢查類別屬性：</p>
+   <td><p>從不支援編輯這些客戶端庫。</p> <p>若要取得「用戶端程式庫」類別，請透過CRXDELite造訪每個cq:ClientLibraryFolder節點，並檢查類別屬性：</p>
     <ul>
      <li><code>/libs/cq/testandtarget/clientlibs/testandtarget/testandtarget</code></li>
      <li><code>/libs/cq/testandtarget/clientlibs/testandtarget/atjs</code></li>
@@ -460,7 +459,7 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>上一個位置</strong></td>
+   <td><strong>上一位置</strong></td>
    <td><p><code>/etc/clientlibs/wcm/foundation</code></p> </td>
   </tr>
   <tr>
@@ -469,10 +468,10 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>對這些客戶機庫的任何自定義使用都應按類別引用客戶機庫，而不是按路徑引用。</p>
+   <td><p>這些客戶端庫的任何自定義使用都應按類別引用客戶端庫，而不是按路徑引用。</p>
     <ol>
-     <li>應更新「上一個位置」中按路徑對「客戶端庫」的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">「客戶端庫」AEM引用framework</a>。</li>
-     <li>如AEM果不能使用客戶端庫引用框架，則客戶端庫的絕對路徑可以通過客戶端庫代理ServletAEM引用。</li>
+     <li>應更新先前位置上依路徑對用戶端程式庫的任何參照，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">參考架構</a>的AEM用戶端程式庫。</li>
+     <li>如果無法使用AEM用戶端程式庫參考架構，則可透過AEM用戶端程式庫代理servlet參考用戶端程式庫的絕對路徑。</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/wcm/foundation/clientlibs/accessibility.css</code></li>
@@ -482,7 +481,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>不支援編輯這些用戶端程式庫。</p> <p>要獲取客戶端庫類別，請通過CRXDELite訪問每個<code>cq:ClientLIbraryFolder</code>節點並檢查類別屬性：</p>
+   <td><p>從不支援編輯這些客戶端庫。</p> <p>若要取得用戶端程式庫類別，請透過CRXDELite造訪每個<code>cq:ClientLIbraryFolder</code>節點，並檢查categories屬性：</p>
     <ul>
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li>
      <li><code>/libs/wcm/foundation/clientlibs/main</code></li>
@@ -490,4 +489,3 @@ ht-degree: 1%
   </tr>
  </tbody>
 </table>
-
