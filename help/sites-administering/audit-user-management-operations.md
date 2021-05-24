@@ -1,8 +1,8 @@
 ---
-title: 如何審計用戶管理操AEM作
-seo-title: 如何審計用戶管理操AEM作
-description: 瞭解如何在中審核用戶管理操作AEM。
-seo-description: 瞭解如何在中審核用戶管理操作AEM。
+title: 如何在AEM中稽核使用者管理作業
+seo-title: 如何在AEM中稽核使用者管理作業
+description: 了解如何在AEM中稽核使用者管理作業。
+seo-description: 了解如何在AEM中稽核使用者管理作業。
 uuid: 9d177afb-172c-4858-a678-254c97cfa472
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,8 +11,7 @@ content-type: reference
 discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
-feature: Operations
-translation-type: tm+mt
+feature: 運作
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '326'
@@ -20,38 +19,38 @@ ht-degree: 1%
 
 ---
 
-# 如何審核{#how-to-audit-user-management-operations-in-aem}中的AEM用戶管理操作
+# 如何審核AEM{#how-to-audit-user-management-operations-in-aem}中的用戶管理操作
 
 ## 簡介 {#introduction}
 
-已AEM引入記錄權限更改的功能，以便稍後可以對其進行審核。
+AEM已導入記錄權限變更的功能，以便稍後進行稽核。
 
-此增強功能允許對用戶的權限和組分配執行審計CRUD（建立、讀取、更新、刪除）操作。 更具體地說，它將記錄：
+此增強功能允許對用戶的權限和組分配執行審核CRUD（建立、讀取、更新、刪除）操作。 更具體來說，它將記錄：
 
 * 建立新使用者
-* 新增至群組的使用者
-* 現有使用者或群組的權限變更
+* 要新增至群組的使用者
+* 現有用戶或組的權限更改
 
-預設情況下，條目將寫入`error.log`檔案。 為了更輕鬆地進行監控，建議將監控重新導向至個別的記錄檔。 以下段落中有關如何執行此動作的詳細資訊。
+預設情況下，這些條目將寫入`error.log`檔案。 為了更方便進行監控，建議將其重新導向至單獨的日誌檔案。 有關如何執行此操作的更多資訊，請參閱以下段落。
 
 ## 將輸出重定向到單獨的日誌檔案{#redirecting-the-output-to-a-separate-log-file}
 
-若要將記錄輸出重新導向至個別的記錄檔，您將需要建立新的&#x200B;**Apache Sling Logging Logger**&#x200B;組態。 我們將使用`useraudit.log`作為下例中單獨檔案的名稱。
+若要將記錄輸出重新導向至個別的記錄檔，您需要建立新的&#x200B;**Apache Sling Logger**&#x200B;設定。 在以下範例中，我們將使用`useraudit.log`作為個別檔案的名稱。
 
 1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*，前往Web主控台
-1. 搜尋&#x200B;**Apache Sling Logging Logger Configuration**。 然後，按條目右側的&quot;+&quot;以建立新的工廠配置。
+1. 搜尋&#x200B;**Apache Sling Logging Logger Configuration**。 然後，按條目右側的「+」以建立新的工廠配置。
 1. 建立下列設定：
 
-   * **日誌級別：信** 息
-   * **日誌檔案：** logs/useraudit.log
-   * **消息模式：** 級別預設
-   * **Logger:** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizedServlet
+   * **記錄層級：** 資訊
+   * **記錄檔：** logs/useraudit.log
+   * **訊息模式：** 層級預設
+   * **記錄器：** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizabledServlet
 
-   要在&#x200B;**Logger**&#x200B;欄位中輸入兩個記錄器，您需要輸入第一個記錄器的名稱，然後按&quot;+&quot;按鈕並輸入第二個記錄器的名稱來建立另一個欄位。
+   要在&#x200B;**記錄器**&#x200B;欄位中輸入兩個記錄器，您需要輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱來建立另一個欄位。
 
 ## 輸出示例{#example-output}
 
-如果配置正確，輸出應如下所示：
+如果已正確設定，輸出應如下所示：
 
 ```xml
 19.05.2017 15:15:08.933 *INFO* [0:0:0:0:0:0:0:1 [1495196108932] POST /libs/granite/security/post/authorizables.html HTTP/1.1] com.adobe.granite.security.user.internal.servlets.AuthorizableServlet Create Group 'group1' operation initiated by User 'admin' (administrator)
@@ -85,7 +84,7 @@ ht-degree: 1%
 
 ## 傳統 UI {#classic-ui}
 
-在Classic UI中，與新增和刪除使用者相關的稽核記錄中記錄的CRUD作業資訊，會限制在受影響使用者的ID，以及變更發生的時間。
+在傳統UI中，稽核記錄中記錄的與新增和刪除使用者相關的CRUD作業資訊，僅限於受影響使用者的ID，以及變更發生的時間。
 
 例如：
 
