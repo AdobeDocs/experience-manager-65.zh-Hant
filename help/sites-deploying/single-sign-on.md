@@ -1,48 +1,47 @@
 ---
 title: 單一登入
 seo-title: 單一登入
-description: 瞭解如何為例項設定單一登入(SSO)AEM。
-seo-description: 瞭解如何為例項設定單一登入(SSO)AEM。
+description: 了解如何為AEM例項設定單一登入(SSO)。
+seo-description: 了解如何為AEM例項設定單一登入(SSO)。
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring, Security
 content-type: reference
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
 
 ---
 
-
 # 單一登入{#single-sign-on}
 
-單一登入(SSO)可讓使用者在提供驗證憑證（例如使用者名稱和密碼）一次後，存取多個系統。 單獨的系統（稱為受信驗證器）執行該驗證並提供與用戶證書的Experience Manager。 Experience Manager會檢查並強制使用者的存取權限（亦即決定允許使用者存取哪些資源）。
+單一登入(SSO)允許用戶在提供一次身份驗證憑據（如用戶名和密碼）後訪問多個系統。 單獨的系統（稱為可信驗證器）執行該驗證，並提供具有用戶憑據的Experience Manager。 Experience Manager會檢查並強制使用者的存取權限（即決定允許使用者存取的資源）。
 
-SSO驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)會處理受信任驗證程式提供的驗證結果。 SSO驗證處理程式會依此順序在下列位置中，將ssid（SSO標識符）搜索為特殊屬性的值：
+SSO身份驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)處理受信任的身份驗證器提供的身份驗證結果。 SSO身份驗證處理程式按以下順序在以下位置中搜索ssid（SSO標識符）作為特殊屬性的值：
 
 1. 請求標題
 1. Cookie
-1. 請求參數
+1. 要求參數
 
-找到值時，搜索完成，並使用此值。
+找到值後，搜尋即完成，並使用此值。
 
-配置以下兩個服務以識別儲存ssid的屬性名稱：
+配置以下兩個服務以識別儲存ssid的屬性的名稱：
 
-* 登錄模組。
+* 登入模組。
 * SSO驗證服務。
 
-您必須為兩個服務指定相同的屬性名稱。 該屬性包含在提供給`Repository.login`的`SimpleCredentials`中。 屬性的值是不相關的，忽略的，僅存在就很重要。
+您必須為兩個服務指定相同的屬性名稱。 該屬性包含在提供給`Repository.login`的`SimpleCredentials`中。 屬性的值不相關且被忽略，僅存在它是重要的，是經過驗證的。
 
 ## 配置SSO {#configuring-sso}
 
-要配置實例的AEMSSO，您需要配置[SSO驗證處理程式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
+要為AEM實例配置SSO，需要配置[SSO身份驗證處理程式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. 使用時，有AEM幾種管理此類服務配置設定的方法；如需詳細資訊和建議的實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md)。
+1. 使用AEM時，有數種方法可管理這類服務的組態設定；如需詳細資訊和建議實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md) 。
 
    例如，對於NTLM集：
 
@@ -50,32 +49,32 @@ SSO驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHa
    * **標題名稱**:  `LOGON_USER`
    * **ID格式**:  `^<DOMAIN>\\(.+)$`
 
-      其中`<*DOMAIN*>`會由您自己的網域名稱取代。
-   針對CoSign:
+      其中`<*DOMAIN*>`被您自己的域名替換。
+   CoSign:
 
    * **路徑：** 視需要；例如，  `/`
    * **標題名稱**:remote_user
-   * **ID格式：原** 樣
+   * **ID格式：** 原樣
 
    對於SiteMinder:
 
    * **路徑：** 視需要；例如，  `/`
    * **標題名稱：** SM_USER
-   * **ID格式**:現狀
+   * **ID格式**:原樣
 
 
 
-1. 確認單一登入功能是否可視需要運作；包括授權。
+1. 確認單一登入可視需要運作；包括授權。
 
 >[!CAUTION]
 >
->請確定在設定SSO時，使AEM用者無法直接存取。
+>請確定若已設定SSO，使用者無法直接存取AEM。
 >
->透過要求使用者執行您的SSO系統代理程式的Web伺服器，可確保使用者無法直接傳送標題、Cookie或參數，讓使用者受到信任AEM，因為代理程式會在從外部傳送時篩選這些資訊。
+>通過要求用戶通過運行SSO系統代理的Web伺服器，可確保任何用戶都不能直接發送標頭、Cookie或參數，以使用戶受到AEM信任，因為如果從外部發送，代理將過濾這些資訊。
 >
->任何可直接存取您AEM的例項而不需透過Web伺服器的使用者，都可透過傳送標題、Cookie或參數（如果已知名稱），以當成任何使用者。
+>任何使用者只要知道名稱，只要能直接存取您的AEM例項而不需瀏覽Web伺服器，就能透過傳送標題、Cookie或參數來擔任任何使用者。
 >
->此外，請確定標題、Cookie和請求參數名稱中，您只需設定SSO設定所需的名稱。
+>另請確定標頭、Cookie和請求參數名稱，您只需設定SSO設定所需的名稱。
 
 
 >[!NOTE]
@@ -84,18 +83,18 @@ SSO驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHa
 
 >[!NOTE]
 >
->如果您還將[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)與Microsoft Internet Information Server(IIS)一起使用，則需要在以下位置進行其他配置：
+>如果您還將[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)與Microsoft Internet Information Server(IIS)一起使用，則在以下位置將需要其他配置：
 >
 >* `disp_iis.ini`
 >* IIS
 
 >
 >
-在`disp_iis.ini`設定中：
->（有關完整詳細資訊，請參見[將Dispatcher與Microsoft Internet Information Server](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server)一起安裝）
+在`disp_iis.ini`中設定：
+>（有關完整詳細資訊，請參閱[使用Microsoft Internet Information Server](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server)安裝Dispatcher）
 >
->* `servervariables=1` （將IIS伺服器變數轉發為請求標題至遠端例項）
->* `replaceauthorization=1` (以其「Basic」等值項取代任何名為「Authorization」（授權）以外的標題)
+>* `servervariables=1` （將IIS伺服器變數作為請求標頭轉發到遠程實例）
+>* `replaceauthorization=1` （以「基本」等值項取代「授權」以外的任何標題）
 
 >
 >
@@ -104,17 +103,17 @@ SSO驗證處理程式服務(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHa
 >* 禁用&#x200B;**匿名訪問**
    >
    >
-* 啟用&#x200B;**整合Windows身份驗證**
+* 啟用&#x200B;**整合Windows驗證**
 
 >
 
 
 
-您可以使用Felix Console的&#x200B;**Authenticator**&#x200B;選項，查看哪個驗證處理常式正套用至內容樹的任何區段；例如：
+您可以使用Felix Console的&#x200B;**Authenticator**&#x200B;選項，查看哪個身份驗證處理程式正在應用於內容樹的任何部分；例如：
 
 `http://localhost:4502/system/console/slingauth`
 
-會先查詢最符合路徑的處理常式。 例如，如果您為路徑`/`配置handler-A，為路徑`/content`配置handler-B，則對`/content/mypage.html`的請求會先查詢handler-B。
+系統會先查詢最符合路徑的處理常式。 例如，如果為路徑`/`配置處理程式 — A，為路徑`/content`配置處理程式 — B，則向`/content/mypage.html`發出的請求將首先查詢處理程式 — B。
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
@@ -128,7 +127,7 @@ Host: localhost:4502
 Cookie: TestCookie=admin
 ```
 
-使用下列配置：
+使用下列設定：
 
 * **路徑**:  `/`
 
@@ -140,7 +139,7 @@ Cookie: TestCookie=admin
 
 * **ID格式**:  `AsIs`
 
-回應是：
+回應會是：
 
 ```xml
 HTTP/1.1 200 OK
@@ -161,29 +160,29 @@ Transfer-Encoding: chunked
 如果您要求：
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-或者，您可以使用下列curl命令將`TestHeader`標題傳送至`admin:`
+或者，您可以使用以下curl命令將`TestHeader`標題發送到`admin:`
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
->在瀏覽器中使用請求參數時，您只會看到部分HTML —— 不含CSS。 這是因為HTML的所有請求都是在沒有請求參數的情況下提出的。
+>在瀏覽器中使用請求參數時，您只會看到部分HTML — 沒有CSS。 這是因為來自HTML的所有請求都是在沒有請求參數的情況下提出。
 
 ## 移除AEM登出連結{#removing-aem-sign-out-links}
 
-使用SSO時，登入和登出會在外部處理，因此AEM.自己的登出連結不再適用，應該移除。
+使用SSO時，系統會從外部處理登入和登出，因此AEM.自己的登出連結不再適用，應移除。
 
-歡迎畫面上的登出連結可依照下列步驟移除。
+可使用下列步驟移除歡迎畫面上的登出連結。
 
 1. 覆蓋`/libs/cq/core/components/welcome/welcome.jsp`至`/apps/cq/core/components/welcome/welcome.jsp`
 1. 從jsp中刪除以下部件。
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
-若要移除右上角使用者個人選單中可用的登出連結，請遵循下列步驟：
+若要移除右上角使用者個人功能表中可用的登出連結，請執行下列步驟：
 
 1. 覆蓋`/libs/cq/ui/widgets/source/widgets/UserInfo.js`至`/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 
-1. 從檔案中刪除以下部件：
+1. 從檔案中刪除以下部分：
 
    ```
    menu.addMenuItem({
@@ -193,4 +192,3 @@ Transfer-Encoding: chunked
    });
    menu.addSeparator();
    ```
-
