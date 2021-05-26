@@ -53,19 +53,16 @@ ht-degree: 0%
 >
 >* [](/help/sites-administering/msm.md) MSM管理從藍圖（例如全域主版）到即時副本（例如本機網站）的翻譯內容在語言邊界內的部署。
 >* AEM的[翻譯](/help/sites-administering/translation.md)整合功能與第三方翻譯管理服務一起管理這些語言並將內容翻譯成這些不同語言。
-
 >
->
-如需更進階的使用案例，MSM也可跨語言主版使用。
+>如需更進階的使用案例，MSM也可跨語言主版使用。
 
 >[!NOTE]
 >
 >針對所有使用案例，建議閱讀下列最佳實務：
 >
 >* [MSM最佳實務](/help/sites-administering/msm-best-practices.md);特別是：
-   >
-   >   
-   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
+>
+>   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
    * [MSM與多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 * [翻譯最佳實務](/help/sites-administering/tc-bp.md)
 
