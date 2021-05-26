@@ -5,18 +5,18 @@ contentOwner: AG
 role: Business Practitioner, Administrator, Leader
 feature: 連線資產、使用者和群組
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 9e99d25a15aee56721112e2afd4b570ba7854bd7
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2742'
 ht-degree: 29%
 
 ---
 
 # 使用「連線資產」在 中共用 DAM 資產 [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-大型企業中，建立網站所需的基礎架構可能很分散。有時候，建立這些網站的網站建立功能和數位資產可能會存放在不同的部署中。原因之一，可能是現有部署在地理上分散，因而需要搭配使用。 另一個原因可能是收購導致基礎架構迥異，母公司希望能夠共同使用。
+大型企業中，建立網站所需的基礎架構可能很分散。有時候，建立這些網站的網站建立功能和數位資產可能會存放在不同的部署中。原因之一，是現有部署分散，需要搭配使用。 另一個原因可能是收購導致基礎架構的差異，包括母公司希望一起使用的不同[!DNL Experience Manager]版本。
 
-用戶可以在[!DNL Experience Manager Sites]中建立網頁。 [!DNL Experience Manager Assets] 是數位資產管理(DAM)系統，可為網站提供所需資產。[!DNL Experience Manager] 現在透過整合和支援上述使 [!DNL Sites] 用案 [!DNL Assets]例。
+「連線資產」功能整合[!DNL Experience Manager Sites]和[!DNL Experience Manager Assets]，可支援上述使用案例。 使用者可以在[!DNL Sites]中建立網頁，使用個別[!DNL Assets]部署中的數位資產。
 
 ## 連線資產概觀 {#overview-of-connected-assets}
 
@@ -188,8 +188,8 @@ ht-degree: 29%
 * 本機資產不會與遠端部署上的原始資產同步。對 DAM 部署所做的任何編輯、刪除或撤銷權限操作都不會傳播到下游。
 * 本機資產為唯讀副本。[!DNL Experience Manager] 元件會對資產執行非破壞性的編輯作業。不允許執行其他編輯作業。
 * 本機擷取的資產僅適用於編寫用途。無法套用資產更新工作流程，也無法編輯中繼資料。
-* 僅支援影像和列出的文件格式。[!DNL Dynamic Media] 不支援資產、內容片段和體驗片段。
-* [!DNL Experience Manager] 不會擷取中繼資料結構。這表示所有擷取的中繼資料都可能無法顯示。 如果單獨更新架構，則會顯示所有屬性。
+* 僅支援影像和列出的文件格式。[!DNL Dynamic Media] 不支 [!DNL Content Fragments]援資 [!DNL Experience Fragments] 產、和。
+* [!DNL Experience Manager] 不會擷取中繼資料結構。這表示所有擷取的中繼資料都可能無法顯示。 如果在[!DNL Sites]部署上單獨更新架構，則會顯示所有元資料屬性。
 * 所有[!DNL Sites]作者都對擷取的復本擁有讀取權限，即使作者無法存取遠端DAM部署亦然。
 * 不提供 API 以支援自訂整合。
 * 此功能可支援順暢的搜尋作業及使用遠端資產。若要在本機部署中一次提供多個遠端資產，不妨考慮移轉資產。請參閱[資產移轉指南](assets-migration-guide.md)。
@@ -199,8 +199,8 @@ ht-degree: 29%
 
 * [!DNL Assets] 支援在 [!DNL Adobe Managed Services] 上部署。
 * [!DNL Sites] 一次可連線至 [!DNL Assets] 單一存放庫。
-* [!DNL Assets]的許可證，作為遠程儲存庫使用。
-* [!DNL Sites]的一個或多個許可證用作本地編寫部署。
+* 需要[!DNL Assets]的許可證才能作為遠程儲存庫使用。
+* 需要[!DNL Sites]的一個或多個許可證作為本地編寫部署。
 
 ### 使用狀況 {#usage}
 
