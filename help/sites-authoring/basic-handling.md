@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 440aa5a2f4a020a16104f11eaf484a2cf7291e1f
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2980'
 ht-degree: 5%
 
 ---
@@ -68,7 +68,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 您可以按一下或點選&#x200B;**Close**&#x200B;以關閉全域導覽面板，以返回您的上一個位置。
 
-![bh-03](assets/bh-03.png)
+![bh-05](assets/bh-03.png)
 
 >[!NOTE]
 >
@@ -287,7 +287,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 由於某些視窗的空間限制，工具列可能會很快變得比可用的空間長。發生此情況時，會出現其他選項。按一下或點選省略號(三個點或…… ****)會開啟一個下拉式選取器，其中包含所有剩餘的動作。例如，在Sites主控台中選取頁面 **後** :
 
-![bh-12](assets/bh-12.png)
+![動作工具列](assets/bh-12.png)
 
 >[!NOTE]
 可用的個別圖示會記錄在適當的主控台/功能/情境中。
