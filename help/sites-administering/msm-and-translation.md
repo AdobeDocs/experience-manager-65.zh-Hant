@@ -63,6 +63,6 @@ ht-degree: 0%
 >* [MSM最佳實務](/help/sites-administering/msm-best-practices.md);特別是：
 >
 >   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
-   * [MSM與多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
-* [翻譯最佳實務](/help/sites-administering/tc-bp.md)
+>   * [MSM與多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>* [翻譯最佳實務](/help/sites-administering/tc-bp.md)
 
