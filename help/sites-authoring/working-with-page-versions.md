@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4d5f7057178ea0a1f00ea363b76dacdfb714b5e3
 workflow-type: tm+mt
-source-wordcount: '1094'
-ht-degree: 6%
+source-wordcount: '1487'
+ht-degree: 5%
 
 ---
 
@@ -64,36 +64,105 @@ ht-degree: 6%
 
    將開啟時間軸，其中會更新指示新版本的資訊。
 
-## 回復為頁面版本{#reverting-to-a-page-version}
+## 恢復版本{#reinstating-versions}
 
-建立版本後，您就可以視需要回復該版本。
+建立頁面版本後，有多種方法可重新安裝舊版：
+
+* **從[時間軸](/help/sites-authoring/basic-handling.md#timeline)邊欄還原為此版本**&#x200B;選項
+
+   恢復所選頁面的先前版本。
+
+* **從頂部[操作工具欄](/help/sites-authoring/basic-handling.md#actions-toolbar)還原**&#x200B;選項
+
+   * **還原版本**
+
+      恢復當前所選資料夾中指定頁面的版本；這也可以包括還原先前已刪除的頁面。
+
+   * **還原樹狀結構**
+
+      在指定的日期和時間恢復整個樹的版本；這可能包括先前已刪除的頁面。
 
 >[!NOTE]
 >
->還原頁面時，所建立的版本將成為新分支的一部分。
+>恢復頁面時，建立的版本將是新分支的一部分。
 >
 >以說明：
 >
 >1. 建立任何頁面的版本。
 >1. 初始標籤和版本節點名稱將為1.0、1.1、1.2等。
->1. 還原第一個版本；即1.0。
+>1. 恢復第一個版本；即1.0。
 >1. 再次建立新版本。
 >1. 產生的標籤和節點名稱現在會是1.0.0、1.0.1、1.0.2等。
 
->
 
+### 回復到{#revert-to-a-version}版本
 
-
-要回復到以前的版本：
+要還原&#x200B;**將所選頁面還原為上一個版本：**
 
 1. 導覽以顯示您要回復為舊版的頁面。
 1. 在[選擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中選擇頁面。
 1. 開啟「時 **間軸** 」欄，然後選 **取「全部顯示** 」 **或「版本**」。將列出所選頁面的頁面版本。
 1. 選擇要恢復的版本。 可能的選項將顯示：
 
-   ![screen-shot_2019-03-05at112505](assets/screen-shot_2019-03-05at112505.png)
+   ![還原為此版本](assets/screen-shot_2019-03-05at112505.png)
 
 1. 選擇&#x200B;**還原為此版本**。 將還原所選版本，並更新時間軸中的資訊。
+
+### 還原版本 {#restore-version}
+
+此方法可用來還原目前資料夾中指定頁面的版本；這也可以包括還原先前已刪除的頁面：
+
+1. 導覽至所需資料夾，然後選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。[
+
+1. 從頂部[操作工具欄](/help/sites-authoring/basic-handling.md#actions-toolbar)中選擇&#x200B;**還原**，然後選擇&#x200B;**還原版本**。
+
+   >[!NOTE]
+   >
+   >若：
+   >
+   >* 您選擇了單個頁面，該頁面從未有子頁面，
+   >* 或資料夾中沒有任何頁面有版本，
+
+   >
+   >然後顯示會是空的，因為沒有適用的版本。
+
+1. 將列出可用版本：
+
+   ![還原版本 — 資料夾中所有頁的清單](/help/sites-authoring/assets/versions-restore-version-01.png)
+
+1. 對於特定頁面，請使用&#x200B;**RESTORE TO VERSION**&#x200B;下拉式選取器，選取該頁面所需的版本。
+
+   ![還原版本 — 選擇版本](/help/sites-authoring/assets/versions-restore-version-02.png)
+
+1. 在主顯示畫面中，選取要還原的必要頁面：
+
+   ![還原版本 — 選擇頁](/help/sites-authoring/assets/versions-restore-version-03.png)
+
+1. 選擇&#x200B;**還原**&#x200B;以將選定頁面的選定版本還原為當前版本。
+
+>[!NOTE]
+>
+>選擇所需頁面和相關版本的順序是可互換的。
+
+### 還原樹狀結構 {#restore-tree}
+
+此方法可用於在指定日期和時間還原樹的版本；其中可能包括先前已刪除的頁面：
+
+1. 導覽至所需資料夾，然後選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。[
+
+1. 從頂部[操作工具欄](/help/sites-authoring/basic-handling.md#actions-toolbar)中選擇&#x200B;**還原**，然後選擇&#x200B;**還原樹**。 將顯示樹的最新版本：
+
+   ![還原樹狀結構](/help/sites-authoring/assets/versions-restore-tree-02.png)
+
+1. 使用&#x200B;**日期的最新版本的日期和時間選擇器，選擇樹的其他版本 — 要還原的版本。**
+
+1. 視需要設定標幟&#x200B;**保留的非版本化頁面**:
+
+   * 如果處於活動狀態（已選取），則任何非版本控制頁面都將受到維護，且不會受到還原的影響。
+
+   * 如果非活動（未選中），則任何非版本化頁面都將被移除，因為這些頁面在版本化樹中不存在。
+
+1. 選擇&#x200B;**Restore**&#x200B;以將要還原為&#x200B;*當前*&#x200B;版本的樹的選定版本。
 
 ## 預覽版本{#previewing-a-version}
 
