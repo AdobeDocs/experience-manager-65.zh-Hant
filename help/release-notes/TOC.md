@@ -7,7 +7,7 @@ breadcrumb-title: 發行說明
 user-guide-description: 在發行說明中了解AEM 6.5的最新新功能。
 feature: 發行資訊
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: dafc10e6e73967566ec8bff8ac0e4c39bc7cd885
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 20%
@@ -21,7 +21,7 @@ ht-degree: 20%
 + [一般發行說明](release-notes.md)
 + Service Pack發行說明{#service-pack}
    + [新增功能](new-features-latest-service-pack.md)
-   + [Service Pack 8發行說明](sp-release-notes.md)
+   + [Service Pack 9發行說明](sp-release-notes.md)
    + [舊版Service Pack發行說明](previous-hotfixes-featurepacks.md)
 + [AEM Sites發行說明](sites.md)
 + [AEM Assets發行說明](assets.md)
