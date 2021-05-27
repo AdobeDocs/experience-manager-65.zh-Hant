@@ -11,9 +11,9 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 97182f9a7b5fa5f96106fed59eeecf866c6d34ff
+source-git-commit: 4a4ecd1304a1eed0916c3f1a51558397fa4dbc47
 workflow-type: tm+mt
-source-wordcount: '3205'
+source-wordcount: '3251'
 ht-degree: 0%
 
 ---
@@ -103,8 +103,12 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
    <td>支援層級</td>
   </tr>
   <tr>
-   <td>OracleJava SE 12 JDK [1]</td>
-   <td>Z:不支援 </td>
+   <td><strong>Azul Zulu OpenJDK 11 - 64位[3]</strong></td>
+   <td>答：支援</td>
+  </tr>
+  <tr>
+   <td>Azul Zulu OpenJDK 8 - 64位[3]</td>
+   <td>答：支援</td>
   </tr>
   <tr>
    <td><strong>OracleJava SE 11 JDK - 64位</strong></td>
@@ -136,7 +140,8 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
 1. Oracle已改用OracleJava SE產品的「長期支援」(LTS)模型。 Java 9、Java 10和Java 12是按Oracle列出的非LTS版本(請參閱[OracleJava SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 若要在生產環境中部署AEM,Adobe僅支援LTS版的Java。
 
 1. IBM JRE僅與WebSphere Application Server一起受支援。
-1. 所有使用OracleJava SE技術的AEM客戶，將直接透過Adobe支援OracleJava SE JDK的支援和發佈，包括公開更新結尾以外的所有LTS版本的維護更新。 如需詳細資訊，請參閱Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf)的[OracleJava支援。
+1. 在2022年12月之前，所有使用OracleJava SE技術的AEM客戶，將直接Adobe，以支援和分發OracleJava SE JDK，包括公共更新結尾以外的所有LTS版本的維護更新。 ****&#x200B;如需詳細資訊，請參閱Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf)的[OracleJava支援。
+1. OpenJDK的Azul Zulu組建的支援和分發，包括LTS版本的所有維護更新，將由Adobe直接支援所有使用OpenJDK的Azul Zulu組建的AEM客戶，從AEM 6.5 SP9開始。
 
 ### 儲存和持久性{#storage-persistence}
 
