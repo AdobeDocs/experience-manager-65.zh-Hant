@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 資產管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: a7f8e98729dd27f6976d3289a51f22435fced585
 workflow-type: tm+mt
-source-wordcount: '9796'
+source-wordcount: '9775'
 ht-degree: 3%
 
 ---
@@ -811,10 +811,6 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
    ![從「打印」(Print)對話框中選擇要在PDF上顯示的注釋/審閱狀態的位置](assets/Print-annotation-dialog.png)
 
    您可以根據要在打印的PDF中顯示注釋/狀態的位置選擇其他設定。如果您希望註解/狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
-
-   >[!NOTE]
-   >
-   >長注釋可能無法在PDF檔案中正確顯示。 為獲得最佳的轉譯效果，Adobe建議您將註解限制為50個字。
 
 1. 按一下&#x200B;**[!UICONTROL 打印]**。 根據您在步驟2中選擇的選項，產生的PDF會在指定位置顯示註解/狀態。例如，如果您選擇使用左上角設定打印注釋和審閱狀態 **** ，則生成的輸出類似於此處所示的PDF檔案。
 
