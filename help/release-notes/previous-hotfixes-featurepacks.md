@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager] 6.5先前的Service Pack發行說明'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 8c69687ef4fbc2e4ee729d98232fe56db9b1df5a
+source-git-commit: d06e60baac692c92358244944226b77d5dad4022
 workflow-type: tm+mt
 source-wordcount: '20321'
 ht-degree: 5%
@@ -1107,7 +1107,7 @@ Adobe Experience Manager 6.5.5.0為重要更新，包含自2019年4月&#x200B;**
 
 * 在中繼資料結構中使用階層式快顯視窗時，選取並儲存包含縮寫符號的下拉式選項時（從子下拉式清單中），重新開啟資產[!UICONTROL 屬性]後，選取的縮寫符號選項會消失(NPR-32649)。
 
-* [!UICONTROL 如果Asset Insights同] 步工作遇到無效項目（在Analytics端），而非移至下一個項目，則會停止並失敗(NPR-32674)。
+* [!UICONTROL 如果Assets Insights同] 步工作遇到無效項目（在Analytics端），而非移至下一個項目，則會停止並失敗(NPR-32674)。
 
 * 陀螺儀無法運作，因為全景檢視器中的行動瀏覽器預設會停用運動感測器(CQ-4272937)。
 
