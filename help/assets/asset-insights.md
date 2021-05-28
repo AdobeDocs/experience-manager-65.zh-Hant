@@ -5,9 +5,9 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 資產分析，資產報表
 exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '760'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 
 對於[!DNL Assets]用於從網站擷取影像使用量統計資料的前瞻分析，您必須在網站代碼中包含影像的內嵌代碼。
 
-若要讓Assets Insights顯示資產的使用量統計資料，請先設定從Adobe Analytics擷取報表資料的功能。 如需詳細資訊，請參閱[設定Assets Insights](/help/assets/configure-asset-insights.md)。 若要使用此功能，請分別購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]上的客戶會收到與[!DNL Experience Manager]捆綁的[!DNL Analytics]許可證。 請參閱[Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
+若要讓Assets Insights顯示資產的使用量統計資料，請先設定從Adobe Analytics擷取報表資料的功能。 如需詳細資訊，請參閱[設定Assets Insights](/help/assets/configure-asset-insights.md)。 若要在內部部署安裝中使用此功能，請分別購買[!DNL Adobe Analytics]授權。 [!DNL Managed Services]上的客戶會收到與[!DNL Experience Manager]捆綁的[!DNL Analytics]許可證。 請參閱[Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >
