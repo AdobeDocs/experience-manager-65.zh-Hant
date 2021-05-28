@@ -13,7 +13,7 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: 升級
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 4%
@@ -53,7 +53,7 @@ ht-degree: 4%
 
 AEM 6.0推出新的Jackrabbit Oak存放庫。 持久性管理器被[微內核](/help/sites-deploying/platform.md#contentbody_title_4)替換。 自6.1版開始，不再支援CRX2。 需要執行名為crx2oak的移轉工具，才能從5.6.1例項移轉CRX2存放庫。 如需詳細資訊，請參閱[使用CRX2OAK移轉工具](/help/sites-deploying/using-crx2oak.md)。
 
-如果要使用Asset Insights ，而您要從AEM 6.2以前的版本升級，則必須移轉資產，並透過JMX Bean產生ID。 在我們的內部測試中，TarMK環境上的125,000個資產會在一小時內移轉，但您的結果可能會有所不同。
+如果要使用Assets Insights ，而您要從AEM 6.2以前的版本進行升級，則必須移轉資產，並透過JMX Bean產生ID。 在我們的內部測試中，TarMK環境上的125,000個資產會在一小時內移轉，但您的結果可能會有所不同。
 
 6.3導入了`SegmentNodeStore`的新格式，這是TarMK實施的基礎。 如果您從AEM 6.3以前的版本升級，則升級過程中需要進行存放庫移轉，涉及系統停機。
 
