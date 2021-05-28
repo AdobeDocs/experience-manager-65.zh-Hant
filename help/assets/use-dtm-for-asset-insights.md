@@ -1,11 +1,11 @@
 ---
-title: 透過DTM啟用資產深入分析
-description: 了解如何使用AdobeDynamic Tag Management(DTM)來啟用Asset Insights。
+title: 透過DTM啟用Assets Insights
+description: 了解如何使用AdobeDynamic Tag Management(DTM)來啟用Assets Insights。
 contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 資產分析，資產報表
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # 透過DTM啟用資產分析{#enable-asset-insights-through-dtm}
 
-Adobe動態標籤管理是啟用數位行銷工具的工具。 此服務免費提供給Adobe Analytics客戶。 您可以自訂追蹤代碼，讓協力廠商CMS解決方案能使用Asset Insights，或使用DTM插入Asset Insights標籤。 僅支援並提供影像見解。
+Adobe動態標籤管理是啟用數位行銷工具的工具。 此服務免費提供給Adobe Analytics客戶。 您可以自訂追蹤代碼，讓協力廠商CMS解決方案能使用Assets Insights，或使用DTM插入Assets Insights標籤。 僅支援並提供影像見解。
 
 >[!CAUTION]
 >
->AdobeDTM已過時，改用[!DNL Adobe Experience Platform Launch]，很快將到達[生命週期結束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[使用 [!DNL Launch] 進行資產前瞻分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
+>AdobeDTM已過時，改用[!DNL Adobe Experience Platform Launch]，很快將到達[生命週期結束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[對於資產前瞻分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)使用 [!DNL Launch] 。
 
-執行這些步驟以透過DTM啟用Asset Insights。
+執行這些步驟以透過DTM啟用Assets Insights。
 
 1. 按一下Experience Manager標誌，然後前往&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 前瞻分析設定]**。
 1. [使用DTMExperience Manager配置Cloud Service](/help/sites-administering/dtm.md)
 
-   一旦您登入[https://dtm.adobe.com](https://dtm.adobe.com/)，並造訪使用者設定檔中的&#x200B;**[!UICONTROL 帳戶設定]**,API代號就應該可供使用。 從資產前瞻分析的角度來看，不需要執行此步驟，因為Experience Manager網站與資產前瞻分析的整合仍在進行中。
+   一旦您登入[https://dtm.adobe.com](https://dtm.adobe.com/)，並造訪使用者設定檔中的&#x200B;**[!UICONTROL 帳戶設定]**,API代號就應該可供使用。 從資產分析的角度來看，此步驟並非必要步驟，因為Experience Manager網站與資產分析的整合仍在進行中。
 
 1. 登入[https://dtm.adobe.com](https://dtm.adobe.com/)，並視情況選取公司。
 1. 建立或開啟現有Web屬性
@@ -51,7 +51,7 @@ Adobe動態標籤管理是啟用數位行銷工具的工具。 此服務免費�
    >
    >* `AppMeasurement.js` 已移除。預期可透過DTM的Adobe Analytics工具取得。
    >* 已移除對`assetAnalytics.dispatcher.init()`的呼叫。 當DTM的Adobe Analytics工具完成載入時，即應呼叫函式。
-   >* 根據Experience Manager、CDN等資產分析頁面追蹤器的托管位置，指令碼來源的來源可能需要變更。
+   >* 視Assets Insights頁面追蹤器的托管位置(例如Experience Manager、CDN等)而定，指令碼來源的來源可能需要變更。
    >* 對於Experience Manager托管的頁面追蹤器，來源應使用Dispatcher例項的主機名稱指向發佈例項。
 
 
