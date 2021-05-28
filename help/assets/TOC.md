@@ -6,7 +6,7 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 40%
@@ -149,7 +149,7 @@ ht-degree: 40%
    + [準備翻譯資產](preparing-assets-for-translation.md)
    + [從Experience Manager下載資產](download-assets-from-aem.md)
    + [Lightbox](light-box.md)
-   + [資產分析](asset-insights.md)
+   + [Assets分析](asset-insights.md)
    + [透過DTM啟用資產分析](use-dtm-for-asset-insights.md)
    + [設定資產分析](configure-asset-insights.md)
    + [簽入和簽出資產](check-out-and-submit-assets.md)
