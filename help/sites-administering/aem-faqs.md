@@ -8,9 +8,9 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
@@ -93,17 +93,9 @@ Adobe Experience Manager(AEM)6.4隨SSL精靈提供，並提供使用者介面以
 
 如果使用者上傳影片檔案在資產節點下沒有刪除權限，則刪除區塊節點會失敗，上傳會重新啟動。
 
-#### 一次可以透過AEM 6.4運作的數位資產數量上限為何？{#what-is-the-maximum-number-of-digital-assets-that-can-be-operated-with-aem-at-a-time}
-
-Adobe Experience Manager(AEM)6.5目前可讓您一次上傳最多2 GB的資產。
-
-如需可透過AEM 6.5運作之資產數量上限的詳細資訊，請參閱[資產規模調整指南](/help/assets/assets-sizing-guide.md)。
-
 #### 建立語言副本時，OOTB設定的預設設定為何？{#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-透過傳統UI建立語言復本時，資產不會移至新語言階層下，而會從語言主版使用。
-
-然而，當您透過觸控式UI（**References** -> **更新語言副本**）建立語言副本時，會在新語言下建立新的DAM資料夾，並從中參照資產。
+透過觸控式UI（**References** -> **更新語言副本**）建立語言副本時，會在新語言下建立新的DAM資料夾，並從中參照資產。
 
 這是OOTB配置的預設設定。 您可以在翻譯設定中設定&#x200B;**翻譯頁面資產** = **不翻譯**。
 對於AEM 6.4,**工具** > **Cloud Services** > **翻譯雲端服務**。
@@ -115,10 +107,6 @@ Adobe Experience Manager(AEM)6.5目前可讓您一次上傳最多2 GB的資產�
 作為因應措施，您也可以在每次AEM重新啟動後，透過UI或`curl`命令（以下範例）手動停用元件。
 
 `curl -u admin:$(pass CQ_Admin) 'https://localhost:4502/system/console/components/com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporter' --data 'action=disable'`
-
-#### 如何使用AEM 6.5例項設定Asset Insights?{#how-to-configure-asset-insights-with-aem-instance}
-
-若要針對透過Adobe啟用(DTM)部署的Experience Manager設定和設定資產前瞻分析，請參閱如何使用AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)設定資產前瞻分析。[
 
 #### 如何自訂管理控制台？{#how-to-customize-admin-consoles}
 
@@ -136,20 +124,8 @@ Granite UI Foundation的一組新Sling元件已針對Coral3建立，位於[/libs
 
 簡單搜尋實作是2017年Summit lab AEM Search Demystified的資料。
 
-#### AEM Assets和AEM MediaLibrary有何不同？{#what-is-the-difference-between-aem-assets-and-aem-medialibrary}
-
-AEM Assets是AEM Platform上的應用程式，可讓客戶在網頁型存放庫中管理其數位資產（影像、影片、檔案和音訊剪輯），而AEM Media Library是AEM WCM內容存放庫的指定部分，存放影像和其他共用資源。
-
-如需詳細資訊，請參閱[AEM Assets與AEM MediaLibrary](/help/assets/medialibrary.md) 。
-
 #### 是否可以為WordPress建立外掛程式，讓客戶存取Adobe資產選擇器以選取影像？{#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
 
 是的，使用WordPress的Adobe可以使用AEM Assets資產選擇器從其伺服器中選擇影像，以將其添加到其WordPress網站上的帖子。
 
 如需詳細資訊，請參閱[資產選取器](../assets/search-assets.md#assetpicker) 。
-
-#### 是否可擴充AEM Assets中的搜尋Facet，以新增其他述詞？{#is-it-possible-to-extend-the-search-facets-in-aem-assets-to-add-additional-predicates}
-
-Adobe Experience Manager(AEM)Assets在整個企業範圍內部署，能儲存許多資產。 您可以將述詞新增至預設表單，或使用包含您所選擇之刻面的自訂表單。
-
-請參閱[搜尋Facet](/help/assets/search-facets.md)以深入了解。
