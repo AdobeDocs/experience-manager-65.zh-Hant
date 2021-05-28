@@ -1,24 +1,24 @@
 ---
-title: 使用Asset Insights示範套件
+title: 使用Assets Insights示範套件
 description: 使用示範套件啟用Adobe資產深入分析，以從中擷取資料，並為網頁產生分析。
 contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 資產分析，資產報表
 exl-id: 13947513-da76-43e1-ae01-abd24a59752a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 2%
 
 ---
 
-# 使用Asset Insights {#using-demo-package-for-asset-insights}示範套件
+# 使用Assets Insights {#using-demo-package-for-asset-insights}示範套件
 
-使用示範套件，您可以啟用Adobe資產深入分析，從中擷取資料，並為範例網頁產生深入分析。
+使用示範套件，您可以啟用Adobe資產分析來從範例網頁擷取資料，並產生深入分析。
 
 ## [!DNL Use Experience Manager Assets] 含範例網頁的深入分析   {#using-aem-assets-insights-with-sample-web-page}
 
-1. 使用[設定資產前瞻分析](configure-asset-insights.md)中的指示設定資產前瞻分析。
+1. 使用[設定Assets Insights](configure-asset-insights.md)中的指示設定Assets Insights 。
 1. 請從下方下載範例Assets套件，並從CRXDE套件管理器安裝套件。
 
 [取得檔案](assets/insightsdemo.zip)
