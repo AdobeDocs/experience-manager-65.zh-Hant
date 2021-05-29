@@ -11,9 +11,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: 元件，發佈
-source-git-commit: 00fc290d91de3c194ada837a931f1d86a5557939
+source-git-commit: 8199702fe778f11cc2a953979a4ccfdcef3f1154
 workflow-type: tm+mt
-source-wordcount: '3108'
+source-wordcount: '3210'
 ht-degree: 5%
 
 ---
@@ -170,16 +170,16 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、回轉集和�
 
    您可以點選元件中的&#x200B;**[!UICONTROL Edit]**&#x200B;以編輯下列進階設定。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 * **[!UICONTROL Optimize for higher resolution devices]** - Select (default) the checkbox to allow DPR (Device Pixel Ratio) optimization.
+* **[!UICONTROL 針對高解析度裝置最佳化]**  — 選取（預設）核取方塊，以允許最佳化DPR（裝置像素比率）。
 
-  See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
+   **[!UICONTROL 僅當以下情況為真時，才會顯示]**&#x200B;為高解析度設備優化選項：
+   * 在「預設類型」下，選擇&#x200B;**[!UICONTROL 影像預設集]**，並從&#x200B;**[!UICONTROL 影像預設集]**&#x200B;下拉清單中選擇&#x200B;**[!UICONTROL RESS_IP]**。
 
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored.
+   ![影像預設集中的裝置像素比率設定](/help/assets/assets-dm/dpr-ress-ip.png)
 
-  The **[!UICONTROL Optimize for higher resolution devices]** option is only shown when the following is true:
-  * Under Preset Type, **[!UICONTROL Image Preset]** is selected, and **[!UICONTROL RESS_IP]** is selected from the **[!UICONTROL Image Preset]** drop-down list.
+<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
 
-  ![device pixel ratio setting for image preset](/help/assets/assets-dm/dpr-ress-ip.png) -->
+  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL 標題]**  — 變更影像的標題。
 
@@ -247,17 +247,17 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、回轉集和�
 
 * **[!UICONTROL 啟用外觀比例比對]**  — 若要讓Dynamic Media挑選外觀比例最符合原始影像外觀比例的智慧型裁切輸出，請選取此選項。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 * **[!UICONTROL Optimize for higher resolution devices]** - Select (default) the checkbox to allow DPR (Device Pixel Ratio) optimization. 
+* **[!UICONTROL 針對高解析度裝置最佳化]**  — 選取（預設）核取方塊，以允許最佳化DPR（裝置像素比率）。
 
-  See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
+   **[!UICONTROL 僅當以下情況為真時，才會顯示]**&#x200B;為高解析度設備優化選項：
 
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored.
+   * 在「預設類型」下，選擇了「智慧型裁切」]**選項。**[!UICONTROL 
 
-  The **[!UICONTROL Optimize for higher resolution devices]** option is only shown when the following is true:
+   ![智慧作物的裝置像素比例設定](/help/assets/assets-dm/dpr-smartcrop.png)
 
-  * Under Preset Type, **[!UICONTROL Smart Crop]** option is selected.
+<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
 
-  ![device pixel ratio setting for smart crop](/help/assets/assets-dm/dpr-smartcrop.png) -->
+  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL 標題]**  — 變更智慧型裁切影像的標題。
 
