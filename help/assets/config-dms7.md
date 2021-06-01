@@ -9,9 +9,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 485464350f391fca327207b78b165897fdacc2d3
 workflow-type: tm+mt
-source-wordcount: '6154'
+source-wordcount: '6156'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 5%
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >下列功能清單需要您使用隨附於Adobe Experience Manager - Dynamic Media的現成可用CDN。 這些功能不支援任何其他自訂CDN。
 >
@@ -48,8 +48,8 @@ ht-degree: 5%
 
 [動態](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) 媒體預設為停用。若要運用Dynamic Media功能，您必須啟用此功能。
 
->[!NOTE]
-Dynamic Media - Scene7模式僅適用於Experience Manager製作例項。 因此，您必須在「Experience Manager製作」例項上設定`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager發佈例項。*
+>[!WARNING]
+Dynamic Media - Scene7模式僅適用於&#x200B;*Experience Manager製作例項*。 因此，您必須在「Experience Manager製作」例項上設定`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager發佈例項。*
 
 若要啟用Dynamic Media，您必須在終端視窗中輸入以下內容，從命令列使用`dynamicmedia_scene7`執行模式啟動Experience Manager（使用的範例埠為4502）:
 
@@ -86,9 +86,9 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 ![dynamicmediaconfiguration_updated](assets/dynamicmediaconfiguration2updated.png)
 
-**在Dynamic Media中建立Cloud Services**
+**若要在Cloud Services中建立Dynamic Media設定：**
 
-1. 在「Experience Manager」中，點選Experience Manager標誌以存取全域導覽主控台，並點選「工具」圖示，然後點選「**[!UICONTROL Cloud Services>Dynamic Media設定」]**。
+1. 在「Experience Manager作者」模式中，點選Experience Manager標誌以存取全域導覽主控台，並點選「工具」圖示，然後點選「**[!UICONTROL Cloud Services>Dynamic Media設定]**」。
 1. 在「動態媒體設定瀏覽器」頁面的左側窗格中，點選 **[!UICONTROL global]** (不點選或選取全域左側的資料夾圖示 ****)，然後點選「 **[!UICONTROL 建立]**」。
 1. 在&#x200B;**[!UICONTROL 建立Dynamic Media設定]**&#x200B;頁面上，輸入標題、Dynamic Media帳戶電子郵件地址、密碼，然後選取您的地區。 此資訊是透過布建電子郵件中的Adobe提供給您的。 如果您未收到電子郵件，請聯絡Adobe客戶服務。
 
