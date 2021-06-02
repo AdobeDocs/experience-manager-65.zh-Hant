@@ -8,27 +8,27 @@ discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 role: Business Practitioner, Administrator
 exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
 feature: 設定
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
 # 設定Dynamic Media {#setting-up-dynamic-media}
 
-[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media可協助您依需求提供豐富的視覺化銷售和行銷資產，並自動調整規模以供網頁、行動裝置和社交網站使用，借此管理資產。Dynamic Media使用一組主要來源資產，透過其全球、可擴充、效能最佳化的網路，即時產生並提供多種豐富內容變異。
+[Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Media可協助您依需求提供豐富的視覺化銷售和行銷資產，並自動調整規模以供網頁、行動裝置和社交網站使用，借此管理資產。Dynamic Media使用一組主要來源資產，透過其全球、可擴充、效能最佳化的網路，即時產生並提供多種豐富內容變異。
 
 >[!NOTE]
 >
->本檔案說明可直接整合至AEM的Dynamic Media功能。 如果您使用整合至AEM的Dynamic Media Classic，請參閱[Dynamic Media Classic整合檔案](/help/sites-administering/scene7.md)。
+>本檔案說明可直接整合至Dynamic Media的Adobe Experience Manager功能。 如果您使用整合至Experience Manager的Dynamic Media Classic，請參閱[Dynamic Media Classic整合檔案](/help/sites-administering/scene7.md)。
 >
->若您想要與Dynamic Media Classic及Dynamic Media整合使用AEM，請參閱[雙重使用案例](/help/sites-administering/scene7.md#dual-use-scenario)。
+>若要使用與Dynamic Media Classic及Dynamic Media整合的Experience Manager，請參閱[雙重使用案例](/help/sites-administering/scene7.md#dual-use-scenario)。
 
 如果您是管理Dynamic Media，請注意下列主題：
 
 * [設定Dynamic Media-Scene7模式](config-dms7.md)  — 如果您是新的Dynamic Media客戶，請使用此設定。
-* [設定Dynamic Media — 混合模式](config-dynamic.md)  — 如果您是現有Dynamic Media客戶升級AEM，請使用此設定。
+* [設定Dynamic Media — 混合模式](config-dynamic.md)  — 如果您是現有Dynamic Media客戶升級Experience Manager，請使用此設定。
 * [管理影像預設集](managing-image-presets.md)
 * [管理檢視器預設集](managing-viewer-presets.md)
 * [疑難排解Dynamic Media - Scene7模式](troubleshoot-dms7.md)
@@ -42,5 +42,5 @@ ht-degree: 0%
 >
 >**如果您要升級：**
 >
->* 在您啟動並執行AEM後，您上傳的任何資產都會自動啟用Dynamic Media（除非系統管理員明確停用）。 如果您位在AEM的升級執行個體且是新進的Dynamic Media，則可能需要重新處理資產，使其啟用Dynamic Media。
+>* 在您啟動並執行Experience Manager後，您上傳的任何資產都會自動啟用Dynamic Media（除非系統管理員明確停用）。 如果您位在升級的Experience Manager例項中，且剛進入Dynamic Media，您必須重新處理資產，使其啟用Dynamic Media。
 
