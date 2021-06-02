@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: e33a4f197c0deb2457237aac1c1e31093c89adef
+source-git-commit: 68928e251203f67faef498dc22f6d57ea141e748
 workflow-type: tm+mt
-source-wordcount: '3381'
+source-wordcount: '3389'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ ht-degree: 2%
 >從AEM Service Pack 9開始，[!DNL Experience Manager]客戶可以使用[!DNL Azul Zulu]組建的OpenJDK（與Java SE相容的標準）來開發和運行其[!DNL Experience Manager]應用程式。
 >[!DNL Experience Manager]客戶也可Adobe[!DNL Azul Zulu] JDK。
 >您可以從[Adobe軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載[!DNL Azul Zulu JDKs]的相關版本。
->oracleJava技術的使用權(由Adobe分發)將於2022年12月底屆滿。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關常見問題集。
+>oracleJava技術的使用權(由Adobe分發)將於2022年12月底屆滿。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
 
 以下是[!DNL Experience Manager] 6.5.9.0版中提供的修正清單。
 
