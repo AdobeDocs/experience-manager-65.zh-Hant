@@ -7,9 +7,9 @@ content-type: reference
 feature: 協助工具
 role: Business Practitioner, Administrator
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -20,20 +20,20 @@ ht-degree: 0%
 
 ## [!DNL Dynamic Media]中的鍵盤輔助功能支援
 
-由於[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的外掛程式，因此大多數鍵盤控制行為與[!DNL Experience Manager Assets]中完全相同。 例如，[!DNL Dynamic Media]中的`Cancel`按鈕與[!DNL Experience Manager Assets]中的按鈕具有相同的焦點突出顯示，並且與[!DNL Experience Manager Assets]中的`Spacebar`鍵反應。 請參閱Assets](/help/assets/accessibility.md#keyboard-shortcuts)中的[鍵盤快速鍵。
+因為[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的外掛程式，所以大多數鍵盤控制行為與[!DNL Experience Manager Assets]中相同。 例如，[!DNL Dynamic Media]中的`Cancel`按鈕與[!DNL Experience Manager Assets]中的按鈕具有相同的焦點突出顯示，並且與[!DNL Experience Manager Assets]中的`Spacebar`鍵反應。 請參閱Assets](/help/assets/accessibility.md#keyboard-shortcuts)中的[鍵盤快速鍵。
 
 [!DNL Dynamic Media]中由單個用戶介面元素支援的擊鍵在大多數情況下是顯而易見的，並且易於發現。 [!DNL Dynamic Media]中的鍵盤控制項與以下內容有關：
 
 * 能夠使用`Tab`和`Shift+Tab`鍵擊在頁面上的互動元素之間導航。
 使用`Tab`將輸入焦點按Tab鍵順序提前到下一個用戶介面元素；使用`Shift+Tab`將輸入焦點重新移回上一個使用者介面元素。
 焦點周遊會遵循畫面上的自然使用者介面元素位置，並依從左至右、由上至下的順序移動。 此外，如果有欄位有錯誤，您可以按`Tab`將焦點移至該欄位。
-* 可使用`Spacebar`和`Enter`鍵來啟用標準使用者介面元素，例如按鈕、下拉式清單等。
-* 可在使用中元素上查看鍵盤焦點醒目提示。 具有輸入焦點的用戶介面元素可以接收視覺焦點指示，作為圍繞用戶介面元素呈現的邊框。
+* 能夠使用`Spacebar`和`Enter`鍵來激活標準用戶介面元素，如按鈕和下拉清單。
+* 可在使用中元素上查看鍵盤焦點醒目提示。 具有輸入焦點的用戶介面元素接收視覺焦點指示，作為圍繞用戶介面元素呈現的邊框。
 * 在熱點編輯器中，可以使用一些自定義鍵擊（如箭頭鍵）與複雜的用戶介面元素交互，以重新定位熱點。
-* 在互動式視訊編輯器中，您可以使用`Spacebar`來選取影像，並將其新增至區段。 此外，您還可以使用`Backspace`鍵從&#x200B;**[!UICONTROL Content]**&#x200B;頁簽中刪除選定項。 此外，按`Tab`可視需要運作，以在頁面上的互動式元素之間導覽。
+* 在互動式視訊編輯器中，您可以使用`Spacebar`來選取影像，並將其新增至區段。 此外，還可以使用`Backspace`鍵從&#x200B;**[!UICONTROL Content]**&#x200B;頁簽中刪除選定項。 此外，按`Tab`可視需要運作，以在頁面上的互動式元素之間導覽。
 * 在影像裁切/智慧型裁切編輯器中，您可以執行下列操作：
    * 使用箭頭鍵裁切幀大小，或重新定位影像，或兩者。
-   * 第一個`Tab`停止將突出顯示整個影像幀。 然後，可以使用鍵盤上的箭頭鍵重新定位框架。
+   * 第一個`Tab`停止將突出顯示整個影像幀。 然後，可以使用鍵盤上的箭頭鍵來重新定位框架。
    * 接下來的四個`Tab`停止是框架的四個角。 將焦點置於框架拐角時，該拐角將加亮。 同樣地，您可以使用鍵盤上的箭頭鍵來移動聚焦的角。
 請參閱[編輯單個影像的智慧型裁切或智慧型色票](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
