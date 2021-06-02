@@ -11,7 +11,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: 元件，發佈
-source-git-commit: 8199702fe778f11cc2a953979a4ccfdcef3f1154
+source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
 workflow-type: tm+mt
 source-wordcount: '3210'
 ht-degree: 5%
@@ -173,13 +173,12 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、回轉集和�
 * **[!UICONTROL 針對高解析度裝置最佳化]**  — 選取（預設）核取方塊，以允許最佳化DPR（裝置像素比率）。
 
    **[!UICONTROL 僅當以下情況為真時，才會顯示]**&#x200B;為高解析度設備優化選項：
+
    * 在「預設類型」下，選擇&#x200B;**[!UICONTROL 影像預設集]**，並從&#x200B;**[!UICONTROL 影像預設集]**&#x200B;下拉清單中選擇&#x200B;**[!UICONTROL RESS_IP]**。
 
    ![影像預設集中的裝置像素比率設定](/help/assets/assets-dm/dpr-ress-ip.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
-
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL 標題]**  — 變更影像的標題。
 
@@ -255,9 +254,7 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、回轉集和�
 
    ![智慧作物的裝置像素比例設定](/help/assets/assets-dm/dpr-smartcrop.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
-
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL 標題]**  — 變更智慧型裁切影像的標題。
 
