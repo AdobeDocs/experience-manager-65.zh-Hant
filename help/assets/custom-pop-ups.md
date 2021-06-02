@@ -1,5 +1,5 @@
 ---
-title: 使用「快速檢視」建立自訂快顯視窗
+title: 使用Quickviews建立自訂快顯視窗
 seo-title: 使用「快速檢視」建立自訂快顯視窗
 description: 預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 您可以觸發自訂內容以顯示在快顯視窗中。
 seo-description: 預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 您可以觸發自訂內容以顯示在快顯視窗中。
@@ -12,16 +12,16 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: 檢視器
 role: Business Practitioner, Administrator
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
 
 # 使用「快速檢視」建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
-預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 不過，您可以觸發自訂內容以顯示在快顯視窗中。 根據您使用的檢視器，此功能可讓使用者按一下熱點、縮圖影像或影像地圖，以查看資訊或相關內容。
+預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 不過，您可以觸發自訂內容以顯示在快顯視窗中。 根據檢視器，此功能可讓使用者點選熱點、縮圖影像或影像地圖，以查看資訊或相關內容。
 
 Dynamic Media中的下列檢視器支援快速檢視：
 
@@ -31,7 +31,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
 
 雖然每個檢視器的功能有所不同，但在所有三個支援的檢視器中，建立「快速檢視」的程式都相同。
 
-**使用Quickviews建立自訂快顯視窗**
+**要使用Quickviews建立自定義彈出窗口，請執行以下操作：**
 
 1. 為已上傳的資產建立快速檢視。
 
@@ -41,7 +41,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
     <tbody>
     <tr>
     <td><strong>您使用的檢視器</strong></td>
-    <td><strong>完成下列步驟以建立快速檢視</strong></td>
+    <td><strong>如果要建立快速檢視，請完成這些步驟</strong></td>
     </tr>
     <tr>
     <td>互動影像</td>
@@ -64,7 +64,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
     <tbody>
     <tr>
     <td><strong>您使用的檢視器</strong><br /> </td>
-    <td><strong>完成下列步驟將檢視器與您的網站整合</strong></td>
+    <td><strong>如果您想要整合檢視器與您的網站，請完成這些步驟</strong></td>
     </tr>
     <tr>
     <td>互動式影像</td>
@@ -83,10 +83,10 @@ Dynamic Media中的下列檢視器支援快速檢視：
 
 1. 您現在使用的檢視器必須知道如何使用「快速檢視」。
 
-   為此，檢視器使用名為`QuickViewActive`的處理常式。
+   檢視器使用名為`QuickViewActive`的處理常式。
 
    ****
-範例假設您在網頁上使用下列範例內嵌程式碼，用於互動式影像：
+範例假設您在網頁上對互動式影像使用下列範例內嵌程式碼：
 
    ![chlimage_1-291](assets/chlimage_1-291.png)
 
@@ -94,7 +94,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
-   **使用上述范常式式碼範例，我們提供下列程式碼：**
+   **使用上方的范常式式碼範例，有下列程式碼：**
 
    ```xml
    s7interactiveimageviewer.setHandlers({
@@ -112,7 +112,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
    * 互動式影像檢視器：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
    * 互動式視訊檢視器：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. 您現在需要配置`quickViewActivate`處理程式。
+1. 現在必須配置`quickViewActivate`處理程式。
 
    `quickViewActivate`處理常式控制檢視器中的「快速檢視」。 處理常式包含變數清單和函式呼叫，以便與Quickview搭配使用。 內嵌程式碼提供在Quickview中設定的SKU變數對應，以及範例`loadQuickView`函式呼叫。
 
@@ -153,7 +153,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
       * 如果您要新增其他變數，請更新`loadQuickView(sku,*var1*,*var2*)`呼叫。
    * 在檢視器外部的頁面上建立簡單的`loadQuickView`()函式。
 
-      例如，下列項目會將sku的值寫入瀏覽器主控台：
+      例如，下列項目會將SKU的值寫入瀏覽器主控台：
 
    ```xml
    function loadQuickView(sku){
@@ -182,7 +182,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
 
 1. 將快顯視窗`DIV`放置在HTML頁面內文中。
 
-   其中一個元素的ID是設定的，當用戶調用Quickview時，ID會用sku值更新。 此範例也包含一個簡單按鈕，可在快顯視窗顯示後重新隱藏快顯視窗。
+   其中一個元素的ID設定為，當使用者叫用Quickview時，ID會以SKU值更新。 此範例也包含一個簡單按鈕，可在快顯視窗顯示後重新隱藏快顯視窗。
 
    ```xml
    <div id="quickview_div" >
@@ -193,7 +193,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
    </div>
    ```
 
-1. 新增函式以更新快顯視窗中的sku值；取代步驟5中建立的簡單函式，使快顯視窗可見。 並搭配下列項目：
+1. 新增函式，以便更新快顯視窗中的SKU值；取代步驟5中建立的簡單函式，使快顯視窗可見。 並搭配下列項目：
 
    ```xml
    <script type="text/javascript">
@@ -209,9 +209,9 @@ Dynamic Media中的下列檢視器支援快速檢視：
 
    有些檢視器（例如互動式視訊檢視器）支援以全螢幕模式顯示。 不過，如前述步驟所述，使用快顯視窗會使其在全螢幕模式中顯示在檢視器後面。
 
-   若要在標準和全螢幕模式中顯示快顯視窗，請將快顯視窗附加至檢視器容器。 要完成此操作，可以使用第二個處理程式方法`initComplete`。
+   若要在標準和全螢幕模式中顯示快顯視窗，請將快顯視窗附加至檢視器容器。 使用第二個處理程式方法`initComplete`。
 
-   在查看器初始化後調用`initComplete`處理器。
+   在初始化查看器後調用`initComplete`處理程式。
 
    ```xml
    "initComplete":function() { code block }
@@ -234,14 +234,14 @@ Dynamic Media中的下列檢視器支援快速檢視：
    }
    ```
 
-   在上述程式碼中，我們已完成下列動作：
+   在上述程式碼中，已執行下列動作：
 
    * 已識別自訂快顯視窗。
    * 從DOM中移除。
    * 已識別檢視器容器。
    * 將快顯視窗附加至檢視器容器。
 
-1. 您的整個setHandlers程式碼現在看起來應類似下列（已使用互動式視訊檢視器）:
+1. 您的整個setHandlers代碼顯示如下所示（使用了Interactive Video查看器）:
 
    ```xml
    s7interactivevideoviewer.setHandlers({
