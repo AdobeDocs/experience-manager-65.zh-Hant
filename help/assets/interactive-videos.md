@@ -11,7 +11,7 @@ docset: aem65
 feature: 互動影片
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '6058'
 ht-degree: 4%
@@ -52,7 +52,8 @@ ht-degree: 4%
 「在AEM Assets中使用互動式視訊、連結共用和YouTube共用」網路研討會教您如何使用互動式視訊和其他功能，將轉換導向的事件連結至您的視訊行銷內容。
 
 >[!NOTE]
-[在AEM Assets中使用互動式影片、連結共用和YouTube共用](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
+>
+>[在AEM Assets中使用互動式影片、連結共用和YouTube共用](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
 
 ## 快速入門：互動式影片{#quick-start-interactive-videos}
 
@@ -92,10 +93,14 @@ ht-degree: 4%
 ## （可選）識別Quickview變數{#optional-identifying-quickview-variables}
 
 >[!NOTE]
-只有在以下情況為真時才需要此任務：
-* 您想要透過觸發Quickviews來為視訊新增互動功能。
-* 您的AEM實作會&#x200B;*不*&#x200B;使用電子商務整合架構，從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）將產品資料提取至AEM。 請參閱AEM Assets中的[電子商務概念](/help/commerce/cif-classic/administering/concepts.md)。
+>
+>只有在以下情況為真時才需要此任務：
+>
+>* 您想要透過觸發Quickviews來為視訊新增互動功能。
+>* 您的AEM實作會&#x200B;*不*&#x200B;使用電子商務整合架構，從任何電子商務解決方案（例如IBM Websphere Commerce、Elastic Path、hybris或Intershop）將產品資料提取至AEM。 請參閱AEM Assets中的[電子商務概念](/help/commerce/cif-classic/administering/concepts.md)。
 
+>
+>
 如果您的AEM實作使用電子商務，您可以略過此工作，並繼續執行下一個工作。
 
 首先，找出您現有Quickview實作所使用的動態變數，以便您可以在互動式視訊建立程式期間，將產品縮圖對應至其對應的產品Quickview。
@@ -255,10 +260,12 @@ ht-degree: 4%
 請參閱[體驗片段](/help/sites-authoring/experience-fragments.md)。
 
 >[!NOTE]
-請注意，當您將檢視器嵌入體驗片段時，互動式視訊中的社交媒體共用工具不受支援。 若要解決此問題，您可以使用或建立沒有社交媒體共用工具的檢視器預設集。 這類檢視器預設集可讓您成功將其內嵌在體驗片段中。
+>
+>請注意，當您將檢視器嵌入體驗片段時，互動式視訊中的社交媒體共用工具不受支援。 若要解決此問題，您可以使用或建立沒有社交媒體共用工具的檢視器預設集。 這類檢視器預設集可讓您成功將其內嵌在體驗片段中。
 
 >[!NOTE]
-如果您的互動式內容有連結與相對URL(尤其是連結至AEM Sites頁面)，則無法使用以URL為基礎的連結方法。
+>
+>如果您的互動式內容有連結與相對URL(尤其是連結至AEM Sites頁面)，則無法使用以URL為基礎的連結方法。
 
 目前建立/編輯工作階段期間，支援在頁面右上角附近還原和重做選項。
 
@@ -269,11 +276,11 @@ ht-degree: 4%
 1. 在「資產」檢視中，導覽至您上傳且想要互動的影片。
 1. 執行下列任一操作：
 
-   * 暫留在影像上，然後點選&#x200B;**[!UICONTROL 選取]**（核取標籤圖示）。 在工具列上，點選&#x200B;**[!UICONTROL 編輯。]**
+   * 暫留在影像上，然後點選&#x200B;**[!UICONTROL 選取]**（核取標籤圖示）。 在工具列上，點選&#x200B;**[!UICONTROL Edit]**。
 
-   * 暫留在影像上，然後點選「**[!UICONTROL 更多動作]**（三個點圖示）**[!UICONTROL >編輯」。]**
+   * 暫留在影像上，然後點選「**[!UICONTROL 更多動作]**（三個點圖示）**[!UICONTROL >編輯]**」。
 
-   * 點選影像以在「詳細資料檢視」頁面中開啟影像。 在工具列上，點選&#x200B;**[!UICONTROL 編輯。]**
+   * 點選影像以在「詳細資料檢視」頁面中開啟影像。 在工具列上，點選&#x200B;**[!UICONTROL Edit]**。
 
 1. 在「建立互動式視訊」頁面上，執行下列任一操作：
 
@@ -281,7 +288,7 @@ ht-degree: 4%
 
       您可以針對您新增的每個時間區段，指派一或多個縮圖影像，然後將這些縮圖連結至Quickview產品頁面，供客戶購買，或連結至網頁，以取得詳細資訊。
 
-   * 點選&#x200B;**[!UICONTROL Play]**&#x200B;按鈕以開始播放視訊。 當您要反白標示的特定產品、服務或詳細資訊進入檢視畫面時，點選「**[!UICONTROL 暫停」。]** 點選「 **[!UICONTROL 新增區段」。]**
+   * 點選&#x200B;**[!UICONTROL Play]**&#x200B;按鈕以開始播放視訊。 當您要反白標示的特定產品、服務或詳細資訊進入檢視畫面時，點選&#x200B;**[!UICONTROL Pause]**。 點選「**[!UICONTROL 新增區段]**」。
 
       在您要新增區段的時間軸上，繼續播放和暫停視訊，直到到達視訊結尾。
 
@@ -360,9 +367,9 @@ ht-degree: 4%
 
    * 刪除區段
 
-      選取時間軸上的最後一個區段，然後在工具列上，點選「 **[!UICONTROL 刪除區段」。]** 如果選取了兩個或多個區段，「刪除區段」功能便會停用。
+      選取時間軸上的最後一個區段，然後在工具列上，點選&#x200B;**[!UICONTROL 刪除區段]**。 如果選取了兩個或多個區段，「刪除區段」功能便會停用。
 
-      您只能刪除最後一個區段。 例如，如果要刪除時間軸上的所有段，必須始終選擇最後一個段，然後點選&#x200B;**[!UICONTROL 刪除段。]**
+      您只能刪除最後一個區段。 例如，如果您要刪除時間軸上的所有區段，您必須一律選取最後一個區段，然後點選&#x200B;**[!UICONTROL 刪除區段]**。
 
 
 1. 選取您要關聯一或多個縮圖影像的時段。
@@ -476,10 +483,11 @@ ht-degree: 4%
 
    如果您建立了自己的互動式視訊檢視器預設集，您也會在您可以選擇的預設集清單中看到它。
 
-   完成後，點選「**[!UICONTROL 儲存」。]**
+   完成後，點選&#x200B;**[!UICONTROL Save]**。
 
    >[!NOTE]
-   當您儲存互動式視訊時，會自動 `.vtt` 儲存相關的檔案。檔 `.vtt` 案會儲存至位 `_VTT` 於資產根目錄的資 **[!UICONTROL 料夾。]**&#x200B;您的互動式視訊必須有檔案和資料夾才能在網站上正確播放。因此，請勿移動、編輯或刪除資料夾 `_VTT` 或其內容。
+   >
+   >當您儲存互動式視訊時，會自動 `.vtt` 儲存相關的檔案。檔 `.vtt` 案會儲存至位 `_VTT` 於資產根目錄的資 **[!UICONTROL 料夾]**。您的互動式視訊必須有檔案和資料夾才能在網站上正確播放。因此，請勿移動、編輯或刪除資料夾 `_VTT` 或其內容。
 
 1. 發佈互動式影片。 發佈會建立內嵌程式碼或URL，您最終會將其複製並貼到您的網站體驗。
 
@@ -488,7 +496,8 @@ ht-degree: 4%
    請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
    >[!NOTE]
-   若要使用Quickviews發佈可購買的視訊，請確定您也從您的商務區域個別發佈每個視訊的相關影像資產。
+   >
+   >若要使用Quickviews發佈可購買的視訊，請確定您也從您的商務區域個別發佈每個視訊的相關影像資產。
 
    新增時間軸區段並發佈互動式視訊後，您就可以將其新增至現有的網站登陸頁面。 請參閱[將互動式視訊與您的網站整合。](#integrating-an-interactive-video-with-your-website)
 
@@ -513,8 +522,10 @@ ht-degree: 4%
 複製的內嵌程式碼會設定為回應式環境，因此應自動符合先前由靜態視訊佔用的區域。
 
 >[!NOTE]
-此時，如果您只以超連結網頁新增互動功能，即可完成。
-不過，如果您新增任何互動來觸發Quickview，互動式視訊旁的縮圖只會用於顯示用途；它們尚未與您現有的Quickviews整合。 在這種情況下，您現在需要將互動式視訊與網站上現有的Quickview整合。
+>
+>此時，如果您只以超連結網頁新增互動功能，即可完成。
+>
+>不過，如果您新增任何互動來觸發Quickview，互動式視訊旁的縮圖只會用於顯示用途；它們尚未與您現有的Quickviews整合。 在這種情況下，您現在需要將互動式視訊與網站上現有的Quickview整合。
 
 **範例**
 
@@ -556,7 +567,8 @@ ht-degree: 4%
 ## 將互動式視訊與現有的Quickview {#integrating-an-interactive-video-with-an-existing-quickview}整合
 
 >[!NOTE]
-只有當您是獨立AEM Assets客戶時，才適用此工作。
+>
+>只有當您是獨立AEM Assets客戶時，才適用此工作。
 
 此程式的最後一個步驟是將您的互動式視訊與網站上使用的現有Quickview實作整合。 整合沒有適用於所有情況的解決方案。 每個Quickview實作都是唯一的。 因此，需要一種最可能需要前端IT人員幫助的具體方法。
 
