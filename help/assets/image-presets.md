@@ -10,16 +10,16 @@ discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 feature: 影像預設集
 role: Business Practitioner, Administrator
 exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 13%
+source-wordcount: '328'
+ht-degree: 6%
 
 ---
 
 # 套用 Dynamic Media 影像預設集 {#applying-image-presets}
 
-「影像預設集」可讓資產以動態方式傳送不同大小、不同格式的影像，或以其他動態產生的影像屬性。 在導出影像時，可以選擇預設集，該預設集還會按照管理員指定的規範重新格式化影像。
+「影像預設集」可讓資產以動態方式傳送不同大小、不同格式的影像，或以其他動態產生的影像屬性。 匯出影像時，您可以選擇預設集。 預設將映像重新格式化為管理員指定的規範。
 
 此外，您可以選擇回應式的影像預設集（在選取後，由&#x200B;**[!UICONTROL RESS]**&#x200B;按鈕指定）。
 
@@ -35,9 +35,9 @@ ht-degree: 13%
 >
 >在Dynamic Media - Scene7模式中，影像預設集僅支援影像資產。
 
-**套用Dynamic Media影像預設集**
+**若要套用Dynamic Media影像預設集：**
 
-1. 開啟資產，在左側導軌中，點選下拉式選單，然後點選「 **[!UICONTROL 轉譯」。]**
+1. 開啟資產，在左側導軌中，點選下拉式選單，然後點選「**[!UICONTROL 轉譯]**」。
 
    >[!NOTE]
    >
@@ -51,11 +51,11 @@ ht-degree: 13%
 
 1. 執行下列任一操作：
 
-   * 選取動態轉譯以預覽影像預設集。
-   * 點選&#x200B;**[!UICONTROL URL]**、**[!UICONTROL Embed]**&#x200B;或&#x200B;**[!UICONTROL RESS]**&#x200B;以顯示快顯視窗。
+   * 選取動態轉譯，以便預覽影像預設集。
+   * 若要顯示快顯視窗，請點選&#x200B;**[!UICONTROL URL]**、**[!UICONTROL Embed]**&#x200B;或&#x200B;**[!UICONTROL RESS]**。
 
    >[!NOTE]
    >
-   >如果資產和 *影像預設集尚未發佈* ，則 **[!UICONTROL URL按鈕(或]** URL **[!UICONTROL 和]****** RESS按鈕 (如果適用) 不可用。
+   >如果資產&#x200B;*和*&#x200B;影像預設集尚未發佈，則&#x200B;**[!UICONTROL URL]**&#x200B;按鈕(或&#x200B;**[!UICONTROL URL]**&#x200B;和&#x200B;**[!UICONTROL RESS]**&#x200B;按鈕（如果適用）不可用。
    >
    >另請注意，影像預設集會自動發佈在Dynamic Media伺服器上。
