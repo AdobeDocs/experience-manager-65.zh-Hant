@@ -11,7 +11,7 @@ docset: aem65
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 2%
@@ -38,7 +38,7 @@ ht-degree: 2%
 **使用軟體介面預覽資產**
 
 1. 從&#x200B;**[!UICONTROL Adobe Experience Manager]**，在&#x200B;**[!UICONTROL 導覽]**&#x200B;頁面上，點選&#x200B;**[!UICONTROL 資產]**，然後點選&#x200B;**[!UICONTROL 檔案]**&#x200B;以存取資產。
-1. 在頁面的右上角，從&#x200B;**[!UICONTROL View]**&#x200B;下拉式清單中，點選&#x200B;**[!UICONTROL List View.]**
+1. 在頁面的右上角，從&#x200B;**[!UICONTROL View]**&#x200B;下拉式清單中，點選&#x200B;**[!UICONTROL List View]**。
 1. （選用）使用&#x200B;**[!UICONTROL Type]**&#x200B;欄，依您要預覽的類型來排序資產。
 1. 在&#x200B;**[!UICONTROL Title]**&#x200B;欄下，按一下您要預覽之資產的標題名稱（而非縮圖影像）。
 1. 視您所點按的資產類型而定，執行下列任一項作業：
