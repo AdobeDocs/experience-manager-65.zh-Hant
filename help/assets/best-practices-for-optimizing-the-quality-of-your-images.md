@@ -10,10 +10,10 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
 workflow-type: tm+mt
 source-wordcount: '1448'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -64,18 +64,19 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
       * **[!UICONTROL 量]** （0-5，效果的強度。）
       * **[!UICONTROL 半徑]** (0-250，在銳化物件周圍繪製的「銳利化線」寬度（以像素計）。
 
-         請記得，參數半徑和量彼此相互作用。 通過增加量可以補償減小的半徑。 半徑允許更精細的控制，因為較低的值只銳化邊緣像素，而較高的值銳化較寬的像素帶。
+      請記得，參數半徑和量彼此相互作用。 通過增加量可以補償減小的半徑。 半徑允許更精細的控制，因為較低的值只銳化邊緣像素，而較高的值銳化較寬的像素帶。
 
       * **[!UICONTROL 閾值]** （0-255，效應的靈敏度）。
 
-         此參數可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素，濾鏡會銳化這些像素。**[!UICONTROL threshold]**&#x200B;參數有助於避免色彩類似的區域過度銳利化，例如膚色。 例如，閾值為12會忽略膚色亮度的微小變化，以避免加上「雜訊」，同時仍會加上邊緣對比度至高對比區域，例如睫毛與皮膚相遇的區域。
-      如需如何設定這三個參數的詳細資訊，包括搭配篩選器使用的最佳實務，請參閱下列資源：
+             此參數可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素，濾鏡會銳化這些像素。**[!UICONTROL threshold]**參數有助於避免色彩相似的區域過度銳利化，例如膚色。例如，閾值為12會忽略膚色亮度的微小變化，以避免加上「雜訊」，同時仍會加上邊緣對比度至高對比區域，例如睫毛與皮膚相遇的區域。
+         
+         如需如何設定這三個參數的詳細資訊，包括搭配篩選器使用的最佳實務，請參閱下列資源：
 
-      銳利化影像的Experience Manager說明主題。
+         銳利化影像的Experience Manager說明主題。
 
-      最佳作法白皮書[AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中的銳利化影像。
+         最佳作法白皮書[AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中的銳利化影像。
 
-   * Experience Manager也可讓您控制第四個參數：單色(0,1)。 此參數確定是否使用值0分別對每個顏色分量應用銳利化遮色片，或使用值1對影像亮度/強度應用銳利化遮色片。
+      * Experience Manager也可讓您控制第四個參數：單色(0,1)。 此參數確定是否使用值0分別對每個顏色分量應用銳利化遮色片，或使用值1對影像亮度/強度應用銳利化遮色片。
 
 
 最佳實務是從遮色片半徑不銳利化參數開始。 可以開頭的半徑設定如下：
