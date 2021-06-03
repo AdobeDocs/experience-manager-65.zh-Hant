@@ -11,7 +11,7 @@ docset: aem65
 feature: 全景影像，資產管理
 role: Business Practitioner, Administrator
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 0%
@@ -46,11 +46,11 @@ ht-degree: 0%
 
 1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
-1. 在頁面的右上角附近，按一下「**[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器」。]**
-1. 在「影像伺服器發佈」頁面上，從頂端附近的&#x200B;**[!UICONTROL 發佈內容]**&#x200B;下拉式選單中，選取&#x200B;**[!UICONTROL 影像伺服。]**
+1. 在頁面的右上角附近，按一下「**[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器]**」。
+1. 在「影像伺服器發佈」頁面上，從頂端附近的&#x200B;**[!UICONTROL 發佈內容]**&#x200B;下拉式選單中，選取&#x200B;**[!UICONTROL 影像伺服]**。
 
-1. 在相同的「影像伺服器發佈」頁面上，找到標題&#x200B;**[!UICONTROL 「請求屬性」。]**
-1. 在「請求屬性」標題下，找出「**[!UICONTROL 回覆影像大小限制」。]** 然後，在相關的「寬度」和「高度」欄位中，增加全景影像的最大允許影像大小。
+1. 在相同的「影像伺服器發佈」頁面上，找到標題&#x200B;**[!UICONTROL Request Attributes]**。
+1. 在「請求屬性」標題下，找到&#x200B;**[!UICONTROL 回覆影像大小限制]**。 然後，在相關的「寬度」和「高度」欄位中，增加全景影像的最大允許影像大小。
 
    Dynamic Media Classic的限制為25,000,000像素。 寬高比為2:1的影像的最大允許大小為7000 x 3500。 但是，對於一般的案頭螢幕，4096 x 2048像素就足夠了。
 
@@ -60,14 +60,14 @@ ht-degree: 0%
 
 1. 在「請求屬性」標題下，執行下列動作：
 
-   * 將「請求模糊化模式」設定為「**[!UICONTROL 禁用」。]**
-   * 將請求鎖定模式設定為&#x200B;**[!UICONTROL 禁用。]**
+   * 將「請求模糊化模式」設定為&#x200B;**[!UICONTROL Disabled]**。
+   * 將「請求鎖定模式」設定為&#x200B;**[!UICONTROL Disabled]**。
 
    在AEM中使用`Panoramic Media` WCM元件時，需要進行這些設定。
 
-1. 在「影像伺服器發佈」頁面的左側，按一下「保存」。]****[!UICONTROL 
+1. 在「影像伺服器發佈」頁面底部的左側，按一下「**[!UICONTROL 儲存]**」。
 
-1. 在右下角，按一下&#x200B;**[!UICONTROL 關閉。]**
+1. 在右下角，按一下&#x200B;**[!UICONTROL 關閉]**。
 
 ### 全景媒體WCM元件{#troubleshooting-the-panoramic-media-wcm-component}疑難排解
 
