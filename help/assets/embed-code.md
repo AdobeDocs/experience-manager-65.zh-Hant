@@ -10,9 +10,9 @@ discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: 檢視器
 role: Business Practitioner, Administrator
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '375'
 ht-degree: 21%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 21%
 
 當您想 **** 要播放視訊或檢視內嵌在網頁上的資產時，請使用「內嵌代碼」功能。您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。「內嵌代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
 
-只有在&#x200B;_not_&#x200B;使用AEM作為WCM時，才內嵌URL。 如果您使用AEM作為WCM，請直接在頁面上新增資產。](adding-dynamic-media-assets-to-pages.md)[
+只有在您&#x200B;*not*&#x200B;使用Adobe Experience Manager作為WCM時，才內嵌URL。 如果您使用Experience Manager作為WCM，請直接在頁面](adding-dynamic-media-assets-to-pages.md)上新增資產。[
 
-請參閱[將URL連結到Web應用程式。](linking-urls-to-yourwebapplication.md)
+請參閱[將URL連結到Web應用程式](linking-urls-to-yourwebapplication.md)。
 
-請參閱[為回應式網站傳送最佳化影像。](responsive-site.md)
+請參閱[傳送回應式網站的最佳化影像](responsive-site.md)。
 
 >[!NOTE]
 >
@@ -37,22 +37,22 @@ ht-degree: 21%
 >
 >請參閱[發佈影像預設集](managing-image-presets.md#publishing-image-presets)。
 
-**將Dynamic Media視訊或影像檢視器內嵌在網頁上**
+**將Dynamic Media視訊或影像檢視器內嵌在網頁上：**
 
 1. 導覽至您要複製其內嵌程式碼的&#x200B;*已發佈*&#x200B;視訊或影像資產。
 
    請記住，內嵌程式碼僅可在您首次 *發佈**資產後* 複製。此外，檢視器預設集或影像預設集也必須發佈。
 
-   請參閱[發佈資產。](publishing-dynamicmedia-assets.md)
+   請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
    請參閱[發佈檢視器預設集](managing-viewer-presets.md#publishing-viewer-presets)。
 
    請參閱[發佈影像預設集](managing-image-presets.md#publishing-image-presets)。
 
-1. 在左側導軌中，選取下拉式選單，然後點選「**[!UICONTROL 檢視器」。]**
+1. 在左側導軌中，選取下拉式選單，然後點選「**[!UICONTROL 檢視器]**」。
 1. 在左側導軌中，點選檢視器預設集名稱。 檢視器預設集會套用至資產。
-1. 點選&#x200B;**[!UICONTROL Embed.]**
-1. 在&#x200B;**[!UICONTROL 內嵌程式碼]**&#x200B;對話方塊中，將整個程式碼複製到剪貼簿，然後點選&#x200B;**[!UICONTROL 關閉。]**
+1. 點選&#x200B;**[!UICONTROL Embed]**。
+1. 在&#x200B;**[!UICONTROL 內嵌程式碼]**&#x200B;對話方塊中，將整個程式碼複製到剪貼簿，然後點選&#x200B;**[!UICONTROL 關閉]**。
 1. 將內嵌程式碼貼到您的網頁中。
 
 ## 使用HTTP/2傳遞Dynamic Media資產{#using-http-to-deliver-your-dynamic-media-assets}
