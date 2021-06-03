@@ -11,9 +11,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: 資產管理，轉譯
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '313'
 ht-degree: 1%
 
 ---
@@ -22,10 +22,10 @@ ht-degree: 1%
 
 如何傳送Dynamic Media資產（包括視訊和影像）取決於網站的實作方式。
 
-有了Dynamic Media，您有幾個選項：
+有了Dynamic Media，您有數個選項：
 
-* 如果您的網站托管於AEM，則您想要直接將Dynamic Media資產新增至頁面。
-* 如果您的網站不在AEM上，您可以選擇：
+* 如果您的網站托管於Adobe Experience Manager，則您想要直接將Dynamic Media資產新增至頁面。
+* 如果您的網站未Experience Manager，您可以選擇：
 
    * 將您的視訊或影像嵌入網站。
    * 將URL連結至您的Web應用程式。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 * [將Dynamic Media Assets新增至網頁](/help/assets/adding-dynamic-media-assets-to-pages.md)
 * [將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)
-* [在 Dynamic Media 中啟用超連結保護](hotlink-protection.md)
+* [在 Dynamic Media 中啟用超連結保護](/help/assets/hotlink-protection.md)
 * [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)
 * [為回應式網站傳送最佳化影像](/help/assets/responsive-site.md)
 * [HTTP2內容傳送](/help/assets/http2.md)
@@ -49,6 +49,6 @@ ht-degree: 1%
 
 ## HTTP/2傳送Dynamic Media資產{#http-delivery-of-dynamic-media-assets}
 
-AEM現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和影片）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可與接受託管資產的任何應用程式整合。 然後會透過HTTP/2通訊協定來傳送已發佈的資產。 此傳遞方法可改善瀏覽器和伺服器通訊的方式，讓所有Dynamic Media資產的回應和載入時間都更佳。
+Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和影片）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可與接受託管資產的任何應用程式整合。 然後會透過HTTP/2通訊協定來傳送已發佈的資產。 此傳遞方法可改善瀏覽器和伺服器通訊的方式，讓所有Dynamic Media資產的回應和載入時間都更佳。
 
-請參閱[HTTP/2內容傳送常見問題](/help/sites-administering/scene7-http2faq.md)以了解更多資訊。
+若要深入了解，請參閱[HTTP/2內容傳送常見問題](/help/sites-administering/scene7-http2faq.md)。
