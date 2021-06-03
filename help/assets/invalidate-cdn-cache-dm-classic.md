@@ -8,7 +8,7 @@ content-type: reference
 feature: CDN快取，Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 16%
@@ -35,7 +35,7 @@ Dynamic Media資產由CDN（內容傳遞網路）快取，以便快速傳遞。 
 
    配置時Adobe提供了您的憑據和登錄。 如果您沒有此資訊，請聯繫技術支援。
 
-1. 在頁面的右上角附近，點選「 **[!UICONTROL 設定>應用程式設定>一般設定」。]**
+1. 在頁面的右上角附近，點選「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**」。
 1. 在「應用程式一般設定」頁面的「伺服器」群組標題下，找出&#x200B;**[!UICONTROL CDN無效範本]**&#x200B;文字方塊。
 
 1. 指定用於使CDN（內容傳遞網路）快取失效的範本。
@@ -46,8 +46,8 @@ Dynamic Media資產由CDN（內容傳遞網路）快取，以便快速傳遞。 
 
    如果範本僅包含`<ID>`，則Dynamic Media會填入`https://<server>/is/image`，其中`<server>`為一般設定中定義的發佈伺服器名稱，而&lt;ID>為選取失效的資產。
 
-1. 在頁面的右下角，按一下「**[!UICONTROL 關閉」。]**
-1. 在Dynamic Media Classic使用者介面中，選取一或多個資產，然後按一下「**[!UICONTROL 檔案>使CDN失效」。]** 您會看到從您建立的範本和您選取的資產產生的一或多個URL清單。它使用「應用程式一般設定」下「已發佈伺服器名稱」下列的伺服器URL。
+1. 在頁面的右下角，按一下&#x200B;**[!UICONTROL Close]**。
+1. 在Dynamic Media Classic使用者介面中，選取一或多個資產，然後按一下「**[!UICONTROL 檔案]** > **[!UICONTROL 使CDN]**&#x200B;無效」。 您會看到從您建立的範本和您選取的資產產生的一或多個URL清單。 它使用「應用程式一般設定」下「已發佈伺服器名稱」下列的伺服器URL。
 
    例如，在上一個步驟中設定了「CDN失效範本」後，假設您選取了名為`Backpack_B`的單一影像資產影像。 當您點選「**[!UICONTROL 檔案>使CDN失效]**」時，會在「CDN失效」使用者介面中產生下列URL:
 
@@ -57,7 +57,7 @@ Dynamic Media資產由CDN（內容傳遞網路）快取，以便快速傳遞。 
 
    按一下&#x200B;**[!UICONTROL 繼續]**&#x200B;後，將顯示一個指示器，為您提供清除快取所需的時間估計。
 
-   如果您選取多個資產，然後點選「 **[!UICONTROL 檔案>使CDN失效]**」，則儲存的&#x200B;**[!UICONTROL 範本URL會參照每個資產。]** 因此，您可以定義CDN **[!UICONTROL 無效范]** 本，以參考網站上參考的每個URL影像預設集（例如產品詳細資料和搜尋結果）。然後，當您從快取中選取一或影像以進行失效時，URL會自動填入介面。
+   如果您選取多個資產，然後點選「**[!UICONTROL 檔案>使CDN失效]**」，則儲存的&#x200B;**[!UICONTROL 範本URL]**&#x200B;會參照每個資產。 因此，您可以定義&#x200B;**[!UICONTROL CDN無效範本]** ，以參考網站上參考的每個URL影像預設集（例如產品詳細資料和搜尋結果）。 然後，當您從快取中選取一或影像以進行失效時，URL會自動填入介面。
 
    >[!NOTE]
    >
