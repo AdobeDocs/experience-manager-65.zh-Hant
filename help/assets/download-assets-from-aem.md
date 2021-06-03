@@ -5,7 +5,7 @@ contentOwner: AG
 role: Business Practitioner
 feature: 資產管理，資產分發
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 3%
@@ -22,13 +22,13 @@ ht-degree: 3%
 
 無法下載資產類型影像集、回轉集、混合媒體集和轉盤集。
 
-若要下載資產，請依照下列步驟操作：
+**若要下載資產，請依照下列步驟操作：**
 
 1. 在左上角，按一下標誌。 在左側邊欄中，按一下「**[!UICONTROL 導覽]**」。
-1. 在[!UICONTROL 導覽]頁面上，按一下&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 檔案。]**
+1. 在[!UICONTROL 導覽]頁面上，按一下&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 檔案]**。
 1. 導覽至包含您要下載之資產的資料夾。
 1. 選取資料夾，或在資料夾內選取一或多個資產。
-1. 在工具列上，按一下「**[!UICONTROL 下載」。]**
+1. 在工具列上，按一下&#x200B;**[!UICONTROL Download]**。
 
    ![從Experience Manager資產下載資產時的可用選項](/help/assets/assets/asset-download1.png)
 
@@ -45,7 +45,7 @@ ht-degree: 3%
    | **[!UICONTROL 智慧裁切]** | 選取此選項，即可從AEM內下載所選資產的所有智慧型裁切轉譯。 會建立包含智慧型裁切轉譯的zip檔案，並下載至您的本機電腦。 |
    | **[!UICONTROL 動態轉譯]** | 選取此選項即時產生一系列替代轉譯。 選取此選項時，您也可以從[影像預設集](image-presets.md)清單中選取，以動態方式選取您要建立的轉譯。 <br>此外，您還可以選取尺寸和單位、格式、顏色空間、解析度，以及任何可選的影像修飾符，如反相影像。只有在您已啟用[!DNL Dynamic Media]時，選項才可用。 |
 
-1. 在對話框中，按一下&#x200B;**[!UICONTROL 下載。]**。
+1. 在對話框中，按一下&#x200B;**[!UICONTROL Download]**。
 
 選取要下載的資料夾時，會下載該資料夾下的完整資產階層。 若要將您下載的每個資產（包括父資料夾下巢狀子資料夾中的資產）包含在個別資料夾中，請選取「**[!UICONTROL 為每個資產建立個別資料夾」]**。
 
