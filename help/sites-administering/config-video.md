@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
@@ -81,7 +81,7 @@ ht-degree: 0%
    >
    >覆蓋並編輯整個設定檔節點，而不只是需要修改的屬性。 這類資源不會透過SlingResourceMerger解決。
 
-4. 如果更改了其中一個屬性，請按一下「全部保存」。]****[!UICONTROL 
+4. 如果更改了其中一個屬性，請按一下&#x200B;**[!UICONTROL 全部保存]**。
 
 >[!NOTE]
 >
