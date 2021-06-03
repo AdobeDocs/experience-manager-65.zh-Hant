@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 配置，混合模式
-source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
+source-git-commit: c4221ede672c131aa0864438bc9fd16c73ddf10c
 workflow-type: tm+mt
 source-wordcount: '7843'
 ht-degree: 1%
@@ -259,16 +259,18 @@ Dynamic Media影像傳送的運作方式是從「Experience Manager作者」發�
 建立PTIFF的預設記憶體限制為3 GB，涵蓋所有工作流程。 例如，您可以在其他工作流程暫停時處理一個需要3 GB記憶體的映像，或者並行處理10個每個需要300 MB記憶體的映像。
 記憶體限制是可配置的，並且適合系統資源可用性和正在處理的影像內容的類型。 如果您有許多大型資產，且系統記憶體足夠，您可以提高此限制，以確保並行處理影像。
 超過最大記憶體限制的映像被拒絕。
-要更改PTIFF建立的記憶體限制，請導航至&#x200B;**[!UICONTROL 工具>操作> Web Console > Adobe CQ Scene7 PTiffManager]**&#x200B;並更改&#x200B;**[!UICONTROL maxMemory]**&#x200B;值。
+要更改PTIFF建立的記憶體限制，請導航到&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web控制台]** > **[!UICONTROL Adobe CQ Scene7 PTiffManager]**&#x200B;並更改&#x200B;**[!UICONTROL maxMemory]**&#x200B;值。
 
 ### 設定驗證{#setting-up-authentication}
 
 在作者上設定復寫驗證，以便您可將影像復寫至Dynamic Media影像傳送服務。 您先取得KeyStore，然後將其儲存在&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;使用者下，並加以設定。 在配置過程中，您的公司管理員收到了一封歡迎電子郵件，其中包含KeyStore檔案和必要的憑據。 如果您未收到此資訊，請聯絡Adobe客戶服務。
 
-**設定驗證**
+**若要設定驗證：**
 
 1. 如果您尚未擁有檔案和密碼，請連絡Adobe客戶服務以取得您的KeyStore檔案和密碼。 此資訊是布建的必要部分。 它會將金鑰關聯至您的帳戶。
+
 1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**。
+
 1. 在「使用者管理」頁面上，導覽至&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;使用者，然後點選以開啟。
 
    ![dm-replication](assets/dm-replication.png)
@@ -818,7 +820,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您
 配置Dynamic Media Image Server設定：
 
 1. 在Experience Manager的左上角，點選&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web主控台]**。
-1. 在「 Adobe Experience Manager Web Console設定」頁面上，點選&#x200B;**[!UICONTROL OSGi > Configuration]** ，列出目前在Experience Manager中執行的所有套件組合。
+1. 在「Adobe Experience Manager Web Console設定」頁面上，點選&#x200B;**[!UICONTROL OSGi]** > **[!UICONTROL Configuration]**&#x200B;以列出目前在Experience Manager內執行的所有套件組合。
 
    Dynamic Media傳送伺服器位於清單中的下列名稱中：
 
