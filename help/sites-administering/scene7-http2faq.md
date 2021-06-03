@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 1%
@@ -56,13 +56,13 @@ Adobe自己的測試得出以下結果：
    * 主要聯繫人姓名、電子郵件和電話號碼。
    * 要轉換為HTTP2的所有網域。 即`images.company.com`或`mycompany.scene7.com`。
 
-      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「 **[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標籤為&#x200B;**[!UICONTROL 已發佈伺服器名稱的欄位。]**
+      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**」。 查找標籤為&#x200B;**[!UICONTROL 已發佈伺服器名稱]**&#x200B;的欄位。
 
    * 確認您對多媒體請求使用安全HTTPS。
    * 確認您是透過Adobe使用CDN，而非以直接關係進行管理。
    * 確認您使用的是專用網域。 即`images.company.com`或`mycompany.scene7.com`，而非一般的Dynamic Media網域，例如`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com`。
 
-      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「 **[!UICONTROL 設定>應用程式設定>一般設定]**」。 查找標籤為&#x200B;**[!UICONTROL Published Server Name的欄位。]** 如果您目前使用一般Dynamic Media網域，可以請求移轉至您自己的自訂網域，作為此轉變的一部分。
+      若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**」。 查找標籤為&#x200B;**[!UICONTROL 已發佈伺服器名稱]**&#x200B;的欄位。 如果您目前使用一般Dynamic Media網域，可以請求移轉至您自己的自訂網域，作為此轉變的一部分。
 
 1. 技術支援會根據提交請求的順序，將您新增至HTTP/2客戶等待清單。
 1. 當Adobe準備好處理您的請求時，「支援」會聯絡您以協調轉變並設定目標日期。
@@ -84,4 +84,4 @@ Adobe自己的測試得出以下結果：
 
 ## 如何驗證URL或網站是否已透過HTTP/2啟動？{#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-您需要下載外部版本才能與網頁瀏覽器搭配使用。 對於Firefox和Chrome，有一個名為&#x200B;**[!UICONTROL HTTP/2和SPDY Indicator的擴充功能。]** 瀏覽器僅安全支援HTTP/2，因此必須使用HTTPS呼叫URL以進行驗證。如果支援HTTP/2，則會以藍色Flash符號和標題「X-Firefox-Spdy」的形式以擴充功能表示：&quot;h2&quot;。
+您需要下載外部版本才能與網頁瀏覽器搭配使用。 對於Firefox和Chrome，有一個名為&#x200B;**[!UICONTROL HTTP/2和SPDY Indicator]**&#x200B;的擴充功能。 瀏覽器僅安全支援HTTP/2，因此必須使用HTTPS呼叫URL以進行驗證。 如果支援HTTP/2，則會以藍色Flash符號和標題「X-Firefox-Spdy」的形式以擴充功能表示：&quot;h2&quot;。
