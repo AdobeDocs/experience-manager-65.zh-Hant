@@ -11,10 +11,10 @@ docset: aem65
 feature: 視訊設定檔
 role: Business Practitioner, Administrator
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '3709'
-ht-degree: 14%
+source-wordcount: '3704'
+ht-degree: 16%
 
 ---
 
@@ -158,11 +158,11 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 **若要建立最適化串流的視訊設定檔**,
 
-1. 點選AEM標誌並導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊描述檔」。]**
+1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 按一下或點選&#x200B;**[!UICONTROL 建立]**&#x200B;以新增視訊描述檔。
 
 1. 輸入設定檔的名稱和說明。
-1. 在「建立/編輯視訊編碼預設集」頁面上，點選「**[!UICONTROL 新增視訊編碼預設集」。]**
+1. 在「建立/編輯視訊編碼預設集」頁面上，點選「**[!UICONTROL 新增視訊編碼預設集]**」。
 1. 在&#x200B;**[!UICONTROL Basic]**標籤上，設定視訊和音訊選項。
 請點選每個選項旁的資訊圖示，以取得其他說明或根據選取的視訊格式codec建議的設定。
 1. 在「視訊大小」標題下，確定已勾選「**[!UICONTROL 保留外觀比例]**」 。
@@ -170,7 +170,7 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 1. 執行下列任一操作：
 
-   * 在&#x200B;**[!UICONTROL Width]**&#x200B;欄位中，輸入&#x200B;**[!UICONTROL auto。]** 在「高 **** 度」欄位中，輸入像素值。
+   * 在&#x200B;**[!UICONTROL Width]**&#x200B;欄位中，輸入&#x200B;**[!UICONTROL auto]**。 在&#x200B;**[!UICONTROL Height]**&#x200B;欄位中，以像素輸入值。
 
    * 若要協助您視覺化視訊的大小，請點選&#x200B;**[!UICONTROL Height]**&#x200B;右側的「資訊」圖示(i)，以開啟「大小計算器」頁面。 使用&#x200B;**[!UICONTROL 大小計算器]**&#x200B;設定您想要的視訊尺寸（由藍色方塊表示）。 完成後，點選右上角的&#x200B;**[!UICONTROL X]**。
 
@@ -181,7 +181,7 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
    * 繼續下一步。
 
 1. （可選）若要將視訊智慧型裁切新增至將套用此設定檔的視訊，請執行下列動作：
-   * 在「編輯視訊描述檔」頁面的「智慧型裁切比例」標題的右側，點選「**[!UICONTROL 新增」。]**
+   * 在「編輯視訊描述檔」頁面的「智慧型裁切比例」標題的右側，點選「**[!UICONTROL 新增]**」。
    * 在「名稱」欄位中，輸入裁切比例的名稱，以便您輕鬆識別。
    * 從&#x200B;**[!UICONTROL 裁切比率]**&#x200B;下拉式清單中，選取您要使用的比率。
 
@@ -211,17 +211,17 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 **若要建立漸進式串流的視訊設定檔：**
 
-1. 點選AEM標誌並導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊描述檔」。]**
+1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 點選&#x200B;**[!UICONTROL 建立]**&#x200B;以新增視訊描述檔。
 1. 輸入設定檔的名稱和說明。
-1. 在「建立/編輯視訊編碼預設集」頁面上，點選「**[!UICONTROL 新增視訊編碼預設集」。]**
+1. 在「建立/編輯視訊編碼預設集」頁面上，點選「**[!UICONTROL 新增視訊編碼預設集]**」。
 1. 在&#x200B;**[!UICONTROL Basic]**標籤上，設定視訊和音訊選項。
 請點選每個選項旁的資訊圖示，以取得其他說明或根據選取的視訊格式codec建議的設定。
-1. （可選）在「視訊大小」標題下，取消選中「保留長寬比」。]****[!UICONTROL 
+1. （可選）在「視訊大小」標題下，取消勾選「保留長寬比&#x200B;**[!UICONTROL 」。]**
 1. 請執行下列動作：
-   * 在&#x200B;**[!UICONTROL Width]**&#x200B;欄位中，輸入&#x200B;**[!UICONTROL auto.]**
+   * 在&#x200B;**[!UICONTROL Width]**&#x200B;欄位中，輸入&#x200B;**[!UICONTROL auto]**。
    * 在&#x200B;**[!UICONTROL Height]**欄位中，以像素輸入值。
-若要協助您視覺化視訊的大小，請點選「高度」的資訊圖示，以開啟「大小計算器」**[!UICONTROL 頁面。]**&#x200B;使用&#x200B;**[!UICONTROL 大小計算器]**&#x200B;頁面進一步設定您想要的視訊維度（藍方塊）。 完成後，在對話框的右上角，點選&#x200B;**[!UICONTROL X.]**
+若要協助您視覺化視訊的大小，請點選「高度」的資訊圖示，以開啟「大小計算器」**[!UICONTROL 頁面。]**&#x200B;使用&#x200B;**[!UICONTROL 大小計算器]**&#x200B;頁面進一步設定您想要的視訊維度（藍方塊）。 完成後，在對話框的右上角，點選&#x200B;**[!UICONTROL X]**。
 1. （選用）執行下列其中一項作業：
 
    * 點選&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤，並確認已選取&#x200B;**[!UICONTROL Use Default Values]**&#x200B;核取方塊（建議）。
@@ -237,7 +237,7 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 1. （可選）若要將視訊智慧型裁切新增至將套用此設定檔的視訊，請執行下列動作：
 
-   * 在「編輯視訊描述檔」頁面的「智慧型裁切比例」標題的右側，點選「**[!UICONTROL 新增」。]**
+   * 在「編輯視訊描述檔」頁面的「智慧型裁切比例」標題的右側，點選「**[!UICONTROL 新增]**」。
    * 在「名稱」欄位中，輸入裁切比例的名稱，以便您輕鬆識別。
    * 從&#x200B;**[!UICONTROL 裁切比率]**&#x200B;下拉式清單中，選取您要使用的比率。
 
@@ -256,7 +256,7 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 **若要使用自訂新增的視訊編碼參數**:
 
-1. 點選AEM標誌，然後導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite」。]**
+1. 點選AEM標誌，然後導覽至「工 **[!UICONTROL 具]** >一 **[!UICONTROL 般]** > **[!UICONTROL CRXDE Lite]**」。
 1. 從「CRXDE Lite」頁面，在左側的「瀏覽器」面板中，導覽至下列項目：
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
@@ -308,11 +308,11 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 ![chlimage_1-516](assets/chlimage_1-516.png)
 
-1. 在頁面的右下角附近，點選「**[!UICONTROL Add.]**」
+1. 在頁面的右下角附近，點選&#x200B;**[!UICONTROL Add]**。
 1. 執行下列任一操作：
 
    * 重複步驟3和4，將其他參數新增至您的視訊編碼設定檔。
-   * 在頁面的左上角附近，點選「**[!UICONTROL 全部儲存」。]**
+   * 在頁面的左上角附近，點選「**[!UICONTROL Save All]**」。
 
 1. 在CRXDE Lite頁面的左上角，點選&#x200B;**[!UICONTROL Back Home]**&#x200B;圖示以返回AEM。
 
@@ -328,22 +328,22 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 **若要編輯視訊設定檔**:
 
-1. 點選AEM標誌並導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊描述檔」。]**
+1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 在視訊描述檔頁面上，檢查一個視訊描述檔名稱。
-1. 在工具列上，點選&#x200B;**[!UICONTROL 編輯。]**
+1. 在工具列上，點選&#x200B;**[!UICONTROL Edit]**。
 1. 在「視訊編碼描述檔」頁面上，視需要編輯名稱和說明。
 1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。點選資訊圖示以取得最適化串流的說明。（如果您正在編輯漸進式視訊設定檔，請勿選取此核取方塊。）
 1. 在「視訊編碼預設集」標題下，新增、編輯或刪除組成設定檔的視訊編碼預設集。
 
    請點選「基本」和「進階」標籤上每個選項旁的資訊圖示，以取得其他說明或根據選取的視訊格式codec建議的設定。********
 
-1. 在頁面的右上角，點選「**[!UICONTROL 儲存」。]**
+1. 在頁面的右上角，點選&#x200B;**[!UICONTROL Save]**。
 
 ### 複製視訊設定檔{#copying-a-video-encoding-profile}
 
-1. 點選AEM標誌並導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊描述檔」。]**
+1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 在視訊描述檔頁面上，檢查一個視訊描述檔名稱。
-1. 在工具列上，點選&#x200B;**[!UICONTROL Copy.]**
+1. 在工具列上，點選&#x200B;**[!UICONTROL Copy]**。
 1. 在「視訊編碼描述檔」頁面上，輸入描述檔的新名稱。
 1. 最佳實務是，請確定已選取「 **[!UICONTROL 最適化串流編碼]** 」核取方塊。點選資訊圖示以取得最適化串流的說明。 (如果您要複製漸進式視訊設定檔，請勿選取核取方塊。) 
 
@@ -352,14 +352,14 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
    點選「基本」和「進階」標籤上每個選項旁的資訊圖示，以取得建議的設定和說明。
 
-1. 在頁面的右上角，點選「**[!UICONTROL 儲存」。]**
+1. 在頁面的右上角，點選&#x200B;**[!UICONTROL Save]**。
 
 ### 刪除視訊設定檔{#deleting-a-video-encoding-profile}
 
-1. 點選AEM標誌並導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊描述檔」。]**
+1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 在視訊描述檔頁面上，檢查一或多個視訊描述檔名稱。
-1. 在工具列上，點選「 **[!UICONTROL 刪除」。]**
-1. 點選&#x200B;**[!UICONTROL 確定。]**
+1. 在工具列上，點選&#x200B;**[!UICONTROL Delete]**。
+1. 點選&#x200B;**[!UICONTROL 確定]**。
 
 ## 將視頻配置檔案應用於資料夾{#applying-a-video-profile-to-folders}
 
@@ -377,7 +377,7 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 ### 將視頻配置檔案應用到特定資料夾{#applying-video-profiles-to-specific-folders}
 
-您可以從「工具」菜單或在資料夾中從「屬性」將視頻配置檔案應 **[!UICONTROL 用到資料夾]****[!UICONTROL 。]**&#x200B;本節說明如何以兩種方式將視訊描述檔套用至資料夾。
+您可以從「工具」菜單或在資料夾中從「屬性」將視頻配置檔案應 **[!UICONTROL 用到資料夾]******。本節說明如何以兩種方式將視訊描述檔套用至資料夾。
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
@@ -385,16 +385,15 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 #### 透過設定檔使用者介面{#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}將視訊設定檔套用至資料夾
 
-1. 點選AEM標誌並導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊描述檔」。]**
+1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 選取您要套用至資料夾或多個資料夾的視訊設定檔。
-1. 點選 **[!UICONTROL 「將描述檔套用至檔案夾」]** ，然後選取您要用來接收新上傳資產的檔案夾或多個檔案夾，並點選「套 **[!UICONTROL 用」。]**&#x200B;在「卡片檢視」中，資料夾名稱正下方會顯示資料夾名稱，以指出已指派給資料夾的 **[!UICONTROL 資料夾。]**
-您可以 [監控視訊設定檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job)。
+1. 點選「**[!UICONTROL 將描述檔套用至資料夾]**」，然後選取您要用來接收新上傳資產的資料夾或多個資料夾，並點選「**[!UICONTROL 套用]**」。 在「卡片檢視」中，資料夾名稱正下方會顯示資料夾名稱，以指出已指派給資料夾的 **[!UICONTROL 資料夾]**。您可以[監視視訊設定檔處理工作](#monitoring-the-progress-of-an-encoding-job)的進度。
 
 #### 從「屬性」 {#applying-video-profiles-to-folders-from-properties}將視頻配置檔案應用到資料夾
 
 1. 點選或按一下AEM標誌，並導覽至&#x200B;**[!UICONTROL Assets]**，然後導覽至您要套用視訊描述檔的資料夾。
-1. 在資料夾中，點選核取標籤以選取，然後點選「屬性」。]****[!UICONTROL 
-1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，然後從下拉式選單中選取描述檔，然後按一下「 **[!UICONTROL 儲存並關閉」。]**&#x200B;已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 在資料夾中，點選核取標籤以選取，然後點選&#x200B;**[!UICONTROL 屬性]**。
+1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，然後從下拉式選單中選取描述檔，然後按一下「 **[!UICONTROL 儲存並關閉」]**。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
 您可以 [監控視訊設定檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job)。
@@ -405,9 +404,9 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 另請參閱[在編輯資料夾的處理設定檔](processing-profiles.md#reprocessing-assets)後，重新處理資料夾中的資產。
 
-**若要全域套用視訊設定檔**,
+**若要全域套用視訊設定檔：**
 
-* 導覽至CRXDE Lite至下列節點：`/content/dam/jcr:content`。 新增屬性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`，然後點選&#x200B;**[!UICONTROL 「全部儲存」。]**
+* 導覽至CRXDE Lite至下列節點：`/content/dam/jcr:content`。 新增屬性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`，然後點選&#x200B;**[!UICONTROL 「儲存全部」]**。
 
    ![chlimage_1-519](assets/chlimage_1-519.png)
 * 您可以[監視視訊設定檔處理工作](#monitoring-the-progress-of-an-encoding-job)的進度。
@@ -422,18 +421,18 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
 
 從資料夾移除視訊描述檔時，任何子資料夾都會自動從其父資料夾移除描述檔。 不過，資料夾內發生的檔案處理仍維持不變。
 
-您可以從「工具」功能表內的資料夾或在資料夾內的「資料夾設定」中移除視訊描述檔 ******[!UICONTROL 。]**&#x200B;本節說明如何以兩種方式從資料夾移除視訊描述檔。
+您可以從「工具」功能表內的資料夾或在資料夾內的「資料夾設定」中移除視訊描述檔 ********。本節說明如何以兩種方式從資料夾移除視訊描述檔。
 
 ### 透過設定檔使用者介面{#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}從資料夾中移除視訊設定檔
 
-1. 點選AEM標誌並導覽至「**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊描述檔」。]**
+1. 點選AEM標誌並導覽至「工 **[!UICONTROL 具]** > **[!UICONTROL 資產]** >視 **[!UICONTROL 訊設定檔]**」。
 1. 選取您要從資料夾或多個資料夾中移除的視訊設定檔。
-1. 點選&#x200B;**[!UICONTROL 「從資料夾移除描述檔」]**，然後選取您要用來從中移除描述檔的資料夾或多個資料夾，並點選&#x200B;**[!UICONTROL 「移除」。]**
+1. 點選 **[!UICONTROL 「從檔案夾移除描述檔]** 」，然後選取您要用來從中移除描述檔的檔案夾或多個檔案夾，並點選「 **[!UICONTROL 移除」]**。
 
    您可以確認視訊描述檔不再套用至資料夾，因為資料夾名稱下方不再顯示該名稱。
 
 ### 透過「屬性」 {#removing-video-profiles-from-folders-by-way-of-properties}從資料夾移除視訊描述檔
 
 1. 點選或按一下AEM標誌，並導覽至&#x200B;**[!UICONTROL Assets]**，然後導覽至您要移除視訊描述檔的資料夾。
-1. 在資料夾中，點選或按一下勾選記號以選取，然後點選或按一下「屬性」。]****[!UICONTROL 
-1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，並從下拉式選單中選 **[!UICONTROL 取「無]** 」，然後按一下「 **[!UICONTROL 儲存並關閉」。]**&#x200B;已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
+1. 在資料夾中，點選核取標籤以選取，然後點選&#x200B;**[!UICONTROL 屬性]**。
+1. 選擇「 **[!UICONTROL 視訊描述檔]** 」標籤，並從下拉式選單中選 **[!UICONTROL 取「無]** 」，然後按一下「 **[!UICONTROL 儲存並關閉」]**。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
