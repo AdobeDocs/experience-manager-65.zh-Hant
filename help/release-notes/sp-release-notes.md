@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 0f70c011cc192df0650c3ec666bae2c26653b444
+source-git-commit: 7d3c8d9266bdec3f75211cfa0636217fd8b054ca
 workflow-type: tm+mt
-source-wordcount: '3391'
+source-wordcount: '3874'
 ht-degree: 2%
 
 ---
@@ -75,6 +75,18 @@ ht-degree: 2%
       >
    * 2021年6月24日。
 
+
+* 能夠使用[!UICONTROL 指派任務]工作流步驟向組發送通知電子郵件。
+
+* 修改源互動式通信後檢索互動式通信草稿的功能。
+
+* 在[!DNL Experience Manager Forms]中為載入、呈現和驗證reCAPTCHA服務設定自定義域名。
+
+* [!UICONTROL 叫用表單資料模型服務]工作流程步驟的輸入資料增強功能。
+
+* 在[!DNL Experience Manager Forms]的「記錄文檔」模板中使用多個首頁。
+
+* [!DNL Experience Manager Forms]中記錄檔案中的支援分頁。
 
 * 內建存放庫(Apache Jackrabbit Oak)更新至1.22.7。
 
@@ -307,7 +319,50 @@ Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] 會在排程的 [!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
+>* [!DNL Experience Manager Forms] 會在排程的 [!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
+>* 您現在可以在OSGi部署上，使用[!DNL OpenJDK]組建的[!DNL Azul Zulu]來開發和操作應用程式，以適用於[!DNL Experience Manager Forms]。
+
+
+**調適型表單**
+
+* 產生多個翻譯字典時[!DNL Experience Manager Forms] 6.5.7.0中的語言初始化問題(NPR-36439)。
+* 將附件新增至最適化表單片段並提交表單時，[!DNL Experience Manager Forms]會顯示下列錯誤訊息(NPR-36195):
+
+   ```TXT
+    POST /content/forms/af/attachmentissue/jcr:content/guideContainer.af.submit.jsp HTTP/1.1] com.adobe.aemds.guide.servlet.GuideSubmitServlet [AF] Invalid file name or mime type for file resulted in submission failure
+   ```
+
+* 當您使用人工翻譯來更新字典並預覽最適化表單時，修改內容不會顯示(NPR-36035)。
+
+**互動式通訊**
+
+* 使用互動式通訊列印管道上傳影像並加以編輯時，影像不再顯示(NPR-36518)。
+
+* 編輯文字資產和填入預留位置時，會從導覽窗格中移除所有互動式元素(NPR-35991)。
+
+**工作流程**
+
+* 在JBoss上呼叫[!DNL Experience Manager Forms]服務的REST端點時，[!DNL Experience Manager]會顯示下列錯誤訊息(NPR-36305):
+
+   ```TXT
+   Invalid input. The maximum length of 2000 characters was exceeded.
+   ```
+
+**後端整合**
+
+* 將讀取服務引數系結至包含破折號的常值時，無法儲存表單資料模型(NPR-36366)。
+
+**文件安全性**
+
+* 當您設定GlobalSign的認證和HSM時，[!DNL Experience Manager Forms]在將時間戳記新增至LTV時顯示`Unsuported Algorithm`和`Invalid TSA Certificate`錯誤訊息(NPR-36026、NPR-36025)。
+
+**文件服務**
+
+* 更新[!DNL Gibson]程式庫以與[!DNL Experience Manager Forms]整合(NPR-36211)。
+
+**Foundation JEE**
+
+* 在AdminUI上選取「端點管理」時， [!DNL Experience Manager Forms]會顯示`endpoint registry failure`錯誤訊息(CQ-4320249)。
 
 如需安全性更新的資訊，請參閱[Experience Manager安全性佈告欄頁面](https://helpx.adobe.com/security/products/experience-manager.html)。
 
@@ -365,34 +420,31 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 若要了解經認證可與此版本搭配使用的平台，請參閱[技術需求](/help/sites-deploying/technical-requirements.md)。
 
-<!--
-
-### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+### 安裝Adobe Experience Manager Forms附加元件套件{#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->Skip if you are not using Experience Manager Forms. Fixes in Experience Manager Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+>如果您未使用Experience ManagerForms，請略過。 Experience ManagerForms中的修正，會在排程的[!DNL Experience Manager] Service Pack發行一週後，透過個別的附加套件提供。
 
-1. Ensure that you have installed the Adobe Experience Manager Service Pack.
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates) for your operating system.
-1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->AEM 6.5.9.0 includes a new version of [AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases). If you are using an older version of AEM Forms Compatibility Package and updating to AEM 6.5.9.0, install the latest version of the package post installation of Forms Add-On Package.
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+1. 確認您已安裝Adobe Experience Manager Service Pack。
+1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates)所列出的對應 Forms 附加套件。
+1. 依照[安裝Forms附加元件套件](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中所述安裝AEM Forms附加元件套件。
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>AEM 6.5.9.0包含新版[AEM Forms相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用舊版AEM Forms相容性套件並更新至AEM 6.5.9.0，請在安裝Forms附加元件套件後安裝最新版本的套件。
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+### 在JEE上安裝Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
--->
+>如果您沒有在JEE上使用AEM Forms，請略過。 JEE版Adobe Experience Manager Forms中的修正是透過個別安裝程式提供。
+
+如需有關在JEE上安裝Experience ManagerForms的累積安裝程式和部署後設定的資訊，請參閱[發行說明](jee-patch-installer-65.md)。
+
+>[!NOTE]
+>
+>在JEE上安裝Experience ManagerForms的Cumulative安裝程式後，請安裝最新的Forms附加元件套件，從`crx-repository\install`資料夾刪除Forms附加元件套件，然後重新啟動伺服器。
 
 ### UberJar {#uber-jar}
 
