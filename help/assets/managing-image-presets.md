@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 影像預設集
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '3830'
-ht-degree: 8%
+source-wordcount: '3831'
+ht-degree: 9%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 8%
 
 ## 管理Dynamic Media影像預設集{#managing-image-presets-1}
 
-您可以點選或按一下AEM標誌以存取全域導覽主控台，然後點選或按一下「工具」圖示，然後導覽至「**[!UICONTROL 資產>影像預設集」，以管理AEM中的影像預設集。]**
+您可以點選或按一下AEM標誌以存取全域導覽主控台，然後點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL Assets > Image Presets]**，以管理AEM中的影像預設集。
 
 ![6_5_tools-assets-imagepresets](assets/6_5_tools-assets-imagepresets.png)
 
@@ -80,11 +80,11 @@ Adobe Illustrator的檔案格式是PDF的變體。 AEM Assets的主要差異如�
 * Adobe Illustrator檔案包含單一頁面及多個層。 每個層會擷取為主要Illustrator資產下的PNG子資產。
 * PDF文檔由一頁或多頁組成。 每個頁面都會擷取為主多頁PDF檔案下的單頁PDF子資產。
 
-子資產由整體`DAM Update Asset`工作流程中的`Create Sub Asset process`元件建立。 若要在工作流程中查看此流程元件，請點選「 **[!UICONTROL 工具>工作流程>模型> DAM更新資產>編輯」。]**
+子資產由整體`DAM Update Asset`工作流程中的`Create Sub Asset process`元件建立。 若要在工作流程中查看此程式元件，請點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**」。
 
 另請參閱[檢視多頁檔案的頁面](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)。
 
-開啟資產時，您可以檢視子資產或頁面，點選「內容」功能表，然後選取&#x200B;**[!UICONTROL Subassets]**&#x200B;或&#x200B;**[!UICONTROL 頁面。]** 子資產是真實資產。也就是說，PDF頁面由`Create Sub Asset`工作流程元件擷取。 接著會儲存為主要資產下方的`page1.pdf`、`page2.pdf`等項目。 儲存後， `DAM Update Asset`工作流程會處理它們。
+開啟資產時，您可以檢視子資產或頁面，點選「內容」功能表，然後選取&#x200B;**[!UICONTROL Subassets]**&#x200B;或&#x200B;**[!UICONTROL Pages]**。 子資產是真實資產。 也就是說，PDF頁面由`Create Sub Asset`工作流程元件擷取。 接著會儲存為主要資產下方的`page1.pdf`、`page2.pdf`等項目。 儲存後， `DAM Update Asset`工作流程會處理它們。
 
 若要使用Dynamic Media來預覽和產生AI、EPS或PDF檔案的動態轉譯，需要下列處理步驟：
 
@@ -105,7 +105,7 @@ Adobe Illustrator的檔案格式是PDF的變體。 AEM Assets的主要差異如�
 
 您可以通過`DAM Update Asset`工作流訪問`Rasterize PDF/AI Image Preview Rendition`進程元件選項。
 
-點選左上角的Adobe Experience Manager，導覽至「**[!UICONTROL 工具>工作流程>模型」。]** 在「工作流模型」頁面上，選 **[!UICONTROL 取「DAM更新資產」]**，然後在工具列上點選「編 **[!UICONTROL 輯」。]** 在「DAM更 [!UICONTROL 新資產] 流量」頁面上，點選兩下流程 `Rasterize PDF/AI Image Preview Rendition` 元件以開啟其「步驟屬性」對話方塊。
+點選左上角的Adobe Experience Manager，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**。 在「工作流模型」頁面上，選擇「**[!UICONTROL DAM更新資產]**」，然後在工具欄點選「**[!UICONTROL 編輯]**」。 在[!UICONTROL DAM更新資產]工作流程頁面上，點選兩下`Rasterize PDF/AI Image Preview Rendition`處理元件以開啟其「步驟屬性」對話方塊。
 
 #### 柵格化PDF/AI影像預覽轉譯選項{#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -203,7 +203,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 >* EPS檔案的縮圖大小是在 **[!UICONTROL EPS縮圖步驟(「縮圖]** 」(Thumbnails)下的「參數」( **[!UICONTROL Arguments]** )頁籤中配置的。
    >
    >
-* 視訊的縮圖大小是在&#x200B;**[!UICONTROL FFmpeg縮圖]**&#x200B;步驟中，在&#x200B;**[!UICONTROL Process]**&#x200B;標籤的&#x200B;**[!UICONTROL Arguments下配置。]**
+* 視訊的縮圖大小是在「參數」下的「 **[!UICONTROL Process]** 」 (處理) 頁籤的「 **[!UICONTROL FFmpeg縮圖]** 」步驟中設定 ****。
 
 >
 
@@ -211,12 +211,12 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 **若要設定影像縮圖大小**:
 
-1. 點選「 **[!UICONTROL 工具>工作流程>模型> DAM更新資產>編輯」。]**
-1. 點選&#x200B;**[!UICONTROL Dynamic Media處理影像資產]**&#x200B;步驟，然後點選或按一下&#x200B;**[!UICONTROL 縮圖]**&#x200B;標籤。 視需要變更縮圖大小，然後點選&#x200B;**[!UICONTROL 確定。]**
+1. 點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**。
+1. 點選&#x200B;**[!UICONTROL Dynamic Media處理影像資產]**&#x200B;步驟，然後點選或按一下&#x200B;**[!UICONTROL 縮圖]**&#x200B;標籤。 視需要變更縮圖大小，然後點選「 **[!UICONTROL 確定]**」。
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. 點選「處 **[!UICONTROL 理縮圖]** 」步驟，然後點選「縮 **[!UICONTROL 圖]** 」標籤。視需要變更縮圖大小，然後點選&#x200B;**[!UICONTROL 確定。]**
+1. 點選「處 **[!UICONTROL 理縮圖]** 」步驟，然後點選「縮 **[!UICONTROL 圖]** 」標籤。視需要變更縮圖大小，然後點選「 **[!UICONTROL 確定]**」。
 
    >[!NOTE]
    >
@@ -226,7 +226,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 ### 增加或減少顯示{#increasing-or-decreasing-the-number-of-image-presets-that-display}的Dynamic Media影像預設集數目
 
-您建立的影像預設集在您預覽資產時可以動態轉譯。 AEM會在從&#x200B;**[!UICONTROL 「詳細資料檢視」>「轉譯」檢視資產時顯示各種動態轉譯。]** 您可以增加或減少顯示的轉譯限制。
+您建立的影像預設集在您預覽資產時可以動態轉譯。 AEM會在從&#x200B;**[!UICONTROL 「詳細資料檢視」>「轉譯」檢視資產時顯示各種動態轉譯。]**&#x200B;您可以增加或減少顯示的轉譯限制。
 
 **若要增加或減少顯示的Dynamic Media影像預設集數目**:
 
@@ -241,7 +241,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. 在limit屬性中，將數字變更為所需數字，例如`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 點選「**[!UICONTROL 全部儲存」。]**
+1. 點選「**[!UICONTROL 儲存全部]**」。
 
 ## 建立Dynamic Media影像預設集{#creating-image-presets}
 
@@ -263,8 +263,8 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 **若要建立Dynamic Media影像預設集**:
 
-1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具>資產>影像預設集。]**
-1. 按一下&#x200B;**[!UICONTROL 建立。]** 「編 **[!UICONTROL 輯影像」]** 對話框開啟。
+1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具>資產>影像預設集]**。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。將開啟「**[!UICONTROL 編輯影像預設集]**」窗口。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
 
@@ -304,7 +304,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 * **[!UICONTROL 啟用簡單銳利化]** -請勿選取「啟用簡 **** 單銳利化」 (此銳利化濾鏡提供的控制力比「非銳利化遮色片」設定少)。
 
-* **[!UICONTROL 銳利化：重新取樣模式]**  — 選取 **[!UICONTROL 雙立方體。]**
+* **[!UICONTROL 銳利化：重新取樣模]** 式 — 選 **[!UICONTROL 取雙三次]**。
 
 #### 基本頁簽選項{#basic-tab-options}
 
@@ -495,11 +495,11 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 ## 編輯影像預設集{#modifying-image-presets}
 
-1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具>資產>影像預設集。]**
+1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**。
 
    ![6_5_imagepreset_editpreset](assets/6_5_imagepreset-editpreset.png)
 
-1. 選取預設集，然後按一下「**[!UICONTROL 編輯」。]** 「編 **[!UICONTROL 輯影像」]** 對話框開啟。
+1. 選取預設集，然後按一下「**[!UICONTROL 編輯]**」。 將開啟「**[!UICONTROL 編輯影像預設集]**」窗口。
 1. 進行更改，然後按一下「保存&#x200B;****」以保存更改，或按一下「取消&#x200B;****」以取消更改。
 
 ## 發佈Dynamic Media影像預設集{#publishing-image-presets}
@@ -510,14 +510,14 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 **若要在Dynamic Media — 混合模式中發佈影像預設集**:
 
-1. 在AEM中，點選或按一下AEM標誌以存取全域導覽主控台，點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL Assets > Image Presets。]**
-1. 從影像預設集清單中選取影像預設集或多個影像預設集，然後按一下或點選「**[!UICONTROL 發佈」。]**
+1. 在AEM中，點選或按一下AEM標誌以存取全域導覽主控台，點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**。
+1. 從影像預設集清單中選取影像預設集或多個影像預設集，然後按一下或點選&#x200B;**[!UICONTROL Publish]**。
 1. 影像預設集發佈後，狀態會從未發佈變更為已發佈。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
 ## 刪除Dynamic Media影像預設集{#deleting-image-presets}
 
-1. 在AEM中，點選或按一下AEM標誌以存取全域導覽主控台。
-1. 點選&#x200B;**[!UICONTROL 工具]**&#x200B;圖示，然後導覽至&#x200B;**[!UICONTROL 資產>影像預設集。]**
+1. 在Experience Manager中，點選或按一下AEM標誌以存取全域導覽主控台。
+1. 點選&#x200B;**[!UICONTROL 工具]**&#x200B;圖示，然後導覽至&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**。
 1. 選取預設集，然後按一下&#x200B;**[!UICONTROL Delete]**。 Dynamic Media會確認您要刪除它。 點選&#x200B;**[!UICONTROL 刪除]**&#x200B;以刪除，或點選&#x200B;**[!UICONTROL 取消]**&#x200B;以中止。
