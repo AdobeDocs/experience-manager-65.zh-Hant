@@ -10,9 +10,9 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: Business Practitioner, Administrator
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: 發佈，配置
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '732'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ HTTP/2改進了瀏覽器和伺服器的通信方式，允許更快地傳輸資�
 
 以下網站以簡單簡短的方式說明HTTP/2及其優點：
 
-[https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)
+[關於HTTP/2您必須了解的事項](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
 ## 轉移至HTTP/2以進行內容傳送的主要優點為何？{#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -62,7 +62,7 @@ Adobe自己的測試得出以下結果：
 
 您啟動切換到HTTP/2的請求；不會自動為您完成。
 
-1. 若要切換至HTTP/2，請起始Adobe客戶服務請求。 請參閱[存取AEM支援入口網站](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html)。
+1. 若要切換至HTTP/2，請起始Adobe客戶服務請求。 請參閱[存取Adobe Experience Manager支援入口網站](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html)。
 
    1. 在您的支援請求中提供下列資訊：
 
