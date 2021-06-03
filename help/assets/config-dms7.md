@@ -9,9 +9,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: 485464350f391fca327207b78b165897fdacc2d3
+source-git-commit: 90737593086c680f0a948f5b9cab6e58767b6373
 workflow-type: tm+mt
-source-wordcount: '6156'
+source-wordcount: '6153'
 ht-degree: 5%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 5%
 
 ## 在Scene7模式{#enabling-dynamic-media-in-scene-mode}中啟用Dynamic Media
 
-[動態](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) 媒體預設為停用。若要運用Dynamic Media功能，您必須啟用此功能。
+[動態](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 媒體預設為停用。若要運用Dynamic Media功能，您必須啟用此功能。
 
 >[!WARNING]
 Dynamic Media - Scene7模式僅適用於&#x200B;*Experience Manager製作例項*。 因此，您必須在「Experience Manager製作」例項上設定`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager發佈例項。*
@@ -76,7 +76,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 Feature Pack 18912的安裝為&#x200B;*optional*。
 
-Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manager上從Dynamic Media — 混合模式或Dynamic Media Classic移轉至Dynamic Media - Scene7模式。 可從[Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html)取得。
+Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manager上從Dynamic Media — 混合模式或Dynamic Media Classic移轉至Dynamic Media - Scene7模式。 可從[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)取得。
 
 如需詳細資訊，請參閱[安裝功能套件18912以移轉大量資產](/help/assets/bulk-ingest-migrate.md) 。
 
@@ -88,7 +88,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 **若要在Cloud Services中建立Dynamic Media設定：**
 
-1. 在「Experience Manager作者」模式中，點選Experience Manager標誌以存取全域導覽主控台，並點選「工具」圖示，然後點選「**[!UICONTROL Cloud Services>Dynamic Media設定]**」。
+1. 在「Experience Manager作者」模式中，點選Experience Manager標誌以存取全域導覽主控台，並點選「工具」圖示，然後點選「**[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media設定]**」。
 1. 在「動態媒體設定瀏覽器」頁面的左側窗格中，點選 **[!UICONTROL global]** (不點選或選取全域左側的資料夾圖示 ****)，然後點選「 **[!UICONTROL 建立]**」。
 1. 在&#x200B;**[!UICONTROL 建立Dynamic Media設定]**&#x200B;頁面上，輸入標題、Dynamic Media帳戶電子郵件地址、密碼，然後選取您的地區。 此資訊是透過布建電子郵件中的Adobe提供給您的。 如果您未收到電子郵件，請聯絡Adobe客戶服務。
 
@@ -109,7 +109,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
          ![「在Dynamic Media發佈後復寫中繼資料」核取方塊](assets-dm/replicate-metadata-setting.png)
 
-      * **[!UICONTROL 選擇]** 性發佈此選項可讓您控制要在Dynamic Media中發佈的資料夾。它可讓您使用智慧型裁切或動態轉譯等功能，或決定要預覽的Experience Manager中專門發佈的資料夾。 這些相同的資產是在Dynamic Media中發佈，並在公共網域中傳送的&#x200B;*not*。<br>您可以在Dynamic Media雲端設定的 **[!UICONTROL 此處]** 設定此選項，或者您可以在資料夾屬性 **[!UICONTROL 的資料夾層級選擇設定此]**&#x200B;選項。<br>請參閱[在 Dynamic Media 中使用選擇性發佈。](/help/assets/selective-publishing.md)<br>如果您稍後變更此設定，或稍後在資料夾層級變更，這些變更只會影響您從此時間點上傳的新資產。資料夾中現有資產的發佈狀態會維持原狀，直到您從&#x200B;**[!UICONTROL 快速發佈]**&#x200B;或&#x200B;**[!UICONTROL 管理出版物]**&#x200B;對話方塊手動變更為止。
+      * **[!UICONTROL 選擇]** 性發佈此選項可讓您控制要在Dynamic Media中發佈的資料夾。它可讓您使用智慧型裁切或動態轉譯等功能，或決定要預覽的Experience Manager中專門發佈的資料夾。 這些相同的資產是在Dynamic Media中發佈，並在公共網域中傳送的&#x200B;*not*。<br>您可以在Dynamic Media雲端設定的 **[!UICONTROL 此處]** 設定此選項，或者您可以在資料夾屬性 **[!UICONTROL 的資料夾層級選擇設定此]**&#x200B;選項。<br>請參 [閱在Dynamic Media中使用選擇性發佈](/help/assets/selective-publishing.md)。<br>如果您稍後變更此設定，或稍後在資料夾層級變更，這些變更只會影響您從此時間點上傳的新資產。資料夾中現有資產的發佈狀態會維持原狀，直到您從&#x200B;**[!UICONTROL 快速發佈]**&#x200B;或&#x200B;**[!UICONTROL 管理出版物]**&#x200B;對話方塊手動變更為止。
    * **[!UICONTROL 安全預覽伺服器]**  — 可讓您指定安全轉譯預覽伺服器的URL路徑。也就是說，產生轉譯後，Experience Manager可以安全地存取和預覽遠端Dynamic Media轉譯(不會將任何二進位檔傳回至Experience Manager執行個體)。
 除非您有使用自己公司的伺服器或特殊伺服器的特殊安排，否則Adobe建議您保留此設定的指定。
 
@@ -117,7 +117,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
    * **[!UICONTROL Dynamic Media 同步處理模式]**
       * **[!UICONTROL 預設啟用]**  — 除非您特別標示要排除的資料夾，否則預設會將設定套用至所有資料夾。  <!-- you can then deselect the folders that you do not want the configuration applied to.-->
-      * **[!UICONTROL 預設為停用]**  — 在您明確標示選取的資料夾以同步至Dynamic Media之前，不會將設定套用至任何資料夾。若要將選取的資料夾標示為同步至Dynamic Media，請選取資產資料夾，然後在工具列上，點選&#x200B;**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL Details]**&#x200B;頁簽的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉清單中，從以下三個選項中選擇。 完成後，點選&#x200B;**[!UICONTROL Save]**。 *記住：如果您選取「同步所有contentier」，則這三&#x200B;**個選項不**可用。* 另請參 [閱在Dynamic Media的資料夾層級使用選擇性發佈。](/help/assets/selective-publishing.md)
+      * **[!UICONTROL 預設為停用]**  — 在您明確標示選取的資料夾以同步至Dynamic Media之前，不會將設定套用至任何資料夾。若要將選取的資料夾標示為同步至Dynamic Media，請選取資產資料夾，然後在工具列上，點選&#x200B;**[!UICONTROL 屬性]**。 在&#x200B;**[!UICONTROL Details]**&#x200B;頁簽的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉清單中，從以下三個選項中選擇。 完成後，點選&#x200B;**[!UICONTROL Save]**。 *記住：如果您選取「同步所有contentier」，則這三&#x200B;**[!UICONTROL 個選項不]**可用。* 另請參 [閱在Dynamic Media的資料夾層級使用選擇性發佈](/help/assets/selective-publishing.md)。
          * **[!UICONTROL 繼承]**  — 資料夾上沒有明確的同步值；相反，資料夾會繼承其上階資料夾中的一個同步值，或繼承雲配置中的預設模式。繼承的詳細狀態會透過工具提示顯示。
          * **[!UICONTROL 啟用子資料夾]**  — 在此子樹狀結構中包含所有項目，以便同步至Dynamic Media。資料夾特定設定會覆寫雲端設定中的預設模式。
          * **[!UICONTROL 針對子資料夾停用]**  — 排除此子樹狀結構中的所有項目，使其無法同步至Dynamic Media。
@@ -131,7 +131,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
    * 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。 配置時，Adobe提供了您的憑據和登錄詳細資訊。 如果您沒有此資訊，請聯繫技術支援。
 
-   * 在頁面右上角的導覽列中，點選「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器]**」。
+   * 在頁面右上角的導覽列中，點選「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**」。
 
    * 在「影像伺服器發佈」頁面的「發佈內容」下拉式清單中，選取「測試影像伺服」**[!UICONTROL 。]**
    * 對於「用戶端位址」篩選器，點選&#x200B;**[!UICONTROL Add]**。
@@ -171,7 +171,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 「發佈設定」設定決定預設如何從Dynamic Media傳送資產。 如果未指定任何設定，Dynamic Media會根據「發佈設定」中定義的預設設定來傳送資產。 例如，傳送不包含解析度屬性的影像請求，會產生具有預設物件解析度設定的影像。
 
-若要設定發佈設定：在Dynamic Media Classic中，點選「 **[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器]**」。
+若要設定發佈設定：在Dynamic Media Classic中，點選&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**。
 
 「影像伺服器」螢幕建立用於傳送影像的預設設定。 請參閱UI畫面，了解每個設定的說明。
 
@@ -181,11 +181,11 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 * **[!UICONTROL 目錄欄位的預設值]** — 這些設定與影像的解析度和預設縮圖類型相關。
 * **[!UICONTROL 顏色管理屬性]**  — 這些設定將決定要使用的ICC顏色配置檔案。
 * **[!UICONTROL 相容性屬性]**  — 此設定可讓文字層中的前導和尾隨段落，如同在3.6版中一樣處理，以提供回溯相容性。
-* **[!UICONTROL 本地化支援]**  — 這些設定可讓您管理多個地區設定屬性。它也可讓您指定地區對應字串，以便定義要在檢視器中支援各種工具提示的語言。 有關設定&#x200B;**[本地化支援]**&#x200B;的詳細資訊，請參閱設定資產本地化時的注意事項[](https://help.adobe.com/en_US/scene7/using/WS997f1dc4cb0179f034e07dc31412799d19a-8000.html)。
+* **[!UICONTROL 本地化支援]**  — 這些設定可讓您管理多個地區設定屬性。它也可讓您指定地區對應字串，以便定義要在檢視器中支援各種工具提示的語言。 有關設定&#x200B;**[本地化支援]**&#x200B;的詳細資訊，請參閱設定資產本地化時的注意事項[](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=en#considerations-when-setting-up-localization-of-assets)。
 
 #### 配置應用程式常規設定{#configuring-application-general-settings}
 
-若要開啟「應用程式一般設定」頁面，請在Dynamic Media Classic全域導覽列中，點選&#x200B;**[!UICONTROL 設定>應用程式設定>一般設定]**。
+若要開啟「應用程式一般設定」頁面，請在Dynamic Media Classic全域導覽列中，點選&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**。
 
 **[!UICONTROL 伺服器]**  — 在帳戶布建時，Dynamic Media會自動為您的公司提供指派的伺服器。這些伺服器可用來建構您網站和應用程式的URL字串。 這些URL呼叫是您的帳戶專屬的。 除非Adobe客戶服務明確指示，否則請勿變更任何伺服器名稱。
 
@@ -248,7 +248,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 **要編輯支援格式的MIME類型，請執行以下操作：**
 
-1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具>一般>CRXDE Lite]**。
+1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左側邊欄中，導覽至下列項目：
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -275,7 +275,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 **為不支援的格式添加MIME類型：**
 
-1. 從Experience Manager，點選&#x200B;**[!UICONTROL 工具>操作> Web Console]**。
+1. 從Experience Manager，點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -293,7 +293,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 1. 在您剛新增的空白文字欄位中輸入`DWG=image/vnd.dwg`。
 
-   範例`DWG=image/vnd.dwg`僅供說明之用。 您在此處新增的MIME類型可能是任何其他不支援的格式。
+   範例`DWG=image/vnd.dwg`僅供示範之用。 您在此處新增的MIME類型可能是任何其他不支援的格式。
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
@@ -302,7 +302,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
    此時，您可以關閉開啟「Adobe Experience Manager Web Console設定」頁面的瀏覽器標籤。
 
 1. 返回具有開啟的Experience Manager控制台的瀏覽器頁簽。
-1. 從Experience Manager，點選&#x200B;**[!UICONTROL 工具>一般>CRXDE Lite]**。
+1. 從Experience Manager，點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -329,7 +329,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 上傳檔案時，Dynamic Media會自動建立一組檔案，其中包含所有符合使用中預設集中所定義命名慣例的檔案。
 
-**配置預設命名**
+##### 配置預設命名
 
 建立用於任何批集預設配方的預設命名慣例。 在批集預設集定義中選取的預設命名慣例可能是貴公司為批生成集所需的全部。 系統會建立批集預設集，以使用您定義的預設命名慣例。 如果公司定義的預設命名有例外，您可以建立任意數量的批集預設集，其中包含特定內容集所需的替代自定義命名慣例。
 
@@ -345,7 +345,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
    配置時，Adobe提供了您的憑據和登錄詳細資訊。 如果您沒有此資訊，請聯繫技術支援。
 
-1. 在頁面頂端附近的導覽列中，點選&#x200B;**[!UICONTROL 設定>應用程式設定>批次集預設集>預設命名]**。
+1. 在頁面頂端附近的導覽列中，點選「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Default Naming]**」。
 1. 選擇 **[!UICONTROL 「查看表單]** 」或「 **[!UICONTROL 查看代碼」]** ，以指定要查看的方式並輸入有關每個元素的資訊。
 
    您可以選取&#x200B;**[!UICONTROL 檢視程式碼]**&#x200B;核取方塊，檢視建立與表單選取項目一併的規則運算式值。 如果表單視圖因任何原因限制您，則可以輸入或更改這些值，以幫助定義命名約定的元素。 如果無法在表單檢視中剖析您的值，表單欄位就會變成非作用中。
@@ -364,7 +364,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
    * 點選&#x200B;**[!UICONTROL 另存新檔]**&#x200B;並輸入預設集的名稱。
    * 如果您正在編輯現有的預設集，請點選「**[!UICONTROL 儲存]**」。
 
-**建立批集預設集**
+##### 建立批集預設集
 
 Dynamic Media使用批次集預設集，將資產組織成影像集（替代影像、顏色選項、360回轉），以便在檢視器中顯示。 批次集預設集會在Dynamic Media中與資產上傳程式一起自動執行。
 
@@ -378,7 +378,7 @@ Dynamic Media使用批次集預設集，將資產組織成影像集（替代影�
 
    配置時，Adobe提供了您的憑據和登錄詳細資訊。 如果您沒有此資訊，請聯繫技術支援。
 
-1. 在頁面頂端附近的導覽列中，點選&#x200B;**[!UICONTROL 設定>應用程式設定>批次集預設集>批次集預設集]**。
+1. 在頁面頂端附近的導航欄上，點選&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]**。
 
    **[!UICONTROL 「檢視表單]**」（如「詳細資料」頁面右上角的設定）是預設檢視。
 
@@ -387,7 +387,7 @@ Dynamic Media使用批次集預設集，將資產組織成影像集（替代影�
 1. 在「批集類型」下拉菜單中，選擇預設類型。
 1. 執行下列任一操作：
 
-   * 如果您使用先前在&#x200B;**[!UICONTROL 「應用程式設定」>「批集預設集」>「預設命名」]**&#x200B;下設定的預設命名慣例，請展開&#x200B;**[!UICONTROL 「資產命名慣例」]**，然後在「檔案命名」下拉式清單中，點選&#x200B;**[!UICONTROL 「預設]**」。
+   * 如果您使用先前在&#x200B;**[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Default Naming]**&#x200B;下設定的預設命名慣例，請展開&#x200B;**[!UICONTROL Asset Naming Conventions]**，然後在「File Naming」下拉式清單中，點選&#x200B;**[!UICONTROL Default]**。
 
    * 若要在設定預設集時定義新的命名慣例，請展開&#x200B;**[!UICONTROL 資產命名慣例]**，然後在「檔案命名」下拉式清單中，點選&#x200B;**[!UICONTROL 自訂]**。
 
@@ -404,7 +404,7 @@ Dynamic Media使用批次集預設集，將資產組織成影像集（替代影�
 
    啟動預設會確保當您將資產上傳至Dynamic Media時，會套用批次集預設集以產生該集。
 
-**建立批集預設集以自動生成2D回轉集**
+##### 建立批集預設集以自動生成2D回轉集
 
 您可以使用批集類型&#x200B;**[!UICONTROL 多軸回轉集]**&#x200B;建立自動生成2D回轉集的方式。 影像分組使用「列」和「列」規則運算式，以便在多維度陣列中的對應位置正確對齊影像資產。 在多軸回轉集中，沒有必須具有的最小或最大行數或列數。
 
@@ -424,9 +424,9 @@ spin-01-01
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
-對回轉集的共用資產名稱部分進行分組會新增至「**符合**」欄位（如醒目提示）。 包含行和列的資產名稱的變數部分將分別添加到 **行** 和 **列欄位中** 。
+對回轉集的共用資產名稱部分進行分組會新增至「**[!UICONTROL 符合]**」欄位（如醒目提示）。 包含行和列的資產名稱的變數部分將分別添加到 **[!UICONTROL 行]** 和 **[!UICONTROL 列欄位中]** 。
 
-上傳和發佈回轉集時，您會啟用「上傳工作選項」對話方塊中「批次集預設集」下方所列的2D回轉集 **方式名稱****** 。
+上傳和發佈回轉集時，您會啟用「上傳工作選項」對話方塊中「批次集預設集」下方所列的2D回轉集 **[!UICONTROL 方式名稱]****** 。
 
 **要為自動生成2D回轉集建立批集預設集，請執行以下操作：**
 
@@ -434,7 +434,7 @@ spin-01-01
 
    配置時，Adobe提供了您的憑據和登錄詳細資訊。 如果您沒有此資訊，請聯繫技術支援。
 
-1. 在頁面頂端附近的導航欄上，點選&#x200B;**[!UICONTROL Setup] > [!UICONTROL Application Setup] > [!UICONTROL Batch Set Presets] > [!UICONTROL Batch Set Preset]**。
+1. 在頁面頂端附近的導航欄上，點選&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]**。
 
    **[!UICONTROL 「檢視表單]**」（如「詳細資料」頁面右上角的設定）是預設檢視。
 
@@ -469,7 +469,7 @@ spin-01-01
 
    `\w+-\w+-C(\d+)`
 
-   上述範例僅供說明之用。 您可以建立規則運算式，但需視需要而定。
+   上述範例僅供示範之用。 您可以建立規則運算式，但需視需要而定。
 
    >[!NOTE]
    如果列和欄規則運算式的組合無法判斷資產在多維度回轉集陣列內的位置，資產不會新增至集。 也會記錄錯誤。
@@ -591,41 +591,17 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
 如果您使用Dynamic Media進行影像處理或影片，或兩者皆使用，則可使用Adobe依原樣提供的預設篩選器。 下列篩選器預設為作用中：
 
-<table>
- <tbody>
-  <tr>
-   <td> </td>
-   <td><strong>篩選</strong></td>
-   <td><strong>Mime類型</strong></td>
-   <td><strong>轉譯</strong></td>
-  </tr>
-  <tr>
-   <td>Dynamic Media影像傳送</td>
-   <td><p>濾鏡影像</p> <p>篩選集</p> <p> </p> </td>
-   <td><p>開頭為<strong>image/</strong></p> <p>包含<strong>application/</strong>，並以<strong>set</strong>結尾。</p> </td>
-   <td>現成可用的「篩選影像」（套用至單一影像資產，包括互動式影像）和「篩選集」（套用至回轉集、影像集、混合媒體集和轉盤集）將：
-    <ul>
-     <li>從復寫中排除原始影像和靜態影像轉譯。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>Dynamic Media影片傳送</td>
-   <td>filter-video</td>
-   <td>開頭為<strong>video/</strong></td>
-   <td>現成可用的「filter-video」將：
-    <ul>
-     <li>從複製中排除原始視訊和靜態縮圖轉譯。<br /> <br /> </li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+|  | 篩選 | Mime類型 | 轉譯 |
+| --- | --- | --- | --- |
+| Dynamic Media影像傳送 | filter-image<br>filter-sets | 開頭為&#x200B;**image/**<br>&#x200B;包含&#x200B;**applications/**，結尾為&#x200B;**set**。 | 現成可用的「篩選影像」（套用至單一影像資產，包括互動式影像）和「篩選集」（套用至回轉集、影像集、混合媒體集和轉盤集）將：<br>·排除不複製原始影像和靜態影像轉譯。 |
+| Dynamic Media影片傳送 | filter-video | 開頭為&#x200B;**video/** | 現成可用的「篩選視訊」將：<br>·從復寫原始視訊和靜態縮圖轉譯中排除。 |
 
 >[!NOTE]
 篩選器會套用至MIME類型，且不能是路徑專屬的。
 
 #### 自訂復寫的資產篩選器{#customizing-asset-filters-for-replication}
 
-1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具>一般>CRXDE Lite]**。
+1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左側資料夾樹中，導覽至`/etc/replication/agents.author/publish/jcr:content/damRenditionFilters`以檢閱篩選器。
 
    ![chlimage_1-17](assets/chlimage_1-2.png)
@@ -648,31 +624,16 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
    可用於篩選複製的字元包括：
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>要使用的字元</strong></td>
-   <td><strong>如何篩選資產以進行復寫</strong></td>
-  </tr>
-  <tr>
-   <td>*</td>
-   <td>萬用字元</td>
-  </tr>
-  <tr>
-   <td>+</td>
-   <td>包含復寫資產。</td>
-  </tr>
-  <tr>
-   <td>-</td>
-   <td>排除復寫中的資產。</td>
-  </tr>
- </tbody>
-</table>
+   | 要使用的字元 | 如何篩選資產以進行復寫 |
+   | --- | --- |
+   | * | 萬用字元 |
+   | + | 包括用於複製的資產 |
+   | - | 排除復寫中的資產 |
 
-導航到 `content/dam/<locate your asset>/jcr:content/renditions`.
+   導航到 `content/dam/<locate your asset>/jcr:content/renditions`.
 
-下圖是資產轉譯的範例。
+   下圖是資產轉譯的範例。
 
-![chlimage_1-4](assets/chlimage_1-4.png)
+   ![chlimage_1-4](assets/chlimage_1-4.png)
 
-如果只想複製原始檔案，則輸入`+original`。
+   如果只想複製原始檔案，則輸入`+original`。
