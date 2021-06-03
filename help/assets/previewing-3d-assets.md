@@ -6,7 +6,7 @@ docset: aem65
 feature: 3D資產
 role: Business Practitioner
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 11%
@@ -55,7 +55,7 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
 
 1. 請確定您已將3D資產上傳至Experience Manager。
 請參閱[支援的3D預覽格式](#supported-3d-previewing-assets)和[上傳資產](/help/assets/manage-assets.md#uploading-assets)。
-1. 從Experience Manager，在&#x200B;**[!UICONTROL 導覽]**&#x200B;頁面上，點選&#x200B;**[!UICONTROL 資產>檔案。]**
+1. 從Experience Manager，在&#x200B;**[!UICONTROL 導覽]**&#x200B;頁面上，點選&#x200B;**[!UICONTROL 資產>檔案]**。
 
    ![導覽頁面](/help/assets/assets-dm/navigation-assets.png)
 
@@ -79,4 +79,4 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
    | **重設** | 在頁面的右下角附近，點選「重設」圖示，將檢視目標點還原到3D資產的中央。 重置還使相機更近或更遠地移開，以便以合理的觀看大小顯示資產的整體。 |  |  |
    | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，點選「全螢幕」圖示。 |  |  |
 
-1. 完成後，在頁面右上角附近，點選「**[!UICONTROL 關閉」。]**
+1. 完成後，在頁面右上角附近，點選「**[!UICONTROL Close]**」。
