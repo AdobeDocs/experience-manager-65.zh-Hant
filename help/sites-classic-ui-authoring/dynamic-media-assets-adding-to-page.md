@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 3%
@@ -43,7 +43,7 @@ ht-degree: 3%
 
 ## Dynamic Media元件{#dynamic-media-components}
 
- Sidekick底下 [!UICONTROL 的] Dynamic Media和Interactive   Media可 **[!UICONTROL 用。]** 您可以對任 **[!UICONTROL 何互]** 動式資產（例如互動式視訊、互動式影像或轉盤集）使用互動式媒體元件。對於所有其他Dynamic Media元件，請使用&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;元件。
+ Sidekick底下 [!UICONTROL 的] Dynamic Media和Interactive   Media可 **[!UICONTROL 用Dynamic Media]**。您可以對任何互動式資產（例如互動式視訊、互動式影像或轉盤集）使用&#x200B;**[!UICONTROL 互動式媒體]**&#x200B;元件。 對於所有其他Dynamic Media元件，請使用&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;元件。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
