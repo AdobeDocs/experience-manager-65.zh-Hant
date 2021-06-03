@@ -10,9 +10,9 @@ discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: Business Practitioner, Administrator
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: 影片
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Scene7視訊元件支援下列格式：
 
 要配置通用預設集：
 
-1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，導覽至您的&#x200B;**[!UICONTROL Scene7]**&#x200B;設定，然後按一下&#x200B;**[!UICONTROL 編輯。]**
+1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，導覽至您的&#x200B;**[!UICONTROL Scene7]**&#x200B;設定，然後按一下&#x200B;**[!UICONTROL 編輯]**。
 1. 選擇&#x200B;**[!UICONTROL Video]**&#x200B;頁簽。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -95,7 +95,7 @@ Scene7視訊元件支援下列格式：
 
 ## 更新查看器和編碼預設集{#updating-viewer-and-encoding-presets}
 
-如果因為Scene7中的預設集已更新，而需要更新AEM中視訊的檢視器和編碼預設集，請導覽至雲端設定中的Scene7設定，然後按一下「更新檢視器和編碼預設集」。]****[!UICONTROL 
+如果因為預設集已在Scene7中更新，而需要更新Experience Manager中視訊的檢視器和編碼預設集，請導覽至雲端設定中的Scene7設定，然後按一下「更新檢視器和編碼預設集」**[!UICONTROL 。]**
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -112,9 +112,9 @@ Scene7視訊元件支援下列格式：
 
 ## Foundation視訊元件與Scene7視訊元件{#foundation-video-component-versus-scene-video-component}
 
-使用AEM時，您可以同時存取Sites和Scene7視訊元件中可用的視訊元件。 這些元件不可互換。
+使用Experience Manager時，您可以同時存取Sites中可用的視訊元件和Scene7視訊元件。 這些元件不可互換。
 
-Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從AEM（使用ffmpeg）和Scene7影片儲存的影片。
+Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從Experience Manager（使用ffmpeg）和Scene7影片儲存的影片。
 
 下列矩陣說明何時應使用哪個元件：
 
@@ -122,11 +122,11 @@ Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從AEM（使�
 
 >[!NOTE]
 >
->S7視訊元件現成可使用通用視訊設定檔。 不過，您可以在Scene7中執行下列其中一項操作，以取得AEM可使用的HTML5視訊播放器：複製現成可用HTML5視訊播放器的內嵌程式碼，並將其放入您的AEM頁面。
+>S7視訊元件現成可使用通用視訊設定檔。 不過，您可以在Scene7中執行下列其中一項操作，以取得以HTML5為基礎的視訊播放器，供Experience Manager使用：複製現成可用HTML5視訊播放器的內嵌程式碼，並將其放入您的Experience Manager頁面。
 
 ## AEM視訊元件{#aem-video-component}
 
-即使建議使用Scene7視訊元件來檢視Scene7視訊，為了完整起見，本節說明如何搭配AEM的Foundation視訊元件來使用Scene7視訊。
+即使建議使用Scene7視訊元件來檢視Scene7視訊，為了完整起見，本節說明如何將Scene7視訊與Foundation視訊元件搭配Experience Manager使用。
 
 ### AEM視訊和Scene7視訊比較{#aem-video-and-scene-video-comparison}
 
@@ -150,9 +150,9 @@ Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從AEM（使�
 >
 >必須啟動新視訊設定檔及其變更才能發佈。
 
-1. 在AEM中，點選「**[!UICONTROL 工具] > [!UICONTROL 設定主控台]**」。
-1. 在&#x200B;**[!UICONTROL Configuration Console]**&#x200B;導覽至導覽樹狀結構中的&#x200B;**[!UICONTROL Tools > DAM > Video Profiles]**。
-1. 建立新的S7視訊設定檔。 在&#x200B;**[!UICONTROL 新……]**&#x200B;功能表，選取&#x200B;**[!UICONTROL 建立頁面]**，然後選取Scene7視訊設定檔範本。 為新視訊設定檔頁面命名，然後按一下「建立」。]****[!UICONTROL 
+1. 在AEM中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 設定主控台]**」。
+1. 在&#x200B;**[!UICONTROL Configuration Console]**&#x200B;導覽至導覽樹狀結構中的&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL DAM]** > **[!UICONTROL Video Profiles]**。
+1. 建立新的S7視訊設定檔。 在&#x200B;**[!UICONTROL New]**&#x200B;中。 功能表，選取「建立頁面」，然後選取「Scene7視訊描述檔」範本。 ****&#x200B;為新視訊設定檔頁面命名，然後按一下「**[!UICONTROL 建立]**」。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
