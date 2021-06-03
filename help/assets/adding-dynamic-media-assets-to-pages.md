@@ -11,10 +11,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: 元件，發佈
-source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '3210'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 5%
 
 1. 在Experience Manager中，開啟您要新增Dynamic Media元件的頁面。
 1. 在頁面左側的面板中（如有必要，切換側面板的顯示），按一下&#x200B;**[!UICONTROL 元件]**&#x200B;表徵圖。
-1. 在&#x200B;**[!UICONTROL 元件]**&#x200B;標題下，在下拉清單中，選擇&#x200B;**[!UICONTROL Dynamic Media。]**
+1. 在&#x200B;**[!UICONTROL 元件]**&#x200B;標題下，在下拉式清單中，選取&#x200B;**[!UICONTROL Dynamic Media]**。
 
    如果沒有可用的Dynamic Media元件清單，您必須啟用您要使用的Dynamic Media元件。 請參閱[啟用Dynamic Media元件](#enabling-dynamic-media-components)。
 
@@ -65,7 +65,7 @@ ht-degree: 5%
 
    ![編輯範本](/help/assets/assets-dm/edit-template.png)
 
-1. 在工具列的靠近頁面頂端的右側，從下拉式清單中，點選「**[!UICONTROL 結構」。]**
+1. 在工具列的靠近頁面頂端的右側，從下拉式清單中，點選&#x200B;**[!UICONTROL Structure]**。
 
    ![政策](/help/assets/assets-dm/structure-mode.png)
 
@@ -74,7 +74,7 @@ ht-degree: 5%
 
    ![允許的元件](/help/assets/assets-dm/allowed-components.png)
 
-1. 捲動直到您看到&#x200B;**[!UICONTROL Dynamic Media。]**
+1. 捲動直到您看見&#x200B;**[!UICONTROL Dynamic Media]**。
 1. 點選&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;左側的>圖示，以展開清單，然後選取您要啟用的Dynamic Media元件。
 
    ![Dynamic Media元件清單](/help/assets/assets-dm/dm-components-select.png)
@@ -99,7 +99,7 @@ ht-degree: 5%
 
 ## Dynamic Media元件{#dynamic-media-components}
 
-點選「**[!UICONTROL 元件]**」圖示，然後篩選&#x200B;**[!UICONTROL Dynamic Media時，Dynamic Media元件可供使用。]**
+點選「**[!UICONTROL 元件]**」圖示，然後依&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;篩選時，可使用Dynamic Media元件。
 
 可用的Dynamic Media元件包括：
 
@@ -142,13 +142,13 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、回轉集和�
 
 您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像具有回應性，您可以設定斷點或套用回應式影像預設集。
 
-點選元件中的&#x200B;**[!UICONTROL Edit]**&#x200B;圖示，然後點選&#x200B;**[!UICONTROL Dynamic Media設定，編輯下列Dynamic Media設定。]**
+點選元件中的&#x200B;**[!UICONTROL Edit]**&#x200B;圖示，然後點選&#x200B;**[!UICONTROL Dynamic Media設定]**，編輯下列Dynamic Media設定。
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->依預設，動態媒體影像元件是可調式的。如果要將其設定為固定大小，請在&#x200B;**[!UICONTROL Advanced]**&#x200B;頁簽的元件中，使用&#x200B;**[!UICONTROL Width]**&#x200B;和&#x200B;**[!UICONTROL Height設定它。]**
+>依預設，動態媒體影像元件是可調式的。如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
 
 * **[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的檢視器預設集。如果您要尋找的檢視器預設集未顯示，您必須使其顯示。 請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。 如果您使用影像預設集，則無法選取檢視器預設集，反之則無法選取。
 
@@ -236,7 +236,7 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、回轉集和�
 
 >[!NOTE]
 >
->依預設，動態媒體影像元件是可調式的。如果要將其設定為固定大小，請在&#x200B;**[!UICONTROL Advanced]**&#x200B;頁簽的元件中，使用&#x200B;**[!UICONTROL Width]**&#x200B;和&#x200B;**[!UICONTROL Height設定它。]**
+>依預設，動態媒體影像元件是可調式的。如果要使其成為固定大小，請在「高級」( **[!UICONTROL Advanced]** )頁籤的元件中使用「寬度」( **[!UICONTROL Width)和「高度」(Height]** )設定它 ****。
 
 * **[!UICONTROL 影像修飾元]**  — 您可以提供其他影像命令來套用影像效果。這些效果在「影像預設集」和「影像伺服命令」參考中有描述。
 
