@@ -11,10 +11,10 @@ docset: aem65
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '11752'
-ht-degree: 6%
+source-wordcount: '11748'
+ht-degree: 7%
 
 ---
 
@@ -456,12 +456,12 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    如果您已有Google帳戶，請跳至下一個步驟。
 
 1. 前往[https://cloud.google.com/](https://cloud.google.com/)。
-1. 在Google雲端頁面的右上角附近，按一下「**[!UICONTROL 主控台」。]**
+1. 在Google cloud頁面的右上角，按一下「主控台」 ****。
 
    如有必要，您可能需要使用Google帳戶憑證&#x200B;**[!UICONTROL 登入]**&#x200B;才能查看&#x200B;**[!UICONTROL Console]**&#x200B;選項。
 
 1. 在「控制面板」頁面的&#x200B;**[!UICONTROL Google Cloud Platform]**&#x200B;右側，按一下「專案」下拉式清單以開啟「選取專案」對話方塊。
-1. 在「選取專案」對話方塊中，點選「**[!UICONTROL 新增專案」。]**
+1. 在「選取專案」對話方塊中，點選「**[!UICONTROL 新增專案]**」。
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
@@ -469,32 +469,32 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    請注意，您的專案ID是以您的專案名稱為基礎。 因此，請謹慎選擇專案名稱；建立後無法變更。 此外，您稍後在AEM中設定YouTube時，將需要再次輸入相同的專案ID;你可能想寫下來。
 
-1. 按一下「**[!UICONTROL 建立」。]**
+1. 按一下&#x200B;**[!UICONTROL 建立]**。
 
 1. 執行下列任一操作：
 
-   * 在專案的控制面板上，在「快速入門」卡片中，點選&#x200B;**[!UICONTROL 探索並啟用API。]**
-   * 在專案的控制面板上，在API卡片中，點選&#x200B;**[!UICONTROL 前往API概覽。]**
+   * 在專案的控制面板上，在「快速入門」卡片中，點選&#x200B;**[!UICONTROL 探索並啟用API]**。
+   * 在專案的控制面板上，在API卡片中，點選&#x200B;**[!UICONTROL 前往API overview]**。
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. 在「API與服務」頁面頂端附近，點選「啟用API與服務」。]****[!UICONTROL 
-1. 在「API資料庫」頁面的左側，在「**[!UICONTROL 類別]**」下，點選「**[!UICONTROL YouTube」。]** 在頁面的右側，點選「  **[!UICONTROL YouTube Data API」。]**
-1. 在YouTube Data API v3頁面上，點選&#x200B;**[!UICONTROL 啟用。]**
+1. 在「API與服務」頁面頂端附近，點選「 **[!UICONTROL 啟用API與服務」]**。
+1. 在「API資料庫」頁面的左側，在&#x200B;**[!UICONTROL Category]**&#x200B;下，點選&#x200B;**[!UICONTROL YouTube]**。 在頁面的右側，點選&#x200B;**[!UICONTROL YouTube Data API]**。
+1. 在YouTube Data API v3頁面上，點選&#x200B;**[!UICONTROL 啟用]**。
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
-1. 若要使用API，您可能需要憑證。 如有必要，請按一下「建立憑據」。]****[!UICONTROL 
+1. 若要使用API，您可能需要憑證。 如有必要，請按一下&#x200B;**[!UICONTROL 建立憑據]**。
 
    ![6_5_googleaccount-api-createcredentials](assets/6_5_googleaccount-apis-createcredentials.png)
 
 1. 在&#x200B;**[!UICONTROL 將憑證新增至您的專案]**&#x200B;頁面的步驟1中，執行下列動作：
 
-   * 從&#x200B;**[!UICONTROL 您使用哪個API?]** 下拉式清單，選取 **[!UICONTROL YouTube Data API v3。]**
+   * 從&#x200B;**[!UICONTROL 您使用哪個API?]** 下拉式清單，選取 **[!UICONTROL YouTube Data API v3]**。
 
    * 從&#x200B;**[!UICONTROL 您要從何處呼叫API?]** 下拉清單，選 **[!UICONTROL 擇Web伺服器（例如node.js、Tomcat）]**
 
-   * 從&#x200B;**[!UICONTROL 您將訪問哪些資料？]** 下拉式清單，點選「使 **[!UICONTROL 用者資料」。]**
+   * 從&#x200B;**[!UICONTROL 您將訪問哪些資料？]** 下拉式清單，點選「使 **[!UICONTROL 用者資料」]**。
 
    ![6_5_googleaccount-api-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
@@ -518,7 +518,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    **注意**:上述路徑範例僅供說明之用。
 
-1. 按一下「**[!UICONTROL 建立OAuth用戶端ID」。]**
+1. 按一下「**[!UICONTROL 建立OAuth用戶端ID]**」。
 1. 在「 **[!UICONTROL 新增認證至您的專案]****** 」頁面的「設定OAuth 2.0同意書」畫面標題下方，選取您目前使用的Gmail電子郵件地址。
 
    ![6_5_googleaccount-api-createcredentials-accensscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
@@ -527,8 +527,8 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    AEM管理員向YouTube驗證時，會顯示同意畫面；AEM會聯絡YouTube以取得權限。
 
-1. 按一下&#x200B;**[!UICONTROL 繼續。]**
-1. 在「新增認證至您的專案」頁面的「下載認證&#x200B;**[!UICONTROL 下載認證]**」標題下，點選「下載」。]****[!UICONTROL 
+1. 按一下&#x200B;**[!UICONTROL 繼續]**。
+1. 在「新增認證至您的專案」頁面的「下載認證」標題下，點選「 **[!UICONTROL 下載]** 」 **[!UICONTROL 步驟4]**。
 
    ![6_5_googleaccount-api-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -536,7 +536,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    稍後在Adobe Experience Manager中設定YouTube時，您需要此下載的json檔案。
 
-1. 按一下&#x200B;**[!UICONTROL 完成。]**
+1. 按一下&#x200B;**[!UICONTROL Done]**。
 
    登出您的Google帳戶。 您現在將建立YouTube管道。
 
@@ -552,9 +552,9 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 前往[https://www.youtube.com](https://www.youtube.com/)並使用您的Google帳戶憑證登入。
 1. 在YouTube頁面的右上角，按一下您的個人資料圖片（也可能以實色圓圈內的字母顯示），然後按一下&#x200B;**[!UICONTROL YouTube設定]**（圓齒輪圖示）。
-1. 在「概述」頁面的「其他功能」標題下，按一下「**[!UICONTROL 查看所有我的通道」或建立新通道。]**
-1. 在「通道」頁上，按一下「建立新通道」。]****[!UICONTROL 
-1. 在「品牌帳戶」頁面的「品牌帳戶名稱」欄位中，輸入商業名稱或您選擇要發佈視訊資產的任何其他管道名稱，然後按一下「**[!UICONTROL 建立」。]**
+1. 在「概述」頁面的「其他功能」標題下，按一下「**[!UICONTROL 查看所有我的頻道或建立新頻道]**」。
+1. 在「通道」頁上，按一下「建立新通道」]**。**[!UICONTROL 
+1. 在「品牌帳戶」頁面的「品牌帳戶名稱」欄位中，輸入商業名稱或您選擇要發佈視訊資產的任何其他管道名稱，然後按一下&#x200B;**[!UICONTROL 建立]**。
 
    請記住您在這裡輸入的名稱，因為在AEM中設定YouTube時，您需要再次輸入名稱。
 
@@ -570,13 +570,13 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 ### 啟用YouTube Publish復寫代理{#enabling-the-youtube-publish-replication-agent}
 
-啟用YouTube Publish復寫代理後，如果您想要測試與Google Cloud帳戶的連線，請點選「**[!UICONTROL 測試連線」。]** 瀏覽器索引標籤會顯示連線結果。如果您已新增YouTube管道，則這些管道的清單會顯示為測試的一部分。
+啟用YouTube Publish復寫代理後，如果您想要測試與Google Cloud帳戶的連線，請點選&#x200B;**[!UICONTROL Test Connection]**。 瀏覽器索引標籤會顯示連線結果。 如果您已新增YouTube管道，則這些管道的清單會顯示為測試的一部分。
 
-1. 在AEM的左上角，按一下AEM標誌，然後在左側導軌中，按一下「**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者代理」。]**
-1. 在「作者代理」頁面上，按一下「**[!UICONTROL YouTube發佈」(youtube)。]**
-1. 在工具欄的「設定」右側，按一下「編輯」。]****[!UICONTROL 
+1. 在AEM的左上角，按一下AEM標誌，然後在左側導軌中，按一下「 **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **** Agent on AuthorAdor」。
+1. 在「作者代理」頁面上，按一下「**[!UICONTROL YouTube發佈(youtube)]**」。
+1. 在工具列的「設定」右側，按一下「**[!UICONTROL 編輯]**」。
 1. 選中&#x200B;**[!UICONTROL 啟用]**&#x200B;複選框以開啟複製代理。
-1. 按一下&#x200B;**[!UICONTROL 確定。]**
+1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
    現在您將在AEM中設定YouTube。
 
@@ -590,10 +590,10 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 #### 在AEM 6.4及更新版本{#setting-up-youtube-in-aem-and-later}中設定YouTube
 
 1. 請務必以管理員身分登入您的Dynamic Media例項。
-1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，點選「**[!UICONTROL Tools]**（槌子圖示）> **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration」。]**
+1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，點選「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube發佈設定]**」。
 1. 點選&#x200B;**[!UICONTROL global]**（請勿選取）。
 
-1. 在全域頁面的右上角附近，點選「**[!UICONTROL Create」。]**
+1. 在全域頁面的右上角附近，點選&#x200B;**[!UICONTROL Create]**。
 1. 在「建立YouTube設定」頁面的「Google cloud平台設定」下方的「應用程式名稱」欄位 **[!UICONTROL 中]** ，輸入Google專案ID。
 
    您最初設定Google Cloud設定時，已指定專案ID。
@@ -604,23 +604,23 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 使用純文字編輯器，開啟您先前在[設定Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings)中下載並儲存的JSON檔案。
 1. 選取並複製整個JSON文字。
 1. 返回YouTube帳戶設定對話方塊。在「 **[!UICONTROL JSON設定」欄位中]** ，貼上JSON文字。
-1. 在頁面的右上角附近，點選「**[!UICONTROL 儲存」。]**
+1. 在頁面的右上角附近，點選&#x200B;**[!UICONTROL Save]**。
 
    您現在將在AEM中設定YouTube管道。
 
-1. 點選「**[!UICONTROL 新增通道」。]**
+1. 點選「**[!UICONTROL 新增通道]**」。
 1. 在「頻道名稱」欄位中，輸入您在「先前將一或多個頻道新增至YouTube ]**」任務中建立的頻道名稱。**[!UICONTROL 
 
    您可以視需要選擇新增說明。
 
-1. 點選&#x200B;**[!UICONTROL 新增。]**
+1. 點選&#x200B;**[!UICONTROL 新增]**。
 1. YouTube/Google驗證隨即顯示。 如果您尚未登入Google雲端帳戶，請略過此步驟。
 
    * 輸入與上述Google專案ID和JSON文字相關聯的Google使用者名稱和密碼。
    * 視您的帳戶有多少管道而定，您會看到兩個或多個項目。 選取管道。 不要選擇電子郵件地址；它不是渠道。
    * 在下一頁，點選&#x200B;**[!UICONTROL 接受]**&#x200B;以允許存取此通道。
 
-1. 點選&#x200B;**[!UICONTROL 允許。]**
+1. 點選&#x200B;**[!UICONTROL 允許]**。
 
    您現在將設定發佈的標籤。
 
@@ -628,9 +628,9 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 點選下拉式清單圖示（向上插入符號），以顯示AEM中可用標籤的清單。
 1. 點選一或多個標籤以新增。
 
-   若要刪除已新增的標籤，請選取標籤，然後點選&#x200B;**[!UICONTROL X.]**
+   若要刪除您已新增的標籤，請選取標籤，然後點選&#x200B;**[!UICONTROL X]**。
 
-1. 添加完所需標籤後，點選&#x200B;**[!UICONTROL 「保存」。]**
+1. 完成添加所需標籤後，點選&#x200B;**[!UICONTROL Save]**。
 
    現在您可將影片發佈至YouTube頻道。
 
@@ -638,10 +638,10 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 請務必以管理員身分登入您的Dynamic Media例項。
 
-1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，點選「**[!UICONTROL Tools]**（槌子圖示）> **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services」。]**
-1. 在「協力廠商服務」標題下方的YouTube下，點選&#x200B;**[!UICONTROL 立即設定。]**
+1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，點選「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL 部署]** > **[!UICONTROL Cloud Services]**」。
+1. 在「協力廠商服務」標題下方的「YouTube」下，點選「**[!UICONTROL 立即設定]**」。
 1. 在「建立配置」對話框中，在相應欄位中輸入標題（必填）和名稱（選填）。
-1. 點選&#x200B;**[!UICONTROL 建立。]**
+1. 點選&#x200B;**[!UICONTROL 建立]**。
 1. 在「YouTube帳戶設定」對話方塊的「應用程式名 **[!UICONTROL 稱」欄位中]** ，輸入Google專案ID。
 
    您在先前[設定的Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings)時指定了專案ID。
@@ -650,23 +650,23 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 使用純文字編輯器，開啟您先前在「設定Google雲端」設定工作中下載並儲存的JSON檔案。
 1. 選取並複製整個JSON文字。
 1. 返回YouTube帳戶設定對話方塊。在「 **[!UICONTROL JSON設定」欄位中]** ，貼上JSON文字。
-1. 點選&#x200B;**[!UICONTROL 確定。]**
+1. 點選&#x200B;**[!UICONTROL 確定]**。
 
-   您現在將在AEM中設定YouTube管道。
+   您現在將在Experience Manager中設定YouTube管道。
 
 1. 在「可用頻道」 **[!UICONTROL 的右側]**，點 **選+**  (加號圖示)。
 1. 在「YouTube頻道設定」對話方塊的「標題」欄位中，輸入您在「先前新增一或多個頻道至YouTube」工作中建立的頻道名稱 **** 。
 
    您可以視需要選擇新增說明。
 
-1. 點選&#x200B;**[!UICONTROL 確定。]**
+1. 點選&#x200B;**[!UICONTROL 確定]**。
 1. YouTube/Google驗證隨即顯示。 如果您尚未登入Google雲端帳戶，請略過此步驟。
 
    * 輸入與上述Google專案ID和JSON文字相關聯的Google使用者名稱和密碼。
    * 視您的帳戶有多少管道而定，您會看到兩個或多個項目。 選取管道。 不要選擇電子郵件地址；它不是渠道。
    * 在下一頁，點選&#x200B;**[!UICONTROL 接受]**&#x200B;以允許存取此通道。
 
-1. 點選&#x200B;**[!UICONTROL 允許。]**
+1. 點選&#x200B;**[!UICONTROL 允許]**。
 
    您現在將設定發佈的標籤。
 
@@ -676,7 +676,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    若要刪除您已新增的標籤，請選取標籤，然後點選&#x200B;**X**。
 
-1. 添加完所需標籤後，點選&#x200B;**[!UICONTROL 確定。]**
+1. 添加完所需標籤後，點選&#x200B;**[!UICONTROL OK]**。
 
    現在您可將影片發佈至YouTube頻道。
 
@@ -688,11 +688,11 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 若要自動設定已上傳影片的預設YouTube屬性：
 
-1. 在AEM的左上角，按一下AEM標誌，然後在左側導軌中，按一下「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料結構」。]**
-1. 按一下「**[!UICONTROL 預設值」。]** （請勿在「預設」左側的選取方塊中新增核取記號。）
-1. 在&#x200B;**[!UICONTROL default]**&#x200B;頁面上，選中&#x200B;**[!UICONTROL video]**&#x200B;左側的框，然後按一下&#x200B;**[!UICONTROL 編輯。]**
-1. 在「元資料結構編輯器」頁上，按一下&#x200B;**[!UICONTROL Advanced]**&#x200B;頁簽。
-1. 在「YouTube發佈」標題下，按一下「YouTube類別」。]****[!UICONTROL 
+1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，按一下「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料結構]**」。
+1. 按一下&#x200B;**[!UICONTROL default]**。 （請勿在「預設」左側的選取方塊中新增核取記號。）
+1. 在&#x200B;**[!UICONTROL default]**&#x200B;頁面上，核取&#x200B;**[!UICONTROL video]**&#x200B;左側的方塊，然後點選&#x200B;**[!UICONTROL Edit]**。
+1. 在「中繼資料結構編輯器」頁面上，點選&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。
+1. 在「YouTube發佈」標題下，按一下「 **[!UICONTROL YouTube類別」]**。
 1. 在頁面右側的&#x200B;**[!UICONTROL Settings]**&#x200B;標籤下，執行下列操作：
 
    * 在&#x200B;**[!UICONTROL 映射至屬性]**文字欄位中，選取並複製值。
@@ -701,7 +701,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * 在&#x200B;**[!UICONTROL Choices]**下，選擇並複製您要使用的預設值（如「人物和部落格」或「科學與技術」）。
 將複製的值貼到開啟的文字編輯器中。 稍後當您建立中繼資料處理設定檔時，將需要此值。 將文字編輯器保持開啟。
 
-1. 在「YouTube發佈」標題下，按一下「YouTube隱私權」。]****[!UICONTROL 
+1. 在「YouTube Publishing」標題下，點選&#x200B;**[!UICONTROL YouTube Privacy]**。
 1. 在頁面右側的&#x200B;**[!UICONTROL Settings]**&#x200B;標籤下，執行下列操作：
 
    * 在&#x200B;**[!UICONTROL 映射至屬性]**文字欄位中，選取並複製值。
@@ -710,11 +710,11 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * 在&#x200B;**[!UICONTROL Choices]**下，選擇並複製您要使用的預設值。 請注意，「選擇」會分組為兩組。 配對中的底部欄位是您要複製的預設值，例如公用、未列出或私用。
 將複製的值貼到開啟的文字編輯器中。 稍後當您建立中繼資料處理設定檔時，將需要此值。 將文字編輯器保持開啟。
 
-1. 在「元資料結構編輯器」頁的右上角附近，按一下「取消」。]****[!UICONTROL 
-1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，按一下「**[!UICONTROL Tools]**（槌子圖示）> **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles」。]**
+1. 在「元資料結構編輯器」頁的右上角附近，按一下「**[!UICONTROL 取消」]**。
+1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，按一下「工具 (槌子圖示) > **[!UICONTROL Assets]** >中繼資 **[!UICONTROL 料設定檔]******」。
 
-1. 在「元資料配置檔案」頁的右上角附近，按一下&#x200B;**[!UICONTROL Create。]**
-1. 在「添加元資料配置檔案」對話框的&#x200B;**[!UICONTROL 配置檔案標題]**&#x200B;文本欄位中，輸入名稱`YouTube Video`，然後按一下「建立」。]****[!UICONTROL 
+1. 在「中繼資料描述檔」頁面的右上角附近，按一下&#x200B;**[!UICONTROL Create]**。
+1. 在「新增中繼資料描述檔」對話方塊的「描述檔標題 **[!UICONTROL 」文字欄位中，輸入名稱，]** 然後按一下「 `YouTube Video` 建立 ****」。
 1. 在「元資料配置檔案編輯器」頁上，按一下&#x200B;**[!UICONTROL Advance]**&#x200B;頁簽。
 1. 執行下列動作，將複製的YouTube Publishing值新增至設定檔：
 
@@ -738,7 +738,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * 按一下「**[!UICONTROL 欄位標籤]**」以選擇元件。
    * 在頁面右側的「設定」標籤下方，將您先前複製的YouTube發佈值（欄位標籤值和對應至屬性值）貼入表單上各自的欄位。 將選擇值貼入預設值欄位。
 
-1. 在頁面的右上角附近，按一下「保存」。]****[!UICONTROL 
+1. 在頁面的右上角附近，按一下「儲 **[!UICONTROL 存」]**。
 1. 將YouTube發佈中繼資料設定檔套用至您要上傳影片的資料夾。 您必須同時設定中繼資料描述檔和視訊描述檔。
 
    請參 [閱中繼資料](/help/assets/metadata-config.md#metadata-profiles)[描述檔和視訊描述檔](/help/assets/video-profiles.md)。
@@ -749,7 +749,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式中執行時，請注意立即發佈不會自動發佈至YouTube。 設定Dynamic Media - Scene7模式時，有兩個發佈選項可供選擇：**[!UICONTROL 激活後立即]**&#x200B;或&#x200B;**[!UICONTROL 。]**
+>在Dynamic Media - Scene7模式中執行時，請注意立即發佈不會自動發佈至YouTube。 設定Dynamic Media - Scene7模式時，有兩個發佈選項可供選擇：**[!UICONTROL Immedialed]**&#x200B;或&#x200B;**[!UICONTROL Activation]**&#x200B;時。
 >
 >**[!UICONTROL 發]** 布立即表示上傳的資產（在與IPS同步後）會自動發佈至傳送系統。雖然Dynamic Media的情況確實如此，但YouTube的情況並非如此。 若要發佈至YouTube，您必須透過AEM Author進行發佈。
 
@@ -765,15 +765,15 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 在AEM中，導覽至您要發佈至YouTube管道的視訊資產。
 1. 選取視訊資產（最適化視訊集）。
-1. 在工具欄上，按一下「屬性」。]****[!UICONTROL 
+1. 在工具欄上，按一下&#x200B;**[!UICONTROL 屬性]**。
 1. 在「基本」頁簽的「元資料」標題下，按一下「標籤」欄位右側的&#x200B;**[!UICONTROL 開啟選擇對話框]**。
 1. 在「選取標籤」頁面上，導覽至您要使用的標籤，然後選取一或多個標籤。
 
    請記住，標籤必須與YouTube管道相關聯。
 
-1. 在頁面的右上角，按一下「**[!UICONTROL 選擇」。]**
-1. 在視訊屬性頁面的右上角，按一下「儲存並關閉」。]****[!UICONTROL 
-1. 在工具列上，按一下&#x200B;**[!UICONTROL 快速發佈。]**
+1. 在頁面的右上角，按一下&#x200B;**[!UICONTROL Select]**。
+1. 在視訊屬性頁面的右上角，按一下「**[!UICONTROL 儲存並關閉]**」。
+1. 在工具列上，按一下&#x200B;**[!UICONTROL 快速發佈]**。
 
    另請參閱[將發佈管理與AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)搭配使用。
 
@@ -803,7 +803,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    請記住，YouTube URL僅可在&#x200B;*之後複製*，而您已先將&#x200B;*已發佈*&#x200B;視訊資產複製到YouTube。
 
-1. 在工具欄上，按一下「屬性」。]****[!UICONTROL 
+1. 在工具欄上，按一下&#x200B;**[!UICONTROL 屬性]**。
 1. 按一下&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤。
 1. 在「YouTube發佈」標題下的「YouTube URL List」（ URL清單）中，選取URL文字並複製到網頁瀏覽器，以預覽資產或新增至您的網頁內容頁面。
 
@@ -825,10 +825,10 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 導覽至您要從YouTube管道取消發佈的視訊資產。
 1. 在資產選取模式中，選取一或多個已發佈的視訊資產。
-1. 在工具列上，按一下&#x200B;**[!UICONTROL 管理出版物。]** 您可能需要點選三個點的圖示(...)在工具欄上，查看&#x200B;**[!UICONTROL 管理發布。]**
-1. 在「管理出版物」頁面，點選&#x200B;**[!UICONTROL 取消發佈。]**
-1. 在頁面的右上角，點選「**[!UICONTROL Next」。]**
-1. 在頁面的右上角，點選「**[!UICONTROL 取消發佈」。]**
+1. 在工具欄上，按一下&#x200B;**[!UICONTROL 管理出版物]**。 您可能需要點選三個點的圖示(...) ，查看&#x200B;**[!UICONTROL 管理出版物]**。
+1. 在「管理出版物」頁面，點選&#x200B;**[!UICONTROL 取消發佈]**。
+1. 在頁面的右上角，點選&#x200B;**[!UICONTROL Next]**。
+1. 在頁面的右上角，點選&#x200B;**[!UICONTROL 取消發佈]**。
 
 ## 監控視訊編碼和YouTube發佈進度{#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -848,11 +848,11 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
-   預設不會顯示此欄。要啟用該列，請從視圖下拉菜單中選擇&#x200B;**[!UICONTROL 查看設定]**，然後添加&#x200B;**[!UICONTROL 處理狀態]**&#x200B;列，並點選或按一下&#x200B;**[!UICONTROL 更新。]**
+   預設不會顯示此欄。若要啟用欄，請從檢視下拉 **[!UICONTROL 式選單中選取「檢視設定]** 」，然後新增「處理狀態」欄，然後點選或按一下「更新」 ********。
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. 在資產詳細資訊中檢視進度。 當您點選或按一下資產時，請開啟下拉式選單並選取「**[!UICONTROL 時間軸」。]** 若要將其縮小至編碼或YouTube發佈等工作流程活動，請選取「工 **[!UICONTROL 作流程」。]**
+1. 在資產詳細資訊中檢視進度。 當您點選或按一下資產時，請開啟下拉式選單並選取「**[!UICONTROL 時間軸]**」。 若要將其縮小至編碼或YouTube發佈等工作流程活動，請選取「**[!UICONTROL 工作流程]**」。
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -869,7 +869,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    >
    >您可以調整這些 **[!UICONTROL 配置中]****[!UICONTROL 的重試]**、重試延遲 **[!UICONTROL ,]** 以及超時屬性。
 
-1. 有關正在進行的工作流，請參閱&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Instances中可用的工作流實例。]**
+1. 如需進行中的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >例項」中的「工作流程例 **[!UICONTROL 項」]******。
 
    >[!NOTE]
    >
@@ -877,13 +877,13 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   選取執行個體，然後點選或按一下「**[!UICONTROL 開啟歷史記錄」。]**
+   選取執行個體，然後點選&#x200B;**[!UICONTROL 開啟History]**。
 
    ![chlimage_1-434](assets/chlimage_1-434.png)
 
    從「工作流實例」區域，您還可以暫停、終止或更名工作流。 如需詳細資訊，請參閱[管理工作流程](/help/sites-administering/workflows-administering.md) 。
 
-1. 有關失敗的作業，請參閱「工具」>「工作流 **[!UICONTROL 程」]** > 「失敗 **[!UICONTROL 」中的「工]** 作流失敗 **[!UICONTROL 」。]**「工作 **[!UICONTROL 流失敗]** 」(Workflow Failure)列出所有失敗的工作流活動。
+1. 有關失敗的作業，請參閱「工具」>「工作流 **[!UICONTROL 程」]** > 「失敗 **[!UICONTROL 」中的「工]** 作流失敗 ****」。「工作 **[!UICONTROL 流失敗]** 」(Workflow Failure)列出所有失敗的工作流活動。
 
    >[!NOTE]
    >
@@ -905,7 +905,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    >
    >您可以調整這些 **[!UICONTROL 配置中]****[!UICONTROL 的重試]**、重試延遲 **[!UICONTROL ,]** 以及超時屬性。
 
-1. 如需完成的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >封存 **[!UICONTROL 」中的「工作流程封存]****[!UICONTROL 」。]**「工作 **[!UICONTROL 流程存檔]** 」會列出所有已完成的工作流活動。
+1. 如需完成的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >封存 **[!UICONTROL 」中的「工作流程封存]******」。「工作 **[!UICONTROL 流程存檔]** 」會列出所有已完成的工作流活動。
 
    >[!NOTE]
    >
@@ -923,13 +923,13 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 設定通知的方式取決於您要接收編碼作業或YouTube發佈作業的通知：
 
-* 對於編碼作業，您可以在&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**&#x200B;存取所有AEM工作流程電子郵件通知的設定頁面，方法是搜尋&#x200B;**[!UICONTROL Day CQ Workflow Email Notification Service。]** 請參 [閱在AEM中設定電子郵件通知](/help/sites-administering/notification.md)。您可以選擇或清除&#x200B;**[!UICONTROL Notify on Abort]**&#x200B;或&#x200B;**[!UICONTROL Notify on Complete]**&#x200B;的複選框。
+* 對於編碼作業，您可以在&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**&#x200B;存取所有AEM工作流電子郵件通知的設定頁面，方法是搜尋&#x200B;**[!UICONTROL Day CQ Workflow Email Notification Service]**。 請參閱[在AEM](/help/sites-administering/notification.md)中設定電子郵件通知。 您可以選擇或清除&#x200B;**[!UICONTROL Notify on Abort]**&#x200B;或&#x200B;**[!UICONTROL Notify on Complete]**&#x200B;的複選框。
 
 * 若為YouTube發佈工作，請執行下列動作：
 
-1. 在AEM中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型」。]**
+1. 在AEM中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**」。
 1. 在「工作流模型」頁上，選擇「**[!UICONTROL 發佈到YouTube]**」，然後點選工具欄上的「**[!UICONTROL 編輯]**」。
-1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選「 **[!UICONTROL 編輯」。]**
+1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選「**[!UICONTROL Edit]**」。
 1. 將滑鼠指標暫留在YouTube上傳元件上，然後點選一次以顯示內嵌工具列。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
@@ -955,7 +955,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    >這些電子郵件是YouTube專屬的，且是一般工作流程電子郵件通知的外掛程式。 因此，您可能會收到兩組電子郵件通知： **[!UICONTROL Day CQ Workflow Email Notification Service]**&#x200B;中提供的一般通知，以及根據您的組態設定而為YouTube指定的一組通知。
 
 1. 完成後，在對話框的右上角附近，點選&#x200B;**[!UICONTROL Done]**&#x200B;表徵圖（複選標籤）。
-1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選「**[!UICONTROL 同步」。]**
+1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選&#x200B;**[!UICONTROL Sync]**。
 
 ## 檢視視訊報表{#viewing-video-reports}
 
@@ -985,18 +985,18 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 依預設，當您首次輸入視訊報表時，報表會顯示從當月的第一個開始，到當月的日期結束的視訊資料。 不過，您可以指定自己的日期範圍來覆寫預設日期範圍。 下次輸入視訊報表時，會使用您指定的日期範圍。
 
-為了讓視訊報表正常運作，設定Dynamic MediaCloud Services時，會自動建立報表套裝ID。 同時，報表套裝ID會推送至發佈伺服器，以便您在預覽資產時能使用「複製URL」功能。 不過，這需要先設定發佈伺服器。 如果未設定發佈伺服器，您仍可以發佈以查看視訊報表，但您需要返回Dynamic Media雲端設定，然後點選&#x200B;**[!UICONTROL 確定。]**
+為了讓視訊報表正常運作，設定Dynamic MediaCloud Services時，會自動建立報表套裝ID。 同時，報表套裝ID會推送至發佈伺服器，以便您在預覽資產時能使用「複製URL」功能。 不過，這需要先設定發佈伺服器。 如果未設定發佈伺服器，您仍可以發佈以查看視訊報表，但您將需要返回Dynamic Media雲端設定，然後點選&#x200B;**[!UICONTROL 確定]**。
 
 若要檢視視訊報表：
 
-1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，點選「**[!UICONTROL Tools]**（槌子圖示）> **[!UICONTROL Assets]** > **[!UICONTROL Video Reports」。]**
+1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，點選「工具 (槌子圖示) > **[!UICONTROL Assets]** >視訊報 **[!UICONTROL 表」]******。
 1. 在視訊報表頁面上，執行下列其中一項作業：
 
    * 在右上角附近，點選「 **重新整理視訊報表**」圖示。
 如果報表的結束日期是當天，您只需使用「重新整理」即可。 這可確保您查看自上次執行報表以來發生的視訊追蹤。
 
    * 在右上角附近，點選「**日期選擇器**」圖示。
-指定您要視訊資料的開始和結束日期範圍，然後點選**[!UICONTROL 執行報表。]**
+指定您要視訊資料的開始和結束日期範圍，然後點選**[!UICONTROL 執行報表]**。
 
    「排名在前的量度」群組方塊可識別您網站上所有&#x200B;*已發佈*&#x200B;影片的各種匯總測量。
 
@@ -1093,7 +1093,7 @@ Dynamic Media可將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
    為獲得最佳結果，請使用Internet Explorer 9或更新版本、Google Chrome或Safari中的工具。
 
-   在工具的&#x200B;**[!UICONTROL 輸入視訊檔案]**&#x200B;欄位中，貼上視訊檔案的複製URL，然後按一下&#x200B;**[!UICONTROL 載入]**。 請參 [閱取得資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) ，以取得視訊檔案本身的URL，然後您可將它貼入視訊檔案 **[!UICONTROL 的「輸入URL」欄位中。]**&#x200B;然後，Internet Explorer、Chrome或Safari就可以原生播放視訊。
+   在工具的&#x200B;**[!UICONTROL 輸入視訊檔案]**&#x200B;欄位中，貼上視訊檔案的複製URL，然後按一下&#x200B;**[!UICONTROL 載入]**。 請參 [閱取得資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) ，以取得視訊檔案本身的URL，然後您可將它貼入視訊檔案 **[!UICONTROL 的「輸入URL」欄位中]**。然後，Internet Explorer、Chrome或Safari就可以原生播放視訊。
 
    現在請依照網站的螢幕指示製作和儲存您的WebVTT檔案。 完成後，複製字幕檔案內容並貼到純文字編輯器中，然後以.vtt副檔名儲存。
 
@@ -1112,13 +1112,13 @@ Dynamic Media可將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
 1. 執行下列任一操作：
 
-   * 如需快顯視訊檢視器體驗，請點選&#x200B;**[!UICONTROL URL。]** 在「URL」對話方塊中，選取URL並將其複製到剪貼簿，然後將URL移至簡單文字編輯器中。使用下列語法附加視訊的複製URL:
+   * 如需快顯視訊檢視器體驗，請點選&#x200B;**[!UICONTROL URL]**。 在「URL」對話方塊中，選取URL並將其複製到剪貼簿，然後將URL移至簡單文字編輯器中。 使用下列語法附加視訊的複製URL:
 
       `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
       注意標題路徑末尾的`,1`。 緊接在路徑中的.vtt副檔名後面，您可以選擇分別將設為`,1`或`,0`，以啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕。
 
-   * 如需內嵌的視訊檢視器體驗，請點選「**[!UICONTROL 內嵌程式碼」。]** 在「內嵌程式碼」對話方塊中，選取內嵌程式碼並複製到剪貼簿，然後將程式碼貼到簡單的文字編輯器中。使用下列語法附加複製的內嵌程式碼：
+   * 如需內嵌的視訊檢視器體驗，請點選「**[!UICONTROL 內嵌程式碼]**」。 在「內嵌程式碼」對話方塊中，選取內嵌程式碼並複製到剪貼簿，然後將程式碼貼到簡單的文字編輯器中。 使用下列語法附加複製的內嵌程式碼：
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -1222,7 +1222,7 @@ AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不�
 
 這些步驟僅適用於以「Dynamicmedia_Scene7」模式執行的Dynamic Media。
 
-T **若要新增自訂視訊縮圖**,
+**若要新增自訂視訊縮圖：**
 
 1. 請確定您已執行下列作業：
 
@@ -1234,23 +1234,23 @@ T **若要新增自訂視訊縮圖**,
 1. 導覽至您要變更其縮圖影像的已上傳視訊資產。
 1. 在「資產選擇」模式中，從「**[!UICONTROL 清單檢視]**」或「**[!UICONTROL 卡片檢視]**」點選視訊資產。
 1. 在工具列上，點選「**[!UICONTROL 屬性]** 」圖示（其中包含「i」的圓圈）。
-1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖。]**
+1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖]**。
 1. 在「更改縮圖」頁上，執行下列操作之一：
 
    * 若要使用視訊的影格作為新縮圖：
 
-      * 在工具列上，點選&#x200B;**[!UICONTROL 從視訊選取幀。]**
+      * 在工具列上，點選&#x200B;**[!UICONTROL 從視訊選取幀]**。
       * 點選「播放」按鈕，然後點選您要擷取的影格上的「暫停」按鈕，作為視訊的新縮圖。
    * 若要使用影像資產作為新縮圖：
 
-      * 在工具列上，點選&#x200B;**[!UICONTROL 「從資產中選取縮圖」。]**
-      * 點選&#x200B;**[!UICONTROL 選取縮圖。]**
+      * 在工具列上，點選&#x200B;**[!UICONTROL 「從資產選取縮圖」]**。
+      * 點選&#x200B;**[!UICONTROL 選取縮圖]**。
       * 導覽至您要使用的先前上傳和發佈的影像資產。 請注意，資產會自動調整大小，作為視訊的縮圖影像。
-      * 選取影像資產，然後點選&#x200B;**[!UICONTROL 「選取」。]**
+      * 選取影像資產，然後點選&#x200B;**[!UICONTROL 選取]**。
 
 
-1. 在「變更縮圖」頁面上，點選「**[!UICONTROL 儲存變更」。]**
-1. 在視訊的「屬性」頁面的右上角，點選&#x200B;**[!UICONTROL 儲存並關閉。]**
+1. 在「變更縮圖」頁面上，點選「**[!UICONTROL 儲存變更]**」。
+1. 在視訊的「屬性」頁面的右上角，點選&#x200B;**[!UICONTROL 儲存並關閉]**。
 
 ## 關於Dynamic Media中的視訊縮圖 — 混合模式{#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
@@ -1268,18 +1268,18 @@ T **若要新增自訂視訊縮圖**,
 
 這些步驟僅適用於以混合模式執行的Dynamic Media。
 
-T **若要新增視訊縮圖**,
+**若要新增影片縮圖：**
 
 1. 導覽至您要新增視訊縮圖的已上傳視訊資產。
 1. 在「清單檢視」或「卡片檢視」的資產選取模式中，點選視訊資產。
 1. 在工具列上，點選「**[!UICONTROL 檢視屬性]** 」圖示（其中包含「i」的圓圈）。
-1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖。]**
-1. 在「更改縮略圖」頁上，在工具欄上，點選&#x200B;**[!UICONTROL 選擇幀。]**
+1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖]**。
+1. 在「更改縮略圖」頁上，在工具欄上，點選&#x200B;**[!UICONTROL 選擇幀]**。
 
    Dynamic Media會根據您自訂的預設時間間隔或時間間隔，從您的視訊產生數列縮圖影像。
 
 1. 預覽產生的縮圖影像，然後選取您要新增至影片的影像。
-1. 點選「**[!UICONTROL 儲存變更」。]**
+1. 點選&#x200B;**[!UICONTROL 儲存變更]**。
 
    視訊的縮圖影像會更新，以使用您選取的縮圖。 如果您稍後決定變更縮圖影像，可以返回&#x200B;**[!UICONTROL 變更縮圖]**&#x200B;頁面並選取新頁面。
 
@@ -1293,9 +1293,9 @@ T **若要新增視訊縮圖**,
 
 請參閱[新增視訊縮圖](#adding-a-video-thumbnail)。
 
-**若要設定產生視訊縮圖的預設時間間隔，**
+**設定產生視訊縮圖的預設時間間隔：**
 
-1. 在AEM中，點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite。]**
+1. 在Experience Manager中，點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**。
 
 1. 在「CRXDE Lite」頁面，在左側的目錄面板中，導覽至`o etc/dam/imageserver/configuration/jcr:content/settings.`
 
@@ -1317,14 +1317,14 @@ T **若要新增視訊縮圖**,
 
 這些步驟僅適用於以混合模式執行的Dynamic Media。
 
-T **若要新增自訂視訊縮圖**,
+**若要新增自訂視訊縮圖：**
 
 1. 導覽至您要新增自訂視訊縮圖的已上傳視訊資產。
 1. 在「清單檢視」或「卡片檢視」的資產選取模式中，點選視訊資產。
 1. 在工具列上，點選「**[!UICONTROL 檢視屬性]** 」圖示（其中包含「i」的圓圈）。
-1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖。]**
-1. 在「更改縮略圖」頁的工具欄上，點選&#x200B;**[!UICONTROL 「上載新縮略圖」。]**
+1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖]**。
+1. 在「變更縮圖」頁面的工具列上，點選「 **[!UICONTROL 上傳新縮圖]**」。
 1. 導覽至您要使用的縮圖影像，選取該影像，然後點選&#x200B;**[!UICONTROL 開啟]**&#x200B;以開始將影像上傳至AEM。 上傳後，請務必發佈影像。
-1. 成功上傳並發佈影像後，在「變更縮圖」頁面中，點選「**[!UICONTROL 儲存變更」。]**
+1. 成功上傳並發佈影像後，在「變更縮圖」頁面中，點選「**[!UICONTROL 儲存變更]**」。
 
    自訂縮圖會新增至您的影片。
