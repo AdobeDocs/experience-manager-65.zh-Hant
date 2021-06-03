@@ -10,7 +10,7 @@ discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '2863'
 ht-degree: 0%
@@ -88,7 +88,7 @@ AEM提供下列Dynamic Media Classic元件：
 
 1. 在AEM中，開啟您要新增Dynamic Media Classic(Scene7)元件的頁面。
 
-1. 如果沒有可用的Dynamic Media Classic元件，請按一下&#x200B;**[!UICONTROL Design]**&#x200B;模式，點選任何具有藍色邊框的元件，點選&#x200B;**[!UICONTROL Parent]**&#x200B;圖示，然後點選&#x200B;**[!UICONTROL Configuration]**&#x200B;圖示。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，選取所有Dynamic Media Classic元件以讓它們可用，然後按一下&#x200B;**[!UICONTROL 確定。]**
+1. 如果沒有可用的Dynamic Media Classic元件，請按一下&#x200B;**[!UICONTROL Design]**&#x200B;模式，點選任何具有藍色邊框的元件，點選&#x200B;**[!UICONTROL Parent]**&#x200B;圖示，然後點選&#x200B;**[!UICONTROL Configuration]**&#x200B;圖示。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，選取所有Dynamic Media Classic元件以讓它們可用，然後按一下&#x200B;**[!UICONTROL OK]**。
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -211,7 +211,7 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 #### 動態更改文本{#changing-text-dynamically}
 
-要動態更改文本，請在欄位中輸入新文本，然後按一下&#x200B;**[!UICONTROL 確定。]** 在此範例中，Price **** 現在是$50，而運費是99美分。
+要動態更改文本，請在欄位中輸入新文本，然後按一下&#x200B;**[!UICONTROL OK]**。 在此範例中，**[!UICONTROL Price]**&#x200B;現在為$50，而運費為99美分。
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -221,7 +221,7 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 #### 更改文本以反映客戶端上下文值{#changing-text-to-reflect-the-value-of-a-client-context-value}的值
 
-若要將欄位連結至用戶端內容值，請點選&#x200B;**[!UICONTROL 選取]**&#x200B;以開啟用戶端內容功能表，選取用戶端內容，然後點選&#x200B;**[!UICONTROL 確定。]** 在此示例中，名稱會根據將名稱與配置檔案中的格式化名稱連結而改變。
+若要將欄位連結至用戶端內容值，請點選&#x200B;**[!UICONTROL 選取]**&#x200B;以開啟用戶端內容功能表，選取用戶端內容，然後點選&#x200B;**[!UICONTROL 確定]**。 在此示例中，名稱會根據將名稱與配置檔案中的格式化名稱連結而改變。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -231,12 +231,12 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 #### 將Dynamic Media傳統影像範本設為連結{#making-the-scene-image-template-a-link}
 
-1. 在具有Dynamic Media Classic **[!UICONTROL 影像範本]**&#x200B;元件的頁面上，點選&#x200B;**[!UICONTROL 編輯。]**
+1. 在具有Dynamic Media Classic **[!UICONTROL 影像範本]**&#x200B;元件的頁面上，點選&#x200B;**[!UICONTROL 編輯]**。
 1. 在&#x200B;**[!UICONTROL URL]**&#x200B;欄位中，輸入點選影像時使用者前往的URL。 在&#x200B;**[!UICONTROL 在]**&#x200B;中開啟欄位中，選擇要開啟目標（新窗口還是同一窗口）。
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. 點選&#x200B;**[!UICONTROL 確定。]**
+1. 點選&#x200B;**[!UICONTROL 確定]**。
 
 ### 視訊元件{#video-component}
 
@@ -347,6 +347,6 @@ Dynamic Media Classic內容瀏覽器可讓您直接在AEM中檢視Dynamic Media 
 
 
 
-**[!UICONTROL 發佈狀態]**  — 您可以根據發佈狀態篩選資產： **** 未發佈或 **[!UICONTROL 已發佈。]** 如果您未選取任何「發 **[!UICONTROL 布狀態」]**,AEM依預設會搜尋所有發佈狀態。
+**[!UICONTROL 發佈狀態]**  — 您可以根據發佈狀態篩選資產： **** 未發佈或 **[!UICONTROL 已發佈]**。如果您未選取任何&#x200B;**[!UICONTROL 發佈狀態]**，依預設AEM會搜尋所有發佈狀態。
 
 ![chlimage_1-248](assets/chlimage_1-247.png)
