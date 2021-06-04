@@ -11,7 +11,7 @@ docset: aem65
 feature: 影像集，資產管理
 role: Business Practitioner, Administrator
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2085'
 ht-degree: 13%
@@ -40,13 +40,13 @@ ht-degree: 13%
 
 **快速啟動並運行：**
 
-1. [上傳多個檢視的主要來源影像。](#uploading-assets-in-image-sets)
+1. [上傳多個檢視的主要來源影像](#uploading-assets-in-image-sets)。
 
    首先，上傳影像集的影像。 選擇影像時，請記住，客戶可以在影像集檢視器中放大影像。 請確定影像在最大尺寸中至少為2000像素，以獲得最佳縮放詳細資訊。 Dynamic Media可以每張2500萬像素的影像呈現。 例如，您可以使用5000 x 5000百萬像素影像或任何其它大小組合，最高2500萬像素。
 
    Adobe Experience Manager Assets支援許多影像檔案格式，但建議使用無損TIFF、PNG和EPS影像。
 
-1. [建立影像集。](#creating-image-sets)
+1. [建立影像集](#creating-image-sets)。
 
    在「影像集」中，用戶按一下「影像集查看器」中的縮圖影像。
 
@@ -59,7 +59,7 @@ ht-degree: 13%
 
    請參閱[準備要上傳和上傳檔案的影像集資產](#uploading-assets-in-image-sets)。
 
-   請參閱[使用選取器。](/help/assets/working-with-selectors.md)
+   請參閱[使用選取器](/help/assets/working-with-selectors.md)。
 
 1. 視需要新增[影像集檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
@@ -68,11 +68,11 @@ ht-degree: 13%
    如果要建立或編輯查看器預設集，請參閱&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 查看器預設集]**。
 
 1. （可選）[查看使用批集預設集建立的影像集](/help/assets/image-sets.md#viewing-image-sets)。
-1. [預覽影像集。](/help/assets/previewing-assets.md)
+1. [預覽影像集](/help/assets/previewing-assets.md)。
 
    選取「影像集」，即可預覽。 按一下縮圖圖示，以便在選取的檢視器中檢查影像集。 您可以從&#x200B;**[!UICONTROL 檢視器]**&#x200B;選單中選擇不同的檢視器，該選單可從左側導軌下拉式選單中取得。
 
-1. [發佈影像集。](/help/assets/publishing-dynamicmedia-assets.md)
+1. [發佈影像集](/help/assets/publishing-dynamicmedia-assets.md)。
 
    發佈影像集會啟用URL和內嵌程式碼。 此外，您必須[發佈您已建立的任何自訂檢視器預設集](/help/assets/managing-viewer-presets.md)。 已發佈現成可用的檢視器預設集。
 
@@ -84,7 +84,7 @@ ht-degree: 13%
 
    請參 [閱連結影像集至網頁](/help/assets/linking-urls-to-yourwebapplication.md)[和內嵌影片或影像檢視器](/help/assets/embed-code.md)。
 
-要編輯影像集，請參閱[編輯影像集。](#editing-image-sets) 此外，您還可以檢視和編輯 [影像集屬性](/help/assets/manage-assets.md#editing-properties)。
+要編輯影像集，請參閱[編輯影像集](#editing-image-sets)。 此外，還可以查看和編輯[影像集屬性](/help/assets/manage-assets.md#editing-properties)。
 
 如果您建立集時遇到問題，請參閱[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md#images-and-sets)中的影像和集。
 
@@ -148,7 +148,7 @@ ht-degree: 13%
 
    使用「資產選擇器」，您可以輸入關鍵字並點選或按一下「退貨」來搜尋 **[!UICONTROL 資產]**。您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後點選工具 **[!UICONTROL 列上的]** 「篩選」圖示。點選「檢視」圖示並選取「欄檢視」、「卡片檢視」或「清 **[!UICONTROL 單檢視」]**, **[!UICONTROL 以變更]**&#x200B;檢視 ****。
 
-   請參閱[使用選取器。](/help/assets/working-with-selectors.md)
+   請參閱[使用選取器](/help/assets/working-with-selectors.md)。
 
    ![6_5_imageset-addingassets](assets/6_5_imageset-addingassets.png)
 
