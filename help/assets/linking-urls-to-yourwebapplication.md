@@ -10,7 +10,7 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: Business Practitioner, Administrator
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 設定
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 11%
@@ -21,7 +21,7 @@ ht-degree: 11%
 
 您的網站和應用程式會透過URL呼叫存取Dynamic Media服務。 發佈資產後，Dynamic Media會啟用參考資產的URL字串。 您可以將這些URL貼到網頁瀏覽器中以進行測試。
 
-只有在您&#x200B;*not*&#x200B;使用AEM作為WCM時，才能連結至URL。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，會使用連結與內嵌。 如果您使用AEM作為WCM，請直接在頁面上新增資產。](adding-dynamic-media-assets-to-pages.md)[
+只有在您&#x200B;*not*&#x200B;使用AEM作為WCM時，才能連結至URL。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，會使用連結與內嵌。 如果您使用AEM作為WCM，請直接在頁面](adding-dynamic-media-assets-to-pages.md)上新增資產。[
 
 若要將這些URL字串放入您的網頁和應用程式中，請從Dynamic Media複製。
 
@@ -29,13 +29,13 @@ ht-degree: 11%
 >
 >URL字串僅可用於資產的動態轉譯。 目前無法供存放在DAM中的靜態資產使用，無法供Dynamic Media伺服器使用。 對於靜態的轉譯，不會顯示URL按鈕。
 
-另請參閱[在網頁上嵌入視頻或影像查看器。](embed-code.md)
+另請參閱[在網頁上嵌入視頻或影像查看器](embed-code.md)。
 
-另請參閱[將YouTube URL連結到Web應用程式。](video.md)
+另請參閱[將YouTube URL連結至您的Web應用程式](video.md)。
 
-另請參閱[為回應式網站傳送最佳化影像。](responsive-site.md)
+另請參閱[傳送回應式網站的最佳化影像](responsive-site.md)。
 
-另請參閱[上傳資產。](manage-assets.md#uploading-assets)
+另請參閱[上傳資產](manage-assets.md#uploading-assets)。
 
 ## 取得資產{#obtaining-a-url-for-an-asset}的URL
 
@@ -59,7 +59,7 @@ ht-degree: 11%
 
    請記住，URL僅可在您首次發 *布資產* 後 *複製* 。此外，檢視器預設集或影像預設集也必須發佈。
 
-   請參閱[發佈資產。](publishing-dynamicmedia-assets.md)
+   請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
    請參閱[發佈檢視器預設集](managing-viewer-presets.md#publishing-viewer-presets)。
 
