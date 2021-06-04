@@ -11,7 +11,7 @@ docset: aem65
 feature: 回轉集，資產管理
 role: Business Practitioner, Administrator
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 11%
@@ -36,11 +36,11 @@ ht-degree: 11%
 
 若要使用回轉集快速上手並執行，請執行下列步驟：
 
-1. [上傳多次檢視的影像。](#uploading-assets-for-spin-sets)
+1. [上傳多次檢視的影像](#uploading-assets-for-spin-sets)。
 
    一維自旋集至少需要8-12個項目的鏡頭，二維自旋集至少需要16-24個。 必須定期拍攝照片，以給人以項目正在旋轉和被翻轉的印象。 例如，如果一維度回轉集包含12個鏡頭，則對每個鏡頭將項目旋轉30度(360/12)。
 
-1. [建立回轉集。](#creating-spin-sets)
+1. [建立回轉集](#creating-spin-sets)。
 
    若要建立回轉集，請選取「**[!UICONTROL 建立>回轉集]**」，然後命名該集，選擇資產，然後選擇影像的顯示順序。
 
@@ -56,17 +56,17 @@ ht-degree: 11%
 
    請參閱&#x200B;**[!UICONTROL 工具>資產>檢視器預設集]**&#x200B;以建立或編輯檢視器預設集。
 
-   請參閱[添加和編輯查看器預設集。](/help/assets/managing-viewer-presets.md)
+   請參閱[新增和編輯檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
 1. [檢視回轉集](#viewing-spin-sets)。
 
    您可以透過三種不同方式的批次集預設集來檢視和存取所建立的集。 （使用批集預設集建立的集，請在用戶介面中顯示&#x200B;*not*。）
 
-1. [預覽回轉集。](/help/assets/previewing-assets.md)
+1. [預覽回轉集](/help/assets/previewing-assets.md)。
 
    選取回轉集，即可預覽。 旋轉回轉集。 您可以從&#x200B;**[!UICONTROL 檢視器]**&#x200B;選單中選擇不同的檢視器，該選單可從左側導軌下拉式選單中取得。
 
-1. [發佈回轉集。](/help/assets/publishing-dynamicmedia-assets.md)
+1. [發佈回轉集](/help/assets/publishing-dynamicmedia-assets.md)。
 
    發佈回轉集會啟用URL和內嵌字串。 此外，您必須[發佈檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
@@ -142,7 +142,7 @@ ht-degree: 11%
 
    如有必要，請將資產的「重新排序」圖示拖曳至資產檔案名稱的右側，以在設定的清單上或下重新排序影像。
 
-   ![將回轉集中的影格拖曳至新位置，重新排序影格11。](assets/6_5_spinset-reorderassets.png)
+   ![將回轉集中的影格拖曳至新位置，重新排序影格11](assets/6_5_spinset-reorderassets.png)。
 
    將回轉集中的影格拖曳至新位置，重新排序影格11。
 
@@ -162,7 +162,7 @@ ht-degree: 11%
 >
 >您也可以透過使用者介面來檢視集，如[編輯回轉集](#editing-spin-sets)所述。
 
-**若要檢視回轉集**
+**若要檢視回轉集：**
 
 1. 開啟個別資產的屬性時。 屬性指明所選資產是的成員（在&#x200B;**[!UICONTROL 整合員]**&#x200B;下）。 按一下集的名稱，即可查看整個集。
 
@@ -188,7 +188,7 @@ ht-degree: 11%
 * 套用檢視器預設集。
 * 刪除回轉集。
 
-**若要編輯回轉集**
+**若要編輯回轉集：**
 
 1. 執行下列任一操作：
 
