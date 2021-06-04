@@ -8,7 +8,7 @@ content-type: reference
 role: Business Practitioner, Administrator
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDN快取
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Dynamic Media資產會由CDN（內容傳遞網路）快取，以快速傳遞給�
 
 >[!IMPORTANT]
 >
->下列步驟僅適用於Adobe Experience Manager 6.5、Service Pack 6(Experience Manager6.5.6)或更新版本中的Dynamic Media - Scene7模式。 此CDN失效功能也要求您使用隨Experience ManagerDynamic Media提供的現成可用CDN;不支援任何其他自訂CDN。<br>如果您在Experience Manager6.5、Service Pack 5(Experience Manager6.5.5)或更舊版本中使用Dynamic Media，請依照透過Dynamic Media  [Classic使CDN快取失效中的步驟操作。](/help/assets/invalidate-cdn-cache-dm-classic.md)
+>下列步驟僅適用於Adobe Experience Manager 6.5、Service Pack 6(Experience Manager6.5.6)或更新版本中的Dynamic Media - Scene7模式。 此CDN失效功能也要求您使用隨Experience ManagerDynamic Media提供的現成可用CDN;不支援任何其他自訂CDN。<br>如果您在Experience Manager6.5、Service Pack 5(Experience Manager6.5.5)或更舊版本中使用Dynamic Media，請依照透過Dynamic Media  [Classic使CDN快取失效中的步驟](/help/assets/invalidate-cdn-cache-dm-classic.md)操作。
 
 另請參閱[Dynamic Media中的快取概述](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)。
 
