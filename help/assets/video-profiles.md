@@ -11,7 +11,7 @@ docset: aem65
 feature: 視訊設定檔
 role: Business Practitioner, Administrator
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '3704'
 ht-degree: 16%
@@ -42,7 +42,7 @@ Dynamic Media已隨附預先定義的最適化視訊編碼設定檔。 此現成
 >
 >搜尋資產時，中繼資料很實用。 縮圖是編碼期間產生的靜態視訊影像。 AEM系統需要這些視訊，並用於使用者介面，協助您在「卡片」檢視、「搜尋結果」檢視和「資產清單」檢視中以視覺化方式識別視訊。 點選編碼視訊的「轉譯」圖示（畫家的浮動視窗）時，您可以看到產生的縮圖。
 
-建立完視訊描述檔後，可將其套用至資料夾或多個資料夾。 請參閱[將視訊設定檔套用至資料夾。](#applying-a-video-profile-to-folders)
+建立完視訊描述檔後，可將其套用至資料夾或多個資料夾。 請參閱[將視訊描述檔套用至資料夾](#applying-a-video-profile-to-folders)。
 
 若要定義其他資產類型的進階處理參數，請參閱[設定資產處理](/help/assets/config-dms7.md#configuring-asset-processing)。
 
