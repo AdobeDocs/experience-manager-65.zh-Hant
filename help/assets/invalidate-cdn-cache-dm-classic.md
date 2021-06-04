@@ -8,7 +8,7 @@ content-type: reference
 feature: CDN快取，Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 16%
@@ -25,7 +25,7 @@ Dynamic Media資產由CDN（內容傳遞網路）快取，以便快速傳遞。 
 
 >[!IMPORTANT]
 >
->下列步驟僅適用於AEM 6.5、Service Pack 5(AEM 6.5.5)或更舊版本的Dynamic Media。<br>如果您在AEM 6.5、Service Pack 6(AEM 6.5.6)或更新版本中使用Dynamic Media，請依照透過Dynamic Media使 [CDN快取失效中的步驟操作。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>下列步驟僅適用於AEM 6.5、Service Pack 5(AEM 6.5.5)或更舊版本的Dynamic Media。<br>如果您在AEM 6.5、Service Pack 6(AEM 6.5.6)或更新版本中使用Dynamic Media，請依照透過Dynamic Media使 [CDN快取失效中的步驟操作](/help/assets/invalidate-cdn-cache-dynamic-media.md)。
 
 另請參閱[Dynamic Media Classic(Scene7)](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)中的快取概觀。
 
