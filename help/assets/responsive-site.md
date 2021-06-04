@@ -10,7 +10,7 @@ discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 12%
@@ -23,11 +23,11 @@ ht-degree: 12%
 
 如果您的網站位於協力廠商WCM，則使用此功能有意義。 不過，如果您的網站是AEM,Offsite影像伺服器會轉譯影像並提供給網頁。
 
-另請參閱[將視頻查看器嵌入到網頁。](embed-code.md)
+另請參閱[在網頁上嵌入視頻查看器](embed-code.md)。
 
-另請參閱[將URL連結到Web應用程式。](linking-urls-to-yourwebapplication.md)
+另請參閱[將URL連結到Web應用程式](linking-urls-to-yourwebapplication.md)。
 
-**若要為回應式網站提供最佳化的影像**:
+**若要為回應式網站提供最佳化的影像：**
 
 1. 導覽至您要為提供回應式程式碼的影像，然後在下拉式選單中，點選&#x200B;**[!UICONTROL 轉譯]**。
 
