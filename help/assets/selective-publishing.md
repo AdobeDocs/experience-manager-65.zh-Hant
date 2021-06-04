@@ -9,7 +9,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: 發佈
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2935'
 ht-degree: 4%
@@ -38,10 +38,10 @@ ht-degree: 4%
 
 在資料夾中設定選擇性發佈後，您可以執行下列任一操作：
 
-* [使用管理出版物選擇性地將資產發佈至Dynamic Media或AEM。](#selective-publish-manage-publication)
-* [使用「管理出版物」從Dynamic Media或AEM選擇性取消發佈資產。](#selective-unpublish-manage-publication)
-* [使用快速發佈將資產發佈至Dynamic Media或AEM。](#quick-publish-aem-dm)
-* [透過搜尋結果選擇性地發佈或取消發佈資產。](#selective-publish-unpublish-search-results)
+* [使用管理出版物選擇性地將資產發佈至Dynamic Media或AEM](#selective-publish-manage-publication)。
+* [使用「管理出版物」從Dynamic Media或AEM選擇性取消發佈資產](#selective-unpublish-manage-publication)。
+* [使用快速發佈將資產發佈至Dynamic Media或AEM](#quick-publish-aem-dm)。
+* [透過搜尋結果選擇性地發佈或取消發佈資產](#selective-publish-unpublish-search-results)。
 
 **若要在Dynamic Media的資料夾層級設定選擇性發佈**
 
@@ -186,7 +186,7 @@ ht-degree: 4%
 
 搜尋結果可顯示具有不同Dynamic Media發佈設定之資產資料夾中的資產。 若您已從搜尋結果中選取一或多個資產，且這些資產具有不同的Dynamic Media發佈模式設定，您可以從工具列觸發&#x200B;**[!UICONTROL 管理出版物]**&#x200B;以發佈或取消發佈。
 
-另請參閱[在AEM中搜尋資產。](/help/assets/search-assets.md)
+另請參閱[在AEM](/help/assets/search-assets.md)中搜尋資產。
 
 **透過搜尋結果選擇性地發佈或取消發佈資產**
 
