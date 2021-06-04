@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ecac6269b5e12b847136f4af534016bc7b88bb2b
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 28%
+source-wordcount: '483'
+ht-degree: 29%
 
 ---
 
@@ -52,10 +52,12 @@ Linux導航到相應的目錄，然後在命令提示符下鍵入
 1. 閱讀 Pre-Installation Summary 資訊，然後按一下 **[!UICONTROL Install]**。
 1. 安裝後，按一下 **[!UICONTROL Next]**，將快速修正更新套用至已安裝的檔案。
 
-1. 在按一下「完成」之前，取消選擇「啟動配置管理器」選項。 在使用&#x200B;**ConfigurationManager.exe**&#x200B;或&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;運行Configuration Manager之前，請導航至&#x200B;*&lt;AEMForms_Install_Dir>\configurationManager\bin*&#x200B;目錄，並在以下檔案中將&#x200B;**axis.jar**&#x200B;更新為&#x200B;**axis-1.1.jar**:
+1. 在按一下「完成」之前，取消選擇「啟動配置管理器」選項。 在使用&#x200B;**ConfigurationManager.exe**&#x200B;或&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;運行ConfigurationManager之前，請導航至&#x200B;*&lt;AEMForms_Install_Dir>\configurationManager\bin*&#x200B;目錄，並使用以下更名操作更新`ConfigurationManager.lax`和`ConfigurationManager_IPv6.lax`檔案：
 
-   * ConfigurationManager.lax
-   * ConfigurationManager_IPv6.lax
+   * `axis.jar` 至 `axis-1.4.1.1.jar`
+   * `serializer-2.7.1.jar` 至 `serializer-2.7.2.jar`
+   * `xalan-2.7.1.jar` 至 `xalan-2.7.2.jar`
+   * `xercesImpl-2.9.1.jar` 至 `xercesImpl-2.12.0.jar`
 
 1. 預設會選取「啟動設定管理器」核取方塊。 按一下 **[!UICONTROL Done]**，執行 Configuration Manager。
 
