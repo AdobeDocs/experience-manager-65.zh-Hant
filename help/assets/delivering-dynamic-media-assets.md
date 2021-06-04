@@ -11,7 +11,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: 資產管理，轉譯
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 
    * 將您的視訊或影像嵌入網站。
    * 將URL連結至您的Web應用程式。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
-   * 如果您的網站回應迅速，您可以[傳送最佳化的影像。](/help/assets/responsive-site.md)
+   * 如果您的網站回應迅速，您可以[傳送最佳化的影像](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
