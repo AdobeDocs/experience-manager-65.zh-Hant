@@ -6,7 +6,7 @@ contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -33,7 +33,7 @@ AEM資產在用戶端上為這些轉譯提供播放支援。
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
-若要為DM編碼的轉譯設定代理伺服器，請[設定Dynamic Media雲端服務。](config-dynamic.md)
+若要針對DM編碼的轉譯設定代理伺服器，請[設定Dynamic Media雲端服務](config-dynamic.md)。
 
 若要使用所需參數產生視訊轉譯，請[建立對應的視訊設定檔](video-profiles.md)。
 
