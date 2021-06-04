@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 影像預設集
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '3831'
 ht-degree: 9%
@@ -61,7 +61,7 @@ ht-degree: 9%
 >
 >在&#x200B;*Dynamic Media — 混合模式*&#x200B;中，您需要手動發佈影像預設集。
 >
->請參閱[發佈影像預設集。](#publishing-image-presets)
+>請參閱[發佈影像預設集](#publishing-image-presets)。
 
 >[!NOTE]
 >
