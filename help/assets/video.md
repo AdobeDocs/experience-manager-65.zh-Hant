@@ -11,7 +11,7 @@ docset: aem65
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '11748'
 ht-degree: 7%
@@ -30,7 +30,7 @@ ht-degree: 7%
 >
 >在Dynamic Media中處理視訊之前，請確定您的AEM管理員已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中啟用並設定Dynamic MediaCloud Services。
 >
->* 請參閱「設定Dynamic Media - Scene7模式」和「[疑難排解Dynamic Media - Scene7模式」中的「設定Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)」。](/help/assets/troubleshoot-dms7.md)[
+>* 請參閱「設定Dynamic Media - Scene7模式」中的「[設定Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)」和「[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)」。
    >
    >
 * 請參閱設定Dynamic Media — 混合模式中的[設定Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
@@ -356,7 +356,7 @@ VBR編碼需要較長的時間，但會產生最有利的結果；媒體檔案�
 
 ### 解析度 {#resolution}
 
-**解析度**以像素描述視訊檔案的高度和寬度。 大部分的源視頻都以高解析度儲存（例如1920 x 1080）。 為了串流目的，來源視訊會壓縮為較小的解析度（640 x 480或更小）。
+**** 解析度以像素說明視訊檔案的高度和寬度。大部分的源視頻都以高解析度儲存（例如1920 x 1080）。 為了串流目的，來源視訊會壓縮為較小的解析度（640 x 480或更小）。
 
 解析度和資料速率是決定視訊品質的兩個整體連結因素。 若要維持相同的視訊品質，視訊檔案中的像素數目越多（解析度越高），資料速率就必須越高。 例如，請考慮解析度為320 x 240和解析度為640 x 480的視頻檔案中每幀的像素數：
 
@@ -548,7 +548,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 >
 >請確定您已在&#x200B;*之前的YouTube*&#x200B;中設定一或多個管道，並在AEM的「YouTube設定」下新增管道(請參閱下方的「在AEM](#setting-up-youtube-in-aem)中設定YouTube」)。 [若您未執行此動作，則不會收到任何警告，指出沒有現有管道。 不過，新增管道時仍會發生Google驗證，但無法選擇要傳送視訊的管道。
 
-若要建立YouTube管道：
+**若要建立YouTube管道：**
 
 1. 前往[https://www.youtube.com](https://www.youtube.com/)並使用您的Google帳戶憑證登入。
 1. 在YouTube頁面的右上角，按一下您的個人資料圖片（也可能以實色圓圈內的字母顯示），然後按一下&#x200B;**[!UICONTROL YouTube設定]**（圓齒輪圖示）。
@@ -761,7 +761,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 >
 >如需更詳細的進度資訊，您可以在復寫下監控YouTube記錄檔。 但請注意，此類監控需要管理員存取權。
 
-若要將影片發佈至您的YouTube頻道：
+**若要將影片發佈至您的YouTube頻道：**
 
 1. 在AEM中，導覽至您要發佈至YouTube管道的視訊資產。
 1. 選取視訊資產（最適化視訊集）。
@@ -797,7 +797,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 >
 >在您將視訊資產發佈至YouTube之前，無法複製YouTube URL。
 
-若要將YouTube URL連結至您的Web應用程式：
+**若要將YouTube URL連結至您的Web應用程式：**
 
 1. 導覽至您要複製其URL的&#x200B;*YouTube已發佈*&#x200B;視訊資產，然後選取它。
 
@@ -821,7 +821,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 >
 >請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
-若要取消發佈影片以從YouTube中移除影片：
+**若要取消發佈影片以從YouTube中移除影片：**
 
 1. 導覽至您要從YouTube管道取消發佈的視訊資產。
 1. 在資產選取模式中，選取一或多個已發佈的視訊資產。
@@ -836,7 +836,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 ### 監控進度{#monitoring-progress}
 
-若要監控進度(包括編碼失敗/YouTube發佈):
+**若要監控進度(包括編碼失敗/YouTube發佈):**
 
 1. 在資產資料夾中檢視視訊編碼進度：
 
@@ -987,7 +987,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 為了讓視訊報表正常運作，設定Dynamic MediaCloud Services時，會自動建立報表套裝ID。 同時，報表套裝ID會推送至發佈伺服器，以便您在預覽資產時能使用「複製URL」功能。 不過，這需要先設定發佈伺服器。 如果未設定發佈伺服器，您仍可以發佈以查看視訊報表，但您將需要返回Dynamic Media雲端設定，然後點選&#x200B;**[!UICONTROL 確定]**。
 
-若要檢視視訊報表：
+**若要檢視視訊報表：**
 
 1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，點選「工具 (槌子圖示) > **[!UICONTROL Assets]** >視訊報 **[!UICONTROL 表」]******。
 1. 在視訊報表頁面上，執行下列其中一項作業：
@@ -1008,7 +1008,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 使用[AdobeDynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)和[HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)建立您自己的視訊檢視器。
 
-若要根據您使用HTML5檢視器SDK API建立的視訊檢視器來檢視視訊報表：
+**若要根據您使用HTML5檢視器SDK API建立的視訊檢視器來檢視視訊報表：**
 
 1. 導覽至任何已發佈的視訊資產。
 1. 在資產頁面的左上角附近，從下拉式清單中選取「檢 **[!UICONTROL 視器]**」。
@@ -1108,7 +1108,7 @@ Dynamic Media可將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
    請記住，URL僅可在您首次發 *布資產* 後 *複製* 。
 
-   請參閱[發佈資產。](/help/assets/publishing-dynamicmedia-assets.md)
+   請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
 1. 執行下列任一操作：
 
@@ -1311,7 +1311,7 @@ AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不�
 1. 點選&#x200B;**[!UICONTROL 確定]**&#x200B;以返回「屬性」頁簽。
 1. 在CRXDE Lite頁面的左上角附近，點選&#x200B;**[!UICONTROL 「儲存全部」]**，然後點選左上角的「首頁」圖示以返回AEM。
 
-   請參閱[新增視訊縮圖。](#adding-a-video-thumbnail)
+   請參閱[新增視訊縮圖](#adding-a-video-thumbnail)。
 
 ### 新增自訂視訊縮圖{#adding-a-custom-video-thumbnail-1}
 
