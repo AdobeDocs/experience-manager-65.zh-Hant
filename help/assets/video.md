@@ -11,10 +11,10 @@ docset: aem65
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '11748'
-ht-degree: 7%
+source-wordcount: '11655'
+ht-degree: 5%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 7%
 
 ## 快速入門：影片{#quick-start-videos}
 
-下列逐步工作流程說明旨在協助您透過Dynamic Media中的最適化視訊集快速上手並執行。 在每個步驟之後，會交叉參照主題標題，以取得詳細資訊。
+下列逐步工作流程說明旨在協助您透過Dynamic Media中的最適化視訊集快速上手並執行。 在每個步驟之後，都會有主題標題的交叉參考，您可在其中找到詳細資訊。
 
 >[!NOTE]
 >
->在Dynamic Media中處理視訊之前，請確定您的AEM管理員已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中啟用並設定Dynamic MediaCloud Services。
+>在Dynamic Media中處理視訊之前，請確定您的Adobe Experience Manager管理員已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中啟用並設定Dynamic MediaCloud Services。
 >
 >* 請參閱「設定Dynamic Media - Scene7模式」中的「[設定Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)」和「[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)」。
    >
@@ -120,11 +120,11 @@ ht-degree: 7%
 
 ## 在Dynamic Media中使用視訊{#working-with-video-in-dynamic-media}
 
-Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品質的最適化視訊，以在多個畫面間串流，包括桌上型電腦、iOS、Android、Blackberry和Windows行動裝置。 適用性視訊集將以不同位速率和格式（如400 kbps、800 kbps和1000 kbps）編碼的相同視訊的版本分組。 台式電腦或行動裝置會偵測可用頻寬。
+Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品質的最適化視訊，以在多個畫面間串流，包括桌上型電腦、iOS、Android™、Blackberry和Windows行動裝置。 適用性視訊集將以不同位速率和格式（如400 kbps、800 kbps和1000 kbps）編碼的相同視訊的版本分組。 台式電腦或行動裝置會偵測可用頻寬。
 
 例如，在iOS行動裝置上，會偵測頻寬，例如3G、4G或Wi-Fi。 然後，它自動從自適應視訊集內的各種視訊位速率中選取正確編碼的視訊。 視訊會串流至桌上型電腦、行動裝置或平板電腦。
 
-此外，如果案頭或行動裝置上的網路條件改變，視訊品質會自動動態切換。 此外，如果客戶在桌上型電腦上進入全螢幕模式，適用性視訊集會使用更佳的解析度來回應，進而改善客戶的觀看體驗。 使用最適化視訊集，可讓客戶在多個畫面和裝置上播放Dynamic Media視訊，獲得最佳的播放效果。
+此外，如果案頭或行動裝置上的網路條件改變，視訊品質會自動動態切換。 此外，如果客戶在桌上型電腦上進入全螢幕模式，適用性視訊集會使用更佳的解析度來回應，改善客戶的觀看體驗。 使用最適化視訊集，可讓客戶在多個畫面和裝置上播放Dynamic Media視訊，獲得最佳的播放效果。
 
 視訊播放器用來判斷播放或播放期間要選取的編碼視訊的邏輯，是根據下列演算法：
 
@@ -145,13 +145,13 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 
 * 所有HTML5視訊檢視器中的視訊字幕。
 * 透過完整的中繼資料支援，組織、瀏覽和搜尋視訊，以有效管理視訊資產。
-* 將最適化視訊集傳送至網路以及桌上型電腦和行動裝置，包括iPhone、iPad、Android、Blackberry和Windows電話。
+* 將最適化視訊集傳送至網路、桌上型電腦和行動裝置，包括iPhone、iPad、Android、Blackberry和Windows Phone。
 
-多種iOS平台均支援最適化視訊串流。 請參閱[Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
+各種iOS平台均支援最適化視訊串流。 請參閱[Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
 
 Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位置找到支援此視頻格式的Blackberry設備：[Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支援的視頻格式。
 
-您可以在以下位置找到支援此視頻格式的Windows設備：[Windows Phone](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx)上支援的視訊格式
+您可以在以下位置找到支援此視頻格式的Windows設備：[Windows Phone 8](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105))支援的媒體轉碼器
 
 * 使用Dynamic Media視訊檢視器預設集播放視訊，包括下列內容：
 
@@ -163,17 +163,23 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
-另請參閱[AEM Assets和Dynamic Media Classic的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)和[僅AEM資產的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
+另請參閱[Experience Manager資產的檢視器和Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)和[僅Experience Manager資產的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
 ## 最佳實務：使用HTML5視訊檢視器{#best-practice-using-the-html-video-viewer}
 
-Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可以使用它們來避免與HTML5視訊播放相關的許多常見問題，以及與行動裝置相關的問題，例如缺乏最適化串流傳送以及案頭瀏覽器觸及率有限。
+Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可以使用它們來避免與HTML5視訊播放相關的許多常見問題。 此外，行動裝置相關的問題，例如缺乏最適化串流傳送以及案頭瀏覽器觸及範圍有限。
 
-在播放器的設計端，您可以使用標準網頁開發工具來設計所有視訊播放器的功能。 例如，您可以使用HTML5和CSS來設計按鈕、控制項和自訂海報影像背景，以協助您以自訂外觀觸及客戶。
+在播放器的設計端，您可以使用標準網頁開發工具來設計視訊播放器的功能。 例如，您可以使用HTML5和CSS來設計按鈕、控制項和自訂海報影像背景，以協助您以自訂外觀觸及客戶。
 
 在檢視器的播放端，會自動偵測瀏覽器的視訊功能。 接著，它會使用HLS（HTTP即時串流）（也稱為最適化視訊串流）提供視訊。 或者，如果這些傳送方法不存在，則會改用HTML5漸進式。
 
-結合為單一播放器，即可使用HTML5和CSS設計播放元件、內嵌播放，以及根據瀏覽器功能使用最適化和漸進式串流，將多媒體內容的觸及範圍擴展至案頭和行動使用者，並確保簡化的視訊體驗。
+合併為單一播放器，可執行下列動作：
+
+* 使用HTML5和CSS設計播放元件的功能
+* 具有內嵌播放
+* 根據瀏覽器功能使用最適化和漸進式串流
+
+您可以將多媒體內容的觸及範圍擴展至案頭和行動使用者，並確保簡化的視訊體驗。
 
 另請參閱[關於HTML5檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
@@ -181,9 +187,9 @@ Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可
 
 針對案頭和行動最適化視訊串流，用於位元速率切換的視訊是以最適化視訊集中的所有MP4視訊為基礎。
 
-使用HLS或漸進式視訊下載時發生視訊播放。 在舊版AEM（例如6.0、6.1和6.2）中，影片會透過HTTP串流化。
+使用HLS或漸進式視訊下載時發生視訊播放。 在舊版Experience Manager（例如6.0、6.1和6.2）中，視訊是透過HTTP串流。
 
-不過，在AEM 6.3及上，視訊現在會透過HTTPS（即HLS）串流，因為DM閘道服務URL一律使用HTTPS。 請注意，此預設行為不會影響客戶。 也就是說，除非瀏覽器不支援，否則視訊串流一律會透過HTTPS進行。 （請參閱下表）。 因此，
+不過，在Experience Manager6.3及以上版本中，視訊現在會透過HTTPS（即HLS）串流，因為DM閘道服務URL一律使用HTTPS。 此預設行為不會有客戶影響。 也就是說，除非瀏覽器不支援，否則視訊串流一律會透過HTTPS進行。 （請參閱下表）。 因此，
 
 * 如果您的HTTPS網站採用HTTPS視訊串流，則串流沒問題。
 * 如果您的HTTP網站採用HTTPS視訊串流，串流沒問題，且網頁瀏覽器沒有混合的內容問題。
@@ -278,18 +284,17 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
 
 如果您已啟用Dynamic Media並設定視訊雲端服務， **Dynamic Media編碼視訊**&#x200B;工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。如果您已啟用Dynamic Media並設定視訊雲端服務，當您上傳視訊時，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會自動生效。 (如果您未使用Dynamic Media, **[!UICONTROL DAM更新資產]**&#x200B;工作流程將生效。)
 
-以下是編碼來源視訊檔案的最佳實務提示。
+<!-- DEAD The following are best-practice tips for encoding source video files.
 
-如需視訊編碼的相關建議，請參閱下列內容：
+For advice about video encoding, see [Video Encoding Basics](https://www.adobe.com/go/learn_s7_encoding_en).
 
-* [串流101:基本概念 — 編解碼器、頻寬、資料速率和解析度](https://www.adobe.com/go/learn_s7_streaming101_en)。
-* [視訊編碼基本概念](https://www.adobe.com/go/learn_s7_encoding_en)。
+* [Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution](https://www.adobe.com/go/learn_s7_streaming101_en). -->
 
 ### 源視頻檔案{#source-video-files}
 
 為視訊檔案編碼時，請使用盡可能高品質的來源視訊檔案。 請避免使用先前編碼的視訊檔案，因為這些檔案已經壓縮，而進一步編碼會造成品質欠佳的視訊。
 
-下表說明了在對源視頻檔案進行編碼之前，您應該具有的建議大小、外觀比例和最小比特率：
+下表說明了源視頻檔案編碼前必須具有的建議大小、外觀比例和最小比特率：
 
 | 大小 | 外觀比例 | 最小比特率 |
 |--- |--- |--- |
@@ -322,7 +327,7 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
 | 1.78 | 16時9分 |
 | 0.56 | 9時16分 |
 
-例如，寬度為1440 x 1080的視頻的長寬比為1440/1080，即1.33。在這種情況下，您可以選擇長寬比為4:3的視頻編碼預設集來編碼視頻檔案。
+例如，寬度為1440 x 1080的視頻的長寬比為1440/1080，即1.33。在這種情況下，選擇寬寬比為4:3的視頻編碼預設集來編碼視頻檔案。
 
 ### 位元速率 {#bitrate}
 
@@ -337,13 +342,13 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
 * **[!UICONTROL 常數位元速率編碼]** (CBR) — 在CBR編碼期間，位元速率或每秒位數在整個編碼過程中保持相同。CBR編碼在整個視頻中將設定的資料速率保存為設定。 此外，CBR編碼不會為質量優化介質檔案，但會節省儲存空間。
 如果視頻在整個視頻中包含類似的運動級別，則使用CBR。 CBR最常用於流式視頻內容。 另請參閱[使用自訂新增的視訊編碼參數](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters)。
 
-* **[!UICONTROL 變數位元速率編碼]** (VBR)- VBR編碼會根據壓縮程式所需的資料，將資料速率調低至您設定的上限。這表示在VBR編碼過程中，媒體檔案的位元速率會根據媒體檔案的位元速率需求，以動態方式增加或減少。
+* **[!UICONTROL 變數位元速率編碼]** (VBR)- VBR編碼會根據壓縮程式所需的資料，將資料速率調低至您設定的上限。此功能表示在VBR編碼過程中，媒體檔案的位元速率會根據媒體檔案的位元速率需求，以動態方式增加或減少。
 VBR編碼需要較長的時間，但會產生最有利的結果；媒體檔案的品質優越。 VBR最常用於http漸進式傳送視訊內容。
 
-何時應使用VBR或CRB?
-在選擇VBR或CBR時，幾乎總是建議您將VBR用於介質檔案。 VBR以有競爭力的位元速率提供更高品質的檔案。 使用VBR時，請務必使用兩遍編碼，並將最大位元速率設為目標視訊位元速率的1.5倍。
+何時使用VBR或CRB?
+選擇VBR或CBR時，幾乎總是建議您將VBR用於介質檔案。 VBR以競爭性位元速率提供高品質的檔案。 使用VBR時，請務必使用兩遍編碼，並將最大位元速率設為目標視訊位元速率的1.5倍。
 
-選擇視訊編碼預設集時，請考慮目標使用者的連線速度。 選擇資料速率為該速度80%的預設集。 例如，如果目標最終用戶的連接速度為1000 Kbps，則最佳預設是視頻資料速率為800 Kbps的預設。
+選擇視頻編碼預設集時，請記住目標最終用戶的連接速度。 選擇資料速率為該速度80%的預設集。 例如，如果目標最終用戶的連接速度為1000 Kbps，則最佳預設是視頻資料速率為800 Kbps的預設。
 
 此表描述了典型連接速度的資料速率。
 
@@ -367,7 +372,7 @@ VBR編碼需要較長的時間，但會產生最有利的結果；媒體檔案�
 
 640 x 480檔案的像素是每幀的4倍。 若要針對這兩個範例解析度取得相同的資料速率，您可對640 x 480檔案套用4倍的壓縮，以降低視訊品質。 因此，250 Kbps的視頻資料速率以320 x 240解析度產生高質量的觀看，而不是以640 x 480解析度產生。
 
-一般而言，您使用的資料速率越高，視訊的外觀越好，使用的解析度越高，您維持檢視品質所需的資料速率就越高（解析度越低）。
+一般而言，您使用的資料速率越高，視訊的外觀越好，使用的解析度越高，您必須維持檢視品質的資料速率就越高（與解析度較低相比）。
 
 由於解析度和資料速率是連結的，因此在對視訊進行編碼時有兩個選項：
 
@@ -414,13 +419,13 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 
 ## 將影片發佈至YouTube {#publishing-videos-to-youtube}
 
-您可以直接將內部部署的AEM視訊資產發佈至您先前建立的YouTube管道。
+您可以直接將內部部署的Experience Manager影片資產發佈至您先前建立的YouTube管道。
 
-若要將影片資產發佈至YouTube，請使用標籤設定AEM Assets。 將這些標籤與YouTube管道建立關聯。 如果影片資產的標籤符合YouTube頻道的標籤，則影片會發佈至YouTube。 只要使用相關標籤，發佈至YouTube就會與一般發佈視訊一起發生。
+若要將視訊資產發佈至YouTube，您需使用標籤設定Experience Manager資產。 將這些標籤與YouTube管道建立關聯。 如果影片資產的標籤符合YouTube頻道的標籤，則影片會發佈至YouTube。 只要使用相關標籤，發佈至YouTube就會與一般發佈視訊一起發生。
 
-YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至YouTube，而非Dynamic Media編碼已建立的任何視訊轉譯。 雖然使用Dynamic Media處理視訊並非必要動作，但是當播放需要檢視器預設集時，應該會這麼做。
+YouTube會自行編碼。 因此，上傳至Experience Manager的原始視訊檔案會發佈至YouTube，而非Dynamic Media編碼已建立的任何視訊轉譯。 雖然使用Dynamic Media處理視訊並非必要動作，但是當播放需要檢視器預設集時，應確實如此。
 
-略過視訊處理設定檔並直接發佈至YouTube時，這只是表示您在AEM Asset中的視訊資產可能沒有可檢視的縮圖。 這也表示，如果您以dynamicmedia或dynamicmedia_scene7執行模式執行，未編碼的視訊將無法用於任何Dynamic Media資產類型。
+略過視訊處理設定檔並直接發佈至YouTube時，這只是表示您Experience Manager資產中的視訊資產沒有取得可檢視的縮圖。 這也表示，如果您以`dynamicmedia`或`dynamicmedia_scene7`執行模式執行，未編碼的視訊無法用於任何Dynamic Media資產類型。
 
 將視訊資產發佈至YouTube伺服器時，必須完成下列工作，以確保透過YouTube進行安全的伺服器對伺服器驗證：
 
@@ -428,7 +433,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. [建立YouTube管道](#creating-a-youtube-channel)
 1. [新增要發佈的標籤](#adding-tags-for-publishing)
 1. [啟用YouTube Publish復寫代理](#enabling-the-youtube-publish-replication-agent)
-1. [在AEM中設定YouTube](#setting-up-youtube-in-aem)
+1. [在Experience Manager中設定YouTube](#setting-up-youtube-in-aem)
 1. [（選用）自動設定已上傳影片的預設YouTube屬性](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [將影片發佈至您的YouTube頻道](#publishing-videos-to-your-youtube-channel)
 1. [（選用）驗證YouTube上發佈的影片](/help/assets/video.md#optional-verifying-the-published-video-on-youtube)
@@ -438,19 +443,19 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 ### 配置Google雲設定{#configuring-google-cloud-settings}
 
-若要發佈至YouTube，您需要Google帳戶。 如果你有Gmail賬戶，那麼你已經有了Google賬戶；如果您沒有Google帳戶，便可輕鬆建立帳戶。 您需要帳戶，因為您需要憑證才能將影片資產發佈至YouTube。 如果您已建立帳戶，請略過此任務，然後直接前往「建立YouTube通道」](#creating-a-youtube-channel)。[
+若要發佈至YouTube，您需要Google帳戶。 如果你有Gmail賬戶，那麼你已經有Google賬戶了；如果您沒有Google帳戶，便可輕鬆建立帳戶。 您需要帳戶，因為您需要憑證才能將影片資產發佈至YouTube。 如果您已建立帳戶，請略過此任務，然後直接前往「建立YouTube通道」](#creating-a-youtube-channel)。[
 
 與Google Cloud搭配使用的帳戶和用於YouTube的Google帳戶不需相同。
 
-請注意，Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的步驟可能與下列檔案稍有不同。 當您嘗試檢查視訊是否已上傳至YouTube時，也會套用此警告。
+Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的步驟可能與下文所述的略有不同。 當您嘗試檢查視訊是否已上傳至YouTube時，也會套用此警告。
 
 >[!NOTE]
 >
->在編寫本文時，以下步驟是正確的。 不過，谷歌會不經通知就定期更新其網站。 因此，這些步驟可能略有不同。
+>在編寫本文時，以下步驟是正確的。 不過，谷歌會不經通知就定期更新其網站。 因此，這些步驟可能會稍有不同。
 
 配置Google雲端設定：
 
-1. 建立新的Google帳戶。
+1. 建立Google帳戶。
    [https://accounts.google.com/SignUp?service=mail](https://accounts.google.com/SignUp?service=mail)
 
    如果您已有Google帳戶，請跳至下一個步驟。
@@ -458,7 +463,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 前往[https://cloud.google.com/](https://cloud.google.com/)。
 1. 在Google cloud頁面的右上角，按一下「主控台」 ****。
 
-   如有必要，您可能需要使用Google帳戶憑證&#x200B;**[!UICONTROL 登入]**&#x200B;才能查看&#x200B;**[!UICONTROL Console]**&#x200B;選項。
+   如有必要，請使用您的Google帳戶憑證登入&#x200B;**[!UICONTROL 以查看**[!UICONTROL  Console ]**選項。]**
 
 1. 在「控制面板」頁面的&#x200B;**[!UICONTROL Google Cloud Platform]**&#x200B;右側，按一下「專案」下拉式清單以開啟「選取專案」對話方塊。
 1. 在「選取專案」對話方塊中，點選「**[!UICONTROL 新增專案]**」。
@@ -467,7 +472,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 在「新建項目」對話框的「項目名稱」欄位中，鍵入新項目的名稱。
 
-   請注意，您的專案ID是以您的專案名稱為基礎。 因此，請謹慎選擇專案名稱；建立後無法變更。 此外，您稍後在AEM中設定YouTube時，將需要再次輸入相同的專案ID;你可能想寫下來。
+   您的專案ID以您的專案名稱為基礎。 因此，請謹慎選擇專案名稱；建立後無法變更。 此外，您之後在Experience Manager中設定YouTube時，必須再次輸入相同的專案ID;考慮寫下來。
 
 1. 按一下&#x200B;**[!UICONTROL 建立]**。
 
@@ -484,7 +489,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
-1. 若要使用API，您可能需要憑證。 如有必要，請按一下&#x200B;**[!UICONTROL 建立憑據]**。
+1. 若要使用API，您需要憑證。 如有必要，請按一下&#x200B;**[!UICONTROL 建立憑據]**。
 
    ![6_5_googleaccount-api-createcredentials](assets/6_5_googleaccount-apis-createcredentials.png)
 
@@ -500,13 +505,13 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 點選&#x200B;**[!UICONTROL 我需要什麼憑證？]**
 1. 在「 **[!UICONTROL 新增認證至您的專案]** 」頁面的「建立OAuth 2.0用戶端ID **** 」標題下，視需要在「名稱」欄位中輸入唯一名稱。或者，您可以使用Google指定的預設名稱。
-1. 在「**[!UICONTROL 授權Javascript原始項]**」標題下，在文本欄位中輸入以下路徑，在路徑中替換您自己的域和埠號，然後按&#x200B;**[!UICONTROL Enter]**&#x200B;將路徑添加到清單中：
+1. 在「**[!UICONTROL 授權的JavaScript原始項]**」標題下，在文本欄位中輸入以下路徑，在路徑中替換您自己的域和埠號，然後按&#x200B;**[!UICONTROL Enter]**&#x200B;將路徑添加到清單中：
 
    `https://<servername.domain>:<port_number>`
 
    例如， `https://1a2b3c.mycompany.com:4321`
 
-   **注意**:上述路徑範例僅供說明之用。
+   **注意**:上述路徑範例僅供示範之用。
 
    ![6_5_googleaccount-api-createcredentials-oauth](assets/6_5_googleaccount-apis-createcredentials-oauth.png)
 
@@ -516,7 +521,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    例如， `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   **注意**:上述路徑範例僅供說明之用。
+   **注意**:上述路徑範例僅供示範之用。
 
 1. 按一下「**[!UICONTROL 建立OAuth用戶端ID]**」。
 1. 在「 **[!UICONTROL 新增認證至您的專案]****** 」頁面的「設定OAuth 2.0同意書」畫面標題下方，選取您目前使用的Gmail電子郵件地址。
@@ -525,7 +530,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 在顯示給使用者的&#x200B;**[!UICONTROL 產品名稱]**&#x200B;標題下，在文字欄位中，輸入您要在同意畫面上顯示的內容。
 
-   AEM管理員向YouTube驗證時，會顯示同意畫面；AEM會聯絡YouTube以取得權限。
+   Experience Manager管理員向YouTube驗證時，會顯示同意畫面；Experience Manager聯繫YouTube以獲取權限。
 
 1. 按一下&#x200B;**[!UICONTROL 繼續]**。
 1. 在「新增認證至您的專案」頁面的「下載認證」標題下，點選「 **[!UICONTROL 下載]** 」 **[!UICONTROL 步驟4]**。
@@ -534,60 +539,60 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 保存`client_id.json`檔案。
 
-   稍後在Adobe Experience Manager中設定YouTube時，您需要此下載的json檔案。
+   稍後在Adobe Experience Manager中設定YouTube時，您需要此已下載的json檔案。
 
 1. 按一下&#x200B;**[!UICONTROL Done]**。
 
-   登出您的Google帳戶。 您現在將建立YouTube管道。
+   登出您的Google帳戶。 現在建立YouTube管道。
 
 ### 建立YouTube通道{#creating-a-youtube-channel}
 
 若要將影片發佈至YouTube，您必須擁有一或多個管道。 如果您已建立YouTube管道，可以略過此工作，然後前往[新增標籤以進行發佈](/help/assets/video.md#adding-tags-for-publishing)。
 
->[!CAUTION]
+>[!WARNING]
 >
->請確定您已在&#x200B;*之前的YouTube*&#x200B;中設定一或多個管道，並在AEM的「YouTube設定」下新增管道(請參閱下方的「在AEM](#setting-up-youtube-in-aem)中設定YouTube」)。 [若您未執行此動作，則不會收到任何警告，指出沒有現有管道。 不過，新增管道時仍會發生Google驗證，但無法選擇要傳送視訊的管道。
+>請確定您已在&#x200B;*之前的YouTube*&#x200B;中設定一或多個管道，並在「Experience Manager」的「YouTube設定」下新增管道(請參閱下方的「在Experience Manager](#setting-up-youtube-in-aem)中設定YouTube」)。 [如果您未設定一或多個管道，系統不會警告您不存在管道。 不過，新增管道時仍會發生Google驗證，但無法選擇要傳送視訊的管道。
 
 **若要建立YouTube管道：**
 
 1. 前往[https://www.youtube.com](https://www.youtube.com/)並使用您的Google帳戶憑證登入。
-1. 在YouTube頁面的右上角，按一下您的個人資料圖片（也可能以實色圓圈內的字母顯示），然後按一下&#x200B;**[!UICONTROL YouTube設定]**（圓齒輪圖示）。
+1. 在YouTube頁面的右上角，按一下您的個人資料圖片（也可以以實色圓圈內的字母顯示），然後按一下&#x200B;**[!UICONTROL YouTube設定]**（圓齒輪圖示）。
 1. 在「概述」頁面的「其他功能」標題下，按一下「**[!UICONTROL 查看所有我的頻道或建立新頻道]**」。
 1. 在「通道」頁上，按一下「建立新通道」]**。**[!UICONTROL 
 1. 在「品牌帳戶」頁面的「品牌帳戶名稱」欄位中，輸入商業名稱或您選擇要發佈視訊資產的任何其他管道名稱，然後按一下&#x200B;**[!UICONTROL 建立]**。
 
-   請記住您在這裡輸入的名稱，因為在AEM中設定YouTube時，您需要再次輸入名稱。
+   請記住您在這裡輸入的名稱，因為當您在Experience Manager中設定YouTube時，必須再次輸入它。
 
 1. （選用）如有必要，請新增更多管道。
 
-   現在您將新增發佈的標籤。
+   現在新增要發佈的標籤。
 
 ### 新增要發佈的標籤{#adding-tags-for-publishing}
 
-若要發佈至YouTube的影片，AEM會將標籤關聯至一或多個YouTube頻道。 若要新增要發佈的標籤，請參閱[管理標籤](/help/sites-administering/tags.md)。
+若要發佈至YouTube的影片，Experience Manager會將標籤關聯至一或多個YouTube頻道。 若要新增要發佈的標籤，請參閱[管理標籤](/help/sites-administering/tags.md)。
 
-或者，如果您想在AEM中使用預設標籤，可以跳過此任務並轉至[啟用YouTube Publish複製代理](#enabling-the-youtube-publish-replication-agent)。
+或者，如果要在Experience Manager中使用預設標籤，可以跳過此任務並轉至[啟用YouTube發佈複製代理](#enabling-the-youtube-publish-replication-agent)。
 
 ### 啟用YouTube Publish復寫代理{#enabling-the-youtube-publish-replication-agent}
 
-啟用YouTube Publish復寫代理後，如果您想要測試與Google Cloud帳戶的連線，請點選&#x200B;**[!UICONTROL Test Connection]**。 瀏覽器索引標籤會顯示連線結果。 如果您已新增YouTube管道，則這些管道的清單會顯示為測試的一部分。
+啟用YouTube Publish復寫代理後，如果您想要測試與Google Cloud帳戶的連線，請點選&#x200B;**[!UICONTROL Test Connection]**。 瀏覽器索引標籤會顯示連線結果。 如果您已新增YouTube管道，這些管道的清單會顯示為測試的一部分。
 
-1. 在AEM的左上角，按一下AEM標誌，然後在左側導軌中，按一下「 **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **** Agent on AuthorAdor」。
+1. 在Experience Manager的左上角，按一下Experience Manager標誌，然後在左側導軌中，按一下「**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者上的代理」。]**
 1. 在「作者代理」頁面上，按一下「**[!UICONTROL YouTube發佈(youtube)]**」。
 1. 在工具列的「設定」右側，按一下「**[!UICONTROL 編輯]**」。
-1. 選中&#x200B;**[!UICONTROL 啟用]**&#x200B;複選框以開啟複製代理。
+1. 選中&#x200B;**[!UICONTROL 啟用]**&#x200B;複選框，以便開啟複製代理。
 1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
-   現在您將在AEM中設定YouTube。
+   現在在Experience Manager中設定YouTube。
 
-### 在AEM {#setting-up-youtube-in-aem}中設定YouTube
+### 在{#setting-up-youtube-in-aem}Experience Manager中設定YouTube
 
-從AEM 6.4開始，引進了全新的觸控使用者介面方法，以在AEM中設定YouTube發佈。根據您所使用的AEM安裝例項，執行下列其中一項作業：
+從Experience Manager6.4開始，引入新的觸控使用者介面方法，以在Experience Manager中設定YouTube發佈。 根據您使用的Experience Manager安裝例項，執行下列其中一項操作：
 
-* 若要在6.4之前的AEM中設定YouTube，請參閱「在6.4 [之前的AEM中設定YouTube」](/help/assets/video.md#setting-up-youtube-in-aem-before)。
-* 若要在AEM 6.4或更新版本中設定YouTube，請參閱[在AEM 6.4和更新版本中設定YouTube](#setting-up-youtube-in-aem-and-later)。
+* 若要在6.4之前的Experience Manager中設定YouTube，請參閱[在6.4](/help/assets/video.md#setting-up-youtube-in-aem-before)之前的Experience Manager中設定YouTube 。
+* 若要在Experience Manager6.4或更新版本中設定YouTube，請參閱[在Experience Manager6.4和更新版本中設定YouTube](#setting-up-youtube-in-aem-and-later)。
 
-#### 在AEM 6.4及更新版本{#setting-up-youtube-in-aem-and-later}中設定YouTube
+#### 在Experience Manager6.4和更新版本{#setting-up-youtube-in-aem-and-later}中設定YouTube
 
 1. 請務必以管理員身分登入您的Dynamic Media例項。
 1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，點選「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube發佈設定]**」。
@@ -606,7 +611,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 返回YouTube帳戶設定對話方塊。在「 **[!UICONTROL JSON設定」欄位中]** ，貼上JSON文字。
 1. 在頁面的右上角附近，點選&#x200B;**[!UICONTROL Save]**。
 
-   您現在將在AEM中設定YouTube管道。
+   現在在Experience Manager中設定YouTube頻道。
 
 1. 點選「**[!UICONTROL 新增通道]**」。
 1. 在「頻道名稱」欄位中，輸入您在「先前將一或多個頻道新增至YouTube ]**」任務中建立的頻道名稱。**[!UICONTROL 
@@ -622,11 +627,11 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 點選&#x200B;**[!UICONTROL 允許]**。
 
-   您現在將設定發佈的標籤。
+   現在設定發佈的標籤。
 
 1. **[!UICONTROL 設定要發佈的標籤]**  — 在「Cloud Services> YouTube」頁面上，點選鉛筆圖示以編輯您要使用的標籤清單。
-1. 點選下拉式清單圖示（向上插入符號），以顯示AEM中可用標籤的清單。
-1. 點選一或多個標籤以新增。
+1. 點選下拉式清單圖示（倒轉插入號），以便以Experience Manager顯示可用標籤清單。
+1. 點選一或多個標籤，以便新增標籤。
 
    若要刪除您已新增的標籤，請選取標籤，然後點選&#x200B;**[!UICONTROL X]**。
 
@@ -634,7 +639,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    現在您可將影片發佈至YouTube頻道。
 
-#### 在6.4之前的AEM中設定YouTube {#setting-up-youtube-in-aem-before}
+#### 在6.4之前的Experience Manager中設定YouTube {#setting-up-youtube-in-aem-before}
 
 1. 請務必以管理員身分登入您的Dynamic Media例項。
 
@@ -645,14 +650,14 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 在「YouTube帳戶設定」對話方塊的「應用程式名 **[!UICONTROL 稱」欄位中]** ，輸入Google專案ID。
 
    您在先前[設定的Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings)時指定了專案ID。
-讓「YouTube帳戶設定」對話方塊保持開啟；你稍後會回來。
+讓「YouTube帳戶設定」對話方塊保持開啟；你馬上就會回來。
 
 1. 使用純文字編輯器，開啟您先前在「設定Google雲端」設定工作中下載並儲存的JSON檔案。
 1. 選取並複製整個JSON文字。
 1. 返回YouTube帳戶設定對話方塊。在「 **[!UICONTROL JSON設定」欄位中]** ，貼上JSON文字。
 1. 點選&#x200B;**[!UICONTROL 確定]**。
 
-   您現在將在Experience Manager中設定YouTube管道。
+   現在在Experience Manager中設定YouTube頻道。
 
 1. 在「可用頻道」 **[!UICONTROL 的右側]**，點 **選+**  (加號圖示)。
 1. 在「YouTube頻道設定」對話方塊的「標題」欄位中，輸入您在「先前新增一或多個頻道至YouTube」工作中建立的頻道名稱 **** 。
@@ -668,11 +673,11 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 點選&#x200B;**[!UICONTROL 允許]**。
 
-   您現在將設定發佈的標籤。
+   現在設定發佈的標籤。
 
 1. **[!UICONTROL 設定要發佈的標籤]**  — 在「Cloud Services> YouTube」頁面上，點選鉛筆圖示以編輯您要使用的標籤清單。
-1. 點選下拉式清單圖示（向上插入符號），以顯示AEM中可用標籤的清單。
-1. 點選一或多個標籤以新增。
+1. 點選下拉式清單圖示（倒轉插入號），以便以Experience Manager顯示可用標籤清單。
+1. 點選一或多個標籤，以便新增標籤。
 
    若要刪除您已新增的標籤，請選取標籤，然後點選&#x200B;**X**。
 
@@ -682,9 +687,9 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 ### （選用）自動設定已上傳影片的預設YouTube屬性{#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
-您可以選擇在上傳影片時自動設定YouTube屬性。 您需在AEM中建立中繼資料處理設定檔，才能達成此目的。
+您可以在Experience Manager中建立中繼資料處理設定檔，選擇在上傳影片時自動設定YouTube屬性。
 
-若要建立中繼資料處理設定檔，您必須先從「欄位標籤 **[!UICONTROL 」、「對應至屬性]********** 」和「選擇」欄位複製值，這些全都可在視訊的中繼資料結構中找到。然後，您會新增這些值，以建立您的YouTube視訊中繼資料處理設定檔。
+若要建立中繼資料處理設定檔，您必須先從「欄位標籤 **[!UICONTROL 」、「對應至屬性]********** 」和「選擇」欄位複製值，這些全都可在視訊的中繼資料結構中找到。接著，您可以新增這些值，以建立YouTube視訊中繼資料處理設定檔。
 
 若要自動設定已上傳影片的預設YouTube屬性：
 
@@ -711,7 +716,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 將複製的值貼到開啟的文字編輯器中。 稍後當您建立中繼資料處理設定檔時，將需要此值。 將文字編輯器保持開啟。
 
 1. 在「元資料結構編輯器」頁的右上角附近，按一下「**[!UICONTROL 取消」]**。
-1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，按一下「工具 (槌子圖示) > **[!UICONTROL Assets]** >中繼資 **[!UICONTROL 料設定檔]******」。
+1. 在Experience Manager的左上角，點選Experience Manager標誌，然後在左側導軌中，按一下「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料描述檔]**」。
 
 1. 在「中繼資料描述檔」頁面的右上角附近，按一下&#x200B;**[!UICONTROL Create]**。
 1. 在「新增中繼資料描述檔」對話方塊的「描述檔標題 **[!UICONTROL 」文字欄位中，輸入名稱，]** 然後按一下「 `YouTube Video` 建立 ****」。
@@ -722,7 +727,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * （可選）將標籤為&#x200B;**[!UICONTROL Section Header]**&#x200B;的元件拖到左側，並將其拖放到表單區域中。
    * （可選）按一下「**[!UICONTROL 欄位標籤]**」以選取元件。
    * （可選）在頁面右側的「設定」標籤下，在「欄位標籤」文本欄位中，輸入`YouTube Publishing`。
-   * 按一下&#x200B;**[!UICONTROL 建置表單]**&#x200B;標籤，然後拖曳標示為&#x200B;**[!UICONTROL 多值文字]**&#x200B;的元件，並將其拖曳至您剛建立的&#x200B;**[!UICONTROL YouTube Publishing]**&#x200B;標題下方。
+   * 按一下&#x200B;**[!UICONTROL 建置表單]**&#x200B;標籤，然後拖曳標示為&#x200B;**[!UICONTROL 多值文字]**&#x200B;的元件，並將其拖曳至您建立的&#x200B;**[!UICONTROL YouTube Publishing]**&#x200B;標題下方。
 
    * 按一下「**[!UICONTROL 欄位標籤]**」以選擇元件。
    * 在頁面右側的「設定」標籤下方，將您先前複製的YouTube發佈值（欄位標籤值和對應至屬性值）貼入表單上各自的欄位。 將選擇值貼入預設值欄位。
@@ -733,29 +738,29 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
    * （可選）將標籤為&#x200B;**[!UICONTROL Section Header]**&#x200B;的元件拖到左側，並將其拖放到表單區域中。
    * （可選）按一下「**[!UICONTROL 欄位標籤]**」以選取元件。
    * （可選）在頁面右側的「設定」標籤下，在「欄位標籤」文本欄位中，輸入`YouTube Privacy`。
-   * 按一下&#x200B;**[!UICONTROL 建置表單]**&#x200B;標籤，然後拖曳標示為&#x200B;**[!UICONTROL 多值文字]**&#x200B;的元件，並將其拖曳至您剛建立的&#x200B;**[!UICONTROL YouTube隱私權]**&#x200B;標題下方。
+   * 按一下&#x200B;**[!UICONTROL 建置表單]**&#x200B;標籤，然後拖曳標示為&#x200B;**[!UICONTROL 多值文字]**&#x200B;的元件，並將其拖曳至您建立的&#x200B;**[!UICONTROL YouTube隱私權]**&#x200B;標題下方。
 
    * 按一下「**[!UICONTROL 欄位標籤]**」以選擇元件。
    * 在頁面右側的「設定」標籤下方，將您先前複製的YouTube發佈值（欄位標籤值和對應至屬性值）貼入表單上各自的欄位。 將選擇值貼入預設值欄位。
 
 1. 在頁面的右上角附近，按一下「儲 **[!UICONTROL 存」]**。
-1. 將YouTube發佈中繼資料設定檔套用至您要上傳影片的資料夾。 您必須同時設定中繼資料描述檔和視訊描述檔。
+1. 將YouTube發佈中繼資料設定檔套用至您要上傳影片的資料夾。 您必須同時設定「中繼資料描述檔」和「視訊描述檔」。
 
    請參 [閱中繼資料](/help/assets/metadata-config.md#metadata-profiles)[描述檔和視訊描述檔](/help/assets/video-profiles.md)。
 
 ### 將影片發佈至您的YouTube頻道{#publishing-videos-to-your-youtube-channel}
 
-現在，您將先前新增的標籤與視訊資產建立關聯。 此程式可讓AEM知道要發佈至您的YouTube管道的資產。
+現在，您將先前新增的標籤與視訊資產建立關聯。 此程式可讓Experience Manager知道要發佈至您的YouTube管道的資產。
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式中執行時，請注意立即發佈不會自動發佈至YouTube。 設定Dynamic Media - Scene7模式時，有兩個發佈選項可供選擇：**[!UICONTROL Immedialed]**&#x200B;或&#x200B;**[!UICONTROL Activation]**&#x200B;時。
+>在Dynamic Media - Scene7模式中執行時，立即發佈不會自動發佈至YouTube。 設定Dynamic Media - Scene7模式時，有兩個發佈選項可供選擇：**[!UICONTROL Immedialed]**&#x200B;或&#x200B;**[!UICONTROL Activation]**&#x200B;時。
 >
->**[!UICONTROL 發]** 布立即表示上傳的資產（在與IPS同步後）會自動發佈至傳送系統。雖然Dynamic Media的情況確實如此，但YouTube的情況並非如此。 若要發佈至YouTube，您必須透過AEM Author進行發佈。
+>**[!UICONTROL 發]** 布立即表示上傳的資產（在與IPS同步後）會自動發佈至傳送系統。雖然Dynamic Media的情況確實如此，但YouTube的情況並非如此。 若要發佈至YouTube，您必須透過「Experience Manager作者」發佈。
 
 >[!NOTE]
 >
->若要從YouTube發佈內容，AEM會使用&#x200B;**[!UICONTROL 發佈至YouTube]**&#x200B;工作流程，讓您監控進度並檢視任何失敗資訊。
+>若要從YouTube發佈內容，Experience Manager會使用&#x200B;**[!UICONTROL 發佈至YouTube]**&#x200B;工作流程，讓您監控進度並檢視任何失敗資訊。
 >
 >請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 >
@@ -763,7 +768,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 **若要將影片發佈至您的YouTube頻道：**
 
-1. 在AEM中，導覽至您要發佈至YouTube管道的視訊資產。
+1. 在Experience Manager中，導覽至您要發佈至YouTube管道的視訊資產。
 1. 選取視訊資產（最適化視訊集）。
 1. 在工具欄上，按一下&#x200B;**[!UICONTROL 屬性]**。
 1. 在「基本」頁簽的「元資料」標題下，按一下「標籤」欄位右側的&#x200B;**[!UICONTROL 開啟選擇對話框]**。
@@ -775,7 +780,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 1. 在視訊屬性頁面的右上角，按一下「**[!UICONTROL 儲存並關閉]**」。
 1. 在工具列上，按一下&#x200B;**[!UICONTROL 快速發佈]**。
 
-   另請參閱[將發佈管理與AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)搭配使用。
+   另請參閱[將發佈管理與Experience Manager網站搭配使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)。
 
    您可以選擇驗證您的YouTube頻道上已發佈的視訊。
 
@@ -785,9 +790,9 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
-發佈時間可能會因許多因素而大不相同，這些因素包括主要來源視訊的格式、檔案大小和上傳流量。 發佈程式可能需要幾分鐘到數小時的時間。 另外，請注意，解析度較高的格式呈現速度會慢得多。 例如，720p和1080p的顯示時間要比480p長得多。
+發佈時間可能會因許多因素而大不相同，這些因素包括主要來源視訊的格式、檔案大小和上傳流量。 發佈程式可能需要幾分鐘到數小時的時間。 另外，更高解析度的格式的呈現速度要慢得多。 例如，720p和1080p的顯示時間比480p要長。
 
-八小時後，如果您仍看到顯示「已上傳（處理，請稍候）」的狀態訊息，請嘗試從我們的網站移除視訊，然後再次上傳。****
+八小時後，如果您仍看到顯示「已上傳（處理，請稍候）」的狀態訊息&#x200B;]**，請嘗試從Adobe的網站移除視訊，然後再次上傳。**[!UICONTROL 
 
 ### 將YouTube URL連結到Web應用程式{#linking-youtube-urls-to-your-web-application}
 
@@ -805,19 +810,19 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 在工具欄上，按一下&#x200B;**[!UICONTROL 屬性]**。
 1. 按一下&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤。
-1. 在「YouTube發佈」標題下的「YouTube URL List」（ URL清單）中，選取URL文字並複製到網頁瀏覽器，以預覽資產或新增至您的網頁內容頁面。
+1. 在「YouTube發佈」標題下的「YouTube URL List」（ URL清單）中，選取URL文字，並將其複製至網頁瀏覽器，以預覽資產或新增至您的網頁內容頁面。
 
 ### 取消發佈影片以從YouTube {#unpublishing-videos-to-remove-them-from-youtube}中移除影片
 
-在AEM中取消發佈視訊資產時，視訊會從YouTube中移除。
+在Experience Manager中取消發佈視訊資產時，視訊會從YouTube移除。
 
 >[!CAUTION]
 >
->如果您直接從YouTube中移除影片，AEM不會察覺，且會繼續以視訊仍發佈至YouTube的方式運作。 一律透過AEM從YouTube取消發佈視訊資產。
+>如果您直接從YouTube中移除影片，Experience Manager不會察覺，且會繼續以視訊仍發佈至YouTube的方式運作。 一律透過Experience Manager從YouTube取消發佈視訊資產。
 
 >[!NOTE]
 >
->若要從YouTube移除內容，AEM會使用&#x200B;**[!UICONTROL 從YouTube取消發佈]**&#x200B;工作流程，讓您監控進度並檢視任何失敗資訊。
+>若要從YouTube移除內容，Experience Manager會使用&#x200B;**[!UICONTROL 從YouTube]**&#x200B;取消發佈工作流程，讓您監控進度並檢視任何失敗資訊。
 >
 >請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
@@ -825,18 +830,16 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 1. 導覽至您要從YouTube管道取消發佈的視訊資產。
 1. 在資產選取模式中，選取一或多個已發佈的視訊資產。
-1. 在工具欄上，按一下&#x200B;**[!UICONTROL 管理出版物]**。 您可能需要點選三個點的圖示(...) ，查看&#x200B;**[!UICONTROL 管理出版物]**。
+1. 在工具欄上，按一下&#x200B;**[!UICONTROL 管理出版物]**。 點選三個點的圖示(...) 在工具列上，開啟&#x200B;**[!UICONTROL 管理出版物]**。
 1. 在「管理出版物」頁面，點選&#x200B;**[!UICONTROL 取消發佈]**。
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL Next]**。
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL 取消發佈]**。
 
 ## 監控視訊編碼和YouTube發佈進度{#monitoring-video-encoding-and-youtube-publishing-progress}
 
-當您將新視訊上傳至已套用視訊編碼的資料夾，或將視訊發佈至Youtube時，可以透過多種方式監控視訊編碼/Youtube發佈的進展（或失敗）。 實際的YouTube發佈進度僅能透過記錄檔取得，但會以下列程式說明的其他方式列出實際的Analytics發佈進度是否失敗。 此外，當YouTube發佈工作流程或視訊編碼完成或中斷時，您可能會收到電子郵件通知。
+將新視訊上傳至已套用視訊編碼的資料夾，或將視訊發佈至YouTube時，您可以監控視訊編碼/Youtube發佈的進展情形（或失敗）。 實際YouTube發佈進度僅透過記錄檔提供。 但是，其失敗或成功會以下列程式中說明的其他方式列出。 此外，當YouTube發佈工作流程或視訊編碼完成或中斷時，您會收到電子郵件通知。
 
 ### 監控進度{#monitoring-progress}
-
-**若要監控進度(包括編碼失敗/YouTube發佈):**
 
 1. 在資產資料夾中檢視視訊編碼進度：
 
@@ -860,20 +863,20 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    >[!NOTE]
    >
-   >由於重試時有多個工作流配置、重試延遲 **[!UICONTROL ，以及]**********[](https://localhost:4502/system/console/configMgr)https://localhost:4502/system/console/configMgr的逾時(例如：
+   >由於&#x200B;**[!UICONTROL retrys]**、**[!UICONTROL retry delay]**&#x200B;和&#x200B;**[!UICONTROL timeout]**(來自[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))的多個工作流配置，最終記錄失敗/錯誤消息可能需要很長的時間，例如：
    >
    >    * Apache Sling作業佇列設定
    >    * AdobeGranite工作流程外部流程作業處理常式
    >    * Granite工作流程逾時佇列
 
    >
-   >您可以調整這些 **[!UICONTROL 配置中]****[!UICONTROL 的重試]**、重試延遲 **[!UICONTROL ,]** 以及超時屬性。
+   >您可以在這些設定中調整&#x200B;**[!UICONTROL retries]**、**[!UICONTROL retry delay]**&#x200B;和&#x200B;**[!UICONTROL timeout]**&#x200B;屬性。
 
 1. 如需進行中的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >例項」中的「工作流程例 **[!UICONTROL 項」]******。
 
    >[!NOTE]
    >
-   >您可能需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
+   >您需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
@@ -887,13 +890,13 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    >[!NOTE]
    >
-   >您可能需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
+   >您需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
 
    ![chlimage_1-435](assets/chlimage_1-435.png)
 
    >[!NOTE]
    >
-   >由於重試時有多個工作流程設定、重試延遲 **[!UICONTROL ，以及https://localhost:4502/system/console/configMgr的逾時(例如]**********[](https://localhost:4502/system/console/configMgr):
+   >由於&#x200B;**[!UICONTROL retrys]**、**[!UICONTROL retry delay]**&#x200B;和&#x200B;**[!UICONTROL timeout]**&#x200B;從[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)到timeout的多個工作流配置，最終記錄錯誤消息可能需要很長的時間，例如：
    >
    >
    >
@@ -903,31 +906,31 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    >
    >
-   >您可以調整這些 **[!UICONTROL 配置中]****[!UICONTROL 的重試]**、重試延遲 **[!UICONTROL ,]** 以及超時屬性。
+   >您可以在這些設定中調整&#x200B;**[!UICONTROL retries]**、**[!UICONTROL retry delay]**&#x200B;和&#x200B;**[!UICONTROL timeout]**&#x200B;屬性。
 
 1. 如需完成的工作流程，請參閱「工具 **[!UICONTROL >工作流程]** >封存 **[!UICONTROL 」中的「工作流程封存]******」。「工作 **[!UICONTROL 流程存檔]** 」會列出所有已完成的工作流活動。
 
    >[!NOTE]
    >
-   >您可能需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
+   >您需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
-1. 您可能會收到有關中止或失敗工作流程作業的電子郵件通知。 管理員可設定這些電子郵件通知。 請參閱[設定電子郵件通知](#configuring-e-mail-notifications)。
+1. 您會收到有關中止或失敗工作流程作業的電子郵件通知。 管理員可設定這些電子郵件通知。 請參閱[設定電子郵件通知](#configuring-e-mail-notifications)。
 
 #### 配置電子郵件通知{#configuring-e-mail-notifications}
 
 >[!NOTE]
 >
->您可能需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
+>您需要管理權限才能訪問&#x200B;**[!UICONTROL 工具]**&#x200B;菜單。
 
 設定通知的方式取決於您要接收編碼作業或YouTube發佈作業的通知：
 
-* 對於編碼作業，您可以在&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**&#x200B;存取所有AEM工作流電子郵件通知的設定頁面，方法是搜尋&#x200B;**[!UICONTROL Day CQ Workflow Email Notification Service]**。 請參閱[在AEM](/help/sites-administering/notification.md)中設定電子郵件通知。 您可以選擇或清除&#x200B;**[!UICONTROL Notify on Abort]**&#x200B;或&#x200B;**[!UICONTROL Notify on Complete]**&#x200B;的複選框。
+* 對於編碼作業，您可以在&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web控制台]**&#x200B;訪問所有Experience Manager工作流電子郵件通知的配置頁，並搜索&#x200B;**[!UICONTROL Day CQ Workflow Email Notification Service]**。 請參閱[在Experience Manager](/help/sites-administering/notification.md)中設定電子郵件通知。 您可以選擇或清除&#x200B;**[!UICONTROL Notify on Abort]**&#x200B;或&#x200B;**[!UICONTROL Notify on Complete]**&#x200B;的複選框。
 
 * 若為YouTube發佈工作，請執行下列動作：
 
-1. 在AEM中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**」。
+1. 在Experience Manager中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**」。
 1. 在「工作流模型」頁上，選擇「**[!UICONTROL 發佈到YouTube]**」，然後點選工具欄上的「**[!UICONTROL 編輯]**」。
 1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選「**[!UICONTROL Edit]**」。
 1. 將滑鼠指標暫留在YouTube上傳元件上，然後點選一次以顯示內嵌工具列。
@@ -952,7 +955,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
    >[!NOTE]
    >
-   >這些電子郵件是YouTube專屬的，且是一般工作流程電子郵件通知的外掛程式。 因此，您可能會收到兩組電子郵件通知： **[!UICONTROL Day CQ Workflow Email Notification Service]**&#x200B;中提供的一般通知，以及根據您的組態設定而為YouTube指定的一組通知。
+   >這些電子郵件是YouTube專屬的，且是一般工作流程電子郵件通知的外掛程式。 因此，您可以收到兩組電子郵件通知： **[!UICONTROL Day CQ Workflow Email Notification Service]**&#x200B;中可用的一般通知，以及根據您的組態設定而為YouTube指定的一組通知。
 
 1. 完成後，在對話框的右上角附近，點選&#x200B;**[!UICONTROL Done]**&#x200B;表徵圖（複選標籤）。
 1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選&#x200B;**[!UICONTROL Sync]**。
@@ -963,7 +966,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 >
 >只有在執行Dynamic Media — 混合模式時，才可使用視訊報表。
 
-「視訊報表」會顯示指定時段內的數個匯總量度，協助您監控*已發佈*個別和匯總視訊是否如預期般執行。 系統會針對整個網站上所有發佈的視訊匯總下列排名在前的量度資料：
+「視訊報表」會顯示指定時間內的數個匯總量度，協助您監控*已發佈*個別和匯總視訊是否如預期般執行。 系統會針對整個網站上所有發佈的視訊匯總下列排名在前的量度資料：
 
 * 視訊開始
 * 完成率
@@ -973,7 +976,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 也會列出所有&#x200B;*已發佈*&#x200B;影片的表格，讓您能夠根據總視訊開始次數追蹤網站上最常檢視的影片。
 
-當您點選清單中的影片名稱時，它會以折線圖的形式顯示影片的對象保留（下拉式）報表。 圖表會顯示視訊播放期間任何指定時刻的檢視次數。 當您播放視訊時，垂直條會與播放器中的時間指示器同步追蹤。 折線圖資料中斷，指出您的受眾從不感興趣的位置下降。
+當您點選清單中的影片名稱時，它會以折線圖的形式顯示影片的對象保留率（下拉式清單）報表。 圖表會顯示視訊播放期間任何指定時刻的檢視次數。 當您播放視訊時，垂直條會與播放器中的時間指示器同步追蹤。 折線圖資料中斷，指出您的受眾從不感興趣的位置下降。
 
 如果視訊在Adobe Experience Manager Dynamic Media外部編碼，就無法使用對象保留率（下拉式清單）圖表和表格中的播放百分比資料。
 
@@ -985,15 +988,15 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 依預設，當您首次輸入視訊報表時，報表會顯示從當月的第一個開始，到當月的日期結束的視訊資料。 不過，您可以指定自己的日期範圍來覆寫預設日期範圍。 下次輸入視訊報表時，會使用您指定的日期範圍。
 
-為了讓視訊報表正常運作，設定Dynamic MediaCloud Services時，會自動建立報表套裝ID。 同時，報表套裝ID會推送至發佈伺服器，以便您在預覽資產時能使用「複製URL」功能。 不過，這需要先設定發佈伺服器。 如果未設定發佈伺服器，您仍可以發佈以查看視訊報表，但您將需要返回Dynamic Media雲端設定，然後點選&#x200B;**[!UICONTROL 確定]**。
+為了讓視訊報表正常運作，設定Dynamic MediaCloud Services時，會自動建立報表套裝ID。 同時，報表套裝ID會推送至發佈伺服器，以便您在預覽資產時能使用「複製URL」功能。 不過，此功能需要已設定發佈伺服器。 如果未設定發佈伺服器，您仍可以發佈以查看視訊報表。 不過，您必須返回「Dynamic Media雲端設定」，然後點選「**[!UICONTROL 確定」]**。
 
 **若要檢視視訊報表：**
 
-1. 在AEM的左上角，點選AEM標誌，然後在左側導軌中，點選「工具 (槌子圖示) > **[!UICONTROL Assets]** >視訊報 **[!UICONTROL 表」]******。
+1. 在Experience Manager的左上角，點選Experience Manager標誌，然後在左側導軌中，點選「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL 資產]** > **[!UICONTROL 視訊報表]**」。
 1. 在視訊報表頁面上，執行下列其中一項作業：
 
    * 在右上角附近，點選「 **重新整理視訊報表**」圖示。
-如果報表的結束日期是當天，您只需使用「重新整理」即可。 這可確保您查看自上次執行報表以來發生的視訊追蹤。
+只有在報表的結束日期為當天時，才使用「重新整理」。 這麼做可確保您看見自您上次執行報表以來所發生的視訊追蹤。
 
    * 在右上角附近，點選「**日期選擇器**」圖示。
 指定您要視訊資料的開始和結束日期範圍，然後點選**[!UICONTROL 執行報表]**。
@@ -1004,7 +1007,7 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 
 ### 根據您使用Dynamic Media HTML5檢視器SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}建立的視訊檢視器檢視視訊報表
 
-如果您使用Dynamic Media提供的現成視訊檢視器，或是您根據現成視訊檢視器建立自訂檢視器預設集，則不需要其他步驟即可檢視視訊報表。 不過，如果您已根據HTML5檢視器SDK API建立自己的視訊檢視器，則請使用下列步驟，確保您的視訊檢視器將追蹤事件傳送至Dynamic Media視訊報表。
+如果您使用Dynamic Media提供的現成視訊檢視器，或如果您根據現成視訊檢視器建立自訂檢視器預設集，則不需要其他步驟即可檢視視訊報表。 不過，如果您已根據HTML5檢視器SDK API建立自己的視訊檢視器，則請使用下列步驟，確保您的視訊檢視器將追蹤事件傳送至Dynamic Media視訊報表。
 
 使用[AdobeDynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)和[HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)建立您自己的視訊檢視器。
 
@@ -1075,17 +1078,17 @@ YouTube會自行編碼。 因此，上傳至AEM的原始視訊檔案會發佈至
 >
 >您使用的視訊播放器必須支援字幕的顯示。
 
-Dynamic Media可將註解檔案轉換為JSON（JavaScript物件標籤法）格式。 這種轉換表示您可以將JSON文字內嵌至網頁，作為視訊的隱藏但完整的記錄。 然後，搜尋引擎可對內容進行編目並建立索引，讓您更容易找到影片，並提供客戶關於影片內容的其他詳細資訊。
+Dynamic Media會將註解檔案轉換為JSON（JavaScript物件標籤法）格式。 這種轉換表示您可以將JSON文字內嵌至網頁，作為視訊的隱藏但完整的記錄。 然後，搜尋引擎可對內容進行編目並建立索引，讓您更容易找到影片，並提供客戶關於影片內容的其他詳細資訊。
 
 如需有關在URL中使用JSON函式的詳細資訊，請參閱&#x200B;*Dynamic Media影像提供與轉譯API說明*&#x200B;中的[提供靜態（非影像）內容](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api)。
 
-**要向視頻添加字幕或字幕**:
+**向視頻添加字幕或字幕：**
 
 1. 使用第三方應用程式或服務建立視頻字幕/字幕檔案。
 
    請確定您建立的檔案符合WebVTT（Web視訊文字追蹤）標準。 字幕副檔名為.vtt。 您可以了解有關WebVTT字幕標準的更多資訊。
 
-   請參閱[WebVTT:Web視頻文本跟蹤格式](https://dev.w3.org/html5/webvtt/)。
+   請參閱[WebVTT:Web視頻文本跟蹤格式](https://w3c.github.io/webvtt/)。
 
    您可以使用免費和優質的工具和服務，在Dynamic Media之外製作字幕/字幕檔案。 例如，要建立不帶樣式的簡單視頻字幕檔案，可以使用以下免費線上字幕創作和編輯工具：
 
@@ -1095,15 +1098,15 @@ Dynamic Media可將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
    在工具的&#x200B;**[!UICONTROL 輸入視訊檔案]**&#x200B;欄位中，貼上視訊檔案的複製URL，然後按一下&#x200B;**[!UICONTROL 載入]**。 請參 [閱取得資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) ，以取得視訊檔案本身的URL，然後您可將它貼入視訊檔案 **[!UICONTROL 的「輸入URL」欄位中]**。然後，Internet Explorer、Chrome或Safari就可以原生播放視訊。
 
-   現在請依照網站的螢幕指示製作和儲存您的WebVTT檔案。 完成後，複製字幕檔案內容並貼到純文字編輯器中，然後以.vtt副檔名儲存。
+   現在請依照網站的螢幕指示製作和儲存您的WebVTT檔案。 完成後，複製字幕檔案內容並貼到純文字檔案編輯器中，然後以`.vtt`副檔名保存。
 
    >[!NOTE]
    >
-   >要以多種語言全球支援視頻字幕，請注意，WebVTT標準要求您為要支援的每種語言分別建立.vtt檔案和調用。
+   >為全球支援多種語言的視頻字幕，WebVTT標準要求您為要支援的每種語言分別建立.vtt檔案和調用。
 
-   通常，您想將字幕VTT檔案命名為與視頻檔案相同的名稱，並將其附加到語言區域設定，如 — EN、-FR或 — DE等。 如此一來，您就能透過現有的網頁內容管理系統，協助您自動產生視訊URL。
+   通常，您想將字幕VTT檔案命名為與視頻檔案相同的名稱，並將其附加到語言區域設定，如 — EN、-FR或 — DE。 如此一來，您就能透過現有的網頁內容管理系統，協助您自動產生視訊URL。
 
-1. 在AEM中，將WebVTT註解檔案上傳至DAM。
+1. 在Experience Manager中，將WebVTT註解檔案上傳至DAM。
 1. 導覽至您要與您上傳之註解檔案建立關聯的&#x200B;*已發佈*&#x200B;視訊資產。
 
    請記住，URL僅可在您首次發 *布資產* 後 *複製* 。
@@ -1116,17 +1119,17 @@ Dynamic Media可將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
       `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
-      注意標題路徑末尾的`,1`。 緊接在路徑中的.vtt副檔名後面，您可以選擇分別將設為`,1`或`,0`，以啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕。
+      注意標題路徑末尾的`,1`。 緊接在路徑的`.vtt`副檔名後面，您可以選擇性地啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕，方法是分別將設定為`,1`或`,0`。
 
-   * 如需內嵌的視訊檢視器體驗，請點選「**[!UICONTROL 內嵌程式碼]**」。 在「內嵌程式碼」對話方塊中，選取內嵌程式碼並複製到剪貼簿，然後將程式碼貼到簡單的文字編輯器中。 使用下列語法附加複製的內嵌程式碼：
+   * 如需內嵌的視訊檢視器體驗，請點選「**[!UICONTROL 內嵌程式碼]**」。 在「內嵌程式碼」對話方塊中，選取內嵌程式碼，並將其複製到剪貼簿，然後將程式碼貼到簡單的文字編輯器中。 使用下列語法附加複製的內嵌程式碼：
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
-      注意標題路徑末尾的`,1`。 緊接在路徑中的.vtt副檔名後面，您可以選擇分別將設為`,1`或`,0`，以啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕。
+      注意標題路徑末尾的`,1`。 緊接在路徑的`.vtt`副檔名後面，您可以選擇性地啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕，方法是分別將設定為`,1`或`,0`。
 
 ## 將章節標籤新增至視訊{#adding-chapter-markers-to-video}
 
-您可以將章節標籤新增至單一視訊或最適化視訊集，讓您更輕鬆觀看和導覽長型視訊。 當使用者播放視訊時，可以按一下視訊時間軸上的章節標籤（也稱為視訊清除程式），輕鬆導覽至其興趣點，或立即跳至新的內容、示範、教學課程等。
+您可以將章節標籤新增至單一視訊或最適化視訊集，讓您更輕鬆觀看和導覽長型視訊。 當使用者播放視訊時，可以按一下視訊時間軸上的章節標籤（也稱為視訊清除程式），輕鬆導覽至其興趣點。 或者，他們可以立即跳至新內容、示範和教學課程。
 
 >[!NOTE]
 >
@@ -1136,7 +1139,7 @@ Dynamic Media可將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
 <!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-您為視訊建立章節清單的方式與建立字幕的方式大致相同。 即，建立WebVTT檔案。 但請注意，此檔案必須與您可能也使用的任何WebVTT標題檔案分開；不能將字幕和章節合併為一個WebVTT檔案。
+您為視訊建立章節清單的方式與建立字幕的方式大致相同。 即，建立WebVTT檔案。 但請注意，此檔案必須與您也使用的任何WebVTT標題檔案分開；不能將字幕和章節合併為一個WebVTT檔案。
 
 您可以使用下列範例作為建立具有章節導覽的WebVTT檔案時所使用的格式範例：
 
@@ -1158,18 +1161,18 @@ Chapter 4
 Cost-efficient access to rapidly evolving technology.
 ```
 
-在上述範例中，`Chapter 1`是提示識別碼，且為選用。 `00:00:000 --> 01:04:364`的提示時間以`00:00:000`格式指定章節的開始時間和結束時間。 最後三位數為毫秒，如果首選，可保留為`000`。 `The bicycle store behind it all`的章節標題是該章節內容的實際說明。 當使用者將滑鼠指標暫留在影片時間軸的視覺提示點上時，提示識別碼、開始提示時間和章節標題都會顯示在影片播放器的快顯視窗中。
+在上述範例中，`Chapter 1`是提示識別碼，且為選用。 `00:00:000 --> 01:04:364`的提示時間以`00:00:000`格式指定章節的開始時間和結束時間。 最後三位數為毫秒，如果首選，可保留為`000`。 `The bicycle store behind it all`的章節標題是該章節內容的實際說明。 當使用者將滑鼠指標暫留在影片時間軸的視覺提示點上時，提示識別碼、開始提示時間和章節標題都會顯示在影片播放器快顯視窗中。
 
-因為您使用的是HTML5視訊檢視器，請確定您建立的章節檔案遵循WebVTT（Web視訊文字追蹤）標準。 章節副檔名為.vtt。 您可以了解有關WebVTT字幕標準的更多資訊。
+因為您使用的是HTML5視訊檢視器，請確定您建立的章節檔案遵循WebVTT（Web視訊文字追蹤）標準。 章節檔案名副檔名為`.vtt`。 您可以了解有關WebVTT字幕標準的更多資訊。
 
-請參閱[WebVTT:Web視頻文本跟蹤格式](https://dev.w3.org/html5/webvtt/)
+請參閱[WebVTT:Web視頻文本跟蹤格式](https://w3c.github.io/webvtt/)
 
 **若要將章節標籤新增至視訊：**
 
-1. 將.vtt檔案儲存為UTF8編碼，以避免章節標題文字的字元轉譯問題。
+1. 以UTF8編碼儲存`.vtt`檔案，以避免章節標題文字中的字元轉譯問題。
 
    一般來說，您會想要將章節VTT檔案命名為與視訊檔案相同的名稱，並附加章節。 如此一來，您就能透過現有的網頁內容管理系統，協助您自動產生視訊URL。
-1. 在AEM中，上傳您的WebVTT章節檔案。
+1. 在Experience Manager中，上傳您的WebVTT章節檔案。
 
    請參閱[上傳資產](/help/assets/manage-assets.md#uploading-assets)。
 
@@ -1186,7 +1189,7 @@ Cost-efficient access to rapidly evolving technology.
        <li>在左側導軌中，點選或按一下視訊檢視器預設集名稱。 視訊的預覽會在個別頁面中開啟。</li>
        <li>在左側邊欄的底部，按一下<strong>URL</strong>。</li>
        <li>在「URL」對話方塊中，選取URL並將其複製到剪貼簿，然後將URL移至簡單文字編輯器中。</li>
-       <li>使用下列語法附加視訊的複製URL，以將其與複製的URL關聯至您的章節檔案：<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
+       <li>使用下列語法附加視訊的複製URL，以便將其與複製的URL建立關聯至您的章節檔案：<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
        </ol> </td>
       </tr>
       <tr>
@@ -1197,8 +1200,8 @@ Cost-efficient access to rapidly evolving technology.
        <li>從下拉式選單中，按一下或點選「<strong>檢視器</strong>」。</li>
        <li>在左側導軌中，點選或按一下視訊檢視器預設集名稱。 視訊的預覽會在個別頁面中開啟。</li>
        <li>在左側邊欄的底部，按一下<strong>Embed</strong>。</li>
-       <li>在「內嵌程式碼」對話方塊中，選取整個程式碼並複製到剪貼簿，然後貼到簡單的文字編輯器中。</li>
-       <li>將視訊的內嵌程式碼附加至下列語法，以將其與複製的URL建立關聯至您的章節檔案：<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
+       <li>在「內嵌程式碼」對話方塊中，選取整個程式碼，並複製到剪貼簿，然後貼到簡單的文字編輯器中。</li>
+       <li>使用下列語法附加視訊的內嵌程式碼，以便將它與複製的URL建立關聯至章節檔案：<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
        </ol> </td>
       </tr>
      </tbody>
@@ -1206,11 +1209,11 @@ Cost-efficient access to rapidly evolving technology.
 
 ## 關於Dynamic Media - Scene7模式中的視訊縮圖{#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-視訊縮圖是視訊影格的縮小版本，或代表視訊給客戶的影像資產。 縮圖應該可鼓勵客戶點按影片。
+視訊縮圖是視訊影格的縮小版本，或代表視訊給客戶的影像資產。 縮圖可鼓勵客戶點按影片。
 
-AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不能刪除縮圖。 依預設，當您將視訊上傳至AEM時，會使用第一個影格作為縮圖。 不過，您也可以自訂縮圖以用於品牌推廣或視覺搜尋。 當您自訂視訊縮圖時，可以播放視訊並暫停您要使用的影格，或是選取您已上傳的影像資產，並在數位資產管理員中選取&#x200B;*已發佈*。
+Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不能刪除縮圖。 依預設，當您上傳視訊至Experience Manager時，會使用第一個影格作為縮圖。 不過，您也可以自訂縮圖以用於品牌推廣或視覺搜尋。 當您自訂視訊縮圖時，可以播放視訊並暫停您要使用的影格，或是選取您已上傳的影像資產，並在數位資產管理員中選取&#x200B;*已發佈*。
 
-請注意，您從視訊選取的自訂視訊縮圖影像不會擷取，並儲存在DAM中，作為個別且不重複的資產。 不過，您從現有影像資產中選取的自訂視訊縮圖會儲存至JCR。 選取資產的路徑會儲存在視訊資產的節點下，如下列範例路徑所示：
+您從視訊中選取的自訂視訊縮圖影像不會擷取，並儲存在DAM中作為個別且不重複的資產。 不過，您從現有影像資產中選取的自訂視訊縮圖會儲存至JCR。 選取資產的路徑會儲存在視訊資產的節點下，如下列範例路徑所示：
 
 `/content/dam/*<folder_name*>/<*video_name*>/jcr:content/manualThumbnail`
 
@@ -1245,7 +1248,7 @@ AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不�
 
       * 在工具列上，點選&#x200B;**[!UICONTROL 「從資產選取縮圖」]**。
       * 點選&#x200B;**[!UICONTROL 選取縮圖]**。
-      * 導覽至您要使用的先前上傳和發佈的影像資產。 請注意，資產會自動調整大小，作為視訊的縮圖影像。
+      * 導覽至您要使用的先前上傳和發佈的影像資產。 資產會自動調整大小，作為視訊的縮圖影像。
       * 選取影像資產，然後點選&#x200B;**[!UICONTROL 選取]**。
 
 
@@ -1254,13 +1257,13 @@ AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不�
 
 ## 關於Dynamic Media中的視訊縮圖 — 混合模式{#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-您可以從Dynamic Media自動產生的十個縮圖影像中選擇其一，以新增至您的影片。 在AEM Sites、AEM Mobile或AEM Screens的製作環境中，將視訊資產與Dynamic Media元件搭配使用時，視訊播放器會顯示您選取的縮圖。 縮圖可當成靜態圖片，最能代表整個視訊的內容，進一步鼓勵使用者按一下「播放」按鈕。
+您可以從Dynamic Media自動產生的十個縮圖影像中選擇其一，以新增至您的影片。 在Experience Manager網站、Experience Manager行動或Experience Manager Screens的製作環境中，將視訊資產與Dynamic Media元件搭配使用時，視訊播放器會顯示您選取的縮圖。 縮圖可當成靜態圖片，最能代表整個視訊的內容，進一步鼓勵使用者按一下「播放」按鈕。
 
 根據影片的總時間，Dynamic Media會將10個（預設）縮圖影像擷取到影片中，分別為1%、11%、21%、31%、41%、51%、61%、71%、81%和91%。 十個縮圖會持續存在，這表示如果您稍後決定選擇不同的縮圖，則不需要重新產生系列。 您可以預覽10個縮圖影像，然後選取您要用於影片的影像。 如果您想要變更為預設值，可以使用CRXDE Lite來設定產生縮圖影像的時間間隔。 例如，如果您只想從視訊產生四張均勻間隔的縮圖影像系列，您可以設定24%、49%、74%和99%的間隔時間。
 
 理想情況下，您可以在上傳視訊之後，以及在網站上發佈視訊之前，隨時新增視訊縮圖。
 
-您可以選擇上傳自訂縮圖以呈現您的視訊，而非使用Dynamic Media產生的縮圖。 例如，您可以建立自訂縮圖影像，其標題為影片、吸引眼球的開頭影像，或從影片擷取的非常特定影像。 上傳的自訂視訊縮圖影像的解析度上限為1280 x 720像素（最小寬度為640像素）且不應大於2MB。
+您可以選擇上傳自訂縮圖以呈現您的視訊，而非使用Dynamic Media產生的縮圖。 例如，您可以建立自訂縮圖影像，其標題為影片、吸引眼球的開頭影像，或從影片擷取的特定影像。 上傳的自訂視訊縮圖影像的解析度上限為1280 x 720像素（最小寬度為640像素）且不得大於2 MB。
 
 另請參閱[關於Dynamic Media - Scene7模式中的視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
@@ -1276,14 +1279,14 @@ AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不�
 1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖]**。
 1. 在「更改縮略圖」頁上，在工具欄上，點選&#x200B;**[!UICONTROL 選擇幀]**。
 
-   Dynamic Media會根據您自訂的預設時間間隔或時間間隔，從您的視訊產生數列縮圖影像。
+   Dynamic Media會根據您自訂的預設時間間隔或時間間隔，從您的視訊產生一系列縮圖影像。
 
 1. 預覽產生的縮圖影像，然後選取您要新增至影片的影像。
 1. 點選&#x200B;**[!UICONTROL 儲存變更]**。
 
    視訊的縮圖影像會更新，以使用您選取的縮圖。 如果您稍後決定變更縮圖影像，可以返回&#x200B;**[!UICONTROL 變更縮圖]**&#x200B;頁面並選取新頁面。
 
-   如果您設定了新的預設時間間隔，或上傳了新視訊以取代現有視訊，則需要讓Dynamic Media重新產生縮圖。
+   如果您已設定新的預設時間間隔，或上傳了新視訊以取代現有視訊，請讓Dynamic Media重新產生縮圖。
 
    請參閱[設定視訊縮圖產生的預設時間間隔](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)。
 
@@ -1299,17 +1302,17 @@ AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不�
 
 1. 在「CRXDE Lite」頁面，在左側的目錄面板中，導覽至`o etc/dam/imageserver/configuration/jcr:content/settings.`
 
-   如果看不到「目錄」面板，則可能需要點選「首頁」標籤左側的>>圖示。
+   如果看不到「目錄」面板，請點選「首頁」標籤左側的>>圖示。
 
 1. 在右下角的「屬性」頁簽中，按兩下`thumbnailtime`。
-1. 在「編輯縮圖時間」對話方塊中，使用文字欄位以百分比輸入間隔值。
+1. 在&#x200B;**[!UICONTROL 編輯縮圖時間]**&#x200B;對話方塊中，使用文字欄位以百分比輸入間隔值。
 
-   * 點選加號(+)圖示以新增一或多個間隔值欄位。 您可能需要捲動至對話方塊底部，才能查看圖示。
-   * 點選間隔值欄位右側的減號(-)圖示，將其從清單中刪除。
-   * 點選向上箭頭圖示和向下箭頭圖示，以重新排序間隔值。
+   * 如果要新增一或多個間隔值欄位，請點選加號(+)圖示。 如有必要，請捲動至對話方塊底部以查看圖示。
+   * 如果要從清單中刪除區間值欄位，請點選區間值欄位右側的減號(-)圖示。
+   * 如果要重新排序間隔值，請點選上箭頭圖示和下箭頭圖示。
 
-1. 點選&#x200B;**[!UICONTROL 確定]**&#x200B;以返回「屬性」頁簽。
-1. 在CRXDE Lite頁面的左上角附近，點選&#x200B;**[!UICONTROL 「儲存全部」]**，然後點選左上角的「首頁」圖示以返回AEM。
+1. 點選&#x200B;**[!UICONTROL 確定]**&#x200B;並返回「屬性」頁簽。
+1. 在CRXDE Lite頁面的左上角附近，點選&#x200B;**[!UICONTROL 「儲存全部」]**，然後點選左上角的「首頁」圖示以返回Experience Manager。
 
    請參閱[新增視訊縮圖](#adding-a-video-thumbnail)。
 
@@ -1324,7 +1327,7 @@ AEM中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不�
 1. 在工具列上，點選「**[!UICONTROL 檢視屬性]** 」圖示（其中包含「i」的圓圈）。
 1. 在視訊的「屬性」頁面上，點選&#x200B;**[!UICONTROL 變更縮圖]**。
 1. 在「變更縮圖」頁面的工具列上，點選「 **[!UICONTROL 上傳新縮圖]**」。
-1. 導覽至您要使用的縮圖影像，選取該影像，然後點選&#x200B;**[!UICONTROL 開啟]**&#x200B;以開始將影像上傳至AEM。 上傳後，請務必發佈影像。
+1. 導覽至您要使用的縮圖影像，選取該影像，然後點選&#x200B;**[!UICONTROL 開啟]**&#x200B;以開始將影像上傳至Experience Manager。 上傳後，請務必發佈影像。
 1. 成功上傳並發佈影像後，在「變更縮圖」頁面中，點選「**[!UICONTROL 儲存變更]**」。
 
    自訂縮圖會新增至您的影片。
