@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 3%
+source-wordcount: '1668'
+ht-degree: 2%
 
 ---
 
 # 將 Dynamic Media 資產新增至頁面{#adding-dynamic-media-assets-to-pages}
 
-若要將Dynamic Media功能新增至您在網站上使用的資產，您可以直接在頁面上新增&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;或&#x200B;**[!UICONTROL Interactive Media]**&#x200B;元件。 若要這麼做，請進入[!UICONTROL Design]模式並啟用Dynamic Media元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。Dynamic Media和互動式媒體元件是智慧型的，他們知道您是新增影像還是視訊，而可用的選項也會隨之變更。
+若要將Dynamic Media功能新增至您在網站上使用的資產，您可以直接在頁面上新增&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;或&#x200B;**[!UICONTROL Interactive Media]**&#x200B;元件。 進入&#x200B;**[!UICONTROL Design]**&#x200B;模式並啟用Dynamic Media元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。Dynamic Media和互動式媒體元件是智慧型的，他們知道您是新增影像還是視訊，而可用的選項也會隨之變更。
 
-如果您使用AEM做為WCM，請直接將動態媒體資產新增至頁面。
+如果您使用Dynamic Media做為WCM，請直接將Adobe Experience Manager資產新增至頁面。
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 若要將Dynamic Media元件/檢視器新增至頁面：
 
-1. 在AEM中，開啟您要新增Dynamic Media元件的頁面。
+1. 在Experience Manager中，開啟您要新增Dynamic Media元件的頁面。
 1. 如果沒有Dynamic Media元件可用，請按一下[!UICONTROL Sidekick]中的尺標以進入&#x200B;**[!UICONTROL Design]**&#x200B;模式，按一下&#x200B;**[!UICONTROL Edit]** parsys，然後選取&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;以使Dynamic Media元件可用。
 
    >[!NOTE]
@@ -49,7 +49,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->預設情況下，這些元件不可用，在使用之前需要在「設計」模式中選取這些元件。 [在「設計」模式中使用元件後](/help/sites-authoring/default-components-designmode.md)，您就可以像新增任何其他AEM元件一樣，將元件新增至頁面。
+>預設情況下，這些元件不可用，在使用之前必須在「設計」模式下選取這些元件。 [在「設計」模式中使用元件後](/help/sites-authoring/default-components-designmode.md)，您可以像新增任何其他Experience Manager元件一樣，將元件新增至頁面。
 
 ### Dynamic Media元件{#dynamic-media-component}
 
@@ -70,7 +70,7 @@ Dynamic Media元件是智慧型的，視您新增影像或影片而定，您有�
 
 [!UICONTROL Dynamic Media]元件可讓您新增動態影像，包括影像集、回轉集和混合媒體集。 您可以放大、縮小，如果適用，可以在回轉集內開啟影像，或從另一類型的集合中選取影像。
 
-您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像具有回應性，您可以設定分界點或套用回應式影像預設集。
+您也可以直接在元件中設定檢視器預設集、影像預設集或影像格式。 若要讓影像具有回應性，您可以設定斷點或套用回應式影像預設集。
 
 ![chlimage_1-72](assets/chlimage_1-72a.png)
 
@@ -82,19 +82,19 @@ Dynamic Media元件是智慧型的，視您新增影像或影片而定，您有�
 >
 >依預設，動態媒體影像元件是可調式的。如果要將其設定為固定大小，請在&#x200B;**[!UICONTROL Advanced]**&#x200B;頁簽的元件中，使用&#x200B;**[!UICONTROL Width]**&#x200B;和&#x200B;**[!UICONTROL Height]**&#x200B;屬性進行設定。
 
-**[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的檢視器預設集。如果您要尋找的檢視器預設集未顯示，您可能需要將其顯示。 請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。 如果您使用影像預設集，則無法選取檢視器預設集，反之亦然。
+**[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的檢視器預設集。如果您要尋找的檢視器預設集未顯示，您必須使其顯示。 請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。 如果您使用影像預設集，則無法選取檢視器預設集，反之則無法選取。
 
-如果您檢視影像集、回轉集或混合媒體集，此選項是唯一可用的選項。 顯示的檢視器預設集也是智慧型的 — 僅顯示相關的檢視器預設集。
+只有在檢視影像集、回轉集或混合媒體集時，才可使用此選項。 顯示的檢視器預設集是智慧型的。 也就是說，只會顯示相關的檢視器預設集。
 
-**[!UICONTROL 影像預設]**  — 從下拉式選單中選取現有的影像預設集。如果您要尋找的影像預設集未顯示，則您可能需要使其可見。 請參閱[管理影像預設集](/help/assets/managing-image-presets.md)。 如果您使用影像預設集，則無法選取檢視器預設集，反之亦然。
-
-如果您正在檢視影像集、回轉集或混合媒體集，則無法使用此選項。
-
-**[!UICONTROL 影像修飾元]**  — 您可以提供其他影像命令來變更影像效果。在[管理影像預設集](/help/assets/managing-viewer-presets.md)和[命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中對這些內容進行了說明。
+**[!UICONTROL 影像預設]**  — 從下拉式選單中選取現有的影像預設集。如果您要尋找的影像預設集未顯示，則必須使其可見。 請參閱[管理影像預設集](/help/assets/managing-image-presets.md)。 如果您使用影像預設集，則無法選取檢視器預設集，反之則無法選取。
 
 如果您正在檢視影像集、回轉集或混合媒體集，則無法使用此選項。
 
-**[!UICONTROL 中斷點]**  — 如果您在回應式網站上使用此資產，則需要新增頁面中斷點。影像斷點必須用逗號(,)分隔。 當影像預設集中未定義高度或寬度時，此選項即可運作。
+**[!UICONTROL 影像修飾元]**  — 您可以提供其他影像命令來變更影像效果。這些命令在[管理影像預設集](/help/assets/managing-viewer-presets.md)和[命令引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中進行了說明。
+
+如果您正在檢視影像集、回轉集或混合媒體集，則無法使用此選項。
+
+**[!UICONTROL 中斷點]**  — 如果您在回應式網站上使用此資產，則必須新增頁面中斷點。影像斷點以逗號分隔(,)。 當影像預設集中未定義高度或寬度時，此選項即可運作。
 
 如果您正在檢視影像集、回轉集或混合媒體集，則無法使用此選項。
 
@@ -114,7 +114,7 @@ Dynamic Media元件是智慧型的，視您新增影像或影片而定，您有�
 
 #### 使用視訊{#when-working-with-video}時
 
-使用[!UICONTROL Dynamic Media]元件將動態視訊新增至網頁。 編輯元件時，您可以選擇使用預先定義的視訊檢視器預設集來在頁面上播放視訊。
+使用&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;元件將動態視訊新增至網頁。 編輯元件時，您可以選擇使用預先定義的視訊檢視器預設集來在頁面上播放視訊。
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
@@ -124,7 +124,7 @@ Dynamic Media元件是智慧型的，視您新增影像或影片而定，您有�
 >
 >依預設，Dynamic Media視訊元件是最適化的。 如果要將其設定為固定大小，請在元件中以&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤中的&#x200B;**[!UICONTROL Width]**&#x200B;和&#x200B;**[!UICONTROL Height]**&#x200B;設定它。
 
-**[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的視訊檢視器預設集。如果您要尋找的檢視器預設集未顯示，您可能需要將其顯示。 請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。
+**[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的視訊檢視器預設集。如果您要尋找的檢視器預設集未顯示，您必須使其顯示。 請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
 您可以按一下元件中的&#x200B;**[!UICONTROL Edit]**&#x200B;編輯以下[!UICONTROL Advanced]設定。
 
@@ -134,7 +134,7 @@ Dynamic Media元件是智慧型的，視您新增影像或影片而定，您有�
 
 #### 如何傳送安全視訊{#how-to-delivery-secure-video}
 
-在AEM 6.2中，安裝[FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)時，您可以控制視訊是透過安全SSL連線(HTTPS)或不安全連線(HTTP)傳送。 依預設，視訊傳送通訊協定會自動從內嵌網頁的通訊協定繼承。 如果網頁透過HTTPS載入，視訊也會透過HTTPS傳送。 反之，如果網頁位於HTTP，則視訊會透過HTTP傳送。 在大多數情況下，此預設行為正常，不需要進行任何設定變更。 不過，您可以在URL路徑的結尾或內嵌程式碼片段中其他檢視器設定參數的清單上附加`VideoPlayer.ssl=on`，以強制執行安全的視訊傳送，借此覆寫此預設行為。
+在Experience Manager6.2中，安裝[FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)時，您可以控制視訊是透過安全SSL連線(HTTPS)或不安全連線(HTTP)傳送。 依預設，視訊傳送通訊協定會自動從內嵌網頁的通訊協定繼承。 如果網頁透過HTTPS載入，視訊也會透過HTTPS傳送。 反之，如果網頁是在HTTP上，視訊會透過HTTP傳送。 通常，此預設行為正常，不需要進行任何設定變更。 不過，您可以覆寫此預設行為。 將`VideoPlayer.ssl=on`附加至URL路徑的結尾，或內嵌程式碼片段中其他檢視器設定參數的清單。 任一動作都會強制確保視訊傳送安全。
 
 如需安全視訊傳送及在URL路徑中使用`VideoPlayer.ssl`設定屬性的詳細資訊，請參閱檢視器參考指南中的[安全視訊傳送](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。 除了視訊檢視器，混合媒體檢視器和互動式視訊檢視器也提供安全的視訊傳送。
 
@@ -148,7 +148,7 @@ Dynamic Media元件是智慧型的，視您新增影像或影片而定，您有�
 
 您可以按一下元件中的&#x200B;**[!UICONTROL Edit]**&#x200B;編輯以下&#x200B;**[!UICONTROL 一般]**&#x200B;設定。
 
-**[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的檢視器預設集。如果您要尋找的檢視器預設集未顯示，您可能需要將其顯示。 必須先發佈檢視器預設集，才能使用。 請參閱管理檢視器預設集。
+**[!UICONTROL 檢視器預設集]**  — 從下拉式選單中選取現有的檢視器預設集。如果您要尋找的檢視器預設集未顯示，您必須使其顯示。 必須先發佈檢視器預設集，才能使用。 請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
 **[!UICONTROL 標題]**  — 變更視訊的標題。
 
