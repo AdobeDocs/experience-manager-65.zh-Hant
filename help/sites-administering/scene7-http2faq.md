@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
 
 # HTTP2 傳送內容常見問答集{#http-delivery-of-content-faq}
 
-Adobe很高興能宣佈推出HTTP/2內容傳送。 使用HTTP/2時，您會發現整體效能有所提升。
+Adobe很高興能宣佈推出HTTP/2內容傳送。 使用HTTP/2時，會注意到整體效能有所提升。
 
 ## 什麼是HTTP/2?{#what-is-http}
 
@@ -23,11 +23,11 @@ HTTP/2改進了瀏覽器和伺服器的通信方式，允許更快地傳輸資�
 
 以下網站以簡單簡短的方式說明HTTP/2及其優點：
 
-[https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)
+[您對HTTP/2須知的事項](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)。
 
 ## 轉移至HTTP/2以進行內容傳送的主要優點為何？{#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
-效能改善會因網站程式碼、您使用Dynamic Media的方式、消費者裝置、畫面和位置等因素而有所不同。
+效能改善會因網站程式碼、Dynamic Media的使用方式、客戶裝置、畫面和位置等因素而異。
 
 Adobe自己的測試得出以下結果：
 
@@ -50,7 +50,7 @@ Adobe自己的測試得出以下結果：
 
 ## 為我的Dynamic Media帳戶啟用HTTP/2的程式為何？{#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-1. 您必須[使用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)並請求切換至HTTP/2;不會自動為您完成。
+1. [使用Admin Console建立支援案](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 例，並請求切換至HTTP/2;不會自動為您完成。
 1. 在您的支援案例中提供下列資訊：
 
    * 主要聯繫人姓名、電子郵件和電話號碼。
@@ -65,7 +65,7 @@ Adobe自己的測試得出以下結果：
       若要尋找您的網域，請開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的公司帳戶或帳戶。 然後點選「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**」。 查找標籤為&#x200B;**[!UICONTROL 已發佈伺服器名稱]**&#x200B;的欄位。 如果您目前使用一般Dynamic Media網域，可以請求移轉至您自己的自訂網域，作為此轉變的一部分。
 
 1. 技術支援會根據提交請求的順序，將您新增至HTTP/2客戶等待清單。
-1. 當Adobe準備好處理您的請求時，「支援」會聯絡您以協調轉變並設定目標日期。
+1. 當Adobe準備好處理您的請求時，「支援」會與您聯絡，協調轉變並設定目標日期。
 1. 完成後會收到通知，並可驗證是否成功轉換至HTTP2。
 
 ## 何時可望轉換為HTTP/2?{#when-can-i-expect-to-be-transitioned-over-to-http}
@@ -74,14 +74,14 @@ Adobe自己的測試得出以下結果：
 
 >[!NOTE]
 >
->可能會有很長的前置時間，因為轉換至HTTP/2涉及清除快取。 因此，一次只能處理少數客戶轉變。
+>前置時間很長，因為轉換至HTTP/2涉及清除快取。 因此，一次只能處理少數客戶轉變。
 
 ## 轉到HTTP/2有什麼風險？{#what-are-the-risks-with-moving-to-http}
 
 轉換至HTTP/2會清除CDN中的快取，因為它涉及移至新的CDN設定。
 
-非快取內容會直接點擊Adobe的原始伺服器，直到重新建置快取為止。 因此，Adobe計劃一次處理一些客戶轉變，以在從來源提取請求時維持可接受的效能。
+非快取內容會直接點擊Adobe的原始伺服器，直到重新建置快取為止。 由於此動作，Adobe計劃一次處理一些客戶轉變，以在從Adobe來源提取請求時維持可接受的效能。
 
 ## 如何驗證URL或網站是否已透過HTTP/2啟動？{#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-您需要下載外部版本才能與網頁瀏覽器搭配使用。 對於Firefox和Chrome，有一個名為&#x200B;**[!UICONTROL HTTP/2和SPDY Indicator]**&#x200B;的擴充功能。 瀏覽器僅安全支援HTTP/2，因此必須使用HTTPS呼叫URL以進行驗證。 如果支援HTTP/2，則會以藍色Flash符號和標題「X-Firefox-Spdy」的形式以擴充功能表示：&quot;h2&quot;。
+下載可與網頁瀏覽器搭配使用的擴充功能。 對於Firefox和Chrome，有一個名為&#x200B;**[!UICONTROL HTTP/2和SPDY Indicator]**&#x200B;的擴充功能。 瀏覽器僅安全支援HTTP/2，因此必須使用HTTPS呼叫URL以進行驗證。 如果支援HTTP/2，則會以藍色Flash符號和標題「X-Firefox-Spdy」的形式以擴充功能表示：&quot;h2&quot;。
