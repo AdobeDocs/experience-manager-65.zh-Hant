@@ -11,10 +11,10 @@ docset: aem65
 feature: 混合媒體集，資產管理
 role: Business Practitioner, Administrator
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 25%
+source-wordcount: '1458'
+ht-degree: 20%
 
 ---
 
@@ -36,11 +36,11 @@ ht-degree: 25%
 
 1. [上傳您的資產](#uploading-assets)。
 
-   首先，上傳混合媒體集的影像和視訊。如有必要，請建立 [影像集](/help/assets/image-sets.md)[和回轉集](/help/assets/spin-sets.md)。由於使用者可以在混合媒體集檢視器中放大影像，因此當您選擇影像時，請考量放大比例。請確定影像在最大尺寸中至少為2000像素。
+   首先，上傳混合媒體集的影像和視訊。如有必要，請建立 [影像集](/help/assets/image-sets.md)[和回轉集](/help/assets/spin-sets.md)。由於使用者可以在混合媒體集檢視器中放大影像，因此請謹慎選擇影像。 請確定影像在最大尺寸中至少為2000像素。
 
 1. [建立混合媒體集](#creating-mixed-media-sets)。
 
-   若要建立混合媒體集，請從「資產」頁面，點選「建立>混合媒體集 **** 」，然後命名該集合，選擇資產，然後選擇影像的顯示順序。
+   若要建立混合媒體集，請從「資產」頁面，點選&#x200B;**[!UICONTROL Create]** > **[!UICONTROL Mixed Media Set]**，然後命名該集，選擇資產，然後選擇影像的顯示順序。
 
    請參閱[使用選取器](/help/assets/working-with-selectors.md)。
 
@@ -48,7 +48,7 @@ ht-degree: 25%
 
    管理員可以建立或修改混合媒體集檢視器預設集。若要檢視您的混合媒體與檢視器預設集，請選取混合媒體集，然後在左側導軌下拉式選單中選取「檢 **[!UICONTROL 視器]**」。
 
-   請參閱&#x200B;**[!UICONTROL 工具>資產>檢視器預設集]**&#x200B;以建立或編輯檢視器預設集。
+   若要建立或編輯檢視器預設集，請參閱&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 檢視器預設集]**。
 
    請參閱[新增和編輯檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
@@ -62,13 +62,13 @@ ht-degree: 25%
 
 1. [將URL連結至您的Web](/help/assets/linking-urls-to-yourwebapplication.md) 應用程 [式，或內嵌視訊或影像檢視器](/help/assets/embed-code.md)。
 
-   AEM Assets會為混合媒體集建立URL呼叫，並在您發佈混合媒體集後啟用它們。 您可以在預覽資產時複製這些URL。 或者，您也可以將它們嵌入您的網站。
+   Adobe Experience Manager Assets會建立混合媒體集的URL呼叫，並在您發佈混合媒體集後啟用它們。 您可以在預覽資產時複製這些URL。 或者，您也可以將它們嵌入您的網站。
 
    選取「混合媒體集」，然後在左側導軌下拉式選單中選取「**[!UICONTROL 檢視器]**」。
 
    請參 [閱將混合媒體集連結至網頁](/help/assets/linking-urls-to-yourwebapplication.md)[和內嵌視訊或影像檢視器](/help/assets/embed-code.md)。
 
-如果需要，可以編輯[混合媒體集](#editing-mixed-media-sets)。 此外，還可以查看和修改[混合媒體集屬性](/help/assets/manage-assets.md#editing-properties)。
+如有必要，您可以編輯[混合媒體集](#editing-mixed-media-sets)。 此外，還可以查看和修改[混合媒體集屬性](/help/assets/manage-assets.md#editing-properties)。
 
 >[!NOTE]
 >
@@ -76,9 +76,9 @@ ht-degree: 25%
 
 ## 上傳資產 {#uploading-assets}
 
-首先，上傳混合媒體集的影像和視訊。由於使用者可以在混合媒體集檢視器中放大影像，因此當您選擇影像時，請務必考量放大比例。 請確定影像在最大尺寸中至少為2000像素。
+首先，上傳混合媒體集的影像和視訊。由於使用者可以在混合媒體集檢視器中放大影像，因此請謹慎選擇影像。 請確定影像在最大尺寸中至少為2000像素。
 
-此外，如果您想要將回轉集或影像集新增至混合媒體集，也請建立這些回轉集或影像集。
+此外，如果您想要將回轉集或影像集新增至混合媒體集，也請建立這些集。
 
 ## 建立混合媒體集{#creating-mixed-media-sets}
 
@@ -98,9 +98,9 @@ ht-degree: 25%
 
    >[!NOTE]
    >
-   >建立混合媒體集時，您可以變更混合媒體集縮圖，或允許AEM根據混合媒體集中的資產自動選取縮圖。 若要選取縮圖，請按一下「**[!UICONTROL 變更縮圖]**」並選取任何影像（您也可以導覽至其他資料夾以尋找影像）。 如果您已選取縮圖，然後決定要讓AEM從混合媒體集產生縮圖，請選取「**[!UICONTROL 切換至自動縮圖]**」。
+   >建立混合媒體集時，您可以變更混合媒體集縮圖，或允許Experience Manager根據混合媒體集中的資產自動選取縮圖。 若要選取縮圖，請按一下「**[!UICONTROL 變更縮圖]**」並選取任何影像（您也可以導覽至其他資料夾以尋找影像）。 如果您已選取縮圖，然後決定要Experience Manager從混合媒體集產生縮圖，請選取「**[!UICONTROL 切換至自動縮圖]**」。
 
-1. 點選「資產選擇器」以選取您要納入混合媒體集的資產。 選擇它們，然後按一下&#x200B;**[!UICONTROL 選擇]**。
+1. 點選「資產選擇器」，以選取您要納入混合媒體集的資產。 選擇它們，然後按一下&#x200B;**[!UICONTROL 選擇]**。
 
    使用「資產選擇器」，您可以輸入關鍵字並點選「回報」來搜尋 **[!UICONTROL 資產]**。您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後從工具列點選 **[!UICONTROL 「篩選]** 」圖示。通過選擇「視圖」圖 **[!UICONTROL 標]** ，然後選擇「清單視圖」、「列 **[!UICONTROL 視圖」]**&#x200B;或「卡片視圖 **[!UICONTROL 」來更]******&#x200B;改視圖。
 
@@ -108,7 +108,7 @@ ht-degree: 25%
 
    ![chlimage_1-140](assets/chlimage_1-383.png)
 
-1. 將資產向上或向下拖曳以重新排序（必須視需要選取&#x200B;**[!UICONTROL Reorder]**&#x200B;圖示）。
+1. 將資產上拖曳或往下拖曳至清單（必須視需要選取&#x200B;**[!UICONTROL Reorder]**&#x200B;圖示），以重新排序。
 
    ![chlimage_1-141](assets/chlimage_1-352.png)
 
@@ -152,17 +152,17 @@ ht-degree: 25%
 
       >[!NOTE]
       >
-      >* 若要刪除整個混合媒體集，請從任何檢視模式（例如&#x200B;**[!UICONTROL 卡片檢視]**&#x200B;或&#x200B;**[!UICONTROL 欄檢視]**）導覽至混合媒體集。 將滑鼠指標暫留在資產上，點選核取標籤圖示以加以選取。在鍵盤上按&#x200B;**[!UICONTROL Backspace]**，或在工具列上按一下&#x200B;**[!UICONTROL More]**（三個點），然後點選&#x200B;**[!UICONTROL Delete]**。
+      >* 若要刪除整個混合媒體集，請從任何檢視模式（例如&#x200B;**[!UICONTROL 卡片檢視]**&#x200B;或&#x200B;**[!UICONTROL 欄檢視]**）導覽至混合媒體集。 將滑鼠指標暫留在資產上，點選核取標籤圖示以供您選取。 在鍵盤上按&#x200B;**[!UICONTROL Backspace]**，或在工具列上按一下&#x200B;**[!UICONTROL More]**（三個點），然後點選&#x200B;**[!UICONTROL Delete]**。
          >
          >
-      * 您可以導覽至混合媒體集，按一下左側導軌中的&#x200B;**[!UICONTROL 設定成員]**，然後點選個別資產上的&#x200B;**[!UICONTROL 鉛筆]**&#x200B;圖示以開啟編輯視窗，以編輯該集合中的資產。
+      * 您可以導覽至混合媒體集，然後按一下左側邊欄中的&#x200B;**[!UICONTROL 設定成員]**，以編輯混合媒體集中的資產。 點選個別資產上的&#x200B;**[!UICONTROL 鉛筆]**&#x200B;圖示，以便在編輯視窗中開啟它。
 
 
 1. 完成編輯時，點選「**[!UICONTROL 儲存]**」。
 
    >[!NOTE]
    >
-   >* 若要編輯混合媒體集中的資產 — 導覽至混合媒體集。 點選 (不要選取) 設定，以在「AEM設定預覽」頁面中開啟該設定。在左側導軌中，按一下向下插入符號以開啟下拉式清單，然後點選&#x200B;**[!UICONTROL 設定成員]**。 在「設定成員」頁面中，暫留在資產上，然後點選&#x200B;**[!UICONTROL Edit]**（鉛筆圖示）以開啟編輯頁面。
+   >* 若要編輯混合媒體集中的資產 — 導覽至混合媒體集。 點選（不要選取）設定，使其在「Experience Manager設定預覽」頁面中開啟。 在左側導軌中，按一下向下插入符號以開啟下拉式清單，然後點選&#x200B;**[!UICONTROL 設定成員]**。 在「設定成員」頁面中，暫留在資產上，然後點選&#x200B;**[!UICONTROL Edit]**（鉛筆圖示）以開啟編輯頁面。
       >
       >
    * 若要刪除整個混合媒體集 — 從任何檢視模式（例如卡片檢視或欄檢視），導覽至混合媒體集。 暫留在集上，然後點選&#x200B;**選取**（勾選圖示）。 在鍵盤上按&#x200B;**[!UICONTROL Backspace]**，或點選&#x200B;**[!UICONTROL More]**（三個點的列），然後點選&#x200B;**[!UICONTROL Delete]**。
@@ -178,4 +178,4 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->如果混合媒體集在您第一次發佈時並未完全進入傳送服務，您可能需要第二次發佈混合媒體集。
+>如果您第一次發佈混合媒體集時未完全進入傳送服務，請第二次發佈混合媒體集。
