@@ -11,9 +11,9 @@ docset: aem65
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
 workflow-type: tm+mt
-source-wordcount: '11655'
+source-wordcount: '11657'
 ht-degree: 5%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 5%
 
 ## 在Dynamic Media中使用視訊{#working-with-video-in-dynamic-media}
 
-Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品質的最適化視訊，以在多個畫面間串流，包括桌上型電腦、iOS、Android™、Blackberry和Windows行動裝置。 適用性視訊集將以不同位速率和格式（如400 kbps、800 kbps和1000 kbps）編碼的相同視訊的版本分組。 台式電腦或行動裝置會偵測可用頻寬。
+Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品質的最適化視訊，以在多個畫面間串流，包括桌上型電腦、iOS、Android™、BlackBerry®和Windows行動裝置。 適用性視訊集將以不同位速率和格式（如400 kbps、800 kbps和1000 kbps）編碼的相同視訊的版本分組。 台式電腦或行動裝置會偵測可用頻寬。
 
 例如，在iOS行動裝置上，會偵測頻寬，例如3G、4G或Wi-Fi。 然後，它自動從自適應視訊集內的各種視訊位速率中選取正確編碼的視訊。 視訊會串流至桌上型電腦、行動裝置或平板電腦。
 
@@ -145,11 +145,11 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 
 * 所有HTML5視訊檢視器中的視訊字幕。
 * 透過完整的中繼資料支援，組織、瀏覽和搜尋視訊，以有效管理視訊資產。
-* 將最適化視訊集傳送至網路、桌上型電腦和行動裝置，包括iPhone、iPad、Android、Blackberry和Windows Phone。
+* 將最適化視訊集傳送至網路、桌上型電腦和行動裝置，包括iPhone、iPad、Android™、BlackBerry®和Windows電話。
 
 各種iOS平台均支援最適化視訊串流。 請參閱[Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
 
-Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位置找到支援此視頻格式的Blackberry設備：[Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支援的視頻格式。
+Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位置找到支援此視頻格式的BlackBerry®設備：[BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支援的視頻格式。
 
 您可以在以下位置找到支援此視頻格式的Windows設備：[Windows Phone 8](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105))支援的媒體轉碼器
 
@@ -239,17 +239,17 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
   </tr>
   <tr>
    <td>行動</td>
-   <td>Chrome（Android 6或更舊版本）</td>
+   <td>Chrome(Android™ 6或更舊版本)</td>
    <td>漸進式下載。</td>
   </tr>
   <tr>
    <td>行動</td>
-   <td>Chrome（Android 7或更新版本）</td>
+   <td>Chrome(Android™ 7或更新版本)</td>
    <td>HLS</td>
   </tr>
   <tr>
    <td>行動</td>
-   <td>Android（預設瀏覽器）</td>
+   <td>Android™（預設瀏覽器）</td>
    <td>漸進式下載。</td>
   </tr>
   <tr>
@@ -264,7 +264,7 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
   </tr>
   <tr>
    <td>行動</td>
-   <td>Blackberry</td>
+   <td>BlackBerry®</td>
    <td>HLS</td>
   </tr>
  </tbody>
@@ -602,7 +602,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 1. 在「建立YouTube設定」頁面的「Google cloud平台設定」下方的「應用程式名稱」欄位 **[!UICONTROL 中]** ，輸入Google專案ID。
 
    您最初設定Google Cloud設定時，已指定專案ID。
-保留建立YouTube設定頁面開啟；你稍後會回來。
+保留建立YouTube設定頁面開啟；一會兒，你就會回到這裡。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -1211,7 +1211,7 @@ Cost-efficient access to rapidly evolving technology.
 
 視訊縮圖是視訊影格的縮小版本，或代表視訊給客戶的影像資產。 縮圖可鼓勵客戶點按影片。
 
-Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不能刪除縮圖。 依預設，當您上傳視訊至Experience Manager時，會使用第一個影格作為縮圖。 不過，您也可以自訂縮圖以用於品牌推廣或視覺搜尋。 當您自訂視訊縮圖時，可以播放視訊並暫停您要使用的影格，或是選取您已上傳的影像資產，並在數位資產管理員中選取&#x200B;*已發佈*。
+Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不能刪除縮圖。 依預設，當您上傳視訊至Experience Manager時，會使用第一個影格作為縮圖。 不過，您也可以自訂縮圖以用於品牌推廣或視覺搜尋。 當您自訂視訊縮圖時，可以播放視訊並暫停您要使用的影格。 或者，您也可以在數位資產管理器中選取已上傳和&#x200B;*已發佈*&#x200B;的影像資產。
 
 您從視訊中選取的自訂視訊縮圖影像不會擷取，並儲存在DAM中作為個別且不重複的資產。 不過，您從現有影像資產中選取的自訂視訊縮圖會儲存至JCR。 選取資產的路徑會儲存在視訊資產的節點下，如下列範例路徑所示：
 
