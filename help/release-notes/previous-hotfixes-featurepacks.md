@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5先前的Service Pack發行說明'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的發行說明。'
 contentOwner: AK
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: d06e60baac692c92358244944226b77d5dad4022
+source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
 workflow-type: tm+mt
-source-wordcount: '20321'
+source-wordcount: '20313'
 ht-degree: 5%
 
 ---
@@ -590,9 +590,9 @@ Adobe Experience Manager 6.5.6.0推出的主要功能和增強功能包括：
 
 * [增強轉譯的最適化表單頁面快取](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
-* 支援Automated forms conversion服務](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)中的[Adobe Sign文字標籤。
+* 支援Automated forms conversion服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)中的[Adobe Sign文字標籤。
 
-* 支援使用[!DNL Automated Forms Conversion service]將彩色表單轉換為最適化表單](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。[
+* 支援使用[!DNL Automated Forms Conversion service]將彩色表單轉換為最適化表單](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。[
 
 * 支援SMB 2和SMB 3協定。
 
@@ -1001,7 +1001,7 @@ Adobe Experience Manager 6.5.5.0為重要更新，包含自2019年4月&#x200B;**
 
 >[!IMPORTANT]
 >
->建議[!DNL Experience Manager desktop app]的Windows使用者升級至[案頭應用程式2.0.3.2](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html#whats-new-added)版，以存取[!DNL Adobe Experience Manager 6.5.5.0]執行個體上的DAM存放庫。 因為他們在使用案頭應用程式2.0.2版存取[!DNL Adobe Experience Manager] 6.5.5.0執行個體上的DAM存放庫時可能會遇到問題。
+>建議[!DNL Experience Manager desktop app]的Windows使用者升級至[案頭應用程式2.0.3.2](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html#what-is-new)版，以存取[!DNL Adobe Experience Manager 6.5.5.0]執行個體上的DAM存放庫。 因為他們在使用案頭應用程式2.0.2版存取[!DNL Adobe Experience Manager] 6.5.5.0執行個體上的DAM存放庫時可能會遇到問題。
 
 **Experience Manager資產中的協助工具增強功能**
 
@@ -2183,7 +2183,7 @@ Remove one mention of this fix.
 
 #### 資產 — 包含
 
-* 為[!DNL Experience Manager Assets]啟用多站點管理器支援。 如需詳細資訊，請參閱[使用MSM對Experience Manager資產重複使用資產](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html)。 NPR-29199：CQ-4259922 的 Hotfix
+* 為[!DNL Experience Manager Assets]啟用多站點管理器支援。 如需詳細資訊，請參閱[使用MSM對Experience Manager資產重複使用資產](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/reuse-assets-using-msm.html)。 NPR-29199：CQ-4259922 的 Hotfix
 
 #### 網站 — 包含
 
