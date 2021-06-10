@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 7d3c8d9266bdec3f75211cfa0636217fd8b054ca
+source-git-commit: 2e01bb0b16728a8073e5de47deb88de69486d408
 workflow-type: tm+mt
-source-wordcount: '3874'
+source-wordcount: '3877'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 2%
 
 * 支援新使用者使用郵件程式設定服務的重新整理Token來重新整理存取Token。
 
-* 支援郵件程式配置服務的[!DNL SMTP XOAUTH2]機制。
+* [支援郵件設定服務的SMTP XOAUTH2](/help/sites-administering/notification.md#setting-up-oauth) 機制。
 
 * 支援[!DNL MongoDB] 4.2和4.4版。
 
