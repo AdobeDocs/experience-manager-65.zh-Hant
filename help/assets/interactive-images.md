@@ -11,9 +11,9 @@ docset: aem65
 feature: 互動影像
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
 workflow-type: tm+mt
-source-wordcount: '4327'
+source-wordcount: '4291'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 前往下列頁面，查看上述網頁上的互動式影像執行中功能：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
 
 ## 觀看互動式影像橫幅的建立方式{#watch-how-interactive-image-banners-are-created}
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 查看某些快速入門任務中的&#x200B;**Example**&#x200B;標題。 其中包含以下網頁範例為基礎的簡短教學課程，目前尚未新增互動式影像：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 本教學課程可協助您說明如何將互動式影像整合到您自己的網站上。
 
@@ -161,7 +161,7 @@ ht-degree: 1%
 
 您可以將上述三個範例中使用的相同方法套用至示範網頁：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 示範網頁有數個產品縮圖，每個縮圖都有標示為「查看更多」的「快速檢視」按鈕。 在Web瀏覽器的偵錯工具仍處於啟用狀態時，按一下每個按鈕並記下記錄的Quickview URL。 啟用頁面上所有的四個產品快速檢視後，您就會有向後端提出的快速檢視請求清單：
 
@@ -355,7 +355,7 @@ ht-degree: 1%
 
 以示範網站為例：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 請注意，這三個人的圖片是靜態`IMG`標籤：
 
@@ -365,7 +365,7 @@ ht-degree: 1%
 
 只要移除`IMG`標籤，並以「Experience Manager資產」中複製的內嵌程式碼取代，整合就很簡單。 您可以在以下URL中看到結果，該URL顯示頁面上具有三個圓形熱點的可購買互動影像：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-1.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html)
 
 >[!NOTE]
 因此，演示網站的可購買交互影像上的熱點僅用於顯示；它們尚未與現有的Quickviews整合。
@@ -512,7 +512,7 @@ loadQuickView(quickViewUrl);
 
 具有完全整合互動式影像的最終示範網站如下所示：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html)
 
 ## 使用「快速檢視」建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
