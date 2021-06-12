@@ -11,9 +11,9 @@ docset: aem65
 feature: 互動影片
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
 workflow-type: tm+mt
-source-wordcount: '6050'
+source-wordcount: '6014'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 * 如果您想要暫停影片並開啟產品的「快速檢視」，請按一下縮圖。 例如，按一下視頻中的KitchenAid縮圖影像以體驗混合器的360度旋轉視圖，或放大以查看混合器詳細資訊。
 
-<!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
+<!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
 ![互動式可購買視頻的幀從互](assets/chlimage_1-126.png) *動式可購買視頻捕獲視頻幀。*
 
@@ -61,13 +61,13 @@ ht-degree: 3%
 
 查看某些快速入門任務中的&#x200B;**Example**&#x200B;標題。 它包含一個簡短的教程，該教程基於此起始演示網頁，*尚未*&#x200B;添加交互功能：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 範例 **可協助您說明** ，如何將互動式視訊整合在您自己的網站上。
 
 完成上一個範例區段的教學課程後，完全整合互動式視訊的最終示範網頁看起來如下所示：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
 互動式影片步驟：
 
@@ -181,7 +181,7 @@ ht-degree: 3%
 
 將上述方法套用至「範例」網站時，您的網頁會包含數個產品縮圖，每個縮圖都會有「查看更多」按鈕：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 啟用頁面上所有可用的產品快速檢視後，您會收到對後端提出的快速檢視請求清單：
 
@@ -530,7 +530,7 @@ ht-degree: 3%
 
 以示範網站為例：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 請注意，內嵌程式碼是標準的：
 
@@ -561,7 +561,7 @@ ht-degree: 3%
 
 只要移除視訊內嵌程式碼，再從Experience Manager中取代為互動式視訊內嵌程式碼，整合就很簡單。 您可以在下列URL中看到結果。 雖然會顯示頁面上顯示的互動式視訊，但尚未與現有的快速檢視整合：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
 ## 將互動式視訊與現有的Quickview {#integrating-an-interactive-video-with-an-existing-quickview}整合
 
@@ -761,7 +761,7 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 完全整合互動式影片的最終示範網站如下所示：
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
 ## 使用Quickviews {#using-quickviews-to-create-custom-pop-ups}建立自訂快顯視窗
 
