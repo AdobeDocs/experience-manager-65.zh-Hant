@@ -11,9 +11,9 @@ docset: aem65
 feature: 輪播橫幅
 role: Business Practitioner, Administrator
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
 workflow-type: tm+mt
-source-wordcount: '4734'
+source-wordcount: '4740'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 建立和修改促銷橫幅中特有的內容可能非常耗時，限制您快速發佈新內容或使其更具針對性的能力。 輪播橫幅可讓您快速建立或修改旋轉橫幅。 您可以添加交互功能（如連結到產品詳細資訊或相關資源的熱點），並將它們提供到任何螢幕，從而讓您更快地將新促銷內容推向市場。
 
-輪播橫幅由橫幅指定，單字為&#x200B;**[!UICONTROL CAROUSELSET]**:
+輪播橫幅由橫幅指定，單字為&#x200B;**[!UICONTROL CAROUSELSET]**
 
 ![chlimage_1-438](assets/chlimage_1-438.png)
 
@@ -48,7 +48,7 @@ ht-degree: 4%
 
 ## 快速入門：輪播橫幅{#quick-start-carousel-banners}
 
-快速啟動並運行：
+若要使用輪播橫幅快速上手並執行：
 
 1. [識別熱點和影像對應變數](#identifying-hotspot-and-image-map-variables) (僅限使用Experience Manager資產+ Dynamic Media的客戶)
 
@@ -56,7 +56,7 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-   >如果您是Experience Manager網站或電子商務客戶，可以使用內建功能導覽至產品頁面，並查詢產品目錄中的現有SKU。 您不需要手動輸入熱點或影像地圖變數。 請參閱有關[設定eCommerce](/help/commerce/cif-classic/administering/generic.md)的資訊。
+   >如果您是Experience Manager網站或電子商務客戶，可以使用內建功能來導覽至產品頁面，並查閱產品目錄中的現有SKU（庫存保存單位）。 您不需要手動輸入熱點或影像地圖變數。 請參閱有關[設定eCommerce](/help/commerce/cif-classic/administering/generic.md)的資訊。
    >
    >
    >如果您是Experience Manager資產和Dynamic Media客戶，請手動輸入熱點和影像地圖的資料，然後將發佈的URL或內嵌程式碼與您的協力廠商內容管理系統整合。
