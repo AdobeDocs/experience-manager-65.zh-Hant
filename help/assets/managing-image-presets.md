@@ -12,18 +12,18 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 影像預設集
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
 workflow-type: tm+mt
-source-wordcount: '3831'
-ht-degree: 9%
+source-wordcount: '3853'
+ht-degree: 8%
 
 ---
 
 # 管理Dynamic Media影像預設集{#managing-image-presets}
 
-影像預設集可讓AEM Assets以不同大小、不同格式，或以動態產生的其他影像屬性來動態傳送影像。 每個影像預設集代表用於顯示影像的大小調整和格式設定命令的預定義集合。 建立影像預設集時，您會選擇影像傳送的大小。 您也可以選擇格式設定命令，以便在傳送影像以供查看時優化影像的外觀。
+影像預設集可讓Adobe Experience Manager Assets以不同大小、不同格式，或透過動態產生的其他影像屬性來動態傳送影像。 每個影像預設集代表用於顯示影像的大小調整和格式設定命令的預定義集合。 建立影像預設集時，您會選擇影像傳送的大小。 您也可以選擇格式設定命令，以便在傳送影像以供查看時優化影像的外觀。
 
-管理員可以建立匯出資產的預設集。 用戶在導出影像時可以選擇預設集，這也會按照管理員指定的規範重新格式化影像。
+管理員可以建立匯出資產的預設集。 用戶在導出映像時可以選擇預設集，該預設集還會按照管理員指定的規範重新格式化映像。
 
 您也可以建立回應式的影像預設集。 如果您將回應式影像預設集套用至資產，則會根據所檢視的裝置或螢幕大小而變更。 除了RGB或灰色之外，還可以配置影像預設集以在顏色空間中使用CMYK。
 
@@ -41,7 +41,7 @@ ht-degree: 9%
 >
 >在Dynamic Media - Scene7模式中，影像預設集僅支援影像資產。
 
-您可以建立兩個影像預設集：案頭版為500 x 500像素，行動版為150 x 150像素。 您可以建立兩個「影像預設集」，一個稱為`Enlarge`，以500x500像素顯示影像，另一個稱為`Thumbnail`，以150x150像素顯示影像。 要以`Enlarge`和`Thumbnail`大小傳送影像，AEM將查找放大影像預設集和縮圖影像預設集的定義。 然後，AEM會以每個影像預設集的大小和格式規格動態產生影像。
+您可以建立兩個影像預設集：案頭版為500 x 500像素，行動版為150 x 150像素。 您可以建立兩個「影像預設集」，一個稱為`Enlarge`，以500x500像素顯示影像，另一個稱為`Thumbnail`，以150x150像素顯示影像。 要以`Enlarge`和`Thumbnail`大小傳送影像，Experience Manager將查找放大影像預設集和縮圖影像預設集的定義。 然後，Experience Manager會動態地根據每個影像預設集的大小和格式規格產生影像。
 
 動態傳送時大小縮小的影像可能會失去清晰度和細節。 因此，每個影像預設集都包含格式控制項，用於在以特定大小傳送影像時對其進行最佳化。 這些控制項可確保影像在傳送至您的網站或應用程式時清晰清晰銳利。
 
@@ -49,7 +49,7 @@ ht-degree: 9%
 
 ## 管理Dynamic Media影像預設集{#managing-image-presets-1}
 
-您可以點選或按一下AEM標誌以存取全域導覽主控台，然後點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL Assets > Image Presets]**，以管理AEM中的影像預設集。
+您可以點選或按一下Experience Manager標誌以存取全域導覽主控台，然後點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL 「資產>影像預設集」]**，以管理Experience Manager中的影像預設集。
 
 ![6_5_tools-assets-imagepresets](assets/6_5_tools-assets-imagepresets.png)
 
@@ -59,13 +59,13 @@ ht-degree: 9%
 >
 >在&#x200B;*Dynamic Media - Scene7模式*&#x200B;中，您需要&#x200B;*not*&#x200B;發佈影像預設集，因為影像預設集會自動發佈。
 >
->在&#x200B;*Dynamic Media — 混合模式*&#x200B;中，您需要手動發佈影像預設集。
+>在&#x200B;*Dynamic Media — 混合模式*&#x200B;中，您必須手動發佈影像預設集。
 >
 >請參閱[發佈影像預設集](#publishing-image-presets)。
 
 >[!NOTE]
 >
->當您在資產的「詳細資料檢視」中選取&#x200B;**[!UICONTROL 轉譯]**&#x200B;時，系統會顯示各種轉譯。 您可以增加或減少顯示的影像預設集數目。 請參閱[增加顯示](#increasing-or-decreasing-the-number-of-image-presets-that-display)的影像預設集數目。
+>當您在資產的「詳細資料檢視」中選取「**[!UICONTROL 轉譯]**」時，系統會顯示各種轉譯。 您可以增加或減少顯示的影像預設集數目。 請參閱[增加顯示](#increasing-or-decreasing-the-number-of-image-presets-that-display)的影像預設集數目。
 
 ### 智慧裁切、Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式{#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
@@ -73,18 +73,18 @@ ht-degree: 9%
 >
 >本主題僅適用於Dynamic Media — 混合模式。
 
-如果要支援AI、EPS和PDF檔案的獲取，以便能夠生成這些檔案格式的動態格式副本，則在建立影像預設集之前，您可能需要查看以下資訊。
+如果要支援擷取AI、EPS和PDF檔案，以便生成這些檔案格式的動態格式副本，請在建立影像預設集之前查看以下資訊。
 
-Adobe Illustrator的檔案格式是PDF的變體。 AEM Assets的主要差異如下：
+Adobe Illustrator的檔案格式是PDF的變體。 在Experience Manager資產方面，主要差異如下：
 
-* Adobe Illustrator檔案包含單一頁面及多個層。 每個層會擷取為主要Illustrator資產下的PNG子資產。
-* PDF文檔由一頁或多頁組成。 每個頁面都會擷取為主多頁PDF檔案下的單頁PDF子資產。
+* Adobe Illustrator檔案包含單一頁面及多個層。 每個圖層都會擷取為主要Illustrator資產下的PNG子資產。
+* PDF文檔由一頁或多頁組成。 每個頁面都會擷取為主多頁PDF檔案下的單一頁面PDF子資產。
 
-子資產由整體`DAM Update Asset`工作流程中的`Create Sub Asset process`元件建立。 若要在工作流程中查看此程式元件，請點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**」。
+整體`DAM Update Asset`工作流程中由`Create Sub Asset process`元件建立的子資產。 若要在工作流程中查看此程式元件，請點選「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**」。
 
 另請參閱[檢視多頁檔案的頁面](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)。
 
-開啟資產時，您可以檢視子資產或頁面，點選「內容」功能表，然後選取&#x200B;**[!UICONTROL Subassets]**&#x200B;或&#x200B;**[!UICONTROL Pages]**。 子資產是真實資產。 也就是說，PDF頁面由`Create Sub Asset`工作流程元件擷取。 接著會儲存為主要資產下方的`page1.pdf`、`page2.pdf`等項目。 儲存後， `DAM Update Asset`工作流程會處理它們。
+開啟資產時，您可以檢視子資產或頁面，點選「內容」功能表，然後選取&#x200B;**[!UICONTROL 子資產]**&#x200B;或&#x200B;**[!UICONTROL 頁面]**。 子資產。 也就是說，PDF頁面由`Create Sub Asset`工作流程元件擷取。 接著會儲存為主要資產下方的`page1.pdf`、`page2.pdf`等項目。 儲存後， `DAM Update Asset`工作流程會處理它們。
 
 若要使用Dynamic Media來預覽和產生AI、EPS或PDF檔案的動態轉譯，需要下列處理步驟：
 
@@ -147,15 +147,15 @@ Adobe Illustrator的檔案格式是PDF的變體。 AEM Assets的主要差異如�
 
 「最大寬度」和「最大高度」限制柵格化的解析度。 例如，如果最大值未變更，且「解析度」設為300 ppi，則美國信函檔案的光柵化為186 ppi。 也就是說，文檔為1581 x 2046像素。
 
-`Rasterize PDF/AI Image Preview Rendition`進程元件已定義最大值，以確保它不會在記憶體中建立過大的映像。 此類大型映像可能會使提供給JVM（Java虛擬機）的記憶體溢出。 請務必注意，為JVM提供足夠的記憶體，以管理已配置的並行工作流數，每個工作流都有可能以最大配置的大小建立映像。
+`Rasterize PDF/AI Image Preview Rendition`進程元件已定義最大值，以確保它不會在記憶體中建立過大的映像。 此類大型映像可能會使提供給JVM(Java™虛擬機)的記憶體溢出。 請務必注意，為JVM提供足夠的記憶體，以管理已配置的並行工作流數，每個工作流都有可能以最大配置的大小建立映像。
 
 ### InDesign(INDD)檔案格式{#indesign-indd-file-format}
 
 如果要支援導入INDD檔案，以便生成此檔案格式的動態格式副本，則在建立影像預設集之前，可能需要查看以下資訊。
 
-對於InDesign檔案，只有在Adobe InDesign伺服器與AEM整合時，才會擷取子資產。 參考的資產會根據其中繼資料進行連結。 InDesign Server不是連結的必要項目。 不過，在處理InDesign檔案之前，必須先在AEM記憶體在參照的資產，才能在InDesign檔案與參照的資產之間建立連結。
+對於InDesign檔案，只有在Adobe InDesign Server與Experience Manager整合時，才會擷取子資產。 參考的資產會根據其中繼資料進行連結。 InDesign Server不是連結的必要項目。 不過，在處理InDesign檔案之前，Experience Manager內必須有參考的資產，才會在InDesign檔案與參考的資產之間建立連結。
 
-請參閱[將AEM Assets與InDesign Server整合](/help/assets/indesign.md)。
+請參閱[整合Experience Manager資產與InDesign Server](/help/assets/indesign.md)。
 
 `DAM Update Asset`工作流程中的媒體擷取程式元件會執行數個預先設定的擴充指令碼，以處理InDesign檔案。
 
@@ -168,48 +168,48 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 <table>
  <tbody>
   <tr>
-   <td><strong>擴展指令碼名稱</strong></td>
+   <td><strong>ExtendScript名稱</strong></td>
    <td><strong>預設</strong></td>
    <td><strong>說明</strong></td>
   </tr>
   <tr>
    <td>ThumbnailExport.jsx</td>
    <td>是</td>
-   <td>生成300 ppi <code>thumbnail.jpg</code>格式副本，該格式副本被優化，並由<code>Dynamic Media Process Image Assets</code>進程元件轉換為PTIFF格式副本。<br /> </td>
+   <td>生成300-ppi <code>thumbnail.jpg</code>轉譯，該轉譯經過優化並由<code>Dynamic Media Process Image Assets</code>進程元件轉換為PTIFF轉譯。<br /> </td>
   </tr>
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>是</td>
-   <td>為每個頁面產生300 ppi JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，還通過<code>DAM Update Asset</code>工作流優化並轉換為PTIFF。<br /> </td>
+   <td>為每個頁面產生300 ppi的JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，還通過<code>DAM Update Asset</code>工作流優化並轉換為PTIFF。<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
    <td>否</td>
-   <td>為每個頁面產生PDF子資產。 PDF子資產的處理方式如先前所述。 由於PDF僅包含單頁，因此不會產生子資產。<br /> </td>
+   <td>為每個頁面產生一個PDF子資產。 PDF子資產會依照先前所述進行處理。 由於PDF僅包含單頁，因此不會產生任何子資產。<br /> </td>
   </tr>
  </tbody>
 </table>
 
 ## 設定影像縮圖大小{#configuring-image-thumbnail-size}
 
-您可以在&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程中配置這些設定，以配置縮圖的大小。 工作流程中有兩個步驟可讓您設定影像資產的縮圖大小。 雖然其中一個(**[!UICONTROL Dynamic Media處理影像資產]**)用於動態影像資產，另一個（**[!UICONTROL 處理縮圖]**）用於靜態縮圖產生，或當所有其他處理無法產生縮圖時，*兩個*&#x200B;應具有相同的設定。
+您可以在&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程中配置這些設定，以配置縮圖的大小。 工作流程中有兩個步驟可讓您設定影像資產的縮圖大小。 雖然其中一個(**[!UICONTROL Dynamic Media處理影像資產]**)用於動態影像資產，另一個（**[!UICONTROL 處理縮圖]**）用於靜態縮圖產生，或當所有其他處理無法產生縮圖時，*兩個*&#x200B;必須具有相同的設定。
 
 在「動 **[!UICONTROL 態媒體處理影像資產」步驟中]** ，影像伺服器會產生縮圖，此組態與套用至「處理縮圖」步驟的組態無關 **** 。透過「處理縮圖 **[!UICONTROL 」步驟產生縮圖]** ，是建立縮圖的最慢且記憶體最耗用的方式。
 
-縮圖大小定義為下列格式：**[!UICONTROL width:height:center]**，例如&#x200B;*80:80:false*。 寬度和高度決定縮圖的像素大小；中心值為false或true，若設為true，表示縮圖影像的大小與設定中指定的大小完全相同。 如果調整大小的影像較小，則會在縮圖中置中。
+縮圖大小定義為下列格式：**[!UICONTROL width:height:center]**，例如&#x200B;*80:80:false*。 寬度和高度會以像素為單位決定縮圖的大小。 中心值為false或true，若設為true，表示縮圖影像的大小與設定中指定的大小完全相同。 如果調整大小的影像較小，則會置於縮圖中。
 
 >[!NOTE]
 >
->* EPS檔案的縮圖大小是在 **[!UICONTROL EPS縮圖步驟(「縮圖]** 」(Thumbnails)下的「參數」( **[!UICONTROL Arguments]** )頁籤中配置的。
+>* EPS檔案的縮圖大小是在「縮圖」下的&#x200B;**[!UICONTROL EPS縮圖]**&#x200B;步驟的&#x200B;**[!UICONTROL 參數]**&#x200B;頁簽中配置的。
    >
    >
-* 視訊的縮圖大小是在「參數」下的「 **[!UICONTROL Process]** 」 (處理) 頁籤的「 **[!UICONTROL FFmpeg縮圖]** 」步驟中設定 ****。
+* 視訊的縮圖大小是在&#x200B;**[!UICONTROL FFmpeg縮圖]**&#x200B;步驟中，在&#x200B;**[!UICONTROL Process]**&#x200B;標籤的&#x200B;**[!UICONTROL Arguments]**&#x200B;下配置。
 
 >
 
 
 
-**若要設定影像縮圖大小**:
+**若要設定影像縮圖大小：**
 
 1. 點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**。
 1. 點選&#x200B;**[!UICONTROL Dynamic Media處理影像資產]**&#x200B;步驟，然後點選或按一下&#x200B;**[!UICONTROL 縮圖]**&#x200B;標籤。 視需要變更縮圖大小，然後點選「 **[!UICONTROL 確定]**」。
@@ -226,9 +226,9 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 ### 增加或減少顯示{#increasing-or-decreasing-the-number-of-image-presets-that-display}的Dynamic Media影像預設集數目
 
-您建立的影像預設集在您預覽資產時可以動態轉譯。 AEM會在從&#x200B;**[!UICONTROL 「詳細資料檢視」>「轉譯」檢視資產時顯示各種動態轉譯。]**&#x200B;您可以增加或減少顯示的轉譯限制。
+您建立的影像預設集在您預覽資產時可以動態轉譯。 Experience Manager從&#x200B;**[!UICONTROL 詳細資料檢視>轉譯]**&#x200B;檢視資產時，會顯示各種動態轉譯。 您可以增加或減少顯示的轉譯限制。
 
-**若要增加或減少顯示的Dynamic Media影像預設集數目**:
+**若要增加或減少顯示的Dynamic Media影像預設集數目：**
 
 1. 導覽至CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
 1. 導覽至`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`處的影像預設集清單節點
@@ -251,7 +251,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 >
 >如果使用Internet Explorer 9，建立預設集在儲存後不會立即出現在預設集清單中。 若要解決此問題，請停用IE9的快取。
 
-如果要支援AI、PDF和EPS檔案的獲取，以便生成這些檔案格式的動態格式副本，則在建立影像預設集之前，您可能需要查看以下資訊。
+如果要支援AI、PDF和EPS檔案的獲取，以便生成這些檔案格式的動態格式副本，請在建立影像預設集之前查看以下資訊。
 請參閱[Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)。
 
 如果要支援導入INDD檔案，以便生成此檔案格式的動態格式副本，則在建立影像預設集之前，可能需要查看以下資訊。
@@ -259,11 +259,11 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 >[!NOTE]
 >
->若要建立Dynamic Media影像預設集，您必須以AEM管理員或Admin Console管理員的身分擁有管理員權限。
+>若要建立Dynamic Media影像預設集，您必須以Experience Manager管理員或Admin Console管理員的身分擁有管理員權限。
 
-**若要建立Dynamic Media影像預設集**:
+**若要建立Dynamic Media影像預設集：**
 
-1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具>資產>影像預設集]**。
+1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**。
 1. 按一下&#x200B;**[!UICONTROL 建立]**。將開啟「**[!UICONTROL 編輯影像預設集]**」窗口。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
@@ -282,7 +282,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 若要建立回應式影像預設集，請執行[建立影像預設集](#creating-image-presets)中的步驟。 在&#x200B;**[!UICONTROL 編輯影像預設集]**&#x200B;窗口中輸入高度和寬度時，請擦除值並將其留空。
 
-將它們保留為空白會告訴AEM此影像預設集是回應式的。 您可以視需要調整其他值。
+將它們留空會告訴Experience Manager此影像預設集是回應式的。 您可以視需要調整其他值。
 
 
 
@@ -316,7 +316,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
   </tr>
   <tr>
    <td><strong>名稱</strong></td>
-   <td>輸入不含空格的描述性名稱。在名稱中加入影像大小規格可幫助使用者識別此影像預設集。</td>
+   <td>輸入描述性名稱，不含任何空格。 在名稱中加入影像大小規格，協助使用者識別此影像預設集。</td>
   </tr>
   <tr>
    <td><strong>寬度和高度</strong></td>
@@ -338,7 +338,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
     <ul>
      <li><strong>類 </strong>型 — 選 <strong>取「適應性」</strong> （預設值）、 <strong>「Web」</strong>或「 <strong>Macintosh」</strong>。如果選擇<strong>Alpha</strong>的GIF，則Macintosh選項不可用。</li>
      <li><strong>Dither</strong>  — 選取「 <strong></strong> 差 <strong>異」或「關閉」</strong>。</li>
-     <li><strong>顏色數 </strong>量 — 輸入介於2和256之間的數字。</li>
+     <li><strong>顏色數 </strong>量 — 輸入從2到256的數字。</li>
      <li><strong>顏色清單</strong>  — 輸入逗號分隔的清單。例如，對於白色、灰色和黑色，請輸入000000、888888、ffffff。</li>
     </ul>
     <div>
@@ -348,7 +348,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
      <strong>含Alpha</strong>的TIFF提供以下額外選項：
     </div>
     <ul>
-     <li><strong>壓縮</strong>  — 選取壓縮演算法。PDF的演算法選項為<strong>None</strong>、<strong>Zip</strong>和<strong>Jpeg</strong>;TIFF的為<strong>無</strong>、<strong>LZW</strong>、<strong>Jpeg</strong>和<strong>Zip</strong>;而Alpha的TIFF為<strong>None</strong>、<strong>LZW</strong>和<strong>Zip</strong>。</li>
+     <li><strong>壓縮</strong>  — 選取壓縮演算法。PDF的演算法選項為<strong>None</strong>、<strong>Zip</strong>和<strong>Jpeg</strong>;對於TIFF，選項為<strong>None</strong>、<strong>LZW</strong>、<strong>Jpeg</strong>和<strong>Zip</strong>;而Alpha的TIFF為<strong>None</strong>、<strong>LZW</strong>和<strong>Zip</strong>。</li>
     </ul> <p>選擇<strong>PNG</strong>、<strong>帶Alpha的PNG、</strong>或<strong>EPS</strong>不提供其他選項。</p> </td>
   </tr>
   <tr>
@@ -379,8 +379,8 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
    <td>您可以覆寫預設的呈現方式。 渲染意圖確定目標顏色配置檔案中無法再現的顏色（超出色域）的結果。 如果「渲染目的」與ICC配置檔案不相容，則將忽略它。
     <ul>
      <li>選擇<strong>感知</strong>以當原始影像中的一個或多個顏色超出目標顏色空間的色域時，將總色域從一個顏色空間壓縮到另一個顏色空間。</li>
-     <li>當當前顏色空間中的顏色超出目標顏色空間中的色域時，選擇<strong>相對比色</strong>，並希望將其映射到目標顏色空間的色域中最接近的顏色，而不影響任何其他顏色。 </li>
-     <li>選擇<strong>飽和度</strong>以在轉換為目標顏色空間時重現原始影像顏色飽和度。 </li>
+     <li>當當前顏色空間中的顏色在目標顏色空間中超出色域時，選擇<strong>相對比色</strong>。 而且，您希望將其映射到目標顏色空間的色域內最接近的可能顏色，而不影響任何其他顏色。 </li>
+     <li>如果要在轉換為目標顏色空間時重現原始影像顏色飽和度，請選擇<strong>飽和度</strong>。 </li>
      <li>選擇「<strong>絕對比色</strong>」以完全匹配顏色，而不調整會改變影像亮度的白點或黑點。</li>
     </ul> </td>
   </tr>
@@ -396,14 +396,14 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
    <td><strong>銳利化類型</strong></td>
    <td><p>選擇「<strong>無</strong>」、「<strong>銳利化</strong>」或「<strong>銳利化遮色片</strong>」。 </p>
     <ul>
-     <li>選擇<strong>無</strong>以禁用銳利化。</li>
-     <li>選擇「<strong>銳化</strong>」，在進行所有縮放後，將基本銳利化濾鏡應用到影像。 銳利化有助於補償以不同大小顯示影像時可能產生的模糊性。 </li>
-     <li>選擇「<strong>銳利化遮色片</strong>」以微調最終縮減取樣影像的銳利化濾鏡效果。 您可以控制效果的強度、效果半徑（以像素計量），以及將忽略的對比度臨界值。 此效果使用的選項與 Photoshop的「遮色片銳利化」濾鏡相同。</li>
+     <li>如果要禁用銳利化，請選擇<strong>無</strong>。</li>
+     <li>如果要在所有縮放發生後將基本銳利化濾鏡應用到影像，請選擇<strong>銳利化</strong>。 銳利化有助於補償以不同大小顯示影像時可能產生的模糊性。 </li>
+     <li>如果要對最終縮減採樣影像微調銳利化濾鏡效果，請選擇「銳利化遮色片」</strong>。 <strong>您可以控制效果的強度、效果半徑（以像素計量），以及忽略的對比度臨界值。 此效果使用的選項與 Photoshop的「遮色片銳利化」濾鏡相同。</strong></li>
     </ul> <p>在<strong>銳利化遮色片</strong>中，您有下列選項：</p>
     <ul>
      <li><strong>量</strong>  — 控制套用至邊緣像素的對比度量。預設的實數值為1.0。對於高解析度影像，您可以將其增加到高達5.0。請將「量」想像為濾鏡強度的度量。</li>
      <li><strong>半徑</strong>  — 決定影響銳利化的邊緣像素周圍的像素數。對於高解析度影像，請輸入從1到2的實數。 低值只會銳化邊緣像素；高值銳化較寬的像素帶。 正確值取決於影像的大小。</li>
-     <li><strong>臨界值</strong>  — 決定套用遮色片銳利化濾鏡時要忽略的對比度範圍。換句話說，此選項可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素且銳化。 為避免引入雜訊，請使用2到20之間的整數值進行實驗。 </li>
+     <li><strong>臨界值</strong>  — 決定套用遮色片銳利化濾鏡時要忽略的對比度範圍。換句話說，此選項可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素且銳化。 為避免引入雜訊，請使用2到20的整數值進行實驗。 </li>
      <li><strong>套用至</strong>  — 判斷未銳利化套用至每種顏色或亮度。</li>
     </ul>
     <div>
@@ -451,7 +451,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 >[!NOTE]
 >
->某些影像修飾元[無法用於AEM](#advanced-tab-options)。
+>某些影像修飾元[無法用於Experience Manager](#advanced-tab-options)。
 
 * [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html#image-serving-api)  — 反轉每個顏色分量以獲得負影像效果。
 
@@ -495,7 +495,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 ## 編輯影像預設集{#modifying-image-presets}
 
-1. 在AEM中，點選AEM標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**。
+1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**。
 
    ![6_5_imagepreset_editpreset](assets/6_5_imagepreset-editpreset.png)
 
@@ -508,9 +508,9 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 (如果您執行的是Dynamic Media - Scene7模式，則會自動發佈影像預設集；您不需要完成這些步驟。)
 
-**若要在Dynamic Media — 混合模式中發佈影像預設集**:
+**若要在Dynamic Media — 混合模式中發佈影像預設集：**
 
-1. 在AEM中，點選或按一下AEM標誌以存取全域導覽主控台，點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**。
+1. 在Experience Manager中，點選或按一下Experience Manager標誌以存取全域導覽主控台，點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**。
 1. 從影像預設集清單中選取影像預設集或多個影像預設集，然後按一下或點選&#x200B;**[!UICONTROL Publish]**。
 1. 影像預設集發佈後，狀態會從未發佈變更為已發佈。
 
@@ -518,6 +518,6 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 ## 刪除Dynamic Media影像預設集{#deleting-image-presets}
 
-1. 在Experience Manager中，點選或按一下AEM標誌以存取全域導覽主控台。
+1. 在Experience Manager中，點選或按一下Experience Manager標誌以存取全域導覽主控台。
 1. 點選&#x200B;**[!UICONTROL 工具]**&#x200B;圖示，然後導覽至&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**。
 1. 選取預設集，然後按一下&#x200B;**[!UICONTROL Delete]**。 Dynamic Media會確認您要刪除它。 點選&#x200B;**[!UICONTROL 刪除]**&#x200B;以刪除，或點選&#x200B;**[!UICONTROL 取消]**&#x200B;以中止。
