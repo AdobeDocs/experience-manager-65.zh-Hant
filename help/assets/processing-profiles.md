@@ -11,9 +11,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 feature: 工作流程，資產管理，轉譯
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1379'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 設定檔是套用至上傳至資料夾之資產的選項方式。 例如，您可以指定要將哪些中繼資料描述檔和視訊編碼描述檔套用至您上傳的視訊資產。 或者，要套用至影像資產以適當裁切的影像設定檔。
 
-這些規則可包括新增中繼資料、智慧裁切影像或建立視訊編碼設定檔。 在AEM中，您可以建立三種設定檔類型，以下連結會詳細說明這些類型：
+這些規則可包括新增中繼資料、智慧裁切影像或建立視訊編碼設定檔。 在Adobe Experience Manager中，您可以建立三種設定檔類型，以下連結將詳細說明這些類型：
 
 * [中繼資料設定檔](/help/assets/metadata-config.md#metadata-profiles)
 * [影像設定檔](/help/assets/image-profiles.md)
@@ -32,8 +32,8 @@ ht-degree: 1%
 
 建立中繼資料、影像或視訊設定檔後，您會將其指派給一或多個資料夾，以用作新上傳資產的目的地。
 
-有關在AEM Assets中使用設定檔的重要概念，是將它們指派給資料夾。 設定檔中是中繼資料設定檔的設定，以及視訊設定檔或影像設定檔。 這些設定會處理資料夾的內容及其任何子資料夾。 因此，為檔案和資料夾命名的方式、子資料夾的排列方式以及這些資料夾內檔案的處理方式，都會對設定檔處理這些資產的方式產生重大影響。
-透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料實務，您可以充分利用數位資產集合，並確保正確的設定檔會處理正確的檔案。
+有關在Experience Manager資產中使用設定檔的重要概念，是將設定檔指派給資料夾。 設定檔中是中繼資料設定檔的設定，以及視訊設定檔或影像設定檔。 這些設定會處理資料夾的內容及其任何子資料夾。 因此，為檔案和資料夾命名的方式、子資料夾排列方式以及這些資料夾內檔案的處理方式，都會對設定檔處理這些資產的方式產生重大影響。
+透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料實務，您可充份運用數位資產集合，並確保正確的設定檔能處理正確的檔案。
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->僅適用於AEM 6.4.6.0或更新版本中的&#x200B;*Dynamic Media - Scene7模式*。
+>僅適用於Experience Manager6.4.6.0或更新版本中的&#x200B;*Dynamic Media - Scene7模式*。
 
 若資料夾中已有您後來變更的現有處理設定檔，您可以重新處理這些資產。
 
@@ -53,27 +53,28 @@ ht-degree: 1%
 
 您可以對第一次處理失敗的資產執行重新處理工作流程。 因此，即使您尚未編輯處理設定檔或套用處理設定檔，您仍可以隨時對資產資料夾執行重新處理工作流程。
 
-您可以選擇調整重新處理工作流程的批大小，從預設的50個資產調整為最多1000個資產。 執行&#x200B;_Scene7時：在資料夾上重新處理資產_&#x200B;工作流程，資產會分批分組，然後傳送至Dynamic Media伺服器進行處理。 處理後，整個批次集中每個資產的中繼資料會在AEM上更新。 如果批次大小很大，您可能會遇到處理延遲的問題。 或者，如果批次大小太小，可能會導致往返Dynamic Media伺服器的次數過多。
+您可以選擇調整重新處理工作流程的批大小，從預設的50個資產調整為最多1000個資產。 執行&#x200B;_Scene7時：在資料夾上重新處理資產_&#x200B;工作流程，資產會分批分組，然後傳送至Dynamic Media伺服器進行處理。 處理後，整個批次集中每個資產的中繼資料會在Experience Manager時更新。 如果批次大小很大，您可能會遇到處理延遲的問題。 或者，如果批次大小太小，可能會導致往返Dynamic Media伺服器的次數過多。
 
 請參閱[調整重新處理工作流的批大小](#adjusting-load)。
 
 >[!NOTE]
 >
->如果您要執行從Dynamic Media Classic到AEM的資產大量移轉，必須在Dynamic Media伺服器上啟用移轉復寫代理。 遷移完成後，請確保禁用代理。
+>如果您要將資產從Dynamic Media Classic大量移轉至Experience Manager，必須在Dynamic Media伺服器上啟用移轉復寫代理。 遷移完成後，請確保禁用代理。
 >
 >必須在Dynamic Media伺服器上停用移轉發佈代理，重新處理工作流程才能正常運作。
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
-**若要重新處理資料夾中的資產**:
-1. 在AEM中，從「資產」頁面導覽至資產資料夾，該資產已指派處理設定檔，且您要套用&#x200B;**Scene7:重新處理資產**&#x200B;工作流程，
+**若要重新處理資料夾中的資產：**
+
+1. 在「Experience Manager」中，從「資產」頁面導覽至資產資料夾，該資產已指派處理設定檔，且您要套用&#x200B;**[!UICONTROL Scene7:重新處理資產]**&#x200B;工作流程，
 
    已指派處理設定檔的資料夾，會透過「卡片檢視」中資料夾名稱正下方的設定檔名稱顯示來指示。
 
 1. 選取資料夾。
 
    * 工作流程會遞回考慮所選資料夾中的所有檔案。
-   * 如果主要選取的資料夾中有一或多個子資料夾含有資產，工作流程將會重新處理資料夾階層中的每個資產。
+   * 如果主要選取的資料夾中有一或多個子資料夾含有資產，工作流程會重新處理資料夾階層中的每個資產。
    * 最佳實務是，您應避免在資料夾階層（擁有超過1000個資產）上執行此工作流程。
 
 1. 在頁面左上角附近，從下拉式清單中按一下「時間 **[!UICONTROL 軸」]**。
@@ -89,11 +90,11 @@ ht-degree: 1%
 
 1. 按一下&#x200B;**[!UICONTROL 開始]**，然後按一下&#x200B;**[!UICONTROL 確認]**。
 
-   若要監控工作流程或檢查其進度，請從AEM主控台頁面按一下「**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]**」。 在「工作流實例」頁上，選擇工作流。 在菜單欄上，按一下&#x200B;**[!UICONTROL 開啟歷史記錄]**。 您也可以從同一「工作流實例」頁終止、掛起或更名選定的工作流。
+   要監視工作流或檢查其進度，請從Experience Manager主控台頁面，按一下&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]**。 在「工作流實例」頁上，選擇工作流。 在菜單欄上，按一下&#x200B;**[!UICONTROL 開啟歷史記錄]**。 您也可以從同一「工作流實例」頁終止、掛起或更名選定的工作流。
 
 ### 調整重新處理工作流{#adjusting-load}的批大小
 
-（選用）重新處理工作流程的預設批次大小為每個工作50個資產。 此最佳批次大小由執行重新處理的資產的平均資產大小和MIME類型所控制。 值越高，表示在單一重新處理作業中會有許多檔案。 因此，處理橫幅會在AEM資產上停留較長時間。 但是，如果平均檔案大小為1 MB或以下，則建議將值增加到幾百個，但Adobe不超過1000。 如果檔案的平均大小為大百兆位元組，則Adobe建議您將批處理大小降低至10。
+（選用）重新處理工作流程的預設批次大小為每個工作50個資產。 此最佳批次大小由執行重新處理的資產的平均資產大小和MIME類型所控制。 值越高，表示在單個重新處理作業中會有許多檔案。 因此，處理橫幅會在Experience Manager資產上停留較久。 但是，如果平均檔案大小很小（1 MB或更小）,Adobe建議您將值增加到數個100，但不要超過1000。 如果檔案的平均大小很大（如數百兆位元組）,Adobe建議您將批處理大小降低到10。
 
 **（可選）要調整重新處理工作流的批大小：**
 
@@ -143,5 +144,5 @@ ht-degree: 1%
     ![Saving the new property](/help/assets/assets/workflow-models10.png)
 
 1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All]**.
-1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main AEM console
+1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
