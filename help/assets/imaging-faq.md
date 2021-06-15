@@ -9,7 +9,7 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 資產管理，轉譯
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1917'
 ht-degree: 1%
@@ -220,7 +220,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 
 1. Adobe客戶服務會根據提交請求的順序，將您新增至智慧型影像處理客戶等候清單。
 1. 當Adobe準備好處理您的請求時，支援與您聯繫以協調並設定目標日期。
-1. **可選**:您可以選擇在測試環境中測試智慧型影像，然後Adobe將新功能推送至生產環境。
+1. **可選**  — 您可以選擇在測試環境中測試智慧型影像，然後Adobe將新功能推展至生產環境。
 1. 客戶服務完成後，會通知您。
 1. 為最大程度提升智慧型影像處理的效能，Adobe建議將存留時間(TTL)設為24小時或更長。 TTL會定義CDN快取資產的時間長度。 要更改此設定：
 
