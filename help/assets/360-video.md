@@ -11,7 +11,7 @@ docset: aem65
 feature: 360 VR 影片
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%
@@ -82,8 +82,8 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **屬性類型**:雙倍
-   * **值**:浮點外觀比例，預設值2.0。
+   * **屬性類型**  — 雙精度
+   * **值**  — 浮點外觀比例，預設為2.0。
 
 設定此屬性後，該屬性會立即對現有視訊和新上傳的視訊生效。
 
