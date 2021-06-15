@@ -10,7 +10,7 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 6%
@@ -81,10 +81,10 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
 最佳實務是從遮色片半徑不銳利化參數開始。 可以開頭的半徑設定如下：
 
-* **[!UICONTROL 網站]**:0.2-0.3像素
-* **[!UICONTROL 照片打印(250-300 ppi)]**:0.3-0.5像素
-* **[!UICONTROL 膠印(266-300 ppi)]**:0.7-1.0像素
-* **[!UICONTROL 畫布列印(150 ppi)]**:1.5-2.0像素
+* **[!UICONTROL 網站]**  - 0.2 - 0.3像素
+* **[!UICONTROL 照片打印(250-300 ppi)]** - 0.3-0.5像素
+* **[!UICONTROL 膠印(266-300 ppi)]** - 0.7-1.0像素
+* **[!UICONTROL 畫布列印(150 ppi)]** - 1.5-2.0像素
 
 逐步從1.75增加到4。 如果銳利化仍不是您想要的方式，請將半徑增加小數點，然後從1.75重新執行量至4。 視需要重複。
 
