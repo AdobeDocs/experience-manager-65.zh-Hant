@@ -12,9 +12,9 @@ discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 feature: 行動表單
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '647'
 ht-degree: 5%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 5%
 
 ### 使用請求參數{#enabling-logging-using-request-parameter}啟用記錄
 
-使用此方法，您可以產生特定請求的記錄。 請求參數的名稱為「log」。 記錄URL如下：
+使用此方法，您可以產生特定請求的記錄。 請求參數的名稱為`log`。 記錄URL如下：
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -94,7 +94,7 @@ ht-degree: 5%
    <td>關閉<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>3</td>
+   <td>1</td>
    <td>致命<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ ht-degree: 5%
    <td>錯誤<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>3</td>
+   <td>1</td>
    <td>警告<br type="_moz" /> </td>
   </tr>
   <tr>
