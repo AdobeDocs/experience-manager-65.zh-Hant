@@ -13,9 +13,9 @@ docset: aem65
 feature: 內容片段
 role: Business Practitioner, Administrator
 exl-id: 28e1052f-62b5-47bc-9bc8-f2d92f0254f6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---
@@ -174,7 +174,7 @@ ht-degree: 4%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-若要指出程式碼的跨度，請以反勾號(&#39;)括住。 與預格式化的代碼塊不同，代碼範圍指示正常段落中的代碼。
+若要指出程式碼的範圍，請以反勾號括住(&amp;grave;)。 與預格式化的代碼塊不同，代碼範圍指示正常段落中的代碼。
 
 例如：
 
