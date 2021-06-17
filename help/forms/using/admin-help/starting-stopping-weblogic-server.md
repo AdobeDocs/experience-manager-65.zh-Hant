@@ -9,9 +9,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '638'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 1%
 >只有在建立WebLogic域和托管伺服器後，才能執行此任務。
 
 1. 請確定WebLogic伺服器和節點管理器正在運行。
-1. 在Web瀏覽器的URL行中鍵入`https://host name]:[port]`/console，啟動WebLogic伺服器管理控制台。
+1. 在Web瀏覽器的URL行中鍵入`https://host name]:[port]/console`，以啟動WebLogic伺服器管理控制台。
 1. 在「域結構」下，按一下「環境」>「伺服器」。
 1. 在右窗格中，按一下「控制」頁簽。
 1. 選擇要啟動的受控伺服器。
