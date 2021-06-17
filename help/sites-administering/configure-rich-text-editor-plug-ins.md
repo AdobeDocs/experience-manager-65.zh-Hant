@@ -3,9 +3,9 @@ title: 設定RTF編輯器外掛程式
 description: 了解如何設定Adobe Experience Manager RTF編輯器外掛程式以啟用個別功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 443115b306ff34ee98da9403222874a9700d8aed
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4395'
 ht-degree: 1%
 
 ---
@@ -338,7 +338,7 @@ ht-degree: 1%
 
 1. 在樣式節點下建立新節點。 請參閱[指定新樣式](#stylesindropdown)。
    * 名稱: `jpn-word-wrap`
-   * 類型：&#39;nt:unstructure
+   * 類型: `nt:unstructure`
 
 1. 將屬性`cssName`新增至節點以參考CSS類別。 此類名是日文換行功能的保留名稱。
    * 名稱: `cssName`
