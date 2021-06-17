@@ -10,9 +10,9 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Administrator
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1907'
 ht-degree: 4%
 
 ---
@@ -191,7 +191,7 @@ Dispatcher是Adobe Experience Manager的快取和/或負載平衡工具，可與
 
 1. 設定反向連結篩選服務：
 
-   以管理員身分登入Apache Felix設定管理器。 配置管理器的預設URL為`https://[server]:[port_number]/system/console/configMgr`。 在&#x200B;**Configurations**&#x200B;功能表中，選取&#x200B;**Apache Sling Referrer Filter**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許它作為反向連結，然後按一下「**儲存**」。 條目的格式為&#39;https://[server]:[port]&#39;。
+   以管理員身分登入Apache Felix設定管理器。 配置管理器的預設URL為`https://[server]:[port_number]/system/console/configMgr`。 在&#x200B;**Configurations**&#x200B;功能表中，選取&#x200B;**Apache Sling Referrer Filter**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許它作為反向連結，然後按一下「**儲存**」。 條目的格式為`https://[server]:[port]`。
 
 #### 配置快取{#configure-cache}
 
