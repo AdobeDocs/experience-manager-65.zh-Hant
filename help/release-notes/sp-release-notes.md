@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 0ed031e8be43633caf6d9916542b6650e3dfd327
+source-git-commit: 101cbd0d06d370da315e1579a8c2f274a6138b9a
 workflow-type: tm+mt
 source-wordcount: '3857'
 ht-degree: 2%
@@ -446,7 +446,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 ### UberJar {#uber-jar}
 
-適用於Experience Manager6.5.9.0的UberJar位於[Maven Central存放庫](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.9/)中。
+適用於Experience Manager6.5.9.0的UberJar位於[Maven Central存放庫](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.9-1.0/)中。
 
 若要在Maven專案中使用UberJar，請參閱[如何使用UberJar](/help/sites-developing/ht-projects-maven.md)，並在您的專案POM中加入下列相依性：
 
@@ -454,7 +454,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.9</version>
+     <version>6.5.9-1.0</version>
      <scope>provided</scope>
 </dependency>
 ```
