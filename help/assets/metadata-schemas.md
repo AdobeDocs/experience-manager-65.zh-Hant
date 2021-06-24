@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner,Administrator
 feature: 中繼資料
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: ae0c8bda918e2e8a7a6a32e0228d1a2410b283d9
+source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3547'
 ht-degree: 7%
 
 ---
 
-# 元資料結構{#metadata-schemas}
+# 中繼資料結構 {#metadata-schemas}
 
 組織提出了元資料模型，可增強資產探索、使用、互操作性等。 正確的中繼資料應用程式是維護中繼資料導向的工作流程和程式的神聖不可侵犯。 若要遵循整個組織的中繼資料策略和標準，您可以使用中繼資料結構，協助DAM使用者協調。 [!DNL Adobe Experience Manager] 可讓您以簡單而有彈性的方法建立、維護和套用中繼資料結構。
 
@@ -30,7 +30,7 @@ ht-degree: 7%
 
    若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳細資訊，請參閱[編輯中繼資料結構Forms](#edit-metadata-schema-forms) 。 如果您修改MIME類型的中繼資料結構，則會修改資產和所有子類型的屬性頁面配置。 例如，在`default/image`下修改jpeg架構時，只會修改MIME類型`image/jpeg`資產的中繼資料配置（資產屬性）。 不過，如果您編輯預設結構，您的變更會修改所有資產類型的中繼資料配置。
 
-## 元資料結構表單{#default-metadata-schema-forms}
+## 中繼資料結構表單 {#default-metadata-schema-forms}
 
 若要檢視表單或範本清單，請在[!DNL Experience Manager]介面中導覽至&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata結構]**。
 
@@ -53,7 +53,7 @@ ht-degree: 7%
 >
 >要查看架構表單的子表單，請按一下架構表單名稱。
 
-## 添加元資料架構表單{#add-a-metadata-schema-form}
+## 新增中繼資料結構表單 {#add-a-metadata-schema-form}
 
 若要新增中繼資料結構表單，請執行下列步驟：
 
@@ -65,7 +65,7 @@ ht-degree: 7%
 
 1. 在對話方塊中，提供架構表單的標題，然後按一下&#x200B;**[!UICONTROL Create]**&#x200B;以完成表單建立程式。
 
-## 編輯元資料結構表單{#edit-metadata-schema-forms}
+## 編輯中繼資料結構表單 {#edit-metadata-schema-forms}
 
 您可以編輯新增或現有的中繼資料結構表單。 中繼資料結構表單包含索引標籤和索引標籤內的表單項目。 您可以將這些表單項目對應/設定至CRX存放庫中中繼資料節點內的欄位。 您可以將索引標籤或表單項目新增至中繼資料結構表單。 從父級派生的頁簽和表單項處於鎖定狀態。 不能在子級更改它們。
 
@@ -73,13 +73,9 @@ ht-degree: 7%
 
 1. 在&#x200B;**[!UICONTROL 中繼資料結構表單編輯器]**&#x200B;頁面上，自訂中繼資料表單。 將所需元件從&#x200B;**[!UICONTROL Build Form]**&#x200B;標籤拖曳至其中一個標籤。
 
-   ![「中繼資料結構編輯器：自訂資產屬性」頁面](assets/metadata-schema-editor.png)
-
-   *圖：「元資 [!UICONTROL 料結構表單編] 輯器」頁，帶有可用頁簽。*
-
 1. 要配置元件，請選擇該元件並在&#x200B;**[!UICONTROL Settings]**&#x200B;頁簽中修改其屬性。
 
-### [!UICONTROL 建置表單]標籤{#components-within-the-build-form-tab}中的元件
+### [!UICONTROL 建置表單]標籤內的元件 {#components-within-the-build-form-tab}
 
 **[!UICONTROL 建置表單]**&#x200B;索引標籤會列出您在架構表單中使用的表單項目。 **[!UICONTROL 設定]**&#x200B;標籤提供您在&#x200B;**[!UICONTROL 建置表單]**&#x200B;標籤中選擇的每個項的屬性。 下表列出&#x200B;**[!UICONTROL Build Form]**&#x200B;索引標籤中可用的表單項目：
 
@@ -100,7 +96,7 @@ ht-degree: 7%
 | [!UICONTROL 資產評等] | 新增至顯示資產評等選項。 |
 | [!UICONTROL 關聯式中繼資料] | 「新增」可控制資產屬性頁面中其他中繼資料索引標籤的顯示。 |
 
-#### 編輯元資料元件{#edit-the-metadata-component}
+#### 編輯中繼資料元件 {#edit-the-metadata-component}
 
 要編輯表單上元資料元件的屬性，請按一下該元件以在&#x200B;**[!UICONTROL Settings]**&#x200B;頁簽中編輯以下所有屬性或以下屬性的子集。
 
@@ -144,15 +140,13 @@ ht-degree: 7%
 
 *圖：資產屬性頁面中的內容中繼資料。*
 
-### 在JSON檔案{#specify-properties-in-json-file}中指定屬性
+### 在JSON檔案中指定屬性 {#specify-properties-in-json-file}
 
 您不必在「設定」標籤中指定選項的屬 **[!UICONTROL 性]** ，而是可以透過指定對應的索引鍵值配對，來定義JSON檔案中的選項。在「 **[!UICONTROL JSON路徑」欄位中指定JSON檔案的]** 路徑。
 
-#### 在架構表單{#adding-deleting-a-tab-in-the-schema-form}中添加或刪除頁簽
+#### 在架構表單中新增或刪除索引標籤 {#adding-deleting-a-tab-in-the-schema-form}
 
 架構編輯器可讓您新增或刪除標籤。預設架構表單包括&#x200B;**[!UICONTROL Basic]**、**[!UICONTROL Advanced]** 、 **[!UICONTROL IPTC]**&#x200B;和&#x200B;**[!UICONTROL IPTC Extension]**&#x200B;頁簽。
-
-![「元資料結構」表單中的預設頁簽](assets/metadata-schema-form-tabs.png)
 
 按一下`+`在架構表單上添加頁簽。 預設情況下，新頁簽的名稱為`Unnamed-1`。 您可以從&#x200B;**[!UICONTROL Settings]**&#x200B;標籤修改名稱。 按一下`X`以刪除索引標籤。
 
@@ -177,7 +171,7 @@ ht-degree: 7%
 * 根據在另一個欄位中指定的值，變更特定欄位所顯示的選項。
 * 根據其他欄位中指定的值，在特定欄位中設定預設中繼資料值。
 
-### 在[!DNL Experience Manager] {#configure-cascading-metadata-in-aem}中配置級聯元資料
+### 在[!DNL Experience Manager]中配置級聯元資料 {#configure-cascading-metadata-in-aem}
 
 假設您要根據選取的資產類型顯示階層式中繼資料。 一些範例
 
@@ -266,7 +260,7 @@ ht-degree: 7%
 
    *圖：文檔的級聯元資料。*
 
-## 刪除元資料結構表單{#delete-metadata-schema-forms}
+## 刪除中繼資料結構表單 {#delete-metadata-schema-forms}
 
 [!DNL Experience Manager] 可讓您僅刪除自訂結構描述表單。它不會讓您刪除預設的結構描述表單/範本。 不過，您可以刪除這些表單中的任何自訂變更。
 
@@ -278,15 +272,15 @@ ht-degree: 7%
 >* 您無法刪除[!DNL Assets]中的預設元資料架構表單。
 
 
-## MIME類型{#schema-forms-for-mime-types}的架構表單
+## MIME類型的架構表單 {#schema-forms-for-mime-types}
 
 [!DNL Experience Manager] 提供各種現成MIME類型的預設表單。不過，您可以為各種MIME類型的資產新增自訂表單。
 
-### 為MIME類型{#add-new-forms-for-mime-types}添加新表單
+### 為MIME類型添加新表單 {#add-new-forms-for-mime-types}
 
 在適當的表單類型下建立表單。 例如，要添加`image/png`子類型的模板，請在「image」表單下建立表單。 方案表單的標題是子類型名稱。在此案例中，標題為`png`。
 
-#### 對各種MIME類型{#use-an-existing-schema-template-for-various-mime-types}使用現有架構模板
+#### 對各種MIME類型使用現有架構模板 {#use-an-existing-schema-template-for-various-mime-types}
 
 您可以將現有範本用於不同的MIME類型。 例如，對於MIME類型`image/png`的資產，請使用`image/jpeg`表單。
 
@@ -313,11 +307,11 @@ ht-degree: 7%
 | video/wmv | video/x-ms-wmv |
 | video/flv | video/x-flv |
 
-## 授予對元資料結構{#grant-access-to-metadata-schemas}的訪問權
+## 授予中繼資料結構的存取權 {#grant-access-to-metadata-schemas}
 
 中繼資料結構功能僅供管理員使用。 不過，管理員可以修改某些權限，以提供對非管理員的存取權。 提供非管理員用戶對`/conf`資料夾建立、修改和刪除權限。
 
-## 應用資料夾特定元資料{#apply-folder-specific-metadata}
+## 套用資料夾特定中繼資料 {#apply-folder-specific-metadata}
 
 [!DNL Assets] 可讓您定義中繼資料結構的變體，並將其套用至特定資料夾。
 
@@ -349,7 +343,7 @@ ht-degree: 7%
 1. 按一下&#x200B;**確定**&#x200B;以關閉成功訊息。
 1. 導覽至您套用已修改中繼資料結構的資料夾。
 
-## 定義強制中繼資料{#define-mandatory-metadata}
+## 定義必要中繼資料 {#define-mandatory-metadata}
 
 您可以在資料夾層級定義必填欄位，這會對上傳至資料夾的資產強制執行。 如果您上傳的資產上傳之前定義之必填欄位的中繼資料遺失，卡片檢視的資產上會顯示遺失中繼資料的視覺指示。
 
