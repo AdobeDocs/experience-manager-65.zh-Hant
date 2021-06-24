@@ -1,10 +1,11 @@
 ---
 title: AEM內容與商務發行說明2021年
 description: AEM內容與商務發行說明2021年
-source-git-commit: 99636664a49da3ac5d236db5a1185ad6659ee255
+exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
+source-git-commit: 71782a3caae3f74a4886c52cf9b29f9e998913fa
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 9%
+source-wordcount: '758'
+ht-degree: 8%
 
 ---
 
@@ -28,6 +29,23 @@ ht-degree: 9%
 | CIF核心元件 | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 發行日期：2021年6月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加元件 | 2021.06.18 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
+| CIF核心元件 | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
+| CIF Venia參考站 | 2021.06.12 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.06.17) |
+
+### 新增功能 {#what-is-new-june}
+
+* 內容片段的新CIF產品和類別參考資料類型(包括 產品/類別選擇器UI支援)
+* 新商務內容片段核心元件
+* AEM後端支援的全文商務搜尋
+* 商務核心元件支援Adobe商務Sensei Recs資料收集
+* 改善類別頁面的SEO易記URL
+* 支援每個網站/設定的自訂HTTP標題
+
 ## 發行日期：2021年5月
 
 | 元件 | 版本 | 詳細資料 |
@@ -36,7 +54,7 @@ ht-degree: 9%
 | CIF核心元件 | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
 | CIF Venia參考站 | 2021.05.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.05.24) |
 
-### 新功能 {#what-is-new-may}
+### 新增功能 {#what-is-new-may}
 
 * 產品控制台屬性中關聯內容的分頁支援
 
@@ -54,7 +72,7 @@ ht-degree: 9%
 | CIF核心元件 | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考站 | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-april}
+### 新增功能 {#what-is-new-april}
 
 * 支援類別UID — 如此可為使用類別ID字串的系統解除鎖定第三方商務整合
 
@@ -68,7 +86,7 @@ ht-degree: 9%
 
 * 根類別欄位沒有顯示在類別頁面的頁面屬性中的商務標籤下
 
-## 發行日期：2021年3月{#what-is-new-march}
+## 發行日期：2021年3月 {#what-is-new-march}
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
@@ -96,13 +114,13 @@ ht-degree: 9%
 | CIF核心元件 | 1.8.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考站 | 2021.02.24 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-february}
+### 新增功能 {#what-is-new-february}
 
 * 產品體驗管理：使用體驗片段，讓產品目錄頁面個別豐富。
 
 * 延伸產品控制台屬性，可顯示連結的資產和體驗片段，包括快速導覽至相關內容的動作。
 
-### {#what-is-improved-february}的改進
+### 改進項目  {#what-is-improved-february}
 
 * 增強的用戶端資料層，提供產品影像url和類別資訊。
 
@@ -116,11 +134,11 @@ ht-degree: 9%
 | CIF核心元件 | 1.7.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考站 | 2021.02.02 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-january}
+### 新增功能 {#what-is-new-january}
 
 * 產品體驗管理：針對資產和體驗片段新增「商務」屬性標籤。 此索引標籤可讓您將資產和體驗片段連結至產品和類別。 索引標籤也會顯示連結商務物件的即時資料，以及可在產品主控台中顯示詳細資料的連結。
 
-### {#what-is-improved-january}的改進
+### 改進項目  {#what-is-improved-january}
 
 * 在驗證後傳送使用者資料至Adobe用戶端資料層。
 
