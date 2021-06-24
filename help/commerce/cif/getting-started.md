@@ -4,10 +4,11 @@ description: 了解如何部署AEM內容與商務專案。
 topics: Commerce
 feature: 商務整合架構
 thumbnail: 37843.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
+source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 2%
+source-wordcount: '721'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +28,7 @@ AEM內容與商務的上線程式為兩個步驟：
 
 2. 將AEM與您的商務解決方案連接
 
-### 安裝AEM 6.5的AEM Content and Commerce附加元件{#install-add-on}
+### 安裝AEM 6.5的AEM Content and Commerce附加元件 {#install-add-on}
 
 從[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)入口網站下載並安裝AEM Commerce Add-On for AEM 6.5。
 
@@ -78,6 +79,9 @@ CIF附加元件提供位於`/api/graphql`的GraphQL代理Servlet，可選擇用�
    >
    > Adobe商務(Magento)2.4.2已推出UID支援。請僅在您的商務後端支援2.4.2版或更新版本的GraphQL架構時啟用。
 - 目錄根類別標識符 — 儲存目錄根的標識符（UID或ID）
+   >[!CAUTION]
+   >
+   > 從CIF核心元件2.0.0版開始，`id`的支援已移除，並改為`uid`。 如果您的專案使用CIF核心元件2.0.0版，則必須啟用目錄UID支援，並使用有效的類別UID作為「目錄根類別識別碼」。
 
 上述組態供參考。 專案應提供自己的設定。
 
