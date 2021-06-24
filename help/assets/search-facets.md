@@ -5,9 +5,9 @@ contentOwner: AG
 role: Administrator, Developer
 feature: 搜尋
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
 workflow-type: tm+mt
-source-wordcount: '2425'
+source-wordcount: '2397'
 ht-degree: 15%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 15%
 
 例如，如果要查找影像，則可以選擇要點陣圖還是向量影像。 您可以指定影像的MIME類型，進一步縮小搜尋範圍。 同樣，在搜索文檔時，可以指定格式，例如PDF或MS Word。
 
-## 新增述詞{#adding-a-predicate}
+## 新增述詞 {#adding-a-predicate}
 
 顯示在「篩選器」面板中的搜尋刻面，是使用述詞在基礎搜尋表單中定義。 若要顯示更多或不同的刻面，您可以將述詞新增至預設表單，或使用包含您所選刻面的自訂表單。
 
@@ -30,8 +30,6 @@ ht-degree: 15%
 
 1. 按一下[!DNL Experience Manager]標誌，然後前往&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**。
 1. 從「搜尋Forms」頁面中，選取「**[!UICONTROL 資產管理搜尋邊欄]**」，然後按一下「**[!UICONTROL 編輯]** ![編輯圖示](assets/do-not-localize/aemassets_edit.png)」。
-
-   ![找出並選取「資產」或「管理搜尋邊欄」](assets/assets_admin_searchrail.png)
 
    >[!NOTE]
    >
@@ -71,7 +69,7 @@ ht-degree: 15%
 1. 導覽至[!DNL Assets]使用者介面中的「搜尋」面板。 「屬性述詞」會新增至面板。
 1. 在文字方塊中輸入要搜尋的資產說明。 例如，輸入`Adobe`。 執行搜尋時，說明符合`Adobe`的資產會列在搜尋結果中。
 
-## 新增選項述詞{#adding-an-options-predicate}
+## 新增選項述詞 {#adding-an-options-predicate}
 
 「選項」述詞可讓您在「篩選器」面板中新增多個搜尋選項。 您可以在「篩選」面板中選取一或多個這些選項以搜尋資產。 例如，若要根據檔案類型搜尋資產，請設定選項，例如搜尋表單中的「影像」、「多媒體」、「檔案」和「封存」。 配置這些選項後，當您在「濾鏡」面板中選擇「影像」選項時，將對GIF、JPEG、PNG等類型的資產執行搜索。
 
@@ -125,7 +123,7 @@ ht-degree: 15%
 1. 在&#x200B;**[!UICONTROL Description]**&#x200B;欄位中，輸入可選說明，然後按一下&#x200B;**[!UICONTROL Done]**。
 1. 導覽至「搜尋」面板。 「選項謂語」已新增至&#x200B;**Search**&#x200B;面板。 **[!UICONTROL 檔案類型]**&#x200B;的選項顯示為複選框。
 
-## 新增多值屬性述詞{#adding-a-multi-value-property-predicate}
+## 新增多值屬性述詞 {#adding-a-multi-value-property-predicate}
 
 「多值屬性」述詞可讓您搜尋多個值的資產。 假設您[!DNL Assets]中有多個產品的影像，且每個影像的中繼資料包含與產品相關聯的SKU編號，則此情境為例。 您可以使用此述詞來根據多個SKU編號來搜尋產品影像。
 
@@ -138,7 +136,7 @@ ht-degree: 15%
 1. 導覽至[!DNL Assets]使用者介面中的「篩選器」面板。 The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
 1. 在「多值」欄位中指定多個值（由分隔字元分隔），然後執行搜索。 述詞會擷取與您指定值完全相符的文字。
 
-## 新增標籤述詞{#adding-a-tags-predicate}
+## 新增標籤述詞 {#adding-a-tags-predicate}
 
 「標籤述詞」可讓您執行資產的標籤式搜尋。 依預設， [!DNL Assets]會根據您指定的標籤，搜尋一或多個標籤相符的資產。 換言之，搜尋查詢會使用指定的標籤執行OR操作。 不過，您可以使用「比對所有標籤」選項，來搜尋包含您所指定之所有標籤的資產。
 
@@ -155,7 +153,7 @@ ht-degree: 15%
 
 1. 選擇&#x200B;**[!UICONTROL 「全部匹配」]**&#x200B;以搜索包含您指定的所有標籤的匹配項。
 
-## 添加其他謂詞{#adding-other-predicates}
+## 新增其他述詞 {#adding-other-predicates}
 
 與新增屬性述詞或選項述詞的方式類似，您可以將下列其他述詞新增至「搜尋」面板：
 
@@ -180,7 +178,7 @@ ht-degree: 15%
 
 依預設，在&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面的&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**&#x200B;前會出現鎖定圖示![鎖定關閉圖示](assets/do-not-localize/lock_closed_icon.svg)。 針對「搜尋Forms」頁面上的選項鎖定圖示，表示預設設定完整且未自訂。 如果向表單添加搜索Facet，指示已修改預設表單，則表徵圖![鎖閉表徵圖](assets/do-not-localize/lock_closed_icon.svg)會消失。
 
-![針對「搜尋Forms」頁面上的選項鎖定圖示，表示預設設定完整且未自訂。](assets/locked_admin_rail.png)
+![鎖定圖示](assets/locked_admin_rail.png)
 
 要還原預設搜索面，請執行以下步驟：
 
@@ -190,7 +188,7 @@ ht-degree: 15%
 
    刪除搜尋Facet的自訂變更後，在&#x200B;**[!UICONTROL 搜尋Forms]**&#x200B;頁面的&#x200B;**[!UICONTROL 資產管理搜尋邊欄]**&#x200B;前會重新顯示鎖定圖示![鎖定關閉圖示](assets/do-not-localize/lock_closed_icon.svg)。
 
-## 用戶權限{#user-permissions}
+## 使用者權限 {#user-permissions}
 
 如果您未獲派管理員角色，以下是執行與搜尋刻面相關的編輯、刪除和預覽動作所需的權限清單。
 
