@@ -7,20 +7,21 @@ version: cloud-service
 activity: develop
 audience: developer
 feature: 商務整合架構
-source-git-commit: d84993e704096eabe85c4d4d61e24096d15ae9bd
+exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
+source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
 
-# AEM內容與商務製作選擇器{#cif-pickers}
+# AEM內容與商務製作選擇器 {#cif-pickers}
 
 AEM內容與商務製作提供一組製作工具，可協助AEM作者和行銷人員有效處理商務產品資料和目錄。 產品選擇器和類別選擇器是CIF附加元件的一部分，並供CIF核心元件使用。 專案可在任何元件對話方塊中使用這些選取器來選取產品或類別。
 
 ## 產品挑選器 {#product-picker}
 
-若要在專案元件中使用產品選擇器，開發人員必須將`commerce/gui/components/common/cifproductfield`新增至元件對話方塊。 例如，在cq:dialog中使用下列項目：
+若要在專案元件中使用產品選擇器，開發人員必須將`commerce/gui/components/common/cifproductfield`新增至元件對話方塊。 例如，對cq:dialog:使用下列項目
 
 ```xml
 <product jcr:primaryType="nt:unstructured"
@@ -46,10 +47,13 @@ AEM內容與商務製作提供一組製作工具，可協助AEM作者和行銷�
 >[!CAUTION]
 >
 >`cifproductfield`元件需要`cif.shell.picker` clientlib。 若要將clientlib新增至對話方塊，您可以使用extraClientlibs屬性。
+>[!CAUTION]
+>
+>從CIF核心元件2.0.0版開始，`id`的支援已移除，並改為`uid`。 強烈建議使用`sku`或`slug`作為產品識別碼。 我們僅對使用CIF核心元件1.x版的專案持續支援`id`。
 
 [CIF核心元件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/_cq_dialog/.content.xml)專案中提供`cifproductfield`的完整運作範例。 另請參閱AEM核心元件檔案的[自訂對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) 。
 
-## 類別選擇器{#category-picker}
+## 類別選擇器 {#category-picker}
 
 類別選擇器也可以像產品選擇器一樣，在元件對話方塊中使用。
 
@@ -73,5 +77,8 @@ AEM內容與商務製作提供一組製作工具，可協助AEM作者和行銷�
 >[!CAUTION]
 >
 >與`cifproductfield`元件相同， `cifcategoryfield`元件也需要`cif.shell.picker` clientlib。 若要將clientlib新增至對話方塊，您可以使用`extraClientlibs`屬性。 請參閱AEM核心元件檔案的[自訂對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) 。
+>[!CAUTION]
+>
+>從CIF核心元件2.0.0版開始，`id`的支援已移除，並改為`uid`。 強烈建議使用`uid`或`slug`作為類別識別碼。 我們僅對使用CIF核心元件1.x版的專案繼續支援`id`和`idAndUrlPath`。
 
 [CIF核心元件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml)專案中提供`cifcategoryfield`的完整運作範例。
