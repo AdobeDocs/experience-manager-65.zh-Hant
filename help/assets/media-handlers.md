@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner
 feature: 工作流程，轉譯
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
+source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 3%
 
 ---
 
-# 使用媒體處理常式和工作流程處理資產{#processing-assets-using-media-handlers-and-workflows}
+# 使用媒體處理常式和工作流程處理資產 {#processing-assets-using-media-handlers-and-workflows}
 
 [!DNL Adobe Experience Manager Assets] 隨附一組預設工作流程和媒體處理常式，用於處理資產。工作流程會定義要在資產上執行的任務，然後將特定任務委派給媒體處理常式，例如縮圖產生或中繼資料擷取。
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 >
 >有關[!DNL Assets]支援的所有格式以及每種格式支援的功能的說明，請參閱[資產支援的格式](assets-formats.md)頁。
 
-## 預設媒體處理程式{#default-media-handlers}
+## 預設媒體處理常式 {#default-media-handlers}
 
 下列媒體處理常式可在[!DNL Assets]內使用，並處理最常見的MIME類型：
 
@@ -61,7 +61,7 @@ ht-degree: 3%
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## 在工作流程中使用媒體處理常式，對資產{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}執行工作
+## 在工作流程中使用媒體處理常式，對資產執行工作 {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 媒體處理常式是與工作流程結合使用的服務。
 
@@ -71,7 +71,7 @@ ht-degree: 3%
 
 下列範例說明如何增強 **[!UICONTROL AEM Assets Synchronization]**  (AEM Assets同步化) 工作流程，以便為除PDF檔案外的所有資產產生子資產。
 
-### 禁用或啟用媒體處理程式{#disabling-enabling-a-media-handler}
+### 禁用或啟用媒體處理程式 {#disabling-enabling-a-media-handler}
 
 媒體處理常式可透過Apache Felix Web Management Console停用或啟用。 停用媒體處理常式時，不會對資產執行其工作。
 
@@ -82,11 +82,11 @@ ht-degree: 3%
 1. 重新整理頁面：媒體處理程式旁會顯示圖示，指出其已停用。
 1. 要啟用媒體處理程式，請按一下媒體處理程式名稱旁的&#x200B;**[!UICONTROL 啟用]**。
 
-### 建立新的媒體處理程式{#creating-a-new-media-handler}
+### 建立新的媒體處理常式 {#creating-a-new-media-handler}
 
 若要支援新媒體類型或對資產執行特定工作，必須建立新媒體處理常式。 本節說明如何繼續。
 
-#### 重要類和介面{#important-classes-and-interfaces}
+#### 重要類和介面 {#important-classes-and-interfaces}
 
 開始實作的最佳方式是繼承所提供抽象實作的內容，這種實作會處理大部分內容，並提供合理的預設行為：`com.day.cq.dam.core.AbstractAssetHandler`類。
 
@@ -129,7 +129,7 @@ package my.own.stuff;/&amp;ast;&amp;ast&amp;ast;@scr.component inherit=&quot;tru
 * `com.day.cq.dam.core.AbstractAssetHandler` 類別：此類別可做為所有其他資產處理常式實施的基礎，並提供常用功能。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` 類別：此類別可做為所有其他資產處理常式實施的基礎，並提供常用功能以及子資產擷取的常用功能。
 
-#### 範例：建立特定文本處理程式{#example-create-a-specific-text-handler}
+#### 範例：建立特定文字處理常式 {#example-create-a-specific-text-handler}
 
 在本節中，將建立特定的文本處理程式，該處理程式將生成帶有水印的縮略圖。
 
@@ -368,7 +368,7 @@ package my.own.stuff;/&amp;ast;&amp;ast&amp;ast;@scr.component inherit=&quot;tru
      Layer watermarkLayer;
      try {
       final Session session = node.getSession();
-      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/geometrixx/icons/certificate.png");
+      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/samplesite/icons/certificate.png");
       watermarkLayer.setX(MARGIN);
       watermarkLayer.setY(MARGIN);
       layer.merge(watermarkLayer);
@@ -441,7 +441,7 @@ package my.own.stuff;/&amp;ast;&amp;ast&amp;ast;@scr.component inherit=&quot;tru
 1. 複製套件組合`myBundle-0.0.1-SNAPSHOT.jar`並將其儲存在`/apps/myApp/install`下（例如使用WebDAV）。 新的文字處理常式現在在[!DNL Experience Manager]中處於作用中狀態。
 1. 在瀏覽器中，開啟[!UICONTROL Apache Felix Web Management Console]。 選擇[!UICONTROL 元件]頁簽並禁用預設文本處理程式`com.day.cq.dam.core.impl.handler.TextHandler`。
 
-## 基於命令行的媒體處理程式{#command-line-based-media-handler}
+## 基於命令行的媒體處理程式 {#command-line-based-media-handler}
 
 [!DNL Experience Manager] 可讓您在工作流程中執行任何命令列工具，以轉換資產(例如 [!DNL ImageMagick])，並將新轉譯新增至資產。您只需在托管[!DNL Experience Manager]伺服器的磁碟上安裝命令行工具，並向工作流中添加和配置進程步驟。 調用的進程（稱為`CommandLineProcess`）還允許根據特定MIME類型進行篩選，並基於新格式副本建立多個縮略圖。
 
@@ -466,7 +466,7 @@ package my.own.stuff;/&amp;ast;&amp;ast&amp;ast;@scr.component inherit=&quot;tru
 * 刪除臨時目錄。
 * 根據這些轉譯建立縮圖（如果指定）。 縮圖的數字和尺寸由步驟的參數定義。
 
-### 使用[!DNL ImageMagick] {#an-example-using-imagemagick}的範例
+### 使用[!DNL ImageMagick]的範例 {#an-example-using-imagemagick}
 
 以下示例說明如何設定命令行處理步驟，以便每次在[!DNL Experience Manager]伺服器上將具有miMIME e-type GIF或TIFF的資產添加到`/content/dam`時，將建立原始影像的翻轉影像以及另外三個縮略圖（140x100、48x48和10x250）。
 
@@ -496,7 +496,7 @@ package my.own.stuff;/&amp;ast;&amp;ast&amp;ast;@scr.component inherit=&quot;tru
 1. 前往&#x200B;**[!UICONTROL CQ5 DAM]**&#x200B;主控台，例如`http://localhost:4502/libs/wcm/core/content/damadmin.html`。
 1. 開啟資產&#x200B;**[!UICONTROL myImage.tiff]**&#x200B;並確認已建立翻轉的影像和三個縮圖。
 
-#### 配置CommandLineProcess進程步驟{#configuring-the-commandlineprocess-process-step}
+#### 配置CommandLineProcess進程步驟 {#configuring-the-commandlineprocess-process-step}
 
 本節介紹如何設定 [!UICONTROL CommandLineProcess的Process][!UICONTROL 參數]。
 
