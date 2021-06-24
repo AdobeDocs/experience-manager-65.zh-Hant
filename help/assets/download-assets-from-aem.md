@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner
 feature: 資產管理，資產分發
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '875'
 ht-degree: 3%
 
 ---
 
-# 從[!DNL Adobe Experience Manager] {#download-assets-from-aem}下載資產
+# 從[!DNL Adobe Experience Manager]下載資產 {#download-assets-from-aem}
 
 您可以下載資產，包括靜態和動態轉譯。 或者，您也可以直接從[!DNL Adobe Experience Manager Assets]傳送包含資產連結的電子郵件。 下載的資產會以ZIP檔案整合。 壓縮的ZIP檔案的檔案大小上限為1 GB。 每個匯出工作最多可允許500個資產。
 
@@ -29,11 +29,6 @@ ht-degree: 3%
 1. 導覽至包含您要下載之資產的資料夾。
 1. 選取資料夾，或在資料夾內選取一或多個資產。
 1. 在工具列上，按一下&#x200B;**[!UICONTROL Download]**。
-
-   ![從Experience Manager資產下載資產時的可用選項](/help/assets/assets/asset-download1.png)
-
-   *圖：下載對話方塊中可用的選項。*
-
 1. 在「下載」對話方塊中，選取您想要的下載選項。
 
    | 匯出或下載選項 | 說明 |
