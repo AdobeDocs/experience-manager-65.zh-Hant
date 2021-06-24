@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 資產管理
 exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1cfa58bb7dcbe70906071a22fbae4a9f479a31d9
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
-# 添加影像映射{#adding-image-maps}
+# 新增影像地圖 {#adding-image-maps}
 
 影像地圖可讓您新增一或多個超連結區域，其功能與其他超連結類似。
 
@@ -26,8 +26,6 @@ ht-degree: 0%
 
    * 在&#x200B;**[!UICONTROL Card]**&#x200B;或&#x200B;**[!UICONTROL List]**&#x200B;檢視中，選取資產，然後按一下工具列上的&#x200B;**[!UICONTROL Edit]**。
    * 從資產頁面按一下「**[!UICONTROL 編輯]**」。
-
-      ![編輯選項](assets/do-not-localize/edit_icon.png)
 
 1. 若要插入影像對應，請按一下工具列中的「啟動對應&#x200B;]**![影像對應](assets/do-not-localize/image-map-icon.png)」。**[!UICONTROL 
 1. 選擇影像映射的形狀。 所選形狀的熱點被放置在影像上。
