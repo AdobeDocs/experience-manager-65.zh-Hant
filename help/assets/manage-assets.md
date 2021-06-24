@@ -6,20 +6,20 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 資產管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: d06e60baac692c92358244944226b77d5dad4022
+source-git-commit: 550d837c8ad86393eefecb264b69157fca312984
 workflow-type: tm+mt
-source-wordcount: '9775'
+source-wordcount: '9743'
 ht-degree: 3%
 
 ---
 
-# 管理您的數位資產{#manage-digital-assets}
+# 管理您的數位資產 {#manage-digital-assets}
 
 在[!DNL Adobe Experience Manager Assets]中，您不僅可以儲存及管理資產。 [!DNL Experience Manager] 提供企業級資產管理功能。您可以編輯和共用資產、執行進階搜尋、建立數十種支援檔案格式的多種轉譯、管理版本和數位版權、自動處理資產、管理和管理中繼資料、使用註解進行協同合作等。
 
 本文主要介紹基本的資產管理任務，如建立或上傳；元資料更新；複製、移動和刪除；發佈、取消發佈和搜尋資產。 若要了解使用者介面，請參閱[開始使用資產使用者介面](/help/sites-authoring/basic-handling.md)。 若要管理內容片段，請參閱[管理內容片段](/help/assets/content-fragments/content-fragments-managing.md)資產。
 
-## 建立資料夾{#creating-folders}
+## 建立資料夾 {#creating-folders}
 
 組織資產集合時（例如所有`Nature`影像），您可以建立資料夾以將其保持在一起。 您可以使用資料夾來分類及組織資產。 [!DNL Experience Manager Assets] 不要求您組織資料夾中的資產，以提高運作效率。
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 請勿在資產檔案名稱的副檔名中加入特殊字元。
 
-## 上傳資產{#uploading-assets}
+## 上傳資產 {#uploading-assets}
 
 <!-- TBD the following:
 Move this section into a new article. CQDOC-14874 ticket is created for this.
@@ -80,8 +80,6 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 要修改大小限制，請配置CRX儲存庫中`fileupload`節點的`chunkUploadMinFileSize`屬性。
 
 按一下&#x200B;**[!UICONTROL Pause]**&#x200B;時，它會切換至&#x200B;**[!UICONTROL Play]**&#x200B;選項。 若要繼續上傳，請按一下&#x200B;**[!UICONTROL Play]**。
-
-![繼續暫停的資產上傳](assets/resume-paused-upload.png)
 
 若要取消持續上傳，請按一下進度列旁的關閉(`X`)。 取消上傳操作時，[!DNL Assets]會刪除資產的部分上傳部分。
 
@@ -152,7 +150,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 資產的串列上傳預設為啟用。 若要停用功能並允許同時上傳，請在Crx-de中覆蓋`fileupload`節點，並將`parallelUploads`屬性的值設為`true`。
 
-### 使用FTP {#uploading-assets-using-ftp}上傳資產
+### 使用FTP上傳資產 {#uploading-assets-using-ftp}
 
 Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型資產(>1 GB)或上傳整個資料夾和子資料夾，則應使用FTP。 您甚至可以設定FTP上傳，以定期執行。
 
@@ -191,7 +189,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型
    若要檢視上傳進度，請在全域導覽列上按一下&#x200B;**[!UICONTROL 工作]**。 「作業」頁面會顯示上傳的進度。 您可以繼續在[!DNL Experience Manager]中工作，並隨時返回Dynamic Media Classic的「工作」頁面，以檢閱進行中的工作。
 要取消正在進行的上載作業，請按一下「持續時間」旁的「取消」****。
 
-#### 上載作業選項{#upload-job-options}
+#### 上傳作業選項 {#upload-job-options}
 
 | 上傳選項 | 子選項 | 說明 |
 |---|---|---|
@@ -212,7 +210,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型
 |  | 視訊選項 | 您可以選擇「視訊預設集」來轉換視訊檔案的程式碼。<br> 請參 [閱設定eVideo上傳選項](#setting-evideo-upload-options)。 |
 |  | 批次集預設集 | 若要從上傳的檔案建立影像集或回轉集，請按一下您要使用之預設集的「作用中」欄。 您可以選取多個預設集。 您可以在Dynamic Media Classic的「應用程式設定/批次集預設集」頁面中建立預設集。<br> 請參 [閱設定批次集預設集以自動產生影像集和回轉](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 集，深入了解如何建立批次集預設集。<br> 請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload)。 |
 
-#### 在上傳{#setting-image-editing-options-at-upload}時設定影像編輯選項
+#### 在上傳時設定影像編輯選項 {#setting-image-editing-options-at-upload}
 
 上載影像檔案（包括AI、EPS和PSD檔案）時，可以在[!UICONTROL 上載作業選項]對話框中執行以下編輯操作：
 
@@ -238,7 +236,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型
 | | Tolerance | Optional.<br> Controls the allowable amount of variation in pixel color matching based on the Corner location that you set.<br> Use a value of 0.0 to match pixel colors exactly or, use a value of 1.0 to allow for the greatest variation. |
 -->
 
-#### 設定PostScript和Illustrator上傳選項{#setting-postscript-and-illustrator-upload-options}
+#### 設定PostScript和Illustrator上傳選項 {#setting-postscript-and-illustrator-upload-options}
 
 上傳PostScript(EPS)或Illustrator(AI)影像檔案時，可以以多種方式格式化它們。 您可以柵格化檔案、維護透明背景、選擇解析度和選擇顏色空間。 在[!UICONTROL PostScript選項]和[!UICONTROL Illustrator選項]下的[!UICONTROL 上傳作業選項]對話方塊中，可使用格式化PostScript和Illustrator檔案的選項。
 
@@ -253,7 +251,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型
 |  | 強制為CMYK | 轉換為CMYK顏色空間。 |
 |  | 強制為灰度 | 轉換為灰度顏色空間。 |
 
-#### 設定Photoshop上傳選項{#setting-photoshop-upload-options}
+#### 設定Photoshop上傳選項 {#setting-photoshop-upload-options}
 
 Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時，可以從檔案自動建立影像模板（在「上傳」螢幕上選擇[!UICONTROL 「建立模板」]選項）。
 
@@ -277,7 +275,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 |  | Photoshop和圖層名稱 | 在PSD檔案後面命名影像，後面跟圖層名稱或圖層編號。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則使用圖層號。 例如，在名為SpringAd的PSD檔案中，名為Price Tag的層名為Spring Ad_Price Tag。 預設名為Layer 2的層稱為Spring Ad_2。 |
 | 錨點 |  | 指定如何將影像錨定到從PSD檔案生成的分層合成生成的模板中。 預設情況下，錨點為中心。 中心錨點允許替換影像最好地填充相同的空間，而不管替換影像的長寬比如何。 當參考範本並使用參數替代時，具有替代此影像的不同方面的影像會有效佔據相同的空間。 如果您的應用程式需要替換影像以填充模板中已分配的空間，請更改為其他設定。 |
 
-#### 設定PDF上載選項{#setting-pdf-upload-options}
+#### 設定PDF上傳選項 {#setting-pdf-upload-options}
 
 上傳PDF檔案時，可以以多種方式格式化它。 您可以裁切其頁面、擷取搜尋字詞、輸入每英吋像素的解析度，然後選擇顏色空間。 PDF檔案通常包含修剪邊界、裁切標籤、註冊標籤和其他打印機標籤。 上傳PDF檔案時，您可以從頁面兩側裁切這些標籤。
 
@@ -300,7 +298,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 |  | 強制為CMYK | 轉換為CMYK顏色空間。 |
 |  | 強制為灰度 | 轉換為灰度顏色空間。 |
 
-#### 設定eVideo上傳選項{#setting-evideo-upload-options}
+#### 設定eVideo上傳選項 {#setting-evideo-upload-options}
 
 若要透過從各種視訊預設集中選擇來轉碼視訊檔案。
 
@@ -312,13 +310,13 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 |  | 行動 | 建立MP4檔案，以便在iPhone或Android行動裝置上傳送。選取一或多個外觀比例，其解析度大小和目標資料速率為您所需的。 |
 |  | 平板電腦 | 建立MP4檔案，以便在iPad或Android平板電腦裝置上傳送。選取一或多個外觀比例，其解析度大小和目標資料速率為您所需的。 |
 
-#### 在上載時設定批集預設集{#setting-batch-set-presets-at-upload}
+#### 在上傳時設定批次集預設集 {#setting-batch-set-presets-at-upload}
 
 如果您想從上傳的影像自動建立影像集或回轉集，請按一下您要使用之預設集的「作用中」欄。 您可以選取多個預設集。
 
 請參閱[配置批集預設集以自動生成影像集和回轉集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)以了解有關建立批集預設集的詳細資訊。
 
-### 流式上載{#streamed-uploads}
+### 串流上傳 {#streamed-uploads}
 
 如果您將許多資產上傳至Adobe Experience Manager，對伺服器的I/O請求會大幅增加，進而降低上傳效率，甚至可能導致部分上傳任務逾時。 [!DNL Experience Manager Assets] 支援資產的串流上傳。串流上傳會先避免將資產儲存在伺服器上的臨時資料夾中，再複製到存放庫，借此在上傳作業期間減少磁碟I/O。 資料會直接傳輸至存放庫。 如此一來，上傳大型資產的時間和逾時的可能性就會降低。 預設會在[!DNL Assets]中啟用串流上傳。
 
@@ -343,7 +341,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 * 您無法同時選取兩個ZIP檔案並解壓縮。 一次只能解壓縮一個ZIP封存。
 * 上傳ZIP封存時，如果上傳對話方塊顯示500伺服器錯誤，請在安裝[最新Service Pack](/help/release-notes/sp-release-notes.md)後重試。
 
-## 預覽資產{#previewing-assets}
+## 預覽資產 {#previewing-assets}
 
 若要預覽資產，請依照下列步驟操作。
 
@@ -378,7 +376,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 >* [檢視子資產](managing-linked-subassets.md#viewing-subassets)。
 
 
-## 編輯屬性和元資料{#editing-properties}
+## 編輯屬性和中繼資料 {#editing-properties}
 
 1. 導覽至資產的位置，以編輯其中繼資料。
 
@@ -425,7 +423,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 1. 按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。
 1. 導覽至[!DNL Assets]使用者介面。 編輯的中繼資料屬性（包括標題、說明、評等等）會顯示在「卡片」檢視的資產卡片上，以及「清單」檢視的相關欄下。
 
-## 複製資產{#copying-assets}
+## 複製資產 {#copying-assets}
 
 複製資產或資料夾時，會複製整個資產或資料夾，及其內容結構。 複製的資產或資料夾會在目標位置複製。 來源位置的資產未變更。
 
@@ -455,7 +453,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    >
    >在貼上操作完成之前，工具列中會提供&#x200B;**[!UICONTROL 貼上]**&#x200B;選項。
 
-## 移動並重新命名資產{#moving-or-renaming-assets}
+## 移動和重新命名資產 {#moving-or-renaming-assets}
 
 當您將資產（或資料夾）移至其他位置時，資產（或資料夾）不會重複，這與複製資產時不同。 資產（或資料夾）會放置在目標位置，並從來源位置移除。 您也可以在將資產移至新位置時重新命名資產。
 如果您將已發佈的資產移至其他位置，則可選擇重新發佈資產。 依預設，已發佈資產的移動操作會自動取消發佈。 如果作者在移動資產時選取[!UICONTROL Republish]選項，則已移動的資產會重新發佈。
@@ -499,7 +497,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    如果您未更新參考，它們會繼續指向資產的先前路徑。 如果調整參照，參照會更新為新資產路徑。
 
-### 使用拖曳操作{#move-using-drag}移動資產
+### 使用拖曳作業移動資產 {#move-using-drag}
 
 您可以將資產（或資料夾）拖曳至目標位置，將資產（或資料夾）移至同層級資料夾，而非在使用者介面中使用[!UICONTROL Move]選項。 不過，只有在清單檢視中才能執行此操作。
 
@@ -507,7 +505,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ![將資產拖曳至同層級資料夾中](assets/move-by-drag.gif)
 
-## 管理轉譯{#managing-renditions}
+## 管理轉譯 {#managing-renditions}
 
 1. 您可以新增或移除資產的轉譯，但原始資產除外。 導覽至您要新增或移除轉譯的資產位置。
 
@@ -541,7 +539,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    同樣地，您可以通過覆蓋`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`來自定義「注釋」頁影像。
 
-   ![在CRXDE中覆蓋重新選取節點以自訂「註解」頁面影像](assets/renditionpicker-node-crxde.png)
+   ![在CRXDE中覆蓋重新選取節點以自訂「註解」頁面影像](assets/renditionpicker-node.png)
 
    若要設定視訊資產的轉譯維度，請導覽至`/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`位置之CRX存放庫的`videopicker`節點、覆蓋節點，然後編輯適當的屬性。
 
@@ -551,7 +549,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 如需有關產生和檢視子資產的詳細資訊，請參閱[管理子資產](managing-linked-subassets.md#generate-subassets)。
 
-## 刪除資產{#deleting-assets}
+## 刪除資產 {#deleting-assets}
 
 若要刪除資產，使用者需要`dam/asset`的刪除權限。 如果您只有修改權限，則只能編輯資產中繼資料和新增註解至資產。 不過，您無法刪除資產或其中繼資料。
 
@@ -584,7 +582,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 請參閱[從Experience Manager下載資產](/help/assets/download-assets-from-aem.md)。
 
-## 發佈或取消發佈資產{#publish-assets}
+## 發佈或取消發佈資產 {#publish-assets}
 
 在[!DNL Experience Manager]作者上傳、處理或編輯資產後，您會將資產發佈至發佈伺服器。 發佈可讓資產公開使用。 取消發佈動作會將資產從發佈伺服器中移除，但不會從編寫伺服器移除。
 
@@ -640,14 +638,14 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 如需簡單、進階和自訂搜尋以探索及使用最適當的資產，請參閱Experience Manager](search-assets.md)中的[搜尋資產。
 
-## 快速操作{#quick-actions}
+## 快速動作 {#quick-actions}
 
 一次只有一個資產的快速動作圖示可用。視您的裝置而定，執行下列動作以顯示快速動作圖示：
 
 * 觸摸設備：觸摸並按住。 例如，在iPad上，您可以點選並按住資產，以顯示快速動作。
 * 非接觸裝置：暫留指針。 例如，在案頭裝置上，如果將指標暫留在資產縮圖上，則會顯示快速動作列。
 
-### 導覽並選取資產{#navigating-and-selecting-assets}
+### 導覽及選取資產 {#navigating-and-selecting-assets}
 
 您可以使用&#x200B;**[!UICONTROL Select]**&#x200B;選項，檢視、導覽及選取具有任何可用檢視（卡片、欄及清單）的資產。
 
@@ -655,13 +653,11 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 在卡片檢視中，**[!UICONTROL Select]**&#x200B;選項會顯示為快速動作。
 
-![在卡片檢視上選取快速動作](assets/select_quick_action.png)
-
 在瀏覽器的[!DNL Assets]使用者介面中瀏覽資料夾或集合時，您可以使用右上角的[!UICONTROL 全選]選項，選取所有顯示或載入的資產。 起初，卡片檢視中只會載入100個資產，清單檢視中只會載入200個資產。 當您捲動搜尋結果頁面時，檢視中會載入更多資產。 [!UICONTROL 全選]選項只會選取載入的資產。
 
 如需詳細資訊，請參閱[檢視並選取您的資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 
-## 編輯影像{#editing-images}
+## 編輯影像 {#editing-images}
 
 [!DNL Assets]介面中的編輯工具可讓您對影像資產執行小型編輯工作。 您可以裁切、旋轉、翻轉和對影像執行其他編輯工作。 您也可以將影像地圖新增至資產。
 
@@ -678,8 +674,6 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 1. 若要裁切影像，請按一下「**[!UICONTROL 裁切]** ![選項」來裁切影像](assets/do-not-localize/crop.png)。
 
 1. 從清單中選取所需的選項。裁切區域會根據您選擇的選項出現在影像上。「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
-
-   ![裁切選項](assets/crop-options.png)
 
 1. 選取要裁切的區域，並在影像上調整大小或重新定位。
 
@@ -736,11 +730,9 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
 
-   ![添加註釋對話框中的注釋框](assets/annotation-comment-box.png)
-
 1. 要通知用戶注釋，請指定用戶的電子郵件地址並添加註釋。 例如，要通知Aaron MacDonald注釋，請輸入@aa。 清單中顯示所有匹配用戶的提示。 從清單中選擇Aaron的電子郵件地址，用注釋標籤她。 同樣地，您可以在批注內或批注前後的任意位置標籤更多用戶。
 
-   ![指定用戶的電子郵件地址並添加註釋以通知用戶](assets/annotation-add-user-email.png)
+   ![指定用戶的電子郵件地址並添加註釋以通知用戶](assets/annotate-gif.gif)
 
    >[!NOTE]
    >
@@ -771,7 +763,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 >
 >您也可以將註解新增至集合。 不過，如果集合包含子集合，則只能向父集合添加註釋/注釋。 「注釋」選項不適用於子集合。
 
-### 查看保存的注釋{#viewing-saved-annotations}
+### 查看保存的注釋 {#viewing-saved-annotations}
 
 1. 若要檢視資產的已儲存註解，請導覽至資產位置，並開啟資產的資產頁面。
 
@@ -784,7 +776,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
    按一下&#x200B;**[!UICONTROL Delete]**&#x200B;以刪除特定注釋。
 
-### 打印注釋{#printing-annotations}
+### 打印注釋 {#printing-annotations}
 
 如果資產有註解或已經受審核工作流程，您可以將資產連同註解和審核狀態列為PDF檔案，以便離線審核。
 
@@ -807,8 +799,6 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 1. 按一下工具欄上的&#x200B;**[!UICONTROL 打印]**。
 
 1. 從「打印」對話框中，選擇要在PDF上顯示注釋/審閱狀態的位置。 例如，如果希望在包含打印影像的頁面的右上方打印注釋/狀態，請使用&#x200B;**左上**&#x200B;設定。 預設會選取。
-
-   ![從「打印」(Print)對話框中選擇要在PDF上顯示的注釋/審閱狀態的位置](assets/Print-annotation-dialog.png)
 
    您可以根據要在打印的PDF中顯示注釋/狀態的位置選擇其他設定。如果您希望註解/狀態顯示在與印刷資產不同的頁面中，請選擇「下 **[!UICONTROL 一頁」]**。
 
@@ -856,7 +846,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 1. 將font-family參數設定為`Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`以配置注釋PDF檔案。 此配置預設可用，適用於所有歐洲和中日韓語言。
 1. 如果您選擇的語言與步驟2中提到的語言不同，請在預設字型系列中附加適當（以逗號分隔）的項。
 
-## 建立、管理、預覽和回復資產版本{#asset-versioning}
+## 建立、管理、預覽和回復資產版本 {#asset-versioning}
 
 版本設定會建立數位資產在特定時間點的快照。版本設定有助於在稍後將資產還原為先前狀態。 例如，如果您想要還原對資產所做的變更，請還原未編輯的資產版本。 在[!DNL Experience Manager]中，您可以建立版本、檢視目前修訂版本、檢視兩個影像版本之間並排的差異，以及將資產還原為其舊版。
 
@@ -909,7 +899,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
    *圖：使用滑桿來輕鬆比較資產的選定版本與目前版本。*
 
-### 在資產{#starting-a-workflow-on-an-asset}上啟動工作流程
+### 啟動資產的工作流程 {#starting-a-workflow-on-an-asset}
 
 若要套用工作流程以處理資產，請參閱[啟動資產](/help/assets/assets-workflow.md#apply-a-workflow-to-an-asset)上的工作流程。
 
@@ -922,7 +912,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 要了解集合管理的詳細資訊，請參閱[管理集合](/help/assets/manage-collections.md)。
 
-## 在案頭應用程式中檢視資產或Adobe資產連結{#hide-expired-assets-via-acp-api}時隱藏過期的資產
+## 在案頭應用程式或Adobe資產連結中檢視資產時，隱藏過期的資產 {#hide-expired-assets-via-acp-api}
 
 [!DNL Experience Manager] 案頭應用程式可從Windows或Mac案頭存取DAM存放庫。Adobe資產連結可讓您從支援的[!DNL Creative Cloud]案頭應用程式存取資產。
 
