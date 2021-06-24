@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 資產管理，轉譯
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
+source-git-commit: 3221454e2d2dfd90b645a4c0303404d44f8d373d
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '2626'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 智慧型影像 {#smart-imaging}
 
-## 什麼是「智慧影像處理」？{#what-is-smart-imaging}
+## 什麼是「智慧影像處理」？ {#what-is-smart-imaging}
 
 智慧型影像處理技術運用Adobe Sensei AI功能，並與現有的「影像預設集」搭配使用，根據用戶端瀏覽器功能自動最佳化影像格式、大小和品質，以增強影像傳送效能。
 
@@ -41,53 +41,54 @@ ht-degree: 1%
 
 與上述內容類似，Adobe也透過來自即時客戶網站的7009個URL執行測試。 他們能夠平均將JPEG的檔案大小進一步優化38%。 對於使用WebP格式的PNG，檔案大小最佳化平均可提高31%。 這種優化是可能的，因為智慧成像技術具有強大的功能。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 On the mobile web, the challenges are compounded by two factors:
+在行動網路上，挑戰因兩個因素而加劇：
 
-* Large variety of devices with different form factors and high-resolution displays.
-* Constrained network bandwidth.
+* 各種不同外形規格的設備和高解析度顯示器。
+* 網路頻寬受限。
 
-In terms of images, the goal is to serve the best quality images as efficiently as possible.
+就影像而言，目標是盡可能有效地提供最佳品質的影像。
 
-### About device pixel ratio optimization {#dpr}
+### 關於裝置像素比例最佳化 {#dpr}
 
-Device pixel ratio (DPR) &ndash; also known as CSS pixel ratio &ndash; is the relation between a device’s physical pixels and logical pixels. Especially with the advent of retina screens, the pixel resolution of modern mobile devices is growing at a fast rate.
+裝置像素比率(DPR)（也稱為CSS像素比率）是裝置的物理像素與邏輯像素之間的關係。 特別是隨著視網膜螢幕的出現，現代移動設備的像素解析度正以快速的速度增長。
 
-Enabling Device Pixel Ratio optimization renders the image at the native resolution of the screen which makes it look crisp.
+啟用「裝置像素比率」最佳化可讓影像以螢幕的原生解析度呈現，使其看起來清晰。
 
-Turning on Smart Imaging DPR configuration automatically adjusts the requested image based on pixel density of the display the request is being served from. Currently, the pixel density of the display comes from Akamai CDN header values.
+開啟智慧影像處理DPR配置會根據請求所服務的顯示器的像素密度自動調整請求的影像。 目前，顯示器的像素密度來自Akamai CDN標頭值。
 
-| Permitted values in the URL of an image | Description |
+| 影像URL中的允許值 | 說明 |
 |---|---|
-| `dpr=off` | Turn off DPR optimization at an individual image URL level.| 
-| `dpr=on,dprValue` | Override the DPR value detected by Smart Imaging, with a custom value (as detected by any client-side logic or other means). Permitted value for `dprValue` is any number greater than 0. Specified values of 1.5, 2, or 3 are typical. |
+| `dpr=off` | 在個別影像URL層級關閉DPR最佳化。 |
+| `dpr=on,dprValue` | 使用自訂值（由任何用戶端邏輯或其他方法偵測）覆寫智慧型影像偵測到的DPR值。 `dprValue`的允許值是大於0的任何數字。 1.5、2或3的指定值通常為。 |
 
 >[!NOTE]
 >
->* You can use `dpr=on,dprValue` even if the company level DPR setting as off.
->* Owing to DPR optimization, when the resultant image is greater than the MaxPix Dynamic Media setting, MaxPix width is always recognized by maintaining the image's aspect ratio.
+>* 即使公司層級DPR設定關閉，您仍可以使用`dpr=on,dprValue`。
+>* 由於DPR優化，當結果影像大於MaxPix Dynamic Media設定時，通過保持影像的長寬比始終可以識別MaxPix寬度。
 
-| Requested Image size | DPR value | Delivered image size |
+
+| 請求的影像大小 | DPR值 | 傳遞的影像大小 |
 |---|---|---|
 | 816x500 | 1 | 816x500 |
 | 816x500 | 2 | 1632x1000 |
 
-See also [When working with images](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images) and [When working with Smart Crop](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop).
+另請參閱[使用影像時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智慧型裁切時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)。
 
-### About network bandwidth optimization {#network-bandwidth-optimization}
+### 關於網路頻寬優化 {#network-bandwidth-optimization}
 
-Turning on Network Bandwidth automatically adjusts the image quality that is served based on actual network bandwidth. For poor network bandwidth, DPR optimization is automatically turned off, even if it is already on.
+開啟網路頻寬會自動根據實際網路頻寬調整提供的影像質量。 對於較差的網路頻寬，DPR優化將自動關閉，即使已經開啟。
 
-If desired, your company can opt out of network bandwidth optimization at the individual image level by appending `network=off` to the URL of the image.
+如有需要，您的公司可以將`network=off`附加至影像的URL，以選擇退出個別影像層級的網路頻寬最佳化。
 
-| Permitted value in the URL of an image | Description |
+| 影像URL中的允許值 | 說明 |
 |---|---|
-| `network=off` | Turns off network optimization at an individual image URL level. |
+| `network=off` | 在個別影像URL層級關閉網路最佳化。 |
 
 >[!NOTE]
 >
->DPR and network bandwidth values are based on the detected client-side values of the bundled CDN. These values are sometimes inaccurate. For example, iPhone5 with DPR=2 and iPhone12 with DPR=3, both show DPR=2. Still, for high-resolution devices, sending DPR=2 is better than sending DPR=1. Coming soon: Adobe is working on client-side code to accurately determine an end user's DPR. -->
+>DPR和網路頻寬值以所偵測到的套裝CDN用戶端值為基礎。 這些值有時不準確。 例如，DPR=2的iPhone5和DPR=3的iPhone12，都會顯示DPR=2。 不過，對於高解析度裝置，傳送DPR=2比傳送DPR=1好。 即將推出：Adobe正在使用用戶端程式碼，以精確判斷使用者的DPR。
 
-## 最新智慧映像有哪些主要優勢？{#what-are-the-key-benefits-of-smart-imaging}
+## 最新智慧映像有哪些主要優勢？ {#what-are-the-key-benefits-of-smart-imaging}
 
 由於影像是頁面載入時間的大部分，因此效能的改善會對業務產生深遠影響，例如較高的轉換率、網站逗留時間以及較低的網站跳出率。
 
@@ -101,7 +102,7 @@ If desired, your company can opt out of network bandwidth optimization at the in
 * 之前，原始和衍生影像都會進行快取，而使快取失效需要兩步驟。 在最新的智慧型影像處理中，只會快取衍生產品，進而允許執行單步快取失效程式。
 * 在規則集中使用自訂標頭的客戶將受益於最新的智慧型影像處理，因為這些標頭不會遭到封鎖，這與舊版的智慧型影像處理不同。 例如，[新增自訂標頭值至影像回應|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建議的「計時允許來源」、「X-Robot」。
 
-## 是否存在與智慧映像相關的許可成本？{#are-there-any-licensing-costs-associated-with-smart-imaging}
+## 是否存在與智慧映像相關的許可成本？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
 否. 您現有的Dynamic Media Classic或Adobe Experience Manager - Dynamic Media(內部部署、AMS和Adobe Experience Manager作為Cloud Service)授權包含智慧型影像。
 
@@ -109,7 +110,7 @@ If desired, your company can opt out of network bandwidth optimization at the in
 >
 >Dynamic Media — 混合客戶無法使用智慧影像處理。
 
-## 智慧型影像處理如何運作？{#how-does-smart-imaging-work}
+## 智慧型影像處理如何運作？ {#how-does-smart-imaging-work}
 
 當消費者請求影像時，智慧影像處理會檢查使用者特性，並根據使用中的瀏覽器轉換為適當的影像格式。 這些格式轉換的執行方式不會降低視覺逼真度。 智慧型影像會以下列方式根據瀏覽器功能自動將影像轉換為不同格式。
 
@@ -134,7 +135,7 @@ If desired, your company can opt out of network bandwidth optimization at the in
 
 如果原始影像大小小於智慧型影像產生的大小，則會提供原始影像。
 
-## 支援哪些影像格式？{#what-image-formats-are-supported}
+## 支援哪些影像格式？ {#what-image-formats-are-supported}
 
 智慧影像處理支援下列影像格式：
 
@@ -148,13 +149,13 @@ If desired, your company can opt out of network bandwidth optimization at the in
 
 Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
-## 智慧型影像處理如何與已使用的現有影像預設集搭配運作？{#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
+## 智慧型影像處理如何與已使用的現有影像預設集搭配運作？ {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
 智慧影像處理可與您現有的「影像預設集」搭配使用，如果請求的檔案格式為JPEG或PNG，則會觀察除質量(`qlt`)和格式(`fmt`)之外的所有影像設定。 對於格式轉換，智慧影像處理會根據影像預設集設定所定義的完整視覺逼真度，但檔案大小較小。 如果原始影像大小小於智慧型影像產生的大小，則會提供原始影像。
 
 <!-- CQDOC-15846 In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
-## 是否必須變更任何URL、影像預設集，或在我的網站上部署任何智慧型影像處理的新程式碼？{#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
+## 是否必須變更任何URL、影像預設集，或在我的網站上部署任何智慧型影像處理的新程式碼？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
 如果您在現有自訂網域上設定智慧型影像處理，智慧型影像處理可順暢地與您現有的影像URL和影像預設集搭配運作。 此外，智慧影像處理不要求您在網站上新增任何程式碼以偵測使用者的瀏覽器。 這些都會自動處理。
 
@@ -166,11 +167,11 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 <!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
-## 智慧型影像處理是否可搭配HTTPS運作？ HTTP/2如何？{#does-smart-imaging-working-with-https-how-about-http}
+## 智慧型影像處理是否可搭配HTTPS運作？ HTTP/2如何？ {#does-smart-imaging-working-with-https-how-about-http}
 
 智慧型影像處理可透過HTTP或HTTPS傳送的影像。 此外，它也可透過HTTP/2運作。
 
-## 我是否有資格使用智慧映像？{#am-i-eligible-to-use-smart-imaging}
+## 我是否有資格使用智慧映像？ {#am-i-eligible-to-use-smart-imaging}
 
 若要使用智慧影像處理，您公司的Dynamic Media Classic或Dynamic MediaExperience Manager帳戶必須符合下列需求：
 
@@ -183,19 +184,19 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 使用Dynamic Media授權，您的第一個自訂網域不需額外付費。
 
-## 為我的帳戶啟用智慧影像處理的程式為何？{#what-is-the-process-for-enabling-smart-imaging-for-my-account}
+## 為我的帳戶啟用智慧影像處理的程式為何？ {#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
 您啟動使用智慧影像處理的請求；不會自動啟用。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 By default, Smart Imaging DPR and network optimization is disabled (turned off) for a Dynamic Media company account. If you want to enable (turn on) one or both of these out-of-the-box enhancements, create a support case as described below.
+依預設，Dynamic Media公司帳戶的智慧型影像處理DPR和網路最佳化會停用（關閉）。 如果要啟用（開啟）上述一項或兩項現成可用的增強功能，請建立支援案例，如下所述。
 
-The release schedule for Smart Imaging DPR and network optimization is as follows:
+智慧影像處理DPR和網路最佳化的發行排程如下：
 
-| Region | Target date |
+| 區域 | 目標日期 |
 |---|---|
-| North America | 24 May 2021 | 
-| Europe, Middle East, Africa | 25 Jun 2021 | 
-| Asia-Pacific | 19 Jul 2021 | -->
+| 北美 | 即時 |
+| 歐洲、中東、非洲 | 2021年8月13日 |
+| 亞太 | 2021年7月22日 |
 
 1. [使用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。
 1. 在您的支援案例中提供下列資訊：
@@ -227,7 +228,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
    1. 如果您使用Dynamic Media Classic，請按一下「**[!UICONTROL 設定>應用程式設定>發佈設定>影像伺服器]**」。 將&#x200B;**[!UICONTROL 預設客戶端快取時間設定為「Live]** 」值24或更長。
    1. 如果您使用Dynamic Media，請依照[這些指示](config-dynamic.md)操作。 將&#x200B;**[!UICONTROL 過期]**&#x200B;值設定24小時或更久。
 
-## 何時可以使用智慧影像處理啟用帳戶？{#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
+## 何時可以使用智慧影像處理啟用帳戶？ {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
 系統會根據等待清單，依客戶服務接收請求的順序處理請求。
 
@@ -235,7 +236,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 >
 >啟用智慧影像處理需要Adobe清除快取，因此可能需要較長的前置時間。 因此，在任何指定時間都只能處理少數客戶轉變。
 
-## 切換到使用智慧映像有什麼風險？{#what-are-the-risks-with-switching-over-to-use-smart-imaging}
+## 切換到使用智慧映像有什麼風險？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
 客戶網頁沒有風險。 不過，轉換至智慧型影像處理會清除CDN中的快取，因為它涉及在Experience Manager上移至Dynamic Media Classic或Dynamic Media的新設定。
 
@@ -260,13 +261,13 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
 
-## 是否可以針對任何請求關閉智慧影像？{#turning-off-smart-imaging}
+## 是否可以針對任何請求關閉智慧影像？ {#turning-off-smart-imaging}
 
 是. 您可以將修飾詞`bfc=off`新增至URL，以關閉智慧型影像。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 ## Can I request DPR and network optimization to be turned off at the company level? {#dpr-companylevel-turnoff}
+## 我可以要求在公司層級關閉DPR和網路最佳化嗎？ {#dpr-companylevel-turnoff}
 
-Yes. To disable DPR and network optimization at your company, create a support case as described earlier in this topic. -->
+是. 若要停用貴公司的DPR和網路最佳化，請建立支援案例，如本主題前面所述。
 
 ## 可以使用什麼「調整」？ 是否有任何可定義的設定或行為？ (#tuning-settings)
 
@@ -280,10 +281,10 @@ Yes. To disable DPR and network optimization at your company, create a support c
 
 智慧型影像處理會判斷轉換是否有益。 只有在轉換導致檔案大小較小且品質相當時，才會傳回新影像。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 ## How does Smart Imaging DPR optimization work with Adobe Experience Manager Sites components and Dynamic Media viewers?
+## 智慧型影像處理DPR最佳化如何與Adobe Experience Manager Sites元件和Dynamic Media檢視器搭配運作？
 
-* Experience Manager Sites Core Components are configured by default for DPR optimization. To avoid oversized images owing to server-side Smart Imaging DPR optimization, `dpr=off` is always added to Experience Manager Sites Core Components Dynamic Media images.
-* Given Dynamic Media Foundation Component is configured by default for DPR optimization, to avoid oversized images owing to server-side Smart Imaging DPR optimization, `dpr=off` is always added to Dynamic Media Foundation Component images. Even if customer deselects DPR optimization in DM Foundation Component, server-side Smart Imaging DPR does not kick in. In summary, in the DM Foundation Component, DPR optimization comes into effect based on DM Foundation Component level setting only.
-* Any viewer side DPR optimization works in tandem with server-side Smart Imaging DPR optimization, and does not result in over-sized images. In other words, wherever DPR is handled by the viewer, such as the main view only in a zoom-enabled viewer, the server-side Smart Imaging DPR values are not triggered. Likewise, wherever viewer elements, such as swatches and thumbnails, do not have DPR handling, the server-side Smart Imaging DPR value is triggered.
+* Experience Manager網站核心元件預設會設定以進行DPR最佳化。 為避免因伺服器端智慧型影像處理DPR最佳化而造成影像過大，一律會將`dpr=off`新增至Experience Manager網站核心元件Dynamic Media影像。
+* 根據預設，為了將Dynamic Media Foundation元件設定為DPR最佳化，為了避免因伺服器端智慧型影像處理DPR最佳化而造成影像過大，一律會將`dpr=off`新增至Dynamic Media Foundation元件影像。 即使客戶在DM Foundation元件中取消選取DPR最佳化，伺服器端智慧型影像處理DPR也不會生效。 總之，在DM基礎元件中，DPR優化僅基於DM基礎元件級別設定而生效。
+* 任何檢視器端DPR最佳化都會與伺服器端智慧型影像處理DPR最佳化搭配運作，而不會導致影像大小過大。 換言之，無論DPR是由檢視器處理的，例如只有啟用縮放的檢視器中的主檢視，伺服器端智慧型影像處理DPR值都不會觸發。 同樣地，只要檢視器元素（例如色票和縮圖）沒有DPR處理，就會觸發伺服器端智慧型影像處理DPR值。
 
-See also [When working with images](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images) and [When working with Smart Crop](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop). -->
+另請參閱[使用影像時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智慧型裁切時](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)。
