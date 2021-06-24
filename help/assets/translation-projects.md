@@ -5,14 +5,14 @@ contentOwner: AG
 role: Architect, Administrator
 feature: 轉換
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1875'
 ht-degree: 15%
 
 ---
 
-# 建立翻譯專案{#creating-translation-projects}
+# 建立翻譯專案 {#creating-translation-projects}
 
 若要建立語言副本，請觸發[!DNL Experience Manager]使用者介面中「參考」邊欄下方可用的下列其中一個語言副本工作流程。
 
@@ -26,7 +26,7 @@ ht-degree: 15%
 >* 翻譯服務提供者支援二進位檔的翻譯。
 
 
-## 建立和翻譯工作流{#create-and-translate-workflow}
+## 建立和翻譯工作流程 {#create-and-translate-workflow}
 
 您可以使用建立和翻譯工作流程來首次為特定語言產生語言副本。 工作流程提供下列選項：
 
@@ -69,15 +69,9 @@ ht-degree: 15%
 
 1. 從「目 **[!UICONTROL 標語言]** 」清單中，選取您要建立檔案夾結構的語言。
 
-   ![chlimage_1-65](assets/chlimage_1-65.png)
-
 1. 從&#x200B;**[!UICONTROL 項目]**&#x200B;清單中，選擇&#x200B;**[!UICONTROL 建立新翻譯項目]**。
 
-   ![chlimage_1-66](assets/chlimage_1-66.png)
-
 1. 在「專 **[!UICONTROL 案標題]** 」欄位中，輸入專案標題。
-
-   ![chlimage_1-67](assets/chlimage_1-67.png)
 
 1. 按一下&#x200B;**[!UICONTROL 建立]**。[!DNL Assets] 從源資料夾複製到目標資料夾中，以了解您在步驟4中選擇的區域設定。
 
@@ -234,14 +228,12 @@ ht-degree: 15%
 
 1. 從&#x200B;**[!UICONTROL 項目]**&#x200B;清單中，選擇&#x200B;**[!UICONTROL 添加到現有翻譯項目]**。
 
-   ![chlimage_1-97](assets/chlimage_1-97.png)
-
 1. 從&#x200B;**[!UICONTROL 現有翻譯專案]**&#x200B;清單中，選取要新增翻譯資產的專案。
 
 1. 按一下&#x200B;**[!UICONTROL 開始]**。
 1. 請參閱[添加到現有翻譯項目](translation-projects.md#add-to-existing-translation-project)的步驟9-14以完成其餘步驟。
 
-## 建立臨時語言副本{#creating-temporary-language-copies}
+## 建立臨時語言副本 {#creating-temporary-language-copies}
 
 當您執行翻譯工作流程以使用原始資產的編輯版本更新語言副本時，會保留現有語言副本，直到您核准翻譯的資產為止。 [!DNL Adobe Experience Manager Assets] 將新翻譯的資產儲存在臨時位置，並在您明確核准資產後更新現有的語言副本。如果您拒絕資產，語言副本將維持不變。
 
@@ -267,7 +259,7 @@ ht-degree: 15%
 
 1. 若要檢視翻譯的中繼資料，請導覽至[!DNL Assets]主控台，並開啟每個翻譯資產的[!UICONTROL 屬性]頁面。
 
-## 提示和限制{#tips-limitations}
+## 提示和限制 {#tips-limitations}
 
 * 如果您啟動複雜資產（例如PDF和[!DNL Adobe InDesign]檔案）的翻譯工作流程，則不會提交其子資產或轉譯（如果有）以供翻譯。
 * 如果您使用機器翻譯，則不會翻譯資產二進位檔。
