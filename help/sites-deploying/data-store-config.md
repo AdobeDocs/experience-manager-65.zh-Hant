@@ -13,14 +13,14 @@ docset: aem65
 legacypath: /deploy/platform/data-store-config
 feature: 設定
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7038e9c2949cb6326470d0248b640e576c7f919
 workflow-type: tm+mt
-source-wordcount: '3424'
+source-wordcount: '3487'
 ht-degree: 0%
 
 ---
 
-# 在AEM 6{#configuring-node-stores-and-data-stores-in-aem}中配置節點儲存和資料儲存
+# 在AEM 6中配置節點儲存區和資料儲存區{#configuring-node-stores-and-data-stores-in-aem}
 
 ## 簡介 {#introduction}
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 可以使用OSGi配置配置資料儲存和節點儲存。 每個OSGi設定都使用永久識別碼(PID)來參照。
 
-## 配置步驟{#configuration-steps}
+## 配置步驟 {#configuration-steps}
 
 要配置節點儲存和資料儲存，請執行以下步驟：
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 1. 啟動AEM。
 
-## 節點儲存配置{#node-store-configurations}
+## 節點儲存配置 {#node-store-configurations}
 
 >[!CAUTION]
 >
@@ -57,7 +57,7 @@ ht-degree: 0%
 >
 >如果您正在閱讀本文章以準備從&#x200B;**AEM 5.x**&#x200B;安裝進行升級，請務必先參閱[升級](https://docs.adobe.com/content/docs/en/aem/6-0/deploy/upgrade.html)檔案。
 
-### 段節點儲存{#segment-node-store}
+### 區段節點存放區 {#segment-node-store}
 
 區段節點存放區是Adobe在AEM6中實作TarMK的基礎。 它使用`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` PID進行配置。
 
@@ -85,7 +85,7 @@ tarmk.size=I"256"
 customBlobStore=B"true"
 ```
 
-#### 文檔節點儲存{#document-node-store}
+#### 文檔節點儲存 {#document-node-store}
 
 檔案節點存放區是AEM MongoMK實作的基礎。 它使用`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PID。 可使用下列設定選項：
 
@@ -112,7 +112,7 @@ db="aem-author"
 customBlobStore=B"false"
 ```
 
-## 資料儲存配置{#data-store-configurations}
+## 資料儲存配置 {#data-store-configurations}
 
 處理大量二進位檔時，建議使用外部資料存放區，而非預設節點存放區，以發揮最大效能。
 
@@ -190,7 +190,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 編輯檔案並新增設定所需的設定選項。
 1. 啟動AEM。
 
-### 升級至1.10.x S3連接器的新版本{#upgrading-to-a-new-version-of-the-s-connector}
+### 升級至1.10.x S3連接器的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
 
 如果您需要升級至新版本的1.10.x S3連接器(例如，從1.10.0升級至1.10.4)，請遵循下列步驟：
 
@@ -229,7 +229,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 * stagingPurgeInterval:從暫存快取清除已完成上傳的間隔（秒）。 預設值為&#x200B;**300**&#x200B;秒（5分鐘）。
 * stagingRetryInterval:失敗上傳的重試間隔（秒）。 預設值為&#x200B;**600**&#x200B;秒（10分鐘）。
 
-### 貯體區域選項{#bucket-region-options}
+### 貯體區域選項 {#bucket-region-options}
 
 <table>
  <tbody>
@@ -295,7 +295,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 失敗的上載（例如，由於網路中斷）將放在重試隊列上並定期重試。 重試間隔是使用`stagingRetryInterval parameter`配置的。
 
-#### 使用Amazon S3 {#configuring-binaryless-replication-with-amazon-s}設定無二進位檔復寫
+#### 使用Amazon S3設定無二進位檔復寫 {#configuring-binaryless-replication-with-amazon-s}
 
 若要使用S3設定無二進位檔復寫，需執行下列步驟：
 
@@ -310,7 +310,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 重新啟動所有製作和發佈執行個體，讓變更生效。
 
-#### 使用S3和MongoDB {#creating-a-cluster-using-s-and-mongodb}建立群集
+#### 使用S3和MongoDB建立叢集 {#creating-a-cluster-using-s-and-mongodb}
 
 1. 使用下列命令解壓縮CQ快速入門：
 
@@ -335,7 +335,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 對第二個AEM例項重複步驟1到4。
 1. 啟動第二個AEM例項。
 
-#### 配置共用資料儲存{#configuring-a-shared-data-store}
+#### 配置共用資料儲存 {#configuring-a-shared-data-store}
 
 1. 首先，在共用資料儲存所需的每個執行個體上建立資料儲存設定檔案：
 
@@ -446,7 +446,7 @@ accessKey="ASDASDERFAERAER"
 secretKey="28932hfjlkwdo8fufsdfas\=\="
 ```
 
-## 資料儲存垃圾收集{#data-store-garbage-collection}
+## 資料儲存垃圾收集 {#data-store-garbage-collection}
 
 資料儲存垃圾收集過程用於移除資料儲存中任何未使用的檔案，從而釋放該過程中的寶貴磁碟空間。
 
@@ -463,11 +463,19 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
    >
    >`markOnly`參數表示垃圾收集的掃描階段是否將運行。
 
-## 共用資料儲存{#data-store-garbage-collection-for-a-shared-data-store}的資料儲存垃圾收集
+## 共用資料儲存的資料儲存垃圾收集 {#data-store-garbage-collection-for-a-shared-data-store}
 
 >[!NOTE]
 >
 >在叢集或共用資料存放區設定（含Mongo或Segment Tar）中執行垃圾收集時，記錄檔可能會顯示無法刪除某些Blob ID的警告。 這是因為以前垃圾收集中刪除的blob ID被沒有ID刪除資訊的其他群集或共用節點重新錯誤引用。 因此，執行垃圾收集時，會在嘗試刪除上次執行中已刪除的ID時記錄警告。 此行為不會影響效能或功能。
+
+>[!NOTE]
+> 如果您使用共用資料儲存設定且資料儲存垃圾收集已停用，則運行Lucene Binary清除任務可能會突然增加使用的磁碟空間。 若要避免此情況，您必須依下列方式在所有製作和發佈執行個體上停用BlobTracker:
+>
+> 1. 停止AEM例項。
+> 2. 在`crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`檔案中新增`blobTrackSnapshotIntervalInSecs=L"0"`參數。 此參數需有Oak 1.12.0、1.10.2或更新版本。
+> 3. 重新啟動AEM例項。
+
 
 使用較新的AEM版本時，資料存放區垃圾收集也可在多個存放庫共用的資料存放區上執行。 為了能夠在共用資料儲存上運行資料儲存垃圾收集，請執行以下步驟：
 
