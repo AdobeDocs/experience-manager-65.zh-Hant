@@ -38,7 +38,7 @@ AEM搜尋能夠搜尋及找到AEM資產，並對各種常用的檔案格式（�
 * 請確定所有套件組合皆已啟動並執行。 如果所有套件組合都未啟用，請等待所有套件組合都啟動並運行。
 
    * 對於OSGi上的AEM Forms，套件組合列在https://&#39;[server]:[port]&#39;/system/console/bundles。
-   * 對於JEE上的AEM Forms，套件組合列在https://&#39;[server]:[port]`/[context-path]/system/console/bundles。 例如https://localhost:8080/lc/system/console/bundles。
+   * 對於JEE上的AEM Forms，套件組合列在https://&#39;[server]:[port]&grave;/[context-path]/system/console/bundles。 例如https://localhost:8080/lc/system/console/bundles。
 
 * 將&#x200B;*sun.util.calendar*&#x200B;包添加到允許清單。 要將包添加到允許清單，請執行以下步驟：
 
