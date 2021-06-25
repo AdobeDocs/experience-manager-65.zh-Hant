@@ -2,17 +2,18 @@
 title: 與Adobe Creative Cloud最佳實務整合
 description: 整合 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 以簡化資產轉移工作流程並實現高內容速度的最佳實務。
 contentOwner: AG
+mini-toc-levels: 1
 role: Business Practitioner, Administrator
 feature: 協作，Adobe資產連結，案頭應用程式
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
-source-git-commit: c4cfb709162ca8f8f6e8508516c39542347c6bc4
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
 source-wordcount: '3254'
 ht-degree: 14%
 
 ---
 
-# [!DNL Adobe Experience Manager] 和整 [!DNL Creative Cloud] 合最佳實務  {#aem-and-creative-cloud-integration-best-practices}
+# [!DNL Adobe Experience Manager] 和整 [!DNL Creative Cloud] 合最佳實務 {#aem-and-creative-cloud-integration-best-practices}
 
 [!DNL Adobe Experience Manager Assets] 是數位資產管理(DAM)解決方案，可與整合， [!DNL Adobe Creative Cloud] 協助DAM使用者與創意團隊合作，簡化內容建立程式中的協作。
 
@@ -24,7 +25,7 @@ ht-degree: 14%
 >
 >[!DNL Experience Manager] 資料 [!DNL Creative Cloud] 夾共用已遭取代，本指南不再涵蓋。Adobe建議使用較新的功能，例如[Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)或[Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html)，讓創意使用者能存取[!DNL Experience Manager]中管理的資產。
 
-## 創意人員、行銷人員和DAM使用者的共同作業需求{#collaboration-needs-of-creatives-marketers-and-dam-users}
+## 創意人員、行銷人員和DAM使用者的共同作業需求 {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
 | 需求 | 使用案例 | 相關曲面 |
 |---|---|---|
@@ -32,7 +33,7 @@ ht-degree: 14%
 | 從[!DNL Adobe Stock]提供高品質且可供使用的資產 | 行銷人員可協助進行資產來源搜尋和探索，協助加速內容建立流程。 創意專業人員可直接在其創意工具中使用已核准的資產。 | [!DNL Experience Manager Assets]; [!DNL Adobe Stock] 市場；中繼資料欄位 |
 | 按組織分發和共用資產 | 內部部門/當地分支機構和外部合作夥伴、分銷商和代理使用母公司共用的已核准資產。 該組織希望安全無縫地共用已建立的資產，以便更廣泛地重複使用。 | Brand Portal, Asset Share Commons |
 
-## 支援協作所需的Adobe產品{#adobe-offerings-to-support-the-collaboration-need}
+## Adobe產品以支援協作需求 {#adobe-offerings-to-support-the-collaboration-need}
 
 | 相關角色的價值主張 | Adobe產品 | 相關曲面 |
 |---|---|---|
@@ -44,7 +45,7 @@ ht-degree: 14%
 
 ![Creative CloudExperience Manager連線，決定要使用的功能](assets/creative-connections-aem.png)
 
-### 使用案例和Adobe解決方案的映射{#mapping-of-use-cases-and-adobe-solutions}
+### 對應使用案例和Adobe解決方案 {#mapping-of-use-cases-and-adobe-solutions}
 
 <!-- TBD: Add some info about XD integration and possibly info about DA v2.0.
 -->
@@ -72,9 +73,9 @@ ht-degree: 14%
 * [!DNL Experience Manager] [連結](/help/assets/link-sharing.md) 共用以使用連結臨機共用資產。
 * [Experience Manager資產](/help/assets/manage-assets.md) Web介面與外部方的區域進行介面，這些區域由訪問控 [!DNL Experience Manager] 制設定和必要的IT/網路配置調整所保護，使這些外部用戶可以訪問 [!DNL Experience Manager]。
 
-## 重要概念和使用案例{#key-concepts-and-use-cases}
+## 重要概念和使用案例 {#key-concepts-and-use-cases}
 
-### 常用辭彙表{#glossary-of-common-terms}
+### 常用術語表 {#glossary-of-common-terms}
 
 * **在製品或創意在製品 (WIP)：**&#x200B;在資產生命週期中，資產會經歷多次變更，且通常尚未準備好更廣泛地與其他團隊共用的階段。
 * **創意就緒資產：** [!DNL Assets] 已準備好更廣泛地與團隊共用，或已由創意團隊選取或核准，以便與行銷或LOB團隊共用。
@@ -86,7 +87,7 @@ ht-degree: 14%
 * **創意使用者：**&#x200B;使用 Creative Cloud 應用程式和服務建立數位資產的創意專業人員。在某些情況下，創意使用者可能是可使用 Creative Cloud、但不會建立數位資產的創意團隊成員 (例如創意總監或創意團隊經理)。
 * **DAM 使用者：** DAM 系統的一般使用者。視組織而異，DAM 使用者可能是行銷或非行銷使用者，例如企業營運 (LOB) 使用者、圖書管理員、銷售人員等。
 
-### 使用[!DNL Experience Manager]和[!DNL Creative Cloud]整合{#considerations-when-using-aem-and-creative-cloud-integration}時的考量事項
+### 使用[!DNL Experience Manager]和[!DNL Creative Cloud]整合時的考量事項 {#considerations-when-using-aem-and-creative-cloud-integration}
 
 * 請參閱[案頭應用程式最佳實務](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)
 * 請參閱[Adobe Stock整合](aem-assets-adobe-stock.md)
@@ -101,7 +102,7 @@ ht-degree: 14%
 * **** 瞭解資產生命週期：瞭解不同團隊在組織中如何處理資產
 * **** 謹慎處理資產的頻繁儲存：Adobe Asset Link會透過PS、AI、ID為您處理。對於其他應用程式，請勿在映射/共用資料夾中執行進行中的工作，除非您需要DAM中的所有變更
 
-### 從[!DNL Assets] {#access-to-adobe-stock-assets-from-aem-assets}存取[!DNL Adobe Stock]資產
+### 從[!DNL Assets]存取[!DNL Adobe Stock]資產 {#access-to-adobe-stock-assets-from-aem-assets}
 
 [Experience Manager與Adobe Stock](/help/assets/aem-assets-adobe-stock.md) 的整 [!DNL Experience Manager] 合讓使用者能夠從中搜尋、預覽、授權和儲存 [!DNL Adobe Stock] 資產 [!DNL Experience Manager]。授權和儲存的[!DNL Stock]資產已選取[!DNL Stock]中繼資料，可用來使用額外的篩選來搜尋。
 
@@ -118,11 +119,11 @@ ht-degree: 14%
 TBD: A condensed version of the below content is better placed in the Adobe DAM introduction article.
 -->
 
-## 關於在DAM {#about-storing-assets-in-a-dam}中儲存資產
+## 關於在DAM中儲存資產 {#about-storing-assets-in-a-dam}
 
 若要在創意與行銷/業務線(LOB)團隊之間設計有效的工作流程，並選擇最佳支援功能，請務必了解資產儲存於DAM的時間和原因。
 
-### 為何資產儲存在DAM {#why-assets-are-stored-in-dam}中
+### 資產為何儲存在DAM中 {#why-assets-are-stored-in-dam}
 
 將資產儲存在DAM中，可讓資產輕鬆存取且可尋找。 它可確保組織或生態系統中的眾多使用者都能運用這些資產，包括合作夥伴、客戶等。
 
@@ -132,7 +133,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 通常，儲存所有資產和更新是不理想的。 例如，如果特定資產的更新品質不佳，且耗用過多資源，則資產可能不會儲存在DAM中。
 
-#### 資產儲存在DAM {#when-assets-are-stored-in-dam}時
+#### 資產儲存在DAM時 {#when-assets-are-stored-in-dam}
 
 創意團隊（和組織）通常對在資產生命週期的每個階段儲存資產不感興趣。 例如，在下列情況下，他們會避免儲存資產：
 
@@ -146,7 +147,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 * 創意團隊預先選取的資產。
 * 根據特定合約或協定（例如，從RAW檔案轉換的JPG檔案、從PSD原始檔案轉換的TIFF/影像），市場營銷可使用或請求的特定資產格式。
 
-#### 資產更新儲存於DAM {#when-updates-to-assets-are-stored-in-dam}時
+#### 資產更新儲存於DAM時 {#when-updates-to-assets-are-stored-in-dam}
 
 一般而言，DAM中只應儲存與較廣的DAM使用者集合相關的資產更新。 它可確保使用者（行銷和類似功能）只能在DAM資產時間軸中看到相關版本。
 
@@ -159,17 +160,17 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 * 在資產可供行銷審核之前先上傳的舊版資產
 * 在創意和行銷團隊決定資產已就緒之前，會在進行中階段經常對資產進行創意變更
 
-### DAM {#user-access-to-dam}的使用者存取權
+### DAM的使用者存取權 {#user-access-to-dam}
 
 [!DNL Assets] 根據對部署的存取支援兩種類 [!DNL Assets] 型。企業網路（防火牆）內的使用者通常可直接存取DAM。 企業網路以外的其他使用者將無法直接存取。 使用者類型會從技術觀點決定可使用的整合。
 
-#### 可直接存取DAM {#creative-users-with-direct-access-to-dam}的創意使用者
+#### 可直接存取DAM的創意使用者 {#creative-users-with-direct-access-to-dam}
 
 內部創意團隊或已上線至內部網路的代理商/創意專業人員通常可存取DAM部署，包括[!DNL Experience Manager]登入。 [!DNL Experience Manager] 而網路基礎設施可以被設定為允許直接訪問外部方 — 通常是受信任的組織，如為客戶工作的機構 — 以通過網路 [!DNL Experience Manager] 訪問，例如通過VPN或IP允許清單。
 
 在這種情況下，Adobe資產連結或[!DNL Experience Manager]案頭應用程式可協助您輕鬆存取最終/核准的資產，並將創意資產儲存至DAM。
 
-#### 無法存取DAM的創意使用者{#creative-users-without-access-to-dam}
+#### 無法存取DAM的創意使用者 {#creative-users-without-access-to-dam}
 
 無法直接存取DAM部署的外部機構和自由工作者可能需要存取已核准的資產，或想要將其新設計新增至DAM。
 
@@ -180,7 +181,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 * 根據[Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/)使用發佈和來源補充入口網站的自訂實作
 * 使用[!DNL Experience Manager]中設定的存取控制和必要的網路基礎架構（例如VPN和IP允許清單），讓外部方可存取您DAM中的專用內容區域。 他們可以使用[!DNL Experience Manager]網頁UI來取得資產，並將新內容上傳至您的DAM。
 
-#### 正在從[!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}處理資產
+#### 正在從[!DNL Experience Manager]處理資產 {#work-in-progress-on-assets-from-aem}
 
 如本檔案所述，建議您對資產執行重大更新，有時稱為進行中的工作，而不要將所有儲存至本機檔案的編輯內容也隨著變更上傳至[!DNL Experience Manager]。 這可加快案頭用戶的工作速度、限制所使用的網路頻寬，並保持資產時間清晰，並將重點放在受控的重大更新上。
 
@@ -212,13 +213,13 @@ Adobe資產連結對此使用案例提供良好支援：
 * 要從單個資料夾上載一些檔案，請直接將檔案拖動到Web介面，或使用[!DNL Assets] Web介面中的「建立」選項。
 * 您也可以使用自訂上傳程式，視您的業務需求而定。
 
-#### 直接從案頭{#managing-digital-assets-directly-from-desktop}管理數位資產
+#### 直接從案頭管理數位資產 {#managing-digital-assets-directly-from-desktop}
 
 如果您使用網路檔案共用來管理數位資產，則只使用[!DNL Experience Manager]案頭應用程式映射的網路共用即可被視為方便的替代項目。 從網路檔案共用轉換時，[!DNL Experience Manager] Web介面提供一組豐富的數位資產管理功能，遠遠超出網路共用（搜索、集合、元資料、協作、預覽等）的可能，而[!DNL Experience Manager]案頭應用程式提供了一個便利的連結，可將伺服器端的DAM存放庫與案頭上的工作連接。
 
 避免使用[!DNL Experience Manager]案頭應用程式直接在[!DNL Assets]的網路共用中管理資產。 例如，請避免使用[!DNL Experience Manager]案頭應用程式來移動/複製多個檔案。 請改為使用[!DNL Assets]介面將資料夾從Finder/Explorer拖曳至網路共用，或使用[!DNL Assets]資料夾上傳功能。
 
-#### 資產遷移{#asset-migration}
+#### 資產移轉 {#asset-migration}
 
 要規劃並執行從現有系統到新系統的資產遷移，或遷移儲存在伺服器上的大量資產，請參閱[遷移指南](/help/assets/assets-migration-guide.md)。 [!DNL Experience Manager] 案頭應用程 [!DNL Experience Manager] 式和 [!DNL Creative Cloud] 整合不支援此類移轉。由於要內嵌的資產數量龐大，以及中繼資料對應、轉換和內嵌等其他需求，因此應使用不同的工具和方法來處理移轉。
 
