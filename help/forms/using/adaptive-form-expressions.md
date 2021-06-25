@@ -164,7 +164,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 >[!NOTE]
 >
->以寫程式方式更改欄位的值時，可以禁用「值提交指令碼」的執行。 若要這麼做，請前往https://&#39;[server]:[port]`/system/console/configMgr並將&#x200B;**相容性適用性Forms版本**&#x200B;變更為&#x200B;**AEM Forms 6.1**。 之後，只有當使用者從UI變更欄位值時，才會執行「值提交指令碼」。
+>以寫程式方式更改欄位的值時，可以禁用「值提交指令碼」的執行。 若要這麼做，請前往https://&#39;[server]:[port]&grave;/system/console/configMgr並將&#x200B;**相容性適用性Forms版本**&#x200B;變更為&#x200B;**AEM Forms 6.1**。 之後，只有當使用者從UI變更欄位值時，才會執行「值提交指令碼」。
 
 ### 可見性運算式 {#visibility-expression}
 
