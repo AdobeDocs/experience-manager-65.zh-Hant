@@ -4,14 +4,14 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 101cbd0d06d370da315e1579a8c2f274a6138b9a
+source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
 workflow-type: tm+mt
-source-wordcount: '3857'
+source-wordcount: '3805'
 ht-degree: 2%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5 service pack發行說明  {#aem-service-pack-release-notes}
+# [!DNL Adobe Experience Manager] 6.5 service pack發行說明 {#aem-service-pack-release-notes}
 
 ## 發行資訊 {#release-information}
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 | 日期 | 2021 年 5 月 27 日 |
 | 下載URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9-1.0.zip) |
 
-## [!DNL Adobe Experience Manager] 6.5.9.0 {#what-s-included-in-aem}中包含的內容
+## [!DNL Adobe Experience Manager] 6.5.9.0中包含的內容 {#what-s-included-in-aem}
 
 [!DNL Adobe Experience Manager] 6.5.9.0包含自2019年4月發行6.5版以來所推出的新功能、客戶要求的重要增強功能，以及效能、穩定性和安全性等改善項目。Service Pack安裝在[!DNL Adobe Experience Manager] 6.5上。
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 * [!DNL Experience Manager Sites] Dynamic Media Foundation元件現在可讓您在使用回應式影像預設集或智慧型裁切時，開啟或關閉高解析度裝置的最佳化。
 
-* 為了改善效能，將hidden=false條件從JCR查詢移至QueryBuilder求值器。 要驗證在更改後隱藏的謂語是否正在工作，Experience Manager將檢查介面上是否未顯示任何隱藏資料夾。
+* 為了改善效能，`hidden=false`條件從JCR查詢移至[!UICONTROL QueryBuilder]求值器。 要驗證更改後隱藏的謂語是否正在工作，[!DNL Experience Manager]檢查是否未顯示任何隱藏資料夾。
 
 * 能夠還原[!DNL Experience Manager Sites]頁面上已刪除的頁面和樹狀結構。
 
@@ -42,37 +42,11 @@ ht-degree: 2%
 
 * 根據中國地區和地區的新命名慣例，會更新與香港、澳門和台灣相關的名稱出現次數。
 
-* [!DNL Experience Manager] [Assets](#assets-accessibility-6590)和[Dynamic Media](#accessibility-dm-6590)中的協助工具增強功能。
+* [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590)和[[!DNL Dynamic Media]](#accessibility-dm-6590)中的協助工具增強功能。
 
-* 智慧影像處理DPR（設備像素比率）和網路頻寬優化使您能夠高效地提供最佳質量影像；在具有高解析度顯示器且網路頻寬受限的設備上。 如需詳細資訊，請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)。
+* 智慧影像處理DPR（設備像素比率）和網路頻寬優化使您能夠高效地提供最佳質量影像；在具有高解析度顯示器且網路頻寬受限的設備上。 如需詳細資訊和時間軸，請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)。
 
-   >[!NOTE]
-   >
-   >上述智慧型影像處理增強功能的發行時間軸為：
-   >
-   >* 北美2021年5月24日於納歐州，
-      >
-      >
-   * 歐洲、中東和非洲2021年6月25日，
-      >
-      >
-   * 亞太2021年7月19日。
-
-
-* 導入Dynamic Media傳送（fmt URL修飾元）中支援下一代影像格式AVIF。 如需詳細資訊，請參閱[影像提供與呈現api fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
-
-   >[!NOTE]
-   >
-   >AVIF支援的發行時間表為：
-   >
-   >* 北美2021年5月10日，
-      >
-      >
-   * 歐洲、中東和非洲2021年5月24日，
-      >
-      >
-   * 2021年6月24日。
-
+* [!DNL Dynamic Media] 傳送(`fmt` URL修飾元)支援新一代影像格式AVIF（AV1影像格式）。有關更多詳細資訊和時間軸，請參閱[影像提供和呈現API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
 
 * 能夠使用[!UICONTROL 指派任務]工作流步驟向組發送通知電子郵件。
 
@@ -167,13 +141,13 @@ ht-degree: 2%
 
 * 無法刪除或移動DAM資料夾，且會記錄例外狀況(NPR-35942)。
 
-#### 資產{#assets-enhancements}中的增強功能
+#### 資產中的增強功能 {#assets-enhancements}
 
 * 在卡片、欄和前瞻分析檢視中導入[!UICONTROL 無]選項，依資產在JCR節點中的儲存順序來排序資產(NPR-36356)。
 
 * 新增選項，以在來自Adobe Experience Manager的API回應中以小寫新增電子郵件ID(CQ-4317704)。
 
-#### 資產{#assets-accessibility-6590}中的協助工具增強功能
+#### Assets中的協助工具增強功能 {#assets-accessibility-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0提供下 [!DNL Assets] 列協助工具增強功能。
 
@@ -214,7 +188,7 @@ Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列
 
 * 當資產標題有雙位元組、多位元組、高ASCII、西里爾文、代理對、希伯來文、阿拉伯文和GB18030字元時，資產標題在發佈至Dynamic Media時會有問號(?) (CQ-4311872).
 
-#### Dynamic Media中的協助工具增強功能{#accessibility-dm-6590}
+#### Dynamic Media中的協助工具增強功能 {#accessibility-dm-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0在中提 [!DNL Assets] 供下列協助工具增 [!DNL Dynamic Media]強功能。
 
@@ -283,7 +257,7 @@ Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列
 
 * [!UICONTROL 商務目錄]精靈無法在欄檢視中載入超過40個項目(CQ-4318379)。
 
-### 翻譯專案{#translation-6590}
+### 翻譯專案 {#translation-6590}
 
 * 將`es`重新轉譯為`es_es`頁面時未顯示更新或覆寫選項(NPR-36170)。
 
@@ -418,7 +392,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 若要了解經認證可與此版本搭配使用的平台，請參閱[技術需求](/help/sites-deploying/technical-requirements.md)。
 
-### 安裝Adobe Experience Manager Forms附加元件套件{#install-aem-forms-add-on-package}
+### 安裝Adobe Experience Manager Forms附加元件套件 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
@@ -471,7 +445,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| Integrations | 已棄用&#x200B;**[!UICONTROL AEM雲端服務選擇加入]**&#x200B;畫面。 隨著Experience Manager6.5中更新Experience Manager和Adobe Target整合，以支援Adobe Target Standard API(透過AdobeIMS和[!DNL Adobe I/O]使用驗證)，以及AdobeLaunch在檢測Experience Manager頁面以用於分析和個人化方面的角色日益提升，選擇加入精靈在功能上已變得無關。 | 透過個別的[!DNL Experience Manager]雲端服務，設定系統連線、AdobeIMS驗證和[!DNL Adobe I/O]整合。 |
+| 整合 | 已棄用&#x200B;**[!UICONTROL AEM雲端服務選擇加入]**&#x200B;畫面。 隨著Experience Manager6.5中更新Experience Manager和Adobe Target整合，以支援Adobe Target Standard API(透過AdobeIMS和[!DNL Adobe I/O]使用驗證)，以及AdobeLaunch在檢測Experience Manager頁面以用於分析和個人化方面的角色日益提升，選擇加入精靈在功能上已變得無關。 | 透過個別的[!DNL Experience Manager]雲端服務，設定系統連線、AdobeIMS驗證和[!DNL Adobe I/O]整合。 |
 | 連接器 | Experience Manager6.5已不再使用Microsoft SharePoint 2010和Microsoft SharePoint 2013的AdobeJCR連接器。 | N/A |
 
 ## 已知問題 {#known-issues}
@@ -494,7 +468,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
    * 透過Shopbable Banner檢視器預覽資產時，Dynamic Media互動式影像中的熱點不會顯示。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :等待登錄更改完成解除登錄的超時。
 
-## 包含{#osgi-bundles-and-content-packages-included}的OSGi套件組合和內容套件
+## 包含的OSGi套件組合和內容套件 {#osgi-bundles-and-content-packages-included}
 
 以下文本文檔列出[!DNL Experience Manager] 6.5.9.0中包含的OSGi套件組合和內容包：
 
@@ -502,7 +476,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 * [Experience Manager6.5.9.0中包含的內容套件清單](assets/6590_packages.txt)
 
-## 受限網站{#restricted-sites}
+## 受限網站 {#restricted-sites}
 
 這些網站僅供客戶使用。 如果您是Adobe，且需要存取權，請聯絡您的客戶經理。
 
