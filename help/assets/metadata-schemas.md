@@ -2,10 +2,11 @@
 title: '中繼資料結構定義中繼資料屬性頁面的版面 '
 description: 中繼資料結構會定義屬性頁面的配置，以及為資產顯示的中繼資料屬性。 了解如何建立自訂中繼資料結構、編輯中繼資料結構，以及如何將中繼資料結構套用至資產。
 contentOwner: AG
+mini-toc-levels: 1
 role: Business Practitioner,Administrator
 feature: 中繼資料
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
+source-git-commit: 9ac5582b2e4859bf4f101c5caa5258fc755ebc46
 workflow-type: tm+mt
 source-wordcount: '3547'
 ht-degree: 7%
