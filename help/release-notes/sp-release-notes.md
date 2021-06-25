@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
+source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3838'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 * [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590)和[[!DNL Dynamic Media]](#accessibility-dm-6590)中的協助工具增強功能。
 
-* 智慧影像處理DPR（設備像素比率）和網路頻寬優化使您能夠高效地提供最佳質量影像；在具有高解析度顯示器且網路頻寬受限的設備上。 如需詳細資訊和時間軸，請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)。
+* 智慧影像處理DPR（設備像素比率）和網路頻寬最佳化可讓您高效地提供最佳品質影像；在具有高解析度顯示器且網路頻寬受限的設備上。 如需詳細資訊和時間軸，請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)。
 
 * [!DNL Dynamic Media] 傳送(`fmt` URL修飾元)支援新一代影像格式AVIF（AV1影像格式）。有關更多詳細資訊和時間軸，請參閱[影像提供和呈現API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
 
@@ -115,6 +115,29 @@ ht-degree: 2%
 
 ### [!DNL Assets] {#assets-6590}
 
+在[!DNL Assets]中執行下列使用者體驗增強：
+
+* 若要檢視未根據[!UICONTROL Create]、[!UICONTROL Modify]或[!UICONTROL Name]參數排序的資產，[!DNL Adobe Experience Manager]在[!UICONTROL Sort by]選項內提供[!UICONTROL None]選項。 [!UICONTROL None]選項可確保「資產」使用者介面（在「卡片」、「欄」和「前瞻分析」檢視中）中的資產順序與JCR節點中的相同(NPR-36356)。
+
+* 若要從[!DNL Adobe Experience Manager]的ACP API回應將電子郵件ID設為小寫，請導入選用設定；由於[!DNL Adobe Asset Link]使用者的ID並非全部字元皆為小寫，因此無法簽入資產。 請注意， [!DNL Adobe Asset Link]面板會從[!DNL Adobe Experience Manager](CQ-4317704)中取用ACP API回應。
+
+[!DNL Adobe Experience Manager] 6.5.9.0提供下 [!DNL Assets] 列協助工具增強功能。
+
+改善下列文字和表徵圖的對比度（與背景），以便視力和顏色感知受限的用戶能夠理解：
+
+* [!UICONTROL 屬性]頁面上的資產標題(NPR-35967)。
+* 各處[!UICONTROL Rating]區段的星級評等圖示(NPR-36009)。
+* 資產和資料夾卡片檢視的文字(NPR-35966)。
+* [!UICONTROL 時間軸]檢視的預留位置文字(NPR-35965)。
+* 資產搜尋結果上的資產名稱(NPR-35964)。
+* [!UICONTROL 連結共用]對話方塊上的預留位置文字(NPR-35963)。
+* [!UICONTROL View Settingsdialog(NPR-]35910)中的Listoption [!UICONTROL (檢]視設定)中的Metadata   、Status     和Othertext)。
+*  在全 [!UICONTROL 域搜] 尋中定位並輸入searchplaceholder文字(NPR-35909)。
+* 展開和折疊[!UICONTROL 內容樹]下的圖示(NPR-35908)。
+* 顯示資產資料夾頁面上的[!UICONTROL Assets]文字(NPR-35905)。
+* [!UICONTROL 資產中繼資料]中的文字，[!UICONTROL 資產詳細資料頁面中的[!UICONTROL 使用狀況統計資料]概述]選項(NPR-35904)。
+* 資產詳細資訊頁面中[!UICONTROL properties]和[!UICONTROL edit]選項的快捷鍵文字(NPR-35904)。
+
 [!DNL Adobe Experience Manager] 6.5.9.0修 [!DNL Assets] 正下列問題。
 
 * 從[!UICONTROL 資料夾中繼資料結構]表單中的標籤選取元素內建立的標籤未儲存(NPR-36119)。
@@ -141,60 +164,13 @@ ht-degree: 2%
 
 * 無法刪除或移動DAM資料夾，且會記錄例外狀況(NPR-35942)。
 
-#### 資產中的增強功能 {#assets-enhancements}
-
-* 在卡片、欄和前瞻分析檢視中導入[!UICONTROL 無]選項，依資產在JCR節點中的儲存順序來排序資產(NPR-36356)。
-
-* 新增選項，以在來自Adobe Experience Manager的API回應中以小寫新增電子郵件ID(CQ-4317704)。
-
-#### Assets中的協助工具增強功能 {#assets-accessibility-6590}
-
-[!DNL Adobe Experience Manager] 6.5.9.0提供下 [!DNL Assets] 列協助工具增強功能。
-
-改善下列文字和表徵圖的對比度（與背景），以便視力和顏色感知受限的用戶能夠理解：
-
-* [!UICONTROL 屬性]頁面上的資產標題(NPR-35967)。
-* 各處[!UICONTROL Rating]區段中的星級評等圖示(NPR-36009)。
-* 資產和資料夾卡片檢視的文字(NPR-35966)。
-* [!UICONTROL 時間軸]檢視上的預留位置文字(NPR-35965)。
-* 資產搜尋結果上的資產名稱(NPR-35964)。
-* [!UICONTROL 連結共用]對話方塊上的預留位置文字(NPR-35963)。
-* [!UICONTROL View Settingsdialog(NPR-]35910)中的Listoption [!UICONTROL (檢]視設定)中的Metadata   、Status     和Othertext)。
-*  在全 [!UICONTROL 域搜] 尋中定位並輸入searchplaceholder文字(NPR-35909)。
-* 展開和折疊[!UICONTROL 內容樹]下的圖示(NPR-35908)。
-* 顯示資產資料夾頁面上的[!UICONTROL Assets]文字(NPR-35905)。
-* [!UICONTROL 資產中繼資料]中的文字，[!UICONTROL 資產詳細資料頁面中的[!UICONTROL 使用狀況統計資料]概述]選項(NPR-35904)。
-* 資產詳細資訊頁面中[!UICONTROL properties]和[!UICONTROL edit]選項的快捷鍵文字(NPR-35904)。
-
 ### [!DNL Dynamic Media] {#dynamic-media-6590}
-
-Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列問題：
-
-* 當[!DNL Dynamic Media]選擇性啟動並由[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config)停用時，自訂檢視器預設集和CSS不會複製到[!DNL Dynamic Media](NPR-36232)。
-
-* 嘗試在資產詳細資訊頁面上預覽視訊轉譯時，視訊載入速度緩慢(CQ-4320122)。
-
-* 上傳超過200個資產且已啟用重複資產偵測器(CQ-4319633)時，瀏覽器頁面會停止回應並減慢速度。
-
-* 將全景影像資產新增至頁面上的全景媒體元件時，會記錄未捕獲的參考錯誤(CQ-4317666)。
-
-* 使用體驗片段實作互動式媒體檢視器時，不會從發佈者開啟體驗片段，且會記錄錯誤(CQ-4317655)。
-
-* 以中繼資料編輯器檢視快速發佈中無法使用發佈至Dynamic Media選項(CQ-4317199)。
-
-* 擁有唯讀權限的網站作者可以對資產使用智慧型裁切功能，並編輯智慧型裁切轉譯。 不過，擁有唯讀權限的使用者必須無法編輯Sites Dev執行個體中的資產屬性(CQ-4316450)。
-
-* 資料夾路徑[!DNL where Dynamic]無法使用視訊註解即使[!DNL Experience Manager]例項是以[!DNL Dynamic Media]模式設定(CQ-4314950)，媒體設定亦未啟用。
-
-* 當資產標題有雙位元組、多位元組、高ASCII、西里爾文、代理對、希伯來文、阿拉伯文和GB18030字元時，資產標題在發佈至Dynamic Media時會有問號(?) (CQ-4311872).
-
-#### Dynamic Media中的協助工具增強功能 {#accessibility-dm-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0在中提 [!DNL Assets] 供下列協助工具增 [!DNL Dynamic Media]強功能。
 
-* 在影像集編輯器中開啟對話方塊，使用鍵盤鍵來新增資產時：
+* 在[!UICONTROL 影像集]編輯器中開啟對話方塊，使用鍵盤鍵新增資產時：
    * 螢幕助讀程式會提供對話方塊已開啟的旁白。
-   * 鍵盤焦點在開啟時會移至對話方塊。
+   * 鍵盤焦點在開啟時移至對話方塊。
    * 對話方塊關閉時，鍵盤焦點會移回「新增資產」選項(CQ-4312134)。
 
 * 您現在可以使用熱點編輯器中的鍵盤鍵來新增及編輯資產上的熱點(CQ-4305965)。
@@ -218,6 +194,26 @@ Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列
 * 影像集編輯器中資產的標題欄位現在提供表示必填欄位的視覺星號，螢幕助讀程式會朗讀欄位的必要資訊(CQ-4290712)。
 
 * 螢幕助讀程式現在可以在資產詳細資訊頁面的檢視器記憶體取及提供各種互動式選項的用途(CQ-4290708)。
+
+Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列問題：
+
+* 當[!DNL Dynamic Media]選擇性啟動並由[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config)停用時，自訂檢視器預設集和CSS不會複製到[!DNL Dynamic Media](NPR-36232)。
+
+* 嘗試在資產詳細資訊頁面上預覽視訊轉譯時，視訊載入速度緩慢(CQ-4320122)。
+
+* 上傳超過200個資產且已啟用重複資產偵測器(CQ-4319633)時，瀏覽器頁面會停止回應並減慢速度。
+
+* 將全景影像資產新增至頁面上的全景媒體元件時，會記錄未捕獲的參考錯誤(CQ-4317666)。
+
+* 使用體驗片段實作互動式媒體檢視器時，不會從發佈者開啟體驗片段，且會記錄錯誤(CQ-4317655)。
+
+* [!UICONTROL 「屬性」] 頁面中的「快 [!UICONTROL 速發] 布」中不  提供「發佈至動態媒體」選項(CQ-4317199)。
+
+* 擁有唯讀權限的網站作者可以對資產使用智慧型裁切功能，並編輯智慧型裁切轉譯(CQ-4316450)。
+
+* 即使在[!DNL Dynamic Media]模式中設定[!DNL Experience Manager]例項(CQ-4314950)，未啟用[!DNL Dynamic Media]設定的資料夾路徑仍無法使用視訊註解。
+
+* 當資產標題有雙位元組、多位元組、高ASCII、西里爾文、代理對、希伯來文、阿拉伯文和GB18030字元時，資產標題在發佈至Dynamic Media時會有問號(?) (CQ-4311872).
 
 ### 平台 {#platform-6590}
 
