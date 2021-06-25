@@ -1,18 +1,18 @@
 ---
-title: 擴展搜索功能。
+title: 擴展搜索功能
 description: 將 [!DNL Adobe Experience Manager Assets] 的搜尋功能擴展至預設值以外。
 contentOwner: AG
 role: Developer
 feature: 搜尋
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 19%
 
 ---
 
-# 擴充資產搜尋{#extending-assets-search}
+# 擴充資產搜尋 {#extending-assets-search}
 
 您可以擴展[!DNL Adobe Experience Manager Assets]搜索功能。 [!DNL Experience Manager Assets]現成可依字串搜尋資產。
 
@@ -34,7 +34,7 @@ ht-degree: 19%
 >
 >預設情況下，`/apps`下的目錄結構不存在，請建立它。 確保節點類型與`/libs`下的節點類型匹配。
 
-## 添加頁簽{#adding-tabs}
+## 新增索引標籤 {#adding-tabs}
 
 您可以在[!DNL Assets]管理介面中配置其他搜索頁簽，以添加其他搜索頁簽。 要建立其他頁簽：
 
@@ -45,7 +45,7 @@ ht-degree: 19%
    >
    >建立第二個`siteadminsearchpanel`時，請務必設定`id`屬性，以防止表單衝突。
 
-## 建立自定義謂詞{#creating-custom-predicates}
+## 建立自訂述詞 {#creating-custom-predicates}
 
 [!DNL Assets] 隨附一組預先定義的述詞，可用來自訂「資產共用」頁面。以此方式自訂資產共用在[建立和設定資產共用頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)中。
 
@@ -55,7 +55,7 @@ ht-degree: 19%
 
 最佳實務是複製現有的述詞並加以調整。 範例謂語位於&#x200B;**/libs/cq/search/components/predicates**&#x200B;中。
 
-### 範例：建立簡單屬性述詞{#example-build-a-simple-property-predicate}
+### 範例：建立簡單屬性述詞 {#example-build-a-simple-property-predicate}
 
 若要建立屬性述詞：
 
@@ -148,7 +148,7 @@ ht-degree: 19%
    >
    >搜尋時，請務必準確輸入詞語，包括正確的大小寫。
 
-### 範例：建立簡單組述詞{#example-build-a-simple-group-predicate}
+### 範例：建立簡單群組述詞 {#example-build-a-simple-group-predicate}
 
 若要建立群組述詞：
 
@@ -247,7 +247,7 @@ ht-degree: 19%
 1. 導覽至您的瀏覽器，並在範例頁面上（例如&#x200B;**press.html**）切換至設計模式，並啟用謂語段落系統的新元件（例如&#x200B;**left**）。
 1. 在&#x200B;**Edit**&#x200B;模式中，新元件現在可在sidekick中使用（可在&#x200B;**Search**&#x200B;群組中找到）。 在&#x200B;**謂詞**&#x200B;列中插入元件。
 
-## 已安裝的謂詞小部件{#installed-predicate-widgets}
+## 已安裝的謂詞小工具 {#installed-predicate-widgets}
 
 下列述詞可作為預先設定的ExtJS介面工具集使用。
 
@@ -295,7 +295,7 @@ ht-degree: 19%
 | searchCallback | 函數 | 觸發搜尋的回呼。 預設為 `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | 數量 | 觸發searchCallback前的逾時。 預設為800毫秒 |
 
-## 自定義搜索結果{#customizing-search-results}
+## 自訂搜尋結果 {#customizing-search-results}
 
 在「資產共用」頁面上呈現搜尋結果的方式由選取的鏡頭控制。 [!DNL Experience Manager Assets] 隨附一組預先定義的鏡頭，可用來自訂「資產共用」頁面。以此方式自訂資產共用在[建立和設定資產共用頁面](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)中。
 
