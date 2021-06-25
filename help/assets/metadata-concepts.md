@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 中繼資料
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2730'
 ht-degree: 6%
 
 ---
 
-# 了解元資料概念{#why-we-need-metadata}
+# 了解中繼資料概念 {#why-we-need-metadata}
 
 中繼資料是指資料的相關資料。 在這方面，資料是指您的數位資產，例如影像。 中繼資料對於有效管理資產至關重要。
 
@@ -28,7 +28,7 @@ ht-degree: 6%
 
 您可以新增更多高階資料至數位資產，例如：
 
-* 資產的類型（是影像、視訊、音訊剪輯或檔案？）。
+* 資產的類型（影像、視訊、音訊剪輯或檔案）。
 * 資產擁有者。
 * 資產的標題。
 * 資產說明。
@@ -44,7 +44,7 @@ ht-degree: 6%
 
 基於這些原因，[!DNL Assets]提供您建立、管理和交換數位資產中繼資料的正確方式。
 
-## 元資料的類型{#types-of-metadata}
+## 中繼資料的類型 {#types-of-metadata}
 
 兩種基本的中繼資料類型是技術中繼資料和描述性中繼資料。
 
@@ -59,7 +59,7 @@ ht-degree: 6%
 
 手動建立描述性中繼資料資訊的成本很高。 因此，制定標準是為了方便跨軟體系統和組織交換元資料。 [!DNL Experience Manager Assets] 支援元資料管理的所有相關標準。
 
-## 編碼標準{#encoding-standards}
+## 編碼標準 {#encoding-standards}
 
 在檔案中內嵌中繼資料有多種方式。 支援一系列編碼標準：
 
@@ -92,11 +92,11 @@ Exif的一個主要限制是一些常見的影像檔案格式（如BMP、GIF或P
 
 Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資料管理中的使用有限。 因此，[!DNL Experience Manager Assets]提供Exif屬性到[公共元資料結構](metadata-schemas.md)和[XMP](xmp-writeback.md)的映射。
 
-### 其他元資料{#other-metadata}
+### 其他中繼資料 {#other-metadata}
 
 可從檔案嵌入的其他元資料包括[!DNL Microsoft Word]、[!DNL PowerPoint]、[!DNL Excel]等。
 
-## 了解元資料結構{#metadata-schemata}
+## 了解中繼資料結構 {#metadata-schemata}
 
 中繼資料結構是可用於各種應用程式的一組預先定義的中繼資料屬性定義。 屬性一律與資產相關聯，這表示屬性是資源的「關於」。
 
@@ -104,7 +104,7 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 
 支援的中繼資料結構列於下方。
 
-### 標準元資料{#standard-metadata}
+### 標準中繼資料 {#standard-metadata}
 
 * DC - [!DNL Dublin Core]是一組重要且廣泛使用的元資料。
 * DICOM — 醫學中的數字影像和通信。
@@ -113,7 +113,7 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 * XMP - [!DNL Extensible Metadata Platform]。
 * `xmpBJ`  — 基本工作票證。
 
-### 應用程式特定元資料{#application-specific-metadata}
+### 應用程式專屬中繼資料 {#application-specific-metadata}
 
 應用程式專用中繼資料包含技術和描述性中繼資料。 如果您使用此類中繼資料，其他應用程式可能無法使用中繼資料。 例如，不同的影像呈現應用程式可能無法訪問[!DNL Adobe Photoshop]元資料。 您可以建立將應用程式特定屬性變更為標準屬性的工作流程步驟。
 
@@ -129,7 +129,7 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 * PDF和PDF/X。
 * Photoshop和psAux - [!DNL Adobe Photoshop]。
 
-### Digital Rights Management(DRM)元資料{#digital-rights-management-metadata}
+### Digital Rights Management(DRM)中繼資料 {#digital-rights-management-metadata}
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights]。
@@ -139,30 +139,30 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 * PUR — 稜鏡使用權。
 * `xmpPlus` - PLUS與XMP整合。
 
-### 攝影專用中繼資料{#photography-specific-metadata}
+### 攝影專用中繼資料 {#photography-specific-metadata}
 
 * Exif — 相機的技術資訊，包括GPS位置。
 * CRS - [!DNL Camera Raw]架構。
 * `iptc4xmpCore` 和 `iptc4xmpExt`.
 * TIFF — 影像中繼資料（不僅適用於TIFF影像）。
 
-### 打印特定元資料{#print-specific-metadata}
+### 特定於打印的元資料 {#print-specific-metadata}
 
 * PDF和PDF/X - Adobe PDF和協力廠商應用程式。
 * PRISM - [發佈行業標準元資料的要求](https://www.idealliance.org/prism-metadata)。
 * XMP - [!DNL Extensible Metadata Platform]。
 * `xmpPG`  — 分頁文字的XMP中繼資料。
 
-### 多媒體特定元資料{#multimedia-specific-metadata}
+### 多媒體特定中繼資料 {#multimedia-specific-metadata}
 
 * `xmpDM` - [!DNL Dynamic Media].
 * `xmpMM`  — 媒體管理。
 
-## 元資料架構參考{#metadata-schemata-reference}
+## 中繼資料結構參考 {#metadata-schemata-reference}
 
 以下引用包括有關特定元資料結構（按字母順序）的資訊，以及屬性及其定義的清單。
 
-### 都柏林核心{#dublin-core}
+### 都柏林核心 {#dublin-core}
 
 都柏林核心中繼資料提供一套標準化的慣例，用於描述資產，以便更容易找到。 在[!DNL Assets]中，都柏林核心描述數字資產，包括視頻、聲音、影像和文檔。
 
@@ -194,7 +194,7 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 
 雖然IPTC標頭資訊已被XMP取代，但XMP可使用IPTC核心架構和擴充架構。 在映像程式中，XMP和IPTC屬性都同步。
 
-## 中繼資料導向的工作流程{#metadata-driven-workflows}
+## 中繼資料導向的工作流程 {#metadata-driven-workflows}
 
 建立中繼資料導向的工作流程可協助您自動執行某些程式，進而提高效率。 在元資料驅動的工作流中，工作流管理系統讀取該工作流，並因此執行一些預定義的操作。 例如，您可以使用中繼資料導向工作流程的一些方式：
 
@@ -210,7 +210,7 @@ XMP（可擴充中繼資料平台）是[!DNL Adobe Experience Manager Assets]用
 
 [XMP規格](https://www.adobe.com/devnet/xmp.html)可從Adobe取得。
 
-### 什麼是XMP?{#what-is-xmp}
+### 什麼是XMP? {#what-is-xmp}
 
 Adobe先在Adobe Acrobat軟體產品中導入XMP標準。 此後，XMP標準被廣泛採用。 [!DNL Assets] 原生支援XMP — 由Adobe牽頭的可擴充中繼資料平台。XMP是處理和儲存數位資產中標準化和專屬中繼資料的標準。 XMP的設計是通用標準，可讓多個應用程式有效處理中繼資料。
 
@@ -223,13 +223,13 @@ XMP借由提供資料模型、儲存模型和結構，標準化中繼資料的�
 XMP中的中繼資料包含一組屬性。 這些屬性一律與
 稱為資源的特定實體；也就是說，屬性是關於資源。 在XMP的情況下，資源一律為資產。
 
-### XMP生態系統{#xmp-ecosystem}
+### XMP生態系統 {#xmp-ecosystem}
 
 XMP定義了 [中繼資料](https://en.wikipedia.org/wiki/Metadata) 模型，可與任何已定義的中繼資料項目集搭配使用。XMP也定義了基本屬性的特定結構 [](https://en.wikipedia.org/wiki/XML_schema) ，這些基本屬性可用於記錄資源在經過多個處理步驟 (從被拍攝、掃描或創作為文字) 、通過照片編輯步驟(如 [](https://en.wikipedia.org/wiki/Image_scanner)[](https://en.wikipedia.org/wiki/Cropping_%28image%29) or color adjustment)到組合成最終影像時的歷史記錄。XMP可讓每個軟體程式或裝置沿途將其資訊新增至數位資源，然後再保留在最終數位檔案中。
 
 XMP最常是使用 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)[Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF)的子集進行序列化和儲存，該子集又以 [XML表示](https://en.wikipedia.org/wiki/XML)。
 
-### XMP {#advantages-of-xmp}的優點
+### XMP的優點 {#advantages-of-xmp}
 
 XMP比其他編碼標準和架構有下列優點：
 
@@ -244,18 +244,18 @@ XMP標準的設計可擴充，可讓您將自訂中繼資料類型新增至XMP�
 >
 >XMP通常不允許嵌入二進位資料類型。 若要在XMP中傳送二進位資料（例如縮圖影像），必須以XML友好格式（例如`Base64`）進行編碼。
 
-### XMP概念{#xmp-core-concepts}
+### XMP概念 {#xmp-core-concepts}
 
 以下各節將說明XMP的核心概念，包括命名空間和架構、屬性和值，以及語言替代項目。
 
-#### 命名空間和架構資料{#namespaces-and-schemata}
+#### 命名空間和架構 {#namespaces-and-schemata}
 
 XMP架構是通用XML命名空間中的一組屬性名稱，包含
 資料類型和描述性資訊。 XMP架構由其XML命名空間URI標識。 使用命名空間可避免名稱相同但含義不同之不同結構中的屬性之間產生衝突。
 
 例如，兩個獨立設計結構中的`Creator`屬性可能代表建立資產的人員，也可能代表建立資產的應用程式(例如Adobe Photoshop)。
 
-#### 屬性和值{#properties-and-values}
+#### 屬性和值 {#properties-and-values}
 
 XMP可包含一或多個結構中的屬性。 例如，許多Adobe應用程式使用的典型子集可能包括：
 
@@ -264,11 +264,11 @@ XMP可包含一或多個結構中的屬性。 例如，許多Adobe應用程式�
 * XMP權限管理結構：`xmpRights:WebStatement`, `xmpRights:Marked`。
 * XMP媒體管理結構：`xmpMM:DocumentID`。
 
-#### 替代語言{#language-alternatives}
+#### 替代語言 {#language-alternatives}
 
 XMP可讓您將`xml:lang`屬性新增至文字屬性，以指定文字的語言。
 
-## 使用IPTC元資料{#support-for-iptc-metadata}
+## 使用IPTC元資料 {#support-for-iptc-metadata}
 
 了解[!DNL Adobe Experience Manager Assets]如何透過[!DNL Adobe Bridge]和其他[!DNL Adobe Creative Cloud]應用程式支援新增至資產的IPTC中繼資料、創作評等和關鍵字。
 
@@ -289,7 +289,7 @@ XMP可讓您將`xml:lang`屬性新增至文字屬性，以指定文字的語言�
 1. 視需要編輯IPTC擴展元資料屬性。
 1. 按一下「**[!UICONTROL 儲存並關閉]**」以儲存變更。
 
-### 創意評分支援{#creative-rating-support}
+### 創意評等支援 {#creative-rating-support}
 
 除了顯示個別使用者評等和匯總評等外，「屬性」頁面現在還會顯示透過Adobe Bridge和其他創意應用程式指派給資產的評等
 
@@ -299,7 +299,7 @@ XMP可讓您將`xml:lang`屬性新增至文字屬性，以指定文字的語言�
 
 不過，此屬性目前未編列索引，以避免與使用者所做的自訂變更產生任何衝突。
 
-### 關鍵字支援{#keyword-support}
+### 關鍵字支援 {#keyword-support}
 
 [!UICONTROL 屬性]頁面的&#x200B;**[!UICONTROL IPTC]**&#x200B;標籤也顯示透過Adobe Bridge和其他Adobe Creative Cloud應用程式新增至資產的關鍵字。 您也可以編輯這些關鍵字，並從&#x200B;**[!UICONTROL IPTC]**&#x200B;標籤新增更多關鍵字。
 
