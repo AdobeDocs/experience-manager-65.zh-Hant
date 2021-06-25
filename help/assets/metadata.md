@@ -1,18 +1,19 @@
 ---
 title: 管理數位資產的中繼資料
-description: 了解中繼資料的類型，並了解如何 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 根據資產的中繼資料自動組織和處理資產。
+description: 了解中繼資料的類型，以及如何管理資產的中繼資料，以輕鬆組織和處理資產。
 contentOwner: AG
+mini-toc-levels: 1
 feature: 標籤，中繼資料
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2339'
 ht-degree: 10%
 
 ---
 
-# 管理數位資產的中繼資料{#managing-metadata-for-digital-assets}
+# 管理數位資產的中繼資料 {#managing-metadata-for-digital-assets}
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
@@ -22,7 +23,7 @@ ht-degree: 10%
 
 [!DNL Adobe Experience Manager Assets] 保留每個資產的中繼資料。它可讓資產分類和組織更輕鬆，並協助尋找特定資產的人。 能夠從上傳至[!DNL Experience Manager Assets]的檔案中擷取中繼資料，中繼資料管理與創意工作流程整合。 您可以使用資產保留和管理中繼資料，並根據資產的中繼資料自動組織和處理資產。
 
-## 元資料及其源{#how-to-edit-or-add-metadata}
+## 元資料及其來源 {#how-to-edit-or-add-metadata}
 
 中繼資料是可搜尋資產的其他相關資訊。 它會新增至資產，而在[!DNL Experience Manager]中，當您上傳資產時就會處理它。 您可以編輯現有的中繼資料、新增中繼資料屬性至現有欄位。 組織需要可控、可靠的元資料辭匯。 因此，[!DNL Experience Manager Assets]不允許隨需新增新中繼資料屬性。 只有管理員和開發人員可以新增包含中繼資料的屬性或欄位。 使用者可以將中繼資料填入現有欄位。
 
@@ -36,7 +37,7 @@ ht-degree: 10%
 
 * 您可以運用[[!DNL Experience Manager Assets]的中繼資料描述檔](/help/assets/metadata-config.md#metadata-profiles)功能，在資產上傳至DAM時自動新增中繼資料。
 
-## 在[!DNL Experience Manager Assets] {#add-edit-metadata}中添加或編輯元資料
+## 在[!DNL Experience Manager Assets]中添加或編輯元資料 {#add-edit-metadata}
 
 若要在[!DNL Assets]使用者介面中編輯資產的中繼資料，請執行下列步驟：
 
@@ -62,7 +63,7 @@ ht-degree: 10%
 
 [技術要求中所述的平台和檔案格式支援並啟用XMP回寫。](/help/sites-deploying/technical-requirements.md)
 
-## 編輯多個資產的中繼資料屬性{#editing-metadata-properties-of-multiple-assets}
+## 編輯多個資產的中繼資料屬性 {#editing-metadata-properties-of-multiple-assets}
 
 [!DNL Adobe Enterprise Manager Assets] 可讓您同時編輯多個資產的中繼資料，以便快速將通用中繼資料變更大量傳播至資產。您也可以大量編輯多個集合的中繼資料。 使用「屬性」頁面，對多個資產或集合執行中繼資料變更：
 
@@ -89,7 +90,7 @@ ht-degree: 10%
 >
 >對於單值欄位，即使您選擇「附加模式」，新元資料也不會附加到欄位中的現 **[!UICONTROL 有值]**。
 
-## 導入元資料{#import-metadata}
+## 匯入中繼資料 {#import-metadata}
 
 [!DNL Assets] 可讓您使用CSV檔案大量匯入資產中繼資料。您可以匯入CSV檔案，針對最近上傳的資產或現有資產執行大量更新。 您也可以從協力廠商系統以CSV格式大量內嵌資產中繼資料。
 
@@ -116,13 +117,13 @@ ht-degree: 10%
 
 1. 若要驗證匯入是否正確，請導覽至資產的[!UICONTROL 屬性]頁面，並驗證欄位中的值。
 
-若要在匯入中繼資料時新增日期和時間戳記，請對日期和時間使用`YYYY-MM-DDThh:mm:ss.fff-00:00`格式。 日期和時間以`T`分隔， `hh`以24小時格式表示小時， `fff`為納秒，而`-00:00`為時區偏移。 例如， `2020-03-26T11:26:00.000-07:00`是2020年3月26日，太平洋時間11:26:00.000 AM。
+若要在匯入中繼資料時新增日期和時間戳記，請對日期和時間使用`YYYY-MM-DDThh:mm:ss.fff-00:00`格式。 日期和時間以`T`分隔， `hh`以24小時格式表示小時， `fff`為納秒，而`-00:00`為時區偏移。 例如， `2020-03-26T11:26:00.000-07:00`是2020年3月26日11:26:00.000 AM PST時間。
 
 >[!CAUTION]
 >
 >如果日期格式與`YYYY-MM-DDThh:mm:ss.fff-00:00`不符，則不會設定日期值。 匯出的中繼資料CSV檔案的日期格式為`YYYY-MM-DDThh:mm:ss-00:00`格式。 如果要導入它，請通過添加以`fff`表示的納秒值將其轉換為可接受的格式。
 
-## 導出元資料{#export-metadata}
+## 匯出中繼資料 {#export-metadata}
 
 您可以將多個資產的中繼資料匯出為CSV格式。 中繼資料會以非同步方式匯出，不會影響系統的效能。 若要匯出中繼資料，[!DNL Experience Manager]會遍歷資產節點`jcr:content/metadata`及其子節點的屬性，並將中繼資料屬性匯出為CSV檔案。
 
@@ -151,11 +152,11 @@ ht-degree: 10%
 
    *圖：對話方塊，下載包含大量匯出之中繼資料的CSV檔案。*
 
-## 編輯集合的元資料{#collections-metadata}
+## 編輯集合的中繼資料 {#collections-metadata}
 
 如需詳細資訊，請參閱[檢視及編輯系列中繼資料](/help/assets/manage-collections.md#view-edit-collection-metadata)及[大量編輯多個系列的中繼資料](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk)。
 
-## 將元資料配置檔案應用於資料夾{#applying-a-metadata-profile-to-folders}
+## 將中繼資料設定檔套用至資料夾 {#applying-a-metadata-profile-to-folders}
 
 <!-- TBD: Review this overview.
 -->
@@ -178,7 +179,7 @@ ht-degree: 10%
 
 若資料夾中已有您之後已變更的現有視訊設定檔，您可以重新處理該資料夾中的資產。 請參閱在編輯資料夾的處理設定檔](processing-profiles.md#reprocessing-assets)後，重新處理資料夾中的資產。[
 
-### 從[!UICONTROL Profiles]用戶介面{#applying-metadata-profiles-to-folders-from-profiles-user-interface}將元資料配置檔案應用於資料夾
+### 從[!UICONTROL Profiles]用戶介面將元資料配置檔案應用到資料夾 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 請依照步驟套用中繼資料設定檔：
 
@@ -186,7 +187,7 @@ ht-degree: 10%
 1. 選取您要套用至資料夾或多個資料夾的中繼資料設定檔。
 1. 按一下「將中繼資料描述檔套用至資料夾」]**，然後選取您要用來接收新上傳資產的資料夾或多個資料夾，然後按一下「**[!UICONTROL  Done ]**」。**[!UICONTROL &#x200B;已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
-### 從[!UICONTROL 屬性] {#applying-metadata-profiles-to-folders-from-properties}將元資料配置檔案應用於資料夾
+### 從[!UICONTROL 屬性]將元資料配置檔案應用到資料夾 {#applying-metadata-profiles-to-folders-from-properties}
 
 1. 在左側邊欄中，按一下&#x200B;**[!UICONTROL Assets]**，然後導覽至您要套用中繼資料描述檔的資料夾。
 1. 在資料夾中，按一下複選標籤以選取該標籤，然後按一下「屬性」****。
@@ -201,13 +202,13 @@ ht-degree: 10%
 
 For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
-### 從資料夾{#removing-a-metadata-profile-from-folders}中刪除元資料配置檔案
+### 從資料夾中移除中繼資料描述檔 {#removing-a-metadata-profile-from-folders}
 
 從資料夾移除中繼資料描述檔時，任何子資料夾都會自動從其父資料夾移除描述檔。 不過，資料夾內發生的檔案處理仍維持不變。
 
 您可以從&#x200B;**[!UICONTROL Tools]**&#x200B;菜單內的資料夾或從資料夾內的&#x200B;**[!UICONTROL Properties]**&#x200B;中刪除元資料配置檔案。
 
-#### 透過設定檔使用者介面{#removing-metadata-profiles-from-folders-via-profiles-user-interface}從資料夾移除中繼資料設定檔
+#### 透過設定檔使用者介面，從資料夾移除中繼資料設定檔 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
 1. 按一下[!DNL Experience Manager]標誌，然後導覽至&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**。
 1. 選取要從資料夾或多個資料夾中移除的中繼資料設定檔。
@@ -215,13 +216,13 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 
    您可以確認中繼資料描述檔不再套用至資料夾，因為資料夾名稱下方不再顯示該名稱。
 
-#### 透過屬性{#removing-metadata-profiles-from-folders-via-properties}從資料夾移除中繼資料描述檔
+#### 透過屬性從資料夾移除中繼資料描述檔 {#removing-metadata-profiles-from-folders-via-properties}
 
 1. 按一下[!DNL Experience Manager]標誌並導覽&#x200B;**[!UICONTROL Assets]**，然後導覽至您要移除中繼資料描述檔的資料夾。
 1. 在資料夾中，按一下複選標籤以選取該標籤，然後按一下「屬性」****。
 1. 選擇「元 **[!UICONTROL 資料描述檔]** 」標籤，然後從下拉式選單中選 **[!UICONTROL 擇「無]** 」，然後按一下「 **[!UICONTROL 儲存]**」。已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
-## 提示和限制{#best-practices-limitations}
+## 提示和限制 {#best-practices-limitations}
 
 * 透過使用者介面更新中繼資料會變更`dc`命名空間中的中繼資料屬性。 透過HTTP API進行的任何更新都會變更`jcr`命名空間中的中繼資料屬性。 請參閱[如何使用HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata)更新中繼資料。
 
