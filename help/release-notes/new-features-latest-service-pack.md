@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
+source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
 workflow-type: tm+mt
-source-wordcount: '3680'
+source-wordcount: '3674'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
    * 對比（與背景）各種編輯器中的文字、預留位置文字和控制項。
    * 依螢幕助讀程式的協助工具和旁白。
 
-* 智慧影像處理DPR（設備像素比率）和網路頻寬優化使您能夠高效地提供最佳質量影像；在具有高解析度顯示器且網路頻寬受限的設備上。 如需詳細資訊和時間軸，請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)。
+* 借助智慧影像處理DPR（設備像素比率）和網路頻寬優化，在具有高解析度顯示器和受限網路頻寬的設備上高效地提供最佳質量影像。 請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)。
 
 * [!DNL Dynamic Media] 傳送(`fmt` URL修飾元)現在支援新一代影像格式AVIF（AV1影像格式）。有關更多詳細資訊和時間軸，請參閱[影像提供和呈現API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
 
