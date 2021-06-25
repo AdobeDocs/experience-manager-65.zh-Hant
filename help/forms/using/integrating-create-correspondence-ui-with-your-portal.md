@@ -45,7 +45,7 @@ ht-degree: 4%
 
 ## 內嵌資料型調用{#inline-data-based-invocation}
 
-呼叫「建立通信」應用程式的另一種（也是更安全）方式可能是，在https://&#39;[server]:[port]`/[contextPath]/aem/forms/createcorrespondence.html點擊URL，同時傳送參數和資料以作為POST請求呼叫「建立通信」應用程式（將其隱藏在最終用戶面前）。 這也表示您現在可以內嵌傳遞建立通信應用程式的XML資料（作為相同請求的一部分，使用cmData參數），這在先前的方法中不可能/不理想。
+呼叫「建立通信」應用程式的另一種（也是更安全）方式可能是，在https://&#39;[server]:[port]&grave;/[contextPath]/aem/forms/createcorrespondence.html點擊URL，同時傳送參數和資料以作為POST請求呼叫「建立通信」應用程式（將其隱藏在最終用戶面前）。 這也表示您現在可以內嵌傳遞建立通信應用程式的XML資料（作為相同請求的一部分，使用cmData參數），這在先前的方法中不可能/不理想。
 
 ### 指定字母{#parameters-for-specifying-letter}的參數
 
