@@ -2,17 +2,18 @@
 title: 支援的檔案格式和MIME類型
 description: ' [!DNL Assets] and [!DNL Dynamic Media] 支援的檔案格式和MIME類型以及每種格式支援的功能。'
 contentOwner: AG
+mini-toc-levels: 1
 role: Business Practitioner, Administrator
 feature: 資產管理，轉譯
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
 source-wordcount: '1582'
 ht-degree: 10%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}中支援的格式
+# [!DNL Adobe Experience Manager Assets]中支援的格式 {#assets-supported-formats}
 
 [!DNL Experience Manager Assets] 支援多種檔案格式，而且每種功能對不同MIME類型的支援各不相同。要將[!DNL Assets]與其他符合標準的數字資產管理(DAM)解決方案和案頭軟體整合，請使用Adobe的[!DNL Extensible Metadata Platform](XMP)。
 
@@ -24,7 +25,7 @@ ht-degree: 10%
 | * | 支援附加功能 |
 | - | 不適用 |
 
-## [!DNL Experience Manager] {#supported-raster-image-formats}中支援的點陣影像格式
+## [!DNL Experience Manager]中支援的光柵影像格式 {#supported-raster-image-formats}
 
 [!DNL Assets]中支援的光柵影像格式包括：
 
@@ -71,7 +72,7 @@ ht-degree: 10%
 
 * 對於EPS檔案， PostScript文檔結構約定(PS-Adobe)3.0版或更新版本支援元資料回寫。
 
-## 支援的3D格式{#support-3d-formats}
+## 支援的3D格式 {#support-3d-formats}
 
 支援下列3D格式清單。
 
@@ -86,7 +87,7 @@ ht-degree: 10%
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
 | USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
 
-## Dynamic Media {#unsupported-image-formats-dynamic-media}中不支援的點陣影像格式
+## Dynamic Media不支援的點陣影像格式 {#unsupported-image-formats-dynamic-media}
 
 下列清單說明Dynamic Media支援的點陣影像檔案格式的子類型，這些格式為&#x200B;*not*。
 
@@ -117,7 +118,7 @@ The following table describes the sub-types of raster image formats that are *no
 |  | Files that have Lab color space. | Use ExifTool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
 -->
 
-## 支援的PDF模擬轉譯器庫{#supported-pdf-rasterizer-library}
+## 支援的PDF模擬轉譯器程式庫 {#supported-pdf-rasterizer-library}
 
 Adobe PDF模擬轉譯器程式庫會為大型且內容密集型[!DNL Adobe Illustrator]和PDF檔案產生高品質的縮圖和預覽。 Adobe建議針對下列項目使用PDF模擬轉譯器程式庫：
 
@@ -127,7 +128,7 @@ Adobe PDF模擬轉譯器程式庫會為大型且內容密集型[!DNL Adobe Illus
 
 請參閱[使用PDF模擬轉譯器](aem-pdf-rasterizer.md)。
 
-## 支援的影像轉碼程式庫{#supported-image-transcoding-library}
+## 支援的影像轉碼程式庫 {#supported-image-transcoding-library}
 
 Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉碼、重新取樣和調整大小）的影像處理解決方案。
 
@@ -135,11 +136,11 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 請參閱[影像轉碼程式庫](imaging-transcoding-library.md)。
 
-## 支援的相機原始資料{#supported-camera-raw}
+## 支援的相機原始 {#supported-camera-raw}
 
 [!DNL Adobe Camera Raw]程式庫可讓[!DNL Assets]內嵌原始影像。 請參閱[Camera Raw支援](camera-raw.md)。
 
-## 支援的[!DNL Assets]文檔格式{#supported-document-formats}
+## 支援的[!DNL Assets]文檔格式 {#supported-document-formats}
 
 資產管理功能支援的文檔格式如下：
 
@@ -164,7 +165,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | QXP | ✓ | ✓ | - | - | - | - | - | - |
 | EPUB | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
 
-## Dynamic Media {#supported-document-formats-dynamic-media}中支援的檔案格式
+## Dynamic Media中支援的檔案格式 {#supported-document-formats-dynamic-media}
 
 | 格式 | 上傳<br>（輸入格式） | 建立<br>影像<br>預設集<br>（輸出格式） | 預覽<br> dynamic<br>轉譯 | 傳送<br> dynamic<br>轉譯 | 下載<br> dynamic<br>轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -180,7 +181,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 * 若要使用Dynamic Media為INDD檔案生成動態轉譯，請參閱[InDesign(INDD)檔案格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
 
-## 支援的多媒體格式{#supported-multimedia-formats}
+## 支援的多媒體格式 {#supported-multimedia-formats}
 
 |  | 儲存 | 中繼資料管理 | 中繼資料擷取 | 縮圖產生 | FFmpeg轉碼 |
 |:---|:---:|:---:|:---:|:---:|:---:|
@@ -203,7 +204,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | WMV | ✓ | ✓ | - | * | * |
 | SWF | ✓ | ✓ | - | - | - |
 
-## Dynamic Media支援的轉碼{#supported-input-video-formats-for-dynamic-media-transcoding}輸入視訊格式
+## Dynamic Media支援的輸入視訊格式，可轉碼 {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | 影片副檔名 | 容器 | 建議的視訊轉碼器 | 不支援的視訊轉碼器 |
 |---|---|---|---|
@@ -224,7 +225,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | FLAC | 原生片段 | 免費無損音頻編解碼器 | - |
 | MJ2 | 動作JPEG 2000 | 運動JPEG 2000編解碼器 | - |
 
-## 支援的存檔格式{#supported-archive-formats}
+## 支援的封存格式 {#supported-archive-formats}
 
 下表說明支援的封存格式和通用DAM工作流程的適用性。
 
@@ -236,7 +237,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ | - |
 | ZIP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-## 其他支援的格式{#other-supported-formats}
+## 其他支援的格式 {#other-supported-formats}
 
 以下說明幾種特定檔案格式的一般DAM功能的適用性。
 
@@ -252,7 +253,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 >
 >上傳和分發JavaScript檔案可能是安全的，也可能不安全。 如有需要，可使用覆蓋來防止使用者上傳JS檔案。
 
-## 支援的MIME類型{#supported-mime-types}
+## 支援的MIME類型 {#supported-mime-types}
 
 預設情況下， [!DNL Experience Manager]會使用副檔名檢測檔案類型。 [!DNL Experience Manager] 可從檔案的內容中偵測。對於後者，在[!DNL Experience Manager] Web控制台的[!UICONTROL Day CQ DAM Mime Type Service]中，選取[!UICONTROL 從內容]檢測MIME選項。
 
