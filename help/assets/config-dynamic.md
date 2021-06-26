@@ -1,6 +1,7 @@
 ---
 title: 配置Dynamic Media — 混合模式
 description: 了解如何設定Dynamic Media — 混合模式。
+mini-toc-levels: 3
 uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -12,14 +13,14 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 配置，混合模式
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 48463a72108621e94f1c50cf43f911794ec759dd
 workflow-type: tm+mt
-source-wordcount: '7843'
+source-wordcount: '7838'
 ht-degree: 1%
 
 ---
 
-# 配置Dynamic Media — 混合模式{#configuring-dynamic-media-hybrid-mode}
+# 配置Dynamic Media — 混合模式 {#configuring-dynamic-media-hybrid-mode}
 
 Dynamic Media-Hybrid必須啟用並設定為使用。 根據您的使用案例，Dynamic Media有數個[支援的設定](#supported-dynamic-media-configurations)。
 
@@ -52,15 +53,15 @@ Dynamic Media-Hybrid必須啟用並設定為使用。 根據您的使用案例�
 
 如果您是Dynamic Media的客戶，則必須使用混合式傳送作為所有Dynamic Media內容的傳送機制。
 
-## 影片的混合發佈架構{#hybrid-publishing-architecture-for-videos}
+## 影片的混合發佈架構 {#hybrid-publishing-architecture-for-videos}
 
 ![chlimage_1-506](assets/chlimage_1-428.png)
 
-## 影像的混合發佈架構{#hybrid-publishing-architecture-for-images}
+## 影像混合發佈架構 {#hybrid-publishing-architecture-for-images}
 
 ![chlimage_1-507](assets/chlimage_1-507.png)
 
-## 支援的Dynamic Media配置{#supported-dynamic-media-configurations}
+## 支援的Dynamic Media設定 {#supported-dynamic-media-configurations}
 
 後面的設定任務參考下列術語：
 
@@ -187,25 +188,25 @@ Dynamic Media-Hybrid必須啟用並設定為使用。 根據您的使用案例�
 
    這些記錄檔僅在啟用Dynamic Media時使用。 從`system/console/status-Bundlelist`頁面產生的&#x200B;**下載完整**&#x200B;套件中未包含這些檔案；如果您有Dynamic Media問題，在呼叫客戶支援時，請將這兩個記錄附加至問題。
 
-### 如果安裝了Experience Manager到其他埠或上下文路徑…… {#if-you-installed-aem-to-a-different-port-or-context-path}
+### 如果安裝了Experience Manager到不同的埠或上下文路徑…… {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-如果要將[Experience Manager部署到應用程式伺服器](/help/sites-deploying/application-server-install.md)並啟用了Dynamic Media，則必須在外部化程式中配置&#x200B;**self**&#x200B;域。 否則，資產的縮圖產生無法對Dynamic Media資產正常運作。
+如果要將[Experience Manager部署到應用程式伺服器](/help/sites-deploying/application-server-install.md)並啟用了Dynamic Media，則必須在外部化程式中配置&#x200B;**self-domain**。 否則，資產的縮圖產生無法對Dynamic Media資產正常運作。
 
-此外，如果在不同的埠或上下文路徑上運行快速啟動，則還必須更改&#x200B;**self**&#x200B;域。
+此外，如果在不同的埠或上下文路徑上運行快速入門，還必須更改&#x200B;**self-domain**。
 
 啟用Dynamic Media時，會使用Dynamic Media產生影像資產的靜態縮圖轉譯。 為了讓Dynamic Media能正常產生縮圖，Experience Manager必須對其本身執行URL要求，且必須知道連接埠號和內容路徑。
 
 Experience Manager:
 
-* [externalizer](/help/sites-developing/externalizer.md)中的&#x200B;**self**&#x200B;域用於檢索埠號和上下文路徑。
-* 如果未配置&#x200B;**self**&#x200B;域，則從Jetty HTTP服務中檢索埠號和上下文路徑。
+* [externalizer](/help/sites-developing/externalizer.md)中的&#x200B;**self-domain**&#x200B;用於檢索埠號和上下文路徑。
+* 如果未配置&#x200B;**self-domain**，則從Jetty HTTP服務中檢索埠號和上下文路徑。
 
-在Experience ManagerQuickStart WAR部署中，埠號和上下文路徑無法派生，因此必須配置&#x200B;**self**&#x200B;域。 有關如何配置&#x200B;**self**&#x200B;域的[外部化程式文檔](/help/sites-developing/externalizer.md)。
+在Experience ManagerQuickStart WAR部署中，埠號和上下文路徑無法派生，因此必須配置&#x200B;**self-domain**。 有關如何配置&#x200B;**self-domain**&#x200B;的[外部化程式文檔](/help/sites-developing/externalizer.md)。
 
 >[!NOTE]
-在[Experience Manager快速入門單機部署](/help/sites-deploying/deploy.md)中，通常不需要配置&#x200B;**self**&#x200B;域，因為埠號和上下文路徑可以自動配置。 但是，如果所有網路介面都關閉，則必須配置&#x200B;**self**&#x200B;域。
+在[Experience Manager快速入門單機部署](/help/sites-deploying/deploy.md)中，通常不需要配置&#x200B;**self-domain**，因為埠號和上下文路徑可以自動配置。 但是，如果所有網路介面都關閉，則必須配置&#x200B;**self-domain**。
 
-## 禁用Dynamic Media {#disabling-dynamic-media}
+## 停用Dynamic Media  {#disabling-dynamic-media}
 
 Dynamic Media預設未啟用。 不過，如果您先前已啟用Dynamic Media，稍後可將其關閉。
 
@@ -227,7 +228,7 @@ Dynamic Media預設未啟用。 不過，如果您先前已啟用Dynamic Media�
    停用Dynamic Media執行模式後，會自動略過產生`cqdam.pyramid.tiff`轉譯的工作流程步驟。 也會停用動態轉譯支援和其他Dynamic Media功能。
    另請注意，當設定Experience Manager伺服器後停用Dynamic Media執行模式時，在該執行模式下上傳的所有資產現在都無效。
 
-## （可選）將Dynamic Media預設集和設定從6.3移轉至6.5零停機{#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## （選用）將Dynamic Media預設集和設定從6.3移轉至6.5，無停機時間 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 如果您要升級Experience Manager- Dynamic Media從6.3升級至6.5（現在包含零停機部署的功能），您必須執行下列curl命令。 命令將所有預設集和配置從`/etc`遷移到CRXDE Lite中的`/conf`。
 
@@ -261,7 +262,7 @@ Dynamic Media影像傳送的運作方式是從「Experience Manager作者」發�
 超過最大記憶體限制的映像被拒絕。
 要更改PTIFF建立的記憶體限制，請導航到&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web控制台]** > **[!UICONTROL Adobe CQ Scene7 PTiffManager]**&#x200B;並更改&#x200B;**[!UICONTROL maxMemory]**&#x200B;值。
 
-### 設定驗證{#setting-up-authentication}
+### 設定驗證 {#setting-up-authentication}
 
 在作者上設定復寫驗證，以便您可將影像復寫至Dynamic Media影像傳送服務。 您先取得KeyStore，然後將其儲存在&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;使用者下，並加以設定。 在配置過程中，您的公司管理員收到了一封歡迎電子郵件，其中包含KeyStore檔案和必要的憑據。 如果您未收到此資訊，請聯絡Adobe客戶服務。
 
@@ -319,7 +320,7 @@ Dynamic Media影像傳送的運作方式是從「Experience Manager作者」發�
 
 1. 點選&#x200B;**[!UICONTROL 確定]**。
 
-### 驗證Dynamic Media的複製代理{#validating-the-replication-agent-for-dynamic-media}
+### 驗證Dynamic Media的復寫代理 {#validating-the-replication-agent-for-dynamic-media}
 
 若要驗證Dynamic Media的復寫代理，請執行下列動作：
 
@@ -350,7 +351,7 @@ Replication test succeeded
 
 設定驗證時，以下是一些您可能遇到的問題及其解決方案。 檢查這些問題之前，請確定您已設定復寫。
 
-#### 問題：HTTP狀態代碼401，帶消息 — 需要授權{#problem-http-status-code-with-message-authorization-required}
+#### 問題：HTTP狀態代碼401，帶消息 — 需要授權 {#problem-http-status-code-with-message-authorization-required}
 
 此問題可能是由於未能為`dynamic-media-replication`用戶設定KeyStore所致。
 
@@ -376,7 +377,7 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
 **解決方**
 案：檢查 `KeyStore` 是否已儲存 **至dynamic-media-** replicationuser，且已提供正確的密碼。
 
-#### 問題：無法解密密鑰 — 無法解密資料{#problem-could-not-decrypt-key-could-not-decrypt-data}
+#### 問題：無法解密密鑰 — 無法解密資料 {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
 ```xml
 Replication test to s7delivery:https://<localhost>:8580/is-publish/
@@ -414,7 +415,7 @@ java.io.IOException: Failed to execute request 'https://replicate-na.assetsadobe
 **解決方案：**
 請確定「Experience Manager作者」上的Java™程式將系統屬 `-Djavax.net.ssl.trustStore=` 性設為有效的信任存放區。
 
-#### 問題：KeyStore未設定或未初始化{#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
+#### 問題：KeyStore未設定或未初始化 {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
 
 此問題可能是由Hotfix或覆寫dynamic-media-user或金鑰存放區節點的Feature Pack所造成。
 
@@ -474,7 +475,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. 在頁面的左上角附近，點選「**[!UICONTROL Save All]**」。
 
-### 測試配置{#testing-your-configuration}
+### 測試您的配置 {#testing-your-configuration}
 
 Adobe建議您對配置執行端對端測試。
 
@@ -498,7 +499,7 @@ Adobe建議您對配置執行端對端測試。
 
 另一種測試已傳送資產的方法，是將req=exists附加至URL。
 
-## 設定Dynamic MediaCloud Services{#configuring-dynamic-media-cloud-services}
+## 設定Dynamic MediaCloud Services {#configuring-dynamic-media-cloud-services}
 
 Dynamic MediaCloud Service支援混合發佈及傳送影像、視訊、視訊分析和視訊編碼等功能。
 
@@ -521,7 +522,7 @@ Dynamic MediaCloud Service支援混合發佈及傳送影像、視訊、視訊分
 1. 點選&#x200B;**[!UICONTROL 儲存]**&#x200B;以返回Dynamic Media設定瀏覽器頁面。
 1. 若要存取全域導覽主控台，請點選Experience Manager標誌。
 
-## 設定視訊報表{#configuring-video-reporting}
+## 設定視訊報表 {#configuring-video-reporting}
 
 您可以使用Dynamic Media Hybrid在多個Experience Manager安裝間設定視訊報告。
 
@@ -533,7 +534,7 @@ Dynamic MediaCloud Service支援混合發佈及傳送影像、視訊、視訊分
 1. 在您設定Dynamic Media設定（6.3之前）之前，將Video Analytics預設集套件安裝至任何&#x200B;***new***&#x200B;製作節點&#x200B;***。***
 1. 驗證和調試包安裝。
 
-### 在設定第一個製作節點{#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}後，建立Video Analytics預設集套件
+### 在設定第一個製作節點後建立Video Analytics預設集套件 {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
 完成此任務後，您會有包含Video Analytics預設集的套件檔案。 這些預設集包含報表套裝、追蹤伺服器、追蹤命名空間，以及Experience Cloud組織ID（若有）。
 
@@ -547,7 +548,7 @@ Dynamic MediaCloud Service支援混合發佈及傳送影像、視訊、視訊分
 1. 建立套件。
 1. 下載或共用Video Analytics預設集套件，以便與後續的新製作節點共用。
 
-### 先安裝Video Analytics預設集套件，再設定更多製作節點{#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### 先安裝Video Analytics預設集套件，再設定更多製作節點 {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 請務必在&#x200B;***之前完成此工作*** ，並設定Dynamic Media設定（6.3之前）。 若未這麼做，將會建立另一個未使用的報表套裝。 此外，即使視訊報表仍可正常運作，資料收集仍未最佳化。
 
@@ -557,7 +558,7 @@ Dynamic MediaCloud Service支援混合發佈及傳送影像、視訊、視訊分
 1. 安裝Video Analytics預設集套件。
 1. 設定Dynamic Media設定（6.3之前）。
 
-### 驗證和調試軟體包安裝{#verifying-and-debugging-the-package-installation}
+### 驗證和調試包安裝 {#verifying-and-debugging-the-package-installation}
 
 1. 執行下列任一操作以驗證軟體包，並在必要時調試軟體包安裝：
 
@@ -604,13 +605,13 @@ Analytics預設集，點 **[!UICONTROL 選「工具]**  >資 **[!UICONTROL 產]*
 
    如果在您設定Dynamic Media設定（6.3之前）服務之前執行視訊報表，也會顯示此錯誤。
 
-### 疑難排解視訊報表設定{#troubleshooting-the-video-reporting-configuration}
+### 疑難排解視訊報表設定 {#troubleshooting-the-video-reporting-configuration}
 
 * 安裝期間，有時連線至Analytics API伺服器會逾時。 安裝會重試連線20次，但仍會失敗。 發生此情況時，記錄檔會記錄多個錯誤。 搜尋 `SiteCatalystReportService`.
 * 先不安裝Analytics預設集套件，可能會導致建立新的報表套裝。
 * 從Experience Manager6.3升級至Experience Manager6.4或Experience Manager6.4.1，然後設定Dynamic Media設定（6.3之前），仍會建立報表套裝。 此問題已知且已針對Experience Manager6.4.2修正。
 
-### 關於Video Analytics預設集{#about-the-video-analytics-preset}
+### 關於Video Analytics預設集 {#about-the-video-analytics-preset}
 
 Video Analytics預設集（有時簡稱為分析預設集）會儲存在Dynamic Media中的檢視器預設集旁。 基本上與檢視器預設集相同，但包含用來設定AppMeasurement和視訊心率報表的資訊。
 
@@ -623,7 +624,7 @@ Video Analytics預設集（有時簡稱為分析預設集）會儲存在Dynamic 
 
 Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
 
-## 複製目錄設定{#replicating-catalog-settings}
+## 複製目錄設定 {#replicating-catalog-settings}
 
 透過JCR發佈您自己的預設目錄設定，作為設定程式的一部分。 要複製目錄設定：
 
@@ -638,7 +639,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 1. 點選「**[!UICONTROL 復寫]**」標籤。
 1. 點選&#x200B;**[!UICONTROL 復寫]**。
 
-## 複製查看器預設集{#replicating-viewer-presets}
+## 複製查看器預設集 {#replicating-viewer-presets}
 
 若要透過檢視器預設集傳送&#x200B;*資產，您必須復寫/發佈*&#x200B;檢視器預設集。 (必須啟動&#x200B;*和*所有檢視器預設集，才能取得資產的URL或內嵌程式碼。
 如需詳細資訊，請參閱[發佈檢視器預設集](/help/assets/managing-viewer-presets.md#publishing-viewer-presets) 。
@@ -646,7 +647,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 >[!NOTE]
 依預設，當您選取&#x200B;**[!UICONTROL 轉譯]**&#x200B;時，系統會顯示各種轉譯，當您在資產的詳細資料檢視中選取&#x200B;**[!UICONTROL 檢視器]**&#x200B;時，系統會顯示各種檢視器預設集。 您可以增加或減少顯示的數量。 請參閱[增加顯示](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[的影像預設集數目增加顯示](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)的檢視器預設集數目。
 
-## 篩選複製資產{#filtering-assets-for-replication}
+## 篩選復寫資產 {#filtering-assets-for-replication}
 
 在非Dynamic Media部署中，您會從Experience Manager製作環境復寫&#x200B;*所有*&#x200B;資產（包括影像和視訊）至Experience Manager發佈節點。 此工作流程是必要的，因為Experience Manager發佈伺服器也會傳送資產。
 
@@ -660,9 +661,9 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 
 篩選器可讓您透過&#x200B;*排除*&#x200B;資產，避免複製到Experience Manager發佈節點。
 
-### 使用復寫的預設資產篩選器{#using-default-asset-filters-for-replication}
+### 對復寫使用預設資產篩選器 {#using-default-asset-filters-for-replication}
 
-如果您在生產&#x200B;**或**(2)影像和視訊中使用Dynamic Media for(1)影像，則可以使用Adobe依原樣提供的預設篩選器。 下列篩選器預設為作用中：
+如果您在生產&#x200B;*或*(2)影像和視訊中使用Dynamic Media(1)影像，則可使用Adobe依原樣提供的預設篩選器。 下列篩選器預設為作用中：
 
 <table>
  <tbody>
@@ -708,7 +709,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 >[!NOTE]
 篩選器會套用至MIME類型，且不能是路徑專屬的。
 
-### 設定僅限視訊部署的資產篩選器{#setting-up-asset-filters-for-video-only-deployments}
+### 為僅限視訊的部署設定資產篩選器 {#setting-up-asset-filters-for-video-only-deployments}
 
 如果您只將Dynamic Media用於視訊，請依照下列步驟設定復寫的資產篩選器：
 
@@ -725,7 +726,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 
 這些步驟會設定Experience Manager發佈例項，以傳送視訊海報影像和播放所需的視訊中繼資料，而視訊本身是由Dynamic MediaCloud Service傳送。 篩選器也會從復寫中排除原始視訊和靜態縮圖轉譯，這在發佈執行個體上是不需要的。
 
-### 為非生產部署的映像設定資產篩選器{#setting-up-asset-filters-for-imaging-in-non-production-deployments}
+### 為非生產部署的影像處理設定資產篩選器 {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
 如果您在非生產部署中使用Dynamic Media進行影像處理，請依照下列步驟設定復寫的資產篩選器：
 
@@ -752,7 +753,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
-### 自訂復寫的資產篩選器{#customizing-asset-filters-for-replication}
+### 自訂復寫的資產篩選器 {#customizing-asset-filters-for-replication}
 
 （可選）要自訂復寫的資產篩選器：
 
@@ -810,7 +811,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 
 如果只想複製原始檔案，則輸入`+original`。
 
-## 配置Dynamic Media影像伺服器設定{#configuring-dynamic-media-image-server-settings}
+## 配置Dynamic Media Image Server設定 {#configuring-dynamic-media-image-server-settings}
 
 設定Dynamic Media Image Server包括編輯Adobe CQ Scene7 ImageServer套件組合和Adobe CQ Scene7 PlatformServer套件組合。
 
@@ -889,7 +890,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您
    | 快取最大大小 | 200000000 | 響應快取的最大大小（以位元組為單位）。 |
    | 快取最大條目數 | 100000 | 快取中允許的最大條目數。 |
 
-### 預設清單設定{#default-manifest-settings}
+### 預設資訊清單設定 {#default-manifest-settings}
 
 預設資訊清單可讓您設定用於產生Dynamic Media傳送回應的預設值。 您可以微調質量（JPEG質量、解析度、重採樣模式）、快取（過期），並防止渲染太大的影像(defaultpix、defaultthumbpix、maxpix)。
 
@@ -964,7 +965,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您
  </tbody>
 </table>
 
-## 設定Dynamic Media色彩管理{#configuring-dynamic-media-color-management}
+## 設定Dynamic Media色彩管理 {#configuring-dynamic-media-color-management}
 
 Dynamic Media色彩管理可讓您為預覽對資產進行色彩校正。
 
@@ -996,7 +997,7 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
 
 1. 安裝功能套件。
 
-### 配置預設顏色配置檔案{#configuring-the-default-color-profiles}
+### 設定預設顏色設定檔 {#configuring-the-default-color-profiles}
 
 安裝Feature Pack後，請配置適當的預設顏色配置檔案，以在請求RGB或CMYK影像資料時啟用顏色校正。
 
@@ -1096,7 +1097,7 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
    <th><p>說明</p> </th>
   </tr>
   <tr>
-   <td>AdobeRGB</td>
+   <td>Adobe RGB</td>
    <td>RGB</td>
    <td>Adobe RGB市（1998年）</td>
   </tr>
@@ -1138,12 +1139,12 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
   <tr>
    <td>EuroscaleCobated</td>
    <td>CMYK</td>
-   <td>塗有V2的歐洲標準</td>
+   <td>歐元級塗層v2</td>
   </tr>
   <tr>
    <td>EuroscaleUncobated</td>
    <td>CMYK</td>
-   <td>歐洲標準無塗層v2</td>
+   <td>歐元級無塗層v2</td>
   </tr>
   <tr>
    <td>JapanColorCobated</td>
@@ -1270,7 +1271,7 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
 * 傳回RGB輸出的動態轉譯，會以*sRGB *色彩空間傳回。
 * 傳回CMYK輸出的動態轉譯，會在&#x200B;*WebCobated*&#x200B;色域中傳回。
 
-## 傳送資產{#delivering-assets}
+## 傳遞資產 {#delivering-assets}
 
 完成上述所有工作後，即會從影像或視訊服務提供啟動的Dynamic Media資產。 在Experience Manager中，此功能會顯示在&#x200B;**[!UICONTROL 複製影像URL]**、**[!UICONTROL 複製檢視器URL]**、**[!UICONTROL 內嵌檢視器代碼]**&#x200B;和WCM中。
 
@@ -1315,6 +1316,6 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
  </tbody>
 </table>
 
-### WCM Dynamic Media和互動式媒體元件{#wcm-dynamic-media-and-interactive-media-components}
+### WCM Dynamic Media和互動式媒體元件 {#wcm-dynamic-media-and-interactive-media-components}
 
 參考Dynamic Media和互動式媒體元件的WCM頁面參考傳送服務。
