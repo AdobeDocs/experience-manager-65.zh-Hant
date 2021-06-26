@@ -11,9 +11,9 @@ docset: aem65
 feature: 互動影像
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4284'
 ht-degree: 1%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 1%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
 
-## 觀看互動式影像橫幅的建立方式{#watch-how-interactive-image-banners-are-created}
+## 觀看互動式影像橫幅的建立方式 {#watch-how-interactive-image-banners-are-created}
 
 播放[如何建立互動式影像橫幅的逐步說明](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)（10分鐘33秒）。 您也可以了解如何預覽、編輯和傳送互動式影像橫幅。
 
-## 快速入門：互動式影像{#quick-start-interactive-images}
+## 快速入門：互動式影像 {#quick-start-interactive-images}
 
 下列逐步工作流程說明旨在協助您在Adobe Experience Manager Assets中快速上手並執行互動式影像。
 
@@ -55,19 +55,19 @@ ht-degree: 1%
 
 1. **上傳影像橫幅**  — 上傳您要進行互動的影像橫幅。請參閱[上傳影像橫幅](#uploading-an-image-banner)。
 
-1. **將熱點新增至影像橫幅**  — 新增一或多個熱點至影像橫幅，並將每個熱點與超連結、快速檢視或體驗片段等動作建立關聯。添加熱點後，將通過發佈交互影像來完成此任務。
+1. **將熱點添加到影像橫幅**  — 將一個或多個熱點添加到影像橫幅中，並將每個熱點與超連結、快速視圖或體驗片段等操作關聯。添加熱點後，將通過發佈交互影像來完成此任務。
 
    * 請參閱[向影像橫幅添加熱點](#adding-hotspots-to-an-image-banner)。
    * 請參閱[預覽互動式影像](#optional-previewing-interactive-images) — 選用。 如果需要，可以查看可購買橫幅的表示並測試其交互性。
    * 如需如何發佈互動式影像資產的詳細資訊，請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. **以Experience Manager新增互動式影像至您的網站或網站**  — 如果您使用Experience Manager網站或電子商務，或兩者，則可以將互動式影像新增至Experience Manager中的網頁。將互動式媒體元件拖曳至頁面。 請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
+1. **新增互動式影像至您的網站**  — 如果您使用Experience Manager網站或電子商務，或兩者，則可以在Experience Manager中將互動式影像新增至網頁。將互動式媒體元件拖曳至頁面。 請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
    如果您使用Experience Manager資產和獨立式Dynamic Media，您必須複製網站上的內嵌程式碼，然後將其與現有的Quickview整合。 請參閱[整合互動式影像與您的網站](#integrating-an-interactive-image-with-your-website)。
 
    如果您使用協力廠商WCM（網頁內容管理員），您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參閱[將互動式影像與現有Quickview](#integrating-an-interactive-image-with-an-existing-quickview)整合。
 
-## （可選）識別熱點變數{#optional-identifying-hotspot-variables}
+## （可選）識別熱點變數 {#optional-identifying-hotspot-variables}
 
 >[!NOTE]
 >
@@ -165,14 +165,14 @@ ht-degree: 1%
 
 示範網頁有數個產品縮圖，每個縮圖都有標示為「查看更多」的「快速檢視」按鈕。 在Web瀏覽器的偵錯工具仍處於啟用狀態時，按一下每個按鈕並記下記錄的Quickview URL。 啟用頁面上所有的四個產品快速檢視後，您就會有向後端提出的快速檢視請求清單：
 
-* `/datafeed/Men-Windbreaker.json`
-* `/datafeed/Men-SimpleHenley.json`
-* `/datafeed/Men-CamoPullover.json`
-* `/datafeed/Women-QuiltedDownJacket.json`
+* `/datafeed/Male-Windbreaker.json`
+* `/datafeed/Male-SimpleHenley.json`
+* `/datafeed/Male-CamoPullover.json`
+* `/datafeed/Female-QuiltedDownJacket.json`
 
 查看伺服器呼叫時，您會發現產品專屬資訊僅存在於請求路徑中。 您也注意到查詢字串完全未使用，且涉及兩種不同類型的資料片段：
 
-* 第一種是「男」或「女」。 您可以將此稱為「產品類別」。
+* 第一種類型是「男性」或「女性」。 您可以將此稱為「產品類別」。
 * 第二種類型是產品名稱，例如CamoPullover。 您可以假設此資訊為產品SKU。
 
 根據此資訊，整個Quickview URL的模式如下：
@@ -183,7 +183,7 @@ ht-degree: 1%
 
 您現在可以使用Experience Manager資產中的可購買互動式影像功能，上傳影像橫幅並新增熱點。
 
-## （可選）建立互動式影像檢視器預設集{#optional-creating-an-interactive-image-viewer-preset}
+## （可選）建立互動式影像檢視器預設集 {#optional-creating-an-interactive-image-viewer-preset}
 
 您可以選擇使用隨Experience Manager資產提供的預設現成互動式影像檢視器預設集，稱為`Shoppable_Banner`。 或者，您可以建立自己的自訂檢視器預設集以搭配互動式影像使用。
 
@@ -215,7 +215,7 @@ ht-degree: 1%
 
    您現在可以上傳影像橫幅了。
 
-## 上傳影像橫幅{#uploading-an-image-banner}
+## 上傳影像橫幅 {#uploading-an-image-banner}
 
 如果已上傳要使用的影像，請前進到下一步[向影像橫幅添加熱點](#adding-hotspots-to-an-image-banner)。
 
@@ -227,7 +227,7 @@ ht-degree: 1%
 
    您現在可以將熱點添加到影像橫幅中；請參閱下面的下一個任務。
 
-## 將熱點添加到影像橫幅{#adding-hotspots-to-an-image-banner}
+## 向影像橫幅添加熱點 {#adding-hotspots-to-an-image-banner}
 
 可以使用「熱點管理」頁上的編輯器將熱點添加到影像橫幅。
 
@@ -283,7 +283,7 @@ ht-degree: 1%
 
          * 請參閱[識別熱點變數](#optional-identifying-hotspot-variables);您必須定義這些變數。
          * 然後，手動輸入SKU值。 在「SKU值」文字欄位中，輸入產品的SKU（庫存保存單位），這是您提供之每個不同產品或服務的唯一識別碼。 輸入的SKU值會自動填入Quickview模板的變數部分，以便系統知道將點選熱點與特定SKU的Quickview關聯。
-         * （可選）如果「快速檢視」中有您必須用來進一步識別產品的其他變數，請點選「**[!UICONTROL 新增一般變數]**」。 在文字欄位中，指定額外的變數。 例如， `category=Mens`是新增的變數。
+         * （可選）如果「快速檢視」中有您必須用來進一步識別產品的其他變數，請點選「**[!UICONTROL 新增一般變數]**」。 在文字欄位中，指定額外的變數。 例如， `category=Males`是新增的變數。
    * 點選&#x200B;**[!UICONTROL 超連結]**。
 
       * 如果您是Experience Manager網站客戶，請點選或按一下網站選擇器圖示（資料夾）以導覽至URL。 如果您的互動式內容有連結與相對URL，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
@@ -317,7 +317,7 @@ ht-degree: 1%
    >[!NOTE]
    如果您正在使用熱點編輯互動式影像並裁切影像，則會刪除熱點。
 
-### （可選）預覽互動式影像{#optional-previewing-interactive-images}
+### （可選）預覽互動式影像 {#optional-previewing-interactive-images}
 
 您可以使用「預覽」來查看客戶對互動式影像的呈現方式，並測試影像的熱點，以確保它們如預期般運作。
 
@@ -333,11 +333,11 @@ ht-degree: 1%
 1. 在「檢視器」清單中，點選&#x200B;**[!UICONTROL Shopbable_Banner]**&#x200B;或您建立的互動式影像檢視器預設集的名稱。
 1. 如果要測試其相關聯的動作，請點選影像上的熱點。
 
-## 發佈互動式影像資產{#publishing-interactive-image-assets}
+## 發佈互動式影像資產 {#publishing-interactive-image-assets}
 
 如需如何發佈互動式影像資產的詳細資訊，請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 將互動式影像與您的網站{#integrating-an-interactive-image-with-your-website}整合
+## 將互動式影像與您的網站整合 {#integrating-an-interactive-image-with-your-website}
 
 上傳橫幅影像、新增熱點至影像並發佈互動式影像後，您現在可以將其新增至網站頁面。
 
@@ -357,7 +357,7 @@ ht-degree: 1%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-請注意，這三個人的圖片是靜態`IMG`標籤：
+請注意，這三隻雄性的圖片是靜態`IMG`標籤：
 
 ```xml
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
@@ -378,7 +378,7 @@ ht-degree: 1%
 
 您現在可以將互動式影像與網站上現有的Quickview整合。
 
-## 將互動式影像與現有的Quickview {#integrating-an-interactive-image-with-an-existing-quickview}整合
+## 將互動式影像與現有的Quickview整合 {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
 只有當您是獨立Experience Manager資產客戶時，才適用此工作。
