@@ -11,14 +11,14 @@ docset: aem65
 feature: 360 VR 影片
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
 
-# 360/VR視訊{#vr-video}
+# 360/VR影片 {#vr-video}
 
 360度的視頻同時記錄每個方向的觀看。 它們是用全向攝像機或一組攝像機拍攝的。 在平面顯示器上播放期間，使用者可控制觀看角度；行動裝置上的播放通常使用其內建的陀螺控制項。
 
@@ -30,27 +30,27 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
 
 另請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
-## 360 Video in action {#video-in-action}
+## 360影片的實際運作 {#video-in-action}
 
 點選[空間站360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)以開啟瀏覽器窗口並觀看360度視頻。 在視頻播放期間，將滑鼠指針拖到新位置以更改觀看角度。
 
 ![360視頻](assets/6_5_360videoiss_simplified.png)
 *示例來自空間站的視頻幀360*
 
-## 360/VR視訊和Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
+## 360/VR影片和Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
 您可以使用AdobePremier Pro來查看和編輯360/VR素材。 例如，您可以將標誌和文字正確放置在場景中，並套用專為等矩形媒體而設計的效果和轉變。
 
 請參閱[編輯360/VR視訊](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html)。
 
-## 上傳資產以便與360視訊檢視器{#uploading-assets-for-use-with-the-video-viewer}搭配使用
+## 上傳資產以便與360視訊檢視器搭配使用 {#uploading-assets-for-use-with-the-video-viewer}
 
 上傳至Adobe Experience Manager的360個視訊資產在「資產」頁面上會標示為&#x200B;**Multimedia**，與一般視訊資產類似。
 
 ![6_5_360視訊 — ](assets/6_5_360video-selecttopreview.png)
 *selecttopreview在「卡片」檢視中看到已上傳的360視訊資產。資產標籤為多媒體。*
 
-**若要上傳要與360視訊檢視器搭配使用的資產：**
+**上傳要與360視訊檢視器搭配使用的資產：**
 
 1. 已建立專屬於360視訊資產的資料夾。
 1. [將最適化視訊設定檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
@@ -62,7 +62,7 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
    * 理想情況下，您原始的360視訊內容最好具備下列其中一種解析度：
 
       * 1080p - 1920 x 1080，稱為全高清或全高清解析度，或
-      * 2160p - 3840 x 2160，稱為4K、UHD或UltraHD解析度。 這種大螢幕解析度通常在高端電視機和電腦顯示器上。 2160p解析度通常稱為「4K」，因為寬度接近4000像素。 換句話說，它提供的像素是1080p的4倍。
+      * 2160p - 3840 x 2160，稱為4k、UHD或UltraHD解析度。 這種大螢幕解析度通常在高端電視機和電腦顯示器上。 2160p的解析度通常稱為「4k」，因為寬度接近4000像素。 換句話說，它提供的像素是1080p的4倍。
    * [建立自訂適用性視訊設](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) 定檔及更高品質的轉譯。例如，建立包含下列三個設定的適用性視訊設定檔：
 
       * width=auto;height=720;bitrate=2500 kbps
@@ -74,7 +74,7 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
 
 1. [將影片上傳至資料夾](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
-## 覆寫360個視訊的預設外觀比例{#overriding-the-default-aspect-ratio-of-videos}
+## 覆寫360個視訊的預設外觀比例  {#overriding-the-default-aspect-ratio-of-videos}
 
 若要讓上傳的資產符合360視訊檢視器使用的360視訊資格，資產的外觀比例必須為2。
 
@@ -91,7 +91,7 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
 
 首先，上傳360個影片。
 
-## 預覽360視訊{#previewing-video}
+## 預覽360影片 {#previewing-video}
 
 您可以使用「預覽」來查看360影片對客戶的外觀，並確保其如預期般運作。
 
@@ -130,7 +130,7 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
 
 1. 在預覽頁面的右上方附近，點選&#x200B;**[!UICONTROL 關閉]**。
 
-## 發佈360影片{#publishing-video}
+## 發佈360影片 {#publishing-video}
 
 發佈360影片，方便您使用。 發佈360影片會啟用URL和內嵌程式碼。 此外，也會將360視訊發佈至Dynamic Media雲端，與CDN整合，以提供可擴充且高效能的傳遞。
 
