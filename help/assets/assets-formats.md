@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner, Administrator
 feature: 資產管理，轉譯
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1581'
 ht-degree: 10%
 
 ---
@@ -136,7 +136,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 請參閱[影像轉碼程式庫](imaging-transcoding-library.md)。
 
-## 支援的相機原始 {#supported-camera-raw}
+## 支援的Camera Raw {#supported-camera-raw}
 
 [!DNL Adobe Camera Raw]程式庫可讓[!DNL Assets]內嵌原始影像。 請參閱[Camera Raw支援](camera-raw.md)。
 
@@ -211,10 +211,10 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | MP4 | MPEG-4 | H264/AVC（所有配置檔案） | - |
 | MOV, QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Meditrate,Apple動畫 |
 | FLV、F4V | AdobeFlash | H264/AVC, Flix VP6, H263, Sorenson | SWF（向量動畫檔案） |
-| WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft螢幕(MSS2)、Microsoft照片(WVP2) |
+| WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft®螢幕(MSS2)、Microsoft®照片(WVP2) |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
 | M4V | Apple iTunes | H264/AVC | - |
-| AVI | A/V插播 | XVID、DIVX、HDV、MiniDV(DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft Video 1(MS-CRAM) |
+| AVI | A/V插播 | XVID、DIVX、HDV、MiniDV(DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | 奧格夫、奧格 | 奧格 | 蒂奧拉，VP3，狄拉克 | - |
 | MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、松下DVCPro | - |
@@ -251,13 +251,13 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 >[!NOTE]
 >
->上傳和分發JavaScript檔案可能是安全的，也可能不安全。 如有需要，可使用覆蓋來防止使用者上傳JS檔案。
+>上傳和分發JavaScript檔案可能是安全的，也可能不安全。 如有必要，您可以使用覆蓋來防止使用者上傳JS檔案。
 
 ## 支援的MIME類型 {#supported-mime-types}
 
 預設情況下， [!DNL Experience Manager]會使用副檔名檢測檔案類型。 [!DNL Experience Manager] 可從檔案的內容中偵測。對於後者，在[!DNL Experience Manager] Web控制台的[!UICONTROL Day CQ DAM Mime Type Service]中，選取[!UICONTROL 從內容]檢測MIME選項。
 
-支援的MIME類型清單可在`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`的CRXDE Lite中取得。
+支援的MIME類型清單可在`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`的CRXDE Lite中找到。
 
 | 副檔名 | MIME類型/ Internet媒體類型 | 預設jobParam值 | 允許的jobParam值 |
 |---|---|---|---|
