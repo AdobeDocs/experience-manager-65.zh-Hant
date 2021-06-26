@@ -2,6 +2,7 @@
 title: 管理Dynamic Media影像預設集
 description: 了解Dynamic Media影像預設集，並了解如何建立、修改和管理影像預設集
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
+mini-toc-levels: 3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -12,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 影像預設集
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '3853'
+source-wordcount: '3851'
 ht-degree: 8%
 
 ---
@@ -33,7 +34,7 @@ ht-degree: 8%
 >
 >智慧型影像處理可與您現有的影像預設集搭配使用，並會在傳送時的最後毫秒內運用智慧，根據瀏覽器或網路連線速度進一步縮小影像檔案大小。 如需詳細資訊，請參閱[智慧影像](/help/assets/imaging-faq.md)。
 
-## 了解Dynamic Media影像預設集{#understanding-image-presets}
+## 了解Dynamic Media影像預設集 {#understanding-image-presets}
 
 像宏一樣，「影像預設集」是儲存在名稱下的大小調整和格式設定命令的預定義集合。 若要了解「影像預設集」的運作方式，假設您的網站要求每個產品影像以不同大小、不同格式以及案頭和行動傳送的壓縮率顯示。
 
@@ -47,7 +48,7 @@ ht-degree: 8%
 
 管理員可以建立影像預設集。 若要建立影像預設集，您可以從草稿開始，也可以從現有的預設集開始，並以新名稱儲存。
 
-## 管理Dynamic Media影像預設集{#managing-image-presets-1}
+## 管理Dynamic Media影像預設集 {#managing-image-presets-1}
 
 您可以點選或按一下Experience Manager標誌以存取全域導覽主控台，然後點選或按一下「工具」圖示，並導覽至&#x200B;**[!UICONTROL 「資產>影像預設集」]**，以管理Experience Manager中的影像預設集。
 
@@ -67,7 +68,7 @@ ht-degree: 8%
 >
 >當您在資產的「詳細資料檢視」中選取「**[!UICONTROL 轉譯]**」時，系統會顯示各種轉譯。 您可以增加或減少顯示的影像預設集數目。 請參閱[增加顯示](#increasing-or-decreasing-the-number-of-image-presets-that-display)的影像預設集數目。
 
-### 智慧裁切、Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式{#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+### 智慧型裁切、Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式 {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
 >[!NOTE]
 >
@@ -96,7 +97,7 @@ Adobe Illustrator的檔案格式是PDF的變體。 在Experience Manager資產�
 >
 >在[!UICONTROL DAM更新資產]工作流程中， **[!UICONTROL EPS縮圖]**&#x200B;步驟會為EPS檔案生成縮圖。
 
-#### PDF/AI/EPS資產中繼資料屬性{#pdf-ai-eps-asset-metadata-properties}
+#### PDF/AI/EPS資產中繼資料屬性 {#pdf-ai-eps-asset-metadata-properties}
 
 | **中繼資料屬性** | **說明** |
 |---|---|
@@ -107,7 +108,7 @@ Adobe Illustrator的檔案格式是PDF的變體。 在Experience Manager資產�
 
 點選左上角的Adobe Experience Manager，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**。 在「工作流模型」頁面上，選擇「**[!UICONTROL DAM更新資產]**」，然後在工具欄點選「**[!UICONTROL 編輯]**」。 在[!UICONTROL DAM更新資產]工作流程頁面上，點選兩下`Rasterize PDF/AI Image Preview Rendition`處理元件以開啟其「步驟屬性」對話方塊。
 
-#### 柵格化PDF/AI影像預覽轉譯選項{#rasterize-pdf-ai-image-preview-rendition-options}
+#### 柵格化PDF/AI影像預覽轉譯選項 {#rasterize-pdf-ai-image-preview-rendition-options}
 
 ![柵格化PDF或AI工作流的參數](assets/rasterize_pdf_ai_image_preview.png)
 
@@ -149,7 +150,7 @@ Adobe Illustrator的檔案格式是PDF的變體。 在Experience Manager資產�
 
 `Rasterize PDF/AI Image Preview Rendition`進程元件已定義最大值，以確保它不會在記憶體中建立過大的映像。 此類大型映像可能會使提供給JVM(Java™虛擬機)的記憶體溢出。 請務必注意，為JVM提供足夠的記憶體，以管理已配置的並行工作流數，每個工作流都有可能以最大配置的大小建立映像。
 
-### InDesign(INDD)檔案格式{#indesign-indd-file-format}
+### InDesign(INDD)檔案格式 {#indesign-indd-file-format}
 
 如果要支援導入INDD檔案，以便生成此檔案格式的動態格式副本，則在建立影像預設集之前，可能需要查看以下資訊。
 
@@ -180,7 +181,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>是</td>
-   <td>為每個頁面產生300 ppi的JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，還通過<code>DAM Update Asset</code>工作流優化並轉換為PTIFF。<br /> </td>
+   <td>為每個頁面產生300 ppi JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，還通過<code>DAM Update Asset</code>工作流優化並轉換為PTIFF。<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -190,7 +191,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
  </tbody>
 </table>
 
-## 設定影像縮圖大小{#configuring-image-thumbnail-size}
+## 設定影像縮圖大小 {#configuring-image-thumbnail-size}
 
 您可以在&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程中配置這些設定，以配置縮圖的大小。 工作流程中有兩個步驟可讓您設定影像資產的縮圖大小。 雖然其中一個(**[!UICONTROL Dynamic Media處理影像資產]**)用於動態影像資產，另一個（**[!UICONTROL 處理縮圖]**）用於靜態縮圖產生，或當所有其他處理無法產生縮圖時，*兩個*&#x200B;必須具有相同的設定。
 
@@ -224,11 +225,11 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 1. 點選&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存對工作流程的變更。
 
-### 增加或減少顯示{#increasing-or-decreasing-the-number-of-image-presets-that-display}的Dynamic Media影像預設集數目
+### 增加或減少顯示的Dynamic Media影像預設集數目 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 您建立的影像預設集在您預覽資產時可以動態轉譯。 Experience Manager從&#x200B;**[!UICONTROL 詳細資料檢視>轉譯]**&#x200B;檢視資產時，會顯示各種動態轉譯。 您可以增加或減少顯示的轉譯限制。
 
-**若要增加或減少顯示的Dynamic Media影像預設集數目：**
+**增加或減少顯示的Dynamic Media影像預設集數目：**
 
 1. 導覽至CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
 1. 導覽至`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`處的影像預設集清單節點
@@ -243,7 +244,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 1. 在limit屬性中，將數字變更為所需數字，例如`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. 點選「**[!UICONTROL 儲存全部]**」。
 
-## 建立Dynamic Media影像預設集{#creating-image-presets}
+## 建立Dynamic Media影像預設集 {#creating-image-presets}
 
 建立Dynamic Media影像預設集可讓您在預覽或發佈時將這些設定套用至任何影像。
 
@@ -278,7 +279,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 1. 按一下「**[!UICONTROL 儲存]**」。
 
-## 建立回應式影像預設集{#creating-a-responsive-image-preset}
+## 建立回應式影像預設集 {#creating-a-responsive-image-preset}
 
 若要建立回應式影像預設集，請執行[建立影像預設集](#creating-image-presets)中的步驟。 在&#x200B;**[!UICONTROL 編輯影像預設集]**&#x200B;窗口中輸入高度和寬度時，請擦除值並將其留空。
 
@@ -296,7 +297,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 >
 >在Dynamic Media — 混合模式中，您必須手動發佈影像預設集和影像資產。
 
-### 影像預設集選項{#image-preset-options}
+### 影像預設集選項 {#image-preset-options}
 
 建立或編輯影像預設集時，您有本節所述的選項。 此外，Adobe建議以下「最佳做法」選項作為開始：
 
@@ -306,7 +307,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 * **[!UICONTROL 銳利化：重新取樣模]** 式 — 選 **[!UICONTROL 取雙三次]**。
 
-#### 基本頁簽選項{#basic-tab-options}
+#### 基本索引標籤選項 {#basic-tab-options}
 
 <table>
  <tbody>
@@ -358,7 +359,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
  </tbody>
 </table>
 
-#### 高級頁簽選項{#advanced-tab-options}
+#### 進階索引標籤選項 {#advanced-tab-options}
 
 <table>
  <tbody>
@@ -408,7 +409,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
     </ul>
     <div>
       銳利化在
-     <a href="https://experienceleague.adobe.com/docs/dynamic-media-classic/assets/sharpening_images.pdf">銳利化影像</a>。
+     <a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf">銳利化影像</a>。
     </div> </td>
   </tr>
   <tr>
@@ -443,7 +444,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
  </tbody>
 </table>
 
-## 使用影像修飾符{#defining-image-preset-options-with-image-modifiers}定義影像預設集選項
+## 使用影像修飾元定義影像預設集選項 {#defining-image-preset-options-with-image-modifiers}
 
 除了「基本」和「進階」索引標籤中可用的選項外，您還可以定義影像修飾元，以在定義影像預設集時提供更多選項。 影像呈現仰賴於[HTTP通訊協定參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html#image-serving-api)中詳細定義的影像呈現API。
 
@@ -493,7 +494,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
    ![6_5_imagepreset-edit-opacity](assets/6_5_imagepreset-edit-opacity.png)
 
-## 編輯影像預設集{#modifying-image-presets}
+## 編輯影像預設集 {#modifying-image-presets}
 
 1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**。
 
@@ -502,7 +503,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 1. 選取預設集，然後按一下「**[!UICONTROL 編輯]**」。 將開啟「**[!UICONTROL 編輯影像預設集]**」窗口。
 1. 進行更改，然後按一下「保存&#x200B;****」以保存更改，或按一下「取消&#x200B;****」以取消更改。
 
-## 發佈Dynamic Media影像預設集{#publishing-image-presets}
+## 發佈Dynamic Media影像預設集 {#publishing-image-presets}
 
 如果您執行的是Dynamic Media — 混合模式，您必須手動發佈影像預設集。
 
@@ -516,7 +517,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
-## 刪除Dynamic Media影像預設集{#deleting-image-presets}
+## 刪除Dynamic Media影像預設集 {#deleting-image-presets}
 
 1. 在Experience Manager中，點選或按一下Experience Manager標誌以存取全域導覽主控台。
 1. 點選&#x200B;**[!UICONTROL 工具]**&#x200B;圖示，然後導覽至&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**。
