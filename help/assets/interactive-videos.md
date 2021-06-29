@@ -11,10 +11,10 @@ docset: aem65
 feature: 互動影片
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '6013'
-ht-degree: 3%
+source-wordcount: '6015'
+ht-degree: 2%
 
 ---
 
@@ -71,22 +71,22 @@ ht-degree: 3%
 
 互動式影片步驟：
 
-1. **（可選）識別Quickview變數**  — 從識別現有Quickview實作使用的動態變數開始。建立互動式視訊時，您可以使用變數將產品縮圖對應至其對應的產品Quickview。 請參閱[（可選）識別Quickview變數](#optional-identifying-quickview-variables)。
-   *只有在下列情況皆為真時才需要此步驟*:·您想要透過觸發Quickviews來為視訊新增互動功能。·您的Experience Manager實作&#x200B;*not*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)提取到Experience Manager中。 請參閱Experience Manager資產](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
+1. **（可選）識別Quickview變數**  — 從識別現有Quickview實作使用的動態變數開始。建立互動式視訊時，您可以使用變數將產品縮圖對應至其對應的產品Quickview。 請參閱[（選用）識別Quickview變數](#optional-identifying-quickview-variables)。
+   *只有在下列情況皆為真時才需要此步驟*:·您想要透過觸發Quickview來為視訊新增互動功能。·您的Experience Manager實作&#x200B;*not*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案(如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager中。 請參閱Experience Manager資產](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
 
 1. **（可選）建立互動式視訊檢視器預設集**  — 自訂組成播放器的各種元件的外觀和行為，例如視訊清除程式和互動式縮圖。如果您想要改用現成可用的互動式視訊檢視器預設集`Shoppable_Video_Light`或`Shoppable_Video_Dark`，則不需要建立您自己的互動式視訊檢視器預設集。
-請參閱[建立新的檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（選用）和[建立互動式檢視器預設集的特殊考量事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
+請參閱[建立檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（選用）和[建立互動式檢視器預設集的特殊考量事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
 
-1. **上傳視訊及其相關影像資產**  — 上傳您要互動的視訊和相關影像。請參閱[上傳視訊及其相關縮圖資產](#uploading-a-video-and-its-associated-thumbnail-assets)。
+1. **上傳視訊及其相關的影像資產**  — 上傳您要互動的視訊和相關影像。請參閱[上傳視訊及其相關縮圖資產](#uploading-a-video-and-its-associated-thumbnail-assets)。
 
-1. **為視訊新增互動功能**  — 為視訊新增一或多個時間區段。然後，將這些時間區段內的影像縮圖建立關聯。 將每個影像縮圖指派給動作，例如超連結、快速檢視或體驗片段。
+1. **為視訊增加互動**  — 在視訊中新增一或多個時間區段。然後，將這些時間區段內的影像縮圖建立關聯。 將每個影像縮圖指派給動作，例如超連結、快速檢視或體驗片段。
 (如果您的互動式內容有連結相對URL的連結，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。)
 完成時，請發佈互動式視訊資產。 發佈會建立內嵌程式碼或URL，您最終會複製這些內嵌程式碼或URL並套用至您的網站登陸頁面。 請參閱[為視訊新增互動](#adding-interactivity-to-your-video)。
 請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
 1. **以Experience Manager將互動式視訊新增至您的網站或網站**  — 如果您使用Experience Manager網站或電子商務，或兩者，您可以將互動式視訊新增至網頁。將互動式媒體元件拖曳至Experience Manager中的頁面。 請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 使用內嵌程式碼或URL將您的互動式視訊與網站體驗整合。 請參閱[將互動式視訊與您的網站整合](#integrating-an-interactive-video-with-your-website)。
-如果您使用協力廠商WCM（網頁內容管理員），您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參閱[將互動式視訊與現有Quickview](#integrating-an-interactive-video-with-an-existing-quickview)整合。
+如果您使用協力廠商WCM（網頁內容管理員），您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參閱[將互動式視訊與現有的Quickview](#integrating-an-interactive-video-with-an-existing-quickview)整合。
    [將Dynamic Media Assets新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## （可選）識別Quickview變數 {#optional-identifying-quickview-variables}
@@ -95,8 +95,8 @@ ht-degree: 3%
 >
 >只有在以下情況為真時才需要此任務：
 >
->* 您想要透過觸發Quickviews來為視訊新增互動功能。
->* 您的Experience Manager實作&#x200B;*not*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)提取至Experience Manager中。 請參閱Experience Manager資產](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
+>* 您想要透過觸發至Quickview來為視訊新增互動功能。
+>* 您的Experience Manager實作&#x200B;*not*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案(如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager中。 請參閱Experience Manager資產](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
 
 >
 >
@@ -183,7 +183,7 @@ ht-degree: 3%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
-啟用頁面上所有可用的產品快速檢視後，您會收到對後端提出的快速檢視請求清單：
+啟動頁面上可用的所有產品Quickview後，您會獲得對後端提出的Quickview請求清單：
 
 * datafeed/candles-233396346.json
 * datafeed/candles-233978050.json
@@ -219,7 +219,7 @@ ht-degree: 3%
 
 您現在可以上傳視訊及其相關的縮圖資產。
 
-## （可選）建立互動式視訊檢視器預設集 {#optional-creating-an-interactive-video-viewer-preset}
+## （選用）建立互動式視訊檢視器預設集 {#optional-creating-an-interactive-video-viewer-preset}
 
 如果要使用預設的、現成的互動式視頻查看器預設類型`Shoppable_Video_dark`或`Shoppable_Video_light`中的一種，您可以跳過此任務並繼續下一步。
 
@@ -231,7 +231,7 @@ ht-degree: 3%
 
 互動式視訊檢視器預設集會正確轉譯您新增的視訊和所有時間軸區段。 在「預覽」模式中按一下產品縮圖時，也會使用預設的「快速檢視」範例，讓您在發佈前測試其互動性。
 
-儲存檢視器預設集後，其狀態會在「檢視器預設集」頁面中自動設為**On **。此狀態表示在動態媒體元件中及您使用它預覽視訊時，都可看到它。請確定您也手動發佈新的檢視器預設集。
+儲存檢視器預設集後，其狀態會在「檢視器預設集」頁面中自動設為&#x200B;**On**。 此狀態表示在動態媒體元件中及您使用它預覽視訊時，都可看到它。請確定您也手動發佈新的檢視器預設集。
 
 請參閱[建立新的檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)以建立您自己的互動式視訊檢視器預設集。
 
@@ -250,7 +250,7 @@ ht-degree: 3%
 
    現在為影片增加互動功能。
 
-## 為視訊新增互動功能 {#adding-interactivity-to-your-video}
+## 為影片增加互動功能 {#adding-interactivity-to-your-video}
 
 使用「建立互動式視訊」頁面上的就地視覺編輯器，將時間軸區段新增至視訊。
 
@@ -490,13 +490,13 @@ ht-degree: 3%
 
 1. 發佈互動式影片。 發佈會建立內嵌程式碼或URL，您最終會將其複製並貼到您的網站體驗。
 
-   如果您使用Quickviews新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用已發佈的URL。 但請注意，如果您的互動式內容具有具有相對URL的連結，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
+   如果您使用Quickview新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用已發佈的URL。 但請注意，如果您的互動式內容具有具有相對URL的連結，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
 
    請參閱[發佈資產](publishing-dynamicmedia-assets.md)。
 
    >[!NOTE]
    >
-   >若要使用Quickviews發佈可購買的視訊，請確定您也從您的商務區域個別發佈每個視訊的相關影像資產。
+   >若要使用Quickview發佈可購買的視訊，請確定您也從您的商務區域個別發佈每個視訊的相關影像資產。
 
    新增時間軸區段並發佈互動式視訊後，您就可以將其新增至現有的網站登陸頁面。 請參閱[將互動式視訊與您的網站整合](#integrating-an-interactive-video-with-your-website)。
 
@@ -513,8 +513,8 @@ ht-degree: 3%
 如果您是獨立Experience Manager資產客戶，您可以依照本節所述，手動將互動式視訊新增至您的網站。
 
 1. 複製已發佈的互動式視訊的內嵌程式碼或URL。
-請參閱[將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)。
-如果您使用Quickviews新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用已發佈的URL。 但請注意，如果您的互動式內容具有具有相對URL的連結，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
+請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
+如果您使用Quickview新增互動功能，則只使用內嵌程式碼；如果您使用超連結網頁新增互動功能，也可以使用已發佈的URL。 但請注意，如果您的互動式內容具有具有相對URL的連結，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
 
 1. 在目標的網頁程式碼中，識別靜態視訊的位置。
 1. 移除靜態視訊，並以您從Experience Manager資產複製的內嵌程式碼或URL取代程式碼，如同。
@@ -524,7 +524,7 @@ ht-degree: 3%
 >
 >此時，如果您只以超連結網頁新增互動功能，即可完成。
 >
->不過，如果您新增任何互動來觸發Quickview，互動式視訊旁的縮圖僅會用於顯示用途；它們尚未與您現有的Quickviews整合。 在這種情況下，您現在必須將互動式視訊與網站上現有的Quickviews整合。
+>不過，如果您新增任何互動來觸發Quickview，互動式視訊旁的縮圖僅會用於顯示用途；它們尚未與您現有的Quickview整合。 在這種情況下，您現在必須將互動式視訊與網站上現有的Quickview整合。
 
 **範例**
 
@@ -559,7 +559,7 @@ ht-degree: 3%
 </script>
 ```
 
-只要移除視訊內嵌程式碼，再從Experience Manager中取代為互動式視訊內嵌程式碼，整合就很簡單。 您可以在下列URL中看到結果。 雖然會顯示頁面上顯示的互動式視訊，但尚未與現有的快速檢視整合：
+只要移除視訊內嵌程式碼，再從Experience Manager中取代為互動式視訊內嵌程式碼，整合就很簡單。 您可以在下列URL中看到結果。 雖然頁面上顯示互動式視訊，但尚未與現有Quickview整合：
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
@@ -591,7 +591,7 @@ ht-degree: 3%
 * 根據縮圖資料建構Quickview URL。
 * 觸發從後端載入Quickview並在畫面上呈現以供顯示的程式。
 
-此外，互動式視訊檢視器支援全螢幕操作模式。 一般使用者按一下縮圖而不離開全螢幕即可觸發「快速檢視」。 若要實現此功能，請變更前端程式碼，將Quickview強制回應對話方塊附加至檢視器的容器。 請勿新增檔案BODY或檢視器處於全螢幕模式時無法使用的其他網頁元素。 執行此作業的程式碼必須監聽在頁面載入的檢視器之後傳送的一或多個檢視器回呼。
+此外，互動式視訊檢視器支援全螢幕操作模式。 一般使用者按一下縮圖而不離開全螢幕，即可觸發Quickview。 若要實現此功能，請變更前端程式碼，將Quickview強制回應對話方塊附加至檢視器的容器。 請勿新增檔案BODY或檢視器處於全螢幕模式時無法使用的其他網頁元素。 執行此作業的程式碼必須監聽在頁面載入的檢視器之後傳送的一或多個檢視器回呼。
 
 由Experience Manager傳回的內嵌程式碼已有可供使用的事件處理常式。 如下列醒目提示的程式碼片段所示，會加以註解：
 
@@ -708,7 +708,7 @@ var inner_container = document.getElementById(sdkContainerId);
 
 實際找出強制回應對話方塊元素並將其附加至上述容器的步驟會依大小寫而定。 同樣地，您可以向熟悉您所需Quickview實作的前端開發人員尋求協助。
 
-如果我們使用範例網站，Quickview強制回應對話方塊會實作為`DIV`，且快速檢視強制回應ID會直接附加至檔案`BODY`。 因此，將該對話方塊移至檢視器容器的程式碼如下：
+如果您使用範例網站，Quickview強制回應對話方塊會實作為`DIV`，且快速檢視強制回應ID會直接附加至檔案`BODY`。 因此，將該對話方塊移至檢視器容器的程式碼如下：
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
@@ -763,6 +763,6 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
-## 使用Quickviews建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+## 使用Quickview建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
-請參閱使用Quickviews](/help/assets/custom-pop-ups.md)建立自訂快顯視窗。[
+請參閱使用Quickview](/help/assets/custom-pop-ups.md)建立自訂快顯視窗。[
