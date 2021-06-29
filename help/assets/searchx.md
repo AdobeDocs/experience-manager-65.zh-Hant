@@ -5,7 +5,7 @@ contentOwner: AG
 role: Developer
 feature: 搜尋
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 19%
@@ -59,7 +59,7 @@ ht-degree: 19%
 
 若要建立屬性述詞：
 
-1. 在您的專案目錄中建立元件資料夾，例如&#x200B;**/apps/geometrixx/components/titlepredicate**。
+1. 在您的專案目錄中建立元件資料夾，例如&#x200B;**/apps/weretail/components/titlepredicate**。
 1. 添加&#x200B;**content.xml**:
 
    ```xml
@@ -152,7 +152,7 @@ ht-degree: 19%
 
 若要建立群組述詞：
 
-1. 在您的專案目錄中建立元件資料夾，例如&#x200B;**/apps/geometrixx/components/picspredicate.**
+1. 在您的專案目錄中建立元件資料夾，例如&#x200B;**/apps/weretail/components/picspredicate**。
 1. 添加&#x200B;**content.xml**:
 
    ```xml
