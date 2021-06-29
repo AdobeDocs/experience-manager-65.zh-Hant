@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3837'
 ht-degree: 2%
 
 ---
@@ -66,10 +66,10 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->從Service Pack 9開始，[!DNL Experience Manager]客戶可以使用OpenJDK的[!DNL Azul Zulu]版本編號開發和運行其[!DNL Experience Manager]應用程式，該版本符合Java SE的標準。
+>從Service Pack 9開始，[!DNL Experience Manager]客戶可以使用OpenJDK的[!DNL Azul Zulu]版本編號開發和運行其[!DNL Experience Manager]應用程式，該版本符合Java™ SE的標準。
 >[!DNL Experience Manager]客戶也可Adobe[!DNL Azul Zulu] JDK。
 >您可以從[Adobe軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載[!DNL Azul Zulu] JDK的相關版本。
->oracleJava技術的使用權(由Adobe分發)將於2022年12月底屆滿。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
+>oracleJava™技術的使用權(由Adobe分發)將於2022年12月底前到期。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java™]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
 
 以下是[!DNL Experience Manager] 6.5.9.0版中提供的修正清單。
 
@@ -83,7 +83,7 @@ ht-degree: 2%
 
 * 另一個已調整大小的配置容器內的巢狀配置容器顯示其子元件的列數不正確，導致這些元件與網格不對齊(NPR-36359)。
 
-* 外部連結檢查器將有效的外部連結顯示為無效連結(NPR-36289)。
+* 外部連結檢查程式將有效的外部連結顯示為無效連結(NPR-36289)。
 
 * 顯示參考一段時間後，參考面板開始顯示錯誤訊息(NPR-36167)。
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
 * 如果在LiveCopy主版中刪除元件，嘗試同步LiveCopy時（在Blueprint啟動時使用轉出設定[!UICONTROL 啟動]和在Blueprint啟動時[!UICONTROL 取消啟動]），同步會失敗並記錄`NullPointerException`(NPR-36127)。
 
-* 當使用者輸入隨選文字中的標籤時（系統上不存在的標籤），並按下Enter時，標籤會出現在欄位下方，但當內容片段儲存並重新開啟時，隨選標籤會消失(NPR-36132)。
+* 當使用者輸入簡易文字標籤時（系統上不存在的標籤），按下Enter時，標籤會出現在欄位下方，但當內容片段儲存並重新開啟時，簡易標籤會消失(NPR-36132)。
 
 * 收件匣沒有顯示非同步操作狀態的選項(NPR-36104)。
 
@@ -119,7 +119,7 @@ ht-degree: 2%
 
 * 若要檢視未根據[!UICONTROL Create]、[!UICONTROL Modify]或[!UICONTROL Name]參數排序的資產，[!DNL Adobe Experience Manager]在[!UICONTROL Sort by]選項內提供[!UICONTROL None]選項。 [!UICONTROL None]選項可確保「資產」使用者介面（在「卡片」、「欄」和「前瞻分析」檢視中）中的資產順序與JCR節點中的相同(NPR-36356)。
 
-* 若要從[!DNL Adobe Experience Manager]的ACP API回應將電子郵件ID設為小寫，請導入選用設定；由於[!DNL Adobe Asset Link]使用者的ID並非全部字元皆為小寫，因此無法簽入資產。 請注意， [!DNL Adobe Asset Link]面板會從[!DNL Adobe Experience Manager](CQ-4317704)中取用ACP API回應。
+* 若要從[!DNL Adobe Experience Manager]的ACP API回應將電子郵件ID設為小寫，請導入選用設定；由於[!DNL Adobe Asset Link]使用者的ID並非全部字元皆為小寫，因此無法簽入資產。 [!DNL Adobe Asset Link]面板會從[!DNL Adobe Experience Manager](CQ-4317704)中取用ACP API回應。
 
 [!DNL Adobe Experience Manager] 6.5.9.0提供下 [!DNL Assets] 列協助工具增強功能。
 
@@ -144,7 +144,7 @@ ht-degree: 2%
 
 * 當使用小橢圓來注釋資產時，橢圓與打印版本中的注釋數重疊(NPR-36114)。
 
-* 在欄檢視中，某些情況下，上傳重複資產時[!DNL Experience Manager]不會提示出現重複資產衝突(NPR-36048)。
+* 有時候，在欄檢視中，上傳重複資產時[!DNL Experience Manager]不會提示出現重複資產衝突(NPR-36048)。
 
 * 如果「共用連結」對話方塊已開啟且未變更，按一下關閉按鈕就不會關閉(NPR-36030)。
 
@@ -189,11 +189,21 @@ ht-degree: 2%
 
 * 導覽資產詳細資料頁面時，螢幕助讀程式現在會說明檢視器中各種選項的用途(CQ-4290716)。
 
-* 改善資產詳細資訊頁面之預留位置文字的對比（與背景）「所有轉譯在轉譯中」選項，以便視力和顏色感知有限的使用者能夠理解(CQ-4290713)。
+* 改善資產詳細資訊頁面之預留位置文字的對比（與背景）「所有轉譯在轉譯中」選項，讓視力和顏色感知受限的使用者能夠理解(CQ-4290713)。
 
-* 影像集編輯器中資產的標題欄位現在提供表示必填欄位的視覺星號，螢幕助讀程式會朗讀欄位的必要資訊(CQ-4290712)。
+* 影像集編輯器的資產標題欄位中現在提供表示必填欄位的視覺星號，螢幕助讀程式會朗讀欄位的必要資訊(CQ-4290712)。
 
 * 螢幕助讀程式現在可以在資產詳細資訊頁面的檢視器記憶體取及提供各種互動式選項的用途(CQ-4290708)。
+
+[!DNL Dynamic Media]中的已知視訊播放問題：
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 
 Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列問題：
 
@@ -275,7 +285,7 @@ Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列
 
 ### [!DNL Communities] {#communities-6590}
 
-* 在垃圾訊息篩選中，系統會耗用100%的Java堆積空間，導致Experience Manager伺服器無反應(NPR-36316、NPR-36493)。
+* 在垃圾訊息篩選中，系統會耗用100%的Java™堆積空間，導致Experience Manager伺服器無反應(NPR-36316、NPR-36493)。
 * 在論壇中，源自`SearchCommentSocialComponentListProvider`的JCR會議資料被洩漏(NPR-36235)。
 * 開啟特定收件匣訊息會反映所有郵件分頁錯誤及其他問題(NPR-35917)。
 
@@ -310,7 +320,7 @@ Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列
 
 **工作流程**
 
-* 在JBoss上呼叫[!DNL Experience Manager Forms]服務的REST端點時，[!DNL Experience Manager]會顯示下列錯誤訊息(NPR-36305):
+* 在JBoss®上呼叫[!DNL Experience Manager Forms]服務的REST端點時，[!DNL Experience Manager]會顯示下列錯誤訊息(NPR-36305):
 
    ```TXT
    Invalid input. The maximum length of 2000 characters was exceeded.
@@ -400,7 +410,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 >[!NOTE]
 >
->AEM 6.5.9.0包含新版[AEM Forms相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用舊版AEM Forms相容性套件並更新至AEM 6.5.9.0，請在安裝Forms附加元件套件後安裝最新版本的套件。
+>Experience Manager6.5.9.0包含新版[AEM Forms相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用舊版AEM Forms相容性套件並更新至Experience Manager6.5.9.0，請在安裝Forms附加元件套件後安裝最新版本的套件。
 
 ### 在JEE上安裝Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
@@ -435,14 +445,14 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 ## 過時的功能 {#removed-deprecated-features}
 
-以下是[!DNL Experience Manager] 6.5.7.0中標籤為過時的功能清單。在以後的版本中，標籤為過時的功能將先後刪除。 通常會提供替代選項。
+以下是[!DNL Experience Manager] 6.5.7.0中標籤為過時的功能清單。在以後的版本中，標籤為過時的功能將先後刪除。 提供替代選項。
 
 查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
 | 整合 | 已棄用&#x200B;**[!UICONTROL AEM雲端服務選擇加入]**&#x200B;畫面。 隨著Experience Manager6.5中更新Experience Manager和Adobe Target整合，以支援Adobe Target Standard API(透過AdobeIMS和[!DNL Adobe I/O]使用驗證)，以及AdobeLaunch在檢測Experience Manager頁面以用於分析和個人化方面的角色日益提升，選擇加入精靈在功能上已變得無關。 | 透過個別的[!DNL Experience Manager]雲端服務，設定系統連線、AdobeIMS驗證和[!DNL Adobe I/O]整合。 |
-| 連接器 | Experience Manager6.5已不再使用Microsoft SharePoint 2010和Microsoft SharePoint 2013的AdobeJCR連接器。 | N/A |
+| 連接器 | Experience Manager6.5已不再使用Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR連接器。 | N/A |
 
 ## 已知問題 {#known-issues}
 
