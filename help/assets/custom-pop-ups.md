@@ -1,6 +1,6 @@
 ---
-title: 使用Quickviews建立自訂快顯視窗
-seo-title: 使用「快速檢視」建立自訂快顯視窗
+title: 使用Quickview建立自訂快顯視窗
+seo-title: 使用Quickview建立自訂快顯視窗
 description: 預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 您可以觸發自訂內容以顯示在快顯視窗中。
 seo-description: 預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 您可以觸發自訂內容以顯示在快顯視窗中。
 uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
@@ -12,18 +12,18 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: 檢視器
 role: Business Practitioner, Administrator
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
 source-wordcount: '1090'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# 使用「快速檢視」建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+# 使用Quickview建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
 預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 不過，您可以觸發自訂內容以顯示在快顯視窗中。 根據檢視器，此功能可讓使用者點選熱點、縮圖影像或影像地圖，以查看資訊或相關內容。
 
-Dynamic Media中的下列檢視器支援快速檢視：
+Dynamic Media中的下列檢視器支援Quickview:
 
 * 互動式影像（可點按的熱點）
 * 互動式視訊（視訊播放期間可點按縮圖影像）
@@ -31,7 +31,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
 
 雖然每個檢視器的功能有所不同，但在所有三個支援的檢視器中，建立「快速檢視」的程式都相同。
 
-**要使用Quickviews建立自定義彈出窗口，請執行以下操作：**
+**要使用Quickview建立自定義彈出窗口，請執行以下操作：**
 
 1. 為已上傳的資產建立快速檢視。
 
@@ -114,7 +114,7 @@ Dynamic Media中的下列檢視器支援快速檢視：
 
 1. 現在必須配置`quickViewActivate`處理程式。
 
-   `quickViewActivate`處理常式控制檢視器中的「快速檢視」。 處理常式包含變數清單和函式呼叫，以便與Quickview搭配使用。 內嵌程式碼提供在Quickview中設定的SKU變數對應，以及範例`loadQuickView`函式呼叫。
+   `quickViewActivate`處理常式控制檢視器中的Quickview。 處理常式包含變數清單和函式呼叫，以便與Quickview搭配使用。 內嵌程式碼提供在Quickview中設定的SKU變數對應，以及範例`loadQuickView`函式呼叫。
 
    **要**
 在網頁中使用的變數mappingMap變數，與Quickview中包含的SKU值和一般變數：
