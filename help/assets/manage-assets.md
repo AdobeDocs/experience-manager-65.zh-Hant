@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 資產管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 550d837c8ad86393eefecb264b69157fca312984
+source-git-commit: dc483b9871cebce64f7b60fec2144f1f19ef28ec
 workflow-type: tm+mt
-source-wordcount: '9743'
+source-wordcount: '9788'
 ht-degree: 3%
 
 ---
@@ -765,7 +765,17 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 ### 查看保存的注釋 {#viewing-saved-annotations}
 
-1. 若要檢視資產的已儲存註解，請導覽至資產位置，並開啟資產的資產頁面。
+一次只能查看一個批注。
+
+>[!NOTE]
+>
+>如果選擇多個注釋，則最新的注釋將顯示在用戶介面上。
+>
+>只有以PDF列印註解的資產時，才支援多選。
+
+**若要檢視資產的已儲存註解：**
+
+1. 導覽至資產位置，然後開啟資產頁面。
 
 1. 在Experience Manager介面中，選擇&#x200B;**[!UICONTROL 時間軸]**。
 1. 從時間軸 **[!UICONTROL 的「顯示全部]** 」清單中，選取「注 **[!UICONTROL 釋]** 」以根據註解來篩選結果。
@@ -781,6 +791,10 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 如果資產有註解或已經受審核工作流程，您可以將資產連同註解和審核狀態列為PDF檔案，以便離線審核。
 
 您也可以選擇僅打印注釋或查看狀態。
+
+>[!NOTE]
+>
+>在以PDF列印註解的資產時，您可以選取多個註解。
 
 要打印注釋和查看狀態，請按一下&#x200B;**[!UICONTROL Print]**，然後按照嚮導中的說明操作。 只有當資產至少為其分配了一個批注或審閱狀態時，**[!UICONTROL 打印]**&#x200B;選項才會出現在工具欄中。
 
