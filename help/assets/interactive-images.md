@@ -11,9 +11,9 @@ docset: aem65
 feature: 互動影像
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '4284'
+source-wordcount: '4286'
 ht-degree: 1%
 
 ---
@@ -57,13 +57,13 @@ ht-degree: 1%
 
 1. **將熱點添加到影像橫幅**  — 將一個或多個熱點添加到影像橫幅中，並將每個熱點與超連結、快速視圖或體驗片段等操作關聯。添加熱點後，將通過發佈交互影像來完成此任務。
 
-   * 請參閱[向影像橫幅添加熱點](#adding-hotspots-to-an-image-banner)。
+   * 請參閱[將熱點添加到影像橫幅](#adding-hotspots-to-an-image-banner)。
    * 請參閱[預覽互動式影像](#optional-previewing-interactive-images) — 選用。 如果需要，可以查看可購買橫幅的表示並測試其交互性。
    * 如需如何發佈互動式影像資產的詳細資訊，請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
 1. **新增互動式影像至您的網站**  — 如果您使用Experience Manager網站或電子商務，或兩者，則可以在Experience Manager中將互動式影像新增至網頁。將互動式媒體元件拖曳至頁面。 請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
-   如果您使用Experience Manager資產和獨立式Dynamic Media，您必須複製網站上的內嵌程式碼，然後將其與現有的Quickview整合。 請參閱[整合互動式影像與您的網站](#integrating-an-interactive-image-with-your-website)。
+   如果您使用Experience Manager資產和獨立式Dynamic Media，您必須複製網站上的內嵌程式碼，然後將其與現有的Quickview整合。 請參閱[將互動式影像與您的網站整合](#integrating-an-interactive-image-with-your-website)。
 
    如果您使用協力廠商WCM（網頁內容管理員），您必須將新的互動式視訊與網站上使用的現有Quickview實作整合。 請參閱[將互動式影像與現有Quickview](#integrating-an-interactive-image-with-an-existing-quickview)整合。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 >
 >只有在以下情況為真時才需要此任務：
 >
->* 您想要透過觸發Quickviews來為影像新增互動功能。
+>* 您想要透過觸發至Quickview來為影像新增互動功能。
 >* 您的Experience Manager實作&#x200B;*not*&#x200B;使用電子商務整合架構，將產品資料從任何電子商務解決方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)提取至Experience Manager中。 請參閱Experience Manager資產](/help/commerce/cif-classic/administering/concepts.md)中的[電子商務概念。
 
 >
@@ -163,7 +163,7 @@ ht-degree: 1%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-示範網頁有數個產品縮圖，每個縮圖都有標示為「查看更多」的「快速檢視」按鈕。 在Web瀏覽器的偵錯工具仍處於啟用狀態時，按一下每個按鈕並記下記錄的Quickview URL。 啟用頁面上所有的四個產品快速檢視後，您就會有向後端提出的快速檢視請求清單：
+示範網頁有數個產品縮圖，每個縮圖都有標示為「查看更多」的「快速檢視」按鈕。 在Web瀏覽器的偵錯工具仍處於啟用狀態時，按一下每個按鈕並記下記錄的Quickview URL。 啟用頁面上所有的四個產品Quickview後，您就會有向後端提出的Quickview請求清單：
 
 * `/datafeed/Male-Windbreaker.json`
 * `/datafeed/Male-SimpleHenley.json`
@@ -183,7 +183,7 @@ ht-degree: 1%
 
 您現在可以使用Experience Manager資產中的可購買互動式影像功能，上傳影像橫幅並新增熱點。
 
-## （可選）建立互動式影像檢視器預設集 {#optional-creating-an-interactive-image-viewer-preset}
+## （選用）建立互動式影像檢視器預設集 {#optional-creating-an-interactive-image-viewer-preset}
 
 您可以選擇使用隨Experience Manager資產提供的預設現成互動式影像檢視器預設集，稱為`Shoppable_Banner`。 或者，您可以建立自己的自訂檢視器預設集以搭配互動式影像使用。
 
@@ -243,7 +243,7 @@ ht-degree: 1%
 
 建立完互動式影像後，您可以使用「預覽」來查看客戶對互動式影像的呈現方式。
 
-請參閱[（選用）預覽互動式影像](#optional-previewing-interactive-images)。
+請參閱[（可選）預覽互動式影像](#optional-previewing-interactive-images)。
 
 >[!NOTE]
 >
@@ -312,7 +312,7 @@ ht-degree: 1%
 
    新增熱點並發佈互動式影像後，您現在可以將其新增至現有網站。
 
-   請參閱[整合互動式影像與您的網站](#integrating-an-interactive-image-with-your-website)。
+   請參閱[將互動式影像與您的網站整合](#integrating-an-interactive-image-with-your-website)。
 
    >[!NOTE]
    如果您正在使用熱點編輯互動式影像並裁切影像，則會刪除熱點。
@@ -322,7 +322,7 @@ ht-degree: 1%
 您可以使用「預覽」來查看客戶對互動式影像的呈現方式，並測試影像的熱點，以確保它們如預期般運作。
 
 對互動式影像感到滿意時，即可發佈影像。
-請參閱[將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)。
+請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
 請參閱[將URL連結到您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有連結與相對URL，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
 請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
@@ -346,7 +346,7 @@ ht-degree: 1%
 如果您是獨立Experience Manager資產客戶，您可以依照本節所述，手動將互動式影像新增至您的網站。
 
 1. 複製已發佈的互動式影像的內嵌程式碼。
-請參閱[將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)。
+請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
 
 1. 將複製的內嵌程式碼新增至網頁內所需的位置。
 複製的內嵌程式碼會設定為回應式環境，以自動符合指派的區域。
@@ -368,7 +368,7 @@ ht-degree: 1%
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html)
 
 >[!NOTE]
-因此，演示網站的可購買交互影像上的熱點僅用於顯示；它們尚未與現有的Quickviews整合。
+因此，演示網站的可購買交互影像上的熱點僅用於顯示；它們尚未與現有Quickview整合。
 
 若要針對回應式環境將「裁切」套用至可購買的互動式影像，您可以將互動式影像組態屬性`ZoomView.iscommand`包含至路徑。 元件`ZoomView`被調用，而`iscommand`是您應用的「裁切」影像伺服命令。
 
@@ -514,6 +514,6 @@ loadQuickView(quickViewUrl);
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html)
 
-## 使用「快速檢視」建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+## 使用Quickview建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
-請參閱[使用Quickviews](/help/assets/custom-pop-ups.md)建立自訂快顯視窗。
+請參閱使用Quickview](/help/assets/custom-pop-ups.md)建立自訂快顯視窗。[
