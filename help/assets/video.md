@@ -1,6 +1,7 @@
 ---
 title: Dynamic Media中的影片
 description: 了解如何在Dynamic Media中使用影片
+mini-toc-levels: 3
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,9 +12,9 @@ docset: aem65
 feature: 資產管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
+source-git-commit: 54230d68fc86c9098f7712044bc501bdc4f16502
 workflow-type: tm+mt
-source-wordcount: '11657'
+source-wordcount: '11668'
 ht-degree: 5%
 
 ---
@@ -22,7 +23,17 @@ ht-degree: 5%
 
 本節說明如何在Dynamic Media中使用影片。
 
-## 快速入門：影片{#quick-start-videos}
+Dynamic Media中目前已知的視訊播放問題：
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
+
+## 快速入門：影片 {#quick-start-videos}
 
 下列逐步工作流程說明旨在協助您透過Dynamic Media中的最適化視訊集快速上手並執行。 在每個步驟之後，都會有主題標題的交叉參考，您可在其中找到詳細資訊。
 
@@ -30,7 +41,7 @@ ht-degree: 5%
 >
 >在Dynamic Media中處理視訊之前，請確定您的Adobe Experience Manager管理員已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中啟用並設定Dynamic MediaCloud Services。
 >
->* 請參閱「設定Dynamic Media - Scene7模式」中的「[設定Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)」和「[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)」。
+>* 請參閱在設定Dynamic Media - Scene7模式中設定[設定Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)和[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)。
    >
    >
 * 請參閱設定Dynamic Media — 混合模式中的[設定Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
@@ -70,7 +81,7 @@ ht-degree: 5%
    * 預覽和發佈視訊資產
 
       * 檢視來源視訊和編碼的視訊轉譯及其相關聯的縮圖：
-         [預覽](managing-video-assets.md#upload-and-preview-video-assets) 視訊或 [預覽資產](previewing-assets.md)
+         [預覽](managing-video-assets.md#upload-and-preview-video-assets) 影片或 [預覽資產](previewing-assets.md)
          [檢視視訊轉譯](video-renditions.md)
          [管理視訊轉譯](manage-assets.md#managing-renditions)
 
@@ -88,10 +99,10 @@ ht-degree: 5%
       * [中繼資料結構](metadata-schemas.md)
    * 檢閱、核准及註解影片，並維護完整版本控制
 
-      * [為視訊](managing-video-assets.md#annotate-video-assets) 加上注 [解資產](manage-assets.md#annotating)
+      * [為視訊](managing-video-assets.md#annotate-video-assets) 加上注 [釋或為資產加上注釋](manage-assets.md#annotating)
 
       * [建立版本](manage-assets.md#asset-versioning)
-      * [將工作流程套](assets-workflow.md) 用至資產， [或參閱在資產上啟動工作流程](manage-assets.md#starting-a-workflow-on-an-asset)
+      * [將工作流程套](assets-workflow.md) 用至資產， [或參閱啟動資產的工作流程](manage-assets.md#starting-a-workflow-on-an-asset)
 
       * [檢閱資料夾資產](bulk-approval.md)
       * [專案](../sites-authoring/projects.md)
@@ -107,18 +118,18 @@ ht-degree: 5%
    * 如果您使用協力廠商網頁內容管理系統，您可以將視訊連結或內嵌至您的網頁。
 
       * 使用URL整合視訊：
-         [將 URL 連結至您的 Web 應用程式](linking-urls-to-yourwebapplication.md).
+         [將URL連結至您的Web應用程式](linking-urls-to-yourwebapplication.md)。
 
       * 使用網頁上的內嵌程式碼整合視訊：
          [將視訊檢視器內嵌在網頁上](embed-code.md)。
    * [將影片發佈至YouTube](#publishing-videos-to-youtube)。
    * [產生視訊報表](#viewing-video-reports)。
 
-   * [為視訊新增字幕](#adding-captions-to-video)。
+   * [為視訊添加字幕](#adding-captions-to-video)。
 
 
 
-## 在Dynamic Media中使用視訊{#working-with-video-in-dynamic-media}
+## 在Dynamic Media中使用影片 {#working-with-video-in-dynamic-media}
 
 Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品質的最適化視訊，以在多個畫面間串流，包括桌上型電腦、iOS、Android™、BlackBerry®和Windows行動裝置。 適用性視訊集將以不同位速率和格式（如400 kbps、800 kbps和1000 kbps）編碼的相同視訊的版本分組。 台式電腦或行動裝置會偵測可用頻寬。
 
@@ -165,7 +176,7 @@ Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位
 
 另請參閱[Experience Manager資產的檢視器和Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)和[僅Experience Manager資產的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
-## 最佳實務：使用HTML5視訊檢視器{#best-practice-using-the-html-video-viewer}
+## 最佳實務：使用HTML5視訊檢視器 {#best-practice-using-the-html-video-viewer}
 
 Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可以使用它們來避免與HTML5視訊播放相關的許多常見問題。 此外，行動裝置相關的問題，例如缺乏最適化串流傳送以及案頭瀏覽器觸及範圍有限。
 
@@ -183,7 +194,7 @@ Dynamic Media HTML5視訊檢視器預設集是強大的視訊播放器。 您可
 
 另請參閱[關於HTML5檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
-### 使用HTML5視訊檢視器{#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}在桌上型電腦和行動裝置上播放視訊
+### 使用HTML5視訊檢視器在桌上型電腦和行動裝置上播放視訊 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
 針對案頭和行動最適化視訊串流，用於位元速率切換的視訊是以最適化視訊集中的所有MP4視訊為基礎。
 
@@ -270,19 +281,19 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
  </tbody>
 </table>
 
-## Dynamic Media視訊解決方案架構{#architecture-of-dynamic-media-video-solution}
+## Dynamic Media視訊解決方案架構 {#architecture-of-dynamic-media-video-solution}
 
 下圖顯示影片的整體製作工作流程，這些影片會透過DMGateway上傳和編碼(在Dynamic Media混合模式中)，並可供公眾使用。
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
-## 影片的混合發佈架構{#hybrid-publishing-architecture-for-videos}
+## 影片的混合發佈架構 {#hybrid-publishing-architecture-for-videos}
 
 ![chlimage_1-428](assets/chlimage_1-428.png)
 
-## 編碼視訊的最佳作法{#best-practices-for-encoding-videos}
+## 編碼視訊的最佳作法 {#best-practices-for-encoding-videos}
 
-如果您已啟用Dynamic Media並設定視訊雲端服務， **Dynamic Media編碼視訊**&#x200B;工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。如果您已啟用Dynamic Media並設定視訊雲端服務，當您上傳視訊時，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會自動生效。 (如果您未使用Dynamic Media, **[!UICONTROL DAM更新資產]**&#x200B;工作流程將生效。)
+如果您已啟用Dynamic Media並設定視訊雲端服務， **Dynamic Media編碼視訊**&#x200B;工作流程會對視訊進行編碼。 此工作流程會擷取工作流程處理歷程記錄和失敗資訊。請參閱[監視視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。 如果您已啟用Dynamic Media並設定視訊雲端服務，當您上傳視訊時，**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程會自動生效。 (如果您未使用Dynamic Media, **[!UICONTROL DAM更新資產]**&#x200B;工作流程將生效。)
 
 <!-- DEAD The following are best-practice tips for encoding source video files.
 
@@ -290,7 +301,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 * [Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution](https://www.adobe.com/go/learn_s7_streaming101_en). -->
 
-### 源視頻檔案{#source-video-files}
+### 源視頻檔案 {#source-video-files}
 
 為視訊檔案編碼時，請使用盡可能高品質的來源視訊檔案。 請避免使用先前編碼的視訊檔案，因為這些檔案已經壓縮，而進一步編碼會造成品質欠佳的視訊。
 
@@ -302,7 +313,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 | 1280 X 720 | 16:9 | 3000 - 6000 kbps，視訊中的運動量而定。 |
 | 1920 X 1080 | 16時9分 | 6000 - 8000 kbps，視訊中的運動量而定。 |
 
-### 獲取檔案的元資料{#obtaining-a-file-s-metadata}
+### 取得檔案的中繼資料 {#obtaining-a-file-s-metadata}
 
 您可以使用視訊編輯工具檢視其中繼資料，或使用專為取得中繼資料而設計的應用程式，以取得檔案的中繼資料。 以下是使用協力廠商應用程式MediaInfo來取得視訊檔案中繼資料的指示：
 
@@ -390,13 +401,13 @@ VBR編碼需要較長的時間，但會產生最有利的結果；媒體檔案�
 | 720便士 | 720 | 大螢幕 |
 | 1080便士 | 1080 | 高清大螢幕 |
 
-### Fps（每秒幀數）{#fps-frames-per-second}
+### Fps（每秒幀數） {#fps-frames-per-second}
 
 在美國和日本，大多數視頻以每秒29.97幀(fps)拍攝；在歐洲，大多數視頻以25幀/秒的速度拍攝。 以24 fps拍攝。
 
 選擇符合主要來源視訊檔案之fps速率的視訊編碼預設集。 例如，如果您的主要來源視訊為25 fps，請選擇編碼預設集(25 fps)。 依預設，所有自訂編碼都使用主要來源視訊檔案的fps。 因此，建立視訊編碼預設集時，您不需要明確指定fps設定。
 
-### 視訊編碼維度{#video-encoding-dimensions}
+### 視訊編碼維度 {#video-encoding-dimensions}
 
 為獲得最佳結果，請選取編碼維度，使來源視訊是所有已編碼視訊的整數倍。
 
@@ -408,12 +419,12 @@ VBR編碼需要較長的時間，但會產生最有利的結果；媒體檔案�
 
 | 視訊類型 | 寬x高 | 寬度比例 | 高度比 |
 |--- |--- |--- |--- |
-| 來源 | 1920x1080 | 1 | 3 |
+| 來源 | 1920x1080 | 1 | 1 |
 | 編碼 | 960 x 540 | 2 | 2 |
-| 編碼 | 640 x 360 | 3 | 3 |
+| 編碼 | 640 x 360 | 3 | 1 |
 | 編碼 | 480 x 270 | 4 | 4 |
 
-### 編碼視頻檔案格式{#encoded-video-file-format}
+### 編碼視訊檔案格式 {#encoded-video-file-format}
 
 Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用H.264視訊轉碼器，因此可提供高品質的視訊，但檔案大小壓縮。
 
@@ -431,17 +442,17 @@ YouTube會自行編碼。 因此，上傳至Experience Manager的原始視訊檔
 
 1. [配置Google雲端設定](#configuring-google-cloud-settings)
 1. [建立YouTube管道](#creating-a-youtube-channel)
-1. [新增要發佈的標籤](#adding-tags-for-publishing)
+1. [新增發佈標籤](#adding-tags-for-publishing)
 1. [啟用YouTube Publish復寫代理](#enabling-the-youtube-publish-replication-agent)
 1. [在Experience Manager中設定YouTube](#setting-up-youtube-in-aem)
-1. [（選用）自動設定已上傳影片的預設YouTube屬性](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [（選用）自動設定您所上傳影片的預設YouTube屬性](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [將影片發佈至您的YouTube頻道](#publishing-videos-to-your-youtube-channel)
-1. [（選用）驗證YouTube上發佈的影片](/help/assets/video.md#optional-verifying-the-published-video-on-youtube)
+1. [（選用）驗證已發佈的YouTube影片](/help/assets/video.md#optional-verifying-the-published-video-on-youtube)
 1. [將YouTube URL連結至您的Web應用程式](#linking-youtube-urls-to-your-web-application)
 
 您也可以[取消發佈視訊，以從YouTube](#unpublishing-videos-to-remove-them-from-youtube)中移除視訊。
 
-### 配置Google雲設定{#configuring-google-cloud-settings}
+### 配置Google雲端設定 {#configuring-google-cloud-settings}
 
 若要發佈至YouTube，您需要Google帳戶。 如果你有Gmail賬戶，那麼你已經有Google賬戶了；如果您沒有Google帳戶，便可輕鬆建立帳戶。 您需要帳戶，因為您需要憑證才能將影片資產發佈至YouTube。 如果您已建立帳戶，請略過此任務，然後直接前往「建立YouTube通道」](#creating-a-youtube-channel)。[
 
@@ -545,7 +556,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    登出您的Google帳戶。 現在建立YouTube管道。
 
-### 建立YouTube通道{#creating-a-youtube-channel}
+### 建立YouTube管道 {#creating-a-youtube-channel}
 
 若要將影片發佈至YouTube，您必須擁有一或多個管道。 如果您已建立YouTube管道，可以略過此工作，然後前往[新增標籤以進行發佈](/help/assets/video.md#adding-tags-for-publishing)。
 
@@ -567,32 +578,32 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    現在新增要發佈的標籤。
 
-### 新增要發佈的標籤{#adding-tags-for-publishing}
+### 新增發佈標籤 {#adding-tags-for-publishing}
 
-若要發佈至YouTube的影片，Experience Manager會將標籤關聯至一或多個YouTube頻道。 若要新增要發佈的標籤，請參閱[管理標籤](/help/sites-administering/tags.md)。
+若要發佈至YouTube的影片，Experience Manager會將標籤關聯至一或多個YouTube頻道。 若要新增發佈標籤，請參閱[管理標籤](/help/sites-administering/tags.md)。
 
-或者，如果要在Experience Manager中使用預設標籤，可以跳過此任務並轉至[啟用YouTube發佈複製代理](#enabling-the-youtube-publish-replication-agent)。
+或者，如果要在Experience Manager中使用預設標籤，可以跳過此任務並轉至[啟用YouTube Publish複製代理](#enabling-the-youtube-publish-replication-agent)。
 
-### 啟用YouTube Publish復寫代理{#enabling-the-youtube-publish-replication-agent}
+### 啟用YouTube Publish復寫代理 {#enabling-the-youtube-publish-replication-agent}
 
 啟用YouTube Publish復寫代理後，如果您想要測試與Google Cloud帳戶的連線，請點選&#x200B;**[!UICONTROL Test Connection]**。 瀏覽器索引標籤會顯示連線結果。 如果您已新增YouTube管道，這些管道的清單會顯示為測試的一部分。
 
 1. 在Experience Manager的左上角，按一下Experience Manager標誌，然後在左側導軌中，按一下「**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** > **[!UICONTROL 作者上的代理」。]**
-1. 在「作者代理」頁面上，按一下「**[!UICONTROL YouTube發佈(youtube)]**」。
+1. 在「作者代理」頁面上，按一下&#x200B;**[!UICONTROL YouTube Publish]**。
 1. 在工具列的「設定」右側，按一下「**[!UICONTROL 編輯]**」。
 1. 選中&#x200B;**[!UICONTROL 啟用]**&#x200B;複選框，以便開啟複製代理。
 1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
    現在在Experience Manager中設定YouTube。
 
-### 在{#setting-up-youtube-in-aem}Experience Manager中設定YouTube
+### 在Experience Manager中設定YouTube {#setting-up-youtube-in-aem}
 
 從Experience Manager6.4開始，引入新的觸控使用者介面方法，以在Experience Manager中設定YouTube發佈。 根據您使用的Experience Manager安裝例項，執行下列其中一項操作：
 
-* 若要在6.4之前的Experience Manager中設定YouTube，請參閱[在6.4](/help/assets/video.md#setting-up-youtube-in-aem-before)之前的Experience Manager中設定YouTube 。
+* 若要在6.4之前的Experience Manager中設定YouTube，請參閱[在6.4之前的Experience Manager中設定YouTube 。](/help/assets/video.md#setting-up-youtube-in-aem-before)
 * 若要在Experience Manager6.4或更新版本中設定YouTube，請參閱[在Experience Manager6.4和更新版本中設定YouTube](#setting-up-youtube-in-aem-and-later)。
 
-#### 在Experience Manager6.4和更新版本{#setting-up-youtube-in-aem-and-later}中設定YouTube
+#### 在Experience Manager6.4和更新版本中設定YouTube {#setting-up-youtube-in-aem-and-later}
 
 1. 請務必以管理員身分登入您的Dynamic Media例項。
 1. 在左上角，點選Experience Manager標誌，然後在左側導軌中，點選「**[!UICONTROL 工具]**（槌子圖示）> **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube發佈設定]**」。
@@ -685,7 +696,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    現在您可將影片發佈至YouTube頻道。
 
-### （選用）自動設定已上傳影片的預設YouTube屬性{#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### （選用）自動設定您所上傳影片的預設YouTube屬性 {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 您可以在Experience Manager中建立中繼資料處理設定檔，選擇在上傳影片時自動設定YouTube屬性。
 
@@ -748,7 +759,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    請參 [閱中繼資料](/help/assets/metadata-config.md#metadata-profiles)[描述檔和視訊描述檔](/help/assets/video-profiles.md)。
 
-### 將影片發佈至您的YouTube頻道{#publishing-videos-to-your-youtube-channel}
+### 將影片發佈至您的YouTube頻道 {#publishing-videos-to-your-youtube-channel}
 
 現在，您將先前新增的標籤與視訊資產建立關聯。 此程式可讓Experience Manager知道要發佈至您的YouTube管道的資產。
 
@@ -762,7 +773,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 >
 >若要從YouTube發佈內容，Experience Manager會使用&#x200B;**[!UICONTROL 發佈至YouTube]**&#x200B;工作流程，讓您監控進度並檢視任何失敗資訊。
 >
->請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
+>請參閱[監視視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 >
 >如需更詳細的進度資訊，您可以在復寫下監控YouTube記錄檔。 但請注意，此類監控需要管理員存取權。
 
@@ -784,17 +795,17 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    您可以選擇驗證您的YouTube頻道上已發佈的視訊。
 
-### （選用）驗證YouTube上發佈的影片{#optional-verifying-the-published-video-on-youtube}
+### （選用）驗證已發佈的YouTube影片 {#optional-verifying-the-published-video-on-youtube}
 
 您可以選擇監控YouTube發佈（或取消發佈）的進度。
 
-請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
+請參閱[監視視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
 發佈時間可能會因許多因素而大不相同，這些因素包括主要來源視訊的格式、檔案大小和上傳流量。 發佈程式可能需要幾分鐘到數小時的時間。 另外，更高解析度的格式的呈現速度要慢得多。 例如，720p和1080p的顯示時間比480p要長。
 
 八小時後，如果您仍看到顯示「已上傳（處理，請稍候）」的狀態訊息&#x200B;]**，請嘗試從Adobe的網站移除視訊，然後再次上傳。**[!UICONTROL 
 
-### 將YouTube URL連結到Web應用程式{#linking-youtube-urls-to-your-web-application}
+### 將YouTube URL連結至您的Web應用程式 {#linking-youtube-urls-to-your-web-application}
 
 您可以取得YouTube URL字串，此字串在您發佈影片後由Dynamic Media產生。 複製YouTube URL時，剪貼簿會隨即顯示，因此您可以視需要將其貼至網站或應用程式中的頁面。
 
@@ -812,7 +823,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 1. 按一下&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤。
 1. 在「YouTube發佈」標題下的「YouTube URL List」（ URL清單）中，選取URL文字，並將其複製至網頁瀏覽器，以預覽資產或新增至您的網頁內容頁面。
 
-### 取消發佈影片以從YouTube {#unpublishing-videos-to-remove-them-from-youtube}中移除影片
+### 取消發佈影片，以便從YouTube中移除影片 {#unpublishing-videos-to-remove-them-from-youtube}
 
 在Experience Manager中取消發佈視訊資產時，視訊會從YouTube移除。
 
@@ -824,7 +835,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 >
 >若要從YouTube移除內容，Experience Manager會使用&#x200B;**[!UICONTROL 從YouTube]**&#x200B;取消發佈工作流程，讓您監控進度並檢視任何失敗資訊。
 >
->請參閱 [監控視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
+>請參閱[監視視訊編碼和YouTube發佈進度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
 **若要取消發佈影片以從YouTube中移除影片：**
 
@@ -835,11 +846,11 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL Next]**。
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL 取消發佈]**。
 
-## 監控視訊編碼和YouTube發佈進度{#monitoring-video-encoding-and-youtube-publishing-progress}
+## 監視視訊編碼和YouTube發佈進度 {#monitoring-video-encoding-and-youtube-publishing-progress}
 
-將新視訊上傳至已套用視訊編碼的資料夾，或將視訊發佈至YouTube時，您可以監控視訊編碼/Youtube發佈的進展情形（或失敗）。 實際YouTube發佈進度僅透過記錄檔提供。 但是，其失敗或成功會以下列程式中說明的其他方式列出。 此外，當YouTube發佈工作流程或視訊編碼完成或中斷時，您會收到電子郵件通知。
+將新視訊上傳至已套用視訊編碼的資料夾，或將視訊發佈至YouTube時，可以監控視訊編碼/Youtube發佈的進展情形。 實際YouTube發佈進度僅透過記錄檔提供。 但是，其失敗或成功會以下列程式中說明的其他方式列出。 此外，當YouTube發佈工作流程或視訊編碼完成或中斷時，您會收到電子郵件通知。
 
-### 監控進度{#monitoring-progress}
+### 監視進度 {#monitoring-progress}
 
 1. 在資產資料夾中檢視視訊編碼進度：
 
@@ -918,7 +929,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
 1. 您會收到有關中止或失敗工作流程作業的電子郵件通知。 管理員可設定這些電子郵件通知。 請參閱[設定電子郵件通知](#configuring-e-mail-notifications)。
 
-#### 配置電子郵件通知{#configuring-e-mail-notifications}
+#### 配置電子郵件通知 {#configuring-e-mail-notifications}
 
 >[!NOTE]
 >
@@ -960,7 +971,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 1. 完成後，在對話框的右上角附近，點選&#x200B;**[!UICONTROL Done]**&#x200B;表徵圖（複選標籤）。
 1. 在「發佈至YouTube」工作流程頁面的右上角附近，點選&#x200B;**[!UICONTROL Sync]**。
 
-## 檢視視訊報表{#viewing-video-reports}
+## 檢視視訊報表 {#viewing-video-reports}
 
 >[!NOTE]
 >
@@ -1005,13 +1016,13 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
 1. 在列出最常發佈影片的表格中，點選影片名稱以播放影片，並查看影片的對象保留率（下拉式清單）報表。
 
-### 根據您使用Dynamic Media HTML5檢視器SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}建立的視訊檢視器檢視視訊報表
+### 根據您使用Dynamic Media HTML5檢視器SDK建立的視訊檢視器，檢視視訊報表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
 如果您使用Dynamic Media提供的現成視訊檢視器，或如果您根據現成視訊檢視器建立自訂檢視器預設集，則不需要其他步驟即可檢視視訊報表。 不過，如果您已根據HTML5檢視器SDK API建立自己的視訊檢視器，則請使用下列步驟，確保您的視訊檢視器將追蹤事件傳送至Dynamic Media視訊報表。
 
-使用[AdobeDynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)和[HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)建立您自己的視訊檢視器。
+使用[AdobeDynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html)和[HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)建立您自己的視訊檢視器。
 
-**若要根據您使用HTML5檢視器SDK API建立的視訊檢視器來檢視視訊報表：**
+**若要根據您使用Dynamic Media HTML5檢視器SDK建立的視訊檢視器來檢視視訊報表：**
 
 1. 導覽至任何已發佈的視訊資產。
 1. 在資產頁面的左上角附近，從下拉式清單中選取「檢 **[!UICONTROL 視器]**」。
@@ -1068,7 +1079,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-## 向視頻{#adding-captions-to-video}添加字幕
+## 為視頻添加字幕或字幕 {#adding-captions-to-video}
 
 您可以在單一影片或最適化影片集中新增字幕，將影片的觸角延伸至全球市場。 通過添加字幕，您可以避免對音頻進行重音，或者使用母語者為每種語言重新錄制音頻。 影片以錄制的語言播放。 外語字幕出現，使不同語言的人仍然能夠理解音頻部分。
 
@@ -1096,7 +1107,7 @@ Dynamic Media會將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
    為獲得最佳結果，請使用Internet Explorer 9或更新版本、Google Chrome或Safari中的工具。
 
-   在工具的&#x200B;**[!UICONTROL 輸入視訊檔案]**&#x200B;欄位中，貼上視訊檔案的複製URL，然後按一下&#x200B;**[!UICONTROL 載入]**。 請參 [閱取得資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) ，以取得視訊檔案本身的URL，然後您可將它貼入視訊檔案 **[!UICONTROL 的「輸入URL」欄位中]**。然後，Internet Explorer、Chrome或Safari就可以原生播放視訊。
+   在工具的&#x200B;**[!UICONTROL 輸入視訊檔案]**&#x200B;欄位中，貼上視訊檔案的複製URL，然後按一下&#x200B;**[!UICONTROL 載入]**。 請參閱[取得資產](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)的URL ，以取得視訊檔案本身的URL，然後您可將該URL貼入視訊檔案欄位&#x200B;**[!UICONTROL 的「輸入URL」。]**&#x200B;然後，Internet Explorer、Chrome或Safari就可以原生播放視訊。
 
    現在請依照網站的螢幕指示製作和儲存您的WebVTT檔案。 完成後，複製字幕檔案內容並貼到純文字檔案編輯器中，然後以`.vtt`副檔名保存。
 
@@ -1127,7 +1138,7 @@ Dynamic Media會將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
       注意標題路徑末尾的`,1`。 緊接在路徑的`.vtt`副檔名後面，您可以選擇性地啟用（開啟）或停用（關閉）視訊播放器列上的隱藏式字幕按鈕，方法是分別將設定為`,1`或`,0`。
 
-## 將章節標籤新增至視訊{#adding-chapter-markers-to-video}
+## 新增章節標籤至視訊 {#adding-chapter-markers-to-video}
 
 您可以將章節標籤新增至單一視訊或最適化視訊集，讓您更輕鬆觀看和導覽長型視訊。 當使用者播放視訊時，可以按一下視訊時間軸上的章節標籤（也稱為視訊清除程式），輕鬆導覽至其興趣點。 或者，他們可以立即跳至新內容、示範和教學課程。
 
@@ -1143,7 +1154,7 @@ Dynamic Media會將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
 您可以使用下列範例作為建立具有章節導覽的WebVTT檔案時所使用的格式範例：
 
-### 具有視訊章節導覽{#webvtt-file-with-video-chapter-navigation}的WebVTT檔案
+### 具有視訊章節導覽的WebVTT檔案 {#webvtt-file-with-video-chapter-navigation}
 
 ```xml
 WEBVTT
@@ -1207,7 +1218,7 @@ Cost-efficient access to rapidly evolving technology.
      </tbody>
    </table>
 
-## 關於Dynamic Media - Scene7模式中的視訊縮圖{#about-video-thumbnails-in-dynamic-media-scene-mode}
+## 關於Dynamic Media - Scene7模式中的影片縮圖 {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
 視訊縮圖是視訊影格的縮小版本，或代表視訊給客戶的影像資產。 縮圖可鼓勵客戶點按影片。
 
@@ -1221,7 +1232,7 @@ Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換�
 
 另請參閱[關於Dynamic Media — 混合模式中的視訊縮圖](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
 
-### 新增自訂視訊縮圖{#adding-a-custom-video-thumbnail}
+### 新增自訂視訊縮圖 {#adding-a-custom-video-thumbnail}
 
 這些步驟僅適用於以「Dynamicmedia_Scene7」模式執行的Dynamic Media。
 
@@ -1255,11 +1266,11 @@ Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換�
 1. 在「變更縮圖」頁面上，點選「**[!UICONTROL 儲存變更]**」。
 1. 在視訊的「屬性」頁面的右上角，點選&#x200B;**[!UICONTROL 儲存並關閉]**。
 
-## 關於Dynamic Media中的視訊縮圖 — 混合模式{#about-video-thumbnails-in-dynamic-media-hybrid-mode}
+## 關於Dynamic Media — 混合模式中的視訊縮圖 {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
 您可以從Dynamic Media自動產生的十個縮圖影像中選擇其一，以新增至您的影片。 在Experience Manager網站、Experience Manager行動或Experience Manager Screens的製作環境中，將視訊資產與Dynamic Media元件搭配使用時，視訊播放器會顯示您選取的縮圖。 縮圖可當成靜態圖片，最能代表整個視訊的內容，進一步鼓勵使用者按一下「播放」按鈕。
 
-根據影片的總時間，Dynamic Media會將10個（預設）縮圖影像擷取到影片中，分別為1%、11%、21%、31%、41%、51%、61%、71%、81%和91%。 十個縮圖會持續存在，這表示如果您稍後決定選擇不同的縮圖，則不需要重新產生系列。 您可以預覽10個縮圖影像，然後選取您要用於影片的影像。 如果您想要變更為預設值，可以使用CRXDE Lite來設定產生縮圖影像的時間間隔。 例如，如果您只想從視訊產生四張均勻間隔的縮圖影像系列，您可以設定24%、49%、74%和99%的間隔時間。
+Dynamic Media會根據視訊的總時間擷取十個（預設）縮圖影像。 影像在影片中以1%、11%、21%、31%、41%、51%、61%、71%、81%和91%的比例擷取。 十個縮圖會持續存在，這表示如果您稍後決定選擇不同的縮圖，則不需要重新產生系列。 您可以預覽10個縮圖影像，然後選取您要用於影片的影像。 如果您想要變更為預設值，可以使用CRXDE Lite來設定產生縮圖影像的時間間隔。 例如，如果您只想從視訊產生四張均勻間隔的縮圖影像系列，您可以設定24%、49%、74%和99%的間隔時間。
 
 理想情況下，您可以在上傳視訊之後，以及在網站上發佈視訊之前，隨時新增視訊縮圖。
 
@@ -1267,7 +1278,7 @@ Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換�
 
 另請參閱[關於Dynamic Media - Scene7模式中的視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
-### 新增視訊縮圖{#adding-a-video-thumbnail}
+### 新增影片縮圖 {#adding-a-video-thumbnail}
 
 這些步驟僅適用於以混合模式執行的Dynamic Media。
 
@@ -1290,7 +1301,7 @@ Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換�
 
    請參閱[設定視訊縮圖產生的預設時間間隔](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)。
 
-#### 配置生成視頻縮略圖的預設時間間隔{#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
+#### 設定產生視訊縮圖的預設時間間隔 {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
 
 當您設定並儲存新的預設時間間隔時，您的變更會自動僅套用至您未來上傳的視訊。 它不會自動將新預設值套用至您先前上傳的影片。 對於現有視頻，必須重新生成縮略圖。
 
@@ -1316,7 +1327,7 @@ Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換�
 
    請參閱[新增視訊縮圖](#adding-a-video-thumbnail)。
 
-### 新增自訂視訊縮圖{#adding-a-custom-video-thumbnail-1}
+### 新增自訂視訊縮圖 {#adding-a-custom-video-thumbnail-1}
 
 這些步驟僅適用於以混合模式執行的Dynamic Media。
 
