@@ -1,13 +1,13 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
 audience: end-user
 user-guide-title: AEM 6.5傳統UI編寫使用手冊
 user-guide-description: 本指南涵蓋傳統使用者介面中AEM的製作概念。
 feature: 製作
 role: Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 25%
@@ -15,7 +15,7 @@ ht-degree: 25%
 ---
 
 
-# AEM 6.5傳統UI編寫使用手冊{#classic-ui}
+# AEM 6.5傳統UI編寫使用手冊 {#classic-ui}
 
 + [傳統UI編寫指南概述](home.md)
 + 傳統UI編寫簡介{#introduction}
