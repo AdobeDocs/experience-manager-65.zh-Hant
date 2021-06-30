@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 資產管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: dc483b9871cebce64f7b60fec2144f1f19ef28ec
+source-git-commit: 03b171d2af17efee73780b01058fd62bc9d45dbd
 workflow-type: tm+mt
 source-wordcount: '9788'
 ht-degree: 3%
@@ -775,7 +775,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 **若要檢視資產的已儲存註解：**
 
-1. 導覽至資產位置，然後開啟資產頁面。
+1. 前往資產位置，然後開啟資產頁面。
 
 1. 在Experience Manager介面中，選擇&#x200B;**[!UICONTROL 時間軸]**。
 1. 從時間軸 **[!UICONTROL 的「顯示全部]** 」清單中，選取「注 **[!UICONTROL 釋]** 」以根據註解來篩選結果。
