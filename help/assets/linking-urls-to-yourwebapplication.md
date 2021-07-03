@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 設定
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 11%
@@ -37,7 +37,7 @@ ht-degree: 11%
 
 另請參閱[上傳資產](manage-assets.md#uploading-assets)。
 
-## 取得資產{#obtaining-a-url-for-an-asset}的URL
+## 取得資產的URL {#obtaining-a-url-for-an-asset}
 
 您可以取得影像預設集或檢視器預設集產生的URL字串。 複製URL後，剪貼簿會隨即開啟，您可以視需要將其貼至網站或應用程式中的頁面。
 
@@ -87,7 +87,7 @@ ht-degree: 11%
 
    若要退出URL視窗，請點選&#x200B;**[!UICONTROL X]**&#x200B;或點選&#x200B;**[!UICONTROL 關閉]**。
 
-## 取得靜態資產{#obtaining-a-url-for-a-static-asset}的URL
+## 取得靜態資產的URL {#obtaining-a-url-for-a-static-asset}
 
 Dynamic Media支援靜態資產的傳送，除了影像和視訊，這是其他資產。 支援的靜態資產格式用於傳送，包括下列內容：
 
@@ -121,7 +121,7 @@ Dynamic Media支援靜態資產的傳送，除了影像和視訊，這是其他�
       變更複製的URL以在路徑中使用`is/content`，而非`is/image/`。
 
 
-## 取得已發佈視訊轉譯{#obtaining-a-video-url-for-a-published-video-rendition}的視訊URL
+## 取得已發佈視訊轉譯的視訊URL {#obtaining-a-video-url-for-a-published-video-rendition}
 
 1. 在AEM中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 雲端]** > **[!UICONTROL Cloud Services]**。
 1. 在「 **[!UICONTROL Cloud Services]** 」頁面上 **[!UICONTROL ，向下捲動至「]** Dynamic Media Cloud Services **[!UICONTROL 」標題，然後點選「]** Show Configurations」。
@@ -158,7 +158,7 @@ Dynamic Media支援靜態資產的傳送，除了影像和視訊，這是其他�
 
    這是已發佈視訊轉譯的完整視訊URL。
 
-## 取得適用性串流(HLS){#obtaining-a-video-url-for-adaptive-streaming-hls}的視訊URL
+## 取得最適化串流(HLS)的視訊URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. 在AEM中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 雲端]** > **[!UICONTROL Cloud Services]**。
 1. 在「 **[!UICONTROL Cloud Services]** 」頁面上 **[!UICONTROL ，向下捲動至「]** Dynamic Media Cloud Services **[!UICONTROL 」標題，然後點選「]** Show Configurations」。
@@ -201,7 +201,7 @@ Dynamic Media支援靜態資產的傳送，除了影像和視訊，這是其他�
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## 使用HTTP/2傳遞Dynamic Media資產{#using-http-to-deliver-your-dynamic-media-assets}
+## 使用HTTP/2傳遞Dynamic Media資產 {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2是全新、更新的Web通訊協定，可改善瀏覽器和伺服器的通訊方式。 它提供了更快的資訊傳輸，並降低了所需的處理能力。 Dynamic Media資產的傳送現在可透過HTTP/2，提供更理想的回應和載入時間。
 
