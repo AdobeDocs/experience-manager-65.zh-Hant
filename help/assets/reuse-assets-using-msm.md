@@ -3,17 +3,17 @@ title: 使用MSM重複使用資產
 description: 在衍生自父資產並連結至父資產的多個頁面/資料夾中使用資產。 資產會與主要副本保持同步，只要按幾下，就會從父資產接收更新。
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner, Administrator, Architect
+role: User, Admin, Architect
 feature: 資產管理，多站點管理員
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '3371'
 ht-degree: 9%
 
 ---
 
-# 對[!DNL Assets] {#reuse-assets-using-msm-for-assets}使用MSM重複使用資產
+# 對[!DNL Assets]使用MSM重複使用資產 {#reuse-assets-using-msm-for-assets}
 
 [!DNL Adobe Experience Manager]中的多站點管理器(MSM)功能使用戶能夠重複使用一次創作的內容，並跨多個Web位置重複使用。 數位資產與[!DNL Assets]功能的MSM相同。 對[!DNL Assets]使用MSM，您可以：
 
@@ -27,7 +27,7 @@ ht-degree: 9%
 
 ## 了解優點和概念 {#concepts}
 
-### 其運作方式及優點{#how-it-works-and-the-benefits}
+### 運作方式與優點 {#how-it-works-and-the-benefits}
 
 若要了解在多個Web位置重複使用相同內容（文字和資產）的使用案例，請參閱[可能的MSM案例](/help/sites-administering/msm.md)。 [!DNL Experience Manager] 維護原始資產與其連結副本之間的連結，稱為即時副本(LC)。維護的連結可將集中的變更推送至多個即時副本。 這樣可以更快地更新，同時消除管理重複副本的限制。 變更的傳播是無誤的，是集中的。 此功能允許儲存受選定即時副本限制的更新空間。 使用者可以分離連結（即中斷繼承），並進行下次更新主副本並執行變更時不會覆寫的本機編輯。 您可以對一些選取的中繼資料欄位或整個資產進行分離。 它允許靈活地在本機更新原來繼承自主副本的資產。
 
@@ -124,7 +124,7 @@ MSM會維護來源資產與其即時副本之間的即時關係，以便：
 
 1. 您可以選擇即時副本的選項，以繼承父項的轉出設定或變更設定。
 
-### 資料夾{#status-lc-folder}的所有即時副本的資訊和狀態
+### 資料夾所有即時副本的資訊和狀態 {#status-lc-folder}
 
 [!DNL Experience Manager] 提供一個控制台，用於檢查源資料夾的所有即時副本的樣式。此主控台會顯示所有子資產的狀態。
 
@@ -167,7 +167,7 @@ MSM會維護來源資產與其即時副本之間的即時關係，以便：
 
 *圖：暫停關係或變更特定即時副本的轉出設定。*
 
-### 從「參考」邊欄快速動作，即時副本{#ref-rail-lc}
+### 從「參考」邊欄快速動作即時副本 {#ref-rail-lc}
 
 若為即時複製資產或資料夾，您可以看到下列資訊，並直接從「參考」邊欄採取下列動作：
 
@@ -208,7 +208,7 @@ MSM會維護來源資產與其即時副本之間的即時關係，以便：
 
 *圖：將來源修改轉出至所選即時副本。*
 
-### 關於同步操作{#about-sync}
+### 關於同步操作 {#about-sync}
 
 同步操作只會將修改從源提取到所選的即時副本。 同步動作會尊重並維護取消繼承後完成的本機修改。 不會覆寫本機修改，且取消的繼承不會重新建立。 您可以透過三種方式啟動同步動作。
 
@@ -218,7 +218,7 @@ MSM會維護來源資產與其即時副本之間的即時關係，以便：
 | [!UICONTROL 屬性]頁中的工具欄 | 在您已開啟即時副本屬性時啟動同步。 | 請參閱[同步即時副本](#sync-lc) |
 | [!UICONTROL 即時副本概] 觀主控台 | 選取來源資料夾或[!UICONTROL 即時副本概述]主控台已開啟時，快速同步多個資產（不一定全部）。 一次會針對一個資產起始同步動作，但是這是一次就多個資產同步的更快方式。 | 請參閱即時副本資料夾中許多資產的動作](#bulk-actions)[ |
 
-### 同步即時副本{#sync-lc}
+### 同步即時副本 {#sync-lc}
 
 若要啟動同步動作，請開啟即 **[!UICONTROL 時副本的「屬性]** 」頁面，按一下「即時 **** 副本」，然後從工具列按一下所要的動作。
 
@@ -232,7 +232,7 @@ MSM會維護來源資產與其即時副本之間的即時關係，以便：
 >
 >如果掛起關係，則工具欄中不提供同步操作。 雖然「參考」邊欄中有同步動作可用，但即使成功轉出，修改也不會傳播。
 
-## 掛起和恢復關係{#suspend-resume}
+## 暫停和恢復關係 {#suspend-resume}
 
 您可以暫時暫停關係，以防止即時副本收到對來源資產或資料夾所做的修改。 也可以恢復關係，以便即時副本開始從來源接收修改。
 
@@ -240,7 +240,7 @@ MSM會維護來源資產與其即時副本之間的即時關係，以便：
 
 或者，您也可以從即時副本概述主控台，快速暫停或繼續即時副本資料夾中多 **[!UICONTROL 個資產的關係]** 。請參 [閱對即時副本資料夾中的許多資產採取動作](#bulk-actions)。
 
-## 對即時副本{#local-mods}進行本機修改
+## 對即時副本進行本機修改 {#local-mods}
 
 Live Copy是建立原始源時的副本。 即時副本的中繼資料值繼承自來源。 中繼資料欄位個別地維護與來源資產之個別欄位的繼承。
 
@@ -270,7 +270,7 @@ Live Copy是建立原始源時的副本。 即時副本的中繼資料值繼承�
 
 或者，您也可以從&#x200B;**[!UICONTROL 即時副本概述]**&#x200B;主控台快速分離即時副本資料夾中的多個資產。 請參 [閱對即時副本資料夾中的許多資產採取動作](#bulk-actions)。
 
-## 即時副本資料夾{#bulk-actions}中的大量動作
+## 即時副本資料夾中的大量動作 {#bulk-actions}
 
 如果即時副本資料夾中有多個資產，對每個資產啟動動作可能會相當繁瑣。 您可以從[!UICONTROL 即時副本控制台]快速啟動許多資產的基本動作。 上述方法仍適用於個別資產。
 
@@ -282,7 +282,7 @@ Live Copy是建立原始源時的副本。 即時副本的中繼資料值繼承�
 
    *圖：從即時副本檢視主控台輕鬆更新即時副本資料 [!UICONTROL 夾中的] 許多資產。*
 
-## 為[!DNL Assets] {#extend-api}擴展MSM
+## 為[!DNL Assets]擴展MSM {#extend-api}
 
 [!DNL Experience Manager] 可讓您使用MSM Java API擴充功能。對於[!DNL Assets]，擴充功能的作用與搭配[!DNL Sites]的MSM時的作用相同。 如需詳細資訊，請參閱[擴充MSM](/help/sites-developing/extending-msm.md)及下列項目，以取得特定工作的相關資訊：
 
@@ -298,7 +298,7 @@ Live Copy是建立原始源時的副本。 即時副本的中繼資料值繼承�
 >* [!DNL Assets]的MSM不支援在頁面屬性（觸控式UI）上設定MSM鎖。
 
 
-## 資產管理任務對即時副本{#manage-assets}的影響
+## 資產管理任務對Live Copy的影響 {#manage-assets}
 
 即時副本和來源是可在一定程度上作為數位資產進行管理的資產或資料夾。 [!DNL Experience Manager]中的某些資產管理任務對即時副本有特定影響。
 
@@ -321,7 +321,7 @@ Live Copy是建立原始源時的副本。 即時副本的中繼資料值繼承�
 * [!DNL Assets]的MSM不支援在頁面屬性上設定MSM鎖定（觸控式UI）。
 * 針對[!DNL Assets]的MSM，僅使用&#x200B;**[!UICONTROL 標準轉出設定]**。 其他轉出設定不適用於[!DNL Assets]的MSM。
 
-## 最佳實務{#best-practices}
+## 最佳實務 {#best-practices}
 
 MSM的一些最佳實務為：
 
