@@ -2,17 +2,17 @@
 title: 資料夾共用至 [!DNL Adobe Creative Cloud] 最佳實務
 description: 配置 [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 以與Adobe Creative Cloud(CC)用戶交換資料夾。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 協作
 exl-id: 130cec6d-1cdd-4304-94bb-65e6bb573e55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager] 到資 [!DNL Adobe Creative Cloud] 料夾共用  {#aem-to-creative-cloud-folder-sharing-best-practices}
+# [!DNL Adobe Experience Manager] 到資 [!DNL Adobe Creative Cloud] 料夾共用 {#aem-to-creative-cloud-folder-sharing-best-practices}
 
 >[!CAUTION]
 >
@@ -45,7 +45,7 @@ ht-degree: 0%
 * **[!DNL Creative Cloud]資產網站服務** (儲存和檔 [!DNL Creative Cloud] 案網頁UI):這是共用資料夾的特定Creative Cloud應用 [!DNL Assets] 程式使用者能夠接受邀請並在其Creative Cloud帳戶儲存體中查看資料夾的位置。
 * **Creative Cloud案頭應用程式**:（可選）可透過與Assets儲存空間同步，從創意使用者的案頭直接存取共用資料夾/ [!DNL Creative Cloud] 檔案。
 
-## 特性和限制{#characteristics-and-limitations}
+## 特徵和限制 {#characteristics-and-limitations}
 
 * **變更的單向傳播：** 檔案變更只會傳播至一個方向 — 從資產最初建立（上傳）的系統([!DNL Experience Manager] 或 [!DNL Creative Cloud Assets])。整合不提供兩個系統之間完全自動化的雙向同步。
 * **版本設定:**
@@ -59,7 +59,7 @@ ht-degree: 0%
 * **網路和頻寬：** 共用資料夾中的檔案和所有更新都需要通過網路在系統之間傳輸。您應確保僅共用相關檔案和更新。
 * **資料夾類型**:共用 [!DNL Assets] 類型的資料 `sling:OrderedFolder`夾在中的共用內容不受支 [!DNL Adobe Marketing Cloud]援。如果要共用資料夾，在[!DNL Assets]中建立資料夾時，請勿選取[!UICONTROL Ordered]選項。
 
-## 最佳實務{#best-practices}
+## 最佳實務 {#best-practices}
 
 將[!DNL Experience Manager]運用於[!DNL Creative Cloud]資料夾共用的最佳實務包括：
 
