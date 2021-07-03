@@ -2,17 +2,17 @@
 title: 使用連結共用資產
 description: 以URL共用資產、資料夾和集合。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 連結共用，資產管理
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: 3ec39279d001297dcc11ebd1110bb452de8ca980
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 5%
 
 ---
 
-# 透過連結{#asset-link-sharing}共用資產
+# 透過連結共用資產 {#asset-link-sharing}
 
 [!DNL Adobe Experience Manager Assets] 可讓您與組織成員和外部實體（包括合作夥伴和廠商）以URL的形式共用資產、資料夾和集合。透過連結共用資產是讓外部使用者無須先登入[!DNL Assets]即可取得資源的便利方式。
 
@@ -71,7 +71,7 @@ ht-degree: 5%
 
 1. 若要取消共用資產，請選取資產，然後按一下工具列中的「**[!UICONTROL 取消共用]**」 。 之後會顯示確認訊息。 資產的項目會從清單中移除。
 
-## 配置Day CQ郵件服務{#configure-day-cq-mail-service}
+## 設定Day CQ郵件服務 {#configure-day-cq-mail-service}
 
 1. 在[!DNL Experience Manager]首頁上，導航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
 1. 從服務清單中，找到&#x200B;**[!UICONTROL Day CQ Mail Service]**。
@@ -86,7 +86,7 @@ ht-degree: 5%
 
 1. 按一下「**[!UICONTROL 儲存]**」。
 
-## 配置最大資料大小{#configure-maximum-data-size}
+## 配置最大資料大小 {#configure-maximum-data-size}
 
 使用連結共用功能從共用的連結下載資產時，[!DNL Experience Manager]會從存放庫壓縮資產階層，然後以ZIP檔案傳回資產。 但是，在ZIP檔案中可壓縮的資料量沒有限制的情況下，會對大量資料進行壓縮，這會導致JVM記憶體不足錯誤。 為了保護系統免受因此情況而可能發生的拒絕服務攻擊，請使用Configuration Manager中&#x200B;**[!UICONTROL Max Content Size(uncompressed)]**&#x200B;參數的&#x200B;**[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]**&#x200B;來配置最大大小。 如果資產的未壓縮大小超過設定的值，資產下載請求就會遭到拒絕。 預設值為100 MB。
 
@@ -98,7 +98,7 @@ ht-degree: 5%
 
 1. 儲存變更。
 
-## {#best-practices-and-troubleshooting}最佳作法和疑難排解
+## 最佳實務和疑難排解 {#best-practices-and-troubleshooting}
 
 * 資產資料夾或名稱中包含空白字元的集合可能無法共用。
 * 如果使用者無法下載共用資產，請洽詢您的[!DNL Experience Manager]管理員[下載限制](#configure-maximum-data-size)是什麼。
@@ -111,4 +111,4 @@ ht-degree: 5%
    * `http://[aem_server]:[port]/linkshare.html`
    * `http://[aem_server]:[port]/linksharepreview.html`
    * `http://[aem_server]:[port]/linkexpired.html`
-   在[!DNL Experience Manager]介面中，訪問&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web控制台]**。 開啟&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;配置，並在&#x200B;**[!UICONTROL Domains]**&#x200B;欄位中修改以下屬性，並針對`local`、`author`和`publish`提及值。 針對`local`和`author`屬性，分別提供本機和Author例項的URL。 如果您執行單一[!DNL Experience Manager]製作例項，請對`local`和`author`屬性使用相同的值。 若為發佈例項，請提供[!DNL Experience Manager]發佈例項的URL。
+   在[!DNL Experience Manager]介面中，訪問&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。 開啟&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;配置，並在&#x200B;**[!UICONTROL Domains]**&#x200B;欄位中修改以下屬性，並針對`local`、`author`和`publish`提及值。 針對`local`和`author`屬性，分別提供本機和Author例項的URL。 如果您執行單一[!DNL Experience Manager]製作例項，請對`local`和`author`屬性使用相同的值。 若為發佈例項，請提供[!DNL Experience Manager]發佈例項的URL。
