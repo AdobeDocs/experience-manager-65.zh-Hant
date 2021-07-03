@@ -3,10 +3,10 @@ title: 與Adobe Creative Cloud最佳實務整合
 description: 整合 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 以簡化資產轉移工作流程並實現高內容速度的最佳實務。
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 協作，Adobe資產連結，案頭應用程式
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '3254'
 ht-degree: 14%
