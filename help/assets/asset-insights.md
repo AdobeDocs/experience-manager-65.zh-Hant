@@ -2,10 +2,10 @@
 title: Assets Insights
 description: 了解「資產前瞻分析」功能如何讓您追蹤第三方網站、行銷活動和Adobe創意解決方案中使用的影像的使用者評等和使用統計資料。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 資產分析，資產報表
 exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 6%
@@ -26,7 +26,7 @@ ht-degree: 6%
 >
 >僅支援並提供影像見解。
 
-## 查看影像{#viewing-statistics-for-an-image}的統計資訊
+## 查看影像的統計資訊 {#viewing-statistics-for-an-image}
 
 您可以從中繼資料頁面檢視「資產前瞻分析」分數。
 
@@ -63,7 +63,7 @@ ht-degree: 6%
 
    ![chlimage_1-98](assets/chlimage_1-303.png)
 
-## 查看影像{#viewing-aggregate-statistics-for-images}的聚合統計資訊
+## 查看映像的聚合統計資訊 {#viewing-aggregate-statistics-for-images}
 
 您可以使用前瞻分析檢視同時檢視資料夾內所有資產 **[!UICONTROL 的分數]**。
 
@@ -71,7 +71,7 @@ ht-degree: 6%
 1. 按一下工具列中的「配置」，然後選擇&#x200B;**[!UICONTROL 前瞻分析視圖]**。
 1. 頁面會顯示資產的使用分數。 比較各種資產的評等並得出深入分析。
 
-## 計畫後台作業{#scheduling-background-job}
+## 排程背景工作 {#scheduling-background-job}
 
 Assets Insights會定期從Adobe Analytics報表套裝擷取資產的使用資料。 根據預設，Assets Insights會每24小時在凌晨2:00執行背景工作，以擷取資料。 不過，您可以透過從Web主控台設定&#x200B;**[!UICONTROL Adobe CQ DAM資產效能報表同步工作]**&#x200B;服務，以修改頻率和時間。
 
