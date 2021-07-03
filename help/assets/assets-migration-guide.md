@@ -2,17 +2,17 @@
 title: 大量移轉資產
 description: 說明如何將資產帶入 [!DNL Adobe Experience Manager]、套用中繼資料、產生轉譯，以及啟用資產以發佈執行個體。
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: 移轉，轉譯，資產管理
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 8%
 
 ---
 
-# 如何大量移轉資產{#assets-migration-guide}
+# 如何大量移轉資產 {#assets-migration-guide}
 
 將資產移轉至[!DNL Adobe Experience Manager]時，需考慮數個步驟。 從其目前的首頁擷取資產和中繼資料不在本檔案的討論範圍內，因為實作之間的差異很大，但本檔案說明如何將這些資產帶入[!DNL Experience Manager]、套用其中繼資料、產生轉譯，以及啟用這些資產以發佈執行個體。
 
@@ -34,7 +34,7 @@ ht-degree: 8%
 >
 本軟體為開放原始碼， [Apache v2授權涵蓋此軟體](https://adobe-consulting-services.github.io/pages/license.html)。若要提出問題或報告問題，請造訪ACS AEM工具和 [ACS AEM公域的GitHub](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)[問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
-## 移轉至[!DNL Experience Manager] {#migrating-to-aem}
+## 遷移至[!DNL Experience Manager] {#migrating-to-aem}
 
 將資產移轉至[!DNL Experience Manager]需要數個步驟，且應視為分階段程式。 移轉階段如下：
 
@@ -47,21 +47,21 @@ ht-degree: 8%
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
-### 禁用工作流{#disabling-workflows}
+### 停用工作流程 {#disabling-workflows}
 
 開始移轉前，請停用[!UICONTROL DAM更新資產]工作流程的啟動器。 最好將所有資產內嵌至系統，然後以批次執行工作流程。 如果您在移轉進行時已上線，您可以排程這些活動在非工作時間執行。
 
-### 載入標籤{#loading-tags}
+### 載入標籤 {#loading-tags}
 
 您可能已準備好將標籤分類套用至影像。 雖然CSV資產匯入工具和[!DNL Experience Manager]中繼資料設定檔支援等工具可自動將標籤套用至資產的程式，但標籤必須載入到系統中。 [ACS AEM工具標籤製作器](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html)功能允許您使用載入到系統中的Microsoft Excel電子錶格填入標籤。
 
-### 擷取資產{#ingesting-assets}
+### 內嵌資產 {#ingesting-assets}
 
 將資產擷取至系統中時，效能和穩定性是重要考量。 由於您要將大量資料載入到系統中，因此，您希望確保系統能盡其所能地運行，以最大限度地減少所需時間，並避免系統超載，這可能導致系統崩潰，特別是在已在生產的系統中。
 
 將資產載入系統有兩種方法：使用HTTP的推送式方法，或使用JCR API的提取式方法。
 
-#### 透過HTTP {#pushing-through-http}傳送
+#### 透過HTTP傳送 {#pushing-through-http}
 
 Adobe的Managed Services團隊使用名為Glutton的工具，將資料載入客戶環境中。 Glutton是一個小型Java應用程式，它將所有資產從一個目錄載入到[!DNL Experience Manager]部署上的另一個目錄。 您也可以使用工具（例如Perl指令碼）將資產張貼至存放庫，而不是使用Glutton。
 
@@ -72,13 +72,13 @@ Adobe的Managed Services團隊使用名為Glutton的工具，將資料載入客�
 
 擷取資產的另一種方法是從本機檔案系統提取資產。 不過，如果您無法將外部硬碟或網路共用裝載至伺服器以執行提取式方法，則透過HTTP張貼資產是最佳選項。
 
-#### 從本地檔案系統{#pulling-from-the-local-filesystem}中讀取
+#### 從本地檔案系統獲取 {#pulling-from-the-local-filesystem}
 
 [ACS AEM工具CSV資產匯入工具](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html)從CSV檔案提取資產，並從CSV檔案提取資產中繼資料以匯入資產。 Experience Manager資產管理器API可用來將資產匯入系統，並套用已設定的中繼資料屬性。 理想情況下，資產會透過網路檔案裝載或外部驅動器裝載在伺服器上。
 
 由於資產不需要透過網路傳輸，因此整體效能大幅改善，且通常認為此方法是將資產載入存放庫的最有效方式。 此外，由於工具支援中繼資料擷取，因此您可以在單一步驟中匯入所有資產和中繼資料，而非也可以建立第二個步驟，透過個別工具套用中繼資料。
 
-### 處理格式副本{#processing-renditions}
+### 處理轉譯 {#processing-renditions}
 
 將資產載入系統後，您需要透過[!UICONTROL  DAM更新資產]工作流程處理資產，以擷取中繼資料並產生轉譯。 執行此步驟之前，您需要複製並修改[!UICONTROL  DAM更新資產]工作流程，以符合您的需求。 現成可用的工作流程包含許多您可能不需要的步驟，例如Dynamic Media PTIFF產生或[!DNL InDesign Server]整合。
 
@@ -87,7 +87,7 @@ Adobe的Managed Services團隊使用名為Glutton的工具，將資料載入客�
 1. 最簡單的方法是[ACS Commons&#39; Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 此工具允許您執行查詢，並通過工作流處理查詢結果。 還有設定批大小的選項。
 1. 您可搭配「合成工 [作流程」使用ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)[](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。雖然此方法的參與度要高得多，但可讓您移除[!DNL Experience Manager]工作流程引擎的額外負荷，同時最佳化伺服器資源的使用。 此外，Fast Action Manager還通過動態監控伺服器資源並調節系統上的負載，進一步提高了效能。ACS Commons功能頁上提供了示例指令碼。
 
-### 啟動資產{#activating-assets}
+### 啟動資產 {#activating-assets}
 
 若是具有發佈層級的部署，您需要將資產啟動至發佈伺服器陣列。 雖然Adobe建議執行多個單一發佈執行個體，但將所有資產複製到單一發佈執行個體然後複製該執行個體最有效率。 在啟動大量資產時，觸發樹狀結構啟動後，您可能需要進行干預。 原因如下：觸發啟動時，項目會新增至Sling作業/事件佇列。 此佇列的大小開始超過約40,000個項目後，處理速度大幅放緩。 當此隊列的大小超過100,000個項後，系統穩定性就會開始受到影響。
 
@@ -101,7 +101,7 @@ Adobe的Managed Services團隊使用名為Glutton的工具，將資料載入客�
 >
 >Adobe不維護或支援Grabbit。
 
-### 複製發佈{#cloning-publish}
+### 原地複製發佈 {#cloning-publish}
 
 啟動資產後，您可以複製發佈執行個體，以建立部署所需的所有復本。 克隆伺服器相當簡單，但有一些重要步驟需要記住。 若要原地複製發佈：
 
@@ -113,11 +113,11 @@ Adobe的Managed Services團隊使用名為Glutton的工具，將資料載入客�
 1. 啟動環境。
 1. 更新作者上任何復寫代理的設定，以指向新執行個體上正確的發佈執行個體或調度程式排清代理，以指向新環境的正確調度程式。
 
-### 啟用工作流{#enabling-workflows}
+### 啟用工作流程 {#enabling-workflows}
 
 完成移轉後，應重新啟用[!UICONTROL  DAM更新資產]工作流程的啟動器，以支援產生轉譯項目和擷取中繼資料，以持續使用日常系統。
 
-## 在[!DNL Experience Manager]部署{#migrating-between-aem-instances}間遷移
+## 跨[!DNL Experience Manager]部署遷移 {#migrating-between-aem-instances}
 
 雖然並不常見，但有時您需要將大量資料從一個[!DNL Experience Manager]部署遷移到另一個部署；例如，執行[!DNL Experience Manager]升級時，請升級硬體，或遷移到新的資料中心，例如進行AMS遷移。
 
