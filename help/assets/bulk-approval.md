@@ -3,9 +3,9 @@ title: 查看資料夾資產和集合
 description: 為資料夾或集合中的資產設定審核工作流程，並與審核者或創意合作夥伴共用，以尋求意見回饋。
 contentOwner: AG
 feature: 協作，集合
-role: Business Practitioner
+role: User
 exl-id: 23c90e10-aa03-450e-9fb0-2f5be0c5066b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 4%
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 審核者完成審核（批准或拒絕資產）後，您會收到審核完成通知。
 
-## 建立資料夾{#creating-a-review-task-for-folders}的審核任務
+## 為資料夾建立審核任務 {#creating-a-review-task-for-folders}
 
 1. 從[!DNL Assets]用戶介面中，選擇要為其建立審閱任務的資料夾。
 1. 在工具欄中，按一下&#x200B;**[!UICONTROL 建立審閱任務]** ![建立審閱任務](assets/do-not-localize/create-review-task.png)以開啟&#x200B;**[!UICONTROL 審閱任務]**&#x200B;頁。 如果您在工具列中看不到選項，請按一下「**[!UICONTROL 更多]**」，然後選取選項。
@@ -70,7 +70,7 @@ ht-degree: 4%
 
    ![查看清單視圖中顯示的狀態](assets/review_status_listview.png)
 
-## 為集合{#creating-a-review-task-for-collections}建立審核任務
+## 為集合建立審核任務 {#creating-a-review-task-for-collections}
 
 1. 從「集合」頁中，選擇要為其建立審閱任務的集合。
 1. 在工具欄中，按一下&#x200B;**[!UICONTROL 建立審閱任務]** ![建立審閱任務](assets/do-not-localize/create-review-task.png)以開啟&#x200B;**[!UICONTROL 審閱任務]**&#x200B;頁。 如果您在工具列上看不到選項，請按一下「**[!UICONTROL 更多]**」，然後選取選項。
