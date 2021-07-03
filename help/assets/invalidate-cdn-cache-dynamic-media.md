@@ -5,17 +5,17 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDN快取
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 1%
 
 ---
 
-# 透過Dynamic Media {#invalidating-cdn-cache-for-dm-assets}使CDN快取失效
+# 透過Dynamic Media使CDN快取失效 {#invalidating-cdn-cache-for-dm-assets}
 
 Dynamic Media資產會由CDN（內容傳遞網路）快取，以快速傳遞給客戶。 不過，當您更新這些資產時，您希望這些變更立即在您的網站上生效。 清除或使CDN快取失效，可讓您快速更新由Dynamic Media傳送的資產。 您不必等待快取透過TTL（存留時間）值（預設為10小時）過期，而是可以在Dynamic Media內傳送要求，讓快取在數分鐘內過期。
 
