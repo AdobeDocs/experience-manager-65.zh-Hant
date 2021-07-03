@@ -3,16 +3,16 @@ title: '[!DNL Assets] 首頁體驗'
 description: 為豐富的歡迎畫面體驗個人化 [!DNL Experience Manager Assets] 首頁，包括資產相關最近活動的快照。
 contentOwner: AG
 feature: 開發人員工具，資產管理
-role: Administrator, Business Practitioner
+role: Admin, User
 exl-id: 042bd959-256a-4794-a34d-0848a6b8840d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] 首頁體驗  {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] 首頁體驗 {#aem-assets-home-page-experience}
 
 個人化[!DNL Adobe Experience Manager Assets]首頁以提供豐富的歡迎畫面體驗，包括資產近期活動的快照。
 
