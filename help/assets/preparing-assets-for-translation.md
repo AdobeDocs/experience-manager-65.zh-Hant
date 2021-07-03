@@ -2,17 +2,17 @@
 title: 準備翻譯資產
 description: 建立語言根資料夾以準備要翻譯的資產，以支援多語言資產。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 專案
 exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-# 準備翻譯資產{#preparing-assets-for-translation}
+# 準備翻譯資產 {#preparing-assets-for-translation}
 
 多語言資產是指具有多種語言的二進位檔、中繼資料和標籤的資產。 資產的二進位檔、中繼資料和標籤通常以一種語言存在，然後轉譯為其他語言，以用於多語言專案。
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 1. 將資產新增至您的語言主要版本。
 1. 建立您需要語言副本的每種目標語言的語言根。
 
-## 建立語言根{#creating-a-language-root}
+## 建立語言根 {#creating-a-language-root}
 
 要建立語言根，請建立資料夾並使用ISO語言代碼作為Name屬性的值。 建立語言根後，您就可以在語言根的任何層級建立語言副本。
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 1. 按一下&#x200B;**[!UICONTROL 建立]**。語言根在[!DNL Assets]控制台中建立。
 
-## 查看語言根{#viewing-language-roots}
+## 查看語言根 {#viewing-language-roots}
 
 [!DNL Experience Manager] 介面提供一 **** 個「參考」面板，該面板顯示已在中建立的語言根 [!DNL Assets]清單。
 
