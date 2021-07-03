@@ -3,20 +3,20 @@ title: ' [!DNL Adobe Experience Manager Assets] 簡介'
 description: 了解什麼是數位資產管理、其使用案例，以及 [!DNL Adobe Experience Manager Asset] 產品。
 contentOwner: AG
 feature: 資產管理
-role: Leader, Architect, Business Practitioner
+role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '876'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
-# 關於[!DNL Adobe Experience Manager Assets]作為DAM解決方案{#administering-assets}
+# 關於[!DNL Adobe Experience Manager Assets]作為DAM解決方案 {#administering-assets}
 
 [!DNL Assets] 是數位資產管理(DAM)工具，是平台的必要部分，可 [!DNL Experience Manager] 讓您的企業管理和發佈數位資產。整個組織的使用者可以管理、儲存及存取許多類型的數位資產，例如影像、影片、檔案、音訊剪輯、3D檔案和多媒體，以用於網路、印刷品和數位散發。
 
-## 什麼是數位資產管理？{#what-is-digital-asset-management}
+## 什麼是數位資產管理？ {#what-is-digital-asset-management}
 
 [!DNL Assets] 提供組織關鍵數位資產的全企業共用和分發。整個組織的用戶可以通過Web介面（或CIFS或WebDAV資料夾）儲存、管理和訪問數字資產，如影像、圖形、音頻、視頻和文檔。
 
@@ -35,14 +35,14 @@ ht-degree: 12%
 
 基本用戶介面與[!DNL Sites]的介面相同。 如需完整詳細資訊，請參閱[網站概觀](/help/sites-authoring/page-authoring.md)。
 
-### 數位資產管理與影像元件{#digital-asset-management-versus-image-component}
+### 數位資產管理與影像元件 {#digital-asset-management-versus-image-component}
 
 判斷要將影像放入DAM存放庫或使用影像元件時，請考量影像生命週期：
 
 * 如果影像的生命週期與頁面相同，請使用影像元件。
 * 例如，如果影像具有單獨的生命週期，則使用影像兩次或在WCM外使用，則使用[!DNL Assets]。
 
-## 什麼是數位資產？{#what-are-digital-assets}
+## 什麼是數位資產？ {#what-are-digital-assets}
 
 資產是數位檔案、影像、視訊或音訊（或其中一部分），可以多次轉譯也可以有子資產（例如photoshop檔案中的圖層、PowerPoint檔案中的投影片、PDF中的頁面、ZIP中的檔案）。
 
@@ -52,7 +52,7 @@ ht-degree: 12%
 >
 >上傳和/或編輯大量資產（尤其是影像）可能會影響[!DNL Experience Manager]部署的效能。
 
-### [!DNL Experience Manager Assets] 術語  {#aem-assets-terminology}
+### [!DNL Experience Manager Assets] 術語 {#aem-assets-terminology}
 
 在[!DNL Experience Manager]中使用數位資產時，您需要了解下列術語：
 
@@ -72,7 +72,7 @@ ht-degree: 12%
 
 * **子資產**:子資產是組成資產的資產，例如檔案中的圖層 [!DNL Adobe Photoshop] 或PDF檔案中的頁面。在[!DNL Assets]中，您可以像管理資產一樣管理子資產。
 
-### 如何使用數位資產{#how-to-work-with-assets}
+### 如何使用數位資產 {#how-to-work-with-assets}
 
 您對資產或集合執行動作。 動作可以建立或修改資產、集合和轉譯。 您對資產執行的許多基本動作（上傳、刪除、更新、儲存子資產）會觸發預先設定的工作流程。 這些在[!DNL Assets]中會自動開啟，並在[!DNL Assets]媒體處理常式中詳細說明。
 
@@ -85,7 +85,7 @@ ht-degree: 12%
 
 當然，您也可以手動套用工作流程。 如需預設工作流程的清單，請參閱[Assets媒體處理常式](media-handlers.md)。
 
-## [!DNL Experience Manager Assets] 和  [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets]與[!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
 如需差異的相關資訊，請參閱[資產和Media Library](medialibrary.md)。
 
