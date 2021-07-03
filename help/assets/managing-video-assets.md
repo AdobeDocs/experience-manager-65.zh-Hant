@@ -2,10 +2,10 @@
 title: 管理影片資產
 description: 在 [!DNL Adobe Experience Manager]中上傳、預覽、加上注釋及發佈視訊資產。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 資產管理
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 了解如何在[!DNL Adobe Experience Manager Assets]中管理和編輯視訊資產。 可使用[!DNL Dynamic Media]整合進行視頻編碼和轉碼，例如FFmpeg轉碼。
 
-## 上傳和預覽視訊資產{#upload-and-preview-video-assets}
+## 上傳和預覽視訊資產 {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] 以副檔名MP4產生視訊資產的預覽。如果資產的格式不是MP4，請安裝FFmpeg套件以產生預覽。 FFmpeg建立OGG和MP4類型的視頻轉譯。 您可以在[!DNL Assets]使用者介面中預覽轉譯。
 
@@ -30,7 +30,7 @@ ht-degree: 7%
 
    ![視訊播放控制項](assets/video-playback-controls.png)
 
-## 上傳大於2 GB {#configuration-to-upload-assets-that-are-larger-than-gb}資產的設定
+## 上傳大於2 GB資產的設定 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
 根據預設，由於檔案大小限制，[!DNL Assets]不會讓您上傳任何大於2 GB的資產。 但是，您可以轉到CRXDE Lite並在`/apps`目錄下建立節點來覆寫此限制。 節點必須具有相同的節點名稱、目錄結構和順序的可比節點屬性。
 
@@ -66,11 +66,11 @@ ht-degree: 7%
 1. 在&#x200B;**[!UICONTROL 逾時]**&#x200B;欄位中，指定值`18000`，然後按一下&#x200B;**[!UICONTROL 確定]**&#x200B;以返回&#x200B;**[!UICONTROL Dynamic Media編碼視訊]**&#x200B;工作流程頁面。
 1. 在頁面頂端附近，在[!UICONTROL Dynamic Media編碼視訊]頁面標題下方，按一下&#x200B;**[!UICONTROL 儲存]**。
 
-## 發佈視訊資產{#publish-video-assets}
+## 發佈視訊資產 {#publish-video-assets}
 
 發佈後，您可以將視訊資產以URL的形式包含在網頁中，或直接內嵌資產。 如需詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 為視訊資產加上注釋{#annotate-video-assets}
+## 為視訊資產加上注釋 {#annotate-video-assets}
 
 1. 在[!DNL Assets]控制台中，選取資產卡上的&#x200B;**[!UICONTROL 編輯]**&#x200B;以顯示資產詳細資訊頁面。
 1. 若要播放視訊，請按一下&#x200B;**[!UICONTROL 預覽]**。
