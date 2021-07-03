@@ -3,16 +3,16 @@ title: ' [!DNL Assets]的最佳作法'
 description: 通過確定和遵守取決於部署和配置的最佳做法，增強系統在負載下的穩定性和效能。
 contentOwner: AG
 feature: 資產管理
-role: Architect, Administrator
+role: Architect, Admin
 exl-id: 6b50f1b3-9c1c-47c8-a43e-6f40c42a41cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
 
 ---
 
-# [!DNL Assets] {#best-practices-for-assets}的最佳作法
+# [!DNL Assets]的最佳作法 {#best-practices-for-assets}
 
 [!DNL Adobe Experience Manager Assets] 是提供高品質數位行銷體驗的重要環節，透過提升內容速度，有助於達成業務目標。如果您在[!DNL Experience Manager Assets]內處理大量資產，或定期/定期上傳許多資產，包括影片和Dynamic Media，則最佳化數位資產管理體驗對於提高系統效率至關重要。
 
