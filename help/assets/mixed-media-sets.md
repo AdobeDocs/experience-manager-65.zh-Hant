@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 feature: 混合媒體集，資產管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 20%
@@ -30,7 +30,7 @@ ht-degree: 20%
 >
 >如需Assets使用者介面的資訊，請參閱[管理資產](/help/assets/manage-assets.md)。
 
-## 快速入門：混合媒體集{#quick-start-mixed-media-sets}
+## 快速入門：混合媒體集 {#quick-start-mixed-media-sets}
 
 若要使用混合媒體集快速上手並執行，請執行下列步驟：
 
@@ -80,7 +80,7 @@ ht-degree: 20%
 
 此外，如果您想要將回轉集或影像集新增至混合媒體集，也請建立這些集。
 
-## 建立混合媒體集{#creating-mixed-media-sets}
+## 建立混合媒體集 {#creating-mixed-media-sets}
 
 您可以將影像、影像集、回轉集和視訊新增至混合媒體集。 在將檔案、影像集和回轉集新增至混合媒體集之前，請確定您的檔案、影像集和回轉集已準備好發佈。
 
@@ -122,7 +122,7 @@ ht-degree: 20%
 1. 若要套用預設集，請點選右上角的&#x200B;**[!UICONTROL 預設]**，並選取要套用至資產的預設集。
 1. 按一下「**[!UICONTROL 儲存]**」。新建立的混合媒體集會顯示在您建立它的資料夾中。
 
-## 編輯混合媒體集{#editing-mixed-media-sets}
+## 編輯混合媒體集 {#editing-mixed-media-sets}
 
 您可以直接在使用者介面[中，對混合媒體集中的資產執行各種編輯工作，如同對資產](/help/assets/manage-assets.md)中的任何資產執行一樣。 您也可以在混合媒體集中執行下列動作：
 
@@ -168,11 +168,11 @@ ht-degree: 20%
    * 若要刪除整個混合媒體集 — 從任何檢視模式（例如卡片檢視或欄檢視），導覽至混合媒體集。 暫留在集上，然後點選&#x200B;**選取**（勾選圖示）。 在鍵盤上按&#x200B;**[!UICONTROL Backspace]**，或點選&#x200B;**[!UICONTROL More]**（三個點的列），然後點選&#x200B;**[!UICONTROL Delete]**。
 
 
-## 預覽混合媒體集{#previewing-mixed-media-sets}
+## 預覽混合媒體集 {#previewing-mixed-media-sets}
 
 如需如何預覽混合媒體集的詳細資訊，請參閱[預覽資產](/help/assets/previewing-assets.md)。
 
-## 發佈混合媒體集{#publishing-mixed-media-sets}
+## 發佈混合媒體集 {#publishing-mixed-media-sets}
 
 如需如何發佈混合媒體集的詳細資訊，請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
