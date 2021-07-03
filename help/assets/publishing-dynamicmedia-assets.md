@@ -7,17 +7,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: 發佈
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 3%
 
 ---
 
-# 發佈Dynamic Media資產{#publishing-dynamic-media-assets}
+# 發佈Dynamic Media Assets {#publishing-dynamic-media-assets}
 
 您可以選取已上傳的資產，然後點選&#x200B;**[!UICONTROL Publish]**&#x200B;或&#x200B;**[!UICONTROL Quick Publish]**，以發佈Dynamic Media資產。 發佈Dynamic Media資產後，您就可以透過URL或將程式碼嵌入頁面，將其加入網頁。
 
@@ -47,7 +47,7 @@ ht-degree: 3%
 
 如需發佈集或資產的詳細資訊，請參閱[發佈資產](manage-assets.md)。
 
-## HTTP/2傳送Dynamic Media資產{#http-delivery-of-dynamic-media-assets}
+## HTTP/2傳送Dynamic Media資產 {#http-delivery-of-dynamic-media-assets}
 
 Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和影片）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可與接受託管資產的任何應用程式整合。 然後會透過HTTP/2通訊協定來傳送已發佈的資產。 此傳遞方法可改善瀏覽器和伺服器通訊的方式，讓所有Dynamic Media資產的回應和載入時間都更佳。
 
