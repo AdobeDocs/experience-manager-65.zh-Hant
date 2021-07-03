@@ -2,10 +2,10 @@
 title: 搜尋Facet以篩選搜尋結果
 description: 如何在 [!DNL Adobe Experience Manager]中建立、修改和使用搜尋Facet。
 contentOwner: AG
-role: Administrator, Developer
+role: Admin, Developer
 feature: 搜尋
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
-source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 15%
