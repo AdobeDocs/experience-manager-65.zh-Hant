@@ -10,16 +10,16 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 feature: 內容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '989'
 ht-degree: 0%
 
 ---
 
-# 建立內容片段的翻譯專案{#creating-translation-projects-for-content-fragments}
+# 建立內容片段的翻譯專案 {#creating-translation-projects-for-content-fragments}
 
 除了資產外，Adobe Experience Manager(AEM)資產支援[內容片段](/help/assets/content-fragments/content-fragments.md)（包括變數）的語言復本工作流程。 在內容片段上執行語言副本工作流程不需要額外的最佳化。 在每個工作流程中，會傳送整個內容片段以供翻譯。
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 當更新或修改源內容片段時，需要重新換算相應的地區/語言特定內容片段。 更新語言副本工作流轉換附加的內容片段組，並將其包含在特定地區的語言副本中。 在這種情況下，翻譯的內容片段會新增至已包含先前翻譯內容片段的目標資料夾。
 
-## 建立和翻譯工作流{#create-and-translate-workflow}
+## 建立和翻譯工作流程 {#create-and-translate-workflow}
 
 「建立和翻譯」工作流包含以下選項。 與每個選項相關聯的程式步驟類似於與資產的對應選項相關聯的步驟。
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 * 建立新翻譯專案：有關過程步驟，請參閱[為資產建立新的翻譯項目](translation-projects.md#create-a-new-translation-project)。
 * 新增至現有的翻譯專案：有關過程步驟，請參閱[添加到資產的現有翻譯項目](translation-projects.md#add-to-existing-translation-project)。
 
-## 更新語言副本工作流{#update-language-copies-workflow}
+## 更新語言副本工作流 {#update-language-copies-workflow}
 
 「更新語言副本」工作流包含以下選項。 與每個選項相關聯的程式步驟類似於與資產的對應選項相關聯的步驟。
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 您也可以建立片段的暫時語言副本，類似為資產建立臨時副本的方式。 如需詳細資訊，請參閱[建立資產的臨時語言副本](translation-projects.md#creating-temporary-language-copies)。
 
-## 轉譯混合媒體片段{#translating-mixed-media-fragments}
+## 轉譯混合媒體片段 {#translating-mixed-media-fragments}
 
 AEM可讓您翻譯包含各種類型媒體資產和集合的內容片段。 如果您翻譯的內容片段包含內嵌資產，則這些資產的翻譯副本會儲存在目標語言根目錄下。
 
