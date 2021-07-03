@@ -2,17 +2,17 @@
 title: 監視 [!DNL Assets] 部署的最佳做法
 description: 部署後監控 [!DNL Adobe Experience Manager] 部署的環境和效能的最佳實務。
 contentOwner: AG
-role: Administrator, Architect
+role: Admin, Architect
 feature: 資產管理
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1670'
 ht-degree: 1%
 
 ---
 
-# 監視[!DNL Adobe Experience Manager Assets]部署{#assets-monitoring-best-practices}的最佳實務
+# 監視[!DNL Adobe Experience Manager Assets]部署的最佳做法 {#assets-monitoring-best-practices}
 
 從[!DNL Experience Manager Assets]的觀點來看，監測應包括觀察和報告以下過程和技術：
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 通常，[!DNL Experience Manager Assets]可以通過兩種方式進行監控，即即時監控和長期監控。
 
-## 即時監視{#live-monitoring}
+## 即時監視 {#live-monitoring}
 
 您應在開發的效能測試階段或高負載情況下執行即時監控，以了解環境的效能特性。 通常應使用一套工具來執行即時監控。 以下是一些建議：
 
@@ -53,15 +53,15 @@ ht-degree: 1%
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
-## 長期監測{#long-term-monitoring}
+## 長期監測 {#long-term-monitoring}
 
 對[!DNL Experience Manager]部署進行長期監視包括對受監視的同一部分進行更長時間的監視。 也包含定義環境專屬的警報。
 
-### 日誌聚合和報告{#log-aggregation-and-reporting}
+### 日誌聚合和報告 {#log-aggregation-and-reporting}
 
 有數種工具可用於匯總日誌，例如Splunk(TM)和Elastic Search、Logstash和Kabana(ELK)。 要評估[!DNL Experience Manager]部署的正常運行時間，您必須了解特定於系統的日誌事件並根據這些事件建立警報。 對您的開發和操作實踐有良好的了解，可幫助您更好地了解如何調整日誌聚合過程以生成關鍵警報。
 
-### 環境監視{#environment-monitoring}
+### 環境監控 {#environment-monitoring}
 
 環境監控包括監控下列項目：
 
@@ -74,7 +74,7 @@ ht-degree: 1%
 
 您需要外部工具，例如NewRelic(TM)和AppDynamics(TM)來監視每個項目。 使用這些工具，您可以定義系統特有的警報，例如高系統利用率、工作流備份、運行狀況檢查失敗或未驗證的網站訪問。 Adobe不建議使用任何特定工具而非其他工具。 尋找適合您的工具，並運用它來監控討論的項目。
 
-#### 內部應用程式監視{#internal-application-monitoring}
+#### 內部應用程式監控 {#internal-application-monitoring}
 
 內部應用程式監視包括監視構成[!DNL Experience Manager]堆棧的應用程式元件，包括JVM、內容儲存庫，以及通過平台上構建的自定義應用程式代碼進行監視。 一般來說，它通過JMX Mbeans來執行，這些JMX Mbeans可以直接由許多流行的監控解決方案進行監控，如SolarWinds(TM)、HP OpenView(TM)、Hyperic(TM)、Zabbix(TM)等。 對於不支援直接連接到JMX的系統，可以編寫shell指令碼以提取JMX資料，並以它們本來理解的格式將其公開到這些系統。
 
@@ -188,7 +188,7 @@ ht-degree: 1%
    * 警報閾值：狀態不確定時
    * 警報定義：記錄檔中有錯誤。 檢查日誌屬性，了解問題原因的詳細資訊。
 
-## 常見問題和決議{#common-issues-and-resolutions}
+## 共同問題和決議  {#common-issues-and-resolutions}
 
 在監控過程中，如果您遇到問題，您可以執行以下一些疑難排解工作，以解決[!DNL Experience Manager]部署的常見問題：
 
