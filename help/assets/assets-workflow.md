@@ -3,24 +3,24 @@ title: 使用工作流程處理資產
 description: 資產處理功能，可轉換格式、建立轉譯、管理資產、驗證資產及執行工作流程。
 contentOwner: AG
 feature: 工作流程，轉譯
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: e7c84385-efb3-4997-83ff-7a7f31582469
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 3%
 
 ---
 
-# 處理數位資產{#process-assets}
+# 處理數位資產 {#process-assets}
 
 [!DNL Adobe Experience Manager Assets] 可讓您以多種方式處理數位資產，以執行強大的資產處理功能。您可以使用預設或定製的處理方法來確保端到端業務流程的完成、審核和合規性、發現和分發，以及數字資產的基本健全性。 您可以執行資產管理任務，同時實現所需的規模和定制。
 
-## 了解工作流程{#understand-workflows}
+## 了解工作流程 {#understand-workflows}
 
 對於資產處理，[!DNL Experience Manager]使用工作流程。 工作流程可協助自動化業務邏輯或活動。 預設會提供完成特定工作的詳細步驟，而開發人員可建立自己的自訂步驟。 這些步驟可依邏輯順序結合，以建立工作流程。 例如，工作流程可以根據特定條件對上傳的影像套用浮水印，例如上傳至的資料夾、影像解析度等。 另一個範例是設定為浮水印和同時新增中繼資料、建立轉譯、新增智慧標籤，以及發佈至資料存放區的工作流程。
 
-## [!DNL Experience Manager] {#default-workflows}中可用的預設工作流
+## [!DNL Experience Manager]中可用的預設工作流 {#default-workflows}
 
 依預設，所有上傳的資產都會使用[!UICONTROL DAM更新資產]工作流程來處理。 工作流程會對每個上傳的資產執行，並完成基本資產管理工作，例如產生轉譯、中繼資料回寫、頁面擷取、媒體擷取和轉碼。
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 *圖：中提供的部分預設工作流程 [!DNL Experience Manager]。*
 
-## 套用工作流程以處理資產{#applying-workflows-to-assets}
+## 套用工作流程以處理資產 {#applying-workflows-to-assets}
 
 將工作流程套用至數位資產與網站頁面的相同。 如需如何建立和使用工作流程的完整指南，請參閱[開始工作流程](/help/sites-authoring/workflows-participating.md)。
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 >
 >如果傳統UI中可用的工作流程無法在觸控式UI中使用，例如[!UICONTROL 請求啟用]和[!UICONTROL 請求停用]，請參閱[建立工作流程模型](/help/sites-developing/workflows-models.md#classic2touchui)。
 
-## 將工作流程套用至資產{#apply-a-workflow-to-an-asset}
+## 將工作流程套用至資產 {#apply-a-workflow-to-an-asset}
 
 <!-- 
 TBD: Add animated GIF for these steps instead of all these screenshots.
@@ -65,7 +65,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
    ![chlimage_1-256](assets/chlimage_1-52.png)
 
-## 將工作流程套用至多個資產{#applying-a-workflow-to-multiple-assets}
+## 將工作流程套用至多個資產 {#applying-a-workflow-to-multiple-assets}
 
 1. 從[!DNL Assets]主控台，導覽至您要啟動工作流程之資產的位置，然後選取資產。 從菜單中選擇&#x200B;**[!UICONTROL 時間軸]**&#x200B;以顯示時間軸。
 
@@ -79,15 +79,15 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 1. （可選）指定工作流的標題，可用於參考工作流實例。
 1. 按一 **[!UICONTROL 下「開始]** 」，然後按一 **[!UICONTROL 下對話方塊中的「確認]** 」。工作流程會在您選取的所有資產上執行。
 
-## 將工作流應用於多個資料夾{#applying-a-workflow-to-multiple-folders}
+## 將工作流程套用至多個資料夾 {#applying-a-workflow-to-multiple-folders}
 
 將工作流程套用至多個資料夾的程式，與將工作流程套用至多個資產的程式類似。 在[!DNL Assets]介面中選取資料夾，並執行[過程中的步驟2-7，將工作流應用於多個資產](/help/assets/assets-workflow.md#applying-a-workflow-to-multiple-assets)。
 
-## 將工作流程套用至集合{#applying-a-workflow-to-a-collection}
+## 將工作流程套用至集合 {#applying-a-workflow-to-a-collection}
 
 請參閱[對集合](/help/assets/manage-collections.md#running-a-workflow-on-a-collection)套用工作流程。
 
-## 自動啟動工作流程以有條件地處理資產{#auto-execute-workflow-on-some-assets}
+## 自動啟動工作流程以有條件地處理資產 {#auto-execute-workflow-on-some-assets}
 
 管理員可以設定工作流程，以根據預先定義的條件自動執行和處理資產。 此功能對於業務線使用者和行銷人員非常實用，例如在特定資料夾上建立自訂工作流程。 假設某個機構拍攝的所有資產都可以加上水印，或者自由職業者上傳的所有資產都可以經過處理，以建立特定的轉譯。
 
@@ -96,7 +96,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 * 製作[!UICONTROL DAM更新資產]工作流程的復本，並加以修改以在特定資料夾階層上執行。 此方法對一些資料夾非常有用。
 * 可使用[OR split](/help/sites-developing/workflows-step-ref.md#or-split)來新增額外的處理步驟，如有條件地適用於所需的資料夾數量。
 
-## 最佳做法和限制{#best-practices-limitations-tips}
+## 最佳實務和限制 {#best-practices-limitations-tips}
 
 * 設計工作流程時，請考量您對所有轉譯類型的需求。 如果您預計未來不需要轉譯，請從工作流程移除其建立步驟。 之後無法大量刪除轉譯。 長時間使用[!DNL Experience Manager]後，不適當的轉譯可能會佔用大量儲存空間。 對於個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以自訂[!DNL Experience Manager]以刪除特定轉譯或刪除資產並再次上傳這些資產。
 * 依預設， [!UICONTROL  DAM更新資產]工作流程包含建立縮圖和Web轉譯的部分步驟。 如果從工作流中刪除了任何預設格式副本，[!DNL Assets]的用戶介面將無法正確呈現。
