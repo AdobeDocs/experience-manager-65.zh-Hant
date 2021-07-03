@@ -2,16 +2,16 @@
 title: '[!DNL Assets] 代理開發'
 description: 代理是 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] 代理，支援的操作、代理元件以及如何開發自定義代理工作器。
 contentOwner: AG
-role: Administrator, Architect
+role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
 
 ---
 
-# [!DNL Assets] 代理開發  {#assets-proxy-development}
+# [!DNL Assets] 代理開發 {#assets-proxy-development}
 
 [!DNL Adobe Experience Manager Assets] 使用代理來分發特定任務的處理。
 
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 當Proxy是個別的[!DNL Experience Manager]例項時，這有助於減少[!DNL Experience Manager]製作例項的負載。 依預設，[!DNL Assets]會在相同JVM（透過Proxy外部化）中執行資產處理任務，以減少[!DNL Experience Manager]製作例項的負載。
 
-## 代理（HTTP訪問）{#proxy-http-access}
+## 代理（HTTP訪問） {#proxy-http-access}
 
 當代理設定為接受處理作業時，可通過HTTP Servlet使用：`/libs/dam/cloud/proxy`。 此Servlet會從發佈的參數建立Sling作業。 然後，此代碼將添加到代理作業隊列，並連接到相應的代理工作器。
 
-### 支援的操作{#supported-operations}
+### 支援的操作 {#supported-operations}
 
 * `job`
 
@@ -69,7 +69,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
     http://localhost:4502/libs/dam/cloud/proxy
 ```
 
-### 代理工作器{#proxy-worker}
+### 代理工作人員 {#proxy-worker}
 
 代理工作人員是負責處理作業和建立結果的處理器。 工作程式位於代理執行個體上，且必須實作[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)才能辨識為代理工作程式。
 
@@ -103,7 +103,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
  proxyJobService.removeJob(jobId);
 ```
 
-### Cloud Service配置{#cloud-service-configurations}
+### Cloud Service配置 {#cloud-service-configurations}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ Proxy和Proxy工作程式設定皆可透過雲端服務設定使用，可從[!DN
  final String value = cloudConfig.get("someProperty", "defaultValue");
 ```
 
-### 開發自定義代理工作器{#developing-a-customized-proxy-worker}
+### 開發自定義代理工作器 {#developing-a-customized-proxy-worker}
 
 [IDS代理工作器](indesign.md)是[!DNL Assets]代理工作器的示例，該代理工作器已經提供到現成可用，用於外包InDesign資產的處理。
 
