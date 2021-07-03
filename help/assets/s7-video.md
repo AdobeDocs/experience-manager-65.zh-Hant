@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: 影片
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Scene7視訊元件支援下列格式：
 * F4V H.264
 * MP4 H.264
 
-## 決定要將視訊上傳到何處{#deciding-where-to-upload-your-video}
+## 決定要將視訊上傳到何處 {#deciding-where-to-upload-your-video}
 
 決定要將視訊資產上傳至何處取決於下列項目：
 
@@ -54,7 +54,7 @@ Scene7視訊元件支援下列格式：
 
 如果這兩個問題的答案皆為「是」，請直接將影片上傳至AdobeDAM。 如果兩個問題的答案都是「否」，請直接將影片上傳至Dynamic Media Classic。 以下章節將說明每個案例的工作流程。
 
-### 如果您要直接將視訊上傳至AdobeDAM {#if-you-are-uploading-your-video-directly-to-adobe-dam}
+### 如果您要直接上傳影片至AdobeDAM {#if-you-are-uploading-your-video-directly-to-adobe-dam}
 
 如果您的資產需要工作流程或版本設定，請先上傳至AdobeDAM。 建議的工作流程如下：
 
@@ -62,7 +62,7 @@ Scene7視訊元件支援下列格式：
 1. 在Experience Manager中，在「內容尋找器」的&#x200B;**[!UICONTROL Movies]**&#x200B;標籤中存取WCM中的視訊資產。
 1. 使用&#x200B;**[!UICONTROL Scene7 Video]**&#x200B;或&#x200B;**[!UICONTROL Foundation Video]**&#x200B;元件製作。
 
-### 如果您要將視訊上傳至Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
+### 如果您要上傳影片至Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 如果您的資產不需要工作流程或版本設定，請將資產上傳至Scene7。 建議的工作流程如下：
 
@@ -70,7 +70,7 @@ Scene7視訊元件支援下列格式：
 1. 在Experience Manager中，在「內容尋找器」的&#x200B;**[!UICONTROL Scene7]**&#x200B;標籤中存取WCM中的視訊資產。
 1. 使用&#x200B;**[!UICONTROL Scene7 Video]**&#x200B;元件製作。
 
-## 設定與Scene7影片的整合{#configuring-integration-with-scene-video}
+## 設定與Scene7影片的整合 {#configuring-integration-with-scene-video}
 
 要配置通用預設集：
 
@@ -93,13 +93,13 @@ Scene7視訊元件支援下列格式：
 
 1. 選取的編碼設定檔會自動套用至您為此Scene7雲端設定所設定的CQ DAM目標資料夾中所上傳的所有視訊。 您可以使用不同的目標資料夾來設定多個Scene7雲端設定，以視需要套用不同的編碼設定檔。
 
-## 更新查看器和編碼預設集{#updating-viewer-and-encoding-presets}
+## 更新檢視器和編碼預設集 {#updating-viewer-and-encoding-presets}
 
 若要更新視訊的檢視器和編碼預設集，因為預設集已在Scene7中更新，請導覽至「雲端設定」中的Scene7設定，然後點選&#x200B;**[!UICONTROL 更新檢視器和編碼預設集]**。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## 從AdobeDAM {#uploading-your-master-video}上傳主要來源視訊至Scene7
+## 從AdobeDAM上傳主要來源視訊至Scene7 {#uploading-your-master-video}
 
 1. 導覽至CQ DAM Target資料夾，您已在該資料夾中使用Scene7編碼設定檔設定雲端設定。
 1. 按一下&#x200B;**[!UICONTROL Upload]**&#x200B;以上傳主要來源視訊。 視訊上傳和編碼在[!UICONTROL DAM更新資產]工作流程完成且&#x200B;**[!UICONTROL 發佈至Scene7]**&#x200B;有核取記號後完成。
@@ -110,7 +110,7 @@ Scene7視訊元件支援下列格式：
 
    將DAM主要來源視訊拖曳至視訊元件上時，可存取&#x200B;*all* Scene7編碼的代理轉譯以進行傳送。
 
-## Foundation視訊元件與Scene7視訊元件{#foundation-video-component-versus-scene-video-component}
+## Foundation視訊元件與Scene7視訊元件 {#foundation-video-component-versus-scene-video-component}
 
 使用Experience Manager時，您可以同時存取Sites中可用的視訊元件和Scene7視訊元件。 這些元件不可互換。
 
@@ -124,11 +124,11 @@ Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從Experience
 >
 >S7視訊元件現成可使用通用視訊設定檔。 不過，您可以取得HTML5視訊播放器，以供Experience Manager使用。 在Scene7中，複製現成可用HTML5視訊播放器的內嵌程式碼，並將其放入您的Experience Manager頁面中。
 
-## Experience Manager視訊元件{#aem-video-component}
+## Experience Manager視訊元件 {#aem-video-component}
 
 即使建議使用Scene7視訊元件來檢視Scene7視訊，為了完整起見，本節說明如何將Scene7視訊與Foundation視訊元件搭配Experience Manager使用。
 
-### Experience Manager影片和Scene7影片比較{#aem-video-and-scene-video-comparison}
+### Experience Manager影片和Scene7影片比較 {#aem-video-and-scene-video-comparison}
 
 下表提供Experience ManagerFoundation視訊元件和Scene7視訊元件之間所支援功能的高階比較：
 
@@ -140,9 +140,9 @@ Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從Experience
 | 擴充性 | 是 | 否 |
 | 行動視訊 | 是 | 是 |
 
-### 設定{#setting-up}
+### 設定 {#setting-up}
 
-#### 建立視訊設定檔{#creating-video-profiles}
+#### 建立視訊設定檔 {#creating-video-profiles}
 
 系統會根據S7雲端設定中選取的S7編碼預設集來建立各種視訊編碼。 為了讓基礎視訊元件使用，必須為選取的每個S7編碼預設集建立視訊設定檔。 此方法可讓視訊元件據以選取DAM轉譯。
 
@@ -168,7 +168,7 @@ Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從Experience
 
    對您要在視訊元件中使用的雲端設定中選取的所有編碼預設集，重複此步驟。
 
-#### 配置設計{#configuring-design}
+#### 配置設計 {#configuring-design}
 
 **[!UICONTROL Foundation Video]**&#x200B;元件必須知道要使用哪些視訊設定檔，才能建立視訊來源清單。 開啟視訊元件設計對話方塊，並設定使用新視訊設定檔的元件設計。
 
