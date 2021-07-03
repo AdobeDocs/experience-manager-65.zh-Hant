@@ -3,9 +3,9 @@ title: 可訪問 [!DNL Experience Manager Assets]的功能和介面
 description: 了解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的協助工具功能如何協助身心障礙的使用者。
 contentOwner: AG
 feature: 資產管理
-role: Business Practitioner, Architect, Leader
+role: User, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Possible topics to cover in this article are below.
   * Link to a11y-specific online methods to report issues, seek support, or request enhancements, if any. Asked the a11y team on Slack.
 -->
 
-# [!DNL Adobe Experience Manager Assets] {#accessibility-in-aem-assets}中的輔助功能
+# [!DNL Adobe Experience Manager Assets]中的輔助功能 {#accessibility-in-aem-assets}
 
 [!DNL Adobe Experience Manager] 可讓內容建立者和發佈者在網路上提供絕佳體驗。Adobe致力於通過改善[!DNL Experience Manager]的可訪問性，將殘疾創造者納入其中。 該軟體不斷得到增強，以滿足所有類型用戶的需求，並遵守包括視覺、聽覺、移動性或其他損傷個人在內的全球標準。
 
@@ -45,7 +45,7 @@ Possible topics to cover in this article are below.
 
 要了解[!DNL Dynamic Media]如何可訪問，請參閱 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)中的[輔助功能。
 
-## 輔助技術{#at-support}
+## 輔助技術 {#at-support}
 
 殘疾用戶經常依賴硬體和軟體來訪問Web內容和使用軟體產品。 這些工具稱為輔助技術。 [!DNL Experience Manager Assets] 使用軟體的核心功能時，可以使用下列類型的輔助技術(AT):
 
@@ -55,7 +55,7 @@ Possible topics to cover in this article are below.
 * 輔助硬體，包括交換機控制、可重新整理的盲文顯示器和其他電腦輸入設備。
 * UI放大工具。
 
-## [!DNL Experience Manager Assets] 可存取的使用案例  {#accessible-assets-use-cases}
+## [!DNL Experience Manager Assets] 可存取的使用案例 {#accessible-assets-use-cases}
 
 在[!DNL Experience Manager]中，輔助功能滿足[!DNL Experience Manager]用戶及其客戶的兩個關鍵要求。
 
@@ -64,7 +64,7 @@ Possible topics to cover in this article are below.
 
 [!DNL Assets]中的核心功能比以往更容易訪問，並定期更新以改進對全球標準的遵守。 [!DNL Assets]中的CRUD操作具有一定程度的可訪問性。 您可以透過鍵盤快速鍵、螢幕助讀程式文字、顏色對比等協助，存取新增、管理、搜尋和發佈資產等DAM工作流程。
 
-## 支援使用鍵盤{#keyboard-use}
+## 支援使用鍵盤 {#keyboard-use}
 
 許多可點按或可透過指標操作的使用者介面元素也可使用鍵盤來參與。 使用鍵盤時，使用者可以專注在UI元素上，並採取適當的動作。 使用者可以直接使用鍵盤快速鍵來觸發命令或動作，而無須聚焦於UI元素並使用鍵盤來觸發。 例如，用戶可以使用鍵盤瀏覽到用戶介面控制項，選擇`Return`，然後選擇`Alt + 2`鍵盤快捷鍵，以開啟用戶介面左側資產的時間軸。
 
@@ -76,7 +76,7 @@ Possible topics to cover in this article are below.
 * Read-only form fields can be focused with the keyboard. Can users tab to these fields to understand the contents and are they able to copy text from the fields?
 -->
 
-### [!DNL Assets] {#keyboard-shortcuts}中的鍵盤快捷鍵
+### [!DNL Assets]中的鍵盤快捷鍵 {#keyboard-shortcuts}
 
 [!DNL Assets]中的以下操作與列出的鍵盤快捷鍵一起使用。 套用至[!DNL Experience Manager]控制台的大部分鍵盤快速鍵也套用至[!DNL Assets]。 請參閱[控制台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)。 請參閱如何[啟用或停用鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
@@ -159,7 +159,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * Some enhancements to metadata properties UI?
 -->
 
-## 管理數位資產{#manage-assets}
+## 管理數位資產 {#manage-assets}
 
 許多資產管理工作（例如CRUD作業、下載資產、新增中繼資料）皆可在不同程度上存取。 [!DNL Assets] 可讓您使用各種輔助技術（例如螢幕助讀程式和鍵盤）來完成工作。
 
@@ -173,7 +173,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * 在螢幕助讀程式的瀏覽模式中，使用鍵盤的拖曳功能在[!UICONTROL 中繼資料結構編輯器]中可正常運作。
 * 用戶可以使用鍵盤將焦點移動到資料夾[!UICONTROL 屬性]的[!UICONTROL 權限]標籤中[!UICONTROL 封閉用戶組]下的「添加用戶」或「組」欄位。
 
-## 搜尋數位資產{#search-assets}
+## 搜尋數位資產 {#search-assets}
 
 快速順暢的資產搜尋體驗可提升內容速度。 內容速度使用案例是核心[!DNL Assets]功能的一部分。 若要從Omnisearch列開始搜尋，使用者可以使用鍵盤快速鍵`/`，或搭配使用`Tab`和螢幕助讀程式來快速找到搜尋選項。 當焦點在搜尋選項![搜尋選項](assets/do-not-localize/search_icon.png)時，螢幕助讀程式會將選項的名稱敘述為「搜尋按鈕」。 使用者可以選取`Return`以開啟Omnisearch方塊。 螢幕助讀程式不僅會提供搜尋方塊中輸入之關鍵字的旁白，也會提供[!DNL Experience Manager Assets]所提供建議的旁白。 使用者可使用方向鍵、`Return`和`Tab`的組合來存取各種選項以觸發搜尋。
 
@@ -206,7 +206,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
    * 可以導覽至所有列出的建議。
    * 提供旁白來敘述針對新增電子郵件地址和搜尋欄位所顯示的建議。
 
-## 可訪問文檔{#accessible-docs}
+## 無障礙檔案 {#accessible-docs}
 
 [!DNL Experience Manager] 提供方便殘疾人士使用的檔案。下列項目有助於讓內容選件目前可供存取，而Adobe仍持續改善範本和內容：
 
@@ -215,7 +215,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * 鍵盤導航是可能的。
 * 對比率有助於突顯檔案網站的某些部分。
 
-## 提供反饋{#a11y-feedback}
+## 提供意見反應 {#a11y-feedback}
 
 若要提供與協助工具相關的意見反應、提出問題並要求產品增強功能，請使用下列方法：
 
