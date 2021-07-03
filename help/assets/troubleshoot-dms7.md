@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: 疑難排解
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 以下檔案說明Dynamic Media執行&#x200B;**dynamicmedia_scene7**&#x200B;執行模式的疑難排解。
 
-## 設定和配置{#setup-and-configuration}
+## 設定與設定 {#setup-and-configuration}
 
 請執行下列動作，確認Dynamic Media已正確設定：
 
@@ -37,11 +37,11 @@ ht-degree: 1%
 
    此復寫代理位於「作者上的代理」下。
 
-## 一般（所有資產）{#general-all-assets}
+## 一般（所有資產） {#general-all-assets}
 
 以下是所有資產的一些一般提示和秘訣。
 
-### 資產同步狀態屬性{#asset-synchronization-status-properties}
+### 資產同步狀態屬性 {#asset-synchronization-status-properties}
 
 您可以在CRXDE Lite中檢閱下列資產屬性，以確認資產是否已成功從AEM同步至Dynamic Media:
 
@@ -52,11 +52,11 @@ ht-degree: 1%
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | 必須填入，才能產生URL至Dynamic Media的遠端資產。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **** 後繼 **失敗：`<error text>`** | 集（回轉集、影像集等）、影像預設集、檢視器預設集、資產的影像地圖更新或已編輯影像的同步狀態。 |
 
-### 同步記錄{#synchronization-logging}
+### 同步記錄 {#synchronization-logging}
 
 同步錯誤和問題記錄在`error.log`(AEM伺服器目錄`/crx-quickstart/logs/`)中。 有足夠的記錄可供判斷大部分問題的根本原因，但您可以透過Sling主控台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))增加`com.adobe.cq.dam.ips`套件上的DEBUG記錄，以收集詳細資訊。
 
-### 移動、複製、刪除{#move-copy-delete}
+### 移動、複製、刪除 {#move-copy-delete}
 
 執行「移動」、「複製」或「刪除」操作之前，請執行以下操作：
 
@@ -72,7 +72,7 @@ ht-degree: 1%
 
 * Dynamic Media - Scene7模式傳送不支援建立版本。 新版本將取代傳送中的現有資產。
 
-## 影像和集{#images-and-sets}
+## 影像和集 {#images-and-sets}
 
 如果您對影像和集有問題，請參閱下列疑難排解指南。
 
