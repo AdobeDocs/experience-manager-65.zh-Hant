@@ -2,17 +2,17 @@
 title: 共用資產的私人資料夾
 description: 了解如何在 [!DNL Adobe Experience Manager Assets] 中建立私人資料夾，並與其他使用者共用資料夾，並為其指派各種權限。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 協作
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] {#private-folder}中的專用資料夾
+# [!DNL Adobe Experience Manager Assets]中的專用資料夾 {#private-folder}
 
 您可以在[!DNL Adobe Experience Manager Assets]使用者介面中建立專供您使用的私人資料夾。 您可以將此私人資料夾共用給其他使用者，並為其指派各種權限。 根據您指派的權限層級，使用者可以對資料夾執行各種工作，例如在資料夾內檢視資產或編輯資產。
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >私人資料夾至少有一個具有「所有者」角色的成員。
 
-## 建立和共用專用資料夾{#create-share-private-folder}
+## 建立和共用私人資料夾 {#create-share-private-folder}
 
 要建立和共用私人資料夾：
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 >
 >要建立專用資料夾，需要在要建立專用資料夾的父資料夾上，讀取並修改[訪問控制權限](/help/sites-administering/security.md#permissions-in-aem)。 如果您不是管理員，預設不會在`/content/dam`上為您啟用這些權限。 在此情況下，請先取得使用者ID/群組的這些權限，再嘗試建立私人資料夾。
 
-## 私人資料夾刪除{#delete-private-folder}
+## 刪除私人資料夾 {#delete-private-folder}
 
 您可以通過選擇資料夾並從頂部菜單中選擇[!UICONTROL 刪除]選項，或使用鍵盤上的Backspace鍵來刪除資料夾。
 
