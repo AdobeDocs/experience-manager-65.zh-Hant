@@ -2,17 +2,17 @@
 title: 建立及設定資產編輯器頁面
 description: 了解如何建立自訂資產編輯器頁面及同時編輯多個資產。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 開發人員工具，資產管理
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2129'
 ht-degree: 1%
 
 ---
 
-# 建立及設定資產編輯器頁面{#creating-and-configuring-asset-editor-pages}
+# 建立及設定資產編輯器頁面 {#creating-and-configuring-asset-editor-pages}
 
 本檔案說明下列項目：
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 >
 >「資產共用」可作為開放原始碼參考實作。 請參閱[資產共用公域](https://adobe-marketing-cloud.github.io/asset-share-commons/)。 未正式支援。
 
-## 為何要建立和設定資產編輯器頁面？{#why-create-and-configure-asset-editor-pages}
+## 為何要建立和設定資產編輯器頁面？ {#why-create-and-configure-asset-editor-pages}
 
 數位資產管理正在越來越多的案例中使用。 當專業用戶從小規模解決方案（例如攝影師或分類學家）向更大、更多樣化的用戶組（例如業務用戶、WCM作者、記者等）轉變時，專業用戶的[!DNL Adobe Experience Manager Assets]強大的用戶介面可能提供太多資訊，而利益相關方開始請求特定的用戶介面或應用程式訪問與他們相關的數字資產。
 
@@ -190,7 +190,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
 -->
 
-## 建立並設定資產編輯器頁面{#creating-and-configuring-an-asset-editor-page}
+## 建立和設定資產編輯器頁面 {#creating-and-configuring-an-asset-editor-page}
 
 您可以自訂資產編輯器，以決定使用者如何檢視及編輯數位資產。 若要這麼做，您需建立新的資產編輯器頁面，然後自訂使用者可在該頁面上執行的檢視和動作。
 
@@ -198,7 +198,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 >
 >如果您想要將自訂欄位新增至DAM資產編輯器，請將新的`cq:Widget`節點新增至`/apps/dam/content/asseteditors.`
 
-### 建立資產編輯器頁面{#creating-the-asset-editor-page}
+### 建立資產編輯器頁面 {#creating-the-asset-editor-page}
 
 建立「資產編輯器」頁面時，最佳作法是在「資產共用」頁面正下方建立頁面。
 
@@ -217,7 +217,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![assetshare6](assets/assetshare6.png)
 
-#### 設定從「資產共用」頁面{#setting-which-asset-editor-opens-from-an-asset-share-page}開啟的資產編輯器
+#### 設定從「資產共用」頁面開啟的資產編輯器 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 建立自訂的「資產編輯器」頁面後，您必須確定當您連按兩下自訂「資產共用」所建立的資產時，會在自訂的「編輯器」頁面中開啟資產。
 
@@ -233,7 +233,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### 新增資產編輯器元件{#adding-asset-editor-components}
+#### 新增資產編輯器元件 {#adding-asset-editor-components}
 
 您可以將元件新增至頁面，借此決定資產編輯器的功能。
 
@@ -261,7 +261,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at22743pm](assets/screen_shot_2012-04-23at22743pm.png)
 
-#### 元資料表單和文本欄位 — 配置視圖元資料元件{#metadata-form-and-text-field-configuring-the-view-metadata-component}
+#### 中繼資料表單和文字欄位 — 設定檢視中繼資料元件 {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
 「中繼資料表單」是包含開始和結束動作的表單。 在中間輸入&#x200B;**Text**&#x200B;欄位。 如需使用表單的詳細資訊，請參閱[Forms](/help/sites-authoring/default-components-foundation.md#form-component)。
 
@@ -361,7 +361,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![chlimage_1-164](assets/chlimage_1-392.png)
 
-#### 新增資產編輯器動作{#adding-asset-editor-actions}
+#### 新增資產編輯器動作 {#adding-asset-editor-actions}
 
 您可以從一系列預先定義的動作中，決定使用者可以對選取的數位資產執行哪些動作。
 
@@ -386,7 +386,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
-## 使用資產編輯器頁面{#multi-editing-assets-with-the-asset-editor-page}進行多重編輯資產
+## 使用資產編輯器頁面多次編輯資產 {#multi-editing-assets-with-the-asset-editor-page}
 
 透過[!DNL Experience Manager Assets]，您可以一次變更數個資產。 選取資產後，您可以同時變更其：
 
