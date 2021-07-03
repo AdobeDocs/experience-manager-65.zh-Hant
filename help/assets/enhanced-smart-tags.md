@@ -3,16 +3,16 @@ title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
 feature: 智慧標籤，搜索
-role: Business Practitioner
+role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1600'
 ht-degree: 1%
 
 ---
 
-# 了解、套用和組織智慧標籤{#enhanced-smart-tags}
+# 了解、套用和組織智慧標籤 {#enhanced-smart-tags}
 
 處理數位資產的組織，在資產中繼資料中越來越多地使用分類法控制的辭匯。 基本上，它包含員工、合作夥伴和客戶通常用來參考和搜尋特定類別的數位資產的關鍵字清單。 使用分類控制的辭匯來標籤資產，可確保輕鬆識別及擷取資產。
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 >
 >如果您使用[!DNL Experience Manager] 6.3或較舊版本，且需要為資產提供標籤服務，請參閱[智慧標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智慧標籤不會使用最新的AI功能，因此比增強智慧標籤服務的準確度較低。
 
-## 檢閱資產和標籤{#reviewing-assets-and-tags}
+## 檢閱資產和標籤 {#reviewing-assets-and-tags}
 
 上線後，您首先想要識別一組標籤，以便在您的業務環境中最能描述這些影像。
 
@@ -117,7 +117,7 @@ ht-degree: 1%
 >
 >如果在[!DNL Adobe Experience Manager]之外完成Lucene索引，則基於智慧標籤的搜尋將無法如預期運作。
 
-## 自動標籤資產{#tagging-assets-automatically}
+## 自動標籤資產 {#tagging-assets-automatically}
 
 在您訓練智慧內容服務後，可以觸發標籤工作流程，自動對不同的一組類似資產套用適當標籤。
 
@@ -127,13 +127,13 @@ ht-degree: 1%
 >
 >標籤工作流程會同時在資產和資料夾上執行。
 
-### 定期標籤{#periodic-tagging}
+### 定期標籤 {#periodic-tagging}
 
 您可以啟用智慧內容服務，以定期標籤資料夾中的資產。 開啟資產資料夾的屬性頁面，在&#x200B;**[!UICONTROL Details]**&#x200B;標籤下選擇&#x200B;**[!UICONTROL 啟用智慧標籤]**，並保存更改。
 
 為資料夾選取此選項後，智慧內容服務就會自動在資料夾中標籤資產。 預設情況下，標籤工作流程每天凌晨12:00執行。
 
-### 按需標籤{#on-demand-tagging}
+### 隨需標籤 {#on-demand-tagging}
 
 您可以從工作流程控制台或時間軸觸發標籤工作流程，以立即標籤您的資產。
 
@@ -141,7 +141,7 @@ ht-degree: 1%
 >
 >如果您從時間軸執行標籤工作流程，一次最多可對15個資產套用標籤。
 
-#### 從工作流程主控台{#tagging-assets-from-the-workflow-console}標籤資產
+#### 從工作流程主控台標籤資產 {#tagging-assets-from-the-workflow-console}
 
 1. 在[!DNL Experience Manager]介面中，轉至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
 1. 從「**[!UICONTROL 工作流模型]**」頁中，選擇「**[!UICONTROL DAM智慧標籤資產]**」工作流，然後從工具欄按一下「**[!UICONTROL 啟動工作流]**」。
@@ -155,7 +155,7 @@ ht-degree: 1%
 
    若要確認智慧內容服務是否正確標籤您的資產，請導覽至資產資料夾並檢閱標籤。
 
-#### 從時間軸{#tagging-assets-from-the-timeline}標籤資產
+#### 從時間軸標籤資產 {#tagging-assets-from-the-timeline}
 
 1. 從[!DNL Assets]使用者介面中，選取包含您要套用智慧標籤之資產或特定資產的資料夾。
 1. 從左上角開啟&#x200B;**[!UICONTROL 時間軸]**。
@@ -170,7 +170,7 @@ ht-degree: 1%
 >
 >在後續的標籤週期中，只有修改的資產會以新訓練的標籤再次標籤。 不過，如果標籤工作流程的最後一個與目前標籤週期之間的間隙超過24小時，即使未更改的資產也會加上標籤。 對於定期標籤工作流程，當時間間隔超過6個月時，會標籤未更改的資產。
 
-## 組織或協調套用的智慧標籤{#manage-smart-tags}
+## 組織或協調套用的智慧標籤 {#manage-smart-tags}
 
 您可以組織智慧標籤，移除指派給品牌影像的任何不正確標籤，以便僅顯示最相關的標籤。
 
@@ -186,7 +186,7 @@ ht-degree: 1%
 1. 按一下「**[!UICONTROL 儲存]**」，然後按一下「**[!UICONTROL 確定]**」
 1. 導覽至影像的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面。 請注意，您促銷的標籤已獲指派更相關性，且顯示在搜尋結果的前面。
 
-## 提示和限制{#tips-best-practices-limitations}
+## 提示和限制 {#tips-best-practices-limitations}
 
 * 智慧內容服務每年最多只能使用200萬個標籤的影像。 處理和標籤的任何重複影像都計為已標籤影像。
 * 如果您從時間軸執行標籤工作流程，一次最多可對15個資產套用標籤。
