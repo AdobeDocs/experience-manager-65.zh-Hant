@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: 檢視器
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 21%
 
 ---
 
-# 將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁{#embedding-the-video-or-image-viewer-on-a-web-page}上
+# 將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上 {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 當您想 **** 要播放視訊或檢視內嵌在網頁上的資產時，請使用「內嵌代碼」功能。您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。「內嵌代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
 
@@ -55,7 +55,7 @@ ht-degree: 21%
 1. 在&#x200B;**[!UICONTROL 內嵌程式碼]**&#x200B;對話方塊中，將整個程式碼複製到剪貼簿，然後點選&#x200B;**[!UICONTROL 關閉]**。
 1. 將內嵌程式碼貼到您的網頁中。
 
-## 使用HTTP/2傳遞Dynamic Media資產{#using-http-to-deliver-your-dynamic-media-assets}
+## 使用HTTP/2傳遞Dynamic Media資產 {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2是全新、更新的Web通訊協定，可改善瀏覽器和伺服器的通訊方式。 它提供了更快的資訊傳輸，並降低了所需的處理能力。 Dynamic Media資產的傳送現在可透過HTTP/2，提供更理想的回應和載入時間。
 
