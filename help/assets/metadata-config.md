@@ -2,17 +2,17 @@
 title: 中繼資料功能的設定和管理。
 description: 配置和管理與元資料添加和管理相關的 [!DNL Experience Manager Assets] 功能。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 中繼資料
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 5%
 
 ---
 
-# [!DNL Assets] {#config-metadata}中元資料功能的配置和管理
+# [!DNL Assets]中元資料功能的配置和管理 {#config-metadata}
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
@@ -22,11 +22,11 @@ ht-degree: 5%
 
 [!DNL Adobe Experience Manager Assets] 保留每個資產的中繼資料。它可讓資產分類和組織更輕鬆，並協助尋找特定資產的人。 您可以使用資產保留和管理中繼資料，並根據資產的中繼資料自動組織和處理資產。 [!DNL Adobe Experience Manager Assets] 可讓管理員設定和自訂中繼資料功能，以修改預設Adobe方案。
 
-## 編輯元資料架構{#metadata-schema}
+## 編輯中繼資料結構 {#metadata-schema}
 
 如需詳細資訊，請參閱[編輯中繼資料結構表單](metadata-schemas.md#edit-metadata-schema-forms)。
 
-## 在[!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}中註冊自訂命名空間
+## 在[!DNL Experience Manager]中註冊自訂命名空間 {#registering-a-custom-namespace-within-aem}
 
 您可以在[!DNL Experience Manager]中新增您自己的命名空間。 就像有預先定義的命名空間，如`cq`、`jcr`和`sling`一樣，您也可以擁有儲存庫元資料和XML處理的命名空間。
 
@@ -35,7 +35,7 @@ ht-degree: 5%
 1. 若要新增命名空間，請按一下頁面底部的&#x200B;**[!UICONTROL 新增]**。
 1. 在XML命名空間約定中指定自訂命名空間。 以URI的形式指定ID以及ID的相關前置詞。 按一下「**[!UICONTROL 儲存]**」。
 
-## 配置批量元資料更新的限制{#bulk-metadata-update-limit}
+## 配置批量元資料更新的限制 {#bulk-metadata-update-limit}
 
 為避免發生類似DOS的情況，[!DNL Enterprise Manager]會限制Sling請求中支援的參數數。 一次更新多個資產的中繼資料時，您可能會達到上限，且不會針對更多資產更新中繼資料。 Enterprise Manager會在記錄檔中產生下列警告：
 
@@ -47,7 +47,7 @@ ht-degree: 5%
 
 中繼資料設定檔可讓您將預設中繼資料套用至資料夾內的資產。 建立中繼資料設定檔並將其套用至資料夾。 您隨後上傳至資料夾的任何資產都會繼承您在中繼資料設定檔中設定的預設中繼資料。
 
-### 新增中繼資料設定檔{#adding-a-metadata-profile}
+### 新增中繼資料設定檔 {#adding-a-metadata-profile}
 
 1. 導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 中繼資料描述檔]**，然後按一下&#x200B;**[!UICONTROL 建立]**。
 1. 輸入設定檔的標題，例如`Sample Metadata`，然後按一下&#x200B;**[!UICONTROL Create]**。 此時會顯示中繼資料設定檔的[!UICONTROL 編輯表單]。
@@ -91,7 +91,7 @@ ht-degree: 5%
 
    ![在「中繼資料描述檔」頁面中新增的中繼資料描述檔](assets/MetadataProfiles-page.png)
 
-### 複製元資料配置檔案{#copying-a-metadata-profile}
+### 複製中繼資料設定檔 {#copying-a-metadata-profile}
 
 1. 從&#x200B;**[!UICONTROL 中繼資料描述檔]**&#x200B;頁面中，選取中繼資料描述檔以製作其復本。
 
@@ -103,7 +103,7 @@ ht-degree: 5%
 
    ![在「中繼資料描述檔」頁面中新增的中繼資料描述檔復本](assets/copy-metadata-profile.png)
 
-### 刪除元資料配置檔案{#deleting-a-metadata-profile}
+### 刪除中繼資料設定檔 {#deleting-a-metadata-profile}
 
 1. 從&#x200B;**[!UICONTROL 中繼資料描述檔]**&#x200B;頁面中，選取要刪除的描述檔。
 
@@ -130,11 +130,11 @@ To apply a metadata profile globally, follow these steps:
   ![See applied metadata profile to a folder in the JCR in CRXDE](assets/metadata-profile-folder-setting2.png)
 -->
 
-## 資料夾{#folder-metadata-schema}的元資料架構
+## 資料夾的中繼資料結構 {#folder-metadata-schema}
 
 [!DNL Adobe Experience Manager Assets] 可讓您建立資產資料夾的中繼資料結構，定義資料夾屬性頁面中顯示的配置和中繼資料。
 
-### 從{#add-a-folder-metadata-schema-form}添加資料夾元資料架構
+### 新增資料夾中繼資料結構表單 {#add-a-folder-metadata-schema-form}
 
 使用資料夾中繼資料結構Forms編輯器，建立和編輯資料夾的中繼資料結構。
 
@@ -142,7 +142,7 @@ To apply a metadata profile globally, follow these steps:
 1. 在「[!UICONTROL 資料夾元資料結構Forms]」頁面上，按一下「**[!UICONTROL 建立]**」。
 1. 指定表單的名稱，然後按一下「**[!UICONTROL 建立]**」。 新架構表單會列在「[!UICONTROL 架構Forms]」頁面中。
 
-### 編輯資料夾元資料結構表單{#edit-folder-metadata-schema-forms}
+### 編輯資料夾中繼資料結構表單 {#edit-folder-metadata-schema-forms}
 
 您可以編輯新增或現有的中繼資料結構表單，其中包括：
 
@@ -172,7 +172,7 @@ To apply a metadata profile globally, follow these steps:
 
 1. 按一下工具列中的&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存變更。
 
-#### 要建立表單的元件{#components-to-build-forms}
+#### 建立表單的元件 {#components-to-build-forms}
 
 **[!UICONTROL 建置表單]**&#x200B;索引標籤會列出您在資料夾中繼資料結構表單中使用的表單項目。 **[!UICONTROL 設定]**&#x200B;標籤顯示您在&#x200B;**[!UICONTROL 生成表單]**&#x200B;標籤中選擇的每個項的屬性。 以下是&#x200B;**[!UICONTROL Build Form]**&#x200B;標籤中可用的表單項清單：
 
@@ -187,7 +187,7 @@ To apply a metadata profile globally, follow these steps:
 | [!UICONTROL 標準標記] | 新增標記. |
 | [!UICONTROL 隱藏欄位] | 新增隱藏欄位。 資產儲存時會以POST參數的形式傳送。 |
 
-#### 編輯表單項{#editing-form-items}
+#### 編輯表單項目 {#editing-form-items}
 
 要編輯表單項的屬性，請按一下元件並在&#x200B;**[!UICONTROL Settings]**&#x200B;頁簽中編輯以下屬性的全部或子集。
 
@@ -213,19 +213,19 @@ To apply a metadata profile globally, follow these steps:
 
 **[!UICONTROL 類別]**:屬性關聯的對象類。
 
-### 刪除資料夾元資料結構表單{#delete-folder-metadata-schema-forms}
+### 刪除資料夾元資料結構表單 {#delete-folder-metadata-schema-forms}
 
 您可以從「資料夾元資料結構」「Forms」頁中刪除資料夾元資料結構表單。 若要刪除表單，請選取表單，然後按一下工具列中的刪除選項。
 
 ![delete_form](assets/delete_form.png)
 
-### 分配資料夾元資料架構{#assign-a-folder-metadata-schema}
+### 指派資料夾中繼資料結構 {#assign-a-folder-metadata-schema}
 
 您可以從「資料夾元資料結構」Forms頁或建立資料夾時，將資料夾元資料結構分配給資料夾。
 
 如果為資料夾配置元資料架構，架構表單的路徑將儲存在`./jcr:content`下資料夾節點的`folderMetadataSchema`屬性中。
 
-#### 從「資料夾元資料結構」頁{#assign-to-a-schema-from-the-folder-metadata-schema-page}分配到架構
+#### 從「資料夾元資料結構」頁指定到結構 {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
 1. 在[!DNL Experience Manager]介面中，轉至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 資料夾元資料結構]**。
 1. 從「資料夾元資料結構Forms」頁中，選擇要應用於資料夾的結構表單。
@@ -240,7 +240,7 @@ To apply a metadata profile globally, follow these steps:
 
    ![folder_metadata_properties](assets/folder_metadata_properties.png)
 
-#### 在建立資料夾{#assign-a-schema-when-creating-a-folder}時分配架構
+#### 建立資料夾時指派結構 {#assign-a-schema-when-creating-a-folder}
 
 建立資料夾時，您可以指派資料夾中繼資料結構。 如果系統中至少存在一個資料夾元資料架構，則在&#x200B;**[!UICONTROL 建立資料夾]**&#x200B;對話框中將顯示額外的清單。 您可以選取所需的結構。 預設情況下，不選擇任何架構。
 
@@ -253,7 +253,7 @@ To apply a metadata profile globally, follow these steps:
 1. 開啟您套用中繼資料結構的資料夾的中繼資料屬性。
 1. 要查看資料夾元資料欄位，請按一下&#x200B;**[!UICONTROL 資料夾元資料]**&#x200B;頁簽。
 
-### 使用資料夾元資料架構{#use-the-folder-metadata-schema}
+### 使用資料夾中繼資料結構 {#use-the-folder-metadata-schema}
 
 開啟配置了資料夾元資料架構的資料夾的屬性。資料夾[!UICONTROL 屬性]頁中顯示&#x200B;**[!UICONTROL 資料夾元資料]**&#x200B;頁簽。 要查看資料夾元資料結構表單，請選擇此頁籤。
 
@@ -261,7 +261,7 @@ To apply a metadata profile globally, follow these steps:
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
 
-## 提示和限制{#best-practices-limitations}
+## 提示和限制 {#best-practices-limitations}
 
 * 若要匯入自訂命名空間上的中繼資料，請先註冊命名空間。
 * 屬性選擇器顯示架構編輯器和搜尋表單中使用的屬性。 屬性選擇器不會從資產中挑選中繼資料屬性。
