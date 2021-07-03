@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 feature: CDN快取，Dynamic Media Classic
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 16%
 
 ---
 
-# 透過Dynamic Media Classic {#invalidating-your-cdn-cached-content}使CDN快取失效
+# 透過Dynamic Media Classic使CDN快取失效 {#invalidating-your-cdn-cached-content}
 
 Dynamic Media資產由CDN（內容傳遞網路）快取，以便快速傳遞。 不過，當您更新資產時，請希望這些變更立即生效。 使CDN快取內容失效可讓您快速更新由Dynamic Media傳送的資產，而不必等待快取過期。
 
