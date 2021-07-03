@@ -9,16 +9,16 @@ content-type: reference
 discoiquuid: 5d5eebe4-46c9-4028-9354-c5f27944fcdc
 docset: aem65
 feature: 資產管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 53ea2cf7-d633-4ab9-a869-ce76eb1c01e5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
 
 ---
 
-# 安裝Feature Pack 18912以進行大量資產移轉{#installing-feature-pack-for-bulk-asset-migration}
+# 安裝Feature Pack 18912以大量移轉資產{#installing-feature-pack-for-bulk-asset-migration}
 
 Feature Pack 18912的安裝為&#x200B;*optional*。
 
