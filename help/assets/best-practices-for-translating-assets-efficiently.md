@@ -2,17 +2,17 @@
 title: 轉譯資產的最佳實務
 description: 高效管理資產的最佳做法，以同步各種翻譯版本並簡化翻譯工作流程。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 資產管理
 exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# 轉譯資產的最佳實務{#best-practices-for-translating-assets-efficiently}
+# 轉譯資產的最佳實務 {#best-practices-for-translating-assets-efficiently}
 
 [!DNL Adobe Experience Manager Assets] 支援多語言工作流程，將數位資產的二進位檔、中繼資料和標籤轉譯為多個地區設定，以及管理翻譯的資產。如需詳細資訊，請參閱[多語言資產](multilingual-assets.md)。
 
