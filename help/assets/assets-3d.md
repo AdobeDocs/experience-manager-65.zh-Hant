@@ -8,16 +8,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 feature: 3D資產，資產管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2306'
 ht-degree: 2%
 
 ---
 
-# 在Dynamic Media中使用3D資產{#working-with-three-d-assets-dm}
+# 在Dynamic Media中使用3D資產 {#working-with-three-d-assets-dm}
 
 Dynamic Media可讓您上傳、管理、檢視及傳遞3D資產，盡享沈浸式體驗。
 
@@ -31,7 +31,7 @@ Dynamic Media可讓您上傳、管理、檢視及傳遞3D資產，盡享沈浸�
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
-## Dynamic Media {#supported-three-d-file-formats-in-dm}支援的3D格式
+## Dynamic Media支援3D格式 {#supported-three-d-file-formats-in-dm}
 
 Dynamic Media支援下列3D格式。
 
@@ -44,7 +44,7 @@ Dynamic Media支援下列3D格式。
 | STL | 光固化成形 | application/vnd.ms-pki.stl |  |
 | USDZ | 通用場景描述Zip封存 | model/vnd.usdz+zip | *僅支援擷取；沒有可用的檢視或互動。* USDZ是專屬的3D格式，可由Safari和iOS裝置原生檢視。 |
 
-## 快速入門：Dynamic Media中的3D資產{#quick-start-three-d}
+## 快速入門：Dynamic Media3D資產 {#quick-start-three-d}
 
 下列逐步工作流程說明旨在協助您在Dynamic Media - Scene7模式中快速上手並執行3D資產。
 
@@ -84,7 +84,7 @@ Dynamic Media支援下列3D格式。
    * [發佈靜態Dynamic Media 3D資產](#publishing-three-d-assets)
    * [使用維度檢視器發佈Dynamic Media 3D資產的替代方法](#alternate-publish-methods)
 
-## 關於檢視與與3D資產互動{#viewing-three-d-assets}
+## 關於檢視與與3D資產互動 {#viewing-three-d-assets}
 
 本節說明如何以兩種不同的方式檢視及與3D資產互動：從資產詳細資訊頁面內和Sites的3D媒體元件內。
 
@@ -104,7 +104,7 @@ Dynamic Media支援下列3D格式。
 >
 >請參閱[管理檢視器預設集](/help/assets/managing-viewer-presets.md)。
 
-## 從資產詳細資訊頁面{#viewing-three-d-assets-from-asset-details-page}檢視3D資產並與其互動
+## 從資產詳細資訊頁面檢視3D資產並與之互動 {#viewing-three-d-assets-from-asset-details-page}
 
 另請參閱[使用軟體介面預覽資產](/help/assets/previewing-assets.md)。
 
@@ -131,7 +131,7 @@ Dynamic Media支援下列3D格式。
 
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL 關閉]**&#x200B;以返回「資產」頁面。
 
-## 查看3D媒體元件{#interacting-with-asset-inside-three-d-media-component}內的3D資產並與之交互
+## 在3D媒體元件內檢視3D資產並與之互動 {#interacting-with-asset-inside-three-d-media-component}
 
 當網頁處於&#x200B;**[!UICONTROL Edit]**&#x200B;模式時，不能與3D資產進行互動。 若要讓資產互動式，您可以使用&#x200B;**[!UICONTROL 預覽]**&#x200B;功能，在頁面編輯器中檢視網頁，且可完整存取3D媒體元件的功能。
 
@@ -162,7 +162,7 @@ Dynamic Media支援下列3D格式。
    | **重設** | 在頁面的右下角附近，點選「重設」圖示，將檢視目標點還原到3D資產的中央。 重置還使相機更近或更遠地移開，以便以合理的觀看大小顯示資產的整體。 |  |  |
    | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，點選「全螢幕」圖示。 |  |  |
 
-## 關於使用3D介質元件{#working-with-three-d-media-component}
+## 關於使用3D媒體元件 {#working-with-three-d-media-component}
 
 Dynamic Media包含Dynamic Media 3D媒體元件，可在Adobe Experience Manager Sites中使用，以互動式檢視網頁上的3D模型。
 
@@ -171,7 +171,7 @@ Dynamic Media包含Dynamic Media 3D媒體元件，可在Adobe Experience Manager
    * [可選 — 配置3D介質元件](#configuring-the-three-d-component)
 * [為3D介質元件分配3D資產](#assigning-a-three-d-asset-to-the-component)
 
-## 將3D媒體元件添加到頁面模板{#adding-three-d-media-component-to-page-template}
+## 將3D媒體元件新增至頁面範本 {#adding-three-d-media-component-to-page-template}
 
 1. 導覽至&#x200B;**[!UICONTROL 工具>一般>範本]**。
 1. 導航到要在中啟用3D元件的頁面模板，然後選擇該模板。
@@ -187,7 +187,7 @@ Dynamic Media包含Dynamic Media 3D媒體元件，可在Adobe Experience Manager
 
    您現在可以將Dynamic Media 3D媒體元件放置在使用此範本的所有頁面上。
 
-## 將3D媒體元件添加到網頁{#adding-the-three-d-media-component-to-a-web-page}
+## 將3D媒體元件新增至網頁 {#adding-the-three-d-media-component-to-a-web-page}
 
 如果您使用Experience Manager作為網頁內容管理系統，則可以通過3D媒體元件將3D資產添加到網頁。
 
@@ -210,7 +210,7 @@ Dynamic Media包含Dynamic Media 3D媒體元件，可在Adobe Experience Manager
 
 請參閱[將3D資產分配給3D媒體元件](#assigning-a-three-d-asset-to-the-component)。
 
-### 可選 — 配置3D介質元件{#configuring-the-three-d-component}
+### 可選 — 配置3D介質元件 {#configuring-the-three-d-component}
 
 1. 在「Experience Manager網站」頁面編輯器中，選取您先前新增至頁面的&#x200B;**[!UICONTROL 3D媒體檢視器]**&#x200B;元件。
 1. 點選「**[!UICONTROL Configuration]**」圖示（扳手），即可開啟元件設定對話方塊。
@@ -223,7 +223,7 @@ Dynamic Media包含Dynamic Media 3D媒體元件，可在Adobe Experience Manager
 
 1. 在右上角，點選核取記號以儲存變更。
 
-## 為3D介質元件{#assigning-a-three-d-asset-to-the-component}分配3D資產
+## 為3D介質元件分配3D資產 {#assigning-a-three-d-asset-to-the-component}
 
 將3D媒體元件新增至網頁後，您就可以指派3D資產給該頁面。
 
@@ -240,7 +240,7 @@ Dynamic Media包含Dynamic Media 3D媒體元件，可在Adobe Experience Manager
 >
 >當網頁處於「Experience Manager網站&#x200B;**[!UICONTROL 編輯]**」模式時，3D媒體元件會顯示3D資產，但無法與資產互動。 若要讓資產互動式，您可以使用&#x200B;**[!UICONTROL 預覽]**&#x200B;功能，在頁面編輯器中檢視網頁，且可完整存取3D媒體元件的功能。
 
-## 發佈靜態Dynamic Media 3D資產{#publishing-three-d-assets}
+## 發佈靜態Dynamic Media 3D資產 {#publishing-three-d-assets}
 
 Dynamic Media接受Dynamic Media中支援作為&#x200B;*靜態內容*&#x200B;的各種3D檔案格式。 靜態內容表示您可以上傳和發佈3D資產，但不支援與3D資產相關聯的&#x200B;*dynamic*&#x200B;影像重新整理或影像重新整理。 原因在於Dynamic Media Imaging Server無法識別3D格式。 因此，在Dynamic Media中發佈3D資產後，您就可以複製即時URL。 3D資產的URL會遵循一般的Dynamic Media URL結構。 不過，您無法編輯資產URL中的任何參數，這與Dynamic Media中的傳統影像資產不同。
 
@@ -275,7 +275,7 @@ Dynamic Media接受Dynamic Media中支援作為&#x200B;*靜態內容*&#x200B;的
 
 1. 點選&#x200B;**[!UICONTROL URL]** ，以顯示3D資產的直接生產URL，您可以複製並在網頁上使用。
 
-### 使用維度檢視器{#alternate-publish-methods}發佈Dynamic Media 3D資產的替代方法
+### 使用維度檢視器發佈Dynamic Media 3D資產的替代方法 {#alternate-publish-methods}
 
 如果您&#x200B;*not*&#x200B;使用Experience Manager作為WCM，請使用下列兩種方法來發佈Dynamic Media 3D資產。
 
