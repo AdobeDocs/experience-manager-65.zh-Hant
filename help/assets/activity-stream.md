@@ -3,16 +3,16 @@ title: 時間軸檢視中數位資產的活動資料流
 description: 本文說明如何在時間軸上顯示資產的活動記錄。
 contentOwner: AG
 feature: 資產管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 28dc0aa5-f2be-4e27-b7d8-415569b7ecd4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 21%
 
 ---
 
-# 時間軸{#activity-stream-in-timeline}中的活動資料流
+# 時間軸中的活動資料流 {#activity-stream-in-timeline}
 
 此功能會顯示時間軸上資產的活動記錄。 如果您在[!DNL Adobe Experience Manager Assets]中執行下列任何與資產相關的操作，活動流功能會更新時間軸以反映活動。
 
