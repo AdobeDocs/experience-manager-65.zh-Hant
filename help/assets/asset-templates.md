@@ -2,17 +2,17 @@
 title: 資產範本
 description: 了解 [!DNL Adobe Experience Manager Assets] 中的資產範本，以及如何使用資產範本建立行銷宣傳資料。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 資產管理，開發人員工具
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1548'
 ht-degree: 0%
 
 ---
 
-# 資產範本{#asset-templates}
+# 資產範本 {#asset-templates}
 
 資產範本是特殊的資產類別，可協助您快速重新調整視覺化豐富內容的用途，以用於數位和列印媒體。 資產範本包含兩個部分：固定訊息區段和可編輯區段。 固定報文傳送部分可包含專有內容，如品牌徽標和禁用編輯的版權資訊。 可編輯的區段可包含欄位中的視覺和文字內容，可編輯這些欄位以自訂訊息。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 您可以以INDD、PDF或JPG格式，匯出上層資料夾內更新的檔案。 您也可以將這些格式的輸出下載到您的本機檔案系統。
 
-## 建立宣傳資料{#creating-a-collateral}
+## 建立抵押品 {#creating-a-collateral}
 
 假設您想要製作可打印的數位宣傳資料，例如手冊、傳單和廣告，以供即將推出的活動之用，並與全球直銷商分享。 根據範本建立宣傳資料有助於跨管道提供統一的客戶體驗。 設計人員可以使用創意解決方案（例如[!DNL InDesign]）建立促銷活動範本（單頁或多頁），並替您將範本上傳至[!DNL Experience Manager Assets]。 在建立宣傳資料之前，請事先將一個或多個INDD模板上載到[!DNL Experience Manager]，並在中可用。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
-## 編輯宣傳資料{#editing-a-collateral}
+## 編輯宣傳品 {#editing-a-collateral}
 
 建立宣傳資料後，您可以立即編輯它。 或者，您也可以從[!UICONTROL 範本]頁面或資產頁面開啟它。
 
@@ -139,7 +139,7 @@ ht-degree: 0%
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
-## 合併宣傳資料{#merge-collateral}
+## 合併抵押品 {#merge-collateral}
 
 1. 在[!DNL Experience Manager]介面中，按一下「導覽」頁面上的[!UICONTROL Assets]。
 
@@ -176,6 +176,6 @@ ht-degree: 0%
    >
    >您以後不能編輯合併的宣傳資料，也不能使用它建立其他宣傳資料。
 
-## 最佳做法和限制{#best-practices-limitations-tips}
+## 最佳實務和限制 {#best-practices-limitations-tips}
 
 * [!DNL Experience Manager]中的[!DNL InDesign]編輯器在標籤層級運作，且單一標籤下的所有文字都視為單一實體。 若要在編輯時保留文字格式和樣式，請個別標籤每個段落（或使用不同樣式的文字）。
