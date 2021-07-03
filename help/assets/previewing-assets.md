@@ -9,16 +9,16 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 feature: 資產管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 2%
 
 ---
 
-# 使用軟體介面{#previewing-assets}預覽資產
+# 使用軟體介面預覽資產 {#previewing-assets}
 
 您可以使用「預覽」，查看您所上傳的數位資產在客戶自己的網頁瀏覽器中被客戶檢視時的外觀。 指派給資產的預設內嵌、跨裝置檢視器會用於預覽。
 
@@ -144,7 +144,7 @@ ht-degree: 2%
     </tbody>
     </table>
 
-## 使用鍵盤{#keyboard-navigation-asset-preview}預覽資產
+## 使用鍵盤預覽資產 {#keyboard-navigation-asset-preview}
 
 1. 從「資產」使用者介面，導覽至包含您要預覽之資產的資料夾。
 
