@@ -11,9 +11,9 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 feature: 內容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 2%
@@ -72,13 +72,13 @@ HTTP方法會決定要執行的操作：
 
 [API參考](/help/assets/assets-api-content-fragments.md#api-reference)檔案中已定義支援請求的確切格式。
 
-### 交易行為{#transactional-behavior}
+### 交易行為 {#transactional-behavior}
 
 所有請求都是原子。
 
 這表示後續(`write`)請求不能合併為單個實體可能成功或失敗的單個事務。
 
-### AEM(Assets)REST API與AEM元件比較{#aem-assets-rest-api-versus-aem-components}
+### AEM(Assets)REST API與AEM元件 {#aem-assets-rest-api-versus-aem-components}
 
 <table>
  <tbody>
@@ -138,7 +138,7 @@ HTTP方法會決定要執行的操作：
 
 在具有特定驗證需求的環境中，建議使用OAuth。
 
-## 可用功能{#available-features}
+## 可用功能 {#available-features}
 
 內容片段是特定的資產類型，請參閱[使用內容片段](/help/assets/content-fragments/content-fragments.md)。
 
@@ -160,7 +160,7 @@ GETREST API支援透過URL參數進行分頁（適用於資產要求）:
 >
 >分頁通常套用在容器實體上（即資料夾或含轉譯的資產），因為它與請求的實體的子項相關。
 
-#### 範例：分頁{#example-paging}
+#### 範例：分頁 {#example-paging}
 
 `GET /api/assets.json?offset=2&limit=3`
 
@@ -178,7 +178,7 @@ GETREST API支援透過URL參數進行分頁（適用於資產要求）:
 ...
 ```
 
-## 實體類型{#entity-types}
+## 實體類型 {#entity-types}
 
 ### 資料夾 {#folders}
 
@@ -213,7 +213,7 @@ GETREST API支援透過URL參數進行分頁（適用於資產要求）:
 
 * 也被視為原子，即元素和變異會公開為片段屬性的一部分，而不是連結或子實體。 這允許有效存取片段的裝載。
 
-#### 內容模型和內容片段{#content-models-and-content-fragments}
+#### 內容模型和內容片段 {#content-models-and-content-fragments}
 
 目前定義內容片段結構的模型不會透過HTTP API公開。 因此，*consumer*&#x200B;需要了解片段的模型（至少是最小值） — 儘管大部分資訊可從裝載推斷；資料類型等。 是定義的一部分。
 
@@ -241,7 +241,7 @@ GETREST API支援透過URL參數進行分頁（適用於資產要求）:
 >
 >如需詳細資訊，請參閱[ API參考](/help/assets/assets-api-content-fragments.md#api-reference)。 尤其是[Adobe Experience Manager Assets API — 內容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
 
-### 讀取/傳送{#read-delivery}
+### 讀取/傳送 {#read-delivery}
 
 使用方式為：
 
@@ -291,7 +291,7 @@ GETREST API支援透過URL參數進行分頁（適用於資產要求）:
 * **目前不支援內容片段模型**:無法讀取或建立。若要建立新內容片段或更新現有內容片段，開發人員必須知道內容片段模型的正確路徑。 目前唯一可透過管理UI來取得這些概觀的方法。
 * **會忽略參考**。目前沒有檢查是否參考現有內容片段。 因此，例如，刪除內容片段可能會在包含參考的頁面上造成問題。
 
-## 狀態代碼和錯誤消息{#status-codes-and-error-messages}
+## 狀態代碼和錯誤消息 {#status-codes-and-error-messages}
 
 在相關情況下，可看到下列狀態代碼：
 
@@ -364,7 +364,7 @@ GETREST API支援透過URL參數進行分頁（適用於資產要求）:
    }
    ```
 
-## API參考{#api-reference}
+## API參考 {#api-reference}
 
 如需詳細的API參考，請參閱這裡：
 
