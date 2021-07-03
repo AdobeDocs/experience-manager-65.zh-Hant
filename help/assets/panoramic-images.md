@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 feature: 全景影像，資產管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ![panoramic-image2](assets/panoramic-image2.png)
 
-## 上傳資產以便與全景影像檢視器{#uploading-assets-for-use-with-the-panoramic-image-viewer}搭配使用
+## 上傳資產以與全景影像檢視器搭配使用 {#uploading-assets-for-use-with-the-panoramic-image-viewer}
 
 若要讓上傳的資產符合要與全景影像檢視器搭配使用之球面全景影像的資格，資產必須具備下列其中一項或兩項：
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 1. 在右下角，按一下&#x200B;**[!UICONTROL 關閉]**。
 
-### 全景媒體WCM元件{#troubleshooting-the-panoramic-media-wcm-component}疑難排解
+### 全景媒體WCM元件疑難排解 {#troubleshooting-the-panoramic-media-wcm-component}
 
 如果您將影像放置到WCM的全景媒體元件中，且元件預留位置已收合，請疑難排解下列問題：
 
@@ -79,10 +79,10 @@ ht-degree: 0%
 * 針對污染的畫布錯誤，請為影像資產的先前請求設定「規則集定義檔案路徑」和「使CTN無效」。
 * 如果影像要求的大小超過支援的限制後影像品質變低，請檢查&#x200B;**[!UICONTROL JPEG編碼屬性>品質]**&#x200B;設定是否不空白。 **[!UICONTROL Quality]**&#x200B;欄位的典型設定為`95`。 您可以在「影像伺服器發佈」頁面上找到設定。 若要存取頁面，請參閱[設定Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)。
 
-## 預覽全景影像{#previewing-panoramic-images}
+## 預覽全景影像 {#previewing-panoramic-images}
 
 請參閱「預覽資產」[。](/help/assets/previewing-assets.md)
 
-## 發佈全景影像{#publishing-panoramic-images}
+## 發佈全景影像 {#publishing-panoramic-images}
 
 請參閱[發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
