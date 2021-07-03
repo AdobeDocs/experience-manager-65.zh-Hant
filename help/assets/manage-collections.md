@@ -3,10 +3,10 @@ title: 管理數位資產集合
 description: 了解管理資產集合的工作，例如建立、檢視、刪除、編輯和下載集合。
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner
+role: User
 feature: 集合，資產管理
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 11%
@@ -27,15 +27,15 @@ ht-degree: 11%
 
 * 智慧型集合，根據搜尋條件以動態方式包含資產。
 
-## 訪問集合控制台{#navigating-the-collections-console}
+## 存取集合主控台 {#navigating-the-collections-console}
 
 若要開啟&#x200B;**[!UICONTROL 集合]**，請在[!DNL Experience Manager]介面中，前往&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 集合]**。
 
-## 建立集合{#creating-a-collection}
+## 建立集合 {#creating-a-collection}
 
 您可以使用[靜態參考](#creating-a-collection-with-static-references)或根據[搜尋准則型篩選器](#creating-a-smart-collection)建立集合。 您也可以從燈箱建立集合。
 
-### 使用靜態參考{#creating-a-collection-with-static-references}建立集合
+### 使用靜態參考建立集合 {#creating-a-collection-with-static-references}
 
 您可以建立包含靜態參照的集合，例如，包含資產、資料夾、集合、回轉集和影像集參考的集合。
 
@@ -57,7 +57,7 @@ ht-degree: 11%
 
    若要新增資產至集合，請導覽至[!DNL Assets]使用者介面。 如需詳細資訊，請參閱[將資產新增至集合](#adding-assets-to-a-collection)。
 
-### 使用dropzone {#create-collections-using-dropzone}建立集合
+### 使用放置區建立集合 {#create-collections-using-dropzone}
 
 您可以將資產從[!DNL Assets]使用者介面拖曳至集合。 您也可以建立集合的復本，並將資產拖曳至該處。
 
@@ -73,7 +73,7 @@ ht-degree: 11%
 1. 在「建 **[!UICONTROL 立新系列]** 」對話方塊中，指定系列的名稱。如果您希望系列可供所有使用者存取，請選取「公用 **[!UICONTROL 系列」]**。
 1. 按一下&#x200B;**[!UICONTROL 繼續]**&#x200B;以建立集合。
 
-### 建立智慧型集合{#creating-a-smart-collection}
+### 建立智慧型集合 {#creating-a-smart-collection}
 
 智慧型集合會使用搜尋條件來動態填入資產。 您可以僅使用檔案而不使用資料夾或檔案和資料夾來建立智慧集合。
 
@@ -105,7 +105,7 @@ ht-degree: 11%
 
    **[!UICONTROL 建立智慧選擇]**&#x200B;選項的標籤將更改為&#x200B;**[!UICONTROL 編輯智慧選擇]**。 要編輯智慧系列的設定，請從「檔案和文 **[!UICONTROL 件夾]** 」列 **[!UICONTROL 表中選擇「檔案]** 」。按一下&#x200B;**[!UICONTROL 編輯智慧選擇]** ![編輯智慧集合](assets/do-not-localize/edit-smart-collection.png)選項。
 
-## 將資產新增至集合{#adding-assets-to-a-collection}
+## 新增資產至集合 {#adding-assets-to-a-collection}
 
 您可以新增資產至包含參考資產或資料夾清單的集合。 智慧型集合會使用搜尋查詢來填入資產。 因此，資產和資料夾的靜態參考不適用。
 
@@ -116,7 +116,7 @@ ht-degree: 11%
 
 1. 按一下「**[!UICONTROL 新增]**」，然後關閉確認訊息。 資產會新增至集合。
 
-## 編輯智慧集合{#editing-a-smart-collection}
+## 編輯智慧型集合 {#editing-a-smart-collection}
 
 智慧型集合是透過儲存搜尋來建立，因此您可以修改[已儲存搜尋](#saved-searches)的搜尋參數來變更其內容。
 
@@ -138,7 +138,7 @@ ht-degree: 11%
 1. 按一下「**[!UICONTROL 覆寫]**」，將原始智慧型系列取代為已編輯的系列。 或者，選取&#x200B;**[!UICONTROL 另存新檔]**&#x200B;以個別儲存已編輯的集合。
 1. 在確認對話方塊中，按一下&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成程式。
 
-## 查看和編輯集合元資料{#view-edit-collection-metadata}
+## 檢視及編輯系列中繼資料 {#view-edit-collection-metadata}
 
 集合中繼資料包含關於集合的資料，包括所新增的任何標籤。
 
@@ -146,7 +146,7 @@ ht-degree: 11%
 1. 在「系列 **[!UICONTROL 中繼資料]** 」頁面中，從「基本」和「進階」標籤檢視系 **[!UICONTROL 列中繼資]** 料 **** 。
 1. 視需要修改中繼資料。 若要儲存變更，請按一下工具列中的&#x200B;**[!UICONTROL 儲存並關閉]**。
 
-## 大量編輯多個集合的中繼資料{#editing-collection-metadata-in-bulk}
+## 大量編輯多個集合的中繼資料 {#editing-collection-metadata-in-bulk}
 
 您可以同時編輯多個集合的中繼資料。 此功能可協助您快速復寫多個集合中的通用中繼資料。
 
@@ -174,19 +174,19 @@ ht-degree: 11%
 >
 >大量編輯方法適用於集合中的可用資產。 對於可跨資料夾使用或符合通用條件的資產，可以在搜尋](/help/assets/search-assets.md#metadataupdates)後，大量更新中繼資料。[
 
-## 搜尋集合{#searching-collections}
+## 搜尋集合 {#searching-collections}
 
 您可以從集合控制台搜尋集合。 當您在Omnisearch方塊中搜尋關鍵字時，[!DNL Assets]會搜尋集合名稱、中繼資料，以及新增至集合的標籤。
 
 如果您從頂層搜尋集合，則搜尋結果中只會傳回個別的集合。 [!DNL Assets] 或集合內的資料夾會遭排除。在所有其他情況下（例如在個別集合或資料夾階層中），會傳回所有相關資產、資料夾和集合。
 
-## 在集合內搜尋{#searching-within-collections}
+## 在集合內搜尋 {#searching-within-collections}
 
 在「集合」控制台中，按一下集合以開啟它。
 
 在集合內，[!DNL Experience Manager]搜尋僅限於您檢視的集合內的資產（及其標籤和中繼資料）。 在資料夾內搜尋時，會傳回目前資料夾內所有相符的資產和子資料夾。 在集合內搜尋時，系統只會傳回相符的資產、資料夾和其他集合，這些集合是集合的直接成員。
 
-## 編輯集合設定{#editing-collection-settings}
+## 編輯集合設定 {#editing-collection-settings}
 
 您可以編輯系列設定，例如標題和說明，或將成員新增至系列。
 
@@ -195,7 +195,7 @@ ht-degree: 11%
 
 1. 要保存更改，請按一下&#x200B;**[!UICONTROL 保存]**。
 
-## 刪除集合{#deleting-a-collection}
+## 刪除集合 {#deleting-a-collection}
 
 1. 從「系列」控制台中，選擇一個或多個系列，然後按一下工具欄中的「刪除」。
 
@@ -205,7 +205,7 @@ ht-degree: 11%
    >
    >您也可以透過[刪除已儲存的搜尋](#saved-searches)刪除智慧型集合。
 
-## 下載集合{#downloading-a-collection}
+## 下載集合 {#downloading-a-collection}
 
 下載集合時，會下載集合內的整個資產階層，包括資料夾和子集合。
 
@@ -215,7 +215,7 @@ ht-degree: 11%
 
    當您選取要下載的集合時，會下載集合下的完整資料夾階層。 若要將您下載的每個系列（包括父系列下巢狀的子系列中的資產）包含在個別資料夾中，請選取「為每個資產建立個別資料夾」 ****。
 
-## 建立巢狀集合{#creating-nested-collections}
+## 建立巢狀集合 {#creating-nested-collections}
 
 您可以將集合新增至其他集合，借此建立巢狀集合。
 
@@ -233,7 +233,7 @@ ht-degree: 11%
 >
 >智慧型集合無法巢狀。 換言之，智慧型集合不能包含任何其他集合。
 
-## 已保存的搜索{#saved-searches}
+## 已儲存的搜尋 {#saved-searches}
 
 在[!DNL Assets]使用者介面中，您可以根據特定規則、搜尋准則或自訂搜尋刻面來搜尋或篩選資產。 如果您將這些項目儲存為「 **[!UICONTROL 已儲存的搜尋]**」，您稍後可從「篩選」面板的「已儲存的搜尋 **** 」清單中存取。建立儲存的搜尋也會建立智慧型系列。
 
@@ -258,7 +258,7 @@ ht-degree: 11%
 
 1. 在對話方塊中，按一下&#x200B;**[!UICONTROL Delete]**&#x200B;以刪除儲存的搜尋。
 
-## 對集合{#running-a-workflow-on-a-collection}執行工作流
+## 對集合執行工作流程 {#running-a-workflow-on-a-collection}
 
 您可以為集合內的資產執行工作流程。 如果集合包含巢狀集合，工作流程也會在巢狀集合內的資產上執行。 不過，如果集合和巢狀集合包含重複資產，工作流程只會針對這些資產執行一次。
 
