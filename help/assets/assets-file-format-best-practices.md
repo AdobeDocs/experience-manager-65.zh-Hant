@@ -2,17 +2,17 @@
 title: 處理支援的檔案格式的最佳實務
 description: 使用 [!DNL Experience Manager Assets]處理各種支援檔案類型的最佳實務。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 資產管理，開發人員工具
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
 
 ---
 
-# Assets檔案格式最佳實務{#assets-file-format-best-practices}
+# Assets檔案格式最佳實務 {#assets-file-format-best-practices}
 
 [!DNL Adobe Experience Manager Assets] 支援許多專有和第三方檔案格式庫，以滿足用戶的不同檔案支援需求。支援的Adobe庫包括[!DNL Adobe Camera Raw]、Gibson、Adobe PDF模擬轉譯器和[!DNL Adobe InDesign Server]。 此外，[!DNL Experience Manager Assets]支援第三方程式庫，包括[!DNL ImageMagick]、[!DNL TwelveMonkeys]等。
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe客戶服務。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
 
-## [!DNL Adobe Camera Raw] 資料庫  {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw] 資料庫 {#adobe-camera-raw-library}
 
 為獲得最佳效能，Adobe建議對RAW和DNG檔案使用[!DNL Adobe Camera Raw]程式庫。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 如需詳細資訊，請參閱[Camera Raw支援](/help/assets/camera-raw.md)。
 
-## Adobe PDF模擬轉譯器庫{#adobe-pdf-rasterizer-library}
+## Adobe PDF模擬轉譯器資料庫 {#adobe-pdf-rasterizer-library}
 
 為獲得最佳結果，Adobe建議對下列檔案使用Adobe PDF模擬轉譯器程式庫：
 
@@ -50,7 +50,7 @@ Adobe建議您使用[!DNL Adobe InDesign Server]擷取[!DNL Adobe InDesign]特�
 
 目前，[!DNL Dynamic Media]可支援每個檔案高達15 GB的內容。
 
-## ImageMagick庫{#imagemagick-library}
+## ImageMagick程式庫 {#imagemagick-library}
 
 Adobe建議在下列情況下使用ImageMagick程式庫：
 
@@ -61,7 +61,7 @@ Adobe建議在下列情況下使用ImageMagick程式庫：
 
 若要了解如何在[!DNL Experience Manager]中設定[!DNL ImageMagick]程式庫，請參閱[使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)。 如需最佳用法，請參閱[設定ImageMagick](/help/assets/best-practices-for-imagemagick.md)的最佳實務。
 
-## 影像轉碼庫{#image-transcoding-library}
+## 影像轉碼程式庫 {#image-transcoding-library}
 
 Adobe影像轉碼程式庫是執行核心影像處理功能的影像處理解決方案，包括影像編碼、轉碼、重新取樣、調整大小等。
 
