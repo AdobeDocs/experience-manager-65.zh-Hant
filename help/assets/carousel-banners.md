@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 feature: 輪播橫幅
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '4740'
 ht-degree: 4%
@@ -38,7 +38,7 @@ ht-degree: 4%
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
-## 觀看輪播橫幅的建立方式{#watch-how-carousel-banners-are-created}
+## 觀看輪播橫幅的建立方式 {#watch-how-carousel-banners-are-created}
 
 播放[如何建立輪播橫幅的逐步說明](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)（10分33秒）。 您也可以了解如何預覽、編輯和傳送輪播橫幅。
 
@@ -46,7 +46,7 @@ ht-degree: 4%
 >
 >必須將非管理使用者新增至&#x200B;**[!UICONTROL dam-users]**&#x200B;群組，才能建立或編輯轉盤橫幅。 如果您在建立或編輯時遇到問題，請洽詢系統管理員，該管理員可將您新增至&#x200B;**[!UICONTROL dam-users]**&#x200B;群組。
 
-## 快速入門：輪播橫幅{#quick-start-carousel-banners}
+## 快速入門：輪播橫幅 {#quick-start-carousel-banners}
 
 若要使用輪播橫幅快速上手並執行：
 
@@ -95,7 +95,7 @@ ht-degree: 4%
 
 若要編輯轉盤集，請參閱[編輯轉盤集](#editing-carousel-sets)。 此外，您還可以查看和編輯[轉盤集屬性](manage-assets.md#editing-properties)。
 
-## 識別熱點和影像映射變數{#identifying-hotspot-and-image-map-variables}
+## 識別熱點和影像映射變數 {#identifying-hotspot-and-image-map-variables}
 
 首先，識別現有Quickview實作所使用的動態變數，以便在Experience Manager資產的轉盤集建立程式期間，正確輸入熱點或影像地圖資料。
 
@@ -177,13 +177,13 @@ ht-degree: 4%
  </tbody>
 </table>
 
-## 上傳影像橫幅{#uploading-image-banners}
+## 上傳影像橫幅 {#uploading-image-banners}
 
 如果您已上傳要使用的影像，請前往下一個步驟[建立轉盤集](#creating-carousel-sets)。 請注意，在啟用Dynamic Media後，必須上傳輪播中使用的影像。
 
 若要上傳影像橫幅，請參閱[上傳資產](/help/assets/manage-assets.md)。
 
-## 建立轉盤集{#creating-carousel-sets}
+## 建立轉盤集 {#creating-carousel-sets}
 
 >[!NOTE]
 >
@@ -234,7 +234,7 @@ ht-degree: 4%
 
 1. 完成後，點選「**[!UICONTROL 儲存]**」。
 
-## 將熱點或影像映射添加到影像橫幅{#adding-hotspots-or-image-maps-to-an-image-banner}
+## 向影像橫幅添加熱點或影像映射 {#adding-hotspots-or-image-maps-to-an-image-banner}
 
 您可以使用轉盤集編輯器將熱點或影像地圖新增至橫幅。
 
@@ -325,7 +325,7 @@ ht-degree: 4%
 
    請參閱[新增轉盤集至您的網站登陸頁面](#adding-a-carousel-banner-to-your-website-page)
 
-## 編輯轉盤集{#editing-carousel-sets}
+## 編輯轉盤集 {#editing-carousel-sets}
 
 >[!NOTE]
 必須將非管理使用者新增至&#x200B;**[!UICONTROL dam-users]**&#x200B;群組，才能建立或編輯轉盤橫幅。 如果您在建立或編輯時遇到問題，請洽詢系統管理員，該管理員可將您新增至&#x200B;**[!UICONTROL dam-users]**&#x200B;群組。
@@ -362,7 +362,7 @@ ht-degree: 4%
    >[!NOTE]
    如果您正在使用熱點編輯互動式影像並裁切影像，則會刪除熱點。
 
-## （可選）預覽轉盤橫幅{#optional-previewing-carousel-banners}
+## （選用）預覽轉盤橫幅 {#optional-previewing-carousel-banners}
 
 您可以使用「預覽」來查看客戶對轉盤橫幅的顯示方式，以及測試轉盤橫幅熱點和影像地圖，以確保它們的行為如預期般。
 
@@ -391,7 +391,7 @@ ht-degree: 4%
 1. 在頁面左側面板的&#x200B;**[!UICONTROL 檢視器]**&#x200B;清單中，點選您要使用的轉盤橫幅檢視器預設集名稱。
 1. 點選影像上的熱點或影像地圖，以便測試其相關聯的動作。
 
-## 發佈轉盤橫幅{#publishing-carousel-banners}
+## 發佈輪播橫幅 {#publishing-carousel-banners}
 
 發佈輪播，方便您使用。 發佈轉盤集會啟用URL和內嵌程式碼。 它也會將轉盤發佈至Dynamic Media雲端，與CDN整合以提供可擴充且效能優異的傳送。
 
@@ -401,7 +401,7 @@ ht-degree: 4%
 
 如需如何發佈轉盤橫幅的詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 將轉盤橫幅新增至您的網站頁面{#adding-a-carousel-banner-to-your-website-page}
+## 新增轉盤橫幅至您的網站頁面 {#adding-a-carousel-banner-to-your-website-page}
 
 上傳橫幅影像以建立輪播、新增熱點和/或影像對應至橫幅並發佈輪播集後，您現在可以將其新增至現有的網站頁面。
 
@@ -416,7 +416,7 @@ ht-degree: 4%
 1. 新增您從Experience Manager資產複製的內嵌程式碼至網頁。
 複製的內嵌程式碼會回應，因此必須自動符合頁面的內嵌區域。
 
-## 將轉盤橫幅與現有快速檢視整合{#integrating-the-carousel-banner-with-an-existing-quickview}
+## 將轉盤橫幅與現有快速檢視整合 {#integrating-the-carousel-banner-with-an-existing-quickview}
 
 注意：只有在您是獨立Experience Manager資產客戶時，才適用此步驟。
 
