@@ -6,17 +6,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: 發佈
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2944'
 ht-degree: 3%
 
 ---
 
-# 在Dynamic Media {#selective-publish-configure-folder}的資料夾層級設定選擇性發佈
+# 在Dynamic Media的資料夾層級設定選擇性發佈 {#selective-publish-configure-folder}
 
 您可以在資料夾層級選擇從Adobe Experience Manager或Dynamic Media發佈或取消發佈資產。 您可以使用&#x200B;**[!UICONTROL 管理出版物]**&#x200B;或&#x200B;**[!UICONTROL 快速發佈]**，而非僅能依賴設定與Dynamic Media執行個體的所有資料夾相同的&#x200B;**[!UICONTROL Dynamic Media組態]**。
 
@@ -74,7 +74,7 @@ ht-degree: 3%
 
 1. 在頁面的右上角，點選&#x200B;**[!UICONTROL 儲存並關閉]**，然後點選&#x200B;**[!UICONTROL 確定]**&#x200B;以返回Experience Manager資產。
 
-## 使用管理出版物{#selective-publish-manage-publication}選擇性地將資產發佈至Dynamic Media或Experience Manager
+## 使用管理出版物選擇性地將資產發佈至Dynamic Media或Experience Manager{#selective-publish-manage-publication}
 
 使用&#x200B;**[!UICONTROL 管理出版物]**&#x200B;來選擇性地將資產發佈至Dynamic Media或Experience Manager之前，請確定您已設定下列其中一項：
 
@@ -123,7 +123,7 @@ ht-degree: 3%
    * 在&#x200B;**[!UICONTROL 管理出版物 — 範圍]**&#x200B;頁面的右上角，點選&#x200B;**[!UICONTROL Publish]**&#x200B;或&#x200B;**[!UICONTROL Publish to Dynamic Media]**。
 1. 點選&#x200B;**[!UICONTROL 確定]**。
 
-### 使用管理出版物{#selective-unpublish-manage-publication}從Dynamic Media或Experience Manager選擇性地取消發佈資產
+### 使用管理出版物從Dynamic Media或Experience Manager選擇性取消發佈資產 {#selective-unpublish-manage-publication}
 
 1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台。 在左側，點選「導覽」圖示（在「工具」圖示的正上方），然後點選「**[!UICONTROL 資產]** > **[!UICONTROL 檔案]**」。
 1. 在&#x200B;**[!UICONTROL 卡片視圖]**、**[!UICONTROL 列視圖]**&#x200B;或&#x200B;**[!UICONTROL 清單視圖]**&#x200B;中，執行以下操作之一：
@@ -154,7 +154,7 @@ ht-degree: 3%
    * 在&#x200B;**[!UICONTROL 管理出版物 — 範圍]**&#x200B;頁面的右上角，點選&#x200B;**[!UICONTROL 取消發佈]**&#x200B;或&#x200B;**[!UICONTROL 從Dynamic Media取消發佈]**。
 1. 點選&#x200B;**[!UICONTROL 確定]**。
 
-## 使用快速發佈{#quick-publish-aem-dm}將資產發佈至Dynamic Media或Experience Manager
+## 使用快速發佈將資產發佈至Dynamic Media或Experience Manager {#quick-publish-aem-dm}
 
 對於簡單的資產啟用案例，您可以使用&#x200B;**[!UICONTROL 快速發佈]**。 **[!UICONTROL 快速發]** 布會立即發佈所選資產，不需進一步進行使用者互動。由於此動作，任何未發佈的參考也會自動發佈。
 
@@ -185,7 +185,7 @@ ht-degree: 3%
 
 1. 點選&#x200B;**[!UICONTROL OK]**，然後點選&#x200B;**[!UICONTROL Close]**。
 
-## 透過搜尋結果{#selective-publish-unpublish-search-results}選擇性地發佈或取消發佈資產
+## 透過搜尋結果選擇性地發佈或取消發佈資產 {#selective-publish-unpublish-search-results}
 
 搜尋結果可顯示具有不同Dynamic Media發佈設定之資產資料夾中的資產。 若您從搜尋結果中選取多個資產，且每個資產具有不同的Dynamic Media發佈模式設定，您可以從工具列觸發&#x200B;**[!UICONTROL 管理出版物]**&#x200B;以進行發佈或取消發佈。
 
@@ -247,7 +247,7 @@ ht-degree: 3%
    * 在&#x200B;**[!UICONTROL 管理出版物 — 範圍]**&#x200B;頁面的右上角，點選&#x200B;**[!UICONTROL Publish]**&#x200B;或&#x200B;**[!UICONTROL Unpublish]**&#x200B;以開始動作。
 1. 點選&#x200B;**[!UICONTROL 確定]**。
 
-## 檢查資產{#check-publish-status-of-asset}的發佈狀態
+## 檢查資產的發佈狀態 {#check-publish-status-of-asset}
 
 您可以在Experience Manager中使用&#x200B;**[!UICONTROL 時間軸]**&#x200B;搭配&#x200B;**[!UICONTROL 卡片檢視]**、**[!UICONTROL 欄檢視]**&#x200B;或&#x200B;**[!UICONTROL 清單檢視]**，快速檢查資產的發佈狀態。
 
@@ -262,7 +262,7 @@ ht-degree: 3%
    * 設為&#x200B;*not*且已設為同步至Dynamic Media的資料夾不會顯示Dynamic Media欄。
       ![清單檢視和時間軸](/help/assets/assets-dm/selective-publish-status-timeline.png)
 
-## 疑難排解選擇性發佈{#selective-publish-troubleshoot}
+## 疑難排解選擇性發佈 {#selective-publish-troubleshoot}
 
 資產未同步至Dynamic Media，但其上觸發了Dynamic Media發佈動作，會導致下列錯誤訊息和解決方案：
 
