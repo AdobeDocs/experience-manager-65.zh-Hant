@@ -4,9 +4,9 @@ description: 了解如何預覽3D資產
 contentOwner: Rick Brough
 docset: aem65
 feature: 3D資產
-role: Business Practitioner
+role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 11%
@@ -21,7 +21,7 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
-## 支援的Experience Manager{#supported-3d-previewing-assets}中3D預覽格式
+## 支援的格式，可在Experience Manager中預覽3D {#supported-3d-previewing-assets}
 
 互動式3D預覽支援下列檔案格式：
 
@@ -45,7 +45,7 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
     material_0_baseColor.
     jpegmaterial_0_normal.jpeg
 
-## 以Experience Manager{#performance-3d-previewing-assets}預覽3D資產時的效能考量事項
+## 以Experience Manager預覽3D資產時的效能考量{#performance-3d-previewing-assets}
 
 在資產詳細資訊檢視頁面中開啟3D資產所花的時間，取決於頻寬、影像複雜度和伺服器延遲等數項因素。
 
