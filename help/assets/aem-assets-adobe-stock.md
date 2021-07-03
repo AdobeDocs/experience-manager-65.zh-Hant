@@ -3,16 +3,16 @@ title: 管理 [!DNL Adobe Stock] 資產
 description: 從 [!DNL Adobe Experience Manager]內搜尋、擷取、授權及管理 [!DNL Adobe Stock] 資產。 將授權資產作為任何其他數位資產使用。
 contentOwner: AG
 feature: 搜尋，Adobe Stock
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 11%
 
 ---
 
-# 在[!DNL Adobe Experience Manager Assets] {#use-adobe-stock-assets-in-aem-assets}中使用[!DNL Adobe Stock]資產
+# 在[!DNL Adobe Experience Manager Assets]中使用[!DNL Adobe Stock]資產 {#use-adobe-stock-assets-in-aem-assets}
 
 組織可將其[!DNL Adobe Stock]企業計畫與[!DNL Experience Manager Assets]整合，以確保授權資產可廣泛用於其創意和行銷專案，並具備[!DNL Experience Manager]的強大資產管理功能。
 
@@ -30,7 +30,7 @@ ht-degree: 11%
 >
 >只有組織的[!DNL Experience Manager]管理員和[!DNL Admin Console]管理員才能執行整合，因為整合需要管理員權限。
 
-### 建立IMS設定{#create-an-ims-configuration}
+### 建立IMS設定 {#create-an-ims-configuration}
 
 1. 在[!DNL Experience Manager]使用者介面中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL AdobeIMS設定]**。 按一 **[!UICONTROL 下「建立]** 」，然後選 **[!UICONTROL 取「雲端解決方案]** > **[!UICONTROL Adobe Stock]**」。
 1. 重複使用現有證書或選擇&#x200B;**[!UICONTROL 建立新證書]**。
@@ -43,7 +43,7 @@ ht-degree: 11%
 <!-- TBD: Update the URL to update the terminology when AIO team updates their documentation URL. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
 -->
 
-### 在[!DNL Experience Manager] {#create-adobe-stock-configuration-in-aem}中建立[!DNL Adobe Stock]配置
+### 在[!DNL Experience Manager]中建立[!DNL Adobe Stock]配置 {#create-adobe-stock-configuration-in-aem}
 
 1. 在[!DNL Experience Manager]中，導覽至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**。
 1. 按一下&#x200B;**[!UICONTROL 建立]**&#x200B;以建立設定，並將其與您現有的IMS設定建立關聯。 選擇`PROD`作為環境參數。
@@ -67,7 +67,7 @@ ht-degree: 11%
 
 **A.**[!DNL Adobe Stock] 搜尋與已提供 ID 之資產的類似資產。**B.** 搜尋與您選取的型態或方向相符的資產。**C.** 搜尋一或多個支援的資產類型 **D.** 開啟或收合篩選器窗格 **E.** 在 中為選取的資產授權並加以儲存 [!DNL Experience Manager]**F.**[!DNL Experience Manager] 將資產儲存在 中並加上浮水印 **G.**[!DNL Adobe Stock] 在 網站上探索與選取的資產類似的資產 **H.**[!DNL Adobe Stock] 在 網站上檢視選取的資產 **I.** 搜尋結果中選取的資產數目 **J.** 在卡片檢視與清單檢視之間切換
 
-### 尋找資產{#find-assets}
+### 尋找資產 {#find-assets}
 
 您的[!DNL Experience Manager]使用者可以同時在[!DNL Experience Manager]和[!DNL Adobe Stock]中搜尋資產。 當搜索位置不限於[!DNL Adobe Stock]時，將顯示[!DNL Experience Manager]和[!DNL Adobe Stock]的搜索結果。
 
@@ -103,7 +103,7 @@ ht-degree: 11%
 
 *圖：對話方塊，以在中授權 [!DNL Adobe Stock] 和儲存 [!DNL Experience Manager Assets]資產。*
 
-### 存取中繼資料和資產屬性{#access-metadata-and-asset-properties}
+### 存取中繼資料和資產屬性 {#access-metadata-and-asset-properties}
 
 使用者可以存取和預覽中繼資料，包括[!DNL Experience Manager]中儲存之資產的[!DNL Adobe Stock]中繼資料屬性，以及為資產新增&#x200B;**[!UICONTROL 授權參考]**。 不過，在[!DNL Experience Manager]和[!DNL Adobe Stock]網站之間未同步授權參考更新。
 
@@ -113,7 +113,7 @@ ht-degree: 11%
 
 *圖：檢視及存取儲存資產的中繼資料和授權參考。*
 
-## 已知限制{#known-limitations}
+## 已知限制 {#known-limitations}
 
 * **未顯示編輯影像警告**:授權影像時，使用者無法檢查影像是否為「僅編輯使用」。為了防止可能的誤用，管理員可以關閉Admin Console對編輯資產的存取權。
 
