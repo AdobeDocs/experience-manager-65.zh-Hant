@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: 協作，資產管理
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 7%
@@ -27,7 +27,7 @@ ht-degree: 7%
 >
 >A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
-## 可以使用Dynamic Media {#what-you-can-do-with-dynamic-media}做什麼
+## 你能用Dynamic Media做什麼 {#what-you-can-do-with-dynamic-media}
 
 Dynamic Media可讓您在發佈資產之前先管理資產。 [使用數位資產](manage-assets.md)中會詳細說明如何使用資產。 一般主題包括上傳、下載、編輯和發佈資產；檢視及編輯屬性，以及搜尋資產。
 
@@ -52,7 +52,7 @@ Dynamic Media可讓您在發佈資產之前先管理資產。 [使用數位資�
 >
 >若要了解使用Dynamic Media與整合Dynamic Media Classic與Adobe Experience Manager之間的差異，請參閱[Dynamic Media Classic整合與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
 
-## Dynamic Media已啟用與Dynamic Media已停用{#dynamic-media-on-versus-dynamic-media-off}
+## Dynamic Media啟用與Dynamic Media停用 {#dynamic-media-on-versus-dynamic-media-off}
 
 您可以借由下列特性來判斷Dynamic Media是否已啟用（開啟）:
 
@@ -62,25 +62,25 @@ Dynamic Media可讓您在發佈資產之前先管理資產。 [使用數位資�
 
 當您按一下影像資產時，Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media)的資產檢視會不同。 Dynamic Media使用隨選HTML5檢視器。
 
-### 動態轉譯{#dynamic-renditions}
+### 動態轉譯 {#dynamic-renditions}
 
 啟用Dynamic Media時，可使用動態轉譯，例如影像和檢視器預設集（位於&#x200B;**[!UICONTROL Dynamic]**&#x200B;下）。
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
-### 影像集、旋轉集、混合媒體集{#image-sets-spins-sets-mixed-media-sets}
+### 影像集，旋轉集，混合媒體集 {#image-sets-spins-sets-mixed-media-sets}
 
 如果已啟用Dynamic Media，則可使用影像集、回轉集和混合媒體集。
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
-### PTIFF轉譯{#ptiff-renditions}
+### PTIFF轉譯 {#ptiff-renditions}
 
 啟用動態媒體的資產包括`pyramid.tiffs`。
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
-### 資產檢視變更{#asset-views-change}
+### 資產檢視變更 {#asset-views-change}
 
 啟用Dynamic Media後，按一下`+`和`-`按鈕即可放大和縮小。 您也可以按一下/點選以放大至特定區域。 還原功能可將您帶到原始版本，您可以按一下對角線箭頭來使影像成為全螢幕。 啟用Dynamic Media的項目如下所示：
 
