@@ -5,17 +5,17 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: Business Practitioner, Administrator,Developer
+role: User, Admin,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
 feature: 配置，規則集
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 5%
 
 ---
 
-# 使用規則集來轉換URL {#using-rulesets-to-transform-urls}
+# 使用規則集轉換URL {#using-rulesets-to-transform-urls}
 
 您可以在Dynamic Media中部署規則集以轉換URL。 規則集是以指令碼語言（如JavaScript）編寫的一組指令，這些指令可評估XML資料，並在資料滿足某些條件時採取某些操作。 每個規則至少包含一個條件和至少一個動作。 規則會根據條件評估XML資料，如果符合條件，則會採取適當的動作。 規則集的範例包括：
 
