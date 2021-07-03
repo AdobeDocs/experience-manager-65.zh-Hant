@@ -2,17 +2,17 @@
 title: 使用Apache Tika偵測資產的MIME類型
 description: 啟用Apache Tika以協助 [!DNL Experience Manager Assets] 在上傳作業期間（而非檔案副檔名）從內容資料流偵測資產的MIME類型。
 contentOwner: AG
-role: Administrator, Architect
+role: Admin, Architect
 feature: 中繼資料，開發人員工具，資產管理
 exl-id: a312466d-8d84-4c94-af85-1549afc61aed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
 
 ---
 
-# 使用[!DNL Apache Tika] {#detecting-mime-type-of-assets-using-apache-tika}偵測資產的MIME類型
+# 使用[!DNL Apache Tika]偵測資產的MIME類型 {#detecting-mime-type-of-assets-using-apache-tika}
 
 通常， [!DNL Adobe Experience Manager Assets]會偵測您從其副檔名上傳的資產的MIME類型。
 
