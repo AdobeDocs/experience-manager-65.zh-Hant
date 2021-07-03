@@ -2,17 +2,17 @@
 title: XMP回寫至轉譯
 description: 了解XMP回寫功能如何將資產的中繼資料變更傳播至資產的所有或特定轉譯。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 中繼資料
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 4%
 
 ---
 
-# XMP回寫至轉譯{#xmp-writeback-to-renditions}
+# XMP回寫至轉譯 {#xmp-writeback-to-renditions}
 
 [!DNL Adobe Experience Manager Assets]中的此XMP回寫功能會將中繼資料變更複製到原始資產的轉譯。 當您從資產內變更資產的中繼資料，或在上傳資產時，變更最初儲存在資產階層的中繼資料節點中。
 
@@ -28,7 +28,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
 不過，[!DNL Experience Manager Assets]不會自動將任何中繼資料變更傳播至資產的轉譯。 請參閱[如何啟用XMP回寫](#enable-xmp-writeback)。
 
-## 啟用XMP回寫{#enable-xmp-writeback}
+## 啟用XMP回寫 {#enable-xmp-writeback}
 
 若要在上傳資產時啟用中繼資料變更以傳播至資產的轉譯，請在Configuration Manager中修改&#x200B;**[!UICONTROL Adobe CQ DAM Rendition Maker]**&#x200B;設定。
 
@@ -38,7 +38,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
-## 為特定轉譯啟用XMP回寫{#enabling-xmp-writeback-for-specific-renditions}
+## 為特定轉譯啟用XMP回寫 {#enabling-xmp-writeback-for-specific-renditions}
 
 若要讓XMP回寫功能傳播中繼資料變更以選取轉譯，請將這些轉譯指定至[!UICONTROL DAM中繼資料回寫]工作流程的XMP回寫程式工作流程步驟。 依預設，此步驟會以原始轉譯設定。
 
@@ -67,7 +67,7 @@ XMP回寫功能可讓您將中繼資料變更傳播至資產的所有或特定�
 >
 >如需支援的平台，請參閱[XMP中繼資料回寫必要條件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
 
-## 篩選XMP中繼資料{#filtering-xmp-metadata}
+## 篩選XMP中繼資料 {#filtering-xmp-metadata}
 
 [!DNL Experience Manager Assets] 支援封鎖清單和允許的清單篩選XMP中繼資料的屬性/節點，這些中繼資料會從資產二進位檔讀取，並在內嵌資產時儲存在JCR中。
 
