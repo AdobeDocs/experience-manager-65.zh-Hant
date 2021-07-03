@@ -2,10 +2,10 @@
 title: 設定Assets Insights以取得分析。
 description: 在 [!DNL Adobe Experience Manager Assets]中設定Assets Insights。
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: 資產分析，資產報表
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 6%
@@ -35,7 +35,7 @@ ht-degree: 6%
 1. 在[!DNL Experience Manager]驗證您的憑證後，從&#x200B;**[!UICONTROL 報表套裝]**&#x200B;清單中，選擇您要Assets Insights擷取資料的[!DNL Adobe Analytics]報表套裝。 按一下&#x200B;**[!UICONTROL 「新增」]**。
 1. 在[!DNL Experience Manager]設定報表套裝後，按一下&#x200B;**[!UICONTROL Done]**。
 
-## 頁面追蹤器{#page-tracker}
+## 頁面追蹤器 {#page-tracker}
 
 設定[!DNL Adobe Analytics]帳戶後，系統會為您產生頁面追蹤器代碼。 若要啟用「資產前瞻分析」以追蹤第三方網站中使用的[!DNL Experience Manager]資產，請在網站程式碼中加入頁面追蹤器程式碼。 使用[!DNL Experience Manager Assets]中的[!UICONTROL 頁面追蹤器]公用程式產生頁面追蹤器程式碼。 如需如何將您的頁面追蹤器程式碼納入第三方網頁的詳細資訊，請參閱[使用頁面追蹤器並在網頁中內嵌程式碼](/help/assets/use-page-tracker.md)。
 
