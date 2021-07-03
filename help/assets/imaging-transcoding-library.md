@@ -2,17 +2,17 @@
 title: 影像轉碼程式庫
 description: 了解如何設定和使用Adobe的影像轉碼程式庫，此影像處理解決方案可執行核心影像處理功能，包括編碼、轉碼、影像重新取樣和影像重新調整大小。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 轉譯，開發人員工具，資產處理
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
 
 ---
 
-# 影像轉碼庫{#imaging-transcoding-library}
+# 影像轉碼程式庫 {#imaging-transcoding-library}
 
 Adobe的影像轉碼程式庫是專屬的影像處理解決方案，可執行核心影像處理功能，包括：
 
@@ -32,7 +32,7 @@ Imaging Condricing Library提供CMYK支援和完整Alpha支援，但CMYK -Alpha�
 * **高吞吐量：** 響應時間較短，吞吐量始終高於ImageMagick。因此，影像轉碼程式庫應能減少使用者的等待時間和托管成本。
 * **隨著同時負載而改善規模：** 影像轉碼程式庫在同時負載條件下效能最佳。它提供了高吞吐量、最佳CPU效能、記憶體使用率和低響應時間，從而有助於降低托管成本。
 
-## 支援的平台{#supported-platforms}
+## 支援平台 {#supported-platforms}
 
 影像轉碼程式庫僅適用於RHEL 7和CentOS 7發行。
 
@@ -67,11 +67,11 @@ Imaging Condricing Library提供CMYK支援和完整Alpha支援，但CMYK -Alpha�
  -output <fileName>
 ```
 
-## 配置成像轉碼庫{#configuring-imaging-transcoding-library}
+## 配置影像轉碼庫 {#configuring-imaging-transcoding-library}
 
 若要設定ITL處理，請建立設定檔案並更新工作流程以執行它。
 
-### 為提取的包{#create-conf-file}建立配置檔案
+### 為提取的捆綁包建立配置檔案 {#create-conf-file}
 
 若要設定程式庫，請建立CONF檔案，使用下列步驟指出程式庫。 您需要管理員或根權限。
 
@@ -102,7 +102,7 @@ Imaging Condricing Library提供CMYK支援和完整Alpha支援，但CMYK -Alpha�
 
 1. 要確保路徑的值設定為`.`，請使用`echo $LD_LIBRARY_PATH`命令。 輸出應為`.`。 如果值未設為`.`，請重新啟動會話。
 
-### 設定[!UICONTROL DAM更新資產]工作流程{#configure-dam-asset-update-workflow}
+### 設定[!UICONTROL DAM更新資產]工作流程 {#configure-dam-asset-update-workflow}
 
 更新[!UICONTROL  DAM更新資產]工作流程，以使用程式庫處理影像。
 
