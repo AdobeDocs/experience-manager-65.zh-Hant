@@ -2,10 +2,10 @@
 title: 組織您的數位資產
 description: 使用Experience Manager組織您的數位資產、影像、檔案、資料夾等。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 資產管理，搜索
 exl-id: d6f815b5-e4fc-4f8c-a6c1-9e50035ab9f2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 [!DNL Experience Manager Assets] 支援多種組織內容的方式。您可以使用資料夾以階層方式組織資料夾，或使用標籤等方式，以無序、隨選的方式組織資料夾。 使用者可以在DAM Asset Editor中編輯標籤，以顯示子資產、轉譯和中繼資料。
 
-## 在資料夾{#organize-using-folders}中組織資產
+## 在資料夾中組織資產 {#organize-using-folders}
 
 組織資產的最基本方式是將這些資產儲存在資料夾中。 它類似於在本地檔案系統中組織資料夾中的檔案。 如需如何建立和管理資料夾的詳細資訊，請參閱[管理資產](manage-assets.md)。 如何命名檔案和資料夾、如何排列子資料夾，以及如何處理這些資料夾內的檔案，都會對處理這些資產的方式產生重大影響。 透過使用一致且適當的檔案和資料夾命名策略，以及良好的中繼資料實務，您可以充份運用數位資產存放庫。
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 * 建立不可能變更的資料夾目錄，以便任何自訂或自動化都能繼續運作。 例如，指派的處理設定檔可繼續運作。
 * 如果資產已發佈，則您可使用[!DNL Experience Manager]將資產移至其他資料夾，並從新位置重新發佈，則仍可使用原始發佈的資產位置，以及新重新發佈的資產。 但原始發佈的資產是&#x200B;*lost*&#x200B;到[!DNL Experience Manager]，無法取消發佈。 因此，最佳作法是先取消發佈資產，然後將其移至其他資料夾。
 
-## 使用{#use-tags-to-organize-assets}標籤組織資產
+## 使用標籤組織資產 {#use-tags-to-organize-assets}
 
 使用標籤做為中繼資料，您可以輕鬆搜尋資產、使用搜尋結果建立集合、提升某些資產的搜尋排名，以及運用Adobe Sensei的AI演算法來探索資產。
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 * [編輯資產中繼資料](metadata.md)
 * [增強資產中的智慧標籤](enhanced-smart-tags.md)
 
-## 組織為集合{#organize-as-collections}
+## 組織為集合 {#organize-as-collections}
 
 在[!DNL Experience Manager Assets]中使用資產集合，您可以簡化使用者之間建立、編輯和共用資產的能力。 根據您使用方式建立數種集合類型，包括包含資產、資料夾和集合靜態參考清單的集合，以及根據搜尋准則提取資產的集合。  您也可以使用不同位置的資產建立集合，並與具有不同存取、檢視和編輯權限層級的多個使用者共用集合。
 
@@ -61,7 +61,7 @@ Any hints/recommendations of when to use what method of organizing? Some example
 Add back links to blog posts by marketing?
 -->
 
-## 組織資產以使用設定檔{#organize-to-use-profiles}
+## 組織您的資產以使用設定檔 {#organize-to-use-profiles}
 
 處理設定檔包含[!DNL Assets]處理命令，這些命令會套用至上傳至預先定義之資料夾的資產。 設定檔可用來自動處理資料夾或新上傳資產的內容。 您可以運用設定檔來更妥善地組織資產。
 
