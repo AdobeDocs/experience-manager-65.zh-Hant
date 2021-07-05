@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 08269877be5e98405474e4b1793526763cab174f
+source-git-commit: 071bc0e36ed2d8eb4ce7bd0ba46823adc0e43095
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 0%
@@ -50,34 +50,17 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 >在下列範例和定義中，會使用下列標籤法：
 >
 >* 每行定義一個節點或一個屬性，其中：
-   >
-   >  
-* `N:<name> [<nodeType>]`
-   >
-   >     
-   描述名稱為`<*name*>`且節點類型為&#x200B;`<*nodeType*>`*的節點。*
-   >
-   >  
-* `P:<name> [<propertyType]`
-   >
-   >     
-   描述名稱為`<*name*>`的屬性和屬性類型為`<*propertyType*>`的屬性。
-   >
-   >  
-* `P:<name> = <value>`
-   >
-   >     
-   描述必須設定為`<value>`值的屬性`<name>`。
+   >  `N:<name> [<nodeType>]` :說明名稱為的節點， `<*name*>` 節點類型為 `<*nodeType*>`*。*
+   >  `P:<name> [<propertyType]` :說明名稱為的屬性 `<*name*>` 和屬性類型為 `<*propertyType*>`。
+   >  `P:<name> = <value>` :說明必 `<name>` 須設為的值的屬 `<value>`性。
    >
    >
 * 縮進顯示節點之間的分層依賴關係。
->* 以分隔的項目 |表示可能的項目清單；例如，類型或名稱：
+>* 以分隔的項目 |表示可能的項目清單；例如，類型或名稱；例如`String|String[]`表示屬性可以是String或String[]。
 
->
->  
-例如`String|String[]`表示屬性可以是String或String[]。
->
->* `[]` 描述陣列；例如[] 字串或查詢定義中的節 [點陣列](#query-definition)。
+   >
+   >
+* `[]` 描述陣列；例如[] 字串或查詢定義中的節 [點陣列](#query-definition)。
 >
 >
 除非另有說明，否則預設類型為：
