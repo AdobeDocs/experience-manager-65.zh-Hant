@@ -10,14 +10,15 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 08269877be5e98405474e4b1793526763cab174f
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 0%
 
 ---
 
-# 開發報表{#developing-reports}
+
+# 開發報表 {#developing-reports}
 
 AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項，其中大部分是以報表架構為基礎。
 
@@ -85,7 +86,7 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 >* 屬性 - `String`
 
 
-## 報告框架{#reporting-framework}
+## 報告架構 {#reporting-framework}
 
 報告框架遵循下列原則：
 
@@ -100,14 +101,14 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 
 ![chlimage_1-248](assets/chlimage_1-248.png)
 
-### 報表頁面{#report-page}
+### 報表頁面 {#report-page}
 
 報表頁面：
 
 * 是標準CQ5頁面。
 * 是以[標準CQ5範本為基礎，並針對報表](#report-template)進行設定。
 
-### 報表庫{#report-base}
+### 報表庫 {#report-base}
 
 [ `reportbase`元件](#report-base-component)構成任何報表的基礎，如下所示：
 
@@ -117,7 +118,7 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 * 定義可用的圖表類型和當前活動的圖表類型。
 * 定義編輯對話方塊，讓使用者設定報表的某些方面。
 
-### 列基{#column-base}
+### 列基 {#column-base}
 
 每列都是[ `columnbase`元件](#column-base-component)的實例，其中：
 
@@ -125,7 +126,7 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 * 定義指向[基礎結果集](#the-query-and-data-retrieval)的連結；即定義此結果集中引用的特定資料及其處理方式。
 * 保留其他定義；例如可用的匯總和篩選，以及任何預設值。
 
-### 查詢與資料檢索{#the-query-and-data-retrieval}
+### 查詢與資料檢索 {#the-query-and-data-retrieval}
 
 查詢：
 
@@ -149,7 +150,7 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 
 開發人員必須確保為報表定義的查詢會傳回適用於該報表的節點集。 但是，節點本身並不需要保留所有所需資訊，這也可以從父節點和/或子節點派生。 例如，用於[用戶報告](/help/sites-administering/reporting.md#user-report)的查詢根據節點類型（在本例中為`rep:user`）選擇節點。 但是，此報告中的大多數列不直接從這些節點獲取其資料，而是從子節點`profile`獲取資料。
 
-### 處理佇列{#processing-queue}
+### 處理佇列 {#processing-queue}
 
 [query](#the-query-and-data-retrieval)會傳回要在報表上顯示為列的資料結果集。 在將結果集中的每一行（伺服器端）在[幾個階段](#phases-of-the-processing-queue)中進行處理，然後轉送到客戶端以顯示在報告上。
 
@@ -168,13 +169,13 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 
    例如，由顯示給使用者的文字、要用於排序的值，以及用於建立連結的其他URL組成（在用戶端上）。
 
-#### 處理佇列{#workflow-of-the-processing-queue}的工作流程
+#### 處理佇列的工作流程 {#workflow-of-the-processing-queue}
 
 下列工作流程代表處理佇列：
 
 ![chlimage_1-249](assets/chlimage_1-249.png)
 
-#### 處理佇列的階段{#phases-of-the-processing-queue}
+#### 處理佇列的階段 {#phases-of-the-processing-queue}
 
 其中詳細步驟和元素包括：
 
@@ -207,7 +208,7 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 >
 >處理佇列的其他元素是在`columnbase`元件上定義。
 
-## 報告構建和配置{#report-construction-and-configuration}
+## 報告建構與設定 {#report-construction-and-configuration}
 
 建立和設定報表需要下列項目：
 
@@ -218,7 +219,7 @@ AEM提供選取[標準報表](/help/sites-administering/reporting.md)的選項�
 * a [報表設計](#report-design)
 * a [報表範本](#report-template)
 
-### 報表元件的位置{#location-of-report-components}
+### 報表元件的位置 {#location-of-report-components}
 
 預設報告元件保存在`/libs/cq/reporting/components`下。
 
@@ -245,13 +246,13 @@ N:apps
                         N:<columnname> [cq:Component]  // column base component
 ```
 
-### 頁面元件{#page-component}
+### 頁面元件 {#page-component}
 
 報表頁面必須使用`/libs/cq/reporting/components/reportpage`的`sling:resourceType`。
 
 自訂的頁面元件在大部分情況下不應是必要的。
 
-## 報表基元件{#report-base-component}
+## 報表基礎元件 {#report-base-component}
 
 每個報表類型都需要從`/libs/cq/reporting/components/reportbase`衍生的容器元件。
 
@@ -269,7 +270,7 @@ N:<reportname> [cq:Component]
     N:queryBuilder
 ```
 
-### 查詢定義{#query-definition}
+### 查詢定義 {#query-definition}
 
 ```xml
 N:queryBuilder
@@ -314,7 +315,7 @@ N:queryBuilder
 
 所有項目皆為選用項目，且可視需要加以組合，但您至少必須定義其中一個項目。
 
-### 圖表定義{#chart-definitions}
+### 圖表定義 {#chart-definitions}
 
 ```xml
 N:charting
@@ -399,7 +400,7 @@ N:charting
 
 
 
-### 配置對話框{#configuration-dialog}
+### 配置對話框 {#configuration-dialog}
 
 每個報表都可以有設定對話方塊，讓使用者可為報表指定各種參數。 開啟報表頁面時，可透過&#x200B;**Edit**&#x200B;按鈕存取此對話方塊。
 
@@ -487,7 +488,7 @@ N:charting
    * [報表範本](#report-template)（作為固定值或作為設定對話方塊的預設值）。
    * 使用者（使用此參數）
 
-## 列基元件{#column-base-component}
+## 列基元件 {#column-base-component}
 
 每個列類型都需要從`/libs/cq/reporting/components/columnbase`派生的元件。
 
@@ -527,7 +528,7 @@ N:<columnname> [cq:Component]
 
 另請參閱[定義新報表](#defining-your-new-report)。
 
-### 列特定查詢{#column-specific-query}
+### 列特定查詢 {#column-specific-query}
 
 這會定義特定資料擷取（從[報表資料結果集](#the-query-and-data-retrieval)），以用於個別欄。
 
@@ -571,7 +572,7 @@ N:definitions
 
 在大多數情況下，只會使用`property`。
 
-### 客戶端篩選器{#client-filter}
+### 用戶端篩選 {#client-filter}
 
 客戶端篩選器從伺服器返回的資料中提取要顯示的資訊。
 
@@ -602,7 +603,7 @@ function(v) {
 }
 ```
 
-### 解析器和預處理{#resolvers-and-preprocessing}
+### 解析器和預處理 {#resolvers-and-preprocessing}
 
 [處理佇列](#processing-queue)定義各種解析器並設定預處理：
 
@@ -790,7 +791,7 @@ N:definitions
                 P:format          // data type formatter
 ```
 
-#### 預處理 — 查找和替換模式{#preprocessing-find-and-replace-patterns}
+#### 預處理 — 查找和替換模式 {#preprocessing-find-and-replace-patterns}
 
 對於預處理，您可以指定位於的`pattern`（定義為[規則運算式](https://en.wikipedia.org/wiki/Regular_expression)或規則運算式），然後以`replace`模式取代：
 
@@ -824,7 +825,7 @@ N:definitions
 
    * `/content/geometrixx/en/services`
 
-#### 前置處理 — 資料類型格式化程式{#preprocessing-data-type-formatters}
+#### 前置處理 — 資料類型格式化程式 {#preprocessing-data-type-formatters}
 
 這些格式化程式會將數值轉換為相對字串。
 
@@ -862,7 +863,7 @@ N:definitions
                         P:format = "datedelta"
 ```
 
-### 列特定定義{#column-specific-definitions}
+### 欄特定定義 {#column-specific-definitions}
 
 欄的特定定義會定義該欄可用的篩選器和匯總。
 
@@ -999,7 +1000,7 @@ N:definitions
 
          採用所有值的第95個百分位數。
 
-### 列預設值{#column-default-values}
+### 欄預設值 {#column-default-values}
 
 這可用來定義欄的預設值：
 
@@ -1012,7 +1013,7 @@ N:defaults
 
    有效的`aggregate`值與`aggregates`下`type`的值相同(請參閱[欄特定定義（定義 — 篩選器/匯總）](#column-specific-definitions))。
 
-### 事件和動作{#events-and-actions}
+### 事件和動作 {#events-and-actions}
 
 「編輯配置」定義偵聽器偵測的必要事件，以及這些事件發生後要套用的動作。 如需背景資訊，請參閱元件開發](/help/sites-developing/components.md)簡介。[
 
@@ -1032,7 +1033,7 @@ N:cq:editConfig [cq:EditConfig]
         P:afterremove = "REFRESH_SELF"
 ```
 
-### 一般列{#generic-columns}
+### 一般欄 {#generic-columns}
 
 一般欄是擴充功能，其中（大部分）欄定義儲存在欄節點（而非元件節點）的例項上。
 
@@ -1078,7 +1079,7 @@ N:cq:editConfig [cq:EditConfig]
 
    `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
 
-## 報表設計{#report-design}
+## 報表設計 {#report-design}
 
 設計會定義哪些欄類型可用於建立報表。 它還定義了添加列的段落系統。
 
@@ -1134,7 +1135,7 @@ N:cq:editConfig [cq:EditConfig]
 >
 >建立報表時，可自動建立預設欄。 這些在範本中指定。
 
-## 報表範本{#report-template}
+## 報表範本 {#report-template}
 
 每種報表類型都必須提供範本。 這些是標準的[CQ範本](/help/sites-developing/templates.md)，可依此設定。
 
@@ -1199,9 +1200,9 @@ N:apps
                 N:<reportname> [sling:Folder]
 ```
 
-## 建立您自己的報表 — 範例{#creating-your-own-report-an-example}
+## 建立您自己的報表 — 範例 {#creating-your-own-report-an-example}
 
-### 定義新報表{#defining-your-new-report}
+### 定義新報表 {#defining-your-new-report}
 
 若要定義新報表，您必須建立並設定：
 
@@ -1381,7 +1382,7 @@ N:apps
    * 提供範本的標題和說明
    * 提供範本清單中要使用的縮圖影像（上方未列出此節點的完整定義 — 最簡單的方式是從現有報表複製thumbnail.png例項）。
 
-### 建立新報表的例項{#creating-an-instance-of-your-new-report}
+### 建立新報表的例項 {#creating-an-instance-of-your-new-report}
 
 現在可以建立新報表的例項：
 
@@ -1404,13 +1405,13 @@ N:apps
    > P:groupable [Boolean] = true
    >```
 
-## 配置報告框架服務{#configuring-the-report-framework-services}
+## 設定報表架構服務 {#configuring-the-report-framework-services}
 
 本節說明實作報表架構之OSGi服務的進階設定選項。
 
 您可以使用Web主控台的「設定」功能表來檢視這些項目（例如`http://localhost:4502/system/console/configMgr`）。 使用AEM時，有數種方法可管理這類服務的組態設定；如需詳細資訊和建議實務，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md) 。
 
-### 基本服務(Day CQ Reporting Configuration){#basic-service-day-cq-reporting-configuration}
+### 基本服務(Day CQ Reporting Configuration) {#basic-service-day-cq-reporting-configuration}
 
 * **** 時區定義為建立的時區歷史資料。這是為了確保歷史圖表為全球每位使用者顯示相同的資料。
 * **** 本地定義要與時區一起用於歷史 **** 資料的地區。區域設定用於確定某些特定於區域設定的日曆設定（例如，一週的第一天是星期日還是星期一）。
@@ -1434,7 +1435,7 @@ N:apps
 
 * **強制快照用戶**，如果啟用，則所有快照將與在快照用戶 *下指定的用戶*&#x200B;一起拍攝。如果處理不正確，可能會對安全性造成嚴重影響。
 
-### 快取設定（日CQ報告快取）{#cache-settings-day-cq-reporting-cache}
+### 快取設定(Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
 
 * **** 啟用可讓您啟用或停用報表資料的快取。啟用報表快取，會在數個請求期間將報表資料保留在記憶體中。 這可能會提高效能，但會導致記憶體消耗增加，在極端情況下，可能會導致記憶體不足。
 * **** TTL會定義快取報表資料的時間（以秒為單位）。數字越高，效能越好，但若資料在某個時段內變更，則可能也會傳回不正確的資料。
