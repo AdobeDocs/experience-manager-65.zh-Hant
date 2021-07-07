@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: 搜尋，中繼資料
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '5575'
+source-wordcount: '5573'
 ht-degree: 5%
 
 ---
@@ -358,7 +358,7 @@ ht-degree: 5%
    儲存變更。
 
 1. 訪問`/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags`並添加`Boolean`類型的`similarityTags`屬性，其值為`true`。
-1. 將智慧標籤套用至[!DNL Experience Manager]存放庫中的資產。 請參閱[如何設定智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html?lang=en#configuring)。
+1. 將智慧標籤套用至[!DNL Experience Manager]存放庫中的資產。 請參閱[如何設定智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring)。
 1. 在CRXDE的`/oak-index/damAssetLucene`節點中，將`reindex`屬性設定為`true`。 儲存變更。
 1. （可選）如果已自定義搜索表單，則將`/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch`節點複製到`/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 儲存變更。
 
