@@ -3,14 +3,15 @@ title: 設定RTF編輯器外掛程式
 description: 了解如何設定Adobe Experience Manager RTF編輯器外掛程式以啟用個別功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4405'
 ht-degree: 1%
 
 ---
 
-# 配置RTF編輯器插件{#configure-the-rich-text-editor-plug-ins}
+
+# 設定RTF編輯器外掛程式 {#configure-the-rich-text-editor-plug-ins}
 
 可透過一系列外掛程式使用RTE功能，每個外掛程式都具有features屬性。 您可以配置功能屬性以啟用或禁用一個或多個RTE功能。 本文說明如何具體設定RTE外掛程式。
 
@@ -72,7 +73,7 @@ ht-degree: 1%
 
 點擊查找時，查找和替換對話框變為透明，點擊替換時變為不透明。 這可讓作者檢閱作者將取代的文字。 如果用戶按一下「全部替換」(replace all)，對話框將關閉並顯示已進行替換的數量。
 
-## 配置貼上模式{#paste-modes}
+## 設定貼上模式 {#paste-modes}
 
 使用RTE時，作者可以在下列三種模式之一中貼上內容：
 
@@ -82,7 +83,7 @@ ht-degree: 1%
 
 * **MS Word模式**:從MS Word複製時，貼上帶有格式的文本（包括表格）。不支援從其他源（如網頁或MS Excel）複製和貼上文本，並且僅保留部分格式。
 
-### 配置RTE工具欄{#configure-paste-options-available-on-the-rte-toolbar}上可用的「貼上」選項
+### 配置RTE工具欄上可用的「貼上」選項  {#configure-paste-options-available-on-the-rte-toolbar}
 
 您可以在RTE工具列中提供以下三個圖示的一部分、全部或全部不提供給作者：
 
@@ -98,7 +99,7 @@ ht-degree: 1%
 1. 導航到節點`rtePlugins/edit`。 如果節點不存在，請參閱[啟用外掛程式](#activateplugin)。
 1. 在`edit`節點上建立`features`屬性，並添加一個或多個功能。 儲存所有變更。
 
-### 配置「貼上」(Ctrl+V)表徵圖和快捷方式{#configure-the-behavior-of-the-paste-ctrl-v-icon-and-shortcut}的行為
+### 配置「貼上」(Ctrl+V)表徵圖和快捷方式的行為 {#configure-the-behavior-of-the-paste-ctrl-v-icon-and-shortcut}
 
 您可以使用下列步驟預先設定「貼上」(Ctrl+V)]**圖示的行為。**[!UICONTROL &#x200B;此設定也定義作者用來貼上內容的鍵盤快速鍵Ctrl+V的行為。
 
@@ -155,53 +156,18 @@ ht-degree: 1%
    >
    >若未明確定義，則會使用預設值true，並接受格式。
 
-1. 也可以使用其他屬性或節點範圍來定義其他格式，這些格式也應用於`htmlPasteRules`節點：
+1. 也可以使用其他屬性或節點範圍來定義其他格式，這些格式也應用於`htmlPasteRules`節點。 儲存所有變更。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>屬性</strong></td>
-   <td><strong>類型</strong></td>
-   <td><strong>說明</strong></td>
-  </tr>
-  <tr>
-   <td>allowBlockTags</td>
-   <td>String[]</td>
-   <td><p>定義允許的區塊標籤清單。</p> <p>一些可能的區塊標籤包括：</p>
-    <ul>
-     <li>標題(h1、h2、h3)</li>
-     <li>第(p)段</li>
-     <li>清單(ol, ul)</li>
-     <li>表（表）</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>fallbackBlockTag</td>
-   <td>字串</td>
-   <td><p>定義用於任何區塊的區塊標籤，這些區塊的區塊標籤具有未包含在allowBlockTags中的區塊標籤。</p> <p> p在大多數情況下都足夠。</p> </td>
-  </tr>
-  <tr>
-   <td>表格</td>
-   <td>nt:unstructured</td>
-   <td><p>定義貼上表時的行為。<br /> </p> <p>此節點必須具有屬性<code>allow</code>（類型<code>Boolean</code>），以定義是否允許貼上表。</p> <p>如果將<code>allow</code>設定為<code>false</code>，則必須指定屬性<code>ignoreMode</code>（類型<code> String</code>）以定義如何處理貼上的表內容。 <code>ignoreMode</code>的有效值為：</p>
-    <ul>
-     <li><code>remove</code>:刪除表內容。</li>
-     <li><code>paragraph</code>:將表格儲存格轉換為段落。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>清單</td>
-   <td>nt：非結構化</td>
-   <td><p>定義貼上清單時的行為。<br /> </p> <p>必須具有屬性<code>allow</code>（類型<code>Boolean</code>），才能定義是否允許貼上清單。</p> <p>如果將<code>allow</code>設定為<code>false</code>，則必須指定屬性<code>ignoreMode</code>（類型<code>String</code>）以定義如何處理貼上的任何清單內容。 <code>ignoreMode</code>的有效值為：</p>
-    <ul>
-     <li><code>remove</code>:移除清單內容。</li>
-     <li><code>paragraph</code>:將清單項目轉換為段落。</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+可以對`htmlPasteRules`使用以下屬性。
 
-有效`htmlPasteRules`結構的示例：
+| 屬性 | 類型 | 說明 |
+|---|---|---|
+| `allowBlockTags` | 字串 | 定義允許的區塊標籤清單。 一些可能的區塊標籤包括： <ul> <li>標題(h1、h2、h3)</li> <li>第(p)段</li> <li>清單(ol, ul)</li> <li>表（表）</li> </ul> |
+| `fallbackBlockTag` | 字串 | 定義用於任何塊的塊標籤，這些塊標籤具有未包含在`allowBlockTags`中的塊標籤。 `p` 在大多數情況下都足夠了。 |
+| 表格 | nt:unstructured | 定義貼上表格時的行為。 此節點必須具有屬性`allow`（類型布林值），才能定義是否允許貼上表。 如果允許設定為`false`，則必須指定屬性`ignoreMode`（類型字串）以定義如何處理貼上的表內容。 `ignoreMode`的有效值為： <ul> <li>`remove`:刪除表內容。</li> <li>`paragraph`:將表格儲存格轉換為段落。</li> </ul> |
+| 清單 | nt：非結構化 | 定義貼上清單時的行為。 必須具有屬性`allow`（類型布林值），才能定義是否允許貼上清單。 如果將`allow`設定為`false`，則必須指定屬性`ignoreMode`（類型字串）以定義如何處理貼上的任何清單內容。 `ignoreMode`的有效值為： <ul><li> `remove`:移除清單內容。</li> <li>`paragraph`:將清單項目轉換為段落。</li> </ul> |
+
+以下是有效`htmlPasteRules`結構的示例。
 
 ```xml
 "htmlPasteRules": {
@@ -223,13 +189,9 @@ ht-degree: 1%
 }
 ```
 
-1. 儲存所有變更。
-
 ## 配置文本樣式 {#textstyles}
 
-作者可套用樣式以變更部分文字的外觀。 樣式以您在CSS樣式表中預先定義的CSS類別為基礎。 程式化內容會使用`class`屬性括在`span`標籤中，以參照CSS類別。 例如：
-
-`<span class=monospaced>Monospaced Text Here</span>`
+作者可套用樣式以變更部分文字的外觀。 樣式以您在CSS樣式表中預先定義的CSS類別為基礎。 程式化內容會使用`class`屬性括在`span`標籤中，以參照CSS類別。 例如， `<span class=monospaced>Monospaced Text Here</span>`。
 
 首次啟用樣式外掛程式時，沒有可用的預設樣式。 快顯清單為空。 若要為作者提供樣式，請執行下列動作：
 
@@ -237,11 +199,11 @@ ht-degree: 1%
 * 指定樣式表的位置。
 * 指定可從「樣式」下拉清單中選取的個別樣式。
 
-對於以後的（重新）配置，例如要添加更多樣式，請僅按照說明參考新樣式表並指定其他樣式。
+對於以後的配置，例如要添加更多樣式，請僅按照說明參考新樣式表並指定其他樣式。
 
 >[!NOTE]
 >
->也可為[表或表單元格](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)定義樣式。 這些設定需要個別的程式。
+>您可以定義[表或表單元格](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)的樣式。 這些設定需要個別的程式。
 
 ### 啟用樣式下拉式選取器清單 {#styleselectorlist}
 
@@ -708,10 +670,7 @@ RTE可讓作者還原或重做最後幾次編輯。 依預設，歷史記錄中�
    * **類型** `String`
    * **值** `richtext`
 
-   `../items/text`節點的位置可能因對話框的結構而異；兩個範例包括：
-   * `/apps/myProject>/components/text/dialog/items/text`
-   * `/apps/<myProject>/components/text/dialog/items/panel/items/text`
-
+   `../items/text`節點的位置可能因對話框的結構而異；`/apps/myProject>/components/text/dialog/items/text`和`/apps/<myProject>/components/text/dialog/items/panel/items/text`是兩個範例。
 
 1. 在`htmlRules`下，建立新節點。
 
