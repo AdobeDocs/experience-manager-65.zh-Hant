@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin
 feature: 協作，Adobe資產連結，案頭應用程式
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '3254'
+source-wordcount: '3250'
 ht-degree: 14%
 
 ---
@@ -89,7 +89,7 @@ ht-degree: 14%
 
 ### 使用[!DNL Experience Manager]和[!DNL Creative Cloud]整合時的考量事項 {#considerations-when-using-aem-and-creative-cloud-integration}
 
-* 請參閱[案頭應用程式最佳實務](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)
+* 請參閱[案頭應用程式最佳實務](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)
 * 請參閱[Adobe Stock整合](aem-assets-adobe-stock.md)
 * 請參閱[Adobe資產連結](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 
@@ -209,7 +209,7 @@ Adobe資產連結對此使用案例提供良好支援：
 
 您可善用下列上傳功能：
 
-* 若要大量上傳大型/階層式資料夾，請使用提供[資料夾上傳](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#upload-and-add-new-assets-to-aem)功能的[!DNL Experience Manager]案頭應用程式。 您也可以上傳階層式資料夾結構。 [!DNL Assets] 會在背景上傳，因此不會系結至網頁瀏覽器工作階段
+* 若要大量上傳大型/階層式資料夾，請使用提供[資料夾上傳](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem)功能的[!DNL Experience Manager]案頭應用程式。 您也可以上傳階層式資料夾結構。 [!DNL Assets] 會在背景上傳，因此不會系結至網頁瀏覽器工作階段
 * 要從單個資料夾上載一些檔案，請直接將檔案拖動到Web介面，或使用[!DNL Assets] Web介面中的「建立」選項。
 * 您也可以使用自訂上傳程式，視您的業務需求而定。
 
