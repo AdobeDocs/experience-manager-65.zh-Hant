@@ -3,9 +3,9 @@ title: 設定RTF編輯器外掛程式
 description: 了解如何設定Adobe Experience Manager RTF編輯器外掛程式以啟用個別功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
+source-git-commit: 11cda989e6a28428f03a269c407a7672e6eab747
 workflow-type: tm+mt
-source-wordcount: '4405'
+source-wordcount: '4406'
 ht-degree: 1%
 
 ---
@@ -245,19 +245,11 @@ ht-degree: 1%
 >
 >RTF編輯器使用ID為`CQrte`的容器DOM元素，可用來提供不同樣式以供檢視和編輯：
 >
+>`#CQ td {`
+>` // defines the style for viewing }`
 >
-```
->#CQ td {
-> // defines the style for viewing
-> }
->```
->
->
-```
->#CQrte td {
-> // defines the style for editing
-> }
->```
+>`#CQrte td {`
+>` // defines the style for editing }`
 
 ### 指定快顯清單中可用的樣式 {#stylesindropdown}
 
@@ -496,7 +488,7 @@ ht-degree: 1%
 
    * **名稱** `features`
    * **類型** `String`
-   * **值** `*`
+   * **值** `*` （星號）
 
    >[!NOTE]
    如果不想啟用所有表功能，可以建立`features`屬性，如下所示：
@@ -613,7 +605,7 @@ RTE可讓作者還原或重做最後幾次編輯。 依預設，歷史記錄中�
 
    * **名稱** `tabSize`
    * **類型** `String`
-   * **** 值要用於表格的空格字元數。
+   * **** 值要用於表格的空格字元數
 
 1. 儲存變更。
 
