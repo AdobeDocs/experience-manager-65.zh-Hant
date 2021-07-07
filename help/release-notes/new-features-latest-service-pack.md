@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '3674'
+source-wordcount: '3668'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 >從[!DNL Experience Manager] Service Pack 9開始，[!DNL Experience Manager]客戶可以使用[!DNL Azul Zulu]版本的OpenJDK（與Java SE相符的標準）開發和運行其[!DNL Experience Manager]應用程式。
 >[!DNL Experience Manager]客戶也可Adobe[!DNL Azul Zulu] JDK。
 >您可以從[Adobe軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載[!DNL Azul Zulu] JDK的相關版本。
->oracleJava技術的使用權(由Adobe分發)將於2022年12月底屆滿。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
+>oracleJava技術的使用權(由Adobe分發)將於2022年12月底屆滿。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf)。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -247,7 +247,7 @@ DAM清單檢視和清單檢視的資產搜尋結果中，會新增可供排序�
 
 #### 使CDN快取內容(6.5.6.0)無效 {#invalidate-cdn-cached-content}
 
-您現在可以使用[!DNL Dynamic Media]使用者介面，將內容傳遞網路(CDN)快取內容判定為失效。 因此，更新後的資產可立即使用，而無需等待快取過期。 您可以透過下列方式使CDN失效：
+您現在可以使用[!DNL Dynamic Media]使用者介面，將內容傳遞網路(CDN)快取內容判定為失效。 因此，更新後的資產可立即使用，而不需等待快取過期。 您可以透過下列方式使CDN失效：
 
 * 建立CDN失效範本：選取與範本相關聯的資產和表單
 
@@ -428,11 +428,11 @@ Experience ManagerForms包含下列協助工具增強功能：
 
 2021年2月25日至2021年5月27日，Adobe除了Service Pack外，還發行了下列內容：
 
-* [!DNL Adobe Experience Manager] 作為Cloud Service [2021.2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-2-0.html)、 [2021.3.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-3-0.html)和 [2021.4.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date)。
+* [!DNL Adobe Experience Manager] 作為Cloud Service [2021.2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-2-0.html)、 [2021.3.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-3-0.html)和 [2021.4.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html#release-date)。
 
 * [[!DNL Experience Manager] 案頭應用程式2.1(2.1.2.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
 
-* [Experience Manager Screens:Feature Pack 202103](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202103.html?lang=en)
+* [Experience Manager Screens:Feature Pack 202103](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202103.html)
 
 >[!MORELIKETHIS]
 >
