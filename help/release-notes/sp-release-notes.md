@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 9專屬的發行
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 0c5759786a698f7c7503a56da7f472229d18f763
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '3843'
+source-wordcount: '3835'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 2%
 >從Service Pack 9開始，[!DNL Experience Manager]客戶可以使用OpenJDK的[!DNL Azul Zulu]版本編號開發和運行其[!DNL Experience Manager]應用程式，該版本符合Java™ SE的標準。
 >[!DNL Experience Manager]客戶也可Adobe[!DNL Azul Zulu] JDK。
 >您可以從[Adobe軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載[!DNL Azul Zulu] JDK的相關版本。
->oracleJava™技術的使用權(由Adobe分發)將於2022年12月底前到期。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java™]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
+>oracleJava™技術的使用權(由Adobe分發)將於2022年12月底前到期。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java™]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf)。
 
 以下是[!DNL Experience Manager] 6.5.9.0版中提供的修正清單。
 
@@ -197,7 +197,7 @@ ht-degree: 2%
 
 Adobe Experience Manager 6.5.9.0 Assets修正了[!DNL Dynamic Media]中的下列問題：
 
-* 當[!DNL Dynamic Media]選擇性啟動並由[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config)停用時，自訂檢視器預設集和CSS不會複製到[!DNL Dynamic Media](NPR-36232)。
+* 當[!DNL Dynamic Media]選擇性啟動並由[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html#troubleshoot-dm-config)停用時，自訂檢視器預設集和CSS不會複製到[!DNL Dynamic Media](NPR-36232)。
 
 * 嘗試在資產詳細資訊頁面上預覽視訊轉譯時，視訊載入速度緩慢(CQ-4320122)。
 
@@ -405,12 +405,12 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 >如果您未使用Experience ManagerForms，請略過。 Experience ManagerForms中的修正，會在排程的[!DNL Experience Manager] Service Pack發行一週後，透過個別的附加套件提供。
 
 1. 確認您已安裝Adobe Experience Manager Service Pack。
-1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates)所列出的對應 Forms 附加套件。
+1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)所列出的對應 Forms 附加套件。
 1. 依照[安裝Forms附加元件套件](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中所述安裝AEM Forms附加元件套件。
 
 >[!NOTE]
 >
->Experience Manager6.5.9.0包含新版[AEM Forms相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用舊版AEM Forms相容性套件並更新至Experience Manager6.5.9.0，請在安裝Forms附加元件套件後安裝最新版本的套件。
+>Experience Manager6.5.9.0包含新版[AEM Forms相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases)。 如果您使用舊版AEM Forms相容性套件並更新至Experience Manager6.5.9.0，請在安裝Forms附加元件套件後安裝最新版本的套件。
 
 ### 在JEE上安裝Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
