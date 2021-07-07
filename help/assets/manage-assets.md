@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User
 feature: 資產管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '9788'
+source-wordcount: '9784'
 ht-degree: 3%
 
 ---
@@ -168,7 +168,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型
 
 1. 使用您選擇的FTP用戶端，使用您從布建電子郵件收到的FTP使用者名稱和密碼登入FTP伺服器。 在FTP用戶端中，將檔案或資料夾上傳至FTP伺服器。
 
-1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)，然後登入您的帳戶。
+1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然後登入您的帳戶。
 
    布建時，Adobe提供了您的憑據和登錄。 如果您沒有此資訊，請聯繫技術支援。
 
@@ -869,7 +869,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 * 上傳檔案名稱相同且位於相同位置的資產。 可以是新資產或相同資產的修改版本。
 * 在[!DNL Experience Manager]中編輯影像並儲存變更。
 * 編輯資產的中繼資料。
-* 使用[!DNL Experience Manager]案頭應用程式來簽出現有資產、編輯資產，然後[上傳您的變更](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#edit-assets-upload-updated-assets)。
+* 使用[!DNL Experience Manager]案頭應用程式來簽出現有資產、編輯資產，然後[上傳您的變更](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
 
 您也可以透過工作流程啟用自動版本設定。 當您建立資產的版本時，中繼資料和轉譯會與版本一併儲存。 轉譯是相同影像的替代項目，例如上傳之JPEG檔案的PNG轉譯。
 
