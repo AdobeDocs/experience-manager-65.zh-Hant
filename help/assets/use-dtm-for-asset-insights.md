@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: 資產分析，資產報表
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b3acfdba41e1bd94c65bb7a87f63b9c326a80dd2
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -114,4 +114,4 @@ Adobe動態標籤管理是啟用數位行銷工具的工具。 此服務免費�
    * AppMeasurement物件是透過查詢所有可用SiteCatalyst引擎的`satelliteLib`來擷取。 如果已配置多個標籤，請適當更改陣列選擇器的索引。 陣列中的項目會依DTM介面中可用的SiteCatalyst工具排序。
 
 1. 儲存並關閉「代碼編輯器」視窗，然後在「工具」設定中儲存變更。
-1. 在&#x200B;**[!UICONTROL Approvals]**&#x200B;標籤中，批准兩個待審批。 DTM標籤已準備好插入網頁。 如需如何在網頁中插入DTM標籤的詳細資訊，請參閱[將DTM整合至自訂頁面範本](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/)。
+1. 在&#x200B;**[!UICONTROL Approvals]**&#x200B;標籤中，批准兩個待審批。 DTM標籤已準備好插入網頁。
