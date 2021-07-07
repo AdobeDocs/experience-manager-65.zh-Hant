@@ -4,9 +4,9 @@ description: 代理是 [!DNL Experience Manager] instance that uses proxy worker
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b3acfdba41e1bd94c65bb7a87f63b9c326a80dd2
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -105,9 +105,11 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### Cloud Service配置 {#cloud-service-configurations}
 
+<!-- TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
 >[!NOTE]
 >
->[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html)下方提供Proxy API的參考檔案。
+>Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
+-->
 
 Proxy和Proxy工作程式設定皆可透過雲端服務設定使用，可從[!DNL Assets] **Tools**&#x200B;主控台或`/etc/cloudservices/proxy`下存取。 每個代理工作器應在`/etc/cloudservices/proxy`下添加一個節點，以了解工作器特定配置詳細資訊（例如`/etc/cloudservices/proxy/workername`）。
 
