@@ -8,9 +8,9 @@ activity: develop
 audience: developer
 feature: 商務整合架構
 exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
-source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
+source-git-commit: 2fadfa65242b208a750b0d5392fdd2c41e9ff20e
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ AEM內容與商務製作提供一組製作工具，可協助AEM作者和行銷�
 
 類別選擇器欄位支援下列可選屬性：
 
-- selectionId(id, uid, snug, idAndUrlPath, uidAndUrlPath) — 允許選擇器要傳回的類別屬性（預設= id）。 idAndUrlPath &amp; uidAndUrlPath是儲存類別id/uid和url_path的特殊選項，以 |字元，例如1|men/tops。
+- selectionId(id, uid, sulg, urlPath, idAndUrlPath _（已廢止）_, uidAndUrlPath _（已廢止）_) — 允許選擇器返回的類別屬性（預設= id）。
 - 多個(true, false) — 啟用選取一或多個類別（預設= false）
 
 此外，也支援標準診斷欄位屬性，例如`name`、`fieldLabel`或`fieldDescription`。
@@ -79,6 +79,6 @@ AEM內容與商務製作提供一組製作工具，可協助AEM作者和行銷�
 >與`cifproductfield`元件相同， `cifcategoryfield`元件也需要`cif.shell.picker` clientlib。 若要將clientlib新增至對話方塊，您可以使用`extraClientlibs`屬性。 請參閱AEM核心元件檔案的[自訂對話方塊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) 。
 >[!CAUTION]
 >
->從CIF核心元件2.0.0版開始，`id`的支援已移除，並改為`uid`。 強烈建議使用`uid`或`slug`作為類別識別碼。 我們僅對使用CIF核心元件1.x版的專案繼續支援`id`和`idAndUrlPath`。
+>從CIF核心元件2.0.0版開始，`id`的支援已移除，並改為`uid`。 強烈建議使用`uid`或`urlPath`作為類別識別碼。 我們僅對使用CIF核心元件1.x版的專案繼續支援`id`和`idAndUrlPath`。
 
 [CIF核心元件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml)專案中提供`cifcategoryfield`的完整運作範例。
