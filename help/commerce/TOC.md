@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce
 user-guide-title: AEM內容與商務
 breadcrumb-title: Commerce 指南
 user-guide-description: 了解如何使用及管理 AEM Content and Commerce。
-source-git-commit: 538dc7620317f86c0b3d762eaef597d0a7969ace
+source-git-commit: a5bf6a1a6e9013e44209ea865145af1557445318
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 32%
+source-wordcount: '111'
+ht-degree: 31%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 32%
       + [多範本使用](cif/configuring/multi-template-usage.md)
       + [配置SEO的URL](cif/configuring/advanced-url-configuration.md)
       + [快取選項](cif/configuring/caching.md)
+      + [自訂HTTP標題](/help/commerce/cif/configuring/custom-http-headers.md)
    + 開發 {#developing}
       + [使用AEM開發](cif/develop.md)
       + [樣式CIF元件](cif/customizing/style-cif-component.md)
