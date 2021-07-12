@@ -9,22 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
-role: Administrator
+role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2803'
 ht-degree: 1%
 
 ---
 
-# 使用Facebook和Twitter進行社交登入{#social-login-with-facebook-and-twitter}
+# 使用Facebook和Twitter進行社交登入 {#social-login-with-facebook-and-twitter}
 
 社交登入功能可讓網站訪客選擇以其Facebook或Twitter帳戶登入。 因此，請在其AEM成員設定檔中納入允許的Facebook或Twitter資料。
 
 ![socialloginweretail](assets/socialloginweretail.png)
 
-## 社交登入概述{#social-login-overview}
+## 社交登入概述 {#social-login-overview}
 
 若要包含社交登入，建立自訂Facebook和Twitter應用程式是&#x200B;*required*。
 
@@ -61,9 +61,9 @@ ht-degree: 1%
    * 這些欄位在[AEM Communities Facebook OAuth提供者](#aem-communities-facebook-oauth-provider)和[AEM Communities Twitter OAuth提供者](#aem-communities-twitter-oauth-provider)中指定。
    * 預設欄位對於大多數使用案例來說已足夠，但可以修改。
 
-## Facebook登入{#facebook-login}
+## Facebook登入 {#facebook-login}
 
-### Facebook API版本{#facebook-api-version}
+### Facebook API版本 {#facebook-api-version}
 
 facebook圖表API 1.0版時，就已開發Social登入和we-retail Facebook範例。
 自AEM 6.4 GA和AEM 6.3 SP1起，社交登入已更新，可搭配較新的Facebook Graph API 2.5版使用。
@@ -74,7 +74,7 @@ facebook圖表API 1.0版時，就已開發Social登入和we-retail Facebook範�
 
 如需Facebook圖表API版本資訊，請參閱[Facebook API變更記錄](https://developers.facebook.com/docs/apps/changelog)。
 
-### 建立Facebook應用程式{#create-a-facebook-app}
+### 建立Facebook應用程式 {#create-a-facebook-app}
 
 必須有正確設定的Facebook應用程式才能啟用Facebook social登入。
 
@@ -96,7 +96,7 @@ facebook圖表API 1.0版時，就已開發Social登入和we-retail Facebook範�
 
 建立應用程式後，找出&#x200B;**[!UICONTROL 應用程式ID]**&#x200B;和&#x200B;**[!UICONTROL 應用程式密碼]**&#x200B;設定。 設定[Facebook雲端服務](#createafacebookcloudservice)時需要此資訊。
 
-### 建立Facebook連接Cloud Service{#create-a-facebook-connect-cloud-service}
+### 建立Facebook ConnectCloud Service {#create-a-facebook-connect-cloud-service}
 
 透過建立雲端服務設定來具現化的[AdobeGranite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項，可識別新使用者所加入的Facebook應用程式和成員群組。
 
@@ -136,7 +136,7 @@ facebook圖表API 1.0版時，就已開發Social登入和we-retail Facebook範�
 
 結果為[AdobeGranite OAuth應用程式和提供者](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)例項，除非新增其他範圍（權限），否則不需要進一步修改。 預設範圍是Facebook登入的標準權限。 如果需要其他範圍，則需要直接編輯OSGI設定。 如果有直接透過系統/主控台完成的修改，請避免從觸控式UI編輯雲端服務設定，以避免覆寫。
 
-### AEM Communities Facebook OAuth提供者{#aem-communities-facebook-oauth-provider}
+### AEM Communities Facebook OAuth提供者 {#aem-communities-facebook-oauth-provider}
 
 AEM Communities提供者延伸[AdobeGranite OAuth應用程式和提供者](#adobe-granite-oauth-application-and-provider)例項。
 
@@ -203,16 +203,16 @@ AEM Communities提供者延伸[AdobeGranite OAuth應用程式和提供者](#adob
       若勾選此選項，則會在每次登入時重新整理存放庫中的使用者資料，以反映設定檔變更或請求的其他資料。 已取消選取預設值。
 
 
-#### 後續步驟{#next-steps}
+#### 後續步驟 {#next-steps}
 
 facebook和Twitter的後續步驟相同：
 
 * [發佈雲端服務設定](#publishcloudservices)
 * [為社區站點啟用](#enable-social-login)
 
-## Twitter登入{#twitter-login}
+## Twitter登入 {#twitter-login}
 
-### 建立Twitter應用程式{#create-a-twitter-app}
+### 建立Twitter應用程式 {#create-a-twitter-app}
 
 必須有已設定的Twitter應用程式才能啟用Twitter social登入。
 
@@ -248,7 +248,7 @@ facebook和Twitter的後續步驟相同：
 
 對社交登入提出的唯一REST要求是&#x200B;*[GET帳戶/驗證憑證](https://dev.twitter.com/rest/reference/get/account/verify_credentials)*。
 
-### 建立Twitter連接Cloud Service{#create-a-twitter-connect-cloud-service}
+### 建立Twitter ConnectCloud Service {#create-a-twitter-connect-cloud-service}
 
 透過建立雲端服務設定來具現化的[AdobeGranite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項，可識別新使用者所加入的Twitter應用程式和成員群組。
 
@@ -300,7 +300,7 @@ facebook和Twitter的後續步驟相同：
 
 結果是不需要進一步修改的[AdobeGranite OAuth應用程式和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)例項。 預設範圍是Twitter登入的標準權限。
 
-### AEM Communities Twitter OAuth提供者{#aem-communities-twitter-oauth-provider}
+### AEM Communities Twitter OAuth提供者 {#aem-communities-twitter-oauth-provider}
 
 AEM Communities設定會擴充[AdobeGranite OAuth應用程式和Provider](#adobe-granite-oauth-application-and-provider)例項。 此提供程式需要編輯才能允許用戶更新。
 
@@ -339,14 +339,14 @@ AEM Communities設定會擴充[AdobeGranite OAuth應用程式和Provider](#adobe
       若勾選此選項，則會在每次登入時重新整理存放庫中的使用者資料，以反映設定檔變更或請求的其他資料。 取消選取預設值。
 
 
-#### 後續步驟{#next-steps-1}
+#### 後續步驟 {#next-steps-1}
 
 facebook和Twitter的後續步驟相同：
 
 * [發佈雲端服務設定](#publishcloudservices)
 * [為社區站點啟用](#enable-social-login)
 
-## 啟用社交登入{#enable-social-login}
+## 啟用社交登入 {#enable-social-login}
 
 ### AEM Communities Sites Console {#aem-communities-sites-console}
 
@@ -362,7 +362,7 @@ facebook和Twitter的後續步驟相同：
 
    ![usermgmt_png](assets/usermgmt_png.png)
 
-## 測試社交登入{#test-social-login}
+## 測試Social登入 {#test-social-login}
 
 * 確認所有發佈執行個體上皆已啟用[AdobeGranite OAuth驗證處理常式](#adobe-granite-oauth-authentication-handler)。
 * 確保雲端服務已發佈。
@@ -376,9 +376,9 @@ facebook和Twitter的後續步驟相同：
 * 請注意，頁面頂端的工具列已更新，以反映成功登入。
 * 選擇&#x200B;**[!UICONTROL 配置檔案]**:設定檔頁面會顯示使用者的頭像影像、名字和姓氏。 它也會根據允許的欄位/參數顯示Facebook或Twitter設定檔的資訊。
 
-## AEM平台OAuth設定{#aem-platform-oauth-configurations}
+## AEM Platform OAuth設定 {#aem-platform-oauth-configurations}
 
-### AdobeGranite OAuth驗證處理常式{#adobe-granite-oauth-authentication-handler}
+### AdobeGranite OAuth驗證處理常式 {#adobe-granite-oauth-authentication-handler}
 
 預設不會啟用`Adobe Granite OAuth Authentication Handler`，且必須在所有AEM發佈執行個體上啟用&#x200B;***。***
 
@@ -399,7 +399,7 @@ facebook和Twitter的後續步驟相同：
 
 ![graniteauth1](assets/graniteoauth1.png)
 
-### AdobeGranite OAuth應用程式和提供程式{#adobe-granite-oauth-application-and-provider}
+### AdobeGranite OAuth應用程式和提供者 {#adobe-granite-oauth-application-and-provider}
 
 建立Facebook或Twitter的雲端服務時，會建立`Adobe Granite OAuth Authentication Handler`例項。
 
@@ -456,7 +456,7 @@ facebook和Twitter的後續步驟相同：
 
 如需詳細資訊，請參閱[使用Apache Oak External登入模組](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)驗證。
 
-## OAuth用戶遍歷效能{#oauth-user-traversal-performance}
+## OAuth使用者周遊效能 {#oauth-user-traversal-performance}
 
 針對使用Facebook或Twitter登入功能註冊的社群網站，當網站訪客使用其社交登入功能時，查詢的周遊效能會因為新增下列Oak索引而得以改善。
 
@@ -497,6 +497,6 @@ facebook和Twitter的後續步驟相同：
 
 如需其他資訊和工具，請參閱[Oak Querys and Indexing](../../help/sites-deploying/queries-and-indexing.md)。
 
-## Dispatcher設定{#dispatcher-configuration}
+## Dispatcher設定 {#dispatcher-configuration}
 
 請參閱[為Communities設定Dispatcher](dispatcher.md)。
