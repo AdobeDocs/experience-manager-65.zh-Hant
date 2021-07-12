@@ -8,22 +8,22 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
-role: Administrator
+role: Admin
 exl-id: f8af1ac3-6a95-4f91-8979-6b41a7e02ca4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# 建立新資料夾以對表單{#create-new-folders-to-categorize-forms}進行分類
+# 建立新資料夾以對表單進行分類 {#create-new-folders-to-categorize-forms}
 
 您可以使用資料夾來更妥善地組織資產。 由於AEM Forms支援多種資產類型（表單範本、PDF、檔案、資源和最適化表單，以及各種中繼資料），因此您可以使用資料夾，根據所需的條件對表單進行分類。
 
 AEM Forms可讓您變更資料夾的標題。 標題與儲存庫中儲存資料夾的節點名稱不同。 標題會保留為資料夾的中繼資料。 如果您變更資料夾的標題，資料夾內任何資產的路徑都不受影響。
 
-## 建立資料夾{#create-a-folder}
+## 建立資料夾 {#create-a-folder}
 
 您可以透過下列其中一種方式，在AEM Forms中建立資料夾：
 
@@ -50,7 +50,7 @@ AEM Forms可讓您變更資料夾的標題。 標題與儲存庫中儲存資料�
 
    如果資料夾存在並指定名稱，則提交會失敗，並出現錯誤。 您可以將游標移至名稱欄位旁出現的錯誤![aem6formserror_alert](assets/aem6forms_error_alert.png)圖示上，以檢視錯誤訊息。
 
-### 編輯資料夾標題{#edit-the-folder-title-br}
+### 編輯資料夾標題 {#edit-the-folder-title-br}
 
 1. 選擇要編輯其標題的資料夾。
 1. 按一下工具列中的編輯![aem6forms_edit](assets/aem6forms_edit.png)圖示。
