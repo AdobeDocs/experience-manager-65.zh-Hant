@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
-role: Administrator
+role: Admin
 exl-id: eafb60be-2963-4ac9-8618-50fd9bc6fe6c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 0%
 
 ---
 
-# DSRP {#mysql-configuration-for-dsrp}的MySQL配置
+# DSRP的MySQL配置 {#mysql-configuration-for-dsrp}
 
 MySQL是關係資料庫，可用於儲存用戶生成的內容(UGC)。
 
@@ -40,7 +40,7 @@ MySQL是關係資料庫，可用於儲存用戶生成的內容(UGC)。
 
 [](https://dev.mysql.com/downloads/mysql/) MySQL應按照目標OS的說明下載和安裝。
 
-### 小寫表名{#lower-case-table-names}
+### 小寫表名 {#lower-case-table-names}
 
 由於SQL不區分大小寫，因此對於區分大小寫的作業系統，必須包含一個設定來將所有表名都小寫。
 
@@ -51,7 +51,7 @@ MySQL是關係資料庫，可用於儲存用戶生成的內容(UGC)。
 
    `lower_case_table_names = 1`
 
-### UTF8字元集{#utf-character-set}
+### UTF8字元集 {#utf-character-set}
 
 若要提供更好的多語言支援，必須使用UTF8字元集。
 
@@ -76,13 +76,13 @@ MySQL Workbench提供了用於執行SQL指令碼的UI，這些指令碼安裝架
 
 MySQL Workbench應按照目標作業系統的說明下載並安裝。
 
-## 社區連接{#communities-connection}
+## Communities Connection {#communities-connection}
 
 MySQL Workbench首次啟動時（除非已用於其他用途），它將不會顯示任何連線：
 
 ![mysqlconnection](assets/mysqlconnection.png)
 
-### 新連接設定{#new-connection-settings}
+### 新連接設定 {#new-connection-settings}
 
 1. 選擇`MySQL Connections`右側的`+`表徵圖。
 1. 在對話方塊`Setup New Connection`中，輸入適合您平台的值
@@ -103,17 +103,17 @@ MySQL Workbench首次啟動時（除非已用於其他用途），它將不會�
 * 預設埠為`3306`
 * 在[JDBC OSGi配置](#configurejdbcconnections)中，選擇的連接名作為資料源名輸入
 
-#### 新Communities連接{#new-communities-connection}
+#### 新建Communities連接 {#new-communities-connection}
 
 ![社群連線](assets/community-connection.png)
 
-## 資料庫設定{#database-setup}
+## 資料庫設定 {#database-setup}
 
 開啟Communities連接以安裝資料庫。
 
 ![install-database](assets/install-database.png)
 
-### 獲取SQL指令碼{#obtain-the-sql-script}
+### 獲取SQL指令碼 {#obtain-the-sql-script}
 
 從AEM儲存庫獲取SQL指令碼：
 
@@ -133,13 +133,13 @@ MySQL Workbench首次啟動時（除非已用於其他用途），它將不會�
 
 * 選取檢視連結，將資料儲存至本機檔案
 
-### 建立DSRP資料庫{#create-the-dsrp-database}
+### 建立DSRP資料庫 {#create-the-dsrp-database}
 
 請依照下列步驟安裝資料庫。 資料庫的預設名稱為`communities`。
 
 如果在指令碼中更改了資料庫名稱，請確保在[JDBC配置](#configurejdbcconnections)中也更改了該名稱。
 
-#### 步驟1:開啟SQL檔案{#step-open-sql-file}
+#### 步驟1:開啟SQL檔案 {#step-open-sql-file}
 
 在MySQL Workbench中
 
@@ -148,7 +148,7 @@ MySQL Workbench首次啟動時（除非已用於其他用途），它將不會�
 
 ![select-sql-script](assets/select-sql-script.png)
 
-#### 步驟2:執行SQL指令碼{#step-execute-sql-script}
+#### 步驟2:執行SQL指令碼 {#step-execute-sql-script}
 
 在Workbench視窗中，針對在步驟1中開啟的檔案選取`lightening (flash) icon`以執行指令碼。
 
@@ -162,7 +162,7 @@ MySQL Workbench首次啟動時（除非已用於其他用途），它將不會�
 
 ![刷新架構](assets/refresh-schema.png)
 
-## 配置JDBC連接{#configure-jdbc-connection}
+## 配置JDBC連接 {#configure-jdbc-connection}
 
 **Day Commons JDBC連接池**&#x200B;的OSGi配置配置MySQL JDBC驅動程式。
 
