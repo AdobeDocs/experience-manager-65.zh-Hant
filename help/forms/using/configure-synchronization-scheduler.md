@@ -9,20 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 8c8b1998-eab4-4230-b24f-5e96883ba599
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 34db1f76-ee40-4612-85da-22041e7560fb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
-# 配置同步調度程式{#configuring-the-synchronization-scheduler}
+# 配置同步調度程式 {#configuring-the-synchronization-scheduler}
 
 依預設，同步排程器會每3分鐘執行一次，以透過LiveCycle工作台11同步儲存庫中修改和更新的所有資產。 同步程式完成後，包含表單和資源的應用程式就會顯示在AEM Forms使用者介面中。
 
-## 更改同步調度程式{#change-interval-of-the-synchronization-scheduler}的間隔
+## 更改同步調度程式的間隔 {#change-interval-of-the-synchronization-scheduler}
 
 執行以下步驟更改同步調度程式的間隔：
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
    頻率單位為分鐘。 例如，若要將排程器設定為每60分鐘執行一次，請指定60。
 
-## 同步資產{#synchronizing-assets}
+## 同步資產 {#synchronizing-assets}
 
 您可以使用&#x200B;**從存放庫同步資產**&#x200B;選項，以手動同步資產。 執行下列步驟以手動同步資產：
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
    **圖：** *同步對話框*
 
-## 排除同步錯誤{#troubleshooting-synchronization-error}
+## 排除同步錯誤 {#troubleshooting-synchronization-error}
 
 您可以在工作流設計工具(LiveCycle工作台)中建立新應用程式。
 
