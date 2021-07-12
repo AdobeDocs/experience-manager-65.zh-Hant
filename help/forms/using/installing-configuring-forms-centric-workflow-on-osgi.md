@@ -7,16 +7,16 @@ uuid: 1ceae822-215a-4b83-a562-4609a09c3a54
 topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 4%
 
 ---
 
-# 在OSGi{#installing-and-configuring-forms-centric-workflow-on-osgi}上安裝和設定以Forms為中心的工作流程
+# 在OSGi上安裝和設定以Forms為中心的工作流程{#installing-and-configuring-forms-centric-workflow-on-osgi}
 
 ## 簡介 {#introduction}
 
@@ -34,7 +34,7 @@ AEM Forms是功能強大的企業級平台。 以Forms為中心的OSGi工作流�
 >
 >比較後，如果您選擇在JEE堆疊上安裝「程式管理」功能，請參閱[在JEE](/help/forms/home.md)安裝或升級AEM Forms ，以取得安裝和設定JEE堆疊和「程式管理」功能的詳細資訊。
 
-## 部署拓撲{#deployment-topology}
+## 部署拓撲 {#deployment-topology}
 
 AEM Forms附加元件套件是部署至AEM的應用程式。 您至少需要一個AEM製作或處理執行個體（生產製作），才能針對OSGi功能執行以Forms為中心的工作流程。 處理例項是[強化的AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md)例項。 請勿在生產作者上執行任何實際製作作業，例如建立工作流程或最適化表單。
 
@@ -44,7 +44,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您至少需要一�
 
 AEM Forms Forms為中心的OSGi工作流程會在AEM Forms的製作執行個體上執行AEM收件匣和AEM工作流程模型建立UI。
 
-## 系統要求{#system-requirements}
+## 系統需求 {#system-requirements}
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ AEM Forms Forms為中心的OSGi工作流程會在AEM Forms的製作執行個體�
  </tbody>
 </table>
 
-## 安裝AEM Forms附加元件套件{#install-aem-forms-add-on-package}
+## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
 
 AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含以Forms為中心的OSGi和其他功能工作流程。 執行下列步驟以安裝附加元件套件：
 
@@ -116,13 +116,13 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含以F
 1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即重新啟動伺服器。** 停止AEM Forms伺服器之前，請等到AEM-Installation-Directory []/crx-quickstart/logs/error.log檔案中出現ServiceEvent REGISTERED和ServiceEvent UNEGRESTED訊息，且記錄穩定。
 1. 在所有「製作」和「發佈」例項上重複步驟1至7。
 
-## 安裝後配置{#post-installation-configurations}
+## 安裝後配置 {#post-installation-configurations}
 
 AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCastle程式庫和序列化代理。 選用的設定包括設定Dispatcher和Adobe Target。
 
-### 強制安裝後配置{#mandatory-post-installation-configurations}
+### 強制安裝後配置 {#mandatory-post-installation-configurations}
 
-#### 配置RSA和BuncyCastle庫{#configure-rsa-and-bouncycastle-libraries}
+#### 配置RSA和BouncyCastle庫  {#configure-rsa-and-bouncycastle-libraries}
 
 對所有製作和發佈執行個體執行下列步驟以引導委派程式庫：
 
@@ -140,7 +140,7 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 1. 儲存並關閉檔案，然後啟動AEM例項。
 1. 在所有「製作」和「發佈」例項上重複步驟1至4。
 
-#### 配置序列化代理{#configure-the-serialization-agent}
+#### 配置序列化代理 {#configure-the-serialization-agent}
 
 對所有製作和發佈執行個體執行下列步驟，將套件新增至允許清單：
 
@@ -149,7 +149,7 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 1. 將&#x200B;**sun.util.calendar**&#x200B;套件新增至&#x200B;**allowlist**&#x200B;欄位。 按一下「儲存」。
 1. 在所有「製作」和「發佈」例項上重複步驟1至3。
 
-### 可選安裝後配置{#optional-post-installation-configurations}
+### 可選安裝後配置 {#optional-post-installation-configurations}
 
 #### 設定Dispatcher {#configure-dispatcher}
 
@@ -167,7 +167,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也有助於保�
 
    以管理員身分登入Apache Felix設定管理器。 配置管理器的預設URL為https://&#39;server&#39;:[port_number]/system/console/configMgr。 在&#x200B;**Configurations**&#x200B;功能表中，選取&#x200B;**Apache Sling Referrer Filter**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許它作為反向連結，然後按一下「**儲存**」。 條目的格式為`https://'[server]:[port]'`。
 
-#### 配置快取{#configure-cache}
+#### 配置快取 {#configure-cache}
 
 快取是一種縮短資料存取時間、減少延遲並改善輸入/輸出(I/O)速度的機制。 適用性表單快取僅會儲存適用性表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 有助於縮短演算最適化表單所需的時間。
 
@@ -183,7 +183,7 @@ Dispatcher是AEM的快取和負載平衡工具。 AEM Dispatcher也有助於保�
    >
    >若要停用快取，請將「適用性Forms數量」欄位中的值設為&#x200B;**0**。 當禁用或更改快取配置時，將重置快取，並從快取中刪除所有表單和文檔。
 
-#### 配置Adobe Sign {#configure-adobe-sign}
+#### 設定Adobe Sign {#configure-adobe-sign}
 
 Adobe Sign可啟用最適化表單的電子簽名工作流程。 電子簽名改進了處理法律、銷售、工資、人力資源管理等許多領域的文檔的工作流。
 
