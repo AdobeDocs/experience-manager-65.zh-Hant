@@ -6,16 +6,16 @@ seo-description: '使用文檔安全性來安全地分發您以支援的格式�
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
 discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
-role: Administrator
+role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 0%
 
 ---
 
-# 安裝和配置文檔安全伺服器{#installing-and-configuring-the-document-security-server}
+# 安裝和配置文檔安全伺服器 {#installing-and-configuring-the-document-security-server}
 
 使用文檔安全性來安全地分發您以支援的格式保存的任何資訊。 只有授權用戶才能訪問受保護的文檔。
 
@@ -27,7 +27,7 @@ Adobe Experience Manager Forms檔案安全性可確保只有獲授權的使用�
 
 文檔安全性還提供了客戶端、查看器和索引器，以保護文檔、查看受保護的文檔以及為受保護的文檔編製索引。 有關文檔安全性的詳細資訊，請參閱[關於文檔安全性](/help/forms/using/admin-help/document-security.md)。
 
-## 部署拓撲{#deployment-topology}
+## 部署拓撲  {#deployment-topology}
 
 檔案安全性功能僅可在JEE上的AEM Forms中使用。 在JEE上需要單一AEM Forms例項。 您也可以視需要建立AEM Forms伺服器的叢集或伺服器陣列。 以下拓撲是運行文檔安全功能的指示性拓撲。 有關拓撲的詳細資訊，請參閱[AEM Forms](aem-forms-architecture-deployment.md)的體系結構和部署拓撲。
 
@@ -39,7 +39,7 @@ Adobe Experience Manager Forms檔案安全性可確保只有獲授權的使用�
 
 ![](do-not-localize/document-security-typical-environment.png)
 
-## 在JEE上安裝AEM Forms {#installing-aem-forms-on-jee}
+## 在JEE安裝AEM Forms {#installing-aem-forms-on-jee}
 
 執行下列步驟以在JEE上安裝和設定AEM Forms:
 
@@ -60,7 +60,7 @@ Adobe Experience Manager Forms檔案安全性可確保只有獲授權的使用�
    >
    >在JEE設定管理員上AEM Forms的「模組選取」畫面上，選取「檔案安全性」選項。 「文檔安全性」選項不要求選擇任何其他模組。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 * [配置客戶端和伺服器選項](/help/forms/using/admin-help/configuring-client-server-options.md)
 * [建立和管理策略](/help/forms/using/admin-help/creating-policies.md)
