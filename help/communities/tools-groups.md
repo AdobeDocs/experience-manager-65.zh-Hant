@@ -10,8 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
-role: Administrator
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 3%
@@ -33,7 +33,7 @@ ht-degree: 3%
 >
 >建立[社群網站](/help/communities/sites-console.md)、[社群網站範本](/help/communities/sites.md)、[社群群組範本](/help/communities/tools-groups.md)和[社群功能](/help/communities/functions.md)的主控台僅用於製作環境。
 
-## 組模板控制台{#group-templates-console}
+## 群組範本主控台 {#group-templates-console}
 
 若要存取AEM製作環境中的群組範本主控台：
 
@@ -95,7 +95,7 @@ ht-degree: 3%
 
 將所有需要的函式拖放至範本產生器區域並完成設定後，請選取右上角的&#x200B;**Save**。
 
-## 編輯群組範本{#edit-group-template}
+## 編輯群組範本 {#edit-group-template}
 
 在主[組模板控制台](#group-templates-console)中查看社區組時，可以選擇現有組模板進行編輯。
 
