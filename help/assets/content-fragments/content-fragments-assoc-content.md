@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
 feature: 內容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: ced7c902-193c-4e97-9070-2a4d958b64a3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 15%
@@ -24,7 +24,7 @@ ht-degree: 15%
 
 關聯內容提供連線，以便當資產（亦即）新增至內容頁面時，可（選擇性）與片段搭配使用。 這可讓[提供在頁面](/help/sites-authoring/content-fragments.md#using-associated-content)上使用內容片段時可存取的資產範圍，同時有助於縮短搜尋適當資產所需的時間。
 
-## 新增關聯內容{#adding-associated-content}
+## 新增相關內容 {#adding-associated-content}
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ ht-degree: 15%
 
    ![cfm-6420-05](assets/cfm-6420-05.png)
 
-## 編輯關聯內容{#editing-associated-content}
+## 編輯相關內容 {#editing-associated-content}
 
 關聯集合後，您可以：
 
