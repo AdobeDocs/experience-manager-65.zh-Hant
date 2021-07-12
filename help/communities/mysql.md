@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
-role: Administrator
+role: Admin
 exl-id: 2d33e6ba-cd32-40d1-8983-58f636b21470
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 1%
 
 ---
 
-# 啟用功能的MySQL配置{#mysql-configuration-for-enablement-features}
+# 啟用功能的MySQL配置 {#mysql-configuration-for-enablement-features}
 
 MySQL是關係資料庫，主要用於SCORM追蹤和報告啟用資源的資料。 其中包括追蹤視訊暫停/繼續等其他功能的表格。
 
@@ -39,7 +39,7 @@ MySQL是關係資料庫，主要用於SCORM追蹤和報告啟用資源的資料�
 
 MySQL應按照目標作業系統的說明下載並安裝。
 
-### 小寫表名{#lower-case-table-names}
+### 小寫表名 {#lower-case-table-names}
 
 由於SQL不區分大小寫，因此對於區分大小寫的作業系統，必須包含一個設定來將所有表名都小寫。
 
@@ -48,7 +48,7 @@ MySQL應按照目標作業系統的說明下載並安裝。
 * 編輯檔案`/etc/my.cnf`
 * 在`[mysqld]`區段中，新增下列行：`lower_case_table_names = 1`
 
-### UTF8字元集{#utf-character-set}
+### UTF8字元集 {#utf-character-set}
 
 若要提供更好的多語言支援，必須使用UTF8字元集。
 
@@ -66,13 +66,13 @@ MySQL Workbench提供了用於執行SQL指令碼的UI，這些指令碼安裝架
 
 MySQL Workbench應按照目標作業系統的說明下載並安裝。
 
-## 啟用連接{#enablement-connection}
+## 啟用連線 {#enablement-connection}
 
 MySQL Workbench首次啟動時（除非已用於其他用途），它將不會顯示任何連線：
 
 ![mysqlconnection](assets/mysqlconnection.png)
 
-### 新連接設定{#new-connection-settings}
+### 新連接設定 {#new-connection-settings}
 
 1. 選擇`MySQL Connections`右側的「+」表徵圖。
 1. 在對話方塊`Setup New Connection`中，輸入適合您的平台以進行示範的值，同一伺服器上具有製作AEM例項和MySQL:
@@ -88,21 +88,21 @@ MySQL Workbench首次啟動時（除非已用於其他用途），它將不會�
 * 預設埠為`3306`。
 * 選擇的`Connection Name`在[JDBC OSGi配置](#configure-jdbc-connections)中作為`datasource`名稱輸入。
 
-#### 成功連接{#successful-connection}
+#### 成功連接 {#successful-connection}
 
 ![mysqlconnection1](assets/mysqlconnection1.png)
 
-#### 新啟用連接{#new-enablement-connection}
+#### 新啟用連線 {#new-enablement-connection}
 
 ![mysqlconnection2](assets/mysqlconnection2.png)
 
-## 資料庫設定{#database-setup}
+## 資料庫設定 {#database-setup}
 
 開啟新的啟用連線時，請注意有測試結構和預設使用者帳戶。
 
 ![database-setup](assets/database-setup.png)
 
-### 獲取SQL指令碼{#obtain-sql-scripts}
+### 獲取SQL指令碼 {#obtain-sql-scripts}
 
 SQL指令碼是使用製作執行個體上的CRXDE Lite來取得。 必須安裝[SCORM包](deploy-communities.md#scorm):
 
@@ -120,7 +120,7 @@ SQL指令碼是使用製作執行個體上的CRXDE Lite來取得。 必須安裝
 * 請注意，`jcr:data`屬性的值是檢視連結。
 * 選取檢視連結，將資料儲存至本機檔案。
 
-### 建立SCORM資料庫{#create-scorm-database}
+### 建立SCORM資料庫 {#create-scorm-database}
 
 要建立的啟用SCORM資料庫是：
 
@@ -141,7 +141,7 @@ SQL指令碼是使用製作執行個體上的CRXDE Lite來取得。 必須安裝
 * [SCORM配置](#configure-scorm)
 
 
-#### 步驟1:開啟SQL檔案{#step-open-sql-file}
+#### 步驟1:開啟SQL檔案 {#step-open-sql-file}
 
 在MySQL Workbench中
 
@@ -153,7 +153,7 @@ SQL指令碼是使用製作執行個體上的CRXDE Lite來取得。 必須安裝
 
 ![scrom-database](assets/scrom-database.png)
 
-#### 步驟2:執行SQL指令碼{#step-execute-sql-script}
+#### 步驟2:執行SQL指令碼 {#step-execute-sql-script}
 
 在Workbench視窗中，針對在步驟1中開啟的檔案選取`lightening (flash) icon`以執行指令碼。
 
@@ -167,13 +167,13 @@ SQL指令碼是使用製作執行個體上的CRXDE Lite來取得。 必須安裝
 
 ![scrom-database2](assets/scrom-database2.png)
 
-#### 結果：scormenginedb &lt;a0/{#result-scormenginedb}
+#### 結果：scorginedb {#result-scormenginedb}
 
 安裝和重新整理架構後，將會顯示`scormenginedb`。
 
 ![scrom-database3](assets/scrom-database3.png)
 
-## 配置JDBC連接{#configure-jdbc-connections}
+## 配置JDBC連接 {#configure-jdbc-connections}
 
 **Day Commons JDBC連接池**&#x200B;的OSGi配置配置MySQL JDBC驅動程式。
 
@@ -200,7 +200,7 @@ SQL指令碼是使用製作執行個體上的CRXDE Lite來取得。 必須安裝
 
 ## 配置Scorm {#configure-scorm}
 
-### AEM Communities ScormEngine服務{#aem-communities-scormengine-service}
+### AEM Communities ScormEngine服務 {#aem-communities-scormengine-service}
 
 **AEM Communities ScormEngine服務**&#x200B;的OSGi設定會為啟用社群使用MySQL伺服器設定SCORM。
 
@@ -229,7 +229,7 @@ SQL指令碼是使用製作執行個體上的CRXDE Lite來取得。 必須安裝
       僅供內部使用：供AEM Communities使用的特殊服務使用者與scorm引擎通訊。
 * 選擇&#x200B;**[!UICONTROL 保存]**
 
-### AdobeGranite CSRF篩選器{#adobe-granite-csrf-filter}
+### AdobeGranite CSRF篩選器 {#adobe-granite-csrf-filter}
 
 為確保啟用課程在所有瀏覽器中皆可正常運作，必須將Mozilla新增為CSRF篩選器未勾選的使用者代理。
 
