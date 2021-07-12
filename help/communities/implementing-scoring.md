@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
-role: Administrator
+role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2884'
 ht-degree: 2%
 
 ---
 
-# Communities計分和徽章{#communities-scoring-and-badges}
+# 社群計分和徽章 {#communities-scoring-and-badges}
 
 ## 概覽 {#overview}
 
@@ -56,7 +56,7 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
 
 Communities [徽章控制台](/help/communities/badges.md)提供添加自定義徽章的功能，該徽章可在獲得（授予）成員或成員在社區中承擔特定角色（已分配）時顯示。
 
-### 已分配徽章{#assigned-badges}
+### 指派的徽章 {#assigned-badges}
 
 管理員會根據社群中的角色，將角色型徽章指派給社群成員。
 
@@ -78,7 +78,7 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 
    ![指派徽章](assets/assigned-badges.png)
 
-### 獎章{#awarded-badges}
+### 獎章 {#awarded-badges}
 
 評分服務會根據套用至社群中活動的規則，將基於獎勵的徽章授予社群成員。
 
@@ -109,13 +109,13 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 >
 >吊銷獎勵徽章的方式與吊銷指定徽章相同。 請參閱[指派和撤銷徽章](#assign-and-revoke-badges)區段。 未來的改善將包括管理成員徽章的UI。
 
-### 自訂徽章{#custom-badges}
+### 自訂徽章 {#custom-badges}
 
 可使用[徽章控制台](/help/communities/badges.md)安裝自訂徽章，並在徽章規則中指派或指定。
 
 從徽章控制台安裝時，自訂徽章會自動複製到發佈環境。
 
-## 啟用計分{#enable-scoring}
+## 啟用計分 {#enable-scoring}
 
 預設未啟用計分。 設定及啟用徽章評分與獎勵的基本步驟為：
 
@@ -127,7 +127,7 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 
 請參閱[快速測試](#quick-test)區段，使用論壇和評論的預設評分和徽章規則為社群網站啟用評分。
 
-### 將規則套用至內容{#apply-rules-to-content}
+### 將規則套用至內容 {#apply-rules-to-content}
 
 要啟用計分和徽章，請將屬性`scoringRules`和`badgingRules`添加到站點內容樹中的任何節點。
 
@@ -146,13 +146,13 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 >
 >如果評分規則似乎對獎勵徽章沒有影響，請確保評分規則未被評分規則的scorinRules屬性阻止。 請參閱[標籤規則](#badging-rules)一節。
 
-### 啟用元件{#enable-badges-for-component}的徽章
+### 為元件啟用徽章 {#enable-badges-for-component}
 
 只有在[編寫模式](/help/communities/author-communities.md)中編輯元件配置以啟用標籤的元件的實例，計分和標籤規則才有效。
 
 布林屬性`allowBadges`啟用/禁用元件實例的徽章顯示。 可在論壇、QnA的[元件編輯對話框](/help/communities/author-communities.md)中，通過標籤為&#x200B;**顯示徽章**&#x200B;的複選框配置它並注釋元件。
 
-#### 範例：論壇元件實例{#example-allowbadges-for-forum-component-instance}的allowBadges
+#### 範例：論壇元件例項的allowBadges {#example-allowbadges-for-forum-component-instance}
 
 ![enable-bagges-component](assets/enable-badges-component.png)
 
@@ -160,7 +160,7 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 >
 >任何元件都可重疊，以顯示徽章，例如，可使用論壇、QnA和注釋中找到的HBS代碼。
 
-## 計分規則{#scoring-rules}
+## 計分規則 {#scoring-rules}
 
 評分規則是評分的基礎，用於授予徽章。
 
@@ -192,7 +192,7 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 >/libs/settings/community/scoring/rules/site1/forums計分
 >/libs/settings/community/scoring/rules/site2/forums計分
 
-### 計分子規則{#scoring-sub-rules}
+### 計分子規則 {#scoring-sub-rules}
 
 分數子規則包含詳細說明參與社群之值的屬性。
 
@@ -276,7 +276,7 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
  </tbody>
 </table>
 
-### 包含計分規則和子規則{#included-scoring-rules-and-sub-rules}
+### 包含計分規則和子規則 {#included-scoring-rules-and-sub-rules}
 
 此發行包含[論壇功能](/help/communities/functions.md#forum-function)的兩個計分規則（論壇和論壇功能的「評論」元件各一個）:
 
@@ -307,11 +307,11 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 
    * 無論位置為何，規則名稱都必須是唯一的。
 
-### 啟用自訂計分規則{#activating-custom-scoring-rules}
+### 啟用自訂計分規則 {#activating-custom-scoring-rules}
 
 必須在發佈時安裝在製作環境中對計分規則或子規則所做的任何變更或新增。
 
-## 簽名規則{#badging-rules}
+## 簽章規則 {#badging-rules}
 
 簽名規則通過指定以下內容將計分規則連結到徽章：
 
@@ -374,7 +374,7 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
  </tbody>
 </table>
 
-### 包含標籤規則{#included-badging-rules}
+### 包含徽章規則 {#included-badging-rules}
 
 此發行包含與[論壇和留言計分規則](#includedscoringrules)對應的兩個標籤規則。
 
@@ -389,11 +389,11 @@ Communities [徽章控制台](/help/communities/badges.md)提供添加自定義�
 
    * 規則名稱必須是唯一的，無論位置為何。
 
-### 啟用自定義標籤規則{#activating-custom-badging-rules}
+### 啟用自訂徽章規則 {#activating-custom-badging-rules}
 
 在製作環境中對標籤規則或影像所做的任何變更或新增，都必須安裝在發佈上。
 
-## 分配和撤消徽章{#assign-and-revoke-badges}
+## 指派和撤銷徽章 {#assign-and-revoke-badges}
 
 可以使用[members console](/help/communities/members.md#badges-tab)或使用cURL命令以寫程式方式為成員分配徽章。
 
@@ -423,13 +423,13 @@ cURL -i -XPOST-H *header* -u *signin* -F *operation* -F *badge* *member-profile-
 
 ### 範例： {#examples}
 
-#### 指派協調者徽章{#assign-a-moderator-badge}
+#### 指派協調者徽章 {#assign-a-moderator-badge}
 
 ```shell
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
-#### 撤消分配的銀徽章{#revoke-an-assigned-silver-badge}
+#### 撤銷指派的銀徽章 {#revoke-an-assigned-silver-badge}
 
 ```shell
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/libs/settings/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
@@ -439,11 +439,11 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 >
 >使用cURL來指派和撤銷徽章適用於任何徽章影像，但當指派而非掙得徽章時，這些徽章會標示為已指派的徽章並據此處理。
 
-## 自訂元件的計分和徽章{#scoring-and-badges-for-custom-components}
+## 自訂元件的計分和徽章 {#scoring-and-badges-for-custom-components}
 
 可為自訂元件建立計分和徽章規則，方法是將為元件建立的事件主題與動詞相關聯。
 
-## 主題和動詞{#topics-and-verbs}
+## 主題和動詞 {#topics-and-verbs}
 
 當成員與社區功能交互時，會發送可觸發非同步偵聽器的事件，如通知和計分。
 
@@ -554,7 +554,7 @@ ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
 | 關閉 | 成員關閉編輯和回覆的注釋 |
 | 開啟 | 成員重新開啟注釋 |
 
-### 自訂元件事件{#custom-component-events}
+### 自訂元件事件 {#custom-component-events}
 
 對於自訂元件，會實例化SocialEvent，將元件的事件記錄為`actions`，該事件會針對`topic`而發生。
 
@@ -562,25 +562,25 @@ ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
 
 ## 疑難排解 {#troubleshooting}
 
-### 徽章未出現{#badges-are-not-appearing}
+### 徽章未顯示 {#badges-are-not-appearing}
 
 如果已將分數和徽章規則套用至網站的內容，但未察覺任何活動的徽章，請確定已為該元件的例項啟用徽章。
 
 請參閱[啟用元件的徽章](#enable-badges-for-component)。
 
-### 計分規則無效{#scoring-rule-has-no-effect}
+### 計分規則無效 {#scoring-rule-has-no-effect}
 
 如果已對網站的內容應用了計分和徽章規則，並且為某些操作（但不為其他操作）授予徽章，請檢查徽章規則是否未限制其應用的計分規則。
 
 請參閱[標籤規則](#badging-rules)的`scoringRules`屬性。
 
-### 區分大小寫類型{#case-sensitive-typo}
+### 區分大小寫類型 {#case-sensitive-typo}
 
 大部分的屬性和值（尤其是動詞）都區分大小寫。 在計分子規則中使用動詞時，必須全部大寫。
 
 如果功能未如預期運作，請確定資料已正確輸入。
 
-## 快速測試{#quick-test}
+## 快速測試 {#quick-test}
 
 您可以使用[快速入門教學課程](/help/communities/getting-started.md)（參與）網站，快速嘗試計分和標籤：
 
