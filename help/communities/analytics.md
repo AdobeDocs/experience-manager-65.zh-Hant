@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2756'
 ht-degree: 3%
 
 ---
 
-# Communities功能的Analytics設定{#analytics-configuration-for-communities-features}
+# Communities功能的Analytics設定 {#analytics-configuration-for-communities-features}
 
 ## 概覽 {#overview}
 
@@ -88,7 +88,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
    要使用的Analytics報表套裝名稱。
 
-## Adobe Analytics視訊報表報表套裝{#adobe-analytics-report-suite-for-video-reporting}
+## Adobe Analytics視訊報表報表套裝 {#adobe-analytics-report-suite-for-video-reporting}
 
 使用Adobe Marketing Cloud的[報表套裝管理器](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)，即可設定Analytics報表套裝，讓社群網站能夠提供社群功能的報表。
 
@@ -144,7 +144,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 >
 >若無法這麼做，可能會導致無法復原的資料遺失。
 
-### 視訊心率分析{#video-heartbeat-analytics}
+### 視訊心率分析 {#video-heartbeat-analytics}
 
 授權Video Heartbeat Analytics時，會指派`Marketing Cloud Org Id`。
 
@@ -162,7 +162,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 若未啟用，視訊心率程式碼將不會具現化，且只會將視訊進度和繼續位置追蹤保存至SRP以供報告。
 
-## AEM Analytics Cloud服務設定{#aem-analytics-cloud-service-configuration}
+## AEM Analytics Cloud服務設定 {#aem-analytics-cloud-service-configuration}
 
 若要使用製作執行個體上的標準UI，建立整合Adobe Analytics與AEM社群網站的新Analytics整合：
 
@@ -172,7 +172,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 ![雲端設定](assets/cloud-config1.png)
 
-### 建立配置對話框{#create-configuration-dialog}
+### 建立配置對話框 {#create-configuration-dialog}
 
 * 選擇&#x200B;**[!UICONTROL 可用配置]**&#x200B;旁的`[+]`表徵圖以建立新配置
 
@@ -198,7 +198,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
    * 啟動配置頁並開啟`Analytics Settings`對話框
 
-### 分析設定對話方塊{#analytics-settings-dialog}
+### Analytics設定對話方塊 {#analytics-settings-dialog}
 
 初始建立新Analytics設定時，會顯示設定，並顯示新對話方塊，供您輸入Analytics設定。 此對話框要求從帳戶代表處獲取[必備帳戶資訊](#prerequisites)。
 
@@ -275,13 +275,13 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 建立Analytics架構會開啟設定的架構。
 
-## AEM Analytics架構設定{#aem-analytics-framework-configuration}
+## AEM Analytics架構設定 {#aem-analytics-framework-configuration}
 
 此架構的用途是將AEM變數對應至Analytics變數（eVar和事件）。 可用於對應的Analytics變數為[，定義於報表套裝](#adobe-analytics-report-suite-for-video-reporting)中。
 
 ![analytics-enablement-framework](assets/analytics-framework1.png)
 
-### 選擇報表套裝{#select-report-suite}
+### 選取報表套裝 {#select-report-suite}
 
 選取已針對視訊報表設定的報表套裝。
 
@@ -290,7 +290,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 不需要Sidekick，且可盡可能最小化，以免妨礙存取報表套裝設定。
 
-#### 選取「新增項目」{#report-suites-dialog-before-and-after-selecting-add-item}之前和之後的報表套裝對話方塊
+#### 選取「新增項目」前後的報表套裝對話方塊 {#report-suites-dialog-before-and-after-selecting-add-item}
 
 ![報表套裝](assets/report-suite.png)
 
@@ -317,9 +317,9 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 Analytic雲服務和架構現已完成。 一旦建立社群網站並啟用此Analytics服務，就會定義對應。
 
-## 為社群網站{#enable-analytics-for-a-community-site}啟用Analytics
+## 為社群網站啟用Analytics {#enable-analytics-for-a-community-site}
 
-### 為新社區站點{#enable-for-new-community-site}啟用
+### 為新社區站點啟用 {#enable-for-new-community-site}
 
 若要在[建立新社群網站](/help/communities/sites-console.md)時新增Analytics雲端服務：
 
@@ -329,7 +329,7 @@ Analytic雲服務和架構現已完成。 一旦建立社群網站並啟用此An
 
 * （可選）返回Analytics架構設定以調整變數對應。
 
-### 啟用現有社區站點{#enable-for-existing-community-site}
+### 為現有社區站點啟用 {#enable-for-existing-community-site}
 
 若要將Analytics雲端服務新增至[現有社群網站](/help/communities/sites-console.md#modifying-site-properties):
 
@@ -342,7 +342,7 @@ Analytic雲服務和架構現已完成。 一旦建立社群網站並啟用此An
 
 * （可選）返回Analytics架構設定以調整變數對應。
 
-### 啟用自定義站點{#enable-for-customized-sites}
+### 為自訂網站啟用 {#enable-for-customized-sites}
 
 為了讓Analytics追蹤和匯入正常運作社群網站，必須存在具有`scf-js-site-title`類別和href屬性的頁面元素。 頁面上只應存在一個此類元素，例如社群網站的未修改`sitepage.hbs`指令碼中。 會擷取`siteUrl`的值，並以&#x200B;*網站路徑*&#x200B;的形式傳送至Adobe Analytics。
 
@@ -371,7 +371,7 @@ Analytic雲服務和架構現已完成。 一旦建立社群網站並啟用此An
 </div>
 ```
 
-## Analytics for Communities功能{#analytics-for-communities-features}
+## Analytics for Communities功能 {#analytics-for-communities-features}
 
 Analytics會自動用於數個Communities功能。
 
@@ -379,7 +379,7 @@ Analytics會自動用於數個Communities功能。
 
 如果已建立為Analytics創作的新自訂元件，則應將其新增至已設定元件的清單。
 
-### 元件配置{#component-configuration}
+### 元件配置 {#component-configuration}
 
 ![component-configuration1](assets/component-configuration1.png)
 
@@ -387,7 +387,7 @@ Analytics會自動用於數個Communities功能。
 >
 >日誌元件用於實施部落格功能。
 
-### 將Analytics對應至AEM變數{#mapped-analytics-to-aem-variables}
+### 將Analytics對應至AEM變數 {#mapped-analytics-to-aem-variables}
 
 在啟用Analytics並選取雲端設定架構後，儲存社群網站時，AEM變數會自動對應至分別以evar1和event1開頭的Analytics eVar和事件，並增加1。
 
@@ -397,7 +397,7 @@ Analytics會自動用於數個Communities功能。
 
 ![map-analytics](assets/map-analytics1.png)
 
-#### 隨每個事件{#map-of-evars-sent-with-each-event}傳送的eVar地圖
+#### 隨每個事件傳送的eVar地圖 {#map-of-evars-sent-with-each-event}
 
 <table>
  <tbody>
@@ -537,7 +537,7 @@ Analytics會自動用於數個Communities功能。
 
 * *社群網站內容路徑*:  `/content/sites/<site name>/en`
 
-### 修改Analytics變數對應{#modifying-analytics-variable-mapping}
+### 修改Analytics變數對應 {#modifying-analytics-variable-mapping}
 
 為社群網站啟用Analytics後，可從架構設定看到Analytics eVar和事件對應至AEM變數。
 
@@ -551,7 +551,7 @@ Analytics會自動用於數個Communities功能。
 >
 >在啟用Analytics後，請務必在社群網站[已發佈](#publishing-the-community-site)前重新映射，否則就有資料遺失的風險。
 
-#### 範例步驟1:將Analytics evar14拖曳至對應表{#example-step-dragging-analytics-evar-into-mapping-table}
+#### 範例步驟1:將Analytics evar14拖曳至對應表格 {#example-step-dragging-analytics-evar-into-mapping-table}
 
 ![analytics-mapping-evar](assets/analytics-mapping-evar.png)
 
@@ -563,9 +563,9 @@ Analytics會自動用於數個Communities功能。
 
 ![analytics-mapping-evar2](assets/analytics-mapping-evar2.png)
 
-## 發佈社群網站{#publishing-the-community-site}
+## 發佈社群網站 {#publishing-the-community-site}
 
-### 驗證Analytics與AEM變數的對應{#verify-analytics-to-aem-variable-mapping}
+### 驗證Analytics與AEM變數的對應 {#verify-analytics-to-aem-variable-mapping}
 
 發佈社群網站（亦會發佈Analytics雲端服務和架構）前，最好先驗證變數對應。
 
@@ -588,7 +588,7 @@ Analytics會自動用於數個Communities功能。
 >
 >若無法這麼做，可能會導致無法復原的資料遺失。
 
-### 主發佈者{#primary-publisher}
+### 主要發行者 {#primary-publisher}
 
 當選擇的部署是[publish farm](/help/communities/topologies.md#tarmk-publish-farm)時，必須將一個AEM發佈執行個體識別為輪詢Adobe Analytics以寫入[SRP](/help/communities/working-with-srp.md)的報表資料的主要發佈者。
 
@@ -602,19 +602,19 @@ Analytics會自動用於數個Communities功能。
 >
 >請務必將主要發佈者設定為防止從多個發佈執行個體進行輪詢。
 
-### 複製加密密鑰{#replicate-the-crypto-key}
+### 複製加密密鑰 {#replicate-the-crypto-key}
 
 Adobe Analytics憑證會經過加密。 為方便製作者與發佈者之間復寫或傳輸加密的AEM憑證，所有Analytics執行個體必須共用相同的主要加密金鑰。
 
 要執行此操作，請按照[複製加密密鑰](/help/communities/deploy-communities.md#replicate-the-crypto-key)中的說明操作。
 
-### 發佈社群網站和Analytics Cloud服務{#publish-community-site-and-analytics-cloud-service}
+### 發佈社群網站和Analytics Cloud服務 {#publish-community-site-and-analytics-cloud-service}
 
 為社群網站啟用Analytics雲端服務後，若有需要，[對應AEM變數](#mapped-analytics-to-aem-variables)便需要透過[(re)發佈社群網站](/help/communities/sites-console.md#publishing-the-site)，將設定複製到發佈環境。
 
-## 從Analytics取得報表{#obtaining-reports-from-analytics}
+## 從Analytics取得報表 {#obtaining-reports-from-analytics}
 
-### 報表管理{#report-management}
+### 報表管理 {#report-management}
 
 作者和主要發佈者的[OSGi設定](/help/sites-deploying/configuring-osgi.md) `AEM Communities Analytics Report Management`可用來查詢Analytics。
 
@@ -624,7 +624,7 @@ Adobe Analytics憑證會經過加密。 為方便製作者與發佈者之間復�
 
 查詢間隔預設為10秒。
 
-### 報表匯入工具{#report-importer}
+### 報表匯入工具 {#report-importer}
 
 發佈已啟用Analytics的社群網站後，主要發行者的[OSGi設定](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`可設定這些設定的預設輪詢間隔，這些設定並非個別在CRXDE中設定。
 
@@ -636,7 +636,7 @@ Adobe Analytics憑證會經過加密。 為方便製作者與發佈者之間復�
 
 ![report-importer](assets/report-importer.png)
 
-### 元件報表自定義{#component-report-customization}
+### 元件報表自訂 {#component-report-customization}
 
 目前，若要自訂要追蹤的量度，系統會在儲存庫中建立節點，定義要針對該量度產生報表的時段。
 
@@ -661,7 +661,7 @@ Adobe Analytics憑證會經過加密。 為方便製作者與發佈者之間復�
 
 ![元件報表](assets/component-report.png)
 
-## 在Analytics {#manage-user-data-in-analytics}中管理使用者資料
+## 在Analytics中管理使用者資料 {#manage-user-data-in-analytics}
 
 Adobe Analytics提供可讓您存取、匯出和刪除使用者資料的API。 如需詳細資訊，請參閱[提交存取和刪除請求](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)。
 
