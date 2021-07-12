@@ -10,8 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
-role: Administrator
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '3292'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 ---
 
 
-# Communities Sites控制台{#communities-sites-console}
+# Communities Sites主控台 {#communities-sites-console}
 
 Communities Sites控制台提供對以下內容的訪問：
 
@@ -51,7 +51,7 @@ Communities Sites控制台提供對以下內容的訪問：
 * 確定[社區管理員](/help/communities/users.md#creating-community-members)。
 * [啟用OAuth](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) 處理器以進行社交登入。
 
-## 訪問Communities Sites控制台{#accessing-communities-sites-console}
+## 訪問Communities Sites控制台 {#accessing-communities-sites-console}
 
 在製作環境中，若要存取Communities Sites主控台：
 
@@ -67,7 +67,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 ![網站主控台](assets/site-console.png)
 
-## 網站建立{#site-creation}
+## 網站建立 {#site-creation}
 
 站點建立控制台提供了根據所選[社區站點模板](/help/communities/sites.md)和設定來組合站點功能的逐步方法。
 
@@ -77,7 +77,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 建立過程是一系列步驟，以面板的形式呈現，其中包含要配置的一組特徵（以子面板的形式呈現）。 在最後一步中提交站點之前，可以前進到&#x200B;**Next**&#x200B;步驟或&#x200B;**Back**&#x200B;到前一步。
 
-### 步驟1 :站點模板{#step-site-template}
+### 步驟1 :網站範本 {#step-site-template}
 
 ![newsitetemplate](assets/newsitetemplate.png)
 
@@ -122,11 +122,11 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 * 選擇&#x200B;**Next**。
 
-### 步驟2 :設計{#step-design}
+### 步驟2 :設計 {#step-design}
 
 「設計」面板包含2個子面板，用於選取主題和品牌橫幅：
 
-#### 社區站點主題{#community-site-theme}
+#### 社群網站主題 {#community-site-theme}
 
 ![Sitetheme](assets/sitetheme.png)
 
@@ -136,7 +136,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 發佈社群網站後，可以[編輯屬性](#modifying-site-properties)並選取不同的主題。
 
-#### 社區站點品牌{#community-site-branding}
+#### 社群網站品牌推廣 {#community-site-branding}
 
 ![網站品牌化](assets/site-branding.png)
 
@@ -155,7 +155,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 * 選擇&#x200B;**Next**。
 
-### 步驟3 :設定{#step-settings}
+### 步驟3 :設定 {#step-settings}
 
 「設定」面板包含數個子面板，顯示在移至建立網站的最後一個步驟之前要設定的功能。
 
@@ -179,7 +179,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 >
 >若要這麼做，請為製作環境啟用` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)`。
 
-#### 用戶管理{#user-management}
+#### 使用者管理 {#user-management}
 
 ![createsitesettings](assets/createsitesettings.png)
 
@@ -366,7 +366,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 * 選擇&#x200B;**Next**。
 
-### 步驟4 :建立社區站點{#step-create-communities-site}
+### 步驟4 :建立社區網站 {#step-create-communities-site}
 
 如果需要任何調整，請使用&#x200B;**Back**&#x200B;按鈕進行調整。
 
@@ -391,7 +391,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 使用滑鼠暫留在網站上，或觸碰網站卡片時，會出現圖示，允許以作者模式](#authoring-site-content)、[開啟網站屬性以進行修改](#modifying-site-properties)、[發佈網站](#publishing-the-site)、[匯出網站](#exporting-the-site)和[刪除網站](#deleting-the-site)。[
 
-## 編寫網站內容{#authoring-site-content}
+## 製作網站內容 {#authoring-site-content}
 
 網站的內容可使用與任何其他AEM網站相同的工具製作。 若要開啟網站進行製作，請選取顯示在滑鼠暫留網站上的`Open Site`圖示。 該站點將在新頁簽中開啟，以便Communities Sites控制台仍可訪問。
 
@@ -401,7 +401,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 >
 >若不熟悉AEM，請檢視[basic handling](/help/sites-authoring/basic-handling.md)和[製作頁面快速指南](/help/sites-authoring/qg-page-authoring.md)的相關檔案。
 
-## 修改站點屬性{#modifying-site-properties}
+## 修改網站屬性 {#modifying-site-properties}
 
 ![編輯網站](assets/edit-site.png)
 
@@ -411,7 +411,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 ![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
-### 修改基本{#modify-basic}
+### 修改基本 {#modify-basic}
 
 BASIC面板允許修改：
 
@@ -424,7 +424,7 @@ BASIC面板允許修改：
 
 相反，可以修改社區站點的[STRUCTURE](#modify-structure)。
 
-### 修改結構{#modify-structure}
+### 修改結構 {#modify-structure}
 
 「結構」面板允許修改最初從所選社區站點模板建立的結構。 從面板，您可以：
 
@@ -460,11 +460,11 @@ BASIC面板允許修改：
 >
 >必須先包含並列出任何其他函式，例如[page函式](/help/communities/functions.md#page-function)。
 
-#### 範例：將目錄函式添加到社區站點結構{#example-adding-a-catalog-function-to-a-community-site-structure}
+#### 範例：將目錄函式添加到社區站點結構 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
 ![add-catalog-site](assets/add-catalog-site.png)
 
-### 修改設計{#modify-design}
+### 修改設計 {#modify-design}
 
 「設計」面板允許應用新主題：
 
@@ -473,7 +473,7 @@ BASIC面板允許修改：
 
    * 捲動至面板底部以變更品牌影像。
 
-### 修改設定{#modify-settings}
+### 修改設定 {#modify-settings}
 
 「設定」面板可讓您存取社群網站建立步驟3之子面板下的大部分設定：
 
@@ -484,17 +484,17 @@ BASIC面板允許修改：
 * [分析](#analytics)
 * [轉換](#translation)
 
-### 修改縮圖{#modify-thumbnail}
+### 修改縮圖 {#modify-thumbnail}
 
 「縮圖」面板允許上傳影像以在Communities Sites控制台中表示站點。
 
-### 修改啟用{#modify-enablement}
+### 修改啟用 {#modify-enablement}
 
 「啟用」面板可讓您存取建立社群網站期間提供的設定。
 
 請參閱[啟用](#enablement)說明。
 
-## 發佈網站{#publishing-the-site}
+## 發佈網站 {#publishing-the-site}
 
 在新建立或修改社群網站後，您可以選取`Publish Site`圖示來發佈（啟動）網站，此圖示會顯示在將滑鼠游標暫留在網站上。
 
@@ -504,11 +504,11 @@ BASIC面板允許修改：
 
 ![網站發佈](assets/site-published.png)
 
-### 使用巢狀群組發佈{#publishing-with-nested-groups}
+### 使用巢狀群組發佈 {#publishing-with-nested-groups}
 
 發佈社群網站後，必須個別發佈使用[群組主控台](/help/communities/groups.md)建立的每個子社群（巢狀群組）。
 
-## 導出站點{#exporting-the-site}
+## 匯出網站 {#exporting-the-site}
 
 ![匯出網站](assets/export-site.png)
 
@@ -516,13 +516,13 @@ BASIC面板允許修改：
 
 請注意，網站套件中未包含UGC。
 
-## 刪除站點{#deleting-the-site}
+## 刪除網站 {#deleting-the-site}
 
 ![deleteicon](assets/deleteicon.png)
 
 要刪除社區站點，請選擇「社區站點控制台」中滑鼠懸停在站點上時顯示的「刪除站點」表徵圖。 此動作會移除與網站相關聯的所有項目，例如UGC、使用者群組、資產和資料庫記錄。
 
-## 已建立社區用戶組{#created-community-user-groups}
+## 建立的社區用戶組 {#created-community-user-groups}
 
 發佈新社群網站後，新成員群組（在發佈環境中建立使用者群組）會對各種管理和成員角色設定適當的權限。
 
@@ -546,7 +546,7 @@ BASIC面板允許修改：
 >
 已建立，則應將套用的[Facebook雲端服務](/help/communities/social-login.md#createafacebookcloudservice)設定為將使用者新增至此群組。
 
-## 配置身份驗證錯誤{#configure-for-authentication-error}
+## 配置身份驗證錯誤 {#configure-for-authentication-error}
 
 依預設，當使用者輸入錯誤的憑證且無法登入時，社群網站會重新導向至範例登入頁面。 此示例登錄名將不存在於[生產伺服器](/help/sites-administering/production-ready.md)上。
 
@@ -571,7 +571,7 @@ BASIC面板允許修改：
 
 ![auth-error](assets/auth-error.png)
 
-### 測試身份驗證重定向{#test-authentication-redirection}
+### 測試驗證重定向 {#test-authentication-redirection}
 
 在相同的AEM發佈執行個體上，使用社群網站的登入頁面對應進行設定：
 
@@ -586,7 +586,7 @@ BASIC面板允許修改：
 
 ![測試驗證](assets/test-authentication.png)
 
-## 從主站點控制台{#accessing-community-sites-from-main-sites-console}訪問社區站點
+## 從主站點控制台訪問社區站點 {#accessing-community-sites-from-main-sites-console}
 
 從全局導航站點控制台，社區站點位於`Community Sites`資料夾中。
 
