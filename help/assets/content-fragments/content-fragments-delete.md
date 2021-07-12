@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
 docset: aem65
 feature: 內容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 13%
@@ -22,7 +22,7 @@ ht-degree: 13%
 
 # 內容片段 - 刪除考量事項{#content-fragments-delete-considerations}
 
-## 權限 — 刪除或不刪除{#permissions-delete-or-not-delete}
+## 權限 — 刪除或不刪除 {#permissions-delete-or-not-delete}
 
 刪除內容的能力強大，但可能很敏感，許多行業需要限制和控制這些權限的分配方式。
 
@@ -48,7 +48,7 @@ ht-degree: 13%
 >
 >另請參閱[如何在AEM](/help/sites-administering/audit-user-management-operations.md)中審核用戶管理操作。
 
-## 僅{#permissions-required-for-editor-functionality-only}編輯器功能所需的權限
+## 僅編輯器功能所需的權限 {#permissions-required-for-editor-functionality-only}
 
 對於需要編輯/更新內容片段而不允許他們刪除整個片段的使用者 ****，必須指派特定權限，因為內容片段編輯器的基本操作要求可以刪除暫時的子元素。
 
