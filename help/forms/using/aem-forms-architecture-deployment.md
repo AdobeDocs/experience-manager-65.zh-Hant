@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
-role: Administrator
+role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2490'
 ht-degree: 0%
 
 ---
 
-# AEM Forms的架構和部署拓撲{#architecture-and-deployment-topologies-for-aem-forms}
+# 適用於AEM Forms的架構和部署拓撲 {#architecture-and-deployment-topologies-for-aem-forms}
 
 ## 架構 {#architecture}
 
@@ -87,11 +87,11 @@ OSGi上的AEM Forms和JEE上的AEM Forms都具備工作流程功能。 您可以
 * 它可從發佈執行個體反向復寫原始表單資料。 預設資料儲存處理程式需要反向復寫功能。
 * AEM工作流程是處理從發佈例項抵達的原始表單資料的主要方式，建議您在製作樣式的系統上執行。
 
-## JEE上AEM Forms的物理拓撲示例{#sample-physical-topologies-for-aem-forms-on-jee}
+## JEE版AEM Forms的實體拓撲範例 {#sample-physical-topologies-for-aem-forms-on-jee}
 
 以下建議使用JEE版AEM Forms拓撲，主要適用於從JEE版LiveCycle或舊版AEM Forms JEE版升級的客戶。 Adobe建議在OSGi上使用AEM Forms以執行全新安裝。 在JEE上全新安裝AEM Forms，僅建議使用檔案安全性和程式管理功能。
 
-### 使用文檔服務或文檔安全功能的拓撲{#topology-for-using-document-services-or-document-security-capabilities}
+### 使用文檔服務或文檔安全功能的拓撲 {#topology-for-using-document-services-or-document-security-capabilities}
 
 AEM Forms客戶計畫只使用文檔服務或文檔安全功能，其拓撲可以與下面顯示的拓撲類似。 此拓撲建議使用單個AEM Forms實例。 您也可以視需要建立AEM Forms伺服器的叢集或伺服器陣列。 當大多數用戶以寫程式方式訪問AEM Forms伺服器的功能，並且通過用戶介面的干預最小時，建議使用此拓撲。 該拓撲對於文檔服務的批處理操作很有幫助。 例如，使用輸出服務每天建立數百個不可編輯的PDF檔案。
 
@@ -99,11 +99,11 @@ AEM Forms客戶計畫只使用文檔服務或文檔安全功能，其拓撲可�
 
 ![基本功能](assets/basic-features.png)
 
-### 使用AEM Forms進程管理的拓撲{#topology-for-using-aem-forms-process-management}
+### 使用AEM Forms進程管理的拓撲 {#topology-for-using-aem-forms-process-management}
 
 AEM Forms客戶計畫使用AEM Forms流程管理功能，例如HTML Workspace的拓撲可能與下方顯示的拓撲類似。 JEE伺服器上的AEM Forms可以是單一伺服器或叢集設定。
 
-如果您從LiveCycleES4升級，此拓撲會與您已有的LiveCycle緊密鏡像，除了在JEE上將AEM Author內建到AEM Forms之外。 此外，對於執行升級的客戶，群集需求沒有變化。 如果您在叢集環境中使用AEM Forms，則可在AEM 6.5 Forms中繼續使用。 若是全新安裝JEE的AEM Forms以使用HTML Workspace，則須額外執行內建至JEE環境的AEM製作執行個體。
+如果您從LiveCycleES4升級，此拓撲會與您已有的LiveCycle緊密鏡像，除了在JEE上將AEM Author內建到AEM Forms之外。 此外，對於執行升級的客戶，群集需求沒有變化。 如果您在叢集環境中使用AEM Forms，則可在AEM 6.5 Forms中繼續使用。 若是全新安裝JEE的AEM Forms以使用HTML Workspace，則需額外執行內建至JEE環境的AEM製作執行個體。
 
 表單資料存放區是第三方資料存放區，用於存放表單的最終處理資料和互動式通訊。 這是拓撲中的可選元素。 您也可以選擇設定處理例項，並視需要將其存放庫用作最終的記錄系統。
 
@@ -111,7 +111,7 @@ AEM Forms客戶計畫使用AEM Forms流程管理功能，例如HTML Workspace的
 
 如果客戶打算使用JEE伺服器上的AEM Forms進行處理程式管理功能（HTML工作區），則建議使用此拓撲，而不使用任何後置處理、最適化表單、HTML5表單和互動式通訊功能。
 
-### 使用最適化表單、HTML5表單、互動式通訊功能的拓撲{#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
+### 使用最適化表單、HTML5表單、互動式通訊功能的拓撲 {#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
 
 AEM Forms客戶若打算使用AEM Forms資料擷取功能，例如適用性表單、HTML5 Forms、PDF forms，其拓撲可能類似於下方顯示的拓撲。 此拓撲還建議使用AEM Forms的交互通信功能。
 
@@ -124,21 +124,21 @@ AEM Forms客戶若打算使用AEM Forms資料擷取功能，例如適用性表�
 * 互動式通訊代理UI通常在組織內執行。 因此，您可以將代理UI的發佈伺服器保留在專用網路中。
 * OSGi例項上內建至JEE伺服器上AEM Forms的AEM表單，也可在OSGi和Watched資料夾上執行以Forms為中心的工作流程。
 
-## 在OSGi {#sample-physical-topologies-for-using-aem-forms-on-osgi}上使用AEM Forms的物理拓撲示例
+## 在OSGi上使用AEM Forms的物理拓撲示例 {#sample-physical-topologies-for-using-aem-forms-on-osgi}
 
-### 資料捕獲的拓撲、互動式通信、OSGi功能上的以表單為中心的工作流{#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
+### 用於資料捕獲的拓撲、互動式通信、OSGi功能上的以表單為中心的工作流 {#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
 
 AEM Forms客戶若打算使用AEM Forms資料擷取功能，例如適用性表單、HTML5 Forms、PDF forms，其拓撲可能類似於下方顯示的拓撲。 對於在OSGi功能上使用互動式通信和以Forms為中心的工作流程(例如，對於將AEM收件匣和AEM Forms應用程式用於業務流程工作流程)，也建議使用此拓撲。
 
 ![interactive-use-cases-af-cm-osgi-workflow](assets/interactive-use-cases-af-cm-osgi-workflow.png)
 
-### 用於使用監視資料夾功能進行離線批處理{#topology-for-using-watched-folder-capabilities-for-offline-batch-processing}的拓撲
+### 用於離線批處理的使用監看資料夾功能的拓撲 {#topology-for-using-watched-folder-capabilities-for-offline-batch-processing}
 
 AEM Forms客戶計畫使用「監看資料夾」進行批次處理，其拓撲可能類似於下方顯示的拓撲。 拓撲顯示群集環境，但您決定根據負載使用單個實例或AEM Forms伺服器群。 第三方資料來源是您自己的記錄系統。 它可作為「觀看的資料夾」的輸入來源。 拓撲還以打印檔案的形式顯示輸出。 您也可以將輸出內容儲存至檔案系統、透過電子郵件傳送，以及使用其他自訂方法來使用輸出。
 
 ![offline-batch-processing-via-watched-folders](assets/offline-batch-processing-via-watched-folders.png)
 
-### 使用文檔服務功能進行基於API的離線處理的拓撲{#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
+### 使用文檔服務功能進行基於API的離線處理的拓撲 {#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
 
 AEM Forms客戶計畫只使用文檔服務功能，其拓撲可以與下面顯示的拓撲類似。 此拓撲建議在OSGi伺服器上使用AEM Forms群集。 當大部分使用者以程式設計方式（使用API）存取AEM Forms伺服器的功能，且透過使用者介面的干預達到最低時，建議使用此拓撲。 該拓撲在多種軟體客戶端情況下非常有用。 例如，多個用戶端使用PDF產生器服務，隨需建立PDF檔案。
 
