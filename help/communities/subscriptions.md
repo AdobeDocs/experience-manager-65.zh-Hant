@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
-role: Administrator
+role: Admin
 exl-id: 338be220-659a-459c-8e90-55e3a11ddeb0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 2%
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 必須配置元件，以啟用以下訂閱&#x200B;*和*。 允許訂閱的功能包括[blog](blog-feature.md)、[forum](forum.md)和[QnA](working-with-qna.md)。
 
-## {#subscriptions-from-following}之後的訂閱
+## 來自下列項目的訂閱 {#subscriptions-from-following}
 
 ![subscription-following](assets/subscription-following.png)
 
@@ -58,7 +58,7 @@ ht-degree: 2%
 
 * 對於特定條目（如論壇主題、QnA問題或部落格文章），當有特定條目的活動時將發送電子郵件。
 
-## 通過電子郵件回復{#reply-by-email}
+## 透過電子郵件回覆 {#reply-by-email}
 
 當電子郵件設定為[以通過電子郵件](email.md#configure-polling-importer)回復時，訂閱的成員將收到一封包含已發佈內容的電子郵件和指向線上內容的連結。
 
