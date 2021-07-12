@@ -6,16 +6,16 @@ uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
-role: Administrator
+role: Admin
 exl-id: eeeab5d1-073a-4e13-a781-391dfe70bb37
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 0%
 
 ---
 
-# Forms使用者管理 |處理用戶資料{#forms-user-management-handling-user-data}
+# Forms使用者管理 |處理用戶資料 {#forms-user-management-handling-user-data}
 
 使用者管理是AEM Forms JEE元件，可讓AEM Forms使用者建立、管理及授權AEM Forms。 用戶管理使用域作為獲取用戶資訊的目錄。 支援下列網域類型：
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 <!-- Fix broken links For more information about how user management works and configured, see AEM Forms JEE administration help. -->
 
-## 用戶資料和資料儲存{#user-data-and-data-stores}
+## 使用者資料和資料儲存 {#user-data-and-data-stores}
 
 用戶管理將用戶資料儲存在資料庫中，如My Sql 、Oracle、MS SQL Server和IBM DB2。 此外，只要使用者已在AEM作者上的Forms應用程式中登入至少一次(`https://'[server]:[port]'lc`)，系統就會在AEM存放庫中建立該使用者。 因此，用戶管理儲存在以下資料儲存中：
 
@@ -86,11 +86,11 @@ ht-degree: 0%
  </tbody>
 </table>
 
-### AEM存放庫{#aem-repository}
+### AEM存放庫 {#aem-repository}
 
 至少曾在`https://'[server]:[port]'lc`下存取過Forms應用程式的使用者，其使用者管理資料也會儲存在AEM存放庫中。
 
-## 訪問和刪除用戶資料{#access-and-delete-user-data}
+## 存取和刪除使用者資料 {#access-and-delete-user-data}
 
 您可以存取和匯出使用者管理資料庫和AEM存放庫中使用者的使用者管理資料，並視需要將其永久刪除。
 
@@ -106,7 +106,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 知道主體ID後，即可匯出或刪除使用者資料。
 
-#### 導出用戶資料{#export-user-data}
+#### 匯出使用者資料 {#export-user-data}
 
 運行以下資料庫命令，從資料庫表導出主ID的用戶管理資料。 在`select`命令中，將`<principal_id>`替換為要導出其資料的用戶的主ID。
 
@@ -147,7 +147,7 @@ Select * from EdcPrincipalGrpCtmntEntity where refchildprincipalid in (Select id
 Select * from EdcPrincipalEntity where id='<principal_id>';
 ```
 
-#### 刪除用戶資料{#delete-user-data}
+#### 刪除使用者資料 {#delete-user-data}
 
 執行以下操作，從資料庫表中刪除主體ID的用戶管理資料。
 
@@ -175,15 +175,15 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 1. 啟動AEM Forms伺服器。
 
-### AEM存放庫{#aem-repository-1}
+### AEM存放庫 {#aem-repository-1}
 
 Forms JEE使用者若至少存取了一個AEM Forms製作例項，其資料會存放在AEM存放庫中。 您可以從AEM存放庫存取和刪除其使用者資料。
 
-#### 訪問用戶資料{#access-user-data}
+#### 存取使用者資料 {#access-user-data}
 
 若要檢視在AEM存放庫中建立的使用者，請使用AEM管理員憑證登入`https://'[server]:[port]'/lc/useradmin`。 請注意，URL中的`server`和`port`是AEM製作例項的。 您可以在此使用使用者名稱搜尋使用者。 按兩下某個使用者，即可檢視該使用者的屬性、權限和群組等資訊。 用戶的`Path`屬性指定在AEM儲存庫中建立的用戶節點的路徑。
 
-#### 刪除用戶資料{#delete-aem}
+#### 刪除使用者資料 {#delete-aem}
 
 要刪除用戶：
 
