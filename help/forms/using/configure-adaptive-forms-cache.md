@@ -9,20 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
 
 ---
 
-# 配置最適化表單快取{#configure-adaptive-forms-cache}
+# 設定最適化表單快取 {#configure-adaptive-forms-cache}
 
 快取是一種縮短資料存取時間、減少延遲並改善輸入/輸出(I/O)速度的機制。 適用性表單快取僅會儲存適用性表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 有助於縮短在用戶端上轉譯最適化表單所需的時間。 專為最適化表單而設計。
 
-## 在製作和發佈例項{#configure-adaptive-forms-caching-at-author-and-publish-instances}時設定最適化表單快取
+## 在製作和發佈例項時設定最適化表單快取 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
 1. 前往`https://[server]:[port]/system/console/configMgr`的AEM Web主控台組態管理器。
 1. 按一下「**[!UICONTROL 適用性表單和互動式通訊Web通道配置]**」以編輯其配置值。
@@ -39,11 +39,11 @@ ht-degree: 0%
 您的環境已設定為使用快取最適化表單和相關資產。
 
 
-## （選用）在Dispatcher {#configure-the-cache}設定最適化表單快取
+## （選用）在Dispatcher設定最適化表單快取 {#configure-the-cache}
 
 您也可以在Dispatcher設定最適化表單快取，以提升效能。
 
-### 先決條件{#pre-requisites}
+### 先決條件 {#pre-requisites}
 
 * 啟用[合併或預填客戶端資料](prepopulate-adaptive-form-fields.md#prefill-at-client)選項。 有助於合併預填表單中每個例項的唯一資料。
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 
 ## 疑難排解 {#troubleshooting}
 
-### 某些包含影像或視訊的最適化表單不會從Dispatcher快取{#videos-or-images-not-auto-invalidated}中自動失效
+### 某些包含影像或視訊的最適化表單不會從Dispatcher快取中自動失效 {#videos-or-images-not-auto-invalidated}
 
 #### 問題 {#issue1}
 
@@ -142,7 +142,7 @@ ht-degree: 0%
 
 發佈影像和影片後，請明確取消發佈並發佈參考這些資產的最適化表單。
 
-### 僅快取適用性表單的第一個例項{#only-first-instance-of-adaptive-forms-is-cached}
+### 系統只會快取最適化表單的第一個例項 {#only-first-instance-of-adaptive-forms-is-cached}
 
 #### 問題 {#issue3}
 
