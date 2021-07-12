@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: ff97424d-b384-4149-9a3c-b4f00aaa1def
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 025a3314-8b9d-48e1-a74f-ea0c933e21e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 適用性表單支援在JEE上將資料提交至AEM Forms程式，以便進一步處理。 它可讓您使用提交表單中可用的資料，在JEE上觸發AEM Forms程式。 執行下列步驟，讓您的AEM Forms執行個體能在JEE程式中將最適化表單提交至AEM Forms:
 
-## 配置AEM Forms伺服器{#configure-your-aem-forms-server}
+## 設定您的AEM Forms伺服器 {#configure-your-aem-forms-server}
 
 執行下列步驟，讓AEM表單伺服器可將資料提交至JEE伺服器上的AEM Forms:
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ![AdobeLiveCycle用戶端SDK設定](assets/clientsdkconfiguration.jpg)
 
-## 使用進程欄位{#map-data-with-process-fields}映射資料
+## 使用流程欄位映射資料 {#map-data-with-process-fields}
 
 設定AEM Forms後，將資料XML和附件從提交的表單對應至JEE流程上AEM Forms的欄位。 要執行此操作：
 
