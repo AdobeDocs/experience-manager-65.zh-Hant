@@ -2,17 +2,17 @@
 title: 如何使用JSON結構描述建立適用性Forms?
 description: 了解如何使用JSON結構描述作為表單模型來建立最適化表單。 您可以使用現有的JSON結構來建立最適化表單。 深入了解JSON結構描述的範例、JSON結構描述定義中的預先設定欄位、限制最適化表單元件的可接受值，以及了解不支援的建構。
 feature: 適用性表單
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1450'
 ht-degree: 4%
 
 ---
 
-# 使用JSON結構{#creating-adaptive-forms-using-json-schema}建立最適化表單
+# 使用JSON結構建立最適化表單 {#creating-adaptive-forms-using-json-schema}
 
 ## 必備條件 {#prerequisites}
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 * [建立最適化表單](creating-adaptive-form.md)
 * [JSON結構](https://json-schema.org/)
 
-## 使用JSON結構作為表單模型{#using-a-json-schema-as-form-model}
+## 使用JSON結構描述作為表單模型  {#using-a-json-schema-as-form-model}
 
 [!DNL Adobe Experience Manager Forms] 支援使用現有的JSON結構描述作為表單模型來建立最適化表單。此JSON結構表示組織中後端系統產生或使用資料的結構。 您使用的JSON結構應符合[v4規範](https://json-schema.org/draft-04/schema)。
 
@@ -103,7 +103,7 @@ JSON結構包含簡單且複雜的元素類型。 元素具有將規則新增至
  </tbody>
 </table>
 
-### 公用架構屬性{#common-schema-properties}
+### 公用架構屬性 {#common-schema-properties}
 
 適用性表單使用JSON結構描述中的可用資訊來對應每個產生的欄位。 特別是：
 
@@ -119,7 +119,7 @@ JSON結構包含簡單且複雜的元素類型。 元素具有將規則新增至
 * `pattern`屬性以最適化形式設定為驗證模式（規則運算式）。
 * JSON結構描述檔案的副檔名必須保留為.schema.json。 例如， &lt;filename>.schema.json。
 
-## JSON結構描述範例{#sample-json-schema}
+## 範例JSON結構描述 {#sample-json-schema}
 
 以下是JSON結構描述的範例。
 
@@ -301,7 +301,7 @@ JSON結構包含簡單且複雜的元素類型。 元素具有將規則新增至
 }
 ```
 
-### 可重複使用的架構定義{#reusable-schema-definitions}
+### 可重複使用的架構定義 {#reusable-schema-definitions}
 
 定義索引鍵可用來識別可重複使用的結構描述。 可重複使用的架構定義用於建立片段。 這類似於在XSD中識別複雜類型。 以下提供定義的範例JSON結構描述：
 
@@ -332,7 +332,7 @@ JSON結構包含簡單且複雜的元素類型。 元素具有將規則新增至
 
 上例定義了客戶記錄，其中每個客戶都有發運和計費地址。 地址的結構相同（地址具有街道地址、城市地址和州地址），因此最好不要複製地址。 此外，欄位的新增和刪除也方便您日後進行任何變更。
 
-## JSON結構定義{#pre-configuring-fields-in-json-schema-definition}中的預先配置欄位
+## JSON結構定義中的預先設定欄位 {#pre-configuring-fields-in-json-schema-definition}
 
 您可以使用&#x200B;**aem:afProperties**&#x200B;屬性來預先設定JSON結構描述欄位，以對應至自訂最適化表單元件。 以下列出範例：
 
@@ -354,7 +354,7 @@ JSON結構包含簡單且複雜的元素類型。 元素具有將規則新增至
 }
 ```
 
-## 配置表單對象{#configure-scripts-or-expressions-for-form-objects}的指令碼或表達式
+## 配置表單對象的指令碼或表達式  {#configure-scripts-or-expressions-for-form-objects}
 
 JavaScript是最適化表單的運算式語言。 所有運算式都是有效的JavaScript運算式，且會使用最適化表單指令碼模型API。 您可以將表單物件預先設定為[評估表單事件上的運算式](adaptive-form-expressions.md)。
 
@@ -585,7 +585,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 
 以下是先前提及範例的範例JSON程式碼。
 
-### 在初始化事件{#hiding-a-field-on-initialize-event}時隱藏欄位
+### 在初始化事件時隱藏欄位 {#hiding-a-field-on-initialize-event}
 
 ```json
 "name": {
@@ -598,7 +598,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 }
 ```
 
-#### 在值提交事件{#configure-value-of-another-field-on-value-commit-event}上配置其他欄位的值
+#### 在值提交事件時配置另一個欄位的值 {#configure-value-of-another-field-on-value-commit-event}
 
 ```json
 "Income": {
@@ -622,7 +622,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
 }
 ```
 
-## 限制最適化表單元件{#limit-acceptable-values-for-an-adaptive-form-component}的可接受值
+## 限制最適化表單元件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
 
 您可以將下列限制新增至JSON結構描述元素，以限制最適化表單元件可接受的值：
 
@@ -720,7 +720,7 @@ JavaScript是最適化表單的運算式語言。 所有運算式都是有效的
  </tbody>
 </table>
 
-## 不支援的構造{#non-supported-constructs}
+## 不支援的構造  {#non-supported-constructs}
 
 適用性表單不支援下列JSON結構：
 
