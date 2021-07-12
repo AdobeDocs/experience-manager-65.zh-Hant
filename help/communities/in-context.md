@@ -9,22 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
-role: Administrator
+role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 1%
 
 ---
 
-# 內容內協調{#in-context-moderation}
+# 內容內協調 {#in-context-moderation}
 
 若為AEM Communities，管理員和信任的社群成員可直接在發佈社群內容的發佈頁面上執行協調。
 
 使用[協調控制台](moderation.md)時，針對內容顯示的資訊包含已發佈頁面的連結，以允許存取在內文中協調時可用的其他協調動作。
 
-## 協調動作{#moderation-actions}
+## 協調動作 {#moderation-actions}
 
 請瀏覽協調概述，取得[協調動作](moderate-ugc.md#moderation-actions)的說明。
 
@@ -48,7 +48,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用[Members console](membe
 
 有關社群使用者群組的詳細資訊，請訪問[管理使用者和使用者群組](users.md)。
 
-### 建立論壇貼文{#create-the-forum-posts}
+### 建立論壇貼文 {#create-the-forum-posts}
 
 * 以Rebekah Larsen(rebekah.larsen@trashymail.com)的身份登錄
 
@@ -87,7 +87,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用[Members console](membe
    * 選擇回復
    * 選擇註銷
 
-### 匿名網站訪客(#5){#anonymous-site-visitor}
+### 匿名網站訪客(#5) {#anonymous-site-visitor}
 
 以下是未登入(5)的網站訪客所檢視的論壇檢視。
 
@@ -95,7 +95,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用[Members console](membe
 
 ![community-forum-visitor](assets/community-forum-visitor.png)
 
-### 新成員(#4){#new-member}
+### 新成員(#4) {#new-member}
 
 在作者上，以管理員身分登入，並使用[Members console](members.md) ，然後使用「登出」 ，將Boyd Larsen(boyd.larsen@dodgit.com)新增為community-engage-members群組的新成員。
 
@@ -134,7 +134,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用[Members console](membe
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### 社群版主(#2){#community-moderator}
+### 社群版主(#2) {#community-moderator}
 
 以社區主持人Aaron McDonald(aaron.mcdonal@mailinator.com)的身份登錄，通過選擇論壇，然後為蜂鳥貼文選擇閱讀更多資訊來訪問線程。
 
@@ -157,7 +157,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用[Members console](membe
 
 ![版主存取](assets/moderator-access.png)
 
-### 內容作者(#1){#content-author}
+### 內容作者(#1) {#content-author}
 
 以Rebekah Larsen(rebekah.larsen@mailinator.com)的身份登錄，此人是社區成員，他啟動了線程，通過選擇「論壇」，然後選擇「閱讀更多資訊」來訪問線程。
 
