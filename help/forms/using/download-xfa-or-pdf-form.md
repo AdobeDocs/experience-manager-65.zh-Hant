@@ -8,16 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
-role: Administrator
+role: Admin
 exl-id: 5b7b9816-38c1-4780-b1fc-8184971f3772
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-# 下載XFA或PDF表單範本{#download-an-xfa-or-a-pdf-form-template}
+# 下載XFA或PDF表單範本 {#download-an-xfa-or-a-pdf-form-template}
 
 如名稱所示，下載操作可讓您將表單從存放庫匯出至本機系統。 結合上傳操作，此操作可協助您將表單從一個存放庫移轉至另一個存放庫。
 
@@ -31,7 +31,7 @@ AEM Forms支援個別或在包含一或多個支援表單的資料夾中下載�
 
 除了這些資產外，如果資產類型存在於資料夾中，您也可以下載`Resource`類型的資產。 本功能可讓您下載XFA表單所參考的資源及表單。
 
-## 下載一個或多個表單{#download-one-or-more-forms}
+## 下載一或多個表單 {#download-one-or-more-forms}
 
 1. 登入`https://<server>:<port>/aem/forms.html`的AEM Forms使用者介面。
 
@@ -51,7 +51,7 @@ AEM Forms支援個別或在包含一或多個支援表單的資料夾中下載�
 
    ZIP檔案會儲存至您系統上的`Downloads`資料夾。
 
-## 上傳操作{#related-considerations-for-the-upload-operation}的相關考量事項
+## 上傳作業的相關考量事項 {#related-considerations-for-the-upload-operation}
 
 * 您可以將ZIP檔案上傳至相同存放庫或其他存放庫中的任何其他位置
 * 上傳作業期間會保留資料夾中資產的階層
