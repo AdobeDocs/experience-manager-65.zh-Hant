@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
 
 ---
 
-# 高級計分和徽章{#advanced-scoring-and-badges}
+# 進階計分和徽章{#advanced-scoring-and-badges}
 
 ## 概覽 {#overview}
 
@@ -57,7 +57,7 @@ ht-degree: 1%
 >
 >要使用高級計分和標籤功能，請安裝[專家身份識別包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
 
-## 可配置計分引擎{#configurable-scoring-engine}
+## 可配置計分引擎 {#configurable-scoring-engine}
 
 進階計分引擎提供OSGi設定，其中包含影響進階計分演算法的參數。
 
@@ -87,7 +87,7 @@ ht-degree: 1%
 
    預設值為 50。
 
-## 高級計分規則{#advanced-scoring-rules}
+## 進階計分規則 {#advanced-scoring-rules}
 
 在基本計分中，已知獲得徽章所需的數量。
 
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 如果秒數檔案遺失，進階計分引擎會擲回錯誤。
 
-## 高級簽名規則{#advanced-badging-rules}
+## 進階徽章規則 {#advanced-badging-rules}
 
 高級簽名規則屬性與[基本簽名規則屬性](/help/communities/implementing-scoring.md#badging-rules)不同。
 
@@ -155,9 +155,9 @@ ht-degree: 1%
  </tbody>
 </table>
 
-## 包含的規則和徽章{#included-rules-and-badge}
+## 包含的規則和徽章 {#included-rules-and-badge}
 
-### 包含的徽章{#included-badge}
+### 包含的徽章 {#included-badge}
 
 此測試版包含一個獎勵型專家徽章：
 
@@ -178,7 +178,7 @@ ht-degree: 1%
 * [啟用元件的徽章](/help/communities/implementing-scoring.md#enableforcomponent)
 * [套用規則](/help/communities/implementing-scoring.md#applytopage)
 
-### 包含計分規則和子規則{#included-scoring-rules-and-sub-rules}
+### 包含計分規則和子規則 {#included-scoring-rules-and-sub-rules}
 
 測試版包含[論壇函式](/help/communities/functions.md#forum-function)的兩個進階計分規則（論壇和論壇功能的註解元件各一個）:
 
@@ -208,7 +208,7 @@ ht-degree: 1%
 * `rules` 應位於具有每個人讀取權限的存放庫位置。
 * 規則名稱必須是唯一的，無論位置為何。
 
-### 包含標籤規則{#included-badging-rules}
+### 包含徽章規則 {#included-badging-rules}
 
 此發行包含兩個與[進階論壇和留言分數規則](#included-scoring-rules-and-sub-rules)對應的進階標籤規則。
 
