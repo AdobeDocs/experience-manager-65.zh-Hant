@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
-role: Administrator
+role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
 
 ---
 
-# 社區的FFmpeg {#ffmpeg-for-communities}
+# 適用於社群的FFmpeg {#ffmpeg-for-communities}
 
 ## 概覽 {#overview}
 
@@ -43,7 +43,7 @@ FFmpeg應安裝在托管AEM *author*&#x200B;例項的伺服器上。
 
    * 例如， `ffmpeg -version`。
 
-## 配置FFmpeg轉碼服務{#configure-ffmpeg-transcoding-service}
+## 配置FFmpeg轉碼服務 {#configure-ffmpeg-transcoding-service}
 
 依預設，安裝FFmpeg時，會根據[!UICONTROL DAM更新資產]工作流程定義來設定多個轉譯（轉譯）。
 
