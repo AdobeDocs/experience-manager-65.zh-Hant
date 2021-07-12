@@ -10,22 +10,22 @@ topic-tags: designer
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
-# 安裝和配置Designer{#installing-and-configuring-designer}
+# 安裝和配置設計工具{#installing-and-configuring-designer}
 
-## 先決條件{#pre-requisites}
+## 先決條件 {#pre-requisites}
 
 AEM Forms Designer安裝程式需要32位版本的[Visual C++可再發行運行時包2012](https://support.microsoft.com/en-in/help/2977003/the-latest-supported-visual-c-downloads)和[Visual C++可再發行運行時包2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package)。 在開始安裝之前，請確保已安裝上述可重新分發的運行時包。
 
-## 安裝設計器{#install-designer}
+## 安裝設計器 {#install-designer}
 
 Designer作為獨立安裝程式提供，並與WorkBench捆綁。 如果您使用Designer的獨立安裝程式，請執行下列步驟：
 
