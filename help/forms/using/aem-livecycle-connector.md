@@ -8,20 +8,20 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
-role: Administrator
+role: Admin
 exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 0%
 
 ---
 
-# 連接AEM Forms與AdobeLiveCycle{#connecting-aem-forms-with-adobe-livecycle}
+# 將AEM Forms與AdobeLiveCycle {#connecting-aem-forms-with-adobe-livecycle}
 
 Adobe Experience Manager(AEM)LiveCycle連接器可讓AdobeLiveCycleES4檔案服務從AEM網頁應用程式和工作流程內順暢地呼叫。 LiveCycle提供豐富用戶端SDK，可讓用戶端應用程式使用Java API啟動LiveCycle服務。 AEMLiveCycle連接器可簡化在OSGi環境中使用這些API的程式。
 
-## 將AEM伺服器連接到AdobeLiveCycle{#connecting-aem-server-to-adobe-livecycle}
+## 將AEM伺服器連接到AdobeLiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
 AEMLiveCycle連接器是[AEM Forms附加元件封裝](/help/forms/using/installing-configuring-aem-forms-osgi.md)的一部分。 安裝AEM Forms附加元件套件後，請執行下列步驟，將LiveCycle伺服器的詳細資訊新增至AEM Web Console。
 
@@ -44,7 +44,7 @@ AEMLiveCycle連接器是[AEM Forms附加元件封裝](/help/forms/using/installi
 * **密碼** — 指定密碼。
 * **服務名稱**  — 指定使用「用戶名」和「密碼」欄位中提供的用戶憑據啟動的服務。依預設，啟動LiveCycle服務時不會傳遞任何憑證。
 
-## 啟動文檔服務{#starting-document-services}
+## 啟動文檔服務 {#starting-document-services}
 
 客戶端應用程式可以使用Java API、Web服務、Remoting和REST以寫程式方式啟動LiveCycle服務。 對於Java用戶端，應用程式可使用LiveCycleSDK。 LiveCycleSDK提供Java API，可遠端啟動這些服務。 例如，要將Microsoft Word文檔轉換為PDF，客戶端將啟動GeneratePDFService。 調用流包含以下步驟：
 
@@ -58,7 +58,7 @@ AEMLiveCycle連接器會將這些用戶端例項公開為可透過標準OSGi方�
 * 用戶憑據傳播：連接到LiveCycle伺服器所需的連接詳細資訊在中央位置進行管理。
 * ServiceClientFactory服務：要啟動進程，客戶端應用程式可以訪問ServiceClientFactory實例。
 
-### 從OSGi服務註冊表{#starting-via-service-references-from-osgi-service-registry}通過服務引用啟動
+### 從OSGi服務註冊表通過服務引用啟動 {#starting-via-service-references-from-osgi-service-registry}
 
 若要從AEM內啟動公開的服務，請執行下列步驟：
 
@@ -136,7 +136,7 @@ AEMLiveCycle連接器會將這些用戶端例項公開為可透過標準OSGi方�
                );
    ```
 
-### 通過ServiceClientFactory {#starting-via-serviceclientfactory}啟動
+### 通過ServiceClientFactory啟動 {#starting-via-serviceclientfactory}
 
 在某些情況下，需要ServiceClientFactory類。 例如，您需要ServiceClientFactory才能調用進程。
 
@@ -152,11 +152,11 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 ...
 ```
 
-## 運行方式支援{#runas-support}
+## 運行方式支援 {#runas-support}
 
 LiveCycle中幾乎每個文檔服務都需要身份驗證。 您可以使用下列任一選項來啟動這些服務，而不需在程式碼中提供明確憑證：
 
-### 允許清單配置{#allowlist-configuration}
+### 允許清單配置 {#allowlist-configuration}
 
 LiveCycle用戶端SDK設定包含有關服務名稱的設定。 此配置是服務的清單，調用邏輯會立即使用管理員憑據。 例如，如果將DirectoryManager服務（用戶管理API的一部分）添加到此清單中，則任何客戶端代碼都可以直接使用該服務，調用層作為發送到LiveCycle伺服器的請求的一部分自動在配置的憑據上傳遞
 
@@ -192,7 +192,7 @@ List<Component> components = runAsManager.doPrivileged(new PrivilegedAction<List
 },credential);
 ```
 
-### InvocationRequest屬性{#invocationrequest-property}
+### InvocationRequest屬性 {#invocationrequest-property}
 
 如果調用進程或直接使用ServiceClientFactory類並建立InvocationRequest，則可以指定一個屬性以指示調用層應使用配置的憑據。
 
@@ -213,9 +213,9 @@ ir.setProperty(InvocationProperties.INVOKER_TYPE,InvocationProperties.INVOKER_TY
 InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir);
 ```
 
-## 文檔服務清單{#document-services-list}
+## 文檔服務清單 {#document-services-list}
 
-### AdobeLiveCycle用戶端SDK API套件組合{#adobe-livecycle-client-sdk-api-bundle}
+### AdobeLiveCycle用戶端SDK API套件 {#adobe-livecycle-client-sdk-api-bundle}
 
 提供下列服務：
 
@@ -225,7 +225,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 * com.adobe.idp.dsc.registry.service.ServiceRegistry
 * com.adobe.idp.dsc.registry.component.ComponentRegistry
 
-#### Maven依賴項{#maven-dependencies}
+#### Maven相依性 {#maven-dependencies}
 
 ```xml
 <dependency>
@@ -240,14 +240,14 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle用戶端SDK套件組合{#adobe-livecycle-client-sdk-bundle}
+### AdobeLiveCycle用戶端SDK套件 {#adobe-livecycle-client-sdk-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.dsc.clientsdk.security.RunAsManager
 * com.adobe.livecycle.dsc.clientsdk.ServiceClientFactoryProvider
 
-#### Maven依賴項{#maven-dependencies-1}
+#### Maven相依性 {#maven-dependencies-1}
 
 ```xml
 <dependency>
@@ -257,7 +257,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleTaskManager客戶端包{#adobe-livecycle-taskmanager-client-bundle}
+### AdobeLiveCycleTaskManager客戶端包 {#adobe-livecycle-taskmanager-client-bundle}
 
 提供下列服務：
 
@@ -268,7 +268,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 * com.adobe.idp.taskmanager.dsc.client.endpoint.TaskManagerEndpointClient
 * com.adobe.idp.taskmanager.dsc.client.userlist.UserlistService
 
-#### Maven依賴項{#maven-dependencies-2}
+#### Maven相依性 {#maven-dependencies-2}
 
 ```xml
 <dependency>
@@ -278,13 +278,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle Workflow客戶端包{#adobe-livecycle-workflow-client-bundle}
+### AdobeLiveCycle Workflow用戶端套件 {#adobe-livecycle-workflow-client-bundle}
 
 提供下列服務：
 
 * com.adobe.idp.workflow.client.WorkflowServiceClient
 
-#### Maven依賴項{#maven-dependencies-3}
+#### Maven相依性 {#maven-dependencies-3}
 
 ```xml
 <dependency>
@@ -294,13 +294,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle PDF Generator用戶端套件組合{#adobe-livecycle-pdf-generator-client-bundle}
+### Adobe LiveCycle PDF Generator用戶端套件 {#adobe-livecycle-pdf-generator-client-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient
 
-#### Maven依賴項{#maven-dependencies-4}
+#### Maven相依性 {#maven-dependencies-4}
 
 ```xml
 <dependency>
@@ -310,7 +310,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle應用程式管理器客戶端套件{#adobe-livecycle-application-manager-client-bundle}
+### AdobeLiveCycle應用程式管理器客戶端套件 {#adobe-livecycle-application-manager-client-bundle}
 
 提供下列服務：
 
@@ -318,7 +318,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 * com.adobe.livecycle.applicationmanager.client.ApplicationManager
 * com.adobe.livecycle.design.service.DesigntimeService
 
-#### Maven依賴項{#maven-dependencies-5}
+#### Maven相依性 {#maven-dependencies-5}
 
 ```xml
 <dependency>
@@ -328,13 +328,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle組合器客戶端包{#adobe-livecycle-assembler-client-bundle}
+### AdobeLiveCycle組合器客戶端套件 {#adobe-livecycle-assembler-client-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.assembler.client.AssemblerServiceClient
 
-#### Maven依賴項{#maven-dependencies-6}
+#### Maven相依性 {#maven-dependencies-6}
 
 ```xml
 <dependency>
@@ -344,13 +344,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle表單資料整合用戶端套件{#adobe-livecycle-form-data-integration-client-bundle}
+### AdobeLiveCycle表單資料整合用戶端套件 {#adobe-livecycle-form-data-integration-client-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.formdataintegration.client.FormDataIntegrationClient
 
-#### Maven依賴項{#maven-dependencies-7}
+#### Maven相依性 {#maven-dependencies-7}
 
 ```xml
 <dependency>
@@ -360,13 +360,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Forms用戶端套件組合{#adobe-livecycle-forms-client-bundle}
+### Adobe LiveCycle Forms用戶端套件 {#adobe-livecycle-forms-client-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.formsservice.client.FormsServiceClient
 
-#### Maven依賴項{#maven-dependencies-8}
+#### Maven相依性 {#maven-dependencies-8}
 
 ```xml
 <dependency>
@@ -376,13 +376,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Output用戶端套件組合{#adobe-livecycle-output-client-bundle}
+### Adobe LiveCycle Output用戶端套件 {#adobe-livecycle-output-client-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.output.client.OutputClient
 
-#### Maven依賴項{#maven-dependencies-9}
+#### Maven相依性 {#maven-dependencies-9}
 
 ```xml
 <dependency>
@@ -392,13 +392,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Reader Extensions用戶端套件組合{#adobe-livecycle-reader-extensions-client-bundle}
+### Adobe LiveCycle Reader Extensions用戶端套件 {#adobe-livecycle-reader-extensions-client-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.readerextensions.client.ReaderExtensionsServiceClient
 
-#### Maven依賴項{#maven-dependencies-10}
+#### Maven相依性 {#maven-dependencies-10}
 
 ```xml
 <dependency>
@@ -408,7 +408,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle權限管理器客戶端套件{#adobe-livecycle-rights-manager-client-bundle}
+### AdobeLiveCycle權限管理器客戶端套件 {#adobe-livecycle-rights-manager-client-bundle}
 
 提供下列服務：
 
@@ -420,7 +420,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 * com.adobe.livecycle.rightsmanagement.client.PolicyManager
 * com.adobe.livecycle.rightsmanagement.client.AbstractPolicyManager
 
-#### Maven依賴項{#maven-dependencies-11}
+#### Maven相依性 {#maven-dependencies-11}
 
 ```xml
 <dependency>
@@ -430,13 +430,13 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle簽名客戶端包{#adobe-livecycle-signatures-client-bundle}
+### AdobeLiveCycle簽名客戶端包 {#adobe-livecycle-signatures-client-bundle}
 
 提供下列服務：
 
 * com.adobe.livecycle.signatures.client.SignatureServiceClientInterface
 
-#### Maven依賴項{#maven-dependencies-12}
+#### Maven相依性 {#maven-dependencies-12}
 
 ```xml
 <dependency>
@@ -446,7 +446,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleTruststore客戶端包{#adobe-livecycle-truststore-client-bundle}
+### AdobeLiveCycleTruststore客戶端包 {#adobe-livecycle-truststore-client-bundle}
 
 提供下列服務：
 
@@ -455,7 +455,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 * com.adobe.truststore.dsc.CredentialService
 * com.adobe.truststore.dsc.CertificateService
 
-#### Maven依賴項{#maven-dependencies-13}
+#### Maven相依性 {#maven-dependencies-13}
 
 ```xml
 <dependency>
@@ -465,14 +465,14 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle儲存庫客戶端包{#adobe-livecycle-repository-client-bundle}
+### AdobeLiveCycle儲存庫客戶端套件 {#adobe-livecycle-repository-client-bundle}
 
 提供下列服務：
 
 * com.adobe.repository.bindings.ResourceRepository
 * com.adobe.repository.bindings.ResourceSynchronizer
 
-#### Maven依賴項{#maven-dependencies-14}
+#### Maven相依性 {#maven-dependencies-14}
 
 ```xml
 <dependency>
