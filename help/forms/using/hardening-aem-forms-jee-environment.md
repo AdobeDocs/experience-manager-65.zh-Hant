@@ -8,16 +8,16 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
-role: Administrator
+role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '7698'
+source-wordcount: '7696'
 ht-degree: 0%
 
 ---
 
-# 在JEE環境{#hardening-your-aem-forms-on-jee-environment}上強化AEM Forms
+# 在JEE環境中強化AEM Forms {#hardening-your-aem-forms-on-jee-environment}
 
 了解各種安全性強化設定，以增強AEM Forms在企業內部網路中執行的JEE安全性。
 
@@ -43,7 +43,7 @@ AEM Forms on JEE可提供高度自訂功能，且可在多種不同環境中運�
 
 如果您是在JBoss上使用統包方法在JEE上安裝AEM Forms，或是安裝PDF產生器，您應以管理員身分在Windows上執行安裝。 此外，在具有原生應用程式支援的Windows上安裝PDF產生器時，您必須以安裝Microsoft Office的相同Windows使用者身分執行安裝。 如需安裝權限的詳細資訊，請參閱*在JEE*上安裝和部署AEM Forms檔案，了解您的應用程式伺服器。
 
-### 網路層安全{#network-layer-security}
+### 網路層安全 {#network-layer-security}
 
 網路安全漏洞是任何面向網際網路或面向內聯網的應用伺服器面臨的首要威脅之一。 本節介紹針對這些漏洞強化網路上主機的過程。 它解決了網路分段、傳輸控制協定/網際網路協定(TCP/IP)棧強化以及使用防火牆進行主機保護等問題。
 
@@ -81,7 +81,7 @@ AEM Forms on JEE可提供高度自訂功能，且可在多種不同環境中運�
  </tbody> 
 </table>
 
-### 作業系統安全性{#operating-system-security}
+### 作業系統安全性 {#operating-system-security}
 
 下表說明一些將作業系統中發現的安全漏洞最小化的潛在方法。
 
@@ -149,13 +149,13 @@ AEM Forms on JEE可提供高度自訂功能，且可在多種不同環境中運�
  </tbody> 
 </table>
 
-## 安裝後步驟{#post-installation-steps}
+## 安裝後步驟 {#post-installation-steps}
 
 在JEE上成功安裝AEM Forms後，請務必從安全性的角度定期維護環境。
 
 以下部分詳細說明了為保護已部署的表單伺服器而建議執行的不同任務。
 
-### AEM Forms安全性{#aem-forms-security}
+### AEM Forms安全性 {#aem-forms-security}
 
 下列建議的設定適用於JEE伺服器上管理Web應用程式以外的AEM Forms。 若要降低伺服器的安全風險，請在JEE上安裝AEM Forms後立即套用這些設定。
 
@@ -275,7 +275,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 
 某些表單伺服器服務具有可由匿名調用者調用的操作。 如果不需要匿名訪問這些服務，請按照[禁用對服務的非必要匿名訪問](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步驟禁用它。
 
-#### 更改預設管理員密碼{#change-the-default-administrator-password}
+#### 更改預設管理員密碼 {#change-the-default-administrator-password}
 
 當安裝JEE上的AEM Forms時，會為使用者Super Administrator/ login-id Administrator設定單一預設使用者帳戶，其預設密碼為&#x200B;*password*。 您應使用Configuration Manager立即更改此密碼。
 
@@ -308,7 +308,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 1. 在&#x200B;**新密碼**&#x200B;欄位中指定新密碼，在&#x200B;**您的密碼**&#x200B;欄位中指定舊密碼。
 1. 按一下使用者介面右下角的「儲存」圖示。
 
-#### 禁用WSDL生成{#disable-wsdl-generation}
+#### 禁用WSDL生成 {#disable-wsdl-generation}
 
 只應為開發環境啟用Web服務定義語言(WSDL)生成，其中開發人員使用WSDL生成來構建其客戶端應用程式。 您可以選擇在生產環境中禁用WSDL生成，以避免顯示服務的內部詳細資訊。
 
@@ -321,7 +321,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 1. 按一下「**設定>核心繫統設定>配置**」。
 1. 取消選擇&#x200B;**啟用WSDL**，然後按一下&#x200B;**確定**。
 
-### 應用程式伺服器安全性{#application-server-security}
+### 應用程式伺服器安全性 {#application-server-security}
 
 下表說明在安裝JEE應用程式上的AEM Forms後，保護應用程式伺服器的一些技術。
 
@@ -348,13 +348,13 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
  </tbody> 
 </table>
 
-### 資料庫安全性{#database-security}
+### 資料庫安全 {#database-security}
 
 保護資料庫時，應實施資料庫供應商描述的度量。 您應將資料庫使用者配置為JEE上AEM Forms所授予之最低必要資料庫權限。 例如，請勿使用具有資料庫管理員權限的帳戶。
 
 在Oracle上，您使用的資料庫帳戶僅需要CONNECT、資源和建立視圖權限。 如需其他資料庫的類似需求，請參閱[準備在JEE（單一伺服器）上安裝AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)。
 
-#### 為JBoss {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}在Windows上配置SQL Server的整合安全
+#### 為JBoss在Windows上的SQL Server配置整合安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
 1. 修改[JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml}以將`integratedSecurity=true`添加到連接URL，如以下示例所示：
 
@@ -366,7 +366,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 1. 將「從本機系統登入」的JBoss Windows服務(JBoss for AEM Forms on JEE)屬性修改為具有AEM Forms資料庫且具有最低特權集的登入帳戶。 如果您是從命令列執行JBoss而非以Windows服務的形式執行，則不需要執行此步驟。
 1. 將SQL Server的安全性從&#x200B;**Mixed**&#x200B;模式設定為&#x200B;**Windows Authentication only**。
 
-#### 為Windows上的SQL Server配置WebLogic {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}的整合安全
+#### 為Windows上的SQL Server配置WebLogic的整合安全 {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}
 
 1. 在Web瀏覽器的URL行中鍵入以下URL，以啟動WebLogic Server管理控制台：
 
@@ -382,7 +382,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 1. 將sqljdbc_auth.dll檔案添加到運行應用程式伺服器的電腦上的Windows系統路徑。 sqljdbc_auth.dll檔案與Microsoft SQL JDBC 6.2.1.0驅動程式安裝一起位置。
 1. 將SQL Server的安全性從&#x200B;**Mixed**&#x200B;模式設定為&#x200B;**Windows Authentication only**。
 
-#### 為Windows上的SQL Server配置WebSphere {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}的整合安全
+#### 為Windows上的SQL Server配置WebSphere的整合安全 {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}
 
 在WebSphere上，只有使用外部SQL Server JDBC驅動程式時，才能配置整合安全，而不是使用嵌入WebSphere的SQL Server JDBC驅動程式。
 
@@ -399,7 +399,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能憑證上傳至JEE
 1. 選擇&#x200B;**此帳戶**&#x200B;並提供設定要使用的登錄帳戶所需的資訊。
 1. 將SQL Server上的安全性從&#x200B;**Mixed**&#x200B;模式設定為&#x200B;**Windows僅驗證**。
 
-### 保護對資料庫{#protecting-access-to-sensitive-content-in-the-database}中敏感內容的訪問
+### 保護對資料庫中敏感內容的訪問 {#protecting-access-to-sensitive-content-in-the-database}
 
 AEM Forms資料庫架構包含有關係統配置和業務流程的敏感資訊，應隱藏在防火牆後。 應將資料庫視為與表單伺服器相同的信任邊界內。 為防止資訊洩漏和業務資料失竊，資料庫管理員(DBA)必須配置該資料庫，以僅允許授權管理員訪問。
 
@@ -411,24 +411,24 @@ AEM Forms資料庫架構包含有關係統配置和業務流程的敏感資訊�
 
 有關供應商特定工具的資訊，請參閱[&quot;資料庫安全資訊&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
 
-### LDAP安全性{#ldap-security}
+### LDAP安全性 {#ldap-security}
 
 輕型目錄存取通訊協定(LDAP)目錄通常由JEE上的AEM Forms用作企業使用者和群組資訊的來源，以及執行密碼驗證的方式。 您應確保LDAP目錄已設定為使用安全通訊端層(SSL)，且JEE上的AEM Forms已設定為使用其SSL埠存取您的LDAP目錄。
 
-#### LDAP拒絕服務{#ldap-denial-of-service}
+#### LDAP拒絕服務 {#ldap-denial-of-service}
 
 使用LDAP的常見攻擊涉及攻擊者故意多次無法驗證。 這會強制LDAP目錄伺服器從所有依賴LDAP的服務中鎖定用戶。
 
 您可以設定當使用者重複無法向AEM Forms驗證時，AEM Forms會實作的失敗嘗試次數和後續鎖定時間。 在管理控制台中，選擇低值。 在選擇失敗嘗試次數時，請務必了解，在進行所有嘗試之後，AEM Forms會在LDAP目錄伺服器發生之前鎖定使用者。
 
-#### 設定自動帳戶鎖定{#set-automatic-account-locking}
+#### 設定自動帳戶鎖定 {#set-automatic-account-locking}
 
 1. 登入管理控制台。
 1. 按一下「**設定** > **用戶管理** > **域管理**」。
 1. 在「自動帳戶鎖定設定」下，將「最大連續身份驗證失敗數&#x200B;**」設定為低數，例如3。**
 1. 按一下「**儲存**」。
 
-### 審核和記錄{#auditing-and-logging}
+### 審核和記錄 {#auditing-and-logging}
 
 正確且安全地使用應用程式稽核和記錄有助於確保盡快追蹤和偵測安全及其他異常事件。 在應用程式內有效使用審核和日誌記錄包括跟蹤成功和失敗的登錄以及關鍵應用程式事件（如建立或刪除關鍵記錄）等項。
 
@@ -469,11 +469,11 @@ AEM Forms資料庫架構包含有關係統配置和業務流程的敏感資訊�
 
 1. 重新啟動AEM Forms執行個體。
 
-## 在JEE上設定AEM Forms以存取企業版以外的{#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
+## 在JEE上設定AEM Forms以存取企業以外的項目 {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
 在JEE上成功安裝AEM Forms後，請務必定期維護您環境的安全性。 本節說明建議哪些工作可維護JEE生產伺服器上AEM Forms的安全性。
 
-### 為Web訪問設定反向代理{#setting-up-a-reverse-proxy-for-web-access}
+### 設定反向代理以訪問Web {#setting-up-a-reverse-proxy-for-web-access}
 
 *反向Proxy*&#x200B;可用來確保JEE Web應用程式上AEM Forms的一組URL可供外部和內部使用者使用。 此設定比讓使用者直接連線至JEE上AEM Forms所執行的應用程式伺服器更安全。 反向代理會針對在JEE上執行AEM Forms的應用程式伺服器執行所有HTTP要求。 使用者只能透過網路存取反向代理，且只能嘗試反向代理支援的URL連線。
 
@@ -658,7 +658,7 @@ JEE Web應用程式上每個AEM Forms的下列應用程式根URL。 您應僅設
  </tbody> 
 </table>
 
-## 防止跨站請求偽造攻擊{#protecting-from-cross-site-request-forgery-attacks}
+## 防止跨網站請求偽造攻擊 {#protecting-from-cross-site-request-forgery-attacks}
 
 跨站請求偽造(CSRF)攻擊利用網站對用戶的信任來傳輸用戶未授權和無意的命令。 攻擊的設定方式是在網頁中包括連結或指令碼，或在電子郵件中包括URL，以訪問用戶已經通過身份驗證的其他站點。
 
@@ -678,7 +678,7 @@ AEM Forms on JEE使用反向連結篩選功能來封鎖CSRF攻擊。 本節使�
 * **允許的URI:** 這是可在不勾選反向連結標題的情況下提供的資源清單。不會導致伺服器狀態變更的資源（例如說明頁面）可以新增至此清單。 「允許的URI」清單中的資源不會遭到「反向連結篩選器」的封鎖，無論反向連結是誰。
 * **Null反向連結：** 未與上層網頁相關聯或並非源自上層網頁的伺服器要求，會視為來自Null反向連結的要求。例如，當您開啟新的瀏覽器視窗並輸入位址，然後按Enter鍵時，傳送至伺服器的反向連結為null。 向Web伺服器發出HTTP請求的案頭應用程式（.NET或SWING）也會向伺服器發送Null反向連結。
 
-### 反向連結篩選{#referer-filtering}
+### 反向連結篩選 {#referer-filtering}
 
 反向連結篩選程式可說明如下：
 
@@ -702,7 +702,7 @@ AEM Forms on JEE使用反向連結篩選功能來封鎖CSRF攻擊。 本節使�
    1. 如果允許Null反向連結，則會傳遞要求。
    1. 如果不允許Null反向連結，則伺服器會檢查所請求的URI是否為Null反向連結的例外，並相應地處理該請求。
 
-### 管理反向連結篩選{#managing-referer-filtering}
+### 管理反向連結篩選 {#managing-referer-filtering}
 
 AEM Forms on JEE提供「反向連結篩選器」，用以指定可存取您伺服器資源的反向連結。 依預設，反向連結篩選器不會篩選使用安全HTTP方法(例如GET)的請求，除非&#x200B;*CSRF_CHECK_GETS*&#x200B;設為true。 如果「允許的反向連結」項目的連接埠號設為0，無論連接埠號為何，JEE上的AEM Forms都會允許來自該主機的所有具有反向連結的請求。 如果未指定埠號，則僅允許來自預設埠80(HTTP)或埠443(HTTPS)的請求。 如果刪除允許的反向連結清單中的所有項目，則會停用反向連結篩選。
 
@@ -805,11 +805,11 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 * 如果客戶端可以在瀏覽器中工作，請嘗試該部署模型。
 * 您最後可以將資源添加到「允許的URI」清單。 這不是建議的設定。
 
-## 安全網路配置{#secure-network-configuration}
+## 安全網路配置 {#secure-network-configuration}
 
 本節說明AEM Forms on JEE所需的通訊協定和連接埠，並提供在JEE上以安全網路設定部署AEM Forms的建議。
 
-### AEM Forms在JEE上使用的網路通訊協定{#network-protocols-used-by-aem-forms-on-jee}
+### AEM Forms在JEE上使用的網路通訊協定 {#network-protocols-used-by-aem-forms-on-jee}
 
 如前一節所述，當您設定安全的網路架構時，若要在JEE上的AEM Forms與企業網路中的其他系統進行互動，需要下列網路通訊協定。
 
@@ -887,7 +887,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
  </tbody> 
 </table>
 
-### 應用程式伺服器的埠{#ports-for-application-servers}
+### 應用程式伺服器的埠 {#ports-for-application-servers}
 
 本節介紹支援的每種應用程式伺服器類型的預設埠（和備用配置範圍）。 內部防火牆上必須啟用或停用這些埠，具體取決於您要允許的網路功能，允許連接到在JEE上執行AEM Forms的應用程式伺服器的用戶端。
 
@@ -951,7 +951,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 有關AEM Forms在JEE上需要的WebSphere埠的資訊，請轉至WebSphere應用程式伺服器UI中的埠號設定。
 
-### 配置SSL {#configuring-ssl}
+### 設定SSL {#configuring-ssl}
 
 請參考JEE物理架構](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)上的[AEM Forms一節中所述的物理架構，您應為您打算使用的所有連線設定SSL。 具體來說，所有SOAP連線都必須透過SSL進行，以防止網路上曝光使用者憑證。
 
@@ -959,7 +959,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 如需如何將憑證匯入為AEM Forms伺服器設定的JVM(Java Virtual Machine)的指示，請參閱[AEM Forms Workbench說明](http://www.adobe.com/go/learn_aemforms_workbench_65)中的「相互驗證」一節。
 
-### 配置SSL重定向{#configuring-ssl-redirect}
+### 設定SSL重新導向 {#configuring-ssl-redirect}
 
 配置應用程式伺服器以支援SSL後，必須確保向應用程式和服務發送的所有HTTP通信都強制使用SSL埠。
 
@@ -985,15 +985,15 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
    保存並關閉standalone.xml檔案。
 
-## 特定於Windows的安全建議{#windows-specific-security-recommendations}
+## 特定於Windows的安全性建議 {#windows-specific-security-recommendations}
 
 本節包含在JEE上執行AEM Forms時，Windows專屬的安全性建議。
 
-### JBoss Service帳戶{#jboss-service-accounts}
+### JBoss Service帳戶 {#jboss-service-accounts}
 
 JEE上的AEM Forms統包安裝預設會使用本機系統帳戶來設定服務帳戶。 內建的本機系統使用者帳戶具備高水準的協助功能；它是管理員組的一部分。 如果工作進程標識以本地系統用戶帳戶的形式運行，則該工作進程可以完全訪問整個系統。
 
-#### 使用非管理帳戶{#run-the-application-server-using-a-non-administrative-account}運行應用程式伺服器
+#### 使用非管理帳戶運行應用程式伺服器 {#run-the-application-server-using-a-non-administrative-account}
 
 1. 在Microsoft管理控制台(MMC)中，建立表單伺服器服務的本地用戶以以下方式登錄：
 
@@ -1033,7 +1033,7 @@ JEE上的AEM Forms統包安裝預設會使用本機系統帳戶來設定服務�
 
 1. 啟動應用程式伺服器服務。
 
-### 檔案系統安全性{#file-system-security}
+### 檔案系統安全 {#file-system-security}
 
 AEM Forms on JEE使用檔案系統的方式如下：
 
@@ -1043,15 +1043,15 @@ AEM Forms on JEE使用檔案系統的方式如下：
 
 使用觀看的資料夾作為通過表單伺服器服務發送和接收文檔的方式時，請對檔案系統安全性採取額外的預防措施。 當使用者丟棄已觀看資料夾中的內容時，該內容會透過已觀看資料夾公開。 在這種情況下，服務不會驗證實際的最終用戶。 相反，它依賴在資料夾級別設定的ACL和共用級別安全性，以確定哪些人可以有效調用服務。
 
-## JBoss特定安全性建議{#jboss-specific-security-recommendations}
+## JBoss專屬安全性建議 {#jboss-specific-security-recommendations}
 
 本節包含在JEE上執行AEM Forms時，專屬於JBoss 7.0.6的應用程式伺服器設定建議。
 
-### 禁用JBoss管理控制台和JMX控制台{#disable-jboss-management-console-and-jmx-console}
+### 停用JBoss管理控制台和JMX主控台 {#disable-jboss-management-console-and-jmx-console}
 
 使用統包安裝方法在JBoss上於JEE安裝AEM Forms時，已設定存取JBoss管理主控台和JMX主控台的權限（已停用JMX監控）。 如果您使用自己的JBoss Application Server，請確保JBoss Management Console和JMX監控主控台的存取權受到保護。 對JMX監控控制台的訪問設定在名為jmx-invoker-service.xml的JBoss配置檔案中。
 
-### 禁用目錄瀏覽{#disable-directory-browsing}
+### 禁用目錄瀏覽 {#disable-directory-browsing}
 
 登入管理控制台後，可修改URL以瀏覽控制台的目錄清單。 例如，如果您將URL變更為下列其中一個URL，則可能會顯示目錄清單：
 
@@ -1060,11 +1060,11 @@ https://<servername>:8080/adminui/secured/
 https://<servername>:8080/um/
 ```
 
-## WebLogic特定安全建議{#weblogic-specific-security-recommendations}
+## WebLogic專屬安全性建議 {#weblogic-specific-security-recommendations}
 
 本節包含在JEE上執行AEM Forms時，用於保護WebLogic 9.1的應用程式伺服器設定建議。
 
-### 禁用目錄瀏覽{#disable_directory_browsing-1}
+### 禁用目錄瀏覽 {#disable_directory_browsing-1}
 
 將weblogic.xml檔案中的index-directories屬性設定為`false`，如以下示例所示：
 
@@ -1075,19 +1075,19 @@ https://<servername>:8080/um/
 </container-descriptor>
 ```
 
-### 啟用WebLogic SSL埠{#enable-weblogic-ssl-port}
+### 啟用WebLogic SSL埠 {#enable-weblogic-ssl-port}
 
 預設情況下，WebLogic不啟用預設SSL偵聽埠7002。 在配置SSL之前，請在WebLogic伺服器管理控制台中啟用此埠。
 
-## WebSphere特定安全建議{#websphere-specific-security-recommendations}
+## WebSphere特定安全建議 {#websphere-specific-security-recommendations}
 
 本節包含保護在JEE上執行AEM Forms之WebSphere的應用程式伺服器設定建議。
 
-### 禁用目錄瀏覽{#disable_directory_browsing-2}
+### 禁用目錄瀏覽 {#disable_directory_browsing-2}
 
 將ibm-web-ext.xml檔案中的`directoryBrowsingEnabled`屬性設定為`false`。
 
-### 啟用WebSphere管理安全{#enable-websphere-administrative-security}
+### 啟用WebSphere管理安全 {#enable-websphere-administrative-security}
 
 1. 登入WebSphere管理控制台。
 1. 在導航樹中，轉至&#x200B;**Security** > **Global Security**
