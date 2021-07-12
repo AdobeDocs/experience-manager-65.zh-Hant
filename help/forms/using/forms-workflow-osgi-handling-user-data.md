@@ -6,16 +6,16 @@ uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
-role: Administrator
+role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
 
 ---
 
-# Forms OSGi工作流程 |處理用戶資料{#forms-centric-workflows-on-osgi-handling-user-data}
+# Forms OSGi工作流程 |處理用戶資料 {#forms-centric-workflows-on-osgi-handling-user-data}
 
 以Forms為中心的AEM工作流程可讓您自動化以Forms為中心的實際業務流程。 工作流由一系列步驟組成，這些步驟按關聯工作流模型中指定的順序執行。 每個步驟都會執行特定動作，例如指派任務給使用者或傳送電子郵件訊息。 工作流程可與存放庫、使用者帳戶和服務中的資產互動。 因此，工作流程可以協調涉及任何Experience Manager方面的複雜活動。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 如需以Forms為中心的AEM工作流程和功能的詳細資訊，請參閱OSGi](/help/forms/using/aem-forms-workflow.md)上以Forms為中心的工作流程。[
 
-## 用戶資料和資料儲存{#user-data-and-data-stores}
+## 使用者資料和資料儲存 {#user-data-and-data-stores}
 
 觸發工作流程時，會自動為工作流程例項產生裝載。 每個工作流程例項都會獲指派一個唯一例項ID和一個相關聯的裝載ID。 裝載包含與工作流程例項相關聯的使用者和表單資料的存放庫位置。 此外，工作流程例項的草稿和歷史資料也會儲存在AEM存放庫中。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-## 訪問和刪除用戶資料{#access-and-delete-user-data}
+## 存取和刪除使用者資料 {#access-and-delete-user-data}
 
 您可以從存放庫的工作流程例項中存取和刪除使用者資料。 要達到此目的，您必須知道與使用者相關聯的工作流程例項的例項ID。 通過使用啟動工作流實例的用戶的用戶名或工作流實例的當前受託人，可以查找工作流實例的實例ID。
 
@@ -124,7 +124,7 @@ ht-degree: 0%
    >
    >AEM [!DNL Forms]應用程式也會以離線模式儲存資料。 工作流程例項的資料可能儲存在本機個別裝置上，並在應用程式與伺服器同步時提交至[!DNL Forms]伺服器。
 
-### 刪除用戶資料{#delete-user-data}
+### 刪除使用者資料 {#delete-user-data}
 
 您必須是AEM管理員，才能執行下列步驟，從工作流程例項刪除使用者資料：
 
