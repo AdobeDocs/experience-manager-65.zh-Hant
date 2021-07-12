@@ -8,9 +8,9 @@ topic-tags: installing
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1907'
 ht-degree: 4%
@@ -31,13 +31,13 @@ AEM Forms提供一套表單，可從使用者取得資料：適用性表單、HT
 
 AEM Forms是功能強大的企業級平台，資料擷取(適用性表單、PDF forms和HTML5 Forms)只是AEM Forms的其中一項功能。 如需功能的完整清單，請參閱[AEM Forms簡介](/help/forms/using/introduction-aem-forms.md)。
 
-## 部署拓撲{#deployment-topology}
+## 部署拓撲 {#deployment-topology}
 
 AEM Forms附加元件套件是部署至AEM的應用程式。 您至少需要一個AEM製作和AEM發佈執行個體，才能執行AEM Forms資料擷取功能。 建議使用以下拓撲來運行AEM Forms AEM Forms資料捕獲功能。 有關拓撲的詳細資訊，請參閱[AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md)的體系結構和部署拓撲。
 
 ![推薦拓撲](assets/recommended-topology.png)
 
-## 系統要求{#system-requirements}
+## 系統需求 {#system-requirements}
 
 開始安裝及設定AEM Forms的資料擷取功能前，請確定：
 
@@ -107,7 +107,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您至少需要一�
 
    * 里比庫
 
-## 安裝AEM Forms附加元件套件{#install-aem-forms-add-on-package}
+## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
 
 AEM Forms附加元件套件是部署至AEM的應用程式。 套件包含AEM Forms資料擷取和其他功能。 執行下列步驟以安裝附加元件套件：
 
@@ -124,7 +124,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 套件包含AEM For
 1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即重新啟動伺服器。** 停止AEM Forms伺服器之前，請等待ServiceEvent REGISTERED和ServiceEvent UNEGRESTED消息停止出現在檔 `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` 案中，並且日誌穩定。
 1. 在所有「製作」和「發佈」例項上重複步驟1至7。
 
-### （僅限Windows）自動安裝Visual Studio可轉散發套件{#automatic-installation-visual-studio-redistributables}
+### （僅限Windows）自動安裝Visual Studio可轉散發套件 {#automatic-installation-visual-studio-redistributables}
 
 如果您以提升模式安裝AEM執行個體，則會在安裝AEM Forms附加元件套件期間自動安裝遺失的Visual Studio可轉散發套件。
 
@@ -142,13 +142,13 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 套件包含AEM For
 
 `Privilege escalation check failed with error: <error message>`
 
-## 安裝後配置{#post-installation-configurations}
+## 安裝後配置 {#post-installation-configurations}
 
 AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCastle程式庫和序列化代理。 選用的設定包括設定Dispatcher、Forms入口網站、Adobe Sign、Adobe Analytics和Adobe Target。
 
-### 強制安裝後配置{#mandatory-post-installation-configurations}
+### 強制安裝後配置 {#mandatory-post-installation-configurations}
 
-#### 配置RSA和BuncyCastle庫{#configure-rsa-and-bouncycastle-libraries}
+#### 配置RSA和BouncyCastle庫  {#configure-rsa-and-bouncycastle-libraries}
 
 對所有製作和發佈執行個體執行下列步驟以引導委派程式庫：
 
@@ -166,7 +166,7 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 1. 儲存並關閉檔案，然後啟動AEM例項。
 1. 在所有「製作」和「發佈」例項上重複步驟1至4。
 
-#### 配置序列化代理{#configure-the-serialization-agent}
+#### 配置序列化代理 {#configure-the-serialization-agent}
 
 對所有製作和發佈執行個體執行下列步驟，將套件新增至允許清單：
 
@@ -175,7 +175,7 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 1. 將&#x200B;**sun.util.calendar**&#x200B;套件新增至&#x200B;**allowlist**&#x200B;欄位。 按一下「**儲存**」。
 1. 在所有「製作」和「發佈」例項上重複步驟1至3。
 
-### 可選安裝後配置{#optional-post-installation-configurations}
+### 可選安裝後配置 {#optional-post-installation-configurations}
 
 #### 設定Dispatcher {#configure-dispatcher}
 
@@ -193,7 +193,7 @@ Dispatcher是Adobe Experience Manager的快取和/或負載平衡工具，可與
 
    以管理員身分登入Apache Felix設定管理器。 配置管理器的預設URL為`https://[server]:[port_number]/system/console/configMgr`。 在&#x200B;**Configurations**&#x200B;功能表中，選取&#x200B;**Apache Sling Referrer Filter**&#x200B;選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許它作為反向連結，然後按一下「**儲存**」。 條目的格式為`https://[server]:[port]`。
 
-#### 配置快取{#configure-cache}
+#### 配置快取 {#configure-cache}
 
 快取是一種縮短資料存取時間、減少延遲並改善輸入/輸出(I/O)速度的機制。 適用性表單快取僅會儲存適用性表單的HTML內容和JSON結構，而不儲存任何預先填入的資料。 有助於縮短演算最適化表單所需的時間。
 
@@ -209,13 +209,13 @@ Dispatcher是Adobe Experience Manager的快取和/或負載平衡工具，可與
    >
    >若要停用快取，請將「適用性Forms數量」欄位中的值設為&#x200B;**0**。 當禁用或更改快取配置時，將重置快取，並從快取中刪除所有表單和文檔。
 
-#### 配置表單資料模型{#configure-ssl-communcation-for-form-data-model}的SSL通信
+#### 為表單資料模型配置SSL通訊 {#configure-ssl-communcation-for-form-data-model}
 
 您可以為表單資料模型啟用SSL通訊。 若要為表單資料模型啟用SSL通訊，請在啟動任何AEM Forms例項前，將憑證新增至所有例項的Java信任存放區。 您可以執行以下命令來新增憑證：&quot;
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
-#### 配置Adobe Sign {#configure-adobe-sign}
+#### 設定Adobe Sign {#configure-adobe-sign}
 
 Adobe Sign可啟用最適化表單的電子簽名工作流程。 電子簽名改進了處理法律、銷售、工資、人力資源管理等許多領域的文檔的工作流。
 
@@ -223,7 +223,7 @@ Adobe Sign可啟用最適化表單的電子簽名工作流程。 電子簽名改
 
 若要將Adobe Sign與AEM Forms搭配使用，[將Adobe Sign與AEM Forms整合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)。
 
-#### 配置Adobe Analytics {#configure-adobe-analytics}
+#### 設定Adobe Analytics {#configure-adobe-analytics}
 
 AEM Forms與Adobe Analytics整合，可讓您擷取及追蹤已發佈表單和檔案的效能量度。 分析這些量度的目的，是根據讓表單或檔案更實用所需的變更資料，做出明智的決策。
 
