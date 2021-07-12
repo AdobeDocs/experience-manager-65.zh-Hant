@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
-role: Administrator
+role: Admin
 exl-id: 36f2e3d2-46c7-48a8-a1e9-213f581bd9f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 1%
 
 ---
 
-# Communities控制台{#communities-consoles}
+# Communities主控台 {#communities-consoles}
 
 全域導覽面板提供作者環境中的AEM Communities主控台，可讓您存取管理工作，例如：
 
@@ -38,14 +38,14 @@ ht-degree: 1%
 >
 >在發佈環境中，當登入的成員具有適當權限時，[社群網站](sites-console.md)將顯示`Administration`菜單項。
 
-## 全局導航面板{#global-navigation-panel}
+## 全域導覽面板 {#global-navigation-panel}
 
 選取左上角的`Adobe Experience Manager`圖示，以開啟全域導覽面板並存取兩個圖示：
 
 * [導覽主控台](#navigation-console)
 * [工具主控台](tools.md)
 
-## 導航控制台{#navigation-console}
+## 導覽主控台 {#navigation-console}
 
 若要存取各種Communities主控台，請從全域導覽中選取&#x200B;**導覽， Communities**。
 
@@ -71,6 +71,6 @@ ht-degree: 1%
 
    「資源」控制台是在[啟用管理員](enablement.md#communitymanagers)建立、管理和為[啟用社區站點](overview.md#enablement-community)的成員分配資源的位置。 主控台僅適用於製作環境。
 
-## 工具控制台{#tools-console}
+## 工具主控台 {#tools-console}
 
 要從全局導航訪問[Communities工具](tools.md)（前稱為管理控制台），請執行以下操作：**[!UICONTROL 工具]** > **[!UICONTROL 社群]**
