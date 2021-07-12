@@ -8,16 +8,16 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
-role: Administrator
+role: Admin
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 0%
 
 ---
 
-# 在JEE {#configuring-secure-administration-settings-for-aem-forms-on-jee}上配置AEM Forms的安全管理設定
+# 配置JEE上AEM Forms的安全管理設定 {#configuring-secure-administration-settings-for-aem-forms-on-jee}
 
 了解如何管理使用者帳戶和服務，雖然這些是私人開發環境中的必要項目，但在JEE上的AEM Forms生產環境中並非必要項目。
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 本文透過AEM Forms on JEE提供的管理選項，說明減少整體攻擊面的方法。
 
-## 禁用對服務的非基本遠程訪問{#disabling-non-essential-remote-access-to-services}
+## 禁用對服務的非必需遠程訪問 {#disabling-non-essential-remote-access-to-services}
 
 在安裝和配置JEE上的AEM Forms後，許多服務都可用於通過SOAP和Enterprise JavaBeans™(EJB)進行遠程調用。在本例中，遠程術語是指任何對應用程式伺服器的SOAP、EJB或Action Message Format(AMF)埠具有網路訪問權限的調用方。
 
@@ -66,7 +66,7 @@ AEM Forms on JEE服務一律需要至少SOAP存取權。 這些服務通常為Wo
 
 1. 按一下「**下一步**」，然後對不在上述清單中的SOAP端點重複上一步。 移除端點之前，請確定SOAP列在「提供者」欄中。
 
-## 禁用對服務{#disabling-non-essential-anonymous-access-to-services}的非必需匿名訪問
+## 禁用對服務的非必需匿名訪問 {#disabling-non-essential-anonymous-access-to-services}
 
 某些表單伺服器服務允許對某些操作進行未驗證（匿名）的調用。 這意味著，可以作為任何已驗證用戶或完全沒有已驗證用戶調用由服務公開的一個或多個操作。
 
@@ -107,11 +107,11 @@ AEM Forms on JEE服務一律需要至少SOAP存取權。 這些服務通常為Wo
 
    對於任何不需要的服務，應禁用匿名訪問。 許多內部服務都要求啟用匿名身份驗證，因為這些身份驗證需要由系統中可能的任何用戶調用，而無需預先授權。
 
-## 更改預設全局超時{#changing-the-default-global-time-out}
+## 更改預設全局超時 {#changing-the-default-global-time-out}
 
 一般使用者可透過Workbench、AEM Forms Web應用程式或叫用AEM Forms伺服器服務的自訂應用程式，驗證AEM Forms。 一個全域逾時設定用來指定這些使用者在被迫重新驗證前，可與AEM Forms互動（使用SAML型斷言）的時間長度。 預設設定為2小時。 在生產環境中，時間量必須縮短至可接受的最小分鐘數。
 
-### 最小化重身份驗證時間限制{#minimize-reauthentication-time-limit}
+### 將重新驗證時間限制最小化 {#minimize-reauthentication-time-limit}
 
 1. 在網頁瀏覽器中輸入下列URL，登入管理主控台：
 
