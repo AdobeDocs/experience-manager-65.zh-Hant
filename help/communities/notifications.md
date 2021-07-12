@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 1%
 
 ---
 
-# 社區通知{#communities-notifications}
+# Communities通知 {#communities-notifications}
 
 ## 概覽 {#overview}
 
@@ -69,7 +69,7 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
 * 成員配置檔案已配置為允許其他成員遵循。
 
-## 來自以下的通知{#notifications-from-following}
+## 來自下列的通知 {#notifications-from-following}
 
 ![通知](assets/notifications.png)
 
@@ -88,7 +88,7 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
    * 遵循該特定項目的所有活動。
 
-## 管理通知設定{#managing-notification-settings}
+## 管理通知設定 {#managing-notification-settings}
 
 通過從「通知」頁中選擇「通知設定」連結，每個成員都可以管理接收通知的方式。
 
@@ -106,9 +106,9 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
 ![notifications3](assets/notifications3.png)
 
-## 查看通知{#viewing-notifications}
+## 檢視通知 {#viewing-notifications}
 
-### Web通知{#web-notifications}
+### Web通知 {#web-notifications}
 
 建立的[精靈社群網站](/help/communities/sites-console.md)現在包含橫幅上方網站標題列中`Notifications`功能的連結。 與訊息不同，會為每個社群網站建立通知，而訊息必須在網站建立程式期間啟用。
 
@@ -116,13 +116,13 @@ AEM Communities提供通知區段，顯示已登入社群成員感興趣的事�
 
 ![通知4](assets/notifications4.png)
 
-### 電子郵件通知{#email-notifications}
+### 電子郵件通知 {#email-notifications}
 
 啟用電子郵件通道時，成員會收到包含指向Web上內容的連結的電子郵件。
 
 ![通知5](assets/notifications5.png)
 
-## 自訂電子郵件通知{#customize-email-notifications}
+## 自訂電子郵件通知 {#customize-email-notifications}
 
 組織可以透過[覆蓋](/help/communities/client-customize.md#overlays)範本來自訂電子郵件通知，位於&#x200B;**/libs/settings/community/templates/email/html**。
 
