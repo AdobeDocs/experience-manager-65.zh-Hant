@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
-# AEM Communities中的使用者和UGC管理服務{#user-and-ugc-management-service-in-aem-communities}
+# AEM Communities中的使用者和UGC管理服務 {#user-and-ugc-management-service-in-aem-communities}
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ AEM Communities會公開API的現成可用功能，以管理使用者設定檔�
 
 這些API可執行下列功能。
 
-## 檢索用戶{#retrieve-the-ugc-of-a-user}的UGC
+## 擷取使用者的UGC {#retrieve-the-ugc-of-a-user}
 
 **getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)** 有助於從系統匯出使用者的所有UGC。
 
@@ -50,7 +50,7 @@ AEM Communities會公開API的現成可用功能，以管理使用者設定檔�
 
 `https://localhost:port/services/social/ugcmanagement?user=weston.mccall@dodgit.com&operation=getUgc`
 
-## 刪除用戶{#delete-the-ugc-of-a-user}的UGC
+## 刪除用戶的UGC {#delete-the-ugc-of-a-user}
 
 **deleteUserUgc(ResourceResolver resourceResolver, String user)** 有助於從系統中刪除某個使用者的所有UGC。
 
@@ -61,7 +61,7 @@ AEM Communities會公開API的現成可用功能，以管理使用者設定檔�
 * 使用者 = `weston.mccall@dodgit.com`
 * 操作 = `deleteUgc`
 
-### 從Adobe Analytics {#delete-ugc-from-adobe-analytics}刪除UGC
+### 從Adobe Analytics刪除UGC {#delete-ugc-from-adobe-analytics}
 
 若要從Adobe Analytics刪除使用者資料，請遵循[GDPR Analytics工作流程](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html);因為API不會從Adobe Analytics刪除使用者資料。
 
@@ -69,7 +69,7 @@ AEM Communities會公開API的現成可用功能，以管理使用者設定檔�
 
 ![AEM Communities變數對應至Adobe Analytics](assets/analytics-communities-mapping.png)
 
-## 禁用用戶帳戶{#disable-a-user-account}
+## 停用使用者帳戶 {#disable-a-user-account}
 
 **deleteUserAccount(ResourceResolver resourceResolver, String user)** 有助於停用使用者帳戶。
 
