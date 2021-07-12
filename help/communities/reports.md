@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 7%
 
 ---
 
-# 報表控制台{#reports-console}
+# 報表主控台 {#reports-console}
 
 ## 概覽 {#overview}
 
@@ -43,9 +43,9 @@ ht-degree: 7%
 
 表格報表可匯出為.csv格式，以供後續處理。
 
-## 報表主控台{#reporting-consoles}
+## 報表主控台 {#reporting-consoles}
 
-### 社群網站報表{#reports-for-community-sites}
+### 社群網站報表 {#reports-for-community-sites}
 
 * 從全局導航：**[!UICONTROL 導航]** > **[!UICONTROL Communities]** > **[!UICONTROL 報表]**
 
@@ -65,7 +65,7 @@ ht-degree: 7%
 
 ![報告](assets/reports1.png)
 
-### 啟用資源和學習路徑報表{#reports-for-enablement-resources-and-learning-paths}
+### 啟用資源和學習路徑報表 {#reports-for-enablement-resources-and-learning-paths}
 
 * 從全局導航：**[!UICONTROL 導航]** > **[!UICONTROL Communities]** > **[!UICONTROL 資源]**
 
@@ -178,11 +178,11 @@ ht-degree: 7%
 
 ## 疑難排解 {#troubleshooting}
 
-### 未列出社區站點{#no-community-sites-listed}
+### 未列出社區站點 {#no-community-sites-listed}
 
 如果未列出社群網站，請確定已為網站啟用Adobe Analytics。 如果選擇分配的報表，請確保分配函式位於社區站點的結構中。
 
-### 報表未顯示在AEM製作例項{#reports-do-not-show-in-aem-author-instance}中
+### 報表未顯示在AEM製作例項中 {#reports-do-not-show-in-aem-author-instance}
 
 如果報表未顯示在AEM製作例項中，請檢查是否有自訂項目，例如「發佈」例項上的URL對應。 如果僅在社群網站的AEM Publish例項上完成URL對應，請確定已在&#x200B;**網站趨勢報表社交元件工廠**&#x200B;設定的AEM Author例項中設定相同的URL對應。
 
