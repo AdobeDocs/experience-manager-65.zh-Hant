@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: ee94f093-fd14-49f2-9990-fbe853d924b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
 
 ---
 
-# 配置消息{#configure-messaging}
+# 配置消息 {#configure-messaging}
 
 ## 概覽 {#overview}
 
@@ -31,13 +31,13 @@ AEM Communities的傳訊功能可讓登入的網站訪客（成員）相互傳�
 
 如需開發人員的其他資訊，請參閱[Messaging Essentials](/help/communities/essentials-messaging.md)。
 
-## 報文傳送操作服務{#messaging-operations-service}
+## 報文傳送操作服務 {#messaging-operations-service}
 
 配置[AEM Communities報文傳送操作服務](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl)標識了處理報文傳送相關請求的端點、服務應用於儲存報文的資料夾，以及如果報文可能包含檔案附件，則允許哪些檔案類型。
 
 對於使用`Communities Sites console`建立的社群網站，服務的例項已存在，收件箱設定為`/mail/inbox`。
 
-### 社區消息傳送操作服務{#community-messaging-operations-service}
+### 社區消息傳送操作服務 {#community-messaging-operations-service}
 
 如下所示，使用[站點建立嚮導](/help/communities/sites-console.md)建立的站點存在服務的配置。 選取設定旁的鉛筆圖示，即可檢視或編輯設定。
 
@@ -135,7 +135,7 @@ AEM Communities的傳訊功能可讓登入的網站訪客（成員）相互傳�
 >
 >若要允許所有副檔名，除那些已列入封鎖名單的副檔名外，請使用「**-**」圖示以（再次）在按一下&#x200B;**Save**&#x200B;前移除單一空白項目。
 
-## 組消息{#group-messaging}
+## 群組訊息 {#group-messaging}
 
 若要允許註冊用戶向用戶組批量發送直接消息，請確保在以下兩個實例中&#x200B;**消息操作服務**&#x200B;配置中啟用組消息&#x200B;**:**
 
