@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
-role: Administrator
+role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 * 選擇&#x200B;**建立組**&#x200B;按鈕。
 
-### 步驟1:社區組模板{#step-community-group-template}
+### 步驟1:社群群組範本 {#step-community-group-template}
 
 ![多語言社群群組](assets/multi-lingual-group.png)
 
@@ -107,9 +107,9 @@ ht-degree: 2%
 
    使用下拉式清單選擇可用的[社群群組範本](/help/communities/tools.md)。
 
-### 步驟2:設計{#step-design}
+### 步驟2:設計 {#step-design}
 
-### 社區組主題{#community-group-theme}
+### 社群群組主題 {#community-group-theme}
 
 ![社區群主題](assets/communitygrouptheme.png)
 
@@ -121,7 +121,7 @@ ht-degree: 2%
 
 發佈社群網站後，可以[編輯屬性](#modifyinggroupproperties)並選取不同的主題。
 
-### 社群群組品牌{#community-group-branding}
+### 社群群品牌推廣 {#community-group-branding}
 
 ![社群品牌](assets/community-group-branding.png)
 
@@ -138,7 +138,7 @@ ht-degree: 2%
    * 小於瀏覽器的寬度，影像會水準重複。
    * 大於瀏覽器的寬度，影像就會看起來被裁切。
 
-### 步驟3:設定{#step-settings}
+### 步驟3:設定 {#step-settings}
 
 **協調**
 
@@ -188,7 +188,7 @@ ht-degree: 2%
 
 ![縮圖 — 影像](assets/thumbnail-image.png)
 
-### 步驟4:建立組{#step-create-group}
+### 步驟4:建立群組 {#step-create-group}
 
 ![community-create-group](assets/community-create-group.png)
 
@@ -204,13 +204,13 @@ ht-degree: 2%
 >
 >組以所有語言建立，如[步驟1中所指定：在各個社區站點的社區組控制台中，以其他可用的社區組語言顯示社區組模板](/help/communities/groups.md#step-community-group-template)。
 
-## 作者群組內容{#author-group-content}
+## 作者群組內容 {#author-group-content}
 
 ![開放網站](assets/open-site.png)
 
 群組的頁面內容可以使用與任何其他AEM頁面相同的工具進行製作。 若要開啟群組以進行製作，請選取將游標移至群組卡片時顯示的「開啟網站」圖示。
 
-## 修改組屬性{#modify-group-properties}
+## 修改組屬性 {#modify-group-properties}
 
 在社區組建立過程中指定的現有子社區站點的屬性可以通過選擇「編輯站點」表徵圖來修改，該表徵圖在將游標暫留在組卡上時顯示：
 
@@ -220,7 +220,7 @@ ht-degree: 2%
 
 ![社群群組基本](assets/community-group-basic.png)
 
-### 修改基本{#modify-basic}
+### 修改基本 {#modify-basic}
 
 BASIC面板允許修改
 
@@ -233,7 +233,7 @@ BASIC面板允許修改
 
 相反，可以修改子社區的[STRUCTURE](#modify-structure)。
 
-### 修改結構{#modify-structure}
+### 修改結構 {#modify-structure}
 
 「結構」面板允許修改最初從從作者或發佈環境建立子社區站點時選定的社區組模板建立的結構。 從面板，您可以：
 
@@ -265,7 +265,7 @@ BASIC面板允許修改
 
 ![community-group-add-calendar](assets/community-group-add-calendar.png)
 
-### 修改設計{#modify-design}
+### 修改設計 {#modify-design}
 
 「設計」面板允許修改主題：
 
@@ -274,19 +274,19 @@ BASIC面板允許修改
 
    * 捲動至面板底部以變更品牌影像。
 
-### 修改設定{#modify-settings}
+### 修改設定 {#modify-settings}
 
 「設定」面板可讓您新增社群[協調者](#moderation)。
 
-### 修改成員資格{#modify-membership}
+### 修改成員資格 {#modify-membership}
 
 [MEMBERSHIP](#membership)面板僅供參考。 無法更改已建立的組成員類型，無論是可選、必需還是受限。
 
-### 修改縮圖{#modify-thumbnail}
+### 修改縮圖 {#modify-thumbnail}
 
 [THUMBNAIL](#thumbnail)面板可讓上傳影像，以在發佈環境以及製作環境中的社群網站群組主控台中，呈現社群群組給網站訪客。
 
-## 發佈組{#publish-the-group}
+## 發佈群組 {#publish-the-group}
 
 ![發佈網站](assets/publish-site.png)
 
@@ -302,7 +302,7 @@ BASIC面板允許修改
 >
 >社群網站和巢狀群組應由上而下發佈。
 
-## 刪除組{#delete-the-group}
+## 刪除群組 {#delete-the-group}
 
 ![刪除圖示](assets/deleteicon.png)
 
