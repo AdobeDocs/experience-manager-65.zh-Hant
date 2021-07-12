@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: e65925ff-1fbf-4da6-bf09-0cf056c86e5a
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 3%
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 按一下![aem6forms_search](assets/aem6forms_search.png)以顯示或隱藏搜尋面板。
 
-## 基本搜索{#basic-search}
+## 基本搜尋 {#basic-search}
 
 基本搜索是預設搜索，運行時不指定任何篩選器。 中繼資料屬性的全文搜尋由AEM Forms執行。
 
@@ -45,7 +45,7 @@ Adobe Experience Manager會在中繼資料屬性中搜尋輸入的文字，並�
 
 * 如果元資料屬性中欄位的資料和顯示值不同，則不能將顯示值用作搜索參數。 例如，您無法根據狀態（如已修改或已發佈）進行搜索，因為這些屬性以不同的格式儲存。
 
-## 高級搜索{#advanced-search}
+## 進階搜尋 {#advanced-search}
 
 在搜索標準中，除了查詢之外，還可以指定一些搜索參數，使基本搜索更加高效和集中。
 
