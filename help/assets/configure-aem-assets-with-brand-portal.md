@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 feature: 品牌入口網站
-role: Administrator
+role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2086'
 ht-degree: 9%
@@ -241,7 +241,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    The API Key, Client Secret key, and JWT payload information will be used to create IMS account configuration.
 -->
 
-### 配置IMS帳戶{#create-ims-account-configuration}
+### 設定IMS帳戶 {#create-ims-account-configuration}
 
 請確認您已執行下列步驟：
 
@@ -351,14 +351,14 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 如需詳細資訊，請參閱[Brand Portal檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/home.html)。
 
 
-## 升級配置{#upgrade-integration-65}
+## 升級配置 {#upgrade-integration-65}
 
 請依所列順序執行下列步驟，將您現有的設定升級至Adobe開發人員控制台：
 1. [驗證正在運行的作業](#verify-jobs)
 1. [刪除現有配置](#delete-existing-configuration)
 1. [建立設定](#configure-new-integration-65)
 
-### 驗證正在運行的作業{#verify-jobs}
+### 驗證正在運行的作業 {#verify-jobs}
 
 進行任何修改之前，請確定您的AEM Assets製作執行個體上未執行任何發佈工作。 為此，您可以驗證所有四個複製代理上活動作業的狀態，並確保隊列處於空閒狀態。
 
@@ -372,11 +372,11 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 找出您Brand Portal租用戶的復寫代理。
 
-   確保所有復寫代理的&#x200B;**Queue均為Idle**，沒有任何發佈作業處於活動狀態。
+   確保所有復寫代理的&#x200B;**Queue均為Idle**，則沒有任何發佈作業處於活動狀態。
 
    ![](assets/test-integration3.png)
 
-### 刪除現有配置{#delete-existing-configuration}
+### 刪除現有配置 {#delete-existing-configuration}
 
 刪除現有配置時，必須運行以下檢查清單：
 * 刪除所有四個複製代理
