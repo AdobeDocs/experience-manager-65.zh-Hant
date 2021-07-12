@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 0%
 
 ---
 
-# ASRP -Adobe儲存資源提供程式{#asrp-adobe-storage-resource-provider}
+# ASRP -Adobe儲存資源提供程式 {#asrp-adobe-storage-resource-provider}
 
 ## 關於ASRP {#about-asrp}
 
@@ -73,23 +73,23 @@ ht-degree: 0%
 
 * 請確定設定檔資料的網站URL可透過[將連結外部化](#externalize-links)從資料中心路由。
 
-### 複製加密密鑰{#replicate-the-crypto-key}
+### 複製加密密鑰 {#replicate-the-crypto-key}
 
 使用者金鑰和密鑰已加密。 為了正確加密/解密金鑰，所有AEM例項上的主要Granite Crypto金鑰必須相同。
 
 按照[複製加密密鑰](/help/communities/deploy-communities.md#replicate-the-crypto-key)中的說明操作。
 
-### 將連結外部化{#externalize-links}
+### 將連結外部化 {#externalize-links}
 
 要獲得正確的配置檔案和配置檔案影像連結，請確保正確[配置連結外部化程式](/help/sites-developing/externalizer.md)。
 
 請務必將網域設定為可從資料中心URL（ASRP端點）路由的URL。
 
-### 時間同步{#time-synchronization}
+### 時間同步 {#time-synchronization}
 
 為了成功與ASRP端點進行身份驗證，運行托管AEM Communities的電腦必須進行時間同步，例如與[網路時間協定(NTP)](https://www.ntp.org/)同步。
 
-### 發佈配置{#publishing-the-configuration}
+### 發佈設定 {#publishing-the-configuration}
 
 ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
@@ -103,7 +103,7 @@ ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
 * 取消選擇&#x200B;**僅修改**
 * 選擇&#x200B;**激活**
 
-## 從AEM 6.0 {#upgrading-from-aem}升級
+## 從AEM 6.0升級 {#upgrading-from-aem}
 
 >[!CAUTION]
 >
@@ -113,7 +113,7 @@ ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
 由於新的儲存結構，從社交社群升級為社群時，必須遵循[upgrade](/help/communities/upgrade.md#adobe-cloud-storage)指示。
 
-## 管理用戶資料{#managing-user-data}
+## 管理使用者資料 {#managing-user-data}
 
 如需&#x200B;*users*、*user profiles*&#x200B;和&#x200B;*user groups*&#x200B;的相關資訊，通常在發佈環境中輸入，請瀏覽
 
@@ -122,23 +122,23 @@ ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
 ## 疑難排解 {#troubleshooting}
 
-### 升級{#ugc-disappears-after-upgrade}後UGC消失
+### 升級後UGC消失 {#ugc-disappears-after-upgrade}
 
 如果從現有AEM 6.0社交社群網站升級，請務必遵循[升級指示](/help/communities/upgrade.md#adobe-cloud-storage)，否則UGC似乎會遺失。
 
-### 驗證錯誤{#authentication-errors}
+### 驗證錯誤 {#authentication-errors}
 
 如果收到資料中心URL的驗證錯誤，且AEM error.log包含有關過時時間戳的訊息，請驗證是否發生時間同步。
 
 使用[網路時間協定(NTP)](https://www.ntp.org/)等工具，將所有AEM作者和發佈伺服器同步化。
 
-### 搜尋{#new-content-does-not-appear-in-searches}中未顯示新內容
+### 搜尋中未出現新內容 {#new-content-does-not-appear-in-searches}
 
 Adobe雲儲存基礎架構使用&#x200B;*最終一致性*&#x200B;來實現其擴展和效能目標。 因此，新內容無法立即使用，而且需要數秒的時間才會顯示在搜尋結果中。
 
 當監控影響最終一致性的間隔時間時，如果新內容出現在搜尋中所花的時間超過幾秒，請連絡您的帳戶代表。
 
-### ASRP {#ugc-not-visible-in-asrp}中不顯示UGC
+### UGC在ASRP中不可見 {#ugc-not-visible-in-asrp}
 
 檢查儲存選項的配置，確保ASRP已配置為預設提供程式。 預設情況下，儲存資源提供者為JSRP，而非ASRP。
 
