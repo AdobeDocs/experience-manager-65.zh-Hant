@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 feature: 內容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 76f3a684-027d-4822-9eb4-220fc96956e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 20%
@@ -23,7 +23,7 @@ ht-degree: 20%
 
 內容片段模型定義[內容片段](/help/assets/content-fragments/content-fragments.md)的內容結構。
 
-## 啟用內容片段模型{#enable-content-fragment-models}
+## 啟用內容片段模型 {#enable-content-fragment-models}
 
 >[!CAUTION]
 >
@@ -34,7 +34,7 @@ ht-degree: 20%
 * 在[設定瀏覽器](/help/sites-administering/configurations.md)中啟用內容片段模型的使用
 * 將設定套用至資產資料夾
 
-### 在Configuration Manager {#enable-content-fragment-models-in-configuration-manager}中啟用內容片段模型
+### 在Configuration Manager中啟用內容片段模型 {#enable-content-fragment-models-in-configuration-manager}
 
 若要[建立新的內容片段模型](#creating-a-content-fragment-model)，您&#x200B;**必須**&#x200B;先使用Configuration Manager啟用它們：
 
@@ -55,13 +55,13 @@ ht-degree: 20%
 
 <!-- 1. Select the location appropriate to your website. -->
 
-### 將設定套用至資產資料夾{#apply-the-configuration-to-your-assets-folder}
+### 將設定套用至資產資料夾 {#apply-the-configuration-to-your-assets-folder}
 
 為內容片段模型啟用設定&#x200B;**global**&#x200B;時，使用者建立的任何模型都可用於任何「資產」資料夾。
 
 若要搭配可比的「資產」檔案夾使用其他設定 (例如排除全域)，您必須定義連線。這是使用適當資 **料夾「資** 料夾屬性 **」的「雲端服務** 」標籤中的「 **設定** 」來完成的。
 
-## 建立內容片段模型{#creating-a-content-fragment-model}
+## 建立內容片段模型 {#creating-a-content-fragment-model}
 
 1. 導覽至&#x200B;**工具**、**資產**，然後開啟&#x200B;**內容片段模型**。
 1. 導覽至適合您的[configuration](#enable-content-fragment-models)的資料夾。
@@ -77,7 +77,7 @@ ht-degree: 20%
 
 1. 使用&#x200B;**Create**&#x200B;保存空模型。 訊息會指出動作是否成功，您可以選取&#x200B;**開啟**&#x200B;以立即編輯模型，或選取&#x200B;**完成**&#x200B;以返回主控台。
 
-## 定義內容片段模型{#defining-your-content-fragment-model}
+## 定義內容片段模型 {#defining-your-content-fragment-model}
 
 內容片段模型有效地定義了產生的內容片段的結構。 使用模型編輯器，可以添加和配置必需欄位：
 
@@ -132,7 +132,7 @@ ht-degree: 20%
 
    ![cfm-6420-14](assets/cfm-6420-14.png)
 
-## 刪除內容片段模型{#deleting-a-content-fragment-model}
+## 刪除內容片段模型 {#deleting-a-content-fragment-model}
 
 >[!CAUTION]
 刪除內容片段模型可能會影響相依片段。
@@ -147,7 +147,7 @@ ht-degree: 20%
    >[!NOTE]
    如果參考模型，則會發出警告。 採取適當行動。
 
-## 發佈內容片段模型{#publishing-a-content-fragment-model}
+## 發佈內容片段模型 {#publishing-a-content-fragment-model}
 
 發佈任何相依內容片段時/之前，必須發佈內容片段模型。
 
