@@ -9,18 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
-role: Administrator
+role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 2%
 
 ---
 
-# SRP {#solr-configuration-for-srp}的Solr配置
+# SRP的Solr配置 {#solr-configuration-for-srp}
 
-## AEM平台解決方案{#solr-for-aem-platform}
+## AEM平台解決方案 {#solr-for-aem-platform}
 
 [Apache Solr](https://lucene.apache.org/solr/)安裝可在[node store](../../help/sites-deploying/data-store-config.md)(Oak)和[common store](working-with-srp.md)(SRP)之間使用不同集合來共用。
 
@@ -46,7 +46,7 @@ ht-degree: 2%
    * [安裝標準MLS](#installing-standard-mls)
    * [安裝進階MLS](#installing-advanced-mls)
 
-## SolrCloud模式{#solrcloud-mode}
+## SolrCloud模式 {#solrcloud-mode}
 
 [](https://cwiki.apache.org/confluence/display/solr/SolrCloud) 建議將SolrCloudmode用於生產環境。在SolrCloud模式下運行時，必須先安裝並配置SolrCloud，然後才能安裝多語言搜索(MLS)。
 
@@ -57,17 +57,17 @@ ht-degree: 2%
 
 還建議配置JVM以優化記憶體使用和垃圾回收。
 
-### JVM配置示例{#jvm-configuration-example}
+### JVM配置示例 {#jvm-configuration-example}
 
 ```shell
 JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"
 ```
 
-### SolrCloud安裝命令{#solrcloud-setup-commands}
+### SolrCloud設定命令 {#solrcloud-setup-commands}
 
 在SolrCloud模式下運行時，在MLS安裝之前，必須使用並了解以下SolrCloud設定命令。
 
-#### 1.將配置上載到ZooKeeper {#upload-a-configuration-to-zookeeper}
+#### 1.將設定上傳至ZooKeeper {#upload-a-configuration-to-zookeeper}
 
 參考資料：
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
@@ -80,7 +80,7 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 -solrhome *solr-home-path* \
 -confdir *config-dir*
 
-#### 2.建立集合{#create-a-collection}
+#### 2.建立集合 {#create-a-collection}
 
 參考資料：
 [https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
@@ -94,7 +94,7 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 -s *number-of-shards&lt;a1/* \
 -rf *number-of-replicas*
 
-#### 3.將集合連結到配置集{#link-a-collection-to-a-configuration-set}
+#### 3.將集合連結至設定集 {#link-a-collection-to-a-configuration-set}
 
 將集合連結到已上載到ZooKeeper的配置。
 
@@ -108,7 +108,7 @@ sh 。/scripts/cloud-scripts/zkcli.sh \
 -collection *mycollection-name* \
 -confname *myconfig-name*
 
-### 標準與高級MLS {#comparison-of-standard-and-advanced-mls}的比較
+### 標準與進階MLS的比較 {#comparison-of-standard-and-advanced-mls}
 
 AEM Communities的多語言搜尋(MLS)是為Solr平台所建置，可改善所有支援語言（包括英文）的搜尋。
 
@@ -142,7 +142,7 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 | 芬蘭文 | 拉脫維亞文 | 泰語 |
 | 法文 | 立陶宛文 | 土耳其文 |
 
-#### AEM 6.1 Solr搜尋、標準MLS和進階MLS {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}的比較
+#### AEM 6.1 Sols搜尋、標準MLS和進階MLS的比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
 **注意**:AEM 6.1是指AEM 6.1 Communities FP3及舊版。
 
@@ -216,7 +216,7 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 1. 重新啟動Solr。
 1. 若為MSRP，請執行[MSRP重新索引工具](#msrpreindextool)，除非這是新安裝。
 
-### 安裝高級MLS {#installing-advanced-mls}
+### 安裝進階MLS {#installing-advanced-mls}
 
 為了支援進階MLS,SRP收集（MSRP或DSRP），除了自訂結構和Solr組態外，還需要新的Solr外掛程式。 所有必要項目都封裝成可下載的zip檔案。 此外，還包括安裝指令碼，以便在獨立模式部署Solr時使用。
 
@@ -281,7 +281,7 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 
 1. 若為MSRP，請執行[MSRP重新索引工具](#msrpreindextool)，除非這是新安裝。
 
-#### 獨立模式 — 高級MLS {#standalone-mode-advanced-mls}
+#### 獨立模式 — 進階MLS {#standalone-mode-advanced-mls}
 
 進階MLS套件中包含安裝指令碼。
 
