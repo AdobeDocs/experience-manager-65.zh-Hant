@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2548'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 
 
-## 下載或上傳Forms和檔案資產{#download-or-upload-forms-amp-documents-assets}
+## 下載或上傳Forms和檔案資產 {#download-or-upload-forms-amp-documents-assets}
 
 AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下載資產，以從AEM執行個體匯出資產。 然後，您可以將下載的AEM CRX套件或二進位檔案匯入另一個AEM例項。
 
@@ -38,7 +38,7 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
 
 對於這些資產類型，您必須使用AEM Package Manager在來源AEM伺服器上建立CRX套件，並在目標伺服器上安裝套件。 有關建立和安裝包的資訊，請參閱[使用包](/help/sites-administering/package-manager.md)。
 
-### 下載Forms和檔案資產{#download-forms-amp-documents-assets}
+### 下載Forms和檔案資產 {#download-forms-amp-documents-assets}
 
 若要下載Forms和檔案資產：
 
@@ -59,7 +59,7 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
    >
    >AEM套件和二進位檔案都會以封存檔（.zip檔案）的形式下載。 系統不會隨資產下載資產的範本。 您需要個別匯出資產範本。
 
-### 上傳Forms和檔案資產{#upload-forms-amp-documents-assets}
+### 上傳Forms和檔案資產 {#upload-forms-amp-documents-assets}
 
 上傳Forms和檔案資產：
 
@@ -78,11 +78,11 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
    >
    >上傳套件不會取代現有的資料夾階層。 例如，如果您有一個名為「培訓」的最適化表單，位置為/content/dam/formsanddocuments ，位於一台伺服器上。 您可以下載最適化表單，然後在其他伺服器上傳表單。 第二台伺服器的相同位置/content/dam/formsanddocuments也有一個名為「Training」的資料夾。 上傳失敗。
 
-## 下載或上傳主題{#downloading-or-uploading-a-theme}
+## 下載或上傳主題 {#downloading-or-uploading-a-theme}
 
 使用AEM Forms，您可以建立、下載或上傳主題。 主題的建立方式與其他資產（如表單、檔案和信函）相同。 您可以建立主題、下載主題，然後將其上傳至個別例項以重複使用。 有關主題的詳細資訊，請參閱[AEM Forms中的主題](../../forms/using/themes.md)。
 
-### 下載主題{#downloading-a-theme}
+### 下載主題 {#downloading-a-theme}
 
 您可以匯出AEM Forms中可用於其他專案或例項的主題。 AEM可讓您以zip檔案的形式下載主題，以便上傳至執行個體。
 
@@ -92,7 +92,7 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
 1. 點選「Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>Forms>主題」。
 1. 選取主題，然後點選&#x200B;**Download**。 主題會下載為封存（.zip檔案）。
 
-### 上傳主題{#uploading-a-theme}
+### 上傳主題 {#uploading-a-theme}
 
 您可以在專案上使用具有樣式預設集的已建立主題。 您可以在您的專案上上傳其他人建立的主題套件，借此匯入這些套件。
 
@@ -107,11 +107,11 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
 1. 點選「Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)圖示>導覽![compass](assets/compass.png)圖示>Forms>主題」。
 1. 按一下「**建立** > **檔案上傳**」。 在「檔案上載」提示符中，瀏覽並選擇電腦上的主題包，然後按一下&#x200B;**Upload**。 主題已上傳。
 
-## 在通信管理{#import-and-export-assets-in-correspondence-management}中匯入和匯出資產
+## 在通信管理中匯入和匯出資產 {#import-and-export-assets-in-correspondence-management}
 
 若要在通信管理的兩個不同實施之間共用資產，例如資料字典、字母和檔案片段，您可以建立和共用.cmp檔案。 .cmp檔案可包含一或多個資料字典、字母、檔案片段和表單。
 
-### 導出文檔片段、字母和/或資料字典{#export-document-fragments-letters-and-or-data-dictionaries}
+### 匯出檔案片段、字母和/或資料字典 {#export-document-fragments-letters-and-or-data-dictionaries}
 
 1. 在信函、檔案片段或資料字典頁面中，點選並選取您要匯出至單一套件的資產，然後點選「佇列以供下載」。 這些資產排成了出口的隊伍。
 1. 視需要，重複上述步驟以新增字母、檔案片段和資料字典。
@@ -126,7 +126,7 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
 
    .cmp檔案包含匯出的資產。 您可以與其他人共用.cmp檔案。 其他使用者可以匯入不同伺服器中的.cmp檔案，以取得新伺服器中的所有資產。
 
-### 將所有通信管理資產匯出為套件{#export-all-the-correspondence-management-assets-as-a-package}
+### 將所有通信管理資產匯出為套件 {#export-all-the-correspondence-management-assets-as-a-package}
 
 使用此選項，從AEM Forms例項以套件形式下載所有通信管理資產和相關相依性。
 
@@ -157,7 +157,7 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
 
    若要將套件中的資產新增至通信管理的另一個例項，請[將套件匯入至AEM Forms例項](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
 
-### 將文檔片段、字母和/或資料字典導入通信管理{#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
+### 將檔案片段、信函和/或資料字典匯入通信管理 {#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
 
 您可以匯入匯出至.cmp檔案的資產。 .cmp檔案可以有一或多個字母、資料字典、檔案片段和相依資產。
 
@@ -177,7 +177,7 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
    >
    >若要上傳XDP（作為cmp檔案或其他檔案的一部分），您必須是表單功能使用者群組的成員。 如需存取權限，請聯絡管理員。
 
-## 導出工作流應用程式{#export-a-workflow-application}
+## 匯出工作流程應用程式 {#export-a-workflow-application}
 
 您可以使用AEM套件管理器來匯出工作流程應用程式。 此程式如下所列：
 
@@ -195,13 +195,13 @@ AEM Forms使用者介面可讓您以AEM CRX套件或二進位檔案的形式下�
    >
    >為了使工作流應用程式能夠正常工作，還導出了相應的最適化表單和工作流模型。
 
-## 資料夾和組織資產{#folders-and-organizing-assets}
+## 資料夾和組織資產 {#folders-and-organizing-assets}
 
 AEM Forms使用者介面使用資料夾來排列資產。 這些資料夾可用來排列在AEM Forms使用者介面中建立的資產。 您可以重新命名、建立子資料夾，以及儲存這些資料夾中的資產和檔案。 在資料夾中組織檔案和資產可讓您將檔案分組，以方便管理。 您可以選取資料夾，然後選擇下載或刪除資料夾。
 
 若要建立資料夾，請完成下列步驟：
 
-### 建立資料夾{#create-a-folder}
+### 建立資料夾 {#create-a-folder}
 
 1. 登入`https://<server>:<port>/aem/forms.html`的AEM Forms使用者介面。
 1. 導覽至您要建立資料夾的位置。
@@ -223,7 +223,7 @@ AEM Forms使用者介面使用資料夾來排列資產。 這些資料夾可用�
 
    ![editdeletedownloadoldafolder](assets/editdeletedownloadafolder.png)
 
-### 建立一個或多個資產或字母的副本{#create-copies-of-one-or-more-assets-or-letters}
+### 建立一或多個資產或信函的復本 {#create-copies-of-one-or-more-assets-or-letters}
 
 您可以使用現有資產和信函，快速建立具有類似屬性、內容及繼承資產的資產和信函。 您可以複製和貼上資料字典、檔案片段和字母。
 
