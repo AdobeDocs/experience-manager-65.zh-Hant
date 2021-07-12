@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
 feature: 內容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: b204df18-2aef-4905-82f8-c777928ba828
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1975'
 ht-degree: 4%
@@ -59,7 +59,7 @@ Adobe Experience Manager(AEM)內容片段可讓您設計、建立、組織及[�
 
 然後，可組合這些內容片段，以透過各種管道提供體驗。
 
-## 內容片段與內容服務{#content-fragments-and-content-services}
+## 內容片段與內容服務 {#content-fragments-and-content-services}
 
 AEM Content Services的設計目的，是為了將AEM中/來自的內容的說明和傳送，歸納為網頁上的重點以外。
 
@@ -97,7 +97,7 @@ AEM內容片段可用來說明及管理結構化內容。 結構化內容定義�
 >
 >AEM也支援片段內容的翻譯。 如需詳細資訊，請參閱[建立內容片段的翻譯專案](/help/assets/creating-translation-projects-for-content-fragments.md)。
 
-## 內容片段{#types-of-content-fragment}的類型
+## 內容片段類型 {#types-of-content-fragment}
 
 內容片段可以是：
 
@@ -131,7 +131,7 @@ AEM內容片段可用來說明及管理結構化內容。 結構化內容定義�
 
 * 與傳送機制（即頁面、通道）無關。
 
-### 具有可視化資產的片段{#fragments-with-visual-assets}
+### 具有視覺資產的片段 {#fragments-with-visual-assets}
 
 為了讓作者更能控制其內容，可將影像新增至內容片段及/或與其整合。
 
@@ -161,7 +161,7 @@ AEM內容片段可用來說明及管理結構化內容。 結構化內容定義�
    * 不提供針對特定片段核准的概念。
    * 如需詳細資訊，請參閱[資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser) 。
 
-### 內容片段{#constituent-parts-of-a-content-fragment}的組成部分
+### 內容片段的組成部分 {#constituent-parts-of-a-content-fragment}
 
 內容片段資產由下列部分組成（直接或間接）:
 
@@ -249,7 +249,7 @@ AEM內容片段可用來說明及管理結構化內容。 結構化內容定義�
    * 可以是[摘要](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text)，以快速截斷文字至預先定義的長度。
    * 在片段編輯器的[Valuations](/help/assets/content-fragments/content-fragments-variations.md)標籤下可用。
 
-### 使用內容片段製作頁面時的內容之間{#in-between-content-when-page-authoring-with-content-fragments}
+### 使用內容片段製作頁面時的內容之間 {#in-between-content-when-page-authoring-with-content-fragments}
 
 中間內容：
 
@@ -262,7 +262,7 @@ AEM內容片段可用來說明及管理結構化內容。 結構化內容定義�
 >
 >中間內容是頁面內容。 它不會儲存在內容片段中。
 
-### 片段{#required-by-fragments}所需
+### 片段所需 {#required-by-fragments}
 
 若要建立、編輯和使用內容片段，您也需要：
 
@@ -288,11 +288,11 @@ AEM內容片段可用來說明及管理結構化內容。 結構化內容定義�
    * 片段需要一或多個專用元件來定義版面，並傳送部分或所有元素/變異和相關內容。
    * 在製作時將片段拖曳至頁面會自動建立所需元件的關聯。
 
-## 使用範例{#example-usage}
+## 使用範例 {#example-usage}
 
 片段及其元素和變數可用來建立多個頻道的一致內容。 設計片段時，您需要考慮要在哪個位置使用。
 
-### We.Retail範例{#we-retail-sample}
+### We.Retail範例 {#we-retail-sample}
 
 範例片段可於下列位置查看：
 
