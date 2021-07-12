@@ -6,16 +6,16 @@ seo-description: 了解在OSGi伺服器上保護AEM Forms的建議和最佳實�
 uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
-role: Administrator
+role: Admin
 exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1463'
 ht-degree: 0%
 
 ---
 
-# 在OSGi環境{#hardening-and-securing-aem-forms-on-osgi-environment}上強化和保護AEM表單
+# 在OSGi環境中強化和保護AEM表單 {#hardening-and-securing-aem-forms-on-osgi-environment}
 
 了解在OSGi伺服器上保護AEM Forms的建議和最佳實務。
 
@@ -34,15 +34,15 @@ ht-degree: 0%
 
 AEM Forms可高度自訂，且可在多種不同環境中運作。 有些建議可能不適用於您的組織。
 
-## 安全傳輸層{#secure-transport-layer}
+## 安全傳輸層 {#secure-transport-layer}
 
 傳輸層安全漏洞是任何面向網際網路或面向內聯網的應用伺服器面臨的首要威脅之一。 本節介紹針對這些漏洞強化網路上主機的過程。 它解決了網路分段、傳輸控制協定/網際網路協定(TCP/IP)棧強化以及使用防火牆進行主機保護等問題。
 
-### 限制開啟的端點{#limit-open-endpoints}
+### 限制開啟的端點  {#limit-open-endpoints}
 
 組織可以有外部防火牆，以限制一般使用者和AEM Forms發佈伺服器陣列之間的存取權。 組織也可以有內部防火牆，以限制發佈伺服器陣列與組織元素內其他元素（例如，製作例項、處理例項、資料庫）之間的存取。 允許防火牆為一般使用者和組織元素內啟用有限數量的AEM Forms URL:
 
-#### 配置外部防火牆{#configure-external-firewall}
+#### 配置外部防火牆  {#configure-external-firewall}
 
 您可以設定外部防火牆，以允許特定AEM Forms URL存取網際網路。 填寫或提交最適化表單、HTML5、通信管理信函或登入AEM Forms伺服器時，必須存取以下URL:
 
@@ -96,7 +96,7 @@ AEM Forms可高度自訂，且可在多種不同環境中運作。 有些建議�
  </tbody>
 </table>
 
-#### 配置內部防火牆{#configure-internal-firewall}
+#### 配置內部防火牆  {#configure-internal-firewall}
 
 您可以設定內部防火牆，以允許某些AEM Forms元件（例如製作例項、處理例項、資料庫）與發佈伺服器陣列和拓撲圖中提到的其他內部元件通訊：
 
@@ -121,7 +121,7 @@ AEM Forms可高度自訂，且可在多種不同環境中運作。 有些建議�
  </tbody>
 </table>
 
-#### 設定儲存庫權限和訪問控制清單(ACL){#setup-repository-permissions-and-access-control-lists-acls}
+#### 設定儲存庫權限和訪問控制清單(ACL) {#setup-repository-permissions-and-access-control-lists-acls}
 
 依預設，發佈節點上的可用資產可供所有人存取。 所有資產都會啟用唯讀存取權。 必須啟用匿名訪問。 如果您打算限制表單檢視並僅向已驗證的使用者提交存取權，則使用通用群組，讓已驗證的使用者僅能以唯讀方式存取發佈節點上可用的資產。 以下位置/目錄包含需要強化（已驗證使用者只讀存取權）的表單資產：
 
@@ -129,17 +129,17 @@ AEM Forms可高度自訂，且可在多種不同環境中運作。 有些建議�
 * /etc.clientlibs/fd/&amp;ast;
 * /libs/fd/&amp;ast;
 
-## 安全地處理表單資料{#securely-handle-forms-data}
+## 安全地處理表單資料  {#securely-handle-forms-data}
 
 AEM Forms會將資料儲存至預先定義的位置和臨時資料夾。 您應保護資料安全，以防止未經授權的使用。
 
-### 設定臨時資料夾{#setup-periodic-cleanup-of-temporary-folder}的定期清理
+### 設定臨時資料夾的定期清理 {#setup-periodic-cleanup-of-temporary-folder}
 
 配置檔案附件、驗證或預覽元件的表單時，相應的資料儲存在位於/tmp/fd/的發佈節點上。 會定期清除資料。 您可以修改預設資料清除作業，使其更具攻擊性。 要修改計劃清除資料的作業，請開啟AEM Web Console、開啟AEM Forms臨時儲存清除任務，並修改Cron表達式。
 
 在上述情況中，僅會為已驗證的使用者儲存資料。 此外，資料還受到訪問控制清單(ACL)的保護。 因此，修改資料清除是保護資訊的額外步驟。
 
-### 保護由表單門戶提交操作保存的資料{#secure-data-saved-by-forms-portal-submit-action}
+### 保護由表單入口網站儲存的資料提交動作 {#secure-data-saved-by-forms-portal-submit-action}
 
 依預設，適用性表單的表單入口網站提交動作會將資料儲存在發佈節點的本機存放庫中。 資料儲存在/content/forms/fp。 **不建議將資料儲存在發佈執行個體上。**
 
@@ -147,7 +147,7 @@ AEM Forms會將資料儲存至預先定義的位置和臨時資料夾。 您應�
 
 使用AEM DS設定服務處理伺服器的認證，將資料從發佈節點發佈到處理伺服器。 建議使用具有處理伺服器儲存庫讀寫權限的受限非管理用戶的憑據。 有關詳細資訊，請參閱[為草稿和提交配置儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
 
-### 由表單資料模型(FDM){#secure-data-handled-by-form-data-model-fdm}處理的安全資料
+### 由表單資料模型(FDM)處理的安全資料 {#secure-data-handled-by-form-data-model-fdm}
 
 使用具有最低所需權限的使用者帳戶來設定表單資料模型(FDM)的資料來源。 使用管理帳戶可以為未經授權的用戶提供對元資料和架構實體的開放訪問。\
 資料整合也提供授權FDM服務要求的方法。 您可以插入執行前和執行後授權機制來驗證請求。 在預填表單、提交表單和通過規則調用服務時生成服務請求。
@@ -156,7 +156,7 @@ AEM Forms會將資料儲存至預先定義的位置和臨時資料夾。 您應�
 
 **處理後授權：** 您可以在將結果返回給請求者之前，使用處理後授權來驗證和控制結果。您也可以篩選、修剪及插入其他資料至結果。
 
-### 限制用戶訪問{#limit-user-access}
+### 限制使用者存取權 {#limit-user-access}
 
 製作、發佈和處理例項需要不同的使用者角色集。 不運行具有管理員憑據的任何實例。
 
@@ -188,14 +188,14 @@ AEM Forms會將資料儲存至預先定義的位置和臨時資料夾。 您應�
 * 若要遠端儲存並提交使用案例，請建立擁有crx-repository內容/表單/fp路徑之讀取、建立和修改權限的使用者。
 * 將使用者新增至工作流程使用者群組，讓使用者能使用AEM收件匣應用程式。
 
-## AEM Forms環境{#secure-intranet-elements-of-an-aem-forms-environment}的安全內聯網元素
+## AEM Forms環境的安全內聯網元素 {#secure-intranet-elements-of-an-aem-forms-environment}
 
 一般而言，處理叢集和Forms Workflow附加元件(JEE上的AEM Forms)會在防火牆後執行。 因此，這些都被認為是安全的。 您仍可執行一些步驟來強化這些環境：
 
-### 安全處理群集{#secure-processing-cluster}
+### 安全處理群集 {#secure-processing-cluster}
 
 處理叢集會在製作模式中執行，但不會用於開發活動。 請勿將一般使用者納入處理叢集的內容作者和表單使用者群組中。
 
-### 使用AEM最佳實務來保護AEM Forms環境{#use-aem-best-practices-to-secure-an-aem-forms-environment}
+### 使用AEM最佳實務來保護AEM Forms環境 {#use-aem-best-practices-to-secure-an-aem-forms-environment}
 
 本檔案提供AEM Forms環境的特定指示。 您應採取措施，確保部署時基礎AEM安裝安全無虞。 如需詳細指示，請參閱[AEM安全性檢查清單](/help/sites-administering/security-checklist.md)檔案。
