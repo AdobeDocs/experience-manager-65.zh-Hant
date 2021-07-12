@@ -2,17 +2,17 @@
 title: 如何建立最適化表單
 description: '了解如何使用 [!DNL Experience Manager Forms]建立最適化表單。 適用性表單是回應式HTML5表單，可簡化資訊收集和處理。 進一步了解如何根據表單資料模型、XFA表單範本，以及XML或JSON結構，建立最適化表單。 '
 feature: 適用性表單
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1858'
 ht-degree: 0%
 
 ---
 
-# 建立最適化表單{#creating-an-adaptive-form}
+# 建立最適化表單 {#creating-an-adaptive-form}
 
 ## <strong>建立最適化表單</strong> {#strong-create-an-adaptive-form-strong}
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 >
 >您也可以變更最適化表單的表單資料模型。 如需詳細步驟，請參閱[編輯最適化表單的表單模型屬性](#edit-form-model)。
 
-## 根據XFA表單範本{#create-an-adaptive-form-based-on-an-xfa-form-template}建立最適化表單
+## 根據XFA表單範本建立最適化表單 {#create-an-adaptive-form-based-on-an-xfa-form-template}
 
 您可以重新調整XFA表單範本的用途，以建立最適化表單。 若要重新調整用途，請上傳XFA表單範本並與最適化表單建立關聯。 表單範本（XFA表單）的元素可在最適化表單製作時用於內容尋找器。 從「內容尋找器」，您可以拖放表單上的表單範本元素。
 
@@ -102,7 +102,7 @@ Do the following to use an XFA form template as form model for your adaptive for
    >
    >You can also change the form template for an adaptive form. For detailed steps, see [Edit Form Model properties of an adaptive form](#edit-form-model). -->
 
-## 根據XML或JSON結構{#create-an-adaptive-form-based-on-xml-or-json-schema}建立最適化表單
+## 根據XML或JSON結構建立最適化表單 {#create-an-adaptive-form-based-on-xml-or-json-schema}
 
 XML和JSON結構代表組織內的後端系統產生或使用資料的結構。 您可以將結構與適用性表單建立關聯，並使用其元素將動態內容新增至適用性表單。 結構的元素可在內容瀏覽器的「資料模型物件」標籤中取得，以製作最適化表單。 您可以拖放結構元素以建立表單。
 
@@ -137,7 +137,7 @@ XML和JSON結構代表組織內的後端系統產生或使用資料的結構。 
 >
 >您也可以變更最適化表單的結構。 如需詳細步驟，請參閱[編輯最適化表單的表單模型屬性](#edit-form-model)。
 
-## 最適化表單範本{#adaptive-form-templates}
+## 最適化表單範本 {#adaptive-form-templates}
 
 範本提供基本結構並定義最適化表單的外觀（配置和樣式）。 它具有包含特定屬性和內容結構的預格式化元件。<!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
 
@@ -147,7 +147,7 @@ XML和JSON結構代表組織內的後端系統產生或使用資料的結構。 
 >
 >當您開啟使用進階範本建立的最適化表單以進行編輯時，會出現錯誤訊息。 進階範本有簽名步驟元件，預設會啟用Adobe Sign。 建立並選取[Adobe Sign雲端設定](adobe-sign-integration-adaptive-forms.md)和[設定簽署者](working-with-adobe-sign.md#addsignerstoanadaptiveform)以解決錯誤。
 
-## 編輯最適化表單的表單模型屬性{#edit-form-model}
+## 編輯最適化表單的表單模型屬性 {#edit-form-model}
 
 最適化表單是在沒有表單模型的情況下建立（對表單模型使用「無」選項），或使用表單模型，如表單範本、XML結構描述或JSON結構描述，或表單資料模型。 您可以將適用性表單的表單模型從「無」變更為其他表單模型。 針對以表單模型為基礎的最適化表單，您可以為相同的表單模型選擇其他表單範本、XML結構描述、JSON結構描述或表單資料模型。 但是，您不能將一個表單模型更改為另一個表單模型。
 
@@ -159,7 +159,7 @@ XML和JSON結構代表組織內的後端系統產生或使用資料的結構。 
 
 1. 點選&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存屬性。
 
-## 自動儲存最適化表單{#auto-save-an-adaptive-form}
+## 自動儲存最適化表單 {#auto-save-an-adaptive-form}
 
 依預設，適用性表單的內容會儲存在使用者動作上，例如按下儲存按鈕時。 您也可以設定最適化表單，以根據事件或時間間隔自動開始儲存內容。 自動儲存選項在下列項目中很實用：
 
@@ -168,7 +168,7 @@ XML和JSON結構代表組織內的後端系統產生或使用資料的結構。 
 * 開始根據使用者事件儲存表單的內容
 * 在指定的時間間隔後重複保存表單的內容
 
-### 為最適化表單{#enable-auto-save-for-an-adaptive-form}啟用「自動儲存」
+### 啟用最適化表單的自動儲存 {#enable-auto-save-for-an-adaptive-form}
 
 預設不會啟用自動儲存選項。 您可以從適用性表單的「自動儲存」標籤中啟用自動儲存選項。 「自動儲存」標籤也提供其他數個設定選項。 執行下列步驟來啟用和設定最適化表單的自動儲存選項：
 
