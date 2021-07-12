@@ -10,16 +10,16 @@ topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 73e8ccc6-f857-493e-b6e3-878f93e2a356
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 2%
 
 ---
 
-# 相容性包{#compatibility-package}
+# 相容性套件{#compatibility-package}
 
 ## 概覽 {#overview}
 
@@ -34,7 +34,7 @@ AEMFD相容性套件也可讓您[使用AEM Forms 6.5上AEM Forms 6.4、6.3和6.2
 
 如需詳細資訊，請參閱安裝相容性套件](../../forms/using/compatibility-package.md#assetsmadecompatible)讓資產與AEM Forms 6.5相容。[
 
-## 新增對AEM Forms 6.4、6.3和6.2資產在AEM Forms 6.5中的支援{#add-support-for-aem-forms-and-assets-in-aem-forms}
+## 新增對AEM Forms 6.4、6.3和6.2資產在AEM Forms 6.5中的支援 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 執行升級後，請執行下列動作以安裝AEMFD相容性套件，並讓您的資產與6.5相容：
 
