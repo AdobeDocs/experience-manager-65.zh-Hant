@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: e29aae44-67be-43d2-8004-c986412d9e63
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-# SRP — 社群內容儲存{#srp-community-content-storage}
+# SRP — 社群內容儲存 {#srp-community-content-storage}
 
 ## 簡介 {#introduction}
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 >
 >當部署不包含通用商店時（例如預設的[JSRP](/help/communities/topologies.md#jsrp)拓撲）,UGC只會顯示在輸入UGC的AEM發佈或製作執行個體上。 只有當拓撲中包含發佈群集時，UGC才會顯示在任何發佈實例上。
 
-## SRP選項的特點{#characteristics-of-srp-options}
+## SRP選項的特點 {#characteristics-of-srp-options}
 
 [ASRP -Adobe儲存資源提供程式](/help/communities/asrp.md)
 
@@ -120,7 +120,7 @@ JSRP:
 
 ## 其他資訊 {#additional-information}
 
-### 從未複製UGC {#ugc-never-replicated}
+### UGC從未複製 {#ugc-never-replicated}
 
 在製作環境中，製作者會建立頁面內容並複製到發佈環境。 當頁面包含互動式AEM Communities功能時（例如留言、評論、論壇、部落格或QnA），成員（在網站訪客中籤名）在發佈實例上的交互會導致用戶在發佈環境中生成內容(UGC)。
 
@@ -130,7 +130,7 @@ JSRP:
 
 複製網站內容時，不會複製UGC。
 
-### 管理用戶資料{#managing-user-data}
+### 管理使用者資料 {#managing-user-data}
 
 CommuniticIes還關注&#x200B;[*users*、*user groups*&#x200B;和&#x200B;*user profiles*](/help/communities/users.md)。 當拓撲為[publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm)時，此用戶相關資料在發佈環境中建立和更新時，必須可供其他發佈實例使用。
 
