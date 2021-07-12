@@ -7,9 +7,9 @@ uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 5%
@@ -28,7 +28,7 @@ AEM Form能夠集中建立、匯編、管理和傳送安全且互動式的檔案
 
 AEM Forms是功能強大的企業級平台。 互動式通訊只是AEM Forms的其中一項功能。 如需功能的完整清單，請參閱[AEM Forms簡介](../../forms/using/introduction-aem-forms.md)。
 
-## 部署拓撲{#deployment-topology}
+## 部署拓撲 {#deployment-topology}
 
 AEM Forms附加元件套件是部署至AEM的應用程式。 您至少需要一個AEM製作與處理執行個體，才能執行互動式通訊功能。 以下拓撲是指示性拓撲，用於在OSGi功能上運行AEM Forms Interactive Communications、通信管理、AEM Forms資料捕獲和以Forms為中心的工作流。 有關拓撲的詳細資訊，請參閱[AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md)的體系結構和部署拓撲。
 
@@ -36,7 +36,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您至少需要一�
 
 AEM Forms互動式通訊會在AEM Forms的Author例項上執行管理、製作和代理使用者介面。 發佈執行個體會托管最終版本的互動式通訊，供使用者使用。
 
-## 系統要求{#system-requirements}
+## 系統需求 {#system-requirements}
 
 開始安裝及設定AEM Forms的互動式通訊和通信管理功能之前，請確定：
 
@@ -86,7 +86,7 @@ AEM Forms互動式通訊會在AEM Forms的Author例項上執行管理、製作�
  </tbody>
 </table>
 
-## 安裝AEM Forms附加元件套件{#install-aem-forms-add-on-package}
+## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
 
 AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM Forms互動式通訊、通信管理和其他功能。 執行下列步驟以安裝附加元件套件：
 
@@ -104,13 +104,13 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即重新啟動伺服器。** 停止AEM Forms伺服器之前，請等到AEM-Installation-Directory []/crx-quickstart/logs/error.log檔案中出現ServiceEvent REGISTERED和ServiceEvent UNEGRESTED訊息，且記錄穩定。
 1. 在所有「製作」和「發佈」例項上重複步驟1至7。
 
-## 安裝後配置{#post-installation-configurations}
+## 安裝後配置 {#post-installation-configurations}
 
 AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCastle程式庫和序列化代理。 選用的設定包括設定Dispatcher和Adobe Target。
 
-### 強制安裝後配置{#mandatory-post-installation-configurations}
+### 強制安裝後配置 {#mandatory-post-installation-configurations}
 
-#### 配置RSA和BuncyCastle庫{#configure-rsa-and-bouncycastle-libraries}
+#### 配置RSA和BouncyCastle庫  {#configure-rsa-and-bouncycastle-libraries}
 
 對所有製作和發佈執行個體執行下列步驟以引導委派程式庫：
 
@@ -128,7 +128,7 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 1. 儲存並關閉檔案，然後啟動AEM例項。
 1. 在所有「製作」和「發佈」例項上重複步驟1至4。
 
-#### 配置序列化代理{#configure-the-serialization-agent}
+#### 配置序列化代理 {#configure-the-serialization-agent}
 
 對所有製作和發佈執行個體執行下列步驟，將套件新增至允許清單：
 
@@ -137,9 +137,9 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 1. 將&#x200B;**sun.util.calendar**&#x200B;套件新增至&#x200B;**allowlist**&#x200B;欄位。 按一下「儲存」。
 1. 在所有「製作」和「發佈」例項上重複步驟1至3。
 
-### 可選安裝後配置{#optional-post-installation-configurations}
+### 可選安裝後配置 {#optional-post-installation-configurations}
 
-#### 安裝相容性包{#install-compatibility-package}
+#### 安裝相容性包 {#install-compatibility-package}
 
 互動式通訊是在AEM 6.5 Forms中建立客戶通訊的預設且建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用信函（通信管理），請安裝[AEMFD相容性套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)。
 
@@ -172,7 +172,7 @@ Dispatcher是Adobe Experience Manager的快取和/或負載平衡工具，可與
 
 AEM forms與Adobe Marketing Cloud解決方案Adobe Target整合，可跨多個數位頻道提供個人化且吸引人的客戶體驗。 若要使用Adobe Target來個人化互動式通訊，請[將Adobe Target與AEM Forms整合](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
 
-#### 配置表單資料模型{#configure-ssl-communcation-for-form-data-model}的SSL通信
+#### 為表單資料模型配置SSL通訊  {#configure-ssl-communcation-for-form-data-model}
 
 您可以為表單資料模型啟用SSL通訊。 若要為表單資料模型啟用SSL通訊，請在啟動任何AEM Forms例項前，將憑證新增至所有例項的Java信任存放區。 您可以執行以下命令來新增憑證：
 
