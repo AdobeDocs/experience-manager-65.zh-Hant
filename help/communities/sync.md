@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2509'
 ht-degree: 1%
 
 ---
 
-# Communities用戶同步{#communities-user-synchronization}
+# Communities用戶同步 {#communities-user-synchronization}
 
 ## 簡介 {#introduction}
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 有關用戶資料的詳細資訊，請訪問[管理用戶和用戶組](/help/communities/users.md)。
 
-## 在發佈伺服器場{#synchronizing-users-across-a-publish-farm}間同步用戶
+## 在發佈伺服器陣列間同步使用者 {#synchronizing-users-across-a-publish-farm}
 
 根據設計，在發佈環境中建立的使用者資料不會出現在製作環境中。
 
@@ -41,13 +41,13 @@ ht-degree: 1%
 
 啟用使用者同步後，系統會自動在伺服器陣列中的發佈執行個體間同步使用者資料。
 
-### 用戶同步設定說明{#user-sync-setup-instructions}
+### 用戶同步設定說明 {#user-sync-setup-instructions}
 
 如需如何在發佈伺服器陣列間啟用同步的詳細逐步指示，請參閱：
 
 * [使用者同步](/help/sites-administering/sync.md)
 
-## 用戶在後台同步{#user-sync-in-the-background}
+## 使用者在背景同步  {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
@@ -59,31 +59,31 @@ ht-degree: 1%
 
    其中包含Sling的發佈資訊。 這是關於內容需要分發的位置，以及上次分發的時間的資訊。
 
-## ... {#what-happens-when}時會發生什麼事
+## 當…… {#what-happens-when}
 
-### 從Communities Sites控制台發佈站點{#publish-site-from-communities-sites-console}
+### 從Communities Sites控制台發佈站點 {#publish-site-from-communities-sites-console}
 
 在作者上，從[Communities Sites主控台](/help/communities/sites-console.md)發佈社群網站時，效果是[復寫](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents)相關聯的頁面，而Sling會分發動態建立的社群使用者群組，包括其成員資格。
 
-### 在發佈時建立或編輯配置檔案{#user-is-created-or-edits-profile-on-publish}
+### 使用者是在發佈時建立或編輯設定檔 {#user-is-created-or-edits-profile-on-publish}
 
 根據設計，在發佈環境中建立的使用者和設定檔（例如透過自行註冊、社交登入、LDAP驗證）不會出現在製作環境中。
 
 當拓撲為[publish farm](/help/communities/topologies.md)且已正確配置用戶同步時，使用Sling分發在發佈場中同步&#x200B;*user*&#x200B;和&#x200B;*user profile*。
 
-### 在發佈{#new-community-group-is-created-on-publish}時建立新社群群組
+### 在發佈時建立新社群群組 {#new-community-group-is-created-on-publish}
 
 雖然從發佈例項開始，但實際上會發生在製作例項上建立社群群組（這會產生新網站頁面和新使用者群組）。
 
 在程式中，新網站頁面會複製到所有發佈執行個體。 動態建立的社群使用者群組及其成員資格已分發至所有發佈執行個體。
 
-### 使用安全控制台{#users-or-user-groups-are-created-using-security-console}建立用戶或組
+### 使用安全控制台建立用戶或組 {#users-or-user-groups-are-created-using-security-console}
 
 根據設計，在發佈環境中建立的使用者資料不會出現在製作環境中，反之亦然。
 
 當使用[使用者管理與安全性](/help/sites-administering/security.md)控制台在發佈環境中新增使用者時，使用者同步會將新使用者及其群組成員資格同步至其他發佈執行個體（如有必要）。 使用者同步也會同步透過安全性主控台建立的使用者群組。
 
-### 使用者在發佈時發佈內容{#user-posts-content-on-publish}
+### 使用者在發佈時發佈內容 {#user-posts-content-on-publish}
 
 對於使用者產生的內容(UGC)，在發佈執行個體上輸入的資料是透過[設定的SRP](/help/communities/srp-config.md)存取。
 
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 若要在AEM Communities上啟用使用者同步，必須進行下列設定。 請確定這些設定正確，以防止Sling內容分送失敗。
 
-### Apache Sling Distribution Agent — 同步代理工廠{#apache-sling-distribution-agent-sync-agents-factory}
+### Apache Sling Distribution Agent — 同步代理工廠 {#apache-sling-distribution-agent-sync-agents-factory}
 
 此設定會擷取要在發佈者間同步的內容。 設定位於製作執行個體上。 作者必須追蹤所有發佈者，以及同步所有資訊的位置。
 
@@ -133,7 +133,7 @@ ht-degree: 1%
       這些端點會定義您要從何處取得內容，以及要推送內容的位置。 作者從指定的匯出工具端點擷取內容，並將內容推送至發佈工具（其擷取內容的發佈工具除外）。
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### AdobeGranite分發 — 加密的密碼傳輸密碼提供程式{#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### AdobeGranite分發 — 加密密碼傳輸機密提供程式 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 它可讓作者識別已授權的使用者，即擁有將使用者資料從作者同步到發佈的權限。
 
@@ -158,7 +158,7 @@ ht-degree: 1%
 
 ![granite-passwrd-trans](assets/granite-paswrd-trans.png)
 
-### Apache Sling Distribution Agent — 佇列代理工廠{#apache-sling-distribution-agent-queue-agents-factory}
+### Apache Sling Distribution Agent — 佇列代理工廠 {#apache-sling-distribution-agent-queue-agents-factory}
 
 此設定用於設定您要在不同發佈者間同步的資料。 在&#x200B;**允許的根**&#x200B;中指定的路徑中建立/更新資料時，「var/community/distribution/diff」將激活，所建立的復製程式從發佈伺服器中提取資料並將其安裝到其他發佈伺服器上。
 
@@ -180,7 +180,7 @@ ht-degree: 1%
 
    ![queue-agent-fact](assets/queue-agents-fact.png)
 
-### AdobeGranite分佈 — 差異觀察器工廠{#adobe-granite-distribution-diff-observer-factory}
+### AdobeGranite分佈 — 差異觀察器工廠 {#adobe-granite-distribution-diff-observer-factory}
 
 此設定會同步各發佈者的群組成員資格。
 如果更改某個發佈伺服器中組的成員身份不更新其它發佈伺服器的成員身份，請確保將**ref:members**&#x200B;添加到&#x200B;**查找的屬性名稱**&#x200B;中。
@@ -202,7 +202,7 @@ ht-degree: 1%
 
    ![diff-obs](assets/diff-obs.png)
 
-### Apache Sling Distribution觸發程式 — 排程觸發程式工廠{#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### Apache Sling Distribution觸發程式 — 排程觸發程式工廠 {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 此設定可讓您設定輪詢間隔（在此間隔內，發佈者會被Ping通，且作者會提取變更），以同步各發佈者的變更。
 
@@ -222,7 +222,7 @@ ht-degree: 1%
 
    ![排程觸發器](assets/scheduled-trigger.png)
 
-### AEM Communities用戶同步偵聽器{#aem-communities-user-sync-listener}
+### AEM Communities使用者同步接聽程式 {#aem-communities-user-sync-listener}
 
 若是Sling分送中訂閱與後續項目不一致的問題，請檢查&#x200B;**AEM Communities使用者同步接聽程式**&#x200B;設定中是否已設定下列屬性：
 
@@ -307,7 +307,7 @@ AEM製作例項使用Sling ID來識別資料傳回的位置，以及發佈商需
 
 重複這些步驟，直到所有發佈執行個體都有唯一的Sling ID。
 
-### 保管庫包生成器工廠{#vault-package-builder-factory}
+### 保管庫包生成器工廠 {#vault-package-builder-factory}
 
 要正確同步更新，必須修改保管庫包生成器以便用戶同步。
 在`/home/users`中，建立`*/rep:cache`節點。 它是一個快取，用於發現如果我們查詢節點的主名，則可以直接使用此快取。
@@ -333,7 +333,7 @@ AEM製作例項使用Sling ID來識別資料傳回的位置，以及發佈商需
 
    ![保管包生成器工廠](assets/vault-package-builder-factory.png)
 
-## 疑難排解AEM Communities {#troubleshoot-sling-distribution-in-aem-communities}中的Sling分發
+## 疑難排解AEM Communities中的Sling散發 {#troubleshoot-sling-distribution-in-aem-communities}
 
 如果Sling發佈失敗，請嘗試下列除錯步驟：
 
