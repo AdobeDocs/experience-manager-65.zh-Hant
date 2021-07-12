@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 3%
 
 ---
 
-# 協調控制台{#moderation-console}
+# 協調控制台 {#moderation-console}
 
 在AEM Communities中，管理員和社群協調者（指派為協調者的受信任社群成員）可從製作和發佈環境中大量協調社群內容[。](/help/communities/moderate-ugc.md)
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 只有以管理員或` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`成員身分登入後，才可執行協調任務。
 
-## 發佈環境訪問{#publish-environment-access}
+## 發佈環境存取 {#publish-environment-access}
 
 從已發佈的社群網站存取「協調」主控台是透過管理連結，此連結會在社群協調者登入時顯示。
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-## 製作環境存取{#author-environment-access}
+## 製作環境存取 {#author-environment-access}
 
 在製作環境中，若要進入「協調」主控台
 
@@ -72,7 +72,7 @@ ht-degree: 3%
 * **[工具列](#toolbar)**
 * **[內容區域](#content-area)**
 
-### 頂端導覽列{#top-navigation-bar}
+### 頂端導覽列 {#top-navigation-bar}
 
 所有主控台的頂端導覽列都為常數。 如需詳細資訊，請參閱[基本處理](/help/sites-authoring/basic-handling.md)。
 
@@ -174,7 +174,7 @@ ht-degree: 3%
 
 ![內容類型](assets/content-types.png)
 
-#### 其他內容類型{#additional-content-types}
+#### 其他內容類型 {#additional-content-types}
 
 若要新增要篩選的其他資源：
 
@@ -232,7 +232,7 @@ ht-degree: 3%
 
 ![情緒](assets/sentiment.png)
 
-## 自訂篩選器{#custom-filters}
+## 自訂篩選器 {#custom-filters}
 
 除了[篩選邊欄](/help/communities/moderation.md#ootbfilters)中的現成篩選器外，您也可以將其他中繼資料的自訂篩選器新增至協調UI。 開發人員可使用Github中的范常式式碼，以擴充現有的協調UI篩選條件。
 
@@ -263,7 +263,7 @@ Github上的[範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
    * 設為新元件`sling:resourceType = social/moderation/v2/modcontainer`。
 
-## 協調動作{#moderation-actions}
+## 協調動作 {#moderation-actions}
 
 [在內](/help/communities/moderate-ugc.md#moderation-actions) 容區域中進行的一或多個選取項目，或在檢視內容詳細資料時，可執行協調動作掃描。
 
@@ -271,7 +271,7 @@ Github上的[範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
 若要協調內容區域中的單一貼文，請用滑鼠（案頭）將滑鼠移到貼文上，或按住貼文（行動）上的手指，使貼文上顯示按鈕。 對單一內容詳細資料執行作業時，只有刪除動作會提示進行確認。
 
-### 協調多個貼文{#moderating-multiple-posts}
+### 協調多個貼文 {#moderating-multiple-posts}
 
 按一下貼文上的`Select`圖示，進入大量選取模式：
 
@@ -289,7 +289,7 @@ Github上的[範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
 ![bulk審核](assets/bulkmoderate.png)
 
-### 協調單一貼文{#moderating-a-single-post}
+### 協調單一貼文 {#moderating-a-single-post}
 
 在單選模式中，可以：
 
