@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
-role: Administrator
+role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 0%
 
 ---
 
-# 管理用戶和用戶組{#managing-users-and-user-groups}
+# 管理使用者和使用者群組 {#managing-users-and-user-groups}
 
 ## 概覽 {#overview}
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 如需詳細資訊，請參閱[成員貢獻限制](limits.md)。
 
-### 動態建立的用戶組{#dynamically-created-user-groups}
+### 動態建立的使用者群組 {#dynamically-created-user-groups}
 
 建立新社群網站時，系統會以唯一ID(uid)和權限動態建立新使用者群組，這些權限適用於在製作環境（請參閱[製作群組角色](#author-group-roles)）或發佈環境（請參閱[發佈群組角色](#publish-group-roles)）中管理社群網站所需的各種管理功能。
 
@@ -58,9 +58,9 @@ ht-degree: 0%
 
 * 社區&#x200B;*參與*&#x200B;成員
 
-## 製作環境{#author-environment}
+## 製作環境 {#author-environment}
 
-### 通道服務{#tunnel-service}
+### 通道服務 {#tunnel-service}
 
 使用製作環境[建立網站](sites-console.md)、[修改網站屬性](sites-console.md#modifying-site-properties)和[管理社群成員和成員群組](members.md)時，必須存取在發佈環境中註冊的使用者和使用者群組。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 若要管理在製作環境中註冊的使用者和使用者群組，請使用[安全主控台](../../help/sites-administering/security.md)
 
-### 作者群組角色{#author-group-roles}
+### 作者群組角色 {#author-group-roles}
 
 | 如果組成員…… | 主要角色 |
 |---|---|
@@ -83,7 +83,7 @@ ht-degree: 0%
 | 社區&lt;*站點名稱* > Siteenablementmanagers | 「社群網站啟用管理員」群組包含指派給管理社群網站啟用[資源](resources.md)的使用者。 |
 | 無 | 匿名網站訪客可能無法存取製作環境。 |
 
-### 系統管理員{#system-administrators}
+### 系統管理員 {#system-administrators}
 
 管理員群組的成員是系統管理員，可為製作和發佈環境執行AEM安裝的初始設定。
 
@@ -93,9 +93,9 @@ ht-degree: 0%
 
 請務必遵循[安全檢查清單](../../help/sites-administering/security-checklist.md)。
 
-## 發佈環境{#publish-environment}
+## 發佈環境 {#publish-environment}
 
-### 成為成員{#becoming-a-member}
+### 成為會員 {#becoming-a-member}
 
 在發佈環境中，視社群網站的[settings](sites-console.md#user-management)而定，網站訪客可能會成為社群成員：
 
@@ -111,7 +111,7 @@ ht-degree: 0%
 >
 >如果網站訪客註冊為一個開放社群網站的成員，他們會自動成為相同發佈環境中其他開放社群網站的成員。
 
-### 發佈組角色{#publish-group-roles}
+### 發佈群組角色 {#publish-group-roles}
 
 | 如果組成員…… | 主要角色 |
 |---|---|
@@ -122,7 +122,7 @@ ht-degree: 0%
 | *特權成員安全組* | 為限制內容建立而手動建立和維護的使用者群組。 請參閱[特權成員組](#privileged-members-group)。 |
 | 無 | 探索到網站的匿名網站訪客可以檢視並搜尋允許匿名存取的社群網站。 若要參與並張貼內容，使用者必須自行註冊（如果允許）並成為社群成員。 |
 
-### 為發佈組角色分配成員{#assigning-members-to-publish-group-roles}
+### 為發佈組角色分配成員 {#assigning-members-to-publish-group-roles}
 
 當[在作者環境中建立社群網站](sites-console.md)時，或當[修改網站屬性時，](sites-console.md#modifying-site-properties)成員可被指派在發佈環境中執行的各種角色，例如協調者、群組管理員、資源聯絡人或有權限的成員。
 
@@ -151,9 +151,9 @@ ht-degree: 0%
 >
 >只有將用戶添加到社區站點的特權成員組時，如果用戶也是同一社區站點的成員，則只授予他們建立權限。
 
-## 建立社區成員{#creating-community-members}
+## 建立社群成員 {#creating-community-members}
 
-### 儲存庫位置{#repository-location}
+### 儲存庫位置 {#repository-location}
 
 為了讓某些功能正常運作，需要建立具有適當權限的使用者和使用者群組。
 
@@ -196,7 +196,7 @@ ht-degree: 0%
 | 管理 | 作者使用者 | 作者的使用者群組 | 發佈的成員 | 發佈時的成員組 |
 | requiles | 管理員權限 | 管理員權限 | 管理員權限，隧道服務，發佈場的使用者同步 | 管理員權限，隧道服務，發佈場的使用者同步 |
 
-### 社區啟用管理員角色{#community-enablement-manager-role}
+### 社群啟用管理員角色 {#community-enablement-manager-role}
 
 網站訪客自行註冊的能力通常不允許用於[啟用社群](overview.md#enablement-community)，因為每個成員都有相關的成本。 在作者的網站建立期間](sites-console.md#enablement)，由指派`enablement manager` [的[角色](#author-group-roles)的使用者管理啟用學習者和資源（新增為群組`Community <site-name> Siteenablementmanagers`的成員）。 `enablement manager`還負責[將學習資源](resources.md)指派給作者的社群成員。
 
@@ -228,13 +228,13 @@ ht-degree: 0%
 
    ![assign-group](assets/assign-group.png)
 
-### 社區管理員角色{#community-administrators-role}
+### 社群管理員角色 {#community-administrators-role}
 
 如[作者群組角色](#author-group-roles)圖表所述，社群管理員群組成員可以建立社群網站、管理網站、管理成員（他們可以禁止社群成員），以及協調內容。
 
 按照建立用戶並將其分配給[啟用管理器](#communitysiteenablementmanagerrole)角色的相同步驟操作，但在用戶的「組」頁簽下添加c `ommunity-administrators`組。
 
-### LDAP整合{#ldap-integration}
+### LDAP整合 {#ldap-integration}
 
 AEM支援使用LDAP來驗證使用者以及建立使用者帳戶。 在[使用AEM 6](../../help/sites-administering/ldap-config.md)配置LDAP中會詳細說明。
 
@@ -261,7 +261,7 @@ AEM支援使用LDAP來驗證使用者以及建立使用者帳戶。 在[使用AE
 
 * `User auto membership`值應為`rep:authorizableId`屬性，而非設定檔的`givenName`（顯示名稱）。
 
-## 在AEM實例之間同步用戶{#synchronizing-users-among-aem-instances}
+## 在AEM執行個體之間同步使用者 {#synchronizing-users-among-aem-instances}
 
 使用[publish farm](topologies.md)時，請先將使用者匯入至一個例項，並[讓使用者同步](sync.md)以Sling將使用者散布至其他發佈例項，以確保使用者在每個發佈例項上擁有相同的路徑。
 
@@ -269,7 +269,7 @@ AEM支援使用LDAP來驗證使用者以及建立使用者帳戶。 在[使用AE
 
 雖然透過使用者同步同步的使用者群組將納入未來的發行版本中，目前只有使用者群組的&#x200B;*成員資格*&#x200B;會在使用者同步執行時同步。
 
-## 關於社區組{#about-community-groups}
+## 關於社群群組 {#about-community-groups}
 
 討論群組時，有兩個不同的主題：
 
