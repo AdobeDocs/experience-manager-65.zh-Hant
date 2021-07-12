@@ -2,17 +2,17 @@
 title: 如何使用XML結構建立適用性Forms?
 description: 了解如何在最適化表單中將XML結構用作表單模型。 您可以套用現有的XSD範本，以建立最適化表單，並從XSD拖放結構元素至最適化表單。 透過XML架構的範例深入探討，使用XML架構將特殊屬性新增至欄位，並限制最適化表單元件的可接受值。
 feature: 適用性表單
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 3%
 
 ---
 
-# 使用XML結構{#creating-adaptive-forms-using-xml-schema}建立最適化表單
+# 使用XML結構建立最適化表單 {#creating-adaptive-forms-using-xml-schema}
 
 ## 必備條件 {#prerequisites}
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 * [建立最適化表單](creating-adaptive-form.md)
 * [XML架構](https://www.w3.org/TR/xmlschema-2/)
 
-## 使用XML架構作為表單模型{#using-an-xml-schema-as-form-model}
+## 使用XML架構作為表單模型 {#using-an-xml-schema-as-form-model}
 
 [!DNL Experience Manager Forms] 支援使用現有XML架構作為表單模型來建立最適化表單。此XML架構表示組織中的後端系統產生或使用資料的結構。
 
@@ -76,7 +76,7 @@ XML架構由簡單和複雜的元素類型組成。 元素具有將規則新增�
  </tbody>
 </table>
 
-## 示例XML架構{#sample-xml-schema}
+## 範例XML架構 {#sample-xml-schema}
 
 以下是XML架構的範例。
 
@@ -124,7 +124,7 @@ XML架構由簡單和複雜的元素類型組成。 元素具有將規則新增�
 >
 >確保XML架構只有一個根元素。 不支援具有多個根元素的XML架構。
 
-## 使用XML架構{#adding-special-properties-to-fields-using-xml-schema}向欄位添加特殊屬性
+## 使用XML架構向欄位添加特殊屬性 {#adding-special-properties-to-fields-using-xml-schema}
 
 您可以將下列屬性新增至XML結構元素，以將特殊屬性新增至相關適用性表單的欄位。
 
@@ -170,7 +170,7 @@ XML架構由簡單和複雜的元素類型組成。 元素具有將規則新增�
 >
 例如，如果新增`userFirstName`架構元素，適用性表單中產生的註解為`User First Name`。
 
-## 限制最適化表單元件{#limit-acceptable-values-for-an-adaptive-form-component}的可接受值
+## 限制最適化表單元件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
 
 您可以將下列限制新增至XML架構元素，以限制最適化表單元件可接受的值：
 
