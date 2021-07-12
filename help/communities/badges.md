@@ -10,22 +10,22 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 50ed9ec4-ff04-4f9d-aefb-0837542a9455
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 4%
 
 ---
 
-# 徽章控制台{#badges-console}
+# 徽章主控台 {#badges-console}
 
-## 關於徽章{#about-badges}
+## 關於徽章 {#about-badges}
 
 「社區徽章」控制台提供添加自定義徽章的功能，這些徽章可以在獲得（授予）成員或成員在社區中承擔特定角色（已分配）時顯示。
 
-### 徽章可見性{#badge-visibility}
+### 徽章可見性 {#badge-visibility}
 
 目前，社群成員所掙得或獲指派的徽章，將與其名稱和頭像一起顯示在下列位置：
 
