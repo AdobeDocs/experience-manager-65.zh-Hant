@@ -9,26 +9,26 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
-role: Administrator
+role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 4%
 
 ---
 
-# 成員和組管理控制台{#members-groups-management-consoles}
+# 成員和群組管理主控台 {#members-groups-management-consoles}
 
 ## 概覽 {#overview}
 
 AEM Communities功能通常會要求網站訪客在參與發佈環境的社群之前，必須先註冊及登入。 其使用者註冊僅需存在於發佈環境中，通常稱為&#x200B;*members*，以便與在製作環境中註冊的&#x200B;*users*&#x200B;區分。
 
-### 發佈{#members-users-on-publish}時的成員（用戶）
+### 發佈時的成員（用戶） {#members-users-on-publish}
 
 使用「社區成員和組」控制台，可以從&#x200B;*author*&#x200B;環境建立和管理在&#x200B;*publish*&#x200B;環境中註冊的成員和成員組。 只有啟用[tunnel服務](deploy-communities.md#tunnel-service-on-author)時，才能執行此操作。
 
-### 作者{#users-on-author}上的使用者
+### 作者使用者 {#users-on-author}
 
 若要管理在&#x200B;*author*&#x200B;環境中註冊的使用者和群組，必須使用平台的安全性主控台：
 
@@ -39,7 +39,7 @@ AEM Communities功能通常會要求網站訪客在參與發佈環境的社群�
 >
 >在部署並啟用範例內容後，許多範例使用者同時存在於製作和發佈環境中。 使用[nosamplecontent執行模式](../../help/sites-administering/production-ready.md)執行時，這些使用者將不存在。
 
-## 成員控制台{#members-console}
+## 成員控制台 {#members-console}
 
 在製作環境中，若要進入「成員」主控台，以管理在發佈環境中註冊的成員：
 
@@ -62,7 +62,7 @@ AEM Communities功能通常會要求網站訪客在參與發佈環境的社群�
 
 選取`Members`標題左側的搜尋圖示，以切換關閉搜尋端面板。
 
-### 成員統計資料{#member-statistics}
+### 成員統計資訊 {#member-statistics}
 
 當使用者為一或多個已啟用Adobe Analytics [的社群網站的成員時，會更新顯示`Views`、`Posts`、`Follows`和`Likes`的欄。](sites-console.md#analytics)
 
@@ -80,7 +80,7 @@ AEM Communities功能通常會要求網站訪客在參與發佈環境的社群�
 
 ![create-member1](assets/create-member1.png)
 
-### 一般 — 成員詳細資訊{#general-member-details}
+### 一般 — 成員詳細資訊 {#general-member-details}
 
 大多數欄位是成員以後可以在其配置檔案中填寫的可選欄位。
 
@@ -114,7 +114,7 @@ AEM Communities功能通常會要求網站訪客在參與發佈環境的社群�
 
 * 選擇&#x200B;**[!UICONTROL 保存]**
 
-### 一般 — 帳戶設定{#general-account-settings}
+### 一般 — 帳戶設定 {#general-account-settings}
 
 在「帳戶設定」下，社區管理員可以：
 
@@ -137,19 +137,19 @@ AEM Communities功能通常會要求網站訪客在參與發佈環境的社群�
 
    修改現有成員時出現的連結。 提供社區管理員重置成員密碼的功能。
 
-### 一般 — 照片{#general-photo}
+### 一般 — 照片 {#general-photo}
 
 要為成員提供頭像，請從選擇&#x200B;**[!UICONTROL 上載影像]**&#x200B;開始，並選擇類型為.jpg、.png、.tif或.gif的影像。 影像的優選大小為240 x 240像素，72 dpi。
 
-### 常規 — 向站點添加成員{#general-add-member-to-sites}
+### 常規 — 向站點添加成員 {#general-add-member-to-sites}
 
 該成員可以添加到一個或多個社區站點的成員組。 首先，在文字方塊中輸入文字。
 
-### 常規 — 向組添加成員{#general-add-member-to-groups}
+### 一般 — 向組添加成員 {#general-add-member-to-groups}
 
 該成員可以添加到一個或多個成員組。 首先，在文字方塊中輸入文字。
 
-### 徽章頁簽{#badges-tab}
+### 徽章標籤 {#badges-tab}
 
 `BADGES`面板提供手動指派徽章及撤銷徽章的功能。 徽章可用於指派的角色，以及通常獲得的徽章。
 
@@ -163,7 +163,7 @@ AEM Communities功能通常會要求網站訪客在參與發佈環境的社群�
 * **[!UICONTROL 移除徽章]**
    * 選取徽章旁的垃圾桶圖示以移除它。
 
-## 組控制台{#groups-console}
+## 群組主控台 {#groups-console}
 
 「群組」主控台可從製作環境取得，可建立及管理在發佈環境中註冊的成員群組。 它對以下方面特別有用：
 * [特權成員組](users.md#privilegedmembersgroups)
@@ -206,7 +206,7 @@ AEM Communities功能通常會要求網站訪客在參與發佈環境的社群�
 
 * 選擇&#x200B;**[!UICONTROL 保存]**
 
-## 授權管理員{#authorized-administrators}
+## 授權管理員 {#authorized-administrators}
 
 在Communities成員控制台中使用成員時，必須以具有適當權限的用戶身份登錄，並且要正確配置[隧道服務](deploy-communities.md#tunnel-service-on-author)所使用的複製代理。
 
