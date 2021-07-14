@@ -9,20 +9,20 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: aaafda59c63ea47c67ec974263013ead468df9cc
 workflow-type: tm+mt
-source-wordcount: '7109'
+source-wordcount: '7268'
 ht-degree: 0%
 
 ---
 
 # Forms上以OSGi為中心的工作流程 — 步驟參考{#forms-centric-workflow-on-osgi-step-reference}
 
-## Forms Workflow步驟{#forms-workflow-steps}
+## Forms Workflow步驟 {#forms-workflow-steps}
 
 Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 這些步驟可讓您在OSGi上快速建立以Forms為中心的最適化表單。 這些工作流可用於開發基本的審核和批准工作流、內部和跨防火牆業務流程。 您也可以使用Forms Workflow步驟來開始檔案服務、整合Adobe Sign簽章工作流程，以及執行其他AEM Forms作業。 您需要[AEM Forms附加元件](https://www.adobe.com/go/learn_aemforms_documentation_63)才能在工作流程中使用這些步驟。
 
-## 分配任務步驟{#assign-task-step}
+## 分配任務步驟 {#assign-task-step}
 
 分配任務步驟將建立一個任務並將其分配給用戶或組。 除了指定任務外，元件還指定任務的最適化表單或非互動式PDF。 需要最適化表單才能接受使用者的輸入，而非互動式PDF或只供審核工作流程使用的唯讀最適化表單。
 
@@ -87,7 +87,9 @@ Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 �
 * **用戶或組：** 將任務分配給選定的用戶或組。在&#x200B;**Assign options**&#x200B;欄位中選取&#x200B;**對特定使用者或群組選項**&#x200B;時，此選項可用。 欄位會列出工作流程使用者群組的所有使用者和群組。\
    **使用者或群組**&#x200B;下拉式功能表會列出登入使用者可存取的使用者和群組。 使用者名稱的顯示取決於您是否對該特定使用者crx-repository中的&#x200B;**users**&#x200B;節點擁有存取權限。
 
-* **透過電子郵件通知受託人：** 選取此選項，將電子郵件通知傳送至受託人。將任務分配給用戶時，將發送這些通知。 使用選項之前，請先從AEM Web Console啟用通知。 有關逐步說明，請參閱[為分配任務步驟配置電子郵件通知](../../forms/using/aem-forms-workflow.md)
+* **[!UICONTROL 傳送通知電子郵件]**:選取此選項，將電子郵件通知傳送給受託人。將任務分配給用戶或組時，將發送這些通知。 您可以使用&#x200B;**[!UICONTROL 收件者電子郵件地址]**&#x200B;選項指定擷取電子郵件地址的機制。
+
+* **[!UICONTROL 收件者電子郵件地址]**:您可以將電子郵件地址儲存在變數中，使用常值來指定永久電子郵件地址，或使用受託人設定檔中指定之受託人的預設電子郵件地址。您可以使用常值或變數來指定群組的電子郵件地址。 變數選項有助於動態擷取和使用電子郵件地址。 **[!UICONTROL 使用受託人的預設電子郵件地址]**&#x200B;選項僅適用於單一受託人。 在這種情況下，會使用儲存在受分配的用戶配置檔案中的電子郵件地址。
 
 * **HTML電子郵件範本**:為通知電子郵件選取電子郵件範本。若要編輯範本，請修改crx-repository中位於/libs/fd/dashboard/templates/email/htmlEmailTemplate.txt的檔案。
 * **允許委派至：** AEM收件匣提供選項給登入的使用者，可將指派的工作流程委派給其他使用者。您可以委派至相同群組內，或委派給其他群組的工作流程使用者。 如果將任務分配給單個用戶，並且選擇了允許委派給受託人組成員&#x200B;**選項，則無法將該任務委派給另一個用戶或組。**
@@ -117,7 +119,7 @@ Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 �
 * **顯示後續步驟中的資料：** 選擇此選項可讓當前受託人查看後續受託人執行的操作和添加到任務的注釋。它還允許當前受託人查看已完成任務的記錄檔案（如果有）。
 * **資料類型的可見性：** 預設情況下，受託人可以查看記錄文檔、受託人、所採取的操作以及先前和後續受託人添加的注釋。使用資料類型的可見性選項來限制受分配者可見的資料類型。
 
-## 傳送電子郵件步驟{#send-email-step}
+## 傳送電子郵件步驟 {#send-email-step}
 
 使用電子郵件步驟來傳送電子郵件，例如，包含記錄檔案、最適化表單連結、互動式通訊連結或附加PDF檔案的電子郵件。 「傳送電子郵件」步驟支援[HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email)。 HTML電子郵件具有回應性，並可適應收件者的電子郵件用戶端和螢幕大小。 您可以使用HTML電子郵件範本來定義電子郵件的外觀、色彩配置和行為。
 
@@ -151,7 +153,7 @@ Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 �
 
 **檔案名稱：** 電子郵件附件檔案的名稱。「電子郵件步驟」將附件的原始檔案名更改為指定的檔案名。 可以手動指定名稱，或從工作流程中繼資料屬性或變數中擷取名稱。 當您知道要指定的確切值時，請使用&#x200B;**常值**&#x200B;選項。 使用&#x200B;**Variable**&#x200B;選項，從字串資料類型變數中儲存的值檢索檔案名。 當要使用的值儲存在工作流元資料屬性中時，請使用&#x200B;**從工作流元資料檢索**&#x200B;選項。
 
-## 生成記錄步驟{#generate-document-of-record-step}的文檔
+## 生成記錄文檔步驟 {#generate-document-of-record-step}
 
 填寫或提交表單時，您可以以打印或文檔格式保存表單記錄。 這稱為記錄檔(DoR)。 您可以使用「產生記錄檔」步驟，建立唯讀或互動式最適化表單的PDF版本。 PDF版本包含填入表單的資訊，以及最適化表單的版面。
 
@@ -172,7 +174,7 @@ Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 �
 
 **地區**:指定記錄檔案的語言。選擇&#x200B;**常值**&#x200B;從下拉清單中選擇區域設定，或選擇&#x200B;**變數**&#x200B;從字串資料類型變數中儲存的值檢索區域設定。 在變數中儲存地區設定值時，必須定義地區設定代碼。 例如，請為英文指定&#x200B;**en_US**，為法文指定&#x200B;**fr_FR**。
 
-## 調用表單資料模型服務步驟{#invoke-form-data-model-service-step}
+## 調用表單資料模型服務步驟 {#invoke-form-data-model-service-step}
 
 您可以使用[AEM Forms Data Integration](../../forms/using/data-integration.md)來設定和連線到不同的資料來源。 這些資料源可以是資料庫、Web服務、REST服務、OData服務和CRM解決方案。 AEM Forms資料整合可讓您建立包含各種服務的表單資料模型，以對已設定的資料庫執行資料擷取、新增和更新作業。 您可以使用&#x200B;**調用資料模型服務步驟**&#x200B;來選擇表單資料模型(FDM)，並使用FDM的服務來檢索、更新或將資料添加到不同的資料源。
 
@@ -242,6 +244,9 @@ Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 �
    * **常值：** 當您知道要指定的確切值時，可使用選項。例如， srose@we.info。
    * **變數：** 使用選項來擷取儲存在變數中的值。
    * **從工作流元資料擷取：** 當要使用的值儲存在工作流程中繼資料屬性中時，請使用選項。例如， emailAddress。
+   * **[!UICONTROL 相對於裝載]**:使用選項可檢索儲存在相對於有效負載的路徑上的檔案附件。選擇選項並指定包含檔案附件的資料夾名稱，或在文本框中指定檔案附件名稱。
+
+      例如，如果CRX儲存庫中的「相對於裝載」資料夾在`attachment\attachment-folder`位置包含檔案附件，請在選取&#x200B;**[!UICONTROL 「相對於裝載]**」選項後，在文字方塊中指定`attachment\attachment-folder`。
    * **JSON點記號：** 當要使用的值位於JSON檔案中時，請使用選項。例如， insurance.customerDetails.emailAddress。 只有選取輸入JSON選項的「對應」輸入欄位時，「JSON點記號」選項才可用。
    * **從輸入JSON對應輸入欄位：** 指定JSON檔案的路徑，以從JSON檔案取得某些服務引數的輸入值。JSON檔案的路徑可以是相對於裝載、絕對路徑，或者您可以使用JSON或表單資料模型類型的變數來選取輸入JSON檔案。
 
@@ -254,7 +259,7 @@ Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 �
 * **服務輸出>儲存輸出至變數或JSON檔案：** 選取選項，將輸出值儲存在JSON檔案的絕對路徑、相對於裝載的路徑或變數中。
 * **使用下列選項儲存輸出JSON檔案：** 儲存輸出JSON檔案。輸出JSON檔案的路徑可以是相對於裝載或絕對路徑。 您也可以使用JSON或表單資料模型資料類型的變數來儲存輸出JSON檔案。
 
-## 簽署文檔步驟{#sign-document-step}
+## 簽署檔案步驟 {#sign-document-step}
 
 「簽署檔案」步驟可讓您使用Adobe Sign來簽署檔案。 「簽署文檔」步驟具有以下屬性：
 
@@ -276,44 +281,44 @@ Forms工作流程步驟會在AEM工作流程中執行AEM Forms專屬作業。 �
 * **狀態變數：** 啟用Adobe Sign的檔案會將檔案的簽署狀態儲存在字串資料類型的變數中。指定狀態變數的名稱(adobeSignStatus)。 在CRXDE中，例項的狀態變數可在/etc/workflow/instances/&lt;server>/&lt;date-time>/&lt;instance of workflow model>/workItems/&lt;node>/metaData包含變數的狀態。
 * **使用以下選項保存已簽名文檔：** 指定保留已簽名文檔的位置。您可以選擇覆蓋裝載檔案、將已簽名文檔放置在裝載目錄中的某個位置，或將已簽名文檔儲存在文檔類型的變數中。
 
-## 文檔服務步驟{#document-services-steps}
+## 文檔服務步驟 {#document-services-steps}
 
 AEM檔案服務是一組用於建立、組裝和保護PDF檔案的服務。 AEM Forms為每個檔案服務提供個別的AEM工作流程步驟。
 
 與其他AEM Forms工作流程步驟（例如「指派任務」、「傳送電子郵件」和「簽署檔案」）類似，您可以在所有AEM檔案服務步驟中使用變數。 如需建立和管理變數的詳細資訊，請參閱AEM工作流程中的[變數](../../forms/using/variable-in-aem-workflows.md)。
 
-### 應用文檔時間戳步驟{#apply-document-time-stamp-step}
+### 應用文檔時間戳步驟 {#apply-document-time-stamp-step}
 
 向文檔添加時間戳。 提供文檔詳細資訊，如輸入文檔路徑、輸入文檔名稱、儲存導出資料的位置。 您可以選擇覆蓋現有的有效負載檔案、選擇不同的檔案名以將資料儲存在有效負載資料夾下的不同檔案中、提供資料的絕對路徑，或將資料儲存在文檔資料類型的變數中。
 
-### 轉換為影像步驟{#convert-to-image-step}
+### 轉換為影像步驟 {#convert-to-image-step}
 
 將PDF文檔轉換為影像清單。 支援的影像格式為JPEG、JPEG2000、PNG和TIFF。 下列資訊適用於TIFF影像的轉換：
 
 * 會產生多頁TIFF檔案。
 * TIFF影像中不包含某些注釋。 不包含需要Acrobat產生外觀的註解。
 
-### 轉換為PDF/步驟{#convert-to-pdf-a-step}
+### 轉換為PDF/A步驟 {#convert-to-pdf-a-step}
 
 使用提供的選項將PDF文檔轉換為PDF/A格式。 PDF/A版的可攜式檔案格式(PDF)專門用於檔案封存和長期保存。
 
-### 轉換為PS步驟{#convert-to-ps-step}
+### 轉換為PS步驟 {#convert-to-ps-step}
 
 將PDF檔案轉換為PostScript。 轉換為PostScript時，可以使用轉換操作指定源文檔以及轉換為PostScript級別2或3。 轉換為PostScript檔案的PDF文檔必須是非互動式的。
 
-### 從指定類型步驟{#create-pdf-from-specified-type-step}建立PDF
+### 從指定的類型步驟建立PDF {#create-pdf-from-specified-type-step}
 
 從輸入檔案生成PDF文檔。 輸入文檔可以是相對於有效負載、具有絕對路徑、可以是有效負載本身或儲存在文檔資料類型的變數中。
 
-### 從URL/HTML/ZIP步驟{#create-pdf-from-url-html-zip-step}建立PDF
+### 從URL/HTML/ZIP步驟建立PDF {#create-pdf-from-url-html-zip-step}
 
 從提供的URL、HTML和ZIP檔案生成PDF文檔。
 
-### 導出資料步驟{#export-data-step}
+### 匯出資料步驟 {#export-data-step}
 
 從PDF forms或XDP檔案匯出資料。 它要求您輸入輸入文檔和導出資料格式的檔案路徑。 「匯出資料格式」的選項有「自動」、「XDP」和「XmlData」。
 
-### Export PDF到指定類型步驟{#export-pdf-to-specified-type-step}
+### Export PDF到指定類型步驟 {#export-pdf-to-specified-type-step}
 
 將PDF文檔轉換為選定格式。
 
@@ -325,7 +330,7 @@ AEM檔案服務是一組用於建立、組裝和保護PDF檔案的服務。 AEM 
 >
 >可以使用變數指定輸入文檔的模板檔案。 將範本檔案的路徑儲存在字串資料類型的變數中。
 
-### 導入資料步驟{#import-data-step}
+### 匯入資料步驟 {#import-data-step}
 
 將表單資料合併為PDF表單。 您可以將表單資料匯入PDF表單。
 
@@ -337,7 +342,7 @@ AEM檔案服務是一組用於建立、組裝和保護PDF檔案的服務。 AEM 
 >
 >您可以使用變數來指定輸入文檔的DDX檔案。 將DDX檔案儲存在Document或XML資料類型的變數中。
 
-### Optimize PDF步驟{#optimize-pdf-step}
+### Optimize PDF步驟 {#optimize-pdf-step}
 
 縮小PDF檔案的大小，以最佳化PDF檔案。 此轉換的結果為PDF檔案，可能小於其原始版本。 此操作還將PDF文檔轉換為優化參數中指定的PDF版本。
 
@@ -359,11 +364,11 @@ AEM檔案服務是一組用於建立、組裝和保護PDF檔案的服務。 AEM 
 >
 >可以使用變數指定輸入文檔的模板檔案。 將範本檔案的路徑儲存在字串資料類型的變數中。
 
-### 安全文檔步驟{#secure-document-step}
+### 安全文檔步驟 {#secure-document-step}
 
 加密、簽署和認證檔案。 AEM Forms支援密碼和憑證基底加密。 您也可以選擇各種檔案簽署演算法。 例如SHA-256和SH-512。 您也可以使用工作流程步驟來讀取擴充PDF檔案。 工作流程步驟提供可啟用條碼解碼、數位簽名、匯入和匯出PDF資料的選項，以及其他選項。
 
-### 發送到打印機步驟{#send-to-printer-step}
+### 發送到打印機步驟 {#send-to-printer-step}
 
 將文檔直接發送到打印機。 它支援下列打印訪問機制：
 
