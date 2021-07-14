@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: 互動式通訊
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b6774acc4ec32c87a5ad5f5b2ea885e1e1aa867e
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2041'
 ht-degree: 0%
 
 ---
 
-# 使用代理UI {#prepare-and-send-interactive-communication-using-the-agent-ui}準備併發送互動式通信
+# 使用Agent UI準備和發送互動式通信 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 代理UI允許代理準備並將互動式通信發送到後續進程。 代理程式會根據允許進行所需的修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 * **內容**:在「內容」頁簽中，代理管理互動式通信中的文檔片段和內容變數等內容。在這些文檔片段的屬性中建立交互通信時，代理可以按照允許的方式在文檔片段中進行更改。 如果允許，代理還可以重新排序、添加/刪除文檔片段以及添加分頁符。
 * **附件**:僅當Interactive Communication具有任何附件或Agent具有庫訪問權時，Attachments頁簽才會顯示在代理UI中。代理可以更改或不能編輯附件。
 
-## 使用代理UI {#prepare-interactive-communication-using-the-agent-ui}準備互動式通信
+## 使用代理UI準備互動式通訊 {#prepare-interactive-communication-using-the-agent-ui}
 
 1. 選取&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**。
 1. 選擇適當的「Interactive Communication（互動式通信）」，然後點選「Open Agent UI ]**（開啟代理UI**[!UICONTROL ）」。
@@ -88,7 +88,7 @@ ht-degree: 0%
 
    繼續管理互動式通信的附件。
 
-### 管理附件{#manage-attachments}
+### 管理附件 {#manage-attachments}
 
 1. 選擇&#x200B;**[!UICONTROL 附件]**。 Agent UI將按建立互動式通信時設定的方式顯示可用附件。
 
@@ -145,7 +145,7 @@ ht-degree: 0%
 
 ## 代理用戶介面中可用的操作和資訊 {#actionsagentui}
 
-### 文檔片段{#document-fragments}
+### 檔案片段 {#document-fragments}
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 * 選擇（眼睛表徵圖）:包括\排除互動式通信中的文檔片段。
 * 未填充的值（資訊）:指示文檔片段中未填充的變數的數量。
 
-### 列出文檔片段{#list-document-fragments}
+### 列出文檔片段 {#list-document-fragments}
 
 ![listoptions](assets/listoptions.png)
 
@@ -171,13 +171,13 @@ ht-degree: 0%
 * 跳過項目符號/編號：啟用以跳過清單文檔片段中的項目符號/編號。
 * 未填充的值（資訊）:指示文檔片段中未填充的變數的數量。
 
-## 將互動式通訊儲存為草稿{#save-as-draft}
+## 將互動式通訊儲存為草稿 {#save-as-draft}
 
 您可以使用代理UI為每個互動式通訊儲存一或多個草稿，並稍後擷取草稿以繼續處理。 您可以為每個草稿指定不同的名稱以加以識別。
 
 Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿。
 
-### 啟用另存為草稿功能{#before-save-as-draft}
+### 啟用另存為草稿功能 {#before-save-as-draft}
 
 預設情況下，「另存為草稿」(Save as a Draft)功能未啟用。 執行下列步驟以啟用功能：
 
@@ -191,7 +191,7 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 1. 點選&#x200B;**[!UICONTROL 建立通信配置]**。
 1. 選擇「**[!UICONTROL 啟用使用CCRDocumentInstanceService]**&#x200B;保存」，然後點選「**[!UICONTROL 保存」。]**
 
-### 將互動式通訊儲存為草稿{#save-as-draft-agent-ui}
+### 將互動式通訊儲存為草稿 {#save-as-draft-agent-ui}
 
 執行下列步驟將互動式通訊儲存為草稿：
 
@@ -203,7 +203,7 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 
 將「互動式通訊」儲存為草稿後，請點選&#x200B;**[!UICONTROL 儲存變更]**&#x200B;以儲存草稿的任何進一步變更。
 
-### 檢索交互通信的草稿{#retrieve-draft}
+### 檢索互動式通信的草稿 {#retrieve-draft}
 
 將互動式通訊儲存為草稿後，您可以擷取它以繼續處理。 使用以下內容檢索互動式通信：
 
@@ -211,11 +211,7 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 
 [] 草稿是指將互動式通訊儲存為草稿後產生的草稿版本唯一識別碼。
 
->[!NOTE]
->
->如果您在將互動式通訊儲存為草稿後對其進行任何變更，草稿版本將無法開啟。
-
-### 示例ccrDocumentInstance SPI實施{#sample-ccrDocumentInstance-spi}
+### 示例ccrDocumentInstance SPI實施 {#sample-ccrDocumentInstance-spi}
 
 實作`ccrDocumentInstance` SPI以將互動式通訊儲存為草稿。 以下是`ccrDocumentInstance` SPI的範例實作。
 
