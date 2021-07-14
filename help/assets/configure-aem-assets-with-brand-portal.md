@@ -12,10 +12,10 @@ docset: aem65
 feature: 品牌入口網站
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: aed6e28d7ff228ecbaeaf0d468d1d9bcb4373f90
 workflow-type: tm+mt
-source-wordcount: '2086'
-ht-degree: 9%
+source-wordcount: '2076'
+ht-degree: 7%
 
 ---
 
@@ -70,13 +70,13 @@ AEM Assets是透過Brand Portal Developer Console使用Adobe來設定，其中�
 
 * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴培訓計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)來請求AEM 6.5。
 
-下載AEM後，如需設定AEM製作例項的指示，請參閱[部署和維護](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html#default-local-install)。
+下載AEM後，如需設定AEM製作例項的指示，請參閱[部署和維護](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#default-local-install)。
 
 ### 下載及安裝AEM最新Service Pack {#servicepack}
 
 有關詳細說明，請參閱
 
-* [AEM 6.5 Service Pack發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
+* [AEM 6.5 Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
 
 **如** 果您找不到最新的AEM套件或Service Pack，請聯絡支援。
 
@@ -337,18 +337,18 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    >
    >請避免停用任何復寫代理，因為這可能導致資產復寫（在佇列中執行）失敗。
    >
-   >請確定所有四個復寫代理均已設定，以避免逾時錯誤。 請參閱[疑難排解平行發佈至Brand Portal時的問題](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)。
+   >請確定所有四個復寫代理均已設定，以避免逾時錯誤。 請參閱[疑難排解平行發佈至Brand Portal時的問題](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=en#connection-timeout)。
 
 您現在可以：
 
 * [從 AEM Assets 發佈資產到 Brand Portal](../assets/brand-portal-publish-assets.md)
-* [從Brand Portal發佈資產至AEM Assets](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)  - Brand Portal中的Asset Sourcing
+* [從Brand Portal發佈資產至AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)  - Brand Portal中的Asset Sourcing
 * [從 AEM Assets 發佈資料夾到 Brand Portal](../assets/brand-portal-publish-folder.md)
 * [從 AEM Assets 發佈集合到 Brand Portal](../assets/brand-portal-publish-collection.md)
-* [將預設集、結構和 Facet 發佈至 Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
-* [將標記發佈至 Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
+* [將預設集、結構和 Facet 發佈至 Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [將標記發佈至 Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
-如需詳細資訊，請參閱[Brand Portal檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-brand-portal/using/home.html)。
+如需詳細資訊，請參閱[Brand Portal檔案](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html)。
 
 
 ## 升級配置 {#upgrade-integration-65}
