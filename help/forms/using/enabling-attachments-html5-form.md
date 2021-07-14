@@ -10,26 +10,31 @@ topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 feature: 行動表單
 exl-id: 68912260-179a-4d1b-b944-0a1777c021ac
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6e2a0f053a1f6989524e9ae2b1dcb001b0397ac6
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 0%
+source-wordcount: '353'
+ht-degree: 1%
 
 ---
 
-# 啟用HTML5表單{#enabling-attachments-for-an-html-form}的附件
+# 啟用HTML5表單的附件 {#enabling-attachments-for-an-html-form}
 
 您可以使用HTML5表單上傳、預覽和提交附件。 依預設，附件支援會停用。 要啟用附件支援，請執行以下操作：
 
-1. 使用多選字串屬性`mfAttachmentOptions`建立[自訂設定檔](/help/forms/using/custom-profile.md)。
-1. 在自訂設定檔中，指定屬性`fileSizeLimit`、`multiSelect`和`buttonTex`t ，以配置檔案附件小工具集的選項。 您也可以視需要指定更多自訂屬性。
+1. 使用`mfAttachmentOptions`多選字串屬性建立[自訂設定檔](/help/forms/using/custom-profile.md)。 `mfAttachmentOptions`屬性中的每個字串都必須具有`property=value`格式，才能配置檔案附件小工具集的選項。 `property`和`value`可以具有下列任一值：
 
-1. 在自訂設定檔中，使用下列設定：
+   | 屬性 | 值 |
+   |--- |---|
+   | multiSelect | true或false（預設為true） |
+   | fileSizeLimit | 以MB為單位的數字（預設為2 MB）。 例如5。 |
+   | buttonText | 彈出式視窗的按鈕文字（預設為「附加」） |
+   | 接受 | 要接受的檔案類型清單（預設為「audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf」） |
 
-   * **multiSelect**  -> true或false（預設為true）
-   * **fileSizeLimit**  -> value_in_mb（例如5）（預設為2 MB）
-   * **buttonText**  ->快顯視窗的按鈕文字（預設為「Attach」）
-   * **接受**  ->檔案類型以接受（預設為「audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf」）
+   例如：
+
+   ![配置選項](assets/mfAttachmentOptions.png)
+
+   您也可以視需要為`mfAttachmentOptions`屬性指定更多自訂選項。
 
    >[!NOTE]
    >
@@ -52,7 +57,7 @@ ht-degree: 0%
    >
    >匿名用戶無法使用檔案預覽選項。
 
-## 附件提交格式{#attachment-submission-format}
+## 附件提交格式 {#attachment-submission-format}
 
 啟用附件時，HTML5表單會提交多部分資料。 多部分提交資料包含兩部分&#x200B;**dataXml**&#x200B;和&#x200B;**附件**。
 
