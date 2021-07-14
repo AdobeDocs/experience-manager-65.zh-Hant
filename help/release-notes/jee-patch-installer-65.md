@@ -5,28 +5,28 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: ecac6269b5e12b847136f4af534016bc7b88bb2b
+source-git-commit: e54d8633aa3b8c1554df90d1b9650713246b95e8
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 29%
 
 ---
 
-# AEM Forms JEE修補程式安裝程式{#aem-forms-jee-patch-installer}
+# AEM Forms JEE修補程式安裝程式 {#aem-forms-jee-patch-installer}
 
 >[!NOTE]
 >
 >[如需](https://www.adobe.com/tw/account/sign-in.supportportal.html) 詳細資訊或取得修補程式，請聯絡支援。
 
-## 關於修補程式安裝程式{#about-the-patch-installer}
+## 關於修補程式安裝程式 {#about-the-patch-installer}
 
 AEM 6.5 Forms JEE修補程式安裝程式包含在此修補程式發行前，AEM 6.5 Forms JEE所有元件的所有已修正問題。 如需修正問題的完整清單，請參閱最新的[Service Pack發行說明](sp-release-notes.md)。
 
-## 安裝修補程式{#prerequisites-to-installing-the-patch}的先決條件
+## 安裝修補程式的必要條件 {#prerequisites-to-installing-the-patch}
 
 * AEM 6.5 Forms
 
-## 安裝和配置修補程式{#installing-and-configuring-the-patch}
+## 安裝和配置修補程式 {#installing-and-configuring-the-patch}
 
 1. 備份&lt;*AEM_forms_root*>/deploy資料夾。 如果決定解除安裝快速修正，則此為必要操作。
 1. 停止應用程式伺服器。
@@ -58,6 +58,7 @@ Linux導航到相應的目錄，然後在命令提示符下鍵入
    * `serializer-2.7.1.jar` 至 `serializer-2.7.2.jar`
    * `xalan-2.7.1.jar` 至 `xalan-2.7.2.jar`
    * `xercesImpl-2.9.1.jar` 至 `xercesImpl-2.12.0.jar`
+   * `xml-apis-2.7.1.jar` 至 `xml-apis-2.7.2.jar`
 
 1. 預設會選取「啟動設定管理器」核取方塊。 按一下 **[!UICONTROL Done]**，執行 Configuration Manager。
 
@@ -70,9 +71,9 @@ Linux導航到相應的目錄，然後在命令提示符下鍵入
 
 1. （僅限JBoss）安裝修補程式並配置伺服器後，刪除JBoss應用程式伺服器的tmp和工作目錄。
 
-## 部署後配置{#post-deployment-configurations}
+## 部署後配置 {#post-deployment-configurations}
 
-### SAML配置{#saml-configurations}
+### SAML設定 {#saml-configurations}
 
 如果您已設定SAML驗證，且遇到大型IDP中繼資料的問題，請安裝修補程式後執行下列作業：
 
@@ -81,7 +82,7 @@ Linux導航到相應的目錄，然後在命令提示符下鍵入
 1. 重新啟動伺服器。
 1. 刪除現有的SAML驗證提供者，並如SAML設定所述，為現有網域再次新增這些提供者。
 
-## 受影響的模組{#impacted-modules}
+## 受影響的模組 {#impacted-modules}
 
 * 文件服務
 * 文件安全性
