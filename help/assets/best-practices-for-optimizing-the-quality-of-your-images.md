@@ -1,5 +1,5 @@
 ---
-title: 影像品質最佳化的最佳作法
+title: 在Dynamic Media中最佳化影像品質的最佳作法
 description: 了解在Dynamic Media中最佳化影像品質的最佳實務
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: 資產管理
 role: User, Admin
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 6%
+source-wordcount: '1451'
+ht-degree: 4%
 
 ---
 
-# 影像品質最佳化的最佳作法 {#best-practices-for-optimizing-the-quality-of-your-images}
+# 在Dynamic Media中最佳化影像品質的最佳作法 {#best-practices-for-optimizing-the-quality-of-your-images}
 
 最佳化影像品質可能是一項耗時的過程，因為許多因素都有助於呈現可接受的結果。 結果部分是主觀的，因為個體對影像質量的看法不同。 結構化實驗是關鍵。
 
@@ -47,7 +47,7 @@ Adobe Experience Manager包含超過100個Dynamic Media影像傳送命令，用�
 
 影像銳利化是控制網站上影像的最複雜環節，也是常有錯誤發生的地方。 請參考下列實用資源，以深入了解銳利化和遮色片銳利化在Experience Manager中的運作方式：
 
-最佳實務白皮書[亦適用於Experience Manager的Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中的銳利化影像。
+最佳作法白皮書[銳化AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中的影像，此白皮書也適用於Experience Manager。
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
@@ -59,14 +59,14 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 * 簡單銳利化(`&op_sharpen`) — 類似於Photoshop中使用的銳利化濾鏡，簡單銳利化會在動態調整大小後將基本銳利化套用至影像的最終檢視。 不過，此方法不可由使用者設定。 除非需要，否則最佳做法是不使用&amp;op_sharpen。
 * 銳利化遮色片(`&op_USM`) — 銳利化遮色片是業界標準的銳利化濾鏡。 最佳作法是依照下列准則，使用非銳利化遮色片來銳利化影像。 遮色片銳利化可讓您控制下列三個參數：
 
-   * `&op_sharpen=`數量，半徑，臨界值
+   * `&op_sharpen=amount,radius,threshold`
 
-      * **[!UICONTROL 量]** （0-5，效果的強度。）
-      * **[!UICONTROL 半徑]** (0-250，在銳化物件周圍繪製的「銳利化線」寬度（以像素計）。
+      * **[!UICONTROL *量&#x200B;*]**（0-5，效果的強度。）
+      * **[!UICONTROL *半徑&#x200B;*]**(0-250，在銳化物件周圍繪製的「銳利化線」寬度（以像素計）。
 
       請記得，參數半徑和量彼此相互作用。 通過增加量可以補償減小的半徑。 半徑允許更精細的控制，因為較低的值只銳化邊緣像素，而較高的值銳化較寬的像素帶。
 
-      * **[!UICONTROL 閾值]** （0-255，效應的靈敏度）。
+      * **[!UICONTROL *閾值&#x200B;*]**（0-255，效應的靈敏度）。
 
              此參數可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素，濾鏡會銳化這些像素。**[!UICONTROL threshold]**參數有助於避免色彩相似的區域過度銳利化，例如膚色。例如，閾值為12會忽略膚色亮度的微小變化，以避免加上「雜訊」，同時仍會加上邊緣對比度至高對比區域，例如睫毛與皮膚相遇的區域。
          
@@ -74,7 +74,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
          銳利化影像的Experience Manager說明主題。
 
-         最佳作法白皮書[AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中的銳利化影像。
+         最佳作法白皮書[在AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中銳化影像。
 
       * Experience Manager也可讓您控制第四個參數：單色(0,1)。 此參數確定是否使用值0分別對每個顏色分量應用銳利化遮色片，或使用值1對影像亮度/強度應用銳利化遮色片。
 
