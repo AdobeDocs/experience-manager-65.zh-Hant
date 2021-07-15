@@ -8,9 +8,9 @@ discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 role: User, Admin
 exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
 feature: 設定
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 如果您是管理Dynamic Media，請注意下列主題：
 
-* [設定Dynamic Media-Scene7模式](config-dms7.md)  — 如果您是新的Dynamic Media客戶，請使用此設定。
+* [設定Dynamic Media - Scene7模式](config-dms7.md)  — 如果您是新的Dynamic Media客戶，請使用此設定。
 * [設定Dynamic Media — 混合模式](config-dynamic.md)  — 如果您是現有Dynamic Media客戶升級Experience Manager，請使用此設定。
 * [管理影像預設集](managing-image-presets.md)
 * [管理檢視器預設集](managing-viewer-presets.md)
