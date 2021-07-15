@@ -7,9 +7,9 @@ content-type: reference
 feature: 協助工具
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 因為[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的外掛程式，所以大多數鍵盤控制行為與[!DNL Experience Manager Assets]中相同。 例如，[!DNL Dynamic Media]中的`Cancel`按鈕與[!DNL Experience Manager Assets]中的按鈕具有相同的焦點突出顯示，並且與[!DNL Experience Manager Assets]中的`Spacebar`鍵反應。 請參閱Assets](/help/assets/accessibility.md#keyboard-shortcuts)中的[鍵盤快速鍵。
 
-[!DNL Dynamic Media]中由單個用戶介面元素支援的擊鍵在大多數情況下是顯而易見的，並且易於發現。 [!DNL Dynamic Media]中的鍵盤控制項與以下內容有關：
+[!DNL Dynamic Media]中由單個用戶介面元素支援的鍵擊清晰易懂。 [!DNL Dynamic Media]中的鍵盤控制項與以下內容有關：
 
 * 能夠使用`Tab`和`Shift+Tab`鍵擊在頁面上的互動元素之間導航。
 使用`Tab`將輸入焦點按Tab鍵順序提前到下一個用戶介面元素；使用`Shift+Tab`將輸入焦點重新移回上一個使用者介面元素。
