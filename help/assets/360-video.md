@@ -11,7 +11,7 @@ docset: aem65
 feature: 360 VR 影片
 role: User, Admin
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
 
 ## 360影片的實際運作 {#video-in-action}
 
-點選[空間站360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)以開啟瀏覽器窗口並觀看360度視頻。 在視頻播放期間，將滑鼠指針拖到新位置以更改觀看角度。
+選擇[空間站360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)以開啟瀏覽器窗口並觀看360度視頻。 在視頻播放期間，將滑鼠指針拖到新位置以更改觀看角度。
 
 ![360視頻](assets/6_5_360videoiss_simplified.png)
 *示例來自空間站的視頻幀360*
@@ -99,42 +99,42 @@ Dynamic Media - Scene7模式包含360個視訊資產的原生支援。 依預設
 
 當您對360影片感到滿意時，即可發佈影片。
 
-請參閱[將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)。
+請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
 請參閱[將URL連結到您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有連結與相對URL，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
 請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
-**若要預覽360個影片：**
+**若要預覽360影片：**
 
-1. 在&#x200B;**[!UICONTROL Assets]**&#x200B;中，導覽至您已建立的現有360視訊。 點選「 360視訊」資產，以便在預覽模式中開啟資產。
+1. 在&#x200B;**[!UICONTROL Assets]**&#x200B;中，導覽至您已建立的現有360視訊。 選取「360視訊」資產，以便在預覽模式中開啟資產。
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
-   點選360視訊資產，以便預覽視訊。
+   選取360視訊資產，以便預覽視訊。
 
-1. 在預覽頁面上，在頁面左上角附近，點選下拉式清單，然後選取「**[!UICONTROL 檢視器]**」。
+1. 在預覽頁面上，在頁面左上角附近，選取下拉式清單，然後選取&#x200B;**[!UICONTROL 檢視器]**。
 
    ![6_5_360視訊預覽檢視器](assets/6_5_360video-preview-viewers.png)
 
-   從「檢視器」清單中，點選&#x200B;**[!UICONTROL Video360_social]**，然後執行下列其中一項作業：
+   從「檢視器」清單中，選取&#x200B;**[!UICONTROL Video360_social]**，然後執行下列其中一項操作：
 
    * 如果要更改靜態場景的觀看角度，請將滑鼠指針拖過視頻。
-   * 如果您要開始播放，請點選視訊的&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕。 當視訊播放時，將滑鼠指標拖曳到視訊上，以變更您的檢視角度。
+   * 如果要開始播放，請選取視訊的&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕。 當視訊播放時，將滑鼠指標拖曳到視訊上，以變更您的檢視角度。
 
    ![6_5_360 video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360影片螢幕擷圖。*
 
-   * 從「檢視器」清單中，點選&#x200B;**[!UICONTROL Video360VR]**。
+   * 從「查看器」清單中，選擇&#x200B;**[!UICONTROL Video360VR]**。
 
       虛擬現實(VR)視訊是沈浸式視訊內容，可透過虛擬現實頭戴式裝置存取。 和普通視訊一樣，當您使用360度的攝像頭來記錄或擷取視訊時，您一開始就會建立VR視訊。
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR視訊螢幕擷圖。*
 
-1. 在預覽頁面的右上方附近，點選&#x200B;**[!UICONTROL 關閉]**。
+1. 在預覽頁面的右上方附近，選擇&#x200B;**[!UICONTROL Close]**。
 
 ## 發佈360影片 {#publishing-video}
 
 發佈360影片，方便您使用。 發佈360影片會啟用URL和內嵌程式碼。 此外，也會將360視訊發佈至Dynamic Media雲端，與CDN整合，以提供可擴充且高效能的傳遞。
 
 如需如何發佈360影片的詳細資訊，請參閱[發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md)。
-另請參閱[在網頁上嵌入視頻或影像查看器](/help/assets/embed-code.md)。
+另請參閱[將視訊或影像檢視器嵌入網頁](/help/assets/embed-code.md)。
 另請參閱[將URL連結到Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的互動式內容有連結與相對URL，尤其是連結至Experience Manager網站頁面的連結，則無法使用以URL為基礎的連結方法。
 另請參閱[將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
