@@ -3,11 +3,11 @@ title: Dynamic Media電子報
 description: 'Dynamic Media電子報(依Experience League)是每月電子報。 它旨在協助您快速上手Dynamic Media和Dynamic Media Classic，讓您立即開始實現價值。 這份一站式商店快訊提供寶貴的知識建立資源。 其中包括影片、解決方案概述，以及影像預設集、檢視器預設集、影片設定檔等部分主要功能的簡介。 '
 keywords: Dynamic Media；電子報；產品更新；提示與秘訣；事件；客戶成功；部落格；部落格；影像；影片；功能
 contentOwner: Rick Brough
-solution: Dynamic Media Classic, Experience Manager
+solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: 協作，Dynamic Media Classic
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
 workflow-type: tm+mt
 source-wordcount: '1182'
 ht-degree: 0%
