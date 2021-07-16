@@ -10,7 +10,7 @@ discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: User, Admin
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
 source-wordcount: '2849'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 本檔案說明如何將數位資產從Experience Manager發佈至Dynamic Media Classic，反之亦然。 檢視器也會詳細說明。 如需為Dynamic Media Classic設定Experience Manager的詳細資訊，請參閱[整合Dynamic Media Classic與Experience Manager](/help/sites-administering/scene7.md)。
 
-另請參閱[新增影像圖](image-maps.md)。
+另請參閱[新增影像地圖](image-maps.md)。
 
 有關使用視訊元件與Experience Manager的詳細資訊，請參閱[Video](video.md)。
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Experience Manager會以非同步方式發佈至Dynamic Media Classic。 按一下&#x200B;**[!UICONTROL Publish]**&#x200B;後，您的資產需要數秒的時間才會發佈至Dynamic Media Classic。
+>Experience Manager會以非同步方式發佈至Dynamic Media Classic。 選取&#x200B;**[!UICONTROL Publish]**&#x200B;後，您的資產需要數秒的時間才能發佈至Dynamic Media Classic。
 
 
 ## Dynamic Media Classic元件 {#scene-components}
@@ -78,8 +78,6 @@ ht-degree: 0%
 
 自2017年1月31日起，AdobeDynamic Media Classic已停止支援Flash檢視器平台。
 
-<!-- For more information about this important change, see [Flash Viewer End-of-Life FAQs](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html). -->
-
 ### 將Dynamic Media Classic(Scene7)元件新增至頁面 {#adding-a-scene-component-to-a-page}
 
 將Dynamic Media Classic(Scene7)元件新增至頁面，與將元件新增至任何頁面相同。 Dynamic Media Classic元件在以下章節中詳細說明。
@@ -88,17 +86,17 @@ ht-degree: 0%
 
 1. 在Experience Manager中，開啟您要新增&#x200B;**[!UICONTROL Dynamic Media Classic(Scene7)]**&#x200B;元件的頁面。
 
-1. 如果沒有可用的Dynamic Media Classic元件，請按一下&#x200B;**[!UICONTROL Design]**&#x200B;模式，點選任何具有藍色邊框的元件，點選&#x200B;**[!UICONTROL Parent]**&#x200B;圖示，然後點選&#x200B;**[!UICONTROL Configuration]**&#x200B;圖示。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，選取所有Dynamic Media Classic元件以讓它們可用，然後按一下&#x200B;**[!UICONTROL OK]**。
+1. 如果沒有可用的Dynamic Media Classic元件，請選擇&#x200B;**[!UICONTROL Design]**&#x200B;模式，選擇任何具有藍色邊框的元件，選擇&#x200B;**[!UICONTROL Parent]**&#x200B;表徵圖，然後選擇&#x200B;**[!UICONTROL Configuration]**&#x200B;表徵圖。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，選取所有Dynamic Media Classic元件以讓它們可用，然後選取&#x200B;**[!UICONTROL OK]**。
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
-1. 按一下「**[!UICONTROL 編輯]**」，以返回&#x200B;**[!UICONTROL 編輯]**&#x200B;模式。
+1. 選擇&#x200B;**[!UICONTROL Edit]**，以便返回到&#x200B;**[!UICONTROL Edit]**&#x200B;模式。
 
 1. 從sidekick中的Dynamic Media Classic群組將元件拖曳至所需位置的頁面。
 
-1. 按一下&#x200B;**[!UICONTROL Configuration]**&#x200B;圖示，即可開啟元件。
+1. 選取&#x200B;**[!UICONTROL Configuration]**&#x200B;圖示，以開啟元件。
 
-1. 視需要編輯元件，然後按一下&#x200B;**[!UICONTROL OK]**&#x200B;以儲存變更。
+1. 視需要編輯元件，並選取&#x200B;**[!UICONTROL OK]**&#x200B;以儲存變更。
 1. 從內容瀏覽器將您的影像或影片拖曳至您新增至頁面的Dynamic Media Classic元件。
 
    >[!NOTE]
@@ -120,7 +118,7 @@ ht-degree: 0%
    >如果Dynamic Media Classic元件不可用，請確定[以透過設計模式](/help/sites-authoring/default-components-designmode.md)啟用它們。
 
 1. 在已啟用&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;元件的網站中，將&#x200B;**[!UICONTROL Image]**&#x200B;元件拖曳至頁面。
-1. 選取元件，然後點選設定圖示。
+1. 選取元件並選取設定圖示。
 1. 在&#x200B;**[!UICONTROL Dynamic Media Classic設定]**&#x200B;標籤中，調整斷點。
 
    ![chlimage_1-225](assets/chlimage_1-225.png)
@@ -143,13 +141,13 @@ ht-degree: 0%
 
 按下&#x200B;**[!UICONTROL +]**&#x200B;按鈕時，HTML5縮放元件會顯示較大的影像。
 
-資產底部有縮放工具。 如果要放大，請點選&#x200B;**[!UICONTROL +]**;如果您想要減少，請點選&#x200B;**[!UICONTROL -]**。 點選&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，可將影像重新調整為原始大小，如此匯入。 點選對角線箭頭，讓它成為全螢幕。 點選&#x200B;**[!UICONTROL 編輯]**&#x200B;以便設定元件。 使用此元件，可以配置所有[!UICONTROL Dynamic Media Classic]元件](#settings-common-to-all-scene-components)共同的[設定。
+資產底部有縮放工具。 如果要放大，請選擇&#x200B;**[!UICONTROL +]**;如果要減少，請選擇&#x200B;**[!UICONTROL -]**。 點選&#x200B;**[!UICONTROL x]**&#x200B;或重設縮放箭頭，可將影像重新調整為原始大小，如此匯入。 選取對角線箭頭，讓它成為全螢幕。 選擇&#x200B;**[!UICONTROL Edit]**&#x200B;以便配置元件。 使用此元件，可以配置所有[!UICONTROL Dynamic Media Classic]元件](#settings-common-to-all-scene-components)共同的[設定。
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 
 ### 飛出 {#flyout}
 
-在HTML5 **[!UICONTROL Flyout]**&#x200B;元件中，資產會以分割畫面顯示；將資產保留在指定大小；顯示縮放部分的右側。 點選&#x200B;**[!UICONTROL 編輯]**&#x200B;以便設定元件。 使用此元件，您可以配置所有Dynamic Media Classic元件(](#settings-common-to-all-scene-components))通用的[設定。
+在HTML5 **[!UICONTROL Flyout]**&#x200B;元件中，資產會以分割畫面顯示；將資產保留在指定大小；顯示縮放部分的右側。 選擇&#x200B;**[!UICONTROL Edit]**&#x200B;以便配置元件。 使用此元件，您可以配置所有Dynamic Media Classic元件(](#settings-common-to-all-scene-components))通用的[設定。
 
 >[!NOTE]
 >
@@ -189,7 +187,7 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 [Dynamic Media Classic影像](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html) 範本是已匯入至Dynamic Media Classic的分層Photoshop內容，其中內容和屬性已參數化，因而可變性。**[!UICONTROL 影像範本]**&#x200B;元件可讓您匯入影像並以動態Experience Manager變更文字。 此外，您可以設定&#x200B;**[!UICONTROL 影像範本]**&#x200B;元件，以使用用戶端內容的值，讓每位使用者都能以個人化的方式體驗影像。
 
-如果要設定元件，請點選「**[!UICONTROL 編輯]**」。 您可以配置所有Dynamic Media Classic元件](#settings-common-to-all-scene-components)的共同設定，以及本節所述的其他設定。[
+如果要配置元件，請選擇&#x200B;**[!UICONTROL 編輯]**。 您可以配置所有Dynamic Media Classic元件](#settings-common-to-all-scene-components)的共同設定，以及本節所述的其他設定。[
 
 ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -211,7 +209,7 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 #### 動態變更文字 {#changing-text-dynamically}
 
-要動態更改文本，請在欄位中輸入新文本，然後按一下&#x200B;**[!UICONTROL OK]**。 在此範例中，**[!UICONTROL Price]**&#x200B;現在為$50，而運費為99美分。
+要動態更改文本，請在欄位中輸入新文本，然後選擇&#x200B;**[!UICONTROL OK]**。 在此範例中，**[!UICONTROL Price]**&#x200B;現在為$50，而運費為99美分。
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -221,7 +219,7 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 #### 更改文本以反映客戶端上下文值的值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-若要將欄位連結至用戶端內容值，請點選&#x200B;**[!UICONTROL 選取]**&#x200B;以開啟用戶端內容功能表，選取用戶端內容，然後點選&#x200B;**[!UICONTROL 確定]**。 在此示例中，名稱會根據將名稱與配置檔案中的格式化名稱連結而改變。
+要將欄位連結到客戶端上下文值，請選擇&#x200B;**[!UICONTROL 選擇]**&#x200B;以開啟客戶端上下文菜單，選擇客戶端上下文，然後選擇&#x200B;**[!UICONTROL 確定]**。 在此示例中，名稱會根據將名稱與配置檔案中的格式化名稱連結而改變。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -231,12 +229,12 @@ Dynamic Media Classic **[!UICONTROL Image]**&#x200B;元件可讓您將Dynamic Me
 
 #### 將Dynamic Media傳統影像範本設為連結 {#making-the-scene-image-template-a-link}
 
-1. 在具有Dynamic Media Classic **[!UICONTROL 影像範本]**&#x200B;元件的頁面上，點選&#x200B;**[!UICONTROL 編輯]**。
+1. 在具有Dynamic Media Classic **[!UICONTROL 影像範本]**&#x200B;元件的頁面上，選取&#x200B;**[!UICONTROL 編輯]**。
 1. 在&#x200B;**[!UICONTROL URL]**&#x200B;欄位中，輸入點選影像時使用者前往的URL。 在&#x200B;**[!UICONTROL 在]**&#x200B;中開啟欄位中，選擇要開啟目標（新窗口還是同一窗口）。
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. 點選&#x200B;**[!UICONTROL 確定]**。
+1. 選擇&#x200B;**[!UICONTROL OK]**。
 
 ### 視訊元件 {#video-component}
 
@@ -311,7 +309,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接以Experience Manager檢視Dy
 
 在任一UI中搜尋時，您可以依下列條件進行篩選（如觸控最佳化UI的此處所示）:
 
-**[!UICONTROL 輸入關鍵字]**  — 您可以依名稱搜尋資產。搜尋時，輸入的關鍵字是檔案名稱的開頭。 例如，輸入&quot;swimming&quot;會尋找任何以該順序字母開頭的資產檔案名稱。 輸入詞語以尋找資產後，請務必點選「enter」。
+**[!UICONTROL 輸入關鍵字]**  — 您可以依名稱搜尋資產。搜尋時，輸入的關鍵字是檔案名稱的開頭。 例如，輸入&quot;swimming&quot;會尋找任何以該順序字母開頭的資產檔案名稱。 輸入詞語以尋找資產後，請務必按下Enter鍵。
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
@@ -349,4 +347,4 @@ Dynamic Media Classic內容瀏覽器可讓您直接以Experience Manager檢視Dy
 
 **[!UICONTROL 發佈狀態]**  — 您可以根據發佈狀態篩選資產： **** 未發佈或 **[!UICONTROL 已發佈]**。如果您未選取任何&#x200B;**[!UICONTROL 發佈狀態]**，預設情況下，Experience Manager會搜尋所有發佈狀態。
 
-![chlimage_1-248](assets/chlimage_1-247.png)
+![chlimage_1-247](assets/chlimage_1-247.png)
