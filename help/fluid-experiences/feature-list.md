@@ -4,7 +4,7 @@ description: 流暢的體驗功能清單
 index: n
 feature: 製作
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 8%
@@ -28,7 +28,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 >
 >AEM Fluid Experiences是AEM功能的子集。 這些表格中連結的功能可能包括AEM中包含的其他功能，但不包括AEM Fluid Experiences中。
 
-## 儲存庫功能{#repository-features}
+## 存放庫功能 {#repository-features}
 
 |  |
 |---|
@@ -43,7 +43,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 | [重複檢測](/help/assets/duplicate-detection.md) |
 | [智慧標記](/help/assets/enhanced-smart-tags.md) |
 
-## 存取、API和傳送功能{#access-api-and-delivery-features}
+## 存取、API和傳送功能 {#access-api-and-delivery-features}
 
 |  |
 |---|
@@ -56,7 +56,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 | [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) |
 | [動態媒體](/help/assets/dynamic-media.md) |
 
-## 管理和整合功能{#admin-and-integration-features}
+## 管理與整合功能 {#admin-and-integration-features}
 
 |  |
 |---|
@@ -72,7 +72,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 | [工作流程](/help/sites-administering/workflows-starting.md) |
 | 連接（雲服務） |
 
-## Analytics和個人化{#analytics-and-personalization}
+## Analytics和個人化 {#analytics-and-personalization}
 
 |  |
 |---|
