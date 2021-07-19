@@ -11,7 +11,7 @@ docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: 資產管理，轉譯
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
@@ -37,18 +37,18 @@ ht-degree: 1%
 
 如需詳細資訊，請參閱下列主題：
 
-* [將Dynamic Media Assets新增至網頁](/help/assets/adding-dynamic-media-assets-to-pages.md)
+* [將Dynamic Media資產新增至網頁](/help/assets/adding-dynamic-media-assets-to-pages.md)
 * [將視訊或影像檢視器內嵌在網頁上](/help/assets/embed-code.md)
-* [在 Dynamic Media 中啟用超連結保護](/help/assets/hotlink-protection.md)
+* [在Dynamic Media中啟用快速連結保護](/help/assets/hotlink-protection.md)
 * [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)
-* [為回應式網站傳送最佳化影像](/help/assets/responsive-site.md)
-* [HTTP2內容傳送](/help/assets/http2.md)
+* [為回應式網站提供最佳化的影像](/help/assets/responsive-site.md)
+* [HTTP2 傳送內容](/help/assets/http2.md)
 * [透過Dynamic Media Classic使CDN快取失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
-* [使用規則集轉換URL](/help/assets/using-rulesets-to-transform-urls.md)
+* [使用規則集來轉換URL](/help/assets/using-rulesets-to-transform-urls.md)
 
 
 ## HTTP/2傳送Dynamic Media資產 {#http-delivery-of-dynamic-media-assets}
 
 Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和影片）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可與接受託管資產的任何應用程式整合。 然後會透過HTTP/2通訊協定來傳送已發佈的資產。 此傳遞方法可改善瀏覽器和伺服器通訊的方式，讓所有Dynamic Media資產的回應和載入時間都更佳。
 
-若要深入了解，請參閱[HTTP/2內容傳送常見問題](/help/sites-administering/scene7-http2faq.md)。
+若要進一步了解，請參閱[HTTP/2內容傳送常見問題](/help/sites-administering/scene7-http2faq.md)。
