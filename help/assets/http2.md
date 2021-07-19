@@ -1,5 +1,5 @@
 ---
-title: HTTP2內容傳送
+title: HTTP2 傳送內容
 description: HTTP/2改進了瀏覽器和伺服器的通信方式，允許更快地傳輸資訊，同時降低所需的處理能力。
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: 發佈，配置
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '732'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# HTTP/2內容傳送 {#http-delivery-of-content}
+# HTTP/2 內容傳送 {#http-delivery-of-content}
 
 Adobe 很榮幸宣佈推出有助於提升整體效能的 HTTP/2 內容傳送。
 
