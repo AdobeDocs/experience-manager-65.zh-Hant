@@ -1,19 +1,19 @@
 ---
-title: 與Dynamic Media Classic整合
+title: 將Adobe Experience Manager與Dynamic Media Classic整合
 description: 了解如何整合Adobe Experience Manager與Dynamic Media Classic。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '5517'
+source-wordcount: '5484'
 ht-degree: 0%
 
 ---
 
-# 與Dynamic Media Classic整合{#integrating-with-dynamic-media-classic-scene}
+# 將Adobe Experience Manager與Dynamic Media Classic整合 {#integrating-with-dynamic-media-classic-scene}
 
 AdobeDynamic Media Classic是托管解決方案，可管理、增強、發佈及將多媒體資產傳送至網路、行動裝置、電子郵件及與網際網路連線的顯示器及列印。
 
@@ -40,13 +40,13 @@ Experience Manager使用者可以選擇使用Dynamic Media的兩種解決方案�
 
 請使用下列條件來決定要選擇的解決方案：
 
-* 如果您是&#x200B;**現有** Dynamic Media Classic客戶，其豐富型媒體資產位於Dynamic Media Classic以進行發佈和傳送，但您想要將這些資產與Sites(WCM)製作和/或Experience Manager資產整合以進行管理，請使用本檔案所述的[Experience Manager/Dynamic Media Classic點對點整合](#aem-scene-point-to-point-integration)。
+* 您是&#x200B;**現有** Dynamic Media Classic客戶，其資產位於Dynamic Media Classic以進行發佈和傳送，但您想要將這些資產與Sites(WCM)製作或Experience Manager資產整合，還是兩者皆整合？ 若是如此，請使用本檔案所述的[Experience Manager/Dynamic Media Classic點對點整合](#aem-scene-point-to-point-integration)。
 
 * 如果您是具有豐富媒體傳送需求的&#x200B;**new** Experience Manager客戶，請選取[Dynamic Media選項](#aem-dynamic-media)。 如果您沒有現有的S7帳戶，且該系統中儲存了許多資產，此選項最有意義。
 
 * 在某些情況下，請同時使用這兩種解決方案。 [雙用方案](/help/sites-administering/scene7.md#dual-use-scenario)描述了該方案。
 
-### Experience Manager/Dynamic Media Classic點對點整合{#aem-scene-point-to-point-integration}
+### Experience Manager/Dynamic Media Classic點對點整合 {#aem-scene-point-to-point-integration}
 
 在此解決方案中使用資產時，您會執行下列其中一項作業：
 
@@ -72,7 +72,7 @@ Experience ManagerDynamic Media是直接在Experience Manager平台中統一Dyna
 
 * **[!UICONTROL 互動式媒體]**  - **[!UICONTROL 互]** 動式媒體元件適用於轉盤橫幅、互動式影像和互動式視訊等資產。這些資產在其中具有交互性，這些熱點或影像地圖。 此元件是智慧的。 也就是說，視您新增影像或影片而定，您有各種選項。 此外，檢視器回應速度快 — 螢幕大小會根據螢幕大小自動變更。 所有檢視器都是HTML5檢視器。
 
-### 雙用方案{#dual-use-scenario}
+### 雙用方案 {#dual-use-scenario}
 
 立即可用，您可以同時使用Dynamic Media和Dynamic Media Classic的Experience Manager整合功能。 下列使用案例表說明了何時開啟或關閉某些區域。
 
@@ -173,9 +173,9 @@ Experience ManagerDynamic Media是直接在Experience Manager平台中統一Dyna
 
 * 選取資產並將其拖曳至Dynamic Media頁面上的Dynamic Media Classic元件後，手動上傳至Experience Manager Classic無法運作。
 * 即使在Assets中編輯Experience Manager時，Analytics-Dynamic Media Classic同步的資產會自動更新至Dynamic Media Classic，回滾動作不會觸發新上傳。 因此，Dynamic Media Classic在回復後不會立即取得最新版本。 解決方法是在回滾完成後重新編輯。
-* 如果您必須將Dynamic Media用於某個使用案例，並將Dynamic Media Classic整合用於另一個使用案例，讓Dynamic Media資產不會與Dynamic Media Classic系統互動，則請勿將Dynamic Media Classic設定套用至Dynamic Media資料夾。 此外，請勿將Dynamic Media設定（處理設定檔）套用至Dynamic Media Classic資料夾。
+* 您是否需要將Dynamic Media用於某個使用案例，並將Dynamic Media Classic整合用於另一個使用案例，讓Dynamic Media資產不會與Dynamic Media Classic系統互動？ 如果是，請勿將Dynamic Media Classic設定套用至Dynamic Media資料夾。 此外，請勿將Dynamic Media設定（處理設定檔）套用至Dynamic Media Classic資料夾。
 
-## 整合Dynamic Media Classic與Experience Manager{#best-practices-for-integrating-scene-with-aem}的最佳實務
+## 整合Dynamic Media Classic與Experience Manager的最佳作法 {#best-practices-for-integrating-scene-with-aem}
 
 將Dynamic Media Classic與Experience Manager整合時，以下方面必須遵循一些重要的最佳實務：
 
@@ -184,7 +184,7 @@ Experience ManagerDynamic Media是直接在Experience Manager平台中統一Dyna
 
 請參閱[已知限制](#known-limitations-and-design-implications)。
 
-### 測試推動整合{#test-driving-your-integration}
+### 測試您的整合 {#test-driving-your-integration}
 
 Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此測試整合。
 
@@ -192,7 +192,7 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 >
 >從現有的Dynamic Media Classic公司帳戶匯入資產可能需花很長的時間才會顯示在Experience Manager中。 請確定您在Dynamic Media Classic中指定的資料夾沒有太多資產（例如，根資料夾經常有太多資產，且可能會導致系統當機）。
 
-### 從Experience Manager資產上傳資產與從Dynamic Media Classic上傳資產{#uploading-assets-from-aem-assets-versus-from-scene}
+### 從Experience Manager資產上傳資產與從Dynamic Media Classic上傳資產 {#uploading-assets-from-aem-assets-versus-from-scene}
 
 您可以使用Assets（數位資產管理）功能，或透過Dynamic Media Classic內容瀏覽器直接以Experience Manager方式存取Dynamic Media Classic，以上傳資產。 您選擇哪個取決於下列因素：
 
@@ -202,17 +202,17 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
    * 資產目前位於
    * 在通用儲存庫中管理這些檔案的重要性
 
-如果資產已在Dynamic Media Classic中，且在通用存放庫中管理這些資產並不重要，則將資產匯出至Experience Manager資產時僅將資產同步回Dynamic Media Classic進行傳送是不必要的往返作業。 否則，建議您將資產保留在單一存放庫中，並僅同步至Dynamic Media Classic進行傳送。
+假設資產已位於Dynamic Media Classic中，並且在通用存放庫中管理資產並不重要。 如果是這種情況，將資產匯出至「Experience Manager資產」只會將資產同步回Dynamic Media Classic以進行傳送，便不必往返。 Adobe建議您將資產保留在單一存放庫中，並同步至Dynamic Media Classic僅供傳送。
 
-## 設定Dynamic Media Classic整合{#configuring-scene-integration}
+## 設定Dynamic Media Classic整合 {#configuring-scene-integration}
 
 您可以設定Experience Manager以將資產上傳至Dynamic Media Classic。 CQ Target資料夾中的Experience Manager可從Target上傳（自動或手動）至Dynamic Media Classic公司帳戶。
 
 >[!NOTE]
 >
->Adobe建議您只使用指定的目標資料夾來匯入Dynamic Media Classic資產。 位於目標資料夾外部的數位資產，只能在已啟用Dynamic Media Classic設定的頁面上用於Dynamic Media Classic元件。 此外，這些量度還會放在Dynamic Media Classic的臨機資料夾中。 臨機資料夾未與Experience Manager同步(但可在Dynamic Media Classic內容瀏覽器中找到資產)。
+>Adobe建議您只使用指定的目標資料夾來匯入Dynamic Media Classic資產。 位於目標資料夾外部的數位資產，只能在已啟用Dynamic Media Classic設定的頁面上用於Dynamic Media Classic元件。 此外，這些量度還會放在Dynamic Media Classic的隨選資料夾中。 隨需資料夾不會與Experience Manager同步(但可在Dynamic Media Classic內容瀏覽器中找到資產)。
 
-若要設定Dynamic Media Classic以與Experience Manager整合，您必須完成下列步驟：
+**若要設定Dynamic Media Classic以與Experience Manager整合：**
 
 1. [定義雲端設定](#creating-a-cloud-configuration-for-scene)  — 定義Dynamic Media Classic資料夾和Assets資料夾之間的對應。即使您只想要單向(將資產Experience Manager為Dynamic Media Classic)同步，請完成此步驟。
 1. [啟用 **Adobe CQ s7dam Dam監聽器**](#enabling-the-adobe-cq-scene-dam-listener)  — 在OSGiconsole中完  成。
@@ -222,11 +222,11 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 
 本節說明如何執行所有這些步驟，並列出重要限制。
 
-### Dynamic Media Classic和Experience Manager資產之間的同步如何運作{#how-synchronization-between-scene-and-aem-assets-works}
+### Dynamic Media Classic和Experience Manager資產的同步運作方式 {#how-synchronization-between-scene-and-aem-assets-works}
 
 設定Experience Manager資產和Dynamic Media Classic同步時，請務必了解下列事項：
 
-#### 從Experience Manager資產{#uploading-to-scene-from-aem-assets}上傳至Dynamic Media Classic
+#### 從Dynamic Media Assets上傳至Experience ManagerClassic {#uploading-to-scene-from-aem-assets}
 
 * 在Experience Manager中為Dynamic Media Classic上傳指定了同步資料夾。
 * 如果將數位資產放在指定的同步資料夾中，則可自動上傳至Dynamic Media Classic。
@@ -236,7 +236,7 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 >
 >Experience Manager會先將所有中繼資料內嵌為XMP，再將其上傳至Dynamic Media Classic，因此中繼資料節點上的所有屬性都可在Dynamic Media Classic中以XMP形式使用。
 
-#### 已知限制和設計意涵{#known-limitations-and-design-implications}
+#### 已知限制和設計意涵 {#known-limitations-and-design-implications}
 
 同步Experience Manager資產和Dynamic Media Classic後，目前有下列限制/設計含意：
 
@@ -255,8 +255,8 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
    <td>如果您刪除包含資產的同步資料夾，所有Dynamic Media Classic遠端資產都會遭刪除，但資料夾仍會保留。</td>
   </tr>
   <tr>
-   <td>臨機資料夾</td>
-   <td>駐留在WCM中手動上傳至Dynamic Media Classic的目標資料夾外的資產，會自動放置在Dynamic Media Classic的個別臨機資料夾中。 您可以在雲端設定中以Experience Manager配置此資料夾。</td>
+   <td>隨選資料夾</td>
+   <td>駐留在WCM中手動上傳至Dynamic Media Classic的目標資料夾外的資產，會自動放置在Dynamic Media Classic的個別隨選資料夾中。 您可以在雲端設定中以Experience Manager配置此資料夾。</td>
   </tr>
   <tr>
    <td>混合媒體</td>
@@ -276,20 +276,20 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
   </tr>
   <tr>
    <td>Target子資料夾</td>
-   <td><p>如果您在目標資料夾內使用子資料夾，請確定您對每個資產使用唯一的名稱（不論位置），或是設定Dynamic Media Classic（在「設定」區域）不會覆寫資產，不論位置。</p> <p>否則，上傳至Dynamic Media Classic目標子資料夾的同名資產將會上傳，但目標資料夾中同名的資產則會刪除。 </p> </td>
+   <td><p>如果您在目標資料夾內使用子資料夾，請務必為每個資產使用唯一的名稱（無論位置為何）。 此外，請確定您將Dynamic Media Classic設定為（在「設定」區域）不會覆寫資產，不論其位置為何。</p> <p>否則，上傳至Dynamic Media Classic目標子資料夾的同名資產將會上傳，但目標資料夾中同名的資產則會刪除。 </p> </td>
   </tr>
  </tbody>
 </table>
 
-### 配置Dynamic Media Classic伺服器{#configuring-scene-servers}
+### 配置Dynamic Media Classic伺服器 {#configuring-scene-servers}
 
-如果在代理後運行Experience Manager或具有特殊的防火牆設定，則必須顯式啟用不同區域的主機。 伺服器在`/etc/cloudservices/scene7/endpoints`中的內容中進行管理，並可根據需要自定義。 點選URL，然後編輯以變更URL（如有必要）。 在舊版Experience Manager中，這些值是硬式編碼。
+如果在代理後運行Experience Manager或具有特殊的防火牆設定，則必須顯式啟用不同區域的主機。 伺服器在`/etc/cloudservices/scene7/endpoints`中的內容中進行管理，並可根據需要自定義。 選取URL，然後視需要編輯以變更URL。 在舊版Experience Manager中，這些值是硬式編碼。
 
 如果導覽至`/etc/cloudservices/scene7/endpoints.html`，您會看到列出的伺服器（並點選URL即可編輯伺服器）:
 
 ![chlimage_1-296](assets/chlimage_1-296.png)
 
-### 為Dynamic Media Classic {#creating-a-cloud-configuration-for-scene}建立雲配置
+### 建立Dynamic Media Classic的雲端設定 {#creating-a-cloud-configuration-for-scene}
 
 雲端設定定義Dynamic Media Classic資料夾和Experience Manager資產資料夾之間的對應。 必須將其設定為將Experience Manager資產與Dynamic Media Classic同步。 如需詳細資訊，請參閱同步如何運作。
 
@@ -297,21 +297,21 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 >
 >從現有的Dynamic Media Classic公司帳戶匯入資產可能需花很長的時間才會顯示在Experience Manager中。 請確定您在Dynamic Media Classic中指定的資產不太多的資料夾。 例如，根資料夾通常包含太多資產。
 >
->如果您想要測試促進整合，請讓根資料夾只指向子資料夾，而非整個公司。
+>如果您想要測試整合，請讓根資料夾只指向子資料夾，而非整個公司。
 
 >[!NOTE]
 >
 >您可以有多個設定：一個雲端設定代表Dynamic Media Classic公司的一名使用者。 如果您想要存取其他Dynamic Media Classic公司或使用者，必須建立多個設定。
 
-若要設定Experience Manager以將資產發佈至Dynamic Media Classic:
+**若要建立Dynamic Media Classic的雲端設定：**
 
-1. 點選Experience Manager圖示並導覽至&#x200B;**[!UICONTROL 部署>Cloud Services]**&#x200B;以存取AdobeDynamic Media Classic。
+1. 選取Experience Manager圖示並導覽至&#x200B;**[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**，以便您可以存取AdobeDynamic Media Classic。
 
-1. 點選&#x200B;**[!UICONTROL 立即配置]**。
+1. 選擇&#x200B;**[!UICONTROL 立即配置]**。
 
    ![chlimage_1-297](assets/chlimage_1-297.png)
 
-1. 在&#x200B;**[!UICONTROL Title]**&#x200B;欄位中，或者在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中輸入相應資訊。 點選&#x200B;**[!UICONTROL 建立]**。
+1. 在&#x200B;**[!UICONTROL Title]**&#x200B;欄位中，或者在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中輸入相應資訊。 選擇 **[!UICONTROL 建立]**。
 
    >[!NOTE]
    >
@@ -319,7 +319,7 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
    >
    >更改父配置。 ****&#x200B;變更上層組態可能會中斷整合。
 
-1. 輸入Dynamic Media Classic帳戶的電子郵件地址、密碼和地區，然後點選&#x200B;**[!UICONTROL 連線至Dynamic Media Classic]**。 您已連線至Dynamic Media Classic伺服器，對話方塊會展開並顯示更多選項。
+1. 輸入Dynamic Media Classic帳戶的電子郵件地址、密碼和地區，然後選取&#x200B;**[!UICONTROL 連線至Dynamic Media Classic]**。 您已連線至Dynamic Media Classic伺服器，對話方塊會展開並顯示更多選項。
 
 1. 輸入&#x200B;**[!UICONTROL 公司]**&#x200B;名稱和&#x200B;**[!UICONTROL 根路徑]**。 此資訊是已發佈的伺服器名稱以及您要指定的任何路徑。 如果您不知道已發佈的伺服器名稱，請在Dynamic Media Classic中前往&#x200B;**[!UICONTROL 設定>應用程式設定]**)。
 
@@ -333,7 +333,7 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 
    ![chlimage_1-298](assets/chlimage_1-298.png)
 
-1. 按一下&#x200B;**[!UICONTROL 「確定」]**。Experience Manager會儲存您的設定。
+1. 選擇&#x200B;**[!UICONTROL OK]**。 Experience Manager會儲存您的設定。
 
 >[!NOTE]
 >
@@ -346,22 +346,22 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 
 
 
-### 啟用Adobe CQ Dynamic Media Classic Dam監聽器{#enabling-the-adobe-cq-scene-dam-listener}
+### 啟用Adobe CQ Dynamic Media Classic Dam監聽器 {#enabling-the-adobe-cq-scene-dam-listener}
 
 啟用Adobe CQ Dynamic Media Classic Dam監聽器，此偵聽器預設為停用。
 
-若要啟用Adobe CQ Dynamic Media Classic Dam監聽器：
+**若要啟用Adobe CQ Dynamic Media Classic Dam監聽器：**
 
-1. 點選[!UICONTROL 工具]圖示，然後導覽至&#x200B;**[!UICONTROL 操作> Web Console]**。 Web控制台開啟。
-1. 導覽至&#x200B;**[!UICONTROL Adobe CQ Dynamic Media Classic Dam Listener]**&#x200B;並選取&#x200B;**[!UICONTROL Enabled]**&#x200B;核取方塊。
+1. 選擇[!UICONTROL 工具]表徵圖，然後導航至&#x200B;**[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
+1. 在Web主控台中，導覽至&#x200B;**[!UICONTROL Adobe CQ Dynamic Media Classic Dam Listener]**&#x200B;並選取&#x200B;**[!UICONTROL Enabled]**&#x200B;核取方塊。
 
    ![chlimage_1-299](assets/chlimage_1-299.png)
 
-1. 點選&#x200B;**[!UICONTROL 儲存]**。
+1. 選擇&#x200B;**[!UICONTROL 保存]**。
 
-### 將可設定的逾時新增至Dynamic Media Classic上傳工作流程{#adding-configurable-timeout-to-scene-upload-workflow}
+### 將可設定的逾時新增至Dynamic Media Classic上傳工作流程 {#adding-configurable-timeout-to-scene-upload-workflow}
 
-依預設，當Experience Manager例項設定為透過Dynamic Media Classic處理視訊編碼時，任何上傳工作都會有35分鐘的逾時。 為了適應運行時間可能更長的視頻編碼作業，可以配置此設定：
+依預設，當Experience Manager例項設定為透過Dynamic Media Classic處理視訊編碼時，任何上傳工作都會有35分鐘的逾時。 若要容納可能執行時間較長的視訊編碼工作，您可以設定此設定。
 
 1. 導覽至&#x200B;**http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl**。
 
@@ -371,13 +371,13 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 
    >[!NOTE]
    >
-   >最佳實務：大部分資產最多會在數分鐘內擷取（例如影像）。 但在某些情況下（例如較大的視訊），會將逾時值增加至7200秒（2小時），以容納長的處理時間。 否則，此Dynamic Media Classic上傳工作在JCR中繼資料中會標示為&#x200B;**[!UICONTROL UploadFailed]**。
+   >最佳實務：大部分資產最多會在數分鐘內擷取（例如影像）。 但在某些情況下（例如較大的視訊），會將逾時值增加至7200秒（2小時），以容納長的處理時間。 否則，此Dynamic Media Classic上傳工作在JCR(Java™內容存放庫)中繼資料中會標示為&#x200B;**[!UICONTROL UploadFailed]**。
 
-1. 點選&#x200B;**[!UICONTROL 儲存]**。
+1. 選擇&#x200B;**[!UICONTROL 保存]**。
 
-### 從Experience Manager資產上傳{#autouploading-from-aem-assets}
+### 從Experience Manager資產自動上傳 {#autouploading-from-aem-assets}
 
-從Experience Manager6.3.2開始，系統會設定「Experience Manager資產」，如果資產位於CQ目標資料夾中，上傳至資產管理員的所有數位資產都會更新至Dynamic Media Classic。
+從Experience Manager6.3.2開始，系統會設定「Experience Manager資產」，如果資產位於CQ Target資料夾中，則所有上傳的數位資產都會更新至Dynamic Media Classic。
 
 當資產新增至Experience Manager資產時，資產會自動上傳並發佈至Dynamic Media Classic。
 
@@ -385,10 +385,11 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 >
 >自動從Experience Manager資產上傳至Dynamic Media Classic的檔案大小上限為500 MB。
 
-若要從Experience Manager資產設定自動上傳：
+**若要從Experience Manager資產自動上傳：**
 
-1. 點選Experience Manager圖示並導覽至&#x200B;**[!UICONTROL 部署>Cloud Services]**，然後在Dynamic Media標題下的「可用設定」下，點選&#x200B;**[!UICONTROL dms7(Dynamic Media]**)
-1. 點選「**[!UICONTROL Advanced]**」標籤，選取「**[!UICONTROL 啟用自動上傳]**」核取方塊，然後點選「**[!UICONTROL OK]**」。 您現在必須設定DAM Asset工作流程，以納入上傳至Dynamic Media Classic。
+1. 選擇Experience Manager表徵圖並導航至&#x200B;**[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**。
+1. 在「Dynamic Media」標題下的「可用配置」下，選擇&#x200B;**[!UICONTROL dms7(Dynamic Media]**)。
+1. 選擇&#x200B;**[!UICONTROL Advanced]**&#x200B;頁簽，選擇&#x200B;**[!UICONTROL Enable Automatic Upload]**&#x200B;複選框，然後選擇&#x200B;**[!UICONTROL OK]**。 您現在必須設定DAM Asset工作流程，以納入上傳至Dynamic Media Classic。
 
    >[!NOTE]
    >
@@ -396,8 +397,8 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
-1. 導覽回Experience Manager歡迎頁面，然後點選&#x200B;**[!UICONTROL Workflows]**。 連按兩下&#x200B;**DAM更新資產**&#x200B;工作流程以開啟它。
-1. 在sidekick中，導覽至&#x200B;**[!UICONTROL Workflow]**&#x200B;元件，然後選取&#x200B;**[!UICONTROL Dynamic Media Classic]**。 將&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;拖曳至工作流程，然後點選&#x200B;**[!UICONTROL Save]**。 新增至目標資料夾中Experience Manager資產的資產會自動上傳至Dynamic Media Classic。
+1. 導覽回Experience Manager歡迎頁面，並選取&#x200B;**[!UICONTROL Workflows]**。 連按兩下&#x200B;**DAM更新資產**&#x200B;工作流程，以開啟該工作流程。
+1. 在sidekick中，導覽至&#x200B;**[!UICONTROL Workflow]**&#x200B;元件，然後選取&#x200B;**[!UICONTROL Dynamic Media Classic]**。 將&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;拖曳至工作流程，然後選取&#x200B;**[!UICONTROL 儲存]**。 新增至目標資料夾中Experience Manager資產的資產會自動上傳至Dynamic Media Classic。
 
    ![chlimage_1-301](assets/chlimage_1-301.png)
 
@@ -407,7 +408,7 @@ Adobe建議您只將根資料夾指向子資料夾，而非整個公司，以此
    >* Experience Manager會先將所有中繼資料內嵌為XMP，再將其上傳至Dynamic Media Classic，因此中繼資料節點上的所有屬性都可在Dynamic Media Classic中以XMP形式使用。
 
 
-### 設定推送至Dynamic Media Classic {#configuring-the-state-published-unpublished-of-assets-pushed-to-scene}的資產狀態（已發佈/未發佈）
+### 設定推送至Dynamic Media Classic的資產狀態（已發佈/未發佈） {#configuring-the-state-published-unpublished-of-assets-pushed-to-scene}
 
 如果您要將Experience Manager資產從Assets推送至Dynamic Media Classic，可以自動發佈（預設行為），或以未發佈狀態將資產推送至Dynamic Media Classic。
 
@@ -419,12 +420,12 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 
 不過，如果您不想將資產推送至Dynamic Media Classic以自動發佈，本節將說明如何設定Experience Manager和Dynamic Media Classic以執行此功能。
 
-#### 將資產推送至Dynamic Media Classic的必要條件未發佈{#prerequisites-to-push-assets-to-scene-unpublished}
+#### 將資產推送至Dynamic Media Classic取消發佈的必要條件 {#prerequisites-to-push-assets-to-scene-unpublished}
 
 您必須先設定下列項目，才能將資產推送至Dynamic Media Classic而不發佈：
 
 1. [使用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。在您的支援案例中，請為您的Dynamic Media Classic帳戶啟用安全預覽功能。
-1. 請依照[為您的Dynamic Media Classic帳戶](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)設定安全預覽的指示操作。
+1. [為您的Dynamic Media Classic帳戶設定安全預覽](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=en)。
 
 這些步驟與您在Dynamic Media Classic中建立任何安全測試設定時要遵循的步驟相同。
 
@@ -432,7 +433,7 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 >
 >如果您的安裝環境是UNIX® 64位作業系統，請參閱[https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)，以了解您必須設定的其他配置選項。
 
-#### 以未發佈狀態推送資產的已知限制{#known-limitations-for-pushing-assets-in-unpublished-state}
+#### 以未發佈狀態推送資產的已知限制  {#known-limitations-for-pushing-assets-in-unpublished-state}
 
 如果您使用此功能，請注意下列限制：
 
@@ -443,28 +444,31 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 >
 >如果您想要立即發佈資產，最佳實務是將&#x200B;**[!UICONTROL 啟用安全預覽]**&#x200B;設為&#x200B;**[!UICONTROL 立即]**&#x200B;並使用&#x200B;**[!UICONTROL 啟用自動上傳]**&#x200B;功能。
 
-### 將推送至Dynamic Media Classic的資產狀態設為未發佈{#setting-the-state-of-assets-pushed-to-scene-as-unpublished}
+### 將推送至Dynamic Media Classic的資產狀態設為未發佈 {#setting-the-state-of-assets-pushed-to-scene-as-unpublished}
 
 >[!NOTE]
 >
 >如果使用者以Experience Manager發佈資產，則會自動觸發S7資產至生產/即時資產（資產不再安全預覽/取消發佈）。
 
-若要將推送至Dynamic Media Classic的資產狀態設為未發佈：
+**若要將推送至Dynamic Media Classic的資產狀態設為未發佈：**
 
-1. 點選Experience Manager圖示，並導覽至&#x200B;**[!UICONTROL 部署>Cloud Services]**，點選&#x200B;**[!UICONTROL Dynamic Media Classic]**，然後在Dynamic Media Classic中選取您的設定。
-1. 點選&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。 在&#x200B;**[!UICONTROL 啟用安全檢視]**&#x200B;下拉式選單中，選取「AEM發佈啟動時&#x200B;]**」 ，即可將資產推送至Dynamic Media Classic，而不需發佈。**[!UICONTROL (預設情況下，此值會設為&#x200B;**[!UICONTROL Immediale]**，其中會立即發佈Dynamic Media Classic資產。)
+1. 選擇Experience Manager表徵圖並導航至&#x200B;**[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**。
+1. 選擇&#x200B;**[!UICONTROL Dynamic Media Classic]**。
+1. 在Dynamic Media Classic中選取您的設定。
+1. 選擇&#x200B;**[!UICONTROL Advanced]**&#x200B;頁簽。
+1. 在&#x200B;**[!UICONTROL 啟用安全檢視]**&#x200B;下拉式選單中，選取「AEM發佈啟動時&#x200B;]**」 ，即可將資產推送至Dynamic Media Classic，而不需發佈。**[!UICONTROL (預設情況下，此值會設為&#x200B;**[!UICONTROL Immediale]**，其中會立即發佈Dynamic Media Classic資產。)
 
-   請參閱[Dynamic Media Classic檔案](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html) ，以取得在公開之前測試資產的詳細資訊。
+   請參閱[Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html) ，以取得在公開之前測試資產的詳細資訊。
 
    ![chlimage_1-302](assets/chlimage_1-302.png)
 
-1. 點選&#x200B;**[!UICONTROL 確定]**。
+1. 選擇&#x200B;**[!UICONTROL OK]**。
 
 啟用安全預覽表示資產已取消發佈並推送至安全預覽伺服器。
 
-若要查看是否已啟用安全預覽，請導覽至Dynamic Media Classic元件(位於Experience Manager中的頁面)。 點選「**[!UICONTROL Edit]**」。 資產的URL中列有安全預覽伺服器。 在Experience Manager中發佈後，檔案參考中的伺服器網域會從預覽URL更新至生產URL。
+若要查看是否啟用了&#x200B;**[!UICONTROL 安全預覽]**，請導覽至Experience Manager中頁面上的Dynamic Media Classic元件。 選擇&#x200B;**[!UICONTROL Edit]**。 資產的URL中列有安全預覽伺服器。 在Experience Manager中發佈後，檔案參考中的伺服器網域會從預覽URL更新至生產URL。
 
-### 為WCM {#enabling-scene-for-wcm}啟用Dynamic Media Classic
+### 為WCM啟用Dynamic Media Classic {#enabling-scene-for-wcm}
 
 為WCM啟用Dynamic Media Classic有兩個必要：
 
@@ -473,44 +477,42 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 
 如同其他設定一樣，為WCM啟用Dynamic Media Classic時，會套用繼承規則。 您可以在觸控最佳化或傳統式使用者介面中，為WCM啟用Dynamic Media Classic。
 
-#### 在觸控最佳化使用者介面{#enabling-scene-for-wcm-in-the-touch-optimized-user-interface}中啟用Dynamic Media Classic以執行WCM
+#### 在觸控最佳化的使用者介面中啟用Dynamic Media Classic for WCM {#enabling-scene-for-wcm-in-the-touch-optimized-user-interface}
 
-若要在觸控最佳化UI中為WCM啟用Dynamic Media Classic:
+1. 選取Experience Manager圖示並導覽至&#x200B;**[!UICONTROL Sites]**，然後導覽至您網站的根頁面（非特定語言）。
 
-1. 點選Experience Manager圖示並導覽至&#x200B;**[!UICONTROL Sites]**，然後導覽至您網站的根頁面（非語言特定）。
+1. 在工具欄中，選擇[!UICONTROL settings]表徵圖，然後選擇&#x200B;**[!UICONTROL 開啟屬性]**。
 
-1. 在工具列中，選取[!UICONTROL settings]圖示，然後點選&#x200B;**[!UICONTROL 開啟屬性]**。
-
-1. 點選&#x200B;**[!UICONTROL Cloud Services]**&#x200B;並點選&#x200B;**[!UICONTROL 新增設定]**&#x200B;並選取&#x200B;**[!UICONTROL Dynamic Media Classic]**。
-1. 在&#x200B;**[!UICONTROL AdobeDynamic Media Classic]**&#x200B;下拉式清單中，選取所需的設定，然後點選&#x200B;**[!UICONTROL 確定]**。
+1. 選擇&#x200B;**[!UICONTROL Cloud Services]**&#x200B;並選擇&#x200B;**[!UICONTROL 添加配置]**&#x200B;並選擇&#x200B;**[!UICONTROL Dynamic Media Classic]**。
+1. 在&#x200B;**[!UICONTROL AdobeDynamic Media Classic]**&#x200B;下拉式清單中，選取所需的設定，然後選取&#x200B;**[!UICONTROL 確定]**。
 
    ![chlimage_1-303](assets/chlimage_1-303.png)
 
    該Dynamic Media Classic設定的視訊預設集可用於該頁面和子頁面上與Dynamic Media Classic視訊元件Experience Manager時。
 
-#### 在Classic使用者介面{#enabling-scene-for-wcm-in-the-classic-user-interface}中為WCM啟用Dynamic Media Classic
+#### 在Classic使用者介面中啟用Dynamic Media Classic for WCM {#enabling-scene-for-wcm-in-the-classic-user-interface}
 
-若要在傳統UI中為WCM啟用Dynamic Media Classic:
+1. 在Experience Manager中，選擇&#x200B;**[!UICONTROL 網站]**&#x200B;並導覽至您網站的根頁面（非語言特定）。
 
-1. 在Experience Manager中，點選&#x200B;**[!UICONTROL 網站]**&#x200B;並導覽至您網站的根頁面（非語言特定）。
+1. 在sidekick中，選擇&#x200B;**[!UICONTROL Page]**&#x200B;圖示，然後選擇&#x200B;**[!UICONTROL Page Properties]**。
 
-1. 在sidekick中，點選&#x200B;**[!UICONTROL Page]**&#x200B;圖示，然後點選&#x200B;**[!UICONTROL Page Properties]**。
-
-1. 點選&#x200B;**[!UICONTROL Cloud Services>新增服務> Dynamic Media Classic]**。
-1. 在&#x200B;**[!UICONTROL AdobeDynamic Media Classic]**&#x200B;下拉式清單中，選取所需的設定，然後點選&#x200B;**[!UICONTROL 確定]**。
+1. 選擇&#x200B;**[!UICONTROL Cloud Services]** > **[!UICONTROL 添加服務]** > **[!UICONTROL Dynamic Media Classic]**。
+1. 在&#x200B;**[!UICONTROL AdobeDynamic Media Classic]**&#x200B;下拉式清單中，選取所需的設定，然後選取&#x200B;**[!UICONTROL 確定]**。
 
    該Dynamic Media Classic設定的視訊預設集可用於該頁面和子頁面上與Dynamic Media Classic視訊元件Experience Manager時。
 
-### 配置預設配置{#configuring-a-default-configuration}
+### 設定預設設定 {#configuring-a-default-configuration}
 
 如果您有多個Dynamic Media Classic設定，您可以指定其中一個作為Dynamic Media Classic內容瀏覽器的預設設定。
 
 指定時間只能將一個Dynamic Media Classic設定標示為預設設定。 預設設定是預設顯示於Dynamic Media Classic內容瀏覽器的公司資產。
 
-要配置預設配置：
+**要配置預設配置：**
 
-1. 點選Experience Manager圖示，並導覽至&#x200B;**[!UICONTROL 部署>Cloud Services]**，點選&#x200B;**[!UICONTROL Dynamic Media Classic]**，然後在Dynamic Media Classic中選取您的設定。
-1. 若要開啟設定，請點選&#x200B;**[!UICONTROL 編輯]**。
+1. 選擇Experience Manager表徵圖並導航至&#x200B;**[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**。
+1. 選擇&#x200B;**[!UICONTROL Dynamic Media Classic]**。
+1. 在Dynamic Media Classic中選取您的設定。
+1. 要開啟配置，請選擇&#x200B;**[!UICONTROL Edit]**。
 
 1. 在&#x200B;**[!UICONTROL 一般]**&#x200B;標籤中，選取&#x200B;**[!UICONTROL 預設設定]**&#x200B;核取方塊，讓它成為顯示在Dynamic Media Classic內容瀏覽器中的預設公司和根路徑。
 
@@ -520,24 +522,26 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
    >
    >如果只有一個配置，則選擇&#x200B;**[!UICONTROL 預設配置]**&#x200B;複選框無效。
 
-### 配置Ad-hoc資料夾{#configuring-the-ad-hoc-folder}
+### 設定臨機資料夾 {#configuring-the-ad-hoc-folder}
 
-當資產不在CQ Target資料夾時，您可以設定在Dynamic Media Classic中上傳資產的資料夾。 請參閱從CQ目標資料夾外部發佈資產。
+當資產不在CQ目標資料夾時，您可以設定要在Dynamic Media Classic中上傳資產的隨選資料夾。 請參閱從CQ目標資料夾外部發佈資產。
 
-設定臨機資料夾：
+**設定臨機資料夾：**
 
-1. 點選Experience Manager圖示，並導覽至&#x200B;**[!UICONTROL 部署>Cloud Services]**，點選&#x200B;**[!UICONTROL Dynamic Media Classic]**，然後在Dynamic Media Classic中選取您的設定。
-1. 若要開啟設定，請點選&#x200B;**[!UICONTROL 編輯]**。
+1. 選擇Experience Manager表徵圖並導航至&#x200B;**[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**。
+1. 選擇&#x200B;**[!UICONTROL Dynamic Media Classic]**。
+1. 在Dynamic Media Classic中選取您的設定。
+1. 要開啟配置，請選擇&#x200B;**[!UICONTROL Edit]**。
 
-1. 點選&#x200B;**[!UICONTROL 進階]**&#x200B;標籤。 在&#x200B;**[!UICONTROL Ad-hoc Folder]**&#x200B;欄位中，您可以修改&#x200B;**Ad-hoc**&#x200B;資料夾。 依預設，它是&#x200B;**name_of_the_company/CQ5_adhoc**。
+1. 選擇&#x200B;**[!UICONTROL Advanced]**&#x200B;頁簽。 在&#x200B;**[!UICONTROL Ad-hoc Folder]**&#x200B;欄位中，您可以修改&#x200B;**Ad-hoc**&#x200B;資料夾。 依預設，它是&#x200B;**name_of_the_company/CQ5_adhoc**。
 
    ![chlimage_1-305](assets/chlimage_1-305.png)
 
-### 配置通用預設集{#configuring-universal-presets}
+### 設定通用視訊預設集 {#configuring-universal-presets}
 
-要配置視頻元件的通用預設，請參閱[Video](/help/assets/s7-video.md)。
+要配置視頻元件的通用視頻預設集，請參閱[Video](/help/assets/s7-video.md)。
 
-## 啟用MIME類型型Assets/Dynamic Media Classic上傳工作參數支援{#enabling-mime-type-based-assets-scene-upload-job-parameter-support}
+## 啟用MIME類型型Assets/Dynamic Media Classic上傳工作參數支援 {#enabling-mime-type-based-assets-scene-upload-job-parameter-support}
 
 您可以啟用同步Digital Asset Manager/Dynamic Media Classic資產所觸發的可設定Dynamic Media Classic上傳工作參數。
 
@@ -545,10 +549,10 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 
 **若要啟用MIME類型型資產：**
 
-1. 點選Experience Manager圖示並導覽至&#x200B;**[!UICONTROL 工具>作業> Web Console]**。
-1. 在「 Adobe Experience Manager Web Console Configuration 」面板的&#x200B;**[!UICONTROL OSGi]**&#x200B;功能表上，點選「 **[!UICONTROL Configuration]** 」。
-1. 在「名稱」欄下，尋找並點選&#x200B;**[!UICONTROL Adobe CQ Dynamic Media Classic資產MIME類型Service]**&#x200B;以編輯設定。
-1. 在「Mime類型映射」區域中，點選任何加號(+)以添加MIME類型。
+1. 選擇Experience Manager表徵圖，然後導航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
+1. 在「Adobe Experience Manager Web控制台配置」面板的&#x200B;**[!UICONTROL OSGi]**&#x200B;菜單上，選擇&#x200B;**[!UICONTROL 配置]**。
+1. 在「名稱」欄下，尋找並選取&#x200B;**[!UICONTROL Adobe CQ Dynamic Media傳統資產MIME類型Service]**&#x200B;以編輯設定。
+1. 在「Mime類型映射」區域中，選擇任何加號(+)以添加MIME類型。
 
    請參閱[支援的MIME類型](/help/assets/assets-formats.md#supported-mime-types)。
 
@@ -556,15 +560,15 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 
    例如，您可鍵入`<file_extension>=<mime_type>` ，如`EPS=application/postscript`或`PSD=image/vnd.adobe.photoshop`中。
 
-1. 在設定視窗的右下角，點選&#x200B;**[!UICONTROL Save]**。
-1. 返回Experience Manager，在左側導軌中，點選「CRXDE Lite」。
+1. 在配置窗口的右下角，選擇&#x200B;**[!UICONTROL Save]**。
+1. 返回Experience Manager，在左側邊欄中，選取&#x200B;**[!UICONTROL CRXDE Lite]**。
 1. 在CRXDE Lite頁面的左側邊欄中，導覽至`/etc/cloudservices/scene7/<environment>`（以實際名稱取代`<environment>`）。
 1. 展開`<environment>`（以實際名稱替代`<environment>`）以顯示`mimeTypes`節點。
-1. 點選您剛新增的mimeType。
+1. 選取您剛新增的mimeType。
 
    例如， `mimeTypes > application_postscript`或`mimeTypes > image_vnd.adobe.photoshop`。
 
-1. 在CRXDE Lite頁面的右側，點選「 **[!UICONTROL Properties]**」標籤。
+1. 在CRXDE Lite頁的右側，選擇&#x200B;**[!UICONTROL Properties]**&#x200B;頁簽。
 1. 在&#x200B;**[!UICONTROL jobParam]**&#x200B;值欄位中指定Dynamic Media Classic上傳工作參數。
 
    例如， `psprocess="rasterize"&psresolution=120` 。
@@ -579,9 +583,9 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
    >
    >確保PSD檔案具有「圖層」。 如果嚴格來說，它是一個影像或帶有遮罩的影像，則它將作為影像處理，因為沒有要處理的圖層。
 
-1. 在CRXDE Lite頁面的左上角，點選「**[!UICONTROL Save All]**」。
+1. 在CRXDE Lite頁面的左上角，選擇&#x200B;**[!UICONTROL Save All]**。
 
-## 疑難排解Dynamic Media Classic和Experience Manager整合{#troubleshooting-scene-and-aem-integration}
+## 疑難排解Dynamic Media Classic和Experience Manager整合 {#troubleshooting-scene-and-aem-integration}
 
 如果您無法將Experience Manager與Dynamic Media Classic整合，請參閱下列解決方案案例。
 
@@ -613,7 +617,7 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 
 * 在「Experience Manager資產」中刪除的資產和資料夾仍會顯示在Dynamic Media Classic的同步資料夾中。 手動刪除。
 
-**如果視訊上傳失敗**
+**如果您的視訊上傳失敗：**
 
 * 如果您的視訊上傳失敗，而您正使用Experience Manager透過Dynamic Media Classic整合來編碼視訊，請參閱[將可設定的逾時新增至Dynamic Media Classic上傳工作流程](#adding-configurable-timeout-to-scene-upload-workflow)。
 
@@ -621,4 +625,4 @@ Dynamic Media Classic資產仍可透過安全預覽功能使用。 只有在Expe
 >
 >從現有的Dynamic Media Classic公司帳戶匯入資產可能需花很長的時間才會顯示在Experience Manager中。 請確定您在Dynamic Media Classic中指定的資產不太多的資料夾。 例如，根資料夾通常包含太多資產。
 >
->如果您想要測試促進整合，請讓根資料夾只指向子資料夾，而非整個公司。
+>如果您想要測試整合，請將根資料夾只指向子資料夾，而非整個公司。
