@@ -1,8 +1,6 @@
 ---
 title: Dynamic Media 6.5的存放庫重新調整
-seo-title: Dynamic Media 6.5的存放庫重新調整
-description: 了解如何進行必要的變更，以移轉至AEM 6.5 for Dynamic Media中的新存放庫結構。
-seo-description: 了解如何進行必要的變更，以移轉至AEM 6.5 for Dynamic Media中的新存放庫結構。
+description: 了解如何進行必要的變更，以移轉至Dynamic Media適用的Experience Manager6.5中的新存放庫結構。
 uuid: e26d61a4-47b6-493a-9ba2-4c58b200ddd9
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -10,16 +8,16 @@ topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
 feature: 升級
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '414'
 ht-degree: 4%
 
 ---
 
-# Dynamic Media存放庫重新調整AEM 6.5 {#dynamic-media-repository-restructuring-in-aem}
+# Dynamic Media 6.5的存放庫重新調整 {#dynamic-media-repository-restructuring-in-aem}
 
-如上層[AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的存放庫重組頁面所述，升級至AEM 6.5的客戶應使用此頁面評估與影響Dynamic Media解決方案的存放庫變更相關的工作量。 有些變更需要AEM 6.5升級程式中的工作量，而有些變更可能會延遲至日後升級。
+如上層[Adobe Experience Manager 6.5中的存放庫重新調整頁面所述，升級至Experience Manager6.5的客戶應使用此頁面評估與影響Dynamic Media的存放庫變更相關的工作成果。 ](/help/sites-deploying/repository-restructuring.md)某些變更需要Experience Manager6.5升級程式期間的工作量，而其他變更可能會延遲至日後升級。
 
 **未來升級前**
 
@@ -29,9 +27,9 @@ ht-degree: 4%
 * [Dynamic Media - YouTubeCloud Service設定](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#youtubecloudserviceconfiguration)
 * [雜項](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#misc)
 
-## 未來升級前{#prior-to-upgrade}
+## 未來升級前 {#prior-to-upgrade}
 
-### 自訂最適化視訊編碼設定{#custom-adaptive-video-encoding-configurations}
+### 自訂最適化視訊編碼設定  {#custom-adaptive-video-encoding-configurations}
 
 <table>
  <tbody>
@@ -45,7 +43,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>您可以執行下列移轉指令碼，以移轉至新位置：</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>或者，您也可以在AEM UI中編輯設定，變更將儲存至新位置。</p> </td>
+   <td><p>您可以執行下列移轉指令碼，以移轉至新位置：</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>或者，您也可以在Experience ManagerUI中編輯設定，並將變更儲存至新位置。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
@@ -54,7 +52,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-### Dynamic Media(DMS7)雲配置{#dynamic-media-dms-cloud-configuration}
+### Dynamic Media(DMS7)雲端設定 {#dynamic-media-dms-cloud-configuration}
 
 <table>
  <tbody>
@@ -118,7 +116,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>1.從YouTube<br /> 2取消發佈所有視訊。 使用新的觸控式UI（來自<code>/conf</code>）建立YouTube設定，包括從舊位置<br /> 3複製所有通道。 將所有影片發佈回YouTube。</p> <p>此工作流程會產生新的YouTube URL。 如果您在建立新的觸控式UI YouTube設定前未取消發佈，則「屬性」下會列出多個YouTube URL，因為如果有機會，重新建立的管道會再次發佈。 這表示您的「屬性」下會列出無用的URL。</p> </td>
+   <td><p>1.從YouTube<br /> 2取消發佈所有視訊。 使用新的觸控式UI（來自<code>/conf</code>）建立YouTube設定，包括從舊位置<br /> 3複製所有通道。 將所有影片發佈回YouTube。</p> <p>此工作流程會產生新的YouTube URL。 如果您在建立觸控式UI YouTube設定前未取消發佈，則「屬性」下方會列出多個YouTube URL，因為重新建立的管道會重新發佈（如果有機會的話）。 此功能表示您的「屬性」下方會列出無用的URL。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
@@ -141,7 +139,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>客戶可執行以下移轉指令碼。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>或者，您也可以在AEM UI中編輯設定，變更將儲存至新位置。</p> </td>
+   <td><p>客戶可執行以下移轉指令碼。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>或者，您也可以在Experience ManagerUI中編輯設定，並將變更儲存至新位置。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
