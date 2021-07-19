@@ -1,6 +1,6 @@
 ---
-title: 將Dynamic Media視訊或影像檢視器內嵌在網頁上
-description: 了解如何將Dynamic Media視訊或影像內嵌在網頁上
+title: 將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上
+description: 了解如何將Dynamic Media視訊、影像或3D影像內嵌在網頁上
 uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,9 +10,9 @@ discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: 檢視器
 role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '381'
 ht-degree: 21%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 21%
 >
 >請參閱[發佈影像預設集](managing-image-presets.md#publishing-image-presets)。
 
-**將Dynamic Media視訊或影像檢視器內嵌在網頁上：**
+**若要將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上：**
 
 1. 導覽至您要複製其內嵌程式碼的&#x200B;*已發佈*&#x200B;視訊或影像資產。
 
@@ -49,10 +49,10 @@ ht-degree: 21%
 
    請參閱[發佈影像預設集](managing-image-presets.md#publishing-image-presets)。
 
-1. 在左側導軌中，選取下拉式選單，然後點選「**[!UICONTROL 檢視器]**」。
-1. 在左側導軌中，點選檢視器預設集名稱。 檢視器預設集會套用至資產。
-1. 點選&#x200B;**[!UICONTROL Embed]**。
-1. 在&#x200B;**[!UICONTROL 內嵌程式碼]**&#x200B;對話方塊中，將整個程式碼複製到剪貼簿，然後點選&#x200B;**[!UICONTROL 關閉]**。
+1. 在左側邊欄中，選取下拉式選單，然後選取&#x200B;**[!UICONTROL 檢視器]**。
+1. 在左側邊欄中，選取檢視器預設集名稱。 檢視器預設集會套用至資產。
+1. 選擇&#x200B;**[!UICONTROL Embed]**。
+1. 在&#x200B;**[!UICONTROL 內嵌代碼]**&#x200B;對話方塊中，將整個代碼複製到剪貼簿，然後選取&#x200B;**[!UICONTROL 關閉]**。
 1. 將內嵌程式碼貼到您的網頁中。
 
 ## 使用HTTP/2傳遞Dynamic Media資產 {#using-http-to-deliver-your-dynamic-media-assets}
