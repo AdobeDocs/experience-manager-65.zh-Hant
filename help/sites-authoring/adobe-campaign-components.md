@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '2854'
+source-wordcount: '2847'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 4%
 >
 >您可以在專案層級實作電子郵件元件，而過時的AEM電子郵件元件則說明如何達成此目標。 不過，這些已棄用的元件不應用於專案。
 
-## Adobe Campaign電子報元件{#adobe-campaign-newsletter-components}
+## Adobe Campaign電子報元件 {#adobe-campaign-newsletter-components}
 
 所有Campaign元件都遵循[電子郵件範本最佳實務](/help/sites-administering/best-practices-for-email-templates.md)中概述的最佳實務，且是以Adobe標籤語言[HTL](https://helpx.adobe.com/tw/experience-manager/htl/using/overview.html)為基礎。
 
@@ -171,9 +171,9 @@ LinkType在下拉式清單中，於
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
-### Scene7 影像範本 (行銷活動) {#scene-image-template-campaign}
+### Dynamic Media Classic(Scene7)影像範本(Campaign) {#scene-image-template-campaign}
 
-[Scene7影](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) 像範本是分層的影像檔案，內容和屬性可根據可變性參數化。**影像範本**&#x200B;元件可讓您在電子報中使用Scene7範本，並變更範本參數的值。 此外，您可以在參數內使用Adobe Campaign中繼資料變數，讓每位使用者都能以個人化的方式體驗影像。
+Dynamic Media Classic(Scene7)影像範本是分層的影像檔案，內容和屬性可參數化，以因應多變性。 **[!UICONTROL 影像範本]**&#x200B;元件可讓您在電子報中使用Scene7範本，並變更範本參數的值。 此外，您可以在參數內使用Adobe Campaign中繼資料變數，讓每位使用者都能以個人化的方式體驗影像。
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -270,7 +270,7 @@ TextAltine文本，如果無法顯示影像，則顯示該文本。
 >
 >只考慮&#x200B;**nms:seedMember**&#x200B;方案或其擴展之一中定義的欄位。 連結到&#x200B;**nms:seedMember**&#x200B;的表的屬性不可用。
 
-## Adobe Campaign表單元件{#adobe-campaign-form-components}
+## Adobe Campaign表單元件 {#adobe-campaign-form-components}
 
 您可以使用Adobe Campaign元件建立表單，讓使用者填寫表單以訂閱電子報、取消訂閱電子報，或更新其使用者設定檔。 如需詳細資訊，請參閱[建立Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md) 。
 
@@ -294,7 +294,7 @@ TextAltine文本，如果無法顯示影像，則顯示該文本。
 
 本節詳細說明每個元件。
 
-### 元件和資料類型{#components-and-data-type}
+### 元件和資料類型 {#components-and-data-type}
 
 下表說明可用於顯示和修改Adobe Campaign設定檔資料的元件。 每個元件都可對應至Adobe Campaign設定檔欄位，以顯示其值，並在提交表單時更新欄位。 不同的元件只能與適當資料類型的欄位匹配。
 
@@ -333,7 +333,7 @@ TextAltine文本，如果無法顯示影像，則顯示該文本。
  </tbody>
 </table>
 
-### 大多數元件的常見設定{#settings-common-to-most-components}
+### 大多數元件的共同設定 {#settings-common-to-most-components}
 
 Adobe Campaign元件具有所有元件中通用的設定（加密主鍵和隱藏協調鍵元件除外）。
 
@@ -391,7 +391,7 @@ CSS輸入要用於此元件的CSS類。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-### 日期欄位（促銷活動）和日期欄位/HTML 5（促銷活動）{#date-field-campaign-and-date-field-html-campaign}
+### 日期欄位（促銷活動）和日期欄位/HTML 5（促銷活動） {#date-field-campaign-and-date-field-html-campaign}
 
 使用日期欄位可讓收件者知道日期；例如，您可能希望收件者指定其出生日期。 日期格式符合您的Adobe Campaign例項中使用的格式。
 
