@@ -1,5 +1,5 @@
 ---
-title: 套用 Dynamic Media 影像預設集
+title: 套用Dynamic Media影像預設集
 description: 了解如何在Dynamic Media中套用影像預設集
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
@@ -8,18 +8,18 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 feature: 影像預設集
-role: User, Admin
+role: User,Admin
 exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 6%
+source-wordcount: '329'
+ht-degree: 3%
 
 ---
 
-# 套用 Dynamic Media 影像預設集 {#applying-image-presets}
+# 套用Dynamic Media影像預設集 {#applying-image-presets}
 
-「影像預設集」可讓資產以動態方式傳送不同大小、不同格式的影像，或以其他動態產生的影像屬性。 匯出影像時，您可以選擇預設集。 預設將映像重新格式化為管理員指定的規範。
+影像預設集可讓資產以動態方式傳送不同大小、不同格式的影像，或以其他動態產生的影像屬性。 匯出影像時，您可以選擇預設集。 預設將映像重新格式化為管理員指定的規範。
 
 此外，您可以選擇回應式的影像預設集（在選取後，由&#x200B;**[!UICONTROL RESS]**&#x200B;按鈕指定）。
 
@@ -37,14 +37,14 @@ ht-degree: 6%
 
 **若要套用Dynamic Media影像預設集：**
 
-1. 開啟資產，在左側導軌中，點選下拉式選單，然後點選「**[!UICONTROL 轉譯]**」。
+1. 開啟資產，然後在左側導軌中，選取下拉式選單，然後選取&#x200B;**[!UICONTROL 轉譯]**。
 
    >[!NOTE]
    >
    >* 靜態轉譯會顯示在窗格的上半部。 動態轉譯會顯示在下半部。 僅限動態轉譯，您可以使用URL來顯示影像。 只有在您選取動態轉譯時，才會顯示&#x200B;**[!UICONTROL URL]**&#x200B;按鈕。 只有在您選取回應式影像預設集時，才會顯示&#x200B;**[!UICONTROL RESS]**&#x200B;按鈕。
       >
       >
-   * 當您在資產的「詳細資料」檢視中選取「**[!UICONTROL 轉譯]**」時，系統會顯示許多轉譯。 您可以增加所檢視的預設集數目。請參閱[增加顯示](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)的影像預設集數目。
+   * 當您在資產的「詳細資料」檢視中選取「**[!UICONTROL 轉譯]**」時，系統會顯示許多轉譯。 您可以增加所檢視的預設集數目。請參閱[增加顯示的影像預設集數](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)。
 
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
@@ -52,7 +52,7 @@ ht-degree: 6%
 1. 執行下列任一操作：
 
    * 選取動態轉譯，以便預覽影像預設集。
-   * 若要顯示快顯視窗，請點選&#x200B;**[!UICONTROL URL]**、**[!UICONTROL Embed]**&#x200B;或&#x200B;**[!UICONTROL RESS]**。
+   * 若要顯示快顯視窗，請選取&#x200B;**[!UICONTROL URL]**、**[!UICONTROL Embed]**&#x200B;或&#x200B;**[!UICONTROL RESS]**。
 
    >[!NOTE]
    >
