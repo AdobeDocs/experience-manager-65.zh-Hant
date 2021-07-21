@@ -1,6 +1,6 @@
 ---
 title: 整合Dynamic Media檢視器與Adobe Analytics和Experience Platform標籤
-description: Dynamic Media檢視器的Experience Platform標籤和Dynamic Media檢視器5.13擴充功能可讓Adobe Analytics和Experience Platform標籤客戶在其Experience Platform標籤設定中使用Dynamic Media檢視器專屬的事件和資料。
+description: 了解適用於Experience Platform標籤的Dynamic Media檢視器擴充功能和Dynamic Media檢視器5.13。它可讓Adobe Analytics和Experience Platform標籤的客戶在其Experience Platform標籤設定中使用Dynamic Media檢視器專屬的事件和資料。
 mini-toc-levels: 3
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -10,9 +10,9 @@ docset: aem65
 feature: 檢視器
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 997eeafa03d3148fb0754eaa27a5a99217e0d1bc
 workflow-type: tm+mt
-source-wordcount: '6630'
+source-wordcount: '6636'
 ht-degree: 6%
 
 ---
@@ -801,7 +801,7 @@ Experience Manager設定包含下列兩個主要步驟：
 
 1. 在&#x200B;**[!UICONTROL Experience Platform標籤設定]**&#x200B;頁面的左側面板中，選取您要套用Experience Platform標籤設定的Experience Manager網站。
 
-   僅供範例之用，螢幕擷取中會選取`We.Retail`網站。
+   僅供範例之用，會在下方螢幕擷取中選取&#x200B;**`We.Retail`**&#x200B;網站。
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
