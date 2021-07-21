@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
+source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 40%
+source-wordcount: '584'
+ht-degree: 38%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 40%
    + [互動影像](interactive-images.md)
    + [互動影片](interactive-videos.md)
    + [360 VR 影片](/help/assets/360-video.md)
-   + [整合 Dynamic Media 檢視器以及 Adobe Analytics 和 Adobe Launch](/help/assets/launch.md)
+   + [整合Dynamic Media檢視器以及Adobe Analytics和Adobe Experience Platform標籤](/help/assets/tags.md)
    + [使用「快速檢視」建立自訂快顯視窗](custom-pop-ups.md)
    + [為回應式網站傳送最佳化影像](responsive-site.md)
    + [預覽 Dynamic Media 資產](previewing-assets.md)
