@@ -12,9 +12,9 @@ docset: aem65
 feature: 資產管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b42a14729a88bda563b0773dac735ad569ad3097
 workflow-type: tm+mt
-source-wordcount: '11672'
+source-wordcount: '11665'
 ht-degree: 5%
 
 ---
@@ -161,7 +161,7 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 
 Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位置找到支援此視頻格式的BlackBerry®設備：[BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支援的視頻格式。
 
-您可以在以下位置找到支援此視頻格式的Windows設備：[Windows Phone 8](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105))支援的媒體轉碼器
+您可以在以下位置找到支援此視頻格式的Windows設備：[Windows Phone 8](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)支援的媒體轉碼器
 
 * 使用Dynamic Media視訊檢視器預設集播放視訊，包括下列內容：
 
@@ -316,7 +316,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 您可以使用視訊編輯工具檢視其中繼資料，或使用專為取得中繼資料而設計的應用程式，以取得檔案的中繼資料。 以下是使用協力廠商應用程式MediaInfo來取得視訊檔案中繼資料的指示：
 
-1. 轉到此網頁：[https://mediainfo.sourceforge.net/en/Download](https://mediainfo.sourceforge.net/en/Download)。
+1. 前往[MediaInfo Download](https://mediaarea.net/en/MediaInfo/Download)。
 1. 選擇並下載GUI版本的安裝程式，並按照安裝說明操作。
 1. 安裝後，按一下右鍵視頻檔案（僅限Windows）並選擇MediaInfo，或開啟MediaInfo並將視頻檔案拖入應用程式。 您會看到與視訊檔案相關聯的所有中繼資料，包括其寬度、高度和fps。
 
@@ -418,9 +418,9 @@ VBR編碼需要較長的時間，但會產生最有利的結果；媒體檔案�
 
 | 視訊類型 | 寬x高 | 寬度比例 | 高度比 |
 |--- |--- |--- |--- |
-| 來源 | 1920x1080 | 1 | 1 |
+| 來源 | 1920x1080 | 1 | 3 |
 | 編碼 | 960 x 540 | 2 | 2 |
-| 編碼 | 640 x 360 | 3 | 1 |
+| 編碼 | 640 x 360 | 3 | 3 |
 | 編碼 | 480 x 270 | 4 | 4 |
 
 ### 編碼視訊檔案格式 {#encoded-video-file-format}
@@ -453,7 +453,7 @@ YouTube會自行編碼。 因此，上傳至Experience Manager的原始視訊檔
 
 ### 配置Google雲端設定 {#configuring-google-cloud-settings}
 
-若要發佈至YouTube，您需要Google帳戶。 如果你有Gmail賬戶，那麼你已經有Google賬戶了；如果您沒有Google帳戶，便可輕鬆建立帳戶。 您需要帳戶，因為您需要憑證才能將影片資產發佈至YouTube。 如果您已建立帳戶，請略過此任務，然後直接前往「建立YouTube通道」](#creating-a-youtube-channel)。[
+若要發佈至YouTube，您需要Google帳戶。 如果你有Gmail賬戶，那麼你已經有Google賬戶了；如果您沒有Google帳戶，便可輕鬆建立帳戶。 您需要帳戶，因為您需要憑證才能將影片資產發佈至YouTube。 如果您已建立帳戶，請略過此任務並直接前往[建立YouTube頻道](#creating-a-youtube-channel)。
 
 與Google Cloud搭配使用的帳戶和用於YouTube的Google帳戶不需相同。
 
@@ -507,9 +507,9 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    * 從&#x200B;**[!UICONTROL 您使用哪個API?]** 下拉式清單，選取 **[!UICONTROL YouTube Data API v3]**。
 
-   * 從&#x200B;**[!UICONTROL 您要從何處呼叫API?]** 下拉清單，選 **[!UICONTROL 擇Web伺服器（例如node.js、Tomcat）]**
+   * 從&#x200B;**[!UICONTROL 呼叫API的來源為何？]** 下拉清單，選 **[!UICONTROL 擇Web伺服器（例如node.js、Tomcat）]**
 
-   * 從&#x200B;**[!UICONTROL 您將訪問哪些資料？]** 下拉式清單，點選「使 **[!UICONTROL 用者資料」]**。
+   * 從&#x200B;**[!UICONTROL 您正在訪問哪些資料？]** 下拉式清單，點選「使 **[!UICONTROL 用者資料」]**。
 
    ![6_5_googleaccount-api-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
