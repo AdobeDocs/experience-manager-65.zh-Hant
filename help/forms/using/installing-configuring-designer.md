@@ -12,10 +12,10 @@ discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 85596d4c2204aa1dd34c409b45d25eeffdb9c046
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ AEM Forms Designer安裝程式需要32位版本的[Visual C++可再發行運行�
 
 Designer作為獨立安裝程式提供，並與WorkBench捆綁。 如果您使用Designer的獨立安裝程式，請執行下列步驟：
 
-1. 請聯繫Adobe支援以下載Designer安裝程式。
+1. 從Adobe[授權網站](https://licensing.adobe.com/)下載設計器。
 
    >[!NOTE]
    >
