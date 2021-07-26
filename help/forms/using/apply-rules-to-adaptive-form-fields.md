@@ -1,5 +1,5 @@
 ---
-title: 「請勿發佈教學課程：將規則套用至最適化表單欄位」
+title: 將規則套用至最適化表單欄位
 seo-title: 將規則套用至最適化表單欄位
 description: 建立規則，將互動性、商業邏輯和智慧驗證新增至最適化表單。
 seo-description: 建立規則，將互動性、商業邏輯和智慧驗證新增至最適化表單。
@@ -8,20 +8,20 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63bc43bba88a42d62fb574bc8ce42470ac61d693
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
 
-# 教學課程：將規則套用至最適化表單欄位{#tutorial-apply-rules-to-adaptive-form-fields}
+# 教學課程：將規則套用至最適化表單欄位 {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
 本教學課程是[建立第一個最適化表單](/help/forms/using/create-your-first-adaptive-form.md)系列中的步驟。 Adobe建議依序依序執行系列，以了解、執行和示範完整的教學課程使用案例。
 
-## 關於教學課程{#about-the-tutorial}
+## 關於教學課程 {#about-the-tutorial}
 
 您可以使用規則將互動性、商業邏輯和智慧驗證新增至最適化表單。 適用性表單有內建的規則編輯器。 規則編輯器提供拖放功能，類似於引導式導覽。 拖放方法是建立規則最快速且最簡單的方法。 規則編輯器還為有興趣測試其編碼技能或將規則提升到下一級的用戶提供一個代碼窗口。
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 本教學課程各節結尾的互動式GIF影像可協助您即時學習及驗證您所建立表單的功能。
 
-## 步驟1:從資料庫{#retrieve-customer-record}中檢索客戶記錄
+## 步驟1:從資料庫中檢索客戶記錄 {#retrieve-customer-record}
 
 您遵循[create form data model](/help/forms/using/create-form-data-model.md)文章建立表單資料模型。 現在，您可以使用規則編輯器叫用Forms資料模型服務，以擷取資訊並新增至資料庫。
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
    ![檢索資訊](assets/retrieve-information.gif)
 
-## 步驟2:將更新的客戶地址添加到資料庫{#updated-customer-address}
+## 步驟2:將更新的客戶地址添加到資料庫 {#updated-customer-address}
 
 從資料庫中擷取客戶詳細資訊後，您就可以更新運送地址、狀態和郵遞區號。 以下過程調用表單資料模型服務以將客戶資訊更新到資料庫：
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 1. 點選&#x200B;**[!UICONTROL Done]**&#x200B;以儲存規則。 在規則編輯器視窗中，點選&#x200B;**[!UICONTROL 關閉]**。
 1. 預覽最適化表單。 檢索客戶的詳細資訊、更新發運地址並提交表單。 當您再次檢索同一客戶的詳細資訊時，將顯示更新的發運地址。
 
-## 步驟3:（額外部分）使用代碼編輯器運行驗證並顯示錯誤消息{#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
+## 步驟3:（額外章節）使用程式碼編輯器執行驗證並顯示錯誤訊息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
 
 您應對表單執行驗證，以確保在表單中輸入的資料正確，並在資料不正確時顯示錯誤訊息。 例如，如果在表單中輸入了非現有客戶ID，則應會顯示錯誤訊息。
 
