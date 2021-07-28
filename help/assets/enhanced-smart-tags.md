@@ -5,9 +5,9 @@ contentOwner: AG
 feature: 智慧標籤，搜索
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 20442918270b484e0b3c3ce8e68df90e0f305a52
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1632'
 ht-degree: 1%
 
 ---
@@ -188,6 +188,7 @@ ht-degree: 1%
 
 ## 提示和限制 {#tips-best-practices-limitations}
 
+* 要訓練模型，請使用最合適的影像。 無法還原培訓或無法刪除培訓模型。 標籤的正確性取決於當前培訓，因此請小心。
 * 智慧內容服務每年最多只能使用200萬個標籤的影像。 處理和標籤的任何重複影像都計為已標籤影像。
 * 如果您從時間軸執行標籤工作流程，一次最多可對15個資產套用標籤。
 * 智慧標籤僅適用於PNG和JPG影像格式。 因此，如果支援的資產以這兩種格式建立轉譯，就會使用智慧標籤加上標籤。
