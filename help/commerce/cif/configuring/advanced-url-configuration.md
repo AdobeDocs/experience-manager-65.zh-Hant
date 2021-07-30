@@ -8,9 +8,10 @@ audience: administrator
 feature: 商務整合架構
 kt: 4933
 thumbnail: 34350.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
+source-git-commit: dbd38aa75caa7c3c2feee79702ab85ab397eb583
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '745'
 ht-degree: 3%
 
 ---
@@ -23,38 +24,63 @@ ht-degree: 3%
 
 ## 設定 {#configuration}
 
-若要根據SEO需求設定`UrlProvider`服務，且需要專案必須提供「CIF URL提供者設定」的OSGI設定，並依照下列說明設定服務。
+若要根據SEO要求設定`UrlProvider`服務，且需要專案必須提供「CIF URL提供者設定」的OSGI設定。
 
 >[!NOTE]
 >
-> [Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)專案，請參閱下方的範例設定，以示範產品和類別頁面的自訂URL使用方式。
+> 自AEM CIF核心元件2.0.0版起，URL提供者設定僅提供預先定義的url格式，而非1.x版中可使用的自由文字設定格式。 此外，在URL中使用選取器傳遞資料的做法已取代為尾碼。
 
-### 產品頁面URL範本 {#product}
+### 產品頁面URL格式 {#product}
 
-這會使用下列屬性設定產品頁面的URL:
+這可設定產品頁面的URL並支援下列選項：
 
-* **產品URL範本**:會使用預留位置集定義URL的格式。預設值為`{{page}}.{{url_key}}.html#{{variant_sku}}`，最後會產生URL，例如`/content/venia/us/en/products/product-page.chaz-kangeroo-hoodie.html#MH01-M-Orange`，其中
-   * `{{page}}` 取代為  `/content/venia/us/en/products/product-page`
-   * `{{url_key}}` 已由Magento的 `url_key` 產品屬性取代，此處  `chaz-kangeroo-hoodie`
-   * `{{variant_sku}}` 已由目前選取的變體取代，此處  `MH01-M-Orange`
-* **產品識別碼位置**:會定義用來擷取產品資料之識別碼的位置。預設值為`SELECTOR`，其他可能值為`SUFFIX`。 在上一個範例URL中，這表示將使用識別碼`chaz-kangeroo-hoodie`來擷取產品資料。
-* **產品識別碼類型**:定義擷取產品資料時要使用的識別碼類型。預設值為`URL_KEY`，其他可能值為`SKU`。 在上一個範例URL中，這表示產品資料將會以`filter:{url_key:{eq:"chaz-kangeroo-hoodie"}}`之類的MagentoGraphQL篩選器擷取。
+* `{{page}}.html/{{sku}}.html#{{variant_sku}}` (預設)
+* `{{page}}.html/{{url_key}}.html#{{variant_sku}}`
+* `{{page}}.html/{{sku}}/{{url_key}}.html#{{variant_sku}}`
+* `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
+* `{{page}}.html/{{sku}}/{{url_path}}.html#{{variant_sku}}`
 
-### 產品清單頁面URL範本{#product-list}
+在[Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)中：
 
-這會使用下列屬性來設定類別或產品清單頁面的URL:
+* `{{page}}` 將替換為  `/content/venia/us/en/products/product-page`
+* `{{sku}}` 將替換為產品的sku，例如  `VP09`
+* `{{url_key}}` 會由產品的屬性取 `url_key` 代，例如  `lenora-crochet-shorts`
+* `{{url_path}}` 將被產品的取代， `url_path`例如  `venia-bottoms/venia-pants/lenora-crochet-shorts`
+* `{{variant_sku}}` 將替換為目前選取的變體，例如  `VP09-KH-S`
 
-* **類別URL範本**:會使用預留位置集定義URL的格式。預設值為`{{page}}.{{id}}.html`，最後會產生URL，例如`/content/venia/us/en/products/category-page.3.html`，其中
-   * `{{page}}` 取代為  `/content/venia/us/en/products/category-page`
-   * `{{id}}` 已由Magento的 `id` 類別屬性取代，此處  `3`
-* **類別識別碼位置**:會定義用來擷取產品資料之識別碼的位置。預設值為`SELECTOR`，其他可能值為`SUFFIX`。 在上一個範例URL中，這表示將使用識別碼`3`來擷取產品資料。
-* **類別識別碼類型**:定義擷取產品資料時要使用的識別碼類型。預設值和當前僅支援的值為`ID`。 在上一個範例URL中，這表示將使用`category(id:3)`之類的MagentoGraphQL篩選器擷取類別資料。
+使用上述範例資料，使用預設URL格式格式化的產品變體URL看起來會像`/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`。
 
-只要元件使用`UrlProvider`設定對應的資料，就可以為每個範本新增自訂屬性。 檢查`ProductListItemImpl`類的代碼，以了解其實現方式。
+### 類別頁面URL格式 {#product-list}
 
-您也可以將`UrlProvider`服務取代為完全自訂的OSGi服務。 在此情況下，必須實作`UrlProvider`介面，並以較高的服務排名註冊該介面，以取代預設實作。
+這可設定類別或產品清單頁面的URL，並支援下列選項：
 
-## 結合Sling對應{#sling-mapping}
+* `{{page}}.html/{{url_path}}.html` (預設)
+* `{{page}}.html/{{url_key}}.html`
+
+在[Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)中：
+
+* `{{page}}` 將替換為  `/content/venia/us/en/products/category-page`
+* `{{url_key}}` 將替換為類別的屬 `url_key` 性
+* `{{url_path}}` 將替換為類別的  `url_path`
+
+使用上述範例資料，使用預設URL格式設定的類別頁面URL看起來會像`/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`。
+
+>[!NOTE]
+> 
+> `url_path`是產品或類別祖先的`url_keys`與產品或類別的`url_key`的串連，以`/`斜線分隔。
+
+## 自訂URL格式 {#custom-url-format}
+
+若要提供自訂URL格式，專案可實作[`UrlFormat`介面](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/UrlFormat.html)，並將實作記錄為OSGI服務，以類別頁面或產品頁面url格式使用。 `UrlFormat#PROP_USE_AS`服務屬性指示要替換的配置預定義格式：
+
+* `useAs=productPageUrlFormat`，將取代已設定的產品頁面url格式
+* `useAs=categoryPageUrlFormat`，將取代已設定的類別頁面url格式
+
+如果註冊為OSGI服務的`UrlFormat`有多個實現，則服務排名較高的實現將服務排名較低的實現替換。
+
+`UrlFormat`必須實作一對方法，以從指定的參數地圖建立URL，並剖析URL以傳回相同的參數地圖。 參數與上述相同，只有對於類別，才向`UrlFormat`提供額外的`{{uid}}`參數。
+
+## 結合Sling對應 {#sling-mapping}
 
 除了`UrlProvider`，您也可以設定[Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)以重寫和處理URL。 AEM原型專案也提供[範例設定](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish)，以針對連接埠4503（發佈）和80（調度程式）設定一些Sling對應。
 
