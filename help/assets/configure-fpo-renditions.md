@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: 轉譯
 exl-id: null
-source-git-commit: 865370e38368072c39ad337eb52259c586403efb
+source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -24,10 +24,10 @@ Experience Manager允許許多方法處理可用於產生FPO轉譯的影像。 �
 
 您可以使用ImageMagick處理影像，包括產生FPO轉譯。 這樣的格式副本被縮減採樣，即如果原始影像的PPI大於72，則格式副本的像素尺寸按比例減少。 請參閱[安裝並設定ImageMagick以搭配Experience Manager資產](best-practices-for-imagemagick.md)使用。
 
-|  |使用Experience Manager內建的工作流程 |使用ImageMagick工作流程 |注釋 |
-| — | — |—|— |
-|適用於新資產 |啟用FPO轉譯([help](#generate-renditions-of-new-assets-using-aem-workflow)) |在Experience Manager工作流程中新增ImageMagick命令列([help](#generate-renditions-of-new-assets-using-imagemagick)) |Experience Manager會針對每次上傳執行DAM更新資產工作流程。 |
-|適用於現有資產 |在新的專用Experience Manager工作流程中啟用FPO轉譯([help](#generate-renditions-of-existing-assets-using-aem-workflow)) |在新的專用Experience Manager工作流程中新增ImageMagick命令列([help](#generate-renditions-of-existing-assets-using-imagemagick)) |現有資產的FPO轉譯可隨選或大量建立。 |
+|  | 使用Experience Manager內建的工作流程 | 使用ImageMagick工作流程 | 注釋 |
+|--- |--- |---|--- |
+| 針對新資產 | 啟用FPO轉譯([help](#generate-renditions-of-new-assets-using-aem-workflow)) | 在Experience Manager工作流程([help](#generate-renditions-of-new-assets-using-imagemagick))中新增ImageMagick命令列 | Experience Manager會針對每次上傳執行DAM更新資產工作流程。 |
+| 針對現有資產 | 在新的專用Experience Manager工作流程中啟用FPO轉譯([help](#generate-renditions-of-existing-assets-using-aem-workflow)) | 在新的專用Experience Manager工作流程([help](#generate-renditions-of-existing-assets-using-imagemagick))中添加ImageMagick命令行 | 現有資產的FPO轉譯可依需求或大量建立。 |
 
 >[!CAUTION]
 >
