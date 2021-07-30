@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
 workflow-type: tm+mt
 source-wordcount: '2601'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 >
 >製作網站時會使用「多網站管理員」及其API，因此這些管理工具僅用於製作環境。
 
-## Java API {#overview-of-the-java-api}概述
+## Java API概觀 {#overview-of-the-java-api}
 
 「多站點管理」包含以下包：
 
@@ -64,14 +64,18 @@ ht-degree: 0%
       * 允許作者使用&#x200B;**建立網站**;這可讓使用者輕鬆選取語言並設定即時副本的結構。
       * 定義任何產生的Live Copy的預設轉出設定。
 
-* **`LiveRelationship`** 會指 `LiveRelationship` 定即時副本分支中的資源與其對等來源/藍圖資源之間的連線（關係）。
+* **`LiveRelationship`**
+
+   `LiveRelationship`指定即時副本分支中的資源與其等效源/藍圖資源之間的連接（關係）。
 
    * 在實現繼承和轉出時會使用關係。
    * `LiveRelationship` 物件提供對轉出設定( `RolloutConfig`)、和關 `LiveCopy`系相 `LiveStatus` 關物件的存取（參考）。
 
    * 例如，在`/content/copy/us`中，從`/content/we-retail/language-masters`的來源/Blueprint建立即時副本。 資源`/content/we.retail/language-masters/en/jcr:content`和`/content/copy/us/en/jcr:content`形成關係。
 
-* **`LiveCopy`** `LiveCopy` 保留即時副本資源與其來源/blueprint資源之間關係( `LiveRelationship`)的設定詳細資料。
+* **`LiveCopy`**
+
+   `LiveCopy` 保留即時副本資源與其來源/blueprint資源之間關係( `LiveRelationship`)的設定詳細資料。
 
    * 使用`LiveCopy`類訪問頁面路徑、源/Blueprint頁面路徑、轉出配置以及子頁面是否也包含在`LiveCopy`中。
 
@@ -91,11 +95,13 @@ ht-degree: 0%
 
    建立給定`LiveAction`配置的`LiveAction`對象。 設定會儲存為存放庫中的資源。
 
-* **`RolloutConfig`** 包 `RolloutConfig` 含要觸發 `LiveActions`時使用的清單。`LiveCopy`繼承`RolloutConfig`，結果在`LiveRelationship`中顯示。
+* **`RolloutConfig`**
+
+   `RolloutConfig`包含`LiveActions`清單，當觸發時使用。 `LiveCopy`繼承`RolloutConfig`，結果在`LiveRelationship`中顯示。
 
    * 第一次設定即時副本時，也會使用RolloutConfig（這會觸發LiveActions）。
 
-## 建立新的同步操作{#creating-a-new-synchronization-action}
+## 建立新的同步操作 {#creating-a-new-synchronization-action}
 
 建立要與轉出設定搭配使用的自訂同步動作。 當[已安裝的操作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)不符合您的特定應用程式要求時，建立同步操作。 要執行此操作，請建立兩個類：
 
@@ -117,7 +123,7 @@ ht-degree: 0%
 
    * `createsAction`:傳回關聯的名 `LiveAction`稱。
 
-### 訪問LiveAction配置節點{#accessing-the-liveaction-configuration-node}
+### 存取LiveAction設定節點 {#accessing-the-liveaction-configuration-node}
 
 在儲存庫中使用`LiveAction`配置節點來儲存影響`LiveAction`實例的運行時行為的資訊。 儲存`LiveAction`配置的儲存庫中的節點在運行時可用於`LiveActionFactory`對象。 因此，您可以將屬性新增至的設定節點，並視需要在`LiveActionFactory`實作中使用。
 
@@ -162,7 +168,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >`Resource`參數可以是不適應`Node`對象（如[ `NonExistingResource`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html)對象）的`null`或`Resources`對象。
 
-## 建立新轉出設定{#creating-a-new-rollout-configuration}
+## 建立新轉出設定 {#creating-a-new-rollout-configuration}
 
 當安裝的轉出設定不符合您的應用程式需求時，建立轉出設定：
 
@@ -175,7 +181,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >另請參閱自訂轉出的[最佳實務](/help/sites-administering/msm-best-practices.md#customizing-rollouts)。
 
-### 建立轉出設定{#create-the-rollout-configuration}
+### 建立轉出設定 {#create-the-rollout-configuration}
 
 若要建立新轉出設定：
 
@@ -224,7 +230,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 按一下「**全部保存**」。
 
-### 將同步化動作新增至轉出設定{#add-synchronization-actions-to-the-rollout-configuration}
+### 將同步化動作新增至轉出設定 {#add-synchronization-actions-to-the-rollout-configuration}
 
 轉出配置儲存在您已在`/apps/msm/<your-project>/rolloutconfigs`節點下建立的[轉出配置節點](#create-the-rollout-configuration)下。
 
@@ -242,7 +248,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 根據需要添加和配置任意數量的同步操作節點。 重新排列動作節點，使其順序符合您希望其發生的順序。 最頂端的動作節點會先發生。
 
-## 建立和使用簡單LiveActionFactory類{#creating-and-using-a-simple-liveactionfactory-class}
+## 建立和使用簡單LiveActionFactory類 {#creating-and-using-a-simple-liveactionfactory-class}
 
 請依照本節中的程式開發`LiveActionFactory`，並在轉出設定中使用。 該過程使用Maven和Eclipse來開發和部署`LiveActionFactory`:
 
@@ -261,7 +267,7 @@ GITHUB上的程式碼
 * [在GitHub上開啟experiencemanager-java-msmrollout專案](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
 * 將專案下載為[a ZIP檔案](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)
 
-### 建立Maven專案{#create-the-maven-project}
+### 建立Maven專案 {#create-the-maven-project}
 
 下列程式需要您將adobe-public設定檔新增至Maven設定檔。
 
@@ -287,7 +293,7 @@ GITHUB上的程式碼
 
 1. 啟動Eclipse並[匯入Maven專案](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)。
 
-### 將相依性添加到POM檔案{#add-dependencies-to-the-pom-file}
+### 將相依性新增至POM檔案 {#add-dependencies-to-the-pom-file}
 
 添加依賴項，以便Eclipse編譯器可以引用`LiveActionFactory`代碼中使用的類。
 
@@ -543,7 +549,7 @@ GITHUB上的程式碼
    13.08.2013 14:34:55.454 *INFO* [OsgiInstallerImpl] org.apache.sling.audit.osgi.installer Started bundle com.adobe.example.msm.MyLiveActionFactory-bundle [316]
    ```
 
-### 建立轉出設定範例{#create-the-example-rollout-configuration}
+### 建立範例轉出設定 {#create-the-example-rollout-configuration}
 
 建立使用您建立之`LiveActionFactory`的MSM轉出設定：
 
@@ -553,7 +559,7 @@ GITHUB上的程式碼
    * **名稱**:examplolloutconfig
    * **cq:trigger**:  `publish`
 
-### 將即時動作新增至範例轉出設定{#add-the-live-action-to-the-example-rollout-configuration}
+### 將即時動作新增至範例轉出設定 {#add-the-live-action-to-the-example-rollout-configuration}
 
 設定您在前一個程式中建立的轉出設定，使其使用`ExampleLiveActionFactory`類別。
 
@@ -574,7 +580,7 @@ GITHUB上的程式碼
 
 1. 按一下「**全部保存**」。
 
-### 建立即時副本{#create-the-live-copy}
+### 建立即時副本 {#create-the-live-copy}
 
 [使用您的轉](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) 出設定，建立We.Retail參考網站的英文/產品分支的即時副本：
 
@@ -610,7 +616,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
     1. **Name** = `xtype`; **Type** = `String`; **Value** = `hidden`
 -->
 
-## 更改語言名稱和預設國家/地區{#changing-language-names-and-default-countries}
+## 更改語言名稱和預設國家 {#changing-language-names-and-default-countries}
 
 AEM使用一組預設的語言和國家/地區代碼。
 
@@ -650,7 +656,7 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-## 在頁面屬性上設定MSM鎖（觸控式UI）{#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## 在頁面屬性上設定MSM鎖（觸控式UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 建立自訂頁面屬性時，您可能需要考慮新屬性是否有資格轉出至任何即時副本。
 
