@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
 workflow-type: tm+mt
-source-wordcount: '3718'
+source-wordcount: '3771'
 ht-degree: 3%
 
 ---
@@ -679,3 +679,10 @@ ht-degree: 3%
          + [以寫程式方式管理首選項節點](developing/programmatically-preferences-nodes.md)
          + [使用策略保護文檔](developing/protecting-documents-policies.md)
          + [使用網站服務API驗證DDX檔案](developing/validate-ddx-document-using-web.md)
+      + 舊版檔案{#legacy-documentation}
+         + [在JEE Workbench上使用AEM Forms中的執行指令碼服務來建立XML資料](developing/building-xml.md)
+         + [在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案](developing/compressing-decompressing-custom-dsc.md)
+         + [在JEE伺服器叢集上設定和疑難排解AEM Forms](developing/configure-server-cluster.md)
+         + [在動態PDF forms中產生和使用雜湊](developing/hashing-forms.md)
+         + [使用WS-Security標頭傳遞憑據](developing/passing-credentials.md)
+
