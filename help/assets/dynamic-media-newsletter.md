@@ -1,30 +1,34 @@
 ---
-title: Dynamic Media電子報
-description: 'Dynamic Media電子報(依Experience League)是每月電子報。 它旨在協助您快速上手Dynamic Media和Dynamic Media Classic，讓您立即開始實現價值。 這份一站式商店快訊提供寶貴的知識建立資源。 其中包括影片、解決方案概述，以及影像預設集、檢視器預設集、影片設定檔等部分主要功能的簡介。 '
+title: Dynamic Media電子報封存
+description: '封存的Dynamic Media電子報(依Experience League)是每月電子報。 它旨在協助您快速熟悉Dynamic Media和Dynamic Media Classic，以便立即實現價值。 封存的電子報包含寶貴的知識建設資源，此一站式電子報現已停用。 封存的電子報包含作法影片和解決方案概述。 也提供影像預設集、檢視器預設集和視訊設定檔等主要功能的簡介。 '
 keywords: Dynamic Media；電子報；產品更新；提示與秘訣；事件；客戶成功；部落格；部落格；影像；影片；功能
 contentOwner: Rick Brough
 solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: 協作，Dynamic Media Classic
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
 
 # ![Dynamic Media電子報標誌](/help/assets/assets/dynamic-media-newsletter-logo.png)
 
-每月的Dynamic Media電子報(依Experience League區分)旨在協助您快速熟悉Dynamic Media和Dynamic Media Classic，以便立即開始實現其價值。
+>[!NOTE]
+>
+>每月電子報現已停止提供。 不過，您仍可存取下方的電子報封存檔。
 
-這份一站式商店快訊提供寶貴的知識建立資源。 其中包括影片、解決方案概述，以及影像預設集、檢視器預設集、影片設定檔等部分主要功能的簡介。
+Dynamic Media電子報(依Experience League區分)旨在協助您快速熟悉Dynamic Media和Dynamic Media Classic，以便立即開始實現其價值。
 
-## 獲得靈感 — 了解詳情
+在這份一站式商店封存電子報中，您可以找到寶貴的知識建立資源，例如作法影片和解決方案概覽。 也提供影像預設集、檢視器預設集和視訊設定檔等主要功能的簡介。
 
-[登](https://www.adobe.com/subscription/dynamic-media-newsletter.html) 入即可在收件匣中每月收到Dynamic Media電子報。
+<!-- ## Get inspired - Stay informed
 
-## 錯過了Dynamic Media電子報一期？
+[Sign up](https://www.adobe.com/subscription/dynamic-media-newsletter.html) to receive the Dynamic Media Newsletter on a monthly basis in your inbox. -->
+
+## Dynamic Media電子報封存
 
 <!-- * **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
 
@@ -52,9 +56,9 @@ ht-degree: 0%
    * 進一步了解Adobe的免費Dynamic Media Classic稽核。
    * 客戶成功服務高級計畫經理John Monroe。
 
-      >[!IMPORTANT]
-      >
-      >Adobe想要確認他們只傳送Dynamic Media電子報給想要接收該電子報的使用者。 要在此期之後繼續接收新聞稿，請在[這裡](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)註冊。
+<!--     >[!IMPORTANT]
+    >
+    >Adobe wants to make sure they are only sending the Dynamic Media newsletter to people who want to receive it. To continue receiving the newsletter after this issue, please sign up for it [here](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&reserved=0). -->
 
 * **[2020年2月第2期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -153,7 +157,7 @@ ht-degree: 0%
 
 * **[2019年4月04期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**
 
-   歡迎參閱Dynamic Media電子報的正式發行，Adobe的新月度電子報內容充滿新聞、活動和資源，供Adobe Experience Manager Assets和AdobeDynamic Media Classic的Dynamic Media使用者使用。
+   歡迎參閱Dynamic Media電子報的正式發行，Adobe電子報內載有新聞、活動和資源，供Adobe Experience Manager資產和AdobeDynamic Media Classic中的Dynamic Media使用者使用。
 
    此問題：
    * 註冊Adobe的Dynamic Media Classic隱藏功能網路研討會。
