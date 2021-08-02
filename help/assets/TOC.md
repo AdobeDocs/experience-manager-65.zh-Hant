@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 38%
+ht-degree: 20%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 38%
    + [使用資產中繼資料](metadata.md)
    + [多語言資產](multilingual-assets.md)
    + [在資產中使用 [!DNL Adobe Stock] 資產](aem-assets-adobe-stock.md)
-   + [預覽 3D 資產](previewing-3d-assets.md)
+   + [預覽3D資產](previewing-3d-assets.md)
    + [查看資料夾資產和集合](bulk-approval.md)
    + [增強型智慧標記](enhanced-smart-tags.md)
    + [時間軸中的活動資料流](activity-stream.md)
@@ -36,28 +36,28 @@ ht-degree: 38%
    + [使用MSM重複使用資產](reuse-assets-using-msm.md)
    + [具有 [!DNL Sites]的連線資產](use-assets-across-connected-assets-instances.md)
 + 動態媒體{#dynamic}
-   + [Experience League 的 Dynamic Media 電子報](dynamic-media-newsletter.md)
-   + [建立 Dynamic Media](administering-dynamic-media.md)
-   + [使用 Dynamic Media](dynamic-media.md)
-   + [設定 Dynamic Media - Scene7 模式](config-dms7.md)
-   + [配置Dynamic Media — 混合模式](config-dynamic.md)
+   + [Dynamic Media電子報封存(依Experience League)](dynamic-media-newsletter.md)
+   + [設定Dynamic Media](administering-dynamic-media.md)
+   + [使用Dynamic Media](dynamic-media.md)
+   + [設定Dynamic Media - Scene7模式](config-dms7.md)
+   + [設定Dynamic Media — 混合模式](config-dynamic.md)
    + [疑難排解Dynamic Media - Scene7模式](troubleshoot-dms7.md)
    + [Dynamic Media 無障礙內容](accessibility-dm.md)
    + [從Dynamic Media — 混合模式移轉至Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
-   + [管理 Dynamic Media 資產](managing-assets.md)
+   + [管理Dynamic Media資產](managing-assets.md)
    + [影像品質最佳化的最佳作法](best-practices-for-optimizing-the-quality-of-your-images.md)
-   + [管理 Dynamic Media 檢視器預設集](managing-viewer-presets.md)
-   + [套用 Dynamic Media 檢視器預設集](viewer-presets.md)
-   + [管理 Dynamic Media 影像預設集](managing-image-presets.md)
-   + [套用 Dynamic Media 影像預設集](image-presets.md)
+   + [管理Dynamic Media檢視器預設集](managing-viewer-presets.md)
+   + [套用Dynamic Media檢視器預設集](viewer-presets.md)
+   + [管理Dynamic Media影像預設集](managing-image-presets.md)
+   + [套用Dynamic Media影像預設集](image-presets.md)
    + [Dynamic Media 影片設定檔](video-profiles.md)
    + [Dynamic Media 影像設定檔](image-profiles.md)
    + [智慧型影像](imaging-faq.md)
    + [影片](s7-video.md)
    + [將Dynamic Media功能新增至頁面](scene7.md)
    + [HTTP2 傳送內容](http2.md)
-   + [傳送 Dynamic Media 資產](delivering-dynamic-media-assets.md)
-   + [在 Dynamic Media 中啟用超連結保護](hotlink-protection.md)
+   + [傳送Dynamic Media資產](delivering-dynamic-media-assets.md)
+   + [在Dynamic Media中啟用快速連結保護](hotlink-protection.md)
    + [3D 支援](/help/assets/assets-3d.md)
    + [影像集](image-sets.md)
    + [全景影像](panoramic-images.md)
@@ -68,16 +68,16 @@ ht-degree: 38%
    + [互動影像](interactive-images.md)
    + [互動影片](interactive-videos.md)
    + [360 VR 影片](/help/assets/360-video.md)
-   + [整合Dynamic Media檢視器以及Adobe Analytics和Adobe Experience Platform標籤](/help/assets/tags.md)
-   + [使用「快速檢視」建立自訂快顯視窗](custom-pop-ups.md)
+   + [整合Dynamic Media檢視器與Adobe Analytics和Adobe Experience Platform標籤](/help/assets/tags.md)
+   + [使用Quickview建立自訂快顯視窗](custom-pop-ups.md)
    + [為回應式網站傳送最佳化影像](responsive-site.md)
-   + [預覽 Dynamic Media 資產](previewing-assets.md)
-   + [將 Dynamic Media 資產新增至頁面](adding-dynamic-media-assets-to-pages.md)
-   + [將動態影片或影像檢視器內嵌在網頁上](embed-code.md)
-   + [將 URL 連結至您的 Web 應用程式](linking-urls-to-yourwebapplication.md)
+   + [預覽Dynamic Media資產](previewing-assets.md)
+   + [新增Dynamic Media資產至頁面](adding-dynamic-media-assets-to-pages.md)
+   + [將動態視訊或影像檢視器內嵌在網頁上](embed-code.md)
+   + [將URL連結至您的Web應用程式](linking-urls-to-yourwebapplication.md)
    + [使用規則集轉換 URL](using-rulesets-to-transform-urls.md)
-   + [發佈 Dynamic Media 資產](publishing-dynamicmedia-assets.md)
-   + [在 Dynamic Media 中使用選擇性發佈](selective-publishing.md)
+   + [發佈Dynamic Media資產](publishing-dynamicmedia-assets.md)
+   + [在Dynamic Media中使用選擇性發佈](selective-publishing.md)
    + [透過Dynamic Media使CDN快取失效](invalidate-cdn-cache-dynamic-media.md)
    + [透過Dynamic Media Classic使CDN快取失效](invalidate-cdn-cache-dm-classic.md)
    + [安裝Feature Pack 18912以移轉大量資產](bulk-ingest-migrate.md)
