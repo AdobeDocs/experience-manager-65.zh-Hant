@@ -12,9 +12,9 @@ docset: aem65
 feature: 資產管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b42a14729a88bda563b0773dac735ad569ad3097
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
-source-wordcount: '11665'
+source-wordcount: '11702'
 ht-degree: 5%
 
 ---
@@ -60,8 +60,10 @@ ht-degree: 5%
       * [將視訊描述檔套用至資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
       * 深入了解[組織數位資產以使用處理設定檔的最佳實務](/help/assets/organize-assets.md)。
       * 深入了解[組織數位資產](/help/assets/organize-assets.md)。
-   * 將您的主要來源影片上傳至資料夾。 您可以上傳每個高達15 GB的視訊檔案。 將視訊新增至資料夾時，會根據您指派給資料夾的視訊處理設定檔進行編碼。
+   * 將您的主要來源影片上傳至資料夾。 將視訊新增至資料夾時，會根據您指派給資料夾的視訊處理設定檔進行編碼。
 
+      * Dynamic Media主要支援長度最多30分鐘的簡短影片。
+      * 您可以上傳每個高達15 GB的視訊檔案。
       * [上傳您的影片](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * 深入了解[支援的輸入檔案格式](/help/assets/assets-formats.md#supported-multimedia-formats)。
    * 監視[視訊編碼從資產或工作流程檢視進行](#monitoring-video-encoding-and-youtube-publishing-progress)的方式。
@@ -303,6 +305,9 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 ### 源視頻檔案 {#source-video-files}
 
 為視訊檔案編碼時，請使用盡可能高品質的來源視訊檔案。 請避免使用先前編碼的視訊檔案，因為這些檔案已經壓縮，而進一步編碼會造成品質欠佳的視訊。
+
+* Dynamic Media主要支援長度最多30分鐘的簡短影片。
+* 您可以上傳最多15 GB的主要來源視訊檔案。
 
 下表說明了源視頻檔案編碼前必須具有的建議大小、外觀比例和最小比特率：
 
