@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 資產管理，轉譯
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
+source-git-commit: a166ea9e56ba6b69793e9949a920a7a24b5b9b25
 workflow-type: tm+mt
-source-wordcount: '2633'
+source-wordcount: '2607'
 ht-degree: 1%
 
 ---
@@ -190,13 +190,13 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 依預設，Dynamic Media公司帳戶的智慧型影像處理DPR和網路最佳化會停用（關閉）。 如果要啟用（開啟）上述一項或兩項現成可用的增強功能，請建立支援案例，如下所述。
 
-智慧影像處理DPR和網路最佳化的發行排程如下：
+<!-- NOW AVAILABLE IN ALL THREE REGIONS AS OF AUGUST 2. 2021. SEE CQDOC- 17915 The release schedule for Smart Imaging DPR and network optimization is as follows:
 
-| 區域 | 目標日期 |
+| Region | Target date |
 |---|---|
-| 北美 | 即時 |
-| 歐洲、中東、非洲 | 2021年8月13日 |
-| 亞太 | 2021年7月22日 |
+| North America | Live |
+| Europe, Middle East, Africa | 13 Aug 2021 |
+| Asia-Pacific | 22 Jul 2021 | -->
 
 1. [使用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。
 1. 在您的支援案例中提供下列資訊：
