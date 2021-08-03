@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: 轉譯
 exl-id: null
-source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
+source-git-commit: 1e8b5ab66668215e0eeed676b42f533d4e210e1c
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -61,9 +61,11 @@ Experience Manager允許許多方法處理可用於產生FPO轉譯的影像。 �
 
 在Experience Manager中，上傳新資產時會執行DAM更新資產工作流程。 若要使用ImageMagick處理新上傳資產的轉譯，請將新命令新增至工作流程模型。
 
-1. 按一下「**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**」。 選擇&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;模型，然後按一下&#x200B;**[!UICONTROL 編輯]**。
+1. 按一下「**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**」。
 
-1. 按一下左上角的「**[!UICONTROL 切換側面板]**」。 搜尋命令列步驟。
+1. 選擇&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;模型，然後按一下&#x200B;**[!UICONTROL 編輯]**。
+
+1. 按一下左上角的「**[!UICONTROL 切換側面板]**」並搜索命令行步驟。
 
 1. 拖動&#x200B;**[!UICONTROL 命令行]**&#x200B;步驟，並將其添加到&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟之前。
 
@@ -89,13 +91,21 @@ Experience Manager允許許多方法處理可用於產生FPO轉譯的影像。 �
 
 若要使用Experience Manager工作流程來產生現有資產的FPO轉譯，請建立使用內建FPO轉譯選項的專用工作流程模型。
 
-1. 按一下「**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**」。 要建立模型，請按一下「**[!UICONTROL 建立]** > **[!UICONTROL 建立模型]**」。 新增有意義的&#x200B;**[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**。
+1. 按一下「**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**」。
 
-1. 選擇模型，然後按一下&#x200B;**[!UICONTROL Edit]**。 按一下「**[!UICONTROL 頁面資訊]** > **[!UICONTROL 開啟屬性]**」。 選擇&#x200B;**[!UICONTROL 暫時工作流]**。 這提高了可擴充性和效能。 按一下&#x200B;******[!UICONTROL 儲存並關閉]**。
+1. 要建立模型，請按一下「**[!UICONTROL 建立]** > **[!UICONTROL 建立模型]**」。
 
-1. 按一下左上角的「**[!UICONTROL 切換側面板]**」。 搜尋處理縮圖步驟。 拖曳&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟。
+1. 新增有意義的&#x200B;**[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**。
 
-1. 選擇&#x200B;**[!UICONTROL 處理縮圖]**，然後按一下&#x200B;**[!UICONTROL 配置]**。 依照[設定，使用Experience Manager工作流程](#generate-renditions-of-new-assets-using-aem-workflow)產生新資產的轉譯。 要激活更改，請按一下&#x200B;**[!UICONTROL Sync]**。
+1. 選擇模型，然後按一下&#x200B;**[!UICONTROL Edit]**。 按一下「**[!UICONTROL 頁資訊]** > **[!UICONTROL 開啟屬性]**」，然後選擇「**[!UICONTROL 暫時工作流]**」。 這提高了可擴充性和效能。
+
+1. 按一下&#x200B;******[!UICONTROL 儲存並關閉]**。
+
+1. 按一下左上角的「**[!UICONTROL 切換側面板]**」並搜尋處理縮圖步驟。
+
+1. 選擇&#x200B;**[!UICONTROL 處理縮圖]**，然後按一下&#x200B;**[!UICONTROL 配置]**。 依照[設定，使用Experience Manager工作流程](#generate-renditions-of-new-assets-using-aem-workflow)產生新資產的轉譯。
+
+1. 要激活更改，請按一下&#x200B;**[!UICONTROL Sync]**。
 
 
 ## 使用ImageMagick產生現有資產的轉譯 {#generate-renditions-of-existing-assets-using-imagemagick}
