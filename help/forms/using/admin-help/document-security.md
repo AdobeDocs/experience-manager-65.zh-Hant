@@ -12,14 +12,14 @@ discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: 文件安全性
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: a84f9bd590193cbb8c2549b34df1bbcec618ba67
+source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
-source-wordcount: '3298'
+source-wordcount: '3310'
 ht-degree: 0%
 
 ---
 
-# 關於檔案安全性{#about-document-security}
+# 關於檔案安全性 {#about-document-security}
 
 檔案安全性可確保只有授權的使用者才能使用您的檔案。 使用文檔安全性，您可以安全地分發以支援格式保存的任何資訊。 支援的檔案格式包括：
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 1. 收件者會在適當的用戶端應用程式中開啟檔案。 接收方可以根據其策略使用文檔。
 1. 文檔所有者、策略集協調者或管理員可以使用網頁跟蹤文檔並修改對它們的訪問。
 
-## 關於文檔安全用戶{#about-document-security-users}
+## 關於檔案安全性使用者 {#about-document-security-users}
 
 各種類型的用戶使用文檔安全性來完成不同的任務：
 
@@ -147,13 +147,13 @@ ht-degree: 0%
 * 文檔安全視圖伺服器事件
 * 文檔安全更改策略所有者
 
-## 策略和受策略保護的文檔{#policies-and-policy-protected-documents}
+## 策略和受策略保護的文檔 {#policies-and-policy-protected-documents}
 
 *policy*&#x200B;定義了一組機密設定，以及可以訪問應用策略的文檔的用戶。 策略還允許動態更改文檔的權限。 它為確保文檔安全的人員提供了更改機密設定以撤銷對文檔的訪問或切換策略的權限。
 
 使用Adobe Acrobat® Pro和Acrobat Standard，可將原則保護套用至PDF檔案。 策略保護可應用於其他檔案類型，如Microsoft® Word、Excel和PowerPoint檔案，方法是使用安裝了相應Acrobat Reader DC擴展的客戶端應用程式。
 
-### 原則如何運作{#how-policies-work}
+### 原則如何運作 {#how-policies-work}
 
 策略包含有關授權用戶和要應用於文檔的機密設定的資訊。 使用者可以是您組織中的任何人，也可以是您組織外部擁有帳戶的人員。 如果管理員啟用了用戶邀請功能，則甚至可以將新用戶添加到策略中，從而啟動註冊邀請電子郵件進程。
 
@@ -182,7 +182,7 @@ ht-degree: 0%
 
 如果啟用了離線使用，則收件者還可以在策略中指定的時間段內離線使用受策略保護的文檔（沒有活動的Internet或網路連接）。
 
-### 受策略保護的文檔如何工作{#how-policy-protected-documents-work}
+### 受策略保護的文檔如何工作 {#how-policy-protected-documents-work}
 
 要開啟和使用受策略保護的文檔，策略必須包括您作為收件人的姓名，並且您必須具有有效的文檔安全帳戶。 若是PDF檔案，您需要Acrobat或Adobe Reader®。 對於其他檔案類型，您需要為已安裝Acrobat Reader DC副檔名的檔案使用適當的應用程式。
 
@@ -207,7 +207,7 @@ ht-degree: 0%
 
 如果使用「保存」或「另存為」菜單命令保存受策略保護的文檔的副本，則會自動為新文檔應用並強制執行該策略。 還會為原始文檔審計並記錄諸如嘗試開啟新文檔之類的事件。
 
-## 策略集{#policy-sets}
+## 策略集 {#policy-sets}
 
 *策* 略集用於分組具有共同業務目的的一組策略。然後，這些策略集將可供系統中的用戶子集使用。
 
@@ -233,7 +233,7 @@ ht-degree: 0%
 
 安裝文檔安全時，將建立名為&#x200B;*全局策略集*&#x200B;的預設策略集。 安裝軟體的管理員管理此策略集。
 
-## 最佳實務{#best-practices}
+## 最佳實務 {#best-practices}
 
 策略是可重複使用的權限集和用戶組集，可應用於各種文檔。 保護文檔。 這些原則可確保只有授權的使用者才能使用允許的功能。 隨著部門內不同用戶角色和文檔的增多，策略和策略集的數量預計會增加。 以下是建立和管理原則的一些考量事項和最佳實務：
 
@@ -276,4 +276,4 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 您可以使用[getAllPolicysetnames()]((https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html)) API來檢索最多1000個策略集名稱。 在內部，API最多檢索1000個策略，其中API調用者具有文檔發佈者權限，然後建立並返回與檢索的策略相關聯的唯一策略集名稱清單。 例如，當API檢索1000個策略，且檢索到的策略總共與200個策略集關聯時，API僅返回200個策略集名稱。
+   > 您可以使用[getAllPolicysetnames()](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API來檢索最多1000個策略集名稱。 在內部，API最多檢索1000個策略，其中API調用者具有文檔發佈者權限，然後建立並返回與檢索的策略相關聯的唯一策略集名稱清單。 例如，當API檢索1000個策略，且檢索到的策略總共與200個策略集關聯時，API僅返回200個策略集名稱。
