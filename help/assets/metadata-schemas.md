@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User,Admin
 feature: 中繼資料
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: d3fcf3e55af1c57bed1db9191aa76576d3bedb29
+source-git-commit: b36448449830aa8e19f6dc29ab7fb62608bb39dd
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3596'
 ht-degree: 7%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 7%
 
 **對應至屬性**:此屬性會指定資產節點的相對路徑或名稱，資產節點儲存在CRX存放庫中。其開頭為`./`，指出路徑位於資產節點下。
 
-以下是屬性的有效值範例：
+以下是屬性有效值的範例：
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資產的中繼資料節點，做為屬性 `dc:title`。
 
