@@ -6,16 +6,16 @@ mini-toc-levels: 1
 role: User
 feature: 資產管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 9dc61a66a79004013d8cff89c4607f7aafad08df
 workflow-type: tm+mt
-source-wordcount: '9784'
+source-wordcount: '9848'
 ht-degree: 3%
 
 ---
 
 # 管理您的數位資產 {#manage-digital-assets}
 
-在[!DNL Adobe Experience Manager Assets]中，您不僅可以儲存及管理資產。 [!DNL Experience Manager] 提供企業級資產管理功能。您可以編輯和共用資產、執行進階搜尋、建立數十種支援檔案格式的多種轉譯、管理版本和數位版權、自動處理資產、管理和管理中繼資料、使用註解進行協同合作等。
+在[!DNL Adobe Experience Manager Assets]中，您可以執行的不僅僅是儲存和管理資產。 [!DNL Experience Manager] 提供企業級資產管理功能。您可以編輯和共用資產、執行進階搜尋，以及建立數十種支援檔案格式的多種轉譯。 您也可以管理版本和數位權限、自動處理資產、管理和管理中繼資料、使用註解進行協作等。
 
 本文主要介紹基本的資產管理任務，如建立或上傳；元資料更新；複製、移動和刪除；發佈、取消發佈和搜尋資產。 若要了解使用者介面，請參閱[開始使用資產使用者介面](/help/sites-authoring/basic-handling.md)。 若要管理內容片段，請參閱[管理內容片段](/help/assets/content-fragments/content-fragments-managing.md)資產。
 
@@ -25,11 +25,11 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->* 共用至Marketing Cloud時，不支援共用`sling:OrderedFolder`類型的[!DNL Assets]資料夾。 如果要共用資料夾，建立資料夾時不要選擇[!UICONTROL Ordered]。
->* [!DNL Experience Manager] 不允許使 `subassets` 用word作為資料夾的名稱。這是為包含複合資產子資產之節點保留的關鍵字。
+>* 共用至Experience Cloud時，不支援共用`sling:OrderedFolder`類型的[!DNL Assets]資料夾。 如果要共用資料夾，建立資料夾時不要選擇[!UICONTROL Ordered]。
+>* [!DNL Experience Manager] 不允許使 `subassets` 用word作為資料夾的名稱。它是為包含複合資產子資產的節點保留的關鍵字。
 
 
-1. 導覽至您要建立新資料夾的數位資產資料夾中的位置。 在菜單中，按一下&#x200B;**[!UICONTROL Create]**。 選擇&#x200B;**[!UICONTROL 新建資料夾]**。
+1. 導覽至您要建立資料夾的數位資產資料夾中的位置。 在菜單中，按一下&#x200B;**[!UICONTROL Create]**。 選擇&#x200B;**[!UICONTROL 新建資料夾]**。
 1. 在&#x200B;**[!UICONTROL Title]**&#x200B;欄位中，提供資料夾名稱。 依預設，DAM會使用您提供的標題作為資料夾名稱。 建立資料夾後，您可以覆寫預設值並指定其他資料夾名稱。
 1. 按一下&#x200B;**[!UICONTROL 建立]**。您的資料夾會顯示在數位資產資料夾中。
 
@@ -51,7 +51,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式中，您只能上傳檔案大小為2 GB或更小的資產。
+>在Dynamic Media - Scene7模式中，預設資產上傳檔案大小為2 GB或更小。 若要設定大於2 GB且高達15 GB的資產上傳，請參閱[（選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb)的資產。
 
 您可以選擇將資產上傳至資料夾，且無論資料夾是否已指派處理設定檔。
 
@@ -75,7 +75,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 資產視為大型資產的大小可設定。 例如，您可以將系統設為將大於1000 MB（而非500 MB）的資產視為大型資產。 在此情況下，上傳大於1000 MB的資產時，進度列上會出現&#x200B;**[!UICONTROL Pause]**。
 
-如果上傳的檔案大於1000 MB且檔案小於1000 MB，則[!UICONTROL Pause]選項不會顯示。 不過，如果取消小於1000 MB的檔案上傳，則會顯示&#x200B;**[!UICONTROL Pause]**&#x200B;選項。
+如果上傳的檔案大於1000 MB且檔案小於1000 MB，則[!UICONTROL Pause]選項不會顯示。 不過，如果取消小於1000-MB的檔案上傳，則會顯示&#x200B;**[!UICONTROL Pause]**&#x200B;選項。
 
 要修改大小限制，請配置CRX儲存庫中`fileupload`節點的`chunkUploadMinFileSize`屬性。
 
@@ -91,9 +91,9 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!CAUTION]
 >
->觸發區塊上傳時的預設值為500 MB，區塊大小為50 MB。 若您修改[Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) ，將`timeout configuration`設為少於資產上傳所花費的時間，則當資產上傳進行時，您可能會遇到工作階段逾時的情況。 因此，您必須變更`chunkUploadMinFileSize`和`chunksize`，讓每個區塊要求都會重新整理工作階段。
+>預設值為500 MB且區塊大小為50 MB時，就會觸發區塊上傳。 如果您編輯[Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html)，並將`timeout configuration`設為少於資產上傳所需的時間，則會在資產上傳期間發生工作階段逾時情況。 因此，請變更`chunkUploadMinFileSize`和`chunksize`，讓每個區塊要求都會重新整理工作階段。
 >
->考慮到憑據到期超時、延遲、頻寬和預期的併發上載，允許您確保選擇以下內容的最高值：
+>在憑證過期逾時、延遲、頻寬和預期的同時上傳的情況下，最高值可讓您確保已挑選下列項目：
 >
 >* 確保在上載過程中為可能導致憑據過期的檔案啟用區塊上載。
    >
@@ -101,7 +101,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 * 確保每個區塊在憑據過期之前完成。
 
 
-如果您上傳的資產名稱與上傳資產的位置已提供的資產名稱相同，則會顯示警告對話方塊。
+如果您上傳的資產名稱與資產相同，且在上傳資產的位置已可用，則會顯示警告對話方塊。
 
 您可以選取重新命名已上傳的新資產，以取代現有資產、建立其他版本，或保留兩者。 如果您取代現有資產，則會刪除資產的中繼資料以及您對現有資產所做的任何先前修改（例如注釋或裁切）。 如果您選擇保留這兩個資產，新資產會重新命名，名稱后面會附加數字`1`。
 
@@ -152,15 +152,15 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 使用FTP上傳資產 {#uploading-assets-using-ftp}
 
-Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型資產(>1 GB)或上傳整個資料夾和子資料夾，則應使用FTP。 您甚至可以設定FTP上傳，以定期執行。
+Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型資產(>1 GB)或上傳整個資料夾和子資料夾，應使用FTP。 您甚至可以設定FTP上傳，以定期執行。
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式中，您只能上傳檔案大小為2 GB或更小的資產。
+>在Dynamic Media - Scene7模式中，預設資產上傳檔案大小為2 GB或更小。 若要設定大於2 GB且高達15 GB的資產上傳，請參閱[（選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb)的資產。
 
 >[!NOTE]
 >
->若要在Dynamic Media - Scene7模式中透過FTP上傳資產，請在[!DNL Experience Manager]製作執行個體上安裝Feature Pack 18912。 請連絡[Adobe客戶服務](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html)以存取FP-18912並完成FTP帳戶的設定。 如需詳細資訊，請參閱[安裝功能套件18912以取得大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
+>若要在Dynamic Media - Scene7模式中透過FTP上傳資產，請在[!DNL Experience Manager]製作執行個體上安裝Feature Pack 18912。 請連絡[Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General#support)以存取FP-18912並完成FTP帳戶的設定。 如需詳細資訊，請參閱[安裝功能套件18912以取得大量資產移轉](/help/assets/bulk-ingest-migrate.md)。
 >
 >如果您使用FTP上傳資產，則會忽略[!DNL Experience Manager]中指定的上傳設定。 系統會改用Dynamic Media Classic中定義的檔案處理規則。
 
@@ -170,7 +170,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型
 
 1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然後登入您的帳戶。
 
-   布建時，Adobe提供了您的憑據和登錄。 如果您沒有此資訊，請聯繫技術支援。
+   配置時，Adobe提供了您的憑據和登錄。 如果您沒有此資訊，請聯繫技術支援。
 
 1. 在全局導航欄上，按一下&#x200B;**[!UICONTROL Upload]**。
 1. 在「上傳」頁面的左上角附近，按一下「透過FTP ]**」標籤。**[!UICONTROL 
@@ -197,20 +197,20 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您要上傳大型
 | 上傳後發佈 |  | 自動發佈您上傳的資產。 |
 | 在任何資料夾中覆寫相同的基本資產名稱（不論副檔名為何） |  | 如果您希望上傳的檔案以相同名稱取代現有檔案，請選取此選項。 此選項的名稱可能不同，具體取決於&#x200B;**[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** > **[!UICONTROL Upload to Application]** > **[!UICONTROL Overwrite Images]**&#x200B;中的設定。 |
 | 上傳時解壓縮Zip或Tar檔案 |  |  |
-| 作業選項 |  | 按一下&#x200B;**[!UICONTROL 作業選項]**&#x200B;以開啟[!UICONTROL 上載作業選項]對話框，並選擇影響整個上載作業的選項。 所有檔案類型的這些選項都相同。<br>您可以從「應用程式一般設定」頁面開始，選擇上傳檔案的預設選項。要開啟此頁，請選擇&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**。 選擇&#x200B;**[!UICONTROL 預設上載選項]**&#x200B;選項以開啟[!UICONTROL 上載作業選項]對話框。 |
+| 作業選項 |  | 按一下&#x200B;**[!UICONTROL 作業選項]** ，以開啟[!UICONTROL 上載作業選項]對話框，並選擇影響整個上載作業的選項。 所有檔案類型的這些選項都相同。<br>您可以從「應用程式一般設定」頁面開始，選擇上傳檔案的預設選項。要開啟此頁，請選擇&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**。 選擇&#x200B;**[!UICONTROL 預設上載選項]**&#x200B;選項以開啟[!UICONTROL 上載作業選項]對話框。 |
 |  | 時間 | 選取一次性或循環。 若要設定循環作業，請選擇「重複」選項（每日、每週、每月或自訂），以指定何時要重複執行FTP上傳作業。 然後視需要指定排程選項。 |
 |  | 包含子資料夾 | 上傳要上傳之資料夾內的所有子資料夾。 在[!DNL Experience Manager Assets]中自動輸入上傳的資料夾及其子資料夾的名稱。 |
-|  | 裁切選項 | 要從影像的側面手動裁切，請選擇「裁切」菜單，然後選擇「手動」。 然後輸入要從影像的任何一側或每一側裁切的像素數。 影像被裁切的程度取決於影像檔案中的ppi設定（每英吋像素）。 例如，如果影像顯示150 ppi，而您在「上」、「右」、「下」和「左」文字方塊中輸入75，則會從每側裁切半英吋。<br> 要自動從影像中裁切空白像素，請開啟「裁切」菜單，選擇「手動」，然後在「頂部」、「右」、「底部」和「左側」欄位中輸入像素測量，以便從側面裁切。您也可以在「裁切」菜單上選擇「修剪」，然後選擇以下選項：<br> **根據** <ul><li>**顏色**  — 選擇顏色選項。然後選取「角」菜單，選擇影像的角，該角的顏色最能代表要裁切的空白顏色。</li><li>**透明度**  — 選擇「透明度」選項。<br> **容差**  — 拖動滑桿以指定0到1的容差。對於基於顏色的修剪，請指定0以僅在像素與您在影像的角中選定的顏色完全匹配時裁剪像素。接近1的數字會產生更多的顏色差異。<br>要根據透明度進行修剪，請指定0隻在像素為透明時裁剪像素。接近1的數字使透明度更高。</li></ul><br>請注意，這些裁切選項不具破壞性。 |
+|  | 裁切選項 | 要從影像的側面手動裁切，請選擇「裁切」菜單，然後選擇「手動」。 然後輸入要從影像的任何一側或每一側裁切的像素數。 影像被裁切的程度取決於影像檔案中的ppi設定（每英吋像素）。 例如，如果影像顯示150 ppi，而您在「上」、「右」、「下」和「左」文字方塊中輸入75，則會從每側裁切半英吋。<br> 要自動從影像中裁切空白像素，請開啟「裁切」菜單，選擇「手動」，然後在「頂部」、「右」、「底部」和「左側」欄位中輸入像素測量，以便從側面裁切。您也可以在「裁切」菜單上選擇「修剪」，然後選擇以下選項：<br> **根據** <ul><li>**顏色**  — 選擇顏色選項。然後選取「角」菜單，選擇影像的角，該角的顏色最能代表要裁切的空白顏色。</li><li>**透明度**  — 選擇「透明度」選項。<br> **容差**  — 拖動滑桿以指定0到1的容差。對於基於顏色的修剪，請指定0以僅在像素與您在影像的角中選定的顏色完全匹配時裁剪像素。接近1的數字會產生更多的顏色差異。<br>要根據透明度進行修剪，請指定0隻在像素為透明時裁剪像素。接近1的數字使透明度更高。</li></ul><br>這些裁切選項不具破壞性。 |
 |  | 色彩描述檔選項 | 建立用於傳送的最佳化檔案時，請選擇色彩轉換：<ul><li>預設顏色保留：當影像包含顏色空間資訊時，保持源影像的顏色；沒有顏色轉換。 目前幾乎所有的影像都已內嵌適當的色彩設定檔。 但是，如果CMYK源影像不包含嵌入的顏色配置檔案，則這些顏色將轉換為sRGB（標準紅綠藍）顏色空間。 sRGB是在網頁上顯示影像的建議色域。</li><li>保留原始顏色空間：保留原始顏色，點上不進行任何顏色轉換。 對於沒有內嵌顏色描述檔的影像，任何顏色轉換都使用在「發佈」設定中設定的預設顏色描述檔來完成。 顏色配置檔案可能與使用此選項建立的檔案中的顏色不一致。 因此，建議您使用「預設顏色保留」選項。</li><li>「自定義自」>「轉換為」<br>開啟菜單，以便選擇「轉換自」和「轉換為顏色空間」。 此高級選項將覆蓋嵌入源檔案中的任何顏色資訊。 當您提交的所有影像都包含不正確或遺失的色彩設定檔資料時，請選取此選項。</li></ul> |
-|  | 影像編輯選項 | 可以保留影像中的剪裁蒙版，並選擇顏色輪廓。<br> 請參閱 [在上傳時設定影像編輯選項](#setting-image-editing-options-at-upload)。 |
+|  | 影像編輯選項 | 可以保留影像中的剪裁蒙版，並選擇顏色輪廓。<br> 請參 [閱在上傳時設定影像編輯的選項](#setting-image-editing-options-at-upload)。 |
 |  | Postscript選項 | 您可以柵格化PostScript®檔案、裁切檔案、維護透明背景、選擇解析度，以及選擇顏色空間。<br> 請參 [閱設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options)。 |
-|  | Photoshop選項 | 您可以從Adobe® Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定如何將影像錨定到範本中。<br> 請注意，中不支援范 [!DNL Experience Manager]本。<br> 請參 [閱設定Photoshop上傳選項](#setting-photoshop-upload-options)。 |
-|  | PDF選項 | 您可以柵格化檔案、提取搜索詞和連結、自動生成eCatalog、設定解析度，以及選擇顏色空間。<br> 請注意，不支援eCatalog  [!DNL Experience Manager]。<br> 請參 [閱設定PDF上傳選項](#setting-pdf-upload-options)。 |
+|  | Photoshop選項 | 您可以從Adobe® Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定如何將影像錨定到範本中。<br> 不支援范 [!DNL Experience Manager]本。<br> 請參 [閱設定Photoshop上傳選項](#setting-photoshop-upload-options)。 |
+|  | PDF選項 | 您可以柵格化檔案、提取搜索詞和連結、自動生成eCatalog、設定解析度，以及選擇顏色空間。<br>中不支援eCatalog  [!DNL Experience Manager]。<br> 請參 [閱設定PDF上傳選項](#setting-pdf-upload-options)。 |
 |  | Illustrator選項 | 您可以柵格化Adobe Illustrator®檔案、維護透明背景、選擇解析度，以及選擇顏色空間。<br> 請參 [閱設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options)。 |
 |  | 視訊選項 | 您可以選擇「視訊預設集」來轉換視訊檔案的程式碼。<br> 請參 [閱設定eVideo上傳選項](#setting-evideo-upload-options)。 |
 |  | 批次集預設集 | 若要從上傳的檔案建立影像集或回轉集，請按一下您要使用之預設集的「作用中」欄。 您可以選取多個預設集。 您可以在Dynamic Media Classic的「應用程式設定/批次集預設集」頁面中建立預設集。<br> 請參 [閱設定批次集預設集以自動產生影像集和回轉](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 集，深入了解如何建立批次集預設集。<br> 請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload)。 |
 
-#### 在上傳時設定影像編輯選項 {#setting-image-editing-options-at-upload}
+#### 設定上傳時影像編輯的選項 {#setting-image-editing-options-at-upload}
 
 上載影像檔案（包括AI、EPS和PSD檔案）時，可以在[!UICONTROL 上載作業選項]對話框中執行以下編輯操作：
 
@@ -270,7 +270,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 | 擷取文字 |  | 擷取文字，讓使用者能在檢視器中搜尋文字。 |
 | 將圖層擴展到背景大小 |  | 將撕開的影像層的大小擴展到背景層的大小。 |
 | 圖層命名 |  | PSD檔案中的圖層將作為單獨的影像上載。 |
-|  | 圖層名稱 | 在影像在PSD檔案中的圖層名稱之後命名影像。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 但是，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（背景、第1層、第2層等），則影像的名稱是以PSD檔案中的圖層編號而非預設圖層名稱來命名。 |
+|  | 圖層名稱 | 在影像在PSD檔案中的圖層名稱之後命名影像。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 但是，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（背景、第1層、第2層等），則影像的名稱將以PSD檔案中的圖層編號命名。 不會以其預設圖層名稱命名。 |
 |  | Photoshop和圖層編號 | 在PSD檔案中的圖層編號後命名影像，忽略原始圖層名稱。 影像的名稱為Photoshop檔案名稱及附加的圖層編號。 例如，名為Spring Ad.psd的檔案的第二層名為Spring Ad_2，即使它在Photoshop中具有非預設名稱亦然。 |
 |  | Photoshop和圖層名稱 | 在PSD檔案後面命名影像，後面跟圖層名稱或圖層編號。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則使用圖層號。 例如，在名為SpringAd的PSD檔案中，名為Price Tag的層名為Spring Ad_Price Tag。 預設名為Layer 2的層稱為Spring Ad_2。 |
 | 錨點 |  | 指定如何將影像錨定到從PSD檔案生成的分層合成生成的模板中。 預設情況下，錨點為中心。 中心錨點允許替換影像最好地填充相同的空間，而不管替換影像的長寬比如何。 當參考範本並使用參數替代時，具有替代此影像的不同方面的影像會有效佔據相同的空間。 如果您的應用程式需要替換影像以填充模板中已分配的空間，請更改為其他設定。 |
@@ -287,7 +287,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 | 選項 | 子選項 | 說明 |
 |---|---|---|
-| 處理 | 光柵化 | （預設）拆分PDF檔案中的頁面，並將向量圖形轉換為點陣圖影像。 選擇此選項可建立eCatalog。 |
+| 處理 | 光柵化 | （預設）拆分PDF檔案中的頁面，並將向量圖形轉換為點陣圖影像。 如果要建立eCatalog，請選擇此選項。 |
 | 提取 | 搜尋字詞 | 從PDF檔案中擷取字詞，以便在eCatalog檢視器中按關鍵字搜尋檔案。 |
 |  | 連結 | 從PDF檔案中擷取連結，並將其轉換為eCatalog檢視器中使用的影像地圖。 |
 | 從多頁PDF自動產生eCatalog |  | 從PDF檔案自動建立eCatalog。 eCatalog以您上傳的PDF檔案命名。 （只有在上傳PDF檔案時柵格化該檔案時，才可使用此選項。） |
@@ -300,15 +300,15 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 #### 設定eVideo上傳選項 {#setting-evideo-upload-options}
 
-若要透過從各種視訊預設集中選擇來轉碼視訊檔案。
+若要透過從各種視訊預設集中選擇來轉換視訊檔案。
 
 | 選項 | 子選項 | 說明 |
 |---|---|---|
 | 適應性影片 |  | 單一編碼預設集可搭配任何外觀比例來建立視訊，以傳送至行動裝置、平板電腦和桌上型電腦。 使用此預設集編碼的已上傳來源影片會以固定高度設定。 不過，寬度會自動縮放以保留視訊的外觀比例。 <br>最佳實務是使用最適化視訊編碼。 |
-| 單一編碼預設集 | 排序編碼預設集 | 選取「名稱」或「大小」 ，依名稱或解析度大小，排序「案頭」、「行動裝置」和「平板電腦」底下列出的編碼預設集。 |
-|  | 桌面 | 建立MP4檔案，以向台式電腦提供流式或漸進式視頻體驗。選擇一個或多個寬高比，其解析度大小和目標資料速率符合您的要求。 |
-|  | 行動 | 建立MP4檔案，以便在iPhone或Android行動裝置上傳送。選取一或多個外觀比例，其解析度大小和目標資料速率為您所需的。 |
-|  | 平板電腦 | 建立MP4檔案，以便在iPad或Android平板電腦裝置上傳送。選取一或多個外觀比例，其解析度大小和目標資料速率為您所需的。 |
+| 單一編碼預設集 | 排序編碼預設集 | 如果您想要依名稱或解析度大小排序「案頭」、「行動裝置」和「平板電腦」下列出的編碼預設集，請選取「**[!UICONTROL 名稱]**」或「**[!UICONTROL 大小]**」。 |
+|  | 桌面 | 建立MP4檔案，將串流或漸進式視訊體驗提供至桌上型電腦。 選擇一個或多個縱橫比，其中包含所需的解析度大小和目標資料速率。 |
+|  | 行動 | 建立MP4檔案，以便在iPhone或Android™行動裝置上傳送。 選擇一個或多個縱橫比，其中包含所需的解析度大小和目標資料速率。 |
+|  | 平板電腦 | 建立MP4檔案，以便在iPad或Android™平板電腦裝置上傳送。 選擇一個或多個縱橫比，其中包含所需的解析度大小和目標資料速率。 |
 
 #### 在上傳時設定批次集預設集 {#setting-batch-set-presets-at-upload}
 
@@ -328,7 +328,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 您可以像上傳任何其他支援的資產一樣上傳ZIP封存檔。 相同的檔案名規則適用於ZIP檔案。 [!DNL Experience Manager] 可讓您將ZIP封存解壓縮至DAM位置。如果封存檔未包含ZIP作為副檔名，請使用內容來啟用檔案類型偵測。
 
-一次選擇一個ZIP存檔，按一下&#x200B;**[!UICONTROL 解壓縮存檔]**，然後選擇目標資料夾。 選擇一個選項以處理衝突（如果有）。 如果ZIP檔案中的資產已存在於目的地資料夾中，您可以選取下列其中一個選項：略過擷取、取代現有檔案、透過重新命名來保留兩個資產，或建立新版本。
+一次選擇一個ZIP存檔，按一下&#x200B;**[!UICONTROL 解壓縮存檔]**，然後選擇目標資料夾。 選擇要處理衝突的選項（如果有）。 如果ZIP檔案中的資產存在於目的地資料夾中，您可以選取下列其中一個選項：略過擷取、取代現有檔案、透過重新命名來保留兩個資產，或建立版本。
 
 提取完成後，[!DNL Experience Manager]會在通知區域中通知您。 當[!DNL Experience Manager]提取郵遞區號時，您可以繼續工作而不中斷提取。
 
@@ -346,7 +346,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 若要預覽資產，請依照下列步驟操作。
 
 1. 從[!DNL Assets]使用者介面，導覽至您要預覽的資產位置。
-1. 按一下所需的資產以開啟它。
+1. 按一下所需的資產，以便開啟它。
 
 1. 在預覽模式中，[支援的影像類型](/help/assets/assets-formats.md#supported-raster-image-formats)（具有互動式編輯）可使用縮放選項。
 
@@ -358,13 +358,13 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 從[!DNL Assets]使用者介面，使用`Tab`和方向鍵導覽至所需的資產。
 
-1. 在所需資產上選取`Enter`鍵以開啟。 您可以在預覽模式中放大資產。
+1. 在所需資產上按`Enter`鍵，以開啟它。 您可以在預覽模式中放大資產。
 
 1. 若要放大資產：
    1. 使用`Tab`鍵將焦點移至放大選項。
    1. 使用`Enter`鍵縮放影像。
 
-   要縮小，請使用`Tab`鍵將焦點移動到縮小選項，然後選擇`Enter`。
+   要縮小，請使用`Tab`鍵將焦點置於縮小選項上，然後按`Enter`鍵。
 
 1. 使用`Shift` + `Tab`鍵將焦點移回影像上。
 
@@ -378,13 +378,13 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 ## 編輯屬性和中繼資料 {#editing-properties}
 
-1. 導覽至資產的位置，以編輯其中繼資料。
+1. 導覽至您要編輯其中繼資料的資產位置。
 
-1. 選取資產，然後按一下工具列中的「屬性&#x200B;**** 」以檢視資產屬性。 或者，選擇資產卡上的&#x200B;**[!UICONTROL 屬性]**&#x200B;快速操作。
+1. 選取資產，然後從工具列中選取「**[!UICONTROL 屬性]**」，以便您檢視資產的屬性。 或者，選擇資產卡上的&#x200B;**[!UICONTROL 屬性]**&#x200B;快速操作。
 
    ![資產卡片檢視的屬性快速動作](assets/properties_quickaction.png)
 
-1. 在[!UICONTROL 屬性]頁中，編輯各個標籤下的元資料屬性。 例如，在&#x200B;**[!UICONTROL Basic]**&#x200B;標籤下，編輯標題、說明等。
+1. 在[!UICONTROL 屬性]頁中，編輯各個標籤下的元資料屬性。 例如，在&#x200B;**[!UICONTROL Basic]**&#x200B;標籤下，編輯標題和說明。
 
    >[!NOTE]
    >
@@ -456,7 +456,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 ## 移動和重新命名資產 {#moving-or-renaming-assets}
 
 當您將資產（或資料夾）移至其他位置時，資產（或資料夾）不會重複，這與複製資產時不同。 資產（或資料夾）會放置在目標位置，並從來源位置移除。 您也可以在將資產移至新位置時重新命名資產。
-如果您將已發佈的資產移至其他位置，則可選擇重新發佈資產。 依預設，已發佈資產的移動操作會自動取消發佈。 如果作者在移動資產時選取[!UICONTROL Republish]選項，則已移動的資產會重新發佈。
+如果您要將已發佈的資產移至其他位置，您可以選擇重新發佈資產。 依預設，已發佈資產的移動操作會自動取消發佈。 如果作者在移動資產時選取[!UICONTROL Republish]選項，則已移動的資產會重新發佈。
 
 ![您可以在移動資產時重新發佈已發佈的資產](assets/republish-on-move.png)
 
@@ -535,7 +535,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    您可以為要顯示在影像或視訊資產詳細資訊頁面中的轉譯設定維度。 [!DNL Assets]會根據您指定的尺寸，顯示包含精確或最接近尺寸的轉譯。
 
-   若要在資產詳細資料層級設定影像的轉譯尺寸，請覆蓋節 `renditionpicker` 點(`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`)並設定width屬性的值。設定屬性大 **[!UICONTROL 小 (長) (KB]** )以取代寬度，以根據影像大小自訂資產詳細資料頁面上的轉譯。對於基於大小的定製，如果匹配的 `preferOriginal` 格式副本的大小大於原始格式副本的大小，則屬性會為原始格式副本指定首選項。
+   若要在資產詳細資料層級設定影像的轉譯尺寸，請覆蓋節 `renditionpicker` 點(`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`)並設定width屬性的值。設定屬性&#x200B;**[!UICONTROL 大小（長）(KB]**)以取代寬度，以便您可以根據影像大小自訂資產詳細資料頁面上的轉譯。 對於基於大小的定製，如果匹配的 `preferOriginal` 格式副本的大小大於原始格式副本的大小，則屬性會為原始格式副本指定首選項。
 
    同樣地，您可以通過覆蓋`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`來自定義「注釋」頁影像。
 
@@ -590,7 +590,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 導覽至您要發佈或要從發佈環境中移除的資產或資產資料夾位置（取消發佈）。
 
-1. 選取要取消發佈的資產或資料夾，然後從工具列按一下「管理出版物&#x200B;]**![管理出版物選項](assets/do-not-localize/globe-publication.png)」選項。**[!UICONTROL &#x200B;或者，若要快速發佈，請從工具列選取&#x200B;**[!UICONTROL 快速發佈]**&#x200B;選項。 如果要發佈的資料夾包含空資料夾，則不會發佈空資料夾。
+1. 選取您要取消發佈的資產或資料夾，然後從工具列按一下「管理出版物&#x200B;]**![管理出版物選項](assets/do-not-localize/globe-publication.png)」選項。**[!UICONTROL &#x200B;或者，若要快速發佈，請從工具列選取&#x200B;**[!UICONTROL 快速發佈]**&#x200B;選項。 如果要發佈的資料夾包含空資料夾，則不會發佈空資料夾。
 
 1. 視需要選取&#x200B;**[!UICONTROL Publish]**&#x200B;或&#x200B;**[!UICONTROL Unpublish]**&#x200B;選項。
 
@@ -608,7 +608,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 * [!UICONTROL 管理出版物]選項僅適用於具有復寫權限的使用者帳戶。
 * 取消發佈複雜資產時，僅取消發佈資產。 請避免取消發佈參考，因為其他已發佈的資產可能會參照這些參考。
 * 未發佈空資料夾。
-* 如果您發佈正在處理的資產，則只會發佈原始內容。 遺失轉譯。 等待處理完成，然後處理完成後發佈或重新發佈資產。
+* 如果您發佈的資產經過處理，則只會發佈原始內容。 遺失轉譯。 等待處理完成，然後在處理完成後發佈或重新發佈資產。
 
 ## 已關閉的使用者群組 {#closed-user-group}
 
@@ -634,7 +634,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 ## 搜尋資產 {#assetsearch}
 
-搜尋資產是數位資產管理系統使用的核心，無論是供創意人員進一步使用、供業務使用者和行銷人員強大管理資產，或供DAM管理員管理。
+搜尋資產是使用數位資產管理系統的核心。 此功能對於創意人員、業務使用者和行銷人員對資產的健全管理，或DAM管理員的管理，都很重要。
 
 如需簡單、進階和自訂搜尋以探索及使用最適當的資產，請參閱Experience Manager](search-assets.md)中的[搜尋資產。
 
@@ -682,7 +682,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
    ![順時針和逆時針旋轉選項](assets/do-not-localize/rotate-options.png)
 
-1. 按一下適當的&#x200B;**[!UICONTROL Flip]**&#x200B;選項，水準![反射水準選項](assets/do-not-localize/flip-horizontal.png)或垂直![反射垂直選項](assets/do-not-localize/flip-vertical.png)反射影像。
+1. 如果要水準翻轉影像![reflect horizontal選項](assets/do-not-localize/flip-horizontal.png)或垂直翻轉![reflect vertical選項](assets/do-not-localize/flip-vertical.png)，請按一下相應的&#x200B;**[!UICONTROL Flip]**&#x200B;選項。
 
 1. 要完成影像編輯，請按一下&#x200B;**[!UICONTROL 完成]** ![完成選項](assets/do-not-localize/check-ok-done-icon.png)。 按一下&#x200B;**完成**&#x200B;也會開始重新產生轉譯。
 
@@ -730,7 +730,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 1. 在時間軸底部的 **[!UICONTROL 「注釋]** 」方塊中新增注釋。或者，在影像上標籤一個區域，並在「添加註釋」( **[!UICONTROL Add Annotation]** )對話框中添加註釋。
 
-1. 要通知用戶注釋，請指定用戶的電子郵件地址並添加註釋。 例如，要通知Aaron MacDonald注釋，請輸入@aa。 清單中顯示所有匹配用戶的提示。 從清單中選擇Aaron的電子郵件地址，用注釋標籤她。 同樣地，您可以在批注內或批注前後的任意位置標籤更多用戶。
+1. 要通知用戶注釋，請指定用戶的電子郵件地址並添加註釋。 例如，要通知Aaron MacDonald注釋，請輸入@aa。 清單中顯示所有匹配用戶的提示。 從清單中選擇Aaron的電子郵件地址，以便您可以用注釋標籤該人員。 同樣地，您可以在批注內或批注前後的任意位置標籤更多用戶。
 
    ![指定用戶的電子郵件地址並添加註釋以通知用戶](assets/annotate-gif.gif)
 
@@ -769,7 +769,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 >[!NOTE]
 >
->如果選擇多個注釋，則最新的注釋將顯示在用戶介面上。
+>如果要選擇多個注釋，則用戶介面上會顯示最新的注釋。
 >
 >只有以PDF列印註解的資產時，才支援多選。
 
@@ -780,7 +780,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 1. 在Experience Manager介面中，選擇&#x200B;**[!UICONTROL 時間軸]**。
 1. 從時間軸 **[!UICONTROL 的「顯示全部]** 」清單中，選取「注 **[!UICONTROL 釋]** 」以根據註解來篩選結果。
 
-   按一下&#x200B;**[!UICONTROL 時間軸]**&#x200B;面板中的注釋以查看影像上的相應注釋。
+   如果要查看影像上的相應注釋，請按一下&#x200B;**[!UICONTROL 時間軸]**&#x200B;面板中的注釋。
 
    ![查看影像注釋的時間軸面板](assets/timeline-view-annotations.png)
 
@@ -826,7 +826,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
    >
    >如果資產有子資產，您可以列印所有子資產及其特定的頁面註解。
 
-   要修改所呈現的PDF檔案的外觀，例如注釋和狀態的字型顏色、大小和樣式、背景顏色，請從Configuration Manager中開啟&#x200B;**[!UICONTROL 注釋PDF配置]**，並修改所需的選項。 例如，若要變更已核准狀態的顯示顏色，請修改對應欄位中的顏色代碼。 有關更改批注的字型顏色的資訊，請參閱[批注](/help/assets/manage-assets.md#annotating)。
+   要編輯呈現的PDF檔案的外觀（例如字型顏色、大小和樣式），請從「配置管理器」開啟&#x200B;**[!UICONTROL 「注釋PDF配置」]**，並修改所需的選項。 例如，若要變更已核准狀態的顯示顏色，請修改對應欄位中的顏色代碼。 有關更改批注的字型顏色的資訊，請參閱[批注](/help/assets/manage-assets.md#annotating)。
 
    ![在PDF檔案上列印資產註解的設定](assets/annotation-print-pdf-config.png)
 
@@ -840,12 +840,12 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
    * 在「系統字型」目錄選項中，指定系統上字型目錄的完整路徑。 例如，如果您是Mac用戶，則可以在「系統字型」目錄選項中將路徑指定為&#x200B;*/Library/Fonts*。 [!DNL Experience Manager] 從此目錄中讀取字型。
    * 在`crx-quickstart`資料夾內建立名為`fonts`的目錄。 CQ-DAM-Handler-Gibson字型管理器服務自動在`crx-quickstart/fonts`位置提取字型。 您可以從Adobe伺服器字型目錄選項內覆寫此預設路徑。
 
-   * 在系統中為字型建立新資料夾，並將所需的字型儲存在資料夾中。 然後，在「客戶字型」目錄選項中指定該資料夾的完整路徑。
+   * 在系統中為字型建立資料夾，並將所需字型儲存在資料夾中。 然後，在「客戶字型」目錄選項中指定該資料夾的完整路徑。
 
 1. 從URL `https://[aem_server]:[4502]/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig`訪問「注釋PDF」配置。
 1. 使用正確的字型系列集配置「注釋PDF」，如下所示：
 
-   * 在font-family選項中包含字串`<font_family_name_of_custom_font, sans-serif>`。 例如，如果要以CJK（中文、日文和韓文）打印注釋，請在字型系列選項中包含字串`Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`。 如果要以印地語打印注釋，請下載相應的字型，並將字型系列配置為Arial Unicode MS、Noto Sans、Noto Sans CJK JP、Noto Sans Devanagari、sans-serif。
+   * 在font-family選項中包含字串`<font_family_name_of_custom_font, sans-serif>`。 例如，如果要以CJK（中文、日文和韓文）打印注釋，請在字型系列選項中包含字串`Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`。 如果要以印地語打印注釋，請下載相應的字型，並將字型系列配置為Arial® Unicode MS®、Noto Sans、Noto Sans CJK JP、Noto Sans Devalagari、sans-serif。
 
 1. 重新啟動[!DNL Experience Manager]部署。
 
@@ -862,7 +862,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 ## 建立、管理、預覽和回復資產版本 {#asset-versioning}
 
-版本設定會建立數位資產在特定時間點的快照。版本設定有助於在稍後將資產還原為先前狀態。 例如，如果您想要還原對資產所做的變更，請還原未編輯的資產版本。 在[!DNL Experience Manager]中，您可以建立版本、檢視目前修訂版本、檢視兩個影像版本之間並排的差異，以及將資產還原為其舊版。
+版本設定會建立數位資產在特定時間點的快照。版本設定有助於稍後將資產還原為先前狀態。 例如，如果您想要還原對資產所做的變更，請還原未編輯的資產版本。 在[!DNL Experience Manager]中，您可以建立版本、檢視目前修訂版本、檢視兩個影像版本之間並排的差異，以及將資產還原為其舊版。
 
 在以下情況下，您可以在[!DNL Experience Manager]中建立版本：
 
@@ -882,7 +882,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 1. 若要建立資產版本：
 
    * 按一下底部的&#x200B;**[!UICONTROL Actions]**。
-   * 按一下「**[!UICONTROL 另存新檔]**」以建立資產的版本。 （可選）添加標籤和注釋。
+   * 按一下「**[!UICONTROL 另存新檔]**」，即可建立資產的版本。 （可選）添加標籤和注釋。
    * 按一下&#x200B;**[!UICONTROL 建立]**&#x200B;以建立版本。
 
       ![從側欄建立資產版本](assets/create-new-version-from-timeline.png)
