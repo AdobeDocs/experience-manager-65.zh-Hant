@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: 中繼資料
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b36448449830aa8e19f6dc29ab7fb62608bb39dd
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1982'
 ht-degree: 5%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 5%
 
    ![對應至中繼資料設定檔中的屬性設定](assets/metadata-profile-setting-map-property.png)
 
-   您為&#x200B;**[!UICONTROL Map to property]**&#x200B;指定的值會儲存為資產中繼資料節點下的屬性。 例如，如果您指定`./jcr:content/metadata/dc:desc`作為&#x200B;**[!UICONTROL Map to property]**&#x200B;的名稱， [!DNL Assets]會將值`dc:desc`儲存在資產的中繼資料節點。
+   您為&#x200B;**[!UICONTROL Map to property]**&#x200B;指定的值會儲存為資產中繼資料節點下的屬性。 例如，如果您指定`./jcr:content/metadata/dc:desc`作為&#x200B;**[!UICONTROL Map to property]**&#x200B;的名稱， [!DNL Assets]會將值`dc:desc`儲存在資產的中繼資料節點。 建議您只將一個欄位對應至中繼資料結構中的指定屬性。 否則，系統會挑選對應至屬性的最新新增欄位。
 
    * **[!UICONTROL 預設值]**:使用此屬性為元資料元件添加預設值。例如，如果您指定「My description」，則此值會指派給資產中繼資料節點的屬性`dc:desc`。
 
