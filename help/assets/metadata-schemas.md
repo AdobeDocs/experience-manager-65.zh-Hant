@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User,Admin
 feature: 中繼資料
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
+source-git-commit: d3fcf3e55af1c57bed1db9191aa76576d3bedb29
 workflow-type: tm+mt
-source-wordcount: '3547'
+source-wordcount: '3597'
 ht-degree: 7%
 
 ---
@@ -28,6 +28,8 @@ ht-degree: 7%
    ![資產屬性的基本索引標籤，其中無法變更資產類型](assets/asset-properties-basic-tab.png)
 
    *圖：資產屬性上的基本 [!UICONTROL 索引標籤]。*
+
+   建立或編輯中繼資料結構時，請確定只有一個屬性對應至欄位。
 
    若要修改資產的MIME類型，請使用自訂中繼資料結構表單或修改現有表單。 如需詳細資訊，請參閱[編輯中繼資料結構Forms](#edit-metadata-schema-forms) 。 如果您修改MIME類型的中繼資料結構，則會修改資產和所有子類型的屬性頁面配置。 例如，在`default/image`下修改jpeg架構時，只會修改MIME類型`image/jpeg`資產的中繼資料配置（資產屬性）。 不過，如果您編輯預設結構，您的變更會修改所有資產類型的中繼資料配置。
 
@@ -99,13 +101,13 @@ ht-degree: 7%
 
 #### 編輯中繼資料元件 {#edit-the-metadata-component}
 
-要編輯表單上元資料元件的屬性，請按一下該元件以在&#x200B;**[!UICONTROL Settings]**&#x200B;頁簽中編輯以下所有屬性或以下屬性的子集。
+要編輯表單上元資料元件的屬性，請按一下該元件以在&#x200B;**[!UICONTROL Settings]**&#x200B;頁簽中編輯以下所有屬性或以下屬性的子集。 建議您只將一個欄位對應至中繼資料結構中的指定屬性。 否則，系統會挑選對應至屬性的最新新增欄位。
 
 **欄位標籤**:資產屬性頁面上顯示的中繼資料屬性名稱。
 
 **對應至屬性**:此屬性會指定資產節點的相對路徑或名稱，資產節點儲存在CRX存放庫中。其開頭為`./`，指出路徑位於資產節點下。
 
-以下是此屬性的有效值：
+以下是屬性的有效值範例：
 
 * `./jcr:content/metadata/dc:title`:將值儲存在資產的中繼資料節點，做為屬性 `dc:title`。
 
