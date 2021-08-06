@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: 9cca48f13f2e6f26961cff86d71f342cab422a78
+source-git-commit: 5769ddeefe2d01d32bb9a0611dc06af68a848936
 workflow-type: tm+mt
-source-wordcount: '6856'
+source-wordcount: '6941'
 ht-degree: 3%
 
 ---
@@ -162,14 +162,19 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 如果您要使用此功能，請注意下列必要條件和要點：
 
-* 您必須執行Service Pack 6.5.4.0或更新版本的Experience Manager6.5。
-* [Oak的直接二進位存取下](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) 載已啟用。
+* 您必須以Dynamic Media - Scene7模式，使用Service Pack 6.5.4.0或更新版本執行Experience Manager6.5。
+* 此大型上傳功能僅支援&#x200B;[*Managed Services*](https://business.adobe.com/products/experience-manager/managed-services.html)客戶。
+* 請確定您的Experience Manager執行個體已使用Amazon S3或Microsoft® Azure Blob儲存。
 
-   要啟用，請在資料儲存配置中設定屬性`presignedHttpDownloadURIExpirySeconds > 0`。 值應足以下載較大的二進位檔，然後可能會重試。
+   >[!NOTE]
+   使用存取金鑰（key1和key2）來設定Azure Blob儲存，因為Blob儲存設定中的AzureSas不支援此大型上傳功能。
+
+* 已啟用Oak的[直接二進位存取下載](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)（不需要Oak的&#x200B;*直接二進位存取上傳*）。
+
+   若要啟用「直接二進位存取」下載，請在資料存放區設定中設定屬性`presignedHttpDownloadURIExpirySeconds > 0` 。 值應足以下載較大的二進位檔，然後可能會重試。
 
 * 超過15 GB的資產不會上傳。 （大小限制設定在下面的步驟8中。）
-* 在資料夾上觸發Scene7重新處理資產工作流程時，會重新處理資料夾中已上傳的大型資產。 不過，它確實會上傳不存在於Scene7公司的大型資產。
-* 大型上傳只適用於單一資產裝載，不適用於資料夾上觸發工作流程的情況。
+* 當資料夾上觸發&#x200B;**[!UICONTROL Dynamic Media重新處理]**&#x200B;資產工作流程時，會重新處理已與Dynamic Media公司同步的任何大型資產。 不過，如果資料夾中尚未同步任何大型資產，則不會上傳資產。 因此，若要同步Dynamic Media中的現有大型資產，您可以對個別資產執行&#x200B;**[!UICONTROL Dynamic Media重新處理]**&#x200B;資產工作流程。
 
 **若要設定Dynamic Media - Scene7模式，以上傳大於2 GB的資產：**
 
@@ -236,7 +241,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 1. 在&#x200B;**[!UICONTROL 步驟屬性]**&#x200B;對話框的&#x200B;**[!UICONTROL Common]**&#x200B;頁簽下的&#x200B;**[!UICONTROL Advanced Settings]**&#x200B;標題下，在&#x200B;**[!UICONTROL Timeout]**&#x200B;欄位中，輸入值`18000`分鐘（5小時）。 預設值為`3600`分鐘（1小時）。
 1. 選擇&#x200B;**[!UICONTROL OK]**。
 1. 選擇&#x200B;**[!UICONTROL 同步]**。
-1. 對&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程模型和&#x200B;**[!UICONTROL Scene7重新處理工作流程]**&#x200B;工作流程模型重複步驟14-21。
+1. 對&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程模型和&#x200B;**[!UICONTROL Dynamic Media重新處理]**&#x200B;工作流程模型重複步驟14-21。
 
 ### （選用）Dynamic Media - Scene7模式設定的設定與設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
