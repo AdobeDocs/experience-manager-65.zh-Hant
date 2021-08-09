@@ -1,6 +1,6 @@
 ---
 title: 管理Dynamic Media影像預設集
-description: 了解Dynamic Media影像預設集，並了解如何建立、修改和管理影像預設集
+description: 了解Dynamic Media影像預設集，並了解如何建立、修改和管理影像預設集。
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 mini-toc-levels: 3
 contentOwner: Rick Brough
@@ -13,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 影像預設集
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '3851'
+source-wordcount: '3843'
 ht-degree: 8%
 
 ---
@@ -101,8 +101,8 @@ Adobe Illustrator的檔案格式是PDF的變體。 在Experience Manager資產�
 
 | **中繼資料屬性** | **說明** |
 |---|---|
-| dam:Physicalwidthinichs | 文檔寬度（英吋）。 |
-| dam：物理高度 | 文檔高度（英吋）。 |
+| `dam:Physicalwidthininches` | 文檔寬度（英吋）。 |
+| `dam:Physicalheightininches` | 文檔高度（英吋）。 |
 
 您可以通過`DAM Update Asset`工作流訪問`Rasterize PDF/AI Image Preview Rendition`進程元件選項。
 
@@ -181,7 +181,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>是</td>
-   <td>為每個頁面產生300 ppi JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，還通過<code>DAM Update Asset</code>工作流優化並轉換為PTIFF。<br /> </td>
+   <td>為每個頁面產生300 PPI JPEG子資產。 JPEG子資產是儲存在InDesign資產下的實際資產。 此外，還通過<code>DAM Update Asset</code>工作流優化並轉換為PTIFF。<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -193,11 +193,11 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 
 ## 設定影像縮圖大小 {#configuring-image-thumbnail-size}
 
-您可以在&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程中配置這些設定，以配置縮圖的大小。 工作流程中有兩個步驟可讓您設定影像資產的縮圖大小。 雖然其中一個(**[!UICONTROL Dynamic Media處理影像資產]**)用於動態影像資產，另一個（**[!UICONTROL 處理縮圖]**）用於靜態縮圖產生，或當所有其他處理無法產生縮圖時，*兩個*&#x200B;必須具有相同的設定。
+您可以在&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程中配置這些設定，以配置縮圖的大小。 工作流程中有兩個步驟可讓您設定影像資產的縮圖大小。 雖然(**[!UICONTROL Dynamic Media處理影像資產]**)用於動態影像資產，而（**[!UICONTROL 處理縮圖]**）用於靜態縮圖產生，或當所有其他處理無法產生縮圖時，*兩個*&#x200B;必須有相同的設定。
 
 在「動 **[!UICONTROL 態媒體處理影像資產」步驟中]** ，影像伺服器會產生縮圖，此組態與套用至「處理縮圖」步驟的組態無關 **** 。透過「處理縮圖 **[!UICONTROL 」步驟產生縮圖]** ，是建立縮圖的最慢且記憶體最耗用的方式。
 
-縮圖大小定義為下列格式：**[!UICONTROL width:height:center]**，例如&#x200B;*80:80:false*。 寬度和高度會以像素為單位決定縮圖的大小。 中心值為false或true，若設為true，表示縮圖影像的大小與設定中指定的大小完全相同。 如果調整大小的影像較小，則會置於縮圖中。
+縮圖大小定義為下列格式：**[!UICONTROL width:height:center]**，例如`80:80:false`。 寬度和高度會以像素為單位決定縮圖的大小。 中心值為false或true，若設為true，表示縮圖影像的大小與設定中指定的大小完全相同。 如果調整大小的影像較小，則會置於縮圖中。
 
 >[!NOTE]
 >
@@ -340,7 +340,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
      <li><strong>類 </strong>型 — 選 <strong>取「適應性」</strong> （預設值）、 <strong>「Web」</strong>或「 <strong>Macintosh」</strong>。如果選擇<strong>Alpha</strong>的GIF，則Macintosh選項不可用。</li>
      <li><strong>Dither</strong>  — 選取「 <strong></strong> 差 <strong>異」或「關閉」</strong>。</li>
      <li><strong>顏色數 </strong>量 — 輸入從2到256的數字。</li>
-     <li><strong>顏色清單</strong>  — 輸入逗號分隔的清單。例如，對於白色、灰色和黑色，請輸入000000、888888、ffffff。</li>
+     <li><strong>顏色清單</strong>  — 輸入逗號分隔的清單。例如，對於白色、灰色和黑色，請輸入<code>000000,888888,ffffff</code>。</li>
     </ul>
     <div>
       選擇
