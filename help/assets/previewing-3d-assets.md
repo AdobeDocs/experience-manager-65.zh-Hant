@@ -6,14 +6,14 @@ docset: aem65
 feature: 3D資產
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 11%
+source-wordcount: '555'
+ht-degree: 6%
 
 ---
 
-# 在Adobe Experience Manager中預覽3D資產{#previewing-3d-assets-aem}
+# 在Adobe Experience Manager中預覽3D資產 {#previewing-3d-assets-aem}
 
 Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式預覽。
 
@@ -49,22 +49,22 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
 
 在資產詳細資訊檢視頁面中開啟3D資產所花的時間，取決於頻寬、影像複雜度和伺服器延遲等數項因素。
 
-此外，在交互操作攝像機時，客戶端電腦的功能（如工作站、筆記型電腦或移動觸摸設備）也很重要。 具有良好圖形功能的強大系統可讓互動式3D觀看體驗更流暢、更有利。
+此外，當您以互動方式操作相機時，還需要考慮客戶端電腦的功能，例如工作站、筆記型電腦或移動觸摸設備。 具有良好圖形功能的強大系統可讓互動式3D觀看體驗更流暢、更有利。
 
 **若要預覽3D資產的Experience Manager:**
 
 1. 請確定您已將3D資產上傳至Experience Manager。
 請參閱[支援的3D預覽格式](#supported-3d-previewing-assets)和[上傳資產](/help/assets/manage-assets.md#uploading-assets)。
-1. 從Experience Manager，在&#x200B;**[!UICONTROL 導覽]**&#x200B;頁面上，點選&#x200B;**[!UICONTROL 資產>檔案]**。
+1. 從Experience Manager，在&#x200B;**[!UICONTROL 導航]**&#x200B;頁面上，選擇&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 檔案]**。
 
    ![導覽頁面](/help/assets/assets-dm/navigation-assets.png)
 
-1. 在頁面的右上角，從「檢視」下拉式清單中，點選「卡片檢視」 ****，然後導覽至您要預覽的3D資產。
+1. 在頁面的右上角附近，從「檢視」下拉式清單中，選取「卡片檢視」 ****，然後導覽至您要預覽的3D資產。
 
    ![3D卡選擇](/help/assets/assets-dm/3d-card-select.png)
-   _在「卡片檢視」中，點選您要預覽之3D資產的卡片。_
+   _在「卡片檢視」中，選取您要預覽之3D資產的卡片。_
 
-1. 點選3D資產的卡片。
+1. 選取3D資產的卡片。
 
    ![互動式3D預覽](/help/assets/assets-dm/3d-preview.png)
    _在資產詳細資訊檢視頁面中互動式預覽3D資產。_
@@ -76,7 +76,7 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
    | **平移您的相機** | 向左、向右、向上或向下平移視圖。 | 按一下右鍵+拖動。 | 用雙指按+拖。 |
    | **縮放您的相機** | 移入和移出3D場景中的區域。 | 滾輪。 | 雙指夾。 |
    | **重新輸入您的相機** | 將相機重新輸入到3D場景中某個對象上的某個點。 | 按兩下。 | 按兩下。 |
-   | **重設** | 在頁面的右下角附近，點選「重設」圖示，將檢視目標點還原到3D資產的中央。 重置還使相機更近或更遠地移開，以便以合理的觀看大小顯示資產的整體。 |  |  |
-   | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，點選「全螢幕」圖示。 |  |  |
+   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點還原到3D資產的中央。 重置還使相機更近或更遠地移開，以便以合理的觀看大小顯示資產的整體。 |  |  |
+   | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，選取全螢幕圖示。 |  |  |
 
-1. 完成後，在頁面右上角附近，點選「**[!UICONTROL Close]**」。
+1. 完成後，在頁面右上角附近，選擇&#x200B;**[!UICONTROL Close]**。
