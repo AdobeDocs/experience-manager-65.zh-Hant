@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: 1e8b5ab66668215e0eeed676b42f533d4e210e1c
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 20%
    + [360 VR 影片](/help/assets/360-video.md)
    + [整合Dynamic Media檢視器與Adobe Analytics和Adobe Experience Platform標籤](/help/assets/tags.md)
    + [使用Quickview建立自訂快顯視窗](custom-pop-ups.md)
-   + [為回應式網站傳送最佳化影像](responsive-site.md)
+   + [為回應式網站提供最佳化的影像](responsive-site.md)
    + [預覽Dynamic Media資產](previewing-assets.md)
    + [新增Dynamic Media資產至頁面](adding-dynamic-media-assets-to-pages.md)
    + [將動態視訊或影像檢視器內嵌在網頁上](embed-code.md)
@@ -81,7 +81,7 @@ ht-degree: 20%
    + [透過Dynamic Media使CDN快取失效](invalidate-cdn-cache-dynamic-media.md)
    + [透過Dynamic Media Classic使CDN快取失效](invalidate-cdn-cache-dm-classic.md)
    + [安裝Feature Pack 18912以移轉大量資產](bulk-ingest-migrate.md)
-   + [使用選取工具](working-with-selectors.md)
+   + [使用選取器](working-with-selectors.md)
 + 擴充資產{#extending}
    + [自定義和擴展 [!DNL Assets]](extending-assets.md)
    + [使用媒體處理常式和工作流程處理資產](media-handlers.md)
