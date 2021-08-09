@@ -10,10 +10,10 @@ discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 feature: 資產管理
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 13%
+source-wordcount: '114'
+ht-degree: 14%
 
 ---
 
@@ -25,7 +25,7 @@ Dynamic Media資產（影像、影片和互動式資產）在上傳後會涉及�
 
 有關管理資產的一般資訊，請參閱[管理資產](/help/assets/manage-assets.md)。
 
-以下主題說明管理Dynamic Media資產所需執行的操作：
+以下主題說明如何管理Dynamic Media資產：
 
 * [影像品質最佳化的最佳作法](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md)
 * [預覽 Dynamic Media 資產](/help/assets/previewing-assets.md)
