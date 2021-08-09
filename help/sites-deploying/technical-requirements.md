@@ -6,14 +6,14 @@ seo-description: AEM支援的用戶端和伺服器平台清單。
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 5ce72a51d69e97d7e07e9f734bfd7547fccd51f1
+source-git-commit: 0f0dfe8af5feed5227a091b89d65ef58d71eb299
 workflow-type: tm+mt
-source-wordcount: '3273'
+source-wordcount: '3266'
 ht-degree: 0%
 
 ---
 
-# 技術要求{#technical-requirements}
+# 技術需求{#technical-requirements}
 
 Adobe支援平台上的Adobe Experience Manager(AEM)，如本檔案的下列資訊所詳述。
 
@@ -30,7 +30,7 @@ Adobe支援平台上的Adobe Experience Manager(AEM)，如本檔案的下列資�
 * 已安裝Java平台、標準版JDK或其他支援的[Java虛擬機](#java-virtual-machines)
 * Experience Manager快速入門檔案（獨立JAR或Web應用程式部署WAR）
 
-### 最小規模要求{#minimum-sizing-requirements}
+### 最低規模要求 {#minimum-sizing-requirements}
 
 執行Adobe Experience Manager的最低需求：
 
@@ -48,11 +48,11 @@ Adobe支援平台上的Adobe Experience Manager(AEM)，如本檔案的下列資�
 
 有關詳細資訊，請參閱[硬體調整指南](/help/managing/hardware-sizing-guidelines.md)。
 
-### 支援級別{#support-levels}
+### 支援層級 {#support-levels}
 
 本檔案列出Adobe Experience Manager支援的用戶端和伺服器平台。 Adobe提供數種支援級別，包括建議的配置和其他配置。
 
-### 支援的配置{#supported-configurations}
+### 支援的配置 {#supported-configurations}
 
 Adobe建議進行這些配置，並在標準軟體維護協定中提供完整支援。
 
@@ -73,15 +73,15 @@ Adobe建議進行這些配置，並在標準軟體維護協定中提供完整支
  </tbody>
 </table>
 
-### 不支援的配置{#unsupported-configurations}
+### 不支援的配置 {#unsupported-configurations}
 
 | 支援層級 | 說明 |
 |---|---|
 | **Z:不支援** | 不支援配置。 Adobe不會針對設定是否有效發表任何陳述，也不支援。 |
 
-## 支援的平台{#supported-platforms}
+## 支援平台 {#supported-platforms}
 
-### Java虛擬機{#java-virtual-machines}
+### Java虛擬機 {#java-virtual-machines}
 
 應用程式需要Java虛擬機才能運行，該虛擬機由Java開發套件(JDK)分發提供。
 
@@ -132,14 +132,14 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
  </tbody>
 </table>
 
-1. OpenJDK的Azul Zulu組建的支援和分發，包括LTS版本的所有維護更新，將由Adobe直接支援所有使用OpenJDK的Azul Zulu組建的AEM客戶，從AEM 6.5 SP9版本開始。 AEM 6.5 SP10 for AEM Forms Java EE。 如需詳細資訊，請參閱[Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf)的Azul Java支援。
+1. OpenJDK的Azul Zulu組建的支援和分發，包括LTS版本的所有維護更新，將由Adobe直接支援所有使用OpenJDK的Azul Zulu組建的AEM客戶，從AEM 6.5 SP9版本開始。 如需詳細資訊，請參閱[Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf)的Azul Java支援。
 
 1. Oracle已改用OracleJava SE產品的「長期支援」(LTS)模型。 Java 9、Java 10和Java 12是按Oracle列出的非LTS版本(請參閱[OracleJava SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 若要在生產環境中部署AEM,Adobe僅支援LTS版的Java。 在2022年12月之前，所有使用OracleJava SE技術的AEM客戶，將直接Adobe，以支援和分發OracleJava SE JDK，包括公共更新結尾以外的所有LTS版本的維護更新。 ****&#x200B;如需詳細資訊，請參閱Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf)的[OracleJava支援。
 
 1. IBM JRE僅與WebSphere Application Server一起受支援。
 
 
-### 儲存和持久性{#storage-persistence}
+### 儲存和持久性 {#storage-persistence}
 
 部署Adobe Experience Manager存放庫有各種選項。 請參閱下列清單，了解支援的技術和儲存選項。
 
@@ -190,7 +190,7 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
 >
 >**AEM 6.5的R級中當前支援大多數關係資料庫，該R級中附帶了支援標準和支援計畫，如上面R級描述所述。**
 
-### Servlet引擎/應用程式伺服器{#servlet-engines-application-servers}
+### Servlet引擎/應用程式伺服器 {#servlet-engines-application-servers}
 
 Adobe Experience Manager可以作為獨立伺服器（quickstart JAR檔案）運行，也可以作為第三方應用程式伺服器（WAR檔案）中的Web應用程式運行。
 
@@ -210,7 +210,7 @@ Servlet 3.1所需的最低Servlet API版本
 1. 建議用於部署AEM Forms。
 1. 在應用程式伺服器上啟動AEM 6.5部署會移至「限制支援」。 現有客戶可升級至AEM 6.5，並繼續使用應用程式伺服器。 對於新客戶，它隨附支援標準和支援計畫，如上面的R級描述所述。
 
-### 伺服器作業系統{#server-operating-systems}
+### 伺服器作業系統 {#server-operating-systems}
 
 Adobe Experience Manager可搭配下列伺服器平台用於生產環境：
 
@@ -231,7 +231,7 @@ Adobe Experience Manager可搭配下列伺服器平台用於生產環境：
 1. 升級至6.5的客戶和非生產用途均支援Microsoft Windows生產部署。 AEM Sites和Assets的新部署可應要求提供。
 1. AEM Forms在沒有支援級別R限制的Microsoft Window Server上受支援
 
-### 虛擬和雲計算環境{#virtual-cloud-computing-environments}
+### 虛擬和雲計算環境 {#virtual-cloud-computing-environments}
 
 支援Adobe Experience Manager在雲端運算環境(例如Microsoft Azure和Amazon Web Services(AWS))上的虛擬機中執行，且符合本頁所列的技術需求，並符合Adobe的標準支援條款。
 
@@ -241,7 +241,7 @@ Adobe建議使用Adobe Managed Services在Azure或AWS上部署AEM。 Adobe Manag
 
 如需有關如何在Azure或AWS上部署AEM的建議，請在Adobe Managed Services之外，強烈建議Adobe直接與雲端提供者或Adobe合作夥伴合作，以支援在您所選擇的雲端環境中部署AEM。 選定的雲提供商或合作夥伴將負責架構的規模規格、設計和實施，以滿足您的特定效能、負載、可擴充性和安全性要求。
 
-### Dispatcher平台（Web伺服器）{#dispatcher-platforms-web-servers}
+### Dispatcher平台（Web伺服器） {#dispatcher-platforms-web-servers}
 
 Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)。Experience Manager6.5需使用Dispatcher 4.3.2版或更新版本。
 
@@ -260,9 +260,9 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 
 1. Windows作業系統無法使用Apache 2.4.x。
 
-## 支援的客戶端平台{#supported-client-platforms}
+## 支援的客戶端平台 {#supported-client-platforms}
 
-### 支援的編寫用戶介面的瀏覽器{#supported-browsers-for-authoring-user-interface}
+### 製作使用者介面支援的瀏覽器 {#supported-browsers-for-authoring-user-interface}
 
 Adobe Experience Manager使用者介面適用於下列用戶端平台。 所有瀏覽器都會使用預設的外掛程式和附加元件集進行測試。
 
@@ -332,11 +332,11 @@ AEM使用者介面已針對較大螢幕（通常是筆記型電腦和桌上型�
 1. Firefox延伸支援版本[在mozilla.org](https://www.mozilla.org/en-US/firefox/organizations/faq/)上深入了解
 1. 支援Apple iPad
 
-### 支援的網站瀏覽器{#supported-browsers-for-websites}
+### 支援的網站瀏覽器 {#supported-browsers-for-websites}
 
 一般而言，AEM Sites轉譯之網站的瀏覽器支援取決於AEM頁面範本、設計和元件輸出的實作，因此可由實作這些部分的一方控制。
 
-### WebDAV客戶端{#webdav-clients}
+### WebDAV客戶端 {#webdav-clients}
 
 **Microsoft Windows 7+**
 
@@ -350,7 +350,7 @@ AEM使用者介面已針對較大螢幕（通常是筆記型電腦和桌上型�
 
 要提高Windows下WebDav客戶端的響應性 — 請參閱[Microsoft支援KB 2445570](https://support.microsoft.com/kb/2445570)
 
-## 其他平台說明{#additional-platform-notes}
+## 其他平台說明 {#additional-platform-notes}
 
 本節提供有關執行Adobe Experience Manager及其附加元件的特殊附註和詳細資訊。
 
@@ -374,7 +374,7 @@ Adobe Experience Manager的所有元素（例項、Dispatcher）都可安裝在I
 * 對於IPv4和IPv6網路安裝，將解釋`localhost`的預設案例
 例如`https://localhost:4502`
 
-### AEM Dynamic Media附加元件{#requirements-for-aem-dynamic-media-add-on}需求
+### AEM Dynamic Media附加元件需求 {#requirements-for-aem-dynamic-media-add-on}
 
 AEM Dynamic Media預設為停用。 請參閱這裡[啟用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media)。
 
@@ -450,7 +450,7 @@ AEM Dynamic Media預設為停用。 請參閱這裡[啟用Dynamic Media](/help/a
 * 10.9.x及更新版本
 * 僅支援試用和示範用途
 
-### AEM Forms PDF產生器{#requirements-for-aem-forms-pdf-generator}需求
+### AEM Forms PDF產生器需求 {#requirements-for-aem-forms-pdf-generator}
 
 <table>
  <tbody>
@@ -510,7 +510,7 @@ AEM Dynamic Media預設為停用。 請參閱這裡[啟用Dynamic Media](/help/a
 
 
 
-### AEM Forms Designer {#requirements-for-aem-forms-designer}的需求
+### AEM Forms Designer的需求 {#requirements-for-aem-forms-designer}
 
 * Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
 * 支援PAE、NX和SSE2的1 GHz或更快的處理器。
@@ -523,7 +523,7 @@ AEM Dynamic Media預設為停用。 請參閱這裡[啟用Dynamic Media](/help/a
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
 * 安裝Designer的管理權限。
 
-### AEM Assets XMP中繼資料回寫{#requirements-for-aem-assets-xmp-metadata-write-back}的需求
+### AEM Assets XMP中繼資料回寫的需求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
 支援並啟用以下平台和檔案格式的XMP回寫：
 
