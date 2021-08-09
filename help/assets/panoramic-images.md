@@ -11,7 +11,7 @@ docset: aem65
 feature: 全景影像，資產管理
 role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
-1. 在頁面的右上角附近，按一下「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**」。
+1. 在頁面的右上角附近，選擇「**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**」。
 1. 在「影像伺服器發佈」頁面上，從頂端附近的&#x200B;**[!UICONTROL 發佈內容]**&#x200B;下拉式選單中，選取&#x200B;**[!UICONTROL 影像伺服]**。
 
 1. 在相同的「影像伺服器發佈」頁面上，找到標題&#x200B;**[!UICONTROL Request Attributes]**。
@@ -65,11 +65,11 @@ ht-degree: 0%
 
    在Experience Manager中使用`Panoramic Media` WCM元件時，需要進行這些設定。
 
-1. 在「影像伺服器發佈」頁面底部的左側，按一下「**[!UICONTROL 儲存]**」。
+1. 在「影像伺服器發佈」頁面的左側，選擇&#x200B;**[!UICONTROL Save]**。
 
-1. 在右下角，按一下&#x200B;**[!UICONTROL 關閉]**。
+1. 在右下角，選擇&#x200B;**[!UICONTROL Close]**。
 
-### 全景媒體WCM元件疑難排解 {#troubleshooting-the-panoramic-media-wcm-component}
+### 疑難排解全景媒體WCM元件 {#troubleshooting-the-panoramic-media-wcm-component}
 
 如果您將影像放置到WCM的全景媒體元件中，且元件預留位置已收合，請疑難排解下列問題：
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 ## 預覽全景影像 {#previewing-panoramic-images}
 
-請參閱「預覽資產」[。](/help/assets/previewing-assets.md)
+請參閱[預覽資產](/help/assets/previewing-assets.md)。
 
 ## 發佈全景影像 {#publishing-panoramic-images}
 
