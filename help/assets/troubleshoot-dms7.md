@@ -1,6 +1,6 @@
 ---
 title: 疑難排解Dynamic Media - Scene7模式
-description: 疑難排解Dynamic Media在Scene7模式中執行時。
+description: 疑難排解Dynamic Media以Scene7模式執行時。
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,7 +11,7 @@ docset: aem65
 role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: 疑難排解
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 1%
@@ -26,8 +26,8 @@ ht-degree: 1%
 
 請執行下列動作，確認Dynamic Media已正確設定：
 
-* 啟動命令包含`-r dynamicmedia_scene7` runmode參數。
-* 任何AEM 6.4 Cumulative Fix Pack(CFP)，都已先於&#x200B;*再安裝於*&#x200B;任何可用的Dynamic Media Feature Pack。
+* 啟動命令包含`-r dynamicmedia_scene7`運行模式參數。
+* 任何Adobe Experience Manager 6.4 Cumulative Fix Pack(CFP)，都已先於&#x200B;*再安裝於*&#x200B;任何可用的Dynamic Media Feature Pack。
 * 已安裝選用的Feature Pack 18912。
 
    此選用功能套件適用於FTP支援，或從Dynamic Media Classic將資產移轉至Dynamic Media。
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 ### 資產同步狀態屬性 {#asset-synchronization-status-properties}
 
-您可以在CRXDE Lite中檢閱下列資產屬性，以確認資產是否已成功從AEM同步至Dynamic Media:
+您可以在CRXDE Lite中檢閱下列資產屬性，以確認資產是否從Experience Manager同步至Dynamic Media:
 
 | **屬性** | **範例** | **說明** |
 |---|---|---|
@@ -54,7 +54,7 @@ ht-degree: 1%
 
 ### 同步記錄 {#synchronization-logging}
 
-同步錯誤和問題記錄在`error.log`(AEM伺服器目錄`/crx-quickstart/logs/`)中。 有足夠的記錄可供判斷大部分問題的根本原因，但您可以透過Sling主控台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))增加`com.adobe.cq.dam.ips`套件上的DEBUG記錄，以收集詳細資訊。
+同步錯誤和問題記錄在`error.log`(Experience Manager伺服器目錄`/crx-quickstart/logs/`)中。 有足夠的記錄可供判斷大部分問題的根本原因，但您可以透過Sling主控台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))增加`com.adobe.cq.dam.ips`套件上的DEBUG記錄，以收集詳細資訊。
 
 ### 移動、複製、刪除 {#move-copy-delete}
 
@@ -62,15 +62,15 @@ ht-degree: 1%
 
 * 對於影像和視訊，在執行移動、複製或刪除操作之前，請確認`<object_node>/jcr:content/metadata/dam:scene7ID`值存在。
 * 對於影像和檢視器預設集，在執行移動、複製或刪除操作之前，請確認`https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata`值存在。
-* 如果遺失上述中繼資料值，您必須在移動、複製或刪除作業前重新上傳資產。
+* 如果缺少上述中繼資料值，您必須在移動、複製或刪除作業前重新上傳資產。
 
 ### 版本控制 {#version-control}
 
-取代現有的Dynamic Media資產（相同名稱和位置）時，您可以選擇保留兩個資產或取代/建立版本：
+取代現有的Dynamic Media資產（相同名稱和位置）時，您可以保留兩個資產或取代/建立版本：
 
-* 同時保留兩者將為已發佈的資產URL建立一個具有唯一名稱的新資產。 例如， `image.jpg`是原始資產，而`image1.jpg`是新上傳的資產。
+* 同時保留會為已發佈的資產URL建立一個唯一名稱的資產。 例如， `image.jpg`是原始資產，而`image1.jpg`是新上傳的資產。
 
-* Dynamic Media - Scene7模式傳送不支援建立版本。 新版本將取代傳送中的現有資產。
+* Dynamic Media - Scene7模式傳送不支援建立版本。 新版本會取代傳送中的現有資產。
 
 ## 影像和集 {#images-and-sets}
 
@@ -89,11 +89,11 @@ ht-degree: 1%
     <ol>
      <li><p>前往CRX/DE:</p>
       <ul>
-       <li>檢查JCR <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code>中是否已定義預設集。 請注意，如果您從AEM 6.x升級至6.4，並選擇退出移轉，此位置即適用。 否則，位置為<code>/conf/global/settings/dam/dm/presets/viewer</code>。</li>
+       <li>檢查JCR <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code>中是否已定義預設集。 如果您從Experience Manager6.x升級至6.4，並選擇退出移轉，則此位置適用。 否則，位置為<code>/conf/global/settings/dam/dm/presets/viewer</code>。</li>
        <li>檢查以確定JCR中的資產在「中繼資料顯示為<code>PublishComplete</code>」下有<code>dam:scene7FileStatus</code><strong> </strong>。</li>
       </ul> </li>
     </ol> </td>
-   <td><p>重新整理頁面/導覽至其他頁面並返回（需重新編譯側欄JSP）</p> <p>如果沒有用：</p>
+   <td><p>重新整理頁面/導覽至其他頁面並返回（必須重新編譯側欄JSP）</p> <p>如果沒有用：</p>
     <ul>
      <li>發佈資產。</li>
      <li>重新上傳資產並發佈。</li>
@@ -107,7 +107,7 @@ ht-degree: 1%
   <tr>
    <td><strong></strong> 在編輯資產集時選取資產後，「選取」按鈕沒有作用中</td>
    <td><p> </p> <p>6.4中需修正的已知問題</p> <p> </p> </td>
-   <td><p>先按一下「資產選擇器」中的其他資料夾，然後返回選取資產。</p> </td>
+   <td><p>先在「資產選擇器」的其他資料夾中選取，然後返回選取資產。</p> </td>
   </tr>
   <tr>
    <td>切換投影片後，輪播熱點會四處移動</td>
@@ -161,8 +161,8 @@ ht-degree: 1%
      <li>將視訊描述檔指派給資料夾。</li>
      <li>編輯視訊設定檔以包含多個編碼預設集。</li>
      <li>等待視頻完成處理。</li>
-     <li>若您重新載入視訊，請確定Dynamic Media編碼視訊工作流程未執行。<br /> </li>
-     <li>重新上傳視訊。</li>
+     <li>重新載入視訊，確定Dynamic Media編碼視訊工作流程未執行。<br /> </li>
+     <li>重新上傳影片。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -175,7 +175,7 @@ ht-degree: 1%
     </ul> </td>
    <td>
     <ol>
-     <li>使用檢查您的AEM例項 <code>-r dynamicmedia_scene7</code></li>
+     <li>使用檢查您的Experience Manager例項 <code>-r dynamicmedia_scene7</code></li>
      <li>檢查「Cloud Services」下的Dynamic Media設定是否已正確設定。</li>
      <li>檢查資料夾是否有視訊設定檔。 此外，檢查視訊設定檔。</li>
     </ol> </td>
@@ -218,12 +218,12 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>未發佈查看器預設集</td>
-   <td><p>繼續到示例管理器診斷頁： <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>觀察計算值。 正確運作時，您應該會看到：</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>注意</strong>:配置檢視器資產的Dynamic Media雲端設定後，可能需要約10分鐘的時間才能同步。</p> <p>如果未啟動的資產仍保留，請按一下<strong>列出所有未啟動的資產</strong>按鈕以查看詳細資訊。</p> </td>
+   <td><p>繼續到示例管理器診斷頁： <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>觀察計算值。 正確運作時，您會看到下列內容：</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
+       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>注意</strong>:配置檢視器資產的Dynamic Media雲端設定後，可能需要約10分鐘的時間才能同步。</p> <p>如果未啟動的資產仍保留，請選取<strong>列出所有未啟動的資產</strong>按鈕中的任一個，以查看詳細資訊。</p> </td>
    <td>
     <ol>
      <li>導覽至管理工具中的檢視器預設集清單： <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
-     <li>選取所有檢視器預設集，然後按一下「<strong>發佈</strong>」。</li>
+     <li>選擇所有查看器預設集，然後選擇<strong>Publish</strong>。</li>
      <li>導覽回範例管理員，並觀察未啟動的資產計數現在為零。</li>
     </ol> </td>
   </tr>
@@ -233,7 +233,7 @@ ht-degree: 1%
     <ol>
      <li>導覽至Dynamic Media同步資料夾內的<code>&lt;sync-folder&gt;/_CSS/_OOTB</code>資料夾（例如<code>/content/dam/_CSS/_OOTB</code>）,</li>
      <li>尋找有問題資產的中繼資料節點（例如<code>&lt;sync-folder&gt;/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/</code>）。</li>
-     <li>檢查是否存在<code>dam:scene7*</code>屬性。 如果資產已成功同步並發佈，您會看到<code>dam:scene7FileStatus</code>集設為<strong>PublishComplete</strong>。</li>
+     <li>檢查是否存在<code>dam:scene7*</code>屬性。 如果資產已成功同步和發佈，您會看到<code>dam:scene7FileStatus</code>集設為<strong>PublishComplete</strong>。</li>
      <li>嘗試串連下列屬性和字串文字的值，以直接從Dynamic Media請求圖稿
       <ul>
        <li><code>dam:scene7Domain</code></li>
@@ -252,11 +252,11 @@ ht-degree: 1%
      <li>導覽至CRX套件管理器：<code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>
       <ol>
        <li>在清單中搜索查看器包（以<code>cq-dam-scene7-viewers-content</code>開頭）</li>
-       <li>按一下「<strong>重新安裝</strong>」。</li>
+       <li>選擇<strong>重新安裝</strong>。</li>
       </ol> </li>
      <li>在「Cloud Services」下，導覽至「Dynamic Media設定」頁面，然後開啟Dynamic Media - S7設定的設定對話方塊。
       <ul>
-       <li>不進行更改，按一下<strong>保存</strong>。 這會再次觸發邏輯，以建立和同步範例資產、檢視器預設集CSS和圖稿。<br />  </li>
+       <li>不進行更改，請選擇<strong>保存</strong>。 此動作會再次觸發邏輯，以建立和同步範例資產、檢視器預設集CSS和圖稿。<br />  </li>
       </ul> </li>
     </ol> </td>
   </tr>
