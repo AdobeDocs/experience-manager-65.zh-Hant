@@ -12,9 +12,9 @@ docset: aem65
 feature: 資產管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '11702'
+source-wordcount: '11699'
 ht-degree: 5%
 
 ---
@@ -306,7 +306,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 為視訊檔案編碼時，請使用盡可能高品質的來源視訊檔案。 請避免使用先前編碼的視訊檔案，因為這些檔案已經壓縮，而進一步編碼會造成品質欠佳的視訊。
 
-* Dynamic Media主要支援長度最多30分鐘的簡短影片。
+* Dynamic Media支援長度最多30分鐘的短片影片。
 * 您可以上傳最多15 GB的主要來源視訊檔案。
 
 下表說明了源視頻檔案編碼前必須具有的建議大小、外觀比例和最小比特率：
@@ -572,7 +572,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
 1. 前往[https://www.youtube.com](https://www.youtube.com/)並使用您的Google帳戶憑證登入。
 1. 在YouTube頁面的右上角，按一下您的個人資料圖片（也可以以實色圓圈內的字母顯示），然後按一下&#x200B;**[!UICONTROL YouTube設定]**（圓齒輪圖示）。
-1. 在「概述」頁面的「其他功能」標題下，按一下「**[!UICONTROL 查看所有我的頻道或建立新頻道]**」。
+1. 在「概述」頁面的「其他功能」標題下，按一下&#x200B;**[!UICONTROL 查看所有我的頻道或建立頻道]**。
 1. 在「通道」頁上，按一下「建立新通道」]**。**[!UICONTROL 
 1. 在「品牌帳戶」頁面的「品牌帳戶名稱」欄位中，輸入商業名稱或您選擇要發佈視訊資產的任何其他管道名稱，然後按一下&#x200B;**[!UICONTROL 建立]**。
 
@@ -1182,7 +1182,7 @@ Cost-efficient access to rapidly evolving technology.
 
 請參閱[WebVTT:Web視頻文本跟蹤格式](https://w3c.github.io/webvtt/)
 
-**若要將章節標籤新增至視訊：**
+**若要新增視訊章節導覽：**
 
 1. 以UTF8編碼儲存`.vtt`檔案，以避免章節標題文字中的字元轉譯問題。
 
