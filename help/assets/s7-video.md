@@ -8,11 +8,12 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: User, Admin
+mini-toc-levels: 3
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: 影片
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1564'
 ht-degree: 1%
 
 ---
@@ -72,9 +73,7 @@ Scene7視訊元件支援下列格式：
 
 ## 設定與Scene7影片的整合 {#configuring-integration-with-scene-video}
 
-要配置通用預設集：
-
-1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，導覽至您的&#x200B;**[!UICONTROL Scene7]**&#x200B;設定，然後按一下&#x200B;**[!UICONTROL 編輯]**。
+1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，導覽至您的&#x200B;**[!UICONTROL Scene7]**&#x200B;設定，並選取&#x200B;**[!UICONTROL 編輯]**。
 1. 選擇&#x200B;**[!UICONTROL Video]**&#x200B;頁簽。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -95,14 +94,14 @@ Scene7視訊元件支援下列格式：
 
 ## 更新檢視器和編碼預設集 {#updating-viewer-and-encoding-presets}
 
-若要更新視訊的檢視器和編碼預設集，因為預設集已在Scene7中更新，請導覽至「雲端設定」中的Scene7設定，然後點選&#x200B;**[!UICONTROL 更新檢視器和編碼預設集]**。
+若要更新視訊的檢視器和編碼預設集，因為預設集已在Scene7中更新，請導覽至雲端設定中的Scene7設定，然後選取&#x200B;**[!UICONTROL 更新檢視器和編碼預設集]**。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
 ## 從AdobeDAM上傳主要來源視訊至Scene7 {#uploading-your-master-video}
 
 1. 導覽至CQ DAM Target資料夾，您已在該資料夾中使用Scene7編碼設定檔設定雲端設定。
-1. 按一下&#x200B;**[!UICONTROL Upload]**&#x200B;以上傳主要來源視訊。 視訊上傳和編碼在[!UICONTROL DAM更新資產]工作流程完成且&#x200B;**[!UICONTROL 發佈至Scene7]**&#x200B;有核取記號後完成。
+1. 選擇&#x200B;**[!UICONTROL Upload]**&#x200B;以上載主源視頻。 視訊上傳和編碼在[!UICONTROL DAM更新資產]工作流程完成且&#x200B;**[!UICONTROL 發佈至Scene7]**&#x200B;有核取記號後完成。
 
    >[!NOTE]
    >
@@ -150,9 +149,9 @@ Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從Experience
 >
 >必須啟動新視訊設定檔及其變更才能發佈。
 
-1. 在「Experience Manager」中，點選「**[!UICONTROL 工具]** > **[!UICONTROL 設定主控台]**」。
+1. 在「Experience Manager」中，選擇「工具」**[!UICONTROL >「**[!UICONTROL &#x200B;配置控制台」]**。]**
 1. 在&#x200B;**[!UICONTROL Configuration Console]**&#x200B;中，導覽至導覽樹狀結構中的&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL DAM]** > **[!UICONTROL Video Profiles]**。
-1. 建立S7視訊設定檔。 在&#x200B;**[!UICONTROL New]**&#x200B;中。 功能表，選取「建立頁面」，然後選取「Scene7視訊描述檔」範本。 ****&#x200B;為新視訊設定檔頁面命名，然後按一下「**[!UICONTROL 建立]**」。
+1. 建立S7視訊設定檔。 在&#x200B;**[!UICONTROL New]**&#x200B;中。 功能表，選取「建立頁面」，然後選取「Scene7視訊描述檔」範本。 ****&#x200B;為新視訊設定檔頁面命名，然後選取&#x200B;**[!UICONTROL Create]**。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
