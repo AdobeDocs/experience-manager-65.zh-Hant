@@ -6,26 +6,26 @@ contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-# 視訊轉譯{#video-renditions}
+# 視訊轉譯 {#video-renditions}
 
-Adobe Experience Manager(AEM)Assets會針對各種格式的視訊資產產生視訊轉譯，包括OGG、FLV等。
+Adobe Experience Manager Assets會針對各種格式的視訊資產產生視訊轉譯，包括OGG、FLV等。
 
-AEM Assets支援媒體資產的靜態和動態轉譯（DM編碼的轉譯）。
+Experience Manager資產支援媒體資產的靜態和動態轉譯（DM編碼的轉譯）。
 
 靜態轉譯是使用FFMPEG（安裝在系統路徑上且可用）以原生方式產生，並儲存在內容存放庫中。
 
 DM編碼的轉譯會儲存在代理伺服器中，並在執行階段提供。
 
-AEM資產在用戶端上為這些轉譯提供播放支援。
+Experience Manager資產在用戶端上為這些轉譯提供播放支援。
 
-若要檢視特定視訊資產的轉譯，請開啟其資產頁面，然後點選「全域導覽」圖示。 然後，從清單中選擇&#x200B;**[!UICONTROL 轉譯]**。
+若要檢視特定視訊資產的轉譯，請開啟其資產頁面，然後選取「全域導覽」圖示。 然後，從清單中選擇&#x200B;**[!UICONTROL 轉譯]**。
 
 ![chlimage_1-478](assets/chlimage_1-478.png)
 
@@ -41,6 +41,6 @@ AEM資產在用戶端上為這些轉譯提供播放支援。
 
 >[!NOTE]
 >
->Microsoft Internet Explorer 11上的OGG和WAV檔案無法播放音訊。 在副檔名為OGG或WAV的資產的資產詳細資訊頁面上，會顯示錯誤`Invalid Source`。
+>Microsoft® Internet Explorer 11上的OGG和WAV檔案無法播放音頻。 在副檔名為OGG或WAV的資產的資產詳細資訊頁面上，會顯示錯誤`Invalid Source`。
 >
->在MS Edge和iPad上，OGG檔案不會播放，且會產生不支援的格式錯誤。
+>在MS® Edge和iPad上，OGG檔案不會播放，且會產生不支援的格式錯誤。
