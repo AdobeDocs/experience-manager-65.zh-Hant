@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: 5769ddeefe2d01d32bb9a0611dc06af68a848936
+source-git-commit: 6c042d2c95f18ae4a0d5fd57a048aa12761495b6
 workflow-type: tm+mt
 source-wordcount: '6941'
 ht-degree: 3%
@@ -167,7 +167,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 * 請確定您的Experience Manager執行個體已使用Amazon S3或Microsoft® Azure Blob儲存。
 
    >[!NOTE]
-   使用存取金鑰（key1和key2）來設定Azure Blob儲存，因為Blob儲存設定中的AzureSas不支援此大型上傳功能。
+   使用存取金鑰和機密金鑰設定Azure Blob儲存，因為Blob儲存設定中的AzureSas不支援此大型上傳功能。
 
 * 已啟用Oak的[直接二進位存取下載](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)（不需要Oak的&#x200B;*直接二進位存取上傳*）。
 
