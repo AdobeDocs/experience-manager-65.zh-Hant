@@ -6,9 +6,9 @@ seo-description: AEM支援的用戶端和伺服器平台清單。
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0f0dfe8af5feed5227a091b89d65ef58d71eb299
+source-git-commit: f3c99936c1bbfd8a942ffefb1fcd3c2c0b3e9094
 workflow-type: tm+mt
-source-wordcount: '3266'
+source-wordcount: '3270'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
   </tr>
   <tr>
    <td>OracleJava SE 11 JDK - 64位</td>
-   <td>答：支援[2]</td>
+   <td>答：支援[2] [4]</td>
   </tr>
   <tr>
    <td>OracleJava SE 10 JDK</td>
@@ -137,6 +137,8 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
 1. Oracle已改用OracleJava SE產品的「長期支援」(LTS)模型。 Java 9、Java 10和Java 12是按Oracle列出的非LTS版本(請參閱[OracleJava SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 若要在生產環境中部署AEM,Adobe僅支援LTS版的Java。 在2022年12月之前，所有使用OracleJava SE技術的AEM客戶，將直接Adobe，以支援和分發OracleJava SE JDK，包括公共更新結尾以外的所有LTS版本的維護更新。 ****&#x200B;如需詳細資訊，請參閱Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf)的[OracleJava支援。
 
 1. IBM JRE僅與WebSphere Application Server一起受支援。
+
+1. [!DNL Oracle Java SE 11 JDK] 不支援 [!DNL Experience Manager Forms]。
 
 
 ### 儲存和持久性 {#storage-persistence}
