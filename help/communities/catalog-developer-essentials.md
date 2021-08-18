@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 exl-id: 4ca76b50-d56d-4f4d-be92-bf8929c5d754
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '362'
 ht-degree: 2%
 
 ---
 
-# 目錄要點{#catalog-essentials}
+# 目錄要點 {#catalog-essentials}
 
 本頁面提供使用啟用社群網站目錄功能的基本資訊。
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 請參閱[標籤啟用資源](tag-resources.md)。
 
-## 客戶端{#essentials-for-client-side}的要點
+## 用戶端的要點 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -58,13 +58,13 @@ ht-degree: 2%
  </tbody>
 </table>
 
-## 伺服器端{#essentials-for-server-side}的要點
+## 伺服器端的Essentials {#essentials-for-server-side}
 
 ### 目錄功能 {#catalog-function}
 
 包含[目錄函式](functions.md#catalog-function)的社區站點結構包括配置的`enablement catalog`元件。
 
-### 預過濾器{#pre-filters}
+### 預先篩選 {#pre-filters}
 
 將目錄功能新增至社群網站後，您可以指定預先篩選，以限制目錄中出現的啟用資源和學習路徑。 若要這麼做，請在網站目錄資源的例項上設定屬性。
 
@@ -105,7 +105,7 @@ ht-degree: 2%
 
 ![configure-catalog](assets/configure-catalog.png)
 
-#### 預先篩選TagIDs {#pre-filter-tagids}
+#### 預先篩選TagID {#pre-filter-tagids}
 
 預先篩選[TagIDs](../../help/sites-developing/framework.md#tagid)必須完全符合套用至啟用資源的標籤。 這些值在網站的`resources`資料夾中顯示為屬性`se_resource-tags`的值。
 
@@ -113,8 +113,8 @@ ht-degree: 2%
 
 ### 參考API {#reference-apis}
 
-* [啟用API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/api/package-summary.html)
+* [啟用API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/reporting/model/api/package-summary.html)
 
-* [報表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
+* [報表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [報表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
+* [報表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)
