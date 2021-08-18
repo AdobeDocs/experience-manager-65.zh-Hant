@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 * [使用用戶端程式](/help/sites-developing/clientlibs.md) 庫（提供使用情況詳細資訊及除錯工具）
 * [SCF的客戶端](/help/communities/client-customize.md#clientlibs) 庫，在定制SCF元件時提供有用的資訊
-* [部落格：AEM用戶端程式庫（由範例說明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
+
 
 ## 為何需要Clientlibs {#why-clientlibs-are-required}
 
@@ -38,15 +38,15 @@ ht-degree: 0%
 
 當缺少所需的clientlib時，[將Communities元件新增至頁面](/help/communities/author-communities.md)可能會導致javascript錯誤以及意外的外觀。
 
-### 範例：未使用Clientlibs {#example-placed-reviews-without-clientlibs}的置入評論
+### 範例：未使用Clientlibs的置入評論 {#example-placed-reviews-without-clientlibs}
 
 ![置入審核](assets/placed-reviews.png)
 
-### 範例：使用Clientlibs {#example-placed-reviews-with-clientlibs}進行置入的審核
+### 範例：使用Clientlibs進行置入的審核 {#example-placed-reviews-with-clientlibs}
 
 ![reviews-clientlibs](assets/reviews-clientlibs.png)
 
-## 標識所需的Clientlibs {#identifying-required-clientlibs}
+## 識別所需的Clientlib {#identifying-required-clientlibs}
 
 開發人員的基本功能資訊可識別所需的用戶端。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ![clientlibs-reviews](assets/clientlibs-reviews.png)
 
-## 新增必要的Clientlibs {#adding-required-clientlibs}
+## 新增必要的Clientlib {#adding-required-clientlibs}
 
 需要將Communities元件新增至頁面時，必須為元件新增所需的clientlib（如果尚未出現）。
 
