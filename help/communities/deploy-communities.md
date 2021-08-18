@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: d42057a2f8ce50332f404388fd1cfc9b6a154765
+source-git-commit: 626ffab5cd1b5ba9c0bd6928911aa09e9450e5fc
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 1%
@@ -167,8 +167,9 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 
 您可從Adobe存放庫取得進階MLS下載（也稱為「phasetwo」）:
 
-* AEM-SOLR-MLS-phasetwo(
-若要取得進階MLS套件，請參閱檔案部署區段中的[AEM進階MLS](deploy-communities.md#aem-advanced-mls) 。
+* AEM-SOLR-MLS-phasetwo
+
+   若要取得進階MLS套件，請參閱檔案部署區段中的[AEM進階MLS](deploy-communities.md#aem-advanced-mls) 。
 
    * 1.2.40版，2016年4月6日
    * 下載AEM-SOLR-MLS-phasetwo-1.2.40.zip
