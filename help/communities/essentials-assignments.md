@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
 exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '222'
 ht-degree: 11%
 
 ---
 
-# 工作總攬{#assignments-essentials}
+# 工作總攬 {#assignments-essentials}
 
 請閱讀以了解使用[啟用社群](/help/communities/overview.md#enablement-community)網站指派功能的基本資訊。
 
 指派功能是將啟用資源和學習路徑指派給啟用社群的成員。
 
-## 客戶端{#essentials-for-client-side}的要點
+## 用戶端的要點 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -55,7 +55,7 @@ ht-degree: 11%
  </tbody>
 </table>
 
-### 完成和成功狀態{#completion-and-success-status}
+### 完成和成功狀態 {#completion-and-success-status}
 
 「完成」和「成功」狀態用於「工作總攬」上的報表和狀態橫幅。
 
@@ -81,7 +81,7 @@ ht-degree: 11%
 | 完成 | 通過 |
 | 完成 | 失敗 |
 
-## 伺服器端{#essentials-for-server-side}的要點
+## 伺服器端的Essentials {#essentials-for-server-side}
 
 ### 指定任務功能 {#assignments-function}
 
@@ -93,4 +93,4 @@ ht-degree: 11%
 
 * [報表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [報表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
+* [報表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)
