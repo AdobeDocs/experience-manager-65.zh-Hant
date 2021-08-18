@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '1534'
-ht-degree: 1%
+source-wordcount: '1521'
+ht-degree: 2%
 
 ---
 
-# SCF Handlebars Helpers {#scf-handlebars-helpers}
+# SCF Handlebars幫助器 {#scf-handlebars-helpers}
 
 | **[⇐功能要點](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
@@ -89,7 +89,7 @@ Then abbreviate would return
 */
 ```
 
-## Content-loadmore {#content-loadmore}
+## 內容載入更多 {#content-loadmore}
 
 協助您在div下方新增兩個範圍，一個適用於全文，另一個適用於較少的文字，並可在兩個檢視之間切換。
 
@@ -143,7 +143,7 @@ Then content-loadmore would return
 
    （選用）要套用的日期格式。 預設值為&quot;YYYY-MM-DDTHH:mm:ss.ssZ&quot;，結果顯示為&quot;2015-03-18T18:17:13-07:00&quot;
 
-### 範例{#examples-1}
+### 範例 {#examples-1}
 
 ```
 {{dateUtil this.memberSince format="dd MMM yyyy, hh:mm"}}
@@ -300,7 +300,7 @@ Then content-loadmore would return
 
    （選用）逗號分隔的用戶端程式庫類別清單。 這會包含指定類別的所有CSS程式庫。
 
-### 範例{#examples-2}
+### 範例 {#examples-2}
 
 ```
 // all: js + theme (theme-js + css)
@@ -447,9 +447,7 @@ var input = {{xss-jsString topic-title}}
 <a href="{{xss-validHref url}}">my link</a>
 ```
 
-## Handlebars.js基本概述{#handlebars-js-basic-overview}
-
-[Handlebars.js檔案](https://handlebarsjs.com/expressions.html)中協助函式的快速概述：
+## Handlebars.js基本概述 {#handlebars-js-basic-overview}
 
 * Handlebars幫手調用是簡單的標識符（幫手的&#x200B;*name*），後面跟著零個或多個以空格分隔的參數。
 * 參數可以是簡單的字串、數字、布林值或JSON物件，以及作為最後一個參數的機碼值組（雜湊引數）的選用序列。
@@ -470,7 +468,7 @@ var input = {{xss-jsString topic-title}}
 
 * 建議從協助程式傳回的HTML字串內容為SafeString。
 
-### Handlebars.js檔案中的簡單協助程式範例：{#an-example-of-a-simple-helper-from-handlebars-js-documentation}
+### Handlebars.js檔案中的簡單協助程式範例： {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link_to', function(title, options) {
@@ -496,7 +494,7 @@ template(context);
 &lt;li>&lt;a href=&quot;/posts/hello-world&quot;>貼！&lt;/a>&lt;/li>
 &lt;/ul>
 
-### Handlebars.js檔案中的區塊協助程式範例：{#an-example-of-a-block-helper-from-handlebars-js-documentation}
+### Handlebars.js檔案中的區塊協助程式範例： {#an-example-of-a-block-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link', function(options) {
@@ -522,11 +520,11 @@ template(data);
 &lt;li>&lt;a href=&quot;/people/2&quot;>耶胡達&lt;/a>&lt;/li>
 &lt;/ul>
 
-## 自定義SCF幫助器{#custom-scf-helpers}
+## 定制SCF幫助器 {#custom-scf-helpers}
 
 必須在伺服器端和用戶端上實作自訂協助程式，尤其是在傳送資料時。 對於SCF，當伺服器在請求頁面時為指定元件生成HTML時，大多數模板都在伺服器端編譯和呈現。
 
-### 伺服器端自訂協助程式{#server-side-custom-helpers}
+### 伺服器端自訂協助工具 {#server-side-custom-helpers}
 
 若要在伺服器端實作和註冊自訂SCF協助程式，只需實作Java介面[TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，將其設為[OSGi服務](../../help/sites-developing/the-basics.md#osgi)，並作為OSGi套件的一部分進行安裝即可。
 
@@ -574,7 +572,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >在登入使用者的用戶端上會重新轉譯元件，如果找不到用戶端協助程式，元件就會消失。
 
-### 客戶端自定義幫助器{#client-side-custom-helpers}
+### 用戶端自訂協助工具 {#client-side-custom-helpers}
 
 客戶端幫助程式是通過調用`Handlebars.registerHelper()`註冊的Handlebars指令碼。
 例如：
