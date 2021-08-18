@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
-source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
+source-git-commit: 07f8a9f629122102d30676926b225d57e542147d
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '677'
 ht-degree: 1%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 1%
 
 ### 無JSP元件模板 {#no-jsp-component-templates}
 
-[社交元件框架](/help/communities/scf.md)(SCF)使用`HandlebarsJS`(HBS)模板語言來取代AEM 6.0之前使用的Java Server Pages(JSP)。
+[社交元件架構](/help/communities/scf.md)(SCF)使用[HandlebarsJS](https://handlebarsjs.com/)(HBS)範本語言，取代AEM 6.0之前使用的Java伺服器頁面(JSP)。
 
 在AEM 6.0中，JSP元件會保留在相同位置的新HBS架構元件旁，而HBS元件通常位於名為「hbs」的子資料夾中。
 
