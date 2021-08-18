@@ -11,14 +11,14 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d42057a2f8ce50332f404388fd1cfc9b6a154765
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1905'
 ht-degree: 1%
 
 ---
 
-# 部署社區{#deploying-communities}
+# 部署社群 {#deploying-communities}
 
 ## 必備條件 {#prerequisites}
 
@@ -32,7 +32,7 @@ ht-degree: 1%
    * [MSRP適用的MongoDB](/help/communities/msrp.md)
    * [適用於ASRP的Adobe雲](/help/communities/asrp.md)
 
-## 安裝檢查清單{#installation-checklist}
+## 安裝檢查清單 {#installation-checklist}
 
 **針對 [AEM平台](/help/sites-deploying/deploy.md#what-is-aem)**
 
@@ -87,21 +87,21 @@ ht-degree: 1%
 
 
 
-## 最新版本{#latest-releases}
+## 最新發行 {#latest-releases}
 
 AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)的更新，請參閱[AEM 6.5發行說明](/help/release-notes/release-notes.md#communities-release-notes.html)。
 
-### AEM 6.5更新{#aem-updates}
+### AEM 6.5更新 {#aem-updates}
 
 自AEM 6.4開始，Communities的更新會隨AEM Cumulative Fix Pack和Service Pack一併提供。
 
 如需AEM 6.5的最新更新，請參閱[Adobe Experience Manager 6.4 Cumulative Fix Pack和Service Pack](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html)。
 
-### 版本歷史記錄{#version-history}
+### 版本記錄 {#version-history}
 
 與AEM 6.4及更新版本一樣，AEM Communities功能和Hotfix是AEM Communities Cumulative Fix Pack和Service Pack的一部分。 因此，沒有單獨的功能套件。
 
-### MySQL {#jdbc-driver-for-mysql}的JDBC驅動程式
+### MySQL的JDBC驅動程式 {#jdbc-driver-for-mysql}
 
 兩個Communities功能使用MySQL資料庫：
 
@@ -134,11 +134,11 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 
 有關安裝套件的詳細資訊，請參見[Web控制台](/help/sites-deploying/web-console.md)頁。
 
-#### 範例：已安裝MySQL連接器套件{#example-installed-mysql-connector-bundle}
+#### 範例：已安裝的MySQL連接器套件組合 {#example-installed-mysql-connector-bundle}
 
 ![連接器束](assets/connector-bundle.png)
 
-### SCORM包{#scorm-package}
+### SCORM套件 {#scorm-package}
 
 共用內容物件參考模型(SCORM)是數位學習的標準和規格的集合。 SCORM也定義了如何將內容封裝成可傳輸的ZIP檔案。
 
@@ -153,7 +153,7 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 1. 從發佈者的`https://<hostname>:<port>/system/console/configMgr`，在CSRF篩選器的「排除路徑」屬性中新增`/content/communities/scorm/RecordResults`。
 
 
-#### SCORM記錄{#scorm-logging}
+#### SCORM記錄 {#scorm-logging}
 
 安裝後，所有啟用活動都會正確記錄到系統主控台。
 
@@ -167,14 +167,15 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 
 您可從Adobe存放庫取得進階MLS下載（也稱為「phasetwo」）:
 
-* [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
+* AEM-SOLR-MLS-phasetwo(
+若要取得進階MLS套件，請參閱檔案部署區段中的[AEM進階MLS](deploy-communities.md#aem-advanced-mls) 。
 
    * 1.2.40版，2016年4月6日
    * 下載AEM-SOLR-MLS-phasetwo-1.2.40.zip
 
 有關詳細資訊和安裝資訊，請訪問SRP的[Solr配置](/help/communities/solr.md)。
 
-### 關於包共用的連結{#about-links-to-package-share}
+### 關於封裝共用的連結 {#about-links-to-package-share}
 
 **AdobeAEM Cloud中可見的套件**
 
@@ -195,7 +196,7 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 
 如需詳細資訊，請造訪[如何使用套件](/help/sites-administering/package-manager.md#package-share)。
 
-## 建議的部署{#recommended-deployments}
+## 建議的部署 {#recommended-deployments}
 
 在AEM Communities中，公用存放區用於儲存使用者產生的內容(UGC)，且通常稱為[儲存資源提供者(SRP)](/help/communities/working-with-srp.md)。 建議的部署中心是為通用商店選擇SRP選項。
 
@@ -213,7 +214,7 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 
 ## 設定 {#configurations}
 
-### 主發佈者{#primary-publisher}
+### 主要發行者 {#primary-publisher}
 
 當選擇的部署是[publish farm](/help/communities/topologies.md#tarmk-publish-farm)時，對於不應在所有例項上發生的活動(例如依賴&#x200B;**notifications**&#x200B;或&#x200B;**Adobe Analytics**&#x200B;的功能)，必須將一個AEM發佈例項識別為&#x200B;**`primary publisher`**。
 
@@ -235,7 +236,7 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 * 取消選中&#x200B;**Primary Publisher**&#x200B;框
 * 選擇&#x200B;**保存**
 
-### 作者上的復寫代理{#replication-agents-on-author}
+### 製作上的復寫代理 {#replication-agents-on-author}
 
 復寫用於在發佈環境中建立的網站內容，例如社群群組，以及使用[tunnel service](#tunnel-service-on-author)管理製作環境中的成員和成員群組。
 
@@ -263,15 +264,15 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 
 下圖顯示了埠從4503更改為6103的結果：
 
-#### 預設代理（發佈）{#default-agent-publish}
+#### 預設代理（發佈） {#default-agent-publish}
 
 ![default-agent-publish](assets/default-agent-publish.png)
 
-#### 反向複製代理（發佈反向）{#reverse-replication-agent-publish-reverse}
+#### 反向復寫代理（發佈反向） {#reverse-replication-agent-publish-reverse}
 
 ![反向複製代理](assets/reverse-replication-agent.png)
 
-### 作者{#tunnel-service-on-author}上的通道服務
+### 作者的通道服務 {#tunnel-service-on-author}
 
 使用製作環境建立網站[](/help/communities/sites-console.md)、[修改網站屬性](/help/communities/sites-console.md#modifying-site-properties)或[管理社群成員](/help/communities/members.md)時，必須存取在發佈環境中註冊的成員（使用者），而非在作者上註冊的使用者。
 
@@ -294,7 +295,7 @@ AEM 6.5 Communities GA包含Communities套件。 若要了解AEM 6.5 [Communitie
 
    ![隧道服務](assets/tunnel-service.png)
 
-### 複製加密密鑰{#replicate-the-crypto-key}
+### 複製加密密鑰 {#replicate-the-crypto-key}
 
 AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同的加密金鑰。 這些是[Analytics](/help/communities/analytics.md)和[ASRP](/help/communities/asrp.md)。
 
@@ -331,7 +332,7 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 >
 >如果已基於加密密鑰配置了另一個安全功能，則複製加密密鑰可能會損壞配置。 如需協助，請[聯絡客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)。
 
-#### 儲存庫複製{#repository-replication}
+#### 存放庫復寫 {#repository-replication}
 
 如同AEM 6.2及更舊版本一樣，將關鍵資料儲存在儲存庫中，可借由在每個AEM例項（會建立初始存放庫）首次啟動時指定下列系統屬性來保留：
 
@@ -354,7 +355,7 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 
    ![replicare-repository](assets/replicare-repository.png)
 
-#### 刷新Granite加密包{#refresh-the-granite-crypto-bundle}
+#### 重新整理Granite加密套件組合 {#refresh-the-granite-crypto-bundle}
 
 * 在每個發佈實例上，訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
@@ -374,7 +375,7 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 
 尤其是，請務必在`RedirectMatch`中使用正確的伺服器名稱，而不是`localhost`。
 
-#### httpd.conf範例{#httpd-conf-sample}
+#### httpd.conf範例 {#httpd-conf-sample}
 
 ```shell
 <IfModule alias_module>
@@ -400,7 +401,7 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 * [為社群設定Dispatcher](/help/communities/dispatcher.md)
 * [已知問題](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 
-## 相關社群檔案{#related-communities-documentation}
+## 相關社群檔案 {#related-communities-documentation}
 
 * 請訪問[管理社區站點](/help/communities/administer-landing.md)了解如何建立社區站點、配置社區站點模板、協調社區內容、管理成員和配置消息。
 
