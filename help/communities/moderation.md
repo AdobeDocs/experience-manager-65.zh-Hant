@@ -12,10 +12,10 @@ discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 3%
+source-wordcount: '2050'
+ht-degree: 4%
 
 ---
 
@@ -242,11 +242,11 @@ Github上的[範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
 若要安裝標籤篩選器的範例：
 
-1. 在AEM Author([https://[aem-author]:4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))例項和AEM Publish([https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))例項上開啟套件管理器。
+1. 在AEM Author(`https://[aem-author]:4502/crx/packmgr/index.jsp`)例項和AEM Publish(`https://[aem-publish]:4503/crx/packmgr/index.jsp`)例項上開啟套件管理器。
 1. 從Github程式碼建立套件`com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip`，然後安裝並啟用相同的套件。
 1. 在AEM Author(`https://[aem-author]:4502/system/console/bundles`)例項和AEM Publish(`https://[aem-publish]:4503/system/console/bundles`)例項上開啟套件組合主控台。
-1. 從Github建置套件` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`，並安裝並啟用相同的套件。
-1. 前往AEM Author([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))和AEM Publish([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))例項上的&lt;a0/apps/mocial/moderation/facets **節點。**
+1. 從Github建置套件(`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`)，並安裝並啟用相同的套件。
+1. 前往AEM Author(`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)和AEM Publish(`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)例項上的&#x200B;**/apps/social/moderation/facets**&#x200B;節點。
 1. 新增具有`jcr:read`權限的技術使用者&#x200B;**communities-utility-reader**。
 
 要公開現有社群網站上的自訂篩選器：
