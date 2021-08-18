@@ -12,10 +12,10 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: f4f4be3d9885723953b1306ff25a52d27799aa93
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '2508'
-ht-degree: 1%
+source-wordcount: '2490'
+ht-degree: 2%
 
 ---
 
@@ -119,7 +119,7 @@ ht-degree: 1%
 要配置Apache Sling同步代理配置：
 
 1. 以AEM製作執行個體的管理員權限登入。
-1. 訪問[Web控制台](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)。 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
+1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)。 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
 1. 找到&#x200B;**Apache Sling Distribution Agent — 同步代理工廠**。
 
    * 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
@@ -165,7 +165,7 @@ ht-degree: 1%
 要配置要同步的資料（節點路徑），請執行以下操作：
 
 1. 以管理員權限登入您的發佈執行個體。
-1. 訪問[Web控制台](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)。
+1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)。
 
    例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
@@ -188,7 +188,7 @@ ht-degree: 1%
 要確保成員同步：
 
 1. 以管理員權限登入您的發佈執行個體。
-1. 訪問[Web控制台](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)。
+1. 訪問[Web控制台](/help/sites-deploying/configuring-osgi.md)。
 
    例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
