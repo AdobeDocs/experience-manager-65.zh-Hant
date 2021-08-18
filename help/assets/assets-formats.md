@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin
 feature: 資產管理，轉譯
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f0a0ea53675afa16463a3cf863257020ba5374d3
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1555'
 ht-degree: 10%
 
 ---
@@ -217,12 +217,8 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | AVI | A/V插播 | XVID、DIVX、HDV、MiniDV(DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | 奧格夫、奧格 | 奧格 | 蒂奧拉，VP3，狄拉克 | - |
-| MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、松下DVCPro | - |
-| MTS | AVCHD | H264/AVC | - |
 | MKV | 馬特羅斯卡 | H264/AVC | - |
-| R3D、RM | 紅色原始視頻 | MJPEG 2000 | - |
 | RAM、RM | RealVideo | 不支援 | Real G2(RV20)、Real 8(RV30)、Real 10(RV40) |
-| FLAC | 原生片段 | 免費無損音頻編解碼器 | - |
 | MJ2 | 動作JPEG 2000 | 運動JPEG 2000編解碼器 | - |
 
 ## 支援的封存格式 {#supported-archive-formats}
