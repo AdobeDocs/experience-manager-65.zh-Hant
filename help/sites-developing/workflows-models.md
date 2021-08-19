@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '2485'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 使用者啟動工作流程時，會啟動例項；這是在您[同步](#sync-your-workflow-generate-a-runtime-model)變更時建立的對應執行階段模型。
 
-## 建立新工作流{#creating-a-new-workflow}
+## 建立新工作流程 {#creating-a-new-workflow}
 
 首次建立新的工作流模型時，它包含：
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 >
 >然後，此資料夾可用於[管理對該資料夾](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)中模型的訪問。
 
-## 編輯工作流{#editing-a-workflow}
+## 編輯工作流程 {#editing-a-workflow}
 
 您可以編輯任何現有的工作流模型以：
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 完成對工作流的更新後，必須使用&#x200B;**Sync**&#x200B;來&#x200B;**生成運行時模型**。 如需詳細資訊，請參閱[同步您的工作流程](#sync-your-workflow-generate-a-runtime-model)。
 
-### 同步工作流 — 生成運行時模型{#sync-your-workflow-generate-a-runtime-model}
+### 同步工作流 — 生成運行時模型 {#sync-your-workflow-generate-a-runtime-model}
 
 **同步** （在編輯器工具列中右側）會產生執 [行階段模型](/help/sites-developing/workflows.md#runtime-model)。執行階段模型是使用者啟動工作流程時實際使用的模型。 如果您未&#x200B;**同步**&#x200B;您的更改，則這些更改將在運行時不可用。
 
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 ![wf-21](assets/wf-21.png)
 
-### 首次編輯預設或舊版工作流{#editing-a-default-or-legacy-workflow-for-the-first-time}
+### 首次編輯預設或舊版工作流程 {#editing-a-default-or-legacy-workflow-for-the-first-time}
 
 開啟[預設和/或舊模型](/help/sites-developing/workflows.md#workflow-types)進行編輯時：
 
@@ -100,7 +100,7 @@ ht-degree: 1%
 
 ![wf-22](assets/wf-22.png)
 
-### 將步驟添加到模型{#adding-a-step-to-a-model}
+### 向模型添加步驟 {#adding-a-step-to-a-model}
 
 您需要將步驟新增至模型以代表要執行的活動 — 每個步驟都會執行特定活動。 標準AEM例項中提供一系列步驟元件。
 
@@ -143,7 +143,7 @@ ht-degree: 1%
 
    如需詳細資訊，請參閱[同步您的工作流程](#sync-your-workflow-generate-a-runtime-model)。
 
-### 配置工作流步驟{#configuring-a-workflow-step}
+### 設定工作流程步驟 {#configuring-a-workflow-step}
 
 您可以使用&#x200B;**步驟屬性**&#x200B;對話方塊，來&#x200B;**設定**&#x200B;及自訂工作流程步驟的行為。
 
@@ -165,7 +165,7 @@ ht-degree: 1%
 
    如需詳細資訊，請參閱[同步您的工作流程](#sync-your-workflow-generate-a-runtime-model)。
 
-### 建立暫時工作流{#creating-a-transient-workflow}
+### 建立暫時性工作流程 {#creating-a-transient-workflow}
 
 建立新模型或編輯現有模型時，可以建立[暫時](/help/sites-developing/workflows.md#transient-workflows)工作流模型：
 
@@ -181,7 +181,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->在[暫時](/help/sites-developing/workflows.md#transient-workflows)模式AEM中執行工作流程時，不會儲存任何工作流程歷史記錄。 因此，[時間軸](/help/sites-authoring/basic-handling.md#timeline)不會顯示與該工作流程相關的任何資訊。[](/help/sites-authoring/basic-handling.md#timeline)
+>在[暫時](/help/sites-developing/workflows.md#transient-workflows)模式AEM中執行工作流程時，不會儲存任何工作流程歷史記錄。 因此，[時間軸](/help/sites-authoring/basic-handling.md#timeline)不會顯示與該工作流程相關的任何資訊。
 
 ## 讓工作流程模型可在觸控式UI中使用 {#classic2touchui}
 
@@ -205,7 +205,7 @@ ht-degree: 1%
 
 1. 使用&#x200B;**[!UICONTROL Sync]**&#x200B;完成該過程。 現在，觸控式UI中提供工作流程。
 
-### 配置多資源支援的工作流{#configuring-a-workflow-for-multi-resource-support}
+### 為多資源支援配置工作流 {#configuring-a-workflow-for-multi-resource-support}
 
 建立新模型時，或編輯現有模型時，可以為[多資源支援](/help/sites-developing/workflows.md#multi-resource-support)配置工作流模型：
 
@@ -220,7 +220,7 @@ ht-degree: 1%
 
    如需詳細資訊，請參閱[同步您的工作流程](#sync-your-workflow-generate-a-runtime-model)。
 
-### 配置工作流階段（顯示工作流進度）{#configuring-workflow-stages-that-show-workflow-progress}
+### 配置工作流階段（顯示工作流進度） {#configuring-workflow-stages-that-show-workflow-progress}
 
 [工作](/help/sites-developing/workflows.md#workflow-stages) 流程階段可協助視覺化處理任務時工作流程的進度。
 
@@ -260,7 +260,7 @@ ht-degree: 1%
 
    如需詳細資訊，請參閱[同步您的工作流程](#sync-your-workflow-generate-a-runtime-model)。
 
-## 導出包{#exporting-a-workflow-model-in-a-package}中的工作流模型
+## 導出包中的工作流模型 {#exporting-a-workflow-model-in-a-package}
 
 要導出包中的工作流模型，請執行以下操作：
 
@@ -293,7 +293,7 @@ ht-degree: 1%
 1. 從包定義的工具欄中選擇&#x200B;**Build**。
 1. 從包工具欄選擇&#x200B;**下載**。
 
-## 使用工作流處理表單提交{#using-workflows-to-process-form-submissions}
+## 使用工作流程處理表單提交 {#using-workflows-to-process-form-submissions}
 
 您可以設定要由所選工作流程處理的表單。 當使用者提交表單時，會建立新的工作流程例項，並將表單提交的資料作為有效負載。
 
@@ -308,7 +308,7 @@ ht-degree: 1%
 
 1. 使用勾號確認新的表單設定。
 
-## 測試工作流{#testing-workflows}
+## 測試工作流程 {#testing-workflows}
 
 在測試工作流程以使用各種裝載類型時，這是個好作法；包括與已開發的類型不同的類型。 例如，如果您想要處理資產，請將頁面設定為裝載以測試工作流程，並確定不會擲回錯誤。
 
@@ -324,7 +324,7 @@ ht-degree: 1%
 
 ## 範例 {#examples}
 
-### 範例：建立（簡單）工作流以接受或拒絕發佈請求{#example-creating-a-simple-workflow-to-accept-or-reject-a-request-for-publication}
+### 範例：建立（簡單）工作流以接受或拒絕發佈請求 {#example-creating-a-simple-workflow-to-accept-or-reject-a-request-for-publication}
 
 為了說明建立工作流的一些可能性，以下示例建立了`Publish Example`工作流的變化。
 
@@ -431,7 +431,7 @@ ht-degree: 1%
 
    如需詳細資訊，請參閱[同步您的工作流程](#sync-your-workflow-generate-a-runtime-model)。
 
-#### 函式Check(){#function-check}
+#### 函式檢查() {#function-check}
 
 >[!NOTE]
 >
@@ -456,7 +456,7 @@ function check() {
 }
 ```
 
-### 範例：激活的自定義請求{#example-customized-request-for-activation}
+### 範例：自訂的啟動請求 {#example-customized-request-for-activation}
 
 您可以自訂任何現成可用的工作流程。 若要具有自訂行為，請覆蓋適當工作流程的詳細資訊。
 
