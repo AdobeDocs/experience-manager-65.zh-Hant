@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
 
-# 效能測試的最佳實務{#best-practices-for-performance-testing}
+# 效能測試最佳實務{#best-practices-for-performance-testing}
 
 ## 簡介 {#introduction}
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 本檔案將概述執行效能測試的總體戰略和方法，以及Adobe提供的一些工具，以協助執行該過程。 最後，我們將從代碼分析和系統配置角度分析AEM 6提供的一些工具，以幫助進行效能調整。
 
-### 模擬現實{#simulating-reality}
+### 模擬現實 {#simulating-reality}
 
 執行效能測試時，最重要的是確保您盡可能模擬生產環境。 雖然這通常很困難，但必須確保這些測試的準確性。 在設計效能測試時，必須考慮以下幾點：
 
@@ -45,15 +45,15 @@ AEM中的許多效能測量（例如查詢回應時間）可能會受到系統�
 
 在系統負載過重之前，系統不會出現許多效能問題。 良好的效能測試應模擬生產系統在其峰值時所受的負載。
 
-### 設定目標{#setting-goals}
+### 設定目標 {#setting-goals}
 
-開始進行效能測試之前，必須設定非功能需求，以指定負載和回應時間。 如果您要從現有系統移轉，請確定回應時間類似於目前的生產值。 對於負載，最好採用當前峰值負載，將其加倍。 這可確保網站在成長時仍可繼續正常運作。
+開始進行效能測試之前，必須設定非功能需求，以指定負載和回應時間。 如果您要從現有系統移轉，請確定回應時間與目前的生產值類似。 對於負載，最好採用當前峰值負載，將其加倍。 這可確保網站在成長時仍可繼續正常運作。
 
 ### 工具 {#tools}
 
 市場上有許多市面上可用的效能測試工具。 運行負載生成工具時，必須確保執行測試的電腦具有足夠的網路頻寬。 否則，一旦測試機達到其連接極限，就不會在被測試的環境中產生額外負載。
 
-#### 測試工具{#testing-tools}
+#### 測試工具 {#testing-tools}
 
 * Adobe的&#x200B;**Tough Day**&#x200B;工具可用來在AEM例項上產生負載並收集效能資料。 Adobe的AEM工程團隊實際上會使用此工具來測試AEM產品本身。 在艱難時刻執行的指令碼是通過屬性檔案和JMX XML檔案配置的。 如需詳細資訊，請參閱[Tough Day documentation](/help/sites-developing/tough-day.md)。
 
@@ -65,10 +65,10 @@ AEM中的許多效能測量（例如查詢回應時間）可能會受到系統�
 * 也可使用雲端負載測試工具，例如[Neustar](https://www.neustar.biz/services/web-performance/load-testing)。
 * 若是測試行動或回應式網站，則需使用個別的工具集。 它們通過調節網路頻寬，模擬慢速移動連接（如3G或EDGE）來工作。 使用範圍更廣的工具包括：
 
-   * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)**  — 它提供易於使用的UI，並且在網路堆疊上工作的級別相當低。其中包含OS X和iOS的版本；[](https://nshipster.com/network-link-conditioner/)
-   * [**Charles**](https://www.charlesproxy.com/)  — 除了數個其他用途外，還提供網路節流功能的網頁除錯代理應用程式。提供Windows、OS X和Linux版本。[](https://www.charlesproxy.com/)
+   * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)**  — 它提供易於使用的UI，並且在網路堆疊上工作的級別相當低。其中包含OS X和iOS的版本；
+   * [**Charles**](https://www.charlesproxy.com/)  — 除了數個其他用途外，還提供網路節流功能的網頁除錯代理應用程式。提供Windows、OS X和Linux版本。
 
-#### 優化工具{#optimization-tools}
+#### 最佳化工具 {#optimization-tools}
 
 **監控**
 
@@ -90,9 +90,9 @@ ACS AEM工具中的[Explain Query Tool](/help/sites-administering/operations-das
 
 Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務，並提供外掛程式，可與Apache執行個體上的Dispatcher一併安裝，以作出其他最佳化。 如需詳細資訊，請參閱[PageSpeed工具網站](https://developers.google.com/speed/pagespeed/)。
 
-## 製作環境{#author-environment}
+## 製作環境 {#author-environment}
 
-### 執行測試{#performing-tests}
+### 執行測試 {#performing-tests}
 
 若要對製作環境進行效能測試，您必須模擬製作作者的體驗。 這表示製作安裝必須包含所有元件、OSGi套件組合、UI自訂、自訂索引，以及您為生產製作例項準備的任何其他新增項目。
 
@@ -100,7 +100,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 
 對於需要大量資產載入或頁面編寫的環境類型，必須使用Tough Day等工具，以確保環境在峰值負載下能有效運作。 [](/help/sites-administering/webdav-access.md) WebDAV是不需要指令碼的工具，也可用於載入大量資產。
 
-#### MongoDB特定步驟{#mongodb-specific-steps}
+#### MongoDB特定步驟 {#mongodb-specific-steps}
 
 在有MongoDB後端的系統上，AEM提供了幾個[JMX](/help/sites-administering/jmx-console.md) MBean，在執行負載或效能測試時需要監控：
 
@@ -116,9 +116,9 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 
 **ObservationQueueMaxLength**&#x200B;區段將顯示Oak觀察佇列中過去幾小時、分鐘、秒和周的事件數。 在「每小時」區段中找出最大的事件數。 需要將此數字與`oak.observation.queue-length`設定進行比較，該設定可在[OSGi控制台](/help/sites-deploying/web-console.md)的&#x200B;**SlingRepositoryManager**&#x200B;元件中找到。 如果觀察佇列顯示的最高數量超過`queue-length`設定，請聯絡Adobe支援以取得提升設定的協助。 預設設定為1,000，但大部分部署通常需要將其提高至20,000或50,000。
 
-## 發佈環境{#publish-environment}
+## 發佈環境 {#publish-environment}
 
-### 執行測試{#performing-tests-1}
+### 執行測試 {#performing-tests-1}
 
 部署中最需要接受載入測試的部分，是面對發佈或調度程式環境的一般使用者。
 
@@ -130,7 +130,7 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 
 對於基本測試，Apache Bench可用於測量Web伺服器響應時間，並幫助建立用於測量記憶體洩漏等內容的負載。 如需詳細資訊，請參閱[監控檔案](/help/sites-deploying/monitoring-and-maintaining.md#apache-bench)中的範例。
 
-## 疑難排解效能問題{#troubleshooting-performance-issues}
+## 疑難排解效能問題 {#troubleshooting-performance-issues}
 
 在製作執行個體上執行效能測試後，任何問題都需要調查、診斷和解決。 在執行分析和解決問題時，您可以使用數種工具和技術：
 
