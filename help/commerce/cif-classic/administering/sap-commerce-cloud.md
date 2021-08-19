@@ -7,7 +7,8 @@ uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
+source-git-commit: 61691c300322edcdee33b121ca400e4c89256e45
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -26,7 +27,7 @@ ht-degree: 1%
 1. [設定目錄匯入工具](#configure-the-catalog-importer)。
 1. 使用[匯入工具將目錄](#catalog-import)匯入至AEM中的特定位置。
 
-## 配置Geometrixx Outdoors的強制搜索{#configure-the-facetted-search-for-geometrixx-outdoors}
+## 配置強制搜索Geometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -100,7 +101,7 @@ ht-degree: 1%
    * **索引器操作**:  `full`
    * **Sol配置**:  `Sample Solr Config for Clothes`
 
-## 配置目錄版本{#configure-the-catalog-version}
+## 配置目錄版本 {#configure-the-catalog-version}
 
 可以為OSGi服務配置導入的&#x200B;**目錄版本**(`hybris.catalog.version`):
 
@@ -115,7 +116,7 @@ ht-degree: 1%
 
 記錄輸出會針對已建立的頁面和元件提供意見反應，並報告可能的錯誤。
 
-## 配置導入結構{#configure-the-import-structure}
+## 配置導入結構 {#configure-the-import-structure}
 
 下列清單顯示預設建立的範例結構（資產、頁面和元件）:
 
@@ -165,7 +166,7 @@ ht-degree: 1%
 
 使用AEM時，有數種方法可管理這類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md) 。 另請參閱主控台，以取得可設定參數及其預設值的完整清單。
 
-## 配置產品屬性以載入{#configure-the-product-attributes-to-load}
+## 設定要載入的產品屬性 {#configure-the-product-attributes-to-load}
 
 回應剖析器可設定為定義要為（變體）產品載入的屬性和屬性：
 
@@ -180,7 +181,7 @@ ht-degree: 1%
    >
    >使用AEM時，有數種方法可管理這類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md) 。 另請參閱主控台，以取得可設定參數及其預設值的完整清單。
 
-## 導入產品資料{#importing-the-product-data}
+## 匯入產品資料 {#importing-the-product-data}
 
 匯入產品資料的方式有許多種。 最初設定環境時，或在hybris資料中進行變更後，可匯入產品資料：
 
@@ -204,7 +205,7 @@ ht-degree: 1%
 >
 >每次請求產品相關資訊時，都會參考hybris伺服器。
 
-### 完整導入{#full-import}
+### 完整匯入 {#full-import}
 
 1. 如有需要，請使用CRXDE Lite刪除所有現有產品資料。
 
@@ -273,7 +274,7 @@ ht-degree: 1%
    ```
 
 
-### 快速更新{#express-update}
+### 快速更新 {#express-update}
 
 匯入程式可能需要很長的時間，因此，作為產品同步的擴充功能，您可以為手動觸發的快速更新選取目錄的特定區域。 這會使用匯出摘要與標準屬性設定。
 
@@ -308,9 +309,7 @@ ht-degree: 1%
        /etc/commerce/products
    ```
 
-   ` [](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
-
-## 配置目錄導入程式{#configure-the-catalog-importer}
+## 設定目錄匯入工具 {#configure-the-catalog-importer}
 
 hybris目錄可使用批次匯入工具，將hybris目錄、類別和產品匯入至AEM。
 
@@ -321,7 +320,7 @@ hybris目錄可使用批次匯入工具，將hybris目錄、類別和產品匯�
 
 使用AEM時，有數種方法可管理這類服務的組態設定；如需完整詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md) 。 另請參閱主控台，以取得可設定參數及其預設值的完整清單。
 
-## 目錄導入{#catalog-import}
+## 目錄匯入 {#catalog-import}
 
 hybris套件隨附目錄匯入工具，用於設定初始頁面結構。
 
@@ -342,7 +341,7 @@ hybris套件隨附目錄匯入工具，用於設定初始頁面結構。
 * **根**
 路徑應匯入目錄的路徑。
 
-## 從目錄{#removing-a-product-from-the-catalog}中刪除產品
+## 從目錄中移除產品 {#removing-a-product-from-the-catalog}
 
 要從目錄中刪除一個或多個產品：
 
@@ -406,7 +405,7 @@ hybris套件隨附目錄匯入工具，用於設定初始頁面結構。
       1. 再次轉出適當的目錄
       1. 刷新相應的類別頁
 
-## 將訂單歷史記錄特徵添加到客戶端上下文{#add-order-history-trait-to-the-client-context}
+## 將訂單歷史記錄特徵新增至用戶端內容 {#add-order-history-trait-to-the-client-context}
 
 要將訂單歷史記錄添加到[客戶端上下文](/help/sites-developing/client-context.md)中，請執行以下操作：
 
