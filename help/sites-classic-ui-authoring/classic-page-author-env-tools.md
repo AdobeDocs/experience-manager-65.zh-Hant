@@ -11,24 +11,24 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 2%
 
 ---
 
-# 編寫 — 環境和工具{#authoring-the-environment-and-tools}
+# 製作 — 環境和工具 {#authoring-the-environment-and-tools}
 
 AEM的製作環境提供多種組織及編輯內容的機制。 提供的工具可從各種主控台和頁面編輯器存取。
 
-## 站點管理{#site-administration}
+## 網站管理 {#site-administration}
 
 **網站**&#x200B;主控台可讓您管理和導覽您的網站。 使用兩個窗格，即可展開網站的結構，並對必要元素採取動作：
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
-## 編輯頁面內容{#editing-your-page-content}
+## 編輯頁面內容 {#editing-your-page-content}
 
 傳統UI提供個別的頁面編輯器，使用內容尋找器和sidekick:
 
@@ -36,7 +36,7 @@ AEM的製作環境提供多種組織及編輯內容的機制。 提供的工具�
 
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
-## 訪問幫助{#accessing-help}
+## 存取說明 {#accessing-help}
 
 您可以從AEM內直接存取各種&#x200B;**Help**&#x200B;資源：
 
@@ -52,7 +52,7 @@ sidekick的&#x200B;**Components**&#x200B;標籤可讓您瀏覽可新增至目前
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
-## 內容尋找器{#the-content-finder}
+## 內容尋找器 {#the-content-finder}
 
 「內容尋找器」是您在編輯頁面時，在存放庫內快速輕鬆尋找資產和/或內容的方法。
 
@@ -62,15 +62,15 @@ sidekick的&#x200B;**Components**&#x200B;標籤可讓您瀏覽可新增至目前
 * [文件](#finding-documents)
 * [影片](#finding-movies)
 * [Dynamic Media瀏覽器](/help/sites-administering/scene7.md#scene7contentbrowser)
-* [](#products) [頁面](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
+* [頁面](#finding-pages)
 
 * [段落](#referencing-paragraphs-from-other-pages)
-* [產品](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#products)
+* [產品](#products)
 * 或按儲存庫結構](#the-content-finder)瀏覽網站[
 
 使用所有選項，您可以[搜索特定項](#the-content-finder)。
 
-### 查找影像{#finding-images}
+### 尋找影像 {#finding-images}
 
 此索引標籤會列出儲存庫中的任何影像。
 
@@ -78,15 +78,15 @@ sidekick的&#x200B;**Components**&#x200B;標籤可讓您瀏覽可新增至目前
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
 
-### 查找文檔{#finding-documents}
+### 查找文檔 {#finding-documents}
 
 此頁簽列出儲存庫中的任何文檔。
 
 在頁面上建立「下載」段落後，您可以拖曳項目並將其拖放至段落中。
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![chlimage_1-192](assets/chlimage_1-112.png)
 
-### 查找電影{#finding-movies}
+### 尋找電影 {#finding-movies}
 
 此索引標籤會列出存放庫中的任何影片(例如Flash項目)。
 
@@ -100,25 +100,25 @@ sidekick的&#x200B;**Components**&#x200B;標籤可讓您瀏覽可新增至目前
 
 ![chlimage_1-114](assets/chlimage_1-114.png)
 
-### 查找頁面{#finding-pages}
+### 尋找頁面 {#finding-pages}
 
 此索引標籤會顯示所有頁面。 按兩下任何頁面以開啟它進行編輯。
 
 ![chlimage_1-114](assets/chlimage_1-115.png)
 
-### 參考其他頁面的段落{#referencing-paragraphs-from-other-pages}
+### 參考其他頁面的段落 {#referencing-paragraphs-from-other-pages}
 
 此索引標籤可讓您搜尋其他頁面。 該頁面的所有段落都將列出。 然後，您可以將段落拖動到當前頁面，這將建立對原始段落的引用。
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-### 使用完整儲存庫視圖{#using-the-full-repository-view}
+### 使用完整儲存庫視圖 {#using-the-full-repository-view}
 
 此頁簽顯示儲存庫中的所有資源。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
-### 使用內容瀏覽器{#using-search-with-the-content-browser}進行搜尋
+### 搭配內容瀏覽器使用搜尋 {#using-search-with-the-content-browser}
 
 在所有選項上，您可以搜尋特定項目。 會列出符合搜尋模式的任何標籤和任何資源：
 
@@ -153,7 +153,7 @@ sidekick的&#x200B;**Components**&#x200B;標籤可讓您瀏覽可新增至目前
 >
 >您也可以使用[SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)搜索。
 
-## 顯示引用{#showing-references}
+## 顯示引用 {#showing-references}
 
 AEM可讓您檢視哪些頁面連結至您目前正在使用的頁面。
 
@@ -186,7 +186,7 @@ AEM可讓您檢視哪些頁面連結至您目前正在使用的頁面。
 
 網站主控台也[提供關於頁面](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)目前狀態的資訊，例如發佈、修改、鎖定、LiveCopy等。
 
-## 頁面模式{#page-modes}
+## 頁面模式 {#page-modes}
 
 使用傳統UI編輯頁面時，可以使用sidekick底部的圖示來存取各種模式：
 
