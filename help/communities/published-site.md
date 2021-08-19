@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 1%
 
 ---
 
-# 體驗已發佈的網站{#experience-the-published-site}
+# 體驗已發佈的網站 {#experience-the-published-site}
 
-## 瀏覽到發佈時的新網站{#browse-to-new-site-on-publish}
+## 在發佈時瀏覽到新站點 {#browse-to-new-site-on-publish}
 
 現在新建立的社群網站已發佈完畢，請瀏覽至建立網站時顯示的URL，但在發佈伺服器上，例如：
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ![已發佈](assets/authorpublished.png)
 
-## 匿名網站訪客{#anonymous-site-visitor}
+## 匿名網站訪客 {#anonymous-site-visitor}
 
 匿名網站訪客在UI中看到下列內容：
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 如果您選取各種連結，您會發現這些連結處於唯讀模式。
 
-### 在JCR {#prevent-anonymous-access-on-jcr}上防止匿名訪問
+### 在JCR上防止匿名訪問 {#prevent-anonymous-access-on-jcr}
 
 已知限制會透過jcr內容和json向匿名訪客公開社群網站內容，不過已針對網站內容停用&#x200B;**允許匿名存取**。 不過，您可以使用Sling限制來控制此行為，作為因應措施。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 1. 新增登入頁面的路徑。 例如， **/content/......./GetStarted**。
 1. 發佈頁面。
 
-## 受信任的社區成員{#trusted-community-member}
+## 受信任的社區成員 {#trusted-community-member}
 
 此體驗假設[Aaron McDonald](/help/communities/tutorials.md#demo-users)已獲派[社群經理和主持人](/help/communities/create-site.md#roles)的角色。 若未包含，請返回作者環境以[修改網站設定](/help/communities/sites-console.md#modifying-site-properties)，並選取Aaron McDonald作為社群經理和協調者。
 
@@ -108,7 +108,7 @@ ht-degree: 1%
 >* [元件、函式和功能要點](/help/communities/essentials.md) （適用於開發人員）
 
 
-### 論壇連結{#forum-link}
+### 論壇連結 {#forum-link}
 
 通過選擇「論壇」連結查看基本論壇功能。
 
@@ -118,7 +118,7 @@ ht-degree: 1%
 
 ![forumlink](assets/forumlink.png)
 
-### 組連結{#groups-link}
+### 群組連結 {#groups-link}
 
 由於Aaron是組管理員，因此選擇「組」連結將允許Aaron通過選擇組模板、影像、組是開啟還是秘密以及邀請成員來建立新的社區組。
 
@@ -193,7 +193,7 @@ ht-degree: 1%
 
 ![grouplink3](assets/grouplink3.png)
 
-### 網頁連結{#web-page-link}
+### 網頁連結 {#web-page-link}
 
 通過選擇「網頁」連結查看網站中包含的基本網頁。 標準AEM製作工具可用來在製作環境中將內容新增至此頁面。
 
@@ -205,11 +205,11 @@ ht-degree: 1%
 
 當社群成員擁有協調權限時，則會顯示「協調」連結，並選取該連結時，會顯示已張貼的社群內容，並允許其以類似於製作環境中[協調控制台](/help/communities/moderation.md)的方式來協調](/help/communities/moderate-ugc.md)。[
 
-使用瀏覽器的返回按鈕返回已發佈的網站。 發佈環境中無法從全域導覽存取大部分的主控台。[](/help/communities/moderate-ugc.md)
+使用瀏覽器的返回按鈕返回已發佈的網站。 發佈環境中無法從全域導覽存取大部分的主控台。
 
 ![協調連結](assets/moderationlink.png)
 
-## 自註冊{#self-registration}
+## 自註冊 {#self-registration}
 
 登出後，可以建立新的使用者註冊。
 
