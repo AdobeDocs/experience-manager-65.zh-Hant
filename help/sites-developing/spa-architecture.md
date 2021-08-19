@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9584392a-d8a3-45a4-9cdf-fd211c8e6091
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '2122'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 >
 >若專案需要SPA架構的用戶端轉譯(例如React或Angular),SPA Editor是建議的解決方案。
 
-## SPA的AEM開發原則{#spa-development-principles-for-aem}
+## SPA的AEM開發原則 {#spa-development-principles-for-aem}
 
 在AEM上開發單頁應用程式時，會假設前端開發人員在建立SPA時遵守標準最佳實務。 如果您是前端開發人員，請遵循這些一般最佳實務以及幾項AEM專屬原則，您的SPA將可搭配[AEM及其內容製作功能](/help/sites-developing/spa-walkthrough.md#content-editing-experience-with-spa)運作。
 
@@ -47,19 +47,19 @@ ht-degree: 1%
 
 產生的SPA應包含高度可攜帶且可重複使用的元件。
 
-### AEM驅動器站點結構{#aem-drives-site-structure}
+### AEM驅動器站點結構 {#aem-drives-site-structure}
 
 前端開發人員必須自認為負責建立用於建立應用程式的SPA元件程式庫。 前端顯影劑對元件的內部結構具有完全控制。 [但AEM隨時擁有網站的結構。](/help/sites-developing/spa-overview.md)
 
 這表示前端開發人員可以在元件入口點之前或之後新增客戶內容，也可以在元件內進行第三方呼叫。 不過，前端開發人員無法完全控制元件的巢狀內嵌方式。
 
-### 動態呈現{#dynamic-rendering}
+### 動態演算 {#dynamic-rendering}
 
-SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的所有子項的預設期望。[](/help/sites-developing/spa-architecture.md#portability)
+SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的所有子項的預設期望。
 
 任何指向特定內容的明確轉譯都視為靜態轉譯，雖然受支援，但與AEM內容製作功能不相容。 這也與[portability](/help/sites-developing/spa-architecture.md#portability)的原則相悖。
 
-### 動態路由{#dynamic-routing}
+### 動態路由 {#dynamic-routing}
 
 與呈現一樣，所有路由也應是動態的。 在AEM中，[SPA應一律擁有路由](/help/sites-developing/spa-routing.md)，並監聽路由，並據此擷取內容。
 
@@ -69,9 +69,9 @@ SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的�
 
 任何AEM專案都應運用[AEM專案原型](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)，這可支援使用React或Angular的SPA專案，並運用SPA SDK。
 
-## SPA設計模型{#spa-design-models}
+## SPA設計模型 {#spa-design-models}
 
-如果遵循在AEM中開發SPA的[原則，則您的SPA將可搭配所有支援的AEM內容製作功能運作。[](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)
+如果遵循在AEM中開發SPA的[原則，則您的SPA將可搭配所有支援的AEM內容製作功能運作。](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)
 
 然而，在某些情況下，這並非完全必要。 下表概述了各種設計模型、其優點和缺點。
 
@@ -103,7 +103,6 @@ SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的�
 >[!NOTE]
 >
 >雖然AEM支援所有模型，但只有實作第三個模型(並因此遵循AEM](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中建議的[SPA開發原則)，內容作者才能按照慣用方式與AEM中的SPA內容互動及編輯。
->[](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)
 
 ## 將現有SPA移轉至AEM {#migrating-existing-spas-to-aem}
 
@@ -121,7 +120,7 @@ SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的�
 
    AEM元件會定義對話方塊和JSON輸出。
 
-## 前端開發人員的說明{#instructions-for-front-end-developers}
+## 前端開發人員的指示 {#instructions-for-front-end-developers}
 
 讓前端開發人員建立SPA for AEM的主要任務是同意元件及其JSON模型。
 
@@ -165,7 +164,7 @@ SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的�
 
    可以禁用或配置`ModelRouter`以忽略規則表達式清單。
 
-## AEM-Agnostic {#aem-agnostic}
+## AEM — 不可知 {#aem-agnostic}
 
 這些程式碼區塊說明React和Angular元件如何不需要任何Adobe或AEM專用的項目。
 
@@ -184,7 +183,7 @@ SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的�
 * [AEM中的SPA快速入門 — React](/help/sites-developing/spa-getting-started-react.md)
 * [AEM中SPA快速入門 — Angular](/help/sites-developing/spa-getting-started-angular.md)
 
-## AEM架構和SPA {#aem-architecture-and-spas}
+## AEM架構與SPA {#aem-architecture-and-spas}
 
 使用SPA時，AEM的一般架構（包括開發、製作和發佈環境）不會變更。 不過，了解SPA開發如何融入此架構會很有幫助。
 
@@ -224,7 +223,7 @@ SPA應僅依賴內容的動態轉譯。 這是AEM擷取並轉譯內容結構的�
 >
 >在AEM內，不需要執行Javascript建置機制或執行Javascript本身。 AEM只會托管SPA應用程式中已編譯的成品。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 如需AEM中簡單SPA的結構及其運作方式的概觀，請參閱[React](/help/sites-developing/spa-getting-started-react.md)和[Angular](/help/sites-developing/spa-getting-started-angular.md)的快速入門手冊。
 
