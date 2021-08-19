@@ -13,7 +13,7 @@ discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 1%
@@ -191,7 +191,7 @@ ht-degree: 1%
 
 ### 運行遷移實用程式後的內部管理任務 {#housekeepingtasks}
 
-運行遷移實用程式後，請處理以下內部管理任務：[](../../forms/using/import-export-forms-templates.md)
+運行遷移實用程式後，請處理以下內部管理任務：
 
 1. 請確定XFA版本的配置和片段配置是3.3或更新版本。 如果您使用舊版的版面和片段版面，則轉譯信函時可能會發生問題。 若要將舊版XFA更新至最新版本，請完成下列步驟：
 
