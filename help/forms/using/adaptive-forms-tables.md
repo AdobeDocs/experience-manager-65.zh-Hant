@@ -10,7 +10,7 @@ discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 feature: 適用性表單
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '2430'
 ht-degree: 0%
@@ -33,13 +33,13 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 * 支援使用XSD複雜類型元素新增列或儲存格
 * 從XML檔案合併資料
 
-## 建立表{#create-a-table}
+## 建立表格 {#create-a-table}
 
 若要建立表格，請從最適化表單的sidekick中的元件瀏覽器，拖放表格元件。 依預設，表格包含兩欄和三列，包括標題列。
 
 ![AEM側欄中的表元件](assets/sidebar-tables.png)
 
-### 關於標題和正文單元格{#about-header-and-body-cells}
+### 關於標題和內文儲存格 {#about-header-and-body-cells}
 
 標題儲存格是文字欄位。 要更改標題的標籤，請按一下右鍵標題單元格，然後按一下&#x200B;**Edit**。 在「編輯」對話方塊中，更新&#x200B;**Value**&#x200B;欄位中的標籤，然後按一下&#x200B;**OK**。
 
@@ -51,7 +51,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 通過選擇要合併的單元格，按一下右鍵，然後選擇&#x200B;**Merge**，可以合併兩個或更多主體單元格。 您也可以對合併的儲存格按一下滑鼠右鍵並選取&#x200B;**「分割儲存格」**&#x200B;來分割該儲存格。
 
-### 添加、刪除、移動行和列{#add-delete-move-rows-and-columns}
+### 添加、刪除、移動行和列 {#add-delete-move-rows-and-columns}
 
 您可以新增和刪除列或欄，以及在表格中上下移動列。
 
@@ -69,7 +69,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 >
 >雖然您可以在表格中新增任意數量的列，但您可新增的最大欄數為6。 此外，您也無法從表格中刪除標題列。
 
-### 添加表說明{#add-table-description}
+### 添加表說明 {#add-table-description}
 
 您可以新增表格說明，說明如何組織資訊，讓螢幕助讀程式解譯及閱讀。 若要新增說明：
 
@@ -108,7 +108,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
    您也可以在&#x200B;**預覽**&#x200B;模式下對表格進行更改，然後再次按一下列標題以排序列值。
 
-## 設定表{#set-column-width}的列寬
+## 設定表的列寬 {#set-column-width}
 
 執行下列步驟來設定表格的欄寬：
 
@@ -129,9 +129,9 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 >[!NOTE]
 >
->您可以變更LESS變數的值，以變更標題和內文列的顏色主題。 如需詳細資訊，請參閱AEM Forms](/help/forms/using/themes.md) [](/help/forms/using/creating-custom-adaptive-form-themes.md)中的[主題。
+>您可以變更LESS變數的值，以變更標題和內文列的顏色主題。 如需詳細資訊，請參閱[AEM Forms中的主題](/help/forms/using/themes.md)。
 
-## 動態地添加或刪除行{#add-or-delete-a-row-dynamically}
+## 動態新增或刪除列 {#add-or-delete-a-row-dynamically}
 
 表格提供立即可用的支援，可在執行階段動態新增或刪除列。
 
@@ -147,7 +147,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 >
 >表格左側行動配置的標題不支援動態新增或刪除列。
 
-## 表{#expressions-in-a-table}中的表達式
+## 表中的運算式 {#expressions-in-a-table}
 
 適用性表單中的表格可讓您在JavaScript中撰寫運算式，以誘導行為，例如顯示或隱藏表格或列、加總所有數字並顯示儲存格中的總計、啟用或停用儲存格、驗證使用者輸入等。 這些運算式使用適用性表單指令碼模型API。
 
@@ -169,13 +169,13 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 如需適用性表單類別、事件、物件和公用API的完整清單，請參閱適用性表單的[ JavaScript程式庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)。
 
-## 行動版面{#mobile-layouts}
+## 行動版面 {#mobile-layouts}
 
 適用性表單中的表格因其流暢且回應式的配置，提供無與倫比的體驗行動裝置。 AEM Forms提供兩種類型的表格行動配置 — 左側標題和可折疊欄。
 
 您可以從表格的「編輯」元件對話方塊的「樣式」索引標籤，為表格設定行動版面。
 
-### 左側的標題{#headers-on-left}
+### 左側的標題 {#headers-on-left}
 
 在左側版面的「標題」中，表格中的標題會在左側轉置，只有一個儲存格會對標題顯示。 此版面中的每一列都會以不同區段顯示。 下列影像會比較案頭上的表格和行動裝置上的表格。
 
@@ -187,7 +187,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 左側版面為「標題」的表格行動檢視
 
-### 可折疊的列佈局{#collapsible-columns-layout}
+### 可折疊的欄佈局 {#collapsible-columns-layout}
 
 在「可折疊」列佈局中，表格中的列會折疊以顯示一列或兩列（視設備大小而定），而其他列則會折疊。 您可以按一下折疊/展開圖示來檢視表格中的其他欄。
 
@@ -205,7 +205,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 行動裝置上表格的擴充欄
 
-## 合併表{#merge-data-in-a-table}中的資料
+## 合併表格中的資料 {#merge-data-in-a-table}
 
 適用性表單中的表格可讓您使用XML檔案中的資料，在執行階段填入表格。 資料XML檔案可位於執行AEM Forms伺服器之電腦的本機檔案系統或CRX存放庫中。
 
@@ -287,7 +287,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 ![資料合併表](assets/data-merged-table.png)
 
-## 使用XDP元件和XSD複雜類型{#use-xdp-components-and-xsd-complex-types}
+## 使用XDP元件和XSD複雜類型 {#use-xdp-components-and-xsd-complex-types}
 
 如果您根據XFA表單範本建立最適化表單，「AEM內容尋找器」的「資料模型」標籤中會提供XFA元素。 您可以在最適化表單中拖放這些XFA元素，包括表格。
 
@@ -307,7 +307,7 @@ XFA表格元素會對應至表格元件，並在最適化表單中立即可用�
 >
 >如果元素數少於一列中的儲存格數，新列會先根據元素新增儲存格，然後新增預設儲存格以填入列中剩餘的儲存格。 例如，如果您將一個由三個元素組成的群組拖曳到一個有四個儲存格的列中，前三個儲存格會以您拖放的元素為基礎，其餘一個儲存格則會是預設的表格儲存格。
 
-## 主要考量事項{#key-considerations}
+## 主要考量 {#key-considerations}
 
 * 如果您在編寫基於XSD的表時上下移動行，則在提交表單時生成的資料XML中會看到表行中的一些資料丟失。
 * 預設表格中的每個主體單元格都具有與其關聯的預定義元素名稱。 如果您在適用性表單中新增其他表格，新表格中的預設內文儲存格將與第一個表格中的元素名稱相同。 在這種情況下，提交表單時產生的資料將僅包含其中一個表格的預設內文儲存格中的資料。 因此，請務必重新命名預設內文儲存格的元素名稱，以讓這些名稱在各表格中保持唯一，並避免資料遺失。
