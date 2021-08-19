@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: 設定
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 83383d46a4200eb3d21deee15c71032314694860
 workflow-type: tm+mt
-source-wordcount: '5892'
+source-wordcount: '5878'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 0%
 >
 >有關備份效能的詳細資訊，請閱讀[備份效能](/help/sites-deploying/configuring-performance.md#backup-performance)部分。
 
-### 備份軟體安裝{#backing-up-your-software-installation}
+### 備份軟體安裝 {#backing-up-your-software-installation}
 
 安裝後或配置發生重大更改後，請備份軟體安裝。
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->如果您正在操作第三方應用程式伺服器，則其他資料夾可能位於不同的位置，並且可能需要備份。 有關安裝應用程式伺服器的資訊，請參閱[如何使用應用程式伺服器安裝AEM](/help/sites-deploying/application-server-install.md)。 [](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager搭配應用程式伺服器)
+>如果您正在操作第三方應用程式伺服器，則其他資料夾可能位於不同的位置，並且可能需要備份。 有關安裝應用程式伺服器的資訊，請參閱[如何使用應用程式伺服器安裝AEM](/help/sites-deploying/application-server-install.md)。
 
 >[!CAUTION]
 >
@@ -86,13 +86,13 @@ ht-degree: 0%
 >
 >磁碟鏡像也可用作備份機制。
 
-### 備份儲存庫{#backing-up-your-repository}
+### 備份儲存庫 {#backing-up-your-repository}
 
 CRX文檔的[備份和還原](/help/sites-administering/backup-and-restore.md)部分涵蓋了與CRX儲存庫備份相關的所有問題。
 
 有關建立線上「熱」備份的完整詳細資訊，請參閱[建立線上備份](/help/sites-administering/backup-and-restore.md#online-backup)。
 
-## 版本清除{#version-purging}
+## 版本清除 {#version-purging}
 
 **清除版本**&#x200B;工具用於清除儲存庫中節點版本或節點層次結構。 其主要用途是透過移除舊版節點，協助您縮小存放庫的大小。
 
@@ -118,7 +118,7 @@ CRX文檔的[備份和還原](/help/sites-administering/backup-and-restore.md)�
 
 **** 清除啟動清除由起始路徑定義的節點上的版本。
 
-### 清除網站版本{#purging-versions-of-a-web-site}
+### 清除網站版本 {#purging-versions-of-a-web-site}
 
 要清除網站的版本，請按以下步驟進行：
 
@@ -139,7 +139,7 @@ CRX文檔的[備份和還原](/help/sites-administering/backup-and-restore.md)�
 >
 >如果未還原儲存庫，則無法還原已清除的節點。 您應處理您的設定，因此我們建議您一律執行乾式執行，然後再清除。
 
-### 分析控制台{#analyzing-the-console}
+### 分析主控台 {#analyzing-the-console}
 
 **乾式運行**&#x200B;和&#x200B;**清除**&#x200B;進程列出所有已處理的節點。 在過程中，節點可以具有以下狀態之一：
 
@@ -164,11 +164,11 @@ CRX文檔的[備份和還原](/help/sites-administering/backup-and-restore.md)�
 
 ![global_version_screasth](assets/global_version_screenshot.png)
 
-## 使用審核記錄和日誌檔案{#working-with-audit-records-and-log-files}
+## 使用審核記錄和日誌檔案 {#working-with-audit-records-and-log-files}
 
 您可以在不同位置找到與Adobe Experience Manager(AEM)相關的稽核記錄和記錄檔。 以下提供您可在何處找到的概觀。
 
-### 使用日誌{#working-with-logs}
+### 使用記錄檔 {#working-with-logs}
 
 AEM WCM記錄詳細記錄。 開啟快速入門程式後，您可以在中找到日誌：
 
@@ -176,7 +176,7 @@ AEM WCM記錄詳細記錄。 開啟快速入門程式後，您可以在中找到
 
 * `<cq-installation-dir>/crx-quickstart/repository/`
 
-#### 日誌檔案旋轉{#log-file-rotation}
+#### 記錄檔旋轉 {#log-file-rotation}
 
 日誌檔案旋轉是指通過定期建立新檔案來限制檔案增長的過程。 在AEM中，名為`error.log`的記錄檔會根據指定規則每天旋轉一次：
 
@@ -188,7 +188,7 @@ AEM WCM記錄詳細記錄。 開啟快速入門程式後，您可以在中找到
 >
 >如果您升級AEM安裝，請注意，AEM不再使用的任何現有記錄檔都會保留在磁碟上。 你可以不冒險地移走它們。 所有新日誌條目都將寫入新日誌檔案中。
 
-### 查找日誌檔案{#finding-the-log-files}
+### 查找日誌檔案 {#finding-the-log-files}
 
 安裝AEM的檔案伺服器上會保留各種記錄檔：
 
@@ -232,7 +232,7 @@ AEM WCM記錄詳細記錄。 開啟快速入門程式後，您可以在中找到
 >
 >**Download Full **包中不包含ImageServer和s7access日誌，該包是從**system/console/status-Bundlist **頁生成的。 為了支援目的，如果您有[!DNL Dynamic Media]問題，當您連絡客戶支援時，請另加ImageServer和s7access日誌。
 
-### 啟用DEBUG日誌級別{#activating-the-debug-log-level}
+### 啟用偵錯記錄層級 {#activating-the-debug-log-level}
 
 預設記錄層級([Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration))為資訊，因此不會記錄除錯訊息。
 
@@ -256,7 +256,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 | 2 | 警告 | 操作已成功，但遇到問題。 AEM WCM可能或無法正常運作。 |
 | 3 | 資訊 | 操作成功。 |
 
-### 建立自定義日誌檔案{#create-a-custom-log-file}
+### 建立自訂記錄檔 {#create-a-custom-log-file}
 
 >[!NOTE]
 >
@@ -437,11 +437,11 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
 Felix Console也會在`../system/console/slinglog`提供Sling記錄支援的相關資訊；例如`https://localhost:4502/system/console/slinglog`。
 
-### 查找審核記錄{#finding-the-audit-records}
+### 查找審核記錄 {#finding-the-audit-records}
 
 保留審計記錄，以便提供記錄，記錄誰做了什麼和何時做了什麼。 會為AEM WCM和OSGi事件產生不同的稽核記錄。
 
-#### AEM WCM稽核記錄在頁面編寫{#aem-wcm-audit-records-shown-when-page-authoring}時顯示
+#### AEM WCM稽核記錄在頁面編寫時顯示 {#aem-wcm-audit-records-shown-when-page-authoring}
 
 1. 開啟頁面。
 1. 從sidekick中，可以選擇帶有鎖表徵圖的頁簽，然後按兩下&#x200B;**審核日誌……**
@@ -451,19 +451,19 @@ Felix Console也會在`../system/console/slinglog`提供Sling記錄支援的相�
 
 1. 要關閉窗口時，按一下&#x200B;**OK**。
 
-#### AEM {#aem-wcm-auditing-records-within-the-repository}儲存庫內的WCM審核記錄
+#### AEM WCM稽核存放庫內的記錄 {#aem-wcm-auditing-records-within-the-repository}
 
 在`/var/audit`資料夾中，根據資源保留審計記錄。 您可以深入研究，直到看到個別記錄及其包含的資訊為止。
 
 這些條目包含的資訊與編輯頁面時顯示的資訊相同。
 
-#### OSGi從Web控制台{#osgi-audit-records-from-the-web-console}審核記錄
+#### 從Web控制台審核OSGi記錄 {#osgi-audit-records-from-the-web-console}
 
 OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Configuration Status**&#x200B;標籤 — > **Log Files**&#x200B;標籤查看：
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
-## 監視複製代理{#monitoring-your-replication-agents}
+## 監視複製代理 {#monitoring-your-replication-agents}
 
 您可以監視[復寫佇列](/help/sites-deploying/replication.md)以偵測佇列是否關閉或封鎖，而這又可能表示發佈執行個體或外部系統有問題：
 
@@ -509,7 +509,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Confi
 
 同樣，您可以開發一個解決方案來檢測所有複製代理（位於`/etc/replication/author`或`/etc/replication/publish`下），然後檢查代理(`enabled`、`disabled`)和基礎隊列(`active`、`idle`、`blocked`)的狀態。
 
-## 監控效能{#monitoring-performance}
+## 監控效能 {#monitoring-performance}
 
 [效能](/help/sites-deploying/configuring-performance.md) 最佳化是互動式程式，在開發期間會受到重視。部署後，通常會在特定間隔或事件後加以檢視。
 
@@ -559,7 +559,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Confi
    * 收集盡可能多的資訊，以便與您在正常情況下對系統的知識進行比較：
 
 
-### 監控和分析效能的工具{#tools-for-monitoring-and-analyzing-performance}
+### 監控和分析效能的工具 {#tools-for-monitoring-and-analyzing-performance}
 
 以下提供一些可用於監控和分析效能的工具的簡要概述。
 
@@ -658,7 +658,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Confi
 
 建議將「慢速」頁面與`request.log`隔離，然後個別調整它們以獲得更佳效能。 這通常是通過包括每個元件的效能度量或使用效能分析工具（如` [yourkit](https://www.yourkit.com/)`）來完成的。
 
-#### 監控網站流量{#monitoring-traffic-on-your-website}
+#### 監控網站流量 {#monitoring-traffic-on-your-website}
 
 請求記錄會記錄所發出的每個請求，以及所發出的回應：
 
@@ -669,7 +669,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Confi
 
 借由在特定時段內（例如各個24小時時段內）總計所有GET項目，您可以對網站的平均流量做出陳述。
 
-#### 使用request.log {#monitoring-response-times-with-the-request-log}監控回應時間
+#### 使用request.log監控回應時間 {#monitoring-response-times-with-the-request-log}
 
 效能分析的一個好起點是請求日誌：
 
@@ -703,7 +703,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Confi
 
 使用小型指令碼，您可以從日誌檔案中提取所需資訊，並匯編所需的統計資訊。 從這些功能中，您可以看到哪些頁面或類型的頁面速度緩慢，以及整體效能是否令人滿意。
 
-#### 使用request.log {#monitoring-search-response-times-with-the-request-log}監控搜尋回應時間
+#### 使用request.log監控搜尋回應時間 {#monitoring-search-response-times-with-the-request-log}
 
 搜尋請求也會註冊在記錄檔中：
 
@@ -716,7 +716,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Confi
 
 不過，一旦您決定了回應時間，您可能需要分析要求為何需要執行所需時間，以及可以採取哪些措施來改善回應。
 
-#### 監控同時使用者人數和影響{#monitoring-the-number-and-impact-of-concurrent-users}
+#### 監控同時使用者的人數和影響 {#monitoring-the-number-and-impact-of-concurrent-users}
 
 同樣，`request.log`可用於監視併發性以及系統對它的反應。
 
@@ -738,7 +738,7 @@ OSGi事件也會產生稽核記錄，您可從AEM Web主控台的&#x200B;**Confi
 31/Mar/2009:11:45:44 +0200 [337] <- 304 text/html 0ms
 ```
 
-### 使用rlog.jar查找持續時間長的{#using-rlog-jar-to-find-requests-with-long-duration-times}請求
+### 使用rlog.jar尋找持續時間較長的請求 {#using-rlog-jar-to-find-requests-with-long-duration-times}
 
 AEM包含位於下列位置的各種協助工具：
 `<cq-installation-dir>/crx-quickstart/opt/helpers`
@@ -784,7 +784,7 @@ $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
 
 如果需要對大型資料示例執行此操作，則可能需要串連單個`request.log`檔案。
 
-### Apache Bench {#apache-bench}
+### 阿帕奇板凳 {#apache-bench}
 
 為了最大限度地減少特殊情況（如垃圾收集等）的影響，建議使用`apachebench`等工具（如，有關進一步文檔，請參閱[ab](https://httpd.apache.org/docs/2.2/programs/ab.html)）來幫助識別記憶體洩漏並有選擇地分析響應時間。
 
@@ -853,7 +853,7 @@ Percentage of the requests served within a certain time (ms)
 
 `apachebench` 也會將每個請求的時間顯示為所有同時請求的平均值；請參 `Time per request: 54.595 [ms]` 閱（平均值，涵蓋所有同時請求）。您可以更改併發參數`-c`的值（一次要執行的多個請求數），以查看任何效果。
 
-### 請求計數器{#request-counters}
+### 請求計數器 {#request-counters}
 
 請求流量的相關資訊（特定時段內的請求數）可讓您指出執行個體的負載。 此資訊可從[request.log](#interpreting-the-request-log)中擷取，但使用計數器會自動收集資料，讓您查看：
 
@@ -869,7 +869,7 @@ Percentage of the requests served within a certain time (ms)
 * 冗餘實例
 * 任何重新啟動（計數器重置為0）
 
-### HTML注釋{#html-comments}
+### HTML註解 {#html-comments}
 
 建議每個項目都包括`html comments`以提高伺服器效能。 可以找到許多好的公眾例子；選取頁面，開啟頁面原始碼以供檢視，並捲動至底部，您會看到下列程式碼：
 
@@ -881,7 +881,7 @@ Percentage of the requests served within a certain time (ms)
          -->
 ```
 
-### 使用JConsole {#monitoring-performance-using-jconsole}監控效能
+### 使用JConsole監控效能 {#monitoring-performance-using-jconsole}
 
 工具命令`jconsole`可用於JDK。
 
@@ -895,7 +895,7 @@ Percentage of the requests served within a certain time (ms)
 
    之後，您可以選取其他選項。
 
-### 使用(J)VisualVM {#monitoring-performance-using-j-visualvm}監控效能
+### 使用(J)VisualVM監控效能 {#monitoring-performance-using-j-visualvm}
 
 自JDK 1.6以來，工具命令`jvisualvm`可用。 安裝JDK 1.6後，您可以：
 
@@ -920,7 +920,7 @@ Percentage of the requests served within a certain time (ms)
 
 您可以使用此工具生成線程轉儲和記憶體頭轉儲。 技術支援團隊經常要求提供這些資訊。
 
-### 資訊收集{#information-collection}
+### 資訊收集 {#information-collection}
 
 盡可能了解您的安裝情況有助於您跟蹤哪些因素可能導致效能更改，以及這些更改是否正確。 這些量度需定期收集，以便輕鬆查看重大變更。
 
@@ -938,7 +938,7 @@ Percentage of the requests served within a certain time (ms)
 * [在尖峰時間，您每小時在製作系統上有多少個要求？](#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time)
 * [在高峰時間，您在發佈系統上每小時有多少個請求？](#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time)
 
-#### 有多少作者使用此系統？{#how-many-authors-are-working-with-the-system}
+#### 有多少作者使用此系統？ {#how-many-authors-are-working-with-the-system}
 
 要查看自安裝以來使用系統的作者人數，請使用命令行：
 
@@ -953,7 +953,7 @@ cut -d " " -f 3 access.log | sort -u | wc -l
 grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 ```
 
-#### 每天啟動的平均頁面數是多少？{#what-is-the-average-number-of-page-activations-per-day}
+#### 每天啟動的平均頁面數是多少？ {#what-is-the-average-number-of-page-activations-per-day}
 
 查看自伺服器安裝後使用儲存庫查詢的頁面激活總數；通過CRXDE — 工具 — 查詢：
 
@@ -965,7 +965,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 然後計算自安裝以來經過的天數以計算平均值。
 
-#### 您當前在此系統上維護多少頁？{#how-many-pages-do-you-currently-maintain-on-this-system}
+#### 您當前在此系統上維護多少頁？ {#how-many-pages-do-you-currently-maintain-on-this-system}
 
 查看伺服器上當前使用儲存庫查詢的頁數；通過CRXDE — 工具 — 查詢：
 
@@ -975,7 +975,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 * **查詢** `//element(*, cq:Page)`
 
-#### 如果您使用MSM，每月的平均轉出數量為何？{#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
+#### 如果您使用MSM，每月的平均轉出數量為何？ {#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
 
 確定自安裝後使用儲存庫查詢的轉出總數；通過CRXDE — 工具 — 查詢：
 
@@ -987,7 +987,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 計算自安裝以來經過的月數以計算平均值。
 
-#### 每月的即時副本平均數量是多少？{#what-is-the-average-number-of-live-copies-per-month}
+#### 每月的即時副本平均數量是多少？ {#what-is-the-average-number-of-live-copies-per-month}
 
 確定安裝後使用儲存庫查詢建立的Live Copy總數；通過CRXDE — 工具 — 查詢：
 
@@ -999,7 +999,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 再次使用安裝後經過的月數來計算平均值。
 
-#### 如果您使用AEM Assets，目前在Assets中維護多少個資產？{#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
+#### 如果您使用AEM Assets，目前在Assets中維護多少個資產？ {#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
 
 若要查看您目前維護的DAM資產數量，請使用存放庫查詢；通過CRXDE — 工具 — 查詢：
 
@@ -1007,7 +1007,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * **路徑** `/`
 * **查詢** `/jcr:root/content/dam//element(*, dam:Asset)`
 
-#### 資產的平均規模為何？{#what-is-the-average-size-of-the-assets}
+#### 資產的平均規模為何？ {#what-is-the-average-size-of-the-assets}
 
 要確定`/var/dam`資料夾的總大小，請執行以下操作：
 
@@ -1022,7 +1022,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    若要取得平均大小，請將全域大小除以`/var/dam`中的資產總數（如上所示）。
 
-#### 目前使用多少個範本？{#how-many-templates-are-currently-used}
+#### 目前使用多少個範本？ {#how-many-templates-are-currently-used}
 
 要查看伺服器上當前使用儲存庫查詢的模板數；通過CRXDE — 工具 — 查詢：
 
@@ -1030,7 +1030,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * **路徑** `/`
 * **查詢** `//element(*, cq:Template)`
 
-#### 目前使用了多少個元件？{#how-many-components-are-currently-used}
+#### 目前使用了多少個元件？ {#how-many-components-are-currently-used}
 
 要查看伺服器上當前使用儲存庫查詢的元件數；通過CRXDE — 工具 — 查詢：
 
@@ -1038,7 +1038,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * **路徑** `/`
 * **查詢** `//element(*, cq:Component)`
 
-#### 在尖峰時間，您每小時在製作系統上有多少個要求？{#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
+#### 在尖峰時間，您每小時在製作系統上有多少個要求？ {#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
 
 若要判斷您在尖峰時段於製作系統上每小時提出的請求：
 
@@ -1058,11 +1058,11 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    使用這些值來計算自安裝以來經過的小時數，然後計算每小時的平均請求數。
 
-#### 在高峰時間，您在發佈系統上每小時有多少個請求？{#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time}
+#### 在高峰時間，您在發佈系統上每小時有多少個請求？ {#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time}
 
 在您的發佈執行個體上重複上述程式。
 
-## 分析特定方案{#analyzing-specific-scenarios}
+## 分析特定方案 {#analyzing-specific-scenarios}
 
 以下是若您開始遇到某些效能問題，應檢查哪些項目的建議清單。 這份清單（不幸的）並不完全全全面。
 
@@ -1079,7 +1079,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 
 
-### 100%的CPU {#cpu-at}
+### CPU為100% {#cpu-at}
 
 如果系統的CPU持續以100%的速度運行，請參閱：
 
@@ -1087,7 +1087,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    * [分析慢速和阻止的進程](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
-### 記憶體不足{#out-of-memory}
+### 記憶體不足 {#out-of-memory}
 
 雖然在開發和測試期間應偵測到這類錯誤，但某些情況可能會漏掉。
 
@@ -1113,7 +1113,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
    * [Apache Sling記錄設定](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML程式庫管理員](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM除錯篩選器](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
-   * [記錄器](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level) [](/help/sites-deploying/configuring.md#loggersandwritersforindividualservices)
+   * [記錄器](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
 * 配置[版本清除](/help/sites-deploying/version-purging.md)的方式
 * 知識庫：
@@ -1121,7 +1121,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
    * [開啟的檔案太多](https://helpx.adobe.com/experience-manager/kb/TooManyOpenFiles.html)
    * [日誌佔用的磁碟空間過多](https://helpx.adobe.com/experience-manager/kb/JournalTooMuchDiskSpace.html)
 
-### 常規效能降級{#regular-performance-degradation}
+### 定期效能降低 {#regular-performance-degradation}
 
 如果您在每次重新啟動後（有時一週或更久）執行個體的效能都在惡化，則可以檢查以下內容：
 
@@ -1130,7 +1130,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    * [非結案工作階段](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html)
 
-### JVM優化{#jvm-tuning}
+### JVM優化 {#jvm-tuning}
 
 Java虛擬機(JVM)在優化方面已有顯著改進（特別是自Java 7以來）。 因此，指定合理的固定JVM大小和使用預設值通常是合適的。
 
