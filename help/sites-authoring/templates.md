@@ -11,7 +11,7 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '4901'
 ht-degree: 9%
@@ -47,7 +47,7 @@ ht-degree: 9%
 >
 >使用&#x200B;**範本控制台**&#x200B;建立的頁面和範本不適用於傳統UI，且不支援這類使用。
 
-## 開始之前{#before-you-start}
+## 開始之前 {#before-you-start}
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ ht-degree: 9%
 
 本文檔中詳述的任務將列出負責執行這些任務的角色。
 
-### 可編輯和靜態範本{#editable-and-static-templates}
+### 可編輯和靜態範本 {#editable-and-static-templates}
 
 AEM現在提供兩種基本範本類型：
 
@@ -114,11 +114,11 @@ AEM現在提供兩種基本範本類型：
 
 根據定義，範本控制台和範本編輯器只允許建立和編輯可編輯的範本。 因此，本檔案專注於可編輯的範本。
 
-### 使用範本建立頁面{#using-a-template-to-create-a-page}
+### 使用範本建立頁面 {#using-a-template-to-create-a-page}
 
 使用範本建立新頁面[時，靜態和可編輯的範本之間沒有可見的差異，也沒有任何指示。 ](/help/sites-authoring/managing-pages.md#creating-a-new-page)對於頁面作者而言，程式是透明的。
 
-## 建立和管理模板{#creating-and-managing-templates}
+## 建立和管理範本 {#creating-and-managing-templates}
 
 建立新的可編輯範本時，您可以：
 
@@ -127,7 +127,7 @@ AEM現在提供兩種基本範本類型：
    * 或直接在：[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 * 如有需要，可以[為範本](#creating-a-template-folder-admin)建立資料夾
-* [建立一開始為空的新範本](#creatinganewtemplateauthor)  [](#templatedefinitions)
+* [建立一開始為空的新範本](#creatinganewtemplateauthor)
 
 * [視需要](#definingtemplatepropertiesauthor) 為範本定義其他屬性
 * [編輯范](#editingtemplates) 本以定義：
@@ -149,11 +149,11 @@ AEM現在提供兩種基本範本類型：
 >
 >切勿在模板中輸入任何需要為[國際化](/help/sites-developing/i18n.md)的資訊。 針對內部化目的，建議使用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
 
-### 建立範本資料夾 — 管理員{#creating-a-template-folder-admin}
+### 建立範本資料夾 — 管理員 {#creating-a-template-folder-admin}
 
 應為您的專案建立範本資料夾，以保留專案專用範本。 這是一項管理任務，在文檔[頁面模板 — 可編輯](/help/sites-developing/page-templates-editable.md#template-folders)中有介紹。
 
-### 建立新範本 — 範本作者{#creating-a-new-template-template-author}
+### 建立新範本 — 範本作者 {#creating-a-new-template-template-author}
 
 1. 開啟范 **本主控台** (透過工具-> **一** 般 ****)，然後導覽至所需的檔案夾。
 
@@ -183,7 +183,7 @@ AEM現在提供兩種基本範本類型：
    >
    >建立新範本時，在主控台中標示為&#x200B;**Draft**，表示頁面作者尚無法使用。
 
-### 定義範本屬性 — 範本作者{#defining-template-properties-template-author}
+### 定義範本屬性 — 範本作者 {#defining-template-properties-template-author}
 
 範本可以有下列屬性：
 
@@ -218,7 +218,7 @@ AEM現在提供兩種基本範本類型：
 >
 >主控台會指出範本的狀態（草稿、啟用或停用）。
 
-#### 範本縮圖影像{#template-thumbnail-image}
+#### 範本縮圖影像 {#template-thumbnail-image}
 
 若要定義範本縮圖：
 
@@ -234,14 +234,14 @@ AEM現在提供兩種基本範本類型：
 
 1. 對縮圖感到滿意時，按一下或點選「**儲存並關閉**」。
 
-### 啟用和允許範本 — 範本作者{#enabling-and-allowing-a-template-template-author}
+### 啟用和允許範本 — 範本作者 {#enabling-and-allowing-a-template-template-author}
 
 若要在建立頁面時使用範本，您必須：
 
 * [啟用范](#enablingatemplate) 本，以便在建立頁面時使用。
 * [允許范](#allowingatemplate) 本指定可使用範本的內容分支。
 
-#### 啟用範本 — 範本作者{#enabling-a-template-template-author}
+#### 啟用範本 — 範本作者 {#enabling-a-template-template-author}
 
 可以啟用或停用範本，使其在&#x200B;**建立頁面**&#x200B;精靈中可用或無法使用。
 
@@ -257,7 +257,7 @@ AEM現在提供兩種基本範本類型：
 >
 >主控台會指出範本的狀態（草稿、啟用或停用）。
 
-#### 允許範本 — 製作{#allowing-a-template-author}
+#### 允許範本 — 作者 {#allowing-a-template-author}
 
 範本可供某些頁面分支使用或無法使用。
 
@@ -286,7 +286,7 @@ AEM現在提供兩種基本範本類型：
 >
 >設定時，通常會為整個網站預先定義允許的範本。
 
-### 發佈範本 — 範本作者{#publishing-a-template-template-author}
+### 發佈範本 — 範本作者 {#publishing-a-template-template-author}
 
 轉譯頁面時參照範本時，必須發佈完全設定的範本，才能在發佈環境中使用。
 
@@ -296,7 +296,7 @@ AEM現在提供兩種基本範本類型：
 
 1. 從工具列選取&#x200B;**Publish**&#x200B;以完成動作。
 
-## 編輯範本 — 範本作者{#editing-templates-template-authors}
+## 編輯範本 — 範本作者 {#editing-templates-template-authors}
 
 建立或編輯範本時，您可以定義各種方面。 編輯範本類似於頁面編寫。
 
@@ -340,7 +340,7 @@ AEM現在提供兩種基本範本類型：
 * [初始內容](#editingatemplateinitialcontent)
 * [配置](#editingatemplatelayout)
 
-![chlimage_1-135](assets/chlimage_1-133.png)
+![chlimage_1-133](assets/chlimage_1-133.png)
 
 而&#x200B;**頁面資訊**&#x200B;功能表上的&#x200B;**頁面原則**&#x200B;選項可讓您[選取所需的頁面原則](#editingatemplatepagepolicies):
 
@@ -350,7 +350,7 @@ AEM現在提供兩種基本範本類型：
 >
 >如果作者開始編輯已啟用的範本，將會顯示警告。 這會通知使用者可能已參考範本，因此任何變更都可能影響參考範本的頁面。
 
-### 編輯範本 — 結構 — 範本作者{#editing-a-template-structure-template-author}
+### 編輯範本 — 結構 — 範本作者 {#editing-a-template-structure-template-author}
 
 在&#x200B;**Structure**&#x200B;模式中，可定義模板的元件和內容，並定義模板及其元件的策略。
 
@@ -574,7 +574,7 @@ AEM現在提供兩種基本範本類型：
 
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-### 編輯範本 — 初始內容 — 作者{#editing-a-template-initial-content-author}
+### 編輯範本 — 初始內容 — 作者 {#editing-a-template-initial-content-author}
 
 **初始** 內容模式用於定義內容，當首次根據範本建立頁面時，這些內容將會顯示。然後頁面作者就可以編輯初始內容。
 
@@ -606,7 +606,7 @@ AEM現在提供兩種基本範本類型：
 >
 >如果您需要在範本中（例如頁首或頁尾）包含可翻譯的文字，則可以使用核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
 
-### 編輯範本 — 版面 — 範本作者{#editing-a-template-layout-template-author}
+### 編輯範本 — 版面 — 範本作者 {#editing-a-template-layout-template-author}
 
 您可以定義裝置範圍的範本配置。 [範本](/help/sites-authoring/responsive-layout.md) 的回應式版面配置在頁面製作上的運作方式與相同。
 
@@ -616,7 +616,7 @@ AEM現在提供兩種基本範本類型：
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
-### 編輯範本 — 頁面設計 — 範本作者/開發人員{#editing-a-template-page-design-template-author-developer}
+### 編輯範本 — 頁面設計 — 範本作者/開發人員 {#editing-a-template-page-design-template-author-developer}
 
 頁面設計 (包括所需的用戶端程式庫和頁面原則) 會保留在「頁面資訊」功能表的「 **頁面設計** 」選 **** 項下。
 
@@ -683,7 +683,7 @@ AEM現在提供兩種基本範本類型：
 >
 >雖然範本作者可以在範本上指定頁面原則，但他/她需要從開發人員取得適當用戶端程式庫的詳細資訊。
 
-### 編輯範本 — 初始頁面屬性 — 作者{#editing-a-template-initial-page-properties-author}
+### 編輯範本 — 初始頁面屬性 — 作者 {#editing-a-template-initial-page-properties-author}
 
 使用&#x200B;**初始頁面屬性**&#x200B;選項，可以定義建立結果頁面時要使用的初始[頁面屬性](/help/sites-authoring/editing-page-properties.md)。
 
