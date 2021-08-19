@@ -12,7 +12,7 @@ discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: fcdadcf691ed5a569a5a40ca070f8ec266ec3eb9
 workflow-type: tm+mt
 source-wordcount: '2756'
 ht-degree: 3%
@@ -154,7 +154,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 * 為社群網站啟用[Analytics](#enable-analytics-for-a-community-site)
 * 將`Marketing Cloud Org Id`與社區站點關聯
 
-`Marketing Cloud Org Id`可在[社區站點建立](/help/communities/sites-console.md#enablement)時或更後通過[修改](/help/communities/sites-console.md#modifying-site-properties)社區站點屬性來輸入。[](#aem-analytics-cloud-service-configuration)
+`Marketing Cloud Org Id`可在[社區站點建立](/help/communities/sites-console.md#enablement)時或更後通過[修改](/help/communities/sites-console.md#modifying-site-properties)社區站點屬性來輸入。
 
 ![marketing-org-id](assets/marketing-org-id.png)
 
