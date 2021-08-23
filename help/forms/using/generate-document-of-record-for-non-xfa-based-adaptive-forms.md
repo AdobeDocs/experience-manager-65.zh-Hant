@@ -11,14 +11,14 @@ discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: 適用性表單
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a81367c2a07031d8c6cf549050a1445ff0c1a8dc
 workflow-type: tm+mt
-source-wordcount: '2665'
+source-wordcount: '3508'
 ht-degree: 2%
 
 ---
 
-# 生成最適化表單的記錄文檔{#generate-document-of-record-for-adaptive-forms}
+# 產生最適化表單的記錄檔案{#generate-document-of-record-for-adaptive-forms}
 
 ## 概覽 {#overview}
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 >
 >基於XFA的最適化表單不支援自動產生記錄檔案。 不過，您可以使用用來建立最適化表單的XDP做為記錄檔案。
 
-## 記錄{#adaptive-form-types-and-their-documents-of-record}的最適化表單類型及其文檔
+## 最適化表單類型及其記錄檔案 {#adaptive-form-types-and-their-documents-of-record}
 
 建立最適化表單時，可以選取表單模型。 您的選項為：
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 選擇表單模型時，使用「記錄模板配置文檔」下的可用選項配置記錄文檔。 請參閱[記錄模板配置文檔](#document-of-record-template-configuration)。
 
-## 自動生成記錄{#automatically-generated-document-of-record}的文檔
+## 自動生成的記錄文檔 {#automatically-generated-document-of-record}
 
 記錄檔案可讓客戶保留已提交表單的副本，以供列印之用。 當您自動生成記錄文檔時，每次更改表單時，其記錄文檔都會立即更新。 例如，您會移除選擇「美利堅合眾國」作為其國家之客戶的年齡欄位。 當這些客戶生成記錄文檔時，記錄文檔中不會顯示年齡欄位。
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 * 它可讓您使用不同的基礎模板嘗試不同的樣式和外觀，並為記錄文檔選擇最佳樣式和外觀。 樣式外觀是可選的，如果未指定樣式，系統樣式將設定為預設樣式。
 * 它可確保在記錄檔案中立即反映任何形式的更改。
 
-## 要自動生成記錄{#components-to-automatically-generate-a-document-of-record}的文檔的元件
+## 要自動生成記錄文檔的元件 {#components-to-automatically-generate-a-document-of-record}
 
 若要產生最適化表單的記錄檔案，您需要下列元件：
 
@@ -80,7 +80,7 @@ ht-degree: 2%
 
 **表** 單資料使用者在最適化表單中填入的資訊。它與記錄模板文檔合併，生成記錄文檔。
 
-## 最適化表單元素{#mapping-of-adaptive-form-elements}的對應
+## 最適化表單元素的對應 {#mapping-of-adaptive-form-elements}
 
 以下各節說明最適化表單元素在記錄檔案中的顯示方式。
 
@@ -192,7 +192,7 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 靜態元件{#static-components}
+### 靜態元件 {#static-components}
 
 | 最適化表單元件 | 對應的XFA元件 | 附註 |
 |---|---|---|
@@ -207,13 +207,13 @@ ht-degree: 2%
 
 適用性表單表格元件（例如頁首、頁尾和列對應至對應的XFA元件）。 您可以將可重複的面板對應至記錄檔案中的表格。
 
-## 記錄{#base-template-of-a-document-of-record}的文檔的基模板
+## 記錄文檔的基礎模板 {#base-template-of-a-document-of-record}
 
 基礎模板為記錄文檔提供樣式和外觀資訊。 它允許您自定義自動生成的記錄文檔的預設外觀。 例如，您想在標題中新增公司標誌，並在記錄檔案的頁尾中新增版權資訊。 基礎模板中的母版頁用作記錄模板文檔的母版頁。 主版頁可以有頁首、頁尾和頁碼等資訊，您可以將這些資訊應用於記錄文檔。 您可以使用基本模板將此類資訊應用於記錄文檔，以自動生成記錄文檔。 使用基本模板可更改欄位的預設屬性。
 
 設計基礎模板時，請遵循[基礎模板約定](#base-template-conventions)。
 
-## 基本模板約定{#base-template-conventions}
+## 基本範本慣例 {#base-template-conventions}
 
 基本模板用於定義記錄文檔的頁眉、頁腳、樣式和外觀。 頁首和頁尾可包含公司標誌和版權文字等資訊。 基本模板中的第一個母版頁被複製，並用作記錄文檔的母版頁，該母版頁包含標題、頁尾、頁碼或應出現在記錄文檔中所有頁上的任何其他資訊。 如果使用的基礎模板不符合基礎模板約定，則基礎模板的第一個主版頁仍用於記錄模板的文檔。 強烈建議您根據基本模板的慣例設計基礎模板，並將其用於自動生成記錄文檔。
 
@@ -292,7 +292,7 @@ ht-degree: 2%
 
 1. 按一下&#x200B;**完成。**
 
-## 自定義記錄{#customize-the-branding-information-in-document-of-record}中的品牌資訊
+## 自定義記錄文檔中的品牌資訊 {#customize-the-branding-information-in-document-of-record}
 
 在生成記錄文檔時，您可以在「記錄文檔」頁簽上更改記錄文檔的品牌資訊。 「記錄文檔」頁簽包含標誌、外觀、佈局、頁眉和頁腳、免責聲明，以及是否要包括未選定的複選框和單選按鈕選項等選項。
 
@@ -322,9 +322,15 @@ ht-degree: 2%
    * **從記錄文檔中排除隱藏的欄位**
    * **隱藏面板描述**
 
+   如果您選擇的自訂XDP範本包含多個主版頁面，則這些頁面的屬性會顯示在&#x200B;**[!UICONTROL 記錄檔案]**&#x200B;標籤的&#x200B;**[!UICONTROL content]**&#x200B;區段中。
+
+   ![主版頁面屬性](assets/master-page-properties.png)
+
+   主版頁面屬性包括徽標影像、標題文本、表單標題、免責聲明標籤和免責聲明文本。 您可以將最適化表單或XDP範本屬性套用至記錄檔案。 AEM Forms預設會將範本屬性套用至記錄檔。 您也可以定義主版頁面屬性的自訂值。 有關如何在記錄文檔中應用多個首頁的資訊，請參閱[將多個首頁應用於記錄文檔](#apply-multiple-master-pages-dor)。
+
    >[!NOTE]
    >
-   >如果您使用的適用性表單範本是以6.3之前的設計器版本建立，則要使用「重音顏色」和「字型系列」屬性，請確定根子表單下的適用性表單範本中存在下列項目：
+   >如果您使用的是使用6.3之前版本的Designer建立的最適化表單範本，以便「重音顏色」和「字型系列」屬性正常運作，請確保根子表單下的最適化表單範本中存在下列項目：
 
    ```xml
    <proto>
@@ -340,7 +346,7 @@ ht-degree: 2%
 
 1. 若要儲存品牌變更，請點選「完成」。
 
-## 記錄文檔{#table-and-column-layouts-for-panels-in-document-of-record}中面板的表和列佈局
+## 記錄文檔中面板的表和列佈局 {#table-and-column-layouts-for-panels-in-document-of-record}
 
 您的最適化表單可能會是一個包含數個表單欄位的冗長表單。 您可能不想將記錄檔案儲存為最適化表單的確切副本。 現在，您可以選擇表格或欄版面，以將一或多個最適化表單面板儲存在記錄PDF的檔案中。
 
@@ -354,7 +360,7 @@ ht-degree: 2%
 
 在記錄文檔的列佈局中呈現的面板中的欄位
 
-## 記錄設定文檔{#document-of-record-settings}
+## 記錄設定文檔 {#document-of-record-settings}
 
 記錄文檔設定允許您選擇要包含在記錄文檔中的選項。 例如，銀行接受表單中的姓名、年齡、社會保障號碼和電話號碼。 此表單會生成銀行帳號和分行詳細資訊。 您可以選擇在記錄檔中只顯示姓名、社保號碼、銀行帳戶和分行詳細資訊。
 
@@ -367,13 +373,70 @@ ht-degree: 2%
 * **將面板顯示為表格：** 如果面板中的欄位少於6個，則設定屬性會將面板顯示為記錄檔案中的表格。僅適用於面板。
 * **從記錄檔中排除標題：** 設定屬性時，會從記錄檔中排除面板/表格的標題。僅適用於面板和表格。
 * **從記錄檔案中排除說明：** 設定屬性會從記錄檔案中排除面板/表格的說明。僅適用於面板和表格。
+* **[!UICONTROL 分頁]**  >放 **[!UICONTROL 置]**:決定您選取放置面板的位置。
+   * **[!UICONTROL 在前一]** 個位置 ****:將面板置於父面板中前一個物件之後。
+   * **[!UICONTROL 將]**  >放 **[!UICONTROL 入內容區域]**  >內容區域名稱：將面板放置在指定的內容區域。
+   * **[!UICONTROL 將]**  >放 **[!UICONTROL 置到下一個內容區域的頂端]**:將面板放置在下一個內容區域的頂端。
+   * **[!UICONTROL 放置]**  >  **[!UICONTROL 內容區域頂端]**  >內容區域名稱：將面板放置在指定內容區域的頂端。
+   * **[!UICONTROL 將]**  >  **[!UICONTROL On Page]**  >主版頁面名稱：將面板放置在指定的頁面上。如果未自動插入分頁符，[!DNL AEM Forms]將添加分頁符。
+   * **[!UICONTROL 放置]**  >  **[!UICONTROL 下一頁頂端]**:將面板放置在下一頁的頂端。如果未自動插入分頁符，[!DNL AEM Forms]將添加分頁符。
+   * **[!UICONTROL 放置]**  >  **[!UICONTROL 頁面頂端]**  >主版頁面名稱：呈現指定的頁面時，將面板置於頁面頂端。如果未自動插入分頁符，[!DNL AEM Forms]將添加分頁符。
+* **[!UICONTROL 分頁]**  >  **[!UICONTROL 之後]**:確定放置面板後要填寫的區域。「後」部分中提供以下 **** 欄位：
+   * **[!UICONTROL 在]**  >繼 **[!UICONTROL 續填入父項]**&#x200B;後：繼續合併父面板中剩餘要填充的所有對象的資料。
+   * **[!UICONTROL 在]**  >前 **[!UICONTROL 往下一個內容區域]**:放置面板後，開始填入下一個內容區域。
+   * **[!UICONTROL 在]**  >  **[!UICONTROL 前往內容區域]**  >內容區域名稱之後：放置面板後，開始填入指定的內容區域。
+   * **[!UICONTROL 之後]**  >  **[!UICONTROL 前往下一頁]**:放置面板後，開始填寫下一頁。
+   * **[!UICONTROL 在]**  >  **[!UICONTROL 前往頁面]**  >頁面名稱之後：放置面板後，開始填入指定的頁面。
+* **[!UICONTROL 分頁]** > **[!UICONTROL 溢出]**:為跨頁的面板或表設定溢出。**[!UICONTROL Overflow]**&#x200B;區段中提供以下欄位：
+   * **[!UICONTROL 溢出]**  >  **[!UICONTROL 無]**:開始填寫下一頁。如果未自動插入分頁符，[!DNL AEM Forms]將添加分頁符。
+   * **[!UICONTROL 溢出]**  >  **[!UICONTROL 轉至內容區域]**  >內容區域名稱：開始填入指定的內容區域。
+   * **[!UICONTROL 溢出]**  >  **[!UICONTROL 轉至頁面]**  >頁面名稱：開始填寫指定的頁面。
+
+有關如何在記錄文檔中應用分頁和應用多個首頁的資訊，請參閱在記錄文檔中應用分頁[和在記錄文檔中應用多個首頁](#apply-page-breaks-in-dor)和[將多個首頁應用於記錄文檔](#apply-multiple-master-pages-dor)。
 
 **表單層級設定**
 
 * **在DoR中包括未綁定欄位：** 設定屬性時，記錄文檔中包括來自基於架構的最適化表單的未綁定欄位。預設為true。
 * **如果隱藏，則從DoR排除欄位：** 設定屬性會覆寫「從記錄檔案排除」欄位層級屬性的行為（若非true）。如果欄位在表單提交時隱藏，如果屬性設定為true，則這些欄位將從記錄檔案中排除，前提是未設定「從記錄檔案中排除」屬性。
 
-## 使用記錄{#key-considerations-when-working-with-document-of-record}的文檔時的主要考量事項
+## 在記錄文檔中應用分頁符 {#apply-page-breaks-in-dor}
+
+您可以使用多種方法在記錄檔案中應用分頁符。
+
+要將分頁符應用於記錄文檔，請執行以下操作：
+
+1. 點選面板，然後選取![Configure](assets/configure-icon.svg)。
+
+1. 展開&#x200B;**[!UICONTROL 記錄的文檔]**&#x200B;以查看屬性。
+
+1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，點選&#x200B;**[!UICONTROL 放置]**&#x200B;欄位中的![資料夾](assets/folder-icon.svg)。
+1. 點選「 **[!UICONTROL 下一頁頂端]** 」，然後點選「 **[!UICONTROL 選取]** 」。 您也可以點選「**[!UICONTROL 頁面頂端]**」，選取主版頁面，然後點選「**[!UICONTROL 選取]**」以套用分頁符。
+1. 點選![儲存](assets/save_icon.svg)以儲存屬性。
+
+選取的面板會移至下一頁。
+
+## 將多個首頁應用於記錄文檔 {#apply-multiple-master-pages-dor}
+
+如果您選擇的自訂XDP範本包含多個主版頁面，則這些頁面的屬性會顯示在[!UICONTROL 記錄檔案]標籤的[!UICONTROL content]區段中。 如需詳細資訊，請參閱[自訂記錄](#customize-the-branding-information-in-document-of-record)檔案中的品牌資訊。
+
+您可以將不同的母版頁面套用至最適化表單的元件，以套用多個母版頁面至記錄檔案。 使用「記錄文檔」屬性的[分頁](#document-of-record-settings)部分來應用多個首頁。
+
+以下示例說明如何將多個首頁應用於記錄文檔：
+將包含四個主版頁面的XDP模板上載到[!DNL AEM Forms]伺服器。 [!DNL AEM Forms] 預設情況下，將模板屬性應用到記錄文檔。[!DNL AEM Forms] 還將模板中的第一個首頁屬性應用於記錄文檔。
+
+要將第二個主版頁面屬性應用於面板，並將第三個主版頁面屬性應用於後續的面板，請執行以下步驟：
+
+1. 點選面板以套用第二個主版頁面，然後選取「![設定](assets/configure-icon.svg)」。
+1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，點選&#x200B;**[!UICONTROL 放置]**&#x200B;欄位中的![資料夾](assets/folder-icon.svg)。
+1. 點選&#x200B;**[!UICONTROL 在頁面]**&#x200B;上，選取第二個主版頁面，然後點選&#x200B;**[!UICONTROL 選取]**。
+AEM Forms會將第二個主版頁面套用至面板，以及最適化表單中的所有後續面板。
+1. 在&#x200B;**[!UICONTROL 分頁]**&#x200B;區段中，點選&#x200B;**[!UICONTROL After]**&#x200B;欄位中的![資料夾](assets/folder-icon.svg) 。
+1. 點選&#x200B;**[!UICONTROL 前往頁面]**，選取第三個主版頁面，然後點選&#x200B;**[!UICONTROL 選取]**。
+1. 點選![儲存](assets/save_icon.svg)以儲存屬性。
+AEM Forms會將第三個主版頁面套用至面板，以及最適化表單中的所有後續面板。
+
+
+## 使用記錄檔案時的主要考量 {#key-considerations-when-working-with-document-of-record}
 
 處理最適化表單的記錄檔案時，請記住下列考量事項和限制。
 
