@@ -1,18 +1,18 @@
 ---
-title: '[!DNL Adobe Camera Raw] 支援。'
-description: 了解如何在 [!DNL Adobe Experience Manager Assets]中啟用 [!DNL Adobe Camera Raw] 支援。
+title: '[!DNL Adobe Camera Raw] 支援處理數位資產'
+description: 了解如何在 [!DNL Adobe Experience Manager Assets]中啟用 [!DNL Adobe Camera Raw] 支援
 contentOwner: AG
 role: Admin
-feature: 開發人員工具
+feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 73e53f516d8e10b548f913db079c7e9812deb907
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 2%
+source-wordcount: '375'
+ht-degree: 1%
 
 ---
 
-# 使用Camera Raw {#camera-raw-support}
+# 使用[!DNL Adobe Camera Raw]處理影像 {#camera-raw-support}
 
 您可以啟用[!DNL Adobe Camera Raw]支援以處理原始檔案格式（如CR2、NEF和RAF），並以JPEG格式呈現影像。 在[!DNL Adobe Experience Manager Assets]中，使用Software Distribution提供的[Camera Raw套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)支援此功能。
 
@@ -22,9 +22,9 @@ ht-degree: 2%
 
 要在[!DNL Experience Manager Assets]中啟用[!DNL Camera Raw]支援，請執行以下步驟：
 
-1. 從Software Distribution下載[Camera Raw套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
+1. 從[!DNL Software Distribution]下載[Camera Raw套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
 1. 存取 `https://[aem_server]:[port]/workflow`. 開啟&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程。
-1. 開啟「處理縮圖&#x200B;]**」步驟。**[!UICONTROL 
+1. 編輯&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟。
 1. 在&#x200B;**[!UICONTROL 縮圖]**&#x200B;標籤中提供下列配置：
 
    * **[!UICONTROL 縮圖]**:  `140:100:false, 48:48:false, 319:319:false`
@@ -36,7 +36,7 @@ ht-degree: 2%
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. 從側面板，在&#x200B;**[!UICONTROL 縮圖建立]**&#x200B;步驟下方新增&#x200B;**[!UICONTROL Camera Raw/DNG處理常式]**&#x200B;步驟。
+1. 從側面板，在&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟下方新增&#x200B;**[!UICONTROL Camera Raw/DNG處理常式]**&#x200B;步驟。
 1. 在&#x200B;**[!UICONTROL Camera Raw/DNG處理常式]**&#x200B;步驟中，在&#x200B;**[!UICONTROL Arguments]**&#x200B;標籤中新增下列設定：
 
    * **[!UICONTROL Mime類型]**: `image/dng` 和  `image/x-raw-(.*)`
@@ -73,4 +73,4 @@ ht-degree: 2%
 
 * 此功能僅支援JPEG轉譯。 Windows 64位元、Mac OS和RHEL 7.x均支援此功能。
 * RAW和DNG格式不支援中繼資料回寫。
-* [!DNL Camera Raw]程式庫對一次可處理的總像素有限制。 目前，無論先遇到什麼條件，最多都可以處理65000個檔案長邊的像素，或512 MP。
+* [!DNL Camera Raw]程式庫對一次可處理的總像素有限制。 目前，無論先遇到什麼條件，最多都可處理檔案長邊的65000像素，或512 MP。

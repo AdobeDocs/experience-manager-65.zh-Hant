@@ -3,11 +3,11 @@ title: 使用「連線資產」在 中共用 DAM 資產 [!DNL Sites]
 description: 使用遠端 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署上可用的資產。
 contentOwner: AG
 role: User, Admin, Leader
-feature: 連線資產、使用者和群組
+feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 37073594b45995ade7f0e73c519feb21adf48482
 workflow-type: tm+mt
-source-wordcount: '2742'
+source-wordcount: '2732'
 ht-degree: 29%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 29%
 
 作者在「內容尋找器」中搜尋影像和下列類型的檔案，並在「頁面編輯器」中使用搜尋的資產。 文檔將添加到`Download`元件，並將影像添加到`Image`元件。 作者也會在延伸預設`Download`或`Image`元件的任何自訂[!DNL Experience Manager]元件中新增遠端資產。 支援的格式為：
 
-* **影像格式**:影像元件支 [援的](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 格式。[!DNL Dynamic Media] 不支援影像。
+* **影像格式**:影像元件支 [援的](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 格式。
 * **文檔格式**:請參閱支 [援的檔案格式](assets-formats.md#supported-document-formats)。
 
 ### 相關使用者和群組 {#users-and-groups-involved}
@@ -188,7 +188,7 @@ ht-degree: 29%
 * 本機資產不會與遠端部署上的原始資產同步。對 DAM 部署所做的任何編輯、刪除或撤銷權限操作都不會傳播到下游。
 * 本機資產為唯讀副本。[!DNL Experience Manager] 元件會對資產執行非破壞性的編輯作業。不允許執行其他編輯作業。
 * 本機擷取的資產僅適用於編寫用途。無法套用資產更新工作流程，也無法編輯中繼資料。
-* 僅支援影像和列出的文件格式。[!DNL Dynamic Media] 不支 [!DNL Content Fragments]援資 [!DNL Experience Fragments] 產、和。
+* 僅支援影像和列出的文件格式。[!DNL Content Fragments] 不 [!DNL Experience Fragments] 支援和。
 * [!DNL Experience Manager] 不會擷取中繼資料結構。這表示所有擷取的中繼資料都可能無法顯示。 如果在[!DNL Sites]部署上單獨更新架構，則會顯示所有元資料屬性。
 * 所有[!DNL Sites]作者都對擷取的復本擁有讀取權限，即使作者無法存取遠端DAM部署亦然。
 * 不提供 API 以支援自訂整合。

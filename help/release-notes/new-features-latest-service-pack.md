@@ -1,17 +1,20 @@
 ---
-title: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
-description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
+title: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
+description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 738972f73ff3af070eb6b48bff67496ab451a6a7
 workflow-type: tm+mt
-source-wordcount: '3668'
-ht-degree: 0%
+source-wordcount: '3974'
+ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5 Service Pack 9的新增功能 {#aem-whats-new-service-pack}
+# [!DNL Adobe Experience Manager] 6.5 Service Pack 10的新增功能 {#aem-whats-new-service-pack}
+
+<!-- TBD: Downsample this image. We do not need as big an image since customers don't use as big a screen to view. Also, having a 700+ KB decorative image is bad for page load time.
+-->
 
 ![Whats-new](assets/whatsnew.jpeg)
 
@@ -19,40 +22,40 @@ ht-degree: 0%
 
 本文重點說明最新Service Pack中包含的功能、先前6.5 Service Pack](#key-features-previous-service-packs)中包含的[主要功能，以及自上次Service Pack](#key-releases-since-last-sp)發行以來的[重要發行。
 
->[!NOTE]
->
->從[!DNL Experience Manager] Service Pack 9開始，[!DNL Experience Manager]客戶可以使用[!DNL Azul Zulu]版本的OpenJDK（與Java SE相符的標準）開發和運行其[!DNL Experience Manager]應用程式。
->[!DNL Experience Manager]客戶也可Adobe[!DNL Azul Zulu] JDK。
->您可以從[Adobe軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下載[!DNL Azul Zulu] JDK的相關版本。
->oracleJava技術的使用權(由Adobe分發)將於2022年12月底屆滿。 [!DNL Experience Manager] 建議客戶在此日期之前規劃並實 [!DNL Azul Zulu] 作JDK的使用。有關[!DNL Oracle Java]技術和[!DNL Azul Zulu]技術使用的詳細資訊，請參閱相關的[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf)。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
-### 還原已刪除的頁面和樹狀結構 {#ability-to-restore-pages-tree}
+* **增強 [!DNL Content Fragment] 模型和編輯器**:您現在可以使用巢狀模型，為結構化內容建立複雜和自訂 [!DNL Content Fragment] 的模型。內容結構被模組化為基本元素，這些基本元素被建模為子片段。 較高層級片段會參考這些子片段。 更多資料類型增強功能（例如進階驗證規則）進一步增強了[!DNL Content Fragments]內容模型的彈性。 [!DNL Experience Manager] [!DNL Content Fragment]編輯器支援公共編輯器會話中的嵌套片段結構，並增強了諸如結構樹視圖和通過片段層次的頁簽式瀏覽路徑標籤導航。
 
-您現在可以還原已刪除的頁面以及[!DNL Experience Manager Sites]頁面上的整個樹狀檢視。
+* **GraphQL API，適[!DNL Content Fragments]**&#x200B;用於：全新的GraphQL API是以JSON格式傳送結構化內容的標準方法。GraphQL查詢可讓用戶端僅要求相關內容項目來呈現體驗。 這種選擇消除了需要在用戶端剖析內容的內容過傳送（在HTTP REST API中可能）。 GraphQL結構衍生自[!DNL Content Fragment]模型，而API回應則採用JSON格式。 在作為[!DNL Cloud Service]的[!DNL Experience Manager]中， [GraphQL查詢會保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching)並處理快取友好GET請求。 在[!DNL Experience Manager] 6.5中尚不可能。
+
+* **階層管理與未來預覽**:使用者現在有介面可存取其啟動的內容結 [!DNL Experience Manager] 構，包括在啟動中新增和移除頁面的功能。此功能增強了[!DNL Experience Manager]啟動以製作內容版本以供未來發佈的靈活性。 [時間扭曲功](/help/sites-authoring/working-with-page-versions.md#timewarp) 能可讓使用者將啟動次數預覽為未來內容狀態。
+
+* [!DNL Experience Manager] 直接在資料夾下顯示所有內容模型的清單，內容作者不必瀏覽檔案結構。此功能現在需要的點擊次數更少，並且提高了製作效率。
+
+* [!DNL Sites]編輯器中的路徑欄位可讓作者從[!DNL Content Finder]拖曳資產。
+
+* Platform提供幾項協助工具增強功能。 請參閱[平台更新](/help/release-notes/sp-release-notes.md#platform-65100)。
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* 更新了與香港、澳門和台灣有關的中國地區和地區的命名，使其與中國社會和政治觀點一致。
+* [!DNL Experience Manager] 將「連線資產」功能延伸至適 [!DNL Dynamic Media] 用核心元件中的影像使用。請參閱[使用連線資產](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-* 引入可選配置，以從[!DNL Adobe Experience Manager]更改ACP API響應中的電子郵件ID的大小寫。
+* 以連結形式共用個別資產和集合時（使用[!UICONTROL 連結共用]對話方塊），使用者可以選擇讓接收者下載原始資產或其轉譯，或兩者皆執行。
 
-   ![配置，在ACP響應中將電子郵件ID更改為小寫，從  [!DNL Experience Manager]](assets/email-lowcase-config.png)
+   ![僅下載原始資產、僅轉譯或兩者的選項](/help/assets/assets/share-renditions.png)
 
-* 針對各種功能，增強了背景中的文字和圖示對比度。 此WCAG指引的實作讓視力和顏色感知受限的使用者更容易存取[!DNL Assets]。 請參閱 [!DNL Assets]](sp-release-notes.md#assets-accessibility-6590)中的[協助工具增強功能。
+* 當使用者下載以連結形式與他們共用的資產時，他們可以選擇下載原始資產、轉譯或兩者。
+
+* 管理員可以限制[!DNL Experience Manager]為複合資產(如PDF、PowerPoint、InDesign和Keynote檔案)產生的子資產數。
+
+   ![限制子資產的產生](/help/assets/assets/sub-asset-limit.png)
+
+* 新的[!DNL Camera Raw]套件可支援[!DNL Adobe Camera Raw] v10.4。請參閱[使用 [!DNL Camera Raw]](/help/assets/camera-raw.md)處理影像。
 
 ### [!DNL Dynamic Media] {#assets-dynamic-media}
 
-* [[!DNL Dynamic Media] 在以下方](sp-release-notes.md#assets-accessibility-6590) 面更方便存取：
-
-   * 使用鍵盤鍵的易用性。
-   * 對比（與背景）各種編輯器中的文字、預留位置文字和控制項。
-   * 依螢幕助讀程式的協助工具和旁白。
-
-* 借助智慧影像處理DPR（設備像素比率）和網路頻寬優化，在具有高解析度顯示器和受限網路頻寬的設備上高效地提供最佳質量影像。 請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)。
-
-* [!DNL Dynamic Media] 傳送(`fmt` URL修飾元)現在支援新一代影像格式AVIF（AV1影像格式）。有關更多詳細資訊和時間軸，請參閱[影像提供和呈現API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
+* 在[!DNL Dynamic Media]用戶端中執行了許多協助工具增強功能，讓螢幕助讀程式能提供更適當且實用的動作或使用者介面說明。 請參閱[[!DNL Dynamic Media] 更新](/help/release-notes/sp-release-notes.md#dynamic-media-65100)。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -60,37 +63,11 @@ ht-degree: 0%
 >
 >[!DNL Experience Manager Forms]的附加元件套件會在排程的[!DNL Experience Manager] Service Pack發行一週後提供使用。
 
-### 支援[!DNL Azul Zulu OpenJDK] {#support-azul-zulu}
-
-您現在可以在OSGi部署上，使用[!DNL OpenJDK]組建的[!DNL Azul Zulu]來開發和操作應用程式，以適用於[!DNL Experience Manager Forms]。 如需詳細資訊，請參閱[Experience Manager6.5 Service Pack 9發行說明](sp-release-notes.md)和[技術要求](../sites-deploying/technical-requirements.md)。
-
-### 能夠使用[!UICONTROL 分配任務]向組發送通知電子郵件 {#group-notification-email}
-
-您現在可以使用「指派工作」工作流程步驟，傳送通知電子郵件至群組電子郵件地址。
-
-### 修改源互動式通信後檢索互動式通信草稿的功能 {#retrieve-draft-after-source-modifications}
-
-您現在可以在對來源互動式通訊進行變更後，擷取儲存為草稿的互動式通訊。
-
-### 為載入、呈現和驗證reCAPTCHA服務設定自訂網域名稱 {#set-custom-domain-name-recaptcha}
-
-reCAPTCHA服務使用`https://www.recaptcha.net/`作為預設網域。 您現在可以修改設定以設定`https://www.google.com/`或任何自訂網域名稱，以載入、呈現和驗證reCAPTCHA服務。
-
-### [!UICONTROL 叫用表單資料模型服務]工作流程步驟的輸入資料增強功能 {#input-data-enhancements-fdm}
-
-在[!UICONTROL 叫用表單資料模型服務]工作流步驟中選擇表單資料模型和服務時，可以為輸入資料指定服務參數。
-
-如果選擇[!UICONTROL 相對於裝載]選項以將檔案附加為服務參數，則現在可以指定包含該檔案的資料夾路徑，而不是實際的檔案名。 定義資料夾名稱（而不是檔案附件名稱）可讓您重複使用工作流模型。 不將工作流模型限制為單個檔案附件名稱。
-
-### 在「記錄文檔」模板中使用多個首頁的功能 {#use-multiple-master-pages-dor-template}
-
-您現在可以在「記錄文檔」模板中使用多個首頁。 因此，您現在可以在標題頁面和範本的其他頁面上擁有不同的頁首、頁尾、字型、標誌資訊。
-
-### 記錄檔案中的支援分頁 {#support-page-breaks-dor}
-
-您現在可以將分頁符新增至記錄檔。 因此，如果某個面板在頁面內斷開，您可以添加分頁符，以將該面板移動到「記錄文檔」中的新頁面。
-
 ## 舊版[!DNL Experience Manager] 6.5 Service Pack中的主要功能 {#key-features-previous-service-packs}
+
+### 能夠還原已刪除的頁和樹(6.5.9.0) {#ability-to-restore-pages-tree}
+
+您現在可以還原已刪除的頁面以及[!DNL Experience Manager Sites]頁面上的整個樹狀檢視。
 
 ### [!DNL Experience Manager Sites] {#aem-sites-previous-service-packs}
 
@@ -150,6 +127,14 @@ reCAPTCHA服務使用`https://www.recaptcha.net/`作為預設網域。 您現在
 
 ### [!DNL Adobe Experience Manager Assets] {#aem-assets-previous-service-packs}
 
+
+* 更新與香港、澳門及台灣相關的中文地區和地區的命名，使其與中國社會和政治觀點(6.5.9.0)一致。
+
+* 引入可選配置，以從[!DNL Adobe Experience Manager](6.5.9.0)更改ACP API響應中的電子郵件ID的大小寫。
+
+   ![配置，在ACP響應中將電子郵件ID更改為小寫，從  [!DNL Experience Manager]](assets/email-lowcase-config.png)
+
+* 針對各種功能，增強了背景中的文字和圖示對比度。 網頁內容可及性指引(WCAG)指引的這項實作，讓視力和顏色感知受限的使用者更容易存取[!DNL Assets]。 請參閱 [!DNL Assets]](sp-release-notes.md#assets-accessibility-6590)(6.5.9.0)中的[協助工具增強功能。
 * 使用[連線資產功能](/help/assets/use-assets-across-connected-assets-instances.md)時，您現在可以檢視使用資產的所有[!DNL Sites]頁面清單。 資產的[!UICONTROL 屬性]頁面會提供這些資產參考。 這可讓管理員、行銷人員和圖書館員全面了解資產使用情形，進而提供更佳的追蹤、管理和品牌一致性(6.5.8.0)。
 
 * 刪除網頁中參考的資產時，[!DNL Experience Manager]會顯示警告。 您可以強制刪除參照的資產，或檢查並修改顯示在資產[!DNL Properties]頁面中的參照。 按一下參照會開啟本機和遠端[!DNL Sites]頁面(6.5.8.0)。
@@ -245,6 +230,16 @@ DAM清單檢視和清單檢視的資產搜尋結果中，會新增可供排序�
 
 ### Dynamic Media {#dynamic-media-previous-service-packs}
 
+* [[!DNL Dynamic Media] 在以下方](sp-release-notes.md#assets-accessibility-6590) 面更方便存取：
+
+   * 使用鍵盤鍵的易用性。
+   * 對比（與背景）各種編輯器中的文字、預留位置文字和控制項。
+   * 依螢幕助讀程式的協助工具和旁白。
+
+* 借助智慧影像處理DPR（設備像素比率）和網路頻寬優化，在具有高解析度顯示器和受限網路頻寬的設備上高效地提供最佳質量影像。 請參閱[智慧型影像常見問題集](/help/assets/imaging-faq.md)(6.5.9.0)。
+
+* [!DNL Dynamic Media] 傳送(`fmt` URL修飾元)現在支援新一代影像格式AVIF（AV1影像格式）。有關更多詳細資訊和時間軸，請參閱[影像提供和呈現API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)(6.5.9.0)。
+
 #### 使CDN快取內容(6.5.6.0)無效 {#invalidate-cdn-cached-content}
 
 您現在可以使用[!DNL Dynamic Media]使用者介面，將內容傳遞網路(CDN)快取內容判定為失效。 因此，更新後的資產可立即使用，而不需等待快取過期。 您可以透過下列方式使CDN失效：
@@ -265,9 +260,39 @@ DAM清單檢視和清單檢視的資產搜尋結果中，會新增可供排序�
 
 #### Dynamic Media適用的視訊描述檔智慧型裁切(6.5.3.0) {#smart-crop-video}
 
-智慧型裁切視訊 — 視訊描述檔中提供的選用功能 — 此工具運用Adobe Sensei中人工智慧的強大功能，自動偵測並裁切您上傳之任何最適化視訊或漸進式視訊中的焦點（不論大小）。 請參閱[關於在視訊描述檔中使用智慧型裁切](../assets/video-profiles.md)。
+智慧型裁切視訊 — 視訊描述檔中提供的選用功能 — 使用Adobe Sensei來自動偵測和裁切任何最適化視訊或漸進式視訊中的焦點（不論大小）。 請參閱[關於在視訊描述檔中使用智慧型裁切](../assets/video-profiles.md)。
 
 ### Experience ManagerForms {#aem-forms-previous-service-packs}
+
+#### 支援[!DNL Azul Zulu OpenJDK](6.5.9.0) {#support-azul-zulu}
+
+您現在可以在OSGi部署上，使用[!DNL OpenJDK]組建的[!DNL Azul Zulu]來開發和操作應用程式，以適用於[!DNL Experience Manager Forms]。 如需詳細資訊，請參閱[Experience Manager6.5 Service Pack 9發行說明](sp-release-notes.md)和[技術要求](../sites-deploying/technical-requirements.md)。
+
+#### 能夠使用[!UICONTROL Assign Task](6.5.9.0)向組發送通知電子郵件 {#group-notification-email}
+
+您現在可以使用「指派工作」工作流程步驟，傳送通知電子郵件至群組電子郵件地址。
+
+#### 修改源互動式通信(6.5.9.0)後檢索互動式通信草稿的功能 {#retrieve-draft-after-source-modifications}
+
+您現在可以在變更來源互動式通訊後，擷取儲存為草稿的互動式通訊。
+
+#### 為載入、呈現和驗證reCAPTCHA服務(6.5.9.0)設定自訂網域名稱 {#set-custom-domain-name-recaptcha}
+
+reCAPTCHA服務使用`https://www.recaptcha.net/`作為預設網域。 您現在可以修改設定以設定`https://www.google.com/`或任何要載入、呈現及驗證reCAPTCHA服務的自訂網域名稱。
+
+#### [!UICONTROL 叫用表單資料模型服務]工作流程步驟(6.5.9.0)的輸入資料增強功能 {#input-data-enhancements-fdm}
+
+在[!UICONTROL 叫用表單資料模型服務]工作流步驟中選擇表單資料模型和服務時，可以為輸入資料指定服務參數。
+
+如果選擇[!UICONTROL 相對於裝載]選項以將檔案附加為服務參數，則現在可以指定包含該檔案的資料夾路徑，而不是實際的檔案名。 定義資料夾名稱（而不是檔案附件名稱）可讓您重複使用工作流模型。 不將工作流模型限制為單個檔案附件名稱。
+
+#### 在「記錄文檔」模板中使用多個首頁(6.5.9.0) {#use-multiple-master-pages-dor-template}
+
+您現在可以在「記錄文檔」模板中使用多個首頁。 因此，您現在可以在標題頁面和範本的其他頁面上擁有不同的頁首、頁尾、字型、標誌資訊。
+
+#### 記錄檔(6.5.9.0)中的支援分頁 {#support-page-breaks-dor}
+
+您現在可以將分頁符新增至記錄檔。 因此，如果某個面板在頁面內斷開，您可以添加分頁符，以將該面板移動到「記錄文檔」中的新頁面。
 
 #### 根據規則(6.5.8.0)在最適化表單中顯示或隱藏CAPTCHA元件 {#show-hide-captcha}
 
@@ -428,15 +453,15 @@ Experience ManagerForms包含下列協助工具增強功能：
 
 2021年2月25日至2021年5月27日，Adobe除了Service Pack外，還發行了下列內容：
 
-* [!DNL Adobe Experience Manager] 作為Cloud Service [2021.2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-2-0.html)、 [2021.3.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-3-0.html)和 [2021.4.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html#release-date)。
+* [!DNL Adobe Experience Manager] 作為Cloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)和 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en)。
 
-* [[!DNL Experience Manager] 案頭應用程式2.1(2.1.2.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
+* [[!DNL Experience Manager] 案頭應用程式2.1(2.1.3.3)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
 
-* [Experience Manager Screens:Feature Pack 202103](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202103.html)
+* [Experience Manager Screens:Feature Pack 202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html?lang=en)
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Adobe Experience Manager] 6.5檔案](../user-guide/home.md)
-* [ [!DNL Adobe Experience Manager] 6.5的一般發行說明](release-notes.md)
-* [ [!DNL Adobe Experience Manager] 6.5的Service Pack發行說明](sp-release-notes.md)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
+>* [ [!DNL Experience Manager]  6.5一般發行說明](release-notes.md)
+>* [ [!DNL Experience Manager]  6.5的Service Pack發行說明](sp-release-notes.md)
 

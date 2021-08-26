@@ -2,12 +2,12 @@
 title: Assets 指南
 description: 本指南涵蓋所有Experience Manager資產工作，例如如何建立、管理、傳送和最佳化數位資產。
 user-guide-title: Assets 指南
-feature: 資產管理
+feature: Asset Management
 role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 883c279330b199d4e3a301e240cae02a6e04fd20
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '333'
 ht-degree: 18%
 
 ---
@@ -17,9 +17,6 @@ ht-degree: 18%
 本指南涵蓋所有[!DNL Experience Manager Assets]工作，例如如何建立、管理、傳送和最佳化數位資產。
 
 ## 關鍵[!DNL Experience Manager]文章
-
-<!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
--->
 
 * [Experience Manager6.5發行說明](/help/release-notes/home.md)
 * [近期文件更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
