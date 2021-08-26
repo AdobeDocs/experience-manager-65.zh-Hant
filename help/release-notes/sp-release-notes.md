@@ -4,10 +4,10 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 10的發行說�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '3648'
-ht-degree: 2%
+source-wordcount: '3652'
+ht-degree: 1%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 
 * **連結共用選項以下載資產或轉譯**:將資產和集合共用為連結時，使用者可以選擇是否允許下載原始資產或其轉譯，或是同時使用共用連結。此外，透過連結下載與他們共用之資產的使用者也可以選擇只下載原始資產、僅下載轉譯或兩者。
 
-* **限制產生的子資產**:管理員可以限制為複合資產( [!DNL Experience Manager] 例如PDF、PowerPoint、InDesign和Keynote檔案)產生的子資產數量。
+* **限制產生的子資產**:管理員可以限制為複合資產( [!DNL Experience Manager] 例如PDF、PowerPoint、InDesign和Keynote檔案)產生的子資產數量。請參閱[管理複合資產](/help/assets/managing-linked-subassets.md#generate-subassets)。
 
 * **Camera Raw支援**:提供支 [!DNL Camera Raw] 援v10.4的 [!DNL Adobe Camera Raw] 新套件。請參閱 [使用 [!DNL Camera Raw]](/help/assets/camera-raw.md)處理影像。
 

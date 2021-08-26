@@ -3,11 +3,11 @@ title: 下載資產
 description: 了解如何從 [!DNL Adobe Experience Manager] 下載資產，以及啟用或停用下載功能。
 contentOwner: AG
 role: User
-feature: 資產管理，資產分發
+feature: Asset Management,Asset Distribution
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 66becef1f25d15c5451be6bc480ff7a4bccd4fcb
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 3%
    |---|---|
    | **[!UICONTROL 為每一個資產建立個別的資料夾]** | 選取此選項，將您下載的每個資產（包括資產的父資料夾下巢狀子資料夾中的資產），納入本機電腦上的一個資料夾。 若未選取此選項，依預設會忽略資料夾階層，而所有資產都會下載至本機電腦的一個資料夾中。 |
    | **[!UICONTROL 電子郵件]** | 會傳送電子郵件通知給使用者。 標準電子郵件範本位於下列位置：<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> 在部署期間自定義的模板可在以下位置使用： <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>您可以在下列位置儲存租用戶專用的自訂範本：<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
-   | **[!UICONTROL 資產]** | 選取此選項即可下載原始格式的資產，而不需任何轉譯。<br>如果原始資產具有子資產，則會提供子資產選項。 |
+   | **[!UICONTROL 資產]** | 選取此選項即可下載原始格式的資產，而不需任何轉譯。<br>如果原始資產有子資產，則子資產選項可供使用。 |
    | **[!UICONTROL 轉譯]** | 轉譯是資產的二進位表示法。資產有主要表示法，即上傳之檔案的主要表示法。 它們可以有任意數量的表示。 <br> 使用此選項，您可以選取要下載的轉譯。可用的轉譯取決於您選取的資產。 如果資產有任何轉譯，則可使用選項。 |
    | **[!UICONTROL 智慧裁切]** | 選取此選項，即可從AEM內下載所選資產的所有智慧型裁切轉譯。 會建立包含智慧型裁切轉譯的zip檔案，並下載至您的本機電腦。 |
    | **[!UICONTROL 動態轉譯]** | 選取此選項即時產生一系列替代轉譯。 選取此選項時，您也可以從[影像預設集](image-presets.md)清單中選取，以動態方式選取您要建立的轉譯。 <br>此外，您還可以選取尺寸和單位、格式、顏色空間、解析度，以及任何可選的影像修飾符，如反相影像。只有在您已啟用[!DNL Dynamic Media]時，選項才可用。 |

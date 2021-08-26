@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: d83f8d6e4b99ac7f287c0f091b84bbbf9d82fc75
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '3974'
+source-wordcount: '3983'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 1%
 [!DNL Adobe Experience Manager] 6.5 Service Pack每季提供新功能、客戶要求的增強功能，以及效能、穩定性和安全性方面的改善。每季的可用性使用戶能夠輕鬆訪問和採用新功能和創新。
 
 本文重點說明最新Service Pack中包含的功能、先前6.5 Service Pack](#key-features-previous-service-packs)中包含的[主要功能，以及自上次Service Pack](#key-releases-since-last-sp)發行以來的[重要發行。
-
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -41,13 +40,13 @@ ht-degree: 1%
 
 * [!DNL Experience Manager] 將「連線資產」功能延伸至適 [!DNL Dynamic Media] 用核心元件中的影像使用。請參閱[使用連線資產](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-* 以連結形式共用個別資產和集合時（使用[!UICONTROL 連結共用]對話方塊），使用者可以選擇讓接收者下載原始資產或其轉譯，或兩者皆執行。
+* 以連結形式共用個別資產和集合時（使用[!UICONTROL 連結共用]對話方塊），使用者可以選擇讓接收者下載原始資產或其轉譯，或兩者皆執行。 請參閱[透過連結](/help/assets/link-sharing.md)共用資產。
 
-   ![僅下載原始資產、僅轉譯或兩者的選項](/help/assets/assets/share-renditions.png)
+   ![選項僅允許下載原始資產、僅允許轉譯，或同時允許](/help/release-notes/assets/share-assets-as-link.png)
 
 * 當使用者下載以連結形式與他們共用的資產時，他們可以選擇下載原始資產、轉譯或兩者。
 
-* 管理員可以限制[!DNL Experience Manager]為複合資產(如PDF、PowerPoint、InDesign和Keynote檔案)產生的子資產數。
+* **限制產生的子資產**:管理員可以限制為複合資產( [!DNL Experience Manager] 例如PDF、PowerPoint、InDesign和Keynote檔案)產生的子資產數量。
 
    ![限制子資產的產生](/help/assets/assets/sub-asset-limit.png)
 

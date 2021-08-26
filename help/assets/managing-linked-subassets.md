@@ -3,11 +3,11 @@ title: 使用參考和多個頁面管理複合資產
 description: 了解如何從 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]內建立數位資產的參考。 使用「頁面檢視器」功能，檢視多頁檔案的個別子資產頁面，例如PDF、INDD、PPT、PPTX和AI檔案。
 contentOwner: AG
 role: User, Admin
-feature: 資產管理
+feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1423'
 ht-degree: 0%
 
 ---
@@ -103,6 +103,10 @@ ht-degree: 0%
    * 選取資產，然後從工具列按一下「[!UICONTROL 建立] > [!UICONTROL 工作流程]」。 從彈出式對話方塊中，選取[!UICONTROL DAM更新資產]工作流程，按一下[!UICONTROL 開始]，然後按一下[!UICONTROL 繼續]。
 
 尤其是Microsoft Word文檔，請執行&#x200B;**[!UICONTROL DAM Parse Word Documents]**&#x200B;工作流。 它從Microsoft Word文檔的內容生成`cq:Page`元件。 從文檔中提取的影像從`cq:Page`元件中引用。 即使停用子資產產生，也會擷取這些影像。
+
+>[!NOTE]
+>
+>在[!UICONTROL 處理參數]的[!UICONTROL 建立子資產流程 — 步驟屬性]中，您可以指定[!DNL Experience Manager]所生成的子資產數。 預設值為 5。若要產生所有子資產，請將欄位留空。 如果欄位為負數，則不會產生子資產。
 
 ## 檢視子資產 {#viewing-subassets}
 

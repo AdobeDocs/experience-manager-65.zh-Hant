@@ -3,11 +3,11 @@ title: 使用連結共用資產
 description: 以URL共用資產、資料夾和集合。
 contentOwner: AG
 role: User
-feature: 連結共用，資產管理
+feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '998'
 ht-degree: 5%
 
 ---
@@ -24,20 +24,17 @@ ht-degree: 5%
 
 ## 共用資產 {#share-assets}
 
-若要產生您要與使用者共用之資產的URL，請使用「連結共用」對話方塊。 具有管理員權限或在`/var/dam/share`位置具有讀取權限的用戶可以查看與他們共用的連結。
+若要產生您要與使用者共用之資產的URL，請使用[!UICONTROL 連結共用]對話方塊。 具有管理員權限或在`/var/dam/share`位置具有讀取權限的用戶可以查看與他們共用的連結。
 
 1. 在[!DNL Assets]使用者介面中，選取要以連結形式共用的資產。
-1. 在工具列中，按一下&#x200B;**[!UICONTROL 共用連結]** ![共用資產圖示](assets/do-not-localize/assets_share.png)。 點擊&#x200B;**[!UICONTROL 共用]**&#x200B;後建立的連結會預先顯示在[!UICONTROL 共用連結]欄位中。 在您按一下&#x200B;**[!UICONTROL Submit]**&#x200B;之前，尚未建立連結。
 
-   ![與連結共用對話方塊](assets/Link-sharing-dialog-box.png)
+1. 在工具列中，按一下&#x200B;**[!UICONTROL 共用連結]** ![共用資產圖示](assets/do-not-localize/assets_share.png)。 點擊&#x200B;**[!UICONTROL 共用]**&#x200B;後建立的連結會預先顯示在[!UICONTROL 共用連結]欄位中。 在您選擇&#x200B;**[!UICONTROL Submit]**&#x200B;之前，不會建立連結。
+
+   ![與連結共用對話方塊](/help/assets/assets/share-assets-as-link.png)
 
    *圖：以連結形式共用資產的對話方塊。*
 
 1. 在「連結共用」對話方 **[!UICONTROL 塊的電子郵件地址方塊中]** ，輸入您要共用連結之使用者的電子郵件ID。您可以新增一或多個使用者。
-
-   ![直接從「連結共用」對話方塊共用資產的連結](assets/Asset-Sharing-LinkShareDialog.png)
-
-   *圖：直接從「連結共用」對話方塊共 [!UICONTROL 用資] 產連結。*
 
    >[!NOTE]
    >
@@ -51,7 +48,7 @@ ht-degree: 5%
 
    ![設定共用連結的到期日](assets/Set-shared-link-expiration.png)
 
-1. 若要讓使用者下載原始資產以及轉譯，請選取「**[!UICONTROL 允許下載原始檔案]**」。 依預設，使用者只能下載您以連結形式共用之資產的轉譯。
+1. 若要讓使用者下載原始資產，請選取「**[!UICONTROL 允許下載原始檔案]**」。 若要讓使用者只下載共用資產的轉譯，請選取「**[!UICONTROL 允許下載檔案]**&#x200B;的轉譯」。
 
 1. 按一下&#x200B;**[!UICONTROL 「共用」]**。訊息會確認連結已透過電子郵件與使用者共用。
 
@@ -111,4 +108,4 @@ ht-degree: 5%
    * `http://[aem_server]:[port]/linkshare.html`
    * `http://[aem_server]:[port]/linksharepreview.html`
    * `http://[aem_server]:[port]/linkexpired.html`
-   在[!DNL Experience Manager]介面中，訪問&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。 開啟&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;配置，並在&#x200B;**[!UICONTROL Domains]**&#x200B;欄位中修改以下屬性，並針對`local`、`author`和`publish`提及值。 針對`local`和`author`屬性，分別提供本機和Author例項的URL。 如果您執行單一[!DNL Experience Manager]製作例項，請對`local`和`author`屬性使用相同的值。 若為發佈例項，請提供[!DNL Experience Manager]發佈例項的URL。
+   在[!DNL Experience Manager]介面中，訪問&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web控制台]**。 開啟&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;配置，並在&#x200B;**[!UICONTROL Domains]**&#x200B;欄位中修改以下屬性，並針對`local`、`author`和`publish`提及值。 針對`local`和`author`屬性，分別提供本機和Author例項的URL。 如果您執行單一[!DNL Experience Manager]製作例項，請對`local`和`author`屬性使用相同的值。 若為發佈例項，請提供[!DNL Experience Manager]發佈例項的URL。
