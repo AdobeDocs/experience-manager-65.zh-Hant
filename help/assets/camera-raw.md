@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: 73e53f516d8e10b548f913db079c7e9812deb907
+source-git-commit: 9e1eea90945bb77e83e15d25708e47f2f3009fd8
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '374'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 要在[!DNL Experience Manager Assets]中啟用[!DNL Camera Raw]支援，請執行以下步驟：
 
-1. 從[!DNL Software Distribution]下載[Camera Raw套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
+1. 從[!DNL Software Distribution]下載[[!DNL Camera Raw] 套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip)。
 1. 存取 `https://[aem_server]:[port]/workflow`. 開啟&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程。
 1. 編輯&#x200B;**[!UICONTROL 處理縮圖]**&#x200B;步驟。
 1. 在&#x200B;**[!UICONTROL 縮圖]**&#x200B;標籤中提供下列配置：
