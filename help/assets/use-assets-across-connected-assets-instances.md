@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 3e4e9ab8b3940f539228bccf759dcade03a8b015
+source-git-commit: 218e97eb31061e833f3b291a6607b2ebf4762471
 workflow-type: tm+mt
 source-wordcount: '2967'
 ht-degree: 26%
@@ -116,7 +116,7 @@ ht-degree: 26%
 ![已連接資產的連接測 [!DNL Sites]](assets/connected-assets-multiple-config.png)
 *試圖：已設定連線資產的連線測試 [!DNL Sites]。*
 
-### 設定動態媒體資產的連線{#sites-dynamic-media-connected-assets}
+### 設定動態媒體資產的連線 {#sites-dynamic-media-connected-assets}
 
 您可以配置[!DNL Sites]部署和[!DNL Dynamic Media]部署之間的連接，使網頁作者可以在其網頁中使用[!DNL Dynamic Media]映像。 編寫網頁時，使用遠端資產和遠端[!DNL Dynamic Media]部署的體驗維持不變。
 
