@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 10的發行說�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
+source-git-commit: 861f5f4ae87da106bc42895e03bc42c0b17bd9fc
 workflow-type: tm+mt
 source-wordcount: '3652'
 ht-degree: 1%
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 * **增強 [!DNL Content Fragment] 模型和編輯器**:您現在可以使用巢狀模型，為結構化內容建立複雜和自訂 [!DNL Content Fragment] 的模型。內容結構被模組化為基本元素，這些基本元素被建模為子片段。 較高層級片段會參考這些子片段。 更多資料類型增強功能（例如進階驗證規則）進一步增強了[!DNL Content Fragments]內容模型的彈性。 [!DNL Experience Manager] [!DNL Content Fragment]編輯器支援公共編輯器會話中的嵌套片段結構，並增強了諸如結構樹視圖和通過片段層次的頁簽式瀏覽路徑標籤導航。
 
-* **GraphQL API，適[!DNL Content Fragments]**&#x200B;用於：全新的GraphQL API是以JSON格式傳送結構化內容的標準方法。GraphQL查詢可讓用戶端僅要求相關內容項目來呈現體驗。 這種選擇消除了需要在用戶端剖析內容的內容過傳送（在HTTP REST API中可能）。 GraphQL結構衍生自[!DNL Content Fragment]模型，而API回應則採用JSON格式。 在作為[!DNL Cloud Service]的[!DNL Experience Manager]中， [GraphQL查詢會保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching)並處理快取友好GET請求。 在[!DNL Experience Manager] 6.5中尚不可能。
+* **GraphQL API，適[!DNL Content Fragments]**&#x200B;用於：全新的GraphQL API是以JSON格式傳送結構化內容的標準方法。GraphQL查詢可讓用戶端僅要求相關內容項目來呈現體驗。 這種選擇消除了需要在用戶端剖析內容的內容過傳送（在HTTP REST API中可能）。 GraphQL結構衍生自[!DNL Content Fragment]模型，而API回應則採用JSON格式。 在作為[!DNL Cloud Service]的[!DNL Experience Manager]中， [GraphQL查詢會保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching)並處理快取友好GET請求。 在[!DNL Experience Manager] 6.5.10.0中尚不可能。
 
 * **階層管理與未來預覽**:使用者現在有介面可存取其啟動的內容結 [!DNL Experience Manager] 構，包括在啟動中新增和移除頁面的功能。此功能增強了[!DNL Experience Manager]啟動以製作內容版本以供未來發佈的靈活性。 [時間扭曲功](/help/sites-authoring/working-with-page-versions.md#timewarp) 能可讓使用者將啟動次數預覽為未來內容狀態。
 
