@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 10的發行說�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 861f5f4ae87da106bc42895e03bc42c0b17bd9fc
+source-git-commit: 9c262f57b3c3b7a1d2deaba78d13d02b74c5208d
 workflow-type: tm+mt
 source-wordcount: '3652'
 ht-degree: 1%
@@ -359,7 +359,7 @@ For information about installing the cumulative installer for Experience Manager
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.10.0</version>
+     <version>6.5.10</version>
      <scope>provided</scope>
 </dependency>
 ```
