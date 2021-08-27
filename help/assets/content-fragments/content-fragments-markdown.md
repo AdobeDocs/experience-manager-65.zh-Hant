@@ -1,30 +1,20 @@
 ---
 title: Markdown
-seo-title: Markdown
-description: 您編寫內容時，內容片段編輯器會使用Markdown語法，讓您輕鬆撰寫內容。
-seo-description: 您編寫內容時，內容片段編輯器會使用Markdown語法，讓您輕鬆撰寫內容。
-uuid: afcbf82f-3a75-4491-9172-706188db65bb
-contentOwner: Alison Heimoz
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: content-fragments
-content-type: reference
-discoiquuid: b193f28c-46c2-4eab-bbb8-578530f80ba5
-docset: aem65
-feature: 內容片段
-role: User, Admin
-exl-id: 28e1052f-62b5-47bc-9bc8-f2d92f0254f6
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: 了解內容片段編輯器如何使用Markdown語法，輕鬆建立無標題內容。
+feature: Content Fragments
+role: User
+source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '522'
 ht-degree: 4%
 
 ---
 
-# Markdown{#markdown}
+# Markdown {#markdown}
 
-當您是[authoring](content-fragments-variations.md#authoring-your-content)時，內容片段編輯器會使用&#x200B;*markdown*&#x200B;語法，讓您輕鬆撰寫內容：
+當您是[authoring](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)時，內容片段編輯器會使用&#x200B;*markdown*&#x200B;語法，讓您輕鬆撰寫無標題內容：
 
-![markdown編輯器](/help/assets/content-fragments/assets/cfm-6420-08.png)
+![markdown編輯器](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
 您可以定義：
 

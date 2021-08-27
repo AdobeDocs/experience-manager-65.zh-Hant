@@ -1,42 +1,34 @@
 ---
 title: 變化 - 編寫片段內容
-seo-title: 變化 - 編寫片段內容
-description: 變異可讓您製作片段的內容，然後根據用途建立該內容的變異（如果需要）。
-seo-description: 變異可讓您製作片段的內容，然後根據用途建立該內容的變異（如果需要）。
-uuid: 0844f271-79bc-4f76-8031-d388b81d6feb
-contentOwner: Alison Heimoz
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: content-fragments
-content-type: reference
-discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
-docset: aem65
-feature: 內容片段
-role: User, Admin
-exl-id: ded05f24-ab5c-4195-b5c4-704a9fd93c7e
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: 了解變異如何讓您在AEM中的無頭式內容更有彈性，方法是允許您為片段製作內容，然後根據目的建立該內容的變異。
+feature: Content Fragments
+role: User
+source-git-commit: 251bf0ac672d516dd6b2018fc9cc804822f48e4c
 workflow-type: tm+mt
-source-wordcount: '1746'
-ht-degree: 15%
+source-wordcount: '2256'
+ht-degree: 12%
 
 ---
 
 # 變化 - 編寫片段內容{#variations-authoring-fragment-content}
 
-[](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 變數是內容片段的重要功能，因為可讓您建立和編輯主要內容的復本，以用於特定頻道和/或案例。
+[](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 變數是AEM內容片段的重要功能，因為可讓您建立和編輯主要內容的復本，以用於特定頻道和/或情境，讓無頭式內容傳送更具彈性。
 
 從&#x200B;**Variations**&#x200B;標籤，您可以：
 
-* [輸入](#authoring-your-content) 片段的內容
-* [建立和管](#managing-variations) 理Mastercontent的變 **** 數
+* [輸入](#authoring-your-content) 片段的內容，
+* [建立和管](#managing-variations) 理Mastercontent的變 **** 數、
 
 根據要編輯的資料類型執行一系列其他動作；例如：
 
 * [將視覺化資產插入您的片段](#inserting-assets-into-your-fragment) （影像）
+
 * 在[RTF](#rich-text)、[純文字](#plain-text)和[Markdown](#markdown)之間進行編輯
 
 * [上傳內容](#uploading-content)
 
 * [檢視索引鍵統計](#viewing-key-statistics) （關於多行文字）
+
 * [摘要文字](#summarizing-text)
 
 * [將變數與主內容同步](#synchronizing-with-master)
@@ -47,37 +39,36 @@ ht-degree: 15%
 
 ## 編寫內容 {#authoring-your-content}
 
-當您開啟內容片段進行編輯時，**Variations**&#x200B;標籤將依預設開啟。 您可以在此為「主版」或您擁有的任何變體製作內容。 您可以：
-
-* 直接在&#x200B;**Valiations**&#x200B;標籤中進行編輯
-* 開啟[全螢幕編輯器](#full-screen-editor)以：
-
-   * 選擇[Format](#formats)
-   * 查看更多編輯選項（[ RTF](#rich-text)格式）
-
-   * 存取[actions](#actions)的範圍
+當您開啟內容片段進行編輯時，**Variations**&#x200B;標籤將依預設開啟。 您可以在此為「主版」或您擁有的任何變體製作內容。 結構化片段包含內容模型中定義之各種資料類型的各種欄位。
 
 例如：
 
-* 編輯簡單片段
+![全螢幕編](assets/cfm-variations-02.png)
+輯器您可以：
 
-   簡單片段包含一個多行文字欄位（可從全螢幕編輯器新增視覺資產）。
+* 直接在&#x200B;**Valiations**&#x200B;標籤中進行編輯
 
-   ![cfm-6420-21](assets/cfm-6420-21.png)
+   * 每種資料類型提供不同的編輯選項
 
-* 使用結構化內容編輯片段
+* 對於&#x200B;**多行文本**&#x200B;欄位，您也可以開啟[全螢幕編輯器](#full-screen-editor)以：
 
-   結構化片段包含內容模型中定義之各種資料類型的各種欄位。 對於任何多行欄位，[全螢幕編輯器](#full-screen-editor)都可用。
+   * 選擇[Format](#formats)
+   * 查看更多編輯選項（[ RTF](#rich-text)格式）
+   * 存取[actions](#actions)的範圍
 
-   ![cfm-6420-16](assets/cfm-6420-16.png)
+* 對於&#x200B;**片段參考**&#x200B;欄位，視模型定義而定，**[編輯內容片段](#fragment-references-edit-content-fragment)**&#x200B;選項可供使用。
 
 ### 全螢幕編輯器 {#full-screen-editor}
 
-編輯多行文本欄位時，可以開啟全螢幕編輯器：
+編輯多行文本欄位時，可以開啟全螢幕編輯器；點選或按一下實際文字，然後選取下列動作圖示：
 
-![cf-fullscreeneditor-icon](assets/cf-fullscreeneditor-icon.png)
+![全螢幕編輯器圖示](assets/cfm-variations-03.png)
 
-全螢幕編輯器提供：
+這會開啟全螢幕文字編輯器：
+
+![全螢幕編輯器](assets/cfm-variations-fullscreentexteditor.png)
+
+全螢幕文字編輯器提供：
 
 * 存取各種[動作](#actions)
 * 視[format](#formats)，其他格式選項([RTF](#rich-text))而定
@@ -88,14 +79,13 @@ ht-degree: 15%
 
 * 選取[format](#formats)（[Rtf](#rich-text), [純文字，](#plain-text) [Markdown](#markdown)）
 
+* [上傳內容](#uploading-content)
+
 * [顯示文本統計資訊](#viewing-key-statistics)
 
-* [上傳內容](#uploading-content)
 * [與主版同步](#synchronizing-with-master) （編輯變數時）
-* [摘要文字](#summarizing-text)
-* [](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) 註解您的文字
 
-* [將視覺化資產插入您的片段](#inserting-assets-into-your-fragment) （影像）
+* [摘要文字](#summarizing-text)
 
 ### 格式 {#formats}
 
@@ -119,16 +109,16 @@ RTF編輯可讓您設定格式：
 * 編號清單
 * 縮排：增加，減少
 * 建立/中斷超連結
+* 貼上文字/來自字詞
+* 插入表格
+* 段落樣式：第1/2/3段
+* [插入資產](#inserting-assets-into-your-fragment)
 * 開啟全螢幕編輯器，其中提供下列格式選項：
-
-   * 貼上文字/來自字詞
-   * 插入表格
-   * 段落樣式：第1/2/3段
-   * [插入視覺資產](#inserting-assets-into-your-fragment)
    * 搜尋
    * 尋找/取代
    * 拼字檢查程式
    * [註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+* [插入內容片段](#inserting-content-fragment-into-your-fragment);當「多行」 **文字欄** 位設定為「允許片段 **參考」時可用**。
 
 也可從全螢幕編輯器存取[actions](#actions)。
 
@@ -164,11 +154,48 @@ RTF編輯可讓您設定格式：
 >
 >如果您在 **Rich Text** 和 **** Markdown之間切換，可能會在區塊引號和程式碼區塊中遇到意外的效果，因為這兩種格式在處理方式上可能會有差異。
 
+### 片段參考 {#fragment-references}
+
+如果內容片段模型包含片段參考，您的片段作者可能有其他選項：
+
+* [編輯內容片段](#fragment-references-edit-content-fragment)
+* [新內容片段](#fragment-references-new-content-fragment)
+
+![片段參考](assets/cfm-variations-12.png)
+
+#### 編輯內容片段 {#fragment-references-edit-content-fragment}
+
+選項&#x200B;**編輯內容片段**&#x200B;將在新視窗索引標籤中開啟該片段。
+
+<!--
+The option **Edit Content Fragment** will open that fragment in a new editor tab (within the same browser tab).
+
+Selecting the original tab again (for example, **Little Pony Inc.**), will close this secondary tab (in this case, **Adam Smith**).
+
+![Fragment References](assets/cfm-variations-editreference.png)
+-->
+
+#### 新內容片段 {#fragment-references-new-content-fragment}
+
+選項&#x200B;**新內容片段**&#x200B;可讓您建立完全新的片段。 為此，將在編輯器中開啟建立內容片段精靈的變數。
+
+然後，您將能夠通過以下方式建立新片段：
+
+1. 導覽至，並選取所需的資料夾。
+1. 選擇&#x200B;**Next**。
+1. 指定屬性；例如&#x200B;**Title**。
+1. 選擇&#x200B;**Create**。
+1. 最後：
+   1. **** Donewill會傳回（至原始片段）並參考新片段。
+   1. **** Open將參考新片段，以及在新瀏覽器索引標籤中開啟新片段以進行編輯。
+
 ### 查看關鍵統計資訊 {#viewing-key-statistics}
 
-當全螢幕編輯器開啟時，「文字統計 **資料** 」動作會顯示一系列有關文字的資訊。例如：
+當全螢幕編輯器開啟時，「文字統計 **資料** 」動作會顯示一系列有關文字的資訊。
 
-![cfx-6420-22](assets/cfx-6420-22.png)
+例如：
+
+![統計](assets/cfm-variations-04.png)
 
 ### 上傳內容 {#uploading-content}
 
@@ -184,25 +211,19 @@ RTF編輯可讓您設定格式：
 
 >[!CAUTION]
 >
->內容片段必須具有有效的語言（ISO代碼）資料夾作為上階；這可用來決定要使用的語言模型。
+>內容片段必須具備有效的語言資料夾（ISO代碼）作為上階；這可用來決定要使用的語言模型。
 >
 >例如，`en/`如下列路徑：
 >
->`/content/dam/my-brand/en/path-down/my-content-fragment`
+>  `/content/dam/my-brand/en/path-down/my-content-fragment`
 
 >[!CAUTION]
->
->英文是現成可用的。
->
->其他語言則可作為Software Distribution的語言模型套件：
->
->* [Software Distribution的法文(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [德文(de)來自Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [Software Distribution的義大利文(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [Software Distribution的西班牙文(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
-
->
-
+英文是現成可用的。
+其他語言則可從Package Share中作為語言模型包：
+* [French(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+* [German(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+* [Italian(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+* [Spanish(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 
 
 1. 選擇&#x200B;**主版**&#x200B;或所需的變數。
@@ -210,7 +231,7 @@ RTF編輯可讓您設定格式：
 
 1. 從工具欄中選擇&#x200B;**摘要文本**。
 
-   ![cf-17](assets/cf-17.png)
+   ![摘要](assets/cfm-variations-05.png)
 
 1. 指定目標字數，然後選擇&#x200B;**Start**:
 1. 原始文本與建議的總結並排顯示：
@@ -219,23 +240,49 @@ RTF編輯可讓您設定格式：
    * 按一下任何醒目提示的句子，將其保留在摘要內容中。
    * 按一下任何未加亮的句子以將其刪除。
 
-   ![cfm-6420-23](assets/cfm-6420-23.png)
-
 1. 選擇&#x200B;**匯總**&#x200B;以確認更改。
+
+1. 原始文本與建議的總結並排顯示：
+
+   * 任何要刪除的句子都以紅色突出顯示，並帶有字串。
+   * 按一下任何醒目提示的句子，將其保留在摘要內容中。
+   * 按一下任何未加亮的句子以將其刪除。
+   * 顯示總結統計資訊：**實際**&#x200B;和&#x200B;**Target**-
+   * 您可以&#x200B;**預覽**&#x200B;變更。
+
+   ![摘要比較](assets/cfm-variations-06.png)
 
 ### 為內容片段加上註解 {#annotating-a-content-fragment}
 
 若要注釋片段：
 
 1. 選擇&#x200B;**主版**&#x200B;或所需的變數。
-1. 開啟全螢幕編輯器。
-1. 選取一些文字。 「**注釋**」表徵圖可用。
 
-   ![cfm-6420-24](assets/cfm-6420-24.png)
+1. 開啟全螢幕編輯器。
+
+1. 頂端工具列中提供&#x200B;**注釋**&#x200B;圖示。 您可以視需要選取一些文字。
+
+   ![注釋](assets/cfm-variations-07.png)
 
 1. 對話方塊將會開啟。 您可以在此輸入注釋。
 
-1. 關閉全螢幕編輯器，並&#x200B;**儲存**&#x200B;片段。
+   ![注釋](assets/cfm-variations-07a.png)
+
+1. 在對話框上選擇&#x200B;**應用**。
+
+   ![注釋](assets/cfm-variations-annotations-apply-icon.png)
+
+   如果將注釋應用於選定文本，則該文本將保持突出顯示。
+
+   ![注釋](assets/cfm-variations-07b.png)
+
+1. 關閉全螢幕編輯器時，仍會強調顯示註解。 如果選中，將開啟一個對話框，以便您可以進一步編輯注釋。
+
+1. 選擇&#x200B;**保存**。
+
+1. 關閉全螢幕編輯器時，仍會強調顯示註解。 如果選中，將開啟一個對話框，以便您可以進一步編輯注釋。
+
+   ![注釋](assets/cfm-variations-07c.png)
 
 ### 查看、編輯、刪除注釋 {#viewing-editing-deleting-annotations}
 
@@ -244,14 +291,13 @@ RTF編輯可讓您設定格式：
 * 在編輯器的全螢幕和一般模式中，以文字上的醒目提示指示。 然後，可通過按一下突出顯示的文本來查看、編輯和/或刪除注釋的完整詳細資訊，這將重新開啟對話框。
 
    >[!NOTE]
-   >
-   >如果已將多個註解套用至一個文字，則提供下拉式選取器。
+   如果已將多個註解套用至一個文字，則提供下拉式選取器。
 
 * 刪除應用了注釋的整個文本時，注釋也會被刪除。
 
 * 在片段編輯器中選取&#x200B;**Annotations**&#x200B;標籤，即可列出及刪除。
 
-   ![cfm-6420-25](assets/cfm-6420-25.png)
+   ![附註](assets/cfm-variations-08.png)
 
 * 可在[時間軸](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)中查看和刪除所選片段。
 
@@ -262,19 +308,16 @@ RTF編輯可讓您設定格式：
 這些檔案將添加到片段的段落序列中，而無需任何格式；在頁面](/help/sites-authoring/content-fragments.md)上使用/參考[片段時，可執行格式設定。
 
 >[!CAUTION]
->
->無法在參考頁面上移動或刪除這些資產，必須在片段編輯器中完成此操作。
->
->不過，必須在[頁面編輯器](/help/sites-authoring/content-fragments.md)中完成資產的格式化（例如大小）。 片段編輯器中資產的表示純粹是為了編寫內容流程。
+無法在參考頁面上移動或刪除這些資產，必須在片段編輯器中完成此操作。
+不過，必須在[頁面編輯器](/help/sites-authoring/content-fragments.md)中完成資產的格式化（例如大小）。 片段編輯器中資產的表示純粹是為了編寫內容流程。
 
 >[!NOTE]
->
->有各種方法可將[images](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)新增至片段和/或頁面。
+有各種方法可將[images](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)新增至片段和/或頁面。
 
 1. 將游標置於要添加影像的位置。
 1. 使用「插 **入資產** 」圖示開啟搜尋對話方塊。
 
-   ![cf-insertasset-icon](assets/cf-insertasset-icon.png)
+   ![插入資產圖示](assets/cfm-variations-09.png)
 
 1. 在對話方塊中，您可以：
 
@@ -286,11 +329,45 @@ RTF編輯可讓您設定格式：
 1. 使用 **「選取** 」將資產新增至目前位置之內容片段的段落系統。
 
    >[!CAUTION]
-   >
-   >如果新增資產後，您將格式變更為：
-   >
-   >* **純文字檔案**:資產將完全從碎片中丟失。
-   >* **Markdown**:資產將不可見，但當您返回 **Rich Text時，資產仍會存在**。
+   如果新增資產後，您將格式變更為：
+   * **純文字檔案**:資產將完全從碎片中丟失。
+   * **Markdown**:資產將不可見，但當您返回 **Rich Text時，資產仍會存在**。
+
+
+### 在片段中插入內容片段 {#inserting-content-fragment-into-your-fragment}
+
+若要簡化編寫內容片段的程式，您也可以新增其他內容片段至您的片段。
+
+它們會新增為參考，位於您片段的目前位置。
+
+>[!NOTE]
+當您的&#x200B;**多行文本**&#x200B;配置了&#x200B;**允許片段引用**&#x200B;時，此選項可用。
+
+>[!CAUTION]
+無法在參考頁面上移動或刪除這些資產，必須在片段編輯器中完成此操作。
+不過，必須在[頁面編輯器](/help/sites-authoring/content-fragments.md)中完成資產的格式化（例如大小）。 片段編輯器中資產的表示純粹是為了編寫內容流程。
+
+>[!NOTE]
+有各種方法可將[images](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)新增至片段和/或頁面。
+
+1. 將游標置於要添加片段的位置。
+1. 使用&#x200B;**插入內容片段**&#x200B;圖示開啟搜尋對話方塊。
+
+   ![插入內容片段圖示](assets/cfm-variations-13.png)
+
+1. 在對話方塊中，您可以：
+
+   * 導覽至「資產」資料夾中的必要片段
+   * 搜尋片段
+
+   找到後，按一下縮圖以選取所需的片段。
+
+1. 使用&#x200B;**Select**&#x200B;將對所選內容片段的引用添加到當前內容片段（在當前位置）。
+
+   >[!CAUTION]
+   如果在將參考新增至另一個片段後，您將格式變更為：
+   * **純文字**:引用將完全從片段中丟失。
+   * **Markdown**:參考將保留。
 
 
 ## 管理變數 {#managing-variations}
@@ -308,8 +385,7 @@ RTF編輯可讓您設定格式：
 1. 選擇 **添加**;片段 **Master** 將會複製到新的變數，現在會開啟供編 [輯](#editing-a-variation)。
 
    >[!NOTE]
-   >
-   >建立新變異時，一律會複製&#x200B;**Master**，而非目前開啟的變異。
+   建立新變異時，一律會複製&#x200B;**Master**，而非目前開啟的變異。
 
 ### 編輯變異 {#editing-a-variation}
 
@@ -318,7 +394,7 @@ RTF編輯可讓您設定格式：
 * [建立您的變異](#creating-a-variation)。
 * 開啟現有片段，然後從側面板選取所需的變數。
 
-![cfm-6420-26](assets/cfm-6420-26.png)
+![編輯變異](assets/cfm-variations-10.png)
 
 ### 更名變數 {#renaming-a-variation}
 
@@ -333,8 +409,7 @@ RTF編輯可讓您設定格式：
 1. 確認&#x200B;**Rename**&#x200B;動作。
 
 >[!NOTE]
->
->這只會影響變數&#x200B;**Title**。
+這只會影響變數&#x200B;**Title**。
 
 ### 刪除變數 {#deleting-a-variation}
 
@@ -347,8 +422,7 @@ RTF編輯可讓您設定格式：
 1. 確認對話方塊中的&#x200B;**Delete**&#x200B;動作。
 
 >[!NOTE]
->
->無法刪除&#x200B;**Master**。
+無法刪除&#x200B;**Master**。
 
 ### 與主伺服器同步 {#synchronizing-with-master}
 
@@ -357,27 +431,31 @@ RTF編輯可讓您設定格式：
 編輯變體時，您可以存取動作，將變體的目前元素與主版同步。 這可讓您自動將對Master所做的變更複製到所需的變數。
 
 >[!CAUTION]
->
->同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
->
->只會同步變數的目前元素。
->
->同步只適用於多 **行文本** -資料類型。
->
->將變 *更從變更傳輸&#x200B;**至Master*** ，不提供選項。
+同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
+只會同步變數的目前元素。
+同步只適用於多 **行文本** -資料類型。
+將變 *更從變更傳輸&#x200B;**至Master*** ，不提供選項。
+
+<!-- needs new screenshot for synchronize effect -->
 
 1. 在片段編輯器中開啟內容片段。 請確定已編輯&#x200B;**主版**。
+
 1. 選擇特定變數，然後從以下任一項選擇適當的同步操作：
 
    * **Actions**&#x200B;下拉式選取器 — **與主版**&#x200B;同步目前元素
 
+      ![與主同步](assets/cfm-variations-11a.png)
+
    * 全螢幕編輯器的工具列 — **與主版同步**
+
+      ![與主同步](assets/cfm-variations-11b.png)
 
 1. 主版和變異會並排顯示：
 
    * 綠色表示已新增的內容（至變數）
    * 紅色表示內容已移除（從變數中）
+   * 藍色表示已替換的文字
 
-   ![cfm-6420-27](assets/cfm-6420-27.png)
+   ![與主同步](assets/cfm-variations-11c.png)
 
 1. 選擇&#x200B;**Synchronize**，將更新並顯示變數。

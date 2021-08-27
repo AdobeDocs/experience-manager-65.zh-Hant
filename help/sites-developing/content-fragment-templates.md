@@ -1,8 +1,8 @@
 ---
 title: 內容片段範本
-seo-title: 內容片段範本
+seo-title: Content Fragment Templates
 description: 建立內容片段時會選取範本，並提供具有基本結構、元素和變異的新片段
-seo-description: 建立內容片段時會選取範本，並提供具有基本結構、元素和變異的新片段
+seo-description: Templates are selected when creating a content fragmen and provide the new fragment with the basic structure, element, and variation
 uuid: d147bac8-b710-40ed-9664-decb5ffcf8e7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '656'
 ht-degree: 4%
 
 ---
@@ -25,6 +25,10 @@ ht-degree: 4%
 >[建議您建](/help/assets/content-fragments/content-fragments-models.md) 立所有片段時，使用內容片段模型。
 >
 >內容片段模型用於We.Retail中的所有範例。
+
+>[!NOTE]
+>
+>在AEM 6.3之前，是使用範本（而非模型）建立內容片段。 不再提供範本以建立新片段，但使用此範本建立的任何片段仍受支援。
 
 建立內容片段時會選取範本。 它們為新片段提供了基本結構、元素和變異。 用於內容片段的範本需受Granite Configuration Manager的規範。
 
@@ -51,12 +55,10 @@ ht-degree: 4%
 >設定和其他變更的建議方法為：
 >
 >1. 在`/apps`下重新建立所需項（即`/libs`中存在的項）
-   >
-   >
-1. 在`/apps`內進行任何更改
+>
+>1. 在`/apps`內進行任何更改
 
 >
-
 
 
 範本的基本結構如下：

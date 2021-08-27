@@ -1,44 +1,36 @@
 ---
 title: 內容片段 - 刪除考量事項
-seo-title: 內容片段 - 刪除考量事項
-description: 內容片段 - 刪除考量事項
-seo-description: 內容片段 - 刪除考量事項
-uuid: e7ac1809-159f-4d02-ad30-dc6c246e8a04
-contentOwner: aheimoz
-topic-tags: content-fragments
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-content-type: reference
-discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
-docset: aem65
-feature: 內容片段
-role: User, Admin
-exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: 在AEM中定義內容片段刪除原則前，請先檢閱這些重要考量事項。 內容片段是傳遞無頭內容的強大工具，刪除這些片段的含意必須謹慎考量。
+feature: Content Fragments
+role: User
+source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 13%
+source-wordcount: '509'
+ht-degree: 9%
 
 ---
 
-# 內容片段 - 刪除考量事項{#content-fragments-delete-considerations}
+# 內容片段 - 刪除考量事項 {#content-fragments-delete-considerations}
+
+在AEM中定義內容片段刪除原則前，請先檢閱這些重要考量事項。 內容片段是傳遞無頭內容的強大工具，刪除這些片段的含意必須謹慎考量。
 
 ## 權限 — 刪除或不刪除 {#permissions-delete-or-not-delete}
 
 刪除內容的能力強大，但可能很敏感，許多行業需要限制和控制這些權限的分配方式。
 
-若要刪除權限，內容片段必須在兩個層級加以考量：
+關於刪除權限，內容片段必須在兩個層級考量：
 
 1. **內容片段為單一實體。**
 
    * **使用案例**:需要編輯/更新內容片段 — 並刪 **除整個片段的使用者**。
    * **權限**:可 [](/help/sites-administering/security.md#actions) 以透過「使 [用者」及/或「群組管理」來指派Deletepermission](/help/sites-administering/security.md#managing-permissions)。
 
-1. **組成內容片段的多個子實體；例如，變異、子節點。**
+2. **組成內容片段的多個子實體；例如，變異、子節點。**
 
    內容片段編輯器的基本操作要求可以刪除這種暫時的子元素。 例如，在操縱變異時；編輯中繼資料或管理相關內容時，也會一併啟用。
 
    * **使用案例**:需要編輯/更新內容片段的使用者， **不允許刪除整個片段**。
-   * **權限**:請參 [閱僅編輯器功能所需的權限](/help/assets/content-fragments/content-fragments-delete.md#permissions-required-for-editor-functionality-only)。
+   * **權限**:請參 [閱僅編輯器功能所需的權限](#permissions-required-for-editor-functionality-only)。
 
 >[!NOTE]
 >

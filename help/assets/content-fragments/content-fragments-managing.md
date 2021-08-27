@@ -1,32 +1,42 @@
 ---
 title: 管理內容片段
-seo-title: 管理內容片段
-description: 內容片段會儲存為資產，因此主要是透過Assets主控台管理。
-seo-description: 內容片段會儲存為資產，因此主要是透過Assets主控台管理。
-uuid: 675e1a6b-2583-488f-bbb4-210daed3e1b0
-contentOwner: Alison Heimoz
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: content-fragments
-content-type: reference
-discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
-docset: aem65
-feature: 內容片段
-role: User, Admin
-exl-id: 636daf55-2225-4780-9c57-1a2d7464fe2c
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: 了解如何使用Assets主控台管理您的AEM內容片段，這是無頭內容的基礎。
+feature: Content Fragments
+role: User
+source-git-commit: 251bf0ac672d516dd6b2018fc9cc804822f48e4c
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1314'
 ht-degree: 11%
 
 ---
 
-# 管理內容片段{#managing-content-fragments}
+# 管理內容片段 {#managing-content-fragments}
 
-內容片段會儲存為&#x200B;**Assets**，因此主要是從&#x200B;**Assets**&#x200B;主控台管理。
+了解如何使用Assets主控台管理您的AEM內容片段，這是無頭內容的基礎。
+
+定義[內容片段模型](#creating-a-content-model)後，您可以將這些模型用於[建立內容片段](#creating-a-content-fragment)。
+
+[內容片段編輯器](#opening-the-fragment-editor)提供各種[模式](#modes-in-the-content-fragment-editor)，讓您能夠：
+
+* [編輯內容](#editing-the-content-of-your-fragment) 並管 [理變數](#creating-and-managing-variations-within-your-fragment)
+* [為片段加上注釋](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+* [將內容與您的片段關聯](#associating-content-with-your-fragment)
+* [設定中繼資料](#viewing-and-editing-the-metadata-properties-of-your-fragment)
+* [查看結構樹](/help/assets/content-fragments/content-fragments-structure-tree.md)
+* [預覽JSON表示法](/help/assets/content-fragments/content-fragments-json-preview.md)
+
 
 >[!NOTE]
 >
->內容片段隨後用於編寫頁面；請參閱使用內容片段進行頁面編寫](/help/sites-authoring/content-fragments.md)。[
+>可使用內容片段：
+>
+>* 編寫頁面時；請參閱使用內容片段進行頁面編寫](/help/sites-authoring/content-fragments.md)。[
+>* 針對[使用內容片段搭配GraphQL](/help/assets/content-fragments/content-fragments-graphql.md)的無周邊內容傳送。
+
+
+>[!NOTE]
+>
+>內容片段會儲存為&#x200B;**Assets**，因此主要是從&#x200B;**Assets**&#x200B;主控台管理。
 
 ## 建立內容片段 {#creating-content-fragments}
 
@@ -34,28 +44,21 @@ ht-degree: 11%
 
 [在建立具](/help/assets/content-fragments/content-fragments-models.md) 有結構化內容的內容片段之前，請啟用並建立內容片段模型。
 
->[!NOTE]
->
->如需範本的詳細資訊，請參閱[開發內容片段](/help/sites-developing/customizing-content-fragments.md);用於簡單內容片段。
-
 ### 建立內容片段 {#creating-a-content-fragment}
 
-建立內容片段的方法（基本上）對於簡單和結構化片段都相同：
+建立內容片段的方法為：
 
 1. 導覽至您 **要建立** 片段的「資產」檔案夾。
 1. 依序選 **擇「建立**」、「 **內容片段** 」以開啟精靈。
 1. 嚮導的第一步要求您指定新片段的基礎。
 
-   * 這可以是：
+   * [模型](/help/assets/content-fragments/content-fragments-models.md)  — 用於建立需要結構化內容的片段；比如冒險 **** 模型
 
-      * [範本](/help/sites-developing/content-fragment-templates.md)  — 例如簡 **單片段**
-
-      * [模型](/help/assets/content-fragments/content-fragments-models.md)  — 用於建立需要結構化內容的片段；例如，機 **** 場模型
-   * 將顯示所有可用的模板和模型。
+      * 將顯示所有可用模型。
 
    選取後，使用&#x200B;**Next**&#x200B;繼續。
 
-   ![cfm-6420-15](assets/cfm-6420-15.png)
+   ![片段基礎](assets/cfm-managing-01.png)
 
 1. 在「屬 **性** 」步驟中指定：
 
@@ -81,14 +84,17 @@ ht-degree: 11%
 
 1. 選擇 **Create**  (建立) 以完成操作，然後選擇 **Open** the fragment for editing (開啟片段以進行編輯) 或返回控制 **台完成**。
 
-## 內容片段的動作 {#actions-for-a-content-fragment}
+   >[!NOTE]
+   >在控制台的&#x200B;**清單**&#x200B;模式中，您可以更新&#x200B;**檢視設定**&#x200B;以啟用&#x200B;**內容片段模型**&#x200B;欄。
+
+## 資產主控台中內容片段的動作 {#actions-for-a-content-fragment-assets-console}
 
 在&#x200B;**Assets**&#x200B;主控台中，一系列動作可供內容片段使用，包括：
 
 * 從工具列；選取片段後，所有適當的動作皆可使用。
 * 作為[快速操作](/help/sites-authoring/basic-handling.md#quick-actions);個別片段卡片可用的動作子集。
 
-![cfm-6420-17](assets/cfm-6420-17.png)
+![動作](assets/cfm-managing-02.png)
 
 選取片段以顯示包含適用動作的工具列：
 
@@ -108,12 +114,7 @@ ht-degree: 11%
 
 * **管理標記**
 * **至集合**
-
-   * 新增片段至集合。
-   * 當[將集合與片段](/help/assets/content-fragments/content-fragments-assoc-content.md#adding-associated-content)關聯時，也可以執行此操作。
-
-* **複製**/**貼上**
-
+* **複製** (並 **貼上**)
 * **移動**
 * **快速發佈**
 * **管理發佈**
@@ -121,7 +122,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->其中許多是[資產](/help/assets/manage-assets.md)和/或[AEM案頭應用程式](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)的標準動作。
+>其中許多是[資產](/help/assets/manage-assets.md)和/或[AEM案頭應用程式](https://helpx.adobe.com/tw/experience-manager/desktop-app/aem-desktop-app.html)的標準動作。
 
 ## 開啟片段編輯器 {#opening-the-fragment-editor}
 
@@ -131,90 +132,156 @@ ht-degree: 11%
 >
 >若要編輯內容片段，您需要[適當的權限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)。 如果您遇到問題，請與系統管理員聯繫。
 
+>[!CAUTION]
+>
+>若要編輯內容片段，您需要適當的權限。 如果您遇到問題，請與系統管理員聯繫。
+
 1. 使用&#x200B;**Assets**&#x200B;控制台導覽至內容片段的位置。
 1. 開啟片段以進行編輯，方法為：
 
    * 按一下/點選片段或片段連結（取決於主控台檢視）。
    * 選取片段，然後從工具列中選取&#x200B;**編輯**。
 
-   片段編輯器將開啟：
+1. 片段編輯器將會開啟。 視需要進行變更：
 
-   ![cfm-6420-18](assets/cfm-6420-18.png)
+   ![片段編輯器](assets/cfm-managing-03.png)
 
-   >[!NOTE]
-   >
-   >1. 內容頁面上已參考片段時，會顯示訊息。
-   >2. 可使用&#x200B;**切換側面板**&#x200B;表徵圖隱藏/顯示側面板。
+1. 進行變更後，請使用&#x200B;**儲存並關閉**。
 
-
-1. 使用側面板中的圖示，導覽這三個模式：
-
-   * 變數：[編輯內容](#editing-the-content-of-your-fragment)和[管理變數](#creating-and-managing-variations-within-your-fragment)
-
-   * [註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
-   * [相關聯的內容](#associating-content-with-your-fragment)
-   * [中繼資料](#viewing-and-editing-the-metadata-properties-of-your-fragment)
-
-   ![cfm-10](assets/cfm-10.png)
-
-1. 進行更改後，根據需要使用&#x200B;**Save**&#x200B;或&#x200B;**Cancel**。
+<!-- 
+1. After making changes, use **Save**, **Save & close** or **Close** as required.
 
    >[!NOTE]
    >
-   >「儲 **存** 」和「取 **消」都會退出編輯器——請參閱「**[](#save-cancel-and-versions) 儲存」、「取消」和「版本」，以取得有關這兩個選項如何對內容片段運作的完整資訊。
+   >**Save & close** is available via the **Save** dropdown.
 
-## 儲存、取消和版本 {#save-cancel-and-versions}
+   >[!NOTE]
+   >
+   >Both **Save & Close** and **Close** will exit the editor - see [Save, Close and Versions](#save-close-and-versions) for full information on how the various options operate for content fragments.
+-->
+
+## 內容片段編輯器中的模式和動作 {#modes-actions-content-fragment-editor}
+
+內容片段編輯器提供多種模式和動作。
+
+### 內容片段編輯器中的模式 {#modes-in-the-content-fragment-editor}
+
+使用側面板中的圖示，導覽各種模式：
+
+* 變數：[編輯內容](#editing-the-content-of-your-fragment)和[管理變數](#creating-and-managing-variations-within-your-fragment)
+
+* [註解](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+* [相關聯的內容](#associating-content-with-your-fragment)
+* [中繼資料](#viewing-and-editing-the-metadata-properties-of-your-fragment)
+* [樹狀結構](/help/assets/content-fragments/content-fragments-structure-tree.md)
+* [預覽](/help/assets/content-fragments/content-fragments-json-preview.md)
+
+![模式](assets/cfm-managing-04.png)
+
+### 內容片段編輯器中的工具列動作 {#toolbar-actions-in-the-content-fragment-editor}
+
+頂端工具列中的部分功能提供多種模式：
+
+<!-- screenshot changed from original text see commented out below -->
+
+![模式](assets/cfm-managing-03.png)
+
+* 內容頁面上已參考片段時，會顯示訊息。 您可以&#x200B;**關閉**&#x200B;訊息。
+
+* 可使用&#x200B;**切換側面板**&#x200B;表徵圖隱藏/顯示側面板。
+
+* 在片段名稱下方，您可以看到用於建立當前片段的[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)的名稱：
+
+   * 名稱也是將開啟模型編輯器的連結。
+
+* 查看片段的狀態；例如，關於建立、修改或發佈時間的資訊。
+
+* **儲存並關閉**
+
+<!--
+Some features in the top toolbar are available from multiple modes:
+
+![modes](assets/cfm-managing-top-toolbar.png)
+
+* A message will be shown when the fragment is already referenced on a content page. You can **Close** the message.
+
+* The side panel can be hidden/shown using the **Toggle Side Panel** icon.
+
+* Underneath the fragment name you can see the name of the [Content Fragment Model](/help/assets/content-fragments/content-fragments-models.md) used for creating the current fragment:
+
+  * The name is also a link that will open the model editor.
+
+* See the status of the fragment; for example, information about when it was created, modified or published. The status is also color-coded:
+
+  * **New**: grey
+  * **Draft**: blue
+  * **Published**: green
+  * **Modified**: orange
+  * **Deactivated**: red
+
+* **Save** provides access to the **Save & close** option.
+  
+* The three dots (**...**) drop-down provides access to additional actions:
+  * **Update page references**
+    * This updates any page references. 
+  * **[Quick publish](#publishing-and-referencing-a-fragment)**
+  * **[Manage Publication](#publishing-and-referencing-a-fragment)**
+-->
+
+<!--
+This updates any page references and ensures that the Dispatcher is flushed as required. -->
+
+<!--
+## Save, Close and Versions {#save-close-and-versions}
 
 >[!NOTE]
 >
->也可以從時間軸](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)建立、比較和還原版本。[
+>Versions can also be [created, compared and reverted from the Timeline](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
 
-編輯器有兩個選項：
+The editor has various options:
 
-* **儲存**
+* **Save** and **Save & close**
 
-   會儲存最新變更並退出編輯器。
+  * **Save** will save the latest changes and remain in the editor.
+  * **Save & close** will save the latest changes and exit the editor.
 
-   >[!CAUTION]
-   >
-   >若要編輯內容片段，您需要[適當的權限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)。 如果您遇到問題，請與系統管理員聯繫。
+  >[!CAUTION]
+  >
+  >To edit a content fragment you need [the appropriate permissions](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Please contact your system administrator if you are experiencing issues. 
+
+  >[!NOTE]
+  >
+  >It is possible to remain in the editor, making a series of changes, before saving.
+
+  >[!CAUTION]
+  >
+  >In addition to simply saving your changes, the actions also update any references and ensures that the Dispatcher is flushed as required. These changes can take time to process. Due to this, there can be a performance impact on a large/complex/heavily-loaded system.
+  >
+  >Please bear this in mind when using **Save & close** and then quickly re-entering the fragment editor to make and save further changes.
+
+* **Close**
+
+  Will exit the editor without saving the latest changes (i.e made since the last **Save**).
+
+While editing your content fragment AEM automatically creates versions to ensure that prior content can be restored if you cancel your changes (using **Close** without saving):
+
+1. When a content fragment is opened for editing AEM checks for the existence of the cookie-based token that indicates whether an *editing session* exists:
+
+   1. If the token is found, the fragment is considered to be part of the existing editing session.
+   2. If the token is *not* available and the user starts editing content, a version is created and a token for this new editing session is sent to the client, where it is saved in a cookie.
+
+2. While there is an *active* editing session, the content being edited is automatically saved every 600 seconds (default).
 
    >[!NOTE]
    >
-   >在選取&#x200B;**Save**&#x200B;之前，可以保留在編輯器中並進行一系列更改。
-
-   >[!CAUTION]
+   >The auto save interval is configurable using the `/conf` mechanism.
    >
-   >除了僅儲存您的變更，**Save**&#x200B;也會更新任何參考，並確保視需要刷新Dispatcher。 這些變更可能需要時間處理。 因此，對於大型/複雜/重載的系統，可能會產生效能影響。
-   >
-   >
-   >使用&#x200B;**Save**，然後快速重新輸入片段編輯器以進行並儲存進一步的變更時，請記住這一點。
+   >Default value, see:
+   >&nbsp;&nbsp;`/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
 
-* **取消**
-
-   會退出編輯器，而不儲存最新變更。
-
-編輯您的內容片段AEM時，會自動建立版本，以確保在您&#x200B;**取消**&#x200B;變更時，可以還原先前的內容：
-
-1. 開啟內容片段以編輯AEM時，會檢查是否有Cookie型Token，指出是否存在&#x200B;*編輯工作階段*:
-
-   1. 如果找到代號，則會將片段視為現有編輯工作階段的一部分。
-   2. 如果代號為&#x200B;*不可用，且使用者開始編輯內容，則會建立版本，並將此新編輯工作階段的代號傳送至用戶端，並儲存於Cookie中。*
-
-2. 雖然有&#x200B;*作用中*&#x200B;編輯工作階段，但每600秒就會自動儲存所編輯的內容（預設值）。
-
-   >[!NOTE]
-   >
-   >可使用`/conf`機制配置自動保存間隔。
-   >
-   >
-   >預設值，請參閱：
-   >
-   >
-   >`/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
-
-3. 如果用戶選擇&#x200B;**取消**&#x200B;編輯，則恢復在編輯會話開始時建立的版本，並刪除令牌以結束編輯會話。
-4. 如果使用者選取&#x200B;**Save**&#x200B;編輯，則更新的元素/變數會持續存在，並移除代號以結束編輯工作階段。
+3. If the user cancels the edit, the version created at the start of the editing session is restored and the token is removed to end the editing session.
+4. If the user selects to **Save** the edits, the updated elements/variations are persisted and the token is removed to end the editing session.
+-->
 
 ## 編輯片段的內容 {#editing-the-content-of-your-fragment}
 
@@ -260,8 +327,7 @@ ht-degree: 11%
 >* 與片段資產相關
 
 >
->
-註解（適用於內容片段）包括：
+>註解（適用於內容片段）包括：
 >
 >* 在片段編輯器中輸入
 >* 特定於片段內選取的文字區段
@@ -269,10 +335,9 @@ ht-degree: 11%
 >
 
 
-
 例如：
 
-![cfm-6420-19-2019](assets/cfm-6420-19-2019.png)
+![時間表](assets/cfm-managing-05.png)
 
 ## 比較片段版本 {#comparing-fragment-versions}
 
@@ -300,7 +365,7 @@ ht-degree: 11%
 >
 >比較片段時無法編輯片段內容。
 
-![cfm-6420-20](assets/cfm-6420-20.png)
+![比較](assets/cfm-managing-06.png)
 
 ## 回復為版本  {#reverting-to-a-version}
 
@@ -322,7 +387,8 @@ ht-degree: 11%
 
 內容片段必須發佈以便在發佈環境中使用。 可發佈：
 
-* 建立後；從&#x200B;**Assets**&#x200B;控制台。
+* 建立後；使用「資產」主控台](#actions-for-a-content-fragment-assets-console)中可用的[動作。
+* 從[內容片段編輯器](#toolbar-actions-in-the-content-fragment-editor)。
 * 當您[發佈使用片段](/help/sites-authoring/content-fragments.md#publishing)的頁面時；片段會列在頁面參考中。
 
 >[!CAUTION]

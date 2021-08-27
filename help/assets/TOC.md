@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 85736791b7a8f518b57180b0139d6a76ebf1c6dc
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 19%
+source-wordcount: '629'
+ht-degree: 18%
 
 ---
 
@@ -91,6 +91,9 @@ ht-degree: 19%
    + [擴充資產編輯器](asseteditorx.md)
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [ [!DNL Assets] HTTP API中的內容片段支援](assets-api-content-fragments.md)
+   + [適用於內容片段的GraphQL API](content-fragments/graphql-api-content-fragments.md)
+   + [內容片段的遠端GraphQL查詢驗證](content-fragments/graphql-authentication-content-fragments.md)
+   + [含內容片段的GraphQL API — 範例內容與查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [[!DNL Assets] 代理開發](proxy.md)
 + 管理資產{#administer}
    + [支援的檔案格式](assets-formats.md)
@@ -130,15 +133,19 @@ ht-degree: 19%
    + [將資產發佈至 [!DNL Brand Portal]](brand-portal-publish-assets.md)
    + [將資料夾發佈到 [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [將集合發佈到 [!DNL Brand Portal]](brand-portal-publish-collection.md)
-+ 內容片段 {#fragments}
++ 內容片段 {#content-fragments}
    + [使用內容片段](content-fragments/content-fragments.md)
-   + [管理內容片段](content-fragments/content-fragments-managing.md)
+   + [以內容片段和GraphQL無周邊傳送](content-fragments/content-fragments-graphql.md)
+   + [為您的執行個體啟用內容片段功能](content-fragments/content-fragments-configuration-browser.md)
    + [內容片段模型](content-fragments/content-fragments-models.md)
+   + [管理內容片段](content-fragments/content-fragments-managing.md)
    + [變化 - 編寫片段內容](content-fragments/content-fragments-variations.md)
    + [內容片段關聯內容](content-fragments/content-fragments-assoc-content.md)
    + [中繼資料 - 片段屬性](content-fragments/content-fragments-metadata.md)
    + [內容片段 - 刪除考量事項](content-fragments/content-fragments-delete.md)
-   + [內容片段 — Markdown](content-fragments/content-fragments-markdown.md)
+   + [Markdown](content-fragments/content-fragments-markdown.md)
+   + [樹狀結構](/help/assets/content-fragments/content-fragments-structure-tree.md)
+   + [預覽 — JSON表示法](/help/assets/content-fragments/content-fragments-json-preview.md)
    + [建立內容片段的翻譯專案](creating-translation-projects-for-content-fragments.md)
 + 管理資產{#managing}
    + [管理數位資產](manage-assets.md)
