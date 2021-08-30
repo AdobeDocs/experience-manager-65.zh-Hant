@@ -2,9 +2,9 @@
 title: AEM內容與商務發行說明2021年
 description: AEM內容與商務發行說明2021年
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: d1e2a2b11bd4eaece80a2538ddc34ada59e63578
+source-git-commit: b6703f519295eef728d5504360d99de69438064c
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '989'
 ht-degree: 8%
 
 ---
@@ -29,12 +29,38 @@ ht-degree: 8%
 | CIF核心元件 | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 發行日期：2021年8月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加元件 | 2021.08.20 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.08.20.zip) |
+| CIF核心元件 | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
+| CIF Venia參考站 | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
+
+### 新增功能 {#what-is-new-august}
+
+* 新的類別選擇器UI可改善使用者體驗、提高效率，以及更完善地支援複雜的產品目錄
+
+   ![新類別選擇器](/help/assets/CIF/category-picker.png)
+
+* 更A11Y支援CIF核心元件
+
+### 錯誤修正 {#bug-fixes-august}
+
+* 開啟類別篩選折疊式功能表後，就無法關閉它
+
+* 產品預告中「呼叫動作文字」屬性損毀
+
+* AEM CS部署步驟期間出現CIF JS錯誤
+
+* 修正對應產品清單項目的原始產品存取權
+
 ## 發行日期：2021年7月
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.07.21 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
-| CIF核心元件 | 1.13.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.13.0) |
+| CIF核心元件 | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
 | CIF Venia參考站 | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
 
 ### 新增功能 {#what-is-new-july}
