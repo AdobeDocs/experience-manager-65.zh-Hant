@@ -6,11 +6,11 @@ audience: end-user
 user-guide-title: AEM 6.5 Developing 使用指南
 breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
-feature: 開發
+feature: Developing
 role: Developer
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+source-git-commit: 1eb2ef06ed0541026ff3ba436dfab0d261af7356
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 14%
 
 ---
@@ -119,7 +119,7 @@ ht-degree: 14%
       + [SPA中的複合元件](spa-composite-component.md)
       + [SPA參考資料](spa-reference-materials.md)
    + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-   + [內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
+   + [內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
    + [體驗片段](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
    + [了解AEM中的內容片段和內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 開發工具{#devtools}
