@@ -4,10 +4,10 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
+source-git-commit: 2a4da77cbde3d3a91674a5239436ccf962f72003
 workflow-type: tm+mt
-source-wordcount: '3983'
-ht-degree: 1%
+source-wordcount: '4106'
+ht-degree: 0%
 
 ---
 
@@ -61,6 +61,23 @@ ht-degree: 1%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms]的附加元件套件會在排程的[!DNL Experience Manager] Service Pack發行一週後提供使用。
+
+* 您現在可以使用Automated forms conversion服務將法文、德文和西班牙文PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)轉換為最適化表單。[
+
+* **屬性瀏覽器中的錯誤訊息**:已針對適用性Forms屬性瀏覽器中的每個屬性新增錯誤訊息。這些訊息有助於了解欄位的允許值。
+
+* **支援使用常值選項來設定JSON類型變數的值**:您可以在AEM工作流程的設定變數步驟中使用文字選項來設定JSON類型變數的值。文字選項可讓您以字串的形式指定JSON。
+
+* **平台更新**: [!DNL Adobe Experience Manager Forms] on JEE已新增對下列平台的支援：
+   * [!DNL Adobe Acrobat 2020]
+   * [!DNL Ubuntu 20.04]
+   * [!DNL Open Office 4.1.10]
+   * [!DNL Microsoft Office 2019]
+   * [!DNL Microsoft Windows Server 2019]
+   * [!DNL RHEL8.3]
+   * [!DNL Apache Geode cache solution]
+
+* 新增[!DNL AEM Forms]中`GuideBridge#getGuidePath` API的支援。
 
 ## 舊版[!DNL Experience Manager] 6.5 Service Pack中的主要功能 {#key-features-previous-service-packs}
 

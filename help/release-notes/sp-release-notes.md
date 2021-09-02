@@ -4,10 +4,10 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 10的發行說�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 9c262f57b3c3b7a1d2deaba78d13d02b74c5208d
+source-git-commit: 8c345f5f78ca5f9e8981611ef377e23309fcbe3d
 workflow-type: tm+mt
-source-wordcount: '3652'
-ht-degree: 1%
+source-wordcount: '4376'
+ht-degree: 2%
 
 ---
 
@@ -55,6 +55,23 @@ ht-degree: 1%
    * [!DNL Experience Manager] 直接在資料夾下顯示所有內容模型的清單，內容作者不必瀏覽檔案結構。此功能現在需要的點按次數更少，而且可改善製作效率。
 
    * [!DNL Sites]編輯器中的路徑欄位可讓作者從[!DNL Content Finder]拖曳資產。
+
+* 新增[!DNL AEM Forms]中`GuideBridge#getGuidePath` API的支援。
+
+* 您現在可以使用Automated forms conversion服務將法文、德文和西班牙文PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)轉換為最適化表單。[
+
+* **屬性瀏覽器中的錯誤訊息**:已針對適用性Forms屬性瀏覽器中的每個屬性新增錯誤訊息。這些訊息有助於了解欄位的允許值。
+
+* **支援使用常值選項來設定JSON類型變數的值**:您可以在AEM工作流程的設定變數步驟中使用文字選項來設定JSON類型變數的值。文字選項可讓您以字串的形式指定JSON。
+
+* **平台更新**: [!DNL Adobe Experience Manager Forms] on JEE已新增對下列平台的支援：
+   * [!DNL Adobe Acrobat 2020]
+   * [!DNL Ubuntu 20.04]
+   * [!DNL Open Office 4.1.10]
+   * [!DNL Microsoft Office 2019]
+   * [!DNL Microsoft Windows Server 2019]
+   * [!DNL RHEL8.3]
+   * [!DNL Apache Geode cache solution]
 
 如需[!DNL Experience Manager] 6.5.10.0中推出的所有功能和增強功能的清單，請參閱[ [!DNL Adobe Experience Manager] 6.5 Service Pack 10](new-features-latest-service-pack.md)中的新功能。
 
@@ -255,6 +272,71 @@ Need to verify with Engineering, the status is currently showing as Resolved
 >* [!DNL Experience Manager Forms] 會在排程的 [!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
 
 
+**調適型表單**
+
+* 如果對適用性表單中的欄位值執行的驗證成功，[!DNL AEM Forms]無法叫用表單資料模型(CQ-4325491)。
+
+* 將語言字典新增至翻譯專案並開啟專案時，[!DNL AEM Forms]會顯示錯誤訊息(CQ-4324933):
+
+   ```TXT
+   Uncaught TypeError: Cannot read property 'PROJECT_LISTING_PATH' of undefined
+   at openButtonClickHandler (clientlibs.js:245)
+   at HTMLButtonElement.onclick (clientlibs.js:258)
+   ```
+
+* 安裝[!DNL AEM Forms] Service Pack 7後出現效能問題(CQ-4326828)。
+
+**通信管理**
+
+* 在[!UICONTROL Data]標籤和HTML字母預覽中顯示字元的延遲(NPR-37020)。
+
+* 編輯文字檔案片段時，儲存片段後新字詞會顯示為HTML標籤(NPR-36837)。
+
+* 無法檢視另存為草稿的信函(NPR-36816)。
+
+* 當您編輯文字檔案片段並預覽信函時，AEM Forms會在HTML信函預覽中顯示運算式語言(CQ-4322331)。
+
+* 使用自助信函範本轉譯資料時發生問題(NPR-37161)。
+
+
+**互動式通訊**
+
+* 編輯文字檔案片段後，每次您列印預覽互動式通訊時，索引標籤字元會在兩個字之間重複(NPR-37021)。
+
+* [!DNL AEM Forms] 儲存超過最大大小限制的文字檔案片段時顯示錯誤(NPR-36874)。
+
+* 將影像新增至互動式通訊時，影像後面會顯示另一個空白區塊(NPR-36659)。
+
+* 在編輯器中選取所有文字時，無法將字型文字變更為Arial(NPR-36646)。
+
+* 在編輯器中建立URL並預覽變更時，畫面會顯示黑色背景，而非URL文字(NPR-36640)。
+
+* 將文字複製並貼到編輯器時，針對檔案中可用的項目符號將字型變更為Arial時會發生問題(NPR-36628)。
+
+* 文字編輯器中的項目符號縮排問題(NPR-36513)。
+
+**設計工具**
+
+* 螢幕Reader無法讀取動態PDF中，置於主版頁面或子表單頁面文字標籤內的浮動欄位資料(CQ-4321587)。
+
+**文件服務**
+
+* 將XDP檔案轉換為PDF檔案，然後組合產生的PDF時，PDF層代會失敗，並顯示下列錯誤訊息：
+
+   ```TXT
+   Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
+   ```
+
+**表單工作流程**
+
+* 升級至AEM Forms Service Pack 8後，無法將表單提交至Workbench程式(CQ-4325846)。
+
+**HTML5 表單**
+
+* 在CRX DE存放庫中將`mfAllowAttachments`屬性的值設為`True`時，在提交HTML5表單時`dataXml`會損毀(NPR-37035)。
+
+* 使用`dataXml`將XDP呈現為HTML時， [!DNL AEM Forms]會顯示`Page Unresponsive`錯誤(NPR-36631)。
+
 ### 商務 {#commerce-65100}
 
 * 顯示的&#x200B;**[!UICONTROL Published By]**&#x200B;欄位中的值在欄檢視中不正確(NPR-36902)。
@@ -319,35 +401,32 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 若要了解經認證可與此版本搭配使用的平台，請參閱[技術需求](/help/sites-deploying/technical-requirements.md)。
 
-<!--
-
-### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+### 安裝Adobe Experience Manager Forms附加元件套件 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->Skip if you are not using Experience Manager Forms. Fixes in Experience Manager Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+>如果您未使用Experience ManagerForms，請略過。 Experience ManagerForms中的修正，會在排程的[!DNL Experience Manager] Service Pack發行一週後，透過個別的附加套件提供。
 
-1. Ensure that you have installed the Adobe Experience Manager Service Pack.
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) for your operating system.
-1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->Experience Manager 6.5.10.0 includes a new version of [AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). If you are using an older version of AEM Forms Compatibility Package and updating to Experience Manager 6.5.10.0, install the latest version of the package post installation of Forms Add-On Package.
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+1. 確認您已安裝Adobe Experience Manager Service Pack。
+1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)所列出的對應 Forms 附加套件。
+1. 依照[安裝Forms附加元件套件](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中所述安裝AEM Forms附加元件套件。
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>Experience Manager6.5.10.0包含新版[AEM Forms相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases)。 如果您使用舊版AEM Forms相容性套件並更新至Experience Manager6.5.10.0，請在安裝Forms附加元件套件後安裝最新版本的套件。
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+### 在JEE上安裝Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
+>如果您沒有在JEE上使用AEM Forms，請略過。 JEE版Adobe Experience Manager Forms中的修正是透過個別安裝程式提供。
 
--->
+如需有關在JEE上安裝Experience ManagerForms的累積安裝程式和部署後設定的資訊，請參閱[發行說明](jee-patch-installer-65.md)。
+
+>[!NOTE]
+>
+>在JEE上安裝Experience ManagerForms的Cumulative安裝程式後，請安裝最新的Forms附加元件套件，從`crx-repository\install`資料夾刪除Forms附加元件套件，然後重新啟動伺服器。
+
 
 ### UberJar {#uber-jar}
 
@@ -380,6 +459,8 @@ For information about installing the cumulative installer for Experience Manager
 | 連接器 | Experience Manager6.5已不再使用Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR連接器。 | N/A |
 
 ## 已知問題 {#known-issues}
+
+* 由於[!DNL Microsoft Windows Server 2019]不支援[!DNL MySQL 5.7]和[!DNL JBoss EAP 7.1]，因此[!DNL Microsoft Windows Server 2019]不支援[!DNL AEM Forms 6.5.10.0]的統包安裝。
 
 * 如果您要將[!DNL Experience Manager]實例從6.5升級到6.5.10.0版，則可以在`error.log`檔案中查看`RRD4JReporter`異常。 若要解決問題，請重新啟動執行個體。
 
