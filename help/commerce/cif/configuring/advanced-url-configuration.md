@@ -1,22 +1,26 @@
 ---
 title: 進階URL設定
 description: 了解如何自訂產品和類別頁面的URL。 這可讓實施最佳化搜尋引擎的URL，並促進探索。
-sub-product: 商務
+sub-product: Commerce
 doc-type: technical-video
 activity: setup
 audience: administrator
-feature: 商務整合架構
+feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: dbd38aa75caa7c3c2feee79702ab85ab397eb583
+source-git-commit: fd973cb3693872e4850f860a625cab70553d2754
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 3%
+source-wordcount: '784'
+ht-degree: 4%
 
 ---
 
 # 進階URL設定 {#url}
+
+>[!NOTE]
+>
+> 搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案都需要解決SEO疑慮。 如需詳細資訊，請參閱[SEO和URL管理最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) 。
 
 [AEM CIF核心元](https://github.com/adobe/aem-core-cif-components) 件提供進階設定，可自訂產品和類別頁面的URL。許多實作會為了搜尋引擎最佳化(SEO)目的自訂這些URL。 以下影片詳細說明如何設定`UrlProvider`服務和[Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)的功能，以自訂產品和類別頁面的URL。
 
