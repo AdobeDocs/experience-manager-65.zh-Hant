@@ -4,10 +4,10 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 496516f7f4b0e59bbfdae4cbe061a793f28449d2
+source-git-commit: 5dfce89b2c03625e5f93fdcfaafd91d1ee77f476
 workflow-type: tm+mt
-source-wordcount: '4106'
-ht-degree: 0%
+source-wordcount: '4095'
+ht-degree: 1%
 
 ---
 
@@ -68,15 +68,19 @@ ht-degree: 0%
 
 * **支援使用常值選項來設定JSON類型變數的值**:您可以在AEM工作流程的設定變數步驟中使用文字選項來設定JSON類型變數的值。文字選項可讓您以字串的形式指定JSON。
 
-* [平台更新](../forms/using/aem-forms-jee-supported-platforms.md): [!DNL Adobe Experience Manager Forms] on JEE已新增對下列平台的支援：
-   * [!DNL Adobe Acrobat 2020]
-   * [!DNL Ubuntu 20.04]
-   * [!DNL Open Office 4.1.10]
-   * [!DNL Microsoft Office 2019]
-   * [!DNL Microsoft Windows Server 2019]
-   * [!DNL RHEL8]
-
 * 新增[!DNL AEM Forms]中`GuideBridge#getGuidePath` API的支援。
+
+<!--
+
+* [Platform Updates](../forms/using/aem-forms-jee-supported-platforms.md): [!DNL Adobe Experience Manager Forms] on JEE has added support for the following platforms:
+  * [!DNL Adobe Acrobat 2020]
+  * [!DNL Ubuntu 20.04]
+  * [!DNL Open Office 4.1.10]
+  * [!DNL Microsoft Office 2019]
+  * [!DNL Microsoft Windows Server 2019]
+  * [!DNL RHEL8]
+
+  -->
 
 ## 舊版[!DNL Experience Manager] 6.5 Service Pack中的主要功能 {#key-features-previous-service-packs}
 
