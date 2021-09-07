@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 7d727f4e3e71fac241ed1409caf0fa19355354b9
+source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
 workflow-type: tm+mt
-source-wordcount: '3249'
+source-wordcount: '3471'
 ht-degree: 1%
 
 ---
@@ -185,7 +185,7 @@ Adobe Experience Manager Forms需要Java虛擬機才能運行，該虛擬機由J
    <td>R:受限支援</td>
   </tr>
   <tr>
-   <td>MySQL 5.7.19 </td>
+   <td>MySQL 5.7.34 </td>
    <td>-</td>
    <td>R:受限支援</td>
   </tr>  
@@ -277,14 +277,29 @@ Adobe Experience Manager Forms需要Java虛擬機才能運行，該虛擬機由J
    <th><p><strong> 平台</strong></p> </th>
    <th><p><strong>支援層級</strong></p> </th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
-  </tr>   
-  <tr>
-   <td>Microsoft Windows Server 2016（64位）</td>
+  </tr>
+   <tr>
+   <td>Microsoft Windows Server 2019（64位）</td>
    <td>答：支援</td>
    <td>服務包和重要更新</td>
-  </tr>  
+  </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7（內核3.x）（64位）</td>
+   <td>烏本圖20.04</td>
+   <td>答：支援</td>
+   <td>服務包和重要更新</td>
+  </tr>
+  <tr>
+   <td>Microsoft Windows Server 2016（64位）（已過時）</td>
+   <td>答：支援</td>
+   <td>服務包和重要更新</td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 8（內核4.x）（64位）</p> </td>
+   <td><p>答：支援</p> </td>
+   <td><p>次要版本、累積更新和重要更新</p> </td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 7（內核3.x）（64位）（已廢止）</td>
    <td><p>答：支援</p> </td>
    <td><p>次要版本、累積更新和重要更新</p> </td>
   </tr>
@@ -432,33 +447,57 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
   <tr>
    <th><p><strong>產品</strong></p> </th>
    <th><p><strong>支援的PDF轉換格式</strong></p> </th>
-  </tr>  
+  </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic tracklatest</a> 版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic tracklatest</a> 版本</td>
    <td>XPS，影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
-  </tr> 
+  </tr>
   <tr>
-   <td>Microsoft® Office 2016</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic tracklatest</a> 版本（已過時）</td>
+   <td>XPS，影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2019</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2016（已過時）</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>WordPerfect X7</td>
    <td>WP, WPD</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>Microsoft® Office Visio 2016<br /> </td>
+   <td>Microsoft® Office Visio 2019<br /> </td>
    <td>VSD、VSDX</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>Microsoft® Publisher 2016<br /> </td>
+   <td>Microsoft® Office Visio 2016（已廢止）<br /> </td>
+   <td>VSD、VSDX</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Publisher 2019<br /> </td>
    <td>PUB</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>Microsoft® Project 2016<br /> </td>
+   <td>Microsoft® Publisher 2016（已廢止）<br /> </td>
+   <td>PUB</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Project 2019<br /> </td>
    <td>MPP</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>OpenOffice 4.1.2</td>
+   <td>Microsoft® Project 2016（已廢止）<br /> </td>
+   <td>MPP</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.10</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、XLS、XLSX、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JP2、J2C、JPXT、JPC)、HTML、HTF、HTF、HTF</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.2（已過時）</td>
    <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、XLS、XLSX、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JP2、J2C、JPXT、JPC)、HTML、HTF、HTF、HTF</td>
   </tr>  
  </tbody>
@@ -470,7 +509,7 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 >
 >此外：
 >
->* PDF產生器需要32位元版本的[Acrobat 2017 17.011.30078或更新版本](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能執行轉換。
+>* PDF產生器需要32位元版本的[Acrobat 2020傳統追蹤20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)或Acrobat 2017 17.011.30078版才能執行轉換。
 >* PDF Generator僅支援32位Retail版的Microsoft Office Professional Plus和轉換所需的其他軟體。
 >* PDF產生器不支援Microsoft Office 365。
 >* OpenOffice的PDF產生器轉換僅在Windows和Linux上受支援。
@@ -579,8 +618,12 @@ AEM Forms的下列子系統不符合[508](https://www.section508.gov/):
    <th><p><strong>Acrobat和Adobe Reader（基地）</strong></p> </th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
-    <tr>
-   <td>Acrobat 2017（傳統曲目）</td>
+  <tr>
+   <td>Acrobat 2020（傳統曲目）</td>
+   <td>20.004.30006版或更新版本<br /> </td>
+  </tr>
+  <tr>
+   <td>Acrobat 2017（傳統追蹤）（已過時）</td>
    <td>17.011.30078或更新版本<br /> </td>
   </tr>
 
@@ -743,9 +786,37 @@ Adobe保留在任何指定時間點變更AEM Forms JEE版本支援的第三方�
 
 有關第三方修補程式的其他資訊，也可通過搜索Adobe企業支援站點中與產品相關的知識庫文章來找到。
 
+## 平台更新 {#platform-updates}
+
+2021年9月7日發行的AEM Forms 6.5.10.0版本將下列平台標示為已過時：
+
+* Adobe Acrobat 2017 - [Adobe Acrobat 2017的核心支援將於2022年6月6日終止](https://helpx.adobe.com/tw/support/programs/eol-matrix.html)。
+
+* Microsoft Windows Server 2016（64位）
+
+* Red Hat Enterprise Linux 7（內核3.x）（64位）
+
+* Microsoft® Office 2016
+
+* OpenOffice 4.1.2
+
+>[!NOTE]
+>
+>標示為[已廢止的平台，在AEM Forms 6.5 Service Pack 15(6.5.15.0)發行](https://helpx.adobe.com/support/programs/eol-matrix.html)之前都不受支援。
+
+
+
 ## 修訂歷史記錄 {#revision-history}
 
 * 2020年9月09日
    * 將AEM Forms應用程式的支援iOS版本變更為iOS 12。 舊版為iOS 11。
 
+* 2021年9月07日
+   * **平台更新**: [!DNL Adobe Experience Manager Forms] on JEE已新增對下列平台的支援：
+      * [!DNL Adobe Acrobat 2020]
+      * [!DNL Ubuntu 20.04]
+      * [!DNL Open Office 4.1.10]
+      * [!DNL Microsoft Office 2019]
+      * [!DNL Microsoft Windows Server 2019]
+      * [!DNL RHEL8]
 
