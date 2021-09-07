@@ -3,12 +3,12 @@ title: 將 [!DNL Assets] 與 [!DNL InDesign Server]整合
 description: 了解如何將 [!DNL Adobe Experience Manager Assets] 與 [!DNL Adobe InDesign Server]整合。
 contentOwner: AG
 role: Admin
-feature: 發佈
+feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f74190692d718da6074affa87d283f326eca7faa
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 4%
+source-wordcount: '1577'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 * 分配特定處理任務的負載的代理。 Proxy是與Proxy工作者通訊以完成特定任務的[!DNL Experience Manager]例項，以及傳送結果的其他[!DNL Experience Manager]例項。
 * 定義和管理特定任務的代理工作。
-這可以涵蓋各種任務；例如，使用[!DNL InDesign Server]處理檔案。
+這可以涵蓋各種任務；例如，使用[!DNL InDesign Server]來處理檔案。
 
 若要將檔案完全上傳至您使用[!DNL Adobe InDesign]代理建立的[!DNL Experience Manager Assets]。 這會使用代理工作器與[!DNL Adobe InDesign Server]通訊，其中[scripts](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)會執行以擷取中繼資料並產生[!DNL Experience Manager Assets]的各種轉譯。 在雲配置中，代理工作器啟用[!DNL InDesign Server]和[!DNL Experience Manager]實例之間的雙向通信。
 
@@ -172,7 +172,9 @@ Pool要用於與通信的SOAP端 [!DNL InDesign Server]點。您可以新增、�
 
 1. 在`https://[aem_server]:[port]/system/console/configMgr`訪問Web控制台。
 1. 找到配置&#x200B;**[!UICONTROL Day CQ Link Externalizer]**。 按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;以開啟。
-1. 連結外部化程式設定有助於為[!DNL Experience Manager]部署和[!DNL InDesign Server]建立絕對URL。 使用&#x200B;**[!UICONTROL Domains]**&#x200B;欄位指定[!DNL Adobe InDesign Server]的主機名和上下文路徑。 按一下「**儲存**」。
+1. 連結外部化程式設定有助於為[!DNL Experience Manager]部署和[!DNL InDesign Server]建立絕對URL。 使用&#x200B;**[!UICONTROL Domains]**&#x200B;欄位指定[!DNL Adobe InDesign Server]的主機名。 按一下「**儲存**」。
+
+   建立絕對URL時，您必須將主機名稱`localhost`用於本機、製作和發佈執行個體。
 
    ![連結外部化程式設定](assets/link-externalizer-config.png)
 
