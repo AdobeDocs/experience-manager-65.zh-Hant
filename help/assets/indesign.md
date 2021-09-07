@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: f74190692d718da6074affa87d283f326eca7faa
+source-git-commit: 610f294c314489032ec71b863542d269d302ee01
 workflow-type: tm+mt
 source-wordcount: '1577'
 ht-degree: 3%
@@ -174,7 +174,7 @@ Pool要用於與通信的SOAP端 [!DNL InDesign Server]點。您可以新增、�
 1. 找到配置&#x200B;**[!UICONTROL Day CQ Link Externalizer]**。 按一下&#x200B;**[!UICONTROL 編輯]**&#x200B;以開啟。
 1. 連結外部化程式設定有助於為[!DNL Experience Manager]部署和[!DNL InDesign Server]建立絕對URL。 使用&#x200B;**[!UICONTROL Domains]**&#x200B;欄位指定[!DNL Adobe InDesign Server]的主機名。 按一下「**儲存**」。
 
-   建立絕對URL時，您必須將主機名稱`localhost`用於本機、製作和發佈執行個體。
+   在絕對URL中，您必須使用`localhost`作為本機、製作和發佈執行個體的主機名稱。
 
    ![連結外部化程式設定](assets/link-externalizer-config.png)
 
