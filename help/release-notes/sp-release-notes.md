@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 10的發行說�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
+source-git-commit: 59cc855e937c7be71cfc7a28fccd1db0b91e9f97
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4394'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 2%
 
 * 新增[!DNL AEM Forms]中`GuideBridge#getGuidePath` API的支援。
 
-* 您現在可以使用Automated forms conversion服務將法文、德文和西班牙文PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)轉換為最適化表單。[
+* 您現在可以使用Automated forms conversion服務，將法文、德文、西班牙文、義大利文和葡萄牙文的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)轉換為最適化表單。[
 
 * **屬性瀏覽器中的錯誤訊息**:已針對適用性Forms屬性瀏覽器中的每個屬性新增錯誤訊息。這些訊息有助於了解欄位的允許值。
 
@@ -272,9 +272,9 @@ Need to verify with Engineering, the status is currently showing as Resolved
 >* [!DNL Experience Manager Forms] 會在排程的 [!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
 
 
-[!DNL AEM Forms 6.5.10.0] 包含下列錯誤修正：
+[!DNL AEM 6.5.10.0 Forms] 包含下列錯誤修正：
 
-* 安裝[!DNL AEM Forms 6.5]時，會自動安裝下列第三方程式庫(CQDOC-18373):
+* 安裝[!DNL AEM 6.5 Forms]時，會自動安裝下列第三方程式庫(CQDOC-18373):
    * [!DNL Microsoft Visual C++ 2008 Service Pack 1 (x86)]
    * [!DNL Microsoft Visual C++ 2010 Service Pack 1 (x86)]
 
