@@ -11,14 +11,14 @@ discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 9f3ca2da0828ce5170622852220a1926df0d5150
+source-git-commit: ba2c753cfd041ccfcd6ba7a45648234290b99d25
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1881'
 ht-degree: 1%
 
 ---
 
-# 在建立通信UI中新增自訂動作/按鈕 {#add-custom-action-button-in-create-correspondence-ui}
+# 在建立通信UI中新增自訂動作按鈕 {#add-custom-action-button-in-create-correspondence-ui}
 
 ## 概覽 {#overview}
 
@@ -360,7 +360,7 @@ LCA進程在LiveCycle伺服器上運行，需要伺服器地址和登錄憑據�
 >
 >若要檢視此程式的功用，或自行建立類似程式，您需要Workbench。
 
-1. 以管理員身分登入Livecycle Server adminui at `https:/[lc server]/:[lc port]/adminui`。
+1. 以管理員身分登入以在`https:/[lc server]/:[lc port]/adminui`LiveCycle® Server adminui。
 
 1. 導航至&#x200B;**首頁>服務>應用程式和服務>應用程式管理**。
 
@@ -382,7 +382,7 @@ LCA進程在LiveCycle伺服器上運行，需要伺服器地址和登錄憑據�
 
 #### 將ServiceName添加到允許清單服務清單 {#adding-servicename-to-the-allowlist-service-list}
 
-在AEM伺服器中提及您要存取AEM伺服器的LiveCycle服務。
+在Experience Manager伺服器中提及您要存取Experience Manager伺服器的LiveCycle服務。
 
 1. 以管理員身分登入`https:/[host]:'port'/system/console/configMgr`。
 
@@ -395,7 +395,7 @@ LCA進程在LiveCycle伺服器上運行，需要伺服器地址和登錄憑據�
 
 在此案例中，若要讓通信管理能夠傳送電子郵件，請在LiveCycle伺服器中設定電子郵件服務。
 
-1. 以管理員憑證登入Livecycle Server adminui at `https:/[lc server]:[lc port]/adminui`。
+1. 使用管理員憑證登入，以在`https:/[lc server]:[lc port]/adminui`LiveCycle伺服器adminui。
 
 1. 導航至&#x200B;**首頁>服務>應用程式和服務>服務管理**。
 
@@ -407,30 +407,30 @@ LCA進程在LiveCycle伺服器上運行，需要伺服器地址和登錄憑據�
 
 #### 配置DSC服務 {#configure-the-dsc-service}
 
-若要使用通信管理API，請下載DSCSample.jar（附於本檔案中，作為components.zip的一部分）並上傳至LiveCycle伺服器。 將DSCSample.jar檔案上傳至LiveCycle伺服器後，AEM伺服器會使用DSCSample.jar檔案來存取renderLetter API。
+若要使用通信管理API，請下載DSCSample.jar（附於本檔案中，作為components.zip的一部分）並上傳至LiveCycle伺服器。 將DSCSample.jar檔案上傳到LiveCycle伺服器後，Experience Manager伺服器使用DSCSample.jar檔案來訪問renderLetter API。
 
 如需詳細資訊，請參閱[將AEM Forms與AdobeLiveCycle連線](/help/forms/using/aem-livecycle-connector.md)。
 
-1. 在DSCSample.jar中，更新cmsa.properties中的AEM伺服器URL，該位置如下：
+1. 更新DSCSample.jar中cmsa.properties中的Experience Manager伺服器URL，該位置如下：
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
 1. 在設定檔案中提供下列參數：
 
    * **crx.serverUrl**=https:/host:port/[內容路徑]/[AEM URL]
-   * **crx.username** = AEM使用者名稱
-   * **crx.password** = AEM密碼
+   * **crx.username** =Experience Manager使用者名稱
+   * **crx.password** =Experience Manager密碼
    * **crx.appRoot** =/content/apps/cm
 
    >[!NOTE]
    >
    >每次在伺服器端進行任何變更時，請重新啟動LiveCycle伺服器。
 
-   DSCSample.jar檔案使用renderLetter API。 如需renderLetter API的詳細資訊，請參閱[介面LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)。
+   DSCSample.jar檔案使用renderLetter API。 如需renderLetter API的詳細資訊，請參閱[介面LetterRenderService](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 #### 將DSC匯入LiveCyle {#import-dsc-to-livecyle}
 
-DSCSample.jar檔案使用renderLetter API從C作為輸入提供的XML資料中，將字母轉譯為PDF位元組。 如需renderLetter和其他API的詳細資訊，請參閱[Letter Render Service](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)。
+DSCSample.jar檔案使用renderLetter API從DSC作為輸入提供的XML資料中，將信函轉譯為PDF位元組。 如需renderLetter和其他API的詳細資訊，請參閱[Letter Render Service](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 1. 啟動Workbench並登入。
 1. 選擇&#x200B;**窗口>顯示視圖>元件**。 元件檢視會新增至Workbench ES2。
