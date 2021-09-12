@@ -1,20 +1,20 @@
 ---
 title: 使用 Brand Portal 設定 AEM Assets
-seo-title: 使用 Brand Portal 設定 AEM Assets
+seo-title: Configure AEM Assets with Brand Portal
 description: 了解如何使用Brand Portal設定AEM Assets，以將資產和集合發佈至Brand Portal。
-seo-description: 了解如何使用Brand Portal設定AEM Assets，以將資產和集合發佈至Brand Portal。
+seo-description: Learn how to configure AEM Assets with Brand Portal for publishing assets and Collections to Brand Portal.
 uuid: b95c046e-9988-444c-b50e-ff5ec8cafe14
 topic-tags: brand-portal
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
-feature: 品牌入口網站
+feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: aed6e28d7ff228ecbaeaf0d468d1d9bcb4373f90
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2047'
 ht-degree: 7%
 
 ---
@@ -70,13 +70,13 @@ AEM Assets是透過Brand Portal Developer Console使用Adobe來設定，其中�
 
 * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴培訓計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)來請求AEM 6.5。
 
-下載AEM後，如需設定AEM製作例項的指示，請參閱[部署和維護](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#default-local-install)。
+下載AEM後，如需設定AEM製作例項的指示，請參閱[部署和維護](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install)。
 
 ### 下載及安裝AEM最新Service Pack {#servicepack}
 
 有關詳細說明，請參閱
 
-* [AEM 6.5 Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
+* [AEM 6.5 Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/sp-release-notes.html?lang=zh-Hant)
 
 **如** 果您找不到最新的AEM套件或Service Pack，請聯絡支援。
 
@@ -337,7 +337,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    >
    >請避免停用任何復寫代理，因為這可能導致資產復寫（在佇列中執行）失敗。
    >
-   >請確定所有四個復寫代理均已設定，以避免逾時錯誤。 請參閱[疑難排解平行發佈至Brand Portal時的問題](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=en#connection-timeout)。
+   >請確定所有四個復寫代理均已設定，以避免逾時錯誤。 請參閱[疑難排解平行發佈至Brand Portal時的問題](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)。
 
 您現在可以：
 

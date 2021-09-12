@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 10的發行說�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 59cc855e937c7be71cfc7a28fccd1db0b91e9f97
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '4394'
+source-wordcount: '4392'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 2%
 
 * 新增[!DNL AEM Forms]中`GuideBridge#getGuidePath` API的支援。
 
-* 您現在可以使用Automated forms conversion服務，將法文、德文、西班牙文、義大利文和葡萄牙文的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)轉換為最適化表單。[
+* 您現在可以使用Automated forms conversion服務，將法文、德文、西班牙文、義大利文和葡萄牙文的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html#language-specific-meta-model)轉換為最適化表單。[
 
 * **屬性瀏覽器中的錯誤訊息**:已針對適用性Forms屬性瀏覽器中的每個屬性新增錯誤訊息。這些訊息有助於了解欄位的允許值。
 
@@ -337,7 +337,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * 升級至AEM Forms Service Pack 8後，無法將表單提交至Workbench程式(CQ-4325846)。
 
-**HTML5 表單**
+**HTML5 Forms**
 
 * 在CRX DE存放庫中將`mfAllowAttachments`屬性的值設為`True`時，在提交HTML5表單時`dataXml`會損毀(NPR-37035)。
 
@@ -506,5 +506,5 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 >* [[!DNL Experience Manager] 6.5發行說明](/help/release-notes/release-notes.md)
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
->* [訂閱 Adobe 優先產品更新](https://www.adobe.com/subscription/priority-product-update.html)
+>* [訂閱 Adobe 優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
 

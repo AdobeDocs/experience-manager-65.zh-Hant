@@ -12,10 +12,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
-feature: 配置，混合模式
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+feature: Configuration,Hybrid Mode
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '7797'
+source-wordcount: '7792'
 ht-degree: 1%
 
 ---
@@ -44,8 +44,7 @@ Dynamic Media-Hybrid必須啟用並設定為使用。 根據您的使用案例�
 >* `ImageServing.log`
 
 >
->
-這些檔案記錄在[監視和維護您的Experience Manager實例](/help/sites-deploying/monitoring-and-maintaining.md)中。
+>這些檔案記錄在[監視和維護您的Experience Manager實例](/help/sites-deploying/monitoring-and-maintaining.md)中。
 
 混合發佈與傳送是Dynamic Media新增Adobe Experience Manager的核心功能。 混合發佈可讓您從雲端而非從Experience Manager發佈節點傳送Dynamic Media資產，例如影像、集和視訊。
 
@@ -344,7 +343,6 @@ Replication test succeeded
 您也可以執行下列其中一項操作來檢查：
 * 檢查復寫記錄，確認已復寫資產。
 * 發佈影像。 選取影像，然後在下拉式選單中選取「**[!UICONTROL 檢視器]**」，然後選取檢視器預設集。 選擇&#x200B;**[!UICONTROL URL]**。 若要確認您可以看到影像，請複製URL路徑並貼到瀏覽器中。
-
 
 
 ### 疑難排解驗證 {#troubleshooting-authentication}
@@ -869,7 +867,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您
 | `defaultthumbpix` | `100,100` | 預設縮圖大小。 用於縮圖請求(`req=tmb`)，而非屬性：:DefaultPix。<br>伺服器會將回覆影像限制為不大於此寬度和高度。如果縮圖要求(`req=tmb`)未明確指定大小，且未明確使用`wid=`、`hei=`或`scl=`指定檢視大小，則此動作為true。<br>指定為兩個整數，0或更大，以逗號分隔。寬度和高度（像素）。 可將任一值或兩個值設為0，以保持它們不受約束。<br>不適用於巢狀/內嵌的請求。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 閱影像伺服API中的DefaultThumbPix。 |
 | `expiration` | `36000000` | 預設的客戶端快取存留時間。 提供預設過期時間間隔，以備特定目錄記錄不包含有效的目錄：：過期值時使用。<br>實數，0或更高。自回覆資料產生以來直到過期的毫秒數。 設為0一律會立即讓回覆影像過期，這會有效停用用戶端快取。 依預設，此值會設為10小時，這表示如果發佈新影像，舊影像需要10小時才會離開使用者的快取。 如果您需要快取，請連絡客戶服務。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 閱影像提供API中的過期。 |
 | `jpegquality` | `80` | 預設JPEG編碼屬性。 指定JPEG回復影像的預設屬性。<br>整數和標幟，以逗號分隔。第一個值在1..100範圍內，並定義品質。 對於正常行為，第二個值可以是0，或者禁用JPEG編碼器採用的RGB色度下採樣。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 閱影像提供API中的JpegQualitive 。 |
-| `maxpix` | `2000,2000` | 回覆影像大小限制。 傳回給用戶端的最大回覆影像寬度和高度。<br>如果請求導致寬度或高度大於屬性：:MaxPix的回覆影像，則伺服器會傳回錯誤。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api) 閱影像伺服API中的MaxPixin 。 |
+| `maxpix` | `2000,2000` | 回覆影像大小限制。 傳回給用戶端的最大回覆影像寬度和高度。<br>如果請求導致寬度或高度大於屬性：:MaxPix的回覆影像，則伺服器會傳回錯誤。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 閱影像伺服API中的MaxPixin 。 |
 | `resmode` | `SHARP2` | 預設重新取樣模式。 指定用於縮放影像資料的預設重採樣和插值屬性。<br>在請 `resMode=` 求中未指定時使用。<br>允許的 `BILIN`值包 `BICUB`括、或 `SHARP2`。<br>列舉。為`bilin`設為2，為`bicub`設為3，為`sharp2`插值模式設為4。 使用`sharp2`獲得最佳結果。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 閱影像伺服API中的ResMode。 |
 | `resolution` | `72` | 預設對象解析度。 提供預設對象解析，以防特定目錄記錄不包含有效的目錄：:Resolution值。<br>實數，大於0。通常以每英吋像素表示，但也可以以其他單位表示，例如每米像素。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) 閱影像伺服API中的解析度。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 這些值代表視訊播放時間的快照，並傳遞至[encoding.com](https://www.encoding.com/)。 如需詳細資訊，請參閱[關於視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode) 。 |

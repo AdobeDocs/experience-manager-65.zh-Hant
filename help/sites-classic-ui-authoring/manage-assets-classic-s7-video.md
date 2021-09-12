@@ -1,6 +1,6 @@
 ---
 title: 影片
-seo-title: 影片
+seo-title: Video
 description: Assets提供集中的視訊資產管理功能，您可以直接將視訊上傳至Assets，以自動編碼至Dynamic Media Classic，並直接從Assets存取Dy視訊，以進行頁面編寫。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1683'
-ht-degree: 1%
+source-wordcount: '1678'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +63,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 
 如果您的資產不需要工作流程或版本設定，應將資產上傳至Dynamic Media Classic。 建議的工作流程如下：
 
-1. 在Dynamic Media Classic案頭應用程式中，[設定排程的FTP上傳和編碼至Dynamic Media Classic（系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=en#upload-options)。
+1. 在Dynamic Media Classic案頭應用程式中，[設定排程的FTP上傳和編碼至Dynamic Media Classic（系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)。
 1. 在Experience Manager中，在「內容尋找器」的&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;標籤中存取WCM中的視訊資產。
 1. 使用Dynamic Media Classic視訊元件製作。
 
@@ -80,7 +80,7 @@ Dynamic Media Classic視訊元件支援下列格式：
 
    >[!NOTE]
    >
-   >有關視訊預設集的含義的詳細資訊，請參閱[編碼視訊檔案的視訊預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=en#video-presets-for-encoding-video-files)。
+   >有關視訊預設集的含義的詳細資訊，請參閱[編碼視訊檔案的視訊預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
    >
    >Adobe建議您在設定通用預設集時同時選取兩個最適化視訊集，或選取&#x200B;**[!UICONTROL 最適化視訊編碼]**&#x200B;選項。
 
@@ -118,7 +118,6 @@ Dynamic Media Classic視訊元件只適用於Dynamic Media Classic視訊。 基�
 >[!NOTE]
 >
 >Dynamic Media Classic視訊元件立即可用，使用通用視訊設定檔。 不過，您可以取得以HTML5為基礎的視訊播放器，以供Experience Manager使用。 在Dynamic Media Classic中，複製現成可用HTML5視訊播放器的內嵌程式碼，並將其放入您的Experience Manager頁面中。
-
 
 ## Experience Manager視訊元件 {#aem-video-component}
 

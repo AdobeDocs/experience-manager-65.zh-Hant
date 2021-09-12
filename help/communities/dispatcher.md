@@ -1,8 +1,8 @@
 ---
 title: 為社群設定Dispatcher
-seo-title: 為社群設定Dispatcher
+seo-title: Configuring Dispatcher for Communities
 description: 設定AEM Communities的Dispatcher
-seo-description: 設定AEM Communities的Dispatcher
+seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '668'
 ht-degree: 3%
 
 ---
 
-# 為Communities {#configuring-dispatcher-for-communities}配置Dispatcher
+# 為社群設定Dispatcher {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 另請參閱主要[Dispatcher檔案](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
 
-## Dispatcher快取{#dispatcher-caching}
+## Dispatcher快取 {#dispatcher-caching}
 
 ### 概覽 {#overview}
 
@@ -70,11 +70,11 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標題 — Max Age**
 
    *（必要）* 要新增至「快取控制」標題的最大年齡（以秒為單位）。值必須大於零(0)。
 
-## Dispatcher用戶端標題{#dispatcher-client-headers}
+## Dispatcher用戶端標題 {#dispatcher-client-headers}
 
 在`dispatcher.any`的/clientheaders區段中，如果列出特定的標題集，則必須包含`"CSRF-Token"`，才能使[啟用功能](enablement.md)正常運作。
 
-## Dispatcher篩選器{#dispatcher-filters}
+## Dispatcher篩選器 {#dispatcher-filters}
 
 `dispatcher.any`檔案的/filter部分記錄在[配置對內容的訪問 — /filter](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html#filter)中。
 
@@ -93,11 +93,9 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標題 — Max Age**
 >**屬性名稱範例**
 >所顯示的所有屬性名稱（例如&#x200B;**/0050**&#x200B;和&#x200B;**/0170**）都應經過調整，以符合現有dispatcher.any設定檔案。
 
-
 >[!CAUTION]
 >
->請參閱[Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) ，以了解使用Dispatcher限制存取時的進一步考量。 此外，請閱讀[AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html)以取得有關AEM安裝的其他安全性詳細資訊。
-
+>請參閱[Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html) ，以了解使用Dispatcher限制存取時的進一步考量。 此外，請閱讀[AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html)以取得有關AEM安裝的其他安全性詳細資訊。
 
 應將下列項添加到/filter節的結尾，尤其是在所有拒絕項後。
 
@@ -249,7 +247,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher快取控制標題 — Max Age**
 ```
 -->
 
-## Dispatcher規則{#dispatcher-rules}
+## Dispatcher規則 {#dispatcher-rules}
 
 `dispatcher.any`的規則區段定義應根據請求的URL快取哪些回應。 對於Communities，規則區段用於定義永不快取的內容。
 

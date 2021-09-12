@@ -4,10 +4,10 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 355cea8e5d3d3426788cd23e6d55297363adf05b
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '4108'
-ht-degree: 0%
+source-wordcount: '4102'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 >
 >[!DNL Experience Manager Forms]的附加元件套件會在排程的[!DNL Experience Manager] Service Pack發行一週後提供使用。
 
-* 您現在可以使用Automated forms conversion服務，將法文、德文、西班牙文、義大利文和葡萄牙文的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)轉換為最適化表單。[
+* 您現在可以使用Automated forms conversion服務，將法文、德文、西班牙文、義大利文和葡萄牙文的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html#language-specific-meta-model)轉換為最適化表單。[
 
 * **屬性瀏覽器中的錯誤訊息**:已針對適用性Forms屬性瀏覽器中的每個屬性新增錯誤訊息。這些訊息有助於了解欄位的允許值。
 
@@ -468,11 +468,11 @@ Experience ManagerForms包含下列協助工具增強功能：
 
 2021年5月27日至2021年8月26日期間，除了Service Pack外，Adobe還發行了以下內容：
 
-* [!DNL Adobe Experience Manager] 作為Cloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)和 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en)。
+* [!DNL Adobe Experience Manager] 作為Cloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)和 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=zh-Hant)。
 
 * [[!DNL Experience Manager] 案頭應用程式2.1(2.1.3.3)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
 
-* [Experience Manager Screens:Feature Pack 202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html?lang=en)
+* [Experience Manager Screens:Feature Pack 202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html)
 
 >[!MORELIKETHIS]
 >

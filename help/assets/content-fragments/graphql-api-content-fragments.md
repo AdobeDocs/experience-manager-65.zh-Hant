@@ -2,13 +2,13 @@
 title: AEM GraphQL API以搭配內容片段使用
 description: 了解如何搭配AEM GraphQL API使用Adobe Experience Manager(AEM)中的內容片段來傳送無周邊內容。
 feature: Content Fragments,GraphQL API
-source-git-commit: 955fd54c94ca7144965ce407ea628806d90d8336
+exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '3921'
+source-wordcount: '3919'
 ht-degree: 1%
 
 ---
-
 
 # AEM GraphQL API以搭配內容片段使用 {#graphql-api-for-use-with-content-fragments}
 
@@ -817,7 +817,7 @@ query {
 
 >[!NOTE]
 >
->如需AEM中CORS資源共用原則的詳細概覽，請參閱[了解跨原始資源共用(CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en#understand-cross-origin-resource-sharing-(cors))。
+>如需AEM中CORS資源共用原則的詳細概覽，請參閱[了解跨原始資源共用(CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors))。
 
 若要存取GraphQL端點，必須在客戶Git存放庫中設定CORS原則。 若要這麼做，請為所需端點新增適當的OSGi CORS設定檔案。
 

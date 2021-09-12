@@ -9,10 +9,10 @@ docset: aem65
 role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
-feature: 配置，Scene7模式
-source-git-commit: 6c042d2c95f18ae4a0d5fd57a048aa12761495b6
+feature: Configuration,Scene7 Mode
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '6941'
+source-wordcount: '6936'
 ht-degree: 3%
 
 ---
@@ -39,11 +39,11 @@ ht-degree: 3%
 >下列功能清單需要您使用隨附於Adobe Experience Manager - Dynamic Media的現成可用CDN。 這些功能不支援任何其他自訂CDN。
 >
 >* [智慧型影像](/help/assets/imaging-faq.md)
-* [快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
-* [熱連結保護](/help/assets/hotlink-protection.md)
-* [HTTP/2 內容傳送](/help/assets/http2.md)
-* CDN層級的URL重新導向
-* Akamai ChinaCDN（以最佳方式在中國傳送）
+>* [快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>* [熱連結保護](/help/assets/hotlink-protection.md)
+>* [HTTP/2 內容傳送](/help/assets/http2.md)
+>* CDN層級的URL重新導向
+>* Akamai ChinaCDN（以最佳方式在中國傳送）
 
 
 ## 在Scene7模式中啟用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
@@ -51,7 +51,8 @@ ht-degree: 3%
 [動態](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 媒體預設為停用。若要運用Dynamic Media功能，您必須啟用此功能。
 
 >[!WARNING]
-Dynamic Media - Scene7模式僅適用於&#x200B;*Experience Manager製作例項*。 因此，您必須在「Experience Manager製作」例項上設定`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager發佈例項。*
+>
+>Dynamic Media - Scene7模式僅適用於&#x200B;*Experience Manager製作例項*。 因此，您必須在「Experience Manager製作」例項上設定`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager發佈例項。*
 
 若要啟用Dynamic Media，您必須在終端視窗中輸入以下內容，從命令列使用`dynamicmedia_scene7`執行模式啟動Experience Manager（使用的範例埠為4502）:
 
@@ -64,7 +65,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 將Experience ManagerDynamic Media從6.3升級至6.4或6.5，現在包含零停機部署的功能。 若要將所有預設集和設定從`/etc`移轉至CRXDE Lite中的`/conf`，請務必執行下列curl命令。
 
 >[!NOTE]
-如果您以相容模式運行Experience Manager實例（即安裝了相容性包），則無需運行這些命令。
+>
+>如果您以相容模式運行Experience Manager實例（即安裝了相容性包），則無需運行這些命令。
 
 對於所有升級，無論是否使用相容性套件，您都可以執行下列Linux® curl命令，以複製Dynamic Media最初隨附的預設現成檢視器預設集：
 
@@ -272,7 +274,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 * **[!UICONTROL 目錄欄位的預設值]** — 這些設定與影像的解析度和預設縮圖類型相關。
 * **[!UICONTROL 顏色管理屬性]**  — 這些設定將決定要使用的ICC顏色配置檔案。
 * **[!UICONTROL 相容性屬性]**  — 此設定可讓文字層中的前導和尾隨段落，如同在3.6版中一樣處理，以提供回溯相容性。
-* **[!UICONTROL 本地化支援]**  — 這些設定可讓您管理多個地區設定屬性。它也可讓您指定地區對應字串，以便定義要在檢視器中支援各種工具提示的語言。 有關設定&#x200B;**[本地化支援]**&#x200B;的詳細資訊，請參閱設定資產本地化時的注意事項[](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=en#considerations-when-setting-up-localization-of-assets)。
+* **[!UICONTROL 本地化支援]**  — 這些設定可讓您管理多個地區設定屬性。它也可讓您指定地區對應字串，以便定義要在檢視器中支援各種工具提示的語言。 有關設定&#x200B;**[本地化支援]**&#x200B;的詳細資訊，請參閱設定資產本地化時的注意事項[](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets)。
 
 #### 配置應用程式一般設定 {#configuring-application-general-settings}
 
@@ -294,7 +296,6 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 >[!NOTE]
 依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。您可以提高此限制。請參閱[增加顯示](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[的影像預設集數目增加顯示](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)的檢視器預設集數目。
-
 
 #### 配置顏色管理 {#configuring-color-management}
 

@@ -7,12 +7,12 @@ topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
-feature: 檢視器
+feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '6636'
+source-wordcount: '6633'
 ht-degree: 6%
 
 ---
@@ -241,7 +241,7 @@ Dynamic Media檢視器擴充功能的唯一設定選項是「**[!UICONTROL 啟�
 
 無論如何，由Dynamic Media檢視器驅動的資料元素值不會儲存在本機儲存體或伺服器上；而是只會保留在用戶端Experience Platform標籤程式庫中。 當網頁重新載入時，這類資料元素的值會消失。
 
-通常，資料元素編輯器支援[儲存持續時間選擇](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/data-elements.html?lang=en#create-a-data-element)。 不過，使用Dynamic Media檢視器擴充功能的資料元素僅支援&#x200B;**[!UICONTROL None]**&#x200B;的儲存期間選項。 在使用者介面中可設定任何其他值，但在此情況下未定義資料元素行為。 擴充功能會自行管理資料元素的值：在整個檢視器生命週期中維護檢視器事件引數值的資料元素。
+通常，資料元素編輯器支援[儲存持續時間選擇](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/data-elements.html#create-a-data-element)。 不過，使用Dynamic Media檢視器擴充功能的資料元素僅支援&#x200B;**[!UICONTROL None]**&#x200B;的儲存期間選項。 在使用者介面中可設定任何其他值，但在此情況下未定義資料元素行為。 擴充功能會自行管理資料元素的值：在整個檢視器生命週期中維護檢視器事件引數值的資料元素。
 
 ### 關於Dynamic Media檢視器擴充功能中的規則 {#about-rules-in-the-dynamic-media-viewers-extension}
 

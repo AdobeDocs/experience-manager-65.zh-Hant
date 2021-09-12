@@ -3,9 +3,10 @@ title: 使用內容片段
 description: 了解Adobe Experience Manager(AEM)中的內容片段如何讓您設計、建立、組織及使用不受頁面影響的內容，最適合無頭式傳送。
 feature: Content Fragments
 role: User
-source-git-commit: 819df6d6123575b378676dda200064725de47b84
+exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1989'
 ht-degree: 3%
 
 ---
@@ -82,7 +83,7 @@ ht-degree: 3%
 >
 >體驗片段可以包含內容片段形式的內容，但不能以相反的方式。
 >
->如需詳細資訊，請參閱[了解AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=en#content-fragments)中的內容片段和體驗片段。
+>如需詳細資訊，請參閱[了解AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments)中的內容片段和體驗片段。
 
 >[!NOTE]
 >

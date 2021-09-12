@@ -10,12 +10,12 @@ content-type: reference
 discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
-feature: 影像預設集
+feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '3843'
+source-wordcount: '3839'
 ht-degree: 8%
 
 ---
@@ -202,12 +202,10 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
 >[!NOTE]
 >
 >* EPS檔案的縮圖大小是在「縮圖」下的&#x200B;**[!UICONTROL EPS縮圖]**&#x200B;步驟的&#x200B;**[!UICONTROL 參數]**&#x200B;頁簽中配置的。
-   >
-   >
-* 視訊的縮圖大小是在&#x200B;**[!UICONTROL FFmpeg縮圖]**&#x200B;步驟中，在&#x200B;**[!UICONTROL Process]**&#x200B;標籤的&#x200B;**[!UICONTROL Arguments]**&#x200B;下配置。
+>
+>* 視訊的縮圖大小是在&#x200B;**[!UICONTROL FFmpeg縮圖]**&#x200B;步驟中，在&#x200B;**[!UICONTROL Process]**&#x200B;標籤的&#x200B;**[!UICONTROL Arguments]**&#x200B;下配置。
 
 >
-
 
 
 **若要設定影像縮圖大小：**
@@ -429,7 +427,7 @@ ExtendScript會在[!UICONTROL DAM更新資產]工作流程中，路徑為「媒�
   </tr>
   <tr>
    <td><strong>影像修飾元</strong></td>
-   <td><p>除了UI中可用的通用影像設定，Dynamic Media支援許多進階影像修改，您可以在<strong>影像修飾元</strong>欄位中指定。 這些參數在<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api">Image Server協定命令引用</a>中定義。</p> <p>重要：不支援API中列出的下列功能：</p>
+   <td><p>除了UI中可用的通用影像設定，Dynamic Media支援許多進階影像修改，您可以在<strong>影像修飾元</strong>欄位中指定。 這些參數在<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html#image-serving-api">Image Server協定命令引用</a>中定義。</p> <p>重要：不支援API中列出的下列功能：</p>
     <ul>
      <li>基本模板和文本呈現命令：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code>和 <code>textPs=</code></li>
      <li>本地化命令：<code>locale=</code>和 <code>req=xlate</code></li>
