@@ -3,11 +3,11 @@ title: Digital Rights Management資產
 description: 了解如何在 [!DNL Experience Manager]中管理授權資產的資產到期狀態和資訊。
 contentOwner: AG
 role: User, Admin
-feature: DRM，資產管理
+feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: e87facbad559aa7e45656f621de17e6ef3109273
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1398'
 ht-degree: 5%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 5%
 1. 開啟[!DNL Experience Manager] Configuration Manager。
 1. 選擇&#x200B;**[!UICONTROL Adobe CQ DAM過期通知]**。 依預設，會選取&#x200B;**[!UICONTROL 以時間為基礎的排程器]**，排程工作以在特定時間檢查資產是否已過期子資產。 作業完成後，過期的子資產和參考資產的資產會在搜尋結果中顯示為過期。
 
-1. 要定期運行作業，請清除「基於時 **[!UICONTROL 間的調度程式規則]** 」欄位，並在「定期調度程式」欄位中以秒為單 **[!UICONTROL 位修改時間]** 。例如，範例運算式`0 0 0 &ast; &ast; ?`會在00小時觸發工作。
+1. 要定期運行作業，請清除「基於時 **[!UICONTROL 間的調度程式規則]** 」欄位，並在「定期調度程式」欄位中以秒為單 **[!UICONTROL 位修改時間]** 。例如，範例運算式`0 0 0 * * ?`會在00小時觸發工作。
 1. 選取&#x200B;**[!UICONTROL 傳送電子郵件]**&#x200B;以在資產過期時接收電子郵件。
 
    >[!NOTE]
