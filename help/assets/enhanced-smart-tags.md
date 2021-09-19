@@ -2,13 +2,13 @@
 title: 增強型智慧標記
 description: 增強型智慧標記
 contentOwner: AG
-feature: 智慧標籤，搜索
+feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: 20442918270b484e0b3c3ce8e68df90e0f305a52
+source-git-commit: fbb27348df0b9d5f93d186acbce45fcf88197c5e
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 1%
+source-wordcount: '1544'
+ht-degree: 0%
 
 ---
 
@@ -47,30 +47,30 @@ ht-degree: 1%
 
 服務會將智慧標籤套用至下列MIME類型的資產：
 
-* image/jpeg
-* image/tiff
-* image/png
-* image/bmp
-* image/gif
-* image/pjpeg
-* image/x-portable-anymap
-* image/x-portable-bitmap
-* image/x-portable-graymap
-* image/x-portable-pixmap
-* image/x-rgb
-* image/x-xbitmap
-* image/x-xpixmap
-* image/x-icon
-* image/photoshop
-* image/x-photoshop
-* 影像/psd
-* image/vnd.adobe.photoshop
+* `image/jpeg`
+* `image/tiff`
+* `image/png`
+* `image/bmp`
+* `image/gif`
+* `image/pjpeg`
+* `image/x-portable-anymap`
+* `image/x-portable-bitmap`
+* `image/x-portable-graymap`
+* `image/x-portable-pixmap`
+* `image/x-rgb`
+* `image/x-xbitmap`
+* `image/x-xpixmap`
+* `image/x-icon`
+* `image/photoshop`
+* `image/x-photoshop`
+* `image/psd`
+* `image/vnd.adobe.photoshop`
 
 服務會套用智慧標籤至下列MIME類型的資產轉譯：
 
-* 影像/jpeg
-* 影像/pjpeg
-* image/png
+* `image/jpeg`
+* `image/pjpeg`
+* `image/png`
 
 ## 入門 {#onboarding}
 
@@ -79,10 +79,6 @@ ht-degree: 1%
 管理員可以按照該連結將智慧內容服務與[!DNL Experience Manager]整合。 若要將服務與[!DNL Experience Manager Assets]整合，請參閱[設定智慧標籤](config-smart-tagging.md)。
 
 當管理員配置服務並在[!DNL Experience Manager]中添加用戶時，上線過程將完成。
-
->[!NOTE]
->
->如果您使用[!DNL Experience Manager] 6.3或較舊版本，且需要為資產提供標籤服務，請參閱[智慧標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智慧標籤不會使用最新的AI功能，因此比增強智慧標籤服務的準確度較低。
 
 ## 檢閱資產和標籤 {#reviewing-assets-and-tags}
 
