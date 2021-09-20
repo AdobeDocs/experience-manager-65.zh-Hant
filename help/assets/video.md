@@ -9,12 +9,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
-feature: 資產管理
+feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: a5164c0c2ef175f1bf63ef911bf92df36e413a6f
 workflow-type: tm+mt
-source-wordcount: '11699'
+source-wordcount: '11713'
 ht-degree: 5%
 
 ---
@@ -32,21 +32,15 @@ ht-degree: 5%
 >在Dynamic Media中處理視訊之前，請確定您的Adobe Experience Manager管理員已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中啟用並設定Dynamic MediaCloud Services。
 >
 >* 請參閱在設定Dynamic Media - Scene7模式中設定[設定Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)和[疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md)。
-   >
-   >
-* 請參閱設定Dynamic Media — 混合模式中的[設定Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
 >
->
-目前，Dynamic Media 6.5.9.0上&#x200B;*的Experience Manager上已知的視訊播放問題：*
->
->* 
+>* 請參閱設定Dynamic Media — 混合模式中的[設定Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
 
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
->* 
-
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 >
+>目前僅&#x200B;*Experience Manager6.5.9.0上Dynamic Media*&#x200B;的已知視訊播放問題：
+>
+>* 如果已發佈的視訊已更新，則必須再次發佈，以反映傳送時的變更。
 
+>
 
 
 1. **執行下列** 操作，上傳Dynamic Media影片：
