@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
-feature: 發佈
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+feature: Publishing
+source-git-commit: a5164c0c2ef175f1bf63ef911bf92df36e413a6f
 workflow-type: tm+mt
-source-wordcount: '2945'
+source-wordcount: '2960'
 ht-degree: 3%
 
 ---
@@ -70,6 +70,8 @@ ht-degree: 3%
    >[!IMPORTANT]
    >
    >無論您選取的Dynamic Media發佈模式選項為何，您之後對已發佈&#x200B;*的資產所進行的任何更新，都會立即發佈這些更新，而不需進一步使用者動作。*
+   >
+   >如果已發佈的視訊已更新，則必須再次發佈，以反映傳送時的變更。
 
    | Dynamic Media發佈模式選項 | 說明 |
    | --- | --- |
