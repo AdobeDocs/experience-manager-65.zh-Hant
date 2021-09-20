@@ -1,8 +1,8 @@
 ---
 title: 手動設定與Adobe Target的整合
-seo-title: 手動設定與Adobe Target的整合
+seo-title: Manually Configuring the Integration with Adobe Target
 description: 了解如何手動設定與Adobe Target的整合。
-seo-description: 了解如何手動設定與Adobe Target的整合。
+seo-description: Learn how to manually configure the integration with Adobe Target.
 uuid: 0bb76a65-f981-4cc5-bee8-5feb3297137c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2210'
 ht-degree: 0%
 
 ---
 
-# 手動配置與Adobe Target的整合{#manually-configuring-the-integration-with-adobe-target}
+# 手動設定與Adobe Target的整合 {#manually-configuring-the-integration-with-adobe-target}
 
 您可以修改使用精靈時所做的選擇加入精靈設定，或無需使用精靈即可手動與Adobe Target整合。
 
-## 修改選擇加入精靈設定{#modifying-the-opt-in-wizard-configurations}
+## 修改選擇加入精靈設定 {#modifying-the-opt-in-wizard-configurations}
 
 [選擇加入精靈](/help/sites-administering/opt-in.md)與Adobe Target](/help/sites-administering/target.md)整合的[會自動建立名為「已布建的目標設定」的Target雲端設定。 精靈也會為名為布建的目標架構的雲端設定建立Target架構。 您可以視需要修改雲配置和框架的屬性。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 若要找到雲配置和框架，請通過&#x200B;**工具** > **部署** > **雲**&#x200B;導航到&#x200B;**Cloud Services**。 ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 在Adobe Target下方，按一下或點選**顯示設定**。
 
-### 布建的目標配置屬性{#provisioned-target-configuration-properties}
+### 已布建的Target配置屬性 {#provisioned-target-configuration-properties}
 
 下列屬性值用於「選擇加入」精靈建立的「已布建的目標設定」雲端設定中：
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 >* AT.js包含target.js中包含的元件，因此不再需要呼叫target.js
 
 
-### 布建的Target框架屬性{#provisioned-target-framework-properties}
+### 布建的Target框架屬性 {#provisioned-target-framework-properties}
 
 選擇加入精靈建立的已布建Target架構已設定為從設定檔資料存放區傳送內容資料。 依預設，會將存放區的年齡和性別資料項目傳送至Target。 您的解決方案可能需要傳送其他參數。
 
@@ -66,9 +66,13 @@ ht-degree: 0%
 
 您可以設定框架，如[新增Target框架](/help/sites-administering/target-configuring.md#adding-a-target-framework)中所述，將其他內容資訊傳送至Target。
 
-### 配置A4T Analytics Cloud配置{#configuring-a-t-analytics-cloud-configuration}
+### 設定A4T Analytics Cloud設定 {#configuring-a-t-analytics-cloud-configuration}
 
 您可以設定Adobe Target，以在鎖定目標內容時使用Adobe Analytics作為報表來源。
+
+>[!NOTE]
+>
+>使用者憑證驗證（舊版）無法用於A4T（適用於Target和Analytics）。 因此，客戶應使用[IMS驗證](/help/sites-administering/integration-ims-adobe-io.md)，而非使用者認證驗證。
 
 若要這麼做，您必須指定要使用下列項目連線Adobe Target雲端設定的A4T雲端設定：
 
@@ -93,7 +97,7 @@ ht-degree: 0%
 
    按一下&#x200B;**「確定」**。使用Adobe Target定位內容時，您可以[選取您的報表來源](/help/sites-authoring/content-targeting-touch.md)。
 
-## 手動與Adobe Target整合{#manually-integrating-with-adobe-target}
+## 手動與Adobe Target整合 {#manually-integrating-with-adobe-target}
 
 手動與Adobe Target整合，而非使用選擇加入精靈。
 
@@ -104,10 +108,9 @@ AT.js提供幾項優於mbox.js資料庫的改善：
 * 提高安全性
 * 更適合單頁應用程式的實作選項
 * AT.js包含target.js中包含的元件，因此不再需要呼叫target.js
-
 您可以在&#x200B;**Client library**&#x200B;下拉式選單中選取AT.js或mbox.js。
 
-### 建立Target雲端設定{#creating-a-target-cloud-configuration}
+### 建立Target雲端設定 {#creating-a-target-cloud-configuration}
 
 若要讓AEM與Adobe Target互動，請建立Target雲端設定。 若要建立設定，請提供Adobe Target用戶端代碼和使用者憑證。
 
@@ -165,7 +168,7 @@ AT.js提供幾項優於mbox.js資料庫的改善：
 
    如果您無法連線至Target，請參閱[疑難排解](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)區段。
 
-### 新增Target架構{#adding-a-target-framework}
+### 新增Target架構 {#adding-a-target-framework}
 
 設定Target雲端設定後，新增Target架構。 該框架識別從可用的[Client Context](/help/sites-administering/client-context.md)或[ContextHub](/help/sites-developing/ch-configuring.md)元件傳送至Adobe Target的預設參數。 Target使用參數來判斷要套用至目前內容的區段。
 
@@ -198,19 +201,17 @@ AT.js提供幾項優於mbox.js資料庫的改善：
 
 已建立您的架構。 若要將架構複製到發佈執行個體，請使用sidekick的&#x200B;**啟動架構**&#x200B;選項。
 
-### 將活動與Target雲端設定{#associating-activities-with-the-target-cloud-configuration}關聯
+### 將活動與Target雲端設定關聯  {#associating-activities-with-the-target-cloud-configuration}
 
 將您的[AEM活動](/help/sites-authoring/activitylib.md)與您的Target雲端設定關聯，以便您能夠鏡射[Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html)中的活動。
 
 >[!NOTE]
 可用的活動類型由下列項目決定：
 * 如果在AEM端使用的Adobe Target租用戶(clientcode)上啟用&#x200B;**xt_only**&#x200B;選項以連線至Adobe Target，則您可以在AEM中建立&#x200B;**only** XT活動。
-
 * 如果在Adobe Target租用戶(clientcode)上啟用&#x200B;**xt_only**&#x200B;選項為&#x200B;**not**，則您可以在AEM中建立&#x200B;**兩個** XT和A/B活動。
-
 **其他附註：** **xt_** onlyoptions是套用於特定Target租用戶(clientcode)的設定，且只能直接在Adobe Target中修改。您無法在AEM中啟用或停用此選項。
 
-### 將Target框架與您的站點{#associating-the-target-framework-with-your-site}關聯
+### 將Target架構與您的網站相關聯 {#associating-the-target-framework-with-your-site}
 
 在AEM中建立Target架構後，請將網頁與架構建立關聯。 頁面上的目標元件會將架構定義的資料傳送至Adobe Target以進行追蹤。 （請參閱[內容鎖定目標](/help/sites-authoring/content-targeting-touch.md)。）
 
@@ -235,7 +236,7 @@ AT.js提供幾項優於mbox.js資料庫的改善：
    >[!NOTE]
    如果您附加至頁面的架構尚未啟動，便會開啟精靈，供您發佈。
 
-## Target連線問題疑難排解{#troubleshooting-target-connection-problems}
+## 疑難排解Target連線問題 {#troubleshooting-target-connection-problems}
 
 執行下列工作以疑難排解連線至Target時發生的問題：
 
