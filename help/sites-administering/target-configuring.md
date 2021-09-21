@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
+source-git-commit: baacb6623757c4a7a67ae2be4232a36c4a509b69
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用者憑證驗證（舊版）無法用於A4T（適用於Target和Analytics）。 因此，客戶應使用[IMS驗證](/help/sites-administering/integration-ims-adobe-io.md)，而非使用者認證驗證。
+>使用者憑證驗證（舊版）無法用於A4T（適用於Target和Analytics）。 因此，客戶應使用IMS驗證，而非使用者憑證驗證。
 
 若要這麼做，您必須指定要使用下列項目連線Adobe Target雲端設定的A4T雲端設定：
 
@@ -88,7 +88,7 @@ ht-degree: 0%
    >使用AEM設定A4T時，您可能會看到「設定參考」遺失項目。 若要選取分析架構，請執行下列動作：
    >
    >1. 導覽至&#x200B;**工具** > **一般** > **CRXDE Lite**。
-   1. 導覽至&#x200B;**/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
+   1. 導航到 `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
    1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
    1. 點選或按一下「**全部儲存**」。
 

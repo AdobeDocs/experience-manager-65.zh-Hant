@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: baf68f43decec6631516442c3f9e319ce879696f
+source-git-commit: baacb6623757c4a7a67ae2be4232a36c4a509b69
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1538'
 ht-degree: 0%
 
 ---
@@ -245,9 +245,6 @@ AEM透過Target Standard API與Adobe Target整合時，需要設定Adobe IMS(Ide
    * **IMS設定**:選取IMS設定的名稱
    * **API類型**:REST
    * **A4T Analytics Cloud設定**:選取用於目標活動目標和量度的Analytics雲端設定。如果您在鎖定目標內容時使用Adobe Analytics作為報表來源，則需要此功能。 如果您沒有看見雲端設定，請參閱[設定A4T Analytics Cloud設定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)中的附註。
-
-   >[!NOTE]
-   >使用者憑證驗證（舊版）無法用於A4T（適用於Target和Analytics）。 因此，客戶應使用     IMS驗證而非使用者憑證驗證。
    * **使用精確鎖定目標**:依預設，此核取方塊會選取。如果選取此選項，雲端服務設定會在載入內容之前等待內容載入。 請參閱以下備注。
    * **從Adobe Target同步區段**:選取此選項可下載Target中定義的區段，以便在AEM中使用。當API類型屬性為REST時，您必須選取此選項，因為不支援內嵌區段，且您一律需要使用Target中的區段。 (請注意，「區段」的AEM詞語等同於Target「對象」。)
    * **用戶端程式庫**:選取您要AT.js用戶端程式庫或mbox.js（已廢止）。
