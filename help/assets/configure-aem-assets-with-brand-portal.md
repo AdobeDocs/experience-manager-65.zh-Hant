@@ -12,9 +12,9 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: d995173140237f34a03c8e84128ad9d657c9a026
 workflow-type: tm+mt
-source-wordcount: '2047'
+source-wordcount: '2053'
 ht-degree: 7%
 
 ---
@@ -338,6 +338,8 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    >請避免停用任何復寫代理，因為這可能導致資產復寫（在佇列中執行）失敗。
    >
    >請確定所有四個復寫代理均已設定，以避免逾時錯誤。 請參閱[疑難排解平行發佈至Brand Portal時的問題](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)。
+   >
+   >請勿修改任何自動產生的設定。
 
 您現在可以：
 
