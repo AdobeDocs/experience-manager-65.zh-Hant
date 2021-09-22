@@ -88,8 +88,7 @@ ht-degree: 0%
    >使用AEM設定A4T時，您可能會看到「設定參考」遺失項目。 若要選取分析架構，請執行下列動作：
    >
    >1. 導覽至&#x200B;**工具** > **一般** > **CRXDE Lite**。
-   1. 導航到:
-      `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
+   1. 導航到:`/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
    1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
    1. 點選或按一下「**全部儲存**」。
 
