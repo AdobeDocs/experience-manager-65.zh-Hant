@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: 1eb2ef06ed0541026ff3ba436dfab0d261af7356
+source-git-commit: b82544398ca414afab867f188f33ae60989596f3
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '910'
 ht-degree: 14%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 14%
       + [使用xtype（傳統UI）](xtypes.md)
       + [開發Forms（傳統UI）](developing-forms.md)
 + 無頭式體驗管理{#headless}
-   + [無頭與混合搭配AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [無頭與混合搭配AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [為元件啟用JSON匯出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 單頁應用程式{#spas}
       + [SPA簡介和逐步說明](spa-walkthrough.md)
