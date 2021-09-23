@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: b0ccbf9e63cd9db00004ae96b2556df43f4b1478
+source-git-commit: e2b13bf47a2a816add7678587d51347266cc3552
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2210'
 ht-degree: 0%
 
 ---
@@ -88,20 +88,15 @@ ht-degree: 0%
    >使用AEM設定A4T時，您可能會看到「設定參考」遺失項目。 若要選取分析架構，請執行下列動作：
    >
    >1. 導覽至&#x200B;**工具** > **一般** > **CRXDE Lite**。
-   1. 導覽至[1]（請參閱下方）
+   1. 導覽至：
+/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
    1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
    1. 點選或按一下「**全部儲存**」。
 
 
-[3]
+   ![chlimage_1-159](assets/chlimage_1-159.png)
 
-```
-   >/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
-```
-
-![chlimage_1-159](assets/chlimage_1-159.png)
-
-按一下&#x200B;**「確定」**。使用Adobe Target定位內容時，您可以[選取您的報表來源](/help/sites-authoring/content-targeting-touch.md)。
+   按一下&#x200B;**「確定」**。使用Adobe Target定位內容時，您可以[選取您的報表來源](/help/sites-authoring/content-targeting-touch.md)。
 
 ## 手動與Adobe Target整合 {#manually-integrating-with-adobe-target}
 
