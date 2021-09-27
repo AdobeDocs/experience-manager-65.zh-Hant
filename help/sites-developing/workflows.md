@@ -1,8 +1,8 @@
 ---
 title: 開發和延伸工作流程
-seo-title: 開發和延伸工作流程
-description: AEM提供多種工具和資源，用於建立工作流程模型、開發工作流程步驟，以及以程式設計方式與工作流程互動
-seo-description: AEM提供多種工具和資源，用於建立工作流程模型、開發工作流程步驟，以及以程式設計方式與工作流程互動
+seo-title: Developing and Extending Workflows
+description: AEM提供數種工具和資源，用於建立工作流程模型、開發工作流程步驟，以及以程式設計方式與工作流程互動
+seo-description: AEM provides several tools and resources for creating workflow models, developing workflow steps, and for programmatically interacting with workflows
 uuid: 5a857589-3b13-4519-bda2-b1dab6005550
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,12 +10,13 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 8954e3df-3afa-4d53-a7e1-255f3b8f499f
 exl-id: 041b1767-8b6c-4887-a70d-abc96a116976
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 82b9b852fa3134f140f8de0bad229282979c8a30
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1512'
 ht-degree: 3%
 
 ---
+
 
 # 開發和延伸工作流程{#developing-and-extending-workflows}
 
@@ -48,12 +49,11 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 >
 
 
-
 ## 模型 {#model}
 
 `WorkflowModel`表示工作流的定義（模型）。 它由`WorkflowNodes`和`WorkflowTransitions`組成。 這些轉變會連接節點並定義&#x200B;*flow*。 「模型」(Model)始終包含起始節點和終止節點。
 
-### 運行時模型{#runtime-model}
+### 運行時模型 {#runtime-model}
 
 工作流程模型版本化。 當您運行工作流實例時，它將使用（並保留）工作流的運行時模型（在啟動工作流時可用）。
 
@@ -120,7 +120,7 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 
 `WorkItems`會直接指派給使用者帳戶或其所屬的群組。
 
-### 工作流類型{#workflow-types}
+### 工作流程類型 {#workflow-types}
 
 工作流模型控制台中指出了各種類型的工作流：
 
@@ -164,7 +164,6 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 >
 
 
-
 >[!CAUTION]
 >
 >在暫時性工作流程中，您不應使用&#x200B;**轉至步驟**。
@@ -187,7 +186,7 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 >
 >有關詳細資訊，請參閱[為多資源支援配置工作流](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)。
 
-### 工作流階段{#workflow-stages}
+### 工作流程階段 {#workflow-stages}
 
 工作流程階段有助於視覺化處理任務時的工作流程進度。 它們可用來提供工作流程經過處理的程度的概述，例如當工作流程執行時，使用者可以檢視&#x200B;**Stage**&#x200B;所述的進度（與個別步驟相反）。
 
@@ -211,12 +210,12 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 
 1. 運行工作流時，用戶可以根據階段名稱（而非步驟名稱）查看進度。 工作流進度將顯示在[收件箱](/help/sites-authoring/inbox.md)中所列工作項](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的任務詳細資訊窗口的[工作流資訊頁簽中。
 
-### 工作流程和Forms {#workflows-and-forms}
+### 工作流程與Forms {#workflows-and-forms}
 
 工作流程通常用於在AEM中處理表單提交。 這可以是透過標準AEM例項中可用的[核心元件表單元件](https://helpx.adobe.com/experience-manager/core-components/using/form-container.html)，或透過[AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md)。
 
 建立新表單時，表單提交可輕鬆與工作流模型關聯；例如，將內容儲存在儲存庫的特定位置，或通知使用者表單提交及其內容。
 
-### 工作流程和翻譯{#workflows-and-translation}
+### 工作流程和翻譯 {#workflows-and-translation}
 
 工作流程也是[翻譯](/help/sites-administering/translation.md)程式的一個完整部分。

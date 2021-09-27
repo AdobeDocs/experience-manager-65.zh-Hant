@@ -1,8 +1,8 @@
 ---
 title: SPA頁面元件
-seo-title: SPA頁面元件
+seo-title: SPA Page Component
 description: 在SPA中，頁面元件不提供其子元件的HTML元素，而是將此元素委派至SPA架構。 本檔案說明如何讓SPA的頁面元件獨一無二。
-seo-description: 在SPA中，頁面元件不提供其子元件的HTML元素，而是將此元素委派至SPA架構。 本檔案說明如何讓SPA的頁面元件獨一無二。
+seo-description: In an SPA the page component doesn't provide the HTML elements of its child components, but instead delegates this to the SPA framework. This document explains how this makes the page component of an SPA unique.
 uuid: d444527a-e883-4873-a55b-c2bc140d8d7f
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6329301c-1a26-4a46-99ae-1b7cc15b08be
 docset: aem65
 exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17c198c744111753ffffcc0758f98859524c964e
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 1%
+source-wordcount: '730'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件的HTML元素。 此操作已委派給SPA架構。 子元件的表示方式會以JSON資料結構（即模型）擷取。 接著會根據提供的JSON模型，將SPA元件新增至頁面。 因此，頁面元件初始內文組成與其預先轉譯的HTML對應不同。
 
-## 頁面模型管理{#page-model-management}
+## 頁面模型管理 {#page-model-management}
 
 將頁面模型的解析度和管理委派給提供的[ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)模組。 SPA在初始化時必須與`PageModelManager`模組互動，以擷取初始頁面模型並註冊模型更新 — 大部分是當作者透過頁面編輯器編輯頁面時產生。 `PageModelManager`可由SPA專案作為npm套件存取。 `PageModelManager`是AEM與SPA之間的翻譯，應與SPA搭配使用。
 
@@ -41,7 +41,7 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 
 別忘了將`cq.authoring.pagemodel.messaging`類別納入頁面編輯器的內容。
 
-## 通信資料類型{#communication-data-type}
+## 通信資料類型 {#communication-data-type}
 
 通訊資料類型是使用`data-cq-datatype`屬性在AEM頁面元件內設定HTML元素。 當通訊資料類型設為JSON時，GET要求會點擊元件的Sling模型端點。 在頁面編輯器中發生更新後，更新元件的JSON表示會傳送至頁面模型程式庫。 然後頁面模型程式庫會警告SPA有更新。
 
@@ -93,13 +93,13 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 >
 >本檔案僅將We.Retail Journal應用程式用於示範用途。 它不應用於任何項目工作。
 >
->任何AEM專案都應運用[AEM專案原型](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)，此原型支援使用React或Angular的SPA專案，並運用SPA SDK。AEM上的所有SPA專案應以SPA Starter Kit的Maven原型為基礎。
+>任何AEM專案都應運用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，此原型支援使用React或Angular的SPA專案，並運用SPA SDK。AEM上的所有SPA專案應以SPA Starter Kit的Maven原型為基礎。
 
-## 頁面編輯器覆蓋同步{#page-editor-overlay-synchronization}
+## 頁面編輯器覆蓋同步 {#page-editor-overlay-synchronization}
 
 覆蓋的同步由`cq.authoring.page`類別提供的非常相同的變異觀測器保證。
 
-## Sling模型JSON匯出結構設定{#sling-model-json-exported-structure-configuration}
+## Sling模型JSON匯出結構設定 {#sling-model-json-exported-structure-configuration}
 
 啟用路由功能後，假設SPA的JSON匯出包含應用程式的不同路由，這要歸功於AEM導覽元件的JSON匯出。 AEM導覽元件的JSON輸出可透過下列兩個屬性，在SPA根頁面內容原則中設定：
 
