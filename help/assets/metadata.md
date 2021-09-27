@@ -3,12 +3,12 @@ title: 管理數位資產的中繼資料
 description: 了解中繼資料的類型，以及如何管理資產的中繼資料，以輕鬆組織和處理資產。
 contentOwner: AG
 mini-toc-levels: 1
-feature: 標籤，中繼資料
+feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
 workflow-type: tm+mt
-source-wordcount: '2339'
+source-wordcount: '2336'
 ht-degree: 10%
 
 ---
@@ -110,7 +110,7 @@ ht-degree: 10%
    | [!UICONTROL 批次大小] | 要匯入中繼資料的批次中的資產數。 預設值為 50。最大值為100。 |
    | [!UICONTROL 欄位分隔符號] | 預設值為`,`（逗號）。 您可以指定任何其他字元。 |
    | [!UICONTROL 多值分隔符號] | 中繼資料值的分隔符號。 預設值為 `|`. |
-   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，預設的啟動器設定對[!UICONTROL  DAM中繼資料回寫]工作流程(將中繼資料寫入二進位XMP資料)有效。 啟用啟動工作流程會拖慢系統速度。 |
+   | [!UICONTROL 啟動工作流程] | 預設為False。 設為`true`時，預設設定對[!UICONTROL  DAM中繼資料回寫]工作流程有效(將中繼資料寫入二進位XMP資料)。 啟用工作流程會拖慢系統速度。 |
    | [!UICONTROL 資產路徑欄名稱] | 定義含有資產的CSV檔案的欄名稱。 |
 
 1. 按一下工具列中的&#x200B;**[!UICONTROL 匯入]**。 匯入中繼資料後，通知會顯示在[!UICONTROL Notification]收件匣中。
@@ -234,7 +234,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >
 >* [中繼資料概念與了解](metadata-concepts.md)。
 >* [編輯多個集合的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)
-* [在Experience Manager資產中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [在Experience Manager資產中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.

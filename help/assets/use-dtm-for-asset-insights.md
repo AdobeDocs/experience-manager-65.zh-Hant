@@ -3,11 +3,11 @@ title: 透過DTM啟用Assets Insights
 description: 了解如何使用AdobeDynamic Tag Management(DTM)來啟用Assets Insights。
 contentOwner: AG
 role: User, Admin
-feature: 資產分析，資產報表
+feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: b3acfdba41e1bd94c65bb7a87f63b9c326a80dd2
+source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe動態標籤管理是啟用數位行銷工具的工具。 此服務免費�
 
 >[!CAUTION]
 >
->AdobeDTM已過時，改用[!DNL Adobe Experience Platform Launch]，很快將到達[生命週期結束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[對於資產前瞻分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)使用 [!DNL Launch] 。
+>AdobeDTM已過時，改用[!DNL Adobe Experience Platform]，很快將到達[生命週期結束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建議您[對於資產前瞻分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)使用 [!DNL Adobe Experience Platform] 。
 
 執行這些步驟以透過DTM啟用Assets Insights。
 
