@@ -1,8 +1,8 @@
 ---
 title: 自訂頁面編寫
-seo-title: 自訂頁面編寫
+seo-title: Customizing Page Authoring
 description: AEM提供多種機制，讓您自訂頁面編寫功能
-seo-description: AEM提供多種機制，讓您自訂頁面編寫功能
+seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
 uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 273836ad0afd6466eac437bf7711e7dbabc1d5e9
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,7 @@ AEM提供多種機制，讓您可自訂製作例項的頁面製作功能（和[c
 >* [AEM觸控式UI的結構，以](/help/sites-developing/touch-ui-structure.md) 取得頁面編寫所用結構區域的詳細資訊。
 
 >
->
-[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)工作階段 — [針對AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html)自訂使用者介面中也涵蓋此主題。
+>[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)工作階段 — [針對AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html)自訂使用者介面中也涵蓋此主題。
 
 >[!CAUTION]
 >
@@ -67,11 +66,11 @@ AEM提供多種機制，讓您可自訂製作例項的頁面製作功能（和[c
 >1. 在`/apps`內進行任何更改
 
 
-## 添加新層（模式）{#add-new-layer-mode}
+## 添加新圖層（模式） {#add-new-layer-mode}
 
 編輯頁面時，有多種[模式](/help/sites-authoring/author-environment-tools.md#page-modes)可用。 這些模式是使用[layers](/help/sites-developing/touch-ui-structure.md#layer)實現的。 這可讓使用者存取相同頁面內容的不同功能類型。 標準層包括：編輯、預覽、注釋、開發人員和鎖定目標。
 
-### 圖層範例：即時副本狀態{#layer-example-live-copy-status}
+### 圖層範例：即時副本狀態 {#layer-example-live-copy-status}
 
 標準AEM例項提供MSM層。 這會存取與[多網站管理](/help/sites-administering/msm.md)相關的資料，並在層中加亮顯示。
 
@@ -81,7 +80,7 @@ AEM提供多種機制，讓您可自訂製作例項的頁面製作功能（和[c
 
 `/libs/wcm/msm/content/touch-ui/authoring/editor/js/msm.Layer.js`
 
-### 程式碼範例{#code-sample}
+### 程式碼範例 {#code-sample}
 
 此範例套件會示範如何建立新層（模式），這是MSM檢視的新層。
 
@@ -92,11 +91,11 @@ GITHUB上的程式碼
 * [在GitHub上開啟aem-authoring-new-layer-mode專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
 * 將專案下載為[a ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)
 
-## 將新選擇類別添加到資產瀏覽器{#add-new-selection-category-to-asset-browser}
+## 新增選取類別至資產瀏覽器 {#add-new-selection-category-to-asset-browser}
 
 資產瀏覽器會顯示各種類型/類別的資產（例如影像、檔案等）。 資產也可依這些資產類別篩選。
 
-### 程式碼範例{#code-sample-1}
+### 程式碼範例 {#code-sample-1}
 
 `aem-authoring-extension-assetfinder-flickr` 是範例套件，說明如何將新群組新增至資產尋找器。此範例會連結至[Flickr](https://www.flickr.com)的公開資料流，並在側面板中顯示。
 
@@ -107,7 +106,7 @@ GITHUB上的程式碼
 * [在GitHub上開啟aem-authoring-extension-assetfinder-flickr專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
 * 將專案下載為[a ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)
 
-## 篩選資源{#filtering-resources}
+## 篩選資源 {#filtering-resources}
 
 編寫頁面時，使用者通常必須從資源（例如頁面、元件、資產等）中選取。 這可以採用清單的形式，例如，作者必須從中選擇項目。
 
@@ -124,11 +123,11 @@ GITHUB上的程式碼
 >
 >如需在傳統UI中實作自訂述詞的範例，請參閱[此知識庫文章](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html)。
 
-## 將新操作添加到元件工具欄{#add-new-action-to-a-component-toolbar}
+## 新增動作至元件工具列 {#add-new-action-to-a-component-toolbar}
 
 每個元件（通常）都有工具列，可供存取該元件可採取的一系列動作。
 
-### 程式碼範例{#code-sample-2}
+### 程式碼範例 {#code-sample-2}
 
 `aem-authoring-extension-toolbar-screenshot` 是範例套件，說明如何建立自訂工具列動作來轉譯元件。
 
@@ -139,9 +138,9 @@ GITHUB上的程式碼
 * [在GitHub上開啟aem-authoring-extension-toolbar — 螢幕擷取專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
 * 將專案下載為[a ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)
 
-## 添加新的就地編輯器{#add-new-in-place-editor}
+## 新增就地編輯器 {#add-new-in-place-editor}
 
-### 標準就地編輯器{#standard-in-place-editor}
+### 標準就地編輯器 {#standard-in-place-editor}
 
 在標準的 AEM 配置中：
 
@@ -190,7 +189,7 @@ GITHUB上的程式碼
    >
    >請注意，在AEM裁切比例中，由`ratio`屬性設定，定義為&#x200B;**height/width**。 這與傳統的寬度/高度定義不同，且是由於舊版相容性原因而完成。 如果您清楚定義`name`屬性，製作使用者將不會察覺到任何差異，因為這是UI中顯示的內容。
 
-#### 建立新的就地編輯器{#creating-a-new-in-place-editor}
+#### 建立新的就地編輯器 {#creating-a-new-in-place-editor}
 
 若要實作新的就地編輯器（在您的clientlib內）:
 
@@ -210,7 +209,7 @@ GITHUB上的程式碼
 
 1. 提供編輯器與可使用的每個資源類型（如元件中）之間的連線。
 
-#### 建立新就地編輯器的程式碼範例{#code-sample-for-creating-a-new-in-place-editor}
+#### 建立新就地編輯器的程式碼範例 {#code-sample-for-creating-a-new-in-place-editor}
 
 `aem-authoring-extension-inplace-editor` 是範例套件，說明如何在AEM中建立新的就地編輯器。
 
@@ -221,15 +220,15 @@ GITHUB上的程式碼
 * [在GitHub上開啟aem-authoring-extension-inplace-editor專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
 * 將專案下載為[a ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor/archive/master.zip)
 
-#### 配置多個就地編輯器{#configuring-multiple-in-place-editors}
+#### 配置多個就地編輯器 {#configuring-multiple-in-place-editors}
 
 您可以設定元件，使元件擁有多個就地編輯器。 設定多個就地編輯器時，您可以選取適當的內容並開啟適當的編輯器。 如需詳細資訊，請參閱[設定多個就地編輯器](/help/sites-developing/multiple-inplace-editors.md)檔案。
 
-## 新增頁面動作{#add-a-new-page-action}
+## 新增頁面動作 {#add-a-new-page-action}
 
 若要將新頁面動作新增至頁面工具列，例如&#x200B;**返回Sites**（主控台）動作。
 
-### 程式碼範例{#code-sample-3}
+### 程式碼範例 {#code-sample-3}
 
 `aem-authoring-extension-header-backtosites` 是範例套件，說明如何建立自訂標頭列動作以跳回Sites主控台。
 
@@ -240,9 +239,13 @@ GITHUB上的程式碼
 * [在GitHub上開啟aem-authoring-extension-header-backtosites專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
 * 將專案下載為[a ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites/archive/master.zip)
 
-## 自訂啟動工作流程請求{#customizing-the-request-for-activation-workflow}
+## 自訂啟動工作流程請求 {#customizing-the-request-for-activation-workflow}
 
-當內容作者沒有適當的復寫權限時，會自動觸發現成可用的工作流程&#x200B;**啟動要求**。
+現成可用的工作流程&#x200B;**啟動要求**:
+
+* 當內容作者&#x200B;**沒有**&#x200B;適當的復寫權限，但&#x200B;**確實有** DAM-Users和Authors的成員資格時，內容作者會自動出現在適當的功能表中。
+
+* 否則不會顯示任何內容，因為已移除復寫權限。
 
 若要在這類啟動時擁有自訂行為，您可以覆蓋&#x200B;**啟動請求**&#x200B;工作流程：
 
