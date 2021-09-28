@@ -1,8 +1,8 @@
 ---
 title: 封裝的Token支援
-seo-title: 封裝的Token支援
+seo-title: Encapsulated Token Support
 description: 了解AEM中的封裝代號支援。
-seo-description: 了解AEM中的封裝代號支援。
+seo-description: Learn about the Encapsulated Token support in AEM.
 uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
 
-# 封裝令牌支援{#encapsulated-token-support}
+# 封裝的Token支援{#encapsulated-token-support}
 
 ## 簡介 {#introduction}
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 如果發佈例項無法使用，在該例項上驗證的所有使用者都會失去工作階段。 這是因為驗證Cookie需要存放庫存取權。
 
-## 使用封裝的Token {#stateless-authentication-with-the-encapsulated-token}進行無狀態身份驗證
+## 使用封裝令牌的無狀態身份驗證 {#stateless-authentication-with-the-encapsulated-token}
 
 橫向可擴充性的解決方案是使用AEM中新的封裝Token支援進行無狀態驗證。
 
@@ -51,16 +51,14 @@ ht-degree: 0%
 >
 >例如，如果因封裝代號的運作方式，在發佈執行個體編號1上建立新使用者，則會在發佈編號2上成功驗證該使用者。 如果使用者不存在於第二個發佈例項上，要求仍不會成功。
 
-
-## 配置封裝令牌{#configuring-the-encapsulated-token}
+## 設定封裝的Token {#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >只有符合下列條件時，同步使用者並仰賴Token驗證（例如SAML和OAuth）的所有驗證處理常式，才能搭配封裝的Token運作：
 >
 >* 黏著工作階段已啟用，或
-   >
-   >
-* 同步開始時，已在AEM中建立使用者。 這表示在同步程式期間處理常式&#x200B;**create**&#x200B;使用者的情況下，將不支援封裝的Token。
+>
+>* 同步開始時，已在AEM中建立使用者。 這表示在同步程式期間處理常式&#x200B;**create**&#x200B;使用者的情況下，將不支援封裝的Token。
 
 
 設定封裝代號時，您需要考量一些事項：
@@ -68,7 +66,7 @@ ht-degree: 0%
 1. 由於涉及密碼學，所有實例都需要具有相同的HMAC密鑰。 自AEM 6.3以來，關鍵資料不再儲存在儲存庫中，而是儲存在實際檔案系統中。 考慮到這一點，複製密鑰的最佳方式是將密鑰從源實例的檔案系統複製到要複製密鑰的目標實例的檔案系統。 請參閱下方的「複製HMAC金鑰」下方的更多資訊。
 1. 必須啟用封裝代號。 這可透過Web主控台完成。
 
-### 複製HMAC密鑰{#replicating-the-hmac-key}
+### 複製HMAC密鑰 {#replicating-the-hmac-key}
 
 HMAC密鑰作為儲存庫中`/etc/key`的二進位屬性顯示。 您可以按其旁的&#x200B;**view**&#x200B;連結，以個別下載：
 
@@ -102,5 +100,5 @@ HMAC密鑰作為儲存庫中`/etc/key`的二進位屬性顯示。 您可以按�
 複製HMAC密鑰後，您可以通過Web控制台啟用封裝令牌：
 
 1. 將瀏覽器指向`https://serveraddress:port/system/console/configMgr`
-1. 尋找名為&#x200B;**Day CRX Token Authentication Handler**&#x200B;的條目，然後按一下它。
+1. 尋找名為&#x200B;**AdobeGranite令牌身份驗證處理程式**&#x200B;的條目，然後按一下它。
 1. 在以下窗口中，勾選&#x200B;**啟用封裝令牌支援**&#x200B;框，然後按&#x200B;**保存**。
