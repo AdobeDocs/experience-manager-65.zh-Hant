@@ -1,19 +1,19 @@
 ---
 title: 配置翻譯整合框架
-seo-title: 配置翻譯整合框架
+seo-title: Configuring the Translation Integration Framework
 description: 了解如何配置翻譯整合框架。
-seo-description: 了解如何配置翻譯整合框架。
+seo-description: Learn how to configure the Translation Integration Framework.
 uuid: 5ecfe154-732f-4a13-96f8-92f55023c54d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
-feature: 語言副本
+feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: bed7ffd413c7826cf0e419fa1c31e3d3c325d4b1
+source-git-commit: cadf2e240327ef52ef57f8fb2e911f36fd003852
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1550'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 如需AEM中內容翻譯功能的概觀，請參閱[多語言網站的翻譯內容](/help/sites-administering/translation.md)。
 
-## 連接到翻譯服務提供程式{#connecting-to-a-translation-service-provider}
+## 連接到翻譯服務提供商 {#connecting-to-a-translation-service-provider}
 
 建立將AEM連接至翻譯服務提供者的雲端設定。 AEM預設包含連接到Microsoft Translator的功能。
 下列翻譯廠商提供翻譯專案的新API實作。 深入了解整合的連結：
@@ -38,7 +38,6 @@ ht-degree: 1%
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [雲字](https://exchange.adobe.com/experiencecloud.details.90019.html)
-* [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
 * [XTM雲](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [林戈泰克](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
 * [智慧](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
@@ -58,14 +57,13 @@ ht-degree: 1%
 >
 
 
-
 安裝連接器封裝後，您可以為連接器建立雲端設定。 通常，您需要提供認證以驗證翻譯服務。 有關為Microsoft Translator連接器添加雲配置的資訊，請參閱[與Microsoft Translator整合](/help/sites-administering/tc-msconf.md)。
 
 您可以視需要為相同連接器建立多個雲端設定。 例如，為您與相同供應商擁有的每個帳戶或項目建立一個配置。
 
 配置連接後，可以建立使用該連接的翻譯整合框架配置。
 
-## 建立翻譯整合配置{#creating-a-translation-integration-configuration}
+## 建立翻譯整合設定 {#creating-a-translation-integration-configuration}
 
 建立翻譯整合架構設定，以指定如何翻譯您的內容。 設定包含下列資訊：
 
@@ -84,7 +82,7 @@ ht-degree: 1%
 架構的單一設定可控制如何翻譯頁面內容、社群內容和資產。
 ![chlimage_1-386](assets/translation-config-65.jpg)
 
-### 站點配置屬性{#sites-configuration-properties}
+### 站點配置屬性 {#sites-configuration-properties}
 
 Sites屬性可控制頁面內容轉譯的執行方式。
 
@@ -131,7 +129,7 @@ Sites屬性可控制頁面內容轉譯的執行方式。
  </tbody>
 </table>
 
-### 社區配置屬性{#communities-configuration-properties}
+### Communities配置屬性 {#communities-configuration-properties}
 
 Communities屬性可控制如何執行使用者產生的內容翻譯。 翻譯使用者產生的內容一律使用機器翻譯。 如需詳細資訊，請參閱[轉譯使用者產生的內容](/help/communities/translate-ugc.md)。
 
@@ -141,7 +139,7 @@ Communities屬性可控制如何執行使用者產生的內容翻譯。 翻譯�
 | 內容類別 | 描述要翻譯的內容的類別。 翻譯內容時，類別可能會影響術語和措辭的選擇。 |
 | 選擇要用作全局共用儲存的區域設定 | （可選）選擇儲存UGC的地區設定後，來自所有語言副本的貼文將出現在一個全域對話中。 根據慣例，為網站的[基語](/help/communities/sites-console.md#translation)選擇語言環境。 選擇「不共用儲存」將禁用全局翻譯。 預設情況下，全局翻譯將被禁用。 |
 
-### 資產配置屬性{#assets-configuration-properties}
+### Assets設定屬性 {#assets-configuration-properties}
 
 資產屬性可控制如何設定資產。 如需轉譯資產的詳細資訊，請參閱[建立資產的語言副本](/help/assets/translation-projects.md)。
 
@@ -196,7 +194,7 @@ Communities屬性可控制如何執行使用者產生的內容翻譯。 翻譯�
 1. 輸入設定的名稱，然後按一下或點選「建立」。
 1. 在「網站」、「社群」和「資產」標籤上設定屬性，然後按一下或點選「確定」。
 
-## 配置翻譯頁面{#configuring-pages-for-translation}
+## 配置翻譯頁面 {#configuring-pages-for-translation}
 
 若要配置將源頁面翻譯成其他語言，請將這些頁面與以下雲配置關聯：
 
@@ -211,7 +209,7 @@ Communities屬性可控制如何執行使用者產生的內容翻譯。 翻譯�
 
 此外，對於頁面上的任何社區[SCF元件](/help/communities/scf.md)，用戶生成的內容(UGC)將包括用戶翻譯內容的能力。 如需詳細資訊，請參閱[轉譯使用者產生的內容](/help/communities/translate-ugc.md)。
 
-### 將頁面與翻譯提供程式{#associating-a-page-with-a-translation-provider}關聯
+### 將頁面與翻譯提供者關聯 {#associating-a-page-with-a-translation-provider}
 
 將頁面與翻譯提供者建立關聯，您使用該提供者翻譯頁面和子代頁面。
 
@@ -220,7 +218,7 @@ Communities屬性可控制如何執行使用者產生的內容翻譯。 翻譯�
 1. 按一下或點選「新增設定>翻譯整合」。
 1. 選取要使用的翻譯提供者，然後按一下或點選「完成」。
 
-### 將頁面與翻譯整合框架{#associating-pages-with-a-translation-integration-framework}關聯
+### 將頁面與翻譯整合框架關聯 {#associating-pages-with-a-translation-integration-framework}
 
 將頁面與定義您要如何執行頁面和子代頁面翻譯的翻譯整合框架相關聯。
 
