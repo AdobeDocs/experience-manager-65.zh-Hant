@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: fb14c1901394198de59c2369563a9dcca2f95f4e
+source-git-commit: 6930d3f6449c8ebd18214c96ddec0bcb61b998c8
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2209'
 ht-degree: 0%
 
 ---
@@ -88,14 +88,14 @@ ht-degree: 0%
    >使用AEM設定A4T時，您可能會看到「設定參考」遺失項目。 若要選取分析架構，請執行下列動作：
    >
    >1. 導覽至&#x200B;**工具** > **一般** > **CRXDE Lite**。
-   1. 導覽至[1]（請參閱下方）
+   1. 導覽至[A4T Analytics設定對話方塊](#a4t-analytics-config-dialog)（請參閱下方）
    1. 將屬性&#x200B;**disable**&#x200B;設定為&#x200B;**false**。
    1. 點選或按一下「**全部儲存**」。
 
 
-[3]
+#### A4T Analytics設定對話方塊 {#a4t-analytics-config-dialog}
 
-```
+```xml
 /libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
 ```
 
