@@ -1,8 +1,8 @@
 ---
 title: Oak查詢和索引
-seo-title: Oak查詢和索引
+seo-title: Oak Queries and Indexing
 description: 了解如何在AEM中設定索引。
-seo-description: 了解如何在AEM中設定索引。
+seo-description: Learn how to configure indexes in AEM.
 uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,11 +10,11 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
-feature: 設定
+feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7cd4b6918a8b0de68f9f5c6a79ab3b49e8ef6fc1
 workflow-type: tm+mt
-source-wordcount: '2881'
+source-wordcount: '2868'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 *WARN* Traversed 1000 nodes with filter Filter(query=select ...) consider creating an index or changing the query
 ```
 
-## 支援的查詢語言{#supported-query-languages}
+## 支援的查詢語言 {#supported-query-languages}
 
 Oak查詢引擎支援下列語言：
 
@@ -44,7 +44,7 @@ Oak查詢引擎支援下列語言：
 * SQL（已廢止）
 * JQOM
 
-## 索引器類型和成本計算{#indexer-types-and-cost-calculation}
+## 索引器類型和成本計算 {#indexer-types-and-cost-calculation}
 
 Apache Oak後端可讓不同的索引器插入存放庫。
 
@@ -64,7 +64,7 @@ Apache Oak後端可讓不同的索引器插入存放庫。
 
 接下來，咨詢每個索引以估計查詢的成本。 完成後，將檢索最便宜的索引的結果。 最後，篩選結果，以確保當前用戶對結果具有讀取訪問權，並且結果與完整查詢匹配。
 
-## 配置索引{#configuring-the-indexes}
+## 配置索引 {#configuring-the-indexes}
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Apache Oak後端可讓不同的索引器插入存放庫。
 
 索引節點的類型必須為&#x200B;**oak:QueryIndexDefinition。** 每個索引器有幾個配置選項可用作節點屬性。有關詳細資訊，請參見下面每個索引器類型的配置詳細資訊。
 
-### 屬性索引{#the-property-index}
+### 屬性索引 {#the-property-index}
 
 對於具有屬性約束但不是全文的查詢，屬性索引通常很有用。 您可以依照下列程式進行設定：
 
@@ -101,13 +101,13 @@ Apache Oak後端可讓不同的索引器插入存放庫。
 * **unique**&#x200B;標幟，若設為&#x200B;**true**，則會在屬性索引上新增唯一性限制。
 
 * **declibingNodeTypes**&#x200B;屬性允許您指定索引將僅應用到的特定節點類型。
-* **重新索引**&#x200B;標幟若設為&#x200B;**true**，將觸發完整內容重新索引。
+* **reindex**&#x200B;標幟若設為&#x200B;**true**，將觸發完整內容重新索引。
 
-### 有序索引{#the-ordered-index}
+### 有序索引 {#the-ordered-index}
 
 Ordered索引是屬性索引的擴展。 不過，已遭取代。 此類型的索引需要替換為[Lucene屬性索引](#the-lucene-property-index)。
 
-### Lucene全文索引{#the-lucene-full-text-index}
+### 盧塞內全文索引 {#the-lucene-full-text-index}
 
 AEM 6提供以Apache Lucene為基礎的全文索引器。
 
@@ -115,7 +115,7 @@ AEM 6提供以Apache Lucene為基礎的全文索引器。
 
 如果未配置全文索引，則具有全文條件的查詢將無法如預期運作。
 
-由於索引是通過非同步的後台線程更新的，因此在完成後台進程之前，某些全文搜索將在一小段時間內不可用。
+由於索引是透過非同步背景執行緒更新，因此在完成背景程式之前，某些全文搜尋功能將無法在短時間內完成。
 
 您可以依照下列程式來設定Lucene全文索引：
 
@@ -136,7 +136,7 @@ Lucene索引具有以下配置選項：
 * **excludePropertyNames**&#x200B;屬性，將定義屬性名稱清單 — 應從索引中排除的屬性。
 * 將&#x200B;**重新索引**&#x200B;標幟設為&#x200B;**true**&#x200B;時，會觸發完整內容重新索引。
 
-### Lucene屬性索引{#the-lucene-property-index}
+### Lucene屬性索引 {#the-lucene-property-index}
 
 由於&#x200B;**Oak 1.0.8**，因此Lucene可用來建立索引，其中涉及非全文的屬性限制。
 
@@ -157,19 +157,19 @@ select * from [nt:base] where [alias] = '/admin'
 
 * **類型:**
 
-   ```
+   ```xml
    lucene (of type String)
    ```
 
 * **非同步處理:**
 
-   ```
+   ```xml
    async (of type String)
    ```
 
 * **fulltextEnabled:**
 
-   ```
+   ```xml
    false (of type Boolean)
    ```
 
@@ -183,7 +183,7 @@ select * from [nt:base] where [alias] = '/admin'
 >
 >如需Lucene屬性索引的詳細資訊，請參閱[Apache Jackrabbit Oak Lucene檔案頁面](https://jackrabbit.apache.org/oak/docs/query/lucene.html)。
 
-### 盧塞內分析器{#lucene-analyzers}
+### 盧塞內分析器 {#lucene-analyzers}
 
 自1.2.0版起，Oak支援Lucene分析器。
 
@@ -199,7 +199,7 @@ select * from [nt:base] where [alias] = '/admin'
 >
 >如需可用分析器的清單，請參閱您所使用Lucene版本的API檔案。
 
-#### 直接指定分析器類{#specifying-the-analyzer-class-directly}
+#### 直接指定分析器類 {#specifying-the-analyzer-class-directly}
 
 如果要使用任何現成分析器，可以按照以下過程進行配置：
 
@@ -228,7 +228,7 @@ select * from [nt:base] where [alias] = '/admin'
    * **名稱：** `stopwords`
    * **類型：** `nt:file`
 
-#### 透過合成{#creating-analyzers-via-composition}建立分析器
+#### 透過合成建立分析器 {#creating-analyzers-via-composition}
 
 分析器也可以基於`Tokenizers`、`TokenFilters`和`CharFilters`來組成。 您可以通過指定分析器並建立其可選標籤和篩選器的子節點來執行此操作，這些節點將按列出順序應用。 另請參閱[https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
@@ -282,7 +282,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 對於載入需要載入外部檔案內容的停止字等情況，可通過為相關檔案建立`nt:file`類型的子節點來提供內容。
 
-### 索爾索引{#the-solr-index}
+### 索爾指數 {#the-solr-index}
 
 Solr索引的目的主要是全文搜索，但它也可以用於按路徑、屬性限制和主類型限制進行索引搜索。 這表示Oak中的Solr索引可用於任何類型的JCR查詢。
 
@@ -290,11 +290,11 @@ AEM中的整合會在存放庫層級進行，因此Solr是可用於Oak(AEM隨附
 
 可將其設定為以具有AEM例項的內嵌伺服器或遠端伺服器運作。
 
-### 使用嵌入式Solr伺服器{#configuring-aem-with-an-embedded-solr-server}配置AEM
+### 使用內嵌Solr伺服器設定AEM {#configuring-aem-with-an-embedded-solr-server}
 
 >[!CAUTION]
 >
->請勿在生產環境中使用內嵌的Solr伺服器。 它只應用於開發環境。
+>請勿在生產環境中使用內嵌的Solr伺服器。 此變數僅應用於開發環境。
 
 AEM可與可透過Web主控台設定的內嵌Solr伺服器搭配使用。 在這種情況下，Solr伺服器將在與其嵌入的AEM實例相同的JVM中運行。
 
@@ -319,12 +319,12 @@ AEM可與可透過Web主控台設定的內嵌Solr伺服器搭配使用。 在這
 
 1. 儲存變更。
 
-### 使用單個遠程Solr伺服器{#configuring-aem-with-a-single-remote-solr-server}配置AEM
+### 使用單一遠端Solr伺服器設定AEM {#configuring-aem-with-a-single-remote-solr-server}
 
-AEM也可設定為與遠端Solr伺服器例項搭配使用：
+AEM也可以設定為與遠端Solr伺服器執行個體搭配使用：
 
 1. 下載並解壓最新版本的Solr。 有關如何執行此操作的詳細資訊，請參閱[Apache Solr安裝文檔](https://cwiki.apache.org/confluence/display/solr/Installing+Solr)。
-1. 現在，建立兩個索爾碎片。 您可以為Solr被封鎖的資料夾中的每個共用建立資料夾，以執行此操作：
+1. 現在，建立兩個索爾碎片。 您可以為已解壓縮Solr的資料夾中的每個共用建立資料夾，來執行此操作：
 
    * 對於第一個共用，建立資料夾：
 
@@ -382,7 +382,7 @@ AEM也可設定為與遠端Solr伺服器例項搭配使用：
 
 1. 儲存變更。
 
-#### Solr {#recommended-configuration-for-solr}的建議配置
+#### Solr的建議配置 {#recommended-configuration-for-solr}
 
 下面是基本配置的示例，可用於本文中描述的所有三個Solr部署。 它可容納AEM中已存在且不應與其他應用程式搭配使用的專用屬性索引。
 
@@ -392,7 +392,7 @@ AEM也可設定為與遠端Solr伺服器例項搭配使用：
 
 [取得檔案](assets/recommended-conf.zip)
 
-### AEM索引工具{#aem-indexing-tools}
+### AEM索引工具 {#aem-indexing-tools}
 
 AEM 6.1也整合了AEM 6.0中提供的兩種索引工具，作為Adobe諮詢服務公域工具集的一部分：
 
@@ -403,7 +403,7 @@ AEM 6.1也整合了AEM 6.0中提供的兩種索引工具，作為Adobe諮詢服�
 
 有關如何使用它們的詳細資訊，請參閱[操作儀表板文檔](/help/sites-administering/operations-dashboard.md)。
 
-#### 通過OSGi {#creating-property-indexes-via-osgi}建立屬性索引
+#### 通過OSGi建立屬性索引 {#creating-property-indexes-via-osgi}
 
 ACS Commons包還公開可用於建立屬性索引的OSGi配置。
 
@@ -411,19 +411,19 @@ ACS Commons包還公開可用於建立屬性索引的OSGi配置。
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
-### 疑難排解索引問題{#troubleshooting-indexing-issues}
+### 疑難排解索引問題 {#troubleshooting-indexing-issues}
 
 查詢執行時間較長，且一般系統回應時間較慢的情況可能會出現。
 
 本節提供一套建議，說明需要採取哪些措施來追蹤這些問題的原因，並就如何解決這些問題提供建議。
 
-#### 準備分析的調試資訊{#preparing-debugging-info-for-analysis}
+#### 準備分析的除錯資訊 {#preparing-debugging-info-for-analysis}
 
 要獲取正在執行的查詢所需資訊，最簡單的方法是通過[Explain Query tool](/help/sites-administering/operations-dashboard.md#explain-query)。 這可讓您收集對慢速查詢進行偵錯所需的精確資訊，而無須查詢記錄層級資訊。 如果您知道要除錯的查詢，則這是理想的作法。
 
 如果由於任何原因不可能，您可以在單一檔案中收集索引記錄，並使用它來疑難排解您的特定問題。
 
-#### 啟用記錄{#enable-logging}
+#### 啟用記錄 {#enable-logging}
 
 若要啟用記錄，您必須針對與Oak索引和查詢相關的類別啟用&#x200B;**DEBUG**&#x200B;層級記錄。 這些類別包括：
 
@@ -447,7 +447,7 @@ ACS Commons包還公開可用於建立屬性索引的OSGi配置。
 1. 執行查詢或呈現使用您要除錯的查詢的頁面。
 1. 執行查詢後，返回日誌控制台，並將新建記錄器的日誌級別更改為&#x200B;**INFO**。
 
-#### 索引配置{#index-configuration}
+#### 索引配置 {#index-configuration}
 
 查詢的評估方式在很大程度上受索引配置的影響。 必須獲取索引配置，以便分析或發送給支援。 您可以以內容套件形式取得設定，或取得JSON轉譯。
 
@@ -457,7 +457,7 @@ ACS Commons包還公開可用於建立屬性索引的OSGi配置。
 
 如果索引配置在不同的位置，請相應地更改路徑。
 
-#### MBean輸出{#mbean-output}
+#### MBean輸出 {#mbean-output}
 
 在某些情況下，提供索引相關MBean的輸出以進行偵錯會很有幫助。 您可以透過下列方式執行此作業：
 
@@ -482,7 +482,7 @@ ACS Commons包還公開可用於建立屬性索引的OSGi配置。
 
 您也可以通過`https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak.tidy.3.json`提供整合的JMX輸出。 這會包含JSON格式的所有Oak相關MBean詳細資訊。
 
-#### 其他詳細資訊{#other-details}
+#### 其他詳細資訊 {#other-details}
 
 您可以收集其他詳細資訊，以協助疑難排解問題，例如：
 
