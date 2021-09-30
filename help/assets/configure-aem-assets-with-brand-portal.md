@@ -12,7 +12,7 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: d995173140237f34a03c8e84128ad9d657c9a026
+source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
 workflow-type: tm+mt
 source-wordcount: '2053'
 ht-degree: 7%
@@ -66,7 +66,7 @@ AEM Assets是透過Brand Portal Developer Console使用Adobe來設定，其中�
 
 建議您讓AEM 6.5設定AEM製作例項。 如果您沒有AEM啟動並執行，請從下列位置下載：
 
-* 如果您是現有AEM客戶，請從[Adobe授權網站](http://licensing.adobe.com)下載AEM 6.5。
+* 如果您是現有AEM客戶，請從[Adobe授權網站](https://licensing.adobe.com)下載AEM 6.5。
 
 * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴培訓計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)來請求AEM 6.5。
 
@@ -118,9 +118,9 @@ IMS 設定包括兩個步驟：
 
 1. 登入您的AEM Assets製作例項。 預設URL為`http://localhost:4502/aem/start.html`。
 
-1. 從&#x200B;**工具** ![工具](assets/do-not-localize/tools.png)面板，導覽至&#x200B;**[!UICONTROL 安全性]** > **[!UICONTROL AdobeIMS設定]**。
+1. 從&#x200B;**工具** ![工具](assets/do-not-localize/tools.png)面板，導覽至&#x200B;**[!UICONTROL 安全性]** > **[!UICONTROL Adobe IMS設定]**。
 
-1. 在「AdobeIMS設定」頁面中，按一下「**[!UICONTROL 建立]**」。 它會重新導向至&#x200B;**[!UICONTROL AdobeIMS技術帳戶設定]**&#x200B;頁面。 依預設，會開啟&#x200B;**Certificate**&#x200B;標籤。
+1. 在「Adobe IMS設定」頁面中，按一下「**[!UICONTROL 建立]**」。 它會重新導向至&#x200B;**[!UICONTROL Adobe IMS技術帳戶設定]**&#x200B;頁面。 依預設，會開啟&#x200B;**Certificate**&#x200B;標籤。
 
 1. 在&#x200B;**[!UICONTROL 雲解決方案]**&#x200B;下拉式清單中，選取&#x200B;**[!UICONTROL AdobeBrand Portal]**。
 
@@ -138,7 +138,7 @@ IMS 設定包括兩個步驟：
 
 1. 按一下&#x200B;**[!UICONTROL 下一步]**。
 
-   在&#x200B;**帳戶**&#x200B;標籤中，建立AdobeIMS帳戶，此帳戶需要在Adobe開發人員控制台中產生的服務帳戶憑證。 暫時保持此頁面開啟。
+   在&#x200B;**帳戶**&#x200B;標籤中，建立Adobe IMS帳戶，此帳戶需要在Adobe開發人員控制台中產生的服務帳戶憑證。 暫時保持此頁面開啟。
 
    開啟新標籤，並在Adobe開發人員控制台](#createnewintegration)中建立服務帳戶(JWT)連線，以取得用於設定IMS帳戶的憑證和JWT裝載。[
 
@@ -374,7 +374,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 找出您Brand Portal租用戶的復寫代理。
 
-   確保所有復寫代理的&#x200B;**Queue均為Idle**，則沒有任何發佈作業處於活動狀態。
+   確保所有復寫代理的&#x200B;**Queue均為Idle**，沒有任何發佈作業處於活動狀態。
 
    ![](assets/test-integration3.png)
 

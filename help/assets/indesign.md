@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 0a4c27432e4005fa3999f7c6a776ef51b10d9746
+source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1591'
 ht-degree: 3%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 3%
 
 * 分配特定處理任務的負載的代理。 Proxy是與Proxy工作者通訊以完成特定任務的[!DNL Experience Manager]例項，以及傳送結果的其他[!DNL Experience Manager]例項。
 * 定義和管理特定任務的代理工作。
-這可以涵蓋各種任務；例如，使用[!DNL InDesign Server]來處理檔案。
+這可以涵蓋各種任務；例如，使用[!DNL InDesign Server]處理檔案。
 
 若要將檔案完全上傳至您使用[!DNL Adobe InDesign]代理建立的[!DNL Experience Manager Assets]。 這會使用代理工作器與[!DNL Adobe InDesign Server]通訊，其中[scripts](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)會執行以擷取中繼資料並產生[!DNL Experience Manager Assets]的各種轉譯。 在雲配置中，代理工作器啟用[!DNL InDesign Server]和[!DNL Experience Manager]實例之間的雙向通信。
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] 提供為兩種不同的產品。[Adobe](https://www.adobe.com/products/indesign.html) InDesign案頭應用程式，用於設計用於打印和數字分發的頁面佈局。[Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Server讓您能夠根據您使用建立的內容，以程式設計方式建立自動化 [!DNL InDesign]檔案。它作為提供其[ExtendScript](https://www.adobe.com/devnet/scripting.html)引擎介面的服務運行。指令碼寫入[!DNL ExtendScript]，與[!DNL JavaScript]類似。 有關[!DNL InDesign]指令碼的資訊，請參見[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
+>[!DNL Adobe InDesign] 提供為兩種不同的產品。[Adobe](https://www.adobe.com/products/indesign.html) InDesign案頭應用程式，用於設計用於打印和數字分發的頁面佈局。[Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Server讓您能夠根據您使用建立的內容，以程式設計方式建立自動化 [!DNL InDesign]檔案。它作為提供其[ExtendScript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)引擎介面的服務運行。指令碼寫入[!DNL ExtendScript]，與[!DNL JavaScript]類似。 有關[!DNL InDesign]指令碼的資訊，請參見[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
 
 ## 提取的運作方式 {#how-the-extraction-works}
 
