@@ -1,8 +1,8 @@
 ---
 title: SAML 2.0 驗證處理常式
-seo-title: SAML 2.0 驗證處理常式
+seo-title: SAML 2.0 Authentication Handler
 description: 了解AEM中的SAML 2.0驗證處理常式。
-seo-description: 了解AEM中的SAML 2.0驗證處理常式。
+seo-description: Learn about the SAML 2.0 Authentication Handler in AEM.
 uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6bc60122d2512a6f58c0204cd240a1b99a37ed93
 workflow-type: tm+mt
-source-wordcount: '853'
-ht-degree: 1%
+source-wordcount: '842'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +36,7 @@ AEM隨附[SAML](http://saml.xml.org/saml-specifications)驗證處理常式。 �
 >
 >若要閱讀端對端社群文章，請按一下：[整合SAML與Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html)。
 
-## 配置SAML 2.0驗證處理程式{#configuring-the-saml-authentication-handler}
+## 設定SAML 2.0驗證處理常式 {#configuring-the-saml-authentication-handler}
 
 [Web控制台](/help/sites-deploying/configuring-osgi.md)提供對[SAML](http://saml.xml.org/saml-specifications) 2.0驗證處理常式配置(稱為&#x200B;**AdobeGranite SAML 2.0驗證處理常式**)的訪問。 可設定下列屬性。
 
@@ -50,10 +50,9 @@ AEM隨附[SAML](http://saml.xml.org/saml-specifications)驗證處理常式。 �
 >
 
 
-
 >[!NOTE]
 >
->SAML聲明經過簽名，並可以選擇進行加密。 要使此功能發揮作用，您至少必須在TrustStore中提供身份提供程式的公開證書。 如需詳細資訊，請參閱[將IdP憑證新增至TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore)區段。
+>SAML聲明經過簽名，並可以選擇進行加密。 為了讓此功能發揮作用，您必須在TrustStore中至少提供身份提供程式的公開證書。 如需詳細資訊，請參閱[將IdP憑證新增至TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore)區段。
 
 **** Sling應使用此驗證處理常式的PathRepository路徑。如果為空，則會停用驗證處理常式。
 
@@ -107,7 +106,7 @@ SAML聲明經過簽名，並可以選擇進行加密。 為了讓此功能發揮
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
-## 將服務提供程式密鑰和證書鏈添加到AEM密鑰庫{#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
+## 將服務提供者金鑰和憑證鏈新增至AEM金鑰存放區 {#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
 
 >[!NOTE]
 >
@@ -127,7 +126,7 @@ SAML聲明經過簽名，並可以選擇進行加密。 為了讓此功能發揮
 
    ![chlimage_1-373](assets/chlimage_1-373.png)
 
-## 為SAML {#configure-a-logger-for-saml}配置記錄器
+## 為SAML配置記錄器 {#configure-a-logger-for-saml}
 
 您可以設定記錄器，以偵錯因錯誤設定SAML而可能產生的任何問題。 您可以透過下列方式執行此作業：
 
