@@ -1,19 +1,19 @@
 ---
-title: 使用「Adobe開發人員應用程式產生器」將 [!DNL Adobe Experience Manager] 延伸為Cloud Service。
-description: 使用「Adobe開發人員應用程式產生器」將 [!DNL Adobe Experience Manager] 延伸為Cloud Service。
-source-git-commit: 8128cb074b9a027c3a51ea7dbd3a4987fc0df03e
+title: 使用Adobe開發人員應用程式產生器擴充 [!DNL Adobe Experience Manager] 6.5。
+description: 使用Adobe開發人員應用程式產生器擴充 [!DNL Adobe Experience Manager] 6.5。
+source-git-commit: aab7d4aaf11b6aef3b729f906259a76c152fd6f0
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
 
-# 使用「Adobe開發人員應用程式產生器」將[!DNL Adobe Experience Manager]擴充為Cloud Service {#extend-using-app-builder}
+# 使用Adobe開發人員應用程式產生器擴充[!DNL Adobe Experience Manager] {#extend-using-app-builder}
 
-## 什麼是AEM as aCloud Service的App Builder {#project-firefly}
+## 什麼是AEM的App Builder {#project-firefly}
 
-全新的Adobe開發人員應用程式產生器為開發人員提供擴充性架構，以輕鬆將AEM擴充為Cloud Service功能。
+全新的Adobe開發人員應用程式產生器為開發人員提供可擴充的架構，以輕鬆擴充AEM功能。
 
 App Builder提供統一的協力廠商擴充性架構，可整合及建立可擴充Adobe Experience Manager的自訂體驗。 有了這一基於Adobe基礎架構的完整可擴充性框架，開發人員可以跨Adobe解決方案和IT堆棧的其餘部分構建自定義微服務、擴展和整合Adobe Experience Manager。
 
