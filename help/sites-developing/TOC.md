@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: b82544398ca414afab867f188f33ae60989596f3
+source-git-commit: eda59d12d96ecc55bd58749985d2c15706344fe0
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '917'
 ht-degree: 14%
 
 ---
@@ -151,6 +151,7 @@ ht-degree: 14%
       + [詳細的客戶端上下文](client-context.md)
       + [用戶端內容Javascript API](ccjsapi.md)
 + 擴充AEM{#extending-aem}
+   + [使用Adobe開發人員應用程式產生器擴充AEM](app-builder.md)
    + [自訂頁面編寫](customizing-page-authoring-touch.md)
    + [自訂主控台](customizing-consoles-touch.md)
    + [自訂頁面屬性的檢視](page-properties-views.md)
