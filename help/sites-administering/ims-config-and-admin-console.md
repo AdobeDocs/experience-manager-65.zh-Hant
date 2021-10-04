@@ -1,8 +1,8 @@
 ---
-title: AdobeIMS驗證和 [!DNL Admin Console] 支援AEM Managed Services
-seo-title: AdobeIMS驗證和 [!DNL Admin Console] 支援AEM Managed Services
+title: Adobe IMS驗證和 [!DNL Admin Console] 支援AEM Managed Services
+seo-title: Adobe IMS Authentication and [!DNL Admin Console] Support for AEM Managed Services
 description: 了解如何在AEM中使用 [!DNL Admin Console] 。
-seo-description: 了解如何在AEM中使用 [!DNL Admin Console] 。
+seo-description: Learn how to use the [!DNL Admin Console] in AEM.
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,23 +10,27 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
-feature: 安全性
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Security
+source-git-commit: 3f55ebfe3b1603a573fcb77155227c449c6c0fbb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1688'
 ht-degree: 10%
 
 ---
 
-# AdobeIMS驗證和[!DNL Admin Console]支援AEM Managed Services {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
+# AEM Managed Services的Adobe IMS驗證和[!DNL Admin Console]支援 {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
 >[!NOTE]
 >
 >請注意，此功能僅供Adobe Managed Services客戶使用。
 
+>[!NOTE]
+>
+>AEM的IMS登入不支援Admin Console中的巢狀群組。
+
 ## 簡介 {#introduction}
 
-AEM 6.4.3.0推出[!DNL Admin Console]支援AEM例項和AdobeIMS(Identity Management系統)驗證，供&#x200B;**AEM Managed Services**&#x200B;客戶使用。
+AEM 6.4.3.0推出[!DNL Admin Console]支援AEM例項和Adobe IMS(Identity Management系統)驗證，供&#x200B;**AEM Managed Services**&#x200B;客戶使用。
 
 AEM上線至[!DNL Admin Console]可讓AEM Managed Services客戶在一個主控台中管理所有Experience Cloud使用者。 可將使用者和群組指派給與AEM例項相關聯的產品設定檔，讓他們登入特定例項。
 
@@ -42,19 +46,19 @@ AEM上線至[!DNL Admin Console]可讓AEM Managed Services客戶在一個主控�
 
 ## 架構 {#architecture}
 
-IMS驗證的運作方式是在AEM和AdobeIMS端點之間使用OAuth通訊協定。 使用者新增至IMS且擁有Adobe身分識別後，就可以使用IMS憑證登入AEM Managed Services執行個體。
+IMS驗證的運作方式是在AEM和Adobe IMS端點之間使用OAuth通訊協定。 使用者新增至IMS且擁有Adobe身分識別後，就可以使用IMS憑證登入AEM Managed Services執行個體。
 
 使用者登入流程如下所示，系統會將使用者重新導向至IMS，並選擇性地導向至客戶IDP以進行SSO驗證，然後重新導向回AEM。
 
 ![image2018-9-23_23-55-8](assets/image2018-9-23_23-55-8.png)
 
-## 如何設定{#how-to-set-up}
+## 如何設定 {#how-to-set-up}
 
-### 將組織佈線至[!DNL Admin Console] {#onboarding-organizations-to-admin-console}
+### 在[!DNL Admin Console]中布建組織 {#onboarding-organizations-to-admin-console}
 
-客戶必須上線至[!DNL Admin Console]才能使用AdobeIMS進行AEM驗證。
+客戶必須上線至[!DNL Admin Console]才能使用Adobe IMS進行AEM驗證。
 
-首先，AdobeIMS中應布建一個組織。 Adobe企業客戶在[Adobe [!DNL Admin Console]](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)中會顯示為IMS組織。
+第一步，客戶應該有已布建於Adobe IMS中的組織。 Adobe企業客戶在[Adobe [!DNL Admin Console]](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)中會顯示為IMS組織。
 
 AEM Managed Services客戶應已布建組織，而在IMS布建過程中，將可在[!DNL Admin Console]中使用客戶例項，以管理使用者權益和存取權。
 
@@ -76,7 +80,7 @@ AEM Managed Services客戶應已布建組織，而在IMS布建過程中，將可
 >
 >有關企業管理和[!DNL Admin Console]的詳細資訊，請參閱[本頁](https://helpx.adobe.com/tw/enterprise/managing/user-guide.html)一文。
 
-### 在[!DNL Admin Console] {#onboarding-users-to-the-admin-console}中引導用戶
+### 在[!DNL Admin Console]中引導用戶 {#onboarding-users-to-the-admin-console}
 
 根據客戶的規模和偏好設定，建立使用者的方式有三種：
 
@@ -84,7 +88,7 @@ AEM Managed Services客戶應已布建組織，而在IMS布建過程中，將可
 1. 上傳含有使用者的CSV檔案
 1. 從客戶的企業Active Directory同步用戶和組。
 
-#### 通過[!DNL Admin Console] UI {#manual-addition-through-admin-console-ui}手動添加
+#### 通過[!DNL Admin Console] UI手動添加 {#manual-addition-through-admin-console-ui}
 
 可在[!DNL Admin Console] UI中手動建立使用者和群組。 如果沒有大量使用者可管理，則可使用此方法。 例如，少於50個AEM使用者。
 
@@ -92,7 +96,7 @@ AEM Managed Services客戶應已布建組織，而在IMS布建過程中，將可
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
-#### [!DNL Admin Console] UI {#file-upload-in-the-admin-console-ui}中的檔案上傳
+#### [!DNL Admin Console] UI中的檔案上傳 {#file-upload-in-the-admin-console-ui}
 
 為方便建立使用者，可上傳CSV檔案以大量新增使用者：
 
@@ -140,7 +144,7 @@ AEM Managed Services客戶應已布建組織，而在IMS布建過程中，將可
 
 ## 使用方式 {#how-to-use}
 
-### 在[!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}中管理產品和用戶訪問
+### 在[!DNL Admin Console]中管理產品和用戶訪問 {#managing-products-and-user-access-in-admin-console}
 
 當客戶產品管理員登入[!DNL Admin Console]時，他們會看到AEM Managed Services產品內容的多個例項，如下所示：
 
@@ -164,7 +168,7 @@ AEM Managed Services客戶應已布建組織，而在IMS布建過程中，將可
 
 ### 登入AEM {#logging-into-aem}
 
-#### 本地管理員登錄{#local-admin-login}
+#### 本機管理員登入 {#local-admin-login}
 
 AEM可繼續支援管理員使用者的本機登入，因為登入畫面可以選取本機登入：
 
@@ -190,7 +194,7 @@ AEM可繼續支援管理員使用者的本機登入，因為登入畫面可以�
 
 ![screen_shot_2018-09-18at120124am](assets/screen_shot_2018-09-18at120124am.png)
 
-### 遷移現有用戶{#migrating-existing-users}
+### 移轉現有使用者 {#migrating-existing-users}
 
 若現有AEM例項使用其他驗證方法，且現在正移轉至IMS，則需要進行移轉步驟。
 
@@ -198,7 +202,7 @@ AEM存放庫中的現有使用者（來源為本機、透過LDAP或SAML）可移
 
 此公用程式將由您的AMS團隊執行，作為IMS布建的一部分。
 
-### 在AEM {#managing-permissions-and-acls-in-aem}中管理權限和ACL
+### 在AEM中管理權限和ACL {#managing-permissions-and-acls-in-aem}
 
 AEM將繼續管理存取控制和權限，這可透過分離來自IMS的使用者群組(例如下列範例中的AEM-GRP-008)和定義權限和存取控制的本機群組來達成。 可將從IMS同步的使用者群組指派給本機群組，並繼承權限。
 
