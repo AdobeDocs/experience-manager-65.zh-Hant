@@ -1,8 +1,8 @@
 ---
 title: 編輯頁面屬性
-seo-title: 編輯頁面屬性
+seo-title: Editing Page Properties
 description: 定義頁面的必要屬性
-seo-description: 定義頁面的必要屬性
+seo-description: Define the required properties for a page
 uuid: d3a2183b-8082-4cfc-aeed-26facbf3f3e6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1898'
 ht-degree: 8%
 
 ---
@@ -131,13 +131,10 @@ ht-degree: 8%
 
    指定要與此頁面一起使用的別名。
 
-   >[!NOTE]
-   >
-   >別名設定`sling:alias`屬性以定義資源的別名（這只會影響資源，而非路徑）。
-   >
-   >例如：如果為節點`/content/we-retail/spanish`定義別名`latin-lang`，則可通過`/content/we-retail/latin-language`訪問此頁
-   >
-   >如需詳細資訊，請參閱SEO和URL管理最佳實務](/help/managing/seo-and-url-management.md#localized-page-names)下的「本地化頁面名稱」。[
+   * 例如，如果為頁面`/content/wknd/us/en/magazine/members-only`定義別名`private`，則此頁面也可透過`/content/wknd/us/en/magazine/private`存取
+   * 建立別名會在頁面節點上設定`sling:alias`屬性，這只會影響資源，而非存放庫路徑。
+   * 無法發佈編輯器中由別名存取的頁面。 [編輯](/help/sites-authoring/publishing-pages.md) 器中的發佈選項僅適用於透過其實際路徑存取的頁面。
+   * 如需詳細資訊，請參閱SEO和URL管理最佳實務](/help/managing/seo-and-url-management.md#localized-page-names)下的「本地化頁面名稱」。[
 
 * **繼承自 &lt;>路徑&#x200B;*>***
 
@@ -261,7 +258,7 @@ ht-degree: 8%
 
 * 提供提供全網站功能之頁面的連結，例如&#x200B;**註冊頁面**、**離線頁面**&#x200B;等。
 
-## 編輯頁面屬性{#editing-page-properties-1}
+## 編輯頁面屬性 {#editing-page-properties-1}
 
 您可以定義頁面屬性：
 
@@ -278,7 +275,7 @@ ht-degree: 8%
 
    * 使用 **頁面資訊** (接著 **開啟屬性**)
 
-### 從Sites Console — 單頁{#from-the-sites-console-single-page}
+### 從Sites Console — 單頁 {#from-the-sites-console-single-page}
 
 按一下或點選&#x200B;**屬性**&#x200B;以定義頁面屬性：
 
@@ -295,7 +292,7 @@ ht-degree: 8%
 
 1. 然後使用&#x200B;**Save**&#x200B;保存更新，然後使用&#x200B;**Close**&#x200B;返回控制台。
 
-### 編輯頁面{#when-editing-a-page}時
+### 編輯頁面時 {#when-editing-a-page}
 
 編輯頁面時，您可以使用&#x200B;**頁面資訊**&#x200B;來定義頁面屬性：
 
@@ -312,7 +309,7 @@ ht-degree: 8%
 
 1. 使用&#x200B;**儲存並關閉**&#x200B;按鈕來儲存變更。
 
-### 從Sites Console — 多頁{#from-the-sites-console-multiple-pages}
+### 從Sites Console — 多個頁面 {#from-the-sites-console-multiple-pages}
 
 從Sites **** Console中，您可以選取數個頁面，然後使用 **View Properties**  (檢視屬性) 來檢視和/或編輯頁面屬性。這稱為頁面屬性的大量編輯。
 
