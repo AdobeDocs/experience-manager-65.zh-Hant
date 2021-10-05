@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版中已棄用和已移除的功能。
 description: Adobe Experience Manager 6.5中已棄用和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: becdfee534e4464147811302ed67de74b8044a24
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1744'
 ht-degree: 11%
 
 ---
@@ -29,7 +29,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
 | [!DNL Sites] | 以範本為基礎的簡單內容片段。 | [現在提供模型型結構化](/help/assets/content-fragments/content-fragments-models.md) 內容片段。 |
-| Creative Cloud整合 | AEM 6.2推出「AEM至Creative Cloud資料夾共用」功能，讓創意使用者能存取AEM中的資產，以便在CC應用程式中開啟資產，並上傳新檔案或將變更儲存至AEM。 Creative Cloud 應用程式推出的新功能 Adobe Asset Link 提供了更優異的使用者體驗，以及更強大的存取功能，可直接從 Photoshop、InDesign 和 Illustrator 中存取 AEM 的資產。Adobe不打算進一步增強AEM以Creative Cloud資料夾共用整合。 雖然AEM中包含此功能，強烈建議客戶使用取代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 |
+| Creative Cloud整合 | AEM 6.2導入了「AEM到Creative Cloud資料夾共用」功能，作為讓創意使用者存取AEM資產的方式，以便在[!DNL Creative Cloud]應用程式中開啟資產，並上傳新檔案或儲存AEM的變更。 Creative Cloud 應用程式推出的新功能 Adobe Asset Link 提供了更優異的使用者體驗，以及更強大的存取功能，可直接從 Photoshop、InDesign 和 Illustrator 中存取 AEM 的資產。Adobe不打算進一步增強AEM以Creative Cloud資料夾共用整合。 雖然AEM中包含此功能，強烈建議客戶使用取代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 |
 | 資產 | `AssetDownloadServlet` 依預設，發佈例項會停用。如需詳細資訊，請參閱[AEM安全性檢查清單](/help/sites-administering/security-checklist.md)。 | [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)中描述的配置。 |
 | 資產 | 如果用戶對`/content/dam/collections`沒有足夠的（讀和寫）權限，則用戶無法建立集合。 | 遵守使用者的存取控制設定，並確保適當的權限。 |
 | Adobe Search&amp;Promote | 已棄用與Adobe Search&amp;Promote的整合。 Adobe不打算進一步增強「搜尋與促銷」整合。 請注意，Search &amp; Promote整合在遭取代時仍完全受支援。 |  |
@@ -67,7 +67,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | Forms | 無法在JEE上從LiveCycleES4 SP1升級至AEM 6.5 Forms的單跳升級 | 請參閱AEM Forms升級檔案中的[可用升級路徑](../forms/using/upgrade.md) 。 |
 | Forms | 移除JEE上AEM Forms的UPD型叢集支援 | 在JEE上的AEM Forms中，您只能使用基於TCP的群集。 如果您將UDP多播伺服器從舊版升級為JEE上的AEM 5.5 Forms ，請執行手動配置以切換到基於TCP的gemfire群集。 如需詳細指示，請參閱JEE](../forms/using/upgrade-forms-jee.md)上的[升級至AEM 6.5表單 |
 | 開發人員 | Firebug Lite已從預設分發(Quickstart)中移除 | 使用瀏覽器內建的開發人員主控台 |
-| 開發人員 | 移除HTML用戶端程式庫管理器中的`customJavaScriptPath`支援。 | 無替換 |
+| 開發人員 | 移除「HTML客戶端庫管理器」中的`customJavaScriptPath`支援。 | 無替換 |
 | [!DNL Assets] | [!DNL Adobe Experience Manager] 6.5中移除了資產卸載功能。 | 無可替換。 |
 | 快取 | `system/console/slingjsp` AEM 6.5中已不再提供移除功能。 | 類別和微快取儲存在Apache Sling Commons FileSystem ClassLoader套件組合下。 您可以在AEM Web Console中檢查套件組合編號，並直接從檔案系統中移除快取資料夾(`crx-quickstart/launchpad/felix/bundle<ID>`)。 |
 

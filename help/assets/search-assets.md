@@ -3,12 +3,12 @@ title: 在 [!DNL Adobe Experience Manager]中搜尋數位資產和影像
 description: 了解如何使用「篩選器」面板在 [!DNL Adobe Experience Manager] 中尋找所需資產，以及如何使用顯示在搜尋中的資產。
 contentOwner: AG
 mini-toc-levels: 1
-feature: 搜尋，中繼資料
+feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '5573'
+source-wordcount: '5570'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 5%
 | [了解搜尋結果和行為](#searchbehavior) | [修改搜尋刻面](#searchfacets) | [大量中繼資料更新](#metadataupdates) |
 | [搜尋排名和提升](#searchrank) | [文字擷取](#extracttextupload) | [智慧型集合](#collections) |
 | [高級搜索：篩選和搜尋範圍](#scope) | [自訂述詞](#custompredicates) | [了解並疑難排解非預期的結果](#unexpected-results) |
-| [從其他解決方案和應用程式中搜尋](#search-assets-other-surfaces):<ul><li>[Adobe資產連結](#aal)</li><li>[品牌入口網站](#brand-portal)</li><li>[Experience Manager案頭應用程式](#desktop-app)</li><li>[Adobe Stock影像](#adobe-stock)</li><li>[Dynamic Media資產](#dynamic-media)</li></ul> |  |  |
+| [從其他解決方案和應用程式中搜尋](#search-assets-other-surfaces):<ul><li>[Adobe資產連結](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager案頭應用程式](#desktop-app)</li><li>[Adobe Stock影像](#adobe-stock)</li><li>[Dynamic Media資產](#dynamic-media)</li></ul> |  |  |
 | [資產選擇器](#asset-picker) |  |  |
 | [](#limitations) 限制和提 [示](#tips) |  |  |
 | [插圖範例](#samples) |  |  |
@@ -42,7 +42,7 @@ ht-degree: 5%
 
 請熟悉搜尋介面和可用動作。
 
-![了解Experience Manager資產搜尋結果介面](assets/aem_search_results.png)
+![了解Experience Manager Assets搜尋結果介面](assets/aem_search_results.png)
 
 *圖：了解 [!DNL Experience Manager Assets] 搜尋結果介面。*
 
@@ -161,7 +161,7 @@ ht-degree: 5%
 | 產生器 | 建立者：約翰 |
 | 位置 | 位置：不適用 |
 | 說明 | 說明：&quot;範例影像&quot; |
-| 建立者工具 | 建立工具：「Adobe Photoshop CC 2015」 |
+| 建立者工具 | 建立工具：&quot;Adobe Photoshop&quot; |
 | 版權擁有者 | 版權人：&quot;Adobe Systems&quot; |
 | 參與者 | 貢獻者：John |
 | 使用條款 | 使用條款：「保留CopyRights」 |
@@ -206,7 +206,7 @@ ht-degree: 5%
 
 ### 在[!DNL Experience Manager]案頭應用程式中搜尋資產 {#desktop-app}
 
-創意專業人員可使用案頭應用程式，讓[!DNL Experience Manager Assets]可輕鬆搜尋，並可在其本機案頭（Win或Mac）上使用。 創作者可以在Mac Finder或Windows Explorer中輕鬆顯示所需資產，在案頭應用程式中開啟，並在本機變更 — 變更會透過在存放庫中建立的新版本儲存回[!DNL Experience Manager]。 應用程式支援使用一個或多個關鍵字、`*`和`?`通配符以及`AND`運算子進行基本搜索。 請參閱案頭應用程式中的[瀏覽、搜尋及預覽資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
+創意專業人員可使用案頭應用程式，讓[!DNL Experience Manager Assets]可輕鬆搜尋，並可在其本機案頭上使用(Win或Mac)。 創作者可以在Mac Finder或Windows Explorer中輕鬆顯示所需資產、在案頭應用程式中開啟並在本機變更 — 變更會透過在存放庫中建立的新版本儲存回[!DNL Experience Manager]。 應用程式支援使用一個或多個關鍵字、`*`和`?`通配符以及`AND`運算子進行基本搜索。 請參閱案頭應用程式中的[瀏覽、搜尋及預覽資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
 
 ### 在[!DNL Brand Portal]中搜尋資產 {#brand-portal}
 

@@ -2,12 +2,12 @@
 title: 設定AEM Assets與Experience Cloud的整合
 description: 了解如何設定AEM Assets與Experience Cloud的整合。
 contentOwner: AG
-feature: 資產管理
+feature: Asset Management
 role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '987'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 1%
 1. 從&#x200B;**[!UICONTROL 範圍]**&#x200B;清單中，選擇&#x200B;**[!UICONTROL dam-read]**、**[!UICONTROL dam-sync]**、**[!UICONTROL dam-write]**&#x200B;和&#x200B;**[!UICONTROL cc-share]**。
 1. 按一下&#x200B;**[!UICONTROL 建立]**。訊息會通知應用程式已建立。
 
-   ![成功建立應用程式以整合AEM Assets與AdobeCC的通知](assets/chlimage_1-50.png)
+   ![成功建立應用程式以整合AEM Assets與Creative Cloud的通知](assets/chlimage_1-50.png)
 
 1. 複製為新應用程式生成的&#x200B;**[!UICONTROL 應用程式ID]**。
 
@@ -75,13 +75,13 @@ ht-degree: 1%
 
 1. 在&#x200B;**[!UICONTROL 建立配置]**&#x200B;對話框中，指定新配置的標題和名稱，然後按一下&#x200B;**[!UICONTROL 建立]**。
 
-   ![為新設定命名以整合AEM Assets和CC](assets/aem-ec-integration-config1.png)
+   ![為新設定命名以整合AEM Assets和Creative Cloud](assets/aem-ec-integration-config1.png)
 
 1. 在&#x200B;**[!UICONTROL 租用戶URL]**&#x200B;欄位中，指定AEM Assets的URL。 過去，如果URL定義為`https://<tenant_id>.marketing.adobe.com`，請將其變更為`https://<tenant_id>.experiencecloud.adobe.com`。
 
    1. 導覽至「 **工具 > 雲端服務 >舊 版雲端服務」**。在Adobe Experience Cloud下，按一下&#x200B;**顯示配置**。
    1. 選取要編輯的現有設定。 編輯配置並將`marketing.adobe.com`替換為`experiencecloud.adobe.com`。
-   1. 儲存設定。測試MAC同步複製代理。
+   1. 儲存設定。測試MAC同步復寫代理。
 
 1. 在&#x200B;**[!UICONTROL Client ID]**&#x200B;欄位中，貼上您在過程[結束時複製的應用程式ID，以建立應用程式](#create-an-application)。
 

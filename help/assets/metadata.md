@@ -6,7 +6,7 @@ mini-toc-levels: 1
 feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 10%
@@ -29,9 +29,9 @@ ht-degree: 10%
 
 下列方法可用來新增中繼資料至數位資產：
 
-* 首先，建立資產的原生應用程式會新增一些中繼資料。 例如， [Acrobat在PDF檔案中添加了元資料](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html)，或者相機在照片中添加了一些基本元資料。 產生資產時，您可以在原生應用程式本身新增中繼資料。 例如，您可以在Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html)Adobe中[新增IPTC中繼資料。
+* 首先，建立資產的原生應用程式會新增一些中繼資料。 例如， [Acrobat在PDF檔案中添加了元資料](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html)，或者相機在照片中添加了一些基本元資料。 產生資產時，您可以在原生應用程式本身新增中繼資料。 例如，您可以在Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html)中[新增IPTC中繼資料。
 
-* 在將資產上傳至[!DNL Experience Manager]之前，您可以使用用來建立資產的原生應用程式，或使用某些其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，會處理中繼資料。 例如，請參閱如何[使用 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中的中繼資料，並參閱[!DNL Adobe Exchange]中 [!DNL Bridge CC]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的[標籤面板。
+* 在將資產上傳至[!DNL Experience Manager]之前，您可以使用用來建立資產的原生應用程式，或使用某些其他中繼資料編輯應用程式來編輯和修改中繼資料。 將資產上傳至Experience Manager時，會處理中繼資料。 例如，請參閱如何[使用 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中的中繼資料，並參閱[!DNL Adobe Exchange]中 [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的[標籤面板。
 
 * 在[!DNL Experience Manager Assets]中，您可以在[!UICONTROL 屬性]頁面中手動新增或編輯資產的中繼資料。
 
@@ -234,7 +234,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >
 >* [中繼資料概念與了解](metadata-concepts.md)。
 >* [編輯多個集合的中繼資料屬性](manage-collections.md#editing-collection-metadata-in-bulk)
->* [在Experience Manager資產中匯入和匯出中繼資料](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [Experience Manager Assets中的中繼資料匯入和匯出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
