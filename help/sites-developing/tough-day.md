@@ -1,8 +1,8 @@
 ---
 title: 艱難的一天
-seo-title: 艱難的一天
+seo-title: Tough Day
 description: Tough Day（嚴格日）測試模擬在最壞情況下約1000位作者的每日負載，同時進行所有操作。
-seo-description: Tough Day（嚴格日）測試模擬在最壞情況下約1000位作者的每日負載，同時進行所有操作。
+seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
 uuid: 1b672182-40f5-4580-b038-2e3c8fbfb8b7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
 docset: aem65
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 3727b561a2ee9778d75f18530caf16c6c3ef846a
+source-git-commit: e1f9cf160892c2fa5c7cc7f80f998166dbc877e6
 workflow-type: tm+mt
-source-wordcount: '1909'
-ht-degree: 1%
+source-wordcount: '1883'
+ht-degree: 2%
 
 ---
 
 # 艱難的一天{#tough-day}
 
-## 艱難的第2天是什麼{#what-is-tough-day}
+## 艱難的第2天 {#what-is-tough-day}
 
-「Tough Day 2」是一項應用程式，可讓您強調測試AEM例項的限制。 可透過預設測試套裝立即執行，或依您的測試需求設定。 您可以觀看[此錄制](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html)以了解應用程式的演示。
+「Tough Day 2」是一項應用程式，可讓您強調測試AEM例項的限制。 可透過預設測試套裝立即執行，或依您的測試需求設定。 您可以觀看[此錄制](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)以了解應用程式的演示。
 
-## 如何執行艱難的第2天{#how-to-run-tough-day}
+## 如何經營艱難的一天2 {#how-to-run-tough-day}
 
 從[Adobe存放庫](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/)下載最新版的Tough Day 2。 下載應用程式後，可通過提供`host`參數以立即運行。 在下列範例中，AEM例項會在本機執行，因此會使用`localhost`值：
 
@@ -54,8 +54,7 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 >
 >艱難的第2天沒有清理步驟。 因此，建議在複製的測試執行個體上執行Tough Day 2 ，而非在主要生產執行個體上。 測試後應捨棄測試執行個體。
 
-
-### 獲取幫助{#getting-help}
+### 取得說明 {#getting-help}
 
 艱難的第2天提供了一系列可從命令行訪問的幫助選項。 例如：
 
@@ -115,7 +114,7 @@ java -jar toughday2.jar --help_full
  </tbody>
 </table>
 
-### 全局參數{#global-parameters}
+### 全域參數 {#global-parameters}
 
 艱難的第2天提供設定或變更測試環境的全域參數。 包括目標主機、埠號、使用的通訊協定、執行個體的使用者和密碼等。 例如：
 
@@ -147,7 +146,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 儲存測試設定的唯一方法是以yaml格式複製。 如需其他詳細資訊，請參閱以下各節中的此[toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml)配置和yaml配置示例。
 
-### 新增測試{#adding-a-new-test}
+### 新增測試 {#adding-a-new-test}
 
 如果您不想使用預設的`toughday`套裝，可使用`add`參數來新增您選擇的測試。 以下示例說明如何使用命令行參數或yaml配置檔案添加`CreateAssetTreeTest`測試。
 
@@ -166,7 +165,7 @@ tests:
   - add : CreateAssetTreeTest
 ```
 
-### 添加同一測試{#adding-multiple-instances-of-the-same-test}的多個實例
+### 新增相同測試的多個例項  {#adding-multiple-instances-of-the-same-test}
 
 您也可以新增及執行相同測試的多個例項，但每個例項必須具有唯一的名稱。 以下範例說明如何使用命令列參數或yaml設定檔案，新增相同測試的兩個例項。
 
@@ -190,7 +189,7 @@ tests:
       name : SecondAssetTree
 ```
 
-### 更改測試屬性{#changing-the-test-properties}
+### 變更測試屬性 {#changing-the-test-properties}
 
 如果需要更改一個或多個測試屬性，可將該屬性添加到命令行或yaml配置檔案。 要查看所有可用的測試屬性，請將`--help <TestClass/PublisherClass>`參數添加到命令行，例如：
 
@@ -219,7 +218,7 @@ tests:
       template : /conf/toughday-templates/settings/wcm/templates/toughday-template
 ```
 
-### 使用預先定義的測試套裝{#working-with-predefined-test-suites}
+### 使用預先定義的測試套裝 {#working-with-predefined-test-suites}
 
 下列範例說明如何將測試新增至預先定義的套裝，以及如何重新設定現有測試並從預先定義的套裝中排除。
 
@@ -308,7 +307,7 @@ runmode:
 
 **常數負載**&#x200B;運行模式與常規運行模式不同，它通過生成常數數目的已啟動測試執行，而不是常數數目的線程。 可以使用具有相同名稱的運行模式參數來設定負載。
 
-### 測試選擇{#test-selection}
+### 測試選擇 {#test-selection}
 
 對於兩種運行模式，測試選擇過程都相同，其步驟如下：所有測試都有`weight`屬性，它決定執行緒的可能性。 例如，如果我們有兩項測試，一項的權重為5，另一項的權重為10，則後者執行的可能性是前者的2倍。
 
@@ -347,7 +346,7 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 
 艱難的第2天會輸出測試量度和記錄。 如需詳細資訊，請閱讀下列章節。
 
-### 測試量度{#test-metrics}
+### 測試量度 {#test-metrics}
 
 艱難的第2天目前報告9個您可評估的測試量度。 具有&#x200B;*****&#x200B;符號的量度只有在成功執行後才會回報：
 
@@ -405,7 +404,7 @@ Tough Day 2會在您執行Tough Day 2的相同目錄中建立記錄檔資料夾�
 
 不會覆寫記錄檔，後續執行會將訊息附加至現有記錄檔。 記錄有數個層級，如需詳細資訊，請參閱` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`。
 
-#### 使用範例{#example-usage}
+#### 使用範例 {#example-usage}
 
 #### 已知問題 {#known-issues}
 
