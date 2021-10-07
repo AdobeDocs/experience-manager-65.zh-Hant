@@ -3,11 +3,11 @@ title: 使用Media Library進行基本數位資產管理
 description: '[!DNL Experience Manager Assets] 和Media Library進行資產管理。'
 contentOwner: AG
 role: Architect, Leader
-feature: 資產管理
+feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5462eb18c55a509712dab8fdbb653eb2d1889763
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Define what is not included
 
 -->
 
-# 使用Media Library進行基本資產管理{#manage-assets-using-media-library}
+# 使用Media Library進行基本資產管理 {#manage-assets-using-media-library}
 
 [!DNL Adobe Experience Manager] platform提供不同的資產管理功能。Media Library可讓使用者將少量資產上傳至存放庫、搜尋及使用網頁中的資產，並完成資產的簡單資產管理工作。
 
@@ -29,15 +29,15 @@ Media Library是輕量型數位資產管理(DAM)解決方案，隨附[!DNL Adobe
 
 [!DNL Adobe Experience Manager Assets] 許可證可單獨購買。[!DNL Experience Manager Assets] 可透過企業使用案例、中繼資料的自訂、結構、搜尋和使用者介面，以及Media Library提供的其他功能，來強大處理資產。
 
-## 許可要求{#avail-media-library-license}
+## 授權需求 {#avail-media-library-license}
 
 擁有[!DNL Sites]授權的客戶有權使用Media Library。 它適用於[!DNL Experience Manager]的所有元件。
 
 Media Library會隨Sites一併安裝。 除了Sites授權和安裝外，不需要其他授權或套件。
 
-## [!DNL Assets] 與Media Library  {#assets-and-media-library}
+## [!DNL Assets] 與Media Library {#assets-and-media-library}
 
-Experience Manager資產提供企業級DAM功能。 資產功能透過單一套件[!DNL Experience Manager]提供。 不過，尚未購買Assets授權的使用者無權使用進階DAM功能。 若沒有Assets授權，僅[Media Library功能](#use-media-library)可供使用。
+Experience Manager Assets提供企業級DAM功能。 資產功能透過單一套件[!DNL Experience Manager]提供。 不過，尚未購買Assets授權的使用者無權使用進階DAM功能。 若沒有Assets授權，僅[Media Library功能](#use-media-library)可供使用。
 
 如果要防止意外使用您未獲得許可的[!DNL Assets]功能，請從[!DNL Experience Manager]中刪除所有[!DNL Assets]特定的工作流、元件、分類、選項和[!DNL Assets]管理員。 這麼做可防止使用者意外使用您未授權的[!DNL Assets]功能。
 
@@ -79,13 +79,22 @@ Media Library廣泛涵蓋下列使用案例：
 * 為資產加上注釋。
 * 透過「內容尋找器」將資產新增至[!DNL Sites]頁面。
 * 使用[!DNL Content Fragments]。
+* 在Sites授權下，針對[!DNL Content Fragments]和參考媒體資產使用HTTP REST和GraphQL API。
+* Marketing Cloud整合。
+* 自訂及擴充資產管理使用者介面。
+* 存取查詢產生器(API)以擴充搜尋功能。
+* 建立靜態標籤。
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
+
+As per PM, we must avoid stating such a list, as we don't have a list that makes sense in Cloud Service.
 -->
 
 >[!IMPORTANT]
 >
->許多進階DAM使用案例都由[!DNL Experience Manager Assets]履行。 Media Library授權可讓您僅使用Media Library履行列出的使用案例。 如果未列出使用案例，請勿將其用於Media Library授權。 若您有任何疑問，請聯絡Adobe客戶服務。
+>許多進階DAM使用案例都由[!DNL Experience Manager Assets]履行。 Media Library授權可讓您僅使用Media Library履行列出的使用案例。 如果未列出使用案例，請勿將其用於Media Library授權。 若您有任何疑問，請聯絡Adobe客戶支援。
+
+請注意，您無法使用智慧標籤、[!DNL Asset]連結、[!DNL Asset]選擇器、大量標籤、修改資產工作流程，但不具備[!DNL Assets]授權。
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
