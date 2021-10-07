@@ -4,11 +4,11 @@ description: 關於 [!DNL Experience Manager] 配置、硬體、軟體和網路�
 contentOwner: AG
 mini-toc-levels: 1
 role: Architect, Admin
-feature: 資產管理
+feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2741'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,8 @@ Adobe建議啟用HTTPS，因為許多公司都有可偵聽HTTP流量的防火牆
 
 主要取決於可用頻寬量和[!DNL Experience Manager]實例上的負載。 常見的配置選項（包括防火牆或代理）有助於提高網路效能。 請謹記以下幾點：
 
-* 根據您的執行個體類型（小、中、大），請確保您擁有足夠的網路頻寬供您的Experience Manager執行個體使用。 如果[!DNL Experience Manager]是在AWS上托管，則適當的頻寬分配尤其重要。
-* 如果您的[!DNL Experience Manager]實例托管在AWS上，則您可以通過通用的擴展策略受益。 如果使用者預期會有高負載，請更新執行個體。 縮減其大小以適度/低負載。
+* 根據您的執行個體類型（小、中、大），請確保您擁有足夠的網路頻寬供您的Experience Manager執行個體使用。 如果[!DNL Experience Manager]托管於AWS，則適當的頻寬分配尤其重要。
+* 如果您的[!DNL Experience Manager]例項托管於AWS，則您可使用通用的縮放政策來獲益。 如果使用者預期會有高負載，請更新執行個體。 縮減其大小以適度/低負載。
 * HTTPS:大部分的使用者都有可偵聽HTTP流量的防火牆，這可能會對上傳檔案或在上傳作業期間損毀的檔案造成負面影響。
 * 大檔案上載：確保用戶有到網路的有線連接（WiFi連接快速飽和）。
 
@@ -212,7 +212,7 @@ Adobe建議啟用HTTPS，因為許多公司都有可偵聽HTTP流量的防火牆
 >
 >ImageMagick `policy.xml`和`configure.xml`檔案可在`/usr/lib64/ImageMagick-&#42;/config/`取代`/etc/ImageMagick/`。有關配置檔案的位置，請參閱[ImageMagick文檔](https://www.imagemagick.org/script/resources.php)。
 
-如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe客戶服務。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
+如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
 
 ### XMP回寫 {#xmp-writeback}
 
@@ -306,6 +306,6 @@ Adobe建議啟用HTTPS，因為許多公司都有可偵聽HTTP流量的防火牆
 * 配置[!DNL ImageMagick]以限制資源消耗。
 * 從[!UICONTROL DAM更新資產]工作流程中移除不必要的步驟。
 * 設定工作流程和版本清除。
-* 使用最新的Service Pack和Hotfix來最佳化索引。 請向Adobe客戶服務洽詢，以了解有哪些其他索引最佳化措施可供使用。
+* 使用最新的Service Pack和Hotfix來最佳化索引。 請向Adobe客戶支援洽詢任何其他可用的索引最佳化。
 * 使用guessTotal來最佳化查詢效能。
 * 如果您設定[!DNL Experience Manager]以從檔案內容偵測檔案類型(在&#x200B;**[!UICONTROL AEM Web Console]**&#x200B;中啟用&#x200B;**[!UICONTROL Day CQ DAM Mime Type Service]**)，請在非尖峰時段大量上傳許多檔案，因為它耗用大量資源。

@@ -3,11 +3,11 @@ title: 處理支援的檔案格式的最佳實務
 description: 使用 [!DNL Experience Manager Assets]處理各種支援檔案類型的最佳實務。
 contentOwner: AG
 role: Admin
-feature: 資產管理，開發人員工具
+feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe客戶服務。 與Adobe客戶服務代表合作，針對您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
+>如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，如果您打算處理大量大型PSD或PSB檔案，請聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
 
 ## [!DNL Adobe Camera Raw] 資料庫 {#adobe-camera-raw-library}
 
 為獲得最佳效能，Adobe建議對RAW和DNG檔案使用[!DNL Adobe Camera Raw]程式庫。
 
-[!DNL Adobe Camera Raw] 庫支援CMYK顏色配置檔案作為輸入。但是，它只支援JPEG格式的輸出，並以RGB顏色空間生成輸出。 它不會在縮圖中保留源檔案顏色空間（例如CMYK）。
+[!DNL Adobe Camera Raw] 庫支援CMYK顏色配置檔案作為輸入。但是，它會以RGB色域產生輸出，並僅支援以JPEG格式輸出。 它不會在縮圖中保留源檔案顏色空間（例如CMYK）。
 
 如需詳細資訊，請參閱[Camera Raw支援](/help/assets/camera-raw.md)。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 * 未在盒內產生縮圖的AI檔案
 * 適用於具有專色(PMS)顏色的AI檔案
 
-使用PDF模擬轉譯器產生的縮圖和預覽畫面品質比現成可用的點陣輸出好。 Adobe PDF模擬轉譯器程式庫不支援任何色域轉換。 無論來源PDF檔案的色域為何，Adobe PDF模擬轉譯器只會產生RGB輸出。
+與現成的點陣輸出相比，使用PDF模擬轉譯器產生的縮圖和預覽的品質更佳。 Adobe PDF模擬轉譯器程式庫不支援任何色域轉換。 無論來源PDF檔案的色域為何，Adobe PDF模擬轉譯器只會產生RGB輸出。
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
@@ -54,7 +54,7 @@ Adobe建議您使用[!DNL Adobe InDesign Server]擷取[!DNL Adobe InDesign]特�
 
 Adobe建議在下列情況下使用ImageMagick程式庫：
 
-* 為EPS檔案生成縮略圖格式副本。
+* 為EPS檔案產生縮圖轉譯。
 * 保留影像設定檔資訊。
 * 保持透明度。
 * 處理PSD和PSB檔案。
@@ -71,7 +71,7 @@ Imaging Conding Library支援下列MIME類型：
 * PNG（8位元和16位元）
 * GIF
 * BMP
-* TIFF/壓縮TIFF（除32位Tiff和PTiff外）。
+* TIFF/壓縮TIFF（32位Tiff和PTiff除外）。
 * 伊科
 * ICN
 

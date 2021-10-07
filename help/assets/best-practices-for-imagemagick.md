@@ -3,11 +3,11 @@ title: 安裝和配置ImageMagick
 description: 了解ImageMagick軟體、如何安裝、設定命令列處理步驟，以及使用它來編輯、撰寫和從影像產生縮圖。
 contentOwner: AG
 role: Admin
-feature: 轉譯，開發人員工具
+feature: Renditions,Developer Tools
 exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '693'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ImageMagick是用於建立、編輯、合成或轉換點陣圖影像的軟體插
 
 >[!NOTE]
 >
->如果您在[!DNL Adobe Managed Services](AMS)上使用[!DNL Experience Manager]，如果您打算處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶服務。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
+>如果您在[!DNL Adobe Managed Services](AMS)上使用[!DNL Experience Manager]，如果您打算處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶支援。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
 
 ## 安裝ImageMagick {#installing-imagemagick}
 
@@ -36,10 +36,10 @@ ImageMagick是用於建立、編輯、合成或轉換點陣圖影像的軟體插
 
 ## 設定命令行處理步驟 {#set-up-the-command-line-process-step}
 
-您可以為您的特定使用案例設定命令列處理步驟。 每次在[!DNL Experience Manager]伺服器上將JPEG影像檔案新增至`/content/dam`時，執行下列步驟以產生翻轉的影像和縮圖（140x100、48x48、319x319和1280x1280）:
+您可以為您的特定使用案例設定命令列處理步驟。 每次在[!DNL Experience Manager]伺服器上將JPEG影像檔案新增至`/content/dam`時，執行下列步驟以產生翻轉的影像和縮圖（140x100、48x48、319x319和1280）:
 
 1. 在[!DNL Experience Manager]伺服器上，前往工作流程主控台(`https://[aem_server]:[port]/workflow`)，並開啟&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程模型。
-1. 從&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流模型中，開啟&#x200B;**[!UICONTROL EPS縮圖（由ImageMagick提供技術）]**&#x200B;步驟。
+1. 從&#x200B;**[!UICONTROL DAM更新資產]**&#x200B;工作流程模型中，開啟&#x200B;**[!UICONTROL EPS縮圖（由ImageMagick提供技術）]**&#x200B;步驟。
 1. 在&#x200B;**[!UICONTROL 參數頁簽]**&#x200B;中，將`image/jpeg`添加到&#x200B;**[!UICONTROL Mime類型]**&#x200B;清單中。
 
    ![mime_types_jpeg](assets/mime_types_jpeg.png)

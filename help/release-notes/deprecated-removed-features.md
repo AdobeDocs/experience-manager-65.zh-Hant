@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5版中已棄用和已移除的功能。
 description: Adobe Experience Manager 6.5中已棄用和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
+source-git-commit: 99d38dddbcd06fecb82c744d446b9cef981e0781
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 11%
@@ -44,12 +44,12 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 開發人員 | jQuery UI用戶端程式庫。 Adobe不打算進一步維護和更新作為分發（快速入門）一部分提供的jQuery UI客戶端庫 | Adobe建議仍需jQuery UI的客戶，將其程式碼新增至其專案程式碼基底。 |
 | 開發人員 | jQuery Animation客戶端庫(`granite.jquery.animation`)。 Adobe不計畫進一步維護和更新作為分發(Quickstart)一部分提供的jQuery Animation客戶端庫 | Adobe建議仍需jQuery動畫才能使用程式碼的客戶，將其新增至專案程式碼基底。 |
 | 開發人員 | Handlebars客戶端庫。 Adobe不計畫進一步維護和更新作為分發的一部分發運的Handlebar客戶端庫（快速入門） | Adobe建議仍需要Handlebars才能使用其程式碼的客戶，將其新增至其專案程式碼基底。 |
-| 開發人員 | Lawnchair客戶端庫。 Adobe不計畫進一步維護和更新作為分發的一部分發運的Lawnchair客戶端庫（快速入門） | Adobe建議仍需要Lawnchair才能使用程式碼的客戶，將其新增至其專案程式碼基底。 |
+| 開發人員 | Lawnchair客戶端庫。 Adobe does not plan to further maintain and update the Lawnchair client library that is shipped as part of the distribution (Quickstart) | Adobe建議仍需要Lawnchair才能使用程式碼的客戶，將其新增至其專案程式碼基底。 |
 | 開發人員 | `Granite.Sling.js` 用戶端程式庫。Adobe不打算進一步增強隨發佈(Quickstart)提供的Granite.Sling.js用戶端程式庫 | Adobe建議依賴程式庫功能的客戶重新調整其程式碼，不再使用。 |
 | 開發人員 | 使用UI來壓縮/縮小JavaScript用戶端程式庫。 Adobe不打算進一步更新YUI程式庫。 在AEM 6.4之前，YUI預設為縮小JavaScript，並提供切換至Google關閉編譯器(GCC)的選項。 從AEM 6.5開始，預設為GCC。 | Adobe建議升級至AEM 6.5的客戶切換至GCC以進行實作 |
 | 開發人員 | CRXDE lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強發佈過程中隨附的傳統UI對話框編輯器（快速入門） | 無可替換。 |
-| Forms | AEM Forms與AEM Mobile的整合已淘汰。 | 無可替換。 |  | 開發人員 | CRXDE lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強發佈過程中隨附的傳統UI對話框編輯器（快速入門） | 無可替換。 |
-| 開發人員 | Lodash/underscore客戶端庫。 Adobe不計畫進一步維護和更新作為分發（快速入門）的Lodash/underscore客戶端庫 | Adobe建議仍需使用Lodash/底線的客戶，將其程式碼新增至其專案程式碼基底。 |
+| Forms | AEM Forms與AEM Mobile的整合已淘汰。 | 無可替換。 |  | Developers | CRXDE lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強發佈過程中隨附的傳統UI對話框編輯器（快速入門） | 無可替換。 |
+| 開發人員 | Lodash/underscore客戶端庫。 Adobe does not plan to further maintain and update the Lodash/underscore client library that is shipped as part of the distribution (Quickstart) | Adobe recommends customers that still require Lodash/underscore for their code to add it into their project code base. |
 
 ## 移除的功能 {#removed-features}
 
@@ -57,7 +57,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 |
 |--- |--- |--- |
-| 與[!DNL Experience Cloud]整合 | 您可以透過[!DNL Adobe I/O]使用設定，將資產與[!DNL Experience Cloud]同步。 [!DNL Adobe Experience Cloud] 先前稱為 [!DNL Adobe Marketing Cloud]。 | 若您有任何疑問，請[聯絡Adobe客戶服務](https://www.adobe.com/tw/account/sign-in.supportportal.html)。 |
+| 與[!DNL Experience Cloud]整合 | 您可以透過[!DNL Adobe I/O]使用設定，將資產與[!DNL Experience Cloud]同步。 [!DNL Adobe Experience Cloud] 先前稱為 [!DNL Adobe Marketing Cloud]。 | 如果您有任何查詢，請[聯繫Adobe客戶支援](https://www.adobe.com/tw/account/sign-in.supportportal.html)。 |
 | AnalyticsActivity Map | AEM中包含的Activity Map版本。 | 由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。使用Adobe Analytics](https://docs.adobe.com/content/help/zh-Hant/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap外掛程式。 |
 | Integrations | ExactTarget整合已從預設分發(Quickstart)中移除，現在已無法使用。 | 沒有替換。 |
 | 整合 | Salesforce Force API整合已從預設分發(Quickstart)中刪除，現在是要從[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)安裝的額外包。 | 功能仍可用。 |
@@ -67,7 +67,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | Forms | 無法在JEE上從LiveCycleES4 SP1升級至AEM 6.5 Forms的單跳升級 | 請參閱AEM Forms升級檔案中的[可用升級路徑](../forms/using/upgrade.md) 。 |
 | Forms | 移除JEE上AEM Forms的UPD型叢集支援 | 在JEE上的AEM Forms中，您只能使用基於TCP的群集。 如果您將UDP多播伺服器從舊版升級為JEE上的AEM 5.5 Forms ，請執行手動配置以切換到基於TCP的gemfire群集。 如需詳細指示，請參閱JEE](../forms/using/upgrade-forms-jee.md)上的[升級至AEM 6.5表單 |
 | 開發人員 | Firebug Lite已從預設分發(Quickstart)中移除 | 使用瀏覽器內建的開發人員主控台 |
-| 開發人員 | 移除「HTML客戶端庫管理器」中的`customJavaScriptPath`支援。 | 無替換 |
+| 開發人員 | Remove `customJavaScriptPath` support in HTML Client Library Manager. | 無替換 |
 | [!DNL Assets] | [!DNL Adobe Experience Manager] 6.5中移除了資產卸載功能。 | 無可替換。 |
 | 快取 | `system/console/slingjsp` AEM 6.5中已不再提供移除功能。 | 類別和微快取儲存在Apache Sling Commons FileSystem ClassLoader套件組合下。 您可以在AEM Web Console中檢查套件組合編號，並直接從檔案系統中移除快取資料夾(`crx-quickstart/launchpad/felix/bundle<ID>`)。 |
 
@@ -77,4 +77,4 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 公告 |
 |--- |--- |--- |
-| Foundation | UI架構 | Adobe預計於2019年淘汰Coral UI 2元件。 AEM 6.2導入了Coral UI 3，而AEM 6.5則完全以Coral 3為基礎。 Adobe建議已使用Coral 2建立自訂UI的客戶和合作夥伴，將其重構至Coral 3。 Adobe提供工具，可將Coral 2對話方塊轉換為Coral 3 - [了解詳情](/help/sites-developing/modernization-tools.md)。 |
+| Foundation | UI架構 | Adobe預計於2019年淘汰Coral UI 2元件。 Coral UI 3 was introduced with AEM 6.2, and AEM 6.5 is fully based on Coral 3. Adobe建議已使用Coral 2建立自訂UI的客戶和合作夥伴，將其重構至Coral 3。 Adobe提供工具，可將Coral 2對話方塊轉換為Coral 3 - [了解詳情](/help/sites-developing/modernization-tools.md)。 |

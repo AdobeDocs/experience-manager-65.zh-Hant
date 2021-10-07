@@ -8,9 +8,9 @@ content-type: reference
 feature: CDN Cache,Dynamic Media Classic
 role: User, Admin
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '733'
 ht-degree: 12%
 
 ---
@@ -27,13 +27,13 @@ Dynamic Media資產由CDN（內容傳遞網路）快取，以便快速傳遞。 
 >
 >下列步驟僅適用於Adobe Experience Manager 6.5、Service Pack 5(Experience Manager6.5.5)或更舊版本的Dynamic Media。<br>如果您在Experience Manager6.5、Service Pack 6(Experience Manager6.5.6)或更新版本中使用Dynamic Media，請依照透過Dynamic Media使 [CDN快取失效中的步驟操作](/help/assets/invalidate-cdn-cache-dynamic-media.md)。
 
-另請參閱[Dynamic Media Classic(Scene7)](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)中的快取概觀。
+另請參閱[Dynamic Media Classic(Scene7)中的快取概述](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)。
 
 **若要透過Dynamic Media Classic使CDN快取失效：**
 
 1. 開啟[Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然後登入您的帳戶。
 
-   配置時Adobe提供了您的憑據和登錄。 如果您沒有此資訊，請聯繫技術支援。
+   配置時Adobe提供了您的憑據和登錄。 如果您沒有此資訊，請聯絡Adobe客戶支援。
 
 1. 在頁面的右上角附近，導覽至&#x200B;**[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**。
 1. 在「應用程式一般設定」頁面的「伺服器」群組標題下，找出&#x200B;**[!UICONTROL CDN無效範本]**&#x200B;文字方塊。

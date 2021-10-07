@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 10的發行說�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 99d38dddbcd06fecb82c744d446b9cef981e0781
 workflow-type: tm+mt
 source-wordcount: '4392'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 | 版本 | 6.5.10.0 |
 | 類型 | Service Pack發行 |
 | 日期 | 2021 年 8 月 26 日 |
-| 下載URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.10.zip) |
+| Download URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.10.zip) |
 
 ## [!DNL Adobe Experience Manager] 6.5.10.0中包含的內容 {#what-is-included-in-aem}
 
@@ -28,17 +28,17 @@ ht-degree: 2%
 
 [!DNL Adobe Experience Manager] 6.5.10.0中推出的主要功能和增強功能為：
 
-* **增強 [!DNL Content Fragment] 模型和編輯器**:您現在可以使用巢狀模型，為結構化內容建立複雜和自訂 [!DNL Content Fragment] 的模型。內容結構被模組化為基本元素，這些基本元素被建模為子片段。 較高層級片段會參考這些子片段。 更多資料類型增強功能（例如進階驗證規則）進一步增強了[!DNL Content Fragments]內容模型的彈性。 [!DNL Experience Manager] [!DNL Content Fragment]編輯器支援公共編輯器會話中的嵌套片段結構，並增強了諸如結構樹視圖和通過片段層次的頁簽式瀏覽路徑標籤導航。
+* **增強 [!DNL Content Fragment] 模型和編輯器**:您現在可以使用巢狀模型，為結構化內容建立複雜和自訂 [!DNL Content Fragment] 的模型。Content structures are modularized into basic elements that are modeled as sub-fragments. 較高層級片段會參考這些子片段。 更多資料類型增強功能（例如進階驗證規則）進一步增強了[!DNL Content Fragments]內容模型的彈性。 [!DNL Experience Manager] [!DNL Content Fragment]編輯器支援公共編輯器會話中的嵌套片段結構，並增強了諸如結構樹視圖和通過片段層次的頁簽式瀏覽路徑標籤導航。
 
 * **GraphQL API，適[!DNL Content Fragments]**&#x200B;用於：全新的GraphQL API是以JSON格式傳送結構化內容的標準方法。GraphQL查詢可讓用戶端僅要求相關內容項目來呈現體驗。 這種選擇消除了需要在用戶端剖析內容的內容過傳送（在HTTP REST API中可能）。 GraphQL結構衍生自[!DNL Content Fragment]模型，而API回應則採用JSON格式。 在作為[!DNL Cloud Service]的[!DNL Experience Manager]中， [GraphQL查詢會保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching)並處理快取友好GET請求。 在[!DNL Experience Manager] 6.5.10.0中尚不可能。
 
-* **階層管理與未來預覽**:使用者現在有介面可存取其啟動的內容結 [!DNL Experience Manager] 構，包括在啟動中新增和移除頁面的功能。此功能增強了[!DNL Experience Manager]啟動以製作內容版本以供未來發佈的靈活性。 [時間扭曲功](/help/sites-authoring/working-with-page-versions.md#timewarp) 能可讓使用者將啟動次數預覽為未來內容狀態。
+* **階層管理與未來預覽**:使用者現在有介面可存取其啟動的內容結 [!DNL Experience Manager] 構，包括在啟動中新增和移除頁面的功能。This feature enhances the flexibility of [!DNL Experience Manager] launches to author content versions targeted for future publishing. [時間扭曲功](/help/sites-authoring/working-with-page-versions.md#timewarp) 能可讓使用者將啟動次數預覽為未來內容狀態。
 
-* **連線資產**: [!DNL Experience Manager] 將功 [!DNL Connected Assets] 能擴充至適用核 [!DNL Dynamic Media] 心元件中的影像使用。請參閱[使用連線資產](/help/assets/use-assets-across-connected-assets-instances.md)。
+* **Connected Assets**: [!DNL Experience Manager] extends the [!DNL Connected Assets] functionality to the use of [!DNL Dynamic Media] images in the applicable core components. 請參閱[使用連線資產](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-* **連結共用選項以下載資產或轉譯**:將資產和集合共用為連結時，使用者可以選擇是否允許下載原始資產或其轉譯，或是同時使用共用連結。此外，透過連結下載與他們共用之資產的使用者也可以選擇只下載原始資產、僅下載轉譯或兩者。
+* **Link share options to download assets or renditions**: When sharing assets and Collections as link, users can choose whether to allow the download of original assets, or their renditions, or both using the shared link. Also, the users who download the assets shared with them through link get the option to download only the original assets, only the renditions, or both.
 
-* **限制產生的子資產**:管理員可以限制為複合資產( [!DNL Experience Manager] 例如PDF、PowerPoint、InDesign和Keynote檔案)產生的子資產數量。請參閱[管理複合資產](/help/assets/managing-linked-subassets.md#generate-subassets)。
+* **限制產生的子資產**:管理員可以限制為複合資產(如 [!DNL Experience Manager] PDF、PowerPoint、InDesign和Keynote檔案)產生的子資產數。請參閱[管理複合資產](/help/assets/managing-linked-subassets.md#generate-subassets)。
 
 * **Camera Raw支援**:提供支 [!DNL Camera Raw] 援v10.4的 [!DNL Adobe Camera Raw] 新套件。請參閱 [使用 [!DNL Camera Raw]](/help/assets/camera-raw.md)處理影像。
 
@@ -101,13 +101,13 @@ ht-degree: 2%
 * 當作者註解頁面上的任何元件、刪除元件並對刪除操作執行還原時，嘗試在網站主控台中檢視頁面的時間軸資料時，會發生錯誤(NPR-36528)。
 * 頁面屬性大量編輯器的[!UICONTROL 儲存並關閉]選項會儲存變更但不會關閉編輯器(NPR-36527)。
 * 當使用者嘗試將新的文字元件拖放至頁面時，元件會立即消失(NPR-36442)。
-* 當使用者在包含空格的隨需標籤中輸入內容時（系統上不存在的標籤），按下Enter鍵，標籤就會顯示在欄位下。 不過，當[!DNL Content Fragment]儲存並重新開啟時，不會顯示隨選標籤(NPR-36441)。
+* 當使用者在包含空格的隨需標籤中輸入內容時（系統上不存在的標籤），按下Enter鍵，標籤就會顯示在欄位下。 However, when the [!DNL Content Fragment] is saved and reopened, the on-demand tag does not appear (NPR-36441).
 * 透過Dispatcher存取執行個體時，無法刪除範本(NPR-36385)。
 * 移動頁面時，需要手動重新整理瀏覽器，才能轉譯變更(NPR-36381)。
-* 選取元件時，可以按Ctrl+X或Ctrl+C（在Mac上按Command+X或Command+C）剪下或複製元件。 按一下其他元件時，您可以貼上工具列，但無法貼上鍵盤（Ctrl+V或Command+V）(NPR-36379)。
+* 選取元件時，您可以按Ctrl+X或Ctrl+C(以及Mac上的Command+X或Command+C)來剪下或複製元件。 When you click another component, you can paste with the toolbar, but not the keyboard (Ctrl+V or Command+V) (NPR-36379).
 * 當使用者嘗試使用剪刀圖示將元件移至其他位置時，會發生主控台錯誤。 此外，在貼上單一元件時會移動(NPR-36378)。
-* [!DNL Experience Manager] 在WCM或通知上有沒有索引的查詢，會降低效能(NPR-36303)。
-* 當作者還原已刪除繼承元件的繼承時，可用選項是同步所有頁面內容。 即使繼承僅還原於一個元件，內容作者仍須同步完成的頁面。 完全同步可能會導致不想要的內容同步(NPR-34456、CQ-4310183)。
+* [!DNL Experience Manager] has a query without index on WCM or notifications, it slows down performance (NPR-36303).
+* When an author restores the inheritance on the deleted inherited component, the available option is to synchronize all page content. 即使繼承僅還原於一個元件，內容作者仍須同步完成的頁面。 完全同步可能會導致不想要的內容同步(NPR-34456、CQ-4310183)。
 * 製作例項上元件的即時使用不會顯示所有發生次數。 某些元件用於超過1000個頁面，但報表只會顯示約40個頁面(CQ-4323724)。
 * 當網站結構中有許多子頁面時，在欄檢視中載入子頁面的Experience Manager6.5.8比Experience Manager6.4.8.2(CQ-4322766)需要更多時間。
 * 在「轉出頁面」選項上取消勾選「全部」無法運作(NPR-37070)。
@@ -207,7 +207,7 @@ ht-degree: 2%
 
 * [!UICONTROL 建立互動式視訊]頁面上時間軸比例中數字的對比度（秒）現在符合最低的必要明度比，讓對顏色有限的使用者可輕鬆閱讀(CQ-4290699)。
 
-* 螢幕助讀程式現在會在導覽[!UICONTROL 建立互動式視訊]頁面時，朗讀[!UICONTROL 產品名稱]欄位的標籤(CQ-4290697)。
+* Screen readers now announce the label for the [!UICONTROL Product Name] field when navigating the [!UICONTROL Create Interactive Video] page (CQ-4290697).
 
 **已修正的問題**
 
@@ -339,9 +339,9 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **HTML5 Forms**
 
-* 在CRX DE存放庫中將`mfAllowAttachments`屬性的值設為`True`時，在提交HTML5表單時`dataXml`會損毀(NPR-37035)。
+* 在CRX DE存放庫中將`mfAllowAttachments`屬性的值設為`True`時，提交HTML5表單時`dataXml`會損毀(NPR-37035)。
 
-* 使用`dataXml`將XDP呈現為HTML時， [!DNL AEM Forms]會顯示`Page Unresponsive`錯誤(NPR-36631)。
+* 使用`dataXml`呈現XDP作為HTML時， [!DNL AEM Forms]顯示`Page Unresponsive`錯誤(NPR-36631)。
 
 ### 商務 {#commerce-65100}
 
@@ -411,7 +411,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 >[!NOTE]
 >
->如果您未使用Experience ManagerForms，請略過。 Experience ManagerForms中的修正，會在排程的[!DNL Experience Manager] Service Pack發行一週後，透過個別的附加套件提供。
+>如果您未使用Experience Manager Forms，請略過。 Experience Manager Forms中的修正是在排程的[!DNL Experience Manager] Service Pack發行一週後，透過個別的附加套件提供。
 
 1. 確認您已安裝Adobe Experience Manager Service Pack。
 1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)所列出的對應 Forms 附加套件。
@@ -427,16 +427,16 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 >
 >如果您沒有在JEE上使用AEM Forms，請略過。 JEE版Adobe Experience Manager Forms中的修正是透過個別安裝程式提供。
 
-如需有關在JEE上安裝Experience ManagerForms的累積安裝程式和部署後設定的資訊，請參閱[發行說明](jee-patch-installer-65.md)。
+如需有關在JEE上安裝Experience Manager Forms累積安裝程式和部署後設定的資訊，請參閱[發行說明](jee-patch-installer-65.md)。
 
 >[!NOTE]
 >
->在JEE上安裝Experience ManagerForms的Cumulative安裝程式後，請安裝最新的Forms附加元件套件，從`crx-repository\install`資料夾刪除Forms附加元件套件，然後重新啟動伺服器。
+>在JEE上安裝Experience Manager Forms的Cumulative Installer後，請安裝最新的Forms附加元件套件，從`crx-repository\install`資料夾中刪除Forms附加元件套件，然後重新啟動伺服器。
 
 
 ### UberJar {#uber-jar}
 
-適用於Experience Manager6.5.10.0的UberJar位於[Maven Central存放庫](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.10/)中。
+The UberJar for Experience Manager 6.5.10.0 is available in the [Maven Central repository](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.10/).
 
 若要在Maven專案中使用UberJar，請參閱[如何使用UberJar](/help/sites-developing/ht-projects-maven.md)，並在您的專案POM中加入下列相依性：
 
@@ -457,12 +457,12 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 
 以下是[!DNL Experience Manager] 6.5.7.0中標籤為過時的功能清單。在以後的版本中，標籤為過時的功能將先後刪除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
+查看您是否在部署中使用了功能。 Also, plan to change the implementation to use an alternate option.
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| 整合 | **[!UICONTROL AEM雲端服務選擇加入]**&#x200B;畫面已淘汰，因為[!DNL Experience Manager]和[!DNL Adobe Target]整合已在Experience Manager6.5中更新。整合支援Adobe Target標準API。 此API使用透過AdobeIMS和[!DNL Adobe I/O]的驗證，並支援AdobeLaunch日益發揮的作用，以檢測[!DNL Experience Manager]頁面以供分析和個人化，選擇加入精靈在功能上與您無關。 | 透過個別的[!DNL Experience Manager]雲端服務，設定系統連線、AdobeIMS驗證和[!DNL Adobe I/O]整合。 |
-| 連接器 | Experience Manager6.5已不再使用Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR連接器。 | N/A |
+| 整合 | **[!UICONTROL AEM雲端服務選擇加入]**&#x200B;畫面已淘汰，因為[!DNL Experience Manager]和[!DNL Adobe Target]整合已在Experience Manager6.5中更新。整合支援Adobe Target標準API。 此API使用透過Adobe IMS和[!DNL Adobe I/O]的驗證，並支援AdobeLaunch日益發揮的作用，以檢測[!DNL Experience Manager]頁面以進行分析和個人化，選擇加入精靈在功能上並無關聯。 | 透過個別的[!DNL Experience Manager]雲端服務，設定系統連線、Adobe IMS驗證和[!DNL Adobe I/O]整合。 |
+| 連接器 | 適用於Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR連接器已於Experience Manager6.5中淘汰。 | N/A |
 
 ## 已知問題 {#known-issues}
 
@@ -479,7 +479,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 * 當使用者首次選取以最適化表單設定欄位時，「屬性瀏覽器」中不會顯示儲存設定的選項。 在相同編輯器中選取以設定最適化表單的其他一些欄位，即可解決問題。
 
 * 安裝Experience Manager6.5.x.x期間可能會顯示下列錯誤和警告訊息：
-   * 「使用Target Standard API（IMS驗證）在Experience Manager中設定Adobe Target整合時，將體驗片段匯出至Target會導致建立錯誤的選件類型。 Target會建立數個選件，並改為類型「HTML」/來源「Adobe Target Classic」，而非「體驗片段」/來源「Adobe Experience Manager」。
+   * 「使用Target Standard API（IMS驗證）在Experience Manager中設定Adobe Target整合時，將體驗片段匯出至Target會導致建立錯誤的選件類型。 Target會建立數個具有「HTML」/來源「Adobe Target Classic」類型的選件，而非「體驗片段」/來源「Adobe Experience Manager」。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`:在granite/operations/maintenance找不到維護窗口。
    * 使用SUM、MAX和MIN等匯總函式時(CQ-4274424)，適用性表單伺服器端驗證會失敗。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`  — 在granite/operations/maintenance處找不到維護窗口。
@@ -499,7 +499,7 @@ B.使用套件管理器](/help/sites-administering/package-manager.md#package-sh
 這些網站僅供客戶使用。 如果您是Adobe，且需要存取權，請聯絡您的客戶經理。
 
 * [透過licensing.adobe.com下載產品](https://licensing.adobe.com/)
-* 請參閱[如何聯絡Adobe客戶服務](https://experienceleague.adobe.com/docs/customer-one/using/home.html)。
+* 請參閱[如何聯絡Adobe客戶支援](https://experienceleague.adobe.com/docs/customer-one/using/home.html)。
 
 >[!MORELIKETHIS]
 >

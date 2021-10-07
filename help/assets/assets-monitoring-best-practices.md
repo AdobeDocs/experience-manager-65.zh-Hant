@@ -3,11 +3,11 @@ title: 監視 [!DNL Assets] 部署的最佳做法
 description: 部署後監控 [!DNL Adobe Experience Manager] 部署的環境和效能的最佳實務。
 contentOwner: AG
 role: Admin, Architect
-feature: 資產管理
+feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1668'
 ht-degree: 1%
 
 ---
@@ -199,5 +199,5 @@ ht-degree: 1%
 * 使用工作流程主控台來確認您的工作流程是否如預期般執行。 如有可能，將多個工作流程簡化為單一工作流程。
 * 重新訪問即時監視，並查找任何特定資源的其他瓶頸或高消費者。
 * 調查來自客戶端網路的輸出點和指向[!DNL Experience Manager]部署網路（包括調度程式）的入口點。 這些經常是瓶頸區。 如需詳細資訊，請參閱[資產網路考量事項](/help/assets/assets-network-considerations.md)。
-* 放大您的[!DNL Experience Manager]伺服器。 您的[!DNL Experience Manager]部署可能大小不足。 Adobe客戶服務可協助您識別伺服器的大小是否不足。
+* 放大您的[!DNL Experience Manager]伺服器。 您的[!DNL Experience Manager]部署可能大小不足。 Adobe客戶支援可協助您識別伺服器的大小是否不足。
 * 檢查`access.log`和`error.log`檔案，以了解是否有問題發生的前後條目。 尋找可能表示自訂程式碼異常的模式。 將它們新增至您監視的事件清單。

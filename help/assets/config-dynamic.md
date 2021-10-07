@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
 source-wordcount: '7792'
 ht-degree: 1%
@@ -263,11 +263,11 @@ Dynamic Media影像傳送的運作方式是從「Experience Manager作者」發�
 
 ### 設定驗證 {#setting-up-authentication}
 
-在作者上設定復寫驗證，以便您可將影像復寫至Dynamic Media影像傳送服務。 您先取得KeyStore，然後將其儲存在&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;使用者下，並加以設定。 在配置過程中，您的公司管理員收到了一封歡迎電子郵件，其中包含KeyStore檔案和必要的憑據。 如果您未收到此資訊，請聯絡Adobe客戶服務。
+在作者上設定復寫驗證，以便您可將影像復寫至Dynamic Media影像傳送服務。 您先取得KeyStore，然後將其儲存在&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;使用者下，並加以設定。 在配置過程中，您的公司管理員收到了一封歡迎電子郵件，其中包含KeyStore檔案和必要的憑據。 如果您未收到此資訊，請聯絡Adobe客戶支援。
 
 **若要設定驗證：**
 
-1. 如果您尚未擁有檔案和密碼，請連絡Adobe客戶服務以取得您的KeyStore檔案和密碼。 此資訊是布建的必要部分。 它會將金鑰關聯至您的帳戶。
+1. 如果您尚未擁有檔案和密碼，請連絡Adobe客戶支援以取得您的KeyStore檔案和密碼。 此資訊是布建的必要部分。 它會將金鑰關聯至您的帳戶。
 
 1. 在Experience Manager中，選擇Experience Manager徽標以訪問全局導航控制台，然後導航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用戶]**。
 
@@ -290,9 +290,9 @@ Dynamic Media影像傳送的運作方式是從「Experience Manager作者」發�
 
    * 在&#x200B;**[!UICONTROL 新別名]**&#x200B;欄位中，輸入您以後要在複製配置中使用的別名的名稱。 例如，您可以使用`replication`作為別名。
    * 選擇&#x200B;**[!UICONTROL KeyStore檔案]**。 導航到Adobe提供給您的KeyStore檔案，選擇它，然後選擇&#x200B;**[!UICONTROL Open]**。
-   * 在&#x200B;**[!UICONTROL KeyStore File Password]**&#x200B;欄位中，輸入KeyStore File密碼。 此密碼為&#x200B;**不**&#x200B;您在步驟5中建立的KeyStore密碼，但是是設定期間發送給您的歡迎電子郵件中提供的KeyStore檔案密碼Adobe。 如果您未收到KeyStore檔案密碼，請聯絡Adobe客戶服務。
-   * 在&#x200B;**[!UICONTROL 私密金鑰密碼]**&#x200B;欄位中，輸入私密金鑰密碼（可以是上一步中提供的相同私密金鑰密碼）。 Adobe會在布建期間，在傳送給您的歡迎電子郵件中提供私密金鑰密碼。 如果您未收到私密金鑰密碼，請聯絡Adobe客戶服務。
-   * 在&#x200B;**[!UICONTROL 私鑰別名]**&#x200B;欄位中，輸入私鑰別名。 例如， `*companyname*-alias`。 Adobe會在布建期間，於您收到的歡迎電子郵件中提供私密金鑰別名。 如果您未收到私密金鑰別名，請聯絡Adobe客戶服務。
+   * 在&#x200B;**[!UICONTROL KeyStore File Password]**&#x200B;欄位中，輸入KeyStore File密碼。 此密碼為&#x200B;**不**&#x200B;您在步驟5中建立的KeyStore密碼，但是是設定期間發送給您的歡迎電子郵件中提供的KeyStore檔案密碼Adobe。 如果您未收到KeyStore檔案密碼，請聯絡Adobe客戶支援。
+   * 在&#x200B;**[!UICONTROL 私密金鑰密碼]**&#x200B;欄位中，輸入私密金鑰密碼（可以是上一步中提供的相同私密金鑰密碼）。 Adobe會在布建期間，在傳送給您的歡迎電子郵件中提供私密金鑰密碼。 如果您未收到私密金鑰密碼，請聯絡Adobe客戶支援。
+   * 在&#x200B;**[!UICONTROL 私鑰別名]**&#x200B;欄位中，輸入私鑰別名。 例如， `*companyname*-alias`。 Adobe會在布建期間，於您收到的歡迎電子郵件中提供私密金鑰別名。 如果您未收到私密金鑰別名，請聯絡Adobe客戶支援。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -309,7 +309,7 @@ Dynamic Media影像傳送的運作方式是從「Experience Manager作者」發�
 
    * **[!UICONTROL 已啟用]**  — 選中此複選框以啟用複製代理。
    * **[!UICONTROL 地區]**  — 設為適當的地區：北美、歐洲或亞洲
-   * **[!UICONTROL 租用戶ID]**  — 此值是發佈至復寫服務的公司/租用戶名稱。此值是Adobe在布建期間傳送給您的歡迎電子郵件中提供的租用戶ID。 如果您未收到此資訊，請聯絡Adobe客戶服務。
+   * **[!UICONTROL 租用戶ID]**  — 此值是發佈至復寫服務的公司/租用戶名稱。此值是Adobe在布建期間傳送給您的歡迎電子郵件中提供的租用戶ID。 如果您未收到此資訊，請聯絡Adobe客戶支援。
    * **[!UICONTROL 金鑰存放別名]**  — 此值與在設定驗 **證** 中產生金鑰時所設 [定的新別名值相同](#setting-up-authentication);例如 `replication`。（請參閱[設定驗證](#setting-up-authentication)中的步驟7。）
    * **[!UICONTROL 金鑰存放區密碼]**  — 點選「建立金鑰存放區」時建立的金 **[!UICONTROL 鑰存放區密碼]**。Adobe未提供此密碼。 請參閱[設定驗證](#setting-up-authentication)的步驟5。
 
@@ -501,7 +501,7 @@ Adobe建議您對配置執行端對端測試。
 
 Dynamic MediaCloud Service支援混合發佈及傳送影像、視訊、視訊分析和視訊編碼等功能。
 
-在配置中，必須輸入註冊ID、視頻服務URL、映像服務URL、複製服務URL和設定身份驗證。 此資訊會在帳戶布建程式期間以電子郵件傳送給您。 若您未收到此資訊，請連絡您的Adobe Experience Manager管理員或Adobe客戶服務以取得資訊。
+在配置中，必須輸入註冊ID、視頻服務URL、映像服務URL、複製服務URL和設定身份驗證。 此資訊會在帳戶布建程式期間以電子郵件傳送給您。 若您未收到此資訊，請連絡您的Adobe Experience Manager管理員或Adobe客戶支援以取得資訊。
 
 >[!NOTE]
 設定Dynamic MediaCloud Services之前，請務必先設定您的發佈執行個體。 您也必須先設定復寫，才能設定Dynamic MediaCloud Services。
@@ -697,8 +697,8 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
    <td><p>開頭為<strong>image/</strong></p> <p>包含<strong>application/</strong>，並以<strong>set</strong>結尾。</p> <p>開頭為<strong>video/</strong></p> </td>
    <td><p>您可以配置傳輸URI以指向Experience Manager發佈伺服器，而不是AdobeDynamic Media雲複製服務URL。 設定此篩選器可讓Dynamic Media Classic傳送資產，而非Experience Manager發佈例項。</p> <p>現成可用的「filter-images」、「filter-sets」和「filter-video」將：</p>
     <ul>
-     <li>包含PTIFF影像、代理視訊轉譯和復寫的中繼資料。 不過，由於JCR中不存在這些JCR(針對執行中的Experience Manager- Dynamic Media Classic整合)，因此JCR無法有效運作。</li>
-     <li>排除原始影像、靜態影像轉譯、原始視訊和靜態縮圖轉譯之外。 相反地，Dynamic Media Classic提供影像和視訊資產。</li>
+     <li>包含PTIFF影像、代理視訊轉譯和復寫的中繼資料。 不過，由於JCR中不存在這些JCR(針對執行中的Experience Manager)- Dynamic Media Classic整合，因此IT無法有效運作。</li>
+     <li>排除原始影像、靜態影像轉譯、原始視訊和靜態縮圖轉譯之外。 相反地，Dynamic Media Classic會提供影像和視訊資產。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -770,7 +770,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 
    若要讓此篩選器套用至所有影像，而不論其格式為何，請將值設為`image/*`，其中`*`是套用至任何格式之所有影像的規則運算式。
 
-   要使濾鏡僅應用於類型為JPEG的影像，請輸入一個值`image/jpeg`。
+   要讓篩選器僅應用於類型JPEG的影像，請輸入`image/jpeg`值。
 
 1. 定義您要包含或排除在復寫中的轉譯。
 
@@ -788,7 +788,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 
    ![chlimage_1-513](assets/chlimage_1-4.png)
 
-   使用上述範例，如果您只想複製PTIFF（金字塔TIFF），則可輸入`+cqdam,*`，其中包含以`cqdam`開頭的所有轉譯。 在範例中，轉譯為`cqdam.pyramid.tiff`。
+   使用上述範例，如果您只想複製PTIFF(金字塔TIFF)，則可輸入`+cqdam,*`，其中包含以`cqdam`開頭的所有轉譯。 在範例中，轉譯為`cqdam.pyramid.tiff`。
 
    如果只想複製原始檔案，則輸入`+original`。
 
@@ -799,7 +799,7 @@ Experience Manager6.4及更新版本會將此預設集儲存在`/conf/global/set
 >[!NOTE]
 Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您可以選擇配置Dynamic Media Image Server以符合特定規格或需求，以微調安裝。
 
-**必備**  -  ** 配置Dynamic Media Image Server之前，請確保Windows®的VM包括Microsoft® Visual C++庫的安裝。必須有這些程式庫才能執行Dynamic Media Image Server。 您可以在[此處](https://www.microsoft.com/en-us/download/details.aspx?id=26999)下載Microsoft® Visual C++ 2010可再分發包(x64)。
+**必備**  -  ** 設定Dynamic Media Image Server之前，請確定您的Windows® VM包含Microsoft® Visual C++程式庫的安裝。必須有這些程式庫才能執行Dynamic Media Image Server。 您可以在[此處](https://www.microsoft.com/en-us/download/details.aspx?id=26999)下載Microsoft® Visual C++ 2010可再發行套件(x64)。
 
 配置Dynamic Media Image Server設定：
 
@@ -842,7 +842,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您
 
 ### 預設資訊清單設定 {#default-manifest-settings}
 
-預設資訊清單可讓您設定用於產生Dynamic Media傳送回應的預設值。 您可以微調質量（JPEG質量、解析度、重採樣模式）、快取（過期），並防止渲染太大的影像(defaultpix、defaultthumbpix、maxpix)。
+預設資訊清單可讓您設定用於產生Dynamic Media傳送回應的預設值。 您可以微調質量(JPEG質量、解析度、重採樣模式)、快取（過期），並防止渲染太大的影像(defaultpix、defaultthumbpix、maxpix)。
 
 預設資訊清單配置的位置取自&#x200B;**[!UICONTROL Adobe CQ Scene7 PlatformServer]**&#x200B;套件組合的&#x200B;**[!UICONTROL 目錄根]**&#x200B;預設值。 預設情況下，此值位於&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**&#x200B;內的以下路徑
 
@@ -862,11 +862,11 @@ Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您
 
 | 屬性 | 預設值 | 說明 |
 | --- | --- | --- |
-| `bkgcolor` | `FFFFFF` | 預設背景顏色。 RGB值，用於填充不包含實際影像資料的回復影像的任何區域。 另請參閱影像伺服API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api)。 |
+| `bkgcolor` | `FFFFFF` | 預設背景顏色。 RGB值，用於填入不含實際影像資料的回覆影像的任何區域。 另請參閱影像伺服API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api)。 |
 | `defaultpix` | `300,300` | 預設視圖大小。 如果請求未使用wid=、hei=或scl=明確指定檢視大小，則伺服器會限制回覆影像不大於此寬度和高度。<br>指定為兩個整數，0或更大，以逗號分隔。寬度和高度（像素）。 可將任一值或兩個值設為0，以保持它們不受約束。 不適用於巢狀/內嵌的請求。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) 閱影像伺服API中的DefaultPixin 。<br>不過，您通常是使用檢視器預設集或影像預設集來傳送資產。Defaultpix僅適用於未使用檢視器預設集或影像預設集的資產。 |
 | `defaultthumbpix` | `100,100` | 預設縮圖大小。 用於縮圖請求(`req=tmb`)，而非屬性：:DefaultPix。<br>伺服器會將回覆影像限制為不大於此寬度和高度。如果縮圖要求(`req=tmb`)未明確指定大小，且未明確使用`wid=`、`hei=`或`scl=`指定檢視大小，則此動作為true。<br>指定為兩個整數，0或更大，以逗號分隔。寬度和高度（像素）。 可將任一值或兩個值設為0，以保持它們不受約束。<br>不適用於巢狀/內嵌的請求。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 閱影像伺服API中的DefaultThumbPix。 |
-| `expiration` | `36000000` | 預設的客戶端快取存留時間。 提供預設過期時間間隔，以備特定目錄記錄不包含有效的目錄：：過期值時使用。<br>實數，0或更高。自回覆資料產生以來直到過期的毫秒數。 設為0一律會立即讓回覆影像過期，這會有效停用用戶端快取。 依預設，此值會設為10小時，這表示如果發佈新影像，舊影像需要10小時才會離開使用者的快取。 如果您需要快取，請連絡客戶服務。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 閱影像提供API中的過期。 |
-| `jpegquality` | `80` | 預設JPEG編碼屬性。 指定JPEG回復影像的預設屬性。<br>整數和標幟，以逗號分隔。第一個值在1..100範圍內，並定義品質。 對於正常行為，第二個值可以是0，或者禁用JPEG編碼器採用的RGB色度下採樣。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 閱影像提供API中的JpegQualitive 。 |
+| `expiration` | `36000000` | 預設的客戶端快取存留時間。 提供預設過期時間間隔，以備特定目錄記錄不包含有效的目錄：：過期值時使用。<br>實數，0或更高。自回覆資料產生以來直到過期的毫秒數。 設為0一律會立即讓回覆影像過期，這會有效停用用戶端快取。 依預設，此值會設為10小時，這表示如果發佈新影像，舊影像需要10小時才會離開使用者的快取。 如果您需要快取，請盡快清除，請聯絡客戶支援。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 閱影像提供API中的過期。 |
+| `jpegquality` | `80` | 預設JPEG編碼屬性。 指定JPEG回覆影像的預設屬性。<br>整數和標幟，以逗號分隔。第一個值在1..100範圍內，並定義品質。 對於正常行為，第二個值可以是0，或者禁用JPEG編碼器採用的RGB色度下採樣。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 閱影像提供API中的JpegQualitive 。 |
 | `maxpix` | `2000,2000` | 回覆影像大小限制。 傳回給用戶端的最大回覆影像寬度和高度。<br>如果請求導致寬度或高度大於屬性：:MaxPix的回覆影像，則伺服器會傳回錯誤。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 閱影像伺服API中的MaxPixin 。 |
 | `resmode` | `SHARP2` | 預設重新取樣模式。 指定用於縮放影像資料的預設重採樣和插值屬性。<br>在請 `resMode=` 求中未指定時使用。<br>允許的 `BILIN`值包 `BICUB`括、或 `SHARP2`。<br>列舉。為`bilin`設為2，為`bicub`設為3，為`sharp2`插值模式設為4。 使用`sharp2`獲得最佳結果。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 閱影像伺服API中的ResMode。 |
 | `resolution` | `72` | 預設對象解析度。 提供預設對象解析，以防特定目錄記錄不包含有效的目錄：:Resolution值。<br>實數，大於0。通常以每英吋像素表示，但也可以以其他單位表示，例如每米像素。<br>另請參 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) 閱影像伺服API中的解析度。 |
@@ -876,7 +876,7 @@ Dynamic Media在啟用](#enabling-dynamic-media)後即可運作[。 不過，您
 
 Dynamic Media色彩管理可讓您為預覽對資產進行色彩校正。
 
-透過色彩校正，擷取的資產可保留其色彩空間（RGB、CMYK、灰色），以及在產生的金字塔TIFF轉譯中內嵌的色彩描述檔。 當您請求動態轉譯時，影像顏色會校正到目標顏色空間中。 您可以在JCR的Dynamic Media發佈設定中設定輸出顏色設定檔。
+透過色彩校正，擷取的資產可保留其色彩空間(RGB、CMYK、灰色)，以及在產生的金字塔TIFF轉譯中內嵌的色彩描述檔。 當您請求動態轉譯時，影像顏色會校正到目標顏色空間中。 您可以在JCR的Dynamic Media發佈設定中設定輸出顏色設定檔。
 
 Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC定義。
 
@@ -954,7 +954,7 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html">iccprofilescrgb</a></td>
    <td>字串</td>
    <td>&lt;empty&gt;</td>
-   <td>預設RGB顏色配置檔案的名稱，用於沒有嵌入顏色配置檔案的RGB影像</td>
+   <td>用於沒有嵌入顏色配置檔案的RGB影像的預設RGB顏色配置檔案的名稱</td>
   </tr>
   <tr>
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html">icprofilersccmank</a></td>
@@ -1011,12 +1011,12 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
   <tr>
    <td>AppleRGB</td>
    <td>RGB</td>
-   <td>Apple RGB</td>
+   <td>AppleRGB</td>
   </tr>
   <tr>
    <td>CIERGB</td>
    <td>RGB</td>
-   <td>CIE RGB</td>
+   <td>CIERGB</td>
   </tr>
   <tr>
    <td>CobatedFogra27</td>
@@ -1036,7 +1036,7 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
   <tr>
    <td>ColorMatchRGB</td>
    <td>RGB</td>
-   <td>ColorMatch RGB</td>
+   <td>ColorMatchRGB</td>
   </tr>
   <tr>
    <td>歐洲ISOC已處理</td>
@@ -1096,7 +1096,7 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
   <tr>
    <td>ProPhoto</td>
    <td>RGB</td>
-   <td>ProPhoto RGB</td>
+   <td>ProPhotoRGB</td>
   </tr>
   <tr>
    <td>PS4Default</td>
@@ -1173,7 +1173,7 @@ Adobe的色彩管理使用ICC（國際色彩協會）設定檔，此格式由ICC
 這麼做會執行下列動作：
 
 * 啟用RGB和CMYK影像的顏色校正。
-* 沒有顏色配置檔案的RGB影像假定位於&#x200B;*sRGB*&#x200B;顏色空間中。
+* 沒有顏色描述檔的RGB影像假設位於&#x200B;*sRGB*&#x200B;顏色空間中。
 * 假定沒有顏色輪廓的CMYK影像位於&#x200B;*WebCobated*&#x200B;顏色空間中。
 * 傳回RGB輸出的動態轉譯，會以*sRGB *色彩空間傳回。
 * 傳回CMYK輸出的動態轉譯，會在&#x200B;*WebCobated*&#x200B;色域中傳回。
