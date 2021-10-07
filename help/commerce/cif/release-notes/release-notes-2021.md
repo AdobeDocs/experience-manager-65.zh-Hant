@@ -2,10 +2,10 @@
 title: AEM內容與商務發行說明2021年
 description: AEM內容與商務發行說明2021年
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: fd973cb3693872e4850f860a625cab70553d2754
+source-git-commit: a401955e4b163a8062a498ea897d4a3d95ae0208
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 8%
+source-wordcount: '1135'
+ht-degree: 9%
 
 ---
 
@@ -28,6 +28,34 @@ ht-degree: 8%
 | CIF附加元件 | 最低：AEM 6.5.7、Magento2.3.5 GraphQL結構 |
 | CIF核心元件 | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 發行日期：2021年9月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加元件 | 2021.09.27 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
+| CIF核心元件 | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
+| CIF Venia參考站 | 2021.09.23 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.09.23) |
+
+### 新增功能 {#what-is-new-september}
+
+* Sites編輯器中新的「關聯商務內容」索引標籤可快速存取目前內容的相關AEM產品內容，進而提高作者效率
+
+   ![關聯商務內容](/help/assets/CIF/associated-commerce-content.png)
+
+* 改善產品選擇器UI，提供更佳的使用者體驗、更高的效率，以及對複雜產品目錄的支援
+
+   ![新產品選擇器](/help/assets/CIF/product-picker.png)
+
+* 在導航元件中遵循「include_in_menu」屬性
+
+### 錯誤修正 {#bug-fixes-september}
+
+* 菜單快取刷新未如預期工作
+
+* AEM CS部署步驟期間和不使用clientside元件時的JS錯誤
+
+* 無法在具有sling:configs節點的資料夾中建立CIF雲端設定
 
 ## 發行日期：2021年8月
 
@@ -70,7 +98,7 @@ ht-degree: 8%
    * 以製作模式呈現階段產品資料的視覺指標，可更清楚掌握即將進行的變更
    * 適用於內容與商務頁面的新Sitemap元件
 
-* 支援AEM Storefront的[Adobe商務Sensei產品建議(由Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供技術支援，使用預先定義或即時建立的建議)
+* 支援AEM Storefront的[Adobe Commerce Sensei產品建議(由Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供技術支援，使用預先定義或即時建立的建議)
 
 ## 發行日期：2021年6月
 
@@ -85,7 +113,7 @@ ht-degree: 8%
 * 內容片段的新CIF產品和類別參考資料類型(包括 產品/類別選擇器UI支援)
 * 新商務內容片段核心元件
 * AEM後端支援的全文商務搜尋
-* 商務核心元件支援Adobe商務Sensei Recs資料收集
+* 商務核心元件支援Adobe Commerce Sensei Recs資料收集
 * 改善類別頁面的SEO易記URL
 * 支援每個網站/設定的自訂HTTP標題
 
