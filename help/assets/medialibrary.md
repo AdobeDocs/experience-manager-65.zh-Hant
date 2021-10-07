@@ -5,21 +5,13 @@ contentOwner: AG
 role: Architect, Leader
 feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
-source-git-commit: 5462eb18c55a509712dab8fdbb653eb2d1889763
+source-git-commit: 64ac790579db921aa16f32c51592f0b701237df9
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
 
-<!--
-
-Define Media Lib
-Define req for it
-Define use cases
-Define what is not included
-
--->
 
 # 使用Media Library進行基本資產管理 {#manage-assets-using-media-library}
 
@@ -43,9 +35,9 @@ Experience Manager Assets提供企業級DAM功能。 資產功能透過單一套
 
 ## 使用Media Library {#use-media-library}
 
-Media Library廣泛涵蓋下列使用案例：
+Media Library提供下列使用案例的基本DAM功能：
 
-* 為使用[!DNL Adobe Experience Manager Sites]建立的網頁提供基本DAM功能。
+* 使用[!DNL Adobe Experience Manager Sites]建立的網頁。
 * 使用[!DNL Adobe Experience Manager Forms]建立的最適化表單和通訊。
 * 使用[!DNL Adobe Experience Manager Screens]建立的數位螢幕體驗。
 * [!DNL Assets] 無頭操作的HTTP REST API。
