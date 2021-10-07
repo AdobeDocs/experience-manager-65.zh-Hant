@@ -2,14 +2,14 @@
 title: ' [!DNL Adobe Experience Manager] 6.5的一般發行說明'
 description: '[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式，以及詳細的變更清單。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f8fcfa9e09167cd4dbaafe938bcbe3ee6ece270f
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 5%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5{#general-release-notes-for-adobe-experience-manager}的一般發行說明
+# [!DNL Adobe Experience Manager] 6.5的一般發行說明{#general-release-notes-for-adobe-experience-manager}
 
 ## 發行資訊 {#release-information}
 
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 ![AEM 6.5登入畫面](/help/assets/assets/aem65-login-v4.png)
 
-## 新功能 {#what-s-new}
+## 新增功能 {#what-s-new}
 
 [!DNL Adobe Experience Manager] 6.5是6.4程式碼基底 [!DNL Adobe Experience Manager] 的升級版本。此版本提供全新的增強功能、重要客戶修正、高優先順序的客戶增強功能，以及針對產品穩定化的一般錯誤修正。此外也包含最多SP4的[!DNL Adobe Experience Manager] 6.4 Service Pack版本。
 
@@ -42,17 +42,17 @@ ht-degree: 5%
 
 快速入門使用Eclipse Jetty 9.4.15作為servlet引擎。
 
-#### Java支援{#java-support}
+#### Java支援  {#java-support}
 
 * Java 11的新支援，以及已支援的Java 8。
 * 為獲得最佳效能，請用其他值覆蓋預設GC值。 有關詳細資訊，請參閱[install and update](/help/sites-deploying/custom-standalone-install.md)部分。
 * Java 11和Java 8維護更新會由Adobe發佈，供AEM相關專案的客戶使用，但不可從Oracle公開取得。
 
-#### Java開發{#java-development}
+#### Java開發 {#java-development}
 
 * 現在有[兩個版本的Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)，一個帶有未標籤為要淘汰的公用介面的推薦版本，以及一個包含標籤為要淘汰的介面的版本。
 
-#### 使用者介面{#user-interface}
+#### 使用者介面 {#user-interface}
 
 UI已經過多種增強功能，讓工作效率更高，使用更輕鬆。
 
@@ -66,7 +66,7 @@ UI已經過多種增強功能，讓工作效率更高，使用更輕鬆。
 >
 >Adobe不打算對傳統UI進行進一步的增強。 AEM 6.5已包含傳統UI，而從舊版升級的客戶可繼續依原樣使用。 請注意，舊版UI仍完全受支援。 [了解詳情](/help/sites-deploying/ui-recommendations.md)。
 
-#### 搜索和索引{#indexing-and-search}
+#### 搜尋和索引 {#indexing-and-search}
 
 * 在Oak中搜尋現在支援動態Facet。 例如，資產搜尋中的篩選邊欄會顯示預估的結果量。
 * QueryBuilder已擴充，以提供含有動態Facet的結果。
@@ -75,7 +75,7 @@ UI已經過多種增強功能，讓工作效率更高，使用更輕鬆。
 
 * 執行AEM 6.2、6.3和6.4的客戶支援直接就地升級至AEM 6.5。使用5.x或6.0/6.1的客戶若想使用就地升級，需先升級至6.4，然後升級至6.5，或透過將執行個體之間的內容直接傳輸至AEM 6.5來升級。
 
-#### 專案和工作流程{#projects-and-workflows}
+#### 專案和工作流程 {#projects-and-workflows}
 
 * 6.4版中推出的新工作流程模型編輯器已經過改良，現在包含更多操作，例如複製和發佈、工作流程步驟中的變數支援，以及增強的OR和AND分割。
 
@@ -83,7 +83,7 @@ UI已經過多種增強功能，讓工作效率更高，使用更輕鬆。
 
 [AEM Sites和Add-ons](/help/release-notes/sites.md)中變更的完整清單。
 
-#### 托管單頁應用{#managed-single-page-apps}
+#### 托管單頁應用程式 {#managed-single-page-apps}
 
 頁面編輯器新增了在用戶端轉譯體驗內內容編輯內容及撰寫/配置的功能(亦稱為[ SPA Editor](/help/sites-developing/spa-architecture.md))。 使用JavaScript架構建立的現有單頁應用程式React或Angular可透過AEM SJ SDK擴充，讓從業人員可編輯。
 
@@ -92,7 +92,7 @@ UI已經過多種增強功能，讓工作效率更高，使用更輕鬆。
 * 使用「模板編輯器」編輯和配置AEM的可編輯部分
 * 使用多網站管理來建立國家/地區、特許經營或白色標籤的SPA體驗
 
-#### 無頭式內容管理{#headless-content-management}
+#### 無頭式內容管理 {#headless-content-management}
 
 AEM能以各種格式和從堆疊的不同層級提供內容。 自2008年起，部分SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)和[POSTServlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)便已推出。 [AEM 6.3中導入了內容服務([Sling Model Exporter](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html))，且是AEM SJ SDK用來水合物化單頁應用程式的方法。 [Assets適用的HTTP API](/help/assets/mac-api-assets.md)是CRUD API，已針對AEM 6.5擴充。
 
@@ -102,7 +102,7 @@ AEM能以各種格式和從堆疊的不同層級提供內容。 自2008年起，
 * 透過內容服務公開內容片段清單，內容片段清單核心元件](https://opensource.adobe.com/aem-core-wcm-components/library/content-fragment-list.html)。[
 * [顯示每](https://opensource.adobe.com/aem-core-wcm-components/library.html) 個元件之預設內容服務JSON輸出的核心元件庫
 
-#### 螢幕附加元件{#screens-add-on}
+#### Screens附加元件 {#screens-add-on}
 
 在從互動式資訊站到數位看板的所有數位顯示器上，有效率地設計、提供和最佳化體驗。
 
@@ -129,7 +129,7 @@ AEM能以各種格式和從堆疊的不同層級提供內容。 自2008年起，
 
 AEM 6.5導入了下列功能和增強功能，以提升AEM使用者、DAM角色以及相關創意和行銷角色的生產力。
 
-#### 與Adobe Creative Cloud的整合{#integration-with-adobe-creative-cloud}
+#### 與Adobe Creative Cloud整合 {#integration-with-adobe-creative-cloud}
 
 推出[Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)，這是適用於在Adobe Creative Cloud應用程式(包括Photoshop、Illustrator和InDesign)中工作的創意使用者的應用程式內體驗，可簡化創意人員與行銷人員在內容建立程式中的協作。 AEM案頭應用程式持續支援使用者在案頭上使用AEM資產（使用任何檔案類型和任何案頭應用程式）的需求。
 
@@ -141,7 +141,7 @@ AEM 6.5導入了下列功能和增強功能，以提升AEM使用者、DAM角色�
 
 「連線資產」功能可針對大型部署使用許多AEM Sites部署，而這些部署需要運用中央AEM Assets DAM部署的資產。 它可改善集中管理資產的控管，同時為各種Sites部署提供高效率的資產。
 
-### 動態媒體 {#dynamic-media}
+### Dynamic Media {#dynamic-media}
 
 Dynamic Media在AEM Assets中提供增強的多媒體製作和傳遞功能，提供身臨其境且個人化的尖端體驗。 透過單一高品質主資產，您可以善用我們進階的雲端轉譯、智慧型裁切和同級最佳的檢視器，以業界領先的效能提供最吸引人的體驗。
 
@@ -152,7 +152,7 @@ Dynamic Media在AEM Assets中提供增強的多媒體製作和傳遞功能，提
 * 增強的協助工具支援
 * 熱連結保護
 
-#### 使用者體驗與搜尋{#user-experience-and-search}
+#### 使用者體驗與搜尋 {#user-experience-and-search}
 
 重要的增強功能可提供動態搜尋刻面，協助您更快找到合適的資產，並能從任何資料夾或搜尋結果中選取所有資產，以更有效率地管理多個資產。
 
@@ -190,15 +190,15 @@ AEM 6.5為Communities新增功能和增強功能。 此版本的重點為：
 
 您可以將Livefyre與AEM 6.5執行個體整合。 請參閱[如何整合Livefyre與AEM](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)。
 
-### 利用以客戶為中心的開發{#leverage-customer-focused-development}
+### 利用以客戶為中心的開發 {#leverage-customer-focused-development}
 
 Adobe使用以客戶為中心的開發模型，允許客戶在規格、開發和測試期間為開發流程的所有階段作出貢獻。 在此過程中，我們感謝所有貢獻客戶和合作夥伴。
 
-Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶為重點的錯誤解決方法和增強功能要求開發。 [Adobe Marketing Cloud支援入口網站](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html)與Adobe增強和缺陷追蹤系統整合。 如有可能，可向客戶服務確認並解決客戶問題。 呈報至研發時，會擷取所有客戶資訊，並用於優先順序和報告用途。 在開發中，優先考慮付費支援、保證問題和客戶付費的增強功能。
+Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶為重點的錯誤解決方法和增強功能要求開發。 [Experience Manager支援門戶](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support)與Adobe增強和缺陷跟蹤系統整合。 客戶問題會盡可能由客戶支援團隊識別和解決。 呈報至研發時，會擷取所有客戶資訊，並用於優先順序和報告用途。 在開發中，優先考慮付費支援、保證問題和客戶付費的增強功能。
 
 此優先順序排列程式已產生750多項以客戶為重點的變更，已在AEM 6.5中修正。
 
-## 屬於版本{#list-of-files-that-are-part-of-the-release}的檔案清單
+## 屬於此版本的檔案清單 {#list-of-files-that-are-part-of-the-release}
 
 **Foundation**
 
@@ -208,7 +208,7 @@ Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶
 * Eclipse IDE的外掛程式（[了解詳情並下載](/help/sites-developing/aem-eclipse.md)）
 
 * 方括弧程式碼編輯器的擴充功能（[了解詳情並下載](/help/sites-developing/aem-brackets.md)）
-* Maven/Gradle相依性（[下載連結](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.5.0/)）
+* Maven/Gradle相依性（[下載連結](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/)）
 
 **網站**
 
@@ -235,10 +235,10 @@ Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶
 * 新增增強PDF模擬轉譯器的套件（[了解詳情](/help/assets/aem-pdf-rasterizer.md)）
 * 添加擴展RAW影像支援的包（[了解詳情](/help/assets/camera-raw.md)）
 
-**表單**
+**Forms**
 
-* [AEM Forms功能的套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
-* [AEM Forms OSGi用戶端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
+* [AEM Forms功能的套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [AEM Forms OSGi用戶端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
 
 ## 語言 {#languages}
 
@@ -257,13 +257,13 @@ Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶
 
 [!DNL Experience Manager] 6.5已通過GB18030-2005 CITS認證，可使用中文編碼標準。
 
-## 安裝和更新{#install-update}
+## 安裝和更新 {#install-update}
 
 有關安裝要求，請參閱[安裝說明](/help/sites-deploying/custom-standalone-install.md)。
 
 有關詳細說明，請參閱[升級文檔](/help/sites-deploying/upgrade.md)。
 
-## 支援的平台{#supported-platforms}
+## 支援平台 {#supported-platforms}
 
 找到支援平台的完整清單，包括[AEM 6.5技術要求](/help/sites-deploying/technical-requirements.md)上的支援級別。
 
@@ -281,7 +281,7 @@ Adobe不斷評估產品中的功能，並隨著時間的推移計畫用更強大
 
 [已知問題清單](/help/release-notes/known-issues.md)
 
-### 產品下載與支援（限制網站）{#product-download-and-support-restricted-sites}
+### 產品下載與支援（受限網站） {#product-download-and-support-restricted-sites}
 
 以下網站僅供客戶使用。 如果您是Adobe，且需要存取權，請聯絡您的客戶經理。
 

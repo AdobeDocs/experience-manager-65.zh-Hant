@@ -1,8 +1,8 @@
 ---
 title: 在AEM Forms中觀看資料夾
-seo-title: 在AEM Forms中觀看資料夾
+seo-title: Watched folder in AEM Forms
 description: 管理員可以將資料夾置於監視資料夾中，並在檔案置於監視資料夾中時啟動工作流程、服務或指令碼操作。
-seo-description: 管理員可以將資料夾置於監視資料夾中，並在檔案置於監視資料夾中時啟動工作流程、服務或指令碼操作。
+seo-description: An administrator can put a folder on watch and start a workflow, service, or script operation when a file is placed in the folder being watched.
 uuid: 39eac0fd-8212-46ff-b75d-8b4320d448a9
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,18 +10,18 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 79dcba8e14eac39467510416bf31737ac721b07f
 workflow-type: tm+mt
-source-wordcount: '7153'
+source-wordcount: '7118'
 ht-degree: 0%
 
 ---
 
 # 在AEM Forms中觀看資料夾{#watched-folder-in-aem-forms}
 
-管理員可以設定網路資料夾（稱為「觀看資料夾」），以便當使用者將檔案（例如PDF檔案）放入「觀看資料夾」時，系統會開始進行預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定操作後，會將結果檔案保存在指定的輸出資料夾中。 有關工作流、服務和指令碼的詳細資訊，請參閱[處理檔案的各種方法](#variousmethodsforprocessingfiles)。
+管理員可以配置網路資料夾（稱為「觀看資料夾」），以便當用戶將檔案(如PDF檔案)放入「觀看資料夾」時，將啟動預先配置的工作流、服務或指令碼操作以處理添加的檔案。 服務執行指定操作後，會將結果檔案保存在指定的輸出資料夾中。 有關工作流、服務和指令碼的詳細資訊，請參閱[處理檔案的各種方法](#variousmethodsforprocessingfiles)。
 
-## 建立監看資料夾{#create-a-watched-folder}
+## 建立監看資料夾 {#create-a-watched-folder}
 
 您可以使用下列其中一種方法，在檔案系統上建立「監看資料夾」：
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 >
 >在群集環境中，用作監視資料夾的資料夾必須在檔案系統或網路上可訪問、可寫和共用。 群集的每個應用程式伺服器實例必須具有對同一共用資料夾的訪問權限。 在Windows上，在所有伺服器上建立映射的網路驅動器，並在folderPath屬性中指定映射的網路驅動器的路徑。
 
-## 建立監看資料夾配置節點{#create-watched-folder-configuration-node}
+## 建立監看資料夾配置節點 {#create-watched-folder-configuration-node}
 
 若要設定「觀看資料夾」，請建立「觀看資料夾」設定節點。 執行下列步驟以建立設定節點：
 
@@ -176,7 +176,7 @@ ht-degree: 0%
 
    * **簡單檔案式裝載對應器：** 使用簡單檔案式裝載對應器，將輸入和輸出內容直接保留在裝載資料夾中。它不會建立任何額外的階層，例如預設映射器。
 
-### 自定義配置參數{#custom-configuration-parameters}
+### 自訂設定參數 {#custom-configuration-parameters}
 
 除了上述「監看資料夾」配置屬性外，您還可以指定自定義配置參數。 自訂參數會傳遞至檔案處理程式碼。 它可讓程式碼根據參數的值來變更其行為。 若要指定參數：
 
@@ -221,7 +221,7 @@ ht-degree: 0%
 
 服務是`com.adobe.aemfd.watchfolder.service.api.ContentProcessor`介面的自訂實作。 已透過OSGi註冊，並附上一些自訂屬性。 實作的自訂屬性使其獨一無二，有助於識別實作。
 
-#### ContentProcessor介面{#custom-implementation-of-the-contentprocessor-interface}的自定義實現
+#### ContentProcessor介面的自定義實現 {#custom-implementation-of-the-contentprocessor-interface}
 
 自訂實作接受處理內容（com.adobe.aemfd.watchfolder.service.api.ProcessorContext類型的物件）、從內容讀取輸入檔案和設定參數、處理輸入，並將輸出新增至
 內容。 ProcessorContext具有以下API:
@@ -262,7 +262,7 @@ public class TestContentProcessor1 implements ContentProcessor {
 }
 ```
 
-### 使用指令碼處理受監視資料夾{#using-scripts-to-process-files-of-a-watched-folder}的檔案
+### 使用指令碼處理受監視資料夾的檔案 {#using-scripts-to-process-files-of-a-watched-folder}
 
 指令碼是寫入到處理置於「觀看」資料夾中的檔案的ECMAScript投訴自訂程式碼。 指令碼以JCR節點表示。 除了標準ECMAScript變數（記錄、Sling等），指令碼還包含變數processorContext。 變數的類型為ProcessorContext。 ProcessorContext具有以下API:
 
@@ -286,7 +286,7 @@ entry.getValue().copyToFile(tempFile);
 processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docmanager.Document(tempFile, true));
 ```
 
-#### 指令碼的位置和安全注意事項{#location-of-scripts-and-security-considerations}
+#### 指令碼的位置和安全考量 {#location-of-scripts-and-security-considerations}
 
 依預設，會提供容器資料夾(/etc/fd/watchfolder/scripts)，客戶可放置其指令碼，且watch-folder架構使用的預設服務使用者具有從此位置讀取指令碼的必要權限。
 
@@ -299,7 +299,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 現在，您可以使用已設定的自訂位置來儲存指令碼。
 
-### 使用工作流處理受監視資料夾{#using-a-workflow-to-process-files-of-a-watched-folder}的檔案
+### 使用工作流程處理受監視資料夾的檔案 {#using-a-workflow-to-process-files-of-a-watched-folder}
 
 工作流程可讓您自動執行Experience Manager活動。 工作流程包含以特定順序執行的一系列步驟。 每個步驟都會執行不同的活動，例如啟動頁面或傳送電子郵件訊息。 工作流程可與存放庫、使用者帳戶和Experience Manager服務中的資產互動。 因此，工作流程可以協調複雜。
 
@@ -392,15 +392,15 @@ wfSvc.execute(impl, graniteWorkItem, graniteWorkflowSession, metaData);
 log.info("Exiting workflow script!")
 ```
 
-### 建立裝載映射器篩選器，將已觀看資料夾的結構對應至工作流程{#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}的裝載
+### 建立裝載對應器篩選器，將已監看資料夾的結構對應至工作流程的裝載 {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
 
 建立已觀看的資料夾時，會在正在觀看的資料夾內建立資料夾結構。 資料夾結構具有階段、結果、保留、輸入和失敗資料夾。 資料夾結構可作為工作流的輸入裝載，並接受來自工作流的輸出。 它也可以列出故障點（如果有）。
 
 如果裝載的結構與已觀看資料夾的結構不同，您可以撰寫自訂指令碼，將已觀看資料夾的結構對應至裝載。 這類指令碼稱為裝載映射器篩選器。 AEM Forms提供裝載對應器篩選器，可將已觀看資料夾的結構對應至裝載。
 
-#### 建立自訂裝載映射器篩選器{#creating-a-custom-payload-mapper-filter}
+#### 建立自訂裝載對應器篩選器 {#creating-a-custom-payload-mapper-filter}
 
-1. 下載[Adobe用戶端SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/6.3.0/aemfd-client-sdk-6.3.0.jar)。
+1. 下載[Adobe用戶端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)。
 1. 在Maven型專案的建置路徑中設定用戶端SDK。 若要開始，您可以下載並在所選IDE中開啟以下基於Maven的項目。
 1. 編輯範例套件中可用的裝載對應器篩選程式程式碼，以符合您的需求。
 1. 使用maven建立自訂裝載映射器篩選器的套件組合。
@@ -484,7 +484,7 @@ log.info("Exiting workflow script!")
    }
    ```
 
-## 使用者如何與「已觀看」資料夾{#how-users-interact-with-a-watched-folder}互動
+## 使用者與已觀看資料夾互動的方式 {#how-users-interact-with-a-watched-folder}
 
 對於「觀看資料夾」端點，使用者可從案頭複製或拖曳輸入檔案或資料夾至「觀看資料夾」，以開始檔案處理作業。 檔案會依到達順序處理。
 
@@ -496,9 +496,9 @@ log.info("Exiting workflow script!")
 >
 >請確定應用程式伺服器已刪除對「觀看資料夾」中檔案的存取權。 如果AEM Forms在掃描後無法從輸入資料夾中刪除檔案，則相關程式將無限期啟動。
 
-## 有關已監視資料夾{#additional-information-about-the-watched-folders}的其他資訊
+## 有關已監視資料夾的其他資訊 {#additional-information-about-the-watched-folders}
 
-### 關於節流{#about-throttling}
+### 關於節流 {#about-throttling}
 
 為監看資料夾端點啟用限制時，它會限制在任何指定時間處理的監視資料夾作業數。 作業的最大數量由「批大小」值確定，也可在「監視資料夾」端點中配置。 達到限制限制時，不會輪詢「監視資料夾」輸入目錄中的傳入文檔。 該文檔還保留在輸入目錄中，直到完成其他「已監視資料夾」作業並進行另一輪輪詢嘗試。 對於同步處理，即使在單個線程中連續處理作業，在單個輪詢中處理的所有作業都將計入限制。
 
@@ -506,7 +506,7 @@ log.info("Exiting workflow script!")
 >
 >限制不會隨群集擴展。 啟用限制時，群集作為一個整體在任何給定時間處理的作業數都不超過批大小中指定的作業數。 此限制為群集範圍，不特定於群集中的每個節點。 例如，批大小為2時，單個節點處理兩個作業時可以達到限制限制，在完成其中一個作業之前，其他節點不會輪詢輸入目錄。
 
-#### 節流如何工作{#how-throttling-works}
+#### 節流如何運作 {#how-throttling-works}
 
 Watched Folder在每個pollInterval掃描輸入資料夾，提取批大小中指定的檔案數，並為每個檔案調用目標服務。 例如，如果批大小為4，則在每次掃描時，「監看資料夾」會拾取4個檔案，建立4個調用請求，並調用目標服務。 在完成這些請求之前，如果調用了「監視的資料夾」，則無論前四個作業是否已完成，它都會再次啟動四個作業。
 
@@ -516,7 +516,7 @@ Watched Folder在每個pollInterval掃描輸入資料夾，提取批大小中指
 * 如果AEM Forms伺服器在「監視的資料夾」調用作業之前關閉，則管理員可以將檔案移出舞台資料夾。 有關資訊，請參閱[故障點和恢復](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)。
 * 如果AEM Forms伺服器正在運行，但當作業管理器服務回叫時（服務未按順序啟動時），監視資料夾未運行，則管理員可以將檔案移出舞台資料夾。 有關資訊，請參閱[故障點和恢復](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)。
 
-### 故障點和恢復故障點和恢復{#failure-points-and-recoveryfailure-points-and-recovery}
+### 故障點和恢復故障點和恢復 {#failure-points-and-recoveryfailure-points-and-recovery}
 
 在每個民調問答事件中，「觀看的資料夾」都會鎖定輸入資料夾、將符合包含檔案模式的檔案移動到階段資料夾，然後解鎖輸入資料夾。 需要鎖定，這樣兩個線程就不會提取同一組檔案並處理兩次。 發生此情況的機率會隨著小pollInterval和大批次大小而增加。 將檔案移到舞台資料夾後，輸入資料夾將解除鎖定，以便其他線程可以掃描資料夾。 此步驟有助於提供高吞吐量，因為其他線程可以在一個線程處理檔案時掃描。
 
@@ -529,7 +529,7 @@ Watched Folder在每個pollInterval掃描輸入資料夾，提取批大小中指
    * **同步**:如果「監看資料夾」配置為同步調用服務，則舞台資料夾中的所有檔案在舞台資料夾中都將保留為未處理。
    * **非同步**:在這種情況下，「觀看的資料夾」需仰賴「工作管理員」服務。如果作業管理器服務回叫「監看資料夾」，則階段資料夾中的檔案會根據調用的結果移動到「保留」或「失敗」資料夾。 如果作業管理器服務未回叫「已監看資料夾」，則檔案在預備資料夾中將保留未處理。 當工作管理員回呼時，「已監看資料夾」未執行時，就會發生此情況。
 
-#### 恢復階段資料夾{#recover-unprocessed-source-files-in-the-stage-folder}中的未處理源檔案
+#### 恢復階段資料夾中未處理的源檔案 {#recover-unprocessed-source-files-in-the-stage-folder}
 
 當「監看資料夾」無法處理階段資料夾中的源檔案時，您可以恢復未處理的檔案。
 
@@ -551,13 +551,13 @@ Watched Folder在每個pollInterval掃描輸入資料夾，提取批大小中指
 
 1. 如果您在步驟2中阻止「監看的資料夾」處理新的輸入檔案，請將「包含檔案模式」更改為其上一個值，或重新啟用您禁用的進程。
 
-### 將觀看的資料夾連結在一起{#chain-watched-folders-together}
+### 將監看的資料夾連結在一起 {#chain-watched-folders-together}
 
-監視資料夾可以連結在一起，以便一個監視資料夾的結果文檔是下一個監視資料夾的輸入文檔。 每個「已觀看資料夾」都可叫用不同的服務。 以此方式配置「監視的資料夾」，可以叫用多個服務。 例如，一個「觀看」資料夾可將PDF檔案轉換為Adobe PostScript®，第二個「觀看」資料夾可將PostScript檔案轉換為PDF/A格式。 要執行此操作，只需將第一個端點定義的「觀看資料夾」的結果資料夾設定為指向第二個端點定義的「觀看資料夾」的輸入資料夾。
+監視資料夾可以連結在一起，以便一個監視資料夾的結果文檔是下一個監視資料夾的輸入文檔。 每個「已觀看資料夾」都可叫用不同的服務。 以此方式配置「監視的資料夾」，可以叫用多個服務。 例如，一個「觀看」資料夾可將PDF檔案轉換為Adobe PostScript®，另一個「觀看」資料夾可將PostScript檔案轉換為PDF/A格式。 要執行此操作，只需將第一個端點定義的「觀看資料夾」的結果資料夾設定為指向第二個端點定義的「觀看資料夾」的輸入資料夾。
 
 第一次轉換的輸出將轉至\path\result。 第二次轉換的輸入為\path\result，第二次轉換的輸出將轉至\path\result\result （或您在第二次轉換的「結果資料夾」方塊中定義的目錄）。
 
-### 檔案和資料夾模式{#file-and-folder-patterns}
+### 檔案和資料夾模式 {#file-and-folder-patterns}
 
 管理員可以指定可叫用服務的檔案類型。 可為每個「觀看的資料夾」建立多個檔案模式。 檔案模式可以是下列檔案屬性之一：
 
@@ -590,11 +590,11 @@ Watched Folder在每個pollInterval掃描輸入資料夾，提取批大小中指
 
 如果輸出參數映射模式以「File.separator」（路徑分隔符）結尾，則會建立資料夾並將內容複製到該資料夾中。 如果模式的結尾不是「File.separator」，則會以該名稱建立內容（結果檔案或資料夾）。
 
-## 搭配觀看資料夾{#using-pdf-generator-with-a-watched-folder}使用PDF產生器
+## 將PDF產生器與監看資料夾搭配使用 {#using-pdf-generator-with-a-watched-folder}
 
-您可以設定「監看資料夾」以起始工作流程、服務或指令碼以處理輸入檔案。 在下節中，我們將配置「監視資料夾」以啟動ECMAScript。 ECMAScript將使用PDF產生器將Microsoft Word(.docx)檔案轉換為PDF檔案。
+您可以設定「監看資料夾」以起始工作流程、服務或指令碼以處理輸入檔案。 在下節中，我們將配置「監視資料夾」以啟動ECMAScript。 ECMAScript將使用PDF產生器，將Microsoft Word(.docx)檔案轉換為PDF檔案。
 
-執行下列步驟以使用PDF產生器設定「監看資料夾」：
+執行下列步驟以使用「PDF產生器」設定「監看資料夾」：
 
 1. [建立ECMAScript](../../forms/using/watched-folder-in-aem-forms.md#p-create-an-ecmascript-p)
 1. [建立工作流程](../../forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
@@ -635,7 +635,7 @@ ECMAScript會使用PDF產生器的createPDF API，將Microsoft Word(.docx)檔案
 
 1. 儲存並關閉檔案。
 
-### 建立工作流{#create-a-workflow}
+### 建立工作流程 {#create-a-workflow}
 
 1. 在瀏覽器視窗中開啟AEM Workflow UI。
 https://[伺服器名稱]:&#39;port&#39;/workflow
@@ -656,7 +656,7 @@ https://[伺服器名稱]:&#39;port&#39;/workflow
 
    ![create-a-workflow3-pdf](assets/create-a-workflow3-pdf.png)
 
-### 配置「監視」資料夾{#configure-the-watched-folder}
+### 配置「監視」資料夾 {#configure-the-watched-folder}
 
 1. 在瀏覽器視窗中開啟CRXDE lite。 https://&#39;[server]:[port]&#39;/crx/de/
 

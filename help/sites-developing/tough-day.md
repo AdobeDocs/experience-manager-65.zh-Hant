@@ -3,17 +3,12 @@ title: 艱難的一天
 seo-title: Tough Day
 description: Tough Day（嚴格日）測試模擬在最壞情況下約1000位作者的每日負載，同時進行所有操作。
 seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
-uuid: 1b672182-40f5-4580-b038-2e3c8fbfb8b7
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
-docset: aem65
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: e1f9cf160892c2fa5c7cc7f80f998166dbc877e6
+source-git-commit: 8b72715c15a65794bb6d1497961071aaea96c35e
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1881'
 ht-degree: 2%
 
 ---
@@ -22,11 +17,11 @@ ht-degree: 2%
 
 ## 艱難的第2天 {#what-is-tough-day}
 
-「Tough Day 2」是一項應用程式，可讓您強調測試AEM例項的限制。 可透過預設測試套裝立即執行，或依您的測試需求設定。 您可以觀看[此錄制](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)以了解應用程式的演示。
+「Tough Day 2」是一項應用程式，可讓您強調測試AEM例項的限制。 可透過預設測試套裝立即執行，或依您的測試需求設定。 您可以觀看[此錄制](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html)以了解應用程式的演示。
 
 ## 如何經營艱難的一天2 {#how-to-run-tough-day}
 
-從[Adobe存放庫](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/)下載最新版的Tough Day 2。 下載應用程式後，可通過提供`host`參數以立即運行。 在下列範例中，AEM例項會在本機執行，因此會使用`localhost`值：
+從[Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)下載最新版的Tough Day 2。 下載應用程式後，可通過提供`host`參數以立即運行。 在下列範例中，AEM例項會在本機執行，因此會使用`localhost`值：
 
 ```xml
 java -jar toughday2.jar --host=localhost

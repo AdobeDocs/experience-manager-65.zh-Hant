@@ -1,8 +1,8 @@
 ---
 title: 為最適化表單欄位建立自訂外觀
-seo-title: 為最適化表單欄位建立自訂外觀
+seo-title: Create custom appearances for adaptive form fields
 description: 在適用性Forms中自訂現成可用元件的外觀。
-seo-description: 在適用性Forms中自訂現成可用元件的外觀。
+seo-description: Customize appearance of out-of-the-box components in Adaptive Forms.
 uuid: 1aa36443-774a-49fb-b3d1-d5a2d5ff849a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +10,9 @@ topic-tags: customization
 discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
 exl-id: 770e257a-9ffd-46a4-9703-ff017ce9caed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8a24ca02762e7902b7d0033b36560629ee711de1
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 先來看看本文使用的主要術語和概念。
 
-**** 外觀：指最適化表單欄位中各種元素的樣式、外觀和組織。它通常包括標籤、提供輸入的互動區、幫助表徵圖以及欄位的簡短和長說明。 本文討論的外觀定制適用於欄位輸入區域的外觀。
+**** 外觀：指最適化表單欄位中各種元素的樣式、外觀和風格及組織。它通常包括標籤、提供輸入的互動區、幫助表徵圖以及欄位的簡短和長說明。 本文討論的外觀定制適用於欄位輸入區域的外觀。
 
 **jQuery** plugin提供基於jQuery Widget框架的標準機制，以實作替代外觀。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 **User** Control（用戶控制）引用介面工具集中包含欄位值的主要元素，並用於外觀框架，用於將自定義介面工具集UI與自適應表單模型綁定。
 
-## 建立自定義外觀的步驟{#steps-to-create-a-custom-appearance}
+## 建立自訂外觀的步驟 {#steps-to-create-a-custom-appearance}
 
 建立自訂外觀的高階步驟如下：
 
@@ -48,18 +48,18 @@ ht-degree: 0%
 1. **建置和安裝專案**:建立Maven專案，並在AEM上安裝產生的內容套件。
 1. **更新最適化表單**:更新最適化表單欄位屬性以使用自訂外觀。
 
-### 建立專案{#create-a-project}
+### 建立專案 {#create-a-project}
 
 模仿原型是建立自訂外觀的起點。 要使用的原型詳細資訊如下：
 
-* **存放庫**:https://repo.adobe.com/nexus/content/groups/public/
+* **存放庫**:https://repo1.maven.org/maven2/com/adobe/
 * **工件Id**:自訂外觀原型
 * **群組Id**:com.adobe.aemforms
 * **版本**:1.0.4
 
 執行下列命令，根據原型建立本機專案：
 
-`mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+`mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
 命令會從存放庫下載Maven外掛程式和原型資訊，並根據下列資訊產生專案：
 
@@ -107,7 +107,7 @@ ht-degree: 0%
                                      └───javascript
 ```
 
-### 擴展現有Widget類{#extend-an-existing-widget-class}
+### 擴展現有的Widget類 {#extend-an-existing-widget-class}
 
 建立專案範本後，視需要進行下列變更：
 
@@ -127,13 +127,13 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>呈現函式返回構件的預設HTML元素的jQuery對象。 預設的HTML元素應為可聚焦類型。 例如，<code>&lt;a&gt;</code>、<code>&lt;input&gt;</code>和<code>&lt;li&gt;</code>。 傳回的元素會作為<code>$userControl</code>使用。 如果<code>$userControl</code>指定上述限制，則<code>AbstractWidget</code>類的函式將如預期運作，否則某些常見API（焦點、按一下）需要更改。 </td>
+   <td>呈現函式返回Widget預設HTML元素的jQuery對象。 預設HTML元素應為可聚焦類型。 例如，<code>&lt;a&gt;</code>、<code>&lt;input&gt;</code>和<code>&lt;li&gt;</code>。 傳回的元素會作為<code>$userControl</code>使用。 如果<code>$userControl</code>指定上述限制，則<code>AbstractWidget</code>類的函式將如預期運作，否則某些常見API（焦點、按一下）需要更改。 </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
-   <td>傳回映射以將HTML事件轉換為XFA事件。 <br /> <code class="code">{
+   <td>傳回對應以將HTML事件轉換為XFA事件。 <br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> 此範例顯 <code>blur</code> 示為HTML事件， <code>XFA_EXIT_EVENT</code> 且是對應的XFA事件。 </td>
+      }</code><br /> 此範例顯示 <code>blur</code> 是HTML事件， <code>XFA_EXIT_EVENT</code> 是對應的XFA事件。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
@@ -168,11 +168,11 @@ ht-degree: 0%
 
    * 範本檔案提供各種方法的範例實施。 移除不要擴充的方法。
 
-### 建立客戶端庫{#create-a-client-library}
+### 建立用戶端程式庫 {#create-a-client-library}
 
 Maven原型產生的範例專案會自動建立必要的用戶端程式庫，並以`af.customwidgets`類別將它們包裝到用戶端程式庫中。 在執行階段會自動包含`af.customwidgets`中可用的JavaScript和CSS檔案。
 
-### 建立並安裝{#build-and-install}
+### 建置和安裝 {#build-and-install}
 
 若要建置專案，請在殼層上執行下列命令，以產生需要安裝在AEM伺服器上的CRX套件。
 
@@ -182,7 +182,7 @@ Maven原型產生的範例專案會自動建立必要的用戶端程式庫，並
 >
 >Maven專案會參照POM檔案中的遠端存放庫。 這僅供參考，而且根據Maven標準，儲存庫資訊會在`settings.xml`檔案中捕獲。
 
-### 更新最適化表單{#update-the-adaptive-form}
+### 更新最適化表單 {#update-the-adaptive-form}
 
 若要將自訂外觀套用至最適化表單欄位：
 
@@ -196,7 +196,7 @@ Maven原型產生的範例專案會自動建立必要的用戶端程式庫，並
 
 1. 執行下列命令，以根據Maven原型建立本機專案：
 
-   `mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+   `mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
    它會提示您為下列參數指定值。
    *此範例中使用的值會以粗體*&#x200B;強調顯示。

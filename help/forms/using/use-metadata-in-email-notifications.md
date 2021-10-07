@@ -1,21 +1,21 @@
 ---
 title: '在電子郵件通知中使用中繼資料 '
-seo-title: '在電子郵件通知中使用中繼資料 '
+seo-title: Use metadata in an email notification
 description: 使用中繼資料在表單工作流程電子郵件通知中填入資訊
-seo-description: 使用中繼資料在表單工作流程電子郵件通知中填入資訊
+seo-description: Use metadata to populate information in a forms workflow email notification
 uuid: 9075b64e-1934-44d5-8b16-aa6e95e93da9
 topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9cf4a68a2b3312fe53282e2fd4ec81988f2fd453
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
 
-# 在電子郵件通知{#use-metadata-in-an-email-notification}中使用中繼資料
+# 在電子郵件通知中使用中繼資料 {#use-metadata-in-an-email-notification}
 
 您可以使用「分配任務」步驟來建立任務並將其分配給用戶或組。 將任務分配給用戶或組時，會向定義的用戶或定義組的每個成員發送電子郵件通知。 典型的[電子郵件通知](../../forms/using/use-custom-email-template-assign-task-step.md)包含指派任務的連結以及與任務相關的資訊。
 
@@ -96,7 +96,7 @@ message=<html><body>\n\
 </html>\n\
 ```
 
-## 在電子郵件通知{#using-system-generated-metadata-in-an-email-notification}中使用系統生成的元資料
+## 在電子郵件通知中使用系統產生的中繼資料 {#using-system-generated-metadata-in-an-email-notification}
 
 AEM Forms應用程式提供數個立即可用的中繼資料變數（索引鍵值配對）。 您可以在電子郵件範本中使用這些變數。 變數的值以相關聯的表單應用程式為基礎。 下表列出所有可立即使用的中繼資料變數：
 
@@ -149,11 +149,11 @@ AEM Forms應用程式提供數個立即可用的中繼資料變數（索引鍵�
  </tbody> 
 </table>
 
-## 在電子郵件通知{#using-custom-metadata-in-an-email-notification}中使用自訂中繼資料
+## 在電子郵件通知中使用自訂中繼資料 {#using-custom-metadata-in-an-email-notification}
 
 您也可以在電子郵件通知中使用自訂中繼資料。 自訂中繼資料除了系統產生的中繼資料外，還包含資訊。 例如，從資料庫檢索的策略詳細資訊。 您可以使用ECMAScript或OSGi套件組合，在crx-repository中新增自訂中繼資料：
 
-### 使用ECMAScript來添加自定義元資料{#use-ecmascript-to-add-custom-metadata}
+### 使用ECMAScript來新增自訂中繼資料  {#use-ecmascript-to-add-custom-metadata}
 
 [](https://en.wikipedia.org/wiki/ECMAScript) ECMAScript是一種指令碼語言。用於用戶端指令碼和伺服器應用程式。 執行下列步驟以使用ECMAScript來為電子郵件範本新增自訂中繼資料：
 
@@ -194,11 +194,11 @@ AEM Forms應用程式提供數個立即可用的中繼資料變數（索引鍵�
       | 類型 | 字串 |
       | 值 | 指定指令碼的標題。 例如，策略保持器的自定義元資料。 指定值顯示在分配任務步驟中。 |
 
-### 使用OSGi套件組合和Java介面來新增自訂中繼資料{#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
+### 使用OSGi套件組合和Java介面來新增自訂中繼資料 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
 您可以使用WorkitemUserMetadataService Java介面為電子郵件範本新增自訂中繼資料。 您可以建立使用WorkitemUserMetadataService Java介面的OSGi套件組合，並將其部署至AEM Forms伺服器。 它使元資料在「分配任務」步驟中可供選擇。
 
-若要使用Java介面建立OSGi套件組合，請將[AEM Forms用戶端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案新增為OSGi套件組合專案的外部相依性。 您可以使用任何Java IDE來建立OSGi套件組合。 下列程式提供使用Eclipse建立OSGi套件組合的步驟：
+若要使用Java介面建立OSGi套件組合，請將[AEM Forms用戶端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)檔案新增為OSGi套件組合專案的外部相依性。 您可以使用任何Java IDE來建立OSGi套件組合。 下列程式提供使用Eclipse建立OSGi套件組合的步驟：
 
 1. 開啟Eclipse IDE。 導覽至「檔案>新增專案」。
 

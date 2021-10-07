@@ -1,19 +1,14 @@
 ---
 title: 將服務與JMX控制台整合
-seo-title: 將服務與JMX控制台整合
+seo-title: Integrating Services with the JMX Console
 description: 通過使用JMX控制台建立和部署MBean來管理服務，公開服務屬性和操作，以啟用管理任務
-seo-description: 通過使用JMX控制台建立和部署MBean來管理服務，公開服務屬性和操作，以啟用管理任務
-uuid: 4a489a24-af10-4505-8333-aafc0c81dd3e
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
+seo-description: Expose service attributes and operations to enable administration tasks to be performed by creating and deploying MBeans to manage services using the JMX Console
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 83c590e0-2e6c-4499-a6ea-216e4c7bc43c
-docset: aem65
 exl-id: fe727406-09cb-4516-8278-806fd78cfc12
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a2e5a5ae7585299de869dbf8744d7be4b86c5bf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -24,13 +19,13 @@ ht-degree: 0%
 
 有關使用JMX控制台的資訊，請參閱[使用JMX控制台監視伺服器資源](/help/sites-administering/jmx-console.md)。
 
-## Felix和CQ5中的JMX框架{#the-jmx-framework-in-felix-and-cq}
+## Felix和CQ5中的JMX架構 {#the-jmx-framework-in-felix-and-cq}
 
 在Apache Felix平台上，您可將MBean部署為OSGi服務。 在OSGi服務註冊表中註冊MBean服務時，Aries JMX白板模組會自動向MBean伺服器註冊MBean。 MBean隨後可用於JMX控制台，該控制台將公開公共屬性和操作。
 
 ![jmxhitboard](assets/jmxwhiteboard.png)
 
-## 為CQ5和CRX {#creating-mbeans-for-cq-and-crx}建立MBean
+## 為CQ5和CRX建立MBean {#creating-mbeans-for-cq-and-crx}
 
 您為管理CQ5或CRX資源而建立的MBean是基於javax.management.DynamicMBean介面。 要建立它們，請遵循JMX規範中規定的常規設計模式：
 
@@ -40,7 +35,7 @@ ht-degree: 0%
 
 除了定義管理介面外，介面還定義了OSGi服務介面。 實施類實現OSGi服務。
 
-### 使用注釋提供MBean資訊{#using-annotations-to-provide-mbean-information}
+### 使用注釋提供MBean資訊 {#using-annotations-to-provide-mbean-information}
 
 [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)套件提供數個注釋和類，以便輕鬆地向JMX控制台提供MBean元資料。 使用這些注釋和類，而不是直接將資訊添加到MBean的MBeanInfo對象。
 
@@ -71,7 +66,7 @@ ht-degree: 0%
 
 以下範例MBean提供有關CRX存放庫的資訊。 介面使用「說明」注釋來向JMX控制台提供資訊。
 
-#### 管理介面{#management-interface}
+#### 管理介面 {#management-interface}
 
 ```java
 package com.adobe.example.myapp;
@@ -94,7 +89,7 @@ public interface ExampleMBean {
 
 實作類別使用SlingRepository服務來擷取CRX存放庫的相關資訊。
 
-#### MBean實現類{#mbean-implementation-class}
+#### MBean實施類 {#mbean-implementation-class}
 
 ```java
 package com.adobe.example.myapp;
@@ -149,7 +144,7 @@ public class ExampleMBeanImpl extends AnnotatedStandardMBean implements ExampleM
 
 可以使用MBean實現類中的SCR注釋來部署可在設計時定義所有屬性和操作的MBean。 在以下示例中，`Service`批注的`value`屬性聲明服務實現`DynamicMBean`介面。 `Property`批注的`name`屬性指定JMX域和鍵屬性。
 
-#### 具有SCR注釋{#mbean-implementation-class-with-scr-annotations}的MBean實現類
+#### 具有SCR注釋的MBean實施類 {#mbean-implementation-class-with-scr-annotations}
 
 ```java
 package com.adobe.example.myapp;
@@ -195,7 +190,7 @@ public class ExampleMBeanImpl extends AnnotatedStandardMBean implements ExampleM
 
 在以下代碼示例中， ExampleMBean服務以寫程式方式註冊。 componentContext對象是ComponentContext，它提供對BundleContext的訪問。
 
-#### 程式碼片段：程式化MBean服務註冊{#code-snippet-programmatic-mbean-service-registration}
+#### 程式碼片段：程式化MBean服務註冊 {#code-snippet-programmatic-mbean-service-registration}
 
 ```java
 Dictionary mbeanProps = new Hashtable();
@@ -209,7 +204,7 @@ ServiceRegistration serviceregistration =
 
 當儲存庫中儲存服務配置時， MBean服務管理器很有用。 管理器可檢索服務資訊，並使用它配置和建立相應的MBean。 管理器類還可以監聽儲存庫更改事件，並相應地更新MBean服務。
 
-## 範例：使用JMX {#example-monitoring-workflow-models-using-jmx}監控工作流模型
+## 範例：使用JMX監控工作流模型 {#example-monitoring-workflow-models-using-jmx}
 
 此範例中的MBean提供儲存在存放庫中的CQ5工作流程模型的相關資訊。 MBean管理器類基於儲存在儲存庫中的工作流模型建立MBean，並在運行時註冊其OSGi服務。 此示例由包含以下成員的單個束組成：
 
@@ -235,7 +230,7 @@ MBean元資料顯示在JMX控制台中，其中包含com.adobe.example域、work
 
 此示例需要MBean介面和實現，該介面是`com.day.cq.workflow.model.WorkflowModel`介面上的反映。 MBean非常簡單，因此示例可以專注於設計的配置和部署方面。 MBean會公開單一屬性，即模型名稱。
 
-#### WorkflowMBean介面{#workflowmbean-interface}
+#### WorkflowMBean介面 {#workflowmbean-interface}
 
 ```java
 package com.adobe.example.myapp.api;
@@ -277,7 +272,7 @@ public class WorkflowMBeanImpl extends AnnotatedStandardMBean implements Workflo
 }
 ```
 
-### 示例MBean管理器{#the-example-mbean-manager}
+### 示例MBean管理器 {#the-example-mbean-manager}
 
 WorkflowMBeanManager服務包括建立WorkflowMBean服務的元件激活方法。 服務實作包含下列方法：
 
@@ -289,8 +284,7 @@ WorkflowMBeanManager服務包括建立WorkflowMBean服務的元件激活方法�
 >
 >WorkflowMBeanManager實施僅為激活元件時存在的模型配置建立MBean服務。 更強大的實施會監聽與新模型配置以及現有模型配置的更改或刪除相關的儲存庫事件。 發生更改時，管理器可以建立、修改或刪除相應的WorkflowMBean服務。
 
-
-#### WorkflowMBeanManager介面{#workflowmbeanmanager-interface}
+#### WorkflowMBeanManager介面 {#workflowmbeanmanager-interface}
 
 ```java
 package com.adobe.example.myapp.api;
@@ -425,7 +419,7 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 }
 ```
 
-### 示例MBean {#the-pom-file-for-the-example-mbean}的POM檔案
+### 示例MBean的POM檔案 {#the-pom-file-for-the-example-mbean}
 
 為方便起見，您可以將下列XML程式碼複製並貼到您的專案pom.xml檔案中，以便建立元件套件組合。 POM會參考數個必要的外掛程式和相依性。
 
@@ -437,7 +431,7 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 
 **注意：** 撰寫時，Maven scr外掛程式與Eclipse適用的m2e外掛程式不相容。（請參閱[Felix bug 3170](https://issues.apache.org/jira/browse/FELIX-3170)。） 若要使用Eclipse IDE，請安裝Maven並使用命令列介面來執行組建。
 
-#### 範例POM檔案{#example-pom-file}
+#### 範例POM檔案 {#example-pom-file}
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"
@@ -550,7 +544,7 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 
 將下列設定檔新增至您的Maven設定檔，以使用公用Adobe存放庫。
 
-#### Maven配置檔案{#maven-profile}
+#### Maven配置檔案 {#maven-profile}
 
 ```xml
 <profile>
@@ -561,13 +555,13 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
     <properties>
          <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
          <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
-         <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
+         <releaseRepository-URL>https://repo1.maven.org/maven2/com/adobe/</releaseRepository-URL>
     </properties>
     <repositories>
          <repository>
              <id>adobe-public-releases</id>
-             <name>Adobe Basel Public Repository</name>
-             <url>https://repo.adobe.com/nexus/content/groups/public</url>
+             <name>Adobe  Public Repository</name>
+             <url>https://repo1.maven.org/maven2/com/adobe/</url>
              <releases>
                  <enabled>true</enabled>
                  <updatePolicy>never</updatePolicy>
@@ -580,8 +574,8 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
      <pluginRepositories>
          <pluginRepository>
              <id>adobe-public-releases</id>
-             <name>Adobe Basel Public Repository</name>
-             <url>https://repo.adobe.com/nexus/content/groups/public</url>
+             <name>Adobe Public Repository</name>
+             <url>https://repo1.maven.org/maven2/com/adobe/</url>
              <releases>
                  <enabled>true</enabled>
                  <updatePolicy>never</updatePolicy>
