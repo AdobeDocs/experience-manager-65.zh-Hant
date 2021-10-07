@@ -1,8 +1,8 @@
 ---
 title: 貢獻AEM
-seo-title: 貢獻AEM
+seo-title: Contributing to AEM
 description: AEM的開發遵循了在大型開放原始碼項目中通常採用的行之有效的方法
-seo-description: AEM的開發遵循了在大型開放原始碼項目中通常採用的行之有效的方法
+seo-description: AEM is developed following proven methodologies commonly practiced in large open source projects
 uuid: ffef60ae-8a9a-4c4b-8cbd-3cd72792a42e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,22 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2709'
 ht-degree: 0%
 
 ---
 
 # 貢獻AEM{#contributing-to-aem}
 
-## 開發方法{#development-methodology}
+## 開發方法 {#development-methodology}
 
 AEM是依照大型開放原始碼專案中常用的實證方法而開發。 AEM技術堆疊中的許多核心元素實際上都維持為作用中的開放原始碼專案，例如Sling和Jackrabbit，這是Apache Software Foundation的貢獻者。 AEM中呈現此精神的一個主要方面是，我們鼓勵您利用現有的郵寄清單和線上論壇，與開發團隊直接互動。
 
 如果您要貢獻AEM的元件，應像貢獻開放原始碼專案時一樣熟悉AEM，並像要貢獻此專案時一樣與現有核心團隊溝通。
 
-## 必要體驗{#required-experience}
+## 必要體驗 {#required-experience}
 
 HyperText傳輸協定(HTTP)是我們所做的一切的核心。 因此，在對AEM作出貢獻之前，您應該對HTTP有深入的了解，最好能夠編寫具有線程池的多線程HTTP伺服器的Java實施。 您也應該了解HTTP/1.1保持運作的行為，並且應深入了解伺服器/用戶端與JavaScript的互動，尤其是AJAX所代表的非同步互動樣式。
 
@@ -34,7 +34,7 @@ HyperText傳輸協定(HTTP)是我們所做的一切的核心。 因此，在對A
 那麼，在最高層面，您應該對以下事項有紮實的了解：
 
 * [HTTP/1.1協定](https://www.ietf.org/rfc/rfc2616.txt)
-* HTML（最好[HTML5](https://dev.w3.org/html5/spec/Overview.html)）
+* HTML(優選[HTML5](https://dev.w3.org/html5/spec/Overview.html))
 * 級聯樣式表
 * 可擴展標籤語言(XML)
 * 非同步JavaScript和XML(AJAX)設計模式
@@ -45,17 +45,17 @@ HyperText傳輸協定(HTTP)是我們所做的一切的核心。 因此，在對A
 * 瀏覽器Cookie
 * 和其他現代網路開發概念
 
-Adobe Experience Manager的技術堆疊是以[Apache Felix](https://felix.apache.org/)具有[Apache Sling](https://sling.apache.org/site/index.html)網頁架構的OSGI容器為基礎，並內嵌以[Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html)為基礎的Java內容存放庫([JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html))。 您應熟悉這些個別專案，以及您要貢獻內容區域中使用的任何其他開放原始碼元件（例如Apache Lucene）。
+Adobe Experience Manager的技術堆疊是以[Apache Felix](https://felix.apache.org/)具有[Apache Sling](https://sling.apache.org/site/index.html)網頁架構的OSGI容器為基礎，並內嵌以[Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html)為基礎的Java內容存放庫([JCR](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html))。 您應熟悉這些個別專案，以及您要貢獻內容區域中使用的任何其他開放原始碼元件（例如Apache Lucene）。
 
-## 部落知識{#tribal-knowledge}
+## 部落知識 {#tribal-knowledge}
 
 某些概念和指導原則深深地植根於前日文化。 本節列出您應注意的「深入內嵌DNA」問題。
 
-### 內容{#everything-is-content}
+### 一切都是內容 {#everything-is-content}
 
-內容不僅包含Web應用程式持續存在的所有資料。 程式碼、程式庫、指令碼、範本、HTML、CSS、影像和各種成品、任何項目和所有項目都會保存在內容存放庫中，並透過套件管理器和套件共用以套件形式匯入/匯出。
+內容不僅包含Web應用程式持續存在的所有資料。 程式碼、程式庫、指令碼、範本、HTML、CSS、影像和各種成品、任何項目和所有項目都會保存在內容存放庫中，並透過封裝管理器和封裝共用以封裝形式匯入/匯出。
 
-### 大衛模型{#david-s-model}
+### 大衛的模型 {#david-s-model}
 
 在Java內容儲存庫中建立內容模型的方式，需要的思維方式與在關係世界中建立資料模型的軟體行業中的常見做法完全不同。 對於任何進入內容管理的新來者而言，JCR方式是[David的模型：內容模型](https://wiki.apache.org/jackrabbit/DavidsModel)的指南。
 
@@ -67,7 +67,7 @@ REST(REpresentational State Transfer)是指萬維網所基於的軟體體系結�
 
 因為REST為我們所做的許多工作提供了指導性理念，因此您應認為必須精通RESTful設計的原則。 從[羅伊·菲爾丁的論文](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)開始，是一個很好的起點。
 
-### Sling要求解析度{#sling-request-resolution}
+### Sling要求解決方法 {#sling-request-resolution}
 
 要了解AEM的一個關鍵方面是傳入請求如何與內容和應用程式行為相關、內容存放庫中的內容結構，以及AEM在何處尋找應用程式邏輯以處理請求。 了解Apache [Sling URL分解](https://sling.apache.org/site/url-decomposition.html)及其強制REST架構樣式及其無狀態、可快取和分層系統限制的方式。
 
@@ -81,7 +81,7 @@ REST(REpresentational State Transfer)是指萬維網所基於的軟體體系結�
 
 更快的啟動時間：當您進行可能影響啟動時間的變更時，請確定變短，而不是變長。
 
-### 精簡與平均{#lean-and-mean}
+### 精簡與平均 {#lean-and-mean}
 
 我們偏好輕巧、小巧、快速、優雅的程式碼和項目。 「夠好」不夠好。
 
@@ -89,25 +89,25 @@ REST(REpresentational State Transfer)是指萬維網所基於的軟體體系結�
 
 松耦合：我們更喜歡鬆散耦合的互動，而不是緊緊的依賴和「不想要的親密」。 松耦合還允許更多代碼重用。
 
-### 不要中斷演示{#don-t-break-the-demo}
+### 不要破壞演示 {#don-t-break-the-demo}
 
 熟悉最常顯示在示範中的示範指令碼和產品功能。 請至少了解，您不應破壞「示範指令碼」功能。 核心產品應一律為示範就緒，即使在開發期間亦然。
 
-### 可靠性設計{#design-for-reliability}
+### 可靠性設計 {#design-for-reliability}
 
 我們致力以失敗軟式方式設計和編碼功能，以免（例如）單一DOM元素的問題不會導致整個頁面無法呈現。 換句話說：製造致命的東西。 讓其他一切都能生存下來。 讓產品「原諒」
 
-### 異常是新常態{#abnormal-is-the-new-normal}
+### 異常是新常態 {#abnormal-is-the-new-normal}
 
 不依賴關閉掛接，確保啟動時清理。 異常終止是正常終止。
 
 `shutdown == kill -9 == power outage`
 
-### 準備使用彈性群集{#be-ready-for-elastic-clustering}
+### 為彈性聚類做好準備 {#be-ready-for-elastic-clustering}
 
 始終準備進行彈性聚類，總是假設存在聚類。 一般而言，遵守內容存放庫中的所有內容，都表示內建叢集支援。
 
-### 後向相容性設計{#design-for-backward-compatibility}
+### 後向相容性設計 {#design-for-backward-compatibility}
 
 您所做的任何事都不應破壞客戶的舊代碼。 請僅考慮`/libs`包含可在升級期間更新的產品代碼。 存放庫的`/apps`區段是專案程式碼，而`/etc`區段包含需要保留的自訂設定。 通常，請勿覆寫`/apps`、`/content`和`/home`中的任何內容。 升級後，舊專案程式碼、設定和內容應可繼續如升級前所做般運作。
 
@@ -149,7 +149,7 @@ JCR的Java API的JavaDoc為[此處](http://jackrabbit.apache.org/jcr/jcr-api.htm
 
 **Multi-Site Manager(MSM)**  - AEM的MSM功能可協助客戶處理多語言和跨國內容，讓客戶在集中品牌與本地化內容之間取得平衡。
 
-**OSGi**  - OSGi是以服務為基礎的執行階段技術，為AEM中模組化Java開發提供基礎。此架構不僅為程式碼資源（稱為套件）提供高度動態（且安全）的分類和執行環境，還可完全控制套件所公開各種服務的可見性和生命週期。 服務註冊表為考慮生命週期動態（和版本要求）的套件組合提供合作模型。 OSGi解決了應用程式伺服器希望解決的許多問題，但是卻以輕量、高度動態的方式解決了這些問題，例如，使熱部署服務（使新代碼立即可用而無需重新啟動伺服器）成為可能。
+**OSGi**  - OSGi是以服務為基礎的執行階段技術，為AEM中模組化Java開發提供基礎。此架構不僅為程式碼資源（稱為套件）提供高度動態（且安全）的分類和執行環境，還可完整控制套件所公開各種服務的可見性和生命週期。 服務註冊表為考慮生命週期動態（和版本要求）的套件組合提供合作模型。 OSGi解決了應用程式伺服器希望解決的許多問題，但是卻以輕量、高度動態的方式解決了這些問題，例如，使熱部署服務（使新代碼立即可用而無需重新啟動伺服器）成為可能。
 
 **Parsys, Paragh System**  — 段落系統(parsys)是複合元件，可讓作者將不同類型的元件新增至頁面，並包含其他段落元件。每個段落類型都以元件的形式表示。 段落制度本身也是一個組成部分，它包含其他段落部分。
 

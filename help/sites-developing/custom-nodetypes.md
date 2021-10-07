@@ -1,8 +1,8 @@
 ---
 title: 自訂節點類型
-seo-title: 自訂節點類型
+seo-title: Custom Node Types
 description: AEM以Sling為基礎，使用JCR存放庫及兩者皆提供的節點類型，但AEM也提供一系列自訂節點類型
-seo-description: AEM以Sling為基礎，使用JCR存放庫及兩者皆提供的節點類型，但AEM也提供一系列自訂節點類型
+seo-description: AEM is based on Sling and uses a JCR repository with node types offered by both, but AEM also provides a range of custom node types
 uuid: f2022504-e433-4b42-9cc1-eef41086483a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,18 @@ topic-tags: platform
 content-type: reference
 discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1877'
 ht-degree: 9%
 
 ---
 
-# 自定義節點類型{#custom-node-types}
+# 自訂節點類型{#custom-node-types}
 
 由於AEM以Sling為基礎，且使用JCR存放庫，因此這兩者提供的節點類型皆可使用：
 
-* [JCR節點類型](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [JCR節點類型](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling節點類型](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
 除此之外。 AEM提供自訂節點類型的範圍。
@@ -56,7 +56,7 @@ ht-degree: 9%
 
 ## 評論 {#comment}
 
-### cq：注釋{#cq-comment}
+### cq:Comment {#cq-comment}
 
 **說明**
 
@@ -119,7 +119,7 @@ ht-degree: 9%
 * `- latitude (double)`
 * `- longitude (double)`
 
-### cq：追蹤{#cq-trackback}
+### cq:Trackback {#cq-trackback}
 
 **說明**
 
@@ -417,7 +417,7 @@ DAM資產。
 `+ jcr:content (dam:AssetContent) = dam:AssetContent copy primary`
 `+ * (nt:base) = nt:base version`
 
-### dam：縮圖{#dam-thumbnail}
+### dam：縮圖 {#dam-thumbnail}
 
 **說明**
 
@@ -429,7 +429,7 @@ DAM資產。
    * `mixin`
    * `+ dam:thumbnails (nt:folder)`
 
-## 交貨容器清單{#delivery-container-list}
+## 傳送容器清單 {#delivery-container-list}
 
 ### cq:containerList {#cq-containerlist}
 
@@ -442,7 +442,7 @@ DAM資產。
 * `[cq:containerList]`
    * `mixin`
 
-## 傳送頁面{#delivery-page}
+## 傳送頁面 {#delivery-page}
 
 ### cq:Cq4PageAttributes {#cq-cq-pageattributes}
 
@@ -633,7 +633,7 @@ Blueprint動作
 
 ## 平台 {#platform}
 
-### cq：主控台{#cq-console}
+### cq:Console {#cq-console}
 
 **說明**
 
@@ -766,7 +766,7 @@ Blueprint動作
 
 ## 標記 {#tagging}
 
-### cq：標籤{#cq-tag}
+### cq:Tag {#cq-tag}
 
 **說明**
 
@@ -896,7 +896,7 @@ Widget
    * `orderable`
    * `+ * (cq:Widget) = cq:Widget copy`
 
-### cq：對話{#cq-dialog}
+### cq：對話 {#cq-dialog}
 
 **說明**
 
@@ -906,7 +906,7 @@ Widget
 
 * `[cq:Dialog] > cq:Widget orderable`
 
-### cq：面板{#cq-panel}
+### cq：面板 {#cq-panel}
 
 **說明**
 
@@ -927,7 +927,7 @@ Widget
 * `[cq:TabPanel]` > `cq:Panel orderable`
    * `- activeTab (long)`
 
-### cq：欄位{#cq-field}
+### cq：欄位 {#cq-field}
 
 **說明**
 
@@ -942,7 +942,7 @@ Widget
 
 ## 維基 {#wiki}
 
-### wiki：主題{#wiki-topic}
+### wiki：主題 {#wiki-topic}
 
 **說明**
 
@@ -963,7 +963,7 @@ Widget
    * `- wiki:logMessage (string)`
    * `- wiki:quietSave (boolean)`
 
-### wiki：用戶{#wiki-user}
+### wiki：用戶 {#wiki-user}
 
 **說明**
 
@@ -974,7 +974,7 @@ Wiki用戶
 * `[wiki:User] mixin`
    * `- wiki:subscriptions (string) multiple`
 
-### wiki：屬性{#wiki-properties}
+### wiki：屬性 {#wiki-properties}
 
 **說明**
 
@@ -988,7 +988,7 @@ Wiki屬性
 
 ## 工作流程 {#workflow}
 
-### cq：工作流程{#cq-workflow}
+### cq：工作流程 {#cq-workflow}
 
 **說明**
 
@@ -1031,7 +1031,7 @@ Wiki屬性
    * `- sling:resourceType (String) = "cq/workflow/components/workitem" mandatory autocreated`
    * `+ metaData (nt:unstructured)`
 
-### cq：裝載{#cq-payload}
+### cq：裝載 {#cq-payload}
 
 **說明**
 
@@ -1134,7 +1134,7 @@ Wiki屬性
    * `- workflowId (String) // not compulsory as this node will already be attached to the workflow node`
    * `- nodeId (String)`
 
-### cq：等待{#cq-wait}
+### cq：等待 {#cq-wait}
 
 **說明**
 
