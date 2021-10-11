@@ -1,7 +1,8 @@
 ---
 title: 如何在JEE伺服器叢集上設定和疑難排解AEM Forms?
 description: 了解如何在JEE伺服器叢集上設定和疑難排解AEM Forms
-source-git-commit: 8502e0227819372db4120d3995fba51c7401d944
+exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
 source-wordcount: '4033'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 ## 必備知識 {#prerequisites}
 
-熟悉JEE、JBoss、WebSphere和Webogic應用程式伺服器、Red Hat Linux、SUSE Linux、Microsoft Windows、IBM AIX或Sun Solaris作業系統、Oracle、IBM DB2或SQL Server資料庫伺服器和Web環境上的AEM Forms。
+熟悉JEE、JBoss、WebSphere和Webogic應用程式伺服器、Red Hat Linux、SUSE Linux、Microsoft Windows、IBM AIX或Sun Solaris作業系統、Oracle、IBM DB2或SQL Server資料庫伺服器以及Web環境上的AEM Forms。
 
 ## 使用者層級 {#user-level}
 
@@ -266,7 +267,7 @@ and ones like:
 INFO `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad
 請務必在記錄中找出第一行，因為某些應用程式伺服器也使用Quartz，且其Quartz例項不應與AEM Forms在JEE排程器服務上使用的例項混淆。 這表示調度程式服務正在啟動，其後面的線路將告訴您它是否在群集模式下正確啟動。 此序列中會顯示多條消息，這是顯示Quartz配置方式的最後一條「已啟動」消息：
 
-此處提供了Quartz實例的名稱：`IDPSchedulerService_$_ap-hp8.ottperflab.corp.adobe.com1312883903975`。 調度程式的Quartz實例的名稱將始終以字串`IDPSchedulerService_$_`開頭。 附加到此結尾的字串將告訴您Quartz是否在群集模式下運行。 從節點的主機名和長位字串（此處`ap-hp8.ottperflab.corp.adobe.com1312883903975`）生成的長唯一標識符指示它正在群集中運行。 如果以單一節點運作，則識別碼會是兩位數字「20」：
+此處提供了Quartz實例的名稱：`IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`。 調度程式的Quartz實例的名稱將始終以字串`IDPSchedulerService_$_`開頭。 附加到此結尾的字串將告訴您Quartz是否在群集模式下運行。 從節點的主機名和長位字串（此處`ap-hp8.ottperflab.adobe.com1312883903975`）生成的長唯一標識符指示它正在群集中運行。 如果以單一節點運作，則識別碼會是兩位數字「20」：
 
 INFO `[org.quartz.core.QuartzScheduler]`計畫程式`IDPSchedulerService_$_20`已啟動。
 必須對所有群集節點單獨執行此檢查，因為每個節點的調度程式獨立地確定是否在群集模式下運行。
@@ -332,19 +333,3 @@ JEE上的AEM Forms中，某些檔案路徑設定會在叢集範圍內建立，�
 特別是，節點之間不應共用臨時目錄路徑。 應使用與所述驗證GDS的過程類似的過程來驗證臨時目錄是否未共用：轉至每個節點，在路徑設定指示的路徑中建立臨時檔案，然後驗證其他節點是否不共用該檔案。 臨時目錄路徑應引用每個節點上的本地磁碟儲存（如果可能），並應被檢查。
 
 對於每個路徑設定，請確定路徑實際存在，並且可從叢集中的每個節點存取，使用AEM Forms在JEE上執行時所使用的有效使用身分識別。 字型目錄內容必須可讀。 臨時目錄必須允許讀取、寫入和控制。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

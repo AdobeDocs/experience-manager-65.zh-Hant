@@ -1,8 +1,8 @@
 ---
 title: 設定電子郵件端點
-seo-title: 設定電子郵件端點
+seo-title: Configuring email endpoints
 description: 了解如何設定電子郵件端點。
-seo-description: 了解如何設定電子郵件端點。
+seo-description: Learn how to configure email endpoints.
 uuid: d47bb45b-0e0e-43ca-9e25-e347d0e60206
 contentOwner: admin
 content-type: reference
@@ -10,20 +10,20 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
-source-wordcount: '3766'
+source-wordcount: '3757'
 ht-degree: 0%
 
 ---
 
-# 配置電子郵件端點{#configuring-email-endpoints}
+# 設定電子郵件端點 {#configuring-email-endpoints}
 
 電子郵件端點可讓使用者將一或多份檔案（作為電子郵件附件）傳送至指定的電子郵件帳戶，借此叫用服務。 電子郵件收件匣可作為附件的收集點。 服務會監控收件匣並處理附件。 轉換的結果會轉送至端點中定義的使用者。
 
 對於電子郵件端點，獲授權的使用者可以將檔案以電子郵件傳送至適當的帳戶，以叫用程式。 結果將返回給提交用戶（預設情況下）或終結點設定中定義的用戶。
 
-配置電子郵件端點之前，請建立POP3或IMAP電子郵件帳戶供端點使用。 為每種轉換類型設定個別帳戶。 例如，一個帳戶可配置為從傳入的檔案附件生成標準PDF文檔，而另一個帳戶可配置為生成安全PDF文檔。
+配置電子郵件端點之前，請建立POP3或IMAP電子郵件帳戶供端點使用。 為每種轉換類型設定個別帳戶。 例如，一個帳戶可以配置為從傳入的檔案附件生成標準PDF文檔，而另一個帳戶可以配置為生成安全PDF文檔。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ ht-degree: 0%
 * 配置所有電子郵件端點通用的屬性
 * 為所有電子郵件端點提供預設值
 
-## 為電子郵件端點{#configure-ssl-for-an-email-endpoint}配置SSL
+## 為電子郵件端點設定SSL {#configure-ssl-for-an-email-endpoint}
 
 您可以配置POP3、IMAP或SMTP以使用安全套接字層(SSL)作為電子郵件端點。
 
@@ -56,21 +56,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->提示：如果您在使用SSL時遇到問題，請使用Microsoft Outlook等電子郵件用戶端來檢查它是否可以使用SSL存取電子郵件伺服器。 如果電子郵件用戶端無法存取電子郵件伺服器，則此問題與憑證或電子郵件伺服器的設定有關。
+>提示：如果您在使用SSL時遇到問題，請使用電子郵件用戶端(例如Microsoft Outlook)來檢查它是否可以使用SSL存取電子郵件伺服器。 如果電子郵件用戶端無法存取電子郵件伺服器，則此問題與憑證或電子郵件伺服器的設定有關。
 
-## 配置預設電子郵件端點設定{#configure-default-email-endpoint-settings}
+## 配置預設電子郵件端點設定 {#configure-default-email-endpoint-settings}
 
 您可以使用「服務管理」頁來配置所有電子郵件端點通用的屬性，並為所有電子郵件端點提供預設值。
 
 要使表單工作流接收和處理來自用戶的傳入電子郵件，您需要為「完成任務」服務建立電子郵件端點。 如[為完成任務服務](configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)建立電子郵件端點中所述，此電子郵件端點需要其他設定。
 
-### 變更電子郵件端點的預設值{#change-the-default-values-for-email-endpoints}
+### 變更電子郵件端點的預設值 {#change-the-default-values-for-email-endpoints}
 
 1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「服務管理」。
 1. 在「服務管理」頁上，按一下「電子郵件：1.0（元件ID為com.adobe.idp.dsc.provider.service.email.Email）。
 1. 在「配置」頁簽上，指定預設的電子郵件端點設定，然後按一下「保存」。
 
-### 預設電子郵件端點設定{#default-email-endpoint-settings}
+### 預設電子郵件端點設定 {#default-email-endpoint-settings}
 
 **Cron運算式：** 用於調度輸入目錄輪詢的Cron運算式。
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 **POP3/IMAP SSL已啟用：** 選取此選項時，啟用SSL。
 
-**SMTP主機：** 電子郵件提供程式用於傳送結果和錯誤訊息的郵件伺服器的主機名。例如， mail.corp.example.com。
+**SMTP主機：** 電子郵件提供程式用於傳送結果和錯誤訊息的郵件伺服器的主機名。例如， mail.example.com。
 
 **SMTP埠：** 用於連接到郵件伺服器的埠。預設值為 25。
 
@@ -122,7 +122,7 @@ ht-degree: 0%
 
 **使用結果電子郵件的原始主旨行：** 依預設，Forms伺服器會在傳送結果電子郵件訊息時，使用「成功電子郵件主旨」和「錯誤電子郵件主旨」設定中指定的值做為主旨行。若要改用與傳送至伺服器的原始電子郵件相同的主旨行，請選取此選項。
 
-**成功電子郵件主旨：** 您傳送電子郵件至電子郵件端點以開始或繼續處理程式後，會收到AEM表單伺服器傳回的電子郵件訊息。如果您的電子郵件成功，您會收到成功電子郵件。 如果您的電子郵件失敗，您會收到失敗電子郵件，告知失敗的原因。 此設定可讓您指定為此端點傳送的成功電子郵件訊息的主旨行。
+**成功電子郵件主旨：** 您傳送電子郵件至電子郵件端點以開始或繼續處理程式後，會從AEM表單伺服器收到傳回的電子郵件訊息。如果您的電子郵件成功，您會收到成功電子郵件。 如果您的電子郵件失敗，您會收到失敗電子郵件，告知失敗的原因。 此設定可讓您指定為此端點傳送的成功電子郵件訊息的主旨行。
 
 **成功電子郵件內文：** 可讓您指定為此端點傳送的成功電子郵件訊息的內文。
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 **失敗的電子郵件已發送資料夾：** 指定在SMTP郵件伺服器無法運行時要儲存結果的目錄。
 
-## 電子郵件端點設定{#email-endpoint-settings}
+## 電子郵件端點設定 {#email-endpoint-settings}
 
 使用下列設定來設定電子郵件端點。
 
@@ -204,7 +204,7 @@ ht-degree: 0%
 
 **非同步：** 設為同步時，會處理所有輸入檔案並傳回單一回應。設為非同步時，會針對每個處理的檔案傳送回應。
 
-例如，會為擷取單一Word檔案並以PDF檔案傳回該檔案的服務建立電子郵件端點。 可以向端點的收件箱發送電子郵件，該收件箱包含多個(3)Word文檔。 處理所有三個檔案時，如果端點設定為同步，則會傳送單一回應電子郵件，並附加所有三個檔案。 如果端點為非同步，則在將每個Word文檔轉換為PDF後發送響應電子郵件。 結果是三封電子郵件，每封都附有單一PDF附件。
+例如，會為採用單一Word文檔並將該文檔作為PDF檔案返回的服務建立電子郵件端點。 可以向端點的收件箱發送電子郵件，該收件箱包含多個(3)Word文檔。 處理所有三個檔案時，如果端點設定為同步，則會傳送單一回應電子郵件，並附加所有三個檔案。 如果端點為非同步，則在將每個Word文檔轉換為PDF後發送響應電子郵件。 結果是三封電子郵件，每封都附有單一PDF附件。
 
 預設值為非同步。
 
@@ -252,7 +252,7 @@ ht-degree: 0%
 
 **映射：** 模式為Result/%F/，源目標為Result%%sourcefilename%%file1，而Result%%%sourcefilename%%file2。如果映射包含多個對象且模式為Result/%F.ps，則響應檔案附件為Result%%sourcefilename1.ps(output 1)和Result%%sourcefilename2.ps(output 2)。
 
-## 為完成任務服務{#create-an-email-endpoint-for-the-complete-task-service}建立電子郵件端點
+## 為完成任務服務建立電子郵件端點 {#create-an-email-endpoint-for-the-complete-task-service}
 
 要使表單工作流接收和處理來自用戶的傳入電子郵件，您需要為「完成任務」服務建立電子郵件端點。
 
