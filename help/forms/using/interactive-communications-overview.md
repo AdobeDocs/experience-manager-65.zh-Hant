@@ -1,22 +1,23 @@
 ---
 title: 互動式通訊概述
-seo-title: 互動式通訊概述
+seo-title: Interactive Communications Overview
 description: 本文包括概述、使用案例範例、建立工作流程，以及互動式通訊與信函之間的差異。
-seo-description: 互動式通訊關鍵功能、範例使用案例、建立工作流程，以及互動式通訊和通信管理之間的差異
+seo-description: Interactive Communication key capabilities, sample use cases, creation workflow, and differences between Interactive Communication and Correspondence Management
 uuid: a06b4ac7-ca20-4d6d-b2b7-87b21e2f5cf9
 contentOwner: gtalwar
 topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 5%
+source-wordcount: '489'
+ht-degree: 7%
 
 ---
 
-# 互動式通信概述{#interactive-communications-overview}
+
+# 互動式通訊概述 {#interactive-communications-overview}
 
 本文包括概述、使用案例範例、建立工作流程，以及互動式通訊與信函之間的差異。
 
@@ -24,18 +25,18 @@ ht-degree: 5%
 
 「互動式通訊」可集中處理和管理安全、個人化與互動式通信的建立、集合與傳送，例如商業信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。
 
-## 關鍵功能{#key-capabilities}
+## 關鍵功能 {#key-capabilities}
 
 以下是互動式通訊的主要功能：
 
-* 與表單資料模型的現成整合，可輕鬆簡化存取後端資料庫和其他CRM系統(例如MS® Dynamics)
-* 用於打印和Web通道的整合創作介面，能夠自動從打印通道生成Web通道
-* 在打印和網路中以易於理解的視覺格式呈現資訊的圖表
-* 檔案片段支援規則編輯器和表單資料模型
-* 代理用戶介面顯示互動式通信的打印和Web預覽
-* 拖放元件，以快速建構列印和Web頻道
+- 與表單資料模型的現成整合，可輕鬆簡化存取後端資料庫和其他CRM系統(例如MS® Dynamics)
+- 用於打印和Web通道的整合創作介面，能夠自動從打印通道生成Web通道
+- 在打印和網路中以易於理解的視覺格式呈現資訊的圖表
+- 檔案片段支援規則編輯器和表單資料模型
+- 代理用戶介面顯示互動式通信的打印和Web預覽
+- 拖放元件，以快速建構列印和Web頻道
 
-## 交互通信建立{#interactive-communication-creation}
+## 互動式通訊建立 {#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
@@ -62,13 +63,13 @@ ht-degree: 5%
 
 以下是建立互動式通訊所需的基礎要素：
 
-* [表單資料模型](/help/forms/using/data-integration.md)
-* [列印和網頁頻道範本](/help/forms/using/web-channel-print-channel.md)
-* [檔案片段](/help/forms/using/document-fragments.md)
-* 影像
-* [](/help/forms/using/themes.md) Themes for the Web channel
+- [表單資料模型](/help/forms/using/data-integration.md)
+- [列印和網頁頻道範本](/help/forms/using/web-channel-print-channel.md)
+- [檔案片段](/help/forms/using/document-fragments.md)
+- 影像
+- [](/help/forms/using/themes.md) Web頻道專用
 
-## 互動式通訊與通信管理{#interactive-communications-vs-correspondence-management}
+## 互動式通訊與通信管理 {#interactive-communications-vs-correspondence-management}
 
 互動式通訊是建立客戶通訊的預設且建議方法。 若要繼續使用在AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您需要[安裝相容性套件](/help/forms/using/compatibility-package.md)。 以下是互動式通訊和信函功能的比較。
 
@@ -118,13 +119,23 @@ ht-degree: 5%
    <td>使用主題來設定網路管道的樣式</td>
    <td>不支援主題</td>
   </tr>
-  <tr>
-   <td>審核和版本設定</td>
-   <td>不支援</td>
+   <tr>
+   <td>草稿</td>
+   <td>支援</td>
    <td>支援</td>
   </tr>
   <tr>
-   <td>草稿和管理執行個體</td>
+   <td>稽核</td>
+   <td>不支援</td>
+   <td>支援</td>
+  </tr>
+   <tr>
+   <td>版本設定</td>
+   <td>不支援</td>
+   <td>支援</td>
+  </tr>
+   <tr>
+   <td>草稿管理執行個體</td>
    <td>不支援</td>
    <td>支援</td>
   </tr>
