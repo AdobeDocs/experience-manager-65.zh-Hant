@@ -4,11 +4,11 @@ description: ' [!DNL Assets] and [!DNL Dynamic Media] 支援的檔案格式和MI
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
-feature: 資產管理，轉譯
+feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: f0a0ea53675afa16463a3cf863257020ba5374d3
+source-git-commit: c8e83622070572d104f2cdc20c592ac2e9d0d31b
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1535'
 ht-degree: 10%
 
 ---
@@ -40,12 +40,12 @@ ht-degree: 10%
 | PGM | ✓ | ✓ | - | - | - | - | ✓ |
 | PBM | ✓ | ✓ | - | - | - | - | ✓ |
 | PPM | ✓ | ✓ | - | - | - | - | ✓ |
-| PSD ‡ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
+| PSD協定 | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | - | ✓ | - |
 | PICT | - | - | - | - | - | - | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ | - | - | - |
 
-*從PSD檔案擷取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
+*從PSD檔案擷取合併的影像。 這是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
 [!DNL Dynamic Media]中支援的光柵影像格式包括：
 
@@ -56,21 +56,21 @@ ht-degree: 10%
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | - | - | - | - |
-| PSD ‡ | ✓ | - | - | - | - |
+| PSD協定 | ✓ | - | - | - | - |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ | - | - | - | - |
 
-*從PSD檔案擷取合併的影像。 它是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
+*從PSD檔案擷取合併的影像。 這是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
 除了上述資訊外，請考量下列事項：
 
-* 對EPS檔案的支援僅適用於光柵影像。 例如，預設不支援EPS向量影像的縮圖產生。 要添加支援，請[配置ImageMagick](best-practices-for-imagemagick.md)。 若要整合協力廠商工具以啟用其他功能，請參閱[命令列式媒體處理常式](media-handlers.md#command-line-based-media-handler)。
+* EPS檔案的支援僅適用於點陣影像。 例如，預設不支援EPS向量影像的縮圖產生。 要添加支援，請[配置ImageMagick](best-practices-for-imagemagick.md)。 若要整合協力廠商工具以啟用其他功能，請參閱[命令列式媒體處理常式](media-handlers.md#command-line-based-media-handler)。
 
 * 將元資料回寫添加到`NComm`處理程式時，該回寫對PSB檔案格式有效。
 
-* 要使用[!DNL Dynamic Media]預覽和生成EPS檔案的動態格式副本，請參閱[Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 若要使用[!DNL Dynamic Media]來預覽和產生EPS檔案的動態轉譯，請參閱[Adobe Illustrator(AI)、Postscript(EPS)和PDF檔案格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 對於EPS檔案， PostScript文檔結構約定(PS-Adobe)3.0版或更新版本支援元資料回寫。
+* 對於EPS檔案， PostScript檔案結構約定(PS-Adobe)3.0版或更新版本支援中繼資料回寫。
 
 ## 支援的3D格式 {#support-3d-formats}
 
@@ -95,10 +95,10 @@ ht-degree: 10%
 
 * IDAT區塊大小大於100 MB的PNG檔案。
 * PSB檔案。
-* 不支援使用CMYK、RGB、灰度或點陣圖以外的顏色空間的PSD檔案。 不支援DuoTone、Lab和索引色空間。
-* 位深度大於16的PSD檔案。
-* 具有浮點資料的TIFF檔案。
-* 具有Lab色域的TIFF檔案。
+* 不支援具有CMYK、RGB、灰度或點陣圖以外的顏色空間的PSD檔案。 不支援DuoTone、Lab和索引色空間。
+* PSD位深度大於16的檔案。
+* TIFF具有浮點資料的檔案。
+* TIFF具有Lab色域的檔案。
 
 <!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
 ## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
@@ -120,11 +120,11 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## 支援的PDF模擬轉譯器程式庫 {#supported-pdf-rasterizer-library}
 
-Adobe PDF模擬轉譯器程式庫會為大型且內容密集型[!DNL Adobe Illustrator]和PDF檔案產生高品質的縮圖和預覽。 Adobe建議針對下列項目使用PDF模擬轉譯器程式庫：
+Adobe PDF模擬轉譯器程式庫會為大型且內容密集型[!DNL Adobe Illustrator]和PDF檔案產生高品質的縮圖和預覽。 Adobe建議對下列項目使用PDF模擬轉譯器程式庫：
 
 * 需要大量資源來處理的內容密集型AI/PDF檔案。
 * AI/PDF檔案，預設不會產生縮圖。
-* AI檔案具有Pantone Matching System(PMS)顏色。
+* 具有Pantone匹配系統(PMS)顏色的AI檔案。
 
 請參閱[使用PDF模擬轉譯器](aem-pdf-rasterizer.md)。
 
@@ -132,7 +132,7 @@ Adobe PDF模擬轉譯器程式庫會為大型且內容密集型[!DNL Adobe Illus
 
 Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉碼、重新取樣和調整大小）的影像處理解決方案。
 
-影像轉碼庫支援JPG/JPEG、PNG（8位和16位）、GIF、BMP、TIFF/壓縮TIFF（除了32位TIFF檔案和PTIFF檔案外）、ICO和ICN MIME類型。
+影像轉碼程式庫支援JPG/JPEG、PNG（8位元和16位元）、GIF、BMP、TIFF/壓縮TIFF(32位元TIFF檔案和PTIFF檔案除外)、ICO和ICN MIME類型。
 
 請參閱[影像轉碼程式庫](imaging-transcoding-library.md)。
 
@@ -163,7 +163,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
 | PS | ✓ | ✓ | - | - | - | - | - | - |
 | QXP | ✓ | ✓ | - | - | - | - | - | - |
-| EPUB | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
+| ePub | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
 
 ## Dynamic Media中支援的檔案格式 {#supported-document-formats-dynamic-media}
 
@@ -209,7 +209,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | 影片副檔名 | 容器 | 建議的視訊轉碼器 | 不支援的視訊轉碼器 |
 |---|---|---|---|
 | MP4 | MPEG-4 | H264/AVC（所有配置檔案） | - |
-| MOV, QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Meditrate,Apple動畫 |
+| MOV, QT | Apple QuickTime | H264/AVC、Apple ProRes422和HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple中級，Apple動畫 |
 | FLV、F4V | AdobeFlash | H264/AVC, Flix VP6, H263, Sorenson | SWF（向量動畫檔案） |
 | WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft®螢幕(MSS2)、Microsoft®照片(WVP2) |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
@@ -218,8 +218,6 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | WebM | WebM | Google VP8 | - |
 | 奧格夫、奧格 | 奧格 | 蒂奧拉，VP3，狄拉克 | - |
 | MKV | 馬特羅斯卡 | H264/AVC | - |
-| RAM、RM | RealVideo | 不支援 | Real G2(RV20)、Real 8(RV30)、Real 10(RV40) |
-| MJ2 | 動作JPEG 2000 | 運動JPEG 2000編解碼器 | - |
 
 ## 支援的封存格式 {#supported-archive-formats}
 
@@ -301,9 +299,9 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | SVG | image/svg+xml |  |  |
 | SWF | application/x-shockwave-flash |  |  |
 | TAR | application/x-tar |  |  |
-| TIF / TIFF | image/tiff |  |  |
+| TIF /TIFF | image/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
-| RTF | application/x-font-ttf |  |  |
+| TTF | application/x-font-ttf |  |  |
 | VOB | 視頻/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | VTT | text/vtt |  |  |
 | WAV | audio/x-wav |  |  |
