@@ -3,9 +3,10 @@ title: 內容片段模型
 description: 了解內容片段模型如何成為AEM中無頭內容的基礎，以及如何使用結構化內容建立內容片段。
 feature: Content Fragments
 role: User
-source-git-commit: 251bf0ac672d516dd6b2018fc9cc804822f48e4c
+exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
+source-git-commit: 924b30680b189ec5061eb0bd664165793a9dbd9c
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2334'
 ht-degree: 7%
 
 ---
@@ -73,6 +74,9 @@ AEM中的內容片段模型定義[內容片段的內容結構，](/help/assets/c
       * 許多屬性不言自明，有關其他詳細資訊，請參閱[屬性](#properties)。
       * 鍵入&#x200B;**欄位標籤**&#x200B;將自動完成&#x200B;**屬性名稱** — 如果為空，然後可手動更新。
 
+         >[!CAUTION]
+         手動更新資料類型&#x200B;**屬性名稱**&#x200B;時，請注意名稱只能包含拉丁字元、數字和底線「_」作為特殊字元。
+         如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
       例如：
 
       ![欄位屬性](assets/cfm-models-05.png)
@@ -132,6 +136,10 @@ AEM中的內容片段模型定義[內容片段的內容結構，](/help/assets/c
 ## 屬性 {#properties}
 
 許多屬性不言自明，對於某些屬性，其他詳細資訊如下：
+
+>[!CAUTION]
+手動更新&#x200B;**屬性名稱**&#x200B;時，請注意名稱只能包含拉丁字元、數字和底線「_」作為特殊字元。
+如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
 
 * **呈現**
 方式用於實現/呈現片段中欄位的各種選項。這通常可讓您定義作者是否會看到欄位的單一例項，或允許建立多個例項。
@@ -351,7 +359,7 @@ GraphQL中的片段參考也提供週期性保護。 如果您在互相參照的
       可允許多個模型。
    ![內容片段模型原則](assets/cfm-model-policy-assets-folder.png)
 
-1. **** 儲存任何變更。
+1. **** 保存任何更改。
 
 資料夾允許的內容片段模型解析如下：
 * **允許的內容片段模型**&#x200B;的&#x200B;**Policys**。
