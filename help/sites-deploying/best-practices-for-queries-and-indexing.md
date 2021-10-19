@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 52c8d4c425213718678543e9e9e8e5a4c2af4f95
+source-git-commit: 9f7bd996d2ec77d29fbee3ee51ac6469f94e9bd7
 workflow-type: tm+mt
-source-wordcount: '4684'
+source-wordcount: '4679'
 ht-degree: 0%
 
 ---
@@ -215,19 +215,19 @@ Lucene索引的Oak檔案列出設計索引時要考量的幾項事項：
 
 ### JCR查詢速查表 {#jcrquerycheatsheet}
 
-為支援建立有效的JCR查詢和索引定義， [JCR查詢速查表|assets/JCR_query_cheatsheet-v1.0.pdf] 可供下載，並在開發期間作為參考使用。 它包含QueryBuilder、XPath和SQL-2的查詢示例，涵蓋多個情況，這些情況在查詢效能方面表現不同。 此外也提供建議，說明如何建立或自訂Oak索引。 此「速查表」的內容適用於AEM 6.5和AEMas a Cloud Service。
+為支援建立有效的JCR查詢和索引定義， [JCR查詢速查表](assets/JCR_query_cheatsheet-v1.0.pdf) 可供下載，並在開發期間作為參考使用。 它包含QueryBuilder、XPath和SQL-2的查詢示例，涵蓋多個情況，這些情況在查詢效能方面表現不同。 此外也提供建議，說明如何建立或自訂Oak索引。 此「速查表」的內容適用於AEM 6.5和AEMas a Cloud Service。
 
 ## 重新索引 {#re-indexing}
 
 本節概述 **僅限** 重新索引Oak索引的可接受原因。
 
-在下列原因之外，開始重新索引Oak索引 **not** 變更行為或解決問題，並必須增加AEM的負載。
+在下列原因之外，開始重新索引Oak索引 **not** 變更行為或解決問題，並不必要地增加AEM的負載。
 
 請避免重新索引Oak索引，除非下表有說明。
 
 >[!NOTE]
 >
->在查看下表以確定重新索引是否有用之前，**始終**證：
+>在查閱下表以確定重新索引是否有用之前， **always** 驗證：
 >
 >* 查詢正確
 >* 查詢解析到預期索引(使用 [說明查詢](/help/sites-administering/operations-dashboard.md#diagnosis-tools))
