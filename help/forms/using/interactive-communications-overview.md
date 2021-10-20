@@ -9,9 +9,9 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
+source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '486'
 ht-degree: 7%
 
 ---
@@ -42,13 +42,13 @@ ht-degree: 7%
 
 ### 工作流程 {#workflow}
 
-要建立互動式通信，請準備好互動式通信的[構建塊](#buildingblocks)，然後完成以下步驟：
+若要建立互動式通訊，請使用 [構建基礎](#buildingblocks) 針對互動式通訊，然後完成下列步驟：
 
-1. 選擇[建立互動式通信](/help/forms/using/create-interactive-communication.md)。
+1. 選擇 [建立互動式通訊](/help/forms/using/create-interactive-communication.md).
 
-1. 指定[表單資料模型](/help/forms/using/data-integration.md)、預填服務，以及[列印和網頁通道範本](/help/forms/using/web-channel-print-channel.md)。 您可以選擇從列印管道產生網頁管道。
+1. 指定 [表單資料模型](/help/forms/using/data-integration.md)、預填服務和 [列印與網頁頻道範本](/help/forms/using/web-channel-print-channel.md). 您可以選擇從列印管道產生網頁管道。
 
-1. 使用[拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，根據需要添加要打印的文檔片段、影像、元件和Web通道。
+1. 使用 [拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，根據需要添加要打印的文檔片段、影像、元件和Interactive Communication的Web通道。
 1. 為插入的元件配置屬性，如：
 
    1. [影像](/help/forms/using/create-interactive-communication.md#step2)
@@ -57,7 +57,7 @@ ht-degree: 7%
    1. [檔案片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. 預覽打印和Web通道，並根據需要編輯互動式通信。
-1. 代理使用代理UI來準備互動式通信](/help/forms/using/prepare-send-interactive-communication.md)，以將其發送到收件人/後續進程。[
+1. 代理使用代理UI [準備互動式通訊](/help/forms/using/prepare-send-interactive-communication.md) 將其傳送至收件者/貼文程式。
 
 ### 建置區塊 {#buildingblocks}
 
@@ -67,11 +67,11 @@ ht-degree: 7%
 - [列印和網頁頻道範本](/help/forms/using/web-channel-print-channel.md)
 - [檔案片段](/help/forms/using/document-fragments.md)
 - 影像
-- [](/help/forms/using/themes.md) Web頻道專用
+- [主題](/help/forms/using/themes.md) 針對網頁頻道
 
 ## 互動式通訊與通信管理 {#interactive-communications-vs-correspondence-management}
 
-互動式通訊是建立客戶通訊的預設且建議方法。 若要繼續使用在AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您需要[安裝相容性套件](/help/forms/using/compatibility-package.md)。 以下是互動式通訊和信函功能的比較。
+互動式通訊是建立客戶通訊的預設且建議方法。 若要繼續使用AEM 6.3 Forms和AEM 6.2 Forms中建立的字母，您必須 [安裝相容性套件](/help/forms/using/compatibility-package.md). 以下是互動式通訊和信函功能的比較。
 
 <table>
  <tbody>
@@ -124,6 +124,12 @@ ht-degree: 7%
    <td>支援</td>
    <td>支援</td>
   </tr>
+   <tr>
+   <td>提交</td>
+   <td>支援</td>
+   <td>支援</td>
+  </tr>
+  <tr>
   <tr>
    <td>稽核</td>
    <td>不支援</td>
@@ -134,12 +140,6 @@ ht-degree: 7%
    <td>不支援</td>
    <td>支援</td>
   </tr>
-   <tr>
-   <td>草稿管理執行個體</td>
-   <td>不支援</td>
-   <td>支援</td>
-  </tr>
-  <tr>
    <td>批次處理</td>
    <td>支援 </td>
    <td>支援</td>
