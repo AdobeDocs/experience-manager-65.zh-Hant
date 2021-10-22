@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 676299c741684708d420ac208f44b0c7a285de0c
+source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2116'
 ht-degree: 1%
 
 ---
@@ -319,7 +319,7 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 
 >[!NOTE]
 >
->以下概述的程式是Publish例項的範例。 若您想這麼做，也可以對Author例項執行此程式。
+>此程式是Publish例項的範例。 如果您想在Author例項上啟用電子郵件通知，則需要遵循Author上的相同步驟。
 
 ### Gmail {#gmail}
 
