@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5版中已棄用和已移除的功能。
 description: Adobe Experience Manager 6.5中已棄用和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: bfe5bb744223be1ff9a00c382734abd9bf4db59a
+source-git-commit: 1e02ad94459ff2893d96055c026d0873b1d69991
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 11%
@@ -63,7 +63,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 整合 | Salesforce Force API整合已從預設分發(Quickstart)中刪除，現在是要從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | 功能仍可用。 |
 | Forms | 由於不再支援Adobe中心產品，因此Adobe中心移轉橋服務的支援已遭移除。 | 沒有替換。 |  |
 | Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 沒有替換。 |  |
-| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 無替換 |
+| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 無替換 |  |
 | Forms | 無法在JEE上從LiveCycleES4 SP1升級至AEM 6.5 Forms的單跳升級 | 請參閱 [可用升級路徑](../forms/using/upgrade.md) 在AEM Forms升級檔案中。 |  |
 | Forms | 移除JEE上AEM Forms的UPD型叢集支援 | 在JEE上的AEM Forms中，您只能使用基於TCP的群集。 如果您將UDP多播伺服器從舊版升級為JEE上的AEM 5.5 Forms ，請執行手動配置以切換到基於TCP的gemfire群集。 如需詳細指示，請參閱 [升級至JEE版AEM 6.5表單](../forms/using/upgrade-forms-jee.md) |  |
 | 開發人員 | Firebug Lite已從預設分發(Quickstart)中移除 | 使用瀏覽器內建的開發人員主控台 |
