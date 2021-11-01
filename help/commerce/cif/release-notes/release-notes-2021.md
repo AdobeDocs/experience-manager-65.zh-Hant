@@ -2,10 +2,10 @@
 title: AEM內容與商務發行說明2021年
 description: AEM內容與商務發行說明2021年
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: a401955e4b163a8062a498ea897d4a3d95ae0208
+source-git-commit: 7261a71769dfb968c768e0cb4835d7d4cca97b1a
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 9%
+source-wordcount: '1327'
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 請參閱下表中您目前使用或計畫未來使用的CIF版本的最低系統需求。
 
-**在4月的版本中，我們已使用CIF附加元件取代GitHub的CIF連接器，** 此元件可在Adobe軟 [體發佈中取得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。切換至附加元件可為專案帶來絕佳優勢：
+**在4月的版本中，我們已將GitHub的CIF連接器更換為CIF附加元件** 可在 [Adobe軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 切換至附加元件可為專案帶來絕佳優勢：
 
 * AEM 6.5將立即提供大部分新功能（不再等待功能端埠）
 * 易於升級到新的附加版本
@@ -28,6 +28,26 @@ ht-degree: 9%
 | CIF附加元件 | 最低：AEM 6.5.7、Magento2.3.5 GraphQL結構 |
 | CIF核心元件 | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 發行日期：2021年10月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加元件 | 2021.10.20.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
+| CIF核心元件 | 2.4.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.0) |
+| CIF Venia參考站 | 2021.11.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.11.01) |
+
+### 新增功能 {#what-is-new-october}
+
+* CIF附加元件支援最新的Commerce v2.4.3，並提供新的GraphQL API和結構
+
+* 作者可使用RTF編輯器(RTE)，在文字欄位中新增產品和目錄頁面的連結。 RTE工具列中已新增CIF圖示，可開啟選擇器以快速搜尋並選取產品或類別，而不需離開內容。
+
+* 現有的快顯購物車和結帳已取代為專用的AEM購物車和結帳頁面。 這些頁面上的元件是使用Magento的可擴充Peregrine元件所建置
+
+* 商家可使用商務後端，在導覽中隱藏特定產品目錄類別。 CIF導覽核心元件會依照商務後端設定「包含在功能表中」，顯示/隱藏導覽中的類別
+
+* AEM Storefront Venia在找不到類別或產品頁面時傳回HTTP 404錯誤
 
 ## 發行日期：2021年9月
 
@@ -98,7 +118,7 @@ ht-degree: 9%
    * 以製作模式呈現階段產品資料的視覺指標，可更清楚掌握即將進行的變更
    * 適用於內容與商務頁面的新Sitemap元件
 
-* 支援AEM Storefront的[Adobe Commerce Sensei產品建議(由Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供技術支援，使用預先定義或即時建立的建議)
+* 支援 [Adobe Commerce Sensei產品建議，由Adobe Sensei提供技術支援](https://business.adobe.com/products/magento/product-recommendations.html) 在AEM Storefront中使用預先定義或即時建立的建議
 
 ## 發行日期：2021年6月
 
