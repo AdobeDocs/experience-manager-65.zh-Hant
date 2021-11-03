@@ -6,11 +6,11 @@ audience: admin-user
 user-guide-title: AEM 6.5 管理使用指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解 AEM 的管理事項。
-feature: 管理
+feature: Administering
 role: Admin
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 48abd410e293a193abc34a1bd4f038a121e58490
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '623'
 ht-degree: 14%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 14%
 # AEM 6.5 管理使用指南 {#administering}
 
 + [管理使用手冊概述](home.md)
-+ 網站功能{#introduction}
++ Sites功能 {#introduction}
    + [網站管理](msm-and-translation.md)
    + [非同步作業](asynchronous-jobs.md)
    + [重複使用內容：多網站管理員和即時副本](msm.md)
@@ -78,7 +78,7 @@ ht-degree: 14%
    + [OWASP前10名](owasp-top10.md)
    + [以生產就緒模式執行AEM](production-ready.md)
    + [Identity Management](identity-management.md)
-   + [AdobeAEM Managed Services的IMS驗證和Admin Console支援](ims-config-and-admin-console.md)
+   + [適用於AEM Managed Services的Adobe IMS驗證和Admin Console支援](ims-config-and-admin-console.md)
    + [建立封閉的使用者群組](cug.md)
    + [緩解AEM中的序列化問題](mitigating-serialization-issues.md)
    + [使用者同步](sync.md)
@@ -119,7 +119,7 @@ ht-degree: 14%
    + [設定Adobe Analytics的視訊追蹤](adobeanalytics-video.md)
    + [HTTP2 傳送內容常見問答集](scene7-http2faq.md)
    + [疑難排解Adobe Campaign整合](troubleshooting-campaignintegration.md)
-   + [SharePoint連接器許可證、版權聲明和免責聲明](sharepoint-connector-licenses.md)
+   + [SharePoint Connector授權、版權聲明及免責聲明](sharepoint-connector-licenses.md)
    + [SharePoint Connector](sharepoint-connector.md)
    + [DHTML 檢視器生命週期結束常見問答集](dhtml-viewer-endoflifefaqs.md)
    + [與Adobe Campaign Classic整合](campaignonpremise.md)
@@ -156,8 +156,8 @@ ht-degree: 14%
    + [AEM Sites - GDPR整備](gdpr-compliance-sites.md)
    + [處理AEM Foundation的GDPR請求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM商務 — GDPR整備](gdpr-compliance-commerce.md)
-+ 內容管理{#contentmanagement}
-   + [如何使用套件](package-manager.md)
++ 內容管理 {#contentmanagement}
+   + [封裝管理員](package-manager.md)
    + [管理標籤](tags.md)
    + [頁面匯出工具](page-exporter.md)
    + [傳統UI標籤控制台](classic-console.md)
