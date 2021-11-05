@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5的向後相容性
-seo-title: AEM 6.5的向後相容性
+seo-title: Backward Compatibility in AEM 6.5
 description: 了解如何讓您的應用程式和設定與AEM 6.5相容
-seo-description: 了解如何讓您的應用程式和設定與AEM 6.5相容
+seo-description: Learn how to keep your apps and configurations compatible with AEM 6.5
 uuid: 81dc2771-f59b-4b24-8932-9e938cba05e0
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,22 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
-feature: 升級
+feature: Upgrading
 exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50a11e30ccd720065962e8dd03cbcc71ec9f715a
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '500'
+ht-degree: 1%
 
 ---
 
-# AEM 6.5{#backward-compatibility-in-aem}中的向後相容性
+# AEM 6.5的向後相容性{#backward-compatibility-in-aem}
 
 ## 概覽 {#overview}
 
 >[!NOTE]
 >
->有關不在「相容性包」範圍內的內容和配置更改的清單，請參閱AEM](/help/sites-deploying/repository-restructuring.md)中的[儲存庫重組。
+>有關不在相容性包範圍內的內容和配置更改的清單，請參見 [AEM中的存放庫重新調整](/help/sites-deploying/repository-restructuring.md).
 
 在AEM 6.5中，開發所有功能時都考量回溯相容性。
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ![sase](assets/sase.png)
 
-相容性包有兩種模式：**已啟用路由**&#x200B;和&#x200B;**已禁用路由**。
+相容性包有兩種模式： **已啟用路由** 和 **已禁用路由**.
 
 這可讓AEM 6.5以三種模式執行：
 
@@ -63,10 +63,10 @@ ht-degree: 0%
 
 ## 設定方法 {#how-to-set-up}
 
-AEM 6.3相容性套件可使用套件管理器以套件形式安裝。 您可以從Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)網站下載[AEM 6.3相容性套件。
+此 **AEM 6.4適用於6.5的Compatability Pack** 可使用套件管理器以套件形式安裝。 您可以下載 [AEM 6.4 Software Distribution適用的6.5 Compatability Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64) 頁簽。
 
 安裝相容性套件後，即可使用OSGI配置中的交換機來啟用或禁用路由，如下所示：
 
-![screen_shot_2017-11-27at122421pm](assets/screen_shot_2017-11-27at122421pm.png)
+![比較交換機](assets/compat-switches.png)
 
 安裝並設定相容性軟體包後，將根據已選擇的相容性模式使用功能。
