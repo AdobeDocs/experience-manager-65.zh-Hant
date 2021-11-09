@@ -1,8 +1,8 @@
 ---
 title: 效能測試最佳實務
-seo-title: 效能測試最佳實務
+seo-title: Best Practices for Performance Testing
 description: 本文概述用於效能測試的總體戰略和方法，以及一些可用於協助該過程的工具。
-seo-description: 本文概述用於效能測試的總體戰略和方法，以及一些可用於協助該過程的工具。
+seo-description: This article outlines the overall strategies and methodologies used for performance testing as well as some of the tools that are available to assist in the process.
 uuid: ab8720d6-b864-4d00-9e07-2e1699cfe7db
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: b6de561422bc3533eef153b13d2c65b4cb7e0387
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '1897'
 ht-degree: 0%
 
 ---
@@ -55,40 +55,40 @@ AEM中的許多效能測量（例如查詢回應時間）可能會受到系統�
 
 #### 測試工具 {#testing-tools}
 
-* Adobe的&#x200B;**Tough Day**&#x200B;工具可用來在AEM例項上產生負載並收集效能資料。 Adobe的AEM工程團隊實際上會使用此工具來測試AEM產品本身。 在艱難時刻執行的指令碼是通過屬性檔案和JMX XML檔案配置的。 如需詳細資訊，請參閱[Tough Day documentation](/help/sites-developing/tough-day.md)。
+* Adobe **艱難的一天** 工具可用來在AEM例項產生負載並收集效能資料。 Adobe的AEM工程團隊實際上會使用此工具來測試AEM產品本身。 在艱難時刻執行的指令碼是通過屬性檔案和JMX XML檔案配置的。 如需詳細資訊，請參閱 [艱難的一天檔案](/help/sites-developing/tough-day.md).
 
-* AEM提供現成可用的工具，可快速查看有問題的查詢、要求和錯誤訊息。 如需詳細資訊，請參閱Operations Dashboard檔案的[診斷工具](/help/sites-administering/operations-dashboard.md#diagnosis-tools)區段。
-* Apache提供名為&#x200B;**JMeter**&#x200B;的產品，可用於效能和負載測試以及功能行為。 它是開源軟體，可免費使用，但功能集比企業產品小，學習曲線也更陡。 您可以在Apache的網站[https://jmeter.apache.org/](https://jmeter.apache.org/)找到JMeter
+* AEM提供現成可用的工具，可快速查看有問題的查詢、要求和錯誤訊息。 如需詳細資訊，請參閱 [診斷工具](/help/sites-administering/operations-dashboard.md#diagnosis-tools) 操作控制面板檔案的區段。
+* Apache提供以下產品： **JMeter** 可用於效能和負載測試以及功能行為。 它是開源軟體，可免費使用，但功能集比企業產品小，學習曲線也更陡。 JMeter可在Apache的網站上找到，網址為 [https://jmeter.apache.org/](https://jmeter.apache.org/)
 
-* **Load Runner** 是企業級負載測試產品。提供免費評估版本。 如需詳細資訊，請參閱[https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
+* **載入運行器** 是企業級負載測試產品。 提供免費評估版本。 如需詳細資訊，請參閱 [https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
 
-* 也可使用雲端負載測試工具，例如[Neustar](https://www.neustar.biz/services/web-performance/load-testing)。
+* 雲端負載測試工具，例如 [諾伊斯塔](https://www.neustar.biz/services/web-performance/load-testing) 也可使用。
 * 若是測試行動或回應式網站，則需使用個別的工具集。 它們通過調節網路頻寬，模擬慢速移動連接（如3G或EDGE）來工作。 使用範圍更廣的工具包括：
 
-   * **[網路連結調節器](https://nshipster.com/network-link-conditioner/)**  — 它提供易於使用的UI，並且在網路堆疊上工作的級別相當低。其中包含OS X和iOS的版本；
-   * [**Charles**](https://www.charlesproxy.com/)  — 除了數個其他用途外，還提供網路節流功能的網頁除錯代理應用程式。提供Windows、OS X和Linux版本。
+   * **[網路鏈路調節器](https://nshipster.com/network-link-conditioner/)**  — 它提供易於使用的UI，並且在網路堆棧中處於相當低的級別工作。 包含OS X和iOS的版本；
+   * [**Charles**](https://www.charlesproxy.com/)  — 除了其他幾種用途外，還提供網路節流的Web調試代理應用程式。 提供Windows、OS X和Linux版本。
 
 #### 最佳化工具 {#optimization-tools}
 
 **監控**
 
-[監視效能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)文檔是可用於診斷問題和查找調整區域的工具和方法的良好資源。
+此 [監控效能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance) 說明檔案是工具和方法的好資源，可用來診斷問題和找出調整的區域。
 
 **觸控式UI中的開發人員模式**
 
-AEM 6的觸控式UI中，有一項新功能是開發人員模式。 就像作者可在編輯和預覽模式之間切換一樣，開發人員可在製作UI中切換至開發人員模式，以查看頁面上每個元件的轉譯時間，以及查看任何錯誤的堆疊追蹤。 如需開發人員模式的詳細資訊，請參閱此[CQ Gems簡報](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)。
+AEM 6的觸控式UI中，有一項新功能是開發人員模式。 就像作者可在編輯和預覽模式之間切換一樣，開發人員可在製作UI中切換至開發人員模式，以查看頁面上每個元件的轉譯時間，以及查看任何錯誤的堆疊追蹤。 如需開發人員模式的詳細資訊，請參閱 [CQ Gems簡報](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
 
 **使用rlog.jar讀取請求日誌**
 
-要更全面地分析AEM系統上的請求日誌，可以使用`rlog.jar`搜索AEM生成的`request.log`檔案並對其進行排序。 `/crx-quickstart/opt/helpers`資料夾中的AEM安裝包含此jar檔案。 有關日誌工具和請求日誌的詳細資訊，請參閱[監視和維護](/help/sites-deploying/monitoring-and-maintaining.md)文檔。
+如需更全面分析AEM系統上的要求記錄， `rlog.jar` 可用來搜尋和排序 `request.log` AEM產生的檔案。 此jar檔案會隨AEM安裝一起包含在 `/crx-quickstart/opt/helpers` 檔案夾。 如需記錄工具和要求記錄的詳細資訊，請參閱 [監控與維護](/help/sites-deploying/monitoring-and-maintaining.md) 檔案。
 
 **說明查詢工具**
 
-ACS AEM工具中的[Explain Query Tool](/help/sites-administering/operations-dashboard.md#explain-query)可用於查看運行查詢時使用的索引。 這在優化慢速運行查詢時非常有用。
+此 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query) 在ACS AEM工具中，可用於查看運行查詢時使用的索引。 這在優化慢速運行查詢時非常有用。
 
 **PageSpeed Tools**
 
-Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務，並提供外掛程式，可與Apache執行個體上的Dispatcher一併安裝，以作出其他最佳化。 如需詳細資訊，請參閱[PageSpeed工具網站](https://developers.google.com/speed/pagespeed/)。
+Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務，以及可與Apache執行個體上的dispatcher一併安裝的外掛程式，以做出其他最佳化。 如需詳細資訊，請參閱 [PageSpeed工具網站](https://developers.google.com/speed/pagespeed/).
 
 ## 製作環境 {#author-environment}
 
@@ -98,23 +98,31 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 
 有許多自動化框架是專為效能和負載測試而設計的。 您可以在這些工具中記錄自訂指令碼，然後加以播放，以模擬同時執行類似內容建立和啟動活動的作者人數高峰。 建議您使用「艱難日」工具來模擬活動，例如上傳數千個資產或啟用大量頁面。
 
-對於需要大量資產載入或頁面編寫的環境類型，必須使用Tough Day等工具，以確保環境在峰值負載下能有效運作。 [](/help/sites-administering/webdav-access.md) WebDAV是不需要指令碼的工具，也可用於載入大量資產。
+對於需要大量資產載入或頁面編寫的環境類型，必須使用Tough Day等工具，以確保環境在峰值負載下能有效運作。 [WebDAV](/help/sites-administering/webdav-access.md) 是不需要指令碼的工具，也可用來載入大量資產。
 
 #### MongoDB特定步驟 {#mongodb-specific-steps}
 
-在有MongoDB後端的系統上，AEM提供了幾個[JMX](/help/sites-administering/jmx-console.md) MBean，在執行負載或效能測試時需要監控：
+在後端有MongoDB的系統上，AEM提供數個 [JMX](/help/sites-administering/jmx-console.md) 執行負載或效能測試時需要監控的MBeans:
 
-* **統一快取統計資訊** MBean。 您可以前往：
+* 此 **整合快取統計資訊** MBean。 您可以前往：
 
 `https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aid%3D6%2Cname%3D%22Consolidated+Cache+statistics%22%2Ctype%3D%22ConsolidatedCacheStats%22`
 
-對於名為&#x200B;**Document-Diff**&#x200B;的快取，點擊率應大於`.90`。 如果點擊率低於90%，您可能需要修改`DocumentNodeStoreService`設定。 Adobe產品支援可建議您的環境最佳設定。
+對於名為的快取 **Document-Diff**，點擊率應該會結束 `.90`. 如果點擊率低於90%，您可能需要修改 `DocumentNodeStoreService` 設定。 Adobe產品支援可建議您的環境最佳設定。
 
-* **Oak Repository Statistics** Mbean。 您可以前往：
+* 此 **Oak存放庫統計資料** Mbean。 您可以前往：
 
 `https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aid%3D16%2Cname%3D%22Oak+Repository+Statistics%22%2Ctype%3D%22RepositoryStats%22`
 
-**ObservationQueueMaxLength**&#x200B;區段將顯示Oak觀察佇列中過去幾小時、分鐘、秒和周的事件數。 在「每小時」區段中找出最大的事件數。 需要將此數字與`oak.observation.queue-length`設定進行比較，該設定可在[OSGi控制台](/help/sites-deploying/web-console.md)的&#x200B;**SlingRepositoryManager**&#x200B;元件中找到。 如果觀察佇列顯示的最高數量超過`queue-length`設定，請聯絡Adobe支援以取得提升設定的協助。 預設設定為1,000，但大部分部署通常需要將其提高至20,000或50,000。
+此 **ObservationQueueMaxLength** 區段會顯示過去幾小時、分鐘、秒和周內，Oak的觀察佇列中的事件數。 在「每小時」區段中找出最大的事件數。 此數字需要與 `oak.observation.queue-length` 設定。 如果觀察佇列顯示的最高數量超過 `queue-length` 設定：
+
+1. 建立名為的檔案： `com.adobe.granite.repository.impl.SlingRepositoryManager.cfg` 包含參數 `oak.observation.queue‐length=50000`
+1. 將其置於/crx-quickstart/install資料夾下。
+
+>[!NOTE]
+>另請參閱 [AEM 6.x |效能調整提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+
+預設設定為10,000，但大部分部署通常需要將其提高至20,000或50,000。
 
 ## 發佈環境 {#publish-environment}
 
@@ -128,22 +136,22 @@ Google的PageSpeed工具提供網站分析，以符合頁面效能最佳實務�
 
 在不需要高層級個人化的系統上，Dispatcher應快取大部分的請求。 因此，發佈例項的負載應維持相對平坦。 如果需要高層級的個人化，建議對個人化內容使用iFrame或AJAX要求等技術，以便允許盡可能多的Dispatcher快取。
 
-對於基本測試，Apache Bench可用於測量Web伺服器響應時間，並幫助建立用於測量記憶體洩漏等內容的負載。 如需詳細資訊，請參閱[監控檔案](/help/sites-deploying/monitoring-and-maintaining.md#apache-bench)中的範例。
+對於基本測試，Apache Bench可用於測量Web伺服器響應時間，並幫助建立用於測量記憶體洩漏等內容的負載。 如需詳細資訊，請參閱 [監控檔案](/help/sites-deploying/monitoring-and-maintaining.md#apache-bench).
 
 ## 疑難排解效能問題 {#troubleshooting-performance-issues}
 
 在製作執行個體上執行效能測試後，任何問題都需要調查、診斷和解決。 在執行分析和解決問題時，您可以使用數種工具和技術：
 
-* 您可以在「操作控制面板」中檢查[請求效能日誌](/help/sites-administering/operations-dashboard.md#request-performance)。 此工具可用來識別緩慢的頁面請求
-* 使用[查詢效能工具](/help/sites-administering/operations-dashboard.md#query-performance)分析慢速運行的查詢
+* 您可以檢查 [請求效能日誌](/help/sites-administering/operations-dashboard.md#request-performance) （在操作控制面板中）。 此工具可用來識別緩慢的頁面請求
+* 使用分析慢速運行的查詢 [查詢效能工具](/help/sites-administering/operations-dashboard.md#query-performance)
 
-* 查看錯誤清單，了解錯誤或警告。 如需詳細資訊，請參閱[記錄](/help/sites-deploying/configure-logging.md)
+* 查看錯誤清單，了解錯誤或警告。 如需詳細資訊，請參閱 [記錄](/help/sites-deploying/configure-logging.md)
 * 監視系統硬體資源，如記憶體和CPU利用率、磁碟I/O或網路I/O。這些資源往往是效能瓶頸的原因
 * 最佳化頁面架構及其處理方式，以盡量減少URL參數的使用，以允許盡可能多的快取
-* 請參閱[效能最佳化](/help/sites-deploying/configuring-performance.md)和[效能調整提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)檔案
+* 關注 [效能最佳化](/help/sites-deploying/configuring-performance.md) 和 [效能調校提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) 檔案
 
 * 如果在製作執行個體上編輯某些頁面或元件時發生問題，請使用觸控式UI開發人員模式來檢查相關頁面。 這可提供頁面上每個內容區域的劃分及其載入時間
-* 縮制網站上的所有JS和CSS。 有關如何執行此操作的詳細資訊，請參閱此[部落格文章](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)。
+* 縮制網站上的所有JS和CSS。 如需如何執行此動作的詳細資訊，請參閱 [部落格貼文](https://blogs.adobe.com/foxes/enable-js-and-css-minification/).
 * 從元件中消除內嵌的CSS和JS。 這些請求應隨用戶端程式庫一併縮制，以盡量減少呈現頁面所需的請求數
 * 使用瀏覽器工具（例如Chrome的「網路」標籤）來檢查伺服器請求，並查看哪些請求花費的時間最長。
 
