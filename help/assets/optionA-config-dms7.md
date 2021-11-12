@@ -1,5 +1,5 @@
 ---
-title: 設定Dynamic Media - Scene7模式
+title: 選項A — 設定Dynamic Media - Scene7模式
 description: 了解如何設定Dynamic Media - Scene7模式。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,20 +8,28 @@ content-type: reference
 docset: aem65
 role: User, Admin
 mini-toc-levels: 3
-exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
+hide: true
+hidefromtoc: true
 feature: Configuration,Scene7 Mode
-source-git-commit: b5835d16efb0f2112ec8a6917e8cf2529cbf19c7
+exl-id: null
+source-git-commit: b151ae21761328ac0734f192ac51ffcc8807123f
 workflow-type: tm+mt
-source-wordcount: '6940'
+source-wordcount: '11558'
 ht-degree: 3%
 
 ---
 
-# 設定Dynamic Media - Scene7模式{#configuring-dynamic-media-scene-mode}
+# 選項A — 設定Dynamic Media - Scene7模式{#configuring-dynamic-media-scene-mode}
+
+>[!NOTE]
+>
+>選項A — 我寫的兩個新主題被刪除。 但在刪除主題之前，其所有內容已移至本主題中已討論一般設定和發佈設定的個別區域。
 
 如果您使用針對不同環境（例如開發、測試和生產）設定的Adobe Experience Manager，請針對其中每個環境設定Dynamic MediaCloud Services。
 
 ## Dynamic Media - Scene7模式的架構圖 {#architecture-diagram-of-dynamic-media-scene-mode}
+
+**里克：保持原樣**
 
 以下架構圖表說明Dynamic Media - Scene7模式的運作方式。
 
@@ -48,6 +56,8 @@ ht-degree: 3%
 
 ## 在Scene7模式中啟用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
 
+**里克：保持原樣**
+
 [Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 預設為停用。 若要運用Dynamic Media功能，您必須啟用此功能。
 
 >[!WARNING]
@@ -61,6 +71,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 ```
 
 ## （選用）將Dynamic Media預設集和設定從6.3移轉至6.5零停機時間 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+
+**里克：保持原樣**
 
 將Experience ManagerDynamic Media從6.3升級至6.4或6.5，現在包含零停機部署的功能。 若要從 `/etc` to `/conf` 在CRXDE Lite中，請務必執行下列curl命令。
 
@@ -78,6 +90,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## 安裝Feature Pack 18912以大量移轉資產 {#installing-feature-pack-for-bulk-asset-migration}
 
+**里克：保持原樣**
+
 安裝Feature Pack 18912為 *可選*.
 
 Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manager時從Dynamic Media — 混合模式或Dynamic Media Classic移轉至Dynamic Media - Scene7模式。 可從以下網址取得： [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
@@ -85,6 +99,8 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 請參閱 [安裝Feature Pack 18912以大量移轉資產](/help/assets/bulk-ingest-migrate.md) 以取得更多資訊。
 
 ## 在Cloud Services中建立Dynamic Media設定 {#configuring-dynamic-media-cloud-services}
+
+**里克：保持原樣**
 
 **設定Dynamic Media之前**  — 收到含有Dynamic Media憑證的布建電子郵件後，您必須開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶以變更密碼。 預配電子郵件中提供的密碼是系統生成的，並且僅用於臨時密碼。 請務必更新密碼，以便使用正確的憑證來設定Dynamic MediaCloud Service。
 
@@ -99,7 +115,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
    選擇 **[!UICONTROL 連線至Dynamic Media]**.
 
    >[!NOTE]
-   收到含有Dynamic Media憑證的布建電子郵件後，請開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶以變更密碼。 預配電子郵件中提供的密碼是系統生成的，並且僅用於臨時密碼。 請務必更新密碼，以便使用正確的憑證來設定Dynamic MediaCloud Service。
+   **里克：保持原狀??** 收到含有Dynamic Media憑證的布建電子郵件後，請開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶以變更密碼。 預配電子郵件中提供的密碼是系統生成的，並且僅用於臨時密碼。 請務必更新密碼，以便使用正確的憑證來設定Dynamic MediaCloud Service。
 
 1. 連線成功時，請設定下列項目。 含星號(*)的標題為必填：
 
@@ -134,7 +150,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 1. 選擇 **[!UICONTROL 儲存]**.
 1. 若要在發佈Dynamic Media內容之前安全地預覽，您必須「允許清單」Experience Manager製作例項，才能連線至Dynamic Media:
 
-   * 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。 配置時，Adobe提供了您的憑據和登錄詳細資訊。 如果您沒有此資訊，請聯絡Adobe客戶支援。
+   * **里克：連結至新的發佈設定主題** 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。 配置時，Adobe提供了您的憑據和登錄詳細資訊。 如果您沒有此資訊，請聯絡Adobe客戶支援。
 
    * 在頁面右上角的導覽列中，導覽至 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 發佈設定]** > **[!UICONTROL 影像伺服器]**.
 
@@ -149,6 +165,8 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 ## （選用）在Dynamic Media - Scene7模式中設定進階設定 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
+**里克：保持原樣**
+
 如果您想進一步自訂Dynamic Media - Scene7模式的設定和設定，或最佳化其效能，您可以完成下列一或多個作業 *可選* 任務：
 
 * [（選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB的資產](#optional-config-dms7-assets-larger-than-2gb)
@@ -160,6 +178,8 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 * [（選用）篩選資產以進行復寫](#optional-filtering-assets-for-replication)
 
 ### （選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB的資產 {#optional-config-dms7-assets-larger-than-2gb}
+
+**里克：保持原樣**
 
 在Dynamic Media - Scene7模式中，預設資產上傳檔案大小為2 GB或更小。 不過，您可以選擇設定大於2 GB和高達15 GB的資產上傳。
 
@@ -246,79 +266,110 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 1. 選擇 **[!UICONTROL 同步]**.
 1. 對 **[!UICONTROL DAM更新資產]** 工作流模型和 **[!UICONTROL Dynamic Media重新處理]** 工作流程模型。
 
-### （選用）Dynamic Media - Scene7模式設定的設定與設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
+### （選用）設定Dynamic Media發佈設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-當您處於執行模式時 `dynamicmedia_scene7`，請使用Dynamic Media Classic使用者介面來變更Dynamic Media設定。
+**里克：此處新增的新發佈設定主題的完整內容**
 
-上述部分工作需要您開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
+>[!IMPORTANT]
+Dynamic Media發佈設定僅適用於：
+* 您以Scene7模式執行Dynamic Media。
+* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)、Adobe Experience Manager 6.5或Experience Manageras a Cloud Service。
+* 您是具有管理員權限的Experience Manager系統管理員。
 
-設定和設定任務包括：
 
-* [影像伺服器的發佈設定](#publishing-setup-for-image-server)
-* [配置應用程式一般設定](#configuring-application-general-settings)
-* [配置顏色管理](#configuring-color-management)
-* [編輯支援格式的MIME類型](#editing-mime-types-for-supported-formats)
-* [為不支援的格式添加MIME類型](#adding-mime-types-for-unsupported-formats)
-* [建立批集預設集以自動生成影像集和回轉集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+Dynamic Media發佈設定頁面設定依預設會決定資產從AdobeDynamic Media伺服器傳送至網站或應用程式的方式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據「發佈設定」頁面上的預設設定來傳送資產。 例如，傳送不包含解析度屬性的影像的請求會產生影像，影像伺服器頁面上具有「預設物件解析度」設定。
 
-#### 影像伺服器的發佈設定 {#publishing-setup-for-image-server}
-
-「發佈設定」設定決定預設如何從Dynamic Media傳送資產。 如果未指定任何設定，Dynamic Media會根據「發佈設定」中定義的預設設定來傳送資產。 例如，傳送不包含解析度屬性的影像請求，會產生具有預設物件解析度設定的影像。
-
-若要設定發佈設定：在Dynamic Media Classic中，導覽至 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 發佈設定]** > **[!UICONTROL 影像伺服器]**.
-
-「影像伺服器」螢幕建立用於傳送影像的預設設定。 請參閱UI畫面，了解每個設定的說明。
-
-* **[!UICONTROL 請求屬性]**  — 這些設定對可從伺服器傳送的影像施加限制。
-* **[!UICONTROL 預設請求屬性]**  — 這些設定與影像的預設外觀相關。
-* **[!UICONTROL 常見縮圖屬性]**  — 這些設定與縮圖影像的預設外觀相關。
-* **[!UICONTROL 目錄欄位的預設值]** — 這些設定與影像的解析度和預設縮圖類型相關。
-* **[!UICONTROL 色彩管理屬性]**  — 這些設定確定使用的ICC顏色配置檔案。
-* **[!UICONTROL 相容性屬性]**  — 此設定允許將文本層中的前導段落和尾隨段落與3.6版中的段落一樣處理，以實現向後相容性。
-* **[!UICONTROL 本地化支援]**  — 這些設定可讓您管理多個地區設定屬性。 它也可讓您指定地區對應字串，以便定義要在檢視器中支援各種工具提示的語言。 如需設定的詳細資訊 **[本地化支援]**，請參閱 [設定資產本地化時的考量事項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
-
-#### 配置應用程式一般設定 {#configuring-application-general-settings}
-
-若要開啟「應用程式一般設定」頁面，請在Dynamic Media Classic全域導覽列中導覽至 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]**.
-
-**[!UICONTROL 伺服器]**  — 帳戶布建時，Dynamic Media會自動為您的公司提供指派的伺服器。 這些伺服器可用來建構您網站和應用程式的URL字串。 這些URL呼叫是您的帳戶專屬的。 除非Adobe客戶支援明確指示，否則請勿更改任何伺服器名稱。
-
-**[!UICONTROL 覆寫影像]** - Dynamic Media不允許兩個檔案具有相同名稱。 每個項目的URL ID（檔案名稱減去副檔名）必須是唯一的。 這些選項指定如何上傳取代資產：無論是取代原始檔案還是變成重複檔案。 重複資產會以「–1」重新命名（例如chair.tif已重新命名為chair-1.tif）。 這些選項會影響上傳至與原始資料夾不同的資料夾的資產，或副檔名與原始資料夾不同的資產(例如JPG、TIF或PNG)。
-
-* **[!UICONTROL 在當前資料夾中覆蓋，具有相同的基本影像名稱/副檔名]**  — 此選項是最嚴格的更換規則。 它要求您將取代影像上傳至與原始影像相同的資料夾，且取代影像的副檔名與原始影像相同。 若不符合這些要求，則會建立重複項目。
+管理員可以變更影像伺服器、影像轉譯器和暈映頁面上的預設設定，以建立從伺服器傳送資產的預設設定。
 
 >[!NOTE]
-若要與Experience Manager保持一致，請一律選擇此設定： **在當前資料夾中覆蓋，具有相同的基本影像名稱/副檔名**
+Dynamic Media發佈設定供經驗豐富的網站開發人員和程式設計人員使用。 Adobe建議變更下列任何預設發佈設定的使用者熟悉AdobeDynamic Media、HTTP通訊協定標準和慣例，以及基本影像技術。
 
-* **[!UICONTROL 以相同的基本資產名稱/擴充功能覆寫任何資料夾]**  — 要求替換影像的副檔名與原始影像相同（例如chair.jpg必須替換chair.jpg，而不是chair.tif）。 不過，您可以將取代影像上傳至與原始影像不同的資料夾。 更新後的影像位於新資料夾中；在檔案的原始位置找不到檔案
-* **[!UICONTROL 在任何資料夾中覆寫相同的基本資產名稱（不論副檔名為何）]**  — 此選項是最包容的取代規則。 您可以將取代影像上傳至與原始檔案不同的資料夾、以不同副檔名上傳檔案，然後取代原始檔案。 如果原始檔案位於不同的資料夾中，則替換影像位於上載到的新資料夾中。
+**若要設定Dynamic Media發佈設定：**
 
-**[!UICONTROL 預設顏色配置檔案]**  — 請參閱 [設定色彩管理](#configuring-color-management) 以取得其他資訊。
+1. 在「Experience Manager作者」模式中，選取Experience Manager標誌以存取全域導覽主控台。
+1. 在左側邊欄中，選取「工具」圖示，然後前往 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media發佈設定]**.
+1. 在「影像伺服器」頁面中，設定您的影像伺服器 — 發佈內容，然後使用五個索引標籤來配置預設發佈設定。
 
->[!NOTE]
-依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。您可以提高此限制。請參閱 [增加顯示的影像預設集數量](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+   * [影像伺服器](#image-server)
+   * [安全性](#security-tab) 標籤
+   * [目錄管理](#catalog-management-tab) 標籤
+   * [請求屬性](#request-attributes-tab) 標籤
+   * [常見縮圖屬性](#common-thumbnail-attributes-tab) 標籤
+   * [色彩管理屬性](#color-management-attributes-tab) 標籤
 
-#### 配置顏色管理 {#configuring-color-management}
+   ![Dynamic Media發佈設定頁面](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media發佈設定頁面，**[!UICONTROL 請求屬性]**頁簽。*<br><br>
 
-Dynamic Media色彩管理可讓您為資產加上色彩校正。 透過色彩校正，擷取的資產可保留其色彩空間(RGB、CMYK、灰色)和內嵌的色彩設定檔。 當您請求動態轉譯時，會使用CMYK、RGB或灰色輸出將影像顏色校正到目標顏色空間中。 請參閱 [設定影像預設集](/help/assets/managing-image-presets.md).
+1. 完成後，在頁面右上角附近選取 **[!UICONTROL 儲存]**.
 
-配置預設顏色屬性，以便在請求影像時啟用顏色校正：
+#### 影像伺服器 {#image-server}
 
-1. 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後使用布建期間提供的憑證登入您的帳戶。
-1. 導覽至 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]**.
-1. 展開「發 **[!UICONTROL 布設定]** 」區域並選 **[!UICONTROL 取「影像伺服器」]**。設定發 **[!UICONTROL 布例項的預設值]** ，將「發佈內容」設 **** 定為「影像伺服」。
-1. 捲動至您要變更的屬性。 例如， **[!UICONTROL 色彩管理屬性]** 的上界。
+「影像伺服器」頁建立從影像伺服器傳送影像的預設設定。 設定分為五個類別
 
-   您可以設定下列顏色校正屬性：
+| 發佈內容 | 說明 |
+| --- | --- |
+| 影像服務 | 指定發佈設定的上下文。 |
+| 測試影像服務 | 指定測試發佈設定的上下文。<br>請參閱 [在將資產公開之前先測試資產](#test-assets-before-making-public). |
 
-   * **[!UICONTROL CMYK預設顏色空間]**  — 預設CMYK顏色配置檔案的名稱
-   * **[!UICONTROL 灰階預設顏色空間]**  — 預設灰色配置檔案的名稱
-   * **[!UICONTROL RGB預設顏色空間]**  — 預設RGB顏色配置檔案的名稱
-   * **[!UICONTROL 色彩轉換演算方式]**  — 指定渲染目的。 可接受的值為： **[!UICONTROL 知覺]**, **[!UICONTROL 相對冷量]**, **[!UICONTROL 飽和度]**, **[!UICONTROL 絕對冷量]**. Adobe建議 **[!UICONTROL 相對]** 作為預設值。
+#### 「安全」頁簽 {#security-tab}
 
-1. 選擇 **[!UICONTROL 儲存]**.
+**[!UICONTROL 用戶端地址]**  — 可讓您指定一或多個IP位址或IP位址範圍。 指定後，拒絕對源自未列出IP地址的客戶端的此映像目錄的請求。 此規則同時適用於影像傳送和已轉譯的影像。
 
-例如，您可以將「 **[!UICONTROL RGB預設顏色空間]** 」設 *為sRGB*，將「 **[!UICONTROL CMYK預設顏色空間」設為]**** WebCobatedCholor。
+#### 目錄管理索引標籤 {#catalog-management-tab}
+
+**[!UICONTROL 規則集定義檔案路徑]**  — 指定包含影像目錄規則集定義的檔案。
+
+另請參閱 [RuleSetFile](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile.html) 參數。
+
+#### 請求屬性索引標籤 {#request-attributes-tab}
+
+這些設定與影像的預設外觀相關。
+
+| 設定 | 說明 |
+| --- | --- |
+| **[!UICONTROL 回覆影像大小限制]** | 必要.<br>指定傳回給用戶端的最大回覆影像寬度和高度。 如果請求導致寬度、高度或兩者均大於此設定的回覆影像，則伺服器會傳回錯誤。<br>另請參閱 [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) 參數。 |
+| **[!UICONTROL 要求混淆模式]** | 如果要將base64編碼應用於有效請求，請啟用。<br>另請參閱 [RequestObfuscation](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) 參數。 |
+| **[!UICONTROL 要求鎖定模式]** | 如果您想在請求中加入簡單雜湊鎖定，請啟用。<br>另請參閱 [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) 參數。 |
+| **[!UICONTROL 預設要求屬性]** |  |
+| **[!UICONTROL 預設影像檔案字尾]** | 必要.<br>如果路徑不包含檔案尾碼，則預設資料檔案副檔名附加到目錄路徑和掩碼路徑欄位值。<br>另請參閱 [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) 參數。 |
+| **[!UICONTROL 預設字體名稱]** | 指定如果文字層請求未提供字型，則使用的字型。 如果指定，則必須是此影像目錄的字型映射或預設目錄的字型映射中的有效字型名稱值。<br>另請參閱 [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) 參數。 |
+| **[!UICONTROL 預設影像]** | 提供預設影像以回應找不到要求影像的要求。<br>另請參閱 [預設影像](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) 參數。 |
+| **[!UICONTROL 預設影像模式]** | 啟用滑桿方塊時（右側的滑桿）, **[!UICONTROL 預設影像]** 以預設影像替換源影像中的每個缺失層，並照常返回複合。 當滑塊框被禁用時（左側的滑塊），預設影像將替換整個複合影像，即使缺少的影像只是多個圖層中的一個。<br>另請參閱 [DefaultImageMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) 參數。 |
+| **[!UICONTROL 預設檢視大小]** | 必要.<br>如果請求未明確指定檢視大小，則伺服器會限制回覆影像不大於此寬度和高度 `wid=`, `hei=`，或 `scl=`.<br>另請參閱 [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) 參數。 |
+| **[!UICONTROL 預設縮圖大小]** | 必要.<br>使用而非屬性 **[!UICONTROL 預設視圖大小]** 針對縮圖請求(`req=tmb`)。 如果縮圖請求(`req=tmb`)未明確指定大小 `wid=`, `hei=`，或 `scl=`.<br>另請參閱 [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) 參數。 |
+| **[!UICONTROL 預設背景顏色]** | 指定用於填入不包含實際影像資料之回覆影像任何區域的RGB值。<br>另請參閱 [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) 參數。 |
+| **[!UICONTROL JPEG 編碼屬性]** |  |
+| **[!UICONTROL 品質]** | 指定JPEG回覆影像的預設屬性。 此 **[!UICONTROL 品質]** 欄位在1 - 100範圍中定義。<br>另請參閱 [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) 參數。 |
+| **[!UICONTROL 色度縮減取樣]** | 啟用或停用JPEG編碼器所採用的色彩下採樣。 |
+| **[!UICONTROL 預設重新取樣模式]** | 指定用於縮放影像資料的預設重採樣和插值屬性。 使用時機 `resMode` 未在請求中指定。<br>另請參閱 [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) 參數。 |
+
+#### 常見縮圖屬性索引標籤 {#common-thumbnail-attributes-tab}
+
+這些設定與縮圖影像的預設外觀和對齊方式有關。
+
+| 設定 | 說明 |
+| --- | --- |
+| **[!UICONTROL 縮圖的預設背景顏色]** | 指定用於填充不包含實際影像資料的輸出縮圖影像區域的RGB值。 僅用於縮圖請求(`req=tmb`)和 **[!UICONTROL 預設縮圖類型]** 設定設為 **[!UICONTROL 適合]** 或 **[!UICONTROL 紋理]**.<br>另請參閱 [ThumbBkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor.html) 參數。 |
+| **[!UICONTROL 水準對齊]** | 指定回復影像矩形中縮圖影像的水準對齊方式，由 `wid=` 和 `hei=` 值。<br>僅用於縮圖請求(`req=tmb`)和 **[!UICONTROL 預設縮圖類型]** 設定設為 **[!UICONTROL 適合]**.<br>有三個水準對齊可供選擇： **[!UICONTROL 中心對齊]**, **[!UICONTROL 左對齊]**，和 **[!UICONTROL 右對齊]**.<br>另請參閱 [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) 參數。 |
+| **[!UICONTROL 垂直對齊]** | 指定回復影像矩形中縮圖影像的垂直對齊方式，由 `wid=` 和 `hei=` 值。 僅用於縮圖請求(`req=tmb`)和 **[!UICONTROL 預設縮圖類型]** 設定設為 **[!UICONTROL 適合]**.<br>有三個垂直對齊可供選擇： **[!UICONTROL 頂端對齊方式]**, **[!UICONTROL 中心對齊]**，和 **[!UICONTROL 底部對齊]**.<br>另請參閱 [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) 參數。 |
+| **[!UICONTROL 預設快取存留時間]** | 提供預設過期時間間隔（小時），以防特定目錄記錄未包含有效的目錄過期值。 設為 `-1` 以標示為永不過期。 <br>另請參閱 [過期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 參數。 |
+| **[!UICONTROL 預設縮圖類型]** | 提供縮圖類型的預設值，以備特定目錄記錄不包含有效的目錄ThumbType值時使用。 僅用於縮圖請求(`req=tmb`)。<br>有三種縮圖類型可供選擇： **[!UICONTROL 裁切]**, **[!UICONTROL 適合]**，和 **[!UICONTROL 紋理]**.<br>另請參閱 [ThumbType](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) 參數。 |
+| **[!UICONTROL 預設縮圖解析度]** | 提供縮圖對象解析的預設值，以備特定目錄記錄不包含有效的目錄ThumbRes值時使用。 僅用於縮圖請求(`req=tmb`)和 **[!UICONTROL 預設縮圖類型]** 設定設為 **[!UICONTROL 紋理]**.<br>另請參閱 [ThumbRes](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) 參數。 |
+
+#### 色彩管理屬性索引標籤 {#color-management-attributes-tab}
+
+這些設定確定用於影像的ICC顏色配置檔案。
+
+**色彩轉換演算方式**
+顏色轉換呈現意圖允許覆蓋工作配置檔案的預設呈現意圖以確定如何調整源顏色。 用於：
+
+1. 預設的ICC配置檔案之一是顏色轉換的目標顏色空間。
+1. 輸出設備（打印機或顯示器）由此配置檔案特徵。
+1. 而且，指定的呈現目的對此配置檔案有效。
+
+不同的渲染意圖使用不同的規則來確定如何調整源顏色。
+
+例如，您可以設定 **[!UICONTROL RGB預設顏色空間]** to **[!UICONTROL sRGB]**，和 **[!UICONTROL CMYK預設顏色空間]** to **[!UICONTROL WebCobated]**.
 
 這麼做會執行下列動作：
 
@@ -328,7 +379,284 @@ Dynamic Media色彩管理可讓您為資產加上色彩校正。 透過色彩校
 * 傳回RGB輸出的動態轉譯，會在 *sRGB* 色域。
 * 傳回CMYK輸出的動態轉譯，會在 *WebCobated* 色域。
 
+另請參閱 [IccRenderIntent](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html) 參數。
+
+>[!NOTE]
+一般而言，最好針對選取的顏色設定使用預設的演算方式，此設定已由Adobe測試，以符合業界標準。 例如，如果您選擇北美或歐洲的色彩設定，預設的色彩轉換演算方式為 **[!UICONTROL 相對顏色量度]**. 如果您選擇日本的顏色設定，預設的顏色轉換呈現方式為 **[!UICONTROL 知覺]**.
+
+| 設定 | 特徵 |
+| --- | --- |
+| **[!UICONTROL CMYK預設顏色空間]** | 指定要用作CMYK資料工作配置檔案的ICC顏色配置檔案的名稱。 若 **[!UICONTROL 未指定]** 如果選擇，則當涉及CMYK源影像時，將禁用此影像目錄的顏色管理。 所有CMYK工作空間都取決於設備，這意味著它們基於實際的油墨和紙張組合。 CMYK工作空間Adobe供應基於標準商業打印條件。<br> 另請參閱 [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) 參數。 |
+| **[!UICONTROL 灰階預設顏色空間]** | 指定要用作灰度資料工作配置檔案的ICC顏色配置檔案的名稱。 若 **[!UICONTROL 未指定]** 選擇，當涉及灰度源影像時，將禁用此影像目錄的顏色管理。<br>另請參閱 [IccProfileGray](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) 參數。 |
+| **[!UICONTROL RGB預設顏色空間]** | 指定要用作RGB資料工作配置檔案的ICC顏色配置檔案的名稱。 若 **[!UICONTROL 未指定]** 選擇此選項時，當涉及RGB源影像時，將禁用此影像目錄的顏色管理。 總的來說，最好選擇 **[!UICONTROL Adobe RGB]** 或 **[!UICONTROL sRGB]**，而非特定裝置的設定檔（例如監視器設定檔）。 **[!UICONTROL sRGB]** 當您為網頁或行動裝置準備影像時，建議使用，因為它會定義用於在網頁上檢視影像的標準監視器的色彩空間。 **[!UICONTROL sRGB]** 當您使用消費者層級數位相機的影像時，也是不錯的選擇，因為這些相機大多使用sRGB作為預設的色域。<br>另請參閱 [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) 參數。 |
+| **[!UICONTROL 色彩轉換演算方式]** | **[!UICONTROL 知覺]**  — 旨在保持顏色之間的視覺關係，使人眼認為顏色是自然的，即使顏色值本身可能改變。 本目的適用於具有大量色域外顏色的照片影像。 此設定是日本印刷業的標準轉譯目的。 |
+|  | **[!UICONTROL 相對比色]**  — 將源顏色空間的極高亮與目標顏色空間的極高亮進行比較，並相應地移動所有顏色。 色域外顏色被移動到目標顏色空間中最接近的可再現顏色。 相對比色保留了影像中更多的原始顏色，而不是感知。 此設定是在北美和歐洲打印的標準渲染意圖。 |
+|  | **[!UICONTROL 飽和度]**  — 試圖在影像中生成生動的顏色，但犧牲顏色準確度。 此渲染方式適用於圖形或圖表等商業圖形，其中亮飽和顏色比顏色之間的精確關係更重要。 |
+|  | **[!UICONTROL 絕對比色]**  — 保持目標色域內部的顏色不變。 色域外的顏色被剪下。 不執行顏色到目標白點的縮放。 該目的旨在以保持顏色之間關係為代價來保持顏色精度，並且適於校樣以模擬特定設備的輸出。 此目的對於預覽紙張顏色對打印顏色的影響很有用。 |
+
+### 在將資產公開之前先測試資產 {#test-assets-before-making-public}
+
+Secure Testing可幫助您定義安全的測試環境，並基於一組可配置的IP地址和範圍，構建強大的企業對企業解決方案。 此功能可讓您將AdobeDynamic Media部署與內容管理和業務系統的架構搭配使用。
+
+透過安全測試，您可以預覽含有未發佈內容之網站的測試版本。
+
+如果需要，請建立測試環境，而非公開提供資產，原因如下：
+
+* 在公開啟動前預覽網站（測試網站）。
+* 提供需要限制存取的資產，例如在B2B Web應用程式中顯示價格的eCatalog。
+* 使用防火牆後的資產作為產品資訊管理系統、客戶服務應用程式、培訓網站等的一部分。
+
+>[!NOTE]
+安全測試不會影響對Adobe Dynamic Media Classic的存取。 Adobe Dynamic Media Classic安全性仍維持一致，並需有存取Adobe Dynamic Media Classic和相關網站服務的一般認證。
+
+#### 安全測試如何運作 {#how-test-assets-works}
+
+大多數公司都把網際網路放在防火牆的後面。 某些路由（通常通過有限的公用IP地址）可以訪問Internet。
+
+從您的公司網路中，您可以使用以下網站來找出您的公開IP位址： [https://www.whatismyip.com](https://www.whatismyip.com/) 或向貴公司的IT組織請求此資訊。
+
+通過安全測試，AdobeDynamic Media為測試環境或內部應用程式建立專用的映像伺服器。 對此伺服器的任何請求都會檢查來源IP位址。 如果傳入的請求不在核准的IP位址清單內，則會傳回失敗回應。 AdobeDynamic Media公司管理員會為其公司的安全測試環境設定已核准的IP位址清單。
+
+由於必須確認原始請求的位置，因此安全測試服務的流量不會經由內容分發網路(如公用Dynamic Media影像伺服器流量)路由。 與公開的Dynamic Media影像伺服器相比，向安全測試服務提出的延遲略高。
+
+取消發佈的資產可立即從安全測試服務取得，而無需發佈。 如此一來，您就可以在資產發佈至其公開的影像伺服器之前，執行預覽。
+
+>[!NOTE]
+安全測試服務使用配置了內部發佈上下文的目錄伺服器。 因此，如果貴公司已設定為發佈至Secure Testing,AdobeDynamic Media中任何上傳的資產都會立即在Secure Testing服務上使用。 無論資產是否在上傳時標示為要發佈，此功能都為true。
+
+安全測試服務目前支援下列資產類型和功能：
+
+* 影像.
+* 暈映（呈現伺服器請求）。
+* 呈現伺服器請求（支援，但必須由客戶明確請求）。
+* 集，包括影像集、eCatalog、渲染集和媒體集。
+* 標準AdobeDynamic Media多媒體檢視器。
+* AdobeDynamic Media OnDemand JSP頁。
+* 靜態內容，例如PDF檔案和逐步提供的影片。
+* HTTP視訊串流。
+* 漸進式視訊串流。
+
+目前不支援下列資產類型和功能：
+
+* Adobe Dynamic Media Classic資訊或eCatalog搜尋
+* RTMP視訊串流
+* 網路印刷
+* UGC（使用者產生的內容）服務
+
+>[!IMPORTANT]
+Adobe Dynamic Media中對新或現有UGC向量影像資產的支援已於2021年9月30日終止。
+
+#### 測試安全測試服務 {#test-secure-testing-service}
+
+要確保安全測試服務正常工作，請執行以下操作：
+
+##### 準備您的帳戶
+
+1. 請連絡Adobe客戶服務，要求他們在您的帳戶上啟用安全測試。
+1. 在Adobe Experience Manager中，選取 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media發佈設定]**.
+1. 在「影像伺服器」頁面上， **[!UICONTROL 發佈內容]** 下拉清單，選擇 **[!UICONTROL 測試影像提供]**.
+1. 選取 **[!UICONTROL 安全性]** 標籤。
+1. 若 **[!UICONTROL 用戶端地址]** 篩選，選取 **[!UICONTROL 新增]**.
+1. 在 **[!UICONTROL IP位址]** 欄位，輸入IP位址。
+1. 在 **[!UICONTROL 遮色片]** 欄位，鍵入網路掩碼。
+
+   >[!NOTE]
+   如果添加多個IP地址和網路掩碼，則它實際上允許 *all* 進行資產呼叫的IP位址，都會顯示。
+
+1. 執行下列任一操作：
+
+   * 若要新增更多IP位址，請重複前三個步驟。
+   * 繼續下一步。
+
+1. 在「影像伺服器」頁的右上角，選擇 **[!UICONTROL 儲存]**.
+1. 上傳所需影像至您的AdobeDynamic Media帳戶。
+
+<!--    See [Upload files](uploading-files.md#uploading_files). -->
+
+1. 請確定某些影像已標示為要發佈，而其他影像已取消標示，然後提交發佈工作。
+
+<!--    See [Publish files](publishing-files.md#publishing_files). -->
+
+1. 請前往 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media一般設定]**.
+1. 在 **[!UICONTROL 伺服器]** 頁面，找到右側的伺服器名稱 **[!UICONTROL 已發佈的伺服器名稱]**.
+
+如果伺服器名稱遺失或伺服器的URL無法運作，請聯絡Adobe服務。
+
+##### 準備網站變體
+
+您需要連結已發佈和未發佈資產的網站的兩個變數：
+
+* 公開版本 — 使用傳統AdobeDynamic Media URL語法連結資產。
+* 測試版本 — 使用相同語法但使用安全測試網站名稱連結資產。
+
+##### 執行測試
+
+執行下列測試：
+
+1. 檢查公司網路中是否顯示資產。
+
+   從由先前定義的IP位址範圍所識別的公司網路中，網站的測試版本會顯示所有影像，無論是否標示為發佈。 因此，您可以在預覽核准或產品發佈之前，不會意外讓影像可供使用，進行測試。
+
+   確認網站的公開版本顯示先前使用AdobeDynamic Media時所體驗的已發佈資產。
+
+1. 從公司網路外部，確認未發佈的資產（即未標示為發佈）受到保護，不受第三方存取。
+
+   從外部（例如從家用電腦或4G/5G連線）存取您的網路，然後確認網站的公開版本顯示所有已發佈資產，但未顯示任何未發佈的內容。
+
+   確認測試版本不顯示任何資產，因為您是從未核准的IP位址存取安全測試服務。
+
+### 配置Dynamic Media一般設定 {#configuring-application-general-settings}
+
+>[!IMPORTANT]
+Dynamic Media一般設定僅在下列情況下可用：
+* 您以Scene7模式執行Dynamic Media。
+* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)、Adobe Experience Manager 6.5或Experience Manageras a Cloud Service。
+* 您是具有管理員權限的Experience Manager系統管理員。
+
+
+在建立帳戶時，AdobeDynamic Media會自動為您的公司提供指派的伺服器。 這些伺服器可用來建構您網站和應用程式的URL字串。 這些URL呼叫是您的帳戶專屬的。
+
+另請參閱 [測試安全測試服務](/help/assets/dm-publish-settings.md#test-assets-before-making-public).
+
+**設定Dynamic Media一般設定：**
+
+1. 在「Experience Manager作者」模式中，選取Experience Manager標誌以存取全域導覽主控台。
+1. 在左側邊欄中，選取「工具」圖示，然後前往 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media一般設定]**.
+1. 在「伺服器」頁面中，設定 **[!UICONTROL 已發佈的伺服器名稱]** 和 **[!UICONTROL 源伺服器名稱]**，然後使用五個標籤來配置預設的發佈設定。
+
+   * [伺服器](#server-general-setting)
+   * [上傳至應用程式](#upload-to-application)
+   * [影像編輯](#image-editing-tab) 標籤
+   * [PostScript](#postscript-tab) 標籤
+   * [Photoshop](#photoshop-tab) 標籤
+   * [PDF](#pdf-tab) 標籤
+   * [Illustrator](#illustrator-tab) 標籤
+
+   ![Dynamic Media一般設定頁面](/help/assets/assets-dm/dm-general-settings.png)
+   *Dynamic Media一般設定頁面，**[!UICONTROL 影像編輯]**頁簽。*<br><br>
+
+1. 完成後，在頁面右上角附近選取 **[!UICONTROL 儲存]**.
+
+#### 伺服器 {#server-general-setting}
+
+在建立帳戶時，AdobeDynamic Media會自動為您的公司提供指派的伺服器。 這些伺服器可用來建構您網站和應用程式的URL字串。 這些URL呼叫是您的帳戶專屬的。
+
+| 選項 | 說明 |
+| --- | --- |
+| **[!UICONTROL 已發佈的伺服器名稱]** | 必要.<br>此伺服器是即時CDN（內容傳遞網路）伺服器，用於您帳戶專屬的所有系統產生URL呼叫。 除非Adobe技術支援指示您更改此伺服器名稱，否則請勿更改此伺服器名稱。 名稱必須使用 `https://` 在路徑中。 |
+| **[!UICONTROL 原始伺服器名稱]** | 必要.<br>此伺服器僅用於質量保證測試。 除非Adobe技術支援指示更改此伺服器名稱，否則請勿更改此伺服器名稱。 |
+
+#### 上傳至應用程式 {#upload-to-application}
+
+* **[!UICONTROL 覆寫影像]**
+
+   AdobeDynamic Media不允許兩個檔案具有相同名稱。 每個項目的AdobeDynamic Media ID（影像名稱減去副檔名）必須是唯一的。 因為這個規則， **[!UICONTROL 上傳至應用程式]** 有覆寫。 此選項的確切效果取決於您選擇的指定「覆寫影像」選項。 這些選項指定替換影像的上傳方式：是替換原始影像，還是變成重複影像。 重複影像會以 `-1`. 例如， `chair.tif` 已重新命名 `chair-1.tif`. 這些選項會影響上傳到與原始資料夾不同的資料夾的影像，或具有與原始資料夾不同副檔名的影像，例如JPG、TIF或PNG。
+
+   | 覆寫影像選項 | 說明 |
+   | --- | --- |
+   | **[!UICONTROL 在目前檔案夾中有相同基底名稱/副檔名時覆寫]** | 預設.<br>此選項是最嚴格的取代規則。 它要求您將取代影像上傳至與原始影像相同的資料夾，且取代影像的副檔名與原始影像相同。 若不符合這些要求，則會建立重複項目。 |
+   | **[!UICONTROL 目前檔案夾內若有基本名稱相同者 (無論副檔名為何)，將予以覆寫]** | 需要您將取代影像上傳至與原始檔案相同的資料夾，但副檔名可能與原始檔案不同。 例如， chair.tif會取代chair.jpg。 |
+   | **[!UICONTROL 任何檔案夾內若有基本資產名稱/副檔名相同者，將予以覆寫]** | 需要替換影像的副檔名與原始影像相同（例如chair.jpg必須替換chair.jpg，而不是chair.tif）。 不過，您可以將取代影像上傳至與原始影像不同的資料夾。 更新後的影像位於新資料夾中；在檔案的原始位置找不到該檔案。 |
+   | **[!UICONTROL 任何檔案夾內若有基本資產名稱相同者 (無論副檔名為何)，將予以覆寫]** | 此選項是最包容的取代規則。 您可以將取代影像上傳至與原始檔案不同的資料夾、以不同副檔名上傳檔案，然後取代原始檔案。 如果原始檔案位於不同的資料夾中，則替換影像位於上載到的新資料夾中。 |
+
+* **[!UICONTROL 保留裁切]**
+
+   控制任何現有手動裁切定義的保留。
+
+   另請參閱 `preserveCrop` in [UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html) 和 [ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html)，兩者皆在Dynamic Media檢視器參考指南中。
+
+#### 預設上傳選項 {#default-upload-options}
+
+##### 影像編輯標籤 {#image-editing-tab}
+
+此篩選器可讓您微調最終縮減取樣影像的銳利化濾鏡效果。 它可協助您控制效果的強度、效果半徑（如以像素計量），以及忽略的對比度臨界值。
+
+「遮色片銳利化」效果使用的選項與Photoshop的「遮色片銳利化」濾鏡相同。 與名稱相反，「遮色片銳利化」是銳利化濾鏡。
+
+| 遮色片不銳利化選項 | 說明 |
+| --- | --- |
+| **[!UICONTROL 數量]** | 必要.<br>控制套用至邊緣像素的對比度。<br>把它想成效果的強度。 在「AdobeDynamic Media」中，「遮色片銳利化」的量值與在「Adobe Photoshop」中的量值之間的主要差異，是Photoshop的量範圍介於1%到500%之間。 而在AdobeDynamic Media中，值範圍為 `0.0` to `5.0`. AdobeDynamic Media中的5.0值大致等於Photoshop中的500%;值0.9等於90%，以此類推。 |
+| **[!UICONTROL 半徑]** | 必要.<br>控制效果的半徑。<br>值範圍是 `0` to `250`. 此效果在影像中的所有像素上運行，並從所有方向的所有像素輻射出來。 半徑以像素計量。 例如，若要獲得類似於2000 x 2000像素影像和500 x 500像素影像的銳利化效果，您可以在2000 x 2000像素影像上設定兩個像素的半徑。 然後在500 x 500像素影像上設定一個像素的半徑值。 較大的值用於具有較多像素的影像。 |
+| **[!UICONTROL 臨界值]** | 必要.<br>臨界值是套用遮色片銳利化濾鏡時會忽略的對比範圍。 這種效果非常重要，這樣在使用此濾波器時，影像就不會引入「雜訊」。 值範圍是 `0` - `255`，即灰度影像中的亮度步驟數。 `0`=黑色， `128`=50%灰色， `255`=white。<br>閾值為 `12` 忽略稍微變化的是膚色亮度以避免加噪，但仍然會為對比區域增加邊緣對比度，例如睫毛與皮膚相遇的區域。<br>如果您有某人的臉部照片，「銳利化遮色片」會影響影像的對位部分。 例如，睫毛和皮膚會聚形成明顯的對比區域，皮膚本身也是光滑的。 即使最平滑的皮膚也表現出亮度值的細微變化。 如果您未使用臨界值，濾鏡會強調外觀像素中的這些細微變化。 然後，產生噪音和不期望的效果，同時增加對睫毛的對比度，增強銳度。<br>為避免此問題，會引入臨界值，告知篩選器忽略不會大幅改變對比度的像素，例如平滑外觀。<br>在前面顯示的拉鍊圖中，注意拉鍊旁邊的紋理。 由於閾值太低，無法抑制雜訊，因此會產生影像雜訊。 |
+| **[!UICONTROL 單色]** | 選擇以取消銳利化遮色片影像亮度（強度）。<br>取消選取「 」，將每個顏色元件分別遮色片銳利化。 |
+
+另請參閱 [在AdobeDynamic Media和影像伺服器上銳化影像](/help/assets/assets/sharpening_images.pdf).
+
+##### PostScript索引標籤 {#postscript-tab}
+
+您可以柵格化Adobe PostScript®檔案、維護透明背景、選擇解析度，以及選擇顏色空間。
+
+您可以在AdobeDynamic Media中使用Adobe PostScript®(EPS)檔案。 AdobeDynamic Media會在您上傳這些檔案時提供設定這些檔案的命令。
+
+上傳PostScript(EPS)影像檔案時，可以以多種方式格式化它們。 您可以柵格化檔案、維護透明背景、選擇解析度和選擇顏色空間。
+
+| PostScript選項 | 說明 |
+| --- | --- |
+| **[!UICONTROL 處理]** | 選擇柵格化將檔案中的向量圖形轉換為點陣圖格式。 |
+| **[!UICONTROL 在演算後的影像中保留透明背景]** | 保留檔案的背景透明度。 |
+| **[!UICONTROL 解析度 (像素/英吋)]** | 確定解析度設定。 此設定決定檔案中每英吋顯示的像素數。 |
+| **[!UICONTROL 色域]** | · **[!UICONTROL 自動檢測]**  — 保留檔案的顏色空間。<br>· **[!UICONTROL 強制為RGB]**  — 轉換為RGB顏色空間。<br>· **[!UICONTROL 強制為CMYK]**  — 轉換為CMYK顏色空間。<br>· **[!UICONTROL 強制為灰度]**  — 轉換為灰度顏色空間。 |
+
+##### Photoshop標籤 {#photoshop-tab}
+
+您可以從Adobe® Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定如何將影像錨定到範本中。
+
+| Photoshop選項 | 說明 |
+| --- | --- |
+| **[!UICONTROL 保留圖層]** | 將PSD中的圖層（如果有的話）分割為個別資產。 資產層仍與PSD相關聯。 您可以在「詳細資訊視圖」中開啟PSD檔案並選取圖層面板來查看它們。 請參閱在PSD檔案中查看和編輯圖層。 |
+| **[!UICONTROL 建立範本]** | 從PSD檔案中的圖層建立模板。 |
+| **[!UICONTROL 擷取文字]** | 擷取文字，讓使用者能在檢視器中搜尋文字。 |
+| **[!UICONTROL 延伸圖層以符合背景大小]** | 將撕開的影像層的大小擴展到背景層的大小。 |
+| **[!UICONTROL 圖層命名]** | 將撕開的影像層的大小擴展到背景層的大小。<br>· **[!UICONTROL 圖層名稱]**  — 在影像的圖層名稱后面命名PSD檔案。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 但是，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（背景、第1層、第2層等），則影像的名稱將以PSD檔案中的圖層號命名。 <br>· **[!UICONTROL Photoshop和圖層編號]**  — 在PSD檔案中的圖層編號後命名影像，忽略原始圖層名稱。 影像的名稱為Photoshop檔案名稱及附加的圖層編號。 例如，檔案的第二層稱為 `Spring Ad.psd` 已命名 `Spring Ad_2` 即使在Photoshop中有非預設名稱。<br>· **[!UICONTROL Photoshop和圖層名稱]**  — 在PSD檔案後面加上圖層名稱或圖層編號的影像名稱。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則使用圖層號。 例如，名為 `Price Tag` 在名為的PSD檔案中 `SpringAd` 已命名 `Spring Ad_Price Tag`. 名為「第2層」的預設名稱為 `Spring Ad_2`. |
+| **[!UICONTROL 錨點]** | 指定如何將影像錨定在從PSD檔案生成的分層合成生成的模板中。 預設情況下，錨點為中心。 中心錨點允許替換影像最好地填充相同的空間，而不管替換影像的長寬比如何。 當參考範本並使用參數替代時，具有替代此影像的不同方面的影像會有效佔據相同的空間。 如果您的應用程式需要替換影像以填充模板中已分配的空間，請更改為其他設定。 |
+
+##### PDF標籤 {#pdf-tab}
+
+您可以選擇柵格化檔案、提取搜索詞和連結、設定解析度，以及選擇顏色空間。
+
+| PDF選項 | 說明 |
+| --- | --- |
+| **[!UICONTROL 處理]** | · **[!UICONTROL 無]**  — 不會處理PDF。<br>· **[!UICONTROL 縮圖]**  — 將PDF檔案中的每個頁面翻轉為縮圖影像。<br> · **[!UICONTROL 光柵化]**  — 拆分PDF檔案中的頁面，並將向量圖形轉換為點陣圖影像。 若要建立eCatalog，請選擇此選項。 |
+| **[!UICONTROL 提取]** | · **[!UICONTROL 無]**  — 不會從PDF中擷取搜尋字詞或連結。<br>· **[!UICONTROL 搜尋字詞]**  — 從PDF檔案中提取搜索詞，以便在eCatalog查看器中按關鍵字搜索該檔案。<br>· **[!UICONTROL 連結]**  — 從PDF檔案中提取連結，並將其轉換為eCatalog檢視器中使用的影像地圖。<br>· **[!UICONTROL 搜尋字詞和連結]**  — 擷取搜尋字詞和連結，以用於eCatalog檢視器。 |
+| **[!UICONTROL 解析度 (像素/英吋)]** | 確定解析度設定。 此設定決定每英吋顯示的PDF檔案像素數。 預設為150。 |
+| **[!UICONTROL 色域]** | · **[!UICONTROL 自動檢測]**  — 維護PDF檔案的顏色空間。<br>· **[!UICONTROL 強制為RGB]**  — 轉換為RGB顏色空間。<br>· **[!UICONTROL 強制為CMYK]**  — 轉換為CMYK顏色空間。<br>· **[!UICONTROL 強制為灰度]**  — 轉換為灰度顏色空間。 |
+
+##### Illustrator標籤 {#illustrator-tab}
+
+您可以柵格化Adobe Illustrator®檔案、維護透明背景、選擇解析度，以及選擇顏色空間。
+
+您可以在AdobeDynamic Media中使用Adobe® Illustrator®(AI)檔案。 AdobeDynamic Media會在您上傳這些檔案時提供設定這些檔案的命令。
+
+上傳Illustrator(AI)影像檔案時，可以使用各種方式來格式化它們。 您可以柵格化檔案、維護透明背景、選擇解析度和選擇顏色空間。 在「上傳工作選項」方塊的「PostScript選項」和「Illustrator選項」下的「上傳」畫面上，可使用格式化PostScript和Illustrator檔案的選項。
+
+
+| Illustrator選項 | 說明 |
+| --- | --- |
+| **[!UICONTROL 處理]** | 選擇柵格化將檔案中的向量圖形轉換為點陣圖格式。 |
+| **[!UICONTROL 在演算後的影像中保留透明背景]** | 保留檔案的背景透明度。 |
+| **[!UICONTROL 解析度 (像素/英吋)]** | 確定解析度設定。 此設定決定檔案中每英吋顯示的像素數。 |
+| **[!UICONTROL 色域]** | · **[!UICONTROL 自動檢測]**  — 保留檔案的顏色空間。<br>· **[!UICONTROL 強制為RGB]**  — 轉換為RGB顏色空間。<br>· **[!UICONTROL 強制為CMYK]**  — 轉換為CMYK顏色空間。<br>· **[!UICONTROL 強制為灰度]**  — 轉換為灰度顏色空間。 |
+
+
+**[!UICONTROL 預設顏色配置檔案]**  — 請參閱 [設定色彩管理](#configuring-color-management) 以取得其他資訊。
+
+>[!NOTE]
+依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。您可以提高此限制。請參閱 [增加顯示的影像預設集數量](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+
+### （可選）其他配置任務
+
+可選的設定和配置任務包括：
+
+* [編輯支援格式的MIME類型](#editing-mime-types-for-supported-formats) **里克：留著？**
+* [為不支援的格式添加MIME類型](#adding-mime-types-for-unsupported-formats) **里克：留著？**
+* [建立批集預設集以自動生成影像集和回轉集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) **里克：留著？**
+
+* **[!UICONTROL 相容性屬性]** - **里克：還需要嗎？ 是經典** 此設定可讓文字層中的前導和尾隨段落，如同在3.6版中處理，以便回溯相容。
+* **[!UICONTROL 本地化支援]** - **里克：還需要嗎？ 是經典** 這些設定可讓您管理多個地區設定屬性。 它也可讓您指定地區對應字串，以便定義要在檢視器中支援各種工具提示的語言。 如需設定的詳細資訊 **[本地化支援]**，請參閱 [設定資產本地化時的考量事項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
+
 #### 編輯支援格式的MIME類型 {#editing-mime-types-for-supported-formats}
+
+**里克：保持原狀??**
 
 您可以定義由Dynamic Media處理的資產類型，並自訂進階資產處理參數。 例如，您可以指定資產處理參數以執行下列動作：
 
@@ -363,6 +691,8 @@ Dynamic Media色彩管理可讓您為資產加上色彩校正。 透過色彩校
 1. 在頁面的左上角，選取 **[!UICONTROL CRXDE Lite]** 返回Experience Manager。
 
 #### 為不支援的格式添加MIME類型 {#adding-mime-types-for-unsupported-formats}
+
+**里克：保持原狀??**
 
 您可以針對Experience Manager Assets中不支援的格式新增自訂MIME類型。 請確定您在CRXDE Lite中新增的任何新節點，不會由Experience Manager刪除，方法是先移動MIME類型 `image_`. 同時，請確定其啟用值已設為 **[!UICONTROL false]**.
 
@@ -416,6 +746,8 @@ Dynamic Media色彩管理可讓您為資產加上色彩校正。 透過色彩校
 
 #### 建立批集預設集以自動生成影像集和回轉集 {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
+**里克：保持原狀??**
+
 在資產上傳至Dynamic Media時，使用批次集預設集來自動建立影像集或回轉集。
 
 首先，定義資產在集合中分組方式的命名慣例。 然後建立批集預設集，該預設集是一組唯一命名的、自包含的指令集。 它必須定義如何使用符合預設方式中已定義命名慣例的影像來建構集。
@@ -433,6 +765,8 @@ Dynamic Media色彩管理可讓您為資產加上色彩校正。 透過色彩校
 定義有兩個元素：「比對」和「基本名稱」。 這些欄位可讓您定義命名約定的所有元素，並識別用於為包含這些元素的集命名的約定的一部分。 公司的個別命名慣例通常會針對每個元素使用一或多行定義。 您可以針對唯一定義使用任意數行，並將它們分組為不同的元素，例如主影像、顏色元素、替代視圖元素和色票元素。
 
 **配置預設命名：**
+
+**里克：保持原狀??**
 
 1. 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
@@ -466,6 +800,8 @@ Dynamic Media使用批次集預設集，將資產組織成影像集（替代影�
 您可以使用表單欄位方法來定義批次集預設集，或使用程式碼方法來使用規則運算式。 如同在「預設命名」中，您可以在「表單檢視」中定義的同時選擇「檢視程式碼」，並使用規則運算式來建立定義。 或者，您也可以取消勾選任一個檢視，以專用使用其中一個檢視。
 
 **要建立批集預設集，請執行以下操作：**
+
+**里克：保持原狀??**
 
 1. 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
@@ -522,6 +858,8 @@ spin-01-01
 上傳和發佈回轉集時，您會啟用「上傳工作選項」對話方塊中「批次集預設集」下方所列的2D回轉集 **[!UICONTROL 方式名稱]****** 。
 
 **要為自動生成2D回轉集建立批集預設集，請執行以下操作：**
+
+**里克：保持原狀??**
 
 1. 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。
 
@@ -580,6 +918,8 @@ spin-01-01
 
 ### （選用）調整Dynamic Media - Scene7模式的效能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
+**里克：保持原狀??**
+
 為了讓Dynamic Media - Scene7模式順利執行，Adobe建議使用下列同步效能/可擴充性微調提示：
 
 * 更新預定義的作業參數，以處理不同的檔案格式。
@@ -588,6 +928,8 @@ spin-01-01
 * 更新最大上傳連線至Dynamic Media Classic伺服器。
 
 #### 更新預定義的作業參數以處理不同的檔案格式
+
+**里克：保持原狀??**
 
 上傳檔案時，您可以調整工作參數以加快處理速度。 例如，如果您上傳PSD檔案，但不想以範本形式處理，則可將圖層擷取設為false(off)。 在這種情況下，調整的作業參數如下所示： `process=None&createTemplate=false`.
 
@@ -613,6 +955,8 @@ Adobe建議對PDF、PostScript®和PSD檔案使用以下「調整」作業參數
 
 #### 更新Granite暫時工作流程佇列 {#updating-the-granite-transient-workflow-queue}
 
+**里克：保持原狀??**
+
 Granite傳輸工作流程佇列用於 **[!UICONTROL DAM更新資產]** 工作流程。 在Dynamic Media中，它用於影像擷取和處理。
 
 **若要更新Granite暫時工作流程佇列：**
@@ -636,6 +980,8 @@ Granite傳輸工作流程佇列用於 **[!UICONTROL DAM更新資產]** 工作流
 
 #### 更新Granite工作流程佇列 {#updating-the-granite-workflow-queue}
 
+**里克：保持原狀??**
+
 Granite工作流程佇列用於非暫時性的工作流程。 在Dynamic Media中，它過去會透過 **[!UICONTROL Dynamic Media編碼視訊]** 工作流程。
 
 **若要更新Granite工作流程佇列：**
@@ -654,6 +1000,8 @@ Granite工作流程佇列用於非暫時性的工作流程。 在Dynamic Media�
 1. 選擇 **[!UICONTROL 儲存]**.
 
 #### 更新Dynamic Media Classic上傳連線 {#updating-the-scene-upload-connection}
+
+**里克：保持原狀??**
 
 Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Classic伺服器。
 
@@ -674,6 +1022,8 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
 ### （選用）篩選資產以進行復寫 {#optional-filtering-assets-for-replication}
 
+**里克：保持原樣**
+
 在非Dynamic Media部署中，您會復寫 *all* Experience Manager製作環境中的資產（影像和影片）傳送至「Experience Manager發佈」節點。 此工作流程是必要的，因為Experience Manager發佈伺服器也會傳送資產。
 
 不過，在Dynamic Media部署中，由於資產是透過Cloud Service傳送，因此不需要將這些相同的資產複製到Experience Manager發佈節點。 這樣的「混合發佈」工作流程可避免額外的儲存成本和更長的複製資產處理時間。 其他內容（例如網站頁面）會繼續從Experience Manager發佈節點提供。
@@ -681,6 +1031,8 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 這些篩選器可讓您 *排除* Experience Manager發佈節點。
 
 #### 對復寫使用預設資產篩選器 {#using-default-asset-filters-for-replication}
+
+**里克：保持原樣**
 
 如果您使用Dynamic Media進行影像處理或影片，或兩者皆使用，則可使用Adobe依原樣提供的預設篩選器。 下列篩選器預設為作用中：
 
@@ -693,6 +1045,8 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 篩選器會套用至MIME類型，且不能是路徑專屬的。
 
 #### 自訂復寫的資產篩選器 {#customizing-asset-filters-for-replication}
+
+**里克：保持原樣**
 
 1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
 1. 在左側資料夾樹中，導覽至 `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` 來檢閱篩選器。
