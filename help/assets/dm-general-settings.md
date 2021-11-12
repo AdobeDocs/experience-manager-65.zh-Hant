@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: bbced918e67c64c0bf2f5a3de8cbcb9063fff669
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '2216'
 ht-degree: 5%
 
 ---
@@ -46,6 +46,9 @@ ht-degree: 5%
    * [Photoshop](#photoshop-tab) 標籤
    * [PDF](#pdf-tab) 標籤
    * [Illustrator](#illustrator-tab) 標籤
+
+   ![Dynamic Media一般設定頁面](/help/assets/assets-dm/dm-general-settings.png)
+   *Dynamic Media一般設定頁面，**[!UICONTROL 影像編輯]**頁簽。*<br><br>
 
 1. 完成後，在頁面右上角附近選取 **[!UICONTROL 儲存]**.
 

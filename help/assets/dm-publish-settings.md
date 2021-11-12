@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: e3067a17153864babaf0243c4c3f6cf9cd8d30bc
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '3098'
+source-wordcount: '3114'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,6 @@ ht-degree: 2%
 >* 您是具有管理員權限的Experience Manager系統管理員。
 
 
-
 Dynamic Media發佈設定頁面設定依預設會決定資產從AdobeDynamic Media伺服器傳送至網站或應用程式的方式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據「發佈設定」頁面上的預設設定來傳送資產。 例如，傳送不包含解析度屬性的影像的請求會產生影像，影像伺服器頁面上具有「預設物件解析度」設定。
 
 管理員可以變更影像伺服器、影像轉譯器和暈映頁面上的預設設定，以建立從伺服器傳送資產的預設設定。
@@ -42,7 +41,7 @@ Dynamic Media發佈設定頁面設定依預設會決定資產從AdobeDynamic Med
 
 1. 在「Experience Manager作者」模式中，選取Experience Manager標誌以存取全域導覽主控台。
 1. 在左側邊欄中，選取「工具」圖示，然後前往 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media發佈設定]**.
-1. 在「影像伺服器」頁面中，設定您的影像伺服器 — 發佈內容，然後使用五個索引標籤來配置預設的發佈設定。
+1. 在「影像伺服器」頁面中，設定您的影像伺服器 — 發佈內容，然後使用五個索引標籤來配置預設發佈設定。
 
    * [影像伺服器](#image-server)
    * [安全性](#security-tab) 標籤
@@ -50,6 +49,9 @@ Dynamic Media發佈設定頁面設定依預設會決定資產從AdobeDynamic Med
    * [請求屬性](#request-attributes-tab) 標籤
    * [常見縮圖屬性](#common-thumbnail-attributes-tab) 標籤
    * [色彩管理屬性](#color-management-attributes-tab) 標籤
+
+   ![Dynamic Media發佈設定頁面](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media發佈設定頁面，**[!UICONTROL 請求屬性]**頁簽。*<br><br>
 
 1. 完成後，在頁面右上角附近選取 **[!UICONTROL 儲存]**.
 
