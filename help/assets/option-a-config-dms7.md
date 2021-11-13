@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: bfa41deb156ffd0adb8138c11548912bc954f084
+source-git-commit: b6000516b88342d6abf8072623cfece43e2ba19d
 workflow-type: tm+mt
-source-wordcount: '11558'
+source-wordcount: '11571'
 ht-degree: 3%
 
 ---
@@ -170,11 +170,11 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 如果您想進一步自訂Dynamic Media - Scene7模式的設定和設定，或最佳化其效能，您可以完成下列一或多個作業 *可選* 任務：
 
 * [（選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB的資產](#optional-config-dms7-assets-larger-than-2gb)
-
-* [（選用）Dynamic Media - Scene7模式設定的設定與設定](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
-
+* [（選用）設定Dynamic Media發佈設定](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
+   * [（選用）在資產公開前先測試資產](#test-assets-before-making-public)
+* [（選用）設定Dynamic Media一般設定](#configuring-application-general-settings)
+* [（可選）其他配置任務](#additional-configuration-tasks)
 * [（選用）調整Dynamic Media - Scene7模式的效能](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
-
 * [（選用）篩選資產以進行復寫](#optional-filtering-assets-for-replication)
 
 ### （選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB的資產 {#optional-config-dms7-assets-larger-than-2gb}
@@ -643,7 +643,7 @@ Dynamic Media一般設定僅在下列情況下可用：
 >[!NOTE]
 依預設，當您選取「轉譯」時，系統會顯示15個轉譯，當您在資產的詳細資料檢視中選取「檢視器 ******** 」時，系統會顯示15個檢視器預設集。您可以提高此限制。請參閱 [增加顯示的影像預設集數量](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
-### （可選）其他配置任務
+### （可選）其他配置任務 {#additional-configuration-tasks}
 
 可選的設定和配置任務包括：
 
