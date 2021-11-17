@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: 468a8d96153c67232524eea6f180c9ceb364d60a
+source-git-commit: 37d298378b7d33ec7c9803cbf9f4f7eb4d2193f9
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '651'
 ht-degree: 18%
 
 ---
@@ -173,5 +173,5 @@ ht-degree: 18%
    + [視訊轉譯](video-renditions.md)
 + 與其他解決方案的整合 {#integrations}
    + [與 [!DNL Adobe Workfront]](workfront-integrations.md)
-   + [安裝 [!DNL enhanced connector for [!DNL Workfront]]](workfront-connector-install.md)
-   + [設定 [!DNL enhanced connector for [!DNL Workfront]]](workfront-connector-configure.md)
+   + [安裝 [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-install.md)
+   + [設定 [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-configure.md)
