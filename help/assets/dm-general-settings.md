@@ -1,5 +1,5 @@
 ---
-title: 設定Dynamic Media一般設定
+title: 配置Dynamic Media一般設定
 description: 了解如何在Dynamic Media中管理一般設定。 您可以在此處設定發佈伺服器名稱和來源伺服器名稱，並設定影像覆寫選項。 還有預設的影像遮色片銳利化上傳選項，以及要如何處理PostScript、Adobe Photoshop、PDF和Adobe Illustrator檔案的上傳選項。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -7,37 +7,43 @@ topic-tags: administering
 content-type: reference
 feature: Image Profiles
 role: User, Admin
+mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
+source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
 workflow-type: tm+mt
-source-wordcount: '2216'
-ht-degree: 5%
+source-wordcount: '2454'
+ht-degree: 4%
 
 ---
 
 
-# 設定Dynamic Media一般設定
+# 配置Dynamic Media一般設定
 
->[!IMPORTANT]
->
->Dynamic Media一般設定僅在下列情況下可用：
->
->* 您以Scene7模式執行Dynamic Media。
->* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)、Adobe Experience Manager 6.5或Experience Manageras a Cloud Service。
->* 您是具有管理員權限的Experience Manager系統管理員。
+設定 **[!UICONTROL Dynamic Media一般設定]** 僅適用於：
 
+* 您以Scene7模式執行Dynamic Media。 請參閱 [在Scene7模式中啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
+* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)、Adobe Experience Manager 6.5或Experience Manageras a Cloud Service。
+* 您是具有管理員權限的Experience Manager系統管理員。
+
+Dynamic Media一般設定適用於經驗豐富的網站開發人員和程式設計人員。 Adobe Dynamic Media建議變更這些發佈設定的使用者熟悉Adobe Experience Manager上的Dynamic Media和基本影像技術。
 
 在建立帳戶時，AdobeDynamic Media會自動為您的公司提供指派的伺服器。 這些伺服器可用來建構您網站和應用程式的URL字串。 這些URL呼叫是您的帳戶專屬的。
 
-另請參閱 [測試安全測試服務](/help/assets/dm-publish-settings.md#test-assets-before-making-public).
+「Dynamic Media發佈設定」頁面會建立預設設定，決定如何將AdobeDynamic Media伺服器傳遞至網站或應用程式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據Dynamic Media發佈設定頁面上設定的預設設定來傳送資產。
+
+另請參閱 [Dynamic Media - Scene7模式設定的設定與設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+
+>[!NOTE]
+>
+>在Adobe Experience Manager上從Dynamic Media Classic升級至Dynamic Media? Dynamic Media中的「一般設定」和「發佈設定」頁面會預先填入您Dynamic Media Classic帳戶取得的值。 例外是 **[!UICONTROL 預設上傳選項]** 「一般設定」頁面的區域。 這些值已處於Experience Manager。 因此，您在 **[!UICONTROL 預設上傳選項]**，則透過「Experience Manager」使用者介面顯示在Dynamic Media中，而非Dynamic Media Classic中。 「一般設定」和「發佈設定」頁面中的所有其他設定和值，都會在Dynamic Media Classic和Dynamic Media之間Experience Manager維護。
 
 **設定Dynamic Media一般設定：**
 
 1. 在「Experience Manager作者」模式中，選取Experience Manager標誌以存取全域導覽主控台。
 1. 在左側邊欄中，選取「工具」圖示，然後前往 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media一般設定]**.
-1. 在「伺服器」頁面中，設定 **[!UICONTROL 已發佈的伺服器名稱]** 和 **[!UICONTROL 源伺服器名稱]**，然後使用五個標籤來配置預設的發佈設定。
+1. 在「伺服器」頁面中，設定 **[!UICONTROL 已發佈的伺服器名稱]** 和 **[!UICONTROL 源伺服器名稱]**，然後使用五個標籤來設定「影像編輯」和「Postscript」、「Photoshop」、「PDF」和「Illustrator」檔案的預設上傳選項。
 
    * [伺服器](#server-general-setting)
    * [上傳至應用程式](#upload-to-application)
@@ -58,7 +64,7 @@ ht-degree: 5%
 
 | 選項 | 說明 |
 | --- | --- |
-| **[!UICONTROL 已發佈的伺服器名稱]** | 必要.<br>此伺服器是即時CDN（內容傳遞網路）伺服器，用於您帳戶專屬的所有系統產生URL呼叫。 除非Adobe技術支援指示您更改此伺服器名稱，否則請勿更改此伺服器名稱。 名稱必須使用 `https://` 在路徑中。 |
+| **[!UICONTROL 已發佈的伺服器名稱]** | 必要.<br>名稱必須使用 `https://` 在路徑中。<br>此伺服器是即時CDN（內容傳遞網路）伺服器，用於您帳戶專屬的所有系統產生URL呼叫。 除非Adobe技術支援指示您更改此伺服器名稱，否則請勿更改此伺服器名稱。 |
 | **[!UICONTROL 原始伺服器名稱]** | 必要.<br>此伺服器僅用於質量保證測試。 除非Adobe技術支援指示更改此伺服器名稱，否則請勿更改此伺服器名稱。 |
 
 ## 上傳至應用程式 {#upload-to-application}
@@ -69,8 +75,8 @@ ht-degree: 5%
 
    | 覆寫影像選項 | 說明 |
    | --- | --- |
-   | **[!UICONTROL 在目前檔案夾中有相同基底名稱/副檔名時覆寫]** | 預設.<br>此選項是最嚴格的取代規則。 它要求您將取代影像上傳至與原始影像相同的資料夾，且取代影像的副檔名與原始影像相同。 若不符合這些要求，則會建立重複項目。 |
-   | **[!UICONTROL 目前檔案夾內若有基本名稱相同者 (無論副檔名為何)，將予以覆寫]** | 需要您將取代影像上傳至與原始檔案相同的資料夾，但副檔名可能與原始檔案不同。 例如， chair.tif會取代chair.jpg。 |
+   | **[!UICONTROL 在目前檔案夾中有基底名稱/副檔名相同者時予以覆寫]** | 僅新Dynamic Media帳戶的預設值。<br>此選項是最嚴格的取代規則。 它要求您將取代影像上傳至與原始影像相同的資料夾，且取代影像的副檔名與原始影像相同。 若不符合這些要求，則會建立重複項目。 |
+   | **[!UICONTROL 在目前檔案夾中有基本名稱相同者 (無論副檔名為何) 時予以覆寫]** | 需要您將取代影像上傳至與原始檔案相同的資料夾，但副檔名可能與原始檔案不同。 例如， chair.tif會取代chair.jpg。 |
    | **[!UICONTROL 任何檔案夾內若有基本資產名稱/副檔名相同者，將予以覆寫]** | 需要替換影像的副檔名與原始影像相同（例如chair.jpg必須替換chair.jpg，而不是chair.tif）。 不過，您可以將取代影像上傳至與原始影像不同的資料夾。 更新後的影像位於新資料夾中；在檔案的原始位置找不到該檔案。 |
    | **[!UICONTROL 任何檔案夾內若有基本資產名稱相同者 (無論副檔名為何)，將予以覆寫]** | 此選項是最包容的取代規則。 您可以將取代影像上傳至與原始檔案不同的資料夾、以不同副檔名上傳檔案，然後取代原始檔案。 如果原始檔案位於不同的資料夾中，則替換影像位於上載到的新資料夾中。 |
 
