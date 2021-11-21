@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: 680c0e00a739c5e880286cb4adf33f4ea5f6a318
+source-git-commit: b1f2a6b8fecd9ee98f345d1de8c26c6f42a44823
 workflow-type: tm+mt
-source-wordcount: '6058'
+source-wordcount: '6107'
 ht-degree: 3%
 
 ---
@@ -249,28 +249,26 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 ### （選用）Dynamic Media - Scene7模式設定的設定與設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-當您處於執行模式時 `dynamicmedia_scene7`，請使用Dynamic Media Classic使用者介面來變更Dynamic Media設定。
-
-設定和設定任務包括：
+<!-- When you are in run mode `dynamicmedia_scene7`, use the Dynamic Media Classic user interface to change your Dynamic Media settings. -->
 
 * [設定影像伺服器的Dynamic Media發佈設定](/help/assets/dm-publish-settings.md)
 * [配置Dynamic Media一般設定](/help/assets/dm-general-settings.md)
 * [配置顏色管理](#configuring-color-management)
 * [編輯支援格式的MIME類型](#editing-mime-types-for-supported-formats)
 * [為不支援的格式添加MIME類型](#adding-mime-types-for-unsupported-formats)
-* [建立批集預設集以自動生成影像集和回轉集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+* [建立批集預設集以自動生成影像集和回轉集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) (在Dynamic Media Classic使用者介面中完成)
 
-<!-- #### Configure Dynamic Media Publish Setup for Image Server {#publishing-setup-for-image-server} 
+#### 設定影像伺服器的Dynamic Media發佈設定 {#publishing-setup-for-image-server}
 
-The Dynamic Media Publish Setup page establishes default settings that determine how assets are delivered from Adobe Dynamic Media servers to web sites or applications.
+「Dynamic Media發佈設定」頁面會建立預設設定，決定如何將AdobeDynamic Media伺服器傳遞至網站或應用程式。
 
-See [Configure Dynamic Media Publish Setup for Image Server](/help/assets/dm-publish-settings.md).
+請參閱 [設定影像伺服器的Dynamic Media發佈設定](/help/assets/dm-publish-settings.md).
 
-#### Configure Dynamic Media General Settings {#configuring-application-general-settings}
+#### 配置Dynamic Media一般設定 {#configuring-application-general-settings}
 
-To configure the default color properties so color correction is enabled when images are requested, see [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md).
+配置預設顏色屬性，以便在請求影像時啟用顏色校正。
 
-See [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md). -->
+請參閱 [配置Dynamic Media一般設定](/help/assets/dm-general-settings.md).
 
 #### 配置顏色管理 {#configuring-color-management}
 
