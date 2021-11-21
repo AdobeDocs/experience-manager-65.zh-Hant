@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: b1f2a6b8fecd9ee98f345d1de8c26c6f42a44823
+source-git-commit: 3b5e65efc9aaedbc3385cc348ead80afecae2f06
 workflow-type: tm+mt
-source-wordcount: '6107'
+source-wordcount: '6063'
 ht-degree: 3%
 
 ---
@@ -101,7 +101,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
    選擇 **[!UICONTROL 連線至Dynamic Media]**.
 
    >[!NOTE]
-   **里克：保持原樣？** 收到含有Dynamic Media憑證的布建電子郵件後，請開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶以變更密碼。 預配電子郵件中提供的密碼是系統生成的，並且僅用於臨時密碼。 請務必更新密碼，以便使用正確的憑證來設定Dynamic MediaCloud Service。
+   收到含有Dynamic Media憑證的布建電子郵件後，請開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶以變更密碼。 預配電子郵件中提供的密碼是系統生成的，並且僅用於臨時密碼。 請務必更新密碼，以便使用正確的憑證來設定Dynamic MediaCloud Service。
 
 1. 連線成功時，請設定下列項目。 含星號(*)的標題為必填：
 
@@ -136,14 +136,13 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 1. 選擇 **[!UICONTROL 儲存]**.
 1. 若要在發佈Dynamic Media內容之前安全地預覽，您必須「允許清單」Experience Manager製作例項，才能連線至Dynamic Media:
 
-   * **里克：連結至新的發佈設定主題** 開啟 [Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登入您的帳戶。 配置時，Adobe提供了您的憑據和登錄詳細資訊。 如果您沒有此資訊，請聯絡Adobe客戶支援。
-
-   * 在頁面右上角的導覽列中，導覽至 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]** > **[!UICONTROL 發佈設定]** > **[!UICONTROL 影像伺服器]**.
-
-   * 在「影像伺服器發佈」頁面的「發佈內容」下拉式清單中，選取 **[!UICONTROL 測試影像提供]**.
-   * 對於客戶端地址篩選器，請選擇 **[!UICONTROL 新增]**.
-   * 若要啟用（開啟）地址，請選取核取方塊。 輸入Experience Manager製作例項的IP位址（非Dispatcher IP）。
-   * 選擇 **[!UICONTROL 儲存]**.
+   * 在「Experience Manager作者」模式中，選取Experience Manager標誌以存取全域導覽主控台。
+   * 在左側邊欄中，選取 **[!UICONTROL 工具]** 表徵圖，然後轉至 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media發佈設定]**.
+   * 在Dynamic Media影像伺服器頁面上， **[!UICONTROL 發佈內容]** 下拉清單，選擇 **[!UICONTROL 測試影像提供]**.
+   * 選取 **[!UICONTROL 安全性]** 標籤。
+   * 若 **[!UICONTROL 用戶端地址]**，選取 **[!UICONTROL 新增]**.
+   * 輸入Experience Manager製作例項的IP位址（非Dispatcher IP）。
+   * 在頁面的右上角，選取 **[!UICONTROL 儲存]**.
 
 您現在已完成基本設定；您已準備好使用Dynamic Media - Scene7模式。
 
