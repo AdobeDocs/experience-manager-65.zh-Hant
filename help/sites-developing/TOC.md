@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: eda59d12d96ecc55bd58749985d2c15706344fe0
+source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '920'
 ht-degree: 14%
 
 ---
@@ -97,6 +97,7 @@ ht-degree: 14%
       + [使用xtype（傳統UI）](xtypes.md)
       + [開發Forms（傳統UI）](developing-forms.md)
 + 無頭式體驗管理{#headless}
+   + [無頭式與AEM](headless/introduction.md)
    + [無頭與混合搭配AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [為元件啟用JSON匯出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 單頁應用程式{#spas}
@@ -159,7 +160,7 @@ ht-degree: 14%
    + [自訂和擴充內容片段](customizing-content-fragments.md)
    + [轉譯專用內容片段設定元件](content-fragments-config-components-rendering.md)
    + [體驗片段](experience-fragments.md)
-   + 擴展工作流{#extending-workflows}
+   + 延伸工作流程{#extending-workflows}
       + [開發和延伸工作流程](workflows.md)
       + [建立工作流模型](workflows-models.md)
       + [延伸工作流程功能](workflows-customizing-extending.md)
@@ -169,7 +170,7 @@ ht-degree: 14%
       + [工作流程處理序參考](workflows-process-ref.md)
       + [AEM工作流程中的變數](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [擴展多站點管理器](extending-msm.md)
-   + 追蹤與Analytics{#extending-analytics}
+   + 追蹤與分析{#extending-analytics}
       + [擴充事件追蹤](extending-analytics.md)
       + [將Adobe Analytics追蹤新增至元件](extending-analytics-components.md)
       + [自訂Adobe Analytics架構](extending-analytics-framework.md)
@@ -184,7 +185,7 @@ ht-degree: 14%
       + [Request Analysis Script](analyze-request.md)
    + [將服務與JMX控制台整合](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/jmx-integration.html)
    + [開發大量編輯器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-bulk-editor.html)
-   + 擴展傳統UI{#extending-classic-ui}
+   + 擴充傳統UI{#extending-classic-ui}
       + [自訂網站主控台（傳統UI）](customizing-siteadmin.md)
       + [自訂歡迎控制台（傳統UI）](customizing-the-welcome-console.md)
       + [開發報表](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-reports.html)
@@ -221,7 +222,7 @@ ht-degree: 14%
    + [JCR整合](jcr-integration.md)
    + [程式碼範例](code-samples.md)
    + [疑難排解慢速查詢](troubleshooting-slow-queries.md)
-+ 行動Web{#mobileweb}
++ 行動網站{#mobileweb}
    + [行動網站](mobile-web.md)
    + [建立裝置群組篩選器](groupfilters.md)
    + [網頁的回應式設計](responsive.md)
