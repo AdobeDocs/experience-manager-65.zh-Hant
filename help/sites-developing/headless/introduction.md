@@ -1,9 +1,9 @@
 ---
 title: 'AEM 6.5 Sites無頭開發 '
 description: 了解AEM 6.5的無周邊功能（例如內容模型、內容片段和GraphQL API）如何搭配運作，讓您集中管理體驗，並跨管道提供體驗。
-source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
+source-git-commit: 8c7acd06f3909897e5756170c606e00aead098b8
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 1%
 
 無頭式實作對於將體驗提供給對象（無論對象在何處、無論管道為何）越來越重要。
 
-Headless implementation forgoes page and component management as is traditional in full stack and hybrid solutions and focuses on the creation of channel-neutral, reusable fragments of content and their cross-channel delivery. 這是實作Web體驗的現代化、動態開發模式。
+無頭實作會放棄頁面和元件管理，如同傳統的完整堆疊和混合解決方案一樣，著重於建立不受管道影響、可重複使用的內容片段及其跨管道傳送。 這是實作Web體驗的現代化、動態開發模式。
 
-![AEM Implementation Models](assets/aem-implementation-models.png)
+![AEM實作模型](assets/aem-implementation-models.png)
 
-## Comparing Headful and Headless {#headful-headless}
+## 比較Headful和Headless {#headful-headless}
 
-本檔案著重於AEM的完整無頭式實作模型。 However headful versus headless need not be a binary choice in AEM. Headless features can be used to manage and deliver your content to a variety of endpoints while also enabling your content authors to edit single page applications. All in AEM.
+本檔案著重於AEM的完整無頭式實作模型。 不過，在AEM中，無頭與無頭並非二進位選擇。 無頭功能可用來管理內容，並將內容傳遞至各種端點，同時讓內容作者編輯單頁應用程式。 全部在AEM。
 
 <!--
 >[!TIP]
@@ -33,9 +33,9 @@ Headless implementation forgoes page and component management as is traditional 
 
 ## AEM 6.5和無頭 {#aem-headless}
 
-AEM as a Cloud Service is a flexible tool for the headless implementation model by offering three powerful services:
+AEM 6.5是無頭式實作模型的彈性工具，提供三種強大的服務：
 
-1. Content Models
+1. 內容模型
    * 內容模型是內容的結構化表示。
    * 這些由AEM內容片段模型編輯器中的資訊架構師定義。
    * 內容模型是內容片段的基礎。
@@ -43,18 +43,18 @@ AEM as a Cloud Service is a flexible tool for the headless implementation model 
    * 內容片段是內容模型的實例化。
    * 這些是由內容作者使用AEM內容片段編輯器建立。
    * 這些資產會儲存在AEM Assets中，並在Assets管理UI中進行管理。
-1. Content API for delivery
+1. 傳遞的內容API
    * AEM GraphQL API支援內容片段傳送。
-   * The AEM Assets REST API supports Content Fragment CRUD operations.
+   * AEM Assets REST API支援內容片段CRUD操作。
    * 您也可以透過 [內容片段核心元件的JSON匯出。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 ## 使用AEM Headless的第一步 {#first-steps}
 
-有許多資源可供您開始使用AEM無頭功能。 They are intended for different use cases, but all give a solid overview of AEM&#39;s headless features.
+有許多資源可供您開始使用AEM無頭功能。 這些範本適用於不同的使用案例，但都能提供AEM無頭功能的實體概述。
 
 | 資源 | 說明 | 類型 | 對象 | Est. 時間 |
 |---|---|---|---|---|
-| [AEM Headless實作教學課程快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **If you prefer a hands-on approach and are familiar with AEM**, this tutorial dives directly into creating a simple headless project. | 教學課程 | Developers | 2 hours |
+| [AEM Headless實作教學課程快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **如果您偏好實作方法，且熟悉AEM**，本教學課程會直接深入探討如何建立簡單的無標題專案。 | 教學課程 | 開發人員 | 2小時 |
 
 <!--
 |Resource|Description|Type|Audience|Est. Time|
