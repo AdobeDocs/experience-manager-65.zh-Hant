@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
+source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
 workflow-type: tm+mt
-source-wordcount: '3443'
+source-wordcount: '3450'
 ht-degree: 2%
 
 ---
@@ -23,19 +23,19 @@ ht-degree: 2%
 
 只有符合以下條件時，才可使用設定Dynamic Media發佈設定：
 
-* 您以Scene7模式執行Dynamic Media。 請參閱 [在Scene7模式中啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
-* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)、Adobe Experience Manager 6.5或Experience Manageras a Cloud Service。
+* 您以Scene7模式執行Dynamic Media。 請參閱 [在Scene7模式中啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
+* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)(在Adobe Experience Manager 6.5或更新版本中)。
 * 您是具有管理員權限的Experience Manager系統管理員。
 
 Dynamic Media發佈設定供經驗豐富的網站開發人員和程式設計人員使用。 Adobe Dynamic Media建議變更這些發佈設定的使用者熟悉AdobeDynamic Media、HTTP通訊協定標準和慣例，以及基本影像技術。
 
 「Dynamic Media發佈設定」頁面會建立預設設定，決定如何將AdobeDynamic Media伺服器傳遞至網站或應用程式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據Dynamic Media發佈設定頁面上設定的預設設定來傳送資產。
 
+另請參閱 [選用 — Dynamic Media的設定和設定 — Scene7模式設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 以了解更多可選配置任務。
+
 >[!NOTE]
 >
->在Adobe Experience Manager上從Dynamic Media Classic升級至Dynamic Media? Dynamic Media中的「一般設定」和「發佈設定」頁面會預先填入您Dynamic Media Classic帳戶取得的值。 例外是 **[!UICONTROL 預設上傳選項]** 「一般設定」頁面的區域。 這些值已處於Experience Manager。 因此，您在 **[!UICONTROL 預設上傳選項]**，則透過「Experience Manager」使用者介面顯示在Dynamic Media中，而非Dynamic Media Classic中。 「一般設定」和「發佈設定」頁面中的所有其他設定和值，都會在Dynamic Media Classic和Dynamic Media之間Experience Manager維護。
-
-另請參閱 [Dynamic Media - Scene7模式設定的設定與設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+>在Adobe Experience Manager上從Dynamic Media Classic升級至Dynamic Media? 此 [一般設定](/help/assets/dm-general-settings.md) Dynamic Media中的「頁面」和「發佈設定」頁面會預先填入從您的Dynamic Media Classic帳戶取得的值。 例外是列於 **[!UICONTROL 預設上傳選項]** 「一般設定」頁面的區域。 這些值已處於Experience Manager。 因此，您在 **[!UICONTROL 預設上傳選項]**，則會透過Experience Manager使用者介面，反映在Dynamic Media中，而非Dynamic Media Classic中。 中的所有其他設定和值 [一般設定](/help/assets/dm-general-settings.md) 頁面和「發佈設定」頁面會在Dynamic Media Classic和Dynamic Media之間Experience Manager。
 
 **若要設定Dynamic Media Publish設定影像伺服器：**
 
