@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
 source-wordcount: '2461'
 ht-degree: 4%
@@ -24,7 +24,7 @@ ht-degree: 4%
 設定 **[!UICONTROL Dynamic Media一般設定]** 僅適用於：
 
 * 您以Scene7模式執行Dynamic Media。 請參閱 [在Scene7模式中啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)(在Adobe Experience Manager 6.5或更新版本中)。
+* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)(在Adobe Experience Manager 6.5.11或更新版本中)。
 * 您是具有管理員權限的Experience Manager系統管理員。
 
 Dynamic Media一般設定適用於經驗豐富的網站開發人員和程式設計人員。 Adobe Dynamic Media建議變更這些發佈設定的使用者熟悉Adobe Experience Manager上的Dynamic Media和基本影像技術。

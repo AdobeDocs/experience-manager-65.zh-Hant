@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: 3b5e65efc9aaedbc3385cc348ead80afecae2f06
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
-source-wordcount: '6063'
+source-wordcount: '6082'
 ht-degree: 3%
 
 ---
@@ -265,7 +265,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
 
 #### 配置Dynamic Media一般設定 {#configuring-application-general-settings}
 
-配置預設顏色屬性，以便在請求影像時啟用顏色校正。
+設定Dynamic Media **[!UICONTROL 發佈伺服器名稱]** URL和 **[!UICONTROL 源伺服器名稱]** URL。 您也可以指定 **[!UICONTROL 上傳至應用程式]** 設定與 **[!UICONTROL 預設上傳選項]** 全部取決於您的特定使用案例。
 
 請參閱 [配置Dynamic Media一般設定](/help/assets/dm-general-settings.md).
 
