@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
+source-git-commit: f5989e182ee0d9075251b582fa618af5efcb9f8a
 workflow-type: tm+mt
 source-wordcount: '2461'
 ht-degree: 4%
@@ -33,7 +33,7 @@ Dynamic Media一般設定適用於經驗豐富的網站開發人員和程式設�
 
 「Dynamic Media發佈設定」頁面會建立預設設定，決定如何將AdobeDynamic Media伺服器傳遞至網站或應用程式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據Dynamic Media發佈設定頁面上設定的預設設定來傳送資產。
 
-另請參閱 [選用 — Dynamic Media的設定和設定 — Scene7模式設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) fpr更多選用的設定工作。
+另請參閱 [選用 — Dynamic Media的設定和設定 — Scene7模式設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) fpr更多選用的設定工作。
 
 >[!NOTE]
 >
