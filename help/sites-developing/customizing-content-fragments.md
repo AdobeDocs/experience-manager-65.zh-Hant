@@ -3,17 +3,13 @@ title: 自訂和擴充內容片段
 seo-title: Customizing and Extending Content Fragments
 description: 內容片段會延伸標準資產。
 seo-description: A content fragment extends a standard asset.
-uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
+source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
 workflow-type: tm+mt
-source-wordcount: '2789'
+source-wordcount: '2778'
 ht-degree: 1%
 
 ---
@@ -133,9 +129,9 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->此 [內容片段核心元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) 現在建議使用。 請參閱 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得更多詳細資訊。
+>此 [內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 現在建議使用。 請參閱 [開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) 以取得更多詳細資訊。
 
-可從AEM頁面參照內容片段，如同任何其他資產類型。 AEM提供 [**內容片段** 核心元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) - a [可讓您在頁面上包含內容片段的元件](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). 您也可以延伸，這 **內容片段** 核心元件。
+可從AEM頁面參照內容片段，如同任何其他資產類型。 AEM提供 [**內容片段** 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) - a [可讓您在頁面上包含內容片段的元件](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). 您也可以延伸，這 **內容片段** 核心元件。
 
 * 元件使用 `fragmentPath` 屬性來參考實際內容片段。 此 `fragmentPath` 財產的處理方式與其他資產類型的類似財產相同；例如，內容片段移至其他位置時。
 
@@ -247,7 +243,7 @@ ht-degree: 1%
 
 您可以使用伺服器端API來存取您的內容片段；請參閱：
 
-[com.adobe.cq.dam.cfm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
+[com.adobe.cq.dam.cfm](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
 >[!CAUTION]
 >
@@ -257,7 +253,7 @@ ht-degree: 1%
 
 以下三個介面可作為入口點：
 
-* **片段範本** ([片段範本](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
+* **片段範本** ([片段範本](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
    使用 `FragmentTemplate.createFragment()` 來建立新片段。
 
@@ -302,7 +298,7 @@ ht-degree: 1%
 
 
 
-* **內容片段** ([內容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **內容片段** ([內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
    此介面可讓您以抽象方式處理內容片段。
 
@@ -332,7 +328,7 @@ ht-degree: 1%
 
    代表片段主要元素的介面包括：
 
-   * **內容元素** ([ContentElement](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **內容元素** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
       * 取得基本資料（名稱、標題、說明）
       * 取得/設定內容
@@ -344,7 +340,7 @@ ht-degree: 1%
          * 移除變異(請參閱 [警告](#caveats))
          * 存取變異資料(請參閱 `ContentVariation`)
       * 解決變異的捷徑（如果指定的變異不適用於元素，則套用一些其他的實作專用備援邏輯）
-   * **內容變異** ([ContentVariation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **內容變異** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * 取得基本資料（名稱、標題、說明）
       * 取得/設定內容
@@ -542,5 +538,5 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 如需詳細資訊，請參閱
 
-* [核心元件 — 內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) （建議）
+* [核心元件 — 內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) （建議）
 * [內容片段元件 — 頁面製作元件](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)
