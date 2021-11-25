@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版中已棄用和已移除的功能。
 description: Adobe Experience Manager 6.5中已棄用和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 1e02ad94459ff2893d96055c026d0873b1d69991
+source-git-commit: c9db5a1764d98bb049c08a0e6962b7ed5e1bfe5c
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1753'
 ht-degree: 11%
 
 ---
@@ -28,7 +28,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 | 版本 (SP) |
 |---|---|---|---|
-| [!DNL Sites] | 內容片段範本，用於建立簡單內容片段。 | [基於模型的結構化內容片段](/help/assets/content-fragments/content-fragments-models.md) 現在。 |  |
+| [!DNL Sites] | 內容片段範本，用於建立簡單內容片段。 | [基於模型的結構化內容片段](/help/assets/content-fragments/content-fragments-models.md) 現在。 | 6.5.11.0 |
 | Creative Cloud整合 | AEM到Creative Cloud資料夾共用於AEM 6.2中推出，作為讓創意使用者存取AEM資產的方式，以便在中開啟資產 [!DNL Creative Cloud] 應用程式和上傳新檔案，或將變更儲存至AEM。 Creative Cloud 應用程式推出的新功能 Adobe Asset Link 提供了更優異的使用者體驗，以及更強大的存取功能，可直接從 Photoshop、InDesign 和 Illustrator 中存取 AEM 的資產。Adobe不打算進一步增強AEM以Creative Cloud資料夾共用整合。 雖然AEM中包含此功能，強烈建議客戶使用取代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 |  |
 | 資產 | `AssetDownloadServlet` 依預設，發佈例項會停用。 如需詳細資訊，請參閱 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). | 配置描述於 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). |  |
 | 資產 | 如果使用者沒有足夠的（讀取和寫入）權限 `/content/dam/collections`，則使用者無法建立集合。 | 遵守使用者的存取控制設定，並確保適當的權限。 |  |
@@ -41,7 +41,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 元件(AEM Sites) | 設計匯入工具元件 `/libs/wcm/designimporter/components` 6.5版起已標示為已淘汰。Adobe不打算對設計匯入工具的實作進行進一步的增強。 | Adobe計畫在未來版本中提供使用案例的替代實作。 |  |
 | Foundation | Granite卸載框架。 Adobe不打算對CQ 5.6.1中推出的卸載架構進行進一步增強，將資產處理外部化。 | Adobe正在開發新一代雲端原生卸載架構。 |  |
 | 開發人員 | `Hobbes.js`. Adobe不打算對 `hobbes.js` 用戶介面測試框架。 | Adobe建議客戶使用Selenium自動化。 |  |
-| 開發人員 | jQuery UI用戶端程式庫。 Adobe不打算進一步維護和更新作為分發（快速入門）一部分提供的jQuery UI客戶端庫 | Adobe建議仍需jQuery UI的客戶，將其程式碼新增至其專案程式碼基底。 |  |
+| 開發人員 | jQuery UI用戶端程式庫。 Adobe不計畫進一步維護和更新作為分發（快速入門）一部分提供的jQuery UI客戶端庫 | Adobe建議仍需jQuery UI的客戶，將其程式碼新增至其專案程式碼基底。 |  |
 | 開發人員 | jQuery Animation客戶端庫(`granite.jquery.animation`)。 Adobe不計畫進一步維護和更新作為分發(Quickstart)一部分提供的jQuery Animation客戶端庫 | Adobe建議仍需jQuery動畫才能使用程式碼的客戶，將其新增至專案程式碼基底。 |  |
 | 開發人員 | Handlebars客戶端庫。 Adobe不計畫進一步維護和更新作為分發的一部分發運的Handlebar客戶端庫（快速入門） | Adobe建議仍需要Handlebars才能使用其程式碼的客戶，將其新增至其專案程式碼基底。 |  |
 | 開發人員 | Lawnchair客戶端庫。 Adobe不計畫進一步維護和更新作為分發的一部分發運的Lawnchair客戶端庫（快速入門） | Adobe建議仍需要Lawnchair才能使用程式碼的客戶，將其新增至其專案程式碼基底。 |  |
