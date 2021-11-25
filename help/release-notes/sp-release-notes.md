@@ -4,9 +4,9 @@ description: 專屬於 [!DNL Adobe Experience Manager] 6.5 service pack 11
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c0393e614cf96066dfd765cc00dc8ad370755a27
+source-git-commit: 35260325b583bd047f22ffa88afb9469b2023e60
 workflow-type: tm+mt
-source-wordcount: '3368'
+source-wordcount: '3367'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 * 使用者體驗增強功能會顯示資料夾中存在的資產數量。 若是資料夾中超過1000個資產， [!DNL Assets] 顯示1000+。
 
-* 您現在可以在卡片和欄檢視中轉譯排序選項(NPR-37199)。
+* 您現在可以在「卡片」和「欄」檢視中轉譯排序選項。
 
 * 您現在可以使用 [!DNL Dynamic Media] 來設定一般設定，而非必須完成 [!DNL Dynamic Media Classic] 案頭應用程式。 請參閱 [配置Dynamic Media一般設定](/help/assets/dm-general-settings.md).
 
@@ -515,7 +515,7 @@ For information about installing the cumulative installer for Experience Manager
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|

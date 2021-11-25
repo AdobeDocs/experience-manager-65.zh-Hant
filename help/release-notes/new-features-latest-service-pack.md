@@ -4,9 +4,9 @@ description: 新增功能 [!DNL Experience Manager] 6.5 Service Pack 11
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 092ba82ac645539fd0d4e2085c380025201914de
+source-git-commit: 35260325b583bd047f22ffa88afb9469b2023e60
 workflow-type: tm+mt
-source-wordcount: '4399'
+source-wordcount: '4391'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 [!DNL Adobe Experience Manager] 6.5 Service Pack每季提供新功能、客戶要求的增強功能，以及效能、穩定性和安全性方面的改善。 每季的可用性使用戶能夠輕鬆訪問和採用新功能和創新。
 
-本文重點說明最新Service Pack中包含的功能， [先前6.5版Service Pack中包含的主要功能](#key-features-previous-service-packs)，和 [自上次Service Pack以來的重要發行](#key-releases-since-last-sp) 發行。
+本文重點說明最新Service Pack中包含的功能 [先前6.5版Service Pack中包含的主要功能](#key-features-previous-service-packs)，和 [自上次Service Pack以來的重要發行](#key-releases-since-last-sp) 發行。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -500,15 +500,15 @@ Experience Manager Forms包含下列協助工具增強功能：
 <!-- TBD: Check if the wider team released anything in FY21.
 -->
 
-## 以下版本的重要發行 [!DNL Adobe Experience Manager] 6.5 SP9 {#key-releases-since-last-sp}
+## 以下版本的重要發行 [!DNL Adobe Experience Manager] 6.5 SP10{#key-releases-since-last-sp}
 
-2021年5月27日至2021年8月26日期間，除了Service Pack外，Adobe還發行了下列內容：
+2021年8月26日至2021年11月25日，Adobe除了Service Pack外，還發行了下列內容：
 
-* [!DNL Adobe Experience Manager] as a Cloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html), [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)，和 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+* [!DNL Adobe Experience Manager] as a Cloud Service [2021.9.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-9-0.html) 和 [2021.10.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
-* [[!DNL Experience Manager] 案頭應用程式2.1(2.1.3.3)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
+* [[!DNL Experience Manager] 案頭應用程式2.1(2.1.3.4)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
 
-* [Experience Manager Screens:Feature Pack 202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html)
+* [Experience Manager Screens:Feature Pack 202109](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202109.html)
 
 >[!MORELIKETHIS]
 >
