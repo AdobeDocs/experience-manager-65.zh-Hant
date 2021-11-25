@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
+source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
 workflow-type: tm+mt
 source-wordcount: '2789'
 ht-degree: 1%
 
 ---
+
 
 # 自訂和擴充內容片段{#customizing-and-extending-content-fragments}
 
@@ -226,9 +227,9 @@ ht-degree: 1%
    >
    >AEM翻譯工作流程可搭配 `/content`:
    >
-   >    * 由於內容片段模型位於 `/conf`，則這些內容不會包含在此類翻譯中。 您可以 [將UI字串國際化](/help/sites-developing/i18n-dev.md).
+   >* 由於內容片段模型位於 `/conf`，則這些內容不會包含在此類翻譯中。 您可以 [將UI字串國際化](/help/sites-developing/i18n-dev.md).
    >
-   >    * 範本會複製以建立片段，因此會是隱式的。
+   >* 範本會複製以建立片段，因此會是隱式的。
 
 
 * **中繼資料結構**
