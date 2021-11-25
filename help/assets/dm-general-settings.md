@@ -8,12 +8,10 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
-hide: true
-hidefromtoc: true
 exl-id: null
-source-git-commit: f5989e182ee0d9075251b582fa618af5efcb9f8a
+source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
 workflow-type: tm+mt
-source-wordcount: '2461'
+source-wordcount: '2470'
 ht-degree: 4%
 
 ---
@@ -24,7 +22,7 @@ ht-degree: 4%
 設定 **[!UICONTROL Dynamic Media一般設定]** 僅適用於：
 
 * 您以Scene7模式執行Dynamic Media。 請參閱 [在Scene7模式中啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)(在Adobe Experience Manager 6.5.11或更新版本中)。
+* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)(在Adobe Experience Manager 6.5.11或更新版本中)。 請參閱 [在Cloud Services中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
 * 您是具有管理員權限的Experience Manager系統管理員。
 
 Dynamic Media一般設定適用於經驗豐富的網站開發人員和程式設計人員。 Adobe Dynamic Media建議變更這些發佈設定的使用者熟悉Adobe Experience Manager上的Dynamic Media和基本影像技術。
