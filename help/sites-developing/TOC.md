@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
+source-git-commit: 879e69aa17c7142c2b1e86b72ce23226a7f09a88
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '1055'
 ht-degree: 14%
 
 ---
@@ -98,31 +98,45 @@ ht-degree: 14%
       + [開發Forms（傳統UI）](developing-forms.md)
 + 無頭式體驗管理{#headless}
    + [無頭式與AEM](headless/introduction.md)
-   + [無頭與混合搭配AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [內容片段]{#content-fragments}
+      + [以內容片段和GraphQL無周邊傳送](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
+      + [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
+      + [為您的執行個體啟用內容片段功能](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
+      + [內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html)
+      + [管理內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-managing.html)
+      + [變化 - 編寫片段內容](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html)
+      + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-markdown.html)
+      + [使用關聯內容](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-assoc-content.html)
+      + [中繼資料 - 片段屬性](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html)
+      + [樹狀結構](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html)
+      + [預覽 — JSON表示法](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
+   + [傳送API]{#delivery-api}
+      + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
+      + [內容片段REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
+      + [內容片段GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
+      + [AEM GraphQL API，含內容片段 — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [內容片段的遠端AEM GraphQL查詢驗證](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
++ 混合與SPA AEM開發{#spas}
+   + [混合SPA與AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [SPA簡介和逐步說明](spa-walkthrough.md)
+   + [SPA WKND教學課程](spa-wknd.md)
+   + [React快速入門](spa-getting-started-react.md)
+   + [針對 SPA 實作 React元件](spa-implementing-react-component.md)
+   + [開始使用Angular](spa-getting-started-angular.md)
+   + [SPA深度潛水](spa-deep-dives.md)
+   + [開發SPA for AEM](spa-architecture.md)
+   + [SPA編輯器概述](spa-overview.md)
+   + [SPA Blueprint](spa-blueprint.md)
+   + [SPA頁面元件](spa-page-component.md)
+   + [SPA的動態模型與元件對應](spa-dynamic-model-to-component-mapping.md)
+   + [SPA模型路由](spa-routing.md)
+   + [RemotePage元件](spa-remote-page.md)
+   + [在AEM中編輯外部SPA](spa-edit-external.md)
+   + [SPA中的複合元件](spa-composite-component.md)
+   + [SPA和伺服器端轉譯](spa-ssr.md)
    + [為元件啟用JSON匯出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
-   + 單頁應用程式{#spas}
-      + [SPA簡介和逐步說明](spa-walkthrough.md)
-      + [SPA WKND教學課程](spa-wknd.md)
-      + [AEM中的SPA快速入門 — React](spa-getting-started-react.md)
-      + [AEM中SPA快速入門 — Angular](spa-getting-started-angular.md)
-      + [針對 SPA 實作 React元件](spa-implementing-react-component.md)
-      + [SPA深度潛水](spa-deep-dives.md)
-      + [SPA編輯器概述](spa-overview.md)
-      + [開發SPA for AEM](spa-architecture.md)
-      + [SPA Blueprint](spa-blueprint.md)
-      + [SPA頁面元件](spa-page-component.md)
-      + [SPA的動態模型與元件對應](spa-dynamic-model-to-component-mapping.md)
-      + [SPA模型路由](spa-routing.md)
-      + [SPA與Adobe Experience Platform Launch整合](spa-launch.md)
-      + [SPA和伺服器端轉譯](spa-ssr.md)
-      + [RemotePage元件](spa-remote-page.md)
-      + [在AEM中編輯外部SPA](spa-edit-external.md)
-      + [SPA中的複合元件](spa-composite-component.md)
-      + [SPA參考資料](spa-reference-materials.md)
-   + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-   + [內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
-   + [體驗片段](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
-   + [了解AEM中的內容片段和內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
+   + [Launch整合](spa-launch.md)
+   + [SPA參考資料](spa-reference-materials.md)
 + 開發工具{#devtools}
    + [開發工具](dev-tools.md)
    + [AEM 現代化工具](modernization-tools.md)
