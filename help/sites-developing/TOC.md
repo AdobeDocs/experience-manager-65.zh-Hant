@@ -8,7 +8,7 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: 879e69aa17c7142c2b1e86b72ce23226a7f09a88
+source-git-commit: fccfcc71d61b483273cc3501fbcc411fce5c1424
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 14%
@@ -98,7 +98,7 @@ ht-degree: 14%
       + [開發Forms（傳統UI）](developing-forms.md)
 + 無頭式體驗管理{#headless}
    + [無頭式與AEM](headless/introduction.md)
-   + [內容片段]{#content-fragments}
+   + 內容片段{#content-fragments}
       + [以內容片段和GraphQL無周邊傳送](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
       + [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
       + [為您的執行個體啟用內容片段功能](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
@@ -110,7 +110,7 @@ ht-degree: 14%
       + [中繼資料 - 片段屬性](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html)
       + [樹狀結構](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html)
       + [預覽 — JSON表示法](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
-   + [傳送API]{#delivery-api}
+   + 傳送API{#delivery-api}
       + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
       + [內容片段REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
       + [內容片段GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
