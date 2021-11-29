@@ -2,7 +2,7 @@
 title: 存取及傳遞內容片段無頭快速入門手冊
 description: 了解如何使用AEM Assets REST API管理內容片段，以及GraphQL API，以無周邊方式傳送內容片段內容。
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: 8ab774b8d21dd16e4873cd39ef0175ead3f2da23
+source-git-commit: 6c75af3957c319c38177cd62c90e781a982ba91b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 [既然您已建立了一些內容片段，](create-content-fragment.md) 您可以使用AEM API來無端傳送。
 
 * [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 可讓您建立存取和傳送內容片段的請求。
-   * 若要使用此功能，必須在AEM中定義並啟用端點，並視需要安裝GraphiQL介面。
+   * 若要使用， [需要在AEM中定義並啟用端點](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)，若需要，則 [已安裝GraphiQL介面](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface).
 * [資產REST API](/help/assets/assets-api-content-fragments.md) 可讓您建立和修改內容片段（和其他資產）。
 
 本指南的其餘部分將重點介紹GraphQL訪問和內容片段交付。
