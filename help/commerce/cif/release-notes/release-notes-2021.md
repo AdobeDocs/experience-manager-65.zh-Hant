@@ -2,9 +2,9 @@
 title: AEM內容與商務發行說明2021年
 description: AEM內容與商務發行說明2021年
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 7261a71769dfb968c768e0cb4835d7d4cca97b1a
+source-git-commit: 98ba3edb3b9e93fa13a0f0418f1b17323d5a7233
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1311'
 ht-degree: 8%
 
 ---
@@ -15,19 +15,29 @@ ht-degree: 8%
 
 請參閱下表中您目前使用或計畫未來使用的CIF版本的最低系統需求。
 
-**在4月的版本中，我們已將GitHub的CIF連接器更換為CIF附加元件** 可在 [Adobe軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 切換至附加元件可為專案帶來絕佳優勢：
-
-* AEM 6.5將立即提供大部分新功能（不再等待功能端埠）
-* 易於升級到新的附加版本
-* 準備Cloud Service
-
-舊版AEM CIF連接器將進入維護模式，不應再使用。 請將CIF連接器更換為新的CIF附加元件。 大多數項目都應該可以簡單地更換套件。
-
 | 元件 | 系統需求 |
 |:-------|:-----:|
 | CIF附加元件 | 最低：AEM 6.5.7、Magento2.3.5 GraphQL結構 |
 | CIF核心元件 | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 發行日期：2021年11月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加元件 | 2021.11.18.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
+| CIF核心元件 | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
+| CIF Venia參考站 | 2021.12.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.12.01) |
+
+### 新增功能 {#what-is-new-november}
+
+* 擴展了基於Commerce可擴展的Peregrine元件的myAccount元件
+
+![擴展myAccount元件](/help/assets/CIF/extended-myAccount-components.png)
+
+* 作者可使用其他建議類型建立隨選商務產品Recommendations
+
+* 支援AEM Storefront中的禮品卡
 
 ## 發行日期：2021年10月
 
