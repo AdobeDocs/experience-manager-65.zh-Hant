@@ -4,9 +4,9 @@ description: 專屬於 [!DNL Adobe Experience Manager] 6.5 service pack 11
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 35260325b583bd047f22ffa88afb9469b2023e60
+source-git-commit: c7fdfeae785ad044437d065a8da6bdcbaf00d4c4
 workflow-type: tm+mt
-source-wordcount: '3367'
+source-wordcount: '3674'
 ht-degree: 2%
 
 ---
@@ -320,91 +320,58 @@ Need to verify with Engineering, the status is currently showing as Resolved
 >* [!DNL Experience Manager Forms] 會在預定的 [!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
 
 
-<!--
+**調適型表單**
 
-[!DNL AEM 6.5.10.0 Forms] includes the following bug fixes:
+* 協助工具 — 當您設定 `Wizard` 版面中，導覽按鈕沒有Aria標籤和角色(NPR-37613)。
 
-* When you install [!DNL AEM 6.5 Forms], the following third-party libraries are installed automatically (CQDOC-18373):
-  * [!DNL Microsoft Visual C++ 2008 Service Pack 1 (x86)]
-  * [!DNL Microsoft Visual C++ 2010 Service Pack 1 (x86)]
+* 適用性表單中的日期欄位無法如預期運作(NPR-37556)。
 
-**Adaptive Forms**
+* 核取方塊和選項按鈕元件的標籤文字長度過長時，文字無法適當調整大小(NPR-37294)。
 
-* If the validations performed on the field values in an adaptive form are successful, [!DNL AEM Forms] fails to invoke the Form Data Model (CQ-4325491).
+* 將樣式變更套用至AEM Forms容器元件的感謝訊息時，這些變更不會在來源適用性表單中複製(NPR-37284)。
 
-* When you add a language dictionary to a translation project and then open the project, [!DNL AEM Forms] displays an error message (CQ-4324933):
+* 與 `Switch` 元件(NPR-37268)。
 
-   ```TXT
-   Uncaught TypeError: Cannot read property 'PROJECT_LISTING_PATH' of undefined
-   at openButtonClickHandler (clientlibs.js:245)
-   at HTMLButtonElement.onclick (clientlibs.js:258)
+* 使用鍵盤鍵導覽至 `Submit` 選項並按 `Enter` 索引鍵，您可以多次提交最適化表單(CQ-4333993)。
 
-   ```
+* 檔案附件元件的移除操作無法如預期運作(NPR-37376)。
 
-* Performance issues after installing [!DNL AEM Forms] Service Pack 7 (CQ-4326828).
+* 當欄位的標籤在翻譯成各種語言的適用性表單中超過1000個字元時，字典無法擷取標籤的翻譯(CQ-4329290)。
 
-* When you submit a form containing a standard HTML upload field from an Apple iOS device, sometimes, the content of the file is not sent and a 0-byte file is received at the other end. Apple iOS 15.1 provides a fix for the issue (CQ-4325361).
+**文件服務**
 
-**Correspondence Management**
-
-* Delay in the display of characters in the [!UICONTROL Data] tab as well as in the HTML letter preview (NPR-37020).
-
-* When you are editing a text document fragment, the new words display as HTML tags after saving the fragment (NPR-36837).
-
-* Unable to view the letters that are saved as drafts (NPR-36816).
-
-* When you edit a text document fragment and then preview the letter, AEM Forms displays the expression language in the HTML letter preview (CQ-4322331).
-
-* Issues while rendering data with a self-service letter template (NPR-37161).
-
-
-**Interactive Communications**
-
-* A tab character duplicates between two words each time you print preview an Interactive Communication after editing a text document fragment (NPR-37021).
-
-* [!DNL AEM Forms] displays an error when you save a text document fragment that exceeds the maximum size limit (NPR-36874).
-
-* When you add an image to an Interactive Communication, an additional empty block displays after the image (NPR-36659).
-
-* When you select all text in an editor, you cannot change the font text to Arial (NPR-36646).
-
-* When you create a URL in an editor and preview the changes, a black background displays instead of the URL text (NPR-36640).
-
-* When you copy and paste text to an editor, there are issues while changing the font to Arial for bullets available in the document (NPR-36628). 
-
-* Indentation issues for bullets in the text editor (NPR-36513).
-
-**Designer**
-
-* Screen Reader fails to read floating field data placed inside text label on the Master page or on Subform pages in a dynamic PDF (CQ-4321587).
-
-**Document Services**
-
-* When you convert XDP files to PDF files and then assemble the resultant PDF, the PDF generations fails and displays the following error message:
+* 使用組合器服務時顯示錯誤(NPR-37606):
 
    ```TXT
-   Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
+     500 Internal Server Error
    ```
 
-**Forms Workflow**
+* 將文檔附件傳遞到組合器服務時，出現以下異常(NPR-37582):
 
-* Unable to submit a form to a Workbench process after upgrading to AEM Forms Service Pack 8 (CQ-4325846).
+   ```TXT
+     com.adobe.livecycle.assembler.client.ProcessingException: ⁪: Failed to execute the DDX
+   ```
+
+* 將PDF檔案轉換為PDF-A/1BPDF檔案後，資料中缺少右括弧(NPR-37608)。
 
 **HTML5 Forms**
 
-* When you set the value for the `mfAllowAttachments` property as `True` in the CRX DE repository, the `dataXml` gets corrupted on submitting the HTML5 form (NPR-37035).
+* 安裝AEM 6.5.10.0時，XDP表單的HTML預覽無法運作(NPR-37503、CQ-4331926)。
 
-* When you render an XDP as HTML using `dataXml`, [!DNL AEM Forms] displays a `Page Unresponsive` error (NPR-36631).
+* 將PDF forms移轉至以各種語言HTML5個表單時發生文字重疊問題(NPR-37173)。
 
-### Commerce {#commerce-65110}
+**字母**
 
-* The value in the **[!UICONTROL Published By]** field displayed is incorrect in the Column view (NPR-36902).
-* When a Catalog is rolled out, new products are incorrectly marked as modified products (NPR-36666).
-* When you recreate a deleted product, the product page is not recreated (NPR-36665).
-* Modified pages are updated but the corresponding linked products are not updated on Catalog rollout (CQ-4321409, NPR-36422).
-* The **[!UICONTROL Publish later]** and **[!UICONTROL Unpublish later]** workflows do not work (CQ-4327679).
+* 當您提交信函並在HTML檢視中重新開啟信函時，文字檔案片段的位置不會維持相同(NPR-37307)。
 
--->
+**表單工作流程**
+
+* 若是內嵌容器工作流程，您會收到多封工作流程完成電子郵件，即使選取 `Notify on Complete of Container Workflow` 選項(NPR-37280)。
+
+**Foundation JEE**
+
+* 安裝AEM 6.5 Forms Service Pack 9後，CRX存放庫URL已無法使用(NPR-37592)。
+
 
 如需安全性更新的詳細資訊，請參閱 [[!DNL Experience Manager] 安全性佈告欄頁面](https://helpx.adobe.com/security/products/experience-manager.html).
 
