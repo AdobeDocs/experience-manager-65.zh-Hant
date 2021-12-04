@@ -9,7 +9,7 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: null
-source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
+source-git-commit: 1b853936760daf7ee8d16ba926e612dadec40788
 workflow-type: tm+mt
 source-wordcount: '2470'
 ht-degree: 4%
@@ -31,7 +31,7 @@ Dynamic Media一般設定適用於經驗豐富的網站開發人員和程式設�
 
 「Dynamic Media發佈設定」頁面會建立預設設定，決定如何將AdobeDynamic Media伺服器傳遞至網站或應用程式。 如果未指定任何設定，AdobeDynamic Media伺服器會根據Dynamic Media發佈設定頁面上設定的預設設定來傳送資產。
 
-另請參閱 [選用 — Dynamic Media的設定和設定 — Scene7模式設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) fpr更多選用的設定工作。
+另請參閱 [選用 — Dynamic Media的設定和設定 — Scene7模式設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 以了解更多可選配置任務。
 
 >[!NOTE]
 >
