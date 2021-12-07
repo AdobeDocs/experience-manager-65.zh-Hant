@@ -4,9 +4,9 @@ description: 的發行說明 [!DNL Adobe Experience Manager] 6.5 service pack
 contentOwner: AK
 mini-toc-levels: 2
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 45673270ec839377f941860c098f965f7b35c59e
+source-git-commit: 80f4e8c857fe9e0dfe344042fc1db81dde721e18
 workflow-type: tm+mt
-source-wordcount: '26608'
+source-wordcount: '26665'
 ht-degree: 4%
 
 ---
@@ -22,6 +22,9 @@ ht-degree: 4%
 * **增強功能 [!DNL Content Fragment] 模型與編輯器**:您現在可以使用巢狀內容，為結構化內容建立複雜的自訂模型 [!DNL Content Fragment] 模型。 內容結構被模組化為基本元素，這些基本元素被建模為子片段。 較高層級片段會參考這些子片段。 進階驗證規則等更多資料類型增強功能，可進一步增強內容模型的彈性，具有 [!DNL Content Fragments]. 此 [!DNL Experience Manager] [!DNL Content Fragment] 編輯器支援通用編輯器工作階段中的巢狀片段結構，並增強功能，例如結構樹檢視和透過片段階層的標籤式階層連結導覽。
 
 * **GraphQL API，適用於[!DNL Content Fragments]**:全新的GraphQL API是以JSON格式傳送結構化內容的標準方法。 GraphQL查詢可讓用戶端僅要求相關內容項目來呈現體驗。 這種選擇消除了需要在用戶端剖析內容的內容過傳送（在HTTP REST API中可能）。 GraphQL結構衍生自 [!DNL Content Fragment] 模型和API回應會以JSON格式產生。 在 [!DNL Experience Manager] as a [!DNL Cloud Service], [GraphQL查詢持續存在](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching) 和處理快取友好GET請求。 在 [!DNL Experience Manager] 6.5.10.0。
+
+* **GraphQL API，適用於[!DNL Content Fragments]**:為了支援GraphQL API，「內容片段模型屬性」欄位中不再允許使用連字型大小。 如果任何「內容片段模型」屬性名稱中都存在連字型大小，GraphQL查詢可能會傳回不想要的結果。
+屬性名稱僅允許使用下列字元：A-Za-z0-9_。 數字不能位於第一個位置。
 
 * **階層管理與未來預覽**:使用者現在有介面可存取其內容結構 [!DNL Experience Manager] 啟動，包括在啟動中新增和移除頁面的功能。 此功能增強了 [!DNL Experience Manager] 啟動以製作鎖定於未來發佈的內容版本。 [時間扭曲功能](/help/sites-authoring/working-with-page-versions.md#timewarp) 可讓使用者將啟動預覽為未來的內容狀態。
 
@@ -312,13 +315,13 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * 文字編輯器中的項目符號縮排問題(NPR-36513)。
 
-**Designer**
+**設計工具**
 
 * 螢幕Reader無法讀取動態PDF中，置於主版頁面或子表單頁面文字標籤內的浮動欄位資料(CQ-4321587)。
 
 **文件服務**
 
-* When you convert XDP files to PDF files and then assemble the resultant PDF, the PDF generations fails and displays the following error message:
+* 將XDP檔案轉換為PDF檔案，然後組合產生的PDF時，PDF層代會失敗，並顯示下列錯誤訊息：
 
    ```TXT
    Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
@@ -1070,7 +1073,7 @@ Adobe Experience Manager 6.5.9.0 Assets修正 [!DNL Dynamic Media]:
 
 * 未提供建立集合權限（「建立集合」選項不可用）的組的用戶仍可以通過直接訪問URL來建立集合 `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/collections/createcollectionwizard.html/content/dam/collections?contentPath=/content/dam/collections` (NPR-35115)。
 
-* 依名稱排序時，搜尋的資產會區分大小寫排序。 This creates two separate sorted lists based on casing that appearing in ordered manner in the search results (NPR-35068).
+* 依名稱排序時，搜尋的資產會區分大小寫排序。 這會根據搜尋結果中以有序方式顯示的大小寫，建立兩個不同的排序清單(NPR-35068)。
 
 * 在編輯器中開啟內容片段時，會出現警告訊息(`Invalid value specified for a metadata property`)記錄在錯誤記錄中(NPR-35012)。
 
@@ -1119,7 +1122,7 @@ Adobe Experience Manager 6.5.9.0 Assets修正 [!DNL Dynamic Media]:
 
 * 遠端影像集在 [!DNL Experience Manager] 如果公司名稱和資料夾名稱相同(NPR-31340)。
 
-* The z-index order is incorrect when you try to preview the output after adding a hotspot to a [!DNL Dynamic Media] image or after editing a [!DNL Dynamic Media] video or an [!DNL Experience Fragment] with an image (CQ-4307267).
+* 在將熱點新增到 [!DNL Dynamic Media] 影像或編輯後 [!DNL Dynamic Media] 視訊或 [!DNL Experience Fragment] (CQ-4307267)。
 
 * [!DNL Dynamic Media] 重新處理混合媒體集時，同步會失敗(CQ-4307184)。
 
@@ -1127,7 +1130,7 @@ Adobe Experience Manager 6.5.9.0 Assets修正 [!DNL Dynamic Media]:
 
 * [!DNL Dynamic Media] 使用原生HTML5視訊控制項(CQ-4306977、CQ-4306727)時，iOS裝置上不會播放視訊。
 
-* Cannot download images on which SmartCrop is applied (CQ-4304558).
+* 無法下載要套用SmartCrop的影像(CQ-4304558)。
 
 * 無法選擇性地將資料夾發佈至Dynamic Media(CQ-4304526)。
 
@@ -1856,15 +1859,15 @@ Adobe Experience Manager 6.5.5.0為重要更新，包含自6.5版正式發行以
 
 * 安裝Experience ManagerSDL包時顯示錯誤消息(NPR-33175)。
 
-* SSRF vulnerability in Experience Manager (NPR-33435).
+* SSRF在Experience Manager中的漏洞(NPR-33435)。
 
 ### 平台 {#platform-6550}
 
 * 此 [!DNL Sling] 若 `sling:match` 對應項目建立於 `/etc/maps` (NPR-33362)。
-* Experience Manager crashes due to segmentation fault with [!DNL Apache Lucene] (NPR-32988).
+* Experience Manager因區段錯誤而當機，與 [!DNL Apache Lucene] (NPR-32988)。
 * [!DNL Jackson] Experience Manageruberjar檔案中缺少核心套件(NPR-32848)。
-* CRXDE Lite does not load content for users without read permission on the `jcr:primaryType` property for a node (NPR-32611).
-* [!DNL Granite] maintenance task scheduler re-initializes too often during Experience Manager deployments (CQ-4294627).
+* CRXDE Lite不會為沒有讀取權限的使用者載入內容 `jcr:primaryType` 節點的屬性(NPR-32611)。
+* [!DNL Granite] 維護任務調度程式在Experience Manager部署期間重新初始化的頻率過高(CQ-4294627)。
 * SQL查詢長時間執行（例如7小時）時，Experience Manager停止回應(NPR-33044)。
 
 ### 使用者介面 {#ui-6550}
@@ -2234,7 +2237,7 @@ Adobe Experience Manager 6.5.4.0中推出的一些主要功能和增強功能包
 
 * 重複的IPTC標籤已新增至資產中繼資料(NPR-31328)。
 
-* The search result count does not update accurately when a search is triggered from the filter rail (NPR-31316).
+* 從篩選器邊欄觸發搜尋時，搜尋結果計數沒有準確更新(NPR-31316)。
 
 * 取消選取檔案類型篩選器中的第二層核取方塊時，會清除所有核取方塊，且搜尋列中的文字未與選取或取消選取的屬性同步(NPR-31287)。
 
@@ -2808,7 +2811,7 @@ Remove one mention of this fix.
 * 「互動式通訊」範本未將頁首與頁尾元件列在允許的元件清單中。 CQ-4237895 的 Hotfix
 * 建立包含影像欄位的互動式通信打印模板時，圖表的標題將設定為空白。 CQ-4264772 的 Hotfix
 * 圖表的線條顏色在刪除時設定為未定義。 CQ-4264762 的 Hotfix
-* Layout layer changes made on Document Fragment disappear on performing keep changes sync. CQ-4266054 的 Hotfix
+* 執行保留變更同步時，對檔案片段所做的版面層變更會消失。 CQ-4266054 的 Hotfix
 * 綁定到文本欄位的文檔片段內的表單資料模型元素不顯示繼承表徵圖，並且允許綁定。 CQ-4261089 的 Hotfix
 * 列印管道轉譯API沒有選項可將資料作為API中的參數傳遞。 CQ-4263540 的 Hotfix
 * 將「字串」欄位/變數的綁定類型從「文本片段」更改為「無/資料模型對象」時，不會顯示代理設定，因為「可編輯」複選框被取消選中。 CQ-4261953 的 Hotfix
@@ -2827,17 +2830,17 @@ Remove one mention of this fix.
 * 與表單資料模型變數相關聯的表單資料模型不可見。 CQ-4266554 的 Hotfix
 * 不支援使用變數的檔案符號狀態變數。 CQ-4266312 的 Hotfix
 * 從工作區提交時會以變母字元失敗。 CQ-4263172 的 Hotfix
-* On an upgraded setup, if the workflow is opened for editing, an error is shown instead of workflow name in watch folder user interface (UI). CQ-4238579 的 Hotfix
+* 在升級的設定中，如果開啟工作流程以進行編輯，監看資料夾使用者介面(UI)中會顯示錯誤，而非工作流程名稱。 CQ-4238579 的 Hotfix
 
 **Forms - 管理**
 
 * 上傳xsd或schema.json以外的擴充功能時，不會上傳，且不會產生錯誤訊息。 CQ-4266716 的 Hotfix
 
-**Forms - Correspondence Management**
+**Forms — 通信管理**
 
 * [!DNL Experience Manager Forms] 6.5建立通信UI(CCR UI)無法開啟使用建立的通信 [!DNL Experience Manager Forms] 6.3. CQ-4266392的Hotfix
-* Sum function in XDP does not work if the DDE data type is of type number. CQ-4227403 的 Hotfix
-* Letters in-memory cache invalidation logic to be updated, because when an asset is published, its last modified time is not updated. CQ-4250465 的 Hotfix
+* 如果DDE資料類型為類型編號，則XDP中的加總函式無法運作。 CQ-4227403 的 Hotfix
+* 要更新的記憶體內字母快取無效邏輯，因為發佈資產時，其上次修改的時間不會更新。 CQ-4250465 的 Hotfix
 * 無法發佈文檔片段、DD和字母。 CQ-4272893 的 Hotfix
 
 #### Forms - JEE 安裝程式
