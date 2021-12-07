@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: 71c91d0284508463ea7746b6fe0ba82372005c81
+source-git-commit: a98ee0c090c299bc86bf027f69b2e191b716707a
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 18%
 
 ---
@@ -121,6 +121,7 @@ ht-degree: 18%
    + [整合 [!DNL InDesign Server]](indesign.md)
    + [Digital Rights Management資產](drm.md)
    + [使用示範套件進行資產分析](use-demo-package-for-asset-insights.md)
+   + [設定Adobe資產連結](configure-asset-link.md)
    + [產生Adobe InDesign的FPO轉譯](configure-fpo-renditions.md)
    + [Assets檔案格式最佳實務](assets-file-format-best-practices.md)
    + [監控資產的最佳實務](assets-monitoring-best-practices.md)
