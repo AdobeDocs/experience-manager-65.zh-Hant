@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版中已棄用和已移除的功能。
 description: Adobe Experience Manager 6.5中已棄用和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: c9db5a1764d98bb049c08a0e6962b7ed5e1bfe5c
+source-git-commit: 6ec25e3c59a841a6734f1d0e9d4347557d89e79a
 workflow-type: tm+mt
-source-wordcount: '1753'
+source-wordcount: '1761'
 ht-degree: 11%
 
 ---
@@ -28,6 +28,7 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 | 版本 (SP) |
 |---|---|---|---|
+| [!DNL Sites] | 的體驗片段屬性 **社交媒體狀態**. |  | 6.5.11.0 |
 | [!DNL Sites] | 內容片段範本，用於建立簡單內容片段。 | [基於模型的結構化內容片段](/help/assets/content-fragments/content-fragments-models.md) 現在。 | 6.5.11.0 |
 | Creative Cloud整合 | AEM到Creative Cloud資料夾共用於AEM 6.2中推出，作為讓創意使用者存取AEM資產的方式，以便在中開啟資產 [!DNL Creative Cloud] 應用程式和上傳新檔案，或將變更儲存至AEM。 Creative Cloud 應用程式推出的新功能 Adobe Asset Link 提供了更優異的使用者體驗，以及更強大的存取功能，可直接從 Photoshop、InDesign 和 Illustrator 中存取 AEM 的資產。Adobe不打算進一步增強AEM以Creative Cloud資料夾共用整合。 雖然AEM中包含此功能，強烈建議客戶使用取代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 |  |
 | 資產 | `AssetDownloadServlet` 依預設，發佈例項會停用。 如需詳細資訊，請參閱 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). | 配置描述於 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). |  |
