@@ -4,9 +4,9 @@ description: 專屬於 [!DNL Adobe Experience Manager] 6.5 service pack 11
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c7fdfeae785ad044437d065a8da6bdcbaf00d4c4
+source-git-commit: f2ccc77393e7fc1f53f9976076ec3c66c3f74189
 workflow-type: tm+mt
-source-wordcount: '3674'
+source-wordcount: '3728'
 ht-degree: 2%
 
 ---
@@ -512,6 +512,16 @@ For information about installing the cumulative installer for Experience Manager
    * `com.adobe.granite.maintenance.impl.TaskScheduler`  — 在granite/operations/maintenance處找不到維護窗口。
    * 透過Shopbable Banner檢視器預覽資產時，Dynamic Media互動式影像中的熱點不會顯示。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :等待登錄更改完成解除登錄的超時。
+
+* 嘗試移動/刪除/發佈內容片段或網站/頁面時，內容片段參考擷取時會發生問題，因為背景查詢會失敗；即功能無法運作。
+為確保操作正確，您需要將以下屬性添加到索引定義節點 `/oak:index/damAssetLucene` （不需要重新索引）:
+
+   ```xml
+   "tags": [
+       "visualSimilaritySearch"
+     ]
+   "refresh": true
+   ```
 
 ## 包含的OSGi套件組合和內容套件 {#osgi-bundles-and-content-packages-included}
 
