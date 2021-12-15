@@ -1,9 +1,9 @@
 ---
 title: 'AEM 6.5 Sites無頭開發 '
 description: 了解AEM 6.5的無周邊功能（例如內容模型、內容片段和GraphQL API）如何搭配運作，讓您集中管理體驗，並跨管道提供體驗。
-source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
+source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -25,11 +25,9 @@ ht-degree: 1%
 
 本檔案著重於AEM的完整無頭式實作模型。 不過，在AEM中，無頭與無頭並非二進位選擇。 無頭功能可用來管理內容，並將內容傳遞至各種端點，同時讓內容作者編輯單頁應用程式。 全部在AEM。
 
-<!-- HM-Links
 >[!TIP]
 >
->See the document [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md) for more information.
--->
+>請參閱檔案 [AEM中的Headful和Headless](/help/sites-developing/headful-headless.md) 以取得更多資訊。
 
 ## AEM 6.5和無頭 {#aem-headless}
 
@@ -54,12 +52,6 @@ AEM 6.5是無頭式實作模型的彈性工具，提供三種強大的服務：
 
 | 資源 | 說明 | 類型 | 對象 | Est. 時間 |
 |---|---|---|---|---|
+| [無頭式開發人員歷程](/help/journey-headless/developer/overview.md) | **適用於剛接觸AEM和無頭的使用者** 技術，請從這裡開始，全面介紹AEM及其無頭式功能，從無頭式理論到與您的第一個無頭式專案同時運作。 | 指南 | 開發人員 **新增至AEM及無頭** | 1小時 |
+| [無頭入門手冊](/help/sites-developing/headless/getting-started/introduction.md) | **適用於經驗豐富的AEM使用者** 若需要主要AEM無頭功能的簡短摘要，請查看此快速入門概述。 | 快速入門 | 開發人員、管理員 **使用AEM體驗** | 20分鐘 |
 | [AEM Headless實作教學課程快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **如果您偏好實作方法，且熟悉AEM**，本教學課程會直接深入探討如何建立簡單的無標題專案。 | 教學課程 | 開發人員 | 2小時 |
-
-<!-- HM-Links
-|Resource|Description|Type|Audience|Est. Time|
-|---|---|---|---|---|
-|[Headless Developer Journey](/help/journey-headless/developer/overview.md)|**For users new to AEM and headless** technologies, start here for a comprehensive introduction to AEM and its headless features from the theory of headless through going live with your first headless project.|Guide|Developers **new to AEM and headless**|1 hour|
-|[Headless Getting Started Guide](/help/implementing/developing/headless/getting-started/introduction.md)|**For experienced AEM users** who need a short summary of the key AEM headless features, check out this quick start overview.|Quick Start|Developers, Administrators **with AEM experience**|20 minutes|
-|[Getting Started with AEM Headless hands-on tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)|**If you prefer a hands-on approach and are familiar with AEM**, this tutorial dives directly into creating a simple headless project.|Tutorial|Developers|2 hours|
--->

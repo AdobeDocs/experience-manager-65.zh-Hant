@@ -2,9 +2,9 @@
 title: 無頭入門手冊
 description: 透過此快速入門手冊，了解AEM 6.5強大無周邊功能的要點，例如內容模型、內容片段和GraphQL API。
 exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
-source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
+source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '301'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,8 @@ ht-degree: 1%
 >[!TIP]
 >
 >本快速入門手冊假設您同時了解AEM和無頭技術。
-
-<!-- HM-Links
 >
->If you are new to either AEM or headless, please refer to our [Headless Documentation Journeys](/help/journey-headless/home.md) for an end-to-end introduction to both headless and how AEM supports it.
--->
+>如果您是初次接觸AEM或無頭，請參閱 [無頭式檔案歷程](/help/journey-headless/home.md) 以了解無頭及AEM如何支援的端對端簡介。
 
 ## 對象 {#audience}
 
