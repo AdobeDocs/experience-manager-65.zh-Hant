@@ -1,14 +1,14 @@
 ---
 title: 支援的檔案格式和MIME類型
-description: 支援的檔案格式和MIME類型 [!DNL Assets] and [!DNL Dynamic Media] 以及每種格式支援的功能。
+description: 支援的檔案格式和MIME類型 [!DNL Assets] 和 [!DNL Dynamic Media] 以及每種格式支援的功能。
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 12a8b26a402ce68ee8f61e1035b7f44531cd2825
+source-git-commit: eb7051582a51d983851c876025770668b258bff5
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1568'
 ht-degree: 10%
 
 ---
@@ -215,10 +215,12 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | MOV, QT | Apple QuickTime | H264/AVC、Apple ProRes422和HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple中級，Apple動畫 |
 | MP4 | MPEG-4 | H264/AVC（所有配置檔案） | - |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
-| MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、松下DVCPro | - |
+| MXF‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、松下DVCPro | - |
 | 奧格夫、奧格 | 奧格 | 蒂奧拉，VP3，狄拉克 | - |
 | WebM | WebM | Google VP8 | - |
 | WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft®螢幕(MSS2)、Microsoft®照片(WVP2) |
+
+*此視訊格式尚不支援與Dynamic Media中的互動式視訊搭配使用，或與Experience Manager Assets中的附註搭配使用。
 
 ## 支援的封存格式 {#supported-archive-formats}
 
