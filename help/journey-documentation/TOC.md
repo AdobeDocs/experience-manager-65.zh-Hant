@@ -5,9 +5,9 @@ breadcrumb-title: AEM檔案歷程
 user-guide-description: 檔案歷程在AEM檔案中提供敘述性結構，將複雜和不同的功能結合在一起，以最佳實務方式解決業務目標。 歷程是以AEM初學者為核心而設計，會介紹概念和功能，以達成從A到Z的目標。
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 87e94a23af77e7c8293826751cf89b84f78b85fd
+source-git-commit: 0b8b517607f305ad82caf6ba766cad5a46021439
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -22,111 +22,43 @@ Please note that all links to other guides need to be absolute references with l
 + AEM檔案歷程 {#overview}
    + [什麼是檔案歷程？](home.md)
 
-<!-- comment out until all pages published 
-
-+ Headless Journeys {#headless}
-  + [Headless Journeys Home](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
-  + Headless Developer Journey {#developer}
-    + [Understand Headless in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
-    + [Learn about CMS Headless Development](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
-    + [Getting Started with AEM Headless as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
-    + [Path to your first experience using AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
-    + [How to model your content as AEM Content Models](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
-    + [How to access your content via AEM delivery APIs](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
-    + [How to update your content via AEM Assets APIs](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
-    + [How to put it all together](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
-    + [How to go live with your headless application](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
-    + [Optional - How to create single page applications with AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
-  + Headless Translation Journey {#translation}
-    + [Understand headless translation in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)
-    + [Get started with AEM headless translation](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/getting-started.html)
-    + [Learn about headless content and how to translate in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/learn-about.html)
-    + [Configure translation connector](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/configure-connector.html)
-    + [Configure translation rules](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translation-rules.html)
-    + [Translate content](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translate-content.html)
-    + [Publish translated content](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/publish-content.html)
-  + Headless Content Author Journey {#author}
-    + [AEM Headless Content Author Journey - Overview](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/overview.html)
-    + [Authoring for Headless with AEM - An Introduction](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/introduction.html)
-    + [Authoring Basics for Headless with AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/basics.html)
-    + [Learn about using references in Content Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/references.html)
-    + [Learn about defining Metadata and Tagging for Content Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/metadata-tagging.html)
-  + Headless Content Architect Journey {#architect}
-    + [AEM Headless Content Architect Journey Overview](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
-    + [Content Modeling for Headless with AEM - An Introduction](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
-    + [Learn the Content Modeling Basics for Headless with AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
-    + [Learn about Creating Content Fragment Models in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
-  + Headless Translation Journey {#translation}
-    + [Understand headless translation in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)
-    + [Get started with AEM headless translation](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/getting-started.html)
-    + [Learn about headless content and how to translate in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/learn-about.html)
-    + [Configure translation connector](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/configure-connector.html)
-    + [Configure translation rules](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translation-rules.html)
-    + [Translate content](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translate-content.html)
-    + [Publish translated content](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/publish-content.html)
-
--->
-
-<!--
-+ AEM Documentation Journeys {#overview}
-  + [What is a documentation journey?](home.md)
-+ Onboarding Journey {#onboarding}
-  + [Onboarding Journey Home](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/home.html)
-  + [Overview to Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/onboarding/onboarding-journey-overview.html)
-  + [Getting Started with Onboarding Process](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/onboarding/get-started-onboarding-journey.html)
-  + [Assign Team Members to Cloud Manager Product Profiles](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/onboarding/assign-team-members-cloud-manager.html)
-  + [Set Up Cloud Resources via Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/onboarding/setup-cloud-resources-via-cloud-manager.html)
-  + [Assign Team Members to AEM as a Cloud Service Product Profiles](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/onboarding/assign-team-members-aem-65.html)
-  + [Learning Path for Developers and Deployment Managers](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/onboarding/learning-path-developers-deploymentmanagers.html)
-  + [Learning Path for AEM Users](https://experienceleague.adobe.com/docs/experience-manager-65/journey-onboarding/onboarding/learning-path-aem-users.html)
-+ Sites Journeys {#sites}
-  + [Sites Journeys Home](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/home.html)
-  + Quick Site Creation Journey {#quick-site}
-    + [Understand Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/quick-site/cloud-manager.html)
-    + [Create site from template](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/quick-site/create-site.html)
-    + [Set up your pipeline](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/quick-site/pipeline-setup.html)
-    + [Grant access to the front-end developer](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/quick-site/grant-access.html)
-    + [Retrieve git repository access information](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/quick-site/retrieve-access.html)
-    + [Customize the site theme](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/quick-site/customize-theme.html)
-    + [Deploy your customized theme](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/quick-site/deploy-theme.html)
-  + Sites Translation Journey {#translation}
-    + [Understand sites translation in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/translation/overview.html)
-    + [Get started with AEM sites translation](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/translation/getting-started.html)
-    + [Learn about sites content and how to translate in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/translation/learn-about.html)
-    + [Configure translation connector](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/translation/configure-connector.html)
-    + [Configure translation rules](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/translation/translation-rules.html)
-    + [Translate content](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/translation/translate-content.html)
-    + [Publish translated content](https://experienceleague.adobe.com/docs/experience-manager-65/sites-journey/translation/publish-content.html)
-+ Headless Journeys {#headless}
-  + [Headless Journeys Home](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
-   + Headless Developer Journey {#developer}
-     + [Understand Headless in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
-     + [Learn about CMS Headless Development](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
-     + [Getting Started with AEM Headless as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
-     + [Path to your first experience using AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
-     + [How to model your content as AEM Content Models](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
-     + [How to access your content via AEM delivery APIs](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
-     + [How to update your content via AEM Assets APIs](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
-     + [How to put it all together](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
-     + [How to go live with your headless application](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
-     + [Optional - How to create single page applications with AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
-   + Headless Translation Journey {#translation}
-     + [Understand headless translation in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)
-     + [Get started with AEM headless translation](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/getting-started.html)
-     + [Learn about headless content and how to translate in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/learn-about.html)
-     + [Configure translation connector](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/configure-connector.html)
-     + [Configure translation rules](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translation-rules.html)
-     + [Translate content](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translate-content.html)
-     + [Publish translated content](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/publish-content.html)
-   + Headless Content Author Journey {#author}
-     + [AEM Headless Content Author Journey - Overview](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/overview.html)
-     + [Authoring for Headless with AEM - An Introduction](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/introduction.html)
-     + [Authoring Basics for Headless with AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/basics.html)
-     + [Learn about using references in Content Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/references.html)
-     + [Learn about defining Metadata and Tagging for Content Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/metadata-tagging.html)
-   + Headless Content Architect Journey {#architect}
-     + [AEM Headless Content Architect Journey Overview](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
-     + [Content Modeling for Headless with AEM - An Introduction](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
-     + [Learn the Content Modeling Basics for Headless with AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
-     + [Learn about Creating Content Fragment Models in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
--->
++ 無頭歷程 {#headless}
+   + [無頭歷程首頁](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
+   + 無頭式開發人員歷程 {#developer}
+      + [了解AEM中的無頭](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
+      + [了解CMS無頭開發](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
+      + [AEM Headlessas a Cloud Service快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
+      + [使用AEM Headless的第一次體驗路徑](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
+      + [如何將內容模型為AEM內容模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
+      + [如何透過AEM傳送API存取您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
+      + [如何透過AEM Assets API更新您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
+      + [如何把它們拼在一起](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
+      + [如何與無頭應用程式一起運行](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
+      + [選用 — 如何使用AEM建立單頁應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
+   + 無頭翻譯歷程 {#translation}
+      + [了解AEM中的無頭翻譯](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)
+      + [開始使用AEM無頭翻譯](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/getting-started.html)
+      + [了解無頭內容及如何在AEM中翻譯](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/learn-about.html)
+      + [配置翻譯連接器](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/configure-connector.html)
+      + [配置翻譯規則](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translation-rules.html)
+      + [翻譯內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translate-content.html)
+      + [發佈翻譯的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/publish-content.html)
+   + 無頭式內容製作歷程 {#author}
+      + [AEM無頭內容作者歷程 — 概觀](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/overview.html)
+      + [使用AEM製作無頭版 — 簡介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/introduction.html)
+      + [使用AEM製作無頭的基本知識](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/basics.html)
+      + [了解如何在內容片段中使用參考](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/references.html)
+      + [了解如何定義內容片段的中繼資料和標籤](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/author/metadata-tagging.html)
+   + 無頭式內容架構者歷程 {#architect}
+      + [AEM無頭式內容架構師歷程概述](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
+      + [使用AEM建立無頭的內容模型 — 簡介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
+      + [了解使用AEM建立無頭式內容模型的基本知識](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
+      + [了解如何在AEM中建立內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
+   + 無頭翻譯歷程 {#translation}
+      + [了解AEM中的無頭翻譯](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)
+      + [開始使用AEM無頭翻譯](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/getting-started.html)
+      + [了解無頭內容及如何在AEM中翻譯](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/learn-about.html)
+      + [配置翻譯連接器](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/configure-connector.html)
+      + [配置翻譯規則](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translation-rules.html)
+      + [翻譯內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translate-content.html)
+      + [發佈翻譯的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/publish-content.html)
