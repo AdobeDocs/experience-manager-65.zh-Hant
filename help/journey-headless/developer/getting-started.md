@@ -1,7 +1,7 @@
 ---
 title: AEM Headless 快速入門
 description: 在AEM無頭式開發人員歷程的這部分，了解AEM無頭式必要條件。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 1%
@@ -273,11 +273,6 @@ GraphQL是AEM與無周邊內容使用者之間的「膠水」。 GraphQL是用�
 ## 其他資源 {#additional-resources}
 
 雖然建議您透過檢閱檔案，繼續進行無頭式開發歷程的下一個階段 [使用AEM無頭式裝置提供第一次體驗的路徑，](path-to-first-experience.md) 以下是一些額外的選用資源，可更深入探討本檔案中提及的一些概念，但您不需要繼續進行無頭歷程。
-
-<!-- HM-Links
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - This documentation journey gives you a broad understanding of headless technology, how AEM serves headless content, and how you can translate it.
-* [An Introduction to the Architecture of Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Understand AEM as a Cloud Service's structure
--->
 
 * [AEM無頭翻譯歷程](/help/journey-headless/translation/overview.md)  — 本檔案歷程可讓您廣泛了解無頭式技術、AEM如何提供無頭式內容，以及如何翻譯內容。
 * [AEM無頭Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  — 使用這些實作教學課程，探索如何使用各種選項，透過AEM將內容傳遞至無頭端點，並選擇適合您的方式。

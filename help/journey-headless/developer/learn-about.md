@@ -1,7 +1,7 @@
 ---
 title: 了解CMS無頭開發
 description: 在AEM無頭式開發人員歷程的這部分，了解無頭式技術及您使用它的原因。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -124,9 +124,5 @@ ht-degree: 0%
 ## 其他資源 {#additional-resources}
 
 雖然建議您透過檢閱檔案，繼續進行無頭式開發歷程的下一個階段 [AEM Headless快速入門](getting-started.md)，以下是一些額外的選用資源，可更深入探討本檔案中提及的一些概念，但您不需要繼續進行無頭歷程。
-
-<!-- HM-Links
-* [An Introduction to the Architecture of Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Understand AEM as a Cloud Service's structure
--->
 
 * [AEM無頭Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  — 使用這些實作教學課程，探索如何使用各種選項，透過AEM將內容傳遞至無頭端點，並選擇適合您的方式。
