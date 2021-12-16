@@ -1,7 +1,7 @@
 ---
 title: 如何與無頭應用程式一起運行
 description: 在AEM無頭式開發人員歷程的這部分，了解如何即時部署無頭式應用程式。
-source-git-commit: ee82e8edc9cdf7fb403d54d82ced6caa2c95fdc9
+source-git-commit: 20d46a7c37663dac36e6af9582d569a7f782eab7
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%
@@ -224,11 +224,3 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
    * [控制CDN快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
 
    * 設定 [CDN重寫器](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*搜尋CDN重寫器*)
-
-<!--
-* [An Overview of Deploying to AEM as a Cloud Service](/help/implementing/deploying/overview.md)
-* [The AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
-* [Set Up A Local AEM Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)
-* [Use Cloud Manager to Deploy Your Code](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)
-* [Integrate the Cloud Manager Git Repository with an External Git Repository and Deploy a Project to AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html)
--->
