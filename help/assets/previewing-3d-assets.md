@@ -1,14 +1,14 @@
 ---
-title: 預覽 3D 資產
-description: 了解如何預覽3D資產
+title: 預覽3D資產
+description: 了解如何以Experience Manager預覽3D資產。
 contentOwner: Rick Brough
 docset: aem65
-feature: 3D資產
+feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 32e637463a2f68a48b39c5dea9cc3cc4d1596d9b
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '556'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
 | 3D檔案副檔名 | 檔案格式 | MIME類型 | 附註 |
 |---|---|---|---|
 | GLB | 二進位GL傳輸 | 模型/gltf二進位 |  |
-| GLTF | GL傳輸格式 | model/gltf+json | 請參閱下方的&#x200B;**注意**。 |
+| GLTF | GL傳輸格式 | model/gltf+json | 請參閱 **附註** 下方。 |
 | OBJ | WaveFront 3D對象檔案 | application/x-tgif |  |
 | STL | 光固化成形 | application/vnd.ms-pki.stl |  |
 | DN | Adobe Dimension | model/x-adobe-dn | 僅支援擷取；預覽不可用。 |
@@ -36,30 +36,30 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
 
 >[!NOTE]
 >
->如果材料未在gLTF模型的預覽中呈現，請確保它們的名稱正確，並且位於與模型相同的根資料夾的`textures`資料夾中，類似於以下內容：
+>如果材料未在gLTF模型的預覽中呈現，請確保它們的名稱正確且在 `textures` 與模型相同的根資料夾中的資料夾，類似於以下內容：
 
     資產（資料夾）
-    模型。
-    gltfmodel.
-    結合（資料夾）
-    material_0_baseColor.
-    jpegmaterial_0_normal.jpeg
+    model.gltf
+    model.bin
+    紋理（資料夾）
+    material_0_baseColor.jpeg
+    material_0_normal.jpeg
 
 ## 以Experience Manager預覽3D資產時的效能考量{#performance-3d-previewing-assets}
 
 在資產詳細資訊檢視頁面中開啟3D資產所花的時間，取決於頻寬、影像複雜度和伺服器延遲等數項因素。
 
-此外，當您以互動方式操作相機時，還需要考慮客戶端電腦的功能，例如工作站、筆記型電腦或移動觸摸設備。 具有良好圖形功能的強大系統可讓互動式3D觀看體驗更流暢、更有利。
+此外，當您以交互方式操作攝像機時，還需要考慮客戶端電腦的功能，如工作站、筆記型電腦或移動觸摸設備。 具有良好圖形功能的強大系統可讓互動式3D觀看體驗更流暢、更有利。
 
 **若要預覽3D資產的Experience Manager:**
 
 1. 請確定您已將3D資產上傳至Experience Manager。
-請參閱[支援的3D預覽格式](#supported-3d-previewing-assets)和[上傳資產](/help/assets/manage-assets.md#uploading-assets)。
-1. 從Experience Manager，在&#x200B;**[!UICONTROL 導航]**&#x200B;頁面上，選擇&#x200B;**[!UICONTROL 資產]** > **[!UICONTROL 檔案]**。
+請參閱 [支援的3D預覽格式](#supported-3d-previewing-assets) 和 [上傳資產](/help/assets/manage-assets.md#uploading-assets).
+1. 從Experience Manager，在 **[!UICONTROL 導覽]** 頁面，選取 **[!UICONTROL 資產]** > **[!UICONTROL 檔案]**.
 
    ![導覽頁面](/help/assets/assets-dm/navigation-assets.png)
 
-1. 在頁面的右上角附近，從「檢視」下拉式清單中，選取「卡片檢視」 ****，然後導覽至您要預覽的3D資產。
+1. 在頁面的右上角附近，從「檢視」下拉式清單中，選取 **[!UICONTROL 卡片檢視]**，然後導覽至您要預覽的3D資產。
 
    ![3D卡選擇](/help/assets/assets-dm/3d-card-select.png)
    _在「卡片檢視」中，選取您要預覽之3D資產的卡片。_
@@ -79,4 +79,4 @@ Experience Manager在製作程式中支援3D資產的上傳、傳送和互動式
    | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點還原到3D資產的中央。 重置還使相機更近或更遠地移開，以便以合理的觀看大小顯示資產的整體。 |  |  |
    | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，選取全螢幕圖示。 |  |  |
 
-1. 完成後，在頁面右上角附近，選擇&#x200B;**[!UICONTROL Close]**。
+1. 完成後，在頁面右上角附近選取 **[!UICONTROL 關閉]**.
