@@ -6,10 +6,10 @@ seo-description: The Tough Day test simulates the daily load of around 1000 auth
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 36c0728908e24a13d08c1eaed4e39542f5b61df5
+source-git-commit: 0b1f28963d9294c7aa9ae45c6b9fc9a9b8b4f6e6
 workflow-type: tm+mt
-source-wordcount: '1885'
-ht-degree: 2%
+source-wordcount: '1879'
+ht-degree: 1%
 
 ---
 
@@ -261,7 +261,7 @@ tests:
       title : NewAsset
 ```
 
-此外，您也可以使用，從預先定義的套裝或發佈器，從預設設定中移除測試 `exclude` 參數。 請注意，您還必須指定測試的套裝名稱和實際名稱(而不是測試C `lass` 名稱)。 您可以在 `name` 測試類的屬性。 在以下範例中， `CreatePageTreeTest` （已命名） `UploadAsset`)測試從toughday套裝中移除。
+此外，您也可以使用，從預先定義的套裝或發佈器，從預設設定中移除測試，並 `exclude` 參數。 請注意，您還必須指定測試的套裝名稱和實際名稱(而不是測試C `lass` 名稱)。 您可以在 `name` 測試類的屬性。 在以下範例中， `CreatePageTreeTest` （已命名） `UploadAsset`)測試從toughday套裝中移除。
 
 使用命令列參數：
 
@@ -403,8 +403,10 @@ Tough Day 2會在您執行Tough Day 2的相同目錄中建立記錄檔資料夾�
 
 不會覆寫記錄檔，後續執行會將訊息附加至現有記錄檔。 記錄有數個層級，如需詳細資訊，請參閱 ` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`.
 
-#### 使用範例 {#example-usage}
+<!--
+#### Example Usage {#example-usage}
 
-#### 已知問題 {#known-issues}
+#### Known Issues {#known-issues}
 
-[取得檔案](assets/toughday-6_1.jar)
+[Get File](assets/toughday-6_1.jar)
+-->
