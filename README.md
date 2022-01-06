@@ -1,18 +1,16 @@
 ---
-source-git-commit: 107ad4d7f875d27d392212f5fb8ca9b39aae3857
+source-git-commit: 41011e538104405c954761d9adc270e774e8a9a1
 workflow-type: tm+mt
-translation-type: tm+mt
 source-wordcount: '84'
-ht-degree: 0%
+ht-degree: 69%
 
 ---
 # Adobe Experience Manager 6.5檔案
 
-這是Adobe Experience Manager 6.5檔案的儲存庫。 本檔案涵蓋安裝、管理、編寫使用以及如何自訂AEM。
+這是Adobe Experience Manager 6.5檔案的存放庫。 本檔案涵蓋安裝、管理、製作使用，以及如何自訂AEM。
 
-歡迎您對本檔案的貢獻。 請參閱下列資源：
+歡迎您協助撰寫本說明文件。請參閱下列資源：
 
-* [compiting.](contributing.md) md有關如何對文檔進行貢獻的概述。
-* [guidelines.](guidelines.md) md有關稿件中預期內容以及如何編寫檔案稿件的概述。
-* [行為准則。](code-of-conduct.md) md有關我們在您參與本檔案專案時預期的行為標準的概述。
-
+* [contributing.md](contributing.md) 如何協助撰寫本說明文件的概述。
+* [Guidelines.md](guidelines.md) 預期貢獻內容以及如何協助編寫說明文件的概述。
+* [code-of-conduct.md](code-of-conduct.md) 我們期望在您貢獻本說明文件專案時的行為標準概述。
