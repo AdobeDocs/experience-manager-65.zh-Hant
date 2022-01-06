@@ -1,10 +1,7 @@
 ---
 title: AEM無頭翻譯歷程
 description: 從這裡開始，使用AEM功能強大的翻譯工具，引導您完成無頭內容的轉譯。
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 7cf68868e0963930bde9fcda647822a03914b61d
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 2%

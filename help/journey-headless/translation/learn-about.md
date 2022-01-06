@@ -1,10 +1,7 @@
 ---
 title: 了解無頭內容，以及如何在AEM中翻譯
 description: 了解無頭概念、它們如何對應至AEM，以及AEM翻譯理論。
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 7cf68868e0963930bde9fcda647822a03914b61d
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%

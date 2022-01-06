@@ -1,10 +1,7 @@
 ---
 title: 發佈翻譯的內容
 description: 了解如何發佈翻譯內容，並隨著內容更新更新翻譯。
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 7cf68868e0963930bde9fcda647822a03914b61d
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 0%

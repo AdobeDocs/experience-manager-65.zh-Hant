@@ -1,10 +1,7 @@
 ---
 title: 了解製作基本知識
 description: 了解使用內容片段為無頭CMS製作內容的概念和機制。
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 9661061a98c31fbb74bd0716dbedc7abef298f44
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 2%
