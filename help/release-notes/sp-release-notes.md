@@ -4,9 +4,9 @@ description: 專屬於 [!DNL Adobe Experience Manager] 6.5 service pack 11
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 5b62efe65be44416335c6dbbde23ee6a7e5a8fd7
+source-git-commit: 282f634e84b7c6c5e281d2b425953853790f225c
 workflow-type: tm+mt
-source-wordcount: '3822'
+source-wordcount: '3829'
 ht-degree: 2%
 
 ---
@@ -37,6 +37,8 @@ ht-degree: 2%
 * 使用者體驗增強功能會顯示資料夾中存在的資產數量。 若是資料夾中超過1000個資產， [!DNL Assets] 顯示1000+。
 
 * 您現在可以在「卡片」和「欄」檢視中轉譯排序選項。
+
+* Adobe資產連結的業務設定檔支援。
 
 * 您現在可以使用 [!DNL Dynamic Media] 來設定一般設定，而非必須完成 [!DNL Dynamic Media Classic] 案頭應用程式。 請參閱 [配置Dynamic Media一般設定](/help/assets/dm-general-settings.md).
 
@@ -380,7 +382,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * 安裝Forms 6.5.11.0附加元件套件後，提交動作、傳送電子郵件和叫用AEM工作流程即停止運作。
 * 安裝Microsoft 6.5.11.0附加套件後，CreatePDF操作停止將Forms Word檔案轉換為PDF檔案。
-* （僅限JEE）Apache Log4j2回報的重大安全性弱點(CVE-2021-44228和CVE-2021-45046)。
+* (僅限 JEE) 針對 Apache Log4j2 回報的重大安全漏洞 (CVE-2021-44228 和 CVE-2021-45046)。
 * （僅限JEE）6.5.11.0修補程式中的組合器DSC包含錯誤的代碼，如規格版本和實際版本。
 
 
@@ -493,7 +495,7 @@ For information about installing the cumulative installer for Experience Manager
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
