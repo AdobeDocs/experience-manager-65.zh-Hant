@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0a28a2cf1184ebdbbc907a661f2d0a2c18775822
+source-git-commit: 41a9ab1dd37c135be73fe47bc36ceb4845e13379
 workflow-type: tm+mt
-source-wordcount: '3486'
+source-wordcount: '3427'
 ht-degree: 0%
 
 ---
@@ -90,60 +90,60 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
 >
 >建議您追蹤來自Java廠商的安全性佈告欄，以確保生產環境的安全性，並安裝最新的Java更新。
 
-<table>
+<!--- <table>
  <tbody>
   <tr>
-   <td><strong>平台</strong></td>
-   <td><strong>支援層級</strong></td>
-   <td><strong>連結</strong></td>
+   <td><strong>Platform</strong></td>
+   <td><strong>Support Level</strong></td>
+   <td><strong>Link</strong></td>
   </tr>
   <tr>
-   <td>Azul Zulu OpenJDK 11 - 64位</td>
-   <td>答：支援[1]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24</td>
+   <td>Azul Zulu OpenJDK 11 - 64bit</td>
+   <td>A: Supported [1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24</td>
   </tr>
   <tr>
-   <td>Azul Zulu OpenJDK 8 - 64位</td>
-   <td>答：支援[1]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18</td>
+   <td>Azul Zulu OpenJDK 8 - 64bit</td>
+   <td>A: Supported [1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=18</td>
   </tr>
   <tr>
-   <td>OracleJava SE 11 JDK - 64位</td>
-   <td>答：支援[2]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24<td>
+   <td>Oracle Java SE 11 JDK - 64bit</td>
+   <td>A: Supported [2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24<td>
   </tr>
   <tr>
-   <td>OracleJava SE 10 JDK</td>
-   <td>Z:不支援[2]</td>
+   <td>Oracle Java SE 10 JDK</td>
+   <td>Z: Not supported [2]</td>
   </tr>
   <tr>
-   <td>OracleJava SE 9 JDK</td>
-   <td>Z:不支援[2]</td>
+   <td>Oracle Java SE 9 JDK</td>
+   <td>Z: Not supported [2]</td>
   </tr>
   <tr>
-   <td>OracleJava SE 8 JDK - 64位</td>
-   <td>答：支援[2]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10<td>
+   <td>Oracle Java SE 8 JDK - 64bit</td>
+   <td>A: Supported [2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=10<td>
   </tr>
   <tr>
-   <td>IBM J9 VM — 版本編號2.9、JRE 1.8.0</td>
-   <td>答：支援[3]</td>
+   <td>IBM J9 VM - build 2.9, JRE 1.8.0</td>
+   <td>A: Supported [3]</td>
   </tr>
   <tr>
-   <td>IBM J9 VM — 版本編號2.8、JRE 1.8.0</td>
-   <td>答：支援[3]</td>
+   <td>IBM J9 VM - build 2.8, JRE 1.8.0</td>
+   <td>A: Supported [3]</td>
   </tr>
  </tbody>
-</table>
+</table> --->
 
 | **平台** | **支援層級** | **連結** |
 |---|---|---|
 | Azul Zulu OpenJDK 11 - 64位 | 答：支援 `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
 | Azul Zulu OpenJDK 8 - 64位 | 答：支援 `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
-| OracleJava SE 11 JDK - 64位 | 答：支援 `[2]` |
+| OracleJava SE 11 JDK - 64位 | 答：支援 `[2]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | OracleJava SE 10 JDK | Z:不支援 `[2]` |
 | OracleJava SE 9 JDK | Z:不支援 `[2]` |
-| OracleJava SE 8 JDK - 64位 | 答：支援 `[2]` |
+| OracleJava SE 8 JDK - 64位 | 答：支援 `[2]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
 | IBM J9 VM — 版本編號2.9、JRE 1.8.0 | 答：支援 `[3]` |
 | IBM J9 VM — 版本編號2.8、JRE 1.8.0 | 答：支援 `[3]` |
 
