@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 7630a6c4d908144e384b705bfce72779803aea93
+source-git-commit: 0a28a2cf1184ebdbbc907a661f2d0a2c18775822
 workflow-type: tm+mt
-source-wordcount: '3340'
+source-wordcount: '3486'
 ht-degree: 0%
 
 ---
@@ -135,6 +135,17 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
   </tr>
  </tbody>
 </table>
+
+| **平台** | **支援層級** | **連結** |
+|---|---|---|
+| Azul Zulu OpenJDK 11 - 64位 | 答：支援 `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
+| Azul Zulu OpenJDK 8 - 64位 | 答：支援 `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
+| OracleJava SE 11 JDK - 64位 | 答：支援 `[2]` |
+| OracleJava SE 10 JDK | Z:不支援 `[2]` |
+| OracleJava SE 9 JDK | Z:不支援 `[2]` |
+| OracleJava SE 8 JDK - 64位 | 答：支援 `[2]` |
+| IBM J9 VM — 版本編號2.9、JRE 1.8.0 | 答：支援 `[3]` |
+| IBM J9 VM — 版本編號2.8、JRE 1.8.0 | 答：支援 `[3]` |
 
 1. OpenJDK的Azul Zulu組建的支援和分發，包括LTS版本的所有維護更新，將由Adobe直接支援所有使用OpenJDK的Azul Zulu組建的AEM客戶，從AEM 6.5 SP9版本開始。 請參閱 [Azul Java支援Adobe Experience Manager問答](assets/adobe-azul-openjdk-license-agreement.pdf) 以取得更多資訊。
 
