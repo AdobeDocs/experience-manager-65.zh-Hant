@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 1aad655a141fd2137875ae829d1b698298dfe285
+source-git-commit: 7630a6c4d908144e384b705bfce72779803aea93
 workflow-type: tm+mt
-source-wordcount: '3253'
+source-wordcount: '3340'
 ht-degree: 0%
 
 ---
@@ -95,18 +95,22 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
   <tr>
    <td><strong>平台</strong></td>
    <td><strong>支援層級</strong></td>
+   <td><strong>連結</strong></td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64位</td>
    <td>答：支援[1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24</td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 8 - 64位</td>
    <td>答：支援[1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18</td>
   </tr>
   <tr>
    <td>OracleJava SE 11 JDK - 64位</td>
    <td>答：支援[2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24<td>
   </tr>
   <tr>
    <td>OracleJava SE 10 JDK</td>
@@ -119,6 +123,7 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
   <tr>
    <td>OracleJava SE 8 JDK - 64位</td>
    <td>答：支援[2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10<td>
   </tr>
   <tr>
    <td>IBM J9 VM — 版本編號2.9、JRE 1.8.0</td>
@@ -517,7 +522,7 @@ AEM Dynamic Media預設為停用。 請參閱這裡以 [啟用Dynamic Media](/he
 
 ### AEM Assets XMP中繼資料回寫的需求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-支援並啟用以下平台和檔案格式的XMP回寫：
+下列平台和檔案格式支援並啟用XMP回寫：
 
 * **作業系統：**
 
