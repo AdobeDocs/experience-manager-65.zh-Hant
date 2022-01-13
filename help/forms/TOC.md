@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: d010b2a20e40fabe40f67d60ef0b6fab245be60f
+source-git-commit: 7962d076135bcbac821ff85fd1831ee2c444ff00
 workflow-type: tm+mt
-source-wordcount: '3777'
-ht-degree: 3%
+source-wordcount: '3772'
+ht-degree: 4%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 3%
 
 + [AEM 6.5 Forms指南](home.md)
 + 發行說明 {#release-notes-new-features}
-   + [發行說明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/release-notes.html#experience-manager-forms)
+   + [發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
    + [新功能摘要](using/whats-new.md)
-   + [過時的功能](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/deprecated-removed-features.html)
+   + [過時的功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
 + 快速入門 {#getting-started}
    + [AEM Forms簡介](using/introduction-aem-forms.md)
    + [製作最適化表單簡介](using/introduction-forms-authoring.md)
@@ -72,7 +72,7 @@ ht-degree: 3%
       + [在JEE for WebSphere上安裝和部署Adobe Experience Manager表單](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [在JEE for WebLogic上安裝和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安裝AEM Forms Workbench](using/install-workbench.md)
-      + [安裝和配置設計工具](using/installing-configuring-designer.md)
+      + [安裝及設定 Designer](using/installing-configuring-designer.md)
       + [準備安裝AEM Forms（伺服器叢集）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
       + [在JBoss叢集上的JEE上設定Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
       + [在WebSphere叢集的JEE上設定Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
@@ -155,7 +155,7 @@ ht-degree: 3%
    + [AEM Forms鍵盤快速鍵](using/keyboard-shortcuts.md)
    + [將提交審核者與表單關聯](using/adding-reviewers-form.md)
    + [為表單欄位編寫內容說明](using/authoring-in-field-help.md)
-   + [使用「版面」模式調整元件大小](/help/forms/using/resize-using-layout-mode.md)
+   + [使用版面模式調整元件大小](/help/forms/using/resize-using-layout-mode.md)
 + 適用性Forms — 進階編寫 {#adaptive-forms-advanced-authoring}
    + [使用JSON結構建立最適化表單](using/adaptive-form-json-schema-form-model.md)
    + [使用XML結構建立最適化表單](using/adaptive-form-xml-schema-form-model.md)
@@ -193,7 +193,7 @@ ht-degree: 3%
    + [打印通道和Web通道](using/web-channel-print-channel.md)
    + [互動式通信配置屬性](using/interactive-communication-configuration-properties.md)
    + [生成多個互動式通信](using/generate-multiple-interactive-communication-using-batch-api.md)
-   + [使用「版面」模式調整元件大小](using/resize-using-layout-mode-interactive-communication.md)
+   + [使用版面模式調整元件大小](using/resize-using-layout-mode-interactive-communication.md)
 + 工作流程 {#workflows}
    + [Forms以OSGi為中心的工作流程](using/aem-forms-workflow.md)
    + [Forms上以OSGi為中心的工作流程 — 步驟參考](using/aem-forms-workflow-step-reference.md)

@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5發行說明
 description: AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: a2b3cb81fb15a1f03004e42cafbf92c84c9d7b89
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 37%
+source-wordcount: '391'
+ht-degree: 38%
 
 ---
 
@@ -13,10 +13,12 @@ ht-degree: 37%
 
 AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 
+* [最新發行說明](/help/release-notes/release-notes.md)
+
 ## 重要AEM文章
 
-* [開始使用AEM](https://helpx.adobe.com/tw/experience-manager/get-started.html)
-* [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [開始使用AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
+* [近期文件更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用手冊
@@ -48,8 +50,8 @@ AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、�
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
 * [AEM 社群論壇](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
-## 版權、許可證和免責聲明{#copyright-licenses-and-disclaimers}
+## 版權、許可證和免責聲明 {#copyright-licenses-and-disclaimers}
 
-如需詳細資訊，請參閱[https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
+如需詳細資訊，請參閱 [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
 
-第三方許可通知：[https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
+第三方許可通知： [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)

@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: User
 feature: Asset Management,Search
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: eb7051582a51d983851c876025770668b258bff5
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
 source-wordcount: '9878'
 ht-degree: 3%
@@ -338,7 +338,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 * 如果目的地存在同名的資料夾，系統會從ZIP檔案擷取現有資料夾中的資產。
 * 如果您取消提取，系統不會刪除已提取的資產。
 * 您無法同時選取兩個ZIP檔案並解壓縮。 一次只能解壓縮一個ZIP封存。
-* 上傳ZIP封存時，如果上傳對話方塊顯示500伺服器錯誤，請在安裝後重試 [最新Service Pack](/help/release-notes/sp-release-notes.md).
+* 上傳ZIP封存時，如果上傳對話方塊顯示500伺服器錯誤，請在安裝後重試 [最新Service Pack](/help/release-notes/release-notes.md).
 
 ## 預覽資產 {#previewing-assets}
 

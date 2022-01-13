@@ -1,21 +1,21 @@
 ---
 title: 了解AEM 6.5功能
-seo-title: 了解AEM 6.5功能
+seo-title: Learn About AEM 6.5 Capabilities
 description: 說明AEM 6.5的基本功能
-seo-description: 說明AEM 6.5的基本功能
+seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 6%
+source-wordcount: '400'
+ht-degree: 7%
 
 ---
 
-# 了解AEM 6.5功能{#learn-about-aem-64-capabilities}
+# 了解AEM 6.5功能 {#learn-about-aem-64-capabilities}
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites是AdeobeExperience Manager內的內容管理系統，可讓您在各個網站、行動網站和站上螢幕上建立、管理和傳遞數位體驗，使其成為全球性的觸及對象，但具備個人相關性和吸引力。 [深](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 入了 [解我們的新影片功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites是AdeobeExperience Manager內的內容管理系統，可讓您在各個網站、行動網站和站上螢幕上建立、管理和傳遞數位體驗，使其成為全球性的觸及對象，但具備個人相關性和吸引力。 [深入了解](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 或 [深入了解我們新推出的影片功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -23,7 +23,7 @@ AEM Assets可讓您的組織從多租用戶雲端平台輕鬆建立、管理、�
 
 * [使用AEM Assets](/help/assets/manage-assets.md)
 * [使用 Dynamic Media](/help/assets/dynamic-media.md)
-* [AEM Assets發行說明](/help/release-notes/assets.md)
+* [AEM發行說明](/help/release-notes/release-notes.md)
 
 ## AEM Forms {#aem-forms}
 
@@ -46,8 +46,8 @@ Communities是Adobe Experience Manager的一項功能，可協助您建立線上
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre是全新的Adobe Experience Manager功能，可讓您利用網路上共用的所有內容，在您自己的網站上持續建立全新高品質的內容流。 [深](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 入了 [解或直接進入指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre是全新的Adobe Experience Manager功能，可讓您利用網路上共用的所有內容，在您自己的網站上持續建立全新高品質的內容流。 [深入了解](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 或 [跳進我們的嚮導。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
 ## AEM Foundation {#aem-foundation}
 
-深入了解[Adobe Experience Manager 6.5 foundation](/help/sites-deploying/home.md)和我們的托管服務部署模型，或深入了解此版本中功能的一些[新簡介影片。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+深入了解 [Adobe Experience Manager 6.5 foundation](/help/sites-deploying/home.md) 以及我們的托管服務部署模式，或深入探討我們的一些 [此版本功能的新簡介影片。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
