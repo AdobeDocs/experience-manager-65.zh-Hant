@@ -2,10 +2,10 @@
 title: 已知問題
 description: Adobe Experience Manager 6.5已知問題的發行說明
 exl-id: 736037cf-af8c-4ce2-969e-c100a939a038
-source-git-commit: e0f024c2e1dc9fc7908382d406844575b4b38363
+source-git-commit: d87e48070329518117f84252ea0cab0471d74a29
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 3%
+source-wordcount: '661'
+ht-degree: 10%
 
 ---
 
@@ -46,6 +46,10 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 1. 儲存檔案並重新啟動AEM執行個體。
 
+## 網站 {#sites}
+
+* **使用頁面版本**:如果頁面已移動，則您無法再對移動前進行的任何版本執行預覽。
+
 ## 資產 {#assets}
 
 * **搜尋：** 如果搜尋字串包含前導空格([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
@@ -80,4 +84,4 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 * AEM Forms啟動時， `SAX Security Manager could not be setup` 警告出現。
 * 在執行Adobe Acrobat Reader 20.10.00版的Apple iOS或iPadOS上開啟受AEM Forms檔案安全性保護的PDF時。
-* 當您從Apple iOS裝置提交包含標準HTML上傳欄位的表單時，有時不會傳送檔案內容，而會在另一端收到0位元組檔案。 Apple iOS 15.1已修正問題。
+* 從 Apple iOS 裝置提交包含標準 HTML 上傳欄位的表單時，有時不會傳送檔案內容並在另一端收到 0 位元組檔案。Apple iOS 15.1 提供此問題的修正。
