@@ -8,13 +8,13 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
-source-git-commit: 1a410c7b71f0e329b327a7f7f05137fcd220fb6a
+exl-id: 55cc7c57-87a0-4bfb-b226-36d01d36849a
+source-git-commit: 9c548dbc0157607adda5ed76cab8ef970588e1e9
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2498'
 ht-degree: 4%
 
 ---
-
 
 # 配置Dynamic Media一般設定
 
@@ -70,9 +70,13 @@ Dynamic Media一般設定適用於經驗豐富的網站開發人員和程式設�
 
    AdobeDynamic Media不允許兩個檔案具有相同名稱。 每個項目的AdobeDynamic Media ID（影像名稱減去副檔名）必須是唯一的。 因為這個規則， **[!UICONTROL 上傳至應用程式]** 有覆寫。 此選項的確切效果取決於您選擇的指定「覆寫影像」選項。 這些選項指定替換影像的上傳方式：是替換原始影像，還是變成重複影像。 重複影像會以 `-1`. 例如， `chair.tif` 已重新命名 `chair-1.tif`. 這些選項會影響上傳到與原始資料夾不同的資料夾的影像，或具有與原始資料夾不同副檔名的影像，例如JPG、TIF或PNG。
 
+   >[!NOTE]
+   >
+   >若要與Experience Manager保持一致，請選取「覆寫影像」選項 **[!UICONTROL 在當前資料夾中覆蓋，基本名稱/副檔名相同]**.
+
    | 覆寫影像選項 | 說明 |
    | --- | --- |
-   | **[!UICONTROL 在目前檔案夾中有基底名稱/副檔名相同者時予以覆寫]** | 僅新Dynamic Media帳戶的預設值。<br>此選項是最嚴格的取代規則。 它要求您將取代影像上傳至與原始影像相同的資料夾，且取代影像的副檔名與原始影像相同。 若不符合這些要求，則會建立重複項目。 |
+   | **[!UICONTROL 在目前檔案夾中有基底名稱/副檔名相同者時予以覆寫]** | *預設* 僅新Dynamic Media帳戶。<br>此選項是最嚴格的取代規則。 它要求您將取代影像上傳至與原始影像相同的資料夾，且取代影像的副檔名與原始影像相同。 若不符合這些要求，則會建立重複項目。<br>*若要與Experience Manager保持一致，請選取此選項*. |
    | **[!UICONTROL 在目前檔案夾中有基本名稱相同者 (無論副檔名為何) 時予以覆寫]** | 需要您將取代影像上傳至與原始檔案相同的資料夾，但副檔名可能與原始檔案不同。 例如， chair.tif會取代chair.jpg。 |
    | **[!UICONTROL 任何檔案夾內若有基本資產名稱/副檔名相同者，將予以覆寫]** | 需要替換影像的副檔名與原始影像相同（例如chair.jpg必須替換chair.jpg，而不是chair.tif）。 不過，您可以將取代影像上傳至與原始影像不同的資料夾。 更新後的影像位於新資料夾中；在檔案的原始位置找不到該檔案。 |
    | **[!UICONTROL 任何檔案夾內若有基本資產名稱相同者 (無論副檔名為何)，將予以覆寫]** | 此選項是最包容的取代規則。 您可以將取代影像上傳至與原始檔案不同的資料夾、以不同副檔名上傳檔案，然後取代原始檔案。 如果原始檔案位於不同的資料夾中，則替換影像位於上載到的新資料夾中。 |
