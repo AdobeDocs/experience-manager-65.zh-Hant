@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c1eb9fb56cf9024ff58adec644a40e3def52e62a
+source-git-commit: e8270ad3f658236184467eda9f25c2ec0e6787ba
 workflow-type: tm+mt
-source-wordcount: '11747'
+source-wordcount: '11766'
 ht-degree: 5%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 5%
       * 深入了解 [組織數位資產](/help/assets/organize-assets.md).
    * 將您的主要來源影片上傳至資料夾。 將視訊新增至資料夾時，會根據您指派給資料夾的視訊處理設定檔進行編碼。
 
-      * Dynamic Media主要支援長度最多30分鐘的簡短影片。
+      * Dynamic Media主要支援長度上限30分鐘、解析度超過50 x 50的短片影片。
       * 您可以上傳每個高達15 GB的視訊檔案。
       * [上傳您的影片](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
       * 深入了解 [支援的輸入檔案格式](/help/assets/assets-formats.md#supported-multimedia-formats).
@@ -300,7 +300,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 為視訊檔案編碼時，請使用盡可能高品質的來源視訊檔案。 請避免使用先前編碼的視訊檔案，因為這些檔案已經壓縮，而進一步編碼會造成品質欠佳的視訊。
 
-* Dynamic Media支援長度最多30分鐘的短片影片。
+* Dynamic Media主要支援長度上限30分鐘、解析度超過50 x 50的短片影片。
 * 您可以上傳最多15 GB的主要來源視訊檔案。
 
 下表說明了源視頻檔案編碼前必須具有的建議大小、外觀比例和最小比特率：
@@ -1152,7 +1152,7 @@ Dynamic Media會將註解檔案轉換為JSON（JavaScript物件標籤法）格�
 
 您為視訊建立章節清單的方式與建立字幕的方式大致相同。 即，建立WebVTT檔案。 但請注意，此檔案必須與您也使用的任何WebVTT標題檔案分開；不能將字幕和章節合併為一個WebVTT檔案。
 
-您可以使用下列範例，作為建立具有章節導覽的WebVTT檔案時所使用格式的範例：
+您可以使用下列範例作為建立具有章節導覽的WebVTT檔案時所使用格式的範例：
 
 ### 具有視訊章節導覽的WebVTT檔案 {#webvtt-file-with-video-chapter-navigation}
 
