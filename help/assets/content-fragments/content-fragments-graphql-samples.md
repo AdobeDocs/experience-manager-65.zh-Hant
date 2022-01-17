@@ -2,9 +2,10 @@
 title: 學習如何搭配AEM使用GraphQL — 範例內容與查詢
 description: 了解如何透過探索範例內容和查詢，將GraphQL與AEM搭配使用，以無故提供內容。
 feature: Content Fragments,GraphQL API
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
+exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
+source-git-commit: 1a3d5a6b3b4f7af67d6a62cdaab484daa536cb63
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 6%
 
 ---
@@ -28,7 +29,7 @@ ht-degree: 6%
 
 * A [範例內容片段結構](#content-fragment-structure-graphql)
 
-* 以及根據範例內容片段結構（內容片段模型與相關內容片段）的某些[範例GraphQL查詢](#graphql-sample-queries)。
+* 有些 [範例GraphQL查詢](#graphql-sample-queries)，以範例內容片段結構（內容片段模型和相關內容片段）為基礎。
 
 
 ## GraphQL — 使用範例內容片段結構的範例查詢 {#graphql-sample-queries-sample-content-fragment-structure}
@@ -37,17 +38,17 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->根據您的實例，您可以直接訪問AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)中包含的[Graph *i* QL介面，以提交和測試查詢。
+>視您的執行個體而定，您可以直接存取 [AEM GraphQL API隨附的GraphiQL介面](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) 用於提交和測試查詢。
 >
 >例如：`http://localhost:4502/content/graphiql.html`
 
 >[!NOTE]
 >
->範例查詢以[要與GraphQL](#content-fragment-structure-graphql)搭配使用的範例內容片段結構為基礎
+>範例查詢以 [與GraphQL搭配使用的內容片段結構範例](#content-fragment-structure-graphql)
 
 ### 範例查詢 — 所有可用的結構和資料類型 {#sample-all-schemes-datatypes}
 
-這會傳回所有可用結構的所有`types`。
+這會傳回所有 `types` ，以了解所有可用的結構。
 
 **範例查詢**
 
@@ -223,7 +224,7 @@ ht-degree: 6%
 
 ### 範例查詢 — 所有城市的名稱 {#sample-names-all-cities}
 
-這是直接查詢，可傳回`city`架構中所有項目的`name`。
+這是簡單明瞭的查詢，可傳回 `name`的 `city`綱要。
 
 **範例查詢**
 
@@ -314,7 +315,7 @@ query {
 
 ### 範例查詢 — 具有已命名變數的所有城市 {#sample-cities-named-variation}
 
-如果您為`city`柏林建立名為&quot;Berlin Center&quot;(`berlin_centre`)的新變數，則可使用查詢傳回變數的詳細資料。
+如果您建立新變體，名為「柏林中心」(`berlin_centre`)，針對 `city` 柏林，則您可以使用查詢來傳回變異的詳細資訊。
 
 **範例查詢**
 
@@ -485,7 +486,7 @@ query {
 
 ### Sample Query — 名為「Jobs」或「Smith」的所有人員 {#sample-all-persons-jobs-smith}
 
-這將篩選所有名稱為`Jobs`或`Smith`的`persons`。
+這會篩選所有 `persons` 對於任何有 `Jobs`或 `Smith`.
 
 **範例查詢**
 
@@ -539,7 +540,7 @@ query {
 
 ### 示例查詢 — 沒有「Jobs」名稱的所有人員 {#sample-all-persons-not-jobs}
 
-這將篩選所有名稱為`Jobs`或`Smith`的`persons`。
+這會篩選所有 `persons` 對於任何有 `Jobs`或 `Smith`.
 
 **範例查詢**
 
@@ -604,9 +605,9 @@ query {
 }
 ```
 
-### 範例查詢 — 其`_path`開頭為特定首碼的所有歷險 {#sample-wknd-all-adventures-cycling-path-filter}
+### 範例查詢 — 所有冒險，其 `_path` 開頭為特定首碼 {#sample-wknd-all-adventures-cycling-path-filter}
 
-`_path`中的`adventures`以特定前置詞(`/content/dam/wknd/en/adventures/cycling`)開頭。
+全部 `adventures` where `_path` 開頭為特定首碼(`/content/dam/wknd/en/adventures/cycling`)。
 
 **範例查詢**
 
@@ -651,7 +652,7 @@ query {
 
 ### 範例查詢 — 位於德國或瑞士，人口介於400000和999999之間的所有城市 {#sample-all-cities-d-ch-population}
 
-此處會篩選欄位組合。 `AND`（隱式）用於選擇`population`範圍，而`OR`（顯式）用於選擇所需城市。
+此處會篩選欄位組合。 安 `AND` （隱式）用於選擇 `population`範圍，若 `OR` （明確）用於選取所需的城市。
 
 **範例查詢**
 
@@ -714,7 +715,7 @@ query {
 
 ### 示例查詢 — 名稱中包含SAN的所有城市（不考慮大小寫） {#sample-all-cities-san-ignore-case}
 
-此查詢會詢問名稱中包含`SAN`的所有城市，而不考慮大小寫。
+這個查詢會詢問所有 `SAN` 名稱中，不論大小寫。
 
 **範例查詢**
 
@@ -765,7 +766,7 @@ query {
 
 ### 範例查詢 — 對項目必須至少發生一次的陣列進行篩選 {#sample-array-item-occur-at-least-once}
 
-此查詢會篩選陣列上必須至少發生一次的項目(`city:na`)。
+此查詢會篩選包含項目(`city:na`)，必須至少發生一次。
 
 **範例查詢**
 
@@ -875,7 +876,7 @@ query {
 
 ### 巢狀內容片段的查詢範例 — 所有至少有一名員工且名稱為「Smith」的公司 {#sample-companies-employee-smith}
 
-此查詢說明了對`name` &quot;Smith&quot;的任何`person`進行篩選，從兩個巢狀片段 — `company`和`employee`返回資訊。
+此查詢說明了任何 `person` of `name` 「Smith」，從兩個巢狀片段傳回資訊 —  `company` 和 `employee`.
 
 **範例查詢**
 
@@ -941,7 +942,7 @@ query {
 
 ### 巢狀內容片段的範例查詢 — 所有員工皆獲得「遊戲之星」獎的公司 {#sample-all-companies-employee-gamestar-award}
 
-此查詢說明如何跨三個巢狀片段（`company`、`employee`和`award`）進行篩選。
+此查詢說明如何跨三個巢狀片段進行篩選 —  `company`, `employee`，和 `award`.
 
 **範例查詢**
 
@@ -1033,7 +1034,7 @@ query {
 
 ### 中繼資料的範例查詢 — 列出題為GB的獎項中繼資料 {#sample-metadata-awards-gb}
 
-此查詢說明如何跨三個巢狀片段（`company`、`employee`和`award`）進行篩選。
+此查詢說明如何跨三個巢狀片段進行篩選 —  `company`, `employee`，和 `award`.
 
 **範例查詢**
 
@@ -1109,8 +1110,8 @@ query {
 
 此示例查詢將詢問：
 
-* `article`類型的所有內容片段
-* 和`author`屬性。`path`
+* 適用於所有類型的內容片段 `article`
+* 和 `path`和 `author` 屬性。
 
 **範例查詢**
 
@@ -1129,7 +1130,7 @@ query {
 
 此查詢將詢問：
 
-* `adventure`類型的所有內容片段
+* 適用於所有類型的內容片段 `adventure`
 * 中繼資料
 
 **範例查詢**
@@ -1190,7 +1191,7 @@ query {
 
 此示例查詢將詢問：
 
-* 針對特定路徑上`article`類型的單一內容片段
+* 適用於單一內容片段類型 `article` 特定路徑
    * 其中，所有格式的內容：
       * HTML
       * Markdown
@@ -1244,12 +1245,12 @@ query {
 
 此查詢將詢問：
 
-* 針對特定路徑上`article`類型的單一內容片段
+* 適用於單一內容片段類型 `article` 特定路徑
    * 其中，參照（巢狀）片段的路徑和作者
 
 >[!NOTE]
 >
->欄位`referencearticle`具有資料類型`fragment-reference`。
+>欄位 `referencearticle` 具有資料類型 `fragment-reference`.
 
 **範例查詢**
 
@@ -1272,12 +1273,12 @@ query {
 
 此查詢將詢問：
 
-* 適用於`bookmark`類型的多個內容片段
-   * 具有特定模型類型`article`和`adventure`的其他片段參考
+* 適用於多種類型的內容片段 `bookmark`
+   * 具有特定模型類型之其他片段的片段參考 `article` 和 `adventure`
 
 >[!NOTE]
 >
->欄位`fragments`具有資料類型`fragment-reference`，且已選取模型`Article`、`Adventure`。
+>欄位 `fragments` 具有資料類型 `fragment-reference`，與模型 `Article`, `Adventure` 已選取。
 
 ```xml
 {
@@ -1303,16 +1304,16 @@ query {
 此查詢有兩種類型：
 
 1. 傳回所有內容參考。
-1. 返回類型`attachments`的特定內容引用。
+1. 傳回類型的特定內容參考 `attachments`.
 
 這些查詢會詢問：
 
-* 適用於`bookmark`類型的多個內容片段
+* 適用於多種類型的內容片段 `bookmark`
    * 搭配其他片段的內容參考
 
 #### 具有預先擷取的參考之多個內容片段的查詢範例 {#sample-wknd-multiple-fragments-prefetched-references}
 
-下列查詢會使用`_references`傳回所有內容參考：
+以下查詢會透過使用 `_references`:
 
 ```xml
 {
@@ -1348,11 +1349,11 @@ query {
 
 #### 含附件的多個內容片段的查詢範例 {#sample-wknd-multiple-fragments-attachments}
 
-以下查詢返回所有`attachments` — 類型`content-reference`的特定欄位（子組）:
+以下查詢將返回所有 `attachments`  — 類型的特定欄位（子組） `content-reference`:
 
 >[!NOTE]
 >
->欄位`attachments`具有資料類型`content-reference`，且已選取各種表單。
+>欄位 `attachments` 具有資料類型 `content-reference`，並選取各種表單。
 
 ```xml
 {
@@ -1389,12 +1390,12 @@ query {
 
 此查詢將詢問：
 
-* 針對特定路徑上`bookmark`類型的單一內容片段
+* 適用於單一內容片段類型 `bookmark` 特定路徑
    * 其中，RTE內嵌參照
 
 >[!NOTE]
 >
->在`_references`中對RTE內嵌引用進行水合。
+>RTE內嵌參照在中水合 `_references`.
 
 **範例查詢**
 
@@ -1435,8 +1436,8 @@ query {
 
 此查詢將詢問：
 
-* 針對特定路徑上`article`類型的單一內容片段
-   * 其中，與變異相關的資料：`variation1`
+* 適用於單一內容片段類型 `article` 特定路徑
+   * 其中，與變異相關的資料： `variation1`
 
 **範例查詢**
 
@@ -1461,7 +1462,7 @@ query {
 
 此查詢將詢問：
 
-* 針對具有特定變異之`article`類型的內容片段：`variation1`
+* 適用於類型的內容片段 `article` 具有特定變異： `variation1`
 
 **範例查詢**
 
@@ -1486,7 +1487,7 @@ query {
 
 此查詢將詢問：
 
-* `fr`地區設定內`article`類型的內容片段
+* 適用於類型的內容片段 `article` 在 `fr` 地區
 
 **範例查詢**
 
@@ -1511,17 +1512,17 @@ query {
 
 範例查詢以下列結構為基礎，其使用：
 
-* 一個或多個[示例內容片段模型](#sample-content-fragment-models-schemas) — 構成GraphQL架構的基礎
+* 一個或多個， [範例內容片段模型](#sample-content-fragment-models-schemas)  — 構成GraphQL架構的基礎
 
-* [根據上](#sample-content-fragments) 述模型的內容片段範例
+* [範例內容片段](#sample-content-fragments) 基於上述模型
 
 ### 內容片段模型範例（結構） {#sample-content-fragment-models-schemas}
 
 對於範例查詢，我們將使用下列內容模型及其相互關係（參考 — >）:
 
 * [公司](#model-company)
-->人 [員](#model-person)
-    ->獎 [項](#model-award)
+-> [人員](#model-person)
+    -> [獎勵](#model-award)
 
 * [城市](#model-city)
 
@@ -1574,8 +1575,8 @@ query {
 | 公司名稱 | 首席執行官 | 員工 |
 |--- |--- |--- |
 | Apple | 史蒂夫·喬布斯 | 杜克·馬什<br>馬克斯·考爾菲爾德 |
-|  小馬公司 | 亞當·斯密 | 拉拉·克羅夫特<br>刀刀刀刀 |
-| NextStep Inc. | 史蒂夫·喬布斯 | 喬·史密斯<br>阿部·林肯 |
+|  小馬公司 | 亞當·斯密 | 拉拉·克羅夫特<br>刀片 |
+| NextStep Inc. | 史蒂夫·喬布斯 | 喬·史密斯<br>阿部林肯 |
 
 #### 人員 {#fragment-person}
 
@@ -1583,7 +1584,7 @@ query {
 |--- |--- |--- |
 | 林肯 |  阿部 |  |
 | 史密斯 | Adam |   |
-| 斯萊德 |  刀具 |  Gameblitz<br>Gamestar |
+| 斯萊德 |  刀具 |  加梅布利茨<br>遊戲之星 |
 | 馬什 |  杜克 |   |   |
 |  史密斯 |  喬 |   |
 | 克羅夫特 |  拉拉 | 遊戲之星 |
@@ -1603,9 +1604,9 @@ query {
 | 名稱 | 國家/地區 | 人口 | 類別 |
 |--- |--- |--- |--- |
 | 巴塞爾 | 瑞士 | 172258 | 城市：emea |
-| 柏林 | 德國 | 3669491 | city:capital<br>city:emea |
-| 布加勒斯特 | 羅馬尼亞 | 1821000 |  city:capital<br>city:emea |
-| 舊金山 |  美國 |  883306 |  city:beach<br>city:na |
+| 柏林 | 德國 | 3669491 | 城市：資本<br>城市：emea |
+| 布加勒斯特 | 羅馬尼亞 | 1821000 |  城市：資本<br>城市：emea |
+| 舊金山 |  美國 |  883306 |  城市：海灘<br>城市：納 |
 | 聖荷西 |  美國 |  102635 |  城市：納 |
 | 斯圖加特 |  德國 |  634830 |  城市：emea |
-|  蘇黎世 |  瑞士 |  415367 |  city:capital<br>city:emea |
+|  蘇黎世 |  瑞士 |  415367 |  城市：資本<br>城市：emea |
