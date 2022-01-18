@@ -1,7 +1,7 @@
 ---
 title: 的一般發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式，以及詳細的變更清單。'
-source-git-commit: 9b15215a68495a800e94a58b523e1b7baa0c0203
+source-git-commit: 37f1df9f9421ff18fff45723b6eb081f0192520a
 workflow-type: tm+mt
 source-wordcount: '4696'
 ht-degree: 4%
@@ -381,7 +381,7 @@ AEM 6.5導入了下列功能和增強功能，以提升AEM使用者、DAM角色�
 
 ##### 自訂影片縮圖 {#custom-video-thumbnails}
 
-您現在可以使用視訊本身或DAM中儲存的其他內容的影格，自訂視訊資產的縮圖。 如需其他指示，請參閱 [關於視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
+您現在可以使用視訊本身或DAM中儲存的其他內容影格，自訂視訊資產的縮圖。 如需其他指示，請參閱 [關於視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
 
 ##### 協助工具增強功能 {#accessibility-enhancements}
 
@@ -552,9 +552,9 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 1. 儲存檔案並重新啟動AEM執行個體。
 
-## 網站 {#sites}
+### 網站 {#sites}
 
-* **使用頁面版本**:如果頁面已移動，則您無法再對移動前進行的任何版本執行預覽。
+* **使用頁面版本**: [如果頁面已移動，則您無法再對移動前進行的任何版本執行預覽](/help/sites-authoring/working-with-page-versions.md#previewing-a-version).
 
 ### 資產 {#assets}
 
