@@ -2,14 +2,14 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式，以及詳細的變更清單。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 13c76122a38e32783bca248597a16f0512dae44c
+source-git-commit: 1cfa01544ad8bf0adafd55e696a6844a8edf1007
 workflow-type: tm+mt
-source-wordcount: '3906'
+source-wordcount: '3894'
 ht-degree: 2%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5最新Service Pack發行說明 {#aem-service-pack-release-notes}
+# [!DNL Adobe Experience Manager] 6.5 Latest Service Pack Release Notes {#aem-service-pack-release-notes}
 
 ## 發行資訊 {#release-information}
 
@@ -35,8 +35,6 @@ ht-degree: 2%
 * 使用者體驗增強功能會顯示資料夾中存在的資產數量。 若是資料夾中超過1000個資產， [!DNL Assets] 顯示1000+。
 
    ![資料夾中的資產數](/help/assets/assets/browse-folder-number-of-assets.png)
-
-* 您現在可以在「卡片」和「欄」檢視中轉譯排序選項。
 
 * Adobe資產連結的業務設定檔支援。
 
@@ -79,9 +77,9 @@ ht-degree: 2%
 
 * 已新增至的分項清單欄位類型 [!UICONTROL 內容片段模型] 中未顯示 [!UICONTROL 內容片段模型編輯器] (SITES-2391)。
 
-* 標籤資料類型不支援某些資料類型(SITES-2390)。
+* Tags data type does not support certain data types (SITES-2390).
 
-* [!UICONTROL 內容片段重置API] 正在匯出過期的標籤值(SITES-2386)。
+* [!UICONTROL Content Fragment Rest API] is exporting outdated tag values (SITES-2386).
 
 * 階層連結中的箭頭在內容片段編輯器中未正確對齊(SITES-2341)。
 
@@ -113,13 +111,13 @@ ht-degree: 2%
 
 * Sites主控台中資料夾的移動作業失敗，並出現「無法擷取所選項目的啟動資訊」錯誤訊息(NPR-37340)。
 
-* 產生Blueprint的縮圖並轉出為Live Copy時，Live Copy中縮圖之後的索引標籤繼承中斷(NPR-37190)。
+* When generating a thumbnail for blueprint and rolling out to live copies, the inheritance for tabs after thumbnail in live copies is broken (NPR-37190).
 
-* 顯示Live Copy的篩選器述詞不會顯示所有Live Copy(NPR-37126)。
+* The filter predicate to display Live Copy does not display all the live copies (NPR-37126).
 
 * 在作者上呼叫復寫事件處理常式時，復寫事件不會傳回所有標示為刪除的上層和下層頁面清單(NPR-37123)。
 
-* 使用大量編輯器儲存多值屬性時，以逗號分隔的字串會儲存為陣列的第一個元素(NPR-37089)。
+* When saving a multi-valued property using Bulk Editor, then the comma-separated string is stored as the first element of the array (NPR-37089).
 
 * 在行動版面中無法調整元件版面大小(NPR-37086)。
 
@@ -220,9 +218,9 @@ ht-degree: 2%
 
 * 當使用者按一下表單模式快速鍵(「F」)時，螢幕助讀程式不會映射 [!UICONTROL 內嵌大小] 功能表按鈕 [!UICONTROL 取得內嵌] 代碼對話框(CQ-4290929)。
 
-* 使用鍵盤導覽來開啟電子郵件連結快顯視窗時，使用者介面上顯示的「收件者」和「寄件者」欄位錯誤建議沒有描述性(CQ-4290930)。
+* When using keyboard navigation to open the email link popup window, the error suggestions displayed on the user interface for the &#39;To&#39; and &#39;From&#39; fields are not descriptive (CQ-4290930).
 
-* 導覽至電子郵件連結對話方塊時，螢幕助讀程式不會透過向下箭頭和表單模式快速鍵(&#39;F&#39;)(CQ-4290934)，旁白提供新新增之編輯欄位的標籤資訊。
+* When navigating to the email link dialog box, the screen reader does not narrate the label information for the newly added edit fields on using the down arrow and form mode shortcut key (&#39;F&#39;) (CQ-4290934).
 
 * 導覽至電子郵件連結對話方塊時，螢幕助讀程式不會反映「收件人」和「發件人」必填欄位(CQ-4290935)的視覺星號(*)符號。
 
@@ -239,7 +237,7 @@ ht-degree: 2%
 
 ### 平台 {#platform-65110}
 
-* 當使用者按一下多欄位選項的重新排序圖示時，捲軸會從使用者介面中消失(CQ-4331100)。
+* When a user clicks on the reorder icon for a multifield option, the scroll bar disappears from the user interface (CQ-4331100).
 
 * 升級後，當使用者開啟工作區登入容器元件時，使用者介面上看不到對話方塊的標題(CQ-4316173)。
 
@@ -346,7 +344,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **文件服務**
 
-* 使用組合器服務時顯示錯誤(NPR-37606):
+* An error displays while using the Assembler service (NPR-37606):
 
    ```TXT
      500 Internal Server Error
@@ -499,7 +497,7 @@ For information about installing the cumulative installer for Experience Manager
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
