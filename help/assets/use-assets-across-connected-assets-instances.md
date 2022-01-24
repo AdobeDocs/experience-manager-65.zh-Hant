@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: f1c8660d36a1e84b57d4d1a65a54d153bc373dc6
+source-git-commit: b4c3f4c393d9b34acaadc375d20738ead42e481d
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2979'
 ht-degree: 26%
 
 ---
@@ -29,7 +29,7 @@ Connected Assets功能通過整合支援上述使用案例 [!DNL Experience Mana
 使用或設定此功能之前，請先確定下列事項：
 
 * 用戶是每個部署上相應用戶組的一部分。
-* 對於 [!DNL Adobe Experience Manager] 部署類型，滿足支援的條件之一。 [!DNL Experience Manager] 6.5 [!DNL Assets] 工作 [!DNL Experience Manager] as a Cloud Service。 有關此功能如何工作的詳細資訊 [!DNL Experience Manager] 作為 [!DNL Cloud Service]，請參閱 [中的連接資產 [!DNL Experience Manager] 作為 [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* 對於 [!DNL Adobe Experience Manager] 部署類型，滿足支援的條件之一。 [!DNL Experience Manager] 6.5 [!DNL Assets] 工作 [!DNL Experience Manager] as a Cloud Service。 有關此功能如何工作的詳細資訊 [!DNL Experience Manager] 作為 [!DNL Cloud Service]，請參閱 [Experience Manageras a Cloud Service中的關連資產](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
    |  | [!DNL Sites] as a [!DNL Cloud Service] | [!DNL Experience Manager] 6.5 [!DNL Sites] 在AMS上。 | [!DNL Experience Manager] 6.5 [!DNL Sites] 現場 |
    |---|---|---|---|
@@ -236,7 +236,7 @@ Connected Assets功能通過整合支援上述使用案例 [!DNL Experience Mana
 
 * 如果無法從 [!UICONTROL 內容查找器]，然後確保所需的角色和權限已到位。
 
-* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
+* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
 
 * 如果無法從本地訪問遠程DAM部署 [!DNL Sites] 部署，確保允許跨站點Cookie, [相同站點cookie支援](/help/sites-administering/same-site-cookie-support.md) 已配置。 如果阻止跨站點Cookie的部署 [!DNL Experience Manager] 無法驗證。 比如說， [!DNL Google Chrome] 在Incognito模式下，可能會阻止第三方Cookie。 允許Cookie進入 [!DNL Chrome] 瀏覽器，按一下地址欄中的「eye」表徵圖，導航到 **站點不工作** > **已阻止**，選擇遠程DAM URL，並允許登錄令牌cookie。 或者，請參見 [如何啟用第三方cookie](https://support.google.com/chrome/answer/95647)。
 
