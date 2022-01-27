@@ -1,133 +1,133 @@
 ---
-title: AEM內容與商務發行說明2021年
-description: AEM內容與商務發行說明2021年
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+title: 《 AEM 2021年內容與商業發佈說明》
+description: 《 AEM 2021年內容與商業發佈說明》
+exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1328'
 ht-degree: 9%
 
 ---
 
+# Commerce Integration Framework GitHub發佈概述
 
-# 商務整合架構GitHub發行概述
-
-## 發行日期：2020年11月
+## 發佈日期：2020年11月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF連接器 | 1.6.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心元件 | 1.6.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venia參考站 | 2020.12.01 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF Venia參考站點 | 2020.12.01 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-november}
+### 新增功能 {#what-is-new-november}
 
-* 範本繼承已新增至特定類別頁面。 此功能可以提高業務用戶效率，因為所有子類別都可以繼承為特定頂級類別建立的模板。
+* 模板繼承已添加到特定類別頁。 此功能提高了業務用戶效率，因為它使所有子類別都能夠繼承為特定頂級類別建立的模板。
 
-* 更新Venia參考店面，以在頁尾使用體驗片段。 商務使用者可使用AEM製作工具編輯頁尾。
+* Venia參考庫面已更新為使用頁腳的「體驗片段」。 企業用戶能夠使用創作工具編輯頁AEM腳。
 
-### {#what-is-improved-november}的改進
+### 改進內容 {#what-is-improved-november}
 
-* 已改善結帳元件，讓購物者能夠進入目的地國家/地區，以允許美國以外的帳單/運送地址。
+* 結帳元件經過改進，使購物者能夠進入目的地國家/地區，從而允許在美國以外的地區開單/送貨地址。
 
 * 導航元件擴展到水合物Adobe客戶端資料層。
 
-* 多項錯誤修正。
+* 多個錯誤修復。
 
-## 發行日期：2020年10月
+## 發佈日期：2020年10月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF連接器 | 1.5.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心元件 | 1.5.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venia參考站 | 2020.10.27 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF Venia參考站點 | 2020.10.27 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-october}
+### 新增功能 {#what-is-new-october}
 
-* 新增「類別轉盤」元件，讓商務使用者可在AEM內容頁面上拖放此元件，以使用商務資料擴充內容頁面。
+* 新增的「類別旋轉木馬」元件，使業務用戶能夠將此元件拖放到內容頁AEM面上，以便用商業資料豐富內容頁面。
 
-* CIF核心元件已延伸，可透過傳送商務資料，將Adobe用戶端資料層加入水合物。 Adobe用戶端資料層是標準化方法，可收集資料並將資料傳送至數位分析和報表伺服器。 如需詳細資訊，請參閱[Adobe用戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki)。
+* CIF核心元件通過發送Adobe資料擴展到水合物層。 Adobe客戶端資料層是一種標準化方法，用於收集資料並將資料傳送到數字分析和報告伺服器。 有關詳細資訊，請參閱 [Adobe客戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki)。
 
-* 擴充「產品詳細資料」和「產品清單」頁面，以從Magento管理員UI中設定自動填入SEO中繼資料（例如標題、中繼說明、中繼關鍵字）
+* 產品詳細資訊和產品清單頁面已擴展，可自動填充從Adobe Commerce管理UI中配置的SEO元資料（如標題、元描述、元關鍵字）
 
-* 修正商務宣傳預告元件錯誤。
+* 修復了商業預告元件錯誤。
 
-## 發行日期：2020年9月
+## 發佈日期：2020年9月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF連接器 | 1.4.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心元件 | 1.4.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venia參考站 | 2020.10.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF Venia參考站點 | 2020.10.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-september}
+### 新增功能 {#what-is-new-september}
 
-* 支援Magento2.4.0架構的查詢。
+* 支援Adobe Commerce2.4.0架構的查詢。
 
-* 新增帳戶資訊功能，讓購物者可更新個人資訊。
+* 添加帳戶資訊功能，使購物者能夠更新個人資訊。
 
-* 為產品清單和搜尋結果頁面實作延遲載入分頁樣式，讓開發人員可設定這些元件，將「載入更多」按鈕顯示為分頁樣式。
+* 為「產品」清單和「搜索結果」頁實施的延遲載入分頁樣式，允許開發人員將這些元件配置為將「載入更多」按鈕顯示為分頁樣式。
 
-* 實作密碼重設頁面，讓購物者能夠更新/重設其帳戶密碼。
+* 實現了密碼重置頁面，使購物者能夠更新/重置其帳戶密碼。
 
-* 支援套件產品類型。
+* 支援捆綁產品類型。
 
-* 開發人員可以為產品轉盤、相關產品和精選類別清單元件設定HTML標籤，以遵循SEO最佳作法。
+* 開發人員可以配置產品傳送器、相關產品和特色類別清單元件的HTML標籤，以遵循SEO最佳實踐。
 
-* 我的帳戶錯誤已修正。
+* 我的帳戶錯誤已修復。
 
-* 多項錯誤修正。
+* 多個錯誤修復。
 
-## 發行日期：2020年8月
+## 發佈日期：2020年8月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF連接器 | 1.3.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心元件 | 1.3.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venia參考站 | 2020.9.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF Venia參考站點 | 2020.9.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-august}
+### 新增功能 {#what-is-new-august}
 
-* 新增階層連結元件以支援內容與商務頁面。
+* 已添加Breadcrumb元件以支援內容和商業頁面。
 
-* 頁面屬性上新增商務標籤，以公開登陸頁面和體驗片段的CIF屬性。
+* 在「頁面」屬性上添加的「商業」頁籤，以公開登錄頁和體驗片段的CIF屬性。
 
-* Searchbar元件已改良為支援顯示預留位置文字的選項
+* 搜索欄元件已改進為支援選項以顯示佔位符文本
 
-* 為產品和產品預告元件增加了彈性，可支援輕鬆自訂。
+* 為產品和產品預告元件增加了靈活性，以支援輕鬆的定製。
 
-* 新增彈性，可覆寫和設定產品預告元件的預設CTA按鈕標籤。
+* 增加了覆蓋和配置產品預告元件預設CTA按鈕標籤的靈活性。
 
-* 改進了通訊簿元件，使註冊購物者在結帳期間可以選擇儲存在通訊簿中的送貨地址和帳單地址。
+* 地址簿元件經過改進，允許註冊購物者在結帳時選擇地址簿中保存的送貨地址和帳單地址。
 
-* 多項錯誤修正。
+* 多個錯誤修復。
 
-## 發行日期：2020年7月
+## 發佈日期：2020年7月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF連接器 | 1.2.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心元件 | 1.2.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venia參考站 | 2020.8.14 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF Venia參考站點 | 2020.8.14 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
-### 新功能 {#what-is-new-july}
+### 新增功能 {#what-is-new-july}
 
-* CIF Venia Reference Site是從CIF原型存放庫中擷取而得，現在是獨立的GitHub存放庫。
+* CIF Venia參考網站是從CIF原型回購協定中提取的，現在是一個獨立的GitHub儲存庫。
 
-* CIF原型與AEM專案原型合併。 若為新專案，請以[AEM專案原型](https://github.com/adobe/aem-project-archetype)作為起點。
+* CIF原型與項目原型AEM合併。 對於新項目，使用 [項AEM目原型](https://github.com/adobe/aem-project-archetype) 作為起點。
 
-* 新增通訊簿管理功能，讓登入的使用者管理其位址。
+* 添加通訊簿管理以允許登錄用戶管理其地址。
 
-* CIF雲端設定UI支援發佈/取消發佈動作。
+* CIF雲配置UI支援發佈/取消發佈操作。
 
-### {#what-is-improved-july}的改進
+### 改進內容 {#what-is-improved-july}
 
-* 登入元件已移至使用者下拉式清單，以方便存取。
+* 登錄元件已移到用戶下拉清單中，以便於訪問。
 
-* 簡化aem-core-cif-react-components套件。
+* 簡化了aem-core-cif-react-components封裝。
 
-* 多項錯誤修正。
+* 多個錯誤修復。
 
-## 發行日期：2020年6月
+## 發佈日期：2020年6月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
@@ -135,27 +135,27 @@ ht-degree: 9%
 | CIF核心元件 | 1.1.1 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.11.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
-### 新功能 {#what-is-new-june}
+### 新增功能 {#what-is-new-june}
 
-這是Adobe Experience Manager支援的CIF核心元件第一版。
+這是Adobe Experience Manager支援的CIF核心元件的第一個版本。
 
-* 在「產品清單」頁面和「搜尋結果」頁面上新增產品排序，讓購物者能根據關聯性、價格和產品名稱來排序。
+* 在「產品清單」頁和「搜索結果」頁上添加產品排序，以允許購物者根據相關性、價格和產品名稱進行排序。
 
-* 新增類別篩選作為面向，讓購物者能夠根據類別進行篩選。
+* 將類別篩選添加為方面，以允許購物者根據類別進行篩選。
 
-* 新增服務使用者對應，作為安全需求的一部分，以確保透過服務使用者而非直接操控ACL來存取/conf。 CIF核心元件現在必須使用服務使用者才能存取設定。
+* 作為安全要求的一部分，添加了服務用戶映射，以確保通過服務用戶而不是直接操作ACL訪問/conf。 CIF核心元件現在必須使用服務用戶來訪問配置。
 
-### {#what-is-improved-june}的改進
+### 改進內容 {#what-is-improved-june}
 
-* 「產品清單」頁面和「搜尋結果」頁面顯示項目總數。 購物者套用篩選時會更新項目數。
+* 「產品清單」頁和「搜索結果」頁顯示項目總數。 購物者應用篩選器時更新項目數。
 
-* 通過組合類別查詢和產品搜索查詢來優化多面搜索。
+* 通過將類別查詢與產品搜索查詢組合而優化的多面搜索。
 
-* 頁面預覽的類別/產品選擇器會遵守cq:catalogPath。
+* 用於頁面預覽的類別/產品選擇器condor cq:catalogPath。
 
-* 多項錯誤修正。
+* 多個錯誤修復。
 
-## 發行日期：2020年5月
+## 發佈日期：2020年5月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
@@ -163,23 +163,23 @@ ht-degree: 9%
 | CIF核心元件 | 1.0.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.11.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
-### 新功能 {#what-is-new-may}
+### 新增功能 {#what-is-new-may}
 
-* 支援Magento2.3.5結構的查詢。
+* 支援Adobe Commerce2.3.5架構的查詢。
 
-* 「搜尋頁面」和「產品清單頁面」新增了「分面搜尋」支援，可讓購物者根據「產品刻面」來篩選搜尋結果。
+* 添加到「搜索頁」和「產品清單」頁的多面搜索支援，使購物者能夠根據「產品」小平面篩選搜索結果。
 
-* 新增OSGi服務，針對SEO目的自訂PDP/PLP URL。 如需詳細資訊，請參閱此[檔案](https://github.com/adobe/aem-core-cif-components/wiki/configuration)。
+* 新的OSGi服務添加到自定義PDP/PLP URL以用於SEO。 有關詳細資訊，請參閱 [文檔](https://github.com/adobe/aem-core-cif-components/wiki/configuration)。
 
-* 建立雲端設定時，會自動建立產品系結。
+* 在建立雲配置時自動建立產品綁定。
 
-### 改進項目
+### 改進內容
 
-* 雲端設定延伸，可顯示「建立資料夾」動作。
+* 雲配置擴展為顯示「建立資料夾」操作。
 
-* 已套用多個錯誤修正。
+* 應用了多個錯誤修復。
 
-## 發行日期：2020年4月
+## 發佈日期：2020年4月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
@@ -187,23 +187,23 @@ ht-degree: 9%
 | CIF核心元件 | 0.10.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.10.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
-### 新功能 {#what-is-new-april}
+### 新增功能 {#what-is-new-april}
 
-* CIF連接器的組態設定已統一並簡化。 如需更多詳細資訊，請結帳[快速入門](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)或[新AEM CIF專案設定](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
+* 統一和簡化CIF連接器的配置設定。 有關詳細資訊，請簽出 [入門](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) 或 [新建AEMCIF項目設定](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
 
-### {#what-is-improved-april}的改進
+### 改進內容 {#what-is-improved-april}
 
-* 購物車和結帳流程已擴展，以支援已註冊的購物者。
+* 購物車和結帳流擴展為支援註冊購物者。
 
-* 所有元件的延伸國際化支援。
+* 跨所有元件提供擴展的國際化支援。
 
 * 支援分組產品和虛擬產品。
 
-* 已改善相關產品、產品轉盤和精選類別元件，以支援選用標題。
+* 相關產品、產品傳送帶和特色類別元件已改進，以支援可選標題。
 
-* 已套用多個錯誤修正。
+* 應用了多個錯誤修復。
 
-## 發行日期：2020年2月
+## 發佈日期：2020年2月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
@@ -211,25 +211,25 @@ ht-degree: 9%
 | CIF核心元件 | 0.9.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.9.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
-### 新功能 {#what-is-new-february}
+### 新增功能 {#what-is-new-february}
 
-* 支援Magento2.3.4結構的查詢。
+* 支援Adobe Commerce2.3.4架構的查詢。
 
-* 新增「類別選擇器」的搜尋支援。
+* 已在類別選取器中添加搜索支援。
 
-* 類別清單元件中的分頁，以支援大型目錄集。
+* 「類別清單」元件中的分頁以支援大型目錄集。
 
-### {#what-is-improved-february}的改進
+### 改進內容 {#what-is-improved-february}
 
-* 購物車已增強，可顯示折扣。
+* 購物車增強，可顯示折扣。
 
 * 產品詳細資訊、產品預告和產品清單元件支援顯示高級定價資訊。
 
-* 改善「產品控制台」和「產品選擇器」中的產品搜尋功能。
+* 產品控制台和產品選取器中的產品搜索已改進。
 
-* 已套用多個錯誤修正。
+* 應用了多個錯誤修復。
 
-## 發行日期：2020年1月
+## 發佈日期：2020年1月
 
 | GitHub | 版本 | 詳細發行說明 |
 |:-------|:-----:|---------------------:|
@@ -237,24 +237,24 @@ ht-degree: 9%
 | CIF核心元件 | 0.8.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.7.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
-### 新功能 {#what-is-new-january}
+### 新增功能 {#what-is-new-january}
 
-* 新增體驗片段(XF)元件，讓客戶可在其商務專案中建立XF。
+* 添加了經驗片段(XF)元件，使客戶能夠在其商業項目中建立XF。
 
-* 更改我帳戶中可用的密碼功能。
+* 更改我的帳戶中可用的密碼功能。
 
-* i18n支援AEM CIF伺服器端核心元件。
+* i18n支援AEMCIF伺服器端核心元件。
 
-* 可用的一般相關產品元件。
+* 通用相關產品元件可用。
 
-### {#what-is-improved-january}的改進
+### 改進內容 {#what-is-improved-january}
 
 * 支援在產品預告上顯示CTA按鈕。
 
-* 在「精選類別清單」元件中變更/選取影像的選項。
+* 在「特色類別清單」元件中更改/選擇影像的選項。
 
-* 在產品清單元件中隱藏/顯示標題/橫幅的選項。
+* 在「產品清單」元件中隱藏/顯示標題/標題的選項。
 
-* 拖放套用至產品轉盤元件的功能。
+* 拖放功能應用於「產品旋轉軸」元件。
 
-* 已套用多個錯誤修正。
+* 應用了多個錯誤修復。
