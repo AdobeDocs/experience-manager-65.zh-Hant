@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 270219c8baedd4b72a256e6318d89154d6dadb0b
+source-git-commit: cfd08526fd1dccf461b13747b4a7496849243669
 workflow-type: tm+mt
-source-wordcount: '6110'
+source-wordcount: '6035'
 ht-degree: 3%
 
 ---
@@ -132,16 +132,17 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活資產後，任何更新都會立即即時發佈到S7交付。
 
 1. 選擇 **[!UICONTROL 保存]**。
-1. 預設情況下，Experience Manager作者無法預覽Dynamic Media內容。 因此，要在發佈Dynamic Media內容之前安全預覽它，您必須 *允許清單* Experience Manager作者實例，以連接Dynamic Media。 此外，如果您希望為用戶提供安全預覽內容的訪問權限，則 *允許清單* 其他IP地址：
+1. 要在發佈Dynamic Media內容之前安全地預覽它，Experience Manager使用基於令牌的驗證，因此，Experience Manager作者預設會預覽Dynamic Media內容。 但是， *允許清單* 更多IP，讓用戶能夠安全地預覽內容。 要在Experience Manager中設定此操作，請參閱 [配置Dynamic Media映像伺服器的發佈設定 — 安全頁籤](/help/assets/dm-publish-settings.md#security-tab)。
+<!-- 1. By default Experience Manager Author cannot preview Dynamic Media content. Therefore, to securely preview Dynamic Media content before it gets published, you must *allowlist* the Experience Manager Author instance to connect to Dynamic Media. In addition, if you want to provide users access to securely preview content, you can *allowlist* additional IP addresses:
 
-   * 在「Experience Manager作者」模式下，選擇Experience Manager徽標以訪問全局導航控制台。
-   * 在左滑軌中，選擇 **[!UICONTROL 工具]** 表徵圖，然後轉到 **[!UICONTROL 資產]** > **[!UICONTROL Dynamic Media發佈設定]**。
-   * 在「Dynamic Media映像伺服器」頁面上， **[!UICONTROL 發佈上下文]** 下拉清單，選擇 **[!UICONTROL Test影像服務]**。
-   * 選擇 **[!UICONTROL 安全]** 頁籤。
-   * 對於 **[!UICONTROL 客戶端地址]**&#x200B;選中 **[!UICONTROL 添加]**。
-   * 輸入Experience Manager作者實例的IP地址（不是Dispatcher IP）。
-   * 在頁面的右上角，選擇 **[!UICONTROL 保存]**。
-
+    * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
+    * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+    * On the Dynamic Media Image Server page, in the **[!UICONTROL Publish Context]** drop-down list, select **[!UICONTROL Test Image Serving]**.
+    * Select the **[!UICONTROL Security]** tab.
+    * For the **[!UICONTROL Client address]**, select **[!UICONTROL Add]**.
+    * Enter the IP address of the Experience Manager Author instance (not Dispatcher IP).
+    * In the upper-right corner of the page, select **[!UICONTROL Save]**.
+ -->
 現在您完成了基本配置；您已準備好使用Dynamic Media-Scene7模式。
 
 如果要進一步自定義配置，您可以選擇完成以下任務 [（可選）在Dynamic Media-Scene7模式下配置高級設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)。
