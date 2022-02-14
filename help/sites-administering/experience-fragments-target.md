@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: cc19ddcf032457091ea1341ea37fba93a0e56fc1
+source-git-commit: a33d46bcfcf901fb774b742c0fc972265401a56e
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 >* **外部化程式域** 的上界。
    >  **注：** 外部化程式域僅與發送到目標的體驗片段的內容相關，而不與諸如查看提供內容之類的元資料相關。
 >
->6.5.2.0 :
+>6.5.2.0:
 >
 >* 可將體驗片段導出到以下任一組：
    >
@@ -37,8 +37,7 @@ ht-degree: 0%
    >   * 在雲配置中指定的命名工作區。
    >   * **注：** 導出到特定工作區需要「Adobe Target高級」。
 >
->* 必AEM須 [與Adobe Target整合，使用Adobe I/O](/help/sites-administering/integration-ims-adobe-io.md)。
-
+>* 必AEM須 [與Adobe Target整合，使用Adobe I/O](/help/sites-administering/integration-target-ims-adobe-io.md)。
 >
 >AEM 6.5.0.0和6.5.1.0:
 >
@@ -54,7 +53,7 @@ ht-degree: 0%
 * JSON:支援無頭內容交付
 * HTML 和 JSON
 
-可AEM以將「體驗片段」導出到Adobe Target的預設工作區，或導出到Adobe Target的用戶定義的工作區。 這是通過Adobe I/O完成的，AEM必須 [與Adobe Target整合，使用Adobe I/O](/help/sites-administering/integration-ims-adobe-io.md)。
+可AEM以將「體驗片段」導出到Adobe Target的預設工作區，或導出到Adobe Target的用戶定義的工作區。 這是通過Adobe I/O完成的，AEM必須 [與Adobe Target整合，使用Adobe I/O](/help/sites-administering/integration-target-ims-adobe-io.md)。
 
 >[!NOTE]
 >
@@ -70,7 +69,6 @@ ht-degree: 0%
 >
 >* [Adobe Target開發](https://www.adobe.io/apis/experiencecloud/target.html)
 >* [核心元件 — 體驗片段](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
-
 >
 
 
@@ -82,7 +80,7 @@ ht-degree: 0%
 
 需要執行以下各種操作：
 
-1. 你必須 [利AEM用Adobe I/O與Adobe Target](/help/sites-administering/integration-ims-adobe-io.md)。
+1. 你必須 [利AEM用Adobe I/O與Adobe Target](/help/sites-administering/integration-target-ims-adobe-io.md)。
 2. 從作者實例導出AEM「體驗片段」，因此您需要 [配置鏈AEM接外部化程式](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) 在作者實例上，以確保將體驗片段中的任何引用外部化以用於Web傳遞。
 
    >[!NOTE]
