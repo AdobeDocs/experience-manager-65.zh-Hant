@@ -2,9 +2,9 @@
 title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細更改清單。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 1ca3032063a148293f67c69a941b83b6aa5d48f1
+source-git-commit: b36b7b0dafbce3aa75afff60fae3cc714b6ac902
 workflow-type: tm+mt
-source-wordcount: '3884'
+source-wordcount: '3887'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->正在開發此軟體包的新版本。 該連結一經發佈即發佈。
+>正在開發新版本的&quot;索引定義&quot;包。 以下連結一經發佈即發佈。
 
 要使用帶GraphQL的內容片段訪問無頭內容傳送，並使用增強的內容片段模型和編輯器功能，請安裝索引定義包，並重新索引以下非同步索AEM引定義：
 
@@ -543,7 +543,7 @@ UberJarExperience Manager6.5.11.0在 [Maven中央儲存庫](https://repo.maven.a
 
 ## 包括OSGi捆綁包和內容包 {#osgi-bundles-and-content-packages-included}
 
-以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.11.0:
+以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.11.0 :
 
 * [6.5.11.0Experience Manager中包含的OSGi捆綁包清單](assets/65110_bundles.txt)
 
