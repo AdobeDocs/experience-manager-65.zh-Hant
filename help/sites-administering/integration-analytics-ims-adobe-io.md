@@ -1,9 +1,9 @@
 ---
 title: 使用Adobe I/O與Adobe Analytics整合
 description: 瞭解如何使用AEMAdobe I/O與Adobe Analytics整合
-source-git-commit: c2c7c3f745a5f1edc1a8d2a73922f86f0b952ff7
+source-git-commit: 5a253147baf64bf1b12b3ea6387f4b377e5d421f
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1052'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ### 建立項目 {#creating-the-project}
 
-開啟Adobe I/O控制台以建立與Adobe Target一起使用的I/OAEM項目：
+開啟Adobe I/O控制台以建立與Adobe Analytics一起使用的I/OAEM項目：
 
 <!--
 >[!NOTE]
@@ -112,23 +112,9 @@ ht-degree: 1%
 
 1. 選擇所需的產品配置檔案，然後繼續 **保存已配置的API**:
 
-   >[!NOTE]
-   >
-   >顯示的產品配置檔案取決於您是否具有：
-   >
-   >* Adobe Target標準 — 僅 **預設工作區** 可用
-   >* Adobe Target高級版 — 列出所有可用工作區，如下所示
-
-
    ![選擇所需的產品配置檔案](assets/integration-analytics-io-16.png)
 
 1. 將確認配置。
-
-<!--
-1. The creation will be confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
-
-   ![](assets/integrate-target-io-07.png)
--->
 
 ### 為整合分配權限 {#assigning-privileges-to-the-integration}
 
@@ -164,7 +150,7 @@ ht-degree: 1%
 
 ## 在中完成IMS配AEM置 {#completing-the-ims-configuration-in-aem}
 
-返回到AEM後，您可以通過添加目標Adobe I/O整合中的所需值來完成IMS配置：
+返回AEM後，可通過添加AnalyticsAdobe I/O整合中的所需值來完成IMS配置：
 
 1. 返回到 [IMS配置在中打AEM開](#configuring-an-ims-configuration-generating-a-public-key)。
 1. 選擇 **下一個**。
@@ -181,7 +167,7 @@ ht-degree: 1%
 
 1. 確認 **建立**。
 
-1. 您的Adobe Target配置將顯示在控AEM制台中。
+1. 您的Adobe Analytics配置將顯示在控AEM制台中。
 
    ![IMS 設定](assets/integrate-analytics-io-11.png)
 
@@ -204,10 +190,6 @@ ht-degree: 1%
    ![IMS配置 — 檢查運行狀況](assets/integrate-analytics-io-12.png)
 
 1. 如果成功，您將看到一條確認消息。
-
-   <!--
-   ![](assets/integrate-target-io-13.png)
-   -->
 
 ## 配置Adobe Analytics Cloud服務 {#configuring-the-adobe-analytics-cloud-service}
 
@@ -232,7 +214,7 @@ ht-degree: 1%
 
    * **IMS配置**:選擇IMS配置的名稱
 
-1. 按一下 **連接到分析** 初始化與Adobe Target的連接。
+1. 按一下 **連接到分析** 初始化與Adobe Analytics的連接。
 
    如果連接成功，則消息 **連接成功** 的上界。
 
