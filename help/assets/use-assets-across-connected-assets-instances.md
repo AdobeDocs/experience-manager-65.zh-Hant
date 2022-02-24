@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: b4c3f4c393d9b34acaadc375d20738ead42e481d
+source-git-commit: 72b39fd0263347c5bfe98fe2fdaf8999d7d40a96
 workflow-type: tm+mt
-source-wordcount: '2979'
-ht-degree: 26%
+source-wordcount: '3215'
+ht-degree: 24%
 
 ---
 
@@ -198,6 +198,22 @@ Connected Assets功能通過整合支援上述使用案例 [!DNL Experience Mana
 
    ![強制刪除警告](assets/delete-referenced-asset.png)
 
+### 管理遠程DAM中資產的更新 {#manage-updates-in-remote-dam}
+
+之後 [配置連接](#configure-a-connection-between-sites-and-assets-deployments) 在遠程DAM和 [!DNL Sites] 部署時，遠程DAM上的資產可在 [!DNL Sites] 部署。 然後，可以對遠程DAM資產或資料夾執行更新、刪除、更名和移動操作。 更新（有延遲）在 [!DNL Sites] 部署。 此外，如果遠程DAM上的資產在本地 [!DNL Experience Manager Sites] 頁中，遠程DAM上資產的更新顯示在 [!DNL Sites] 的子菜單。
+
+將資產從一個位置移動到另一個位置時，請確保 [調整參照](/help/assets/manage-assets.md) 使資產在 [!DNL Sites] 的子菜單。 如果將資產移動到本地無法訪問的位置 [!DNL Sites] 部署時，該資產無法顯示在站點部署中。
+
+您還可以更新遠程DAM上資產的元資料屬性，並且更改可在本地 [!DNL Sites] 部署。
+
+[!DNL Sites] 作者可以預覽 [!DNL Sites] 部署，然後重新發佈更改，使其在 [!DNL Experience Manager] 發佈實例。
+
+[!DNL Experience Manager] 顯示中資產的過期狀態可視指示器 `Remote Assets Content Finder` 阻止站點作者在 [!DNL Sites] 的子菜單。 如果您使用的資產的狀態為 [!DNL Sites] 頁面，資產無法顯示在 [!DNL Experience Manager] 發佈實例。
+
+>[!NOTE]
+>
+>將遠程DAM中資產的更新提供給 [!DNL Sites] 僅在遠程DAM和 [!DNL Sites] 部署已啟動 [!DNL Experience Manager]。
+
 ## 限制和最佳做法 {#tip-and-limitations}
 
 * 要獲得有關資產使用情況的見解，請配置 [資產洞察](/help/assets/asset-insights.md) 功能 [!DNL Sites] 實例。
@@ -236,7 +252,7 @@ Connected Assets功能通過整合支援上述使用案例 [!DNL Experience Mana
 
 * 如果無法從 [!UICONTROL 內容查找器]，然後確保所需的角色和權限已到位。
 
-* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
+* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
 
 * 如果無法從本地訪問遠程DAM部署 [!DNL Sites] 部署，確保允許跨站點Cookie, [相同站點cookie支援](/help/sites-administering/same-site-cookie-support.md) 已配置。 如果阻止跨站點Cookie的部署 [!DNL Experience Manager] 無法驗證。 比如說， [!DNL Google Chrome] 在Incognito模式下，可能會阻止第三方Cookie。 允許Cookie進入 [!DNL Chrome] 瀏覽器，按一下地址欄中的「eye」表徵圖，導航到 **站點不工作** > **已阻止**，選擇遠程DAM URL，並允許登錄令牌cookie。 或者，請參見 [如何啟用第三方cookie](https://support.google.com/chrome/answer/95647)。
 

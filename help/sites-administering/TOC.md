@@ -8,9 +8,9 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解 AEM 的管理事項。
 feature: Administering
 role: Admin
-source-git-commit: d4f5cebc76ed9348a17efc07443cd82317f24368
+source-git-commit: 206df4237e0e6959389dd0128c79c8f64bc4a0e4
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '631'
 ht-degree: 14%
 
 ---
@@ -117,6 +117,7 @@ ht-degree: 14%
    + [為Adobe Analytics配置鏈路跟蹤](adobeanalytics-link.md)
    + [使用Adobe Analytics屬性映射元件資料](adobeanalytics-mapping.md)
    + [為Adobe Analytics配置視頻跟蹤](adobeanalytics-video.md)
+   + [使用Adobe I/O與Adobe Analytics整合](integration-analytics-ims-adobe-io.md)
    + [HTTP2 傳送內容常見問答集](scene7-http2faq.md)
    + [排除您的Adobe Campaign整合故障](troubleshooting-campaignintegration.md)
    + [SharePoint連接器許可證、版權聲明和免責聲明](sharepoint-connector-licenses.md)
