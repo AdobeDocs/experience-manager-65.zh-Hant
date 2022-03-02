@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 079b7b1e386ac2d02026ee2d8db411e517168b00
+source-git-commit: 72012fa441edb01deb7e557b707fb068d8e9892e
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
    >   * 在雲配置中指定的命名工作區。
    >   * **注：** 導出到特定工作區需要「Adobe Target高級」。
 >
->* 必AEM須 [與Adobe Target整合，使用Adobe I/O](/help/sites-administering/integration-target-ims.md)。
+>* 必AEM須 [與Adobe Target採用IMS.](/help/sites-administering/integration-target-ims.md)。
 >
 >AEM 6.5.0.0和6.5.1.0:
 >
@@ -53,11 +53,11 @@ ht-degree: 0%
 * JSON:支援無頭內容交付
 * HTML 和 JSON
 
-可AEM以將「體驗片段」導出到Adobe Target的預設工作區，或導出到Adobe Target的用戶定義的工作區。 這是通過Adobe I/O完成的，AEM必須 [與Adobe Target整合，使用Adobe I/O](/help/sites-administering/integration-target-ims.md)。
+可AEM以將「體驗片段」導出到Adobe Target的預設工作區，或導出到Adobe Target的用戶定義的工作區。 這是使用Adobe開發者控制台完成的，AEM必須 [與Adobe Target採用IMS.](/help/sites-administering/integration-target-ims.md)。
 
 >[!NOTE]
 >
->Adobe Target工作區在Adobe Target本身不存在。 它們在Adobe IMS(Identity Management系統)中定義和管理，然後使用Adobe I/O整合選擇用於解決方案。
+>Adobe Target工作區在Adobe Target本身不存在。 它們在Adobe IMS(Identity Management系統)中定義和管理，然後使用Adobe開發者控制台的整合在解決方案中選擇使用。
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 需要執行以下各種操作：
 
-1. 你必須 [利AEM用Adobe I/O與Adobe Target](/help/sites-administering/integration-target-ims.md)。
+1. 你必須 [使AEM用IMS與Adobe Target整合](/help/sites-administering/integration-target-ims.md)。
 2. 從作者實例導出AEM「體驗片段」，因此您需要 [配置鏈AEM接外部化程式](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) 在作者實例上，以確保將體驗片段中的任何引用外部化以用於Web傳遞。
 
    >[!NOTE]
