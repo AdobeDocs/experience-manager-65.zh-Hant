@@ -8,9 +8,9 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解 AEM 的管理事項。
 feature: Administering
 role: Admin
-source-git-commit: 206df4237e0e6959389dd0128c79c8f64bc4a0e4
+source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '627'
 ht-degree: 14%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 14%
    + [為Adobe Analytics配置鏈路跟蹤](adobeanalytics-link.md)
    + [使用Adobe Analytics屬性映射元件資料](adobeanalytics-mapping.md)
    + [為Adobe Analytics配置視頻跟蹤](adobeanalytics-video.md)
-   + [使用Adobe I/O與Adobe Analytics整合](integration-analytics-ims-adobe-io.md)
+   + [使用IMS與Adobe Analytics整合](integration-analytics-ims.md)
    + [HTTP2 傳送內容常見問答集](scene7-http2faq.md)
    + [排除您的Adobe Campaign整合故障](troubleshooting-campaignintegration.md)
    + [SharePoint連接器許可證、版權聲明和免責聲明](sharepoint-connector-licenses.md)
@@ -143,7 +143,7 @@ ht-degree: 14%
    + [與Adobe Marketing Cloud](marketing-cloud.md)
    + [手動配置與Adobe Target的整合](target-configuring.md)
    + [與Adobe Target整合的先決條件](target-requirements.md)
-   + [使用Adobe I/O與Adobe Target整合](integration-target-ims-adobe-io.md)
+   + [使用IMS與Adobe Target整合](integration-target-ims.md)
    + [Adobe分類](adobeanalytics-classifications.md)
    + [與AdobeSearch&amp;Promote整合](search-and-promote.md)
    + [解決方案整合](integration.md)
