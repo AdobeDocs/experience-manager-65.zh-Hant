@@ -1,25 +1,17 @@
 ---
-title: 使用Adobe I/O與Adobe Target整合
-seo-title: Integration with Adobe Target using Adobe I/O
-description: 瞭解如何使用AEMAdobe I/O與Adobe Target整合
-seo-description: Learn about integrating AEM with Adobe Target using Adobe I/O
-uuid: dd4ed638-e182-4d7e-9c98-282431812467
-contentOwner: aheimoz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: integration
-discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
-docset: aem65
-source-git-commit: e6f4f3cf31c39853b45450e0c925694fc45f7aec
+title: 使用IMS與Adobe Target整合
+description: 瞭解使用IMSAEM與Adobe Target的整合
+exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
 
-# 使用Adobe I/O與Adobe Target整合{#integration-with-adobe-target-using-adobe-i-o}
+# 使用IMS與Adobe Target整合{#integration-with-adobe-target-using-ims}
 
-通過目標標AEM準API與Adobe Target進行整合需要配置Adobe IMS(Identity Management系統)和Adobe I/O。
+通過目標標AEM準API與Adobe Target整合需要使用Adobe開發人員控制台配置Adobe IMS(Identity Management系統)。
 
 >[!NOTE]
 >
@@ -37,13 +29,13 @@ ht-degree: 0%
 * [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 必須設定帳戶：
 
    * Adobe控制台
-   * Adobe I/O
+   * Adobe開發人員控制台
    * Adobe Target
    * Adobe IMS(Identity Management系統)
 
 * 您組織的系統管理員應使用該Admin Console將組織中所需的開發人員添加到相關的產品配置檔案中。
 
-   * 這為特定開發人員提供了在Adobe I/O中啟用整合的權限。
+   * 這為特定開發人員提供了在Adobe開發人員控制台中啟用整合的權限。
    * 有關詳細資訊，請參閱 [管理開發人員](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)。
 
 
@@ -60,7 +52,7 @@ ht-degree: 0%
 
    ![](assets/integrate-target-io-01.png)
 
-1. 選擇 **下載** 或 **下載公鑰**)將檔案下載到本地驅動器，以便在 [配置Adobe I/O以與](#configuring-adobe-i-o-for-adobe-target-integration-with-aem)。
+1. 選擇 **下載** 或 **下載公鑰**)將檔案下載到本地驅動器，以便在 [配置IMS以與Adobe Target集AEM成](#configuring-ims-for-adobe-target-integration-with-aem)。
 
    >[!CAUTION]
    >
@@ -68,21 +60,17 @@ ht-degree: 0%
 
    ![](assets/integrate-target-io-02.png)
 
-## 配置Adobe I/O，以便與 {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}
+## 配置IMS以與Adobe Target集AEM成 {#configuring-ims-for-adobe-target-integration-with-aem}
 
-您需要與Adobe Target一起建立將使用的Adobe I/O項目(集AEM成)，然後分配所需的權限。
+使用Adobe開發人員控制台，您需要與Adobe Target建立一個項目（整合）,AEM然後分配所需的權限。
 
 ### 建立項目 {#creating-the-project}
 
-開啟Adobe I/O控制台以建立與Adobe Target一起使用的I/OAEM項目：
+開啟Adobe開發者控制台，以建立將使用以下功能的具有Adobe TargetAEM的項目：
 
->[!NOTE]
->
->另請參閱 [Adobe I/O教程](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html)。
+1. 開啟項目Adobe開發人員控制台：
 
-1. 開啟項目Adobe I/O控制台：
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. 將顯示您擁有的任何項目。 選擇 **建立新項目**  — 地點和用途取決於：
 
@@ -145,11 +133,11 @@ ht-degree: 0%
 1. 選擇 **API憑據**，然後是所需的整合配置。
 1. 選擇 **編輯器** 的 **產品角色**;而不是 **觀察者**。
 
-## 為Adobe I/O整合項目儲存的詳細資訊 {#details-stored-for-the-adobe-io-integration-project}
+## 為Adobe開發人員控制台整合項目儲存的詳細資訊 {#details-stored-for-the-ims-integration-project}
 
-從「Adobe I/O項目」控制台，您可以看到所有整合項目的清單：
+在Adobe開發者控制台 — 項目中，您可以看到所有整合項目的清單：
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 選擇 **視圖** （位於特定項目條目的右側）以顯示有關配置的詳細資訊。 這些包括：
 
@@ -162,22 +150,22 @@ ht-degree: 0%
 * APIS
    * 比如說Adobe Target
 
-其中一些需要完成中目標的Adobe I/O整合AEM。
+其中一些需要完成Adobe Target在基於IMSAEM的整合。
 
 ## 在中完成IMS配AEM置 {#completing-the-ims-configuration-in-aem}
 
-返回到AEM後，您可以通過添加目標Adobe I/O整合中的所需值來完成IMS配置：
+返回到AEM，您可以通過添加目標Adobe開發者控制台整合中的所需值來完成IMS配置：
 
 1. 返回到 [IMS配置在中打AEM開](#configuring-an-ims-configuration-generating-a-public-key)。
 1. 選擇 **下一個**。
 
-1. 在這裡，你可以 [詳細資訊來自Adobe I/O](#details-stored-for-the-adobe-io-integration-project):
+1. 在這裡，你可以 [Adobe開發人員控制台中項目配置的詳細資訊](#details-stored-for-the-ims-integration-project):
 
    * **標題**:你的簡訊。
    * **授權伺服器**:從 `aud` 行 **負載** 如 `https://ims-na1.adobelogin.com` 在下面的示例中
-   * **API密鑰**:從 [概述](#details-stored-for-the-adobe-io-integration-project) 目標的Adobe I/O整合部分
-   * **客戶端密碼**:在 [概述](#details-stored-for-the-adobe-io-integration-project) 目標的Adobe I/O整合部分，並複製
-   * **負載**:從 [生成JWT](#details-stored-for-the-adobe-io-integration-project) 目標的Adobe I/O整合部分
+   * **API密鑰**:從 [概述](#details-stored-for-the-ims-integration-project) 節
+   * **客戶端密碼**:在 [概述](#details-stored-for-the-ims-integration-project) 和複製
+   * **負載**:從 [生成JWT](#details-stored-for-the-ims-integration-project) 節
 
    ![](assets/integrate-target-io-10.png)
 

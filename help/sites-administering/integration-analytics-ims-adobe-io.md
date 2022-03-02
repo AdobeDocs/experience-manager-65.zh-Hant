@@ -1,16 +1,16 @@
 ---
-title: 使用Adobe I/O與Adobe Analytics整合
-description: 瞭解如何使用AEMAdobe I/O與Adobe Analytics整合
-source-git-commit: 5a253147baf64bf1b12b3ea6387f4b377e5d421f
+title: 使用IMS與Adobe Analytics整合
+description: 瞭解使用IMSAEM與Adobe Analytics的整合
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
 
-# 使用Adobe I/O與Adobe Analytics整合 {#integration-with-adobe-analytics-using-adobe-i-o}
+# 使用IMS與Adobe Analytics整合 {#integration-with-adobe-analytics-using-ims}
 
-通過分析標AEM準API與Adobe Analytics進行整合需要配置Adobe IMS(Identity Management系統)和Adobe I/O。
+通過分析標AEM準API與Adobe Analytics進行整合需要使用Adobe開發人員控制台配置Adobe IMS(Identity Management系統)。
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ ht-degree: 1%
 * [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 必須設定帳戶：
 
    * Adobe控制台
-   * Adobe I/O
+   * Adobe開發人員控制台
    * Adobe Analytics
    * Adobe IMS(Identity Management系統)
 
 * 您組織的系統管理員應使用該Admin Console將組織中所需的開發人員添加到相關的產品配置檔案中。
 
-   * 這為特定開發人員提供了在Adobe I/O中啟用整合的權限。
+   * 這為特定開發人員提供了在Adobe開發人員控制台中啟用整合的權限。
    * 有關詳細資訊，請參閱 [管理開發人員](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)。
 
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
    ![](assets/integrate-analytics-io-01.png)
 
-1. 選擇 **下載** 或 **下載公鑰**)將檔案下載到本地驅動器，以便在 [配置Adobe I/O以與](#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem)。
+1. 選擇 **下載** 或 **下載公鑰**)將檔案下載到本地驅動器，以便在 [配置IMS以與Adobe Analytics集AEM成](#configuring-ims-for-adobe-analytics-integration-with-aem)。
 
    >[!CAUTION]
    >
@@ -60,23 +60,17 @@ ht-degree: 1%
 
    ![](assets/integrate-analytics-io-02.png)
 
-## 配置Adobe I/O，以便與 {#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem}
+## 配置IMS以與Adobe Analytics集AEM成 {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-您需要與Adobe Analytics一起建立將使用的Adobe I/O項目(集AEM成)，然後分配所需的權限。
+使用Adobe開發人員控制台，您需要與Adobe Analytics（供使用）建立項目(集AEM成)，然後分配所需的權限。
 
 ### 建立項目 {#creating-the-project}
 
-開啟Adobe I/O控制台以建立與Adobe Analytics一起使用的I/OAEM項目：
+開啟Adobe開發者控制台，以建立將使用以下功能的具有Adobe AnalyticsAEM的項目：
 
-<!--
->[!NOTE]
->
->See also the [Adobe I/O tutorials](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
--->
+1. 開啟項目Adobe開發人員控制台：
 
-1. 開啟項目Adobe I/O控制台：
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. 將顯示您擁有的任何項目。 選擇 **建立新項目**  — 地點和用途取決於：
 
@@ -129,11 +123,11 @@ ht-degree: 1%
 1. 選擇 **API憑據**，然後是所需的整合配置。
 1. 選擇 **編輯器** 的 **產品角色**;而不是 **觀察者**。
 
-## 為Adobe I/O整合項目儲存的詳細資訊 {#details-stored-for-the-adobe-io-integration-project}
+## 為Adobe開發人員控制台整合項目儲存的詳細資訊 {#details-stored-for-the-ims-integration-project}
 
-從「Adobe I/O項目」控制台，您可以看到所有整合項目的清單：
+從Adobe開發人員項目控制台中，您可以看到所有整合項目的清單：
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 選擇特定項目條目以顯示有關配置的詳細資訊。 這些包括：
 
@@ -146,22 +140,22 @@ ht-degree: 1%
 * APIS
    * 比如說Adobe Analytics
 
-其中一些需要完成Adobe Analytics的Adobe I/O整合AEM。
+其中一些需要完成Adobe Analytics的整合工AEM作。
 
 ## 在中完成IMS配AEM置 {#completing-the-ims-configuration-in-aem}
 
-返回AEM後，可通過添加AnalyticsAdobe I/O整合中的所需值來完成IMS配置：
+返回AEM後，可以通過從Analytics整合項目中添加所需值來完成IMS配置：
 
 1. 返回到 [IMS配置在中打AEM開](#configuring-an-ims-configuration-generating-a-public-key)。
 1. 選擇 **下一個**。
 
-1. 在這裡，你可以 [項目配置的詳細資訊(在Adobe I/O中)](#details-stored-for-the-adobe-io-integration-project):
+1. 在這裡，你可以 [為Adobe開發人員控制台整合項目儲存的詳細資訊](#details-stored-for-the-ims-integration-project):
 
    * **標題**:你的簡訊。
    * **授權伺服器**:從 `aud` 行 **負載** 如 `https://ims-na1.adobelogin.com` 在下面的示例中
-   * **API密鑰**:從 **憑據** 的下界 [項目概述](#details-stored-for-the-adobe-io-integration-project)
-   * **客戶端密碼**:在 [「服務帳戶(JWT)」部分的「客戶機密鑰」頁籤](#details-stored-for-the-adobe-io-integration-project)，然後複製
-   * **負載**:從 [生成「服務帳戶(JWT)」部分的JWT頁籤](#details-stored-for-the-adobe-io-integration-project)
+   * **API密鑰**:從 **憑據** 的下界 [項目概述](#details-stored-for-the-ims-integration-project)
+   * **客戶端密碼**:在 [「服務帳戶(JWT)」部分的「客戶機密鑰」頁籤](#details-stored-for-the-ims-integration-project)，然後複製
+   * **負載**:從 [生成「服務帳戶(JWT)」部分的JWT頁籤](#details-stored-for-the-ims-integration-project)
 
    ![IMS配AEM置詳細資訊](assets/integrate-analytics-io-10.png)
 
