@@ -2,9 +2,9 @@
 title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6a89cb79ccfbcec7385832d5682bf61895253718
+source-git-commit: b1e38323fbbb268de76067eb85596119b44221c2
 workflow-type: tm+mt
-source-wordcount: '2641'
+source-wordcount: '2662'
 ht-degree: 2%
 
 ---
@@ -325,17 +325,11 @@ UberJarExperience Manager6.5.12.0在 [Maven中央儲存庫](https://repo.maven.a
 
 * 安裝AEM6.5 Service Pack 12並嘗試下載狀態ZIP檔案時，Experience Manager會下載損壞的檔案。
 
-   >[!CAUTION]
-   >
-   >正在開發新版本的&quot;索引定義&quot;包。 以下連結一經發佈即發佈。
-   >
-   >在此之前，請聯繫「客戶服務」以獲取修補程式。
+   為避免這種情況，請在實例上下載並安裝以下兩AEM項 **先** 正在下載狀態ZIP檔案：
 
-   <!--
-  Download and install [AEM Sites SEO Index Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/sites-seo-index-content-1.0.0.zip) on your AEM instance before downloading the ZIP file to resolve the issue.
-  -->
+   * 以下 [修補程式](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
 
-   在下載ZIP檔案以解決問題之前，請AEM先在實例上下載並安裝AEM SitesSEO索引包。
+   * 這樣 [AEM SitesSEO指數包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
 
 * 作為 [!DNL Microsoft Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss EAP 7.1]。 [!DNL Microsoft Windows Server 2019] 不支援對 [!DNL AEM Forms 6.5.10.0]。
 
