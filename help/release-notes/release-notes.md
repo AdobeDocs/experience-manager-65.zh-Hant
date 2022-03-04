@@ -2,9 +2,9 @@
 title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: b02ec58b94e37e0d9902078bbd2387c7b75a208b
+source-git-commit: 7649b9a36fbf47ec92bd4c33cd7590d9934aa169
 workflow-type: tm+mt
-source-wordcount: '3071'
+source-wordcount: '3204'
 ht-degree: 3%
 
 ---
@@ -153,6 +153,10 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * 當您以自適應形式複製任何元件時，CSS會出現問題(NPR-37812)。
 
+**表單資料模型**
+
+* 將連接到表單資料模型的自適應表單附件保存到資料庫時出現問題(CQ-4338561)。
+
 **互動式通訊**
 
 * 「引用」(Reference)頁籤不列出交互通信(NPR-37995)中的任何引用。
@@ -163,15 +167,38 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * 無法使用workbench將PDF轉換為PDFA(NPR-37879)。
 
+* 在從Forms升級到Forms後，在使用PDF發AEM電機服務時，在辦公文AEM件方面出現問題(NPR-37758)。
+
 **文件安全性**
 
 * PDF加密在升級到java版本1.8.0_281(NPR-37716)後不起作用。
 
 **Foundation JEE**
 
-* 多線程PDF生成器在AEM Forms6.5.7.0(NPR-38053)的隨機時間後服務死鎖。
+* 多線程PDF生成器服務死鎖在隨機時間後AEM，用於6.5.7.0Forms(NPR-38053)。
 
-* 在AEMWorkbench版本6.5.0.20210518.1.338459中，當您使用電子郵件起始點並編輯用戶名和密碼時，不保存配置(NPR-37967)。
+* 在AEMWorkbench版本6.5.0.20210518.1.338459中，當您使用電子郵件起始點並編輯用戶名和密碼時，不保存配置(NPR-37967、CQ-4336081)。
+
+* 保存日誌會導致需要伺服器重新啟動的CPU利用率高(NPR-37868)。
+
+* `Gemfire.log` 未在 `temp\adobejb_server1\Caching` 安裝AEM Forms-6.5.0-0038(CQ-4340237)後的資料夾。
+
+* 執行以下命令後顯示以下錯誤 `ConfigurationManager.sh` 命令(CQ-4338323):
+
+   ```TXT
+     [root@localhost bin]# ./ConfigurationManager.sh 
+     bash: ./ConfigurationManagerCLI.sh: /bin/sh^M: bad interpreter: No such file or directory
+   ```
+
+* AEMRHEL8上的6.5Forms不支援JBOSS EAP 7.3和MySQL8(CQ-4331770)。
+
+**工作流程**
+
+* 將UTF-8特殊字元儲存為工作流的一部分時，在AEM6.5.10.0Forms發佈實例(NPR-37673)上出現問題。
+
+* 建立ArrayList類型和JSON子類型的變數時出現問題(NPR-37600)。
+
+* XPath/Dot Notation瀏覽器在工作流中的設定變數步AEM驟(位於Forms和AEMForms)中出現問題(CQ-4336582)。
 
 
 有關安全更新的資訊，請參見 [[!DNL Experience Manager] 安全公告頁](https://helpx.adobe.com/security/products/experience-manager.html)。
@@ -292,7 +319,7 @@ UberJarExperience Manager6.5.12.0在 [Maven中央儲存庫](https://repo.maven.a
 
    * [AEM6.5.12站點HotFix-NPR-38144](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
 
-   * [GraphQL索AEM引包1.0.4的內容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
+   * [GraphQL索AEM引包1.0.3的內容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.3.zip)
 
 * 作為 [!DNL Microsoft Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss EAP 7.1]。 [!DNL Microsoft Windows Server 2019] 不支援對 [!DNL AEM Forms 6.5.10.0]。
 
