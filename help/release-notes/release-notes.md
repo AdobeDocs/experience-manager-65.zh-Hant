@@ -2,9 +2,9 @@
 title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 7649b9a36fbf47ec92bd4c33cd7590d9934aa169
+source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3154'
 ht-degree: 3%
 
 ---
@@ -111,7 +111,6 @@ The following accessibility enhancements are available in [!DNL Assets]:
    * 只為從屬不可編輯欄位(NPR-37858)保存父欄位的最後選擇。
    * 從屬下拉清單（多值欄位）間歇性地反映所選父下拉清單的預設值(NPR-37791)。
 
-
 ### [!DNL Dynamic Media] {#dynamic-media-65120}
 
 以下問題已在 [!DNL Dynamic Media]:
@@ -128,9 +127,7 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * 如果對收件箱項目(CQ-433594)應用篩選器，滾動操作將不按預期工作。
 
-
 ### [!DNL Forms] {#forms-65120}
-
 
 >[!NOTE]
 >
@@ -200,7 +197,6 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * XPath/Dot Notation瀏覽器在工作流中的設定變數步AEM驟(位於Forms和AEMForms)中出現問題(CQ-4336582)。
 
-
 有關安全更新的資訊，請參見 [[!DNL Experience Manager] 安全公告頁](https://helpx.adobe.com/security/products/experience-manager.html)。
 
 ## 安裝6.5.12.0 {#install}
@@ -266,10 +262,6 @@ B使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.m
 1. 確保已安裝Adobe Experience ManagerService Pack。
 1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)所列出的對應 Forms 附加套件。
 1. 按中所述安裝Forms附加程式包 [安裝AEM Forms附加軟體包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)。
-
->[!NOTE]
->
->Experience Manager6.5.12.0包含 [AEM Forms相容性包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases)。 如果您使用的是舊版的AEM Forms相容性軟體包並更新到Experience Manager6.5.10.0，請安裝安裝後安裝的最新版本的Forms附加軟體包。
 
 ### 在JEE上安裝Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
