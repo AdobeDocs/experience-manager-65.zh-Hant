@@ -2,9 +2,9 @@
 title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
+source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
 workflow-type: tm+mt
-source-wordcount: '3154'
+source-wordcount: '3180'
 ht-degree: 3%
 
 ---
@@ -84,6 +84,7 @@ ht-degree: 3%
 * [社區] 組成員表內的內容不可按一下(CQ-4334404)。
 * [橡樹] Cold-Standby同步進程未工作，並且記錄錯誤(CQ-433868)。
 * [平台基礎UI] [!DNL Experience Manager] 當用戶選擇 [!DNL Adobe Experience Manager] 表徵圖已在起始頁(CQ-4317409)上。
+* 對於用戶（沒有複製權限）刪除或移動頁面（即使頁面未激活）, `Page Subtree Activation Check` 在配置下 `Page Manager Factory` 需要啟用(NPR-37936)。
 
 ### [!DNL Assets] {#assets-65120}
 
