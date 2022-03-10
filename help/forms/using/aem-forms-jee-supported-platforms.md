@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 45a26c34ba879e1948ace785e861d38cce71e3a6
+source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3515'
+ht-degree: 1%
 
 ---
 
@@ -115,7 +115,13 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td>答：支援</td>
    <td>次要版本和更新</td>
   </tr>
- </tbody>
+  <tr>
+   <td> IBMJAVA1.8.0_291(內部版8.0.6.30)<br /> </td>
+   <td>答：支援</td>
+   <td>次要版本和更新</td>
+  </tr>
+
+</tbody>
 </table>
 
 >[!NOTE]
@@ -159,7 +165,7 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td>支援</td>
   </tr>
   <tr>
-   <td><p>MicrosoftSQL Server 2016</p> </td>
+   <td><p>MicrosoftSQL Server 2016（不建議使用）</p> </td>
    <td><p>儲存庫微內核</p> </td>
    <td><p>支援</p> </td>
   </tr>
@@ -244,7 +250,7 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td>Service Pack和關鍵更新</td>
   </tr>
   <tr>
-   <td>IBM® WebSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
+   <td>IBM® WebSphere® Application Server 9.0.0.10 <sup>[1] [4]</sup><br /> </td>
    <td>答：支援</td>
    <td>Service Pack和關鍵更新</td>
   </tr>
@@ -751,7 +757,7 @@ Adobe保留在任何給定時刻更改AEM Forms在JEE版本上支援的第三方
 
 ## 平台更新 {#platform-updates}
 
-2022年2月3日AEM Forms6.5.12.0版將以下平台標籤為不建議使用：
+2022年3月3日AEM Forms6.5.12.0版將以下平台標籤為不建議使用：
 
 - MongoDB Enterprise 4.0
 - IBMDB2 11.1
@@ -761,6 +767,7 @@ Adobe保留在任何給定時刻更改AEM Forms在JEE版本上支援的第三方
 - JBoss®企業應用程式平台(EAP)7.1.4
 - IBMContent Manager Server 8.5修復包2
 - IBMContent Manager客戶端8.5
+- MicrosoftSQL Server 2016
 
 2021年9月7日AEM Forms6.5.10.0版將以下平台標籤為不建議使用：
 
@@ -776,11 +783,11 @@ Adobe保留在任何給定時刻更改AEM Forms在JEE版本上支援的第三方
 
 ## 修訂歷史記錄 {#revision-history}
 
-- 2022 年 2 月 03 日
+- 2022年3月3日
 
    - 已刪除對以下內容的支援：
       - IBM® J9虛擬機(build 2.8, JRE 1.8.0)
-      - Oracle資料庫12c版本2
+      - Oracle資料庫12c版本1
       - Oracle資料庫18c
       - Oracle統一目錄(OUD)11g版本2
       - IBM蓮達樂9.0
