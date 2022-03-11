@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
-source-git-commit: 10e46fe60edcaa116978173b8c61542653f6a551
+source-git-commit: 084e5d561e25dcbaee4489b65f423fc9166832be
 workflow-type: tm+mt
-source-wordcount: '2001'
-ht-degree: 13%
+source-wordcount: '2000'
+ht-degree: 12%
 
 ---
 
@@ -97,7 +97,7 @@ ht-degree: 13%
 
 要添加活動，請執行以下操作：
 
-1. 按一下或點選您要建立活動的品牌，然後按一下或點選「建立」 **** ，然 **後點選「建立活動」**。如果正在編輯，請選擇活動，然後按一下或點擊 **編輯**。
+1. 按一下或點擊要為其建立活動的品牌，按一下或點擊 **建立** 然後 **建立活動**。 如果正在編輯，請選擇活動，然後按一下或點擊 **編輯**。
 1. 提供以下資訊，然後按一下或點擊 **下一個**:
 
    * 活動的名稱。
