@@ -6,7 +6,7 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 19eaabb55f11ea8080a545d994795e30817a51fb
+source-git-commit: f4e6a1855fad76df8102751b14e9ac6982315937
 workflow-type: tm+mt
 source-wordcount: '3786'
 ht-degree: 17%
@@ -246,45 +246,65 @@ Experience Manager允許您將遠程DAM部署作為源連接到多個Experience 
 
 ## 常見問題 {#frequently-asked-questions}
 
-### 如果需要使用上的可用資產，是否應配置已連接資產 [!DNL Sites] 部署？
++++**如果需要使用上的可用資產，是否應配置已連接資產 [!DNL Sites] 部署？**
 
 在這種情況下，無需配置連接的資產。 您可以使用 [!DNL Sites] 部署。
 
-### 您何時需要配置「已連接資產」功能？
++++
+
++++**您何時需要配置「已連接資產」功能？**
 
 僅當需要使用遠程DAM部署上的可用資產時，才配置「已連接資產」功能 [!DNL Sites] 部署。
 
-### 多少 [!DNL Sites] 部署配置連接的資產後，您能否連接到遠程DAM部署？
++++
+
++++**多少 [!DNL Sites] 部署配置連接的資產後，您能否連接到遠程DAM部署？**
 
 最多可連接4個 [!DNL Sites] 在配置連接的資產後部署到遠程DAM部署。 有關詳細資訊，請參見 [連接資產體系結構](#connected-assets-architecture)。
 
-### 您可以連接到 [!DNL Sites] 配置連接的資產後部署？
++++
+
++++**您可以連接到 [!DNL Sites] 配置連接的資產後部署？**
 
 您可以將一個遠程DAM部署連接到 [!DNL Sites] 配置連接的資產後進行部署。 有關詳細資訊，請參見 [連接資產體系結構](#connected-assets-architecture)。
 
-### 你能用Dynamic Media的資產 [!DNL Sites] 配置連接的資產後部署？
++++
+
++++**你能用Dynamic Media的資產 [!DNL Sites] 配置連接的資產後部署？**
 
 配置連接的資產後， [!DNL Dynamic Media] 資產於 [!DNL Sites] 以只讀模式部署。 因此，您不能使用 [!DNL Dynamic Media] 處理 [!DNL Sites] 部署。 有關詳細資訊，請參見 [配置站點和Dynamic Media部署之間的連接](#dynamic-media-assets)。
 
-### 您能否使用上遠程DAM部署中的「映像」和「文檔」格式類型的資產 [!DNL Sites] 配置連接的資產後部署？
++++
+
++++**您能否使用上遠程DAM部署中的「映像」和「文檔」格式類型的資產 [!DNL Sites] 配置連接的資產後部署？**
 
 是，您可以使用上的遠程DAM部署中的「映像」和「文檔」格式類型的資產 [!DNL Sites] 配置連接的資產後進行部署。
 
-### 您能否使用上遠程DAM部署的內容片段和視頻資產 [!DNL Sites] 配置連接的資產後部署？
++++
+
++++**您能否使用上遠程DAM部署的內容片段和視頻資產 [!DNL Sites] 配置連接的資產後部署？**
 
 否，您不能使用上遠程DAM部署中的內容片段和視頻資產 [!DNL Sites] 配置連接的資產後進行部署。
 
-### 是否使用上遠程DAM部署的Dynamic Media資產 [!DNL Sites] 配置連接的資產後部署？
++++
+
++++**是否使用上遠程DAM部署的Dynamic Media資產 [!DNL Sites] 配置連接的資產後部署？**
 
 是，您可以配置和使用Dynamic Media映像資產，這些資產來自 [!DNL Sites] 配置連接的資產後進行部署。 有關詳細資訊，請參見 [配置站點和Dynamic Media部署之間的連接](#dynamic-media-assets)。
 
-### 配置連接的資產後，您能否對遠程DAM資產或資料夾執行更新、刪除、更名和移動操作？
++++
+
++++**配置連接的資產後，您能否對遠程DAM資產或資料夾執行更新、刪除、更名和移動操作？**
 
 是的，在配置連接的資產後，您可以對遠程DAM資產或資料夾執行更新、刪除、更名和移動操作。 這些更新在站點部署中自動可用，但有一些延遲。 有關詳細資訊，請參見 [管理遠程DAM中資產的更新](#handling-updates-to-remote-assets)。
 
-### 配置連接的資產後，可以在 [!DNL Sites] 部署並使其在遠程DAM部署中可用？
++++
+
++++**配置連接的資產後，可以在 [!DNL Sites] 部署並使其在遠程DAM部署中可用？**
 
 可以將資產添加到 [!DNL Sites] 但是，這些資產無法用於遠程DAM部署。
+
++++
 
 ## 限制和最佳做法 {#tip-and-limitations}
 
@@ -323,7 +343,7 @@ Experience Manager允許您將遠程DAM部署作為源連接到多個Experience 
 
 * 如果無法從 [!UICONTROL 內容查找器]，然後確保所需的角色和權限已到位。
 
-* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
+* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
 
 * 如果無法從本地訪問遠程DAM部署 [!DNL Sites] 部署，確保允許跨站點Cookie, [相同站點cookie支援](/help/sites-administering/same-site-cookie-support.md) 已配置。 如果阻止跨站點Cookie的部署 [!DNL Experience Manager] 無法驗證。 比如說， [!DNL Google Chrome] 在Incognito模式下，可能會阻止第三方Cookie。 允許Cookie進入 [!DNL Chrome] 瀏覽器，按一下地址欄中的「eye」表徵圖，導航到 **站點不工作** > **已阻止**，選擇遠程DAM URL，並允許登錄令牌cookie。 或者，請參見 [如何啟用第三方cookie](https://support.google.com/chrome/answer/95647)。
 
