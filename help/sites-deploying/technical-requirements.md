@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cda5e0b545903333d928f14e043a931898d87dc3
+source-git-commit: 077540ed65f31f1bb4f0063fb6ac8bddb76595da
 workflow-type: tm+mt
-source-wordcount: '3362'
-ht-degree: 0%
+source-wordcount: '3314'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,6 @@ Adobe支AEM持Adobe Experience Manager()在平台上，如本文檔的以下資�
 >
 >* 數字資產使用案例需要更多基本記憶體。 請參閱 [部署和維護](/help/sites-deploying/deploy.md#default-local-install) 的雙曲餘切值。
 >* [AEM Forms附加包](/help/forms/using/installing-configuring-aem-forms-osgi.md) 需要15 GB的臨時空間。
-
 >
 
 
@@ -58,7 +57,7 @@ Adobe推薦這些配置，並作為標準軟體維護協定的一部分提供全
 <table>
  <tbody>
   <tr>
-   <td>支援級別</td>
+   <td>支援程度</td>
    <td>說明<br /> </td>
   </tr>
   <tr>
@@ -74,7 +73,7 @@ Adobe推薦這些配置，並作為標準軟體維護協定的一部分提供全
 
 ### 不支援的配置 {#unsupported-configurations}
 
-| 支援級別 | 說明 |
+| 支援程度 | 說明 |
 |---|---|
 | **Z:不支援** | 不支援配置。 Adobe不會對配置是否有效發表任何聲明，也不支援它。 |
 
@@ -136,10 +135,10 @@ Adobe Experience Manager使用以下版本的Java虛擬機運行：
  </tbody>
 </table> --->
 
-| **平台** | **支援級別** | **連結** |
+| **平台** | **支援程度** | **連結** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64位 | 答：支援 `[1]` | [下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
-| Azul Zulu OpenJDK 8 - 64位 | 答：支援 `[1]` | [下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
+| Azul Zulu OpenJDK 11 - 64位 | 答：支援 `[1]` |  |
+| Azul Zulu OpenJDK 8 - 64位 | 答：支援 `[1]` |  |
 | OracleJava SE 11 JDK - 64位 | 答：支援 `[2]` | [下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | OracleJava SE 10 JDK | Z:不支援 `[2]` |
 | OracleJava SE 9 JDK | Z:不支援 `[2]` |
@@ -149,7 +148,7 @@ Adobe Experience Manager使用以下版本的Java虛擬機運行：
 
 1. 對OpenJDK的Azul Zulu Builds的支援和分發，包括對LTS版本的所有維護更新，將由Adobe直接支援，所有使用OpenJDK的Azul Zulu Builds的AEM客戶都可以使用，從AEM6.5 SP9的結果開始。 查看 [阿祖爾Java支援Adobe Experience Manager問答](assets/adobe-azul-openjdk-license-agreement.pdf) 的子菜單。
 
-1. Oracle已經轉向了OracleJava SE產品的&quot;長期支援&quot;(LTS)模型。 Java 9、Java 10和Java 12是按Oracle排列的非LTS版本（請參見） [OracleJava SE支援路線圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生AEM產環境中部署，Adobe僅支援Java的LTS版本。 支援和分發OracleJava SE JDK，包括所有在公共更新結束之後的LTS版本的維護更新，將通過Adobe直接支援所有使用OracleJava SE技術AEM的客戶 **直至2022年12月**。 查看 [OracleJava支援Adobe Experience Manager問答](assets/adobe-oracle-java-license-agreement.pdf) 的子菜單。
+1. Oracle已經轉向了OracleJava SE產品的&quot;長期支援&quot;(LTS)模型。 Java 9、Java 10和Java 12是按Oracle排列的非LTS版本（請參見） [OracleJava SE支援路線圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生AEM產環境中部署，Adobe僅支援Java的LTS版本。 支援和分發OracleJava SE JDK，包括所有在公共更新結束之後的LTS版本的維護更新，將直接由使用OracleJava SE技術的所有客AEM戶Adobe支援。 查看 [OracleJava支援Adobe Experience Manager問答](assets/adobe-oracle-java-license-agreement.pdf) 的子菜單。
 
 1. IBMJRE僅與WebSphere Application Server一起受支援。
 
@@ -158,7 +157,7 @@ Adobe Experience Manager使用以下版本的Java虛擬機運行：
 
 部署Adobe Experience Manager儲存庫有各種選項。 有關支援的技術和儲存選項，請參見以下清單。
 
-| **平台** | **說明** | **支援級別** |
+| **平台** | **說明** | **支援程度** |
 |---|---|---|
 | **具有TAR檔案的檔案系統** `[1]` | 存放庫 | 答：支援 |
 | **具有資料儲存的檔案系統** `[1]` | 二進位檔案 | 答：支援 |
@@ -213,7 +212,7 @@ Adobe Experience Manager可以作為獨立伺服器（快速啟動JAR檔案）�
 
 需要的Servlet API最低版本是Servlet 3.1
 
-| 平台 | 支援級別 |
+| 平台 | 支援程度 |
 |---|---|
 | **Quickstart內置Servlet引擎(Jetty 9.4)** | 答：支援 |
 | OracleWebLogic Server 12.2(12cR2) | Z:不支援 |
@@ -231,7 +230,7 @@ Adobe Experience Manager可以作為獨立伺服器（快速啟動JAR檔案）�
 
 Adobe Experience Manager與以下生產環境伺服器平台協作：
 
-| **平台** | **支援級別** |
+| **平台** | **支援程度** |
 |---|---|
 | **Linux，基於Red Hat分發** | 答：支援 `[1]` `[3]` |
 | Linux，基於Debian分發，包括 烏邦圖 | 答：支援 `[2]` |
@@ -265,7 +264,7 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 
 支援以下Web伺服器與Dispatcher 4.3.2版一起使用：
 
-| 平台 | 支援級別 |
+| 平台 | 支援程度 |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | 答：支援 |
 | MicrosoftIIS 10(Internet Information Server) | 答：支援 |
@@ -517,7 +516,6 @@ Adobe Experience Manager的所有元素（實例、調度程式）都可以安�
 >* Acrobat版本與AEM Forms捆綁，以啟用PDF生成器功能。 捆綁版本只應在AEM Forms許可證期間通過AEM Forms以寫程式方式訪問，以便與AEM FormsPDF生成器一起使用。 有關詳細資訊，請參閱按部署的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 >* PDF生成器服務不支援MicrosoftWindows 10。
-
 >
 
 
