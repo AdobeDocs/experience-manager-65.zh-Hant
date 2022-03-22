@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
+source-git-commit: 73d5b894dfa1bbb3ae3f2973cc4f9db1ace90ef8
 workflow-type: tm+mt
 source-wordcount: '3515'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Adobe推薦這些配置，並作為標準軟體維護協定的一部分提供完
 <table>
  <tbody>
   <tr>
-   <th>支援級別</th>
+   <th>支援程度</th>
    <th>說明</th>
   </tr>
   <tr>
@@ -62,7 +62,7 @@ Adobe推薦這些配置，並作為標準軟體維護協定的一部分提供完
 
 ### 不支援的配置 {#unsupported-configurations}
 
-| 支援級別 | 說明 |
+| 支援程度 | 說明 |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | E:預計工作 | 預計該配置將起作用，沒有相反的報告。 |
 | Z:不支援 | 不支援配置。 Adobe不會對配置是否有效發表任何聲明，也不支援它。 |
@@ -87,7 +87,7 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
  <tbody>
   <tr>
    <th><p><strong>平台</strong></p> </th>
-   <th><p><strong>支援級別</strong></p> </th>
+   <th><p><strong>支援程度</strong></p> </th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
@@ -116,12 +116,11 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td>次要版本和更新</td>
   </tr>
   <tr>
-   <td> IBMJAVA1.8.0_291(內部版8.0.6.30)<br /> </td>
+   <td>IBMJAVA1.8.0_291(內部版8.0.6.30)<br /> </td>
    <td>答：支援</td>
    <td>次要版本和更新</td>
   </tr>
-
-</tbody>
+ </tbody>
 </table>
 
 >[!NOTE]
@@ -137,7 +136,7 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
   <tr>
    <td><p><strong>平台</strong></p> </td>
    <td><p><strong> 說明</strong></p> </td>
-   <td><p><strong>支援級別</strong></p> </td>
+   <td><p><strong>支援程度</strong></p> </td>
   </tr>
   <tr>
    <td><p>檔案系統</p> </td>
@@ -241,7 +240,7 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
  <tbody>
   <tr>
    <td><p><strong> 平台</strong></p> </td>
-   <td><p><strong>支援級別</strong></p> </td>
+   <td><p><strong>支援程度</strong></p> </td>
    <td><p><strong>支援的修補程式定義</strong></p> </td>
   </tr>
   <tr>
@@ -335,7 +334,7 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
  <tbody>
   <tr>
    <th><p><strong>平台（基本版本）</strong></p> </th>
-   <th>支援級別</th>
+   <th>支援程度</th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
@@ -649,7 +648,7 @@ AEM Forms應用現在支援Apache Cordova。 以下是支援的特定於平台�
    <td>所有更新</td>
   </tr>
   <tr>
-   <td>Microsoft火狐ESR</td>
+   <td>Mozilla Firefox ESR</td>
    <td>E:預計工作</td>
    <td> 所有更新</td>
   </tr>
@@ -687,7 +686,7 @@ AEM Forms應用現在支援Apache Cordova。 以下是支援的特定於平台�
 > - Forms門戶支援Internet Explorer 11上的JAWS 14.0螢幕閱讀器軟體，用於輔助功能。
 
 
-#### 移動客戶端 {#mobile-clients}
+#### Mobile客戶 {#mobile-clients}
 
 <table>
  <tbody>
