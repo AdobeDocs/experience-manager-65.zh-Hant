@@ -1,12 +1,12 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager 6.5, Experience Manager Assets
+solution: Experience Manager, Experience Manager Assets
 audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: 2706a069bea731da1f84c15e2da02b53a9db4d28
+source-git-commit: ee6e408668a523464632e53a01ba11eddec103f6
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 18%
@@ -171,7 +171,7 @@ ht-degree: 18%
    + [相關資產](related-assets.md)
    + [專用資料夾共用](private-folder.md)
    + [視頻呈現](video-renditions.md)
-+ 與其他解決方案整合 {#integrations}
++ 與其他解決方案的整合 {#integrations}
    + [與 [!DNL Adobe Workfront]](workfront-integrations.md)
    + [安裝 [!DNL enhanced connector] 為 [!DNL Workfront]](workfront-connector-install.md)
    + [配置 [!DNL enhanced connector] 為 [!DNL Workfront]](workfront-connector-configure.md)
