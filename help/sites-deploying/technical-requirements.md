@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: ec1c8d80fabefdae01fea92fec9cb33bc5779f3c
+source-git-commit: 9e9a01cddf56d23bfe4e84812534c295be1595f4
 workflow-type: tm+mt
-source-wordcount: '3262'
+source-wordcount: '3294'
 ht-degree: 1%
 
 ---
@@ -91,18 +91,20 @@ Adobe Experience Manager使用以下版本的Java虛擬機運行：
 
 | **平台** | **支援程度** | **連結** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64位 | Z:不支援 |  |
-| Azul Zulu OpenJDK 8 - 64位 | 答：不支援 |  |
 | OracleJava SE 11 JDK - 64位 | 答：支援 `[1]` | [下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | OracleJava SE 10 JDK | Z:不支援 `[1]` |
 | OracleJava SE 9 JDK | Z:不支援 `[1]` |
 | OracleJava SE 8 JDK - 64位 | 答：支援 `[1]` | [下載](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
 | IBMJ9 VM — 內部版本2.9,JRE 1.8.0 | 答：支援 `[2]` |
 | IBMJ9 VM — 內部版本2.8,JRE 1.8.0 | 答：支援 `[2]` |
+| Azul Zulu OpenJDK 11 - 64位 | 答：支援 `[3]` |  |
+| Azul Zulu OpenJDK 8 - 64位 | 答：支援 `[3]` |  |
 
 1. Oracle已經轉向了OracleJava SE產品的&quot;長期支援&quot;(LTS)模型。 Java 9、Java 10和Java 12是按Oracle排列的非LTS版本（請參見） [OracleJava SE支援路線圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生AEM產環境中部署，Adobe僅支援Java的LTS版本。 支援和分發OracleJava SE JDK，包括所有在公共更新結束之後的LTS版本的維護更新，將直接由使用OracleJava SE技術的所有客AEM戶Adobe支援。 查看 [OracleJava支援Adobe Experience Manager問答](assets/adobe-oracle-java-license-agreement.pdf) 的子菜單。
 
 1. IBMJRE僅與WebSphere Application Server一起受支援。
+
+1. 從6.5 SP9版開始的內部部署支援Azul Zulu OpenJDK LTSAEM版本。 支援和分發阿祖爾祖魯JDK LTS版本必須由我們的客戶直接從阿祖爾獲得許可。
 
 
 ### 儲存和持久性 {#storage-persistence}
@@ -317,7 +319,7 @@ Adobe Experience Manager用戶介面可與以下客戶端平台配合使用。 �
 
 1. 使用值2或更大值將BasicAuthLevel註冊表項添加到此子項。
 
-要提高Windows下WebDav客戶端的響應性 — 請參見 [Microsoft支援KB 2445570](https://support.microsoft.com/kb/2445570)
+要提高Windows下WebDav客戶端的響應能力 — 請參見 [Microsoft支援KB 2445570](https://support.microsoft.com/kb/2445570)
 
 ## 其他平台說明 {#additional-platform-notes}
 
