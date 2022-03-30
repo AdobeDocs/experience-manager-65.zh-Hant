@@ -4,7 +4,7 @@ description: 安裝 [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
-source-git-commit: a589836c77fd919838dce60a1eaf676683c165c0
+source-git-commit: 679ad8f1fec1abe97dfc90b6318c3f3c4ab85b7f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -28,11 +28,8 @@ ht-degree: 0%
 要安裝連接器，請執行以下步驟：
 
 1. 從下載連接器 [[!DNL Software Distribution] 連結](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip)。
-
 1. [配置防火牆](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html)。
-
 1. 在調度程式上，允許HTTP標頭命名 `authorization`。 `username`, `apikey`。 允許 `GET`。 `POST`, `PUT` 請求 `/bin/workfront-tools`。
-
 1. 確保中不存在以下路徑 [!DNL Experience Manager] 儲存庫：
 
    * `/apps/dam/gui/coral/components/admin/schemaforms/formbuilder`
@@ -42,7 +39,6 @@ ht-degree: 0%
    * `/apps/settings/dam/cfm/models/formbuilderconfig`
 
 1. 使用 [!UICONTROL 包管理器]。 要瞭解如何安裝軟體包，請參見 [包管理器文檔](/help/sites-administering/package-manager.md)。
-
 1. 建立 `wf-workfront-users` 在 [!DNL Experience Manager] 用戶組並分配權限 `jcr:all` 至 `/content/dam`。
 
 系統用戶 `workfront-tools` 自動建立，並自動管理所需權限。 所有用戶 [!DNL Workfront] 使用連接器的用戶將自動添加為此組的一部分。
@@ -68,7 +64,4 @@ Experience Manager Assets使您能夠 [!DNL Workfront for Experience Manager enh
 更新 [!DNL Workfront for Experience Manager enhanced connector] 至最新版本：
 
 1. 從下載增強連接器的最新版本 [[!DNL Software Distribution] 連結](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip)。
-
 1. 使用 [!UICONTROL 包管理器]。 要瞭解如何安裝軟體包，請參見 [包管理器文檔](/help/sites-administering/package-manager.md)。
-
-
