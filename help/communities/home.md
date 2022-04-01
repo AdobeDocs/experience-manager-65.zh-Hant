@@ -1,50 +1,50 @@
 ---
-title: Adobe Experience Manager 6.5 Communities指南
-seo-title: Adobe Experience Manager 6.5 Communities指南
-description: 本指南涵蓋所有AEM Communities工作，例如建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
-seo-description: 涵蓋所有AEM Communities工作，例如建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
+title: Adobe Experience Manager6.5社區指南
+seo-title: Adobe Experience Manager 6.5 Communities Guide
+description: 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。瀏覽我們的指南，說明如何部署、管理、開發和編寫社區。
+seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 24%
+source-wordcount: '381'
+ht-degree: 33%
 
 ---
 
-# Adobe Experience Manager 6.5 Communities指南
+# Adobe Experience Manager6.5社區指南
 
-本指南涵蓋所有AEM Communities工作，例如建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
+建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。瀏覽我們的指南，說明如何部署、管理、開發和編寫社區。
 
-## 重要AEM文章
+## 關鍵條AEM目
 
-* [AEM快速入門](https://helpx.adobe.com/tw/experience-manager/get-started.html)
-* [AEM 6.5發行說明](/help/release-notes/home.md)
+* [入AEM門](https://helpx.adobe.com/tw/experience-manager/get-started.html)
+* [AEM6.5發行說明](/help/release-notes/home.md)
 * [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
-* [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
+* [安AEM全核對表](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用手冊
 
 | 使用手冊 | 說明 |
 |--- |---|
-| [發行說明](/help/release-notes/home.md) | 提供AEM最新版本的重要資訊，包括新增功能、支援的平台、過時和移除的功能，以及已知問題 |
-| [Assets 使用手冊](/help/assets/home.md) | 了解如何建立、管理、提供和最佳化數位資產。 |
-| [Forms使用手冊](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表單。 |
-| [Communities使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [Administering 指南](/help/sites-administering/home.md) | 了解如何管理AEM |
-| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
-| [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中於AEM中編寫的概念。 |
-| [Screens使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解數位看板解決方案，以發佈動態的互動式數位體驗。 |
-| [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南會說明AEM的基本概念。 |
-| [開發使用手冊](/help/sites-developing/home.md) | 了解如何建置您的AEM例項。 |
-| [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
-| [商務使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
-| [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
+| [發行說明](/help/release-notes/home.md) | 提供有關最新版本的重要信AEM息，包括新增的、受支援的平台、不建議使用和刪除的功能以及已知問題 |
+| [Assets 使用手冊](/help/assets/home.md) | 瞭解如何建立、管理、交付和優化數字資產。 |
+| [Forms使用手冊](/help/forms/home.md) | 本指南介紹如何建立、管理、發佈和更新數字表單。 |
+| [社區使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
+| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管AEM理 |
+| [Authoring 指南](/help/sites-authoring/home.md) | 本指南介紹了中的創作概AEM念。 |
+| [經典UI創作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介紹了在經典用戶界AEM面中創作的概念。 |
+| [螢幕使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數字標牌解決方案，以發佈動態和互動式數字型驗。 |
+| [部署使用手冊](/help/sites-deploying/home.md) | 本指南向您介紹的基本信AEM息。 |
+| [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何構建實AEM例。 |
+| [管理使用手冊](/help/managing/home.md) | 本指南介紹如何成功管AEM理項目。 |
+| [《 Commerce使用手冊》](/help/commerce/home.md) | 瞭解有關的Commerce Integration FrameworkAEM。 |
+| [Mobile使用手冊](/help/mobile/home.md) | 本指南介紹如何為移動應用程式建立和管理內容。 |
+| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南介紹如何與Livefyre共用用戶生成的內容。 |
 
-## 重要AEM資源
+## 關鍵資AEM源
 
-* [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
+* [教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
 * [核心元件使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
