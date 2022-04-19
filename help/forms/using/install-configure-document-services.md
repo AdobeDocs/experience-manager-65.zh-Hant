@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 8fcbdb4d00a5ddffadf5b4a099454dc795999769
+source-git-commit: 81008366b7d5edaf1d2f83ccd2ba6237c2e96fad
 workflow-type: tm+mt
-source-wordcount: '5100'
+source-wordcount: '5107'
 ht-degree: 2%
 
 ---
@@ -677,13 +677,23 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
 +++
 
-+++HTMLtoPDF
+++HTML到PDF轉換問題
 
 * 確保字型目錄已添加到PDF生成器配置UI中。
 
-+++
+**Linux和Solaris（PhantomJS轉換路由）**
 
-+++Linux®和Solaris™（WebKit轉換）
+* 確保32位庫(libicudata.so.42)可用於基於Webkit的HTMLToPDF轉換，64位(libicudata.so.42 libs可用於基於PhantomJS的HTMLToPDF轉換。
+
+* 運行以下命令以列出phantomjs的缺少庫：
+
+   ```
+   ldd phantomjs | grep not
+   ```
+
+* 確保JAVA_HOME_32環境變數指向正確的位置。
+
+**Linux®和Solaris™（WebKit轉換路由）**
 
 * 確保目錄 `/usr/lib/X11/fonts` 和 `/usr/share/fonts` 存在。 如果目錄不存在，請從建立符號連結 `/usr/share/X11/fonts` 至 `/usr/lib/X11/fonts` 另一個符號連結 `/usr/share/fonts` 至 `/usr/share/X11/fonts`。
 
@@ -724,27 +734,13 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
 +++
 
-+++Linux®和Solaris(PhantomJS)HTMLtoPDF
-
-* 確保32位庫(libicudata.so.42)可用於基於Webkit的HTMLToPDF轉換，64位(libicudata.so.42 libs可用於基於PhantomJS的HTMLToPDF轉換。
-
-* 運行以下命令以列出phantomjs的缺少庫：
-
-```
-ldd phantomjs | grep not
-```
-
-* 確保JAVA_HOME_32環境變數指向正確的位置。
-
-+++
-
 +++ 無法添加PDF生成器(PDFG)用戶
 
 * 確保Windows上安裝了Microsoft® Visual C++ 2008 x86、Microsoft® Visual C++ 2010 x86、Microsoft® Visual C++ 2012 x86和Microsoft® Visual C++ 2013 x86（32位）可再發行版。
 
 +++
 
-+++自動化test失敗
++++自動化test故障
 
 * 對於Microsoft® Office和OpenOffice，請手動執行至少一次轉換（作為每個用戶），以確保轉換過程中不會彈出對話框。 如果出現任何對話，則將其取消。 自動轉換過程中不應出現此類對話框。
 
