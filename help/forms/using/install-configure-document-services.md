@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 81008366b7d5edaf1d2f83ccd2ba6237c2e96fad
+source-git-commit: 0f4207564645ef7ba7da9064e971248b59f5a9b3
 workflow-type: tm+mt
-source-wordcount: '5107'
-ht-degree: 2%
+source-wordcount: '5381'
+ht-degree: 1%
 
 ---
 
@@ -199,6 +199,7 @@ AEM Forms附加軟體包是部署到的應AEM用程式 通常，只需一個實A
 
 >[!NOTE]
 >
+>* 如果您的AEM Forms伺服器處於離線或安全環境中，且Internet無法激活Adobe Acrobat，請參閱 [離線激活](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) 以便激活這類Adobe Acrobat。
 >* Adobe Acrobat、Microsoft® Word、Excel和Powerpoint僅可用於Microsoft® Windows。 如果使用基於UNIX的作業系統，請安裝OpenOffice以將富文本檔案和支援的Microsoft® Office檔案轉換為PDF文檔。
 >* 關閉安裝Adobe Acrobat和第三方軟體後顯示的所有對話框，供配置為使用PDF生成器服務的所有用戶使用。
 >* 至少啟動一次所有已安裝的軟體。 關閉所有配置為使用PDF生成器服務的用戶的所有對話框。
@@ -389,10 +390,10 @@ AEM Forms附加軟體包是部署到的應AEM用程式 該軟體包包含AEM For
    1. 選擇 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 的子菜單。
    2. 選擇包的版本和類型。 您還可以使用 **[!UICONTROL 搜索下載]** 選項。
 1. 點擊適用於您的作業系統的包名稱，選擇 **[!UICONTROL 接受EULA條款]**，然後點擊 **[!UICONTROL 下載]**。
-1. 開啟[套件管理器](https://docs.adobe.com/content/help/zh-Hant/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
+1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
 1. 選擇包並按一下 **[!UICONTROL 安裝]**。
 
-   您也可以通過中列出的直接連結下載軟體包 [AEM Forms釋放](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
+   您也可以通過中列出的直接連結下載軟體包 [AEM Forms釋放](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 文章。
 
 1. 安裝軟體包後，系統會提示您重新啟動實AEM例。 **不要立即停止伺服器。** 停止AEM Forms伺服器之前，請等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出現在 `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log檔案和日誌穩定。
 
@@ -759,6 +760,34 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 * 對於Microsoft® Office和OpenOffice，請手動執行至少一次轉換（作為每個用戶），以確保轉換過程中不會彈出對話框。 如果出現任何對話，則將其取消。 自動轉換過程中不應出現此類對話框。
 
 * 執行示例轉換。
+
++++
+
++++安裝在Adobe Acrobat伺服器上的AEM Forms許可證到期
+
+* 如果你有Adobe Acrobat的現有許可證，而且已經過期， [下載最新版本的Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html)，並遷移序列號。 之前 [遷移序列號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)。
+
+   * 使用以下命令生成prov.xml並使用prov.xml檔案（而不是中提供的命令）重新序列化現有安裝 [遷移序列號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 編號文章。
+
+      * 生成prov.xml
+
+         ```
+         adobe_prtk --tool=VolumeSerialize --generate --serial=<serialnum> [--leid=<LEID>] [--regsuppress=ss] [--eulasuppress] [--locales=limited list of locales in xx_XX format or ALL>] [--provfile=<Absolute path to prov.xml>]
+         ```
+
+      * 卷序列化包（使用prov.xml檔案和新序列重新序列化現有安裝）:以管理員身份從PRTK安裝資料夾中運行以下命令，以序列化和激活客戶端電腦上部署的包：
+
+         ```
+         adobe_prtk --tool=VolumeSerialize --provfile=C:\prov.xml –stream
+         ```
+
+* 對於大型安裝，請使用 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) 刪除以前版本的Reader和Acrobat。 自定義安裝程式並將其部署到您組織的所有電腦。
+
++++
+
++++ AEM Forms伺服器處於離線或安全環境中，並且Internet無法激活Acrobat。
+
+* 您可以在Adobe產品首次發佈後7天內聯機完成線上激活和註冊，或使用啟用網際網路的設備和產品序列號完成此過程。 有關詳細說明，請參見 [離線激活](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en)。
 
 +++
 
