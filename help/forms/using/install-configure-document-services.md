@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 0f4207564645ef7ba7da9064e971248b59f5a9b3
+source-git-commit: a23b3648b2687bcdbb46ea5e0bb42090822e1dd9
 workflow-type: tm+mt
-source-wordcount: '5381'
+source-wordcount: '5420'
 ht-degree: 1%
 
 ---
@@ -203,7 +203,7 @@ AEM Forms附加軟體包是部署到的應AEM用程式 通常，只需一個實A
 >* Adobe Acrobat、Microsoft® Word、Excel和Powerpoint僅可用於Microsoft® Windows。 如果使用基於UNIX的作業系統，請安裝OpenOffice以將富文本檔案和支援的Microsoft® Office檔案轉換為PDF文檔。
 >* 關閉安裝Adobe Acrobat和第三方軟體後顯示的所有對話框，供配置為使用PDF生成器服務的所有用戶使用。
 >* 至少啟動一次所有已安裝的軟體。 關閉所有配置為使用PDF生成器服務的用戶的所有對話框。
->
+>* [檢查您的Adobe Acrobat序列號的到期日期](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) 並設定更新許可證或 [遷移序列號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 根據到期日。
 
 
 安裝Acrobat後，開啟Microsoft® Word。 在 **Acrobat** 按鈕 **建立PDF** 並將電腦上可用的.doc或.docx檔案轉換為PDF文檔。 如果轉換成功，AEM Forms已準備好將Acrobat與PDF生成器服務配合使用。
