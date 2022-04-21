@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: a23b3648b2687bcdbb46ea5e0bb42090822e1dd9
+source-git-commit: 4b3327ed46024662813bb538f8338c59e508e10e
 workflow-type: tm+mt
-source-wordcount: '5420'
+source-wordcount: '5330'
 ht-degree: 1%
 
 ---
@@ -223,11 +223,6 @@ AEM Forms附加軟體包是部署到的應AEM用程式 通常，只需一個實A
    <td><p><strong>JDK（64位）</strong></p> </td>
    <td><p>JAVA_HOME</p> </td>
    <td><p>C:\Program Files\Java\jdk1.8.0_74</p> </td>
-  </tr>
-  <tr>
-   <td><p><strong>JDK（32位）</strong></p> </td>
-   <td><p>JAVA_HOME_32</p> </td>
-   <td><p>C:\Program Files (x86)\Java\jdk1.8.0_74</p> </td>
   </tr>
   <tr>
    <td><p><strong>Adobe Acrobat</strong></p> </td>
@@ -596,7 +591,20 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
 「系統就緒性」工具檢查機器是否配置正確以運行PDF生成器轉換。 該工具在指定路徑上生成報告。 要運行工具，請執行以下操作：
 
-1. 為「系統就緒」工具建立配置檔案。 例如， srt_config.yaml。 檔案格式為：
+1. 開啟命令提示符。 導航到 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 的子菜單。
+
+1. 從命令提示符運行以下命令：
+
+   `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
+
+   該命令生成報告，並建立srt_config.yaml檔案。
+
+   >[!NOTE]
+   >
+   > * 如果系統就緒工具報告pdfgen.api檔案在Acrobat插件資料夾中不可用，則從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄 `[Acrobat_root]\Acrobat\plug_ins` 的子菜單。
+   >
+   > * 可以使用srt_config.yaml檔案配置的各種設定。 檔案格式為：
+
 
    ```
       # =================================================================
@@ -623,19 +631,13 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
       outputDir:
    ```
 
-1. 開啟命令提示符。 導航到 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 的子菜單。 從命令提示符運行以下命令：
-
-   `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
-
-   >[!NOTE]
-   >
-   >如果系統就緒工具報告pdfgen.api檔案在Acrobat插件資料夾中不可用，則從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄 `[Acrobat_root]\Acrobat\plug_ins` 的子菜單。
-
 1. 導航到 `[Path_of_reports_folder]`. 開啟SystemReadinessTool.html檔案。 驗證報告並修復上述問題。
 
 ## 疑難排解
 
 如果即使在修復了SRT工具報告的所有問題後仍面臨問題，請執行以下檢查：
+
+在執行以下檢查之前，請確保 [系統就緒性工具](#SRT) 不報告任何錯誤。
 
 +++ Adobe Acrobat
 
@@ -644,9 +646,7 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 * 確保 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) 批處理檔案以管理員權限運行。
 * 確保在PDF配置UI中添加PDF生成器用戶。
 * 確保 [替換進程級別令牌](#grant-the-replace-a-process-level-token-privilege) 為PDF生成器用戶添加權限。
-* （對於基於應用伺服器的安裝）確保應用伺服器以服務形式運行。
-* 確保用戶對PDF生成器的臨時和作業系統臨時目錄具有讀寫權限。 比如說， `<crx-quickstart-home>\temp` 和 `C:\Windows\Temp`
-* 確保為AcrobatOffice應用程式啟用MicrosoftPDFMaker Office COM載入項。 如果未啟用載入項，請運行Adobe Acrobat修復，運行 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) 檔案，然後重新啟動AEM Forms伺服器。
+* 確保為AcrobatOffice應用程式啟用MicrosoftPDFMaker Office COM載入項。
 
 +++
 
@@ -654,12 +654,9 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
 **Microsoft® Windows**
 
-* 確保 [支援的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 已安裝Open Office，並取消所有應用程式的開啟對話框。
+* 確保 [支援的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 已安裝Microsoft辦公室，並取消所有應用程式的開啟對話。
 * 確保在PDF配置UI中添加PDF生成器用戶。
-* 確保 [系統就緒性工具](#SRT) 不報告任何錯誤。
 * 確保PDF生成器用戶是管理員組的成員， [替換進程級別令牌](#grant-the-replace-a-process-level-token-privilege) 為用戶設定權限。
-* 確保 `\Windows\SysWOW64\config\systemprofile\Deskop` 資料夾存在。 如果資料夾不存在，請建立它。
-* 授予對 `\Windows\SysWOW64\config\systemprofile`。 `<crx-quickstart-home>\temp`, `\Windows\Temp` 資料夾到PDF生成器用戶。
 * 確保用戶在PDF生成器UI中配置，並執行以下操作：
    1. 使用PDF生成器用戶登錄Microsoft® Windows。
    1. 開啟Microsoft® Office或Open Office應用程式並取消所有對話框。
@@ -673,7 +670,6 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
 * 確保 [支援的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 已安裝Open Office，所有應用程式的開啟對話框均被取消，Office應用程式已成功啟動。
 * 建立環境變數 `OpenOffice_PATH` 並將其設定為指向在 [控制台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) 或dt（設備樹）配置檔案。
-* 使用32位Java™啟動AEM Forms伺服器。
 * 如果安裝OpenOffice時出現問題，請確保 [32位庫](#extrarequirements) OpenOffice安裝所需的內容可用。
 
 +++
@@ -709,7 +705,7 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 * 確保系統上安裝了32位lib curl、libcrypto和libssl庫的最新版本。 還建立符號連結 `/usr/lib/libcurl.so` (或libcurl.a（用於AIX®）, `/usr/lib/libcrypto.so` （或libcrypto.a for AIX®）和 `/usr/lib/libssl.so` （或libssl.a for AIX®），指向各個庫的最新版本（32位）。
 
 * 為IBM® SSL套接字提供程式執行以下步驟：
-   1. 從中複製java.security檔案 `<WAS_Installed_JAVA>\jre\lib\security` 到你AEM Forms伺服器上的任何位置。 預設位置為「預設位置」為= `<WAS_Installed>\Appserver\java_1.7_64\jre\lib\security`。
+   1. 從中複製java.security檔案 `<WAS_Installed_JAVA>\jre\lib\security` 到你AEM Forms伺服器上的任何位置。 預設位置為「預設位置」為= `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`。
 
    1. 在複製的位置編輯java.security檔案，並更改JSSE2工廠的預設SSL Socket工廠（使用JSSE2工廠而不是WebSphere®）。
 
@@ -737,7 +733,7 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
 +++ 無法添加PDF生成器(PDFG)用戶
 
-* 確保Windows上安裝了Microsoft® Visual C++ 2008 x86、Microsoft® Visual C++ 2010 x86、Microsoft® Visual C++ 2012 x86和Microsoft® Visual C++ 2013 x86（32位）可再發行版。
+* 確保Windows上已安裝Microsoft® Visual C++ 2012 x86和Microsoft® Visual C++ 2013 x86（32位）可再發行軟體。
 
 +++
 
