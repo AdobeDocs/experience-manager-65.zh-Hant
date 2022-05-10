@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: f2cfe62c561e772a10ede4f76314a5904d6d64ff
+source-git-commit: 5c29ac6b87b818e168a746827624b65c6ba3b2f7
 workflow-type: tm+mt
-source-wordcount: '6048'
+source-wordcount: '6049'
 ht-degree: 3%
 
 ---
@@ -134,7 +134,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活資產後，任何更新都會立即即時發佈到S7交付。
 
 1. 選擇 **[!UICONTROL 保存]**。
-1. 預設情況下，Experience Manager作者無法預覽Dynamic Media內容。 因此，要在發佈Dynamic Media內容之前安全預覽它，您必須 *允許清單* Experience Manager作者實例，以連接Dynamic Media。 此外，如果您希望為用戶提供安全預覽內容的訪問權限，則 *允許清單* 其他IP地址。
+1. 預設情況下，Experience Manager作者無法預覽Dynamic Media內容。 因此，要在發佈Dynamic Media內容之前安全地預覽它，必須允許列出Experience Manager作者實例以連接到Dynamic Media。 此外，如果您希望為用戶提供安全預覽內容的訪問權限，則可以允許列出其他IP地址。 <!-- CQDOC-19254 UNHIDE ON MAY 26, 2022 To securely preview Dynamic Media content before it gets published, Experience Manager Author uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can allowlist more IPs to provide users access to securely preview content. -->
 要在Experience Manager中設定此操作，請參閱 [配置Dynamic Media映像伺服器的發佈設定 — 安全頁籤](/help/assets/dm-publish-settings.md#security-tab)。
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
@@ -306,7 +306,7 @@ Dynamic Media色彩管理允許您對正確的資產進行色彩調整。 通過
 
    * 按兩下 **[!UICONTROL jobParam]** 開啟其關聯的文本欄位。 請參閱 [支援的MIME類型](/help/assets/assets-formats.md#supported-mime-types) 可用於給定mime類型的允許處理參數值清單。
 
-1. 執行下列操作之一：
+1. 執行下列任一項作業：
 
    * 重複步驟3-4以編輯更多MIME類型。
    * 在CRXDE Lite頁的菜單欄上，選擇 **[!UICONTROL 全部保存]**。
@@ -315,7 +315,7 @@ Dynamic Media色彩管理允許您對正確的資產進行色彩調整。 通過
 
 #### 添加不支援格式的MIME類型 {#adding-mime-types-for-unsupported-formats}
 
-您可以為Experience Manager Assets不支援的格式添加自定義MIME類型。 通過在CRXDE Lite之前移動MIME類型，確保Experience Manager不會刪除您在中添加的任何新節點 `image_`。 另外，請確保其啟用值設定為 **[!UICONTROL 假]**。
+您可以為Experience Manager Assets不支援的格式添加自定義MIME類型。 通過在CRXDE Lite之前移動MIME類型，確保Experience Manager不會刪除添加到中的任何新節點 `image_`。 另外，請確保其啟用值設定為 **[!UICONTROL 假]**。
 
 **要為不支援的格式添加MIME類型：**
 
@@ -395,7 +395,7 @@ Dynamic Media色彩管理允許您對正確的資產進行色彩調整。 通過
    可以選擇 **[!UICONTROL 查看代碼]** 框中，選擇「 CSV文本」。 如果表單視圖因任何原因限制您，則可以輸入或更改這些值以幫助定義命名約定的元素。 如果無法在表單視圖中分析您的值，則表單欄位將變為非活動狀態。
 
    >[!NOTE]
-   取消激活的表單域不會驗證規則運算式是否正確。 在「結果」(Result)行後，將看到要為每個元素構建的規則運算式的結果。 完整的規則運算式在頁面底部可見。
+   取消激活的表單域不會驗證規則運算式是否正確。 在「結果」(Result)行後，將看到要為每個元素生成的規則運算式的結果。 完整的規則運算式在頁面底部可見。
 
 1. 根據需要展開每個元素並輸入要使用的命名約定。
 1. 如有必要，請執行以下任一操作：
@@ -403,14 +403,12 @@ Dynamic Media色彩管理允許您對正確的資產進行色彩調整。 通過
    * 選擇 **[!UICONTROL 添加]** 為元素添加其他命名約定。
    * 選擇 **[!UICONTROL 刪除]** 刪除元素的命名約定。
 
-1. 執行下列操作之一：
+1. 執行下列任一項作業：
 
    * 選擇 **[!UICONTROL 另存為]** 鍵入預設的名稱。
    * 選擇 **[!UICONTROL 保存]** 編輯現有預設。
 
 ##### 建立批集預設
-
-
 
 Dynamic Media使用批集預設將資產組織成一組影像（替代影像、顏色選項、360旋轉），以在查看器中顯示。 批集預設在Dynamic Media的資產上載流程旁邊自動運行。
 
@@ -431,7 +429,7 @@ Dynamic Media使用批集預設將資產組織成一組影像（替代影像、�
 1. 在「預設清單」面板中，選擇 **[!UICONTROL 添加]** 激活螢幕右側「詳細資訊」面板中的定義欄位。
 1. 在「詳細資訊」面板的「預設名稱」欄位中，鍵入預設的名稱。
 1. 在「批集類型」下拉菜單中，選擇預設類型。
-1. 執行下列操作之一：
+1. 執行下列任一項作業：
 
    * 如果您使用的是先前在以下位置設定的預設命名約定 **[!UICONTROL 應用程式設定]** > **[!UICONTROL 批集預設]** > **[!UICONTROL 預設命名]**&#x200B;展開 **[!UICONTROL 資產命名約定]**，然後在「檔案命名」下拉清單中，選擇 **[!UICONTROL 預設]**。
 
