@@ -2,9 +2,9 @@
 title: 《 AEM 2022年內容與商業發佈說明》
 description: 《 AEM 2022年內容與商業發佈說明》
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 1a82930d9f0aa84cea590782aba2e70ec23b41c3
+source-git-commit: aacb497b10f46be3157aae86a5973aa277fda967
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '458'
 ht-degree: 6%
 
 ---
@@ -15,11 +15,29 @@ ht-degree: 6%
 
 查看下表中您當前使用或計畫將來使用的CIF版本的最低系統要求。
 
-| 元件 | 系統要求 |
+| Component | 系統要求 |
 |:-------|:-----:|
 | CIF附加 | 最小：AEM 6.5.7 、Magento2.3.5 GraphQL架構 |
 | CIF核心元件 | [系統要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 發佈日期：2022年4月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加 | 2022.04.28.00 | [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
+| CIF核心元件 | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
+| CIF Venia參考站點 | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
+
+### 新增功能 {#what-is-new}
+
+* 快速訪問產品駕駛艙：在站點編輯器中按一下一次即可輕鬆訪問完整的詳細產品資訊
+
+   ![啟用願望清單](/help/assets/CIF/enable-wishlist.png)
+
+* 支援其他營銷商務元件：可將元件配置為顯示附加購物車和附加清單的行動要求
+
+   ![產品駕駛艙的站點編輯器快捷方式](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
 ## 發佈日期：2022年3月
 
@@ -51,7 +69,7 @@ ht-degree: 6%
 * 產品建議元件支援其他頁面類型（首頁、購物車、訂單確認）
 * **希望清單**
    * 已登錄的訪問者可以將產品添加到願望清單
-   * 通過myAccount修改願望清單及其產品
+   * 通過myAccount管理願望清單及其產品是可能的
    * 可以通過策略在元件級別上啟用/禁用「添加到願望清單」按鈕（例如，產品預告、產品詳細資訊）
    * 可作為核心元件在Venia StorefrontAEM中使用
 
