@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: f4e6a1855fad76df8102751b14e9ac6982315937
+source-git-commit: e486e5336edc28137b93d5263faf86c63a790528
 workflow-type: tm+mt
-source-wordcount: '3786'
+source-wordcount: '3779'
 ht-degree: 17%
 
 ---
@@ -46,7 +46,7 @@ Connected Assets功能通過整合支援上述使用案例 [!DNL Experience Mana
 
 作者在Content Finder中搜索影像和以下類型的文檔，並在頁面編輯器中拖動搜索到的資產。 文檔將添加到 `Download` 元件和影像 `Image` 元件。 作者還可以在任何自定義中添加遠程資產 [!DNL Experience Manager] 擴展預設值的元件 `Download` 或 `Image` 元件。 支援的格式包括：
 
-* **影像格式**:格式 [影像元件](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 支援。
+* **影像格式**:格式 [影像元件](assets-formats.md#supported-raster-image-formats) 支援。
 * **文檔格式**:查看 [支援的文檔格式](assets-formats.md#supported-document-formats)。
 
 ### 相關使用者和群組 {#users-and-groups-involved}
@@ -244,7 +244,7 @@ Experience Manager允許您將遠程DAM部署作為源連接到多個Experience 
 >
 >將遠程DAM中資產的更新提供給 [!DNL Sites] 僅在遠程DAM和 [!DNL Sites] 部署已啟動 [!DNL Experience Manager]。
 
-## 常見問題 {#frequently-asked-questions}
+## 常見問答 {#frequently-asked-questions}
 
 +++**如果需要使用上的可用資產，是否應配置已連接資產 [!DNL Sites] 部署？**
 
@@ -343,7 +343,7 @@ Experience Manager允許您將遠程DAM部署作為源連接到多個Experience 
 
 * 如果無法從 [!UICONTROL 內容查找器]，然後確保所需的角色和權限已到位。
 
-* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或者網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
+* 從遠程DAM獲取的資產由於一個或多個原因不能發佈在網頁上。 遠程伺服器上不存在它，缺少獲取它的適當權限，或網路故障可能是原因。 確保資產未從遠程DAM中刪除。 確保具有適當的權限，並滿足先決條件。 請重新將資產添加到頁面並重新發佈。 檢查[非同步工作清單](/help/sites-administering/asynchronous-jobs.md)，找出資產擷取作業的錯誤。
 
 * 如果無法從本地訪問遠程DAM部署 [!DNL Sites] 部署，確保允許跨站點Cookie, [相同站點cookie支援](/help/sites-administering/same-site-cookie-support.md) 已配置。 如果阻止跨站點Cookie的部署 [!DNL Experience Manager] 無法驗證。 比如說， [!DNL Google Chrome] 在Incognito模式下，可能會阻止第三方Cookie。 允許Cookie進入 [!DNL Chrome] 瀏覽器，按一下地址欄中的「eye」表徵圖，導航到 **站點不工作** > **已阻止**，選擇遠程DAM URL，並允許登錄令牌cookie。 或者，請參見 [如何啟用第三方cookie](https://support.google.com/chrome/answer/95647)。
 
