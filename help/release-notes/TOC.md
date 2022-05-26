@@ -7,10 +7,10 @@ breadcrumb-title: 發行說明
 user-guide-description: 瞭解發行說明中AEM6.5中的最新新功能。
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 0e521d9b70b19b235b71c8495f9f40ffe2155769
+source-git-commit: 2fb2ad0936127c06d9ba526d2e27f91aaf546ff1
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 43%
+source-wordcount: '59'
+ht-degree: 38%
 
 ---
 
@@ -18,8 +18,9 @@ ht-degree: 43%
 # Adobe Experience Manager6.5發行說明 {#release-notes}
 
 + [AEM6.5發行說明](home.md)
-+ [最新發行說明](release-notes.md)
++ [當前發行說明](release-notes.md)
 + 上一份發行說明 {#service-pack}
+   + [6.5.12](previous/6.5.12.md)
    + [6.5.11](previous/6.5.11.md)
    + [6.5.10](previous/6.5.10.md)
    + [6.5.9](previous/6.5.9.md)
