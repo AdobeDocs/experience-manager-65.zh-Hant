@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: ee6e408668a523464632e53a01ba11eddec103f6
+source-git-commit: 66958dc5328177d27dbdddf0c8983096e38f76b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '672'
 ht-degree: 18%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 18%
    + [Dynamic Media 影片設定檔](video-profiles.md)
    + [Dynamic Media 影像設定檔](image-profiles.md)
    + [智慧型影像](imaging-faq.md)
+   + [具有客戶端設備像素比的智慧成像](client-side-dpr.md)
    + [影片](s7-video.md)
    + [HTTP2 傳送內容](http2.md)
    + [交付Dynamic Media資產](delivering-dynamic-media-assets.md)
@@ -153,7 +154,7 @@ ht-degree: 18%
    + [為內容片段建立翻譯項目](creating-translation-projects-for-content-fragments.md)
 + 管理資產 {#managing}
    + [管理數字資產](manage-assets.md)
-   + [管理集合](manage-collections.md)
+   + [管理收藏集](manage-collections.md)
    + [啟用重複檢測](duplicate-detection.md)
    + [組織數字資產](organize-assets.md)
    + [管理影片資產](managing-video-assets.md)
@@ -171,7 +172,7 @@ ht-degree: 18%
    + [相關資產](related-assets.md)
    + [專用資料夾共用](private-folder.md)
    + [視頻呈現](video-renditions.md)
-+ 與其他解決方案的整合 {#integrations}
++ 和其他解決方案整合 {#integrations}
    + [與 [!DNL Adobe Workfront]](workfront-integrations.md)
    + [安裝 [!DNL enhanced connector] 為 [!DNL Workfront]](workfront-connector-install.md)
    + [配置 [!DNL enhanced connector] 為 [!DNL Workfront]](workfront-connector-configure.md)
