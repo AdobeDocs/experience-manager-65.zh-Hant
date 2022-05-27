@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 684f73722834f1764e8f37ad790d7da4ef57a369
+source-git-commit: b14cbc4cad15b06754db8b8c992a596d4d64c096
 workflow-type: tm+mt
-source-wordcount: '6090'
+source-wordcount: '6037'
 ht-degree: 3%
 
 ---
@@ -134,8 +134,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活資產後，任何更新都會立即即時發佈到S7交付。
 
 1. 選擇 **[!UICONTROL 保存]**。
-1. 預設情況下，Experience Manager作者無法預覽Dynamic Media內容。 因此，要在發佈Dynamic Media內容之前安全地預覽它，必須允許列出Experience Manager作者實例以連接到Dynamic Media。 此外，如果您希望為用戶提供安全預覽內容的訪問權限，則可以允許列出其他IP地址。
-要在發佈Dynamic Media內容之前安全地預覽它，Experience Manager作者使用基於令牌的驗證，因此，預設情況下Experience Manager作者預覽Dynamic Media內容。 但是，您可以允許列出更多IP，以便用戶能夠安全地預覽內容。 要在Experience Manager中設定此操作，請參閱 [配置Dynamic Media映像伺服器的發佈設定 — 安全頁籤](/help/assets/dm-publish-settings.md#security-tab)。
+1. 要在發佈Dynamic Media內容之前安全地預覽它，Experience Manager作者使用基於令牌的驗證，因此，預設情況下Experience Manager作者預覽Dynamic Media內容。 但是，您可以允許列出更多IP，以便用戶能夠安全地預覽內容。 要在Experience Manager中設定此操作，請參閱 [配置Dynamic Media映像伺服器的發佈設定 — 安全頁籤](/help/assets/dm-publish-settings.md#security-tab)。
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
