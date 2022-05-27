@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 9b02a5363d32771cd9c039f97044e8a1d72fe286
+source-git-commit: bb42b5990993b0f8cea95cf1f6c033aed2713c1c
 workflow-type: tm+mt
-source-wordcount: '3518'
+source-wordcount: '3519'
 ht-degree: 1%
 
 ---
@@ -129,7 +129,7 @@ DPR和網路頻寬值基於所綁定CDN的檢測到的客戶端值。 這些價�
 
 ## Smart Imaging是如何工作的？ {#how-does-smart-imaging-work}
 
-當用戶請求影像時，智慧映像會檢查用戶特徵並根據使用中的瀏覽器轉換為適當的影像格式。 這些格式轉換以不降低視覺保真度的方式進行。 智慧成像按照以下方式根據瀏覽器功能自動將影像轉換為不同格式。
+當用戶請求影像時，Smart Imaging會檢查用戶特徵，並根據使用中的瀏覽器將其轉換為適當的影像格式。 這些格式轉換以不降低視覺保真度的方式進行。 智慧成像按照以下方式根據瀏覽器功能自動將影像轉換為不同格式。
 
 * 如果瀏覽器支援格式，則自動轉換為AVIF
 * 如果AVIF轉換無益或瀏覽器不支援AVIF，則自動轉換為WebP
