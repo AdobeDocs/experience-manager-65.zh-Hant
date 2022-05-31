@@ -1,28 +1,36 @@
 ---
-title: AEM 6.5的相同網站Cookie支援
-description: AEM 6.5的相同網站Cookie支援
+title: 6.5版的同AEM一站點Cookie支援
+description: 6.5版的同AEM一站點Cookie支援
 topic-tags: security
 exl-id: e1616385-0855-4f70-b787-b01701929bbc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f7a4907ca6ce8ecaff9ef1fdf99ec0951ff497e0
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
-# AEM 6.5 {#same-site-cookie-support-for-aem-65}的相同網站Cookie支援
+# 6.5版的同AEM一站點Cookie支援 {#same-site-cookie-support-for-aem-65}
 
-自80版、Chrome和更新版Safari推出Cookie安全性新模型。 此模式旨在透過名為`SameSite`的設定，對協力廠商網站Cookie的可用性引入安全控制。 如需詳細資訊，請參閱這篇[文章](https://web.dev/samesite-cookies-explained/)。
+自80版、Chrome和更新版Safari以來，Cookie安全性引入了新型號。 此模式旨在通過名為 `SameSite`。 有關詳細資訊，請參閱 [文章](https://web.dev/samesite-cookies-explained/)。
 
-此設定的預設值(`SameSite=Lax`)可能會導致AEM執行個體或服務之間的驗證無法運作。 這是因為這些服務的網域或URL結構可能不受此Cookie原則的限制。
+此設定的預設值(`SameSite=Lax`)可能導致實例AEM或服務之間的身份驗證無效。 這是因為這些服務的域或URL結構可能不在此cookie策略的約束下。
 
-為了解決此問題，您需要為登入Token將SameSite Cookie部落設定為`None`。
+為了繞過這個，你需要設定 `SameSite` cookie屬性 `None` 的下界。
 
-您可以依照下列步驟來執行此操作：
+>[!CAUTION]
+>
+>的 `SameSite=None` 僅當協定安全(HTTPS)時才應用設定。
+>
+>如果協定不安全(HTTP)，則忽略該設定，伺服器將顯示以下WARN消息：
+>
+>`WARN com.day.crx.security.token.TokenCookie Skip 'SameSite=None'`
 
-1. 前往`http://serveraddress:serverport/system/console/configMgr`的Web主控台
-1. 搜尋並按一下&#x200B;**AdobeGranite代號驗證處理常式**
-1. 將登入代號Cookie **的** SameSite屬性設為`None`，如下圖所示
-   ![samesite](assets/samesite1.png)
-1. 按一下儲存
-1. 更新此設定並重新登出使用者後，`login-token` Cookie即會設定`None`屬性，並納入跨網站請求中。
+您可以通過以下步驟添加設定：
+
+1. 轉到Web控制台，位於 `http://serveraddress:serverport/system/console/configMgr`
+1. 搜索並按一下 **Adobe花崗岩令牌驗證處理程式**
+1. 設定 **登錄令牌Cookie的SameSite屬性** 至 `None`，如下圖所示
+   ![三元](assets/samesite1.png)
+1. 按一下「保存」
+1. 更新此設定並重新註銷用戶後， `login-token` 曲奇餅 `None` 屬性集，並將包含在跨站點請求中。
