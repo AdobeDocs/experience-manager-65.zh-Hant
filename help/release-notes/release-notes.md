@@ -3,9 +3,9 @@ title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: a45d66dc2226dbe2879aa61d95cc5379dce882bb
+source-git-commit: f78d12d6fa1daa1c1b3afdfe22ecb8c183e8e1d0
 workflow-type: tm+mt
-source-wordcount: '3774'
+source-wordcount: '3737'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 5%
    * 添加了對螢幕閱讀器的支援，以停止導航HTML工作區，直到開啟對話框。 (NPR-37134)
    * 增加了在Forms設計器中為超連結指定螢幕Reader文本的功能。(NPR-36221)
 
-中介紹了以下錯誤修復、關鍵功能和增強 [!DNL Experience Manager] 6.5.13.0 :
+中介紹了以下錯誤修復、關鍵功能和增強 [!DNL Experience Manager] 6.5.13.0:
 
 <!-- The following issues are fixed in [!DNL Experience Manager] 6.5.13.0: -->
 
@@ -92,9 +92,9 @@ ht-degree: 5%
 
 ## [!DNL Forms] {#forms-65130}
 
-* 使用預填充服務填充包含片段且片段包含支援RTF的文本框的自適應表單時，表單無法提交，並出現以下錯誤：
+<!-- * When you use the prefill service to fill an adaptive form that contains a fragment and the fragment contains a Text box that supports rich text, the form fails to submit, and the following error occurs:
 
-   `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542)
+  `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542) -->
 
 * 單選按鈕、複選框和檔案上載元件未正確從德語翻譯為英語。 (NPR-38527)
 * PDF417條形碼編碼 [!DNL Experience Manager] Forms對單選按鈕組無效。 (NPR-38525)
@@ -248,7 +248,7 @@ ht-degree: 5%
 * 「樣式系統」下拉清單可能位於頁面頂部，而不是元件的上下文中 — 用於使用 `cq:editConfig` 「afteredit:REFRESH_PAGE」。 此問題現在已解決。 (NPR-38384)
 
 <!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
-* 將文本元件添加到嵌套的佈局容器時未對齊。 (NPR-38193)
+* 添加到嵌套的佈局容器時，文本元件未對齊。 (NPR-38193)
 * 當沒有元件的「樣式系統」配置時，將顯示一個空樣式頁籤；當沒有配置時，該頁籤現在處於隱藏狀態。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有經過驗證才能工作。 (NPR-37996)
