@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 73d5b894dfa1bbb3ae3f2973cc4f9db1ace90ef8
+source-git-commit: dab643ffd64217018bf2f5544ae3c417963cea82
 workflow-type: tm+mt
-source-wordcount: '3515'
+source-wordcount: '3533'
 ht-degree: 1%
 
 ---
@@ -419,8 +419,12 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td>八點五 </td>
   </tr>
   <tr>
-   <td>MicrosoftSharepoint</td>
-   <td>2016<br /> </td>
+   <td>MicrosoftSharepoint </td>
+   <td>2016（不建議使用）<br /> </td>
+  </tr>
+  <tr>
+   <td>MicrosoftSharepoint </td>
+   <td>2019<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -589,7 +593,7 @@ AEM Forms應用現在支援Apache Cordova。 以下是支援的特定於平台�
 - TCP/IPv4或TCP/IPv6網路連接到JEE伺服器上的AEM Forms
 - 您必須具有管理權限才能在Windows上安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式將提示您輸入相應帳戶的憑據。
 
-### 設計師 {#designer}
+### Designer {#designer}
 
 - Microsoft® Windows® 2016伺服器、Microsoft® Windows® 2019伺服器或Microsoft® Windows® 10
 - 1 GHz或更快的處理器，支援PAE、NX和SSE2。
@@ -686,7 +690,7 @@ AEM Forms應用現在支援Apache Cordova。 以下是支援的特定於平台�
 > - Forms門戶支援Internet Explorer 11上的JAWS 14.0螢幕閱讀器軟體，用於輔助功能。
 
 
-#### Mobile客戶 {#mobile-clients}
+#### 移動客戶端 {#mobile-clients}
 
 <table>
  <tbody>
@@ -755,6 +759,10 @@ Adobe保留在任何給定時刻更改AEM Forms在JEE版本上支援的第三方
 通過搜索Adobe企業支援站點以查找與您的產品相關的知識庫文章，還可以找到有關第三方補丁程式的其他資訊。
 
 ## 平台更新 {#platform-updates}
+
+2022年6月2日AEM Forms6.5.13.0版將以下平台標籤為不建議使用：
+
+- MicrosoftSharePoint2016
 
 2022年3月3日AEM Forms6.5.12.0版將以下平台標籤為不建議使用：
 

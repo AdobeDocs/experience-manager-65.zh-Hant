@@ -3,9 +3,9 @@ title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6c9e8f1e62fe1a193cb9938e5f789e1e08b8339d
+source-git-commit: db94e464b130c6ca223314c3c5ffb8893a92a142
 workflow-type: tm+mt
-source-wordcount: '3546'
+source-wordcount: '3752'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,22 @@ ht-degree: 5%
 ## 包含的內容 [!DNL Experience Manager] 6.5.13.0 {#what-is-included-in-aem}
 
 [!DNL Experience Manager] 6.5.13.0包括自2019年4月6.5首次推出以來發佈的新功能、客戶要求的關鍵增強功能以及效能、穩定性和安全性改進。 [安裝此Service Pack](#install) 上 [!DNL Experience Manager] 6.5
+
+中介紹的關鍵功能和增強功能 [!DNL Adobe Experience Manager] 6.5.13.0是：
+
+* 在自適應形式中使用不可見的驗證碼：現在，您只能在可疑活動時使用看不見的驗證碼顯示驗證碼挑戰。 如果未發現可疑活動，則不顯示驗證碼質詢。 它有助於評估人形表單的完成情況，而無需複選框要求，減少定制工作，並改善最終用戶體驗。 (NPR-38500)
+
+* 已添加對在表單資料模型後處理器中讀取REST端點的響應標頭的支援。 (NPR-38275)
+
+* 現在，在生成自適應表單轉換檔案時，生成的XLIFF檔案的文本序列與相應自適應表單中的元件序列相同。 (NPR-37700)
+
+* 當您本地化自適應表單，並對基本語言的文本進行哪怕很小的更改時，所有其他語言都會丟失完整的翻譯。 此問題已在 [!DNL Experience Manager] 6.5.13.0。 (NPR-37189)
+
+* Forms的無障礙性改進：
+
+   * 增加了對螢幕閱讀器的支援，以將表的標題和正文識別為連續和連接的實體。 它幫助螢幕閱讀器正確導航表。 (NPR-37139)
+   * 添加了對螢幕閱讀器的支援，以停止導航HTML工作區，直到開啟對話框。 (NPR-37134)
+   * 增加了在Forms設計器中為超連結指定螢幕Reader文本的功能。(NPR-36221)
 
 中介紹了以下錯誤修復、關鍵功能和增強 [!DNL Experience Manager] 6.5.13.0:
 
@@ -120,20 +136,6 @@ ht-degree: 5%
 >
 >* [!DNL Experience Manager Forms] 會在預定的 [!DNL Experience Manager] Service Pack 發行日期一週後發行附加元件的套件。
 
-
-<!-- **Adaptive Forms**
-
-**Form Data Model**
-
-**Interactive Communication**
-
-**Document Services**
-
-**Document Security**
-
-**Foundation JEE**
-
-**Workflow** -->
 
 ## Granite {#granite-6513}
 
@@ -246,7 +248,7 @@ ht-degree: 5%
 * 「樣式系統」下拉清單可能位於頁面頂部，而不是元件的上下文中 — 用於使用 `cq:editConfig` 「afteredit:REFRESH_PAGE」。 此問題現在已解決。 (NPR-38384)
 
 <!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
-* 將文本元件添加到嵌套的佈局容器時未對齊。 (NPR-38193)
+* 添加到嵌套的佈局容器時，文本元件未對齊。 (NPR-38193)
 * 當沒有元件的「樣式系統」配置時，將顯示一個空樣式頁籤；當沒有配置時，該頁籤現在處於隱藏狀態。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有經過驗證才能工作。 (NPR-37996)
@@ -455,7 +457,7 @@ UberJar [!DNL Experience Manager] 6.5.13.0在 [Maven中央儲存庫](https://rep
 
 ## 包括OSGi捆綁包和內容包 {#osgi-bundles-and-content-packages-included}
 
-以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.13.0:
+以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.13.0 :
 
 * [6.5.13.0Experience Manager中包含的OSGi捆綁包清單](/help/release-notes/assets/65130_bundles.txt)
 
