@@ -3,9 +3,9 @@ title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: db94e464b130c6ca223314c3c5ffb8893a92a142
+source-git-commit: a45d66dc2226dbe2879aa61d95cc5379dce882bb
 workflow-type: tm+mt
-source-wordcount: '3752'
+source-wordcount: '3774'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 5%
    * 添加了對螢幕閱讀器的支援，以停止導航HTML工作區，直到開啟對話框。 (NPR-37134)
    * 增加了在Forms設計器中為超連結指定螢幕Reader文本的功能。(NPR-36221)
 
-中介紹了以下錯誤修復、關鍵功能和增強 [!DNL Experience Manager] 6.5.13.0:
+中介紹了以下錯誤修復、關鍵功能和增強 [!DNL Experience Manager] 6.5.13.0 :
 
 <!-- The following issues are fixed in [!DNL Experience Manager] 6.5.13.0: -->
 
@@ -248,7 +248,7 @@ ht-degree: 5%
 * 「樣式系統」下拉清單可能位於頁面頂部，而不是元件的上下文中 — 用於使用 `cq:editConfig` 「afteredit:REFRESH_PAGE」。 此問題現在已解決。 (NPR-38384)
 
 <!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
-* 添加到嵌套的佈局容器時，文本元件未對齊。 (NPR-38193)
+* 將文本元件添加到嵌套的佈局容器時未對齊。 (NPR-38193)
 * 當沒有元件的「樣式系統」配置時，將顯示一個空樣式頁籤；當沒有配置時，該頁籤現在處於隱藏狀態。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有經過驗證才能工作。 (NPR-37996)
@@ -371,6 +371,7 @@ ht-degree: 5%
 1. 確保已安裝 [!DNL Experience Manager] 服務包。
 1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)所列出的對應 Forms 附加套件。
 1. 按中所述安裝Forms附加程式包 [安裝AEM Forms附加軟體包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)。
+1. 如果在Forms6.5Experience Manager中使用字母，請安裝 [最新的AEMFD相容性包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)。
 
 ### 安裝 [!DNL Experience Manager] FormsJEE {#install-aem-forms-jee-installer}
 
@@ -457,7 +458,7 @@ UberJar [!DNL Experience Manager] 6.5.13.0在 [Maven中央儲存庫](https://rep
 
 ## 包括OSGi捆綁包和內容包 {#osgi-bundles-and-content-packages-included}
 
-以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.13.0 :
+以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.13.0:
 
 * [6.5.13.0Experience Manager中包含的OSGi捆綁包清單](/help/release-notes/assets/65130_bundles.txt)
 
