@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Developing User Guide
 description: 瞭解如何構建實AEM例。 瞭解有關平台和元件的更多資訊，並查找有關開發工具和個性化的資訊。
 seo-description: Covers how to build out your AEM instance.
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 28%
+source-wordcount: '372'
+ht-degree: 29%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 28%
 
 ## 關鍵條AEM目
 
-* [入AEM門](https://helpx.adobe.com/tw/experience-manager/get-started.html)
+* [入AEM門](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
 * [AEM6.5發行說明](/help/release-notes/home.md)
 * [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [安AEM全核對表](/help/sites-administering/security-checklist.md)
@@ -38,7 +38,7 @@ ht-degree: 28%
 | [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何構建實AEM例。 |
 | [管理使用手冊](/help/managing/home.md) | 本指南介紹如何成功管AEM理項目。 |
 | [《 Commerce使用手冊》](/help/commerce/home.md) | 瞭解有關的Commerce Integration FrameworkAEM。 |
-| [Mobile使用手冊](/help/mobile/home.md) | 本指南介紹如何為移動應用程式建立和管理內容。 |
+| [移動使用手冊](/help/mobile/home.md) | 本指南介紹如何為移動應用程式建立和管理內容。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南介紹如何與Livefyre共用用戶生成的內容。 |
 
 ## 關鍵資AEM源
