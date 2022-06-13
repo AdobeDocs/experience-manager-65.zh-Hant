@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 4b3327ed46024662813bb538f8338c59e508e10e
+source-git-commit: 57bccab9b95d328591e6cbb1070fd9e59712c016
 workflow-type: tm+mt
-source-wordcount: '5330'
+source-wordcount: '5364'
 ht-degree: 1%
 
 ---
@@ -329,7 +329,7 @@ AEM Forms附加軟體包是部署到的應AEM用程式 通常，只需一個實A
 
    1. Microsoft®建議在修改註冊表之前先備份它。 有關詳細步驟，請參見 [如何在Windows中備份和還原註冊表](https://support.microsoft.com/en-us/help/322756)。
    1. 開啟Microsoft® Windows註冊表編輯器。 要開啟註冊表編輯器，請轉到「開始」>「運行」，鍵入regedit，然後按一下「確定」。
-   1. 導航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`. 確保EnableLUA的值設定為0（零）。
+   1. 導覽至 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。確保EnableLUA的值設定為0（零）。
    1. 確保 **啟用LUA** 設定為0（零）。 如果值不是0，請將值更改為0。 關閉登錄編輯程式。
 
 1. 重新啟動電腦。
@@ -575,7 +575,7 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
 * 在基於UNIX的作業系統上，執行以下操作以查找任何缺少的庫：
 
-1. 導航到 `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/`.
+1. 導覽至 `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/`。
 
 1. 運行以下命令以列出PhantomJSHTML到PDF轉換所需的所有庫。
 
@@ -631,7 +631,7 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
       outputDir:
    ```
 
-1. 導航到 `[Path_of_reports_folder]`. 開啟SystemReadinessTool.html檔案。 驗證報告並修復上述問題。
+1. 導覽至 `[Path_of_reports_folder]`。開啟SystemReadinessTool.html檔案。 驗證報告並修復上述問題。
 
 ## 疑難排解
 
@@ -765,18 +765,19 @@ DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應�
 
    * 使用以下命令生成prov.xml並使用prov.xml檔案（而不是中提供的命令）重新序列化現有安裝 [遷移序列號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 編號文章。
 
-      * 生成prov.xml
+          「」
+          
+          adobe_prtk -tool=VolumeSerialize -genate —serial=&lt;serialnum> [ - leid=&lt;leid>] [ -regsuppress=ss] [ -eulasuppress] [ -locales=xx_XX格式或ALL格式的語言環境限制清單>] [ -provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
+          
+          「」
+      
+   * 卷序列化包（使用prov.xml檔案和新序列重新序列化現有安裝）:以管理員身份從PRTK安裝資料夾中運行以下命令，以序列化和激活客戶端電腦上部署的包：
 
-         ```
-         adobe_prtk --tool=VolumeSerialize --generate --serial=<serialnum> [--leid=<LEID>] [--regsuppress=ss] [--eulasuppress] [--locales=limited list of locales in xx_XX format or ALL>] [--provfile=<Absolute path to prov.xml>]
-         ```
-
-      * 卷序列化包（使用prov.xml檔案和新序列重新序列化現有安裝）:以管理員身份從PRTK安裝資料夾中運行以下命令，以序列化和激活客戶端電腦上部署的包：
-
-         ```
-         adobe_prtk --tool=VolumeSerialize --provfile=C:\prov.xml –stream
-         ```
-
+          「」
+          adobe_prtk -tool=VolumeSerialize -provfile=C:\prov.xml -stream
+          
+          「」
+      
 * 對於大型安裝，請使用 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) 刪除以前版本的Reader和Acrobat。 自定義安裝程式並將其部署到您組織的所有電腦。
 
 +++
