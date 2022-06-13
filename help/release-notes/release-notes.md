@@ -3,9 +3,9 @@ title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: f78d12d6fa1daa1c1b3afdfe22ecb8c183e8e1d0
+source-git-commit: 6b75c41cf796b28409c263175cf3f3a2044422ff
 workflow-type: tm+mt
-source-wordcount: '3737'
+source-wordcount: '3733'
 ht-degree: 5%
 
 ---
@@ -248,7 +248,7 @@ ht-degree: 5%
 * 「樣式系統」下拉清單可能位於頁面頂部，而不是元件的上下文中 — 用於使用 `cq:editConfig` 「afteredit:REFRESH_PAGE」。 此問題現在已解決。 (NPR-38384)
 
 <!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
-* 添加到嵌套的佈局容器時，文本元件未對齊。 (NPR-38193)
+* 將文本元件添加到嵌套的佈局容器時未對齊。 (NPR-38193)
 * 當沒有元件的「樣式系統」配置時，將顯示一個空樣式頁籤；當沒有配置時，該頁籤現在處於隱藏狀態。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有經過驗證才能工作。 (NPR-37996)
@@ -281,8 +281,9 @@ ht-degree: 5%
 
 ## Sling {#sling-6513}
 
-* 記憶體洩漏 `DiscoveryLiteDescriptor`。 (NPR-38288)
+<!-- OBSOLETE BASED ON CQDOC-19400 * Memory leak in `DiscoveryLiteDescriptor`. (NPR-38288) -->
 * 更新 `sling-javax.activation` 捆綁包，固定SLING-8777。 (NPR-38077)
+
 <!-- VULNERABILITY ISSUE - REMOVED AND ADDED TO https://wiki.corp.adobe.com/display/DXContent/Security+and+Vulnerability+issues+for+SP+and+CFP+releases * Security issues reported under `org.apache.sling.scripting.jst`. (NPR-38067) -->
 
 ## 翻譯項目 {#translation-6513}
