@@ -1,68 +1,74 @@
 ---
-title: 簽入和簽出 [!DNL Assets]中的檔案
-description: 了解如何簽出要編輯的資產，並在變更完成後重新簽入。
+title: 簽入和簽出檔案 [!DNL Assets]
+description: 瞭解如何簽出資產以進行編輯，並在更改完成後將其簽回。
 contentOwner: AG
 role: User
-feature: 資產管理
+feature: Asset Management
 exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 0%
+source-wordcount: '460'
+ht-degree: 2%
 
 ---
 
-# [!DNL Experience Manager] DAM中的簽入和簽出檔案 {#check-in-and-check-out-files-in-assets}
+# 簽入和簽出檔案 [!DNL Experience Manager] 水壩 {#check-in-and-check-out-files-in-assets}
 
-[!DNL Adobe Experience Manager Assets] 可讓您簽出要編輯的資產，並在完成變更後重新簽入。結帳資產後，只有您可以編輯、注釋、發佈、移動或刪除資產。 簽出資產會鎖定資產。 在您將資產簽回[!DNL Assets]之前，其他使用者無法對資產執行任何這些操作。 不過，他們仍可以變更鎖定資產的中繼資料。
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/check-out-and-submit-assets.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/managing/check-out-and-submit-assets.html?lang=en) |
 
-若要簽出/登入資產，您需要這些資產的寫入存取權。
+[!DNL Adobe Experience Manager Assets] 允許您簽出要編輯的資產，並在完成更改後將其簽回。 簽出資產後，只有您才能編輯、注釋、發佈、移動或刪除資產。 簽出資產會鎖定資產。 在您將資產簽回至 [!DNL Assets]。 但是，他們仍然可以更改鎖定資產的元資料。
 
-此功能可協助防止其他使用者覆寫作者所做的變更，讓多位使用者共同合作編輯團隊間的工作流程。
+要能夠簽出/簽入資產，您需要對其進行寫入訪問。
 
-## 結帳資產 {#checking-out-assets}
+此功能有助於防止其他用戶覆蓋作者所做的更改，其中多個用戶在跨團隊編輯工作流時進行協作。
 
-1. 從[!DNL Assets]使用者介面中，選取您要結帳的資產。 您也可以選取多個要結帳的資產。
-1. 在工具列中，按一下&#x200B;**[!UICONTROL Checkout]**。 **[!UICONTROL Checkout]**&#x200B;選項切換為&#x200B;**[!UICONTROL Checkin]**。
-若要確認其他使用者是否可以編輯您簽出的資產，請以其他使用者身分登入。 鎖定符號會顯示在您簽出的資產縮圖上。
+## 簽出資產 {#checking-out-assets}
+
+1. 從 [!DNL Assets] 用戶介面，選擇要簽出的資產。 您也可以選擇多個資產以簽出。
+1. 在工具欄中，按一下 **[!UICONTROL 簽出]**。 的 **[!UICONTROL 簽出]** 選項切換至 **[!UICONTROL 簽入]**。
+要驗證其他用戶是否可以編輯您簽出的資產，請以其他用戶身份登錄。 鎖定符號顯示在您簽出的資產的縮略圖上。
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
 
-   選取資產。 請注意，工具列不會顯示任何選項，讓您編輯、注釋、發佈或刪除資產。
+   選擇資產。 請注意，工具欄不顯示任何允許您編輯、注釋、發佈或刪除資產的選項。
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   若要編輯鎖定資產的中繼資料，請按一下「檢視屬性&#x200B;****」。
+   要編輯鎖定資產的元資料，請按一下 **[!UICONTROL 查看屬性]**。
 
-1. 按一下「**[!UICONTROL 編輯]**」以在編輯模式中開啟資產。
+1. 按一下 **[!UICONTROL 編輯]** 以編輯模式開啟資源。
 
    ![chlimage_1-473](assets/chlimage_1-473.png)
 
-1. 編輯資產並儲存變更。 例如，裁切影像並儲存。
+1. 編輯資產並保存更改。 例如，裁剪影像並保存。
 
    ![chlimage_1-474](assets/chlimage_1-474.png)
 
-   您也可以選擇為資產加上注釋或發佈。
+   您也可以選擇注釋或發佈資產。
 
-1. 從[!DNL Assets]介面中選擇已編輯的資產，然後從工具欄按一下&#x200B;**[!UICONTROL 簽入]**。 已修改的資產已簽入[!DNL Assets]，可供其他使用者編輯。
+1. 從 [!DNL Assets] ，然後按一下 **[!UICONTROL 簽入]** 的子菜單。 已修改的資產將簽入到 [!DNL Assets] 可供其他用戶編輯。
 
 ## 強制簽入 {#forced-check-in}
 
 管理員可以簽入其他用戶簽出的資產。
 
-1. 以管理員身分登入[!DNL Assets]。
-1. 從[!DNL Assets]使用者介面中，選取一或多個已由其他使用者簽出的資產。
+1. 登錄到 [!DNL Assets] 作為管理員。
+1. 從 [!DNL Assets] 用戶介面選擇一個或多個已由其他用戶簽出的資產。
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. 在工具欄中，按一下&#x200B;**[!UICONTROL 釋放鎖定]**。 資產會重新簽入，供其他使用者編輯。
+1. 在工具欄中，按一下 **[!UICONTROL 釋放鎖定]**。 資產將簽回並可供其他用戶編輯。
 
-## 最佳實務和限制 {#tips-limitations}
+## 最佳做法和限制 {#tips-limitations}
 
-* 可以刪除包含已簽出資產檔案的&#x200B;*資料夾*。 刪除資料夾前，請確定使用者未簽出任何數位資產。
+* 可以刪除 *資料夾* 包含已簽出資產檔案。 在刪除資料夾之前，請確保用戶未簽出任何數字資產。
 
 >[!MORELIKETHIS]
 >
->* [了解籤入和簽出獨立頂 [!DNL Experience Manager] 層應用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#how-app-works2)
->* [了解籤入和簽出的視頻教程 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
+>* [了解籤入和簽出 [!DNL Experience Manager] 案頭應用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#how-app-works2)
+>* [了解籤入和簽入的視頻教程 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 

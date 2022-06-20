@@ -5,16 +5,22 @@ contentOwner: AG
 role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 0%
+source-wordcount: '1758'
+ht-degree: 1%
 
 ---
 
 # [!DNL Assets] HTTP API {#assets-http-api}
 
-## 概覽 {#overview}
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html?lang=en) |
+
+## 概觀 {#overview}
 
 的 [!DNL Assets] HTTP API允許對數字資產（包括元資料、格式副本和注釋）以及結構化內容（使用）執行建立 — 讀取 — 更新 — 刪除(CRUD)操作 [!DNL Experience Manager] 內容片段。 它在 `/api/assets` 並作為REST API實現。 包括 [支援內容片段](/help/assets/assets-api-content-fragments.md)。
 
@@ -64,7 +70,7 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種�
 * `parent`:連結到父資料夾。
 * `thumbnail`:（可選）指向資料夾縮略圖的連結。
 
-### 資產 {#assets}
+### Assets {#assets}
 
 在Experience Manager中，資產包含以下元素：
 

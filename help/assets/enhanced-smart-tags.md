@@ -5,47 +5,53 @@ contentOwner: AG
 feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: fbb27348df0b9d5f93d186acbce45fcf88197c5e
+source-git-commit: dd1e08bee03a6c7b07b32b0fb929d02dad467744
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 0%
+source-wordcount: '1579'
+ht-degree: 1%
 
 ---
 
-# 了解、套用和組織智慧標籤 {#enhanced-smart-tags}
+# 瞭解、應用和建立智慧標籤 {#enhanced-smart-tags}
 
-處理數位資產的組織，在資產中繼資料中越來越多地使用分類法控制的辭匯。 基本上，它包含員工、合作夥伴和客戶通常用來參考和搜尋特定類別的數位資產的關鍵字清單。 使用分類控制的辭匯來標籤資產，可確保輕鬆識別及擷取資產。
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/enhanced-smart-tags.html?lang=en) |
 
-與自然語言辭匯相比，根據商業分類法標籤數位資產有助於使其與公司的業務一致，並確保搜尋中出現最相關的資產。
+處理數字資產的組織越來越多地在資產元資料中使用分類控制辭彙。 實際上，它包括一個關鍵字清單，員工、合作夥伴和客戶通常用來引用和搜索特定類別的數字資產。 使用分類控制辭彙標籤資產可確保資產易於識別和檢索。
 
-例如，汽車製造商可以用型號標籤汽車影像，以便在搜索各種型號的影像以設計促銷活動時，只顯示相關影像。
+與自然語言辭彙相比，基於業務分類標籤數字資產有助於使其與公司的業務保持一致，並確保最相關的資產出現在搜索中。
 
-若要讓智慧內容服務套用正確的標籤，請加以訓練以辨識您的分類法。 若要訓練服務，請先組織一組最能說明這些資產的資產和標籤。 為協助服務學習，請將這些標籤套用至資產，並執行訓練工作流程。
+例如，汽車製造商可以用型號名稱標籤汽車影像，以便當搜索各種型號的影像以設計促銷活動時，只顯示相關影像。
 
-標籤完成訓練並準備就緒後，服務現在可以透過標籤工作流程將這些標籤套用至資產。
+要使智慧內容服務應用正確的標籤，請對其進行培訓以識別分類。 要培訓服務，首先建立一組最能描述這些資產的資產和標籤。 要幫助服務學習，請在資產上應用這些標籤並運行培訓工作流。
 
-在背景中，智慧內容服務會使用Adobe Sensei AI架構，根據您的標籤結構和商業分類訓練其影像識別演算法。 然後，系統會使用此內容智慧，將相關標籤套用至不同的資產集。
+一旦標籤經過培訓並準備好，該服務現在就可以通過標籤工作流將這些標籤應用於資產。
 
-智慧內容服務是托管於[!DNL Adobe Developer Console]的雲端服務。 要在[!DNL Adobe Experience Manager]中使用它，系統管理員必須將您的[!DNL Experience Manager]部署與[!DNL Adobe Developer Console]整合。
+在後台，智慧內容服務使用Adobe SenseiAI框架，根據標籤結構和業務分類來訓練其影像識別算法。 然後，該內容智慧被用於對不同的資產集應用相關標籤。
 
-總而言之，以下是使用智慧內容服務的主要步驟：
+Smart Content Service是托管在 [!DNL Adobe Developer Console]。 要在 [!DNL Adobe Experience Manager]，系統管理員必須整合 [!DNL Experience Manager] 部署 [!DNL Adobe Developer Console]。
+
+總之，以下是使用智慧內容服務的主要步驟：
 
 * 入門
-* 檢閱資產和標籤（分類法定義）
-* 訓練智慧內容服務
+* 審閱資產和標籤（分類定義）
+* 培訓智慧內容服務
 * 自動標籤
 
 ![流程圖](assets/flowchart.gif)
 
 ## 先決條件和支援的格式 {#prerequisites}
 
-使用智慧內容服務之前，請確定以下內容以在[!DNL Adobe Developer Console]上建立整合：
+在使用智慧內容服務之前，請確保以下內容在 [!DNL Adobe Developer Console]:
 
 * 具有組織管理員權限的Adobe ID帳戶。
-* 為貴組織啟用智慧內容服務。
-* 要將智慧內容服務基本包添加到部署，請許可[!DNL Adobe Experience Manager Sites]基本包和[!DNL Assets]附加元件。
+* 為您的組織啟用Smart Content Service服務。
+* 將Smart Content Services Base包添加到部署，許可證 [!DNL Adobe Experience Manager Sites] 基本包和 [!DNL Assets] 附件。
 
-服務會將智慧標籤套用至下列MIME類型的資產：
+該服務將智慧標籤應用於以下MIME類型的資產：
 
 * `image/jpeg`
 * `image/tiff`
@@ -66,7 +72,7 @@ ht-degree: 0%
 * `image/psd`
 * `image/vnd.adobe.photoshop`
 
-服務會套用智慧標籤至下列MIME類型的資產轉譯：
+該服務將智慧標籤應用於以下MIME類型的資產格式副本：
 
 * `image/jpeg`
 * `image/pjpeg`
@@ -74,117 +80,117 @@ ht-degree: 0%
 
 ## 入門 {#onboarding}
 
-智慧內容服務可作為[!DNL Experience Manager]的附加元件購買。 購買後，系統會傳送電子郵件給您組織的管理員，並附上[!DNL Adobe I/O]連結。
+智慧內容服務可作為附件購買 [!DNL Experience Manager]。 購買後，系統會向組織的管理員發送一封電子郵件，其中包含指向 [!DNL Adobe I/O]。
 
-管理員可以按照該連結將智慧內容服務與[!DNL Experience Manager]整合。 若要將服務與[!DNL Experience Manager Assets]整合，請參閱[設定智慧標籤](config-smart-tagging.md)。
+管理員可以遵循連結將智慧內容服務與 [!DNL Experience Manager]。 將服務與 [!DNL Experience Manager Assets]，請參閱 [配置智慧標籤](config-smart-tagging.md)。
 
-當管理員配置服務並在[!DNL Experience Manager]中添加用戶時，上線過程將完成。
+當管理員配置服務並在中添加用戶時，登入過程將完成 [!DNL Experience Manager]。
 
-## 檢閱資產和標籤 {#reviewing-assets-and-tags}
+## 查看資產和標籤 {#reviewing-assets-and-tags}
 
-上線後，您首先想要識別一組標籤，以便在您的業務環境中最能描述這些影像。
+在上架後，您首先要確定一組標籤，這些標籤最適合在您的業務環境中描述這些映像。
 
-接下來，查看影像，以識別最能代表您產品滿足特定業務需求的一組影像。 確保已組織集中的資產符合[智慧內容服務訓練准則](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
+接下來，查看影像以確定一組最能代表您產品以滿足特定業務需求的影像。 確保所管理集中的資產符合 [智慧內容服務培訓指南](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
 
-將資產新增至資料夾，並從屬性頁面將標籤套用至每個資產。 然後，對此資料夾運行培訓工作流。 已組織的資產集可讓智慧內容服務使用您的分類定義，有效訓練更多資產。
+將資產添加到資料夾，並將標籤應用到屬性頁面中的每個資產。 然後，在此資料夾上運行培訓工作流。 管理的資產集使智慧內容服務能夠使用分類定義有效地培訓更多資產。
 
 >[!NOTE]
 >
->1. 培訓是一個不可撤銷的過程。 Adobe建議您先檢閱已組織資產集中的標籤，再訓練標籤上的智慧內容服務。
->1. 針對標籤進行訓練之前，請參閱[智慧內容服務訓練准則](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
->1. 第一次訓練智慧內容服務時，Adobe建議您至少在兩個不同的標籤上訓練智慧內容服務。
+>1. 培訓是一個不可撤銷的過程。 Adobe建議您在對標籤上的智慧內容服務進行培訓之前，早早地查看所管理的資產集中的標籤。
+>1. 在培訓標籤之前，請參閱 [智慧內容服務培訓指南](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
+>1. 首次培訓智慧內容服務時，Adobe建議您至少在兩個不同的標籤上對其進行培訓。
 
 
-## 了解使用智慧標籤的[!DNL Experience Manager]搜尋結果 {#understandsearch}
+## 瞭解 [!DNL Experience Manager] 使用智慧標籤搜索結果 {#understandsearch}
 
-預設情況下， [!DNL Experience Manager]搜索將搜索詞與`AND`子句組合。 使用智慧標籤不會變更此預設行為。 使用智慧標籤會新增額外的`OR`子句，以尋找與智慧標籤相關的任何搜尋詞。 例如，請考慮搜尋`woman running`。 依預設，中繼資料中只有`woman`或只有`running`關鍵字的資產不會出現在搜尋結果中。 不過，使用智慧標籤標示為`woman`或`running`的資產會顯示在這類搜尋查詢中。 搜索結果是，
+預設情況下， [!DNL Experience Manager] 搜索將搜索詞與 `AND` 。 使用智慧標籤不會更改此預設行為。 使用智慧標籤可添加額外 `OR` 子句，以查找與smart標籤相關的任何搜索項。 例如，請考慮搜索 `woman running`。 僅具有 `woman` 或者 `running` 預設情況下，元資料中的關鍵字不會出現在搜索結果中。 但是，標有 `woman` 或 `running` 在此類搜索查詢中顯示使用智慧標籤。 所以搜索結果是，
 
-* 中繼資料中具有`woman`和`running`關鍵字的資產。
+* 資產 `woman` 和 `running` 元資料中的關鍵字。
 
-* 以任一關鍵字標示的資產智慧型。
+* 標籤了任一關鍵字的智慧資產。
 
-會先顯示符合中繼資料欄位中所有搜尋詞的搜尋結果，接著顯示符合智慧標籤中任何搜尋詞的搜尋結果。 在上述範例中，搜尋結果的顯示約略順序為：
+首先顯示與元資料欄位中的所有搜索項相匹配的搜索結果，然後顯示與智慧標籤中任何搜索項相匹配的搜索結果。 在上例中，搜索結果的大致顯示順序是：
 
-1. 在各種中繼資料欄位中符合`woman running`。
-1. 智慧標籤中`woman running`的相符項目。
-1. 相符項目：智慧標籤中的`woman`或`running`。
+1. 匹配項 `woman running` 的子菜單。
+1. 匹配項 `woman running` 在智慧標籤中。
+1. 匹配項 `woman` 或 `running` 在智慧標籤中。
 
 >[!CAUTION]
 >
->如果在[!DNL Adobe Experience Manager]之外完成Lucene索引，則基於智慧標籤的搜尋將無法如預期運作。
+>如果Lucene索引已完成 [!DNL Adobe Experience Manager]，則基於智慧標籤的搜索不會按預期工作。
 
 ## 自動標籤資產 {#tagging-assets-automatically}
 
-在您訓練智慧內容服務後，可以觸發標籤工作流程，自動對不同的一組類似資產套用適當標籤。
+在培訓了智慧內容服務後，可以觸發標籤工作流以自動將適當的標籤應用於不同的一組類似資產。
 
 您可以定期或在需要時運行標籤工作流。
 
 >[!NOTE]
 >
->標籤工作流程會同時在資產和資料夾上執行。
+>標籤工作流在資產和資料夾上運行。
 
 ### 定期標籤 {#periodic-tagging}
 
-您可以啟用智慧內容服務，以定期標籤資料夾中的資產。 開啟資產資料夾的屬性頁面，在&#x200B;**[!UICONTROL Details]**&#x200B;標籤下選擇&#x200B;**[!UICONTROL 啟用智慧標籤]**，並保存更改。
+您可以啟用Smart Content Service定期在資料夾中標籤資產。 開啟資產資料夾的屬性頁，選擇 **[!UICONTROL 啟用智慧標籤]** 下 **[!UICONTROL 詳細資訊]** 的子菜單。
 
-為資料夾選取此選項後，智慧內容服務就會自動在資料夾中標籤資產。 預設情況下，標籤工作流程每天凌晨12:00執行。
+為資料夾選擇此選項後，Smart Content Service會自動為資料夾中的資產標籤。 預設情況下，標籤工作流每天上午12:00運行。
 
-### 隨需標籤 {#on-demand-tagging}
+### 按需標籤 {#on-demand-tagging}
 
-您可以從工作流程控制台或時間軸觸發標籤工作流程，以立即標籤您的資產。
+您可以從工作流控制台或時間軸觸發標籤工作流，以立即標籤您的資產。
 
 >[!NOTE]
 >
->如果您從時間軸執行標籤工作流程，一次最多可對15個資產套用標籤。
+>如果從時間軸運行標籤工作流，則一次最多可以對15個資產應用標籤。
 
-#### 從工作流程主控台標籤資產 {#tagging-assets-from-the-workflow-console}
+#### 從工作流控制台標籤資產 {#tagging-assets-from-the-workflow-console}
 
-1. 在[!DNL Experience Manager]介面中，轉至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
-1. 從「**[!UICONTROL 工作流模型]**」頁中，選擇「**[!UICONTROL DAM智慧標籤資產]**」工作流，然後從工具欄按一下「**[!UICONTROL 啟動工作流]**」。
+1. 在 [!DNL Experience Manager] 介面，轉到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
+1. 從 **[!UICONTROL 工作流模型]** ，選擇 **[!UICONTROL DAM智慧標籤資產]** 工作流，然後按一下 **[!UICONTROL 啟動工作流]** 的子菜單。
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
 
-1. 在&#x200B;**[!UICONTROL 執行工作流程]**&#x200B;對話方塊中，瀏覽至包含您要自動套用標籤之資產的裝載資料夾。
-1. 指定工作流程的標題和可選注釋。 按一下&#x200B;**[!UICONTROL 運行]**。
+1. 在 **[!UICONTROL 運行工作流]** 對話框，瀏覽到包含要自動應用標籤的資產的負載資料夾。
+1. 指定工作流的標題和可選注釋。 按一下 **[!UICONTROL 運行]**。
 
-   ![tagging_dialog](assets/tagging_dialog.png)
+   ![標籤對話框](assets/tagging_dialog.png)
 
-   若要確認智慧內容服務是否正確標籤您的資產，請導覽至資產資料夾並檢閱標籤。
+   要驗證Smart Content Service是否正確標籤了您的資產，請導航到資產資料夾並查看標籤。
 
-#### 從時間軸標籤資產 {#tagging-assets-from-the-timeline}
+#### 從時間線標籤資產 {#tagging-assets-from-the-timeline}
 
-1. 從[!DNL Assets]使用者介面中，選取包含您要套用智慧標籤之資產或特定資產的資料夾。
-1. 從左上角開啟&#x200B;**[!UICONTROL 時間軸]**。
-1. 從左側邊欄底部開啟動作，然後按一下「開始工作流程」**[!UICONTROL 。]**
+1. 從 [!DNL Assets] 用戶介面，選擇包含要應用智慧標籤的資產或特定資產的資料夾。
+1. 從左上角開啟 **[!UICONTROL 時間軸]**。
+1. 從左側欄底部開啟操作，然後按一下 **[!UICONTROL 啟動工作流]**。
 
-   ![start_workflow](assets/start_workflow.png)
+   ![啟動工作流](assets/start_workflow.png)
 
-1. 選取&#x200B;**[!UICONTROL DAM智慧標籤資產]**&#x200B;工作流程，並指定工作流程的標題。
-1. 按一下&#x200B;**[!UICONTROL 開始]**。 工作流程會對資產套用標籤。 若要確認智慧內容服務是否已正確標籤您的資產，請導覽至資產資料夾並檢閱標籤。
+1. 選擇 **[!UICONTROL DAM智慧標籤資產]** ，並為工作流指定標題。
+1. 按一下 **[!UICONTROL 開始]**。 工作流將標籤應用於資產。 要驗證Smart Content Service是否正確標籤了您的資產，請導航到資產資料夾並查看標籤。
 
 >[!NOTE]
 >
->在後續的標籤週期中，只有修改的資產會以新訓練的標籤再次標籤。 不過，如果標籤工作流程的最後一個與目前標籤週期之間的間隙超過24小時，即使未更改的資產也會加上標籤。 對於定期標籤工作流程，當時間間隔超過6個月時，會標籤未更改的資產。
+>在隨後的標籤循環中，只有修改的資產才用新訓練的標籤重新標籤。 但是，如果標籤工作流的最後一個標籤週期與當前標籤週期之間的間隔超過24小時，則即使未更改的資產也會被標籤。 對於定期標籤工作流，當時間差超過六個月時，將標籤未更改的資產。
 
-## 組織或協調套用的智慧標籤 {#manage-smart-tags}
+## 建立或調整應用的智慧標籤 {#manage-smart-tags}
 
-您可以組織智慧標籤，移除指派給品牌影像的任何不正確標籤，以便僅顯示最相關的標籤。
+您可以建立智慧標籤以刪除分配給品牌影像的任何不準確標籤，以便只顯示最相關的標籤。
 
-協調智慧標籤也可確保影像顯示在最相關標籤的搜尋結果中，以利調整影像的標籤式搜尋。 從本質上講，這有助於消除不相關影像在搜索結果中出現的可能性。
+調節智慧標籤還有助於優化基於標籤的影像搜索，具體方法是確保您的影像出現在最相關標籤的搜索結果中。 本質上，它有助於消除不相關影像在搜索結果中出現的可能性。
 
-您也可以指派較高的排名給標籤，以提高其與影像的相關性。 提升影像的標籤，會增加搜尋特定標籤時，影像出現在搜尋結果中的機率。
+您還可以為標籤指定更高的等級，以增加其與影像的相關性。 當搜索特定標籤時，升級影像的標籤會增加在搜索結果中出現影像的可能性。
 
-1. 在搜尋方塊中，使用標籤作為關鍵字來搜尋資產。
-1. 若要識別您找不到與搜尋相關的影像，請檢閱搜尋結果。
-1. 選取影像，然後按一下工具列中的「管理標籤」 ****。
-1. 從&#x200B;**[!UICONTROL 管理標籤]**&#x200B;頁面，檢閱標籤。 如果您不希望根據特定標籤搜索影像，請選擇標籤，然後從工具欄按一下&#x200B;**[!UICONTROL Delete]**。 或者，按一下標籤旁出現的`x`符號。
-1. 或者，若要指派較高的排名給標籤，請選取標籤，然後從工具列按一下&#x200B;**[!UICONTROL Promote]**。 您促銷的標籤會移至&#x200B;**[!UICONTROL Tags]**&#x200B;區段。
-1. 按一下「**[!UICONTROL 儲存]**」，然後按一下「**[!UICONTROL 確定]**」
-1. 導覽至影像的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面。 請注意，您促銷的標籤已獲指派更相關性，且顯示在搜尋結果的前面。
+1. 在搜索框中，使用標籤作為關鍵字來搜索資產。
+1. 要標識您找不到與搜索相關的影像，請查看搜索結果。
+1. 選擇影像，然後按一下 **[!UICONTROL 管理標籤]** 的子菜單。
+1. 從 **[!UICONTROL 管理標籤]** 頁，查看標籤。 如果不希望根據特定標籤搜索影像，請選擇該標籤，然後按一下 **[!UICONTROL 刪除]** 的子菜單。 或者，按一下 `x` 表徵圖。
+1. （可選）要為標籤分配更高的級別，請選擇標籤並按一下 **[!UICONTROL 提升]** 的子菜單。 您升級的標籤將移到 **[!UICONTROL 標籤]** 的子菜單。
+1. 按一下 **[!UICONTROL 保存]** 然後按一下 **[!UICONTROL 確定]**
+1. 導航到 **[!UICONTROL 屬性]** 的子菜單。 請注意，您升級的標籤被分配了更多相關性，並在搜索結果中顯示得更早。
 
 ## 提示和限制 {#tips-best-practices-limitations}
 
-* 要訓練模型，請使用最合適的影像。 無法還原培訓或無法刪除培訓模型。 標籤的正確性取決於當前培訓，因此請小心。
-* 智慧內容服務每年最多只能使用200萬個標籤的影像。 處理和標籤的任何重複影像都計為已標籤影像。
-* 如果您從時間軸執行標籤工作流程，一次最多可對15個資產套用標籤。
-* 智慧標籤僅適用於PNG和JPG影像格式。 因此，如果支援的資產以這兩種格式建立轉譯，就會使用智慧標籤加上標籤。
+* 要訓練模型，請使用最合適的影像。 無法還原培訓或無法刪除培訓模型。 您的標籤準確性取決於當前培訓，因此請小心進行。
+* 智慧內容服務的使用限制為每年最多200萬張帶標籤的影像。 處理和標籤的任何重複影像都被計算為標籤影像。
+* 如果從時間軸運行標籤工作流，則一次最多可以對15個資產應用標籤。
+* 智慧標籤只適用於PNG和JPG影像格式。 因此，以這兩種格式建立格式副本的受支援資產將被標籤為「智慧標籤」。

@@ -5,15 +5,21 @@ contentOwner: AG
 role: Architect, Leader
 feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 0%
+source-wordcount: '586'
+ht-degree: 4%
 
 ---
 
 
 # 使用Media Library進行基本資產管理 {#manage-assets-using-media-library}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/medialibrary.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/medialibrary.html?lang=zh-Hant) |
 
 [!DNL Adobe Experience Manager] 平台提供了不同的資產管理功能。 Media Library允許用戶將少量資產上載到儲存庫、搜索和使用網頁中的資產，並完成有關資產的簡單資產管理任務。
 
@@ -51,7 +57,7 @@ Media Library為以下使用情形提供了基本的DAM功能：
 要使用Media Library功能，可以使用 [!DNL Experience Manager] 用戶介面。 Media Library是 [!DNL Experience Manager Sites] 安裝，不需要單獨的介面或載入項。 使用現有介面，Media Library用戶有權完成以下任務：
 
 * 建立資料夾以組織資產。
-* 上載資產。
+* 上傳資產.
 * 發佈資產。
 * 編輯、移動和複製資產。
 * 瀏覽、篩選和搜索（包括相似性搜索）資產。
