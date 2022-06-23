@@ -4,7 +4,7 @@ description: 瞭解如何執行就地升級。
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 64c9296554c55b539145dd59a14b2255b1750e47
+source-git-commit: 6d2b7e341dcdedf3c000b9fb0ecd21722bdf2a27
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 0%
@@ -187,7 +187,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 1. 通過替換現有jar的路徑修改命令( `crx-quickstart/app/aem-quickstart*.jar` 在本例中)的新jar是 `crx-quickstart` 的子菜單。 以我們以前的命令為例，我們的命令將是：
 
    ```shell
-   /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar cq-quickstart-6.5.0.jar -c crx-quickstart -p 4502 -Dsling.properties=conf/sling.properties
+   /usr/bin/java -server -Xmx1024m -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar cq-quickstart-6.5.0.jar -c crx-quickstart -p 4502 -Dsling.properties=conf/sling.properties
    ```
 
    這將確保為升級應用所有正確的記憶體設定、自定義運行模式和其他環境參數。 升級完成後，可以從將來啟動的啟動指令碼啟動實例。
