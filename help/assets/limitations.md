@@ -1,16 +1,17 @@
 ---
 title: Dynamic Media限制
-description: '瞭解建立映像集或旋轉集或上載PDF時的最佳做法和強制限制。 還瞭解Dynamic Media查看器不支援的Web瀏覽器和作業系統組合。 '
+description: 瞭解建立映像集或旋轉集或上載PDF時的最佳做法和強制限制。 還瞭解Dynamic Media查看器不支援的Web瀏覽器和作業系統組合。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/Dynamic-Media-Classic
 geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
 role: User
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+exl-id: e4d4059e-ac0b-42e7-910c-001310796574
+source-git-commit: 7a800199b0d3a9dce0a8a31d14f07326b56050ba
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 3%
+source-wordcount: '189'
+ht-degree: 6%
 
 ---
 
@@ -28,13 +29,13 @@ ht-degree: 3%
 
 在建立「旋轉集」或「映像集」或上載頁面提取PDF時，Adobe建議採用以下最佳做法並強制實施以下限制：
 
-| 資產 — 限制類型 | 最佳實踐 | 已實現的限制 | 2022年12月31日限額變動 |
+| 資產 — 限制類型 | 最佳實踐 | 強加的限制 | 2022年12月31日變更上限 |
 | --- | --- | --- | --- |
-| **影像**  — 每個映像的智慧作物數 | 5 | 100 |  |
-| **影像集**  — 每個集的重複資產數 | 無重複項 | 100 | 20 |
-| **影像集**  — 每個集的最大影像數 | 每組5-10頁影像 | 1000 |
-| **旋轉集**  — 每2D集的最大行/列數 | 每組12-18頁圖片 | 1000 |
-| **PDF**  — 要考慮提取的PDF的最大頁數 |  | 5000（用於新上載） | 100 |
+| **影像**  — 每個映像的智慧作物數 | 5 | 100 | 20 |
+| **所有集**  — 每個集的重複資產數 | 無重複項 | 20 | 不適用 |
+| **所有集**  — 每組資產的最大數量 | 每組5-10頁影像 | 1000 | 不適用 |
+| **旋轉集**  — 每2D集的最大行/列數 | 每組12-18頁圖片 | 1000 | 不適用 |
+| **PDF**  — 要考慮提取的PDF的最大頁數 |  | 5000（用於新上載） | 100(所有PDF) |
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 

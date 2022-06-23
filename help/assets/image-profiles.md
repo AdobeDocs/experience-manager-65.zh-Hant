@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '2825'
+source-wordcount: '2831'
 ht-degree: 9%
 
 ---
@@ -33,9 +33,9 @@ ht-degree: 9%
 
 在映像上實施Smart Crop時，Adobe建議採用以下最佳做法並強制實施以下限制：
 
-| 限制類型 | 最佳實踐 | 已實現的限制 |
-| --- | --- | --- |
-| 每個映像的智慧作物數 | 5 | 100 |
+| 限制類型 | 最佳實踐 | 強加的限制 | 2022年12月31日變更上限 |
+| --- | --- | --- | --- |
+| 每個映像的智慧作物數 | 5 | 100 | 20 |
 
 另請參閱 [Dynamic Media限制](/help/assets/limitations.md)。
 

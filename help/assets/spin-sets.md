@@ -11,9 +11,9 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '1946'
+source-wordcount: '1952'
 ht-degree: 8%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 8%
 
 建立「旋轉集」時，Adobe建議採用以下最佳做法並強制實施以下限制：
 
-| 限制類型 | 最佳實踐 | 已實現的限制 |
+| 限制類型 | 最佳實踐 | 強加的限制 |
 | --- | --- | --- |
 | 每2D集的最大行/列數 | 每組12-18頁圖片 | 1000 |
 
@@ -124,7 +124,7 @@ ht-degree: 8%
 
 建立「旋轉集」時，Adobe建議採用以下最佳做法並強制實施以下限制：
 
-| 限制類型 | 最佳實踐 | 已實現的限制 |
+| 限制類型 | 最佳實踐 | 有限強加 |
 | --- | --- | --- |
 | 每2D集的最大行/列數 | 每組12-18頁圖片 | 1000 |
 
