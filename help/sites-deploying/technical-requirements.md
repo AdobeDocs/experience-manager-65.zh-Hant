@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 80298613370c7187288b33e5a665a074ccb5cd3e
+source-git-commit: 3643534fa0f24a1c2ea00c35853a2671b156bf9a
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3329'
 ht-degree: 1%
 
 ---
@@ -207,7 +207,9 @@ Adobe Experience Manager與以下生產環境伺服器平台協作：
 
 支援Adobe Experience Manager在雲計算環境(如MicrosoftAzure和Amazon Web Services(AWS))上的虛擬機中運行，以符合本頁所列的技術要求，並且符合Adobe的標準支援條款。
 
-Adobe建議使用Adobe托管服務在AEMAzure或AWS上部署。 Adobe Managed Services為專家提供了在這些雲計算環境中部署和運AEM營的經驗和技能。 請參閱 [有關Adobe Managed Services的其他文檔](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)。
+對於雲本地環境，請查看產品線中的最AEM新產品：Adobe Experience Manager as a Cloud Service。 請參閱 [Adobe Experience Manager as a Cloud Service文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=en) 的雙曲餘切值。
+
+Adobe還提供Adobe托管服務，以在AEMAzure或AWS上部署。 Adobe Managed Services為專家提供了在這些雲計算環境中部署和運AEM營的經驗和技能。 請參閱 [有關Adobe Managed Services的其他文檔](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)。
 
 在Azure或AEMAWS或任何其他雲計算環境上部署的所有其他情況下，將根據此頁上列出的技術規範將來自Adobe的支援包含到虛擬計算環境。 任何與在這些雲環境中運行相關的AEM報告問題都需要獨立於特定於雲計算環境的任何雲服務可重複，除非雲服務作為本頁所列技術要求的一部分特別受支援，例如Azure Blob儲存或AWSS3。
 
