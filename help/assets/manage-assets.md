@@ -6,9 +6,9 @@ role: User
 feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: dabd27389c9fc5f30589d554ba4da8fce041dd4b
+source-git-commit: d43bd3ae17c81c5ed8eed2568e085c29fb924326
 workflow-type: tm+mt
-source-wordcount: '9974'
+source-wordcount: '9980'
 ht-degree: 4%
 
 ---
@@ -210,7 +210,7 @@ Dynamic Media支援通過FTP伺服器批量上載資產。 如果要上載大資
 |  | 影像編輯選項 | 可以保留影像中的剪貼蒙版，並選擇顏色配置檔案。<br> 請參閱 [在上載時設定影像編輯選項](#setting-image-editing-options-at-upload)。 |
 |  | Postscript選項 | 您可以柵格化PostScript®檔案、裁剪檔案、維護透明背景、選擇解析度和選擇顏色空間。<br> 請參閱 [設定PostScript和Illustrator上載選項](#setting-postscript-and-illustrator-upload-options)。 |
 |  | Photoshop選項 | 您可以從Adobe®Photoshop®檔案建立模板，維護圖層，指定圖層的命名方式，提取文本，並指定如何將影像定位到模板中。<br> 中不支援模板 [!DNL Experience Manager]。<br> 請參閱 [設定Photoshop上載選項](#setting-photoshop-upload-options)。 |
-|  | PDF選項 | 您可以柵格化檔案、提取搜索詞和連結、自動生成eCatalog、設定解析度並選擇顏色空間。<br>中不支援eCatalog [!DNL Experience Manager]。 <br> 請參閱 [設定PDF上載選項](#setting-pdf-upload-options)。<br>**注釋**:要考慮提取的PDF的最大頁數為5000，用於新上載。 到2022年12月31日，此限制將改為100頁。 另請參閱 [Dynamic Media限制](/help/assets/limitations.md)。 |
+|  | PDF選項 | 您可以柵格化檔案、提取搜索詞和連結、自動生成eCatalog、設定解析度並選擇顏色空間。<br>中不支援eCatalog [!DNL Experience Manager]。 <br> 請參閱 [設定PDF上載選項](#setting-pdf-upload-options)。<br>**注釋**:要考慮提取的PDF的最大頁數為5000，用於新上載。 此限制將於2022年12月31日改為100頁(所有PDF)。 另請參閱 [Dynamic Media限制](/help/assets/limitations.md)。 |
 |  | Illustrator選項 | 您可以柵格化Adobe Illustrator®檔案、維護透明背景、選擇解析度和選擇顏色空間。<br> 請參閱 [設定PostScript和Illustrator上載選項](#setting-postscript-and-illustrator-upload-options)。 |
 |  | EVideo選項 | 通過選擇「視頻預設」，可以對視頻檔案進行代碼轉換。<br> 請參閱 [設定eVideo上載選項](#setting-evideo-upload-options)。 |
 |  | 批次集預設集 | 要從上載的檔案建立「影像集」或「旋轉集」，請按一下要使用的預設的「活動」列。 可以選擇多個預設。 您可以在Dynamic Media Classic的「應用程式設定/批集預設」頁中建立預設。<br> 請參閱 [將批集預設配置為自動生成影像集和旋轉集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 以瞭解有關建立批集預設的詳細資訊。<br> 請參閱 [在上載時設定批集預設](#setting-batch-set-presets-at-upload)。 |
@@ -284,7 +284,7 @@ Dynamic Media會使用檔案建立模板，從包含圖層的PSD檔案建立多�
 
 上載PDF檔案時，可以採用各種格式設定該檔案。 您可以裁剪其頁面、提取搜索詞、輸入每英吋像素的解析度並選擇顏色空間。 PDF檔案通常包含裁切邊距、裁切標籤、註冊標籤和其他打印機標籤。 在上載PDF檔案時，可以從頁面的側面裁剪這些標籤。
 
-要考慮提取的PDF的最大頁數為5000，用於新上載。 到2022年12月31日，此限制將改為100頁。 另請參閱 [Dynamic Media限制](/help/assets/limitations.md)。
+要考慮提取的PDF的最大頁數為5000，用於新上載。 此限制將於2022年12月31日改為100頁(所有PDF)。 另請參閱 [Dynamic Media限制](/help/assets/limitations.md)。
 
 >[!NOTE]
 >
