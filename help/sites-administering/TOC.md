@@ -10,8 +10,8 @@ feature: Administering
 role: Admin
 source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 14%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 14%
    + [6.5中的自定義AEM用戶組映射](/help/sites-administering/cug-mapping.md)
    + [同一站點Cookie支援](same-site-cookie-support.md)
 + 個性化 {#personalization}
-   + [個性化](personalization.md)
+   + [個人化](personalization.md)
    + [配置ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
    + [ClientContext](client-context.md)
    + [促銷活動](campaigns.md)

@@ -10,8 +10,8 @@ feature: Developing
 role: Developer
 source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -191,7 +191,7 @@ ht-degree: 12%
       + [客戶端上下文詳細資訊](client-context.md)
       + [客戶端上下文Javascript API](ccjsapi.md)
 + 擴展AEM{#extending-aem}
-   + [使用AEMAdobe開發人員應用程式生成器擴展](app-builder.md)
+   + [使用AEMAdobe Developer應用程式生成器擴展](app-builder.md)
    + [自定義頁面創作](customizing-page-authoring-touch.md)
    + [自定義控制台](customizing-consoles-touch.md)
    + [自定義頁面屬性的視圖](page-properties-views.md)
@@ -261,9 +261,9 @@ ht-degree: 12%
    + [JCR整合](jcr-integration.md)
    + [程式碼範例](code-samples.md)
    + [排除慢速查詢的故障](troubleshooting-slow-queries.md)
-+ Mobile網{#mobileweb}
-   + [Mobile網](mobile-web.md)
++ 移動Web{#mobileweb}
+   + [移動Web](mobile-web.md)
    + [建立設備組篩選器](groupfilters.md)
    + [網頁響應性設計](responsive.md)
-   + [為Mobile設備建立站點](mobile.md)
+   + [為移動設備建立站點](mobile.md)
    + [模擬器](emulators.md)

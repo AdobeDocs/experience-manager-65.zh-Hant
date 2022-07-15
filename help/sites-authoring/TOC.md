@@ -10,8 +10,8 @@ feature: Authoring
 role: User
 source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 46%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 46%
    + [體驗片段](experience-fragments.md)
    + [匯出為 CSV](csv-export.md)
    + [元件](default-components.md)
-   + [為Mobile設備創作頁面](mobile.md)
+   + [為移動設備創作頁面](mobile.md)
    + [創作時AEM故障排除](troubleshooting.md)
    + [編輯頁面時的鍵盤快捷鍵](page-authoring-keyboard-shortcuts.md)
    + [最佳作法](best-practices.md)
@@ -82,7 +82,7 @@ ht-degree: 46%
    + [查看頁面分析資料](pa-using.md)
    + [將Search&amp;Promote功能添加到頁面](search-and-promote.md)
 + 個性化 {#personalization}
-   + [個性化](personalization.md)
+   + [個人化](personalization.md)
    + [使用 ContextHub 資料預覽頁面](ch-previewing.md)
    + [使用定位模式製作目標內容](content-targeting-touch.md)
    + [在多個網站中使用目標內容](multisite-support-targeted-content.md)
