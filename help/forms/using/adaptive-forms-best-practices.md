@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 64ba9b1082e39552cd27e5616de2a35f7870270b
+source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4322'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ AEM Forms提供 [規則編輯器](/help/forms/using/rule-editor.md) 允許您建
    * 此外，您還可以使用以下欄位屬性：
 
       * `field.value` 的子菜單。
-      * f `ield.enabled` 啟用/禁用欄位。
+      * `field.enabled` 啟用/禁用欄位。
       * `field.visible` 的子菜單。
 
 * 自適應表單作者可能需要編寫JavaScript代碼以在表單中構建業務邏輯。 儘管JavaScript功能強大且高效，但它很可能會在安全預期方面做出犧牲。 因此，必須確保表單作者是可信的角色，並且在表單投入生產之前，需要進行審閱和批准JavaScript代碼的過程。 管理員可以根據用戶組的角色或功能限制對規則編輯器的訪問。 請參閱 [授予規則編輯器對選定用戶組的訪問權限](/help/forms/using/rule-editor-access-user-groups.md)。
@@ -228,17 +228,6 @@ AEM Forms提供 [規則編輯器](/help/forms/using/rule-editor.md) 允許您建
 * 瀏覽並瞭解guideBridge API
 
 有關詳細資訊，請參見 [AEMChrome插件 — 自適應窗體](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)。
-
-Calvin SDK是一個實用API，供適應性Forms開發者test適應性Forms. Calvin SDK是在 [霍布斯.js測試框架](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)。 可以使用框架test以下內容：
-
-* 自適應表單的再現體驗
-* 自適應表單的預填充體驗
-* 提交自適應表單的體驗
-* 表達式規則
-* 驗證
-* 延遲載入
-
-有關詳細資訊，請參見 [自動測試自適應表單](/help/forms/using/calvin.md)。
 
 ### 驗證伺服器上的自適AEM應表單 {#validating-adaptive-forms-on-aem-server}
 
