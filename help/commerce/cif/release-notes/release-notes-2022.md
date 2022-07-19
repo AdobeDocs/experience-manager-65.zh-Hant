@@ -2,10 +2,10 @@
 title: 《 AEM 2022年內容與商業發佈說明》
 description: 《 AEM 2022年內容與商業發佈說明》
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: f6a16e5744222600b3a1760efe3c61619160b6cd
+source-git-commit: 600a836ff7ae0be9fde107ff2828bb41e8eed98f
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 6%
+source-wordcount: '660'
+ht-degree: 7%
 
 ---
 
@@ -20,6 +20,26 @@ ht-degree: 6%
 | CIF附加 | 最小：AEM 6.5.7 、Magento2.3.5 GraphQL架構 |
 | CIF核心元件 | [系統要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 發佈日期：2022年6月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加 | 2022.06.xx.00 | [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF核心元件 | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
+| CIF Venia參考站點 | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
+
+### 新增功能 {#what-is-new-june}
+
+* 創作產品目錄模板時，模板名稱現在可見是站點編輯器
+
+* 各種CIF核心元件改進
+
+### 錯誤修正 {#bug-fixes-june}
+
+* 將登錄令牌添加到客戶端價格提取
+
+* 資料層中的頁元件錯誤
 
 ## 發佈日期：2022年5月
 
@@ -63,7 +83,7 @@ ht-degree: 6%
 
    ![產品駕駛艙的站點編輯器快捷方式](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
-## 發佈日期：2022年3月
+## 發佈日期：2022年2月
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
