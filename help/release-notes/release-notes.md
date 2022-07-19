@@ -3,9 +3,9 @@ title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6b75c41cf796b28409c263175cf3f3a2044422ff
+source-git-commit: 9f957175573eeb2b40d79a5087dc3034c56819cc
 workflow-type: tm+mt
-source-wordcount: '3733'
+source-wordcount: '3742'
 ht-degree: 5%
 
 ---
@@ -248,7 +248,7 @@ ht-degree: 5%
 * 「樣式系統」下拉清單可能位於頁面頂部，而不是元件的上下文中 — 用於使用 `cq:editConfig` 「afteredit:REFRESH_PAGE」。 此問題現在已解決。 (NPR-38384)
 
 <!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
-* 將文本元件添加到嵌套的佈局容器時未對齊。 (NPR-38193)
+* 添加到嵌套的佈局容器時，文本元件未對齊。 (NPR-38193)
 * 當沒有元件的「樣式系統」配置時，將顯示一個空樣式頁籤；當沒有配置時，該頁籤現在處於隱藏狀態。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有經過驗證才能工作。 (NPR-37996)
@@ -298,10 +298,10 @@ ht-degree: 5%
 
 ## 使用者介面 {#ui-6513}
 
+* 更新到 `favicon.ico` 用於Experience Manager。 (CQ-4315324)
 * 在「開始」頁>「工具」部分上，按一下 [!DNL Experience Manager] 表徵圖 [!DNL Experience Manager] 導航螢幕應彈出。 (NPR-38417)
 * 啟用ES6 `/libs/granite/ui/references/clientlibs/coral/references`。 (NPR-38303)
 * 啟用ES6 `/libs/granite/datavisualization/clientlibs/d3-3.x`。 (NPR-38302)
-
 <!-- VULNERABILITY ISSUE - REMOVED AND ADDED TO https://wiki.corp.adobe.com/display/DXContent/Security+and+Vulnerability+issues+for+SP+and+CFP+releases * AEM‑OP‑09 ‑ Persistent cross‑site scripting selecting paths in templates. (NPR-38301) -->
 * 觸摸屏中的日期選取器以韓語顯示。 (NPR-38079)
 * 在重新排序欄位時，使用多個欄位創作對話框，從而忽略單選按鈕選擇值。 (NPR-38063)
