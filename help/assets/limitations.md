@@ -8,9 +8,9 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: d4eae7774cb657713a06261deeef0fd2ad542836
+source-git-commit: 098c52720d08ad294a745addb8bd3ca3f1c63b5c
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '283'
 ht-degree: 4%
 
 ---
@@ -51,3 +51,27 @@ Dynamic Media查看器不支援以下Web瀏覽器和作業系統組合。
 * Safari 7 + OS X 10.9小牛隊
 * Safari 8 +iOS8.4
 * Safari 8 + OS X 10.10 Yosemite
+
+## TLS 1.0和1.1的支援結束 {#tls}
+
+<!-- CQDOC-19433 -->
+
+自2022年9月30日起，AdobeDynamic Media觀眾將結束對以下內容的支援：
+
+* TLS（傳輸層安全性）1.0和1.1
+* TLS 1.2中的以下弱密碼：
+   * `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`
+   * `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`
+   * `TLS_RSA_WITH_AES_256_GCM_SHA384`
+   * `TLS_RSA_WITH_AES_256_CBC_SHA256`
+   * `TLS_RSA_WITH_AES_256_CBC_SHA`
+   * `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`
+   * `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`
+   * `TLS_RSA_WITH_AES_128_GCM_SHA256`
+   * `TLS_RSA_WITH_AES_128_CBC_SHA256`
+   * `TLS_RSA_WITH_AES_128_CBC_SHA`
+   * `TLS_RSA_WITH_CAMELLIA_256_CBC_SHA`
+   * `TLS_RSA_WITH_CAMELLIA_128_CBC_SHA`
+   * `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`
+   * `TLS_RSA_WITH_SDES_EDE_CBC_SHA`
+
