@@ -2,9 +2,9 @@
 title: 《 AEM 2022年內容與商業發佈說明》
 description: 《 AEM 2022年內容與商業發佈說明》
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 600a836ff7ae0be9fde107ff2828bb41e8eed98f
+source-git-commit: b493e7bd73d679aa46bf41fad105f13215226dd4
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '663'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 7%
 
 ### 新增功能 {#what-is-new-june}
 
-* 創作產品目錄模板時，模板名稱現在可見是站點編輯器
+* 產品目錄豐富現在支援AEM頁面。 這使作者能夠管理頁面 — 產品關聯。
 
 * 各種CIF核心元件改進
 
