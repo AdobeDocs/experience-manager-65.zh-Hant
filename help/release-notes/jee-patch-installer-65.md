@@ -5,7 +5,7 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: d28d78e426f1e89caa8bd28b067765d40b95cb8a
+source-git-commit: 3af8a2425596ff6c15fb49fed66e9fbd0e9d391e
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 29%
@@ -72,7 +72,7 @@ ht-degree: 29%
 1. （僅限JBoss）安裝修補程式並配置伺服器後，刪除JBoss應用程式伺服器的tmp和工作目錄。
 
 >**注：** 啟動前 **配置管理器**，下載和替換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 的子菜單。
-
+>
 ## 部署後配置 {#post-deployment-configurations}
 
 ### SAML配置 {#saml-configurations}
