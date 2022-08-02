@@ -5,9 +5,9 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 2c2277f43fe12c4d4fa655c0666519e3608ba3f9
+source-git-commit: c425caa9aadd8bae3c2863f24e73b5265ec0b358
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '475'
 ht-degree: 29%
 
 ---
@@ -52,17 +52,12 @@ ht-degree: 29%
 1. 閱讀 Pre-Installation Summary 資訊，然後按一下 **[!UICONTROL Install]**。
 1. 安裝後，按一下 **[!UICONTROL Next]**，將快速修正更新套用至已安裝的檔案。
 
-1. 按一下「完成」之前，請取消選擇「啟動配置管理器」選項。 在使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導航 *&lt;aemforms_install_dir>\configurationManager\bin* 目錄和更新 `ConfigurationManager.lax` 和 `ConfigurationManager_IPv6.lax` 具有以下更名操作的檔案：
+1. **[僅Windows]** 執行以下步驟：
 
-   * `axis.jar` 至 `axis-1.4.1.1.jar`
-   * `serializer-2.7.1.jar` 至 `serializer-2.7.2.jar`
-   * `xalan-2.7.1.jar` 至 `xalan-2.7.2.jar`
-   * `xercesImpl-2.9.1.jar` 至 `xercesImpl-2.12.0.jar`
-   * `xml-apis-2.7.1.jar` 至 `xml-apis-2.7.2.jar`
-
+   取消選擇 **啟動Configuration Manager** 選項，然後按一下 **[!UICONTROL 完成]**。 在使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導航 `<AEMForms_Install_Dir>\configurationManager\bin` 目錄和替換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 的子菜單。
 1. 預設情況下，「啟動配置管理器」(Start Configuration Manager)複選框處於選中狀態。 按一下 **[!UICONTROL Done]**，執行 Configuration Manager。
 
-1. 若要稍後執行 Configuration Manager，請取消選取 Start Configuration Manager 選項，再按一下 Done。以後可以使用中的相應指令碼啟動Configuration Manager `[AEM_forms_root]/configurationManager/bin` 的子菜單。
+1. 若要稍後執行 Configuration Manager，請取消選取 Start Configuration Manager 選項，再按一下 **[!UICONTROL Done]**。以後可以使用中的相應指令碼啟動Configuration Manager `[AEM_forms_root]/configurationManager/bin` 的子菜單。
 
 1. 根據您的應用程式伺服器，選擇以下文檔之一併按照 *配置和部署表AEM單* 的子菜單。
 
@@ -70,9 +65,6 @@ ht-degree: 29%
    * [安裝和部AEM署WebSphere窗體](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_tw)
 
 1. （僅限JBoss）安裝修補程式並配置伺服器後，刪除JBoss應用程式伺服器的tmp和工作目錄。
-
->[!NOTE]
->啟動前 **配置管理器**，下載和替換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 的子菜單。
 
 ## 部署後配置 {#post-deployment-configurations}
 
