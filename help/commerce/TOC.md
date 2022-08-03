@@ -5,8 +5,8 @@ breadcrumb-title: Commerce 指南
 user-guide-description: 了解如何使用及管理 AEM 內容與商務。
 source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 29%
 
 ---
 
