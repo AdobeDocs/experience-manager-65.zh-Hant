@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
+source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
 workflow-type: tm+mt
-source-wordcount: '4322'
+source-wordcount: '4529'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,19 @@ Adobe Experience Manager(AEM)表格可幫助您將複雜事務轉換為簡單、
    * 通過建立自定義小部件或外觀來引入自定義交互活動。 不建議修改預設元件。 有關詳細資訊，請參見 [外觀框架](/help/forms/using/introduction-widgets.md)。
 
 * 請參閱 [處理個人身份資訊](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p) 有關處理PII資料的建議。
+
+### 建立表單模板
+
+可以使用中啟用的表單模板建立自適應表單 **配置瀏覽器**。 要啟用表單模板，請參閱 [建立自適應表單模板](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en)。
+
+還可以從在另一作者電腦上建立的Adaptive Form包上載表單模板。 通過安裝，表單模板可用 [Aemforms引用 — *包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)。 建議的一些最佳做法是：
+* 的 **諾薩姆** 僅建議作者使用runmode，而不建議發佈節點使用runmode。
+* 僅在「作者」節點上執行資產（如自適應表單、主題、模板或雲配置）的創作，這些節點可在配置的「發佈」節點上發佈。
+有關詳細資訊，請參見 [發佈和取消發佈表單和文檔](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
+* Formsaddon包是創作和發佈所需的，以支援文檔服務操作；因此，它可以被視為一種依賴。
+如果您只想要與Forms相關的示例模板、主題和DOR包，則可以從 [Aemforms引用 — *包](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)。
+
+有關詳細資訊，請參閱 [創作自適應表單簡介](/help/forms/using/introduction-forms-authoring.md)。
 
 ## 作者自適應表單 {#author-adaptive-forms}
 
@@ -309,3 +322,5 @@ AEM Forms提供 [規則編輯器](/help/forms/using/rule-editor.md) 允許您建
 
 * 使用安全的外部儲存（如資料庫）來儲存草稿和已提交表單中的資料。 請參閱 [為草稿和提交的表單資料配置外部儲存](/help/forms/using/adaptive-forms-best-practices.md#external-storage)。
 * 使用「條款和條件」窗體元件在啟用自動保存之前獲得用戶的明確同意。 在這種情況下，僅當用戶同意條款和條件元件中的條件時，才啟用自動保存。
+
+
