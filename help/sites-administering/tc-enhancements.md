@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 3de9f3c97b99644297a2f07344f6aebae1c5ae83
+source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -73,12 +73,20 @@ ht-degree: 0%
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
-將AEM將選定的字串發回翻譯管理系統。
+更AEM新配置TMS的翻譯儲存器中現有字串的翻譯。
 
-* 該操作更新配置的翻譯管理系統(TMS)的翻譯儲存器中現有字串的翻譯。
+* 該操作更新配置TMS的翻譯儲存器中現有字串的翻譯。
 * 它不會建立新的翻譯作業。
-* 它通過轉換API將字串的值對及其轉換發回到TMSAEM。
-* 此功能要求將翻譯管理系統配置為與一起使AEM用。
+* 它通過翻譯API(參見下AEM面)將翻譯發回TMS。
+
+要使用此功能：
+
+* 必須配置TMS以與一起使AEM用。
+* 連接器需要實現該方法 [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html)。
+   * 此方法中的代碼確定翻譯記憶庫更新請求發生的情況。
+   * 轉AEM換框架通過該方法實現將字串值對（原始和更新的轉換）發回到TMS。
+
+對於使用專有翻譯儲存器的情況，翻譯儲存器更新可以被截取併發送到定制目的地。
 
 ## 多級語言副本 {#language-copies-on-multiple-levels}
 
