@@ -8,10 +8,10 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解 AEM 的管理事項。
 feature: Administering
 role: Admin
-source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
+source-git-commit: 9a164f92b6d5a927d1cb4ead2f119cc094180713
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '637'
+ht-degree: 14%
 
 ---
 
@@ -113,6 +113,7 @@ ht-degree: 0%
    + [與第三方服務整合](third-party-services.md)
    + [與Salesforce整合](salesforce.md)
    + [整合 Adobe Target](target.md)
+   + [與Adobe學習管理器整合](adobe-learningmanager.md)
    + [整合 Adobe Analytics](adobeanalytics.md)
    + [連接到Adobe Analytics並建立框架](adobeanalytics-connect.md)
    + [為Adobe Analytics配置鏈路跟蹤](adobeanalytics-link.md)
