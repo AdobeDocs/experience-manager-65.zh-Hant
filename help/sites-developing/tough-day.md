@@ -4,7 +4,7 @@ description: Tough Daytest模擬在最壞情況下的每日大約1000個作者�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
+source-git-commit: 1b92b973209fdbd2509b1c644c1064a1e9224a9e
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## 艱難的第2天 {#what-is-tough-day}
 
-「艱難的第2天」是一個應用程式，它允許您強調test實例的AEM限制。 它可以使用預設的test套件在開箱後運行，也可以根據您的測試需要配置。 你可以看 [此錄制](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html) 的子菜單。
+「艱難的第2天」是一個應用程式，它允許您強調test實例的AEM限制。 它可以使用預設的test套件在開箱後運行，也可以根據您的測試需要配置。 你可以看 [此錄制](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) 的子菜單。
 
 >[!CAUTION]
 >
