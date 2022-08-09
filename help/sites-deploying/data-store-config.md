@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 6257b56c61ae14889d9ecefed5030e123a415fd7
+source-git-commit: 4e68a8a8d84d0ffa1d28ab13c196731e58b4cf9a
 workflow-type: tm+mt
-source-wordcount: '3455'
+source-wordcount: '3447'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ customBlobStore=B"true"
 
 * `changesSize`:Mongo中用於快取差異輸出的封蓋集合的大小(MB)。 預設值為 `256`
 
-* `customBlobStore`:指示將使用自定義資料儲存的布爾值。 預設值為 `false`。
+* `customBlobStore`:指示將使用自定義資料儲存的布爾值。 預設為 `false`。
 
 以下是示例 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` 檔案：
 
@@ -207,8 +207,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 可將配置檔案與以下選項一起使用：
 
 * accessKey:AWS接入密鑰。
-* 密鑰：AWS的秘密訪問密鑰。 **注：** 或者， [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 可用於驗證。 如果您使用IAM角色，則不再需要指定 `accessKey` 和 `secretKey`。
-
+* 密鑰：AWS的秘密訪問密鑰。 **注：** 當 `accessKey` 或 `secretKey` 未指定 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 用於驗證。
 * s3Bucket:儲存段名稱。
 * s3區域：桶區域。
 * 路徑：資料儲存的路徑。 預設值為 **&lt;aem install=&quot;&quot; folder=&quot;&quot;>/資料庫/資料儲存庫**
@@ -273,7 +272,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 快取具有大小限制，可使用cacheSize參數配置。
 
-**下載內容**
+**下載**
 
 在從DataStore訪問請求的檔案/blob之前，將檢查本地快取中的記錄。 當快取超出配置的限制時(請參見 `cacheSize` 參數)時，將檔案添加到快取中，然後將逐出某些檔案以回收空間。
 
@@ -312,7 +311,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 在 `crx-quickstart` 資料夾：
 
-   * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*。*配置*
+   * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*。*config*
 
    * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*。*配置*
 
