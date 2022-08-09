@@ -3,9 +3,9 @@ title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 9f957175573eeb2b40d79a5087dc3034c56819cc
+source-git-commit: e51cf7a5b7d14bc4aed053496c7fe6685dd2b0b8
 workflow-type: tm+mt
-source-wordcount: '3742'
+source-wordcount: '3653'
 ht-degree: 5%
 
 ---
@@ -39,7 +39,12 @@ ht-degree: 5%
 
    * 增加了對螢幕閱讀器的支援，以將表的標題和正文識別為連續和連接的實體。 它幫助螢幕閱讀器正確導航表。 (NPR-37139)
    * 添加了對螢幕閱讀器的支援，以停止導航HTML工作區，直到開啟對話框。 (NPR-37134)
-   * 增加了在Forms設計器中為超連結指定螢幕Reader文本的功能。(NPR-36221)
+
+   <!-- 
+
+    * Added ability to specify Screen Reader Text for Hyperlinks in Forms Designer.(NPR-36221)
+  
+  -->
 
 中介紹了以下錯誤修復、關鍵功能和增強 [!DNL Experience Manager] 6.5.13.0:
 
@@ -123,11 +128,19 @@ ht-degree: 5%
 * 當用戶在執行工作流時向注釋部分添加HTML標籤時，將呈現HTML標籤。 (NPR-37591)
 * 在導入和發佈包含新XDP檔案的字母時，這些字母無法在「發佈」實例上預覽。 但是，如果使用同一CMP檔案導入並第二次發佈字母，則會成功預覽字母。 (CQ-4343599)
 * 具有「準備資料處理」屬性集的表單無法在HTML工作區中呈現。 (CQ-4343294)
-* 對於使用Forms6.5設計器建立的靜態PDF forms,PDF輔助功能失敗並出現錯誤 `Tab order entry in page with annotations not set to "S"`。 (CQ-4343117)
+<!--
+For static PDF forms that are created with Forms 6.5 Designer, PDF accessibility fails with error `Tab order entry in page with annotations not set to "S"`. (CQ-4343117) 
+ -->
 * 在應用AEMForms-6.5.0-0038(log4jv2.16)修補程式後，無法使用PDFG服務和OCR將影像轉換為PDF。 (CQ-4342450)
-* 條形碼SSCC-18顯示的值不正確。 Forms伺服器忽略條形碼右側的值。 (CQ-4342400)
+
+<!-- 
+* Incorrect value is displayed for barcode SSCC-18. Forms servers omit the value on the right part of the barcode. (CQ-4342400)
+-->
 * 無法將Microsoft® Word檔案導入Forms設計器。 用戶遇到錯誤 `Word (version XP or onwards) could not be found on the machine`。 (CQ-4342146)
-* 在Forms6.5設計器中，開啟使用Forms6.1設計器建立的表單並編輯文本框時，段落間距超過指定的空間。 將刪除空間的所有先前設定，並需要手動重新格式化文本框。 (CQ-4341899)
+
+<!-- 
+* In Forms 6.5 Designer, when you open a form created with Forms 6.1 Designer and edit a textbox, paragraph spacing exceeds the specified space. All previous settings to the space are removed and manual reformatting of the text box is required. (CQ-4341899) 
+-->
 * 用戶無法在作業清除計畫程式中設定自定義時間。 (CQ-4339192)
 * 用戶無法更新終結點管理UI下的任何配置，並遇到錯誤 ` Uncaught ReferenceError: updateEndpoint_required is not defined`。 (CQ-4331523)
 * 對於無效標籤，錯誤消息的正常處理不按預期工作。 （NPR-38106和CQ-4337173）
@@ -248,7 +261,7 @@ ht-degree: 5%
 * 「樣式系統」下拉清單可能位於頁面頂部，而不是元件的上下文中 — 用於使用 `cq:editConfig` 「afteredit:REFRESH_PAGE」。 此問題現在已解決。 (NPR-38384)
 
 <!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
-* 添加到嵌套的佈局容器時，文本元件未對齊。 (NPR-38193)
+* 將文本元件添加到嵌套的佈局容器時未對齊。 (NPR-38193)
 * 當沒有元件的「樣式系統」配置時，將顯示一個空樣式頁籤；當沒有配置時，該頁籤現在處於隱藏狀態。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有經過驗證才能工作。 (NPR-37996)
