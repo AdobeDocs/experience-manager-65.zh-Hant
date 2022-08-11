@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: c425caa9aadd8bae3c2863f24e73b5265ec0b358
+source-git-commit: 6c6ddaba0e42df4b4701670e8abfdabe5205879c
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 29%
+source-wordcount: '525'
+ht-degree: 22%
 
 ---
 
@@ -47,17 +47,23 @@ ht-degree: 29%
    這會啟動安裝精靈，引導您完成安裝。
 
 1. 在 Introduction 面板上，按一下 **[!UICONTROL Next]**。
-1. 在「Choose Install Folder（選擇安裝資料夾）」螢幕上，驗證顯示的預設位置是否適合您的現有安裝，或按一下 **[!UICONTROL 瀏覽]** 選擇安裝表單的備AEM用資料夾，然後按一下 **[!UICONTROL 下一個]**。
+1. 在 **選擇安裝資料夾** 螢幕中，驗證顯示的預設位置是否正確，或者按一下 **[!UICONTROL 瀏覽]** 選擇安裝表單的備AEM用資料夾，然後按一下 **[!UICONTROL 下一個]**。
 1. 閱讀 Quick Fix Patch Summary 資訊，然後按一下 **[!UICONTROL Next]**。
 1. 閱讀 Pre-Installation Summary 資訊，然後按一下 **[!UICONTROL Install]**。
 1. 安裝後，按一下 **[!UICONTROL Next]**，將快速修正更新套用至已安裝的檔案。
 
-1. **[僅Windows]** 執行以下步驟：
+1. **[僅適用於Windows]:** 執行以下步驟之一：
+   * 取消選擇 **啟動Configuration Manager** 選項 **[!UICONTROL 完成]**。 運行 **配置管理器** 使用 **ConfigurationManager.bat** 檔案位於 `[aem-forms root]\configurationManager\bin`。
 
-   取消選擇 **啟動Configuration Manager** 選項，然後按一下 **[!UICONTROL 完成]**。 在使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導航 `<AEMForms_Install_Dir>\configurationManager\bin` 目錄和替換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 的子菜單。
-1. 預設情況下，「啟動配置管理器」(Start Configuration Manager)複選框處於選中狀態。 按一下 **[!UICONTROL Done]**，執行 Configuration Manager。
+   * 取消選擇 **啟動Configuration Manager** 選項 **[!UICONTROL 完成]**。 運行前 **配置管理器** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導航 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目錄和替換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 的子菜單。
+   >[!NOTE]
+   >使用 **ConfigurationManager.bat** 檔案可幫助您避免手動更新.lax檔案的名稱。
 
-1. 若要稍後執行 Configuration Manager，請取消選取 Start Configuration Manager 選項，再按一下 **[!UICONTROL Done]**。以後可以使用中的相應指令碼啟動Configuration Manager `[AEM_forms_root]/configurationManager/bin` 的子菜單。
+1. **[僅適用於基於Unix]:** 執行以下步驟之一：
+
+   * 的 **啟動Configuration Manager** 複選框。 按一下 **[!UICONTROL 完成]** 即時運行Configuration Manager。
+
+   * 運行 **配置管理器** 稍後，取消選擇 **啟動Configuration Manager** 選項 **[!UICONTROL 完成]**。 你可以開始 **配置管理器** 稍後使用 `[AEM_forms_root]/configurationManager/bin` 的子菜單。
 
 1. 根據您的應用程式伺服器，選擇以下文檔之一併按照 *配置和部署表AEM單* 的子菜單。
 
