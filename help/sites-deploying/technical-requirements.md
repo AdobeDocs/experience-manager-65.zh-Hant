@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: a1e620103290f8c704f2b8782be495ab7aec5fe2
+source-git-commit: 9faad7562a85f368ae47bb0c3a381bebe4c8c612
 workflow-type: tm+mt
-source-wordcount: '3329'
+source-wordcount: '3434'
 ht-degree: 1%
 
 ---
@@ -422,6 +422,8 @@ Adobe Experience Manager的所有元素（實例、調度程式）都可以安�
 
 ### AEM FormsPDF發電機要求 {#requirements-for-aem-forms-pdf-generator}
 
+### 用於PDF發生器的軟體支援 {#software-support-for-pdf-generator}
+
 <table>
  <tbody>
   <tr>
@@ -429,51 +431,74 @@ Adobe Experience Manager的所有元素（實例、調度程式）都可以安�
    <th><p><strong>支援的轉換到PDF格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2017年經典賽道</a> 最新版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2020年經典賽道</a> 最新版本</td>
    <td>XPS，影像格式(BMP,GIF,JPEG,JPG, TIF,TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC),HTML, HTM, DWG, DXF和DWF</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2017年經典賽道</a> 最新版本（不建議使用）</td>
+   <td>XPS，影像格式(BMP,GIF,JPEG,JPG, TIF,TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC),HTML, HTM, DWG, DXF和DWF</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2019</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
-   <td>WordPerfect X7</td>
+   <td>Microsoft® Office 2016（不建議使用）</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+  </tr>
+  <tr>
+   <td>WordPerfect 2020<br /> </td>
    <td>WP,WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2016<br /> </td>
+   <td>Microsoft® Office Visio 2019<br /> </td>
    <td>VSD、VSDX</td>
   </tr>
   <tr>
-   <td>Microsoft®發行商2016<br /> </td>
+   <td>Microsoft® Office Visio 2016（不建議使用）<br /> </td>
+   <td>VSD、VSDX</td>
+  </tr>
+  <tr>
+   <td>Microsoft®發行商2019<br /> </td>
    <td>酒吧</td>
   </tr>
   <tr>
-   <td>Microsoft2016工程<br /> </td>
+   <td>Microsoft® Publisher 2016（不建議使用）<br /> </td>
+   <td>酒吧</td>
+  </tr>
+  <tr>
+   <td>Microsoft2019工程<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
-   <td>OpenOffice 4.1.2</td>
+   <td>Microsoft® Project 2016（不建議使用）<br /> </td>
+   <td>MPP</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.10</td>
    <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF和TXT</td>
   </tr>
+  <tr>
+   <td>OpenOffice 4.1.2（已棄用）</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF和TXT</td>
+  </tr>  
  </tbody>
 </table>
 
 >[!NOTE]
 >
->PDF生成器僅支援受支援的作業系統和應用程式的英文、法文、德文和日文版本。
+> PDF生成器僅支援受支援的作業系統和應用程式的英文、法文、德文和日文版本。
 >
->此外：
+> 此外：
 >
->* PDF生成器需要32位版本 [Acrobat2017經典曲目17.011.30078版或更高版本](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 的子菜單。
->* PDF生成器僅支援32位Retail版的MicrosoftOffice Professional Plus和轉換所需的其他軟體。
->* PDF生成器不支援MicrosoftOffice 365。
->* OpenOffice的PDF生成器轉換僅在Windows和Linux上受支援。
->* OCRPDF、Optimize PDF和Export PDF功能僅在Windows上受支援。
->* Acrobat版本與AEM Forms捆綁，以啟用PDF生成器功能。 捆綁版本只應在AEM Forms許可證期間通過AEM Forms以寫程式方式訪問，以便與AEM FormsPDF生成器一起使用。 有關詳細資訊，請參閱按部署的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+> * PDF生成器需要32位版本 [Acrobat2020經典賽道20.004.30006版](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat2017 17.011.30078版執行轉換。
+> * PDF生成器僅支援32位Retail版的MicrosoftOffice Professional Plus和轉換所需的其他軟體。
+> * PDF生成器不支援MicrosoftOffice 365。
+> * OpenOffice的PDF生成器轉換僅在Windows和Linux上受支援。
+> * OCRPDF、Optimize PDF和Export PDF功能僅在Windows上受支援。
+> * Acrobat版本與AEM Forms捆綁，以啟用PDF生成器功能。 捆綁版本只應在AEM Forms許可證期間通過AEM Forms以寫程式方式訪問，以便與AEM FormsPDF生成器一起使用。 有關詳細資訊，請參閱按部署的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >
->* PDF生成器服務不支援MicrosoftWindows 10。
->
+> * PDF生成器服務不支援MicrosoftWindows 10。
 
 
 ### AEM Forms設計師要求 {#requirements-for-aem-forms-designer}
