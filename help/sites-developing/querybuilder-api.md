@@ -12,9 +12,9 @@ discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 49a74d8c14c79e72f9df1e2ec41652ebc6fe76b6
+source-git-commit: 13f15bee38b6b4af4cd59376849810a788f0c467
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2313'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ REST API通過HTTP提供對完全相同功能的訪問，響應以JSON形式發�
 
 >[!NOTE]
 >
->QueryBuilder API是使用JCR API構建的。 您也可以使用JCR API從OSGi捆綁包中查詢Adobe Experience ManagerJCR。 有關資訊，請參見 [使用JCR API查詢Adobe Experience Manager資料](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html)。
+>QueryBuilder API是使用JCR API構建的。 您也可以使用JCR API從OSGi捆綁包中查詢Adobe Experience ManagerJCR。 有關資訊，請參見 [Adobe Experience Manager使用JCR API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=en)。
 
 ## Gem會話 {#gem-session}
 
