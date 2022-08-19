@@ -2,9 +2,9 @@
 title: 《 AEM 2022年內容與商業發佈說明》
 description: 《 AEM 2022年內容與商業發佈說明》
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: b493e7bd73d679aa46bf41fad105f13215226dd4
+source-git-commit: 6c5c37c1c365e1f03ea9b5c935adf63a33faba5d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '715'
 ht-degree: 7%
 
 ---
@@ -21,11 +21,22 @@ ht-degree: 7%
 | CIF核心元件 | [系統要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 發佈日期：2022年7月
+
+| 元件 | 版本 | 詳細資料 |
+|:-------|:-----:|---------------------:|
+| CIF附加 | 2022.08.02.00 | [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
+
+### 新增功能 {#what-is-new-july}
+
+* 通過頁AEM面屬性以及產品座艙中的AEM概述將頁面與產品和類別關聯
+   ![產品駕駛艙頁面關聯](/help/assets/CIF/product_cockpit_page_association.png)
+
 ## 發佈日期：2022年6月
 
 | 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
-| CIF附加 | 2022.06.xx.00 | [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF附加 | 2022.07.05.00 | [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
 | CIF核心元件 | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
 | CIF Venia參考站點 | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
 
