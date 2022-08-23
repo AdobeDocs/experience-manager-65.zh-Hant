@@ -1,11 +1,11 @@
 ---
 title: 發行說明 [!DNL Adobe Experience Manager] 6.5
-description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
+description: 「查找發行資訊、新增內容、安裝how-tos和詳細的更改清單 [!DNL Adobe Experience Manager] 6.5」
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: e51cf7a5b7d14bc4aed053496c7fe6685dd2b0b8
+source-git-commit: 3c3efe108b020d9c64e456d409f114c8969f2723
 workflow-type: tm+mt
-source-wordcount: '3653'
+source-wordcount: '3652'
 ht-degree: 5%
 
 ---
@@ -472,7 +472,7 @@ UberJar [!DNL Experience Manager] 6.5.13.0在 [Maven中央儲存庫](https://rep
 
 ## 包括OSGi捆綁包和內容包 {#osgi-bundles-and-content-packages-included}
 
-以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.13.0:
+以下文本文檔列出了包含在 [!DNL Experience Manager] 6.5.13.0 :
 
 * [6.5.13.0Experience Manager中包含的OSGi捆綁包清單](/help/release-notes/assets/65130_bundles.txt)
 
