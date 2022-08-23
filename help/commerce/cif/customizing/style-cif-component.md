@@ -3,16 +3,16 @@ title: 樣式AEMCIF核心元件
 description: 瞭解如何設AEM置CIF核心元件的樣式。 本教程介紹如何使用客戶端庫或客戶端庫為Adobe Experience Manager(AEM)Commerce實現部署和管理CSS和Javascript。 本教程還將介紹如何將ui.frontend模組和webpack項目整合到端到端構建流程中。
 sub-product: Commerce
 topics: Development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
 workflow-type: tm+mt
 source-wordcount: '2567'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
