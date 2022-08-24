@@ -1,28 +1,28 @@
 ---
-title: 使用API列出網頁上的表單
-seo-title: 使用API列出網頁上的表單
-description: 以程式設計方式查詢Forms Manager，以擷取已篩選的表單清單並顯示在您自己的網頁上。
-seo-description: 以程式設計方式查詢Forms Manager，以擷取已篩選的表單清單並顯示在您自己的網頁上。
+title: 使用API在網頁上列出表單
+seo-title: Listing forms on a web page using APIs
+description: 以寫程式方式查詢Forms管理器以檢索已篩選的表單清單並在您自己的網頁上顯示。
+seo-description: Programmatically query Forms Manager to retrieve a filtered list of forms and display on your own web pages.
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: cfca6656-d2db-476d-a734-7a1d1e44894e
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
 
+# 使用API在網頁上列出表單 {#listing-forms-on-a-web-page-using-apis}
 
-# 使用API {#listing-forms-on-a-web-page-using-apis}列出網頁上的表單
+AEM Forms提供了基於REST的搜索API,Web開發人員可以使用該API查詢和檢索符合搜索標準的一組表單。 您可以使用API根據各種篩選器搜索表單。 響應對象包含表單屬性、屬性和呈現表單的端點。
 
-AEM Forms提供REST型搜尋API，網頁開發人員可使用此API來查詢及擷取符合搜尋條件的一組表單。 您可以使用API根據各種篩選條件來搜尋表單。 回應物件包含表單屬性、屬性，以及轉譯表單端點。
+要使用REST API搜索表單，請向伺服器發送GET請求，地址為 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 查詢參數。
 
-若要使用REST API搜尋表單，請使用下述的查詢參數，在`https://'[server]:[port]'/libs/fd/fm/content/manage.json`將GET要求傳送至伺服器。
-
-## 查詢參數{#query-parameters}
+## 查詢參數 {#query-parameters}
 
 <table>
  <tbody>
@@ -31,55 +31,55 @@ AEM Forms提供REST型搜尋API，網頁開發人員可使用此API來查詢及�
    <td><strong>說明<br /> </strong></td>
   </tr>
   <tr>
-   <td>func<br /> </td>
-   <td><p>指定要呼叫的函式。 若要搜尋表單，請將<code>func </code>屬性的值設為<code>searchForms</code>。</p> <p>例如， <code class="code">
+   <td>函式<br /> </td>
+   <td><p>指定要調用的函式。 要搜索表單，請設定 <code>func </code>屬性 <code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此參數為必要項目。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注：</strong> <em>此參數是必需的。</em><br /> </p> </td>
   </tr>
   <tr>
-   <td>appPath<br /> </td>
-   <td><p>指定要搜索表單的應用程式路徑。 依預設， appPath屬性會搜尋根節點層級上可用的所有應用程式。<br /> </p> <p>您可以在單一搜尋查詢中指定多個應用程式路徑。 以垂直號(|)字元分隔多個路徑。 </p> </td>
+   <td>應用路徑<br /> </td>
+   <td><p>指定搜索表單的應用程式路徑。 預設情況下，appPath屬性將搜索根節點級別上可用的所有應用程式。<br /> </p> <p>可以在單個搜索查詢中指定多個應用程式路徑。 使用管道(|)字元分隔多條路徑。 </p> </td>
   </tr>
   <tr>
-   <td>cutPoints<br /> </td>
-   <td><p>指定要使用資產擷取的屬性。 您可以使用星號(*)一次擷取所有屬性。 使用垂直號(|)運算子來指定多個屬性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>: </p>
+   <td>剪切點<br /> </td>
+   <td><p>指定要使用資產提取的屬性。 可以使用星號(*)一次獲取所有屬性。 使用管道(|)運算子指定多個屬性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>: </p>
     <ul>
-     <li><em>系統一律會擷取id、路徑和名稱等屬性。 </em></li>
-     <li><em>每個資產都有不同的屬性集。 formUrl、pdfUrl和guideUrl等屬性不依賴切換點屬性。 這些屬性取決於資產類型，並會據此擷取。 </em></li>
+     <li><em>始終讀取id、路徑和名稱等屬性。 </em></li>
+     <li><em>每個資產都有不同的屬性集。 formUrl、pdfUrl和guideUrl等屬性不依賴於刀口屬性。 這些屬性取決於資產類型，並會相應讀取。 </em></li>
     </ul> </td>
   </tr>
   <tr>
-   <td>relation<br /> </td>
-   <td>指定要擷取的相關資產以及搜尋結果。 您可以選擇下列其中一個選項來擷取相關資產：
+   <td>關係<br /> </td>
+   <td>指定要隨搜索結果一起提取的相關資產。 您可以選擇以下選項之一來獲取相關資產：
     <ul>
-     <li><strong>無關係</strong>:請勿擷取相關資產。</li>
-     <li><strong>立即</strong>:擷取與搜尋結果直接相關的資產。</li>
-     <li><strong>全部</strong>:擷取直接和間接相關的資產。</li>
+     <li><strong>無關係(_R)</strong>:不提取相關資產。</li>
+     <li><strong>立即</strong>:提取與搜索結果直接相關的資產。</li>
+     <li><strong>全部</strong>:獲取直接和間接相關資產。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>maxSize</td>
-   <td>指定要擷取的表單數量上限。</td>
+   <td>最大大小</td>
+   <td>指定要提取的最大表單數。</td>
   </tr>
   <tr>
    <td>偏移</td>
-   <td>指定從頭開始要略過的表單數。</td>
+   <td>指定要從開始跳過的表單數。</td>
   </tr>
   <tr>
-   <td>returnCount</td>
+   <td>返回計數</td>
    <td>指定是否返回與給定條件匹配的搜索結果。 </td>
   </tr>
   <tr>
-   <td>語句</td>
-   <td><p>指定語句清單。 查詢會在JSON格式中指定的陳述式清單上執行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td>聲明</td>
+   <td><p>指定語句清單。 查詢在JSON格式指定的語句清單上執行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
-       statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上述範例中， </p>
+       statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上例中， </p>
     <ul>
-     <li><strong>名稱</strong>:指定要搜索的屬性名稱。</li>
+     <li><strong>名稱</strong>:指定要搜索的屬性的名稱。</li>
      <li><strong>值</strong>:指定要搜索的屬性的值。</li>
-     <li><strong>運算元</strong>:指定在搜索時應用的運算子。支援下列運算子：
+     <li><strong>算子</strong>:指定搜索時要應用的運算子。 支援以下運算子：
       <ul>
        <li>EQ — 等於 </li>
        <li>NEQ — 不等於</li>
@@ -91,14 +91,14 @@ AEM Forms提供REST型搜尋API，網頁開發人員可使用此API來查詢及�
        <li>全文 — 全文搜索</li>
        <li>STARTSWITH — 如果B是A的開頭部分，則A以B開頭</li>
        <li>ENDSWITH — 如果B是A的結尾部分，則A以B結尾</li>
-       <li>LIKE — 實作LIKE運算子</li>
-       <li>AND — 合併多個陳述式</li>
-      </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ和LTEQ運算子適用於線性類型的屬性，如LONG、DOUBLE和DATE。</em></p> </li>
+       <li>LIKE — 實現LIKE運算子</li>
+       <li>AND — 合併多個語句</li>
+      </ul> <p><strong>注：</strong> <em>GT、LT、GTEQ和LTEQ算子適用於線性類型如LONG、DOUBLE和DATE的性質。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>排序<br /> </td>
-   <td><p>指定搜索結果的順序標準。 條件以JSON格式定義。 您可以對多個欄位上的搜尋結果進行排序。 查詢中顯示的欄位會依序排序結果。</p> <p>例如，</p> <p>若要以升序擷取依標題屬性排序的查詢結果，請新增下列參數： </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>指定搜索結果的順序標準。 條件以JSON格式定義。 可以對多個欄位上的搜索結果進行排序。 結果按查詢中顯示欄位的順序排序。</p> <p>例如，</p> <p>要按升序檢索按title屬性排序的查詢結果，請添加以下參數： </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
@@ -106,25 +106,25 @@ AEM Forms提供REST型搜尋API，網頁開發人員可使用此API來查詢及�
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
      <li><strong>名稱</strong>:指定用於排序搜索結果的屬性名稱。</li>
-     <li><strong>條件</strong>:指定結果的順序。order屬性接受以下值：
+     <li><strong>標準</strong>:指定結果的順序。 訂單屬性接受以下值：
       <ul>
-       <li>ASC — 使用ASC以升序排列結果。<br /> </li>
-       <li>DES — 使用DES以降序排列結果。</li>
+       <li>ASC — 使用ASC按升序排列結果。<br /> </li>
+       <li>DES — 使用DES按降序排列結果。</li>
       </ul> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td>includeXdp</td>
-   <td>指定是否檢索二進位內容。 <code>includeXdp</code>屬性適用於<code>FORM</code>、<code>PDFFORM</code>和<code>PRINTFORM</code>類型的資產。</td>
+   <td>包括Xdp</td>
+   <td>指定是否檢索二進位內容。 的 <code>includeXdp</code> 屬性適用於類型的資產 <code>FORM</code>。 <code>PDFFORM</code>, <code>PRINTFORM</code>。</td>
   </tr>
   <tr>
-   <td>assetType</td>
-   <td>指定要從所有已發佈資產中擷取的資產類型。 使用垂直號(|)運算子來指定多個資產類型。 有效的資產類型包括FORM、PDFFORM、PRINTFORM、RESOURCE和GUIDE。</td>
+   <td>資產類型</td>
+   <td>指定要從所有已發佈資產中檢索的資產類型。 使用管道(|)運算子指定多個資產類型。 有效的資產類型有FORM、PDFFORM、PRINTFORM、RESOURCE和GUIDE。</td>
   </tr>
  </tbody>
 </table>
 
-## 範例要求{#sample-request}
+## 示例請求 {#sample-request}
 
 ```json
 func : searchForms
@@ -141,10 +141,10 @@ statements: [{"name":"name","value":"*Claim.xdp","operator":"CONTAINS"},
                 {"name":"status","value":"false","operator":"EQ"},
                 {"name":"lastModifiedDate","value":"01/09/2013","operator":"GTEQ"},
                 {"name":"lastModifiedDate","value":"01/18/2013","operator":"LTEQ"}]
-orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
+orderings:[{"name" :"lastModifiedDate":"order":"ASC"}]
 ```
 
-## 範例回應{#sample-response}
+## 示例響應 {#sample-response}
 
 ```json
 [
@@ -170,11 +170,11 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 ## 相關文章
 
-* [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md)
-* [建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md)
-* [使用API列出網頁上的表單](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [啟用表單門戶元件](/help/forms/using/enabling-forms-portal-components.md)
+* [建立表單門戶頁](/help/forms/using/creating-form-portal-page.md)
+* [使用API在網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交元件](/help/forms/using/draft-submission-component.md)
-* [自訂草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)
-* [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)
-* [自訂表單入口網站元件的範本](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在入口網站發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)
+* [自定義草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)
+* [將草稿和提交元件與資料庫整合的示例](/help/forms/using/integrate-draft-submission-database.md)
+* [自定義表單門戶元件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [門戶上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)

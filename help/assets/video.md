@@ -12,7 +12,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 128358e17aa6166c81e0979825ee81d029418f22
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '11766'
 ht-degree: 5%
@@ -198,7 +198,7 @@ Dynamic MediaHTML5視頻查看器預設是強大的視頻播放器。 您可以�
 * 如果您有一個HTTPS網站，其中包含HTTPS視頻流，則流處理是正常的。
 * 如果HTTP網站具有HTTPS視頻流，則流處理是正常的，並且Web瀏覽器中不存在混合內容問題。
 
-HLS是Apple的自適應視頻流標準，可根據網路頻寬容量自動調整回放。 它還讓客戶可以「查找」視頻中的任何點，而無需等待視頻的其餘部分下載。
+HLS是Apple的自適應視頻流標準，可根據網路頻寬容量自動調整回放。 它還讓客戶可以「查找」到視頻中的任何點，而無需等待視頻的其餘部分下載。
 
 通過在用戶的案頭系統或移動設備上本地下載和儲存視頻來傳送漸進視頻。
 
@@ -1122,7 +1122,7 @@ Dynamic Media將字幕檔案轉換為JSON（JavaScript對象表示法）格式�
 
    請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. 執行下列操作之一：
+1. 執行下列任一項作業：
 
    * 要獲得彈出式視頻查看器體驗，請點擊 **[!UICONTROL URL]**。 在「URL」對話框中，選擇URL並將其複製到剪貼簿，然後將URL傳到簡單文本編輯器中。 使用以下語法追加視頻的複製URL:
 
@@ -1146,7 +1146,7 @@ Dynamic Media將字幕檔案轉換為JSON（JavaScript對象表示法）格式�
 
 如果需要，您可以使用章節建立並標籤您自己的自定義視頻查看器，而不是使用視頻查看器預設。 有關使用章節導航建立您自己的HTML5查看器的說明，請在AdobeHTML5查看器SDK API中，參考類下的標題「使用修飾符自定義行為」 `s7sdk.video.VideoPlayer` 和 `s7sdk.video.VideoScrubber`。 查看 [HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) 文檔。
 
-<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 您為視頻建立章節清單的方式與建立字幕的方式大致相同。 即，建立WebVTT檔案。 但請注意，此檔案必須與您同時使用的任何WebVTT標題檔案分開；不能將字幕和章節合併為一個WebVTT檔案。
 
@@ -1185,7 +1185,7 @@ Cost-efficient access to rapidly evolving technology.
 
    請參閱 [上載資產](/help/assets/manage-assets.md#uploading-assets)。
 
-1. 執行下列操作之一：
+1. 執行下列任一項作業：
 
    <table>
      <tbody>

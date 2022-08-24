@@ -3,7 +3,7 @@ title: 發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 「查找發行資訊、新增內容、安裝how-tos和詳細的更改清單 [!DNL Adobe Experience Manager] 6.5」
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 3c3efe108b020d9c64e456d409f114c8969f2723
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3652'
 ht-degree: 5%
@@ -260,8 +260,8 @@ For static PDF forms that are created with Forms 6.5 Designer, PDF accessibility
 <!-- version 2 of the description above * When out of the box components that don't have inlineEditing or dropTarget feature in the _cq_editConfig file (navigation, breadcrumb, embed) are deleted > undeleted (by way of Undo), all configurations are lost and empty placeholder reappears. Component must be reconfigured from scratch. (NPR-38361) -->
 * 「樣式系統」下拉清單可能位於頁面頂部，而不是元件的上下文中 — 用於使用 `cq:editConfig` 「afteredit:REFRESH_PAGE」。 此問題現在已解決。 (NPR-38384)
 
-<!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
-* 將文本元件添加到嵌套的佈局容器時未對齊。 (NPR-38193)
+<!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig "afteredit: REFRESH_PAGE". (NPR-38384) -->
+* 添加到嵌套的佈局容器時，文本元件未對齊。 (NPR-38193)
 * 當沒有元件的「樣式系統」配置時，將顯示一個空樣式頁籤；當沒有配置時，該頁籤現在處於隱藏狀態。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有經過驗證才能工作。 (NPR-37996)
@@ -453,7 +453,7 @@ UberJar [!DNL Experience Manager] 6.5.13.0在 [Maven中央儲存庫](https://rep
 * 當用戶首次以自適應格式選擇配置欄位時，「屬性瀏覽器」中不會顯示保存配置的選項。 選擇以在同一編輯器中配置自適應表單的其它一些欄位可解決此問題。
 
 * 在安裝期間可能顯示以下錯誤和警告消息 [!DNL Experience Manager] 6.5.x.x:
-   * &quot;當Adobe Target整合配置在 [!DNL Experience Manager] 使用目標標準API（IMS驗證），然後將體驗片段導出到目標會導致建立錯誤的提供類型。 Target不是「體驗片段」/源「Adobe Experience Manager」，而是建立「HTML」/源「Adobe Target經典」類型的幾個產品。
+   * &quot;當Adobe Target整合配置在 [!DNL Experience Manager] 使用目標標準API（IMS驗證），然後將體驗片段導出到目標會導致建立錯誤的提供類型。 Target不是「體驗片段」/源「Adobe Experience Manager」，而是建立多個「HTML」/源「Adobe Target經典」類型的產品。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`:未在花崗岩/操作/維護中找到維護窗口。
    * 當使用SUM、MAX和MIN等集合函式(CQ-4274424)時，Adaptive Form伺服器端驗證失敗。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`  — 在花崗岩/操作/維護處找不到維護窗口。

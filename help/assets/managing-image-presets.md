@@ -13,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 0d3bcdaa10d16c292aa0dd60254302d30fd700d6
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3839'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -396,7 +396,7 @@ Adobe Illustrator的檔案格式是PDF的變體。 在Experience Manager Assets�
     <ul>
      <li>選擇 <strong>無</strong> 的子菜單。</li>
      <li>選擇 <strong>銳化</strong> ，也請參見Wiki頁。 銳化有助於補償以不同大小顯示影像時可能產生的模糊性。 </li>
-     <li>選擇<strong> 非銳化蒙版</strong> 的子菜單。 可以控制效果強度、效果半徑（以像素計量）以及忽略的對比度閾值。 此效果使用的選項與 Photoshop的「遮色片銳利化」濾鏡相同。</li>
+     <li>選擇<strong> 非銳化蒙版</strong> 的子菜單。 可以控制效果強度、效果半徑（以像素計量）以及忽略的對比度閾值。 此效果使用的選項與Photoshop的「非銳化掩碼」濾鏡相同。</li>
     </ul> <p>在 <strong>非銳化蒙版</strong>，您有以下選項：</p>
     <ul>
      <li><strong>金額</strong>  — 控制應用於邊緣像素的對比度量。 預設實數值為1.0。對於高解析度影像，可將其增加到高達5.0。將Amount視為過濾器強度的度量。</li>

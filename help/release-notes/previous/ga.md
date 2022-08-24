@@ -1,10 +1,11 @@
 ---
 title: 常規發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式和詳細的更改清單。」'
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '4696'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -97,11 +98,11 @@ Quickstart將Eclipse Jetty 9.4.15用作Servlet引擎。
 
 * 已為管理員用戶添加密碼到期。
 
-#### Web伺服器 {#web-server}
+#### 網頁伺服器 {#web-server}
 
 * Quickstart分發將Eclipse Jetty 9.4.15用作Servlet引擎(隨附AEM於9.3.22的6.4)。
 
-### [!DNL Experience Manager] 網站 {#experience-manager-sites}
+### [!DNL Experience Manager] Sites {#experience-manager-sites}
 
 #### 托管單頁應用 {#managed-single-page-apps}
 
@@ -144,7 +145,7 @@ AEM能夠以各種格式和堆棧的不同級別為內容提供服務。 有些�
 * 新項目的單頁App Maven項目原型1.0.6+，請參見 [發行說明的Github](https://github.com/adobe/aem-spa-project-archetype/releases)。
 * HTL 1.4版，請參見 [發行說明的Github](https://github.com/adobe/htl-spec/releases/tag/1.4)。
 
-   * 字串、陣列和對象的「in」運算子：
+   * 字串、陣列和對象的&quot;in&quot;運算子：
 
       ```html
       ${'a' in 'abc’}
@@ -452,7 +453,7 @@ Adobe已制定相應的流程和流程，以便收集、排定優先順序並跟
 * 括弧代碼編輯器的擴展([閱讀更多內容並下載](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle依賴項([下載連結](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
 
-**網站**
+**Sites**
 
 * 核心元件([GitHub項目](https://github.com/adobe/aem-core-wcm-components))
 * We.Retail Reference實施([閱讀更多](/help/sites-developing/we-retail.md))
@@ -472,7 +473,7 @@ Adobe已制定相應的流程和流程，以便收集、排定優先順序並跟
 
 * 現AEM代化工具套件，例如對話框轉換工具。 ([GitHub項目](https://github.com/adobe/aem-modernize-tools))
 
-**資產**
+**Assets**
 
 * 要添加增強的PDF光柵化器([閱讀更多](/help/assets/aem-pdf-rasterizer.md))
 * 要添加擴展RAW映像支援的包([閱讀更多](/help/assets/camera-raw.md))
@@ -552,11 +553,11 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 1. 保存檔案並重新啟AEM動實例。
 
-### 網站 {#sites}
+### Sites {#sites}
 
 * **使用頁面版本**: [如果已移動頁面，則無法再對移動之前建立的任何版本執行預覽](/help/sites-authoring/working-with-page-versions.md#previewing-a-version)。
 
-### 資產 {#assets}
+### Assets {#assets}
 
 * **搜索：** 如果搜索字串包含前導空格()，則搜索不會生成任何返回[OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
 * **資料夾元資料架構**:添加選擇按鈕後，ID和值欄位不會按預期方式呈現，刪除功能將不起作用。 (CQ-4261144)
