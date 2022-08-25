@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b14cbc4cad15b06754db8b8c992a596d4d64c096
+source-git-commit: 6c6f67929b774492d8caa052598b8c33e9a41710
 workflow-type: tm+mt
-source-wordcount: '6037'
+source-wordcount: '6253'
 ht-degree: 3%
 
 ---
@@ -86,11 +86,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## 在Cloud Services中建立Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
 
-**在配置Dynamic Media之前**  — 在您收到具有Dynamic Media憑據的預配電子郵件後，必須開啟 [Dynamic Media Classic台式機應用](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登錄帳戶以更改密碼。 預配電子郵件中提供的密碼是系統生成的，僅用於臨時密碼。 更新密碼以使用正確的憑據設定Dynamic MediaCloud Service非常重要。
+<!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
-![動態媒體配置更新](assets/dynamicmediaconfiguration2updated.png)
+   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**要在Cloud Services中建立Dynamic Media配置：**
+**To create a Dynamic Media Configuration in Cloud Services:** -->
 
 1. 在「Experience Manager作者」模式下，選擇Experience Manager徽標以訪問全局導航控制台，然後選擇「工具」表徵圖，然後轉到 **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media配置]**。
 1. 在「Dynamic Media配置瀏覽器」頁面的左窗格中，選擇 **[!UICONTROL 全球]** (不選擇資料夾表徵圖 **[!UICONTROL 全球]**)，然後選擇 **[!UICONTROL 建立]**。
@@ -98,8 +98,24 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    選擇 **[!UICONTROL 連接到Dynamic Media]**。
 
-   >[!NOTE]
-   在您收到帶有Dynamic Media憑據的預配電子郵件後，開啟 [Dynamic Media Classic台式機應用](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然後登錄帳戶以更改密碼。 預配電子郵件中提供的密碼是系統生成的，僅用於臨時密碼。 更新密碼以使用正確的憑據設定Dynamic MediaCloud Service非常重要。
+1. 在 **[!UICONTROL 更改密碼]** 對話框 **[!UICONTROL 新密碼]** 欄位中，輸入包含8-25個字元的新密碼。 密碼必須至少包含下列各項之一：
+
+   * 大寫字母
+   * 小寫字母
+   * 數量
+   * 特殊字元： `# $ & . - _ : { }`
+
+   的 **[!UICONTROL 當前密碼]** 欄位被有意預先填充，並且隱藏在交互中。
+
+   如有必要，您可以通過選擇密碼眼表徵圖來顯示密碼來檢查鍵入或重新鍵入的密碼的拼寫。 再次選擇該表徵圖以隱藏密碼。
+
+1. 在 **[!UICONTROL 重複密碼]** ，重新鍵入新密碼，然後選擇 **[!UICONTROL 完成]**。
+
+   新密碼將在您選擇 **[!UICONTROL 保存]** 右上角 **[!UICONTROL 建立Dynamic Media配置]** 的子菜單。
+
+   如果已選擇 **[!UICONTROL 取消]** 的 **[!UICONTROL 更改密碼]** 對話框，在保存新建立的Dynamic Media配置時，仍必須輸入新密碼。
+
+   另請參閱 [將密碼更改為Dynamic Media](#change-dm-password)。
 
 1. 連接成功後，請設定以下內容。 需要帶星號(*)的標題：
 
@@ -147,6 +163,37 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 現在您完成了基本配置；您已準備好使用Dynamic Media-Scene7模式。
 
 如果要進一步自定義配置，您可以選擇完成以下任務 [（可選）在Dynamic Media-Scene7模式下配置高級設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)。
+
+### 將密碼更改為Dynamic Media {#change-dm-password}
+
+在Dynamic Media，密碼過期時間設定為自當前系統日期起100年。
+
+密碼必須至少包含下列各項之一：
+
+* 大寫字母
+* 小寫字母
+* 數量
+* 特殊字元： `# $ & . - _ : { }`
+
+如有必要，您可以通過選擇密碼眼表徵圖來顯示密碼來檢查鍵入或重新鍵入的密碼的拼寫。 再次選擇該表徵圖以隱藏密碼。
+
+選擇時，將保存更改的密碼 **[!UICONTROL 保存]** 右上角 **[!UICONTROL 編輯Dynamic Media配置]** 的子菜單。
+
+**將密碼更改為Dynamic Media:**
+
+1. 在「Experience Manager作者」模式下，選擇Experience Manager徽標以訪問全局導航控制台。
+1. 在控制台左側，選擇「工具」表徵圖，然後轉到 **[!UICONTROL Cloud Services] > [!UICONTROL Dynamic Media配置]**。
+1. 在「Dynamic Media配置瀏覽器」頁面的左窗格中，選擇 **[!UICONTROL 全球]**。 不選擇資料夾表徵圖 **[!UICONTROL 全球]**。 然後，選擇 **[!UICONTROL 編輯]**。
+1. 在 **[!UICONTROL 編輯Dynamic Media配置]** 頁，位於 **[!UICONTROL 密碼]** 欄位，選擇 **[!UICONTROL 更改密碼]**。
+1. 在 **[!UICONTROL 更改密碼]** 對話框，執行以下操作：
+
+   * 在 **[!UICONTROL 新密碼]** 的子菜單。
+
+      的 **[!UICONTROL 當前密碼]** 欄位被有意預先填充，並且隱藏在交互中。
+
+   * 在 **[!UICONTROL 重複密碼]** ，重新鍵入新密碼，然後選擇 **[!UICONTROL 完成]**。
+
+1. 在右上角 **[!UICONTROL 編輯Dynamic Media配置]** ，選擇 **[!UICONTROL 保存]**，然後選擇 **[!UICONTROL 確定]**。
 
 ## （可選）在Dynamic Media-Scene7模式下配置高級設定 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
