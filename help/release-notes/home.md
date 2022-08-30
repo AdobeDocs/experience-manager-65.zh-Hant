@@ -2,10 +2,10 @@
 title: Adobe Experience Manager6.5發行說明
 description: AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-source-git-commit: a2b3cb81fb15a1f03004e42cafbf92c84c9d7b89
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '374'
+ht-degree: 31%
 
 ---
 
@@ -31,27 +31,27 @@ AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、�
 | [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管AEM理 |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南介紹了中的創作概AEM念。 |
 | [經典UI創作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介紹了在經典用戶界AEM面中創作的概念。 |
-| [螢幕使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數字標牌解決方案，以發佈動態和互動式數字型驗。 |
+| [螢幕使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=en) | 瞭解數字標牌解決方案，以發佈動態和互動式數字型驗。 |
 | [部署使用手冊](/help/sites-deploying/home.md) | 本指南向您介紹的基本信AEM息。 |
 | [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何構建實AEM例。 |
 | [管理使用手冊](/help/managing/home.md) | 本指南介紹如何成功管AEM理項目。 |
 | [《 Commerce使用手冊》](/help/commerce/home.md) | 瞭解有關的Commerce Integration FrameworkAEM。 |
 | [移動使用手冊](/help/mobile/home.md) | 本指南介紹如何為移動應用程式建立和管理內容。 |
-| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南介紹如何與Livefyre共用用戶生成的內容。 |
+| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南介紹如何與Livefyre共用用戶生成的內容。 |
 
 ## 關鍵資AEM源
 
-* [教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
-* [《 Dispatcher使用手冊》](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
-* [HTL使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
-* [核心元件使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [教程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
+* [《 Dispatcher使用手冊》](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other)
 * [AEM 社群論壇](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
 ## 版權、許可證和免責聲明 {#copyright-licenses-and-disclaimers}
 
-有關詳細資訊，請參閱 [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
+有關詳細資訊，請參見 [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
 
-第三方許可證通知： [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
+第三方許可證通知： [https://www.adobe.com/products/eula/third_party](https://www.adobe.com/products/eula/third_party.html)

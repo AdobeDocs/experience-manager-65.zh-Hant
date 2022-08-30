@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin, Architect
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1670'
 ht-degree: 1%
 
 ---
@@ -193,7 +193,7 @@ ht-degree: 1%
 在監視過程中，如果遇到問題，您可以執行一些故障排除任務來解決與 [!DNL Experience Manager] 部署：
 
 * 如果使用TarMK，請經常運行Tar壓縮。 有關詳細資訊，請參閱 [維護儲存庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)。
-* 檢查 `OutOfMemoryError` 日誌。 有關詳細資訊，請參見 [分析記憶體問題](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)。
+* 檢查 `OutOfMemoryError` 日誌。 有關詳細資訊，請參見 [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)。
 
 * 檢查日誌中是否有對未索引查詢、樹遍歷或索引遍歷的引用。 這表示未編製索引的查詢或索引不足的查詢。 有關優化查詢和索引效能的最佳做法，請參見 [查詢和索引的最佳做法](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 * 使用工作流控制台驗證工作流是否按預期方式執行。 如果可能，將多個工作流壓縮為單個工作流。

@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: 35639a818f58923ae9ad099752d359e7795be60b
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2753'
 ht-degree: 0%
 
 ---
@@ -222,7 +222,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來嗅探HTTP通信，
 * 將建立資產的版本
 * [!UICONTROL DAM更新資產] 針對資產運行
 
-所列結果消耗了大量資源。 因此，Adobe建議 [禁用寫XMP回](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html)，也請參見Wiki頁。
+所列結果消耗了大量資源。 因此，Adobe建議XMP在不需要寫回時禁用寫回。 有關詳細資訊，請參見 [XMP寫](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/xmp-writeback.html)。
 
 如果選中了運行工作流標誌，則導入大量元資料XMP可能導致資源密集型寫回活動。 在精益伺服器使用期間計畫此類導入，以便不影響其他用戶的效能。
 
@@ -242,7 +242,7 @@ Adobe建議啟用HTTPS，因為許多公司都有防火牆來嗅探HTTP通信，
 
 ## 搜索索引 {#search-indexes}
 
-安裝 [最新的Service Pack](/help/release-notes/release-notes.md) 和與效能相關的修補程式，因為這些修補程式通常包括對系統索引的更新。 請參閱 [效能優化提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) 進行索引優化。
+安裝 [最新的Service Pack](/help/release-notes/release-notes.md) 和與效能相關的修補程式，因為這些修補程式通常包括對系統索引的更新。 請參閱 [效能優化提示](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html?lang=en) 進行索引優化。
 
 為經常運行的查詢建立自定義索引。 有關詳細資訊，請參閱 [分析慢查詢的方法](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) 和 [編製自定義索引](/help/sites-deploying/queries-and-indexing.md)。 有關查詢和索引最佳做法的其他見解，請參見 [查詢和索引的最佳做法](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 

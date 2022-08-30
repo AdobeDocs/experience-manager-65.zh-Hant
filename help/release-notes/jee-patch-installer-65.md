@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 495b9a006f5288ad6579e13aaea82ace6d6f0e91
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 22%
+ht-degree: 20%
 
 ---
 
@@ -65,8 +65,8 @@ ht-degree: 22%
 
 1. 根據您的應用程式伺服器，選擇以下文檔之一併按照 *配置和部署表AEM單* 的子菜單。
 
-   * [安裝和部AEM署JBoss表單](http://www.adobe.com/go/learn_aemforms_installJBoss_65_tw)
-   * [安裝和部AEM署WebSphere窗體](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_tw)
+   * [安裝和部AEM署JBoss表單](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安裝和部AEM署WebSphere窗體](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. （僅限JBoss）安裝修補程式並配置伺服器後，刪除JBoss應用程式伺服器的tmp和工作目錄。
 
