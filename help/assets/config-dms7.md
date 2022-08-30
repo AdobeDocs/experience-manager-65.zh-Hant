@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 6c6f67929b774492d8caa052598b8c33e9a41710
+source-git-commit: 74e3d4204166280e8624298098042b8cb222c034
 workflow-type: tm+mt
 source-wordcount: '6253'
 ht-degree: 3%
@@ -119,9 +119,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 1. 連接成功後，請設定以下內容。 需要帶星號(*)的標題：
 
-   * **[!UICONTROL 公司]** -Dynamic Media帳戶的名稱。 你有多個Dynamic Media賬戶。 例如，您可以有不同的子品牌、分部、分段或生產環境。
+   * **[!UICONTROL 公司]** -Dynamic Media帳戶的名稱。 你可以在Dynamic Media有個Experience Manager賬戶。 <!-- CQDOC-19579 and CQDOC-19612 -->
 
-   <!-- UNHIDE FEBRUARY 24, 2022 See also [Configure Dynamic Media company alias account](/help/assets/dm-alias-account.md). -->
+      另請參閱 [配置Dynamic Media公司別名帳戶](/help/assets/dm-alias-account.md)。
 
    * **[!UICONTROL 公司根資料夾路徑]**
 
