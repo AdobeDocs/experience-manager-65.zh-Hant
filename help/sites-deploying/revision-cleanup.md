@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 550e7993f88367ec4b5c1d024dc742c087c1a9eb
 workflow-type: tm+mt
-source-wordcount: '5904'
+source-wordcount: '5912'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### AEM 6.5升級注意事項 {#aem-upgrade-considerations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td>問題 </td>
@@ -143,7 +143,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### 遷移到Oak Segment Tar {#migrating-to-oak-segment-tar}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>問題</strong></td>
@@ -205,7 +205,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### 運行聯機修訂版清除 {#running-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>問題</strong></td>
@@ -368,7 +368,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### 監視線上修訂版清除 {#monitoring-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>線上修訂版清理期間需要監控哪些內容？</strong></td>
@@ -453,7 +453,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### 聯機修訂版清除疑難解答 {#troubleshooting-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>如果不運行「線上修訂版清除」，最壞的情況是什麼？</strong></td>
@@ -507,15 +507,68 @@ TarMK GC: no base state available, running full compaction instead
 
 如果在聯機修訂版清除過程中發生意外事件，error.log將是冗餘的。 以下矩陣旨在解釋最常見的資訊並提供可能的解決方案：
 
-| **階段** | **日誌消息** | **解釋** | **後續步驟** |
+<!---| **Phase** |**Log Messages** |**Explanation** |**Next Steps** |
 |---|---|---|---|
-|  |  |  |  |
-| 估計 | TarMK GC #2:由於壓縮暫停而跳過估計 | 當按配置在系統上禁用壓縮時跳過估計階段。 | 啟用聯機修訂版清除。 |
-|  | TarMK GC #2:估計中斷：${REASON}。 跳過壓縮。 | 估計階段提前終止。 可能中斷估計階段的事件的一些示例：主機系統上記憶體或磁碟空間不足。 | 這要看給定的原因。 |
-| 壓縮 | TarMK GC #2:壓縮暫停 | 只要壓縮階段被配置暫停，估計階段和壓縮階段都不會執行。 | 啟用聯機修訂版清除。 |
-|  | TarMK GC #2:壓縮已取消：${REASON}。 | 壓縮階段提前終止。 可能中斷壓縮階段的事件的一些示例：主機系統上記憶體或磁碟空間不足。 此外，還可以通過關閉系統或通過管理介面（如操作面板中的維護窗口）明確取消壓縮來取消壓縮。 | 這要看給定的原因。 |
-|  | TarMK GC #2:壓縮在32.902分鐘（1974140毫秒）後失敗，經過5次循環 | 此消息並不表示存在無法恢復的錯誤，但只表示在經過一定的嘗試後才終止壓縮。 另外，閱讀 [後段](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes)。 | 閱讀以下內容 [橡木文檔](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes)，以及 [運行聯機修訂版清除](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) 的子菜單。 |
-| 清理 | TarMK GC #2:清理中斷 | 已通過關閉儲存庫取消清理。 預期不會影響一致性。 另外，磁碟空間很可能不會完全回收。 將在下一個修訂版清除週期中回收。 | 調查儲存庫關閉的原因，然後繼續嘗試避免在維護窗口期間關閉儲存庫。 |
+|   |  |  |  |
+| Estimation |TarMK GC #2: estimation skipped because compaction is paused |The estimation phase is skipped when compaction is disabled on the system by configuration. |Enable Online Revision Cleanup. |
+|   |TarMK GC #2: estimation interrupted: ${REASON}. Skipping compaction. |The estimation phase terminated prematurely. Some examples of events that could interrupt the estimation phase: not enough memory or disk space on the host system. |Depends on the given reason. |
+| Compaction |TarMK GC #2: compaction paused |As long as the compaction phase is paused by configuration, neither the estimation phase nor the compaction phase will be executed. |Enable online revision cleanup. |
+|   |TarMK GC #2: compaction cancelled: ${REASON}. |The compaction phase terminated prematurely. Some examples of events that could interrupt the compaction phase: not enough memory or disk space on the host system. Moreover, compaction can also be cancelled by shutting down the system or by explicitly cancelling it via administrative interfaces such as the Maintenance Window within the Operations Dashobard. |Depends on the given reason. |
+|   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message doesn’t mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
+| Cleanup |TarMK GC #2: cleanup interrupted |Cleanup has been cancelled by shutting down the repository. No impact on consistency is expected. Also, disk space is most likely not reclaimed to full extent. It will be reclaimed during next revision cleanup cycle. |Investigate why repository has been shut down and going forward try to avoid shutting down the repository during maintenance windows. |-->
+
+<table style="table-layout:auto">
+ <tbody>
+  <tr>
+    <th>階段</th>
+    <th>日誌消息</th>
+    <th>解釋</th>
+    <th>後續步驟</th>
+  </tr>  
+  <tr>
+    <td>估計</td>
+    <td>TarMK GC #2:已跳過估計，因為壓縮已暫停。</td>
+    <td>當按配置在系統上禁用壓縮時跳過估計階段。</td>
+    <td>啟用聯機修訂版清除。</td>
+  </td>
+  </tr>
+  <tr>
+    <td>N/A</td>
+    <td>TarMK GC #2:估計中斷：${REASON}。 跳過壓縮。</td>
+    <td>估計階段提前終止。 可能中斷估計階段的事件的一些示例：主機系統上記憶體或磁碟空間不足。</td>
+    <td>這要看給定的原因。</td>
+  </td>
+  </tr>
+  <tr>
+    <td>壓縮</td>
+    <td>TarMK GC #2:壓縮暫停。</td>
+    <td>只要壓縮階段被配置暫停，估計階段和壓縮階段都不會執行。</td>
+    <td>啟用聯機修訂版清除。</td>
+  </td>
+  </tr>
+   <tr>
+    <td>不適用</td>
+    <td>TarMK GC #2:壓縮已取消：${REASON}。</td>
+    <td>壓縮階段提前終止。 可能中斷壓縮階段的事件的一些示例：主機系統上記憶體或磁碟空間不足。 此外，還可以通過關閉系統或通過管理介面（如操作控制板中的維護窗口）顯式取消壓縮來取消壓縮。</td>
+    <td>這要看給定的原因。</td>
+  </td>
+  </tr>
+  <tr>
+    <td>不適用</td>
+    <td>TarMK GC #2:壓縮在5次循環後32.902 min(1974140 ms)失效。</td>
+    <td>此消息並不表示存在無法恢復的錯誤，但只表示在經過一定的嘗試後才終止壓縮。 另外，閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">下段。</a></td>
+    <td>閱讀以下內容 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">橡木文檔</a>，以及「正在運行的聯機修訂版清除」部分的最後一個問題。</a></td>
+  </td>
+  </tr>
+  <tr>
+    <td>清理</td>
+    <td>TarMK GC #2:清理中斷。</td>
+    <td>已通過關閉儲存庫取消清理。 預期不會影響一致性。 另外，磁碟空間很可能不會完全回收。 將在下一個修訂版清除週期中回收。</td>
+    <td>調查儲存庫關閉的原因，然後繼續嘗試避免在維護窗口期間關閉儲存庫。</td>
+  </td>
+  </tr>
+  </tbody>
+</table>
 
 ## 如何運行離線修訂版清除 {#how-to-run-offline-revision-cleanup}
 
@@ -601,7 +654,7 @@ java -Dupdate.limit=10000 -Dcompaction-progress-log=150000 -Dlogback.configurati
 
 ### 離線修訂版清理常見問題 {#offline-revision-cleanup-frequently-asked-questions}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>決定離線修訂版清除持續時間的因素有哪些？</strong></td>
