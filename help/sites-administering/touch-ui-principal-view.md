@@ -11,7 +11,7 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: 4ea49fe6745b23f01f46edfe07ff3dd8c8299729
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 權限管理的主體視圖{#principal-view-for-permissions-management}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 AEM 6.5推出使用者和群組的權限管理。 主要功能與傳統UI相同，但更方便使用且更有效率。
 
@@ -88,7 +88,7 @@ CRXDE以管理進階權限和限制。 已以相同檢視加以整合。 此檢�
 
 >[!NOTE]
 >
->欲知每項限制的含義，請參閱 [傑克拉布特橡樹檔案](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
+>欲知每項限制的含義，請參閱 [傑克拉布特橡樹檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
 您可以借由選擇限制類型、輸入值並點擊 **+** 表徵圖。
 

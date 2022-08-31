@@ -1,7 +1,8 @@
 ---
 title: 如何使用WS-security標頭傳遞憑據？
 description: 了解如何使用WS-security標頭傳遞憑證
-source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
+exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 **其他所需產品**
 
-Java編輯器，如[Eclipse](https://www.eclipse.org/)或[Netbeans IDE](https://netbeans.apache.org/)
+Java編輯器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
 
 ## 使用者層級 {#user-level}
 
@@ -127,7 +128,7 @@ public class ZIPService {
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<component xmlns="http://adobe.com/idp/dsc/component/document">
+<component xmlns="https://adobe.com/idp/dsc/component/document">
 <!-- Unique id identifying this component -->
    <component-id>ZipService</component-id>
 
@@ -212,13 +213,10 @@ public class ZIPService {
 
 * 查找指定資料夾中的所有檔案，並以壓縮文檔形式返回這些檔案。
 
-* 提供包含數個PDF檔案的ZIP檔案，解壓縮後這些檔案即可供Reader延伸。 這需要JEE上的AEM FormsReader擴充功能模組。
+* 提供包含許多PDF文檔的ZIP檔案，這些文檔在解壓縮後可以被讀取器擴展。 這需要JEE上的AEM FormsReader擴充功能模組。
 
-* 提供包含異構類型的文檔的ZIP檔案，這些文檔可以使用生成PDF服務被解壓縮並轉換為PDF文檔。
+* 提供包含異構類型的文檔的ZIP檔案，這些文檔可以使用「生成PDF」服務被解壓縮並轉換為PDF文檔。
 
 * 原則會保護檔案清單，並以ZIP檔案傳回。
 
 * 允許使用者以單一ZIP檔案的形式下載處理程式例項的所有附件。
-
-
-

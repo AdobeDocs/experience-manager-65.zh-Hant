@@ -1,7 +1,7 @@
 ---
 title: 升級至 AEM 6.5 Forms
 seo-title: Upgrade to AEM 6.5 Forms
-description: 您可以執行從AEM6.1Forms、AEM6.2Forms和LiveCycleES4 SP1到AEM6.3Forms的直接升級。
+description: 您可以從AEM 6.1 Forms、AEM 6.2 Forms和LiveCycleES4 SP1直接升級至AEM 6.3 Forms。
 seo-description: You can perform a direct upgrade from AEM 6.1 Forms, AEM 6.2 Forms, and LiveCycle ES4 SP1 to AEM 6.3 Forms.
 uuid: 1435246a-9215-4d88-b52c-59a5c329bb77
 content-type: reference
@@ -11,34 +11,34 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '375'
+ht-degree: 2%
 
 ---
 
-# 升級至AEMJEE上的6.5Forms {#upgrade-to-aem-forms-jee}
+# 在JEE升級至AEM 6.5 Forms {#upgrade-to-aem-forms-jee}
 
-AEM6.5.12.0FormsJEE提供兩種類型的安裝程式：完整安裝程式和修補程式安裝程式。
+AEM 6.5.12.0 Forms on JEE提供兩種類型的安裝程式：完整安裝程式和修補程式安裝程式。
 
-**完整安裝程式**:您可以使用 [AEM6.5.12.0 on JEE完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 設定新的AEM Forms實例或從JEE上的AEM6.3Forms、AEMJEE上的6.4升級，以及從JEE上的AEM6.5.x.xForms升級到JEE上的AEM6.5.12.0Forms升級。
+**完整安裝程式**:您可以使用 [AEM 6.5.12.0（JEE完整安裝程式）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 若要設定最新的AEM Forms執行個體，或從JEE版的AEM 6.3 Forms、JEE版的AEM 6.4以及從JEE版的AEM 6.5.x.x Forms現成升級為JEE版的AEM 6.5.12.0 Forms 。
 
-**修補程式安裝程式**: [AEM 6.5.12.0上的JEE修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 適用於已使AEM用6.5.x.x版本的客戶。 您可以使用修補程式安裝程式升級到最新版本的AEM Forms。
+**修補程式安裝程式**: [AEM 6.5.12.0（JEE修補程式安裝程式）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 適用於已使用AEM 6.5.x.x版的客戶。 您可以使用修補程式安裝程式來升級至最新版本的AEM Forms。
 
-下表描述了使用完整安裝程式和修補程式安裝程式的感測器。
+下表描述了使用完整安裝程式和修補程式安裝程式的參數。
 
 ![](assets/full-and-patch-installer.png)
 
-執行以下步驟，使用完整安裝程式將JEE上的AEM現有6.3Forms或JEE上的6.4Forms升級到JEE上的AEM6.5.12.0Forms:
+請執行下列程式，使用完整安裝程式將JEE上的現有AEM 6.3 Forms或JEE上的AEM 6.4 Forms升級至JEE上的AEM 6.5.12.0 Forms:
 
-1. 從AEM下載JEE安裝程式上的6.5Forms [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 您需要有效的維護和支援合同才能使用安裝程式。
-1. 請參閱 [升級核對表和規劃](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65) 瞭解要執行的檢查以確保成功升級。
-1. 請參閱 [準備升級到AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65) 瞭解並執行確保升級在最短伺服器停機時間內正確運行的任務。
+1. 從下載AEM 6.5 Forms on JEE安裝程式 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 您需要有效的維護和支援合同才能使用安裝程式。
+1. 請參閱 [升級檢查清單和規劃](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65) 了解要執行的檢查，以確保成功升級。
+1. 請參閱 [準備升級至AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65) 學習並執行各項任務，以確保在最短的伺服器停機時間內正確運行升級。
 1. 根據您現有的環境和應用程式伺服器，選擇以下文檔之一併按照說明操作。
 
-   * [將JBossAEM從6.3或AEM6.4Forms升級AEM到6.5Forms](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-   * [從AEM6.3或AEM6.4Forms升級到AEM6.5FormsWebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
-   * [從6AEM.3或6.AEM4Forms升級到AEM6.5Forms](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+   * [從AEM 6.3或AEM 6.4 Forms升級至AEM 6.5 Forms for JBoss](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
+   * [從AEM 6.3或AEM 6.4 Forms升級至AEM 6.5 Forms for WebSphere](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+   * [從AEM 6.3或AEM 6.4 Forms升級至AEM 6.5 Forms，以完成JBoss整套功能](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
 
-無法直接從LiveCycleES2、LiveCycleES3、AEM6.0Forms、AEM6.1Forms、AEM6.2Forms升級到AEM6.5。 您可以執行到LiveCycle或AEM Forms的一個或多個版本的中間升級，然後升級到AEM6.5Forms。 有關中間版本清單和相應升級說明，請參見 [選擇升級路徑](upgrade.md)。
+無法從LiveCycleES2、LiveCycleES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Forms直接升級至AEM 6.5 Forms。 您可以執行一或多個版本的LiveCycle或AEM Forms的中繼升級，然後升級至AEM 6.5 Forms。 如需中間版本清單及對應的升級指示，請參閱 [選擇升級路徑](upgrade.md).

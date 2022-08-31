@@ -4,7 +4,7 @@ seo-title: Learn About AEM 6.5 Capabilities
 description: 說明AEM 6.5的基本功能
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 7%
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites是AdeobeExperience Manager內的內容管理系統，可讓您在各個網站、行動網站和站上螢幕上建立、管理和傳遞數位體驗，使其成為全球性的觸及對象，但具備個人相關性和吸引力。 [深入了解](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 或 [深入了解我們新推出的影片功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites是AdeobeExperience Manager內的內容管理系統，可讓您在各個網站、行動網站和站上螢幕上建立、管理和傳遞數位體驗，使其成為全球性的觸及對象，但具備個人相關性和吸引力。 [深入了解](https://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 或 [深入了解我們新推出的影片功能教學課程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -42,11 +42,11 @@ Screens是Adobe Experience Manager的功能，可讓您發佈動態的互動式�
 
 ## AEM Communities {#aem-communities}
 
-Communities是Adobe Experience Manager的一項功能，可協助您建立線上社群體驗，包括論壇、使用者群組、學習資源和其他對客戶、員工和您的品牌有價值的社交功能。 [了解更多.](http://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
+Communities是Adobe Experience Manager的一項功能，可協助您建立線上社群體驗，包括論壇、使用者群組、學習資源和其他對客戶、員工和您的品牌有價值的社交功能。 [了解更多.](https://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre是全新的Adobe Experience Manager功能，可讓您利用網路上共用的所有內容，在您自己的網站上持續建立全新高品質的內容流。 [深入了解](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 或 [跳進我們的嚮導。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre是全新的Adobe Experience Manager功能，可讓您利用網路上共用的所有內容，在您自己的網站上持續建立全新高品質的內容流。 [深入了解](https://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 或 [跳進我們的嚮導。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
 ## AEM Foundation {#aem-foundation}
 
