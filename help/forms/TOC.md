@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 3f7191ecdddf7325f2c1153f1ec733893cc649dc
+source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
 workflow-type: tm+mt
-source-wordcount: '3795'
-ht-degree: 4%
+source-wordcount: '3791'
+ht-degree: 3%
 
 ---
 
@@ -332,7 +332,6 @@ ht-degree: 4%
    + [設定分析和報表](using/configure-analytics-forms-documents.md)
    + [檢視並了解AEM Forms分析報表](using/view-understand-aem-forms-analytics-reports.md)
    + [建立和管理最適化表單的A/B測試](using/ab-testing-adaptive-forms.md)
-   + [與 Adobe Analytics 整合](using/integrate-aem-forms-with-adobe-analytics.md)
 + 發佈與處理AEM Forms {#publish-process-aem-forms}
    + [在入口網站發佈表單簡介](using/introduction-publishing-forms.md)
    + [將草稿和提交元件與資料庫整合的範例](using/integrate-draft-submission-database.md)

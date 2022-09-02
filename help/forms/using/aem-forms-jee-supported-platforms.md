@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3559'
 ht-degree: 1%
 
 ---
@@ -89,11 +89,6 @@ Adobe Experience Manager Forms需要Java虛擬機才能運行，該虛擬機由J
    <th><p><strong>平台</strong></p> </th>
    <th><p><strong>支援程度</strong></p> </th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
-  </tr>
-  <tr>
-   <td><p>OracleJava™ SE 11（64位） <sup> [8] </sup> </p>  </td>
-   <td><p>答：支援</p> </td>
-   <td><p>次要版本和更新 </p> </td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64位</td>
@@ -796,9 +791,12 @@ Adobe保留在任何指定時間點變更AEM Forms JEE版本支援的第三方�
 
 ## 修訂歷史記錄 {#revision-history}
 
-- 2022年9月01日
+<!-- 
+- Sep 01, 2022
+  
+  - Added support for Oracle Java™ SE 11 (64 bit) SDK for application server JBoss EAP 7.4.
 
-   - 新增對OracleJava™ SE 11（64位）SDK的支援，用於應用程式伺服器JBoss EAP 7.4。
+  -->
 
 - 2022年3月03日
 
