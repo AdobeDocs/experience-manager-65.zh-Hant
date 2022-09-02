@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 3e6eba85dbd9e98ac29fed55c1787e5633bafc04
 workflow-type: tm+mt
-source-wordcount: '10769'
+source-wordcount: '10683'
 ht-degree: 0%
 
 ---
@@ -186,16 +186,6 @@ Distiller服務( `DistillerService`)通過網路將PostScript、Encapsuled PostS
 **SMTP用戶：** 用於登錄到SMTP伺服器的用戶帳戶的用戶名。
 
 **SMTP密碼：** 與SMTP用戶帳戶關聯的密碼。
-
-**0Auth2.0驗證：** Auth2.0驗證服務提供對其整合式郵件服務的支援，使組織能夠遵守安全的電子郵件要求。
-
-**客戶端ID:** Azure入口網站會產生應用程式ID，用於驗證。
-
-**用戶端密碼：** Azure入口網站會產生用於驗證的機密金鑰。
-
-**重新整理Token:**  OAuth用戶端使用字串來取得新的存取權杖，而不需使用者互動。
-
-如需如何擷取和使用用戶端ID、用戶端密碼和重新整理Token的詳細資訊，請參閱 [電子郵件服務的OAuth2.0驗證支援](/help/forms/using/oauth2-support-for-mail-service.md).
 
 **SMTP傳輸安全：** 用於連接到SMTP伺服器的安全協定：
 

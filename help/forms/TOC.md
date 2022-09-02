@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 3f7191ecdddf7325f2c1153f1ec733893cc649dc
 workflow-type: tm+mt
-source-wordcount: '3801'
+source-wordcount: '3795'
 ht-degree: 4%
 
 ---
@@ -122,7 +122,6 @@ ht-degree: 4%
       + [JEE版AEM Forms的一般安全性考量事項](using/general-security-considerations.md)
       + [在JEE環境中強化AEM Forms](using/hardening-aem-forms-jee-environment.md)
       + [配置JEE上AEM Forms的安全管理設定](using/configuring-secure-administration-settings-aem.md)
-      + [OAuth2對郵件服務的支援](using/oauth2-support-for-mail-service.md)
 + 表單資料模型 {#form-data-model}
    + [AEM Forms資料整合簡介](using/data-integration.md)
    + [設定資料來源](using/configure-data-sources.md)
