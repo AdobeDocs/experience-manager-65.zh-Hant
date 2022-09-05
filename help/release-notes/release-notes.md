@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
+source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '3237'
 ht-degree: 4%
 
 ---
@@ -80,9 +80,49 @@ ht-degree: 4%
 
 ## [!DNL Forms] {#forms-6514}
 
+<!--
+
 >[!NOTE]
 >
-> 中的修正 [!DNL Experience Manager] Forms會在排程一週後透過個別的附加套件傳送 [!DNL Experience Manager] Service Pack版本。
+> Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+
+>[!NOTE]
+>
+>* [!DNL Experience Manager Forms] releases the add-on packages one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages will release Thursday, September 1, 2022. In addition, a list of Forms fixes and enhancements will also be added to this section.
+
+-->
+
+* 將檔案附加至多面板最適化表單，並儲存最適化表單的草稿時，會發生錯誤。 (NPR-38978)
+* 當使用者使用createPDF2 Java API搭配AdobePDF設定將RGB描述檔轉換為CMYK描述檔時，選項無法與Java API搭配使用。 該選項與獨立DistillerClient應用程式無關。 (NPR-38858、CQ-4346181)
+* 安裝AEM 6.5 Forms Service Pack 12(6.5.12.0)後，除了關閉工作之外，所有選項都無法在AEM工作流程的「指派工作」步驟中使用。 (NPR-38743)
+* 在記錄文檔(DoR)中，表中的某些值被截斷。 (NPR-38657)
+* 使用資料XML預覽FormSet時，當XDP包含浮動欄位時，預覽FormSet時不會顯示任何資料，但使用「預覽PDF」選項時會顯示資料。
+* 在適用性Forms中，選項按鈕和核取方塊未依索引標籤順序排列。 (NPR-38645)
+* 若您使用 `Summary Step` 要在提交表單後為已翻譯的最適化表單生成記錄文檔(DoR)，不會翻譯為本地化語言。 (NPR-38567)
+* AEM工作流程步驟中的停用重試選項未如預期運作。 問題似乎間歇性出現。 (NPR-38547)
+* 使用RTF欄位提交適用性表單時， `an Internal Error while Submitting a Form` 發生錯誤。 當使用者在表單提交前將焦點放在RTF欄位上時，不會發生錯誤。 (NPR-38542)
+* 錯誤 `sling-default-3-AdobeSignRefreshTokenScheduleJob com.adobe.forms.foundation.oauth.model.OAuthConfigSlingModel Refresh Token not present for: /conf/gws-eform/cashlite/settings/cloudconfigs/fdm/cashlite/jcr:content occurs` 已記錄。 (NPR-38541)
+* 當使用者上傳PDF至適用性表單時，AEM Forms伺服器會停止回應。 (NPR-38398)
+* 在OSGi伺服器上的AEM Forms上，當您使用檔案服務API來驗證PDF時，系統會失敗，並出現錯誤：com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311。 (CQ-4346252)
+* 在提交信函草稿時， `Could not upload asset from xml input` 發生錯誤。 對功能沒有影響。 開啟草稿時，字母會正確轉譯。 (CQ-4345979、CQ-4344418)
+* 以德文格式輸入日期時， `Preview with Data` 選項用於信函，則不會呈現「日期」欄位。 (CQ-4345783)
+* 當您建立Web門戶並根據資料生成條形碼時，某些條形碼無法正確解碼。 (CQ-4345743)
+* 轉換到PDF的Postscript不會以預期的顏色呈現輸出文檔。 (CQ-4345074)
+* 資源解析器會造成間歇性提交失敗，並導致同一堆疊追蹤在單一提交中出現多次。 (CQ-4344764)
+* 使用者無法開啟使用的修改草稿信函 `cmDataUrl` 參數。 草稿首次開啟。 問題會在後續嘗試中開始出現。 (CQ-4344418)
+* 當使用者進入 `&` 在交互通信(IC)中的符號，相應IC的草稿無法載入。 (CQ-4343969)
+* 使用AEM Forms Designer中的樣式選項生成PCL檔案時，指定的樣式不會應用於生成的檔案。 (CQ-4339573)
+* 當頁數超過15時，將動態XDP表單自動轉換為最適化表單失敗。 當頁數小於15時，此功能可正常運作。 (NPR-35337)
+* 使用「新增至我的最愛」選項時，不會指出切換至螢幕助讀程式的狀態。 (NPR-37137)
+* 在表單資料模型中，資料庫支援的表單資料模型中小數後的值會因金錢和小額金錢資料類型而截斷。. (CQDOC-19509)
+* 當您在HTML工作區中為工作流程選取導覽連結時，不會指出已選取導覽連結。 (NPR-37138)
+* 手寫簽名功能與輔助工具指南不相容。 (NPR-37596)
+* AEM Forms使用log4j 1.x。log4j 1.x支援已終止。 (NPR-38273)
+* 在「表單資料模型」中將MSSQL資料庫用作資料源並檢索值時，檢索值中小數後的數字將被切換。 (CQ-4346190)
+* 在Forms 6.5 Designer中，當您開啟以Forms 6.1 Designer建立的表單並編輯文本框時，段落間距超過指定的空間。 空間的所有先前設定都將被刪除，並且需要手動重新格式化文本框。 (CQ-4341899)
+* 條形碼SSCC-18顯示的值不正確。 Forms伺服器會忽略條碼右側的值。 (CQ-4342400)
+* 針對以Forms 6.5 Designer建立的靜態PDF forms,PDF協助工具會因錯誤而失敗 `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
+* 新增在Forms Designer中為超連結指定「螢幕Reader文字」的功能。(NPR-36221)
 
 ## Integrations {#integrations-6514}
 
@@ -215,7 +255,11 @@ ht-degree: 4%
 >
 >如果您未使用 [!DNL Experience Manager] Forms。
 
-中的修正 [!DNL Experience Manager] Forms會在排程一週後透過個別的附加套件傳送 [!DNL Experience Manager] Service Pack版本。
+<!-- 
+
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+
+-->
 
 1. 確認您已安裝 [!DNL Experience Manager] Service Pack。
 1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)所列出的對應 Forms 附加套件。
@@ -261,7 +305,7 @@ UberJar [!DNL Experience Manager] 6.5.13.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|

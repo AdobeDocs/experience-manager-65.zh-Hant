@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
+source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
 workflow-type: tm+mt
-source-wordcount: '3791'
+source-wordcount: '3797'
 ht-degree: 3%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 3%
       + [將AEM Forms與AdobeLiveCycle](using/aem-livecycle-connector.md)
       + [設定AEM Forms以在JEE程式中將表單資料提交至AEM Forms](using/submit-form-data-livecycle-process.md)
       + [AEM AEM Forms案頭應用程式](/help/forms/using/aem-desktop-app-for-aem-forms.md)
+      + [OAuth2支援郵寄服務](/help/forms/using//oauth2-support-for-mail-service.md)
 + 升級AEM Forms {#upgrade-aem-forms}
    + [可用升級路徑](using/upgrade.md)
    + 在OSGi上升級AEM Forms {#aem-forms-osgi-upgrade}
