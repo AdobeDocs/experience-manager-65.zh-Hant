@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 381ab110ccf5605b17382b9c77693c819e31e3b6
 workflow-type: tm+mt
-source-wordcount: '3237'
+source-wordcount: '3224'
 ht-degree: 4%
 
 ---
@@ -152,7 +152,6 @@ ht-degree: 4%
 * 新增至巢狀「版面容器」時，文字元件不會對齊。 (NPR-38193)
 * 當元件沒有樣式系統配置時，將顯示空樣式頁簽。 現在，若未進行任何設定，則會隱藏索引標籤。 (NPR-38218) <!-- version 2 (old) of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 屬性 `useLegacyResponsiveBehaviour` 只有在通過驗證時才有效。 (NPR-37996)
-* 將jquery-ui升級至最新版本導致編輯器中斷。 (SITES-5647)
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6514}
 
