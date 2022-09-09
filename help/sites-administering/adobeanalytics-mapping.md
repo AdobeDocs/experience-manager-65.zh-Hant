@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6c1f8869-62d9-4fac-aa0d-b99bb0e86d6b
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: 085e77b7b831d6be626a46d3de215aedb50f6178
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 
    ![aa-13](assets/aa-13.png)
 
-   有數個預設元件群組： **一般**, **商務**, **社群**, **Search&amp;Promote**，和 **其他**. 您的AEM例項可設定為顯示不同的群組和元件。
+   有數個預設元件群組： **一般**, **商務**, **社群**，和 **其他**. 您的AEM例項可設定為顯示不同的群組和元件。
 
 1. 若要使用元件中定義的變數對應Adobe Analytics變數，請拖曳 **Analytics變數** 從內容尋找器到追蹤元件上的欄位。 例如，拖曳 `Page Name (pageName)` to `pagedata.title`.
 
@@ -121,10 +121,6 @@ AEM會使用慣例來命名原本要對應至Adobe Analytics產品相關屬性�
    >[!NOTE]
    >
    >一次只能有一個活動的篩選按鈕。
-
-   >[!NOTE]
-   >
-   >Search&amp;Promote變數也屬於「轉換」區段。
 
    1. 清單也具有搜尋功能，可根據在搜尋欄位中輸入的文字來篩選元素。
    1. 如果在搜尋清單中的元素時啟用了篩選選項，則系統也會根據使用中按鈕來篩選顯示的結果。
