@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: ffabf5a9e3b08f60394cecfe540692b161437362
+source-git-commit: c73d39a1c88c914cd63bc08fe8daf0ff37b4bf7c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEM隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式。
 >
 >預設會停用SAML 2.0驗證處理常式。 必須至少設定以下屬性之一才能啟用處理程式：
 >
->* 身分提供者POSTURL。
+>* 身分提供者POSTURL或IDP URL。
 >* 服務提供商實體ID。
 >
 
@@ -57,7 +57,7 @@ AEM隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式。
 
 **IDP憑證別名** 全域信任存放區中IdP憑證的別名。 如果此屬性為空，則禁用身份驗證處理程式。 請參閱下方的「將IdP憑證新增至AEM TrustStore」一章，了解如何設定。
 
-**身分提供者URL** IDP的URL，應將SAML驗證要求傳送至此處。 如果此屬性為空，則禁用身份驗證處理程式。
+**IDP URL** IDP的URL，應將SAML驗證要求傳送至此處。 如果此屬性為空，則禁用身份驗證處理程式。
 
 >[!CAUTION]
 >
