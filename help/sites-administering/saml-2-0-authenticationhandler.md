@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: c73d39a1c88c914cd63bc08fe8daf0ff37b4bf7c
+source-git-commit: 5df1579a341f70c93a3c4b43a278bc99794a4652
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,8 @@ AEM隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式。
 此處理常式會將加密的SAML回應訊息儲存在使用者節點中( `usernode/samlResponse`)，以方便與協力廠商的通訊。
 
 >[!NOTE]
+>
+>請參閱 [AEM與SAML整合的示範](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17481.html).
 >
 >若要閱讀端對端社群文章，請按一下： [整合SAML與Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html).
 
