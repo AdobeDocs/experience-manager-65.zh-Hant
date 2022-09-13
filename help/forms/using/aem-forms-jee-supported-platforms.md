@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 060bfb2ed3288b0ef9fbb5ba7f6b06ee027062b6
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3624'
 ht-degree: 1%
 
 ---
@@ -22,6 +22,14 @@ ht-degree: 1%
 # AEM Forms on JEE的支援平台 {#supported-platforms-for-aem-forms-on-jee}
 
 ## 支援平台 {#supported-platforms}
+
+<div class="preview">
+
+AEM 6.5 Forms Service Pack 12(6.5.12.0)提供JEE上AEM 6.5 Forms的最新完整安裝程式。
+
+Adobe建議使用 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html"> AEM 6.5.12.0 JEE上的Forms </a> 完整安裝程式（於2022年3月03日發行），而非AEM 6.5。安裝程式（於2019年4月08日發行）。
+
+</div>
 
 ### 支援層級 {#support-levels}
 
