@@ -6,7 +6,7 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0194abbdd9da1f89491678e0ad688d392af56423
+source-git-commit: 9a74a92262a1ee8dd651965b3a770c4c843f7980
 workflow-type: tm+mt
 source-wordcount: '3452'
 ht-degree: 1%
@@ -492,15 +492,14 @@ AEM Dynamic Media預設為停用。 請參閱這裡以 [啟用Dynamic Media](/he
 > 此外：
 >
 > * PDF產生器需要32位元版本 [Acrobat 2020 classic track 20.004.30006版](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat 2017 17.011.30078版，以執行轉換。
-> > * 只有Windows和Linux支援OpenOffice的PDF生成器轉換。
-
-> * PDF生成器僅支援Microsoft Office Professional Plus的32位零售版本，以及在Windows作業系統上轉換所需的其他軟體。
+> * 只有Windows和Linux支援OpenOffice的PDF生成器轉換。
+> * PDF生成器僅支援Microsoft Office Professional Plus的32位零售版，以及在Windows作業系統上轉換所需的其他軟體。
 > * PDF產生器支援Linux作業系統上的32位和64位版本的OpenOffice。
 > * PDF生成器不支援Microsoft Office 365。
 > * OCRPDF、Optimize PDF和Export PDF功能僅在Windows上受支援。
 > * Acrobat版本與AEM Forms搭配，以啟用PDF產生器功能。 套件版本在AEM Forms授權期間，僅能透過AEM Forms以程式設計方式存取，以便與AEM FormsPDF產生器搭配使用。 如需詳細資訊，請參閱根據您的部署的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
->
 > * PDF產生器服務不支援Microsoft Windows 10。
+>
 
 
 ### AEM Forms Designer的需求 {#requirements-for-aem-forms-designer}

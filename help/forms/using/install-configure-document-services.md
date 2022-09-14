@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 32b97aeff398a19556d46ff6c905dc3019988bc1
+source-git-commit: e5b78a6f84fa0f9de746ca4ae69a8df4f474e305
 workflow-type: tm+mt
-source-wordcount: '5389'
+source-wordcount: '5388'
 ht-degree: 1%
 
 ---
@@ -659,7 +659,7 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
 * 確認PDF產生器使用者為管理員群組的成員，且 [取代處理層級代號](#grant-the-replace-a-process-level-token-privilege) 已為用戶設定權限。
 * 確認已在PDF產生器UI中設定使用者，並執行下列動作：
    1. 使用Microsoft產生器使用者登入PDF® Windows。
-   1. 開啟Microsoft® Office或Open Office應用程式並取消所有對話。
+   1. 開啟Microsoft® Office或OpenOffice應用程式並取消所有對話。
    1. 將AdobePDF設為預設打印機。
    1. 將Acrobat設定為PDF檔案的預設程式。
    1. 使用Microsoft Office應用程式中的「檔案」>「打印」和「Acrobat」功能區選項執行手動轉換，並取消所有對話框。
