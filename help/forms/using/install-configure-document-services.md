@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: a0612d10c91cf096403dad1c50b0884feeb10ec2
+source-git-commit: 26fbf8629715c983ccae9dcdee1defb279849107
 workflow-type: tm+mt
 source-wordcount: '5461'
 ht-degree: 1%
@@ -605,11 +605,12 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
    >
    > * 您可以使用srt_config.yaml檔案來配置的各種設定。 檔案格式為：
 
-       #=================================================================
        # SRT配置
-       #=================================================================
-       #Note — 遵循正確格式，避免分析失敗
-       #e.g. &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       
+       #注意 — 請遵循正確格式，以避免解析失敗
+       
+       #例如 &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       
        #locale:（必填欄位）要用於SRT的地區設定。 支援的地區設定[en/fr/de/ja]。
        區域：en
        
