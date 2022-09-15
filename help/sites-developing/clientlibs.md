@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 684474d764ac2a2c187827382e0180e6c0d5259b
+source-git-commit: 7ceee6819618d785f04029b9ac1c6f763995b3ac
 workflow-type: tm+mt
 source-wordcount: '2861'
 ht-degree: 1%
@@ -224,7 +224,7 @@ Web客戶端必須具有訪問 `cq:ClientLibraryFolder` 節點。 您也可以�
 
 #### 應用程式專屬用戶端程式庫資料夾 {#app-specific-client-library-folders}
 
-最好將所有與應用程式相關的檔案保留在以下其應用程式資料夾中 `/apps`. 也是拒絕網站訪客存取 `/app` 檔案夾。 為了同時滿足這兩個最佳實務，請在下方建立用戶端程式庫資料夾 `/apps`，並透過代理servlet存取，如 [找到客戶端庫資料夾並使用代理客戶端庫Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
+最好將所有與應用程式相關的檔案保留在以下其應用程式資料夾中 `/apps`. 也是拒絕網站訪客存取 `/apps` 檔案夾。 為了同時滿足這兩個最佳實務，請在下方建立用戶端程式庫資料夾 `/apps`，並透過代理servlet存取，如 [找到客戶端庫資料夾並使用代理客戶端庫Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
 
 使用categories屬性來識別要內嵌的用戶端程式庫資料夾。 若要內嵌程式庫，請新增屬性至內嵌 `cq:ClientLibraryFolder` 節點，使用以下屬性：
 
