@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 935698e6c8caabccb7bbe0aa9f45012d07163660
+source-git-commit: 48f898a774d2ddd6d2c31f6a4107c71e4032cfc2
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3281'
 ht-degree: 4%
 
 ---
@@ -118,7 +118,7 @@ ht-degree: 4%
 * 當您在HTML工作區中為工作流程選取導覽連結時，不會指出已選取導覽連結。 (NPR-37138)
 * 手寫簽名功能與輔助工具指南不相容。 (NPR-37596)
 * AEM Forms使用log4j 1.x。log4j 1.x支援已終止。 (NPR-38273)
-* 在「表單資料模型」中將MSSQL資料庫用作資料源並檢索值時，檢索值中小數後的數字將被切換。 (CQ-4346190)
+* 在「表單資料模型」中將MSSQL資料庫用作資料源並檢索值時，檢索值中小數後的數字將被截斷。 (CQ-4346190)
 * 在Forms 6.5 Designer中，當您開啟以Forms 6.1 Designer建立的表單並編輯文本框時，段落間距超過指定的空間。 空間的所有先前設定都將被刪除，並且需要手動重新格式化文本框。 (CQ-4341899)
 * 條形碼SSCC-18顯示的值不正確。 Forms伺服器會忽略條碼右側的值。 (CQ-4342400)
 * 針對以Forms 6.5 Designer建立的靜態PDF forms,PDF協助工具會因錯誤而失敗 `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
@@ -305,7 +305,7 @@ UberJar [!DNL Experience Manager] 6.5.13.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
@@ -317,7 +317,8 @@ UberJar [!DNL Experience Manager] 6.5.13.0可在 [Maven Central存放庫](https:
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THE LIST.
  -->
 
-* [AEM內容片段，含GraphQL索引套件1.0.3](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.3.zip)
+* [AEM內容片段，含GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+使用GraphQL的客戶需要此軟體包；這可讓使用者根據實際使用的功能，新增所需的索引定義。
 
 * As [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
 
