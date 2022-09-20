@@ -10,10 +10,10 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 126d5309fe3c3b6474e180d21f5c7d1697d9e08a
 workflow-type: tm+mt
-source-wordcount: '1870'
-ht-degree: 8%
+source-wordcount: '1884'
+ht-degree: 7%
 
 ---
 
@@ -105,6 +105,9 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您至少需要一�
 
    * 里比庫
 
+* 安裝 [Microsoft Visual Studio 2019 32位可再發行](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
+
+
 ## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
 
 AEM Forms附加元件套件是部署至AEM的應用程式。 套件包含AEM Forms資料擷取和其他功能。 執行下列步驟以安裝附加元件套件：
@@ -124,7 +127,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 套件包含AEM For
 
 ### （僅限Windows）自動安裝Visual Studio可轉散發套件 {#automatic-installation-visual-studio-redistributables}
 
-如果您以提升模式安裝AEM執行個體，則會在安裝AEM Forms附加元件套件期間自動安裝遺失的Visual Studio可轉散發套件。
+如果您以提升模式安裝AEM執行個體，在安裝AEM Forms附加元件套件期間會自動安裝32位元Visual Studio可轉散發套件。
 
 要評估是否自動安裝了Visual Studio可轉散發套件，請開啟 `error.log` 檔案 `/crx-repository/logs/` 目錄。 記錄檔包含下列訊息：
 
