@@ -10,9 +10,9 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 11bad847558d295d1cf38aa9e8f246fc6fc3877b
+source-git-commit: 1a6881b29024799c44b2068ea82750c983a012e5
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '3867'
 ht-degree: 0%
 
 ---
@@ -291,19 +291,29 @@ ht-degree: 0%
 
 ### 啟用保存草稿功能 {#enable-save-draft-feature}
 
-在發佈信函或在發佈執行個體上儲存草稿之前，請執行下列步驟以啟用「另存為草稿」功能：
+在發佈信函或在發佈執行個體上儲存草稿之前，請對製作和發佈執行個體執行下列步驟，以啟用「另存為草稿」功能：
 
-1. 使用以下URL開啟伺服器的Web控制台配置：https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr。
+此 *cq:lastReplicationAction*, *cq:lastreaded* 和 *cq:lastReplicatedBy* 依預設，屬性不會傳遞至發佈執行個體。 為了繼續 *cq:lastReplicationAction*, *cq:lastreaded* 和 *cq:lastReplicatedBy* 要發佈實例的屬性，禁用 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] 元件。 若要停用元件：
 
-1. 尋找並按一下 **編輯** 表徵圖 *com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name* 設定。
+1. 在製作執行個體上，開啟Adobe Experience Manager Web主控台元件主控台。 預設URL為 `http://author-server:port/system/console/components`
 
-1. 在 *VersionRestoreManager作者URL* 欄位中，指定對應製作例項的URL。
+1. 搜尋 **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** 元件。
+
+1. 按一下 ![「禁用」按鈕](/help/forms/using/assets/enablebutton.png) 表徵圖禁用 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] 元件。
+
+![製作例項](/help/forms/using/assets/replicationproperties.png)
+
+若要啟用另存為草稿功能，請取代現有URL，位於 [!UICONTROL VersionRestoreManager作者URL] 搭配您製作例項的URL。 若要取代URL:
+
+1. 在發佈例項上，開啟 [!UICONTROL Adode Manager Web控制台配置]. 預設URL為 `https://publish-server:port/system/console/configMgr`
+
+1. 搜尋並開啟 **[!UICONTROL 通信管理 — 製作執行個體版本還原設定]** 元件。
+
+1. 找出 **[!UICONTROL VersionRestoreManager作者URL]** 欄位，並指定製作例項的URL。
 
 1. 按一下「儲存」。
 
-此 *cq:lastReplicationAction*, *cq:lastreaded* 和 *cq:lastReplicatedBy* 依預設，屬性不會傳遞至發佈執行個體。 若要在發佈執行個體啟用重新載入草稿，需要在發佈執行個體中使用這些屬性。
-
-為了繼續 *cq:lastReplicationAction*, *cq:lastreaded* 和 *cq:lastReplicatedBy* 要發佈實例的屬性，將元件禁用為 *com.day.cq.replication.impl.ReplicationPropertiesFilterFactory* 在Author例項中使用URL:`http://server:port/system/console/components`
+![發佈例項](/help/forms/using/assets/correspondencemanagement.png)
 
 開啟信函例項的儲存時，您可以選擇要儲存信函例項的位置。 儲存字母例項有兩個選項：本地保存或遠程保存。
 
@@ -323,7 +333,7 @@ ht-degree: 0%
 
 #### 指定處理製作設定 {#specify-processing-author-settings}
 
-1. 在AEM中，使用下列URL開啟您伺服器的Adobe Experience Manager Web Console設定： `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. 在AEM中，使用下列URL開啟您伺服器的Adobe Experience Manager Web Console設定： `https://<server>:<port>/system/console/configMgr`
 
    ![Adobe Experience Manager Web主控台設定](assets/2configmanager.png)
 
