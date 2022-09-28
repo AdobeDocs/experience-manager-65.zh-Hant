@@ -6,10 +6,10 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 1a383f0e620adf6968d912a9a1759e5ee020c908
+source-git-commit: 1a741ff01fcf17dfdcc8c1cebcd858052d07361c
 workflow-type: tm+mt
-source-wordcount: '3447'
-ht-degree: 0%
+source-wordcount: '3583'
+ht-degree: 2%
 
 ---
 
@@ -204,61 +204,93 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 將jar檔案複製到 **&lt;aem-install>**/crx-quickstart/install/15(在AEM安裝資料夾中)。
 1. 啟動AEM並檢查連接器功能。
 
-您可搭配下列選項使用設定檔案：
+您可以使用設定檔案及下列詳細說明的選項。
 
-* accessKey:AWS存取金鑰。
-* secretKey:AWS秘密存取金鑰。 **注意：** 當 `accessKey` 或 `secretKey` 未指定，則 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 用於驗證。
-* s3Bucket:貯體名稱。
-* s3地區：桶區。
-* 路徑：資料儲存的路徑。 預設為 **&lt;aem install=&quot;&quot; folder=&quot;&quot;>/repository/datastore**
-* minRecordLength:應儲存在資料儲存區中的對象的最小大小。 最小/預設值為 **16KB。**
-* maxCachedBinarySize:大小小於或等於此大小的二進位檔會儲存在記憶體快取中。 大小為位元組。 預設為**17408 **(17 KB)。
+<!--
+* accessKey: The AWS access key.
+* secretKey: The AWS secret access key. **Note:** When the `accessKey` or `secretKey` is not specified then the [IAM role](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) is used for authentication.
+* s3Bucket: The bucket name.
+* s3Region: The bucket region.
+* path: The path of the data store. The default is **&lt;AEM install folder&gt;/repository/datastore**
+* minRecordLength: The minimum size of an object that should be stored in the data store. The minimum/default is **16KB.**
+* maxCachedBinarySize: Binaries with size less than or equal to this size will be stored in memory cache. The size is in bytes. The default is **17408 **(17 KB).
+* cacheSize: The size of the cache. The value is specified in bytes. The default is **64GB**.
+* secret: Only to be used if using binaryless replication for shared datastore setup.
+* stagingSplitPercentage: The percentage of cache size configured to be used for staging asynchronous uploads. The default value is **10**.
+* uploadThreads: The number of uploads threads that are used for asynchronous uploads. The default value is **10**.
+* stagingPurgeInterval: The interval in seconds for purging finished uploads from the staging cache. The default value is **300** seconds (5 minutes).
+* stagingRetryInterval: The retry interval in seconds for failed uploads. The default value is **600** seconds (10 minutes).
+-->
 
-* cacheSize:快取的大小。 值以位元組為單位指定。 預設為 **64GB**.
-* 機密：僅在共用資料存放區設定使用無二進位檔復寫時使用。
-* stagingSplitPercentage:配置為用於暫存非同步上載的快取大小的百分比。 預設值為 **10**.
-* uploadThreads:用於非同步上載的上載線程數。 預設值為 **10**.
-* stagingPurgeInterval:從暫存快取清除已完成上傳的間隔（秒）。 預設值為 **300** 秒（5分鐘）。
-* stagingRetryInterval:失敗上傳的重試間隔（秒）。 預設值為 **600** 秒（10分鐘）。
+### S3連接器組態檔選項 {#s3-connector-configuration-file-options}
 
-### 貯體區域選項 {#bucket-region-options}
+>[!NOTE]
+>
+>S3連接器支援IAM用戶身份驗證和IAM角色身份驗證。 要使用IAM角色身份驗證，請忽略 `accessKey` 和 `secretKey` 值。 S3連接器將預設為 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 指派給例項。
+
+| 關鍵 | 說明 | 預設 | 必要 |
+| --- | --- | --- | --- |
+| accessKey | 具有儲存桶訪問權限的IAM用戶的Access Key ID。 |  | 是，當不使用IAM角色時。 |
+| secretKey | 具有儲存桶訪問權限的IAM用戶的秘密訪問密鑰。 |  | 是，當不使用IAM角色時。 |
+| cacheSize | 本地快取的大小（以位元組為單位）。 | 64GB | 否. |
+| connectionTimeout | 設定在最初建立連接時超時之前等待的時間（以毫秒為單位）。 | 10000 | 否. |
+| maxCachedBinarySize | 大小小於或等於此值的二進位檔（以位元組為單位）將儲存在記憶體快取中。 | 17408(17 KB) | 否. |
+| maxConnections | 設定允許的開啟HTTP連線數量上限。 | 50 | 否. |
+| maxErrorRetry | 設定失敗（可檢索）請求的最大重試次數。 | 3 | 否. |
+| minRecordLength | 應儲存在資料儲存區中的對象的最小大小（以位元組為單位）。 | 16384 | 否. |
+| 路徑 | AEM資料存放區的本機路徑。 | `crx-quickstart/repository/datastore` | 否. |
+| proxyHost | 設定客戶端將通過的可選代理主機。 |  | 否. |
+| proxyPort | 設定客戶端將通過的可選代理埠。 |  | 否. |
+| s3Bucket | S3儲存貯體的名稱。 |  | 是 |
+| s3EndPoint | S3 REST API端點。 |  | 否. |
+| s3地區 | 貯體所在的地區。 看這個 [頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html) 以取得更多詳細資訊。 | 執行AWS例項的地區。 | 否. |
+| socketTimeout | 設定在連接超時和關閉之前，通過已建立的開啟連接傳輸資料的等待時間（以毫秒為單位）。 | 50000 | 否. |
+| stagingPurgeInterval | 從預備快取清除已完成上傳的間隔（秒）。 | 300 | 否. |
+| stagingRetryInterval | 重試上傳失敗的間隔（秒）。 | 600 | 否. |
+| stagingSplitPercentage | 百分比 `cacheSize` 用於測試非同步上傳。 | 10 | 否. |
+| uploadThreads | 用於非同步上載的上載線程數。 | 10 | 否. |
+| writeThreads | 用於通過S3傳輸管理器寫入的併發線程數。 | 10 | 否. |
+
+<!---
+### Bucket region options {#bucket-region-options}
 
 <table>
  <tbody>
   <tr>
-   <td>美國標準</td>
+   <td>US Standard</td>
    <td><code>us-standard</code></td>
   </tr>
   <tr>
-   <td>美國西部</td>
+   <td>US West</td>
    <td><code>us-west-2</code></td>
   </tr>
   <tr>
-   <td>美國西部（北加利福尼亞）</td>
+   <td>US West (Northern California)</td>
    <td><code>us-west-1</code></td>
   </tr>
   <tr>
-   <td>歐盟（愛爾蘭）<br /> </td>
+   <td>EU (Ireland)<br /> </td>
    <td><code>EU</code></td>
   </tr>
   <tr>
-   <td>亞太地區（新加坡）<br /> </td>
+   <td>Asia Pacific (Singapore)<br /> </td>
    <td><code>ap-southeast-1</code></td>
   </tr>
   <tr>
-   <td>亞太地區（雪梨）<br /> </td>
+   <td>Asia Pacific (Sydney)<br /> </td>
    <td><code>ap-southeast-2</code></td>
   </tr>
   <tr>
-   <td>亞太地區（東京）</td>
+   <td>Asia Pacific (Tokyo)</td>
    <td><code>ap-northeast-1</code></td>
   </tr>
   <tr>
-   <td>南美（聖保羅）<br /> </td>
+   <td>South America (Sao Paolo)<br /> </td>
    <td><code>sa-east-1</code></td>
   </tr>
  </tbody>
 </table>
+-->
 
 ### DataStore快取 {#data-store-caching}
 
