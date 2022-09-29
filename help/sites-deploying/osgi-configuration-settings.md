@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 4c3cc888a7590fdbee9b7d7e441602e4ae3f54b0
+source-git-commit: 71c318e59f39b091f52650853be2d472354c2f1c
 workflow-type: tm+mt
-source-wordcount: '3511'
+source-wordcount: '3474'
 ht-degree: 0%
 
 ---
@@ -243,11 +243,6 @@ OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作�
 * **指令碼用戶**  — 此可選屬性可指定用於讀取指令碼的儲存庫用戶帳戶。 如果未指定帳戶，則 `admin` 預設會使用使用者。
 
 * **預設擴充功能** 將使用預設行為的擴充功能清單。 這表示資源類型的最後一個路徑區段可作為指令碼名稱使用。
-
-**Day Commons GFX字型幫助程式** 渲染圖形時，可使用DrawText嵌入文本。 為此，您也可以安裝您自己的字型：
-
-* 定義 **字型路徑** 搜索項目特定字型。
-例如， `/apps/myapp/fonts`.
 
 **Apache HTTP元件代理配置** 使用Apache HTTP用戶端，在進行HTTP時使用的所有程式碼的代理設定；例如在復寫時。
 
